@@ -6,22 +6,43 @@ export interface WikiPage {
   children?: WikiPage[];
 }
 
-// Helper to extract title from markdown content
-function extractTitle(content: string, filename: string): string {
-  const match = content.match(/^#\s+(.+)$/m);
-  if (match) {
-    return match[1];
+// Helper to extract title from markdown content or filename
+function extractTitle(_content: string, filename: string): string {
+  // Filename format: "1.1.1.Title.md" -> "Title"
+  // Or "index.md" inside "1.1.1.Title" -> "Title"
+  
+  let namePart = filename.split('/').pop()?.replace(/\.md$/, '') || '';
+  
+  if (namePart === 'index') {
+    // Use parent folder name
+    const parts = filename.split('/');
+    if (parts.length >= 2) {
+      namePart = parts[parts.length - 2];
+    }
   }
-  // Fallback to filename, removing extension
-  return filename.split('/').pop()?.replace(/\.md$/, '') || '';
+
+  // Match "1.2.3.Title" -> capture "Title"
+  const match = namePart.match(/^[\d\.]+\.?(.*)$/);
+  if (match && match[1]) {
+    return match[1].trim(); 
+  }
+  return namePart;
 }
 
 // Helper to process filename into slug and sort order
 function processFileInfo(path: string) {
   // Remove /docs/wiki/ prefix and .md suffix
-  // Path comes from import.meta.glob, e.g., "../../docs/wiki/1.离散数学/1.1.数理逻辑.md"
-  const relativePath = path.replace(/^\.\.\/\.\.\/docs\/wiki\//, '').replace(/\.md$/, '');
-  const segments = relativePath.split('/');
+  let relativePath = path.replace(/^\.\.\/\.\.\/docs\/wiki\//, '').replace(/\.md$/, '');
+  
+  // Handle index files: they represent the folder itself
+  if (relativePath.endsWith('/index')) {
+    relativePath = relativePath.replace(/\/index$/, '');
+  } else if (relativePath === 'index') {
+    // Root index? Unlikely in this structure but possible
+    relativePath = '';
+  }
+
+  const segments = relativePath.split('/').filter(Boolean);
   
   const cleanSegments = segments.map(segment => {
     return { name: segment };
@@ -33,7 +54,7 @@ function processFileInfo(path: string) {
   };
 }
 
-// Validation function for "Double Insurance"
+// Validation function for "Double Insurance" (Runtime/Dev check)
 function validatePath(path: string) {
   const relativePath = path.replace(/^\.\.\/\.\.\/docs\/wiki\//, '').replace(/\.md$/, '');
   const segments = relativePath.split('/');
@@ -112,19 +133,21 @@ function buildWikiData(): WikiPage[] {
 
 export const wikiData: WikiPage[] = buildWikiData();
 
-export function findPageByPath(path: string, data: WikiPage[] = wikiData): WikiPage | null {
+export function findPageByPath(path: string, data: WikiPage[] = wikiData): { page: WikiPage, ancestors: WikiPage[] } | null {
   const segments = path.split('/').filter(Boolean);
   if (segments.length === 0) return null;
 
   let currentLevel = data;
   let foundPage: WikiPage | null = null;
+  const ancestors: WikiPage[] = [];
 
   for (const segment of segments) {
-    // Decode URI component to handle Chinese characters in URL
     const decodedSegment = decodeURIComponent(segment);
     foundPage = currentLevel.find(p => p.slug === decodedSegment) || null;
     if (!foundPage) return null;
     
+    ancestors.push(foundPage);
+
     if (foundPage.children) {
       currentLevel = foundPage.children;
     } else {
@@ -132,5 +155,6 @@ export function findPageByPath(path: string, data: WikiPage[] = wikiData): WikiP
     }
   }
 
-  return foundPage;
+  // The last item in ancestors is the page itself, so pop it or handle it in consumer
+  return foundPage ? { page: foundPage, ancestors: ancestors.slice(0, -1) } : null;
 }
