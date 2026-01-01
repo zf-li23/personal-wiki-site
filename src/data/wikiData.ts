@@ -6,98 +6,118 @@ export interface WikiPage {
   children?: WikiPage[];
 }
 
-export const wikiData: WikiPage[] = [
-  {
-    id: '1',
-    title: 'Introduction',
-    slug: 'intro',
-    content: `# Introduction
-
-Welcome to my personal wiki. This is where I store my knowledge.
-
-## About this Wiki
-This wiki is built with React and Markdown. It features:
-- Hierarchical structure
-- Markdown rendering
-- Dark/Light mode
-- Responsive design
-
-## How to navigate
-Use the sidebar on the left to navigate through different topics.
-`,
-  },
-  {
-    id: '2',
-    title: 'Frontend Development',
-    slug: 'frontend',
-    children: [
-      {
-        id: '2-1',
-        title: 'React',
-        slug: 'react',
-        content: `# React
-
-React is a JavaScript library for building user interfaces.
-
-## Core Concepts
-- Components
-- Props
-- State
-
-## Hooks
-1. useState
-2. useEffect
-3. useContext
-`,
-        children: [
-          {
-            id: '2-1-1',
-            title: 'Hooks Deep Dive',
-            slug: 'hooks',
-            content: `# Hooks Deep Dive
-
-Detailed explanation of React Hooks.
-
-### useState
-\`\`\`javascript
-const [count, setCount] = useState(0);
-\`\`\`
-`
-          }
-        ]
-      },
-      {
-        id: '2-2',
-        title: 'TypeScript',
-        slug: 'typescript',
-        content: `# TypeScript
-
-TypeScript is JavaScript with syntax for types.
-
-## Basic Types
-- string
-- number
-- boolean
-- array
-- any
-`
-      }
-    ]
-  },
-  {
-    id: '3',
-    title: 'Backend Development',
-    slug: 'backend',
-    children: [
-      {
-        id: '3-1',
-        title: 'Node.js',
-        slug: 'nodejs',
-        content: '# Node.js\n\nJavaScript runtime built on Chrome\'s V8 JavaScript engine.'
-      }
-    ]
+// Helper to extract title from markdown content
+function extractTitle(content: string, filename: string): string {
+  const match = content.match(/^#\s+(.+)$/m);
+  if (match) {
+    return match[1];
   }
-];
+  // Fallback to filename, removing extension and leading numbers
+  const name = filename.split('/').pop()?.replace(/\.md$/, '') || '';
+  return name.replace(/^\d+-/, '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+}
+
+// Helper to process filename into slug and sort order
+function processFileInfo(path: string) {
+  // Remove /wiki/ prefix and .md suffix
+  const relativePath = path.replace(/^\/wiki\//, '').replace(/\.md$/, '');
+  const segments = relativePath.split('/');
+  
+  const cleanSegments = segments.map(segment => {
+    // Extract ordering number if present (e.g., "01-intro" -> order: 1, name: "intro")
+    const match = segment.match(/^(\d+)-(.+)$/);
+    if (match) {
+      return { order: parseInt(match[1]), name: match[2] };
+    }
+    return { order: 999, name: segment };
+  });
+
+  return {
+    slug: cleanSegments.map(s => s.name).join('/'),
+    segments: cleanSegments
+  };
+}
+
+function buildWikiData(): WikiPage[] {
+  // Import all markdown files from the wiki directory
+  // Note: The path must be relative to this file or absolute from project root
+  // Using absolute path from project root for clarity, assuming 'wiki' is at root
+  const modules = import.meta.glob('/wiki/**/*.md', { query: '?raw', import: 'default', eager: true });
+  
+  const root: WikiPage[] = [];
+
+  for (const path in modules) {
+    const content = modules[path] as string;
+    const { slug, segments } = processFileInfo(path);
+    const title = extractTitle(content, path);
+    
+    let currentLevel = root;
+    
+    segments.forEach((segment, index) => {
+      const isLast = index === segments.length - 1;
+      const existingNode = currentLevel.find(node => node.slug === segment.name);
+
+      if (existingNode) {
+        if (isLast) {
+          // Update existing node (which might have been created as a parent placeholder)
+          existingNode.content = content;
+          existingNode.title = title; // Update title from content
+        }
+        if (!existingNode.children) existingNode.children = [];
+        currentLevel = existingNode.children;
+      } else {
+        const newNode: WikiPage = {
+          id: path, // Use file path as ID
+          title: isLast ? title : segment.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+          slug: segment.name,
+          children: [],
+          // Only leaf nodes or nodes with matching files get content
+          content: isLast ? content : undefined 
+        };
+        
+        // Insert in correct order
+        const insertIndex = currentLevel.findIndex(node => {
+           // We need to recover the order from the original path to compare
+           // This is a bit tricky since we only have the clean node. 
+           // But we can assume the current iteration's segment order is what matters.
+           return false; // Simplified: just push and sort later
+        });
+        
+        currentLevel.push(newNode);
+        
+        // Sort current level by order (we need to store order on the node temporarily or re-derive it)
+        // For simplicity, let's rely on the file system traversal order or sort at the end.
+        // Actually, let's attach a hidden property for sorting if we could, but interface doesn't allow.
+        // Let's just sort by filename (which includes the number) implicitly if glob returns sorted keys.
+        // Glob usually returns sorted keys.
+        
+        currentLevel = newNode.children!;
+      }
+    });
+  }
+
+  // Recursive sort function
+  const sortNodes = (nodes: WikiPage[]) => {
+    nodes.sort((a, b) => {
+      // We need to find the original file path segment to compare numbers...
+      // This is getting complicated. 
+      // Alternative: The 'modules' keys are already sorted alphabetically.
+      // "01-intro.md" comes before "02-frontend".
+      // So if we process in order, the array should be naturally ordered!
+      return 0;
+    });
+    nodes.forEach(node => {
+      if (node.children) sortNodes(node.children);
+    });
+  };
+
+  // Since glob keys are sorted, we might be good. 
+  // But "02-frontend/01-react.md" vs "02-frontend.md" (if it existed).
+  
+  return root;
+}
+
+export const wikiData: WikiPage[] = buildWikiData();
 
 export function findPageByPath(path: string, data: WikiPage[] = wikiData): WikiPage | null {
   const segments = path.split('/').filter(Boolean);

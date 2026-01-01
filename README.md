@@ -1,109 +1,82 @@
-# Personal Wiki Site
+# 个人维基网站 (Personal Wiki Site)
 
-A personal knowledge base and portfolio website built with React, Vite, and Tailwind CSS. Designed to be easily deployed to GitHub Pages.
+这是一个基于 React, Vite 和 Tailwind CSS 构建的个人知识库和作品集网站。设计目标是易于部署到 GitHub Pages，并提供类似 GitBook 的阅读体验。
 
-## Features
+## 功能特点
 
-- **Wiki System**: Hierarchical documentation with automatic sidebar generation.
-- **Markdown Support**: Write content in Markdown with syntax highlighting and GFM support.
-- **Table of Contents**: Automatic in-page TOC generation in the sidebar for the active page.
-- **Dark/Light Mode**: System-aware theme toggling.
-- **Responsive Design**: Mobile-friendly layout (Sidebar hidden on small screens, TODO: Add mobile drawer).
-- **GitHub Pages Ready**: Pre-configured for easy deployment.
+-   **维基系统**: 支持无限层级的文档结构，自动生成侧边栏导航。
+-   **Markdown 支持**: 使用 Markdown 编写内容，支持代码高亮和 GFM 语法。
+-   **目录导航 (TOC)**: 自动生成当前页面的右侧/文内目录。
+-   **深色/浅色模式**: 跟随系统设置自动切换，也支持手动切换。
+-   **响应式设计**: 适配移动端和桌面端。
+-   **GitHub Pages 部署**: 预配置了部署脚本，一键发布。
+-   **文件驱动**: 像 Jekyll 一样，通过在 `wiki/` 目录下创建 Markdown 文件来添加内容，无需修改代码。
 
-## Tech Stack
+## 技术栈
 
-- **Framework**: React 18 + Vite
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS + Tailwind Typography
-- **Routing**: React Router DOM v6
-- **Markdown**: react-markdown, remark-gfm, rehype-highlight
-- **Icons**: Lucide React
+-   **框架**: React 18 + Vite
+-   **语言**: TypeScript
+-   **样式**: Tailwind CSS + Tailwind Typography
+-   **路由**: React Router DOM v6
+-   **Markdown**: react-markdown, remark-gfm, rehype-highlight
+-   **图标**: Lucide React
 
-## Project Structure
+## 项目结构
 
 ```
 personal-wiki-site/
-├── public/              # Static assets
+├── wiki/                # [核心] 你的 Markdown 文档放在这里
+│   ├── 01-intro.md      # 文件名中的数字用于排序
+│   └── 02-frontend/     # 支持文件夹嵌套
+│       └── 01-react.md
 ├── src/
-│   ├── components/      # Reusable UI components
-│   │   ├── Layout.tsx   # Main layout with Header
-│   │   ├── MarkdownRenderer.tsx # Markdown rendering logic
-│   │   ├── ThemeToggle.tsx # Dark mode toggle
-│   │   └── WikiSidebar.tsx # Recursive sidebar navigation
+│   ├── components/      # UI 组件
 │   ├── data/
-│   │   └── wikiData.ts  # Wiki content and structure definition
-│   ├── lib/
-│   │   └── utils.ts     # Utility functions (cn, extractHeaders)
-│   ├── pages/
-│   │   ├── Home.tsx     # Landing page
-│   │   └── Wiki.tsx     # Wiki page layout and logic
-│   ├── App.tsx          # App entry and routing
-│   ├── main.tsx         # React entry point
-│   └── index.css        # Global styles and Tailwind directives
-├── index.html           # HTML entry point
-├── package.json         # Dependencies and scripts
-├── tailwind.config.js   # Tailwind configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite configuration
+│   │   └── wikiData.ts  # 自动读取 wiki/ 下的 md 文件并生成路由数据
+│   ├── pages/           # 页面组件
+│   └── ...
+├── ...
 ```
 
-## Setup & Development
+## 如何添加内容
 
-1.  **Install Dependencies**
+1.  在项目根目录的 `wiki/` 文件夹中创建 Markdown 文件 (`.md`)。
+2.  **文件命名**: 建议使用 `数字-名称.md` 的格式（如 `01-intro.md`），数字用于控制侧边栏的排序，名称将作为 URL 的一部分（slug）。
+3.  **标题**: 文件的第一个一级标题 (`# Title`) 将被自动用作侧边栏显示的标题。
+4.  **层级**: 创建文件夹来建立层级结构。文件夹内的文件将作为子页面显示。
+
+## 开发与部署
+
+1.  **安装依赖**
     ```bash
     pnpm install
     ```
 
-2.  **Start Development Server**
+2.  **启动开发服务器**
     ```bash
     pnpm dev
     ```
 
-3.  **Build for Production**
-    ```bash
-    pnpm build
-    ```
+3.  **构建与部署**
+    本项目使用 `gh-pages` 分支进行部署。
+    *   **main 分支**: 存放源代码。
+    *   **gh-pages 分支**: 存放构建后的静态文件（由脚本自动生成）。
 
-## Deployment (GitHub Pages)
-
-This project is configured to be deployed to GitHub Pages.
-
-1.  Update `vite.config.ts` `base` URL if you are deploying to a project page (e.g., `/repo-name/`). Currently set to `./` for relative paths which usually works for both user sites and project sites if configured correctly, but explicit base is better for routing.
-    *   If your repo is `username.github.io`, `base: '/'` is fine.
-    *   If your repo is `username.github.io/repo`, set `base: '/repo/'`.
-
-2.  **Deploy Script**
-    The `package.json` includes a `deploy` script using `gh-pages`.
+    **部署步骤**:
     ```bash
     pnpm run deploy
     ```
-    This will build the project and push the `dist` folder to the `gh-pages` branch.
+    此命令会自动执行构建 (`pnpm build`) 并将 `dist` 目录推送到 `gh-pages` 分支。
 
-## Data Management (API)
+## 常见问题
 
-The wiki content is currently managed in `src/data/wikiData.ts`.
+### 为什么有两个分支？
+-   `main`: 是你的**源码**，包含 React 组件、TypeScript 代码和原始 Markdown 文档。你应该在这里进行所有的编辑和提交。
+-   `gh-pages`: 是**发布代码**，包含经过 Vite 编译、压缩后的 HTML/CSS/JS 文件。浏览器只能运行这些编译后的代码。你**不需要**手动修改这个分支，部署脚本会处理一切。
 
-### `WikiPage` Interface
+### 为什么 gh-pages 文件很少？
+因为它只包含编译后的产物（通常是一个 `index.html` 和 `assets` 文件夹），源码中的 TypeScript、React 组件等都被打包成了浏览器可识别的最小化 JavaScript 文件。
 
-```typescript
-interface WikiPage {
-  id: string;       // Unique identifier
-  title: string;    // Display title
-  slug: string;     // URL segment (e.g., 'react')
-  content?: string; // Markdown content
-  children?: WikiPage[]; // Nested pages
-}
-```
+## 许可证
 
-To add a new page:
-1.  Open `src/data/wikiData.ts`.
-2.  Add a new object to the `wikiData` array or the `children` array of an existing page.
-3.  Ensure the `slug` is unique among siblings.
-
-## Future Improvements
-
-- [ ] Mobile Sidebar (Drawer)
-- [ ] Search functionality
-- [ ] Backend integration (API calls)
-- [ ] Dynamic content loading (fetch Markdown from files instead of string literals)
+MIT
