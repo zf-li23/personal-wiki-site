@@ -9,12 +9,6 @@ export default function Wiki() {
   const params = useParams();
   const path = params['*'] || '';
 
-  // Redirect to first page if at root /wiki
-  if (!path && wikiData.length > 0) {
-     const firstPage = wikiData[0];
-     return <Navigate to={`/wiki/${firstPage.slug}`} replace />;
-  }
-
   const result = useMemo(() => findPageByPath(path), [path]);
   const page = result?.page;
   const ancestors = result?.ancestors || [];
@@ -89,6 +83,12 @@ export default function Wiki() {
     const finalParts = [...prefixParts, displayTitle];
     return finalParts.join(' - ');
   }, [page, ancestors]);
+
+  // Redirect to first page if at root /wiki
+  if (!path && wikiData.length > 0) {
+     const firstPage = wikiData[0];
+     return <Navigate to={`/wiki/${firstPage.slug}`} replace />;
+  }
 
   return (
     <div className="flex min-h-[calc(100vh-3.5rem)]">
