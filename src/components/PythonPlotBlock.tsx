@@ -73,9 +73,13 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                 matplotlib.use("Agg")
                 import matplotlib.pyplot as plt
                 import io, base64
+                import sys
                 
                 # Mock plt.show to do nothing (we capture manually)
-                plt.show = lambda: None
+                # We define it to print a message so we know it was called
+                def noop_show(*args, **kwargs):
+                    print("Debug: plt.show() called (ignored)")
+                plt.show = noop_show
 
                 # Set style based on theme
                 if ${isDark ? 'True' : 'False'}:
@@ -92,19 +96,24 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
             window.pyodide.setStdout({ batched: (msg: string) => setOutput(prev => prev + msg + '\n') });
 
             // Run user code
+            console.log("Running user code...");
             await window.pyodide.runPythonAsync(code);
 
             // Get plot
             const image = await window.pyodide.runPythonAsync(`
                 buf = io.BytesIO()
                 # Check if any figure exists
-                if plt.get_fignums():
+                fignums = plt.get_fignums()
+                print(f"Debug: Active figures: {fignums}")
+                
+                if fignums:
                     plt.savefig(buf, format='png', bbox_inches='tight')
                     buf.seek(0)
                     img_str = base64.b64encode(buf.read()).decode('utf-8')
                     plt.close('all')
                     img_str
                 else:
+                    print("Debug: No figures found to save.")
                     ""
             `);
             
