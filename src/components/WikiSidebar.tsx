@@ -28,25 +28,8 @@ export default function WikiSidebar({
   // Auto-expand active path on mount and when location changes
   useEffect(() => {
     const currentPath = location.pathname;
-    // If we are at /wiki/1.DiscreteMath/1.1.Logic
-    // We need to expand /wiki/1.DiscreteMath
-    
-    // Simple logic: Expand all parents of the current active page
-    // The data structure is recursive, so we might need to traverse or just rely on the fact
-    // that we render recursively.
-    
-    // Actually, since we are rendering recursively, we can just check if a child is active
-    // But here we are at a specific level.
-    
-    // Let's just expand the current path's parents.
-    // Since we don't have a flat list of parents easily here without traversing,
-    // we can just set expanded based on the URL segments.
-    
-    // Example: /wiki/A/B/C
-    // Expand /wiki/A and /wiki/A/B
     
     const parts = currentPath.split('/').filter(Boolean);
-    // parts: ['wiki', 'A', 'B', 'C']
     
     const keysToExpand: Record<string, boolean> = {};
     let pathAccumulator = '';
@@ -106,27 +89,6 @@ export default function WikiSidebar({
                 <Link
                   to={currentPath}
                   onClick={() => handleLinkClick(currentPath, !!hasChildren)}
-                  className={cn(
-                    "flex-1 block py-1.5 pr-2 text-sm hover:text-primary transition-colors rounded-r-md relative",
-                    isActive 
-                      ? "font-medium text-primary bg-accent/50 border-l-2 border-primary -ml-[1px]" 
-                      : "text-muted-foreground border-l border-transparent"
-                  )}
-                  style={{ paddingLeft: `${level * 12 + (hasChildren ? 20 : 12)}px` }}
-                >
-                  <span className="mr-2 opacity-70 text-xs font-mono">{currentIndex}</span>
-                  {page.title}
-                </Link>
-            </div>
-                        // If we want to toggle expand on click, we can do it here.
-                        // But we also want to navigate.
-                        // We don't prevent default.
-                        setExpanded(prev => ({
-                            ...prev,
-                            [currentPath]: !prev[currentPath]
-                        }));
-                    }
-                  }}
                   className={cn(
                     "flex-1 block py-1.5 pr-2 text-sm hover:text-primary transition-colors rounded-r-md relative",
                     isActive 
