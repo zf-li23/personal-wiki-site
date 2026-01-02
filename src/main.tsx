@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
-console.log('Wiki Site Version: 2026-01-02-Fix-Queue-v2');
+console.log('Wiki Site Version: 2026-01-02-Clean-Logs');
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

@@ -76,9 +76,8 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                 import sys
                 
                 # Mock plt.show to do nothing (we capture manually)
-                # We define it to print a message so we know it was called
                 def noop_show(*args, **kwargs):
-                    print("Debug: plt.show() called (ignored)")
+                    pass
                 plt.show = noop_show
 
                 # Set style based on theme
@@ -106,7 +105,6 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                     buf = io.BytesIO()
                     # Check if any figure exists
                     fignums = plt.get_fignums()
-                    print(f"Debug: Active figures: {fignums}")
                     
                     if fignums:
                         try:
@@ -114,12 +112,10 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                             buf.seek(0)
                             return base64.b64encode(buf.read()).decode('utf-8')
                         except Exception as e:
-                            print(f"Debug: Savefig error: {e}")
                             return ""
                         finally:
                             plt.close('all')
                     else:
-                        print("Debug: No figures found to save.")
                         return ""
                 
                 _extract_plot_data()
