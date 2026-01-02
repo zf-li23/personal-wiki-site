@@ -108,7 +108,7 @@ export default function Wiki() {
                 <h1 className="text-4xl font-bold tracking-tight">{compositeTitle}</h1>
               </div>
               {page.content ? (
-                <MarkdownRenderer content={page.content} />
+                <MarkdownRenderer content={page.content} currentPath={page.slug} />
               ) : (
                 <p className="text-muted-foreground italic">This page has no content yet.</p>
               )}
