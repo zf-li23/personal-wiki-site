@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface PythonPlotBlockProps {
   code: string;
@@ -11,6 +11,12 @@ declare global {
   }
 }
 
+// Global queue to serialize Pyodide execution across all component instances
+const queueKey = '__pyodide_execution_queue__';
+if (!(window as any)[queueKey]) {
+    (window as any)[queueKey] = Promise.resolve();
+}
+
 export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
   const [showCode, setShowCode] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -18,10 +24,10 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
   const [plotImage, setPlotImage] = useState<string>('');
   const [error, setError] = useState('');
   const [isPyodideLoaded, setIsPyodideLoaded] = useState(false);
+  const hasRunRef = useRef(false);
 
-  // Global execution queue to prevent race conditions with matplotlib state
+  // Check if Pyodide script is already added
   useEffect(() => {
-    // Check if Pyodide script is already added
     const scriptId = 'pyodide-script';
     const existingScript = document.getElementById(scriptId) as HTMLScriptElement;
 
@@ -49,16 +55,10 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
     setOutput('');
     setPlotImage('');
 
-    // Use a global queue to serialize execution
-    // We attach the promise to the window object to ensure it's shared across all instances
-    // even if HMR reloads the module.
-    const queueKey = '__pyodide_execution_queue__';
-    if (!(window as any)[queueKey]) {
-        (window as any)[queueKey] = Promise.resolve();
-    }
-
+    // Append to global queue
     (window as any)[queueKey] = (window as any)[queueKey].then(async () => {
         try {
+            // Initialize Pyodide if needed (only once globally)
             if (!window.pyodide) {
                 window.pyodide = await window.loadPyodide();
                 await window.pyodide.loadPackage(['matplotlib', 'numpy']);
@@ -67,6 +67,7 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
             const isDark = document.documentElement.classList.contains('dark');
 
             // Setup matplotlib backend to Agg and set theme
+            // We must do this BEFORE every plot to ensure clean state
             await window.pyodide.runPythonAsync(`
                 import matplotlib
                 matplotlib.use("Agg")
@@ -82,8 +83,9 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                 else:
                     plt.style.use('default')
                 
-                # Reset figure
+                # Reset figure explicitly
                 plt.clf()
+                plt.close('all')
             `);
 
             // Capture stdout
@@ -95,11 +97,15 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
             // Get plot
             const image = await window.pyodide.runPythonAsync(`
                 buf = io.BytesIO()
-                plt.savefig(buf, format='png', bbox_inches='tight')
-                buf.seek(0)
-                img_str = base64.b64encode(buf.read()).decode('utf-8')
-                plt.close()
-                img_str
+                # Check if any figure exists
+                if plt.get_fignums():
+                    plt.savefig(buf, format='png', bbox_inches='tight')
+                    buf.seek(0)
+                    img_str = base64.b64encode(buf.read()).decode('utf-8')
+                    plt.close('all')
+                    img_str
+                else:
+                    ""
             `);
             
             if (image) {
@@ -116,7 +122,8 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
 
   // Auto-run once when visible/loaded
   useEffect(() => {
-      if (isPyodideLoaded && !plotImage && !error && !isLoading) {
+      if (isPyodideLoaded && !hasRunRef.current) {
+          hasRunRef.current = true;
           runPython();
       }
   }, [isPyodideLoaded]);

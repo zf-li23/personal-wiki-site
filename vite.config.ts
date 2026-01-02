@@ -33,4 +33,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Force chunk names to not start with _ to avoid Jekyll issues on GitHub Pages
+        chunkFileNames: (chunkInfo) => {
+          const name = chunkInfo.name.replace(/^_/, 'safe_');
+          return `assets/js/${name}-[hash].js`;
+        },
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+      }
+    }
+  }
 })
