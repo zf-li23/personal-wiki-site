@@ -3,6 +3,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import 'highlight.js/styles/github-dark.css';
 import 'katex/dist/katex.min.css';
 import { useState } from 'react';
@@ -49,23 +50,25 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
   const processedContent = preprocessMath(content);
 
   // Calculate base path for images
-  // currentPath is like "1.DiscreteMath/index" or "1.DiscreteMath"
-  // We want the folder path.
-  // If it ends with /index, remove it.
-  const folderPath = currentPath ? currentPath.replace(/\/index$/, '') : '';
+  // currentPath is the slug, e.g. "1.DiscreteMath/index" or "1.DiscreteMath/1.1.Logic"
+  // Since the wiki structure is folder-based (index.md files), the slug represents the folder.
+  // We use the slug directly as the folder path.
+  const folderPath = currentPath || '';
   
   // Base URL for assets
   // In dev: /personal-wiki-site/wiki-content/FOLDER/IMAGE
   // In prod: /personal-wiki-site/wiki-content/FOLDER/IMAGE
   // Note: vite-plugin-static-copy puts files in dist/wiki-content
   // Vite base is /personal-wiki-site/
+  // If folderPath is empty, we shouldn't add a trailing slash if we want to be clean, but double slash is usually fine.
   const assetBase = `/personal-wiki-site/wiki-content/${folderPath}`;
 
   return (
     <div className="prose prose-slate dark:prose-invert max-w-none">
       <ReactMarkdown 
         remarkPlugins={[remarkGfm, remarkMath]} 
-        rehypePlugins={[rehypeHighlight, rehypeKatex]}
+        rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeKatex]}
+        remarkRehypeOptions={{ allowDangerousHtml: true }}
         components={{
           img({ src, alt, ...props }) {
              let finalSrc = src;
@@ -73,6 +76,10 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
                  // Relative path
                  // Remove ./ prefix if present
                  const cleanSrc = src.replace(/^\.\//, '');
+                 // Join with assetBase
+                 // If assetBase ends with /, don't add another.
+                 // But assetBase is constructed with template literal, might not end with /.
+                 // folderPath might be empty.
                  finalSrc = `${assetBase}/${cleanSrc}`.replace(/\/+/g, '/');
              }
              return <img src={finalSrc} alt={alt} {...props} className="rounded-lg shadow-md max-w-full mx-auto" />;
@@ -81,25 +88,22 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
             const match = /language-(\w+)/.exec(className || '');
             const codeText = String(children).replace(/\n$/, '');
             const language = match ? match[1] : '';
+            const isMultiLine = codeText.includes('\n');
 
-            if (!inline) {
+            // Treat as block if it's explicitly not inline, OR if it has a language, OR if it's multiline
+            // This helps when rehype-raw or other plugins might mess up the 'inline' prop
+            const isBlock = !inline && (match || isMultiLine);
+
+            if (isBlock) {
                 if (language === 'mermaid') {
                     return <MermaidBlock code={codeText} />;
                 }
-                if (language === 'python-plot' || (language === 'python' && codeText.includes('plt.show') || codeText.includes('plt.savefig'))) {
-                    // Use PythonPlotBlock for explicit 'python-plot' or python code that looks like plotting
-                    // Actually, let's stick to explicit 'python-plot' or maybe just 'python' if user wants?
-                    // User said "support using python to draw".
-                    // Let's use a specific language tag 'python-plot' to be safe, 
-                    // or just 'python' if it imports matplotlib?
-                    // Let's check for 'python-plot' OR if the code imports matplotlib.
-                    if (language === 'python-plot' || codeText.includes('import matplotlib')) {
-                        return <PythonPlotBlock code={codeText} />;
-                    }
+                if (language === 'python-plot' || (language === 'python' && codeText.includes('import matplotlib'))) {
+                    return <PythonPlotBlock code={codeText} />;
                 }
 
               return (
-                <div className="relative group">
+                <div className="relative group my-4">
                   <CopyButton text={codeText} />
                   <code className={className} {...props}>
                     {children}
@@ -110,7 +114,7 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
             
             // Inline code styling
             return (
-              <code className={`${className} bg-muted px-1.5 py-0.5 rounded text-sm font-mono before:content-[''] after:content-['']`} {...props}>
+              <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground" {...props}>
                 {children}
               </code>
             );

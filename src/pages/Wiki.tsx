@@ -91,11 +91,11 @@ export default function Wiki() {
   }, [page, ancestors]);
 
   return (
-    <div className="flex h-[calc(100vh-3.5rem)]">
-      <aside className="w-80 border-r border-border overflow-y-auto hidden md:block py-6 pr-4 pl-2 bg-muted/10">
+    <div className="flex min-h-[calc(100vh-3.5rem)]">
+      <aside className="w-80 border-r border-border hidden md:block py-6 pr-4 pl-2 bg-muted/10 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto">
          <WikiSidebar data={wikiData} toc={toc} />
       </aside>
-      <main className="flex-1 overflow-y-auto p-6 md:p-10 scroll-smooth">
+      <main className="flex-1 p-6 md:p-10">
         <div className="max-w-4xl mx-auto">
           {!page ? (
             <div className="py-10">

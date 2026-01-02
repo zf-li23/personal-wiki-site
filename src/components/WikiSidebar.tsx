@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { WikiPage } from '@/data/wikiData';
 import { TOCItem, cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
+import { ChevronRight, ChevronDown } from 'lucide-react';
 
 interface WikiSidebarProps {
   data: WikiPage[];
@@ -18,6 +20,67 @@ export default function WikiSidebar({
   indexPrefix = ''
 }: WikiSidebarProps) {
   const location = useLocation();
+  
+  // State to track expanded items
+  // We use a map of path -> boolean
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  // Auto-expand active path on mount and when location changes
+  useEffect(() => {
+    const currentPath = location.pathname;
+    // If we are at /wiki/1.DiscreteMath/1.1.Logic
+    // We need to expand /wiki/1.DiscreteMath
+    
+    // Simple logic: Expand all parents of the current active page
+    // The data structure is recursive, so we might need to traverse or just rely on the fact
+    // that we render recursively.
+    
+    // Actually, since we are rendering recursively, we can just check if a child is active
+    // But here we are at a specific level.
+    
+    // Let's just expand the current path's parents.
+    // Since we don't have a flat list of parents easily here without traversing,
+    // we can just set expanded based on the URL segments.
+    
+    // Example: /wiki/A/B/C
+    // Expand /wiki/A and /wiki/A/B
+    
+    const parts = currentPath.split('/').filter(Boolean);
+    // parts: ['wiki', 'A', 'B', 'C']
+    
+    const keysToExpand: Record<string, boolean> = {};
+    let pathAccumulator = '';
+    
+    parts.forEach((part, index) => {
+        if (index === 0 && part === 'wiki') {
+            pathAccumulator = '/wiki';
+        } else {
+            pathAccumulator = `${pathAccumulator}/${part}`;
+        }
+        // Expand this path
+        keysToExpand[pathAccumulator] = true;
+    });
+    
+    setExpanded(prev => ({ ...prev, ...keysToExpand }));
+  }, [location.pathname]);
+
+  const toggleExpand = (path: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setExpanded(prev => ({
+      ...prev,
+      [path]: !prev[path]
+    }));
+  };
+
+  const handleLinkClick = (path: string, hasChildren: boolean) => {
+    if (hasChildren) {
+        setExpanded(prev => ({
+            ...prev,
+            [path]: true
+        }));
+    }
+  };
 
   return (
     <nav className={cn("space-y-1", level > 0 && "mt-1")}>
@@ -25,22 +88,57 @@ export default function WikiSidebar({
         const currentPath = `${basePath}/${page.slug}`;
         const isActive = location.pathname === currentPath;
         const currentIndex = indexPrefix ? `${indexPrefix}.${index + 1}` : `${index + 1}`;
+        const hasChildren = page.children && page.children.length > 0;
+        const isExpanded = expanded[currentPath];
 
         return (
           <div key={page.id} className="relative">
-            <Link
-              to={currentPath}
-              className={cn(
-                "block py-1.5 pr-2 text-sm hover:text-primary transition-colors rounded-r-md",
-                isActive 
-                  ? "font-medium text-primary bg-accent/50 border-l-2 border-primary -ml-[1px]" 
-                  : "text-muted-foreground border-l border-transparent"
-              )}
-              style={{ paddingLeft: `${level * 12 + 12}px` }}
-            >
-              <span className="mr-2 opacity-70 text-xs font-mono">{currentIndex}</span>
-              {page.title}
-            </Link>
+            <div className="flex items-center group">
+                {hasChildren && (
+                    <button 
+                        onClick={(e) => toggleExpand(currentPath, e)}
+                        className="absolute left-0 p-1 hover:bg-accent rounded-sm text-muted-foreground z-10"
+                        style={{ left: `${level * 12}px` }}
+                    >
+                        {isExpanded ? <ChevronDown className="h-3 w-3" /> : <ChevronRight className="h-3 w-3" />}
+                    </button>
+                )}
+                <Link
+                  to={currentPath}
+                  onClick={() => handleLinkClick(currentPath, !!hasChildren)}
+                  className={cn(
+                    "flex-1 block py-1.5 pr-2 text-sm hover:text-primary transition-colors rounded-r-md relative",
+                    isActive 
+                      ? "font-medium text-primary bg-accent/50 border-l-2 border-primary -ml-[1px]" 
+                      : "text-muted-foreground border-l border-transparent"
+                  )}
+                  style={{ paddingLeft: `${level * 12 + (hasChildren ? 20 : 12)}px` }}
+                >
+                  <span className="mr-2 opacity-70 text-xs font-mono">{currentIndex}</span>
+                  {page.title}
+                </Link>
+            </div>
+                        // If we want to toggle expand on click, we can do it here.
+                        // But we also want to navigate.
+                        // We don't prevent default.
+                        setExpanded(prev => ({
+                            ...prev,
+                            [currentPath]: !prev[currentPath]
+                        }));
+                    }
+                  }}
+                  className={cn(
+                    "flex-1 block py-1.5 pr-2 text-sm hover:text-primary transition-colors rounded-r-md relative",
+                    isActive 
+                      ? "font-medium text-primary bg-accent/50 border-l-2 border-primary -ml-[1px]" 
+                      : "text-muted-foreground border-l border-transparent"
+                  )}
+                  style={{ paddingLeft: `${level * 12 + (hasChildren ? 20 : 12)}px` }}
+                >
+                  <span className="mr-2 opacity-70 text-xs font-mono">{currentIndex}</span>
+                  {page.title}
+                </Link>
+            </div>
             
             {isActive && toc && toc.length > 0 && (
               <div className="my-1 space-y-1 border-l border-border ml-4" style={{ marginLeft: `${level * 12 + 12}px` }}>
@@ -59,9 +157,9 @@ export default function WikiSidebar({
               </div>
             )}
 
-            {page.children && (
+            {hasChildren && isExpanded && (
               <WikiSidebar 
-                data={page.children} 
+                data={page.children!} 
                 toc={toc} 
                 basePath={currentPath} 
                 level={level + 1}
