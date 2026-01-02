@@ -16,7 +16,7 @@
 
 逆否命题： $\lnot q \to \lnot p$
 
-![四种命题间的逆否关系](https://files.mdnice.com/user/86063/d505d8ec-4830-4ec2-8fb5-9f04bf2b011c.png)
+![四种命题间的逆否关系](./1_1_2_1.png)
 
 一个命题与它的逆否命题等值： $p \to q = \lnot q \to \lnot p$
 
