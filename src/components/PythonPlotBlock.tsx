@@ -19,6 +19,7 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
   const [error, setError] = useState('');
   const [isPyodideLoaded, setIsPyodideLoaded] = useState(false);
 
+  // Global execution queue to prevent race conditions with matplotlib state
   useEffect(() => {
     // Check if Pyodide script is already added
     const scriptId = 'pyodide-script';
@@ -48,60 +49,69 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
     setOutput('');
     setPlotImage('');
 
-    try {
-      if (!window.pyodide) {
-        window.pyodide = await window.loadPyodide();
-        await window.pyodide.loadPackage(['matplotlib', 'numpy']);
-      }
-
-      const isDark = document.documentElement.classList.contains('dark');
-
-      // Setup matplotlib backend to Agg and set theme
-      await window.pyodide.runPythonAsync(`
-        import matplotlib
-        matplotlib.use("Agg")
-        import matplotlib.pyplot as plt
-        import io, base64
-        
-        # Mock plt.show to do nothing (we capture manually)
-        plt.show = lambda: None
-
-        # Set style based on theme
-        if ${isDark ? 'True' : 'False'}:
-            plt.style.use('dark_background')
-        else:
-            plt.style.use('default')
-        
-        # Reset figure
-        plt.clf()
-      `);
-
-      // Capture stdout
-      window.pyodide.setStdout({ batched: (msg: string) => setOutput(prev => prev + msg + '\n') });
-
-      // Run user code
-      await window.pyodide.runPythonAsync(code);
-
-      // Get plot
-      const image = await window.pyodide.runPythonAsync(`
-        buf = io.BytesIO()
-        plt.savefig(buf, format='png', bbox_inches='tight')
-        buf.seek(0)
-        img_str = base64.b64encode(buf.read()).decode('utf-8')
-        plt.close()
-        img_str
-      `);
-      
-      if (image) {
-          setPlotImage(`data:image/png;base64,${image}`);
-      }
-
-    } catch (err: any) {
-      console.error('Python execution error:', err);
-      setError(err.message);
-    } finally {
-      setIsLoading(false);
+    // Use a global queue to serialize execution
+    // We attach the promise to the window object to ensure it's shared across all instances
+    // even if HMR reloads the module.
+    const queueKey = '__pyodide_execution_queue__';
+    if (!(window as any)[queueKey]) {
+        (window as any)[queueKey] = Promise.resolve();
     }
+
+    (window as any)[queueKey] = (window as any)[queueKey].then(async () => {
+        try {
+            if (!window.pyodide) {
+                window.pyodide = await window.loadPyodide();
+                await window.pyodide.loadPackage(['matplotlib', 'numpy']);
+            }
+
+            const isDark = document.documentElement.classList.contains('dark');
+
+            // Setup matplotlib backend to Agg and set theme
+            await window.pyodide.runPythonAsync(`
+                import matplotlib
+                matplotlib.use("Agg")
+                import matplotlib.pyplot as plt
+                import io, base64
+                
+                # Mock plt.show to do nothing (we capture manually)
+                plt.show = lambda: None
+
+                # Set style based on theme
+                if ${isDark ? 'True' : 'False'}:
+                    plt.style.use('dark_background')
+                else:
+                    plt.style.use('default')
+                
+                # Reset figure
+                plt.clf()
+            `);
+
+            // Capture stdout
+            window.pyodide.setStdout({ batched: (msg: string) => setOutput(prev => prev + msg + '\n') });
+
+            // Run user code
+            await window.pyodide.runPythonAsync(code);
+
+            // Get plot
+            const image = await window.pyodide.runPythonAsync(`
+                buf = io.BytesIO()
+                plt.savefig(buf, format='png', bbox_inches='tight')
+                buf.seek(0)
+                img_str = base64.b64encode(buf.read()).decode('utf-8')
+                plt.close()
+                img_str
+            `);
+            
+            if (image) {
+                setPlotImage(`data:image/png;base64,${image}`);
+            }
+        } catch (err: any) {
+            console.error('Python execution error:', err);
+            setError(err.message);
+        } finally {
+            setIsLoading(false);
+        }
+    });
   };
 
   // Auto-run once when visible/loaded

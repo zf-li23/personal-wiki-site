@@ -27,9 +27,15 @@ export default function MermaidBlock({ code }: MermaidBlockProps) {
         const { svg } = await mermaid.render(id, code);
         setSvgContent(svg);
         setError('');
-      } catch (err) {
+      } catch (err: any) {
         console.error('Mermaid render error:', err);
-        setError('Failed to render diagram. Please check syntax.');
+        // Try to show a more helpful error message
+        const msg = err.message || 'Unknown error';
+        if (msg.includes('Failed to fetch dynamically imported module')) {
+            setError('Failed to load Mermaid modules. Please try refreshing the page (Ctrl+F5).');
+        } else {
+            setError(`Failed to render diagram: ${msg}`);
+        }
       }
     };
 
