@@ -21,14 +21,22 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
 
   useEffect(() => {
     // Check if Pyodide script is already added
-    if (!document.getElementById('pyodide-script')) {
+    const scriptId = 'pyodide-script';
+    const existingScript = document.getElementById(scriptId) as HTMLScriptElement;
+
+    if (!existingScript) {
       const script = document.createElement('script');
-      script.id = 'pyodide-script';
+      script.id = scriptId;
       script.src = 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js';
       script.onload = () => setIsPyodideLoaded(true);
       document.body.appendChild(script);
-    } else if (window.loadPyodide) {
-      setIsPyodideLoaded(true);
+    } else {
+      if (window.loadPyodide) {
+        setIsPyodideLoaded(true);
+      } else {
+        // Script exists but not loaded, wait for it
+        existingScript.addEventListener('load', () => setIsPyodideLoaded(true));
+      }
     }
   }, []);
 
@@ -55,6 +63,9 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
         import matplotlib.pyplot as plt
         import io, base64
         
+        # Mock plt.show to do nothing (we capture manually)
+        plt.show = lambda: None
+
         # Set style based on theme
         if ${isDark ? 'True' : 'False'}:
             plt.style.use('dark_background')
