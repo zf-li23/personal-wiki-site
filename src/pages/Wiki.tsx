@@ -95,8 +95,8 @@ export default function Wiki() {
       <aside className="w-80 border-r border-border hidden md:block py-6 pr-4 pl-2 bg-muted/10 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto">
          <WikiSidebar data={wikiData} toc={toc} />
       </aside>
-      <main className="flex-1 p-6 md:p-10">
-        <div className="max-w-4xl mx-auto">
+      <main className="flex-1 p-4 md:p-10 min-w-0 overflow-x-hidden">
+        <div className="max-w-4xl mx-auto w-full">
           {!page ? (
             <div className="py-10">
               <h1 className="text-2xl font-bold text-destructive">Page Not Found</h1>

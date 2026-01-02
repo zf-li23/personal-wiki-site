@@ -67,7 +67,11 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
     <div className="prose prose-slate dark:prose-invert max-w-none">
       <ReactMarkdown 
         remarkPlugins={[remarkGfm, remarkMath]} 
-        rehypePlugins={[rehypeRaw, rehypeHighlight, rehypeKatex]}
+        rehypePlugins={[
+          rehypeRaw, 
+          rehypeHighlight, 
+          [rehypeKatex, { strict: false }]
+        ]}
         remarkRehypeOptions={{ allowDangerousHtml: true }}
         components={{
           img({ src, alt, ...props }) {

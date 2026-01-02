@@ -48,6 +48,32 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+@layer utilities {
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding: 0.5em 0;
+    /* Make scrollbar nicer */
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted-foreground) transparent;
+  }
+  
+  .katex-display::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .katex-display::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .katex-display::-webkit-scrollbar-thumb {
+    background-color: var(--muted-foreground);
+    border-radius: 3px;
+    opacity: 0.5;
+  }
+}
  
 @layer base {
   * {
