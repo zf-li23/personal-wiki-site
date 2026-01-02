@@ -101,24 +101,36 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
 
             // Get plot
             const image = await window.pyodide.runPythonAsync(`
-                buf = io.BytesIO()
-                # Check if any figure exists
-                fignums = plt.get_fignums()
-                print(f"Debug: Active figures: {fignums}")
+                import io, base64
+                def _extract_plot_data():
+                    buf = io.BytesIO()
+                    # Check if any figure exists
+                    fignums = plt.get_fignums()
+                    print(f"Debug: Active figures: {fignums}")
+                    
+                    if fignums:
+                        try:
+                            plt.savefig(buf, format='png', bbox_inches='tight')
+                            buf.seek(0)
+                            return base64.b64encode(buf.read()).decode('utf-8')
+                        except Exception as e:
+                            print(f"Debug: Savefig error: {e}")
+                            return ""
+                        finally:
+                            plt.close('all')
+                    else:
+                        print("Debug: No figures found to save.")
+                        return ""
                 
-                if fignums:
-                    plt.savefig(buf, format='png', bbox_inches='tight')
-                    buf.seek(0)
-                    img_str = base64.b64encode(buf.read()).decode('utf-8')
-                    plt.close('all')
-                    img_str
-                else:
-                    print("Debug: No figures found to save.")
-                    ""
+                _extract_plot_data()
             `);
             
-            if (image) {
+            console.log("Debug: JS received image string length:", image ? image.length : 0);
+            
+            if (image && image.length > 0) {
                 setPlotImage(`data:image/png;base64,${image}`);
+            } else {
+                console.warn("Debug: No image data received from Python");
             }
         } catch (err: any) {
             console.error('Python execution error:', err);
