@@ -121,12 +121,8 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
                 _extract_plot_data()
             `);
             
-            console.log("Debug: JS received image string length:", image ? image.length : 0);
-            
             if (image && image.length > 0) {
                 setPlotImage(`data:image/png;base64,${image}`);
-            } else {
-                console.warn("Debug: No image data received from Python");
             }
         } catch (err: any) {
             console.error('Python execution error:', err);
