@@ -82,6 +82,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Fix for anchor scrolling offset */
+  h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 5rem; /* 3.5rem header + 1.5rem buffer */
+  }
 }
 
 /* Fix for inline code styling in prose */
