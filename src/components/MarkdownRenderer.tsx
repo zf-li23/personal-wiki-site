@@ -9,6 +9,7 @@ import 'katex/dist/katex.min.css';
 import { useState } from 'react';
 import MermaidBlock from './MermaidBlock';
 import PythonPlotBlock from './PythonPlotBlock';
+import { generateId } from '@/lib/utils';
 
 interface MarkdownRendererProps {
   content: string;
@@ -74,6 +75,14 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
         ]}
         remarkRehypeOptions={{ allowDangerousHtml: true }}
         components={{
+          h2({ children, ...props }) {
+            const id = generateId(String(children));
+            return <h2 id={id} {...props}>{children}</h2>;
+          },
+          h3({ children, ...props }) {
+            const id = generateId(String(children));
+            return <h3 id={id} {...props}>{children}</h3>;
+          },
           img({ src, alt, ...props }) {
              let finalSrc = src;
              if (src && !src.startsWith('http') && !src.startsWith('/')) {

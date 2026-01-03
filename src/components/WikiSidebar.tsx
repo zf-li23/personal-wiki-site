@@ -69,10 +69,15 @@ export default function WikiSidebar({
     <nav className={cn("space-y-1", level > 0 && "mt-1")}>
       {data.map((page, index) => {
         const currentPath = `${basePath}/${page.slug}`;
-        const isActive = location.pathname === currentPath;
+        // Decode location.pathname to ensure matching works with Chinese characters
+        const decodedLocationPath = decodeURIComponent(location.pathname);
+        // Also handle potential trailing slashes for robustness
+        const normalize = (p: string) => p.replace(/\/$/, '');
+        const isActive = normalize(decodedLocationPath) === normalize(currentPath);
+        
         const currentIndex = indexPrefix ? `${indexPrefix}.${index + 1}` : `${index + 1}`;
         const hasChildren = page.children && page.children.length > 0;
-        const isExpanded = expanded[currentPath];
+        const isExpanded = expanded[currentPath]; // Use raw path for state keys
 
         return (
           <div key={page.id} className="relative">
@@ -102,16 +107,25 @@ export default function WikiSidebar({
                 </Link>
             </div>
             
+            {/* Render TOC if active and has items */}
             {isActive && toc && toc.length > 0 && (
               <div className="my-1 space-y-1 border-l border-border ml-4" style={{ marginLeft: `${level * 12 + 12}px` }}>
                 {toc.map((item) => (
                   <a
                     key={item.id}
                     href={`#${item.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById(item.id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                     className={cn(
-                      "block py-1 text-xs hover:text-primary transition-colors text-muted-foreground pl-4 border-l border-transparent hover:border-muted-foreground/50",
+                      "block py-1 text-xs hover:text-primary transition-colors text-muted-foreground pl-4 border-l border-transparent hover:border-muted-foreground/50 truncate",
                       item.level === 3 && "pl-6"
                     )}
+                    title={item.text}
                   >
                     {item.text}
                   </a>

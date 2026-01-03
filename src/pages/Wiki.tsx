@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import { wikiData, findPageByPath } from '@/data/wikiData';
 import WikiSidebar from '@/components/WikiSidebar';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
@@ -111,6 +111,40 @@ export default function Wiki() {
                 <MarkdownRenderer content={page.content} currentPath={page.slug} />
               ) : (
                 <p className="text-muted-foreground italic">This page has no content yet.</p>
+              )}
+
+              {/* Automatic Directory for Folder Pages */}
+              {page.children && page.children.length > 0 && (
+                <div className="mt-12 pt-8 border-t border-border">
+                  <h2 className="text-2xl font-bold mb-6">目录</h2>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {page.children.map(child => {
+                      // Extract numbering from slug (e.g. "1.1.Logic" -> "1.1")
+                      const childNumbering = child.slug.split('/').pop()?.match(/^([\d\.]+)/)?.[1] || '';
+                      // If title doesn't start with numbering, prepend it
+                      const displayTitle = childNumbering && !child.title.startsWith(childNumbering) 
+                        ? `${childNumbering} ${child.title}` 
+                        : child.title;
+
+                      return (
+                        <Link 
+                          key={child.slug}
+                          to={child.slug}
+                          className="block p-4 rounded-lg border border-border bg-card hover:bg-accent/50 transition-colors group"
+                        >
+                          <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">
+                            {displayTitle}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {child.children && child.children.length > 0 
+                              ? `${child.children.length} 个子章节` 
+                              : '文档'}
+                          </p>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
               )}
             </>
           )}
