@@ -4,12 +4,12 @@ import remarkMath from 'remark-math';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
+import rehypeSlug from 'rehype-slug';
 import 'highlight.js/styles/github-dark.css';
 import 'katex/dist/katex.min.css';
 import { useState } from 'react';
 import MermaidBlock from './MermaidBlock';
 import PythonPlotBlock from './PythonPlotBlock';
-import { generateId } from '@/lib/utils';
 
 interface MarkdownRendererProps {
   content: string;
@@ -70,19 +70,12 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
         remarkPlugins={[remarkGfm, remarkMath]} 
         rehypePlugins={[
           rehypeRaw, 
+          rehypeSlug,
           rehypeHighlight, 
           [rehypeKatex, { strict: false }]
         ]}
         remarkRehypeOptions={{ allowDangerousHtml: true }}
         components={{
-          h2({ children, ...props }) {
-            const id = generateId(String(children));
-            return <h2 id={id} {...props}>{children}</h2>;
-          },
-          h3({ children, ...props }) {
-            const id = generateId(String(children));
-            return <h3 id={id} {...props}>{children}</h3>;
-          },
           img({ src, alt, ...props }) {
              let finalSrc = src;
              if (src && !src.startsWith('http') && !src.startsWith('/')) {
