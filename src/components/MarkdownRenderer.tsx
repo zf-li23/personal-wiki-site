@@ -10,6 +10,7 @@ import 'katex/dist/katex.min.css';
 import { useState } from 'react';
 import MermaidBlock from './MermaidBlock';
 import PythonPlotBlock from './PythonPlotBlock';
+import { cn } from '@/lib/utils';
 
 interface MarkdownRendererProps {
   content: string;
@@ -76,6 +77,26 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
         ]}
         remarkRehypeOptions={{ allowDangerousHtml: true }}
         components={{
+          div({ className, children, ...props }) {
+            if (className?.includes('katex-display')) {
+              return (
+                <div className={cn("overflow-x-auto max-w-full py-2", className)} {...props}>
+                  {children}
+                </div>
+              );
+            }
+            return <div className={className} {...props}>{children}</div>;
+          },
+          span({ className, children, ...props }) {
+            if (className?.includes('katex-display')) {
+              return (
+                <span className={cn("block overflow-x-auto max-w-full py-2", className)} {...props}>
+                  {children}
+                </span>
+              );
+            }
+            return <span className={className} {...props}>{children}</span>;
+          },
           img({ src, alt, ...props }) {
              let finalSrc = src;
              if (src && !src.startsWith('http') && !src.startsWith('/')) {
