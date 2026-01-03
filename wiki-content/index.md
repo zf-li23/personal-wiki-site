@@ -1,253 +1,299 @@
-## 12.1. 实数集合
+*本章中的许多内容应当由命题逻辑进行类推来学习，不难发现许多概念是移植过来的，也适合对命题逻辑进行复习。*
 
-**定义 12.1.1** 整数 对自然数集合 $N$，令
-$$
-Z_+ = N - \{0\}
-$$
+## 5.1. 等值式
 
-$$
-Z_- = \{\langle 0,n\rangle | n \in Z_+\},
-$$
+### 5.1.1. 等值的定义
 
-$$
-Z = Z_- \cup \{0\} \cup Z_+。
-$$
+在谓词逻辑中，等值关系建立在普遍有效性的基础上。设 $A$、$B$ 是一阶谓词逻辑中的公式。若 $A \leftrightarrow B$ 是**普遍有效**的公式，则称 $A$ 与 $B$ **等值**，记作 $A = B$ 或 $A \Leftrightarrow B$。
 
-则称 $Z_+$ 的元素为正整数，$Z_-$ 的元素为负整数，$Z$ 的元素为整数。
+### 5.1.2. 否定型等值式
 
-**定义 12.1.2** 一个整数的相反数分别是
-$$
--n = \langle 0,n\rangle \text{当 } n \in Z_+,
-$$
+否定型等值式描述了量词与否定词交换位置的规律，是谓词逻辑中最基本的等值变换之一。否定型等值式反映了量词与否定词之间的德摩根律关系。
 
 $$
--0 = 0,
+\begin{align*}
+\neg (\forall x)P(x) &\Leftrightarrow (\exists x)\neg P(x) \\
+\neg (\exists x)P(x) &\Leftrightarrow (\forall x)\neg P(x)
+\end{align*}
 $$
 
-$$
--\langle 0,n\rangle = n \text{当 } n \in Z_+。
-$$
+这两个公式互为对偶形式。其语义是直观的：“并非所有个体都满足P”等价于“存在某个个体不满足P”；“不存在满足P的个体”等价于“所有个体都不满足P”。
 
-**定义 12.1.3** 在集合 $Z$ 上定义小于等于关系 $\leq$ 为，对任意的 $x,y \in Z$，$x \leq y$ 当且仅当
+**证明**（以第一个等值式为例，在有限域 $\{a_1, a_2, ..., a_n\}$ 上）：
 $$
-(x \in N \land y \in N \land x \leq y) \lor (x \in Z_- \land y \in N) \lor (x \in Z_- \land y \in Z_- \land -y \leq -x)。
-$$
-在集合 $Z$ 上定义小于关系 $<$ 为，对任意的 $x,y \in Z$，
-$$
-x < y \text{ 当且仅当 } (x \leq y) \land (x \neq y)。
+\begin{align*}
+\neg \forall x P(x) &\Leftrightarrow \neg (P(a_1) \land P(a_2) \land ... \land P(a_n)) \\
+&\Leftrightarrow \neg P(a_1) \lor \neg P(a_2) \lor ... \lor \neg P(a_n) \\
+&\Leftrightarrow \exists x \neg P(x)
+\end{align*}
 $$
 
-**定义 12.1.4** 等价关系 $\approx$ 对整数集合 $Z$，令
-$$
-Q_1 = Z \times (Z - \{0\}) = \{(a,b)| a \in Z \land b \in Z \land b \neq 0\},
-$$
-并称 $Q_1$ 是 $Z$ 上的因式的集合。对 $(a,b) \in Q_1$，可以用 $a/b$ 代替 $(a,b)$。在 $Q_1$ 上定义关系 $\approx$ 为，对任意的 $a/b \in Q_1$， $c/d \in Q_1$，
-$$
-a/b \approx c/d \text{ 当且仅当 } a \cdot d = b \cdot c。
-$$
-其中 $a \cdot b$ 是在 $Z$ 上定义的乘法，$=$ 是 $Z$ 上的相等关系。
-
-**定理 12.1.1** 在 $Q_1$ 上的关系 $\approx$ 是等价关系。
-
-**定义 12.1.5** 有理数集合 令 $Q = Q_1/\approx$，即 $Q$ 是集合 $Q_1$ 对等价关系 $\approx$ 的商集，则称 $Q$ 的元素为有理数，一般用 $a/b$ 表示 $Q$ 中的元素 $[a,b]_≈$。并习惯上取 $a, b$ 是互素的整数，且 $b > 0$。
-
-**定义 12.1.6** 在 $Q$ 上定义小于等于关系 $\leq$ 为，对任意的 $a/b, c/d \in Q$，
-$$
-a/b \leq c/d \text{ 当且仅当 } a \cdot d \leq b \cdot c。
-$$
-
-**定义 12.1.7** 基本函数 如果 $f:N \rightarrow Q$ 满足条件：
-
-(1) $(\exists x)(x \in Q \land (\forall n)(n \in N \rightarrow f(n) \leq x))$，
-
-(2) $(\exists n)(n \in N \land (\forall m)(\forall i)((m \in N \land i \in N \land n \leq m \land n \leq i \land m \leq i) \rightarrow (f(m) \leq f(i))))$，
-
-则称 $f$ 是一个基本函数，或有界非递减函数。当 $f$ 是一个基本函数时，则函数值
-$$
-f(0), f(1), f(2), \ldots, f(n), \ldots
-$$
-称为一个基本序列，它有时写为
-$$
-r_0, r_1, r_2, \cdots, r_n, \cdots。
-$$
-在以下定义与定理中，$B$ 表示所有基本函数的集合。$BF(f)$ 表示 $f$ 是一个基本函数。
-
-**定理 12.1.2** 当 $f: N \to Q$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in Q$，
-$$
-r, r, r, \cdots
-$$
-是一个基本序列。
-
-**定理 12.1.3** 存在不是常值函数的基本函数。
-
-**定义 12.1.8** 对基本函数的集合 $B$，定义 $B$ 上的关系 $\sim$ 为，对任意的 $f, g \in B$，$f \sim g$ 当且仅当
-$$
-(\forall \varepsilon)(\varepsilon \in Q \land \varepsilon > 0) \rightarrow (\exists n)(n \in N \land (\forall m)((m \in N \land n \leq m) \rightarrow |f(m)-g(m)| < \varepsilon))。
-$$
-直观上说，$f \sim g$ 等价于 $f$ 和 $g$ 的序列的极限相同。
-
-**定理 12.1.4** $B$ 上的关系 $\sim$ 是等价关系。
-
-**定理 12.1.5** 设 $f: N \to Q$ 和 $g: N \to Q$ 都是常值函数，且 $f \sim g$，则 $f = g$。
-
-**定义 12.1.9** 实数集 令 $R = B / \sim$，即 $R$ 是集合 $B$ 对等价关系 $\sim$ 的商集，则称 $R$ 的元素为实数，称 $R$ 为实数集合。
-
-**定义 12.1.10** 在 $B$ 上定义小于关系 $<_B$ 为，对任意的 $f, g \in B$，$f <_B g$ 当且仅当
-$$
-(\exists \varepsilon)(\varepsilon \in Q \land 0 < \varepsilon) \land (\exists n)(n \in N \land (\forall m)((m \in N \land n \leq m) \rightarrow g(m)-f(m) > \varepsilon)))。
-$$
-
-**定义 12.1.11** 在 $R$ 上定义小于等于关系 $\leq_R$ 和小于关系 $<_R$ 为，对任意的 $f, g \in B$，
-$$
-[f]_\sim \leq_R [g]_\sim \text{ 当且仅当 } f \leq_B g,
-$$
+> **例子**：“并非所有的动物都是猫”。
+>
+> * 设 $A(x)$：$x$ 是动物，$B(x)$：$x$ 是猫。
+> * 原语句：$\neg (\forall x)(A(x) \rightarrow B(x))$
+> * 利用否定型等值式转换：
 
 $$
-[f]_\sim <_R [g]_\sim \text{ 当且仅当 } f <_B g。
+\begin{align*}
+\neg (\forall x)(A(x) \rightarrow B(x)) &\Leftrightarrow (\exists x)\neg (A(x) \rightarrow B(x)) \\
+&\Leftrightarrow (\exists x)\neg (\neg A(x) \lor B(x)) \\
+&\Leftrightarrow (\exists x)(A(x) \land \neg B(x))
+\end{align*}
 $$
 
-## 12.2. 集合的等势
+> 转换后的公式 $(\exists x)(A(x) \land \neg B(x))$ 意为“存在是动物但不是猫的个体”，与原句含义一致。
 
-**定义 12.2.1** 集合的等势 对集合 $A$ 和 $B$，如果存在从 $A$ 到 $B$ 的双射函数，就称 $A$ 和 $B$ 等势，记作 $A \approx B$。如果不存在从 $A$ 到 $B$ 的双射函数，就称 $A$ 和 $B$ 不等势，记作 $\neg A \approx B$。
+## 5.2. 量词分配等值式
 
-**定理 12.2.1** 对任意的集合 $A$，有
+量词分配等值式描述了量词对各类逻辑联结词的分配性质，是进行谓词公式变换和简化的关键工具。
+
+### 5.2.1. 量词对析取词和合取词的分配律（与命题变元）
+
+当量词作用域内的公式包含一个与个体变元无关的命题变元时，量词可以“提取”出来。
 $$
-P(A) \approx A_2。
+\begin{align*}
+(\forall x)(P(x) \lor q) &\Leftrightarrow (\forall x)P(x) \lor q \\
+(\exists x)(P(x) \lor q) &\Leftrightarrow (\exists x)P(x) \lor q \\
+(\forall x)(P(x) \land q) &\Leftrightarrow (\forall x)P(x) \land q \\
+(\exists x)(P(x) \land q) &\Leftrightarrow (\exists x)P(x) \land q
+\end{align*}
+$$
+其中 $q$ 是命题变项，与个体变元 $x$ 无关。
+
+### 5.2.2. 量词对蕴含词的分配律
+
+量词对蕴含词的分配较为特殊，需要注意前件和后件的位置。
+$$
+\begin{align*}
+(\forall x)(P(x) \rightarrow q) &\Leftrightarrow (\exists x)P(x) \rightarrow q \\
+(\exists x)(P(x) \rightarrow q) &\Leftrightarrow (\forall x)P(x) \rightarrow q \\
+(\forall x)(p \rightarrow Q(x)) &\Leftrightarrow p \rightarrow (\forall x)Q(x) \\
+(\exists x)(p \rightarrow Q(x)) &\Leftrightarrow p \rightarrow (\exists x)Q(x)
+\end{align*}
+$$
+其中 $p, q$ 是命题变项，与个体变元 $x$ 无关。**规律**：当量词修饰整个蕴含式时，若量词在前件($P(x)$)，则分配后量词变号（全称变存在，存在变全称）；若量词在后件($Q(x)$)，则分配后量词不变。
+
+### 5.2.3. 全称量词对 $\land$，存在量词对 $\lor$ 的分配律
+
+这是量词对相同量词修饰的谓词公式的分配。
+$$
+\begin{align*}
+(\forall x)(P(x) \land Q(x)) &\Leftrightarrow (\forall x)P(x) \land (\forall x)Q(x) \\
+(\exists x)(P(x) \lor Q(x)) &\Leftrightarrow (\exists x)P(x) \lor (\exists x)Q(x)
+\end{align*}
 $$
 
-**定理 12.2.2** 对任意的集合 $ A, B $ 和 $C$，
+### 5.2.4. 重要的不等价与蕴含关系
 
-(1) $A \approx A$，
-
-(2) 若 $A \approx B$，则 $B \approx A$，
-
-(3) 若 $A \approx B \land B \approx C$，则 $A \approx C$。
-
-**定理 12.2.3** 康托尔定理
-
-(1) $\neg N \approx R$，
-
-(2) 对任意的集合 $A$，$\neg A \approx P(A)$。
-
-## 12.3. 有限集合与无限集合
-
-**定义 12.3.1** （有限集合与无限集合） 集合 $A$ 是有限集合，当且仅当存在 $n \in N$，使 $n \approx A$。集合 $A$ 是无限集合当且仅当 $A$ 不是有限集合，即不存在 $n \in N$ 使 $n \approx A$。
-
-**定理 12.3.1** 不存在与自己的真子集等势的自然数。
-
-**推论 12.3.1** 不存在与自己的真子集等势的有限集合。
-
-**推论 12.3.2** 任何与自己的真子集等势的集合是无限集合。$N$ 和 $R$ 都是无限集合。
-
-**推论 12.3.3** 任何有限集合只与唯一的自然数等势。
-
-## 12.4. 集合的基数
-
-**定义 12.4.1** 对任意的集合 $A$ 和 $B$，它们的基数分别用 $\text{card}(A)$ 和 $\text{card}(B)$ 表示，并且 $\text{card}(A) = \text{card}(B) \Leftrightarrow A \approx B$。（有时把 $\text{card}(A)$ 记作 $|A|$ 或 $\#(A)$。） 对有限集合 $A$ 和 $n \in N$，若 $A \approx n$，则
+并非所有的分配都成立等值关系，以下仅为蕴含关系：
 $$
-\text{card}(A) = n。
+\begin{align*}
+(\forall x)P(x) \lor (\forall x)Q(x) &\Rightarrow (\forall x)(P(x) \lor Q(x)) \\
+(\exists x)(P(x) \land Q(x)) &\Rightarrow (\exists x)P(x) \land (\exists x)Q(x)
+\end{align*}
 $$
 
-1. （自然数集合 $N$ 的基数） $N$ 的基数不是自然数，因为 $N$ 不与任何自然数等势。通常用康托尔的记法，把 $\text{card}(N)$ 记作 $\aleph_0$，读作“阿列夫零”。因此，
+> 例如，设论域为所有人，$P(x)$: $x$ 是高才生，$Q(x)$: $x$ 是运动员。
+>
+> * $(\forall x)(P(x) \lor Q(x))$ 意为“每个人或者是高才生，或者是运动员”。
+> * $(\forall x)P(x) \lor (\forall x)Q(x)$ 意为“要么所有人都是高才生，要么所有人都是运动员”。
+>   显然，前者为真不能推出后者为真（可能一部分人是高才生，另一部分是运动员）。
+
+### 5.2.5. 变元易名与多重量词分配
+
+通过变元易名规则，可以将涉及不同个体变元的量词进行合并或重组。
+$$
+\begin{align*}
+(\forall x)(\forall y)(P(x) \lor Q(y)) &\Leftrightarrow (\forall x)P(x) \lor (\forall x)Q(x) \\
+(\exists x)(\exists y)(P(x) \land Q(y)) &\Leftrightarrow (\exists x)P(x) \land (\exists x)Q(x)
+\end{align*}
+$$
+
+## 5.3. 范式
+
+范式是谓词公式的一种标准形式，对于判定问题、定理证明（特别是归结法）具有重要意义。
+
+### 5.3.1. 前束范式
+
+**定义**：设 $A$ 为一个一阶谓词逻辑公式，如果 $A$ 中所有量词都位于该公式的最左边（且这些量词前都不含否定词），且这些量词的辖域都延伸到整个公式的末端，则称 $A$ 为**前束范式**。
+前束范式的一般形式为：
+$$
+(Q_1 x_1)(Q_2 x_2) \cdots (Q_n x_n) M(x_1, x_2, \cdots, x_n)
+$$
+其中 $Q_i(1 \leq i \leq n)$ 为 $\forall$ 或 $\exists$，$M$ 为不含量词的公式，称为公式的**基式**或**母式**。
+
+**前束范式存在定理**：一阶谓词逻辑的任一公式都存在与之等值的前束范式，但其前束范式并不唯一（量词顺序、母式等价变换均可导致不同形式）。
+
+### 5.3.2. 化前束范式的基本步骤
+
+将一个任意公式转化为前束范式，可遵循以下机械化步骤：
+
+1.  **消去联结词**：利用等值式 $A \rightarrow B \Leftrightarrow \neg A \lor B$ 和 $A \leftrightarrow B \Leftrightarrow (A \rightarrow B) \land (B \rightarrow A)$，消去公式中的蕴含词($\rightarrow$)和双蕴含词($\leftrightarrow$)。
+2.  **否定词内移**：利用**否定型等值式**和德摩根律，将否定词($\neg$)深入，直至直接作用于原子谓词公式。
+3.  **量词左移**：利用**量词分配等值式**，将量词逐个向左（公式前端）移动。
+4.  **变元易名**：利用**变元易名规则**，确保不同量词约束的变元使用不同的名称，避免混淆。约束变元的换名不改变公式含义。
+
+**例子**：求 $\neg ((\forall x)(\exists y)P(a, x, y) \rightarrow (\exists x)(\neg (\forall y)Q(y, b) \rightarrow R(x)))$ 的前束范式。
+经过上述步骤，可得到其一个前束范式为：$(\forall x)(\exists y)(\exists z)(P(a, x, y) \land \neg Q(z, b) \land \neg R(x))$。
+
+### 5.3.3. Skolem 标准型
+
+一阶谓词逻辑的任一公式 $A$，若其前束范式中所有的存在量词都在全称量词的左边，或是仅保留全称量词而消去存在量词，便得到公式 $A$ 的Skolem标准型。公式 $A$ 与其Skolem标准型只能保持某种意义下的等值关系。
+
+前束范式为进一步的标准化处理提供了基础，其中最重要的两种是**仅含全称量词的前束范式**和**仅含存在量词的前束范式**。它们对于判定公式的普遍有效性和不可满足性有特殊作用。
+
+**构造 Skolem 标准型的关键**：
+
+*   **Skolem常数**：若存在量词是最外层且其前无全称量词，则用一个新常数替换。
+    *   例如，$\exists yP(y)$ 化为 $P(c)$。
+*   **Skolem函数** $f(x_1, ..., x_n)$ ：若存在量词前有全称量词，则用一个依赖于这些全称变元的新函数替换。
+    *   例如，$\forall x \exists y P(x, y)$ 化为 $\forall x P(x, f(x))$。
+
+> *   **例子**：将 $(\exists x)(\forall y)(\forall z)(\exists u)(\forall v)(\exists w)P(x, y, z, u, v, w)$ 化为 Skolem 标准型。
+>     1.  消去 $(\exists x)$：用常数 $a$ 替换 $x$。
+>     2.  消去 $(\exists u)$：$u$ 前有 $(\forall y)(\forall z)$，用函数 $f(y, z)$ 替换 $u$。
+>     3.  消去 $(\exists w)$：$w$ 前有 $(\forall y)(\forall z)(\forall v)$，用函数 $g(y, z, v)$ 替换 $w$。
+>         最终得到：$(\forall y)(\forall z)(\forall v)P(a, y, z, f(y, z), v, g(y, z, v))$。
+
+### 5.3.4. $\exists$ 前束范式
+
+形式为 $(\exists x_1)(\exists x_2)\cdots(\exists x_i)(\forall x_{i+1})\cdots(\forall x_n)M$，即所有存在量词都在全称量词左边，且至少有一个存在量词。
+**存在定理**：一阶谓词逻辑的任一公式 $A$ 都存在与之等值的 $\exists$ 前束范式，并且 **$A$ 是普遍有效的当且仅当其 $\exists$ 前束范式是普遍有效的**。
+
+### 5.3.5. $\forall$ 前束范式
+
+形式为仅保留全称量词的前束范式。通过引入 Skolem 函数或 Skolem 常数消去存在量词得到。
+**存在定理**：一阶谓词逻辑的任一公式 $A$ 都可化成相应的 $\forall$ 前束范式，并且 **$A$ 是不可满足的当且仅当其 $\forall$ 前束范式是不可满足的**。注意，一般公式与其 Skolem 标准型并不等值，但**在不可满足的意义下一致**。
+
+## 5.4. 基本推理公式
+
+基本推理公式是普遍有效的蕴涵式，是进行谓词逻辑推理演算的基础。
+
+在一阶谓词逻辑中，从前提 $A_1, A_2, \cdots, A_n$ 出发推出结论 $B$ 的推理形式结构为 $A_1 \land A_2 \land \cdots \land A_n \rightarrow B$。若此式为永真式（普遍有效），则称推理正确，记作 $A_1 \land A_2 \land \cdots \land A_n \Rightarrow B$。
+
+以下是除命题逻辑推理公式外，谓词逻辑中特有的一些基本推理公式：
+
+1.  $(\forall x)P(x) \lor (\forall x)Q(x) \Rightarrow (\forall x)(P(x) \lor Q(x))$
+2.  $(\exists x)(P(x) \land Q(x)) \Rightarrow (\exists x)P(x) \land (\exists x)Q(x)$
+3.  $(\forall x)(P(x) \rightarrow Q(x)) \Rightarrow (\forall x)P(x) \rightarrow (\forall x)Q(x)$
+4.  $(\forall x)(P(x) \rightarrow Q(x)) \Rightarrow (\exists x)P(x) \rightarrow (\exists x)Q(x)$
+5.  $(\forall x)(P(x) \leftrightarrow Q(x)) \Rightarrow (\forall x)P(x) \leftrightarrow (\forall x)Q(x)$
+6.  $(\forall x)(P(x) \leftrightarrow Q(x)) \Rightarrow (\exists x)P(x) \leftrightarrow (\exists x)Q(x)$
+7.  $(\forall x)(P(x) \rightarrow Q(x)) \land (\forall x)(Q(x) \rightarrow R(x)) \Rightarrow (\forall x)(P(x) \rightarrow R(x))$ （谓词逻辑三段论）
+8.  $(\forall x)(P(x) \rightarrow Q(x)) \land P(a) \Rightarrow Q(a)$ （全称实例化推理）
+9.  $(\forall x)(\forall y)P(x,y) \Rightarrow (\exists x)(\forall y)P(x,y)$
+10.  $(\exists x)(\forall y)P(x,y) \Rightarrow (\forall y)(\exists x)P(x,y)$
+     *   注意其逆不成立。$(\forall y)(\exists x)P(x,y)$ 意为“对每个y，都存在一个x使得P(x,y)成立”，这个x可以依赖于y（即对不同y可以是不同的x）。
+     *   $(\exists x)(\forall y)P(x,y)$ 意为“存在一个x，对所有y都有P(x,y)成立”，这个x是统一的、不依赖于y的。显然后者强于前者。
+
+## 5.5. 推理演算
+
+谓词逻辑的推理演算是在命题逻辑推理规则基础上，增加了处理量词的规则，从而形成的可操作的形式推演系统。
+
+### 5.5.1. 量词推理规则
+
+这是谓词逻辑推理演算的核心新增规则，共四条。
+
+1. **全称量词消去规则（UI - Universal Instantiation）**
    $$
-   \text{card}(Z) = \text{card}(Q) = \text{card}(N \times N) = \aleph_0。
+   \frac{(\forall x)P(x)}{P(y)} \quad \text{或} \quad \frac{(\forall x)P(x)}{P(c)}
    $$
+   **条件**：
 
-2. （实数集合 $R$ 的基数） $R$ 的基数不是自然数，也不是 $\aleph_0$（因为 $\neg R \approx N$）。通常把 $\text{card}(R)$ 记作 $\aleph_1$，读作“阿列夫壹”。因此，
+   *   $y$ 是任意不在 $P(x)$ 中约束出现的个体变项（代表任意个体）。
+   *   $c$ 是任意个体常项。
+   *   替换必须在 $x$ 自由出现的所有地方进行。
+   *   **关键限制**：替换 $x$ 的 $y$ 不能是 $P(x)$ 中已被约束的变元，否则可能导致错误。例如，从 $(\forall x)(\exists y)(x<y)$ (实数域上成立) 错误地 UI 为 $(\exists y)(y<y)$ (矛盾式)，原因就是将 $x$ 替换成了已在 $P(x)$ 中受 $\exists y$ 约束的 $y$。
+
+2. **全称量词引入规则（UG - Universal Generalization）**
    $$
-   \text{card}([0,1]) = \text{card}((0,1)) = \text{card}(\mathbb{R}_+) = \aleph_1。
+   \frac{P(y)}{(\forall x)P(x)}
    $$
+   **条件**：
 
-## 12.5. 基数的算术运算
+   *   $P(y)$ 必须对论域中任意个体 $y$ 都为真。
+   *   取代 $y$ 的 $x$ 不能在 $P(y)$ 中约束出现。
 
-**定义 12.5.1** 对任意的基数 $k$ 和 $l$，
+3. **存在量词消去规则（EI - Existential Instantiation）**
+   $$
+   \frac{(\exists x)P(x)}{P(c)}
+   $$
+   **条件**：
 
-   （1）若存在集合 $K$ 和 $L$，$K \cap L = \emptyset$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k + l = \text{card}(K \cup L)。
-$$
-   （2）若存在集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k \cdot l = \text{card}(K \times L)。
-$$
-   （3）若存在集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k^l = \text{card}(L_K)，
-$$
-   其中 $L_K$ 是从 $L$ 到 $K$ 的函数的集合。
+   *   $c$ 是使 $P$ 为真的**特定的、新的**个体常项（此前未在证明中出现）。
+   *   $P(x)$ 中不能有其他自由出现的个体变项（否则 $c$ 可能依赖于这些变元）。
 
-**定理 12.5.1** 对任意的基数 $k$、$l$ 和 $m$，
+4. **存在量词引入规则（EG - Existential Generalization）**
+   $$
+   \frac{P(c)}{(\exists x)P(x)}
+   $$
+   **条件**：
 
-   （1）$k + l = l + k$， $k \cdot l = l \cdot k$，
+   *   $c$ 是特定的个体常项。
+   *   取代 $c$ 的 $x$ 不能在 $P(c)$ 中出现过。
 
-   （2）$k + (l+m) = (k+l) + m$， $k \cdot (l \cdot m) = (k \cdot l) \cdot m$，
+| 规则名称              | 规则形式                                                     | 条件与说明                                                   |
+| :-------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **全称量词消去 (UI)** | $\dfrac{(\forall x)P(x)}{P(y)}$ 或 $\dfrac{(\forall x)P(x)}{P(c)}$ | $y$ 为任意不在 $P(x)$ 中约束出现的个体变项；$c$ 为任意个体常项。必须替换 $x$ 的所有自由出现。 |
+| **全称量词引入 (UG)** | $\dfrac{P(y)}{(\forall x)P(x)}$                              | 对任意 $y$，$P(y)$ 均为真；$x$ 不能在 $P(y)$ 中约束出现。    |
+| **存在量词消去 (EI)** | $\dfrac{(\exists x)P(x)}{P(c)}$                              | $c$ 是使 $P$ 为真的**特定**个体常项；$c$ 不在 $P(x)$ 中出现；$P(x)$ 中无其他自由个体变项。 |
+| **存在量词引入 (EG)** | $\dfrac{P(c)}{(\exists x)P(x)}$                              | $c$ 是特定的个体常项；$x$ 不在 $P(c)$ 中出现过。             |
 
-   （3）$k \cdot (l+m) = k \cdot l + k \cdot m$，
+### 5.5.2. 推理演算的一般过程
 
-   （4）$k^{(l+m)} = k^l \cdot k^m$，
+1.  **形式化**：用谓词公式符号化自然语言前提和结论。
+2.  **去量词**：使用 UI 和 EI 规则，消去前提中的量词，得到命题或只含自由变元的公式。
+3.  **命题推理**：在无量词环境下，运用命题逻辑的推理规则和公式进行推导。
+4.  **引入量词**：使用 UG 和 EG 规则，给推导出的中间结论或最终结论加上所需的量词。
 
-   （5）$(k \cdot l)^m = k^m \cdot l^m$，
+> **例子**：证明三段论“所有的人都是要死的；苏格拉底是人；所以苏格拉底是要死的。”
+>
+> *   形式化：$(\forall x)(P(x) \rightarrow Q(x)) \land P(s) \Rightarrow Q(s)$，其中 $P(x):x$是人，$Q(x):x$是要死的，$s$：苏格拉底。
+> *   证明过程：
+>     1.  $(\forall x)(P(x) \rightarrow Q(x))$ （前提引入）
+>     2.  $P(s) \rightarrow Q(s)$ （UI，对1中 $x$ 用 $s$ 实例化）
+>     3.  $P(s)$ （前提引入）
+>     4.  $Q(s)$ （分离规则，由2和3）
+>         结论得证。
 
-   （6）$(k^l)^m = k^{(l \cdot m)}$。
+## 5.6. 谓词逻辑的归结推理法
 
-## 12.6. 基数的比较
+归结推理法是一种适用于机器自动定理证明的方法，它将命题逻辑的归结法推广到谓词逻辑。
 
-**定义 12.6.1** 对集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，如果存在从 $K$ 到 $L$ 的单射函数，则称集合 $L$ 优于 $K$，记作 $K \preceq L$，且称基数 $k$ 不大于基数 $l$，记作 $k \leq l$。
+### 5.6.1. 基本思想
 
-**定义 12.6.2** 对基数 $k$ 和 $l$，如果 $k \leq l$ 且 $k \neq l$，则称 $k$ 小于 $l$，记作 $k < l$。
+欲证明 $A_1 \land A_2 \land \cdots \land A_n \Rightarrow B$，等价于证明 $G = A_1 \land A_2 \land \cdots \land A_n \land \neg B$ 是**不可满足的**（矛盾式）。归结法通过不断推导出空子句($\square$)来证明 $G$ 的不可满足性。
 
-**定理 12.6.1** 对任意的基数 $k,l$ 和 $m$，
+### 5.6.2. 归结推理法步骤
 
-   （1）$k \leq k$，
+1. **构造矛盾式**：$G = A_1 \land A_2 \land \cdots \land A_n \land \neg B$。
 
-   （2）若 $k \leq l$ 且 $l \leq m$，则 $k \leq m$，
+2. **化为 Skolem 标准型**：
 
-   （3）若 $k \leq l$ 且 $l \leq k$ 则 $k = l$，
+   *   将 $G$ 化成前束范式。
+   *   再进行 Skolem 化，消去所有存在量词，得到仅含全称量词的 $\forall$ 前束范式 $G^*$。$G$ 与 $G^*$ 在不可满足的意义上一致。
 
-   （4）$k \leq l$ 或 $l \leq k$。
+3. **生成子句集**：
 
-**定理 12.6.2** 对任意的基数 $k,l$ 和 $m$，如果 $k \leq l$，
+   *   略去 $G^*$ 中的所有全称量词（此时公式中的自由变元均被隐含地全称量化）。
+   *   将 $G^*$ 的母式（已是合取范式）中的各合取项（子句）用逗号分隔，构成子句集 $S$。每个子句是一个析取式。
 
-   （1）$k + m \leq l + m$，
+4. **归结演绎**：
 
-   （2）$k \cdot m \leq l \cdot m$，
+   * 对子句集中的子句进行归结。**谓词逻辑的归结**需要**合一**操作：寻找一个替换（如 $\{x/a\}$），使两个子句中的某对文字（如 $P(x)$ 和 $\neg P(a)$）互补，然后消去这对文字，将剩余部分析取，得到归结式。例如：
+     $$
+     C_1 = P(x) \lor Q(x)
+     $$
 
-   （3）$k^m \leq l^m$，
+     $$
+     C_2 = \neg P(a) \lor R(y)
+     $$
 
-   （4）若 $k \neq 0$ 或 $m \neq 0$，则 $m^k \leq m^l$。
+     对 $C_1$ 应用置换 $\{x/a\}$ 后，$P(a)$ 与 $\neg P(a)$ 构成互补对，可进行归结，得到归结式 $Q(a) \lor R(y)$。
 
-**定理 12.6.3** 对基数 $k$ 和 $l$，如果 $k \leq l$，$k \neq 0$，$l$ 是无限基数，则
-$$
-   k + l = k \cdot l = l = \max(k, l)。
-$$
+   * 将归结式加入子句集 $S$。
 
-**定理 12.6.4**
+   * 重复归结过程，直至产生**空子句 $\square$**。空子句代表矛盾，证明结束。
 
-   （1）对任意的无限集合 $K$，$N \preceq K$。
-
-   （2）对任意的无限基数 $k$，$\aleph_0 \leq k$。
-
-## 12.7. 可数集合与连续统假设
-
-**定义 12.7.1** （可数集合） 对集合 $K$，如果 $\text{card}(K) \leq \aleph_0$，则称 $K$ 是可数集合。
-
-**定理 12.7.1** （可数集的性质）
-
-   （1）可数集的任何子集是可数集。
-
-   （2）两个可数集的并集和笛卡儿积是可数集。
-
-   （3）若 $K$ 是无限集合，则 $P(K)$ 是不可数的。
-
-   （4）可数个可数集的并集是可数集（该结论可写为：若 $A$ 是可数集，$A$ 的元素都是可数集，则 $\cup A$ 是可数集）。
-
-已知的基数按从小到大的次序排列就是
-$$
-0,1,\cdots,n,\cdots,\aleph_0,\aleph_1,2^{\aleph_0},\cdots。
-$$
-
-（连续统假设）“连续统假设”就是断言不存在基数 $k$，使
-$$
-\aleph_0 < k < 2^{\aleph_0}。
-$$
-这个假设至今未经过证明。有人已证明：根据现有的公理系统，既不能证明它是对的，也不能证明它是错的。
+**关键点**：谓词逻辑归结的核心在于处理含有变元的原子公式。通过合一找到使原子公式互补的替换，从而应用归结规则。这使得归结法能够处理涉及量词的复杂逻辑推理问题，并为自动定理证明奠定了坚实基础。
