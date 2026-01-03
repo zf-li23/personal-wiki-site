@@ -1,253 +1,325 @@
-## 12.1. 实数集合
+## 7.1 贝叶斯与频率统计的基本对比 (Bayesian vs. Frequentist Statistics)
 
-**定义 12.1.1** 整数 对自然数集合 $N$，令
-$$
-Z_+ = N - \{0\}
-$$
+### 7.1.1 频率统计 (Frequentist Statistics)
+- **核心假设**：
+  - 参数 $\theta$ 是固定未知常数。
+  - 概率定义为长期频率的极限。
+  - 推断基于重复抽样思想。
+- **推断方法**：
+  - 点估计（如 MLE、矩估计）
+  - 置信区间（频率解释）
+  - 假设检验（基于 $p$ 值）
+- **关键局限**：
+  - 不直接给出“参数在区间内的概率”。
+  - 依赖于未观测到的数据空间（如 $p$ 值计算）。
 
-$$
-Z_- = \{\langle 0,n\rangle | n \in Z_+\},
-$$
+### 7.1.2 贝叶斯统计 (Bayesian Statistics)
+- **核心假设**：
+  - 参数 $\theta$ 是随机变量，具有概率分布。
+  - 概率是主观信念的度量。
+  - 推断基于先验信念与数据的结合。
+- **推断框架**：
+  - 先验分布 $\pi(\theta)$ 表达对 $\theta$ 的初始信念。
+  - 后验分布 $\pi(\theta \mid x)$ 综合先验与数据。
+  - 所有推断基于后验分布进行。
 
-$$
-Z = Z_- \cup \{0\} \cup Z_+。
-$$
+### 7.1.3 似然原理 (Likelihood Principle)
+- **内容**：若两个实验产生的似然函数成比例，则它们应对 $\theta$ 提供相同的证据。
+- **频率统计**：某些方法（如 $p$ 值）违反似然原理。
+- **贝叶斯统计**：自动满足似然原理，因后验仅通过似然依赖于数据。
 
-则称 $Z_+$ 的元素为正整数，$Z_-$ 的元素为负整数，$Z$ 的元素为整数。
+---
 
-**定义 12.1.2** 一个整数的相反数分别是
-$$
--n = \langle 0,n\rangle \text{当 } n \in Z_+,
-$$
+## 7.2 贝叶斯推断的基本原理 (Fundamentals of Bayesian Inference)
 
-$$
--0 = 0,
-$$
+### 7.2.1 先验分布、似然与后验分布 (Prior, Likelihood and Posterior)
 
-$$
--\langle 0,n\rangle = n \text{当 } n \in Z_+。
-$$
-
-**定义 12.1.3** 在集合 $Z$ 上定义小于等于关系 $\leq$ 为，对任意的 $x,y \in Z$，$x \leq y$ 当且仅当
-$$
-(x \in N \land y \in N \land x \leq y) \lor (x \in Z_- \land y \in N) \lor (x \in Z_- \land y \in Z_- \land -y \leq -x)。
-$$
-在集合 $Z$ 上定义小于关系 $<$ 为，对任意的 $x,y \in Z$，
-$$
-x < y \text{ 当且仅当 } (x \leq y) \land (x \neq y)。
-$$
-
-**定义 12.1.4** 等价关系 $\approx$ 对整数集合 $Z$，令
-$$
-Q_1 = Z \times (Z - \{0\}) = \{(a,b)| a \in Z \land b \in Z \land b \neq 0\},
-$$
-并称 $Q_1$ 是 $Z$ 上的因式的集合。对 $(a,b) \in Q_1$，可以用 $a/b$ 代替 $(a,b)$。在 $Q_1$ 上定义关系 $\approx$ 为，对任意的 $a/b \in Q_1$， $c/d \in Q_1$，
-$$
-a/b \approx c/d \text{ 当且仅当 } a \cdot d = b \cdot c。
-$$
-其中 $a \cdot b$ 是在 $Z$ 上定义的乘法，$=$ 是 $Z$ 上的相等关系。
-
-**定理 12.1.1** 在 $Q_1$ 上的关系 $\approx$ 是等价关系。
-
-**定义 12.1.5** 有理数集合 令 $Q = Q_1/\approx$，即 $Q$ 是集合 $Q_1$ 对等价关系 $\approx$ 的商集，则称 $Q$ 的元素为有理数，一般用 $a/b$ 表示 $Q$ 中的元素 $[a,b]_≈$。并习惯上取 $a, b$ 是互素的整数，且 $b > 0$。
-
-**定义 12.1.6** 在 $Q$ 上定义小于等于关系 $\leq$ 为，对任意的 $a/b, c/d \in Q$，
-$$
-a/b \leq c/d \text{ 当且仅当 } a \cdot d \leq b \cdot c。
-$$
-
-**定义 12.1.7** 基本函数 如果 $f:N \rightarrow Q$ 满足条件：
-
-(1) $(\exists x)(x \in Q \land (\forall n)(n \in N \rightarrow f(n) \leq x))$，
-
-(2) $(\exists n)(n \in N \land (\forall m)(\forall i)((m \in N \land i \in N \land n \leq m \land n \leq i \land m \leq i) \rightarrow (f(m) \leq f(i))))$，
-
-则称 $f$ 是一个基本函数，或有界非递减函数。当 $f$ 是一个基本函数时，则函数值
-$$
-f(0), f(1), f(2), \ldots, f(n), \ldots
-$$
-称为一个基本序列，它有时写为
-$$
-r_0, r_1, r_2, \cdots, r_n, \cdots。
-$$
-在以下定义与定理中，$B$ 表示所有基本函数的集合。$BF(f)$ 表示 $f$ 是一个基本函数。
-
-**定理 12.1.2** 当 $f: N \to Q$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in Q$，
-$$
-r, r, r, \cdots
-$$
-是一个基本序列。
-
-**定理 12.1.3** 存在不是常值函数的基本函数。
-
-**定义 12.1.8** 对基本函数的集合 $B$，定义 $B$ 上的关系 $\sim$ 为，对任意的 $f, g \in B$，$f \sim g$ 当且仅当
-$$
-(\forall \varepsilon)(\varepsilon \in Q \land \varepsilon > 0) \rightarrow (\exists n)(n \in N \land (\forall m)((m \in N \land n \leq m) \rightarrow |f(m)-g(m)| < \varepsilon))。
-$$
-直观上说，$f \sim g$ 等价于 $f$ 和 $g$ 的序列的极限相同。
-
-**定理 12.1.4** $B$ 上的关系 $\sim$ 是等价关系。
-
-**定理 12.1.5** 设 $f: N \to Q$ 和 $g: N \to Q$ 都是常值函数，且 $f \sim g$，则 $f = g$。
-
-**定义 12.1.9** 实数集 令 $R = B / \sim$，即 $R$ 是集合 $B$ 对等价关系 $\sim$ 的商集，则称 $R$ 的元素为实数，称 $R$ 为实数集合。
-
-**定义 12.1.10** 在 $B$ 上定义小于关系 $<_B$ 为，对任意的 $f, g \in B$，$f <_B g$ 当且仅当
-$$
-(\exists \varepsilon)(\varepsilon \in Q \land 0 < \varepsilon) \land (\exists n)(n \in N \land (\forall m)((m \in N \land n \leq m) \rightarrow g(m)-f(m) > \varepsilon)))。
-$$
-
-**定义 12.1.11** 在 $R$ 上定义小于等于关系 $\leq_R$ 和小于关系 $<_R$ 为，对任意的 $f, g \in B$，
-$$
-[f]_\sim \leq_R [g]_\sim \text{ 当且仅当 } f \leq_B g,
-$$
+- **先验分布 (Prior Distribution)** $\pi(\theta)$：
+  - 描述在见到数据前对 $\theta$ 的不确定性。
+  - 可以是主观的（基于专家知识）或非信息的（如均匀先验）。
+  
+- **似然函数 (Likelihood Function)** $f(x \mid \theta)$：
+  - 描述在给定 $\theta$ 下观测到数据 $x$ 的概率。
+  
+- **后验分布 (Posterior Distribution)** $\pi(\theta \mid x)$：
+  - 结合先验与数据后的更新信念。
+  - 由贝叶斯定理给出：
 
 $$
-[f]_\sim <_R [g]_\sim \text{ 当且仅当 } f <_B g。
+\pi(\theta \mid x) = \frac{f(x \mid \theta) \pi(\theta)}{m(x)} \propto f(x \mid \theta) \pi(\theta)
 $$
 
-## 12.2. 集合的等势
+其中 $m(x) = \int f(x \mid \theta) \pi(\theta) d\theta$ 为**边际似然 (Marginal Likelihood)**，亦称证据（Evidence）。
 
-**定义 12.2.1** 集合的等势 对集合 $A$ 和 $B$，如果存在从 $A$ 到 $B$ 的双射函数，就称 $A$ 和 $B$ 等势，记作 $A \approx B$。如果不存在从 $A$ 到 $B$ 的双射函数，就称 $A$ 和 $B$ 不等势，记作 $\neg A \approx B$。
+### 7.2.2 共轭先验 (Conjugate Priors)
 
-**定理 12.2.1** 对任意的集合 $A$，有
+- **定义**：若先验分布与后验分布属于同一分布族，则称该先验为**共轭先验**。
+- **优点**：
+  - 后验有解析形式。
+  - 计算简便，易于理解。
+- **常见例子**：
+
+| 总体分布                                       | 参数     | 共轭先验                      | 后验分布                                 |
+| ---------------------------------------------- | -------- | ----------------------------- | ---------------------------------------- |
+| $X \sim B(1, \theta)$                          | $\theta$ | $\text{Beta}(a,b)$            | $\text{Beta}(a+x, b+n-x)$                |
+| $X \sim N(\theta, \sigma^2)$ ($\sigma^2$ 已知) | $\theta$ | $N(\mu_0, \tau_0^2)$          | $N(\mu_n, \tau_n^2)$                     |
+| $X \sim \text{Poisson}(\theta)$                | $\theta$ | $\text{Gamma}(\alpha, \beta)$ | $\text{Gamma}(\alpha+\sum x_i, \beta+n)$ |
+
+其中后验参数更新公式见具体推导。
+
+### 7.2.3 先验的构造方法 (Constructing Priors)
+
+#### 7.2.3.1 主观先验 (Subjective Priors)
+- 基于历史数据、专家知识或理论模型。
+- 可进行敏感性分析：更换不同先验，检查结论是否稳健。
+
+#### 7.2.3.2 非信息先验 (Non-informative Priors)
+- 旨在让数据“自己说话”，最小化先验影响。
+- **均匀先验 (Uniform Prior)**：
+  - $\pi(\theta) \propto 1$，可能为**广义先验 (Improper Prior)**。
+  - 需确保后验是正常（Proper）的。
+- **Jeffreys 先验**：
+  - $\pi(\theta) \propto \sqrt{I(\theta)}$，其中 $I(\theta)$ 为 Fisher 信息。
+  - 具有**重参数化不变性**。
+- **最大熵先验 (Maximum Entropy Prior)**：
+  - 在给定约束（如矩条件）下，选择熵最大的分布。
+  - 对正态约束给出正态先验。
+
+#### 7.2.3.3 分层先验 (Hierarchical Priors)
+- 先验参数本身也有分布，形成层次结构：
+  $$
+  \pi(\theta) = \int \pi(\theta \mid \psi) g(\psi) d\psi
+  $$
+- 适用于参数具有组结构的情形（如多组均值估计）。
+
+---
+
+## 7.3 贝叶斯点估计 (Bayesian Point Estimation)
+
+### 7.3.1 常用估计量
+
+- **后验众数估计 (Maximum A Posteriori, MAP)**：
+  $$
+  \hat{\theta}_{\text{MAP}} = \arg \max_{\theta} \pi(\theta \mid x)
+  $$
+  - 在均匀先验下，MAP 等于 MLE。
+  
+- **后验均值估计 (Posterior Mean)**：
+  $$
+  \hat{\theta}_{\text{mean}} = E[\theta \mid x] = \int \theta \, \pi(\theta \mid x) d\theta
+  $$
+  - 在平方损失下，是**最优估计**（最小化后验均方误差 PMSE）。
+
+- **后验中位数估计 (Posterior Median)**：
+  $$
+  \hat{\theta}_{\text{median}} = \text{median of } \pi(\theta \mid x)
+  $$
+  - 在绝对损失下最优。
+
+### 7.3.2 估计精度：后验均方误差 (Posterior Mean Squared Error, PMSE)
+
 $$
-P(A) \approx A_2。
-$$
-
-**定理 12.2.2** 对任意的集合 $ A, B $ 和 $C$，
-
-(1) $A \approx A$，
-
-(2) 若 $A \approx B$，则 $B \approx A$，
-
-(3) 若 $A \approx B \land B \approx C$，则 $A \approx C$。
-
-**定理 12.2.3** 康托尔定理
-
-(1) $\neg N \approx R$，
-
-(2) 对任意的集合 $A$，$\neg A \approx P(A)$。
-
-## 12.3. 有限集合与无限集合
-
-**定义 12.3.1** （有限集合与无限集合） 集合 $A$ 是有限集合，当且仅当存在 $n \in N$，使 $n \approx A$。集合 $A$ 是无限集合当且仅当 $A$ 不是有限集合，即不存在 $n \in N$ 使 $n \approx A$。
-
-**定理 12.3.1** 不存在与自己的真子集等势的自然数。
-
-**推论 12.3.1** 不存在与自己的真子集等势的有限集合。
-
-**推论 12.3.2** 任何与自己的真子集等势的集合是无限集合。$N$ 和 $R$ 都是无限集合。
-
-**推论 12.3.3** 任何有限集合只与唯一的自然数等势。
-
-## 12.4. 集合的基数
-
-**定义 12.4.1** 对任意的集合 $A$ 和 $B$，它们的基数分别用 $\text{card}(A)$ 和 $\text{card}(B)$ 表示，并且 $\text{card}(A) = \text{card}(B) \Leftrightarrow A \approx B$。（有时把 $\text{card}(A)$ 记作 $|A|$ 或 $\#(A)$。） 对有限集合 $A$ 和 $n \in N$，若 $A \approx n$，则
-$$
-\text{card}(A) = n。
-$$
-
-1. （自然数集合 $N$ 的基数） $N$ 的基数不是自然数，因为 $N$ 不与任何自然数等势。通常用康托尔的记法，把 $\text{card}(N)$ 记作 $\aleph_0$，读作“阿列夫零”。因此，
-   $$
-   \text{card}(Z) = \text{card}(Q) = \text{card}(N \times N) = \aleph_0。
-   $$
-
-2. （实数集合 $R$ 的基数） $R$ 的基数不是自然数，也不是 $\aleph_0$（因为 $\neg R \approx N$）。通常把 $\text{card}(R)$ 记作 $\aleph_1$，读作“阿列夫壹”。因此，
-   $$
-   \text{card}([0,1]) = \text{card}((0,1)) = \text{card}(\mathbb{R}_+) = \aleph_1。
-   $$
-
-## 12.5. 基数的算术运算
-
-**定义 12.5.1** 对任意的基数 $k$ 和 $l$，
-
-   （1）若存在集合 $K$ 和 $L$，$K \cap L = \emptyset$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k + l = \text{card}(K \cup L)。
-$$
-   （2）若存在集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k \cdot l = \text{card}(K \times L)。
-$$
-   （3）若存在集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，则
-$$
-   k^l = \text{card}(L_K)，
-$$
-   其中 $L_K$ 是从 $L$ 到 $K$ 的函数的集合。
-
-**定理 12.5.1** 对任意的基数 $k$、$l$ 和 $m$，
-
-   （1）$k + l = l + k$， $k \cdot l = l \cdot k$，
-
-   （2）$k + (l+m) = (k+l) + m$， $k \cdot (l \cdot m) = (k \cdot l) \cdot m$，
-
-   （3）$k \cdot (l+m) = k \cdot l + k \cdot m$，
-
-   （4）$k^{(l+m)} = k^l \cdot k^m$，
-
-   （5）$(k \cdot l)^m = k^m \cdot l^m$，
-
-   （6）$(k^l)^m = k^{(l \cdot m)}$。
-
-## 12.6. 基数的比较
-
-**定义 12.6.1** 对集合 $K$ 和 $L$，$\text{card}(K) = k, \text{card}(L) = l$，如果存在从 $K$ 到 $L$ 的单射函数，则称集合 $L$ 优于 $K$，记作 $K \preceq L$，且称基数 $k$ 不大于基数 $l$，记作 $k \leq l$。
-
-**定义 12.6.2** 对基数 $k$ 和 $l$，如果 $k \leq l$ 且 $k \neq l$，则称 $k$ 小于 $l$，记作 $k < l$。
-
-**定理 12.6.1** 对任意的基数 $k,l$ 和 $m$，
-
-   （1）$k \leq k$，
-
-   （2）若 $k \leq l$ 且 $l \leq m$，则 $k \leq m$，
-
-   （3）若 $k \leq l$ 且 $l \leq k$ 则 $k = l$，
-
-   （4）$k \leq l$ 或 $l \leq k$。
-
-**定理 12.6.2** 对任意的基数 $k,l$ 和 $m$，如果 $k \leq l$，
-
-   （1）$k + m \leq l + m$，
-
-   （2）$k \cdot m \leq l \cdot m$，
-
-   （3）$k^m \leq l^m$，
-
-   （4）若 $k \neq 0$ 或 $m \neq 0$，则 $m^k \leq m^l$。
-
-**定理 12.6.3** 对基数 $k$ 和 $l$，如果 $k \leq l$，$k \neq 0$，$l$ 是无限基数，则
-$$
-   k + l = k \cdot l = l = \max(k, l)。
+\text{PMSE}(\hat{\theta}) = E[(\theta - \hat{\theta})^2 \mid x] = \text{Var}(\theta \mid x) + (\hat{\theta} - E[\theta \mid x])^2
 $$
 
-**定理 12.6.4**
+- 后验均值估计使 PMSE 最小。
+- 后验方差 $\text{Var}(\theta \mid x)$ 是估计不确定性的度量。
 
-   （1）对任意的无限集合 $K$，$N \preceq K$。
+### 7.3.3 例子
 
-   （2）对任意的无限基数 $k$，$\aleph_0 \leq k$。
+#### 例1：正态均值估计（方差已知）
+- $X_i \stackrel{\text{i.i.d.}}{\sim} N(\theta, \sigma^2)$，$\sigma^2$ 已知。
+- 先验：$\theta \sim N(\mu_0, \tau_0^2)$。
+- 后验：$\theta \mid x \sim N(\mu_n, \tau_n^2)$，其中
+  $$
+  \mu_n = \frac{\sigma^2/n}{\sigma^2/n + \tau_0^2} \mu_0 + \frac{\tau_0^2}{\sigma^2/n + \tau_0^2} \bar{x}, \quad \tau_n^2 = \frac{\sigma^2 \tau_0^2}{n\tau_0^2 + \sigma^2}
+  $$
+- 后验均值 $\mu_n$ 是先验均值与样本均值的加权平均。
 
-## 12.7. 可数集合与连续统假设
+#### 例2：二项成功率估计
+- $X \sim B(n, \theta)$。
+- 先验：$\theta \sim \text{Beta}(a, b)$。
+- 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
+- 后验均值：$\hat{\theta}_{\text{mean}} = \frac{a+x}{a+b+n}$。
+- 特别当 $a=b=1$（均匀先验）时，$\hat{\theta}_{\text{mean}} = \frac{x+1}{n+2}$，避免极端估计（如 $x=0$ 时估计不为0）。
 
-**定义 12.7.1** （可数集合） 对集合 $K$，如果 $\text{card}(K) \leq \aleph_0$，则称 $K$ 是可数集合。
+---
 
-**定理 12.7.1** （可数集的性质）
+## 7.4 贝叶斯区间估计 (Bayesian Interval Estimation)
 
-   （1）可数集的任何子集是可数集。
+### 7.4.1 可信区间 (Credible Interval)
 
-   （2）两个可数集的并集和笛卡儿积是可数集。
+- **定义**：给定 $1-\alpha$，若区间 $[L(x), U(x)]$ 满足
+  $$
+  P(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha,
+  $$
+  则称 $[L, U]$ 为 $\theta$ 的 $1-\alpha$ **可信区间**。
+- 与频率置信区间不同，这里的概率是**给定数据**下参数落在区间内的概率。
 
-   （3）若 $K$ 是无限集合，则 $P(K)$ 是不可数的。
+### 7.4.2 最高后验密度区间 (Highest Posterior Density Interval, HPD)
 
-   （4）可数个可数集的并集是可数集（该结论可写为：若 $A$ 是可数集，$A$ 的元素都是可数集，则 $\cup A$ 是可数集）。
+- **定义**：是所有 $1-\alpha$ 可信区间中长度最短的区间。
+- 特点：区间内任一点的后验密度不低于区间外任一点。
+- 对于单峰对称后验，HPD 区间即为等尾区间。
 
-已知的基数按从小到大的次序排列就是
-$$
-0,1,\cdots,n,\cdots,\aleph_0,\aleph_1,2^{\aleph_0},\cdots。
-$$
+### 7.4.3 例子：正态均值的可信区间
 
-（连续统假设）“连续统假设”就是断言不存在基数 $k$，使
-$$
-\aleph_0 < k < 2^{\aleph_0}。
-$$
-这个假设至今未经过证明。有人已证明：根据现有的公理系统，既不能证明它是对的，也不能证明它是错的。
+- 沿用 7.3.3 例1 设置，后验 $\theta \mid x \sim N(\mu_n, \tau_n^2)$。
+- $1-\alpha$ 等尾可信区间为：
+  $$
+  [\mu_n - z_{\alpha/2} \tau_n,\; \mu_n + z_{\alpha/2} \tau_n]
+  $$
+
+---
+
+## 7.5 贝叶斯假设检验 (Bayesian Hypothesis Testing)
+
+### 7.5.1 基本方法
+
+- **假设**：$H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$。
+- 计算后验概率：
+  $$
+  \alpha_0 = P(\theta \in \Theta_0 \mid x), \quad \alpha_1 = P(\theta \in \Theta_1 \mid x)
+  $$
+- **决策**：若 $\alpha_1 > \alpha_0$，则倾向于拒绝 $H_0$。
+- 可计算**后验优势比 (Posterior Odds)**：
+  $$
+  \frac{\alpha_1}{\alpha_0} = \frac{P(\theta \in \Theta_1 \mid x)}{P(\theta \in \Theta_0 \mid x)}
+  $$
+
+### 7.5.2 贝叶斯因子 (Bayes Factor)
+
+- 比较两个模型 $M_0$ 与 $M_1$ 的相对支持程度：
+  $$
+  BF_{10} = \frac{m_1(x)}{m_0(x)} = \frac{\int f(x \mid \theta, M_1) \pi_1(\theta) d\theta}{\int f(x \mid \theta, M_0) \pi_0(\theta) d\theta}
+  $$
+- $BF_{10} > 1$ 表示数据更支持 $M_1$。
+
+### 7.5.3 例子：二项分布的成功率检验
+
+- $X \sim B(n, \theta)$，检验 $H_0: \theta \le 0.5$ vs $H_1: \theta > 0.5$。
+- 取均匀先验 $\theta \sim U(0,1)$。
+- 后验：$\theta \mid x \sim \text{Beta}(x+1, n-x+1)$。
+- 计算 $\alpha_0 = P(\theta \le 0.5 \mid x)$，$\alpha_1 = 1 - \alpha_0$。
+
+---
+
+## 7.6 贝叶斯预测 (Bayesian Prediction)
+
+### 7.6.1 后验预测分布 (Posterior Predictive Distribution)
+
+- **问题**：已有数据 $x$，预测新观测 $\tilde{x}$。
+- 后验预测密度：
+  $$
+  p(\tilde{x} \mid x) = \int f(\tilde{x} \mid \theta) \pi(\theta \mid x) d\theta
+  $$
+- 意义：综合了参数不确定性（通过后验）与抽样变异性。
+
+### 7.6.2 例子：二项分布的预测
+
+- $X \sim B(n, \theta)$，先验 $\theta \sim \text{Beta}(a,b)$。
+- 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
+- 预测新 $m$ 次试验中成功次数 $Y$：
+  $$
+  P(Y=y \mid x) = \int_0^1 \binom{m}{y} \theta^y (1-\theta)^{m-y} \pi(\theta \mid x) d\theta
+  $$
+  该分布为 **Beta-Binomial 分布**。
+
+---
+
+## 7.7 贝叶斯计算技术 (Computational Techniques for Bayesian Inference)
+
+### 7.7.1 解析方法
+
+- 适用于共轭先验或简单模型。
+- 可直接计算后验、后验矩、可信区间等。
+
+### 7.7.2 数值方法
+
+- **马尔可夫链蒙特卡洛 (Markov Chain Monte Carlo, MCMC)**：
+  - 通过构建马尔可夫链，使其平稳分布为目标后验分布。
+  - **Gibbs 抽样**：轮流从各参数的条件后验中抽样。
+  - **Metropolis-Hastings 算法**：更一般的接受-拒绝抽样框架。
+- **变分近似 (Variational Approximation)**：
+  - 用简单分布族逼近后验，转化为优化问题。
+- **拉普拉斯近似 (Laplace Approximation)**：
+  - 在后验众数处进行二阶泰勒展开，近似为正态分布。
+
+### 7.7.3 边际似然的计算
+
+- 用于模型比较（如贝叶斯因子）。
+- 方法：
+  - **调和平均估计**
+  - **桥抽样 (Bridge Sampling)**
+  - **嵌套抽样 (Nested Sampling)**
+
+---
+
+## 7.8 贝叶斯决策理论 (Bayesian Decision Theory)
+
+### 7.8.1 基本框架
+
+- **行动空间** $\mathcal{A}$：所有可能决策的集合。
+- **损失函数** $L(a, \theta)$：采取行动 $a$ 而真实参数为 $\theta$ 时的损失。
+- **贝叶斯风险**：后验期望损失
+  $$
+  R(a \mid x) = E[L(a, \theta) \mid x]
+  $$
+- **贝叶斯决策**：选择使后验期望损失最小的行动
+  $$
+  a^* = \arg \min_{a \in \mathcal{A}} R(a \mid x)
+  $$
+
+### 7.8.2 常见损失函数下的贝叶斯估计
+
+- **平方损失** $L(\hat{\theta}, \theta) = (\hat{\theta} - \theta)^2$ → 后验均值。
+- **绝对损失** $L(\hat{\theta}, \theta) = |\hat{\theta} - \theta|$ → 后验中位数。
+- **0-1损失**（假设检验）→ 选择后验概率最大的假设。
+
+### 7.8.3 例子：疫苗接种决策
+
+- 暴露于病毒后，感染概率 $\theta \sim \text{Beta}(1,2)$（先验）。
+- 疫苗费用 £500，死亡损失极高（设为 ∞）。
+- 计算接种与不接种的后验期望损失，选择损失较小的行动。
+
+---
+
+## 小结
+
+- **贝叶斯推断** 将参数视为随机变量，通过先验分布表达初始信念，再利用贝叶斯定理将先验与数据结合得到后验分布，并基于后验进行所有推断。
+- **与频率统计对比**：
+  - 贝叶斯方法提供参数的概率陈述（如可信区间）。
+  - 满足似然原理，且推断自然包含先验信息。
+- **核心组成**：
+  - **先验选择**：主观先验、非信息先验（均匀、Jeffreys、最大熵）、分层先验。
+  - **后验计算**：共轭先验（解析解）、MCMC 等数值方法。
+  - **点估计**：后验众数（MAP）、后验均值、后验中位数，其中后验均值在平方损失下最优。
+  - **区间估计**：可信区间（直接概率解释），HPD 区间最短。
+  - **假设检验**：基于后验概率或贝叶斯因子进行比较。
+  - **预测**：通过后验预测分布综合参数与抽样不确定性。
+- **决策理论**：为贝叶斯推断提供损失最小化的决策框架。
+- **计算**：现代贝叶斯分析常依赖 MCMC 等数值方法处理复杂后验。
+
+**关键公式**：
+
+- 贝叶斯定理：
+  $$
+  \pi(\theta \mid x) \propto f(x \mid \theta) \pi(\theta)
+  $$
+- 后验均值（平方损失最优）：
+  $$
+  \hat{\theta}_{\text{mean}} = E[\theta \mid x]
+  $$
+- $1-\alpha$ 可信区间：
+  $$
+  P(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha
+  $$
+- 贝叶斯决策：
+  $$
+  a^* = \arg\min_a E[L(a, \theta) \mid x]
+  $$
+
+**应用提示**：
+- 先验选择应反映可用信息，并进行敏感性分析。
+- 对于非共轭模型，需熟练掌握 MCMC 等计算方法。
+- 贝叶斯方法特别适合顺序更新、预测问题和决策分析。
