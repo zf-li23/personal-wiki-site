@@ -1,332 +1,313 @@
 **内容**：矩阵与向量（用于种群结构、代谢流）；线性方程组；特征值的生物学意义（如种群增长率、结构稳定性）。
 
-## **为什么从离散与线性开始？**
+在生态学中，种群很少由完全相同的个体组成。个体在年龄、大小或发育阶段上的差异会显著影响其繁殖与生存能力。为了描述这种结构化种群的动态，我们需要超越简单的总数计数，转而关注**种群的结构分布**及其随时间的变化。
 
-在深入连续变化的微积分世界之前，让我们先关注离散的、线性关系主导的生物系统。许多生物结构天然是离散的：种群按年龄分组、代谢物以整数分子存在、基因状态可简化为开或关。线性关系虽然简单，却在生物建模中无处不在且惊人有效——从描述种群年龄结构的Leslie矩阵，到分析代谢通量的线性规划，再到神经网络的基础运算。
+**Leslie矩阵模型**正是为此设计的经典工具。它用线性代数语言，优雅地刻画了种群年龄结构的年际变化。
 
-本节将建立两个核心观念：**矩阵作为线性变换**描述状态如何演化；**特征值与特征向量**揭示系统的长期行为模式。这些概念将贯穿本书，从本章的种群模型到第6章的神经网络。
+## **2.1.1 种群状态向量与投影矩阵：从斐波那契数列到年龄结构**
 
-## **2.1.1 向量：生物状态的数学表示**
-
-在生物学中，我们常需要同时追踪多个相关量。例如，一个由幼年、成年、老年三个年龄组构成的种群，其状态可以用一个三维向量表示：
+让我们从一个看似与生态学无关的数学序列——**斐波那契数列**开始思考。这个序列定义如下：
 
 $$
-\mathbf{n}(t) = \begin{bmatrix}
-n_1(t) \\ n_2(t) \\ n_3(t)
-\end{bmatrix}
+F_0 = 0, \quad F_1 = 1, \quad F_{n+2} = F_{n+1} + F_n \quad (n \geq 0)
 $$
 
-其中 $n_1(t)$、$n_2(t)$、$n_3(t)$ 分别表示时间 $t$ 时幼年、成年、老年个体的数量。这种表示方法不仅简洁，而且自然地引出了矩阵运算。
+它描述了兔子繁殖的理想化模型：每对成熟兔子每月生下一对新兔子，新生兔子需要一个月成熟。虽然这个模型过于简化，但它揭示了一个深刻思想：**当前状态可以由前几个状态线性组合得到**。
 
-### **Python实现：向量的基本操作**
-
-```python
-import numpy as np
-
-# 定义初始种群向量：幼年100，成年50，老年20
-n_0 = np.array([100, 50, 20])
-print("初始种群向量:", n_0)
-print("幼年组数量:", n_0[0])
-print("总个体数:", np.sum(n_0))
-
-# 向量加法：模拟一次迁移
-migration = np.array([10, -5, 0])  # 幼年迁入10，成年迁出5
-n_1 = n_0 + migration
-print("迁移后种群:", n_1)
-
-# 标量乘法：模拟种群翻倍
-growth_factor = 2.0
-n_doubled = growth_factor * n_0
-print("翻倍后种群:", n_doubled)
-```
-
-## **2.1.2 矩阵：线性变换与种群投影**
-
-当生物状态从一个时间步演变到下一个时间步，且这种演变可以通过各分量的线性组合描述时，矩阵便成为自然的数学工具。考虑一个简化的年龄结构种群模型：
-
-- 幼年个体每年有0.1的概率存活到成年
-- 成年个体每年有0.8的概率存活到老年，且每个成年个体平均产生0.5个幼年后代
-- 老年个体每年有0.2的概率存活，但不繁殖
-
-这些关系可以用一个**Leslie矩阵** $\mathbf{L}$ 表示：
+将斐波那契数列改写为矩阵形式：
 
 $$
-\mathbf{L} = \begin{bmatrix}
-0 & 0.5 & 0 \\
-0.1 & 0 & 0 \\
-0 & 0.8 & 0.2
-\end{bmatrix}
+\begin{pmatrix}
+F_{n+2} \\
+F_{n+1}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+F_{n+1} \\
+F_n
+\end{pmatrix}
 $$
 
-种群动态由线性方程描述：
+令 $\mathbf{x}_n = (F_{n+1}, F_n)^\top$，则：
+
+$$
+\mathbf{x}_{n+1} = \mathbf{A} \mathbf{x}_n, \quad \mathbf{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
+$$
+
+这就是一个**离散线性动力系统**。斐波那契数列的增长，本质上是矩阵 $\mathbf{A}$ 反复作用于初始向量的结果。
+
+### **Leslie矩阵：年龄结构化种群的投影**
+
+在现实种群中，个体的繁殖和存活能力通常依赖于年龄。P.H. Leslie在1945年提出了一种优雅的矩阵模型来描述这种年龄结构化的种群动态。
+
+考虑一个分为 $m$ 个年龄组的种群，每个年龄组的时间跨度相同（如一年）。令 $n_i(t)$ 表示时刻 $t$ 第 $i$ 个年龄组的个体数。种群状态可用向量表示：
+
+$$
+\mathbf{n}(t) = \begin{pmatrix}
+n_1(t) \\
+n_2(t) \\
+\vdots \\
+n_m(t)
+\end{pmatrix}
+$$
+
+从时刻 $t$ 到 $t+1$，种群变化遵循两个基本过程：
+1. **存活**：第 $i$ 组个体以概率 $s_i$ 存活并进入第 $i+1$ 组（$i = 1, \cdots, m-1$）。
+2. **繁殖**：第 $i$ 组个体平均产生 $f_i$ 个新个体（这些新生个体进入第1组）。
+
+这些过程可用 **Leslie矩阵** $\mathbf{L}$ 表示为：
 
 $$
 \mathbf{n}(t+1) = \mathbf{L} \mathbf{n}(t)
 $$
 
-### **Python实现：矩阵乘法与种群投影**
+其中 $\mathbf{L}$ 的形式为：
+
+$$
+\mathbf{L} = 
+\begin{pmatrix}
+f_1 & f_2 & \cdots & f_{m-1} & f_m \\
+s_1 & 0 & \cdots & 0 & 0 \\
+0 & s_2 & \cdots & 0 & 0 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & \cdots & s_{m-1} & 0
+\end{pmatrix}
+$$
+
+这里 $f_i \geq 0$ 为**生育率**，$s_i \in [0, 1]$ 为**存活率**。注意矩阵的第一行包含所有年龄组的生育贡献，而次对角线包含存活率。
+
+**例1：三年龄组模型**
+设一个物种分为幼年、青年、成年三组，参数如下：
+- 生育率：幼年不繁殖（$f_1 = 0$），青年每个体产2崽（$f_2 = 2$），成年每个体产1崽（$f_3 = 1$）。
+- 存活率：幼年存活到青年的概率为0.5（$s_1 = 0.5$），青年存活到成年的概率为0.8（$s_2 = 0.8$）。
+
+则Leslie矩阵为：
+
+$$
+\mathbf{L} = 
+\begin{pmatrix}
+0 & 2 & 1 \\
+0.5 & 0 & 0 \\
+0 & 0.8 & 0
+\end{pmatrix}
+$$
+
+若初始种群 $\mathbf{n}(0) = (100, 50, 30)^\top$，则一年后：
+
+$$
+\mathbf{n}(1) = \mathbf{L} \mathbf{n}(0) = 
+\begin{pmatrix}
+0\times100 + 2\times50 + 1\times30 \\
+0.5\times100 + 0\times50 + 0\times30 \\
+0\times100 + 0.8\times50 + 0\times30
+\end{pmatrix}
+= 
+\begin{pmatrix}
+130 \\
+50 \\
+40
+\end{pmatrix}
+$$
+
+## **2.1.2 特征值与特征向量：长期行为分析**
+
+Leslie矩阵模型是线性系统：$\mathbf{n}(t) = \mathbf{L}^t \mathbf{n}(0)$。要理解长期行为，我们需要分析 $\mathbf{L}^t$。这由矩阵的**特征值和特征向量**决定。
+
+对于矩阵 $\mathbf{L}$，若存在标量 $\lambda$ 和非零向量 $\mathbf{w}$ 使得：
+
+$$
+\mathbf{L} \mathbf{w} = \lambda \mathbf{w}
+$$
+
+则称 $\lambda$ 为 $\mathbf{L}$ 的特征值，$\mathbf{w}$ 为对应的右特征向量。特征值满足特征方程：
+
+$$
+\det(\mathbf{L} - \lambda \mathbf{I}) = 0
+$$
+
+对于Leslie矩阵，可以证明在合理的生物学假设下（至少有一个 $f_i > 0$ 且 $s_i > 0$）：
+1. 存在唯一的**主导正实特征值** $\lambda_1$，且 $|\lambda_1| > |\lambda_i|$（$i \neq 1$）。
+2. $\lambda_1$ 决定了**长期增长率**：
+   - $\lambda_1 > 1$：种群增长
+   - $\lambda_1 = 1$：种群稳定
+   - $\lambda_1 < 1$：种群衰退
+3. 对应的右特征向量 $\mathbf{w}_1$ 给出了**稳定年龄结构**：无论初始结构如何，长期而言各年龄组的比例将收敛于 $\mathbf{w}_1$ 的比例。
+
+**左特征向量** $\mathbf{v}_1$（满足 $\mathbf{v}_1^\top \mathbf{L} = \lambda_1 \mathbf{v}_1^\top$）的各个分量则表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的贡献。
+
+**例2：计算特征值和稳定结构**
+对于前面的三年龄组Leslie矩阵：
+
+```python
+import numpy as np
+
+L = np.array([[0, 2, 1],
+              [0.5, 0, 0],
+              [0, 0.8, 0]])
+
+# 计算特征值和特征向量
+eigvals, eigvecs = np.linalg.eig(L)
+
+# 找到主导特征值（最大模）
+dominant_idx = np.argmax(np.abs(eigvals))
+lambda1 = eigvals[dominant_idx]
+w1 = eigvecs[:, dominant_idx]
+
+print(f"特征值: {eigvals}")
+print(f"主导特征值 λ₁ = {lambda1:.4f}")
+print(f"对应的特征向量: {w1}")
+
+# 归一化得到稳定年龄结构
+stable_structure = w1 / np.sum(w1)
+print(f"稳定年龄结构（比例）: {stable_structure}")
+```
+
+运行结果可能显示 $\lambda_1 \approx 1.1$，表明种群将缓慢增长，稳定结构中成年组比例最高。
+
+## **2.1.3 Python实现与可视化**
+
+下面我们实现一个更完整的年龄结构模型，并可视化其动态。
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 定义Leslie矩阵
-L = np.array([[0, 0.5, 0],
-              [0.1, 0, 0],
-              [0, 0.8, 0.2]])
+class LeslieModel:
+    """Leslie矩阵模型类"""
+    
+    def __init__(self, fecundities, survival_rates):
+        """
+        参数:
+        fecundities: 各年龄组生育率列表
+        survival_rates: 存活率列表（长度比fecundities少1）
+        """
+        self.m = len(fecundities)
+        self.f = np.array(fecundities)
+        self.s = np.array(survival_rates)
+        
+        # 构建Leslie矩阵
+        self.L = np.zeros((self.m, self.m))
+        self.L[0, :] = self.f
+        for i in range(self.m - 1):
+            self.L[i + 1, i] = self.s[i]
+    
+    def simulate(self, n0, T):
+        """模拟T个时间步"""
+        population = np.zeros((T, self.m))
+        population[0, :] = n0
+        
+        for t in range(1, T):
+            population[t, :] = self.L @ population[t - 1, :]
+        
+        return population
+    
+    def analyze(self):
+        """分析长期行为"""
+        eigvals, eigvecs = np.linalg.eig(self.L)
+        dominant_idx = np.argmax(np.abs(eigvals))
+        lambda1 = np.real(eigvals[dominant_idx])
+        w1 = np.real(eigvecs[:, dominant_idx])
+        w1 = w1 / np.sum(w1)  # 归一化
+        
+        return lambda1, w1
 
-# 初始种群
-n = np.array([100, 50, 20])
+# 实例：五年龄组种群
+fecundities = [0, 0, 1.5, 2.0, 0.5]  # 生育率
+survival_rates = [0.3, 0.6, 0.8, 0.2]  # 存活率
 
-# 模拟10年的种群动态
-years = 10
-population_history = np.zeros((years, 3))
-population_history[0] = n
+model = LeslieModel(fecundities, survival_rates)
 
-for t in range(1, years):
-    n = L @ n  # 矩阵乘法，等价于 np.dot(L, n)
-    population_history[t] = n
+# 初始种群：大量幼年个体
+n0 = np.array([200, 100, 50, 20, 10])
+T = 30  # 模拟30年
+
+# 模拟
+population = model.simulate(n0, T)
+total_pop = np.sum(population, axis=1)
+
+# 分析
+lambda1, stable_structure = model.analyze()
 
 # 可视化
-plt.figure(figsize=(10, 6))
-time = np.arange(years)
-plt.plot(time, population_history[:, 0], 'o-', label='幼年', linewidth=2)
-plt.plot(time, population_history[:, 1], 's-', label='成年', linewidth=2)
-plt.plot(time, population_history[:, 2], '^-', label='老年', linewidth=2)
-plt.xlabel('时间 (年)')
-plt.ylabel('个体数量')
-plt.title('年龄结构种群动态')
-plt.legend()
-plt.grid(True, alpha=0.3)
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+# 1. 总种群增长
+axes[0, 0].plot(range(T), total_pop, 'b-', linewidth=2)
+axes[0, 0].set_xlabel('时间（年）')
+axes[0, 0].set_ylabel('总个体数')
+axes[0, 0].set_title('总种群动态')
+axes[0, 0].grid(True, alpha=0.3)
+
+# 2. 各年龄组数量（对数坐标）
+for i in range(model.m):
+    axes[0, 1].semilogy(range(T), population[:, i], label=f'年龄组 {i+1}')
+axes[0, 1].set_xlabel('时间（年）')
+axes[0, 0].set_ylabel('个体数（对数）')
+axes[0, 1].set_title('各年龄组动态（对数坐标）')
+axes[0, 1].legend()
+axes[0, 1].grid(True, alpha=0.3)
+
+# 3. 年龄结构演变
+time_points = [0, 5, 10, 20, 29]
+for t in time_points:
+    structure = population[t, :] / np.sum(population[t, :])
+    axes[1, 0].plot(range(1, model.m + 1), structure, 'o-', label=f'第{t}年')
+axes[1, 0].plot(range(1, model.m + 1), stable_structure, 'k--', linewidth=2, label='稳定结构')
+axes[1, 0].set_xlabel('年龄组')
+axes[1, 0].set_ylabel('比例')
+axes[1, 0].set_title('年龄结构演变')
+axes[1, 0].legend()
+axes[1, 0].grid(True, alpha=0.3)
+
+# 4. 增长率收敛
+growth_rates = np.diff(np.log(total_pop))
+axes[1, 1].plot(range(1, T), growth_rates, 'g-', linewidth=2)
+axes[1, 1].axhline(y=np.log(lambda1), color='r', linestyle='--', label=f'ln(λ₁) = {np.log(lambda1):.3f}')
+axes[1, 1].set_xlabel('时间（年）')
+axes[1, 1].set_ylabel('瞬时增长率 ln[N(t+1)/N(t)]')
+axes[1, 1].set_title('增长率向ln(λ₁)收敛')
+axes[1, 1].legend()
+axes[1, 1].grid(True, alpha=0.3)
+
+plt.tight_layout()
 plt.show()
+
+print(f"长期增长率 λ₁ = {lambda1:.4f}")
+print(f"稳定年龄结构: {stable_structure}")
 ```
 
-运行这段代码，你会观察到各年龄组数量的振荡与演化。这种振荡是线性矩阵模型的典型特征，源于不同年龄组间的时滞相互作用。
+## **思考题：复杂年龄结构模型分析**
 
-## **2.1.3 特征值与特征向量：长期行为模式**
+考虑一个分为6个年龄组的种群，其参数如下：
 
-对于一个线性系统 $\mathbf{n}(t+1) = \mathbf{L} \mathbf{n}(t)$，长期的种群行为由矩阵 $\mathbf{L}$ 的**特征值**和**特征向量**决定。特征值 $\lambda$ 和对应的特征向量 $\mathbf{v}$ 满足：
+- **生育率**：$f = [0, 0, 0.5, 1.2, 1.8, 0.3]$
+- **存活率**：$s = [0.2, 0.4, 0.7, 0.6, 0.1]$
 
-$$
-\mathbf{L} \mathbf{v} = \lambda \mathbf{v}
-$$
+**问题**：
+1. **矩阵构建与特征分析**：
+   - 写出该种群的Leslie矩阵 $\mathbf{L}$。
+   - 计算 $\mathbf{L}$ 的所有特征值，确定主导特征值 $\lambda_1$。
+   - 计算稳定年龄结构 $\mathbf{w}_1$ 和繁殖价值向量 $\mathbf{v}_1$（左特征向量）。
 
-这表示当种群结构恰好是特征向量时，每年简单地按比例 $\lambda$ 缩放。最大的特征值（称为**主导特征值**）决定了长期增长率，对应的特征向量给出了稳定的年龄分布。
+2. **动态模拟**：
+   - 取初始种群 $\mathbf{n}(0) = (500, 200, 100, 50, 20, 10)^\top$，模拟50个时间步。
+   - 计算每个时间步的总种群 $N(t)$ 和瞬时增长率 $r(t) = \ln[N(t+1)/N(t)]$。
+   - 绘制 $r(t)$ 随时间变化图，验证其是否收敛到 $\ln(\lambda_1)$。
 
-### **数学推导：特征值的生物学意义**
+3. **弹性分析**：
+   - 使用公式 $e_{p} = \dfrac{\partial \ln \lambda_1}{\partial \ln p}$ 计算 $\lambda_1$ 对每个参数（$f_i$ 和 $s_i$）的弹性。
+   - 哪个参数的变化对种群长期增长影响最大？这对保护管理有何启示？
 
-假设 $\lambda_1$ 是最大特征值，$\mathbf{v}_1$ 是对应的特征向量。对于任意初始种群 $\mathbf{n}_0$，经过足够长时间后，种群近似为：
+4. **密度制约效应**（进阶）：
+   - 修改模型，使生育率随总种群密度下降：$f_i(N) = f_i^0 \exp(-0.001 N)$，其中 $N$ 为总个体数。
+   - 模拟该非线性系统，观察种群是否趋于稳定平衡。平衡时的总种群数和年龄结构是多少？
 
-$$
-\mathbf{n}(t) \approx c_1 \lambda_1^t \mathbf{v}_1
-$$
+**提示**：
+- 使用`numpy.linalg.eig`计算特征值和特征向量，注意左特征向量是右特征向量矩阵的逆矩阵的行。
+- 弹性可通过扰动参数并重新计算 $\lambda_1$ 来数值估算。
 
-其中 $c_1$ 是由初始条件决定的常数。这意味着：
-1. 长期增长率由 $\lambda_1$ 决定：若 $\lambda_1 > 1$，种群增长；若 $\lambda_1 < 1$，种群衰退
-2. 稳定年龄结构由 $\mathbf{v}_1$ 给出（需归一化使各组分和为1）
-
-### **Python实现：计算特征值与特征向量**
-
-```python
-import numpy as np
-
-# 计算Leslie矩阵的特征值和特征向量
-eigenvalues, eigenvectors = np.linalg.eig(L)
-
-# 找到主导特征值（最大绝对值）
-dominant_idx = np.argmax(np.abs(eigenvalues))
-lambda1 = eigenvalues[dominant_idx]
-v1 = eigenvectors[:, dominant_idx]
-
-print(f"所有特征值: {eigenvalues}")
-print(f"主导特征值 λ1 = {lambda1:.3f}")
-print(f"对应的特征向量: {v1}")
-
-# 归一化特征向量得到稳定年龄分布
-stable_distribution = v1 / np.sum(v1)
-print(f"稳定年龄分布: {stable_distribution}")
-
-# 验证：应用矩阵乘法是否等于特征值乘法
-test_vector = v1.copy()
-result = L @ test_vector
-expected = lambda1 * test_vector
-print(f"验证 L*v = λv: 最大差异 = {np.max(np.abs(result - expected)):.2e}")
-```
-
-### **应用：种群长期预测**
-
-```python
-# 模拟长期种群动态并与特征值预测比较
-n = np.array([100, 50, 20])
-years = 50
-total_population = np.zeros(years)
-
-for t in range(years):
-    total_population[t] = np.sum(n)
-    n = L @ n
-
-# 根据特征值预测
-# 初始种群在主导特征向量方向的分量
-c1 = np.dot(n_0, np.linalg.inv(eigenvectors)[dominant_idx, :])
-predicted = c1 * (lambda1 ** np.arange(years)) * np.sum(v1)
-
-# 可视化比较
-plt.figure(figsize=(10, 6))
-plt.plot(range(years), total_population, 'b-', label='模拟总种群', linewidth=2)
-plt.plot(range(years), predicted, 'r--', label=f'特征值预测 (λ={lambda1:.3f})', linewidth=2)
-plt.xlabel('时间 (年)')
-plt.ylabel('总个体数量')
-plt.title('种群长期动态：模拟 vs 特征值预测')
-plt.legend()
-plt.grid(True, alpha=0.3)
-plt.yscale('log')  # 对数尺度更清晰显示指数增长
-plt.show()
-```
-
-## **2.1.4 线性方程组：代谢平衡分析**
-
-线性代数在生物建模中的另一个重要应用是代谢通量分析。考虑一个简单的代谢网络：
-
-$$
-\begin{aligned}
-\text{A} &\xrightarrow{v_1} \text{B} \\
-\text{B} &\xrightarrow{v_2} \text{C} \\
-\text{B} &\xrightarrow{v_3} \text{D}
-\end{aligned}
-$$
-
-在稳态下，每个代谢物的净生成率为零。这导致线性方程组：
-
-$$
-\begin{aligned}
--v_1 &= 0 \\
-v_1 - v_2 - v_3 &= 0 \\
-v_2 &= 0 \\
-v_3 &= 0
-\end{aligned}
-$$
-
-用矩阵形式表示为 $\mathbf{S} \mathbf{v} = \mathbf{0}$，其中 $\mathbf{S}$ 是化学计量矩阵。
-
-### **Python实现：解线性方程组**
-
-```python
-import numpy as np
-
-# 化学计量矩阵 S (代谢物 × 反应)
-# 行：A, B, C, D
-# 列：v1, v2, v3
-S = np.array([[-1, 0, 0],
-              [1, -1, -1],
-              [0, 1, 0],
-              [0, 0, 1]])
-
-# 稳态条件：S * v = 0
-# 这是一个齐次线性方程组，我们需要非零解
-# 计算S的零空间（满足Sv=0的向量空间）
-
-# 方法1：使用奇异值分解(SVD)找零空间
-U, Sigma, Vh = np.linalg.svd(S)
-# 零空间由Vh的最后几行组成（对应奇异值为0）
-null_space = Vh[Sigma < 1e-10]
-
-print("化学计量矩阵S:")
-print(S)
-print("\n零空间基向量（可能的稳态通量模式）:")
-for i, vec in enumerate(null_space):
-    print(f"模式{i+1}: {vec}")
-
-# 方法2：具体求解（假设v1=1作为参考）
-# 从方程可知：v1 = 1, v2 = 0, v3 = 0 是一个解
-# 但生物系统通常有多个自由度
-
-# 更一般的情况：添加目标函数（如最大化生物质生成）
-# 这引向线性规划，将在第7章讨论
-```
-
-## **2.1.5 生物启发的线性代数应用**
-
-### **应用1：生态网络中的能流分析**
-
-食物网中物种间的能量传递可以表示为线性变换。设 $\mathbf{e}(t)$ 是各物种能量含量的向量，$\mathbf{T}$ 是传递效率矩阵，则：
-
-$$
-\mathbf{e}(t+1) = \mathbf{T} \mathbf{e}(t) + \mathbf{i}
-$$
-
-其中 $\mathbf{i}$ 是外部能量输入（如太阳辐射）。
-
-### **应用2：神经网络中的线性变换**
-
-即使是最复杂的深度学习模型，其核心仍是线性变换与非线性激活函数的交替。单层神经网络的输出为：
-
-$$
-\mathbf{y} = \sigma(\mathbf{W} \mathbf{x} + \mathbf{b})
-$$
-
-其中 $\mathbf{W}$ 是权重矩阵，$\mathbf{b}$ 是偏置向量，$\sigma$ 是非线性激活函数。这种线性-非线性组合是生物神经元信息处理的简化模型。
-
-### **Python实现：简单神经网络层**
-
-```python
-def neural_layer(x, W, b, activation='relu'):
-    """模拟单层神经网络前向传播"""
-    z = np.dot(W, x) + b  # 线性变换
-    
-    if activation == 'relu':
-        return np.maximum(0, z)  # ReLU激活函数
-    elif activation == 'sigmoid':
-        return 1 / (1 + np.exp(-z))
-    else:
-        return z  # 无激活（线性）
-
-# 示例：3输入，2输出的神经网络层
-np.random.seed(42)
-W = np.random.randn(2, 3) * 0.1  # 权重矩阵
-b = np.random.randn(2) * 0.1     # 偏置向量
-x = np.array([0.5, -1.2, 0.8])   # 输入
-
-output = neural_layer(x, W, b, activation='relu')
-print(f"输入: {x}")
-print(f"权重矩阵 W:\n{W}")
-print(f"偏置向量 b: {b}")
-print(f"输出: {output}")
-```
-
-## **2.1.6 从线性到非线性**
-
-虽然本节聚焦线性系统，但我们必须清醒认识到：生命系统本质上是非线性的。线性模型只是真实世界的局部近似或特意简化。然而，线性代数提供了分析非线性系统的重要工具：
-
-1. **局部线性化**：在平衡点附近，非线性系统常可用线性近似描述
-2. **特征值稳定性分析**：线性化系统的特征值决定了平衡点的局部稳定性
-3. **主成分分析(PCA)**：用线性变换揭示高维数据的主要变异方向
-
-这些方法将在第4章详细讨论。
-
-## **总结与展望**
-
-本节建立了离散线性系统的基本语言：**向量**表示生物状态，**矩阵**描述状态转移，**特征值/特征向量**揭示长期模式。这些概念是后续学习的基础：
-
-- 下一节（2.2）将引入微积分，处理连续变化
-- 第4章将把这些线性工具应用于基因调控网络
-- 第7章将在机器学习背景下扩展线性代数
-
-**关键点回顾**：
-1. 线性模型虽简单，却能捕捉许多生物现象的核心动态
-2. 矩阵特征值决定了线性系统的长期增长率与稳定结构
-3. Python的NumPy库提供了高效的线性代数运算实现
-
-在继续前进前，请确保你理解：为什么Leslie矩阵的主特征值能预测种群长期命运？如何用化学计量矩阵表示代谢网络？这些问题的答案将在整本书中反复出现。
-
----
-
-## **思考题**
-
-1. 修改Leslie矩阵的繁殖率和存活率参数，观察特征值和种群动态如何变化。是否存在使种群稳定的参数组合？
-2. 设计一个包含4个年龄组的种群模型，计算其稳定年龄分布。不同存活率模式如何影响该分布？
-3. 在一个三物种食物链（植物→食草动物→食肉动物）中，如何构建能量传递矩阵？主导特征值有何生态意义？
-4. 实现一个简单的两层神经网络，观察权重矩阵的特征值如何影响信号传播。
-
----
-
-*下一节，我们将进入连续世界，学习描述变化率的微积分语言。*
+通过这个练习，你将深入掌握Leslie矩阵模型的构建、分析和应用，为后续学习更复杂的生态模型和生物网络模型奠定基础。

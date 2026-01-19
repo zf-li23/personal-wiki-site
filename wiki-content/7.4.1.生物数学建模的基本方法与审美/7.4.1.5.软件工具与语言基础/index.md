@@ -4,9 +4,8 @@
 
 ### 核心哲学：为什么是Python？
 
-在众多编程语言和商业软件中，我们选择**Python**作为本书的唯一核心编程语言，基于以下考量：
+在众多编程语言和商业软件中，我们选择**Python**作为本书的核心编程语言，基于以下考量：
 *   **生态系统**：Python拥有极其丰富且成熟的科学计算库（NumPy, SciPy），数据可视化库（Matplotlib, Seaborn），以及蓬勃发展的生物信息学/计算生物学专用库（如Biopython）。其生态宛如一个巨大的“零件市场”，几乎所有建模需求都能找到现成的、高质量的“零件”。
-*   **可读性与易学性**：Python语法接近自然英语和数学表达式，对初学者友好，能让研究者将精力集中于问题本身，而非语言细节。
 *   **通用性与免费开源**：Python是跨平台的（Windows, macOS, Linux），且完全免费。这消除了软件许可的成本和障碍，保证了本书所有代码在任何读者的电脑上都能以相同的方式运行。
 *   **社区与未来**：Python拥有全球最大、最活跃的开发者与科学计算社区。这意味着遇到问题时更容易找到解决方案，也意味着相关工具库将持续维护和发展，是面向未来的选择。
 
@@ -101,7 +100,7 @@
 *   **定位**：商业数值计算与仿真环境。在控制理论、信号处理、某些领域的计算物理/化学中应用广泛。
 *   **与Python对比**：
     *   **语法**：MATLAB语法更专注于矩阵运算（例如，默认的乘法`*`就是矩阵乘法），对于线性代数问题表达非常简洁。
-    *   **生态**：拥有丰富的专业工具箱（Toolbox），但商业许可昂贵。社区和开源生态不如Python活跃。
+    *   **生态**：拥有丰富的专业工具箱（Toolbox），但社区和开源生态不如Python活跃。
     *   **交互性**：类似，但其“工作区”变量查看非常直观。
 *   **一个简单的ODE求解对比**（与上例对应）：
     ```matlab
@@ -141,171 +140,753 @@
 
 现在，你的数字实验室已经就绪，拥有了理解生物数学建模思想所需的语言和工具。从下一章开始，我们将运用Python和这些工具，去具体学习构建生物模型的数理基础。请记住，工具的价值在于使用。在学习过程中，请务必在Jupyter Notebook中亲手运行、修改、甚至“玩坏”每一个代码示例。这是将抽象知识转化为肌肉记忆的唯一途径。
 
-欢迎来到生物数学建模的计算世界。让我们开始构建。
+TODO：面向生物数学的标准标记语言
 
-# 生物数学建模公式书写规范
+## 1. Markdown 的基本知识
 
-## 1. 基础数学规范
+- 文件后缀名： `.md`
+- 应用场景：
+  - 自述文档：在 github 等平台中的开源项目都需要编写一个面向用户的说明文档，即常见的 `README.md`
+  - 编程题目说明：如洛谷等线上评测平台，对题目的所有注意事项分条目说明
+  - 博客、推文等：CSDN、知乎等硬科普平台用于便捷地展示公式和代码，本篇推文同样以 markdown 语言撰写
+  - 协作文档：如腾讯文档同时支持 word 和部分 markdown 的语法和编辑方式
+- 编辑器：
 
-### 1.1 公式格式
-- **行间公式**：使用双美元号包裹，如 `$$公式$$`
-- **行内公式**：使用单美元号包裹，如 `$公式$`
-- **字体规范**：
-  - 正体粗体：`$\mathbf{}$`，如 $\mathbf{A}$（表示矩阵）
-  - 斜体粗体：`$\boldsymbol{}$`，如 $\boldsymbol{x}$（表示向量）
-  - 特殊集合：`$\mathbb{}$`，如 $\mathbb{R}$（实数集）、$\mathbb{Z}$（整数集）
+  - VScode：下载常见的拓展如 `Markdown All in One` 可编辑同时预览
+  - [Typora](https://www.typora.net/ "Typora")：没有预览窗口，实时渲染，可以自己修订渲染出的主题，通过修改一些代码就能实现三线表等符合学术规范要求的格式，可以简洁地实现 pdf 的导出
+  - [墨滴](https://mdnice.com/ "墨滴")：无需下载即可在线编辑，可以上传图片避免 markdown 以代码形式插入图片导致的文件路径维护成本的上升，支持复制到微信公众号和知乎，方便知识分享
 
-### 1.2 符号与运算符
-- **分数表示**：
-  - 行内公式：使用 `$\dfrac{}{}$`，如 $\dfrac{\partial f}{\partial t}$
-  - 行间公式：可使用 `$\frac{}{}$`，如 $\frac{dx}{dt} = kx$
-- **括号使用**：分式等内容使用自适应高度括号
-  - 正确：$\left( \dfrac{a}{b} + \dfrac{c}{d} \right)$
-  - 避免：$(\dfrac{a}{b} + \dfrac{c}{d})$
-- **省略号**：使用 `$\cdots$` 表示居中省略号
-  - 正确：$a_1, a_2, \cdots, a_n$
-  - 避免：$a_1, a_2, ..., a_n$
-- **相等性**：使用单等号 `$=$` 表示相等
-  - 正确：$f(x) = g(x)$
-  - 避免：$f(x) == g(x)$
+## 2. Markdown 的基本语法
 
-### 1.3 变量命名
-- **变量名**：使用斜体，如 $x, y, t$
-- **常量**：通常使用正体，如 $\pi, e$
-- **函数**：使用正体，如 $\sin, \log, \exp$
-- **数字与公式间隔**：数字、字母、公式与前后的汉字之间各留一个空格
-  - 正确：在第 $k$ 个时间点
-  - 避免：在第$k$个时间点
+### 1. 标题
 
-## 2. 生物学特定规范
+使用 `#` 标记，至多表示六级标题，例如：
 
-### 2.1 基因与蛋白质表示
-- **基因名称**：使用斜体小写或首字母大写，根据物种惯例
-  - 原核生物：$lacZ, \textit{lacZ}$
-  - 真核生物：$p53, \textit{p53}$
-- **蛋白质名称**：使用正体首字母大写或全大写
-  - 正确：LacZ, $\text{LacZ}$, GFP
-  - 避免：$LacZ$（除非作为数学变量）
-- **基因座**：使用斜体，如 $lacZ::GFP$
+```markdown
+# 一级标题
 
-### 2.2 浓度表示
-- **标准表示**：使用方括号或直接变量名
-  - 方括号：$[A]$, $[\text{mRNA}]$
-  - 变量名：$c_A$, $m_A$（mRNA浓度），$p_A$（蛋白浓度）
-- **下标表示**：细胞类型或状态作为下标
-  - $[\text{IPTG}]_\text{in}$（细胞内IPTG浓度）
-  - $[\text{GFP}]_\text{total}$（总GFP浓度）
+## 二级标题
 
-### 2.3 反应与速率常数
-- **速率常数**：$k$ 加描述性下标
-  - 转录速率：$k_\text{txn}$ 或 $k_t$
-  - 翻译速率：$k_\text{tl}$ 或 $k_p$
-  - 降解速率：$d_m$（mRNA降解），$d_p$（蛋白降解）
-  - 结合常数：$K_d$（解离常数），$K_a$（结合常数）
-- **Hill函数参数**：
-  - 半最大浓度：$K$
-  - Hill系数：$n$
-  - 基础表达水平：$\alpha_0$
-  - 最大表达水平：$\alpha_\text{max}$
+### 三级标题
 
-### 2.4 缩写规范
-- **长名称缩写**：首次出现时定义，后续使用缩写
-  - 首次：mRNA（信使RNA）
-  - 后续：mRNA
-- **常见缩写**：
-  - ODE：常微分方程
-  - PDE：偏微分方程
-  - RBS：核糖体结合位点
-  - TF：转录因子
-  - PTM：翻译后修饰
-  - FBA：通量平衡分析
+#### 四级标题
 
-### 2.5 特殊符号
-- **化学计量系数**：使用希腊字母 $\nu$，如 $\nu_i$
-- **通量**：使用 $J$ 或 $v$，如 $J_\text{glc}$（葡萄糖通量）
-- **生长速率**：$\mu$
-- **产率系数**：$Y_{X/S}$（基质S到生物量X的产率）
+##### 五级标题
 
-## 3. 数学建模特定规范
+###### 六级标题
+```
 
-### 3.1 方程格式
-- **微分方程**：使用 Leibniz 或 Newton 记号
-  - Leibniz：$\dfrac{d[A]}{dt} = k[B]$
-  - Newton：$\dot{x} = f(x, t)$
-- **偏微分方程**：明确自变量
-  - $\dfrac{\partial c}{\partial t} = D \dfrac{\partial^2 c}{\partial x^2}$
-- **反应方程式**：化学式或数学式
-  - 化学式：$A + B \xrightarrow{k} C$
-  - 数学式：$v = k[A][B]$
+效果：
 
-### 3.2 参数与变量
-- **参数**：通常使用希腊字母或带下标的拉丁字母
-  - $\alpha, \beta, \gamma$
-  - $k_1, k_2, k_{-1}$
-- **状态变量**：通常使用拉丁字母
-  - $x, y, z$ 或带生物学含义：$m, p, s$
-- **时间与空间**：
-  - 时间：$t$，空间：$x, y, z$
-  - 离散时间：$t_n$ 或 $t[n]$
-  - 空间网格：$x_i, y_j$
+# 一级标题
 
-### 3.3 集合与索引
-- **物种集合**：$\mathcal{S} = \{S_1, S_2, \cdots, S_n\}$
-- **反应集合**：$\mathcal{R} = \{R_1, R_2, \cdots, R_m\}$
-- **索引表示**：
-  - 物种 $i$ 的浓度：$[S_i]$ 或 $x_i$
-  - 反应 $j$ 的速率：$v_j$
+## 二级标题
 
-### 3.4 矩阵与向量
-- **代谢网络**：化学计量矩阵 $\mathbf{N}$
-- **通量向量**：$\mathbf{v} = (v_1, v_2, \cdots, v_m)^\top$
-- **浓度向量**：$\mathbf{x} = (x_1, x_2, \cdots, x_n)^\top$
+### 三级标题
 
-## 4. 代码与数学区分
+#### 四级标题
 
-### 4.1 变量表示
-- **数学变量**：斜体，如 $x[i]$
-- **代码变量**：等宽字体，如 `x[i]`
-- **避免混淆**：不在公式中使用代码语法
-  - 正确：$a_{i,j}$ 或 $a(i, j)$
-  - 避免：$a[i][j]$
+##### 五级标题
 
-### 4.2 函数调用
-- **数学函数**：$\sin(x)$, $\log(x)$
-- **自定义函数**：$f(x, y)$, $g(t; \theta)$
-- **参数分隔**：使用逗号或分号
-  - 变量：$f(x, y)$
-  - 参数：$f(x; \alpha, \beta)$
+###### 六级标题
 
-### 4.3 条件与约束
-- **约束条件**：使用大括号或文本
-  - $\max f(x) \quad \text{subject to} \quad g(x) = 0$
-  - $\{ x \in \mathbb{R}^n \mid Ax = b \}$
-- **条件概率**：$P(A \mid B)$
+### 2. 换行
 
-## 5. 示例整合
+markdown 代码的换行并不一定表示渲染的结果换行，这只在标题、公式块和代码块等特殊格式后才会发生。最常用的换行实际上是通过空行（换两行）进行的，另外在句尾加上空格加 `\` ，或在文本中加入 `<br/>` 也可以换行，例如：
 
-### 示例1：基因表达模型
-$$
-\begin{aligned}
-\dfrac{dm}{dt} &= k_\text{txn} - d_m m \\
-\dfrac{dp}{dt} &= k_\text{tl} m - d_p p
-\end{aligned}
-$$
-其中 $m$ 为 mRNA 浓度，$p$ 为蛋白质浓度。
+```markdown
+一次换行
+实际只会显示空格
 
-### 示例2：酶促反应
-$$
-v = \dfrac{V_\text{max} [S]}{K_m + [S]}
-$$
-其中 $v$ 为反应速率，$[S]$ 为底物浓度。
+空行才是换行 \
+这样也是换行 <br/>这样还是换行
+```
 
-### 示例3：逻辑回归（分类模型）
-$$
-P(y=1 \mid \boldsymbol{x}) = \dfrac{1}{1 + \exp(-\boldsymbol{\beta}^\top \boldsymbol{x})}
-$$
-其中 $\boldsymbol{x}$ 为特征向量，$\boldsymbol{\beta}$ 为参数向量。
+效果：
+
+一次换行
+实际只会显示空格
+
+空行才是换行 \
+这样也是换行<br/>这样还是换行
+
+### 3. 字体与布局
+
+由一些特殊符号标定了特殊字体的开始和结束，有时需要配合一些 html 格式的 tag 使用。在布局方面，markdown 默认居左，没有角标，只能使用 html 语法改变布局，例如：
+
+```markdown
+| markdown            | html                                |
+| ------------------- | ----------------------------------- |
+| _斜体_ / _斜体_     | <i>斜体</i> / <em>斜体</em>         |
+| **粗体** / **粗体** | <b>粗体</b> / <strong>粗体</strong> |
+| **_粗斜体_**        | <i><b>粗斜体</b></i>                |
+| ~~删除线~~          | <del>删除线</del>                   |
+
+<u>下划线</u>，上<sup>角标</sup>，下<sub>角标</sub>
+
+<center>居中</center>
+
+<p style="text-align: right;">居右</p>
+```
+
+效果：
+
+| markdown            | html                                |
+| ------------------- | ----------------------------------- |
+| _斜体_ / _斜体_     | <i>斜体</i> / <em>斜体</em>         |
+| **粗体** / **粗体** | <b>粗体</b> / <strong>粗体</strong> |
+| **_粗斜体_**        | <i><b>粗斜体</b></i>                |
+| ~~删除线~~          | <del>删除线</del>                   |
+
+<u>下划线</u>，上<sup>角标</sup>，下<sub>角标</sub>
+
+<center>居中</center>
+
+<p style="text-align: right;">居右</p>
+
+### 4. 列表
+
+**无序列表**：使用 `-` 、 `+` 、 `*` 加一个空格均可表示，缩进方便
+
+**有序列表**：使用数字并加上 `.` 号，再加一个空格表示，会自动进行排序，但缩进比较混乱，例如：
+
+```markdown
+- 无序列表
+* 无序列表
+  - 无序列表
+
+1. 有序列表 1
+1. 有序列表 2
+  1. 有序列表 3
+```
+
+效果：
+
+- 无序列表
+
+* 无序列表
+  - 无序列表
+
+1. 有序列表 1
+1. 有序列表 2
+1. 有序列表 3
+
+### 5. 引用
+
+通过符号 `>` 实现，空格可有可无，在引用的区块内，允许换行存在，直到空行终止，允许引用的引用存在，例如：
+
+```markdown
+> 这是一个引用
+> > 这是一个引用的引用
+> > > 这是一个引用的引用的引用
+```
+
+效果：
+
+> 这是一个引用
+>
+> > 这是一个引用的引用
+> >
+> > > 这是一个引用的引用的引用
+
+### 6. 分割线
+
+用 `---` 或 `<hr>` 实现，例如：
+
+```markdown
+---
+<hr>
+```
+
+效果：
 
 ---
 
-**遵循本规范可确保公式的清晰性、一致性和专业性，便于读者理解和复现建模工作。**
+<hr>
+
+
+### 7. 表格
+
+使用|来分割不同的单元格，第二行使用 `---` 来分隔表头和其他行，第二行还可以通过 `:` 的位置设置对齐方式，一些markdown编辑器的格式化会使得即使不渲染的表格也能一定程度上被对齐，例如：
+
+```markdown
+| 表头       |   表头 |   表头   |
+| ---------- | -----: | :------: |
+| 默认左对齐 | 右对齐 | 居中对齐 |
+```
+
+效果：
+
+| 表头       |   表头 |   表头   |
+| ---------- | -----: | :------: |
+| 默认左对齐 | 右对齐 | 居中对齐 |
+
+### 8. 链接
+
+常用的markdown编辑器一般支持一键写入链接格式（但在微信中可能无法访问），即 `[链接名称](链接地址 "链接名称")` ，或者也可以显式地使用 `<链接地址>` ，例如：
+
+```markdown
+[pubmed](https://pubmed.ncbi.nlm.nih.gov/ "pubmed")
+```
+
+效果：
+
+[pubmed](https://pubmed.ncbi.nlm.nih.gov/ "pubmed")
+
+在微信无法展示markdown的脚注功能，插入方式为 `[^编号]` ，在文末 `[^编号:]` 后写上脚注内容。由于微信不支持链接访问，这里将上述pubmed的链接转为脚注，自动以参考文献的形式出现在文章末尾。
+
+### 9. 图片
+
+对于本地的编写，可以通过输入文件路径获取图像，线上编写则需要先将图片上传到一个可访问的地址，再通过代码插入，格式为 `![图片名称](图片地址)`，例如：
+
+```markdown
+![igem](https://static.igem.org/websites/common/2022/logos/igem-logo-light.svg)
+```
+
+效果：
+
+![igem](https://static.igem.org/websites/common/2022/logos/igem-logo-light.svg)
+
+### 10. 特殊符号
+
+由于markdown语法中靠一些特殊符号表达了排版的信息，如果想要表示符号本身可能需要在符号前加上斜杠，例如：
+
+```markdown
+\+ \* \\
+```
+
+效果：
+
+\+ \* \\
+
+### 11. 代码与代码块
+
+`行内代码` 用反引号 \` 围起来即可，代码块则在前一行和后一行使用三个反引号，同时在前一个反引号后写入代码的语言，默认为文本文件，例如（如下 markdown 代码块中为了不被重复渲染加上斜杠）：
+
+```markdown
+\```
+文本
+\```
+
+\```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+cout << "Hello World" << endl;
+return 0;
+}
+\```
+```
+
+```
+文本
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello World" << endl;
+    return 0;
+}
+```
+
+### 12. 公式与公式块
+
+$ 行内公式y=f(x)$ 用美元号 \$ 围起来即可，公式块则在前一行和后一行使用两个美元号，例如：
+
+$$
+E = mc^2
+$$
+
+*以上介绍了 markdown 作为排版工具的简洁性，以下介绍选用 markdown 进行数学公式整理的重要优势：LaTeX 公式语法。*
+
+## 1. 基本规定
+
+- `{}` ：划定符号的作用区域，被大括号括起来的部分会作为一个整体看待，否则可能只会作用于单个字符。如果要表示 `{}` 本身，则需要用 `\{` 和 `\}`
+- `\` ：表示其后的字符并不单单只是一串字母，而是有其他意义
+- 上下标符号：在公式中非常常用，分别用 `^` 和 `_` 后面的元素表示，可以同时或叠加使用，也常在大型运算符后使用，此时标记写在运算符的上下
+- `\text{}` ：使得大括号内的字符不会再被识别为代码，而是以正体被直接输出
+- `\tag{}` ：在公式末尾对公式进行标号，方便引用
+- `\color{}` ：改变公式的颜色，大括号内填入常见的颜色。如果只更改局部，可以通过 `\color{back}` 改回
+
+## 2. 希腊字母
+
+| 小写希腊字母 | LaTeX 符号 | 大写希腊字母 | LaTeX 符号 |
+| :----------: | :--------: | :----------: | :--------: |
+|   $\alpha$   |   \alpha   |   $\Alpha$   |   \Alpha   |
+|   $\beta$    |   \beta    |   $\Beta$    |   \Beta    |
+|   $\gamma$   |   \gamma   |   $\Gamma$   |   \Gamma   |
+|   $\delta$   |   \delta   |   $\Delta$   |   \Delta   |
+|  $\epsilon$  |  \epsilon  |  $\Epsilon$  |  \Epsilon  |
+|   $\zeta$    |   \zeta    |   $\Zeta$    |   \Zeta    |
+|    $\eta$    |    \eta    |    $\Eta$    |    \Eta    |
+|   $\theta$   |   \theta   |   $\Theta$   |   \Theta   |
+|   $\iota$    |   \iota    |   $\Iota$    |   \Iota    |
+|   $\kappa$   |   \kappa   |   $\Kappa$   |   \Kappa   |
+|  $\lambda$   |  \lambda   |  $\Lambda$   |  \Lambda   |
+|    $\mu$     |    \mu     |    $\Mu$     |    \Mu     |
+|    $\nu$     |    \nu     |    $\Nu$     |    \Nu     |
+|    $\xi$     |    \xi     |    $\Xi$     |    \Xi     |
+|  $\omicron$  |  \omicron  |  $\Omicron$  |  \Omicron  |
+|    $\pi$     |    \pi     |    $\Pi$     |    \Pi     |
+|    $\rho$    |    \rho    |    $\Rho$    |    \Rho    |
+|   $\sigma$   |   \sigma   |   $\Sigma$   |   \Sigma   |
+|    $\tau$    |    \tau    |    $\Tau$    |    \Tau    |
+|  $\upsilon$  |  \upsilon  |  $\Upsilon$  |  \Upsilon  |
+|    $\phi$    |    \phi    |    $\Phi$    |    \Phi    |
+|    $\chi$    |    \chi    |    $\Chi$    |    \Chi    |
+|    $\psi$    |    \psi    |    $\Psi$    |    \Psi    |
+|   $\omega$   |   \omega   |   $\Omega$   |   \Omega   |
+
+微信可能显示不出一些不很常见的大写希腊字母，但在许多编辑器中是可以的。
+
+## 3. 运算符
+
+$+$ 、 $-$ 、$*$ 等在公式中输入符号即可，还有一些特殊符号前可能需要加上斜杠，比如 $\%$ 、 $\#$ 、 $\&$ 、 $\$$ 、 $\_$ 等。还有一些运算符需要一些代码实现，包括乘除号、根号、比较运算符、集合运算符、逻辑运算符、标注符等：
+
+|     运算符效果     |    LaTeX 符号    |       运算符效果        |      LaTeX 符号       |
+| :----------------: | :--------------: | :---------------------: | :-------------------: |
+|      $\times$      |      \times      |         $\div$          |         \div          |
+|     $\sqrt{}$      |     \sqrt{}      |      $\sqrt[n]{}$       |      \sqrt[n]{}       |
+|       $\lt$        |       \lt        |          $\gt$          |          \gt          |
+|       $\le$        |       \le        |          $\ge$          |          \ge          |
+|       $\leq$       |       \leq       |         $\geq$          |         \geq          |
+|      $\leqq$       |      \leqq       |         $\geqq$         |         \geqq         |
+|    $\leqslant$     |    \leqslant     |       $\geqslant$       |       \geqslant       |
+|       $\neq$       |       \neq       |        $\approx$        |        \approx        |
+|       $\sim$       |       \sim       |        $\simeq$         |        \simeq         |
+|      $\cong$       |      \cong       |        $\equiv$         |        \equiv         |
+|       $\pm$        |       \pm        |          $\mp$          |          \mp          |
+|       $\cup$       |       \cup       |         $\cap$          |         \cap          |
+|       $\in$        |       \in        |        $\notin$         |        \notin         |
+|     $\subset$      |     \subset      |        $\supset$        |        \supset        |
+|    $\subseteq$     |    \subseteq     |      $\subsetneq$       |      \subsetneq       |
+|    $\emptyset$     |    \emptyset     |      $\varnothing$      |      \varnothing      |
+|     $\uparrow$     |     \uparrow     |      $\downarrow$       |      \downarrow       |
+|   $\rightarrow$    |   \rightarrow    |      $\leftarrow$       |      \leftarrow       |
+|   $\Rightarrow$    |   \Rightarrow    |      $\Leftarrow$       |      \Leftarrow       |
+|       $\to$        |       \to        |        $\mapsto$        |        \mapsto        |
+|      $\land$       |      \land       |         $\lor$          |         \lor          |
+|      $\lnot$       |      \lnot       |        $\not ?$         |        \not ?         |
+|     $\forall$      |     \forall      |        $\exists$        |        \exists        |
+|       $\top$       |       \top       |         $\bot$          |         \bot          |
+|      $\vdash$      |      \vdash      |        $\vDash$         |        \vDash         |
+|      $\star$       |      \star       |        $\oplus$         |        \oplus         |
+|      $\circ$       |      \circ       |        $\bullet$        |        \bullet        |
+|     $\because$     |     \because     |      $\therefore$       |      \therefore       |
+|      $\prec$       |      \prec       |         $\lhd$          |         \lhd          |
+|      $\infty$      |      \infty      |        $\aleph$         |        \aleph         |
+|      $\nabla$      |      \nabla      |       $\partial$        |       \partial        |
+|    $\triangle$     |    \triangle     |        $\square$        |        \square        |
+|      $\cdot$       |      \cdot       |        $\cdots$         |        \cdots         |
+|      $\vdots$      |      \vdots      |        $\ddots$         |        \ddots         |
+|     $\epsilon$     |     \epsilon     |      $\varepsilon$      |      \varepsilon      |
+|       $\phi$       |       \phi       |        $\varphi$        |        \varphi        |
+|      $\hat{}$      |      \hat{}      |      $\widehat{}$       |      \widehat{}       |
+|     $\tilde{}$     |     \tilde{}     |     $\widetilde{}$      |     \widetilde{}      |
+|      $\bar{}$      |      \bar{}      |       $\acute{}$        |       \acute{}        |
+|     $\breve{}$     |     \breve{}     |       $\grave{}$        |       \grave{}        |
+|      $\dot{}$      |      \dot{}      |        $\ddot{}$        |        \ddot{}        |
+|      $\vec{}$      |      \vec{}      |       $\check{}$        |       \check{}        |
+|   $\overline{}$    |   \overline{}    | $\overleftrightarrow{}$ | \overleftrightarrow{} |
+| $\overleftarrow{}$ | \overleftarrow{} |   $\overrightarrow{}$   |   \overrightarrow{}   |
+
+## 4. 特殊函数
+
+包括对数、三角函数、最大最小值，一些反三角函数没有默认运算符，需要将字符转换为运算符实现：
+
+|         函数效果          |       LaTeX 符号        |         函数效果          |       LaTeX 符号        |
+| :-----------------------: | :---------------------: | :-----------------------: | :---------------------: |
+|         $\log x$          |         \log x          |        $\log_n x$         |        \log_n x         |
+|          $\ln x$          |          \ln x          |          $\lg x$          |          \lg x          |
+|         $\sin x$          |         \sin x          |         $\cos x$          |         \cos x          |
+|         $\tan x$          |         \tan x          |         $\cot x$          |         \cot x          |
+|         $\sec x$          |         \sec x          |         $\csc x$          |         \csc x          |
+|        $\arcsin x$        |        \arcsin x        |        $\arccos x$        |        \arccos x        |
+|        $\arctan x$        |        \arctan x        | $\operatorname{arccot} x$ | \operatorname{arccot} x |
+| $\operatorname{arcsec} x$ | \operatorname{arcsec} x | $\operatorname{arccsc} x$ | \operatorname{arccsc} x |
+|       $\max (a,b)$        |       \max (a,b)        |   $\min_{x \in S} f(x)$   |   \min_{x \in S} f(x)   |
+
+## 5. 大型运算符
+
+包括求和、求积、极限、积分、与或、集合：
+
+求和 $\sum$ ： `\sum`
+
+```markdown
+\sum_{i=1}^n x_i
+```
+
+$$
+\sum_{i=1}^n x_i
+$$
+
+求积 $\prod$ ： `\prod`
+
+```markdown
+\prod_{k=1}^n x_k
+```
+
+$$
+\prod_{k=1}^n x_k
+$$
+
+极限 $\lim$ ： `\lim`
+
+```markdown
+\lim_{x\to \infty} f(x)
+```
+
+$$
+\lim_{x\to \infty} f(x)
+$$
+
+积分 $\int$ ： `\int`
+
+```markdown
+\int_a^b f(x) dx 
+```
+
+$$
+\int_a^b f(x) dx 
+$$
+
+重积分 $\iint$ ： `\iint`
+
+```markdown
+\iint_D f(x,y) dx \, dy
+```
+
+$$
+\iint_D f(x,y) dx \, dy
+$$
+
+其中 `\,` 用于增大些许间距使之更美观。或者使用两次积分符号， `\!` 用于减小积分号之间的间距
+
+```markdown
+\int \!\!\!\! \int_D f(x,y) dx \, dy
+```
+
+$$
+\int \!\!\!\! \int_D f(x,y) dx \, dy
+$$
+
+多重积分规则与之相似，最多可以用 `\iiiint` 表示四重积分 $\iiiint$ 。
+
+析取 $\bigvee$ ： `\bigvee`
+
+```markdown
+\bigvee_{i=1}^{n} A_i
+```
+
+$$
+\bigvee_{i=1}^{n} A_i
+$$
+
+交集 $\bigwedge$ ： `\bigwedge`
+
+```markdown
+\bigwedge_{i=1}^{n} A_i
+```
+
+$$
+\bigwedge_{i=1}^{n} A_i
+$$
+
+并集 $\bigcup$ ： `\bigcup`
+
+```markdown
+\bigcup_{i \in I} A_i
+```
+
+$$
+\bigcup_{i \in I} A_i
+$$
+
+交集 $\bigcap$ ： `\bigcap`
+
+```markdown
+\bigcap_{i \in I} A_i
+```
+
+$$
+\bigcap_{i \in I} A_i
+$$
+
+## 6. 分数
+
+**基本方法**： `\frac{分子}{分母}` ，单字符可以不加大括号
+
+效果： $\frac{分子}{分母}$
+
+**突出样式**： `\cfrac{分子}{分母}` ，适用于复杂或嵌套的分数
+
+效果： $\cfrac{分子}{分母}$
+
+**简便方法**： `{分子 \over 分母}` ，不需要给分子分母都加大括号
+
+效果： ${分子 \over 分母}$
+
+## 7. 括号
+
+- 小括号 `()` 和中括号 `[]` ：二者在下述使用规则中完全一样
+
+  - 可以直接使用，但无法适应内容
+
+  ```markdown
+  ( \int )
+  ```
+
+  $$
+  ( \int )
+  $$
+
+  - 加上 `\left` 和 `\right` 标签使用，可以适应括号内的内容，但必须成对
+
+  ```markdown
+  \left( \int \right)
+  ```
+
+  $$
+  \left( \int \right)
+  $$
+
+  - 可以单独使用，用一些标签调整大小
+
+  ```makrdown
+  \Biggl(\biggl(\Bigl(\bigl((x]\bigr]\Bigr]\biggr]\Biggr]
+  ```
+
+  $$
+  \Biggl(\biggl(\Bigl(\bigl((x]\bigr]\Bigr]\biggr]\Biggr]
+  $$
+
+还有另一些形式的括号：
+
+| 函数效果  | LaTeX 符号 | 函数效果  | LaTeX 符号 |
+| :-------: | :--------: | :-------: | :--------: |
+|  $\vert$  |   \vert    |  $\Vert$  |   \Vert    |
+| $\langle$ |  \langle   | $\rangle$ |  \rangle   |
+| $\lceil$  |   \lceil   | $\rceil$  |   \rceil   |
+| $\lfloor$ |  \lfloor   | $\rfloor$ |  \rfloor   |
+
+花括号 $\{\}$ 必须加斜杠使用 `\{\}` ，只能表示符号，不能适应括号里的内容。表示分类的大括号可以用一对标签表示：
+
+```markdown
+\begin{cases}
+情况1 & 条件1 \\
+情况2 & 条件2 \\
+情况3
+\end{cases}
+```
+
+其中 `\\` 表示换行， `&` 及后面的条件可省，效果：
+$$
+\begin{cases}
+情况1 & 条件1 \\
+情况2 & 条件2 \\
+情况3
+\end{cases}
+$$
+
+例如：
+
+```markdown
+f(x) = 
+\begin{cases} 
+1 & x \in \mathbb{Q} \\
+0 & x \notin \mathbb{Q}
+\end{cases}
+```
+
+效果：
+$$
+f(x) = 
+\begin{cases} 
+1 & x \in \mathbb{Q} \\
+0 & x \notin \mathbb{Q}
+\end{cases}
+$$
+
+## 8. 多行公式
+
+大部分编辑器支持用空格加 `\\` 进行公式的换行，但一些编辑器需要嵌入 `{split}` 的环境才能使用换行符：
+
+```markdown
+\begin{split}
+a + b = c + d \\
+e + f = g + h
+\end{split}
+```
+
+效果：
+$$
+\begin{split}
+a + b = c + d \\
+e + f = g + h
+\end{split}
+$$
+一些复杂的公式推导可能需要进行连等换行，这时可以用 `&` 标记需要对齐的位置：
+
+```markdown
+\begin{split}
+x + y &= 2z + w \\
+&= a + b + c \\
+&= p + q + r
+\end{split}
+```
+
+效果：
+$$
+\begin{split}
+x + y &= 2z + w \\
+&= a + b + c \\
+&= p + q + r
+\end{split}
+$$
+`{align}` 环境也有相似的作用，但在一些编辑器中可能会将每行公式打上标签：
+
+```markdown
+\begin{align}
+x + y &= 2z + w \\
+&= a + b + c \\
+&= p + q + r
+\end{align}
+```
+
+效果：
+$$
+\begin{align}
+x + y &= 2z + w \\
+&= a + b + c \\
+&= p + q + r
+\end{align}
+$$
+
+## 9. 矩阵
+
+`{matrix}` 环境可以实现基本的矩阵操作，用 `&` 间隔同一行的每个元素，用 `\\` 进行换行：
+
+```markdown
+\begin{matrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn}
+\end{matrix}
+```
+
+效果：
+$$
+\begin{matrix}
+a_{11} & \cdots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{m1} & \cdots & a_{mn}
+\end{matrix}
+$$
+矩阵一般还带有不同样式的括号，可以用不同的矩阵环境实现：
+
+```markdown
+\begin{pmatrix} \ddots \end{pmatrix}
+\begin{bmatrix} \ddots \end{bmatrix}
+\begin{Bmatrix} \ddots \end{Bmatrix}
+\begin{vmatrix} \ddots \end{vmatrix}
+\begin{Vmatrix} \ddots \end{Vmatrix}
+```
+
+效果：
+$$
+\begin{pmatrix} \ddots \end{pmatrix}
+\begin{bmatrix} \ddots \end{bmatrix}
+\begin{Bmatrix} \ddots \end{Bmatrix}
+\begin{vmatrix} \ddots \end{vmatrix}
+\begin{Vmatrix} \ddots \end{Vmatrix}
+$$
+
+## 10. 字体
+
+在数学公式中，不同的字体往往也有不同的含义。
+
+- 表示向量和矩阵的粗体： `\boldsymbol{}`
+
+  ```markdown
+  \boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}
+  ```
+
+  效果：
+  $$
+  \boldsymbol{A}\boldsymbol{x} = \boldsymbol{b}
+  $$
+  `\mathbf{}` 也可以加粗字体，但会被转换为正体
+
+  ```markdown
+  \mathbf{A}\mathbf{x} = \mathbf{b}
+  ```
+
+  效果：
+  $$
+  \mathbf{A}\mathbf{x} = \mathbf{b}
+  $$
+
+- 表示数集的黑板粗体： `\mathbb{}` 或 `\Bbb{}`
+
+  ```markdown
+  x \in \mathbb{R}, n \in \Bbb{N}
+  ```
+
+  效果：
+  $$
+  x \in \mathbb{R}, n \in \Bbb{N}
+  $$
+
+- 表示集合或空间的花体字： `\mathcal{}`
+
+  ```markdown
+  \mathcal{U} \cap \mathcal{V}
+  ```
+
+  效果：
+  $$
+  \mathcal{U} \cap \mathcal{V}
+  $$
+
+- 表示抽象代数结构的哥特字体： `\mathfrak{}`
+
+  ```markdown
+  \mathfrak{so}(n)
+  ```
+
+  效果：
+  $$
+  \mathfrak{so}(n)
+  $$
+
+- 表示代码或离散符号的打字机字体： `\mathtt{}`
+
+  ```markdown
+  \mathtt{Hello \quad world!}
+  ```
+
+  效果：
+  $$
+  \mathtt{Hello \quad world!}
+  $$
+
+- 表示常数或物理常数的罗马字体： `\mathrm{}`
+
+  ```markdown
+  \mathrm{e}, \mathrm{c}
+  ```
+
+  效果：
+  $$
+  \mathrm{e}, \mathrm{c}
+  $$
+
+---
+
+**<center>希望你也能找到排版数学公式的乐趣！</center>**
