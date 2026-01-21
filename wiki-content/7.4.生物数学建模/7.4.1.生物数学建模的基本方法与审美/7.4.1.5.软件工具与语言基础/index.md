@@ -186,7 +186,7 @@
     ax.grid(True, linestyle=":", alpha=0.6)  # 添加网格线，更易读
     # 4. 显示或保存
     plt.tight_layout()  # 自动调整布局，避免标签重叠
-    # plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
+    plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
     plt.show()
     ```
 *   **科研图表原则**：图表应力求**清晰、准确、信息丰富**。始终标注坐标轴（包括单位！）、使用清晰的图例、选择合适的图表类型（线图、散点图、柱状图等）、并确保在黑白印刷时也能区分不同曲线（利用线型和标记点）。
