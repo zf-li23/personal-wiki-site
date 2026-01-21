@@ -2,7 +2,7 @@
 
 在明确了建模的思想、价值与审美之后，我们将从形而上降至形而下，开始接触实现这些想法的具体工具。工欲善其事，必先利其器。本节将介绍本书，也是现代计算生物学界，最核心、最通用的一套软件工具与语言基础。我们的原则是：**最小化、可移植、聚焦生物建模**。你将不会看到一个庞杂的软件列表，而是一个精心挑选的、能贯穿本书所有章节的核心工具栈。
 
-### 核心哲学：为什么是Python？
+## 1.5.1.Python语言与核心工具栈简介
 
 在众多编程语言和商业软件中，我们选择**Python**作为本书的核心编程语言，基于以下考量：
 *   **生态系统**：Python拥有极其丰富且成熟的科学计算库（NumPy, SciPy），数据可视化库（Matplotlib, Seaborn），以及蓬勃发展的生物信息学/计算生物学专用库（如Biopython）。其生态宛如一个巨大的“零件市场”，几乎所有建模需求都能找到现成的、高质量的“零件”。
@@ -11,17 +11,72 @@
 
 **我们的核心工具栈**：`Python` + `NumPy` + `SciPy` + `Matplotlib` (+ `Seaborn`)。掌握这四（五）个库，你就能完成本书90%以上的建模与可视化任务。
 
-### 环境配置：你的数字实验室
+### 1.5.1.1.编程环境配置
 
-在开始编写第一行代码前，你需要建立一个统一的、可复现的计算环境。我们强烈推荐使用**Anaconda**发行版和**Jupyter Lab**（或Jupyter Notebook）作为起点。
+以下将会以Windows系统为例，介绍如何配置Python编程环境。其他操作系统（macOS, Linux）的步骤类似，但略有不同。笔者最常用的系统是Ubuntu Linux，也是首次配置windows环境，以下是一个简单的步骤：
+
+1. 下载 Visual Studio Code（简称 VSCode）
+   下载最新版本，在官方网站（https://code.visualstudio.com）或任意应用商城基本都能下载。VSCode 是目前最受欢迎的代码编辑器之一，支持多种语言。侧边的扩展功能中可以下载自己喜欢的各种工具，如中文配置。
+2. 创建工作目录
+   如`E:\MMLS`（意为 Mathmatical Modeling of Life Sciences）。
+3. 下载python
+   在官网（https://www.python.org）或应用商城下载最新版本，建议 3.13。
+4. 安装 VSCode 的 Python 插件
+   VSCode本身并不直接支持Python开发，但我们可以通过安装插件来实现这一功能。
+   在 VSCode 的插件市场，搜索 “Python”，安装由微软官方维护的 Python 扩展。该插件提供了代码智能补全、调试支持、Jupyter Notebook 集成等核心功能。
+   ![](7_4_1_5_1.png)
+5. 配置 python 解释器
+   打开VSCode，按下`Ctrl+Shift+P`​（Windows/Linux）或`Cmd+Shift+P`​（macOS）打开命令面板。输入“Python: Select Interpreter”，选择你安装的 Python 解释器。
+   ![](7_4_1_5_2.png)
+   这里选择的是 python 的默认解释器，对于每个项目，建议使用虚拟环境作为解释器来管理依赖，避免冲突。
+6. 创建虚拟环境
+   打开终端（`Ctrl+​ ~`）并进入你的项目目录。
+   ![](image.png)
+   使用以下命令创建虚拟环境：
+   ```bash
+   python -m venv mmls
+   ```
+   这将创建一个名为`mmls`的虚拟环境，你可以在项目目录下看到它。关于这条命令行的解释：
+   `python`是Python解释器的命令行接口，`-m`表示执行模块，`venv`是Python的虚拟环境管理工具，`mmls`是你创建的虚拟环境名称。
+   ![](image-1.png)
+7. 激活虚拟环境：
+   ```bash
+   mmls\Scripts\activate
+   ```
+   ![](image-2.png)
+   此时很可能遇到报错，解决方法：
+   以管理员身份打开powershell：
+   ![](image-3.png)
+   执行：
+   ```bash
+   Set-ExecutionPolicy RemoteSigned
+   ```
+   输入y并回车。
+   ![](image-4.png)
+   此时重新激活虚拟环境即可成功。
+   ![](image-5.png)
+   激活后，你会看到终端提示符变成了虚拟环境的名称，表示你已成功进入虚拟环境。
+8. 安装Python包：
+   在虚拟环境中安装所需的Python包非常简单，只需要使用pip​命令即可。例如：
+   ```bash
+   pip install numpy
+   ```
+   ![](image-6.png)
+   你可以直接下载所需的所有包（可以先更新包管理工具pip）：
+   ```bash
+   python.exe -m pip install --upgrade pip
+   pip install numpy scipy matplotlib seaborn
+   ```
+
+以上只是针对初学者可以使用的编程环境，今后你很可能需要建立一个统一的、可复现的计算环境。我们强烈推荐使用**Anaconda**发行版和**Jupyter Lab**（或Jupyter Notebook）作为起点。
 *   **Anaconda**：它是一个集成了Python、核心科学计算库和包管理工具`conda`的发行版。一次性安装，免去手动配置各种依赖的烦恼。
 *   **Jupyter Lab**：它是一个基于网页的交互式计算环境。你可以将代码、方程、可视化结果和叙述性文字（Markdown）整合在一个文档中，非常适合进行探索性数据分析、建模和生成可重复的研究报告。
 
 **行动建议**：访问Anaconda官网，下载并安装适用于你操作系统的Anaconda发行版。启动后，打开Jupyter Lab，新建一个Python笔记本（Notebook），这就是你的第一个“数字生物建模实验室”。
 
-### Python科学计算基础（极简精华）
+### 1.5.1.2.Python科学计算包简介
 
-我们不会展开完整的Python语法教程，而是聚焦于生物建模中最常用、最必须的部分。
+我们不会展开完整的Python语法教程，而是聚焦于生物建模中最常用、最必须的部分。AI辅助编程可以帮我们节省对于语法细枝末节的了解。
 
 1.  **数据结构：数据的容器**
     *   **列表 (List)**：有序、可变的元素集合。用于存储时间序列数据、一组参数等。
@@ -70,7 +125,7 @@
     *   **优化 (`scipy.optimize`)**：用于参数拟合（如`curve_fit`， `least_squares`）。
     *   **插值、线性代数、统计等**：满足各种其他需求。
 
-### 数据可视化：Matplotlib与科研图表审美
+### 1.5.1.3.数据可视化：Matplotlib与科研图表审美
 
 一图胜千言。`Matplotlib`是Python绘图的事实标准，`Seaborn`基于其构建，提供了更美观的统计图形样式。
 *   **基本绘图流程**：
@@ -92,9 +147,51 @@
     plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
     plt.show()
     ```
+    ```python-plot
+    params = {
+        "k_txn": 0.5,  # 转录速率，min^-1
+        "d_mRNA": 0.1,  # mRNA降解率，min^-1
+        "k_tl": 2.0,  # 翻译速率，min^-1
+        "d_protein": 0.05,  # 蛋白质降解率，min^-1
+    }
+    import numpy as np
+    from scipy.integrate import odeint
+
+
+    # 定义ODE系统（例如，简单的基因表达模型）
+    def model(y, t, params):
+        mRNA, protein = y
+        dmRNA_dt = params["k_txn"] - params["d_mRNA"] * mRNA
+        dprotein_dt = params["k_tl"] * mRNA - params["d_protein"] * protein
+        return [dmRNA_dt, dprotein_dt]
+
+
+    # 初始条件、时间点、参数
+    y0 = [0, 0]
+    t = np.linspace(0, 300, 1000)
+    sol = odeint(model, y0, t, args=(params,))  # 求解ODE！
+    # sol[:, 0] 是mRNA的时间序列，sol[:, 1] 是protein的时间序列
+    import matplotlib.pyplot as plt
+
+    # 1. 创建图形和坐标轴
+    fig, ax = plt.subplots(figsize=(8, 5), dpi=150)  # figsize控制尺寸，dpi控制分辨率
+    # 2. 在坐标轴上绘图
+    ax.plot(t, sol[:, 0], label="mRNA", color="blue", linewidth=2)
+    ax.plot(t, sol[:, 1], label="Protein", color="red", linewidth=2, linestyle="--")
+    # 3. 美化图表（这是科研图表审美的体现！）
+    ax.set_xlabel("Time (min)", fontsize=12)
+    ax.set_ylabel("Concentration (a.u.)", fontsize=12)
+    ax.set_title("Gene Expression Dynamics", fontsize=14, fontweight="bold")
+    ax.legend(fontsize=11)
+    ax.grid(True, linestyle=":", alpha=0.6)  # 添加网格线，更易读
+    # 4. 显示或保存
+    plt.tight_layout()  # 自动调整布局，避免标签重叠
+    # plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
+    plt.show()
+    ```
 *   **科研图表原则**：图表应力求**清晰、准确、信息丰富**。始终标注坐标轴（包括单位！）、使用清晰的图例、选择合适的图表类型（线图、散点图、柱状图等）、并确保在黑白印刷时也能区分不同曲线（利用线型和标记点）。
 
-### 补充：MATLAB简介
+### 1.5.1.4.补充：MATLAB简介
 
 尽管我们以Python为主，但许多高校和实验室仍在使用**MATLAB**。了解其基本概念有助于阅读相关文献和代码。
 *   **定位**：商业数值计算与仿真环境。在控制理论、信号处理、某些领域的计算物理/化学中应用广泛。
@@ -122,11 +219,11 @@
     ```
     理解两者思维模式的差异，能让你更好地在不同的工具间迁移思想。
 
-### 文档与公式：Markdown与LaTeX基础
+## 1.5.2.文档撰写格式与数学公式基础
 
 优秀的建模工作离不开优秀的文档。清晰的文档能让你在数月后依然能理解自己的代码，也是团队协作和成果展示的基础。
 *   **Markdown**：Jupyter Notebook的原生标记语言。它用简单的符号（如`#`表示标题，`**`表示加粗）来格式化文本，让你能轻松地混合代码、文字叙述和图片。
-    *   **核心用途**：在Jupyter Notebook中撰写实验记录、模型描述、结果分析。它也是GitHub等平台README文件的标准格式。
+    *   **核心用途**：在Jupyter Notebook中撰写实验记录、模型描述、结果分析。它也是GitHub等平台README文件的标准格式，现在也可以用来编写网页等项目。
 *   **LaTeX**：专业的学术排版系统，尤其在处理复杂数学公式时无可替代。
     *   **在Markdown/Notebook中使用**：Jupyter Notebook支持使用`$$ ... $$`（行间公式）或`$ ... $`（行内公式）来嵌入LaTeX数学公式。
         ```markdown
@@ -136,13 +233,7 @@
         ```
     *   **重要性**：掌握基本的LaTeX公式语法，是清晰、专业地表达你模型中数学思想的必备技能。
 
-### 从这里出发
-
-现在，你的数字实验室已经就绪，拥有了理解生物数学建模思想所需的语言和工具。从下一章开始，我们将运用Python和这些工具，去具体学习构建生物模型的数理基础。请记住，工具的价值在于使用。在学习过程中，请务必在Jupyter Notebook中亲手运行、修改、甚至“玩坏”每一个代码示例。这是将抽象知识转化为肌肉记忆的唯一途径。
-
-TODO：面向生物数学的标准标记语言
-
-## 1. Markdown 的基本知识
+### 1.5.2.1.Markdown 的基本知识
 
 - 文件后缀名： `.md`
 - 应用场景：
@@ -156,9 +247,9 @@ TODO：面向生物数学的标准标记语言
   - [Typora](https://www.typora.net/ "Typora")：没有预览窗口，实时渲染，可以自己修订渲染出的主题，通过修改一些代码就能实现三线表等符合学术规范要求的格式，可以简洁地实现 pdf 的导出
   - [墨滴](https://mdnice.com/ "墨滴")：无需下载即可在线编辑，可以上传图片避免 markdown 以代码形式插入图片导致的文件路径维护成本的上升，支持复制到微信公众号和知乎，方便知识分享
 
-## 2. Markdown 的基本语法
+### 1.5.2.2.Markdown 的基本语法
 
-### 1. 标题
+#### 1.5.2.2.1. 标题
 
 使用 `#` 标记，至多表示六级标题，例如：
 
@@ -176,21 +267,7 @@ TODO：面向生物数学的标准标记语言
 ###### 六级标题
 ```
 
-效果：
-
-# 一级标题
-
-## 二级标题
-
-### 三级标题
-
-#### 四级标题
-
-##### 五级标题
-
-###### 六级标题
-
-### 2. 换行
+#### 1.5.2.2.2. 换行
 
 markdown 代码的换行并不一定表示渲染的结果换行，这只在标题、公式块和代码块等特殊格式后才会发生。最常用的换行实际上是通过空行（换两行）进行的，另外在句尾加上空格加 `\` ，或在文本中加入 `<br/>` 也可以换行，例如：
 
@@ -210,7 +287,7 @@ markdown 代码的换行并不一定表示渲染的结果换行，这只在标�
 空行才是换行 \
 这样也是换行<br/>这样还是换行
 
-### 3. 字体与布局
+#### 1.5.2.2.3. 字体与布局
 
 由一些特殊符号标定了特殊字体的开始和结束，有时需要配合一些 html 格式的 tag 使用。在布局方面，markdown 默认居左，没有角标，只能使用 html 语法改变布局，例如：
 

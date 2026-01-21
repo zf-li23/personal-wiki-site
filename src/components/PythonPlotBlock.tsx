@@ -24,17 +24,19 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
   const [plotImage, setPlotImage] = useState<string>('');
   const [error, setError] = useState('');
   const [isPyodideLoaded, setIsPyodideLoaded] = useState(false);
+  const [status, setStatus] = useState<string>('');
   const hasRunRef = useRef(false);
 
   // Check if Pyodide script is already added
   useEffect(() => {
     const scriptId = 'pyodide-script';
     const existingScript = document.getElementById(scriptId) as HTMLScriptElement;
+    const pyodideVersion = 'v0.26.4';
 
     if (!existingScript) {
       const script = document.createElement('script');
       script.id = scriptId;
-      script.src = 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js';
+      script.src = `https://cdn.jsdelivr.net/pyodide/${pyodideVersion}/full/pyodide.js`;
       script.onload = () => setIsPyodideLoaded(true);
       document.body.appendChild(script);
     } else {
@@ -47,6 +49,22 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
     }
   }, []);
 
+  // Preload Pyodide environment to minimize wait time
+  useEffect(() => {
+    if (isPyodideLoaded && !(window as any).pyodide && !(window as any).pyodideInitPromise) {
+        (window as any).pyodideInitPromise = (async () => {
+             const pyodide = await window.loadPyodide({
+                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/"
+            });
+            await pyodide.loadPackage(['matplotlib', 'numpy', 'scipy', 'micropip']);
+            const micropip = pyodide.pyimport("micropip");
+            await micropip.install('seaborn');
+            window.pyodide = pyodide;
+            return pyodide;
+        })();
+    }
+  }, [isPyodideLoaded]);
+
   const runPython = async () => {
     if (!isPyodideLoaded) return;
     
@@ -54,16 +72,36 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
     setError('');
     setOutput('');
     setPlotImage('');
+    setStatus('Waiting in queue...');
 
     // Append to global queue
     (window as any)[queueKey] = (window as any)[queueKey].then(async () => {
         try {
-            // Initialize Pyodide if needed (only once globally)
+            // Initialize Pyodide if needed (using preload promise if available)
             if (!window.pyodide) {
-                window.pyodide = await window.loadPyodide();
-                await window.pyodide.loadPackage(['matplotlib', 'numpy']);
+                if (!(window as any).pyodideInitPromise) {
+                    setStatus('Initializing Python environment...');
+                    // Explicitly set indexURL to match the script source
+                    (window as any).pyodideInitPromise = (async () => {
+                         const pyodide = await window.loadPyodide({
+                            indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/"
+                        });
+                        setStatus('Installing packages (matplotlib, numpy, scipy, seaborn)... This may take a while.');
+                        await pyodide.loadPackage(['matplotlib', 'numpy', 'scipy', 'micropip']);
+                        const micropip = pyodide.pyimport("micropip");
+                        await micropip.install('seaborn');
+                        window.pyodide = pyodide;
+                        return pyodide;
+                    })();
+                } else {
+                    setStatus('Finalizing background initialization...');
+                }
+                
+                // Wait for the initialization (whether preloaded or just started) to finish
+                await (window as any).pyodideInitPromise;
             }
 
+            setStatus('Rendering plot...');
             const isDark = document.documentElement.classList.contains('dark');
 
             // Setup matplotlib backend to Agg and set theme
@@ -181,7 +219,7 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
         ) : (
           <>
             {!isPyodideLoaded && <div className="text-muted-foreground text-sm">Loading Python environment...</div>}
-            {isLoading && <div className="text-muted-foreground text-sm animate-pulse">Generating plot...</div>}
+            {isLoading && <div className="text-muted-foreground text-sm animate-pulse">{status || 'Generating plot...'}</div>}
             {error && <div className="text-destructive text-sm whitespace-pre-wrap">{error}</div>}
             {plotImage && (
                 <img src={plotImage} alt="Python Plot" className="max-w-full rounded shadow-sm" />
