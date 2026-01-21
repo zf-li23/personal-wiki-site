@@ -25,6 +25,7 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
   const [error, setError] = useState('');
   const [isPyodideLoaded, setIsPyodideLoaded] = useState(false);
   const [status, setStatus] = useState<string>('');
+  const [copied, setCopied] = useState(false);
   const hasRunRef = useRef(false);
 
   // Check if Pyodide script is already added
@@ -64,6 +65,16 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
         })();
     }
   }, [isPyodideLoaded]);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy code:', err);
+    }
+  };
 
   const runPython = async () => {
     if (!isPyodideLoaded) return;
@@ -201,6 +212,13 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
             className="text-xs px-2 py-1 rounded bg-green-500/10 hover:bg-green-500/20 text-green-600 transition-colors disabled:opacity-50"
             >
             {isLoading ? 'Running...' : 'Run'}
+            </button>
+            <button
+            onClick={handleCopy}
+            className="text-xs px-2 py-1 rounded bg-muted/50 hover:bg-muted text-muted-foreground transition-colors"
+            title="Copy code"
+            >
+            {copied ? 'Copied!' : 'Copy'}
             </button>
             <button
             onClick={() => setShowCode(!showCode)}
