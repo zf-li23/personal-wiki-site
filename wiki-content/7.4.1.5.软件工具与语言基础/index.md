@@ -129,7 +129,7 @@
 
 一图胜千言。`Matplotlib`是Python绘图的事实标准，`Seaborn`基于其构建，提供了更美观的统计图形样式。
 *   **基本绘图流程**：
-    ```python-plot
+    ```python
     import matplotlib.pyplot as plt
     # 1. 创建图形和坐标轴
     fig, ax = plt.subplots(figsize=(8, 5), dpi=150) # figsize控制尺寸，dpi控制分辨率
@@ -144,6 +144,48 @@
     ax.grid(True, linestyle=':', alpha=0.6) # 添加网格线，更易读
     # 4. 显示或保存
     plt.tight_layout() # 自动调整布局，避免标签重叠
+    plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
+    plt.show()
+    ```
+    ```python-plot
+    params = {
+        "k_txn": 0.5,  # 转录速率，min^-1
+        "d_mRNA": 0.1,  # mRNA降解率，min^-1
+        "k_tl": 2.0,  # 翻译速率，min^-1
+        "d_protein": 0.05,  # 蛋白质降解率，min^-1
+    }
+    import numpy as np
+    from scipy.integrate import odeint
+
+
+    # 定义ODE系统（例如，简单的基因表达模型）
+    def model(y, t, params):
+        mRNA, protein = y
+        dmRNA_dt = params["k_txn"] - params["d_mRNA"] * mRNA
+        dprotein_dt = params["k_tl"] * mRNA - params["d_protein"] * protein
+        return [dmRNA_dt, dprotein_dt]
+
+
+    # 初始条件、时间点、参数
+    y0 = [0, 0]
+    t = np.linspace(0, 300, 1000)
+    sol = odeint(model, y0, t, args=(params,))  # 求解ODE！
+    # sol[:, 0] 是mRNA的时间序列，sol[:, 1] 是protein的时间序列
+    import matplotlib.pyplot as plt
+
+    # 1. 创建图形和坐标轴
+    fig, ax = plt.subplots(figsize=(8, 5), dpi=150)  # figsize控制尺寸，dpi控制分辨率
+    # 2. 在坐标轴上绘图
+    ax.plot(t, sol[:, 0], label="mRNA", color="blue", linewidth=2)
+    ax.plot(t, sol[:, 1], label="Protein", color="red", linewidth=2, linestyle="--")
+    # 3. 美化图表（这是科研图表审美的体现！）
+    ax.set_xlabel("Time (min)", fontsize=12)
+    ax.set_ylabel("Concentration (a.u.)", fontsize=12)
+    ax.set_title("Gene Expression Dynamics", fontsize=14, fontweight="bold")
+    ax.legend(fontsize=11)
+    ax.grid(True, linestyle=":", alpha=0.6)  # 添加网格线，更易读
+    # 4. 显示或保存
+    plt.tight_layout()  # 自动调整布局，避免标签重叠
     # plt.savefig('gene_expression.png', bbox_inches='tight') # 保存为高清图片，用于报告或论文
     plt.show()
     ```
@@ -207,7 +249,7 @@
 
 ### 1.5.2.2.Markdown 的基本语法
 
-#### 1. 标题
+#### 1.5.2.2.1. 标题
 
 使用 `#` 标记，至多表示六级标题，例如：
 
@@ -225,7 +267,7 @@
 ###### 六级标题
 ```
 
-### 2. 换行
+#### 1.5.2.2.2. 换行
 
 markdown 代码的换行并不一定表示渲染的结果换行，这只在标题、公式块和代码块等特殊格式后才会发生。最常用的换行实际上是通过空行（换两行）进行的，另外在句尾加上空格加 `\` ，或在文本中加入 `<br/>` 也可以换行，例如：
 
@@ -245,7 +287,7 @@ markdown 代码的换行并不一定表示渲染的结果换行，这只在标�
 空行才是换行 \
 这样也是换行<br/>这样还是换行
 
-### 3. 字体与布局
+#### 1.5.2.2.3. 字体与布局
 
 由一些特殊符号标定了特殊字体的开始和结束，有时需要配合一些 html 格式的 tag 使用。在布局方面，markdown 默认居左，没有角标，只能使用 html 语法改变布局，例如：
 
