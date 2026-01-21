@@ -1,70 +1,62 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import md5 from 'js-md5';
 
 interface PythonPlotBlockProps {
   code: string;
+  folderPath?: string; // We'll need this prop
 }
 
-declare global {
-  interface Window {
-    loadPyodide: any;
-    pyodide: any;
-  }
-}
-
-// Global queue to serialize Pyodide execution across all component instances
-const queueKey = '__pyodide_execution_queue__';
-if (!(window as any)[queueKey]) {
-    (window as any)[queueKey] = Promise.resolve();
-}
-
-export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
+export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockProps) {
   const [showCode, setShowCode] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [output, setOutput] = useState<string>('');
-  const [plotImage, setPlotImage] = useState<string>('');
-  const [error, setError] = useState('');
-  const [isPyodideLoaded, setIsPyodideLoaded] = useState(false);
-  const [status, setStatus] = useState<string>('');
+  const [plotSrc, setPlotSrc] = useState<string>('');
   const [copied, setCopied] = useState(false);
-  const hasRunRef = useRef(false);
+  const [imgError, setImgError] = useState(false);
 
-  // Check if Pyodide script is already added
+  // Normalize code for hash calculation: trim trailing newlines
+  const normalizedCode = code.replace(/\n$/, '');
+  // @ts-ignore
+  const codeHash = md5(normalizedCode);
+
   useEffect(() => {
-    const scriptId = 'pyodide-script';
-    const existingScript = document.getElementById(scriptId) as HTMLScriptElement;
-    const pyodideVersion = 'v0.26.4';
+    // Determine theme on mount and change
+    const updateSrc = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        const theme = isDark ? 'dark' : 'light';
+        // Construct path: base + wiki-content + folderPath + hash + theme + .png
+        // import.meta.env.BASE_URL usually includes trailing slash
+        const baseUrl = import.meta.env.BASE_URL;
+        // folderPath pass logic:
+        // MarkdownRenderer passes 'currentPath'. e.g. "1.Discrete/index".
+        // The image is next to index.md.
+        // So we need to remove "/index" if present or keep folder structure.
+        
+        // If helper removes "index", we get "1.Discrete".
+        // URL needs "1.Discrete/".
+        
+        let pathPart = folderPath || '';
+        if (pathPart.endsWith('/index')) {
+            pathPart = pathPart.replace(/\/index$/, '');
+        } else if (pathPart === 'index') {
+            pathPart = '';
+        }
+        
+        // Ensure pathPart ends with / if not empty
+        if (pathPart && !pathPart.endsWith('/')) {
+            pathPart += '/';
+        }
+        
+        const src = `${baseUrl}wiki-content/${pathPart}${codeHash}_${theme}.png`;
+        setPlotSrc(src);
+        setImgError(false); // Reset error on source change
+    };
 
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.src = `https://cdn.jsdelivr.net/pyodide/${pyodideVersion}/full/pyodide.js`;
-      script.onload = () => setIsPyodideLoaded(true);
-      document.body.appendChild(script);
-    } else {
-      if (window.loadPyodide) {
-        setIsPyodideLoaded(true);
-      } else {
-        // Script exists but not loaded, wait for it
-        existingScript.addEventListener('load', () => setIsPyodideLoaded(true));
-      }
-    }
-  }, []);
-
-  // Preload Pyodide environment to minimize wait time
-  useEffect(() => {
-    if (isPyodideLoaded && !(window as any).pyodide && !(window as any).pyodideInitPromise) {
-        (window as any).pyodideInitPromise = (async () => {
-             const pyodide = await window.loadPyodide({
-                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/"
-            });
-            await pyodide.loadPackage(['matplotlib', 'numpy', 'scipy', 'micropip']);
-            const micropip = pyodide.pyimport("micropip");
-            await micropip.install('seaborn');
-            window.pyodide = pyodide;
-            return pyodide;
-        })();
-    }
-  }, [isPyodideLoaded]);
+    updateSrc();
+    
+    // Observer for class change on html
+    const observer = new MutationObserver(updateSrc);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, [codeHash, folderPath]);
 
   const handleCopy = async () => {
     try {
@@ -76,143 +68,11 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
     }
   };
 
-  const runPython = async () => {
-    if (!isPyodideLoaded) return;
-    
-    setIsLoading(true);
-    setError('');
-    setOutput('');
-    setPlotImage('');
-    setStatus('Waiting in queue...');
-
-    // Append to global queue
-    (window as any)[queueKey] = (window as any)[queueKey].then(async () => {
-        try {
-            // Initialize Pyodide if needed (using preload promise if available)
-            if (!window.pyodide) {
-                if (!(window as any).pyodideInitPromise) {
-                    setStatus('Initializing Python environment...');
-                    // Explicitly set indexURL to match the script source
-                    (window as any).pyodideInitPromise = (async () => {
-                         const pyodide = await window.loadPyodide({
-                            indexURL: "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/"
-                        });
-                        setStatus('Installing packages (matplotlib, numpy, scipy, seaborn)... This may take a while.');
-                        await pyodide.loadPackage(['matplotlib', 'numpy', 'scipy', 'micropip']);
-                        const micropip = pyodide.pyimport("micropip");
-                        await micropip.install('seaborn');
-                        window.pyodide = pyodide;
-                        return pyodide;
-                    })();
-                } else {
-                    setStatus('Finalizing background initialization...');
-                }
-                
-                // Wait for the initialization (whether preloaded or just started) to finish
-                await (window as any).pyodideInitPromise;
-            }
-
-            setStatus('Rendering plot...');
-            const isDark = document.documentElement.classList.contains('dark');
-
-            // Setup matplotlib backend to Agg and set theme
-            // We must do this BEFORE every plot to ensure clean state
-            await window.pyodide.runPythonAsync(`
-                import matplotlib
-                matplotlib.use("Agg")
-                import matplotlib.pyplot as plt
-                import io, base64
-                import sys
-                
-                # Mock plt.show to do nothing (we capture manually)
-                def noop_show(*args, **kwargs):
-                    pass
-                plt.show = noop_show
-
-                # Set style based on theme
-                if ${isDark ? 'True' : 'False'}:
-                    plt.style.use('dark_background')
-                else:
-                    plt.style.use('default')
-                
-                # Reset figure explicitly
-                plt.clf()
-                plt.close('all')
-            `);
-
-            // Capture stdout
-            window.pyodide.setStdout({ batched: (msg: string) => setOutput(prev => prev + msg + '\n') });
-
-            // Run user code
-            console.log("Running user code...");
-            await window.pyodide.runPythonAsync(code);
-
-            // Get plot
-            const image = await window.pyodide.runPythonAsync(`
-                import io, base64
-                def _extract_plot_data():
-                    buf = io.BytesIO()
-                    # Check if any figure exists
-                    fignums = plt.get_fignums()
-                    
-                    if fignums:
-                        try:
-                            plt.savefig(buf, format='png', bbox_inches='tight')
-                            buf.seek(0)
-                            return base64.b64encode(buf.read()).decode('utf-8')
-                        except Exception as e:
-                            return ""
-                        finally:
-                            plt.close('all')
-                    else:
-                        return ""
-                
-                _extract_plot_data()
-            `);
-            
-            if (image && image.length > 0) {
-                setPlotImage(`data:image/png;base64,${image}`);
-            }
-        } catch (err: any) {
-            console.error('Python execution error:', err);
-            setError(err.message);
-        } finally {
-            setIsLoading(false);
-        }
-    });
-  };
-
-  // Auto-run once when visible/loaded
-  useEffect(() => {
-      if (isPyodideLoaded && !hasRunRef.current) {
-          hasRunRef.current = true;
-          runPython();
-      }
-  }, [isPyodideLoaded]);
-
-  // Re-run on theme change
-  useEffect(() => {
-    const observer = new MutationObserver(() => {
-       if (isPyodideLoaded && !isLoading) {
-           runPython();
-       }
-    });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, [isPyodideLoaded, code]);
-
   return (
     <div className="my-4 border rounded-lg overflow-hidden bg-card">
       <div className="flex justify-between items-center p-2 bg-muted/30 border-b">
         <span className="text-xs font-mono text-muted-foreground">Python Plot</span>
         <div className="flex gap-2">
-            <button
-            onClick={runPython}
-            disabled={isLoading || !isPyodideLoaded}
-            className="text-xs px-2 py-1 rounded bg-green-500/10 hover:bg-green-500/20 text-green-600 transition-colors disabled:opacity-50"
-            >
-            {isLoading ? 'Running...' : 'Run'}
-            </button>
             <button
             onClick={handleCopy}
             className="text-xs px-2 py-1 rounded bg-muted/50 hover:bg-muted text-muted-foreground transition-colors"
@@ -236,16 +96,18 @@ export default function PythonPlotBlock({ code }: PythonPlotBlockProps) {
           </pre>
         ) : (
           <>
-            {!isPyodideLoaded && <div className="text-muted-foreground text-sm">Loading Python environment...</div>}
-            {isLoading && <div className="text-muted-foreground text-sm animate-pulse">{status || 'Generating plot...'}</div>}
-            {error && <div className="text-destructive text-sm whitespace-pre-wrap">{error}</div>}
-            {plotImage && (
-                <img src={plotImage} alt="Python Plot" className="max-w-full rounded shadow-sm" />
-            )}
-            {output && (
-                <pre className="mt-2 w-full text-xs bg-black/5 dark:bg-white/5 p-2 rounded text-foreground">
-                    {output}
-                </pre>
+            {!imgError ? (
+                <img 
+                    src={plotSrc} 
+                    alt="Python Plot" 
+                    className="max-w-full rounded shadow-sm"
+                    onError={() => setImgError(true)}
+                />
+            ) : (
+                <div className="text-muted-foreground text-sm flex flex-col items-center gap-2">
+                    <span>⚠️ Plot not available</span>
+                    <span className="text-xs opacity-70">Run 'pnpm run build' to generate plots locally.</span>
+                </div>
             )}
           </>
         )}

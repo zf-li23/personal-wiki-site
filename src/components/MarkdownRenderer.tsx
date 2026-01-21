@@ -126,7 +126,7 @@ export default function MarkdownRenderer({ content, currentPath }: MarkdownRende
                     return <MermaidBlock code={codeText} />;
                 }
                 if (language === 'python-plot' || (language === 'python' && codeText.includes('import matplotlib'))) {
-                    return <PythonPlotBlock code={codeText} />;
+                    return <PythonPlotBlock code={codeText} folderPath={currentPath} />;
                 }
 
               return (
