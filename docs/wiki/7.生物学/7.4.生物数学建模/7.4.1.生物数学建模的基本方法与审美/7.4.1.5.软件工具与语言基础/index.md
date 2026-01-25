@@ -16,11 +16,11 @@
 以下将会以Windows系统为例，介绍如何配置Python编程环境。其他操作系统（macOS, Linux）的步骤类似，但略有不同。笔者最常用的系统是Ubuntu Linux，也是首次配置windows环境，以下是一个简单的步骤：
 
 1. 下载 Visual Studio Code（简称 VSCode）
-   下载最新版本，在官方网站（https://code.visualstudio.com）或任意应用商城基本都能下载。VSCode 是目前最受欢迎的代码编辑器之一，支持多种语言。侧边的扩展功能中可以下载自己喜欢的各种工具，如中文配置。
+   下载最新版本，在官方网站（<https://code.visualstudio.com>）或任意应用商城基本都能下载。VSCode 是目前最受欢迎的代码编辑器之一，支持多种语言。侧边的扩展功能中可以下载自己喜欢的各种工具，如中文配置。
 2. 创建工作目录
    如`E:\MMLS`（意为 Mathmatical Modeling of Life Sciences）。
 3. 下载python
-   在官网（https://www.python.org）或应用商城下载最新版本，建议 3.13。
+   在官网（<https://www.python.org>）或应用商城下载最新版本，建议 3.13。
 4. 安装 VSCode 的 Python 插件
    VSCode本身并不直接支持Python开发，但我们可以通过安装插件来实现这一功能。
    在 VSCode 的插件市场，搜索 “Python”，安装由微软官方维护的 Python 扩展。该插件提供了代码智能补全、调试支持、Jupyter Notebook 集成等核心功能。
@@ -1054,3 +1054,290 @@ $$
 ## 思考题
 1. 配置可运行的python环境（不限于文档中的方法过程和操作系统，用自己的电脑能运行代码即可），将1.5.1.3.中的python代码并保存结果图。
 2. 用任意的markdown或者latex编辑器（推荐overleaf）撰写一个简单的基因表达数学建模文档，包含上一题的结果图，尝试解释为什么系统能达到稳定，提交html格式（可以将图片放在同一目录并压缩为zip文件）或pdf格式的报告。
+
+**基因表达数学建模综合分析报告**
+
+**1. 引言**
+
+基因表达是生命科学中的核心过程，涉及从DNA到mRNA的转录以及从mRNA到蛋白质的翻译。理解这一过程的动力学特性对于系统生物学和合成生物学至关重要。本报告整合了多位学生的分析视角，建立了一个简单的基因表达数学模型，通过数值模拟、稳态分析、稳定性分析（包括特征值、李雅普诺夫指数和相图）以及参数敏感性分析，全面探究了该系统的动态行为与稳态特性。
+
+**2. 数学模型**
+
+**2.1 模型假设**
+
+- 转录以恒定速率进行。
+- mRNA和蛋白质的降解遵循一级动力学。
+- 翻译速率与mRNA浓度成正比。
+- 系统是充分混合的，忽略随机效应。
+
+**2.2 动力学方程**
+
+设 $M(t)$ 表示mRNA浓度，$P(t)$ 表示蛋白质浓度，系统由以下常微分方程组描述：
+
+$$
+\begin{aligned}
+\frac{dM}{dt} &= \alpha - \delta_m M, \\
+\frac{dP}{dt} &= \beta M - \delta_p P.
+\end{aligned}
+\tag{1}
+$$
+
+其中：
+
+- $\alpha$: 转录速率常数（min⁻¹）
+- $\beta$: 翻译速率常数（min⁻¹）
+- $\delta_m$: mRNA降解速率常数（min⁻¹）
+- $\delta_p$: 蛋白质降解速率常数（min⁻¹）
+
+**2.3 参数设定**
+
+作业中使用的参数值：
+$$
+\alpha = 1.0, \quad \beta = 0.5, \quad \delta_m = 0.1, \quad \delta_p = 0.05.
+$$
+初始条件通常设为 $M(0) = 0, P(0) = 0$。
+
+**3. 数值模拟与可视化**
+
+使用SciPy的`solve_ivp`函数求解ODE系统，Matplotlib进行可视化。
+
+```python-plot
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+
+# 定义ODE系统
+def gene_expression(t, y, alpha, beta, delta_m, delta_p):
+    M, P = y
+    dMdt = alpha - delta_m * M
+    dPdt = beta * M - delta_p * P
+    return [dMdt, dPdt]
+
+
+# 参数
+alpha = 1.0
+beta = 0.5
+delta_m = 0.1
+delta_p = 0.05
+
+# 初始条件与时间范围
+y0 = [0, 0]
+t_span = (0, 200)
+t_eval = np.linspace(0, 200, 1000)
+
+# 求解
+sol = solve_ivp(
+    gene_expression,
+    t_span,
+    y0,
+    args=(alpha, beta, delta_m, delta_p),
+    t_eval=t_eval,
+    method="RK45",
+)
+
+# 绘图
+plt.figure(figsize=(8, 5), dpi=150)
+plt.plot(sol.t, sol.y[0], label="mRNA", color="blue", linewidth=2)
+plt.plot(sol.t, sol.y[1], label="Protein", color="red", linewidth=2, linestyle="--")
+plt.xlabel("Time (min)", fontsize=12)
+plt.ylabel("Concentration (a.u.)", fontsize=12)
+plt.title("Gene Expression Dynamics", fontsize=14, fontweight="bold")
+plt.legend(fontsize=11)
+plt.grid(True, linestyle=":", alpha=0.6)
+plt.tight_layout()
+plt.savefig("gene_expression.png", dpi=150)
+plt.show()
+```
+
+mRNA浓度迅速上升并稳定在稳态值附近，蛋白质浓度由于翻译过程的累积效应，上升较慢但最终稳定在更高的水平。
+
+## 4. 稳态分析
+
+令时间导数为零：
+$$
+\begin{aligned}
+0 &= \alpha - \delta_m M_{ss} \quad \Rightarrow \quad M_{ss} = \frac{\alpha}{\delta_m}, \\
+0 &= \beta M_{ss} - \delta_p P_{ss} \quad \Rightarrow \quad P_{ss} = \frac{\alpha \beta}{\delta_m \delta_p}.
+\end{aligned}
+\tag{2}
+$$
+
+代入参数得：
+$$
+M_{ss} = \frac{1.0}{0.1} = 10, \quad P_{ss} = \frac{1.0 \times 0.5}{0.1 \times 0.05} = 100.
+$$
+
+**5. 稳定性分析**
+
+**5.1 雅可比矩阵与特征值**
+
+系统(1)的雅可比矩阵为：
+$$
+J = \begin{bmatrix}
+-\delta_m & 0 \\
+\beta & -\delta_p
+\end{bmatrix}.
+\tag{3}
+$$
+
+特征值为：
+$$
+\lambda_1 = -\delta_m, \quad \lambda_2 = -\delta_p.
+\tag{4}
+$$
+
+由于 $\delta_m > 0, \delta_p > 0$，两个特征值均为负实数，因此系统是**渐近稳定**的。
+
+**5.2 李雅普诺夫指数**
+
+对于线性自治系统，李雅普诺夫指数即为特征值的实部。因此：
+$$
+\Lambda_1 = \text{Re}(\lambda_1) = -\delta_m = -0.1, \quad
+\Lambda_2 = \text{Re}(\lambda_2) = -\delta_p = -0.05.
+$$
+所有李雅普诺夫指数均为负，进一步证实系统是渐近稳定的，且任何扰动都会以指数形式衰减。
+
+**5.3 相图与向量场**
+
+相图展示了在 $M-P$ 平面上的系统轨迹。通过绘制向量场和从不同初始条件出发的轨迹，可以直观看到所有轨迹都收敛于稳态点 $(M_{ss}, P_{ss}) = (10, 100)$。
+
+```python-plot
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+
+# 定义ODE系统
+def gene_expression(t, y, alpha, beta, delta_m, delta_p):
+    M, P = y
+    dMdt = alpha - delta_m * M
+    dPdt = beta * M - delta_p * P
+    return [dMdt, dPdt]
+
+
+# 参数
+alpha = 1.0
+beta = 0.5
+delta_m = 0.1
+delta_p = 0.05
+t_span = (0, 200)
+
+# 相图与向量场绘制
+M_range = np.linspace(0, 25, 20)
+P_range = np.linspace(0, 250, 20)
+M, P = np.meshgrid(M_range, P_range)
+
+dM = alpha - delta_m * M
+dP = beta * M - delta_p * P
+
+# 归一化箭头
+norm = np.sqrt(dM**2 + dP**2)
+dM_norm = dM / (norm + 1e-10)
+dP_norm = dP / (norm + 1e-10)
+
+M_ss = alpha / delta_m
+P_ss = (beta * M_ss) / delta_p
+
+plt.figure(figsize=(7, 6))
+# 添加 angles='xy' 参数，强制箭头按照数据坐标系的方向绘制
+# 这解决了当x轴和y轴尺度不一致时（0-25 vs 0-250），箭头指向与轨迹不平行的问题
+plt.quiver(
+    M,
+    P,
+    dM_norm,
+    dP_norm,
+    norm,
+    alpha=0.6,
+    cmap="viridis",
+    scale=30,
+    width=0.003,
+    angles="xy",
+)
+plt.plot(M_ss, P_ss, "r*", markersize=15, label="Steady State")
+
+# 绘制几条轨迹
+# 生成更均匀的初始条件：沿着边界采样，使轨迹覆盖整个相平面
+ic_M_bottom = np.linspace(0, 25, 6)
+ic_P_left = np.linspace(0, 250, 6)
+initial_conditions = []
+
+# 添加底边初始点 (P=0)
+for m in ic_M_bottom:
+    initial_conditions.append([m, 0])
+# 添加左边初始点 (M=0)
+for p in ic_P_left:
+    initial_conditions.append([0, p])
+# 添加几个中间区域的点以补充流线
+initial_conditions.extend([[25, 100], [25, 200], [10, 250]])
+
+for M0, P0 in initial_conditions:
+    sol = solve_ivp(
+        gene_expression,
+        t_span,
+        [M0, P0],
+        args=(alpha, beta, delta_m, delta_p),
+        t_eval=np.linspace(0, 200, 1000),
+    )
+    plt.plot(sol.y[0], sol.y[1], "k-", alpha=0.7, linewidth=1)
+
+plt.xlabel("mRNA Concentration", fontsize=12)
+plt.ylabel("Protein Concentration", fontsize=12)
+plt.title("Phase Portrait with Vector Field", fontsize=14, fontweight="bold")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig("phase_portrait.png", dpi=150)
+plt.show()
+```
+
+### 5.4 扰动分析
+
+考虑小扰动 $\epsilon_m = M - M_{ss}, \epsilon_p = P - P_{ss}$，其动力学为：
+$$
+\begin{aligned}
+\frac{d\epsilon_m}{dt} &= -\delta_m \epsilon_m, \\
+\frac{d\epsilon_p}{dt} &= \beta \epsilon_m - \delta_p \epsilon_p.
+\end{aligned}
+\tag{5}
+$$
+
+解得：
+$$
+\begin{aligned}
+\epsilon_m(t) &= \epsilon_m(0) e^{-\delta_m t}, \\
+\epsilon_p(t) &= \left[ \epsilon_p(0) + \frac{\beta \epsilon_m(0)}{\delta_p - \delta_m} \right] e^{-\delta_p t} - \frac{\beta \epsilon_m(0)}{\delta_p - \delta_m} e^{-\delta_m t}.
+\end{aligned}
+\tag{6}
+$$
+
+所有扰动均按指数衰减至零，系统具有鲁棒性。
+
+**7. 讨论与结论**
+
+**7.1 为什么系统能达到稳定？**
+
+1. **负反馈机制**：mRNA和蛋白质的降解提供了持续的负反馈，防止浓度无限增长。
+2. **线性结构与负特征值**：系统的线性特性保证了其动态行为可预测，且所有特征值均为负，确保了渐近稳定性。
+3. **李雅普诺夫指数均为负**：从动态系统理论看，所有李雅普诺夫指数均为负表明相空间体积收缩，轨迹被吸引到稳定的不动点。
+
+**7.2 生物学意义**
+
+- **稳态平衡**：细胞通过合成与降解的平衡维持蛋白质水平的稳态，这对细胞功能至关重要。
+- **鲁棒性**：系统对初始条件和小的扰动不敏感，能够在波动环境中保持功能。
+- **可预测性**：单调趋近稳态使得基因表达响应可预测，便于细胞对外部信号作出可靠反应。
+
+**7.3 模型局限与扩展**
+
+当前模型是确定性的、线性的，忽略了：
+
+- 随机涨落（基因表达噪声）
+- 非线性调控（如转录因子反馈）
+- 时间延迟（转录、翻译过程耗时）
+- 资源竞争与细胞周期影响
+
+未来可引入随机微分方程、希尔函数调控、时滞微分方程等，以更贴近真实生物学情境。
+
+**8. 总结**
+
+本报告整合了基因表达数学建模的核心内容，从基础模型建立、数值模拟、稳态与稳定性分析（包括特征值、李雅普诺夫指数和相图），到参数敏感性分析，全面展示了线性基因表达系统的动态特性。分析表明，该系统由于降解过程的负反馈和负的特征值，具有渐近稳定性，能够从任意初始条件平滑趋近唯一的稳态。该模型为理解更复杂的基因调控网络奠定了基础。

@@ -91,7 +91,7 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
       
       <div className="p-4 overflow-x-auto flex flex-col items-center bg-white dark:bg-gray-900 transition-colors min-h-[200px] justify-center">
         {showCode ? (
-          <pre className="text-sm font-mono whitespace-pre-wrap text-left w-full text-foreground">
+          <pre className="text-sm font-mono whitespace-pre-wrap text-left w-full bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 p-4 rounded border border-border">
             {code}
           </pre>
         ) : (
