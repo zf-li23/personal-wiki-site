@@ -16,11 +16,11 @@
 以下将会以Windows系统为例，介绍如何配置Python编程环境。其他操作系统（macOS, Linux）的步骤类似，但略有不同。笔者最常用的系统是Ubuntu Linux，也是首次配置windows环境，以下是一个简单的步骤：
 
 1. 下载 Visual Studio Code（简称 VSCode）
-   下载最新版本，在官方网站（https://code.visualstudio.com）或任意应用商城基本都能下载。VSCode 是目前最受欢迎的代码编辑器之一，支持多种语言。侧边的扩展功能中可以下载自己喜欢的各种工具，如中文配置。
+   下载最新版本，在官方网站（<https://code.visualstudio.com>）或任意应用商城基本都能下载。VSCode 是目前最受欢迎的代码编辑器之一，支持多种语言。侧边的扩展功能中可以下载自己喜欢的各种工具，如中文配置。
 2. 创建工作目录
    如`E:\MMLS`（意为 Mathmatical Modeling of Life Sciences）。
 3. 下载python
-   在官网（https://www.python.org）或应用商城下载最新版本，建议 3.13。
+   在官网（<https://www.python.org>）或应用商城下载最新版本，建议 3.13。
 4. 安装 VSCode 的 Python 插件
    VSCode本身并不直接支持Python开发，但我们可以通过安装插件来实现这一功能。
    在 VSCode 的插件市场，搜索 “Python”，安装由微软官方维护的 Python 扩展。该插件提供了代码智能补全、调试支持、Jupyter Notebook 集成等核心功能。
