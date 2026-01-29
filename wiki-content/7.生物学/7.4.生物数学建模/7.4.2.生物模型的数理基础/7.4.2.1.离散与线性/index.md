@@ -500,58 +500,8 @@ A = np.array([
     [0, 0, 0.0452, 0.9804]
 ])
 
-# 计算右特征向量和主特征值
-eigenvalues, eigenvectors = np.linalg.eig(A)
-dominant_idx = np.argmax(np.real(eigenvalues))
-lambda1 = np.real(eigenvalues[dominant_idx])
-w = np.real(eigenvectors[:, dominant_idx])
-
-# 归一化右特征向量（稳定阶段分布）
-w = w / np.sum(w)
-
 stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
-for i, (name, val) in enumerate(zip(stage_names, w)):
-    print(f"  {name}: {val:.6f} ({val*100:.2f}%)")
 
-# 计算左特征向量（繁殖价值）
-# 注意：左特征向量满足 A^T v = λ v，因此计算A^T的特征向量
-A_T = A.T
-eigenvalues_T, eigenvectors_T = np.linalg.eig(A_T)
-
-# 找到对应于主特征值λ的左特征向量
-# 由于数值误差，特征值可能不完全相等，我们找最接近的那个
-idx_T = np.argmin(np.abs(eigenvalues_T - lambda1))
-v = eigenvectors_T[:, idx_T]
-
-# 取实部并确保所有分量非负
-v = np.real(v)
-
-# 处理可能的符号问题：确保主要分量是正的
-# 如果大多数分量为负，则乘以-1
-if np.sum(v < 0) > len(v) / 2:
-    v = -v
-
-# 归一化左特征向量：使最小正分量为1
-# 首先找出所有非零分量
-non_zero_mask = np.abs(v) > 1e-10
-if np.any(non_zero_mask):
-    # 找到非零分量的最小值
-    min_nonzero = np.min(np.abs(v[non_zero_mask]))
-    v = v / min_nonzero
-else:
-    # 所有分量都接近0，使用另一种归一化
-    v = v / np.linalg.norm(v)
-
-for i, (name, val) in enumerate(zip(stage_names, v)):
-    print(f"  {name}: {val:.6f}")
-
-# 验证左特征向量条件：v^T A ≈ λ v^T
-left_side = v.T @ A
-right_side = lambda1 * v.T
-error = np.linalg.norm(left_side - right_side)
-
-# 验证左右特征向量的点积不为零
-vTw = np.dot(v, w)
 # 四个初始向量
 initial_vectors = [
     np.array([250, 0, 0, 0]),    # All calves
@@ -563,7 +513,7 @@ labels = ['All calves', 'All juveniles', 'All mature', 'All post-reproductive']
 years = 50
 
 # 模拟并绘图
-plt.figure(figsize=(12, 10))
+plt.figure(figsize=(10, 8))
 
 for i, (x0, label) in enumerate(zip(initial_vectors, labels)):
     # 模拟
@@ -575,16 +525,8 @@ for i, (x0, label) in enumerate(zip(initial_vectors, labels)):
     N = np.sum(population, axis=0)
     proportions = population / N
     
-    # 绘制总个体数
-    plt.subplot(4, 2, 2*i+1)
-    plt.plot(N, 'k-', linewidth=2)
-    plt.xlabel('Time (years)')
-    plt.ylabel('Total population')
-    plt.title(f'{label} - Total population')
-    plt.grid(True)
-    
     # 绘制各阶段比例
-    plt.subplot(4, 2, 2*i+2)
+    plt.subplot(2, 2, i+1)
     colors = ['c', 'g', 'b', 'r']
     for stage in range(4):
         plt.plot(proportions[stage, :], color=colors[stage], 
