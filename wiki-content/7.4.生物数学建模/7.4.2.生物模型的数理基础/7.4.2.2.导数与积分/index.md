@@ -34,11 +34,9 @@ $$
 
 当 $r$ 超过 3 时，平衡点 $\overline{x}_1$ 失稳，系统出现周期 2 振荡。随着 $r$ 进一步增大，周期倍增（倍周期分岔）发生，最终进入混沌状态。
 
-### 蛛网图（Cobweb plot）可视化
+### 2.2.1.2.蛛网图（Cobweb plot）可视化
 
-蛛网图是一种可视化离散映射迭代过程的工具。它通过绘制函数 $y = f(x)$ 和对角线 $y = x$，并追踪迭代路径，帮助我们直观理解系统的动态。
-
-以下Python代码绘制逻辑斯谛映射的蛛网图：
+蛛网图是一种可视化离散映射迭代过程的工具。它通过绘制函数 $f(x) = rx(1-x)$ 和对角线 $f(x) = x$，并追踪迭代路径，帮助我们直观理解系统的动态。
 
 ```python-plot
 import numpy as np
@@ -73,9 +71,9 @@ def cobweb_plot(r, x0, n_iter, ax=None):
         ax.plot([x_current, y_current], [y_current, y_current], 'r-', lw=0.5)
         x_current = y_current
     
-    ax.set_xlabel('$x_t$', fontsize=14)
-    ax.set_ylabel('$x_{t+1}$', fontsize=14)
-    ax.set_title(f'逻辑斯谛映射蛛网图 (r = {r}, x0 = {x0})', fontsize=16)
+    ax.set_xlabel('x', fontsize=14)
+    ax.set_ylabel('f(x)', fontsize=14)
+    ax.set_title(f'Logistic cobweb plot (r = {r}, x0 = {x0})', fontsize=16)
     ax.legend(fontsize=12)
     ax.grid(True, alpha=0.3)
     ax.set_xlim(0, 1)
@@ -84,7 +82,7 @@ def cobweb_plot(r, x0, n_iter, ax=None):
 
 # 示例：绘制不同r值的蛛网图
 fig, axes = plt.subplots(2, 2, figsize=(12, 12))
-r_vals = [2.5, 3.2, 3.5, 4.0]
+r_vals = [1.5, 3.2, 3.662117, 4.0]
 x0 = 0.3
 n_iter = 50
 
@@ -93,7 +91,7 @@ for i, (r, ax) in enumerate(zip(r_vals, axes.flat)):
     # 标注平衡点（如果存在）
     if r > 1:
         x_eq = 1 - 1/r
-        ax.plot(x_eq, x_eq, 'go', markersize=8, label='平衡点')
+        ax.plot(x_eq, x_eq, 'go', markersize=8, label='Equilibrium point')
         ax.legend()
 
 plt.tight_layout()
