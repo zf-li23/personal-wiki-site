@@ -22,11 +22,19 @@ def extract_code_blocks(md_content):
     # Dedent to handle indented code blocks (e.g. inside lists)
     cleaned = []
     for b in blocks:
-        # Remove empty first lines if any (caused by spaces after ```)
+        # Determine smart dedent logic to match frontend behavior
         lines = b.split('\n')
-        # Dedent the whole block based on the first non-empty line
-        dedented = textwrap.dedent(b)
-        cleaned.append(dedented.strip())
+        non_empty_lines = [line for line in lines if line.strip()]
+        
+        normalized_text = b
+        if non_empty_lines:
+            # Check common indentation
+            common_indent = min(len(line) - len(line.lstrip()) for line in non_empty_lines)
+            
+            if common_indent > 0:
+                normalized_text = textwrap.dedent(b)
+        
+        cleaned.append(normalized_text.strip())
     return cleaned
 
 def generate_plot(code, output_path, is_dark):
@@ -83,17 +91,7 @@ def main():
                 
             print(f"Processing {md_file} ({len(blocks)} blocks)")
             
-            for block in blocks:
-                # Calculate hash using the same logic as frontend (md5 of trimmed string usually)
-                # Ensure we handle newlines exactly as the frontend would receive them
-                # React 'children' usually keeps newlines.
-                # Let's normalize by stripping trailing newlines which extract_code_blocks regex does implicitly by capture group placement?
-                # Actually regex `\n(.*?)\n``` ` captures content WITHOUT the last newline before ```
-                # But frontend `String(children).replace(/\n$/, '')` effectively removes trailing newline.
-                
-                # To be safe, let's normalize: logic matches `codeText` in MarkdownRenderer
-                code_text = block
-                
+            for code_text in blocks:
                 # Check for cached/existing files
                 # Filename: {hash}_light.png and {hash}_dark.png
                 code_hash = hashlib.md5(code_text.encode('utf-8')).hexdigest()
