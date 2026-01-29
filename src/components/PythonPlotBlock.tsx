@@ -48,7 +48,7 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
         // Encode path components to handle Chinese characters
         const encodedPathPart = pathPart.split('/').map(segment => encodeURIComponent(segment)).join('/');
         
-        const src = `${baseUrl}wiki-content/${encodedPathPart}${codeHash}_${theme}.png`;
+        const src = `${baseUrl}wiki-content/${encodedPathPart}${codeHash}_${theme}.png?v=2`;
         setPlotSrc(src);
         setImgError(false); // Reset error on source change
     };
