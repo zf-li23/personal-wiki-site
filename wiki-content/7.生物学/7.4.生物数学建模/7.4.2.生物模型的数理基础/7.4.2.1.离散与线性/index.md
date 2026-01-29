@@ -831,7 +831,7 @@ for i in range(4):
 
 print("\nSensitivity of λ to diagonal elements:")
 for i, (name, sens) in enumerate(zip(stage_names, sensitivity)):
-    print(f"  ∂λ/∂a_{{{i+1}{i+1}}} = {sens:.6f}")
+    print(f"  ∂λ/∂a_{{" + f"{i+1}{i+1}" + f"}} = {sens:.6f}")
 
 # 计算最大可持续收获率
 max_harvest_rate = np.zeros(4)
