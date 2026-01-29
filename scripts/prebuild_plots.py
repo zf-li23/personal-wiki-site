@@ -46,6 +46,14 @@ def generate_plot(code, output_path, is_dark):
         # Set style
         if is_dark:
             plt.style.use('dark_background')
+            # Patch code to replace black lines with white lines for dark mode
+            # This is a heuristic to fix explicit 'k' or 'black' usage
+            code = code.replace("'k'", "'w'")\
+                       .replace('"k"', '"w"')\
+                       .replace("'black'", "'white'")\
+                       .replace('"black"', '"white"')\
+                       .replace("'k-'", "'w-'")\
+                       .replace("'k--'", "'w--'")
         else:
             plt.style.use('default')
             # Force white background for light mode
