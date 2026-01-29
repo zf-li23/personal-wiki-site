@@ -12,8 +12,8 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
   const [copied, setCopied] = useState(false);
   const [imgError, setImgError] = useState(false);
 
-  // Normalize code for hash calculation: trim trailing newlines
-  const normalizedCode = code.replace(/\n$/, '');
+  // Normalize code for hash calculation: trim whitespace from both ends to match python script's .strip()
+  const normalizedCode = code.trim();
   // @ts-ignore
   const codeHash = md5(normalizedCode);
 
@@ -45,7 +45,10 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
             pathPart += '/';
         }
         
-        const src = `${baseUrl}wiki-content/${pathPart}${codeHash}_${theme}.png`;
+        // Encode path components to handle Chinese characters
+        const encodedPathPart = pathPart.split('/').map(segment => encodeURIComponent(segment)).join('/');
+        
+        const src = `${baseUrl}wiki-content/${encodedPathPart}${codeHash}_${theme}.png`;
         setPlotSrc(src);
         setImgError(false); // Reset error on source change
     };

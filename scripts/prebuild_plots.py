@@ -40,7 +40,10 @@ def generate_plot(code, output_path, is_dark):
             plt.style.use('dark_background')
         else:
             plt.style.use('default')
-            
+            # Force white background for light mode
+            plt.gcf().set_facecolor('white')
+            plt.gca().set_facecolor('white')
+
         # Execute code
         # We need to capture the plot state after execution
         exec_globals = {}
@@ -56,7 +59,7 @@ def generate_plot(code, output_path, is_dark):
         # Save figure
         # Check if user plot created a figure
         if plt.get_fignums():
-            plt.savefig(output_path, format='png', bbox_inches='tight', dpi=100)
+            plt.savefig(output_path, format='png', bbox_inches='tight', dpi=100, facecolor=plt.gcf().get_facecolor(), transparent=False)
             plt.close('all')
             return True
         else:
