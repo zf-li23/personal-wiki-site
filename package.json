@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prebuild": "python scripts/prebuild_plots.py",
-    "deploy": "pnpm run build && gh-pages -d dist"
+    "deploy": "pnpm run build && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "clsx": "^2.1.0",
