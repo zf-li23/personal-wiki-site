@@ -102,13 +102,91 @@ plt.show()
 可能需要稍加理解绘图逻辑：在每个迭代步骤，我们绘制从当前 $x_t$ 到下一个 $x_{t+1}$ ，即 $f(x_t)$ 的垂直线，再画水平线到 $f(x)=x$，从该点进行下一次迭代。这些线段构成了“蛛网”，显示了种群数量如何在每次迭代中沿着逻辑斯谛曲线移动。
 
 通过改变 $r$ 的值，我们可以观察到：
+- $r=0.75$（代表$0<r<1$）时，不存在平衡点，种群衰落
+- $r=1.5$（代表$1<r<2$）时，在 $f(x)$ 的上升段有平衡点
+- $r=2.0$ 时，在 $f(x)$ 的顶点有平衡点
+- $r=2.5$（代表$2<r<3$）时，在 $f(x)$ 的下降段有平衡点振荡
 
+```python-plot
+import numpy as np
+import matplotlib.pyplot as plt
+
+def cobweb_plot(r, x0, n_iter, ax=None, n_skip=0):
+    """
+    绘制逻辑斯谛映射的蛛网图。
+    
+    参数:
+        r: 增长率
+        x0: 初始值
+        n_iter: 绘图的迭代次数
+        ax: matplotlib轴对象，若为None则创建新图
+        n_skip: 绘图前忽略的瞬态迭代次数
+    """
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(8, 8))
+    
+    # 绘制函数曲线
+    x = np.linspace(0, 1, 1000)
+    f = r * x * (1 - x)
+    ax.plot(x, f, 'b-', lw=2, label=f'$f(x) = r x (1 - x)$')
+    ax.plot(x, x, 'k--', lw=1, label='$y = x$')
+    
+    # 迭代并绘制蛛网线
+    x_current = x0
+    
+    # 1. 瞬态迭代：不绘图，只更新状态，消除初始 transient
+    for _ in range(n_skip):
+        x_current = r * x_current * (1 - x_current)
+        
+    # 2. 稳态迭代：绘图
+    for i in range(n_iter):
+        y_current = r * x_current * (1 - x_current)
+        # 垂直线
+        ax.plot([x_current, x_current], [x_current, y_current], 'r-', lw=0.5)
+        # 水平线
+        ax.plot([x_current, y_current], [y_current, y_current], 'r-', lw=0.5)
+        x_current = y_current
+    
+    ax.set_xlabel('x', fontsize=14)
+    ax.set_ylabel('f(x)', fontsize=14)
+    ax.set_title(f'Logistic cobweb plot (r = {r}, x0 = {x0})', fontsize=16)
+    ax.legend(fontsize=12)
+    ax.grid(True, alpha=0.3)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    return ax
+
+# 示例：绘制不同r值的蛛网图
+fig, axes = plt.subplots(2, 2, figsize=(12, 12))
+r_vals = [3.2, 3.5, 3.662117, 4]
+x0 = 0.3
+n_iter = 100  # 增加绘图轮数以展示完整轨迹
+n_skip = 1000 # 忽略前1000次迭代，确保进入稳定状态
+
+for i, (r, ax) in enumerate(zip(r_vals, axes.flat)):
+    cobweb_plot(r, x0, n_iter, ax, n_skip=n_skip)
+    # 标注平衡点（如果存在）
+    if r > 1:
+        x_eq = 1 - 1/r
+        ax.plot(x_eq, x_eq, 'go', markersize=8, label='Equilibrium point')
+        ax.legend()
+
+plt.tight_layout()
+plt.subplots_adjust(hspace=0.3)
+plt.show()
+```
+
+$r>3$ 时，为了使系统达到稳定震荡状态，我们忽略前1000次迭代，然后记录100次迭代的过程：
+- $r=3.2$（代表$3<r<1+\sqrt{6}$）时，系统出现周期 2 振荡
+- $r=3.5$（代表$r>1+\sqrt{6}$）时，系统出现周期 4 振荡，相比之前呈现周期倍增
+- $r=3.662117$时，系统出现周期 8 振荡，此后振荡周期数改变越来越密集
+- $r=4$时，系统混沌，无法找出振荡现象的发生
 
 ### 2.2.1.3.分岔图与混沌
 
-为了全面了解参数 $r$ 对系统行为的影响，我们可以绘制分岔图，即对于每个 $r$，将长期迭代的 $x_t$ 值绘制出来。以下代码生成逻辑斯谛映射的分岔图：
+为了全面了解参数 $r$ 对系统行为的影响，我们可以绘制分岔图，即对于每个 $r$，将长期迭代后稳定的 $x_t$ 值绘制出来。以下代码生成逻辑斯谛映射的分岔图：
 
-```python
+```python-plot
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -152,6 +230,68 @@ bifurcation_diagram()
 ```
 
 分岔图清晰地展示了从稳定平衡到倍周期分岔再到混沌的过程。在混沌区域（如 $r \approx 4$），系统对初始条件极其敏感，即著名的“蝴蝶效应”。这正是混沌系统的特征：确定性方程产生看似随机的输出，并且长期预测不可能。
+
+类似地，$sin$ 曲线的混沌行为也可以通过类似的分岔图来展示，其中 $r$ 对应于频率或周期。两张图的形状几乎一模一样：
+```python-plot
+import numpy as np
+import matplotlib.pyplot as plt
+
+def bifurcation_diagram(r_min=0.6, r_max=1.0, n_r=1000, n_transient=500, n_iter=100, x0=0.3):
+    """
+    绘制正弦映射(Sine map)的分岔图。
+    
+    参数:
+        r_min, r_max: r的取值范围
+        n_r: r的采样点数
+        n_transient: 抛弃的瞬态迭代次数
+        n_iter: 记录迭代的次数
+        x0: 初始值（每个r都从x0开始）
+    """
+    r_vals = np.linspace(r_min, r_max, n_r)
+    # 初始化存储数组
+    x_vals = []
+    r_plot = []
+    
+    for r in r_vals:
+        x = x0
+        # 抛弃瞬态
+        for _ in range(n_transient):
+            x = r * np.sin(np.pi * x)
+        # 记录后续迭代
+        for _ in range(n_iter):
+            x = r * np.sin(np.pi * x)
+            x_vals.append(x)
+            r_plot.append(r)
+    
+    # 绘制散点图
+    plt.figure(figsize=(10, 6))
+    plt.scatter(r_plot, x_vals, s=0.01, c='k', alpha=0.5)
+    plt.xlabel('$r$', fontsize=14)
+    plt.ylabel('$x$', fontsize=14)
+    plt.title('Sine Map bifurcation diagram', fontsize=16)
+    plt.grid(True, alpha=0.3)
+    plt.show()
+
+bifurcation_diagram()
+```
+
+这种倍周期现象是如何产生的呢？在一定程度上，我们可以用重整化群来解释：
+
+### 2.2.1.4.重整化群
+
+重整化群理论（Renormalization Group, RG）是一种数学工具，用于研究物理系统中尺度不变性。在混沌系统的背景下，它可以用来理解倍周期分岔是如何发生的。
+
+在逻辑斯谛映射中，当 $r$ 超过某个临界值时（例如3.57），系统开始出现周期倍增。这可以通过重整化群的思想来解释：
+
+1. **尺度变换**：将时间 $t$ 替换为 $\tau = t / \lambda^n$，其中 $\lambda > 1$ 是尺度因子，$n$ 是整数。
+2. **重整化映射**：在新的尺度下，系统动力学由 $x(\tau) \rightarrow f(r, x(\tau))$ 给出。
+3. **倍周期分岔**：随着 $\lambda$ 的增加，系统可能在某些临界点上出现新的稳定周期。例如，当 $r > 3.57$ 时，系统从周期2变为周期4，再进一步变为更高周期的振荡。
+
+可以首先来回答一个问题：为什么是$r>1+\sqrt{6}$时出现周期 4 振荡？
+
+```python-plot
+TODO
+```
 
 ## 2.2.2.连续的种群增长：导数与积分
 
