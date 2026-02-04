@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 import md5 from 'js-md5';
+import plotManifestData from '../data/plot_manifest.json';
+
+// Type assertion for manifest
+const plotManifest = plotManifestData as Record<string, number>;
 
 interface PythonPlotBlockProps {
   code: string;
@@ -8,7 +12,7 @@ interface PythonPlotBlockProps {
 
 export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockProps) {
   const [showCode, setShowCode] = useState(false);
-  const [plotSrc, setPlotSrc] = useState<string>('');
+  const [plotSrcs, setPlotSrcs] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
   const [imgError, setImgError] = useState(false);
 
@@ -16,6 +20,9 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
   const normalizedCode = code.trim();
   // @ts-ignore
   const codeHash = md5(normalizedCode);
+  
+  // Get plot count from manifest (default to 1 if not found for backward compatibility)
+  const plotCount = plotManifest[codeHash] || 1;
 
   useEffect(() => {
     // Determine theme on mount and change
@@ -48,8 +55,27 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
         // Encode path components to handle Chinese characters
         const encodedPathPart = pathPart.split('/').map(segment => encodeURIComponent(segment)).join('/');
         
-        const src = `${baseUrl}wiki-content/${encodedPathPart}${codeHash}_${theme}.png?v=2`;
-        setPlotSrc(src);
+        const newSrcs: string[] = [];
+        for (let i = 0; i < plotCount; i++) {
+             // If count == 1, assume no suffix for backward compatibility 
+             // UNLESS we eventually enforce suffix. But for now, existing images have no suffix.
+             // New multi-images will have count > 1.
+             // What if I have 2 images? Names: _0_..., _1_...
+             // So if count > 1, use index suffix.
+             // If count == 1, use no suffix.
+             
+             let filename = '';
+             if (plotCount === 1) {
+                 filename = `${codeHash}_${theme}.png`;
+             } else {
+                 filename = `${codeHash}_${i}_${theme}.png`;
+             }
+             
+             const src = `${baseUrl}wiki-content/${encodedPathPart}${filename}?v=2`;
+             newSrcs.push(src);
+        }
+        
+        setPlotSrcs(newSrcs);
         setImgError(false); // Reset error on source change
     };
 
@@ -59,7 +85,7 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
     const observer = new MutationObserver(updateSrc);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
     return () => observer.disconnect();
-  }, [codeHash, folderPath]);
+  }, [codeHash, folderPath, plotCount]);
 
   const handleCopy = async () => {
     try {
@@ -92,7 +118,7 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
         </div>
       </div>
       
-      <div className="p-4 overflow-x-auto flex flex-col items-center bg-white dark:bg-gray-900 transition-colors min-h-[200px] justify-center">
+      <div className="p-4 overflow-x-auto flex flex-col items-center bg-white dark:bg-gray-900 transition-colors min-h-[200px] justify-center gap-4">
         {showCode ? (
           <pre className="text-sm font-mono whitespace-pre-wrap text-left w-full bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 p-4 rounded border border-border">
             {code}
@@ -100,12 +126,15 @@ export default function PythonPlotBlock({ code, folderPath }: PythonPlotBlockPro
         ) : (
           <>
             {!imgError ? (
-                <img 
-                    src={plotSrc} 
-                    alt="Python Plot" 
-                    className="max-w-full rounded shadow-sm"
-                    onError={() => setImgError(true)}
-                />
+                plotSrcs.map((src, index) => (
+                    <img 
+                        key={index}
+                        src={src} 
+                        alt={`Python Plot ${index + 1}`}
+                        className="max-w-full rounded shadow-sm"
+                        onError={() => setImgError(true)}
+                    />
+                ))
             ) : (
                 <div className="text-muted-foreground text-sm flex flex-col items-center gap-2">
                     <span>⚠️ Plot not available</span>

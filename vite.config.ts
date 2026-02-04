@@ -34,8 +34,16 @@ export default defineConfig({
     },
   },
   build: {
+    chunkSizeWarningLimit: 1000, // Increase warning limit to 1MB
     rollupOptions: {
       output: {
+        manualChunks: {
+          'mermaid': ['mermaid'],
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'markdown-core': ['react-markdown', 'remark-gfm', 'rehype-raw', 'rehype-slug'],
+          'math-vendor': ['remark-math', 'rehype-katex', 'katex'],
+          'syntax-vendor': ['highlight.js', 'rehype-highlight']
+        },
         // Force chunk names to not start with _ to avoid Jekyll issues on GitHub Pages
         chunkFileNames: (chunkInfo) => {
           const name = chunkInfo.name.replace(/^_/, 'safe_');
