@@ -32,9 +32,9 @@
 
 设总体分布来自参数族 \(\mathcal{F} = \{f(x; \theta) : \theta \in \Theta\}\)，其中 \(\theta\) 可为向量。假设待估参数 \(g(\theta)\) 可以表示为若干个总体矩的函数：
 
-\[
+$$
 g(\theta) = G(\alpha_1, \dots, \alpha_k; \mu_2, \dots, \mu_s),
-\]
+$$
 
 其中：
 - **总体原点矩**：\(\alpha_k = E_{\theta}(X^k)\)，
@@ -45,9 +45,9 @@ g(\theta) = G(\alpha_1, \dots, \alpha_k; \mu_2, \dots, \mu_s),
 - **样本中心矩**：\(m_{n,k} = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^k\)，其中 \(\bar{X} = a_{n,1}\)。
 
 **定义 9 (矩估计).** 将总体矩 \(\alpha_k, \mu_k\) 替换为对应的样本矩 \(a_{n,k}, m_{n,k}\)，得到：
-\[
+$$
 \hat{g}(\boldsymbol{X}) = G(a_{n1}, \dots, a_{nk}; m_{n2}, \dots, m_{ns}),
-\]
+$$
 称 \(\hat{g}(\boldsymbol{X})\) 为 \(g(\theta)\) 的**矩估计**。
 
 ---
@@ -56,36 +56,36 @@ g(\theta) = G(\alpha_1, \dots, \alpha_k; \mu_2, \dots, \mu_s),
 
 #### 1. 无偏性 (Unbiasedness)
 - **样本原点矩**是总体原点矩的**无偏估计**：
-  \[
+  $$
   E[a_{n,k}] = \alpha_k.
-  \]
+  $$
 - **样本中心矩**通常**不是无偏估计**：
-  \[
+  $$
   E[m_{n,k}] \neq \mu_k \quad (k \ge 2).
-  \]
+  $$
   例如，对于方差，有：
-  \[
+  $$
   E[m_{n,2}] = \frac{n-1}{n} \mu_2 \neq \mu_2.
-  \]
+  $$
   使用调整样本方差 \(S_n^2 = \frac{n}{n-1} m_{n,2}\) 可得到无偏估计。
 - 一般地，矩估计 \(\hat{g}(\boldsymbol{X})\) 是**有偏**的，但常为**渐近无偏**。
 
 #### 2. 相合性 (Consistency)
 - 由**强大数定律 (SLLN)**，样本矩是总体矩的**强相合估计**：
-  \[
+  $$
   a_{n,k} \xrightarrow{a.s.} \alpha_k, \quad m_{n,k} \xrightarrow{a.s.} \mu_k \quad (n \to \infty).
-  \]
+  $$
 - 若 \(G\) 是连续函数，则由连续映射定理，矩估计也是**强相合**的：
-  \[
+  $$
   \hat{g}(\boldsymbol{X}) \xrightarrow{a.s.} g(\theta).
-  \]
+  $$
 
 #### 3. 渐近正态性 (Asymptotic Normality)
 - 在一定正则条件下（如总体矩存在且有限），矩估计是**相合渐近正态估计**。
 - 具体地，对多元矩估计向量 \(\hat{\boldsymbol{g}}\)，当 \(n \to \infty\) 时：
-  \[
+  $$
   \sqrt{n}\big(\hat{\boldsymbol{g}} - \boldsymbol{g}(\theta)\big) \xrightarrow{d} N(\boldsymbol{0}, \boldsymbol{\Sigma}),
-  \]
+  $$
   其中 \(\boldsymbol{\Sigma}\) 为渐近协方差矩阵，可通过 Delta 方法或中心极限定理求得。
 - **常见例子**：
   - 样本均值 \(\bar{X}\)：\(\sqrt{n}(\bar{X} - \mu) \xrightarrow{d} N(0, \sigma^2)\)。
@@ -121,23 +121,23 @@ g(\theta) = G(\alpha_1, \dots, \alpha_k; \mu_2, \dots, \mu_s),
 
 **定义 5 (似然函数与对数似然函数).**
 - **似然函数**定义为样本的联合密度（或概率）函数：
-  \[
+  $$
   L(\theta; \boldsymbol{x}) = \prod_{i=1}^{n} f(x_i; \theta), \quad \theta \in \Theta.
-  \]
+  $$
 - **对数似然函数**为：
-  \[
+  $$
   l(\theta; \boldsymbol{x}) = \log L(\theta; \boldsymbol{x}) = \sum_{i=1}^{n} \log f(x_i; \theta).
-  \]
+  $$
 
 **定义 5 (极大似然估计).**
 如果估计量 \(\hat{\theta} = \hat{\theta}(\boldsymbol{X})\) 满足：
-\[
+$$
 L(\hat{\theta}(\boldsymbol{x}); \boldsymbol{x}) = \sup_{\theta \in \Theta} L(\theta; \boldsymbol{x}), \quad \forall \boldsymbol{x} \in \mathcal{X},
-\]
+$$
 或等价地，
-\[
+$$
 l(\hat{\theta}(\boldsymbol{x}); \boldsymbol{x}) = \sup_{\theta \in \Theta} l(\theta; \boldsymbol{x}), \quad \forall \boldsymbol{x} \in \mathcal{X},
-\]
+$$
 则称 \(\hat{\theta}(\boldsymbol{X})\) 为 \(\theta\) 的**极大似然估计量**，\(\hat{\theta}(\boldsymbol{x})\) 称为 \(\theta\) 的**极大似然估计值**。
 
 ---
@@ -146,9 +146,9 @@ l(\hat{\theta}(\boldsymbol{x}); \boldsymbol{x}) = \sup_{\theta \in \Theta} l(\th
 
 #### 1. 似然方程法
 在参数空间内部，若似然函数对 \(\theta\) 可微，则极大似然估计通常满足**似然方程**（对数似然方程）：
-\[
+$$
 \frac{\partial l(\theta; \boldsymbol{x})}{\partial \theta_i} = 0, \quad i = 1, \dots, k \quad (\text{若 } \theta \text{ 为向量})。
-\]
+$$
 
 #### 2. 验证极值条件
 - 对于单参数情形，需检查二阶导数 \(l''(\theta; \boldsymbol{x}) < 0\)。
@@ -168,28 +168,28 @@ l(\hat{\theta}(\boldsymbol{x}); \boldsymbol{x}) = \sup_{\theta \in \Theta} l(\th
 **定理 4.** 设 \(T = T(\boldsymbol{X})\) 是 \(\theta\) 的充分统计量。若 MLE 存在，则它一定是 \(T\) 的函数。
 
 *证明.* 由因子分解定理：
-\[
+$$
 L(\theta; \boldsymbol{x}) = g(T(\boldsymbol{x}), \theta) \cdot h(\boldsymbol{x}).
-\]
+$$
 最大化 \(L(\theta; \boldsymbol{x})\) 等价于最大化 \(g(T(\boldsymbol{x}), \theta)\)，因此 MLE 只通过 \(T(\boldsymbol{x})\) 依赖于样本。
 
 #### 3. 大样本性质
 
 **相合性 (Consistency)**  
 **定理 5.** 在一定正则条件下，MLE 序列 \(\hat{\theta}_n\) 是**相合估计**：
-\[
+$$
 \hat{\theta}_n \xrightarrow{P_\theta} \theta, \quad n \to \infty.
-\]
+$$
 
 **渐近正态性 (Asymptotic Normality)**  
 **定理 6.** 在正则条件下，MLE 是**渐近正态**的：
-\[
+$$
 \sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{d} N(0, \sigma_\theta^2), \quad \text{其中 } \sigma_\theta^2 = \frac{1}{I(\theta)}.
-\]
+$$
 这里 \(I(\theta)\) 是 **Fisher 信息量**（每个观测）：
-\[
+$$
 I(\theta) = E_\theta\left[ \left( \frac{\partial}{\partial \theta} \log f(X; \theta) \right)^2 \right].
-\]
+$$
 
 **渐近有效性 (Asymptotic Efficiency)**  
 在上述正则条件下，MLE 是**渐近有效**的，即达到 Cramér-Rao 下界。
@@ -199,17 +199,17 @@ I(\theta) = E_\theta\left[ \left( \frac{\partial}{\partial \theta} \log f(X; \th
 ### 3.3.4 指数族中的 MLE
 
 对于指数族分布，其密度为：
-\[
+$$
 f(x; \boldsymbol{\theta}) = C(\boldsymbol{\theta}) \exp\left\{ \sum_{i=1}^{k} \theta_i T_i(x) \right\} h(x), \quad \boldsymbol{\theta} \in \Theta^*,
-\]
+$$
 其中 \(\Theta^*\) 是自然参数空间。样本的对数似然函数为：
-\[
+$$
 l(\boldsymbol{\theta}; \boldsymbol{x}) = n \log C(\boldsymbol{\theta}) + \sum_{i=1}^{k} \theta_i \sum_{j=1}^{n} T_i(x_j) + \log h(\boldsymbol{x}).
-\]
+$$
 似然方程为：
-\[
+$$
 \frac{n}{C(\boldsymbol{\theta})} \frac{\partial C(\boldsymbol{\theta})}{\partial \theta_i} = - \sum_{j=1}^{n} T_i(x_j), \quad i = 1, \dots, k.
-\]
+$$
 
 **定理 2.** 如果对任意样本，上述似然方程在自然参数空间的内点集 \(\Theta_0\) 中有解，则该解**唯一**，并且就是 MLE。
 
