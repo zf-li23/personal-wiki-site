@@ -317,51 +317,48 @@ def create_competition_figure(a, b, rho=1.0, case_name=""):
     plt.tight_layout()
     return fig, model
 
-# Analyze four competition cases
-if __name__ == "__main__":
-    
-    # Case 1: Species 1 wins (a < 1, b > 1)
-    print("Case 1: Species 1 wins")
-    fig1, model1 = create_competition_figure(a=0.5, b=1.5, case_name="Species 1 wins")
-    plt.savefig('competition_case1.png', dpi=300, bbox_inches='tight')
-    
-    # Case 2: Species 2 wins (a > 1, b < 1)
-    print("\nCase 2: Species 2 wins")
-    fig2, model2 = create_competition_figure(a=1.5, b=0.5, case_name="Species 2 wins")
-    plt.savefig('competition_case2.png', dpi=300, bbox_inches='tight')
-    
-    # Case 3: Stable coexistence (a < 1, b < 1)
-    print("\nCase 3: Stable coexistence")
-    fig3, model3 = create_competition_figure(a=0.5, b=0.5, case_name="Stable coexistence")
-    plt.savefig('competition_case3.png', dpi=300, bbox_inches='tight')
-    
-    # Case 4: Unstable coexistence (a > 1, b > 1)
-    print("\nCase 4: Unstable coexistence (competitive exclusion)")
-    fig4, model4 = create_competition_figure(a=1.5, b=1.5, case_name="Unstable coexistence")
-    plt.savefig('competition_case4.png', dpi=300, bbox_inches='tight')
-    
-    plt.show()
-    
-    # Print equilibrium analysis for each case
-    print("\n" + "="*60)
-    print("EQUILIBRIUM ANALYSIS")
-    print("="*60)
-    
-    cases = [
-        ("Species 1 wins", model1),
-        ("Species 2 wins", model2),
-        ("Stable coexistence", model3),
-        ("Unstable coexistence", model4)
-    ]
-    
-    for case_name, model in cases:
-        print(f"\n{case_name}:")
-        print(f"  Parameters: a={model.a}, b={model.b}, ρ={model.rho}")
-        print("  Equilibria:")
-        for eq in model.equilibria:
-            analysis = model.analyze_equilibrium(eq)
-            print(f"    {eq}: {analysis['type']} (stability: {analysis['stability']})")
-            print(f"      Eigenvalues: {analysis['eigenvalues']}")
+# Case 1: Species 1 wins (a < 1, b > 1)
+print("Case 1: Species 1 wins")
+fig1, model1 = create_competition_figure(a=0.5, b=1.5, case_name="Species 1 wins")
+plt.savefig('competition_case1.png', dpi=300, bbox_inches='tight')
+
+# Case 2: Species 2 wins (a > 1, b < 1)
+print("\nCase 2: Species 2 wins")
+fig2, model2 = create_competition_figure(a=1.5, b=0.5, case_name="Species 2 wins")
+plt.savefig('competition_case2.png', dpi=300, bbox_inches='tight')
+
+# Case 3: Stable coexistence (a < 1, b < 1)
+print("\nCase 3: Stable coexistence")
+fig3, model3 = create_competition_figure(a=0.5, b=0.5, case_name="Stable coexistence")
+plt.savefig('competition_case3.png', dpi=300, bbox_inches='tight')
+
+# Case 4: Unstable coexistence (a > 1, b > 1)
+print("\nCase 4: Unstable coexistence (competitive exclusion)")
+fig4, model4 = create_competition_figure(a=1.5, b=1.5, case_name="Unstable coexistence")
+plt.savefig('competition_case4.png', dpi=300, bbox_inches='tight')
+
+plt.show()
+
+# Print equilibrium analysis for each case
+print("\n" + "="*60)
+print("EQUILIBRIUM ANALYSIS")
+print("="*60)
+
+cases = [
+    ("Species 1 wins", model1),
+    ("Species 2 wins", model2),
+    ("Stable coexistence", model3),
+    ("Unstable coexistence", model4)
+]
+
+for case_name, model in cases:
+    print(f"\n{case_name}:")
+    print(f"  Parameters: a={model.a}, b={model.b}, ρ={model.rho}")
+    print("  Equilibria:")
+    for eq in model.equilibria:
+        analysis = model.analyze_equilibrium(eq)
+        print(f"    {eq}: {analysis['type']} (stability: {analysis['stability']})")
+        print(f"      Eigenvalues: {analysis['eigenvalues']}")
 ```
 
 ### 稳定性分析
