@@ -338,7 +338,7 @@ plot_competition_schematic(a=0.5, b=0.5,
 
 # 调整子图间距，增加高度方向的间距(h_pad)
 plt.tight_layout(h_pad=3.0)
-plt.savefig('competition_four_cases_schematic.png', dpi=300, bbox_inches='tight')
+# plt.savefig('competition_four_cases_schematic.png', dpi=300, bbox_inches='tight')
 plt.show()
 ```
 
@@ -657,22 +657,22 @@ def create_competition_figure(a, b, rho=1.0, case_name=""):
 # Case 1: Species 1 wins (a < 1, b > 1)
 print("Case 1: Species 1 wins")
 fig1, model1 = create_competition_figure(a=0.5, b=1.5, case_name="Species 1 wins")
-plt.savefig('competition_case1.png', dpi=300, bbox_inches='tight')
+# plt.savefig('competition_case1.png', dpi=300, bbox_inches='tight')
 
 # Case 2: Species 2 wins (a > 1, b < 1)
 print("\nCase 2: Species 2 wins")
 fig2, model2 = create_competition_figure(a=1.5, b=0.5, case_name="Species 2 wins")
-plt.savefig('competition_case2.png', dpi=300, bbox_inches='tight')
+# plt.savefig('competition_case2.png', dpi=300, bbox_inches='tight')
 
 # Case 3: Stable coexistence (a < 1, b < 1)
 print("\nCase 3: Stable coexistence")
 fig3, model3 = create_competition_figure(a=0.4, b=0.6, case_name="Stable coexistence")
-plt.savefig('competition_case3.png', dpi=300, bbox_inches='tight')
+# plt.savefig('competition_case3.png', dpi=300, bbox_inches='tight')
 
 # Case 4: Unstable coexistence (a > 1, b > 1)
 print("\nCase 4: Unstable coexistence (competitive exclusion)")
 fig4, model4 = create_competition_figure(a=1.4, b=1.6, case_name="Unstable coexistence")
-plt.savefig('competition_case4.png', dpi=300, bbox_inches='tight')
+# plt.savefig('competition_case4.png', dpi=300, bbox_inches='tight')
 
 plt.show()
 ```
@@ -1127,7 +1127,7 @@ ax4.text(0.02, 0.98, 'Limit cycle characteristics:\n1. Stable periodic solution\
         bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
 plt.tight_layout(h_pad=3.0)
-plt.savefig('predator_prey_schematic_diagrams.png', dpi=300, bbox_inches='tight')
+# plt.savefig('predator_prey_schematic_diagrams.png', dpi=300, bbox_inches='tight')
 plt.show()
 ```
 
@@ -1547,7 +1547,7 @@ fig1, model1 = create_predator_prey_figure(
     alpha=1.0, beta=0.5, gamma=0.0, delta=0.0,
     case_name="Classic Lotka-Volterra (neutral cycles)"
 )
-plt.savefig('predator_prey_classic.png', dpi=300, bbox_inches='tight')
+# plt.savefig('predator_prey_classic.png', dpi=300, bbox_inches='tight')
 
 # Case 2: With density dependence (damped oscillations)
 print("\nCase 2: Model with prey density dependence")
@@ -1555,7 +1555,7 @@ fig2, model2 = create_predator_prey_figure(
     alpha=1.0, beta=0.5, gamma=0.2, delta=0.0,
     case_name="With density dependence (damped oscillations)"
 )
-plt.savefig('predator_prey_damped.png', dpi=300, bbox_inches='tight')
+# plt.savefig('predator_prey_damped.png', dpi=300, bbox_inches='tight')
 
 # Case 3: Limit cycle (Hopf bifurcation) using Rosenzweig-MacArthur
 # Parameters adjusted to ensure the interior equilibrium is unstable (left of hump)
@@ -1567,7 +1567,7 @@ fig3, model3 = create_predator_prey_figure(
     alpha=1.0, beta=0.35, gamma=0.3, delta=1.0,
     case_name="Limit Cycle (Rosenzweig-MacArthur)"
 )
-plt.savefig('predator_prey_limit_cycle.png', dpi=300, bbox_inches='tight')
+# plt.savefig('predator_prey_limit_cycle.png', dpi=300, bbox_inches='tight')
 
 plt.show()
 ```
@@ -2204,7 +2204,7 @@ def explore_diverse_dynamics():
         })
         
         # Save figures
-        fig.savefig(f'complex_model_case_{i+1:02d}.png', dpi=300, bbox_inches='tight')
+        # fig.savefig(f'complex_model_case_{i+1:02d}.png', dpi=300, bbox_inches='tight')
     
     # Create summary table
     print(f"\n{'='*80}")
@@ -2264,7 +2264,7 @@ def explore_diverse_dynamics():
     
     plt.tight_layout()
     fig_summary.suptitle('Behavior Classification of Different Cases', fontsize=16, y=1.05)
-    fig_summary.savefig('behavior_classification_summary.png', dpi=300, bbox_inches='tight')
+    # fig_summary.savefig('behavior_classification_summary.png', dpi=300, bbox_inches='tight')
     
     plt.show()
     
@@ -2349,7 +2349,7 @@ def parameter_sensitivity_analysis():
         ax.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    fig.savefig('parameter_sensitivity_analysis.png', dpi=300, bbox_inches='tight')
+    # fig.savefig('parameter_sensitivity_analysis.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 print("Complex Ecological Model Analysis")
@@ -2449,7 +2449,7 @@ def plot_lorenz_attractor():
     ax4.grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig('lorenz_attractor.png', dpi=300, bbox_inches='tight')
+    # plt.savefig('lorenz_attractor.png', dpi=300, bbox_inches='tight')
     
     # Demonstrate sensitivity to initial conditions
     fig2, axes = plt.subplots(3, 1, figsize=(12, 10))
@@ -2485,7 +2485,7 @@ def plot_lorenz_attractor():
     axes[2].grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig('sensitivity_initial_conditions.png', dpi=300, bbox_inches='tight')
+    # plt.savefig('sensitivity_initial_conditions.png', dpi=300, bbox_inches='tight')
     
     plt.show()
 
@@ -2643,7 +2643,7 @@ ax1 = fig.add_subplot(111, projection='3d')
 plot_3d_state_space(ax1)
 
 plt.tight_layout()
-plt.savefig('complex_ecosystem_schematic.png', dpi=300, bbox_inches='tight')
+# plt.savefig('complex_ecosystem_schematic.png', dpi=300, bbox_inches='tight')
 plt.show()
 ```
 
