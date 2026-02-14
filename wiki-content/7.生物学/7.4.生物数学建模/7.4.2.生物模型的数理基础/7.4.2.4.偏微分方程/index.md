@@ -1805,7 +1805,7 @@ for i, (idx, title) in enumerate(zip(time_indices, titles)):
 
 fig3.suptitle('Schnakenberg Model: Turing Pattern Formation', fontsize=16)
 plt.tight_layout()
-plt.savefig('turing_pattern.png', dpi=300)
+# plt.savefig('turing_pattern.png', dpi=300)
 plt.show()
 
 # 绘制功率谱分析
@@ -1859,7 +1859,7 @@ axes4[1].set_title('Radial power spectrum', fontsize=14)
 axes4[1].grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('turing_pattern_spectrum.png', dpi=300)
+# plt.savefig('turing_pattern_spectrum.png', dpi=300)
 plt.show()
 ```
 
@@ -2223,9 +2223,8 @@ def explore_parameter_space():
         # Current logic: step_idx * 100. Let's fix axes titles in visualize_turing_patterns instead if possible
         # Or just accept it displays step number
         
-        fig1.savefig(f'turing_patterns_case_{i+1}.png', dpi=300, bbox_inches='tight')
-        fig2.savefig(f'turing_spectrum_case_{i+1}.png', dpi=300, bbox_inches='tight')
-        plt.close('all') # Close figures to free memory
+        # fig1.savefig(f'turing_patterns_case_{i+1}.png', dpi=300, bbox_inches='tight')
+        # fig2.savefig(f'turing_spectrum_case_{i+1}.png', dpi=300, bbox_inches='tight')
     
     return all_results
 
