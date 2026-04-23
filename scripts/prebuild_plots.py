@@ -1,15 +1,18 @@
 import os
 import re
 import hashlib
-import matplotlib
-import matplotlib.pyplot as plt
 import sys
 import textwrap
 import json
 from pathlib import Path
 
-# Set non-interactive backend
-matplotlib.use('Agg')
+try:
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+except ImportError:
+    print("[Info] matplotlib is not installed, skip prebuild plot generation.")
+    sys.exit(0)
 
 # Find all python-plot blocks
 WIKI_ROOT = Path("docs/wiki")
