@@ -15,7 +15,7 @@ interface WikiSidebarProps {
 export default function WikiSidebar({ 
   data, 
   toc, 
-  basePath = '/wiki', 
+  basePath = '', 
   level = 0,
   indexPrefix = ''
 }: WikiSidebarProps) {
@@ -34,14 +34,9 @@ export default function WikiSidebar({
     const keysToExpand: Record<string, boolean> = {};
     let pathAccumulator = '';
     
-    parts.forEach((part, index) => {
-        if (index === 0 && part === 'wiki') {
-            pathAccumulator = '/wiki';
-        } else {
-            pathAccumulator = `${pathAccumulator}/${part}`;
-        }
-        // Expand this path
-        keysToExpand[pathAccumulator] = true;
+    parts.forEach((part) => {
+      pathAccumulator = `${pathAccumulator}/${part}`;
+      keysToExpand[pathAccumulator] = true;
     });
     
     setExpanded(prev => ({ ...prev, ...keysToExpand }));
@@ -68,7 +63,7 @@ export default function WikiSidebar({
   return (
     <nav className={cn("space-y-1", level > 0 && "mt-1")}>
       {data.map((page, index) => {
-        const currentPath = `${basePath}/${page.slug}`;
+        const currentPath = basePath ? `${basePath}/${page.slug}` : `/${page.slug}`;
         // Decode location.pathname to ensure matching works with Chinese characters
         const decodedLocationPath = decodeURIComponent(location.pathname);
         // Also handle potential trailing slashes for robustness
