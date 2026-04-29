@@ -31,7 +31,7 @@ function extractTitle(_content: string, filename: string): string {
 
 // Helper to process filename into slug and sort order
 function processFileInfo(path: string) {
-  // Remove /docs/wiki/ prefix and .md suffix
+  // Remove /docs/ prefix and .md suffix
   let relativePath = path.replace(/^\.\.\/\.\.\/docs\/wiki\//, '').replace(/\.md$/, '');
   
   // Handle index files: they represent the folder itself
@@ -82,8 +82,8 @@ function validatePath(path: string) {
 }
 
 function buildWikiData(): WikiPage[] {
-  // Import all markdown files from the docs/wiki directory
-  const modules = import.meta.glob('../../docs/wiki/**/*.md', { query: '?raw', import: 'default', eager: true });
+  // Import all markdown files from the docs directory
+  const modules = import.meta.glob('../../docs/**/*.md', { query: '?raw', import: 'default', eager: true });
   
   const root: WikiPage[] = [];
 

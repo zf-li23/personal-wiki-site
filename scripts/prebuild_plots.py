@@ -15,7 +15,7 @@ except ImportError:
     sys.exit(0)
 
 # Find all python-plot blocks
-WIKI_ROOT = Path("docs/wiki")
+WIKI_ROOT = Path("docs")
 MANIFEST_PATH = Path("src/data/plot_manifest.json")
 
 def load_manifest():

@@ -1,7 +1,7 @@
 import os
 import shutil
 
-WIKI_ROOT = '/home/zf-li23/freedom/personal-wiki-site/docs/wiki'
+WIKI_ROOT = '/home/zf-li23/freedom/personal-wiki-site/docs'
 
 def migrate_to_index_md():
     # Walk top-down. 

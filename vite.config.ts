@@ -12,7 +12,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'docs/wiki/**/*',
+          src: 'docs/**/*',
           dest: 'wiki-content'
         }
       ]
@@ -22,7 +22,7 @@ export default defineConfig({
       configureServer(server) {
         server.middlewares.use(
           '/personal-wiki-site/wiki-content',
-          serveStatic(path.resolve(__dirname, 'docs/wiki'))
+          serveStatic(path.resolve(__dirname, 'docs'))
         )
       }
     }

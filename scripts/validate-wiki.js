@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const WIKI_ROOT = path.join(process.cwd(), 'docs/wiki');
+const WIKI_ROOT = path.join(process.cwd(), 'docs');
 
 function validateDirectory(dirPath, parentNumbering) {
   if (!fs.existsSync(dirPath)) return;
