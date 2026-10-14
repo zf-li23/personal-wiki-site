@@ -6,13 +6,14 @@
 #   - or one English annotation at the definition:   中心极限定理（Central Limit Theorem）
 # Every other page links its first mention to that definition.
 # `exclude` lists longer words that contain the name but do not mean it (分岔图 vs 分岔).
+# `scope` limits a concept to disciplines/courses (page ids) when the word means something else elsewhere.
 # Report: pnpm wiki terms
 terms:
   # discrete mathematics
   - { zh: 命题逻辑, en: propositional logic }
   - { zh: 谓词逻辑, en: predicate logic }
-  - { zh: 合取范式, en: conjunctive normal form }
-  - { zh: 析取范式, en: disjunctive normal form }
+  - { zh: 合取范式, en: conjunctive normal form, exclude: [主合取范式] }
+  - { zh: 析取范式, en: disjunctive normal form, exclude: [主析取范式] }
   - { zh: 等价关系, en: equivalence relation }
   - { zh: 偏序集, en: poset }
   - { zh: 半群, en: semigroup }
@@ -23,8 +24,145 @@ terms:
   - { zh: 表示论, en: representation theory }
   - { zh: 欧拉回路, en: Eulerian circuit }
   - { zh: 哈密顿回路, en: Hamiltonian cycle }
-  - { zh: 生成树, en: spanning tree }
-  - { zh: 网络流, en: network flow }
+  - { zh: 生成树, en: spanning tree, aliases: [支撑树], exclude: [最小生成树] }
+  - { zh: 网络流, en: network flow, exclude: [网络流图] }
+  # discrete mathematics: mathematical logic (1.1)
+  - { zh: 联结词, en: logical connective, aliases: [逻辑联结词, 命题联结词] }
+  - { zh: 合式公式, en: well-formed formula, aliases: [命题公式] }
+  - { zh: 真值表, en: truth table }
+  - { zh: 重言式, en: tautology, aliases: [永真式] }
+  - { zh: 矛盾式, en: contradiction, aliases: [永假式] }
+  - { zh: 可满足式, en: satisfiable formula }
+  - { zh: 波兰表达式, en: Polish notation, aliases: [前缀表达式], exclude: [逆波兰表达式] }
+  - { zh: 逆波兰表达式, en: reverse Polish notation, aliases: [后缀表达式] }
+  - { zh: 德摩根律, en: De Morgan's laws, aliases: [摩根律] }
+  - { zh: 联结词的完备集, en: functionally complete set }
+  - { zh: 对偶式, en: dual formula }
+  - { zh: 极小项, en: minterm }
+  - { zh: 极大项, en: maxterm }
+  - { zh: 主析取范式, en: principal disjunctive normal form }
+  - { zh: 主合取范式, en: principal conjunctive normal form }
+  - { zh: 重言蕴含, en: tautological implication }
+  - { zh: 归结式, en: resolvent }
+  - { zh: 公理系统, en: axiomatic system }
+  - { zh: 相继式, en: sequent }
+  - { zh: 王浩算法, en: Wang Hao's algorithm }
+  - { zh: 演绎定理, en: deduction theorem }
+  - { zh: 个体域, en: domain of discourse, aliases: [论域], exclude: [全总个体域] }
+  - { zh: 谓词, en: predicate, exclude: [谓词逻辑, 谓词公式, 谓词演算] }
+  - { zh: 量词, en: quantifier, exclude: [全称量词, 存在量词] }
+  - { zh: 全称量词, en: universal quantifier }
+  - { zh: 存在量词, en: existential quantifier }
+  - { zh: 约束变元, en: bound variable }
+  - { zh: 自由变元, en: free variable }
+  - { zh: 一阶谓词逻辑, en: first-order logic, aliases: [一阶逻辑, 狭谓词逻辑] }
+  - { zh: 普遍有效公式, en: valid formula }
+  - { zh: 不可满足公式, en: unsatisfiable formula }
+  - { zh: 前束范式, en: prenex normal form }
+  - { zh: Skolem 标准型, en: Skolem normal form }
+  # discrete mathematics: set theory (1.2)
+  - { zh: 集合, en: set, exclude: [集合族, 集合论] }
+  - { zh: 有序对, en: ordered pair, aliases: [序偶] }
+  - { zh: 幂集, en: power set }
+  - { zh: 笛卡儿积, en: Cartesian product, aliases: [笛卡尔积] }
+  - { zh: 文氏图, en: Venn diagram, aliases: [韦恩图] }
+  - { zh: 传递集合, en: transitive set }
+  - { zh: 包含排除原理, en: inclusion–exclusion principle, aliases: [容斥原理] }
+  - { zh: 选择公理, en: axiom of choice }
+  - { zh: 二元关系, en: binary relation }
+  - { zh: 传递闭包, en: transitive closure }
+  - { zh: 等价类, en: equivalence class }
+  - { zh: 商集, en: quotient set }
+  - { zh: 划分, en: partition, exclude: [划分块], scope: ["1"] }
+  - { zh: 相容关系, en: compatibility relation }
+  - { zh: 覆盖, en: cover, exclude: [完全覆盖], scope: ["1.2"] }
+  - { zh: 偏序关系, en: partial order, aliases: [半序关系] }
+  - { zh: 全序关系, en: total order, aliases: [线序关系] }
+  - { zh: 良序集, en: well-ordered set }
+  - { zh: 良序定理, en: well-ordering theorem }
+  - { zh: 单射, en: injection }
+  - { zh: 满射, en: surjection }
+  - { zh: 双射, en: bijection }
+  - { zh: 反函数, en: inverse function }
+  - { zh: 集合的特征函数, en: indicator function }
+  - { zh: 模糊子集, en: fuzzy subset, aliases: [模糊集] }
+  - { zh: 等势, en: equinumerosity }
+  - { zh: 基数, en: cardinal number }
+  - { zh: 可数集合, en: countable set, aliases: [可数集] }
+  - { zh: Cantor 定理, en: Cantor's theorem, aliases: [康托尔定理] }
+  - { zh: Schröder–Bernstein 定理, en: Schröder–Bernstein theorem }
+  - { zh: 连续统假设, en: continuum hypothesis }
+  # discrete mathematics: algebraic structures (1.3)
+  - { zh: 代数系统, en: algebraic system, aliases: [代数结构] }
+  - { zh: 单位元, en: identity element, exclude: [左单位元, 右单位元] }
+  - { zh: 逆元, en: inverse element, exclude: [左逆元, 右逆元] }
+  - { zh: 同构, en: isomorphism }
+  - { zh: 交换群, en: abelian group, aliases: [阿贝尔群] }
+  - { zh: 子群, en: subgroup }
+  - { zh: 循环群, en: cyclic group }
+  - { zh: 对称群, en: symmetric group }
+  - { zh: 陪集, en: coset }
+  - { zh: 同态核, en: kernel }
+  - { zh: 交换环, en: commutative ring }
+  - { zh: 含幺环, en: ring with identity }
+  - { zh: 子环, en: subring }
+  - { zh: 理想, en: ideal, exclude: [左理想, 右理想], scope: ["1"] }
+  - { zh: 零因子, en: zero divisor }
+  - { zh: 整环, en: integral domain }
+  - { zh: 除环, en: division ring }
+  - { zh: 数域, en: number field }
+  - { zh: 分配格, en: distributive lattice }
+  - { zh: 模格, en: modular lattice }
+  - { zh: 布尔代数, en: Boolean algebra }
+  - { zh: 子格, en: sublattice }
+  - { zh: 滤子, en: filter }
+  - { zh: 交换李代数, en: abelian Lie algebra }
+  - { zh: 不可约表示, en: irreducible representation }
+  # discrete mathematics: graph theory (1.4)
+  - { zh: 握手定理, en: handshaking lemma }
+  - { zh: 简单图, en: simple graph }
+  - { zh: 邻接矩阵, en: adjacency matrix }
+  - { zh: 关联矩阵, en: incidence matrix, exclude: [基本关联矩阵] }
+  - { zh: 连通图, en: connected graph }
+  - { zh: 欧拉道路, en: Eulerian trail }
+  - { zh: 哈密顿道路, en: Hamiltonian path }
+  - { zh: 闭合图, en: Hamiltonian closure }
+  - { zh: 旅行商问题, en: traveling salesman problem }
+  - { zh: Dijkstra 算法, en: Dijkstra's algorithm }
+  - { zh: 中国邮路问题, en: Chinese postman problem }
+  - { zh: 割边, en: cut edge, aliases: [桥], exclude: [七桥问题, 哥尼斯堡七桥问题], scope: ["1.4"] }
+  - { zh: 基本关联矩阵, en: reduced incidence matrix }
+  - { zh: 割集, en: cut set, aliases: [边割集], exclude: [点割集, 基本割集, 割集矩阵], scope: ["1.4"] }
+  - { zh: 外向树, en: arborescence, aliases: [根树] }
+  - { zh: 最优二叉树, en: Huffman tree, aliases: [Huffman 树] }
+  - { zh: 最小生成树, en: minimum spanning tree, aliases: [最短树] }
+  - { zh: Kruskal 算法, en: Kruskal's algorithm }
+  - { zh: Prim 算法, en: Prim's algorithm }
+  - { zh: 平面图, en: planar graph, exclude: [极大平面图, 非平面图] }
+  - { zh: 欧拉公式, en: Euler's formula for planar graphs, scope: ["1.4"] }
+  - { zh: 极大平面图, en: maximal planar graph }
+  - { zh: 二分图, en: bipartite graph, exclude: [完全二分图] }
+  - { zh: Kuratowski 定理, en: Kuratowski's theorem }
+  - { zh: 对偶图, en: dual graph }
+  - { zh: 四色定理, en: four color theorem }
+  - { zh: 色数, en: chromatic number, exclude: [色数多项式, 边色数] }
+  - { zh: 色数多项式, en: chromatic polynomial }
+  - { zh: 匹配, en: matching, exclude: [最大匹配, 完全匹配, 完美匹配, 最佳匹配], scope: ["1.4"] }
+  - { zh: 最大匹配, en: maximum matching }
+  - { zh: 完美匹配, en: perfect matching }
+  - { zh: 可增广道路, en: augmenting path }
+  - { zh: Hall 定理, en: Hall's marriage theorem }
+  - { zh: König 定理, en: König's theorem }
+  - { zh: 匈牙利算法, en: Hungarian algorithm }
+  - { zh: 最大流, en: maximum flow, exclude: [最大流最小割定理] }
+  - { zh: 最大流最小割定理, en: max-flow min-cut theorem }
+  - { zh: 点割集, en: vertex cut }
+  - { zh: 割点, en: cut vertex }
+  - { zh: 点连通度, en: vertex connectivity }
+  - { zh: 边连通度, en: edge connectivity }
+  - { zh: Whitney 不等式, en: Whitney's inequality }
+  - { zh: Menger 定理, en: Menger's theorem }
+  - { zh: 代数连通度, en: algebraic connectivity }
   # linear algebra and calculus
   - { zh: 特征值, en: eigenvalue }
   - { zh: 特征向量, en: eigenvector }
@@ -34,7 +172,7 @@ terms:
   - { zh: 泰勒公式, en: Taylor's formula }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
-  - { zh: 特征函数, en: characteristic function }
+  - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数
   - { zh: 矩母函数, en: moment generating function }
   - { zh: 大数定律, en: law of large numbers }
   - { zh: 中心极限定理, en: central limit theorem }

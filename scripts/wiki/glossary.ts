@@ -4,6 +4,7 @@
  *   terms:
  *     - { zh: 中心极限定理, en: central limit theorem, aliases: [CLT] }
  *     - { zh: 分岔, en: bifurcation, exclude: [分岔图] }   # 分岔图 is not a mention of 分岔
+ *     - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # only statistics pages
  *
  * A concept's id is its English name in kebab-case (central-limit-theorem). Where a concept is
  * *defined* is found in the content, not stored here (see linking.ts), so the registry cannot drift.
@@ -21,6 +22,16 @@ export interface Concept {
   aliases: string[];
   /** Longer words that contain a name but are not mentions (Chinese has no word boundaries). */
   exclude?: string[];
+  /**
+   * Page-id prefixes (disciplines or courses, e.g. "3" or "1.2") where the concept is recognised.
+   * Use it when the same word means something else elsewhere (特征函数 in probability vs. sets).
+   */
+  scope?: string[];
+}
+
+/** Whether a concept applies on a page (no scope = everywhere). */
+export function inScope(concept: Concept, pageId: string): boolean {
+  return !concept.scope?.length || concept.scope.some((s) => pageId === s || pageId.startsWith(`${s}.`));
 }
 
 export function conceptId(en: string): string {
@@ -51,7 +62,7 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
   const names = new Map<string, string>();
   const out: Concept[] = [];
   terms.forEach((t, i) => {
-    const term = t as { zh?: unknown; en?: unknown; aliases?: unknown; exclude?: unknown };
+    const term = t as { zh?: unknown; en?: unknown; aliases?: unknown; exclude?: unknown; scope?: unknown };
     if (typeof term?.zh !== 'string' || typeof term?.en !== 'string') {
       diag.error(file, `terms[${i}] needs string "zh" and "en" fields`);
       return;
@@ -65,7 +76,9 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
       names.set(name, term.en);
     }
     const exclude = Array.isArray(term.exclude) ? term.exclude.filter((a): a is string => typeof a === 'string') : [];
-    out.push({ id, zh: term.zh, en: term.en, aliases, ...(exclude.length ? { exclude } : {}) });
+    const scope = Array.isArray(term.scope) ? term.scope.map(String) : [];
+    if (term.scope !== undefined && !scope.length) diag.error(file, `"${term.en}": scope must be a list of page ids, e.g. scope: ["3"]`);
+    out.push({ id, zh: term.zh, en: term.en, aliases, ...(exclude.length ? { exclude } : {}), ...(scope.length ? { scope } : {}) });
   });
   return out;
 }

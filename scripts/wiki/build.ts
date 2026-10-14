@@ -19,7 +19,7 @@ import { Diagnostics } from './diagnostics.ts';
 import { loadConcepts } from './glossary.ts';
 import { type LinkResult, buildLinkIndex, linkPage } from './linking.ts';
 import { type RenderOutput, emptyRender, renderHtml, renderMarkdown } from './markdown.ts';
-import { GENERATED_DIR, GENERATED_PUBLIC_DIR, PUBLIC_DIR, PUBLIC_PATHS, SITE_DATA_FILE, rel } from './paths.ts';
+import { GENERATED_DIR, GENERATED_PUBLIC_DIR, GLOSSARY_FILE, PUBLIC_DIR, PUBLIC_PATHS, SITE_DATA_FILE, rel } from './paths.ts';
 import { type PlotResults, plotImagePath, renderPlots } from './plots.ts';
 import { type ContentTree, type PageSource, ancestorsOf, scanContent } from './scan.ts';
 
@@ -108,6 +108,9 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   });
   const order = new Map(readingOrder.map((id, i) => [id, i]));
   const concepts = loadConcepts(diag);
+  for (const c of concepts) {
+    for (const s of c.scope ?? []) if (!tree.pages.has(s)) diag.error(GLOSSARY_FILE, `"${c.en}": scope "${s}" is not a page id`);
+  }
   const sourceRenders = new Map(readingOrder.map((id) => [id, rendered.get(`${SOURCE}/${id}`)!]));
   const sourceFiles = new Map(readingOrder.map((id) => [id, tree.pages.get(id)!.files[SOURCE]?.path ?? tree.pages.get(id)!.dir]));
   const index = buildLinkIndex(tree, sourceRenders, sourceFiles, concepts, readingOrder, diag);

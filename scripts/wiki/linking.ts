@@ -17,7 +17,7 @@ import type { Element, ElementContent, Root, RootContent, Text } from 'hast';
 import { toString as hastToString } from 'hast-util-to-string';
 import { BASE_PATH, type Lang } from '../../site.config.ts';
 import type { Diagnostics } from './diagnostics.ts';
-import type { Concept } from './glossary.ts';
+import { type Concept, inScope } from './glossary.ts';
 import type { RenderOutput } from './markdown.ts';
 import { REFERENCE_RE, courseOf, kindOfWord } from './numbering.ts';
 import type { ContentTree } from './scan.ts';
@@ -126,10 +126,12 @@ export function buildLinkIndex(
     const file = sourceFiles.get(pageId) ?? pageId;
     for (const s of out.statements) {
       statements.set(`${course}|${s.kind}|${s.number}`, { pageId, anchor: s.anchor });
-      const concept = s.kind === 'def' && s.name ? byZhName.get(s.name) : undefined;
+      const named = s.kind === 'def' && s.name ? byZhName.get(s.name) : undefined;
+      const concept = named && inScope(named, pageId) ? named : undefined;
       if (concept) add(concept.id, { pageId, anchor: s.anchor, file });
     }
     for (const concept of concepts) {
+      if (!inScope(concept, pageId)) continue;
       const anchor = markAnnotatedDefinition(out.hast, concept);
       if (anchor) {
         out.anchors.add(anchor);
@@ -262,7 +264,7 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
       }
     }
   }
-  const { re, byName } = namesRegex(index.concepts, lang);
+  const { re, byName } = namesRegex(index.concepts.filter((c) => inScope(c, pageId)), lang);
   const excluded = new Map(index.concepts.map((c) => [c.id, c.exclude ?? []]));
   if (re) {
     const seen = new Set(result.concepts);

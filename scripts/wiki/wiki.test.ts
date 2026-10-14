@@ -368,6 +368,13 @@ describe('cross-page linking', () => {
     assert.ok(!/分岔<\/span>图/.test(p13), '分岔图 is not a mention of 分岔');
     assert.deepEqual([...s.results.get('3.1.12')!.targets], ['3.1.13']);
   });
+  it('recognises a scoped concept only inside its scope', async () => {
+    concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
+    const s = await site({ '1.2.3': '## 3.1. A\n\n特征函数', '3.1.11': '## 11.1. B\n\n特征函数' });
+    concepts.pop();
+    assert.ok(!s.html('1.2.3').includes('concept-ref'));
+    assert.match(s.html('3.1.11'), /data-concept="characteristic-function"/);
+  });
   it('allows restating a definition but not a second English annotation', async () => {
     const s = await site({
       '3.1.12': '## 12.1. A\n\n大数定律（law of large numbers）',
