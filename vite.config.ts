@@ -1,57 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
-import fs from 'fs'
-import serveStatic from 'serve-static'
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import { wikiContent } from './scripts/wiki/vite-plugin.ts';
+import { BASE_PATH } from './site.config.ts';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'docs/**/*',
-          dest: 'wiki-content'
-        }
-      ]
-    }),
-    {
-      name: 'serve-wiki-content',
-      configureServer(server) {
-        server.middlewares.use(
-          '/personal-wiki-site/wiki-content',
-          serveStatic(path.resolve(__dirname, 'docs'))
-        )
-      }
-    }
-  ],
-  base: '/personal-wiki-site/', // Set base to repository name for GitHub Pages
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+  base: BASE_PATH,
+  plugins: [react(), tailwindcss(), wikiContent()],
   build: {
-    chunkSizeWarningLimit: 1000, // Increase warning limit to 1MB
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'mermaid': ['mermaid'],
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'markdown-core': ['react-markdown', 'remark-gfm', 'rehype-raw', 'rehype-slug'],
-          'math-vendor': ['remark-math', 'rehype-katex', 'katex'],
-          'syntax-vendor': ['highlight.js', 'rehype-highlight']
-        },
-        // Force chunk names to not start with _ to avoid Jekyll issues on GitHub Pages
-        chunkFileNames: (chunkInfo) => {
-          const name = chunkInfo.name.replace(/^_/, 'safe_');
-          return `assets/js/${name}-[hash].js`;
-        },
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-      }
-    }
-  }
-})
+        // GitHub Pages (Jekyll) ignores files starting with "_".
+        sanitizeFileName: (name) => name.replace(/^_+/, ''),
+      },
+    },
+  },
+});

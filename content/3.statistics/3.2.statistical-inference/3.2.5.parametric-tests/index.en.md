@@ -1,0 +1,3 @@
+---
+title: Parametric Hypothesis Testing
+---

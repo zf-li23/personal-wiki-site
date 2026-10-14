@@ -1,0 +1,3 @@
+---
+title: Real Symmetric Matrices
+---

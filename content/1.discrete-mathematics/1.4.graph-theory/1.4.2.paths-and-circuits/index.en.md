@@ -1,0 +1,3 @@
+---
+title: Paths and Circuits
+---

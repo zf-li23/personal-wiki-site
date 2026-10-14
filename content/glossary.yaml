@@ -1,0 +1,58 @@
+# Key terms shared by both languages.
+#
+# Rule for Chinese pages: the FIRST time a term appears in the body text of a page
+# (not in headings, code or math), write its English name right after it in
+# full-width parentheses:   中心极限定理（Central Limit Theorem）
+# Later occurrences on the same page need no annotation.
+#
+# English pages and translations use the `en` wording below.
+# Check with:  pnpm wiki terms [<page-id>...]
+#
+# Add a term when it is a named concept a reader may want to look up in English
+# literature. Keep `en` in its usual English spelling and capitalisation.
+terms:
+  # discrete mathematics
+  - { zh: 命题逻辑, en: propositional logic }
+  - { zh: 谓词逻辑, en: predicate logic }
+  - { zh: 合取范式, en: conjunctive normal form }
+  - { zh: 析取范式, en: disjunctive normal form }
+  - { zh: 等价关系, en: equivalence relation }
+  - { zh: 偏序集, en: poset }
+  - { zh: 半群, en: semigroup }
+  - { zh: 正规子群, en: normal subgroup }
+  - { zh: 商群, en: quotient group }
+  - { zh: 同态, en: homomorphism }
+  - { zh: 李代数, en: Lie algebra }
+  - { zh: 表示论, en: representation theory }
+  - { zh: 欧拉回路, en: Eulerian circuit }
+  - { zh: 哈密顿回路, en: Hamiltonian cycle }
+  - { zh: 生成树, en: spanning tree }
+  - { zh: 网络流, en: network flow }
+  # linear algebra and calculus
+  - { zh: 特征值, en: eigenvalue }
+  - { zh: 特征向量, en: eigenvector }
+  - { zh: 行列式, en: determinant }
+  - { zh: 内积, en: inner product }
+  - { zh: 一致连续, en: uniform continuity }
+  - { zh: 泰勒公式, en: Taylor's formula }
+  # probability and statistics
+  - { zh: 条件期望, en: conditional expectation }
+  - { zh: 特征函数, en: characteristic function }
+  - { zh: 矩母函数, en: moment generating function }
+  - { zh: 大数定律, en: law of large numbers }
+  - { zh: 中心极限定理, en: central limit theorem }
+  - { zh: 依分布收敛, en: convergence in distribution }
+  - { zh: 依概率收敛, en: convergence in probability }
+  - { zh: 几乎处处收敛, en: almost sure convergence }
+  - { zh: 多元正态分布, en: multivariate normal distribution }
+  - { zh: 极大似然估计, en: maximum likelihood estimation, aliases: [最大似然估计] }
+  - { zh: 置信区间, en: confidence interval }
+  - { zh: 假设检验, en: hypothesis testing }
+  # mathematical modelling in biology
+  - { zh: 逻辑斯谛增长, en: logistic growth }
+  - { zh: 分岔, en: bifurcation }
+  - { zh: 李雅普诺夫指数, en: Lyapunov exponent }
+  - { zh: 极限环, en: limit cycle }
+  - { zh: 反应扩散方程, en: reaction-diffusion equation }
+  - { zh: 图灵斑图, en: Turing pattern }
+  - { zh: 行波解, en: traveling wave solution }
