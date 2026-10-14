@@ -5,6 +5,7 @@
  *   .generated/public/                           Vite publicDir (served at the site base URL)
  *     data/pages/<lang>/<id>.json                PagePayload per page and language
  *     data/search/<lang>.json                    SearchEntry[] per language
+ *     data/concepts.json                         ConceptEntry[] (both languages)
  *     media/<id>/<file>                          files from content/<page>/assets/
  *     plots/<key>/<i>-<light|dark>.webp          rendered plots
  *     (everything in public/)
@@ -13,9 +14,11 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { LANGUAGES, type Lang, siteConfig } from '../../site.config.ts';
-import type { NavNode, PagePayload, SearchEntry, SiteData, TranslationStatus } from '../../src/shared/types.ts';
+import type { ConceptEntry, NavNode, PagePayload, SearchEntry, SiteData, TranslationStatus } from '../../src/shared/types.ts';
 import { Diagnostics } from './diagnostics.ts';
-import { type RenderOutput, renderMarkdown } from './markdown.ts';
+import { loadConcepts } from './glossary.ts';
+import { type LinkResult, buildLinkIndex, linkPage } from './linking.ts';
+import { type RenderOutput, emptyRender, renderHtml, renderMarkdown } from './markdown.ts';
 import { GENERATED_DIR, GENERATED_PUBLIC_DIR, PUBLIC_DIR, PUBLIC_PATHS, SITE_DATA_FILE, rel } from './paths.ts';
 import { type PlotResults, plotImagePath, renderPlots } from './plots.ts';
 import { type ContentTree, type PageSource, ancestorsOf, scanContent } from './scan.ts';
@@ -34,6 +37,9 @@ export interface BuildResult {
   site: SiteData;
   /** Keyed by `${lang}/${id}`. */
   payloads: Map<string, PagePayload>;
+  concepts: ConceptEntry[];
+  /** Concepts mentioned on a page that comes before their definition in reading order. */
+  forwardUses: { pageId: string; conceptId: string }[];
 }
 
 const SOURCE = siteConfig.sourceLanguage;
@@ -64,10 +70,11 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   const plots = await renderPlots(tree, diag, { log });
 
   const rendered = new Map<string, RenderOutput>();
-  const payloads = new Map<string, PagePayload>();
+  const renderDiag = new Map<string, Diagnostics>();
   const usedPlots = new Set<string>();
   const usedAssets = new Map<string, Set<string>>();
 
+  // 1. render every page in every language
   for (const page of tree.pages.values()) {
     usedAssets.set(page.id, new Set());
     for (const lang of LANGUAGES) {
@@ -75,33 +82,81 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
       // Untranslated pages show the source text, with links pointing at the reader's language.
       const contentLang = status === 'untranslated' ? SOURCE : lang;
       const file = page.files[contentLang];
+      // The fallback render repeats the source render, so its diagnostics would be duplicates.
+      const pageDiag = contentLang === lang ? diag : new Diagnostics();
+      renderDiag.set(`${lang}/${page.id}`, pageDiag);
       const ctx = {
         page,
         tree,
         plots,
-        // The fallback render repeats the source render, so its diagnostics would be duplicates.
-        diag: contentLang === lang ? diag : new Diagnostics(),
+        diag: pageDiag,
         file: file?.path ?? path.join(page.dir, `index.${contentLang}.md`),
         lineOffset: file?.bodyLineOffset ?? 0,
         linkLang: lang,
+        contentLang,
         usedPlots,
         usedAssets: usedAssets.get(page.id)!,
       };
-      const out = file && file.body.trim() ? await renderMarkdown(file.body, ctx) : emptyRender();
+      const out = file && file.body.trim() ? await renderMarkdown(file.body, ctx) : emptyRender(contentLang);
       rendered.set(`${lang}/${page.id}`, out);
-      const fmDescription = page.files[lang]?.frontMatter.description;
-      payloads.set(`${lang}/${page.id}`, {
-        id: page.id,
-        lang,
-        title: titleOf(page, lang),
-        status,
-        contentLang,
-        html: out.html,
-        headings: out.headings,
-        description: fmDescription ?? truncate(out.excerpt, 160),
-      });
     }
   }
+
+  // 2. index statements and concept definitions across the site, 3. link every page
+  const readingOrder = tree.rootIds.flatMap(function walk(id: string): string[] {
+    return [id, ...tree.pages.get(id)!.childIds.flatMap(walk)];
+  });
+  const order = new Map(readingOrder.map((id, i) => [id, i]));
+  const concepts = loadConcepts(diag);
+  const sourceRenders = new Map(readingOrder.map((id) => [id, rendered.get(`${SOURCE}/${id}`)!]));
+  const sourceFiles = new Map(readingOrder.map((id) => [id, tree.pages.get(id)!.files[SOURCE]?.path ?? tree.pages.get(id)!.dir]));
+  const index = buildLinkIndex(tree, sourceRenders, sourceFiles, concepts, readingOrder, diag);
+  const links = new Map<string, LinkResult>();
+  for (const [key, out] of rendered) {
+    const [lang, pageId] = key.split('/') as [Lang, string];
+    const page = tree.pages.get(pageId)!;
+    const file = page.files[out.contentLang]?.path ?? page.dir;
+    links.set(key, linkPage({ pageId, out, linkLang: lang, tree, index, readingOrder: order, diag: renderDiag.get(key)!, file }));
+  }
+
+  // backlinks come from the source language (translations mirror its structure)
+  const backlinks = new Map<string, Set<string>>();
+  for (const id of readingOrder) {
+    for (const target of links.get(`${SOURCE}/${id}`)!.targets) backlinks.set(target, (backlinks.get(target) ?? new Set()).add(id));
+  }
+
+  const payloads = new Map<string, PagePayload>();
+  for (const [key, out] of rendered) {
+    const [lang, pageId] = key.split('/') as [Lang, string];
+    const page = tree.pages.get(pageId)!;
+    payloads.set(key, {
+      id: pageId,
+      lang,
+      title: titleOf(page, lang),
+      status: translationStatus(page, lang),
+      contentLang: out.contentLang,
+      html: renderHtml(out),
+      headings: out.headings,
+      description: page.files[lang]?.frontMatter.description ?? truncate(out.excerpt, 160),
+      backlinks: [...(backlinks.get(pageId) ?? [])].sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0)),
+      concepts: [...links.get(key)!.concepts],
+    });
+  }
+
+  const usedIn = new Map<string, string[]>();
+  const forwardUses: BuildResult['forwardUses'] = [];
+  for (const id of readingOrder) {
+    const result = links.get(`${SOURCE}/${id}`)!;
+    for (const c of result.concepts) usedIn.set(c, [...(usedIn.get(c) ?? []), id]);
+    for (const c of result.forwardUses) forwardUses.push({ pageId: id, conceptId: c });
+  }
+  const conceptEntries: ConceptEntry[] = concepts.map((c) => ({
+    id: c.id,
+    zh: c.zh,
+    en: c.en,
+    site: index.conceptSites.get(c.id),
+    usedIn: usedIn.get(c.id) ?? [],
+  }));
 
   checkCrossPageAnchors(tree, rendered, diag);
   checkUnused(tree, plots, usedPlots, usedAssets, diag);
@@ -114,6 +169,7 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
     .createHash('sha256')
     .update(JSON.stringify(site.nav))
     .update(JSON.stringify([...payloads.values()].map((p) => p.html)))
+    .update(JSON.stringify(conceptEntries))
     .digest('hex')
     .slice(0, 12);
 
@@ -125,18 +181,14 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
     }
   }
 
-  if (!opts.dryRun) writeOutputs(tree, plots, site, payloads, rendered);
-  return { diag, tree, site, payloads };
+  if (!opts.dryRun) writeOutputs(tree, plots, site, payloads, rendered, conceptEntries);
+  return { diag, tree, site, payloads, concepts: conceptEntries, forwardUses };
 }
 
 /** A diagnostic belongs to a page if it is in the page's own files (not in a child page's directory). */
 function isOwnDiagnostic(file: string, dir: string): boolean {
   const rest = file.slice(dir.length);
   return /^(index\.[a-z]+\.md|assets\/[^/]+|plots\/[^/]+)?$/.test(rest);
-}
-
-function emptyRender(): RenderOutput {
-  return { html: '', headings: [], anchors: new Set(), links: [], localAnchors: [], text: '', excerpt: '' };
 }
 
 function truncate(s: string, n: number): string {
@@ -200,6 +252,7 @@ function writeOutputs(
   site: SiteData,
   payloads: Map<string, PagePayload>,
   rendered: Map<string, RenderOutput>,
+  concepts: ConceptEntry[],
 ): void {
   // Build into a sibling directory and swap, so a running dev server never sees a half-written tree.
   const tmp = `${GENERATED_PUBLIC_DIR}.tmp-${process.pid}`;
@@ -224,6 +277,8 @@ function writeOutputs(
     }
     writeJson(path.join(tmp, PUBLIC_PATHS.search, `${lang}.json`), entries);
   }
+
+  writeJson(path.join(tmp, PUBLIC_PATHS.concepts), concepts);
 
   for (const page of tree.pages.values()) {
     for (const name of page.assets) {

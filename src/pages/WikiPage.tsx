@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import { useLocation, useParams } from 'react-router';
 import { type Lang } from '../../site.config.ts';
 import { Article } from '../components/Article.tsx';
-import { Breadcrumbs, ChildList, DevDiagnostics, PrevNext, StatusBanner } from '../components/PageParts.tsx';
+import { Breadcrumbs, ChildList, DevDiagnostics, PageConnections, PrevNext, StatusBanner } from '../components/PageParts.tsx';
 import { Sidebar } from '../components/Sidebar.tsx';
 import { Toc } from '../components/Toc.tsx';
 import { reloadPage, usePage } from '../content/pages.ts';
@@ -81,7 +81,12 @@ function PageContent({ lang, node }: { lang: Lang; node: NavNode }) {
               <>
                 <DevDiagnostics items={payload.diagnostics} />
                 <StatusBanner status={payload.status} />
-                {payload.html ? <Article html={payload.html} lang={payload.contentLang} /> : <p className="italic text-muted-foreground">{t.emptyPage}</p>}
+                {payload.html ? (
+                  <Article html={payload.html} lang={payload.contentLang} readerLang={lang} pageId={node.id} />
+                ) : (
+                  <p className="italic text-muted-foreground">{t.emptyPage}</p>
+                )}
+                <PageConnections payload={payload} />
               </>
             )}
           </div>

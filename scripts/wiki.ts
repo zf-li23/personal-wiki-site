@@ -6,7 +6,8 @@
  *   stamp <id>... | --all            mark translations as up to date with the current source text
  *   new <parent-id|root> <slug> <zh-title> <en-title>
  *                                    create the next page under a parent, with both language files
- *   terms [<id>...]                  glossary check: first use of each term must carry its English name
+ *   terms                            concept report: concepts without a definition, uses before the definition
+ *   fix [<id>...] [--dry-run]        rewrite heading / statement-label numbering formats into the canonical form
  *   freeze <plots/script.py>...      render once and commit the images; the script is never run again
  *   unfreeze <plots/script.py>...    delete the frozen images; the script renders normally again
  */
@@ -16,8 +17,8 @@ import { LANGUAGES, siteConfig } from '../site.config.ts';
 import { compareIds, idSegments } from '../src/shared/page-id.ts';
 import { buildContent, sourceHash, translationStatus } from './wiki/build.ts';
 import { Diagnostics } from './wiki/diagnostics.ts';
+import { fixMarkdown } from './wiki/fix.ts';
 import { serializePageFile } from './wiki/frontmatter.ts';
-import { findUnannotatedTerms, loadGlossary } from './wiki/glossary.ts';
 import { CONTENT_DIR, REPO_ROOT, rel } from './wiki/paths.ts';
 import { removeFrozen, renderPlots, writeFrozen } from './wiki/plots.ts';
 import { pageFileName, scanContent } from './wiki/scan.ts';
@@ -108,24 +109,46 @@ function newPage() {
   console.log(`created ${rel(dir)} (page id ${id})`);
 }
 
-function terms() {
-  const diag = new Diagnostics();
-  const glossary = loadGlossary(diag);
+async function terms() {
+  const { diag, concepts, forwardUses } = await buildContent({ dryRun: true });
+  const own = diag.items.filter((d) => d.file.endsWith('glossary.yaml') || d.message.startsWith('concept "'));
+  if (own.length) {
+    const report = new Diagnostics();
+    report.items.push(...own);
+    console.log(report.format());
+  }
+  const undefinedConcepts = concepts.filter((c) => !c.site);
+  if (undefinedConcepts.length) {
+    console.log('\nconcepts without a definition site (annotate the defining occurrence as 名称（English）, or name a 定义 after it):');
+    for (const c of undefinedConcepts) console.log(`  ${c.zh}（${c.en}）  mentioned on ${c.usedIn.length} page(s)${c.usedIn.length ? `: ${c.usedIn.slice(0, 5).join(', ')}` : ''}`);
+  }
+  if (forwardUses.length) {
+    console.log('\nconcepts used before the page that defines them (consider reordering or a forward pointer):');
+    for (const f of forwardUses) {
+      const c = concepts.find((x) => x.id === f.conceptId)!;
+      console.log(`  ${f.pageId} uses ${c.zh}（${c.en}）, defined on ${c.site!.pageId}`);
+    }
+  }
+  console.log(`\n${concepts.length} concepts: ${concepts.length - undefinedConcepts.length} defined, ${undefinedConcepts.length} without definition; ${forwardUses.length} forward use(s)`);
+}
+
+function fix() {
   const tree = scanOrFail();
-  if (diag.errorCount) fail(diag.format());
   const ids = positional.length ? positional : [...tree.pages.keys()].sort(compareIds);
   let total = 0;
   for (const id of ids) {
     const page = tree.pages.get(id) ?? fail(`unknown page id "${id}"`);
-    const file = page.files[siteConfig.sourceLanguage];
-    if (!file) continue;
-    for (const f of findUnannotatedTerms(file.body, glossary)) {
-      total++;
-      const line = f.line ? `:${f.line + file.bodyLineOffset}` : '';
-      console.log(`${rel(file.path)}${line}\n  first use of "${f.term.zh}" should be written "${f.term.zh}（${f.term.en}）"`);
+    for (const lang of LANGUAGES) {
+      const file = page.files[lang];
+      if (!file) continue;
+      const { text, changes } = fixMarkdown(file.body, lang);
+      if (!changes) continue;
+      total += changes;
+      console.log(`${flags.has('--dry-run') ? 'would fix' : 'fixed'} ${changes} line(s) in ${rel(file.path)}`);
+      if (!flags.has('--dry-run')) fs.writeFileSync(file.path, serializePageFile(file.frontMatter, text));
     }
   }
-  console.log(`${glossary.length} glossary terms, ${total} unannotated first use(s)`);
+  console.log(`${total} line(s) ${flags.has('--dry-run') ? 'to fix' : 'fixed'}`);
 }
 
 function scriptArgs(): string[] {
@@ -157,6 +180,6 @@ function unfreeze() {
   }
 }
 
-const commands: Record<string, () => void | Promise<void>> = { build, status, stamp, new: newPage, terms, freeze, unfreeze };
+const commands: Record<string, () => void | Promise<void>> = { build, status, stamp, new: newPage, terms, fix, freeze, unfreeze };
 const run = commands[command ?? ''] ?? (() => fail(`unknown command "${command ?? ''}". Commands: ${Object.keys(commands).join(', ')}`));
 await run();

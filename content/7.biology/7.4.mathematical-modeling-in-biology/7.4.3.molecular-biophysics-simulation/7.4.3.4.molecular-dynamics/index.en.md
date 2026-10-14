@@ -1,3 +1,0 @@
----
-title: Molecular Dynamics Simulation
----

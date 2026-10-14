@@ -2,22 +2,22 @@
 title: 参数假设检验
 ---
 
-## 5.1 基本概念 (General Concepts)
+## 5.1. 基本概念 (General Concepts)
 
-### 5.1.1 假设检验的动机与问题引入
+### 5.1.1. 假设检验的动机与问题引入
 
 参数假设检验是统计推断的两大主要任务之一，其核心是在总体分布形式已知（如属于分布族 $\{f(x; \theta): \theta \in \Theta\}$ ）的前提下，基于随机样本判断总体参数 $\theta$ 是否属于参数空间 $\Theta$ 的某个特定子集 $\Theta_0$。
 
-#### 1. 基本思想
+#### 5.1.1.1. 基本思想
 - **原假设 (Null Hypothesis)**：记为 $H_0: \theta \in \Theta_0$，表示待检验的、通常代表现状或保守观点的假设。
 - **备择假设 (Alternative Hypothesis)**：记为 $H_1: \theta \in \Theta_1$，其中 $\Theta_1 = \Theta - \Theta_0$，代表与原假设对立的观点。
 - 检验的目标：基于样本数据，决定是“拒绝”还是“接受” $H_0$。
 
-#### 2. 假设的类型
+#### 5.1.1.2. 假设的类型
 - **简单假设 (Simple Hypothesis)**：如果 $\Theta_0$（或 $\Theta_1$）仅包含一个参数点。
 - **复合假设 (Composite Hypothesis)**：如果 $\Theta_0$（或 $\Theta_1$）包含多个参数点。
 
-#### 3. 常见的假设形式（当 $\theta \in \mathbb{R}$ 时）
+#### 5.1.1.3. 常见的假设形式（当 $\theta \in \mathbb{R}$ 时）
   1. $H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta = \theta_1$
   2. $H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta > \theta_0$
   3. $H_0: \theta = \theta_0 \quad \text{vs} \quad H_1: \theta < \theta_0$
@@ -26,15 +26,15 @@ title: 参数假设检验
   6. $H_0: \theta \geq \theta_0 \quad \text{vs} \quad H_1: \theta < \theta_0$
   7. $H_0: \theta \leq \theta_1 \text{ 或 } \theta \geq \theta_2 \quad \text{vs} \quad H_1: \theta_1 < \theta < \theta_2$
 
-### 5.1.2 检验的构成：拒绝域与检验函数
+### 5.1.2. 检验的构成：拒绝域与检验函数
 
 基于样本 $\mathbf{X} = (X_1, \cdots, X_n)$ 做出决策，需要构造一个规则。
 
-#### 1. 拒绝域与接受域
+#### 5.1.2.1. 拒绝域与接受域
 - **拒绝域 (Rejection / Critical Region)**：样本空间 $\mathcal{X}$ 的一个子集 $D$，当样本观测值 $\mathbf{x} \in D$ 时，我们拒绝 $H_0$。
 - **接受域 (Acceptance Region)**：拒绝域的补集 $D^c = \mathcal{X} - D$，当 $\mathbf{x} \in D^c$ 时，我们接受 $H_0$。
 
-#### 2. 检验函数
+#### 5.1.2.2. 检验函数
 - **非随机化检验 (Nonrandomized Test)**：检验函数 $\varphi(\mathbf{x})$ 只取 0 或 1。
   $$
   \varphi(\mathbf{x}) = 
@@ -54,9 +54,9 @@ title: 参数假设检验
   $$
   常用于离散分布，以精确控制犯第一类错误的概率。
 
-### 5.1.3 错误类型与检验的功效
+### 5.1.3. 错误类型与检验的功效
 
-#### 1. 两类错误 (Type I and Type II Errors)
+#### 5.1.3.1. 两类错误 (Type I and Type II Errors)
 - **第一类错误 (弃真)**：$H_0$ 为真时，拒绝了 $H_0$。其概率记为 $\alpha(\theta)$。
   $$
   \alpha(\theta) = P_\theta(\text{拒绝 } H_0) = E_\theta[\varphi(\mathbf{X})], \quad \theta \in \Theta_0
@@ -66,7 +66,7 @@ title: 参数假设检验
   \beta(\theta) = P_\theta(\text{接受 } H_0) = 1 - E_\theta[\varphi(\mathbf{X})], \quad \theta \in \Theta_1
   $$
 
-#### 2. 显著性水平与功效函数
+#### 5.1.3.2. 显著性水平与功效函数
 - **显著性水平 (Level of Significance)**：犯第一类错误的最大概率，记为 $\alpha$。
   $$
   \alpha = \max_{\theta \in \Theta_0} \alpha(\theta)
@@ -78,13 +78,13 @@ title: 参数假设检验
   $$
   当 $\theta \in \Theta_1$ 时，$\pi_\varphi(\theta)$ 越大越好；当 $\theta \in \Theta_0$ 时，希望 $\pi_\varphi(\theta) \leq \alpha$。
 
-### 5.1.4 Neyman-Pearson 原则与 p 值
+### 5.1.4. Neyman-Pearson 原则与 p 值
 
-#### 1. Neyman-Pearson 原则
+#### 5.1.4.1. Neyman-Pearson 原则
   1. 首先控制第一类错误的概率不超过预先设定的显著性水平 $\alpha$。
   2. 在此约束下，尽可能使第二类错误的概率最小（即功效最大）。
 
-#### 2. p 值 (p-value)
+#### 5.1.4.2. p 值 (p-value)
 - **定义**：在原假设 $H_0$ 成立下，获得与当前样本同样极端或更极端结果的概率。
 - **作用**：衡量反对 $H_0$ 的证据强度。p 值越小，证据越强。
 - **决策规则**：若 p 值 $\leq \alpha$，则拒绝 $H_0$。
@@ -102,20 +102,20 @@ title: 参数假设检验
     p = P_{\theta_0}(T(\mathbf{X}) \leq t(\mathbf{x}))
     $$
 
-### 5.1.5 假设检验的一般步骤
+### 5.1.5. 假设检验的一般步骤
 1. **提出假设**：根据实际问题确定原假设 $H_0$ 和备择假设 $H_1$。
 2. **选择检验统计量**：选取一个能较好区分 $H_0$ 和 $H_1$ 的样本函数 $T(\mathbf{X})$，并确定其抽样分布。
 3. **确定拒绝域形式**：根据 $H_1$ 的方向（单侧或双侧）确定拒绝域 $D$ 的形式（如 $T > c$, $T < c$, $|T| > c$）。
 4. **确定临界值**：根据显著性水平 $\alpha$ 和 $T(\mathbf{X})$ 在 $H_0$ 下的分布，确定临界值 $c$。
 5. **计算并决策**：根据样本观测值计算检验统计量的值 $t(\mathbf{x})$，若 $t(\mathbf{x}) \in D$ 则拒绝 $H_0$，否则接受 $H_0$。通常也计算 p 值以提供更多信息。
 
-## 5.2 各种总体下的参数假设检验 (Testing Hypotheses for Parameters in Various Populations)
+## 5.2. 各种总体下的参数假设检验 (Testing Hypotheses for Parameters in Various Populations)
 
-### 5.2.1 单正态总体下的参数检验 (Testing Parameters in a Single Normal Population)
+### 5.2.1. 单正态总体下的参数检验 (Testing Parameters in a Single Normal Population)
 
 设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} N(\mu, \sigma^2)$。
 
-#### 5.2.1.1 方差已知时均值的检验 (Test for Normal Mean μ when σ² is known)
+#### 5.2.1.1. 方差已知时均值的检验 (Test for Normal Mean μ when σ² is known)
 
 检验问题：
 1. $H_0: \mu = \mu_0 \quad \text{vs.} \quad H_1: \mu \neq \mu_0$ （双侧）
@@ -137,7 +137,7 @@ $$
 \pi_1(\mu) = 1 - \Phi\left( z_{\alpha/2} + \frac{\sqrt{n}(\mu_0 - \mu)}{\sigma} \right) + \Phi\left( -z_{\alpha/2} + \frac{\sqrt{n}(\mu_0 - \mu)}{\sigma} \right).
 $$
 
-#### 5.2.1.2 方差未知时均值的检验 (Test for Normal Mean μ when σ² is unknown)
+#### 5.2.1.2. 方差未知时均值的检验 (Test for Normal Mean μ when σ² is unknown)
 
 **检验统计量**：
 $$
@@ -149,7 +149,7 @@ $$
 - 右侧单侧：$D = \{ T > t_{n-1,\alpha} \}$
 - 左侧单侧：$D = \{ T < -t_{n-1,\alpha} \}$
 
-#### 5.2.1.3 均值已知时方差的检验 (Test for Normal Variance σ² when μ is known)
+#### 5.2.1.3. 均值已知时方差的检验 (Test for Normal Variance σ² when μ is known)
 
 检验问题：
 1. $H_0: \sigma^2 = \sigma_0^2 \quad \text{vs.} \quad H_1: \sigma^2 \neq \sigma_0^2$
@@ -166,7 +166,7 @@ $$
 D = \left\{ \chi^2 < \chi_{n,1-\alpha/2}^2 \ \text{或} \ \chi^2 > \chi_{n,\alpha/2}^2 \right\}.
 $$
 
-#### 5.2.1.4 均值未知时方差的检验 (Test for Normal Variance σ² when μ is unknown)
+#### 5.2.1.4. 均值未知时方差的检验 (Test for Normal Variance σ² when μ is unknown)
 
 **检验统计量**：
 $$
@@ -178,9 +178,9 @@ $$
 D = \left\{ \chi^2 < \chi_{n-1,1-\alpha/2}^2 \ \text{或} \ \chi^2 > \chi_{n-1,\alpha/2}^2 \right\}.
 $$
 
-### 5.2.2 非正态总体下的参数检验 (Testing Parameters in Non-normal Distribution)
+### 5.2.2. 非正态总体下的参数检验 (Testing Parameters in Non-normal Distribution)
 
-#### 5.2.2.1 二项分布参数θ的检验 (Test for $B(1, \theta)$)
+#### 5.2.2.1. 二项分布参数θ的检验 (Test for $B(1, \theta)$)
 
 设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} B(1, \theta)$，记 $T(X) = \sum_{i=1}^n X_i \sim B(n, \theta)$。
 
@@ -200,7 +200,7 @@ U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \stackrel{H
 $$
 拒绝域为 $U > z_\alpha$（右侧单侧）。
 
-#### 5.2.2.2 泊松分布参数θ的检验 (Test for $P(\theta)$)
+#### 5.2.2.2. 泊松分布参数θ的检验 (Test for $P(\theta)$)
 
 设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} P(\theta)$。
 
@@ -210,11 +210,11 @@ U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \stackrel{H_0}{\overs
 $$
 拒绝域为 $|U_0| > z_{\alpha/2}$（双侧）等。
 
-### 5.2.3 两个正态总体下的参数检验 (Testing Parameters in Two Normal Populations)
+### 5.2.3. 两个正态总体下的参数检验 (Testing Parameters in Two Normal Populations)
 
 设 $X_1, \cdots, X_m \stackrel{\text{i.i.d.}}{\sim} N(\mu_1, \sigma_1^2)$，$Y_1, \cdots, Y_n \stackrel{\text{i.i.d.}}{\sim} N(\mu_2, \sigma_2^2)$，且两组样本独立。
 
-#### 5.2.3.1 两总体均值差的检验 (Test for $\mu_1 - \mu_2$)
+#### 5.2.3.1. 两总体均值差的检验 (Test for $\mu_1 - \mu_2$)
 
 **（1）方差 $\sigma_1^2, \sigma_2^2$ 已知**
 
@@ -243,7 +243,7 @@ $$
 r = \frac{\left( \frac{S_X^2}{m} + \frac{S_Y^2}{n} \right)^2}{\frac{S_X^4}{m^2(m-1)} + \frac{S_Y^4}{n^2(n-1)}}.
 $$
 
-#### 5.2.3.2 两总体方差比的检验 (Test for $\sigma_1^2 / \sigma_2^2$)
+#### 5.2.3.2. 两总体方差比的检验 (Test for $\sigma_1^2 / \sigma_2^2$)
 
 **（1）均值 $\mu_1, \mu_2$ 未知**
 
@@ -264,16 +264,16 @@ F_k = \frac{S_{Y*}^2}{S_{X*}^2} = \frac{\frac{1}{n}\sum_{i=1}^n (Y_i - \mu_2)^2}
 $$
 拒绝域形式类似，但自由度不同。
 
-### 5.2.4 成对比较 (Paired Comparison)
+### 5.2.4. 成对比较 (Paired Comparison)
 
 当成对数据 $(X_i, Y_i)$ 存在相依性时（如治疗前后比较），可考虑差值 $Z_i = Y_i - X_i$。若 $Z_i \stackrel{\text{i.i.d.}}{\sim} N(\mu, \sigma^2)$，则检验 $H_0: \mu = 0$ 可化为单样本 $t$ 检验：
 $$
 T = \frac{\sqrt{n}\bar{Z}}{S_Z} \stackrel{H_0}{\sim} t_{n-1}.
 $$
 
-### 5.2.5 大样本理论下的假设检验 (Hypothesis Testing Based on Large Sample Theory)
+### 5.2.5. 大样本理论下的假设检验 (Hypothesis Testing Based on Large Sample Theory)
 
-#### 5.2.5.1 中心极限定理的应用 (Application of CLT)
+#### 5.2.5.1. 中心极限定理的应用 (Application of CLT)
 
 设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} F$，$E[X_i] = \mu$，$\operatorname{Var}(X_i) = \sigma^2 < \infty$。由中心极限定理及 Slutsky 定理，当 $n$ 较大时，
 $$
@@ -281,7 +281,7 @@ $$
 $$
 因此，对于均值的检验，即使总体分布非正态，也可使用基于正态近似的 $U$ 检验。
 
-#### 5.2.5.2 两总体均值差的大样本检验 (Large Sample Test for $\mu_1 - \mu_2$ when $\sigma_1^2, \sigma_2^2$ unknown)
+#### 5.2.5.2. 两总体均值差的大样本检验 (Large Sample Test for $\mu_1 - \mu_2$ when $\sigma_1^2, \sigma_2^2$ unknown)
 
 当 $m, n$ 都较大时，
 $$
@@ -289,27 +289,27 @@ U^* = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_X^2/m + S_Y^2/n}} \stackrel{H_0
 $$
 拒绝域同基于正态的检验。
 
-#### 5.2.5.3 二项分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $B(1, \theta)$)
+#### 5.2.5.3. 二项分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $B(1, \theta)$)
 
 当 $n$ 较大时，
 $$
 U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1).
 $$
 
-#### 5.2.5.4 泊松分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $P(\theta)$)
+#### 5.2.5.4. 泊松分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $P(\theta)$)
 
 当 $n$ 较大时，
 $$
 U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1).
 $$
 
-## 5.3 似然比检验 (Likelihood Ratio Test)
+## 5.3. 似然比检验 (Likelihood Ratio Test)
 
-### 5.3.1 动机与原理 (Motivation and Rationale)
+### 5.3.1. 动机与原理 (Motivation and Rationale)
 
 似然比检验由 J. Neyman 和 E.S. Pearson 于 1928 年提出，其思想是比较原假设参数空间 $\Theta_0$ 和全参数空间 $\Theta$ 下的最大似然值。若原假设为真，则两个最大似然值应接近；若为假，则差距较大。
 
-### 5.3.2 似然比检验的定义 (Definition of Likelihood Ratio Test)
+### 5.3.2. 似然比检验的定义 (Definition of Likelihood Ratio Test)
 
 设样本 $X$ 的似然函数为 $L(\theta) = f(X; \theta)$，$\hat{\theta}_{\text{MLE},0}$ 为 $\Theta_0$ 上的极大似然估计，$\hat{\theta}_{\text{MLE}}$ 为 $\Theta$ 上的极大似然估计。则似然比统计量为：
 $$
@@ -317,9 +317,9 @@ $$
 $$
 由于 $\lambda(X) \in [0,1]$，当 $\lambda(X)$ 过小时拒绝 $H_0$。拒绝域通常取 $\{ \lambda(X) < \lambda_0 \}$ 或等价地 $\{ -2\log \lambda(X) > C \}$。
 
-### 5.3.3 例子与应用 (Examples and Applications)
+### 5.3.3. 例子与应用 (Examples and Applications)
 
-#### 5.3.3.1 柯西分布的例子 (Example with Cauchy Distribution)
+#### 5.3.3.1. 柯西分布的例子 (Example with Cauchy Distribution)
 
 设 $X \sim \text{Cauchy}(\theta)$，p.d.f. 为 $f(x;\theta) = \frac{1}{\pi} \cdot \frac{1}{1+(x-\theta)^2}$。检验 $H_0: \theta = 0 \ \text{vs.} \ H_1: \theta \neq 0$。
 易得 $\hat{\theta}_{\text{MLE}} = X$，故
@@ -328,7 +328,7 @@ $$
 $$
 拒绝域为 $\lambda < \lambda_0$，即 $|X| > C$，其中 $C = \tan\left( \frac{(1-\alpha)\pi}{2} \right)$。
 
-#### 5.3.3.2 负指数分布的例子 (Example with Negative Exponential Distribution)
+#### 5.3.3.2. 负指数分布的例子 (Example with Negative Exponential Distribution)
 
 设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\theta)$，p.d.f. 为 $f(x;\theta) = \theta e^{-\theta x}, x>0$。检验 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$。
 似然函数 $L(\theta) = \theta^n e^{-\theta T}$，其中 $T = \sum_{i=1}^n X_i$。MLE 为 $\hat{\theta} = n/T$。
@@ -338,7 +338,7 @@ $$
 $$
 拒绝域 $\lambda < \lambda_0$ 等价于 $T e^{-(\theta_0/n)T} < C_0$，进一步可化为 $T < C_1$ 或 $T > C_2$，其中 $C_1, C_2$ 由 $P_{\theta_0}(T < C_1) = P_{\theta_0}(T > C_2) = \alpha/2$ 确定。
 
-### 5.3.4 线性回归中的似然比检验 (Likelihood Ratio Test in Linear Regression)
+### 5.3.4. 线性回归中的似然比检验 (Likelihood Ratio Test in Linear Regression)
 在线性回归模型 $Y = X\beta + \epsilon$ 中，假设随机误差 $\epsilon_i \stackrel{\text{i.i.d.}}{\sim} N(0, \sigma^2)$。检验单个回归系数 $\beta_j$ 的显著性，即 $H_{0j}: \beta_j = 0$。
 
 **参数空间与似然函数**：
@@ -361,7 +361,7 @@ $$
 $$
 近似水平为 $\alpha$ 的拒绝域为：$-2\log\lambda > \chi^2_{1,\alpha}$。
 
-### 5.3.5 检验回归模型的整体显著性 (Testing Overall Significance of the Linear Model)
+### 5.3.5. 检验回归模型的整体显著性 (Testing Overall Significance of the Linear Model)
 检验所有斜率系数是否均为零：$H_0: \beta_1 = \beta_2 = \cdots = \beta_p = 0$。
 
 **参数空间**：
@@ -384,7 +384,7 @@ F = \frac{||X\hat{\beta}_{\text{MLE}} - \bar{y}||_2^2 / p}{||Y - X\hat{\beta}_{\
 $$
 水平为 $\alpha$ 的拒绝域为：$F > F_{p, n-p-1, \alpha}$。
 
-### 5.3.6 双因素方差分析中的似然比检验 (Likelihood Ratio Test in Two-Way ANOVA)
+### 5.3.6. 双因素方差分析中的似然比检验 (Likelihood Ratio Test in Two-Way ANOVA)
 考虑模型：$Y_{ij} = \mu + \alpha_i + \beta_j + e_{ij}$，其中 $i=1,\ldots,I$, $j=1,\ldots,J$，$e_{ij} \stackrel{\text{i.i.d.}}{\sim} N(0, \sigma^2)$，且满足 $\sum_i \alpha_i = 0$，$\sum_j \beta_j = 0$。
 
 **检验行效应**：$H_{0,A}: \alpha_1 = \cdots = \alpha_I = 0$。
@@ -399,18 +399,18 @@ $$
 
 **检验列效应**：$H_{0,B}: \beta_1 = \cdots = \beta_J = 0$，方法类似，检验统计量为 $F_B$，服从 $F_{J-1, (I-1)(J-1)}$ 分布。
 
-## 5.4 一致最大功效检验 (Uniformly Most Powerful Test, UMP Test)
+## 5.4. 一致最大功效检验 (Uniformly Most Powerful Test, UMP Test)
 
-### 5.4.1 定义与动机 (Definition and Motivation)
+### 5.4.1. 定义与动机 (Definition and Motivation)
 对于一个固定的检验水平 $\alpha$，可能存在多个不同的检验。UMP检验的目标是在所有水平不超过 $\alpha$ 的检验中，找到一个对于 **所有** $\theta \in \Theta_1$ 都具有最大功效（即犯第二类错误概率最小）的检验。
 
-**定义 (UMP Test)**：考虑检验问题 $H_0: \theta \in \Theta_0 \ \text{vs.} \ H_1: \theta \in \Theta_1$。设 $\varphi$ 是一个水平为 $\alpha$ 的检验。如果对于任何其他水平不超过 $\alpha$ 的检验 $\varphi^*$，都有 $\pi_\varphi(\theta) \geq \pi_{\varphi^*}(\theta)$ 对所有 $\theta \in \Theta_1$ 成立，则称 $\varphi$ 为 **一致最大功效 (UMP) 检验**。
+**定义（UMP Test）**：考虑检验问题 $H_0: \theta \in \Theta_0 \ \text{vs.} \ H_1: \theta \in \Theta_1$。设 $\varphi$ 是一个水平为 $\alpha$ 的检验。如果对于任何其他水平不超过 $\alpha$ 的检验 $\varphi^*$，都有 $\pi_\varphi(\theta) \geq \pi_{\varphi^*}(\theta)$ 对所有 $\theta \in \Theta_1$ 成立，则称 $\varphi$ 为 **一致最大功效 (UMP) 检验**。
 
 - **局限性**：UMP检验通常只存在于参数为一维，且原假设和备择假设形式简单（如单边检验）的情形下。
 - **简单假设**：当 $H_0$ 和 $H_1$ 都是简单假设（即 $\Theta_0$ 和 $\Theta_1$ 都只包含一个点）时，UMP检验的存在性由 **Neyman-Pearson基本引理** 保证。
 
-### 5.4.2 Neyman-Pearson基本引理 (Neyman-Pearson Fundamental Lemma)
-**定理 1 (N-P Lemma)**：设样本 $\mathbf{X}$ 的联合 p.d.f. (或 p.m.f.) 为 $f(\boldsymbol{x}; \theta)$。考虑简单对简单的检验问题：$H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta = \theta_1$，显著性水平为 $\alpha \in (0, 1)$。定义检验函数：
+### 5.4.2. Neyman-Pearson基本引理 (Neyman-Pearson Fundamental Lemma)
+**定理 5.4.1（N-P Lemma）**：设样本 $\mathbf{X}$ 的联合 p.d.f. (或 p.m.f.) 为 $f(\boldsymbol{x}; \theta)$。考虑简单对简单的检验问题：$H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta = \theta_1$，显著性水平为 $\alpha \in (0, 1)$。定义检验函数：
 $$
 \varphi(\boldsymbol{x}) = 
 \begin{cases}
@@ -425,7 +425,7 @@ $$
 - 若总体分布连续，通常可取 $r=0$。
 - N-P引理是构造UMP检验的基石。
 
-### 5.4.3 由N-P引理构造UMP检验 (Constructing UMP Test via N-P Lemma)
+### 5.4.3. 由N-P引理构造UMP检验 (Constructing UMP Test via N-P Lemma)
 对于复合假设的 **单边检验** 问题，有时可以通过以下步骤构造UMP检验：
 1. 在 $\Theta_0$ 中选一个“边界点” $\theta_0$，在 $\Theta_1$ 中任选一点 $\theta_1$。
 2. 利用N-P引理构造 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta = \theta_1$ 的MP检验 $\varphi_{\theta_1}$。
@@ -434,10 +434,10 @@ $$
 
 **例子**：设 $X \sim f(x;\theta) = \theta x^{\theta-1}, 0<x<1, \theta>1$。对于 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$，利用N-P引理得到的MP检验拒绝域为 $x > (1-\alpha)^{1/\theta_0}$，该形式不依赖于 $\theta_1$，因此它是 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$ 的UMP检验。
 
-### 5.4.4 指数族分布中的UMP检验 (UMP Test in Exponential Family)
+### 5.4.4. 指数族分布中的UMP检验 (UMP Test in Exponential Family)
 对于具有单调似然比的一维参数指数族，存在标准的UMP检验形式。
 
-**定理 2**：设 $X_1, \cdots, X_n$ 来自一维参数指数族：$f(x,\theta) = C(\theta)e^{Q(\theta)T(x)}h(x)$，其中 $Q(\theta)$ 是 $\theta$ 的严格单调函数。令 $V = \sum_{i=1}^n T(X_i)$。
+**定理 5.4.2**：设 $X_1, \cdots, X_n$ 来自一维参数指数族：$f(x,\theta) = C(\theta)e^{Q(\theta)T(x)}h(x)$，其中 $Q(\theta)$ 是 $\theta$ 的严格单调函数。令 $V = \sum_{i=1}^n T(X_i)$。
 1. 对于检验问题 $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$，UMP水平 $\alpha$ 检验为：
    $$
    \varphi(\boldsymbol{x}) = 
@@ -457,12 +457,12 @@ $$
 **双边检验与无偏检验 (Two-Sided Test and Unbiased Test)**：
 对于双边检验问题 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$，通常不存在UMP检验。此时，可以寻找 **一致最大功效无偏 (UMPU) 检验**。无偏检验要求其功效函数在备择假设上处处不低于水平 $\alpha$，即 $\pi(\theta) \geq \alpha, \forall \theta \in \Theta_1$。对于指数族，存在构造UMPU检验的方法。
 
-## 5.5 假设检验与置信区间 (Hypothesis Testing and Confidence Interval)
+## 5.5. 假设检验与置信区间 (Hypothesis Testing and Confidence Interval)
 
-### 5.5.1 对偶关系 (Duality)
+### 5.5.1. 对偶关系 (Duality)
 假设检验与置信区间（或置信域）之间存在紧密的对偶关系，二者可以相互构造。
 
-### 5.5.2 由假设检验构造置信区间 (Constructing Confidence Interval from Hypothesis Test)
+### 5.5.2. 由假设检验构造置信区间 (Constructing Confidence Interval from Hypothesis Test)
 **基本思想**：对于一个未知参数 $\theta$，其 $1-\alpha$ 置信区间由所有那些在水平 $\alpha$ 下不会被样本数据拒绝的假设值 $\theta_0$ 构成。
 
 **定理**：设 $X$ 是来自总体 $\{f(x; \theta), \theta \in \Theta\}$ 的样本。对于每个可能的 $\theta \in \Theta$，考虑检验问题 $H_{0,\theta}: \theta^* = \theta \ \text{vs.} \ H_{1,\theta}: \theta^* \neq \theta$，并设 $A(\theta)$ 为该检验在水平 $\alpha$ 下的 **接受域**。定义样本观测值 $x$ 对应的集合：
@@ -481,7 +481,7 @@ $$
 - 检验 $H_0: \theta \geq \theta_0 \ \text{vs.} \ H_1: \theta < \theta_0$ 的接受域可导出 $\theta$ 的 **下置信限** $\hat{\theta}_L(X)$，满足 $P(\theta \geq \hat{\theta}_L(X)) = 1-\alpha$。
 - 检验 $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$ 的接受域可导出 $\theta$ 的 **上置信限** $\hat{\theta}_U(X)$，满足 $P(\theta \leq \hat{\theta}_U(X)) = 1-\alpha$。
 
-### 5.5.3 由置信区间进行假设检验 (Hypothesis Testing Based on Confidence Interval)
+### 5.5.3. 由置信区间进行假设检验 (Hypothesis Testing Based on Confidence Interval)
 反之，给定一个置信水平为 $1-\alpha$ 的置信区间（或置信限），可以立即对参数进行相应的假设检验。
 
 **操作方法**：
@@ -493,7 +493,7 @@ $$
 3. **右侧单边检验** $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$：
    - 若 $\theta_0$ 小于 $1-\alpha$ **下置信限** $\hat{\theta}_L$，则拒绝 $H_0$。
 
-### 课程小结 (Course Summary)
+### 5.5.4. 课程小结 (Course Summary)
 
 **核心知识点**：
 1. **参数假设检验框架**：明确了原假设 $H_0$ 与备择假设 $H_1$、检验统计量、拒绝域、显著性水平 $\alpha$、两类错误、功效函数等基本概念。

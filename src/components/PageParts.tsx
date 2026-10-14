@@ -1,10 +1,11 @@
 /** Small presentational pieces of a wiki page. */
 import { AlertTriangle, ArrowLeft, ArrowRight, Languages } from 'lucide-react';
 import { Link } from 'react-router';
-import { ancestorsOf, neighbours } from '../content/site.ts';
+import { useConcepts } from '../content/concepts.ts';
+import { ancestorsOf, findNode, neighbours } from '../content/site.ts';
 import { useLang, useStrings } from '../i18n.ts';
 import { homePath, pagePath } from '../shared/page-id.ts';
-import type { Diagnostic, NavNode, TranslationStatus } from '../shared/types.ts';
+import type { Diagnostic, NavNode, PagePayload, TranslationStatus } from '../shared/types.ts';
 
 export function Breadcrumbs({ id }: { id: string }) {
   const lang = useLang();
@@ -117,5 +118,58 @@ export function PrevNext({ id }: { id: string }) {
         <span className="flex-1" />
       )}
     </nav>
+  );
+}
+
+/** Concepts used or defined on the page, and the pages that link here. */
+export function PageConnections({ payload }: { payload: PagePayload }) {
+  const lang = useLang();
+  const t = useStrings();
+  const concepts = useConcepts();
+  if (!payload.concepts.length && !payload.backlinks.length) return null;
+  return (
+    <section className="mt-12 space-y-6 border-t border-border pt-8 text-sm">
+      {payload.concepts.length > 0 && concepts && (
+        <div>
+          <h2 className="mb-3 font-semibold">{t.conceptsOnPage}</h2>
+          <ul className="flex flex-wrap gap-2">
+            {payload.concepts.map((id) => {
+              const c = concepts.get(id);
+              if (!c) return null;
+              const label = lang === 'zh' ? `${c.zh}（${c.en}）` : c.en;
+              const chip = 'inline-block rounded-md border border-border px-2 py-1 transition-colors hover:bg-accent';
+              return (
+                <li key={id}>
+                  {c.site ? (
+                    <Link to={`${pagePath(lang, c.site.pageId)}#${c.site.anchor}`} className={chip} title={t.definedIn(c.site.pageId)}>
+                      {label}
+                    </Link>
+                  ) : (
+                    <Link to={`/${lang}/concepts/#${id}`} className={`${chip} text-muted-foreground`}>
+                      {label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {payload.backlinks.length > 0 && (
+        <div>
+          <h2 className="mb-3 font-semibold">{t.linkedFrom}</h2>
+          <ul className="space-y-1">
+            {payload.backlinks.map((id) => (
+              <li key={id}>
+                <Link to={pagePath(lang, id)} className="hover:underline">
+                  <span className="mr-2 font-mono text-xs text-muted-foreground">{id}</span>
+                  {findNode(id)?.title[lang] ?? id}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
   );
 }

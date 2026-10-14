@@ -2,7 +2,7 @@
 title: 统计学基本概念
 ---
 
-## 1.1 总体与样本 (Population and Sample)
+## 1.1. 总体与样本 (Population and Sample)
 
 - **总体 (Population)**：所有研究对象的集合，通常用一个随机变量 $X$ 或其分布 $F$ 描述。
 - **个体 (Individual)**：总体中的每一个元素。
@@ -13,12 +13,12 @@ title: 统计学基本概念
   X_1, X_2, \ldots, X_n \stackrel{\text{i.i.d.}}{\sim} F
   $$
 
-## 1.2 样本空间 (Sample Space)
+## 1.2. 样本空间 (Sample Space)
 
 - **样本空间 $\mathcal{X}$**：所有可能样本值的集合。
 - **观测值**：抽样后得到的实际数值 $x = (x_1, x_2, \ldots, x_n)$。
 
-## 1.3 统计模型 (Statistical Model)
+## 1.3. 统计模型 (Statistical Model)
 
 - **统计模型**：描述样本分布的数学模型，通常是一个分布族：
   $$
@@ -26,7 +26,7 @@ title: 统计学基本概念
   $$
 - **参数空间 (Parameter Space)**：$\Theta$，参数所有可能取值的集合。
 
-## 1.4 统计量 (Statistic)
+## 1.4. 统计量 (Statistic)
 
 - **定义**：样本的函数 $T(X_1, X_2, \ldots, X_n)$，且不依赖于未知参数。
 - **常用统计量**：
@@ -64,7 +64,7 @@ title: 统计学基本概念
     （对正态分布等于 0）
     其中 $m_{n,k}$ 是样本 $k$ 阶中心矩。
 
-## 1.5 顺序统计量 (Order Statistics)
+## 1.5. 顺序统计量 (Order Statistics)
 
 - **定义**：将样本按升序排列：$X_{(1)} \leq X_{(2)} \leq \cdots \leq X_{(n)}$
 - **样本中位数**：
@@ -80,7 +80,7 @@ title: 统计学基本概念
   R = X_{(n)} - X_{(1)}
   $$
 
-## 1.6 经验分布函数 (Empirical Distribution Function, E.D.F.)  
+## 1.6. 经验分布函数 (Empirical Distribution Function, E.D.F.)
 
 - **定义**：
   
@@ -120,7 +120,7 @@ title: 统计学基本概念
     \sup_x |F_n(x) - F(x)| \xrightarrow{a.s.} 0
     $$
 
-## 1.7 统计推断的类型 (Types of Statistical Inference)
+## 1.7. 统计推断的类型 (Types of Statistical Inference)
 
 - **参数推断 (Parametric Inference)**：已知分布形式，推断参数。
 - **非参数推断 (Nonparametric Inference)**：不假设分布形式，推断分布特征。

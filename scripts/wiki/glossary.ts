@@ -1,86 +1,71 @@
 /**
- * Terminology: content/glossary.yaml lists key concepts as { zh, en } pairs.
- * Rule for source-language (zh) pages: the FIRST occurrence of a glossary term in
- * body text (not headings, code or math) is followed by its English name in
- * full-width parentheses, e.g. "中心极限定理（Central Limit Theorem）".
- * `pnpm wiki terms` reports violations; translators use the glossary for consistent wording.
+ * Concept registry: content/glossary.yaml lists the concepts ("词条") shared across courses.
+ *
+ *   terms:
+ *     - { zh: 中心极限定理, en: central limit theorem, aliases: [CLT] }
+ *     - { zh: 分岔, en: bifurcation, exclude: [分岔图] }   # 分岔图 is not a mention of 分岔
+ *
+ * A concept's id is its English name in kebab-case (central-limit-theorem). Where a concept is
+ * *defined* is found in the content, not stored here (see linking.ts), so the registry cannot drift.
  */
 import fs from 'node:fs';
-import type { Root } from 'mdast';
-import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';
-import remarkParse from 'remark-parse';
-import { unified } from 'unified';
-import { visit } from 'unist-util-visit';
 import { parse as parseYaml } from 'yaml';
 import type { Diagnostics } from './diagnostics.ts';
 import { GLOSSARY_FILE } from './paths.ts';
 
-export interface GlossaryTerm {
+export interface Concept {
+  id: string;
   zh: string;
   en: string;
-  /** Other zh spellings that count as the same term. */
-  aliases?: string[];
+  /** Other spellings (either language) that count as the same concept. */
+  aliases: string[];
+  /** Longer words that contain a name but are not mentions (Chinese has no word boundaries). */
+  exclude?: string[];
 }
 
-export function loadGlossary(diag: Diagnostics): GlossaryTerm[] {
-  if (!fs.existsSync(GLOSSARY_FILE)) return [];
+export function conceptId(en: string): string {
+  return en
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/'s\b/g, 's')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[] {
+  if (!fs.existsSync(file)) return [];
   let data: unknown;
   try {
-    data = parseYaml(fs.readFileSync(GLOSSARY_FILE, 'utf8'));
+    data = parseYaml(fs.readFileSync(file, 'utf8'));
   } catch (e) {
-    diag.error(GLOSSARY_FILE, `invalid YAML: ${(e as Error).message}`);
+    diag.error(file, `invalid YAML: ${(e as Error).message}`);
     return [];
   }
   const terms = (data as { terms?: unknown })?.terms;
   if (!Array.isArray(terms)) {
-    diag.error(GLOSSARY_FILE, 'expected a top-level "terms:" list');
+    diag.error(file, 'expected a top-level "terms:" list');
     return [];
   }
-  const seen = new Set<string>();
-  const out: GlossaryTerm[] = [];
+  const ids = new Map<string, string>();
+  const names = new Map<string, string>();
+  const out: Concept[] = [];
   terms.forEach((t, i) => {
-    const term = t as GlossaryTerm;
+    const term = t as { zh?: unknown; en?: unknown; aliases?: unknown; exclude?: unknown };
     if (typeof term?.zh !== 'string' || typeof term?.en !== 'string') {
-      diag.error(GLOSSARY_FILE, `terms[${i}] needs string "zh" and "en" fields`);
+      diag.error(file, `terms[${i}] needs string "zh" and "en" fields`);
       return;
     }
-    if (seen.has(term.zh)) diag.error(GLOSSARY_FILE, `duplicate term "${term.zh}"`);
-    seen.add(term.zh);
-    out.push(term);
+    const aliases = Array.isArray(term.aliases) ? term.aliases.filter((a): a is string => typeof a === 'string') : [];
+    const id = conceptId(term.en);
+    if (ids.has(id)) diag.error(file, `"${term.en}" duplicates the concept "${ids.get(id)}"`);
+    ids.set(id, term.en);
+    for (const name of [term.zh, ...aliases]) {
+      if (names.has(name)) diag.error(file, `name "${name}" is used by two concepts (${names.get(name)} and ${term.en})`);
+      names.set(name, term.en);
+    }
+    const exclude = Array.isArray(term.exclude) ? term.exclude.filter((a): a is string => typeof a === 'string') : [];
+    out.push({ id, zh: term.zh, en: term.en, aliases, ...(exclude.length ? { exclude } : {}) });
   });
   return out;
-}
-
-export interface TermFinding {
-  term: GlossaryTerm;
-  line?: number;
-}
-
-/** Terms whose first body occurrence is not annotated with the English name. */
-export function findUnannotatedTerms(body: string, terms: GlossaryTerm[]): TermFinding[] {
-  const tree = unified().use(remarkParse).use(remarkGfm).use(remarkMath).parse(body) as Root;
-  const segments: { value: string; line?: number }[] = [];
-  visit(tree, (node) => {
-    if (node.type === 'heading' || node.type === 'code' || node.type === 'math' || node.type === 'html') return 'skip';
-    if (node.type === 'text') segments.push({ value: node.value, line: node.position?.start.line });
-    return undefined;
-  });
-  const findings: TermFinding[] = [];
-  for (const term of terms) {
-    const names = [term.zh, ...(term.aliases ?? [])];
-    for (const seg of segments) {
-      const hit = names.map((n) => ({ n, i: seg.value.indexOf(n) })).filter((h) => h.i >= 0).sort((a, b) => a.i - b.i)[0];
-      if (!hit) continue;
-      const after = seg.value.slice(hit.i + hit.n.length);
-      const annotated = new RegExp(`^\\s*[（(]\\s*${escapeRe(term.en)}`, 'i').test(after);
-      if (!annotated) findings.push({ term, line: seg.line });
-      break;
-    }
-  }
-  return findings;
-}
-
-function escapeRe(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

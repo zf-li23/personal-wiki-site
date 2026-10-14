@@ -11,10 +11,13 @@ import { BASE_PATH } from '../../site.config.ts';
 import { useStrings } from '../i18n.ts';
 import { useTheme } from '../lib/theme.tsx';
 import { renderMermaidBlocks } from '../lib/mermaid.ts';
+import type { Lang } from '../../site.config.ts';
 import { ARTICLE_CLASS } from '../shared/article.ts';
+import { LinkPreviewCard, useLinkPreview } from './LinkPreview.tsx';
 
 interface ArticleProps {
   html: string;
+  /** Language of the HTML (the source language on untranslated pages). */
   lang: string;
 }
 
@@ -23,7 +26,7 @@ const ArticleBody = memo(function ArticleBody({ html, lang }: ArticleProps) {
   return <div className={ARTICLE_CLASS} lang={lang} dangerouslySetInnerHTML={{ __html: html }} />;
 });
 
-export function Article({ html, lang }: ArticleProps) {
+export function Article({ html, lang, readerLang, pageId }: ArticleProps & { readerLang: Lang; pageId: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const t = useStrings();
@@ -65,8 +68,11 @@ export function Article({ html, lang }: ArticleProps) {
     if (ref.current) void renderMermaidBlocks(ref.current, theme);
   }, [html, theme]);
 
+  const { preview, keep, close, dismiss } = useLinkPreview(ref, readerLang, pageId);
+
   return (
     <div ref={ref}>
+      {preview && <LinkPreviewCard preview={preview} onEnter={keep} onLeave={close} onNavigate={dismiss} />}
       <ArticleBody html={html} lang={lang} />
     </div>
   );

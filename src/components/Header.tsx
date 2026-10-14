@@ -1,8 +1,9 @@
-import { Languages, Menu, Moon, Search, Sun } from 'lucide-react';
+import { BookA, Languages, Menu, Moon, Search, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { otherLang, useLang, useStrings } from '../i18n.ts';
 import { storeLang } from '../lib/preferences.ts';
 import { useTheme } from '../lib/theme.tsx';
+import { conceptsPath } from '../shared/page-id.ts';
 
 interface HeaderProps {
   onOpenSearch: () => void;
@@ -43,6 +44,10 @@ export function Header({ onOpenSearch, onOpenMenu }: HeaderProps) {
           <span className="hidden sm:inline">{t.search}</span>
           <kbd className="hidden rounded border border-border px-1.5 font-mono text-[10px] md:inline">Ctrl K</kbd>
         </button>
+        <Link to={conceptsPath(lang)} className={iconButton} aria-label={t.concepts} title={t.concepts}>
+          <BookA size={16} />
+          <span className="hidden md:inline">{t.concepts}</span>
+        </Link>
         <Link to={switchTo} className={iconButton} onClick={() => storeLang(target)} aria-label={t.switchLanguageLabel} hrefLang={target}>
           <Languages size={16} />
           <span>{t.switchLanguage}</span>

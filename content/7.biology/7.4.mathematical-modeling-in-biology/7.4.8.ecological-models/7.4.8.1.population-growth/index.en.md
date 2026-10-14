@@ -1,3 +1,0 @@
----
-title: Population Growth Models
----

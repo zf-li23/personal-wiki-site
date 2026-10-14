@@ -23,6 +23,7 @@ export const PLOT_REQUIREMENTS = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot',
 export const PUBLIC_PATHS = {
   pages: 'data/pages',
   search: 'data/search',
+  concepts: 'data/concepts.json',
   media: 'media',
   plots: 'plots',
 } as const;

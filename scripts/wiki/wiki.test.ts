@@ -9,11 +9,14 @@ import { describe, it } from 'node:test';
 import { BASE_PATH } from '../../site.config.ts';
 import { compareIds, isPageId, parentIdOf } from '../../src/shared/page-id.ts';
 import { search } from '../../src/shared/search.ts';
+import { fixMarkdown } from './fix.ts';
+import { checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 import { sourceHash, translationStatus } from './build.ts';
 import { Diagnostics } from './diagnostics.ts';
 import { parsePageFile, serializePageFile } from './frontmatter.ts';
-import { findUnannotatedTerms } from './glossary.ts';
-import { type RenderContext, renderMarkdown } from './markdown.ts';
+import type { Concept } from './glossary.ts';
+import { buildLinkIndex, linkPage } from './linking.ts';
+import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
 import { lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
 import { PLOT_RENDERER } from './paths.ts';
@@ -98,7 +101,7 @@ function fakePage(id: string, extra: Partial<PageSource> = {}): PageSource {
 }
 
 async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotResults; page?: PageSource } = {}) {
-  const current = opts.page ?? fakePage('1');
+  const current = opts.page ?? fakePage('3.1.13');
   const pages = new Map([[current.id, current], ...(opts.pages ?? []).map((p) => [p.id, p] as const)]);
   const tree: ContentTree = { pages, rootIds: [...pages.keys()] };
   const diag = new Diagnostics();
@@ -110,29 +113,32 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
     file: '/content/1.p/index.zh.md',
     lineOffset: 3,
     linkLang: 'en',
+    contentLang: 'zh',
     usedPlots: new Set(),
     usedAssets: new Set(),
   };
   const out = await renderMarkdown(body, ctx);
-  return { out, diag, messages: diag.items.map((d) => `${d.level}:${d.line}:${d.message}`) };
+  return { out, html: renderHtml(out), diag, messages: diag.items.map((d) => `${d.level}:${d.line}:${d.message}`) };
 }
 
 describe('markdown rendering', () => {
   it('rewrites internal links into the reader language and checks targets', async () => {
-    const { out, messages } = await render('[a](/2#x) and [b](/9)', { pages: [fakePage('2')] });
-    assert.match(out.html, new RegExp(`href="${BASE_PATH}en/2/#x" data-internal`));
+    const { out, html, messages } = await render('[a](/3.1.12#x) and [b](/9)', { pages: [fakePage('3.1.12')] });
+    assert.match(html, new RegExp(`href="${BASE_PATH}en/3.1.12/#x" data-internal`));
     assert.ok(messages.some((m) => m.includes('link to unknown page "9"')));
-    assert.deepEqual(out.links.map((l) => [l.targetId, l.anchor]), [['2', 'x'], ['9', undefined]]);
+    assert.deepEqual(out.links.map((l) => [l.targetId, l.anchor]), [['3.1.12', 'x'], ['9', undefined]]);
   });
 
   it('assigns heading ids (custom {#id} wins) and builds the TOC from h2/h3', async () => {
-    const { out } = await render('## 条件期望 $E(X)$ {#cond-exp}\n\n### Sub\n\n#### Deep');
+    const { out, html } = await render('## 13.1. 条件期望 $E(X)$ {#cond-exp}\n\n### 13.1.1. Sub\n\n#### 13.1.1.1. Deep\n\n## 小结');
     assert.deepEqual(out.headings, [
-      { id: 'cond-exp', text: '条件期望 E(X)', depth: 2 },
-      { id: 'sub', text: 'Sub', depth: 3 },
+      { id: 'cond-exp', text: '13.1. 条件期望 E(X)', depth: 2 },
+      { id: 'sec-13.1.1', text: '13.1.1. Sub', depth: 3 },
+      { id: '小结', text: '小结', depth: 2 },
     ]);
-    assert.match(out.html, /<h2 id="cond-exp">/);
-    assert.ok(!out.html.includes('{#cond-exp}'));
+    assert.match(html, /<h4 id="sec-13.1.1.1">/);
+    assert.match(html, /<h2 id="cond-exp">/);
+    assert.ok(!html.includes('{#cond-exp}'));
   });
 
   it('rejects legacy syntax with file line numbers', async () => {
@@ -143,25 +149,25 @@ describe('markdown rendering', () => {
   });
 
   it('embeds plots as themed figures with source', async () => {
-    const pg = fakePage('1', { plotFiles: ['growth.py'] });
+    const pg = fakePage('3.1.13', { plotFiles: ['growth.py'] });
     const plots: PlotResults = new Map([
       [path.join(pg.dir, 'plots/growth.py'), { key: 'abc', imageDir: '/tmp/abc', imagePrefix: '', frozen: false, figures: [{ width: 800, height: 600 }], source: 'import numpy' }],
     ]);
-    const { out, diag } = await render('![增长曲线](./plots/growth.py)', { page: pg, plots });
+    const { html, diag } = await render('![增长曲线](./plots/growth.py)', { page: pg, plots });
     assert.equal(diag.errorCount, 0);
-    assert.match(out.html, /<figure class="wiki-plot">/);
-    assert.match(out.html, new RegExp(`src="${BASE_PATH}plots/abc/0-light.webp"[^>]*width="400" height="300"`));
-    assert.match(out.html, /0-dark\.webp/);
-    assert.match(out.html, /<figcaption>增长曲线<\/figcaption>/);
-    assert.match(out.html, /<details class="wiki-plot-source">/);
-    assert.ok(!out.html.includes('<p><figure'), 'figure must replace the paragraph');
+    assert.match(html, /<figure class="wiki-plot">/);
+    assert.match(html, new RegExp(`src="${BASE_PATH}plots/abc/0-light.webp"[^>]*width="400" height="300"`));
+    assert.match(html, /0-dark\.webp/);
+    assert.match(html, /<figcaption>增长曲线<\/figcaption>/);
+    assert.match(html, /<details class="wiki-plot-source">/);
+    assert.ok(!html.includes('<p><figure'), 'figure must replace the paragraph');
   });
 
   it('resolves assets, wraps tables, reports bad images and KaTeX errors', async () => {
-    const pg = fakePage('1', { assets: ['a.png'] });
-    const { out, messages } = await render('![图](./assets/a.png)\n\n![](missing.png)\n\n| a |\n|---|\n| 1 |\n\n$\\frac{1}$', { page: pg });
-    assert.match(out.html, new RegExp(`<figure class="wiki-figure"><img src="${BASE_PATH}media/1/a.png"`));
-    assert.match(out.html, /<div class="table-wrap"><table>/);
+    const pg = fakePage('3.1.13', { assets: ['a.png'] });
+    const { html, messages } = await render('![图](./assets/a.png)\n\n![](missing.png)\n\n| a |\n|---|\n| 1 |\n\n$\\frac{1}$', { page: pg });
+    assert.match(html, new RegExp(`<figure class="wiki-figure"><img src="${BASE_PATH}media/3.1.13/a.png"`));
+    assert.match(html, /<div class="table-wrap"><table>/);
     assert.ok(messages.some((m) => m.includes('unsupported image source "missing.png"')));
     assert.ok(messages.some((m) => m.startsWith('warning:') && m.includes('KaTeX could not render')));
   });
@@ -176,9 +182,9 @@ describe('markdown rendering', () => {
   });
 
   it('turns mermaid fences into diagram placeholders and adds code-block chrome', async () => {
-    const { out } = await render('```mermaid\ngraph TD; A-->B;\n```\n\n```python\nprint(1)\n```');
-    assert.match(out.html, /<div class="wiki-mermaid"><pre class="wiki-mermaid-source">graph TD; A-->B;/);
-    assert.match(out.html, /<div class="code-block"><div class="code-block-header"><span class="code-lang">python<\/span><button type="button" class="copy-button" data-copy="">Copy<\/button>/);
+    const { html } = await render('```mermaid\ngraph TD; A-->B;\n```\n\n```python\nprint(1)\n```');
+    assert.match(html, /<div class="wiki-mermaid"><pre class="wiki-mermaid-source">graph TD; A-->B;/);
+    assert.match(html, /<div class="code-block"><div class="code-block-header"><span class="code-lang">python<\/span><button type="button" class="copy-button" data-copy="">Copy<\/button>/);
   });
 });
 
@@ -269,12 +275,86 @@ describe('search', () => {
   });
 });
 
-describe('glossary', () => {
-  const terms = [{ zh: '中心极限定理', en: 'central limit theorem' }];
-  it('accepts an annotated first use and ignores headings/code', () => {
-    assert.deepEqual(findUnannotatedTerms('## 中心极限定理\n\n`中心极限定理`\n\n中心极限定理（Central Limit Theorem）说明……再次提到中心极限定理。', terms), []);
+describe('numbering rules', () => {
+  it('parses heading numbers and flags non-canonical formats', () => {
+    assert.deepEqual(parseHeadingNumber('13.1. 基本概念'), { number: ['13', '1'], title: '基本概念', wellFormed: true });
+    assert.equal(parseHeadingNumber('13.1 基本概念').wellFormed, false);
+    assert.equal(parseHeadingNumber('2025年').number, undefined);
   });
-  it('reports an unannotated first use', () => {
-    assert.equal(findUnannotatedTerms('由中心极限定理可知……', terms).length, 1);
+  it('checks levels, prefixes and sequences of chapter headings', () => {
+    const problems = (hs: [number, string][]) => checkHeadings(hs.map(([depth, text]) => ({ depth, text })), ['13']).map((p) => p.message);
+    assert.deepEqual(problems([[2, '13.1. A'], [3, '13.1.1. B'], [3, '13.1.2. C'], [2, '13.2. D'], [2, '小结'], [3, '要点']]), []);
+    assert.match(problems([[2, '13.1. A'], [3, '13.1.1. B'], [3, '13.1.3. C']])[0], /breaks the sequence: expected 13.1.2./);
+    assert.match(problems([[2, '13.1. A'], [4, '13.1.1.1. B']])[0], /heading level skipped/);
+    assert.match(problems([[2, '12.1. A']])[0], /does not fit here/);
+    assert.match(problems([[2, '13.1. A'], [3, '背景']])[0], /must be numbered too/);
+  });
+  it('parses statement labels in both languages and rejects ordinary bold text', () => {
+    assert.deepEqual(parseStatementLabel('定理 13.2.1（中心极限定理）'), { kind: 'thm', word: '定理', number: ['13', '2', '1'], name: '中心极限定理', canonical: true });
+    assert.equal(parseStatementLabel('Theorem 2.1 (CLT)')?.canonical, true);
+    assert.equal(parseStatementLabel('定理1.')?.canonical, false);
+    for (const plain of ['注意', '例子', '定理证明']) assert.equal(parseStatementLabel(plain), null, plain);
+  });
+  it('fix rewrites formats only, never code blocks', () => {
+    const { text } = fixMarkdown(['## 13.1 基本概念', '### **13.1.1 背景**', '- **推论1**（标准化平方和）：若', '**定义 8 (充分统计量).** 如果', '```', '## 1.1 code', '```'].join('\n'), 'zh');
+    assert.deepEqual(text.split('\n'), ['## 13.1. 基本概念', '### 13.1.1. 背景', '- **推论 1（标准化平方和）**：若', '**定义 8（充分统计量）** 如果', '```', '## 1.1 code', '```']);
+  });
+});
+
+describe('statements and page roles', () => {
+  it('wraps numbered statements with their display math, anchors equations, and checks numbers', async () => {
+    const { out, html, messages } = await render('## 13.2. 定理\n\n**定理 13.2.1（中心极限定理）** 设\n\n$$\nS_n \\tag{13.1}\n$$\n\n证明略。\n\n**定义 12.1.1** 错号');
+    assert.deepEqual(out.statements.map((x) => [x.kind, x.number, x.anchor]), [['thm', '13.2.1', 'thm-13.2.1'], ['eq', '13.1', 'eq-13.1']]);
+    assert.match(html, /<div class="wiki-stmt wiki-stmt-thm" id="thm-13.2.1" data-kind="thm"><p><strong class="wiki-stmt-label">定理 13.2.1（中心极限定理）<\/strong>/);
+    assert.match(html, /<div class="wiki-eq" id="eq-13.1">/);
+    assert.ok(/<\/div>\s*<p>证明略/.test(html), 'the proof paragraph is not part of the statement');
+    assert.ok(messages.some((m) => m.includes('定义 12.1.1: numbers on this page start with 13.')));
+  });
+  it('rejects headings on discipline and course pages', async () => {
+    const { messages } = await render('概述\n\n## 课程目标', { page: fakePage('3.1') });
+    assert.ok(messages.some((m) => m.includes('course pages are overviews without headings')));
+  });
+});
+
+describe('cross-page linking', () => {
+  const concepts: Concept[] = [
+    { id: 'convergence-in-distribution', zh: '依分布收敛', en: 'convergence in distribution', aliases: [] },
+    { id: 'law-of-large-numbers', zh: '大数定律', en: 'law of large numbers', aliases: [] },
+    { id: 'bifurcation', zh: '分岔', en: 'bifurcation', aliases: [], exclude: ['分岔图'] },
+  ];
+  async function site(pages: Record<string, string>) {
+    const sources = Object.fromEntries(Object.keys(pages).map((id) => [id, fakePage(id)]));
+    const tree: ContentTree = { pages: new Map(Object.entries(sources)), rootIds: [] };
+    const rendered = new Map<string, Awaited<ReturnType<typeof render>>['out']>();
+    for (const [id, body] of Object.entries(pages)) rendered.set(id, (await render(body, { page: sources[id], pages: Object.values(sources) })).out);
+    const diag = new Diagnostics();
+    const order = Object.keys(pages);
+    const index = buildLinkIndex(tree, rendered, new Map(order.map((id) => [id, id])), concepts, order, diag);
+    const results = new Map(order.map((id) => [id, linkPage({ pageId: id, out: rendered.get(id)!, linkLang: 'zh', tree, index, readingOrder: new Map(order.map((x, i) => [x, i])), diag, file: id })]));
+    return { index, diag, html: (id: string) => renderHtml(rendered.get(id)!), results };
+  }
+  it('resolves statement references within the course and links first concept mentions to definitions', async () => {
+    const s = await site({
+      '3.1.12': '## 12.1. 定律\n\n大数定律（law of large numbers）描述均值。由定理 13.2.1 可知。',
+      '3.1.13': '## 13.1. 收敛\n\n**定义 13.1.1（依分布收敛）** 设……\n\n## 13.2. 定理\n\n**定理 13.2.1** 见定义 13.1.1。大数定律和大数定律，分岔图不是分岔。',
+    });
+    assert.deepEqual(s.diag.items, []);
+    assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'def-13.1.1');
+    assert.equal(s.index.conceptSites.get('law-of-large-numbers')?.anchor, 'concept-law-of-large-numbers');
+    assert.match(s.html('3.1.12'), /<dfn id="concept-law-of-large-numbers" class="wiki-dfn"/);
+    assert.match(s.html('3.1.12'), new RegExp(`<a href="${BASE_PATH}zh/3.1.13/#thm-13.2.1" class="wiki-ref" data-internal="">定理 13.2.1</a>`));
+    assert.match(s.html('3.1.13'), /<a href="#def-13.1.1" class="wiki-ref">定义 13.1.1<\/a>/);
+    const p13 = s.html('3.1.13');
+    assert.equal((p13.match(/class="concept-ref"/g) ?? []).length, 2, 'one link for 大数定律 (first mention only) and one hover card for 分岔');
+    assert.match(p13, /<span class="concept-ref" data-concept="bifurcation">分岔<\/span>/);
+    assert.ok(!/分岔<\/span>图/.test(p13), '分岔图 is not a mention of 分岔');
+    assert.deepEqual([...s.results.get('3.1.12')!.targets], ['3.1.13']);
+  });
+  it('allows restating a definition but not a second English annotation', async () => {
+    const s = await site({
+      '3.1.12': '## 12.1. A\n\n大数定律（law of large numbers）',
+      '3.1.14': '## 14.1. B\n\n大数定律（law of large numbers）再述',
+    });
+    assert.match(s.diag.items[0].message, /already defined on page 3.1.12/);
   });
 });

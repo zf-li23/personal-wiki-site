@@ -2,9 +2,9 @@
 title: 贝叶斯推断
 ---
 
-## 7.1 贝叶斯与频率统计的基本对比 (Bayesian vs. Frequentist Statistics)
+## 7.1. 贝叶斯与频率统计的基本对比 (Bayesian vs. Frequentist Statistics)
 
-### 7.1.1 频率统计 (Frequentist Statistics)
+### 7.1.1. 频率统计 (Frequentist Statistics)
 - **核心假设**：
   - 参数 $\theta$ 是固定未知常数。
   - 概率定义为长期频率的极限。
@@ -17,7 +17,7 @@ title: 贝叶斯推断
   - 不直接给出“参数在区间内的概率”。
   - 依赖于未观测到的数据空间（如 $p$ 值计算）。
 
-### 7.1.2 贝叶斯统计 (Bayesian Statistics)
+### 7.1.2. 贝叶斯统计 (Bayesian Statistics)
 - **核心假设**：
   - 参数 $\theta$ 是随机变量，具有概率分布。
   - 概率是主观信念的度量。
@@ -27,16 +27,16 @@ title: 贝叶斯推断
   - 后验分布 $\pi(\theta \mid x)$ 综合先验与数据。
   - 所有推断基于后验分布进行。
 
-### 7.1.3 似然原理 (Likelihood Principle)
+### 7.1.3. 似然原理 (Likelihood Principle)
 - **内容**：若两个实验产生的似然函数成比例，则它们应对 $\theta$ 提供相同的证据。
 - **频率统计**：某些方法（如 $p$ 值）违反似然原理。
 - **贝叶斯统计**：自动满足似然原理，因后验仅通过似然依赖于数据。
 
 ---
 
-## 7.2 贝叶斯推断的基本原理 (Fundamentals of Bayesian Inference)
+## 7.2. 贝叶斯推断的基本原理 (Fundamentals of Bayesian Inference)
 
-### 7.2.1 先验分布、似然与后验分布 (Prior, Likelihood and Posterior)
+### 7.2.1. 先验分布、似然与后验分布 (Prior, Likelihood and Posterior)
 
 - **先验分布 (Prior Distribution)** $\pi(\theta)$：
   - 描述在见到数据前对 $\theta$ 的不确定性。
@@ -55,7 +55,7 @@ $$
 
 其中 $m(x) = \int f(x \mid \theta) \pi(\theta) d\theta$ 为**边际似然 (Marginal Likelihood)**，亦称证据（Evidence）。
 
-### 7.2.2 共轭先验 (Conjugate Priors)
+### 7.2.2. 共轭先验 (Conjugate Priors)
 
 - **定义**：若先验分布与后验分布属于同一分布族，则称该先验为**共轭先验**。
 - **优点**：
@@ -71,13 +71,13 @@ $$
 
 其中后验参数更新公式见具体推导。
 
-### 7.2.3 先验的构造方法 (Constructing Priors)
+### 7.2.3. 先验的构造方法 (Constructing Priors)
 
-#### 7.2.3.1 主观先验 (Subjective Priors)
+#### 7.2.3.1. 主观先验 (Subjective Priors)
 - 基于历史数据、专家知识或理论模型。
 - 可进行敏感性分析：更换不同先验，检查结论是否稳健。
 
-#### 7.2.3.2 非信息先验 (Non-informative Priors)
+#### 7.2.3.2. 非信息先验 (Non-informative Priors)
 - 旨在让数据“自己说话”，最小化先验影响。
 - **均匀先验 (Uniform Prior)**：
   - $\pi(\theta) \propto 1$，可能为**广义先验 (Improper Prior)**。
@@ -89,7 +89,7 @@ $$
   - 在给定约束（如矩条件）下，选择熵最大的分布。
   - 对正态约束给出正态先验。
 
-#### 7.2.3.3 分层先验 (Hierarchical Priors)
+#### 7.2.3.3. 分层先验 (Hierarchical Priors)
 - 先验参数本身也有分布，形成层次结构：
   $$
   \pi(\theta) = \int \pi(\theta \mid \psi) g(\psi) d\psi
@@ -98,9 +98,9 @@ $$
 
 ---
 
-## 7.3 贝叶斯点估计 (Bayesian Point Estimation)
+## 7.3. 贝叶斯点估计 (Bayesian Point Estimation)
 
-### 7.3.1 常用估计量
+### 7.3.1. 常用估计量
 
 - **后验众数估计 (Maximum A Posteriori, MAP)**：
   $$
@@ -120,7 +120,7 @@ $$
   $$
   - 在绝对损失下最优。
 
-### 7.3.2 估计精度：后验均方误差 (Posterior Mean Squared Error, PMSE)
+### 7.3.2. 估计精度：后验均方误差 (Posterior Mean Squared Error, PMSE)
 
 $$
 \text{PMSE}(\hat{\theta}) = E[(\theta - \hat{\theta})^2 \mid x] = \text{Var}(\theta \mid x) + (\hat{\theta} - E[\theta \mid x])^2
@@ -129,9 +129,9 @@ $$
 - 后验均值估计使 PMSE 最小。
 - 后验方差 $\text{Var}(\theta \mid x)$ 是估计不确定性的度量。
 
-### 7.3.3 例子
+### 7.3.3. 例子
 
-#### 例1：正态均值估计（方差已知）
+#### 7.3.3.1. 例1：正态均值估计（方差已知）
 - $X_i \stackrel{\text{i.i.d.}}{\sim} N(\theta, \sigma^2)$，$\sigma^2$ 已知。
 - 先验：$\theta \sim N(\mu_0, \tau_0^2)$。
 - 后验：$\theta \mid x \sim N(\mu_n, \tau_n^2)$，其中
@@ -140,7 +140,7 @@ $$
   $$
 - 后验均值 $\mu_n$ 是先验均值与样本均值的加权平均。
 
-#### 例2：二项成功率估计
+#### 7.3.3.2. 例2：二项成功率估计
 - $X \sim B(n, \theta)$。
 - 先验：$\theta \sim \text{Beta}(a, b)$。
 - 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
@@ -149,9 +149,9 @@ $$
 
 ---
 
-## 7.4 贝叶斯区间估计 (Bayesian Interval Estimation)
+## 7.4. 贝叶斯区间估计 (Bayesian Interval Estimation)
 
-### 7.4.1 可信区间 (Credible Interval)
+### 7.4.1. 可信区间 (Credible Interval)
 
 - **定义**：给定 $1-\alpha$，若区间 $[L(x), U(x)]$ 满足
   $$
@@ -160,13 +160,13 @@ $$
   则称 $[L, U]$ 为 $\theta$ 的 $1-\alpha$ **可信区间**。
 - 与频率置信区间不同，这里的概率是**给定数据**下参数落在区间内的概率。
 
-### 7.4.2 最高后验密度区间 (Highest Posterior Density Interval, HPD)
+### 7.4.2. 最高后验密度区间 (Highest Posterior Density Interval, HPD)
 
 - **定义**：是所有 $1-\alpha$ 可信区间中长度最短的区间。
 - 特点：区间内任一点的后验密度不低于区间外任一点。
 - 对于单峰对称后验，HPD 区间即为等尾区间。
 
-### 7.4.3 例子：正态均值的可信区间
+### 7.4.3. 例子：正态均值的可信区间
 
 - 沿用 7.3.3 例1 设置，后验 $\theta \mid x \sim N(\mu_n, \tau_n^2)$。
 - $1-\alpha$ 等尾可信区间为：
@@ -176,9 +176,9 @@ $$
 
 ---
 
-## 7.5 贝叶斯假设检验 (Bayesian Hypothesis Testing)
+## 7.5. 贝叶斯假设检验 (Bayesian Hypothesis Testing)
 
-### 7.5.1 基本方法
+### 7.5.1. 基本方法
 
 - **假设**：$H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$。
 - 计算后验概率：
@@ -191,7 +191,7 @@ $$
   \frac{\alpha_1}{\alpha_0} = \frac{P(\theta \in \Theta_1 \mid x)}{P(\theta \in \Theta_0 \mid x)}
   $$
 
-### 7.5.2 贝叶斯因子 (Bayes Factor)
+### 7.5.2. 贝叶斯因子 (Bayes Factor)
 
 - 比较两个模型 $M_0$ 与 $M_1$ 的相对支持程度：
   $$
@@ -199,7 +199,7 @@ $$
   $$
 - $BF_{10} > 1$ 表示数据更支持 $M_1$。
 
-### 7.5.3 例子：二项分布的成功率检验
+### 7.5.3. 例子：二项分布的成功率检验
 
 - $X \sim B(n, \theta)$，检验 $H_0: \theta \le 0.5$ vs $H_1: \theta > 0.5$。
 - 取均匀先验 $\theta \sim U(0,1)$。
@@ -208,9 +208,9 @@ $$
 
 ---
 
-## 7.6 贝叶斯预测 (Bayesian Prediction)
+## 7.6. 贝叶斯预测 (Bayesian Prediction)
 
-### 7.6.1 后验预测分布 (Posterior Predictive Distribution)
+### 7.6.1. 后验预测分布 (Posterior Predictive Distribution)
 
 - **问题**：已有数据 $x$，预测新观测 $\tilde{x}$。
 - 后验预测密度：
@@ -219,7 +219,7 @@ $$
   $$
 - 意义：综合了参数不确定性（通过后验）与抽样变异性。
 
-### 7.6.2 例子：二项分布的预测
+### 7.6.2. 例子：二项分布的预测
 
 - $X \sim B(n, \theta)$，先验 $\theta \sim \text{Beta}(a,b)$。
 - 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
@@ -231,14 +231,14 @@ $$
 
 ---
 
-## 7.7 贝叶斯计算技术 (Computational Techniques for Bayesian Inference)
+## 7.7. 贝叶斯计算技术 (Computational Techniques for Bayesian Inference)
 
-### 7.7.1 解析方法
+### 7.7.1. 解析方法
 
 - 适用于共轭先验或简单模型。
 - 可直接计算后验、后验矩、可信区间等。
 
-### 7.7.2 数值方法
+### 7.7.2. 数值方法
 
 - **马尔可夫链蒙特卡洛 (Markov Chain Monte Carlo, MCMC)**：
   - 通过构建马尔可夫链，使其平稳分布为目标后验分布。
@@ -249,7 +249,7 @@ $$
 - **拉普拉斯近似 (Laplace Approximation)**：
   - 在后验众数处进行二阶泰勒展开，近似为正态分布。
 
-### 7.7.3 边际似然的计算
+### 7.7.3. 边际似然的计算
 
 - 用于模型比较（如贝叶斯因子）。
 - 方法：
@@ -259,9 +259,9 @@ $$
 
 ---
 
-## 7.8 贝叶斯决策理论 (Bayesian Decision Theory)
+## 7.8. 贝叶斯决策理论 (Bayesian Decision Theory)
 
-### 7.8.1 基本框架
+### 7.8.1. 基本框架
 
 - **行动空间** $\mathcal{A}$：所有可能决策的集合。
 - **损失函数** $L(a, \theta)$：采取行动 $a$ 而真实参数为 $\theta$ 时的损失。
@@ -274,13 +274,13 @@ $$
   a^* = \arg \min_{a \in \mathcal{A}} R(a \mid x)
   $$
 
-### 7.8.2 常见损失函数下的贝叶斯估计
+### 7.8.2. 常见损失函数下的贝叶斯估计
 
 - **平方损失** $L(\hat{\theta}, \theta) = (\hat{\theta} - \theta)^2$ → 后验均值。
 - **绝对损失** $L(\hat{\theta}, \theta) = |\hat{\theta} - \theta|$ → 后验中位数。
 - **0-1损失**（假设检验）→ 选择后验概率最大的假设。
 
-### 7.8.3 例子：疫苗接种决策
+### 7.8.3. 例子：疫苗接种决策
 
 - 暴露于病毒后，感染概率 $\theta \sim \text{Beta}(1,2)$（先验）。
 - 疫苗费用 £500，死亡损失极高（设为 ∞）。

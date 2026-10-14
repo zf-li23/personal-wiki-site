@@ -40,6 +40,11 @@ export function pagePath(lang: Lang, id: string): string {
   return `/${lang}/${id}/`;
 }
 
+/** Router path of the concept index, e.g. "/en/concepts/". */
+export function conceptsPath(lang: Lang): string {
+  return `/${lang}/concepts/`;
+}
+
 /** Router path of a language home page, e.g. "/en/". */
 export function homePath(lang: Lang): string {
   return `/${lang}/`;

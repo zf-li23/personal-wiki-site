@@ -3,15 +3,19 @@
  * parser in the project: the client receives finished HTML and never parses
  * Markdown itself.
  *
- * Pipeline: remark-parse -> gfm -> math -> (checks) -> rehype -> raw HTML ->
- * wiki transforms (ids, links, images, plots, mermaid) -> highlight -> KaTeX ->
- * finalize (code-block chrome, KaTeX error reporting) -> HTML string.
+ * Pipeline: remark-parse -> gfm -> math -> (checks, incl. heading numbering) -> rehype ->
+ * raw HTML -> wiki transforms (ids, links, images, plots, mermaid) -> statements and
+ * equations -> highlight -> KaTeX -> finalize (code-block chrome).
+ *
+ * The result keeps the HAST: cross-page references and concept links need every page
+ * rendered first, so linking.ts mutates the trees and only then are they stringified.
  */
 import path from 'node:path';
 import GithubSlugger from 'github-slugger';
 import type { Element, ElementContent, Root as HastRoot, RootContent } from 'hast';
 import { toHtml } from 'hast-util-to-html';
 import { toString as hastToString } from 'hast-util-to-string';
+import { toString as mdastToString } from 'mdast-util-to-string';
 import latex from 'highlight.js/lib/languages/latex';
 // Registers \ce / \pu (chemistry) on the KaTeX instance rehype-katex uses (versions are pinned equal, see tests).
 import 'katex/contrib/mhchem';
@@ -31,6 +35,19 @@ import { VFile } from 'vfile';
 import { BASE_PATH, type Lang } from '../../site.config.ts';
 import type { TocHeading } from '../../src/shared/types.ts';
 import type { Diagnostics } from './diagnostics.ts';
+import {
+  type HeadingInput,
+  type StatementKind,
+  checkHeadings,
+  equationAnchor,
+  formatStatementLabel,
+  numberPrefix,
+  pageRole,
+  parseHeadingNumber,
+  parseStatementLabel,
+  sectionAnchor,
+  statementAnchor,
+} from './numbering.ts';
 import { PUBLIC_PATHS } from './paths.ts';
 import type { PlotResult, PlotResults } from './plots.ts';
 import type { ContentTree, PageSource } from './scan.ts';
@@ -46,6 +63,8 @@ export interface RenderContext {
   lineOffset: number;
   /** Language that internal links point to (the reader's language, not necessarily the body's). */
   linkLang: Lang;
+  /** Language the Markdown body is written in. */
+  contentLang: Lang;
   /** Collected while rendering: plot scripts and assets referenced by the body. */
   usedPlots: Set<string>;
   usedAssets: Set<string>;
@@ -57,8 +76,23 @@ export interface PageLink {
   line?: number;
 }
 
+export interface StatementInfo {
+  /** Statement kind, or 'eq' for a display equation with \tag{…}. */
+  kind: StatementKind | 'eq';
+  /** Dotted number, e.g. "13.2.1". */
+  number: string;
+  name?: string;
+  anchor: string;
+  line?: number;
+}
+
 export interface RenderOutput {
-  html: string;
+  /** Final tree; stringified by build.ts after linking.ts has resolved references. */
+  hast: HastRoot;
+  /** Language of the Markdown that was rendered (the source language for untranslated pages). */
+  contentLang: Lang;
+  /** Numbered statements (定理 13.2.1 …) on this page, in order. */
+  statements: StatementInfo[];
   headings: TocHeading[];
   /** Every element id in the page, for validating `#anchor` links. */
   anchors: Set<string>;
@@ -105,7 +139,11 @@ function lineOf(state: State, node: { position?: { start: { line: number } } }):
 function remarkWikiChecks(state: State) {
   return (tree: MdastRoot, file: VFile) => {
     const source = String(file.value);
+    const headings: HeadingInput[] = [];
     visit(tree, (node) => {
+      if (node.type === 'heading' && node.depth >= 2 && node.position) {
+        headings.push({ depth: node.depth, text: mdastToString(node).replace(CUSTOM_ID_RE, ''), line: node.position.start.line + state.ctx.lineOffset });
+      }
       const line = node.position ? node.position.start.line + state.ctx.lineOffset : undefined;
       if (node.type === 'heading' && node.depth === 1) {
         state.ctx.diag.error(state.ctx.file, 'do not use "# " headings; the page title is the H1. Start sections at "## "', line);
@@ -126,7 +164,22 @@ function remarkWikiChecks(state: State) {
         }
       }
     });
+    checkPageHeadings(state, headings);
   };
+}
+
+/** Upper pages (discipline, course) are overviews without headings; chapter pages follow the numbering rules. */
+function checkPageHeadings(state: State, headings: HeadingInput[]) {
+  const { ctx } = state;
+  const role = pageRole(ctx.page.id);
+  if (role === 'discipline' || role === 'course') {
+    for (const h of headings) {
+      ctx.diag.error(ctx.file, `"${h.text}": ${role} pages are overviews without headings; put sectioned content into a chapter page`, h.line);
+    }
+    return;
+  }
+  if (role !== 'chapter') return; // depth errors are reported by scan.ts
+  for (const p of checkHeadings(headings, numberPrefix(ctx.page.id))) ctx.diag.error(ctx.file, p.message, p.line);
 }
 
 /* ------------------------------------------------------------------- rehype */
@@ -159,6 +212,11 @@ function rehypeWiki(state: State) {
           }
         }
         const label = hastToString(node).trim();
+        const numbered = parseHeadingNumber(label);
+        if (!id && numbered.number && numbered.wellFormed) {
+          id = sectionAnchor(numbered.number);
+          slugger.slug(id);
+        }
         id ??= slugger.slug(label) || `section-${out.anchors.size + 1}`;
         if (out.anchors.has(id)) ctx.diag.error(ctx.file, `duplicate heading id "${id}"`, line);
         node.properties = { ...node.properties, id };
@@ -197,6 +255,133 @@ function rehypeWiki(state: State) {
     });
 
     out.text = plainText(tree).replace(/\s+/g, ' ').trim();
+  };
+}
+
+const STATEMENT_GROUP: Record<StatementKind, string> = {
+  def: 'def',
+  thm: 'thm',
+  lem: 'thm',
+  prop: 'thm',
+  cor: 'thm',
+  pty: 'note',
+  ex: 'ex',
+  rem: 'note',
+  alg: 'note',
+  fml: 'note',
+};
+
+function isWhitespace(n: RootContent | ElementContent): boolean {
+  return n.type === 'text' && !n.value.trim();
+}
+
+function isDisplayMath(n: RootContent | ElementContent): boolean {
+  return n.type === 'element' && n.tagName === 'pre' && n.children.some((c) => c.type === 'element' && hasClass(c, 'math-display'));
+}
+
+/** Leading bold run of a paragraph, if the paragraph starts with one. */
+function leadingStrong(p: Element): Element | undefined {
+  const first = p.children.find((c) => !isWhitespace(c));
+  return first?.type === 'element' && first.tagName === 'strong' ? first : undefined;
+}
+
+/**
+ * Statements: a paragraph that starts with **定理 13.2.1（名称）** gets a language-neutral anchor
+ * (thm-13.2.1). At the top level it is wrapped together with the display math, lists and tables
+ * that directly follow it into <div class="wiki-stmt …">, which is also what previews show.
+ * Display math with \tag{X} gets the anchor eq-X.
+ */
+function rehypeStatements(state: State) {
+  const { ctx, out } = state;
+  return (tree: HastRoot) => {
+    const prefix = pageRole(ctx.page.id) === 'chapter' ? numberPrefix(ctx.page.id) : null;
+    const seen = new Set<string>();
+
+    const register = (p: Element): Element | null => {
+      const strong = leadingStrong(p);
+      if (!strong) return null;
+      const label = parseStatementLabel(hastToString(strong));
+      if (!label) return null;
+      const line = lineOf(state, p);
+      const lang = ctx.contentLang;
+      if (!label.canonical) {
+        ctx.diag.warn(ctx.file, `write the label as **${formatStatementLabel(label, lang)}** (\`pnpm wiki fix\` does this)`, line);
+      }
+      if (!label.number) return null;
+      const number = label.number.join('.');
+      if (prefix && (label.number.length <= prefix.length || label.number.slice(0, prefix.length).join('.') !== prefix.join('.'))) {
+        ctx.diag.error(ctx.file, `${label.word} ${number}: numbers on this page start with ${prefix.join('.')}. (e.g. ${prefix.join('.')}.1.1)`, line);
+        return null;
+      }
+      const anchor = statementAnchor(label.kind, label.number);
+      if (seen.has(anchor)) {
+        ctx.diag.error(ctx.file, `${label.word} ${number} is numbered twice on this page`, line);
+        return null;
+      }
+      seen.add(anchor);
+      out.anchors.add(anchor);
+      out.statements.push({ kind: label.kind, number, name: label.name, anchor, line });
+      strong.properties = { ...strong.properties, className: ['wiki-stmt-label'] };
+      return el('div', { className: ['wiki-stmt', `wiki-stmt-${STATEMENT_GROUP[label.kind]}`], id: anchor, dataKind: label.kind }, []);
+    };
+
+    // Top-level statements: wrap the label paragraph and what belongs to it.
+    const children = tree.children;
+    for (let i = 0; i < children.length; i++) {
+      const node = children[i];
+      if (node.type !== 'element' || node.tagName !== 'p') continue;
+      const wrapper = register(node);
+      if (!wrapper) continue;
+      let end = i + 1;
+      let last = i;
+      while (end < children.length) {
+        const c = children[end];
+        if (isWhitespace(c)) {
+          end++;
+          continue;
+        }
+        if (c.type === 'element' && (isDisplayMath(c) || /^(ul|ol)$/.test(c.tagName) || hasClass(c, 'table-wrap'))) {
+          last = end++;
+          continue;
+        }
+        break;
+      }
+      wrapper.children = children.slice(i, last + 1) as ElementContent[];
+      children.splice(i, last - i + 1, wrapper);
+    }
+
+    // Statements inside lists/quotes: anchor the paragraph itself. Equations: anchor by \tag.
+    visit(tree, 'element', (node, index, parent) => {
+      // A paragraph in a list/quote, or a tight list item (whose text has no <p> around it).
+      const inWrapper = parent?.type === 'element' && hasClass(parent, 'wiki-stmt');
+      if ((node.tagName === 'p' && parent?.type === 'element' && !inWrapper) || (node.tagName === 'li' && !node.children.some((c) => c.type === 'element' && c.tagName === 'p'))) {
+        const wrapper = register(node);
+        if (wrapper) node.properties = { ...node.properties, id: wrapper.properties.id, className: ['wiki-stmt-inline'] };
+        return undefined;
+      }
+      if (isDisplayMath(node) && parent && index !== undefined) {
+        const tag = /\\tag\*?\{([^}]+)\}/.exec(hastToString(node))?.[1]?.trim();
+        if (!tag) return 'skip';
+        const anchor = equationAnchor(tag);
+        if (out.anchors.has(anchor)) ctx.diag.error(ctx.file, `equation tag (${tag}) is used twice on this page`, lineOf(state, node));
+        out.anchors.add(anchor);
+        out.statements.push({ kind: 'eq', number: tag, anchor, line: lineOf(state, node) });
+        parent.children[index] = el('div', { className: ['wiki-eq'], id: anchor }, [node]);
+        return 'skip';
+      }
+      return undefined;
+    });
+
+    // A numbered label in the middle of a paragraph was meant to start a new statement.
+    visit(tree, 'element', (node) => {
+      if (node.tagName !== 'strong' || hasClass(node, 'wiki-stmt-label')) return;
+      const label = parseStatementLabel(hastToString(node));
+      if (!label?.number) return;
+      // A bold mention of a statement that exists on this page is just an emphasised reference.
+      if (out.anchors.has(statementAnchor(label.kind, label.number))) return;
+      node.properties = { ...node.properties, className: ['wiki-label-text'] };
+      ctx.diag.warn(ctx.file, `**${hastToString(node)}** is in the middle of a paragraph; start a new paragraph for it so it becomes a numbered statement`, lineOf(state, node));
+    });
   };
 }
 
@@ -374,7 +559,17 @@ function rehypeFinalize() {
 /* -------------------------------------------------------------------- entry */
 
 export async function renderMarkdown(body: string, ctx: RenderContext): Promise<RenderOutput> {
-  const out: RenderOutput = { html: '', headings: [], anchors: new Set(), links: [], localAnchors: [], text: '', excerpt: '' };
+  const out: RenderOutput = {
+    hast: { type: 'root', children: [] },
+    contentLang: ctx.contentLang,
+    statements: [],
+    headings: [],
+    anchors: new Set(),
+    links: [],
+    localAnchors: [],
+    text: '',
+    excerpt: '',
+  };
   const state: State = { ctx, out };
   const processor = unified()
     .use(remarkParse)
@@ -384,6 +579,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeWiki, state)
+    .use(rehypeStatements, state)
     .use(rehypeHighlight, { languages: { ...common, matlab, latex }, plainText: ['text', 'txt', 'plain', 'math'] })
     .use(rehypeKatex, { strict: 'ignore', output: 'html' })
     .use(rehypeFinalize);
@@ -405,6 +601,24 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
   for (const { anchor, line } of out.localAnchors) {
     if (!out.anchors.has(anchor)) ctx.diag.error(ctx.file, `link to missing anchor "#${anchor}" on this page`, line);
   }
-  out.html = toHtml(hast);
+  out.hast = hast;
   return out;
+}
+
+export function emptyRender(contentLang: Lang): RenderOutput {
+  return {
+    hast: { type: 'root', children: [] },
+    contentLang,
+    statements: [],
+    headings: [],
+    anchors: new Set(),
+    links: [],
+    localAnchors: [],
+    text: '',
+    excerpt: '',
+  };
+}
+
+export function renderHtml(out: RenderOutput): string {
+  return out.hast.children.length ? toHtml(out.hast) : '';
 }

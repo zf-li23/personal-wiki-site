@@ -2,23 +2,23 @@
 title: 期望、方差、相关不等式
 ---
 
-## 8.1 数学期望
+## 8.1. 数学期望
 
-### 8.1.1 期望的定义
+### 8.1.1. 期望的定义
 
-#### 离散型随机变量
+#### 8.1.1.1. 离散型随机变量
 设 $X$ 有概率分布 $\mathbb{P}(X = x_j), j = 1, 2, ...$，如果 $\sum_{j=1}^\infty |x_j| \mathbb{P}(X = x_j) < +\infty$，则：
 $$
 E(X) = \sum_{j=1}^\infty x_j \mathbb{P}(X = x_j)
 $$
 
-#### 连续型随机变量
+#### 8.1.1.2. 连续型随机变量
 设 $X$ 有概率密度 $f(x)$，如果 $\int_{-\infty}^{\infty} |x| f(x) dx < +\infty$，则：
 $$
 E(X) = \int_{-\infty}^{\infty} x f(x) dx
 $$
 
-### 8.1.2 常见分布的期望
+### 8.1.2. 常见分布的期望
 
 - **两点分布** $B(1, p)$：$E(X) = p$
 - **二项分布** $B(n, p)$：$E(X) = np$
@@ -29,7 +29,7 @@ $$
 - **Gamma分布** $\Gamma(\alpha, \beta)$：$E(X) = \frac{\alpha}{\beta}$
 - **正态分布** $N(\mu, \sigma^2)$：$E(X) = \mu$
 
-### 8.1.3 期望的性质
+### 8.1.3. 期望的性质
 
 **定理**：设 $E|X| < +\infty, E|Y| < +\infty$，$a, b, C$ 为实数，则：
 1. $E(C) = C$
@@ -38,29 +38,29 @@ $$
 4. 若 $X \leq Y$ a.s.，则 $EX \leq EY$
 5. 若 $X$ 和 $Y$ 独立，则 $E(XY) = (EX)(EY)$
 
-## 8.2 随机变量函数的数学期望
+## 8.2. 随机变量函数的数学期望
 
-### 8.2.1 基本定理
+### 8.2.1. 基本定理
 设 $X = (X_1, X_2, ..., X_n)$ 是随机向量，$g(x)$ 是实函数，如果 $\int_{\mathbb{R}^n} |g(x)| dF(x) < \infty$，则：
 $$
 E(g(X)) = \int_{\mathbb{R}^n} g(x) dF(x)
 $$
 
-### 8.2.2 应用实例
+### 8.2.2. 应用实例
 
-**例1**：$X \sim U(0, \pi/2)$，计算 $E(\cos(X))$
+**例 8.2.1**：$X \sim U(0, \pi/2)$，计算 $E(\cos(X))$
 $$
 E(\cos(X)) = \int_{0}^{\frac{\pi}{2}} \frac{2}{\pi} \cos(x) dx = \frac{2}{\pi}
 $$
 
-**例2**：$(X, Y)$ 在单位圆内均匀分布，计算 $E(X)$
+**例 8.2.2**：$(X, Y)$ 在单位圆内均匀分布，计算 $E(X)$
 $$
 E(X) = \frac{1}{\pi} \int_{-1}^{1} \left( \int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}} x dx \right) dy = 0
 $$
 
-## 8.3 方差
+## 8.3. 方差
 
-### 8.3.1 定义与性质
+### 8.3.1. 定义与性质
 
 **定义**：设 $\mu = EX$ 有限，则方差为：
 $$
@@ -79,7 +79,7 @@ $$
 3. $var(X) = 0 \iff X = \mu$ a.s.
 4. 若 $X_1, ..., X_n$ 相互独立，则 $var\left(\sum_{k=1}^n X_k\right) = \sum_{k=1}^n var(X_k)$
 
-### 8.3.2 常见分布的方差
+### 8.3.2. 常见分布的方差
 
 - **两点分布** $B(1, p)$：$var(X) = p(1-p)$
 - **二项分布** $B(n, p)$：$var(X) = np(1-p)$
@@ -90,7 +90,7 @@ $$
 - **正态分布** $N(\mu, \sigma^2)$：$var(X) = \sigma^2$
 - **Gamma分布** $\Gamma(\alpha, \beta)$：$var(X) = \frac{\alpha}{\beta^2}$
 
-### 8.3.3 标准化
+### 8.3.3. 标准化
 
 **定义**：设 $var(X) < \infty$，令：
 $$
@@ -98,38 +98,38 @@ Y = \frac{X - EX}{\sqrt{var(X)}}
 $$
 则 $EY = 0, var(Y) = 1$，称 $Y$ 是 $X$ 的标准化。
 
-## 8.4 高阶矩
+## 8.4. 高阶矩
 
-### 8.4.1 定义
+### 8.4.1. 定义
 设 $X$ 是随机变量，$m$ 是正整数：
 - **m阶原点矩**：$E(X^m)$
 - **m阶中心矩**：$E(X - EX)^m$
 
-### 8.4.2 重要高阶矩
+### 8.4.2. 重要高阶矩
 - **偏度**（Skewness）：$\frac{E(X-EX)^3}{[E(X-EX)^2]^{3/2}}$
 - **峰度**（Kurtosis）：$\frac{E(X-EX)^4}{[E(X-EX)^2]^2} - 3$
 
-## 8.5 相关不等式
+## 8.5. 相关不等式
 
-### 8.5.1 Markov不等式
+### 8.5.1. Markov不等式
 对随机变量 $X$ 和 $\varepsilon > 0$，有：
 $$
 \mathbb{P}(|X| \geq \varepsilon) \leq \frac{E |X|^{\alpha}}{\varepsilon^{\alpha}}, \\quad \alpha > 0
 $$
 
-### 8.5.2 Chebyshev不等式
+### 8.5.2. Chebyshev不等式
 $$
 \mathbb{P}(|X - EX| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}
 $$
 
-### 8.5.3 Cauchy-Schwarz不等式
+### 8.5.3. Cauchy-Schwarz不等式
 设 $EX^2 < \infty$ 和 $EY^2 < \infty$，则：
 $$
 |E(XY)| \leq \sqrt{EX^2EY^2}
 $$
 等号成立当且仅当存在不全为零的常数 $a, b$ 使得 $aX + bY = 0$ a.s.
 
-### 8.5.4 Jensen不等式
+### 8.5.4. Jensen不等式
 设 $\psi$ 是凸函数，且 $X$ 和 $\psi(X)$ 都有有限的期望，则：
 $$
 \psi(EX) \leq E(\psi(X))

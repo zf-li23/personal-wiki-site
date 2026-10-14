@@ -20,13 +20,16 @@ Node ≥ 22.18 runs the TypeScript in `scripts/` directly (type stripping): no b
 ## Architecture
 
 ```
-content/**  ──scan──▶  ContentTree ──▶ plots (Python, cached) ──▶ Markdown→HTML per page×lang
+content/**  ──scan──▶  ContentTree ──▶ plots (Python, cached) ──▶ Markdown→HAST per page×lang
    (source of truth)        scripts/wiki/scan.ts      plots.ts + plot/render_plot.py        markdown.ts
                                                                                               │
-         build.ts writes .generated/  ◀───────────────────────────────────────────────────────┘
+                     linking.ts: statement index, concept sites, references/concept links ◀──┘
+                                                                                              │
+         build.ts stringifies and writes .generated/  ◀───────────────────────────────────────┘
            site.json                    navigation (SiteData) → client via `virtual:wiki/site`
            public/data/pages/<lang>/<id>.json   PagePayload (pre-rendered HTML, TOC, status)
            public/data/search/<lang>.json       search index
+           public/data/concepts.json            concept registry + definition sites + usage
            public/media/<id>/…  public/plots/<key>/…
                                     │
  vite-plugin.ts: publicDir=.generated/public, dev watcher, build hook, prerender (prerender.ts)
@@ -47,7 +50,10 @@ Key decisions (keep them):
 
 | Task | Place |
 |---|---|
-| New Markdown syntax / HTML transform | `scripts/wiki/markdown.ts` (`rehypeWiki`), plus CSS in `src/styles/index.css`, plus a test |
+| New Markdown syntax / HTML transform | `scripts/wiki/markdown.ts` (`rehypeWiki`, `rehypeStatements`), plus CSS in `src/styles/index.css`, plus a test |
+| Page roles, heading / statement numbering rules | `scripts/wiki/numbering.ts` (pure, shared by checker, `pnpm wiki fix` in `fix.ts`, tests) |
+| Cross-page references, concept definitions & links, backlinks | `scripts/wiki/linking.ts` (runs after all pages render; then `build.ts` stringifies) |
+| Hover previews, concept index, page connections | `src/components/LinkPreview.tsx`, `src/pages/ConceptsPage.tsx`, `src/components/PageParts.tsx` |
 | Behaviour inside articles (copy, diagrams, link interception) | `src/components/Article.tsx` (event delegation on the injected HTML) |
 | New content rule / lint | `scan.ts` (structure), `frontmatter.ts` (schema), `markdown.ts` (body), `plots.ts` (scripts); document it in CONTENT_GUIDE.md |
 | UI strings | `src/i18n.ts` (both languages; TypeScript enforces parity) |

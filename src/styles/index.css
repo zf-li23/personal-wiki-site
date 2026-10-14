@@ -206,6 +206,85 @@
   color: #dc2626;
 }
 
+/* Numbered statements (定义/定理/…): see rehypeStatements in scripts/wiki/markdown.ts. */
+.wiki-article .wiki-stmt {
+  --stmt: #64748b;
+  margin: 1.25em 0;
+  padding: 0.6em 1em;
+  border-left: 3px solid var(--stmt);
+  border-radius: 0 0.375rem 0.375rem 0;
+  background: color-mix(in srgb, var(--stmt) 7%, transparent);
+  scroll-margin-top: 5rem;
+}
+.wiki-article .wiki-stmt > :first-child {
+  margin-top: 0;
+}
+.wiki-article .wiki-stmt > :last-child {
+  margin-bottom: 0;
+}
+.wiki-article .wiki-stmt-def {
+  --stmt: #2563eb;
+}
+.wiki-article .wiki-stmt-thm {
+  --stmt: #7c3aed;
+}
+.wiki-article .wiki-stmt-ex {
+  --stmt: #059669;
+}
+.dark .wiki-article .wiki-stmt-def {
+  --stmt: #60a5fa;
+}
+.dark .wiki-article .wiki-stmt-thm {
+  --stmt: #a78bfa;
+}
+.dark .wiki-article .wiki-stmt-ex {
+  --stmt: #34d399;
+}
+.wiki-article .wiki-stmt-label {
+  color: var(--stmt);
+}
+.wiki-article :is(.wiki-stmt-inline, .wiki-eq) {
+  scroll-margin-top: 5rem;
+}
+.wiki-article :is(.wiki-stmt, .wiki-stmt-inline, .wiki-eq, h2, h3, h4, dfn):target {
+  animation: wiki-target 1.6s ease-out;
+}
+@keyframes wiki-target {
+  from {
+    background-color: color-mix(in srgb, #f59e0b 30%, transparent);
+  }
+}
+
+/* References, concepts and definitions: see scripts/wiki/linking.ts. */
+.wiki-article a.wiki-ref,
+.wiki-article .concept-ref {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--muted-foreground);
+  text-underline-offset: 3px;
+  font-weight: inherit;
+}
+.wiki-article a.wiki-ref:hover,
+.wiki-article a.concept-ref:hover {
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+}
+.wiki-article span.concept-ref {
+  cursor: help;
+}
+.wiki-article dfn.wiki-dfn {
+  font-style: normal;
+  font-weight: 600;
+  scroll-margin-top: 5rem;
+}
+.wiki-preview {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.wiki-preview :is(.wiki-stmt) {
+  margin: 0;
+}
+
 /* ------------------------------------------------------------------ syntax highlighting (hljs, GitHub palette) */
 .hljs-comment,
 .hljs-quote {

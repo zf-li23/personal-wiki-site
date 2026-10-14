@@ -57,6 +57,10 @@ export interface PagePayload {
   headings: TocHeading[];
   /** Plain-text excerpt for <meta name="description">. */
   description: string;
+  /** Pages that link here (references, concept links, explicit links), in reading order. */
+  backlinks: string[];
+  /** Concept ids mentioned or defined on this page. */
+  concepts: string[];
   /** Present only in dev builds: problems found while building this page. */
   diagnostics?: Diagnostic[];
 }
@@ -70,4 +74,16 @@ export interface SearchEntry {
   headings: string[];
   /** Plain body text without code and math. */
   text: string;
+}
+
+/** One entry of `<base>/data/concepts.json` (concept registry joined with where it is defined and used). */
+export interface ConceptEntry {
+  /** Kebab-case English name, e.g. "central-limit-theorem". */
+  id: string;
+  zh: string;
+  en: string;
+  /** Definition site; absent while no page defines the concept. */
+  site?: { pageId: string; anchor: string };
+  /** Pages (source language) that mention or define it, in reading order. */
+  usedIn: string[];
 }

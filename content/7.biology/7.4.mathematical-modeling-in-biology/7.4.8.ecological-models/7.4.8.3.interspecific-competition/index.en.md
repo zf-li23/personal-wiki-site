@@ -1,3 +1,0 @@
----
-title: Interspecific Competition Models
----

@@ -1,3 +1,0 @@
----
-title: Metabolic Network Dynamics
----

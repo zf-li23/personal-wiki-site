@@ -1,3 +1,0 @@
----
-title: Multiscale Model Integration
----

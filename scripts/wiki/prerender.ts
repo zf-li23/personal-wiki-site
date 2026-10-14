@@ -12,7 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { BASE_PATH, LANGUAGES, type Lang, siteConfig } from '../../site.config.ts';
-import { homePath, pagePath } from '../../src/shared/page-id.ts';
+import { conceptsPath, homePath, pagePath } from '../../src/shared/page-id.ts';
 import { ARTICLE_CLASS } from '../../src/shared/article.ts';
 import type { PagePayload } from '../../src/shared/types.ts';
 import type { BuildResult } from './build.ts';
@@ -85,6 +85,21 @@ export function prerender(outDir: string, result: BuildResult): number {
       .join('');
     write(homePath(lang), withBody(renderHead(template, head), `<main class="prerender-main"><h1>${esc(head.title)}</h1><ul>${nav}</ul></main>`));
     urls.push(absolute(homePath(lang)));
+
+    // Concept index: a real page for crawlers; the client renders the interactive list.
+    const conceptAlternates = Object.fromEntries(LANGUAGES.map((l) => [l, conceptsPath(l)])) as Record<Lang, string>;
+    const conceptTitle = lang === 'zh' ? '概念索引' : 'Concept index';
+    const items = result.concepts
+      .map((c) => `<li>${esc(lang === 'zh' ? `${c.zh}（${c.en}）` : `${c.en} (${c.zh})`)}${c.site ? ` — <a href="${BASE_PATH}${lang}/${c.site.pageId}/#${c.site.anchor}">${c.site.pageId}</a>` : ''}</li>`)
+      .join('');
+    write(
+      conceptsPath(lang),
+      withBody(
+        renderHead(template, { lang, title: `${conceptTitle} · ${siteConfig.title[lang]}`, description: siteConfig.description[lang], alternates: conceptAlternates }),
+        `<main class="prerender-main"><h1>${esc(conceptTitle)}</h1><ul>${items}</ul></main>`,
+      ),
+    );
+    urls.push(absolute(conceptsPath(lang)));
   }
 
   for (const payload of result.payloads.values()) {

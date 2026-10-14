@@ -2,27 +2,27 @@
 title: 统计学基础
 ---
 
-## 2.1 抽样分布 (Sampling Distribution)
+## 2.1. 抽样分布 (Sampling Distribution)
 
-### 2.1.1 基本概念
+### 2.1.1. 基本概念
 - **统计量**是样本的函数，因此是随机变量。
 - **抽样分布**：统计量的概率分布。
 - **精确抽样分布**：总体分布已知时统计量的分布，通常复杂难求。
 - **极限分布**：当样本量 $n \to \infty$ 时统计量的极限分布，常用于大样本近似。
 
-### 2.1.2 正态分布下的抽样分布
+### 2.1.2. 正态分布下的抽样分布
 
-**定理1.** 设 $X_1, \ldots, X_n$ 独立，$X_k \sim N(a_k, \sigma_k^2)$，$c_1, \ldots, c_n$ 为常数，则
+**定理 2.1.1** 设 $X_1, \ldots, X_n$ 独立，$X_k \sim N(a_k, \sigma_k^2)$，$c_1, \ldots, c_n$ 为常数，则
 $$
 T = \sum_{k=1}^n c_k X_k \sim N\left( \sum_{k=1}^n c_k a_k, \sum_{k=1}^n c_k^2 \sigma_k^2 \right) = N\left( a_k \sum_{k=1}^n c_k, \sigma_k^2 \sum_{k=1}^n c_k^2 \right) = N(\mu, \tau^2)
 $$
 
-**推论.** 若 $X_1, \ldots, X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，则
+**推论** 若 $X_1, \ldots, X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，则
 $$
 \bar{X} \sim N\left(a, \frac{\sigma^2}{n}\right)
 $$
 
-**定理 2. （正态向量的线性变换）**  
+**定理 2.1.2（正态向量的线性变换）**  
 设 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，记 $\mathbf{X} = (X_1,\dots,X_n)^T$。  
 设 $A = (a_{ij})$ 为 $n \times n$ 常数矩阵，$Y = A\mathbf{X}$，即  
 $$
@@ -51,16 +51,16 @@ $$
    Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(0,\sigma^2).
    $$
 
-**定理3. (样本均值与样本方差)** 设 $$，则：
+**定理 2.1.3（样本均值与样本方差）** 设 $$，则：
 
 1. $\bar{X} \sim N(a, \sigma^2/n)$
 2. $\dfrac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2$
 3. $\bar{X}$ 与 $S^2$ 独立
 
-### 2.1.3 三大抽样分布
+### 2.1.3. 三大抽样分布
 
-#### 1. 卡方分布（$\chi^2$ Distribution）
-**定义3.** 若 $X_1, \ldots, X_r \stackrel{\text{i.i.d.}}{\sim} N(0,1)$，则
+#### 2.1.3.1. 卡方分布（$\chi^2$ Distribution）
+**定义 2.1.1** 若 $X_1, \ldots, X_r \stackrel{\text{i.i.d.}}{\sim} N(0,1)$，则
 $$
 \xi = \sum_{i=1}^r X_i^2 \sim \chi_r^2
 $$
@@ -73,8 +73,8 @@ $$
 - $E(\xi) = r$, $\text{Var}(\xi) = 2r$
 - 可加性：若 $\xi_i \sim \chi^2_{r_i}$ 独立，则 $\sum_{i=1}^k \xi_i \sim \chi^2_{r_1 + \cdots + r_k}$
 
-#### 2. $t$ 分布（Student’s t Distribution）
-**定义4.** 若 $X \sim N(0,1)$, $Y \sim \chi_r^2$ 独立，则
+#### 2.1.3.2. $t$ 分布（Student’s t Distribution）
+**定义 2.1.2** 若 $X \sim N(0,1)$, $Y \sim \chi_r^2$ 独立，则
 $$
 T = \frac{X}{\sqrt{Y/r}} \sim t_r
 $$
@@ -88,8 +88,8 @@ $$
 - 特例：$t_1$ 是 Cauchy 分布，密度为 $f_1(t) = \frac{1}{\pi(1+t^2)}$
 - $r \to \infty$ 时 $t_r$ 收敛于 $N(0,1)$
 
-#### 3. $F$ 分布（F Distribution）
-**定义5.** 若 $X \sim \chi_{r_1}^2$, $Y \sim \chi_{r_2}^2$ 独立，则
+#### 2.1.3.3. $F$ 分布（F Distribution）
+**定义 2.1.3** 若 $X \sim \chi_{r_1}^2$, $Y \sim \chi_{r_2}^2$ 独立，则
 $$
 F = \frac{X/r_1}{Y/r_2} \sim F_{r_1, r_2}
 $$
@@ -107,16 +107,16 @@ $$
   $$
 - 分位数关系：$F_{r_1,r_2}(1 - \alpha) = 1 / F_{r_2,r_1}(\alpha)$
 
-#### 4. 推论（Useful Corollaries）
-- **推论1**（标准化平方和）：若 $X_i \sim N(a_i,\sigma_i^2)$ 独立，则
+#### 2.1.3.4. 推论（Useful Corollaries）
+- **推论 2.1.1（标准化平方和）**：若 $X_i \sim N(a_i,\sigma_i^2)$ 独立，则
   $$
   \sum_{i=1}^n \left( \frac{X_i-a_i}{\sigma_i} \right)^2 \sim \chi_n^2
   $$
-- **推论2**（单样本 t 统计量）：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a,\sigma^2)$，则
+- **推论 2.1.2（单样本 t 统计量）**：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a,\sigma^2)$，则
   $$
   T = \frac{\sqrt{n}(\bar{X}-a)}{S} \sim t_{n-1}
   $$
-- **推论3**（两独立样本 t 统计量，方差相等）：若
+- **推论 2.1.3（两独立样本 t 统计量，方差相等）**：若
   $$
   X_1,\dots,X_m \stackrel{\text{i.i.d.}}{\sim} N(a_1,\sigma^2),\quad
   Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(a_2,\sigma^2)
@@ -126,16 +126,16 @@ $$
   T = \frac{(\bar{X}-\bar{Y})-(a_1-a_2)}{S_w} \sqrt{\frac{mn}{m+n}} \sim t_{m+n-2}
   $$
   其中 $S_w^2 = \frac{(m-1)S_X^2 + (n-1)S_Y^2}{m+n-2}$。
-- **推论4**（方差比 F 统计量）：在上述两样本情形（独立，正态），若 $\sigma_1^2,\sigma_2^2$ 为真方差，则
+- **推论 2.1.4（方差比 F 统计量）**：在上述两样本情形（独立，正态），若 $\sigma_1^2,\sigma_2^2$ 为真方差，则
   $$
   F = \frac{S_X^2}{S_Y^2} \cdot \frac{\sigma_2^2}{\sigma_1^2} \sim F_{m-1,n-1}
   $$
-- **推论5**（指数分布与卡方分布）：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\lambda)$，则
+- **推论 2.1.5（指数分布与卡方分布）**：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\lambda)$，则
   $$
   2\lambda n\bar{X} = 2\lambda \sum_{i=1}^n X_i \sim \chi_{2n}^2
   $$
 
-### 2.1.4 极限分布与Slutsky定理
+### 2.1.4. 极限分布与Slutsky定理
 - **极限分布**：当 $n \to \infty$ 时统计量的极限分布。
 - **Slutsky定理**：若 $X_n \xrightarrow{d} X$，$Y_n \xrightarrow{p} c$（常数），则：
   - $X_n + Y_n \xrightarrow{d} X + c$
@@ -154,11 +154,11 @@ $$
 
 ---
 
-## 2.2 指数族 (Exponential Family)
+## 2.2. 指数族 (Exponential Family)
 
-### 2.2.1 定义
+### 2.2.1. 定义
 
-**定义7.** 若分布族 $\mathcal{F} = \{f(x, \theta) : \theta \in \Theta\}$ 的密度函数可写为：
+**定义 2.2.1** 若分布族 $\mathcal{F} = \{f(x, \theta) : \theta \in \Theta\}$ 的密度函数可写为：
 $$
 f(x, \theta) = C(\theta) \exp\left\{ \sum_{i=1}^k Q_i(\theta) T_i(x) \right\} h(x)
 $$
@@ -175,7 +175,7 @@ $$
 
 ---
 
-### 2.2.2 示例
+### 2.2.2. 示例
 
 1. **正态分布** $N(\mu, \sigma^2)$ 的样本 $X_1,\dots,X_n$
    $$
@@ -231,7 +231,7 @@ $$
 
 ---
 
-### 2.2.3 非指数族示例
+### 2.2.3. 非指数族示例
 
 1. **均匀分布** $U[0,\theta]$  
    $$
@@ -249,9 +249,9 @@ $$
 
 ---
 
-### 2.2.4 自然形式 (Canonical Form)
+### 2.2.4. 自然形式 (Canonical Form)
 
-**定义8.** 通过参数变换 $\varphi_i = Q_i(\theta)$，可将指数族化为**自然形式**：
+**定义 2.2.2** 通过参数变换 $\varphi_i = Q_i(\theta)$，可将指数族化为**自然形式**：
 $$
 f(x, \varphi) = C^*(\varphi) \exp\left\{ \sum_{i=1}^k \varphi_i T_i(x) \right\} h(x),
 $$
@@ -278,7 +278,7 @@ $$
 
 ---
 
-### 2.2.5 指数族的性质
+### 2.2.5. 指数族的性质
 
 1. **支撑集与参数无关**  
    所有分布的支撑集相同：$\{x: h(x)>0\}$，不依赖于 $\theta$。
@@ -311,13 +311,13 @@ $$
 
 ---
 
-## 2.3 充分统计量与完全统计量 (Sufficient and Complete Statistics)
+## 2.3. 充分统计量与完全统计量 (Sufficient and Complete Statistics)
 
-### 2.3.1 充分统计量 (Sufficient Statistic)
+### 2.3.1. 充分统计量 (Sufficient Statistic)
 
 设 $\boldsymbol{X} = (X_1, \dots, X_n)$ 是来自分布族 $\{f(x; \theta): \theta \in \Theta\}$ 的随机样本，$T = T(\boldsymbol{X})$ 是一个统计量。
 
-**定义 8 (充分统计量).** 如果在给定 $T=t$ 的条件下，样本 $\boldsymbol{X}$ 的条件分布与参数 $\theta$ 无关，即：
+**定义 2.3.1（充分统计量）** 如果在给定 $T=t$ 的条件下，样本 $\boldsymbol{X}$ 的条件分布与参数 $\theta$ 无关，即：
 $$
 f_{\boldsymbol{X} \mid T}(\boldsymbol{x} \mid t; \theta) = f_{\boldsymbol{X} \mid T}(\boldsymbol{x} \mid t), \quad \forall \theta \in \Theta,
 $$
@@ -325,15 +325,15 @@ $$
 
 ---
 
-### 2.3.2 因子分解定理 (Factorization Theorem)
+### 2.3.2. 因子分解定理 (Factorization Theorem)
 
-**定理 6 (因子分解定理).** $T(\boldsymbol{X})$ 是充分统计量当且仅当存在非负函数 $g$ 和 $h$，使得样本的联合密度（或概率）函数可分解为：
+**定理 2.3.1（因子分解定理）** $T(\boldsymbol{X})$ 是充分统计量当且仅当存在非负函数 $g$ 和 $h$，使得样本的联合密度（或概率）函数可分解为：
 $$
 f(\boldsymbol{x}; \theta) = g(T(\boldsymbol{x}); \theta) \cdot h(\boldsymbol{x}), \quad \forall \boldsymbol{x} \in \mathcal{X}, \ \theta \in \Theta,
 $$
 其中 $h(\boldsymbol{x})$ 与 $\theta$ 无关，$g$ 只通过 $T(\boldsymbol{x})$ 依赖于 $\boldsymbol{x}$。
 
-#### 例子
+#### 2.3.2.1. 例子
 1. **伯努利分布**  
    设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} B(1, \theta)$，则联合概率为：
    $$
@@ -357,17 +357,17 @@ $$
 
 ---
 
-### 2.3.3 极小充分统计量 (Minimal Sufficient Statistic)
+### 2.3.3. 极小充分统计量 (Minimal Sufficient Statistic)
 
 - 充分统计量**不唯一**。例如，在正态样本 $N(\theta, 1)$ 中，$T_1(\boldsymbol{X}) = \bar{X}$ 和 $T_2(\boldsymbol{X}) = (\sum_{i=1}^{m} X_i, \sum_{i=m+1}^n X_i)$ ($1 < m < n$) 都是充分统计量，但前者更简单。
 
-**定义 9 (极小充分统计量).** 如果一个充分统计量 $T(\boldsymbol{X})$ 可以表示为任何其他充分统计量的函数，则称 $T(\boldsymbol{X})$ 为**极小充分统计量**。
+**定义 2.3.2（极小充分统计量）** 如果一个充分统计量 $T(\boldsymbol{X})$ 可以表示为任何其他充分统计量的函数，则称 $T(\boldsymbol{X})$ 为**极小充分统计量**。
 
 ---
 
-### 2.3.4 完全统计量 (Complete Statistic)
+### 2.3.4. 完全统计量 (Complete Statistic)
 
-**定义 10 (完全统计量).** 设 $T = T(\boldsymbol{X})$ 是一个统计量。如果对于任意可测函数 $\varphi$，满足：
+**定义 2.3.3（完全统计量）** 设 $T = T(\boldsymbol{X})$ 是一个统计量。如果对于任意可测函数 $\varphi$，满足：
 $$
 E_\theta[\varphi(T)] = 0, \quad \forall \theta \in \Theta
 $$
@@ -379,24 +379,24 @@ $$
 
 **注记**：若 $T$ 的密度为 $g(t; \theta)$，则完全性等价于：从 $\int \varphi(t) g(t; \theta) dt = 0 \ (\forall \theta)$ 可推出 $\varphi(t) = 0$ 几乎处处成立。这意味着密度函数族 $\{g(t; \theta): \theta \in \Theta\}$ 在 $L^1$ 意义下是完备的。
 
-#### 例子
+#### 2.3.4.1. 例子
 1. **伯努利分布**：$T = \sum X_i \sim B(n, \theta)$ 是完全统计量。
 2. **正态分布 $N(\theta, 1)$**：$T = \bar{X}$ 是完全统计量。
 3. **均匀分布 $U(0, \theta)$**：$T = X_{(n)}$ 是完全统计量。
 
 ---
 
-### 2.3.5 有界完全统计量 (Bounded Complete Statistic)
+### 2.3.5. 有界完全统计量 (Bounded Complete Statistic)
 
-**定义 11 (有界完全统计量).** 若定义 10 中的 $\varphi$ 仅限定为**有界函数**时结论成立，则称 $T(\boldsymbol{X})$ 是**有界完全统计量**。
+**定义 2.3.4（有界完全统计量）** 若定义 2.3.3 中的 $\varphi$ 仅限定为**有界函数**时结论成立，则称 $T(\boldsymbol{X})$ 是**有界完全统计量**。
 
 完全性蕴含了有界完全性，反之不一定成立。
 
 ---
 
-### 2.3.6 指数族中的完全性定理
+### 2.3.6. 指数族中的完全性定理
 
-**定理 7 (指数族的完全性).** 设 $\boldsymbol{X}$ 来自指数族，其联合密度为：
+**定理 2.3.2（指数族的完全性）** 设 $\boldsymbol{X}$ 来自指数族，其联合密度为：
 $$
 f(\boldsymbol{x}; \boldsymbol{\theta}) = C(\boldsymbol{\theta}) \exp\left\{ \sum_{i=1}^k \theta_i T_i(\boldsymbol{x}) \right\} h(\boldsymbol{x}), \quad \boldsymbol{\theta} = (\theta_1, \dots, \theta_k) \in \Theta^*,
 $$
@@ -404,11 +404,11 @@ $$
 
 ---
 
-### 2.3.7 Basu 定理 (Basu's Theorem)
+### 2.3.7. Basu 定理 (Basu's Theorem)
 
-**定理 8 (Basu).** 若 $T(\boldsymbol{X})$ 是有界完全的充分统计量，而另一个统计量 $V(\boldsymbol{X})$ 的分布与 $\theta$ 无关，则 $T(\boldsymbol{X})$ 和 $V(\boldsymbol{X})$ 相互独立。
+**定理 2.3.3（Basu）** 若 $T(\boldsymbol{X})$ 是有界完全的充分统计量，而另一个统计量 $V(\boldsymbol{X})$ 的分布与 $\theta$ 无关，则 $T(\boldsymbol{X})$ 和 $V(\boldsymbol{X})$ 相互独立。
 
-#### 例子：正态分布中的独立性
+#### 2.3.7.1. 例子：正态分布中的独立性
 设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} N(\theta, 1)$，则：
 - $T(\boldsymbol{X}) = \bar{X}$ 是有界完全的充分统计量。
 - $V(\boldsymbol{X}) = X_{(n)} - X_{(1)}$（样本极差）的分布与 $\theta$ 无关（因为 $Y_i = X_i - \theta \sim N(0,1)$，其极差不依赖于 $\theta$）。

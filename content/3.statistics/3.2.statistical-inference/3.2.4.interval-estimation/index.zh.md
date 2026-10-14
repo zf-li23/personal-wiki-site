@@ -2,9 +2,9 @@
 title: 区间估计与置信区间
 ---
 
-## 4.1 基本概念 (Basic Concepts)
+## 4.1. 基本概念 (Basic Concepts)
 
-### 4.1.1 区间估计与置信区间 (Interval Estimation and Confidence Interval)
+### 4.1.1. 区间估计与置信区间 (Interval Estimation and Confidence Interval)
 - **区间估计 (Interval Estimation)**：用样本构造的随机区间 $[\hat{g}_1(\mathbf{X}), \hat{g}_2(\mathbf{X})]$ 来估计参数 $g(\theta)$，并考察该区间包含真实参数的概率。
 - **置信区间 (Confidence Interval, CI)**：对于给定的 $0 < \alpha < 1$，若统计量 $\hat{\theta}_1(\mathbf{X}), \hat{\theta}_2(\mathbf{X})$ 满足：
   $$
@@ -17,28 +17,28 @@ title: 区间估计与置信区间
   $$
 - **精度 (Precision)**：常用置信区间的平均长度衡量：$E_\theta(\hat{\theta}_2 - \hat{\theta}_1)$。
 
-### 4.1.2 置信限 (Confidence Limits)
+### 4.1.2. 置信限 (Confidence Limits)
 - **上置信限 (Upper Confidence Limit)** $\hat{\theta}_U(\mathbf{X})$：满足 $P_\theta(\theta \leq \hat{\theta}_U) \geq 1 - \alpha$。
 - **下置信限 (Lower Confidence Limit)** $\hat{\theta}_L(\mathbf{X})$：满足 $P_\theta(\hat{\theta}_L \leq \theta) \geq 1 - \alpha$。
 - 若 $\hat{\theta}_L, \hat{\theta}_U$ 分别为置信水平 $1-\alpha_1$ 和 $1-\alpha_2$ 的置信限，则 $[\hat{\theta}_L, \hat{\theta}_U]$ 是置信水平 $1-(\alpha_1 + \alpha_2)$ 的置信区间。
 
-### 4.1.3 置信区域 (Confidence Region)
+### 4.1.3. 置信区域 (Confidence Region)
 - 对于多维参数 $\boldsymbol{\theta} = (\theta_1, \dots, \theta_k)$，定义随机区域 $S(\mathbf{X}) \subseteq \Theta$，若满足：
   $$
   P_\theta(\boldsymbol{\theta} \in S(\mathbf{X})) \geq 1 - \alpha, \quad \forall \boldsymbol{\theta} \in \Theta
   $$
   则 $S(\mathbf{X})$ 称为 $\boldsymbol{\theta}$ 的置信水平 $1 - \alpha$ 的置信区域。
 
-### 4.1.4 可靠性与精度的权衡 (Trade-off between Reliability and Precision)
+### 4.1.4. 可靠性与精度的权衡 (Trade-off between Reliability and Precision)
 - **可靠性 (Reliability)**：置信水平 $1 - \alpha$。
 - **精度 (Precision)**：置信区间的平均长度。
 - 二者通常不能同时优化，需要在给定置信水平下寻求最短的置信区间（**Neyman 原则**）。
 
 ---
 
-## 4.2 枢轴变量法 (Pivot Variable Method)
+## 4.2. 枢轴变量法 (Pivot Variable Method)
 
-### 4.2.1 枢轴变量的定义与构造步骤
+### 4.2.1. 枢轴变量的定义与构造步骤
 - **枢轴变量 (Pivot Variable)**：一个关于样本和参数的函数 $T(\mathbf{X}; \theta)$，满足：
   1. 表达式依赖于未知参数 $\theta$；
   2. 其分布完全已知，且与 $\theta$ 无关。
@@ -48,7 +48,7 @@ title: 区间估计与置信区间
   3. 将不等式 $a \leq T \leq b$ 改写为 $\hat{\theta}_1(\mathbf{X}) \leq \theta \leq \hat{\theta}_2(\mathbf{X})$；
   4. 得到置信区间 $[\hat{\theta}_1, \hat{\theta}_2]$。
 
-### 4.2.2 单正态总体均值的置信区间
+### 4.2.2. 单正态总体均值的置信区间
 - **方差已知**：$\sigma^2$ 已知，$\mu$ 未知。
   枢轴变量：
   $$
@@ -69,7 +69,7 @@ title: 区间估计与置信区间
   \left[ \bar{X} - \frac{S}{\sqrt{n}} t_{n-1,\alpha/2},\; \bar{X} + \frac{S}{\sqrt{n}} t_{n-1,\alpha/2} \right]
   $$
 
-### 4.2.3 单正态总体方差的置信区间
+### 4.2.3. 单正态总体方差的置信区间
 - **均值已知**：$\mu$ 已知，$\sigma^2$ 未知。
   令 $S_\mu^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \mu)^2$，
   枢轴变量：
@@ -91,7 +91,7 @@ title: 区间估计与置信区间
   \left[ \frac{(n-1)S^2}{\chi_{n-1;\alpha/2}^2},\; \frac{(n-1)S^2}{\chi_{n-1;1-\alpha/2}^2} \right]
   $$
 
-### 4.2.4 两正态总体均值差的置信区间（方差相等）
+### 4.2.4. 两正态总体均值差的置信区间（方差相等）
 - 假设 $X_1,\dots,X_m \stackrel{\text{i.i.d.}}{\sim} N(\mu_1,\sigma^2)$，$Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(\mu_2,\sigma^2)$，且相互独立。
 - 定义合并样本方差：
   $$
@@ -106,7 +106,7 @@ title: 区间估计与置信区间
   (\bar{X} - \bar{Y}) \pm t_{m+n-2,\alpha/2} \cdot S_w \sqrt{\frac{1}{m} + \frac{1}{n}}
   $$
 
-### 4.2.5 两正态总体方差比的置信区间
+### 4.2.5. 两正态总体方差比的置信区间
 - 假设 $X_1,\dots,X_m \stackrel{\text{i.i.d.}}{\sim} N(\mu_1,\sigma_1^2)$，$Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(\mu_2,\sigma_2^2)$，且相互独立。
 - 枢轴变量：
   $$
@@ -117,7 +117,7 @@ title: 区间估计与置信区间
   \left[ \frac{S_X^2}{S_Y^2} F_{n-1,m-1;1-\alpha/2},\; \frac{S_X^2}{S_Y^2} F_{n-1,m-1;\alpha/2} \right]
   $$
 
-### 4.2.6 均匀分布参数的置信区间
+### 4.2.6. 均匀分布参数的置信区间
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} U(0,\theta)$。
 - 充分统计量：$X_{(n)} = \max\{X_1,\dots,X_n\}$。
 - 令 $Y = X_{(n)} / \theta$，其密度为 $f_Y(y) = n y^{n-1},\; 0 \leq y \leq 1$。
@@ -127,7 +127,7 @@ title: 区间估计与置信区间
   $$
 - 最短区间取 $b=1,\; a=\alpha^{1/n}$，即 $[X_{(n)},\; X_{(n)}/\alpha^{1/n}]$。
 
-### 4.2.7 指数分布参数的置信区间
+### 4.2.7. 指数分布参数的置信区间
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\lambda)$。
 - 枢轴变量：
   $$
@@ -140,9 +140,9 @@ title: 区间估计与置信区间
 
 ---
 
-## 4.3 近似置信区间 (Approximate Confidence Intervals)
+## 4.3. 近似置信区间 (Approximate Confidence Intervals)
 
-### 4.3.1 适用场景与基本思想
+### 4.3.1. 适用场景与基本思想
 - **适用场景**：精确分布复杂或未知，但样本量 $n$ 较大。
 - **基本思想**：利用中心极限定理 (CLT) 和 Slutsky 定理，构造渐近分布不依赖于参数的统计量，从而得到近似置信区间。
 - **渐近有效置信区间 (Asymptotically Valid CI)**：满足
@@ -150,7 +150,7 @@ title: 区间估计与置信区间
   \lim_{n\to\infty} P_\theta\left( \hat{\theta}_1(\mathbf{X}_n) \leq \theta \leq \hat{\theta}_2(\mathbf{X}_n) \right) \geq 1 - \alpha
   $$
 
-### 4.3.2 伯努利分布参数的近似置信区间
+### 4.3.2. 伯努利分布参数的近似置信区间
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} B(1,\theta)$。
 - 由 CLT：
   $$
@@ -165,7 +165,7 @@ title: 区间估计与置信区间
   \bar{X}_n \pm z_{\alpha/2} \sqrt{\frac{\bar{X}_n(1-\bar{X}_n)}{n}}
   $$
 
-### 4.3.3 泊松分布参数的近似置信区间
+### 4.3.3. 泊松分布参数的近似置信区间
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} P(\theta)$。
 - 近似枢轴变量：
   $$
@@ -176,7 +176,7 @@ title: 区间估计与置信区间
   \bar{X}_n \pm z_{\alpha/2} \sqrt{\frac{\bar{X}_n}{n}}
   $$
 
-### 4.3.4 指数分布参数的近似置信区间
+### 4.3.4. 指数分布参数的近似置信区间
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\theta)$，其中 $E X_1 = \theta$。
 - 近似枢轴变量：
   $$
@@ -187,7 +187,7 @@ title: 区间估计与置信区间
   \bar{X}_n \pm z_{\alpha/2} \frac{\bar{X}_n}{\sqrt{n}}
   $$
 
-### 4.3.5 两总体均值差的近似置信区间（方差不等）
+### 4.3.5. 两总体均值差的近似置信区间（方差不等）
 - **Behrens-Fisher 问题**：$\sigma_1^2 \neq \sigma_2^2$ 且未知，$m,n$ 不一定大。
 - 当 $m,n$ 较大时，由 CLT：
   $$
@@ -208,9 +208,9 @@ title: 区间估计与置信区间
 
 ---
 
-## 4.4 置信区域 (Confidence Regions)
+## 4.4. 置信区域 (Confidence Regions)
 
-### 4.4.1 正态分布均值和方差的联合置信区域
+### 4.4.1. 正态分布均值和方差的联合置信区域
 - $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(\mu,\sigma^2)$。
 - 选取 $c$ 使得 $P(-c \leq Z \leq c) = \sqrt{1-\alpha},\; Z \sim N(0,1)$。
 - 选取 $a,b$ 使得 $P(a \leq X \leq b) = \sqrt{1-\alpha},\; X \sim \chi_{n-1}^2$。
@@ -220,7 +220,7 @@ title: 区间估计与置信区间
   $$
   在 $(\mu,\sigma^2)$ 平面上为一抛物线围成的区域。
 
-### 4.4.2 多个均值参数的联合置信区域
+### 4.4.2. 多个均值参数的联合置信区域
 - **问题**：构造 $k$ 个均值参数 $\mu_1,\dots,\mu_k$ 的联合置信区域。
 - **Bonferroni 校正法**：对每个 $\mu_i$ 分别构造置信水平 $1 - \alpha/k$ 的置信区间，这些区间的笛卡尔积构成联合置信区域。
   - 对于正态样本，$\mu_i$ 的置信区间为：

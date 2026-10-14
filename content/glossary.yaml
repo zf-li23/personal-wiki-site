@@ -1,15 +1,12 @@
-# Key terms shared by both languages.
+# Concept registry (词条库). See CONTENT_GUIDE.md §6.
 #
-# Rule for Chinese pages: the FIRST time a term appears in the body text of a page
-# (not in headings, code or math), write its English name right after it in
-# full-width parentheses:   中心极限定理（Central Limit Theorem）
-# Later occurrences on the same page need no annotation.
-#
-# English pages and translations use the `en` wording below.
-# Check with:  pnpm wiki terms [<page-id>...]
-#
-# Add a term when it is a named concept a reader may want to look up in English
-# literature. Keep `en` in its usual English spelling and capitalisation.
+# Each entry names a concept shared across courses: { zh, en, aliases?, exclude? }.
+# Where a concept is DEFINED is found in the content, not here:
+#   - a 定义 label whose name is the concept:   **定义 13.1.1（依分布收敛）**
+#   - or one English annotation at the definition:   中心极限定理（Central Limit Theorem）
+# Every other page links its first mention to that definition.
+# `exclude` lists longer words that contain the name but do not mean it (分岔图 vs 分岔).
+# Report: pnpm wiki terms
 terms:
   # discrete mathematics
   - { zh: 命题逻辑, en: propositional logic }
@@ -50,7 +47,7 @@ terms:
   - { zh: 假设检验, en: hypothesis testing }
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
-  - { zh: 分岔, en: bifurcation }
+  - { zh: 分岔, en: bifurcation, exclude: [分岔图] }
   - { zh: 李雅普诺夫指数, en: Lyapunov exponent }
   - { zh: 极限环, en: limit cycle }
   - { zh: 反应扩散方程, en: reaction-diffusion equation }

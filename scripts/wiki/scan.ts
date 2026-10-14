@@ -78,6 +78,10 @@ function scanPage(dir: string, parentId: string | null, pages: Map<string, PageS
     diag.error(dir, `page id "${id}" does not match its location: expected ${expected}`);
     return null;
   }
+  if (id.split('.').length > 3) {
+    diag.error(dir, `page ${id} is too deep: the wiki has three levels (discipline.course.chapter); merge it into its chapter page`);
+    return null;
+  }
   if (pages.has(id)) {
     diag.error(dir, `duplicate page id "${id}" (also used by ${pages.get(id)!.dir})`);
     return null;

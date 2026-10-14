@@ -1,3 +1,0 @@
----
-title: Predator-Prey Models
----

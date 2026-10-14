@@ -3,6 +3,7 @@ import { siteConfig } from '../../site.config.ts';
 import { Link } from 'react-router';
 import { readingOrder, site } from '../content/site.ts';
 import { useLang, useStrings } from '../i18n.ts';
+import { cn } from '../lib/cn.ts';
 import { pagePath } from '../shared/page-id.ts';
 
 export function HomePage() {
@@ -24,8 +25,12 @@ export function HomePage() {
       </section>
 
       <section className="mt-12 grid gap-5 md:grid-cols-2">
-        {site.nav.map((root) => (
-          <article key={root.id} className="rounded-xl border border-border bg-card p-5">
+        {site.nav.map((root, i) => (
+          <article
+            key={root.id}
+            // An odd last card spans the full row instead of leaving a hole in the two-column grid.
+            className={cn('rounded-xl border border-border bg-card p-5', i === site.nav.length - 1 && i % 2 === 0 && 'md:col-span-2')}
+          >
             <Link to={pagePath(lang, root.id)} className="group block">
               <span className="font-mono text-xs text-muted-foreground">{root.id}</span>
               <h2 className="text-xl font-semibold tracking-tight group-hover:underline">{root.title[lang]}</h2>

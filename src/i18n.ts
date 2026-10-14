@@ -37,6 +37,15 @@ const zh = {
   pagesWritten: (done: number, total: number, _translated: number) => `已撰写 ${done} / ${total} 页`,
   subsections: (n: number) => `${n} 个子章节`,
   devDiagnostics: (n: number) => `构建发现 ${n} 个问题（仅开发模式可见）`,
+  concepts: '概念索引',
+  conceptsIntro: '全站的核心概念（词条）及其定义位置。在正文中第一次提到某个概念时，会链接到这里列出的定义处。',
+  conceptsFilter: '筛选概念…',
+  conceptUndefined: '这个概念尚未在任何页面中定义。',
+  definedIn: (where: string) => `定义于 ${where}`,
+  notDefinedYet: '尚未定义',
+  usedOnPages: (n: number) => `${n} 个页面提到`,
+  conceptsOnPage: '本页概念',
+  linkedFrom: '引用本页的页面',
 };
 
 const en: typeof zh = {
@@ -71,6 +80,15 @@ const en: typeof zh = {
   pagesWritten: (done: number, total: number, translated: number) => `${done} of ${total} pages written · ${translated} translated into English`,
   subsections: (n: number) => `${n} subsection${n === 1 ? '' : 's'}`,
   devDiagnostics: (n: number) => `The build found ${n} problem(s) (shown in dev mode only)`,
+  concepts: 'Concept index',
+  conceptsIntro: 'Core concepts across the wiki and where each is defined. The first mention of a concept on a page links to its definition.',
+  conceptsFilter: 'Filter concepts…',
+  conceptUndefined: 'This concept is not defined on any page yet.',
+  definedIn: (where: string) => `Defined in ${where}`,
+  notDefinedYet: 'not defined yet',
+  usedOnPages: (n: number) => `mentioned on ${n} page${n === 1 ? '' : 's'}`,
+  conceptsOnPage: 'Concepts on this page',
+  linkedFrom: 'Pages linking here',
 };
 
 export type Strings = typeof zh;
