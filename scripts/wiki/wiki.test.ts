@@ -9,6 +9,7 @@ import { describe, it } from 'node:test';
 import { BASE_PATH } from '../../site.config.ts';
 import { compareIds, isPageId, parentIdOf } from '../../src/shared/page-id.ts';
 import { search } from '../../src/shared/search.ts';
+import { sourceLines } from '../../src/shared/sources.ts';
 import { fixMarkdown } from './fix.ts';
 import { checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 import { sourceHash, translationStatus } from './build.ts';
@@ -272,6 +273,23 @@ describe('search', () => {
     assert.deepEqual(search(entries, '概率论 大数').map((h) => h.entry.id), ['3.1.12']);
     assert.deepEqual(search(entries, 'EIGEN').map((h) => h.entry.id), ['2.1']);
     assert.deepEqual(search(entries, '   '), []);
+  });
+});
+
+describe('knowledge sources', () => {
+  it('validates courses/textbooks and formats them identically everywhere', () => {
+    const fm = '---\ntitle: 概率论\ncourses:\n  - { code: "40160713", name: 初等概率论 }\n  - { code: "10420803", name: 概率论与数理统计, note: 概率论部分 }\ntextbooks:\n  - { title: 概率论基础, author: 李贤平, edition: 3 }\n---\n';
+    const parsed = parsePageFile(fm, 'zh');
+    assert.deepEqual(parsed.errors, []);
+    const { courses, textbooks } = parsed.value!.frontMatter;
+    assert.deepEqual(sourceLines(courses, textbooks, 'zh'), [
+      { label: '对应课程', value: '40160713 初等概率论；10420803 概率论与数理统计（概率论部分）' },
+      { label: '参考书', value: '《概率论基础》，李贤平，第 3 版' },
+    ]);
+    assert.equal(sourceLines(undefined, textbooks, 'en')[0].value, '概率论基础, 李贤平, 3rd ed.');
+    assert.equal(serializePageFile(parsed.value!.frontMatter, '').includes('note: 概率论部分'), true);
+    assert.match(parsePageFile('---\ntitle: x\ntextbooks:\n  - { title: A }\n---\n', 'zh').errors[0], /"author" is required/);
+    assert.match(parsePageFile('---\ntitle: x\ncourses: []\n---\n', 'en').errors[0], /unknown front matter key "courses"/);
   });
 });
 

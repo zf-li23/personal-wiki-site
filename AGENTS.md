@@ -1,7 +1,7 @@
 # Agent guide: personal-wiki-site
 
 A bilingual (zh source / en translation) static knowledge base deployed to GitHub Pages.
-**Writing content? Read [CONTENT_GUIDE.md](CONTENT_GUIDE.md) — it is the content spec.**
+**Writing content? Read [CONTENT_GUIDE.md](CONTENT_GUIDE.md) (format spec) and [AUTHORING.md](AUTHORING.md) (writer-agent workflow; dispatch writers as the `wiki-writer` agent).**
 This file is for changing the code.
 
 ## Commands

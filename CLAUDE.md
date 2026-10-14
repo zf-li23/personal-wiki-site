@@ -1,2 +1,3 @@
 @AGENTS.md
 @CONTENT_GUIDE.md
+@AUTHORING.md

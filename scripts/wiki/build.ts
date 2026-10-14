@@ -138,6 +138,8 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
       html: renderHtml(out),
       headings: out.headings,
       description: page.files[lang]?.frontMatter.description ?? truncate(out.excerpt, 160),
+      ...(page.files[SOURCE]?.frontMatter.courses ? { courses: page.files[SOURCE]!.frontMatter.courses } : {}),
+      ...(page.files[SOURCE]?.frontMatter.textbooks ? { textbooks: page.files[SOURCE]!.frontMatter.textbooks } : {}),
       backlinks: [...(backlinks.get(pageId) ?? [])].sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0)),
       concepts: [...links.get(key)!.concepts],
     });

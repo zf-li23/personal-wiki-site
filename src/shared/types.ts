@@ -44,6 +44,21 @@ export interface Diagnostic {
   message: string;
 }
 
+/** A course the knowledge on a page comes from (front matter `courses`). */
+export interface CourseRef {
+  code: string | number;
+  name: string;
+  /** e.g. "概率论部分" when the page covers only part of the course. */
+  note?: string;
+}
+
+/** A reference book (front matter `textbooks`). */
+export interface TextbookRef {
+  title: string;
+  author: string;
+  edition?: string | number;
+}
+
 /** Served at `<base>/data/pages/<lang>/<id>.json`. */
 export interface PagePayload {
   id: string;
@@ -57,6 +72,9 @@ export interface PagePayload {
   headings: TocHeading[];
   /** Plain-text excerpt for <meta name="description">. */
   description: string;
+  /** Knowledge sources from the source-language front matter (shown in every language). */
+  courses?: CourseRef[];
+  textbooks?: TextbookRef[];
   /** Pages that link here (references, concept links, explicit links), in reading order. */
   backlinks: string[];
   /** Concept ids mentioned or defined on this page. */

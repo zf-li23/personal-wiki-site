@@ -5,6 +5,7 @@ import { useConcepts } from '../content/concepts.ts';
 import { ancestorsOf, findNode, neighbours } from '../content/site.ts';
 import { useLang, useStrings } from '../i18n.ts';
 import { homePath, pagePath } from '../shared/page-id.ts';
+import { sourceLines } from '../shared/sources.ts';
 import type { Diagnostic, NavNode, PagePayload, TranslationStatus } from '../shared/types.ts';
 
 export function Breadcrumbs({ id }: { id: string }) {
@@ -171,5 +172,23 @@ export function PageConnections({ payload }: { payload: PagePayload }) {
         </div>
       )}
     </section>
+  );
+}
+
+/** Where the knowledge comes from: courses and reference books (front matter of the source page). */
+export function SourceNote({ payload }: { payload: PagePayload }) {
+  const lang = useLang();
+  const lines = sourceLines(payload.courses, payload.textbooks, lang);
+  if (!lines.length) return null;
+  return (
+    <div className="mt-4 space-y-0.5 text-sm text-muted-foreground">
+      {lines.map((l) => (
+        <p key={l.label}>
+          {l.label}
+          {lang === 'zh' ? '：' : ': '}
+          {l.value}
+        </p>
+      ))}
+    </div>
   );
 }

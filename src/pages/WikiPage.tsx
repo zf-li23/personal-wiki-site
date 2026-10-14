@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 import { useLocation, useParams } from 'react-router';
 import { type Lang } from '../../site.config.ts';
 import { Article } from '../components/Article.tsx';
-import { Breadcrumbs, ChildList, DevDiagnostics, PageConnections, PrevNext, StatusBanner } from '../components/PageParts.tsx';
+import { Breadcrumbs, ChildList, DevDiagnostics, PageConnections, PrevNext, SourceNote, StatusBanner } from '../components/PageParts.tsx';
 import { Sidebar } from '../components/Sidebar.tsx';
 import { Toc } from '../components/Toc.tsx';
 import { reloadPage, usePage } from '../content/pages.ts';
@@ -67,6 +67,7 @@ function PageContent({ lang, node }: { lang: Lang; node: NavNode }) {
             <span className="mr-3 font-mono text-xl text-muted-foreground sm:text-2xl">{node.id}</span>
             {node.title[lang]}
           </h1>
+          {payload && <SourceNote payload={payload} />}
           <div className="mt-8">
             {!entry && <p className="text-muted-foreground">{t.loading}</p>}
             {entry && 'error' in entry && (

@@ -14,6 +14,7 @@ import path from 'node:path';
 import { BASE_PATH, LANGUAGES, type Lang, siteConfig } from '../../site.config.ts';
 import { conceptsPath, homePath, pagePath } from '../../src/shared/page-id.ts';
 import { ARTICLE_CLASS } from '../../src/shared/article.ts';
+import { sourceLines } from '../../src/shared/sources.ts';
 import type { PagePayload } from '../../src/shared/types.ts';
 import type { BuildResult } from './build.ts';
 
@@ -63,6 +64,7 @@ function staticPage(payload: PagePayload): string {
   return [
     `<header class="prerender-header"><a href="${BASE_PATH}${payload.lang}/">${esc(site)}</a></header>`,
     `<main class="prerender-main"><h1>${esc(`${payload.id} ${payload.title}`)}</h1>`,
+    ...sourceLines(payload.courses, payload.textbooks, payload.lang).map((l) => `<p>${esc(l.label)}${payload.lang === 'zh' ? '：' : ': '}${esc(l.value)}</p>`),
     `<article id="wiki-prerendered" class="${ARTICLE_CLASS}" lang="${HTML_LANG[payload.contentLang]}">${html}</article></main>`,
     `<script type="application/json" id="wiki-initial">${initial}</script>`,
   ].join('');
