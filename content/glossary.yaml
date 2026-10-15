@@ -200,7 +200,7 @@ terms:
   - { zh: 自然映射, en: canonical map, aliases: [典型映射, natural map] }
   - { zh: 开集, en: open set }
   - { zh: 闭集, en: closed set }
-  - { zh: 极限点, en: limit point, aliases: [凝聚点] }
+  - { zh: 极限点, en: limit point, aliases: [凝聚点, 聚点, accumulation point] }
   - { zh: 内点, en: interior point }
   - { zh: 导集, en: derived set }
   - { zh: 隶属函数, en: membership function }
@@ -356,7 +356,7 @@ terms:
   - { zh: 李代数同构, en: Lie algebra isomorphism }
   - { zh: 可约表示, en: reducible representation, aliases: [可约], scope: ["1.3"] }
   - { zh: 表示空间, en: representation space }
-  - { zh: Lagrange 定理, en: "Lagrange's theorem" }
+  - { zh: Lagrange 定理, en: "Lagrange's theorem", scope: ["1.3"] }
   - { zh: Cayley 定理, en: "Cayley's theorem" }
   - { zh: 轨道—稳定子定理, en: orbit–stabilizer theorem }
   - { zh: Maschke 定理, en: "Maschke's theorem" }
@@ -493,7 +493,7 @@ terms:
   - { zh: 行列式, en: determinant }
   - { zh: 内积, en: inner product, aliases: [标准内积, 点积, 数量积, dot product, standard inner product] }
   - { zh: 一致连续, en: uniform continuity }
-  - { zh: 泰勒公式, en: Taylor's formula }
+  - { zh: 泰勒公式, en: "Taylor's formula", aliases: [Taylor 公式, "Taylor's theorem"] }
   - { zh: 线性组合, en: linear combination }
   - { zh: 线性变换, en: linear transformation, aliases: [linear operator] }
   - { zh: 表示矩阵, en: matrix of a linear map, aliases: [standard matrix] }
@@ -717,6 +717,247 @@ terms:
   - { zh: 特解, en: particular solution }
   - { zh: 数值域, en: numerical range, aliases: [field of values] }
   - { zh: Runge 现象, en: Runge phenomenon, aliases: [龙格现象, "Runge's phenomenon"] }
+  # calculus (2.2)
+  - { zh: 去心邻域, en: punctured neighborhood, aliases: [空心邻域, deleted neighborhood] }
+  - { zh: 确界存在定理, en: least-upper-bound property, aliases: [确界原理, 确界存在性定理, supremum property] }
+  - { zh: 实数的完备性, en: completeness of the real numbers, aliases: [实数的连续性, 实数连续性] }
+  - { zh: Archimedes 性质, en: Archimedean property, aliases: [阿基米德公理, Archimedes 公理] }
+  - { zh: 有界函数, en: bounded function }
+  - { zh: 奇函数, en: odd function }
+  - { zh: 偶函数, en: even function }
+  - { zh: 周期函数, en: periodic function, aliases: [最小正周期, fundamental period] }
+  - { zh: 单调函数, en: monotonic function, aliases: [monotone function] }
+  - { zh: 复合函数, en: composite function }
+  - { zh: 基本初等函数, en: basic elementary function }
+  - { zh: 初等函数, en: elementary function }
+  - { zh: 反三角函数, en: inverse trigonometric function }
+  - { zh: 双曲函数, en: hyperbolic function }
+  - { zh: 符号函数, en: sign function }
+  - { zh: 取整函数, en: floor function, aliases: [integer part function] }
+  - { zh: Dirichlet 函数, en: Dirichlet function, aliases: [狄利克雷函数] }
+  - { zh: 隐函数, en: implicit function }
+  - { zh: 数列, en: sequence }
+  - { zh: 数列极限, en: limit of a sequence, aliases: [收敛数列, convergent sequence] }
+  - { zh: 发散数列, en: divergent sequence }
+  - { zh: 子列, en: subsequence }
+  - { zh: 无穷小量, en: infinitesimal, aliases: [无穷小] }
+  - { zh: 无界数列, en: unbounded sequence }
+  - { zh: 夹逼定理, en: squeeze theorem, aliases: [夹逼原理, 夹逼准则, sandwich theorem] }
+  - { zh: 单调收敛定理, en: monotone convergence theorem, aliases: [单调收敛原理], scope: ["2.2"] }
+  - { zh: 自然常数, en: "Euler's number", aliases: [自然对数的底] }
+  - { zh: Cauchy 数列, en: Cauchy sequence, aliases: [柯西数列, 基本列] }
+  - { zh: Cauchy 收敛准则, en: Cauchy criterion, aliases: [柯西收敛准则, Cauchy convergence criterion] }
+  - { zh: 函数极限, en: limit of a function }
+  - { zh: 单侧极限, en: one-sided limit, aliases: [左极限, 右极限, left-hand limit, right-hand limit] }
+  - { zh: Heine 定理, en: sequential criterion for limits, aliases: [归结原则, 海涅定理] }
+  - { zh: 复合极限定理, en: limit of a composite function }
+  - { zh: 等价无穷小, en: equivalent infinitesimals }
+  - { zh: 高阶无穷小, en: higher-order infinitesimal, aliases: [little-o notation] }
+  - { zh: 同阶无穷小, en: infinitesimals of the same order }
+  - { zh: 连续函数, en: continuous function, aliases: [连续, continuity] }
+  - { zh: 左连续, en: left-continuous function, aliases: [left continuity] }
+  - { zh: 右连续, en: right-continuous function, aliases: [right continuity] }
+  - { zh: 间断点, en: point of discontinuity, aliases: [discontinuity] }
+  - { zh: 第一类间断点, en: discontinuity of the first kind }
+  - { zh: 第二类间断点, en: discontinuity of the second kind, aliases: [essential discontinuity] }
+  - { zh: 可去间断点, en: removable discontinuity }
+  - { zh: 跳跃间断点, en: jump discontinuity }
+  - { zh: 区间套定理, en: nested interval theorem, aliases: [闭区间套定理, nested intervals theorem] }
+  - { zh: 列紧性定理, en: Bolzano–Weierstrass theorem, aliases: [致密性定理, Bolzano–Weierstrass 定理] }
+  - { zh: 零点定理, en: "Bolzano's theorem", aliases: [零点存在定理] }
+  - { zh: 介值定理, en: intermediate value theorem }
+  - { zh: 最大最小值定理, en: extreme value theorem, aliases: [最值定理] }
+  - { zh: Heine–Cantor 定理, en: Heine–Cantor theorem }
+  - { zh: 导数, en: derivative, aliases: [可导, differentiable, 导函数] }
+  - { zh: 单侧导数, en: one-sided derivative, aliases: [左导数, 右导数] }
+  - { zh: 切线, en: tangent line }
+  - { zh: 法线, en: normal line }
+  - { zh: 链式法则, en: chain rule, aliases: [链式求导法则, 复合函数求导法则] }
+  - { zh: 对数求导法, en: logarithmic differentiation }
+  - { zh: 隐函数求导, en: implicit differentiation }
+  - { zh: 高阶导数, en: higher-order derivative }
+  - { zh: Leibniz 公式, en: general Leibniz rule, aliases: [莱布尼茨公式] }
+  - { zh: 微分, en: differential, aliases: [可微] }
+  - { zh: 一阶微分形式不变性, en: invariance of the first differential }
+  - { zh: 极值, en: local extremum, aliases: [极大值, 极小值, 极值点, local maximum, local minimum] }
+  - { zh: 驻点, en: stationary point }
+  - { zh: Fermat 定理, en: "Fermat's theorem on stationary points", aliases: [费马定理], scope: ["2"] }
+  - { zh: Rolle 定理, en: "Rolle's theorem", aliases: [罗尔定理, Rolle 中值定理] }
+  - { zh: Lagrange 中值定理, en: mean value theorem, aliases: [拉格朗日中值定理, Lagrange mean value theorem] }
+  - { zh: Cauchy 中值定理, en: "Cauchy's mean value theorem", aliases: [柯西中值定理] }
+  - { zh: Darboux 定理, en: "Darboux's theorem", aliases: [导数介值定理], scope: ["2.2"] }
+  - { zh: 不定式, en: indeterminate form, aliases: [未定式] }
+  - { zh: L'Hôpital 法则, en: "L'Hôpital's rule", aliases: [洛必达法则] }
+  - { zh: 凸函数, en: convex function, aliases: [下凸函数] }
+  - { zh: 凹函数, en: concave function, aliases: [上凸函数] }
+  - { zh: Jensen 不等式, en: "Jensen's inequality", aliases: [琴生不等式] }
+  - { zh: 算术–几何平均不等式, en: inequality of arithmetic and geometric means, aliases: [AM–GM 不等式, AM–GM inequality] }
+  - { zh: Young 不等式, en: "Young's inequality for products" }
+  - { zh: 拐点, en: inflection point }
+  - { zh: 渐近线, en: asymptote, aliases: [竖直渐近线, 水平渐近线, 斜渐近线] }
+  - { zh: Taylor 多项式, en: Taylor polynomial, aliases: [泰勒多项式] }
+  - { zh: Peano 余项, en: Peano form of the remainder, aliases: [佩亚诺余项] }
+  - { zh: Lagrange 余项, en: Lagrange form of the remainder, aliases: [拉格朗日余项] }
+  - { zh: Maclaurin 公式, en: "Maclaurin's formula", aliases: [麦克劳林公式] }
+  - { zh: 原函数, en: antiderivative, aliases: [primitive function] }
+  - { zh: 不定积分, en: indefinite integral }
+  - { zh: 换元积分法, en: integration by substitution, aliases: [第一换元法, 第二换元法, 凑微分法] }
+  - { zh: 分部积分法, en: integration by parts, aliases: [分部积分] }
+  - { zh: 有理函数, en: rational function, aliases: [有理分式函数, 有理分式] }
+  - { zh: 部分分式, en: partial fraction decomposition, aliases: [最简分式, 部分分式分解] }
+  - { zh: 万能代换, en: Weierstrass substitution, aliases: [万能公式, tangent half-angle substitution] }
+  - { zh: 定积分, en: definite integral, aliases: [Riemann 积分, 黎曼积分, Riemann integral, 可积] }
+  - { zh: Riemann 和, en: Riemann sum, aliases: [黎曼和, 积分和] }
+  - { zh: Darboux 和, en: Darboux sum, aliases: [达布和, 达布上和, 达布下和, upper Darboux sum, lower Darboux sum] }
+  - { zh: 振幅, en: oscillation, scope: ["2.2"] }
+  - { zh: 积分中值定理, en: mean value theorem for integrals, aliases: [推广的积分中值定理] }
+  - { zh: 变上限积分, en: integral with a variable upper limit, aliases: [积分上限函数] }
+  - { zh: 微积分基本定理, en: fundamental theorem of calculus, aliases: [Newton–Leibniz 公式, 牛顿-莱布尼茨公式, Newton–Leibniz formula] }
+  - { zh: Wallis 积分, en: Wallis integrals, aliases: [Wallis 公式] }
+  - { zh: 极坐标, en: polar coordinates }
+  - { zh: 弧长, en: arc length, aliases: [曲线长度] }
+  - { zh: 可求长曲线, en: rectifiable curve }
+  - { zh: 光滑曲线, en: smooth curve }
+  - { zh: 曲率, en: curvature }
+  - { zh: 曲率半径, en: radius of curvature }
+  - { zh: 旋转体, en: solid of revolution }
+  - { zh: 旋转曲面, en: surface of revolution }
+  - { zh: 微元法, en: method of differential elements, aliases: [element method] }
+  - { zh: 反常积分, en: improper integral, aliases: [广义积分] }
+  - { zh: 无穷积分, en: improper integral over an unbounded interval, aliases: [无穷限积分, improper integral of the first kind] }
+  - { zh: 瑕积分, en: improper integral of an unbounded function, aliases: [瑕点, improper integral of the second kind] }
+  - { zh: 绝对收敛, en: absolute convergence, aliases: [绝对可积, absolutely convergent] }
+  - { zh: 条件收敛, en: conditional convergence, aliases: [conditionally convergent] }
+  - { zh: 比较判别法, en: comparison test, aliases: [比较判别法的极限形式, limit comparison test] }
+  - { zh: 比阶判别法, en: p-test, aliases: [p-series test] }
+  - { zh: Gamma 函数, en: gamma function, aliases: [Γ 函数, 伽马函数] }
+  - { zh: Beta 函数, en: beta function, aliases: [B 函数, 贝塔函数] }
+  - { zh: 级数, en: series, aliases: [数项级数, infinite series, 级数的和] }
+  - { zh: 部分和, en: partial sum }
+  - { zh: 几何级数, en: geometric series, aliases: [等比级数] }
+  - { zh: p 级数, en: p-series, aliases: [p-级数] }
+  - { zh: 调和级数, en: harmonic series }
+  - { zh: 正项级数, en: series of nonnegative terms, aliases: [positive series] }
+  - { zh: 比值判别法, en: ratio test, aliases: ["D'Alembert 判别法", 达朗贝尔判别法] }
+  - { zh: 根值判别法, en: root test }
+  - { zh: 积分判别法, en: integral test }
+  - { zh: 交错级数, en: alternating series }
+  - { zh: Leibniz 判别法, en: alternating series test, aliases: [莱布尼茨判别法, Leibniz test] }
+  - { zh: Cauchy 乘积, en: Cauchy product, aliases: [柯西乘积] }
+  - { zh: Riemann 重排定理, en: Riemann rearrangement theorem, aliases: [Riemann 级数定理, Riemann series theorem] }
+  - { zh: Abel 判别法, en: "Abel's test", aliases: [阿贝尔判别法] }
+  - { zh: Dirichlet 判别法, en: "Dirichlet's test", aliases: [狄利克雷判别法] }
+  - { zh: 函数项级数, en: series of functions, aliases: [函数级数] }
+  - { zh: 收敛域, en: domain of convergence }
+  - { zh: 逐点收敛, en: pointwise convergence, aliases: [处处收敛] }
+  - { zh: 一致收敛, en: uniform convergence, aliases: [uniformly convergent] }
+  - { zh: Weierstrass 判别法, en: Weierstrass M-test, aliases: [魏尔斯特拉斯判别法, M 判别法, Weierstrass 比较判别法] }
+  - { zh: 幂级数, en: power series }
+  - { zh: Abel 定理, en: "Abel's theorem", aliases: [阿贝尔定理] }
+  - { zh: 收敛半径, en: radius of convergence }
+  - { zh: 收敛区间, en: interval of convergence }
+  - { zh: Taylor 级数, en: Taylor series, aliases: [泰勒级数] }
+  - { zh: Maclaurin 级数, en: Maclaurin series, aliases: [麦克劳林级数] }
+  - { zh: 二项式级数, en: binomial series }
+  - { zh: 三角级数, en: trigonometric series }
+  - { zh: 正交函数系, en: orthogonal system of functions, aliases: [三角函数系, 正交函数列] }
+  - { zh: Fourier 级数, en: Fourier series, aliases: [傅里叶级数] }
+  - { zh: Fourier 系数, en: Fourier coefficients, aliases: [傅里叶系数] }
+  - { zh: Dirichlet 收敛定理, en: "Dirichlet's convergence theorem", aliases: [Dirichlet 条件, Dirichlet conditions] }
+  - { zh: 正弦级数, en: Fourier sine series }
+  - { zh: 余弦级数, en: Fourier cosine series }
+  - { zh: 奇延拓, en: odd extension }
+  - { zh: 偶延拓, en: even extension }
+  - { zh: Gibbs 现象, en: Gibbs phenomenon }
+  - { zh: 边界点, en: boundary point }
+  - { zh: 区域, en: region, aliases: [开区域], scope: ["2"] }
+  - { zh: 闭区域, en: closed region }
+  - { zh: 连通集, en: path-connected set, aliases: [connected set] }
+  - { zh: 多元函数, en: function of several variables, aliases: [multivariable function] }
+  - { zh: 等值线, en: level curve, aliases: [等高线, contour line, level set] }
+  - { zh: 二重极限, en: double limit }
+  - { zh: 累次极限, en: iterated limit }
+  - { zh: 偏导数, en: partial derivative }
+  - { zh: 高阶偏导数, en: higher-order partial derivative, aliases: [混合偏导数, mixed partial derivative] }
+  - { zh: 全微分, en: total differential }
+  - { zh: 方向导数, en: directional derivative }
+  - { zh: 梯度, en: gradient }
+  - { zh: Jacobi 矩阵, en: Jacobian matrix, aliases: [雅可比矩阵, Jacobi matrix] }
+  - { zh: Jacobi 行列式, en: Jacobian determinant, aliases: [雅可比行列式, Jacobian, 函数行列式] }
+  - { zh: 隐函数定理, en: implicit function theorem, aliases: [隐函数存在定理] }
+  - { zh: 齐次函数, en: homogeneous function }
+  - { zh: 向量值函数, en: vector-valued function }
+  - { zh: 切向量, en: tangent vector }
+  - { zh: 法平面, en: normal plane }
+  - { zh: 切平面, en: tangent plane }
+  - { zh: 法向量, en: normal vector }
+  - { zh: 鞍点, en: saddle point }
+  - { zh: 条件极值, en: constrained extremum }
+  - { zh: Lagrange 乘子法, en: method of Lagrange multipliers, aliases: [拉格朗日乘子法, Lagrange 乘数法, Lagrange 函数, Lagrange multiplier] }
+  - { zh: 二重积分, en: double integral }
+  - { zh: 三重积分, en: triple integral }
+  - { zh: 重积分, en: multiple integral }
+  - { zh: 累次积分, en: iterated integral }
+  - { zh: 柱坐标, en: cylindrical coordinates, aliases: [柱面坐标] }
+  - { zh: 球坐标, en: spherical coordinates, aliases: [球面坐标] }
+  - { zh: 广义极坐标, en: generalized polar coordinates }
+  - { zh: Gauss 积分, en: Gaussian integral, aliases: [概率积分, Euler–Poisson 积分] }
+  - { zh: 质心, en: center of mass }
+  - { zh: 转动惯量, en: moment of inertia }
+  - { zh: 含参变量积分, en: integral depending on a parameter, aliases: [含参积分, parametric integral] }
+  - { zh: Dirichlet 积分, en: Dirichlet integral }
+  - { zh: 第一型曲线积分, en: line integral of a scalar function, aliases: [对弧长的曲线积分, line integral with respect to arc length] }
+  - { zh: 曲面面积, en: surface area }
+  - { zh: 第一型曲面积分, en: surface integral of a scalar function, aliases: [对面积的曲面积分] }
+  - { zh: 有向曲线, en: oriented curve }
+  - { zh: 第二型曲线积分, en: line integral of a vector field, aliases: [对坐标的曲线积分] }
+  - { zh: 单连通区域, en: simply connected domain, aliases: [单连通, simply connected] }
+  - { zh: 复连通区域, en: multiply connected domain }
+  - { zh: Green 公式, en: "Green's theorem", aliases: [格林公式, Green 定理] }
+  - { zh: 有向曲面, en: oriented surface, aliases: [双侧曲面, 可定向曲面, orientable surface] }
+  - { zh: 第二型曲面积分, en: flux integral, aliases: [对坐标的曲面积分, surface integral of a vector field] }
+  - { zh: 通量, en: flux }
+  - { zh: 环量, en: circulation }
+  - { zh: 向量场, en: vector field }
+  - { zh: 数量场, en: scalar field }
+  - { zh: Hamilton 算子, en: nabla operator, aliases: [哈密顿算子, del operator, nabla] }
+  - { zh: 散度, en: divergence, aliases: [div] }
+  - { zh: 旋度, en: curl, aliases: [rotation, rot] }
+  - { zh: Laplace 算子, en: Laplace operator, aliases: [拉普拉斯算子, Laplacian] }
+  - { zh: Gauss 公式, en: divergence theorem, aliases: [高斯公式, Gauss 定理, "Gauss's theorem", Gauss–Ostrogradsky theorem] }
+  - { zh: Stokes 公式, en: "Stokes' theorem", aliases: [斯托克斯公式, Stokes 定理] }
+  - { zh: 保守场, en: conservative vector field, aliases: [保守向量场, conservative field] }
+  - { zh: 有势场, en: gradient field, aliases: [potential field] }
+  - { zh: 势函数, en: potential function, aliases: [scalar potential] }
+  - { zh: 无旋场, en: irrotational vector field, aliases: [irrotational field] }
+  - { zh: 无源场, en: solenoidal vector field, aliases: [solenoidal field, divergence-free field] }
+  - { zh: 调和场, en: harmonic vector field }
+  - { zh: 调和函数, en: harmonic function }
+  - { zh: Lamé 系数, en: Lamé coefficients, aliases: [scale factors] }
+  - { zh: 微分方程, en: differential equation }
+  - { zh: 常微分方程, en: ordinary differential equation }
+  - { zh: 偏微分方程, en: partial differential equation, aliases: [PDE] }
+  - { zh: 线性微分方程, en: linear differential equation }
+  - { zh: 通解, en: general solution }
+  - { zh: 初值问题, en: initial value problem, aliases: [Cauchy 问题, 定解问题] }
+  - { zh: 积分曲线, en: integral curve }
+  - { zh: Lipschitz 条件, en: Lipschitz condition, aliases: [利普希茨条件] }
+  - { zh: 存在唯一性定理, en: Picard–Lindelöf theorem, aliases: [解的存在唯一性定理, existence and uniqueness theorem] }
+  - { zh: 变量分离方程, en: separable equation, aliases: [可分离变量方程, separable differential equation] }
+  - { zh: Bernoulli 方程, en: Bernoulli differential equation, aliases: [伯努利方程, Bernoulli equation] }
+  - { zh: 全微分方程, en: exact differential equation, aliases: [恰当方程, exact equation] }
+  - { zh: 积分因子, en: integrating factor }
+  - { zh: 叠加原理, en: superposition principle }
+  - { zh: Wronski 行列式, en: Wronskian, aliases: [朗斯基行列式, Wronsky 行列式] }
+  - { zh: 基本解组, en: fundamental set of solutions, aliases: [fundamental system of solutions] }
+  - { zh: 基解矩阵, en: fundamental matrix, aliases: [基本解矩阵] }
+  - { zh: 特征方程, en: characteristic equation, scope: ["2.2", "2.4"] }
+  - { zh: 特征根, en: characteristic root, scope: ["2.2", "2.4"] }
+  - { zh: 微分算子法, en: operator method, aliases: [算子法, differential operator method] }
+  - { zh: Euler 方程, en: Cauchy–Euler equation, aliases: [欧拉方程, Euler–Cauchy equation], scope: ["2.2", "2.4"] }
+  - { zh: 共振, en: resonance }
+  - { zh: 线性微分方程组, en: system of linear differential equations, aliases: [linear system of ODEs] }
+  - { zh: 邻域, en: neighborhood, aliases: [ε 邻域] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数

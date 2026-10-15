@@ -1,3 +1,3 @@
 ---
-title: Theory of Limits
+title: Limits
 ---

@@ -1,3 +1,3 @@
 ---
-title: Indefinite Integrals
+title: Antiderivatives and Indefinite Integrals
 ---
