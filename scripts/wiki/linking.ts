@@ -204,8 +204,12 @@ export function buildLinkIndex(
 function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): string | null {
   const anchor = `concept-${concept.id}`;
   if (lang === 'en') return markEmphasis(root, concept, anchor, ['em', 'i']) ? anchor : null;
-  // The annotation may use the English name or any English alias.
-  const en = conceptNames(concept, 'en').map(escapeRe).join('|');
+  // The annotation may use the English name or any English alias, but not a bare abbreviation:
+  // "常微分方程（ODE）" only introduces the abbreviation, it does not mark the definition.
+  const en = conceptNames(concept, 'en')
+    .filter((n) => !/^[A-Z]{2,6}s?$/.test(n))
+    .map(escapeRe)
+    .join('|');
   const enRe = new RegExp(`^\\s*[（(]\\s*(?:${en})\\s*[）)]`, 'i');
   let found = false;
 

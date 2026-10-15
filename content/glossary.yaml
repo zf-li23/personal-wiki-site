@@ -775,11 +775,11 @@ terms:
   - { zh: 链式法则, en: chain rule, aliases: [链式求导法则, 复合函数求导法则] }
   - { zh: 对数求导法, en: logarithmic differentiation }
   - { zh: 隐函数求导, en: implicit differentiation }
-  - { zh: 高阶导数, en: higher-order derivative }
+  - { zh: 高阶导数, en: higher-order derivative, aliases: [二阶导数, second derivative] }
   - { zh: Leibniz 公式, en: general Leibniz rule, aliases: [莱布尼茨公式] }
   - { zh: 微分, en: differential, aliases: [可微] }
   - { zh: 一阶微分形式不变性, en: invariance of the first differential }
-  - { zh: 极值, en: local extremum, aliases: [极大值, 极小值, 极值点, local maximum, local minimum] }
+  - { zh: 极值, en: local extremum, aliases: [极大值, 极小值, 极值点, local maximum, local minimum, 极大值点, 极小值点] }
   - { zh: 驻点, en: stationary point }
   - { zh: Fermat 定理, en: "Fermat's theorem on stationary points", aliases: [费马定理], scope: ["2"] }
   - { zh: Rolle 定理, en: "Rolle's theorem", aliases: [罗尔定理, Rolle 中值定理] }
@@ -935,7 +935,7 @@ terms:
   - { zh: 调和函数, en: harmonic function }
   - { zh: Lamé 系数, en: Lamé coefficients, aliases: [scale factors] }
   - { zh: 微分方程, en: differential equation }
-  - { zh: 常微分方程, en: ordinary differential equation }
+  - { zh: 常微分方程, en: ordinary differential equation, aliases: [ODE] }
   - { zh: 偏微分方程, en: partial differential equation, aliases: [PDE] }
   - { zh: 线性微分方程, en: linear differential equation }
   - { zh: 通解, en: general solution }
@@ -958,6 +958,18 @@ terms:
   - { zh: 共振, en: resonance }
   - { zh: 线性微分方程组, en: system of linear differential equations, aliases: [linear system of ODEs] }
   - { zh: 邻域, en: neighborhood, aliases: [ε 邻域] }
+  - { zh: 真分式, en: proper rational function, aliases: [假分式, improper rational function] }
+  - { zh: 无穷大量, en: infinitely large quantity, aliases: [无穷大] }
+  - { zh: 无穷间断点, en: infinite discontinuity }
+  - { zh: 振荡间断点, en: oscillating discontinuity }
+  - { zh: 和函数, en: sum function }
+  - { zh: 向量积, en: cross product, aliases: [叉积, vector product] }
+  - { zh: 外点, en: exterior point }
+  - { zh: 有界集, en: bounded set }
+  - { zh: 逆映射定理, en: inverse function theorem, aliases: [反函数定理] }
+  - { zh: 二次曲面, en: quadric surface }
+  - { zh: Fubini 定理, en: "Fubini's theorem", aliases: [富比尼定理] }
+  - { zh: 积分号下求导, en: differentiation under the integral sign, aliases: [Leibniz 积分法则, Leibniz integral rule] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数
