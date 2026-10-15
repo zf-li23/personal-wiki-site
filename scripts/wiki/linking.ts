@@ -112,7 +112,9 @@ function nameKeys(text: string, lang: Lang): string[] {
 /** Concepts by name in one language (only those in scope for the page, when given). */
 function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: string) => Concept | undefined {
   const map = new Map<string, Concept>();
-  for (const c of concepts) {
+  // Scoped concepts last, so that inside their scope they win over an unscoped homonym.
+  const ordered = [...concepts].sort((a, b) => Number(!!a.scope?.length) - Number(!!b.scope?.length));
+  for (const c of ordered) {
     if (pageId && !inScope(c, pageId)) continue;
     for (const n of conceptNames(c, lang)) map.set(nameKeys(n, lang)[0], c);
   }
@@ -129,6 +131,8 @@ function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: str
 
 interface SiteCandidate extends Target {
   file: string;
+  /** A named non-definition statement: used only when there is no other candidate. */
+  fallback?: boolean;
 }
 
 export function buildLinkIndex(
@@ -149,8 +153,10 @@ export function buildLinkIndex(
     const lookup = nameIndex(concepts, out.contentLang, pageId);
     for (const s of out.statements) {
       statements.set(`${course}|${s.kind}|${s.number}`, { pageId, anchor: s.anchor });
-      const concept = s.kind === 'def' && s.name ? lookup(s.name) : undefined;
-      if (concept) add(concept.id, { pageId, anchor: s.anchor, file });
+      // A named definition defines its concept; a named theorem, algorithm… (not an example or
+      // remark) does so only when the concept is defined nowhere else ("Lagrange 定理").
+      const concept = s.name && s.kind !== 'ex' && s.kind !== 'rem' ? lookup(s.name) : undefined;
+      if (concept) add(concept.id, { pageId, anchor: s.anchor, file, fallback: s.kind !== 'def' });
     }
     // A bold concept name inside a 定义 statement is the term being defined there.
     eachStrong(out.hast, (strong, _parent, _i, def) => {
@@ -170,8 +176,9 @@ export function buildLinkIndex(
   const order = new Map(readingOrder.map((id, i) => [id, i]));
   const conceptSites = new Map<string, Target>();
   for (const concept of concepts) {
-    const list = candidates.get(concept.id);
-    if (!list?.length) continue;
+    const all = candidates.get(concept.id) ?? [];
+    const list = all.some((c) => !c.fallback) ? all.filter((c) => !c.fallback) : all;
+    if (!list.length) continue;
     // A statement definition beats an annotation on the same page; across pages the earliest wins.
     const pages = [...new Set(list.map((c) => c.pageId))].sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0));
     const onFirst = list.filter((c) => c.pageId === pages[0]);
@@ -195,7 +202,9 @@ export function buildLinkIndex(
 function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): string | null {
   const anchor = `concept-${concept.id}`;
   if (lang === 'en') return markEmphasis(root, concept, anchor, ['em', 'i']) ? anchor : null;
-  const enRe = new RegExp(`^\\s*[（(]\\s*${escapeRe(concept.en)}\\s*[）)]`, 'i');
+  // The annotation may use the English name or any English alias.
+  const en = conceptNames(concept, 'en').map(escapeRe).join('|');
+  const enRe = new RegExp(`^\\s*[（(]\\s*(?:${en})\\s*[）)]`, 'i');
   let found = false;
 
   const dfn = (children: ElementContent[]): Element => el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: concept.id }, children);
@@ -217,7 +226,7 @@ function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): stri
       }
       if (child.type !== 'text') continue;
       for (const name of conceptNames(concept, 'zh')) {
-        const re = new RegExp(`${escapeRe(name)}(?=\\s*[（(]\\s*${escapeRe(concept.en)}\\s*[）)])`, 'i');
+        const re = new RegExp(`${escapeRe(name)}(?=\\s*[（(]\\s*(?:${en})\\s*[）)])`, 'i');
         const m = re.exec(child.value);
         if (!m) continue;
         const before = child.value.slice(0, m.index);

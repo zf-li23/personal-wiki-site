@@ -165,6 +165,15 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   }));
 
   checkCrossPageAnchors(tree, rendered, diag);
+  // Concept links in every language point at the definition site; a translation must keep it.
+  for (const [id, site] of index.conceptSites) {
+    for (const lang of LANGUAGES) {
+      const out = rendered.get(`${lang}/${site.pageId}`)!;
+      if (out.contentLang !== lang || out.anchors.has(site.anchor) || !site.anchor.startsWith('concept-')) continue;
+      const page = tree.pages.get(site.pageId)!;
+      diag.warn(page.files[lang]?.path ?? page.dir, `the definition of concept "${id}" is not marked in this translation (italicise *term* in English, or write 名称（English） in Chinese, at the defining occurrence)`);
+    }
+  }
   checkUnused(tree, plots, usedPlots, usedAssets, diag);
 
   const site: SiteData = {

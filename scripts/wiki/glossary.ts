@@ -56,9 +56,12 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
     return [];
   }
   const ids = new Map<string, string>();
-  // A name may be shared only by concepts whose scopes do not overlap (homonyms in different courses).
+  // Homonyms may share a name (or English name) when their scopes do not overlap, or when one
+  // of them is unscoped: inside its scope the scoped concept wins (lattice "complement" vs set "complement").
   const names = new Map<string, { en: string; scope: string[] }[]>();
-  const overlap = (a: string[], b: string[]) => !a.length || !b.length || a.some((x) => b.some((y) => x === y || x.startsWith(`${y}.`) || y.startsWith(`${x}.`)));
+  const overlap = (a: string[], b: string[]) => !!a.length && !!b.length && a.some((x) => b.some((y) => x === y || x.startsWith(`${y}.`) || y.startsWith(`${x}.`)));
+  const conflicts = (a: string[], b: string[]) => (!a.length && !b.length) || overlap(a, b);
+  const scopes = new Map<string, string[]>();
   const out: Concept[] = [];
   terms.forEach((t, i) => {
     const term = t as { zh?: unknown; en?: unknown; aliases?: unknown; scope?: unknown };
@@ -68,13 +71,18 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
       return;
     }
     const aliases = Array.isArray(term.aliases) ? term.aliases.filter((a): a is string => typeof a === 'string') : [];
-    const id = conceptId(term.en);
-    if (ids.has(id)) diag.error(file, `"${term.en}" duplicates the concept "${ids.get(id)}"`);
-    ids.set(id, term.en);
     const scope = Array.isArray(term.scope) ? term.scope.map(String) : [];
     if (term.scope !== undefined && !scope.length) diag.error(file, `"${term.en}": scope must be a list of page ids, e.g. scope: ["3"]`);
-    for (const name of [term.zh, ...aliases]) {
-      const clash = names.get(name)?.find((other) => overlap(other.scope, scope));
+    let id = conceptId(term.en);
+    if (ids.has(id)) {
+      if (conflicts(scopes.get(id) ?? [], scope) || !scope.length) diag.error(file, `"${term.en}" duplicates the concept "${ids.get(id)}"; give it a scope that does not overlap`);
+      id = `${id}-${conceptId(scope.join(' '))}`;
+    }
+    ids.set(id, term.en);
+    scopes.set(id, scope);
+    for (const name of [term.zh, ...aliases, term.en]) {
+      if (name === term.en && /\p{Script=Han}/u.test(name)) continue;
+      const clash = names.get(name)?.find((other) => conflicts(other.scope, scope));
       if (clash) diag.error(file, `name "${name}" is used by two concepts (${clash.en} and ${term.en}); give them non-overlapping scopes`);
       names.set(name, [...(names.get(name) ?? []), { en: term.en, scope }]);
     }

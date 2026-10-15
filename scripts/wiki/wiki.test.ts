@@ -433,6 +433,14 @@ describe('cross-page linking', () => {
     concepts.pop();
     assert.equal((s.html('1.1.2').match(/class="concept-ref"/g) ?? []).length, 1);
   });
+  it('lets a named theorem define its concept, and a scoped homonym win inside its scope', async () => {
+    concepts.push({ id: 'lagranges-theorem', zh: 'Lagrange 定理', en: "Lagrange's theorem", aliases: [] });
+    concepts.push({ id: 'big-numbers-1-2', zh: '大数', en: 'big numbers', aliases: ['大数定律'], scope: ['1.2'] });
+    const s = await site({ '1.1.1': '## 1.1. A\n\n**定理 1.1.1（Lagrange 定理）** 设……', '1.2.1': '## 1.1. B\n\n由 **Lagrange 定理** 与**大数定律**。' });
+    concepts.splice(-2);
+    assert.equal(s.index.conceptSites.get('lagranges-theorem')?.anchor, 'thm-1.1.1');
+    assert.match(s.html('1.2.1'), /data-concept="big-numbers-1-2"/);
+  });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
     const s = await site({ '1.2.3': '## 3.1. A\n\n**特征函数**', '3.1.11': '## 11.1. B\n\n**特征函数**' });
