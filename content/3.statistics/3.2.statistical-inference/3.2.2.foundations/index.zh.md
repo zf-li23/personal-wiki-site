@@ -12,12 +12,12 @@ title: 统计学基础
 
 ### 2.1.2. 正态分布下的抽样分布
 
-**定理 2.1.1** 设 $X_1, \ldots, X_n$ 独立，$X_k \sim \mathcal{N}(a_k, \sigma_k^2)$，$c_1, \ldots, c_n$ 为常数，则
+**定理 2.1.1** 设 $X_1, \dots, X_n$ 独立，$X_k \sim \mathcal{N}(a_k, \sigma_k^2)$，$c_1, \dots, c_n$ 为常数，则
 $$
 T = \sum_{k=1}^n c_k X_k \sim \mathcal{N}\left( \sum_{k=1}^n c_k a_k, \sum_{k=1}^n c_k^2 \sigma_k^2 \right)
 $$
 
-**推论** 若 $X_1, \ldots, X_n \overset{\text{iid}}{\sim} \mathcal{N}(a, \sigma^2)$，则
+**推论** 若 $X_1, \dots, X_n \overset{\text{iid}}{\sim} \mathcal{N}(a, \sigma^2)$，则
 $$
 \bar{X} \sim \mathcal{N}\left(a, \frac{\sigma^2}{n}\right)
 $$
@@ -60,7 +60,7 @@ $$
 ### 2.1.3. 三大抽样分布
 
 #### 2.1.3.1. 卡方分布（$\chi^2$ Distribution）
-**定义 2.1.1** 若 $X_1, \ldots, X_r \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则
+**定义 2.1.1** 若 $X_1, \dots, X_r \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则
 $$
 \xi = \sum_{i=1}^r X_i^2 \sim \chi_r^2
 $$
@@ -105,7 +105,7 @@ $$
   \mathbb{E}(F) = \frac{r_2}{r_2 - 2}\ (r_2 \ge 3),\quad
   \operatorname{Var}(F) = \frac{2r_2^2(r_1 + r_2 - 2)}{r_1(r_2-2)^2(r_2-4)}\ (r_2 \ge 5)
   $$
-- 分位数关系：$F_{r_1,r_2}(1 - \alpha) = 1 / F_{r_2,r_1}(\alpha)$
+- 分位数关系：$F_{r_1,r_2,1-\alpha} = 1 / F_{r_2,r_1,\alpha}$，其中 $F_{r_1,r_2,\alpha}$ 为 $F_{r_1,r_2}$ 的上 $\alpha$ 分位数
 
 #### 2.1.3.4. 推论（Useful Corollaries）
 - **推论 2.1.1（标准化平方和）**：若 $X_i \sim \mathcal{N}(a_i,\sigma_i^2)$ 独立，则
@@ -335,7 +335,7 @@ $$
 
 #### 2.3.2.1. 例子
 1. **伯努利分布**  
-   设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathrm{Bin}(1, \theta)$，则联合概率为：
+   设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathrm{Ber}(\theta)$，则联合概率为：
    $$
    f(\boldsymbol{x}; \theta) = \theta^{\sum x_i} (1-\theta)^{n-\sum x_i} = g(t(\boldsymbol{x}); \theta) \cdot 1,
    $$

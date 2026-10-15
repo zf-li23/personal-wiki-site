@@ -20,7 +20,7 @@ $$
 
 ### 8.1.2. 常见分布的期望
 
-- **两点分布** $\mathrm{Bin}(1, p)$：$\mathbb{E}(X) = p$
+- **两点分布** $\mathrm{Ber}(p)$：$\mathbb{E}(X) = p$
 - **二项分布** $\mathrm{Bin}(n, p)$：$\mathbb{E}(X) = np$
 - **泊松分布** $\mathrm{Poi}(\lambda)$：$\mathbb{E}(X) = \lambda$
 - **几何分布** $\mathrm{Geo}(p)$：$\mathbb{E}(X) = \frac{1}{p}$
@@ -81,7 +81,7 @@ $$
 
 ### 8.3.2. 常见分布的方差
 
-- **两点分布** $\mathrm{Bin}(1, p)$：$\operatorname{Var}(X) = p(1-p)$
+- **两点分布** $\mathrm{Ber}(p)$：$\operatorname{Var}(X) = p(1-p)$
 - **二项分布** $\mathrm{Bin}(n, p)$：$\operatorname{Var}(X) = np(1-p)$
 - **泊松分布** $\mathrm{Poi}(\lambda)$：$\operatorname{Var}(X) = \lambda$
 - **几何分布** $\mathrm{Geo}(p)$：$\operatorname{Var}(X) = \frac{1-p}{p^2}$

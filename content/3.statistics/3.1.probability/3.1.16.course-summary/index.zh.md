@@ -30,7 +30,7 @@ title: 课程总结
 ## 16.2. 重要分布总结
 
 ### 16.2.1. 离散型分布
-- 两点分布 $\mathrm{Bin}(1,p)$
+- 两点分布 $\mathrm{Ber}(p)$
 - 二项分布 $\mathrm{Bin}(n,p)$
 - 几何分布 $\mathrm{Geo}(p)$
 - 泊松分布 $\mathrm{Poi}(\lambda)$
@@ -91,7 +91,7 @@ title: 课程总结
 | -------------------------- | ------------------------------------ |
 | $\mathrm{Ber}(p)$          | $\mathrm{Bin}(n,p)$                  |
 | $\mathrm{Bin}(m_i,p)$      | $\mathrm{Bin}(\sum m_i,p)$           |
-| $\mathrm{Geo}(p)$          | 帕斯卡分布（参数 $n, p$），即 $n + \mathrm{NB}(n,p)$ |
+| $\mathrm{Geo}(p)$          | $\mathrm{Pascal}(n,p)$，即 $n + \mathrm{NB}(n,p)$ |
 | $\mathrm{Poi}(\lambda_i)$  | $\mathrm{Poi}(\sum \lambda_i)$       |
 | $\mathcal{N}(\mu_i,\sigma_i^2)$ | $\mathcal{N}(\sum \mu_i,\sum \sigma_i^2)$ |
 | $\mathrm{Exp}(\lambda)$    | $\Gamma(n,\lambda)$                  |

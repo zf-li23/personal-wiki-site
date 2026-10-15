@@ -26,7 +26,7 @@ $$
 
 **性质 11.1.1** 设 $A(x)$、$B(x)$ 可导，大小使运算有意义。
 
-1. $(A + B)' = A' + B'$，$(A^{\mathsf T})' = (A')^{\mathsf T}$，$(\operatorname{tr}A)' = \operatorname{tr}A'$；
+1. $(A + B)' = A' + B'$，$(A^{\mathsf T})' = (A')^{\mathsf T}$，$(\operatorname{tr}(A))' = \operatorname{tr}(A')$；
 2. $(AB)' = A'B + AB'$，因子的顺序不能交换，所以 $(A^2)' = A'A + AA'$，一般不等于 $2AA'$；
 3. 若 $A(x)$ 可逆，则 $(A^{-1})' = -A^{-1}A'A^{-1}$（对 $AA^{-1} = I$ 求导）；
 4. 若 $x = u(t)$ 可导，则 $\dfrac{\mathrm{d}}{\mathrm{d}t}A(u(t)) = A'(u(t))\,u'(t)$。
@@ -287,7 +287,7 @@ $$
 
 1. 若 $AB = BA$，则 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；
 2. $\mathrm{e}^{P^{-1}AP} = P^{-1}\mathrm{e}^AP$；
-3. $\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}A}$；
+3. $\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}(A)}$；
 4. $\dfrac{\mathrm{d}}{\mathrm{d}t}\mathrm{e}^{At} = A\mathrm{e}^{At} = \mathrm{e}^{At}A$。
 
 **证明** 1：$A, B$ 可交换时二项式定理成立，两个绝对收敛级数的 Cauchy 乘积按 $\mathrm{e}^{x+y} = \mathrm{e}^x\mathrm{e}^y$ 的同样方式重排。2：性质 11.5.1。3：由性质 11.5.1 的第 3 条，$\mathrm{e}^A$ 的特征值是 $\mathrm{e}^{\lambda_1}, \dots, \mathrm{e}^{\lambda_n}$（计重数），乘积为 $\mathrm{e}^{\lambda_1 + \cdots + \lambda_n}$。4：幂级数逐项求导。 $\square$
@@ -318,7 +318,7 @@ $$
 
 **定理 11.8.2** 设 $B \in \mathbb{C}^{n\times n}$，则存在 $X$ 使 $\mathrm{e}^X = B$ $\Leftrightarrow$ $B$ 可逆。
 
-**证明** 必要性：$\det \mathrm{e}^X = \mathrm{e}^{\operatorname{tr}X} \ne 0$。充分性：由定理 11.8.1 的第 2 条，只需对 $B$ 的每个 Jordan 块 $J_{\lambda,k}$（$\lambda \ne 0$）找到 $X$。写 $J_{\lambda,k} = \lambda(I + M)$，$M = \lambda^{-1}N$ 幂零。取 $\lambda$ 的一个对数 $\ell$（$\mathrm{e}^\ell = \lambda$），令
+**证明** 必要性：$\det \mathrm{e}^X = \mathrm{e}^{\operatorname{tr}(X)} \ne 0$。充分性：由定理 11.8.1 的第 2 条，只需对 $B$ 的每个 Jordan 块 $J_{\lambda,k}$（$\lambda \ne 0$）找到 $X$。写 $J_{\lambda,k} = \lambda(I + M)$，$M = \lambda^{-1}N$ 幂零。取 $\lambda$ 的一个对数 $\ell$（$\mathrm{e}^\ell = \lambda$），令
 
 $$
 X = \ell I + L, \qquad L = \ln(I + M) = M - \frac{M^2}{2} + \cdots + \frac{(-1)^kM^{k-1}}{k-1},
@@ -376,7 +376,7 @@ $$
 
 式 (11.3) 称为常数变易公式（variation of constants formula）：把齐次解 $\mathrm{e}^{At}\boldsymbol{c}$ 中的常向量 $\boldsymbol{c}$ 换成函数 $\boldsymbol{c}(t)$ 代入方程，就得到 $\boldsymbol{c}'(t) = \mathrm{e}^{-At}B\boldsymbol{u}(t)$。它是控制理论中线性系统响应的基本公式。
 
-系数随时间变化的方程组 $\boldsymbol{X}'(t) = A(t)\boldsymbol{X}(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$\mathrm{e}^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $\mathrm{e}^{At}$，它满足 $\det\Phi(t) = \mathrm{e}^{\int_0^t\operatorname{tr}A(s)\,\mathrm{d}s}$，非齐次方程的解为 $\boldsymbol{X}(t) = \Phi(t)\boldsymbol{x}_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)\boldsymbol{u}(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
+系数随时间变化的方程组 $\boldsymbol{X}'(t) = A(t)\boldsymbol{X}(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$\mathrm{e}^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $\mathrm{e}^{At}$，它满足 $\det\Phi(t) = \mathrm{e}^{\int_0^t\operatorname{tr}(A(s))\,\mathrm{d}s}$，非齐次方程的解为 $\boldsymbol{X}(t) = \Phi(t)\boldsymbol{x}_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)\boldsymbol{u}(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
 
 ## 小结
 
@@ -386,7 +386,7 @@ $$
 | 函数向量的相关性 | Gram 矩阵满秩 $\Leftrightarrow$ 无关（定理 11.2.1）；Wronski 矩阵在一点满秩 $\Rightarrow$ 无关（定理 11.2.2） |
 | 矩阵序列与级数 | $A^k \to O \Leftrightarrow \rho(A) < 1$；$\sum A^k = (I - A)^{-1} \Leftrightarrow \rho(A) < 1$；绝对收敛看 $\sum \lvert A_k\rvert$ |
 | 矩阵函数 | 只依赖于 $f^{(j)}(\mu_i)$，$j < m_i$；三种定义一致（定理 11.6.1、11.7.1） |
-| 矩阵指数 | 可交换时 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；$\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}A}$；$\mathrm{e}^X = B$ 可解 $\Leftrightarrow$ $B$ 可逆 |
+| 矩阵指数 | 可交换时 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；$\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}(A)}$；$\mathrm{e}^X = B$ 可解 $\Leftrightarrow$ $B$ 可逆 |
 | 微分方程组 | $\boldsymbol{X}' = A\boldsymbol{X}$：$\boldsymbol{X} = \mathrm{e}^{At}\boldsymbol{x}_0$，基本解由 Jordan 链给出；非齐次：常数变易公式 (11.3) |
 
 计算 $f(A)$ 的三种方法比较如下。

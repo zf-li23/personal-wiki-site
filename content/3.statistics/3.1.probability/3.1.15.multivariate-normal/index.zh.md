@@ -148,14 +148,14 @@ $$
 
 ### 15.7.1. 大数定律
 
-设 $\boldsymbol{X}_1, \ldots, \boldsymbol{X}_n, \ldots$ 独立同分布，则：
+设 $\boldsymbol{X}_1, \dots, \boldsymbol{X}_n, \dots$ 独立同分布，则：
 $$
 \frac{\boldsymbol{X}_1 + \cdots + \boldsymbol{X}_n}{n} \xrightarrow{\text{a.s.}/p} \mathbb{E}\boldsymbol{X}_1
 $$
 
 ### 15.7.2. 中心极限定理
 
-设 $\boldsymbol{X}_1, \ldots, \boldsymbol{X}_n, \ldots$ 独立同分布，$\mathbb{E}\boldsymbol{X}_1 = \boldsymbol{\mu}$，$\operatorname{Var}(\boldsymbol{X}_1) = \Sigma$，则：
+设 $\boldsymbol{X}_1, \dots, \boldsymbol{X}_n, \dots$ 独立同分布，$\mathbb{E}\boldsymbol{X}_1 = \boldsymbol{\mu}$，$\operatorname{Var}(\boldsymbol{X}_1) = \Sigma$，则：
 $$
 \frac{\boldsymbol{S}_n - n\boldsymbol{\mu}}{\sqrt{n}} \xrightarrow{d} \mathcal{N}(\boldsymbol{0}, \Sigma)
 $$

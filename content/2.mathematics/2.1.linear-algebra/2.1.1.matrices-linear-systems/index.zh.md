@@ -69,7 +69,7 @@ $$
 1. 可加性：对任意 $\boldsymbol{x}, \boldsymbol{x}' \in \mathbb{R}^n$，$f(\boldsymbol{x} + \boldsymbol{x}') = f(\boldsymbol{x}) + f(\boldsymbol{x}')$；
 2. 齐次性：对任意 $\boldsymbol{x} \in \mathbb{R}^n$，$k \in \mathbb{R}$，$f(k\boldsymbol{x}) = kf(\boldsymbol{x})$。
 
-两条性质可以合写为 $f(k\boldsymbol{x} + \ell\boldsymbol{y}) = kf(\boldsymbol{x}) + \ell f(\boldsymbol{y})$。取 $k = 0$ 得 $f(\boldsymbol{0}_n) = \boldsymbol{0}_m$：线性映射把零向量映到零向量。恒等变换 $I = \mathrm{id}\colon \boldsymbol{x} \mapsto \boldsymbol{x}$ 是线性变换。
+两条性质可以合写为 $f(k\boldsymbol{x} + \ell\boldsymbol{y}) = kf(\boldsymbol{x}) + \ell f(\boldsymbol{y})$。取 $k = 0$ 得 $f(\boldsymbol{0}_n) = \boldsymbol{0}_m$：线性映射把零向量映到零向量。恒等变换 $\mathrm{id}\colon \boldsymbol{x} \mapsto \boldsymbol{x}$ 是线性变换。
 
 **例 1.2.1** 映射 $f\colon \mathbb{R} \to \mathbb{R}$ 中，$f(x) = 3x$ 与 $f(x) = 0$ 是线性映射；$f(x) = x + 1$、$f(x) = x^2$、$f(x) = |x|$、$f(x) = 1$ 都不是。由齐次性，$\mathbb{R} \to \mathbb{R}$ 的线性映射一定形如 $f(x) = f(1)\,x$，即正比例函数。
 
@@ -117,7 +117,7 @@ $$
 
 **定义 1.3.2（表示矩阵）** 设 $f\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$\boldsymbol{a}_i = f(\boldsymbol{e}_i)$（$i = 1, \dots, n$），称 $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 为 $f$ 在标准坐标向量下的**表示矩阵**。
 
-由定理 1.2.1，线性映射 $\mathbb{R}^n \to \mathbb{R}^m$ 与 $m \times n$ 矩阵一一对应：每个线性映射由它的表示矩阵完全决定，每个矩阵也唯一确定一个线性映射。常用与矩阵同名的黑体字母 $\boldsymbol{A}$ 表示这个映射。
+由定理 1.2.1，线性映射 $\mathbb{R}^n \to \mathbb{R}^m$ 与 $m \times n$ 矩阵一一对应：每个线性映射由它的表示矩阵完全决定，每个矩阵也唯一确定一个线性映射。矩阵 $A$ 对应的线性映射记作 $T_A\colon \mathbb{R}^n \to \mathbb{R}^m$，$T_A(\boldsymbol{x}) = A\boldsymbol{x}$（乘积 $A\boldsymbol{x}$ 的定义见下）。
 
 **定义 1.3.3（矩阵与向量的乘积）** $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 与 $n$ 维列向量 $\boldsymbol{x}$ 的乘积定义为
 
@@ -125,14 +125,14 @@ $$
 A\boldsymbol{x} = x_1\boldsymbol{a}_1 + x_2\boldsymbol{a}_2 + \cdots + x_n\boldsymbol{a}_n = \begin{bmatrix} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\ \vdots \\ a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n \end{bmatrix} = \begin{bmatrix} \tilde{\boldsymbol{a}}_1^{\mathsf T}\boldsymbol{x} \\ \vdots \\ \tilde{\boldsymbol{a}}_m^{\mathsf T}\boldsymbol{x} \end{bmatrix}.
 $$
 
-于是线性映射可以写成 $f(\boldsymbol{x}) = \boldsymbol{A}(\boldsymbol{x}) = A\boldsymbol{x}$。乘积有两种看法：
+于是线性映射可以写成 $f(\boldsymbol{x}) = T_A(\boldsymbol{x}) = A\boldsymbol{x}$。乘积有两种看法：
 
 - 列观点：$A\boldsymbol{x}$ 是 $A$ 的列向量的线性组合，系数是 $\boldsymbol{x}$ 的分量；要求 $A$ 的列数等于 $\boldsymbol{x}$ 的维数。
 - 行观点：$A\boldsymbol{x}$ 的第 $i$ 个分量是第 $i$ 行与 $\boldsymbol{x}$ 的内积 $\tilde{\boldsymbol{a}}_i^{\mathsf T}\boldsymbol{x}$，只依赖于 $A$ 的第 $i$ 行。特别地，两个同维向量的内积就是行向量与列向量的乘积：$\boldsymbol{a} \cdot \boldsymbol{b} = \boldsymbol{a}^{\mathsf T}\boldsymbol{b}$。
 
 **命题 1.3.1（分配律）** 设 $A$ 是 $m \times n$ 矩阵，对任意 $\boldsymbol{x}_1, \boldsymbol{x}_2 \in \mathbb{R}^n$ 和 $k_1, k_2 \in \mathbb{R}$，有 $A(k_1\boldsymbol{x}_1 + k_2\boldsymbol{x}_2) = k_1(A\boldsymbol{x}_1) + k_2(A\boldsymbol{x}_2)$。
 
-这只是"$\boldsymbol{A}$ 是线性映射"的矩阵写法。
+这只是"$T_A$ 是线性映射"的矩阵写法。
 
 **例 1.3.1** $3 \times 2$ 矩阵 $\begin{bmatrix} 2 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}$ 把 $\mathbb{R}^2$ 映到 $\mathbb{R}^3$ 中由两列张成的平面；$2 \times 3$ 矩阵 $\begin{bmatrix} 1 & 0 & 3 \\ 1 & 2 & 2 \end{bmatrix}$ 把 $\mathbb{R}^3$ 映到 $\mathbb{R}^2$；$1 \times 2$ 矩阵 $[1\ \ 1]$ 把 $\mathbb{R}^2$ 映到 $\mathbb{R}$，它就是与向量 $[1\ 1]^{\mathsf T}$ 作内积。一般地，每个 $\boldsymbol{a} \in \mathbb{R}^n$ 都对应一个线性映射 $\mathbb{R}^n \to \mathbb{R}$，$\boldsymbol{x} \mapsto \boldsymbol{a}^{\mathsf T}\boldsymbol{x}$。
 
@@ -189,7 +189,7 @@ $$
 
 求解线性方程组有三种几何图像：
 
-- 映射的观点：求给定向量 $\boldsymbol{b}$ 在线性映射 $\boldsymbol{A}$ 下的原像 $\boldsymbol{x}$。
+- 映射的观点：求给定向量 $\boldsymbol{b}$ 在线性映射 $T_A$ 下的原像 $\boldsymbol{x}$。
 - 行的观点：第 $i$ 个方程 $\tilde{\boldsymbol{a}}_i^{\mathsf T}\boldsymbol{x} = b_i$ 是 $\mathbb{R}^n$ 中的一个 $n-1$ 维（仿射）超平面，求解就是求 $m$ 个超平面的交点。
 - 列的观点：$A\boldsymbol{x} = x_1\boldsymbol{a}_1 + \cdots + x_n\boldsymbol{a}_n = \boldsymbol{b}$，求解就是寻找列向量的一个线性组合使其等于 $\boldsymbol{b}$。
 
@@ -404,15 +404,15 @@ $$
 
 线性映射可以相加、数乘、复合；矩阵的运算就按"表示矩阵跟随映射"的原则来定义。
 
-**定义 1.9.1（映射的线性运算）** 设 $\boldsymbol{A}, \boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$k \in \mathbb{R}$，定义映射
+**定义 1.9.1（映射的线性运算）** 设 $T_A, T_B\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$k \in \mathbb{R}$，定义映射
 
 $$
-\boldsymbol{A} + \boldsymbol{B}\colon \boldsymbol{x} \mapsto \boldsymbol{A}(\boldsymbol{x}) + \boldsymbol{B}(\boldsymbol{x}), \qquad k\boldsymbol{A}\colon \boldsymbol{x} \mapsto k\boldsymbol{A}(\boldsymbol{x}),
+T_A + T_B\colon \boldsymbol{x} \mapsto T_A(\boldsymbol{x}) + T_B(\boldsymbol{x}), \qquad kT_A\colon \boldsymbol{x} \mapsto kT_A(\boldsymbol{x}),
 $$
 
-分别称为 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 的和、数 $k$ 与 $\boldsymbol{A}$ 的数乘。
+分别称为 $T_A$ 与 $T_B$ 的和、数 $k$ 与 $T_A$ 的数乘。
 
-容易验证 $\boldsymbol{A} + \boldsymbol{B}$ 与 $k\boldsymbol{A}$ 仍是线性映射，且对任意 $k, \ell$ 有 $(k\boldsymbol{A} + \ell\boldsymbol{B})(\boldsymbol{x}) = k\boldsymbol{A}(\boldsymbol{x}) + \ell\boldsymbol{B}(\boldsymbol{x})$。全体 $\mathbb{R}^n \to \mathbb{R}^m$ 的线性映射在这两种运算下封闭，并满足与性质 1.1.1 相同的八条法则（零元素是零映射）；它本身构成一个线性空间（[第 8 章](/2.1.8)）。
+容易验证 $T_A + T_B$ 与 $kT_A$ 仍是线性映射，且对任意 $k, \ell$ 有 $(kT_A + \ell T_B)(\boldsymbol{x}) = kT_A(\boldsymbol{x}) + \ell T_B(\boldsymbol{x})$。全体 $\mathbb{R}^n \to \mathbb{R}^m$ 的线性映射在这两种运算下封闭，并满足与性质 1.1.1 相同的八条法则（零元素是零映射）；它本身构成一个线性空间（[第 8 章](/2.1.8)）。
 
 **定义 1.9.2（矩阵的线性运算）** 设 $A = [a_{ij}]_{m \times n}$，$B = [b_{ij}]_{m \times n}$，$k \in \mathbb{R}$，定义
 
@@ -422,7 +422,7 @@ $$
 
 所有元素全为 $0$ 的矩阵称为零矩阵，记为 $O_{m \times n}$ 或 $O$；$-A = (-1)A$ 称为 $A$ 的负矩阵，$A - B = A + (-B)$。
 
-若 $\boldsymbol{A}, \boldsymbol{B}$ 的表示矩阵是 $A, B$，则 $\boldsymbol{A} + \boldsymbol{B}$、$k\boldsymbol{A}$ 的表示矩阵分别是 $A + B$、$kA$（逐列比较 $\boldsymbol{e}_j$ 的像即得）。矩阵的加法与数乘同样满足八条运算法则，$\mathbb{R}^{m \times n}$ 也是一个线性空间。由映射的等式 $(k\boldsymbol{A} + \ell\boldsymbol{B})(\boldsymbol{x}) = k\boldsymbol{A}(\boldsymbol{x}) + \ell\boldsymbol{B}(\boldsymbol{x})$ 立得：
+$T_A + T_B$、$kT_A$ 的表示矩阵分别是 $A + B$、$kA$（逐列比较 $\boldsymbol{e}_j$ 的像即得），即 $T_A + T_B = T_{A+B}$，$kT_A = T_{kA}$。矩阵的加法与数乘同样满足八条运算法则，$\mathbb{R}^{m \times n}$ 也是一个线性空间。由映射的等式 $(kT_A + \ell T_B)(\boldsymbol{x}) = kT_A(\boldsymbol{x}) + \ell T_B(\boldsymbol{x})$ 立得：
 
 **命题 1.9.1** 矩阵与向量的乘积对矩阵的线性运算满足分配律：$(kA + \ell B)\boldsymbol{x} = k(A\boldsymbol{x}) + \ell(B\boldsymbol{x})$。
 
@@ -452,15 +452,15 @@ $$
 
 要定义 $g \circ f$，$g$ 的定义域必须是 $f$ 的陪域。复合满足结合律：对 $f\colon X \to Y$，$g\colon Y \to Z$，$h\colon Z \to W$，有 $h \circ (g \circ f) = (h \circ g) \circ f$，因为两边都把 $x$ 映到 $h(g(f(x)))$。
 
-**命题 1.10.1** 设 $\boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 是线性映射，则 $\boldsymbol{A} \circ \boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^\ell$ 也是线性映射。并且对线性映射 $\boldsymbol{B}, \boldsymbol{B}'\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}, \boldsymbol{A}'\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 和 $k \in \mathbb{R}$，有
+**命题 1.10.1** 设 $T_B\colon \mathbb{R}^n \to \mathbb{R}^m$，$T_A\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 是线性映射，则 $T_A \circ T_B\colon \mathbb{R}^n \to \mathbb{R}^\ell$ 也是线性映射。并且对线性映射 $T_B, T_{B'}\colon \mathbb{R}^n \to \mathbb{R}^m$，$T_A, T_{A'}\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 和 $k \in \mathbb{R}$，有
 
 $$
-(\boldsymbol{A} + \boldsymbol{A}') \circ \boldsymbol{B} = \boldsymbol{A} \circ \boldsymbol{B} + \boldsymbol{A}' \circ \boldsymbol{B}, \quad \boldsymbol{A} \circ (\boldsymbol{B} + \boldsymbol{B}') = \boldsymbol{A} \circ \boldsymbol{B} + \boldsymbol{A} \circ \boldsymbol{B}', \quad k(\boldsymbol{A} \circ \boldsymbol{B}) = (k\boldsymbol{A}) \circ \boldsymbol{B} = \boldsymbol{A} \circ (k\boldsymbol{B}).
+(T_A + T_{A'}) \circ T_B = T_A \circ T_B + T_{A'} \circ T_B, \quad T_A \circ (T_B + T_{B'}) = T_A \circ T_B + T_A \circ T_{B'}, \quad k(T_A \circ T_B) = (kT_A) \circ T_B = T_A \circ (kT_B).
 $$
 
-**证明** 线性：$(\boldsymbol{A} \circ \boldsymbol{B})(k\boldsymbol{x} + \ell\boldsymbol{x}') = \boldsymbol{A}(k\boldsymbol{B}(\boldsymbol{x}) + \ell\boldsymbol{B}(\boldsymbol{x}')) = k(\boldsymbol{A} \circ \boldsymbol{B})(\boldsymbol{x}) + \ell(\boldsymbol{A} \circ \boldsymbol{B})(\boldsymbol{x}')$。第一个分配律：$((\boldsymbol{A} + \boldsymbol{A}') \circ \boldsymbol{B})(\boldsymbol{x}) = \boldsymbol{A}(\boldsymbol{B}(\boldsymbol{x})) + \boldsymbol{A}'(\boldsymbol{B}(\boldsymbol{x}))$；第二个分配律要用到 $\boldsymbol{A}$ 的可加性；数乘一式要用到 $\boldsymbol{A}$ 的齐次性。$\square$
+**证明** 线性：$(T_A \circ T_B)(k\boldsymbol{x} + \ell\boldsymbol{x}') = T_A(kT_B(\boldsymbol{x}) + \ell T_B(\boldsymbol{x}')) = k(T_A \circ T_B)(\boldsymbol{x}) + \ell(T_A \circ T_B)(\boldsymbol{x}')$。第一个分配律：$((T_A + T_{A'}) \circ T_B)(\boldsymbol{x}) = T_A(T_B(\boldsymbol{x})) + T_{A'}(T_B(\boldsymbol{x}))$；第二个分配律要用到 $T_A$ 的可加性；数乘一式要用到 $T_A$ 的齐次性。$\square$
 
-复合映射 $\boldsymbol{A} \circ \boldsymbol{B}$ 的表示矩阵是什么？设 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_m]$ 是 $\ell \times m$ 矩阵，$B = [\boldsymbol{b}_1\ \cdots\ \boldsymbol{b}_n]$ 是 $m \times n$ 矩阵，则第 $j$ 列是 $\boldsymbol{A}(\boldsymbol{B}(\boldsymbol{e}_j)) = A\boldsymbol{b}_j$。
+复合映射 $T_A \circ T_B$ 的表示矩阵是什么？设 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_m]$ 是 $\ell \times m$ 矩阵，$B = [\boldsymbol{b}_1\ \cdots\ \boldsymbol{b}_n]$ 是 $m \times n$ 矩阵，则第 $j$ 列是 $T_A(T_B(\boldsymbol{e}_j)) = A\boldsymbol{b}_j$。
 
 **定义 1.10.2（矩阵乘法）** $\ell \times m$ 矩阵 $A$ 与 $m \times n$ 矩阵 $B = [\boldsymbol{b}_1\ \cdots\ \boldsymbol{b}_n]$ 的乘积是 $\ell \times n$ 矩阵
 
@@ -468,13 +468,13 @@ $$
 AB = A[\boldsymbol{b}_1\ \boldsymbol{b}_2\ \cdots\ \boldsymbol{b}_n] = [A\boldsymbol{b}_1\ A\boldsymbol{b}_2\ \cdots\ A\boldsymbol{b}_n].
 $$
 
-于是 $AB$ 是 $\boldsymbol{A} \circ \boldsymbol{B}$ 的表示矩阵，满足
+于是 $AB$ 是 $T_A \circ T_B$ 的表示矩阵，即 $T_A \circ T_B = T_{AB}$，满足
 
 $$
 (AB)\boldsymbol{x} = A(B\boldsymbol{x}).
 $$
 
-计算 $AB$ 要求 $A$ 的列数等于 $B$ 的行数（对应于 $\boldsymbol{A}$ 的定义域是 $\boldsymbol{B}$ 的陪域）；$AB$ 的行数等于 $A$ 的行数，列数等于 $B$ 的列数。设 $A$ 的行向量为 $\tilde{\boldsymbol{a}}_1^{\mathsf T}, \dots, \tilde{\boldsymbol{a}}_\ell^{\mathsf T}$，则
+计算 $AB$ 要求 $A$ 的列数等于 $B$ 的行数（对应于 $T_A$ 的定义域是 $T_B$ 的陪域）；$AB$ 的行数等于 $A$ 的行数，列数等于 $B$ 的列数。设 $A$ 的行向量为 $\tilde{\boldsymbol{a}}_1^{\mathsf T}, \dots, \tilde{\boldsymbol{a}}_\ell^{\mathsf T}$，则
 
 $$
 AB = \begin{bmatrix} \tilde{\boldsymbol{a}}_1^{\mathsf T}\boldsymbol{b}_1 & \cdots & \tilde{\boldsymbol{a}}_1^{\mathsf T}\boldsymbol{b}_n \\ \vdots & & \vdots \\ \tilde{\boldsymbol{a}}_\ell^{\mathsf T}\boldsymbol{b}_1 & \cdots & \tilde{\boldsymbol{a}}_\ell^{\mathsf T}\boldsymbol{b}_n \end{bmatrix} = \begin{bmatrix} \tilde{\boldsymbol{a}}_1^{\mathsf T}B \\ \vdots \\ \tilde{\boldsymbol{a}}_\ell^{\mathsf T}B \end{bmatrix}, \qquad c_{ik} = \tilde{\boldsymbol{a}}_i^{\mathsf T}\boldsymbol{b}_k = \sum_{j=1}^m a_{ij}b_{jk}.
@@ -497,7 +497,7 @@ $$
 3. 与数乘交换：$k(AB) = (kA)B = A(kB)$；
 4. 转置：$\boldsymbol{a}^{\mathsf T}\boldsymbol{x} = \boldsymbol{x}^{\mathsf T}\boldsymbol{a}$，$(A\boldsymbol{x})^{\mathsf T} = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}$，$(AB)^{\mathsf T} = B^{\mathsf T}A^{\mathsf T}$。
 
-**证明** 结合律有三种证法。其一，$(AB)C$ 与 $A(BC)$ 分别是 $(\boldsymbol{A} \circ \boldsymbol{B}) \circ \boldsymbol{C}$ 与 $\boldsymbol{A} \circ (\boldsymbol{B} \circ \boldsymbol{C})$ 的表示矩阵，而映射的复合满足结合律。其二，设 $C = [\boldsymbol{c}_1\ \cdots\ \boldsymbol{c}_p]$，由 $(AB)\boldsymbol{x} = A(B\boldsymbol{x})$，
+**证明** 结合律有三种证法。其一，$(AB)C$ 与 $A(BC)$ 分别是 $(T_A \circ T_B) \circ T_C$ 与 $T_A \circ (T_B \circ T_C)$ 的表示矩阵，而映射的复合满足结合律。其二，设 $C = [\boldsymbol{c}_1\ \cdots\ \boldsymbol{c}_p]$，由 $(AB)\boldsymbol{x} = A(B\boldsymbol{x})$，
 
 $$
 A(BC) = [A(B\boldsymbol{c}_1)\ \cdots\ A(B\boldsymbol{c}_p)] = [(AB)\boldsymbol{c}_1\ \cdots\ (AB)\boldsymbol{c}_p] = (AB)C.
@@ -554,4 +554,4 @@ $$
 | 列 | 列向量的线性组合 $\sum_j x_j\boldsymbol{a}_j$ | $[A\boldsymbol{b}_1\ \cdots\ A\boldsymbol{b}_n]$ |
 | 行 | 第 $i$ 个分量 $\tilde{\boldsymbol{a}}_i^{\mathsf T}\boldsymbol{x}$ | 第 $i$ 行 $\tilde{\boldsymbol{a}}_i^{\mathsf T}B$ |
 | 元素 | $\sum_j a_{ij}x_j$ | $c_{ik} = \sum_j a_{ij}b_{jk}$ |
-| 映射 | $\boldsymbol{A}(\boldsymbol{x})$ | $\boldsymbol{A} \circ \boldsymbol{B}$ 的表示矩阵 |
+| 映射 | $T_A(\boldsymbol{x})$ | $T_A \circ T_B = T_{AB}$ |

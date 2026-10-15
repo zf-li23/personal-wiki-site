@@ -124,6 +124,8 @@ $$
 M_n \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
 $$
 
+其中 $z_{\alpha/2}$ 是标准正态分布的上 $\alpha/2$ 分位数（$1 - \Phi(z_{\alpha/2}) = \alpha/2$），区间的近似置信水平为 $1-\alpha$。
+
 ## 小结
 
 ### 核心知识点

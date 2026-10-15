@@ -9,7 +9,7 @@ title: 概率空间、条件概率
 **定义**：设$\Omega$是样本空间，$\mathcal{F}$表示$\Omega$的某些子集构成的集合，如果$\mathcal{F}$满足：
 1. $\Omega \in \mathcal{F}$
 2. 如果 $A \in \mathcal{F}$，则 $A^{\mathsf c} \in \mathcal{F}$
-3. 如果 $A_n \in \mathcal{F}$，$n=1,2,\ldots$，则 $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$
+3. 如果 $A_n \in \mathcal{F}$，$n=1,2,\dots$，则 $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$
 
 称$\mathcal{F}$是$\Omega$上的**事件域**或**$\sigma$-代数**，称$(\Omega,\mathcal{F})$是**可测空间**。
 

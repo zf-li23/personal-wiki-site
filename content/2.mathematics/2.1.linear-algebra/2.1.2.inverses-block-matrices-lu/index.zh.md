@@ -50,17 +50,17 @@ $$
 
 由 [1.2.3 的定理 3.2.8](/1.2.3#thm-3.2.8)（$X \ne \varnothing$）：$f$ 是**单射**当且仅当存在 $g$ 使 $g \circ f = \mathrm{id}_X$（$g$ 是 $f$ 的**左逆**）；$f$ 是**满射**当且仅当存在 $g$ 使 $f \circ g = \mathrm{id}_Y$（**右逆**）；$f$ 是**双射**（一一对应）当且仅当 $f$ 可逆。
 
-**定义 2.2.2（可逆线性变换）** 设 $\boldsymbol{A}, \boldsymbol{B}$ 是 $\mathbb{R}^n$ 上的线性变换。若 $\boldsymbol{A} \circ \boldsymbol{B} = \boldsymbol{B} \circ \boldsymbol{A} = I$，则称 $\boldsymbol{A}$ 和 $\boldsymbol{B}$ 是可逆变换，$\boldsymbol{B} = \boldsymbol{A}^{-1}$ 是 $\boldsymbol{A}$ 的逆变换。
+**定义 2.2.2（可逆线性变换）** 设 $T_A, T_B$ 是 $\mathbb{R}^n$ 上的线性变换。若 $T_A \circ T_B = T_B \circ T_A = \mathrm{id}$，则称 $T_A$ 和 $T_B$ 是可逆变换，$T_B = T_A^{-1}$ 是 $T_A$ 的逆变换。
 
-**命题 2.2.2** 若 $\boldsymbol{A}\colon \mathbb{R}^n \to \mathbb{R}^n$ 是可逆的线性变换，则逆映射 $\boldsymbol{A}^{-1}$ 也是线性变换。
+**命题 2.2.2** 若 $T_A\colon \mathbb{R}^n \to \mathbb{R}^n$ 是可逆的线性变换，则逆映射 $T_A^{-1}$ 也是线性变换。
 
-**证明** 设 $\boldsymbol{y} = \boldsymbol{A}(\boldsymbol{x})$，$\boldsymbol{y}' = \boldsymbol{A}(\boldsymbol{x}')$，$k \in \mathbb{R}$。由 $\boldsymbol{A}$ 线性，$\boldsymbol{A}(\boldsymbol{x} + \boldsymbol{x}') = \boldsymbol{y} + \boldsymbol{y}'$，$\boldsymbol{A}(k\boldsymbol{x}) = k\boldsymbol{y}$，所以 $\boldsymbol{A}^{-1}(\boldsymbol{y} + \boldsymbol{y}') = \boldsymbol{x} + \boldsymbol{x}' = \boldsymbol{A}^{-1}(\boldsymbol{y}) + \boldsymbol{A}^{-1}(\boldsymbol{y}')$，$\boldsymbol{A}^{-1}(k\boldsymbol{y}) = k\boldsymbol{x} = k\boldsymbol{A}^{-1}(\boldsymbol{y})$。$\square$
+**证明** 设 $\boldsymbol{y} = T_A(\boldsymbol{x})$，$\boldsymbol{y}' = T_A(\boldsymbol{x}')$，$k \in \mathbb{R}$。由 $T_A$ 线性，$T_A(\boldsymbol{x} + \boldsymbol{x}') = \boldsymbol{y} + \boldsymbol{y}'$，$T_A(k\boldsymbol{x}) = k\boldsymbol{y}$，所以 $T_A^{-1}(\boldsymbol{y} + \boldsymbol{y}') = \boldsymbol{x} + \boldsymbol{x}' = T_A^{-1}(\boldsymbol{y}) + T_A^{-1}(\boldsymbol{y}')$，$T_A^{-1}(k\boldsymbol{y}) = k\boldsymbol{x} = kT_A^{-1}(\boldsymbol{y})$。$\square$
 
 对应到表示矩阵，就得到可逆矩阵的定义。
 
 **定义 2.2.3（可逆矩阵）** 设 $A$ 是 $n$ 阶方阵。若存在 $n$ 阶方阵 $B$ 使得 $AB = BA = I_n$，则称 $A$ 是**可逆矩阵**（非奇异矩阵），称 $B$ 为 $A$ 的**逆矩阵**，记为 $A^{-1}$。不可逆的方阵称为**奇异矩阵**。
 
-逆矩阵若存在则唯一：若 $B, \tilde{B}$ 都是 $A$ 的逆，则 $B = BI_n = B(A\tilde{B}) = (BA)\tilde{B} = \tilde{B}$。线性变换 $\boldsymbol{x} \mapsto A\boldsymbol{x}$ 可逆当且仅当矩阵 $A$ 可逆，此时 $\boldsymbol{A}^{-1}$ 的表示矩阵就是 $A^{-1}$。对正整数 $k$ 和可逆矩阵 $A$，定义负整数幂 $A^{-k} = (A^{-1})^k$。
+逆矩阵若存在则唯一：若 $B, \tilde{B}$ 都是 $A$ 的逆，则 $B = BI_n = B(A\tilde{B}) = (BA)\tilde{B} = \tilde{B}$。线性变换 $T_A\colon \boldsymbol{x} \mapsto A\boldsymbol{x}$ 可逆当且仅当矩阵 $A$ 可逆，此时 $T_A^{-1}$ 的表示矩阵就是 $A^{-1}$，即 $T_A^{-1} = T_{A^{-1}}$。对正整数 $k$ 和可逆矩阵 $A$，定义负整数幂 $A^{-k} = (A^{-1})^k$。
 
 **例 2.2.1**
 

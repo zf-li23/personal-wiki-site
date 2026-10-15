@@ -8,14 +8,14 @@ title: 子空间、维数与秩
 
 ## 3.1. 线性映射的像与原像
 
-矩阵 $A$ 确定线性映射 $\boldsymbol{A}\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{x} \mapsto A\boldsymbol{x}$。方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 解的存在与唯一，直接对应于这个映射的像与原像的性质。
+矩阵 $A$ 确定线性映射 $T_A\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{x} \mapsto A\boldsymbol{x}$。方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 解的存在与唯一，直接对应于这个映射的像与原像的性质。
 
 **命题 3.1.1** 设 $A$ 是 $m \times n$ 矩阵。
 
-1. $\boldsymbol{A}$ 是**单射**，当且仅当齐次方程组 $A\boldsymbol{x} = \boldsymbol{0}_m$ 只有零解 $\boldsymbol{0}_n$；
-2. $\boldsymbol{A}$ 是**满射**，当且仅当对任意 $\boldsymbol{b} \in \mathbb{R}^m$，方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 有解。
+1. $T_A$ 是**单射**，当且仅当齐次方程组 $A\boldsymbol{x} = \boldsymbol{0}_m$ 只有零解 $\boldsymbol{0}_n$；
+2. $T_A$ 是**满射**，当且仅当对任意 $\boldsymbol{b} \in \mathbb{R}^m$，方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 有解。
 
-**证明** 第 1 条：$\boldsymbol{A}$ 是单射，即由 $A\boldsymbol{x}_1 = A\boldsymbol{x}_2$ 能推出 $\boldsymbol{x}_1 = \boldsymbol{x}_2$，也就是由 $A(\boldsymbol{x}_1 - \boldsymbol{x}_2) = \boldsymbol{0}$ 能推出 $\boldsymbol{x}_1 - \boldsymbol{x}_2 = \boldsymbol{0}$。第 2 条就是满射的定义。$\square$
+**证明** 第 1 条：$T_A$ 是单射，即由 $A\boldsymbol{x}_1 = A\boldsymbol{x}_2$ 能推出 $\boldsymbol{x}_1 = \boldsymbol{x}_2$，也就是由 $A(\boldsymbol{x}_1 - \boldsymbol{x}_2) = \boldsymbol{0}$ 能推出 $\boldsymbol{x}_1 - \boldsymbol{x}_2 = \boldsymbol{0}$。第 2 条就是满射的定义。$\square$
 
 所以判断线性映射是否为单射，只需看零向量的原像是否唯一。由此引入两个集合：
 
@@ -23,9 +23,9 @@ $$
 \mathcal{R}(A) = \{A\boldsymbol{x} \mid \boldsymbol{x} \in \mathbb{R}^n\} \subseteq \mathbb{R}^m, \qquad \mathcal{N}(A) = \{\boldsymbol{x} \in \mathbb{R}^n \mid A\boldsymbol{x} = \boldsymbol{0}\} \subseteq \mathbb{R}^n.
 $$
 
-$\mathcal{R}(A)$ 是 $\boldsymbol{A}$ 的**值域**，即 $A$ 的列向量的全体线性组合；$\mathcal{N}(A)$ 是齐次方程组 $A\boldsymbol{x} = \boldsymbol{0}$ 的解集。总有 $\boldsymbol{0}_m \in \mathcal{R}(A)$，$\boldsymbol{0}_n \in \mathcal{N}(A)$；方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 有解当且仅当 $\boldsymbol{b} \in \mathcal{R}(A)$。
+$\mathcal{R}(A)$ 是 $T_A$ 的**值域**，即 $A$ 的列向量的全体线性组合；$\mathcal{N}(A)$ 是齐次方程组 $A\boldsymbol{x} = \boldsymbol{0}$ 的解集。总有 $\boldsymbol{0}_m \in \mathcal{R}(A)$，$\boldsymbol{0}_n \in \mathcal{N}(A)$；方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 有解当且仅当 $\boldsymbol{b} \in \mathcal{R}(A)$。
 
-**命题 3.1.2** 设 $A$ 是 $m \times n$ 矩阵，则 $\boldsymbol{A}$ 是满射当且仅当 $\mathcal{R}(A) = \mathbb{R}^m$；$\boldsymbol{A}$ 是单射当且仅当 $\mathcal{N}(A) = \{\boldsymbol{0}\}$。
+**命题 3.1.2** 设 $A$ 是 $m \times n$ 矩阵，则 $T_A$ 是满射当且仅当 $\mathcal{R}(A) = \mathbb{R}^m$；$T_A$ 是单射当且仅当 $\mathcal{N}(A) = \{\boldsymbol{0}\}$。
 
 **例 3.1.1** 对 $A = \begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 0 \end{bmatrix}$，
 
@@ -34,7 +34,7 @@ $$
 \mathcal{N}(A) = \left\{ k\begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix} \;\middle|\; k \in \mathbb{R} \right\}.
 $$
 
-$\boldsymbol{A}$ 既不是单射也不是满射。这两个集合都在线性运算下封闭，这引出子空间的概念；它们中的向量都能由有限个向量线性表示，这引出基的概念。
+$T_A$ 既不是单射也不是满射。这两个集合都在线性运算下封闭，这引出子空间的概念；它们中的向量都能由有限个向量线性表示，这引出基的概念。
 
 ## 3.2. 子空间
 
@@ -315,11 +315,11 @@ $$
 
 列满秩矩阵满足 $n \le m$（"高"矩阵），行满秩矩阵满足 $m \le n$（"宽"矩阵），满秩矩阵一定是方阵；行满秩或列满秩的方阵一定满秩。
 
-**命题 3.8.2** 设 $A$ 是 $m \times n$ 矩阵，$\boldsymbol{A}\colon \boldsymbol{x} \mapsto A\boldsymbol{x}$，则
+**命题 3.8.2** 设 $A$ 是 $m \times n$ 矩阵，$T_A\colon \boldsymbol{x} \mapsto A\boldsymbol{x}$，则
 
-1. $\boldsymbol{A}$ 是满射当且仅当 $A$ 行满秩；
-2. $\boldsymbol{A}$ 是单射当且仅当 $A$ 列满秩；
-3. $\boldsymbol{A}$ 是**双射**当且仅当 $A$ 满秩。
+1. $T_A$ 是满射当且仅当 $A$ 行满秩；
+2. $T_A$ 是单射当且仅当 $A$ 列满秩；
+3. $T_A$ 是**双射**当且仅当 $A$ 满秩。
 
 **证明** 1. 满射即 $\mathcal{R}(A) = \mathbb{R}^m$；由 $\mathcal{R}(A) \subseteq \mathbb{R}^m$ 和命题 3.6.1，这等价于 $\dim\mathcal{R}(A) = m$。2. 单射即 $A\boldsymbol{x} = \boldsymbol{0}$ 只有零解，即列向量组线性无关，即 $\operatorname{rank}(A) = n$。3. 由前两条得到。$\square$
 
@@ -336,7 +336,7 @@ $$
 
 **证明** 1. $AB = [A\boldsymbol{b}_1\ \cdots\ A\boldsymbol{b}_n]$ 的每一列都属于 $\mathcal{R}(A)$。$B$ 可逆时，又有 $\mathcal{R}(A) = \mathcal{R}((AB)B^{-1}) \subseteq \mathcal{R}(AB)$。2. 由第 1 条得 $\operatorname{rank}(AB) \le \operatorname{rank}(A)$，$B$ 可逆时取等号。由定理 3.8.1，$\operatorname{rank}(AB) = \operatorname{rank}(B^{\mathsf T}A^{\mathsf T}) \le \operatorname{rank}(B^{\mathsf T}) = \operatorname{rank}(B)$。$A$ 可逆时 $AB$ 与 $B$ 左相抵，由命题 3.7.1 列向量组的秩相同。$\square$
 
-从映射的角度看，$\boldsymbol{A} \circ \boldsymbol{B}$ 的像集包含在 $\boldsymbol{A}$ 的像集中。一般 $\mathcal{R}(AB) \ne \mathcal{R}(B)$（二者甚至不在同一个空间中）。
+从映射的角度看，$T_A \circ T_B$ 的像集包含在 $T_A$ 的像集中。一般 $\mathcal{R}(AB) \ne \mathcal{R}(B)$（二者甚至不在同一个空间中）。
 
 ## 3.9. 相抵与相抵标准形
 

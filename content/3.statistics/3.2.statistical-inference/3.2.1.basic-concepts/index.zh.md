@@ -6,17 +6,17 @@ title: 统计学基本概念
 
 - **总体 (Population)**：所有研究对象的集合，通常用一个随机变量 $X$ 或其分布 $F$ 描述。
 - **个体 (Individual)**：总体中的每一个元素。
-- **样本 (Sample)**：从总体中抽取的一部分数据，记为 $X_1, X_2, \ldots, X_n$。
+- **样本 (Sample)**：从总体中抽取的一部分数据，记为 $X_1, X_2, \dots, X_n$。
 - **样本量 (Sample Size)**：$n$。
-- **简单随机样本 (Simple Random Sample)**：若 $X_1, X_2, \ldots, X_n$ 是独立同分布的，即：
+- **简单随机样本 (Simple Random Sample)**：若 $X_1, X_2, \dots, X_n$ 是独立同分布的，即：
   $$
-  X_1, X_2, \ldots, X_n \overset{\text{iid}}{\sim} F
+  X_1, X_2, \dots, X_n \overset{\text{iid}}{\sim} F
   $$
 
 ## 1.2. 样本空间 (Sample Space)
 
 - **样本空间 $\mathcal{X}$**：所有可能样本值的集合。
-- **观测值**：抽样后得到的实际数值 $\boldsymbol{x} = (x_1, x_2, \ldots, x_n)$。
+- **观测值**：抽样后得到的实际数值 $\boldsymbol{x} = (x_1, x_2, \dots, x_n)$。
 
 ## 1.3. 统计模型 (Statistical Model)
 
@@ -28,7 +28,7 @@ title: 统计学基本概念
 
 ## 1.4. 统计量 (Statistic)
 
-- **定义**：样本的函数 $T(X_1, X_2, \ldots, X_n)$，且不依赖于未知参数。
+- **定义**：样本的函数 $T(X_1, X_2, \dots, X_n)$，且不依赖于未知参数。
 - **常用统计量**：
   - 样本均值 (Sample mean)：
     $$
@@ -54,15 +54,12 @@ title: 统计学基本概念
     $$
     \hat{\beta}_1 = \frac{m_{n,3}}{m_{n,2}^{3/2}} = \sqrt{n} \frac{\sum_{i=1}^n (X_i - \bar{X})^3}{\left( \sum_{i=1}^n (X_i - \bar{X})^2 \right)^{3/2}}
     $$
-    （对正态分布等于 0）
-    其中 $m_{n,k}$ 是样本 $k$ 阶中心矩。
+    其中 $m_{n,k}$ 是上面定义的样本 $k$ 阶中心矩；正态总体的偏度为 0。
   - 样本峰度 (Sample kurtosis)：
     $$
     \hat{\beta}_2 = \frac{m_{n,4}}{m_{n,2}^2} - 3 = n \frac{\sum_{i=1}^n (X_i - \bar{X})^4}{\left( \sum_{i=1}^n (X_i - \bar{X})^2 \right)^2} - 3
     $$
-    此处为**超额峰度**，正态分布的峰度定义为 3，减去 3 后正态分布对应 0。
-    （对正态分布等于 0）
-    其中 $m_{n,k}$ 是样本 $k$ 阶中心矩。
+    此处为**超额峰度**：正态分布的峰度为 3，减去 3 后正态总体对应 0。
 
 ## 1.5. 顺序统计量 (Order Statistics)
 

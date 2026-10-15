@@ -96,7 +96,7 @@ $$
 ## 12.4. 经典应用
 
 ### 12.4.1. 频率与概率
-对于伯努利试验 $X_n \sim \mathrm{Bin}(1, p)$：
+对于伯努利试验 $X_n \sim \mathrm{Ber}(p)$：
 
 $$
 \frac{1}{n} \sum_{k=1}^n X_k \xrightarrow{p} p
@@ -110,11 +110,13 @@ F_n(x) = \frac{1}{n} \sum_{j=1}^n \boldsymbol{1}_{\{X_j \leq x\}} \xrightarrow{\
 $$
 
 ### 12.4.3. 蒙特卡洛方法
-用随机模拟计算积分：
+用随机模拟计算积分（投点法）：设 $0 \leq f(x) \leq c$（$a \leq x \leq b$），独立地向矩形 $[a,b] \times [0,c]$ 均匀投点 $(U_j, V_j)$，$j = 1, \dots, n$。点落在曲线 $y = f(x)$ 下方的概率为 $p = \frac{1}{c(b-a)}\int_a^b f(x)\,\mathrm{d}x$，由强大数定律，
 
 $$
-\int_a^b f(x) \mathrm{d}x \approx c(b-a) \cdot \frac{1}{n} \sum_{j=1}^n I_j
+\int_a^b f(x) \,\mathrm{d}x \approx c(b-a) \cdot \frac{1}{n} \sum_{j=1}^n \boldsymbol{1}_{\{V_j \leq f(U_j)\}}
 $$
+
+其中示性函数 $\boldsymbol{1}_{\{V_j \leq f(U_j)\}}$ 在第 $j$ 个点落在曲线下方时取 1，否则取 0。
 
 ## 小结
 

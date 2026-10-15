@@ -238,7 +238,7 @@ $$
 
 ### 3.4.1. UMVUE 的定义与存在性
 
-- **定义**：若 $U = U(X_1, \cdots, X_n)$ 是 $g(\theta)$ 的无偏估计，且对任意其他无偏估计 $V$，都有
+- **定义**：若 $U = U(X_1, \dots, X_n)$ 是 $g(\theta)$ 的无偏估计，且对任意其他无偏估计 $V$，都有
   $$
   \operatorname{Var}_\theta(U) \leq \operatorname{Var}_\theta(V), \quad \forall \theta \in \Theta
   $$
@@ -266,7 +266,7 @@ $$
 
 ### 3.4.3. 例子
 
-#### 3.4.3.1. 伯努利分布 $\mathrm{Bin}(1, \theta)$
+#### 3.4.3.1. 伯努利分布 $\mathrm{Ber}(\theta)$
 
 - $T = \sum X_i$ 充分完全。
 - $\bar{X}$ 是 $\theta$ 的 UMVUE。
@@ -312,7 +312,7 @@ $$
   \operatorname{Var}_{\theta} (\hat{g}(\boldsymbol{X})) \geq \frac{1}{nI(\theta)}
   $$
 
-- **多参数情形**：设 $\boldsymbol{\theta} = (\theta_1, \cdots, \theta_k)^{\mathsf T}$，则
+- **多参数情形**：设 $\boldsymbol{\theta} = (\theta_1, \dots, \theta_k)^{\mathsf T}$，则
   $$
   \operatorname{Cov}_{\boldsymbol{\theta}}(\hat{\boldsymbol{\theta}}) \geq (nI(\boldsymbol{\theta}))^{-1}
   $$
@@ -326,7 +326,7 @@ $$
 - **定义**：$I(\theta) = \mathbb{E}_\theta \left[ \frac{\partial \log f(X; \theta)}{\partial \theta} \right]^2$
 - **性质**：
   - 反映总体提供的信息量
-  - 随机样本 $(X_1, \cdots, X_n)$ 的总信息量为 $nI(\theta)$
+  - 随机样本 $(X_1, \dots, X_n)$ 的总信息量为 $nI(\theta)$
   - 在MLE的渐近正态性中起关键作用
 
 ### 3.4.7. 有效估计
@@ -340,7 +340,7 @@ $$
 
 ### 3.4.8. 例子
 
-- **伯努利分布** $\mathrm{Bin}(1, \theta)$：$\bar{X}$ 是 $\theta$ 的有效估计
+- **伯努利分布** $\mathrm{Ber}(\theta)$：$\bar{X}$ 是 $\theta$ 的有效估计
 - **泊松分布** $\mathrm{Poi}(\theta)$：$\bar{X}$ 是 $\theta$ 的有效估计  
 - **指数分布** $\mathrm{Exp}(\theta)$：$\bar{X}$ 是 $1/\theta$ 的有效估计
 - **正态分布** $\mathcal{N}(\mu, \sigma^2)$：
@@ -355,7 +355,7 @@ $$
 
 - **简单线性回归**：
   $$
-  y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \quad i=1,\cdots,n
+  y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \quad i=1,\dots,n
   $$
 - **多元线性回归**：
   $$
@@ -365,7 +365,7 @@ $$
   $$
   \boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\varepsilon}
   $$
-  其中 $\boldsymbol{Y} = (y_1, \cdots, y_n)^{\mathsf T}$，$X$ 为设计矩阵，$\boldsymbol{\beta} = (\beta_0, \beta_1, \cdots, \beta_p)^{\mathsf T}$，$\boldsymbol{x}_i^{\mathsf T}$ 为 $X$ 的第 $i$ 行
+  其中 $\boldsymbol{Y} = (y_1, \dots, y_n)^{\mathsf T}$，$X$ 为设计矩阵，$\boldsymbol{\beta} = (\beta_0, \beta_1, \dots, \beta_p)^{\mathsf T}$，$\boldsymbol{x}_i^{\mathsf T}$ 为 $X$ 的第 $i$ 行
 
 ### 3.5.2. 基本假设
 
@@ -416,7 +416,7 @@ $$
   $$
 - **MLE**：
   $$
-  \hat{\boldsymbol{\beta}}_{\text{MLE}} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} \boldsymbol{Y}, \quad \hat{\sigma}^2_{\text{MLE}} = \frac{1}{n} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \hat{\boldsymbol{\beta}})^2
+  \hat{\boldsymbol{\beta}}_{\mathrm{MLE}} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} \boldsymbol{Y}, \quad \hat{\sigma}^2_{\mathrm{MLE}} = \frac{1}{n} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \hat{\boldsymbol{\beta}})^2
   $$
 
 ### 3.5.4. 估计量的性质
@@ -483,7 +483,7 @@ $$
   - $h$ 太小：估计过拟合，噪声多，方差大
   - $h$ 太大：估计过平滑，偏差大，细节丢失
 
-- **偏差-方差权衡**：MSE = Bias² + Variance
+- **偏差-方差权衡**：$\operatorname{MSE} = \operatorname{Bias}^2 + \operatorname{Var}$
 
 - **最优带宽选择准则**：
 

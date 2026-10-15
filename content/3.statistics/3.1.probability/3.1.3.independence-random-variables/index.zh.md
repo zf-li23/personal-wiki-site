@@ -31,19 +31,19 @@ $$
 
 ### 3.1.3. 一组事件的相互独立性
 
-**定义**：设 $A_1, A_2, \ldots, A_n \in \mathcal{F}$，如果对任意非空子集 $S \subset \{1, 2, \ldots, n\}$，都有
+**定义**：设 $A_1, A_2, \dots, A_n \in \mathcal{F}$，如果对任意非空子集 $S \subset \{1, 2, \dots, n\}$，都有
 $$
 \mathbb{P}\left( \bigcap_{i \in S} A_i \right) = \prod_{i \in S} \mathbb{P}(A_i),
 $$
-则称 $A_1, A_2, \ldots, A_n$ 相互独立。
+则称 $A_1, A_2, \dots, A_n$ 相互独立。
 
 ### 3.1.4. 一组事件的两两独立性
 
-**定义**：设 $A_1, A_2, \ldots, A_n \in \mathcal{F}$，如果对任意的 $i \neq j$，有
+**定义**：设 $A_1, A_2, \dots, A_n \in \mathcal{F}$，如果对任意的 $i \neq j$，有
 $$
 \mathbb{P}(A_i \cap A_j) = \mathbb{P}(A_i)\mathbb{P}(A_j),
 $$
-则称 $A_1, A_2, \ldots, A_n$ 两两独立。
+则称 $A_1, A_2, \dots, A_n$ 两两独立。
 
 **注意**：两两独立不一定相互独立
 
@@ -63,7 +63,7 @@ $$
 - 数值化试验结果
 - 通用性，多个场景可共用同一模型
 
-**定义（随机变量）**：设 $(\Omega, \mathcal{F})$ 为可测空间，如果函数 $X: \Omega \to \mathbb{R}$ 满足对任意 $x \in \mathbb{R}$，有
+**定义（随机变量）**：设 $(\Omega, \mathcal{F})$ 为可测空间，如果函数 $X\colon \Omega \to \mathbb{R}$ 满足对任意 $x \in \mathbb{R}$，有
 $$
 \{ \omega \in \Omega : X(\omega) \leq x \} \in \mathcal{F},
 $$
@@ -87,21 +87,21 @@ $$
 
 ### 3.3.1. 定义
 
-**定义**：设 $X_1, X_2, \ldots, X_n$ 是随机变量，如果对任意实数 $x_1, x_2, \ldots, x_n$，有
+**定义**：设 $X_1, X_2, \dots, X_n$ 是随机变量，如果对任意实数 $x_1, x_2, \dots, x_n$，有
 $$
-\mathbb{P}(X_1 \leq x_1, X_2 \leq x_2, \ldots, X_n \leq x_n) = \mathbb{P}(X_1 \leq x_1) \mathbb{P}(X_2 \leq x_2) \cdots \mathbb{P}(X_n \leq x_n),
+\mathbb{P}(X_1 \leq x_1, X_2 \leq x_2, \dots, X_n \leq x_n) = \mathbb{P}(X_1 \leq x_1) \mathbb{P}(X_2 \leq x_2) \cdots \mathbb{P}(X_n \leq x_n),
 $$
-则称 $X_1, X_2, \ldots, X_n$ 相互独立。
+则称 $X_1, X_2, \dots, X_n$ 相互独立。
 
 ### 3.3.2. 性质
 
-**定理**：若 $X_1, \ldots, X_n$ 相互独立，则对任意 Borel 集 $A_1, \ldots, A_n$，事件 $\{X_1 \in A_1\}, \ldots, \{X_n \in A_n\}$ 相互独立
+**定理**：若 $X_1, \dots, X_n$ 相互独立，则对任意 Borel 集 $A_1, \dots, A_n$，事件 $\{X_1 \in A_1\}, \dots, \{X_n \in A_n\}$ 相互独立
 
-**定理**：若 $X_1, \ldots, X_n$ 相互独立，$g_1, \ldots, g_n$ 是可测函数，则 $g_1(X_1), \ldots, g_n(X_n)$ 相互独立
+**定理**：若 $X_1, \dots, X_n$ 相互独立，$g_1, \dots, g_n$ 是可测函数，则 $g_1(X_1), \dots, g_n(X_n)$ 相互独立
 
 ### 3.3.3. 独立序列与独立同分布
 
-**定义**：如果对任意 $n$，$X_1, \ldots, X_n$ 相互独立，则称随机变量序列 $\{X_i\}$ 相互独立
+**定义**：如果对任意 $n$，$X_1, \dots, X_n$ 相互独立，则称随机变量序列 $\{X_i\}$ 相互独立
 
 **定义**：如果随机变量序列 $\{X_i\}$ 相互独立且具有相同的分布，则称为独立同分布序列（i.i.d.）
 
@@ -136,4 +136,4 @@ $$
 - 独立性：$\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)$
 - 条件独立性：$\mathbb{P}(A \cap B|C) = \mathbb{P}(A|C)\mathbb{P}(B|C)$
 - 相互独立：对任意子集 $S$，$\mathbb{P}\left( \bigcap_{i \in S} A_i \right) = \prod_{i \in S} \mathbb{P}(A_i)$
-- 随机变量独立：$\mathbb{P}(X_1 \leq x_1, \ldots, X_n \leq x_n) = \prod_{i=1}^n \mathbb{P}(X_i \leq x_i)$
+- 随机变量独立：$\mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n) = \prod_{i=1}^n \mathbb{P}(X_i \leq x_i)$

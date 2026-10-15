@@ -22,7 +22,7 @@ g(s) = \mathbb{E}(s^X) = \sum_{j=0}^{\infty} s^j \mathbb{P}(X = j), \quad s \in 
 $$
 
 $$
-\mathbb{P}(X = k) = \frac{g^{(k)}(0)}{k!}, \quad k = 0, 1, \ldots
+\mathbb{P}(X = k) = \frac{g^{(k)}(0)}{k!}, \quad k = 0, 1, \dots
 $$
 
 2. 
@@ -35,7 +35,7 @@ $$
 \operatorname{Var}(X) = g^{(2)}(1) + g^{(1)}(1) - [g^{(1)}(1)]^2
 $$
 
-4. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的概率母函数为
+4. 如果 $X_1, \dots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的概率母函数为
 $$
 g_Y(s) = g_1(s)g_2(s)\cdots g_n(s), \quad s \in [-1,1]
 $$
@@ -99,11 +99,11 @@ $$
 
 2. 
 $$
-\mathbb{E}X^k = M^{(k)}(0), \quad k = 1, 2, \ldots, n
+\mathbb{E}X^k = M^{(k)}(0), \quad k = 1, 2, \dots, n
 $$
 3. 可逆性：如果存在正数 $a$，使得对任意 $s \in [-a, a]$ 有 $M(s) < \infty$，则 $M(s)$ 唯一决定 $X$ 的分布
 
-4. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的矩母函数为
+4. 如果 $X_1, \dots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的矩母函数为
 $$
 M_Y(s) = M_{X_1}(s) \cdots M_{X_n}(s)
 $$
@@ -155,7 +155,7 @@ $$
 $$
 \phi_{aX+b}(t) = \mathrm{e}^{\mathrm{i}tb} \phi_X(at)
 $$
-5. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的特征函数为
+5. 如果 $X_1, \dots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的特征函数为
 $$
 \phi_Y(t) = \prod_{k=1}^n \phi_k(t)
 $$
@@ -198,7 +198,7 @@ $$
 $$
 ### 11.3.5. 特征函数与独立性
 
-设 $\boldsymbol{X} = (X_1, \ldots, X_n)^{\mathsf T}$ 是随机向量，其特征函数为 $\phi(\boldsymbol{t}) = \mathbb{E}\,\mathrm{e}^{\mathrm{i}\boldsymbol{t}^{\mathsf T}\boldsymbol{X}}$，$\boldsymbol{t} = (t_1, \ldots, t_n)^{\mathsf T}$，则 $X_1, \ldots, X_n$ 相互独立的充要条件是
+设 $\boldsymbol{X} = (X_1, \dots, X_n)^{\mathsf T}$ 是随机向量，其特征函数为 $\phi(\boldsymbol{t}) = \mathbb{E}\,\mathrm{e}^{\mathrm{i}\boldsymbol{t}^{\mathsf T}\boldsymbol{X}}$，$\boldsymbol{t} = (t_1, \dots, t_n)^{\mathsf T}$，则 $X_1, \dots, X_n$ 相互独立的充要条件是
 $$
 \phi(\boldsymbol{t}) = \phi_1(t_1) \phi_2(t_2) \cdots \phi_n(t_n)
 $$

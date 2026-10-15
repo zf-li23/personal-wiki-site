@@ -67,7 +67,7 @@ $$
 | ---------------------------------------------- | -------- | ----------------------------- | ---------------------------------------- |
 | $X \sim \mathrm{Bin}(n, \theta)$                          | $\theta$ | $\mathrm{Beta}(a,b)$            | $\mathrm{Beta}(a+x, b+n-x)$                |
 | $X \sim \mathcal{N}(\theta, \sigma^2)$ ($\sigma^2$ 已知) | $\theta$ | $\mathcal{N}(\mu_0, \tau_0^2)$          | $\mathcal{N}(\mu_n, \tau_n^2)$                     |
-| $X_1, \dots, X_n \overset{\text{iid}}{\sim} \mathrm{Poi}(\theta)$ | $\theta$ | $\Gamma(\alpha, \beta)$ | $\Gamma(\alpha+\sum x_i, \beta+n)$ |
+| $X_1, \dots, X_n \overset{\text{iid}}{\sim} \mathrm{Poi}(\theta)$ | $\theta$ | $\Gamma(\alpha, \lambda)$（$\lambda$ 为速率） | $\Gamma(\alpha+\sum x_i, \lambda+n)$ |
 
 其中后验参数更新公式见具体推导。
 
@@ -104,19 +104,19 @@ $$
 
 - **后验众数估计 (Maximum A Posteriori, MAP)**：
   $$
-  \hat{\theta}_{\text{MAP}} = \arg \max_{\theta} \pi(\theta \mid x)
+  \hat{\theta}_{\mathrm{MAP}} = \arg \max_{\theta} \pi(\theta \mid x)
   $$
   - 在均匀先验下，MAP 等于 MLE。
   
 - **后验均值估计 (Posterior Mean)**：
   $$
-  \hat{\theta}_{\text{mean}} = \mathbb{E}[\theta \mid x] = \int \theta \, \pi(\theta \mid x) \mathrm{d}\theta
+  \hat{\theta}_{\mathrm{mean}} = \mathbb{E}[\theta \mid x] = \int \theta \, \pi(\theta \mid x) \mathrm{d}\theta
   $$
   - 在平方损失下，是**最优估计**（最小化后验均方误差 PMSE）。
 
 - **后验中位数估计 (Posterior Median)**：
   $$
-  \hat{\theta}_{\text{median}} = \pi(\theta \mid x) \text{ 的中位数}
+  \hat{\theta}_{\mathrm{median}} = \pi(\theta \mid x) \text{ 的中位数}
   $$
   - 在绝对损失下最优。
 
@@ -144,8 +144,8 @@ $$
 - $X \sim \mathrm{Bin}(n, \theta)$。
 - 先验：$\theta \sim \mathrm{Beta}(a, b)$。
 - 后验：$\theta \mid x \sim \mathrm{Beta}(a+x, b+n-x)$。
-- 后验均值：$\hat{\theta}_{\text{mean}} = \frac{a+x}{a+b+n}$。
-- 特别当 $a=b=1$（均匀先验）时，$\hat{\theta}_{\text{mean}} = \frac{x+1}{n+2}$，避免极端估计（如 $x=0$ 时估计不为0）。
+- 后验均值：$\hat{\theta}_{\mathrm{mean}} = \frac{a+x}{a+b+n}$。
+- 特别当 $a=b=1$（均匀先验）时，$\hat{\theta}_{\mathrm{mean}} = \frac{x+1}{n+2}$，避免极端估计（如 $x=0$ 时估计不为0）。
 
 ---
 
@@ -312,7 +312,7 @@ $$
   $$
 - 后验均值（平方损失最优）：
   $$
-  \hat{\theta}_{\text{mean}} = \mathbb{E}[\theta \mid x]
+  \hat{\theta}_{\mathrm{mean}} = \mathbb{E}[\theta \mid x]
   $$
 - $1-\alpha$ 可信区间：
   $$

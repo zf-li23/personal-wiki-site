@@ -6,7 +6,7 @@ title: 常见随机变量
 
 ### 4.1.1. 基本概念
 
-**定义**：如果随机变量$X$只取有限个值$x_1, \ldots, x_m$或者可列个值$x_1, x_2, \ldots$，则称$X$是**离散型随机变量**。
+**定义**：如果随机变量$X$只取有限个值$x_1, \dots, x_m$或者可列个值$x_1, x_2, \dots$，则称$X$是**离散型随机变量**。
 
 **概率分布列（PMF）**：
 $$
@@ -37,12 +37,12 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, n
+\mathbb{P}(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \dots, n
 $$
 则称$X$服从**二项分布**，记作$X \sim \mathrm{Bin}(n,p)$。
 
 **性质**：
-- 如果$X_1, \ldots, X_n$相互独立且都服从$\mathrm{Bin}(1,p)$，则$S = X_1 + \cdots + X_n \sim \mathrm{Bin}(n,p)$
+- 如果$X_1, \dots, X_n$相互独立且都服从$\mathrm{Ber}(p)$，则$S = X_1 + \cdots + X_n \sim \mathrm{Bin}(n,p)$
 - 如果$X \sim \mathrm{Bin}(n,p)$，$Y \sim \mathrm{Bin}(m,p)$且相互独立，则$X + Y \sim \mathrm{Bin}(m+n,p)$
 
 **最大可能值**：
@@ -53,7 +53,7 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, \ldots
+\mathbb{P}(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, \dots
 $$
 则称$X$服从**几何分布**，记作$X \sim \mathrm{Geo}(p)$。
 
@@ -66,9 +66,9 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \binom{k-1}{r-1} (1-p)^{k-r} p^r, \quad k = r, r+1, \ldots
+\mathbb{P}(X = k) = \binom{k-1}{r-1} (1-p)^{k-r} p^r, \quad k = r, r+1, \dots
 $$
-则称$X$服从**帕斯卡分布**。
+则称$X$服从**帕斯卡分布**，记作$X \sim \mathrm{Pascal}(r,p)$。
 
 **注**：当$r = 1$时，帕斯卡分布就是几何分布。
 
@@ -76,7 +76,7 @@ $$
 
 **定义**：令$Y = X - r$，则$Y$的概率分布为
 $$
-\mathbb{P}(Y = k) = \binom{k+r-1}{r-1} (1-p)^k p^r, \quad k = 0, 1, \ldots
+\mathbb{P}(Y = k) = \binom{k+r-1}{r-1} (1-p)^k p^r, \quad k = 0, 1, \dots
 $$
 称$Y$服从**负二项分布**，记作$Y \sim \mathrm{NB}(r,p)$。
 
@@ -84,7 +84,7 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}, \quad k = 0, 1, \ldots, \min\{n, M\}
+\mathbb{P}(X = k) = \frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}, \quad k = 0, 1, \dots, \min\{n, M\}
 $$
 则称$X$服从**超几何分布**，记作$X \sim \mathrm{H}(n, M, N)$。
 
@@ -97,7 +97,7 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \frac{\binom{k+r-1}{k}\binom{N-k-r}{M-r}}{\binom{N}{M}}, \quad k = 0, 1, \ldots, N-M
+\mathbb{P}(X = k) = \frac{\binom{k+r-1}{k}\binom{N-k-r}{M-r}}{\binom{N}{M}}, \quad k = 0, 1, \dots, N-M
 $$
 则称$X$服从**负超几何分布**，记作$X \sim \mathrm{NH}(r, M, N)$。
 
@@ -105,7 +105,7 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}, \quad k = 0, 1, 2, \ldots
+\mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}, \quad k = 0, 1, 2, \dots
 $$
 则称$X$服从**泊松分布**，记作$X \sim \mathrm{Poi}(\lambda)$。
 
@@ -249,7 +249,7 @@ f(x) = \frac{1}{2^{v/2} \Gamma(v/2)} x^{\frac{v}{2}-1} \mathrm{e}^{-\frac{x}{2}}
 $$
 称$X$服从**卡方分布**，记作$X \sim \chi_v^2$。
 
-**性质**：如果$Z_1, \ldots, Z_n \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则$X = Z_1^2 + \cdots + Z_n^2 \sim \chi_n^2$
+**性质**：如果$Z_1, \dots, Z_n \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则$X = Z_1^2 + \cdots + Z_n^2 \sim \chi_n^2$
 
 #### 4.2.5.6. t分布
 **定义**：如果$X$的密度为

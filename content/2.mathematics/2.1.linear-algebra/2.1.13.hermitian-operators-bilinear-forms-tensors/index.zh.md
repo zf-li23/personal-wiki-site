@@ -82,7 +82,7 @@ $R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同
 
 **性质 13.3.1**
 
-1. Hermite 二次型取实值：$\overline{f} = \overline{\boldsymbol{x}^{\mathsf H}A\boldsymbol{x}} = (\boldsymbol{x}^{\mathsf H}A\boldsymbol{x})^{\mathsf H} = \boldsymbol{x}^{\mathsf H}A^{\mathsf H}\boldsymbol{x} = f$。
+1. Hermite 二次型取实值：$\bar{f} = \overline{\boldsymbol{x}^{\mathsf H}A\boldsymbol{x}} = (\boldsymbol{x}^{\mathsf H}A\boldsymbol{x})^{\mathsf H} = \boldsymbol{x}^{\mathsf H}A^{\mathsf H}\boldsymbol{x} = f$。
 2. $n$ 阶 Hermite 矩阵与 $n$ 元 Hermite 二次型一一对应：若 $\boldsymbol{x}^{\mathsf H}C\boldsymbol{x} = 0$ 对一切 $\boldsymbol{x} \in \mathbb{C}^n$ 成立，则 $C = O$。取 $\boldsymbol{x} = \boldsymbol{e}_j$ 得 $c_{jj} = 0$；取 $\boldsymbol{x} = \boldsymbol{e}_j + \boldsymbol{e}_k$ 与 $\boldsymbol{x} = \boldsymbol{e}_j + \mathrm{i}\boldsymbol{e}_k$ 得 $c_{jk} + c_{kj} = 0$ 与 $\mathrm{i}(c_{jk} - c_{kj}) = 0$，所以 $c_{jk} = 0$。
 
 作可逆变量替换 $\boldsymbol{x} = P\boldsymbol{y}$，$f = \boldsymbol{x}^{\mathsf H}A\boldsymbol{x} = \boldsymbol{y}^{\mathsf H}(P^{\mathsf H}AP)\boldsymbol{y}$，矩阵按下面的关系变化。

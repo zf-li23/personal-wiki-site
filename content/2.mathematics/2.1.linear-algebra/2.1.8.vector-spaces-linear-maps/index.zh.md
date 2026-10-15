@@ -191,7 +191,7 @@ $f+g$、$kf$、$gf$ 仍是线性映射，$\operatorname{Hom}(U,V)$ 关于加法�
 
 **证明** 子空间由线性直接验证。若 $f$ 单射，则 $f(a)=0=f(0)$ 推出 $a=0$；反之若 $\mathcal{N}(f)=\{0\}$，由 $f(a)=f(b)$ 得 $f(a-b)=0$，$a=b$。满射的刻画是定义。$\square$
 
-**定义 8.4.4（线性变换的特征值）** 线性空间 $U$ 到自身的线性映射称为 $U$ 上的**线性变换**。设 $f\in\operatorname{Hom}(U,U)$，若 $\lambda\in \mathbb{F}$ 与非零向量 $x\in U$ 满足 $f(x)=\lambda x$，则称 $\lambda$ 为 $f$ 的**特征值**，$x$ 为 $f$ 的属于 $\lambda$ 的**特征向量**，$(\lambda,x)$ 为 $f$ 的特征对；核 $\mathcal{N}(\lambda I-f)$ 称为 $f$ 的属于 $\lambda$ 的**特征子空间**，其中 $I$ 是**恒等映射**。
+**定义 8.4.4（线性变换的特征值）** 线性空间 $U$ 到自身的线性映射称为 $U$ 上的**线性变换**。设 $f\in\operatorname{Hom}(U,U)$，若 $\lambda\in \mathbb{F}$ 与非零向量 $x\in U$ 满足 $f(x)=\lambda x$，则称 $\lambda$ 为 $f$ 的**特征值**，$x$ 为 $f$ 的属于 $\lambda$ 的**特征向量**，$(\lambda,x)$ 为 $f$ 的特征对；核 $\mathcal{N}(\lambda\,\mathrm{id}-f)$ 称为 $f$ 的属于 $\lambda$ 的**特征子空间**，其中 $\mathrm{id}$ 是**恒等映射**。
 
 **命题 8.4.2** 线性变换属于不同特征值的特征向量线性无关。
 
@@ -200,10 +200,10 @@ $f+g$、$kf$、$gf$ 仍是线性映射，$\operatorname{Hom}(U,V)$ 关于加法�
 **例 8.4.1（线性映射的例子）**
 
 - 设 $A\in \mathbb{F}^{m\times n}$，左乘 $L_A\colon \mathbb{F}^{n\times p}\to \mathbb{F}^{m\times p}$，$X\mapsto AX$ 与右乘 $R_A\colon \mathbb{F}^{\ell\times m}\to \mathbb{F}^{\ell\times n}$，$X\mapsto XA$ 都是线性映射。
-- **转置** $\mathbb{F}^{m\times n}\to \mathbb{F}^{n\times m}$，$A\mapsto A^{\mathsf T}$ 与取**迹** $\mathbb{F}^{n\times n}\to \mathbb{F}$，$A\mapsto\operatorname{tr}A$ 都是线性映射。
+- **转置** $\mathbb{F}^{m\times n}\to \mathbb{F}^{n\times m}$，$A\mapsto A^{\mathsf T}$ 与取**迹** $\mathbb{F}^{n\times n}\to \mathbb{F}$，$A\mapsto\operatorname{tr}(A)$ 都是线性映射。
 - 在 $n$ 个两两不同的点取值：$C(\mathbb{R})\to\mathbb{R}^n$，$f\mapsto[f(x_i)]$ 是线性映射；插值问题就是问它限制在 $\mathbb{R}[x]_n$ 上是否为双射（例 8.3.3 说明是）。
-- 对称化 $S\colon \mathbb{F}^{n\times n}\to \mathbb{F}^{n\times n}$，$A\mapsto\frac12(A+A^{\mathsf T})$ 是线性变换，$\mathcal{N}(S)$ 与 $\mathcal{R}(S)$ 分别是反对称、对称矩阵构成的子空间。由 $S^2=S$，特征值满足 $\lambda^2=\lambda$，所以只能是 $1,0$，相应的特征子空间为 $\mathcal{N}(I-S)=\mathcal{R}(S)$ 与 $\mathcal{N}(S)$。
-- 在 $C^\infty(\mathbb{R})$ 上，求导算子 $D=\frac{\mathrm{d}}{\mathrm{d}x}$ 是线性变换，$\mathcal{N}(D)$ 是常值函数构成的子空间。由 $(\lambda I-D)f=0$，即 $f'=\lambda f$，解得 $f=k\mathrm{e}^{\lambda x}$，所以每个实数 $\lambda$ 都是 $D$ 的特征值，$\mathrm{e}^{\lambda x}$ 是相应的特征向量。结合命题 8.4.2，这再次证明了例 8.3.4。
+- 对称化 $S\colon \mathbb{F}^{n\times n}\to \mathbb{F}^{n\times n}$，$A\mapsto\frac12(A+A^{\mathsf T})$ 是线性变换，$\mathcal{N}(S)$ 与 $\mathcal{R}(S)$ 分别是反对称、对称矩阵构成的子空间。由 $S^2=S$，特征值满足 $\lambda^2=\lambda$，所以只能是 $1,0$，相应的特征子空间为 $\mathcal{N}(\mathrm{id}-S)=\mathcal{R}(S)$ 与 $\mathcal{N}(S)$。
+- 在 $C^\infty(\mathbb{R})$ 上，求导算子 $D=\frac{\mathrm{d}}{\mathrm{d}x}$ 是线性变换，$\mathcal{N}(D)$ 是常值函数构成的子空间。由 $(\lambda\,\mathrm{id}-D)f=0$，即 $f'=\lambda f$，解得 $f=k\mathrm{e}^{\lambda x}$，所以每个实数 $\lambda$ 都是 $D$ 的特征值，$\mathrm{e}^{\lambda x}$ 是相应的特征向量。结合命题 8.4.2，这再次证明了例 8.3.4。
 - $V=\left\{\begin{bmatrix}a&-b\\b&a\end{bmatrix}\,\middle|\,a,b\in\mathbb{R}\right\}$ 是 $\mathbb{R}^{2\times2}$ 的子空间，$\mathbb{C}\to V$，$a+b\mathrm{i}\mapsto\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 是 $\mathbb{R}$ 上线性空间之间的双射线性映射，并且保持乘法（[第 9 章](/2.1.9)）。
 - 给定可逆矩阵 $T\in \mathbb{F}^{n\times n}$，$\boldsymbol{x}\mapsto T\boldsymbol{x}$ 是 $\mathbb{F}^n$ 到自身的可逆线性变换。
 
@@ -326,13 +326,13 @@ $$
 
 所以同构 $\sigma$ 不仅保持线性运算，也保持乘法：线性映射的代数与矩阵的代数完全相同。这解释了矩阵乘法为什么要那样定义，也说明 $f$ 可逆当且仅当它的矩阵可逆（$\dim U=\dim V$ 时），且 $\sigma(f^{-1})=\sigma(f)^{-1}$。
 
-**命题 8.6.3** 设 $F$ 是 $f\in\operatorname{Hom}(U,V)$ 在基 $e_1,\dots,e_n;\eta_1,\dots,\eta_m$ 下的矩阵，则坐标映射限制为同构 $\mathcal{N}(f)\to\mathcal{N}(F)$ 与 $\mathcal{R}(f)\to\mathcal{R}(F)$。于是 $\dim\mathcal{N}(f)=\dim\mathcal{N}(F)$，$\dim\mathcal{R}(f)=\operatorname{rank}F$，并且
+**命题 8.6.3** 设 $F$ 是 $f\in\operatorname{Hom}(U,V)$ 在基 $e_1,\dots,e_n;\eta_1,\dots,\eta_m$ 下的矩阵，则坐标映射限制为同构 $\mathcal{N}(f)\to\mathcal{N}(F)$ 与 $\mathcal{R}(f)\to\mathcal{R}(F)$。于是 $\dim\mathcal{N}(f)=\dim\mathcal{N}(F)$，$\dim\mathcal{R}(f)=\operatorname{rank}(F)$，并且
 
 $$
 \dim\mathcal{N}(f)+\dim\mathcal{R}(f)=\dim U.
 $$
 
-**证明** 由 $\widehat{f(a)}=F\hat{\boldsymbol{a}}$，$a\in\mathcal{N}(f)$ 当且仅当 $\hat{\boldsymbol{a}}\in\mathcal{N}(F)$；$b\in\mathcal{R}(f)$ 当且仅当存在 $\hat{\boldsymbol{a}}$ 使 $\hat{\boldsymbol{b}}=F\hat{\boldsymbol{a}}$，即 $\hat{\boldsymbol{b}}\in\mathcal{R}(F)$。最后一式是矩阵的**秩–零化度定理** $\dim\mathcal{N}(F)+\operatorname{rank}F=n$。$\square$
+**证明** 由 $\widehat{f(a)}=F\hat{\boldsymbol{a}}$，$a\in\mathcal{N}(f)$ 当且仅当 $\hat{\boldsymbol{a}}\in\mathcal{N}(F)$；$b\in\mathcal{R}(f)$ 当且仅当存在 $\hat{\boldsymbol{a}}$ 使 $\hat{\boldsymbol{b}}=F\hat{\boldsymbol{a}}$，即 $\hat{\boldsymbol{b}}\in\mathcal{R}(F)$。最后一式是矩阵的**秩–零化度定理** $\dim\mathcal{N}(F)+\operatorname{rank}(F)=n$。$\square$
 
 $\dim\mathcal{R}(f)$ 称为 $f$ 的秩，它不依赖于基的选取。由此，当 $\dim U=\dim V<\infty$ 时，$f\in\operatorname{Hom}(U,V)$ 是单射 ⇔ 满射 ⇔ 双射；无限维时这不成立，例如 $\mathbb{R}[x]$ 上的求导是满射但不是单射。
 
@@ -362,7 +362,7 @@ $$
 
 所以同一个线性映射在不同基下的矩阵**相抵**。反之也成立：
 
-**定理 8.7.2** 设 $f\in\operatorname{Hom}(U,V)$ 在某两组基下的矩阵是 $F$，则对任意与 $F$ 相抵的矩阵 $\tilde F$，存在 $U,V$ 的基使 $f$ 在其下的矩阵是 $\tilde F$。特别地，存在 $U,V$ 的基使 $f$ 的矩阵是**相抵标准形** $\begin{bmatrix}I_r&O\\O&O\end{bmatrix}$，$r=\operatorname{rank}F=\dim\mathcal{R}(f)$。
+**定理 8.7.2** 设 $f\in\operatorname{Hom}(U,V)$ 在某两组基下的矩阵是 $F$，则对任意与 $F$ 相抵的矩阵 $\tilde F$，存在 $U,V$ 的基使 $f$ 在其下的矩阵是 $\tilde F$。特别地，存在 $U,V$ 的基使 $f$ 的矩阵是**相抵标准形** $\begin{bmatrix}I_r&O\\O&O\end{bmatrix}$，$r=\operatorname{rank}(F)=\dim\mathcal{R}(f)$。
 
 **证明** 若 $\tilde F=PFQ$，$P,Q$ 可逆，取 $T=Q$，$S=P^{-1}$，由命题 8.5.2 它们确定新的基，由定理 8.7.1 新矩阵为 $S^{-1}FT=\tilde F$。$\square$
 
@@ -423,7 +423,7 @@ $$
 这个矩阵对称，可对角化，特征值为 $0$（一重）与 $1$（三重），特征向量分别是 $[0\ 1\ {-1}\ 0]^{\mathsf T}$ 与 $[1\ 0\ 0\ 0]^{\mathsf T},[0\ 0\ 0\ 1]^{\mathsf T},[0\ 1\ 1\ 0]^{\mathsf T}$。换回矩阵，
 
 $$
-\mathcal{N}(S)=\operatorname{span}\left(\begin{bmatrix}0&-1\\1&0\end{bmatrix}\right),\qquad \mathcal{N}(I-S)=\mathcal{R}(S)=\operatorname{span}\left(\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix}\right),
+\mathcal{N}(S)=\operatorname{span}\left(\begin{bmatrix}0&-1\\1&0\end{bmatrix}\right),\qquad \mathcal{N}(\mathrm{id}-S)=\mathcal{R}(S)=\operatorname{span}\left(\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix}\right),
 $$
 
 在基 $\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ 下，$S$ 的矩阵是 $\operatorname{diag}(1,1,1,0)$。
@@ -508,7 +508,7 @@ $f^{\mathsf t}$ 是线性映射，并满足 $\langle f^{\mathsf t}\varphi,u\rang
 
 **证明** 由定理 8.8.1，$f^{\mathsf t}(\eta_k^*)=\sum_j\big(f^{\mathsf t}\eta_k^*\big)(e_j)\,e_j^*=\sum_j\eta_k^*\big(f(e_j)\big)e_j^*$。而 $f(e_j)=\sum_lf_{lj}\eta_l$，所以 $\eta_k^*(f(e_j))=f_{kj}$，即 $f^{\mathsf t}(\eta_k^*)$ 的坐标是 $F$ 的第 $k$ 行，$f^{\mathsf t}$ 的矩阵的第 $k$ 列是 $F$ 的第 $k$ 行。$\square$
 
-所以矩阵的**转置**就是对偶映射的矩阵。矩阵转置的性质由此都有了不依赖坐标的解释：$(gf)^{\mathsf t}=f^{\mathsf t}g^{\mathsf t}$ 对应 $(GF)^{\mathsf T}=F^{\mathsf T}G^{\mathsf T}$；$\operatorname{rank}f^{\mathsf t}=\operatorname{rank}f$ 对应行秩等于列秩；$f^{\mathsf t}$ 的核是在 $\mathcal{R}(f)$ 上取零的线性函数的全体，对应 $\mathcal{N}(A^{\mathsf T})$ 与 $\mathcal{R}(A)$ 的正交关系。在 $\mathbb{R}^n$ 中用命题 8.8.1 把线性函数等同于向量，对偶映射就是**伴随变换**在标准正交基下的特例。对偶空间与 $V^*\times V\to \mathbb{F}$ 的配对是 [第 13 章](/2.1.13) 双线性型与张量的出发点。
+所以矩阵的**转置**就是对偶映射的矩阵。矩阵转置的性质由此都有了不依赖坐标的解释：$(gf)^{\mathsf t}=f^{\mathsf t}g^{\mathsf t}$ 对应 $(GF)^{\mathsf T}=F^{\mathsf T}G^{\mathsf T}$；$\operatorname{rank}(f^{\mathsf t})=\operatorname{rank}(f)$ 对应行秩等于列秩；$f^{\mathsf t}$ 的核是在 $\mathcal{R}(f)$ 上取零的线性函数的全体，对应 $\mathcal{N}(A^{\mathsf T})$ 与 $\mathcal{R}(A)$ 的正交关系。在 $\mathbb{R}^n$ 中用命题 8.8.1 把线性函数等同于向量，对偶映射就是**伴随变换**在标准正交基下的特例。对偶空间与 $V^*\times V\to \mathbb{F}$ 的配对是 [第 13 章](/2.1.13) 双线性型与张量的出发点。
 
 ## 小结
 

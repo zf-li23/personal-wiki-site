@@ -58,6 +58,7 @@ title: 区间估计与置信区间
   $$
   \left[ \bar{X} - \frac{\sigma}{\sqrt{n}} z_{\alpha/2},\; \bar{X} + \frac{\sigma}{\sqrt{n}} z_{\alpha/2} \right]
   $$
+  其中 $z_{\alpha/2}$ 是 $\mathcal{N}(0,1)$ 的上 $\alpha/2$ 分位数，即 $\mathbb{P}(Z > z_{\alpha/2}) = \alpha/2$；下文的 $t_{n,\alpha}$、$\chi^2_{n,\alpha}$、$F_{m,n,\alpha}$ 也都是上 $\alpha$ 分位数。
 
 - **方差未知**：$\sigma^2$ 未知，$\mu$ 未知。
   枢轴变量：
@@ -78,7 +79,7 @@ title: 区间估计与置信区间
   $$
   置信区间：
   $$
-  \left[ \frac{n S_\mu^2}{\chi_{n;\alpha/2}^2},\; \frac{n S_\mu^2}{\chi_{n;1-\alpha/2}^2} \right]
+  \left[ \frac{n S_\mu^2}{\chi^2_{n,\alpha/2}},\; \frac{n S_\mu^2}{\chi^2_{n,1-\alpha/2}} \right]
   $$
 
 - **均值未知**：$\mu$ 未知，$\sigma^2$ 未知。
@@ -88,7 +89,7 @@ title: 区间估计与置信区间
   $$
   置信区间：
   $$
-  \left[ \frac{(n-1)S^2}{\chi_{n-1;\alpha/2}^2},\; \frac{(n-1)S^2}{\chi_{n-1;1-\alpha/2}^2} \right]
+  \left[ \frac{(n-1)S^2}{\chi^2_{n-1,\alpha/2}},\; \frac{(n-1)S^2}{\chi^2_{n-1,1-\alpha/2}} \right]
   $$
 
 ### 4.2.4. 两正态总体均值差的置信区间（方差相等）
@@ -114,7 +115,7 @@ title: 区间估计与置信区间
   $$
 - 置信区间：
   $$
-  \left[ \frac{S_X^2}{S_Y^2} F_{n-1,m-1;1-\alpha/2},\; \frac{S_X^2}{S_Y^2} F_{n-1,m-1;\alpha/2} \right]
+  \left[ \frac{S_X^2}{S_Y^2} F_{n-1,m-1,1-\alpha/2},\; \frac{S_X^2}{S_Y^2} F_{n-1,m-1,\alpha/2} \right]
   $$
 
 ### 4.2.6. 均匀分布参数的置信区间
@@ -135,7 +136,7 @@ title: 区间估计与置信区间
   $$
 - 置信区间：
   $$
-  \left[ \frac{\chi_{2n;1-\alpha/2}^2}{2n\bar{X}},\; \frac{\chi_{2n;\alpha/2}^2}{2n\bar{X}} \right]
+  \left[ \frac{\chi^2_{2n,1-\alpha/2}}{2n\bar{X}},\; \frac{\chi^2_{2n,\alpha/2}}{2n\bar{X}} \right]
   $$
 
 ---
@@ -151,7 +152,7 @@ title: 区间估计与置信区间
   $$
 
 ### 4.3.2. 伯努利分布参数的近似置信区间
-- $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathrm{Bin}(1,\theta)$。
+- $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathrm{Ber}(\theta)$。
 - 由 CLT：
   $$
   \frac{\sqrt{n}(\bar{X}_n - \theta)}{\sqrt{\theta(1-\theta)}} \xrightarrow{d} \mathcal{N}(0,1)
@@ -177,7 +178,7 @@ title: 区间估计与置信区间
   $$
 
 ### 4.3.4. 指数分布参数的近似置信区间
-- $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathrm{Exp}(\theta)$，其中 $\mathbb{E} X_1 = \theta$。
+- $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathrm{Exp}(1/\theta)$，即速率为 $1/\theta$、均值 $\mathbb{E} X_1 = \theta$。
 - 近似枢轴变量：
   $$
   \frac{\sqrt{n}(\bar{X}_n - \theta)}{\bar{X}_n} \xrightarrow{d} \mathcal{N}(0,1)
@@ -255,7 +256,7 @@ title: 区间估计与置信区间
   $$
 - 单正态方差（均值未知）：
   $$
-  \left[ \frac{(n-1)S^2}{\chi_{n-1;\alpha/2}^2},\; \frac{(n-1)S^2}{\chi_{n-1;1-\alpha/2}^2} \right]
+  \left[ \frac{(n-1)S^2}{\chi^2_{n-1,\alpha/2}},\; \frac{(n-1)S^2}{\chi^2_{n-1,1-\alpha/2}} \right]
   $$
 - 两正态均值差（方差相等）：
   $$

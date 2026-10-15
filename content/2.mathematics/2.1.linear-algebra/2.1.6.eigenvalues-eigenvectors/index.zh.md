@@ -61,7 +61,7 @@ $$
 
 由行列式的完全展开（定理 5.7.1），右端是关于 $\lambda$ 的首项系数为 $1$ 的 $n$ 次多项式。求多项式的根必然要用到复数，因此本章在复数集 $\mathbb{C}$ 上考虑向量和矩阵，除非特别说明。实矩阵的矩阵运算、线性方程组、子空间、基与维数、行列式等概念和结论都可以原样推广到复矩阵。内积与正交性是例外：复向量 $\boldsymbol{a}, \boldsymbol{b} \in \mathbb{C}^n$ 的内积要定义为 $\boldsymbol{a}^{\mathsf H}\boldsymbol{b} = \overline{\boldsymbol{a}}^{\mathsf T}\boldsymbol{b}$，见[第 12 章](/2.1.12)。
 
-对 $a, b \in \mathbb{R}$，复数 $a + b\mathrm{i}$ 的共轭记为 $\overline{a + b\mathrm{i}} = a - b\mathrm{i}$。共轭保持加法和乘法：$\overline{z + w} = \overline{z} + \overline{w}$，$\overline{zw} = \overline{z}\,\overline{w}$。复矩阵的共轭 $\overline{A}$ 是逐元素取共轭，同样有 $\overline{AB} = \overline{A}\,\overline{B}$。复数与复向量空间的系统讨论见[第 9 章](/2.1.9)。
+对 $a, b \in \mathbb{R}$，复数 $a + b\mathrm{i}$ 的共轭记为 $\overline{a + b\mathrm{i}} = a - b\mathrm{i}$。共轭保持加法和乘法：$\overline{z + w} = \bar{z} + \bar{w}$，$\overline{zw} = \bar{z}\,\bar{w}$。复矩阵的共轭 $\bar{A}$ 是逐元素取共轭，同样有 $\overline{AB} = \bar{A}\,\bar{B}$。复数与复向量空间的系统讨论见[第 9 章](/2.1.9)。
 
 ## 6.2. 多项式的根
 
@@ -101,7 +101,7 @@ $$
 
 **命题 6.2.1** 若 $a + b\mathrm{i}$ 是实系数多项式 $p(x)$ 的根，则 $\overline{a + b\mathrm{i}} = a - b\mathrm{i}$ 也是它的根，且二者重数相同。
 
-**证明** 设 $p(x) = \sum_k a_kx^{n-k}$，$a_k \in \mathbb{R}$。共轭保持加法与乘法，故 $p(\overline{z}) = \sum_k a_k\overline{z}^{\,n-k} = \overline{\sum_k a_kz^{n-k}} = \overline{p(z)}$，$p(z) = 0$ 推出 $p(\overline{z}) = 0$。对因式分解 $p(x) = a_0\prod(x - x_i)^{n_i}$ 两边取共轭，由分解的唯一性知 $z$ 与 $\overline{z}$ 重数相同。$\square$
+**证明** 设 $p(x) = \sum_k a_kx^{n-k}$，$a_k \in \mathbb{R}$。共轭保持加法与乘法，故 $p(\bar{z}) = \sum_k a_k\bar{z}^{\,n-k} = \overline{\sum_k a_kz^{n-k}} = \overline{p(z)}$，$p(z) = 0$ 推出 $p(\bar{z}) = 0$。对因式分解 $p(x) = a_0\prod(x - x_i)^{n_i}$ 两边取共轭，由分解的唯一性知 $z$ 与 $\bar{z}$ 重数相同。$\square$
 
 ## 6.3. 特征值与特征向量
 
@@ -183,7 +183,7 @@ $$
 
 **命题 6.4.1** 若 $n$ 阶实方阵 $A$ 有非实数的特征值 $\lambda_0$，则 $\overline{\lambda_0}$ 也是 $A$ 的特征值，且二者代数重数相等。进一步，若 $\boldsymbol{x}_0$ 是属于 $\lambda_0$ 的特征向量，则 $\overline{\boldsymbol{x}_0}$ 是属于 $\overline{\lambda_0}$ 的特征向量。
 
-**证明** $p_A$ 是实系数多项式，由命题 6.2.1 即得关于特征值的结论。对 $A\boldsymbol{x}_0 = \lambda_0\boldsymbol{x}_0$ 取共轭，由 $\overline{A} = A$ 得 $A\overline{\boldsymbol{x}_0} = \overline{\lambda_0}\,\overline{\boldsymbol{x}_0}$。$\square$
+**证明** $p_A$ 是实系数多项式，由命题 6.2.1 即得关于特征值的结论。对 $A\boldsymbol{x}_0 = \lambda_0\boldsymbol{x}_0$ 取共轭，由 $\bar{A} = A$ 得 $A\overline{\boldsymbol{x}_0} = \overline{\lambda_0}\,\overline{\boldsymbol{x}_0}$。$\square$
 
 例 6.3.1 中的 $\pm\mathrm{i}$ 与例 6.3.2 中旋转的 $\cos\theta \pm \mathrm{i}\sin\theta$ 都是这样的共轭对，对应的特征向量也互为共轭。
 

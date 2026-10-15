@@ -28,7 +28,7 @@ title: 概率模型与性质
 ### 1.2.1. 概率公理系统
 1. **非负性**：对一切事件 $A$，$\mathbb{P}(A) \geq 0$
 2. **归一化**：$\mathbb{P}(\Omega) = 1$
-3. **可列可加性**：若 $A_1, A_2, \ldots$ 互不相交，则
+3. **可列可加性**：若 $A_1, A_2, \dots$ 互不相交，则
    $$
    \mathbb{P}\left( \bigcup_{i=1}^{\infty} A_i \right) = \sum_{i=1}^{\infty} \mathbb{P}(A_i)
    $$
