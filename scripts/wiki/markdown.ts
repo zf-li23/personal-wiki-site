@@ -155,6 +155,9 @@ function remarkWikiChecks(state: State) {
           line,
         );
       }
+      if (state.ctx.contentLang === 'en' && hanText(node)) {
+        state.ctx.diag.warn(state.ctx.file, `Chinese text on an English page: "${truncateText(hanText(node)!, 40)}" (translate it; sources belong in the front matter)`, line);
+      }
       if (node.type === 'text' && node.position) {
         const raw = source.slice(node.position.start.offset, node.position.end.offset);
         if (/(?<!\\)\\\(/.test(raw)) {
@@ -166,6 +169,17 @@ function remarkWikiChecks(state: State) {
     });
     checkPageHeadings(state, headings);
   };
+}
+
+/** The text of a node that contains Han characters (prose, math, code, image alt), or null. */
+function hanText(node: { type: string; value?: unknown; alt?: unknown }): string | null {
+  const text = node.type === 'image' ? node.alt : /^(text|inlineMath|math|inlineCode|code)$/.test(node.type) ? node.value : null;
+  return typeof text === 'string' && /\p{Script=Han}/u.test(text) ? text : null;
+}
+
+function truncateText(s: string, n: number): string {
+  const t = s.replace(/\s+/g, ' ').trim();
+  return t.length > n ? `${t.slice(0, n)}…` : t;
 }
 
 /** Upper pages (discipline, course) are overviews without headings; chapter pages follow the numbering rules. */

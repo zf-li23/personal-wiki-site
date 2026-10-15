@@ -4,10 +4,12 @@
  *  1. Statement index: numbered statements and tagged equations per course,
  *     so "定理 13.2.1" / "Theorem 13.2.1" / "式 (13.2)" in plain text link to their anchor.
  *     Numbers are course-scoped: references are only resolved within the same course.
- *  2. Concept definition sites (registry in glossary.ts), found in the source-language pages:
+ *  2. Concept definition sites (registry in glossary.ts), found in each page's source language:
  *       - a 定义 statement whose name is the concept:  **定义 13.1.1（依分布收敛）**
  *       - a bold concept name inside a 定义 statement:  **定义 1.1.1** 称 ……为**合取**
- *       - an annotated occurrence:  依分布收敛（convergence in distribution）
+ *       - outside definitions, an annotated occurrence:  依分布收敛（convergence in distribution）
+ *         in Chinese, an italic occurrence in English:  *convergence in distribution*
+ *     English names match case-insensitively and in the plural (**groups** → group).
  *     A concept may be defined on one page only.
  *  3. Concept links: a bold run whose whole text is a concept name (**群**, **依分布收敛**)
  *     links to the definition (or, if there is none yet, becomes a hover card). Running text
@@ -95,6 +97,34 @@ function conceptNames(concept: Concept, lang: Lang): string[] {
   return [...new Set(names)].filter(Boolean);
 }
 
+/** Lookup keys of a written name: itself, and for English lower-cased with plural forms undone. */
+function nameKeys(text: string, lang: Lang): string[] {
+  const t = text.trim().replace(/\s+/g, ' ');
+  if (lang !== 'en') return [t];
+  const l = t.toLowerCase();
+  const keys = [l];
+  if (l.endsWith('ies')) keys.push(`${l.slice(0, -3)}y`);
+  if (/(s|x|z|ch|sh)es$/.test(l)) keys.push(l.slice(0, -2));
+  if (l.endsWith('s') && !l.endsWith('ss')) keys.push(l.slice(0, -1));
+  return keys;
+}
+
+/** Concepts by name in one language (only those in scope for the page, when given). */
+function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: string) => Concept | undefined {
+  const map = new Map<string, Concept>();
+  for (const c of concepts) {
+    if (pageId && !inScope(c, pageId)) continue;
+    for (const n of conceptNames(c, lang)) map.set(nameKeys(n, lang)[0], c);
+  }
+  return (text) => {
+    for (const k of nameKeys(text, lang)) {
+      const c = map.get(k);
+      if (c) return c;
+    }
+    return undefined;
+  };
+}
+
 /* ------------------------------------------------------------------ index */
 
 interface SiteCandidate extends Target {
@@ -112,26 +142,24 @@ export function buildLinkIndex(
   const statements = new Map<string, Target>();
   const candidates = new Map<string, SiteCandidate[]>();
   const add = (id: string, c: SiteCandidate) => candidates.set(id, [...(candidates.get(id) ?? []), c]);
-  const byZhName = new Map<string, Concept>();
-  for (const c of concepts) for (const n of conceptNames(c, 'zh')) byZhName.set(n, c);
 
   for (const [pageId, out] of sourceRenders) {
     const course = courseOf(pageId);
     const file = sourceFiles.get(pageId) ?? pageId;
+    const lookup = nameIndex(concepts, out.contentLang, pageId);
     for (const s of out.statements) {
       statements.set(`${course}|${s.kind}|${s.number}`, { pageId, anchor: s.anchor });
-      const named = s.kind === 'def' && s.name ? byZhName.get(s.name) : undefined;
-      const concept = named && inScope(named, pageId) ? named : undefined;
+      const concept = s.kind === 'def' && s.name ? lookup(s.name) : undefined;
       if (concept) add(concept.id, { pageId, anchor: s.anchor, file });
     }
     // A bold concept name inside a 定义 statement is the term being defined there.
     eachStrong(out.hast, (strong, _parent, _i, def) => {
-      const named = def ? byZhName.get(hastToString(strong).trim()) : undefined;
-      if (named && def && inScope(named, pageId)) add(named.id, { pageId, anchor: def, file });
+      const concept = def ? lookup(hastToString(strong)) : undefined;
+      if (concept && def) add(concept.id, { pageId, anchor: def, file });
     });
     for (const concept of concepts) {
       if (!inScope(concept, pageId)) continue;
-      const anchor = markAnnotatedDefinition(out.hast, concept);
+      const anchor = markAnnotatedDefinition(out.hast, concept, out.contentLang);
       if (anchor) {
         out.anchors.add(anchor);
         add(concept.id, { pageId, anchor, file });
@@ -152,7 +180,7 @@ export function buildLinkIndex(
     // Restating a definition in a later chapter (a 定义 label) is normal; a second English
     // annotation is not, because the annotation marks *the* definition.
     for (const extra of list.filter((c) => c.pageId !== chosen.pageId && c.anchor.startsWith('concept-'))) {
-      diag.error(extra.file, `concept "${concept.zh}（${concept.en}）" is already defined on page ${chosen.pageId}; keep the English annotation only at the definition`);
+      diag.error(extra.file, `concept "${concept.zh}（${concept.en}）" is already defined on page ${chosen.pageId}; keep the defining mark (English annotation, or italics in English) only at the definition`);
     }
   }
   void tree;
@@ -160,11 +188,13 @@ export function buildLinkIndex(
 }
 
 /**
- * Find "名称（English）" (or a bold 名称 followed by （English）) in a source page and turn the
- * name into <dfn id="concept-…">. Returns the anchor, or null when the page has no annotation.
+ * Find the marked defining occurrence outside definitions and turn it into <dfn id="concept-…">:
+ * in Chinese "名称（English）" (or a bold 名称 followed by （English）), in English the first
+ * italic occurrence of the name. Returns the anchor, or null when the page has no such mark.
  */
-function markAnnotatedDefinition(root: Root, concept: Concept): string | null {
+function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): string | null {
   const anchor = `concept-${concept.id}`;
+  if (lang === 'en') return markEmphasis(root, concept, anchor, ['em', 'i']) ? anchor : null;
   const enRe = new RegExp(`^\\s*[（(]\\s*${escapeRe(concept.en)}\\s*[）)]`, 'i');
   let found = false;
 
@@ -257,19 +287,17 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
     if (site.pageId !== pageId) continue;
     result.concepts.add(id);
     if (site.anchor.startsWith('concept-') && !out.anchors.has(site.anchor)) {
-      // Translation of the defining page: its first bold mention becomes the definition anchor.
+      // Translation of the defining page: its own defining mark (annotation / italics),
+      // or else its first bold mention, becomes the definition anchor.
       const concept = index.concepts.find((c) => c.id === id)!;
-      if (markBoldDefinition(out.hast, conceptNames(concept, lang), lang, site.anchor, id)) out.anchors.add(site.anchor);
+      const marked = markAnnotatedDefinition(out.hast, concept, lang) ?? (markFirstBold(out.hast, concept, lang, site.anchor) ? site.anchor : null);
+      if (marked === site.anchor) out.anchors.add(site.anchor);
     }
   }
-  const byName = new Map<string, string>();
-  for (const c of index.concepts) {
-    if (!inScope(c, pageId)) continue;
-    for (const n of conceptNames(c, lang)) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
-  }
+  const lookup = nameIndex(index.concepts, lang, pageId);
   eachStrong(out.hast, (strong, parent, i, def) => {
     const name = hastToString(strong).trim();
-    const id = byName.get(lang === 'en' ? name.toLowerCase() : name);
+    const id = lookup(name)?.id;
     if (!id) {
       if (!PROOF_WORD.test(name) && !parseStatementLabel(name)) result.plainBold.push({ text: name, inDefinition: !!def });
       return;
@@ -311,14 +339,32 @@ function eachStrong(root: Root | Element, fn: (node: Element, parent: Root | Ele
   walk(root, null);
 }
 
-/** In a translated defining page, turn the first bold mention of the concept into <dfn id=…>. */
-function markBoldDefinition(root: Root, names: string[], lang: Lang, anchor: string, id: string): boolean {
-  const wanted = new Set(names.map((n) => (lang === 'en' ? n.toLowerCase() : n)));
+/** Wrap the first emphasised (`tags`) occurrence of the concept's English name in <dfn id=anchor>. */
+function markEmphasis(root: Root, concept: Concept, anchor: string, tags: string[]): boolean {
+  const lookup = nameIndex([concept], 'en');
+  let done = false;
+  const walk = (parent: Root | Element) => {
+    const children = parent.children as (RootContent | ElementContent)[];
+    for (let i = 0; i < children.length && !done; i++) {
+      const child = children[i];
+      if (child.type !== 'element' || skippable(child)) continue;
+      if (tags.includes(child.tagName) && lookup(hastToString(child))) {
+        children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: concept.id }, [child]);
+        done = true;
+      } else walk(child);
+    }
+  };
+  walk(root);
+  return done;
+}
+
+/** In a translated defining page without a defining mark, wrap the first bold mention in <dfn id=anchor>. */
+function markFirstBold(root: Root, concept: Concept, lang: Lang, anchor: string): boolean {
+  const lookup = nameIndex([concept], lang);
   let done = false;
   eachStrong(root, (strong, parent, i) => {
-    const name = hastToString(strong).trim();
-    if (done || !wanted.has(lang === 'en' ? name.toLowerCase() : name)) return;
-    parent.children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: id }, [strong]);
+    if (done || !lookup(hastToString(strong))) return;
+    parent.children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: concept.id }, [strong]);
     done = true;
   });
   return done;

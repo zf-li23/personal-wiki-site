@@ -3,7 +3,10 @@
  *
  *   build [--strict]                 content/ -> .generated/ ; exits 1 on errors (and on warnings with --strict)
  *   status [--all]                   translation status per page (stale / untranslated / ...)
- *   stamp <id>... | --all            mark translations as up to date with the current source text
+ *   stamp <id>... [--from <lang>] | --all
+ *                                    mark translations as up to date with the current source text;
+ *                                    --from names the source language when both files are written
+ *                                    and neither is stamped yet (a page may be written in either language)
  *   new <parent-id|root> <slug> <zh-title> <en-title>
  *                                    create the next page under a parent, with both language files
  *   terms                            concept report: concepts without a definition, uses before the definition
@@ -14,7 +17,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { LANGUAGES, siteConfig } from '../site.config.ts';
+import { LANGUAGES, type Lang, isLang } from '../site.config.ts';
 import { compareIds, idSegments } from '../src/shared/page-id.ts';
 import { buildContent, sourceHash, translationStatus } from './wiki/build.ts';
 import { Diagnostics } from './wiki/diagnostics.ts';
@@ -22,11 +25,11 @@ import { fixMarkdown } from './wiki/fix.ts';
 import { serializePageFile } from './wiki/frontmatter.ts';
 import { CONTENT_DIR, REPO_ROOT, rel } from './wiki/paths.ts';
 import { removeFrozen, renderPlots, writeFrozen } from './wiki/plots.ts';
-import { pageFileName, scanContent } from './wiki/scan.ts';
+import { type PageSource, pageFileName, scanContent } from './wiki/scan.ts';
 
 const [command, ...args] = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith('--')));
-const positional = args.filter((a) => !a.startsWith('--'));
+const positional = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--from');
 
 function fail(message: string): never {
   console.error(`\x1b[31m${message}\x1b[0m`);
@@ -59,13 +62,14 @@ function status() {
   const ids = [...tree.pages.keys()].sort(compareIds);
   for (const id of ids) {
     const page = tree.pages.get(id)!;
+    const source = page.files[page.sourceLang];
     for (const lang of LANGUAGES) {
-      if (lang === siteConfig.sourceLanguage) continue;
+      if (lang === page.sourceLang) continue;
       const s = translationStatus(page, lang);
       counts[s] = (counts[s] ?? 0) + 1;
       if (flags.has('--all') || s === 'stale' || s === 'untranslated') {
-        const chars = page.files[siteConfig.sourceLanguage]?.body.trim().length ?? 0;
-        rows.push(`${lang}  ${s.padEnd(12)} ${id.padEnd(10)} ${String(chars).padStart(7)} chars  ${page.files[siteConfig.sourceLanguage]?.frontMatter.title ?? ''}`);
+        const chars = source?.body.trim().length ?? 0;
+        rows.push(`${page.sourceLang}→${lang}  ${s.padEnd(12)} ${id.padEnd(10)} ${String(chars).padStart(7)} chars  ${source?.frontMatter.title ?? ''}`);
       }
     }
   }
@@ -79,9 +83,10 @@ function stamp() {
   if (!ids.length) fail('usage: pnpm wiki stamp <id>... | --all');
   for (const id of ids) {
     const page = tree.pages.get(id) ?? fail(`unknown page id "${id}"`);
-    const source = page.files[siteConfig.sourceLanguage];
+    const from = fromLang(page);
+    const source = page.files[from];
     for (const lang of LANGUAGES) {
-      if (lang === siteConfig.sourceLanguage) continue;
+      if (lang === from) continue;
       const file = page.files[lang];
       if (!source || !file || !file.body.trim()) {
         if (!flags.has('--all')) console.log(`skip ${id} (${lang}): no translation body`);
@@ -93,6 +98,22 @@ function stamp() {
       console.log(`stamped ${rel(file.path)} (${hash})`);
     }
   }
+}
+
+/** Source language for `stamp`: --from, or the page's own when it is unambiguous. */
+function fromLang(page: PageSource): Lang {
+  const i = args.indexOf('--from');
+  if (i >= 0) {
+    const value = args[i + 1];
+    if (!value || !isLang(value)) fail(`--from needs a language (${LANGUAGES.join(', ')})`);
+    return value;
+  }
+  const written = LANGUAGES.filter((l) => page.files[l]?.body.trim());
+  const stamped = written.some((l) => page.files[l]!.frontMatter.source_hash);
+  if (written.length > 1 && !stamped && !flags.has('--all')) {
+    fail(`${page.id}: both languages are written and neither is stamped; say which one is the source: pnpm wiki stamp ${page.id} --from ${LANGUAGES.join('|')}`);
+  }
+  return page.sourceLang;
 }
 
 function newPage() {

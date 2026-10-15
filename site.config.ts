@@ -11,7 +11,7 @@ export const siteConfig = {
   /** Public URL of the deployed site, with trailing slash. Its path becomes Vite's `base`. */
   siteUrl: 'https://zf-li23.github.io/personal-wiki-site/',
   repoUrl: 'https://github.com/zf-li23/personal-wiki-site',
-  /** Language the content is written in first; translations track it via `source_hash`. */
+  /** Default source language of a page (used when it is not evident which file is the source, see scan.ts `sourceLangOf`). */
   sourceLanguage: 'zh' as Lang,
   /** Language used when the visitor has no stored preference and the browser language is unknown. */
   defaultLanguage: 'zh' as Lang,

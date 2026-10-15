@@ -13,7 +13,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { LANGUAGES, type Lang, siteConfig } from '../../site.config.ts';
+import { LANGUAGES, type Lang } from '../../site.config.ts';
 import type { ConceptEntry, NavNode, PagePayload, SearchEntry, SiteData, TranslationStatus } from '../../src/shared/types.ts';
 import { Diagnostics } from './diagnostics.ts';
 import { loadConcepts } from './glossary.ts';
@@ -44,8 +44,6 @@ export interface BuildResult {
   plainBold: Map<string, LinkResult['plainBold']>;
 }
 
-const SOURCE = siteConfig.sourceLanguage;
-
 /** Hash of a source-language body; a translation is up to date when its `source_hash` equals this. */
 export function sourceHash(body: string): string {
   const normalized = body.replace(/\r\n?/g, '\n').replace(/[ \t]+$/gm, '').trim();
@@ -53,16 +51,16 @@ export function sourceHash(body: string): string {
 }
 
 export function translationStatus(page: PageSource, lang: Lang): TranslationStatus {
-  const source = page.files[SOURCE]?.body.trim() ?? '';
+  const src = page.sourceLang;
+  const source = page.files[src]?.body.trim() ?? '';
   const own = page.files[lang]?.body.trim() ?? '';
-  if (lang === SOURCE) return source ? 'source' : 'empty';
+  if (lang === src) return source ? 'source' : 'empty';
   if (!own) return source ? 'untranslated' : 'empty';
-  if (!source) return 'translated';
-  return page.files[lang]?.frontMatter.source_hash === sourceHash(page.files[SOURCE]!.body) ? 'translated' : 'stale';
+  return page.files[lang]?.frontMatter.source_hash === sourceHash(page.files[src]!.body) ? 'translated' : 'stale';
 }
 
 function titleOf(page: PageSource, lang: Lang): string {
-  return page.files[lang]?.frontMatter.title ?? page.files[SOURCE]?.frontMatter.title ?? page.slug;
+  return page.files[lang]?.frontMatter.title ?? page.files[page.sourceLang]?.frontMatter.title ?? page.slug;
 }
 
 export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult> {
@@ -82,7 +80,7 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
     for (const lang of LANGUAGES) {
       const status = translationStatus(page, lang);
       // Untranslated pages show the source text, with links pointing at the reader's language.
-      const contentLang = status === 'untranslated' ? SOURCE : lang;
+      const contentLang = status === 'untranslated' ? page.sourceLang : lang;
       const file = page.files[contentLang];
       // The fallback render repeats the source render, so its diagnostics would be duplicates.
       const pageDiag = contentLang === lang ? diag : new Diagnostics();
@@ -113,8 +111,9 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   for (const c of concepts) {
     for (const s of c.scope ?? []) if (!tree.pages.has(s)) diag.error(GLOSSARY_FILE, `"${c.en}": scope "${s}" is not a page id`);
   }
-  const sourceRenders = new Map(readingOrder.map((id) => [id, rendered.get(`${SOURCE}/${id}`)!]));
-  const sourceFiles = new Map(readingOrder.map((id) => [id, tree.pages.get(id)!.files[SOURCE]?.path ?? tree.pages.get(id)!.dir]));
+  const sourceKey = (id: string) => `${tree.pages.get(id)!.sourceLang}/${id}`;
+  const sourceRenders = new Map(readingOrder.map((id) => [id, rendered.get(sourceKey(id))!]));
+  const sourceFiles = new Map(readingOrder.map((id) => [id, tree.pages.get(id)!.files[tree.pages.get(id)!.sourceLang]?.path ?? tree.pages.get(id)!.dir]));
   const index = buildLinkIndex(tree, sourceRenders, sourceFiles, concepts, readingOrder, diag);
   const links = new Map<string, LinkResult>();
   for (const [key, out] of rendered) {
@@ -127,7 +126,7 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   // backlinks come from the source language (translations mirror its structure)
   const backlinks = new Map<string, Set<string>>();
   for (const id of readingOrder) {
-    for (const target of links.get(`${SOURCE}/${id}`)!.targets) backlinks.set(target, (backlinks.get(target) ?? new Set()).add(id));
+    for (const target of links.get(sourceKey(id))!.targets) backlinks.set(target, (backlinks.get(target) ?? new Set()).add(id));
   }
 
   const payloads = new Map<string, PagePayload>();
@@ -143,8 +142,8 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
       html: renderHtml(out),
       headings: out.headings,
       description: page.files[lang]?.frontMatter.description ?? truncate(out.excerpt, 160),
-      ...(page.files[SOURCE]?.frontMatter.courses ? { courses: page.files[SOURCE]!.frontMatter.courses } : {}),
-      ...(page.files[SOURCE]?.frontMatter.textbooks ? { textbooks: page.files[SOURCE]!.frontMatter.textbooks } : {}),
+      ...(page.files[page.sourceLang]?.frontMatter.courses ? { courses: page.files[page.sourceLang]!.frontMatter.courses } : {}),
+      ...(page.files[page.sourceLang]?.frontMatter.textbooks ? { textbooks: page.files[page.sourceLang]!.frontMatter.textbooks } : {}),
       backlinks: [...(backlinks.get(pageId) ?? [])].sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0)),
       concepts: [...links.get(key)!.concepts],
     });
@@ -153,7 +152,7 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   const usedIn = new Map<string, string[]>();
   const forwardUses: BuildResult['forwardUses'] = [];
   for (const id of readingOrder) {
-    const result = links.get(`${SOURCE}/${id}`)!;
+    const result = links.get(sourceKey(id))!;
     for (const c of result.concepts) usedIn.set(c, [...(usedIn.get(c) ?? []), id]);
     for (const c of result.forwardUses) forwardUses.push({ pageId: id, conceptId: c });
   }

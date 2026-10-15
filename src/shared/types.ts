@@ -47,16 +47,23 @@ export interface Diagnostic {
 /** A course the knowledge on a page comes from (front matter `courses`). */
 export interface CourseRef {
   code: string | number;
+  /** The course name as the institution gives it. */
   name: string;
+  /** English name, shown on English pages when `name` is not English. */
+  name_en?: string;
   /** e.g. "概率论部分" when the page covers only part of the course. */
   note?: string;
 }
 
 /** A reference book (front matter `textbooks`). */
 export interface TextbookRef {
+  /** Original title and author(s), as printed in the book. */
   title: string;
   author: string;
   edition?: string | number;
+  /** For a book not in English: English title / romanised authors, shown on English pages. */
+  title_en?: string;
+  author_en?: string;
 }
 
 /** Served at `<base>/data/pages/<lang>/<id>.json`. */

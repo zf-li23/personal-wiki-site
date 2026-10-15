@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { LANGUAGES, type Lang } from '../../site.config.ts';
+import { LANGUAGES, type Lang, siteConfig } from '../../site.config.ts';
 import { PAGE_DIR_RE, compareIds, idSegments, parentIdOf } from '../../src/shared/page-id.ts';
 import type { Diagnostics } from './diagnostics.ts';
 import { type FrontMatter, parsePageFile } from './frontmatter.ts';
@@ -20,6 +20,11 @@ export interface PageSource {
   parentId: string | null;
   /** Parsed `index.<lang>.md`; missing when the file is absent or invalid (an error is reported). */
   files: Partial<Record<Lang, PageFile>>;
+  /**
+   * Language the page was written in (see `sourceLangOf`); the other language is its translation.
+   * Pages may be written in either language first.
+   */
+  sourceLang: Lang;
   /** File names inside `assets/`. */
   assets: string[];
   /** File names inside `plots/` (scripts and their data files). */
@@ -87,7 +92,7 @@ function scanPage(dir: string, parentId: string | null, pages: Map<string, PageS
     return null;
   }
 
-  const page: PageSource = { id, slug, dir, parentId, files: {}, assets: [], plotFiles: [], childIds: [] };
+  const page: PageSource = { id, slug, dir, parentId, files: {}, sourceLang: siteConfig.sourceLanguage, assets: [], plotFiles: [], childIds: [] };
   pages.set(id, page);
 
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -100,7 +105,7 @@ function scanPage(dir: string, parentId: string | null, pages: Map<string, PageS
         diag.error(full, `unknown language "${lang}" (configured: ${LANGUAGES.join(', ')})`);
         continue;
       }
-      const parsed = parsePageFile(fs.readFileSync(full, 'utf8'), lang as Lang);
+      const parsed = parsePageFile(fs.readFileSync(full, 'utf8'));
       for (const e of parsed.errors) diag.error(full, e, 1);
       if (parsed.value) page.files[lang as Lang] = { path: full, ...parsed.value };
     } else if (entry.isDirectory() && entry.name === 'assets') {
@@ -120,9 +125,37 @@ function scanPage(dir: string, parentId: string | null, pages: Map<string, PageS
       diag.error(path.join(dir, pageFileName(lang)), `missing ${pageFileName(lang)} (every page needs a file per language; a translation may have an empty body)`);
     }
   }
+  page.sourceLang = sourceLangOf(page.files);
+  checkSources(page, diag);
   page.childIds.sort(compareIds);
   checkSiblings(page.childIds, dir, id, diag);
   return id;
+}
+
+/**
+ * The source language of a page: the file without `source_hash` when the other one has it
+ * (a stamped translation); otherwise the only file with a body; otherwise the site default.
+ */
+export function sourceLangOf(files: Partial<Record<Lang, PageFile>>): Lang {
+  const withBody = LANGUAGES.filter((l) => files[l]?.body.trim());
+  const stamped = withBody.filter((l) => files[l]!.frontMatter.source_hash);
+  if (withBody.length > 1 && stamped.length === 1) return withBody.find((l) => l !== stamped[0])!;
+  if (withBody.length === 1) return withBody[0];
+  return siteConfig.sourceLanguage;
+}
+
+/** `source_hash` marks the translation, so only one file may carry it; sources (courses, books) live in the source file. */
+function checkSources(page: PageSource, diag: Diagnostics): void {
+  const stamped = LANGUAGES.filter((l) => page.files[l]?.frontMatter.source_hash);
+  if (stamped.length > 1) diag.error(page.files[stamped[1]]!.path, `only the translation carries source_hash, but ${stamped.join(' and ')} both do`);
+  for (const lang of LANGUAGES) {
+    const file = page.files[lang];
+    if (!file || lang === page.sourceLang) continue;
+    for (const key of ['courses', 'textbooks'] as const) {
+      if (file.frontMatter[key]) diag.error(file.path, `"${key}" belongs in the source-language file (${pageFileName(page.sourceLang)}), not in the translation`, 1);
+    }
+    if (file.frontMatter.source_hash && !page.files[page.sourceLang]?.body.trim()) diag.error(file.path, 'source_hash is set but the source-language file has no body', 1);
+  }
 }
 
 function listFlatDir(dir: string, diag: Diagnostics): string[] {

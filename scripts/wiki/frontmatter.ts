@@ -1,6 +1,4 @@
 import { parse as parseYaml, stringify as stringifyYaml } from 'yaml';
-import type { Lang } from '../../site.config.ts';
-import { siteConfig } from '../../site.config.ts';
 import type { CourseRef, TextbookRef } from '../../src/shared/types.ts';
 
 /**
@@ -8,12 +6,14 @@ import type { CourseRef, TextbookRef } from '../../src/shared/types.ts';
  *
  *   title        required  page title in this language
  *   description  optional  one-sentence summary used for search engines and link previews
- *   courses      optional  source language only: where the knowledge comes from (shown under the title)
- *                            courses: [{ code: "20240013", name: 离散数学(1), note: 可选备注 }]
- *   textbooks    optional  source language only: reference books (shown under the title)
- *                            textbooks: [{ title: 离散数学, author: 屈婉玲, edition: 3 }]
- *   source_hash  optional  translations only: `sourceHash()` of the source-language body this
- *                          translation was made from (written by `pnpm wiki stamp <id>`)
+ *   courses      optional  source-language file only: where the knowledge comes from (shown under the title)
+ *                            courses: [{ code: "20240013", name: 离散数学(1), name_en?: Discrete Mathematics (1), note?: 备注 }]
+ *   textbooks    optional  source-language file only: reference books (shown under the title)
+ *                            textbooks: [{ title: 离散数学, author: 屈婉玲, edition: 3, title_en?: …, author_en?: … }]
+ *   source_hash  optional  translation only: `sourceHash()` of the source-language body this
+ *                          translation was made from (written by `pnpm wiki stamp <id>`). It also
+ *                          marks which file is the translation: a page may be written in either
+ *                          language first (scan.ts `sourceLangOf`).
  */
 export interface FrontMatter {
   title: string;
@@ -55,7 +55,7 @@ export interface ParsedPageFile {
 
 const FM_RE = /^---\n([\s\S]*?)\n---\n?/;
 
-export function parsePageFile(raw: string, lang: Lang): { value?: ParsedPageFile; errors: string[] } {
+export function parsePageFile(raw: string): { value?: ParsedPageFile; errors: string[] } {
   const text = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g, '\n');
   const m = FM_RE.exec(text);
   if (!m) return { errors: ['missing front matter block (--- title: ... ---) at the top of the file'] };
@@ -70,7 +70,8 @@ export function parsePageFile(raw: string, lang: Lang): { value?: ParsedPageFile
     return { errors: ['front matter must be a YAML mapping'] };
   }
   const record = data as Record<string, unknown>;
-  const allowed = lang === siteConfig.sourceLanguage ? ['title', 'description', 'courses', 'textbooks'] : ['title', 'description', 'source_hash'];
+  // Which file is the source is only known once both are read (scan.ts checks the placement).
+  const allowed = ['title', 'description', 'courses', 'textbooks', 'source_hash'];
   for (const key of Object.keys(record)) {
     if (!allowed.includes(key)) errors.push(`unknown front matter key "${key}" (allowed: ${allowed.join(', ')})`);
   }
@@ -80,8 +81,8 @@ export function parsePageFile(raw: string, lang: Lang): { value?: ParsedPageFile
     }
   }
   if (!('title' in record)) errors.push('front matter "title" is required');
-  if ('courses' in record) checkList(record.courses, 'courses', { code: 'required', name: 'required', note: 'optional' }, errors);
-  if ('textbooks' in record) checkList(record.textbooks, 'textbooks', { title: 'required', author: 'required', edition: 'optional' }, errors);
+  if ('courses' in record) checkList(record.courses, 'courses', { code: 'required', name: 'required', name_en: 'optional', note: 'optional' }, errors);
+  if ('textbooks' in record) checkList(record.textbooks, 'textbooks', { title: 'required', author: 'required', edition: 'optional', title_en: 'optional', author_en: 'optional' }, errors);
   if (errors.length) return { errors };
 
   const fmLines = m[0].split('\n').length - 1;

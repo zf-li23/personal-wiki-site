@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { siteConfig } from '../../site.config.ts';
 import { Link } from 'react-router';
 import { readingOrder, site } from '../content/site.ts';
 import { useLang, useStrings } from '../i18n.ts';
@@ -9,8 +8,9 @@ import { pagePath } from '../shared/page-id.ts';
 export function HomePage() {
   const lang = useLang();
   const t = useStrings();
-  const written = readingOrder.filter((n) => n.status[siteConfig.sourceLanguage] !== 'empty').length;
-  const translated = readingOrder.filter((n) => n.status.en === 'translated' || n.status.en === 'stale').length;
+  // Each page is written in one language (status "source") and translated into the others.
+  const written = readingOrder.filter((n) => Object.values(n.status).includes('source')).length;
+  const translated = readingOrder.filter((n) => Object.values(n.status).some((s) => s === 'translated' || s === 'stale')).length;
 
   useEffect(() => {
     document.title = t.siteTitle;

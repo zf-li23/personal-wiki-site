@@ -14,6 +14,7 @@ import { fixMarkdown } from './fix.ts';
 import { checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 import { sourceHash, translationStatus } from './build.ts';
 import { Diagnostics } from './diagnostics.ts';
+import type { Lang } from '../../site.config.ts';
 import { parsePageFile, serializePageFile } from './frontmatter.ts';
 import type { Concept } from './glossary.ts';
 import { buildLinkIndex, linkPage } from './linking.ts';
@@ -21,7 +22,7 @@ import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
 import { lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
 import { PLOT_RENDERER } from './paths.ts';
-import { type ContentTree, type PageSource, scanContent } from './scan.ts';
+import { type ContentTree, type PageSource, scanContent, sourceLangOf } from './scan.ts';
 
 describe('page ids', () => {
   it('accepts purely numeric hierarchical ids only', () => {
@@ -37,17 +38,16 @@ describe('page ids', () => {
 
 describe('front matter', () => {
   it('parses and round-trips', () => {
-    const { value, errors } = parsePageFile('---\ntitle: 数理逻辑\n---\n\n## A\n', 'zh');
+    const { value, errors } = parsePageFile('---\ntitle: 数理逻辑\n---\n\n## A\n');
     assert.deepEqual(errors, []);
     assert.equal(value!.frontMatter.title, '数理逻辑');
     assert.equal(value!.bodyLineOffset, 3);
     assert.equal(serializePageFile(value!.frontMatter, value!.body), '---\ntitle: 数理逻辑\n---\n\n## A\n');
   });
   it('rejects unknown keys, missing titles and source_hash on the source language', () => {
-    assert.match(parsePageFile('---\ntitle: x\ntags: [a]\n---\n', 'en').errors[0], /unknown front matter key "tags"/);
-    assert.match(parsePageFile('---\ndescription: x\n---\n', 'en').errors[0], /"title" is required/);
-    assert.match(parsePageFile('---\ntitle: x\nsource_hash: abc\n---\n', 'zh').errors[0], /unknown front matter key "source_hash"/);
-    assert.match(parsePageFile('no front matter', 'zh').errors[0], /missing front matter/);
+    assert.match(parsePageFile('---\ntitle: x\ntags: [a]\n---\n').errors[0], /unknown front matter key "tags"/);
+    assert.match(parsePageFile('---\ndescription: x\n---\n').errors[0], /"title" is required/);
+    assert.match(parsePageFile('no front matter').errors[0], /missing front matter/);
   });
 });
 
@@ -97,11 +97,23 @@ describe('scan', () => {
   });
 });
 
+describe('source language', () => {
+  const file = (body: string, source_hash?: string) => ({ path: 'x', body, bodyLineOffset: 0, frontMatter: { title: 't', ...(source_hash ? { source_hash } : {}) } });
+  it('is the file without source_hash, else the only written file, else the default', () => {
+    assert.equal(sourceLangOf({ zh: file('中文'), en: file('') }), 'zh');
+    assert.equal(sourceLangOf({ zh: file(''), en: file('English') }), 'en');
+    assert.equal(sourceLangOf({ zh: file('中文', 'abc'), en: file('English') }), 'en');
+    assert.equal(sourceLangOf({ zh: file('中文'), en: file('English', 'abc') }), 'zh');
+    assert.equal(sourceLangOf({ zh: file('中文'), en: file('English') }), 'zh');
+    assert.equal(sourceLangOf({ zh: file(''), en: file('') }), 'zh');
+  });
+});
+
 function fakePage(id: string, extra: Partial<PageSource> = {}): PageSource {
-  return { id, slug: 'p', dir: `/content/${id}.p`, parentId: null, files: {}, assets: [], plotFiles: [], childIds: [], ...extra };
+  return { id, slug: 'p', dir: `/content/${id}.p`, parentId: null, files: {}, sourceLang: 'zh', assets: [], plotFiles: [], childIds: [], ...extra };
 }
 
-async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotResults; page?: PageSource } = {}) {
+async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotResults; page?: PageSource; lang?: Lang } = {}) {
   const current = opts.page ?? fakePage('3.1.13');
   const pages = new Map([[current.id, current], ...(opts.pages ?? []).map((p) => [p.id, p] as const)]);
   const tree: ContentTree = { pages, rootIds: [...pages.keys()] };
@@ -114,7 +126,7 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
     file: '/content/1.p/index.zh.md',
     lineOffset: 3,
     linkLang: 'en',
-    contentLang: 'zh',
+    contentLang: opts.lang ?? 'zh',
     usedPlots: new Set(),
     usedAssets: new Set(),
   };
@@ -123,6 +135,11 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
 }
 
 describe('markdown rendering', () => {
+  it('warns about Chinese text left on an English page', async () => {
+    const { messages } = await render('## 13.1. Basics\n\nA set 集合 and $\\text{若}$.', { lang: 'en' });
+    assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);
+    assert.equal((await render('## 13.1. 基本\n\n集合')).messages.length, 0);
+  });
   it('rewrites internal links into the reader language and checks targets', async () => {
     const { out, html, messages } = await render('[a](/3.1.12#x) and [b](/9)', { pages: [fakePage('3.1.12')] });
     assert.match(html, new RegExp(`href="${BASE_PATH}en/3.1.12/#x" data-internal`));
@@ -279,7 +296,7 @@ describe('search', () => {
 describe('knowledge sources', () => {
   it('validates courses/textbooks and formats them identically everywhere', () => {
     const fm = '---\ntitle: 概率论\ncourses:\n  - { code: "40160713", name: 初等概率论 }\n  - { code: "10420803", name: 概率论与数理统计, note: 概率论部分 }\ntextbooks:\n  - { title: 概率论基础, author: 李贤平, edition: 3 }\n---\n';
-    const parsed = parsePageFile(fm, 'zh');
+    const parsed = parsePageFile(fm);
     assert.deepEqual(parsed.errors, []);
     const { courses, textbooks } = parsed.value!.frontMatter;
     assert.deepEqual(sourceLines(courses, textbooks, 'zh'), [
@@ -287,9 +304,13 @@ describe('knowledge sources', () => {
       { label: '参考书', value: '《概率论基础》，李贤平，第 3 版' },
     ]);
     assert.equal(sourceLines(undefined, textbooks, 'en')[0].value, '概率论基础, 李贤平, 3rd ed.');
+    const translated = [{ title: '图论与代数结构', author: '崔勇、张小平', edition: 2, title_en: 'Graph Theory and Algebraic Structures', author_en: 'Yong Cui, Xiaoping Zhang' }];
+    assert.equal(sourceLines(undefined, translated, 'en')[0].value, 'Graph Theory and Algebraic Structures, Yong Cui, Xiaoping Zhang, 2nd ed. (in Chinese)');
+    assert.equal(sourceLines([{ code: 1, name: '离散数学(2)', name_en: 'Discrete Mathematics (2)' }], undefined, 'en')[0].value, '1 Discrete Mathematics (2)');
+    assert.equal(sourceLines(undefined, [{ title: 'Algebra', author: 'Artin' }], 'zh')[0].value, 'Algebra，Artin');
     assert.equal(serializePageFile(parsed.value!.frontMatter, '').includes('note: 概率论部分'), true);
-    assert.match(parsePageFile('---\ntitle: x\ntextbooks:\n  - { title: A }\n---\n', 'zh').errors[0], /"author" is required/);
-    assert.match(parsePageFile('---\ntitle: x\ncourses: []\n---\n', 'en').errors[0], /unknown front matter key "courses"/);
+    assert.match(parsePageFile('---\ntitle: x\ntextbooks:\n  - { title: A }\n---\n').errors[0], /"author" is required/);
+    assert.match(parsePageFile('---\ntitle: x\ncourses: []\n---\n').errors[0], /"courses" must be a non-empty list/);
   });
 });
 
@@ -340,11 +361,15 @@ describe('cross-page linking', () => {
     { id: 'law-of-large-numbers', zh: '大数定律', en: 'law of large numbers', aliases: [] },
     { id: 'bifurcation', zh: '分岔', en: 'bifurcation', aliases: [] },
   ];
+  /** Pages by id; a body starting with "en:" is an English-source page. */
   async function site(pages: Record<string, string>) {
     const sources = Object.fromEntries(Object.keys(pages).map((id) => [id, fakePage(id)]));
     const tree: ContentTree = { pages: new Map(Object.entries(sources)), rootIds: [] };
     const rendered = new Map<string, Awaited<ReturnType<typeof render>>['out']>();
-    for (const [id, body] of Object.entries(pages)) rendered.set(id, (await render(body, { page: sources[id], pages: Object.values(sources) })).out);
+    for (const [id, body] of Object.entries(pages)) {
+      const lang: Lang = body.startsWith('en:') ? 'en' : 'zh';
+      rendered.set(id, (await render(body.replace(/^en:/, ''), { page: sources[id], pages: Object.values(sources), lang })).out);
+    }
     const diag = new Diagnostics();
     const order = Object.keys(pages);
     const index = buildLinkIndex(tree, rendered, new Map(order.map((id) => [id, id])), concepts, order, diag);
@@ -386,6 +411,21 @@ describe('cross-page linking', () => {
       { text: '前件', inDefinition: true },
       { text: '重要的一点', inDefinition: false },
     ]);
+  });
+  it('finds definitions on English-source pages and matches English names case-insensitively and in the plural', async () => {
+    concepts.push({ id: 'group', zh: '群', en: 'group', aliases: [] });
+    const s = await site({
+      '1.3.2': 'en:## 2.2. Groups\n\n**Definition 2.2.1** A set with one operation is a **group** if…\n\nA *law of large numbers* says…',
+      '1.3.3': '## 3.1. 环\n\n每个**群**都有单位元。',
+      '1.3.4': 'en:## 4.1. Lattices\n\nAll **Groups** and the **law of large numbers**.',
+    });
+    concepts.pop();
+    assert.deepEqual(s.diag.items, []);
+    assert.equal(s.index.conceptSites.get('group')?.anchor, 'def-2.2.1');
+    assert.equal(s.index.conceptSites.get('law-of-large-numbers')?.anchor, 'concept-law-of-large-numbers');
+    assert.match(s.html('1.3.2'), /<dfn id="concept-law-of-large-numbers" class="wiki-dfn" data-concept="law-of-large-numbers"><em>law of large numbers<\/em><\/dfn>/);
+    assert.match(s.html('1.3.3'), /1\.3\.2\/#def-2\.2\.1" class="concept-ref"/);
+    assert.equal((s.html('1.3.4').match(/class="concept-ref"/g) ?? []).length, 2);
   });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });

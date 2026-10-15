@@ -12,16 +12,20 @@ function ordinal(n: number): string {
   return `${n}${ORDINAL[(v - 20) % 10] ?? ORDINAL[v] ?? ORDINAL[0]}`;
 }
 
+const HAN = /\p{Script=Han}/u;
+
 export function formatCourse(c: CourseRef, lang: Lang): string {
-  const base = `${c.code} ${c.name}`;
+  const base = `${c.code} ${lang === 'en' && c.name_en ? c.name_en : c.name}`;
   if (!c.note) return base;
   return lang === 'zh' ? `${base}（${c.note}）` : `${base} (${c.note})`;
 }
 
 export function formatTextbook(b: TextbookRef, lang: Lang): string {
   const edition = b.edition === undefined ? '' : typeof b.edition === 'number' ? (lang === 'zh' ? `第 ${b.edition} 版` : `${ordinal(b.edition)} ed.`) : String(b.edition);
-  if (lang === 'zh') return [`《${b.title}》`, b.author, edition].filter(Boolean).join('，');
-  return [b.title, b.author, edition].filter(Boolean).join(', ');
+  if (lang === 'zh') return [HAN.test(b.title) ? `《${b.title}》` : b.title, b.author, edition].filter(Boolean).join('，');
+  if (!b.title_en) return [b.title, b.author, edition].filter(Boolean).join(', ');
+  // A translated title is not the book's real title: say which language the book is in.
+  return `${[b.title_en, b.author_en ?? b.author, edition].filter(Boolean).join(', ')}${HAN.test(b.title) ? ' (in Chinese)' : ''}`;
 }
 
 export function sourceLines(courses: CourseRef[] | undefined, textbooks: TextbookRef[] | undefined, lang: Lang): { label: string; value: string }[] {
