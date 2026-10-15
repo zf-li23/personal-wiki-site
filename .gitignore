@@ -17,3 +17,7 @@ dist/
 *.log
 *.tsbuildinfo
 .env
+
+# course materials (slides, notes, textbooks): copyrighted, never committed (see sources/README.md)
+sources/*
+!sources/README.md

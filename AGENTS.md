@@ -70,4 +70,5 @@ Key decisions (keep them):
 - Relative imports with explicit extensions (`./x.ts`, `./X.tsx`); `import type` for types.
 - Code comments in English. User-visible strings only via `src/i18n.ts`.
 - Generated directories (`.generated/`, `.cache/`, `dist/`) are disposable; never edit them.
+- `sources/` holds the current course's copyrighted materials and is git-ignored except its README; never commit anything from it or copy it into `content/`.
 - Deploy: push to `main` → `.github/workflows/deploy.yml` builds, checks and publishes to GitHub Pages (source: "GitHub Actions"). There is only the `main` branch; do not recreate `gh-pages`.
