@@ -28,7 +28,7 @@ $$
 **定义 1.2.2（子集）** 设 $A, B$ 为集合。若 $A$ 中的每个元素都是 $B$ 的元素，则称 $A$ 为 $B$ 的子集合，简称**子集**，这时也称 $B$ 包含 $A$，记作 $A \subseteq B$。该定义的符号化表示为
 
 $$
-A \subseteq B \Leftrightarrow (\forall x)(x \in A \rightarrow x \in B).
+A \subseteq B \Leftrightarrow (\forall x)(x \in A \to x \in B).
 $$
 
 **定理 1.2.1** 两个集合相等的充要条件是它们互为子集，即
@@ -86,7 +86,7 @@ $$
 $$
 \begin{aligned}
 \bigcup A &= \{x \mid (\exists z)(z \in A \land x \in z)\}, \\
-\bigcap A &= \{x \mid (\forall z)(z \in A \rightarrow x \in z)\}.
+\bigcap A &= \{x \mid (\forall z)(z \in A \to x \in z)\}.
 \end{aligned}
 $$
 
@@ -132,7 +132,7 @@ $$
 集合运算的优先顺序规定如下：
 
 - 广义并、广义交、幂集、绝对补（$\bigcup A, \bigcap A, \mathcal{P}(A), A^{\mathsf c}$）为一类运算；并、交、对称差、笛卡儿积、相对补（$\cup, \cap, \oplus, \times, -$）为二类运算。
-- 一类运算优先于二类运算；二类运算优先于集合关系运算（$=, \subseteq, \subset, \in$）；上述集合运算都优先于逻辑运算（$\lnot, \land, \lor, \rightarrow, \leftrightarrow, \Rightarrow$）。
+- 一类运算优先于二类运算；二类运算优先于集合关系运算（$=, \subseteq, \subset, \in$）；上述集合运算都优先于逻辑运算（$\lnot, \land, \lor, \to, \leftrightarrow, \Rightarrow$）。
 - 括号内优先于括号外；同一层括号内优先级相同时，一类运算之间按由右向左的顺序进行，其他按由左向右的顺序进行。
 
 ## 1.4. 集合的图形表示法
@@ -227,7 +227,7 @@ $$
 **定义 1.5.1（传递集合）** 如果集合 $A$ 的任一元素的元素都是 $A$ 的元素，就称 $A$ 为**传递集合**。该定义也可写成
 
 $$
-A \text{ 是传递集合} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \rightarrow x \in A).
+A \text{ 是传递集合} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \to x \in A).
 $$
 
 **定理 1.5.9（传递集合的性质 1）** 对任意的集合 $A$，$A$ 是传递集合 $\Leftrightarrow A \subseteq \mathcal{P}(A)$。
@@ -356,7 +356,7 @@ ZF 公理系统（Zermelo–Fraenkel set theory）由德国数学家 E. Zermelo 
 
 1. **外延公理**（axiom of extensionality） 两个集合相等的充要条件是它们恰好具有同样的元素。
    $$
-   (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \rightarrow x = y)
+   (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \to x = y)
    $$
 2. **空集合存在公理**（empty set axiom） 存在不含任何元素的集合（空集 $\varnothing$）。
    $$
@@ -376,19 +376,19 @@ ZF 公理系统（Zermelo–Fraenkel set theory）由德国数学家 E. Zermelo 
    $$
 6. **幂集合公理**（axiom of power set） 对任意的集合 $x$，存在一个集合 $y$，它的元素恰好是 $x$ 的子集。
    $$
-   (\forall x)(\exists y)(\forall z)(z \in y \leftrightarrow (\forall u)(u \in z \rightarrow u \in x))
+   (\forall x)(\exists y)(\forall z)(z \in y \leftrightarrow (\forall u)(u \in z \to u \in x))
    $$
 7. **正则公理**（axiom of regularity） 对任意的非空集合 $x$，存在 $x$ 的一个元素，它和 $x$ 不相交。
    $$
-   (\forall x)(x \neq \varnothing \rightarrow (\exists y)(y \in x \land x \cap y = \varnothing))
+   (\forall x)(x \neq \varnothing \to (\exists y)(y \in x \land x \cap y = \varnothing))
    $$
 8. **无穷公理**（axiom of infinity） 存在一个集合，它含有 $\varnothing$，并且对它的任一元素 $y$ 也含有 $y \cup \{y\}$；因此它含有全部自然数（见定义 1.7.4）。
    $$
-   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
+   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \to y \cup \{y\} \in x))
    $$
 9. **替换公理模式**（axiom schema of replacement） 对任意的谓词公式 $P(x, y)$，如果对任意的 $x$ 存在唯一的 $y$ 使 $P(x, y)$ 为真，那么对任意的集合 $t$ 存在一个集合 $s$，$s$ 的元素恰好是 $t$ 中元素 $x$ 所对应的那些 $y$。
    $$
-   (\forall x)(\exists ! y)P(x, y) \rightarrow (\forall t)(\exists s)(\forall u)(u \in s \leftrightarrow (\exists z)(z \in t \land P(z, u)))
+   (\forall x)(\exists ! y)P(x, y) \to (\forall t)(\exists s)(\forall u)(u \in s \leftrightarrow (\exists z)(z \in t \land P(z, u)))
    $$
    其中 $(\exists ! y)$ 表示存在唯一的 $y$。
 10. **选择公理**（axiom of choice） 对任意的关系 $R$，存在一个函数 $F$，$F$ 是 $R$ 的子集，而且 $F$ 和 $R$ 的定义域相等。
@@ -450,5 +450,5 @@ $$
 **定理 1.7.11（自然数的三歧性）** 集合 $\mathbb{N}$ 有三歧性，每个自然数也都有三歧性，即
 
 $$
-(\forall m)(\forall n)(m \in \mathbb{N} \land n \in \mathbb{N} \rightarrow m < n \lor m = n \lor m > n).
+(\forall m)(\forall n)(m \in \mathbb{N} \land n \in \mathbb{N} \to m < n \lor m = n \lor m > n).
 $$

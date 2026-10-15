@@ -339,7 +339,7 @@ $$
 拒绝域 $\lambda < \lambda_0$ 等价于 $T \mathrm{e}^{-(\theta_0/n)T} < C_0$，进一步可化为 $T < C_1$ 或 $T > C_2$，其中 $C_1, C_2$ 由 $\mathbb{P}_{\theta_0}(T < C_1) = \mathbb{P}_{\theta_0}(T > C_2) = \alpha/2$ 确定。
 
 ### 5.3.4. 线性回归中的似然比检验 (Likelihood Ratio Test in Linear Regression)
-在线性回归模型 $\boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\epsilon}$ 中，假设随机误差 $\epsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)$。检验单个回归系数 $\beta_j$ 的显著性，即 $H_{0j}: \beta_j = 0$。
+在线性回归模型 $\boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\varepsilon}$ 中，假设随机误差 $\varepsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)$。检验单个回归系数 $\beta_j$ 的显著性，即 $H_{0j}: \beta_j = 0$。
 
 **参数空间与似然函数**：
 - 全参数空间 $\Theta = \{(\boldsymbol{\beta}, \sigma^2)\} \subset \mathbb{R}^{p+2}$，维度 $k = p+2$。

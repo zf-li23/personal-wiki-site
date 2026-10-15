@@ -143,11 +143,14 @@ describe('notation', () => {
     // logic predicates, the group identity and power sets keep their letters
     assert.equal(fixNotation(String.raw`P(x) \land e^{-1} = e`, '1.3.2'), String.raw`P(x) \land e^{-1} = e`);
     assert.deepEqual(checkNotation(String.raw`\mathbf{R}^n`, '2.1.1').map((r) => r.id), ['number-set']);
+    // T as a variable: integral bounds, powers, the Poisson distribution, closures in set theory
+    assert.equal(fixNotation(String.raw`\int_{-T}^T f + n^T + P(\lambda) + tr(R)`, '3.1.1'), String.raw`\int_{-T}^T f + n^T + P(\lambda) + \operatorname{tr}(R)`);
+    assert.equal(fixNotation(String.raw`tr(R)`, '1.2.2'), 'tr(R)');
   });
   it('only touches formulas', () => {
-    const { text, changes } = fixNotationInMarkdown('Text e^x and `x^T`.\n\n$$\nx^T\n$$\n\n```\nx^T\n```\n', '2.1.1');
+    const { text, changes } = fixNotationInMarkdown('Text e^x and `A^T`.\n\n$$\nA^T\n$$\n\n```\nA^T\n```\n', '2.1.1');
     assert.equal(changes, 1);
-    assert.equal(text, 'Text e^x and `x^T`.\n\n$$\nx^{\\mathsf T}\n$$\n\n```\nx^T\n```\n');
+    assert.equal(text, 'Text e^x and `A^T`.\n\n$$\nA^{\\mathsf T}\n$$\n\n```\nA^T\n```\n');
   });
 });
 

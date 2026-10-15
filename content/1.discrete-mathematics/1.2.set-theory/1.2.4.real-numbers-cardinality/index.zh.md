@@ -66,10 +66,10 @@ $$
 
 分母取正是必要的：$1/2 \leq 1/1$，但若写成 $1/2$ 与 $(-1)/(-1)$，则 $1 \cdot (-1) \leq 2 \cdot (-1)$ 不成立。
 
-**定义 4.1.7（基本函数）** 如果 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 满足条件：
+**定义 4.1.7（基本函数）** 如果 $f\colon \mathbb{N} \to \mathbb{Q}$ 满足条件：
 
-1. $(\exists x)(x \in \mathbb{Q} \land (\forall n)(n \in \mathbb{N} \rightarrow f(n) \leq x))$；
-2. $(\exists n)(n \in \mathbb{N} \land (\forall m)(\forall i)((m \in \mathbb{N} \land i \in \mathbb{N} \land n \leq m \leq i) \rightarrow f(m) \leq f(i)))$，
+1. $(\exists x)(x \in \mathbb{Q} \land (\forall n)(n \in \mathbb{N} \to f(n) \leq x))$；
+2. $(\exists n)(n \in \mathbb{N} \land (\forall m)(\forall i)((m \in \mathbb{N} \land i \in \mathbb{N} \land n \leq m \leq i) \to f(m) \leq f(i)))$，
 
 即 $f$ 有上界，并且从某一项起单调不减，则称 $f$ 是一个基本函数，或有界非递减函数。当 $f$ 是一个基本函数时，函数值序列
 
@@ -79,21 +79,21 @@ $$
 
 称为一个基本序列，有时写为 $r_0, r_1, r_2, \cdots, r_n, \cdots$。以下用 $B$ 表示所有基本函数组成的集合，用 $BF(f)$ 表示 $f$ 是一个基本函数。
 
-**定理 4.1.2** 当 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in \mathbb{Q}$，$r, r, r, \cdots$ 是一个基本序列。
+**定理 4.1.2** 当 $f\colon \mathbb{N} \to \mathbb{Q}$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in \mathbb{Q}$，$r, r, r, \cdots$ 是一个基本序列。
 
 **定理 4.1.3** 存在不是常值函数的基本函数。
 
 **定义 4.1.8（基本函数的等价）** 对基本函数的集合 $B$，定义 $B$ 上的关系 $\sim$：对任意的 $f, g \in B$，$f \sim g$ 当且仅当
 
 $$
-(\forall \varepsilon)((\varepsilon \in \mathbb{Q} \land \varepsilon > 0) \rightarrow (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \rightarrow |f(m) - g(m)| < \varepsilon))).
+(\forall \varepsilon)((\varepsilon \in \mathbb{Q} \land \varepsilon > 0) \to (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \to |f(m) - g(m)| < \varepsilon))).
 $$
 
 直观上说，$f \sim g$ 表示 $f$ 和 $g$ 对应的序列有相同的极限。
 
 **定理 4.1.4** $B$ 上的关系 $\sim$ 是等价关系。
 
-**定理 4.1.5** 设 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 和 $g\colon \mathbb{N} \rightarrow \mathbb{Q}$ 都是常值函数，且 $f \sim g$，则 $f = g$。
+**定理 4.1.5** 设 $f\colon \mathbb{N} \to \mathbb{Q}$ 和 $g\colon \mathbb{N} \to \mathbb{Q}$ 都是常值函数，且 $f \sim g$，则 $f = g$。
 
 **定义 4.1.9（实数）** 令 $\mathbb{R} = B/{\sim}$，即 $\mathbb{R}$ 是集合 $B$ 关于等价关系 $\sim$ 的商集，则称 $\mathbb{R}$ 的元素为**实数**，称 $\mathbb{R}$ 为实数集合。
 
@@ -102,7 +102,7 @@ $$
 **定义 4.1.10（基本函数的大小）** 在 $B$ 上定义小于关系 $<_B$：对任意的 $f, g \in B$，$f <_B g$ 当且仅当
 
 $$
-(\exists \varepsilon)(\varepsilon \in \mathbb{Q} \land \varepsilon > 0 \land (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \rightarrow g(m) - f(m) > \varepsilon))).
+(\exists \varepsilon)(\varepsilon \in \mathbb{Q} \land \varepsilon > 0 \land (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \to g(m) - f(m) > \varepsilon))).
 $$
 
 并定义 $f \leq_B g$ 当且仅当 $f <_B g$ 或 $f \sim g$。
@@ -143,7 +143,7 @@ $$
 1. $\mathbb{N} \not\approx \mathbb{R}$；
 2. 对任意的集合 $A$，$A \not\approx \mathcal{P}(A)$。
 
-**证明** (2) 设 $f\colon A \rightarrow \mathcal{P}(A)$ 是任一函数，令
+**证明** (2) 设 $f\colon A \to \mathcal{P}(A)$ 是任一函数，令
 
 $$
 D = \{x \mid x \in A \land x \notin f(x)\} \in \mathcal{P}(A).
@@ -151,7 +151,7 @@ $$
 
 若存在 $a \in A$ 使 $f(a) = D$，则 $a \in D \Leftrightarrow a \notin f(a) \Leftrightarrow a \notin D$，矛盾。所以 $D \notin \operatorname{ran}(f)$，$f$ 不是**满射**，更不是双射。
 
-(1) 用对角线法：设 $f\colon \mathbb{N} \rightarrow \mathbb{R}$ 是任一函数。对每个 $n$，若 $f(n) \in [0, 1)$，把它写成十进制小数 $0.a_{n0}a_{n1}a_{n2}\cdots$（不以 $9$ 无限循环结尾，这样的写法唯一），否则令 $a_{nn} = 0$。令 $b_n = 5$（若 $a_{nn} \neq 5$），$b_n = 4$（若 $a_{nn} = 5$），则 $b = 0.b_0b_1b_2\cdots \in [0, 1)$。对每个 $n$，若 $f(n) \in [0, 1)$，则 $b$ 与 $f(n)$ 的第 $n$ 位小数不同（$b$ 的各位都不是 $0$ 或 $9$，其十进制写法也唯一），故 $b \neq f(n)$；若 $f(n) \notin [0, 1)$，显然 $b \neq f(n)$。所以 $b \notin \operatorname{ran}(f)$，$f$ 不是满射，从而 $\mathbb{N} \not\approx \mathbb{R}$。$\square$
+(1) 用对角线法：设 $f\colon \mathbb{N} \to \mathbb{R}$ 是任一函数。对每个 $n$，若 $f(n) \in [0, 1)$，把它写成十进制小数 $0.a_{n0}a_{n1}a_{n2}\cdots$（不以 $9$ 无限循环结尾，这样的写法唯一），否则令 $a_{nn} = 0$。令 $b_n = 5$（若 $a_{nn} \neq 5$），$b_n = 4$（若 $a_{nn} = 5$），则 $b = 0.b_0b_1b_2\cdots \in [0, 1)$。对每个 $n$，若 $f(n) \in [0, 1)$，则 $b$ 与 $f(n)$ 的第 $n$ 位小数不同（$b$ 的各位都不是 $0$ 或 $9$，其十进制写法也唯一），故 $b \neq f(n)$；若 $f(n) \notin [0, 1)$，显然 $b \neq f(n)$。所以 $b \notin \operatorname{ran}(f)$，$f$ 不是满射，从而 $\mathbb{N} \not\approx \mathbb{R}$。$\square$
 
 ## 4.3. 有限集合与无限集合
 

@@ -16,7 +16,7 @@ title: Hermite 变换、双线性型与张量
 
 由定理 12.6.2，$T$ 是 Hermite 变换（对称变换）当且仅当它在标准正交基下的矩阵是 Hermite 矩阵（实对称矩阵）。Hermite 矩阵的对角元满足 $a_{ii} = \bar a_{ii}$，都是实数。Hermite 变换显然是正规变换。
 
-**例 13.1.1** $\mathbb{R}^n$ 上 $\boldsymbol{x} \mapsto A\boldsymbol{x}$，$A$ 实对称，是对称变换。$\mathbb{C}^2$ 上 $\boldsymbol{x} \mapsto \begin{pmatrix} 2 & 1 + \mathrm{i} \\ 1 - \mathrm{i} & 3 \end{pmatrix}\boldsymbol{x}$ 是 Hermite 变换：在标准正交基 $\boldsymbol{e}_1, \boldsymbol{e}_2$ 下矩阵为 $A$，$A^{\mathsf H} = A$。
+**例 13.1.1** $\mathbb{R}^n$ 上 $\boldsymbol{x} \mapsto A\boldsymbol{x}$，$A$ 实对称，是对称变换。$\mathbb{C}^2$ 上 $\boldsymbol{x} \mapsto \begin{bmatrix} 2 & 1 + \mathrm{i} \\ 1 - \mathrm{i} & 3 \end{bmatrix}\boldsymbol{x}$ 是 Hermite 变换：在标准正交基 $\boldsymbol{e}_1, \boldsymbol{e}_2$ 下矩阵为 $A$，$A^{\mathsf H} = A$。
 
 **定理 13.1.1** 设 $A$ 是 Hermite 矩阵。
 
@@ -36,7 +36,7 @@ $$
 **例 13.1.3** 设 $V = \operatorname{span}\{1, \cos x, \sin x\}$，$\langle f, g \rangle = \int_0^{2\pi}f(x)g(x)\,\mathrm{d}x$，$D\colon f \mapsto f'$。$e_1 = \frac{1}{\sqrt{2\pi}}$，$e_2 = \frac{\cos x}{\sqrt\pi}$，$e_3 = \frac{\sin x}{\sqrt\pi}$ 是标准正交基，$De_1 = 0$，$De_2 = -e_3$，$De_3 = e_2$，所以
 
 $$
-(De_1, De_2, De_3) = (e_1, e_2, e_3)A, \qquad A = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix}, \qquad A^{\mathsf T} = -A.
+(De_1, De_2, De_3) = (e_1, e_2, e_3)A, \qquad A = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{bmatrix}, \qquad A^{\mathsf T} = -A.
 $$
 
 故 $D^* = -D$，$D$ 不是自伴随的，而是反自伴随的，特征值为 $0, \pm \mathrm{i}$（对应复函数 $1, \mathrm{e}^{\pm \mathrm{i}x}$）。背后的原因是分部积分：对周期函数，$\langle f', g \rangle = -\langle f, g' \rangle$。相应地 $-D^2 = -\frac{\mathrm{d}^2}{\mathrm{d}x^2}$ 是自伴随的，这是偏微分方程中 Fourier 级数方法的出发点。
@@ -45,7 +45,7 @@ $$
 
 ## 13.2. 极分解
 
-复数与矩阵的对应关系如下表（复数 $z = a + b\mathrm{i}$ 本身对应 2 阶实正规矩阵 $\begin{pmatrix} a & -b \\ b & a \end{pmatrix}$，[第 9 章](/2.1.9)）。
+复数与矩阵的对应关系如下表（复数 $z = a + b\mathrm{i}$ 本身对应 2 阶实正规矩阵 $\begin{bmatrix} a & -b \\ b & a \end{bmatrix}$，[第 9 章](/2.1.9)）。
 
 | 复数 | 矩阵 |
 |---|---|
@@ -70,7 +70,7 @@ $R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同
 
 称 $A = R\mathrm{e}^{\mathrm{i}M}$ 为正规矩阵 $A$ 的极分解（polar decomposition）。由 $A^{\mathsf H}A = \mathrm{e}^{-\mathrm{i}M}R^2\mathrm{e}^{\mathrm{i}M} = R^2$，$R = (A^{\mathsf H}A)^{1/2}$ 由 $A$ 唯一确定（取半正定的平方根）；$M$ 不唯一，各 $\theta_j$ 可以相差 $2\pi$ 的整数倍，$A$ 不可逆时零特征值的辐角也可任取。这兑现了[第 11 章](/2.1.11)开头提出的问题。
 
-**例 13.2.1** 复数 $z = r\mathrm{e}^{\mathrm{i}\theta}$ 对应的矩阵 $A = \begin{pmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{pmatrix}$ 的极分解为 $R = rI$，$M = \begin{pmatrix} 0 & \mathrm{i}\theta \\ -\mathrm{i}\theta & 0 \end{pmatrix}$：$M$ 是 Hermite 矩阵，$\mathrm{i}M = \theta\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$，$\mathrm{e}^{\mathrm{i}M}$ 就是转角为 $\theta$ 的旋转矩阵（例 11.8.1）。矩阵的极分解与复数的极形式在这里完全重合。
+**例 13.2.1** 复数 $z = r\mathrm{e}^{\mathrm{i}\theta}$ 对应的矩阵 $A = \begin{bmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{bmatrix}$ 的极分解为 $R = rI$，$M = \begin{bmatrix} 0 & \mathrm{i}\theta \\ -\mathrm{i}\theta & 0 \end{bmatrix}$：$M$ 是 Hermite 矩阵，$\mathrm{i}M = \theta\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$，$\mathrm{e}^{\mathrm{i}M}$ 就是转角为 $\theta$ 的旋转矩阵（例 11.8.1）。矩阵的极分解与复数的极形式在这里完全重合。
 
 一般方阵（不必正规）也有极分解 $A = UP$（$U$ 为酉矩阵，$P$ 为半正定 Hermite 矩阵），但 $U$ 与 $P$ 不一定可交换，见 13.5 节。
 
@@ -78,7 +78,7 @@ $R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同
 
 **定义 13.3.1** 设 $a_{ij} = \bar a_{ji}$（$1 \le i, j \le n$），称 $n$ 个复变量的函数 $f(x_1, \dots, x_n) = \sum_{i,j=1}^n a_{ij}\bar x_ix_j$ 为 $n$ 元 **Hermite 二次型**。记 $A = (a_{ij})$，则 $A$ 是 Hermite 矩阵，$f = \boldsymbol{x}^{\mathsf H}A\boldsymbol{x}$，$A$ 称为 $f$ 的矩阵。
 
-**例 13.3.1** $f(x_1, x_2) = \mathrm{i}\bar x_1x_2 - \mathrm{i}\bar x_2x_1$ 的矩阵为 $\begin{pmatrix} 0 & \mathrm{i} \\ -\mathrm{i} & 0 \end{pmatrix}$。$\boldsymbol{x} = (1, \mathrm{i})^{\mathsf T}$ 时 $f = \mathrm{i} \cdot \mathrm{i} - \mathrm{i} \cdot (-\mathrm{i}) \cdot 1 = -2$。
+**例 13.3.1** $f(x_1, x_2) = \mathrm{i}\bar x_1x_2 - \mathrm{i}\bar x_2x_1$ 的矩阵为 $\begin{bmatrix} 0 & \mathrm{i} \\ -\mathrm{i} & 0 \end{bmatrix}$。$\boldsymbol{x} = (1, \mathrm{i})^{\mathsf T}$ 时 $f = \mathrm{i} \cdot \mathrm{i} - \mathrm{i} \cdot (-\mathrm{i}) \cdot 1 = -2$。
 
 **性质 13.3.1**
 
@@ -103,7 +103,7 @@ $$
 
 $p$ 与 $r - p$ 称为 $f$ 的正、负**惯性指数**。
 
-**例 13.3.2** $A = \begin{pmatrix} 1 & \mathrm{i} & 1 \\ -\mathrm{i} & 0 & 0 \\ 1 & 0 & 0 \end{pmatrix}$，求可逆阵 $C$ 使 $f = \boldsymbol{x}^{\mathsf H}A\boldsymbol{x}$ 化为规范形。
+**例 13.3.2** $A = \begin{bmatrix} 1 & \mathrm{i} & 1 \\ -\mathrm{i} & 0 & 0 \\ 1 & 0 & 0 \end{bmatrix}$，求可逆阵 $C$ 使 $f = \boldsymbol{x}^{\mathsf H}A\boldsymbol{x}$ 化为规范形。
 
 1. $\det(\lambda I - A) = (\lambda - 2)(\lambda + 1)\lambda$，特征值 $2, -1, 0$。对应的特征向量为 $(2, -\mathrm{i}, 1)^{\mathsf T}$、$(-1, -\mathrm{i}, 1)^{\mathsf T}$、$(0, \mathrm{i}, 1)^{\mathsf T}$，它们属于不同特征值，自动正交，单位化得
 $$
@@ -137,10 +137,10 @@ $$
 
 半正定的情形有类似的结论：$A$ 半正定 $\Leftrightarrow$ 特征值全非负 $\Leftrightarrow$ $A = C^{\mathsf H}C$（$C$ 不必可逆）$\Leftrightarrow$ $A$ 复相合于 $\operatorname{diag}(I_r, O)$。但顺序主子式全非负不能推出半正定：$\operatorname{diag}(0, -1)$ 的顺序主子式为 $0, 0$，它却不是半正定的；正确的条件是所有主子式（不只是顺序主子式）都非负。
 
-**例 13.4.1** $A = \begin{pmatrix} 2 & 1 + \mathrm{i} \\ 1 - \mathrm{i} & 3 \end{pmatrix}$。顺序主子式 $2 > 0$，$\det A = 6 - |1 + \mathrm{i}|^2 = 4 > 0$，所以 $A$ 正定（特征值为 $1$ 与 $4$）。Cholesky 分解：$r_{11} = \sqrt2$，$r_{11}r_{12} = 1 + \mathrm{i} \Rightarrow r_{12} = \frac{1 + \mathrm{i}}{\sqrt2}$，$r_{22} = \sqrt{3 - |r_{12}|^2} = \sqrt2$，
+**例 13.4.1** $A = \begin{bmatrix} 2 & 1 + \mathrm{i} \\ 1 - \mathrm{i} & 3 \end{bmatrix}$。顺序主子式 $2 > 0$，$\det A = 6 - |1 + \mathrm{i}|^2 = 4 > 0$，所以 $A$ 正定（特征值为 $1$ 与 $4$）。Cholesky 分解：$r_{11} = \sqrt2$，$r_{11}r_{12} = 1 + \mathrm{i} \Rightarrow r_{12} = \frac{1 + \mathrm{i}}{\sqrt2}$，$r_{22} = \sqrt{3 - |r_{12}|^2} = \sqrt2$，
 
 $$
-A = R^{\mathsf H}R, \qquad R = \begin{pmatrix} \sqrt2 & \frac{1 + \mathrm{i}}{\sqrt2} \\ 0 & \sqrt2 \end{pmatrix}.
+A = R^{\mathsf H}R, \qquad R = \begin{bmatrix} \sqrt2 & \frac{1 + \mathrm{i}}{\sqrt2} \\ 0 & \sqrt2 \end{bmatrix}.
 $$
 
 ## 13.5. 复矩阵的奇异值分解
@@ -150,7 +150,7 @@ $$
 **定理 13.5.1（奇异值分解）** 设 $A \in \mathbb{C}^{m \times n}$，$\operatorname{rank}(A) = r$，则存在 $m$ 阶酉矩阵 $U$、$n$ 阶酉矩阵 $V$，使
 
 $$
-A = U\Sigma V^{\mathsf H}, \qquad \Sigma = \begin{pmatrix} \operatorname{diag}(\sigma_1, \dots, \sigma_r) & O \\ O & O \end{pmatrix}_{m \times n}, \qquad \sigma_1 \ge \cdots \ge \sigma_r > 0.
+A = U\Sigma V^{\mathsf H}, \qquad \Sigma = \begin{bmatrix} \operatorname{diag}(\sigma_1, \dots, \sigma_r) & O \\ O & O \end{bmatrix}_{m \times n}, \qquad \sigma_1 \ge \cdots \ge \sigma_r > 0.
 $$
 
 $\sigma_i$ 是 $A^{\mathsf H}A$ 的正特征值的算术平方根，称为 $A$ 的**奇异值**。
@@ -194,7 +194,7 @@ print(np.allclose(U.conj().T @ U, np.eye(4)))    # True
 1. $A$ 对称时 $g$ 对称：$\boldsymbol{\alpha}^{\mathsf T}A\boldsymbol{\beta} = (\boldsymbol{\alpha}^{\mathsf T}A\boldsymbol{\beta})^{\mathsf T} = \boldsymbol{\beta}^{\mathsf T}A\boldsymbol{\alpha}$；$A$ 反对称时 $g$ 反对称。
 2. $A$ 是实对称正定矩阵时，$g$ 是 $\mathbb{R}^n$ 上的内积；$A = I$ 时是标准内积。
 3. $\mathbb{R}^4$ 上取 $A = \operatorname{diag}(1, 1, 1, -c^2)$，$\boldsymbol{\alpha}_k = (x_k, y_k, z_k, t_k)^{\mathsf T}$，得 Lorentz 型 $g(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2) = x_1x_2 + y_1y_2 + z_1z_2 - c^2t_1t_2$，它是狭义相对论中时空的"度量"，$g(\boldsymbol{\alpha}, \boldsymbol{\alpha})$ 可正可负可为零。
-4. $\mathbb{R}^2$ 上 $g\left((a, b)^{\mathsf T}, (c, d)^{\mathsf T}\right) = ad - bc$ 是反对称型，$A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$。
+4. $\mathbb{R}^2$ 上 $g\left((a, b)^{\mathsf T}, (c, d)^{\mathsf T}\right) = ad - bc$ 是反对称型，$A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$。
 
 **定义 13.6.2** 设 $v_1, \dots, v_n$ 是 $V$ 的基，$g$ 是双线性型。称 $G = (g(v_i, v_j))_{n \times n}$ 为 $g$ 在这组基下的矩阵（度量矩阵）。若 $G$ 可逆，则称 $g$ 为**非退化双线性型**。
 
@@ -213,7 +213,7 @@ $$
 **例 13.6.2** $\mathcal{P}_2(\mathbb{R})$ 上 $g(f, h) = \int_0^1 f(x)h(x)\,\mathrm{d}x$ 在基 $1, x, x^2$ 下的矩阵为
 
 $$
-G = \begin{pmatrix} 1 & \frac12 & \frac13 \\ \frac12 & \frac13 & \frac14 \\ \frac13 & \frac14 & \frac15 \end{pmatrix}, \qquad g_{ij} = \int_0^1 x^{i+j-2}\,\mathrm{d}x = \frac{1}{i + j - 1}.
+G = \begin{bmatrix} 1 & \frac12 & \frac13 \\ \frac12 & \frac13 & \frac14 \\ \frac13 & \frac14 & \frac15 \end{bmatrix}, \qquad g_{ij} = \int_0^1 x^{i+j-2}\,\mathrm{d}x = \frac{1}{i + j - 1}.
 $$
 
 这是 Hilbert 矩阵。$n$ 阶 Hilbert 矩阵是著名的病态矩阵，$n = 10$ 时条件数约为 $1.6 \times 10^{13}$：单项式基 $1, x, \dots, x^{n-1}$ 在 $[0, 1]$ 上"几乎线性相关"。若改用 $[0, 1]$ 上正交化得到的多项式（平移的 Legendre 多项式，参见例 12.4.2）作基，度量矩阵就是 $I$。选一组好的基，往往比改进算法更能提高计算的稳定性。
@@ -231,7 +231,7 @@ $(p, q)$ 称为 $g$ 的符号（signature）。例 13.6.1 中的 Lorentz 型的�
 **定理 13.7.2** 设 $g$ 是 $n$ 维实空间 $V$ 上的非退化反对称双线性型，则 $n = 2m$ 是偶数，且存在基 $e_1, f_1, \dots, e_m, f_m$，使 $g(e_i, f_i) = 1 = -g(f_i, e_i)$，其余基向量对的值为零。即 $g$ 的矩阵为
 
 $$
-\operatorname{diag}(J, \dots, J), \qquad J = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}.
+\operatorname{diag}(J, \dots, J), \qquad J = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}.
 $$
 
 这样的基称为辛基。
@@ -248,7 +248,7 @@ $\operatorname{Isom}(V, g)$ 关于复合构成群：等距变换的复合与逆�
 |---|---|---|
 | $I_n$（内积） | 正交群 $O(n)$ | $M^{\mathsf T}M = I$，即[上一章](/2.1.12)的正交变换 |
 | $\operatorname{diag}(I_p, -I_q)$ | 不定正交群 $O(p, q)$ | $M^{\mathsf T}\operatorname{diag}(I_p, -I_q)M = \operatorname{diag}(I_p, -I_q)$ |
-| $\operatorname{diag}(J, \dots, J)$ | 辛群 $Sp(2m, \mathbb{R})$ | $M^{\mathsf T}GM = G$ |
+| $\operatorname{diag}(J, \dots, J)$ | 辛群 $\operatorname{Sp}(2m, \mathbb{R})$ | $M^{\mathsf T}GM = G$ |
 
 **例 13.7.1** 在 $\mathbb{R}^4$ 上取例 13.6.1 的 Lorentz 型。设 $0 < v < c$，$E_0 = \sqrt{1 - v^2/c^2}$，
 
@@ -258,7 +258,7 @@ $$
 
 直接计算 $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$，除以 $E_0^2$ 得 $x'^2 - c^2t'^2 = x^2 - c^2t^2$，所以 $g(T\alpha, T\alpha) = g(\alpha, \alpha)$；由对称双线性型的极化，$g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$。$T$ 是 Lorentz 变换，Lorentz 型的等距群 $O(3, 1)$ 称为 Lorentz 群（Lorentz group）。
 
-**例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in Sp(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
+**例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
 
 在等距群中取单参数子群 $\mathrm{e}^{tX}$ 并在 $t = 0$ 处求导，条件 $M^{\mathsf T}GM = G$ 变成 $X^{\mathsf T}G + GX = O$。$G = I$ 时得到反对称矩阵 $\mathfrak{so}(n)$，$G$ 为辛矩阵时得到 $\mathfrak{sp}(2m)$，它们都是 [1.3.5](/1.3.5) 中的**典型李代数**。
 

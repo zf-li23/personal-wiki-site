@@ -9,7 +9,7 @@ title: 实数与函数
     -   邻域：$N(x_{0}, \delta) \triangleq \{ x \mid x_{0} - \delta < x < x_{0} + \delta \} = (x_{0} - \delta, x_{0} + \delta), \quad \delta > 0$
     -   去心邻域：$N^{*}(x_{0}, \delta) \triangleq \{ x \mid 0 < |x - x_{0}| < \delta \} = (x_{0} - \delta, x_{0}) \cup (x_{0}, x_{0} + \delta), \quad \delta > 0$
 -   **符号**：
-    $\in$ 属于，$\forall$ 任取，$\exists$ 存在，$\exists!$ 存在唯一，$\triangleq$ 定义，$\rightarrow$ 推出，$\leftrightarrow$ 等价，$\equiv$ 恒等于
+    $\in$ 属于，$\forall$ 任取，$\exists$ 存在，$\exists!$ 存在唯一，$\triangleq$ 定义，$\to$ 推出，$\leftrightarrow$ 等价，$\equiv$ 恒等于
 -   **绝对值的性质**：
     $$
     \bigl| |a| - |b| \bigr| \leq |a + b| \leq |a| + |b|

@@ -202,29 +202,62 @@ terms:
 |---|---|---|---|
 | 斜体（默认） | `x` | 变量、函数名、物理量、命题与谓词 | $x, f, A, t, m, P(x)$ |
 | 直立 | `\mathrm{}` | 数学常数、微分算子、单位、元素与粒子符号、单词构成的下标、分布名 | $\mathrm{e}, \mathrm{i}, \mathrm{d}x$；$\mathrm{mol}$；$x_{\max}$, $T_{\mathrm{c}}$；$\mathrm{Bin}(n,p)$ |
-| 运算符 | `\operatorname{}` | 多字母运算（`\det`、`\ker`、`\dim`、`\exp`、`\log` 等已有命令直接用） | $\operatorname{tr}, \operatorname{rank}, \operatorname{span}, \operatorname{diag}, \operatorname{sgn}, \operatorname{Var}, \operatorname{Cov}, \operatorname{Corr}$ |
-| 粗斜体 | `\boldsymbol{}` | $\mathbb{F}^n$ 中的列向量、随机向量、物理中的矢量、全 1 向量与示性函数 | $\boldsymbol{x}, \boldsymbol{X}, \boldsymbol{F}, \boldsymbol{1}, \boldsymbol{1}_A$ |
+| 运算符 | `\operatorname{}` | 多字母运算与函数、典型群（`\det`、`\ker`、`\dim`、`\exp`、`\log` 等已有命令直接用） | $\operatorname{tr}, \operatorname{rank}, \operatorname{span}, \operatorname{diag}, \operatorname{sgn}, \operatorname{Re}, \operatorname{Var}, \operatorname{Cov}, \operatorname{MSE}$；$\operatorname{GL}_n, \operatorname{SO}(n), \operatorname{U}(n), \operatorname{Sp}(2m)$ |
+| 粗斜体 | `\boldsymbol{}` | $\mathbb{F}^n$ 中的列向量（含零向量、向量值函数、参数向量）、随机向量、物理中的矢量、全 1 向量与示性函数 | $\boldsymbol{x}, \boldsymbol{0}, \boldsymbol{X}(t), \boldsymbol{\theta}, \boldsymbol{X}, \boldsymbol{F}, \boldsymbol{1}, \boldsymbol{1}_A$ |
 | 黑板粗体 | `\mathbb{}` | 数集、一般数域、概率、期望 | $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{F}$；$\mathbb{P}, \mathbb{E}$ |
-| 花体 | `\mathcal{}` | 集族与 σ-代数、映射空间、矩阵的列空间与零空间、正态分布 | $\mathcal{F}$, $\mathcal{L}(V,W)$, $\mathcal{R}(A), \mathcal{N}(A)$, $\mathcal{N}(\mu,\sigma^2)$ |
+| 花体 | `\mathcal{}` | 集族与 σ-代数、幂集、多重线性映射空间、线性映射与矩阵的像空间与零空间、正态分布 | $\mathcal{F}$, $\mathcal{P}(A)$, $\mathcal{L}(V,V;\mathbb{F})$, $\mathcal{R}(T), \mathcal{N}(A)$, $\mathcal{N}(\mu,\sigma^2)$ |
 | 哥特体 | `\mathfrak{}` | 李代数、素理想与极大理想 | $\mathfrak{g}, \mathfrak{sl}_2, \mathfrak{p}, \mathfrak{m}$ |
 | 无衬线 | `\mathsf{}` | 转置、共轭转置 | $A^{\mathsf T}, A^{\mathsf H}$ |
 | 手写体 | `\mathscr{}` | 积分变换 | $\mathscr{L}\{f\}$, $\mathscr{F}\{f\}$ |
 
-不要使用：`\vec`、`\mathbf`、`\bm`（向量一律 `\boldsymbol`；数集用 `\mathbb`）；`^T`、`^\top`、`'` 表示转置；`\Pr`；`\text{var}` 或裸写的 `var(`；公式里的 `...`（用 `\dots` 或 `\cdots`）；`\mathbb{1}`（KaTeX 不支持，示性函数写 $\boldsymbol{1}_A$）。
+不要使用：`\vec`、`\mathbf`、`\bm`（向量一律 `\boldsymbol`；数集用 `\mathbb`）；`^T`、`^\top`、`'` 表示转置；`\Pr`；`\text{var}` 或裸写的 `var(`；公式里的 `...`；`\mathbb{1}`（KaTeX 不支持，示性函数写 $\boldsymbol{1}_A$）；`\emptyset`（写 `\varnothing`）；`\epsilon`（写 `\varepsilon`）；`\rightarrow`（写 `\to`）；`\stackrel`（写 `\overset`）；公式中的 Unicode 希腊字母（写 `\alpha`）；`C_n^k`（写 $\binom{n}{k}$）；取整 $[x]$（写 $\lfloor x\rfloor$）；集合差 $A - B$（写 $A \setminus B$）；`||x||`（写 $\|x\|$）。
+
+排版细节：
+- 省略号：逗号分隔的列表用 `\dots`（$a_1, \dots, a_n$），运算符之间用 `\cdots`（$a_1 + \cdots + a_n$）。
+- 上横线：单个字母用 `\bar`（$\bar z$），较长的表达式用 `\overline`（$\overline{z_1 z_2}$）；重音作用于命令时加花括号：`\bar{\boldsymbol{y}}`（`\bar\boldsymbol{y}` 会出错）。
+- 运算符的括号：$\operatorname{rank}(A)$、$\operatorname{tr}(A)$、$\operatorname{Var}(X)$ 带括号；$\det A$、$\dim V$、$\ker T$ 不带。
+- 映射写 `f\colon A \to B`（不是 `f: A \to B`）。
+- 单词或缩写构成的下标、标签直立：$e_{\mathrm{L}}$、$C_{3\mathrm{v}}$、$\rho_{\mathrm{in}}$、$\mathrm{SS}_A$、$\mathrm{BF}_{10}$；作为函数的统计量用 `\operatorname`：$\operatorname{MSE}(\hat\theta)$、$\operatorname{Bias}$。
+- 特殊函数：$\Gamma(x)$、Beta 函数 $\mathrm{B}(\alpha,\beta)$。
+- 表格单元格中的绝对值、范数写 `\lvert x \rvert`、`\Vert x \Vert`：裸的 `|` 会被当作列分隔符。
+- 同一课程内矩阵统一用一种括号（线性代数用 `bmatrix`）。
 
 ### 7.2 数学
 
 - **常数与算子**：自然常数 $\mathrm{e}$、虚数单位 $\mathrm{i}$、微分 $\mathrm{d}$ 直立（$\mathrm{e}^{\mathrm{i}\theta}$，$\int f(x)\,\mathrm{d}x$，$\frac{\mathrm{d}y}{\mathrm{d}x}$）；作下标、求和指标的 $i$ 与群的单位元 $e$ 是变量，用斜体。$\pi$ 照常写 `\pi`。
 - **数集**：$\mathbb{N} = \{0, 1, 2, \dots\}$ 包含 0（ISO 80000-2），正整数写 $\mathbb{N}_+$；一般数域写 $\mathbb{F}$（不用中文教材常用的 $P$，以免与概率混淆）。
-- **线性代数**：矩阵用斜体大写 $A$（不加粗）；$\mathbb{F}^n$ 中的向量用粗斜体 $\boldsymbol{x}$；抽象线性空间用斜体大写 $V, W$，其元素用普通斜体 $v, w$，它在基 $B$ 下的坐标是粗体 $[v]_B \in \mathbb{F}^n$——粗体与否本身提示"具体还是抽象"。转置 $A^{\mathsf T}$，共轭转置 $A^{\mathsf H}$，伴随变换 $T^*$，对偶映射 $T^{\mathsf t}$；内积 $\langle x, y\rangle$，范数 $\|x\|$；复共轭 $\bar z$。
-- **集合与映射**：$f\colon A \to B$；空集 $\varnothing$；补集 $A^{\mathsf c}$；集合论中集合的特征函数可写 $\chi_A$。
-- **逻辑**：命题、谓词用斜体大写 $P, Q, R$；联结词 $\lnot, \land, \lor, \to, \leftrightarrow$。
+- **线性代数**：矩阵用斜体大写 $A$（不加粗），零矩阵 $O$，单位矩阵 $I_n$；$\mathbb{F}^n$ 中的向量用粗斜体 $\boldsymbol{x}$，零向量 $\boldsymbol{0}$，标准基 $\boldsymbol{e}_i$；矩阵 $A$ 对应的线性映射写 $T_A\colon \boldsymbol{x} \mapsto A\boldsymbol{x}$（不用粗体 $\boldsymbol{A}$ 表示映射）。抽象线性空间用斜体大写 $V, W$，其元素用普通斜体 $v, w$，零元 $0$（必要时 $0_V$），恒等映射 $\mathrm{id}_V$；坐标向量是粗体（$[v]_B$ 或课程中约定的 $\hat{\boldsymbol{x}}$）——粗体与否本身提示"具体还是抽象"。矩阵空间 $\mathbb{F}^{m\times n}$，线性映射空间 $\operatorname{Hom}(V,W)$，像与零空间 $\mathcal{R}(T)$、$\mathcal{N}(T)$（抽象代数中的同态核仍写 $\ker\varphi$、$\operatorname{Im}\varphi$）。转置 $A^{\mathsf T}$，共轭转置 $A^{\mathsf H}$，伴随变换 $T^*$，对偶映射 $T^{\mathsf t}$；内积 $\langle x, y\rangle$，范数 $\|x\|$，Frobenius 范数 $\|A\|_{\mathrm{F}}$；复共轭 $\bar z$。
+- **分析**：$\lim$、$\sup$、$\inf$ 用已有命令；区域 $\Omega \subset \mathbb{R}^n$ 中的点在分析、微分方程中可以写普通斜体 $x$（分析学惯例），作为线性代数对象的向量仍加粗。
+- **集合与映射**：$f\colon A \to B$；空集 $\varnothing$；补集 $A^{\mathsf c}$，差 $A \setminus B$，幂集 $\mathcal{P}(A)$；集合论中集合的特征函数可写 $\chi_A$；格与布尔代数中的补元写 $a'$。
+- **逻辑**：命题变元用斜体小写 $p, q, r$，公式用斜体大写 $A, B$，谓词与公理模式中的 $P, Q, R$ 斜体；联结词 $\lnot, \land, \lor, \to, \leftrightarrow$。
+- **代数结构**：群的单位元 $e$（斜体，是变量）；抽象代数中的一般域写 $F$（教材通行写法），作为线性代数标量域时写 $\mathbb{F}$；有限域 $\mathbb{F}_q$；李代数 $\mathfrak{g}$；典型群 $\operatorname{GL}_n(\mathbb{F})$、$\operatorname{SO}(n)$、$\operatorname{U}(n)$。
 
 ### 7.3 概率与统计
 
 - 概率 $\mathbb{P}(A)$，期望 $\mathbb{E}[X]$（或 $\mathbb{E}X$），方差 $\operatorname{Var}(X)$，协方差 $\operatorname{Cov}(X, Y)$，相关系数 $\operatorname{Corr}(X,Y)$，示性函数 $\boldsymbol{1}_A$。
 - 随机变量用斜体大写 $X$，观测值用小写 $x$；随机向量 $\boldsymbol{X}$，观测向量 $\boldsymbol{x}$；参数用希腊字母 $\theta, \mu, \sigma$，估计量加帽 $\hat\theta$，样本均值 $\bar X$。
-- 分布：$\mathcal{N}(\mu, \sigma^2)$、$\mathrm{Bin}(n,p)$、$\mathrm{Poi}(\lambda)$、$\mathrm{Exp}(\lambda)$、$\mathrm{U}(a,b)$、$\Gamma(\alpha,\lambda)$、$\mathrm{Beta}(\alpha,\beta)$、$\chi^2_n$、$t_n$、$F_{m,n}$；独立同分布 $\overset{\text{iid}}{\sim}$。
+- 参数向量加粗（$\boldsymbol{\theta}$、$\boldsymbol{\beta}$）；参数下的概率与期望 $\mathbb{P}_\theta$、$\mathbb{E}_\theta$，原假设下 $\mathbb{P}_{H_0}$、$\overset{H_0}{\sim}$。
+- 分布（直立缩写，参数按下列约定）：
+
+  | 分布 | 记号 | 约定 |
+  |---|---|---|
+  | 两点（Bernoulli） | $\mathrm{Ber}(p)$ | |
+  | 二项 | $\mathrm{Bin}(n,p)$ | |
+  | 几何 | $\mathrm{Geo}(p)$ | 取值 $1, 2, \dots$（首次成功所需次数） |
+  | 负二项 | $\mathrm{NB}(r,p)$ | 第 $r$ 次成功前的失败次数，取值从 0 开始 |
+  | Pascal | $\mathrm{Pascal}(r,p)$ | 第 $r$ 次成功所需次数，$= r + \mathrm{NB}(r,p)$ |
+  | 超几何 / 负超几何 | $\mathrm{H}(n,M,N)$ / $\mathrm{NH}(r,M,N)$ | |
+  | Poisson | $\mathrm{Poi}(\lambda)$ | |
+  | 多项 | $\mathrm{Mult}(n,\boldsymbol{p})$ | |
+  | 均匀 | $\mathrm{U}(a,b)$ | 不写 $\mathrm{U}[a,b]$ |
+  | 指数 | $\mathrm{Exp}(\lambda)$ | $\lambda$ 是速率（均值 $1/\lambda$） |
+  | Gamma | $\Gamma(\alpha,\lambda)$ | $\lambda$ 是速率 |
+  | Beta | $\mathrm{Beta}(\alpha,\beta)$ | |
+  | 正态 | $\mathcal{N}(\mu,\sigma^2)$，多元 $\mathcal{N}_p(\boldsymbol{\mu},\Sigma)$ | 第二个参数是方差 |
+  | Cauchy | $\mathrm{Cauchy}(\theta)$ | 标准 Cauchy 即 $t_1$ |
+  | $\chi^2$、$t$、$F$ | $\chi^2_n$、$t_n$、$F_{m,n}$ | 上 $\alpha$ 分位数 $z_\alpha$、$t_{n,\alpha}$、$\chi^2_{n,\alpha}$、$F_{m,n,\alpha}$ |
+
+  独立同分布 $\overset{\text{iid}}{\sim}$，近似服从 $\overset{\cdot}{\sim}$ 或 $\overset{H_0}{\approx}$。
 - 收敛：$\xrightarrow{d}$（依分布）、$\xrightarrow{p}$（依概率）、$\xrightarrow{\text{a.s.}}$（几乎必然）。
 
 ### 7.4 物理、化学与生物
@@ -241,7 +274,10 @@ terms:
 | $\mathcal{N}(A)$ / $\mathcal{N}(\mu,\sigma^2)$ | 零空间 / 正态分布 | 参数 |
 | $\bar z$ / $\bar X$ | 复共轭 / 样本均值 | 对象 |
 | $V$ | 线性空间 / 图的顶点集 | 学科 |
-| $\mathcal{L}$ | 映射空间 $\mathcal{L}(V,W)$ / 物理中的拉格朗日量 | 学科 |
+| $\mathcal{L}$ | 多重线性映射空间 / 物理中的拉格朗日量 | 学科 |
+| $P$ | 置换矩阵 / 可逆矩阵（相似变换 $P^{-1}AP$） | 语境；需要时写 $P_\sigma$ |
+| $\sigma$ | 坐标同构（2.1.8）/ 矩阵的谱 $\sigma(A)$ / 标准差 | 学科与参数 |
+| $F$ / $\mathbb{F}$ | 名为 $F$ 的矩阵、抽象代数中的域 / 线性代数的标量域 | 字体 |
 
 ## 8. 提交前
 

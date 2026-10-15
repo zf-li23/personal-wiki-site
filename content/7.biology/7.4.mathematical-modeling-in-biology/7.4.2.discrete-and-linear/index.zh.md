@@ -573,9 +573,9 @@ Post-reproductive    -0.0000            -0.000000
 
 计算完成后，应验证：
 $$
-\| \boldsymbol{v}^{\mathsf T} A - \lambda \boldsymbol{v}^{\mathsf T} \| < \epsilon
+\| \boldsymbol{v}^{\mathsf T} A - \lambda \boldsymbol{v}^{\mathsf T} \| < \varepsilon
 $$
-其中$\epsilon$是一个小的容差（如$10^{-10}$）。
+其中$\varepsilon$是一个小的容差（如$10^{-10}$）。
 
 同时，应验证$\boldsymbol{v}^{\mathsf T} \boldsymbol{w} \neq 0$，因为$\boldsymbol{v}$和$\boldsymbol{w}$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
 

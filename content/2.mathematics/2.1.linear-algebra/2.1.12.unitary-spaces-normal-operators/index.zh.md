@@ -204,7 +204,7 @@ $$
 
 只有在标准正交基下，伴随的矩阵才是 $A^{\mathsf H}$。在度量矩阵为 $G$ 的一般基下，由 $\langle T\alpha, \beta \rangle = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}G\bar{\boldsymbol{y}}$ 可得 $T^*$ 的矩阵为 $\bar G^{-1}A^{\mathsf H}\bar G$。
 
-**例 12.6.2** $\mathbb{C}^3$ 取标准内积，$T(x_1, x_2, x_3)^{\mathsf T} = (x_1 - \mathrm{i}x_2, x_2 + \mathrm{i}x_3, x_3 + \mathrm{i}x_1)^{\mathsf T}$，矩阵 $A = \begin{pmatrix} 1 & -\mathrm{i} & 0 \\ 0 & 1 & \mathrm{i} \\ \mathrm{i} & 0 & 1 \end{pmatrix}$，则 $T^*\boldsymbol{y} = A^{\mathsf H}\boldsymbol{y} = (y_1 - \mathrm{i}y_3, \mathrm{i}y_1 + y_2, -\mathrm{i}y_2 + y_3)^{\mathsf T}$。
+**例 12.6.2** $\mathbb{C}^3$ 取标准内积，$T(x_1, x_2, x_3)^{\mathsf T} = (x_1 - \mathrm{i}x_2, x_2 + \mathrm{i}x_3, x_3 + \mathrm{i}x_1)^{\mathsf T}$，矩阵 $A = \begin{bmatrix} 1 & -\mathrm{i} & 0 \\ 0 & 1 & \mathrm{i} \\ \mathrm{i} & 0 & 1 \end{bmatrix}$，则 $T^*\boldsymbol{y} = A^{\mathsf H}\boldsymbol{y} = (y_1 - \mathrm{i}y_3, \mathrm{i}y_1 + y_2, -\mathrm{i}y_2 + y_3)^{\mathsf T}$。
 
 **性质 12.6.1** 设 $V$ 是有限维内积空间，$T, T_1, T_2$ 是 $V$ 上的线性变换，$c \in \mathbb{F}$。
 
@@ -225,7 +225,7 @@ $$
 
 **例 12.7.1**
 
-1. $\mathbb{R}^2$ 上的旋转 $\boldsymbol{x} \mapsto \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}\boldsymbol{x}$：$\langle A\boldsymbol{x}, A\boldsymbol{y} \rangle = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}A\boldsymbol{y} = \boldsymbol{x}^{\mathsf T}\boldsymbol{y}$。
+1. $\mathbb{R}^2$ 上的旋转 $\boldsymbol{x} \mapsto \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}\boldsymbol{x}$：$\langle A\boldsymbol{x}, A\boldsymbol{y} \rangle = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}A\boldsymbol{y} = \boldsymbol{x}^{\mathsf T}\boldsymbol{y}$。
 2. $\mathbb{C}^n$ 上 $\boldsymbol{\alpha} \mapsto U\boldsymbol{\alpha}$，$U$ 是酉矩阵（性质 12.3.2）。
 3. $\mathbb{C}^{n\times n}$ 取 Frobenius 内积，$U$ 是固定的酉矩阵，$T(A) = UA$：$\langle UA, UB \rangle = \operatorname{tr}(UAB^{\mathsf H}U^{\mathsf H}) = \operatorname{tr}(AB^{\mathsf H}U^{\mathsf H}U) = \langle A, B \rangle$。
 
@@ -263,7 +263,7 @@ $$
 
 也可以用定理 12.7.2：把 $u$ 扩充为标准正交基 $e_1 = u, e_2, \dots, e_n$，则 $Te_1 = -e_1$，$Te_j = e_j$（$j \ge 2$），矩阵 $\operatorname{diag}(-1, 1, \dots, 1)$ 是正交矩阵。$T$ 是关于超平面 $u^\perp$ 的镜面反射，在 $\mathbb{R}^n$ 中就是 Householder 变换 $I - 2\boldsymbol{u}\boldsymbol{u}^{\mathsf T}$。
 
-设 $T$ 是欧氏空间上的正交变换，在标准正交基下的矩阵 $A$ 是正交矩阵，$\det A = \pm 1$。$\det A = 1$ 时称 $T$ 为第一类正交变换（旋转），$\det A = -1$ 时称为第二类正交变换。例如 $\mathbb{R}^2$ 上 $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$ 是第一类的，$\begin{pmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{pmatrix}$（关于倾角为 $\theta/2$ 的直线的反射）是第二类的。所有正交变换构成群，第一类正交变换构成它的子群，对应 [1.3.5](/1.3.5) 中的 $O(n)$ 与 $SO(n)$；[第 13 章](/2.1.13)将从双线性型的角度重新认识这些群。
+设 $T$ 是欧氏空间上的正交变换，在标准正交基下的矩阵 $A$ 是正交矩阵，$\det A = \pm 1$。$\det A = 1$ 时称 $T$ 为第一类正交变换（旋转），$\det A = -1$ 时称为第二类正交变换。例如 $\mathbb{R}^2$ 上 $\begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$ 是第一类的，$\begin{bmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{bmatrix}$（关于倾角为 $\theta/2$ 的直线的反射）是第二类的。所有正交变换构成群，第一类正交变换构成它的子群，对应 [1.3.5](/1.3.5) 中的 $O(n)$ 与 $\operatorname{SO}(n)$；[第 13 章](/2.1.13)将从双线性型的角度重新认识这些群。
 
 ## 12.8. 正交相似与酉相似
 
@@ -285,7 +285,7 @@ $$
 
 **定义 12.9.1** 设 $V$ 是酉空间。满足 $TT^* = T^*T$ 的线性变换 $T$ 称为**正规变换**；满足 $AA^{\mathsf H} = A^{\mathsf H}A$ 的复方阵 $A$ 称为**正规矩阵**。
 
-$T$ 是正规变换当且仅当它在标准正交基下的矩阵是正规矩阵。酉矩阵（$A^{\mathsf H}A = I = AA^{\mathsf H}$）、Hermite 矩阵（$A^{\mathsf H} = A$）、反 Hermite 矩阵（$A^{\mathsf H} = -A$）与对角阵都是正规的，所以酉变换是正规变换的特例，而且是真子类。$\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ 不是正规的。
+$T$ 是正规变换当且仅当它在标准正交基下的矩阵是正规矩阵。酉矩阵（$A^{\mathsf H}A = I = AA^{\mathsf H}$）、Hermite 矩阵（$A^{\mathsf H} = A$）、反 Hermite 矩阵（$A^{\mathsf H} = -A$）与对角阵都是正规的，所以酉变换是正规变换的特例，而且是真子类。$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ 不是正规的。
 
 **性质 12.9.1** 设 $T$ 是正规变换。
 
@@ -340,7 +340,7 @@ $$
 
 **推论 12.10.3** 既正规又幂零的矩阵是零矩阵：它酉相似于对角阵，而对角元（特征值）全为零。
 
-**例 12.10.1** 2 阶实正规矩阵。设 $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathbb{R}^{2\times 2}$，比较 $AA^{\mathsf T}$ 与 $A^{\mathsf T}A$ 得 $b^2 = c^2$ 与 $(c - b)(a - d) = 0$，所以 $A$ 正规当且仅当 $A$ 对称（$b = c$），或 $A = \begin{pmatrix} a & b \\ -b & a \end{pmatrix}$（$b \ne 0$）。后者是复数 $a - b\mathrm{i}$ 的矩阵表示（[第 9 章](/2.1.9)），特征值 $a \pm b\mathrm{i}$，对应的特征向量 $\frac{1}{\sqrt2}(1, \pm \mathrm{i})^{\mathsf T}$ 正交，$U = \frac{1}{\sqrt2}\begin{pmatrix} 1 & 1 \\ \mathrm{i} & -\mathrm{i} \end{pmatrix}$ 是酉矩阵，$U^{\mathsf H}AU = \operatorname{diag}(a + b\mathrm{i}, a - b\mathrm{i})$。它在 $\mathbb{R}^2$ 中没有实特征向量，不能正交对角化，但可以酉对角化。
+**例 12.10.1** 2 阶实正规矩阵。设 $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathbb{R}^{2\times 2}$，比较 $AA^{\mathsf T}$ 与 $A^{\mathsf T}A$ 得 $b^2 = c^2$ 与 $(c - b)(a - d) = 0$，所以 $A$ 正规当且仅当 $A$ 对称（$b = c$），或 $A = \begin{bmatrix} a & b \\ -b & a \end{bmatrix}$（$b \ne 0$）。后者是复数 $a - b\mathrm{i}$ 的矩阵表示（[第 9 章](/2.1.9)），特征值 $a \pm b\mathrm{i}$，对应的特征向量 $\frac{1}{\sqrt2}(1, \pm \mathrm{i})^{\mathsf T}$ 正交，$U = \frac{1}{\sqrt2}\begin{bmatrix} 1 & 1 \\ \mathrm{i} & -\mathrm{i} \end{bmatrix}$ 是酉矩阵，$U^{\mathsf H}AU = \operatorname{diag}(a + b\mathrm{i}, a - b\mathrm{i})$。它在 $\mathbb{R}^2$ 中没有实特征向量，不能正交对角化，但可以酉对角化。
 
 正规矩阵酉对角化的计算是两个标准问题的组合：
 
@@ -350,7 +350,7 @@ $$
 2. 对每个 $\mu_j$，解 $(A - \mu_jI)\boldsymbol{x} = \boldsymbol{0}$ 得特征子空间的一组基，对它作 Gram–Schmidt 正交化，得到标准正交基。
 3. 把所有这些向量排成 $U$。不同特征子空间自动正交（性质 12.9.1），所以 $U$ 是酉矩阵，$U^{\mathsf H}AU = \Lambda$。
 
-**例 12.10.2** $A = \begin{pmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & \mathrm{i} \end{pmatrix}$。$A^{\mathsf H} = \begin{pmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & -\mathrm{i} \end{pmatrix}$，$A^{\mathsf H}A = I = AA^{\mathsf H}$，$A$ 是酉矩阵，从而正规。$\det(\lambda I - A) = (\lambda^2 + 1)(\lambda - \mathrm{i})$，特征值 $\mathrm{i}$（二重）与 $-\mathrm{i}$。
+**例 12.10.2** $A = \begin{bmatrix} 0 & 1 & 0 \\ -1 & 0 & 0 \\ 0 & 0 & \mathrm{i} \end{bmatrix}$。$A^{\mathsf H} = \begin{bmatrix} 0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & -\mathrm{i} \end{bmatrix}$，$A^{\mathsf H}A = I = AA^{\mathsf H}$，$A$ 是酉矩阵，从而正规。$\det(\lambda I - A) = (\lambda^2 + 1)(\lambda - \mathrm{i})$，特征值 $\mathrm{i}$（二重）与 $-\mathrm{i}$。
 
 1. $\lambda = \mathrm{i}$：$(A - \mathrm{i}I)\boldsymbol{x} = \boldsymbol{0}$ 的基为 $(-\mathrm{i}, 1, 0)^{\mathsf T}$、$(0, 0, 1)^{\mathsf T}$，它们已经正交，单位化得 $\boldsymbol{u}_1 = \frac{1}{\sqrt2}(-\mathrm{i}, 1, 0)^{\mathsf T}$，$\boldsymbol{u}_2 = (0, 0, 1)^{\mathsf T}$。若取的基不正交（例如 $(-\mathrm{i}, 1, 1)^{\mathsf T}$ 与 $(0, 0, 1)^{\mathsf T}$），就需要先作 Gram–Schmidt。
 2. $\lambda = -\mathrm{i}$：基为 $(\mathrm{i}, 1, 0)^{\mathsf T}$，$\boldsymbol{u}_3 = \frac{1}{\sqrt2}(\mathrm{i}, 1, 0)^{\mathsf T}$，它与 $\boldsymbol{u}_1, \boldsymbol{u}_2$ 自动正交。

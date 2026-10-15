@@ -10,13 +10,13 @@ title: 矩阵函数
 
 **定义 11.1.1** 以区间 $[a, b]$ 上的实函数 $a_{ij}(x)$ 为元素的矩阵 $A(x) = (a_{ij}(x))_{m \times n}$ 称为**函数矩阵**。
 
-例如 $A(x) = \begin{pmatrix} \sin x & \mathrm{e}^x & 1 \\ 3x^2 & 0 & x - 1 \end{pmatrix}$。数字矩阵是函数矩阵的特例。函数矩阵的加法、与函数 $k(x)$ 的数乘、乘法 $A(x)B(x) = \left(\sum_k a_{ik}(x)b_{kj}(x)\right)$ 和转置都与数字矩阵相同。
+例如 $A(x) = \begin{bmatrix} \sin x & \mathrm{e}^x & 1 \\ 3x^2 & 0 & x - 1 \end{bmatrix}$。数字矩阵是函数矩阵的特例。函数矩阵的加法、与函数 $k(x)$ 的数乘、乘法 $A(x)B(x) = \left(\sum_k a_{ik}(x)b_{kj}(x)\right)$ 和转置都与数字矩阵相同。
 
 **定义 11.1.2** 设 $A(x)$ 是 $n$ 阶函数矩阵。若存在 $n$ 阶函数矩阵 $B(x)$，使对任意 $x \in [a, b]$ 都有 $A(x)B(x) = B(x)A(x) = I$，则称 $A(x)$ 在 $[a, b]$ 上可逆，记 $B(x) = A^{-1}(x)$。$A(x)$ 中不恒等于零的子式的最高阶数称为 $A(x)$ 的秩；$n$ 阶函数矩阵的秩为 $n$ 时称为满秩。
 
 **定理 11.1.1** $n$ 阶函数矩阵 $A(x)$ 在 $[a, b]$ 上可逆 $\Leftrightarrow$ $\det A(x)$ 在 $[a, b]$ 上处处不为零。此时 $A^{-1}(x) = \dfrac{1}{\det A(x)}\operatorname{adj}A(x)$，$\operatorname{adj}A(x)$ 是**伴随矩阵**。
 
-与数字矩阵不同，满秩不等于可逆：$A(x) = \begin{pmatrix} x & 0 \\ 0 & 1 \end{pmatrix}$ 在 $[-1, 1]$ 上 $\det A(x) = x$ 不恒为零，秩为 $2$；但 $\det A(0) = 0$，它在 $[-1, 1]$ 上不可逆。满秩只要求行列式不恒为零，可逆要求它处处不为零。
+与数字矩阵不同，满秩不等于可逆：$A(x) = \begin{bmatrix} x & 0 \\ 0 & 1 \end{bmatrix}$ 在 $[-1, 1]$ 上 $\det A(x) = x$ 不恒为零，秩为 $2$；但 $\det A(0) = 0$，它在 $[-1, 1]$ 上不可逆。满秩只要求行列式不恒为零，可逆要求它处处不为零。
 
 **定义 11.1.3** 若 $A(x)$ 的每个元素在 $x_0$ 处有极限（连续、可导），则称 $A(x)$ 在 $x_0$ 处有极限（连续、可导），并逐元素定义
 
@@ -57,7 +57,7 @@ $g_{ij}$ 是 $\boldsymbol{\alpha}_i, \boldsymbol{\alpha}_j$ 在积分内积下�
 
 **证明** 反证。若 $\sum_j k_j\boldsymbol{\alpha}_j(x) = \boldsymbol{0}$ 有非零解 $\boldsymbol{k}$，逐次求导得 $\sum_j k_j\boldsymbol{\alpha}_j^{(l)}(x) = \boldsymbol{0}$（$l = 0, \dots, m - 1$），在 $x_0$ 处写成矩阵形式为 $W^{\mathsf T}(x_0)\boldsymbol{k} = \boldsymbol{0}$，于是 $\operatorname{rank}(W(x_0)) < m$，矛盾。 $\square$
 
-这个条件只是充分的。取 $n = 1$，$\boldsymbol{\alpha}_1(x) = x^2$，$\boldsymbol{\alpha}_2(x) = x|x|$，它们在 $[-1, 1]$ 上线性无关（在 $[0, 1]$ 上相等，在 $[-1, 0]$ 上相反），但 $W(x) = \begin{pmatrix} x^2 & 2x \\ x|x| & 2|x| \end{pmatrix}$ 的行列式 $2x^2|x| - 2x^2|x|$ 恒为零。
+这个条件只是充分的。取 $n = 1$，$\boldsymbol{\alpha}_1(x) = x^2$，$\boldsymbol{\alpha}_2(x) = x|x|$，它们在 $[-1, 1]$ 上线性无关（在 $[0, 1]$ 上相等，在 $[-1, 0]$ 上相反），但 $W(x) = \begin{bmatrix} x^2 & 2x \\ x|x| & 2|x| \end{bmatrix}$ 的行列式 $2x^2|x| - 2x^2|x|$ 恒为零。
 
 ## 11.3. 矩阵序列与矩阵级数
 
@@ -117,12 +117,12 @@ $$
 **定理 11.4.1** 设 $f$ 是多项式，$J_{\lambda,m}$ 是 $m$ 阶 Jordan 块，则
 
 $$
-f(J_{\lambda,m}) = \begin{pmatrix} f(\lambda) & f'(\lambda) & \frac{1}{2!}f''(\lambda) & \cdots & \frac{1}{(m-1)!}f^{(m-1)}(\lambda) \\ & f(\lambda) & f'(\lambda) & \ddots & \vdots \\ & & \ddots & \ddots & \frac{1}{2!}f''(\lambda) \\ & & & f(\lambda) & f'(\lambda) \\ & & & & f(\lambda) \end{pmatrix} = \sum_{j=0}^{m-1} \frac{f^{(j)}(\lambda)}{j!}N^j. \tag{11.1}
+f(J_{\lambda,m}) = \begin{bmatrix} f(\lambda) & f'(\lambda) & \frac{1}{2!}f''(\lambda) & \cdots & \frac{1}{(m-1)!}f^{(m-1)}(\lambda) \\ & f(\lambda) & f'(\lambda) & \ddots & \vdots \\ & & \ddots & \ddots & \frac{1}{2!}f''(\lambda) \\ & & & f(\lambda) & f'(\lambda) \\ & & & & f(\lambda) \end{bmatrix} = \sum_{j=0}^{m-1} \frac{f^{(j)}(\lambda)}{j!}N^j. \tag{11.1}
 $$
 
 **证明** 由**泰勒公式**，多项式 $f$ 在 $\lambda$ 处的展开 $f(x) = \sum_{j \ge 0} \frac{f^{(j)}(\lambda)}{j!}(x - \lambda)^j$ 是有限和，精确成立。代入 $x = J_{\lambda,m} = \lambda I + N$，$N = J_{0,m}$ 满足 $N^m = O$，而 $N^j$ 是第 $j$ 条上对角线为 $1$、其余为 $0$ 的矩阵。 $\square$
 
-**例 11.4.1** $J_{2,3} = \begin{pmatrix} 2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{pmatrix}$，$f(x) = x^3$。$f(2) = 8$，$f'(2) = 12$，$\frac{1}{2}f''(2) = 6$，故 $J_{2,3}^3 = \begin{pmatrix} 8 & 12 & 6 \\ 0 & 8 & 12 \\ 0 & 0 & 8 \end{pmatrix}$。
+**例 11.4.1** $J_{2,3} = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{bmatrix}$，$f(x) = x^3$。$f(2) = 8$，$f'(2) = 12$，$\frac{1}{2}f''(2) = 6$，故 $J_{2,3}^3 = \begin{bmatrix} 8 & 12 & 6 \\ 0 & 8 & 12 \\ 0 & 0 & 8 \end{bmatrix}$。
 
 所以计算 $f(A)$ 只需要知道 $f$ 在每个特征值 $\mu_i$ 处直到 $m_i - 1$ 阶的导数值，$m_i$ 是关于 $\mu_i$ 的最大 Jordan 块的阶数，即 $\mu_i$ 在极小多项式中的重数。这个观察给出了一般函数的定义。
 
@@ -154,13 +154,13 @@ $$
 
 **例 11.5.1** $J = J_{0,3}$，$f(z) = \sin z$。$m_J = \lambda^3$，$f(0) = 0$，$f'(0) = 1$，$f''(0) = 0$，故 $\sin J = J$。
 
-**例 11.5.2** $A = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 2 & 0 & 1 & 0 \\ 0 & -2 & 0 & 0 \\ 4 & 0 & 2 & 0 \end{pmatrix}$，求 $\mathrm{e}^A$。$\det(\lambda I_4 - A) = \lambda^4$，$\operatorname{rank}(A) = 2$，$\operatorname{rank}(A^2) = 1$，$A^3 = O$，故 $J = \operatorname{diag}(J_{0,3}, J_{0,1})$，$m_A = \lambda^3$。取 Jordan 基 $P = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -2 & 0 & 1 & 0 \\ 0 & 2 & 0 & 1 \end{pmatrix}$（第 1、2、3 列是一条 Jordan 链，第 4 列是另一个特征向量）。由 $f(z) = \mathrm{e}^z$，$f(0) = f'(0) = f''(0) = 1$，
+**例 11.5.2** $A = \begin{bmatrix} 0 & 1 & 0 & 0 \\ 2 & 0 & 1 & 0 \\ 0 & -2 & 0 & 0 \\ 4 & 0 & 2 & 0 \end{bmatrix}$，求 $\mathrm{e}^A$。$\det(\lambda I_4 - A) = \lambda^4$，$\operatorname{rank}(A) = 2$，$\operatorname{rank}(A^2) = 1$，$A^3 = O$，故 $J = \operatorname{diag}(J_{0,3}, J_{0,1})$，$m_A = \lambda^3$。取 Jordan 基 $P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -2 & 0 & 1 & 0 \\ 0 & 2 & 0 & 1 \end{bmatrix}$（第 1、2、3 列是一条 Jordan 链，第 4 列是另一个特征向量）。由 $f(z) = \mathrm{e}^z$，$f(0) = f'(0) = f''(0) = 1$，
 
 $$
-\mathrm{e}^J = \operatorname{diag}\left(\begin{pmatrix} 1 & 1 & \frac12 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{pmatrix}, 1\right), \qquad \mathrm{e}^A = P\mathrm{e}^JP^{-1} = \begin{pmatrix} 2 & 1 & \frac12 & 0 \\ 2 & 1 & 1 & 0 \\ -2 & -2 & 0 & 0 \\ 4 & 0 & 2 & 1 \end{pmatrix}.
+\mathrm{e}^J = \operatorname{diag}\left(\begin{bmatrix} 1 & 1 & \frac12 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix}, 1\right), \qquad \mathrm{e}^A = P\mathrm{e}^JP^{-1} = \begin{bmatrix} 2 & 1 & \frac12 & 0 \\ 2 & 1 & 1 & 0 \\ -2 & -2 & 0 & 0 \\ 4 & 0 & 2 & 1 \end{bmatrix}.
 $$
 
-**例 11.5.3** 若 $A \ne O$，$A^2 = O$，则 $m_A = \lambda^2$，Jordan 块只有 $J_{0,2}$ 和 $J_{0,1}$。$\mathrm{e}^{J_{0,2}} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = I + J_{0,2}$，$\mathrm{e}^{J_{0,1}} = 1$，所以 $\mathrm{e}^J = I + J$，$\mathrm{e}^A = P(I + J)P^{-1} = I + A$。
+**例 11.5.3** 若 $A \ne O$，$A^2 = O$，则 $m_A = \lambda^2$，Jordan 块只有 $J_{0,2}$ 和 $J_{0,1}$。$\mathrm{e}^{J_{0,2}} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = I + J_{0,2}$，$\mathrm{e}^{J_{0,1}} = 1$，所以 $\mathrm{e}^J = I + J$，$\mathrm{e}^A = P(I + J)P^{-1} = I + A$。
 
 ## 11.6. 插值法
 
@@ -191,7 +191,7 @@ $$
 3. 由 $r^{(j)}(\mu_i) = f^{(j)}(\mu_i)$ 列出 $m$ 个线性方程，解出 $a_0, \dots, a_{m-1}$。
 4. $f(A) = r(A) = a_0I + a_1A + \cdots + a_{m-1}A^{m-1}$。
 
-**例 11.6.1** $A = \begin{pmatrix} -4 & 2 & 10 \\ -4 & 3 & 7 \\ -3 & 1 & 7 \end{pmatrix}$，求 $\cos A$。$\det(\lambda I - A) = (\lambda - 2)^3$，$\operatorname{rank}(2I - A) = 2$，只有一个 Jordan 块，$m_A = (\lambda - 2)^3$。设 $r(z) = a_0 + a_1z + a_2z^2$，由 $r(2) = \cos 2$，$r'(2) = -\sin 2$，$r''(2) = -\cos 2$：
+**例 11.6.1** $A = \begin{bmatrix} -4 & 2 & 10 \\ -4 & 3 & 7 \\ -3 & 1 & 7 \end{bmatrix}$，求 $\cos A$。$\det(\lambda I - A) = (\lambda - 2)^3$，$\operatorname{rank}(2I - A) = 2$，只有一个 Jordan 块，$m_A = (\lambda - 2)^3$。设 $r(z) = a_0 + a_1z + a_2z^2$，由 $r(2) = \cos 2$，$r'(2) = -\sin 2$，$r''(2) = -\cos 2$：
 
 $$
 \begin{cases} a_0 + 2a_1 + 4a_2 = \cos 2, \\ a_1 + 4a_2 = -\sin 2, \\ 2a_2 = -\cos 2, \end{cases} \qquad a_0 = 2\sin 2 - \cos 2, \quad a_1 = 2\cos 2 - \sin 2, \quad a_2 = -\tfrac12\cos 2.
@@ -200,13 +200,13 @@ $$
 于是
 
 $$
-\cos A = a_0I + a_1A + a_2A^2 = \begin{pmatrix} 2\cos 2 + 6\sin 2 & -2\sin 2 & -2\cos 2 - 10\sin 2 \\ \frac12\cos 2 + 4\sin 2 & \cos 2 - \sin 2 & -\cos 2 - 7\sin 2 \\ \frac12\cos 2 + 3\sin 2 & -\sin 2 & -5\sin 2 \end{pmatrix}.
+\cos A = a_0I + a_1A + a_2A^2 = \begin{bmatrix} 2\cos 2 + 6\sin 2 & -2\sin 2 & -2\cos 2 - 10\sin 2 \\ \frac12\cos 2 + 4\sin 2 & \cos 2 - \sin 2 & -\cos 2 - 7\sin 2 \\ \frac12\cos 2 + 3\sin 2 & -\sin 2 & -5\sin 2 \end{bmatrix}.
 $$
 
-**例 11.6.2** $A = \begin{pmatrix} 3 & -3 & 2 \\ -1 & 5 & -2 \\ -1 & 3 & 0 \end{pmatrix}$，求 $\ln A$、$\sin\frac{\pi}{4}A$ 与 $\mathrm{e}^A$。$\det(\lambda I - A) = (\lambda - 2)^2(\lambda - 4)$，极小多项式是 $(\lambda - 2)^2(\lambda - 4)$ 或 $(\lambda - 2)(\lambda - 4)$；由 $\operatorname{rank}(A - 2I) = 1$，$\lambda = 2$ 有两个 Jordan 块，$m_A = (\lambda - 2)(\lambda - 4)$。设 $r(z) = a_0 + a_1z$。
+**例 11.6.2** $A = \begin{bmatrix} 3 & -3 & 2 \\ -1 & 5 & -2 \\ -1 & 3 & 0 \end{bmatrix}$，求 $\ln A$、$\sin\frac{\pi}{4}A$ 与 $\mathrm{e}^A$。$\det(\lambda I - A) = (\lambda - 2)^2(\lambda - 4)$，极小多项式是 $(\lambda - 2)^2(\lambda - 4)$ 或 $(\lambda - 2)(\lambda - 4)$；由 $\operatorname{rank}(A - 2I) = 1$，$\lambda = 2$ 有两个 Jordan 块，$m_A = (\lambda - 2)(\lambda - 4)$。设 $r(z) = a_0 + a_1z$。
 
 - $\ln$：$a_0 + 2a_1 = \ln 2$，$a_0 + 4a_1 = 2\ln 2$，得 $a_0 = 0$，$a_1 = \frac12\ln 2$，$\ln A = \frac{\ln 2}{2}A$。
-- $\sin\frac{\pi}{4}z$：$a_0 + 2a_1 = 1$，$a_0 + 4a_1 = 0$，得 $a_0 = 2$，$a_1 = -\frac12$，$\sin\frac{\pi}{4}A = 2I - \frac12A = \begin{pmatrix} \frac12 & \frac32 & -1 \\ \frac12 & -\frac12 & 1 \\ \frac12 & -\frac32 & 2 \end{pmatrix}$。
+- $\sin\frac{\pi}{4}z$：$a_0 + 2a_1 = 1$，$a_0 + 4a_1 = 0$，得 $a_0 = 2$，$a_1 = -\frac12$，$\sin\frac{\pi}{4}A = 2I - \frac12A = \begin{bmatrix} \frac12 & \frac32 & -1 \\ \frac12 & -\frac12 & 1 \\ \frac12 & -\frac32 & 2 \end{bmatrix}$。
 - $\mathrm{e}^z$：$a_0 + 2a_1 = \mathrm{e}^2$，$a_0 + 4a_1 = \mathrm{e}^4$，$\mathrm{e}^A = (2\mathrm{e}^2 - \mathrm{e}^4)I + \frac12(\mathrm{e}^4 - \mathrm{e}^2)A$。
 
 下面的代码按算法 11.6.1 求解带导数条件的 Vandermonde 方程组，计算 $\mathrm{e}^A$，并与 SciPy 的 `expm` 对比。
@@ -292,7 +292,7 @@ $$
 
 **证明** 1：$A, B$ 可交换时二项式定理成立，两个绝对收敛级数的 Cauchy 乘积按 $\mathrm{e}^{x+y} = \mathrm{e}^x\mathrm{e}^y$ 的同样方式重排。2：性质 11.5.1。3：由性质 11.5.1 的第 3 条，$\mathrm{e}^A$ 的特征值是 $\mathrm{e}^{\lambda_1}, \dots, \mathrm{e}^{\lambda_n}$（计重数），乘积为 $\mathrm{e}^{\lambda_1 + \cdots + \lambda_n}$。4：幂级数逐项求导。 $\square$
 
-可交换的条件不能去掉：$A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$，$B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$，$\mathrm{e}^A\mathrm{e}^B = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$，而 $A + B$ 的特征值为 $\pm 1$，$\mathrm{e}^{A+B} = \begin{pmatrix} \cosh 1 & \sinh 1 \\ \sinh 1 & \cosh 1 \end{pmatrix}$。
+可交换的条件不能去掉：$A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$，$B = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}$，$\mathrm{e}^A\mathrm{e}^B = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$，而 $A + B$ 的特征值为 $\pm 1$，$\mathrm{e}^{A+B} = \begin{bmatrix} \cosh 1 & \sinh 1 \\ \sinh 1 & \cosh 1 \end{bmatrix}$。
 
 计算 $\mathrm{e}^{At}$ 时，由 $P^{-1}AP = J$ 得 $\mathrm{e}^{At} = P\mathrm{e}^{Jt}P^{-1}$。对 Jordan 块，$J_{\lambda,m}t = \lambda tI + tN$ 的两项可交换，
 
@@ -302,10 +302,10 @@ $$
 
 这也是 $f(z) = \mathrm{e}^{tz}$ 代入式 (11.1) 的结果（$f^{(j)}(\lambda) = t^j\mathrm{e}^{\lambda t}$）。注意 $tJ_{\lambda,m}$ 的上对角线是 $t$，它本身不是 Jordan 块，不能把它当作 Jordan 块再套用式 (11.1)。
 
-**例 11.8.1** $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{\mathrm{i}, -\mathrm{i}\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + \mathrm{i}a_1 = \mathrm{e}^{\mathrm{i}t}$，$a_0 - \mathrm{i}a_1 = \mathrm{e}^{-\mathrm{i}t}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
+**例 11.8.1** $A = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{\mathrm{i}, -\mathrm{i}\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + \mathrm{i}a_1 = \mathrm{e}^{\mathrm{i}t}$，$a_0 - \mathrm{i}a_1 = \mathrm{e}^{-\mathrm{i}t}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
 
 $$
-\mathrm{e}^{At} = \cos t\,I + \sin t\,A = \begin{pmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{pmatrix}.
+\mathrm{e}^{At} = \cos t\,I + \sin t\,A = \begin{bmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{bmatrix}.
 $$
 
 $A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧拉公式** $\mathrm{e}^{\mathrm{i}t} = \cos t + \mathrm{i}\sin t$ 的矩阵版本；$\{\mathrm{e}^{At}\}$ 是平面旋转构成的**单参数子群**。
@@ -313,7 +313,7 @@ $A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧�
 **例 11.8.2** 若 $P^{-1}AP = J = \operatorname{diag}(J_{2,1}, J_{4,2})$，则由式 (11.2)，
 
 $$
-\mathrm{e}^{At} = P\begin{pmatrix} \mathrm{e}^{2t} & 0 & 0 \\ 0 & \mathrm{e}^{4t} & t\mathrm{e}^{4t} \\ 0 & 0 & \mathrm{e}^{4t} \end{pmatrix}P^{-1}.
+\mathrm{e}^{At} = P\begin{bmatrix} \mathrm{e}^{2t} & 0 & 0 \\ 0 & \mathrm{e}^{4t} & t\mathrm{e}^{4t} \\ 0 & 0 & \mathrm{e}^{4t} \end{bmatrix}P^{-1}.
 $$
 
 **定理 11.8.2** 设 $B \in \mathbb{C}^{n\times n}$，则存在 $X$ 使 $\mathrm{e}^X = B$ $\Leftrightarrow$ $B$ 可逆。
@@ -353,13 +353,13 @@ $$
 **例 11.9.1** 求解
 
 $$
-\begin{cases} x_1' = 6x_1 + 2x_2 + 2x_3, \\ x_2' = -2x_1 + 2x_2, \\ x_3' = 2x_3, \end{cases} \qquad A = \begin{pmatrix} 6 & 2 & 2 \\ -2 & 2 & 0 \\ 0 & 0 & 2 \end{pmatrix}.
+\begin{cases} x_1' = 6x_1 + 2x_2 + 2x_3, \\ x_2' = -2x_1 + 2x_2, \\ x_3' = 2x_3, \end{cases} \qquad A = \begin{bmatrix} 6 & 2 & 2 \\ -2 & 2 & 0 \\ 0 & 0 & 2 \end{bmatrix}.
 $$
 
 $\det(\lambda I - A) = (\lambda - 2)(\lambda - 4)^2$，$\operatorname{rank}(A - 4I) = 2$，关于 $4$ 只有一个块，$J = \operatorname{diag}(2, J_{4,2})$。$(A - 2I)\boldsymbol{x} = \boldsymbol{0}$ 得 $\boldsymbol{p}_1 = (0, -1, 1)^{\mathsf T}$；$(A - 4I)\boldsymbol{x} = \boldsymbol{0}$ 得 $\boldsymbol{p}_2 = (2, -2, 0)^{\mathsf T}$；$(A - 4I)\boldsymbol{x} = \boldsymbol{p}_2$ 得 $\boldsymbol{p}_3 = (1, 0, 0)^{\mathsf T}$。通解为
 
 $$
-\boldsymbol{X}(t) = c_1\mathrm{e}^{2t}\begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} + c_2\mathrm{e}^{4t}\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + c_3\mathrm{e}^{4t}\left(t\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\right).
+\boldsymbol{X}(t) = c_1\mathrm{e}^{2t}\begin{bmatrix} 0 \\ -1 \\ 1 \end{bmatrix} + c_2\mathrm{e}^{4t}\begin{bmatrix} 2 \\ -2 \\ 0 \end{bmatrix} + c_3\mathrm{e}^{4t}\left(t\begin{bmatrix} 2 \\ -2 \\ 0 \end{bmatrix} + \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right).
 $$
 
 给定初值 $\boldsymbol{X}(0) = \boldsymbol{x}_0$ 时，$\boldsymbol{c} = P^{-1}\boldsymbol{x}_0$，$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$。例如 $\boldsymbol{x}_0 = (1, 0, 0)^{\mathsf T} = \boldsymbol{p}_3$ 时 $\boldsymbol{c} = (0, 0, 1)^{\mathsf T}$，$\boldsymbol{X}(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。

@@ -355,29 +355,29 @@ $$
 
 - **简单线性回归**：
   $$
-  y_i = \beta_0 + \beta_1 x_i + \epsilon_i, \quad i=1,\cdots,n
+  y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \quad i=1,\cdots,n
   $$
 - **多元线性回归**：
   $$
-  y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip} + \epsilon_i
+  y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_p x_{ip} + \varepsilon_i
   $$
 - **矩阵形式**：
   $$
-  \boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\epsilon}
+  \boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\varepsilon}
   $$
   其中 $\boldsymbol{Y} = (y_1, \cdots, y_n)^{\mathsf T}$，$X$ 为设计矩阵，$\boldsymbol{\beta} = (\beta_0, \beta_1, \cdots, \beta_p)^{\mathsf T}$，$\boldsymbol{x}_i^{\mathsf T}$ 为 $X$ 的第 $i$ 行
 
 ### 3.5.2. 基本假设
 
 - **Gauss-Markov假设**：
-  - $\mathbb{E}(\epsilon_i) = 0$
-  - $\operatorname{Var}(\epsilon_i) = \sigma^2$（同方差）
-  - $\epsilon_i$ 相互独立
-  - $\mathbb{E}(\epsilon_i | x_i) = 0$
+  - $\mathbb{E}(\varepsilon_i) = 0$
+  - $\operatorname{Var}(\varepsilon_i) = \sigma^2$（同方差）
+  - $\varepsilon_i$ 相互独立
+  - $\mathbb{E}(\varepsilon_i | x_i) = 0$
 
 - **正态假设**（用于MLE）：
   $$
-  \epsilon_i \sim \mathcal{N}(0, \sigma^2)
+  \varepsilon_i \sim \mathcal{N}(0, \sigma^2)
   $$
 
 ### 3.5.3. 估计方法
@@ -398,7 +398,7 @@ $$
 
 #### 3.5.3.2. 矩估计法
 
-- **基于条件**：$\mathbb{E}(\epsilon_i) = 0$，$\mathbb{E}(x_i\epsilon_i) = 0$
+- **基于条件**：$\mathbb{E}(\varepsilon_i) = 0$，$\mathbb{E}(x_i\varepsilon_i) = 0$
 - **估计方程**：
   $$
   \begin{cases}

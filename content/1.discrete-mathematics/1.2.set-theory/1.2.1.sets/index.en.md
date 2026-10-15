@@ -1,6 +1,6 @@
 ---
 title: Sets
-source_hash: f91d2d5b58dd
+source_hash: c94c3904abd1
 ---
 
 This chapter introduces the basic language of set theory: how sets are described, the relations between sets, the operations on sets and the laws they obey, and the cardinality of finite sets; it closes with a brief introduction to the ZF axioms of set theory. The relations, functions and cardinal numbers of the later chapters are all built on these notions: ordered pairs and Cartesian products give the definition of a relation, and the cardinality of finite sets is extended to arbitrary sets in Chapter 4.
@@ -29,7 +29,7 @@ $$
 **Definition 1.2.2 (Subset)** Let $A$ and $B$ be sets. If every element of $A$ is an element of $B$, then $A$ is called a **subset** of $B$, and we also say that $B$ includes $A$, written $A \subseteq B$. In symbols,
 
 $$
-A \subseteq B \Leftrightarrow (\forall x)(x \in A \rightarrow x \in B).
+A \subseteq B \Leftrightarrow (\forall x)(x \in A \to x \in B).
 $$
 
 **Theorem 1.2.1** Two sets are equal if and only if each is a subset of the other:
@@ -87,7 +87,7 @@ The universal set is relative: different problems have different universal sets,
 $$
 \begin{aligned}
 \bigcup A &= \{x \mid (\exists z)(z \in A \land x \in z)\}, \\
-\bigcap A &= \{x \mid (\forall z)(z \in A \rightarrow x \in z)\}.
+\bigcap A &= \{x \mid (\forall z)(z \in A \to x \in z)\}.
 \end{aligned}
 $$
 
@@ -133,7 +133,7 @@ $$
 The precedence of set operations is fixed as follows:
 
 - Generalized union, generalized intersection, power set and absolute complement ($\bigcup A, \bigcap A, \mathcal{P}(A), A^{\mathsf c}$) are operations of the first kind; union, intersection, symmetric difference, Cartesian product and relative complement ($\cup, \cap, \oplus, \times, -$) are operations of the second kind.
-- Operations of the first kind take precedence over those of the second kind; operations of the second kind take precedence over set relations ($=, \subseteq, \subset, \in$); and all of these take precedence over the logical connectives ($\lnot, \land, \lor, \rightarrow, \leftrightarrow, \Rightarrow$).
+- Operations of the first kind take precedence over those of the second kind; operations of the second kind take precedence over set relations ($=, \subseteq, \subset, \in$); and all of these take precedence over the logical connectives ($\lnot, \land, \lor, \to, \leftrightarrow, \Rightarrow$).
 - Expressions inside parentheses are evaluated first. Within the same pair of parentheses, operations of equal precedence are evaluated from right to left for operations of the first kind and from left to right otherwise.
 
 ## 1.4. Diagrams of Sets
@@ -228,7 +228,7 @@ $$
 **Definition 1.5.1 (Transitive Set)** A set $A$ is called a **transitive set** if every element of an element of $A$ is an element of $A$. In symbols,
 
 $$
-A \text{ is a transitive set} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \rightarrow x \in A).
+A \text{ is a transitive set} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \to x \in A).
 $$
 
 **Theorem 1.5.9 (Properties of Transitive Sets, I)** For every set $A$, $A$ is a transitive set $\Leftrightarrow A \subseteq \mathcal{P}(A)$.
@@ -357,7 +357,7 @@ An axiomatic set theory extends the **axiomatic system** of **first-order logic*
 
 1. *Axiom of extensionality*: two sets are equal if and only if they have exactly the same elements.
    $$
-   (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \rightarrow x = y)
+   (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \to x = y)
    $$
 2. *Empty set axiom*: there is a set with no elements (the empty set $\varnothing$).
    $$
@@ -377,19 +377,19 @@ An axiomatic set theory extends the **axiomatic system** of **first-order logic*
    $$
 6. *Axiom of power set*: for any set $x$, there is a set $y$ whose elements are exactly the subsets of $x$.
    $$
-   (\forall x)(\exists y)(\forall z)(z \in y \leftrightarrow (\forall u)(u \in z \rightarrow u \in x))
+   (\forall x)(\exists y)(\forall z)(z \in y \leftrightarrow (\forall u)(u \in z \to u \in x))
    $$
 7. *Axiom of regularity*: every nonempty set $x$ has an element that is disjoint from $x$.
    $$
-   (\forall x)(x \neq \varnothing \rightarrow (\exists y)(y \in x \land x \cap y = \varnothing))
+   (\forall x)(x \neq \varnothing \to (\exists y)(y \in x \land x \cap y = \varnothing))
    $$
 8. *Axiom of infinity*: there is a set that contains $\varnothing$ and, together with each of its elements $y$, also contains $y \cup \{y\}$; such a set therefore contains all natural numbers (see Definition 1.7.4).
    $$
-   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
+   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \to y \cup \{y\} \in x))
    $$
 9. *Axiom schema of replacement*: for any formula $P(x, y)$, if for every $x$ there is a unique $y$ such that $P(x, y)$ is true, then for every set $t$ there is a set $s$ whose elements are exactly the $y$ corresponding to the elements $x$ of $t$.
    $$
-   (\forall x)(\exists ! y)P(x, y) \rightarrow (\forall t)(\exists s)(\forall u)(u \in s \leftrightarrow (\exists z)(z \in t \land P(z, u)))
+   (\forall x)(\exists ! y)P(x, y) \to (\forall t)(\exists s)(\forall u)(u \in s \leftrightarrow (\exists z)(z \in t \land P(z, u)))
    $$
    Here $(\exists ! y)$ means "there exists a unique $y$".
 10. *Axiom of choice*: for every relation $R$, there is a function $F$ such that $F$ is a subset of $R$ and $F$ has the same domain as $R$.
@@ -451,5 +451,5 @@ $$
 **Theorem 1.7.11 (Trichotomy of the Natural Numbers)** The set $\mathbb{N}$ has the property of trichotomy, and so does every natural number; that is,
 
 $$
-(\forall m)(\forall n)(m \in \mathbb{N} \land n \in \mathbb{N} \rightarrow m < n \lor m = n \lor m > n).
+(\forall m)(\forall n)(m \in \mathbb{N} \land n \in \mathbb{N} \to m < n \lor m = n \lor m > n).
 $$

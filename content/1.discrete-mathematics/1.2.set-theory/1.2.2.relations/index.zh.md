@@ -137,8 +137,8 @@ $$
 
 $$
 \begin{aligned}
-R \text{ 在 } A \text{ 上是自反的} &\Leftrightarrow (\forall x)(x \in A \rightarrow \langle x, x \rangle \in R), \\
-R \text{ 在 } A \text{ 上是非自反的} &\Leftrightarrow (\forall x)(x \in A \rightarrow \langle x, x \rangle \notin R).
+R \text{ 在 } A \text{ 上是自反的} &\Leftrightarrow (\forall x)(x \in A \to \langle x, x \rangle \in R), \\
+R \text{ 在 } A \text{ 上是非自反的} &\Leftrightarrow (\forall x)(x \in A \to \langle x, x \rangle \notin R).
 \end{aligned}
 $$
 
@@ -146,21 +146,21 @@ $$
 
 $$
 \begin{aligned}
-R \text{ 是对称的} &\Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R) \rightarrow \langle y, x \rangle \in R), \\
-R \text{ 是反对称的} &\Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R \land \langle y, x \rangle \in R) \rightarrow x = y).
+R \text{ 是对称的} &\Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R) \to \langle y, x \rangle \in R), \\
+R \text{ 是反对称的} &\Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R \land \langle y, x \rangle \in R) \to x = y).
 \end{aligned}
 $$
 
 反对称性的另一种等价定义为
 
 $$
-R \text{ 是反对称的} \Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R \land x \neq y) \rightarrow \langle y, x \rangle \notin R).
+R \text{ 是反对称的} \Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R \land x \neq y) \to \langle y, x \rangle \notin R).
 $$
 
 **定义 2.4.3（传递性）** 设 $R$ 为集合 $A$ 上的关系。若由 $xRy$ 与 $yRz$ 总能推出 $xRz$，则称 $R$ 是传递的，或称 $R$ 是 $A$ 上的**传递关系**。符号化表示为
 
 $$
-R \text{ 是传递的} \Leftrightarrow (\forall x)(\forall y)(\forall z)((x, y, z \in A \land \langle x, y \rangle \in R \land \langle y, z \rangle \in R) \rightarrow \langle x, z \rangle \in R).
+R \text{ 是传递的} \Leftrightarrow (\forall x)(\forall y)(\forall z)((x, y, z \in A \land \langle x, y \rangle \in R \land \langle y, z \rangle \in R) \to \langle x, z \rangle \in R).
 $$
 
 **定理 2.4.1（自反性的保持）** 设 $R_1, R_2$ 是 $A$ 上的自反关系，则 $R_1^{-1}$、$R_1 \cap R_2$、$R_1 \cup R_2$ 也是 $A$ 上的自反关系。
@@ -315,10 +315,10 @@ $$
 
 **定义 2.6.4（划分）** 设 $A$ 为非空集合。$A$ 的一个**划分**是满足下列条件的集合 $\pi$，$\pi$ 中的元素称为 $A$ 的**划分块**：
 
-1. $(\forall x)(x \in \pi \rightarrow x \subseteq A)$；
+1. $(\forall x)(x \in \pi \to x \subseteq A)$；
 2. $\varnothing \notin \pi$；
 3. $\bigcup \pi = A$；
-4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \varnothing)$。
+4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \to x \cap y = \varnothing)$。
 
 **定理 2.6.2（等价关系诱导的划分）** 对非空集合 $A$ 上的等价关系 $R$，商集 $A/R$ 是 $A$ 的划分，称为由等价关系 $R$ 诱导出的 $A$ 的划分，记作 $\pi_R$。
 
@@ -347,15 +347,15 @@ $$
 **定义 2.7.2（相容类）** 对非空集合 $A$ 上的相容关系 $R$，若 $C \subseteq A$，且 $C$ 中任意两个元素 $x$ 和 $y$ 都有 $xRy$，则称 $C$ 是由相容关系 $R$ 产生的相容类，简称**相容类**。这个条件也可以写成
 
 $$
-(\forall x)(\forall y)((x \in C \land y \in C) \rightarrow xRy).
+(\forall x)(\forall y)((x \in C \land y \in C) \to xRy).
 $$
 
 **定义 2.7.3（最大相容类）** 对非空集合 $A$ 上的相容关系 $R$，一个相容类若不是任何相容类的真子集，就称为**最大相容类**，记作 $C_R$。最大相容类 $C_R$ 有下列性质：
 
 $$
 \begin{aligned}
-& (\forall x)(\forall y)((x \in C_R \land y \in C_R) \rightarrow xRy), \\
-& (\forall x)(x \in A - C_R \rightarrow (\exists y)(y \in C_R \land \lnot xRy)).
+& (\forall x)(\forall y)((x \in C_R \land y \in C_R) \to xRy), \\
+& (\forall x)(x \in A - C_R \to (\exists y)(y \in C_R \land \lnot xRy)).
 \end{aligned}
 $$
 
@@ -365,7 +365,7 @@ $$
 
 **定义 2.7.4（覆盖）** 设 $A$ 为非空集合。$A$ 的一个**覆盖**是满足下列条件的集合 $\Omega$，$\Omega$ 中的元素称为 $\Omega$ 的**覆盖块**：
 
-1. $(\forall x)(x \in \Omega \rightarrow x \subseteq A)$；
+1. $(\forall x)(x \in \Omega \to x \subseteq A)$；
 2. $\varnothing \notin \Omega$；
 3. $\bigcup \Omega = A$。
 
@@ -411,17 +411,17 @@ $$
 
 **定义 2.8.5（最小元、最大元、极小元、极大元）** 对偏序集 $(A, \leq)$ 和 $B \subseteq A$，
 
-1. 若 $y \in B \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的**最小元**；
-2. 若 $y \in B \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的**最大元**；
-3. 若 $y \in B \land (\forall x)((x \in B \land x \leq y) \rightarrow x = y)$，则称 $y$ 为 $B$ 的**极小元**；
-4. 若 $y \in B \land (\forall x)((x \in B \land y \leq x) \rightarrow x = y)$，则称 $y$ 为 $B$ 的**极大元**。
+1. 若 $y \in B \land (\forall x)(x \in B \to y \leq x)$，则称 $y$ 为 $B$ 的**最小元**；
+2. 若 $y \in B \land (\forall x)(x \in B \to x \leq y)$，则称 $y$ 为 $B$ 的**最大元**；
+3. 若 $y \in B \land (\forall x)((x \in B \land x \leq y) \to x = y)$，则称 $y$ 为 $B$ 的**极小元**；
+4. 若 $y \in B \land (\forall x)((x \in B \land y \leq x) \to x = y)$，则称 $y$ 为 $B$ 的**极大元**。
 
 最小元（最大元）若存在则唯一，并且一定是极小元（极大元）；反之不然。
 
 **定义 2.8.6（上界、下界、上确界、下确界）** 对偏序集 $(A, \leq)$ 和 $B \subseteq A$，
 
-1. 若 $y \in A \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的**上界**；
-2. 若 $y \in A \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的**下界**；
+1. 若 $y \in A \land (\forall x)(x \in B \to x \leq y)$，则称 $y$ 为 $B$ 的**上界**；
+2. 若 $y \in A \land (\forall x)(x \in B \to y \leq x)$，则称 $y$ 为 $B$ 的**下界**；
 3. 令 $C = \{y \mid y \text{ 是 } B \text{ 的上界}\}$，则 $C$ 的最小元称为 $B$ 的**上确界**或最小上界；
 4. 令 $C = \{y \mid y \text{ 是 } B \text{ 的下界}\}$，则 $C$ 的最大元称为 $B$ 的**下确界**或最大下界。
 

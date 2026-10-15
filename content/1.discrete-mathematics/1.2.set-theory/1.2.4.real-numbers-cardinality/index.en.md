@@ -1,6 +1,6 @@
 ---
 title: The Real Numbers and Cardinality
-source_hash: 828e4062b586
+source_hash: f120980b34e4
 ---
 
 This chapter first constructs the integers, the rational numbers and the real numbers in turn within set theory, and then uses **bijections** to compare the sizes of arbitrary sets: it introduces equinumerosity, finite and infinite sets, cardinal numbers with their arithmetic and comparison, and finally discusses countable sets and the continuum hypothesis. The cardinality of finite sets from Chapter 1 (Definition 1.6.1) is extended here to arbitrary sets.
@@ -67,10 +67,10 @@ $$
 
 Positive denominators are essential: $1/2 \leq 1/1$, but if these are written as $1/2$ and $(-1)/(-1)$, then $1 \cdot (-1) \leq 2 \cdot (-1)$ fails.
 
-**Definition 4.1.7 (Basic Function)** If $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ satisfies the conditions
+**Definition 4.1.7 (Basic Function)** If $f\colon \mathbb{N} \to \mathbb{Q}$ satisfies the conditions
 
-1. $(\exists x)(x \in \mathbb{Q} \land (\forall n)(n \in \mathbb{N} \rightarrow f(n) \leq x))$;
-2. $(\exists n)(n \in \mathbb{N} \land (\forall m)(\forall i)((m \in \mathbb{N} \land i \in \mathbb{N} \land n \leq m \leq i) \rightarrow f(m) \leq f(i)))$,
+1. $(\exists x)(x \in \mathbb{Q} \land (\forall n)(n \in \mathbb{N} \to f(n) \leq x))$;
+2. $(\exists n)(n \in \mathbb{N} \land (\forall m)(\forall i)((m \in \mathbb{N} \land i \in \mathbb{N} \land n \leq m \leq i) \to f(m) \leq f(i)))$,
 
 that is, $f$ is bounded above and nondecreasing from some term on, then $f$ is called a basic function, or a bounded nondecreasing function. When $f$ is a basic function, the sequence of its values
 
@@ -80,21 +80,21 @@ $$
 
 is called a basic sequence, sometimes written $r_0, r_1, r_2, \cdots, r_n, \cdots$. In what follows, $B$ denotes the set of all basic functions, and $BF(f)$ means that $f$ is a basic function.
 
-**Theorem 4.1.2** If $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ is constant, then $f$ is a basic function. That is, for every $r \in \mathbb{Q}$, the sequence $r, r, r, \cdots$ is a basic sequence.
+**Theorem 4.1.2** If $f\colon \mathbb{N} \to \mathbb{Q}$ is constant, then $f$ is a basic function. That is, for every $r \in \mathbb{Q}$, the sequence $r, r, r, \cdots$ is a basic sequence.
 
 **Theorem 4.1.3** There are basic functions that are not constant.
 
 **Definition 4.1.8 (Equivalence of Basic Functions)** On the set $B$ of basic functions, define the relation $\sim$ as follows: for all $f, g \in B$, $f \sim g$ if and only if
 
 $$
-(\forall \varepsilon)((\varepsilon \in \mathbb{Q} \land \varepsilon > 0) \rightarrow (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \rightarrow |f(m) - g(m)| < \varepsilon))).
+(\forall \varepsilon)((\varepsilon \in \mathbb{Q} \land \varepsilon > 0) \to (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \to |f(m) - g(m)| < \varepsilon))).
 $$
 
 Intuitively, $f \sim g$ means that the sequences given by $f$ and $g$ have the same limit.
 
 **Theorem 4.1.4** The relation $\sim$ on $B$ is an equivalence relation.
 
-**Theorem 4.1.5** If $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ and $g\colon \mathbb{N} \rightarrow \mathbb{Q}$ are both constant and $f \sim g$, then $f = g$.
+**Theorem 4.1.5** If $f\colon \mathbb{N} \to \mathbb{Q}$ and $g\colon \mathbb{N} \to \mathbb{Q}$ are both constant and $f \sim g$, then $f = g$.
 
 **Definition 4.1.9 (Real Numbers)** Let $\mathbb{R} = B/{\sim}$, the quotient set of $B$ by the equivalence relation $\sim$. The elements of $\mathbb{R}$ are called **real numbers**, and $\mathbb{R}$ is called the set of real numbers.
 
@@ -103,7 +103,7 @@ By Theorem 4.1.5, the constant sequences of distinct rational numbers $r$ lie in
 **Definition 4.1.10 (Order of Basic Functions)** Define the relation $<_B$ on $B$ as follows: for all $f, g \in B$, $f <_B g$ if and only if
 
 $$
-(\exists \varepsilon)(\varepsilon \in \mathbb{Q} \land \varepsilon > 0 \land (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \rightarrow g(m) - f(m) > \varepsilon))).
+(\exists \varepsilon)(\varepsilon \in \mathbb{Q} \land \varepsilon > 0 \land (\exists n)(n \in \mathbb{N} \land (\forall m)((m \in \mathbb{N} \land n \leq m) \to g(m) - f(m) > \varepsilon))).
 $$
 
 Further, define $f \leq_B g$ if and only if $f <_B g$ or $f \sim g$.
@@ -144,7 +144,7 @@ The following theorem, *Cantor's theorem*, shows that infinite sets also differ 
 1. $\mathbb{N} \not\approx \mathbb{R}$;
 2. $A \not\approx \mathcal{P}(A)$ for every set $A$.
 
-**Proof** (2) Let $f\colon A \rightarrow \mathcal{P}(A)$ be any function, and let
+**Proof** (2) Let $f\colon A \to \mathcal{P}(A)$ be any function, and let
 
 $$
 D = \{x \mid x \in A \land x \notin f(x)\} \in \mathcal{P}(A).
@@ -152,7 +152,7 @@ $$
 
 If there were an $a \in A$ with $f(a) = D$, then $a \in D \Leftrightarrow a \notin f(a) \Leftrightarrow a \notin D$, a contradiction. Hence $D \notin \operatorname{ran}(f)$, so $f$ is not a **surjection**, let alone a bijection.
 
-(1) We use the diagonal argument. Let $f\colon \mathbb{N} \rightarrow \mathbb{R}$ be any function. For each $n$, if $f(n) \in [0, 1)$, write it as a decimal $0.a_{n0}a_{n1}a_{n2}\cdots$ (not ending in an infinite string of $9$s, so that this expansion is unique); otherwise set $a_{nn} = 0$. Let $b_n = 5$ if $a_{nn} \neq 5$ and $b_n = 4$ if $a_{nn} = 5$, and put $b = 0.b_0b_1b_2\cdots \in [0, 1)$. For each $n$, if $f(n) \in [0, 1)$, then $b$ and $f(n)$ differ in the $n$th decimal digit (no digit of $b$ is $0$ or $9$, so its decimal expansion is also unique), hence $b \neq f(n)$; if $f(n) \notin [0, 1)$, then clearly $b \neq f(n)$. Therefore $b \notin \operatorname{ran}(f)$, so $f$ is not surjective, and $\mathbb{N} \not\approx \mathbb{R}$. $\square$
+(1) We use the diagonal argument. Let $f\colon \mathbb{N} \to \mathbb{R}$ be any function. For each $n$, if $f(n) \in [0, 1)$, write it as a decimal $0.a_{n0}a_{n1}a_{n2}\cdots$ (not ending in an infinite string of $9$s, so that this expansion is unique); otherwise set $a_{nn} = 0$. Let $b_n = 5$ if $a_{nn} \neq 5$ and $b_n = 4$ if $a_{nn} = 5$, and put $b = 0.b_0b_1b_2\cdots \in [0, 1)$. For each $n$, if $f(n) \in [0, 1)$, then $b$ and $f(n)$ differ in the $n$th decimal digit (no digit of $b$ is $0$ or $9$, so its decimal expansion is also unique), hence $b \neq f(n)$; if $f(n) \notin [0, 1)$, then clearly $b \neq f(n)$. Therefore $b \notin \operatorname{ran}(f)$, so $f$ is not surjective, and $\mathbb{N} \not\approx \mathbb{R}$. $\square$
 
 ## 4.3. Finite and Infinite Sets
 

@@ -39,11 +39,11 @@ $k = 2$ 时条件 4 就是 $V_1 \cap V_2 = \{0\}$。但 $k \ge 3$ 时两两相�
 
 **例 10.1.1** 在 $\mathbb{C}^3$ 中，$V_1$ 为 $xOy$ 平面、$V_2$ 为 $yOz$ 平面，则 $V_1 + V_2 = \mathbb{C}^3$，但 $\dim V_1 + \dim V_2 = 4 > 3$，不是直和；事实上 $(0, 1, 0)$ 同时属于两者。
 
-**例 10.1.2** 设 $A = \begin{pmatrix} 1 & 3 & 2 \\ 1 & 7 & 2 \\ -2 & -14 & -4 \end{pmatrix}$。$\mathcal{N}(A^{\mathsf T})$ 的基为 $\boldsymbol{\alpha}_1 = (0, 2, 1)^{\mathsf T}$，**列空间** $\mathcal{R}(A)$ 的基为 $\boldsymbol{\alpha}_2 = (1, 1, -2)^{\mathsf T}$、$\boldsymbol{\alpha}_3 = (3, 7, -14)^{\mathsf T}$。三者线性无关，由条件 2 得 $\mathbb{C}^3 = \mathcal{N}(A^{\mathsf T}) \oplus \mathcal{R}(A)$。对实矩阵这总是成立的（$\mathcal{N}(A^{\mathsf T})$ 是 $\mathcal{R}(A)$ 的**正交补**，[第 4 章](/2.1.4)）；对复矩阵，与 $\mathcal{R}(A)$ 互补的是 $\mathcal{N}(A^{\mathsf H})$，$\mathcal{N}(A^{\mathsf T}) \cap \mathcal{R}(A)$ 可能非零（例如 $A = \begin{pmatrix} 1 & \mathrm{i} \\ \mathrm{i} & -1 \end{pmatrix}$ 时两者都等于 $\operatorname{span}\{(1, \mathrm{i})^{\mathsf T}\}$），原因见 [第 12 章](/2.1.12)的复内积。
+**例 10.1.2** 设 $A = \begin{bmatrix} 1 & 3 & 2 \\ 1 & 7 & 2 \\ -2 & -14 & -4 \end{bmatrix}$。$\mathcal{N}(A^{\mathsf T})$ 的基为 $\boldsymbol{\alpha}_1 = (0, 2, 1)^{\mathsf T}$，**列空间** $\mathcal{R}(A)$ 的基为 $\boldsymbol{\alpha}_2 = (1, 1, -2)^{\mathsf T}$、$\boldsymbol{\alpha}_3 = (3, 7, -14)^{\mathsf T}$。三者线性无关，由条件 2 得 $\mathbb{C}^3 = \mathcal{N}(A^{\mathsf T}) \oplus \mathcal{R}(A)$。对实矩阵这总是成立的（$\mathcal{N}(A^{\mathsf T})$ 是 $\mathcal{R}(A)$ 的**正交补**，[第 4 章](/2.1.4)）；对复矩阵，与 $\mathcal{R}(A)$ 互补的是 $\mathcal{N}(A^{\mathsf H})$，$\mathcal{N}(A^{\mathsf T}) \cap \mathcal{R}(A)$ 可能非零（例如 $A = \begin{bmatrix} 1 & \mathrm{i} \\ \mathrm{i} & -1 \end{bmatrix}$ 时两者都等于 $\operatorname{span}\{(1, \mathrm{i})^{\mathsf T}\}$），原因见 [第 12 章](/2.1.12)的复内积。
 
 ## 10.2. 不变子空间
 
-先看 $A$ 相似于分块对角阵意味着什么。若 $A \in \mathbb{C}^{3\times 3}$ 且 $P^{-1}AP = \begin{pmatrix} b_{11} & 0 & 0 \\ 0 & b_{22} & b_{23} \\ 0 & b_{32} & b_{33} \end{pmatrix}$，$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$，比较 $AP = PB$ 的各列：
+先看 $A$ 相似于分块对角阵意味着什么。若 $A \in \mathbb{C}^{3\times 3}$ 且 $P^{-1}AP = \begin{bmatrix} b_{11} & 0 & 0 \\ 0 & b_{22} & b_{23} \\ 0 & b_{32} & b_{33} \end{bmatrix}$，$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$，比较 $AP = PB$ 的各列：
 
 $$
 A\boldsymbol{p}_1 = b_{11}\boldsymbol{p}_1, \qquad A\boldsymbol{p}_2 = b_{22}\boldsymbol{p}_2 + b_{32}\boldsymbol{p}_3, \qquad A\boldsymbol{p}_3 = b_{23}\boldsymbol{p}_2 + b_{33}\boldsymbol{p}_3.
@@ -70,23 +70,23 @@ $$
 T(v) = (T\alpha_1, \dots, T\alpha_r)\boldsymbol{x} = (\alpha_1, \dots, \alpha_r)B\boldsymbol{x} = \lambda_0 (\alpha_1, \dots, \alpha_r)\boldsymbol{x} = \lambda_0 v. \qquad \square
 $$
 
-性质 4 依赖于复数域：实空间上的旋转 $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ 没有一维不变子空间。
+性质 4 依赖于复数域：实空间上的旋转 $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$ 没有一维不变子空间。
 
 **定理 10.2.1** 设 $V$ 是 $n$ 维复空间，$T\colon V \to V$ 是线性变换，$V_1$ 是 $T$-不变子空间。
 
 1. 存在子空间 $V_2$ 使 $V = V_1 \oplus V_2$（把 $V_1$ 的基扩充为 $V$ 的基即可）。
-2. 设 $v_1, \dots, v_r$ 是 $V_1$ 的基，$w_1, \dots, w_{n-r}$ 是 $V_2$ 的基，则 $T$ 在基 $v_1, \dots, v_r, w_1, \dots, w_{n-r}$ 下的矩阵形如 $\begin{pmatrix} B_{11} & B_{12} \\ O & B_{22} \end{pmatrix}$，$B_{11}$ 是 $T|_{V_1}$ 的 $r$ 阶矩阵。
+2. 设 $v_1, \dots, v_r$ 是 $V_1$ 的基，$w_1, \dots, w_{n-r}$ 是 $V_2$ 的基，则 $T$ 在基 $v_1, \dots, v_r, w_1, \dots, w_{n-r}$ 下的矩阵形如 $\begin{bmatrix} B_{11} & B_{12} \\ O & B_{22} \end{bmatrix}$，$B_{11}$ 是 $T|_{V_1}$ 的 $r$ 阶矩阵。
 3. 若 $V_2$ 也是 $T$-不变的，则 $B_{12} = O$，矩阵是**分块对角矩阵**。
 
 于是：$A$ 相似于分块上三角阵 $\Leftrightarrow$ 有非平凡的不变子空间；$A$ 相似于分块对角阵 $\Leftrightarrow$ 空间能分解成两个不变子空间的直和。
 
-**例 10.2.2** 设 $A = \begin{pmatrix} 4 & -5 & 2 \\ 5 & -7 & 3 \\ 6 & -9 & 4 \end{pmatrix}$，$T(\boldsymbol{x}) = A\boldsymbol{x}$。$\mathcal{N}(A)$ 是 $T$-不变的，基为 $(1, 2, 3)^{\mathsf T}$。把它扩充为 $\mathbb{C}^3$ 的基 $(1, 2, 3)^{\mathsf T}, \boldsymbol{e}_2, \boldsymbol{e}_3$，计算各基向量的像在这组基下的坐标：
+**例 10.2.2** 设 $A = \begin{bmatrix} 4 & -5 & 2 \\ 5 & -7 & 3 \\ 6 & -9 & 4 \end{bmatrix}$，$T(\boldsymbol{x}) = A\boldsymbol{x}$。$\mathcal{N}(A)$ 是 $T$-不变的，基为 $(1, 2, 3)^{\mathsf T}$。把它扩充为 $\mathbb{C}^3$ 的基 $(1, 2, 3)^{\mathsf T}, \boldsymbol{e}_2, \boldsymbol{e}_3$，计算各基向量的像在这组基下的坐标：
 
 $$
-A\begin{pmatrix}1\\2\\3\end{pmatrix} = \boldsymbol{0}, \quad A\boldsymbol{e}_2 = \begin{pmatrix}-5\\-7\\-9\end{pmatrix} = -5\begin{pmatrix}1\\2\\3\end{pmatrix} + 3\boldsymbol{e}_2 + 6\boldsymbol{e}_3, \quad A\boldsymbol{e}_3 = \begin{pmatrix}2\\3\\4\end{pmatrix} = 2\begin{pmatrix}1\\2\\3\end{pmatrix} - \boldsymbol{e}_2 - 2\boldsymbol{e}_3,
+A\begin{bmatrix}1\\2\\3\end{bmatrix} = \boldsymbol{0}, \quad A\boldsymbol{e}_2 = \begin{bmatrix}-5\\-7\\-9\end{bmatrix} = -5\begin{bmatrix}1\\2\\3\end{bmatrix} + 3\boldsymbol{e}_2 + 6\boldsymbol{e}_3, \quad A\boldsymbol{e}_3 = \begin{bmatrix}2\\3\\4\end{bmatrix} = 2\begin{bmatrix}1\\2\\3\end{bmatrix} - \boldsymbol{e}_2 - 2\boldsymbol{e}_3,
 $$
 
-所以 $P = \begin{pmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 3 & 0 & 1 \end{pmatrix}$ 使 $P^{-1}AP = \begin{pmatrix} 0 & -5 & 2 \\ 0 & 3 & -1 \\ 0 & 6 & -2 \end{pmatrix}$，左上角的 $1 \times 1$ 块对应 $\mathcal{N}(A)$。
+所以 $P = \begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 3 & 0 & 1 \end{bmatrix}$ 使 $P^{-1}AP = \begin{bmatrix} 0 & -5 & 2 \\ 0 & 3 & -1 \\ 0 & 6 & -2 \end{bmatrix}$，左上角的 $1 \times 1$ 块对应 $\mathcal{N}(A)$。
 
 ## 10.3. Schur 定理
 
@@ -94,10 +94,10 @@ $$
 
 **定理 10.3.1（Schur 定理）** 设 $A \in \mathbb{C}^{n\times n}$，$\det(\lambda I_n - A) = (\lambda - \mu_1)^{n_1} \cdots (\lambda - \mu_s)^{n_s}$，$\mu_1, \dots, \mu_s$ 互不相同。则存在可逆阵 $P$ 使 $P^{-1}AP = U$ 是**上三角矩阵**，且 $U$ 的对角元依次为 $n_1$ 个 $\mu_1$、$n_2$ 个 $\mu_2$、……、$n_s$ 个 $\mu_s$（顺序可任意指定）。$P$ 与 $U$ 都不唯一。
 
-**证明** 对 $n$ 归纳，$n = 1$ 显然。取 $A$ 关于 $\mu_1$ 的特征向量 $\boldsymbol{p}_1$，扩充为 $\mathbb{C}^n$ 的基 $\boldsymbol{p}_1, \dots, \boldsymbol{p}_n$，令 $P_1 = (\boldsymbol{p}_1, \dots, \boldsymbol{p}_n)$，则 $P_1^{-1}AP_1 = \begin{pmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T} \\ \boldsymbol{0} & A_1 \end{pmatrix}$，$A_1$ 的特征多项式为 $\det(\lambda I - A)/(\lambda - \mu_1)$。由归纳假设有可逆阵 $Q$ 使 $Q^{-1}A_1Q$ 是上三角阵，令 $P = P_1 \begin{pmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q \end{pmatrix}$，则
+**证明** 对 $n$ 归纳，$n = 1$ 显然。取 $A$ 关于 $\mu_1$ 的特征向量 $\boldsymbol{p}_1$，扩充为 $\mathbb{C}^n$ 的基 $\boldsymbol{p}_1, \dots, \boldsymbol{p}_n$，令 $P_1 = (\boldsymbol{p}_1, \dots, \boldsymbol{p}_n)$，则 $P_1^{-1}AP_1 = \begin{bmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T} \\ \boldsymbol{0} & A_1 \end{bmatrix}$，$A_1$ 的特征多项式为 $\det(\lambda I - A)/(\lambda - \mu_1)$。由归纳假设有可逆阵 $Q$ 使 $Q^{-1}A_1Q$ 是上三角阵，令 $P = P_1 \begin{bmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q \end{bmatrix}$，则
 
 $$
-P^{-1}AP = \begin{pmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q^{-1} \end{pmatrix}\begin{pmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T} \\ \boldsymbol{0} & A_1 \end{pmatrix}\begin{pmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q \end{pmatrix} = \begin{pmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T}Q \\ \boldsymbol{0} & Q^{-1}A_1Q \end{pmatrix}
+P^{-1}AP = \begin{bmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q^{-1} \end{bmatrix}\begin{bmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T} \\ \boldsymbol{0} & A_1 \end{bmatrix}\begin{bmatrix} 1 & \boldsymbol{0}^{\mathsf T} \\ \boldsymbol{0} & Q \end{bmatrix} = \begin{bmatrix} \mu_1 & \boldsymbol{\alpha}^{\mathsf T}Q \\ \boldsymbol{0} & Q^{-1}A_1Q \end{bmatrix}
 $$
 
 是上三角阵。每一步先取哪个特征值可以自由选择，故对角元的顺序可以任意指定。 $\square$
@@ -107,14 +107,14 @@ $$
 **算法 10.3.1（Schur 三角化）** 输入 $A \in \mathbb{C}^{n\times n}$。
 
 1. 求 $A$ 的一个特征值 $\mu$ 及特征向量 $\boldsymbol{p}_1$（多项式求根、解齐次方程组）。
-2. 把 $\boldsymbol{p}_1$ 扩充为 $\mathbb{C}^n$ 的基，构成 $P_1$，计算 $P_1^{-1}AP_1 = \begin{pmatrix} \mu & \ast \\ \boldsymbol{0} & A_1 \end{pmatrix}$。
+2. 把 $\boldsymbol{p}_1$ 扩充为 $\mathbb{C}^n$ 的基，构成 $P_1$，计算 $P_1^{-1}AP_1 = \begin{bmatrix} \mu & \ast \\ \boldsymbol{0} & A_1 \end{bmatrix}$。
 3. 对 $n - 1$ 阶矩阵 $A_1$ 重复以上步骤得到 $Q$，令 $P = P_1\operatorname{diag}(1, Q)$；$A_1$ 是 $1$ 阶时停止。
 
 **例 10.3.1** 对例 10.2.2 的 $A$，$\det(\lambda I_3 - A) = \lambda^2(\lambda - 1)$。
 
-1. 取 $\mu = 1$ 的特征向量 $\boldsymbol{p}_1 = (1, 1, 1)^{\mathsf T}$，扩充为基 $\boldsymbol{p}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$。由 $A\boldsymbol{e}_2 = (-5, -7, -9)^{\mathsf T} = -5\boldsymbol{p}_1 - 2\boldsymbol{e}_2 - 4\boldsymbol{e}_3$，$A\boldsymbol{e}_3 = (2, 3, 4)^{\mathsf T} = 2\boldsymbol{p}_1 + \boldsymbol{e}_2 + 2\boldsymbol{e}_3$，得 $P_1 = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 0 & 1 \end{pmatrix}$，$P_1^{-1}AP_1 = \begin{pmatrix} 1 & -5 & 2 \\ 0 & -2 & 1 \\ 0 & -4 & 2 \end{pmatrix}$。
-2. $A_1 = \begin{pmatrix} -2 & 1 \\ -4 & 2 \end{pmatrix}$ 有特征向量 $\boldsymbol{q}_1 = (1, 2)^{\mathsf T}$（$A_1\boldsymbol{q}_1 = \boldsymbol{0}$），扩充为 $\boldsymbol{q}_1, \boldsymbol{e}_2$，$Q = \begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}$，$Q^{-1}A_1Q = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$。
-3. $P = P_1\operatorname{diag}(1, Q) = \begin{pmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 2 & 1 \end{pmatrix}$，$P^{-1}AP = \begin{pmatrix} 1 & -1 & 2 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{pmatrix}$。
+1. 取 $\mu = 1$ 的特征向量 $\boldsymbol{p}_1 = (1, 1, 1)^{\mathsf T}$，扩充为基 $\boldsymbol{p}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$。由 $A\boldsymbol{e}_2 = (-5, -7, -9)^{\mathsf T} = -5\boldsymbol{p}_1 - 2\boldsymbol{e}_2 - 4\boldsymbol{e}_3$，$A\boldsymbol{e}_3 = (2, 3, 4)^{\mathsf T} = 2\boldsymbol{p}_1 + \boldsymbol{e}_2 + 2\boldsymbol{e}_3$，得 $P_1 = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 0 & 1 \end{bmatrix}$，$P_1^{-1}AP_1 = \begin{bmatrix} 1 & -5 & 2 \\ 0 & -2 & 1 \\ 0 & -4 & 2 \end{bmatrix}$。
+2. $A_1 = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix}$ 有特征向量 $\boldsymbol{q}_1 = (1, 2)^{\mathsf T}$（$A_1\boldsymbol{q}_1 = \boldsymbol{0}$），扩充为 $\boldsymbol{q}_1, \boldsymbol{e}_2$，$Q = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$，$Q^{-1}A_1Q = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$。
+3. $P = P_1\operatorname{diag}(1, Q) = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 2 & 1 \end{bmatrix}$，$P^{-1}AP = \begin{bmatrix} 1 & -1 & 2 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix}$。
 
 [第 12 章](/2.1.12)将把 Schur 定理加强为：$P$ 可以取成酉矩阵。
 
@@ -142,7 +142,7 @@ $$
 
 **证明** 2：设 $\boldsymbol{v} \in N_{\lambda_0, l+2}$，则 $(A - \lambda_0 I)^{l+1}\left((A - \lambda_0 I)\boldsymbol{v}\right) = \boldsymbol{0}$，即 $(A - \lambda_0 I)\boldsymbol{v} \in N_{\lambda_0, l+1} = N_{\lambda_0, l}$，于是 $(A - \lambda_0 I)^{l+1}\boldsymbol{v} = \boldsymbol{0}$，$\boldsymbol{v} \in N_{\lambda_0, l+1}$。归纳即得。由于各 $N_{\lambda_0,k}$ 的维数不超过 $n$，严格增长不能无限进行，得 3。 $\square$
 
-**例 10.4.1** $A = \begin{pmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{pmatrix}$，$\det(\lambda I_4 - A) = (\lambda - 1)^3(\lambda - 2)$。$\operatorname{rank}(A - I) = 2 > \operatorname{rank}\left((A - I)^2\right) = 1 = \operatorname{rank}\left((A - I)^3\right)$，所以
+**例 10.4.1** $A = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 2 \end{bmatrix}$，$\det(\lambda I_4 - A) = (\lambda - 1)^3(\lambda - 2)$。$\operatorname{rank}(A - I) = 2 > \operatorname{rank}\left((A - I)^2\right) = 1 = \operatorname{rank}\left((A - I)^3\right)$，所以
 
 $$
 N_{1,1} \subsetneq N_{1,2} = N_{1,3} = \cdots = G_1, \qquad \dim N_{1,1} = 2, \quad \dim G_1 = 3,
@@ -170,13 +170,13 @@ $$
 2. $G_{\mu_i} = \mathcal{N}\left((A - \mu_i I_n)^{n_i}\right)$；
 3. $\mathbb{C}^n = G_{\mu_1} \oplus \cdots \oplus G_{\mu_s}$。
 
-**证明** 1、2：以 $\mu_1$ 为例。由 Schur 定理，存在 $P$ 使 $P^{-1}AP = \begin{pmatrix} B_{11} & B_{12} \\ O & B_{22} \end{pmatrix}$，其中 $B_{11}$ 是对角元全为 $\mu_1$ 的 $n_1$ 阶上三角阵，$B_{22}$ 是对角元都不等于 $\mu_1$ 的上三角阵。于是
+**证明** 1、2：以 $\mu_1$ 为例。由 Schur 定理，存在 $P$ 使 $P^{-1}AP = \begin{bmatrix} B_{11} & B_{12} \\ O & B_{22} \end{bmatrix}$，其中 $B_{11}$ 是对角元全为 $\mu_1$ 的 $n_1$ 阶上三角阵，$B_{22}$ 是对角元都不等于 $\mu_1$ 的上三角阵。于是
 
 $$
-P^{-1}(A - \mu_1 I)^k P = \begin{pmatrix} C_{11}^k & \ast \\ O & C_{22}^k \end{pmatrix}, \qquad C_{11} = B_{11} - \mu_1 I, \quad C_{22} = B_{22} - \mu_1 I,
+P^{-1}(A - \mu_1 I)^k P = \begin{bmatrix} C_{11}^k & \ast \\ O & C_{22}^k \end{bmatrix}, \qquad C_{11} = B_{11} - \mu_1 I, \quad C_{22} = B_{22} - \mu_1 I,
 $$
 
-$C_{11}$ 是严格上三角阵，$C_{11}^{n_1} = O$；$C_{22}$ 可逆。当 $k \ge n_1$ 时右边形如 $\begin{pmatrix} O & \ast \\ O & C_{22}^k \end{pmatrix}$，秩为 $n - n_1$。所以 $\dim N_{\mu_1, k} = n_1$ 对一切 $k \ge n_1$ 成立，链在 $k = n_1$ 处已经稳定，$G_{\mu_1} = N_{\mu_1, n_1}$，维数为 $n_1$。
+$C_{11}$ 是严格上三角阵，$C_{11}^{n_1} = O$；$C_{22}$ 可逆。当 $k \ge n_1$ 时右边形如 $\begin{bmatrix} O & \ast \\ O & C_{22}^k \end{bmatrix}$，秩为 $n - n_1$。所以 $\dim N_{\mu_1, k} = n_1$ 对一切 $k \ge n_1$ 成立，链在 $k = n_1$ 处已经稳定，$G_{\mu_1} = N_{\mu_1, n_1}$，维数为 $n_1$。
 
 3：由引理 10.5.2，零向量在 $G_{\mu_1} + \cdots + G_{\mu_s}$ 中的表示唯一，所以和是直和（定理 10.1.1 条件 3），维数为 $n_1 + \cdots + n_s = n$，它就是 $\mathbb{C}^n$。 $\square$
 
@@ -194,16 +194,16 @@ $A_i$ 是 $n_i$ 阶矩阵，且只有一个特征值 $\mu_i$：$\det(\lambda I_{
 
 **推论 10.5.1** $A$ 可对角化 $\Leftrightarrow$ $\mathbb{C}^n = V_{\mu_1} \oplus \cdots \oplus V_{\mu_s}$ $\Leftrightarrow$ 每个特征值的代数重数等于**几何重数** $\Leftrightarrow$ 对每个 $i$，$G_{\mu_i} = V_{\mu_i}$。
 
-**例 10.5.1** $A = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 2 & -5 & 4 \end{pmatrix}$（**友矩阵**），$\det(\lambda I_3 - A) = (\lambda - 1)^2(\lambda - 2)$。
+**例 10.5.1** $A = \begin{bmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 2 & -5 & 4 \end{bmatrix}$（**友矩阵**），$\det(\lambda I_3 - A) = (\lambda - 1)^2(\lambda - 2)$。
 
 $$
-G_1 = \mathcal{N}\left((A - I)^2\right) = \mathcal{N}\begin{pmatrix} 1 & -2 & 1 \\ 2 & -4 & 2 \\ 4 & -8 & 4 \end{pmatrix} = \operatorname{span}\left\{\begin{pmatrix}2\\1\\0\end{pmatrix}, \begin{pmatrix}1\\0\\-1\end{pmatrix}\right\}, \qquad G_2 = \mathcal{N}(A - 2I) = \operatorname{span}\left\{\begin{pmatrix}1\\2\\4\end{pmatrix}\right\}.
+G_1 = \mathcal{N}\left((A - I)^2\right) = \mathcal{N}\begin{bmatrix} 1 & -2 & 1 \\ 2 & -4 & 2 \\ 4 & -8 & 4 \end{bmatrix} = \operatorname{span}\left\{\begin{bmatrix}2\\1\\0\end{bmatrix}, \begin{bmatrix}1\\0\\-1\end{bmatrix}\right\}, \qquad G_2 = \mathcal{N}(A - 2I) = \operatorname{span}\left\{\begin{bmatrix}1\\2\\4\end{bmatrix}\right\}.
 $$
 
-令 $P = \begin{pmatrix} 2 & 1 & 1 \\ 1 & 0 & 2 \\ 0 & -1 & 4 \end{pmatrix}$，由 $A(2,1,0)^{\mathsf T} = (1, 0, -1)^{\mathsf T}$，$A(1, 0, -1)^{\mathsf T} = (0, -1, -2)^{\mathsf T} = -(2,1,0)^{\mathsf T} + 2(1,0,-1)^{\mathsf T}$，得
+令 $P = \begin{bmatrix} 2 & 1 & 1 \\ 1 & 0 & 2 \\ 0 & -1 & 4 \end{bmatrix}$，由 $A(2,1,0)^{\mathsf T} = (1, 0, -1)^{\mathsf T}$，$A(1, 0, -1)^{\mathsf T} = (0, -1, -2)^{\mathsf T} = -(2,1,0)^{\mathsf T} + 2(1,0,-1)^{\mathsf T}$，得
 
 $$
-P^{-1}AP = \begin{pmatrix} A_1 & \\ & A_2 \end{pmatrix}, \qquad A_1 = \begin{pmatrix} 0 & -1 \\ 1 & 2 \end{pmatrix}, \quad A_2 = (2).
+P^{-1}AP = \begin{bmatrix} A_1 & \\ & A_2 \end{bmatrix}, \qquad A_1 = \begin{bmatrix} 0 & -1 \\ 1 & 2 \end{bmatrix}, \quad A_2 = (2).
 $$
 
 $A_1$ 的特征多项式是 $(\lambda - 1)^2$，与定理 10.5.2 一致。
@@ -247,7 +247,7 @@ $$
 
 6：由推论 10.5.1，可对角化 $\Leftrightarrow$ $G_{\mu_i} = N_{\mu_i, 1}$ $\Leftrightarrow$ 所有 $m_i = 1$。 $\square$
 
-**例 10.6.1** $A = \operatorname{diag}(1, 1, 2)$ 的特征多项式是 $(x - 1)^2(x - 2)$，极小多项式是 $(x - 1)(x - 2)$；$\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$ 的极小多项式是 $(x - 1)^2$，有重根，所以不可对角化。
+**例 10.6.1** $A = \operatorname{diag}(1, 1, 2)$ 的特征多项式是 $(x - 1)^2(x - 2)$，极小多项式是 $(x - 1)(x - 2)$；$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ 的极小多项式是 $(x - 1)^2$，有重根，所以不可对角化。
 
 **例 10.6.2** 若 $A^2 = I_n$，则 $x^2 - 1 = (x - 1)(x + 1)$ 是化零多项式，$m_A$ 整除它而没有重根，故 $A$ 可对角化。同理，满足 $A^2 = A$（投影）或 $A^k = I$ 的复矩阵都可对角化。
 
@@ -279,7 +279,7 @@ $$
 2. $C_v$ 是 $T$-不变子空间，$T|_{C_v}$ 是循环变换，它在循环基下的矩阵为
 
 $$
-J_{0,k} = \begin{pmatrix} 0 & 1 & & \\ & 0 & \ddots & \\ & & \ddots & 1 \\ & & & 0 \end{pmatrix}_{k \times k};
+J_{0,k} = \begin{bmatrix} 0 & 1 & & \\ & 0 & \ddots & \\ & & \ddots & 1 \\ & & & 0 \end{bmatrix}_{k \times k};
 $$
 
 3. 称 $C_v$ 是极大的，若不存在 $w$ 使 $C_v \subsetneq C_w$。则 $C_v$ 极大 $\Leftrightarrow$ $v \notin \mathcal{R}(T)$。
@@ -346,7 +346,7 @@ $$
 **定义 10.9.2（Jordan 块）** 称 $k$ 阶矩阵
 
 $$
-J_{\lambda,k} = \lambda I_k + J_{0,k} = \begin{pmatrix} \lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda \end{pmatrix}
+J_{\lambda,k} = \lambda I_k + J_{0,k} = \begin{bmatrix} \lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda \end{bmatrix}
 $$
 
 为关于 $\lambda$ 的 $k$ 阶 Jordan 块（第 6 章记作 $J_k(\lambda)$）。它的特征多项式与极小多项式都是 $(x - \lambda)^k$。
@@ -392,7 +392,7 @@ $k = d - 1$ 与 $k = d$ 两式相减，每个阶数 $\ge d$ 的块恰好贡献 $
 
 **例 10.9.1** $A = (\boldsymbol{0}, \boldsymbol{e}_1, \boldsymbol{0}, 2\boldsymbol{e}_2, \boldsymbol{0}, \boldsymbol{e}_3) \in \mathbb{C}^{6\times 6}$（按列写出），则 $A^2 = (\boldsymbol{0}, \boldsymbol{0}, \boldsymbol{0}, 2\boldsymbol{e}_1, \boldsymbol{0}, \boldsymbol{0})$，$A^3 = O$，$\operatorname{rank}(A) = 3$，$\operatorname{rank}(A^2) = 1$，$\operatorname{rank}(A^3) = 0$。阶数 $\ge 1, \ge 2, \ge 3$ 的块数分别为 $6 - 3 = 3$、$3 - 1 = 2$、$1 - 0 = 1$，所以 $J = \operatorname{diag}(J_{0,3}, J_{0,2}, J_{0,1})$。
 
-**例 10.9.2** $A = \begin{pmatrix} 1 & 2 & 2 & 0 & 0 \\ 2 & 1 & 2 & 0 & 0 \\ 2 & 2 & 1 & 0 & 0 \\ 0 & 0 & 0 & 5 & 0 \\ 0 & 0 & 0 & 2 & 5 \end{pmatrix}$，$\det(\lambda I_5 - A) = (\lambda + 1)^2(\lambda - 5)^3$。$\operatorname{rank}(A + I) = 3$，关于 $-1$ 有 $5 - 3 = 2$ 个块，而 $-1$ 的代数重数是 $2$，所以是两个 $1$ 阶块。$\operatorname{rank}(A - 5I) = 3$，关于 $5$ 也有 $2$ 个块，总阶数为 $3$，只能是 $2 + 1$。故 $J = \operatorname{diag}(-1, -1, J_{5,2}, 5)$。
+**例 10.9.2** $A = \begin{bmatrix} 1 & 2 & 2 & 0 & 0 \\ 2 & 1 & 2 & 0 & 0 \\ 2 & 2 & 1 & 0 & 0 \\ 0 & 0 & 0 & 5 & 0 \\ 0 & 0 & 0 & 2 & 5 \end{bmatrix}$，$\det(\lambda I_5 - A) = (\lambda + 1)^2(\lambda - 5)^3$。$\operatorname{rank}(A + I) = 3$，关于 $-1$ 有 $5 - 3 = 2$ 个块，而 $-1$ 的代数重数是 $2$，所以是两个 $1$ 阶块。$\operatorname{rank}(A - 5I) = 3$，关于 $5$ 也有 $2$ 个块，总阶数为 $3$，只能是 $2 + 1$。故 $J = \operatorname{diag}(-1, -1, J_{5,2}, 5)$。
 
 **例 10.9.3** 设 $n \ge 2$，求 $J_{0,n}^2$ 的 Jordan 形。$J_{0,n}^2$ 的特征值全为 $0$，$\operatorname{rank}(J_{0,n}^2) = n - 2$，所以有两个块。$J_{0,n}^k$ 在 $k \ge n$ 时为零。$n = 2m$ 时 $(J_{0,n}^2)^m = O \ne (J_{0,n}^2)^{m-1}$，极小多项式为 $x^m$，最大块阶数为 $m$，Jordan 形为 $\operatorname{diag}(J_{0,m}, J_{0,m})$；$n = 2m + 1$ 时极小多项式为 $x^{m+1}$，Jordan 形为 $\operatorname{diag}(J_{0,m+1}, J_{0,m})$。直观上，$J_{0,n}^2$ 把 $\boldsymbol{e}_n \mapsto \boldsymbol{e}_{n-2} \mapsto \cdots$ 与 $\boldsymbol{e}_{n-1} \mapsto \boldsymbol{e}_{n-3} \mapsto \cdots$ 分成奇偶两条链。
 
@@ -409,14 +409,14 @@ Jordan 形只需要秩，而 Jordan 基 $P$ 需要逐条构造 Jordan 链。构�
 
 第 1 步是多项式求根，第 2 步是一系列消元，第 3 步是解齐次线性方程组并检验线性无关（仍是算秩）。第 3 步的无关性条件不能省：选错了顶端向量，不同链的特征向量会重合，$P$ 不可逆（见例 10.10.2）。对小矩阵也常用自下而上的做法：在 $\mathcal{N}(A - \mu_iI) \cap \mathcal{R}\left((A - \mu_iI)^{k-1}\right)$ 中取链底的特征向量，再依次解 $(A - \mu_iI)\boldsymbol{x} = $（上一个向量）向上延长。
 
-**例 10.10.1** $A = \begin{pmatrix} 3 & 0 & 8 \\ 3 & -1 & 6 \\ -2 & 0 & -5 \end{pmatrix}$，$\det(\lambda I - A) = (\lambda + 1)^3$。$\operatorname{rank}(A + I) = 1$，$(A + I)^2 = O$，所以有 $3 - 1 = 2$ 个块、最大阶数 $2$：$J = \operatorname{diag}(J_{-1,2}, -1)$。自下而上：$A + I = \begin{pmatrix} 4 & 0 & 8 \\ 3 & 0 & 6 \\ -2 & 0 & -4 \end{pmatrix}$ 的列空间由 $(4, 3, -2)^{\mathsf T}$ 张成，它也在 $\mathcal{N}(A + I)$ 中，取 $\boldsymbol{p}_1 = (4, 3, -2)^{\mathsf T}$；解 $(A + I)\boldsymbol{x} = \boldsymbol{p}_1$ 得 $\boldsymbol{p}_2 = (1, 0, 0)^{\mathsf T}$；再取 $\mathcal{N}(A + I)$ 中与 $\boldsymbol{p}_1$ 无关的 $\boldsymbol{p}_3 = (0, 1, 0)^{\mathsf T}$。$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$ 使 $P^{-1}AP = J$。
+**例 10.10.1** $A = \begin{bmatrix} 3 & 0 & 8 \\ 3 & -1 & 6 \\ -2 & 0 & -5 \end{bmatrix}$，$\det(\lambda I - A) = (\lambda + 1)^3$。$\operatorname{rank}(A + I) = 1$，$(A + I)^2 = O$，所以有 $3 - 1 = 2$ 个块、最大阶数 $2$：$J = \operatorname{diag}(J_{-1,2}, -1)$。自下而上：$A + I = \begin{bmatrix} 4 & 0 & 8 \\ 3 & 0 & 6 \\ -2 & 0 & -4 \end{bmatrix}$ 的列空间由 $(4, 3, -2)^{\mathsf T}$ 张成，它也在 $\mathcal{N}(A + I)$ 中，取 $\boldsymbol{p}_1 = (4, 3, -2)^{\mathsf T}$；解 $(A + I)\boldsymbol{x} = \boldsymbol{p}_1$ 得 $\boldsymbol{p}_2 = (1, 0, 0)^{\mathsf T}$；再取 $\mathcal{N}(A + I)$ 中与 $\boldsymbol{p}_1$ 无关的 $\boldsymbol{p}_3 = (0, 1, 0)^{\mathsf T}$。$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$ 使 $P^{-1}AP = J$。
 
-**例 10.10.2** 求 $A = \begin{pmatrix} 1 & 1 & 1 & 1 & 1 & 1 \\ 0 & 2 & 0 & 1 & 2 & 3 \\ 0 & 0 & 2 & 0 & 1 & -1 \\ 0 & 0 & 0 & 2 & 1 & 2 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 0 & 0 & 2 \end{pmatrix}$ 的 Jordan 形与 Jordan 基。
+**例 10.10.2** 求 $A = \begin{bmatrix} 1 & 1 & 1 & 1 & 1 & 1 \\ 0 & 2 & 0 & 1 & 2 & 3 \\ 0 & 0 & 2 & 0 & 1 & -1 \\ 0 & 0 & 0 & 2 & 1 & 2 \\ 0 & 0 & 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 0 & 0 & 2 \end{bmatrix}$ 的 Jordan 形与 Jordan 基。
 
 1. $\det(\lambda I_6 - A) = (\lambda - 1)(\lambda - 2)^5$。
 2. 记 $N = A - 2I$。$\operatorname{rank}(N) = 4$，$\operatorname{rank}(N^2) = 2$，$\operatorname{rank}(N^3) = 1 = 6 - 5$，停止。关于 $2$ 的阶数 $\ge 1, \ge 2, \ge 3$ 的块数分别为 $6 - 4 = 2$、$4 - 2 = 2$、$2 - 1 = 1$，即一个 $3$ 阶块和一个 $2$ 阶块：$J = \operatorname{diag}(1, J_{2,3}, J_{2,2})$。
 3. $\mu = 1$：$\boldsymbol{p}_1 = \boldsymbol{e}_1$。$\mu = 2$ 的第 $3$ 层：取 $\boldsymbol{y} = (-2, 0, 0, 0, 1, 0)^{\mathsf T} \in N_3 \setminus N_2$，链为 $N^2\boldsymbol{y} = (1, 1, 0, 0, 0, 0)^{\mathsf T}$，$N\boldsymbol{y} = (3, 2, 1, 1, 0, 0)^{\mathsf T}$，$\boldsymbol{y}$。第 $2$ 层：$N_2$ 由 $N_1 = \operatorname{span}\{(1,1,0,0,0,0)^{\mathsf T}, (1,0,1,0,0,0)^{\mathsf T}\}$ 及 $\boldsymbol{e}_4$、$(3, 0, 0, 0, -2, 1)^{\mathsf T}$ 张成。$\boldsymbol{e}_4$ 不能选：$\boldsymbol{e}_4 = N\boldsymbol{y} - 2(1,1,0,0,0,0)^{\mathsf T} - (1,0,1,0,0,0)^{\mathsf T}$ 落在 $N_1 + \operatorname{span}\{N\boldsymbol{y}\}$ 中，它的链底 $N\boldsymbol{e}_4 = N^2\boldsymbol{y}$ 与第一条链重合。取 $\boldsymbol{z} = (3, 0, 0, 0, -2, 1)^{\mathsf T}$，链为 $N\boldsymbol{z} = (-4, -1, -3, 0, 0, 0)^{\mathsf T}$，$\boldsymbol{z}$。
-4. $P = (\boldsymbol{e}_1, N^2\boldsymbol{y}, N\boldsymbol{y}, \boldsymbol{y}, N\boldsymbol{z}, \boldsymbol{z}) = \begin{pmatrix} 1 & 1 & 3 & -2 & -4 & 3 \\ 0 & 1 & 2 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & -3 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{pmatrix}$，$\det P = -3 \ne 0$，$P^{-1}AP = J$。
+4. $P = (\boldsymbol{e}_1, N^2\boldsymbol{y}, N\boldsymbol{y}, \boldsymbol{y}, N\boldsymbol{z}, \boldsymbol{z}) = \begin{bmatrix} 1 & 1 & 3 & -2 & -4 & 3 \\ 0 & 1 & 2 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & -3 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$，$\det P = -3 \ne 0$，$P^{-1}AP = J$。
 
 Jordan 形是理论上的最简形，却不适合浮点计算：它不是矩阵元素的连续函数。下面的代码把 $J_{0,10}$ 的一个元素改动 $10^{-10}$，特征值就从全为 $0$ 变成模都等于 $(10^{-10})^{1/10} = 0.1$ 的十个不同的数，Jordan 形从一个 $10$ 阶块变成对角阵。
 
