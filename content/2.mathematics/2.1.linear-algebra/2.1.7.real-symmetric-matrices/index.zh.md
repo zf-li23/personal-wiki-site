@@ -146,6 +146,10 @@ $$
 
 定理 7.2.1 把特征值问题变成了约束优化问题：$\lambda_1$ 是二次型在单位球面 $\|\boldsymbol{x}\|=1$ 上的最大值，最大值点是 $\boldsymbol{q}_1$。主成分分析正是这样求协方差矩阵方差最大的方向。更一般的 Courant–Fischer 极小极大原理不需要事先知道特征向量：$\lambda_i$ 是 Rayleigh 商在所有 $i$ 维子空间上的最小值的最大值。
 
+以前面的 $5x_1^2+4x_1x_2+5x_2^2$ 为例：下图左边是它的等值线，都是以两个特征向量为主轴的椭圆；右边是 Rayleigh 商沿单位圆的取值，最大值 $7$ 在 $\boldsymbol{q}_1$ 方向（$45^\circ$）取到，最小值 $3$ 在与之正交的 $\boldsymbol{q}_2$ 方向（$135^\circ$）取到。
+
+![左：二次型 5x_1^2+4x_1x_2+5x_2^2 的等值线是以特征向量为主轴的椭圆，箭头是曲线 x^T A x = 1 的两条半轴 q_i/√λ_i；右：Rayleigh 商在单位圆上的取值，最大值与最小值恰为特征值 7 与 3](./plots/principal-axes-rayleigh.py)
+
 对非对称的实方阵 $A$，Rayleigh 商只依赖于 $A$ 的对称部分，所以它的极值是 $\frac12(A+A^{\mathsf T})$ 的最大、最小特征值，而不是 $A$ 的特征值。例如 $A=\begin{bmatrix}0&1\\0&0\end{bmatrix}$ 的特征值都是 $0$，但 Rayleigh 商 $x_1x_2/(x_1^2+x_2^2)$ 取遍 $[-\frac12,\frac12]$。
 
 ## 7.3. 正定矩阵与合同
@@ -354,7 +358,9 @@ $$
 - $A^{\mathsf T}A=V\Sigma^{\mathsf T}\Sigma V^{\mathsf T}$，$AA^{\mathsf T}=U\Sigma\Sigma^{\mathsf T}U^{\mathsf T}$ 分别是二者的谱分解；$A$ 的非零奇异值是 $A^{\mathsf T}A$（或 $AA^{\mathsf T}$）的非零特征值的算术平方根。
 - 实对称矩阵的奇异值是特征值的绝对值（由 $A=Q\Lambda Q^{\mathsf T}$，把负特征值的符号移到 $U$ 的列上），对称半正定矩阵的奇异值就是特征值；正交相似的矩阵有相同的特征值与奇异值。若 $A$ 可逆，则 $A^{-1}=V\Sigma^{-1}U^{\mathsf T}$，$A^{-1}$ 的奇异值是 $A$ 的奇异值的倒数。
 
-几何上，$A=U\Sigma V^{\mathsf T}$ 说明任何线性映射都是"旋转（或反射）、沿坐标轴伸缩、再旋转"的复合：$A$ 把单位球面映成以 $\sigma_i\boldsymbol{u}_i$ 为半轴的（退化的）椭球面。
+几何上，$A=U\Sigma V^{\mathsf T}$ 说明任何线性映射都是"旋转（或反射）、沿坐标轴伸缩、再旋转"的复合：$A$ 把单位球面映成以 $\sigma_i\boldsymbol{u}_i$ 为半轴的（退化的）椭球面。下图以例 7.4.1 中的 $2\times2$ 矩阵 $\begin{bmatrix}3&0\\4&5\end{bmatrix}$ 为例，把 $V^{\mathsf T}$、$\Sigma$、$U$ 依次作用于单位圆：$V^{\mathsf T}$ 把右奇异向量 $\boldsymbol{v}_1,\boldsymbol{v}_2$ 转到坐标轴上，$\Sigma$ 沿坐标轴分别伸缩 $\sigma_1,\sigma_2$ 倍，$U$ 再把坐标轴转到 $\boldsymbol{u}_1,\boldsymbol{u}_2$ 方向。
+
+![SVD 的几何意义：单位圆依次经过旋转 V^T、沿坐标轴伸缩 Σ、旋转 U，得到它在 A 下的像；红、绿箭头跟踪 v_1、v_2，最终成为椭圆的半轴 σ_1 u_1、σ_2 u_2（前两幅放大显示）](./plots/svd-rotate-stretch-rotate.py)
 
 **算法 7.4.1（计算奇异值分解）** 输入 $m\times n$ 实矩阵 $A$：
 

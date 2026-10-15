@@ -350,6 +350,10 @@ $$
 
 可以验证，形如 $\mathrm{e}^{\lambda t}\left(\frac{t^{k-1}}{(k-1)!}\boldsymbol{\alpha}_1 + \cdots + t\boldsymbol{\alpha}_{k-1} + \boldsymbol{\alpha}_k\right)$（$\boldsymbol{\alpha}_1 \ne \boldsymbol{0}$）的函数是解，当且仅当 $\boldsymbol{\alpha}_1, \dots, \boldsymbol{\alpha}_k$ 是关于 $\lambda$ 的 Jordan 链。所以解方程组就是求 Jordan 链。
 
+对 2 阶实矩阵，$A$ 的特征值与 Jordan 结构决定了轨线 $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{x}_0$ 的形状（下图）：两个实特征值同号时轨线进入或离开原点（结点），异号时是鞍点；一对共轭复特征值 $a \pm b\mathrm{i}$ 给出螺旋线，$a = 0$ 时轨线是闭曲线（中心，例 11.8.1 的旋转）。二重特征值的两种 Jordan 形给出不同的图像：$A = \lambda I$ 时每个向量都是特征向量，轨线是射线；$A$ 相似于 $J_{\lambda,2}$ 时解中出现 $t\mathrm{e}^{\lambda t}$ 项，所有轨线都沿唯一的特征向量方向趋于原点。
+
+![六个 2 阶矩阵的相图：每条曲线是一条轨线 e^{tA}x_0，箭头指向 t 增大的方向，虚线是实特征向量所在的直线；下排中间与右侧的矩阵特征值相同（都是二重特征值 -1），区别只在 Jordan 块的结构](./plots/phase-portraits.py)
+
 **例 11.9.1** 求解
 
 $$

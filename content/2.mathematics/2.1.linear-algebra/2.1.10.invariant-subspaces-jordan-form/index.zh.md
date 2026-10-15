@@ -392,6 +392,10 @@ $k = d - 1$ 与 $k = d$ 两式相减，每个阶数 $\ge d$ 的块恰好贡献 $
 
 **例 10.9.1** $A = (\boldsymbol{0}, \boldsymbol{e}_1, \boldsymbol{0}, 2\boldsymbol{e}_2, \boldsymbol{0}, \boldsymbol{e}_3) \in \mathbb{C}^{6\times 6}$（按列写出），则 $A^2 = (\boldsymbol{0}, \boldsymbol{0}, \boldsymbol{0}, 2\boldsymbol{e}_1, \boldsymbol{0}, \boldsymbol{0})$，$A^3 = O$，$\operatorname{rank}(A) = 3$，$\operatorname{rank}(A^2) = 1$，$\operatorname{rank}(A^3) = 0$。阶数 $\ge 1, \ge 2, \ge 3$ 的块数分别为 $6 - 3 = 3$、$3 - 1 = 2$、$1 - 0 = 1$，所以 $J = \operatorname{diag}(J_{0,3}, J_{0,2}, J_{0,1})$。
 
+把每条 Jordan 链竖着画成一列、链底的特征向量放在最下面，就得到下图右侧的点图：第 $d$ 行的点数是阶数 $\ge d$ 的块数，也就是秩序列相邻两项之差。点图的各列长度给出 Jordan 形，各行长度给出秩序列，两者互相决定。
+
+![例 10.9.1 的幂零阵：左为秩序列 r_k = rank(A^k)，每一步下降的量等于阶数不小于 k 的 Jordan 块数；右为对应的三条 Jordan 链（阶数 3、2、1），箭头表示作用 A，第 d 行的点数等于 r_{d-1} - r_d](./plots/rank-sequence-dot-diagram.py)
+
 **例 10.9.2** $A = \begin{bmatrix} 1 & 2 & 2 & 0 & 0 \\ 2 & 1 & 2 & 0 & 0 \\ 2 & 2 & 1 & 0 & 0 \\ 0 & 0 & 0 & 5 & 0 \\ 0 & 0 & 0 & 2 & 5 \end{bmatrix}$，$\det(\lambda I_5 - A) = (\lambda + 1)^2(\lambda - 5)^3$。$\operatorname{rank}(A + I) = 3$，关于 $-1$ 有 $5 - 3 = 2$ 个块，而 $-1$ 的代数重数是 $2$，所以是两个 $1$ 阶块。$\operatorname{rank}(A - 5I) = 3$，关于 $5$ 也有 $2$ 个块，总阶数为 $3$，只能是 $2 + 1$。故 $J = \operatorname{diag}(-1, -1, J_{5,2}, 5)$。
 
 **例 10.9.3** 设 $n \ge 2$，求 $J_{0,n}^2$ 的 Jordan 形。$J_{0,n}^2$ 的特征值全为 $0$，$\operatorname{rank}(J_{0,n}^2) = n - 2$，所以有两个块。$J_{0,n}^k$ 在 $k \ge n$ 时为零。$n = 2m$ 时 $(J_{0,n}^2)^m = O \ne (J_{0,n}^2)^{m-1}$，极小多项式为 $x^m$，最大块阶数为 $m$，Jordan 形为 $\operatorname{diag}(J_{0,m}, J_{0,m})$；$n = 2m + 1$ 时极小多项式为 $x^{m+1}$，Jordan 形为 $\operatorname{diag}(J_{0,m+1}, J_{0,m})$。直观上，$J_{0,n}^2$ 把 $\boldsymbol{e}_n \mapsto \boldsymbol{e}_{n-2} \mapsto \cdots$ 与 $\boldsymbol{e}_{n-1} \mapsto \boldsymbol{e}_{n-3} \mapsto \cdots$ 分成奇偶两条链。
@@ -430,6 +434,10 @@ Jp[-1, 0] = eps                         # perturb a single entry by 1e-10
 print(np.abs(np.linalg.eigvals(J)).max())    # 0.0
 print(np.abs(np.linalg.eigvals(Jp)))         # all about eps**(1/n) = 0.1
 ```
+
+一般地，扰动 $J_{0,k}$ 的左下角元素为 $\varepsilon$ 时，特征多项式变为 $\lambda^k - \varepsilon$，特征值是 $\varepsilon$ 的 $k$ 个 $k$ 次方根，变化量为 $\varepsilon^{1/k}$，块越大越敏感；而对正规矩阵 $A$（[第 12 章](/2.1.12)），$A + E$ 的每个特征值与 $A$ 的某个特征值相距不超过 $\|E\|_2$（Bauer–Fike 定理）。
+
+![左：10 阶幂零 Jordan 块的左下角元素改为 ε 后，特征值从 0 跳到半径为 ε 的十次方根的圆上，三种 ε 分别对应半径 0.1、0.25、0.5；右：k 阶 Jordan 块的特征值变化量 ε^(1/k) 与正规矩阵的变化上界 ε 的比较（对数坐标）](./plots/jordan-perturbation.py)
 
 因此数值软件计算的是 Schur 形（[第 12 章](/2.1.12)的酉三角化），Jordan 形主要用于理论推导、精确计算和[下一章](/2.1.11)的矩阵函数。
 

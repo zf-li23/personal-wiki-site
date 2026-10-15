@@ -392,6 +392,10 @@ $$
 \boldsymbol{k}_0 + \mathcal{N}(A) = \{\boldsymbol{k}_0 + c_1\boldsymbol{k}_1 + \cdots + c_{n-r}\boldsymbol{k}_{n-r} \mid c_1, \dots, c_{n-r} \in \mathbb{R}\}.
 $$
 
+几何上，$A\boldsymbol{x} = \boldsymbol{b}$ 的解集是把过原点的子空间 $\mathcal{N}(A)$ 平移 $\boldsymbol{k}_0$ 得到的集合，与 $\mathcal{N}(A)$ 平行、维数相同，但不过原点。例如方程组 $x_1 + x_2 + x_3 = 1$，$x_1 - x_2 = 0$ 中 $\operatorname{rank}(A) = 2$，$\mathcal{N}(A) = \operatorname{span}([1\ 1\ {-2}]^{\mathsf T})$ 是 $\mathbb{R}^3$ 中过原点的直线，一个特解是 $\boldsymbol{k}_0 = [\frac12\ \frac12\ 0]^{\mathsf T}$：
+
+![方程组 x₁ + x₂ + x₃ = 1, x₁ − x₂ = 0 的解集：两个平面的交线 k₀ + N(A)（红）与零空间 N(A)（绿色虚线）平行，二者相差一个特解 k₀](./plots/solution-set-translate.py)
+
 第 1 章的判定定理（定理 1.7.2）可以用秩重新叙述：
 
 **定理 3.10.3（判定定理）** 对 $n$ 个未知量的线性方程组 $A\boldsymbol{x} = \boldsymbol{b}$：
@@ -450,6 +454,10 @@ $$
 | 左零空间 $\mathcal{N}(A^{\mathsf T})$ | $\mathbb{R}^m$ | $m - r$ | 对 $A^{\mathsf T}$ 求零空间，或记录消元中零行的组合系数 |
 
 对例 3.7.1 的 $4 \times 5$ 矩阵，四个子空间的维数依次是 $3, 2, 3, 1$，左零空间由 $[-\frac53\ \ 5\ \ {-\frac43}\ \ 1]^{\mathsf T}$ 生成（例 3.8.1 的零行）。[第 4 章](/2.1.4)将证明 $\mathcal{N}(A)$ 与 $\mathcal{R}(A^{\mathsf T})$、$\mathcal{N}(A^{\mathsf T})$ 与 $\mathcal{R}(A)$ 分别互为正交补，这是最小二乘法的几何基础。
+
+下图以秩为 $1$ 的矩阵 $A = \begin{bmatrix} 1 & 2 \\ 3 & 6 \end{bmatrix}$ 为例画出四个基本子空间。定义域中的 $\boldsymbol{x}$ 可以分解成行空间中的 $\boldsymbol{x}_r$ 与零空间中的 $\boldsymbol{x}_n$ 之和（[第 4 章](/2.1.4)），由于 $A\boldsymbol{x}_n = \boldsymbol{0}$，$A\boldsymbol{x} = A\boldsymbol{x}_r$ 落在列空间中；与 $\boldsymbol{x}$ 相差一个零空间向量的所有向量有相同的像，它们构成 $A\boldsymbol{x} = \boldsymbol{b}$ 的解集。
+
+![秩为 1 的矩阵 A（两行为 (1, 2) 与 (3, 6)）的四个基本子空间。左：定义域中的行空间与零空间，x = x_r + x_n，虚线是 Ax = b 的解集 x + N(A)；右：陪域中的列空间与左零空间，b = Ax 位于列空间中。图中两对子空间互相垂直，这将在第 4 章证明](./plots/four-subspaces.py)
 
 ## 小结
 

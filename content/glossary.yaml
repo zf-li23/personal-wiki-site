@@ -534,7 +534,7 @@ terms:
   - { zh: 列空间, en: column space }
   - { zh: 零空间, en: null space, aliases: [nullspace, 解空间] }
   - { zh: 子空间, en: subspace, aliases: [线性子空间, linear subspace] }
-  - { zh: 线性生成, en: span, aliases: [张成, linear span] }
+  - { zh: 线性生成, en: span, aliases: [张成, linear span, spanned] }
   - { zh: 线性相关, en: linear dependence, aliases: [linearly dependent] }
   - { zh: 线性无关, en: linear independence, aliases: [linearly independent] }
   - { zh: 基, en: basis }
@@ -544,7 +544,7 @@ terms:
   - { zh: 秩, en: rank, aliases: [矩阵的秩, 向量组的秩] }
   - { zh: 行空间, en: row space }
   - { zh: 左零空间, en: left null space }
-  - { zh: 满秩, en: full rank, aliases: [列满秩, 行满秩] }
+  - { zh: 满秩, en: full rank, aliases: [列满秩, 行满秩, full column rank, full row rank] }
   - { zh: 相抵, en: matrix equivalence, aliases: [矩阵相抵] }
   - { zh: 相抵标准形, en: rank normal form }
   - { zh: 秩–零化度定理, en: rank–nullity theorem }
@@ -584,7 +584,7 @@ terms:
   - { zh: Jordan 标准形, en: Jordan canonical form, aliases: [若当标准形, 若尔当标准形, Jordan normal form] }
   - { zh: 同时对角化, en: simultaneous diagonalization }
   - { zh: 谱分解, en: spectral decomposition }
-  - { zh: 正交相似, en: orthogonal similarity }
+  - { zh: 正交相似, en: orthogonal similarity, aliases: [orthogonally similar] }
   - { zh: 二次型, en: quadratic form }
   - { zh: Hesse 矩阵, en: Hessian matrix, aliases: [黑塞矩阵, Hessian] }
   - { zh: Rayleigh 商, en: Rayleigh quotient, aliases: [瑞利商] }
@@ -595,7 +595,7 @@ terms:
   - { zh: 顺序主子式, en: leading principal minor }
   - { zh: 合同, en: congruence of matrices, aliases: [矩阵合同, congruent matrices] }
   - { zh: Sylvester 惯性定律, en: "Sylvester's law of inertia", aliases: [惯性定律, 惯性定理] }
-  - { zh: 惯性指数, en: inertia, aliases: [正惯性指数, 负惯性指数] }
+  - { zh: 惯性指数, en: inertia, aliases: [正惯性指数, 负惯性指数, positive index of inertia, negative index of inertia] }
   - { zh: 奇异值, en: singular value }
   - { zh: 奇异值分解, en: singular value decomposition, aliases: [SVD] }
   - { zh: Moore–Penrose 广义逆, en: Moore–Penrose pseudoinverse, aliases: [广义逆, 伪逆, pseudoinverse] }
@@ -657,7 +657,7 @@ terms:
   - { zh: Wronski 矩阵, en: Wronskian matrix, aliases: [朗斯基矩阵] }
   - { zh: 矩阵级数, en: matrix series }
   - { zh: 谱半径, en: spectral radius }
-  - { zh: 矩阵的谱, en: spectrum of a matrix, aliases: [谱] }
+  - { zh: 矩阵的谱, en: spectrum of a matrix, aliases: [谱, spectrum] }
   - { zh: 矩阵函数, en: matrix function }
   - { zh: Hermite 插值多项式, en: Hermite interpolation polynomial }
   - { zh: 内积空间, en: inner product space }
@@ -708,11 +708,15 @@ terms:
   - { zh: 条件数, en: condition number }
   - { zh: Frobenius 范数, en: Frobenius norm }
   - { zh: Eckart–Young 定理, en: Eckart–Young theorem }
-  - { zh: 整除, en: divisibility, scope: ["2"] }
-  - { zh: 复数的模, en: modulus of a complex number, aliases: [模], scope: ["2"] }
+  - { zh: 整除, en: divisibility, aliases: [divides], scope: ["2"] }
+  - { zh: 复数的模, en: modulus of a complex number, aliases: [模, modulus], scope: ["2"] }
   - { zh: 常数变易公式, en: variation of constants formula, aliases: [常数变易法, variation of parameters] }
   - { zh: Legendre 多项式, en: Legendre polynomials, aliases: [勒让德多项式] }
   - { zh: Lorentz 群, en: Lorentz group }
+  - { zh: 主列, en: pivot column, scope: ["2"] }
+  - { zh: 特解, en: particular solution }
+  - { zh: 数值域, en: numerical range, aliases: [field of values] }
+  - { zh: Runge 现象, en: Runge phenomenon, aliases: [龙格现象, "Runge's phenomenon"] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数

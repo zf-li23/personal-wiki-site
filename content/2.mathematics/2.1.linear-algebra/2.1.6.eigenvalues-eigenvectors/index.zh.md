@@ -153,6 +153,10 @@ $$
 2. **三角矩阵**的特征值就是对角元（$\lambda I_n - T$ 仍是三角矩阵）。但特征向量的个数可以不同：$\begin{bmatrix} 1 & 1 \\ 0 & 2 \end{bmatrix}$ 有特征值 $1, 2$，特征向量 $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$、$\begin{bmatrix} 1 \\ 1 \end{bmatrix}$，两个一维特征子空间；$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ 只有特征值 $1$，只有一个线性无关的特征向量 $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$。
 3. 旋转 $R_\theta$：$\theta = k\pi$ 时特征值为 $(-1)^k$，特征子空间是整个 $\mathbb{C}^2$；$\theta \ne k\pi$ 时有两个复特征值 $\cos\theta \pm \mathrm{i}\sin\theta$，对应的特征向量为 $\begin{bmatrix} 1 \\ \mp\mathrm{i} \end{bmatrix}$。
 
+下图左边的实矩阵有特征值 $2.5$ 和 $1$：单位圆变成椭圆，一般的向量 $\boldsymbol{x}$ 被变换后方向改变，只有两条特征方向上的向量只被伸缩。右边的 $0.9R_{\pi/6}$ 有一对共轭复特征值 $0.9\,\mathrm{e}^{\pm\mathrm{i}\pi/6}$，每个向量都被转过 $\pi/6$ 并缩短为 $0.9$ 倍，没有实的不变方向，迭代 $B^t\boldsymbol{x}_0$ 沿螺线收缩到原点：复特征值的辐角是转角，模是伸缩倍数。
+
+![左：A = [2 1; 0.5 1.5] 把单位圆变成椭圆，灰色箭头从 x 指向 Ax，只有两条特征方向上的向量保持方向；右：B = 0.9 R_{π/6} 把每个向量旋转并缩短，没有实特征向量，轨道 B^t x_0 是收缩的螺线](./plots/eigen-directions.py)
+
 ## 6.4. 特征值的性质
 
 ### 6.4.1. 圆盘定理
@@ -391,6 +395,10 @@ phi, psi = (1 + 5**0.5) / 2, (1 - 5**0.5) / 2
 print([round((phi**n - psi**n) / 5**0.5) for n in range(1, 11)])
 # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 ```
+
+下图画出例 6.1.1 中不同初始分布的迭代 $A^t\boldsymbol{x}$。每一步属于特征值 $0.5$ 的分量减半，所以迭代点沿 $\boldsymbol{x}_2 = (1, -1)$ 方向（总人口不变）移向特征直线 $\operatorname{span}(\boldsymbol{x}_1)$；与极限的距离按 $0.5^t$ 衰减。
+
+![例 6.1.1 的人口迁移：左图中各初始分布的迭代点沿 x2 方向收敛到特征直线 span(x1)；右图中与极限的距离按第二个特征值的幂 0.5^t 衰减](./plots/migration-iteration.py)
 
 ## 6.8. 相似
 

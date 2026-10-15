@@ -104,6 +104,8 @@ function nameKeys(text: string, lang: Lang): string[] {
   const l = t.toLowerCase();
   const keys = [l];
   if (l.endsWith('ies')) keys.push(`${l.slice(0, -3)}y`);
+  if (l.endsWith('ices')) keys.push(`${l.slice(0, -4)}ix`, `${l.slice(0, -4)}ex`); // matrices, vertices
+  if (l.endsWith('ses')) keys.push(`${l.slice(0, -2)}is`); // bases, hypotheses
   if (/(s|x|z|ch|sh)es$/.test(l)) keys.push(l.slice(0, -2));
   if (l.endsWith('s') && !l.endsWith('ss')) keys.push(l.slice(0, -1));
   return keys;

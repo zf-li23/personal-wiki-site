@@ -16,6 +16,7 @@ import path from 'node:path';
 import { LANGUAGES, type Lang } from '../../site.config.ts';
 import type { ConceptEntry, NavNode, PagePayload, SearchEntry, SiteData, TranslationStatus } from '../../src/shared/types.ts';
 import { Diagnostics } from './diagnostics.ts';
+import { acquireBuildLock } from './lock.ts';
 import { loadConcepts } from './glossary.ts';
 import { type LinkResult, buildLinkIndex, linkPage } from './linking.ts';
 import { type RenderOutput, emptyRender, renderHtml, renderMarkdown } from './markdown.ts';
@@ -64,6 +65,15 @@ function titleOf(page: PageSource, lang: Lang): string {
 }
 
 export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult> {
+  const release = acquireBuildLock(opts.log ?? console.log);
+  try {
+    return await buildContentLocked(opts);
+  } finally {
+    release();
+  }
+}
+
+async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
   const log = opts.log ?? (() => {});
   const diag = new Diagnostics();
   const tree = scanContent(diag);

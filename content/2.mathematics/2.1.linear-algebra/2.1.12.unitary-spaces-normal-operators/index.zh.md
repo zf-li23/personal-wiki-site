@@ -121,6 +121,8 @@ $$
 2. 若 $A^{\mathsf H} = A$，则 $\mathrm{e}^{\mathrm{i}A}$ 是酉矩阵：由幂级数定义 $(\mathrm{e}^{\mathrm{i}A})^{\mathsf H} = \mathrm{e}^{(\mathrm{i}A)^{\mathsf H}} = \mathrm{e}^{-\mathrm{i}A}$，而 $\mathrm{i}A$ 与 $-\mathrm{i}A$ 可交换，$\mathrm{e}^{-\mathrm{i}A}\mathrm{e}^{\mathrm{i}A} = \mathrm{e}^O = I$（[第 11 章](/2.1.11)定理 11.8.1）。这是 $|\mathrm{e}^{\mathrm{i}\theta}| = 1$（$\theta$ 实）的矩阵版本。
 3. 例 12.3.1 的三个向量作为列，得到酉矩阵 $F_3 = \frac{1}{\sqrt3}(\omega^{jk})_{j,k=0,1,2}$。一般地 $F_n = \frac{1}{\sqrt n}(\omega_n^{jk})$（$\omega_n = \mathrm{e}^{2\pi \mathrm{i}/n}$）是离散 Fourier 变换的矩阵。直接计算 $F_n\boldsymbol{x}$ 需要 $n^2$ 次乘法，快速 Fourier 变换利用 $F_n$ 的分块结构把代价降到 $O(n\log n)$。
 
+![16 阶酉矩阵 F_16 的四列：第 k 列的实部与虚部是频率为 k 的余弦与正弦在 16 个等距点上的取值（细线为对应的连续函数），这些列构成 C^16 的标准正交基](./plots/dft-basis.py)
+
 ## 12.4. Gram–Schmidt 正交化
 
 **算法 12.4.1（Gram–Schmidt 正交化）** 输入内积空间 $V$ 中线性无关的 $v_1, \dots, v_k$。
@@ -341,6 +343,10 @@ $$
 **推论 12.10.3** 既正规又幂零的矩阵是零矩阵：它酉相似于对角阵，而对角元（特征值）全为零。
 
 **例 12.10.1** 2 阶实正规矩阵。设 $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathbb{R}^{2\times 2}$，比较 $AA^{\mathsf T}$ 与 $A^{\mathsf T}A$ 得 $b^2 = c^2$ 与 $(c - b)(a - d) = 0$，所以 $A$ 正规当且仅当 $A$ 对称（$b = c$），或 $A = \begin{bmatrix} a & b \\ -b & a \end{bmatrix}$（$b \ne 0$）。后者是复数 $a - b\mathrm{i}$ 的矩阵表示（[第 9 章](/2.1.9)），特征值 $a \pm b\mathrm{i}$，对应的特征向量 $\frac{1}{\sqrt2}(1, \pm \mathrm{i})^{\mathsf T}$ 正交，$U = \frac{1}{\sqrt2}\begin{bmatrix} 1 & 1 \\ \mathrm{i} & -\mathrm{i} \end{bmatrix}$ 是酉矩阵，$U^{\mathsf H}AU = \operatorname{diag}(a + b\mathrm{i}, a - b\mathrm{i})$。它在 $\mathbb{R}^2$ 中没有实特征向量，不能正交对角化，但可以酉对角化。
+
+正规与非正规的差别也可以从数值域（numerical range）$W(A) = \{\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} \mid \|\boldsymbol{x}\| = 1\}$ 看出。它总包含全部特征值（取 $\boldsymbol{x}$ 为单位特征向量），并且是凸集（Toeplitz–Hausdorff 定理）。若 $A = U\Lambda U^{\mathsf H}$ 正规，令 $\boldsymbol{y} = U^{\mathsf H}\boldsymbol{x}$，则 $\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} = \sum_i \lambda_i|y_i|^2$，$\sum_i |y_i|^2 = 1$，所以 $W(A)$ 恰好是特征值的凸包；非正规矩阵的数值域可以大得多。[第 11 章](/2.1.11)中非正规矩阵的幂先增长后衰减，也是同一现象。
+
+![两个特征值相同（1、-0.5+i、-0.8-0.6i）的 3 阶矩阵的数值域：左为正规矩阵，数值域就是特征值构成的三角形；右为上三角的非正规矩阵，数值域远大于三角形；散点是随机单位向量 x 给出的 x^H A x](./plots/numerical-range.py)
 
 正规矩阵酉对角化的计算是两个标准问题的组合：
 

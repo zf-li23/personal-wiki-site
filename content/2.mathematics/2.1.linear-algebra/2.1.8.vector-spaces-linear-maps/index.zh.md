@@ -249,7 +249,9 @@ $$
 a=(e_1,\dots,e_n)\boldsymbol{x}=(t_1,\dots,t_n)\boldsymbol{y}=(e_1,\dots,e_n)(T\boldsymbol{y}),
 $$
 
-由坐标的唯一性得坐标变换公式 $\boldsymbol{x}=T\boldsymbol{y}$，$\boldsymbol{y}=T^{-1}\boldsymbol{x}$。注意方向：基按 $T$ 变化，坐标按 $T^{-1}$ 变化。
+由坐标的唯一性得坐标变换公式 $\boldsymbol{x}=T\boldsymbol{y}$，$\boldsymbol{y}=T^{-1}\boldsymbol{x}$。注意方向：基按 $T$ 变化，坐标按 $T^{-1}$ 变化。例如在 $\mathbb{R}^2$ 中取 $\boldsymbol{t}_1=2\boldsymbol{e}_1+\boldsymbol{e}_2$，$\boldsymbol{t}_2=\boldsymbol{e}_1+2\boldsymbol{e}_2$，即 $T=\begin{bmatrix}2&1\\1&2\end{bmatrix}$；向量 $\boldsymbol{a}=[4\ 5]^{\mathsf T}$ 在新基下的坐标是 $\boldsymbol{y}=T^{-1}\boldsymbol{a}=[1\ 2]^{\mathsf T}$，即 $\boldsymbol{a}=\boldsymbol{t}_1+2\boldsymbol{t}_2$。
+
+![同一个向量 a 在两组基下的坐标：左边标准基下为 (4, 5)，右边基 t_1, t_2 下为 (1, 2)；网格线是各自坐标系的坐标线，虚线是 a 沿基向量的分解](./plots/change-of-basis-coordinates.py)
 
 **命题 8.5.2** 设 $e_1,\dots,e_n$ 是 $V$ 的基，$T\in \mathbb{F}^{n\times n}$，$(t_1,\dots,t_n)=(e_1,\dots,e_n)T$，则 $t_1,\dots,t_n$ 是 $V$ 的基，当且仅当 $T$ 可逆。
 
@@ -278,6 +280,10 @@ T=\begin{bmatrix}1&-x_0&x_0^2&\cdots&(-x_0)^{n-1}\\&1&-2x_0&\cdots&(n-1)(-x_0)^{
 $$
 
 其 $(i,k)$ 元（从 $0$ 编号）为 $\binom ki(-x_0)^{k-i}$，且 $[a_0\ \cdots\ a_{n-1}]^{\mathsf T}=T\tilde{\boldsymbol{f}}$。
+
+同一个空间的不同的基各有所长。下图画出 $\mathbb{R}[x]_4$ 的三组基：单项式基最便于运算，但在 $[0,1]$ 上 $x^2$ 与 $x^3$ 的图像相差不大，用它表示函数时系数对误差很敏感（相应的 Vandermonde 矩阵病态）；平移后的基 $(x-x_0)^k$ 下的坐标是 $f$ 在 $x_0$ 处的 Taylor 系数（例 8.5.2）；以 $0,\frac13,\frac23,1$ 为节点的 Lagrange 基 $L_0,\dots,L_3$ 满足 $L_i(a_j)=\delta_{ij}$，多项式在这组基下的坐标就是它在四个节点处的值（定理 9.4.2）。
+
+![R[x]_4 的三组基在 [0, 1] 上的图像：单项式基 1, x, x^2, x^3；平移基 (x − 1/2)^k；以 0, 1/3, 2/3, 1 为节点的 Lagrange 基，L_i 在第 i 个节点取 1（空心点）、在其余节点取 0（实心点）](./plots/polynomial-bases.py)
 
 ## 8.6. 线性映射的矩阵表示
 

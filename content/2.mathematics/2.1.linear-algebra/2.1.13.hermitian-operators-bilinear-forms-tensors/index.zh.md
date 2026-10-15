@@ -181,6 +181,8 @@ print(np.allclose(U, U2), np.allclose(P, P2))    # True True
 print(np.allclose(U.conj().T @ U, np.eye(4)))    # True
 ```
 
+![2 阶实矩阵 A = UP 的极分解：P 先沿它的两个正交特征向量 v_1、v_2 分别伸缩 σ_1、σ_2 倍，把单位圆变成椭圆，U 再把椭圆整体旋转，得到 A 对单位圆的像；绿色折线标示同一图形在两步中的变化](./plots/polar-decomposition.py)
+
 奇异值分解与极分解的应用很广，这里只列几类。低秩逼近：截断 $A = \sum\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf H}$ 的前 $k$ 项是谱范数与 Frobenius 范数下最好的秩 $k$ 逼近（Eckart–Young 定理，定理 7.6.2），这是数据压缩与主成分分析的基础——中心化数据矩阵的右奇异向量就是主方向。最小二乘与广义逆：$A^+ = V\Sigma^+U^{\mathsf H}$ 给出长度最小的最小二乘解；$\sigma_1 / \sigma_r$ 衡量问题的病态程度，很小的奇异值说明矩阵"数值上"秩亏。极分解：$U$ 是在 Frobenius 范数下离 $A$ 最近的酉矩阵，用于把有误差的旋转矩阵"正交化"（正交 Procrustes 问题）；连续介质力学把形变梯度分解为旋转与伸缩，也是这个分解。量子信息中，两体纯态的 Schmidt 分解就是其系数矩阵的奇异值分解。
 
 ## 13.6. 双线性型
@@ -259,6 +261,8 @@ $$
 直接计算 $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$，除以 $E_0^2$ 得 $x'^2 - c^2t'^2 = x^2 - c^2t^2$，所以 $g(T\alpha, T\alpha) = g(\alpha, \alpha)$；由对称双线性型的极化，$g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$。$T$ 是 Lorentz 变换，Lorentz 型的等距群 $O(3, 1)$ 称为 Lorentz 群（Lorentz group）。
 
 **例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
+
+![平面上三种双线性型的等距变换：左，旋转保持 x^2 + y^2，点沿圆周移动；中，Lorentz 变换（取 c = 1）保持 x^2 - t^2，点沿双曲线移动，光锥 x = ±t 不变；右，行列式为 1 的矩阵保持有向面积，单位圆盘经剪切与压缩后面积仍为 π](./plots/isometry-groups.py)
 
 在等距群中取单参数子群 $\mathrm{e}^{tX}$ 并在 $t = 0$ 处求导，条件 $M^{\mathsf T}GM = G$ 变成 $X^{\mathsf T}G + GX = O$。$G = I$ 时得到反对称矩阵 $\mathfrak{so}(n)$，$G$ 为辛矩阵时得到 $\mathfrak{sp}(2m)$，它们都是 [1.3.5](/1.3.5) 中的**典型李代数**。
 

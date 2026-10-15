@@ -141,6 +141,10 @@ $$
 | 倍乘矩阵 $E_{11;k}$ | $(x_1, x_2) \mapsto (kx_1, x_2)$ | 沿 $x_1$ 方向伸缩 | $k$ | 一行乘以 $k$：行列式乘以 $k$ |
 | 倍加矩阵 $E_{21;k}$ | $(x_1, x_2) \mapsto (x_1, kx_1 + x_2)$ | 错切（等底等高） | $1$ | 一行的倍数加到另一行：不变 |
 
+下图画出单位正方形及其中的字母 F 在几个变换下的像：像的面积等于 $|\det A|$；对换（反射）把 F 变成镜像，对应 $\det A < 0$。
+
+![单位正方形在错切、伸缩、对换和一般线性变换下的像：平行四边形的面积是 |det A|，det A 为负时字母 F 被翻成镜像（定向改变）](./plots/determinant-area.py)
+
 一般地，$n$ 阶对换矩阵 $P_{ij} = I_n - (\boldsymbol{e}_i - \boldsymbol{e}_j)(\boldsymbol{e}_i - \boldsymbol{e}_j)^{\mathsf T} = I_n - 2\boldsymbol{v}\boldsymbol{v}^{\mathsf T}$，$\boldsymbol{v} = (\boldsymbol{e}_i - \boldsymbol{e}_j)/\sqrt{2}$，是一个 **Householder 变换**。
 
 ### 5.3.2. 唯一性
@@ -185,6 +189,8 @@ $$
 函数 $X \mapsto \det\begin{bmatrix} X & O \\ O & I \end{bmatrix}$ 满足定义 5.1.1 的三条公理，故等于 $\det X$；在第二个因子中，用前面的列做倍加列变换可消去 $A^{-1}C$ 而不改变行列式，再用同样的论证得 $\det\begin{bmatrix} I & O \\ O & B \end{bmatrix} = \det B$。
 
 由第 3 条与 QR 分解可以得到行列式的一个直观解释：设 $A = QR$（第 4 章），则 $\det A = \det Q\det R$，其中 $\det Q = \pm 1$ 表示有向体积的符号，$\det R = \prod_i r_{ii} = \prod_i \|\tilde{\boldsymbol{q}}_i\| \ge 0$ 是体积的大小。$\|\tilde{\boldsymbol{q}}_i\|$ 是 $\boldsymbol{a}_i$ 到前 $i-1$ 个棱张成的子空间的距离，即平行体逐层的"高"，所以 $|\det A|$ 就是"底面积乘高"的 $n$ 维推广。
+
+![二阶情形：以 a1, a2 为邻边的平行四边形与以 a1 为底、Gram–Schmidt 得到的 q2 为高的矩形面积相等，都是 |det A| = ||a1|| · ||q2||](./plots/base-times-height.py)
 
 ### 5.4.2. 用消元计算行列式
 

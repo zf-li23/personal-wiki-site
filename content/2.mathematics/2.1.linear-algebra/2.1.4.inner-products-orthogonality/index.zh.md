@@ -500,6 +500,10 @@ $$
 
 回代得 $x_2 = 7/5$，$x_1 = 11/6 - 7/5 = 13/30$，与正规方程法一致。最小残量为 $\boldsymbol{r} = \boldsymbol{b} - A\boldsymbol{x} = \frac{11}{30}\begin{bmatrix} -5 \\ 2 \\ 1 \end{bmatrix}$，它与 $\boldsymbol{a}_1, \boldsymbol{a}_2$ 都正交。
 
+下图把例 4.1.1 与本例并排画出：向直线投影与向列空间投影是同一件事，最小二乘解给出的 $A\boldsymbol{x}_0$ 就是 $\boldsymbol{b}$ 在平面 $\mathcal{R}(A)$ 上的垂足，残量垂直于整个平面。
+
+![左：例 4.1.1 中 b 向直线 span(a) 的正交投影，残量 r 与 a 垂直；右：例 4.5.1 中 b 向列空间 R(A) 的正交投影 P_A b = A x_0，残量 r 与平面 R(A) 垂直](./plots/projection-geometry.py)
+
 ### 4.5.3. 数据拟合
 
 最小二乘法的一个重要应用是数据拟合。设变量 $y$ 与 $t$ 之间存在某种规律 $y = f(t)$，但函数形式未知；通过测量得到数据点 $(t_1, y_1), \dots, (t_m, y_m)$。假定 $f$ 是已知的简单函数 $f_1, \dots, f_n$ 的线性组合：

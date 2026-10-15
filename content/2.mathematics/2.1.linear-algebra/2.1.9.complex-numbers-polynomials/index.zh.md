@@ -96,6 +96,10 @@ $$
 - $\bar\omega_k=\omega_{n-k}$（$\omega_k$ 的模为 $1$，故 $\bar\omega_k=\omega_k^{-1}$）；
 - $n\ge2$ 时 $1+\omega+\omega^2+\cdots+\omega^{n-1}=0$：由 $\omega\neq1$，等比数列求和得 $\frac{1-\omega^n}{1-\omega}=0$；几何上，正多边形的顶点向量之和为零。
 
+下图左边演示乘法的几何意义：乘以 $w=1.3\,\mathrm{e}^{\mathrm{i}\pi/6}$ 把整个平面绕原点旋转 $30^\circ$ 并放大 $1.3$ 倍，图形的形状不变；右边是 $8$ 次单位根，它们是正八边形的顶点，首尾相接地依次相加回到原点。
+
+![左：把图形 S 依次乘以 w = 1.3 e^{iπ/6}，每次旋转 30° 并放大 1.3 倍；右：8 次单位根 ω^k 构成单位圆的内接正八边形，部分和 1 + ω + ⋯ + ω^k 构成的折线（缩小 0.35 倍显示）回到原点](./plots/complex-multiplication-roots-of-unity.py)
+
 ## 9.2. 复矩阵与复向量空间
 
 复矩阵 $A=[a_{ij}]\in\mathbb{C}^{m\times n}$ 的共轭是 $\bar A=[\bar a_{ij}]$。把元素的实部、虚部分开，$A=U+\mathrm{i}V$（$U,V$ 是实矩阵），则 $\bar A=U-\mathrm{i}V$；$A$ 是实矩阵当且仅当 $\bar A=A$；由 $\overline{z_1z_2}=\bar z_1\bar z_2$ 得 $\overline{AB}=\bar A\bar B$。例如
@@ -289,6 +293,10 @@ $$
 **证明** $L_i$ 的分子在 $a_j$（$j\neq i$）处为零，在 $a_i$ 处等于分母，所以 $L_i(a_j)=\delta_{ij}$，$L(a_j)=\sum_ib_i\delta_{ij}=b_j$；$\deg L\le n$。唯一性见上。$\square$
 
 $L_0,\dots,L_n$ 是 $\mathbb{F}[x]_{n+1}$ 的一组基，$L$ 在这组基下的坐标就是 $(b_0,\dots,b_n)$；而且 $L_0,\dots,L_n$ 恰是第 8 章取值映射 $p\mapsto(p(a_0),\dots,p(a_n))$ 下标准基 $\boldsymbol{e}_i$ 的原像。用余数的语言，插值问题是求次数 $\le n$ 的 $L$，使 $L$ 除以 $x-a_i$ 的余式为 $b_i$（$i=0,\dots,n$），这是多项式的中国剩余定理的特例。[第 11 章](/2.1.11) 还要求导数值也吻合，得到 Hermite 插值，用于计算矩阵函数。
+
+插值多项式虽然唯一，但用它近似函数的效果取决于节点的选取。对 $f(x)=\frac1{1+25x^2}$ 在 $[-1,1]$ 上用等距节点插值，次数越高，区间两端的振荡反而越剧烈，插值多项式不收敛于 $f$，这称为 Runge 现象（Runge Phenomenon）；改用 Chebyshev 节点 $\cos\frac{(2k+1)\pi}{2n+2}$（$k=0,\dots,n$），节点向两端加密，插值多项式就一致收敛于 $f$。
+
+![Runge 函数 1/(1+25x^2) 的 Lagrange 插值：左边用等距节点，次数升高时端点附近的振荡越来越大；右边用 Chebyshev 节点，插值多项式随次数升高收敛于原函数](./plots/lagrange-runge.py)
 
 **例 9.4.3** 求首一二次多项式 $f$，使 $f$ 除以 $x-1$ 余 $1$，除以 $x-2$ 余 $2$。由余数定理 $f(1)=1$，$f(2)=2$，所以 $f(x)-x$ 是以 $1,2$ 为根的首一二次多项式：$f=x+(x-1)(x-2)=x^2-2x+2$。
 
