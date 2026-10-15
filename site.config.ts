@@ -13,8 +13,8 @@ export const siteConfig = {
   repoUrl: 'https://github.com/zf-li23/personal-wiki-site',
   /** Default source language of a page (used when it is not evident which file is the source, see scan.ts `sourceLangOf`). */
   sourceLanguage: 'zh' as Lang,
-  /** Language used when the visitor has no stored preference and the browser language is unknown. */
-  defaultLanguage: 'zh' as Lang,
+  /** Language of the home page and of every entry point until the visitor picks one (then remembered). */
+  defaultLanguage: 'en' as Lang,
   title: { zh: '个人知识库', en: 'Personal Wiki' } satisfies Record<Lang, string>,
   description: {
     zh: '本科阶段的数学、统计、计算机与生物学知识库。',

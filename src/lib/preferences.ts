@@ -35,13 +35,10 @@ export function storeTheme(theme: Theme) {
   write(KEYS.theme, theme);
 }
 
-/** Stored choice, else the browser language (Chinese -> zh, anything else -> en). */
+/** The visitor's stored choice, else the site default (English), whatever the browser language. */
 export function preferredLang(): Lang {
   const stored = read(KEYS.lang);
-  if (isLang(stored)) return stored;
-  const nav = typeof navigator !== 'undefined' ? navigator.languages?.[0] ?? navigator.language : '';
-  if (!nav) return siteConfig.defaultLanguage;
-  return nav.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+  return isLang(stored) ? stored : siteConfig.defaultLanguage;
 }
 
 export function storeLang(lang: Lang) {

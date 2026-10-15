@@ -1,9 +1,10 @@
+import { ArrowLeft } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { useConcepts } from '../content/concepts.ts';
 import { findNode } from '../content/site.ts';
 import { useLang, useStrings } from '../i18n.ts';
-import { pagePath } from '../shared/page-id.ts';
+import { homePath, pagePath } from '../shared/page-id.ts';
 
 /** The book's index: every concept with its definition site, sorted by pinyin (zh) or alphabetically (en). */
 export function ConceptsPage() {
@@ -11,6 +12,9 @@ export function ConceptsPage() {
   const t = useStrings();
   const concepts = useConcepts();
   const [filter, setFilter] = useState('');
+  const navigate = useNavigate();
+  // "default" means this page was the entry point: there is no in-app page to go back to.
+  const canGoBack = useLocation().key !== 'default';
 
   useEffect(() => {
     document.title = `${t.concepts} · ${t.siteTitle}`;
@@ -27,6 +31,13 @@ export function ConceptsPage() {
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
+      <button
+        type="button"
+        onClick={() => (canGoBack ? navigate(-1) : navigate(homePath(lang)))}
+        className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
+      >
+        <ArrowLeft size={14} /> {canGoBack ? t.back : t.backHome}
+      </button>
       <h1 className="text-3xl font-bold tracking-tight">{t.concepts}</h1>
       <p className="mt-3 text-muted-foreground">{t.conceptsIntro}</p>
       <input
