@@ -375,6 +375,18 @@ describe('cross-page linking', () => {
     assert.equal(s.index.conceptSites.get('group')?.anchor, 'def-2.2.1');
     assert.equal((s.html('1.3.3').match(/class="concept-ref"/g) ?? []).length, 1);
   });
+  it('takes a bold concept name inside a 定义 as its definition site, and reports other bold text', async () => {
+    const s = await site({
+      '1.1.1': '## 1.1. 联结词\n\n**定义 1.1.1** 称 $P \\land Q$ 为**依分布收敛**，其中 $P$ 为**前件**。\n\n**证明** 这是**重要的一点**。',
+      '1.1.2': '## 2.1. A\n\n由**依分布收敛**可知。',
+    });
+    assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'def-1.1.1');
+    assert.match(s.html('1.1.2'), /href="[^"]*1\.1\.1\/#def-1\.1\.1" class="concept-ref"/);
+    assert.deepEqual(s.results.get('1.1.1')!.plainBold, [
+      { text: '前件', inDefinition: true },
+      { text: '重要的一点', inDefinition: false },
+    ]);
+  });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
     const s = await site({ '1.2.3': '## 3.1. A\n\n**特征函数**', '3.1.11': '## 11.1. B\n\n**特征函数**' });

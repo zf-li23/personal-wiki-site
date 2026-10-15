@@ -40,6 +40,8 @@ export interface BuildResult {
   concepts: ConceptEntry[];
   /** Concepts mentioned on a page that comes before their definition in reading order. */
   forwardUses: { pageId: string; conceptId: string }[];
+  /** Per `${lang}/${pageId}` (own-language renders only): bold runs that are neither a concept nor a label. */
+  plainBold: Map<string, LinkResult['plainBold']>;
 }
 
 const SOURCE = siteConfig.sourceLanguage;
@@ -187,7 +189,8 @@ export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult
   }
 
   if (!opts.dryRun) writeOutputs(tree, plots, site, payloads, rendered, conceptEntries);
-  return { diag, tree, site, payloads, concepts: conceptEntries, forwardUses };
+  const plainBold = new Map([...links].filter(([key]) => rendered.get(key)!.contentLang === key.split('/')[0]).map(([key, r]) => [key, r.plainBold]));
+  return { diag, tree, site, payloads, concepts: conceptEntries, forwardUses, plainBold };
 }
 
 /** A diagnostic belongs to a page if it is in the page's own files (not in a child page's directory). */

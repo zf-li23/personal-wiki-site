@@ -6,6 +6,7 @@
  *     Numbers are course-scoped: references are only resolved within the same course.
  *  2. Concept definition sites (registry in glossary.ts), found in the source-language pages:
  *       - a 定义 statement whose name is the concept:  **定义 13.1.1（依分布收敛）**
+ *       - a bold concept name inside a 定义 statement:  **定义 1.1.1** 称 ……为**合取**
  *       - an annotated occurrence:  依分布收敛（convergence in distribution）
  *     A concept may be defined on one page only.
  *  3. Concept links: a bold run whose whole text is a concept name (**群**, **依分布收敛**)
@@ -20,7 +21,7 @@ import { BASE_PATH, type Lang } from '../../site.config.ts';
 import type { Diagnostics } from './diagnostics.ts';
 import { type Concept, inScope } from './glossary.ts';
 import type { RenderOutput } from './markdown.ts';
-import { REFERENCE_RE, courseOf, kindOfWord } from './numbering.ts';
+import { REFERENCE_RE, courseOf, kindOfWord, parseStatementLabel } from './numbering.ts';
 import type { ContentTree } from './scan.ts';
 
 export interface Target {
@@ -43,6 +44,8 @@ export interface LinkResult {
   concepts: Set<string>;
   /** Concepts mentioned here before they are defined (in reading order). */
   forwardUses: string[];
+  /** Bold runs that are neither a concept name nor a statement label (for `pnpm wiki terms --bold`). */
+  plainBold: { text: string; inDefinition: boolean }[];
 }
 
 const SKIP_TAGS = new Set(['a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code', 'pre', 'script', 'style', 'dfn', 'svg']);
@@ -121,6 +124,11 @@ export function buildLinkIndex(
       const concept = named && inScope(named, pageId) ? named : undefined;
       if (concept) add(concept.id, { pageId, anchor: s.anchor, file });
     }
+    // A bold concept name inside a 定义 statement is the term being defined there.
+    eachStrong(out.hast, (strong, _parent, _i, def) => {
+      const named = def ? byZhName.get(hastToString(strong).trim()) : undefined;
+      if (named && def && inScope(named, pageId)) add(named.id, { pageId, anchor: def, file });
+    });
     for (const concept of concepts) {
       if (!inScope(concept, pageId)) continue;
       const anchor = markAnnotatedDefinition(out.hast, concept);
@@ -214,7 +222,7 @@ export interface LinkPageInput {
 }
 
 export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, diag, file }: LinkPageInput): LinkResult {
-  const result: LinkResult = { targets: new Set(out.links.map((l) => l.targetId)), concepts: new Set(), forwardUses: [] };
+  const result: LinkResult = { targets: new Set(out.links.map((l) => l.targetId)), concepts: new Set(), forwardUses: [], plainBold: [] };
   const course = courseOf(pageId);
   const lang = out.contentLang;
 
@@ -259,10 +267,13 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
     if (!inScope(c, pageId)) continue;
     for (const n of conceptNames(c, lang)) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
   }
-  eachStrong(out.hast, (strong, parent, i) => {
+  eachStrong(out.hast, (strong, parent, i, def) => {
     const name = hastToString(strong).trim();
     const id = byName.get(lang === 'en' ? name.toLowerCase() : name);
-    if (!id) return;
+    if (!id) {
+      if (!PROOF_WORD.test(name) && !parseStatementLabel(name)) result.plainBold.push({ text: name, inDefinition: !!def });
+      return;
+    }
     result.concepts.add(id);
     const site = index.conceptSites.get(id);
     if (!site) {
@@ -278,17 +289,26 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
   return result;
 }
 
-/** Visit bold runs that may refer to concepts (not labels, not inside links, headings or code). */
-function eachStrong(root: Root | Element, fn: (node: Element, parent: Root | Element, index: number) => void): void {
-  const walk = (parent: Root | Element) => {
+/** Unnumbered proof / solution openers are labels, not emphasis. */
+const PROOF_WORD = /^(证明|解|Proof|Solution)[:：.]?$/i;
+
+/**
+ * Visit bold runs that may refer to concepts (not labels, not inside links, headings or code).
+ * `def` is the anchor of the enclosing 定义 statement (def-…), if any.
+ */
+function eachStrong(root: Root | Element, fn: (node: Element, parent: Root | Element, index: number, def: string | null) => void): void {
+  const walk = (parent: Root | Element, def: string | null) => {
     const children = parent.children as (RootContent | ElementContent)[];
     children.forEach((child, i) => {
       if (child.type !== 'element' || skippable(child)) return;
-      if (child.tagName === 'strong' || child.tagName === 'b') fn(child, parent, i);
-      else walk(child);
+      if (child.tagName === 'strong' || child.tagName === 'b') fn(child, parent, i, def);
+      else {
+        const id = child.properties?.id;
+        walk(child, typeof id === 'string' && id.startsWith('def-') ? id : def);
+      }
     });
   };
-  walk(root);
+  walk(root, null);
 }
 
 /** In a translated defining page, turn the first bold mention of the concept into <dfn id=…>. */

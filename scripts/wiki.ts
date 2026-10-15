@@ -7,6 +7,7 @@
  *   new <parent-id|root> <slug> <zh-title> <en-title>
  *                                    create the next page under a parent, with both language files
  *   terms                            concept report: concepts without a definition, uses before the definition
+ *   terms --bold [<id-prefix>...]    list bold text that is not a concept name (and so does not link)
  *   fix [<id>...] [--dry-run]        rewrite heading / statement-label numbering formats into the canonical form
  *   freeze <plots/script.py>...      render once and commit the images; the script is never run again
  *   unfreeze <plots/script.py>...    delete the frozen images; the script renders normally again
@@ -110,7 +111,27 @@ function newPage() {
 }
 
 async function terms() {
-  const { diag, concepts, forwardUses } = await buildContent({ dryRun: true });
+  const { diag, concepts, forwardUses, plainBold } = await buildContent({ dryRun: true });
+  if (flags.has('--bold')) {
+    // Bold = emphasis = link (CONTENT_GUIDE §6): outside definitions every bold run should be a
+    // concept name or a label; inside a 定义 a bold run names the term being defined.
+    const match = (id: string) => !positional.length || positional.some((p) => id === p || id.startsWith(`${p}.`));
+    const counts = { outside: 0, inDefinition: 0 };
+    for (const [key, list] of [...plainBold].sort(([a], [b]) => compareIds(a.split('/')[1], b.split('/')[1]) || a.localeCompare(b))) {
+      if (!list.length || !match(key.split('/')[1])) continue;
+      const outside = list.filter((b) => !b.inDefinition).map((b) => `**${b.text}**`);
+      const inDef = list.filter((b) => b.inDefinition).map((b) => `**${b.text}**`);
+      counts.outside += outside.length;
+      counts.inDefinition += inDef.length;
+      if (outside.length) console.log(`${key}  outside definitions: ${outside.join('  ')}`);
+      if (inDef.length) console.log(`${key}  in definitions:      ${inDef.join('  ')}`);
+    }
+    console.log(
+      `${counts.outside} bold run(s) outside definitions that are not concept names (make them concepts, rephrase, or drop the bold); ` +
+        `${counts.inDefinition} defined term(s) not in the glossary (add the important ones)`,
+    );
+    return;
+  }
   const own = diag.items.filter((d) => d.file.endsWith('glossary.yaml') || d.message.startsWith('concept "'));
   if (own.length) {
     const report = new Diagnostics();
