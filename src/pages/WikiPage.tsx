@@ -87,11 +87,11 @@ function PageContent({ lang, node }: { lang: Lang; node: NavNode }) {
                 ) : (
                   <p className="italic text-muted-foreground">{t.emptyPage}</p>
                 )}
-                <PageConnections payload={payload} />
               </>
             )}
           </div>
           <ChildList node={node} />
+          {payload && <PageConnections payload={payload} />}
           <PrevNext id={node.id} />
         </div>
       </main>

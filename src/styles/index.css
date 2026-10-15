@@ -255,6 +255,17 @@
   }
 }
 
+/* Blockquotes hold notes (作者注) and quotations: no automatic quote marks or italics. */
+.wiki-article blockquote {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--muted-foreground);
+}
+.wiki-article blockquote p::before,
+.wiki-article blockquote p::after {
+  content: none;
+}
+
 /* References, concepts and definitions: see scripts/wiki/linking.ts. */
 .wiki-article a.wiki-ref,
 .wiki-article .concept-ref {
@@ -269,7 +280,7 @@
   text-decoration-style: solid;
   text-decoration-color: currentColor;
 }
-.wiki-article span.concept-ref {
+.wiki-article .concept-ref:not(a) {
   cursor: help;
 }
 .wiki-article dfn.wiki-dfn {

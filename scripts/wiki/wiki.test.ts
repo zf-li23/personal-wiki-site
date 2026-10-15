@@ -338,7 +338,7 @@ describe('cross-page linking', () => {
   const concepts: Concept[] = [
     { id: 'convergence-in-distribution', zh: '依分布收敛', en: 'convergence in distribution', aliases: [] },
     { id: 'law-of-large-numbers', zh: '大数定律', en: 'law of large numbers', aliases: [] },
-    { id: 'bifurcation', zh: '分岔', en: 'bifurcation', aliases: [], exclude: ['分岔图'] },
+    { id: 'bifurcation', zh: '分岔', en: 'bifurcation', aliases: [] },
   ];
   async function site(pages: Record<string, string>) {
     const sources = Object.fromEntries(Object.keys(pages).map((id) => [id, fakePage(id)]));
@@ -351,10 +351,10 @@ describe('cross-page linking', () => {
     const results = new Map(order.map((id) => [id, linkPage({ pageId: id, out: rendered.get(id)!, linkLang: 'zh', tree, index, readingOrder: new Map(order.map((x, i) => [x, i])), diag, file: id })]));
     return { index, diag, html: (id: string) => renderHtml(rendered.get(id)!), results };
   }
-  it('resolves statement references within the course and links first concept mentions to definitions', async () => {
+  it('resolves statement references within the course and links bold concept names to definitions', async () => {
     const s = await site({
       '3.1.12': '## 12.1. 定律\n\n大数定律（law of large numbers）描述均值。由定理 13.2.1 可知。',
-      '3.1.13': '## 13.1. 收敛\n\n**定义 13.1.1（依分布收敛）** 设……\n\n## 13.2. 定理\n\n**定理 13.2.1** 见定义 13.1.1。大数定律和大数定律，分岔图不是分岔。',
+      '3.1.13': '## 13.1. 收敛\n\n**定义 13.1.1（依分布收敛）** 设……\n\n## 13.2. 定理\n\n**定理 13.2.1** 见定义 13.1.1。**大数定律**与大数定律，**分岔图**不是**分岔**，**分岔**。',
     });
     assert.deepEqual(s.diag.items, []);
     assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'def-13.1.1');
@@ -363,21 +363,21 @@ describe('cross-page linking', () => {
     assert.match(s.html('3.1.12'), new RegExp(`<a href="${BASE_PATH}zh/3.1.13/#thm-13.2.1" class="wiki-ref" data-internal="">定理 13.2.1</a>`));
     assert.match(s.html('3.1.13'), /<a href="#def-13.1.1" class="wiki-ref">定义 13.1.1<\/a>/);
     const p13 = s.html('3.1.13');
-    assert.equal((p13.match(/class="concept-ref"/g) ?? []).length, 2, 'one link for 大数定律 (first mention only) and one hover card for 分岔');
-    assert.match(p13, /<span class="concept-ref" data-concept="bifurcation">分岔<\/span>/);
-    assert.ok(!/分岔<\/span>图/.test(p13), '分岔图 is not a mention of 分岔');
+    assert.match(p13, new RegExp(`<a href="${BASE_PATH}zh/3.1.12/#concept-law-of-large-numbers" class="concept-ref" data-concept="law-of-large-numbers" data-internal=""><strong>大数定律</strong></a>与大数定律`), 'bold mention links, plain text does not');
+    assert.equal((p13.match(/<strong class="concept-ref" data-concept="bifurcation">分岔<\/strong>/g) ?? []).length, 2, 'every bold mention of an undefined concept gets a hover card');
+    assert.match(p13, /<strong>分岔图<\/strong>/, 'a longer bold phrase is not a mention');
     assert.deepEqual([...s.results.get('3.1.12')!.targets], ['3.1.13']);
   });
-  it('does not match single-character concepts in running text but still finds their definition', async () => {
+  it('treats single-character concepts like any other: only bold mentions link', async () => {
     concepts.push({ id: 'group', zh: '群', en: 'group', aliases: [] });
-    const s = await site({ '1.3.2': '## 2.2. 群\n\n**定义 2.2.1（群）** 设……', '1.3.3': '## 3.1. 环\n\n每个群都有单位元，循环也一样。' });
+    const s = await site({ '1.3.2': '## 2.2. 群\n\n**定义 2.2.1（群）** 设……', '1.3.3': '## 3.1. 环\n\n每个**群**都有单位元，循环群也一样。' });
     concepts.pop();
     assert.equal(s.index.conceptSites.get('group')?.anchor, 'def-2.2.1');
-    assert.ok(!s.html('1.3.3').includes('concept-ref'));
+    assert.equal((s.html('1.3.3').match(/class="concept-ref"/g) ?? []).length, 1);
   });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
-    const s = await site({ '1.2.3': '## 3.1. A\n\n特征函数', '3.1.11': '## 11.1. B\n\n特征函数' });
+    const s = await site({ '1.2.3': '## 3.1. A\n\n**特征函数**', '3.1.11': '## 11.1. B\n\n**特征函数**' });
     concepts.pop();
     assert.ok(!s.html('1.2.3').includes('concept-ref'));
     assert.match(s.html('3.1.11'), /data-concept="characteristic-function"/);

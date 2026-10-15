@@ -8,8 +8,9 @@
  *       - a 定义 statement whose name is the concept:  **定义 13.1.1（依分布收敛）**
  *       - an annotated occurrence:  依分布收敛（convergence in distribution）
  *     A concept may be defined on one page only.
- *  3. Concept links: the first mention of each concept on every other page links to its
- *     definition (or, if it has none yet, becomes a hover card without a link).
+ *  3. Concept links: a bold run whose whole text is a concept name (**群**, **依分布收敛**)
+ *     links to the definition (or, if there is none yet, becomes a hover card). Running text
+ *     is never matched: authors bold what they want to emphasise.
  *
  * The page trees are mutated in place; build.ts stringifies them afterwards.
  */
@@ -89,20 +90,6 @@ function conceptNames(concept: Concept, lang: Lang): string[] {
   const isHan = (s: string) => /\p{Script=Han}/u.test(s);
   const names = lang === 'zh' ? [concept.zh, ...concept.aliases.filter(isHan)] : [concept.en, ...concept.aliases.filter((a) => !isHan(a))];
   return [...new Set(names)].filter(Boolean);
-}
-
-/** Longest-first alternation so 分岔图 is not matched as 分岔. */
-function namesRegex(concepts: Concept[], lang: Lang): { re: RegExp | null; byName: Map<string, string> } {
-  const byName = new Map<string, string>();
-  // Single Chinese characters (群, 环, 域, 格) are never matched in running text: without word
-  // boundaries they would hit 循环, 定义域, …. Such concepts still get definition sites and cards.
-  for (const c of concepts) {
-    for (const n of conceptNames(c, lang)) if (lang === 'en' || [...n].length > 1) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
-  }
-  const names = [...byName.keys()].sort((a, b) => b.length - a.length).map(escapeRe);
-  if (!names.length) return { re: null, byName };
-  const body = names.join('|');
-  return { re: lang === 'en' ? new RegExp(`\\b(?:${body})\\b`, 'gi') : new RegExp(body, 'g'), byName };
 }
 
 /* ------------------------------------------------------------------ index */
@@ -256,76 +243,63 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
     return parts;
   });
 
-  // 2. concepts: definitions on this page count as mentioned; first other mention links to the definition
+  // 2. concepts: only a bold run whose whole text is a concept name refers to the concept
+  //    (authors bold what they want to emphasise; running text is never matched).
   for (const [id, site] of index.conceptSites) {
-    if (site.pageId === pageId) {
-      result.concepts.add(id);
-      if (site.anchor.startsWith('concept-') && !out.anchors.has(site.anchor)) {
-        // Translation of the defining page: mark the first English mention as the definition.
-        const concept = index.concepts.find((c) => c.id === id)!;
-        markFirstMention(out.hast, conceptNames(concept, lang), lang, site.anchor, id);
-        out.anchors.add(site.anchor);
-      }
+    if (site.pageId !== pageId) continue;
+    result.concepts.add(id);
+    if (site.anchor.startsWith('concept-') && !out.anchors.has(site.anchor)) {
+      // Translation of the defining page: its first bold mention becomes the definition anchor.
+      const concept = index.concepts.find((c) => c.id === id)!;
+      if (markBoldDefinition(out.hast, conceptNames(concept, lang), lang, site.anchor, id)) out.anchors.add(site.anchor);
     }
   }
-  const { re, byName } = namesRegex(index.concepts.filter((c) => inScope(c, pageId)), lang);
-  const excluded = new Map(index.concepts.map((c) => [c.id, c.exclude ?? []]));
-  if (re) {
-    const seen = new Set(result.concepts);
-    eachText(out.hast, (node) => {
-      const parts: ElementContent[] = [];
-      let last = 0;
-      for (const m of node.value.matchAll(new RegExp(re.source, re.flags))) {
-        const id = byName.get(lang === 'en' ? m[0].toLowerCase() : m[0]);
-        if (!id || seen.has(id) || insideExcluded(node.value, m.index, m[0].length, excluded.get(id))) continue;
-        seen.add(id);
-        result.concepts.add(id);
-        const site = index.conceptSites.get(id);
-        if (m.index > last) parts.push({ type: 'text', value: node.value.slice(last, m.index) });
-        const label: ElementContent[] = [{ type: 'text', value: m[0] }];
-        if (site) {
-          parts.push(el('a', { href: hrefTo(site, linkLang, pageId), className: ['concept-ref'], dataConcept: id, dataInternal: '' }, label));
-          result.targets.add(site.pageId);
-          if ((readingOrder.get(pageId) ?? 0) < (readingOrder.get(site.pageId) ?? 0)) result.forwardUses.push(id);
-        } else {
-          parts.push(el('span', { className: ['concept-ref'], dataConcept: id }, label));
-        }
-        last = m.index + m[0].length;
-      }
-      if (!parts.length) return null;
-      if (last < node.value.length) parts.push({ type: 'text', value: node.value.slice(last) });
-      return parts;
-    });
+  const byName = new Map<string, string>();
+  for (const c of index.concepts) {
+    if (!inScope(c, pageId)) continue;
+    for (const n of conceptNames(c, lang)) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
   }
+  eachStrong(out.hast, (strong, parent, i) => {
+    const name = hastToString(strong).trim();
+    const id = byName.get(lang === 'en' ? name.toLowerCase() : name);
+    if (!id) return;
+    result.concepts.add(id);
+    const site = index.conceptSites.get(id);
+    if (!site) {
+      // No definition yet: a hover card only.
+      strong.properties = { ...strong.properties, className: ['concept-ref'], dataConcept: id };
+    } else if (site.pageId !== pageId) {
+      parent.children[i] = el('a', { href: hrefTo(site, linkLang, pageId), className: ['concept-ref'], dataConcept: id, dataInternal: '' }, [strong]);
+      result.targets.add(site.pageId);
+      if ((readingOrder.get(pageId) ?? 0) < (readingOrder.get(site.pageId) ?? 0)) result.forwardUses.push(id);
+    }
+  });
   result.targets.delete(pageId);
   return result;
 }
 
-/** Whether text[at, at+len) lies inside one of the excluded compounds (e.g. 分岔 inside 分岔图). */
-function insideExcluded(text: string, at: number, len: number, words: string[] | undefined): boolean {
-  for (const w of words ?? []) {
-    for (let i = text.indexOf(w); i !== -1; i = text.indexOf(w, i + 1)) {
-      if (i <= at && at + len <= i + w.length) return true;
-    }
-  }
-  return false;
+/** Visit bold runs that may refer to concepts (not labels, not inside links, headings or code). */
+function eachStrong(root: Root | Element, fn: (node: Element, parent: Root | Element, index: number) => void): void {
+  const walk = (parent: Root | Element) => {
+    const children = parent.children as (RootContent | ElementContent)[];
+    children.forEach((child, i) => {
+      if (child.type !== 'element' || skippable(child)) return;
+      if (child.tagName === 'strong' || child.tagName === 'b') fn(child, parent, i);
+      else walk(child);
+    });
+  };
+  walk(root);
 }
 
-function markFirstMention(root: Root, names: string[], lang: Lang, anchor: string, id: string): void {
-  if (!names.length) return;
-  const body = names.map(escapeRe).join('|');
-  const re = lang === 'en' ? new RegExp(`\\b(?:${body})\\b`, 'i') : new RegExp(body);
+/** In a translated defining page, turn the first bold mention of the concept into <dfn id=…>. */
+function markBoldDefinition(root: Root, names: string[], lang: Lang, anchor: string, id: string): boolean {
+  const wanted = new Set(names.map((n) => (lang === 'en' ? n.toLowerCase() : n)));
   let done = false;
-  eachText(root, (node) => {
-    if (done) return null;
-    const m = re.exec(node.value);
-    if (!m) return null;
+  eachStrong(root, (strong, parent, i) => {
+    const name = hastToString(strong).trim();
+    if (done || !wanted.has(lang === 'en' ? name.toLowerCase() : name)) return;
+    parent.children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: id }, [strong]);
     done = true;
-    const parts: ElementContent[] = [];
-    if (m.index) parts.push({ type: 'text', value: node.value.slice(0, m.index) });
-    parts.push(el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: id }, [{ type: 'text', value: m[0] }]));
-    const rest = node.value.slice(m.index + m[0].length);
-    if (rest) parts.push({ type: 'text', value: rest });
-    return parts;
   });
+  return done;
 }
