@@ -118,6 +118,11 @@ terms:
   - { zh: 滤子, en: filter }
   - { zh: 交换李代数, en: abelian Lie algebra }
   - { zh: 不可约表示, en: irreducible representation }
+  # single characters: defined by their 定义 labels, never matched in running text
+  - { zh: 群, en: group, scope: ["1.3"] }
+  - { zh: 环, en: ring, scope: ["1.3"] }
+  - { zh: 域, en: field, scope: ["1.3"] }
+  - { zh: 格, en: lattice, scope: ["1.3"] }
   # discrete mathematics: graph theory (1.4)
   - { zh: 握手定理, en: handshaking lemma }
   - { zh: 简单图, en: simple graph }

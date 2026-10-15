@@ -368,6 +368,13 @@ describe('cross-page linking', () => {
     assert.ok(!/分岔<\/span>图/.test(p13), '分岔图 is not a mention of 分岔');
     assert.deepEqual([...s.results.get('3.1.12')!.targets], ['3.1.13']);
   });
+  it('does not match single-character concepts in running text but still finds their definition', async () => {
+    concepts.push({ id: 'group', zh: '群', en: 'group', aliases: [] });
+    const s = await site({ '1.3.2': '## 2.2. 群\n\n**定义 2.2.1（群）** 设……', '1.3.3': '## 3.1. 环\n\n每个群都有单位元，循环也一样。' });
+    concepts.pop();
+    assert.equal(s.index.conceptSites.get('group')?.anchor, 'def-2.2.1');
+    assert.ok(!s.html('1.3.3').includes('concept-ref'));
+  });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
     const s = await site({ '1.2.3': '## 3.1. A\n\n特征函数', '3.1.11': '## 11.1. B\n\n特征函数' });

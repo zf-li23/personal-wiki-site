@@ -94,7 +94,11 @@ function conceptNames(concept: Concept, lang: Lang): string[] {
 /** Longest-first alternation so 分岔图 is not matched as 分岔. */
 function namesRegex(concepts: Concept[], lang: Lang): { re: RegExp | null; byName: Map<string, string> } {
   const byName = new Map<string, string>();
-  for (const c of concepts) for (const n of conceptNames(c, lang)) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
+  // Single Chinese characters (群, 环, 域, 格) are never matched in running text: without word
+  // boundaries they would hit 循环, 定义域, …. Such concepts still get definition sites and cards.
+  for (const c of concepts) {
+    for (const n of conceptNames(c, lang)) if (lang === 'en' || [...n].length > 1) byName.set(lang === 'en' ? n.toLowerCase() : n, c.id);
+  }
   const names = [...byName.keys()].sort((a, b) => b.length - a.length).map(escapeRe);
   if (!names.length) return { re: null, byName };
   const body = names.join('|');
