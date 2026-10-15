@@ -2,7 +2,7 @@
 title: 函数
 ---
 
-函数是一类特殊的关系：定义域中的每个元素恰好对应值域中的一个元素。本章在上一章关系理论的基础上定义函数及单射、满射、双射，讨论函数的合成与逆、函数的相容性，再用函数的语言介绍实数集上的开集与闭集，最后由特征函数引出模糊子集。双射是下一章比较集合大小（等势与基数）的基本工具。
+函数是一类特殊的**二元关系**：定义域中的每个元素恰好对应值域中的一个元素。本章在上一章关系理论的基础上定义函数及单射、满射、双射，讨论函数的合成与逆、函数的相容性，再用函数的语言介绍实数集上的开集与闭集，最后由特征函数引出模糊子集。双射是下一章比较集合大小（等势与基数）的基本工具。
 
 ## 3.1. 函数和选择公理
 
@@ -30,17 +30,16 @@ $$
 
 若 $A$ 和 $B$ 是有限集合，$|A| = m$，$|B| = n$，则 $|{}^{A}B| = n^m$。
 
-**定义 3.1.3（象与完全原象）** 设 $f: A \rightarrow B$，$A_1 \subseteq A$，定义 $A_1$ 在 $f$ 下的象为
+**定义 3.1.3（象与完全原象）** 设 $f: A \rightarrow B$，$A_1 \subseteq A$，$B_1 \subseteq B$。$A_1$ 在 $f$ 下的**象** $f[A_1]$ 与 $B_1$ 在 $f$ 下的**完全原象** $f^{-1}[B_1]$ 分别定义为
 
 $$
-f[A_1] = \{y \mid (\exists x)(x \in A_1 \land y = f(x))\},
+\begin{aligned}
+f[A_1] &= \{y \mid (\exists x)(x \in A_1 \land y = f(x))\}, \\
+f^{-1}[B_1] &= \{x \mid x \in A \land f(x) \in B_1\}.
+\end{aligned}
 $$
 
-并把 $f[A]$ 称为函数 $f$ 的象。设 $B_1 \subseteq B$，定义 $B_1$ 在 $f$ 下的完全原象为
-
-$$
-f^{-1}[B_1] = \{x \mid x \in A \land f(x) \in B_1\}.
-$$
+$f[A]$ 称为函数 $f$ 的象。
 
 **定义 3.1.4（满射、单射、双射）** 设 $f: A \rightarrow B$，
 
@@ -50,17 +49,17 @@ $$
 
 **例 3.1.1** 设 $f, g, h: \mathbb{N} \rightarrow \mathbb{N}$，$f(n) = 2n$，$g(n) = \lfloor n/2 \rfloor$，$h(n) = n + (-1)^n$（即交换 $0$ 与 $1$、$2$ 与 $3$……）。则 $f$ 是单射但不是满射（奇数不在值域中）；$g$ 是满射但不是单射（$g(0) = g(1) = 0$）；$h$ 是双射。
 
-**定义 3.1.5（常函数）** 设 $f: A \rightarrow B$。如果存在 $y \in B$，使得对所有的 $x \in A$，有 $f(x) = y$，即 $f[A] = \{y\}$，则称 $f$ 为常函数。
+**定义 3.1.5（常函数）** 设 $f: A \rightarrow B$。如果存在 $y \in B$，使得对所有的 $x \in A$，有 $f(x) = y$，即 $f[A] = \{y\}$，则称 $f$ 为**常函数**。
 
-**定义 3.1.6（恒等函数）** $A$ 上的恒等关系 $I_A: A \rightarrow A$ 称为恒等函数。对任意的 $x \in A$，有 $I_A(x) = x$。
+**定义 3.1.6（恒等函数）** $A$ 上的恒等关系 $I_A: A \rightarrow A$ 称为**恒等函数**。对任意的 $x \in A$，有 $I_A(x) = x$。
 
-**定义 3.1.7（单调函数）** 设 $f: \mathbb{R} \rightarrow \mathbb{R}$。如果对任意的 $x, y \in \mathbb{R}$，$x \leq y \rightarrow f(x) \leq f(y)$，则称 $f$ 为单调递增的；如果 $x < y \rightarrow f(x) < f(y)$，则称 $f$ 为严格单调递增的。类似可定义单调递减和严格单调递减的函数。
+**定义 3.1.7（单调函数）** 设 $f: \mathbb{R} \rightarrow \mathbb{R}$。如果对任意的 $x, y \in \mathbb{R}$，$x \leq y \rightarrow f(x) \leq f(y)$，则称 $f$ 为**单调递增**的；如果 $x < y \rightarrow f(x) < f(y)$，则称 $f$ 为**严格单调递增**的。类似可定义单调递减和严格单调递减的函数。
 
-**定义 3.1.8（$n$ 元运算）** 对集合 $A$ 和 $n \in \mathbb{N}$，函数 $f: A^n \rightarrow A$ 称为 $A$ 上的 $n$ 元运算，其中 $A^n$ 是 $A$ 的 $n$ 阶笛卡儿积。
+**定义 3.1.8（$n$ 元运算）** 对集合 $A$ 和 $n \in \mathbb{N}$，函数 $f: A^n \rightarrow A$ 称为 $A$ 上的 **$n$ 元运算**，其中 $A^n$ 是 $A$ 的 $n$ 阶笛卡儿积。
 
-**定义 3.1.9（泛函）** 设 $A, B, C$ 是集合，${}^{B}C$ 为从 $B$ 到 $C$ 的所有函数的集合，则 $F: A \rightarrow {}^{B}C$ 称为一个泛函（有时也将 $G: {}^{B}C \rightarrow A$ 称为一个泛函）。
+**定义 3.1.9（泛函）** 设 $A, B, C$ 是集合，${}^{B}C$ 为从 $B$ 到 $C$ 的所有函数的集合，则 $F: A \rightarrow {}^{B}C$ 称为一个**泛函**（有时也将 $G: {}^{B}C \rightarrow A$ 称为一个泛函）。
 
-**定义 3.1.10（集合的特征函数）** 设 $E$ 是全集，对任意的 $A \subseteq E$，$A$ 的特征函数 $\chi_A$ 定义为
+**定义 3.1.10（集合的特征函数）** 设 $E$ 是全集，对任意的 $A \subseteq E$，$A$ 的**特征函数** $\chi_A$ 定义为
 
 $$
 \chi_A: E \rightarrow \{0, 1\}, \qquad \chi_A(a) =
@@ -70,15 +69,15 @@ $$
 \end{cases}
 $$
 
-**定义 3.1.11（典型映射）** 设 $R$ 是 $A$ 上的等价关系，令 $g: A \rightarrow A/R$，$g(a) = [a]_R$，则称 $g$ 为从 $A$ 到商集 $A/R$ 的典型映射或自然映射。
+**定义 3.1.11（典型映射）** 设 $R$ 是 $A$ 上的等价关系，令 $g: A \rightarrow A/R$，$g(a) = [a]_R$，则称 $g$ 为从 $A$ 到商集 $A/R$ 的**典型映射**或自然映射。
 
-**选择公理（形式 1）** 对任意的关系 $R$，存在函数 $f$，使得
+**选择公理**（形式 1）对任意的关系 $R$，存在函数 $f$，使得
 
 $$
 f \subseteq R \quad \text{且} \quad \operatorname{dom}(f) = \operatorname{dom}(R).
 $$
 
-这就是 ZF 公理系统中的第 10 条公理（见 1.7 节）。直观地说：对 $\operatorname{dom}(R)$ 中的每个 $x$，可以从 $\{y \mid xRy\}$ 中同时"选出"一个 $f(x)$。
+这就是 **ZF 公理系统**中的第 10 条公理（见 [1.7 节](/1.2.1#sec-1.7)）。直观地说：对 $\operatorname{dom}(R)$ 中的每个 $x$，可以从 $\{y \mid xRy\}$ 中同时"选出"一个 $f(x)$。
 
 ## 3.2. 函数的合成与函数的逆
 
@@ -115,7 +114,7 @@ $$
 
 **定理 3.2.7** 若 $f: A \rightarrow B$ 是双射的，则对任意的 $x \in A$，有 $f^{-1}(f(x)) = x$；对任意的 $y \in B$，有 $f(f^{-1}(y)) = y$。即 $f^{-1} \circ f = I_A$，$f \circ f^{-1} = I_B$。
 
-**定义 3.2.2（左逆和右逆）** 设 $f: A \rightarrow B$，$g: B \rightarrow A$。如果 $g \circ f = I_A$，则称 $g$ 为 $f$ 的左逆；如果 $f \circ g = I_B$，则称 $g$ 为 $f$ 的右逆。
+**定义 3.2.2（左逆和右逆）** 设 $f: A \rightarrow B$，$g: B \rightarrow A$。如果 $g \circ f = I_A$，则称 $g$ 为 $f$ 的**左逆**；如果 $f \circ g = I_B$，则称 $g$ 为 $f$ 的**右逆**。
 
 **定理 3.2.8** 设 $f: A \rightarrow B$，$A \neq \emptyset$，则
 
@@ -124,11 +123,11 @@ $$
 3. $f$ 既存在左逆又存在右逆，当且仅当 $f$ 是双射的；
 4. 若 $f$ 是双射的，则 $f$ 的左逆等于右逆（都等于 $f^{-1}$）。
 
-由定理 3.2.3 立即得到 (1)(2) 的必要性。(1) 的充分性：取定 $a_0 \in A$，令 $g(y) = f^{-1}(y)$（$y \in \operatorname{ran}(f)$，由单射性唯一确定），$g(y) = a_0$（$y \notin \operatorname{ran}(f)$），这里用到 $A \neq \emptyset$。(2) 的充分性要对每个 $y \in B$ 从非空集合 $f^{-1}[\{y\}]$ 中选一个元素作为 $g(y)$，需要用选择公理。(4)：若 $g$ 是左逆、$h$ 是右逆，则 $g = g \circ I_B = g \circ (f \circ h) = (g \circ f) \circ h = I_A \circ h = h$。
+由定理 3.2.3 立即得到 (1)(2) 的必要性。(1) 的充分性：取定 $a_0 \in A$，令 $g(y) = f^{-1}(y)$（$y \in \operatorname{ran}(f)$，由单射性唯一确定），$g(y) = a_0$（$y \notin \operatorname{ran}(f)$），这里用到 $A \neq \emptyset$。(2) 的充分性要对每个 $y \in B$ 从非空集合 $f^{-1}[\{y\}]$ 中选一个元素作为 $g(y)$，需要用**选择公理**。(4)：若 $g$ 是左逆、$h$ 是右逆，则 $g = g \circ I_B = g \circ (f \circ h) = (g \circ f) \circ h = I_A \circ h = h$。
 
 ## 3.3. 函数的性质
 
-**定义 3.3.1（函数的相容性）** 设 $f: A \rightarrow B$，$g: C \rightarrow D$，如果对任意的 $x \in A \cap C$，都有 $f(x) = g(x)$，就说 $f$ 和 $g$ 是相容的。
+**定义 3.3.1（函数的相容性）** 设 $f: A \rightarrow B$，$g: C \rightarrow D$，如果对任意的 $x \in A \cap C$，都有 $f(x) = g(x)$，就说 $f$ 和 $g$ 是**相容**的。
 
 **定义 3.3.2（函数集的相容性）** 设 $\mathcal{C}$ 是由一些函数组成的集合，如果 $\mathcal{C}$ 中任意两个函数都是相容的，就说 $\mathcal{C}$ 是相容的。
 
@@ -154,17 +153,15 @@ $$
 
 ## 3.4. 开集与闭集
 
-**定义 3.4.1（距离）** 对实数集 $\mathbb{R}$，定义 $\rho: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ 为 $\rho(\langle x, y \rangle) = |x - y|$，其中 $|x - y|$ 是 $x - y$ 的绝对值，称 $\rho$ 为 $\mathbb{R}$ 上的距离函数。对任意 $\langle x, y \rangle \in \mathbb{R} \times \mathbb{R}$，$\rho(\langle x, y \rangle)$ 称为 $x$ 和 $y$ 的距离，也写作 $\rho(x, y) = |x - y|$。
+**定义 3.4.1（距离）** 对实数集 $\mathbb{R}$，定义 $\rho: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ 为 $\rho(\langle x, y \rangle) = |x - y|$，其中 $|x - y|$ 是 $x - y$ 的绝对值，称 $\rho$ 为 $\mathbb{R}$ 上的**距离函数**。对任意 $\langle x, y \rangle \in \mathbb{R} \times \mathbb{R}$，$\rho(\langle x, y \rangle)$ 称为 $x$ 和 $y$ 的距离，也写作 $\rho(x, y) = |x - y|$。
 
-**定义 3.4.2（邻域）** 设 $x_0 \in \mathbb{R}$，$\varepsilon \in \mathbb{R}$ 且 $\varepsilon > 0$，则集合
+**定义 3.4.2（邻域）** 设 $x_0 \in \mathbb{R}$，$\varepsilon \in \mathbb{R}$ 且 $\varepsilon > 0$。$x_0$ 的 **$\varepsilon$ 邻域**是集合
 
 $$
-\{x \mid x \in \mathbb{R} \land \rho(x_0, x) < \varepsilon\}
+\{x \mid x \in \mathbb{R} \land \rho(x_0, x) < \varepsilon\}.
 $$
 
-称为 $x_0$ 的 $\varepsilon$ 邻域。
-
-**定义 3.4.3（极限点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in \mathbb{R}$。如果在 $x_0$ 的任一 $\varepsilon$ 邻域中都存在不等于 $x_0$ 的 $A$ 的元素，则称 $x_0$ 是 $A$ 的一个极限点（或凝聚点）。定义的条件可以写成
+**定义 3.4.3（极限点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in \mathbb{R}$。如果在 $x_0$ 的任一 $\varepsilon$ 邻域中都存在不等于 $x_0$ 的 $A$ 的元素，则称 $x_0$ 是 $A$ 的一个**极限点**（或凝聚点）。定义的条件可以写成
 
 $$
 (\forall \varepsilon)((\varepsilon \in \mathbb{R} \land \varepsilon > 0) \rightarrow (\exists x)(x \in A \land x \neq x_0 \land \rho(x, x_0) < \varepsilon)).
@@ -174,21 +171,21 @@ $$
 
 **定理 3.4.2** 若 $A \subseteq \mathbb{R}$ 是有界无限集，则 $A$ 具有极限点。
 
-**定义 3.4.4（孤立点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in A$。若 $x_0$ 不是 $A$ 的极限点，则称 $x_0$ 为 $A$ 的孤立点。
+**定义 3.4.4（孤立点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in A$。若 $x_0$ 不是 $A$ 的极限点，则称 $x_0$ 为 $A$ 的**孤立点**。
 
-**定义 3.4.5（导集与闭集）** 设 $A \subseteq \mathbb{R}$，$A$ 的所有极限点组成的集合称为 $A$ 的导集，记作 $A'$。如果 $A' \subseteq A$，则称 $A$ 为闭集。
+**定义 3.4.5（导集与闭集）** 设 $A \subseteq \mathbb{R}$，$A$ 的所有极限点组成的集合称为 $A$ 的**导集**，记作 $A'$。如果 $A' \subseteq A$，则称 $A$ 为**闭集**。
 
 **定理 3.4.3** 设 $A \subseteq \mathbb{R}$，则 $A'$ 是闭集，即 $(A')' \subseteq A'$。
 
 **定理 3.4.4** 任意个闭集的交集是闭集，有限个闭集的并集是闭集。
 
-**定义 3.4.6（内点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in \mathbb{R}$。如果存在 $x_0$ 的某个 $\varepsilon$ 邻域，其中全是 $A$ 的元素，则称 $x_0$ 为 $A$ 的一个内点。定义的条件可以写成
+**定义 3.4.6（内点）** 设 $A \subseteq \mathbb{R}$，$x_0 \in \mathbb{R}$。如果存在 $x_0$ 的某个 $\varepsilon$ 邻域，其中全是 $A$ 的元素，则称 $x_0$ 为 $A$ 的一个**内点**。定义的条件可以写成
 
 $$
 (\exists \varepsilon)(\varepsilon \in \mathbb{R} \land \varepsilon > 0 \land (\forall x)((x \in \mathbb{R} \land \rho(x, x_0) < \varepsilon) \rightarrow x \in A)).
 $$
 
-**定义 3.4.7（开集）** 设 $A \subseteq \mathbb{R}$，若 $A$ 的元素都是 $A$ 的内点，则称 $A$ 为开集。
+**定义 3.4.7（开集）** 设 $A \subseteq \mathbb{R}$，若 $A$ 的元素都是 $A$ 的内点，则称 $A$ 为**开集**。
 
 **定理 3.4.5** 任意个开集的并集是开集，有限个开集的交集是开集。
 
@@ -201,7 +198,7 @@ $$
 
 ## 3.5. 模糊子集
 
-**定理 3.5.1（特征函数的性质）** 设 $E$ 是论域（全集），$A \subseteq E$，$B \subseteq E$，$+$、$-$、$\cdot$ 是算术加、减、乘法，$\bar{A} = E - A$ 是 $A$ 的绝对补集，则（第 5–8 条对任意的 $x \in E$ 成立）：
+**定理 3.5.1（特征函数的性质）** 设 $E$ 是**论域**（全集），$A \subseteq E$，$B \subseteq E$，$+$、$-$、$\cdot$ 是算术加、减、乘法，$\bar{A} = E - A$ 是 $A$ 的绝对补集，则（第 5–8 条对任意的 $x \in E$ 成立）：
 
 1. $(\forall x)(\chi_A(x) = 0) \Leftrightarrow A = \emptyset$；
 2. $(\forall x)(\chi_A(x) = 1) \Leftrightarrow A = E$；
@@ -214,7 +211,7 @@ $$
 
 普通子集由取值于 $\{0, 1\}$ 的特征函数完全确定。把取值范围放宽到区间 $[0, 1]$，就得到模糊子集。
 
-**定义 3.5.1（模糊子集与隶属函数）** 设 $E$ 是论域，$E$ 上的一个模糊子集 $A$ 是指：给定一个函数 $\mu_A: E \rightarrow [0, 1]$，$\mu_A(x)$ 表示 $x$ 属于 $A$ 的程度，称 $\mu_A$ 为 $A$ 的隶属函数。$E$ 上所有模糊子集组成的集合记作 $F(E)$。
+**定义 3.5.1（模糊子集与隶属函数）** 设 $E$ 是论域，$E$ 上的一个**模糊子集** $A$ 是指：给定一个函数 $\mu_A: E \rightarrow [0, 1]$，$\mu_A(x)$ 表示 $x$ 属于 $A$ 的程度，称 $\mu_A$ 为 $A$ 的**隶属函数**。$E$ 上所有模糊子集组成的集合记作 $F(E)$。
 
 **定义 3.5.2（模糊子集的运算）** 设 $E$ 是全集，$A, B \in F(E)$，$A \cup B$、$A \cap B$、$\bar{A}$ 分别是具有下列隶属函数的模糊子集，依次称为 $A$ 与 $B$ 的并集、交集和 $A$ 的绝对补集：
 
@@ -226,13 +223,13 @@ $$
 \end{aligned}
 $$
 
-**定义 3.5.3（截集）** 设 $E$ 是全集，$A \in F(E)$，对 $\lambda \in [0, 1]$，集合
+**定义 3.5.3（截集）** 设 $E$ 是全集，$A \in F(E)$，$\lambda \in [0, 1]$。$A$ 的 **$\lambda$ 截集** $(A)_\lambda$（也写作 $A_\lambda$）定义为
 
 $$
-(A)_\lambda = \{x \mid x \in E \land \mu_A(x) \geq \lambda\}
+(A)_\lambda = \{x \mid x \in E \land \mu_A(x) \geq \lambda\}.
 $$
 
-称为 $A$ 的 $\lambda$ 截集，也写作 $A_\lambda$。它是 $E$ 的普通子集。
+它是 $E$ 的普通子集。
 
 **定理 3.5.2** 设 $E$ 是全集，$A, B \in F(E)$，$\lambda \in [0, 1]$，则
 
@@ -250,14 +247,10 @@ $$
 \mu_A(u) = \sup_{\lambda \in [0, 1]} \min(\lambda, \chi_{A_\lambda}(u)),
 $$
 
-其中 $\sup$ 表示上确界。
+其中 $\sup$ 表示**上确界**。
 
 事实上，当 $\lambda \leq \mu_A(u)$ 时 $u \in A_\lambda$，$\min(\lambda, \chi_{A_\lambda}(u)) = \lambda$；当 $\lambda > \mu_A(u)$ 时该值为 $0$。所以右端等于 $\sup\{\lambda \mid \lambda \leq \mu_A(u)\} = \mu_A(u)$。分解定理说明模糊子集由它的全体截集确定。
 
-**定义 3.5.4（支集、核、边界、正规模糊集）** 设 $E$ 是全集，$A \in F(E)$，则
+**定义 3.5.4（支集、核、边界、正规模糊集）** 设 $E$ 是全集，$A \in F(E)$。集合 $\operatorname{supp} A = \{u \mid u \in E \land \mu_A(u) > 0\}$ 称为 $A$ 的**支集**，截集 $A_1$ 称为 $A$ 的核，$(\operatorname{supp} A) - A_1$ 称为 $A$ 的边界。若 $A_1 \neq \emptyset$，就称 $A$ 为**正规模糊集**；若 $A_1 = \emptyset$，就称 $A$ 为非正规模糊集。
 
-$$
-\operatorname{supp} A = \{u \mid u \in E \land \mu_A(u) > 0\}
-$$
-
-称为 $A$ 的支集，截集 $A_1$ 称为 $A$ 的核，$(\operatorname{supp} A) - A_1$ 称为 $A$ 的边界。核 $A_1$ 的元素完全隶属于 $A$。若 $A_1 \neq \emptyset$，就称 $A$ 为正规模糊集；若 $A_1 = \emptyset$，就称 $A$ 为非正规模糊集。
+核 $A_1$ 的元素完全隶属于 $A$，边界上的元素则部分隶属于 $A$。

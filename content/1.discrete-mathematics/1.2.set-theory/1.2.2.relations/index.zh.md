@@ -6,11 +6,11 @@ title: 关系
 
 ## 2.1. 二元关系
 
-如果一个集合是空集，或者它的元素都是有序对，则称该集合为一个**二元关系**（binary relation），简称关系，常记作 $R$。对二元关系 $R$，若 $\langle x, y \rangle \in R$，也记作 $xRy$。
+如果一个集合是空集，或者它的元素都是**有序对**，则称该集合为一个**二元关系**（binary relation），简称关系，常记作 $R$。对二元关系 $R$，若 $\langle x, y \rangle \in R$，也记作 $xRy$。
 
 **定义 2.1.1（$A$ 到 $B$ 的二元关系）** 设 $A, B$ 为集合，$A \times B$ 的任一子集所定义的二元关系称为 $A$ 到 $B$ 的二元关系。特别地，当 $A = B$ 时，$A \times A$ 的任一子集称为 $A$ 上的一个二元关系。
 
-**定义 2.1.2（$n$ 元关系）** 若 $n \in \mathbb{N}$，$n > 1$，$A_1, A_2, \cdots, A_n$ 是 $n$ 个集合，则 $A_1 \times A_2 \times \cdots \times A_n$ 的任一子集称为 $A_1, A_2, \cdots, A_n$ 上的一个 $n$ 元关系，它是 $n$ 元组的集合。
+**定义 2.1.2（$n$ 元关系）** 若 $n \in \mathbb{N}$，$n > 1$，$A_1, A_2, \cdots, A_n$ 是 $n$ 个集合，则 $A_1 \times A_2 \times \cdots \times A_n$ 的任一子集称为 $A_1, A_2, \cdots, A_n$ 上的一个 **$n$ 元关系**，它是 $n$ 元组的集合。
 
 设 $A$ 是集合族，$A$ 上的包含关系和真包含关系分别定义为
 
@@ -21,23 +21,23 @@ R_{\subset} &= \{\langle x, y \rangle \mid x \in A \land y \in A \land x \subset
 \end{aligned}
 $$
 
-例如，对任意的集合 $A$，幂集 $P(A)$ 上的包含关系为 $\{\langle x, y \rangle \mid x \in P(A) \land y \in P(A) \land x \subseteq y\}$。
+例如，对任意的集合 $A$，**幂集** $P(A)$ 上的包含关系为 $\{\langle x, y \rangle \mid x \in P(A) \land y \in P(A) \land x \subseteq y\}$。
 
 **定义 2.1.3（恒等关系、全域关系和空关系）** 对任意的集合 $A$，
 
-1. $A$ 上的恒等关系 $I_A = \{\langle x, x \rangle \mid x \in A\}$；
-2. $A$ 上的全域关系（全关系）$E_A = \{\langle x, y \rangle \mid x \in A \land y \in A\} = A \times A$；
-3. 空集 $\emptyset$ 是 $A \times A$ 的子集，称为 $A$ 上的空关系。
+1. $A$ 上的**恒等关系** $I_A = \{\langle x, x \rangle \mid x \in A\}$；
+2. $A$ 上的**全域关系**（全关系）$E_A = \{\langle x, y \rangle \mid x \in A \land y \in A\} = A \times A$；
+3. 空集 $\emptyset$ 是 $A \times A$ 的子集，称为 $A$ 上的**空关系**。
 
 **定义 2.1.4（定义域和值域）** 设 $R$ 是 $A$ 到 $B$ 的二元关系，
 
-1. $R$ 中所有有序对的第一元素构成的集合称为 $R$ 的定义域，记作 $\operatorname{dom}(R) = \{x \mid (\exists y)(\langle x, y \rangle \in R)\}$；
-2. $R$ 中所有有序对的第二元素构成的集合称为 $R$ 的值域，记作 $\operatorname{ran}(R) = \{y \mid (\exists x)(\langle x, y \rangle \in R)\}$；
+1. $R$ 中所有有序对的第一元素构成的集合称为 $R$ 的**定义域**，记作 $\operatorname{dom}(R) = \{x \mid (\exists y)(\langle x, y \rangle \in R)\}$；
+2. $R$ 中所有有序对的第二元素构成的集合称为 $R$ 的**值域**，记作 $\operatorname{ran}(R) = \{y \mid (\exists x)(\langle x, y \rangle \in R)\}$；
 3. $R$ 的定义域和值域的并集称为 $R$ 的域，记作 $\operatorname{fld}(R) = \operatorname{dom}(R) \cup \operatorname{ran}(R)$。
 
 ## 2.2. 关系矩阵和关系图
 
-**定义 2.2.1（关系矩阵）** 设集合 $X = \{x_1, x_2, \cdots, x_m\}$，$Y = \{y_1, y_2, \cdots, y_n\}$，$R$ 是 $X$ 到 $Y$ 的一个关系，则 $R$ 的关系矩阵是 $m \times n$ 矩阵 $M(R) = (r_{ij})_{m \times n}$，其中
+**定义 2.2.1（关系矩阵）** 设集合 $X = \{x_1, x_2, \cdots, x_m\}$，$Y = \{y_1, y_2, \cdots, y_n\}$，$R$ 是 $X$ 到 $Y$ 的一个关系，则 $R$ 的**关系矩阵**是 $m \times n$ 矩阵 $M(R) = (r_{ij})_{m \times n}$，其中
 
 $$
 r_{ij} =
@@ -52,7 +52,7 @@ $$
 
 **定义 2.2.2（关系图）** 设集合 $X = \{x_1, x_2, \cdots, x_m\}$，$Y = \{y_1, y_2, \cdots, y_n\}$。
 
-1. 若 $R$ 是 $X$ 到 $Y$ 的一个关系，则 $R$ 的关系图是一个有向图 $G(R) = (V, E)$，它的顶点集是 $V = X \cup Y$；从 $x_i$ 到 $y_j$ 的有向边 $e_{ij} \in E$ 当且仅当 $\langle x_i, y_j \rangle \in R$。
+1. 若 $R$ 是 $X$ 到 $Y$ 的一个关系，则 $R$ 的**关系图**是一个有向图 $G(R) = (V, E)$，它的顶点集是 $V = X \cup Y$；从 $x_i$ 到 $y_j$ 的有向边 $e_{ij} \in E$ 当且仅当 $\langle x_i, y_j \rangle \in R$。
 2. 若 $R$ 是 $X$ 上的一个关系，则 $R$ 的关系图是上述情形的特例，顶点集为 $X$。
 
 ## 2.3. 关系的逆、合成、限制和象
@@ -63,11 +63,11 @@ $$
    $$
    R^{-1} = \{\langle y, x \rangle \mid \langle x, y \rangle \in R\};
    $$
-2. $R$ 与 $S$ 的合成 $S \circ R$（有些书中称为关系的左复合）为 $X$ 到 $Z$ 的关系：
+2. $R$ 与 $S$ 的**合成** $S \circ R$（有些书中称为关系的左复合）为 $X$ 到 $Z$ 的关系：
    $$
    S \circ R = \{\langle x, z \rangle \mid (\exists y)(\langle x, y \rangle \in R \land \langle y, z \rangle \in S)\};
    $$
-3. 对任意的集合 $A$，$R$ 在 $A$ 上的限制 $R \upharpoonright A$ 为 $A$ 到 $Y$ 的关系：
+3. 对任意的集合 $A$，$R$ 在 $A$ 上的**限制** $R \upharpoonright A$ 为 $A$ 到 $Y$ 的关系：
    $$
    R \upharpoonright A = \{\langle x, y \rangle \mid \langle x, y \rangle \in R \land x \in A\};
    $$
@@ -133,7 +133,7 @@ $$
 
 ## 2.4. 关系的性质
 
-**定义 2.4.1（自反性与非自反性）** 设 $R$ 为集合 $A$ 上的关系，则
+**定义 2.4.1（自反性与非自反性）** 设 $R$ 为集合 $A$ 上的关系。若 $A$ 中每个元素 $x$ 都有 $xRx$，则称 $R$ 在 $A$ 上是自反的，或称 $R$ 是 $A$ 上的**自反关系**；若 $A$ 中没有元素 $x$ 使 $xRx$，则称 $R$ 在 $A$ 上是非自反的，或称 $R$ 是**非自反关系**。符号化表示为
 
 $$
 \begin{aligned}
@@ -142,7 +142,7 @@ R \text{ 在 } A \text{ 上是非自反的} &\Leftrightarrow (\forall x)(x \in A
 \end{aligned}
 $$
 
-**定义 2.4.2（对称性与反对称性）** 设 $R$ 为集合 $A$ 上的关系，则
+**定义 2.4.2（对称性与反对称性）** 设 $R$ 为集合 $A$ 上的关系。若对 $A$ 中任意的 $x, y$，由 $xRy$ 总能推出 $yRx$，则称 $R$ 是对称的，或称 $R$ 是 $A$ 上的**对称关系**；若 $xRy$ 与 $yRx$ 同时成立时必有 $x = y$，则称 $R$ 是反对称的，或称 $R$ 是 $A$ 上的**反对称关系**。符号化表示为
 
 $$
 \begin{aligned}
@@ -157,7 +157,7 @@ $$
 R \text{ 是反对称的} \Leftrightarrow (\forall x)(\forall y)((x \in A \land y \in A \land \langle x, y \rangle \in R \land x \neq y) \rightarrow \langle y, x \rangle \notin R).
 $$
 
-**定义 2.4.3（传递性）** 设 $R$ 为集合 $A$ 上的关系，则
+**定义 2.4.3（传递性）** 设 $R$ 为集合 $A$ 上的关系。若由 $xRy$ 与 $yRz$ 总能推出 $xRz$，则称 $R$ 是传递的，或称 $R$ 是 $A$ 上的**传递关系**。符号化表示为
 
 $$
 R \text{ 是传递的} \Leftrightarrow (\forall x)(\forall y)(\forall z)((x, y, z \in A \land \langle x, y \rangle \in R \land \langle y, z \rangle \in R) \rightarrow \langle x, z \rangle \in R).
@@ -207,13 +207,13 @@ $$
 2. $R^{s+lp+i} = R^{s+i}$，其中 $l, i \in \mathbb{N}$，$p = t - s$；
 3. 令 $B = \{R^0, R^1, \cdots, R^{t-1}\}$，则 $R$ 的各次幂均为 $B$ 的元素，即对任意的 $q \in \mathbb{N}$，有 $R^q \in B$。
 
-**定义 2.5.2（闭包）** 设 $R$ 是非空集合 $A$ 上的关系。如果 $A$ 上有另一个关系 $R'$ 满足：
+**定义 2.5.2（闭包）** 设 $R$ 是非空集合 $A$ 上的关系。$R$ 的**自反闭包**（**对称闭包**、**传递闭包**）是 $A$ 上满足下列条件的关系 $R'$：
 
 1. $R'$ 是自反的（对称的、传递的）；
 2. $R \subseteq R'$；
-3. 对 $A$ 上任何包含 $R$ 的自反的（对称的、传递的）关系 $R''$，有 $R' \subseteq R''$，
+3. 对 $A$ 上任何包含 $R$ 的自反的（对称的、传递的）关系 $R''$，有 $R' \subseteq R''$。
 
-则称关系 $R'$ 为 $R$ 的自反（对称、传递）闭包。$R$ 的自反闭包记作 $r(R)$，对称闭包记作 $s(R)$，传递闭包记作 $t(R)$。它们分别是包含 $R$ 且具有自反性（对称性、传递性）的最小关系。
+$R$ 的自反闭包记作 $r(R)$，对称闭包记作 $s(R)$，传递闭包记作 $t(R)$。它们分别是包含 $R$ 且具有自反性（对称性、传递性）的最小关系。
 
 **定理 2.5.4（闭包的性质 1）** 对非空集合 $A$ 上的关系 $R$，有
 
@@ -290,7 +290,7 @@ $$
 
 ## 2.6. 等价关系和划分
 
-**定义 2.6.1（等价关系）** 设 $R$ 为非空集合 $A$ 上的关系，如果 $R$ 是自反的、对称的和传递的，则称 $R$ 为 $A$ 上的等价关系。
+**定义 2.6.1（等价关系）** 设 $R$ 为非空集合 $A$ 上的关系，如果 $R$ 是自反的、对称的和传递的，则称 $R$ 为 $A$ 上的**等价关系**。
 
 **定义 2.6.2（等价类）** 设 $R$ 为非空集合 $A$ 上的等价关系，对任意的 $x \in A$，称集合
 
@@ -298,7 +298,7 @@ $$
 [x]_R = \{y \mid y \in A \land xRy\}
 $$
 
-为 $x$ 关于 $R$ 的等价类，简称 $x$ 的等价类，也可简记作 $[x]$ 或 $\overline{x}$。
+为 $x$ 关于 $R$ 的**等价类**，简称 $x$ 的等价类，也可简记作 $[x]$ 或 $\overline{x}$。
 
 **定理 2.6.1（等价类的性质）** 设 $R$ 是非空集合 $A$ 上的等价关系，对任意的 $x, y \in A$，有
 
@@ -307,20 +307,18 @@ $$
 3. 若 $\langle x, y \rangle \notin R$，则 $[x]_R \cap [y]_R = \emptyset$；
 4. $\bigcup \{[x]_R \mid x \in A\} = A$。
 
-**定义 2.6.3（商集）** 设 $R$ 为非空集合 $A$ 上的等价关系，以 $R$ 的所有等价类为元素的集合称为 $A$ 关于 $R$ 的商集，记作 $A/R$，即
+**定义 2.6.3（商集）** 设 $R$ 为非空集合 $A$ 上的等价关系，以 $R$ 的所有等价类为元素的集合称为 $A$ 关于 $R$ 的**商集**，记作 $A/R$，即
 
 $$
 A/R = \{[x]_R \mid x \in A\}.
 $$
 
-**定义 2.6.4（划分）** 设 $A$ 为非空集合，若集合 $\pi$ 满足下列条件：
+**定义 2.6.4（划分）** 设 $A$ 为非空集合。$A$ 的一个**划分**是满足下列条件的集合 $\pi$，$\pi$ 中的元素称为 $A$ 的**划分块**：
 
 1. $(\forall x)(x \in \pi \rightarrow x \subseteq A)$；
 2. $\emptyset \notin \pi$；
 3. $\bigcup \pi = A$；
-4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \emptyset)$，
-
-则称 $\pi$ 为 $A$ 的一个划分，称 $\pi$ 中的元素为 $A$ 的划分块。
+4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \emptyset)$。
 
 **定理 2.6.2（等价关系诱导的划分）** 对非空集合 $A$ 上的等价关系 $R$，商集 $A/R$ 是 $A$ 的划分，称为由等价关系 $R$ 诱导出的 $A$ 的划分，记作 $\pi_R$。
 
@@ -344,15 +342,15 @@ $$
 
 ## 2.7. 相容关系和覆盖
 
-**定义 2.7.1（相容关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是自反的、对称的，则称 $R$ 为 $A$ 上的相容关系。
+**定义 2.7.1（相容关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是自反的、对称的，则称 $R$ 为 $A$ 上的**相容关系**。
 
-**定义 2.7.2（相容类）** 对非空集合 $A$ 上的相容关系 $R$，若 $C \subseteq A$，且 $C$ 中任意两个元素 $x$ 和 $y$ 都有 $xRy$，则称 $C$ 是由相容关系 $R$ 产生的相容类，简称相容类。这个条件也可以写成
+**定义 2.7.2（相容类）** 对非空集合 $A$ 上的相容关系 $R$，若 $C \subseteq A$，且 $C$ 中任意两个元素 $x$ 和 $y$ 都有 $xRy$，则称 $C$ 是由相容关系 $R$ 产生的相容类，简称**相容类**。这个条件也可以写成
 
 $$
 (\forall x)(\forall y)((x \in C \land y \in C) \rightarrow xRy).
 $$
 
-**定义 2.7.3（最大相容类）** 对非空集合 $A$ 上的相容关系 $R$，一个相容类若不是任何相容类的真子集，就称为最大相容类，记作 $C_R$。最大相容类 $C_R$ 有下列性质：
+**定义 2.7.3（最大相容类）** 对非空集合 $A$ 上的相容关系 $R$，一个相容类若不是任何相容类的真子集，就称为**最大相容类**，记作 $C_R$。最大相容类 $C_R$ 有下列性质：
 
 $$
 \begin{aligned}
@@ -365,13 +363,13 @@ $$
 
 **定理 2.7.1（最大相容类的存在性）** 对非空有限集合 $A$ 上的相容关系 $R$，若 $C$ 是一个相容类，则存在一个最大相容类 $C_R$，使 $C \subseteq C_R$。
 
-**定义 2.7.4（覆盖）** 对非空集合 $A$，若集合 $\Omega$ 满足下列条件：
+**定义 2.7.4（覆盖）** 设 $A$ 为非空集合。$A$ 的一个**覆盖**是满足下列条件的集合 $\Omega$，$\Omega$ 中的元素称为 $\Omega$ 的**覆盖块**：
 
 1. $(\forall x)(x \in \Omega \rightarrow x \subseteq A)$；
 2. $\emptyset \notin \Omega$；
-3. $\bigcup \Omega = A$，
+3. $\bigcup \Omega = A$。
 
-则称 $\Omega$ 为 $A$ 的一个覆盖，称 $\Omega$ 中的元素为 $\Omega$ 的覆盖块。划分是覆盖块两两不相交的覆盖。
+划分是覆盖块两两不相交的覆盖。
 
 **定理 2.7.2（完全覆盖）** 对非空集合 $A$ 上的相容关系 $R$，所有最大相容类组成的集合是 $A$ 的一个覆盖，称为 $A$ 的完全覆盖，记作 $C_R(A)$，而且 $C_R(A)$ 是唯一的。
 
@@ -387,11 +385,11 @@ $$
 
 ## 2.8. 偏序关系
 
-**定义 2.8.1（偏序关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是自反的、反对称的和传递的，则称 $R$ 为 $A$ 上的偏序关系。
+**定义 2.8.1（偏序关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是自反的、反对称的和传递的，则称 $R$ 为 $A$ 上的**偏序关系**。
 
 在不会产生误解时，偏序关系 $R$ 通常记作 $\leq$；当 $xRy$ 时记作 $x \leq y$，读作"$x$ 小于等于 $y$"。偏序关系又称弱偏序关系或半序关系。
 
-**定义 2.8.2（拟序关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是非自反的和传递的，则称 $R$ 为 $A$ 上的拟序关系，又称强偏序关系。
+**定义 2.8.2（拟序关系）** 对非空集合 $A$ 上的关系 $R$，如果 $R$ 是非自反的和传递的，则称 $R$ 为 $A$ 上的**拟序关系**，又称强偏序关系。
 
 在不会产生误解时，拟序关系 $R$ 通常记作 $<$；当 $xRy$ 时记作 $x < y$，读作"$x$ 小于 $y$"。
 
@@ -401,42 +399,42 @@ $$
 
 **定理 2.8.3** 对 $A$ 上的偏序关系 $R$，$R - I_A$ 是 $A$ 上的拟序关系。
 
-**定义 2.8.3（偏序集）** 集合 $A$ 与 $A$ 上的关系 $R$ 一起称为一个结构。集合 $A$ 与 $A$ 上的偏序关系 $R$ 一起称为一个偏序结构，或称偏序集，记作 $(A, R)$。
+**定义 2.8.3（偏序集）** 集合 $A$ 与 $A$ 上的关系 $R$ 一起称为一个结构。集合 $A$ 与 $A$ 上的偏序关系 $R$ 一起称为一个偏序结构，或称**偏序集**，记作 $(A, R)$。
 
-**定义 2.8.4（盖住关系）** 对偏序集 $(A, \leq)$，若 $x, y \in A$，$x \leq y$，$x \neq y$，且不存在 $z \in A$ 使得 $x \leq z \leq y$ 且 $z \neq x$、$z \neq y$，则称 $y$ 盖住 $x$。$A$ 上的盖住关系定义为
+**定义 2.8.4（盖住关系）** 对偏序集 $(A, \leq)$，若 $x, y \in A$，$x \leq y$，$x \neq y$，且不存在 $z \in A$ 使得 $x \leq z \leq y$ 且 $z \neq x$、$z \neq y$，则称 $y$ **盖住** $x$。$A$ 上的**盖住关系**定义为
 
 $$
 \operatorname{cov} A = \{\langle x, y \rangle \mid x \in A \land y \in A \land y \text{ 盖住 } x\}.
 $$
 
-有限偏序集可以用盖住关系画出的哈斯图表示：每个元素画成一个点，$y$ 盖住 $x$ 时把 $y$ 画在 $x$ 上方并连一条线。
+有限偏序集可以用盖住关系画出的哈斯图（Hasse diagram）表示：每个元素画成一个点，$y$ 盖住 $x$ 时把 $y$ 画在 $x$ 上方并连一条线。
 
 **定义 2.8.5（最小元、最大元、极小元、极大元）** 对偏序集 $(A, \leq)$ 和 $B \subseteq A$，
 
-1. 若 $y \in B \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的最小元；
-2. 若 $y \in B \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的最大元；
-3. 若 $y \in B \land (\forall x)((x \in B \land x \leq y) \rightarrow x = y)$，则称 $y$ 为 $B$ 的极小元；
-4. 若 $y \in B \land (\forall x)((x \in B \land y \leq x) \rightarrow x = y)$，则称 $y$ 为 $B$ 的极大元。
+1. 若 $y \in B \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的**最小元**；
+2. 若 $y \in B \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的**最大元**；
+3. 若 $y \in B \land (\forall x)((x \in B \land x \leq y) \rightarrow x = y)$，则称 $y$ 为 $B$ 的**极小元**；
+4. 若 $y \in B \land (\forall x)((x \in B \land y \leq x) \rightarrow x = y)$，则称 $y$ 为 $B$ 的**极大元**。
 
 最小元（最大元）若存在则唯一，并且一定是极小元（极大元）；反之不然。
 
 **定义 2.8.6（上界、下界、上确界、下确界）** 对偏序集 $(A, \leq)$ 和 $B \subseteq A$，
 
-1. 若 $y \in A \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的上界；
-2. 若 $y \in A \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的下界；
-3. 令 $C = \{y \mid y \text{ 是 } B \text{ 的上界}\}$，则 $C$ 的最小元称为 $B$ 的上确界或最小上界；
-4. 令 $C = \{y \mid y \text{ 是 } B \text{ 的下界}\}$，则 $C$ 的最大元称为 $B$ 的下确界或最大下界。
+1. 若 $y \in A \land (\forall x)(x \in B \rightarrow x \leq y)$，则称 $y$ 为 $B$ 的**上界**；
+2. 若 $y \in A \land (\forall x)(x \in B \rightarrow y \leq x)$，则称 $y$ 为 $B$ 的**下界**；
+3. 令 $C = \{y \mid y \text{ 是 } B \text{ 的上界}\}$，则 $C$ 的最小元称为 $B$ 的**上确界**或最小上界；
+4. 令 $C = \{y \mid y \text{ 是 } B \text{ 的下界}\}$，则 $C$ 的最大元称为 $B$ 的**下确界**或最大下界。
 
 **例 2.8.1** 在偏序集 $(P(\{a, b\}), \subseteq)$ 中取 $B = \{\{a\}, \{b\}\}$。$B$ 没有最小元和最大元，$\{a\}$ 和 $\{b\}$ 既是 $B$ 的极小元又是极大元；$B$ 的上界只有 $\{a, b\}$，下界只有 $\emptyset$，因此上确界为 $\{a, b\}$，下确界为 $\emptyset$。
 
-**定义 2.8.7（可比）** 对偏序集 $(A, \leq)$ 和 $x, y \in A$，若 $x \leq y$ 或 $y \leq x$，则称 $x$ 和 $y$ 是可比的。
+**定义 2.8.7（可比）** 对偏序集 $(A, \leq)$ 和 $x, y \in A$，若 $x \leq y$ 或 $y \leq x$，则称 $x$ 和 $y$ 是**可比**的。
 
-**定义 2.8.8（全序关系与全序集）** 对偏序集 $(A, \leq)$，如果对任意的 $x, y \in A$，$x$ 和 $y$ 都可比，则称 $\leq$ 为 $A$ 上的全序关系，或称线序关系，并称 $(A, \leq)$ 为全序集。
+**定义 2.8.8（全序关系与全序集）** 对偏序集 $(A, \leq)$，如果对任意的 $x, y \in A$，$x$ 和 $y$ 都可比，则称 $\leq$ 为 $A$ 上的**全序关系**，或称线序关系，并称 $(A, \leq)$ 为**全序集**。
 
 **定义 2.8.9（链、反链）** 对偏序集 $(A, \leq)$ 和 $B \subseteq A$，
 
-1. 如果对任意的 $x, y \in B$，$x$ 和 $y$ 都是可比的，则称 $B$ 为 $A$ 中的链，$B$ 中元素的个数称为链的长度；
-2. 如果对任意的 $x, y \in B$，$x \neq y$ 时 $x$ 和 $y$ 都不可比，则称 $B$ 为 $A$ 中的反链，$B$ 中元素的个数称为反链的长度。
+1. 如果对任意的 $x, y \in B$，$x$ 和 $y$ 都是可比的，则称 $B$ 为 $A$ 中的**链**，$B$ 中元素的个数称为链的长度；
+2. 如果对任意的 $x, y \in B$，$x \neq y$ 时 $x$ 和 $y$ 都不可比，则称 $B$ 为 $A$ 中的**反链**，$B$ 中元素的个数称为反链的长度。
 
 **定理 2.8.4（偏序集的分解定理）** 对有限偏序集 $(A, \leq)$，设 $A$ 中最长链的长度是 $n$，则将 $A$ 中元素分成不相交的反链时，反链的个数至少是 $n$；并且恰好可以分成 $n$ 个不相交的反链。
 
@@ -444,7 +442,7 @@ $$
 
 **证明** 若 $A$ 中没有长度为 $n + 1$ 的链，则最长链的长度不超过 $n$，由定理 2.8.4，$A$ 可以分成至多 $n$ 个不相交的反链。$mn + 1$ 个元素分到至多 $n$ 个反链中，必有一个反链至少含 $m + 1$ 个元素。$\square$
 
-**定义 2.8.10（良序关系与良序集）** 对偏序集 $(A, \leq)$，如果 $A$ 的任何非空子集都有最小元，则称 $\leq$ 为良序关系，称 $(A, \leq)$ 为良序集。
+**定义 2.8.10（良序关系与良序集）** 对偏序集 $(A, \leq)$，如果 $A$ 的任何非空子集都有最小元，则称 $\leq$ 为**良序关系**，称 $(A, \leq)$ 为**良序集**。
 
 **定理 2.8.6** 一个良序集一定是全序集。
 
@@ -452,11 +450,11 @@ $$
 
 **定理 2.8.8（良序定理）** 任意的集合都是可以良序化的。
 
-良序定理与选择公理等价。$(\mathbb{N}, \leq)$ 是良序集，而 $(\mathbb{Z}, \leq)$ 与 $(\mathbb{R}, \leq)$ 是全序集但不是良序集。
+良序定理（well-ordering theorem）与**选择公理**等价。$(\mathbb{N}, \leq)$ 是良序集，而 $(\mathbb{Z}, \leq)$ 与 $(\mathbb{R}, \leq)$ 是全序集但不是良序集。
 
 **定义 2.8.11（区间）** 在全序集 $(\mathbb{R}, \leq)$ 上，对 $a, b \in \mathbb{R}$，$a < b$，
 
-1. $[a, b] = \{x \mid x \in \mathbb{R} \land a \leq x \leq b\}$，称为从 $a$ 到 $b$ 的闭区间；
-2. $(a, b) = \{x \mid x \in \mathbb{R} \land a < x < b\}$，称为从 $a$ 到 $b$ 的开区间；
-3. $[a, b) = \{x \mid x \in \mathbb{R} \land a \leq x < b\}$ 和 $(a, b] = \{x \mid x \in \mathbb{R} \land a < x \leq b\}$ 都称为从 $a$ 到 $b$ 的半开区间；
+1. $[a, b] = \{x \mid x \in \mathbb{R} \land a \leq x \leq b\}$，称为从 $a$ 到 $b$ 的**闭区间**；
+2. $(a, b) = \{x \mid x \in \mathbb{R} \land a < x < b\}$，称为从 $a$ 到 $b$ 的**开区间**；
+3. $[a, b) = \{x \mid x \in \mathbb{R} \land a \leq x < b\}$ 和 $(a, b] = \{x \mid x \in \mathbb{R} \land a < x \leq b\}$ 都称为从 $a$ 到 $b$ 的**半开区间**；
 4. 还可以定义无穷区间：$(-\infty, a] = \{x \mid x \in \mathbb{R} \land x \leq a\}$，$(-\infty, a) = \{x \mid x \in \mathbb{R} \land x < a\}$，$[a, +\infty) = \{x \mid x \in \mathbb{R} \land a \leq x\}$，$(a, +\infty) = \{x \mid x \in \mathbb{R} \land a < x\}$，$(-\infty, +\infty) = \mathbb{R}$。

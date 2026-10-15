@@ -2,9 +2,9 @@
 title: 表示论
 ---
 
-**表示论**（representation theory）是本课程主线的终点。Cayley 定理（定理 2.4.4）说每个群都可以实现为某个集合上的变换群；表示论要求更多：把群（或李代数）实现为某个向量空间上的**线性**变换，取定基后就是矩阵。这样，抽象的群运算变成矩阵乘法，结构问题就转化为线性代数问题，可以使用特征值、迹、直和分解等全部工具。上一章的 $SO(3)$ 与 $\mathfrak{so}(3)$ 本来就由矩阵构成，本章把这种情形推广到一般的群和李代数。
+**表示论**（representation theory）是本课程主线的终点。Cayley 定理（定理 2.4.4）说每个群都可以实现为某个集合上的变换群；表示论要求更多：把群（或李代数）实现为某个向量空间上的线性变换，即保持向量加法与数乘的变换，取定基后就是矩阵。这样，抽象的群运算变成矩阵乘法，结构问题就转化为线性代数问题，可以使用**特征值**、迹、直和分解等全部工具。上一章的 $SO(3)$ 与 $\mathfrak{so}(3)$ 本来就由矩阵构成，本章把这种情形推广到一般的群和李代数。
 
-抽象地看，一个表示就是一个同态（定义 1.4.3）：群表示是到可逆线性变换群 $\operatorname{GL}(V)$ 的群同态，李代数表示是到一般线性李代数 $\mathfrak{gl}(V)$ 的李代数同态。本章用到第 2 章的群作用、共轭类与同态，第 3 章的域上向量空间与 $\operatorname{GL}(V)$（3.6.3 节），第 5 章的李代数、矩阵指数与 $\mathfrak{sl}(2)$，以及线性代数中的不变子空间、特征值和迹（[线性代数](/2.1)）。表示论在物理和化学中用途极广：量子力学中对称性通过群在态空间上的表示起作用，分子光谱和晶体学用点群的特征标表分析振动模式与选择定则。
+抽象地看，一个表示就是一个**同态**（定义 1.4.3）：群表示是到可逆线性变换群 $\operatorname{GL}(V)$ 的群同态，李代数表示是到一般线性李代数 $\mathfrak{gl}(V)$ 的李代数同态。本章用到第 2 章的**群作用**、**共轭类**与同态，第 3 章的域上**向量空间**与 $\operatorname{GL}(V)$（3.6.3 节），第 5 章的**李代数**、**矩阵指数**与 $\mathfrak{sl}(2)$，以及线性代数中的不变子空间、特征值和迹（[线性代数](/2.1)）。表示论在物理和化学中用途极广：量子力学中对称性通过群在态空间上的表示起作用，分子光谱和晶体学用点群的特征标表分析振动模式与选择定则。
 
 ## 6.1. 群表示
 
@@ -16,33 +16,31 @@ title: 表示论
 
 **例 6.1.1** 几个基本的表示：
 
-- **平凡表示**：$\rho(g) = 1$（一维空间上的恒等变换）对所有 $g \in G$；
-- **符号表示**：$\operatorname{sgn}: S_n \to \operatorname{GL}(1, \mathbb{R}) = \mathbb{R} \setminus \{0\}$，偶置换映为 $1$，奇置换映为 $-1$（2.7.1 节）；
-- 矩阵李群 $G \subseteq \operatorname{GL}(n, \mathbb{C})$（定义 5.5.1）的包含映射是它在 $\mathbb{C}^n$ 上的表示，称为**自然表示**，例如 $SO(3)$ 以旋转的方式作用在 $\mathbb{R}^3$ 上。
+- **平凡表示**（trivial representation）：$\rho(g) = 1$（一维空间上的恒等变换）对所有 $g \in G$；
+- **符号表示**（sign representation）：$\operatorname{sgn}: S_n \to \operatorname{GL}(1, \mathbb{R}) = \mathbb{R} \setminus \{0\}$，偶置换映为 $1$，奇置换映为 $-1$（2.7.1 节）；
+- 矩阵李群 $G \subseteq \operatorname{GL}(n, \mathbb{C})$（定义 5.5.1）的包含映射是它在 $\mathbb{C}^n$ 上的表示，称为**自然表示**（defining representation），例如 $SO(3)$ 以旋转的方式作用在 $\mathbb{R}^3$ 上。
 
-**例 6.1.2（置换表示）** 对 $\sigma \in S_n$，令 $\rho(\sigma)$ 是把标准基向量 $\boldsymbol{e}_i$ 映到 $\boldsymbol{e}_{\sigma(i)}$ 的线性变换，它的矩阵是**置换矩阵**（每行每列恰有一个 $1$）。由 $\rho(\sigma)\rho(\tau)\boldsymbol{e}_i = \boldsymbol{e}_{\sigma(\tau(i))} = \rho(\sigma\tau)\boldsymbol{e}_i$，$\rho$ 是 $S_n$ 在 $F^n$ 上的 $n$ 维表示。更一般地，群 $G$ 在有限集 $A$ 上的作用（定义 2.5.3）通过置换基向量给出一个 $|A|$ 维表示；$G$ 在自身上的左乘作用（Cayley 定理）给出的 $|G|$ 维表示称为**正则表示**。
+**例 6.1.2（置换表示）** 对 $\sigma \in S_n$，令 $\rho(\sigma)$ 是把标准基向量 $\boldsymbol{e}_i$ 映到 $\boldsymbol{e}_{\sigma(i)}$ 的线性变换，它的矩阵是置换矩阵（每行每列恰有一个 $1$）。由 $\rho(\sigma)\rho(\tau)\boldsymbol{e}_i = \boldsymbol{e}_{\sigma(\tau(i))} = \rho(\sigma\tau)\boldsymbol{e}_i$，$\rho$ 是 $S_n$ 在 $F^n$ 上的 $n$ 维表示，称为**置换表示**（permutation representation）。更一般地，群 $G$ 在有限集 $A$ 上的作用（定义 2.5.3）通过置换基向量给出一个 $|A|$ 维表示；$G$ 在自身上的左乘作用（Cayley 定理）给出的 $|G|$ 维表示称为**正则表示**（regular representation）。
 
 **例 6.1.3** 把正三角形的中心放在原点，例 2.4.1 中的 $6$ 个对称都是平面 $\mathbb{R}^2$ 上的正交变换，于是得到 $S_3$ 的一个二维表示：$(1\ 2\ 3)$ 对应转角 $120^\circ$ 的旋转矩阵，$(2\ 3)$ 对应关于过顶点 $1$ 的对称轴的反射矩阵。
 
-**定义 6.1.2** 设 $G$ 是群，$V$ 是域 $F$ 上的向量空间。若给定映射 $G \times V \to V$，$(g, v) \mapsto g \cdot v$，使得对任意 $g, h \in G$，$v, w \in V$，$\lambda, \mu \in F$ 满足：
+**定义 6.1.2（线性作用）** 设 $G$ 是群，$V$ 是域 $F$ 上的向量空间，$(g, v) \mapsto g \cdot v$ 是一个映射 $G \times V \to V$。若对任意 $g, h \in G$，$v, w \in V$，$\lambda, \mu \in F$ 满足下面三条，则称它是 $G$ 在 $V$ 上的一个**线性作用**，也说 $G$ 线性作用于 $V$：
 
 1. **线性性**：$g \cdot (\lambda v + \mu w) = \lambda(g \cdot v) + \mu(g \cdot w)$（即每个 $g$ 给出 $V$ 上的一个线性变换）；
 2. **相容性**：$g \cdot (h \cdot v) = (gh) \cdot v$；
-3. **单位性**：$e \cdot v = v$，
+3. **单位性**：$e \cdot v = v$。
 
-则称 $G$ **线性作用**于 $V$。
-
-条件 2、3 就是群作用的定义（定义 2.5.3），所以线性作用就是"每个 $g$ 都作用为线性变换"的群作用。正如群作用等价于到 $E(A)$ 的同态（2.5.5 节），线性作用与表示是同一件事的两种说法：令 $\rho(g)(v) = g \cdot v$，条件 2、3 保证 $\rho(g)$ 可逆（逆为 $\rho(g^{-1})$）且 $\rho$ 是群同态；反之，由表示 $\rho$ 令 $g \cdot v = \rho(g)(v)$ 就得到线性作用。
+条件 2、3 就是**群作用**的定义（定义 2.5.3），所以线性作用就是"每个 $g$ 都作用为线性变换"的群作用。正如群作用等价于到 $E(A)$ 的同态（2.5.5 节），线性作用与表示是同一件事的两种说法：令 $\rho(g)(v) = g \cdot v$，条件 2、3 保证 $\rho(g)$ 可逆（逆为 $\rho(g^{-1})$）且 $\rho$ 是群同态；反之，由表示 $\rho$ 令 $g \cdot v = \rho(g)(v)$ 就得到线性作用。
 
 ### 6.1.2. 等价表示、不变子空间与不可约表示
 
 **定义 6.1.3** 设 $\rho_1: G \to \operatorname{GL}(V_1)$ 和 $\rho_2: G \to \operatorname{GL}(V_2)$ 是群 $G$ 的两个表示。若存在线性同构 $\varphi: V_1 \to V_2$，使得对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则称这两个表示是**等价**的。在有限维情形下取定基，这意味着存在同一个可逆矩阵 $P$，使得对所有 $g$ 都有 $\rho_2(g) = P\rho_1(g)P^{-1}$。
 
-等价的表示只是选了不同的基，就像同构的代数系统只是元素换了名字（1.4.2 节）；矩阵的相似关系见[线性代数](/2.1.5#sec-5.3)。满足 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$（$\varphi$ 不必可逆）的线性映射称为 **$G$-等变映射**，它是"表示之间的同态"。
+等价的表示只是选了不同的基，就像同构的代数系统只是元素换了名字（1.4.2 节）；矩阵的相似关系见[线性代数](/2.1.5#sec-5.3)。满足 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$（$\varphi$ 不必可逆）的线性映射称为 $G$-**等变映射**（equivariant map），它是"表示之间的同态"。
 
 **定义 6.1.4（不可约表示）** 设 $\rho: G \to \operatorname{GL}(V)$ 是表示。若子空间 $W \subseteq V$ 满足对所有 $g \in G$ 有 $\rho(g)W \subseteq W$，则称 $W$ 是**不变子空间**。若 $V \neq \{0\}$ 且除 $\{0\}$ 和 $V$ 外没有其他不变子空间，则称该表示是不可约表示；否则（$V$ 有非平凡的不变子空间）称为**可约**的。
 
-不变子空间 $W$ 上的限制 $g \mapsto \rho(g)|_W$ 本身是一个表示，称为**子表示**，它是子群、子环、子代数在表示论中的对应物。一维表示总是不可约的。
+不变子空间 $W$ 上的限制 $g \mapsto \rho(g)|_W$ 本身是一个表示，称为**子表示**（subrepresentation），它是子群、子环、子代数在表示论中的对应物。一维表示总是不可约的。
 
 **定义 6.1.5（直和）** 设 $\rho_1, \rho_2$ 分别是 $G$ 在 $V_1, V_2$ 上的表示。在直和空间 $V_1 \oplus V_2$ 上令 $\rho(g)(v_1, v_2) = (\rho_1(g)v_1, \rho_2(g)v_2)$，得到的表示称为 $\rho_1$ 与 $\rho_2$ 的**直和**，记作 $\rho_1 \oplus \rho_2$。在适当的基下，它的矩阵是分块对角矩阵 $\begin{pmatrix} \rho_1(g) & 0 \\ 0 & \rho_2(g) \end{pmatrix}$。
 
@@ -74,13 +72,13 @@ $$
 \operatorname{ad}(x)(y) = [x, y], \quad \forall x, y \in \mathfrak{g}.
 $$
 
-则 $\operatorname{ad}$ 是李代数同态，称为 $\mathfrak{g}$ 的**伴随表示**。事实上，对任意 $z \in \mathfrak{g}$，
+则 $\operatorname{ad}$ 是李代数同态，称为 $\mathfrak{g}$ 的**伴随表示**（adjoint representation）。事实上，对任意 $z \in \mathfrak{g}$，
 
 $$
 \operatorname{ad}([x, y])(z) = [[x, y], z], \qquad [\operatorname{ad}(x), \operatorname{ad}(y)](z) = [x, [y, z]] - [y, [x, z]],
 $$
 
-两者相等恰好就是雅可比恒等式。也就是说，雅可比恒等式等价于 $\operatorname{ad}$ 保持李括号。$\operatorname{ad}$ 的核是中心 $Z(\mathfrak{g})$（5.2.2 节）；伴随表示的不变子空间恰好是 $\mathfrak{g}$ 的理想，所以 $\mathfrak{g}$ 是单李代数时伴随表示不可约。
+两者相等恰好就是雅可比恒等式。也就是说，雅可比恒等式等价于 $\operatorname{ad}$ 保持李括号。$\operatorname{ad}$ 的核是**中心** $Z(\mathfrak{g})$（5.2.2 节）；伴随表示的不变子空间恰好是 $\mathfrak{g}$ 的理想，所以 $\mathfrak{g}$ 是**单李代数**时伴随表示不可约。
 
 **例 6.2.2（$\mathfrak{sl}(2, \mathbb{C})$ 的不可约表示）** 设 $e, f, h$ 是例 5.4.5 中 $\mathfrak{sl}(2, \mathbb{C})$ 的基。对每个非负整数 $n$，取 $n+1$ 维空间的基 $v_0, v_1, \dots, v_n$，令
 
@@ -91,7 +89,7 @@ $$
 其中约定 $v_{-1} = v_{n+1} = 0$。可以直接验证这三个线性变换满足 $[h, e] = 2e$，$[h, f] = -2f$，$[e, f] = h$（例如 $(ef - fe)v_k = [(k+1)(n-k) - k(n-k+1)]v_k = (n-2k)v_k$），因而给出一个表示 $V(n)$。可以证明：
 
 - $V(n)$ 不可约，且 $\mathfrak{sl}(2, \mathbb{C})$ 的每个 $n+1$ 维不可约表示都与 $V(n)$ 等价；
-- $h$ 在 $V(n)$ 上的特征值是 $n, n-2, \dots, -n$，称为**权**；$e$ 把权升高 $2$，$f$ 把权降低 $2$。
+- $h$ 在 $V(n)$ 上的特征值是 $n, n-2, \dots, -n$，称为**权**（weight）；$e$ 把权升高 $2$，$f$ 把权降低 $2$。
 
 $n = 1$ 是 $\mathbb{C}^2$ 上的自然表示，$n = 2$ 是三维的伴随表示。在量子力学中，$V(n)$ 就是自旋 $j = n/2$ 的角动量多重态，维数 $2j + 1$，$h/2$ 的特征值是磁量子数 $m = j, j-1, \dots, -j$。
 
@@ -117,15 +115,9 @@ $$
 
 特征标是群表示最重要的不变量，它由表示矩阵的迹给出。
 
-**定义 6.4.1** 设 $\rho: G \to \operatorname{GL}(V)$ 是有限群 $G$ 在有限维向量空间 $V$ 上的表示。函数 $\chi_\rho: G \to F$，
+**定义 6.4.1（特征标）** 设 $\rho: G \to \operatorname{GL}(V)$ 是有限群 $G$ 在有限维向量空间 $V$ 上的表示。函数 $\chi_\rho: G \to F$，$\chi_\rho(g) = \operatorname{tr}(\rho(g))$（$g \in G$）称为表示 $\rho$ 的**特征标**。
 
-$$
-\chi_\rho(g) = \operatorname{tr}(\rho(g)), \quad \forall g \in G,
-$$
-
-称为表示 $\rho$ 的**特征标**。
-
-由迹的性质 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$（[矩阵的迹](/2.1.1#sec-1.4.2)），$\chi_\rho(e) = \dim V$，$\chi_\rho(hgh^{-1}) = \chi_\rho(g)$——特征标在每个共轭类（定义 2.6.2）上取常值——并且等价的表示有相同的特征标。直和的特征标是特征标之和：$\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$。
+由迹的性质 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$（[矩阵的迹](/2.1.1#sec-1.4.2)），$\chi_\rho(e) = \dim V$，$\chi_\rho(hgh^{-1}) = \chi_\rho(g)$——特征标在每个**共轭类**（定义 2.6.2）上取常值——并且等价的表示有相同的特征标。直和的特征标是特征标之和：$\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$。
 
 **定理 6.4.1（Schur 引理）** 设 $(\rho_1, V_1)$ 和 $(\rho_2, V_2)$ 是群 $G$ 的两个不可约表示，$\varphi: V_1 \to V_2$ 是 $G$-等变线性映射，即对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则：
 

@@ -3,9 +3,12 @@
 # Each entry names a concept shared across courses: { zh, en, aliases?, scope? }.
 # Where a concept is DEFINED is found in the content, not here:
 #   - a 定义 label whose name is the concept:   **定义 13.1.1（依分布收敛）**
-#   - or one English annotation at the definition:   中心极限定理（Central Limit Theorem）
+#   - a bold concept name inside a 定义 statement (the term being defined)
+#   - otherwise one marked occurrence at the definition: 中心极限定理（Central Limit Theorem）
+#     in Chinese, *central limit theorem* (italics) on pages written in English first
 # A bold run whose whole text is a concept name (**群**) links to that definition; plain text is never matched.
-# `scope` limits a concept to disciplines/courses (page ids) when the word means something else elsewhere.
+# `scope` limits a concept to disciplines/courses (page ids) when the word means something else elsewhere;
+# homonyms may share a name when their scopes do not overlap.
 # Report: pnpm wiki terms
 terms:
   # discrete mathematics
@@ -16,9 +19,9 @@ terms:
   - { zh: 等价关系, en: equivalence relation }
   - { zh: 偏序集, en: poset }
   - { zh: 半群, en: semigroup }
-  - { zh: 正规子群, en: normal subgroup }
+  - { zh: 正规子群, en: normal subgroup, aliases: [不变子群] }
   - { zh: 商群, en: quotient group }
-  - { zh: 同态, en: homomorphism }
+  - { zh: 同态, en: homomorphism, aliases: [同态映射] }
   - { zh: 李代数, en: Lie algebra }
   - { zh: 表示论, en: representation theory }
   - { zh: 欧拉回路, en: Eulerian circuit }
@@ -31,10 +34,10 @@ terms:
   - { zh: 真值表, en: truth table }
   - { zh: 重言式, en: tautology, aliases: [永真式] }
   - { zh: 矛盾式, en: contradiction, aliases: [永假式] }
-  - { zh: 可满足式, en: satisfiable formula }
+  - { zh: 可满足式, en: satisfiable formula, aliases: [可满足公式] }
   - { zh: 波兰表达式, en: Polish notation, aliases: [前缀表达式] }
   - { zh: 逆波兰表达式, en: reverse Polish notation, aliases: [后缀表达式] }
-  - { zh: 德摩根律, en: De Morgan's laws, aliases: [摩根律] }
+  - { zh: 德摩根律, en: "De Morgan's laws", aliases: [摩根律, De Morgan 律] }
   - { zh: 联结词的完备集, en: functionally complete set }
   - { zh: 对偶式, en: dual formula }
   - { zh: 极小项, en: minterm }
@@ -59,6 +62,50 @@ terms:
   - { zh: 不可满足公式, en: unsatisfiable formula }
   - { zh: 前束范式, en: prenex normal form }
   - { zh: Skolem 标准型, en: Skolem normal form }
+  - { zh: 命题, en: proposition }
+  - { zh: 真值, en: truth value }
+  - { zh: 原子命题, en: atomic proposition, aliases: [简单命题] }
+  - { zh: 复合命题, en: compound proposition }
+  - { zh: 命题变项, en: propositional variable, aliases: [命题变元] }
+  - { zh: 否定, en: negation }
+  - { zh: 合取, en: conjunction }
+  - { zh: 析取, en: disjunction }
+  - { zh: 蕴含, en: implication }
+  - { zh: 双蕴含, en: biconditional }
+  - { zh: 赋值, en: truth assignment }
+  - { zh: 子公式, en: subformula }
+  - { zh: 代入规则, en: substitution rule }
+  - { zh: 中缀表达式, en: infix notation }
+  - { zh: 等值, en: logical equivalence }
+  - { zh: 置换规则, en: replacement rule }
+  - { zh: 异或, en: exclusive or, aliases: [不可兼或] }
+  - { zh: 与非, en: NAND }
+  - { zh: 或非, en: NOR }
+  - { zh: 文字, en: literal, scope: ["1.1"] }
+  - { zh: 简单析取式, en: clause, aliases: [子句] }
+  - { zh: 逻辑推论, en: logical consequence }
+  - { zh: 推理规则, en: rule of inference }
+  - { zh: 分离规则, en: modus ponens, aliases: [假言推理] }
+  - { zh: 条件证明规则, en: conditional proof }
+  - { zh: 归结推理法, en: resolution, aliases: [归结法, 归结] }
+  - { zh: 公理, en: axiom }
+  - { zh: 可靠性, en: soundness, aliases: [可靠的], scope: ["1.1"] }
+  - { zh: 完备性, en: completeness, aliases: [完备的], scope: ["1.1"] }
+  - { zh: 无矛盾性, en: consistency, aliases: [无矛盾的, 一致性], scope: ["1.1"] }
+  - { zh: 可判定性, en: decidability, aliases: [可判定的] }
+  - { zh: 个体词, en: individual term }
+  - { zh: 个体常项, en: individual constant, aliases: [个体常元] }
+  - { zh: 个体变项, en: individual variable, aliases: [个体变元] }
+  - { zh: 辖域, en: scope of a quantifier }
+  - { zh: 变元易名规则, en: renaming of bound variables, aliases: [变元易名] }
+  - { zh: 原子公式, en: atomic formula }
+  - { zh: 解释, en: interpretation, scope: ["1.1"] }
+  - { zh: 判定问题, en: decision problem }
+  - { zh: 能行方法, en: effective method, aliases: [能行的方法] }
+  - { zh: 母式, en: matrix, aliases: [基式], scope: ["1.1"] }
+  - { zh: Skolem 常数, en: Skolem constant }
+  - { zh: Skolem 函数, en: Skolem function }
+  - { zh: 合一, en: unification }
   # discrete mathematics: set theory (1.2)
   - { zh: 集合, en: set }
   - { zh: 有序对, en: ordered pair, aliases: [序偶] }
@@ -91,11 +138,74 @@ terms:
   - { zh: Cantor 定理, en: Cantor's theorem, aliases: [康托尔定理] }
   - { zh: Schröder–Bernstein 定理, en: Schröder–Bernstein theorem }
   - { zh: 连续统假设, en: continuum hypothesis }
+  - { zh: 元素, en: element }
+  - { zh: 外延表示法, en: roster notation, aliases: [列元素法] }
+  - { zh: 内涵表示法, en: set-builder notation, aliases: [谓词表示法] }
+  - { zh: 子集, en: subset }
+  - { zh: 真子集, en: proper subset }
+  - { zh: 空集, en: empty set }
+  - { zh: 全集, en: universal set }
+  - { zh: 并集, en: union }
+  - { zh: 交集, en: intersection }
+  - { zh: 差集, en: set difference, aliases: [相对补集] }
+  - { zh: 余集, en: complement, aliases: [绝对补集, 补集] }
+  - { zh: 对称差, en: symmetric difference }
+  - { zh: 有限集合, en: finite set, aliases: [有限集] }
+  - { zh: 无限集合, en: infinite set, aliases: [无限集] }
+  - { zh: 自然数, en: natural number }
+  - { zh: 后继, en: successor, scope: ["1.2"] }
+  - { zh: 三歧性, en: trichotomy }
+  - { zh: ZF 公理系统, en: Zermelo–Fraenkel set theory, aliases: [ZF 集合论, ZF 集合论公理系统] }
+  - { zh: 外延公理, en: axiom of extensionality }
+  - { zh: 空集合存在公理, en: empty set axiom, aliases: [空集公理] }
+  - { zh: 无序对集合存在公理, en: axiom of pairing, aliases: [配对公理] }
+  - { zh: 并集合公理, en: axiom of union, aliases: [并集公理] }
+  - { zh: 子集公理模式, en: axiom schema of separation, aliases: [分离公理模式] }
+  - { zh: 幂集合公理, en: axiom of power set, aliases: [幂集公理] }
+  - { zh: 正则公理, en: axiom of regularity, aliases: [基础公理] }
+  - { zh: 无穷公理, en: axiom of infinity }
+  - { zh: 替换公理模式, en: axiom schema of replacement, aliases: [替换公理] }
+  - { zh: 定义域, en: domain }
+  - { zh: 值域, en: range }
+  - { zh: 恒等关系, en: identity relation }
+  - { zh: 关系矩阵, en: relation matrix }
+  - { zh: 自反关系, en: reflexive relation, aliases: [自反性] }
+  - { zh: 非自反关系, en: irreflexive relation }
+  - { zh: 对称关系, en: symmetric relation }
+  - { zh: 反对称关系, en: antisymmetric relation, aliases: [反对称性] }
+  - { zh: 传递关系, en: transitive relation, aliases: [传递性] }
+  - { zh: 自反闭包, en: reflexive closure }
+  - { zh: 对称闭包, en: symmetric closure }
+  - { zh: 拟序关系, en: strict partial order, aliases: [强偏序关系] }
+  - { zh: 盖住关系, en: covering relation }
+  - { zh: 哈斯图, en: Hasse diagram }
+  - { zh: 最小元, en: least element }
+  - { zh: 最大元, en: greatest element }
+  - { zh: 极小元, en: minimal element }
+  - { zh: 极大元, en: maximal element }
+  - { zh: 上界, en: upper bound }
+  - { zh: 下界, en: lower bound }
+  - { zh: 上确界, en: supremum, aliases: [最小上界] }
+  - { zh: 下确界, en: infimum, aliases: [最大下界] }
+  - { zh: 链, en: chain, scope: ["1.2", "1.3"] }
+  - { zh: 反链, en: antichain }
+  - { zh: 函数, en: function, aliases: [映射, map, mapping] }
+  - { zh: 恒等映射, en: identity map, aliases: [恒等函数, identity function] }
+  - { zh: 自然映射, en: canonical map, aliases: [典型映射, natural map] }
+  - { zh: 开集, en: open set }
+  - { zh: 闭集, en: closed set }
+  - { zh: 极限点, en: limit point, aliases: [凝聚点] }
+  - { zh: 内点, en: interior point }
+  - { zh: 导集, en: derived set }
+  - { zh: 隶属函数, en: membership function }
+  - { zh: 整数, en: integer }
+  - { zh: 有理数, en: rational number }
+  - { zh: 实数, en: real number }
   # discrete mathematics: algebraic structures (1.3)
   - { zh: 代数系统, en: algebraic system, aliases: [代数结构] }
   - { zh: 单位元, en: identity element }
   - { zh: 逆元, en: inverse element }
-  - { zh: 同构, en: isomorphism }
+  - { zh: 同构, en: isomorphism, aliases: [同构映射] }
   - { zh: 交换群, en: abelian group, aliases: [阿贝尔群] }
   - { zh: 子群, en: subgroup }
   - { zh: 循环群, en: cyclic group }
@@ -103,16 +213,16 @@ terms:
   - { zh: 陪集, en: coset }
   - { zh: 同态核, en: kernel }
   - { zh: 交换环, en: commutative ring }
-  - { zh: 含幺环, en: ring with identity }
+  - { zh: 含幺环, en: ring with identity, aliases: [有单位元的环] }
   - { zh: 子环, en: subring }
   - { zh: 理想, en: ideal }
   - { zh: 零因子, en: zero divisor }
   - { zh: 整环, en: integral domain }
-  - { zh: 除环, en: division ring }
+  - { zh: 除环, en: division ring, aliases: [体] }
   - { zh: 数域, en: number field }
   - { zh: 分配格, en: distributive lattice }
   - { zh: 模格, en: modular lattice }
-  - { zh: 布尔代数, en: Boolean algebra }
+  - { zh: 布尔代数, en: Boolean algebra, aliases: [布尔格] }
   - { zh: 子格, en: sublattice }
   - { zh: 滤子, en: filter }
   - { zh: 交换李代数, en: abelian Lie algebra }
@@ -139,6 +249,74 @@ terms:
   - { zh: 环, en: ring }
   - { zh: 域, en: field }
   - { zh: 格, en: lattice }
+  - { zh: 交换律, en: commutative law }
+  - { zh: 结合律, en: associative law }
+  - { zh: 分配律, en: distributive law }
+  - { zh: 消去律, en: cancellation law }
+  - { zh: 二元运算, en: binary operation, aliases: [二元代数运算] }
+  - { zh: 可逆元, en: invertible element }
+  - { zh: 同态象, en: homomorphic image }
+  - { zh: 子代数, en: subalgebra, aliases: [子代数系统] }
+  - { zh: 单同态, en: monomorphism }
+  - { zh: 满同态, en: epimorphism }
+  - { zh: 自同态, en: endomorphism }
+  - { zh: 自同构, en: automorphism }
+  - { zh: 含幺半群, en: monoid, aliases: [幺半群, 幺群] }
+  - { zh: 生成元, en: generator, scope: ["1.3"] }
+  - { zh: 阶, en: order, scope: ["1.3"] }
+  - { zh: 置换, en: permutation }
+  - { zh: 轮换, en: cyclic permutation }
+  - { zh: 对换, en: transposition }
+  - { zh: 奇置换, en: odd permutation }
+  - { zh: 偶置换, en: even permutation }
+  - { zh: 交错群, en: alternating group }
+  - { zh: 子群的指数, en: index of a subgroup, aliases: [指数], scope: ["1.3.2"] }
+  - { zh: 共轭, en: conjugate, scope: ["1.3"] }
+  - { zh: 直积, en: direct product }
+  - { zh: 多项式环, en: polynomial ring }
+  - { zh: 商环, en: quotient ring }
+  - { zh: 真理想, en: proper ideal }
+  - { zh: 极大理想, en: maximal ideal }
+  - { zh: 素理想, en: prime ideal }
+  - { zh: 环同态, en: ring homomorphism, aliases: [环同态映射] }
+  - { zh: 有限域, en: finite field, aliases: [Galois 域] }
+  - { zh: 子域, en: subfield }
+  - { zh: 域的特征, en: characteristic of a field, aliases: [特征], scope: ["1.3"] }
+  - { zh: 素域, en: prime field }
+  - { zh: 分式域, en: field of fractions }
+  - { zh: 扩域, en: extension field, aliases: [域扩张] }
+  - { zh: 线性映射, en: linear map }
+  - { zh: 并, en: join, scope: ["1.3.4"] }
+  - { zh: 交, en: meet, scope: ["1.3.4"] }
+  - { zh: 有界格, en: bounded lattice }
+  - { zh: 补元, en: complement in a lattice, scope: ["1.3.4"] }
+  - { zh: 格同态, en: lattice homomorphism }
+  - { zh: 布尔网络, en: Boolean network }
+  - { zh: 李括号, en: Lie bracket }
+  - { zh: 雅可比恒等式, en: Jacobi identity }
+  - { zh: 李群, en: Lie group }
+  - { zh: 换位子, en: commutator }
+  - { zh: 李子代数, en: Lie subalgebra }
+  - { zh: 中心, en: center, scope: ["1.3"] }
+  - { zh: 导出代数, en: derived algebra }
+  - { zh: 商李代数, en: quotient Lie algebra }
+  - { zh: 李代数同态, en: Lie algebra homomorphism }
+  - { zh: 典型李代数, en: classical Lie algebra }
+  - { zh: 例外李代数, en: exceptional Lie algebra }
+  - { zh: 一般线性李代数, en: general linear Lie algebra }
+  - { zh: 特殊线性李代数, en: special linear Lie algebra }
+  - { zh: 单参数子群, en: one-parameter subgroup }
+  - { zh: Rodrigues 公式, en: "Rodrigues' rotation formula" }
+  - { zh: 表示, en: representation, scope: ["1.3"] }
+  - { zh: 平凡表示, en: trivial representation }
+  - { zh: 符号表示, en: sign representation }
+  - { zh: 自然表示, en: defining representation }
+  - { zh: 正则表示, en: regular representation }
+  - { zh: 线性作用, en: linear action }
+  - { zh: 等变映射, en: equivariant map }
+  - { zh: 不变子空间, en: invariant subspace }
+  - { zh: 子表示, en: subrepresentation }
+  - { zh: 权, en: weight, scope: ["1.3.6"] }
   # discrete mathematics: graph theory (1.4)
   - { zh: 握手定理, en: handshaking lemma }
   - { zh: 简单图, en: simple graph }
@@ -178,12 +356,89 @@ terms:
   - { zh: 最大流, en: maximum flow }
   - { zh: 最大流最小割定理, en: max-flow min-cut theorem }
   - { zh: 点割集, en: vertex cut }
-  - { zh: 割点, en: cut vertex }
+  - { zh: 割点, en: cut vertex, aliases: [关节点] }
   - { zh: 点连通度, en: vertex connectivity }
   - { zh: 边连通度, en: edge connectivity }
   - { zh: Whitney 不等式, en: Whitney's inequality }
   - { zh: Menger 定理, en: Menger's theorem }
   - { zh: 代数连通度, en: algebraic connectivity }
+  - { zh: 图, en: graph, scope: ["1.4"] }
+  - { zh: 有向图, en: directed graph }
+  - { zh: 无向图, en: undirected graph }
+  - { zh: 自环, en: loop, scope: ["1.4"] }
+  - { zh: 重边, en: multiple edges }
+  - { zh: 多重图, en: multigraph }
+  - { zh: 度, en: degree, scope: ["1.4"] }
+  - { zh: 正度, en: out-degree, aliases: [出度] }
+  - { zh: 负度, en: in-degree, aliases: [入度] }
+  - { zh: 空图, en: empty graph, scope: ["1.4"] }
+  - { zh: 完全图, en: complete graph }
+  - { zh: 赋权图, en: weighted graph }
+  - { zh: 子图, en: subgraph }
+  - { zh: 支撑子图, en: spanning subgraph, aliases: [生成子图] }
+  - { zh: 导出子图, en: induced subgraph, aliases: [导出的子图] }
+  - { zh: 补图, en: complement graph }
+  - { zh: 邻点集, en: neighborhood, scope: ["1.4"] }
+  - { zh: 图的同构, en: graph isomorphism }
+  - { zh: 哥尼斯堡七桥问题, en: Seven Bridges of Königsberg, aliases: [七桥问题] }
+  - { zh: 道路, en: walk, aliases: [链], scope: ["1.4"] }
+  - { zh: 回路, en: closed walk, scope: ["1.4"] }
+  - { zh: 简单道路, en: trail }
+  - { zh: 简单回路, en: circuit, scope: ["1.4"] }
+  - { zh: 初级道路, en: path, scope: ["1.4"] }
+  - { zh: 初级回路, en: cycle, scope: ["1.4"] }
+  - { zh: 有向道路, en: directed walk }
+  - { zh: 有向回路, en: closed directed walk }
+  - { zh: 非连通图, en: disconnected graph }
+  - { zh: 连通支, en: connected component, aliases: [连通分支, 极大连通子图] }
+  - { zh: 道路矩阵, en: reachability matrix }
+  - { zh: 广度优先搜索, en: breadth-first search, aliases: [广探法] }
+  - { zh: 深度优先搜索, en: depth-first search, aliases: [深探法] }
+  - { zh: 分支与界法, en: branch and bound, aliases: [分支定界法] }
+  - { zh: 三角不等式, en: triangle inequality }
+  - { zh: Bellman–Ford 算法, en: Bellman–Ford algorithm, aliases: [Ford 算法] }
+  - { zh: 拓扑排序, en: topological sorting }
+  - { zh: 关键路径, en: critical path }
+  - { zh: 树, en: tree, scope: ["1.4"] }
+  - { zh: 树叶, en: leaf, scope: ["1.4"] }
+  - { zh: 余树, en: cotree }
+  - { zh: 余树枝, en: chord, scope: ["1.4"] }
+  - { zh: 完全回路矩阵, en: cycle matrix, aliases: [回路矩阵] }
+  - { zh: 基本回路, en: fundamental cycle }
+  - { zh: 基本回路矩阵, en: fundamental cycle matrix }
+  - { zh: 完全割集矩阵, en: cut-set matrix, aliases: [割集矩阵] }
+  - { zh: 基本割集, en: fundamental cut set }
+  - { zh: 基本割集矩阵, en: fundamental cut-set matrix }
+  - { zh: 基本树变换, en: elementary tree transformation }
+  - { zh: 二叉树, en: binary tree }
+  - { zh: 完全二叉树, en: full binary tree, scope: ["1.4"] }
+  - { zh: Laplace 矩阵, en: Laplacian matrix, aliases: [拉普拉斯矩阵] }
+  - { zh: 矩阵树定理, en: matrix-tree theorem, aliases: [Kirchhoff 矩阵树定理] }
+  - { zh: 分枝, en: branching, scope: ["1.4"] }
+  - { zh: 面, en: face, scope: ["1.4"] }
+  - { zh: 非平面图, en: nonplanar graph }
+  - { zh: 完全二分图, en: complete bipartite graph }
+  - { zh: 边色数, en: chromatic index }
+  - { zh: 交互道路, en: alternating path }
+  - { zh: 完全匹配, en: complete matching }
+  - { zh: Berge 定理, en: "Berge's theorem" }
+  - { zh: 运输网络, en: flow network, aliases: [网络流图] }
+  - { zh: 源, en: source, scope: ["1.4"] }
+  - { zh: 汇, en: sink, scope: ["1.4"] }
+  - { zh: 容量, en: capacity, scope: ["1.4"] }
+  - { zh: 允许流, en: feasible flow }
+  - { zh: 割切, en: s–t cut, scope: ["1.4"] }
+  - { zh: 增流路径, en: flow augmenting path }
+  - { zh: 最小费用流, en: minimum-cost flow }
+  - { zh: 最小费用最大流, en: minimum-cost maximum flow }
+  - { zh: 不可分图, en: nonseparable graph }
+  - { zh: 块, en: block, scope: ["1.4"] }
+  - { zh: 内部点不交, en: internally disjoint }
+  - { zh: 边不交, en: edge-disjoint }
+  - { zh: Harary 图, en: Harary graph }
+  - { zh: 容器, en: container, scope: ["1.4"] }
+  - { zh: 宽距离, en: wide distance }
+  - { zh: 宽直径, en: wide diameter }
   # linear algebra and calculus
   - { zh: 特征值, en: eigenvalue }
   - { zh: 特征向量, en: eigenvector }

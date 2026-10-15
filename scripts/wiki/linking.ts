@@ -23,7 +23,7 @@ import { BASE_PATH, type Lang } from '../../site.config.ts';
 import type { Diagnostics } from './diagnostics.ts';
 import { type Concept, inScope } from './glossary.ts';
 import type { RenderOutput } from './markdown.ts';
-import { REFERENCE_RE, courseOf, kindOfWord, parseStatementLabel } from './numbering.ts';
+import { REFERENCE_RE, courseOf, kindOfWord, pageRole, parseStatementLabel } from './numbering.ts';
 import type { ContentTree } from './scan.ts';
 
 export interface Target {
@@ -313,7 +313,8 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
     } else if (site.pageId !== pageId) {
       parent.children[i] = el('a', { href: hrefTo(site, linkLang, pageId), className: ['concept-ref'], dataConcept: id, dataInternal: '' }, [strong]);
       result.targets.add(site.pageId);
-      if ((readingOrder.get(pageId) ?? 0) < (readingOrder.get(site.pageId) ?? 0)) result.forwardUses.push(id);
+      // Overview pages introduce what their chapters define; only chapters can use a concept too early.
+      if (pageRole(pageId) === 'chapter' && (readingOrder.get(pageId) ?? 0) < (readingOrder.get(site.pageId) ?? 0)) result.forwardUses.push(id);
     }
   });
   result.targets.delete(pageId);
