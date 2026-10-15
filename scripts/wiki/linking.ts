@@ -297,6 +297,9 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
   const lookup = nameIndex(index.concepts, lang, pageId);
   eachStrong(out.hast, (strong, parent, i, def) => {
     const name = hastToString(strong).trim();
+    // "**命题**：…" is an unnumbered statement label, not the concept 命题.
+    const next = parent.children[i + 1];
+    if (parseStatementLabel(name) && next?.type === 'text' && /^\s*[：:.]/.test(next.value)) return;
     const id = lookup(name)?.id;
     if (!id) {
       if (!PROOF_WORD.test(name) && !parseStatementLabel(name)) result.plainBold.push({ text: name, inDefinition: !!def });

@@ -427,6 +427,12 @@ describe('cross-page linking', () => {
     assert.match(s.html('1.3.3'), /1\.3\.2\/#def-2\.2\.1" class="concept-ref"/);
     assert.equal((s.html('1.3.4').match(/class="concept-ref"/g) ?? []).length, 2);
   });
+  it('does not take an unnumbered statement label for a concept of the same name', async () => {
+    concepts.push({ id: 'proposition', zh: '命题', en: 'proposition', aliases: [] });
+    const s = await site({ '1.1.1': '## 1.1. A\n\n**定义 1.1.1（命题）** 设……', '1.1.2': '## 2.1. B\n\n**命题**：任意……\n\n每个**命题**都有真值。' });
+    concepts.pop();
+    assert.equal((s.html('1.1.2').match(/class="concept-ref"/g) ?? []).length, 1);
+  });
   it('recognises a scoped concept only inside its scope', async () => {
     concepts.push({ id: 'characteristic-function', zh: '特征函数', en: 'characteristic function', aliases: [], scope: ['3'] });
     const s = await site({ '1.2.3': '## 3.1. A\n\n**特征函数**', '3.1.11': '## 11.1. B\n\n**特征函数**' });
