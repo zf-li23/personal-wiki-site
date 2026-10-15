@@ -3,10 +3,13 @@ title: 图论
 courses:
   - code: "20240023"
     name: 离散数学(2)
+    name_en: Discrete Mathematics (2)
 textbooks:
   - title: 图论与代数结构
     author: 崔勇、张小平
     edition: 2
+    title_en: Graph Theory and Algebraic Structures
+    author_en: Yong Cui, Xiaoping Zhang
 ---
 
 图论以图为研究对象：用结点表示事物，用有向或无向的边表示事物之间的联系。本课程先给出图、结点的度、子图、图的运算与同构等基本概念，以及邻接矩阵、关联矩阵、邻接表等表示方法；然后讨论道路与回路，包括连通性的判定、欧拉回路与哈密顿回路、旅行商问题、最短路径、关键路径和中国邮路问题；接着研究树，用关联矩阵、回路矩阵和割集矩阵刻画支撑树并为其计数，介绍 Huffman 树、最短树与最大分枝；再讨论平面图、欧拉公式、Kuratowski 定理、对偶图与图的着色；随后是二分图的匹配与网络流，包括 Hall 定理、匈牙利算法、最大流最小割定理与最小费用流；最后用点连通度、边连通度、Whitney 不等式和 Menger 定理更精细地刻画图的连通程度。

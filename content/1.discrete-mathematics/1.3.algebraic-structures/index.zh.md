@@ -3,10 +3,13 @@ title: 代数结构
 courses:
   - code: "20240023"
     name: 离散数学(2)
+    name_en: Discrete Mathematics (2)
 textbooks:
   - title: 图论与代数结构
     author: 崔勇、张小平
     edition: 2
+    title_en: Graph Theory and Algebraic Structures
+    author_en: Yong Cui, Xiaoping Zhang
 ---
 
 代数结构研究"集合加上运算"：不关心元素具体是什么，只关心运算满足哪些规律，以及满足同样规律的系统有哪些共同性质。本课程先在**集合**、映射和**等价关系**的基础上定义代数运算与**代数系统**，引入单位元、逆元、**同态**与同构；然后讨论群论，从半群、幺群到**群**，介绍子群、循环群、置换群与 Cayley 定理、陪集与 Lagrange 定理、**正规子群**与商群、同态基本定理和群的直积；再依次介绍有两种运算的**环**与**域**、以序关系为出发点的**格**与**布尔代数**、带李括号的向量空间——**李代数**，最后用**表示论**把群和李代数表示为向量空间上的线性变换。
