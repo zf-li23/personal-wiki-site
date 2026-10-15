@@ -55,13 +55,15 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
     diag.error(file, 'expected a top-level "terms:" list');
     return [];
   }
-  const ids = new Map<string, string>();
   // Homonyms may share a name (or English name) when their scopes do not overlap, or when one
   // of them is unscoped: inside its scope the scoped concept wins (lattice "complement" vs set "complement").
   const names = new Map<string, { en: string; scope: string[] }[]>();
   const overlap = (a: string[], b: string[]) => !!a.length && !!b.length && a.some((x) => b.some((y) => x === y || x.startsWith(`${y}.`) || y.startsWith(`${x}.`)));
   const conflicts = (a: string[], b: string[]) => (!a.length && !b.length) || overlap(a, b);
-  const scopes = new Map<string, string[]>();
+  const sameEn = new Map<string, string[][]>();
+  const unscopedIds = new Set(
+    terms.filter((t) => typeof t?.en === 'string' && !(Array.isArray(t.scope) && t.scope.length)).map((t) => conceptId(t.en as string)),
+  );
   const out: Concept[] = [];
   terms.forEach((t, i) => {
     const term = t as { zh?: unknown; en?: unknown; aliases?: unknown; scope?: unknown };
@@ -73,13 +75,13 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
     const aliases = Array.isArray(term.aliases) ? term.aliases.filter((a): a is string => typeof a === 'string') : [];
     const scope = Array.isArray(term.scope) ? term.scope.map(String) : [];
     if (term.scope !== undefined && !scope.length) diag.error(file, `"${term.en}": scope must be a list of page ids, e.g. scope: ["3"]`);
-    let id = conceptId(term.en);
-    if (ids.has(id)) {
-      if (conflicts(scopes.get(id) ?? [], scope) || !scope.length) diag.error(file, `"${term.en}" duplicates the concept "${ids.get(id)}"; give it a scope that does not overlap`);
-      id = `${id}-${conceptId(scope.join(' '))}`;
-    }
-    ids.set(id, term.en);
-    scopes.set(id, scope);
+    // Same English name: allowed for non-overlapping scopes (or one unscoped). The unscoped
+    // concept keeps the plain id; a scoped homonym gets its scope appended.
+    const base = conceptId(term.en);
+    const seen = sameEn.get(base) ?? [];
+    if (seen.some((other) => conflicts(other, scope))) diag.error(file, `"${term.en}" duplicates another concept with that English name; give them scopes that do not overlap`);
+    const id = scope.length && (seen.length || unscopedIds.has(base)) ? `${base}-${conceptId(scope.join(' '))}` : base;
+    sameEn.set(base, [...seen, scope]);
     for (const name of [term.zh, ...aliases, term.en]) {
       if (name === term.en && /\p{Script=Han}/u.test(name)) continue;
       const clash = names.get(name)?.find((other) => conflicts(other.scope, scope));

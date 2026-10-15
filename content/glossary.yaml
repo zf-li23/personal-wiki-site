@@ -491,9 +491,208 @@ terms:
   - { zh: 特征值, en: eigenvalue }
   - { zh: 特征向量, en: eigenvector }
   - { zh: 行列式, en: determinant }
-  - { zh: 内积, en: inner product }
+  - { zh: 内积, en: inner product, aliases: [标准内积, 点积, 数量积, dot product, standard inner product] }
   - { zh: 一致连续, en: uniform continuity }
   - { zh: 泰勒公式, en: Taylor's formula }
+  - { zh: 线性组合, en: linear combination }
+  - { zh: 线性变换, en: linear transformation, aliases: [linear operator] }
+  - { zh: 表示矩阵, en: matrix of a linear map, aliases: [standard matrix] }
+  - { zh: 单位矩阵, en: identity matrix }
+  - { zh: 对角矩阵, en: diagonal matrix }
+  - { zh: 三角矩阵, en: triangular matrix, aliases: [上三角矩阵, 下三角矩阵, upper triangular matrix, lower triangular matrix] }
+  - { zh: 线性方程组, en: system of linear equations, aliases: [linear system] }
+  - { zh: 增广矩阵, en: augmented matrix }
+  - { zh: 初等行变换, en: elementary row operation, aliases: [初等变换] }
+  - { zh: 阶梯形矩阵, en: row echelon form, aliases: [阶梯形] }
+  - { zh: 行简化阶梯形, en: reduced row echelon form, aliases: [行简化阶梯形矩阵] }
+  - { zh: 主元, en: pivot }
+  - { zh: Gauss 消元法, en: Gaussian elimination, aliases: [高斯消元法] }
+  - { zh: Gauss–Jordan 消元法, en: Gauss–Jordan elimination }
+  - { zh: 回代法, en: back substitution }
+  - { zh: 齐次线性方程组, en: homogeneous linear system }
+  - { zh: 矩阵乘法, en: matrix multiplication }
+  - { zh: 转置, en: transpose }
+  - { zh: 对称矩阵, en: symmetric matrix }
+  - { zh: 反对称矩阵, en: skew-symmetric matrix, aliases: [斜对称矩阵] }
+  - { zh: 迹, en: trace }
+  - { zh: 初等矩阵, en: elementary matrix }
+  - { zh: 可逆矩阵, en: invertible matrix, aliases: [非奇异矩阵, nonsingular matrix] }
+  - { zh: 逆矩阵, en: inverse matrix }
+  - { zh: 奇异矩阵, en: singular matrix }
+  - { zh: 置换矩阵, en: permutation matrix }
+  - { zh: 对角占优矩阵, en: diagonally dominant matrix }
+  - { zh: 幂零矩阵, en: nilpotent matrix }
+  - { zh: 左相抵, en: row equivalence }
+  - { zh: 分块矩阵, en: block matrix }
+  - { zh: 分块对角矩阵, en: block diagonal matrix }
+  - { zh: Schur 补, en: Schur complement, aliases: [舒尔补] }
+  - { zh: Sherman–Morrison 公式, en: Sherman–Morrison formula }
+  - { zh: Woodbury 公式, en: Woodbury matrix identity, aliases: [Sherman–Morrison–Woodbury 公式] }
+  - { zh: LU 分解, en: LU decomposition, aliases: [LU factorization] }
+  - { zh: 顺序主子阵, en: leading principal submatrix }
+  - { zh: PLU 分解, en: PLU decomposition }
+  - { zh: 列空间, en: column space }
+  - { zh: 零空间, en: null space, aliases: [nullspace, 解空间] }
+  - { zh: 子空间, en: subspace, aliases: [线性子空间, linear subspace] }
+  - { zh: 线性生成, en: span, aliases: [张成, linear span] }
+  - { zh: 线性相关, en: linear dependence, aliases: [linearly dependent] }
+  - { zh: 线性无关, en: linear independence, aliases: [linearly independent] }
+  - { zh: 基, en: basis }
+  - { zh: 标准基, en: standard basis }
+  - { zh: 极大线性无关部分组, en: maximal linearly independent subset, aliases: [极大线性无关组] }
+  - { zh: 维数, en: dimension }
+  - { zh: 秩, en: rank, aliases: [矩阵的秩, 向量组的秩] }
+  - { zh: 行空间, en: row space }
+  - { zh: 左零空间, en: left null space }
+  - { zh: 满秩, en: full rank, aliases: [列满秩, 行满秩] }
+  - { zh: 相抵, en: matrix equivalence, aliases: [矩阵相抵] }
+  - { zh: 相抵标准形, en: rank normal form }
+  - { zh: 秩–零化度定理, en: rank–nullity theorem }
+  - { zh: Cauchy–Schwarz 不等式, en: Cauchy–Schwarz inequality, aliases: [柯西-施瓦茨不等式] }
+  - { zh: 正交, en: orthogonality, aliases: [orthogonal], scope: ["2"] }
+  - { zh: 标准正交基, en: orthonormal basis }
+  - { zh: Gram–Schmidt 正交化, en: Gram–Schmidt process, aliases: [格拉姆-施密特正交化] }
+  - { zh: 正交矩阵, en: orthogonal matrix }
+  - { zh: Givens 变换, en: Givens rotation }
+  - { zh: Householder 变换, en: Householder reflection, aliases: [Householder transformation, 镜面反射] }
+  - { zh: QR 分解, en: QR decomposition, aliases: [QR factorization] }
+  - { zh: 正交补, en: orthogonal complement }
+  - { zh: 正交投影, en: orthogonal projection }
+  - { zh: 正交投影矩阵, en: orthogonal projection matrix, aliases: [投影矩阵, projection matrix] }
+  - { zh: 最小二乘法, en: least squares, aliases: [最小二乘, 最小二乘问题, least squares problem] }
+  - { zh: 正规方程, en: normal equations, aliases: [法方程] }
+  - { zh: 代数余子式, en: cofactor }
+  - { zh: 余子式, en: minor, scope: ["2"] }
+  - { zh: 伴随矩阵, en: adjugate matrix, aliases: [adjugate] }
+  - { zh: Cramer 法则, en: "Cramer's rule", aliases: [克拉默法则] }
+  - { zh: Vandermonde 矩阵, en: Vandermonde matrix, aliases: [范德蒙德矩阵, Vandermonde 行列式] }
+  - { zh: 多项式插值, en: polynomial interpolation }
+  - { zh: 特征多项式, en: characteristic polynomial }
+  - { zh: 特征子空间, en: eigenspace }
+  - { zh: 代数重数, en: algebraic multiplicity }
+  - { zh: 几何重数, en: geometric multiplicity }
+  - { zh: Gershgorin 圆盘定理, en: Gershgorin circle theorem, aliases: [圆盘定理] }
+  - { zh: 友矩阵, en: companion matrix }
+  - { zh: Vieta 定理, en: "Vieta's formulas", aliases: [韦达定理] }
+  - { zh: 可对角化, en: diagonalizable matrix, aliases: [对角化, diagonalization] }
+  - { zh: 特征值分解, en: eigendecomposition }
+  - { zh: 亏损特征值, en: defective eigenvalue }
+  - { zh: 半单特征值, en: semisimple eigenvalue }
+  - { zh: 相似, en: matrix similarity, aliases: [相似矩阵, similar matrices] }
+  - { zh: Cayley–Hamilton 定理, en: Cayley–Hamilton theorem, aliases: [Hamilton–Cayley 定理] }
+  - { zh: Jordan 块, en: Jordan block, aliases: [若当块, 若尔当块] }
+  - { zh: Jordan 标准形, en: Jordan canonical form, aliases: [若当标准形, 若尔当标准形, Jordan normal form] }
+  - { zh: 同时对角化, en: simultaneous diagonalization }
+  - { zh: 谱分解, en: spectral decomposition }
+  - { zh: 正交相似, en: orthogonal similarity }
+  - { zh: 二次型, en: quadratic form }
+  - { zh: Hesse 矩阵, en: Hessian matrix, aliases: [黑塞矩阵, Hessian] }
+  - { zh: Rayleigh 商, en: Rayleigh quotient, aliases: [瑞利商] }
+  - { zh: 正定矩阵, en: positive definite matrix, aliases: [正定] }
+  - { zh: 半正定矩阵, en: positive semidefinite matrix, aliases: [半正定] }
+  - { zh: 不定矩阵, en: indefinite matrix }
+  - { zh: Cholesky 分解, en: Cholesky decomposition, aliases: [乔列斯基分解] }
+  - { zh: 顺序主子式, en: leading principal minor }
+  - { zh: 合同, en: congruence of matrices, aliases: [矩阵合同, congruent matrices] }
+  - { zh: Sylvester 惯性定律, en: "Sylvester's law of inertia", aliases: [惯性定律, 惯性定理] }
+  - { zh: 惯性指数, en: inertia, aliases: [正惯性指数, 负惯性指数] }
+  - { zh: 奇异值, en: singular value }
+  - { zh: 奇异值分解, en: singular value decomposition, aliases: [SVD] }
+  - { zh: Moore–Penrose 广义逆, en: Moore–Penrose pseudoinverse, aliases: [广义逆, 伪逆, pseudoinverse] }
+  - { zh: 谱范数, en: spectral norm }
+  - { zh: 矩阵范数, en: matrix norm }
+  - { zh: 子空间的和, en: sum of subspaces }
+  - { zh: 直和, en: direct sum, scope: ["2"] }
+  - { zh: 维数公式, en: "Grassmann's dimension formula" }
+  - { zh: 有限维线性空间, en: finite-dimensional vector space }
+  - { zh: 核, en: kernel of a linear map, aliases: [kernel], scope: ["2"] }
+  - { zh: 坐标, en: coordinate vector, aliases: [coordinates], scope: ["2"] }
+  - { zh: 过渡矩阵, en: change-of-basis matrix, aliases: [transition matrix] }
+  - { zh: 象, en: image, aliases: [像, 像集] }
+  - { zh: 对偶空间, en: dual space }
+  - { zh: 对偶基, en: dual basis }
+  - { zh: 对偶映射, en: dual map, aliases: [对偶线性映射, transpose map] }
+  - { zh: 线性函数, en: linear functional, aliases: [线性泛函, 线性型] }
+  - { zh: 复数, en: complex number }
+  - { zh: 共轭复数, en: complex conjugate, aliases: [复共轭] }
+  - { zh: 复数的极形式, en: polar form, aliases: [极形式, 三角形式] }
+  - { zh: 辐角, en: argument, scope: ["2"] }
+  - { zh: 单位根, en: root of unity, aliases: [n 次单位根] }
+  - { zh: 共轭转置, en: conjugate transpose, aliases: [Hermite 共轭] }
+  - { zh: 复向量空间, en: complex vector space, aliases: [复线性空间] }
+  - { zh: 多项式, en: polynomial, aliases: [一元多项式] }
+  - { zh: 首一多项式, en: monic polynomial }
+  - { zh: 带余除法, en: division with remainder }
+  - { zh: 综合除法, en: synthetic division, aliases: [Horner 算法, "Horner's method"] }
+  - { zh: 余数定理, en: polynomial remainder theorem }
+  - { zh: Lagrange 插值多项式, en: Lagrange interpolation polynomial, aliases: [Lagrange 插值] }
+  - { zh: 最大公因式, en: greatest common divisor }
+  - { zh: 辗转相除法, en: Euclidean algorithm }
+  - { zh: Bézout 等式, en: "Bézout's identity" }
+  - { zh: 互素, en: coprime, aliases: [relatively prime] }
+  - { zh: 不可约多项式, en: irreducible polynomial }
+  - { zh: 因式分解唯一性定理, en: unique factorization theorem }
+  - { zh: 重根, en: multiple root }
+  - { zh: 有理根定理, en: rational root theorem }
+  - { zh: 本原多项式, en: primitive polynomial, scope: ["2.1"] }
+  - { zh: Gauss 引理, en: "Gauss's lemma", scope: ["2.1"] }
+  - { zh: Eisenstein 判别法, en: "Eisenstein's criterion" }
+  - { zh: 判别式, en: discriminant }
+  - { zh: 代数基本定理, en: fundamental theorem of algebra }
+  - { zh: Schur 定理, en: Schur triangularization theorem, aliases: [Schur 三角化定理] }
+  - { zh: 广义特征向量, en: generalized eigenvector, aliases: [根向量] }
+  - { zh: 根子空间, en: generalized eigenspace, aliases: [广义特征子空间] }
+  - { zh: 根子空间分解定理, en: generalized eigenspace decomposition }
+  - { zh: 化零多项式, en: annihilating polynomial }
+  - { zh: 极小多项式, en: minimal polynomial, aliases: [最小多项式] }
+  - { zh: 幂零变换, en: nilpotent transformation }
+  - { zh: 幂零指数, en: index of nilpotency, aliases: [幂零次数] }
+  - { zh: 循环子空间, en: cyclic subspace }
+  - { zh: 循环基, en: cyclic basis }
+  - { zh: 循环变换, en: cyclic transformation, scope: ["2.1"] }
+  - { zh: Jordan 链, en: Jordan chain, aliases: [若当链] }
+  - { zh: Jordan 基, en: Jordan basis }
+  - { zh: 函数矩阵, en: matrix-valued function }
+  - { zh: Gram 矩阵, en: Gram matrix, aliases: [格拉姆矩阵, 度量矩阵] }
+  - { zh: Wronski 矩阵, en: Wronskian matrix, aliases: [朗斯基矩阵] }
+  - { zh: 矩阵级数, en: matrix series }
+  - { zh: 谱半径, en: spectral radius }
+  - { zh: 矩阵的谱, en: spectrum of a matrix, aliases: [谱] }
+  - { zh: 矩阵函数, en: matrix function }
+  - { zh: Hermite 插值多项式, en: Hermite interpolation polynomial }
+  - { zh: 内积空间, en: inner product space }
+  - { zh: 欧氏空间, en: Euclidean space, aliases: [欧几里得空间] }
+  - { zh: 酉空间, en: unitary space }
+  - { zh: Frobenius 内积, en: Frobenius inner product }
+  - { zh: 酉矩阵, en: unitary matrix }
+  - { zh: 伴随变换, en: adjoint operator, aliases: [伴随算子, 共轭变换] }
+  - { zh: 保积变换, en: isometry, aliases: [linear isometry], scope: ["2"] }
+  - { zh: 正交变换, en: orthogonal transformation }
+  - { zh: 酉变换, en: unitary transformation }
+  - { zh: 酉相似, en: unitary similarity, aliases: [unitarily similar] }
+  - { zh: 正规变换, en: normal operator }
+  - { zh: 正规矩阵, en: normal matrix }
+  - { zh: 谱定理, en: spectral theorem }
+  - { zh: 自伴随算子, en: self-adjoint operator }
+  - { zh: Hermite 变换, en: Hermitian operator, aliases: [埃尔米特变换] }
+  - { zh: Hermite 矩阵, en: Hermitian matrix, aliases: [埃尔米特矩阵] }
+  - { zh: 反 Hermite 矩阵, en: skew-Hermitian matrix }
+  - { zh: 极分解, en: polar decomposition }
+  - { zh: Hermite 二次型, en: Hermitian form, aliases: [埃尔米特二次型] }
+  - { zh: 复相合, en: "*-congruence" }
+  - { zh: Riesz 表示定理, en: Riesz representation theorem }
+  - { zh: 双线性型, en: bilinear form }
+  - { zh: 对称双线性型, en: symmetric bilinear form }
+  - { zh: 反对称双线性型, en: skew-symmetric bilinear form, aliases: [alternating bilinear form] }
+  - { zh: 非退化双线性型, en: nondegenerate bilinear form }
+  - { zh: 辛空间, en: symplectic space }
+  - { zh: 正交群, en: orthogonal group }
+  - { zh: 辛群, en: symplectic group }
+  - { zh: 张量积, en: tensor product }
+  - { zh: 多重线性型, en: multilinear form }
+  - { zh: 自由变量, en: free variable, scope: ["2"] }
+  - { zh: 矩阵, en: matrix }
+  - { zh: 欧拉公式, en: "Euler's formula", scope: ["2"] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数

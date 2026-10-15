@@ -83,7 +83,7 @@ title: 群论
 
 由定理 1.3.2、定理 1.3.3，群的单位元和每个元素的逆元都是唯一的；由 1.3.6 节，群中左、右**消去律**都成立。
 
-例如 $(\mathbb{Z}, +)$、$(\mathbb{Z}_n, +)$、$(\mathbb{R}^+, \cdot)$ 都是群；$n$ 阶可逆实矩阵的集合 $\operatorname{GL}(n, \mathbb{R})$ 关于矩阵乘法构成群，称为**一般线性群**（general linear group），可逆矩阵见[线性代数](/2.1.1#sec-1.5.2)；而 $(M_n(\mathbb{R}), \cdot)$ 只是幺群，因为奇异矩阵不可逆。
+例如 $(\mathbb{Z}, +)$、$(\mathbb{Z}_n, +)$、$(\mathbb{R}^+, \cdot)$ 都是群；$n$ 阶可逆实矩阵的集合 $\operatorname{GL}(n, \mathbb{R})$ 关于矩阵乘法构成群，称为**一般线性群**（general linear group），可逆矩阵见[线性代数](/2.1.2)；而 $(M_n(\mathbb{R}), \cdot)$ 只是幺群，因为奇异矩阵不可逆。
 
 **定义 2.2.3（交换群）** 若群 $G$ 的运算满足交换律（对任意 $a, b \in G$，$ab = ba$），则称 $G$ 是交换群，也称**阿贝尔群**。
 

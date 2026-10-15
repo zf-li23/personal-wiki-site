@@ -36,7 +36,7 @@ title: 表示论
 
 **定义 6.1.3** 设 $\rho_1: G \to \operatorname{GL}(V_1)$ 和 $\rho_2: G \to \operatorname{GL}(V_2)$ 是群 $G$ 的两个表示。若存在线性同构 $\varphi: V_1 \to V_2$，使得对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则称这两个表示是**等价**的。在有限维情形下取定基，这意味着存在同一个可逆矩阵 $P$，使得对所有 $g$ 都有 $\rho_2(g) = P\rho_1(g)P^{-1}$。
 
-等价的表示只是选了不同的基，就像同构的代数系统只是元素换了名字（1.4.2 节）；矩阵的相似关系见[线性代数](/2.1.5#sec-5.3)。满足 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$（$\varphi$ 不必可逆）的线性映射称为 $G$-**等变映射**（equivariant map），它是"表示之间的同态"。
+等价的表示只是选了不同的基，就像同构的代数系统只是元素换了名字（1.4.2 节）；矩阵的相似关系见[线性代数](/2.1.6)。满足 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$（$\varphi$ 不必可逆）的线性映射称为 $G$-**等变映射**（equivariant map），它是"表示之间的同态"。
 
 **定义 6.1.4（不可约表示）** 设 $\rho: G \to \operatorname{GL}(V)$ 是表示。若子空间 $W \subseteq V$ 满足对所有 $g \in G$ 有 $\rho(g)W \subseteq W$，则称 $W$ 是**不变子空间**。若 $V \neq \{0\}$ 且除 $\{0\}$ 和 $V$ 外没有其他不变子空间，则称该表示是不可约表示；否则（$V$ 有非平凡的不变子空间）称为**可约**的。
 
@@ -117,14 +117,14 @@ $$
 
 **定义 6.4.1（特征标）** 设 $\rho: G \to \operatorname{GL}(V)$ 是有限群 $G$ 在有限维向量空间 $V$ 上的表示。函数 $\chi_\rho: G \to F$，$\chi_\rho(g) = \operatorname{tr}(\rho(g))$（$g \in G$）称为表示 $\rho$ 的**特征标**。
 
-由迹的性质 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$（[矩阵的迹](/2.1.1#sec-1.4.2)），$\chi_\rho(e) = \dim V$，$\chi_\rho(hgh^{-1}) = \chi_\rho(g)$——特征标在每个**共轭类**（定义 2.6.2）上取常值——并且等价的表示有相同的特征标。直和的特征标是特征标之和：$\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$。
+由迹的性质 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$（[矩阵的迹](/2.1.1)），$\chi_\rho(e) = \dim V$，$\chi_\rho(hgh^{-1}) = \chi_\rho(g)$——特征标在每个**共轭类**（定义 2.6.2）上取常值——并且等价的表示有相同的特征标。直和的特征标是特征标之和：$\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$。
 
 **定理 6.4.1（Schur 引理）** 设 $(\rho_1, V_1)$ 和 $(\rho_2, V_2)$ 是群 $G$ 的两个不可约表示，$\varphi: V_1 \to V_2$ 是 $G$-等变线性映射，即对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则：
 
 1. $\varphi = 0$ 或 $\varphi$ 是线性同构；特别地，当两个表示不等价时，$\varphi = 0$；
 2. 若 $V_1 = V_2 = V$ 是有限维空间，$\rho_1 = \rho_2$，且域 $F$ 代数闭（如 $\mathbb{C}$），则 $\varphi = \lambda I_V$（$\lambda \in F$）是数乘变换。
 
-**证明**：$\ker \varphi$ 是 $V_1$ 的不变子空间，$\varphi(V_1)$ 是 $V_2$ 的不变子空间。由不可约性，$\ker \varphi = V_1$（即 $\varphi = 0$）或 $\ker \varphi = \{0\}$；在后一情形 $\varphi(V_1) \neq \{0\}$，故 $\varphi(V_1) = V_2$，$\varphi$ 是同构，得 1。对 2，取 $\varphi$ 的一个特征值 $\lambda$（代数闭域上存在，见[特征值](/2.1.5#sec-5.1)），则 $\varphi - \lambda I_V$ 也是等变映射且不是同构，由 1 得 $\varphi = \lambda I_V$。 $\square$
+**证明**：$\ker \varphi$ 是 $V_1$ 的不变子空间，$\varphi(V_1)$ 是 $V_2$ 的不变子空间。由不可约性，$\ker \varphi = V_1$（即 $\varphi = 0$）或 $\ker \varphi = \{0\}$；在后一情形 $\varphi(V_1) \neq \{0\}$，故 $\varphi(V_1) = V_2$，$\varphi$ 是同构，得 1。对 2，取 $\varphi$ 的一个特征值 $\lambda$（代数闭域上存在，见[特征值](/2.1.6)），则 $\varphi - \lambda I_V$ 也是等变映射且不是同构，由 1 得 $\varphi = \lambda I_V$。 $\square$
 
 Schur 引理揭示了不可约表示之间的"刚性"，是推导正交关系和分类不可约表示的基础。由它可以得到下面的正交关系。
 

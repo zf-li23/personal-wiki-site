@@ -1,6 +1,6 @@
 ---
 title: Rings and Fields
-source_hash: f1fd3e33cc77
+source_hash: 5f6360b226b9
 ---
 
 A group has a single operation, whereas integers, polynomials and matrices all have both addition and multiplication, linked by the **distributive law** (Section 1.3.3). A ring is the abstraction of such systems in which one can add, subtract and multiply; a field further requires multiplication to be commutative and every nonzero element to be invertible, so that one can also divide.
@@ -329,7 +329,7 @@ The basic method for constructing extension fields is to form quotient rings. Le
 
 ### 3.6.3. Vector Spaces over a Field
 
-In linear algebra, linear spaces are defined over number fields (see [Linear Algebra: Linear Spaces](/2.1.7#sec-7.1)). The eight axioms there use only addition, subtraction, multiplication and division in the number field, so the number field can be replaced by an arbitrary field.
+In linear algebra, linear spaces are defined over number fields (see [Linear Algebra: Linear Spaces](/2.1.8)). The eight axioms there use only addition, subtraction, multiplication and division in the number field, so the number field can be replaced by an arbitrary field.
 
 **Definition 3.6.1 (Vector Space)** Let $F$ be a field. A nonempty set $V$ together with an addition $V \times V \to V$ and a scalar multiplication $F \times V \to V$ is called a vector space (or linear space) over $F$ if $(V, +)$ is an abelian group and for all $a, b \in F$ and $x, y \in V$
 
@@ -337,7 +337,7 @@ $$
 a(x + y) = ax + ay, \quad (a + b)x = ax + bx, \quad (ab)x = a(bx), \quad 1x = x.
 $$
 
-In the language of Chapter 1, a vector space is an algebraic system: an additive abelian group together with a family of unary operations $x \mapsto ax$ indexed by the elements of the field. The results of linear algebra on bases, dimension, linear maps and their matrix representations ([Linear Algebra 2.1.7](/2.1.7)) hold for vector spaces over any field, with the same proofs. For example:
+In the language of Chapter 1, a vector space is an algebraic system: an additive abelian group together with a family of unary operations $x \mapsto ax$ indexed by the elements of the field. The results of linear algebra on bases, dimension, linear maps and their matrix representations ([Linear Algebra 2.1.8](/2.1.8)) hold for vector spaces over any field, with the same proofs. For example:
 
 - $F^n$ ($n$-tuples with componentwise operations) is an $n$-dimensional vector space over $F$;
 - $\mathbb{F}_2^n$ is the vector space of bit strings of length $n$ under bitwise exclusive or, and linear error-correcting codes are its subspaces;
