@@ -2,8 +2,10 @@
  * `pnpm wiki fix`: rewrite numbering *formats* into the canonical form (never renumbers):
  *   "## 13.1 Title" / "## 13.1.Title" / "## **13.1 Title**"  →  "## 13.1. Title"
  *   "**定理1.**" / "**定义 8 (充分统计量).**" / "**推论1**（名称）"  →  "**定理 1**" / "**定义 8（充分统计量）**" / "**推论 1（名称）**"
+ *   formula notation (notation.ts rules with a fix): \vec{x} → \boldsymbol{x}, A^T → A^{\mathsf T}, …
  * Code blocks are left alone. Useful right after pasting Markdown converted from slides.
  */
+import { fixNotationInMarkdown } from './notation.ts';
 import { formatHeading, formatStatementLabel, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 
 const FENCE = /^\s*(`{3,}|~{3,})/;
@@ -15,8 +17,10 @@ export interface FixResult {
   changes: number;
 }
 
-export function fixMarkdown(body: string, lang: 'zh' | 'en'): FixResult {
-  let changes = 0;
+export function fixMarkdown(body: string, lang: 'zh' | 'en', pageId = ''): FixResult {
+  const notation = fixNotationInMarkdown(body, pageId);
+  body = notation.text;
+  let changes = notation.changes;
   let inFence = false;
   const lines = body.split('\n').map((line) => {
     if (FENCE.test(line)) {

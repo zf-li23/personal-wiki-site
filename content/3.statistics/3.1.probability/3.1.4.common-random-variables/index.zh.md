@@ -105,7 +105,7 @@ $$
 
 **定义**：如果随机变量$X$的概率分布为
 $$
-\mathbb{P}(X = k) = \frac{\lambda^k}{k!} e^{-\lambda}, \quad k = 0, 1, 2, \ldots
+\mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}, \quad k = 0, 1, 2, \ldots
 $$
 则称$X$服从**泊松分布**，记作$X \sim \mathcal{P}(\lambda)$。
 
@@ -122,13 +122,13 @@ $$
 
 **定义**：设随机变量$X$，如果存在非负函数$f(x)$使得对任意$a < b$，
 $$
-\mathbb{P}(a < X \leq b) = \int_a^b f(x) dx
+\mathbb{P}(a < X \leq b) = \int_a^b f(x) \mathrm{d}x
 $$
 则称$X$是**连续型随机变量**，称$f(x)$是$X$的**概率密度函数（PDF）**。
 
 **性质**：
-1. $\int_{-\infty}^{\infty} f(x) dx = 1$
-2. 对任意Borel集$A$，有$\mathbb{P}(X \in A) = \int_A f(x) dx$
+1. $\int_{-\infty}^{\infty} f(x) \mathrm{d}x = 1$
+2. 对任意Borel集$A$，有$\mathbb{P}(X \in A) = \int_A f(x) \mathrm{d}x$
 3. $\mathbb{P}(X = a) = 0$
 
 ### 4.2.2. 均匀分布
@@ -159,7 +159,7 @@ $$
 $$
 f(x) = 
 \begin{cases} 
-\lambda e^{-\lambda x}, & x \geq 0 \\
+\lambda \mathrm{e}^{-\lambda x}, & x \geq 0 \\
 0, & x < 0
 \end{cases}
 $$
@@ -207,14 +207,14 @@ f(x) = \frac{1}{B(\alpha, \beta)} x^{\alpha-1}(1-x)^{\beta-1}, \quad 0 < x < 1
 $$
 其中$B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$，称$X$服从**Beta分布**，记作$X \sim Beta(\alpha, \beta)$。
 $$
-\Gamma (x) = \int_0^{+\infty} e^{-t} t^{x-1} dt \quad (x > 0)
+\Gamma (x) = \int_0^{+\infty} \mathrm{e}^{-t} t^{x-1} \mathrm{d}t \quad (x > 0)
 $$
 **特例**：当$\alpha = \beta = 1$时，为均匀分布$U(0,1)$
 
 #### 4.2.5.2. Gamma分布
 **定义**：如果$X$的密度为
 $$
-f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} e^{-\lambda x}, \quad x \geq 0
+f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} \mathrm{e}^{-\lambda x}, \quad x \geq 0
 $$
 称$X$服从**Gamma分布**，记作$X \sim \Gamma(\alpha, \lambda)$。
 
@@ -236,7 +236,7 @@ $$
 #### 4.2.5.4. Rayleigh分布
 **定义**：如果$X$的密度为
 $$
-f(x) = x e^{-\frac{x^2}{2}}, \quad x \geq 0
+f(x) = x \mathrm{e}^{-\frac{x^2}{2}}, \quad x \geq 0
 $$
 称$X$服从**Rayleigh分布**。
 
@@ -245,7 +245,7 @@ $$
 #### 4.2.5.5. 卡方分布
 **定义**：如果$X$的密度为
 $$
-f(x) = \frac{1}{2^{v/2} \Gamma(v/2)} x^{\frac{v}{2}-1} e^{-\frac{x}{2}}, \quad x \geq 0
+f(x) = \frac{1}{2^{v/2} \Gamma(v/2)} x^{\frac{v}{2}-1} \mathrm{e}^{-\frac{x}{2}}, \quad x \geq 0
 $$
 称$X$服从**卡方分布**，记作$X \sim \chi_v^2$。
 
@@ -301,7 +301,7 @@ $$
 ### 关键公式总结
 - 二项分布：$\mathbb{P}(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$
 - 几何分布：$\mathbb{P}(X = k) = (1-p)^{k-1}p$
-- 泊松分布：$\mathbb{P}(X = k) = \frac{\lambda^k}{k!} e^{-\lambda}$
+- 泊松分布：$\mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}$
 - 均匀分布：$f(x) = \frac{1}{b-a}I_{(a,b)}(x)$
-- 指数分布：$f(x) = \lambda e^{-\lambda x}I_{[0,\infty)}(x)$
+- 指数分布：$f(x) = \lambda \mathrm{e}^{-\lambda x}I_{[0,\infty)}(x)$
 - 正态分布：$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$

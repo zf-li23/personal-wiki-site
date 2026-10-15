@@ -2,7 +2,7 @@
 title: 复数与多项式
 ---
 
-矩阵能化简到什么程度，取决于它的特征多项式在所给数域上能分解到什么程度。例如 $\lambda^4+1$ 在 $\mathbb{Q}$ 上不可约，在 $\mathbb{R}$ 上分解为 $(\lambda^2+\sqrt2\lambda+1)(\lambda^2-\sqrt2\lambda+1)$，在 $\mathbb{C}$ 上分解为四个一次因式 $\prod_{k=0}^{3}(\lambda-e^{\mathrm{i}(2k+1)\pi/4})$；相应地，以它为特征多项式的实矩阵在 $\mathbb{R}$ 上只能化成两个 $2\times2$ 块，在 $\mathbb{C}$ 上却能对角化。[第 8 章](/2.1.8) 的例 8.7.2 也说明了这一点。本章先系统地介绍复数——每个多项式都能完全分解的数域——以及复矩阵、复向量空间；再在一般数域 $F$ 上研究一元多项式：带余除法、整除、最大公因式、不可约多项式与因式分解，最后讨论 $\mathbb{C}$、$\mathbb{R}$、$\mathbb{Q}$ 上的分解与根和系数的关系。
+矩阵能化简到什么程度，取决于它的特征多项式在所给数域上能分解到什么程度。例如 $\lambda^4+1$ 在 $\mathbb{Q}$ 上不可约，在 $\mathbb{R}$ 上分解为 $(\lambda^2+\sqrt2\lambda+1)(\lambda^2-\sqrt2\lambda+1)$，在 $\mathbb{C}$ 上分解为四个一次因式 $\prod_{k=0}^{3}(\lambda-\mathrm{e}^{\mathrm{i}(2k+1)\pi/4})$；相应地，以它为特征多项式的实矩阵在 $\mathbb{R}$ 上只能化成两个 $2\times2$ 块，在 $\mathbb{C}$ 上却能对角化。[第 8 章](/2.1.8) 的例 8.7.2 也说明了这一点。本章先系统地介绍复数——每个多项式都能完全分解的数域——以及复矩阵、复向量空间；再在一般数域 $F$ 上研究一元多项式：带余除法、整除、最大公因式、不可约多项式与因式分解，最后讨论 $\mathbb{C}$、$\mathbb{R}$、$\mathbb{Q}$ 上的分解与根和系数的关系。
 
 多项式理论将在 [第 10 章](/2.1.10) 中用于极小多项式和根子空间分解：把空间分解成线性变换的不变子空间的直和，靠的正是多项式的互素与 Bézout 等式；判断矩阵能否对角化，归结为检验极小多项式有没有重根，而这又只需用辗转相除法求一个最大公因式。[第 11 章](/2.1.11) 的矩阵函数用插值多项式计算。整章可以对照整数来读：$F[x]$ 与 $\mathbb{Z}$ 一样有带余除法、最大公因数与唯一分解，它们都是离散数学中**多项式环**与**整环**（[1.3.3](/1.3.3)）的例子。多项式的计算还处处体现"标准化求解"：除法化为综合除法，最大公因式化为反复的带余除法，有理根化为有限次验证。
 
@@ -31,7 +31,7 @@ $$
 1. 代数形式：$z=a+b\mathrm{i}$。
 2. 几何形式：平面上的点 $(a,b)$，或从原点到 $(a,b)$ 的向量。复数的加法就是向量的加法，$\bar z$ 是关于实轴的反射，$|z|$ 是向量的长度。
 3. 极形式：令 $r=|z|$，$\theta$ 为从正实轴到向量 $z$ 的转角，则 $\cos\theta=a/r$，$\sin\theta=b/r$，$z=r(\cos\theta+\mathrm{i}\sin\theta)$。
-4. 指数形式：$z=re^{\mathrm{i}\theta}$（见下文的欧拉公式）。
+4. 指数形式：$z=r\mathrm{e}^{\mathrm{i}\theta}$（见下文的欧拉公式）。
 
 **定义 9.1.3（复数的极形式）** 把非零复数写成 $z=r(\cos\theta+\mathrm{i}\sin\theta)$（$r=|z|>0$），称为 $z$ 的**极形式**（也称三角形式），$\theta$ 称为 $z$ 的**辐角**。辐角只确定到相差 $2\pi$ 的整数倍。
 
@@ -44,16 +44,16 @@ $$
 即乘积的模是模的乘积，辐角是辐角的和：乘以 $z_2$ 就是把平面旋转 $\theta_2$、再伸缩 $r_2$ 倍。这与"指数相乘、指数相加"的规则相同，于是记
 
 $$
-e^{\mathrm{i}\theta}=\cos\theta+\mathrm{i}\sin\theta,
+\mathrm{e}^{\mathrm{i}\theta}=\cos\theta+\mathrm{i}\sin\theta,
 $$
 
-称为欧拉公式（Euler's Formula）。用幂级数可以把 $e^z$ 定义到全体复数上，并证明这个等式（复变函数课程 2.3）；这里把它当作 $e^{\mathrm{i}\theta}$ 的定义。由此 $e^{\mathrm{i}\theta_1}e^{\mathrm{i}\theta_2}=e^{\mathrm{i}(\theta_1+\theta_2)}$，$(e^{\mathrm{i}\theta})^n=e^{\mathrm{i}n\theta}$（De Moivre 公式），$e^{\mathrm{i}\theta}=e^{\mathrm{i}(\theta+2k\pi)}$（$k\in\mathbb{Z}$），以及
+称为欧拉公式（Euler's Formula）。用幂级数可以把 $\mathrm{e}^z$ 定义到全体复数上，并证明这个等式（复变函数课程 2.3）；这里把它当作 $\mathrm{e}^{\mathrm{i}\theta}$ 的定义。由此 $\mathrm{e}^{\mathrm{i}\theta_1}\mathrm{e}^{\mathrm{i}\theta_2}=\mathrm{e}^{\mathrm{i}(\theta_1+\theta_2)}$，$(\mathrm{e}^{\mathrm{i}\theta})^n=\mathrm{e}^{\mathrm{i}n\theta}$（De Moivre 公式），$\mathrm{e}^{\mathrm{i}\theta}=\mathrm{e}^{\mathrm{i}(\theta+2k\pi)}$（$k\in\mathbb{Z}$），以及
 
 $$
-e^{\mathrm{i}\pi}=-1,\qquad e^{\mathrm{i}\pi/2}=\mathrm{i},\qquad e^{2k\pi\mathrm{i}}=1\ (k\in\mathbb{Z}).
+\mathrm{e}^{\mathrm{i}\pi}=-1,\qquad \mathrm{e}^{\mathrm{i}\pi/2}=\mathrm{i},\qquad \mathrm{e}^{2k\pi\mathrm{i}}=1\ (k\in\mathbb{Z}).
 $$
 
-**例 9.1.1** 求 $(1+\mathrm{i})^{10}$。$1+\mathrm{i}=\sqrt2e^{\mathrm{i}\pi/4}$，所以 $(1+\mathrm{i})^{10}=2^5e^{\mathrm{i}5\pi/2}=32\mathrm{i}$。用二项式展开需要计算 11 项，用指数形式只需算一次模的幂与一次辐角的倍数。又由 $(\cos\theta+\mathrm{i}\sin\theta)^2=\cos2\theta+\mathrm{i}\sin2\theta$，展开左边并比较实部与虚部，就得到倍角公式 $\cos2\theta=\cos^2\theta-\sin^2\theta$，$\sin2\theta=2\sin\theta\cos\theta$。
+**例 9.1.1** 求 $(1+\mathrm{i})^{10}$。$1+\mathrm{i}=\sqrt2\mathrm{e}^{\mathrm{i}\pi/4}$，所以 $(1+\mathrm{i})^{10}=2^5\mathrm{e}^{\mathrm{i}5\pi/2}=32\mathrm{i}$。用二项式展开需要计算 11 项，用指数形式只需算一次模的幂与一次辐角的倍数。又由 $(\cos\theta+\mathrm{i}\sin\theta)^2=\cos2\theta+\mathrm{i}\sin2\theta$，展开左边并比较实部与虚部，就得到倍角公式 $\cos2\theta=\cos^2\theta-\sin^2\theta$，$\sin2\theta=2\sin\theta\cos\theta$。
 
 ### 9.1.3. 复数的矩阵形式
 
@@ -68,30 +68,30 @@ $$
 所以 $T$ 是一个单的**环同态**，$\mathbb{C}$ 同构于 $2\times2$ 实矩阵环中的子域 $\left\{\begin{bmatrix}a&-b\\b&a\end{bmatrix}\right\}$（也见 [第 8 章](/2.1.8) 的例 8.4.1）。在这个对应下，$\mathrm{i}$ 对应旋转 $90^\circ$ 的矩阵 $\begin{bmatrix}0&-1\\1&0\end{bmatrix}$，它的平方是 $-I$；$\bar z$ 对应**转置**；$|z|^2$ 对应**行列式**；极形式对应
 
 $$
-T(re^{\mathrm{i}\theta})=r\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix},
+T(r\mathrm{e}^{\mathrm{i}\theta})=r\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix},
 $$
 
-即伸缩矩阵 $rI$ 与旋转矩阵之积，这正是复数乘法的几何意义。把 $z=re^{\mathrm{i}\theta}$ 推广到矩阵，就是 [第 13 章](/2.1.13) 的极分解 $A=Re^{\mathrm{i}M}$（$R$ 半正定，$e^{\mathrm{i}M}$ 是酉矩阵）；矩阵 $\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 则是 [第 12 章](/2.1.12) 中二阶实正规矩阵的典型。
+即伸缩矩阵 $rI$ 与旋转矩阵之积，这正是复数乘法的几何意义。把 $z=r\mathrm{e}^{\mathrm{i}\theta}$ 推广到矩阵，就是 [第 13 章](/2.1.13) 的极分解 $A=R\mathrm{e}^{\mathrm{i}M}$（$R$ 半正定，$\mathrm{e}^{\mathrm{i}M}$ 是酉矩阵）；矩阵 $\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 则是 [第 12 章](/2.1.12) 中二阶实正规矩阵的典型。
 
 ### 9.1.4. 复数的幂与方根
 
-对实数 $\alpha$ 和 $z=re^{\mathrm{i}\theta}\neq0$，由 $z=re^{\mathrm{i}(\theta+2k\pi)}$，定义
+对实数 $\alpha$ 和 $z=r\mathrm{e}^{\mathrm{i}\theta}\neq0$，由 $z=r\mathrm{e}^{\mathrm{i}(\theta+2k\pi)}$，定义
 
 $$
-z^\alpha=r^\alpha e^{\mathrm{i}\alpha(\theta+2k\pi)},\qquad k\in\mathbb{Z}.
+z^\alpha=r^\alpha \mathrm{e}^{\mathrm{i}\alpha(\theta+2k\pi)},\qquad k\in\mathbb{Z}.
 $$
 
 它可能有多个值：
 
-- $\alpha\in\mathbb{Z}$ 时，$e^{2\mathrm{i}\alpha k\pi}=1$，$z^\alpha=r^\alpha e^{\mathrm{i}\alpha\theta}$ 只有一个值；
-- $\alpha=q/p$（$p>0$，$p,q$ 互素）时，$z^\alpha=r^\alpha e^{\mathrm{i}(q\theta+2qk\pi)/p}$ 随 $k$ 以 $p$ 为周期变化，恰有 $p$ 个值（$k=0,1,\dots,p-1$）；
-- $\alpha\notin\mathbb{Q}$ 时，不同的 $k$ 给出不同的值，$z^\alpha$ 有无穷多个值。例如 $\mathrm{i}=e^{\mathrm{i}(\pi/2+2k\pi)}$，所以 $\mathrm{i}^\pi=e^{\mathrm{i}(\pi^2/2+2k\pi^2)}$，$k\in\mathbb{Z}$。
+- $\alpha\in\mathbb{Z}$ 时，$\mathrm{e}^{2\mathrm{i}\alpha k\pi}=1$，$z^\alpha=r^\alpha \mathrm{e}^{\mathrm{i}\alpha\theta}$ 只有一个值；
+- $\alpha=q/p$（$p>0$，$p,q$ 互素）时，$z^\alpha=r^\alpha \mathrm{e}^{\mathrm{i}(q\theta+2qk\pi)/p}$ 随 $k$ 以 $p$ 为周期变化，恰有 $p$ 个值（$k=0,1,\dots,p-1$）；
+- $\alpha\notin\mathbb{Q}$ 时，不同的 $k$ 给出不同的值，$z^\alpha$ 有无穷多个值。例如 $\mathrm{i}=\mathrm{e}^{\mathrm{i}(\pi/2+2k\pi)}$，所以 $\mathrm{i}^\pi=\mathrm{e}^{\mathrm{i}(\pi^2/2+2k\pi^2)}$，$k\in\mathbb{Z}$。
 
 多值函数的系统处理（分支、Riemann 面）属于复变函数课程。最重要的是 $1$ 的方根。
 
-**定义 9.1.4（单位根）** 方程 $z^n=1$ 的 $n$ 个复根 $\omega_k=e^{2k\pi\mathrm{i}/n}$（$k=0,1,\dots,n-1$）称为 $n$ 次**单位根**。
+**定义 9.1.4（单位根）** 方程 $z^n=1$ 的 $n$ 个复根 $\omega_k=\mathrm{e}^{2k\pi\mathrm{i}/n}$（$k=0,1,\dots,n-1$）称为 $n$ 次**单位根**。
 
-记 $\omega=\omega_1=e^{2\pi\mathrm{i}/n}$，则 $\omega_k=\omega^k$，$n$ 次单位根是单位圆的内接正 $n$ 边形的顶点，且 $x^n-1=\prod_{k=0}^{n-1}(x-\omega^k)$。它们满足：
+记 $\omega=\omega_1=\mathrm{e}^{2\pi\mathrm{i}/n}$，则 $\omega_k=\omega^k$，$n$ 次单位根是单位圆的内接正 $n$ 边形的顶点，且 $x^n-1=\prod_{k=0}^{n-1}(x-\omega^k)$。它们满足：
 
 - $\bar\omega_k=\omega_{n-k}$（$\omega_k$ 的模为 $1$，故 $\bar\omega_k=\omega_k^{-1}$）；
 - $n\ge2$ 时 $1+\omega+\omega^2+\cdots+\omega^{n-1}=0$：由 $\omega\neq1$，等比数列求和得 $\frac{1-\omega^n}{1-\omega}=0$；几何上，正多边形的顶点向量之和为零。
@@ -141,9 +141,9 @@ $$
 | 复数 | 矩阵 | 章节 |
 |---|---|---|
 | $\mathbb{C}$ 上多项式完全分解 | 相似意义下的最简形：Jordan 标准形 | [第 10 章](/2.1.10) |
-| $e^z$ 等函数 | 矩阵函数 $e^A$、线性微分方程组 | [第 11 章](/2.1.11) |
+| $\mathrm{e}^z$ 等函数 | 矩阵函数 $\mathrm{e}^A$、线性微分方程组 | [第 11 章](/2.1.11) |
 | $\mathbb{R}^n$ 的标准正交基、正交矩阵、正交相似、实对称矩阵 | $\mathbb{C}^n$ 的标准正交基、酉矩阵、酉相似、正规矩阵 | [第 12 章](/2.1.12) |
-| 实数 $\bar z=z$，极形式 $z=re^{\mathrm{i}\theta}$ | Hermite 矩阵 $A^{\mathsf H}=A$，极分解 $A=Re^{\mathrm{i}M}$ | [第 13 章](/2.1.13) |
+| 实数 $\bar z=z$，极形式 $z=r\mathrm{e}^{\mathrm{i}\theta}$ | Hermite 矩阵 $A^{\mathsf H}=A$，极分解 $A=R\mathrm{e}^{\mathrm{i}M}$ | [第 13 章](/2.1.13) |
 
 ## 9.3. 一元多项式与带余除法
 
@@ -368,7 +368,7 @@ $u,v$ 不唯一：$u'=u+\frac gd$，$v'=v-\frac fd$（$d=(f,g)\neq0$）也满足
 
 **证明** 1：$g=f_1q_1=f_2q_2$，由 $uf_1+vf_2=1$，$g=ugf_1+vgf_2=uf_2q_2f_1+vf_1q_1f_2$，被 $f_1f_2$ 整除。2：由 $uf+vg=1$，$h=ufh+vgh$，两项都被 $f$ 整除。3：由 $d=uf+vg$ 两边除以 $d$ 得 $u\frac fd+v\frac gd=1$。4：由 $d=uf+vg$ 得 $td=u(tf)+v(tg)$，而 $td$ 是 $tf,tg$ 的首一公因式，被任一公因式整除，所以是最大公因式。5：把 $u_1f_1+v_1g=1$ 与 $u_2f_2+v_2g=1$ 相乘，得 $(u_1u_2)f_1f_2+(u_1f_1v_2+v_1u_2f_2+v_1v_2g)g=1$。$\square$
 
-**例 9.6.1** 证明 $x^3-1\mid x^{3k}-1$。$x^3-1=(x-1)(x-\omega)(x-\omega^2)$，$\omega=e^{2\pi\mathrm{i}/3}$，三个因式两两互素。$f=x^{3k}-1$ 满足 $f(1)=0$，$f(\omega)=\omega^{3k}-1=0$，$f(\omega^2)=0$，由余数定理每个因式都整除 $f$，由命题 9.6.1 的第 1 条，乘积整除 $f$。由整除与数域无关，这在 $\mathbb{Q}[x]$ 中也成立。
+**例 9.6.1** 证明 $x^3-1\mid x^{3k}-1$。$x^3-1=(x-1)(x-\omega)(x-\omega^2)$，$\omega=\mathrm{e}^{2\pi\mathrm{i}/3}$，三个因式两两互素。$f=x^{3k}-1$ 满足 $f(1)=0$，$f(\omega)=\omega^{3k}-1=0$，$f(\omega^2)=0$，由余数定理每个因式都整除 $f$，由命题 9.6.1 的第 1 条，乘积整除 $f$。由整除与数域无关，这在 $\mathbb{Q}[x]$ 中也成立。
 
 **例 9.6.2** 若 $(f,g)=1$，则对任意 $h$ 有 $(fh,g)=(h,g)$。记 $d=(fh,g)$，$d_1=(h,g)$。$d_1\mid h$，$d_1\mid g$，故 $d_1\mid fh$，$d_1\mid d$。反之 $(d,f)$ 整除 $f$ 与 $g$（因为 $d\mid g$），所以 $(d,f)=1$；由 $d\mid fh$ 与命题 9.6.1 的第 2 条，$d\mid h$，于是 $d\mid d_1$。二者都是首一的，故 $d=d_1$。
 
@@ -450,7 +450,7 @@ $$
 
 特别地，奇数次实系数多项式必有实根，所以奇数阶实矩阵必有实特征值。
 
-**例 9.8.1** $x^4+2$ 在 $\mathbb{R}$ 上可约吗？它的复根是 $\sqrt[4]2\,e^{\mathrm{i}(2k+1)\pi/4}$（$k=0,1,2,3$），两两共轭。把共轭的一对合并：$e^{\mathrm{i}\pi/4}$ 与 $e^{-\mathrm{i}\pi/4}$ 给出 $x^2-2\sqrt[4]2\cos\frac\pi4\,x+\sqrt2=x^2-2^{3/4}x+\sqrt2$，另一对给出 $x^2+2^{3/4}x+\sqrt2$，所以
+**例 9.8.1** $x^4+2$ 在 $\mathbb{R}$ 上可约吗？它的复根是 $\sqrt[4]2\,\mathrm{e}^{\mathrm{i}(2k+1)\pi/4}$（$k=0,1,2,3$），两两共轭。把共轭的一对合并：$\mathrm{e}^{\mathrm{i}\pi/4}$ 与 $\mathrm{e}^{-\mathrm{i}\pi/4}$ 给出 $x^2-2\sqrt[4]2\cos\frac\pi4\,x+\sqrt2=x^2-2^{3/4}x+\sqrt2$，另一对给出 $x^2+2^{3/4}x+\sqrt2$，所以
 
 $$
 x^4+2=\big(x^2-2^{3/4}x+\sqrt2\big)\big(x^2+2^{3/4}x+\sqrt2\big).
@@ -568,8 +568,8 @@ $$
 
 | 主题 | 核心结论 | 算法与代价 |
 |---|---|---|
-| 复数 | $z=a+b\mathrm{i}=re^{\mathrm{i}\theta}$；乘法 = 旋转与伸缩；$z\mapsto\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 是单的环同态 | 用指数形式计算 $z^n$ |
-| 幂与方根 | $z^{q/p}$ 有 $p$ 个值；$n$ 次单位根 $e^{2k\pi\mathrm{i}/n}$，和为零 | — |
+| 复数 | $z=a+b\mathrm{i}=r\mathrm{e}^{\mathrm{i}\theta}$；乘法 = 旋转与伸缩；$z\mapsto\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 是单的环同态 | 用指数形式计算 $z^n$ |
+| 幂与方根 | $z^{q/p}$ 有 $p$ 个值；$n$ 次单位根 $\mathrm{e}^{2k\pi\mathrm{i}/n}$，和为零 | — |
 | 复矩阵 | $A^{\mathsf H}=\bar A^{\mathsf T}$，$\boldsymbol{x}^{\mathsf H}\boldsymbol{x}>0$；复向量空间 $\dim_{\mathbb{R}}V=2\dim_{\mathbb{C}}V$ | — |
 | 带余除法 | $f=qg+r$ 唯一；整除、最大公因式与数域无关 | 长除法 |
 | 余数定理 | $x-a$ 除 $f$ 余 $f(a)$；$a$ 为重根 ⇔ $f(a)=f'(a)=0$ | 综合除法（Horner）：$n$ 次乘法；按 $x-a$ 展开：$\frac{n(n+1)}2$ 次 |

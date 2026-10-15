@@ -28,7 +28,7 @@ title: 概率空间、条件概率
 **定义**：设$(\Omega, \mathcal{F})$是可测空间，$\mathbb{P}$是定义在$\mathcal{F}$上的函数，如果满足：
 1. **非负性**：对任意的$A \in \mathcal{F}, \mathbb{P}(A) \geq 0$
 2. **归一化**：$\mathbb{P}(\Omega) = 1$
-3. **可列可加性**：对于互不相交的事件$A_1, A_2, ...,$，有
+3. **可列可加性**：对于互不相交的事件$A_1, A_2, \dots,$，有
    $$
    \mathbb{P} \left( \bigcup_{n=1}^{\infty} A_n \right) = \sum_{n=1}^{\infty} \mathbb{P}(A_n)
    $$
@@ -37,7 +37,7 @@ title: 概率空间、条件概率
 
 ### 2.1.4. 概率空间示例
 1. **掷硬币**：$\Omega = \{H, T\}, \mathcal{F} = \{\Omega, \emptyset, \{H\}, \{T\}\}$
-2. **掷骰子**：$\Omega = \{1, 2, ..., 6\}, \mathcal{F} = 2^\Omega$（幂集）
+2. **掷骰子**：$\Omega = \{1, 2, \dots, 6\}, \mathcal{F} = 2^\Omega$（幂集）
 3. **反复掷硬币**：$\Omega = \{T^n H: n \geq 0\} \cup \{T^\infty\}$
 
 ## 2.2. 概率的连续性
@@ -96,9 +96,9 @@ $$
 ## 2.4. 乘法公式
 
 ### 2.4.1. 定理
-设$A_i \in \mathcal{F}$，$i = 1, ..., n$，且$\mathbb{P}(A_1 \cap A_2 \cap ... \cap A_{n-1}) > 0$，则
+设$A_i \in \mathcal{F}$，$i = 1, \dots, n$，且$\mathbb{P}(A_1 \cap A_2 \cap \dots \cap A_{n-1}) > 0$，则
 $$
-\mathbb{P} \left( \bigcap_{i=1}^n A_i \right) = \mathbb{P}(A_1) \prod_{i=2}^n \mathbb{P}(A_i | A_1 \cap A_2 \cap ... \cap A_{i-1})
+\mathbb{P} \left( \bigcap_{i=1}^n A_i \right) = \mathbb{P}(A_1) \prod_{i=2}^n \mathbb{P}(A_i | A_1 \cap A_2 \cap \dots \cap A_{i-1})
 $$
 
 ### 2.4.2. 序贯树形图计算法
@@ -112,7 +112,7 @@ $n$封信装入$n$个信封，每个信封任意写地址：
   $$
   \mathbb{P} \left( \bigcup_{i=1}^n A_i \right) = 1 - \frac{1}{2!} + \frac{1}{3!} - \cdots + (-1)^{n-1} \frac{1}{n!}
   $$
-- 当$n \to \infty$时，$q_0 \approx e^{-1}$
+- 当$n \to \infty$时，$q_0 \approx \mathrm{e}^{-1}$
 
 ## 2.5. 全概率公式
 
@@ -146,7 +146,7 @@ $$
 ### 2.6.1. 定理
 设$\{A_i\}$是$\Omega$的一个分割，且$\mathbb{P}(B) > 0$，$\mathbb{P}(A_i) > 0$，则
 $$
-\mathbb{P}(A_i|B) = \frac{\mathbb{P}(A_i)\mathbb{P}(B|A_i)}{\sum_{j=1}^n \mathbb{P}(A_j)\mathbb{P}(B|A_j)}, \quad i = 1, ..., n
+\mathbb{P}(A_i|B) = \frac{\mathbb{P}(A_i)\mathbb{P}(B|A_i)}{\sum_{j=1}^n \mathbb{P}(A_j)\mathbb{P}(B|A_j)}, \quad i = 1, \dots, n
 $$
 
 特别地：

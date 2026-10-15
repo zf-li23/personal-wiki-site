@@ -11,13 +11,13 @@ title: 导数与微分
 **4.2 导数的运算法则**
 
 -   **四则运算**：$(u \pm v)' = u' \pm v'$；$(uv)' = u'v + uv'$；$(u/v)' = (u'v - uv')/v^2$。
--   **复合函数求导**：链式法则 $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$。
+-   **复合函数求导**：链式法则 $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u} \cdot \frac{\mathrm{d}u}{\mathrm{d}x}$。
 -   **对数求导法**：用于幂指函数 $u(x)^{v(x)}$。
--   **反函数求导**：$\frac{dx}{dy} = \frac{1}{dy/dx}$。
+-   **反函数求导**：$\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{dy/dx}$。
 
 **4.3 特殊的求导法则**
 
--   **参数方程求导**：$\frac{dy}{dx} = \frac{y'(t)}{x'(t)}$。
+-   **参数方程求导**：$\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{y'(t)}{x'(t)}$。
 -   **隐函数求导**：方程两边同时对 $x$ 求导，解出 $y'$。
 
 **4.4 高阶导数**

@@ -160,13 +160,13 @@ $$
 
 系数矩阵是 **Vandermonde 矩阵**，可逆，所以 $k_i$ 全为零。因此 $1,x,\dots,x^{n-1}$ 是 $F[x]_n$ 的基，$\dim F[x]_n=n$；由 $n$ 的任意性，$F[x]$、$C^\infty(D)$、$C(D)$ 与函数空间都是无限维的。
 
-**例 8.3.4** $C^\infty(\mathbb{R})$ 中，对相异实数 $\lambda_1,\lambda_2$，$e^{\lambda_1x},e^{\lambda_2x}$ 线性无关。设 $k_1e^{\lambda_1x}+k_2e^{\lambda_2x}=0$（零函数），求导得 $k_1\lambda_1e^{\lambda_1x}+k_2\lambda_2e^{\lambda_2x}=0$，即
+**例 8.3.4** $C^\infty(\mathbb{R})$ 中，对相异实数 $\lambda_1,\lambda_2$，$\mathrm{e}^{\lambda_1x},\mathrm{e}^{\lambda_2x}$ 线性无关。设 $k_1\mathrm{e}^{\lambda_1x}+k_2\mathrm{e}^{\lambda_2x}=0$（零函数），求导得 $k_1\lambda_1\mathrm{e}^{\lambda_1x}+k_2\lambda_2\mathrm{e}^{\lambda_2x}=0$，即
 
 $$
-\begin{bmatrix}e^{\lambda_1x}&e^{\lambda_2x}\\\lambda_1e^{\lambda_1x}&\lambda_2e^{\lambda_2x}\end{bmatrix}\begin{bmatrix}k_1\\k_2\end{bmatrix}=\boldsymbol{0},
+\begin{bmatrix}\mathrm{e}^{\lambda_1x}&\mathrm{e}^{\lambda_2x}\\\lambda_1\mathrm{e}^{\lambda_1x}&\lambda_2\mathrm{e}^{\lambda_2x}\end{bmatrix}\begin{bmatrix}k_1\\k_2\end{bmatrix}=\boldsymbol{0},
 $$
 
-系数矩阵的**行列式** $e^{(\lambda_1+\lambda_2)x}(\lambda_2-\lambda_1)\neq0$，故 $k_1=k_2=0$。对相异实数 $\lambda_1,\dots,\lambda_n$，求导 $n-1$ 次得到的系数行列式是 $e^{(\lambda_1+\cdots+\lambda_n)x}$ 乘一个 Vandermonde 行列式，同理 $e^{\lambda_1x},\dots,e^{\lambda_nx}$ 线性无关。这一方法（Wronski 矩阵）在 [第 11 章](/2.1.11) 中用于判定函数向量的线性相关性。
+系数矩阵的**行列式** $\mathrm{e}^{(\lambda_1+\lambda_2)x}(\lambda_2-\lambda_1)\neq0$，故 $k_1=k_2=0$。对相异实数 $\lambda_1,\dots,\lambda_n$，求导 $n-1$ 次得到的系数行列式是 $\mathrm{e}^{(\lambda_1+\cdots+\lambda_n)x}$ 乘一个 Vandermonde 行列式，同理 $\mathrm{e}^{\lambda_1x},\dots,\mathrm{e}^{\lambda_nx}$ 线性无关。这一方法（Wronski 矩阵）在 [第 11 章](/2.1.11) 中用于判定函数向量的线性相关性。
 
 ## 8.4. 线性映射
 
@@ -201,7 +201,7 @@ $f+g$、$kf$、$gf$ 仍是线性映射，$\operatorname{Hom}(U,V)$ 关于加法�
 - **转置** $F^{m\times n}\to F^{n\times m}$，$A\mapsto A^{\mathsf T}$ 与取**迹** $F^{n\times n}\to F$，$A\mapsto\operatorname{trace}A$ 都是线性映射。
 - 在 $n$ 个两两不同的点取值：$C(\mathbb{R})\to\mathbb{R}^n$，$f\mapsto[f(x_i)]$ 是线性映射；插值问题就是问它限制在 $\mathbb{R}[x]_n$ 上是否为双射（例 8.3.3 说明是）。
 - 对称化 $S:F^{n\times n}\to F^{n\times n}$，$A\mapsto\frac12(A+A^{\mathsf T})$ 是线性变换，$\mathcal{N}(S)$ 与 $\mathcal{R}(S)$ 分别是反对称、对称矩阵构成的子空间。由 $S^2=S$，特征值满足 $\lambda^2=\lambda$，所以只能是 $1,0$，相应的特征子空间为 $\mathcal{N}(I-S)=\mathcal{R}(S)$ 与 $\mathcal{N}(S)$。
-- 在 $C^\infty(\mathbb{R})$ 上，求导算子 $D=\frac{\mathrm{d}}{\mathrm{d}x}$ 是线性变换，$\mathcal{N}(D)$ 是常值函数构成的子空间。由 $(\lambda I-D)f=0$，即 $f'=\lambda f$，解得 $f=ke^{\lambda x}$，所以每个实数 $\lambda$ 都是 $D$ 的特征值，$e^{\lambda x}$ 是相应的特征向量。结合命题 8.4.2，这再次证明了例 8.3.4。
+- 在 $C^\infty(\mathbb{R})$ 上，求导算子 $D=\frac{\mathrm{d}}{\mathrm{d}x}$ 是线性变换，$\mathcal{N}(D)$ 是常值函数构成的子空间。由 $(\lambda I-D)f=0$，即 $f'=\lambda f$，解得 $f=k\mathrm{e}^{\lambda x}$，所以每个实数 $\lambda$ 都是 $D$ 的特征值，$\mathrm{e}^{\lambda x}$ 是相应的特征向量。结合命题 8.4.2，这再次证明了例 8.3.4。
 - $V=\left\{\begin{bmatrix}a&-b\\b&a\end{bmatrix}\,\middle|\,a,b\in\mathbb{R}\right\}$ 是 $\mathbb{R}^{2\times2}$ 的子空间，$\mathbb{C}\to V$，$a+b\mathrm{i}\mapsto\begin{bmatrix}a&-b\\b&a\end{bmatrix}$ 是 $\mathbb{R}$ 上线性空间之间的双射线性映射，并且保持乘法（[第 9 章](/2.1.9)）。
 - 给定可逆矩阵 $T\in F^{n\times n}$，$\boldsymbol{x}\mapsto T\boldsymbol{x}$ 是 $F^n$ 到自身的可逆线性变换。
 
@@ -426,7 +426,7 @@ $$
 
 在基 $\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ 下，$S$ 的矩阵是 $\operatorname{diag}(1,1,1,0)$。
 
-**例 8.7.2** 例 8.6.2 中 $D$ 在 $\operatorname{span}(1,\sin x,\cos x)$ 上的矩阵的特征多项式是 $\lambda(\lambda^2+1)$，在 $\mathbb{R}$ 上只有特征值 $0$，所以 $D$ 在实数域上不能对角化。若允许复系数，$e^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ 与 $e^{-\mathrm{i}x}$ 是属于 $\pm\mathrm{i}$ 的特征向量，$D$ 在基 $1,e^{\mathrm{i}x},e^{-\mathrm{i}x}$ 下的矩阵是 $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$。能否对角化取决于数域，这是 [第 9 章](/2.1.9) 讨论复数与多项式分解的原因。
+**例 8.7.2** 例 8.6.2 中 $D$ 在 $\operatorname{span}(1,\sin x,\cos x)$ 上的矩阵的特征多项式是 $\lambda(\lambda^2+1)$，在 $\mathbb{R}$ 上只有特征值 $0$，所以 $D$ 在实数域上不能对角化。若允许复系数，$\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ 与 $\mathrm{e}^{-\mathrm{i}x}$ 是属于 $\pm\mathrm{i}$ 的特征向量，$D$ 在基 $1,\mathrm{e}^{\mathrm{i}x},\mathrm{e}^{-\mathrm{i}x}$ 下的矩阵是 $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$。能否对角化取决于数域，这是 [第 9 章](/2.1.9) 讨论复数与多项式分解的原因。
 
 本课程中矩阵的几种等价关系，都可以理解为同一个对象在不同基下的表示：
 

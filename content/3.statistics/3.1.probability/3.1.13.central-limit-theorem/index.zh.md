@@ -23,13 +23,13 @@ $$
 **定理 13.2.1（中心极限定理）**
 设 $\{X_n\}$ 是独立同分布的随机变量序列，其期望为 $\mu$，方差为 $\sigma^2 < \infty$，记 $S_n = X_1 + \cdots + X_n$，则
 $$
-\frac{S_n - E(S_n)}{\sqrt{var(S_n)}} \overset{d}{\to} N(0,1)
+\frac{S_n - \mathbb{E}(S_n)}{\sqrt{var(S_n)}} \overset{d}{\to} N(0,1)
 $$
 
 **等价形式**
 样本均值 $M_n = \frac{1}{n} \sum_{i=1}^n X_i$ 满足：
 $$
-\frac{M_n - E(M_n)}{\sqrt{var(M_n)}} \overset{d}{\to} N(0,1)
+\frac{M_n - \mathbb{E}(M_n)}{\sqrt{var(M_n)}} \overset{d}{\to} N(0,1)
 $$
 
 ### 13.2.2. 近似分布
@@ -41,7 +41,7 @@ $$
 ## 13.3. 定理证明
 
 ### 13.3.1. 证明思路
-令 $Y_k = \frac{X_k - \mu}{\sigma}$，则 $\{Y_k\}$ 独立同分布，$EY_k = 0$，$var(Y_k) = 1$。
+令 $Y_k = \frac{X_k - \mu}{\sigma}$，则 $\{Y_k\}$ 独立同分布，$\mathbb{E}Y_k = 0$，$\operatorname{Var}(Y_k) = 1$。
 
 考虑标准化和：
 $$
@@ -63,7 +63,7 @@ $$
 
 标准化和的特征函数：
 $$
-\phi_n(t) = \left[\phi\left(\frac{t}{\sqrt{n}}\right)\right]^n = \left(1 - \frac{t^2}{2n} + o\left(\frac{t^2}{n}\right)\right)^n \to e^{-t^2/2}
+\phi_n(t) = \left[\phi\left(\frac{t}{\sqrt{n}}\right)\right]^n = \left(1 - \frac{t^2}{2n} + o\left(\frac{t^2}{n}\right)\right)^n \to \mathrm{e}^{-t^2/2}
 $$
 
 ## 13.4. 理论拓展
@@ -78,7 +78,7 @@ $$
 
 则中心极限定理成立的充分必要条件是 Lindeberg 条件：
 $$
-\lim_{n \to \infty} \frac{1}{B_n^2} \sum_{k=1}^n E[(X_k - EX_k)^2 I_{\{|X_k - EX_k| > \varepsilon B_n\}}] = 0
+\lim_{n \to \infty} \frac{1}{B_n^2} \sum_{k=1}^n \mathbb{E}[(X_k - \mathbb{E}X_k)^2 I_{\{|X_k - \mathbb{E}X_k| > \varepsilon B_n\}}] = 0
 $$
 
 ### 13.4.2. 理论意义

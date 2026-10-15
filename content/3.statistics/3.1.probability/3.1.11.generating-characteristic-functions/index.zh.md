@@ -8,7 +8,7 @@ title: 概率母函数、矩母函数、特征函数
 
 设 $X$ 是取非负整值的随机变量，称
 $$
-g(s) = E(s^X) = \sum_{j=0}^{\infty} s^j P(X = j), \quad s \in [-1,1]
+g(s) = \mathbb{E}(s^X) = \sum_{j=0}^{\infty} s^j \mathbb{P}(X = j), \quad s \in [-1,1]
 $$
 为 $X$ 的概率母函数，约定 $0^0 = 1$。
 
@@ -18,7 +18,7 @@ $$
 
 1. 
 $$
-g(s) = E(s^X) = \sum_{j=0}^{\infty} s^j \mathbb{P}(X = j), \quad s \in [-1,1]
+g(s) = \mathbb{E}(s^X) = \sum_{j=0}^{\infty} s^j \mathbb{P}(X = j), \quad s \in [-1,1]
 $$
 
 $$
@@ -27,12 +27,12 @@ $$
 
 2. 
 $$
-E(X) = g^{(1)}(1)
+\mathbb{E}(X) = g^{(1)}(1)
 $$
 
-3. 如果 $E(X) < \infty$，则
+3. 如果 $\mathbb{E}(X) < \infty$，则
 $$
-var(X) = g^{(2)}(1) + g^{(1)}(1) - [g^{(1)}(1)]^2
+\operatorname{Var}(X) = g^{(2)}(1) + g^{(1)}(1) - [g^{(1)}(1)]^2
 $$
 
 4. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的概率母函数为
@@ -47,9 +47,9 @@ $$
 g(s) = (q + sp)^n, \quad q = 1-p
 $$
 
-- Poisson分布 $P(\lambda)$：
+- Poisson分布 $\mathbb{P}(\lambda)$：
 $$
-g(s) = e^{\lambda(s-1)}
+g(s) = \mathrm{e}^{\lambda(s-1)}
 $$
 
 - 几何分布 $G(p)$：
@@ -74,18 +74,18 @@ $$
 
 设 $X$ 是随机变量，称
 $$
-M_X(s) = E(e^{sX})
+M_X(s) = \mathbb{E}(\mathrm{e}^{sX})
 $$
 为 $X$ 的矩母函数。
 
 - 离散型：
 $$
-M_X(s) = \sum_j e^{sx_j} \mathbb{P}(X = x_j)
+M_X(s) = \sum_j \mathrm{e}^{sx_j} \mathbb{P}(X = x_j)
 $$
 
 - 连续型：
 $$
-M_X(s) = \int_{-\infty}^{\infty} e^{sx} f_X(x) dx
+M_X(s) = \int_{-\infty}^{\infty} \mathrm{e}^{sx} f_X(x) \mathrm{d}x
 $$
 
 ### 11.2.2. 性质
@@ -94,12 +94,12 @@ $$
 
 1. $Y = aX + b$ 的矩母函数为
 $$
-M_Y(s) = e^{sb} M(sa)
+M_Y(s) = \mathrm{e}^{sb} M(sa)
 $$
 
 2. 
 $$
-EX^k = M^{(k)}(0), \quad k = 1, 2, \ldots, n
+\mathbb{E}X^k = M^{(k)}(0), \quad k = 1, 2, \ldots, n
 $$
 3. 可逆性：如果存在正数 $a$，使得对任意 $s \in [-a, a]$ 有 $M(s) < \infty$，则 $M(s)$ 唯一决定 $X$ 的分布
 
@@ -115,7 +115,7 @@ M(s) = \frac{\lambda}{\lambda - s}, \quad s < \lambda
 $$
 - 正态分布 $N(\mu, \sigma^2)$：
 $$
-M(s) = e^{\mu s + \frac{\sigma^2 s^2}{2}}
+M(s) = \mathrm{e}^{\mu s + \frac{\sigma^2 s^2}{2}}
 $$
 ### 11.2.4. 随机个随机变量之和
 
@@ -125,7 +125,7 @@ W = X_1 + \cdots + X_N
 $$
 的矩母函数为
 $$
-M_W(s) = E[(M_X(s))^N]
+M_W(s) = \mathbb{E}[(M_X(s))^N]
 $$
 ## 11.3. 特征函数
 
@@ -133,13 +133,13 @@ $$
 
 对随机变量 $X$，称
 $$
-\phi(t) = E(e^{itX}) = E \cos(tX) + iE \sin(tX), \quad t \in \mathbb{R}
+\phi(t) = \mathbb{E}(\mathrm{e}^{itX}) = E \cos(tX) + iE \sin(tX), \quad t \in \mathbb{R}
 $$
 为 $X$ 的特征函数，其中 $i = \sqrt{-1}$。
 
 ### 11.3.2. 性质
 
-设 $\phi(t) = E(e^{itX})$，则：
+设 $\phi(t) = \mathbb{E}(\mathrm{e}^{itX})$，则：
 
 1. 
 $$
@@ -147,13 +147,13 @@ $$
 $$
 2. $\phi(t)$ 在 $(-\infty, \infty)$ 上一致连续
 
-3. 如果 $E(|X|^k) < \infty$，则
+3. 如果 $\mathbb{E}(|X|^k) < \infty$，则
 $$
-\phi^{(k)}(t) = i^k E(X^k e^{itX}), \quad \phi^{(k)}(0) = i^k E(X^k)
+\phi^{(k)}(t) = i^k \mathbb{E}(X^k \mathrm{e}^{itX}), \quad \phi^{(k)}(0) = i^k \mathbb{E}(X^k)
 $$
 4. 对任意常数 $a, b$，有
 $$
-\phi_{aX+b}(t) = e^{itb} \phi_X(at)
+\phi_{aX+b}(t) = \mathrm{e}^{itb} \phi_X(at)
 $$
 5. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的特征函数为
 $$
@@ -163,19 +163,19 @@ $$
 
 - 二项分布 $B(n, p)$：
 $$
-\phi(t) = (q + pe^{it})^n
+\phi(t) = (q + p\mathrm{e}^{it})^n
 $$
 - Poisson分布 $\mathcal{P}(\lambda)$：
 $$
-\phi(t) = e^{\lambda(e^{it}-1)}
+\phi(t) = \mathrm{e}^{\lambda(\mathrm{e}^{it}-1)}
 $$
 - 几何分布 $G(p)$：
 $$
-\phi(t) = \frac{pe^{it}}{1 - qe^{it}}
+\phi(t) = \frac{p\mathrm{e}^{it}}{1 - q\mathrm{e}^{it}}
 $$
 - 均匀分布 $U(a, b)$：
 $$
-\phi(t) = \frac{e^{itb} - e^{ita}}{it(b-a)}
+\phi(t) = \frac{\mathrm{e}^{itb} - \mathrm{e}^{ita}}{it(b-a)}
 $$
 - 指数分布 $\mathcal{E}(\lambda)$：
 $$
@@ -187,14 +187,14 @@ $$
 $$
 - Cauchy分布：
 $$
-\phi(t) = e^{-|t|}
+\phi(t) = \mathrm{e}^{-|t|}
 $$
 ### 11.3.4. 特征函数与分布函数
 
 - 随机变量的特征函数和分布函数相互唯一决定
 - 逆转公式：如果 $F(x)$ 在 $a, b$ 连续，则
 $$
-\frac{1}{2\pi} \lim_{T \to \infty} \int_{-T}^{T} \frac{e^{-ita} - e^{-itb}}{it} \phi(t) dt = F(b) - F(a)
+\frac{1}{2\pi} \lim_{T \to \infty} \int_{-T}^{\mathsf T} \frac{\mathrm{e}^{-ita} - \mathrm{e}^{-itb}}{it} \phi(t) \mathrm{d}t = F(b) - F(a)
 $$
 ### 11.3.5. 特征函数与独立性
 
@@ -222,11 +222,11 @@ $$
 
 | 分布                   | 概率母函数         | 矩母函数                             | 特征函数                                |
 | ---------------------- | ------------------ | ------------------------------------ | --------------------------------------- |
-| $B(n, p)$              | $(q + ps)^n$       | $(q + pe^s)^n$                       | $(q + pe^{it})^n$                       |
-| $\mathcal{P}(\lambda)$ | $e^{\lambda(s-1)}$ | $e^{\lambda(e^s-1)}$                 | $e^{\lambda(e^{it}-1)}$                 |
-| $G(p)$                 | $\frac{sp}{1-sq}$  | -                                    | $\frac{pe^{it}}{1 - qe^{it}}$           |
+| $B(n, p)$              | $(q + ps)^n$       | $(q + p\mathrm{e}^s)^n$                       | $(q + p\mathrm{e}^{it})^n$                       |
+| $\mathcal{P}(\lambda)$ | $\mathrm{e}^{\lambda(s-1)}$ | $\mathrm{e}^{\lambda(\mathrm{e}^s-1)}$                 | $\mathrm{e}^{\lambda(\mathrm{e}^{it}-1)}$                 |
+| $G(p)$                 | $\frac{sp}{1-sq}$  | -                                    | $\frac{p\mathrm{e}^{it}}{1 - q\mathrm{e}^{it}}$           |
 | $\mathcal{E}(\lambda)$ | -                  | $\frac{\lambda}{\lambda-s}$          | $(1 - \frac{it}{\lambda})^{-1}$         |
-| $N(\mu, \sigma^2)$     | -                  | $e^{\mu s + \frac{\sigma^2 s^2}{2}}$ | $e^{i\mu t - \frac{1}{2} \sigma^2 t^2}$ |
+| $N(\mu, \sigma^2)$     | -                  | $\mathrm{e}^{\mu s + \frac{\sigma^2 s^2}{2}}$ | $\mathrm{e}^{i\mu t - \frac{1}{2} \sigma^2 t^2}$ |
 
 ### 应用技巧
 

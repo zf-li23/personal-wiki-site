@@ -36,4 +36,4 @@ title: 极限论
 -   **无穷小量**：极限为零的量。有限个无穷小的和、积仍为无穷小；有界量与无穷小之积为无穷小；无穷小的倒数为无穷大。
 -   **阶的比较**：
     -   等价无穷小：$f(x) \sim g(x)$ 若 $\lim \frac{f(x)}{g(x)} = 1$。
-    -   常用等价无穷小 ($x \to 0$)：$x \sim \sin x \sim \tan x \sim \arcsin x \sim \arctan x \sim \ln(1+x) \sim e^x - 1$；$1-\cos x \sim \frac{1}{2}x^2$；$(1+x)^k - 1 \sim kx$。
+    -   常用等价无穷小 ($x \to 0$)：$x \sim \sin x \sim \tan x \sim \arcsin x \sim \arctan x \sim \ln(1+x) \sim \mathrm{e}^x - 1$；$1-\cos x \sim \frac{1}{2}x^2$；$(1+x)^k - 1 \sim kx$。

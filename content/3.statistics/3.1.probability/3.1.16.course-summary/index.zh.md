@@ -18,9 +18,9 @@ title: 课程总结
 - 随机向量函数的分布、次序统计量
 
 ### 16.1.4. 数值特征
-- 期望 $EX$、方差 $var(X)$
-- 协方差 $\text{cov}(X,Y)$、相关系数
-- 条件期望 $E(X|Y)$、条件方差 $var(X|Y)$
+- 期望 $\mathbb{E}X$、方差 $\operatorname{Var}(X)$
+- 协方差 $\operatorname{Cov}(X,Y)$、相关系数
+- 条件期望 $\mathbb{E}(X|Y)$、条件方差 $\operatorname{Var}(X|Y)$
 
 ### 16.1.5. 极限理论
 - 收敛性：依分布、依概率、几乎处处收敛
@@ -48,27 +48,27 @@ title: 课程总结
 
 ### 16.2.3. 多元分布
 - 多项分布
-- 多元正态分布 $N(\vec{\mu},\Sigma)$
+- 多元正态分布 $N(\boldsymbol{\mu},\Sigma)$
 
 ## 16.3. 核心定理与公式
 
 ### 16.3.1. 不等式
 - Markov不等式：$\mathbb{P}(|X| \geq a) \leq \frac{E|X|}{a}$
-- Chebyshev不等式：$\mathbb{P}(|X-EX| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}$
-- Cauchy-Schwarz不等式：$|E(XY)| \leq \sqrt{EX^2 \cdot EY^2}$
-- Jensen不等式：$g(EX) \leq Eg(X)$（$g$凸函数）
+- Chebyshev不等式：$\mathbb{P}(|X-\mathbb{E}X| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}$
+- Cauchy-Schwarz不等式：$|\mathbb{E}(XY)| \leq \sqrt{EX^2 \cdot \mathbb{E}Y^2}$
+- Jensen不等式：$g(\mathbb{E}X) \leq Eg(X)$（$g$凸函数）
 
 ### 16.3.2. 期望公式
-- 重期望法则：$EX = E[E(X|Y)]$
-- 全方差公式：$var(X) = var[E(X|Y)] + E[var(X|Y)]$
+- 重期望法则：$\mathbb{E}X = \mathbb{E}[\mathbb{E}(X|Y)]$
+- 全方差公式：$\operatorname{Var}(X) = \operatorname{Var}[\mathbb{E}(X|Y)] + \mathbb{E}[\operatorname{Var}(X|Y)]$
 
 ### 16.3.3. 收敛性关系
 - 几乎处处收敛 $\Rightarrow$ 依概率收敛 $\Rightarrow$ 依分布收敛
 - 常数情形：依分布收敛 $\Leftrightarrow$ 依概率收敛
 
 ### 16.3.4. 极限定理
-- 弱大数定律：$\frac{1}{n}\sum_{i=1}^n X_i \overset{p}{\to} EX_1$
-- 强大数定律：$\frac{1}{n}\sum_{i=1}^n X_i \overset{a.s.}{\to} EX_1$
+- 弱大数定律：$\frac{1}{n}\sum_{i=1}^n X_i \overset{p}{\to} \mathbb{E}X_1$
+- 强大数定律：$\frac{1}{n}\sum_{i=1}^n X_i \overset{a.s.}{\to} \mathbb{E}X_1$
 - 中心极限定理：$\frac{S_n - n\mu}{\sigma\sqrt{n}} \overset{d}{\to} N(0,1)$
 
 ## 16.4. 解题技巧与方法

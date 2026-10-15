@@ -190,7 +190,60 @@ terms:
 - 同名异义：同一个词在不同学科里指不同概念时（概率论的"特征函数"与集合的特征函数，图论的"匹配"），给词条加 `scope: ["3"]`（页面编号前缀，可写学科或课程），它只在这些页面里被识别。中文名或英文名相同的两个词条，范围不能重叠；或者一个不加范围，此时在另一个的范围内以带范围的为准（格论的 complement 与集合的 complement）。
 - 重要概念请加入词条库。`pnpm wiki terms` 列出尚无定义处的概念，以及"先使用、后定义"的情况（按阅读顺序，供调整章节顺序参考，不阻断构建）。
 
-## 7. 提交前
+## 7. 符号约定
+
+全站跨学科共用一套记号，以国际标准 **ISO 80000-2**（数学符号）、**ISO 80000-1**（物理量）和各领域通行教材为准：**字体表达语义**。同一个字母在不同学科表示不同对象时，尽量用不同字体区分（命题 $P$ 与概率 $\mathbb{P}$，边集 $E$ 与期望 $\mathbb{E}$）。确实无法避免的重名列在 §7.5。
+
+构建会检查公式中可以机械识别的违例并警告（规则见 `scripts/wiki/notation.ts`），其中没有歧义的由 `pnpm wiki fix` 自动改写；字体的语义本身无法自动判断，写作和修缮时按下表逐条核对。
+
+### 7.1 字体与含义
+
+| 字体 | TeX | 用于 | 例子 |
+|---|---|---|---|
+| 斜体（默认） | `x` | 变量、函数名、物理量、命题与谓词 | $x, f, A, t, m, P(x)$ |
+| 直立 | `\mathrm{}` | 数学常数、微分算子、单位、元素与粒子符号、单词构成的下标、分布名 | $\mathrm{e}, \mathrm{i}, \mathrm{d}x$；$\mathrm{mol}$；$x_{\max}$, $T_{\mathrm{c}}$；$\mathrm{Bin}(n,p)$ |
+| 运算符 | `\operatorname{}` | 多字母运算（`\det`、`\ker`、`\dim`、`\exp`、`\log` 等已有命令直接用） | $\operatorname{tr}, \operatorname{rank}, \operatorname{span}, \operatorname{diag}, \operatorname{sgn}, \operatorname{Var}, \operatorname{Cov}, \operatorname{Corr}$ |
+| 粗斜体 | `\boldsymbol{}` | $\mathbb{F}^n$ 中的列向量、随机向量、物理中的矢量、全 1 向量与示性函数 | $\boldsymbol{x}, \boldsymbol{X}, \boldsymbol{F}, \boldsymbol{1}, \boldsymbol{1}_A$ |
+| 黑板粗体 | `\mathbb{}` | 数集、一般数域、概率、期望 | $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}, \mathbb{F}$；$\mathbb{P}, \mathbb{E}$ |
+| 花体 | `\mathcal{}` | 集族与 σ-代数、映射空间、矩阵的列空间与零空间、正态分布 | $\mathcal{F}$, $\mathcal{L}(V,W)$, $\mathcal{R}(A), \mathcal{N}(A)$, $\mathcal{N}(\mu,\sigma^2)$ |
+| 哥特体 | `\mathfrak{}` | 李代数、素理想与极大理想 | $\mathfrak{g}, \mathfrak{sl}_2, \mathfrak{p}, \mathfrak{m}$ |
+| 无衬线 | `\mathsf{}` | 转置、共轭转置 | $A^{\mathsf T}, A^{\mathsf H}$ |
+| 手写体 | `\mathscr{}` | 积分变换 | $\mathscr{L}\{f\}$, $\mathscr{F}\{f\}$ |
+
+不要使用：`\vec`、`\mathbf`、`\bm`（向量一律 `\boldsymbol`；数集用 `\mathbb`）；`^T`、`^\top`、`'` 表示转置；`\Pr`；`\text{var}` 或裸写的 `var(`；公式里的 `...`（用 `\dots` 或 `\cdots`）；`\mathbb{1}`（KaTeX 不支持，示性函数写 $\boldsymbol{1}_A$）。
+
+### 7.2 数学
+
+- **常数与算子**：自然常数 $\mathrm{e}$、虚数单位 $\mathrm{i}$、微分 $\mathrm{d}$ 直立（$\mathrm{e}^{\mathrm{i}\theta}$，$\int f(x)\,\mathrm{d}x$，$\frac{\mathrm{d}y}{\mathrm{d}x}$）；作下标、求和指标的 $i$ 与群的单位元 $e$ 是变量，用斜体。$\pi$ 照常写 `\pi`。
+- **数集**：$\mathbb{N} = \{0, 1, 2, \dots\}$ 包含 0（ISO 80000-2），正整数写 $\mathbb{N}_+$；一般数域写 $\mathbb{F}$（不用中文教材常用的 $P$，以免与概率混淆）。
+- **线性代数**：矩阵用斜体大写 $A$（不加粗）；$\mathbb{F}^n$ 中的向量用粗斜体 $\boldsymbol{x}$；抽象线性空间用斜体大写 $V, W$，其元素用普通斜体 $v, w$，它在基 $B$ 下的坐标是粗体 $[v]_B \in \mathbb{F}^n$——粗体与否本身提示"具体还是抽象"。转置 $A^{\mathsf T}$，共轭转置 $A^{\mathsf H}$，伴随变换 $T^*$，对偶映射 $T^{\mathsf t}$；内积 $\langle x, y\rangle$，范数 $\|x\|$；复共轭 $\bar z$。
+- **集合与映射**：$f\colon A \to B$；空集 $\varnothing$；补集 $A^{\mathsf c}$；集合论中集合的特征函数可写 $\chi_A$。
+- **逻辑**：命题、谓词用斜体大写 $P, Q, R$；联结词 $\lnot, \land, \lor, \to, \leftrightarrow$。
+
+### 7.3 概率与统计
+
+- 概率 $\mathbb{P}(A)$，期望 $\mathbb{E}[X]$（或 $\mathbb{E}X$），方差 $\operatorname{Var}(X)$，协方差 $\operatorname{Cov}(X, Y)$，相关系数 $\operatorname{Corr}(X,Y)$，示性函数 $\boldsymbol{1}_A$。
+- 随机变量用斜体大写 $X$，观测值用小写 $x$；随机向量 $\boldsymbol{X}$，观测向量 $\boldsymbol{x}$；参数用希腊字母 $\theta, \mu, \sigma$，估计量加帽 $\hat\theta$，样本均值 $\bar X$。
+- 分布：$\mathcal{N}(\mu, \sigma^2)$、$\mathrm{Bin}(n,p)$、$\mathrm{Poi}(\lambda)$、$\mathrm{Exp}(\lambda)$、$\mathrm{U}(a,b)$、$\Gamma(\alpha,\lambda)$、$\mathrm{Beta}(\alpha,\beta)$、$\chi^2_n$、$t_n$、$F_{m,n}$；独立同分布 $\overset{\text{iid}}{\sim}$。
+- 收敛：$\xrightarrow{d}$（依分布）、$\xrightarrow{p}$（依概率）、$\xrightarrow{\text{a.s.}}$（几乎必然）。
+
+### 7.4 物理、化学与生物
+
+- **物理**：物理量斜体（$m, t, E$），矢量粗斜体（$\boldsymbol{F}, \boldsymbol{v}$），算符加帽（$\hat H$）；单位直立，与数值间留细空格（$3\,\mathrm{m\,s^{-1}}$）；常数斜体（$c, h, k_{\mathrm{B}}$，元电荷 $e$）；粒子符号直立；复共轭与厄米共轭按物理惯例写 $z^*$、$A^\dagger$。
+- **化学**：化学式与反应式写在 `\ce{}` 中（$\ce{H2O}$、$\ce{2H2 + O2 -> 2H2O}$），元素与电子 $\ce{e-}$ 自动直立；浓度 $[\ce{A}]$ 或 $c_{\mathrm{A}}$。
+- **生物**（正文，不是公式）：基因名斜体（*lacZ*），蛋白质名正体（LacZ）；物种学名斜体（*Escherichia coli*）。
+
+### 7.5 已知的重名
+
+| 记号 | 含义 | 靠什么区分 |
+|---|---|---|
+| $e$ / $\mathrm{e}$ / $e$ | 群的单位元 / 自然常数 / 元电荷 | 字体与学科 |
+| $\mathcal{N}(A)$ / $\mathcal{N}(\mu,\sigma^2)$ | 零空间 / 正态分布 | 参数 |
+| $\bar z$ / $\bar X$ | 复共轭 / 样本均值 | 对象 |
+| $V$ | 线性空间 / 图的顶点集 | 学科 |
+| $\mathcal{L}$ | 映射空间 $\mathcal{L}(V,W)$ / 物理中的拉格朗日量 | 学科 |
+
+## 8. 提交前
 
 ```bash
 pnpm check     # 内容（严格模式）+ 类型检查 + lint + 单元测试

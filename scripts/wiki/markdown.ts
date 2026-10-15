@@ -48,6 +48,7 @@ import {
   sectionAnchor,
   statementAnchor,
 } from './numbering.ts';
+import { checkNotation } from './notation.ts';
 import { PUBLIC_PATHS } from './paths.ts';
 import type { PlotResult, PlotResults } from './plots.ts';
 import type { ContentTree, PageSource } from './scan.ts';
@@ -154,6 +155,11 @@ function remarkWikiChecks(state: State) {
           'inline ```python-plot blocks are no longer supported: move the code to plots/<name>.py and embed it with ![caption](./plots/<name>.py)',
           line,
         );
+      }
+      if ((node.type === 'math' || node.type === 'inlineMath') && typeof node.value === 'string') {
+        for (const rule of checkNotation(node.value, state.ctx.page.id)) {
+          state.ctx.diag.warn(state.ctx.file, `notation (${rule.id}): write ${rule.advice}${rule.fix ? ' — `pnpm wiki fix` does this' : ''} (CONTENT_GUIDE §7)`, line);
+        }
       }
       if (state.ctx.contentLang === 'en' && hanText(node)) {
         state.ctx.diag.warn(state.ctx.file, `Chinese text on an English page: "${truncateText(hanText(node)!, 40)}" (translate it; sources belong in the front matter)`, line);

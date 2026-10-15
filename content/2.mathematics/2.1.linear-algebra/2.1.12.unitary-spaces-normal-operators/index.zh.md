@@ -86,7 +86,7 @@ $$
 
 所以在**标准正交基**下，坐标只需作内积，内积只需对坐标作标准内积：抽象的酉空间与 $\mathbb{C}^n$ 在计算上没有区别。
 
-**例 12.3.1** 设 $\omega = e^{2\pi i/3}$，$\mathbb{C}^3$ 取标准内积。向量
+**例 12.3.1** 设 $\omega = \mathrm{e}^{2\pi i/3}$，$\mathbb{C}^3$ 取标准内积。向量
 
 $$
 v_1 = \tfrac{1}{\sqrt3}(1, 1, 1)^{\mathsf T}, \qquad v_2 = \tfrac{1}{\sqrt3}(1, \omega, \omega^2)^{\mathsf T}, \qquad v_3 = \tfrac{1}{\sqrt3}(1, \omega^2, \omega^4)^{\mathsf T}
@@ -118,8 +118,8 @@ $$
 **例 12.3.3**
 
 1. 若 $Q$ 是实正交矩阵，$|z| = 1$，则 $zQ$ 是酉矩阵：$(zQ)^{\mathsf H}(zQ) = \bar zzQ^{\mathsf T}Q = I$。
-2. 若 $A^{\mathsf H} = A$，则 $e^{iA}$ 是酉矩阵：由幂级数定义 $(e^{iA})^{\mathsf H} = e^{(iA)^{\mathsf H}} = e^{-iA}$，而 $iA$ 与 $-iA$ 可交换，$e^{-iA}e^{iA} = e^O = I$（[第 11 章](/2.1.11)定理 11.8.1）。这是 $|e^{i\theta}| = 1$（$\theta$ 实）的矩阵版本。
-3. 例 12.3.1 的三个向量作为列，得到酉矩阵 $F_3 = \frac{1}{\sqrt3}(\omega^{jk})_{j,k=0,1,2}$。一般地 $F_n = \frac{1}{\sqrt n}(\omega_n^{jk})$（$\omega_n = e^{2\pi i/n}$）是离散 Fourier 变换的矩阵。直接计算 $F_nx$ 需要 $n^2$ 次乘法，快速 Fourier 变换利用 $F_n$ 的分块结构把代价降到 $O(n\log n)$。
+2. 若 $A^{\mathsf H} = A$，则 $\mathrm{e}^{iA}$ 是酉矩阵：由幂级数定义 $(\mathrm{e}^{iA})^{\mathsf H} = \mathrm{e}^{(iA)^{\mathsf H}} = \mathrm{e}^{-iA}$，而 $iA$ 与 $-iA$ 可交换，$\mathrm{e}^{-iA}\mathrm{e}^{iA} = \mathrm{e}^O = I$（[第 11 章](/2.1.11)定理 11.8.1）。这是 $|\mathrm{e}^{i\theta}| = 1$（$\theta$ 实）的矩阵版本。
+3. 例 12.3.1 的三个向量作为列，得到酉矩阵 $F_3 = \frac{1}{\sqrt3}(\omega^{jk})_{j,k=0,1,2}$。一般地 $F_n = \frac{1}{\sqrt n}(\omega_n^{jk})$（$\omega_n = \mathrm{e}^{2\pi i/n}$）是离散 Fourier 变换的矩阵。直接计算 $F_nx$ 需要 $n^2$ 次乘法，快速 Fourier 变换利用 $F_n$ 的分块结构把代价降到 $O(n\log n)$。
 
 ## 12.4. Gram–Schmidt 正交化
 

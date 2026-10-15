@@ -456,7 +456,7 @@ $$
 
 这个不等式（Weyl 不等式）的证明需要 Courant–Fischer 极小极大原理，这里从略。它说明奇异值是良态的：矩阵改变多少，奇异值至多改变多少。特征值则不然。
 
-**例 7.6.1（奇异值与特征值的对比）** 设 $J_n$ 是 $n$ 阶 Jordan 块（对角元为 $0$，上次对角线为 $1$），$J_n^{\mathsf T}J_n=\operatorname{diag}(0,1,\dots,1)$，所以 $J_n$ 有 $n$ 重特征值 $0$，奇异值为 $n-1$ 重的 $1$ 和 $1$ 重的 $0$。把 $J_n$ 的 $(n,1)$ 元改为 $10^{-n}$ 得 $\tilde J_n$，$\|\tilde J_n-J_n\|=10^{-n}$。这时 $\tilde J_n^{\mathsf T}\tilde J_n=\operatorname{diag}(10^{-2n},1,\dots,1)$，奇异值为 $n-1$ 重的 $1$ 和 $10^{-n}$，变化恰为 $10^{-n}$；而特征多项式为 $\lambda^n-10^{-n}$，特征值为 $10^{-1}e^{2\pi\mathrm{i}j/n}$（$j=1,\dots,n$），变化是 $10^{-1}$，比扰动大 $10^{n-1}$ 倍。一般地，特征值的变化只能估计为 $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$，其中 $C_A$ 是与 $A,\tilde A$ 有关的常数；所以称特征值不是良态的（病态的）。对称矩阵是例外：若 $A,\tilde A$ 都是实对称矩阵，特征值按大小排列，则同样有 $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$（也由极小极大原理得到），所以实对称矩阵的特征值问题是良态的。
+**例 7.6.1（奇异值与特征值的对比）** 设 $J_n$ 是 $n$ 阶 Jordan 块（对角元为 $0$，上次对角线为 $1$），$J_n^{\mathsf T}J_n=\operatorname{diag}(0,1,\dots,1)$，所以 $J_n$ 有 $n$ 重特征值 $0$，奇异值为 $n-1$ 重的 $1$ 和 $1$ 重的 $0$。把 $J_n$ 的 $(n,1)$ 元改为 $10^{-n}$ 得 $\tilde J_n$，$\|\tilde J_n-J_n\|=10^{-n}$。这时 $\tilde J_n^{\mathsf T}\tilde J_n=\operatorname{diag}(10^{-2n},1,\dots,1)$，奇异值为 $n-1$ 重的 $1$ 和 $10^{-n}$，变化恰为 $10^{-n}$；而特征多项式为 $\lambda^n-10^{-n}$，特征值为 $10^{-1}\mathrm{e}^{2\pi\mathrm{i}j/n}$（$j=1,\dots,n$），变化是 $10^{-1}$，比扰动大 $10^{n-1}$ 倍。一般地，特征值的变化只能估计为 $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$，其中 $C_A$ 是与 $A,\tilde A$ 有关的常数；所以称特征值不是良态的（病态的）。对称矩阵是例外：若 $A,\tilde A$ 都是实对称矩阵，特征值按大小排列，则同样有 $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$（也由极小极大原理得到），所以实对称矩阵的特征值问题是良态的。
 
 奇异值的极值刻画还回答了"用低秩矩阵逼近 $A$ 最好能做到多好"。
 

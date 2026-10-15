@@ -179,13 +179,13 @@ $$
 设 $N(t)$ 表示时刻 $t$ 的种群数量。最简单的连续增长模型是指数增长：
 
 $$
-\frac{dN}{dt} = r N
+\frac{\mathrm{d}N}{\mathrm{d}t} = r N
 $$
 
 其中 $r$ 是瞬时增长率。这个微分方程表示种群变化率与当前数量成正比。方程的积分式为：
 
 $$
-N(t) = N_0 e^{rt}
+N(t) = N_0 \mathrm{e}^{rt}
 $$
 
 其中 $N_0 = N(0)$ 是初始数量。指数增长在资源无限时是合理的，但现实世界中资源有限，因此我们需要引入密度制约。
@@ -195,13 +195,13 @@ $$
 在连续时间中，密度制约表现为增长率随种群数量增加而下降。逻辑斯谛方程是：
 
 $$
-\frac{dN}{dt} = r N \left(1 - \frac{N}{K}\right)
+\frac{\mathrm{d}N}{\mathrm{d}t} = r N \left(1 - \frac{N}{K}\right)
 $$
 
 其中 $K$ 是环境容纳量。当 $N$ 接近 $K$ 时，增长率趋近于零。这个方程可以解析求解（通过分离变量法），得到：
 
 $$
-N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) e^{-rt}}
+N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) \mathrm{e}^{-rt}}
 $$
 
 逻辑斯谛增长曲线呈S形（Sigmoid），从初始指数增长逐渐减速，最终趋于 $K$。
@@ -224,7 +224,7 @@ $$
 
 3. 两边积分：
 $$
-\int \left( \frac{1}{N} + \frac{1}{K - N} \right) dN = \int r \, dt
+\int \left( \frac{1}{N} + \frac{1}{K - N} \right) \mathrm{d}N = \int r \, \mathrm{d}t
 $$
 计算积分：
 $$
@@ -237,23 +237,23 @@ $$
 
 4. 消去对数取指数：
 $$
-\left| \frac{N}{K - N} \right| = e^{rt + C} = A e^{rt}
+\left| \frac{N}{K - N} \right| = \mathrm{e}^{rt + C} = A \mathrm{e}^{rt}
 $$
-其中 $A = e^C > 0$。当 $0 < N < K$ 时，可去掉绝对值：
+其中 $A = \mathrm{e}^C > 0$。当 $0 < N < K$ 时，可去掉绝对值：
 $$
-\frac{N}{K - N} = A e^{rt}
+\frac{N}{K - N} = A \mathrm{e}^{rt}
 $$
 
 5. 整理方程，解出 $N(t)$：
 ：
 $$
-N = (K - N) A e^{rt} = K A e^{rt} - N A e^{rt}
+N = (K - N) A \mathrm{e}^{rt} = K A \mathrm{e}^{rt} - N A \mathrm{e}^{rt}
 $$
 $$
-N (1 + A e^{rt}) = K A e^{rt}
+N (1 + A \mathrm{e}^{rt}) = K A \mathrm{e}^{rt}
 $$
 $$
-N(t) = \frac{K A e^{rt}}{1 + A e^{rt}}
+N(t) = \frac{K A \mathrm{e}^{rt}}{1 + A \mathrm{e}^{rt}}
 $$
 
 6. 由初始条件确定常数 $A$：
@@ -269,15 +269,15 @@ $$
 7. 代入得最终解：
 将 $A$ 代入 $N(t)$：
 $$
-N(t) = \frac{K \cdot \frac{N_0}{K - N_0} \cdot e^{rt}}{1 + \frac{N_0}{K - N_0} \cdot e^{rt}}
+N(t) = \frac{K \cdot \frac{N_0}{K - N_0} \cdot \mathrm{e}^{rt}}{1 + \frac{N_0}{K - N_0} \cdot \mathrm{e}^{rt}}
 $$
 分子分母同乘以 $K - N_0$：
 $$
-N(t) = \frac{K N_0 e^{rt}}{K - N_0 + N_0 e^{rt}}
+N(t) = \frac{K N_0 \mathrm{e}^{rt}}{K - N_0 + N_0 \mathrm{e}^{rt}}
 $$
-或等价地，分子分母同除以 $N_0 e^{rt}$：
+或等价地，分子分母同除以 $N_0 \mathrm{e}^{rt}$：
 $$
-N(t) = \frac{K}{1 + \left( \frac{K - N_0}{N_0} \right) e^{-rt}}
+N(t) = \frac{K}{1 + \left( \frac{K - N_0}{N_0} \right) \mathrm{e}^{-rt}}
 $$
 
 ### 3.2.3. 导数与积分的生物学意义
@@ -314,8 +314,8 @@ $$
 $$
 \begin{aligned}
 \frac{K - N_0}{N_0} &= c, \\
-\frac{K - N_1}{N_1} &= c e^{-r\Delta t}, \\
-\frac{K - N_2}{N_2} &= c e^{-2r\Delta t}.
+\frac{K - N_1}{N_1} &= c \mathrm{e}^{-r\Delta t}, \\
+\frac{K - N_2}{N_2} &= c \mathrm{e}^{-2r\Delta t}.
 \end{aligned}
 $$
 消去 $c$ 和 $r$ 得：
@@ -464,7 +464,7 @@ print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
 
 周期2解的稳定性由复合函数 $f^{(2)}$ 在 $p$ 和 $q$ 处的导数乘积决定：
 $$
-\frac{d}{dx} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
+\frac{\mathrm{d}}{\mathrm{d}x} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
 $$
 同理在 $q$ 处相同。由于 $f'(x) = r(1 - 2x)$，故稳定性条件为 $|f'(p) f'(q)| < 1$。
 
@@ -520,8 +520,8 @@ $$
 
 逻辑斯谛微分方程及其解析解为：
 $$
-\frac{dN}{dt} = r N \left(1 - \frac{N}{K}\right), \quad
-N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) e^{-rt}}.
+\frac{\mathrm{d}N}{\mathrm{d}t} = r N \left(1 - \frac{N}{K}\right), \quad
+N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) \mathrm{e}^{-rt}}.
 $$
 
 **2. 拟合方法**
@@ -545,7 +545,7 @@ $$
 $$
 令 $y = \ln\left(\dfrac{K - N}{N}\right)$，则 $y = a - r t$，其中 $a = \ln\left(\dfrac{K - N_0}{N_0}\right)$。通过线性回归得到 $a$ 和 $r$，然后：
 $$
-N_0 = \frac{K}{1 + e^{a}}.
+N_0 = \frac{K}{1 + \mathrm{e}^{a}}.
 $$
 
 **三、代码实现与结果**

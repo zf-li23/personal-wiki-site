@@ -9,10 +9,10 @@ title: 随机向量函数的分布、次序统计量、p分位数
 #### 7.1.1.1. 卡方分布（$\chi^2$分布）
 - **定义**：$X \sim \chi_v^2$ 的密度函数为：
   $$
-  f(x) = \frac{1}{2^{v/2}\Gamma(v/2)} x^{\frac{v}{2}-1} e^{-\frac{x}{2}}, \quad x \geq 0
+  f(x) = \frac{1}{2^{v/2}\Gamma(v/2)} x^{\frac{v}{2}-1} \mathrm{e}^{-\frac{x}{2}}, \quad x \geq 0
   $$
 - **性质**：
-  - 若 $Z_1, ..., Z_n \overset{\text{i.i.d}}{\sim} N(0,1)$，则 $\sum_{i=1}^n Z_i^2 \sim \chi_n^2$
+  - 若 $Z_1, \dots, Z_n \overset{\text{i.i.d}}{\sim} N(0,1)$，则 $\sum_{i=1}^n Z_i^2 \sim \chi_n^2$
   - $\chi_n^2 = \Gamma\left(\frac{n}{2}, \frac{1}{2}\right)$
 
 #### 7.1.1.2. Student's t分布
@@ -49,14 +49,14 @@ title: 随机向量函数的分布、次序统计量、p分位数
   独立时：$\mathbb{P}(Z = z) = \sum_x \mathbb{P}(X = x)\mathbb{P}(Y = z - x)$
 - **连续型**：
   $$
-  f_Z(z) = \int_{-\infty}^{\infty} f(x, z - x) dx
+  f_Z(z) = \int_{-\infty}^{\infty} f(x, z - x) \mathrm{d}x
   $$
-  独立时：$f_Z(z) = \int_{-\infty}^{\infty} f_X(x) f_Y(z - x) dx$
+  独立时：$f_Z(z) = \int_{-\infty}^{\infty} f_X(x) f_Y(z - x) \mathrm{d}x$
 
 #### 7.1.3.2. 差的分布：$V = X - Y$
 - **连续型**：
   $$
-  f_V(v) = \int_{-\infty}^{\infty} f(x, x - v) dx
+  f_V(v) = \int_{-\infty}^{\infty} f(x, x - v) \mathrm{d}x
   $$
 
 **例子**  
@@ -144,18 +144,18 @@ $$
 ## 7.2. 次序统计量
 
 ### 7.2.1. 定义
-设 $X_1, ..., X_n$ 为随机变量，将其观测值从小到大排列：
+设 $X_1, \dots, X_n$ 为随机变量，将其观测值从小到大排列：
 $$
 X_{(1)} \leq X_{(2)} \leq \cdots \leq X_{(n)}
 $$
-称 $X_{(1)}, ..., X_{(n)}$ 为次序统计量。
+称 $X_{(1)}, \dots, X_{(n)}$ 为次序统计量。
 
 ### 7.2.2. 分布性质
 
 #### 7.2.2.1. 联合密度
-若 $X_1, ..., X_n \overset{\text{i.i.d}}{\sim} f(x)$，则：
+若 $X_1, \dots, X_n \overset{\text{i.i.d}}{\sim} f(x)$，则：
 $$
-g(x_1, ..., x_n) = 
+g(x_1, \dots, x_n) = 
 \begin{cases}
 n! \prod_{i=1}^n f(x_i), & x_1 < \cdots < x_n \\
 0, & \text{其他}
@@ -173,8 +173,8 @@ g(x_{k_1}, x_{k_2}) = \frac{n!}{(k_1-1)!(k_2-k_1-1)!(n-k_2)!} \times [F(x_{k_1})
 $$
 
 ### 7.2.3. 应用实例
-- **最小值分布**：$X_{(1)} = \min\{X_1, ..., X_n\}$
-- **最大值分布**：$X_{(n)} = \max\{X_1, ..., X_n\}$
+- **最小值分布**：$X_{(1)} = \min\{X_1, \dots, X_n\}$
+- **最大值分布**：$X_{(n)} = \max\{X_1, \dots, X_n\}$
 - **灯泡寿命问题**：灯泡数量增加会缩短首次故障时间
 
 ### 7.2.4. Beta分布
@@ -232,7 +232,7 @@ $$
   - 在统计推断和随机数生成中的应用
 
 ### 关键公式
-- 和的分布：$f_Z(z) = \int_{-\infty}^{\infty} f(x, z-x) dx$
+- 和的分布：$f_Z(z) = \int_{-\infty}^{\infty} f(x, z-x) \mathrm{d}x$
 - 次序统计量密度：$g_k(x) = n \binom{n-1}{k-1} [F(x)]^{k-1} [1-F(x)]^{n-k} f(x)$
 - p分位数：$\xi_p = F^{-1}(p) = \inf\{x | F(x) \geq p\}$
 - 随机变量生成：$Y = F^{-1}(U)$，其中 $U \sim U(0,1)$

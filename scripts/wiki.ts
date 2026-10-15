@@ -11,7 +11,7 @@
  *                                    create the next page under a parent, with both language files
  *   terms                            concept report: concepts without a definition, uses before the definition
  *   terms --bold [<id-prefix>...]    list bold text that is not a concept name (and so does not link)
- *   fix [<id>...] [--dry-run]        rewrite heading / statement-label numbering formats into the canonical form
+ *   fix [<id>...] [--dry-run]        rewrite heading / statement-label formats and formula notation into the canonical form
  *   freeze <plots/script.py>...      render once and commit the images; the script is never run again
  *   unfreeze <plots/script.py>...    delete the frozen images; the script renders normally again
  */
@@ -183,7 +183,7 @@ function fix() {
     for (const lang of LANGUAGES) {
       const file = page.files[lang];
       if (!file) continue;
-      const { text, changes } = fixMarkdown(file.body, lang);
+      const { text, changes } = fixMarkdown(file.body, lang, id);
       if (!changes) continue;
       total += changes;
       console.log(`${flags.has('--dry-run') ? 'would fix' : 'fixed'} ${changes} line(s) in ${rel(file.path)}`);

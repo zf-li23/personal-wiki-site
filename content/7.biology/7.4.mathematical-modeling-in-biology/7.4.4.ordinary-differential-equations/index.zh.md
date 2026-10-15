@@ -14,13 +14,13 @@ title: 常微分方程
 
 **定义**：形如
 $$
-\frac{dx}{dt} = f(x, t)
+\frac{\mathrm{d}x}{\mathrm{d}t} = f(x, t)
 $$
 的方程称为一阶常微分方程，其中$x(t)$是未知函数，$f(x,t)$是已知函数。
 
 **自治系统**：当$f$不显式依赖于时间$t$时，即
 $$
-\frac{dx}{dt} = f(x)
+\frac{\mathrm{d}x}{\mathrm{d}t} = f(x)
 $$
 称为自治系统。这是生态模型中常见的形式，反映了系统动态仅由当前状态决定。
 
@@ -47,9 +47,9 @@ $$
 
 2. **特征值判据**：对于二维系统$J = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$，特征值满足
    $$
-   \lambda^2 - \text{tr}(J)\lambda + \det(J) = 0
+   \lambda^2 - \operatorname{tr}(J)\lambda + \det(J) = 0
    $$
-   其中$\text{tr}(J) = a+d$，$\det(J) = ad-bc$
+   其中$\operatorname{tr}(J) = a+d$，$\det(J) = ad-bc$
 
 3. **稳定性分类**：
    - 稳定结点：$\lambda_1, \lambda_2 < 0$（实数）
@@ -104,7 +104,7 @@ Python中常用的ODE求解器：
 
 **轨迹（Trajectory）**：系统状态随时间在相空间中描绘的曲线，满足
 $$
-\frac{d}{dt} \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} f_1(x,y) \\ f_2(x,y) \end{pmatrix}
+\frac{\mathrm{d}}{\mathrm{d}t} \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} f_1(x,y) \\ f_2(x,y) \end{pmatrix}
 $$
 
 **零增长线（Nullclines）**：满足$dx/dt=0$或$dy/dt=0$的曲线。零增长线的交点即为平衡点。
@@ -326,8 +326,8 @@ Unstable coexistence:
 
 $$
 \begin{aligned}
-\frac{dN}{dt} &= rN - \varepsilon NP \\
-\frac{dP}{dt} &= -\mu P + \theta NP
+\frac{\mathrm{d}N}{\mathrm{d}t} &= rN - \varepsilon NP \\
+\frac{\mathrm{d}P}{\mathrm{d}t} &= -\mu P + \theta NP
 \end{aligned}
 $$
 
@@ -519,7 +519,7 @@ $$
 \begin{aligned}
 \frac{dx_1}{dt} &= r_1 x_1 \left(1 - \frac{x_1}{K_1} - \alpha_{12}\frac{x_2}{K_1}\right) - \varepsilon_1 x_1 y \\
 \frac{dx_2}{dt} &= r_2 x_2 \left(1 - \frac{x_2}{K_2} - \alpha_{21}\frac{x_1}{K_2}\right) - \varepsilon_2 x_2 y \\
-\frac{dy}{dt} &= -\mu y + \theta_1 x_1 y + \theta_2 x_2 y
+\frac{\mathrm{d}y}{\mathrm{d}t} &= -\mu y + \theta_1 x_1 y + \theta_2 x_2 y
 \end{aligned}
 $$
 
@@ -557,9 +557,9 @@ $$
 三维及以上的动力系统可能展现混沌行为。以洛伦兹系统为例：
 $$
 \begin{aligned}
-\frac{dx}{dt} &= \sigma(y - x) \\
-\frac{dy}{dt} &= x(\rho - z) - y \\
-\frac{dz}{dt} &= xy - \beta z
+\frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma(y - x) \\
+\frac{\mathrm{d}y}{\mathrm{d}t} &= x(\rho - z) - y \\
+\frac{\mathrm{d}z}{\mathrm{d}t} &= xy - \beta z
 \end{aligned}
 $$
 
@@ -606,10 +606,10 @@ $$
 
 2. 修改捕食者-猎物模型，加入猎物密度制约（即猎物单独增长为逻辑斯谛型）：
    $$
-   \frac{dN}{dt} = rN\left(1-\frac{N}{K}\right) - \varepsilon NP
+   \frac{\mathrm{d}N}{\mathrm{d}t} = rN\left(1-\frac{N}{K}\right) - \varepsilon NP
    $$
    $$
-   \frac{dP}{dt} = -\mu P + \theta NP
+   \frac{\mathrm{d}P}{\mathrm{d}t} = -\mu P + \theta NP
    $$
    分析平衡点的稳定性。与经典模型相比，密度制约如何改变系统行为？绘制相图和时间序列。
 
@@ -618,8 +618,8 @@ $$
 经典 Lotka-Volterra 捕食者-猎物模型为：
 $$
 \begin{aligned}
-\frac{dN}{dt} &= rN - \varepsilon NP \\
-\frac{dP}{dt} &= -\mu P + \theta NP
+\frac{\mathrm{d}N}{\mathrm{d}t} &= rN - \varepsilon NP \\
+\frac{\mathrm{d}P}{\mathrm{d}t} &= -\mu P + \theta NP
 \end{aligned}
 $$
 其中 $N$ 为猎物种群，$P$ 为捕食者种群，$r$ 为猎物内禀增长率，$\varepsilon$ 为捕食效率，$\mu$ 为捕食者死亡率，$\theta$ 为捕食者将猎物转化为新生捕食者的效率。
@@ -627,8 +627,8 @@ $$
 现在考虑猎物增长受到环境容纳量 $K$ 的限制，即猎物遵循逻辑斯谛增长，修改后模型为：
 $$
 \begin{aligned}
-\frac{dN}{dt} &= rN\left(1 - \frac{N}{K}\right) - \varepsilon NP \\
-\frac{dP}{dt} &= -\mu P + \theta NP
+\frac{\mathrm{d}N}{\mathrm{d}t} &= rN\left(1 - \frac{N}{K}\right) - \varepsilon NP \\
+\frac{\mathrm{d}P}{\mathrm{d}t} &= -\mu P + \theta NP
 \end{aligned}
 $$
 
@@ -757,8 +757,8 @@ $$
 经典 Lotka-Volterra 模型（原变量形式）为：
 $$
 \begin{aligned}
-\frac{dH}{dt} &= a H - b H L \\
-\frac{dL}{dt} &= -c L + d H L
+\frac{\mathrm{d}H}{\mathrm{d}t} &= a H - b H L \\
+\frac{\mathrm{d}L}{\mathrm{d}t} &= -c L + d H L
 \end{aligned}
 $$
 其中 $H$ 为雪兔数量，$L$ 为猞猁数量，$a$ 为兔子自然增长率，$b$ 为捕食率，$c$ 为猞猁死亡率，$d$ 为转化效率。

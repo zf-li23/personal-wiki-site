@@ -53,7 +53,7 @@ $$
 \pi(\theta \mid x) = \frac{f(x \mid \theta) \pi(\theta)}{m(x)} \propto f(x \mid \theta) \pi(\theta)
 $$
 
-其中 $m(x) = \int f(x \mid \theta) \pi(\theta) d\theta$ 为**边际似然 (Marginal Likelihood)**，亦称证据（Evidence）。
+其中 $m(x) = \int f(x \mid \theta) \pi(\theta) \mathrm{d}\theta$ 为**边际似然 (Marginal Likelihood)**，亦称证据（Evidence）。
 
 ### 7.2.2. 共轭先验 (Conjugate Priors)
 
@@ -92,7 +92,7 @@ $$
 #### 7.2.3.3. 分层先验 (Hierarchical Priors)
 - 先验参数本身也有分布，形成层次结构：
   $$
-  \pi(\theta) = \int \pi(\theta \mid \psi) g(\psi) d\psi
+  \pi(\theta) = \int \pi(\theta \mid \psi) g(\psi) \mathrm{d}\psi
   $$
 - 适用于参数具有组结构的情形（如多组均值估计）。
 
@@ -110,7 +110,7 @@ $$
   
 - **后验均值估计 (Posterior Mean)**：
   $$
-  \hat{\theta}_{\text{mean}} = E[\theta \mid x] = \int \theta \, \pi(\theta \mid x) d\theta
+  \hat{\theta}_{\text{mean}} = \mathbb{E}[\theta \mid x] = \int \theta \, \pi(\theta \mid x) \mathrm{d}\theta
   $$
   - 在平方损失下，是**最优估计**（最小化后验均方误差 PMSE）。
 
@@ -123,11 +123,11 @@ $$
 ### 7.3.2. 估计精度：后验均方误差 (Posterior Mean Squared Error, PMSE)
 
 $$
-\text{PMSE}(\hat{\theta}) = E[(\theta - \hat{\theta})^2 \mid x] = \text{Var}(\theta \mid x) + (\hat{\theta} - E[\theta \mid x])^2
+\text{PMSE}(\hat{\theta}) = \mathbb{E}[(\theta - \hat{\theta})^2 \mid x] = \operatorname{Var}(\theta \mid x) + (\hat{\theta} - \mathbb{E}[\theta \mid x])^2
 $$
 
 - 后验均值估计使 PMSE 最小。
-- 后验方差 $\text{Var}(\theta \mid x)$ 是估计不确定性的度量。
+- 后验方差 $\operatorname{Var}(\theta \mid x)$ 是估计不确定性的度量。
 
 ### 7.3.3. 例子
 
@@ -155,7 +155,7 @@ $$
 
 - **定义**：给定 $1-\alpha$，若区间 $[L(x), U(x)]$ 满足
   $$
-  P(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha,
+  \mathbb{P}(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha,
   $$
   则称 $[L, U]$ 为 $\theta$ 的 $1-\alpha$ **可信区间**。
 - 与频率置信区间不同，这里的概率是**给定数据**下参数落在区间内的概率。
@@ -183,7 +183,7 @@ $$
 - **假设**：$H_0: \theta \in \Theta_0$ vs $H_1: \theta \in \Theta_1$。
 - 计算后验概率：
   $$
-  \alpha_0 = P(\theta \in \Theta_0 \mid x), \quad \alpha_1 = P(\theta \in \Theta_1 \mid x)
+  \alpha_0 = \mathbb{P}(\theta \in \Theta_0 \mid x), \quad \alpha_1 = \mathbb{P}(\theta \in \Theta_1 \mid x)
   $$
 - **决策**：若 $\alpha_1 > \alpha_0$，则倾向于拒绝 $H_0$。
 - 可计算**后验优势比 (Posterior Odds)**：
@@ -195,7 +195,7 @@ $$
 
 - 比较两个模型 $M_0$ 与 $M_1$ 的相对支持程度：
   $$
-  BF_{10} = \frac{m_1(x)}{m_0(x)} = \frac{\int f(x \mid \theta, M_1) \pi_1(\theta) d\theta}{\int f(x \mid \theta, M_0) \pi_0(\theta) d\theta}
+  BF_{10} = \frac{m_1(x)}{m_0(x)} = \frac{\int f(x \mid \theta, M_1) \pi_1(\theta) \mathrm{d}\theta}{\int f(x \mid \theta, M_0) \pi_0(\theta) \mathrm{d}\theta}
   $$
 - $BF_{10} > 1$ 表示数据更支持 $M_1$。
 
@@ -204,7 +204,7 @@ $$
 - $X \sim B(n, \theta)$，检验 $H_0: \theta \le 0.5$ vs $H_1: \theta > 0.5$。
 - 取均匀先验 $\theta \sim U(0,1)$。
 - 后验：$\theta \mid x \sim \text{Beta}(x+1, n-x+1)$。
-- 计算 $\alpha_0 = P(\theta \le 0.5 \mid x)$，$\alpha_1 = 1 - \alpha_0$。
+- 计算 $\alpha_0 = \mathbb{P}(\theta \le 0.5 \mid x)$，$\alpha_1 = 1 - \alpha_0$。
 
 ---
 
@@ -215,7 +215,7 @@ $$
 - **问题**：已有数据 $x$，预测新观测 $\tilde{x}$。
 - 后验预测密度：
   $$
-  p(\tilde{x} \mid x) = \int f(\tilde{x} \mid \theta) \pi(\theta \mid x) d\theta
+  p(\tilde{x} \mid x) = \int f(\tilde{x} \mid \theta) \pi(\theta \mid x) \mathrm{d}\theta
   $$
 - 意义：综合了参数不确定性（通过后验）与抽样变异性。
 
@@ -225,7 +225,7 @@ $$
 - 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
 - 预测新 $m$ 次试验中成功次数 $Y$：
   $$
-  P(Y=y \mid x) = \int_0^1 \binom{m}{y} \theta^y (1-\theta)^{m-y} \pi(\theta \mid x) d\theta
+  \mathbb{P}(Y=y \mid x) = \int_0^1 \binom{m}{y} \theta^y (1-\theta)^{m-y} \pi(\theta \mid x) \mathrm{d}\theta
   $$
   该分布为 **Beta-Binomial 分布**。
 
@@ -267,7 +267,7 @@ $$
 - **损失函数** $L(a, \theta)$：采取行动 $a$ 而真实参数为 $\theta$ 时的损失。
 - **贝叶斯风险**：后验期望损失
   $$
-  R(a \mid x) = E[L(a, \theta) \mid x]
+  R(a \mid x) = \mathbb{E}[L(a, \theta) \mid x]
   $$
 - **贝叶斯决策**：选择使后验期望损失最小的行动
   $$
@@ -312,15 +312,15 @@ $$
   $$
 - 后验均值（平方损失最优）：
   $$
-  \hat{\theta}_{\text{mean}} = E[\theta \mid x]
+  \hat{\theta}_{\text{mean}} = \mathbb{E}[\theta \mid x]
   $$
 - $1-\alpha$ 可信区间：
   $$
-  P(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha
+  \mathbb{P}(L(x) \le \theta \le U(x) \mid x) \ge 1-\alpha
   $$
 - 贝叶斯决策：
   $$
-  a^* = \arg\min_a E[L(a, \theta) \mid x]
+  a^* = \arg\min_a \mathbb{E}[L(a, \theta) \mid x]
   $$
 
 **应用提示**：

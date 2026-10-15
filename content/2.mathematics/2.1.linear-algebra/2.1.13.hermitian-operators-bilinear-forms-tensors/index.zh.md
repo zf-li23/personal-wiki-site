@@ -2,7 +2,7 @@
 title: Hermite 变换、双线性型与张量
 ---
 
-[上一章](/2.1.12)证明了正规变换恰好是能在标准正交基下对角化的变换。正规矩阵与复数之间有一个清楚的对应：正规矩阵中特征值全为实数的一类（Hermite 矩阵）相当于实数，特征值模为 $1$ 的一类（酉矩阵）相当于单位复数。本章前半部分沿着这个类比，把复数的极形式 $z = re^{i\theta}$ 推广为矩阵的极分解 $A = Re^{iM}$；再把 [第 7 章](/2.1.7)的实**二次型**、**合同**、**Sylvester 惯性定律**与正定矩阵搬到复数域上，得到 Hermite 二次型与复相合；最后叙述复矩阵的**奇异值分解**，并说明它与极分解的关系。这些结论的证明多与实情形相同，只简述。
+[上一章](/2.1.12)证明了正规变换恰好是能在标准正交基下对角化的变换。正规矩阵与复数之间有一个清楚的对应：正规矩阵中特征值全为实数的一类（Hermite 矩阵）相当于实数，特征值模为 $1$ 的一类（酉矩阵）相当于单位复数。本章前半部分沿着这个类比，把复数的极形式 $z = r\mathrm{e}^{i\theta}$ 推广为矩阵的极分解 $A = R\mathrm{e}^{iM}$；再把 [第 7 章](/2.1.7)的实**二次型**、**合同**、**Sylvester 惯性定律**与正定矩阵搬到复数域上，得到 Hermite 二次型与复相合；最后叙述复矩阵的**奇异值分解**，并说明它与极分解的关系。这些结论的证明多与实情形相同，只简述。
 
 后半部分换一个角度。内积 $(a, b), (c, d) \mapsto ac + bd$ 与平面上的有向面积 $(a, b), (c, d) \mapsto ad - bc$（二阶**行列式**）都是"两个向量 $\mapsto$ 一个数"、对每个变量都线性的映射。本章在一般线性空间上研究这类映射——双线性型，它们在换基下按 $P^{\mathsf T}GP$ 变化，这正是合同关系的来源。对称的非退化双线性型给出"广义内积"（如狭义相对论中的 Lorentz 型），反对称的给出辛空间；保持它们的变换构成正交群与辛群。最后用[第 8 章](/2.1.8)的**对偶空间**引入张量：从数（$0$ 阶）到线性函数（$1$ 阶）、双线性型（$2$ 阶），再到多重线性型。
 
@@ -39,7 +39,7 @@ $$
 (De_1, De_2, De_3) = (e_1, e_2, e_3)A, \qquad A = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{pmatrix}, \qquad A^{\mathsf T} = -A.
 $$
 
-故 $D^* = -D$，$D$ 不是自伴随的，而是反自伴随的，特征值为 $0, \pm i$（对应复函数 $1, e^{\pm ix}$）。背后的原因是分部积分：对周期函数，$\langle f', g \rangle = -\langle f, g' \rangle$。相应地 $-D^2 = -\frac{\mathrm{d}^2}{\mathrm{d}x^2}$ 是自伴随的，这是偏微分方程中 Fourier 级数方法的出发点。
+故 $D^* = -D$，$D$ 不是自伴随的，而是反自伴随的，特征值为 $0, \pm i$（对应复函数 $1, \mathrm{e}^{\pm ix}$）。背后的原因是分部积分：对周期函数，$\langle f', g \rangle = -\langle f, g' \rangle$。相应地 $-D^2 = -\frac{\mathrm{d}^2}{\mathrm{d}x^2}$ 是自伴随的，这是偏微分方程中 Fourier 级数方法的出发点。
 
 任一复方阵都可以唯一地写成 $A = H + K$，$H = \frac12(A + A^{\mathsf H})$ 是 Hermite 矩阵，$K = \frac12(A - A^{\mathsf H})$ 是反 Hermite 矩阵，这是 $z = a + bi$ 分成实部与虚部的类比。展开 $AA^{\mathsf H}$ 与 $A^{\mathsf H}A$ 可知，$A$ 正规 $\Leftrightarrow$ $HK = KH$。
 
@@ -55,22 +55,22 @@ $$
 | 纯虚数 $z = -\bar z$ | 反 Hermite 矩阵 $A = -A^{\mathsf H}$ |
 | $\lvert z\rvert = 1$，即 $\bar zz = 1$ | 酉矩阵 $A^{\mathsf H}A = I$ |
 | $r \ge 0$ | 半正定 Hermite 矩阵（特征值 $\ge 0$） |
-| $e^{i\theta}$，$\theta$ 实 | $e^{iM}$，$M$ 为 Hermite 矩阵（例 12.3.3） |
-| 极形式 $z = re^{i\theta}$ | $A = Re^{iM}$ |
+| $\mathrm{e}^{i\theta}$，$\theta$ 实 | $\mathrm{e}^{iM}$，$M$ 为 Hermite 矩阵（例 12.3.3） |
+| 极形式 $z = r\mathrm{e}^{i\theta}$ | $A = R\mathrm{e}^{iM}$ |
 
-**定理 13.2.1** 设 $A$ 是 $n$ 阶正规矩阵，则存在半正定 Hermite 矩阵 $R$ 与 Hermite 矩阵 $M$，使 $A = Re^{iM}$，且 $RM = MR$。
+**定理 13.2.1** 设 $A$ 是 $n$ 阶正规矩阵，则存在半正定 Hermite 矩阵 $R$ 与 Hermite 矩阵 $M$，使 $A = R\mathrm{e}^{iM}$，且 $RM = MR$。
 
-**证明** 由谱定理，存在酉矩阵 $U$ 使 $U^{\mathsf H}AU = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$。把每个特征值写成**复数的极形式** $\lambda_j = r_je^{i\theta_j}$，$r_j \ge 0$，$\theta_j \in \mathbb{R}$，令
+**证明** 由谱定理，存在酉矩阵 $U$ 使 $U^{\mathsf H}AU = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$。把每个特征值写成**复数的极形式** $\lambda_j = r_j\mathrm{e}^{i\theta_j}$，$r_j \ge 0$，$\theta_j \in \mathbb{R}$，令
 
 $$
 R = U\operatorname{diag}(r_1, \dots, r_n)U^{\mathsf H}, \qquad M = U\operatorname{diag}(\theta_1, \dots, \theta_n)U^{\mathsf H}.
 $$
 
-$R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同一个 $U$ 对角化，所以可交换。由矩阵函数的性质 $e^{iM} = U\operatorname{diag}(e^{i\theta_1}, \dots, e^{i\theta_n})U^{\mathsf H}$，于是 $Re^{iM} = U\operatorname{diag}(r_je^{i\theta_j})U^{\mathsf H} = A$。 $\square$
+$R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同一个 $U$ 对角化，所以可交换。由矩阵函数的性质 $\mathrm{e}^{iM} = U\operatorname{diag}(\mathrm{e}^{i\theta_1}, \dots, \mathrm{e}^{i\theta_n})U^{\mathsf H}$，于是 $R\mathrm{e}^{iM} = U\operatorname{diag}(r_j\mathrm{e}^{i\theta_j})U^{\mathsf H} = A$。 $\square$
 
-称 $A = Re^{iM}$ 为正规矩阵 $A$ 的极分解（polar decomposition）。由 $A^{\mathsf H}A = e^{-iM}R^2e^{iM} = R^2$，$R = (A^{\mathsf H}A)^{1/2}$ 由 $A$ 唯一确定（取半正定的平方根）；$M$ 不唯一，各 $\theta_j$ 可以相差 $2\pi$ 的整数倍，$A$ 不可逆时零特征值的辐角也可任取。这兑现了[第 11 章](/2.1.11)开头提出的问题。
+称 $A = R\mathrm{e}^{iM}$ 为正规矩阵 $A$ 的极分解（polar decomposition）。由 $A^{\mathsf H}A = \mathrm{e}^{-iM}R^2\mathrm{e}^{iM} = R^2$，$R = (A^{\mathsf H}A)^{1/2}$ 由 $A$ 唯一确定（取半正定的平方根）；$M$ 不唯一，各 $\theta_j$ 可以相差 $2\pi$ 的整数倍，$A$ 不可逆时零特征值的辐角也可任取。这兑现了[第 11 章](/2.1.11)开头提出的问题。
 
-**例 13.2.1** 复数 $z = re^{i\theta}$ 对应的矩阵 $A = \begin{pmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{pmatrix}$ 的极分解为 $R = rI$，$M = \begin{pmatrix} 0 & i\theta \\ -i\theta & 0 \end{pmatrix}$：$M$ 是 Hermite 矩阵，$iM = \theta\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$，$e^{iM}$ 就是转角为 $\theta$ 的旋转矩阵（例 11.8.1）。矩阵的极分解与复数的极形式在这里完全重合。
+**例 13.2.1** 复数 $z = r\mathrm{e}^{i\theta}$ 对应的矩阵 $A = \begin{pmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{pmatrix}$ 的极分解为 $R = rI$，$M = \begin{pmatrix} 0 & i\theta \\ -i\theta & 0 \end{pmatrix}$：$M$ 是 Hermite 矩阵，$iM = \theta\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$，$\mathrm{e}^{iM}$ 就是转角为 $\theta$ 的旋转矩阵（例 11.8.1）。矩阵的极分解与复数的极形式在这里完全重合。
 
 一般方阵（不必正规）也有极分解 $A = UP$（$U$ 为酉矩阵，$P$ 为半正定 Hermite 矩阵），但 $U$ 与 $P$ 不一定可交换，见 13.5 节。
 
@@ -161,11 +161,11 @@ $\sigma_i$ 是 $A^{\mathsf H}A$ 的正特征值的算术平方根，称为 $A$ �
 
 奇异值分解把正规矩阵的谱分解推广到任意矩阵：代价是左右用两个不同的酉矩阵。由它立即得到一般方阵的极分解。
 
-**定理 13.5.2（极分解）** 设 $A \in M_n(\mathbb{C})$，则存在酉矩阵 $U$ 与半正定 Hermite 矩阵 $P$，使 $A = UP$。$P = (A^{\mathsf H}A)^{1/2}$ 唯一；若 $A$ 可逆，$U$ 也唯一。$A$ 正规 $\Leftrightarrow$ 可以取 $U$ 使 $UP = PU$，此时它就是定理 13.2.1 中的 $A = Re^{iM}$（$R = P$，$e^{iM} = U$）。
+**定理 13.5.2（极分解）** 设 $A \in M_n(\mathbb{C})$，则存在酉矩阵 $U$ 与半正定 Hermite 矩阵 $P$，使 $A = UP$。$P = (A^{\mathsf H}A)^{1/2}$ 唯一；若 $A$ 可逆，$U$ 也唯一。$A$ 正规 $\Leftrightarrow$ 可以取 $U$ 使 $UP = PU$，此时它就是定理 13.2.1 中的 $A = R\mathrm{e}^{iM}$（$R = P$，$\mathrm{e}^{iM} = U$）。
 
 **证明** 由 $A = W\Sigma V^{\mathsf H}$（$W, V$ 为酉矩阵，$\Sigma$ 为非负对角阵），$A = (WV^{\mathsf H})(V\Sigma V^{\mathsf H})$，令 $U = WV^{\mathsf H}$，$P = V\Sigma V^{\mathsf H}$。由 $A^{\mathsf H}A = P^2$ 与半正定平方根的唯一性，$P$ 唯一（$(A^{\mathsf H}A)^{1/2}$ 是[第 11 章](/2.1.11)意义下的矩阵函数 $\sqrt z$，取非负分支）；$A$ 可逆时 $P$ 可逆，$U = AP^{-1}$ 唯一。若 $UP = PU$，则 $AA^{\mathsf H} = UP^2U^{\mathsf H} = P^2 = A^{\mathsf H}A$；反之由定理 13.2.1。 $\square$
 
-同样 $A = (W\Sigma W^{\mathsf H})(WV^{\mathsf H}) = P'U$，$P' = (AA^{\mathsf H})^{1/2}$。几何上，极分解把任意线性变换拆成"沿正交方向伸缩"（$P$）与"保长度的转动或反射"（$U$），这是复数 $z = r \cdot e^{i\theta}$ 的完整推广。下面的代码由 SVD 计算极分解，并与 SciPy 的结果比较。
+同样 $A = (W\Sigma W^{\mathsf H})(WV^{\mathsf H}) = P'U$，$P' = (AA^{\mathsf H})^{1/2}$。几何上，极分解把任意线性变换拆成"沿正交方向伸缩"（$P$）与"保长度的转动或反射"（$U$），这是复数 $z = r \cdot \mathrm{e}^{i\theta}$ 的完整推广。下面的代码由 SVD 计算极分解，并与 SciPy 的结果比较。
 
 ```python
 import numpy as np
@@ -260,7 +260,7 @@ $$
 
 **例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\alpha, \beta) = \det(\alpha, \beta)$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in Sp(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
 
-在等距群中取单参数子群 $e^{tX}$ 并在 $t = 0$ 处求导，条件 $M^{\mathsf T}GM = G$ 变成 $X^{\mathsf T}G + GX = O$。$G = I$ 时得到反对称矩阵 $\mathfrak{so}(n)$，$G$ 为辛矩阵时得到 $\mathfrak{sp}(2m)$，它们都是 [1.3.5](/1.3.5) 中的**典型李代数**。
+在等距群中取单参数子群 $\mathrm{e}^{tX}$ 并在 $t = 0$ 处求导，条件 $M^{\mathsf T}GM = G$ 变成 $X^{\mathsf T}G + GX = O$。$G = I$ 时得到反对称矩阵 $\mathfrak{so}(n)$，$G$ 为辛矩阵时得到 $\mathfrak{sp}(2m)$，它们都是 [1.3.5](/1.3.5) 中的**典型李代数**。
 
 ## 13.8. 张量
 
@@ -293,7 +293,7 @@ $k = 2$ 时就是 $G' = P^{\mathsf T}GP$。于是"数 $\to$ 向量 $\to$ 矩阵 
 | 主题 | 结论 |
 |---|---|
 | Hermite 矩阵 | 特征值为实数，可酉对角化为实对角阵；正规 + 实特征值 $\Leftrightarrow$ Hermite（定理 13.1.1） |
-| 极分解 | 正规矩阵 $A = Re^{iM}$，$R$ 半正定、$M$ Hermite、可交换（定理 13.2.1）；一般方阵 $A = UP$，$P = (A^{\mathsf H}A)^{1/2}$（定理 13.5.2） |
+| 极分解 | 正规矩阵 $A = R\mathrm{e}^{iM}$，$R$ 半正定、$M$ Hermite、可交换（定理 13.2.1）；一般方阵 $A = UP$，$P = (A^{\mathsf H}A)^{1/2}$（定理 13.5.2） |
 | Hermite 二次型 | $f = x^{\mathsf H}Ax$ 取实值；换元 $x = Py$ 时矩阵复相合 $P^{\mathsf H}AP$；规范形与惯性定律（定理 13.3.1） |
 | 正定 Hermite 矩阵 | 特征值全正 $\Leftrightarrow$ $A = P^{\mathsf H}P$ $\Leftrightarrow$ 顺序主子式全正 $\Leftrightarrow$ $A = R^{\mathsf H}R$（定理 13.4.1） |
 | 复奇异值分解 | $A = U\Sigma V^{\mathsf H}$（定理 13.5.1）；应用于低秩逼近、广义逆、主成分分析 |

@@ -4,7 +4,7 @@ title: 定积分
 
 **7.1 定积分的概念和存在条件**
 
--   **黎曼积分定义**：$\int_{a}^{b} f(x) dx = \lim_{\lambda \to 0} \sum f(\xi_i) \Delta x_i$。
+-   **黎曼积分定义**：$\int_{a}^{b} f(x) \mathrm{d}x = \lim_{\lambda \to 0} \sum f(\xi_i) \Delta x_i$。
 -   **可积条件**：闭区间上连续或分段连续（有限个第一类间断点）的函数可积；单调函数可积。
 
 **7.2 定积分的性质**
@@ -13,20 +13,20 @@ title: 定积分
 
 **7.3 变上限积分和牛顿-莱布尼茨公式**
 
--   **变上限积分**：$\Phi(x) = \int_a^x f(t) dt$ 是 $f(x)$ 的一个原函数，即 $\Phi'(x) = f(x)$。
--   **微积分基本定理**：$\int_a^b f(x) dx = F(b) - F(a)$，其中 $F$ 是 $f$ 的任意一个原函数。
+-   **变上限积分**：$\Phi(x) = \int_a^x f(t) \mathrm{d}t$ 是 $f(x)$ 的一个原函数，即 $\Phi'(x) = f(x)$。
+-   **微积分基本定理**：$\int_a^b f(x) \mathrm{d}x = F(b) - F(a)$，其中 $F$ 是 $f$ 的任意一个原函数。
 
 **7.4 定积分的换元积分法与分部积分法**
 
 -   **换元法**：注意“换元必换限”。
--   **分部积分法**：$\int_a^b u dv = [uv]_a^b - \int_a^b v du$。
+-   **分部积分法**：$\int_a^b u \mathrm{d}v = [uv]_a^b - \int_a^b v \mathrm{d}u$。
 
 **7.5 定积分的几何应用**
 
--   **面积**：直角坐标 $S = \int_a^b |f(x)-g(x)| dx$；极坐标 $S = \frac{1}{2} \int_{\alpha}^{\beta} r^2(\theta) d\theta$。
--   **体积**：旋转体体积 $V = \pi \int_a^b [f(x)]^2 dx$。
--   **弧长**：参数方程 $l = \int_{\alpha}^{\beta} \sqrt{[x'(t)]^2 + [y'(t)]^2} dt$。
--   **旋转曲面侧面积**：$S = 2\pi \int_a^b y \sqrt{1+(y')^2} dx$。
+-   **面积**：直角坐标 $S = \int_a^b |f(x)-g(x)| \mathrm{d}x$；极坐标 $S = \frac{1}{2} \int_{\alpha}^{\beta} r^2(\theta) \mathrm{d}\theta$。
+-   **体积**：旋转体体积 $V = \pi \int_a^b [f(x)]^2 \mathrm{d}x$。
+-   **弧长**：参数方程 $l = \int_{\alpha}^{\beta} \sqrt{[x'(t)]^2 + [y'(t)]^2} \mathrm{d}t$。
+-   **旋转曲面侧面积**：$S = 2\pi \int_a^b y \sqrt{1+(y')^2} \mathrm{d}x$。
 -   **曲率**：$k = \left| \frac{y''}{(1+(y')^2)^{3/2}} \right|$。
 
 **7.6 反常积分**
@@ -34,4 +34,4 @@ title: 定积分
 -   **两种类型**：无穷区间上的积分（无穷积分）和无界函数的积分（瑕积分）。
 -   **收敛性判定**：
     -   比较判别法（包括极限形式）。
-    -   比阶判别法（$p$-积分：$\int_1^{+\infty} 1/x^p dx$ 在 $p>1$ 收敛；$\int_0^1 1/x^p dx$ 在 $p<1$ 收敛）。
+    -   比阶判别法（$p$-积分：$\int_1^{+\infty} 1/x^p \mathrm{d}x$ 在 $p>1$ 收敛；$\int_0^1 1/x^p \mathrm{d}x$ 在 $p<1$ 收敛）。

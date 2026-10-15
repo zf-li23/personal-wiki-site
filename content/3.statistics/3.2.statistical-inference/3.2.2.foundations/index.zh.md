@@ -23,8 +23,8 @@ $$
 $$
 
 **定理 2.1.2（正态向量的线性变换）**  
-设 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，记 $\mathbf{X} = (X_1,\dots,X_n)^T$。  
-设 $A = (a_{ij})$ 为 $n \times n$ 常数矩阵，$Y = A\mathbf{X}$，即  
+设 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，记 $\boldsymbol{X} = (X_1,\dots,X_n)^{\mathsf T}$。  
+设 $A = (a_{ij})$ 为 $n \times n$ 常数矩阵，$Y = A\boldsymbol{X}$，即  
 $$
 \begin{pmatrix} Y_1 \\ \vdots \\ Y_n \end{pmatrix} =
 \begin{pmatrix}
@@ -38,15 +38,15 @@ $$
 则：
 1. **$Y$ 仍是正态随机向量**，且  
    $$
-   E[Y_i] = a \sum_{k=1}^n a_{ik}, \quad 
-   \mathrm{Var}(Y_i) = \sigma^2 \sum_{k=1}^n a_{ik}^2, \quad 
-   \mathrm{Cov}(Y_i,Y_j) = \sigma^2 \sum_{k=1}^n a_{ik} a_{jk}.
+   \mathbb{E}[Y_i] = a \sum_{k=1}^n a_{ik}, \quad 
+   \operatorname{Var}(Y_i) = \sigma^2 \sum_{k=1}^n a_{ik}^2, \quad 
+   \operatorname{Cov}(Y_i,Y_j) = \sigma^2 \sum_{k=1}^n a_{ik} a_{jk}.
    $$
-2. **特别地**，若 $A$ 是 $n$ 阶正交矩阵（即 $AA^T = I$），则 $Y_1,\dots,Y_n$ **相互独立**，且  
+2. **特别地**，若 $A$ 是 $n$ 阶正交矩阵（即 $AA^{\mathsf T} = I$），则 $Y_1,\dots,Y_n$ **相互独立**，且  
    $$
    Y_i \sim N\!\left( a\sum_{k=1}^n a_{ik}, \ \sigma^2 \right).
    $$
-3. 若进一步有 $a = 0$（即 $\mathbf{X} \sim N(0,\sigma^2 I)$），且 $A$ 为正交矩阵，则  
+3. 若进一步有 $a = 0$（即 $\boldsymbol{X} \sim N(0,\sigma^2 I)$），且 $A$ 为正交矩阵，则  
    $$
    Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(0,\sigma^2).
    $$
@@ -66,11 +66,11 @@ $$
 $$
 **密度函数**：
 $$
-f(x) = \frac{1}{2^{r/2}\Gamma(r/2)} x^{(r/2)-1} e^{-x/2}, \quad x > 0
+f(x) = \frac{1}{2^{r/2}\Gamma(r/2)} x^{(r/2)-1} \mathrm{e}^{-x/2}, \quad x > 0
 $$
 **性质**：
 - 特征函数：$\varphi(t) = (1 - 2it)^{-r/2}$
-- $E(\xi) = r$, $\text{Var}(\xi) = 2r$
+- $\mathbb{E}(\xi) = r$, $\operatorname{Var}(\xi) = 2r$
 - 可加性：若 $\xi_i \sim \chi^2_{r_i}$ 独立，则 $\sum_{i=1}^k \xi_i \sim \chi^2_{r_1 + \cdots + r_k}$
 
 #### 2.1.3.2. $t$ 分布（Student’s t Distribution）
@@ -83,8 +83,8 @@ $$
 f_T(t) = \frac{\Gamma\left(\frac{r+1}{2}\right)}{\Gamma\left(\frac{r}{2}\right)\sqrt{\pi r}} \left(1 + \frac{t^2}{r}\right)^{-(r+1)/2}, \quad t \in \mathbb{R}
 $$
 **性质**：
-- 矩存在性：$E(T^k)$ 存在当且仅当 $k < r$；$k$ 为奇数时 $E(T^k)=0$
-- $r \ge 2$ 时 $E(T) = 0$，$r \ge 3$ 时 $\text{Var}(T) = r/(r-2)$
+- 矩存在性：$\mathbb{E}(T^k)$ 存在当且仅当 $k < r$；$k$ 为奇数时 $\mathbb{E}(T^k)=0$
+- $r \ge 2$ 时 $\mathbb{E}(T) = 0$，$r \ge 3$ 时 $\operatorname{Var}(T) = r/(r-2)$
 - 特例：$t_1$ 是 Cauchy 分布，密度为 $f_1(t) = \frac{1}{\pi(1+t^2)}$
 - $r \to \infty$ 时 $t_r$ 收敛于 $N(0,1)$
 
@@ -98,12 +98,12 @@ $$
 - 与 $t$ 分布的关系：若 $T \sim t_r$，则 $T^2 \sim F_{1,r}$
 - 矩公式：若 $2k < r_2$，
   $$
-  E(F^k) = \left( \frac{r_2}{r_1} \right)^k \frac{\Gamma\left(\frac{r_1}{2}+k\right)\Gamma\left(\frac{r_2}{2}-k\right)}{\Gamma\left(\frac{r_1}{2}\right)\Gamma\left(\frac{r_2}{2}\right)}
+  \mathbb{E}(F^k) = \left( \frac{r_2}{r_1} \right)^k \frac{\Gamma\left(\frac{r_1}{2}+k\right)\Gamma\left(\frac{r_2}{2}-k\right)}{\Gamma\left(\frac{r_1}{2}\right)\Gamma\left(\frac{r_2}{2}\right)}
   $$
   特别地：
   $$
-  E(F) = \frac{r_2}{r_2 - 2}\ (r_2 \ge 3),\quad
-  \text{Var}(F) = \frac{2r_2^2(r_1 + r_2 - 2)}{r_1(r_2-2)^2(r_2-4)}\ (r_2 \ge 5)
+  \mathbb{E}(F) = \frac{r_2}{r_2 - 2}\ (r_2 \ge 3),\quad
+  \operatorname{Var}(F) = \frac{2r_2^2(r_1 + r_2 - 2)}{r_1(r_2-2)^2(r_2-4)}\ (r_2 \ge 5)
   $$
 - 分位数关系：$F_{r_1,r_2}(1 - \alpha) = 1 / F_{r_2,r_1}(\alpha)$
 
@@ -179,11 +179,11 @@ $$
 
 1. **正态分布** $N(\mu, \sigma^2)$ 的样本 $X_1,\dots,X_n$
    $$
-   f(\boldsymbol{x};\mu,\sigma^2) = (\sqrt{2\pi}\sigma)^{-n} e^{-\frac{n\mu^2}{2\sigma^2}} \exp\left\{ \frac{\mu}{\sigma^2} \sum x_i - \frac{1}{2\sigma^2} \sum x_i^2 \right\}
+   f(\boldsymbol{x};\mu,\sigma^2) = (\sqrt{2\pi}\sigma)^{-n} \mathrm{e}^{-\frac{n\mu^2}{2\sigma^2}} \exp\left\{ \frac{\mu}{\sigma^2} \sum x_i - \frac{1}{2\sigma^2} \sum x_i^2 \right\}
    $$
    对应：
    $$
-   C(\theta)=(\sqrt{2\pi}\sigma)^{-n}e^{-n\mu^2/(2\sigma^2)},\ 
+   C(\theta)=(\sqrt{2\pi}\sigma)^{-n}\mathrm{e}^{-n\mu^2/(2\sigma^2)},\ 
    Q_1=\mu/\sigma^2,\ 
    Q_2=-1/(2\sigma^2),\ 
    T_1=\sum x_i,\ 
@@ -203,13 +203,13 @@ $$
    h(x)=C_n^x.
    $$
 
-3. **泊松分布** $P(\theta)$
+3. **泊松分布** $\mathbb{P}(\theta)$
    $$
-   f(x;\theta) = \frac{e^{-\theta}\theta^x}{x!} = e^{-\theta} \exp\{ x\log\theta \} \frac{1}{x!}
+   f(x;\theta) = \frac{\mathrm{e}^{-\theta}\theta^x}{x!} = \mathrm{e}^{-\theta} \exp\{ x\log\theta \} \frac{1}{x!}
    $$
    对应：
    $$
-   C(\theta)=e^{-\theta},\ 
+   C(\theta)=\mathrm{e}^{-\theta},\ 
    Q_1=\log\theta,\ 
    T_1=x,\ 
    h(x)=1/x!.
@@ -257,14 +257,14 @@ f(x, \varphi) = C^*(\varphi) \exp\left\{ \sum_{i=1}^k \varphi_i T_i(x) \right\} 
 $$
 其中 $\varphi = (\varphi_1,\dots,\varphi_k)$ 称为**自然参数**，自然参数空间为：
 $$
-\Theta^* = \left\{ \varphi : \int \exp\left\{ \sum_{i=1}^k \varphi_i T_i(x) \right\} h(x) dx < \infty \right\}.
+\Theta^* = \left\{ \varphi : \int \exp\left\{ \sum_{i=1}^k \varphi_i T_i(x) \right\} h(x) \mathrm{d}x < \infty \right\}.
 $$
 
 **示例**：
 
 1. 二项分布：令 $\varphi = \log\frac{\theta}{1-\theta}$，则
    $$
-   f(x;\varphi) = (1+e^{\varphi})^{-n} \exp\{\varphi x\} C_n^x,
+   f(x;\varphi) = (1+\mathrm{e}^{\varphi})^{-n} \exp\{\varphi x\} C_n^x,
    \quad \Theta^* = (-\infty, \infty).
    $$
 
@@ -287,21 +287,21 @@ $$
    $\Theta^*$ 是 $\mathbb{R}^k$ 中的凸集。  
    **证明**：对任意 $\varphi^0,\varphi^1\in\Theta^*$ 和 $0<\alpha<1$，由 Hölder 不等式：
    $$
-   \int \exp\left\{ \sum (\alpha\varphi_i^0 + (1-\alpha)\varphi_i^1)T_i(x) \right\} h(x) dx
-   \le \left[ \int e^{\sum\varphi_i^0 T_i} h dx \right]^{\alpha}
-       \left[ \int e^{\sum\varphi_i^1 T_i} h dx \right]^{1-\alpha} < \infty.
+   \int \exp\left\{ \sum (\alpha\varphi_i^0 + (1-\alpha)\varphi_i^1)T_i(x) \right\} h(x) \mathrm{d}x
+   \le \left[ \int \mathrm{e}^{\sum\varphi_i^0 T_i} h \mathrm{d}x \right]^{\alpha}
+       \left[ \int \mathrm{e}^{\sum\varphi_i^1 T_i} h \mathrm{d}x \right]^{1-\alpha} < \infty.
    $$
 
 3. **矩母函数的可微性**  
-   若 $\varphi$ 是内点，对任意使积分 $G(\varphi)=\int g(x) e^{\sum\varphi_i T_i(x)} h(x) dx$ 存在的 $g(x)$，$G(\varphi)$ 在 $\Theta^*$ 内部任意阶可导，且：
+   若 $\varphi$ 是内点，对任意使积分 $G(\varphi)=\int g(x) \mathrm{e}^{\sum\varphi_i T_i(x)} h(x) \mathrm{d}x$ 存在的 $g(x)$，$G(\varphi)$ 在 $\Theta^*$ 内部任意阶可导，且：
    $$
    \frac{\partial^m G(\varphi)}{\partial\varphi_1^{m_1}\cdots\partial\varphi_k^{m_k}}
-   = \int g(x) \left( \prod T_i^{m_i}(x) \right) e^{\sum\varphi_i T_i(x)} h(x) dx.
+   = \int g(x) \left( \prod T_i^{m_i}(x) \right) \mathrm{e}^{\sum\varphi_i T_i(x)} h(x) \mathrm{d}x.
    $$
    **应用**：矩的计算（令 $g(x)=1$ 得矩母函数）：
    $$
-   E[T_i(X)] = -\frac{\partial}{\partial\varphi_i} D(\varphi),\quad
-   \text{Cov}[T_i(X),T_j(X)] = -\frac{\partial^2}{\partial\varphi_i\partial\varphi_j} D(\varphi),
+   \mathbb{E}[T_i(X)] = -\frac{\partial}{\partial\varphi_i} D(\varphi),\quad
+   \operatorname{Cov}[T_i(X),T_j(X)] = -\frac{\partial^2}{\partial\varphi_i\partial\varphi_j} D(\varphi),
    $$
    其中 $D(\varphi) = \log C^*(\varphi)$。
 
@@ -344,9 +344,9 @@ $$
 2. **正态分布 (方差已知)**  
    设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} N(\theta, 1)$，则：
    $$
-   f(\boldsymbol{x}; \theta) = (2\pi)^{-\frac{n}{2}} e^{-\frac{1}{2} \sum (x_i - \theta)^2} = (2\pi)^{-\frac{n}{2}} e^{-\frac{n\theta^2}{2} + n\theta\bar{x}} \cdot e^{-\frac{1}{2} \sum x_i^2}.
+   f(\boldsymbol{x}; \theta) = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{1}{2} \sum (x_i - \theta)^2} = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{n\theta^2}{2} + n\theta\bar{x}} \cdot \mathrm{e}^{-\frac{1}{2} \sum x_i^2}.
    $$
-   这里 $t(\boldsymbol{x}) = \bar{x}$，$g(t; \theta) = e^{-\frac{n\theta^2}{2} + n\theta\bar{x}}$，$h(\boldsymbol{x}) = (2\pi)^{-\frac{n}{2}} e^{-\frac{1}{2} \sum x_i^2}$。
+   这里 $t(\boldsymbol{x}) = \bar{x}$，$g(t; \theta) = \mathrm{e}^{-\frac{n\theta^2}{2} + n\theta\bar{x}}$，$h(\boldsymbol{x}) = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{1}{2} \sum x_i^2}$。
 
 3. **均匀分布**  
    设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} U(0, \theta)$，则：
@@ -377,7 +377,7 @@ P_\theta(\varphi(T) = 0) = 1, \quad \forall \theta \in \Theta,
 $$
 则称 $T(\boldsymbol{X})$ 是 $\theta$ 的**完全统计量**。
 
-**注记**：若 $T$ 的密度为 $g(t; \theta)$，则完全性等价于：从 $\int \varphi(t) g(t; \theta) dt = 0 \ (\forall \theta)$ 可推出 $\varphi(t) = 0$ 几乎处处成立。这意味着密度函数族 $\{g(t; \theta): \theta \in \Theta\}$ 在 $L^1$ 意义下是完备的。
+**注记**：若 $T$ 的密度为 $g(t; \theta)$，则完全性等价于：从 $\int \varphi(t) g(t; \theta) \mathrm{d}t = 0 \ (\forall \theta)$ 可推出 $\varphi(t) = 0$ 几乎处处成立。这意味着密度函数族 $\{g(t; \theta): \theta \in \Theta\}$ 在 $L^1$ 意义下是完备的。
 
 #### 2.3.4.1. 例子
 1. **伯努利分布**：$T = \sum X_i \sim B(n, \theta)$ 是完全统计量。

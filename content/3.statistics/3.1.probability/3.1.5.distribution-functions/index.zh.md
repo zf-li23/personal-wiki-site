@@ -24,7 +24,7 @@ $$
 
 - **连续型随机变量**：若 $X$ 有 PDF $f(x)$，则 CDF 为：
   $$
-  F(x) = \int_{-\infty}^{x} f(t) \, dt
+  F(x) = \int_{-\infty}^{x} f(t) \, \mathrm{d}t
   $$
   在 $f(x)$ 的连续点处，有 $f(x) = F'(x)$。
 
@@ -41,7 +41,7 @@ $$
 - **类型判断**：若 $F(x)$ 不连续，则 $X$ 非连续型；若 $F(x)$ 连续且导数存在，可通过导数得到 PDF。
 
 ### 5.1.6. 例子
-- **标准正态分布**：CDF 为 $\Phi(x) = \int_{-\infty}^{x} \varphi(t) \, dt$，其中 $\varphi(t) = \frac{1}{\sqrt{2\pi}} e^{-t^2/2}$。性质：$\Phi(-x) = 1 - \Phi(x)$。
+- **标准正态分布**：CDF 为 $\Phi(x) = \int_{-\infty}^{x} \varphi(t) \, \mathrm{d}t$，其中 $\varphi(t) = \frac{1}{\sqrt{2\pi}} \mathrm{e}^{-t^2/2}$。性质：$\Phi(-x) = 1 - \Phi(x)$。
 - **一般正态分布**：若 $X \sim N(\mu, \sigma^2)$，则：
   $$
   \mathbb{P}(X \leq a) = \Phi\left( \frac{a - \mu}{\sigma} \right)
@@ -60,7 +60,7 @@ $$
 
 - **一般方法**：
   1. 求 $Y$ 的 CDF：$F_Y(y) = \mathbb{P}(Y \leq y)$。
-  2. 求导得 PDF：$f_Y(y) = \frac{d}{dy} F_Y(y)$。
+  2. 求导得 PDF：$f_Y(y) = \frac{\mathrm{d}}{\mathrm{d}y} F_Y(y)$。
 
 - **线性变换**：若 $Y = aX + b$，则：
   $$
@@ -82,9 +82,9 @@ $$
 ### 5.2.3. Gamma 分布
 - **定义**：$X \sim \Gamma(\alpha, \lambda)$ 的 PDF 为：
   $$
-  f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} e^{-\lambda x}, \quad x \geq 0
+  f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} \mathrm{e}^{-\lambda x}, \quad x \geq 0
   $$
-  其中 $\Gamma(\alpha) = \int_{0}^{\infty} x^{\alpha-1} e^{-x} \, dx$。
+  其中 $\Gamma(\alpha) = \int_{0}^{\infty} x^{\alpha-1} \mathrm{e}^{-x} \, \mathrm{d}x$。
 - **性质**：
   - $\Gamma(n) = (n-1)!$ 对正整数 $n$。
   - $\Gamma(\alpha + 1) = \alpha \Gamma(\alpha)$。
@@ -99,7 +99,7 @@ $$
 - **分布函数（CDF）**：统一描述随机变量的工具，适用于所有类型。定义 $F(x) = \mathbb{P}(X \leq x)$，具有单调性、极限行为和右连续性。
 - **CDF 与 PMF/PDF 的关系**：
   - 离散型：$F(x) = \sum_{j: x_j \leq x} p_j$。
-  - 连续型：$F(x) = \int_{-\infty}^{x} f(t) \, dt$，$f(x) = F'(x)$。
+  - 连续型：$F(x) = \int_{-\infty}^{x} f(t) \, \mathrm{d}t$，$f(x) = F'(x)$。
 - **随机变量函数的分布**：
   - 离散型：直接计算 PMF。
   - 连续型：通过 CDF 求导或使用变换公式（如线性变换、单调函数）。
@@ -112,7 +112,7 @@ $$
 ### 关键公式总结
 - CDF 定义：$F(x) = \mathbb{P}(X \leq x)$
 - 离散型 CDF：$F(x) = \sum_{j: x_j \leq x} p_j$
-- 连续型 CDF：$F(x) = \int_{-\infty}^{x} f(t) \, dt$
+- 连续型 CDF：$F(x) = \int_{-\infty}^{x} f(t) \, \mathrm{d}t$
 - 线性变换：$f_Y(y) = \frac{1}{|a|} f_X\left( \frac{y - b}{a} \right)$
 - 单调变换：$f_Y(y) = f_X(h(y)) \left| h'(y) \right|$
-- Gamma 分布 PDF：$f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} e^{-\lambda x}$
+- Gamma 分布 PDF：$f(x) = \frac{\lambda^{\alpha}}{\Gamma(\alpha)} x^{\alpha-1} \mathrm{e}^{-\lambda x}$

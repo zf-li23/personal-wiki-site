@@ -2,7 +2,7 @@
 title: 矩阵函数
 ---
 
-本章回答两个问题。第一，复数有极形式 $z = re^{i\theta}$，矩阵能否也写成"伸缩乘以旋转"的形式 $A = Re^{iM}$？这需要先定义 $e^{iM}$，答案在 [第 13 章](/2.1.13)的极分解。第二，一元方程 $x'(t) = kx(t)$ 的解是 $x(t) = x(0)e^{kt}$；方程组 $X'(t) = AX(t)$ 的解能否写成 $X(t) = e^{At}X(0)$？两个问题都要求把复函数 $f: \mathbb{C} \to \mathbb{C}$ 推广为矩阵上的映射 $f: M_n(\mathbb{C}) \to M_n(\mathbb{C})$。
+本章回答两个问题。第一，复数有极形式 $z = r\mathrm{e}^{i\theta}$，矩阵能否也写成"伸缩乘以旋转"的形式 $A = R\mathrm{e}^{iM}$？这需要先定义 $\mathrm{e}^{iM}$，答案在 [第 13 章](/2.1.13)的极分解。第二，一元方程 $x'(t) = kx(t)$ 的解是 $x(t) = x(0)\mathrm{e}^{kt}$；方程组 $X'(t) = AX(t)$ 的解能否写成 $X(t) = \mathrm{e}^{At}X(0)$？两个问题都要求把复函数 $f: \mathbb{C} \to \mathbb{C}$ 推广为矩阵上的映射 $f: M_n(\mathbb{C}) \to M_n(\mathbb{C})$。
 
 离散数学中已经用幂级数定义过**矩阵指数**并讨论了它与李群的关系（[1.3.5](/1.3.5)）。本章给出 $f(A)$ 的三种等价定义——Jordan 标准形上的谱定义、插值多项式、幂级数——以及相应的三种算法，并比较它们的代价。准备工作是把微积分（[2.2](/2.2)）中的极限、导数、级数搬到矩阵上；主要工具是[上一章](/2.1.10)的 Jordan 标准形与极小多项式，以及[第 9 章](/2.1.9)的 **Lagrange 插值多项式**。核心结论是：$f(A)$ 只依赖于 $f$ 及其导数在 $A$ 的特征值处的有限个值，因此计算 $f(A)$ 可以归结为解一个线性方程组。最后一节用矩阵指数求解线性常系数微分方程组，它是常微分方程（[2.4](/2.4)）的起点。
 
@@ -10,7 +10,7 @@ title: 矩阵函数
 
 **定义 11.1.1** 以区间 $[a, b]$ 上的实函数 $a_{ij}(x)$ 为元素的矩阵 $A(x) = (a_{ij}(x))_{m \times n}$ 称为**函数矩阵**。
 
-例如 $A(x) = \begin{pmatrix} \sin x & e^x & 1 \\ 3x^2 & 0 & x - 1 \end{pmatrix}$。数字矩阵是函数矩阵的特例。函数矩阵的加法、与函数 $k(x)$ 的数乘、乘法 $A(x)B(x) = \left(\sum_k a_{ik}(x)b_{kj}(x)\right)$ 和转置都与数字矩阵相同。
+例如 $A(x) = \begin{pmatrix} \sin x & \mathrm{e}^x & 1 \\ 3x^2 & 0 & x - 1 \end{pmatrix}$。数字矩阵是函数矩阵的特例。函数矩阵的加法、与函数 $k(x)$ 的数乘、乘法 $A(x)B(x) = \left(\sum_k a_{ik}(x)b_{kj}(x)\right)$ 和转置都与数字矩阵相同。
 
 **定义 11.1.2** 设 $A(x)$ 是 $n$ 阶函数矩阵。若存在 $n$ 阶函数矩阵 $B(x)$，使对任意 $x \in [a, b]$ 都有 $A(x)B(x) = B(x)A(x) = I$，则称 $A(x)$ 在 $[a, b]$ 上可逆，记 $B(x) = A^{-1}(x)$。$A(x)$ 中不恒等于零的子式的最高阶数称为 $A(x)$ 的秩；$n$ 阶函数矩阵的秩为 $n$ 时称为满秩。
 
@@ -149,22 +149,22 @@ $$
 1. $P^{-1}f(A)P = f(P^{-1}AP)$，且 $f(A)$ 与 $A$ 可交换；
 2. $(f + g)(A) = f(A) + g(A)$，$(fg)(A) = f(A)g(A)$（对式 (11.1) 用 Leibniz 公式）；
 3. $\det(\lambda I - f(A)) = \prod_i (\lambda - f(\mu_i))^{n_i}$，即 $f(A)$ 的特征值是 $f(\mu_i)$，重数不变（$f(J)$ 是上三角阵）；
-4. $e^A$ 总是可逆的，$(e^A)^{-1} = e^{-A}$（由 2 与 $e^ze^{-z} = 1$；也可由 3 得 $\det e^A = \prod e^{n_i\mu_i} \ne 0$）；
+4. $\mathrm{e}^A$ 总是可逆的，$(\mathrm{e}^A)^{-1} = \mathrm{e}^{-A}$（由 2 与 $\mathrm{e}^z\mathrm{e}^{-z} = 1$；也可由 3 得 $\det \mathrm{e}^A = \prod \mathrm{e}^{n_i\mu_i} \ne 0$）；
 5. 若 $A$ 可对角化，$P^{-1}AP = \operatorname{diag}(\mu_1I_{n_1}, \dots, \mu_sI_{n_s})$，则 $f(A) = P\operatorname{diag}(f(\mu_1)I_{n_1}, \dots, f(\mu_s)I_{n_s})P^{-1}$ 也可对角化。
 
 **例 11.5.1** $J = J_{0,3}$，$f(z) = \sin z$。$m_J = \lambda^3$，$f(0) = 0$，$f'(0) = 1$，$f''(0) = 0$，故 $\sin J = J$。
 
-**例 11.5.2** $A = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 2 & 0 & 1 & 0 \\ 0 & -2 & 0 & 0 \\ 4 & 0 & 2 & 0 \end{pmatrix}$，求 $e^A$。$\det(\lambda I_4 - A) = \lambda^4$，$\operatorname{rank}(A) = 2$，$\operatorname{rank}(A^2) = 1$，$A^3 = O$，故 $J = \operatorname{diag}(J_{0,3}, J_{0,1})$，$m_A = \lambda^3$。取 Jordan 基 $P = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -2 & 0 & 1 & 0 \\ 0 & 2 & 0 & 1 \end{pmatrix}$（第 1、2、3 列是一条 Jordan 链，第 4 列是另一个特征向量）。由 $f(z) = e^z$，$f(0) = f'(0) = f''(0) = 1$，
+**例 11.5.2** $A = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 2 & 0 & 1 & 0 \\ 0 & -2 & 0 & 0 \\ 4 & 0 & 2 & 0 \end{pmatrix}$，求 $\mathrm{e}^A$。$\det(\lambda I_4 - A) = \lambda^4$，$\operatorname{rank}(A) = 2$，$\operatorname{rank}(A^2) = 1$，$A^3 = O$，故 $J = \operatorname{diag}(J_{0,3}, J_{0,1})$，$m_A = \lambda^3$。取 Jordan 基 $P = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ -2 & 0 & 1 & 0 \\ 0 & 2 & 0 & 1 \end{pmatrix}$（第 1、2、3 列是一条 Jordan 链，第 4 列是另一个特征向量）。由 $f(z) = \mathrm{e}^z$，$f(0) = f'(0) = f''(0) = 1$，
 
 $$
-e^J = \operatorname{diag}\left(\begin{pmatrix} 1 & 1 & \frac12 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{pmatrix}, 1\right), \qquad e^A = Pe^JP^{-1} = \begin{pmatrix} 2 & 1 & \frac12 & 0 \\ 2 & 1 & 1 & 0 \\ -2 & -2 & 0 & 0 \\ 4 & 0 & 2 & 1 \end{pmatrix}.
+\mathrm{e}^J = \operatorname{diag}\left(\begin{pmatrix} 1 & 1 & \frac12 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{pmatrix}, 1\right), \qquad \mathrm{e}^A = P\mathrm{e}^JP^{-1} = \begin{pmatrix} 2 & 1 & \frac12 & 0 \\ 2 & 1 & 1 & 0 \\ -2 & -2 & 0 & 0 \\ 4 & 0 & 2 & 1 \end{pmatrix}.
 $$
 
-**例 11.5.3** 若 $A \ne O$，$A^2 = O$，则 $m_A = \lambda^2$，Jordan 块只有 $J_{0,2}$ 和 $J_{0,1}$。$e^{J_{0,2}} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = I + J_{0,2}$，$e^{J_{0,1}} = 1$，所以 $e^J = I + J$，$e^A = P(I + J)P^{-1} = I + A$。
+**例 11.5.3** 若 $A \ne O$，$A^2 = O$，则 $m_A = \lambda^2$，Jordan 块只有 $J_{0,2}$ 和 $J_{0,1}$。$\mathrm{e}^{J_{0,2}} = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = I + J_{0,2}$，$\mathrm{e}^{J_{0,1}} = 1$，所以 $\mathrm{e}^J = I + J$，$\mathrm{e}^A = P(I + J)P^{-1} = I + A$。
 
 ## 11.6. 插值法
 
-例 11.5.2 中 $A^3 = O$，直接看 $e^A = I + A + \frac{1}{2}A^2$ 似乎更快：右边恰好是 $f(z) = e^z$ 在 $0$ 处的二次 Taylor 多项式。一般地，$f(A)$ 总等于某个低次多项式在 $A$ 处的值。
+例 11.5.2 中 $A^3 = O$，直接看 $\mathrm{e}^A = I + A + \frac{1}{2}A^2$ 似乎更快：右边恰好是 $f(z) = \mathrm{e}^z$ 在 $0$ 处的二次 Taylor 多项式。一般地，$f(A)$ 总等于某个低次多项式在 $A$ 处的值。
 
 **定理 11.6.1** 设 $m_A(\lambda) = \prod_{i=1}^s(\lambda - \mu_i)^{m_i}$，$m = \deg m_A$，$f$ 在 $A$ 的谱上有定义。则存在唯一的次数小于 $m$ 的多项式 $r(z)$，使
 
@@ -203,13 +203,13 @@ $$
 \cos A = a_0I + a_1A + a_2A^2 = \begin{pmatrix} 2\cos 2 + 6\sin 2 & -2\sin 2 & -2\cos 2 - 10\sin 2 \\ \frac12\cos 2 + 4\sin 2 & \cos 2 - \sin 2 & -\cos 2 - 7\sin 2 \\ \frac12\cos 2 + 3\sin 2 & -\sin 2 & -5\sin 2 \end{pmatrix}.
 $$
 
-**例 11.6.2** $A = \begin{pmatrix} 3 & -3 & 2 \\ -1 & 5 & -2 \\ -1 & 3 & 0 \end{pmatrix}$，求 $\ln A$、$\sin\frac{\pi}{4}A$ 与 $e^A$。$\det(\lambda I - A) = (\lambda - 2)^2(\lambda - 4)$，极小多项式是 $(\lambda - 2)^2(\lambda - 4)$ 或 $(\lambda - 2)(\lambda - 4)$；由 $\operatorname{rank}(A - 2I) = 1$，$\lambda = 2$ 有两个 Jordan 块，$m_A = (\lambda - 2)(\lambda - 4)$。设 $r(z) = a_0 + a_1z$。
+**例 11.6.2** $A = \begin{pmatrix} 3 & -3 & 2 \\ -1 & 5 & -2 \\ -1 & 3 & 0 \end{pmatrix}$，求 $\ln A$、$\sin\frac{\pi}{4}A$ 与 $\mathrm{e}^A$。$\det(\lambda I - A) = (\lambda - 2)^2(\lambda - 4)$，极小多项式是 $(\lambda - 2)^2(\lambda - 4)$ 或 $(\lambda - 2)(\lambda - 4)$；由 $\operatorname{rank}(A - 2I) = 1$，$\lambda = 2$ 有两个 Jordan 块，$m_A = (\lambda - 2)(\lambda - 4)$。设 $r(z) = a_0 + a_1z$。
 
 - $\ln$：$a_0 + 2a_1 = \ln 2$，$a_0 + 4a_1 = 2\ln 2$，得 $a_0 = 0$，$a_1 = \frac12\ln 2$，$\ln A = \frac{\ln 2}{2}A$。
 - $\sin\frac{\pi}{4}z$：$a_0 + 2a_1 = 1$，$a_0 + 4a_1 = 0$，得 $a_0 = 2$，$a_1 = -\frac12$，$\sin\frac{\pi}{4}A = 2I - \frac12A = \begin{pmatrix} \frac12 & \frac32 & -1 \\ \frac12 & -\frac12 & 1 \\ \frac12 & -\frac32 & 2 \end{pmatrix}$。
-- $e^z$：$a_0 + 2a_1 = e^2$，$a_0 + 4a_1 = e^4$，$e^A = (2e^2 - e^4)I + \frac12(e^4 - e^2)A$。
+- $\mathrm{e}^z$：$a_0 + 2a_1 = \mathrm{e}^2$，$a_0 + 4a_1 = \mathrm{e}^4$，$\mathrm{e}^A = (2\mathrm{e}^2 - \mathrm{e}^4)I + \frac12(\mathrm{e}^4 - \mathrm{e}^2)A$。
 
-下面的代码按算法 11.6.1 求解带导数条件的 Vandermonde 方程组，计算 $e^A$，并与 SciPy 的 `expm` 对比。
+下面的代码按算法 11.6.1 求解带导数条件的 Vandermonde 方程组，计算 $\mathrm{e}^A$，并与 SciPy 的 `expm` 对比。
 
 ```python
 import numpy as np
@@ -247,14 +247,14 @@ E = matrix_function(B, [(2, 1), (4, 1)], lambda mu, j: np.exp(mu))
 print(np.abs(E - expm(B)).max())
 ```
 
-插值法对小矩阵和精确计算很方便，但它需要准确的特征值和重数，而带导数条件的 Vandermonde 方程组在特征值相近时病态。数值软件中的 `expm` 采用"缩放与平方"配合有理逼近：先算 $e^{A/2^s}$（$\|A/2^s\|$ 很小，用 Padé 逼近），再平方 $s$ 次。
+插值法对小矩阵和精确计算很方便，但它需要准确的特征值和重数，而带导数条件的 Vandermonde 方程组在特征值相近时病态。数值软件中的 `expm` 采用"缩放与平方"配合有理逼近：先算 $\mathrm{e}^{A/2^s}$（$\|A/2^s\|$ 很小，用 Padé 逼近），再平方 $s$ 次。
 
 ## 11.7. 幂级数定义
 
 第三种定义直接把幂级数中的 $z$ 换成 $A$，它与 [1.3.5](/1.3.5) 中矩阵指数的定义一致。设 $S(z) = \sum_{p=0}^\infty a_pz^p$ 的收敛半径为 $R$：$|z| < R$ 时绝对收敛，$|z| > R$ 时发散；逐项求导后的级数有相同的收敛半径（[2.2.8](/2.2.8)）。常用的展开有
 
 $$
-e^z = \sum_{p=0}^\infty \frac{z^p}{p!}, \quad \sin z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p+1}}{(2p+1)!}, \quad \cos z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p}}{(2p)!} \quad (R = +\infty), \qquad \ln(1 + z) = \sum_{p=1}^\infty \frac{(-1)^{p-1}z^p}{p} \quad (R = 1).
+\mathrm{e}^z = \sum_{p=0}^\infty \frac{z^p}{p!}, \quad \sin z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p+1}}{(2p+1)!}, \quad \cos z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p}}{(2p)!} \quad (R = +\infty), \qquad \ln(1 + z) = \sum_{p=1}^\infty \frac{(-1)^{p-1}z^p}{p} \quad (R = 1).
 $$
 
 **定义 11.7.1** 对 $A \in M_n(\mathbb{C})$，令 $S(A) = \sum_{p=0}^\infty a_pA^p$；若部分和 $S_p(A) = a_0I + \cdots + a_pA^p$ 收敛，则称 $S(A)$ 收敛。
@@ -265,12 +265,12 @@ $$
 
 课件此处的推论写成"若 $S(z)$ 的收敛半径为 $R$，则 $|\mu_i| < R$"，方向颠倒了；正确的是上面的定理：特征值都在收敛圆内时级数收敛。
 
-由定理 11.7.1，$e^A$、$\sin A$、$\cos A$ 对一切 $A$ 收敛；$\rho(A) < 1$ 时 $\ln(I + A) = A - \frac12A^2 + \frac13A^3 - \cdots$，并且 $\sum_k A^k = (I - A)^{-1}$（定理 11.3.2）正是 $f(z) = \frac{1}{1 - z}$ 的情形。对满足特殊关系的矩阵，幂级数可以直接求和：
+由定理 11.7.1，$\mathrm{e}^A$、$\sin A$、$\cos A$ 对一切 $A$ 收敛；$\rho(A) < 1$ 时 $\ln(I + A) = A - \frac12A^2 + \frac13A^3 - \cdots$，并且 $\sum_k A^k = (I - A)^{-1}$（定理 11.3.2）正是 $f(z) = \frac{1}{1 - z}$ 的情形。对满足特殊关系的矩阵，幂级数可以直接求和：
 
-**例 11.7.1** 若 $A^2 = O$，则 $e^A = I + A$，$\sin A = A$，$\cos A = I$（与例 11.5.3 一致）。若 $A^2 = A$，则 $A^k = A$（$k \ge 1$），
+**例 11.7.1** 若 $A^2 = O$，则 $\mathrm{e}^A = I + A$，$\sin A = A$，$\cos A = I$（与例 11.5.3 一致）。若 $A^2 = A$，则 $A^k = A$（$k \ge 1$），
 
 $$
-e^A = I + \left(1 + \frac{1}{2!} + \frac{1}{3!} + \cdots\right)A = I + (e - 1)A.
+\mathrm{e}^A = I + \left(1 + \frac{1}{2!} + \frac{1}{3!} + \cdots\right)A = I + (e - 1)A.
 $$
 
 ## 11.8. 矩阵指数
@@ -278,77 +278,77 @@ $$
 **定义 11.8.1（矩阵指数）** 对 $A \in M_n(\mathbb{C})$ 与 $t \in \mathbb{R}$（或 $\mathbb{C}$），
 
 $$
-e^{At} = \sum_{k=0}^\infty \frac{t^k}{k!}A^k = I + tA + \frac{t^2}{2!}A^2 + \cdots.
+\mathrm{e}^{At} = \sum_{k=0}^\infty \frac{t^k}{k!}A^k = I + tA + \frac{t^2}{2!}A^2 + \cdots.
 $$
 
-由定理 11.7.1，级数对一切 $A$、$t$ 绝对收敛，且等于 $f(z) = e^{tz}$ 在 $A$ 处的矩阵函数。
+由定理 11.7.1，级数对一切 $A$、$t$ 绝对收敛，且等于 $f(z) = \mathrm{e}^{tz}$ 在 $A$ 处的矩阵函数。
 
 **定理 11.8.1** 设 $A, B \in M_n(\mathbb{C})$，$P$ 可逆。
 
-1. 若 $AB = BA$，则 $e^{A+B} = e^Ae^B$；
-2. $e^{P^{-1}AP} = P^{-1}e^AP$；
-3. $\det e^A = e^{\operatorname{tr}A}$；
-4. $\dfrac{\mathrm{d}}{\mathrm{d}t}e^{At} = Ae^{At} = e^{At}A$。
+1. 若 $AB = BA$，则 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；
+2. $\mathrm{e}^{P^{-1}AP} = P^{-1}\mathrm{e}^AP$；
+3. $\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}A}$；
+4. $\dfrac{\mathrm{d}}{\mathrm{d}t}\mathrm{e}^{At} = A\mathrm{e}^{At} = \mathrm{e}^{At}A$。
 
-**证明** 1：$A, B$ 可交换时二项式定理成立，两个绝对收敛级数的 Cauchy 乘积按 $e^{x+y} = e^xe^y$ 的同样方式重排。2：性质 11.5.1。3：由性质 11.5.1 的第 3 条，$e^A$ 的特征值是 $e^{\lambda_1}, \dots, e^{\lambda_n}$（计重数），乘积为 $e^{\lambda_1 + \cdots + \lambda_n}$。4：幂级数逐项求导。 $\square$
+**证明** 1：$A, B$ 可交换时二项式定理成立，两个绝对收敛级数的 Cauchy 乘积按 $\mathrm{e}^{x+y} = \mathrm{e}^x\mathrm{e}^y$ 的同样方式重排。2：性质 11.5.1。3：由性质 11.5.1 的第 3 条，$\mathrm{e}^A$ 的特征值是 $\mathrm{e}^{\lambda_1}, \dots, \mathrm{e}^{\lambda_n}$（计重数），乘积为 $\mathrm{e}^{\lambda_1 + \cdots + \lambda_n}$。4：幂级数逐项求导。 $\square$
 
-可交换的条件不能去掉：$A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$，$B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$，$e^Ae^B = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$，而 $A + B$ 的特征值为 $\pm 1$，$e^{A+B} = \begin{pmatrix} \cosh 1 & \sinh 1 \\ \sinh 1 & \cosh 1 \end{pmatrix}$。
+可交换的条件不能去掉：$A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$，$B = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$，$\mathrm{e}^A\mathrm{e}^B = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$，而 $A + B$ 的特征值为 $\pm 1$，$\mathrm{e}^{A+B} = \begin{pmatrix} \cosh 1 & \sinh 1 \\ \sinh 1 & \cosh 1 \end{pmatrix}$。
 
-计算 $e^{At}$ 时，由 $P^{-1}AP = J$ 得 $e^{At} = Pe^{Jt}P^{-1}$。对 Jordan 块，$J_{\lambda,m}t = \lambda tI + tN$ 的两项可交换，
-
-$$
-e^{J_{\lambda,m}t} = e^{\lambda t}e^{tN} = e^{\lambda t}\left(I + tN + \frac{t^2}{2!}N^2 + \cdots + \frac{t^{m-1}}{(m-1)!}N^{m-1}\right). \tag{11.2}
-$$
-
-这也是 $f(z) = e^{tz}$ 代入式 (11.1) 的结果（$f^{(j)}(\lambda) = t^je^{\lambda t}$）。注意 $tJ_{\lambda,m}$ 的上对角线是 $t$，它本身不是 Jordan 块，不能把它当作 Jordan 块再套用式 (11.1)。
-
-**例 11.8.1** $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{i, -i\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + ia_1 = e^{it}$，$a_0 - ia_1 = e^{-it}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
+计算 $\mathrm{e}^{At}$ 时，由 $P^{-1}AP = J$ 得 $\mathrm{e}^{At} = P\mathrm{e}^{Jt}P^{-1}$。对 Jordan 块，$J_{\lambda,m}t = \lambda tI + tN$ 的两项可交换，
 
 $$
-e^{At} = \cos t\,I + \sin t\,A = \begin{pmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{pmatrix}.
+\mathrm{e}^{J_{\lambda,m}t} = \mathrm{e}^{\lambda t}\mathrm{e}^{tN} = \mathrm{e}^{\lambda t}\left(I + tN + \frac{t^2}{2!}N^2 + \cdots + \frac{t^{m-1}}{(m-1)!}N^{m-1}\right). \tag{11.2}
 $$
 
-$A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧拉公式** $e^{it} = \cos t + i\sin t$ 的矩阵版本；$\{e^{At}\}$ 是平面旋转构成的**单参数子群**。
+这也是 $f(z) = \mathrm{e}^{tz}$ 代入式 (11.1) 的结果（$f^{(j)}(\lambda) = t^j\mathrm{e}^{\lambda t}$）。注意 $tJ_{\lambda,m}$ 的上对角线是 $t$，它本身不是 Jordan 块，不能把它当作 Jordan 块再套用式 (11.1)。
+
+**例 11.8.1** $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{i, -i\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + ia_1 = \mathrm{e}^{it}$，$a_0 - ia_1 = \mathrm{e}^{-it}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
+
+$$
+\mathrm{e}^{At} = \cos t\,I + \sin t\,A = \begin{pmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{pmatrix}.
+$$
+
+$A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧拉公式** $\mathrm{e}^{it} = \cos t + i\sin t$ 的矩阵版本；$\{\mathrm{e}^{At}\}$ 是平面旋转构成的**单参数子群**。
 
 **例 11.8.2** 若 $P^{-1}AP = J = \operatorname{diag}(J_{2,1}, J_{4,2})$，则由式 (11.2)，
 
 $$
-e^{At} = P\begin{pmatrix} e^{2t} & 0 & 0 \\ 0 & e^{4t} & te^{4t} \\ 0 & 0 & e^{4t} \end{pmatrix}P^{-1}.
+\mathrm{e}^{At} = P\begin{pmatrix} \mathrm{e}^{2t} & 0 & 0 \\ 0 & \mathrm{e}^{4t} & t\mathrm{e}^{4t} \\ 0 & 0 & \mathrm{e}^{4t} \end{pmatrix}P^{-1}.
 $$
 
-**定理 11.8.2** 设 $B \in M_n(\mathbb{C})$，则存在 $X$ 使 $e^X = B$ $\Leftrightarrow$ $B$ 可逆。
+**定理 11.8.2** 设 $B \in M_n(\mathbb{C})$，则存在 $X$ 使 $\mathrm{e}^X = B$ $\Leftrightarrow$ $B$ 可逆。
 
-**证明** 必要性：$\det e^X = e^{\operatorname{tr}X} \ne 0$。充分性：由定理 11.8.1 的第 2 条，只需对 $B$ 的每个 Jordan 块 $J_{\lambda,k}$（$\lambda \ne 0$）找到 $X$。写 $J_{\lambda,k} = \lambda(I + M)$，$M = \lambda^{-1}N$ 幂零。取 $\lambda$ 的一个对数 $\ell$（$e^\ell = \lambda$），令
+**证明** 必要性：$\det \mathrm{e}^X = \mathrm{e}^{\operatorname{tr}X} \ne 0$。充分性：由定理 11.8.1 的第 2 条，只需对 $B$ 的每个 Jordan 块 $J_{\lambda,k}$（$\lambda \ne 0$）找到 $X$。写 $J_{\lambda,k} = \lambda(I + M)$，$M = \lambda^{-1}N$ 幂零。取 $\lambda$ 的一个对数 $\ell$（$\mathrm{e}^\ell = \lambda$），令
 
 $$
 X = \ell I + L, \qquad L = \ln(I + M) = M - \frac{M^2}{2} + \cdots + \frac{(-1)^kM^{k-1}}{k-1},
 $$
 
-级数因 $M^k = O$ 而有限。形式幂级数恒等式 $\exp(\ln(1 + z)) = 1 + z$ 对幂零矩阵代入后成立，所以 $e^L = I + M$；$\ell I$ 与 $L$ 可交换，$e^X = e^\ell e^L = \lambda(I + M) = J_{\lambda,k}$。 $\square$
+级数因 $M^k = O$ 而有限。形式幂级数恒等式 $\exp(\ln(1 + z)) = 1 + z$ 对幂零矩阵代入后成立，所以 $\mathrm{e}^L = I + M$；$\ell I$ 与 $L$ 可交换，$\mathrm{e}^X = \mathrm{e}^\ell \mathrm{e}^L = \lambda(I + M) = J_{\lambda,k}$。 $\square$
 
-对数不唯一：$e^{2\pi i I} = I = e^O$。实矩阵也未必有实对数，例如 $\operatorname{diag}(-1, 2)$ 没有实对数：对实矩阵 $X$，$e^X$ 关于负特征值的 Jordan 块总是成对出现（来自 $X$ 的一对共轭复特征值 $\ell, \bar\ell$）。
+对数不唯一：$\mathrm{e}^{2\pi i I} = I = \mathrm{e}^O$。实矩阵也未必有实对数，例如 $\operatorname{diag}(-1, 2)$ 没有实对数：对实矩阵 $X$，$\mathrm{e}^X$ 关于负特征值的 Jordan 块总是成对出现（来自 $X$ 的一对共轭复特征值 $\ell, \bar\ell$）。
 
 ## 11.9. 线性常系数微分方程组
 
-设 $X(t) = (x_1(t), \dots, x_n(t))^{\mathsf T}$，$A \in M_n(\mathbb{C})$ 是常数矩阵，求解 $X'(t) = AX(t)$。仿照一元方程：$e^{-At}$ 与 $A$ 可交换，由性质 11.1.1 与定理 11.8.1，
+设 $X(t) = (x_1(t), \dots, x_n(t))^{\mathsf T}$，$A \in M_n(\mathbb{C})$ 是常数矩阵，求解 $X'(t) = AX(t)$。仿照一元方程：$\mathrm{e}^{-At}$ 与 $A$ 可交换，由性质 11.1.1 与定理 11.8.1，
 
 $$
-\left(e^{-At}X(t)\right)' = -Ae^{-At}X(t) + e^{-At}X'(t) = e^{-At}\left(X'(t) - AX(t)\right).
+\left(\mathrm{e}^{-At}X(t)\right)' = -A\mathrm{e}^{-At}X(t) + \mathrm{e}^{-At}X'(t) = \mathrm{e}^{-At}\left(X'(t) - AX(t)\right).
 $$
 
-**定理 11.9.1** 方程组 $X'(t) = AX(t)$ 满足初值 $X(0) = x_0$ 的解存在且唯一，为 $X(t) = e^{At}x_0$。因此通解是 $X(t) = e^{At}c$，即 $e^{At}$ 各列的任意线性组合。
+**定理 11.9.1** 方程组 $X'(t) = AX(t)$ 满足初值 $X(0) = x_0$ 的解存在且唯一，为 $X(t) = \mathrm{e}^{At}x_0$。因此通解是 $X(t) = \mathrm{e}^{At}c$，即 $\mathrm{e}^{At}$ 各列的任意线性组合。
 
-**证明** 由定理 11.8.1 的第 4 条，$e^{At}x_0$ 是解。反之若 $X(t)$ 是解，则上式右边为零，$e^{-At}X(t)$ 是常向量，等于 $X(0) = x_0$，于是 $X(t) = e^{At}x_0$。 $\square$
+**证明** 由定理 11.8.1 的第 4 条，$\mathrm{e}^{At}x_0$ 是解。反之若 $X(t)$ 是解，则上式右边为零，$\mathrm{e}^{-At}X(t)$ 是常向量，等于 $X(0) = x_0$，于是 $X(t) = \mathrm{e}^{At}x_0$。 $\square$
 
-**推论 11.9.1** 设 $P^{-1}AP = J$。$X'(t) = AX(t)$ 的通解为 $X(t) = Pe^{Jt}c$（$c = P^{-1}x_0$ 为任意常向量）。具体地，若 $p_1, \dots, p_k$ 是关于特征值 $\lambda$ 的一条 Jordan 链（$p_1$ 是特征向量），则它给出 $k$ 个线性无关的解
+**推论 11.9.1** 设 $P^{-1}AP = J$。$X'(t) = AX(t)$ 的通解为 $X(t) = P\mathrm{e}^{Jt}c$（$c = P^{-1}x_0$ 为任意常向量）。具体地，若 $p_1, \dots, p_k$ 是关于特征值 $\lambda$ 的一条 Jordan 链（$p_1$ 是特征向量），则它给出 $k$ 个线性无关的解
 
 $$
-e^{\lambda t}p_1, \quad e^{\lambda t}(tp_1 + p_2), \quad e^{\lambda t}\left(\frac{t^2}{2!}p_1 + tp_2 + p_3\right), \quad \dots, \quad e^{\lambda t}\sum_{j=1}^{k}\frac{t^{k-j}}{(k-j)!}p_j.
+\mathrm{e}^{\lambda t}p_1, \quad \mathrm{e}^{\lambda t}(tp_1 + p_2), \quad \mathrm{e}^{\lambda t}\left(\frac{t^2}{2!}p_1 + tp_2 + p_3\right), \quad \dots, \quad \mathrm{e}^{\lambda t}\sum_{j=1}^{k}\frac{t^{k-j}}{(k-j)!}p_j.
 $$
 
-**证明** $Pe^{Jt}c = e^{At}Pc$ 是解，$Pc$ 取遍 $\mathbb{C}^n$。$Pe^{Jt}$ 的列由式 (11.2) 直接写出。 $\square$
+**证明** $P\mathrm{e}^{Jt}c = \mathrm{e}^{At}Pc$ 是解，$Pc$ 取遍 $\mathbb{C}^n$。$P\mathrm{e}^{Jt}$ 的列由式 (11.2) 直接写出。 $\square$
 
-可以验证，形如 $e^{\lambda t}\left(\frac{t^{k-1}}{(k-1)!}\alpha_1 + \cdots + t\alpha_{k-1} + \alpha_k\right)$（$\alpha_1 \ne 0$）的函数是解，当且仅当 $\alpha_1, \dots, \alpha_k$ 是关于 $\lambda$ 的 Jordan 链。所以解方程组就是求 Jordan 链。
+可以验证，形如 $\mathrm{e}^{\lambda t}\left(\frac{t^{k-1}}{(k-1)!}\alpha_1 + \cdots + t\alpha_{k-1} + \alpha_k\right)$（$\alpha_1 \ne 0$）的函数是解，当且仅当 $\alpha_1, \dots, \alpha_k$ 是关于 $\lambda$ 的 Jordan 链。所以解方程组就是求 Jordan 链。
 
 **例 11.9.1** 求解
 
@@ -359,24 +359,24 @@ $$
 $\det(\lambda I - A) = (\lambda - 2)(\lambda - 4)^2$，$\operatorname{rank}(A - 4I) = 2$，关于 $4$ 只有一个块，$J = \operatorname{diag}(2, J_{4,2})$。$(A - 2I)x = 0$ 得 $p_1 = (0, -1, 1)^{\mathsf T}$；$(A - 4I)x = 0$ 得 $p_2 = (2, -2, 0)^{\mathsf T}$；$(A - 4I)x = p_2$ 得 $p_3 = (1, 0, 0)^{\mathsf T}$。通解为
 
 $$
-X(t) = c_1e^{2t}\begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} + c_2e^{4t}\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + c_3e^{4t}\left(t\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\right).
+X(t) = c_1\mathrm{e}^{2t}\begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} + c_2\mathrm{e}^{4t}\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + c_3\mathrm{e}^{4t}\left(t\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\right).
 $$
 
-给定初值 $X(0) = x_0$ 时，$c = P^{-1}x_0$，$P = (p_1, p_2, p_3)$。例如 $x_0 = (1, 0, 0)^{\mathsf T} = p_3$ 时 $c = (0, 0, 1)^{\mathsf T}$，$X(t) = e^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。
+给定初值 $X(0) = x_0$ 时，$c = P^{-1}x_0$，$P = (p_1, p_2, p_3)$。例如 $x_0 = (1, 0, 0)^{\mathsf T} = p_3$ 时 $c = (0, 0, 1)^{\mathsf T}$，$X(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。
 
 非齐次方程组的解由齐次解加上输入的"累积响应"组成。
 
 **定理 11.9.2** 设 $B \in \mathbb{C}^{n \times m}$，$u(t)$ 是连续的 $m$ 维函数向量。方程组 $X'(t) = AX(t) + Bu(t)$ 满足 $X(0) = x_0$ 的解存在且唯一，为
 
 $$
-X(t) = e^{At}x_0 + \int_0^t e^{A(t-\tau)}Bu(\tau)\,\mathrm{d}\tau. \tag{11.3}
+X(t) = \mathrm{e}^{At}x_0 + \int_0^t \mathrm{e}^{A(t-\tau)}Bu(\tau)\,\mathrm{d}\tau. \tag{11.3}
 $$
 
-**证明** 设 $X(t)$ 是解，则 $\left(e^{-At}X(t)\right)' = e^{-At}\left(X' - AX\right) = e^{-At}Bu(t)$。从 $0$ 到 $t$ 积分：$e^{-At}X(t) - x_0 = \int_0^t e^{-A\tau}Bu(\tau)\,\mathrm{d}\tau$，两边左乘 $e^{At}$ 即得式 (11.3)，这同时证明了唯一性；直接求导可验证式 (11.3) 确实是解。 $\square$
+**证明** 设 $X(t)$ 是解，则 $\left(\mathrm{e}^{-At}X(t)\right)' = \mathrm{e}^{-At}\left(X' - AX\right) = \mathrm{e}^{-At}Bu(t)$。从 $0$ 到 $t$ 积分：$\mathrm{e}^{-At}X(t) - x_0 = \int_0^t \mathrm{e}^{-A\tau}Bu(\tau)\,\mathrm{d}\tau$，两边左乘 $\mathrm{e}^{At}$ 即得式 (11.3)，这同时证明了唯一性；直接求导可验证式 (11.3) 确实是解。 $\square$
 
-式 (11.3) 称为常数变易公式（variation of constants formula）：把齐次解 $e^{At}c$ 中的常向量 $c$ 换成函数 $c(t)$ 代入方程，就得到 $c'(t) = e^{-At}Bu(t)$。它是控制理论中线性系统响应的基本公式。
+式 (11.3) 称为常数变易公式（variation of constants formula）：把齐次解 $\mathrm{e}^{At}c$ 中的常向量 $c$ 换成函数 $c(t)$ 代入方程，就得到 $c'(t) = \mathrm{e}^{-At}Bu(t)$。它是控制理论中线性系统响应的基本公式。
 
-系数随时间变化的方程组 $X'(t) = A(t)X(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$e^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $e^{At}$，它满足 $\det\Phi(t) = e^{\int_0^t\operatorname{tr}A(s)\,\mathrm{d}s}$，非齐次方程的解为 $X(t) = \Phi(t)x_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)u(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
+系数随时间变化的方程组 $X'(t) = A(t)X(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$\mathrm{e}^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $\mathrm{e}^{At}$，它满足 $\det\Phi(t) = \mathrm{e}^{\int_0^t\operatorname{tr}A(s)\,\mathrm{d}s}$，非齐次方程的解为 $X(t) = \Phi(t)x_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)u(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
 
 ## 小结
 
@@ -386,8 +386,8 @@ $$
 | 函数向量的相关性 | Gram 矩阵满秩 $\Leftrightarrow$ 无关（定理 11.2.1）；Wronski 矩阵在一点满秩 $\Rightarrow$ 无关（定理 11.2.2） |
 | 矩阵序列与级数 | $A^k \to O \Leftrightarrow \rho(A) < 1$；$\sum A^k = (I - A)^{-1} \Leftrightarrow \rho(A) < 1$；绝对收敛看 $\sum \lvert A_k\rvert$ |
 | 矩阵函数 | 只依赖于 $f^{(j)}(\mu_i)$，$j < m_i$；三种定义一致（定理 11.6.1、11.7.1） |
-| 矩阵指数 | 可交换时 $e^{A+B} = e^Ae^B$；$\det e^A = e^{\operatorname{tr}A}$；$e^X = B$ 可解 $\Leftrightarrow$ $B$ 可逆 |
-| 微分方程组 | $X' = AX$：$X = e^{At}x_0$，基本解由 Jordan 链给出；非齐次：常数变易公式 (11.3) |
+| 矩阵指数 | 可交换时 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；$\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}A}$；$\mathrm{e}^X = B$ 可解 $\Leftrightarrow$ $B$ 可逆 |
+| 微分方程组 | $X' = AX$：$X = \mathrm{e}^{At}x_0$，基本解由 Jordan 链给出；非齐次：常数变易公式 (11.3) |
 
 计算 $f(A)$ 的三种方法比较如下。
 

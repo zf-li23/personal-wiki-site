@@ -5,70 +5,70 @@ title: 随机向量的分布
 ## 6.1. 随机向量的基本概念
 
 ### 6.1.1. 定义
-设 $X_1, ..., X_n$ 都是概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的随机变量，称 $X = (X_1, ..., X_n)$ 是 n 维随机向量。
+设 $X_1, \dots, X_n$ 都是概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的随机变量，称 $X = (X_1, \dots, X_n)$ 是 n 维随机向量。
 
 ### 6.1.2. 联合分布函数
-$X = (X_1, ..., X_n)$ 的联合分布函数定义为：
+$X = (X_1, \dots, X_n)$ 的联合分布函数定义为：
 $$
-F(x_1, ..., x_n) = \mathbb{P}(X_1 \leq x_1, ..., X_n \leq x_n)
+F(x_1, \dots, x_n) = \mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n)
 $$
 
 ## 6.2. 离散型随机向量
 
 ### 6.2.1. 联合分布列
-设离散型随机向量 $X = (X_1, ..., X_n)$ 的取值为：
+设离散型随机向量 $X = (X_1, \dots, X_n)$ 的取值为：
 $$
-x(j_1, ..., j_n) = (x_1(j_1), ..., x_n(j_n)), \quad j_1, ..., j_n \geq 1
+x(j_1, \dots, j_n) = (x_1(j_1), \dots, x_n(j_n)), \quad j_1, \dots, j_n \geq 1
 $$
 联合分布列为：
 $$
-p_{j_1, ..., j_n} = \mathbb{P}(X = x(j_1, ..., j_n))
+p_{j_1, \dots, j_n} = \mathbb{P}(X = x(j_1, \dots, j_n))
 $$
 
 ### 6.2.2. 边缘分布列
-$(X_1, ..., X_k)$ 的边缘分布列为：
+$(X_1, \dots, X_k)$ 的边缘分布列为：
 $$
-\mathbb{P}(X_1 = x_1(j_1), ..., X_k = x_k(j_k)) = \sum_{j_{k+1}, ..., j_n} p_{j_1, ..., j_n}
+\mathbb{P}(X_1 = x_1(j_1), \dots, X_k = x_k(j_k)) = \sum_{j_{k+1}, \dots, j_n} p_{j_1, \dots, j_n}
 $$
 
 ### 6.2.3. 独立性判定
-**定理**：离散型随机向量 $X_1, ..., X_n$ 相互独立当且仅当对任意 $(x_1(j_1), ..., x_n(j_n))$：
+**定理**：离散型随机向量 $X_1, \dots, X_n$ 相互独立当且仅当对任意 $(x_1(j_1), \dots, x_n(j_n))$：
 $$
-\mathbb{P}(X_1 = x_1(j_1), ..., X_n = x_n(j_n)) = \prod_{i=1}^n \mathbb{P}(X_i = x_i(j_i))
+\mathbb{P}(X_1 = x_1(j_1), \dots, X_n = x_n(j_n)) = \prod_{i=1}^n \mathbb{P}(X_i = x_i(j_i))
 $$
 
 ### 6.2.4. 经典分布：多项分布
-设 $A_1, ..., A_r$ 是试验的完备事件组，进行 $n$ 次独立重复试验，$X_i$ 表示 $A_i$ 发生次数，则：
+设 $A_1, \dots, A_r$ 是试验的完备事件组，进行 $n$ 次独立重复试验，$X_i$ 表示 $A_i$ 发生次数，则：
 $$
-\mathbb{P}(X_1 = k_1, ..., X_r = k_r) = \frac{n!}{k_1!...k_r!} p_1^{k_1} ... p_r^{k_r}
+\mathbb{P}(X_1 = k_1, \dots, X_r = k_r) = \frac{n!}{k_1!\dots k_r!} p_1^{k_1} \dots p_r^{k_r}
 $$
 其中 $k_i \geq 0$，$\sum k_i = n$，$p_i = \mathbb{P}(A_i)$。
 
 ## 6.3. 连续型随机向量
 
 ### 6.3.1. 联合概率密度
-存在非负可积函数 $f(x_1, ..., x_n)$，使得对任意 Borel 集 $B$：
+存在非负可积函数 $f(x_1, \dots, x_n)$，使得对任意 Borel 集 $B$：
 $$
-\mathbb{P}(X \in B) = \int_B f(x) dx
+\mathbb{P}(X \in B) = \int_B f(x) \mathrm{d}x
 $$
-且 $\int_{\mathbb{R}^n} f(x) dx = 1$。
+且 $\int_{\mathbb{R}^n} f(x) \mathrm{d}x = 1$。
 
 ### 6.3.2. 边缘密度
-$(X_1, ..., X_k)$ 的边缘密度为：
+$(X_1, \dots, X_k)$ 的边缘密度为：
 $$
-f_k(x_1, ..., x_k) = \int_{\mathbb{R}^{n-k}} f(x_1, ..., x_n) dx_{k+1} ... dx_n
+f_k(x_1, \dots, x_k) = \int_{\mathbb{R}^{n-k}} f(x_1, \dots, x_n) \mathrm{d}x_{k+1} \dots \mathrm{d}x_n
 $$
 
 ### 6.3.3. 独立性判定
-**定理**：连续型随机变量 $X_1, ..., X_n$ 相互独立当且仅当联合密度可分解为：
+**定理**：连续型随机变量 $X_1, \dots, X_n$ 相互独立当且仅当联合密度可分解为：
 $$
-f(x_1, ..., x_n) = f_1(x_1) f_2(x_2) ... f_n(x_n)
+f(x_1, \dots, x_n) = f_1(x_1) f_2(x_2) \dots f_n(x_n)
 $$
 
 ### 6.3.4. 联合分布与联合密度的关系
 - 已知密度求分布：
   $$
-  F(x, y) = \int_{-\infty}^x \int_{-\infty}^y f(u, v) du dv
+  F(x, y) = \int_{-\infty}^x \int_{-\infty}^y f(u, v) \mathrm{d}u \mathrm{d}v
   $$
 - 已知分布求密度（当偏导数存在时）：
   $$
@@ -87,7 +87,7 @@ $$
 给定 $Y = y$ 下（$f_Y(y) > 0$）：
 - 条件分布函数：
   $$
-  F_{X|Y}(x|y) = \mathbb{P}(X \leq x | Y = y) = \frac{\int_{-\infty}^x f(s, y) ds}{f_Y(y)}
+  F_{X|Y}(x|y) = \mathbb{P}(X \leq x | Y = y) = \frac{\int_{-\infty}^x f(s, y) \mathrm{d}s}{f_Y(y)}
   $$
 - 条件密度函数：
   $$
@@ -138,10 +138,10 @@ $$
 - **二元正态分布**：重要的连续型随机向量，相关系数 $\rho$ 决定变量间的相关性。
 
 ### 关键公式
-- 联合 CDF：$F(x_1, ..., x_n) = \mathbb{P}(X_1 \leq x_1, ..., X_n \leq x_n)$
-- 离散型联合分布列：$p_{j_1, ..., j_n} = \mathbb{P}(X = x(j_1, ..., j_n))$
-- 连续型联合密度：$\mathbb{P}(X \in B) = \int_B f(x) dx$
-- 边缘密度：$f_k(x_1, ..., x_k) = \int_{\mathbb{R}^{n-k}} f(x_1, ..., x_n) dx_{k+1} ... dx_n$
+- 联合 CDF：$F(x_1, \dots, x_n) = \mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n)$
+- 离散型联合分布列：$p_{j_1, \dots, j_n} = \mathbb{P}(X = x(j_1, \dots, j_n))$
+- 连续型联合密度：$\mathbb{P}(X \in B) = \int_B f(x) \mathrm{d}x$
+- 边缘密度：$f_k(x_1, \dots, x_k) = \int_{\mathbb{R}^{n-k}} f(x_1, \dots, x_n) \mathrm{d}x_{k+1} \dots \mathrm{d}x_n$
 - 条件密度：$f_{X|Y}(x|y) = \dfrac{f(x, y)}{f_Y(y)}$
 - 二元正态密度：矩阵形式和显式表达式
 

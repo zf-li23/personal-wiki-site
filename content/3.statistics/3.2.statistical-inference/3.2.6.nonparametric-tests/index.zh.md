@@ -50,15 +50,15 @@ title: 非参数假设检验
 - **数据**：$n$ 对观测 $(X_i, Y_i)$，例如 $X_i$ = 服用药物1后的额外睡眠，$Y_i$ = 服用药物2后的额外睡眠。
 - **差值**：$Z_i = Y_i - X_i$。
 - **假设**：
-  - $H_0$：两种药物效果相同，即 $P(Z_i > 0) = P(Z_i < 0) = 0.5$。
-  - $H_1$：两种药物效果不同，即 $P(Z_i > 0) \neq P(Z_i < 0)$。
+  - $H_0$：两种药物效果相同，即 $\mathbb{P}(Z_i > 0) = \mathbb{P}(Z_i < 0) = 0.5$。
+  - $H_1$：两种药物效果不同，即 $\mathbb{P}(Z_i > 0) \neq \mathbb{P}(Z_i < 0)$。
 - **步骤**：
   1. 剔除 $Z_i = 0$ 的观测（若有），记有效样本量为 $n_0$。
   2. 计算正号数 $n_+ = \#\{Z_i > 0\}$。
   3. 在 $H_0$ 下，$n_+ \sim B(n_0, 0.5)$。
   4. 对于双侧检验，p 值为：
      $$
-     p = P(|B(n_0,0.5) - n_0/2| \geq |n_+ - n_0/2|)
+     p = \mathbb{P}(|B(n_0,0.5) - n_0/2| \geq |n_+ - n_0/2|)
      $$
   5. 大样本时可用正态近似：
      $$
@@ -88,7 +88,7 @@ title: 非参数假设检验
 ### 6.3.2. 检验步骤（以成对数据为例）
 1. 计算差值 $Z_i = Y_i - X_i$，剔除 $Z_i = 0$。
 2. 取绝对值 $|Z_i|$，并赋予**秩** $R_i$（若打平，取平均秩）。
-3. 计算**符号秩**：$SR_i = \text{sign}(Z_i) \times R_i$。
+3. 计算**符号秩**：$SR_i = \operatorname{sgn}(Z_i) \times R_i$。
 4. 计算**正秩和** $W^+ = \sum_{Z_i > 0} R_i$ 与**负秩和** $W^- = \sum_{Z_i < 0} R_i$。
 5. 检验统计量通常取 $W = \min(W^+, W^-)$ 或 $W^+$。
 6. 在 $H_0$（差值对称分布于0）下，$W^+$ 的分布可查表或大样本近似。
@@ -96,11 +96,11 @@ title: 非参数假设检验
 ### 6.3.3. 大样本正态近似
 - 在 $H_0$ 下：
   $$
-  E(W^+) = \frac{n_0(n_0+1)}{4}, \quad \text{Var}(W^+) = \frac{n_0(n_0+1)(2n_0+1)}{24}
+  \mathbb{E}(W^+) = \frac{n_0(n_0+1)}{4}, \quad \operatorname{Var}(W^+) = \frac{n_0(n_0+1)(2n_0+1)}{24}
   $$
 - 标准化：
   $$
-  U = \frac{W^+ - E(W^+)}{\sqrt{\text{Var}(W^+)}} \stackrel{H_0}{\approx} N(0,1)
+  U = \frac{W^+ - \mathbb{E}(W^+)}{\sqrt{\operatorname{Var}(W^+)}} \stackrel{H_0}{\approx} N(0,1)
   $$
 
 ### 6.3.4. 适用条件与比较
@@ -127,12 +127,12 @@ title: 非参数假设检验
 ### 6.4.3. 大样本正态近似
 - 在 $H_0$ 下：
   $$
-  E(W_Y) = \frac{n(N+1)}{2}, \quad \text{Var}(W_Y) = \frac{mn(N+1)}{12}
+  \mathbb{E}(W_Y) = \frac{n(N+1)}{2}, \quad \operatorname{Var}(W_Y) = \frac{mn(N+1)}{12}
   $$
   其中 $N = m + n$。
 - 标准化：
   $$
-  U = \frac{W_Y - E(W_Y)}{\sqrt{\text{Var}(W_Y)}} \stackrel{H_0}{\approx} N(0,1)
+  U = \frac{W_Y - \mathbb{E}(W_Y)}{\sqrt{\operatorname{Var}(W_Y)}} \stackrel{H_0}{\approx} N(0,1)
   $$
 
 ### 6.4.4. 与两样本 $t$ 检验的比较

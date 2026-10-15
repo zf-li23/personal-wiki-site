@@ -62,7 +62,7 @@ title: 条件期望、条件方差
   $$
   - 连续：
     $$
-    f_X(x) = \int f_{X|Y}(x|y)f_Y(y)dy
+    f_X(x) = \int f_{X|Y}(x|y)f_Y(y)\mathrm{d}y
     $$
 
 ### 9.1.4. 贝叶斯准则
@@ -82,90 +82,90 @@ title: 条件期望、条件方差
     f_{X|Y}(x|y) = \frac{f_X(x)f_{Y|X}(y|x)}{f_Y(y)}
     $$
 
-## 9.2. 条件期望 $E(X|A)$
+## 9.2. 条件期望 $\mathbb{E}(X|A)$
 
 ### 9.2.1. 定义
 
 - 离散型：
   $$
-  E(X|A) = \sum_i x_i \mathbb{P}(X = x_i | A)
+  \mathbb{E}(X|A) = \sum_i x_i \mathbb{P}(X = x_i | A)
   $$
   
 - 连续型：
   $$
-  E(X|A) = \int_{-\infty}^{\infty} x f_{X|A}(x) dx
+  \mathbb{E}(X|A) = \int_{-\infty}^{\infty} x f_{X|A}(x) \mathrm{d}x
   $$
 
-### 9.2.2. 由无条件期望计算 $E(X|A)$
+### 9.2.2. 由无条件期望计算 $\mathbb{E}(X|A)$
 
 - 定理：
   $$
-  E(X|A) = \frac{E(X \cdot I_A)}{\mathbb{P}(A)}
+  \mathbb{E}(X|A) = \frac{E(X \cdot I_A)}{\mathbb{P}(A)}
   $$
   
 - 例子：若 $X \sim \mathcal{E}(\lambda)$，则
   $$
-  E(X|X > a) = a + \frac{1}{\lambda}
+  \mathbb{E}(X|X > a) = a + \frac{1}{\lambda}
   $$
 
 ### 9.2.3. 全期望定理
 
 - 若 $A_1, \dots, A_n$ 是 $\Omega$ 的分割，则：
   $$
-  E(X) = \sum_{i=1}^n \mathbb{P}(A_i)E(X|A_i)
+  \mathbb{E}(X) = \sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}(X|A_i)
   $$
   
 - 例子：几何分布 $X \sim G(p)$，可得
   $$
-  E(X) = \frac{1}{p}
+  \mathbb{E}(X) = \frac{1}{p}
   $$
 
-## 9.3. 条件期望 $E(X|Y)$
+## 9.3. 条件期望 $\mathbb{E}(X|Y)$
 
 ### 9.3.1. 定义
 
 - 离散型：
   $$
-  E(X|Y = y) = \sum_i x_i \mathbb{P}(X = x_i | Y = y)
+  \mathbb{E}(X|Y = y) = \sum_i x_i \mathbb{P}(X = x_i | Y = y)
   $$
   
 - 连续型：
   $$
-  E(X|Y = y) = \int_{-\infty}^{\infty} x f_{X|Y}(x|y) dx
+  \mathbb{E}(X|Y = y) = \int_{-\infty}^{\infty} x f_{X|Y}(x|y) \mathrm{d}x
   $$
   
 - 条件期望作为随机变量：
   $$
-  E(X|Y) = m(Y)
+  \mathbb{E}(X|Y) = m(Y)
   $$
 
 ### 9.3.2. 重期望法则
 
 - 定理：
   $$
-  E[E(X|Y)] = E(X)
+  \mathbb{E}[\mathbb{E}(X|Y)] = \mathbb{E}(X)
   $$
 
 ### 9.3.3. 性质
 
 1. 线性性：
    $$
-   E(c + \sum c_i X_i | Y) = c + \sum c_i E(X_i|Y)
+   \mathbb{E}(c + \sum c_i X_i | Y) = c + \sum c_i \mathbb{E}(X_i|Y)
    $$
    
 2. 独立性：
    $$
-   E(g(X)|Y) = E(g(X)) \quad \text{若 } X \perp Y
+   \mathbb{E}(g(X)|Y) = \mathbb{E}(g(X)) \quad \text{若 } X \perp Y
    $$
    
 3. 最佳预测性：
    $$
-   E[(X - E(X|Y))h(Y)] = 0
+   \mathbb{E}[(X - \mathbb{E}(X|Y))h(Y)] = 0
    $$
    
 4. 最小均方误差：
    $$
-   E[(X - m(Y))^2] \leq E[(X - g(Y))^2]
+   \mathbb{E}[(X - m(Y))^2] \leq \mathbb{E}[(X - g(Y))^2]
    $$
 
 ## 9.4. 条件方差
@@ -174,38 +174,38 @@ title: 条件期望、条件方差
 
 - 条件方差：
   $$
-  var(X|Y) = E[(X - E(X|Y))^2 | Y]
+  \operatorname{Var}(X|Y) = \mathbb{E}[(X - \mathbb{E}(X|Y))^2 | Y]
   $$
 
 ### 9.4.2. 全方差法则
 
 - 定理：
   $$
-  var(X) = E[var(X|Y)] + var(E[X|Y])
+  \operatorname{Var}(X) = \mathbb{E}[\operatorname{Var}(X|Y)] + \operatorname{Var}(\mathbb{E}[X|Y])
   $$
 
 ## 小结
 
 ### 核心知识点
 
-- 理解 $E(X|A)$ 和 $E(X|Y)$ 的定义与意义
+- 理解 $\mathbb{E}(X|A)$ 和 $\mathbb{E}(X|Y)$ 的定义与意义
 - 掌握由无条件期望计算条件期望的方法
 - 熟练运用全期望定理和全方差法则
-- 理解 $E(X|Y)$ 是最佳预测
+- 理解 $\mathbb{E}(X|Y)$ 是最佳预测
 
 ### 关键公式
 
 - 条件期望：
-  $$E(X|A) = \frac{E(XI_A)}{\mathbb{P}(A)}$$
-  $$E(X) = \sum \mathbb{P}(A_i)E(X|A_i)$$
-  $$E[E(X|Y)] = E(X)$$
+  $$\mathbb{E}(X|A) = \frac{E(XI_A)}{\mathbb{P}(A)}$$
+  $$\mathbb{E}(X) = \sum \mathbb{P}(A_i)\mathbb{E}(X|A_i)$$
+  $$\mathbb{E}[\mathbb{E}(X|Y)] = \mathbb{E}(X)$$
 
 - 条件方差：
-  $$var(X|Y) = E[(X - E(X|Y))^2 | Y]$$
-  $$var(X) = E[var(X|Y)] + var(E[X|Y])$$
+  $$\operatorname{Var}(X|Y) = \mathbb{E}[(X - \mathbb{E}(X|Y))^2 | Y]$$
+  $$\operatorname{Var}(X) = \mathbb{E}[\operatorname{Var}(X|Y)] + \operatorname{Var}(\mathbb{E}[X|Y])$$
 
 ### 应用技巧
 
-- 计算 $E(X|Y)$ 时，先固定 $Y = y$，再将 $y$ 替换为 $Y$
+- 计算 $\mathbb{E}(X|Y)$ 时，先固定 $Y = y$，再将 $y$ 替换为 $Y$
 - 利用对称性、换序求和/积分简化计算
-- 在二次型中加减 $E(X|Y)$ 以构造零均值项
+- 在二次型中加减 $\mathbb{E}(X|Y)$ 以构造零均值项

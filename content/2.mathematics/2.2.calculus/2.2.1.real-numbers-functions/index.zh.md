@@ -66,7 +66,7 @@ title: 实数与函数
     | 反正切 | $\arctan x$ | $(-\infty,\infty)$ | $(-\frac{\pi}{2},\frac{\pi}{2})$ | 奇函数 |
     | 反余切 | $\operatorname{arccot} x$ | $(-\infty,\infty)$ | $(0,\pi)$ | 非奇非偶 |
     -   性质：$\arcsin x + \arccos x = \frac{\pi}{2}$，$\arctan x + \operatorname{arccot} x = \frac{\pi}{2}$。$|x| \leq 1$ 时，$\arcsin x \sim x$；$\arctan x \sim x$。
--   **双曲函数**：双曲正弦 $\sinh x = \frac{e^x - e^{-x}}{2}$，双曲余弦 $\cosh x = \frac{e^x + e^{-x}}{2}$，双曲正切 $\tanh x = \frac{\sinh x}{\cosh x}$ 等。满足 $\cosh^2 x - \sinh^2 x = 1$。
+-   **双曲函数**：双曲正弦 $\sinh x = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}$，双曲余弦 $\cosh x = \frac{\mathrm{e}^x + \mathrm{e}^{-x}}{2}$，双曲正切 $\tanh x = \frac{\sinh x}{\cosh x}$ 等。满足 $\cosh^2 x - \sinh^2 x = 1$。
 
 **1.5 非初等函数**
 

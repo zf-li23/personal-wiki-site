@@ -5,18 +5,18 @@ title: 不定积分
 **6.1 不定积分的概念与性质**
 
 -   **原函数**：若 $F'(x) = f(x)$，则 $F(x)$ 为 $f(x)$ 的原函数。
--   **不定积分**：$\int f(x) dx = F(x) + C$。
+-   **不定积分**：$\int f(x) \mathrm{d}x = F(x) + C$。
 -   **基本积分公式**：包含幂函数、指数函数、三角函数等基本积分。
--   **线性性质**：$\int (\alpha f \pm \beta g) dx = \alpha \int f dx \pm \beta \int g dx$。
+-   **线性性质**：$\int (\alpha f \pm \beta g) \mathrm{d}x = \alpha \int f \mathrm{d}x \pm \beta \int g \mathrm{d}x$。
 
 **6.2 不定积分的换元积分法**
 
--   **第一换元法（凑微分）**：$\int f(\varphi(x)) \varphi'(x) dx = \int f(u) du$。
+-   **第一换元法（凑微分）**：$\int f(\varphi(x)) \varphi'(x) \mathrm{d}x = \int f(u) \mathrm{d}u$。
 -   **第二换元法（代入消去）**：主要解决含根式的积分，如三角换元 $x = a \sin t$ 等。
 
 **6.3 不定积分的分部积分法**
 
--   **公式**：$\int u dv = uv - \int v du$。
+-   **公式**：$\int u \mathrm{d}v = uv - \int v \mathrm{d}u$。
 -   **选用原则**：通常将反三角、对数函数选为 $u$；将指数、三角、幂函数选为 $v'$。
 
 **6.4 有理函数的不定积分**

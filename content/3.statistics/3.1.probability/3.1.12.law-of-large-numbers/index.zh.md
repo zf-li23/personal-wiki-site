@@ -8,7 +8,7 @@ title: 大数定律
 样本均值估计总体均值的可靠性问题：
 
 $$
-M_n = \frac{1}{n} \sum_{i=1}^n X_i \quad \text{vs} \quad EX_1
+M_n = \frac{1}{n} \sum_{i=1}^n X_i \quad \text{vs} \quad \mathbb{E}X_1
 $$
 
 其中 $\{X_n\}$ 是独立同分布的随机变量序列。
@@ -18,23 +18,23 @@ $$
 ### 12.2.1. 弱大数定律
 
 **定理 12.2.1（弱大数定律）**
-设 $\{X_n\}$ 是独立同分布的随机变量序列，且 $var(X_1) < \infty$，则对任意 $\varepsilon > 0$：
+设 $\{X_n\}$ 是独立同分布的随机变量序列，且 $\operatorname{Var}(X_1) < \infty$，则对任意 $\varepsilon > 0$：
 
 $$
-\lim_{n \to \infty} \mathbb{P}\left( \left| \frac{1}{n} \sum_{i=1}^n X_i - EX_1 \right| \geq \varepsilon \right) = 0
+\lim_{n \to \infty} \mathbb{P}\left( \left| \frac{1}{n} \sum_{i=1}^n X_i - \mathbb{E}X_1 \right| \geq \varepsilon \right) = 0
 $$
 
 记作：
 
 $$
-\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\to} EX_1
+\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\to} \mathbb{E}X_1
 $$
 
 ### 12.2.2. 证明方法
 基于切比雪夫不等式：
 
 $$
-\mathbb{P}(|X - EX| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}
+\mathbb{P}(|X - \mathbb{E}X| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}
 $$
 
 ## 12.3. 理论深化
@@ -44,7 +44,7 @@ $$
 **定理 12.3.1（辛钦大数定律）**
 设 $\{X_n\}$ 是独立同分布序列，且 $E|X_1| < \infty$，则：
 $$
-\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\rightarrow} EX_1
+\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\rightarrow} \mathbb{E}X_1
 $$
 
 **定理 12.3.2（弱大数定律一般形式）**
@@ -64,10 +64,10 @@ $$
 1. 若 $E|X_1| < \infty$，则：
 
 $$
-\frac{1}{n}\sum_{k=1}^n X_k \overset{a.s.}{\rightarrow} EX_1
+\frac{1}{n}\sum_{k=1}^n X_k \overset{a.s.}{\rightarrow} \mathbb{E}X_1
 $$
 
-2. 若 $\frac{1}{n}\sum_{k=1}^n X_k \overset{a.s.}{\rightarrow} C$，则 $E|X_1| < \infty$ 且 $C = EX_1$
+2. 若 $\frac{1}{n}\sum_{k=1}^n X_k \overset{a.s.}{\rightarrow} C$，则 $E|X_1| < \infty$ 且 $C = \mathbb{E}X_1$
 
 ### 12.3.3. 收敛模式
 
@@ -113,7 +113,7 @@ $$
 用随机模拟计算积分：
 
 $$
-\int_a^b f(x) dx \approx c(b-a) \cdot \frac{1}{n} \sum_{j=1}^n I_j
+\int_a^b f(x) \mathrm{d}x \approx c(b-a) \cdot \frac{1}{n} \sum_{j=1}^n I_j
 $$
 
 ## 小结
@@ -128,19 +128,19 @@ $$
 - 弱大数定律：
 
 $$
-\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\to} EX_1
+\frac{1}{n} \sum_{k=1}^n X_k \overset{p}{\to} \mathbb{E}X_1
 $$
 
 - 强大数定律：
 
 $$
-\frac{1}{n} \sum_{k=1}^n X_k \overset{a.s.}{\to} EX_1
+\frac{1}{n} \sum_{k=1}^n X_k \overset{a.s.}{\to} \mathbb{E}X_1
 $$
 
 - 切比雪夫不等式：
 
 $$
-\mathbb{P}(|X - EX| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}
+\mathbb{P}(|X - \mathbb{E}X| \geq \varepsilon) \leq \frac{var(X)}{\varepsilon^2}
 $$
 
 ### 理论意义

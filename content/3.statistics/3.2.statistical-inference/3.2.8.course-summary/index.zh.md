@@ -41,8 +41,8 @@ title: 课程总结
 - Student氏定理：$\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$
 
 ### 8.2.2. 估计量性质
-- Cramer-Rao不等式：$var(\hat{\theta}) \geq \frac{1}{n I(\theta)}$
-- 均方误差分解：$MSE(\hat{\theta}) = var(\hat{\theta}) + [bias(\hat{\theta})]^2$
+- Cramer-Rao不等式：$\operatorname{Var}(\hat{\theta}) \geq \frac{1}{n I(\theta)}$
+- 均方误差分解：$MSE(\hat{\theta}) = \operatorname{Var}(\hat{\theta}) + [bias(\hat{\theta})]^2$
 
 ### 8.2.3. 假设检验
 - 似然比统计量：$\lambda(x) = \frac{\sup_{\theta \in \Theta_0} L(\theta|x)}{\sup_{\theta \in \Theta} L(\theta|x)}$
@@ -65,7 +65,7 @@ title: 课程总结
 2. **MLE**：写出似然函数 $L(\theta)$，取对数 $\ln L(\theta)$，求导置零（或分析边界）。
 
 ### 8.4.2. 构造置信区间
-- **枢轴量法**：寻找 $G(X_1, ..., X_n; \theta)$ 分布不依赖于 $\theta$，反解不等式。
+- **枢轴量法**：寻找 $G(X_1, \dots, X_n; \theta)$ 分布不依赖于 $\theta$，反解不等式。
 
 ### 8.4.3. 构造检验拒绝域
 - **N-P引理**：针对简单假设 $H_0: \theta=\theta_0$ vs $H_1: \theta=\theta_1$，拒绝域为 $\frac{L(\theta_1)}{L(\theta_0)} > k$。

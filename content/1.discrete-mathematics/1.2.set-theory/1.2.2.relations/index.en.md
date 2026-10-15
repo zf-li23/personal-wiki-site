@@ -1,6 +1,6 @@
 ---
 title: Relations
-source_hash: d3f5f72816a2
+source_hash: 93dc4c426653
 ---
 
 Relations describe connections between the elements of sets. This chapter defines a relation as a set of ordered pairs (see Definition 1.3.4), introduces the representations of relations (matrices and graphs), their operations (inverse, composition, restriction and image), their basic properties (reflexivity, symmetry, antisymmetry and transitivity) and their closures, and then discusses three important kinds of relations: equivalence relations and their correspondence with partitions, compatibility relations and covers, and partial orders and partially ordered sets. The functions of the next chapter are a special kind of relation.
@@ -284,7 +284,7 @@ Note that $s(R)$ need not be transitive when $R$ is: $R = \{\langle a, b \rangle
 **Theorem 2.5.12 (Closures Inheriting Several Properties, II)** For a relation $R$ on a nonempty set $A$,
 
 1. $rs(R) = sr(R)$;
-2. $rt(R) = tr(R)$;
+2. $rt(R) = \operatorname{tr}(R)$;
 3. $st(R) \subseteq ts(R)$,
 
 where $rs(R) = r(s(R))$, and similarly for the others.

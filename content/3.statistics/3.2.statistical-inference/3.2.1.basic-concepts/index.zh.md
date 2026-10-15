@@ -113,7 +113,7 @@ title: 统计学基本概念
   - Glivenko–Cantelli 定理：
     $$
     \text{Let } D_n = \sup_{-\infty < x < \infty} |F_n(x) - F(x)| \\
-    \text{then } P\left( \lim_{n \to \infty} D_n = 0 \right) = 1
+    \text{then } \mathbb{P}\left( \lim_{n \to \infty} D_n = 0 \right) = 1
     $$
     等价于：
     $$

@@ -152,7 +152,7 @@ $$
 **定理 14.4.5（Cramér-Wold）**
 $X_n \overset{d}{\to} X$ 的充分必要条件是对任意常数向量 $a$，有：
 $$
-a^T X_n \overset{d}{\to} a^T X
+a^{\mathsf T} X_n \overset{d}{\to} a^{\mathsf T} X
 $$
 
 ## 14.5. 定理应用

@@ -11,6 +11,7 @@ import { compareIds, isPageId, parentIdOf } from '../../src/shared/page-id.ts';
 import { search } from '../../src/shared/search.ts';
 import { sourceLines } from '../../src/shared/sources.ts';
 import { fixMarkdown } from './fix.ts';
+import { checkNotation, fixNotation, fixNotationInMarkdown } from './notation.ts';
 import { checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 import { sourceHash, translationStatus } from './build.ts';
 import { Diagnostics } from './diagnostics.ts';
@@ -133,6 +134,22 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
   const out = await renderMarkdown(body, ctx);
   return { out, html: renderHtml(out), diag, messages: diag.items.map((d) => `${d.level}:${d.line}:${d.message}`) };
 }
+
+describe('notation', () => {
+  it('rewrites unambiguous forms and respects scopes', () => {
+    assert.equal(fixNotation(String.raw`\vec{x}^T A\vec x + Ae^{At} + a_1,...,a_n`, '2.1.1'), String.raw`\boldsymbol{x}^{\mathsf T} A\boldsymbol{x} + A\mathrm{e}^{At} + a_1,\dots,a_n`);
+    assert.equal(fixNotation(String.raw`E(X)+EX+P\{X=1\}+\text{var}(X)+cov(X,Y)`, '3.1.8'), String.raw`\mathbb{E}(X)+\mathbb{E}X+\mathbb{P}\{X=1\}+\operatorname{Var}(X)+\operatorname{Cov}(X,Y)`);
+    assert.equal(fixNotation(String.raw`\int f(x)dx + \frac{dy}{dx} + d(x,y)`, '2.2.4'), String.raw`\int f(x)\mathrm{d}x + \frac{\mathrm{d}y}{\mathrm{d}x} + d(x,y)`);
+    // logic predicates, the group identity and power sets keep their letters
+    assert.equal(fixNotation(String.raw`P(x) \land e^{-1} = e`, '1.3.2'), String.raw`P(x) \land e^{-1} = e`);
+    assert.deepEqual(checkNotation(String.raw`\mathbf{R}^n`, '2.1.1').map((r) => r.id), ['number-set']);
+  });
+  it('only touches formulas', () => {
+    const { text, changes } = fixNotationInMarkdown('Text e^x and `x^T`.\n\n$$\nx^T\n$$\n\n```\nx^T\n```\n', '2.1.1');
+    assert.equal(changes, 1);
+    assert.equal(text, 'Text e^x and `x^T`.\n\n$$\nx^{\\mathsf T}\n$$\n\n```\nx^T\n```\n');
+  });
+});
 
 describe('markdown rendering', () => {
   it('keeps a paragraph written directly under display math inside the statement', async () => {

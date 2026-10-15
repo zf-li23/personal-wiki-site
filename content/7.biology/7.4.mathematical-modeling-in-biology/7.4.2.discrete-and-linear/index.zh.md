@@ -34,7 +34,7 @@ F_n
 \end{pmatrix}
 $$
 
-令 $\boldsymbol{x}_n = (F_{n+1}, F_n)^\top$，则：
+令 $\boldsymbol{x}_n = (F_{n+1}, F_n)^{\mathsf T}$，则：
 
 $$
 \boldsymbol{x}_{n+1} = \boldsymbol{A} \boldsymbol{x}_n, \quad \boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
@@ -169,7 +169,7 @@ $$
    - $\lambda_1 = 1$：种群稳定
    - $\lambda_1 < 1$：种群衰退
 3. 对应的**右特征向量** $\boldsymbol{w}_1$ 给出了**稳定年龄结构**：无论初始结构如何，长期而言各年龄组的比例将收敛于 $\boldsymbol{w}_1$ 的比例。
-4. **左特征向量** $\boldsymbol{v}_1$（满足 $\boldsymbol{v}_1^\top \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^\top$）的各个分量则表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的贡献。
+4. **左特征向量** $\boldsymbol{v}_1$（满足 $\boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$）的各个分量则表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的贡献。
 
 ### 2.2.3. 以斐波那契数列为例
 
@@ -200,7 +200,7 @@ $$
 
 **步骤3：长期行为分析**
 
-初始向量 $\boldsymbol{x}_0 = (F_1, F_0)^\top = (1, 0)^\top$，可表示为：
+初始向量 $\boldsymbol{x}_0 = (F_1, F_0)^{\mathsf T} = (1, 0)^{\mathsf T}$，可表示为：
 $$
 \boldsymbol{x}_0 = c_1 \boldsymbol{w}_1 + c_2 \boldsymbol{w}_2
 $$
@@ -224,19 +224,19 @@ $$
 
 ## 2.3. 左特征向量与繁殖价值
 
-对于投影矩阵 $\boldsymbol{L}$，除了右特征向量外，左特征向量也具有重要的生物学意义。左特征向量 $\boldsymbol{v}_1^\top$ 定义为满足下式的非零行向量：
+对于投影矩阵 $\boldsymbol{L}$，除了右特征向量外，左特征向量也具有重要的生物学意义。左特征向量 $\boldsymbol{v}_1^{\mathsf T}$ 定义为满足下式的非零行向量：
 
 $$
-\boldsymbol{v}_1^\top \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^\top
+\boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
 $$
 
 其各个分量表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的相对贡献。繁殖价值量化了不同年龄或阶段个体对种群长期增长的重要性，是种群生物学和进化生态学中的一个核心概念。
 
 ### 2.3.1. 以斐波那契数列为例
 
-回顾斐波那契模型的矩阵 $\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$，现在计算对应于 $\lambda_1$ 的左特征向量 $\boldsymbol{v}_1^\top$。
+回顾斐波那契模型的矩阵 $\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$，现在计算对应于 $\lambda_1$ 的左特征向量 $\boldsymbol{v}_1^{\mathsf T}$。
 
-设 $\boldsymbol{v}_1^\top = (x, y)$，由 $\boldsymbol{v}_1^\top \boldsymbol{A} = \lambda_1 \boldsymbol{v}_1^\top$ 得：
+设 $\boldsymbol{v}_1^{\mathsf T} = (x, y)$，由 $\boldsymbol{v}_1^{\mathsf T} \boldsymbol{A} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$ 得：
 
 $$
 (x, y) \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} = \lambda_1 (x, y)
@@ -266,7 +266,7 @@ $$
 由于 $y \neq 0$，化简得 $\lambda_1 + 1 = \lambda_1^2$，这正是特征方程，成立。取 $y = 1$，则 $x = \lambda_1$，于是：
 
 $$
-\boldsymbol{v}_1^\top = (\lambda_1, 1)
+\boldsymbol{v}_1^{\mathsf T} = (\lambda_1, 1)
 $$
 
 为方便解释，通常将繁殖价值归一化，使得最小值为1。这里取第二个分量为1，则第一个分量为 $\lambda_1 \approx 1.618$。这意味着：
@@ -279,17 +279,17 @@ $$
 
 左特征向量的计算方式：
 1. 计算 $\boldsymbol{L}$ 的特征值和右特征向量。
-2. 求解 $\boldsymbol{v}_1^\top$，使得：
+2. 求解 $\boldsymbol{v}_1^{\mathsf T}$，使得：
   $$
-  \boldsymbol{v}_1^\top \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^\top
+  \boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
   $$
-3. 归一化 $\boldsymbol{v}_1^\top$，使得分量最小值为 $1$。
+3. 归一化 $\boldsymbol{v}_1^{\mathsf T}$，使得分量最小值为 $1$。
 
 左特征向量（繁殖价值）与右特征向量（稳定年龄结构）共同揭示了种群动态的内在对偶性：
 
 1. **预测长期增长幅度**：初始种群 $\boldsymbol{n}(0)$ 在主导模式上的系数 $c_1$ 可由左特征向量计算：
    $$
-   c_1 = \frac{\boldsymbol{v}_1^\top \boldsymbol{n}(0)}{\boldsymbol{v}_1^\top \boldsymbol{w}_1}
+   c_1 = \frac{\boldsymbol{v}_1^{\mathsf T} \boldsymbol{n}(0)}{\boldsymbol{v}_1^{\mathsf T} \boldsymbol{w}_1}
    $$
    其中分母为归一化常数。长期种群数量为 $\boldsymbol{n}(t) \approx c_1 \lambda_1^t \boldsymbol{w}_1$。因此，繁殖价值高的年龄组对 $c_1$ 的贡献更大，即这些组别的初始数量对长期种群规模影响更大。
 
@@ -370,7 +370,7 @@ Stable stage distribution w:
 
 即主特征值 $\lambda_1 \approx 1.0254$，对应稳定阶段分布为：
 $$
-\boldsymbol{w} = \begin{pmatrix} 0.036972 & 0.316071 & 0.322910 & 0.324047 \end{pmatrix}^\top
+\boldsymbol{w} = \begin{pmatrix} 0.036972 & 0.316071 & 0.322910 & 0.324047 \end{pmatrix}^{\mathsf T}
 $$
 
 **b)** 预测未来50年的种群动态：
@@ -389,13 +389,13 @@ $$
 
 对于投影矩阵$A$，左特征向量$v$满足：
 $$
-v^T A = \lambda v^T
+v^{\mathsf T} A = \lambda v^{\mathsf T}
 $$
 等价于：
 $$
-A^T v = \lambda v
+A^{\mathsf T} v = \lambda v
 $$
-因此，左特征向量是$A^T$对应于特征值 $\lambda$ 的右特征向量。
+因此，左特征向量是$A^{\mathsf T}$对应于特征值 $\lambda$ 的右特征向量。
 
 ```python
 import numpy as np
@@ -559,13 +559,13 @@ Post-reproductive    -0.0000            -0.000000
 
 左特征向量计算的补充说明：
 
-对于主特征值 $\lambda$ 和对应的右特征向量$w$（满足$Aw = \lambda w$），左特征向量$v$满足$v^T A = \lambda v^T$。
+对于主特征值 $\lambda$ 和对应的右特征向量$w$（满足$Aw = \lambda w$），左特征向量$v$满足$v^{\mathsf T} A = \lambda v^{\mathsf T}$。
 
-由于$v^T A = \lambda v^T$等价于$A^T v = \lambda v$，我们可以通过求解$A^T$的特征值问题来获得$v$。
+由于$v^{\mathsf T} A = \lambda v^{\mathsf T}$等价于$A^{\mathsf T} v = \lambda v$，我们可以通过求解$A^{\mathsf T}$的特征值问题来获得$v$。
 
 在数值计算中，需要注意以下数值稳定性问题：
 
-1. **特征值匹配**：由于数值误差，$A$和$A^T$计算出的特征值可能不完全相等。我们需要找到最接近的特征值。
+1. **特征值匹配**：由于数值误差，$A$和$A^{\mathsf T}$计算出的特征值可能不完全相等。我们需要找到最接近的特征值。
 
 2. **特征向量符号**：特征向量的符号是任意的。我们通常选择使主要分量为正的方向。
 
@@ -573,11 +573,11 @@ Post-reproductive    -0.0000            -0.000000
 
 计算完成后，应验证：
 $$
-\| v^T A - \lambda v^T \| < \epsilon
+\| v^{\mathsf T} A - \lambda v^{\mathsf T} \| < \epsilon
 $$
 其中$\epsilon$是一个小的容差（如$10^{-10}$）。
 
-同时，应验证$v^T w \neq 0$，因为$v$和$w$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
+同时，应验证$v^{\mathsf T} w \neq 0$，因为$v$和$w$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
 
 
 **结果分析**：
@@ -593,7 +593,7 @@ $$
 **数学原理**：
 特征值$ \lambda $对矩阵元素$a_{ij}$的灵敏度为：
 $$
-\frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{v^T w}
+\frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{v^{\mathsf T} w}
 $$
 其中$v$和$w$分别是左、右特征向量。
 
@@ -616,13 +616,13 @@ $$
 $$
 \frac{\partial A}{\partial a_{ij}} w + A \frac{\partial w}{\partial a_{ij}} = \frac{\partial \lambda}{\partial a_{ij}} w + \lambda \frac{\partial w}{\partial a_{ij}}
 $$
-两边左乘$v^T$，利用$v^T A = \lambda v^T$：
+两边左乘$v^{\mathsf T}$，利用$v^{\mathsf T} A = \lambda v^{\mathsf T}$：
 $$
-v^T \frac{\partial A}{\partial a_{ij}} w = \frac{\partial \lambda}{\partial a_{ij}} v^T w
+v^{\mathsf T} \frac{\partial A}{\partial a_{ij}} w = \frac{\partial \lambda}{\partial a_{ij}} v^{\mathsf T} w
 $$
 由于$\frac{\partial A}{\partial a_{ij}}$仅在$(i,j)$位置为1，其余为0，故：
 $$
-v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} v^T w
+v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} v^{\mathsf T} w
 $$
 即得灵敏度公式。
 
