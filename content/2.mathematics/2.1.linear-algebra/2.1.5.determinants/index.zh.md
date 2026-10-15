@@ -28,15 +28,15 @@ $$
 
 ### 5.1.2. 行列式的公理化定义
 
-把 $n$ 个列向量的函数 $\delta(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_n)$ 看作方阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 的函数 $\delta(A)$，就得到：
+把 $n$ 个列向量的函数 $\delta(\boldsymbol{a}_1, \dots, \boldsymbol{a}_n)$ 看作方阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 的函数 $\delta(A)$，就得到：
 
-**定义 5.1.1（行列式）** 定义在全体 $n$ 阶方阵上的函数 $\delta: \mathbb{R}^{n \times n} \to \mathbb{R}$ 若满足：
+**定义 5.1.1（行列式）** 定义在全体 $n$ 阶方阵上的函数 $\delta\colon \mathbb{R}^{n \times n} \to \mathbb{R}$ 若满足：
 
-1. 列多线性：对每一列都是线性的，即对 $i = 1, \cdots, n$，
+1. 列多线性：对每一列都是线性的，即对 $i = 1, \dots, n$，
    $$
-   \delta(\cdots, k\boldsymbol{a}_i + k'\boldsymbol{a}_i', \cdots) = k\delta(\cdots, \boldsymbol{a}_i, \cdots) + k'\delta(\cdots, \boldsymbol{a}_i', \cdots);
+   \delta(\dots, k\boldsymbol{a}_i + k'\boldsymbol{a}_i', \dots) = k\delta(\dots, \boldsymbol{a}_i, \dots) + k'\delta(\dots, \boldsymbol{a}_i', \dots);
    $$
-2. 列反对称：交换任意两列，函数值变号，即对 $i < j$，$\delta(\cdots, \boldsymbol{a}_i, \cdots, \boldsymbol{a}_j, \cdots) = -\delta(\cdots, \boldsymbol{a}_j, \cdots, \boldsymbol{a}_i, \cdots)$；
+2. 列反对称：交换任意两列，函数值变号，即对 $i < j$，$\delta(\dots, \boldsymbol{a}_i, \dots, \boldsymbol{a}_j, \dots) = -\delta(\dots, \boldsymbol{a}_j, \dots, \boldsymbol{a}_i, \dots)$；
 3. 单位化：$\delta(I_n) = 1$，
 
 则称 $\delta$ 为 $n$ 阶行列式函数。行列式函数在方阵 $A$ 上的值称为 $A$ 的**行列式**，记作 $\det(A)$、$\det A$ 或 $|A|$。
@@ -60,7 +60,7 @@ $$
 **证明** 1. 交换这两列，矩阵不变，由列反对称性 $\det A = -\det A$。2. 若 $A$ 不满秩，其列向量组**线性相关**，有一列可以写成其他列的**线性组合** $\boldsymbol{a}_j = \sum_{i \ne j} k_i\boldsymbol{a}_i$。由列多线性，
 
 $$
-\det A = \sum_{i \ne j} k_i\,\delta(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_{j-1}, \boldsymbol{a}_i, \boldsymbol{a}_{j+1}, \cdots, \boldsymbol{a}_n) = 0,
+\det A = \sum_{i \ne j} k_i\,\delta(\boldsymbol{a}_1, \dots, \boldsymbol{a}_{j-1}, \boldsymbol{a}_i, \boldsymbol{a}_{j+1}, \dots, \boldsymbol{a}_n) = 0,
 $$
 
 因为每一项都有两列相等。3. 有一行或一列为零的矩阵不满秩，由 2 即得。$\square$
@@ -68,7 +68,7 @@ $$
 在列多线性的条件下，列反对称与"两列相等则为零"等价：前者推出后者见上；反之，若两列相等时总为零，则
 
 $$
-0 = \delta(\cdots, \boldsymbol{a}_i + \boldsymbol{a}_j, \cdots, \boldsymbol{a}_i + \boldsymbol{a}_j, \cdots) = \delta(\cdots, \boldsymbol{a}_i, \cdots, \boldsymbol{a}_j, \cdots) + \delta(\cdots, \boldsymbol{a}_j, \cdots, \boldsymbol{a}_i, \cdots).
+0 = \delta(\dots, \boldsymbol{a}_i + \boldsymbol{a}_j, \dots, \boldsymbol{a}_i + \boldsymbol{a}_j, \dots) = \delta(\dots, \boldsymbol{a}_i, \dots, \boldsymbol{a}_j, \dots) + \delta(\dots, \boldsymbol{a}_j, \dots, \boldsymbol{a}_i, \dots).
 $$
 
 几何上，性质 5.1.1 的 2 是说：棱落在一个低维子空间里的平行体是"扁"的，体积为零。只有可逆矩阵的行列式才可能非零，下一节证明它确实非零。
@@ -84,7 +84,7 @@ $$
 **证明** 三类初等矩阵都是对 $I_n$ 做一次初等列变换得到的。$P_{ij}$ 交换 $I_n$ 的两列，由列反对称性 $\det P_{ij} = -\det I_n = -1$；$E_{ii;k}$ 把第 $i$ 列乘以 $k$，由列多线性 $\det E_{ii;k} = k$；对 $E_{ji;k}$，
 
 $$
-\det E_{ji;k} = \delta(\cdots, \boldsymbol{e}_i + k\boldsymbol{e}_j, \cdots, \boldsymbol{e}_j, \cdots) = \delta(\cdots, \boldsymbol{e}_i, \cdots, \boldsymbol{e}_j, \cdots) + k\,\delta(\cdots, \boldsymbol{e}_j, \cdots, \boldsymbol{e}_j, \cdots) = 1.
+\det E_{ji;k} = \delta(\dots, \boldsymbol{e}_i + k\boldsymbol{e}_j, \dots, \boldsymbol{e}_j, \dots) = \delta(\dots, \boldsymbol{e}_i, \dots, \boldsymbol{e}_j, \dots) + k\,\delta(\dots, \boldsymbol{e}_j, \dots, \boldsymbol{e}_j, \dots) = 1.
 $$
 
 又 $P_{ij}^{\mathsf T} = P_{ij}$，$E_{ii;k}^{\mathsf T} = E_{ii;k}$，$E_{ji;k}^{\mathsf T} = E_{ij;k}$，故转置后行列式不变。$\square$
@@ -110,7 +110,7 @@ $$
 
 2. 可逆矩阵是初等矩阵的乘积（第 2 章），由 1 和命题 5.2.1，其行列式是若干非零数之积，非零；不可逆矩阵的行列式为零（性质 5.1.1）。
 
-3. 若 $B$ 可逆，$B = E_1\cdots E_m$，则 $\det(AB) = \det(AE_1\cdots E_m) = \det A\det E_1\cdots\det E_m = \det A\det B$。若 $B$ 不可逆，则 $AB$ 不可逆（$\operatorname{rank}(AB) \le \operatorname{rank}B < n$），两边都是 $0$。交换 $A, B$ 即得第二个等号。
+3. 若 $B$ 可逆，$B = E_1\cdots E_m$，则 $\det(AB) = \det(AE_1\cdots E_m) = \det A\det E_1\cdots\det E_m = \det A\det B$。若 $B$ 不可逆，则 $AB$ 不可逆（$\operatorname{rank}(AB) \le \operatorname{rank}(B) < n$），两边都是 $0$。交换 $A, B$ 即得第二个等号。
 
 4. 若 $A = E_1\cdots E_m$ 可逆，则 $A^{\mathsf T} = E_m^{\mathsf T}\cdots E_1^{\mathsf T}$，由命题 5.2.1 与 1，$\det A^{\mathsf T} = \det E_m\cdots\det E_1 = \det A$。若 $A$ 不可逆，则 $A^{\mathsf T}$ 也不可逆，两边都是 $0$。$\square$
 
@@ -119,7 +119,7 @@ $$
 **推论 5.2.1（行列式作为行向量组的函数）** 由 $\det A^{\mathsf T} = \det A$：
 
 1. 行列式也是行多线性、行反对称的；初等行变换对行列式的影响与初等列变换相同；
-2. 若函数 $\delta: \mathbb{R}^{n \times n} \to \mathbb{R}$ 满足行多线性、行反对称和单位化，则 $\delta$ 就是 $n$ 阶行列式函数（因为 $A \mapsto \delta(A^{\mathsf T})$ 满足定义 5.1.1）。
+2. 若函数 $\delta\colon \mathbb{R}^{n \times n} \to \mathbb{R}$ 满足行多线性、行反对称和单位化，则 $\delta$ 就是 $n$ 阶行列式函数（因为 $A \mapsto \delta(A^{\mathsf T})$ 满足定义 5.1.1）。
 
 ## 5.3. 几何意义与唯一性
 
@@ -128,10 +128,10 @@ $$
 从线性变换的角度看 $\det(AB) = \det A\det B$：设 $A$ 对应线性变换 $\boldsymbol{x} \mapsto A\boldsymbol{x}$，$B = [\boldsymbol{b}_1\ \cdots\ \boldsymbol{b}_n]$，则
 
 $$
-\det(AB) = \delta(A\boldsymbol{b}_1, \cdots, A\boldsymbol{b}_n) = \det A \cdot \delta(\boldsymbol{b}_1, \cdots, \boldsymbol{b}_n),
+\det(AB) = \delta(A\boldsymbol{b}_1, \dots, A\boldsymbol{b}_n) = \det A \cdot \delta(\boldsymbol{b}_1, \dots, \boldsymbol{b}_n),
 $$
 
-即在 $A$ 的作用下，以 $\boldsymbol{b}_1, \cdots, \boldsymbol{b}_n$ 为棱的平行体的有向体积变为原来的 $\det A$ 倍。因此 $\det A$ 称为线性变换 $A$ 的变积系数；复合变换的变积系数是各自变积系数之积。$\det A$ 的符号表示变换是否保持定向，$|\det A|$ 表示体积放大的倍数。这一观点在多元积分的变量替换中会再次出现（Jacobi 行列式）。
+即在 $A$ 的作用下，以 $\boldsymbol{b}_1, \dots, \boldsymbol{b}_n$ 为棱的平行体的有向体积变为原来的 $\det A$ 倍。因此 $\det A$ 称为线性变换 $A$ 的变积系数；复合变换的变积系数是各自变积系数之积。$\det A$ 的符号表示变换是否保持定向，$|\det A|$ 表示体积放大的倍数。这一观点在多元积分的变量替换中会再次出现（Jacobi 行列式）。
 
 平面上的三类初等变换正好对应三种基本的几何操作：
 
@@ -240,15 +240,15 @@ $$
 
 的矩阵称为 **Vandermonde 矩阵**。
 
-**定理 5.4.1** $\det V = \displaystyle\prod_{1 \le j < i \le n}(\lambda_i - \lambda_j)$。特别地，$\lambda_1, \cdots, \lambda_n$ 两两不同时 $V$ 可逆。
+**定理 5.4.1** $\det V = \displaystyle\prod_{1 \le j < i \le n}(\lambda_i - \lambda_j)$。特别地，$\lambda_1, \dots, \lambda_n$ 两两不同时 $V$ 可逆。
 
-**证明** 对 $n$ 用数学归纳法，$n = 2$ 时 $\det V = \lambda_2 - \lambda_1$。与例 5.4.3 相同，从最后一列开始，依次把第 $k$ 列的 $-\lambda_1$ 倍加到第 $k+1$ 列（$k = n-1, \cdots, 1$），第 $i$ 行变为 $[1,\ \lambda_i - \lambda_1,\ \lambda_i(\lambda_i - \lambda_1),\ \cdots,\ \lambda_i^{n-2}(\lambda_i - \lambda_1)]$，第一行变为 $[1, 0, \cdots, 0]$。按分块下三角矩阵计算，再从第 $i$ 行（$i \ge 2$）提出公因子 $\lambda_i - \lambda_1$，得
+**证明** 对 $n$ 用数学归纳法，$n = 2$ 时 $\det V = \lambda_2 - \lambda_1$。与例 5.4.3 相同，从最后一列开始，依次把第 $k$ 列的 $-\lambda_1$ 倍加到第 $k+1$ 列（$k = n-1, \dots, 1$），第 $i$ 行变为 $[1,\ \lambda_i - \lambda_1,\ \lambda_i(\lambda_i - \lambda_1),\ \dots,\ \lambda_i^{n-2}(\lambda_i - \lambda_1)]$，第一行变为 $[1, 0, \dots, 0]$。按分块下三角矩阵计算，再从第 $i$ 行（$i \ge 2$）提出公因子 $\lambda_i - \lambda_1$，得
 
 $$
-\det V = \prod_{i=2}^n(\lambda_i - \lambda_1) \cdot \det V(\lambda_2, \cdots, \lambda_n),
+\det V = \prod_{i=2}^n(\lambda_i - \lambda_1) \cdot \det V(\lambda_2, \dots, \lambda_n),
 $$
 
-其中 $V(\lambda_2, \cdots, \lambda_n)$ 是 $n-1$ 阶 Vandermonde 矩阵。由归纳假设即得结论。$\square$
+其中 $V(\lambda_2, \dots, \lambda_n)$ 是 $n-1$ 阶 Vandermonde 矩阵。由归纳假设即得结论。$\square$
 
 **定义 5.4.2（多项式插值）** 给定平面上若干点，求一条经过这些点的曲线，称为插值；插值函数是多项式时称为**多项式插值**。
 
@@ -289,7 +289,7 @@ $$
 
 **证明** 对 $n$ 用数学归纳法，$n = 2$ 时已验证。设 $n-1$ 阶行列式函数存在（即代数余子式有意义且具有行列式的全部性质）。由推论 5.2.1，只需验证 $\delta$ 满足行多线性、行反对称和单位化。
 
-行多线性：以第一行为例（其他行同理）。设第一行 $a_{1j} = ka_{1j}' + \ell a_{1j}''$（$j = 1, \cdots, n$），$A', A''$ 分别是把第一行换成 $[a_{1j}']$、$[a_{1j}'']$ 的矩阵。$i \ne 1$ 时，$C_{i1}$ 所对应的子矩阵含有第一行（去掉第一个元素），由归纳假设 $C_{i1} = kC_{i1}' + \ell C_{i1}''$；而 $C_{11} = C_{11}' = C_{11}''$。于是
+行多线性：以第一行为例（其他行同理）。设第一行 $a_{1j} = ka_{1j}' + \ell a_{1j}''$（$j = 1, \dots, n$），$A', A''$ 分别是把第一行换成 $[a_{1j}']$、$[a_{1j}'']$ 的矩阵。$i \ne 1$ 时，$C_{i1}$ 所对应的子矩阵含有第一行（去掉第一个元素），由归纳假设 $C_{i1} = kC_{i1}' + \ell C_{i1}''$；而 $C_{11} = C_{11}' = C_{11}''$。于是
 
 $$
 \delta(A) = (ka_{11}' + \ell a_{11}'')C_{11} + \sum_{i=2}^n a_{i1}(kC_{i1}' + \ell C_{i1}'') = k\delta(A') + \ell\delta(A'').
@@ -367,14 +367,14 @@ $$
 **定理 5.6.2（Cramer 法则）** 设 $A$ 是 $n$ 阶方阵，线性方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 有唯一解当且仅当 $\det A \ne 0$，此时唯一解为
 
 $$
-x_1 = \frac{\det B_1}{\det A}, \quad x_2 = \frac{\det B_2}{\det A}, \quad \cdots, \quad x_n = \frac{\det B_n}{\det A},
+x_1 = \frac{\det B_1}{\det A}, \quad x_2 = \frac{\det B_2}{\det A}, \quad \dots, \quad x_n = \frac{\det B_n}{\det A},
 $$
 
 其中 $B_j$ 是把 $A$ 的第 $j$ 列换成 $\boldsymbol{b}$ 得到的矩阵。
 
 **证明** $A\boldsymbol{x} = \boldsymbol{b}$ 有唯一解当且仅当 $A$ 可逆，即 $\det A \ne 0$。把方程组写成 $x_1\boldsymbol{a}_1 + \cdots + x_n\boldsymbol{a}_n = \boldsymbol{b}$，两边与 $\boldsymbol{c}_i$ 做内积，由命题 5.6.1 得 $x_i\boldsymbol{c}_i^{\mathsf T}\boldsymbol{a}_i = \boldsymbol{c}_i^{\mathsf T}\boldsymbol{b}$。$\boldsymbol{c}_i^{\mathsf T}\boldsymbol{a}_i$ 与 $\boldsymbol{c}_i^{\mathsf T}\boldsymbol{b}$ 分别是 $\det A$ 与 $\det B_i$ 按第 $i$ 列的展开，故 $x_i = \det B_i/\det A$。$\square$
 
-几何意义：$x_i$ 是以 $\boldsymbol{b}$ 与 $\boldsymbol{a}_j$（$j \ne i$）为棱的平行体与以 $\boldsymbol{a}_1, \cdots, \boldsymbol{a}_n$ 为棱的平行体的有向体积之比。两个平行体有相同的底面（以 $\boldsymbol{a}_j$，$j \ne i$ 为棱）；由于 $\boldsymbol{b} - x_i\boldsymbol{a}_i = \sum_{j \ne i}x_j\boldsymbol{a}_j$ 在底面内，$\boldsymbol{b}$ 与 $x_i\boldsymbol{a}_i$ 在底面法向量 $\boldsymbol{c}_i$ 上的投影相等，所以 $x_i$ 就是两个平行体的高之比。
+几何意义：$x_i$ 是以 $\boldsymbol{b}$ 与 $\boldsymbol{a}_j$（$j \ne i$）为棱的平行体与以 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_n$ 为棱的平行体的有向体积之比。两个平行体有相同的底面（以 $\boldsymbol{a}_j$，$j \ne i$ 为棱）；由于 $\boldsymbol{b} - x_i\boldsymbol{a}_i = \sum_{j \ne i}x_j\boldsymbol{a}_j$ 在底面内，$\boldsymbol{b}$ 与 $x_i\boldsymbol{a}_i$ 在底面法向量 $\boldsymbol{c}_i$ 上的投影相等，所以 $x_i$ 就是两个平行体的高之比。
 
 与逆矩阵公式一样，Cramer 法则是理论工具（例如说明解连续依赖于数据，或在二、三阶时手算），而不应用来数值求解方程组。
 
@@ -392,9 +392,9 @@ $$
 
 ### 5.7.2. 排列及其符号
 
-**定义 5.7.1（排列）** 把 $1, 2, \cdots, n$ 按一定顺序排成 $\sigma_1, \sigma_2, \cdots, \sigma_n$，称为一个 $n$ 元排列，记作 $\sigma$。交换排列中两个数的位置，称为对该排列做一次对换。若排列 $\sigma$ 可以经过奇数次对换变为 $1, 2, \cdots, n$，则称为奇排列，定义其符号 $\operatorname{sign}(\sigma) = -1$；若可以经过偶数次对换变为 $1, 2, \cdots, n$，则称为偶排列，$\operatorname{sign}(\sigma) = 1$。
+**定义 5.7.1（排列）** 把 $1, 2, \dots, n$ 按一定顺序排成 $\sigma_1, \sigma_2, \dots, \sigma_n$，称为一个 $n$ 元排列，记作 $\sigma$。交换排列中两个数的位置，称为对该排列做一次对换。若排列 $\sigma$ 可以经过奇数次对换变为 $1, 2, \dots, n$，则称为奇排列，定义其符号 $\operatorname{sgn}(\sigma) = -1$；若可以经过偶数次对换变为 $1, 2, \dots, n$，则称为偶排列，$\operatorname{sgn}(\sigma) = 1$。
 
-排列 $\sigma$ 就是映射 $i \mapsto \sigma_i$，即 1.3.2 中的**置换**；奇排列、偶排列分别对应**奇置换**、**偶置换**。排列与置换矩阵一一对应：$\sigma \mapsto P_\sigma = [\boldsymbol{e}_{\sigma_1}\ \cdots\ \boldsymbol{e}_{\sigma_n}]$，一次对换对应交换两列，于是 $\det P_\sigma = \operatorname{sign}(\sigma)$。
+排列 $\sigma$ 就是映射 $i \mapsto \sigma_i$，即 1.3.2 中的**置换**；奇排列、偶排列分别对应**奇置换**、**偶置换**。排列与置换矩阵一一对应：$\sigma \mapsto P_\sigma = [\boldsymbol{e}_{\sigma_1}\ \cdots\ \boldsymbol{e}_{\sigma_n}]$，一次对换对应交换两列，于是 $\det P_\sigma = \operatorname{sgn}(\sigma)$。
 
 这也回答了"一个排列能否既是奇排列又是偶排列"：不能。若 $\sigma$ 经过 $s$ 次对换变为恒等排列，则 $P_\sigma$ 经过 $s$ 次列对换变为 $I_n$，$\det P_\sigma = (-1)^s$，而 $\det P_\sigma$ 是唯一确定的（定理 5.3.1），故 $s$ 的奇偶性由 $\sigma$ 唯一确定。$n \ge 2$ 时，固定一个对换 $\tau$，$\sigma \mapsto \tau\sigma$ 是奇排列与偶排列之间的一一对应，所以二者各有 $n!/2$ 个。
 
@@ -403,7 +403,7 @@ $$
 **定理 5.7.1（行列式的完全展开）** 对 $n$ 阶方阵 $A = [a_{ij}]$，
 
 $$
-\det A = \sum_{\sigma} \operatorname{sign}(\sigma)\,a_{\sigma_11}a_{\sigma_22}\cdots a_{\sigma_nn} = \sum_{\sigma} \operatorname{sign}(\sigma)\,a_{1\sigma_1}a_{2\sigma_2}\cdots a_{n\sigma_n},
+\det A = \sum_{\sigma} \operatorname{sgn}(\sigma)\,a_{\sigma_11}a_{\sigma_22}\cdots a_{\sigma_nn} = \sum_{\sigma} \operatorname{sgn}(\sigma)\,a_{1\sigma_1}a_{2\sigma_2}\cdots a_{n\sigma_n},
 $$
 
 其中求和取遍全部 $n!$ 个 $n$ 元排列。
@@ -411,14 +411,14 @@ $$
 **证明** 与例 5.7.1 相同，对每一列用多线性展开：
 
 $$
-\det A = \sum_{\sigma_1, \cdots, \sigma_n = 1}^n a_{\sigma_11}\cdots a_{\sigma_nn}\,\delta(\boldsymbol{e}_{\sigma_1}, \cdots, \boldsymbol{e}_{\sigma_n}).
+\det A = \sum_{\sigma_1, \dots, \sigma_n = 1}^n a_{\sigma_11}\cdots a_{\sigma_nn}\,\delta(\boldsymbol{e}_{\sigma_1}, \dots, \boldsymbol{e}_{\sigma_n}).
 $$
 
-若 $\sigma_1, \cdots, \sigma_n$ 中有两个相同，则 $\delta(\boldsymbol{e}_{\sigma_1}, \cdots, \boldsymbol{e}_{\sigma_n})$ 有两列相等，为零；否则 $\sigma$ 是排列，$\delta(\boldsymbol{e}_{\sigma_1}, \cdots, \boldsymbol{e}_{\sigma_n}) = \det P_\sigma = \operatorname{sign}(\sigma)$。这就得到第一个等式。对 $\det A^{\mathsf T} = \det A$ 应用第一个等式得第二个。$\square$
+若 $\sigma_1, \dots, \sigma_n$ 中有两个相同，则 $\delta(\boldsymbol{e}_{\sigma_1}, \dots, \boldsymbol{e}_{\sigma_n})$ 有两列相等，为零；否则 $\sigma$ 是排列，$\delta(\boldsymbol{e}_{\sigma_1}, \dots, \boldsymbol{e}_{\sigma_n}) = \det P_\sigma = \operatorname{sgn}(\sigma)$。这就得到第一个等式。对 $\det A^{\mathsf T} = \det A$ 应用第一个等式得第二个。$\square$
 
 这个证明只用到了公理，所以它也独立地给出了唯一性；反过来，直接验证右端满足三条公理，也可以证明存在性。
 
-完全展开式有 $n!$ 项，每项 $n-1$ 次乘法，运算量为 $(n-1)\cdot n!$；按行列展开的递归算法也需要约 $(e-1)\cdot n!$ 次乘法。它们都随 $n$ 超指数增长，而 Gauss 消元（算法 5.4.1）只需约 $n^3/3$ 次乘法。$n = 20$ 时，完全展开需要约 $5 \times 10^{19}$ 次乘法，消元只需约 $3000$ 次。因此行列式一般不应通过完全展开或按行列展开来计算；完全展开式的价值在于理论，例如说明 $\det A$ 是矩阵元素的多项式（从而是连续函数），以及第 6 章特征多项式次数与系数的推导。
+完全展开式有 $n!$ 项，每项 $n-1$ 次乘法，运算量为 $(n-1)\cdot n!$；按行列展开的递归算法也需要约 $(\mathrm{e}-1)\cdot n!$ 次乘法。它们都随 $n$ 超指数增长，而 Gauss 消元（算法 5.4.1）只需约 $n^3/3$ 次乘法。$n = 20$ 时，完全展开需要约 $5 \times 10^{19}$ 次乘法，消元只需约 $3000$ 次。因此行列式一般不应通过完全展开或按行列展开来计算；完全展开式的价值在于理论，例如说明 $\det A$ 是矩阵元素的多项式（从而是连续函数），以及第 6 章特征多项式次数与系数的推导。
 
 ![计算 n 阶行列式所需乘法次数的比较（对数纵轴）：完全展开与按行列展开随 n! 增长，Gauss 消元只按 n³ 增长](./plots/determinant-cost.py)
 
@@ -438,10 +438,10 @@ $$
 | 按行或列展开 | $\det A = \sum_i a_{ij}C_{ij} = \sum_j a_{ij}C_{ij}$ | 定理 5.5.2 |
 | 代数余子式向量 | $\boldsymbol{a}_{j'}^{\mathsf T}\boldsymbol{c}_j = \delta_{jj'}\det A$；底面的法向量，长度为底面积 | 命题 5.6.1 |
 | 逆矩阵公式与 Cramer 法则 | $A^{-1} = C^{\mathsf T}/\det A$；$x_j = \det B_j/\det A$ | 定理 5.6.1、定理 5.6.2 |
-| 完全展开 | $\det A = \sum_\sigma \operatorname{sign}(\sigma)\prod_i a_{\sigma_ii}$ | 定理 5.7.1 |
+| 完全展开 | $\det A = \sum_\sigma \operatorname{sgn}(\sigma)\prod_i a_{\sigma_ii}$ | 定理 5.7.1 |
 
 | 计算方法 | 运算量 | 适用场合 |
 |---|---|---|
 | Gauss 消元（算法 5.4.1） | 约 $\frac{2}{3}n^3$ 次浮点运算 | 一般矩阵的标准方法 |
-| 按某行或某列展开 | 约 $(e-1)\cdot n!$ 次乘法 | 某行或某列有许多零元时手算 |
+| 按某行或某列展开 | 约 $(\mathrm{e}-1)\cdot n!$ 次乘法 | 某行或某列有许多零元时手算 |
 | 完全展开 | $(n-1)\cdot n!$ 次乘法 | 理论推导，二、三阶手算 |

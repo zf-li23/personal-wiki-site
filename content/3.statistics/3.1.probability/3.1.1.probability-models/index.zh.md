@@ -65,12 +65,12 @@ title: 概率模型与性质
 ## 1.5. 概率的性质
 
 ### 1.5.1. 基本性质
-1. $\mathbb{P}(\emptyset) = 0$
-2. **有限可加性**：若 $A_i \cap A_j = \emptyset (i \neq j)$，则
+1. $\mathbb{P}(\varnothing) = 0$
+2. **有限可加性**：若 $A_i \cap A_j = \varnothing (i \neq j)$，则
    $$
    \mathbb{P}\left( \bigcup_{i=1}^n A_i \right) = \sum_{i=1}^n \mathbb{P}(A_i)
    $$
-3. $\mathbb{P}(A^c) = 1 - \mathbb{P}(A)$
+3. $\mathbb{P}(A^{\mathsf c}) = 1 - \mathbb{P}(A)$
 4. 若 $A \subset B$，则 $\mathbb{P}(B \setminus A) = \mathbb{P}(B) - \mathbb{P}(A)$
 
 ### 1.5.2. 重要不等式与公式

@@ -1,6 +1,6 @@
 ---
 title: Lattice Theory
-source_hash: 1d8064562a10
+source_hash: ed8b31577db6
 ---
 
 The groups, rings and fields of the previous two chapters all come from "computation": addition, multiplication, composition of maps. Mathematics and computer science have another, equally basic, kind of structure that comes from "comparison": inclusion between sets, divisibility between integers, implication between propositions, inclusion between subgroups. All of these are **partial orders**. When any two elements have a "least common upper bound" and a "greatest common lower bound", taking suprema and infima become two binary operations, and the poset turns into an **algebraic system**: a **lattice**. The notion of a lattice goes back to Dedekind's work at the end of the nineteenth century; from the 1930s on, Garrett Birkhoff developed lattice theory systematically.
@@ -83,7 +83,7 @@ This relation is the bridge between the order structure and the algebraic struct
 
 **Example 4.2.1** Let $S$ be a nonempty set and $\mathcal{P}(S)$ its power set. For $A, B \in \mathcal{P}(S)$ let $A \vee B = A \cup B$ and $A \wedge B = A \cap B$. Then $(\mathcal{P}(S), \cup, \cap)$ is a lattice, and the corresponding partial order is inclusion $\subseteq$.
 
-**Example 4.2.2** The set $\mathbb{Z}^+$ of positive integers is a poset under divisibility: $m \le n$ if and only if $m \mid n$. In this order, the supremum of $\{m, n\}$ is the least common multiple $\operatorname{lcm}(m, n)$ and the infimum is the greatest common divisor $\gcd(m, n)$, so $(\mathbb{Z}^+, \operatorname{lcm}, \gcd)$ is a lattice. It differs from the power set lattice of Example 4.2.1: there the operations are union and intersection of sets, here they are the number-theoretic lcm and gcd. This illustrates the abstract nature of lattices.
+**Example 4.2.2** The set $\mathbb{N}_+$ of positive integers is a poset under divisibility: $m \le n$ if and only if $m \mid n$. In this order, the supremum of $\{m, n\}$ is the least common multiple $\operatorname{lcm}(m, n)$ and the infimum is the greatest common divisor $\gcd(m, n)$, so $(\mathbb{N}_+, \operatorname{lcm}, \gcd)$ is a lattice. It differs from the power set lattice of Example 4.2.1: there the operations are union and intersection of sets, here they are the number-theoretic lcm and gcd. This illustrates the abstract nature of lattices.
 
 The positive divisors of $12$ form a sublattice under divisibility, with the following Hasse diagram (a lower element divides an upper one):
 
@@ -121,7 +121,7 @@ hold, then $L$ is called a distributive lattice.
 
 In a lattice, each of the two distributive laws implies the other, so it suffices to check one of them. This differs from rings, where only multiplication distributes over addition; in a distributive lattice, $\wedge$ distributes over $\vee$ and $\vee$ distributes over $\wedge$.
 
-**Example 4.3.1** The power set lattice $(\mathcal{P}(S), \cup, \cap)$ and the divisibility lattice $(\mathbb{Z}^+, \operatorname{lcm}, \gcd)$ are distributive. Every totally ordered set is also a distributive lattice.
+**Example 4.3.1** The power set lattice $(\mathcal{P}(S), \cup, \cap)$ and the divisibility lattice $(\mathbb{N}_+, \operatorname{lcm}, \gcd)$ are distributive. Every totally ordered set is also a distributive lattice.
 
 ### 4.3.2. Modular Lattices
 
@@ -235,7 +235,7 @@ In a power set lattice, $A + B = (A \setminus B) \cup (B \setminus A)$ is the **
 
 This is exactly the subalgebra of Chapter 1 (Definition 1.4.4) for two operations.
 
-**Definition 4.4.2 (Lattice Homomorphism)** Let $(L_1, \vee_1, \wedge_1)$ and $(L_2, \vee_2, \wedge_2)$ be lattices and $f: L_1 \to L_2$ a map. If $f(a \vee_1 b) = f(a) \vee_2 f(b)$ and $f(a \wedge_1 b) = f(a) \wedge_2 f(b)$ for all $a, b \in L_1$, then $f$ is called a **lattice homomorphism**; if $f$ is moreover bijective, it is called a **lattice isomorphism**.
+**Definition 4.4.2 (Lattice Homomorphism)** Let $(L_1, \vee_1, \wedge_1)$ and $(L_2, \vee_2, \wedge_2)$ be lattices and $f\colon L_1 \to L_2$ a map. If $f(a \vee_1 b) = f(a) \vee_2 f(b)$ and $f(a \wedge_1 b) = f(a) \wedge_2 f(b)$ for all $a, b \in L_1$, then $f$ is called a **lattice homomorphism**; if $f$ is moreover bijective, it is called a **lattice isomorphism**.
 
 This is the definition of a homomorphism for several operations from Section 1.4.3. A homomorphism of Boolean algebras is further required to preserve complements, $0$ and $1$. For example, for a fixed $x \in S$, the map $\mathcal{P}(S) \to \{0, 1\}$ sending $A$ to $1$ if $x \in A$ and to $0$ if $x \notin A$ is a homomorphism of Boolean algebras.
 

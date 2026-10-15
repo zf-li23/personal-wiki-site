@@ -6,7 +6,7 @@ title: 协方差、相关
 
 ### 10.1.1. 协方差的定义
 
-设 $X$ 和 $Y$ 是两个随机变量，且 $\mathbb{E}X$ 和 $\mathbb{E}Y$ 存在。当 $\mathbb{E}[(X - \mathbb{E}X)(Y - \mathbb{E}Y)] < \infty$ 时，称
+设 $X$ 和 $Y$ 是两个随机变量，且 $\mathbb{E}X$ 和 $\mathbb{E}Y$ 存在。当 $\mathbb{E}|(X - \mathbb{E}X)(Y - \mathbb{E}Y)| < \infty$ 时，称
 $$
 \operatorname{Cov}(X, Y) = \mathbb{E}[(X - \mathbb{E}X)(Y - \mathbb{E}Y)]
 $$
@@ -25,7 +25,7 @@ $$
 
 ### 10.1.3. 例子：多项分布的协方差
 
-设 $(X_1, \dots, X_k) \sim \text{Multinomial}(n, \boldsymbol{p})$，其中 $\boldsymbol{p} = (p_1, \dots, p_k)$，且 $\sum_{i=1}^k p_i = 1$。
+设 $(X_1, \dots, X_k) \sim \mathrm{Mult}(n, \boldsymbol{p})$，其中 $\boldsymbol{p} = (p_1, \dots, p_k)^{\mathsf T}$，且 $\sum_{i=1}^k p_i = 1$。
 
 - 当 $i = j$ 时，$\operatorname{Cov}(X_i, X_j) = \operatorname{Var}(X_i) = n p_i (1-p_i)$
 - 当 $i \neq j$ 时，$\operatorname{Cov}(X_i, X_j) = -n p_i p_j$
@@ -36,12 +36,12 @@ $$
 
 当 $0 < \operatorname{Var}(X) \cdot \operatorname{Var}(Y) < \infty$ 时，定义 $X$ 与 $Y$ 的相关系数为
 $$
-\operatorname{Corr}(X, Y) = \frac{\operatorname{Cov}(X, Y)}{\sqrt{var(X)} \sqrt{var(Y)}}
+\operatorname{Corr}(X, Y) = \frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}(X)} \sqrt{\operatorname{Var}(Y)}}
 $$
 
 ### 10.2.2. 例子：二元正态分布
 
-设 $(X, Y) \sim N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$，则 $\operatorname{Corr}(X, Y) = \rho$。
+设 $(X, Y) \sim \mathcal{N}(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$，则 $\operatorname{Corr}(X, Y) = \rho$。
 
 ### 10.2.3. 相关系数的性质
 
@@ -77,23 +77,23 @@ $$
 
 ### 10.4.1. 随机向量的期望
 
-设 $X = (X_1, \dots, X_n)$，若每个 $X_i$ 的期望存在，则
+设 $\boldsymbol{X} = (X_1, \dots, X_n)^{\mathsf T}$，若每个 $X_i$ 的期望存在，则
 $$
-\mathbb{E}X = (\mathbb{E}X_1, \dots, \mathbb{E}X_n)
+\mathbb{E}\boldsymbol{X} = (\mathbb{E}X_1, \dots, \mathbb{E}X_n)^{\mathsf T}
 $$
 
 ### 10.4.2. 协方差矩阵的定义
 
-设 $X = (X_1, \dots, X_n)$ 为随机向量，期望向量 $\mu = \mathbb{E}X$，则协方差矩阵为
+设 $\boldsymbol{X} = (X_1, \dots, X_n)^{\mathsf T}$ 为随机向量，期望向量 $\boldsymbol{\mu} = \mathbb{E}\boldsymbol{X}$，则协方差矩阵为
 $$
-\Sigma = \mathbb{E}[(X - \mu)'(X - \mu)] = (\sigma_{ij})_{n \times n}
+\Sigma = \mathbb{E}[(\boldsymbol{X} - \boldsymbol{\mu})(\boldsymbol{X} - \boldsymbol{\mu})^{\mathsf T}] = (\sigma_{ij})_{n \times n}
 $$
 其中 $\sigma_{ij} = \operatorname{Cov}(X_i, X_j)$。
 
 ### 10.4.3. 协方差矩阵的性质
 
 - $\Sigma$ 是对称非负定矩阵
-- $\Sigma$ 退化的充要条件是存在非零向量 $\boldsymbol{a} = (a_1, \dots, a_n)$ 使得
+- $\Sigma$ 退化的充要条件是存在非零向量 $\boldsymbol{a} = (a_1, \dots, a_n)^{\mathsf T}$ 使得
   $$
   \sum_{i=1}^n a_i (X_i - \mathbb{E}X_i) = 0 \quad \text{a.s.}
   $$
@@ -110,9 +110,9 @@ $$
 ### 关键公式
 
 - 协方差：$\operatorname{Cov}(X, Y) = \mathbb{E}[(X - \mathbb{E}X)(Y - \mathbb{E}Y)] = \mathbb{E}(XY) - (\mathbb{E}X)(\mathbb{E}Y)$
-- 相关系数：$\operatorname{Corr}(X, Y) = \frac{\operatorname{Cov}(X, Y)}{\sqrt{var(X)} \sqrt{var(Y)}}$
+- 相关系数：$\operatorname{Corr}(X, Y) = \frac{\operatorname{Cov}(X, Y)}{\sqrt{\operatorname{Var}(X)} \sqrt{\operatorname{Var}(Y)}}$
 - 方差公式：$\operatorname{Var}(X_1 + X_2) = \operatorname{Var}(X_1) + \operatorname{Var}(X_2) + 2\operatorname{Cov}(X_1, X_2)$
-- 协方差矩阵：$\Sigma = \mathbb{E}[(X - \mu)'(X - \mu)]$
+- 协方差矩阵：$\Sigma = \mathbb{E}[(\boldsymbol{X} - \boldsymbol{\mu})(\boldsymbol{X} - \boldsymbol{\mu})^{\mathsf T}]$
 
 ### 应用技巧
 

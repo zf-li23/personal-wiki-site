@@ -5,8 +5,8 @@ title: 点估计
 ## 3.1. 估计量的最优准则 (Optimal Criterion of Estimation)
 
 ### 3.1.1. 无偏性 (Unbiasedness)
-- 定义：若 $E_\theta[\hat{g}(X)] = g(\theta)$，则 $\hat{g}(X)$ 是 $g(\theta)$ 的无偏估计。
-- 渐近无偏性：$\lim_{n \to \infty} E_\theta[\hat{g}_n(X)] = g(\theta)$。
+- 定义：若 $\mathbb{E}_\theta[\hat{g}(X)] = g(\theta)$，则 $\hat{g}(X)$ 是 $g(\theta)$ 的无偏估计。
+- 渐近无偏性：$\lim_{n \to \infty} \mathbb{E}_\theta[\hat{g}_n(X)] = g(\theta)$。
 - 样本均值 $\bar{X}$ 和样本方差 $S^2$ 分别是 $\mu$ 和 $\sigma^2$ 的无偏估计。
 
 ### 3.1.2. 有效性 (Efficiency)
@@ -14,15 +14,15 @@ title: 点估计
 - 样本均值比单个观测更有效。
 
 ### 3.1.3. 均方误差 (Mean Squared Error, MSE)
-- 定义：$MSE(\hat{\theta}) = E_\theta(\hat{\theta} - \theta)^2$。
-- 分解：$MSE = \operatorname{Var}(\hat{\theta}) + [Bias(\hat{\theta})]^2$。
+- 定义：$\operatorname{MSE}(\hat{\theta}) = \mathbb{E}_\theta(\hat{\theta} - \theta)^2$。
+- 分解：$\operatorname{MSE}(\hat{\theta}) = \operatorname{Var}(\hat{\theta}) + [\operatorname{Bias}(\hat{\theta})]^2$。
 - 无偏估计的 MSE 等于方差。
 - 偏差-方差权衡：有时允许轻微偏差以大幅降低方差。
 
 ### 3.1.4. 相合性 (Consistency)
-- 弱相合：$\hat{g}_n \xrightarrow{P} g(\theta)$。
-- 强相合：$\hat{g}_n \xrightarrow{a.s.} g(\theta)$。
-- $r$ 阶矩相合：$\lim_{n \to \infty} E|\hat{g}_n - g(\theta)|^r = 0$。
+- 弱相合：$\hat{g}_n \xrightarrow{p} g(\theta)$。
+- 强相合：$\hat{g}_n \xrightarrow{\text{a.s.}} g(\theta)$。
+- $r$ 阶矩相合：$\lim_{n \to \infty} \mathbb{E}|\hat{g}_n - g(\theta)|^r = 0$。
 - 样本矩是强相合的。
 
 ### 3.1.5. 渐近正态性 (Asymptotic Normality)
@@ -41,8 +41,8 @@ g(\theta) = G(\alpha_1, \dots, \alpha_k; \mu_2, \dots, \mu_s),
 $$
 
 其中：
-- **总体原点矩**：$\alpha_k = E_{\theta}(X^k)$，
-- **总体中心矩**：$\mu_k = E_{\theta}[(X - \alpha_1)^k]$。
+- **总体原点矩**：$\alpha_k = \mathbb{E}_{\theta}(X^k)$，
+- **总体中心矩**：$\mu_k = \mathbb{E}_{\theta}[(X - \alpha_1)^k]$。
 
 设 $\boldsymbol{X} = (X_1, \dots, X_n)$ 是来自该总体的简单随机样本，定义相应的**样本矩**：
 - **样本原点矩**：$a_{n,k} = \frac{1}{n} \sum_{i=1}^{n} X_i^k$,
@@ -50,7 +50,7 @@ $$
 
 **定义 3.2.1（矩估计）** 将总体矩 $\alpha_k, \mu_k$ 替换为对应的样本矩 $a_{n,k}, m_{n,k}$，得到：
 $$
-\hat{g}(\boldsymbol{X}) = G(a_{n1}, \dots, a_{nk}; m_{n2}, \dots, m_{ns}),
+\hat{g}(\boldsymbol{X}) = G(a_{n,1}, \dots, a_{n,k}; m_{n,2}, \dots, m_{n,s}),
 $$
 称 $\hat{g}(\boldsymbol{X})$ 为 $g(\theta)$ 的**矩估计**。
 
@@ -77,23 +77,23 @@ $$
 #### 3.2.2.2. 相合性 (Consistency)
 - 由**强大数定律 (SLLN)**，样本矩是总体矩的**强相合估计**：
   $$
-  a_{n,k} \xrightarrow{a.s.} \alpha_k, \quad m_{n,k} \xrightarrow{a.s.} \mu_k \quad (n \to \infty).
+  a_{n,k} \xrightarrow{\text{a.s.}} \alpha_k, \quad m_{n,k} \xrightarrow{\text{a.s.}} \mu_k \quad (n \to \infty).
   $$
 - 若 $G$ 是连续函数，则由连续映射定理，矩估计也是**强相合**的：
   $$
-  \hat{g}(\boldsymbol{X}) \xrightarrow{a.s.} g(\theta).
+  \hat{g}(\boldsymbol{X}) \xrightarrow{\text{a.s.}} g(\theta).
   $$
 
 #### 3.2.2.3. 渐近正态性 (Asymptotic Normality)
 - 在一定正则条件下（如总体矩存在且有限），矩估计是**相合渐近正态估计**。
 - 具体地，对多元矩估计向量 $\hat{\boldsymbol{g}}$，当 $n \to \infty$ 时：
   $$
-  \sqrt{n}\big(\hat{\boldsymbol{g}} - \boldsymbol{g}(\theta)\big) \xrightarrow{d} N(\boldsymbol{0}, \boldsymbol{\Sigma}),
+  \sqrt{n}\big(\hat{\boldsymbol{g}} - \boldsymbol{g}(\theta)\big) \xrightarrow{d} \mathcal{N}(\boldsymbol{0}, \boldsymbol{\Sigma}),
   $$
   其中 $\boldsymbol{\Sigma}$ 为渐近协方差矩阵，可通过 Delta 方法或中心极限定理求得。
 - **常见例子**：
-  - 样本均值 $\bar{X}$：$\sqrt{n}(\bar{X} - \mu) \xrightarrow{d} N(0, \sigma^2)$。
-  - 调整样本方差 $S_n^2$：$\sqrt{n}(S_n^2 - \sigma^2) \xrightarrow{d} N(0, \mu_4 - \sigma^4)$。
+  - 样本均值 $\bar{X}$：$\sqrt{n}(\bar{X} - \mu) \xrightarrow{d} \mathcal{N}(0, \sigma^2)$。
+  - 调整样本方差 $S_n^2$：$\sqrt{n}(S_n^2 - \sigma^2) \xrightarrow{d} \mathcal{N}(0, \mu_4 - \sigma^4)$。
 
 ---
 
@@ -183,18 +183,18 @@ $$
 
 **定理 3.3.2** 在一定正则条件下，MLE 序列 $\hat{\theta}_n$ 是**相合估计**：
 $$
-\hat{\theta}_n \xrightarrow{P_\theta} \theta, \quad n \to \infty.
+\hat{\theta}_n \xrightarrow{p} \theta, \quad n \to \infty.
 $$
 
 **渐近正态性 (Asymptotic Normality)**
 
 **定理 3.3.3** 在正则条件下，MLE 是**渐近正态**的：
 $$
-\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{d} N(0, \sigma_\theta^2), \quad \text{其中 } \sigma_\theta^2 = \frac{1}{I(\theta)}.
+\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{d} \mathcal{N}(0, \sigma_\theta^2), \quad \text{其中 } \sigma_\theta^2 = \frac{1}{I(\theta)}.
 $$
 这里 $I(\theta)$ 是 **Fisher 信息量**（每个观测）：
 $$
-I(\theta) = E_\theta\left[ \left( \frac{\partial}{\partial \theta} \log f(X; \theta) \right)^2 \right].
+I(\theta) = \mathbb{E}_\theta\left[ \left( \frac{\partial}{\partial \theta} \log f(X; \theta) \right)^2 \right].
 $$
 
 **渐近有效性 (Asymptotic Efficiency)**  
@@ -244,13 +244,13 @@ $$
   $$
   则称 $U$ 为 $g(\theta)$ 的 UMVUE。
 
-- **存在性**：无偏估计不一定存在。例如，对于 $X \sim B(n, p)$，$g(p) = 1/p$ 不存在无偏估计。
+- **存在性**：无偏估计不一定存在。例如，对于 $X \sim \mathrm{Bin}(n, p)$，$g(p) = 1/p$ 不存在无偏估计。
 
 ### 3.4.2. 构造 UMVUE 的方法
 
 #### 3.4.2.1. 零无偏估计法 (Zero Unbiased Estimate Method)
 
-- **定理**：若 $\hat{g}(X)$ 是 $g(\theta)$ 的无偏估计，且对任意满足 $E_\theta l(X) = 0$ 的统计量 $l(X)$，都有
+- **定理**：若 $\hat{g}(X)$ 是 $g(\theta)$ 的无偏估计，且对任意满足 $\mathbb{E}_\theta l(X) = 0$ 的统计量 $l(X)$，都有
   $$
   \operatorname{Cov}_\theta(\hat{g}(X), l(X)) = 0, \quad \forall \theta \in \Theta
   $$
@@ -262,22 +262,22 @@ $$
 
 - **定理**：设 $T(X)$ 是充分且完全的统计量，若 $\hat{g}(T(X))$ 是 $g(\theta)$ 的无偏估计，则 $\hat{g}(T(X))$ 是唯一的 UMVUE。
 
-- **构造方法**：若 $T$ 充分完全，则对任意无偏估计 $U$，令 $\hat{g}(T) = E_\theta(U \mid T)$，则 $\hat{g}(T)$ 是 UMVUE。
+- **构造方法**：若 $T$ 充分完全，则对任意无偏估计 $U$，令 $\hat{g}(T) = \mathbb{E}_\theta(U \mid T)$，则 $\hat{g}(T)$ 是 UMVUE。
 
 ### 3.4.3. 例子
 
-#### 3.4.3.1. 伯努利分布 $B(1, \theta)$
+#### 3.4.3.1. 伯努利分布 $\mathrm{Bin}(1, \theta)$
 
 - $T = \sum X_i$ 充分完全。
 - $\bar{X}$ 是 $\theta$ 的 UMVUE。
 - $g(\theta) = \theta(1-\theta)$ 的 UMVUE 为 $\frac{T(n-T)}{n(n-1)}$。
 
-#### 3.4.3.2. 均匀分布 $U(0, \theta)$
+#### 3.4.3.2. 均匀分布 $\mathrm{U}(0, \theta)$
 
 - $T = X_{(n)}$ 充分完全。
 - $\hat{\theta} = \frac{n+1}{n}X_{(n)}$ 是 $\theta$ 的 UMVUE。
 
-#### 3.4.3.3. 正态分布 $N(\mu, \sigma^2)$
+#### 3.4.3.3. 正态分布 $\mathcal{N}(\mu, \sigma^2)$
 
 - $T = (\bar{X}, S^2)$ 充分完全。
 - $\bar{X}$ 是 $\mu$ 的 UMVUE。
@@ -285,12 +285,12 @@ $$
 - $\sigma^r$ 的 UMVUE 为 $K_{n-1,r} \cdot T_2^{r/2}$，其中 $T_2 = \sum (X_i - \bar{X})^2$。
 - $\mu/\sigma^2$ 的 UMVUE 为 $(n-3)\bar{X}/T_2$。
 
-#### 3.4.3.4. 泊松分布 $\mathbb{P}(\theta)$
+#### 3.4.3.4. 泊松分布 $\mathrm{Poi}(\theta)$
 
 - $T = \sum X_i$ 充分完全。
 - $\bar{X}$ 是 $\theta$ 的 UMVUE。
 - $\theta^r$ 的 UMVUE 为 $\frac{T(T-1)\cdots(T-r+1)}{n^r}$。
-- $P_\theta(X_1 = x)$ 的 UMVUE 为 $C_T^x \frac{(n-1)^{T-x}}{n^{\mathsf T}}$。
+- $\mathbb{P}_\theta(X_1 = x)$ 的 UMVUE 为 $\binom{T}{x} \left(\frac{1}{n}\right)^{x} \left(1 - \frac{1}{n}\right)^{T-x}$。
 
 ### 3.4.4. C-R正则分布族
 
@@ -299,7 +299,7 @@ $$
   2. 分布族有共同支撑集
   3. 对任意 $x \in \mathcal{X}$ 和 $\theta \in \Theta$，$\frac{\partial f(x;\theta)}{\partial \theta}$ 存在
   4. 积分与求导可交换：$\frac{\partial}{\partial \theta} \int f(x; \theta) \mathrm{d}x = \int \frac{\partial}{\partial \theta} f(x; \theta) \mathrm{d}x$
-  5. Fisher信息 $I(\theta) = E_\theta \left[ \frac{\partial \log f(X; \theta)}{\partial \theta} \right]^2$ 满足 $0 < I(\theta) < \infty$
+  5. Fisher信息 $I(\theta) = \mathbb{E}_\theta \left[ \frac{\partial \log f(X; \theta)}{\partial \theta} \right]^2$ 满足 $0 < I(\theta) < \infty$
 
 ### 3.4.5. Cramer-Rao不等式
 
@@ -312,18 +312,18 @@ $$
   \operatorname{Var}_{\theta} (\hat{g}(\boldsymbol{X})) \geq \frac{1}{nI(\theta)}
   $$
 
-- **多参数情形**：设 $\theta = (\theta_1, \cdots, \theta_k)$，则
+- **多参数情形**：设 $\boldsymbol{\theta} = (\theta_1, \cdots, \theta_k)^{\mathsf T}$，则
   $$
-  \operatorname{Cov}_{\theta}(\hat{\theta}) \geq (nI(\theta))^{-1}
+  \operatorname{Cov}_{\boldsymbol{\theta}}(\hat{\boldsymbol{\theta}}) \geq (nI(\boldsymbol{\theta}))^{-1}
   $$
-  其中 $I(\theta) = (I_{ij}(\theta))$ 是Fisher信息矩阵，
+  其中 $I(\boldsymbol{\theta}) = (I_{ij}(\boldsymbol{\theta}))$ 是Fisher信息矩阵，
   $$
-  I_{ij}(\theta) = E_{\theta} \left[ \frac{\partial \log f(X; \theta)}{\partial \theta_i} \frac{\partial \log f(X; \theta)}{\partial \theta_j} \right]
+  I_{ij}(\boldsymbol{\theta}) = \mathbb{E}_{\boldsymbol{\theta}} \left[ \frac{\partial \log f(X; \boldsymbol{\theta})}{\partial \theta_i} \frac{\partial \log f(X; \boldsymbol{\theta})}{\partial \theta_j} \right]
   $$
 
 ### 3.4.6. Fisher信息
 
-- **定义**：$I(\theta) = E_\theta \left[ \frac{\partial \log f(X; \theta)}{\partial \theta} \right]^2$
+- **定义**：$I(\theta) = \mathbb{E}_\theta \left[ \frac{\partial \log f(X; \theta)}{\partial \theta} \right]^2$
 - **性质**：
   - 反映总体提供的信息量
   - 随机样本 $(X_1, \cdots, X_n)$ 的总信息量为 $nI(\theta)$
@@ -340,10 +340,10 @@ $$
 
 ### 3.4.8. 例子
 
-- **伯努利分布** $B(1, \theta)$：$\bar{X}$ 是 $\theta$ 的有效估计
-- **泊松分布** $\mathbb{P}(\theta)$：$\bar{X}$ 是 $\theta$ 的有效估计  
-- **指数分布** $\text{Exp}(\theta)$：$\bar{X}$ 是 $1/\theta$ 的有效估计
-- **正态分布** $N(\mu, \sigma^2)$：
+- **伯努利分布** $\mathrm{Bin}(1, \theta)$：$\bar{X}$ 是 $\theta$ 的有效估计
+- **泊松分布** $\mathrm{Poi}(\theta)$：$\bar{X}$ 是 $\theta$ 的有效估计  
+- **指数分布** $\mathrm{Exp}(\theta)$：$\bar{X}$ 是 $1/\theta$ 的有效估计
+- **正态分布** $\mathcal{N}(\mu, \sigma^2)$：
   - $\bar{X}$ 是 $\mu$ 的有效估计
   - $S^2$ 不是 $\sigma^2$ 的有效估计，但是渐近有效
 
@@ -363,9 +363,9 @@ $$
   $$
 - **矩阵形式**：
   $$
-  Y = X\beta + \epsilon
+  \boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\epsilon}
   $$
-  其中 $Y = (y_1, \cdots, y_n)'$，$X$ 为设计矩阵，$\beta = (\beta_0, \beta_1, \cdots, \beta_p)'$
+  其中 $\boldsymbol{Y} = (y_1, \cdots, y_n)^{\mathsf T}$，$X$ 为设计矩阵，$\boldsymbol{\beta} = (\beta_0, \beta_1, \cdots, \beta_p)^{\mathsf T}$，$\boldsymbol{x}_i^{\mathsf T}$ 为 $X$ 的第 $i$ 行
 
 ### 3.5.2. 基本假设
 
@@ -377,7 +377,7 @@ $$
 
 - **正态假设**（用于MLE）：
   $$
-  \epsilon_i \sim N(0, \sigma^2)
+  \epsilon_i \sim \mathcal{N}(0, \sigma^2)
   $$
 
 ### 3.5.3. 估计方法
@@ -386,15 +386,15 @@ $$
 
 - **目标**：最小化残差平方和
   $$
-  \hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n (y_i - x_i^{\mathsf T} \beta)^2
+  \hat{\boldsymbol{\beta}} = \arg\min_{\boldsymbol{\beta}} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \boldsymbol{\beta})^2
   $$
 - **解**：
   $$
-  \hat{\beta} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} Y
+  \hat{\boldsymbol{\beta}} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} \boldsymbol{Y}
   $$
 - **方差估计**：
-  - 有偏估计：$\hat{\sigma}_n^2 = \frac{1}{n} \sum_{i=1}^n (y_i - x_i^{\mathsf T} \hat{\beta})^2$
-  - 无偏估计：$\hat{\sigma}^2 = \frac{1}{n-p-1} \sum_{i=1}^n (y_i - x_i^{\mathsf T} \hat{\beta})^2$
+  - 有偏估计：$\hat{\sigma}_n^2 = \frac{1}{n} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \hat{\boldsymbol{\beta}})^2$
+  - 无偏估计：$\hat{\sigma}^2 = \frac{1}{n-p-1} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \hat{\boldsymbol{\beta}})^2$
 
 #### 3.5.3.2. 矩估计法
 
@@ -412,22 +412,22 @@ $$
 
 - **似然函数**（在正态假设下）：
   $$
-  L(\beta, \sigma^2) = (2\pi\sigma^2)^{-n/2} \exp\left\{-\frac{1}{2\sigma^2}\sum_{i=1}^n (y_i - x_i^{\mathsf T} \beta)^2\right\}
+  L(\boldsymbol{\beta}, \sigma^2) = (2\pi\sigma^2)^{-n/2} \exp\left\{-\frac{1}{2\sigma^2}\sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \boldsymbol{\beta})^2\right\}
   $$
 - **MLE**：
   $$
-  \hat{\beta}_{\text{MLE}} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} Y, \quad \hat{\sigma}^2_{\text{MLE}} = \frac{1}{n} \sum_{i=1}^n (y_i - x_i^{\mathsf T} \hat{\beta})^2
+  \hat{\boldsymbol{\beta}}_{\text{MLE}} = (X^{\mathsf T} X)^{-1} X^{\mathsf T} \boldsymbol{Y}, \quad \hat{\sigma}^2_{\text{MLE}} = \frac{1}{n} \sum_{i=1}^n (y_i - \boldsymbol{x}_i^{\mathsf T} \hat{\boldsymbol{\beta}})^2
   $$
 
 ### 3.5.4. 估计量的性质
 
-- **无偏性**：在Gauss-Markov假设下，$\hat{\beta}$ 是 $\beta$ 的无偏估计
-- **有效性**：$\hat{\beta}$ 是最佳线性无偏估计(BLUE)
+- **无偏性**：在Gauss-Markov假设下，$\hat{\boldsymbol{\beta}}$ 是 $\boldsymbol{\beta}$ 的无偏估计
+- **有效性**：$\hat{\boldsymbol{\beta}}$ 是最佳线性无偏估计(BLUE)
 - **正态性**：在正态假设下，
   $$
-  \hat{\beta} \sim N(\beta, \sigma^2(X^{\mathsf T} X)^{-1})
+  \hat{\boldsymbol{\beta}} \sim \mathcal{N}(\boldsymbol{\beta}, \sigma^2(X^{\mathsf T} X)^{-1})
   $$
-- **独立性**：$\hat{\beta}$ 与 $\hat{\sigma}^2$ 相互独立
+- **独立性**：$\hat{\boldsymbol{\beta}}$ 与 $\hat{\sigma}^2$ 相互独立
 
 ---
 
@@ -466,14 +466,14 @@ $$
 ### 3.6.3. 核函数选择
 
 - **常用核函数**：
-  - 均匀核：$K(x) = \frac{1}{2}I_{[-1,1]}(x)$
+  - 均匀核：$K(x) = \frac{1}{2}\boldsymbol{1}_{[-1,1]}(x)$
   - 三角核
   - Epanechnikov核：在均方误差意义下最优
   - 四次核
   - 三权重核
   - 高斯核：数学性质方便，常用
 - **核函数性质要求**：
-  1. $K(x) \geq 0$, $\sup_{x \in R} K(x) \leq M < \infty$, $\lim_{|x| \to \infty} |x|K(x) = 0$
+  1. $K(x) \geq 0$, $\sup_{x \in \mathbb{R}} K(x) \leq M < \infty$, $\lim_{|x| \to \infty} |x|K(x) = 0$
   2. $K(x) = K(-x)$, $\int_{-\infty}^{\infty} K(x)\mathrm{d}x = 1$, $\int_{-\infty}^{\infty} x^2K(x)\mathrm{d}x < \infty$
 
 ### 3.6.4. 带宽选择
@@ -489,18 +489,18 @@ $$
 
   - **MISE**（均方积分误差）：
     $$
-    MISE(h) = E\left[\int (\hat{f}_n(x) - f(x))^2 \mathrm{d}x\right]
+    \operatorname{MISE}(h) = \mathbb{E}\left[\int (\hat{f}_n(x) - f(x))^2 \mathrm{d}x\right]
     $$
 
   - **AMISE**（渐近MISE）：
     $$
-    AMISE(h) = \frac{R(K)}{nh} + \frac{1}{4}m_2(K)^2h^4R(f'')
+    \operatorname{AMISE}(h) = \frac{R(K)}{nh} + \frac{1}{4}m_2(K)^2h^4R(f'')
     $$
-    其中 $R(g) = \int g(x)^2dx$, $m_2(K) = \int x^2K(x)\mathrm{d}x$
+    其中 $R(g) = \int g(x)^2\,\mathrm{d}x$, $m_2(K) = \int x^2K(x)\mathrm{d}x$
 
   - **最优带宽**：
     $$
-    h_{AMISE} = \frac{R(K)^{1/5}}{m_2(K)^{2/5}R(f'')^{1/5}n^{1/5}}
+    h_{\mathrm{AMISE}} = \frac{R(K)^{1/5}}{m_2(K)^{2/5}R(f'')^{1/5}n^{1/5}}
     $$
 
 - **实际选择方法**：
@@ -521,9 +521,9 @@ $$
 
 - **渐近无偏**：$\lim_{n \to \infty} \mathbb{E}[f_n(x)] = f(x)$
 - **均方相合**：$\lim_{n \to \infty} \mathbb{E}[f_n(x) - f(x)]^2 = 0$
-- **弱相合**：$f_n(x) \xrightarrow{P} f(x)$
-- **强相合**：$f_n(x) \xrightarrow{a.s.} f(x)$
-- **渐近正态**：$\frac{f_n(x) - \mathbb{E}[f_n(x)]}{\sqrt{Var(f_n(x))}} \xrightarrow{d} N(0,1)$
+- **弱相合**：$f_n(x) \xrightarrow{p} f(x)$
+- **强相合**：$f_n(x) \xrightarrow{\text{a.s.}} f(x)$
+- **渐近正态**：$\frac{f_n(x) - \mathbb{E}[f_n(x)]}{\sqrt{\operatorname{Var}(f_n(x))}} \xrightarrow{d} \mathcal{N}(0,1)$
 
 ---
 
@@ -540,7 +540,6 @@ $$
   - **关键工具**：
     - **充分统计量**：包含所有样本信息。
     - **完全统计量**：确保无偏估计的唯一性。
-      263
   - **应用**：在伯努利、均匀、正态、泊松等常见分布中，可以显式地给出 UMVUE。
   - **注意事项**：UMVUE 的存在性和形式依赖于统计模型和参数函数。
 

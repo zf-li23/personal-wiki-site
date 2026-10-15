@@ -14,28 +14,28 @@ title: 中心极限定理
 $$
 \lim_{n \to \infty} F_n(x) = F(x)
 $$
-则称 $Y_n$ 依分布收敛到 $Y$，记作 $Y_n \overset{d}{\to} Y$。
+则称 $Y_n$ 依分布收敛到 $Y$，记作 $Y_n \xrightarrow{d} Y$。
 
 ## 13.2. 基本定理
 
 ### 13.2.1. Lindeberg-Lévy 中心极限定理
 
 **定理 13.2.1（中心极限定理）**
-设 $\{X_n\}$ 是独立同分布的随机变量序列，其期望为 $\mu$，方差为 $\sigma^2 < \infty$，记 $S_n = X_1 + \cdots + X_n$，则
+设 $\{X_n\}$ 是独立同分布的随机变量序列，其期望为 $\mu$，方差为 $0 < \sigma^2 < \infty$，记 $S_n = X_1 + \cdots + X_n$，则
 $$
-\frac{S_n - \mathbb{E}(S_n)}{\sqrt{var(S_n)}} \overset{d}{\to} N(0,1)
+\frac{S_n - \mathbb{E}(S_n)}{\sqrt{\operatorname{Var}(S_n)}} \xrightarrow{d} \mathcal{N}(0,1)
 $$
 
 **等价形式**
 样本均值 $M_n = \frac{1}{n} \sum_{i=1}^n X_i$ 满足：
 $$
-\frac{M_n - \mathbb{E}(M_n)}{\sqrt{var(M_n)}} \overset{d}{\to} N(0,1)
+\frac{M_n - \mathbb{E}(M_n)}{\sqrt{\operatorname{Var}(M_n)}} \xrightarrow{d} \mathcal{N}(0,1)
 $$
 
 ### 13.2.2. 近似分布
 当 $n$ 充分大时：
 $$
-S_n \approx N(n\mu, n\sigma^2), \quad M_n \approx N\left(\mu, \frac{\sigma^2}{n}\right)
+S_n \approx \mathcal{N}(n\mu, n\sigma^2), \quad M_n \approx \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
 $$
 
 ## 13.3. 定理证明
@@ -50,7 +50,7 @@ $$
 
 ### 13.3.2. 特征函数方法
 **定理 13.3.1（连续性定理）**
-$X_n \overset{d}{\to} X$ 的充分必要条件是其特征函数满足：
+$X_n \xrightarrow{d} X$ 的充分必要条件是其特征函数满足：
 $$
 \lim_{n \to \infty} \phi_n(t) = \phi(t), \quad \forall t \in \mathbb{R}
 $$
@@ -78,7 +78,7 @@ $$
 
 则中心极限定理成立的充分必要条件是 Lindeberg 条件：
 $$
-\lim_{n \to \infty} \frac{1}{B_n^2} \sum_{k=1}^n \mathbb{E}[(X_k - \mathbb{E}X_k)^2 I_{\{|X_k - \mathbb{E}X_k| > \varepsilon B_n\}}] = 0
+\lim_{n \to \infty} \frac{1}{B_n^2} \sum_{k=1}^n \mathbb{E}[(X_k - \mathbb{E}X_k)^2 \boldsymbol{1}_{\{|X_k - \mathbb{E}X_k| > \varepsilon B_n\}}] = 0
 $$
 
 ### 13.4.2. 理论意义
@@ -90,7 +90,7 @@ $$
 ### 13.5.1. 离散型随机变量的修正
 
 **定理 13.5.1（de Moivre-Laplace 中心极限定理）**
-设 $S_n \sim B(n,p)$，当 $n$ 充分大时：
+设 $S_n \sim \mathrm{Bin}(n,p)$，当 $n$ 充分大时：
 $$
 \mathbb{P}(k \leq S_n \leq m) \approx \Phi\left(\frac{m + 0.5 - np}{\sqrt{np(1-p)}}\right) - \Phi\left(\frac{k - 0.5 - np}{\sqrt{np(1-p)}}\right)
 $$
@@ -135,12 +135,12 @@ $$
 ### 关键公式
 - 中心极限定理：
 $$
-\frac{S_n - n\mu}{\sigma\sqrt{n}} \overset{d}{\to} N(0,1)
+\frac{S_n - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} \mathcal{N}(0,1)
 $$
 
 - 样本均值近似：
 $$
-M_n \approx N\left(\mu, \frac{\sigma^2}{n}\right)
+M_n \approx \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
 $$
 
 - 离散修正：

@@ -21,13 +21,13 @@ R_{\subset} &= \{\langle x, y \rangle \mid x \in A \land y \in A \land x \subset
 \end{aligned}
 $$
 
-例如，对任意的集合 $A$，**幂集** $P(A)$ 上的包含关系为 $\{\langle x, y \rangle \mid x \in P(A) \land y \in P(A) \land x \subseteq y\}$。
+例如，对任意的集合 $A$，**幂集** $\mathcal{P}(A)$ 上的包含关系为 $\{\langle x, y \rangle \mid x \in \mathcal{P}(A) \land y \in \mathcal{P}(A) \land x \subseteq y\}$。
 
 **定义 2.1.3（恒等关系、全域关系和空关系）** 对任意的集合 $A$，
 
 1. $A$ 上的**恒等关系** $I_A = \{\langle x, x \rangle \mid x \in A\}$；
 2. $A$ 上的**全域关系**（全关系）$E_A = \{\langle x, y \rangle \mid x \in A \land y \in A\} = A \times A$；
-3. 空集 $\emptyset$ 是 $A \times A$ 的子集，称为 $A$ 上的**空关系**。
+3. 空集 $\varnothing$ 是 $A \times A$ 的子集，称为 $A$ 上的**空关系**。
 
 **定义 2.1.4（定义域和值域）** 设 $R$ 是 $A$ 到 $B$ 的二元关系，
 
@@ -117,7 +117,7 @@ $$
 \end{aligned}
 $$
 
-这里规定关系的合成运算优先于集合运算。两个包含式一般不能改为等式，例如取 $X = Y = Z = \{a, b\}$，$R_1 = \{\langle a, a \rangle, \langle b, a \rangle\}$，$R_2 = \{\langle a, a \rangle\}$，$R_3 = \{\langle a, b \rangle\}$，则 $R_2 \cap R_3 = \emptyset$，而 $R_1 \circ R_2 \cap R_1 \circ R_3 = \{\langle a, a \rangle\}$。
+这里规定关系的合成运算优先于集合运算。两个包含式一般不能改为等式，例如取 $X = Y = Z = \{a, b\}$，$R_1 = \{\langle a, a \rangle, \langle b, a \rangle\}$，$R_2 = \{\langle a, a \rangle\}$，$R_3 = \{\langle a, b \rangle\}$，则 $R_2 \cap R_3 = \varnothing$，而 $R_1 \circ R_2 \cap R_1 \circ R_3 = \{\langle a, a \rangle\}$。
 
 **定理 2.3.4（集合在关系下的象的性质）** 对 $X$ 到 $Y$ 的关系 $R$、集合 $A, B$ 和集合族 $\mathcal{A}$，有
 
@@ -126,7 +126,7 @@ $$
 R[A \cup B] &= R[A] \cup R[B], \\
 R\left[\textstyle\bigcup \mathcal{A}\right] &= \textstyle\bigcup \{R[B] \mid B \in \mathcal{A}\}, \\
 R[A \cap B] &\subseteq R[A] \cap R[B], \\
-R\left[\textstyle\bigcap \mathcal{A}\right] &\subseteq \textstyle\bigcap \{R[B] \mid B \in \mathcal{A}\} \quad (\mathcal{A} \neq \emptyset), \\
+R\left[\textstyle\bigcap \mathcal{A}\right] &\subseteq \textstyle\bigcap \{R[B] \mid B \in \mathcal{A}\} \quad (\mathcal{A} \neq \varnothing), \\
 R[A] - R[B] &\subseteq R[A - B].
 \end{aligned}
 $$
@@ -283,7 +283,7 @@ $$
 **定理 2.5.12（闭包同时具有的多种性质 2）** 对非空集合 $A$ 上的关系 $R$，有
 
 1. $rs(R) = sr(R)$；
-2. $rt(R) = \operatorname{tr}(R)$；
+2. $rt(R) = t r(R)$；
 3. $st(R) \subseteq ts(R)$，
 
 其中 $rs(R) = r(s(R))$，其他类似。
@@ -302,9 +302,9 @@ $$
 
 **定理 2.6.1（等价类的性质）** 设 $R$ 是非空集合 $A$ 上的等价关系，对任意的 $x, y \in A$，有
 
-1. $[x]_R \neq \emptyset$ 且 $[x]_R \subseteq A$，即 $[x]_R$ 是 $A$ 的非空子集；
+1. $[x]_R \neq \varnothing$ 且 $[x]_R \subseteq A$，即 $[x]_R$ 是 $A$ 的非空子集；
 2. 若 $xRy$，则 $[x]_R = [y]_R$；
-3. 若 $\langle x, y \rangle \notin R$，则 $[x]_R \cap [y]_R = \emptyset$；
+3. 若 $\langle x, y \rangle \notin R$，则 $[x]_R \cap [y]_R = \varnothing$；
 4. $\bigcup \{[x]_R \mid x \in A\} = A$。
 
 **定义 2.6.3（商集）** 设 $R$ 为非空集合 $A$ 上的等价关系，以 $R$ 的所有等价类为元素的集合称为 $A$ 关于 $R$ 的**商集**，记作 $A/R$，即
@@ -316,9 +316,9 @@ $$
 **定义 2.6.4（划分）** 设 $A$ 为非空集合。$A$ 的一个**划分**是满足下列条件的集合 $\pi$，$\pi$ 中的元素称为 $A$ 的**划分块**：
 
 1. $(\forall x)(x \in \pi \rightarrow x \subseteq A)$；
-2. $\emptyset \notin \pi$；
+2. $\varnothing \notin \pi$；
 3. $\bigcup \pi = A$；
-4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \emptyset)$。
+4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \varnothing)$。
 
 **定理 2.6.2（等价关系诱导的划分）** 对非空集合 $A$ 上的等价关系 $R$，商集 $A/R$ 是 $A$ 的划分，称为由等价关系 $R$ 诱导出的 $A$ 的划分，记作 $\pi_R$。
 
@@ -366,7 +366,7 @@ $$
 **定义 2.7.4（覆盖）** 设 $A$ 为非空集合。$A$ 的一个**覆盖**是满足下列条件的集合 $\Omega$，$\Omega$ 中的元素称为 $\Omega$ 的**覆盖块**：
 
 1. $(\forall x)(x \in \Omega \rightarrow x \subseteq A)$；
-2. $\emptyset \notin \Omega$；
+2. $\varnothing \notin \Omega$；
 3. $\bigcup \Omega = A$。
 
 划分是覆盖块两两不相交的覆盖。
@@ -425,7 +425,7 @@ $$
 3. 令 $C = \{y \mid y \text{ 是 } B \text{ 的上界}\}$，则 $C$ 的最小元称为 $B$ 的**上确界**或最小上界；
 4. 令 $C = \{y \mid y \text{ 是 } B \text{ 的下界}\}$，则 $C$ 的最大元称为 $B$ 的**下确界**或最大下界。
 
-**例 2.8.1** 在偏序集 $(P(\{a, b\}), \subseteq)$ 中取 $B = \{\{a\}, \{b\}\}$。$B$ 没有最小元和最大元，$\{a\}$ 和 $\{b\}$ 既是 $B$ 的极小元又是极大元；$B$ 的上界只有 $\{a, b\}$，下界只有 $\emptyset$，因此上确界为 $\{a, b\}$，下确界为 $\emptyset$。
+**例 2.8.1** 在偏序集 $(\mathcal{P}(\{a, b\}), \subseteq)$ 中取 $B = \{\{a\}, \{b\}\}$。$B$ 没有最小元和最大元，$\{a\}$ 和 $\{b\}$ 既是 $B$ 的极小元又是极大元；$B$ 的上界只有 $\{a, b\}$，下界只有 $\varnothing$，因此上确界为 $\{a, b\}$，下确界为 $\varnothing$。
 
 **定义 2.8.7（可比）** 对偏序集 $(A, \leq)$ 和 $x, y \in A$，若 $x \leq y$ 或 $y \leq x$，则称 $x$ 和 $y$ 是**可比**的。
 

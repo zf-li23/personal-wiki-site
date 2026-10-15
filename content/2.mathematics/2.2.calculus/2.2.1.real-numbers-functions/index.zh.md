@@ -20,7 +20,7 @@ title: 实数与函数
 
 **1.2 实数和实数集**
 
--   **实数**：有理数可表示为 $\frac{m}{n}$ ($m,n$ 为正整数)。$\sqrt{2}$ 是无理数（反证法）。阿基米德公理：$\forall p, q > 0, \exists N \in \mathbb{Z}^{+}$ 使 $N p > q \geq (N-1) p$。有理数在实数中稠密。
+-   **实数**：有理数可表示为 $\frac{m}{n}$（$m \in \mathbb{Z}$，$n \in \mathbb{N}_+$）。$\sqrt{2}$ 是无理数（反证法）。阿基米德公理：$\forall p, q > 0, \exists N \in \mathbb{N}_+$ 使 $N p > q \geq (N-1) p$。有理数在实数中稠密。
 -   **实数集的界与确界**：
     -   上/下界、最大值/最小值
     -   上确界 $\sup E$：上界的最小值；下确界 $\inf E$：下界的最大值。
@@ -65,11 +65,11 @@ title: 实数与函数
     | 反余弦 | $\arccos x$ | $[-1,1]$ | $[0,\pi]$ | 非奇非偶 |
     | 反正切 | $\arctan x$ | $(-\infty,\infty)$ | $(-\frac{\pi}{2},\frac{\pi}{2})$ | 奇函数 |
     | 反余切 | $\operatorname{arccot} x$ | $(-\infty,\infty)$ | $(0,\pi)$ | 非奇非偶 |
-    -   性质：$\arcsin x + \arccos x = \frac{\pi}{2}$，$\arctan x + \operatorname{arccot} x = \frac{\pi}{2}$。$|x| \leq 1$ 时，$\arcsin x \sim x$；$\arctan x \sim x$。
+    -   性质：$\arcsin x + \arccos x = \frac{\pi}{2}$，$\arctan x + \operatorname{arccot} x = \frac{\pi}{2}$。$x \to 0$ 时，$\arcsin x \sim x$，$\arctan x \sim x$。
 -   **双曲函数**：双曲正弦 $\sinh x = \frac{\mathrm{e}^x - \mathrm{e}^{-x}}{2}$，双曲余弦 $\cosh x = \frac{\mathrm{e}^x + \mathrm{e}^{-x}}{2}$，双曲正切 $\tanh x = \frac{\sinh x}{\cosh x}$ 等。满足 $\cosh^2 x - \sinh^2 x = 1$。
 
 **1.5 非初等函数**
 
--   **分段函数**：符号函数 $\operatorname{sgn} x$、取整函数 $[x]$。
+-   **分段函数**：符号函数 $\operatorname{sgn} x$、取整函数 $\lfloor x \rfloor$。
 -   **隐函数**：由方程 $F(x,y)=0$ 确定。
 -   **参数方程表示的函数**：$\begin{cases} x = x(t) \\ y = y(t) \end{cases}$

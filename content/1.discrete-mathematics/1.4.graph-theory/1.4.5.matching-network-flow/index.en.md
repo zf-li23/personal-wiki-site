@@ -1,6 +1,6 @@
 ---
 title: Matching and Network Flow
-source_hash: f5c3a1afc5fa
+source_hash: 7690bc3c1f06
 ---
 
 Matching problems and network flow problems are two classes of graph-theoretic problems with rich practical backgrounds: the former include job assignment and marriage problems, the latter the transportation of goods and the routing of communication traffic. In this chapter we first discuss maximum matchings in bipartite graphs, complete matchings (Hall's theorem) and optimal matchings; we then treat maximum flows in networks, the max-flow min-cut theorem and the algorithms based on it; and finally we explain the connection between the two classes of problems.
@@ -35,7 +35,7 @@ The *Hungarian algorithm* is the classical algorithm for maximum matchings in **
 
 1. Label every saturated vertex of $X$ with $1$ and all others with $0$.
 2. If every vertex of $X$ has a nonzero label, $M$ is a maximum matching; stop. Otherwise choose a vertex $x_0 \in X$ labeled $0$.
-3. Set $X_0 \leftarrow \{x_0\}$ and $Y_0 \leftarrow \emptyset$.
+3. Set $X_0 \leftarrow \{x_0\}$ and $Y_0 \leftarrow \varnothing$.
 4. If $\Gamma(X_0) \subseteq Y_0$, there is no augmenting path starting at $x_0$; label $x_0$ with $2$ and go to step 2. Otherwise choose any $y \in \Gamma(X_0) - Y_0$:
    - if $y$ is saturated, say $(y, z) \in M$, set $X_0 \leftarrow X_0 \cup \{z\}$ and $Y_0 \leftarrow Y_0 \cup \{y\}$, and go to step 4;
    - if $y$ is unsaturated, an augmenting path $P$ from $x_0$ to $y$ has been found; set $M \leftarrow M \oplus P$, label $x_0$ with $1$, and go to step 2.

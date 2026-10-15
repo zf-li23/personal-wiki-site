@@ -1,6 +1,6 @@
 ---
 title: Lie Algebras
-source_hash: 5d13fcfa07e0
+source_hash: 98625469a3e8
 ---
 
 Most of the groups in Chapter 2 are finite, such as the $6$ symmetries of an equilateral triangle (Example 2.4.1). Symmetries such as rotations and rigid motions of space, however, vary continuously: one can rotate about an axis through any angle, and all rotations together form a "smooth" infinite group. Such groups are hard to study directly. The idea of the Norwegian mathematician Sophus Lie in the 1870s was to look only at the "infinitesimal transformations" near the identity: they form a vector space, and the noncommutativity of the group leaves on this space a bilinear operation, the **Lie bracket**. The resulting structure is a Lie algebra, which can be viewed as the linearization of a continuous group; such continuous groups are now called *Lie groups*.
@@ -19,7 +19,7 @@ For matrices, the most natural operation that "measures noncommutativity" is the
 
 ### 5.1.2. The Lie Bracket
 
-**Definition 5.1.2 (Lie Algebra)** Let $\mathfrak{g}$ be a vector space over a field $F$. If $\mathfrak{g}$ carries an operation $[\cdot\,, \cdot] : \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$, called the **Lie bracket**, satisfying the following three axioms, then $\mathfrak{g}$ is called a Lie algebra:
+**Definition 5.1.2 (Lie Algebra)** Let $\mathfrak{g}$ be a vector space over a field $F$. If $\mathfrak{g}$ carries an operation $[\cdot\,, \cdot]\colon \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$, called the **Lie bracket**, satisfying the following three axioms, then $\mathfrak{g}$ is called a Lie algebra:
 
 1. **bilinearity**: for all $x, y, z \in \mathfrak{g}$ and $a, b \in F$,
    $$
@@ -38,7 +38,7 @@ The dimension of $\mathfrak{g}$ as a vector space is called the dimension of the
 
 The alternating property and bilinearity imply antisymmetry, $[x, y] = -[y, x]$: expand $0 = [x + y, x + y] = [x, y] + [y, x]$. This holds over a field of any characteristic. Conversely, if $F$ does not have characteristic $2$ (for the **characteristic of a field**, see Definition 3.5.4), antisymmetry gives $[x, x] = -[x, x]$ and hence $[x, x] = 0$, so the two axioms are equivalent.
 
-The Lie bracket is in general not associative; the Jacobi identity plays the role of associativity. Writing $\operatorname{ad} x: y \mapsto [x, y]$ and using antisymmetry, the Jacobi identity can be rewritten as
+The Lie bracket is in general not associative; the Jacobi identity plays the role of associativity. Writing $\operatorname{ad} x\colon y \mapsto [x, y]$ and using antisymmetry, the Jacobi identity can be rewritten as
 
 $$
 \operatorname{ad} x\,([y, z]) = [\operatorname{ad} x\,(y), z] + [y, \operatorname{ad} x\,(z)],
@@ -81,13 +81,13 @@ Here the quotient space $\mathfrak{g}/\mathfrak{i}$ is the **quotient group** of
 
 ### 5.2.3. Lie Algebra Homomorphisms
 
-**Definition 5.2.3** Let $\mathfrak{g}_1$ and $\mathfrak{g}_2$ be Lie algebras over the same field and $\varphi: \mathfrak{g}_1 \to \mathfrak{g}_2$ a **linear map**. If $\varphi([x, y]_{\mathfrak{g}_1}) = [\varphi(x), \varphi(y)]_{\mathfrak{g}_2}$ for all $x, y \in \mathfrak{g}_1$, then $\varphi$ is called a **Lie algebra homomorphism**; if $\varphi$ is moreover bijective, it is called a **Lie algebra isomorphism**.
+**Definition 5.2.3** Let $\mathfrak{g}_1$ and $\mathfrak{g}_2$ be Lie algebras over the same field and $\varphi\colon \mathfrak{g}_1 \to \mathfrak{g}_2$ a **linear map**. If $\varphi([x, y]_{\mathfrak{g}_1}) = [\varphi(x), \varphi(y)]_{\mathfrak{g}_2}$ for all $x, y \in \mathfrak{g}_1$, then $\varphi$ is called a **Lie algebra homomorphism**; if $\varphi$ is moreover bijective, it is called a **Lie algebra isomorphism**.
 
-**Theorem 5.2.2** Let $\varphi: \mathfrak{g}_1 \to \mathfrak{g}_2$ be a Lie algebra homomorphism. Then $\ker \varphi = \{x \in \mathfrak{g}_1 \mid \varphi(x) = 0\}$ is an ideal of $\mathfrak{g}_1$, and the image $\varphi(\mathfrak{g}_1)$ is a subalgebra of $\mathfrak{g}_2$.
+**Theorem 5.2.2** Let $\varphi\colon \mathfrak{g}_1 \to \mathfrak{g}_2$ be a Lie algebra homomorphism. Then $\ker \varphi = \{x \in \mathfrak{g}_1 \mid \varphi(x) = 0\}$ is an ideal of $\mathfrak{g}_1$, and the image $\varphi(\mathfrak{g}_1)$ is a subalgebra of $\mathfrak{g}_2$.
 
 **Proof**: $\ker \varphi$ is the kernel of a linear map and hence a subspace. For $x \in \mathfrak{g}_1$ and $y \in \ker \varphi$, $\varphi([x, y]) = [\varphi(x), 0] = 0$, so $[x, y] \in \ker \varphi$. The image is a subspace, and $[\varphi(x), \varphi(y)] = \varphi([x, y])$ again lies in the image. $\square$
 
-**Theorem 5.2.3 (Fundamental Homomorphism Theorem for Lie Algebras)** Let $\varphi: \mathfrak{g}_1 \to \mathfrak{g}_2$ be a surjective Lie algebra homomorphism. Then
+**Theorem 5.2.3 (Fundamental Homomorphism Theorem for Lie Algebras)** Let $\varphi\colon \mathfrak{g}_1 \to \mathfrak{g}_2$ be a surjective Lie algebra homomorphism. Then
 
 $$
 \mathfrak{g}_1 / \ker \varphi \cong \mathfrak{g}_2,
@@ -130,7 +130,7 @@ $$
 [\boldsymbol{u}, \boldsymbol{v}] = \boldsymbol{u} \times \boldsymbol{v}.
 $$
 
-The cross product is bilinear, satisfies $\boldsymbol{u} \times \boldsymbol{u} = \boldsymbol{0}$ and the Jacobi identity, so $(\mathbb{R}^3, \times)$ is a Lie algebra. In the standard basis, $[\boldsymbol{e}_1, \boldsymbol{e}_2] = \boldsymbol{e}_3$, $[\boldsymbol{e}_2, \boldsymbol{e}_3] = \boldsymbol{e}_1$ and $[\boldsymbol{e}_3, \boldsymbol{e}_1] = \boldsymbol{e}_2$. This is the vector form of the Lie algebra $\mathfrak{so}(3)$ of the three-dimensional rotation group $SO(3)$ (see Example 5.4.4 and Section 5.5): $\boldsymbol{u}$ represents an infinitesimal rotation about the axis $\boldsymbol{u}$, and the cross product captures the noncommutativity of two infinitesimal rotations.
+The cross product is bilinear, satisfies $\boldsymbol{u} \times \boldsymbol{u} = \boldsymbol{0}$ and the Jacobi identity, so $(\mathbb{R}^3, \times)$ is a Lie algebra. In the standard basis, $[\boldsymbol{e}_1, \boldsymbol{e}_2] = \boldsymbol{e}_3$, $[\boldsymbol{e}_2, \boldsymbol{e}_3] = \boldsymbol{e}_1$ and $[\boldsymbol{e}_3, \boldsymbol{e}_1] = \boldsymbol{e}_2$. This is the vector form of the Lie algebra $\mathfrak{so}(3)$ of the three-dimensional rotation group $\operatorname{SO}(3)$ (see Example 5.4.4 and Section 5.5): $\boldsymbol{u}$ represents an infinitesimal rotation about the axis $\boldsymbol{u}$, and the cross product captures the noncommutativity of two infinitesimal rotations.
 
 ### 5.4.2. Matrix Lie Algebras
 
@@ -148,9 +148,9 @@ $$
 \mathfrak{sl}(n, F) = \{A \in \mathfrak{gl}(n, F) \mid \operatorname{tr}(A) = 0\},
 $$
 
-is a subalgebra of $\mathfrak{gl}(n, F)$, called the *special linear Lie algebra*. In fact, $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ shows that every commutator has trace zero, so $\mathfrak{sl}(n, F)$ is even an ideal of $\mathfrak{gl}(n, F)$. It is the kernel of the trace map $\operatorname{tr}: \mathfrak{gl}(n, F) \to F$ (regarding $F$ as a one-dimensional abelian Lie algebra, $\operatorname{tr}$ is a Lie algebra homomorphism), so by Theorem 5.2.3, $\mathfrak{gl}(n, F)/\mathfrak{sl}(n, F) \cong F$.
+is a subalgebra of $\mathfrak{gl}(n, F)$, called the *special linear Lie algebra*. In fact, $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ shows that every commutator has trace zero, so $\mathfrak{sl}(n, F)$ is even an ideal of $\mathfrak{gl}(n, F)$. It is the kernel of the trace map $\operatorname{tr}\colon \mathfrak{gl}(n, F) \to F$ (regarding $F$ as a one-dimensional abelian Lie algebra, $\operatorname{tr}$ is a Lie algebra homomorphism), so by Theorem 5.2.3, $\mathfrak{gl}(n, F)/\mathfrak{sl}(n, F) \cong F$.
 
-**Example 5.4.4** The Lie algebra $\mathfrak{so}(3)$ of the three-dimensional rotation group $SO(3)$ consists of all real $3 \times 3$ skew-symmetric matrices, with the matrix commutator as bracket. The map
+**Example 5.4.4** The Lie algebra $\mathfrak{so}(3)$ of the three-dimensional rotation group $\operatorname{SO}(3)$ consists of all real $3 \times 3$ skew-symmetric matrices, with the matrix commutator as bracket. The map
 
 $$
 \boldsymbol{u} = (u_1, u_2, u_3) \mapsto \hat{u} = \begin{pmatrix} 0 & -u_3 & u_2 \\ u_3 & 0 & -u_1 \\ -u_2 & u_1 & 0 \end{pmatrix}
@@ -181,19 +181,19 @@ This section explains how Lie algebras arise from continuous groups. To avoid di
 For $X \in M_n(\mathbb{C})$, define the *matrix exponential*
 
 $$
-e^X = \exp(X) = \sum_{k=0}^{\infty} \frac{X^k}{k!} = I + X + \frac{X^2}{2!} + \cdots;
+\mathrm{e}^X = \exp(X) = \sum_{k=0}^{\infty} \frac{X^k}{k!} = I + X + \frac{X^2}{2!} + \cdots;
 $$
 
 the series converges for every $X$. It has the following properties (compared with the real exponential function, the difference is that a commutativity condition is needed):
 
 **Theorem 5.5.1** For all $X, Y \in M_n(\mathbb{C})$ and every invertible matrix $P$:
 
-1. if $XY = YX$, then $e^{X+Y} = e^X e^Y$; in particular, $e^X$ is invertible with $(e^X)^{-1} = e^{-X}$;
-2. $e^{PXP^{-1}} = P e^X P^{-1}$;
-3. $\det(e^X) = e^{\operatorname{tr} X}$;
-4. $t \mapsto e^{tX}$ is a group homomorphism from $(\mathbb{R}, +)$ to $\operatorname{GL}(n, \mathbb{C})$, and $\dfrac{\mathrm{d}}{\mathrm{d}t} e^{tX} = X e^{tX}$.
+1. if $XY = YX$, then $\mathrm{e}^{X+Y} = \mathrm{e}^X \mathrm{e}^Y$; in particular, $\mathrm{e}^X$ is invertible with $(\mathrm{e}^X)^{-1} = \mathrm{e}^{-X}$;
+2. $\mathrm{e}^{PXP^{-1}} = P \mathrm{e}^X P^{-1}$;
+3. $\det(\mathrm{e}^X) = \mathrm{e}^{\operatorname{tr} X}$;
+4. $t \mapsto \mathrm{e}^{tX}$ is a group homomorphism from $(\mathbb{R}, +)$ to $\operatorname{GL}(n, \mathbb{C})$, and $\dfrac{\mathrm{d}}{\mathrm{d}t} \mathrm{e}^{tX} = X \mathrm{e}^{tX}$.
 
-Property 4 shows that $\{e^{tX} \mid t \in \mathbb{R}\}$ is a subgroup, called the *one-parameter subgroup* generated by $X$; $X$ is its "velocity" at $t = 0$. Property 3 can be proved using the Jordan canonical form ([Linear Algebra](/2.1.10#thm-10.9.2)) and property 2: the exponential of an upper triangular matrix is again upper triangular, with diagonal entries $e^{\lambda_i}$.
+Property 4 shows that $\{e^{tX} \mid t \in \mathbb{R}\}$ is a subgroup, called the *one-parameter subgroup* generated by $X$; $X$ is its "velocity" at $t = 0$. Property 3 can be proved using the Jordan canonical form ([Linear Algebra](/2.1.10#thm-10.9.2)) and property 2: the exponential of an upper triangular matrix is again upper triangular, with diagonal entries $\mathrm{e}^{\lambda_i}$.
 
 ### 5.5.2. Matrix Lie Groups
 
@@ -202,27 +202,27 @@ Property 4 shows that $\{e^{tX} \mid t \in \mathbb{R}\}$ is a subgroup, called t
 Common matrix Lie groups include:
 
 - $\operatorname{GL}(n, \mathbb{R})$, and $\operatorname{SL}(n, \mathbb{R}) = \{A \mid \det A = 1\}$ (the kernel of $\det$; see Section 2.7.5);
-- the orthogonal group $O(n) = \{R \in M_n(\mathbb{R}) \mid R^{\mathsf{T}} R = I\}$ and the special orthogonal group $SO(n) = \{R \in O(n) \mid \det R = 1\}$ (for orthogonal matrices see [Linear Algebra](/2.1.4#def-4.3.1)); $SO(3)$ is the group of all rotations of three-dimensional space about the origin;
-- the unitary group $U(n) = \{U \in M_n(\mathbb{C}) \mid U^* U = I\}$ and $SU(n) = \{U \in U(n) \mid \det U = 1\}$.
+- the orthogonal group $\operatorname{O}(n) = \{R \in M_n(\mathbb{R}) \mid R^{\mathsf{T}} R = I\}$ and the special orthogonal group $\operatorname{SO}(n) = \{R \in \operatorname{O}(n) \mid \det R = 1\}$ (for orthogonal matrices see [Linear Algebra](/2.1.4#def-4.3.1)); $\operatorname{SO}(3)$ is the group of all rotations of three-dimensional space about the origin;
+- the unitary group $\operatorname{U}(n) = \{U \in M_n(\mathbb{C}) \mid U^{\mathsf H} U = I\}$ and $\operatorname{SU}(n) = \{U \in \operatorname{U}(n) \mid \det U = 1\}$.
 
-All of these groups are infinite but depend on only finitely many continuous parameters; for example, a rotation in $SO(3)$ is determined by the direction of its axis ($2$ parameters) and its angle ($1$ parameter).
+All of these groups are infinite but depend on only finitely many continuous parameters; for example, a rotation in $\operatorname{SO}(3)$ is determined by the direction of its axis ($2$ parameters) and its angle ($1$ parameter).
 
 **Definition 5.5.2** The Lie algebra of a matrix Lie group $G$ is
 
 $$
-\mathfrak{g} = \{X \in M_n(\mathbb{C}) \mid e^{tX} \in G \text{ for all } t \in \mathbb{R}\},
+\mathfrak{g} = \{X \in M_n(\mathbb{C}) \mid \mathrm{e}^{tX} \in G \text{ for all } t \in \mathbb{R}\},
 $$
 
 that is, the set of "velocities" of all one-parameter subgroups of $G$.
 
 **Theorem 5.5.2** The Lie algebra $\mathfrak{g}$ of a matrix Lie group $G$ is a real vector space closed under the commutator, and hence a Lie subalgebra of $\mathfrak{gl}(n, \mathbb{C})$ (regarded as a real Lie algebra).
 
-**Proof** (sketch): Closure under scalar multiplication is obvious. Closure under addition follows from the Lie product formula $e^{X+Y} = \lim_{m \to \infty} (e^{X/m} e^{Y/m})^m$ and the closedness condition in Definition 5.5.1. For the bracket, let $X, Y \in \mathfrak{g}$. By property 2 of Theorem 5.5.1, $e^{s \cdot e^{tX} Y e^{-tX}} = e^{tX} e^{sY} e^{-tX} \in G$, so $e^{tX} Y e^{-tX} \in \mathfrak{g}$ for all $t$. Its derivative with respect to $t$ at $t = 0$ is $XY - YX$, and the derivative of a curve lying in a subspace again lies in that subspace; hence $[X, Y] \in \mathfrak{g}$. $\square$
+**Proof** (sketch): Closure under scalar multiplication is obvious. Closure under addition follows from the Lie product formula $\mathrm{e}^{X+Y} = \lim_{m \to \infty} (\mathrm{e}^{X/m} \mathrm{e}^{Y/m})^m$ and the closedness condition in Definition 5.5.1. For the bracket, let $X, Y \in \mathfrak{g}$. By property 2 of Theorem 5.5.1, $\mathrm{e}^{s \cdot \mathrm{e}^{tX} Y \mathrm{e}^{-tX}} = \mathrm{e}^{tX} \mathrm{e}^{sY} \mathrm{e}^{-tX} \in G$, so $\mathrm{e}^{tX} Y \mathrm{e}^{-tX} \in \mathfrak{g}$ for all $t$. Its derivative with respect to $t$ at $t = 0$ is $XY - YX$, and the derivative of a curve lying in a subspace again lies in that subspace; hence $[X, Y] \in \mathfrak{g}$. $\square$
 
 The relation between the Lie bracket and the noncommutativity of the group can be seen from the following expansion: for small $t$,
 
 $$
-e^{tX} e^{tY} e^{-tX} e^{-tY} = I + t^2 [X, Y] + O(t^3).
+\mathrm{e}^{tX} \mathrm{e}^{tY} \mathrm{e}^{-tX} \mathrm{e}^{-tY} = I + t^2 [X, Y] + O(t^3).
 $$
 
 The left-hand side is the group "commutator" $aba^{-1}b^{-1}$, which equals $I$ if and only if $a$ and $b$ commute; the second-order term on the right is exactly the Lie bracket.
@@ -230,26 +230,26 @@ The left-hand side is the group "commutator" $aba^{-1}b^{-1}$, which equals $I$ 
 Theorem 5.5.1 lets us compute where the earlier examples come from:
 
 - the Lie algebra of $\operatorname{GL}(n, \mathbb{R})$ is $\mathfrak{gl}(n, \mathbb{R})$;
-- since $\det(e^{tX}) = e^{t \operatorname{tr} X}$, the Lie algebra of $\operatorname{SL}(n, \mathbb{R})$ is $\mathfrak{sl}(n, \mathbb{R})$;
-- since $(e^{tX})^{\mathsf{T}} e^{tX} = I$ holds for all $t$ if and only if $X^{\mathsf{T}} = -X$ (necessity follows by differentiating at $t = 0$, sufficiency from $(e^{tX})^{\mathsf{T}} = e^{tX^{\mathsf{T}}} = e^{-tX}$), the Lie algebras of $O(n)$ and $SO(n)$ are both the algebra $\mathfrak{so}(n)$ of skew-symmetric matrices.
+- since $\det(\mathrm{e}^{tX}) = \mathrm{e}^{t \operatorname{tr} X}$, the Lie algebra of $\operatorname{SL}(n, \mathbb{R})$ is $\mathfrak{sl}(n, \mathbb{R})$;
+- since $(\mathrm{e}^{tX})^{\mathsf{T}} \mathrm{e}^{tX} = I$ holds for all $t$ if and only if $X^{\mathsf{T}} = -X$ (necessity follows by differentiating at $t = 0$, sufficiency from $(\mathrm{e}^{tX})^{\mathsf{T}} = \mathrm{e}^{tX^{\mathsf{T}}} = \mathrm{e}^{-tX}$), the Lie algebras of $\operatorname{O}(n)$ and $\operatorname{SO}(n)$ are both the algebra $\mathfrak{so}(n)$ of skew-symmetric matrices.
 
-We have $\dim \mathfrak{so}(3) = 3$, in agreement with the $3$ continuous parameters of $SO(3)$: the dimension of the Lie algebra is the number of parameters of the Lie group.
+We have $\dim \mathfrak{so}(3) = 3$, in agreement with the $3$ continuous parameters of $\operatorname{SO}(3)$: the dimension of the Lie algebra is the number of parameters of the Lie group.
 
 **Example 5.5.1** Let $\boldsymbol{u}$ be a unit vector and $\hat{u}$ as in Example 5.4.4. Then $\hat{u}^3 = -\hat{u}$, and summing the series directly gives *Rodrigues' rotation formula*
 
 $$
-e^{\theta \hat{u}} = I + \sin\theta\, \hat{u} + (1 - \cos\theta)\, \hat{u}^2,
+\mathrm{e}^{\theta \hat{u}} = I + \sin\theta\, \hat{u} + (1 - \cos\theta)\, \hat{u}^2,
 $$
 
-which is exactly the matrix of the rotation through angle $\theta$ about the axis $\boldsymbol{u}$. Thus a vector $\theta\boldsymbol{u}$ in $\mathfrak{so}(3)$ (a "rotation vector") yields a rotation via the exponential map, and every rotation arises in this way. This is why molecular simulation and structural biology often parameterize molecular orientations by rotation vectors or by unit quaternions (which correspond to $SU(2)$).
+which is exactly the matrix of the rotation through angle $\theta$ about the axis $\boldsymbol{u}$. Thus a vector $\theta\boldsymbol{u}$ in $\mathfrak{so}(3)$ (a "rotation vector") yields a rotation via the exponential map, and every rotation arises in this way. This is why molecular simulation and structural biology often parameterize molecular orientations by rotation vectors or by unit quaternions (which correspond to $\operatorname{SU}(2)$).
 
-**Example 5.5.2** The rigid motions $\boldsymbol{x} \mapsto R\boldsymbol{x} + \boldsymbol{t}$ of three-dimensional space ($R \in SO(3)$, $\boldsymbol{t} \in \mathbb{R}^3$) form the group $SE(3)$. In homogeneous coordinates $(\boldsymbol{x}, 1)$ a rigid motion can be written as the $4 \times 4$ matrix
+**Example 5.5.2** The rigid motions $\boldsymbol{x} \mapsto R\boldsymbol{x} + \boldsymbol{t}$ of three-dimensional space ($R \in \operatorname{SO}(3)$, $\boldsymbol{t} \in \mathbb{R}^3$) form the group $\operatorname{SE}(3)$. In homogeneous coordinates $(\boldsymbol{x}, 1)$ a rigid motion can be written as the $4 \times 4$ matrix
 
 $$
 \begin{pmatrix} R & \boldsymbol{t} \\ \boldsymbol{0}^{\mathsf{T}} & 1 \end{pmatrix},
 $$
 
-so $SE(3)$ is a matrix Lie group in $\operatorname{GL}(4, \mathbb{R})$. Its Lie algebra consists of the matrices $\begin{pmatrix} \hat{\omega} & \boldsymbol{v} \\ \boldsymbol{0}^{\mathsf{T}} & 0 \end{pmatrix}$ ($\boldsymbol{\omega}, \boldsymbol{v} \in \mathbb{R}^3$) and has dimension $6$, corresponding to the $3$ rotational and $3$ translational degrees of freedom of a rigid body. Molecular docking searches $SE(3)$ for the pose of a ligand relative to a receptor; protein structure models such as AlphaFold2 represent the backbone of each residue as a local coordinate frame, that is, as an element of $SE(3)$.
+so $\operatorname{SE}(3)$ is a matrix Lie group in $\operatorname{GL}(4, \mathbb{R})$. Its Lie algebra consists of the matrices $\begin{pmatrix} \hat{\omega} & \boldsymbol{v} \\ \boldsymbol{0}^{\mathsf{T}} & 0 \end{pmatrix}$ ($\boldsymbol{\omega}, \boldsymbol{v} \in \mathbb{R}^3$) and has dimension $6$, corresponding to the $3$ rotational and $3$ translational degrees of freedom of a rigid body. Molecular docking searches $\operatorname{SE}(3)$ for the pose of a ligand relative to a receptor; protein structure models such as AlphaFold2 represent the backbone of each residue as a local coordinate frame, that is, as an element of $\operatorname{SE}(3)$.
 
 ## Summary
 
@@ -259,6 +259,6 @@ so $SE(3)$ is a matrix Lie group in $\operatorname{GL}(4, \mathbb{R})$. Its Lie 
 | Substructures and homomorphisms | Lie subalgebras, ideals (center, derived algebra), quotient Lie algebras, Lie algebra homomorphisms, the kernel is an ideal, fundamental homomorphism theorem |
 | Classification | simple and semisimple Lie algebras, the classical series $A_l, B_l, C_l, D_l$ of complex simple Lie algebras and the exceptional Lie algebras |
 | Examples | cross product $(\mathbb{R}^3, \times) \cong \mathfrak{so}(3)$, $\mathfrak{gl}(n, F)$, $\mathfrak{sl}(n, F)$, the basis $e, f, h$ of $\mathfrak{sl}(2, F)$ |
-| Lie groups | matrix exponential, one-parameter subgroups, matrix Lie groups ($\operatorname{GL}$, $\operatorname{SL}$, $O(n)$, $SO(n)$, $SE(3)$), the Lie algebra of a Lie group, group commutators and the Lie bracket |
+| Lie groups | matrix exponential, one-parameter subgroups, matrix Lie groups ($\operatorname{GL}$, $\operatorname{SL}$, $\operatorname{O}(n)$, $\operatorname{SO}(n)$, $\operatorname{SE}(3)$), the Lie algebra of a Lie group, group commutators and the Lie bracket |
 
-We have seen in this chapter that the rotation group $SO(3)$ consists of matrices from the outset, with matrix multiplication as its group operation, and that $\mathfrak{so}(3)$ also consists of matrices, with the commutator as its bracket. The next chapter extends this practice of "realizing by matrices" to arbitrary groups and Lie algebras: a representation is a homomorphism into $\operatorname{GL}(V)$ or $\mathfrak{gl}(V)$.
+We have seen in this chapter that the rotation group $\operatorname{SO}(3)$ consists of matrices from the outset, with matrix multiplication as its group operation, and that $\mathfrak{so}(3)$ also consists of matrices, with the commutator as its bracket. The next chapter extends this practice of "realizing by matrices" to arbitrary groups and Lie algebras: a representation is a homomorphism into $\operatorname{GL}(V)$ or $\mathfrak{gl}(V)$.

@@ -65,9 +65,9 @@ $$
 
 | 总体分布                                       | 参数     | 共轭先验                      | 后验分布                                 |
 | ---------------------------------------------- | -------- | ----------------------------- | ---------------------------------------- |
-| $X \sim B(1, \theta)$                          | $\theta$ | $\text{Beta}(a,b)$            | $\text{Beta}(a+x, b+n-x)$                |
-| $X \sim N(\theta, \sigma^2)$ ($\sigma^2$ 已知) | $\theta$ | $N(\mu_0, \tau_0^2)$          | $N(\mu_n, \tau_n^2)$                     |
-| $X \sim \text{Poisson}(\theta)$                | $\theta$ | $\text{Gamma}(\alpha, \beta)$ | $\text{Gamma}(\alpha+\sum x_i, \beta+n)$ |
+| $X \sim \mathrm{Bin}(n, \theta)$                          | $\theta$ | $\mathrm{Beta}(a,b)$            | $\mathrm{Beta}(a+x, b+n-x)$                |
+| $X \sim \mathcal{N}(\theta, \sigma^2)$ ($\sigma^2$ 已知) | $\theta$ | $\mathcal{N}(\mu_0, \tau_0^2)$          | $\mathcal{N}(\mu_n, \tau_n^2)$                     |
+| $X_1, \dots, X_n \overset{\text{iid}}{\sim} \mathrm{Poi}(\theta)$ | $\theta$ | $\Gamma(\alpha, \beta)$ | $\Gamma(\alpha+\sum x_i, \beta+n)$ |
 
 其中后验参数更新公式见具体推导。
 
@@ -116,14 +116,14 @@ $$
 
 - **后验中位数估计 (Posterior Median)**：
   $$
-  \hat{\theta}_{\text{median}} = \text{median of } \pi(\theta \mid x)
+  \hat{\theta}_{\text{median}} = \pi(\theta \mid x) \text{ 的中位数}
   $$
   - 在绝对损失下最优。
 
 ### 7.3.2. 估计精度：后验均方误差 (Posterior Mean Squared Error, PMSE)
 
 $$
-\text{PMSE}(\hat{\theta}) = \mathbb{E}[(\theta - \hat{\theta})^2 \mid x] = \operatorname{Var}(\theta \mid x) + (\hat{\theta} - \mathbb{E}[\theta \mid x])^2
+\operatorname{PMSE}(\hat{\theta}) = \mathbb{E}[(\theta - \hat{\theta})^2 \mid x] = \operatorname{Var}(\theta \mid x) + (\hat{\theta} - \mathbb{E}[\theta \mid x])^2
 $$
 
 - 后验均值估计使 PMSE 最小。
@@ -132,18 +132,18 @@ $$
 ### 7.3.3. 例子
 
 #### 7.3.3.1. 例1：正态均值估计（方差已知）
-- $X_i \stackrel{\text{i.i.d.}}{\sim} N(\theta, \sigma^2)$，$\sigma^2$ 已知。
-- 先验：$\theta \sim N(\mu_0, \tau_0^2)$。
-- 后验：$\theta \mid x \sim N(\mu_n, \tau_n^2)$，其中
+- $X_i \overset{\text{iid}}{\sim} \mathcal{N}(\theta, \sigma^2)$，$\sigma^2$ 已知。
+- 先验：$\theta \sim \mathcal{N}(\mu_0, \tau_0^2)$。
+- 后验：$\theta \mid x \sim \mathcal{N}(\mu_n, \tau_n^2)$，其中
   $$
   \mu_n = \frac{\sigma^2/n}{\sigma^2/n + \tau_0^2} \mu_0 + \frac{\tau_0^2}{\sigma^2/n + \tau_0^2} \bar{x}, \quad \tau_n^2 = \frac{\sigma^2 \tau_0^2}{n\tau_0^2 + \sigma^2}
   $$
 - 后验均值 $\mu_n$ 是先验均值与样本均值的加权平均。
 
 #### 7.3.3.2. 例2：二项成功率估计
-- $X \sim B(n, \theta)$。
-- 先验：$\theta \sim \text{Beta}(a, b)$。
-- 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
+- $X \sim \mathrm{Bin}(n, \theta)$。
+- 先验：$\theta \sim \mathrm{Beta}(a, b)$。
+- 后验：$\theta \mid x \sim \mathrm{Beta}(a+x, b+n-x)$。
 - 后验均值：$\hat{\theta}_{\text{mean}} = \frac{a+x}{a+b+n}$。
 - 特别当 $a=b=1$（均匀先验）时，$\hat{\theta}_{\text{mean}} = \frac{x+1}{n+2}$，避免极端估计（如 $x=0$ 时估计不为0）。
 
@@ -168,7 +168,7 @@ $$
 
 ### 7.4.3. 例子：正态均值的可信区间
 
-- 沿用 7.3.3 例1 设置，后验 $\theta \mid x \sim N(\mu_n, \tau_n^2)$。
+- 沿用 7.3.3 例1 设置，后验 $\theta \mid x \sim \mathcal{N}(\mu_n, \tau_n^2)$。
 - $1-\alpha$ 等尾可信区间为：
   $$
   [\mu_n - z_{\alpha/2} \tau_n,\; \mu_n + z_{\alpha/2} \tau_n]
@@ -188,22 +188,22 @@ $$
 - **决策**：若 $\alpha_1 > \alpha_0$，则倾向于拒绝 $H_0$。
 - 可计算**后验优势比 (Posterior Odds)**：
   $$
-  \frac{\alpha_1}{\alpha_0} = \frac{P(\theta \in \Theta_1 \mid x)}{P(\theta \in \Theta_0 \mid x)}
+  \frac{\alpha_1}{\alpha_0} = \frac{\mathbb{P}(\theta \in \Theta_1 \mid x)}{\mathbb{P}(\theta \in \Theta_0 \mid x)}
   $$
 
 ### 7.5.2. 贝叶斯因子 (Bayes Factor)
 
 - 比较两个模型 $M_0$ 与 $M_1$ 的相对支持程度：
   $$
-  BF_{10} = \frac{m_1(x)}{m_0(x)} = \frac{\int f(x \mid \theta, M_1) \pi_1(\theta) \mathrm{d}\theta}{\int f(x \mid \theta, M_0) \pi_0(\theta) \mathrm{d}\theta}
+  \mathrm{BF}_{10} = \frac{m_1(x)}{m_0(x)} = \frac{\int f(x \mid \theta, M_1) \pi_1(\theta) \mathrm{d}\theta}{\int f(x \mid \theta, M_0) \pi_0(\theta) \mathrm{d}\theta}
   $$
-- $BF_{10} > 1$ 表示数据更支持 $M_1$。
+- $\mathrm{BF}_{10} > 1$ 表示数据更支持 $M_1$。
 
 ### 7.5.3. 例子：二项分布的成功率检验
 
-- $X \sim B(n, \theta)$，检验 $H_0: \theta \le 0.5$ vs $H_1: \theta > 0.5$。
-- 取均匀先验 $\theta \sim U(0,1)$。
-- 后验：$\theta \mid x \sim \text{Beta}(x+1, n-x+1)$。
+- $X \sim \mathrm{Bin}(n, \theta)$，检验 $H_0: \theta \le 0.5$ vs $H_1: \theta > 0.5$。
+- 取均匀先验 $\theta \sim \mathrm{U}(0,1)$。
+- 后验：$\theta \mid x \sim \mathrm{Beta}(x+1, n-x+1)$。
 - 计算 $\alpha_0 = \mathbb{P}(\theta \le 0.5 \mid x)$，$\alpha_1 = 1 - \alpha_0$。
 
 ---
@@ -221,8 +221,8 @@ $$
 
 ### 7.6.2. 例子：二项分布的预测
 
-- $X \sim B(n, \theta)$，先验 $\theta \sim \text{Beta}(a,b)$。
-- 后验：$\theta \mid x \sim \text{Beta}(a+x, b+n-x)$。
+- $X \sim \mathrm{Bin}(n, \theta)$，先验 $\theta \sim \mathrm{Beta}(a,b)$。
+- 后验：$\theta \mid x \sim \mathrm{Beta}(a+x, b+n-x)$。
 - 预测新 $m$ 次试验中成功次数 $Y$：
   $$
   \mathbb{P}(Y=y \mid x) = \int_0^1 \binom{m}{y} \theta^y (1-\theta)^{m-y} \pi(\theta \mid x) \mathrm{d}\theta
@@ -282,7 +282,7 @@ $$
 
 ### 7.8.3. 例子：疫苗接种决策
 
-- 暴露于病毒后，感染概率 $\theta \sim \text{Beta}(1,2)$（先验）。
+- 暴露于病毒后，感染概率 $\theta \sim \mathrm{Beta}(1,2)$（先验）。
 - 疫苗费用 £500，死亡损失极高（设为 ∞）。
 - 计算接种与不接种的后验期望损失，选择损失较小的行动。
 

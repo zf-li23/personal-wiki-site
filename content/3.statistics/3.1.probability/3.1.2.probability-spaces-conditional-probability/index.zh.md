@@ -8,7 +8,7 @@ title: 概率空间、条件概率
 
 **定义**：设$\Omega$是样本空间，$\mathcal{F}$表示$\Omega$的某些子集构成的集合，如果$\mathcal{F}$满足：
 1. $\Omega \in \mathcal{F}$
-2. 如果 $A \in \mathcal{F}$，则 $A^c \in \mathcal{F}$
+2. 如果 $A \in \mathcal{F}$，则 $A^{\mathsf c} \in \mathcal{F}$
 3. 如果 $A_n \in \mathcal{F}$，$n=1,2,\ldots$，则 $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$
 
 称$\mathcal{F}$是$\Omega$上的**事件域**或**$\sigma$-代数**，称$(\Omega,\mathcal{F})$是**可测空间**。
@@ -19,9 +19,9 @@ title: 概率空间、条件概率
 - $\mathcal{F}$对集合的各类可列交并补运算都是封闭的
 
 ### 2.1.2. 事件域的构造示例
-- 平凡$\sigma$-代数：$\mathcal{F} = \{\Omega, \emptyset\}$
-- 最大$\sigma$-代数：$\mathcal{F} = \{\Omega\}$的所有子集
-- 由$A$生成的最小$\sigma$-代数：$\mathcal{F} = \{\Omega, \emptyset, A, A^c\}$
+- 平凡$\sigma$-代数：$\mathcal{F} = \{\Omega, \varnothing\}$
+- 最大$\sigma$-代数：$\mathcal{F} = 2^\Omega$（$\Omega$ 的所有子集）
+- 由$A$生成的最小$\sigma$-代数：$\mathcal{F} = \{\Omega, \varnothing, A, A^{\mathsf c}\}$
 
 ### 2.1.3. 概率测度
 
@@ -36,7 +36,7 @@ title: 概率空间、条件概率
 称$\mathbb{P}$为概率测度，称$(\Omega, \mathcal{F}, \mathbb{P})$为**概率空间**。
 
 ### 2.1.4. 概率空间示例
-1. **掷硬币**：$\Omega = \{H, T\}, \mathcal{F} = \{\Omega, \emptyset, \{H\}, \{T\}\}$
+1. **掷硬币**：$\Omega = \{H, T\}, \mathcal{F} = \{\Omega, \varnothing, \{H\}, \{T\}\}$
 2. **掷骰子**：$\Omega = \{1, 2, \dots, 6\}, \mathcal{F} = 2^\Omega$（幂集）
 3. **反复掷硬币**：$\Omega = \{T^n H: n \geq 0\} \cup \{T^\infty\}$
 
@@ -51,7 +51,7 @@ title: 概率空间、条件概率
 $$
 \mathbb{P} (\lim_{n \to \infty} A_n) = \lim_{n \to \infty} \mathbb{P} (A_n)
 $$
-如果$\{B_j\}$是单调减序列，则
+如果$\{B_n\}$是单调减序列，则
 $$
 \mathbb{P} (\lim_{n \to \infty} B_n) = \lim_{n \to \infty} \mathbb{P} (B_n)
 $$
@@ -90,7 +90,7 @@ $$
 
 ### 2.3.3. 条件概率vs无条件概率
 - 当$B \subset A$时，$\mathbb{P}(B|A) = \frac{\mathbb{P}(B)}{\mathbb{P}(A)} \geq \mathbb{P}(B)$
-- 当$A \cap B = \emptyset$时，$\mathbb{P}(B|A) = 0 \leq \mathbb{P}(B)$
+- 当$A \cap B = \varnothing$时，$\mathbb{P}(B|A) = 0 \leq \mathbb{P}(B)$
 - 一般情况下大小关系不确定
 
 ## 2.4. 乘法公式
@@ -124,7 +124,7 @@ $$
 
 特别地，当$0 < \mathbb{P}(A) < 1$时：
 $$
-\mathbb{P}(B) = \mathbb{P}(A)\mathbb{P}(B|A) + \mathbb{P}(A^c)\mathbb{P}(B|A^c)
+\mathbb{P}(B) = \mathbb{P}(A)\mathbb{P}(B|A) + \mathbb{P}(A^{\mathsf c})\mathbb{P}(B|A^{\mathsf c})
 $$
 
 ### 2.5.2. 应用：无放回抽样
@@ -151,7 +151,7 @@ $$
 
 特别地：
 $$
-\mathbb{P}(A|B) = \frac{\mathbb{P}(A)\mathbb{P}(B|A)}{\mathbb{P}(A)\mathbb{P}(B|A) + \mathbb{P}(A^c)\mathbb{P}(B|A^c)}
+\mathbb{P}(A|B) = \frac{\mathbb{P}(A)\mathbb{P}(B|A)}{\mathbb{P}(A)\mathbb{P}(B|A) + \mathbb{P}(A^{\mathsf c})\mathbb{P}(B|A^{\mathsf c})}
 $$
 
 ### 2.6.2. 应用：假阳性之谜

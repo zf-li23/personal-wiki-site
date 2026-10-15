@@ -75,11 +75,11 @@ title: 树
 
 **定理 3.2.3** 设 $B$ 是有向连通图 $G$ 的关联矩阵，则 $\operatorname{rank} B = n-1$。
 
-**证明** 设行向量 $x = (x_1, \dots, x_n)$ 满足 $xB = 0$。对每条边 $e = (v_i, v_j)$，$xB$ 中对应 $e$ 的分量为 $x_i - x_j$，所以相邻结点对应的 $x_i$ 都相等；由于 $G$ 连通，$x_1 = x_2 = \cdots = x_n$。于是方程 $xB = 0$ 的解空间是一维的，$\operatorname{rank} B = n - 1$。$\square$
+**证明** 设行向量 $\boldsymbol{x} = (x_1, \dots, x_n)$ 满足 $\boldsymbol{x}B = \boldsymbol{0}$。对每条边 $e = (v_i, v_j)$，$\boldsymbol{x}B$ 中对应 $e$ 的分量为 $x_i - x_j$，所以相邻结点对应的 $x_i$ 都相等；由于 $G$ 连通，$x_1 = x_2 = \cdots = x_n$。于是方程 $\boldsymbol{x}B = \boldsymbol{0}$ 的解空间是一维的，$\operatorname{rank} B = n - 1$。$\square$
 
 **定理 3.2.4** 有向连通图 $G$ 的基本关联矩阵 $B_k$ 的秩 $\operatorname{rank} B_k = n-1$，即 $B_k$ 的 $n-1$ 行线性无关。
 
-**证明** 若 $B_k$ 的行有非平凡的线性组合等于零，补上系数 $x_k = 0$，就得到 $xB = 0$ 的一个解，且 $x$ 的分量不全相等，与定理 3.2.3 的证明矛盾。$\square$
+**证明** 若 $B_k$ 的行有非平凡的线性组合等于零，补上系数 $x_k = 0$，就得到 $\boldsymbol{x}B = \boldsymbol{0}$ 的一个解，且 $\boldsymbol{x}$ 的分量不全相等，与定理 3.2.3 的证明矛盾。$\square$
 
 ### 3.2.3. 基本关联矩阵与回路的关系
 
@@ -285,8 +285,8 @@ Kruskal 算法（Kruskal's algorithm）的思想是：将边按权值从小到�
 
 **算法 3.7.1（Kruskal 算法）**
 
-1. 令 $T \leftarrow \emptyset$，将 $E$ 中的边按权值非减排序。
-2. 当 $|T| < n-1$ 且 $E \ne \emptyset$ 时重复：取出 $E$ 中当前最短的边 $e$，令 $E \leftarrow E - \{e\}$；若 $T \cup \{e\}$ 不含回路，则令 $T \leftarrow T \cup \{e\}$。
+1. 令 $T \leftarrow \varnothing$，将 $E$ 中的边按权值非减排序。
+2. 当 $|T| < n-1$ 且 $E \ne \varnothing$ 时重复：取出 $E$ 中当前最短的边 $e$，令 $E \leftarrow E - \{e\}$；若 $T \cup \{e\}$ 不含回路，则令 $T \leftarrow T \cup \{e\}$。
 3. 若 $|T| < n-1$，则 $G$ 不连通；否则 $T$ 为最短树。
 
 **定理 3.7.1** 支撑树 $T = (V, E')$ 是赋权连通图 $G$ 的最短树，当且仅当对任意余树枝 $e \in E - E'$，$e$ 对应的基本回路 $C^e \subseteq E' \cup \{e\}$ 满足：对所有 $a \in C^e$，$a \ne e$，都有 $w(e) \ge w(a)$。
@@ -299,7 +299,7 @@ Prim 算法（Prim's algorithm）的思想是：从一个结点出发逐步扩�
 
 **算法 3.7.2（Prim 算法）**
 
-1. 令 $U \leftarrow \{v_1\}$，$T \leftarrow \emptyset$。
+1. 令 $U \leftarrow \{v_1\}$，$T \leftarrow \varnothing$。
 2. 当 $U \ne V$ 时重复：选取 $u \in U$，$v \in V - U$，使 $w(u, v)$ 最小；令 $T \leftarrow T \cup \{(u, v)\}$，$U \leftarrow U \cup \{v\}$；并对每个 $x \in V - U$ 更新它到 $U$ 的最短距离。
 
 **定理 3.7.3** 设 $U$ 是赋权连通图 $G$ 的结点集的非空真子集，$e$ 是一个端点在 $U$、另一个端点在 $V - U$ 的边中权最小的一条，则 $G$ 有一棵最短树包含 $e$。若这样的最短边唯一，则 $G$ 的每一棵最短树都包含 $e$。

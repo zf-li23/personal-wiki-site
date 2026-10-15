@@ -15,7 +15,7 @@ $$
 **性质**：
 - 若 $\mathbb{P}(B) > 0$，则独立性等价于 $\mathbb{P}(A|B) = \mathbb{P}(A)$
 - 不可能事件、必然事件与任何事件独立
-- 若 $A$ 与 $B$ 独立，则 $A$ 与 $B^c$、$A^c$ 与 $B$、$A^c$ 与 $B^c$ 均独立
+- 若 $A$ 与 $B$ 独立，则 $A$ 与 $B^{\mathsf c}$、$A^{\mathsf c}$ 与 $B$、$A^{\mathsf c}$ 与 $B^{\mathsf c}$ 均独立
 
 **注意**：独立性与互不相容（不相交）是不同的概念
 
@@ -51,7 +51,7 @@ $$
 
 **例**：检测问题。设每人携带违禁品的概率为0.04%，连续检测20人，求至少一人携带的概率。
 $$
-\mathbb{P}\left( \bigcup_{i=1}^{20} A_i \right) = 1 - \mathbb{P}\left( \bigcap_{i=1}^{20} A_i^c \right) = 1 - (1 - 0.0004)^{20} \approx 0.008.
+\mathbb{P}\left( \bigcup_{i=1}^{20} A_i \right) = 1 - \mathbb{P}\left( \bigcap_{i=1}^{20} A_i^{\mathsf c} \right) = 1 - (1 - 0.0004)^{20} \approx 0.008.
 $$
 
 ## 3.2. 随机变量

@@ -2,7 +2,7 @@
 title: 表示论
 ---
 
-**表示论**（representation theory）是本课程主线的终点。Cayley 定理（定理 2.4.4）说每个群都可以实现为某个集合上的变换群；表示论要求更多：把群（或李代数）实现为某个向量空间上的线性变换，即保持向量加法与数乘的变换，取定基后就是矩阵。这样，抽象的群运算变成矩阵乘法，结构问题就转化为线性代数问题，可以使用**特征值**、迹、直和分解等全部工具。上一章的 $SO(3)$ 与 $\mathfrak{so}(3)$ 本来就由矩阵构成，本章把这种情形推广到一般的群和李代数。
+**表示论**（representation theory）是本课程主线的终点。Cayley 定理（定理 2.4.4）说每个群都可以实现为某个集合上的变换群；表示论要求更多：把群（或李代数）实现为某个向量空间上的线性变换，即保持向量加法与数乘的变换，取定基后就是矩阵。这样，抽象的群运算变成矩阵乘法，结构问题就转化为线性代数问题，可以使用**特征值**、迹、直和分解等全部工具。上一章的 $\operatorname{SO}(3)$ 与 $\mathfrak{so}(3)$ 本来就由矩阵构成，本章把这种情形推广到一般的群和李代数。
 
 抽象地看，一个表示就是一个**同态**（定义 1.4.3）：群表示是到可逆线性变换群 $\operatorname{GL}(V)$ 的群同态，李代数表示是到一般线性李代数 $\mathfrak{gl}(V)$ 的李代数同态。本章用到第 2 章的**群作用**、**共轭类**与同态，第 3 章的域上**向量空间**与 $\operatorname{GL}(V)$（3.6.3 节），第 5 章的**李代数**、**矩阵指数**与 $\mathfrak{sl}(2)$，以及线性代数中的不变子空间、特征值和迹（[线性代数](/2.1)）。表示论在物理和化学中用途极广：量子力学中对称性通过群在态空间上的表示起作用，分子光谱和晶体学用点群的特征标表分析振动模式与选择定则。
 
@@ -10,15 +10,15 @@ title: 表示论
 
 ### 6.1.1. 群表示的定义
 
-**定义 6.1.1** 设 $G$ 是一个群，$V$ 是域 $F$ 上的向量空间，$\operatorname{GL}(V)$ 是 $V$ 上所有可逆线性变换关于合成构成的群（$V$ 的**一般线性群**，见 3.6.3 节）。群同态 $\rho: G \to \operatorname{GL}(V)$ 称为 $G$ 在 $V$ 上的一个（线性）**表示**，$V$ 称为**表示空间**，$V$ 的维数称为该表示的维数。
+**定义 6.1.1** 设 $G$ 是一个群，$V$ 是域 $F$ 上的向量空间，$\operatorname{GL}(V)$ 是 $V$ 上所有可逆线性变换关于合成构成的群（$V$ 的**一般线性群**，见 3.6.3 节）。群同态 $\rho\colon G \to \operatorname{GL}(V)$ 称为 $G$ 在 $V$ 上的一个（线性）**表示**，$V$ 称为**表示空间**，$V$ 的维数称为该表示的维数。
 
 当 $V$ 是 $n$ 维空间时，取定一组基后，$\operatorname{GL}(V)$ 中的元素就是 $n$ 阶可逆矩阵，于是表示 $\rho$ 把 $G$ 的每个元素对应到一个可逆矩阵，即一个同态 $G \to \operatorname{GL}(n, F)$。同态条件 $\rho(gh) = \rho(g)\rho(h)$ 保证了群运算与矩阵乘法一致；由定理 2.7.3，$\rho(e) = I_V$，$\rho(g^{-1}) = \rho(g)^{-1}$。
 
 **例 6.1.1** 几个基本的表示：
 
 - **平凡表示**（trivial representation）：$\rho(g) = 1$（一维空间上的恒等变换）对所有 $g \in G$；
-- **符号表示**（sign representation）：$\operatorname{sgn}: S_n \to \operatorname{GL}(1, \mathbb{R}) = \mathbb{R} \setminus \{0\}$，偶置换映为 $1$，奇置换映为 $-1$（2.7.1 节）；
-- 矩阵李群 $G \subseteq \operatorname{GL}(n, \mathbb{C})$（定义 5.5.1）的包含映射是它在 $\mathbb{C}^n$ 上的表示，称为**自然表示**（defining representation），例如 $SO(3)$ 以旋转的方式作用在 $\mathbb{R}^3$ 上。
+- **符号表示**（sign representation）：$\operatorname{sgn}\colon S_n \to \operatorname{GL}(1, \mathbb{R}) = \mathbb{R} \setminus \{0\}$，偶置换映为 $1$，奇置换映为 $-1$（2.7.1 节）；
+- 矩阵李群 $G \subseteq \operatorname{GL}(n, \mathbb{C})$（定义 5.5.1）的包含映射是它在 $\mathbb{C}^n$ 上的表示，称为**自然表示**（defining representation），例如 $\operatorname{SO}(3)$ 以旋转的方式作用在 $\mathbb{R}^3$ 上。
 
 **例 6.1.2（置换表示）** 对 $\sigma \in S_n$，令 $\rho(\sigma)$ 是把标准基向量 $\boldsymbol{e}_i$ 映到 $\boldsymbol{e}_{\sigma(i)}$ 的线性变换，它的矩阵是置换矩阵（每行每列恰有一个 $1$）。由 $\rho(\sigma)\rho(\tau)\boldsymbol{e}_i = \boldsymbol{e}_{\sigma(\tau(i))} = \rho(\sigma\tau)\boldsymbol{e}_i$，$\rho$ 是 $S_n$ 在 $F^n$ 上的 $n$ 维表示，称为**置换表示**（permutation representation）。更一般地，群 $G$ 在有限集 $A$ 上的作用（定义 2.5.3）通过置换基向量给出一个 $|A|$ 维表示；$G$ 在自身上的左乘作用（Cayley 定理）给出的 $|G|$ 维表示称为**正则表示**（regular representation）。
 
@@ -34,11 +34,11 @@ title: 表示论
 
 ### 6.1.2. 等价表示、不变子空间与不可约表示
 
-**定义 6.1.3** 设 $\rho_1: G \to \operatorname{GL}(V_1)$ 和 $\rho_2: G \to \operatorname{GL}(V_2)$ 是群 $G$ 的两个表示。若存在线性同构 $\varphi: V_1 \to V_2$，使得对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则称这两个表示是**等价**的。在有限维情形下取定基，这意味着存在同一个可逆矩阵 $P$，使得对所有 $g$ 都有 $\rho_2(g) = P\rho_1(g)P^{-1}$。
+**定义 6.1.3** 设 $\rho_1\colon G \to \operatorname{GL}(V_1)$ 和 $\rho_2\colon G \to \operatorname{GL}(V_2)$ 是群 $G$ 的两个表示。若存在线性同构 $\varphi\colon V_1 \to V_2$，使得对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则称这两个表示是**等价**的。在有限维情形下取定基，这意味着存在同一个可逆矩阵 $P$，使得对所有 $g$ 都有 $\rho_2(g) = P\rho_1(g)P^{-1}$。
 
 等价的表示只是选了不同的基，就像同构的代数系统只是元素换了名字（1.4.2 节）；矩阵的相似关系见[线性代数](/2.1.6#def-6.8.1)。满足 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$（$\varphi$ 不必可逆）的线性映射称为 $G$-**等变映射**（equivariant map），它是"表示之间的同态"。
 
-**定义 6.1.4（不可约表示）** 设 $\rho: G \to \operatorname{GL}(V)$ 是表示。若子空间 $W \subseteq V$ 满足对所有 $g \in G$ 有 $\rho(g)W \subseteq W$，则称 $W$ 是**不变子空间**。若 $V \neq \{0\}$ 且除 $\{0\}$ 和 $V$ 外没有其他不变子空间，则称该表示是不可约表示；否则（$V$ 有非平凡的不变子空间）称为**可约**的。
+**定义 6.1.4（不可约表示）** 设 $\rho\colon G \to \operatorname{GL}(V)$ 是表示。若子空间 $W \subseteq V$ 满足对所有 $g \in G$ 有 $\rho(g)W \subseteq W$，则称 $W$ 是**不变子空间**。若 $V \neq \{0\}$ 且除 $\{0\}$ 和 $V$ 外没有其他不变子空间，则称该表示是不可约表示；否则（$V$ 有非平凡的不变子空间）称为**可约**的。
 
 不变子空间 $W$ 上的限制 $g \mapsto \rho(g)|_W$ 本身是一个表示，称为**子表示**（subrepresentation），它是子群、子环、子代数在表示论中的对应物。一维表示总是不可约的。
 
@@ -62,11 +62,11 @@ $\mathbb{R}^3 = W_1 \oplus W_2$。$W_1$ 上是平凡表示。$W_2$ 是二维不�
 
 把李代数的元素对应为向量空间上的线性变换，就得到李代数的表示。思想与群表示相同，只是同态条件换成保持李括号。
 
-**定义 6.2.1** 设 $\mathfrak{g}$ 是域 $F$ 上的李代数，$V$ 是 $F$ 上的向量空间，$\mathfrak{gl}(V)$ 是 $V$ 上全体线性变换关于 $[X, Y] = XY - YX$ 构成的李代数（例 5.4.2）。李代数同态 $\pi: \mathfrak{g} \to \mathfrak{gl}(V)$ 称为 $\mathfrak{g}$ 在 $V$ 上的一个**表示**，即 $\pi$ 是线性映射，且 $\pi([x, y]) = \pi(x)\pi(y) - \pi(y)\pi(x)$。
+**定义 6.2.1** 设 $\mathfrak{g}$ 是域 $F$ 上的李代数，$V$ 是 $F$ 上的向量空间，$\mathfrak{gl}(V)$ 是 $V$ 上全体线性变换关于 $[X, Y] = XY - YX$ 构成的李代数（例 5.4.2）。李代数同态 $\pi\colon \mathfrak{g} \to \mathfrak{gl}(V)$ 称为 $\mathfrak{g}$ 在 $V$ 上的一个**表示**，即 $\pi$ 是线性映射，且 $\pi([x, y]) = \pi(x)\pi(y) - \pi(y)\pi(x)$。
 
 不变子空间、不可约表示、等价、直和的定义与群表示完全相同，只需把"对所有 $g \in G$"换成"对所有 $x \in \mathfrak{g}$"。
 
-**例 6.2.1（伴随表示）** 对任意李代数 $\mathfrak{g}$，定义映射 $\operatorname{ad}: \mathfrak{g} \to \mathfrak{gl}(\mathfrak{g})$ 为
+**例 6.2.1（伴随表示）** 对任意李代数 $\mathfrak{g}$，定义映射 $\operatorname{ad}\colon \mathfrak{g} \to \mathfrak{gl}(\mathfrak{g})$ 为
 
 $$
 \operatorname{ad}(x)(y) = [x, y], \quad \forall x, y \in \mathfrak{g}.
@@ -97,29 +97,29 @@ $n = 1$ 是 $\mathbb{C}^2$ 上的自然表示，$n = 2$ 是三维的伴随表示
 
 李群 $G$ 的表示经过微分得到其李代数 $\mathfrak{g}$ 的表示；反过来，李代数的表示通过指数映射（5.5 节）可以（至少局部地）提升为李群的表示，当 $G$ 单连通时可以提升为整个 $G$ 的表示。
 
-**定理 6.3.1** 设 $G$ 是李群，$\rho: G \to \operatorname{GL}(V)$ 是 $G$ 在有限维空间 $V$ 上的（光滑）表示，则
+**定理 6.3.1** 设 $G$ 是李群，$\rho\colon G \to \operatorname{GL}(V)$ 是 $G$ 在有限维空间 $V$ 上的（光滑）表示，则
 
 $$
 \mathrm{d}\rho(X) = \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0} \rho(\exp(tX)), \quad X \in \mathfrak{g}
 $$
 
-定义了李代数的表示 $\mathrm{d}\rho: \mathfrak{g} \to \mathfrak{gl}(V)$，并且 $\rho(\exp(X)) = \exp(\mathrm{d}\rho(X))$，即群表示与指数映射交换。
+定义了李代数的表示 $\mathrm{d}\rho\colon \mathfrak{g} \to \mathfrak{gl}(V)$，并且 $\rho(\exp(X)) = \exp(\mathrm{d}\rho(X))$，即群表示与指数映射交换。
 
 对矩阵李群的自然表示（例 6.1.1），$\mathrm{d}\rho$ 就是李代数 $\mathfrak{g} \subseteq \mathfrak{gl}(n, \mathbb{C})$ 的包含映射。
 
-这体现了李代数作为"线性近似"的价值：它把李群上的非线性问题化为李代数上的线性代数问题，是数学物理中最常用的技巧之一。例如物理学中通过旋转群 $SO(3)$ 的李代数 $\mathfrak{so}(3)$ 的表示来分类角动量：$\mathfrak{so}(3)$ 复化后同构于 $\mathfrak{sl}(2, \mathbb{C})$（表中的 $B_1 \cong A_1$），所以它的不可约表示就是例 6.2.2 的 $V(n)$；其中 $n$ 为偶数（整数自旋）的提升为 $SO(3)$ 的表示，$n$ 为奇数（半整数自旋）的只能提升为 $SO(3)$ 的二重覆盖 $SU(2)$ 的表示。
+这体现了李代数作为"线性近似"的价值：它把李群上的非线性问题化为李代数上的线性代数问题，是数学物理中最常用的技巧之一。例如物理学中通过旋转群 $\operatorname{SO}(3)$ 的李代数 $\mathfrak{so}(3)$ 的表示来分类角动量：$\mathfrak{so}(3)$ 复化后同构于 $\mathfrak{sl}(2, \mathbb{C})$（表中的 $B_1 \cong A_1$），所以它的不可约表示就是例 6.2.2 的 $V(n)$；其中 $n$ 为偶数（整数自旋）的提升为 $\operatorname{SO}(3)$ 的表示，$n$ 为奇数（半整数自旋）的只能提升为 $\operatorname{SO}(3)$ 的二重覆盖 $\operatorname{SU}(2)$ 的表示。
 
-在分子建模中，$SO(3)$ 与 $SE(3)$（例 5.5.2）的表示给出了"旋转等变"的精确含义。一个以原子坐标为输入的函数 $\Phi$ 若满足 $\Phi(\rho_{\text{in}}(g)x) = \rho_{\text{out}}(g)\Phi(x)$，就称为等变的，也就是定义 6.1.3 后所说的 $G$-等变映射：分子整体旋转后，预测的能量（平凡表示）不变，预测的力（自然表示）随之旋转。用于分子与蛋白质结构的等变神经网络正是把特征按 $SO(3)$ 的不可约表示分解来构造这类映射的。
+在分子建模中，$\operatorname{SO}(3)$ 与 $\operatorname{SE}(3)$（例 5.5.2）的表示给出了"旋转等变"的精确含义。一个以原子坐标为输入的函数 $\Phi$ 若满足 $\Phi(\rho_{\mathrm{in}}(g)x) = \rho_{\mathrm{out}}(g)\Phi(x)$，就称为等变的，也就是定义 6.1.3 后所说的 $G$-等变映射：分子整体旋转后，预测的能量（平凡表示）不变，预测的力（自然表示）随之旋转。用于分子与蛋白质结构的等变神经网络正是把特征按 $\operatorname{SO}(3)$ 的不可约表示分解来构造这类映射的。
 
 ## 6.4. 特征标与正交关系
 
 特征标是群表示最重要的不变量，它由表示矩阵的迹给出。
 
-**定义 6.4.1（特征标）** 设 $\rho: G \to \operatorname{GL}(V)$ 是有限群 $G$ 在有限维向量空间 $V$ 上的表示。函数 $\chi_\rho: G \to F$，$\chi_\rho(g) = \operatorname{tr}(\rho(g))$（$g \in G$）称为表示 $\rho$ 的**特征标**。
+**定义 6.4.1（特征标）** 设 $\rho\colon G \to \operatorname{GL}(V)$ 是有限群 $G$ 在有限维向量空间 $V$ 上的表示。函数 $\chi_\rho\colon G \to F$，$\chi_\rho(g) = \operatorname{tr}(\rho(g))$（$g \in G$）称为表示 $\rho$ 的**特征标**。
 
 由迹的性质 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$（[矩阵的迹](/2.1.1#def-1.10.3)），$\chi_\rho(e) = \dim V$，$\chi_\rho(hgh^{-1}) = \chi_\rho(g)$——特征标在每个**共轭类**（定义 2.6.2）上取常值——并且等价的表示有相同的特征标。直和的特征标是特征标之和：$\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$。
 
-**定理 6.4.1（Schur 引理）** 设 $(\rho_1, V_1)$ 和 $(\rho_2, V_2)$ 是群 $G$ 的两个不可约表示，$\varphi: V_1 \to V_2$ 是 $G$-等变线性映射，即对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则：
+**定理 6.4.1（Schur 引理）** 设 $(\rho_1, V_1)$ 和 $(\rho_2, V_2)$ 是群 $G$ 的两个不可约表示，$\varphi\colon V_1 \to V_2$ 是 $G$-等变线性映射，即对任意 $g \in G$ 有 $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$，则：
 
 1. $\varphi = 0$ 或 $\varphi$ 是线性同构；特别地，当两个表示不等价时，$\varphi = 0$；
 2. 若 $V_1 = V_2 = V$ 是有限维空间，$\rho_1 = \rho_2$，且域 $F$ 代数闭（如 $\mathbb{C}$），则 $\varphi = \lambda I_V$（$\lambda \in F$）是数乘变换。
@@ -155,11 +155,11 @@ $$
 
 验证正交关系：$\langle \chi_3, \chi_3 \rangle = \frac{1}{6}(1 \cdot 4 + 3 \cdot 0 + 2 \cdot 1) = 1$，$\langle \chi_1, \chi_3 \rangle = \frac{1}{6}(2 + 0 - 2) = 0$。置换表示的特征标是每个置换的不动点个数 $(3, 1, 0)$，而 $\langle \chi, \chi_1 \rangle = \frac{1}{6}(3 + 3 + 0) = 1$，$\langle \chi, \chi_2 \rangle = \frac{1}{6}(3 - 3 + 0) = 0$，$\langle \chi, \chi_3 \rangle = \frac{1}{6}(6 + 0 + 0) = 1$，与例 6.1.4 的分解 $\chi = \chi_1 + \chi_3$ 吻合。
 
-由于 $\mathrm{NH_3}$ 的点群 $C_{3v}$ 与 $S_3$ 同构（例 2.4.1），上表正是化学中 $C_{3v}$ 的特征标表（三个不可约表示在化学中记作 $A_1$、$A_2$、$E$）。用它分解分子振动所张成的表示，就能判断哪些振动模式在红外或拉曼光谱中可见。
+由于 $\ce{NH3}$ 的点群 $C_{3\mathrm{v}}$ 与 $S_3$ 同构（例 2.4.1），上表正是化学中 $C_{3\mathrm{v}}$ 的特征标表（三个不可约表示在化学中记作 $A_1$、$A_2$、$E$）。用它分解分子振动所张成的表示，就能判断哪些振动模式在红外或拉曼光谱中可见。
 
 ## 6.5. 表示论的意义
 
-表示论把抽象的群和李代数的元素具体化为线性变换，从而揭示这些结构的内部性质；环也有相应的表示理论（环在交换群上的线性作用，称为模），本课程不展开。在数学上，有限单群、李群与代数群的研究都高度依赖表示论。在物理学上，基本粒子的分类与原子光谱的分析都由群与李代数的表示描述：量子力学的角动量理论就是 $SO(3)$（及 $SU(2)$）的表示论，粒子物理的标准模型则依赖规范群 $SU(3) \times SU(2) \times U(1)$ 的表示。
+表示论把抽象的群和李代数的元素具体化为线性变换，从而揭示这些结构的内部性质；环也有相应的表示理论（环在交换群上的线性作用，称为模），本课程不展开。在数学上，有限单群、李群与代数群的研究都高度依赖表示论。在物理学上，基本粒子的分类与原子光谱的分析都由群与李代数的表示描述：量子力学的角动量理论就是 $\operatorname{SO}(3)$（及 $\operatorname{SU}(2)$）的表示论，粒子物理的标准模型则依赖规范群 $\operatorname{SU}(3) \times \operatorname{SU}(2) \times \operatorname{U}(1)$ 的表示。
 
 在化学和结构生物学中，晶体的对称性由 $32$ 个晶体学点群和 $230$ 个空间群描述；由于蛋白质由手性的 L-氨基酸构成，蛋白质晶体只能属于其中仅含旋转、螺旋和平移等保持手性的对称操作的 $65$ 个空间群，这是 X 射线晶体学解析结构时的基本约束。分子光谱的选择定则、对称性等价原子的识别、旋转等变的分子模型，都是群及其表示的直接应用。因此表示论是连接抽象代数与科学应用的最直接的桥梁之一。
 

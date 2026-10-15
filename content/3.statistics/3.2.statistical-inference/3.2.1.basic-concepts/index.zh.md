@@ -10,13 +10,13 @@ title: 统计学基本概念
 - **样本量 (Sample Size)**：$n$。
 - **简单随机样本 (Simple Random Sample)**：若 $X_1, X_2, \ldots, X_n$ 是独立同分布的，即：
   $$
-  X_1, X_2, \ldots, X_n \stackrel{\text{i.i.d.}}{\sim} F
+  X_1, X_2, \ldots, X_n \overset{\text{iid}}{\sim} F
   $$
 
 ## 1.2. 样本空间 (Sample Space)
 
 - **样本空间 $\mathcal{X}$**：所有可能样本值的集合。
-- **观测值**：抽样后得到的实际数值 $x = (x_1, x_2, \ldots, x_n)$。
+- **观测值**：抽样后得到的实际数值 $\boldsymbol{x} = (x_1, x_2, \ldots, x_n)$。
 
 ## 1.3. 统计模型 (Statistical Model)
 
@@ -86,7 +86,7 @@ title: 统计学基本概念
   
   给定观测样本 $X_1, X_2, \dots, X_n$，经验分布函数 $F_n(x)$ 定义为：
   $$
-  F_n(x) = \frac{1}{n} \left[ \text{样本 } X_i \text{ 中小于等于 } x \text{ 的个数} \right] = \frac{1}{n} \sum_{i=1}^n I_{(-\infty, x]}(X_i)
+  F_n(x) = \frac{1}{n} \left[ \text{样本 } X_i \text{ 中小于等于 } x \text{ 的个数} \right] = \frac{1}{n} \sum_{i=1}^n \boldsymbol{1}_{(-\infty, x]}(X_i)
   $$
   按顺序统计量 $X_{(1)} \leq X_{(2)} \leq \dots \leq X_{(n)}$ 可表示为分段函数：
   $$
@@ -99,25 +99,24 @@ title: 统计学基本概念
   $$
   
 - **性质**：
-  - $nF_n(x) \sim B(n, F(x))$
+  - $nF_n(x) \sim \mathrm{Bin}(n, F(x))$
   
-  - 根据弱大数定律 (WLLN)，依概率收敛：$F_n(x) \xrightarrow{P} F(x)$
+  - 根据弱大数定律 (WLLN)，依概率收敛：$F_n(x) \xrightarrow{p} F(x)$
   
-  - 根据强大数定律 (SLLN)，几乎处处收敛：$F_n(x) \xrightarrow{a.s.} F(x)$
+  - 根据强大数定律 (SLLN)，几乎处处收敛：$F_n(x) \xrightarrow{\text{a.s.}} F(x)$
   
   - 根据中心极限定理 (CLT)：
     $$
-    \frac{\sqrt{n}(F_n(x) - F(x))}{\sqrt{F(x)(1 - F(x))}} \xrightarrow[n\to\infty]{d} N(0,1)
+    \frac{\sqrt{n}(F_n(x) - F(x))}{\sqrt{F(x)(1 - F(x))}} \xrightarrow[n\to\infty]{d} \mathcal{N}(0,1)
     $$
     
-  - Glivenko–Cantelli 定理：
+  - Glivenko–Cantelli 定理：记 $D_n = \sup_{-\infty < x < \infty} |F_n(x) - F(x)|$，则
     $$
-    \text{Let } D_n = \sup_{-\infty < x < \infty} |F_n(x) - F(x)| \\
-    \text{then } \mathbb{P}\left( \lim_{n \to \infty} D_n = 0 \right) = 1
+    \mathbb{P}\left( \lim_{n \to \infty} D_n = 0 \right) = 1
     $$
     等价于：
     $$
-    \sup_x |F_n(x) - F(x)| \xrightarrow{a.s.} 0
+    \sup_x |F_n(x) - F(x)| \xrightarrow{\text{a.s.}} 0
     $$
 
 ## 1.7. 统计推断的类型 (Types of Statistical Inference)
@@ -140,4 +139,4 @@ title: 统计学基本概念
 - **关键公式**：
   - 样本均值：$\bar{X} = \frac{1}{n} \sum X_i$
   - 样本方差：$S^2 = \frac{1}{n-1} \sum (X_i - \bar{X})^2$
-  - 经验分布函数：$F_n(x) = \frac{1}{n} \sum I_{(-\infty, x]}(X_i)$
+  - 经验分布函数：$F_n(x) = \frac{1}{n} \sum \boldsymbol{1}_{(-\infty, x]}(X_i)$

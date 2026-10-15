@@ -12,19 +12,19 @@ title: 统计学基础
 
 ### 2.1.2. 正态分布下的抽样分布
 
-**定理 2.1.1** 设 $X_1, \ldots, X_n$ 独立，$X_k \sim N(a_k, \sigma_k^2)$，$c_1, \ldots, c_n$ 为常数，则
+**定理 2.1.1** 设 $X_1, \ldots, X_n$ 独立，$X_k \sim \mathcal{N}(a_k, \sigma_k^2)$，$c_1, \ldots, c_n$ 为常数，则
 $$
-T = \sum_{k=1}^n c_k X_k \sim N\left( \sum_{k=1}^n c_k a_k, \sum_{k=1}^n c_k^2 \sigma_k^2 \right) = N\left( a_k \sum_{k=1}^n c_k, \sigma_k^2 \sum_{k=1}^n c_k^2 \right) = N(\mu, \tau^2)
+T = \sum_{k=1}^n c_k X_k \sim \mathcal{N}\left( \sum_{k=1}^n c_k a_k, \sum_{k=1}^n c_k^2 \sigma_k^2 \right)
 $$
 
-**推论** 若 $X_1, \ldots, X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，则
+**推论** 若 $X_1, \ldots, X_n \overset{\text{iid}}{\sim} \mathcal{N}(a, \sigma^2)$，则
 $$
-\bar{X} \sim N\left(a, \frac{\sigma^2}{n}\right)
+\bar{X} \sim \mathcal{N}\left(a, \frac{\sigma^2}{n}\right)
 $$
 
 **定理 2.1.2（正态向量的线性变换）**  
-设 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a, \sigma^2)$，记 $\boldsymbol{X} = (X_1,\dots,X_n)^{\mathsf T}$。  
-设 $A = (a_{ij})$ 为 $n \times n$ 常数矩阵，$Y = A\boldsymbol{X}$，即  
+设 $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathcal{N}(a, \sigma^2)$，记 $\boldsymbol{X} = (X_1,\dots,X_n)^{\mathsf T}$。  
+设 $A = (a_{ij})$ 为 $n \times n$ 常数矩阵，$\boldsymbol{Y} = A\boldsymbol{X}$，即  
 $$
 \begin{pmatrix} Y_1 \\ \vdots \\ Y_n \end{pmatrix} =
 \begin{pmatrix}
@@ -36,7 +36,7 @@ a_{n1} & \cdots & a_{nn}
 $$
 
 则：
-1. **$Y$ 仍是正态随机向量**，且  
+1. **$\boldsymbol{Y}$ 仍是正态随机向量**，且  
    $$
    \mathbb{E}[Y_i] = a \sum_{k=1}^n a_{ik}, \quad 
    \operatorname{Var}(Y_i) = \sigma^2 \sum_{k=1}^n a_{ik}^2, \quad 
@@ -44,23 +44,23 @@ $$
    $$
 2. **特别地**，若 $A$ 是 $n$ 阶正交矩阵（即 $AA^{\mathsf T} = I$），则 $Y_1,\dots,Y_n$ **相互独立**，且  
    $$
-   Y_i \sim N\!\left( a\sum_{k=1}^n a_{ik}, \ \sigma^2 \right).
+   Y_i \sim \mathcal{N}\!\left( a\sum_{k=1}^n a_{ik}, \ \sigma^2 \right).
    $$
-3. 若进一步有 $a = 0$（即 $\boldsymbol{X} \sim N(0,\sigma^2 I)$），且 $A$ 为正交矩阵，则  
+3. 若进一步有 $a = 0$（即 $\boldsymbol{X} \sim \mathcal{N}(\boldsymbol{0},\sigma^2 I)$），且 $A$ 为正交矩阵，则  
    $$
-   Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(0,\sigma^2).
+   Y_1,\dots,Y_n \overset{\text{iid}}{\sim} \mathcal{N}(0,\sigma^2).
    $$
 
-**定理 2.1.3（样本均值与样本方差）** 设 $$，则：
+**定理 2.1.3（样本均值与样本方差）** 设 $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathcal{N}(a, \sigma^2)$，则：
 
-1. $\bar{X} \sim N(a, \sigma^2/n)$
+1. $\bar{X} \sim \mathcal{N}(a, \sigma^2/n)$
 2. $\dfrac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2$
 3. $\bar{X}$ 与 $S^2$ 独立
 
 ### 2.1.3. 三大抽样分布
 
 #### 2.1.3.1. 卡方分布（$\chi^2$ Distribution）
-**定义 2.1.1** 若 $X_1, \ldots, X_r \stackrel{\text{i.i.d.}}{\sim} N(0,1)$，则
+**定义 2.1.1** 若 $X_1, \ldots, X_r \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则
 $$
 \xi = \sum_{i=1}^r X_i^2 \sim \chi_r^2
 $$
@@ -69,12 +69,12 @@ $$
 f(x) = \frac{1}{2^{r/2}\Gamma(r/2)} x^{(r/2)-1} \mathrm{e}^{-x/2}, \quad x > 0
 $$
 **性质**：
-- 特征函数：$\varphi(t) = (1 - 2it)^{-r/2}$
+- 特征函数：$\varphi(t) = (1 - 2\mathrm{i}t)^{-r/2}$
 - $\mathbb{E}(\xi) = r$, $\operatorname{Var}(\xi) = 2r$
 - 可加性：若 $\xi_i \sim \chi^2_{r_i}$ 独立，则 $\sum_{i=1}^k \xi_i \sim \chi^2_{r_1 + \cdots + r_k}$
 
 #### 2.1.3.2. $t$ 分布（Student’s t Distribution）
-**定义 2.1.2** 若 $X \sim N(0,1)$, $Y \sim \chi_r^2$ 独立，则
+**定义 2.1.2** 若 $X \sim \mathcal{N}(0,1)$, $Y \sim \chi_r^2$ 独立，则
 $$
 T = \frac{X}{\sqrt{Y/r}} \sim t_r
 $$
@@ -86,7 +86,7 @@ $$
 - 矩存在性：$\mathbb{E}(T^k)$ 存在当且仅当 $k < r$；$k$ 为奇数时 $\mathbb{E}(T^k)=0$
 - $r \ge 2$ 时 $\mathbb{E}(T) = 0$，$r \ge 3$ 时 $\operatorname{Var}(T) = r/(r-2)$
 - 特例：$t_1$ 是 Cauchy 分布，密度为 $f_1(t) = \frac{1}{\pi(1+t^2)}$
-- $r \to \infty$ 时 $t_r$ 收敛于 $N(0,1)$
+- $r \to \infty$ 时 $t_r$ 收敛于 $\mathcal{N}(0,1)$
 
 #### 2.1.3.3. $F$ 分布（F Distribution）
 **定义 2.1.3** 若 $X \sim \chi_{r_1}^2$, $Y \sim \chi_{r_2}^2$ 独立，则
@@ -108,18 +108,18 @@ $$
 - 分位数关系：$F_{r_1,r_2}(1 - \alpha) = 1 / F_{r_2,r_1}(\alpha)$
 
 #### 2.1.3.4. 推论（Useful Corollaries）
-- **推论 2.1.1（标准化平方和）**：若 $X_i \sim N(a_i,\sigma_i^2)$ 独立，则
+- **推论 2.1.1（标准化平方和）**：若 $X_i \sim \mathcal{N}(a_i,\sigma_i^2)$ 独立，则
   $$
   \sum_{i=1}^n \left( \frac{X_i-a_i}{\sigma_i} \right)^2 \sim \chi_n^2
   $$
-- **推论 2.1.2（单样本 t 统计量）**：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} N(a,\sigma^2)$，则
+- **推论 2.1.2（单样本 t 统计量）**：若 $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathcal{N}(a,\sigma^2)$，则
   $$
   T = \frac{\sqrt{n}(\bar{X}-a)}{S} \sim t_{n-1}
   $$
 - **推论 2.1.3（两独立样本 t 统计量，方差相等）**：若
   $$
-  X_1,\dots,X_m \stackrel{\text{i.i.d.}}{\sim} N(a_1,\sigma^2),\quad
-  Y_1,\dots,Y_n \stackrel{\text{i.i.d.}}{\sim} N(a_2,\sigma^2)
+  X_1,\dots,X_m \overset{\text{iid}}{\sim} \mathcal{N}(a_1,\sigma^2),\quad
+  Y_1,\dots,Y_n \overset{\text{iid}}{\sim} \mathcal{N}(a_2,\sigma^2)
   $$
   且两者独立，则
   $$
@@ -130,7 +130,7 @@ $$
   $$
   F = \frac{S_X^2}{S_Y^2} \cdot \frac{\sigma_2^2}{\sigma_1^2} \sim F_{m-1,n-1}
   $$
-- **推论 2.1.5（指数分布与卡方分布）**：若 $X_1,\dots,X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\lambda)$，则
+- **推论 2.1.5（指数分布与卡方分布）**：若 $X_1,\dots,X_n \overset{\text{iid}}{\sim} \mathrm{Exp}(\lambda)$，则
   $$
   2\lambda n\bar{X} = 2\lambda \sum_{i=1}^n X_i \sim \chi_{2n}^2
   $$
@@ -142,13 +142,13 @@ $$
   - $X_n Y_n \xrightarrow{d} cX$
   - $X_n / Y_n \xrightarrow{d} X/c$（若 $c \ne 0$）
 
-**应用例子**：对于正态样本 $X_1,\dots,X_n \sim N(a,\sigma^2)$，有  
+**应用例子**：对于正态样本 $X_1,\dots,X_n \sim \mathcal{N}(a,\sigma^2)$，有  
 $$
-\sqrt{n}(\overline{X}-a)/\sigma \xrightarrow{d} N(0,1)，\quad S^2 \xrightarrow{p} \sigma^2
+\sqrt{n}(\overline{X}-a)/\sigma \xrightarrow{d} \mathcal{N}(0,1)，\quad S^2 \xrightarrow{p} \sigma^2
 $$
 由Slutsky定理可得  
 $$
-\frac{\sqrt{n}(\overline{X} - a)}{S} \xrightarrow{d} N(0,1)
+\frac{\sqrt{n}(\overline{X} - a)}{S} \xrightarrow{d} \mathcal{N}(0,1)
 $$
 实际上在有限样本下，它是自由度为 $n-1$ 的 $t$ 分布；当 $n \to \infty$ 时 $t_{n-1}$ 趋于标准正态分布。
 
@@ -177,7 +177,7 @@ $$
 
 ### 2.2.2. 示例
 
-1. **正态分布** $N(\mu, \sigma^2)$ 的样本 $X_1,\dots,X_n$
+1. **正态分布** $\mathcal{N}(\mu, \sigma^2)$ 的样本 $X_1,\dots,X_n$
    $$
    f(\boldsymbol{x};\mu,\sigma^2) = (\sqrt{2\pi}\sigma)^{-n} \mathrm{e}^{-\frac{n\mu^2}{2\sigma^2}} \exp\left\{ \frac{\mu}{\sigma^2} \sum x_i - \frac{1}{2\sigma^2} \sum x_i^2 \right\}
    $$
@@ -191,19 +191,19 @@ $$
    h(\boldsymbol{x})=1.
    $$
 
-2. **二项分布** $B(n, \theta)$
+2. **二项分布** $\mathrm{Bin}(n, \theta)$
    $$
-   f(x;\theta) = C_n^x \theta^x (1-\theta)^{n-x} = (1-\theta)^n \exp\left\{ x\log\frac{\theta}{1-\theta} \right\} C_n^x
+   f(x;\theta) = \binom{n}{x} \theta^x (1-\theta)^{n-x} = (1-\theta)^n \exp\left\{ x\log\frac{\theta}{1-\theta} \right\} \binom{n}{x}
    $$
    对应：
    $$
    C(\theta)=(1-\theta)^n,\ 
    Q_1=\log\frac{\theta}{1-\theta},\ 
    T_1=x,\ 
-   h(x)=C_n^x.
+   h(x)=\binom{n}{x}.
    $$
 
-3. **泊松分布** $\mathbb{P}(\theta)$
+3. **泊松分布** $\mathrm{Poi}(\theta)$
    $$
    f(x;\theta) = \frac{\mathrm{e}^{-\theta}\theta^x}{x!} = \mathrm{e}^{-\theta} \exp\{ x\log\theta \} \frac{1}{x!}
    $$
@@ -217,7 +217,7 @@ $$
 
 4. **Gamma分布** $\Gamma(\gamma, \lambda)$ 的样本 $X_1,\dots,X_n$
    $$
-   f(\boldsymbol{x};\gamma,\lambda) = \frac{\lambda^{n\gamma}}{(\Gamma(\gamma))^n} \exp\left\{ -\lambda\sum x_i + (\gamma-1)\sum\log x_i \right\} \prod I_{(0,\infty)}(x_i)
+   f(\boldsymbol{x};\gamma,\lambda) = \frac{\lambda^{n\gamma}}{(\Gamma(\gamma))^n} \exp\left\{ -\lambda\sum x_i + (\gamma-1)\sum\log x_i \right\} \prod \boldsymbol{1}_{(0,\infty)}(x_i)
    $$
    对应：
    $$
@@ -226,16 +226,16 @@ $$
    Q_2=\gamma-1,\ 
    T_1=\sum x_i,\ 
    T_2=\sum\log x_i,\ 
-   h(\boldsymbol{x})=\prod I_{(0,\infty)}(x_i).
+   h(\boldsymbol{x})=\prod \boldsymbol{1}_{(0,\infty)}(x_i).
    $$
 
 ---
 
 ### 2.2.3. 非指数族示例
 
-1. **均匀分布** $U[0,\theta]$  
+1. **均匀分布** $\mathrm{U}[0,\theta]$  
    $$
-   f(x;\theta) = \frac{1}{\theta}I_{[0,\theta]}(x)
+   f(x;\theta) = \frac{1}{\theta}\boldsymbol{1}_{[0,\theta]}(x)
    $$
    支撑集 $[0,\theta]$ 依赖于 $\theta$。
 
@@ -264,7 +264,7 @@ $$
 
 1. 二项分布：令 $\varphi = \log\frac{\theta}{1-\theta}$，则
    $$
-   f(x;\varphi) = (1+\mathrm{e}^{\varphi})^{-n} \exp\{\varphi x\} C_n^x,
+   f(x;\varphi) = (1+\mathrm{e}^{\varphi})^{-n} \exp\{\varphi x\} \binom{n}{x},
    \quad \Theta^* = (-\infty, \infty).
    $$
 
@@ -335,23 +335,23 @@ $$
 
 #### 2.3.2.1. 例子
 1. **伯努利分布**  
-   设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} B(1, \theta)$，则联合概率为：
+   设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathrm{Bin}(1, \theta)$，则联合概率为：
    $$
    f(\boldsymbol{x}; \theta) = \theta^{\sum x_i} (1-\theta)^{n-\sum x_i} = g(t(\boldsymbol{x}); \theta) \cdot 1,
    $$
    其中 $t(\boldsymbol{x}) = \sum_{i=1}^n x_i$ 是充分统计量 $T(\boldsymbol{X})$ 的观测值。
 
 2. **正态分布 (方差已知)**  
-   设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} N(\theta, 1)$，则：
+   设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathcal{N}(\theta, 1)$，则：
    $$
    f(\boldsymbol{x}; \theta) = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{1}{2} \sum (x_i - \theta)^2} = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{n\theta^2}{2} + n\theta\bar{x}} \cdot \mathrm{e}^{-\frac{1}{2} \sum x_i^2}.
    $$
    这里 $t(\boldsymbol{x}) = \bar{x}$，$g(t; \theta) = \mathrm{e}^{-\frac{n\theta^2}{2} + n\theta\bar{x}}$，$h(\boldsymbol{x}) = (2\pi)^{-\frac{n}{2}} \mathrm{e}^{-\frac{1}{2} \sum x_i^2}$。
 
 3. **均匀分布**  
-   设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} U(0, \theta)$，则：
+   设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathrm{U}(0, \theta)$，则：
    $$
-   f(\boldsymbol{x}; \theta) = \frac{1}{\theta^n} I(0 < x_i < \theta, \ \forall i) = \frac{1}{\theta^n} I(x_{(n)} < \theta) \cdot I(x_{(1)} > 0).
+   f(\boldsymbol{x}; \theta) = \frac{1}{\theta^n} \boldsymbol{1}_{\{0 < x_i < \theta, \ \forall i\}} = \frac{1}{\theta^n} \boldsymbol{1}_{\{x_{(n)} < \theta\}} \cdot \boldsymbol{1}_{\{x_{(1)} > 0\}}.
    $$
    其中 $t(\boldsymbol{x}) = x_{(n)} = \max\{x_1,\dots,x_n\}$ 是充分统计量 $T(\boldsymbol{X})$ 的观测值。
 
@@ -359,7 +359,7 @@ $$
 
 ### 2.3.3. 极小充分统计量 (Minimal Sufficient Statistic)
 
-- 充分统计量**不唯一**。例如，在正态样本 $N(\theta, 1)$ 中，$T_1(\boldsymbol{X}) = \bar{X}$ 和 $T_2(\boldsymbol{X}) = (\sum_{i=1}^{m} X_i, \sum_{i=m+1}^n X_i)$ ($1 < m < n$) 都是充分统计量，但前者更简单。
+- 充分统计量**不唯一**。例如，在正态样本 $\mathcal{N}(\theta, 1)$ 中，$T_1(\boldsymbol{X}) = \bar{X}$ 和 $T_2(\boldsymbol{X}) = (\sum_{i=1}^{m} X_i, \sum_{i=m+1}^n X_i)$ ($1 < m < n$) 都是充分统计量，但前者更简单。
 
 **定义 2.3.2（极小充分统计量）** 如果一个充分统计量 $T(\boldsymbol{X})$ 可以表示为任何其他充分统计量的函数，则称 $T(\boldsymbol{X})$ 为**极小充分统计量**。
 
@@ -369,20 +369,20 @@ $$
 
 **定义 2.3.3（完全统计量）** 设 $T = T(\boldsymbol{X})$ 是一个统计量。如果对于任意可测函数 $\varphi$，满足：
 $$
-E_\theta[\varphi(T)] = 0, \quad \forall \theta \in \Theta
+\mathbb{E}_\theta[\varphi(T)] = 0, \quad \forall \theta \in \Theta
 $$
 都有：
 $$
-P_\theta(\varphi(T) = 0) = 1, \quad \forall \theta \in \Theta,
+\mathbb{P}_\theta(\varphi(T) = 0) = 1, \quad \forall \theta \in \Theta,
 $$
 则称 $T(\boldsymbol{X})$ 是 $\theta$ 的**完全统计量**。
 
 **注记**：若 $T$ 的密度为 $g(t; \theta)$，则完全性等价于：从 $\int \varphi(t) g(t; \theta) \mathrm{d}t = 0 \ (\forall \theta)$ 可推出 $\varphi(t) = 0$ 几乎处处成立。这意味着密度函数族 $\{g(t; \theta): \theta \in \Theta\}$ 在 $L^1$ 意义下是完备的。
 
 #### 2.3.4.1. 例子
-1. **伯努利分布**：$T = \sum X_i \sim B(n, \theta)$ 是完全统计量。
-2. **正态分布 $N(\theta, 1)$**：$T = \bar{X}$ 是完全统计量。
-3. **均匀分布 $U(0, \theta)$**：$T = X_{(n)}$ 是完全统计量。
+1. **伯努利分布**：$T = \sum X_i \sim \mathrm{Bin}(n, \theta)$ 是完全统计量。
+2. **正态分布 $\mathcal{N}(\theta, 1)$**：$T = \bar{X}$ 是完全统计量。
+3. **均匀分布 $\mathrm{U}(0, \theta)$**：$T = X_{(n)}$ 是完全统计量。
 
 ---
 
@@ -409,8 +409,8 @@ $$
 **定理 2.3.3（Basu）** 若 $T(\boldsymbol{X})$ 是有界完全的充分统计量，而另一个统计量 $V(\boldsymbol{X})$ 的分布与 $\theta$ 无关，则 $T(\boldsymbol{X})$ 和 $V(\boldsymbol{X})$ 相互独立。
 
 #### 2.3.7.1. 例子：正态分布中的独立性
-设 $\boldsymbol{X} \stackrel{\text{i.i.d.}}{\sim} N(\theta, 1)$，则：
+设 $\boldsymbol{X} \overset{\text{iid}}{\sim} \mathcal{N}(\theta, 1)$，则：
 - $T(\boldsymbol{X}) = \bar{X}$ 是有界完全的充分统计量。
-- $V(\boldsymbol{X}) = X_{(n)} - X_{(1)}$（样本极差）的分布与 $\theta$ 无关（因为 $Y_i = X_i - \theta \sim N(0,1)$，其极差不依赖于 $\theta$）。
+- $V(\boldsymbol{X}) = X_{(n)} - X_{(1)}$（样本极差）的分布与 $\theta$ 无关（因为 $Y_i = X_i - \theta \sim \mathcal{N}(0,1)$，其极差不依赖于 $\theta$）。
 
 由 Basu 定理，$\bar{X}$ 与样本极差 $V(\boldsymbol{X})$ 独立。

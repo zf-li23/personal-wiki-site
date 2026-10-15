@@ -55,14 +55,14 @@ title: 非参数假设检验
 - **步骤**：
   1. 剔除 $Z_i = 0$ 的观测（若有），记有效样本量为 $n_0$。
   2. 计算正号数 $n_+ = \#\{Z_i > 0\}$。
-  3. 在 $H_0$ 下，$n_+ \sim B(n_0, 0.5)$。
+  3. 在 $H_0$ 下，$n_+ \sim \mathrm{Bin}(n_0, 0.5)$。
   4. 对于双侧检验，p 值为：
      $$
-     p = \mathbb{P}(|B(n_0,0.5) - n_0/2| \geq |n_+ - n_0/2|)
+     p = \mathbb{P}(|S - n_0/2| \geq |n_+ - n_0/2|), \quad S \sim \mathrm{Bin}(n_0, 0.5)
      $$
   5. 大样本时可用正态近似：
      $$
-     U = \frac{2n_+ - n_0}{\sqrt{n_0}} \stackrel{H_0}{\approx} N(0,1)
+     U = \frac{2n_+ - n_0}{\sqrt{n_0}} \overset{H_0}{\approx} \mathcal{N}(0,1)
      $$
 
 ### 6.2.3. 单样本中位数的符号检验
@@ -100,7 +100,7 @@ title: 非参数假设检验
   $$
 - 标准化：
   $$
-  U = \frac{W^+ - \mathbb{E}(W^+)}{\sqrt{\operatorname{Var}(W^+)}} \stackrel{H_0}{\approx} N(0,1)
+  U = \frac{W^+ - \mathbb{E}(W^+)}{\sqrt{\operatorname{Var}(W^+)}} \overset{H_0}{\approx} \mathcal{N}(0,1)
   $$
 
 ### 6.3.4. 适用条件与比较
@@ -132,7 +132,7 @@ title: 非参数假设检验
   其中 $N = m + n$。
 - 标准化：
   $$
-  U = \frac{W_Y - \mathbb{E}(W_Y)}{\sqrt{\operatorname{Var}(W_Y)}} \stackrel{H_0}{\approx} N(0,1)
+  U = \frac{W_Y - \mathbb{E}(W_Y)}{\sqrt{\operatorname{Var}(W_Y)}} \overset{H_0}{\approx} \mathcal{N}(0,1)
   $$
 
 ### 6.4.4. 与两样本 $t$ 检验的比较
@@ -152,10 +152,10 @@ title: 非参数假设检验
 ### 6.5.2. Pearson $\chi^2$ 检验（离散或分组数据）
 1. 将样本空间分为 $r$ 个互斥类别（或区间）$A_1,\dots,A_r$。
 2. 计算**观测频数** $O_j = \#\{X_i \in A_j\}$。
-3. 计算**期望频数** $E_j = n \cdot P_{H_0}(X \in A_j)$。
+3. 计算**期望频数** $E_j = n \cdot \mathbb{P}_{H_0}(X \in A_j)$。
 4. 检验统计量：
    $$
-   \chi^2 = \sum_{j=1}^r \frac{(O_j - E_j)^2}{E_j} \stackrel{H_0}{\approx} \chi^2_{r-1}
+   \chi^2 = \sum_{j=1}^r \frac{(O_j - E_j)^2}{E_j} \overset{H_0}{\approx} \chi^2_{r-1}
    $$
 5. 拒绝域：$\chi^2 > \chi^2_{r-1, \alpha}$。
 
@@ -184,7 +184,7 @@ title: 非参数假设检验
   - 期望频数：$\hat{E}_{ij} = \frac{n_{i\cdot} n_{\cdot j}}{n}$。
   - 检验统计量：
     $$
-    \chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(n_{ij} - \hat{E}_{ij})^2}{\hat{E}_{ij}} \stackrel{H_0}{\approx} \chi^2_{(r-1)(c-1)}
+    \chi^2 = \sum_{i=1}^r \sum_{j=1}^{c} \frac{(n_{ij} - \hat{E}_{ij})^2}{\hat{E}_{ij}} \overset{H_0}{\approx} \chi^2_{(r-1)(c-1)}
     $$
 - **齐一性检验**：
   - $H_0$：多个总体的类别比例相同（即行变量分布齐一）。
@@ -200,8 +200,8 @@ title: 非参数假设检验
 ## 6.7. 正态性检验 (Test of Normality)
 
 ### 6.7.1. 常用方法
-- **Kolmogorov-Smirnov 检验**：与完全已知的正态分布 $N(\mu_0, \sigma_0^2)$ 比较。
-- **Shapiro-Wilk 检验**：专门针对正态性，检验 $H_0$：数据来自某个正态分布 $N(\mu, \sigma^2)$（参数未知）。
+- **Kolmogorov-Smirnov 检验**：与完全已知的正态分布 $\mathcal{N}(\mu_0, \sigma_0^2)$ 比较。
+- **Shapiro-Wilk 检验**：专门针对正态性，检验 $H_0$：数据来自某个正态分布 $\mathcal{N}(\mu, \sigma^2)$（参数未知）。
   - 基于样本顺序统计量与正态分布期望顺序统计量的相关性。
   - 检验统计量 $W$ 越接近1，越支持正态性。
 - **QQ图**：图形化方法，观察样本分位数与理论正态分位数是否近似直线。

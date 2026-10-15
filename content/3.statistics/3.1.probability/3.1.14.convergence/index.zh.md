@@ -11,7 +11,7 @@ title: 收敛性
 $$
 \lim_{n \to \infty} F_n(x) = F(x)
 $$
-则称 $Y_n$ 依分布收敛到 $Y$，记作 $Y_n \overset{d}{\to} Y$。
+则称 $Y_n$ 依分布收敛到 $Y$，记作 $Y_n \xrightarrow{d} Y$。
 
 ### 14.1.2. 几乎处处收敛
 
@@ -20,12 +20,11 @@ $$
 $$
 \mathbb{P}(\lim_{n \to \infty} X_n = X) = 1
 $$
-则称 $X_n$ 几乎处处收敛到 $X$，记作 $X_n \overset{a.s.}{\to} X$。
+则称 $X_n$ 几乎处处收敛到 $X$，记作 $X_n \xrightarrow{\text{a.s.}} X$。
 
 **等价表述**
-对 $\forall \varepsilon > 0$：
 $$
-\left\{ \lim_{n \to \infty} X_n = X \right\} = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} \{ |X_k - X| < \varepsilon \}
+\left\{ \lim_{n \to \infty} X_n = X \right\} = \bigcap_{m=1}^{\infty} \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} \left\{ |X_k - X| < \frac{1}{m} \right\}
 $$
 
 ### 14.1.3. 依概率收敛
@@ -35,7 +34,7 @@ $$
 $$
 \lim_{n \to \infty} \mathbb{P}(|X_n - X| \geq \varepsilon) = 0
 $$
-则称 $X_n$ 依概率收敛到 $X$，记作 $X_n \overset{p}{\to} X$。
+则称 $X_n$ 依概率收敛到 $X$，记作 $X_n \xrightarrow{p} X$。
 
 **等价表述**
 令 $A_n = \{ |X_n - X| < \varepsilon \}$，则：
@@ -47,9 +46,9 @@ $$
 
 | 收敛类型     | 记号                        | 定义                                         |
 | ------------ | --------------------------- | -------------------------------------------- |
-| 依分布收敛   | $X_n \overset{d}{\to} X$    | 在 $F(x)$ 连续点，$\lim F_n(x) = F(x)$       |
-| 依概率收敛   | $X_n \overset{p}{\to} X$    | $\forall \varepsilon > 0$，$\lim \mathbb{P}( | X_n - X | \geq \varepsilon) = 0$ |
-| 几乎处处收敛 | $X_n \overset{a.s.}{\to} X$ | $\mathbb{P}(\lim X_n = X) = 1$               |
+| 依分布收敛   | $X_n \xrightarrow{d} X$    | 在 $F(x)$ 连续点，$\lim F_n(x) = F(x)$       |
+| 依概率收敛   | $X_n \xrightarrow{p} X$    | $\forall \varepsilon > 0$，$\lim \mathbb{P}(\lvert X_n - X\rvert \geq \varepsilon) = 0$ |
+| 几乎处处收敛 | $X_n \xrightarrow{\text{a.s.}} X$ | $\mathbb{P}(\lim X_n = X) = 1$               |
 
 ## 14.2. 收敛性关系
 
@@ -57,25 +56,25 @@ $$
 
 **定理 14.2.1（收敛性强弱关系）**
 $$
-X_n \overset{a.s.}{\to} X \Rightarrow X_n \overset{p}{\to} X \Rightarrow X_n \overset{d}{\to} X
+X_n \xrightarrow{\text{a.s.}} X \Rightarrow X_n \xrightarrow{p} X \Rightarrow X_n \xrightarrow{d} X
 $$
 
 ### 14.2.2. 几乎处处收敛推依概率收敛
 
 **定理 14.2.2**
-如果 $X_n \overset{a.s.}{\to} X$，则 $X_n \overset{p}{\to} X$。
+如果 $X_n \xrightarrow{\text{a.s.}} X$，则 $X_n \xrightarrow{p} X$。
 
 **证明思路**
-利用集合关系：
+利用集合关系：对 $\forall \varepsilon > 0$，
 $$
-\left\{ \lim_{n \to \infty} X_n = X \right\} = \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} \{ |X_k - X| < \varepsilon \}
+\left\{ \lim_{n \to \infty} X_n = X \right\} \subset \bigcup_{n=1}^{\infty} \bigcap_{k=n}^{\infty} \{ |X_k - X| < \varepsilon \}
 $$
 通过概率的连续性可得结论。
 
 ### 14.2.3. 依概率收敛推依分布收敛
 
 **定理 14.2.3**
-如果 $X_n \overset{p}{\to} X$，则 $X_n \overset{d}{\to} X$。
+如果 $X_n \xrightarrow{p} X$，则 $X_n \xrightarrow{d} X$。
 
 **证明思路**
 通过构造不等式：
@@ -89,7 +88,7 @@ $$
 **定理 14.2.4**
 若 $C$ 为常数，则：
 $$
-X_n \overset{d}{\to} C \Leftrightarrow X_n \overset{p}{\to} C
+X_n \xrightarrow{d} C \Leftrightarrow X_n \xrightarrow{p} C
 $$
 
 ## 14.3. 反例分析
@@ -97,7 +96,7 @@ $$
 ### 14.3.1. 依分布收敛不蕴含依概率收敛
 
 **例 14.3.1**
-设 $\{X_n\}$ 独立同分布 $\sim N(0,1)$，则 $X_n \overset{d}{\to} X_1$，但：
+设 $\{X_n\}$ 独立同分布 $\sim \mathcal{N}(0,1)$，则 $X_n \xrightarrow{d} X_1$，但：
 $$
 \mathbb{P}(|X_n - X_1| > 1) = \mathbb{P}\left( |X_1| > \frac{1}{\sqrt{2}} \right) > 0
 $$
@@ -110,7 +109,7 @@ $$
 $$
 \mathbb{P}(X_n = 0) = 1 - n^{-1}, \quad \mathbb{P}(X_n = 1) = n^{-1}
 $$
-则 $X_n \overset{p}{\to} 0$，但由 Borel-Cantelli 引理，$X_n$ 不几乎处处收敛到 $0$。
+则 $X_n \xrightarrow{p} 0$，但由 Borel-Cantelli 引理，$X_n$ 不几乎处处收敛到 $0$。
 
 ## 14.4. 常用定理
 
@@ -118,30 +117,30 @@ $$
 
 **定理 14.4.1（连续映射定理）**
 设 $g$ 连续，则：
-1. $X_n \overset{a.s.}{\to} X \Rightarrow g(X_n) \overset{a.s.}{\to} g(X)$
-2. $X_n \overset{p}{\to} X \Rightarrow g(X_n) \overset{p}{\to} g(X)$  
-3. $X_n \overset{d}{\to} X \Rightarrow g(X_n) \overset{d}{\to} g(X)$
+1. $X_n \xrightarrow{\text{a.s.}} X \Rightarrow g(X_n) \xrightarrow{\text{a.s.}} g(X)$
+2. $X_n \xrightarrow{p} X \Rightarrow g(X_n) \xrightarrow{p} g(X)$  
+3. $X_n \xrightarrow{d} X \Rightarrow g(X_n) \xrightarrow{d} g(X)$
 
 ### 14.4.2. Slutsky 定理
 
 **定理 14.4.2（Slutsky 定理）**
-假设 $X_n \overset{d}{\to} X$，$Y_n \overset{p}{\to} c$（常数），则：
-1. $X_n + Y_n \overset{d}{\to} X + c$
-2. $X_n Y_n \overset{d}{\to} cX$
-3. $X_n / Y_n \overset{d}{\to} X / c$（$c \neq 0$）
+假设 $X_n \xrightarrow{d} X$，$Y_n \xrightarrow{p} c$（常数），则：
+1. $X_n + Y_n \xrightarrow{d} X + c$
+2. $X_n Y_n \xrightarrow{d} cX$
+3. $X_n / Y_n \xrightarrow{d} X / c$（$c \neq 0$）
 
 ### 14.4.3. Delta 方法
 
 **定理 14.4.3（Delta 方法）**
-假设 $\sqrt{n}(X_n - a) \overset{d}{\to} N(0, V)$，$g$ 连续可导，则：
+假设 $\sqrt{n}(X_n - a) \xrightarrow{d} \mathcal{N}(0, V)$，$g$ 连续可导，则：
 $$
-\sqrt{n}(g(X_n) - g(a)) \overset{d}{\to} N(0, (g'(a))^2 V)
+\sqrt{n}(g(X_n) - g(a)) \xrightarrow{d} \mathcal{N}(0, (g'(a))^2 V)
 $$
 
 ### 14.4.4. 连续性定理
 
 **定理 14.4.4（连续性定理）**
-$X_n \overset{d}{\to} X$ 的充分必要条件是：
+$X_n \xrightarrow{d} X$ 的充分必要条件是：
 $$
 \lim_{n \to \infty} \phi_n(t) = \phi(t), \quad \forall t \in \mathbb{R}
 $$
@@ -150,9 +149,9 @@ $$
 ### 14.4.5. Cramér-Wold 方法
 
 **定理 14.4.5（Cramér-Wold）**
-$X_n \overset{d}{\to} X$ 的充分必要条件是对任意常数向量 $a$，有：
+随机向量 $\boldsymbol{X}_n \xrightarrow{d} \boldsymbol{X}$ 的充分必要条件是对任意常数向量 $\boldsymbol{a}$，有：
 $$
-a^{\mathsf T} X_n \overset{d}{\to} a^{\mathsf T} X
+\boldsymbol{a}^{\mathsf T} \boldsymbol{X}_n \xrightarrow{d} \boldsymbol{a}^{\mathsf T} \boldsymbol{X}
 $$
 
 ## 14.5. 定理应用

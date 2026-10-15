@@ -30,7 +30,7 @@ $$
 \mathbb{E}(X) = g^{(1)}(1)
 $$
 
-3. 如果 $\mathbb{E}(X) < \infty$，则
+3. 如果 $\mathbb{E}(X^2) < \infty$，则
 $$
 \operatorname{Var}(X) = g^{(2)}(1) + g^{(1)}(1) - [g^{(1)}(1)]^2
 $$
@@ -42,17 +42,17 @@ $$
 
 ### 11.1.3. 常见分布的概率母函数
 
-- 二项分布 $B(n, p)$：
+- 二项分布 $\mathrm{Bin}(n, p)$：
 $$
 g(s) = (q + sp)^n, \quad q = 1-p
 $$
 
-- Poisson分布 $\mathbb{P}(\lambda)$：
+- Poisson分布 $\mathrm{Poi}(\lambda)$：
 $$
 g(s) = \mathrm{e}^{\lambda(s-1)}
 $$
 
-- 几何分布 $G(p)$：
+- 几何分布 $\mathrm{Geo}(p)$：
 $$
 g(s) = \frac{sp}{1-sq}, \quad q = 1-p
 $$
@@ -109,11 +109,11 @@ M_Y(s) = M_{X_1}(s) \cdots M_{X_n}(s)
 $$
 ### 11.2.3. 常见分布的矩母函数
 
-- 指数分布 $\mathcal{E}(\lambda)$：
+- 指数分布 $\mathrm{Exp}(\lambda)$：
 $$
 M(s) = \frac{\lambda}{\lambda - s}, \quad s < \lambda
 $$
-- 正态分布 $N(\mu, \sigma^2)$：
+- 正态分布 $\mathcal{N}(\mu, \sigma^2)$：
 $$
 M(s) = \mathrm{e}^{\mu s + \frac{\sigma^2 s^2}{2}}
 $$
@@ -133,13 +133,13 @@ $$
 
 对随机变量 $X$，称
 $$
-\phi(t) = \mathbb{E}(\mathrm{e}^{itX}) = E \cos(tX) + iE \sin(tX), \quad t \in \mathbb{R}
+\phi(t) = \mathbb{E}(\mathrm{e}^{\mathrm{i}tX}) = \mathbb{E} \cos(tX) + \mathrm{i}\,\mathbb{E} \sin(tX), \quad t \in \mathbb{R}
 $$
-为 $X$ 的特征函数，其中 $i = \sqrt{-1}$。
+为 $X$ 的特征函数，其中 $\mathrm{i} = \sqrt{-1}$。
 
 ### 11.3.2. 性质
 
-设 $\phi(t) = \mathbb{E}(\mathrm{e}^{itX})$，则：
+设 $\phi(t) = \mathbb{E}(\mathrm{e}^{\mathrm{i}tX})$，则：
 
 1. 
 $$
@@ -149,11 +149,11 @@ $$
 
 3. 如果 $\mathbb{E}(|X|^k) < \infty$，则
 $$
-\phi^{(k)}(t) = i^k \mathbb{E}(X^k \mathrm{e}^{itX}), \quad \phi^{(k)}(0) = i^k \mathbb{E}(X^k)
+\phi^{(k)}(t) = \mathrm{i}^k \mathbb{E}(X^k \mathrm{e}^{\mathrm{i}tX}), \quad \phi^{(k)}(0) = \mathrm{i}^k \mathbb{E}(X^k)
 $$
 4. 对任意常数 $a, b$，有
 $$
-\phi_{aX+b}(t) = \mathrm{e}^{itb} \phi_X(at)
+\phi_{aX+b}(t) = \mathrm{e}^{\mathrm{i}tb} \phi_X(at)
 $$
 5. 如果 $X_1, \ldots, X_n$ 相互独立，则 $Y = X_1 + \cdots + X_n$ 的特征函数为
 $$
@@ -161,29 +161,29 @@ $$
 $$
 ### 11.3.3. 常见分布的特征函数
 
-- 二项分布 $B(n, p)$：
+- 二项分布 $\mathrm{Bin}(n, p)$：
 $$
-\phi(t) = (q + p\mathrm{e}^{it})^n
+\phi(t) = (q + p\mathrm{e}^{\mathrm{i}t})^n
 $$
-- Poisson分布 $\mathcal{P}(\lambda)$：
+- Poisson分布 $\mathrm{Poi}(\lambda)$：
 $$
-\phi(t) = \mathrm{e}^{\lambda(\mathrm{e}^{it}-1)}
+\phi(t) = \mathrm{e}^{\lambda(\mathrm{e}^{\mathrm{i}t}-1)}
 $$
-- 几何分布 $G(p)$：
+- 几何分布 $\mathrm{Geo}(p)$：
 $$
-\phi(t) = \frac{p\mathrm{e}^{it}}{1 - q\mathrm{e}^{it}}
+\phi(t) = \frac{p\mathrm{e}^{\mathrm{i}t}}{1 - q\mathrm{e}^{\mathrm{i}t}}
 $$
-- 均匀分布 $U(a, b)$：
+- 均匀分布 $\mathrm{U}(a, b)$：
 $$
-\phi(t) = \frac{\mathrm{e}^{itb} - \mathrm{e}^{ita}}{it(b-a)}
+\phi(t) = \frac{\mathrm{e}^{\mathrm{i}tb} - \mathrm{e}^{\mathrm{i}ta}}{\mathrm{i}t(b-a)}
 $$
-- 指数分布 $\mathcal{E}(\lambda)$：
+- 指数分布 $\mathrm{Exp}(\lambda)$：
 $$
-\phi(t) = \left(1 - \frac{it}{\lambda}\right)^{-1}
+\phi(t) = \left(1 - \frac{\mathrm{i}t}{\lambda}\right)^{-1}
 $$
-- 正态分布 $N(\mu, \sigma^2)$：
+- 正态分布 $\mathcal{N}(\mu, \sigma^2)$：
 $$
-\phi(t) = \exp\left(i\mu t - \frac{1}{2} \sigma^2 t^2\right)
+\phi(t) = \exp\left(\mathrm{i}\mu t - \frac{1}{2} \sigma^2 t^2\right)
 $$
 - Cauchy分布：
 $$
@@ -194,13 +194,13 @@ $$
 - 随机变量的特征函数和分布函数相互唯一决定
 - 逆转公式：如果 $F(x)$ 在 $a, b$ 连续，则
 $$
-\frac{1}{2\pi} \lim_{T \to \infty} \int_{-T}^{\mathsf T} \frac{\mathrm{e}^{-ita} - \mathrm{e}^{-itb}}{it} \phi(t) \mathrm{d}t = F(b) - F(a)
+\frac{1}{2\pi} \lim_{T \to \infty} \int_{-T}^{+T} \frac{\mathrm{e}^{-\mathrm{i}ta} - \mathrm{e}^{-\mathrm{i}tb}}{\mathrm{i}t} \phi(t) \mathrm{d}t = F(b) - F(a)
 $$
 ### 11.3.5. 特征函数与独立性
 
-设 $X = (X_1, \ldots, X_n)$ 是随机向量，则 $X_1, \ldots, X_n$ 相互独立的充要条件是
+设 $\boldsymbol{X} = (X_1, \ldots, X_n)^{\mathsf T}$ 是随机向量，其特征函数为 $\phi(\boldsymbol{t}) = \mathbb{E}\,\mathrm{e}^{\mathrm{i}\boldsymbol{t}^{\mathsf T}\boldsymbol{X}}$，$\boldsymbol{t} = (t_1, \ldots, t_n)^{\mathsf T}$，则 $X_1, \ldots, X_n$ 相互独立的充要条件是
 $$
-\phi(t) = \phi_1(t_1) \phi_2(t_2) \cdots \phi_n(t_n)
+\phi(\boldsymbol{t}) = \phi_1(t_1) \phi_2(t_2) \cdots \phi_n(t_n)
 $$
 ### 11.3.6. 特征函数与收敛性
 
@@ -222,11 +222,11 @@ $$
 
 | 分布                   | 概率母函数         | 矩母函数                             | 特征函数                                |
 | ---------------------- | ------------------ | ------------------------------------ | --------------------------------------- |
-| $B(n, p)$              | $(q + ps)^n$       | $(q + p\mathrm{e}^s)^n$                       | $(q + p\mathrm{e}^{it})^n$                       |
-| $\mathcal{P}(\lambda)$ | $\mathrm{e}^{\lambda(s-1)}$ | $\mathrm{e}^{\lambda(\mathrm{e}^s-1)}$                 | $\mathrm{e}^{\lambda(\mathrm{e}^{it}-1)}$                 |
-| $G(p)$                 | $\frac{sp}{1-sq}$  | -                                    | $\frac{p\mathrm{e}^{it}}{1 - q\mathrm{e}^{it}}$           |
-| $\mathcal{E}(\lambda)$ | -                  | $\frac{\lambda}{\lambda-s}$          | $(1 - \frac{it}{\lambda})^{-1}$         |
-| $N(\mu, \sigma^2)$     | -                  | $\mathrm{e}^{\mu s + \frac{\sigma^2 s^2}{2}}$ | $\mathrm{e}^{i\mu t - \frac{1}{2} \sigma^2 t^2}$ |
+| $\mathrm{Bin}(n, p)$              | $(q + ps)^n$       | $(q + p\mathrm{e}^s)^n$                       | $(q + p\mathrm{e}^{\mathrm{i}t})^n$                       |
+| $\mathrm{Poi}(\lambda)$ | $\mathrm{e}^{\lambda(s-1)}$ | $\mathrm{e}^{\lambda(\mathrm{e}^s-1)}$                 | $\mathrm{e}^{\lambda(\mathrm{e}^{\mathrm{i}t}-1)}$                 |
+| $\mathrm{Geo}(p)$                 | $\frac{sp}{1-sq}$  | -                                    | $\frac{p\mathrm{e}^{\mathrm{i}t}}{1 - q\mathrm{e}^{\mathrm{i}t}}$           |
+| $\mathrm{Exp}(\lambda)$ | -                  | $\frac{\lambda}{\lambda-s}$          | $(1 - \frac{\mathrm{i}t}{\lambda})^{-1}$         |
+| $\mathcal{N}(\mu, \sigma^2)$     | -                  | $\mathrm{e}^{\mu s + \frac{\sigma^2 s^2}{2}}$ | $\mathrm{e}^{\mathrm{i}\mu t - \frac{1}{2} \sigma^2 t^2}$ |
 
 ### 应用技巧
 

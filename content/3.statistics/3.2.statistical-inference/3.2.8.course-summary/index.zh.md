@@ -37,26 +37,26 @@ title: 课程总结
 ## 8.2. 核心定理与公式
 
 ### 8.2.1. 抽样分布性质
-- Fisher引理：正态总体下 $\bar{X}$ 与 $S^2$ 独立，且 $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$
-- Student氏定理：$\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t(n-1)$
+- Fisher引理：正态总体下 $\bar{X}$ 与 $S^2$ 独立，且 $\frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}$
+- Student氏定理：$\frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t_{n-1}$
 
 ### 8.2.2. 估计量性质
 - Cramer-Rao不等式：$\operatorname{Var}(\hat{\theta}) \geq \frac{1}{n I(\theta)}$
-- 均方误差分解：$MSE(\hat{\theta}) = \operatorname{Var}(\hat{\theta}) + [bias(\hat{\theta})]^2$
+- 均方误差分解：$\operatorname{MSE}(\hat{\theta}) = \operatorname{Var}(\hat{\theta}) + [\operatorname{Bias}(\hat{\theta})]^2$
 
 ### 8.2.3. 假设检验
-- 似然比统计量：$\lambda(x) = \frac{\sup_{\theta \in \Theta_0} L(\theta|x)}{\sup_{\theta \in \Theta} L(\theta|x)}$
-- 拒绝域形式：$W = \{x: \lambda(x) \leq c\}$
+- 似然比统计量：$\lambda(\boldsymbol{x}) = \frac{\sup_{\theta \in \Theta_0} L(\theta|\boldsymbol{x})}{\sup_{\theta \in \Theta} L(\theta|\boldsymbol{x})}$
+- 拒绝域形式：$W = \{\boldsymbol{x}: \lambda(\boldsymbol{x}) \leq c\}$
 
 ## 8.3. 常用统计量与分布对应
 
 | 检验场景 | 统计量构造 | 服从分布 |
 | :--- | :--- | :--- |
-| 单正态均值 $\mu$ ($\sigma^2$已知) | $Z = \frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}$ | $N(0,1)$ |
-| 单正态均值 $\mu$ ($\sigma^2$未知) | $T = \frac{\bar{X}-\mu_0}{S/\sqrt{n}}$ | $t(n-1)$ |
-| 单正态方差 $\sigma^2$ ($\mu$未知) | $\chi^2 = \frac{(n-1)S^2}{\sigma_0^2}$ | $\chi^2(n-1)$ |
-| 双正态均值差 $\mu_1-\mu_2$ ($\sigma_1^2=\sigma_2^2$未知) | $T = \frac{(\bar{X}-\bar{Y}) - \delta}{S_w \sqrt{1/n_1+1/n_2}}$ | $t(n_1+n_2-2)$ |
-| 双正态方差比 $\sigma_1^2/\sigma_2^2$ | $F = \frac{S_1^2}{S_2^2}$ | $F(n_1-1, n_2-1)$ |
+| 单正态均值 $\mu$ ($\sigma^2$已知) | $Z = \frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}$ | $\mathcal{N}(0,1)$ |
+| 单正态均值 $\mu$ ($\sigma^2$未知) | $T = \frac{\bar{X}-\mu_0}{S/\sqrt{n}}$ | $t_{n-1}$ |
+| 单正态方差 $\sigma^2$ ($\mu$未知) | $\chi^2 = \frac{(n-1)S^2}{\sigma_0^2}$ | $\chi^2_{n-1}$ |
+| 双正态均值差 $\mu_1-\mu_2$ ($\sigma_1^2=\sigma_2^2$未知) | $T = \frac{(\bar{X}-\bar{Y}) - \delta}{S_w \sqrt{1/n_1+1/n_2}}$ | $t_{n_1+n_2-2}$ |
+| 双正态方差比 $\sigma_1^2/\sigma_2^2$ | $F = \frac{S_1^2}{S_2^2}$ | $F_{n_1-1, n_2-1}$ |
 
 ## 8.4. 解题技巧与方法
 

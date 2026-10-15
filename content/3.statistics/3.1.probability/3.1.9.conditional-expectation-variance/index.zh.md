@@ -18,7 +18,7 @@ title: 条件期望、条件方差
   $$
   - 连续型：
     $$
-    f_{X|A}(x) = \frac{f_X(x) \cdot I_A(x)}{\mathbb{P}(A)}
+    f_{X|A}(x) = \frac{f_X(x) \cdot \boldsymbol{1}_A(x)}{\mathbb{P}(A)}
     $$
   
 - 条件分布 $\mathbb{P}(X|Y)$：
@@ -75,7 +75,7 @@ title: 条件期望、条件方差
 - 随机变量：
   - 离散：
   $$
-  P_{X|Y}(x|y) = \frac{P_X(x)P_{Y|X}(y|x)}{P_Y(y)}
+  p_{X|Y}(x|y) = \frac{p_X(x)p_{Y|X}(y|x)}{p_Y(y)}
   $$
   - 连续：
     $$
@@ -100,10 +100,10 @@ title: 条件期望、条件方差
 
 - 定理：
   $$
-  \mathbb{E}(X|A) = \frac{E(X \cdot I_A)}{\mathbb{P}(A)}
+  \mathbb{E}(X|A) = \frac{\mathbb{E}(X \cdot \boldsymbol{1}_A)}{\mathbb{P}(A)}
   $$
   
-- 例子：若 $X \sim \mathcal{E}(\lambda)$，则
+- 例子：若 $X \sim \mathrm{Exp}(\lambda)$，则
   $$
   \mathbb{E}(X|X > a) = a + \frac{1}{\lambda}
   $$
@@ -115,7 +115,7 @@ title: 条件期望、条件方差
   \mathbb{E}(X) = \sum_{i=1}^n \mathbb{P}(A_i)\mathbb{E}(X|A_i)
   $$
   
-- 例子：几何分布 $X \sim G(p)$，可得
+- 例子：几何分布 $X \sim \mathrm{Geo}(p)$，可得
   $$
   \mathbb{E}(X) = \frac{1}{p}
   $$
@@ -196,7 +196,7 @@ title: 条件期望、条件方差
 ### 关键公式
 
 - 条件期望：
-  $$\mathbb{E}(X|A) = \frac{E(XI_A)}{\mathbb{P}(A)}$$
+  $$\mathbb{E}(X|A) = \frac{\mathbb{E}(X\boldsymbol{1}_A)}{\mathbb{P}(A)}$$
   $$\mathbb{E}(X) = \sum \mathbb{P}(A_i)\mathbb{E}(X|A_i)$$
   $$\mathbb{E}[\mathbb{E}(X|Y)] = \mathbb{E}(X)$$
 

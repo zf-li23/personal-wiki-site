@@ -42,7 +42,7 @@ $$
 
 ## 2.2. 可逆映射与可逆矩阵
 
-**定义 2.2.1（可逆映射）** 设 $f: X \to Y$ 是映射。若存在映射 $g: Y \to X$ 使得 $f \circ g = \mathrm{id}_Y$ 且 $g \circ f = \mathrm{id}_X$，则称 $f$ 可逆，称 $g$ 是 $f$ 的逆映射。
+**定义 2.2.1（可逆映射）** 设 $f\colon X \to Y$ 是映射。若存在映射 $g\colon Y \to X$ 使得 $f \circ g = \mathrm{id}_Y$ 且 $g \circ f = \mathrm{id}_X$，则称 $f$ 可逆，称 $g$ 是 $f$ 的逆映射。
 
 **命题 2.2.1** 可逆映射的逆映射唯一，记为 $f^{-1}$。
 
@@ -52,7 +52,7 @@ $$
 
 **定义 2.2.2（可逆线性变换）** 设 $\boldsymbol{A}, \boldsymbol{B}$ 是 $\mathbb{R}^n$ 上的线性变换。若 $\boldsymbol{A} \circ \boldsymbol{B} = \boldsymbol{B} \circ \boldsymbol{A} = I$，则称 $\boldsymbol{A}$ 和 $\boldsymbol{B}$ 是可逆变换，$\boldsymbol{B} = \boldsymbol{A}^{-1}$ 是 $\boldsymbol{A}$ 的逆变换。
 
-**命题 2.2.2** 若 $\boldsymbol{A}: \mathbb{R}^n \to \mathbb{R}^n$ 是可逆的线性变换，则逆映射 $\boldsymbol{A}^{-1}$ 也是线性变换。
+**命题 2.2.2** 若 $\boldsymbol{A}\colon \mathbb{R}^n \to \mathbb{R}^n$ 是可逆的线性变换，则逆映射 $\boldsymbol{A}^{-1}$ 也是线性变换。
 
 **证明** 设 $\boldsymbol{y} = \boldsymbol{A}(\boldsymbol{x})$，$\boldsymbol{y}' = \boldsymbol{A}(\boldsymbol{x}')$，$k \in \mathbb{R}$。由 $\boldsymbol{A}$ 线性，$\boldsymbol{A}(\boldsymbol{x} + \boldsymbol{x}') = \boldsymbol{y} + \boldsymbol{y}'$，$\boldsymbol{A}(k\boldsymbol{x}) = k\boldsymbol{y}$，所以 $\boldsymbol{A}^{-1}(\boldsymbol{y} + \boldsymbol{y}') = \boldsymbol{x} + \boldsymbol{x}' = \boldsymbol{A}^{-1}(\boldsymbol{y}) + \boldsymbol{A}^{-1}(\boldsymbol{y}')$，$\boldsymbol{A}^{-1}(k\boldsymbol{y}) = k\boldsymbol{x} = k\boldsymbol{A}^{-1}(\boldsymbol{y})$。$\square$
 

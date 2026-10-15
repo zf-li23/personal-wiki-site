@@ -1,6 +1,6 @@
 ---
 title: Relations
-source_hash: 93dc4c426653
+source_hash: ce6508d5f3f2
 ---
 
 Relations describe connections between the elements of sets. This chapter defines a relation as a set of ordered pairs (see Definition 1.3.4), introduces the representations of relations (matrices and graphs), their operations (inverse, composition, restriction and image), their basic properties (reflexivity, symmetry, antisymmetry and transitivity) and their closures, and then discusses three important kinds of relations: equivalence relations and their correspondence with partitions, compatibility relations and covers, and partial orders and partially ordered sets. The functions of the next chapter are a special kind of relation.
@@ -22,13 +22,13 @@ R_{\subset} &= \{\langle x, y \rangle \mid x \in A \land y \in A \land x \subset
 \end{aligned}
 $$
 
-For example, for any set $A$, the inclusion relation on the **power set** $P(A)$ is $\{\langle x, y \rangle \mid x \in P(A) \land y \in P(A) \land x \subseteq y\}$.
+For example, for any set $A$, the inclusion relation on the **power set** $\mathcal{P}(A)$ is $\{\langle x, y \rangle \mid x \in \mathcal{P}(A) \land y \in \mathcal{P}(A) \land x \subseteq y\}$.
 
 **Definition 2.1.3 (Identity Relation, Universal Relation and Empty Relation)** For every set $A$,
 
 1. the **identity relation** on $A$ is $I_A = \{\langle x, x \rangle \mid x \in A\}$;
 2. the **universal relation** (full relation) on $A$ is $E_A = \{\langle x, y \rangle \mid x \in A \land y \in A\} = A \times A$;
-3. the empty set $\emptyset$, being a subset of $A \times A$, is called the **empty relation** on $A$.
+3. the empty set $\varnothing$, being a subset of $A \times A$, is called the **empty relation** on $A$.
 
 **Definition 2.1.4 (Domain and Range)** Let $R$ be a binary relation from $A$ to $B$.
 
@@ -118,7 +118,7 @@ $$
 \end{aligned}
 $$
 
-Here composition of relations is taken to bind more tightly than the set operations. The two inclusions cannot in general be replaced by equalities. For example, take $X = Y = Z = \{a, b\}$, $R_1 = \{\langle a, a \rangle, \langle b, a \rangle\}$, $R_2 = \{\langle a, a \rangle\}$ and $R_3 = \{\langle a, b \rangle\}$; then $R_2 \cap R_3 = \emptyset$, whereas $R_1 \circ R_2 \cap R_1 \circ R_3 = \{\langle a, a \rangle\}$.
+Here composition of relations is taken to bind more tightly than the set operations. The two inclusions cannot in general be replaced by equalities. For example, take $X = Y = Z = \{a, b\}$, $R_1 = \{\langle a, a \rangle, \langle b, a \rangle\}$, $R_2 = \{\langle a, a \rangle\}$ and $R_3 = \{\langle a, b \rangle\}$; then $R_2 \cap R_3 = \varnothing$, whereas $R_1 \circ R_2 \cap R_1 \circ R_3 = \{\langle a, a \rangle\}$.
 
 **Theorem 2.3.4 (Properties of Images under a Relation)** For a relation $R$ from $X$ to $Y$, sets $A, B$ and a family of sets $\mathcal{A}$,
 
@@ -127,7 +127,7 @@ $$
 R[A \cup B] &= R[A] \cup R[B], \\
 R\left[\textstyle\bigcup \mathcal{A}\right] &= \textstyle\bigcup \{R[B] \mid B \in \mathcal{A}\}, \\
 R[A \cap B] &\subseteq R[A] \cap R[B], \\
-R\left[\textstyle\bigcap \mathcal{A}\right] &\subseteq \textstyle\bigcap \{R[B] \mid B \in \mathcal{A}\} \quad (\mathcal{A} \neq \emptyset), \\
+R\left[\textstyle\bigcap \mathcal{A}\right] &\subseteq \textstyle\bigcap \{R[B] \mid B \in \mathcal{A}\} \quad (\mathcal{A} \neq \varnothing), \\
 R[A] - R[B] &\subseteq R[A - B].
 \end{aligned}
 $$
@@ -284,7 +284,7 @@ Note that $s(R)$ need not be transitive when $R$ is: $R = \{\langle a, b \rangle
 **Theorem 2.5.12 (Closures Inheriting Several Properties, II)** For a relation $R$ on a nonempty set $A$,
 
 1. $rs(R) = sr(R)$;
-2. $rt(R) = \operatorname{tr}(R)$;
+2. $rt(R) = t r(R)$;
 3. $st(R) \subseteq ts(R)$,
 
 where $rs(R) = r(s(R))$, and similarly for the others.
@@ -303,9 +303,9 @@ is called the **equivalence class** of $x$ with respect to $R$, or simply the eq
 
 **Theorem 2.6.1 (Properties of Equivalence Classes)** Let $R$ be an equivalence relation on a nonempty set $A$. For all $x, y \in A$,
 
-1. $[x]_R \neq \emptyset$ and $[x]_R \subseteq A$, that is, $[x]_R$ is a nonempty subset of $A$;
+1. $[x]_R \neq \varnothing$ and $[x]_R \subseteq A$, that is, $[x]_R$ is a nonempty subset of $A$;
 2. if $xRy$, then $[x]_R = [y]_R$;
-3. if $\langle x, y \rangle \notin R$, then $[x]_R \cap [y]_R = \emptyset$;
+3. if $\langle x, y \rangle \notin R$, then $[x]_R \cap [y]_R = \varnothing$;
 4. $\bigcup \{[x]_R \mid x \in A\} = A$.
 
 **Definition 2.6.3 (Quotient Set)** Let $R$ be an equivalence relation on a nonempty set $A$. The set whose elements are all the equivalence classes of $R$ is called the **quotient set** of $A$ by $R$, written $A/R$; that is,
@@ -317,9 +317,9 @@ $$
 **Definition 2.6.4 (Partition)** Let $A$ be a nonempty set. A **partition** of $A$ is a set $\pi$ satisfying the following conditions; the elements of $\pi$ are called the **blocks** of the partition:
 
 1. $(\forall x)(x \in \pi \rightarrow x \subseteq A)$;
-2. $\emptyset \notin \pi$;
+2. $\varnothing \notin \pi$;
 3. $\bigcup \pi = A$;
-4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \emptyset)$.
+4. $(\forall x)(\forall y)((x \in \pi \land y \in \pi \land x \neq y) \rightarrow x \cap y = \varnothing)$.
 
 **Theorem 2.6.2 (The Partition Induced by an Equivalence Relation)** For an equivalence relation $R$ on a nonempty set $A$, the quotient set $A/R$ is a partition of $A$, called the partition of $A$ induced by $R$ and written $\pi_R$.
 
@@ -367,7 +367,7 @@ That is, any two elements of $C_R$ are compatible, and every element outside $C_
 **Definition 2.7.4 (Cover)** Let $A$ be a nonempty set. A **cover** of $A$ is a set $\Omega$ satisfying the following conditions; the elements of $\Omega$ are called the **blocks** of $\Omega$:
 
 1. $(\forall x)(x \in \Omega \rightarrow x \subseteq A)$;
-2. $\emptyset \notin \Omega$;
+2. $\varnothing \notin \Omega$;
 3. $\bigcup \Omega = A$.
 
 A partition is a cover whose blocks are pairwise disjoint.
@@ -426,7 +426,7 @@ A least (greatest) element, if it exists, is unique and is necessarily a minimal
 3. let $C = \{y \mid y \text{ is an upper bound of } B\}$; the least element of $C$ is called the **supremum**, or least upper bound, of $B$;
 4. let $C = \{y \mid y \text{ is a lower bound of } B\}$; the greatest element of $C$ is called the **infimum**, or greatest lower bound, of $B$.
 
-**Example 2.8.1** In the poset $(P(\{a, b\}), \subseteq)$, take $B = \{\{a\}, \{b\}\}$. Then $B$ has neither a least nor a greatest element, and $\{a\}$ and $\{b\}$ are both minimal and maximal elements of $B$. The only upper bound of $B$ is $\{a, b\}$ and the only lower bound is $\emptyset$, so the supremum of $B$ is $\{a, b\}$ and the infimum is $\emptyset$.
+**Example 2.8.1** In the poset $(\mathcal{P}(\{a, b\}), \subseteq)$, take $B = \{\{a\}, \{b\}\}$. Then $B$ has neither a least nor a greatest element, and $\{a\}$ and $\{b\}$ are both minimal and maximal elements of $B$. The only upper bound of $B$ is $\{a, b\}$ and the only lower bound is $\varnothing$, so the supremum of $B$ is $\{a, b\}$ and the infimum is $\varnothing$.
 
 **Definition 2.8.7 (Comparability)** Let $(A, \leq)$ be a poset and $x, y \in A$. If $x \leq y$ or $y \leq x$, then $x$ and $y$ are said to be **comparable**.
 

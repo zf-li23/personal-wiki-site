@@ -12,7 +12,7 @@ title: 随机向量函数的分布、次序统计量、p分位数
   f(x) = \frac{1}{2^{v/2}\Gamma(v/2)} x^{\frac{v}{2}-1} \mathrm{e}^{-\frac{x}{2}}, \quad x \geq 0
   $$
 - **性质**：
-  - 若 $Z_1, \dots, Z_n \overset{\text{i.i.d}}{\sim} N(0,1)$，则 $\sum_{i=1}^n Z_i^2 \sim \chi_n^2$
+  - 若 $Z_1, \dots, Z_n \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则 $\sum_{i=1}^n Z_i^2 \sim \chi_n^2$
   - $\chi_n^2 = \Gamma\left(\frac{n}{2}, \frac{1}{2}\right)$
 
 #### 7.1.1.2. Student's t分布
@@ -21,17 +21,17 @@ title: 随机向量函数的分布、次序统计量、p分位数
   f(x) = \frac{\Gamma\left(\frac{v+1}{2}\right)}{\sqrt{v\pi}\Gamma\left(\frac{v}{2}\right)} \left(1 + \frac{x^2}{v}\right)^{-\frac{v+1}{2}}, \quad x \in \mathbb{R}
   $$
 - **性质**：
-  - 若 $Z \sim N(0,1)$，$X \sim \chi_n^2$ 且独立，则 $T = \frac{Z}{\sqrt{X/n}} \sim t_n$
+  - 若 $Z \sim \mathcal{N}(0,1)$，$X \sim \chi_n^2$ 且独立，则 $T = \frac{Z}{\sqrt{X/n}} \sim t_n$
   - 对称分布，比正态分布重尾
   - $v=1$ 时为 Cauchy 分布
 
 #### 7.1.1.3. F分布
-- **定义**：$X \sim F(m,n)$ 的密度函数为：
+- **定义**：$X \sim F_{m,n}$ 的密度函数为：
   $$
   f(x) = \frac{\Gamma\left(\frac{m+n}{2}\right) m^{m/2} n^{n/2} x^{\frac{m}{2}-1}}{\Gamma\left(\frac{m}{2}\right) \Gamma\left(\frac{n}{2}\right) (mx+n)^{\frac{m+n}{2}}}, \quad x \geq 0
   $$
 - **性质**：
-  - 若 $X \sim \chi_m^2$，$Y \sim \chi_n^2$ 且独立，则 $F = \frac{X/m}{Y/n} \sim F(m,n)$
+  - 若 $X \sim \chi_m^2$，$Y \sim \chi_n^2$ 且独立，则 $F = \frac{X/m}{Y/n} \sim F_{m,n}$
 
 ### 7.1.2. 一般方法：直接求分布
 
@@ -60,7 +60,7 @@ title: 随机向量函数的分布、次序统计量、p分位数
   $$
 
 **例子**  
-设 $X_1, X_2, \dots, X_n$ 独立同分布，且服从 $\mathcal{U}(-1, 1)$。则：
+设 $X_1, X_2, \dots, X_n$ 独立同分布，且服从 $\mathrm{U}(-1, 1)$。则：
 
 1. **$X_1 + X_2$ 的密度函数**为：  
 $$
@@ -153,7 +153,7 @@ $$
 ### 7.2.2. 分布性质
 
 #### 7.2.2.1. 联合密度
-若 $X_1, \dots, X_n \overset{\text{i.i.d}}{\sim} f(x)$，则：
+若 $X_1, \dots, X_n \overset{\text{iid}}{\sim} f(x)$，则：
 $$
 g(x_1, \dots, x_n) = 
 \begin{cases}
@@ -178,11 +178,11 @@ $$
 - **灯泡寿命问题**：灯泡数量增加会缩短首次故障时间
 
 ### 7.2.4. Beta分布
-- **定义**：$X \sim Beta(\alpha, \beta)$ 的密度为：
+- **定义**：$X \sim \mathrm{Beta}(\alpha, \beta)$ 的密度为：
   $$
-  f(x) = \frac{1}{B(\alpha, \beta)} x^{\alpha-1} (1-x)^{\beta-1}, \quad 0 < x < 1
+  f(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} x^{\alpha-1} (1-x)^{\beta-1}, \quad 0 < x < 1
   $$
-  其中 $B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$
+  其中 $\mathrm{B}(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$
 - **特例**：
   - $\alpha = \beta = 1$：均匀分布
   - 与次序统计量的关系：均匀分布的次序统计量服从 Beta 分布
@@ -205,7 +205,7 @@ $$
 6. **连续性情形**：若 $F$ 连续，则 $F(F^{-1}(p)) = p$
 
 ### 7.3.3. 随机变量生成
-**定理**：若 $U \sim U(0,1)$，$F$ 为连续分布函数，则：
+**定理**：若 $U \sim \mathrm{U}(0,1)$，$F$ 为连续分布函数，则：
 $$
 Y = F^{-1}(U) \sim F
 $$
@@ -235,7 +235,7 @@ $$
 - 和的分布：$f_Z(z) = \int_{-\infty}^{\infty} f(x, z-x) \mathrm{d}x$
 - 次序统计量密度：$g_k(x) = n \binom{n-1}{k-1} [F(x)]^{k-1} [1-F(x)]^{n-k} f(x)$
 - p分位数：$\xi_p = F^{-1}(p) = \inf\{x | F(x) \geq p\}$
-- 随机变量生成：$Y = F^{-1}(U)$，其中 $U \sim U(0,1)$
+- 随机变量生成：$Y = F^{-1}(U)$，其中 $U \sim \mathrm{U}(0,1)$
 
 ### 应用技巧
 - **分布推导**：根据问题特点选择CDF法或直接变换法

@@ -1,6 +1,6 @@
 ---
 title: Functions
-source_hash: 884a0e3a724b
+source_hash: e3c85ec1a1b7
 ---
 
 A function is a special kind of **binary relation**: each element of the domain corresponds to exactly one element of the range. Building on the theory of relations from the previous chapter, this chapter defines functions together with injections, surjections and bijections, discusses composition and inverses of functions and the compatibility of functions, then uses the language of functions to introduce open and closed sets of real numbers, and finally passes from characteristic functions to fuzzy subsets. Bijections are the basic tool of the next chapter for comparing the sizes of sets (equinumerosity and cardinal numbers).
@@ -12,7 +12,7 @@ A function is a special kind of **binary relation**: each element of the domain 
 1. for every $x \in \operatorname{dom}(f)$ there is a unique $y \in \operatorname{ran}(f)$ such that $xfy$;
 2. $\operatorname{dom}(f) = A$.
 
-Then $f$ is called a **function** from $A$ to $B$, or we say that $f$ maps $A$ into $B$ (some books also speak of a total function, a map or a transformation), written $f: A \rightarrow B$. In this case, if $xfy$, we write $f: x \mapsto y$ or $f(x) = y$.
+Then $f$ is called a **function** from $A$ to $B$, or we say that $f$ maps $A$ into $B$ (some books also speak of a total function, a map or a transformation), written $f\colon A \rightarrow B$. In this case, if $xfy$, we write $f\colon x \mapsto y$ or $f(x) = y$.
 
 The two conditions on a function can be written as
 
@@ -26,12 +26,12 @@ $$
 **Definition 3.1.2 (The Set of Functions from $A$ to $B$)** For sets $A$ and $B$, the set of all functions from $A$ to $B$ is written ${}^{A}B$ (some books write $B^A$); that is,
 
 $$
-{}^{A}B = \{f \mid f: A \rightarrow B\}.
+{}^{A}B = \{f \mid f\colon A \rightarrow B\}.
 $$
 
 If $A$ and $B$ are finite sets with $|A| = m$ and $|B| = n$, then $|{}^{A}B| = n^m$.
 
-**Definition 3.1.3 (Image and Preimage)** Let $f: A \rightarrow B$, $A_1 \subseteq A$ and $B_1 \subseteq B$. The **image** $f[A_1]$ of $A_1$ under $f$ and the **preimage** (inverse image) $f^{-1}[B_1]$ of $B_1$ under $f$ are defined by
+**Definition 3.1.3 (Image and Preimage)** Let $f\colon A \rightarrow B$, $A_1 \subseteq A$ and $B_1 \subseteq B$. The **image** $f[A_1]$ of $A_1$ under $f$ and the **preimage** (inverse image) $f^{-1}[B_1]$ of $B_1$ under $f$ are defined by
 
 $$
 \begin{aligned}
@@ -42,35 +42,35 @@ $$
 
 $f[A]$ is called the image of the function $f$.
 
-**Definition 3.1.4 (Surjection, Injection and Bijection)** Let $f: A \rightarrow B$.
+**Definition 3.1.4 (Surjection, Injection and Bijection)** Let $f\colon A \rightarrow B$.
 
 1. If $\operatorname{ran}(f) = B$, then $f$ is said to be surjective, or a **surjection**, or to map $A$ onto $B$;
 2. if $f(x_1) \neq f(x_2)$ for all $x_1, x_2 \in A$ with $x_1 \neq x_2$, then $f$ is said to be injective, or an **injection**, or one-to-one;
 3. if $f$ is both surjective and injective, then $f$ is said to be bijective, or a one-to-one correspondence between $A$ and $B$, or simply a **bijection**.
 
-**Example 3.1.1** Let $f, g, h: \mathbb{N} \rightarrow \mathbb{N}$ with $f(n) = 2n$, $g(n) = \lfloor n/2 \rfloor$ and $h(n) = n + (-1)^n$ (which swaps $0$ and $1$, $2$ and $3$, and so on). Then $f$ is injective but not surjective (the odd numbers are not in its range); $g$ is surjective but not injective ($g(0) = g(1) = 0$); and $h$ is bijective.
+**Example 3.1.1** Let $f, g, h\colon \mathbb{N} \rightarrow \mathbb{N}$ with $f(n) = 2n$, $g(n) = \lfloor n/2 \rfloor$ and $h(n) = n + (-1)^n$ (which swaps $0$ and $1$, $2$ and $3$, and so on). Then $f$ is injective but not surjective (the odd numbers are not in its range); $g$ is surjective but not injective ($g(0) = g(1) = 0$); and $h$ is bijective.
 
-**Definition 3.1.5 (Constant Function)** Let $f: A \rightarrow B$. If there is a $y \in B$ such that $f(x) = y$ for all $x \in A$, that is, $f[A] = \{y\}$, then $f$ is called a **constant function**.
+**Definition 3.1.5 (Constant Function)** Let $f\colon A \rightarrow B$. If there is a $y \in B$ such that $f(x) = y$ for all $x \in A$, that is, $f[A] = \{y\}$, then $f$ is called a **constant function**.
 
-**Definition 3.1.6 (Identity Function)** The identity relation $I_A: A \rightarrow A$ on $A$ is called the **identity function** on $A$. For every $x \in A$, $I_A(x) = x$.
+**Definition 3.1.6 (Identity Function)** The identity relation $I_A\colon A \rightarrow A$ on $A$ is called the **identity function** on $A$. For every $x \in A$, $I_A(x) = x$.
 
-**Definition 3.1.7 (Monotone Function)** Let $f: \mathbb{R} \rightarrow \mathbb{R}$. If $x \leq y \rightarrow f(x) \leq f(y)$ for all $x, y \in \mathbb{R}$, then $f$ is called **monotonically increasing**; if $x < y \rightarrow f(x) < f(y)$, then $f$ is called **strictly increasing**. Monotonically decreasing and strictly decreasing functions are defined similarly.
+**Definition 3.1.7 (Monotone Function)** Let $f\colon \mathbb{R} \rightarrow \mathbb{R}$. If $x \leq y \rightarrow f(x) \leq f(y)$ for all $x, y \in \mathbb{R}$, then $f$ is called **monotonically increasing**; if $x < y \rightarrow f(x) < f(y)$, then $f$ is called **strictly increasing**. Monotonically decreasing and strictly decreasing functions are defined similarly.
 
-**Definition 3.1.8 ($n$-ary Operation)** For a set $A$ and $n \in \mathbb{N}$, a function $f: A^n \rightarrow A$ is called an **$n$-ary operation** on $A$, where $A^n$ is the $n$-fold Cartesian product of $A$.
+**Definition 3.1.8 ($n$-ary Operation)** For a set $A$ and $n \in \mathbb{N}$, a function $f\colon A^n \rightarrow A$ is called an **$n$-ary operation** on $A$, where $A^n$ is the $n$-fold Cartesian product of $A$.
 
-**Definition 3.1.9 (Functional)** Let $A, B, C$ be sets and let ${}^{B}C$ be the set of all functions from $B$ to $C$. A function $F: A \rightarrow {}^{B}C$ is called a **functional** (sometimes a function $G: {}^{B}C \rightarrow A$ is also called a functional).
+**Definition 3.1.9 (Functional)** Let $A, B, C$ be sets and let ${}^{B}C$ be the set of all functions from $B$ to $C$. A function $F\colon A \rightarrow {}^{B}C$ is called a **functional** (sometimes a function $G\colon {}^{B}C \rightarrow A$ is also called a functional).
 
 **Definition 3.1.10 (Characteristic Function of a Set)** Let $E$ be the universal set. For every $A \subseteq E$, the **characteristic function** (also called the indicator function) $\chi_A$ of $A$ is defined by
 
 $$
-\chi_A: E \rightarrow \{0, 1\}, \qquad \chi_A(a) =
+\chi_A\colon E \rightarrow \{0, 1\}, \qquad \chi_A(a) =
 \begin{cases}
 1, & a \in A, \\
 0, & a \notin A.
 \end{cases}
 $$
 
-**Definition 3.1.11 (Canonical Map)** Let $R$ be an equivalence relation on $A$, and let $g: A \rightarrow A/R$ be given by $g(a) = [a]_R$. Then $g$ is called the **canonical map** (or natural map) from $A$ to the quotient set $A/R$.
+**Definition 3.1.11 (Canonical Map)** Let $R$ be an equivalence relation on $A$, and let $g\colon A \rightarrow A/R$ be given by $g(a) = [a]_R$. Then $g$ is called the **canonical map** (or natural map) from $A$ to the quotient set $A/R$.
 
 **Axiom of choice** (first form). For every relation $R$ there is a function $f$ such that
 
@@ -84,18 +84,18 @@ This is the tenth axiom of **Zermelo–Fraenkel set theory** listed in [Section 
 
 Composition of functions is composition of relations (Definition 2.3.1), and the inverse of a function is its inverse as a relation.
 
-**Theorem 3.2.1 (Composition of Functions)** Let $g: A \rightarrow B$ and $f: B \rightarrow C$. Then
+**Theorem 3.2.1 (Composition of Functions)** Let $g\colon A \rightarrow B$ and $f\colon B \rightarrow C$. Then
 
-1. $f \circ g$ is a function $f \circ g: A \rightarrow C$;
+1. $f \circ g$ is a function $f \circ g\colon A \rightarrow C$;
 2. $(f \circ g)(x) = f(g(x))$ for every $x \in A$.
 
-**Theorem 3.2.2 (Properties of Composition, I)** Let $g: A \rightarrow B$ and $f: B \rightarrow C$.
+**Theorem 3.2.2 (Properties of Composition, I)** Let $g\colon A \rightarrow B$ and $f\colon B \rightarrow C$.
 
 1. If $f$ and $g$ are surjective, then $f \circ g$ is surjective;
 2. if $f$ and $g$ are injective, then $f \circ g$ is injective;
 3. if $f$ and $g$ are bijective, then $f \circ g$ is bijective.
 
-**Theorem 3.2.3 (Properties of Composition, II)** Let $g: A \rightarrow B$ and $f: B \rightarrow C$.
+**Theorem 3.2.3 (Properties of Composition, II)** Let $g\colon A \rightarrow B$ and $f\colon B \rightarrow C$.
 
 1. If $f \circ g$ is surjective, then $f$ is surjective;
 2. if $f \circ g$ is injective, then $g$ is injective;
@@ -105,56 +105,56 @@ Composition of functions is composition of relations (Definition 2.3.1), and the
 
 These conclusions cannot be strengthened: take $A = C = \{0\}$, $B = \{0, 1\}$, $g(0) = 0$ and $f(0) = f(1) = 0$. Then $f \circ g = I_{\{0\}}$ is a bijection, but $f$ is not injective and $g$ is not surjective.
 
-**Theorem 3.2.4** If $f: A \rightarrow B$, then $f = f \circ I_A = I_B \circ f$.
+**Theorem 3.2.4** If $f\colon A \rightarrow B$, then $f = f \circ I_A = I_B \circ f$.
 
-**Theorem 3.2.5 (Inverse of a Function)** If $f: A \rightarrow B$ is bijective, then $f^{-1}$ is a function $f^{-1}: B \rightarrow A$.
+**Theorem 3.2.5 (Inverse of a Function)** If $f\colon A \rightarrow B$ is bijective, then $f^{-1}$ is a function $f^{-1}\colon B \rightarrow A$.
 
-**Definition 3.2.1 (Inverse Function)** If $f: A \rightarrow B$ is bijective, then $f^{-1}: B \rightarrow A$ is called the inverse function of $f$.
+**Definition 3.2.1 (Inverse Function)** If $f\colon A \rightarrow B$ is bijective, then $f^{-1}\colon B \rightarrow A$ is called the inverse function of $f$.
 
-**Theorem 3.2.6** If $f: A \rightarrow B$ is bijective, then $f^{-1}: B \rightarrow A$ is bijective.
+**Theorem 3.2.6** If $f\colon A \rightarrow B$ is bijective, then $f^{-1}\colon B \rightarrow A$ is bijective.
 
-**Theorem 3.2.7** If $f: A \rightarrow B$ is bijective, then $f^{-1}(f(x)) = x$ for every $x \in A$ and $f(f^{-1}(y)) = y$ for every $y \in B$; that is, $f^{-1} \circ f = I_A$ and $f \circ f^{-1} = I_B$.
+**Theorem 3.2.7** If $f\colon A \rightarrow B$ is bijective, then $f^{-1}(f(x)) = x$ for every $x \in A$ and $f(f^{-1}(y)) = y$ for every $y \in B$; that is, $f^{-1} \circ f = I_A$ and $f \circ f^{-1} = I_B$.
 
-**Definition 3.2.2 (Left Inverse and Right Inverse)** Let $f: A \rightarrow B$ and $g: B \rightarrow A$. If $g \circ f = I_A$, then $g$ is called a **left inverse** of $f$; if $f \circ g = I_B$, then $g$ is called a **right inverse** of $f$.
+**Definition 3.2.2 (Left Inverse and Right Inverse)** Let $f\colon A \rightarrow B$ and $g\colon B \rightarrow A$. If $g \circ f = I_A$, then $g$ is called a **left inverse** of $f$; if $f \circ g = I_B$, then $g$ is called a **right inverse** of $f$.
 
-**Theorem 3.2.8** Let $f: A \rightarrow B$ with $A \neq \emptyset$. Then
+**Theorem 3.2.8** Let $f\colon A \rightarrow B$ with $A \neq \varnothing$. Then
 
 1. $f$ has a left inverse if and only if $f$ is injective;
 2. $f$ has a right inverse if and only if $f$ is surjective;
 3. $f$ has both a left inverse and a right inverse if and only if $f$ is bijective;
 4. if $f$ is bijective, then its left inverse equals its right inverse (both equal $f^{-1}$).
 
-The necessity in (1) and (2) follows at once from Theorem 3.2.3. Sufficiency in (1): fix $a_0 \in A$ and let $g(y) = f^{-1}(y)$ for $y \in \operatorname{ran}(f)$ (uniquely determined because $f$ is injective) and $g(y) = a_0$ for $y \notin \operatorname{ran}(f)$; this is where $A \neq \emptyset$ is used. Sufficiency in (2) requires choosing, for each $y \in B$, an element of the nonempty set $f^{-1}[\{y\}]$ as $g(y)$, which needs the **axiom of choice**. (4): if $g$ is a left inverse and $h$ a right inverse, then $g = g \circ I_B = g \circ (f \circ h) = (g \circ f) \circ h = I_A \circ h = h$.
+The necessity in (1) and (2) follows at once from Theorem 3.2.3. Sufficiency in (1): fix $a_0 \in A$ and let $g(y) = f^{-1}(y)$ for $y \in \operatorname{ran}(f)$ (uniquely determined because $f$ is injective) and $g(y) = a_0$ for $y \notin \operatorname{ran}(f)$; this is where $A \neq \varnothing$ is used. Sufficiency in (2) requires choosing, for each $y \in B$, an element of the nonempty set $f^{-1}[\{y\}]$ as $g(y)$, which needs the **axiom of choice**. (4): if $g$ is a left inverse and $h$ a right inverse, then $g = g \circ I_B = g \circ (f \circ h) = (g \circ f) \circ h = I_A \circ h = h$.
 
 ## 3.3. Properties of Functions
 
-**Definition 3.3.1 (Compatible Functions)** Let $f: A \rightarrow B$ and $g: C \rightarrow D$. If $f(x) = g(x)$ for every $x \in A \cap C$, then $f$ and $g$ are said to be **compatible**.
+**Definition 3.3.1 (Compatible Functions)** Let $f\colon A \rightarrow B$ and $g\colon C \rightarrow D$. If $f(x) = g(x)$ for every $x \in A \cap C$, then $f$ and $g$ are said to be **compatible**.
 
 **Definition 3.3.2 (Compatible Sets of Functions)** Let $\mathcal{C}$ be a set of functions. If any two functions in $\mathcal{C}$ are compatible, then $\mathcal{C}$ is said to be compatible.
 
-**Theorem 3.3.1** Let $f: A \rightarrow B$ and $g: C \rightarrow D$. Then $f$ and $g$ are compatible if and only if $f \cup g$ is a function.
+**Theorem 3.3.1** Let $f\colon A \rightarrow B$ and $g\colon C \rightarrow D$. Then $f$ and $g$ are compatible if and only if $f \cup g$ is a function.
 
-**Theorem 3.3.2** Let $f: A \rightarrow B$ and $g: C \rightarrow D$. Then $f$ and $g$ are compatible if and only if
+**Theorem 3.3.2** Let $f\colon A \rightarrow B$ and $g\colon C \rightarrow D$. Then $f$ and $g$ are compatible if and only if
 
 $$
 f \upharpoonright (A \cap C) = g \upharpoonright (A \cap C).
 $$
 
-**Theorem 3.3.3** Let $\mathcal{C}$ be a set of functions. If $\mathcal{C}$ is compatible and $F = \bigcup \mathcal{C}$, then $F$ is a function $F: \operatorname{dom}(F) \rightarrow \operatorname{ran}(F)$, and
+**Theorem 3.3.3** Let $\mathcal{C}$ be a set of functions. If $\mathcal{C}$ is compatible and $F = \bigcup \mathcal{C}$, then $F$ is a function $F\colon \operatorname{dom}(F) \rightarrow \operatorname{ran}(F)$, and
 
 $$
 \operatorname{dom}(F) = \textstyle\bigcup \{\operatorname{dom}(f) \mid f \in \mathcal{C}\}.
 $$
 
-**Definition 3.3.3 (Compatibility of a Relation with a Function)** Let $R$ be an equivalence relation on $A$ and $f: A \rightarrow A$. If $\langle x, y \rangle \in R \Rightarrow \langle f(x), f(y) \rangle \in R$ for all $x, y \in A$, then the relation $R$ and the function $f$ are said to be compatible.
+**Definition 3.3.3 (Compatibility of a Relation with a Function)** Let $R$ be an equivalence relation on $A$ and $f\colon A \rightarrow A$. If $\langle x, y \rangle \in R \Rightarrow \langle f(x), f(y) \rangle \in R$ for all $x, y \in A$, then the relation $R$ and the function $f$ are said to be compatible.
 
-**Theorem 3.3.4** Let $R$ be an equivalence relation on $A$ and $f: A \rightarrow A$. If $R$ and $f$ are compatible, then there is a unique function $F: A/R \rightarrow A/R$ with $F([x]_R) = [f(x)]_R$; if $R$ and $f$ are not compatible, then no such function $F$ exists.
+**Theorem 3.3.4** Let $R$ be an equivalence relation on $A$ and $f\colon A \rightarrow A$. If $R$ and $f$ are compatible, then there is a unique function $F\colon A/R \rightarrow A/R$ with $F([x]_R) = [f(x)]_R$; if $R$ and $f$ are not compatible, then no such function $F$ exists.
 
 Compatibility guarantees that the definition of $F$ does not depend on the choice of representatives. For example, let $R$ be congruence modulo $3$ on $\mathbb{Z}$. The function $f(x) = x + 1$ is compatible with $R$ and induces $F([x]) = [x + 1]$; but $f(x) = \lfloor x/2 \rfloor$ is not compatible with $R$, because $0 R 3$ while $f(0) = 0$ and $f(3) = 1$ are not congruent.
 
 ## 3.4. Open Sets and Closed Sets
 
-**Definition 3.4.1 (Distance)** On the set $\mathbb{R}$ of real numbers, define $\rho: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ by $\rho(\langle x, y \rangle) = |x - y|$, where $|x - y|$ is the absolute value of $x - y$; $\rho$ is called the **distance function** on $\mathbb{R}$. For every $\langle x, y \rangle \in \mathbb{R} \times \mathbb{R}$, $\rho(\langle x, y \rangle)$ is called the distance between $x$ and $y$, also written $\rho(x, y) = |x - y|$.
+**Definition 3.4.1 (Distance)** On the set $\mathbb{R}$ of real numbers, define $\rho\colon \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ by $\rho(\langle x, y \rangle) = |x - y|$, where $|x - y|$ is the absolute value of $x - y$; $\rho$ is called the **distance function** on $\mathbb{R}$. For every $\langle x, y \rangle \in \mathbb{R} \times \mathbb{R}$, $\rho(\langle x, y \rangle)$ is called the distance between $x$ and $y$, also written $\rho(x, y) = |x - y|$.
 
 **Definition 3.4.2 (Neighborhood)** Let $x_0 \in \mathbb{R}$, and let $\varepsilon \in \mathbb{R}$ with $\varepsilon > 0$. The **$\varepsilon$-neighborhood** of $x_0$ is the set
 
@@ -199,28 +199,28 @@ The word "finitely" cannot be dropped: the intersection of the open sets $(-1/n,
 
 ## 3.5. Fuzzy Subsets
 
-**Theorem 3.5.1 (Properties of Characteristic Functions)** Let $E$ be the **domain of discourse** (the universal set), $A \subseteq E$ and $B \subseteq E$; let $+$, $-$ and $\cdot$ denote arithmetic addition, subtraction and multiplication, and let $\bar{A} = E - A$ be the absolute complement of $A$. Then (items 5–8 hold for every $x \in E$):
+**Theorem 3.5.1 (Properties of Characteristic Functions)** Let $E$ be the **domain of discourse** (the universal set), $A \subseteq E$ and $B \subseteq E$; let $+$, $-$ and $\cdot$ denote arithmetic addition, subtraction and multiplication, and let $A^{\mathsf c} = E - A$ be the absolute complement of $A$. Then (items 5–8 hold for every $x \in E$):
 
-1. $(\forall x)(\chi_A(x) = 0) \Leftrightarrow A = \emptyset$;
+1. $(\forall x)(\chi_A(x) = 0) \Leftrightarrow A = \varnothing$;
 2. $(\forall x)(\chi_A(x) = 1) \Leftrightarrow A = E$;
 3. $(\forall x)(\chi_A(x) \leq \chi_B(x)) \Leftrightarrow A \subseteq B$;
 4. $(\forall x)(\chi_A(x) = \chi_B(x)) \Leftrightarrow A = B$;
 5. $\chi_{A \cap B}(x) = \chi_A(x) \cdot \chi_B(x)$;
 6. $\chi_{A \cup B}(x) = \chi_A(x) + \chi_B(x) - \chi_{A \cap B}(x)$;
 7. $\chi_{A - B}(x) = \chi_A(x) - \chi_{A \cap B}(x)$;
-8. $\chi_{\bar{A}}(x) = 1 - \chi_A(x)$.
+8. $\chi_{A^{\mathsf c}}(x) = 1 - \chi_A(x)$.
 
 An ordinary subset is completely determined by its characteristic function, which takes values in $\{0, 1\}$. Allowing the values to range over the whole interval $[0, 1]$ gives fuzzy subsets.
 
-**Definition 3.5.1 (Fuzzy Subset and Membership Function)** Let $E$ be a domain of discourse. A **fuzzy subset** $A$ of $E$ is given by a function $\mu_A: E \rightarrow [0, 1]$, where $\mu_A(x)$ expresses the degree to which $x$ belongs to $A$; $\mu_A$ is called the **membership function** of $A$. The set of all fuzzy subsets of $E$ is written $F(E)$.
+**Definition 3.5.1 (Fuzzy Subset and Membership Function)** Let $E$ be a domain of discourse. A **fuzzy subset** $A$ of $E$ is given by a function $\mu_A\colon E \rightarrow [0, 1]$, where $\mu_A(x)$ expresses the degree to which $x$ belongs to $A$; $\mu_A$ is called the **membership function** of $A$. The set of all fuzzy subsets of $E$ is written $F(E)$.
 
-**Definition 3.5.2 (Operations on Fuzzy Subsets)** Let $E$ be the universal set and $A, B \in F(E)$. The fuzzy subsets $A \cup B$, $A \cap B$ and $\bar{A}$ with the following membership functions are called the union and the intersection of $A$ and $B$ and the absolute complement of $A$, respectively:
+**Definition 3.5.2 (Operations on Fuzzy Subsets)** Let $E$ be the universal set and $A, B \in F(E)$. The fuzzy subsets $A \cup B$, $A \cap B$ and $A^{\mathsf c}$ with the following membership functions are called the union and the intersection of $A$ and $B$ and the absolute complement of $A$, respectively:
 
 $$
 \begin{aligned}
 \mu_{A \cup B}(x) &= \max(\mu_A(x), \mu_B(x)), \\
 \mu_{A \cap B}(x) &= \min(\mu_A(x), \mu_B(x)), \\
-\mu_{\bar{A}}(x) &= 1 - \mu_A(x).
+\mu_{A^{\mathsf c}}(x) &= 1 - \mu_A(x).
 \end{aligned}
 $$
 
@@ -252,6 +252,6 @@ where $\sup$ denotes the **supremum**.
 
 Indeed, when $\lambda \leq \mu_A(u)$ we have $u \in A_\lambda$ and $\min(\lambda, \chi_{A_\lambda}(u)) = \lambda$; when $\lambda > \mu_A(u)$ this value is $0$. Hence the right-hand side equals $\sup\{\lambda \mid \lambda \leq \mu_A(u)\} = \mu_A(u)$. The decomposition theorem shows that a fuzzy subset is determined by the family of all its cuts.
 
-**Definition 3.5.4 (Support, Core, Boundary and Normal Fuzzy Set)** Let $E$ be the universal set and $A \in F(E)$. The set $\operatorname{supp} A = \{u \mid u \in E \land \mu_A(u) > 0\}$ is called the **support** of $A$, the cut $A_1$ is called the core of $A$, and $(\operatorname{supp} A) - A_1$ is called the boundary of $A$. If $A_1 \neq \emptyset$, then $A$ is called a **normal fuzzy set**; if $A_1 = \emptyset$, then $A$ is called a subnormal fuzzy set.
+**Definition 3.5.4 (Support, Core, Boundary and Normal Fuzzy Set)** Let $E$ be the universal set and $A \in F(E)$. The set $\operatorname{supp} A = \{u \mid u \in E \land \mu_A(u) > 0\}$ is called the **support** of $A$, the cut $A_1$ is called the core of $A$, and $(\operatorname{supp} A) - A_1$ is called the boundary of $A$. If $A_1 \neq \varnothing$, then $A$ is called a **normal fuzzy set**; if $A_1 = \varnothing$, then $A$ is called a subnormal fuzzy set.
 
 The elements of the core $A_1$ belong to $A$ fully, while the elements of the boundary belong to $A$ only partially.

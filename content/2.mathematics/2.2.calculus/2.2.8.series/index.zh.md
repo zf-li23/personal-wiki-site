@@ -49,4 +49,4 @@ title: 级数
 -   **傅里叶级数**：$f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos nx + b_n \sin nx)$。
 -   **收敛定理**（狄利克雷充分条件）：分段单调且仅有有限个第一类间断点的周期函数，其傅里叶级数收敛于该点左右极限的平均值。
 -   **正弦级数与余弦级数**：奇函数展开为正弦级数；偶函数展开为余弦级数。
--   **复数形式**：$f(x) \sim \sum_{n=-\infty}^{\infty} c_n \mathrm{e}^{inx}$，其中 $c_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \mathrm{e}^{-inx} \mathrm{d}x$。
+-   **复数形式**：$f(x) \sim \sum_{n=-\infty}^{\infty} c_n \mathrm{e}^{\mathrm{i}nx}$，其中 $c_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) \mathrm{e}^{-\mathrm{i}nx} \mathrm{d}x$。

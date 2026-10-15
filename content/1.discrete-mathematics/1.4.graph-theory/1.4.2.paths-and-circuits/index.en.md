@@ -1,6 +1,6 @@
 ---
 title: Paths and Cycles
-source_hash: 6bcecc8878e6
+source_hash: "240322952817"
 ---
 
 Walks, paths and cycles are the most basic structures in graph theory. In this chapter we first define walks, closed walks and connectivity in directed and undirected graphs, and present matrix methods and search methods for deciding whether a walk exists. We then discuss two classical traversal problems and the conditions under which they can be solved: Eulerian circuits, which traverse every edge, and Hamiltonian cycles, which visit every vertex. Finally we turn to optimization problems involving paths: the traveling salesman problem, shortest paths, critical paths and the Chinese postman problem.
@@ -221,7 +221,7 @@ Step 3: since $G$ is connected and $l < n$, some vertex $v_t$ not on $C$ is adja
 
 The *traveling salesman problem* (TSP) is the following: given $n$ cities and the distances between every two of them (that is, a positively weighted complete graph), find a shortest closed tour that visits every city exactly once and returns to the start, in other words a shortest $H$ cycle.
 
-The complete graph $K_n$ ($n \ge 3$) has $\frac{1}{2}(n-1)!$ distinct $H$ cycles. By Stirling's formula $n! \approx \sqrt{2\pi n}\left(\frac{n}{e}\right)^n$, this number grows faster than any exponential: for $n = 26$ there are already about $7.8 \times 10^{24}$ of them, and even a supercomputer would need an extremely long time to enumerate them one by one. Exhaustive enumeration is therefore infeasible.
+The complete graph $K_n$ ($n \ge 3$) has $\frac{1}{2}(n-1)!$ distinct $H$ cycles. By Stirling's formula $n! \approx \sqrt{2\pi n}\left(\frac{n}{\mathrm{e}}\right)^n$, this number grows faster than any exponential: for $n = 26$ there are already about $7.8 \times 10^{24}$ of them, and even a supercomputer would need an extremely long time to enumerate them one by one. Exhaustive enumeration is therefore infeasible.
 
 ### 2.5.2. Branch and Bound
 

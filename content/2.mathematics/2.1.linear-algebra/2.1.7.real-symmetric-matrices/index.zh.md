@@ -10,13 +10,13 @@ title: 实对称矩阵
 
 **命题 7.1.1** 实对称矩阵的特征值都是实数。
 
-**证明** 设 $n$ 阶实对称矩阵 $A$ 有特征值 $\lambda\in\mathbb{C}$ 和特征向量 $\boldsymbol{x}=[x_i]\in\mathbb{C}^n$，$A\boldsymbol{x}=\lambda\boldsymbol{x}$。两端取共轭再转置，由 $\bar A=A$、$A^{\mathsf T}=A$ 得 $\bar{\boldsymbol{x}}^{\mathsf T}A=\bar\lambda\,\bar{\boldsymbol{x}}^{\mathsf T}$。于是
+**证明** 设 $n$ 阶实对称矩阵 $A$ 有特征值 $\lambda\in\mathbb{C}$ 和特征向量 $\boldsymbol{x}=[x_i]\in\mathbb{C}^n$，$A\boldsymbol{x}=\lambda\boldsymbol{x}$。两端取共轭转置，由 $\bar A=A$、$A^{\mathsf T}=A$ 得 $\boldsymbol{x}^{\mathsf H}A=\bar\lambda\,\boldsymbol{x}^{\mathsf H}$。于是
 
 $$
-\lambda\,\bar{\boldsymbol{x}}^{\mathsf T}\boldsymbol{x}=\bar{\boldsymbol{x}}^{\mathsf T}A\boldsymbol{x}=\bar\lambda\,\bar{\boldsymbol{x}}^{\mathsf T}\boldsymbol{x},
+\lambda\,\boldsymbol{x}^{\mathsf H}\boldsymbol{x}=\boldsymbol{x}^{\mathsf H}A\boldsymbol{x}=\bar\lambda\,\boldsymbol{x}^{\mathsf H}\boldsymbol{x},
 $$
 
-而 $\bar{\boldsymbol{x}}^{\mathsf T}\boldsymbol{x}=\sum_{i=1}^n|x_i|^2>0$，故 $\lambda=\bar\lambda$。$\square$
+而 $\boldsymbol{x}^{\mathsf H}\boldsymbol{x}=\sum_{i=1}^n|x_i|^2>0$，故 $\lambda=\bar\lambda$。$\square$
 
 由于 $\lambda$ 是实数，$\lambda I-A$ 是实矩阵，齐次方程组 $(\lambda I-A)\boldsymbol{x}=\boldsymbol{0}$ 有非零实解，所以实对称矩阵的特征向量都可以取为实向量。下文的特征向量均指实特征向量。
 
@@ -58,7 +58,7 @@ $$
 
 由命题 7.1.2，不同特征子空间自动正交，所以第 2 步只需在每个特征子空间内部正交化。
 
-**例 7.1.1** 求 $A=\begin{bmatrix}4&2&2\\2&4&2\\2&2&4\end{bmatrix}$ 的谱分解。$A=2I+2\boldsymbol{e}\boldsymbol{e}^{\mathsf T}$，其中 $\boldsymbol{e}=[1\ 1\ 1]^{\mathsf T}$，所以特征值为 $8$（特征向量 $\boldsymbol{e}$）和二重的 $2$（特征子空间是 $x_1+x_2+x_3=0$）。在后者中取基 $[-1\ 1\ 0]^{\mathsf T},[-1\ 0\ 1]^{\mathsf T}$，正交化并单位化，得
+**例 7.1.1** 求 $A=\begin{bmatrix}4&2&2\\2&4&2\\2&2&4\end{bmatrix}$ 的谱分解。$A=2I+2\boldsymbol{1}\boldsymbol{1}^{\mathsf T}$，其中 $\boldsymbol{1}=[1\ 1\ 1]^{\mathsf T}$，所以特征值为 $8$（特征向量 $\boldsymbol{1}$）和二重的 $2$（特征子空间是 $x_1+x_2+x_3=0$）。在后者中取基 $[-1\ 1\ 0]^{\mathsf T},[-1\ 0\ 1]^{\mathsf T}$，正交化并单位化，得
 
 $$
 Q=\begin{bmatrix}\frac{1}{\sqrt3}&-\frac{1}{\sqrt2}&-\frac{1}{\sqrt6}\\ \frac{1}{\sqrt3}&\frac{1}{\sqrt2}&-\frac{1}{\sqrt6}\\ \frac{1}{\sqrt3}&0&\frac{2}{\sqrt6}\end{bmatrix},\qquad \Lambda=\operatorname{diag}(8,2,2),\qquad A=Q\Lambda Q^{\mathsf T}.
@@ -104,7 +104,7 @@ $$
 
 所以 $\boldsymbol{x}^{\mathsf T}A\boldsymbol{x}$ 也常称为能量函数。
 
-**例 7.2.1（Hesse 矩阵）** 设 $f:\mathbb{R}^n\to\mathbb{R}$ 在 $\boldsymbol{x}_0$ 附近三阶连续可微，则由多元函数的**泰勒公式**，在 $\boldsymbol{x}_0$ 的半径为 $\rho$ 的小邻域内
+**例 7.2.1（Hesse 矩阵）** 设 $f\colon \mathbb{R}^n\to\mathbb{R}$ 在 $\boldsymbol{x}_0$ 附近三阶连续可微，则由多元函数的**泰勒公式**，在 $\boldsymbol{x}_0$ 的半径为 $\rho$ 的小邻域内
 
 $$
 f(\boldsymbol{x})=f(\boldsymbol{x}_0)+\nabla f(\boldsymbol{x}_0)^{\mathsf T}(\boldsymbol{x}-\boldsymbol{x}_0)+\tfrac12(\boldsymbol{x}-\boldsymbol{x}_0)^{\mathsf T}H(\boldsymbol{x}_0)(\boldsymbol{x}-\boldsymbol{x}_0)+o(\rho^2),
@@ -276,7 +276,7 @@ $$
 X^{\mathsf T}AX=J=\begin{bmatrix}I_p&&\\&-I_{r-p}&\\&&O\end{bmatrix},
 $$
 
-其中 $r=\operatorname{rank}A$，$0\le p\le r$。$J$ 称为 $A$ 的合同标准形。
+其中 $r=\operatorname{rank}(A)$，$0\le p\le r$。$J$ 称为 $A$ 的合同标准形。
 
 **证明** 由谱分解，存在正交矩阵 $Q$ 使 $Q^{\mathsf T}AQ=\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_n)$，并把特征值排成 $\lambda_1,\dots,\lambda_p>0$，$\lambda_{p+1},\dots,\lambda_r<0$，$\lambda_{r+1}=\cdots=\lambda_n=0$。令 $Y=\operatorname{diag}\big(|\lambda_1|^{-1/2},\dots,|\lambda_r|^{-1/2},1,\dots,1\big)$，则 $Y^{\mathsf T}\Lambda Y=J$。取 $X=QY$ 即可。$\square$
 
@@ -308,7 +308,7 @@ $$
 
 ## 7.4. 奇异值分解
 
-$m\times n$ 矩阵没有特征值，但 $A^{\mathsf T}A$（$n$ 阶）与 $AA^{\mathsf T}$（$m$ 阶）都是对称半正定矩阵，可以做谱分解。由 $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$ 得 $\operatorname{rank}A=\operatorname{rank}A^{\mathsf T}A=\operatorname{rank}AA^{\mathsf T}$，记为 $r$；于是二者的特征值都非负，且各有 $r$ 个正特征值（计重数）。
+$m\times n$ 矩阵没有特征值，但 $A^{\mathsf T}A$（$n$ 阶）与 $AA^{\mathsf T}$（$m$ 阶）都是对称半正定矩阵，可以做谱分解。由 $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$ 得 $\operatorname{rank}(A)=\operatorname{rank}(A^{\mathsf T}A)=\operatorname{rank}(AA^{\mathsf T})$，记为 $r$；于是二者的特征值都非负，且各有 $r$ 个正特征值（计重数）。
 
 **命题 7.4.1** $A^{\mathsf T}A$ 与 $AA^{\mathsf T}$ 有相同的正特征值（计重数），且对应的特征向量可以相互导出。
 
@@ -320,7 +320,7 @@ $m\times n$ 矩阵没有特征值，但 $A^{\mathsf T}A$（$n$ 阶）与 $AA^{\m
 
 这时 $A^{\mathsf T}A\boldsymbol{x}=\sigma^2\boldsymbol{x}$，$AA^{\mathsf T}\boldsymbol{y}=\sigma^2\boldsymbol{y}$：右奇异向量是 $A^{\mathsf T}A$ 的特征向量，左奇异向量是 $AA^{\mathsf T}$ 的特征向量，奇异值是对应特征值的算术平方根。
 
-**定理 7.4.1（奇异值分解）** 设 $A$ 是 $m\times n$ 实矩阵，$\operatorname{rank}A=r$，则存在 $m$ 阶正交矩阵 $U$ 和 $n$ 阶正交矩阵 $V$，使得 $A=U\Sigma V^{\mathsf T}$，其中
+**定理 7.4.1（奇异值分解）** 设 $A$ 是 $m\times n$ 实矩阵，$\operatorname{rank}(A)=r$，则存在 $m$ 阶正交矩阵 $U$ 和 $n$ 阶正交矩阵 $V$，使得 $A=U\Sigma V^{\mathsf T}$，其中
 
 $$
 \Sigma=\begin{bmatrix}\Sigma_r&O\\O&O\end{bmatrix}_{m\times n},\qquad \Sigma_r=\operatorname{diag}(\sigma_1,\dots,\sigma_r),\qquad \sigma_1\ge\sigma_2\ge\cdots\ge\sigma_r>0.
@@ -380,7 +380,7 @@ SVD 是数据分析中最常用的矩阵分解。秩一展开中各项按 $\sigm
 
 ## 7.5. Moore–Penrose 广义逆
 
-**定义 7.5.1（Moore–Penrose 广义逆）** 设 $A\in\mathbb{R}^{m\times n}$，$\operatorname{rank}A=r$，有简化奇异值分解 $A=U_r\Sigma_rV_r^{\mathsf T}$。矩阵
+**定义 7.5.1（Moore–Penrose 广义逆）** 设 $A\in\mathbb{R}^{m\times n}$，$\operatorname{rank}(A)=r$，有简化奇异值分解 $A=U_r\Sigma_rV_r^{\mathsf T}$。矩阵
 
 $$
 A^+=V_r\Sigma_r^{-1}U_r^{\mathsf T}\in\mathbb{R}^{n\times m}
@@ -448,25 +448,25 @@ $$
 
 **证明** 1、2 由定义直接得到。3：取单位向量 $\boldsymbol{x}_0$ 使 $\|A+B\|=\|(A+B)\boldsymbol{x}_0\|$，则 $\|A+B\|\le\|A\boldsymbol{x}_0\|+\|B\boldsymbol{x}_0\|\le\|A\|+\|B\|$。4：取单位向量 $\boldsymbol{x}_0$ 使 $\|AB\|=\|AB\boldsymbol{x}_0\|$，则 $\|AB\|\le\|A\|\|B\boldsymbol{x}_0\|\le\|A\|\|B\|$。5：由 4，$\|UAV^{\mathsf T}\|\le\|U\|\|A\|\|V^{\mathsf T}\|=\|A\|$；又 $A=U^{\mathsf T}(UAV^{\mathsf T})V$，同理 $\|A\|\le\|UAV^{\mathsf T}\|$。$\square$
 
-**定义 7.6.2（矩阵范数）** 满足命题 7.6.2 中条件 1–4 的函数 $\|\cdot\|:\mathbb{R}^{m\times n}\to\mathbb{R}$（条件 4 对一切可乘的矩阵对成立）称为**矩阵范数**。
+**定义 7.6.2（矩阵范数）** 满足命题 7.6.2 中条件 1–4 的函数 $\|\cdot\|\colon \mathbb{R}^{m\times n}\to\mathbb{R}$（条件 4 对一切可乘的矩阵对成立）称为**矩阵范数**。
 
-另一个常用的矩阵范数是 Frobenius 范数（Frobenius Norm）$\|A\|_F=\sqrt{\operatorname{trace}(A^{\mathsf T}A)}=\sqrt{\sum_{i,j}a_{ij}^2}$。由**迹**的正交不变性，$\|A\|_F^2=\operatorname{trace}(\Sigma^{\mathsf T}\Sigma)=\sigma_1^2+\cdots+\sigma_r^2$，所以 $\|A\|\le\|A\|_F\le\sqrt r\,\|A\|$。
+另一个常用的矩阵范数是 Frobenius 范数（Frobenius Norm）$\|A\|_{\mathrm{F}}=\sqrt{\operatorname{tr}(A^{\mathsf T}A)}=\sqrt{\sum_{i,j}a_{ij}^2}$。由**迹**的正交不变性，$\|A\|_{\mathrm{F}}^2=\operatorname{tr}(\Sigma^{\mathsf T}\Sigma)=\sigma_1^2+\cdots+\sigma_r^2$，所以 $\|A\|\le\|A\|_{\mathrm{F}}\le\sqrt r\,\|A\|$。
 
 **定理 7.6.1（奇异值的稳定性）** 设 $A,\tilde A$ 是同型实矩阵，奇异值分别为 $\sigma_1\ge\sigma_2\ge\cdots$ 与 $\tilde\sigma_1\ge\tilde\sigma_2\ge\cdots$，则 $|\tilde\sigma_i-\sigma_i|\le\|\tilde A-A\|$。
 
 这个不等式（Weyl 不等式）的证明需要 Courant–Fischer 极小极大原理，这里从略。它说明奇异值是良态的：矩阵改变多少，奇异值至多改变多少。特征值则不然。
 
-**例 7.6.1（奇异值与特征值的对比）** 设 $J_n$ 是 $n$ 阶 Jordan 块（对角元为 $0$，上次对角线为 $1$），$J_n^{\mathsf T}J_n=\operatorname{diag}(0,1,\dots,1)$，所以 $J_n$ 有 $n$ 重特征值 $0$，奇异值为 $n-1$ 重的 $1$ 和 $1$ 重的 $0$。把 $J_n$ 的 $(n,1)$ 元改为 $10^{-n}$ 得 $\tilde J_n$，$\|\tilde J_n-J_n\|=10^{-n}$。这时 $\tilde J_n^{\mathsf T}\tilde J_n=\operatorname{diag}(10^{-2n},1,\dots,1)$，奇异值为 $n-1$ 重的 $1$ 和 $10^{-n}$，变化恰为 $10^{-n}$；而特征多项式为 $\lambda^n-10^{-n}$，特征值为 $10^{-1}\mathrm{e}^{2\pi\mathrm{i}j/n}$（$j=1,\dots,n$），变化是 $10^{-1}$，比扰动大 $10^{n-1}$ 倍。一般地，特征值的变化只能估计为 $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$，其中 $C_A$ 是与 $A,\tilde A$ 有关的常数；所以称特征值不是良态的（病态的）。对称矩阵是例外：若 $A,\tilde A$ 都是实对称矩阵，特征值按大小排列，则同样有 $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$（也由极小极大原理得到），所以实对称矩阵的特征值问题是良态的。
+**例 7.6.1（奇异值与特征值的对比）** 设 $J_n(0)$ 是 $n$ 阶 Jordan 块（对角元为 $0$，上次对角线为 $1$），$J_n(0)^{\mathsf T}J_n(0)=\operatorname{diag}(0,1,\dots,1)$，所以 $J_n(0)$ 有 $n$ 重特征值 $0$，奇异值为 $n-1$ 重的 $1$ 和 $1$ 重的 $0$。把 $J_n(0)$ 的 $(n,1)$ 元改为 $10^{-n}$ 得 $\tilde J$，$\|\tilde J-J_n(0)\|=10^{-n}$。这时 $\tilde J^{\mathsf T}\tilde J=\operatorname{diag}(10^{-2n},1,\dots,1)$，奇异值为 $n-1$ 重的 $1$ 和 $10^{-n}$，变化恰为 $10^{-n}$；而特征多项式为 $\lambda^n-10^{-n}$，特征值为 $10^{-1}\mathrm{e}^{2\pi\mathrm{i}j/n}$（$j=1,\dots,n$），变化是 $10^{-1}$，比扰动大 $10^{n-1}$ 倍。一般地，特征值的变化只能估计为 $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$，其中 $C_A$ 是与 $A,\tilde A$ 有关的常数；所以称特征值不是良态的（病态的）。对称矩阵是例外：若 $A,\tilde A$ 都是实对称矩阵，特征值按大小排列，则同样有 $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$（也由极小极大原理得到），所以实对称矩阵的特征值问题是良态的。
 
 奇异值的极值刻画还回答了"用低秩矩阵逼近 $A$ 最好能做到多好"。
 
 **定理 7.6.2（Eckart–Young 定理）** 设 $A$ 有 SVD $A=\sum_{i=1}^r\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf T}$，$0\le k<r$，令 $A_k=\sum_{i=1}^k\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf T}$，则
 
 $$
-\min_{\operatorname{rank}B\le k}\|A-B\|=\|A-A_k\|=\sigma_{k+1}.
+\min_{\operatorname{rank}(B)\le k}\|A-B\|=\|A-A_k\|=\sigma_{k+1}.
 $$
 
-**证明** $A-A_k=\sum_{i=k+1}^r\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf T}$ 的最大奇异值是 $\sigma_{k+1}$。另一方面，设 $\operatorname{rank}B\le k$，则 $\dim\mathcal{N}(B)\ge n-k$，它与 $(k+1)$ 维子空间 $\operatorname{span}(\boldsymbol{v}_1,\dots,\boldsymbol{v}_{k+1})$ 的维数之和大于 $n$，所以有公共的单位向量 $\boldsymbol{x}$。由命题 7.6.1，$\|A-B\|\ge\|(A-B)\boldsymbol{x}\|=\|A\boldsymbol{x}\|\ge\sigma_{k+1}$。$\square$
+**证明** $A-A_k=\sum_{i=k+1}^r\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf T}$ 的最大奇异值是 $\sigma_{k+1}$。另一方面，设 $\operatorname{rank}(B)\le k$，则 $\dim\mathcal{N}(B)\ge n-k$，它与 $(k+1)$ 维子空间 $\operatorname{span}(\boldsymbol{v}_1,\dots,\boldsymbol{v}_{k+1})$ 的维数之和大于 $n$，所以有公共的单位向量 $\boldsymbol{x}$。由命题 7.6.1，$\|A-B\|\ge\|(A-B)\boldsymbol{x}\|=\|A\boldsymbol{x}\|\ge\sigma_{k+1}$。$\square$
 
 对 Frobenius 范数也有同样的结论，误差为 $\sqrt{\sigma_{k+1}^2+\cdots+\sigma_r^2}$。上图右边画出了一个奇异值按几何级数衰减的 $80\times60$ 矩阵的截断误差：存储 $A_k$ 只需 $k(m+n+1)$ 个数，而误差随 $k$ 迅速下降，这就是低秩压缩的原理。
 
@@ -483,8 +483,8 @@ $$
 | 合同 | $X^{\mathsf T}AX$；标准形 $\operatorname{diag}(I_p,-I_{r-p},O)$；惯性定律：$(p,r-p,n-r)$ 是完全不变量 | 配平方或谱分解 |
 | 奇异值分解 | $A=U\Sigma V^{\mathsf T}=\sum\sigma_i\boldsymbol{u}_i\boldsymbol{v}_i^{\mathsf T}$；奇异向量是四个基本子空间的标准正交基 | 算法 7.4.1：$A^{\mathsf T}A$ 的谱分解 + $U_1=AV_1\Sigma_r^{-1}$ |
 | 广义逆 | $A^+=V_r\Sigma_r^{-1}U_r^{\mathsf T}$；$AA^+$、$A^+A$ 是正交投影；$A^+\boldsymbol{b}$ 是最小长度最小二乘解 | 由 SVD |
-| 谱范数 | $\|A\|=\sigma_1$；正交不变；奇异值良态（$|\tilde\sigma_i-\sigma_i|\le\|\tilde A-A\|$），特征值一般病态 | — |
-| 低秩近似 | $\min_{\operatorname{rank}B\le k}\|A-B\|=\sigma_{k+1}$，由截断 SVD 达到 | 截断 SVD |
+| 谱范数 | $\Vert A\Vert=\sigma_1$；正交不变；奇异值良态（$\vert\tilde\sigma_i-\sigma_i\vert\le\Vert\tilde A-A\Vert$），特征值一般病态 | — |
+| 低秩近似 | $\min_{\operatorname{rank}(B)\le k}\Vert A-B\Vert=\sigma_{k+1}$，由截断 SVD 达到 | 截断 SVD |
 
 三种等价关系的对比：
 

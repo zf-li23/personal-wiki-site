@@ -55,13 +55,13 @@ $$
 A \text{ 和 } B \text{ 不相交} \Leftrightarrow \lnot(\exists x)(x \in A \land x \in B).
 $$
 
-**定义 1.2.5（空集）** 不含任何元素的集合称为**空集**，记作 $\emptyset$。空集可符号化为
+**定义 1.2.5（空集）** 不含任何元素的集合称为**空集**，记作 $\varnothing$。空集可符号化为
 
 $$
-\emptyset = \{x \mid x \neq x\}.
+\varnothing = \{x \mid x \neq x\}.
 $$
 
-**定理 1.2.3** 空集是一切集合的子集，即对任意的集合 $A$，$\emptyset \subseteq A$。
+**定理 1.2.3** 空集是一切集合的子集，即对任意的集合 $A$，$\varnothing \subseteq A$。
 
 **定义 1.2.6（全集）** 在给定的问题中，所考虑的所有事物组成的集合称为**全集**，记作 $E$。该定义亦可叙述为：在一个具体问题中，如果所涉及的集合都是某个集合的子集，则称这个集合为全集。全集的符号化表示为
 
@@ -78,7 +78,7 @@ $$
 1. **并集**：$A \cup B = \{x \mid x \in A \lor x \in B\}$；
 2. **交集**：$A \cap B = \{x \mid x \in A \land x \in B\}$；
 3. **差集**：$A - B = \{x \mid x \in A \land x \notin B\}$，又称 $B$ 对 $A$ 的相对补集；
-4. **余集**：$-A = E - A = \{x \mid x \in E \land x \notin A\}$，其中 $E$ 为全集；$A$ 的余集又称 $A$ 的绝对补集，即 $A$ 对 $E$ 的相对补集；
+4. **余集**：$A^{\mathsf c} = E - A = \{x \mid x \in E \land x \notin A\}$，其中 $E$ 为全集；$A$ 的余集又称 $A$ 的绝对补集，即 $A$ 对 $E$ 的相对补集；
 5. **对称差**：$A \oplus B = (A - B) \cup (B - A) = \{x \mid (x \in A \land x \notin B) \lor (x \notin A \land x \in B)\}$。
 
 **定义 1.3.2（广义并和广义交）** 设 $A$ 为集合，$A$ 的所有元素的元素组成的集合称为 $A$ 的**广义并**，记作 $\bigcup A$；设 $A$ 为非空集合，$A$ 的所有元素的公共元素组成的集合称为 $A$ 的**广义交**，记作 $\bigcap A$。符号化表示为
@@ -90,15 +90,15 @@ $$
 \end{aligned}
 $$
 
-对空集也可以作广义并：$\bigcup \emptyset = \emptyset$。但 $\bigcap \emptyset$ 不是集合（按上式它将包含一切集合），没有意义。
+对空集也可以作广义并：$\bigcup \varnothing = \varnothing$。但 $\bigcap \varnothing$ 不是集合（按上式它将包含一切集合），没有意义。
 
-**定义 1.3.3（幂集）** 设 $A$ 为集合，$A$ 的所有子集组成的集合称为 $A$ 的**幂集**，记作 $P(A)$。符号化表示为
+**定义 1.3.3（幂集）** 设 $A$ 为集合，$A$ 的所有子集组成的集合称为 $A$ 的**幂集**，记作 $\mathcal{P}(A)$。符号化表示为
 
 $$
-P(A) = \{x \mid x \subseteq A\}.
+\mathcal{P}(A) = \{x \mid x \subseteq A\}.
 $$
 
-对任意的集合 $A$，有 $\emptyset \subseteq A$ 和 $A \subseteq A$，因此 $\emptyset \in P(A)$，$A \in P(A)$。
+对任意的集合 $A$，有 $\varnothing \subseteq A$ 和 $A \subseteq A$，因此 $\varnothing \in \mathcal{P}(A)$，$A \in \mathcal{P}(A)$。
 
 由两个元素 $x$ 和 $y$（允许 $x = y$）按给定次序排列组成的二元组称为一个**有序对**（ordered pair）或序偶，记作 $\langle x, y \rangle$，其中 $x$ 是它的第一元素，$y$ 是它的第二元素。有序对具有以下性质：
 
@@ -131,7 +131,7 @@ $$
 
 集合运算的优先顺序规定如下：
 
-- 广义并、广义交、幂集、绝对补（$\bigcup A, \bigcap A, P(A), -A$）为一类运算；并、交、对称差、笛卡儿积、相对补（$\cup, \cap, \oplus, \times, -$）为二类运算。
+- 广义并、广义交、幂集、绝对补（$\bigcup A, \bigcap A, \mathcal{P}(A), A^{\mathsf c}$）为一类运算；并、交、对称差、笛卡儿积、相对补（$\cup, \cap, \oplus, \times, -$）为二类运算。
 - 一类运算优先于二类运算；二类运算优先于集合关系运算（$=, \subseteq, \subset, \in$）；上述集合运算都优先于逻辑运算（$\lnot, \land, \lor, \rightarrow, \leftrightarrow, \Rightarrow$）。
 - 括号内优先于括号外；同一层括号内优先级相同时，一类运算之间按由右向左的顺序进行，其他按由左向右的顺序进行。
 
@@ -152,21 +152,21 @@ $$
    $$
    \begin{aligned}
    A - (B \cup C) &= (A - B) \cap (A - C), & A - (B \cap C) &= (A - B) \cup (A - C), \\
-   -(B \cup C) &= -B \cap -C, & -(B \cap C) &= -B \cup -C.
+   (B \cup C)^{\mathsf c} &= B^{\mathsf c} \cap C^{\mathsf c}, & (B \cap C)^{\mathsf c} &= B^{\mathsf c} \cup C^{\mathsf c}.
    \end{aligned}
    $$
-7. 同一律：$A \cup \emptyset = A$，$A \cap E = A$。
-8. 零律：$A \cup E = E$，$A \cap \emptyset = \emptyset$。
-9. 补余律：$A \cup -A = E$（排中律），$A \cap -A = \emptyset$（矛盾律）。
-10. 补律：$-\emptyset = E$，$-E = \emptyset$。
-11. 双补律：$-(-A) = A$。
+7. 同一律：$A \cup \varnothing = A$，$A \cap E = A$。
+8. 零律：$A \cup E = E$，$A \cap \varnothing = \varnothing$。
+9. 补余律：$A \cup A^{\mathsf c} = E$（排中律），$A \cap A^{\mathsf c} = \varnothing$（矛盾律）。
+10. 补律：$\varnothing^{\mathsf c} = E$，$E^{\mathsf c} = \varnothing$。
+11. 双补律：$(A^{\mathsf c})^{\mathsf c} = A$。
 
 **定理 1.5.2（差集的性质）** 对任意的集合 $A$、$B$ 和 $C$，
 
 $$
 \begin{aligned}
 A - B &= A - (A \cap B), \\
-A - B &= A \cap -B, \\
+A - B &= A \cap B^{\mathsf c}, \\
 A \cup (B - A) &= A \cup B, \\
 A \cap (B - C) &= (A \cap B) - C.
 \end{aligned}
@@ -177,8 +177,8 @@ $$
 1. 交换律：$A \oplus B = B \oplus A$；
 2. 结合律：$(A \oplus B) \oplus C = A \oplus (B \oplus C)$；
 3. 分配律：$A \cap (B \oplus C) = (A \cap B) \oplus (A \cap C)$；
-4. 同一律：$A \oplus \emptyset = A$；
-5. 零律：$A \oplus A = \emptyset$；
+4. 同一律：$A \oplus \varnothing = A$；
+5. 零律：$A \oplus A = \varnothing$；
 6. 吸收律：$A \oplus (A \oplus B) = B$。
 
 **定理 1.5.4（包含关系的性质）** 对任意的集合 $A$、$B$、$C$ 和 $D$，
@@ -198,30 +198,30 @@ $$
 
 $$
 \begin{aligned}
-A \subseteq B &\Leftrightarrow P(A) \subseteq P(B), \\
-A = B &\Leftrightarrow P(A) = P(B).
+A \subseteq B &\Leftrightarrow \mathcal{P}(A) \subseteq \mathcal{P}(B), \\
+A = B &\Leftrightarrow \mathcal{P}(A) = \mathcal{P}(B).
 \end{aligned}
 $$
 
 **定理 1.5.6（幂集的性质 2）** 对任意的集合 $A$ 和 $B$，
 
 $$
-P(A) \in P(B) \Rightarrow A \in B.
+\mathcal{P}(A) \in \mathcal{P}(B) \Rightarrow A \in B.
 $$
 
 **定理 1.5.7（幂集的性质 3）** 对任意的集合 $A$ 和 $B$，
 
 $$
 \begin{aligned}
-P(A) \cap P(B) &= P(A \cap B), \\
-P(A) \cup P(B) &\subseteq P(A \cup B).
+\mathcal{P}(A) \cap \mathcal{P}(B) &= \mathcal{P}(A \cap B), \\
+\mathcal{P}(A) \cup \mathcal{P}(B) &\subseteq \mathcal{P}(A \cup B).
 \end{aligned}
 $$
 
 **定理 1.5.8（幂集的性质 4）** 对任意的集合 $A$ 和 $B$，
 
 $$
-P(A - B) \subseteq (P(A) - P(B)) \cup \{\emptyset\}.
+\mathcal{P}(A - B) \subseteq (\mathcal{P}(A) - \mathcal{P}(B)) \cup \{\varnothing\}.
 $$
 
 **定义 1.5.1（传递集合）** 如果集合 $A$ 的任一元素的元素都是 $A$ 的元素，就称 $A$ 为**传递集合**。该定义也可写成
@@ -230,16 +230,16 @@ $$
 A \text{ 是传递集合} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \rightarrow x \in A).
 $$
 
-**定理 1.5.9（传递集合的性质 1）** 对任意的集合 $A$，$A$ 是传递集合 $\Leftrightarrow A \subseteq P(A)$。
+**定理 1.5.9（传递集合的性质 1）** 对任意的集合 $A$，$A$ 是传递集合 $\Leftrightarrow A \subseteq \mathcal{P}(A)$。
 
-**定理 1.5.10（传递集合的性质 2）** 对任意的集合 $A$，$A$ 是传递集合 $\Leftrightarrow P(A)$ 是传递集合。
+**定理 1.5.10（传递集合的性质 2）** 对任意的集合 $A$，$A$ 是传递集合 $\Leftrightarrow \mathcal{P}(A)$ 是传递集合。
 
 **定理 1.5.11（广义并和广义交的性质 1）** 对集合族 $A$ 和 $B$，
 
 $$
 \begin{aligned}
 A \subseteq B &\Rightarrow \textstyle\bigcup A \subseteq \bigcup B, \\
-A \subseteq B &\Rightarrow \textstyle\bigcap B \subseteq \bigcap A \quad (A \neq \emptyset).
+A \subseteq B &\Rightarrow \textstyle\bigcap B \subseteq \bigcap A \quad (A \neq \varnothing).
 \end{aligned}
 $$
 
@@ -248,27 +248,27 @@ $$
 $$
 \begin{aligned}
 \textstyle\bigcup (A \cup B) &= \left(\textstyle\bigcup A\right) \cup \left(\textstyle\bigcup B\right), \\
-\textstyle\bigcap (A \cup B) &= \left(\textstyle\bigcap A\right) \cap \left(\textstyle\bigcap B\right) \quad (A \neq \emptyset,\ B \neq \emptyset).
+\textstyle\bigcap (A \cup B) &= \left(\textstyle\bigcap A\right) \cap \left(\textstyle\bigcap B\right) \quad (A \neq \varnothing,\ B \neq \varnothing).
 \end{aligned}
 $$
 
 **定理 1.5.13（广义并与幂集的关系）** 对任意的集合 $A$，
 
 $$
-\textstyle\bigcup P(A) = A.
+\textstyle\bigcup \mathcal{P}(A) = A.
 $$
 
 **定理 1.5.14（传递集合的性质 3）** 若集合 $A$ 是传递集合，则 $\bigcup A$ 是传递集合。
 
 **定理 1.5.15（传递集合的性质 4）** 若集合 $A$ 的元素都是传递集合，则 $\bigcup A$ 是传递集合。
 
-**定理 1.5.16（传递集合的性质 5）** 若非空集合 $A$ 是传递集合，则 $\bigcap A = \emptyset$，从而 $\bigcap A$ 是传递集合。
+**定理 1.5.16（传递集合的性质 5）** 若非空集合 $A$ 是传递集合，则 $\bigcap A = \varnothing$，从而 $\bigcap A$ 是传递集合。
 
-后一结论用到了正则公理：由定理 1.7.8，非空传递集合 $A$ 含有 $\emptyset$，故 $\bigcap A \subseteq \emptyset$。
+后一结论用到了正则公理：由定理 1.7.8，非空传递集合 $A$ 含有 $\varnothing$，故 $\bigcap A \subseteq \varnothing$。
 
 **定理 1.5.17（传递集合的性质 6）** 若非空集合 $A$ 的元素都是传递集合，则 $\bigcap A$ 是传递集合。
 
-**定理 1.5.18（有序对与幂集）** 若 $A$ 是集合，$x \in A$，$y \in A$，则 $\langle x, y \rangle \in P(P(A))$。
+**定理 1.5.18（有序对与幂集）** 若 $A$ 是集合，$x \in A$，$y \in A$，则 $\langle x, y \rangle \in \mathcal{P}(\mathcal{P}(A))$。
 
 **定理 1.5.19（笛卡儿积对并、交的分配律）** 对任意的集合 $A$、$B$ 和 $C$，
 
@@ -281,7 +281,7 @@ A \times (B \cap C) &= (A \times B) \cap (A \times C), \\
 \end{aligned}
 $$
 
-**定理 1.5.20（笛卡儿积与包含关系的性质 1）** 对任意的集合 $A$、$B$ 和 $C$，若 $C \neq \emptyset$，则
+**定理 1.5.20（笛卡儿积与包含关系的性质 1）** 对任意的集合 $A$、$B$ 和 $C$，若 $C \neq \varnothing$，则
 
 $$
 A \subseteq B \Leftrightarrow A \times C \subseteq B \times C \Leftrightarrow C \times A \subseteq C \times B.
@@ -293,18 +293,18 @@ $$
 A \times B \subseteq C \times D \Leftrightarrow (A \subseteq C \land B \subseteq D).
 $$
 
-非空条件不能去掉：若 $A = \emptyset$，则 $A \times B = \emptyset \subseteq C \times D$ 总成立，而 $B \subseteq D$ 未必成立。
+非空条件不能去掉：若 $A = \varnothing$，则 $A \times B = \varnothing \subseteq C \times D$ 总成立，而 $B \subseteq D$ 未必成立。
 
 ## 1.6. 有限集合的基数
 
-**定义 1.6.1（有限集合的基数）** 如果存在 $n \in \mathbb{N}$，使集合 $A$ 与集合 $\{x \mid x \in \mathbb{N} \land x < n\} = \{0, 1, \cdots, n - 1\}$ 之间存在双射（即二者等势，见定义 4.2.1），就说集合 $A$ 的基数是 $n$，记作 $|A| = n$ 或 $\operatorname{card}(A) = n$。空集 $\emptyset$ 的基数是 $0$。
+**定义 1.6.1（有限集合的基数）** 如果存在 $n \in \mathbb{N}$，使集合 $A$ 与集合 $\{x \mid x \in \mathbb{N} \land x < n\} = \{0, 1, \cdots, n - 1\}$ 之间存在双射（即二者等势，见定义 4.2.1），就说集合 $A$ 的基数是 $n$，记作 $|A| = n$ 或 $\operatorname{card}(A) = n$。空集 $\varnothing$ 的基数是 $0$。
 
 **定义 1.6.2（有限集合）** 如果存在 $n \in \mathbb{N}$，使 $n$ 是集合 $A$ 的基数，就说 $A$ 是**有限集合**；如果不存在这样的 $n$，就说 $A$ 是**无限集合**。
 
 **定理 1.6.1（幂集的基数）** 对有限集合 $A$，
 
 $$
-|P(A)| = 2^{|A|}.
+|\mathcal{P}(A)| = 2^{|A|}.
 $$
 
 **定理 1.6.2（笛卡儿积的基数）** 对有限集合 $A$ 和 $B$，
@@ -358,7 +358,7 @@ ZF 公理系统（Zermelo–Fraenkel set theory）由德国数学家 E. Zermelo 
    $$
    (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \rightarrow x = y)
    $$
-2. **空集合存在公理**（empty set axiom） 存在不含任何元素的集合（空集 $\emptyset$）。
+2. **空集合存在公理**（empty set axiom） 存在不含任何元素的集合（空集 $\varnothing$）。
    $$
    (\exists x)(\forall y)(y \notin x)
    $$
@@ -380,11 +380,11 @@ ZF 公理系统（Zermelo–Fraenkel set theory）由德国数学家 E. Zermelo 
    $$
 7. **正则公理**（axiom of regularity） 对任意的非空集合 $x$，存在 $x$ 的一个元素，它和 $x$ 不相交。
    $$
-   (\forall x)(x \neq \emptyset \rightarrow (\exists y)(y \in x \land x \cap y = \emptyset))
+   (\forall x)(x \neq \varnothing \rightarrow (\exists y)(y \in x \land x \cap y = \varnothing))
    $$
-8. **无穷公理**（axiom of infinity） 存在一个集合，它含有 $\emptyset$，并且对它的任一元素 $y$ 也含有 $y \cup \{y\}$；因此它含有全部自然数（见定义 1.7.4）。
+8. **无穷公理**（axiom of infinity） 存在一个集合，它含有 $\varnothing$，并且对它的任一元素 $y$ 也含有 $y \cup \{y\}$；因此它含有全部自然数（见定义 1.7.4）。
    $$
-   (\exists x)(\emptyset \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
+   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
    $$
 9. **替换公理模式**（axiom schema of replacement） 对任意的谓词公式 $P(x, y)$，如果对任意的 $x$ 存在唯一的 $y$ 使 $P(x, y)$ 为真，那么对任意的集合 $t$ 存在一个集合 $s$，$s$ 的元素恰好是 $t$ 中元素 $x$ 所对应的那些 $y$。
    $$
@@ -406,13 +406,13 @@ ZF 公理系统（Zermelo–Fraenkel set theory）由德国数学家 E. Zermelo 
 
 **定理 1.7.5（万有集不存在定理）** 不存在集合 $A$，使任一集合都是 $A$ 的元素。
 
-**定义 1.7.1（$\in$-极小元）** 对任意的集合 $A$ 和 $B$，若 $A \in B$ 且 $A \cap B = \emptyset$，就称 $A$ 为 $B$ 的一个 **$\in$-极小元**。正则公理即断言：每个非空集合都有 $\in$-极小元。
+**定义 1.7.1（$\in$-极小元）** 对任意的集合 $A$ 和 $B$，若 $A \in B$ 且 $A \cap B = \varnothing$，就称 $A$ 为 $B$ 的一个 **$\in$-极小元**。正则公理即断言：每个非空集合都有 $\in$-极小元。
 
 **定理 1.7.6（集合的重要性质 1）** 对任意的集合 $A$，$A \notin A$。
 
 **定理 1.7.7（集合的重要性质 2）** 对任意的集合 $A$ 和 $B$，$\lnot(A \in B \land B \in A)$。
 
-**定理 1.7.8（传递集合的性质 7）** 对任意非空的传递集合 $A$，有 $\emptyset \in A$。
+**定理 1.7.8（传递集合的性质 7）** 对任意非空的传递集合 $A$，有 $\varnothing \in A$。
 
 **定义 1.7.2（奇异集合）** 如果集合 $A$ 中有集合的序列 $A_0, A_1, \cdots, A_n, \cdots$（每个 $A_n \in A$），使得
 
@@ -428,7 +428,7 @@ $$
 
 **定义 1.7.3（前驱与后继）** 对任意的集合 $A$，定义集合 $A^+ = A \cup \{A\}$，称 $A^+$ 为 $A$ 的**后继**，称 $A$ 为 $A^+$ 的**前驱**。
 
-**定义 1.7.4（用后继定义自然数）** 集合 $0 = \emptyset$ 是一个**自然数**；若集合 $n$ 是一个自然数，则集合 $n + 1 = n^+$ 也是一个自然数；自然数只有这样得到的集合。于是 $1 = \{0\}$，$2 = \{0, 1\}$，一般地 $n = \{0, 1, \cdots, n - 1\}$。
+**定义 1.7.4（用后继定义自然数）** 集合 $0 = \varnothing$ 是一个**自然数**；若集合 $n$ 是一个自然数，则集合 $n + 1 = n^+$ 也是一个自然数；自然数只有这样得到的集合。于是 $1 = \{0\}$，$2 = \{0, 1\}$，一般地 $n = \{0, 1, \cdots, n - 1\}$。
 
 **定义 1.7.5（自然数的大小）** 对任意的自然数 $m$ 和 $n$，
 

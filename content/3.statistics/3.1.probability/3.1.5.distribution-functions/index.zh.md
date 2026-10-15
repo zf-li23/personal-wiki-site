@@ -42,7 +42,7 @@ $$
 
 ### 5.1.6. 例子
 - **标准正态分布**：CDF 为 $\Phi(x) = \int_{-\infty}^{x} \varphi(t) \, \mathrm{d}t$，其中 $\varphi(t) = \frac{1}{\sqrt{2\pi}} \mathrm{e}^{-t^2/2}$。性质：$\Phi(-x) = 1 - \Phi(x)$。
-- **一般正态分布**：若 $X \sim N(\mu, \sigma^2)$，则：
+- **一般正态分布**：若 $X \sim \mathcal{N}(\mu, \sigma^2)$，则：
   $$
   \mathbb{P}(X \leq a) = \Phi\left( \frac{a - \mu}{\sigma} \right)
   $$
@@ -66,7 +66,7 @@ $$
   $$
   f_Y(y) = \frac{1}{|a|} f_X\left( \frac{y - b}{a} \right)
   $$
-  例如，若 $X \sim N(\mu, \sigma^2)$，则 $Y = aX + b \sim N(a\mu + b, a^2\sigma^2)$。
+  例如，若 $X \sim \mathcal{N}(\mu, \sigma^2)$，则 $Y = aX + b \sim \mathcal{N}(a\mu + b, a^2\sigma^2)$。
 
 - **严格单调函数**：若 $Y = g(X)$，$g$ 严格单调且可逆，则：
   $$

@@ -106,15 +106,15 @@ $$
 
 ### 4.2.2. 正交向量组与标准正交基
 
-**定义 4.2.1（正交向量组）** 设 $\boldsymbol{a}_1, \cdots, \boldsymbol{a}_r$ 是 $\mathbb{R}^n$ 中的向量组。若这些向量都非零且两两正交，则称之为**正交向量组**；若正交向量组中的向量都是单位向量，则称之为**正交单位向量组**。
+**定义 4.2.1（正交向量组）** 设 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_r$ 是 $\mathbb{R}^n$ 中的向量组。若这些向量都非零且两两正交，则称之为**正交向量组**；若正交向量组中的向量都是单位向量，则称之为**正交单位向量组**。
 
 **命题 4.2.2** 正交向量组**线性无关**。
 
-**证明** 设 $k_1\boldsymbol{a}_1 + \cdots + k_r\boldsymbol{a}_r = \boldsymbol{0}$。两边与 $\boldsymbol{a}_i$ 做内积，由两两正交得 $k_i\|\boldsymbol{a}_i\|^2 = 0$；而 $\boldsymbol{a}_i \ne \boldsymbol{0}$，故 $k_i = 0$（$i = 1, \cdots, r$）。$\square$
+**证明** 设 $k_1\boldsymbol{a}_1 + \cdots + k_r\boldsymbol{a}_r = \boldsymbol{0}$。两边与 $\boldsymbol{a}_i$ 做内积，由两两正交得 $k_i\|\boldsymbol{a}_i\|^2 = 0$；而 $\boldsymbol{a}_i \ne \boldsymbol{0}$，故 $k_i = 0$（$i = 1, \dots, r$）。$\square$
 
 **定义 4.2.2（标准正交基）** 设 $M$ 是 $\mathbb{R}^n$ 的子空间。若 $M$ 的一组基是正交向量组，则称之为 $M$ 的一组**正交基**；若是正交单位向量组，则称之为 $M$ 的一组**标准正交基**。
 
-**标准基** $\boldsymbol{e}_1, \cdots, \boldsymbol{e}_n$ 是 $\mathbb{R}^n$ 的一组标准正交基。由命题 4.2.2，$r$ 维子空间 $M$ 中任意 $r$ 个向量构成的正交向量组都是 $M$ 的正交基。标准正交基的好处是坐标只需做内积：一般的基下求坐标要解一个线性方程组，而在正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_n$ 下，把 $\boldsymbol{a} = \sum_j x_j\boldsymbol{q}_j$ 两边与 $\boldsymbol{q}_i$ 做内积就得到 $x_i$：
+**标准基** $\boldsymbol{e}_1, \dots, \boldsymbol{e}_n$ 是 $\mathbb{R}^n$ 的一组标准正交基。由命题 4.2.2，$r$ 维子空间 $M$ 中任意 $r$ 个向量构成的正交向量组都是 $M$ 的正交基。标准正交基的好处是坐标只需做内积：一般的基下求坐标要解一个线性方程组，而在正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_n$ 下，把 $\boldsymbol{a} = \sum_j x_j\boldsymbol{q}_j$ 两边与 $\boldsymbol{q}_i$ 做内积就得到 $x_i$：
 
 $$
 \boldsymbol{a} = \frac{\boldsymbol{q}_1^{\mathsf T}\boldsymbol{a}}{\boldsymbol{q}_1^{\mathsf T}\boldsymbol{q}_1}\boldsymbol{q}_1 + \frac{\boldsymbol{q}_2^{\mathsf T}\boldsymbol{a}}{\boldsymbol{q}_2^{\mathsf T}\boldsymbol{q}_2}\boldsymbol{q}_2 + \cdots + \frac{\boldsymbol{q}_n^{\mathsf T}\boldsymbol{a}}{\boldsymbol{q}_n^{\mathsf T}\boldsymbol{q}_n}\boldsymbol{q}_n,
@@ -124,23 +124,23 @@ $$
 
 **定理 4.2.1（标准正交基的存在定理）** $\mathbb{R}^n$ 的任意非零子空间 $M$ 都存在一组正交基，从而存在一组标准正交基。
 
-**证明** 对 $\dim M$ 用数学归纳法。$\dim M = 1$ 时任一非零向量构成正交基。设结论对 $r$ 维子空间成立，考虑 $r+1$ 维子空间 $M$，取 $M$ 的一组基 $\boldsymbol{a}_1, \cdots, \boldsymbol{a}_{r+1}$。由归纳假设，$N = \operatorname{span}(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_r)$ 有正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$，于是 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r, \boldsymbol{a}_{r+1}$ 也是 $M$ 的基。令 $\boldsymbol{q}_{r+1} = \boldsymbol{a}_{r+1} + k_1\boldsymbol{q}_1 + \cdots + k_r\boldsymbol{q}_r$，要求它与 $\boldsymbol{q}_i$ 正交，两边与 $\boldsymbol{q}_i$ 做内积得 $0 = \boldsymbol{q}_i^{\mathsf T}\boldsymbol{a}_{r+1} + k_i\|\boldsymbol{q}_i\|^2$，故
+**证明** 对 $\dim M$ 用数学归纳法。$\dim M = 1$ 时任一非零向量构成正交基。设结论对 $r$ 维子空间成立，考虑 $r+1$ 维子空间 $M$，取 $M$ 的一组基 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_{r+1}$。由归纳假设，$N = \operatorname{span}(\boldsymbol{a}_1, \dots, \boldsymbol{a}_r)$ 有正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$，于是 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r, \boldsymbol{a}_{r+1}$ 也是 $M$ 的基。令 $\boldsymbol{q}_{r+1} = \boldsymbol{a}_{r+1} + k_1\boldsymbol{q}_1 + \cdots + k_r\boldsymbol{q}_r$，要求它与 $\boldsymbol{q}_i$ 正交，两边与 $\boldsymbol{q}_i$ 做内积得 $0 = \boldsymbol{q}_i^{\mathsf T}\boldsymbol{a}_{r+1} + k_i\|\boldsymbol{q}_i\|^2$，故
 
 $$
 \boldsymbol{q}_{r+1} = \boldsymbol{a}_{r+1} - \frac{\boldsymbol{q}_1^{\mathsf T}\boldsymbol{a}_{r+1}}{\|\boldsymbol{q}_1\|^2}\boldsymbol{q}_1 - \cdots - \frac{\boldsymbol{q}_r^{\mathsf T}\boldsymbol{a}_{r+1}}{\|\boldsymbol{q}_r\|^2}\boldsymbol{q}_r.
 $$
 
-由于 $\boldsymbol{a}_{r+1} \notin N$，$\boldsymbol{q}_{r+1} \ne \boldsymbol{0}$，于是 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_{r+1}$ 是 $M$ 的正交基。把每个向量单位化即得标准正交基。$\square$
+由于 $\boldsymbol{a}_{r+1} \notin N$，$\boldsymbol{q}_{r+1} \ne \boldsymbol{0}$，于是 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_{r+1}$ 是 $M$ 的正交基。把每个向量单位化即得标准正交基。$\square$
 
 **定理 4.2.2（标准正交基的扩充定理）** 设 $M \subseteq N$ 是 $\mathbb{R}^n$ 的两个子空间，则 $M$ 的任意一组标准正交基都可以扩充为 $N$ 的一组标准正交基。
 
-**证明** 设 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$ 是 $M$ 的标准正交基。由第 3 章的基扩充定理，可以把它扩充为 $N$ 的一组基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r, \boldsymbol{a}_{r+1}, \cdots, \boldsymbol{a}_s$。对后面的向量依次重复定理 4.2.1 证明中的构造（前 $r$ 个向量已经两两正交，不会改变），再单位化，即得 $N$ 的一组包含 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$ 的标准正交基。$\square$
+**证明** 设 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$ 是 $M$ 的标准正交基。由第 3 章的基扩充定理，可以把它扩充为 $N$ 的一组基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r, \boldsymbol{a}_{r+1}, \dots, \boldsymbol{a}_s$。对后面的向量依次重复定理 4.2.1 证明中的构造（前 $r$ 个向量已经两两正交，不会改变），再单位化，即得 $N$ 的一组包含 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$ 的标准正交基。$\square$
 
 ### 4.2.3. Gram–Schmidt 正交化
 
 定理 4.2.1 的证明本身就是一个算法：从任意一组基出发，逐个减去在已得正交向量方向上的投影。
 
-**算法 4.2.1（Gram–Schmidt 正交化）** 输入 $r$ 维子空间 $M \subseteq \mathbb{R}^n$ 的一组基 $\boldsymbol{a}_1, \cdots, \boldsymbol{a}_r$，输出 $M$ 的一组标准正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$。
+**算法 4.2.1（Gram–Schmidt 正交化）** 输入 $r$ 维子空间 $M \subseteq \mathbb{R}^n$ 的一组基 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_r$，输出 $M$ 的一组标准正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$。
 
 1. 正交化：依次计算
    $$
@@ -151,15 +151,15 @@ $$
    \tilde{\boldsymbol{q}}_r &= \boldsymbol{a}_r - \frac{\tilde{\boldsymbol{q}}_1^{\mathsf T}\boldsymbol{a}_r}{\|\tilde{\boldsymbol{q}}_1\|^2}\tilde{\boldsymbol{q}}_1 - \frac{\tilde{\boldsymbol{q}}_2^{\mathsf T}\boldsymbol{a}_r}{\|\tilde{\boldsymbol{q}}_2\|^2}\tilde{\boldsymbol{q}}_2 - \cdots - \frac{\tilde{\boldsymbol{q}}_{r-1}^{\mathsf T}\boldsymbol{a}_r}{\|\tilde{\boldsymbol{q}}_{r-1}\|^2}\tilde{\boldsymbol{q}}_{r-1};
    \end{aligned}
    $$
-2. 单位化：$\boldsymbol{q}_i = \tilde{\boldsymbol{q}}_i / \|\tilde{\boldsymbol{q}}_i\|$（$i = 1, \cdots, r$）。
+2. 单位化：$\boldsymbol{q}_i = \tilde{\boldsymbol{q}}_i / \|\tilde{\boldsymbol{q}}_i\|$（$i = 1, \dots, r$）。
 
-第 $i$ 步把 $\boldsymbol{a}_i$ 减去它在 $\tilde{\boldsymbol{q}}_1, \cdots, \tilde{\boldsymbol{q}}_{i-1}$ 方向上的正交投影，留下与它们都正交的部分 $\tilde{\boldsymbol{q}}_i$。每一步中三个向量组
+第 $i$ 步把 $\boldsymbol{a}_i$ 减去它在 $\tilde{\boldsymbol{q}}_1, \dots, \tilde{\boldsymbol{q}}_{i-1}$ 方向上的正交投影，留下与它们都正交的部分 $\tilde{\boldsymbol{q}}_i$。每一步中三个向量组
 
 $$
-\{\tilde{\boldsymbol{q}}_1, \cdots, \tilde{\boldsymbol{q}}_{i-1}, \tilde{\boldsymbol{q}}_i\}, \qquad \{\tilde{\boldsymbol{q}}_1, \cdots, \tilde{\boldsymbol{q}}_{i-1}, \boldsymbol{a}_i\}, \qquad \{\boldsymbol{a}_1, \cdots, \boldsymbol{a}_{i-1}, \boldsymbol{a}_i\}
+\{\tilde{\boldsymbol{q}}_1, \dots, \tilde{\boldsymbol{q}}_{i-1}, \tilde{\boldsymbol{q}}_i\}, \qquad \{\tilde{\boldsymbol{q}}_1, \dots, \tilde{\boldsymbol{q}}_{i-1}, \boldsymbol{a}_i\}, \qquad \{\boldsymbol{a}_1, \dots, \boldsymbol{a}_{i-1}, \boldsymbol{a}_i\}
 $$
 
-线性等价，因此对每个 $i$ 都有 $\operatorname{span}(\boldsymbol{q}_1, \cdots, \boldsymbol{q}_i) = \operatorname{span}(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_i)$。这一"前 $i$ 个向量张成同一子空间"的性质，正是下一节 $R$ 为上三角矩阵的原因。
+线性等价，因此对每个 $i$ 都有 $\operatorname{span}(\boldsymbol{q}_1, \dots, \boldsymbol{q}_i) = \operatorname{span}(\boldsymbol{a}_1, \dots, \boldsymbol{a}_i)$。这一"前 $i$ 个向量张成同一子空间"的性质，正是下一节 $R$ 为上三角矩阵的原因。
 
 **例 4.2.1** 用 Gram–Schmidt 正交化把 $\mathbb{R}^3$ 的基 $\boldsymbol{a}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$，$\boldsymbol{a}_2 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$，$\boldsymbol{a}_3 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}$ 化为标准正交基。
 
@@ -175,7 +175,7 @@ $$
 
 ### 4.3.1. 正交矩阵
 
-设 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_n$ 是 $\mathbb{R}^n$ 的标准正交基，$Q = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$，则 $Q^{\mathsf T}Q$ 的 $(i, j)$ 元是 $\boldsymbol{q}_i^{\mathsf T}\boldsymbol{q}_j$，即 $Q^{\mathsf T}Q = I_n$。
+设 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_n$ 是 $\mathbb{R}^n$ 的标准正交基，$Q = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$，则 $Q^{\mathsf T}Q$ 的 $(i, j)$ 元是 $\boldsymbol{q}_i^{\mathsf T}\boldsymbol{q}_j$，即 $Q^{\mathsf T}Q = I_n$。
 
 **定义 4.3.1（正交矩阵）** 满足 $Q^{\mathsf T}Q = I_n$ 的 $n$ 阶方阵 $Q$ 称为 $n$ 阶**正交矩阵**。
 
@@ -258,7 +258,7 @@ $$
 
 ### 4.3.3. QR 分解
 
-用矩阵乘法描述 Gauss 消元得到 **LU 分解**；类似地，用矩阵乘法描述 Gram–Schmidt 正交化，得到另一种矩阵分解。设 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 可逆，对它的列向量组做算法 4.2.1，得到正交基 $\tilde{\boldsymbol{q}}_1, \cdots, \tilde{\boldsymbol{q}}_n$ 与标准正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_n$。由于 $\boldsymbol{a}_i$ 可以由 $\tilde{\boldsymbol{q}}_1, \cdots, \tilde{\boldsymbol{q}}_i$ 线性表示，令 $\tilde{Q} = [\tilde{\boldsymbol{q}}_1\ \cdots\ \tilde{\boldsymbol{q}}_n]$，$Q = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$，有
+用矩阵乘法描述 Gauss 消元得到 **LU 分解**；类似地，用矩阵乘法描述 Gram–Schmidt 正交化，得到另一种矩阵分解。设 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 可逆，对它的列向量组做算法 4.2.1，得到正交基 $\tilde{\boldsymbol{q}}_1, \dots, \tilde{\boldsymbol{q}}_n$ 与标准正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_n$。由于 $\boldsymbol{a}_i$ 可以由 $\tilde{\boldsymbol{q}}_1, \dots, \tilde{\boldsymbol{q}}_i$ 线性表示，令 $\tilde{Q} = [\tilde{\boldsymbol{q}}_1\ \cdots\ \tilde{\boldsymbol{q}}_n]$，$Q = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$，有
 
 $$
 A = \tilde{Q}\tilde{R}, \qquad
@@ -323,14 +323,14 @@ $$
 
 ### 4.3.4. QR 分解的计算
 
-**算法 4.3.1（Gram–Schmidt QR）** 输入列满秩的 $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$，输出简化 QR 分解 $A = Q_1R_1$。对 $j = 1, \cdots, n$：
+**算法 4.3.1（Gram–Schmidt QR）** 输入列满秩的 $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$，输出简化 QR 分解 $A = Q_1R_1$。对 $j = 1, \dots, n$：
 
-1. 计算 $r_{ij} = \boldsymbol{q}_i^{\mathsf T}\boldsymbol{a}_j$（$i = 1, \cdots, j-1$）；
+1. 计算 $r_{ij} = \boldsymbol{q}_i^{\mathsf T}\boldsymbol{a}_j$（$i = 1, \dots, j-1$）；
 2. 计算 $\tilde{\boldsymbol{q}}_j = \boldsymbol{a}_j - \sum_{i<j} r_{ij}\boldsymbol{q}_i$，$r_{jj} = \|\tilde{\boldsymbol{q}}_j\|$，$\boldsymbol{q}_j = \tilde{\boldsymbol{q}}_j / r_{jj}$。
 
 改进的（modified）Gram–Schmidt 算法在数学上与之等价，只是把第 1 步中的 $\boldsymbol{a}_j$ 换成"已经减去前面投影的当前向量"：每得到一个 $\boldsymbol{q}_i$，就立即从所有后续向量中减去它的分量。总运算量约为 $2mn^2$ 次浮点运算。
 
-**算法 4.3.2（Householder QR）** 输入 $m \times n$ 矩阵 $A$（$m \ge n$）。对 $j = 1, \cdots, n$：取当前矩阵第 $j$ 列中第 $j$ 到第 $m$ 个分量组成的向量 $\boldsymbol{x}$，按命题 4.3.1 构造 Householder 变换把 $\boldsymbol{x}$ 变成 $-\operatorname{sign}(x_1)\|\boldsymbol{x}\|\boldsymbol{e}_1$（选这个符号是为了避免 $\boldsymbol{y} - \boldsymbol{x}$ 相减时的抵消），作用在当前矩阵的第 $j$ 到第 $m$ 行上。$n$ 步之后得到上三角的 $R$，而 $H_n\cdots H_1A = R$，即 $A = QR$，$Q = H_1H_2\cdots H_n$。
+**算法 4.3.2（Householder QR）** 输入 $m \times n$ 矩阵 $A$（$m \ge n$）。对 $j = 1, \dots, n$：取当前矩阵第 $j$ 列中第 $j$ 到第 $m$ 个分量组成的向量 $\boldsymbol{x}$，按命题 4.3.1 构造 Householder 变换把 $\boldsymbol{x}$ 变成 $-\operatorname{sgn}(x_1)\|\boldsymbol{x}\|\boldsymbol{e}_1$（选这个符号是为了避免 $\boldsymbol{y} - \boldsymbol{x}$ 相减时的抵消），作用在当前矩阵的第 $j$ 到第 $m$ 行上。$n$ 步之后得到上三角的 $R$，而 $H_n\cdots H_1A = R$，即 $A = QR$，$Q = H_1H_2\cdots H_n$。
 
 三种算法在精确算术下给出同一个分解，但在浮点运算中差别很大。下图对条件数 $\kappa(A)$（最大与最小奇异值之比，见[第 7 章](/2.1.7)）不同的 $60 \times 30$ 矩阵计算 $\|I - Q^{\mathsf T}Q\|_2$，即计算出的 $Q$ 偏离列正交的程度：经典 Gram–Schmidt 的误差约按 $\varepsilon\kappa(A)^2$ 增长（$\varepsilon \approx 10^{-16}$ 是双精度的机器精度），$\kappa(A) \approx 10^8$ 时已完全失去正交性；改进的 Gram–Schmidt 约按 $\varepsilon\kappa(A)$ 增长；Householder 方法始终保持在机器精度。这正是数值软件（如 LAPACK、`numpy.linalg.qr`）采用 Householder 变换的原因。
 
@@ -342,7 +342,7 @@ $$
 
 ### 4.4.1. 子空间的正交与正交补
 
-若 $\boldsymbol{r}$ 与 $\boldsymbol{a}_1, \cdots, \boldsymbol{a}_s$ 都正交，则由双线性，$\boldsymbol{r}$ 与 $\operatorname{span}(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_s)$ 中任意向量都正交。例如齐次线性方程组 $A\boldsymbol{x} = \boldsymbol{0}$ 的每个解都与 $A$ 的每个行向量正交，因此**零空间** $\mathcal{N}(A)$ 中的向量与**行空间** $\mathcal{R}(A^{\mathsf T})$ 中的向量都正交。
+若 $\boldsymbol{r}$ 与 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_s$ 都正交，则由双线性，$\boldsymbol{r}$ 与 $\operatorname{span}(\boldsymbol{a}_1, \dots, \boldsymbol{a}_s)$ 中任意向量都正交。例如齐次线性方程组 $A\boldsymbol{x} = \boldsymbol{0}$ 的每个解都与 $A$ 的每个行向量正交，因此**零空间** $\mathcal{N}(A)$ 中的向量与**行空间** $\mathcal{R}(A^{\mathsf T})$ 中的向量都正交。
 
 **定义 4.4.1（子空间正交）** 设 $M, N$ 是 $\mathbb{R}^n$ 的子空间。若 $M$ 中任意向量与 $N$ 中任意向量都正交，则称 $M$ 与 $N$ 正交，记为 $M \perp N$。若 $\operatorname{span}(\boldsymbol{a}) \perp M$，则称向量 $\boldsymbol{a}$ 与 $M$ 正交，记为 $\boldsymbol{a} \perp M$。
 
@@ -359,7 +359,7 @@ $$
 
 **证明** 1. 若 $\boldsymbol{a} \in M \cap M^\perp$，则 $\boldsymbol{a} \perp \boldsymbol{a}$，$\boldsymbol{a}^{\mathsf T}\boldsymbol{a} = 0$，故 $\boldsymbol{a} = \boldsymbol{0}$。
 
-2. 取 $M$ 的标准正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$，扩充为 $\mathbb{R}^n$ 的标准正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_n$（定理 4.2.2），则 $\operatorname{span}(\boldsymbol{q}_{r+1}, \cdots, \boldsymbol{q}_n) \subseteq M^\perp$。反之，对 $\boldsymbol{a} \in M^\perp$，$\boldsymbol{a} = \sum_{i=1}^n (\boldsymbol{q}_i^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_i = \sum_{i=r+1}^n (\boldsymbol{q}_i^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_i$。故 $M^\perp = \operatorname{span}(\boldsymbol{q}_{r+1}, \cdots, \boldsymbol{q}_n)$，$\dim M^\perp = n - r$。
+2. 取 $M$ 的标准正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$，扩充为 $\mathbb{R}^n$ 的标准正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_n$（定理 4.2.2），则 $\operatorname{span}(\boldsymbol{q}_{r+1}, \dots, \boldsymbol{q}_n) \subseteq M^\perp$。反之，对 $\boldsymbol{a} \in M^\perp$，$\boldsymbol{a} = \sum_{i=1}^n (\boldsymbol{q}_i^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_i = \sum_{i=r+1}^n (\boldsymbol{q}_i^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_i$。故 $M^\perp = \operatorname{span}(\boldsymbol{q}_{r+1}, \dots, \boldsymbol{q}_n)$，$\dim M^\perp = n - r$。
 
 3. $M \subseteq (M^\perp)^\perp$，且由 2，$\dim (M^\perp)^\perp = n - \dim M^\perp = \dim M$，故二者相等。
 
@@ -374,9 +374,9 @@ $$
 
 **证明** 1. $\boldsymbol{x} \in \mathcal{N}(A)$ 当且仅当 $\boldsymbol{x}$ 与 $A$ 的每一行正交，当且仅当 $\boldsymbol{x} \perp \mathcal{R}(A^{\mathsf T})$。对 $A^{\mathsf T}$ 应用同一结论得第二式。
 
-2. 显然 $\mathcal{N}(A) \subseteq \mathcal{N}(A^{\mathsf T}A)$。反之，若 $A^{\mathsf T}A\boldsymbol{x} = \boldsymbol{0}$，则 $\|A\boldsymbol{x}\|^2 = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}A\boldsymbol{x} = 0$，故 $A\boldsymbol{x} = \boldsymbol{0}$。于是 $\mathcal{N}(A^{\mathsf T}A) = \mathcal{N}(A)$。又 $\mathcal{R}(A^{\mathsf T}A) \subseteq \mathcal{R}(A^{\mathsf T})$，而由**秩–零化度定理**，$\operatorname{rank}(A^{\mathsf T}A) = n - \dim\mathcal{N}(A^{\mathsf T}A) = n - \dim\mathcal{N}(A) = \operatorname{rank}A = \operatorname{rank}A^{\mathsf T}$，故 $\mathcal{R}(A^{\mathsf T}A) = \mathcal{R}(A^{\mathsf T})$。把 $A$ 换成 $A^{\mathsf T}$ 得其余两式。$\square$
+2. 显然 $\mathcal{N}(A) \subseteq \mathcal{N}(A^{\mathsf T}A)$。反之，若 $A^{\mathsf T}A\boldsymbol{x} = \boldsymbol{0}$，则 $\|A\boldsymbol{x}\|^2 = \boldsymbol{x}^{\mathsf T}A^{\mathsf T}A\boldsymbol{x} = 0$，故 $A\boldsymbol{x} = \boldsymbol{0}$。于是 $\mathcal{N}(A^{\mathsf T}A) = \mathcal{N}(A)$。又 $\mathcal{R}(A^{\mathsf T}A) \subseteq \mathcal{R}(A^{\mathsf T})$，而由**秩–零化度定理**，$\operatorname{rank}(A^{\mathsf T}A) = n - \dim\mathcal{N}(A^{\mathsf T}A) = n - \dim\mathcal{N}(A) = \operatorname{rank}(A) = \operatorname{rank}(A^{\mathsf T})$，故 $\mathcal{R}(A^{\mathsf T}A) = \mathcal{R}(A^{\mathsf T})$。把 $A$ 换成 $A^{\mathsf T}$ 得其余两式。$\square$
 
-结合第 3 章的维数公式，四个基本子空间两两配成正交补（设 $\operatorname{rank}A = r$）：
+结合第 3 章的维数公式，四个基本子空间两两配成正交补（设 $\operatorname{rank}(A) = r$）：
 
 | 子空间 | 所在空间 | 维数 | 正交补 |
 |---|---|---|---|
@@ -389,13 +389,13 @@ $$
 
 ### 4.4.3. 子空间上的正交投影
 
-设 $M$ 是 $\mathbb{R}^n$ 的子空间。由定理 4.4.1，每个 $\boldsymbol{a} \in \mathbb{R}^n$ 唯一地分解为 $\boldsymbol{a} = \boldsymbol{a}_1 + \boldsymbol{a}_2$，$\boldsymbol{a}_1 \in M$，$\boldsymbol{a}_2 \in M^\perp$。由分解的唯一性，$\boldsymbol{a} + \boldsymbol{b}$ 的分解就是两个分解之和，$k\boldsymbol{a}$ 的分解就是 $\boldsymbol{a}$ 的分解乘以 $k$，因此 $\boldsymbol{a} \mapsto \boldsymbol{a}_1$ 是一个线性变换。取 $M$ 的标准正交基 $\boldsymbol{q}_1, \cdots, \boldsymbol{q}_r$，令 $Q_r = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_r]$，则
+设 $M$ 是 $\mathbb{R}^n$ 的子空间。由定理 4.4.1，每个 $\boldsymbol{a} \in \mathbb{R}^n$ 唯一地分解为 $\boldsymbol{a} = \boldsymbol{a}_1 + \boldsymbol{a}_2$，$\boldsymbol{a}_1 \in M$，$\boldsymbol{a}_2 \in M^\perp$。由分解的唯一性，$\boldsymbol{a} + \boldsymbol{b}$ 的分解就是两个分解之和，$k\boldsymbol{a}$ 的分解就是 $\boldsymbol{a}$ 的分解乘以 $k$，因此 $\boldsymbol{a} \mapsto \boldsymbol{a}_1$ 是一个线性变换。取 $M$ 的标准正交基 $\boldsymbol{q}_1, \dots, \boldsymbol{q}_r$，令 $Q_r = [\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_r]$，则
 
 $$
 \boldsymbol{a}_1 = (\boldsymbol{q}_1^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_1 + \cdots + (\boldsymbol{q}_r^{\mathsf T}\boldsymbol{a})\boldsymbol{q}_r = (\boldsymbol{q}_1\boldsymbol{q}_1^{\mathsf T} + \cdots + \boldsymbol{q}_r\boldsymbol{q}_r^{\mathsf T})\boldsymbol{a} = Q_rQ_r^{\mathsf T}\boldsymbol{a}.
 $$
 
-**定义 4.4.3（正交投影）** 线性变换 $P_M: \boldsymbol{a} \mapsto \boldsymbol{a}_1$ 称为子空间 $M$ 上的**正交投影**（变换），$\boldsymbol{a}_1 = P_M(\boldsymbol{a})$ 称为向量 $\boldsymbol{a}$ 在 $M$ 上的正交投影。它的表示矩阵是 $P_M = Q_rQ_r^{\mathsf T}$，其中 $Q_r$ 的列向量组是 $M$ 的任意一组标准正交基。
+**定义 4.4.3（正交投影）** 线性变换 $P_M\colon \boldsymbol{a} \mapsto \boldsymbol{a}_1$ 称为子空间 $M$ 上的**正交投影**（变换），$\boldsymbol{a}_1 = P_M(\boldsymbol{a})$ 称为向量 $\boldsymbol{a}$ 在 $M$ 上的正交投影。它的表示矩阵是 $P_M = Q_rQ_r^{\mathsf T}$，其中 $Q_r$ 的列向量组是 $M$ 的任意一组标准正交基。
 
 $P_M$ 由 $M$ 唯一确定，与标准正交基的选取无关（因为分解是唯一的）。由定义：
 
@@ -502,13 +502,13 @@ $$
 
 ### 4.5.3. 数据拟合
 
-最小二乘法的一个重要应用是数据拟合。设变量 $y$ 与 $t$ 之间存在某种规律 $y = f(t)$，但函数形式未知；通过测量得到数据点 $(t_1, y_1), \cdots, (t_m, y_m)$。假定 $f$ 是已知的简单函数 $f_1, \cdots, f_n$ 的线性组合：
+最小二乘法的一个重要应用是数据拟合。设变量 $y$ 与 $t$ 之间存在某种规律 $y = f(t)$，但函数形式未知；通过测量得到数据点 $(t_1, y_1), \dots, (t_m, y_m)$。假定 $f$ 是已知的简单函数 $f_1, \dots, f_n$ 的线性组合：
 
 $$
 f(t) = x_1f_1(t) + x_2f_2(t) + \cdots + x_nf_n(t),
 $$
 
-确定 $f$ 就是求系数 $x_1, \cdots, x_n$。令
+确定 $f$ 就是求系数 $x_1, \dots, x_n$。令
 
 $$
 \boldsymbol{f}_j = \begin{bmatrix} f_j(t_1) \\ \vdots \\ f_j(t_m) \end{bmatrix}, \quad
@@ -516,17 +516,17 @@ A = [\boldsymbol{f}_1\ \cdots\ \boldsymbol{f}_n] = \begin{bmatrix} f_1(t_1) & \c
 \boldsymbol{b} = \begin{bmatrix} y_1 \\ \vdots \\ y_m \end{bmatrix},
 $$
 
-条件 $f(t_i) = y_i$（$i = 1, \cdots, m$）就是 $A\boldsymbol{x} = \boldsymbol{b}$。数据点通常多于参数（$m > n$），且测量有误差、选定的函数形式也只是近似，这个方程组一般无解，于是转而求最小二乘解。注意 $f$ 关于 $t$ 可以是非线性的，只要它关于未知系数 $\boldsymbol{x}$ 是线性的，就是线性最小二乘问题。常见的选择：
+条件 $f(t_i) = y_i$（$i = 1, \dots, m$）就是 $A\boldsymbol{x} = \boldsymbol{b}$。数据点通常多于参数（$m > n$），且测量有误差、选定的函数形式也只是近似，这个方程组一般无解，于是转而求最小二乘解。注意 $f$ 关于 $t$ 可以是非线性的，只要它关于未知系数 $\boldsymbol{x}$ 是线性的，就是线性最小二乘问题。常见的选择：
 
 | 拟合 | 函数形式 | 基函数 $f_j$ |
 |---|---|---|
 | 线性拟合 | $f(t) = kt + a$ | $t,\ 1$ |
 | 二次拟合 | $f(t) = at^2 + bt + c$ | $t^2,\ t,\ 1$ |
-| 多项式拟合 | $f(t) = a_nt^n + \cdots + a_1t + a_0$ | $t^n, \cdots, t, 1$ |
+| 多项式拟合 | $f(t) = a_nt^n + \cdots + a_1t + a_0$ | $t^n, \dots, t, 1$ |
 
 对多项式拟合，$A$ 就是第 5 章的 **Vandermonde 矩阵**（取前 $n+1$ 列）。
 
-**例 4.5.2（一元线性拟合）** 给定数据 $(t_1, y_1), \cdots, (t_m, y_m)$，用 $y = kt + a$ 拟合。记 $\boldsymbol{t} = [t_i]$，$\boldsymbol{1} = [1\ \cdots\ 1]^{\mathsf T}$，$\boldsymbol{b} = [y_i]$，则 $A = [\boldsymbol{t}\ \boldsymbol{1}]$，$\boldsymbol{x} = \begin{bmatrix} k \\ a \end{bmatrix}$。只要 $t_i$ 不全相同，$A$ 就列满秩，最小二乘解唯一。正规方程为
+**例 4.5.2（一元线性拟合）** 给定数据 $(t_1, y_1), \dots, (t_m, y_m)$，用 $y = kt + a$ 拟合。记 $\boldsymbol{t} = [t_i]$，$\boldsymbol{1} = [1\ \cdots\ 1]^{\mathsf T}$，$\boldsymbol{b} = [y_i]$，则 $A = [\boldsymbol{t}\ \boldsymbol{1}]$，$\boldsymbol{x} = \begin{bmatrix} k \\ a \end{bmatrix}$。只要 $t_i$ 不全相同，$A$ 就列满秩，最小二乘解唯一。正规方程为
 
 $$
 \begin{bmatrix} \boldsymbol{t}^{\mathsf T}\boldsymbol{t} & \boldsymbol{1}^{\mathsf T}\boldsymbol{t} \\ \boldsymbol{1}^{\mathsf T}\boldsymbol{t} & m \end{bmatrix}\begin{bmatrix} k \\ a \end{bmatrix} = \begin{bmatrix} \boldsymbol{t}^{\mathsf T}\boldsymbol{b} \\ \boldsymbol{1}^{\mathsf T}\boldsymbol{b} \end{bmatrix},

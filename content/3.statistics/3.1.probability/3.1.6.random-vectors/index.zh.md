@@ -5,10 +5,10 @@ title: 随机向量的分布
 ## 6.1. 随机向量的基本概念
 
 ### 6.1.1. 定义
-设 $X_1, \dots, X_n$ 都是概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的随机变量，称 $X = (X_1, \dots, X_n)$ 是 n 维随机向量。
+设 $X_1, \dots, X_n$ 都是概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的随机变量，称 $\boldsymbol{X} = (X_1, \dots, X_n)$ 是 $n$ 维随机向量。
 
 ### 6.1.2. 联合分布函数
-$X = (X_1, \dots, X_n)$ 的联合分布函数定义为：
+$\boldsymbol{X} = (X_1, \dots, X_n)$ 的联合分布函数定义为：
 $$
 F(x_1, \dots, x_n) = \mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n)
 $$
@@ -16,13 +16,13 @@ $$
 ## 6.2. 离散型随机向量
 
 ### 6.2.1. 联合分布列
-设离散型随机向量 $X = (X_1, \dots, X_n)$ 的取值为：
+设离散型随机向量 $\boldsymbol{X} = (X_1, \dots, X_n)$ 的取值为：
 $$
-x(j_1, \dots, j_n) = (x_1(j_1), \dots, x_n(j_n)), \quad j_1, \dots, j_n \geq 1
+\boldsymbol{x}(j_1, \dots, j_n) = (x_1(j_1), \dots, x_n(j_n)), \quad j_1, \dots, j_n \geq 1
 $$
 联合分布列为：
 $$
-p_{j_1, \dots, j_n} = \mathbb{P}(X = x(j_1, \dots, j_n))
+p_{j_1, \dots, j_n} = \mathbb{P}(\boldsymbol{X} = \boldsymbol{x}(j_1, \dots, j_n))
 $$
 
 ### 6.2.2. 边缘分布列
@@ -49,9 +49,9 @@ $$
 ### 6.3.1. 联合概率密度
 存在非负可积函数 $f(x_1, \dots, x_n)$，使得对任意 Borel 集 $B$：
 $$
-\mathbb{P}(X \in B) = \int_B f(x) \mathrm{d}x
+\mathbb{P}(\boldsymbol{X} \in B) = \int_B f(\boldsymbol{x}) \mathrm{d}\boldsymbol{x}
 $$
-且 $\int_{\mathbb{R}^n} f(x) \mathrm{d}x = 1$。
+且 $\int_{\mathbb{R}^n} f(\boldsymbol{x}) \mathrm{d}\boldsymbol{x} = 1$。
 
 ### 6.3.2. 边缘密度
 $(X_1, \dots, X_k)$ 的边缘密度为：
@@ -103,16 +103,16 @@ $$
 ## 6.5. 经典连续型随机向量：二元正态分布
 
 ### 6.5.1. 定义
-$(X, Y) \sim N(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$ 的联合密度为：
+$(X, Y) \sim \mathcal{N}(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$ 的联合密度为：
 $$
 f(x, y) = \frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}} \exp\left\{ -\frac{1}{2(1-\rho^2)} \left[ \frac{(x-\mu_1)^2}{\sigma_1^2} - \frac{2\rho(x-\mu_1)(y-\mu_2)}{\sigma_1\sigma_2} + \frac{(y-\mu_2)^2}{\sigma_2^2} \right] \right\}
 $$
 
 ### 6.5.2. 矩阵形式
 $$
-f(\boldsymbol{x}) = \frac{1}{\sqrt{(2\pi)^2 |\Sigma|}} \exp\left\{ -\frac{1}{2}(\boldsymbol{x} - \mu)'\Sigma^{-1}(\boldsymbol{x} - \mu) \right\}
+f(\boldsymbol{x}) = \frac{1}{\sqrt{(2\pi)^2 |\Sigma|}} \exp\left\{ -\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^{\mathsf T}\Sigma^{-1}(\boldsymbol{x} - \boldsymbol{\mu}) \right\}
 $$
-其中 $\boldsymbol{x} = (x, y)'$，$\mu = (\mu_1, \mu_2)'$，$\Sigma = \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix}$。
+其中 $\boldsymbol{x} = (x, y)^{\mathsf T}$，$\boldsymbol{\mu} = (\mu_1, \mu_2)^{\mathsf T}$，$\Sigma = \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix}$。
 
 ### 6.5.3. 独立性条件
 **定理**：对于二元正态分布，$X, Y$ 独立当且仅当 $\rho = 0$。
@@ -120,7 +120,7 @@ $$
 ### 6.5.4. 条件分布
 给定 $X = x$ 时，$Y$ 的条件分布为：
 $$
-Y|_{X=x} \sim N\left( \mu_2 + \rho\frac{\sigma_2}{\sigma_1}(x - \mu_1), (1-\rho^2)\sigma_2^2 \right)
+Y|_{X=x} \sim \mathcal{N}\left( \mu_2 + \rho\frac{\sigma_2}{\sigma_1}(x - \mu_1), (1-\rho^2)\sigma_2^2 \right)
 $$
 
 ## 小结
@@ -139,8 +139,8 @@ $$
 
 ### 关键公式
 - 联合 CDF：$F(x_1, \dots, x_n) = \mathbb{P}(X_1 \leq x_1, \dots, X_n \leq x_n)$
-- 离散型联合分布列：$p_{j_1, \dots, j_n} = \mathbb{P}(X = x(j_1, \dots, j_n))$
-- 连续型联合密度：$\mathbb{P}(X \in B) = \int_B f(x) \mathrm{d}x$
+- 离散型联合分布列：$p_{j_1, \dots, j_n} = \mathbb{P}(\boldsymbol{X} = \boldsymbol{x}(j_1, \dots, j_n))$
+- 连续型联合密度：$\mathbb{P}(\boldsymbol{X} \in B) = \int_B f(\boldsymbol{x}) \mathrm{d}\boldsymbol{x}$
 - 边缘密度：$f_k(x_1, \dots, x_k) = \int_{\mathbb{R}^{n-k}} f(x_1, \dots, x_n) \mathrm{d}x_{k+1} \dots \mathrm{d}x_n$
 - 条件密度：$f_{X|Y}(x|y) = \dfrac{f(x, y)}{f_Y(y)}$
 - 二元正态密度：矩阵形式和显式表达式

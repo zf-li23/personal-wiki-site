@@ -10,7 +10,7 @@ title: 参数假设检验
 
 #### 5.1.1.1. 基本思想
 - **原假设 (Null Hypothesis)**：记为 $H_0: \theta \in \Theta_0$，表示待检验的、通常代表现状或保守观点的假设。
-- **备择假设 (Alternative Hypothesis)**：记为 $H_1: \theta \in \Theta_1$，其中 $\Theta_1 = \Theta - \Theta_0$，代表与原假设对立的观点。
+- **备择假设 (Alternative Hypothesis)**：记为 $H_1: \theta \in \Theta_1$，其中 $\Theta_1 = \Theta \setminus \Theta_0$，代表与原假设对立的观点。
 - 检验的目标：基于样本数据，决定是“拒绝”还是“接受” $H_0$。
 
 #### 5.1.1.2. 假设的类型
@@ -32,7 +32,7 @@ title: 参数假设检验
 
 #### 5.1.2.1. 拒绝域与接受域
 - **拒绝域 (Rejection / Critical Region)**：样本空间 $\mathcal{X}$ 的一个子集 $D$，当样本观测值 $\boldsymbol{x} \in D$ 时，我们拒绝 $H_0$。
-- **接受域 (Acceptance Region)**：拒绝域的补集 $D^c = \mathcal{X} - D$，当 $\boldsymbol{x} \in D^c$ 时，我们接受 $H_0$。
+- **接受域 (Acceptance Region)**：拒绝域的补集 $D^{\mathsf c} = \mathcal{X} \setminus D$，当 $\boldsymbol{x} \in D^{\mathsf c}$ 时，我们接受 $H_0$。
 
 #### 5.1.2.2. 检验函数
 - **非随机化检验 (Nonrandomized Test)**：检验函数 $\varphi(\boldsymbol{x})$ 只取 0 或 1。
@@ -40,7 +40,7 @@ title: 参数假设检验
   \varphi(\boldsymbol{x}) = 
   \begin{cases}
   1, & \text{拒绝 } H_0 \quad (\boldsymbol{x} \in D) \\
-  0, & \text{接受 } H_0 \quad (\boldsymbol{x} \in D^c)
+  0, & \text{接受 } H_0 \quad (\boldsymbol{x} \in D^{\mathsf c})
   \end{cases}
   $$
 - **随机化检验 (Randomized Test)**：检验函数 $\varphi(\boldsymbol{x})$ 可以取 $[0, 1]$ 之间的值，表示拒绝 $H_0$ 的概率。
@@ -59,11 +59,11 @@ title: 参数假设检验
 #### 5.1.3.1. 两类错误 (Type I and Type II Errors)
 - **第一类错误 (弃真)**：$H_0$ 为真时，拒绝了 $H_0$。其概率记为 $\alpha(\theta)$。
   $$
-  \alpha(\theta) = P_\theta(\text{拒绝 } H_0) = E_\theta[\varphi(\boldsymbol{X})], \quad \theta \in \Theta_0
+  \alpha(\theta) = \mathbb{P}_\theta(\text{拒绝 } H_0) = \mathbb{E}_\theta[\varphi(\boldsymbol{X})], \quad \theta \in \Theta_0
   $$
 - **第二类错误 (取伪)**：$H_0$ 为假时，接受了 $H_0$。其概率记为 $\beta(\theta)$。
   $$
-  \beta(\theta) = P_\theta(\text{接受 } H_0) = 1 - E_\theta[\varphi(\boldsymbol{X})], \quad \theta \in \Theta_1
+  \beta(\theta) = \mathbb{P}_\theta(\text{接受 } H_0) = 1 - \mathbb{E}_\theta[\varphi(\boldsymbol{X})], \quad \theta \in \Theta_1
   $$
 
 #### 5.1.3.2. 显著性水平与功效函数
@@ -74,7 +74,7 @@ title: 参数假设检验
   通常预先设定为一个小值（如 0.05, 0.01）。
 - **功效函数 (Power Function)**：检验函数 $\varphi$ 拒绝 $H_0$ 的概率，是参数 $\theta$ 的函数。
   $$
-  \pi_\varphi(\theta) = P_\theta(\text{拒绝 } H_0) = E_\theta[\varphi(\boldsymbol{X})]
+  \pi_\varphi(\theta) = \mathbb{P}_\theta(\text{拒绝 } H_0) = \mathbb{E}_\theta[\varphi(\boldsymbol{X})]
   $$
   当 $\theta \in \Theta_1$ 时，$\pi_\varphi(\theta)$ 越大越好；当 $\theta \in \Theta_0$ 时，希望 $\pi_\varphi(\theta) \leq \alpha$。
 
@@ -91,15 +91,15 @@ title: 参数假设检验
 - **常见形式的 p 值**：
   - 双侧检验 $H_0: \theta = \theta_0$ vs $H_1: \theta \neq \theta_0$：
     $$
-    p = P_{\theta_0}(|T(\boldsymbol{X})| \geq |t(\boldsymbol{x})|)
+    p = \mathbb{P}_{\theta_0}(|T(\boldsymbol{X})| \geq |t(\boldsymbol{x})|)
     $$
   - 右侧检验 $H_0: \theta \leq \theta_0$ vs $H_1: \theta > \theta_0$：
     $$
-    p = P_{\theta_0}(T(\boldsymbol{X}) \geq t(\boldsymbol{x}))
+    p = \mathbb{P}_{\theta_0}(T(\boldsymbol{X}) \geq t(\boldsymbol{x}))
     $$
   - 左侧检验 $H_0: \theta \geq \theta_0$ vs $H_1: \theta < \theta_0$：
     $$
-    p = P_{\theta_0}(T(\boldsymbol{X}) \leq t(\boldsymbol{x}))
+    p = \mathbb{P}_{\theta_0}(T(\boldsymbol{X}) \leq t(\boldsymbol{x}))
     $$
 
 ### 5.1.5. 假设检验的一般步骤
@@ -113,7 +113,7 @@ title: 参数假设检验
 
 ### 5.2.1. 单正态总体下的参数检验 (Testing Parameters in a Single Normal Population)
 
-设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} N(\mu, \sigma^2)$。
+设 $X_1, \cdots, X_n \overset{\text{iid}}{\sim} \mathcal{N}(\mu, \sigma^2)$。
 
 #### 5.2.1.1. 方差已知时均值的检验 (Test for Normal Mean μ when σ² is known)
 
@@ -124,7 +124,7 @@ title: 参数假设检验
 
 **检验统计量**：
 $$
-Z = \frac{\sqrt{n}(\bar{X} - \mu_0)}{\sigma} \stackrel{H_0}{\sim} N(0,1).
+Z = \frac{\sqrt{n}(\bar{X} - \mu_0)}{\sigma} \overset{H_0}{\sim} \mathcal{N}(0,1).
 $$
 
 **拒绝域**：
@@ -141,7 +141,7 @@ $$
 
 **检验统计量**：
 $$
-T = \frac{\sqrt{n}(\bar{X} - \mu_0)}{S} \stackrel{H_0}{\sim} t_{n-1}, \quad \text{其中 } S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2.
+T = \frac{\sqrt{n}(\bar{X} - \mu_0)}{S} \overset{H_0}{\sim} t_{n-1}, \quad \text{其中 } S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2.
 $$
 
 **拒绝域**：
@@ -158,7 +158,7 @@ $$
 
 **检验统计量**：
 $$
-\chi^2 = \sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma_0} \right)^2 \stackrel{H_0}{\sim} \chi_n^2.
+\chi^2 = \sum_{i=1}^n \left( \frac{X_i - \mu}{\sigma_0} \right)^2 \overset{H_0}{\sim} \chi_n^2.
 $$
 
 **拒绝域**（以双侧为例）：
@@ -170,7 +170,7 @@ $$
 
 **检验统计量**：
 $$
-\chi^2 = \frac{(n-1)S^2}{\sigma_0^2} \stackrel{H_0}{\sim} \chi_{n-1}^2.
+\chi^2 = \frac{(n-1)S^2}{\sigma_0^2} \overset{H_0}{\sim} \chi_{n-1}^2.
 $$
 
 **拒绝域**（以双侧为例）：
@@ -180,39 +180,39 @@ $$
 
 ### 5.2.2. 非正态总体下的参数检验 (Testing Parameters in Non-normal Distribution)
 
-#### 5.2.2.1. 二项分布参数θ的检验 (Test for $B(1, \theta)$)
+#### 5.2.2.1. 二项分布参数θ的检验 (Test for $\mathrm{Bin}(1, \theta)$)
 
-设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} B(1, \theta)$，记 $T(X) = \sum_{i=1}^n X_i \sim B(n, \theta)$。
+设 $X_1, \cdots, X_n \overset{\text{iid}}{\sim} \mathrm{Bin}(1, \theta)$，记 $T(\boldsymbol{X}) = \sum_{i=1}^n X_i \sim \mathrm{Bin}(n, \theta)$。
 
 对于检验问题 $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$，常用随机化检验：
 $$
-\varphi(X) = \begin{cases}
-1, & T(X) > c, \\
-r, & T(X) = c, \\
-0, & T(X) < c,
+\varphi(\boldsymbol{X}) = \begin{cases}
+1, & T(\boldsymbol{X}) > c, \\
+r, & T(\boldsymbol{X}) = c, \\
+0, & T(\boldsymbol{X}) < c,
 \end{cases}
 $$
-其中 $c$ 和 $r$ 由 $E_{\theta_0}[\varphi(X)] = \alpha$ 确定。
+其中 $c$ 和 $r$ 由 $\mathbb{E}_{\theta_0}[\varphi(\boldsymbol{X})] = \alpha$ 确定。
 
 **大样本近似**：当 $n$ 较大时，由中心极限定理，
 $$
-U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1),
+U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \overset{H_0}{\overset{\text{approx}}{\sim}} \mathcal{N}(0,1),
 $$
 拒绝域为 $U > z_\alpha$（右侧单侧）。
 
-#### 5.2.2.2. 泊松分布参数θ的检验 (Test for $\mathbb{P}(\theta)$)
+#### 5.2.2.2. 泊松分布参数θ的检验 (Test for $\mathrm{Poi}(\theta)$)
 
-设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} \mathbb{P}(\theta)$。
+设 $X_1, \cdots, X_n \overset{\text{iid}}{\sim} \mathrm{Poi}(\theta)$。
 
 **大样本近似**：当 $n$ 较大时，
 $$
-U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1),
+U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \overset{H_0}{\overset{\text{approx}}{\sim}} \mathcal{N}(0,1),
 $$
 拒绝域为 $|U_0| > z_{\alpha/2}$（双侧）等。
 
 ### 5.2.3. 两个正态总体下的参数检验 (Testing Parameters in Two Normal Populations)
 
-设 $X_1, \cdots, X_m \stackrel{\text{i.i.d.}}{\sim} N(\mu_1, \sigma_1^2)$，$Y_1, \cdots, Y_n \stackrel{\text{i.i.d.}}{\sim} N(\mu_2, \sigma_2^2)$，且两组样本独立。
+设 $X_1, \cdots, X_m \overset{\text{iid}}{\sim} \mathcal{N}(\mu_1, \sigma_1^2)$，$Y_1, \cdots, Y_n \overset{\text{iid}}{\sim} \mathcal{N}(\mu_2, \sigma_2^2)$，且两组样本独立。
 
 #### 5.2.3.1. 两总体均值差的检验 (Test for $\mu_1 - \mu_2$)
 
@@ -220,7 +220,7 @@ $$
 
 检验统计量：
 $$
-U = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{\sigma_1^2/m + \sigma_2^2/n}} \stackrel{H_0}{\sim} N(0,1),
+U = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{\sigma_1^2/m + \sigma_2^2/n}} \overset{H_0}{\sim} \mathcal{N}(0,1),
 $$
 其中 $\mu_0$ 为假设的差值。拒绝域形式同单总体 $U$ 检验。
 
@@ -228,7 +228,7 @@ $$
 
 检验统计量：
 $$
-T = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_p^2 \left( \frac{1}{m} + \frac{1}{n} \right)}} \stackrel{H_0}{\sim} t_{m+n-2},
+T = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_p^2 \left( \frac{1}{m} + \frac{1}{n} \right)}} \overset{H_0}{\sim} t_{m+n-2},
 $$
 其中 $S_p^2 = \frac{(m-1)S_X^2 + (n-1)S_Y^2}{m+n-2}$ 为合并样本方差。拒绝域形式同单总体 $t$ 检验。
 
@@ -236,7 +236,7 @@ $$
 
 当 $m, n$ 不大时，可采用 Welch 近似：
 $$
-T_* = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_X^2/m + S_Y^2/n}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} t_r,
+T_* = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_X^2/m + S_Y^2/n}} \overset{H_0}{\overset{\text{approx}}{\sim}} t_r,
 $$
 其中自由度 $r$ 由下式近似（取最接近的整数）：
 $$
@@ -249,7 +249,7 @@ $$
 
 检验统计量：
 $$
-F = \frac{S_Y^2}{S_X^2} \stackrel{H_0}{\sim} F_{n-1, m-1}, \quad \text{当 } \sigma_1^2 = \sigma_2^2 \text{ 时}.
+F = \frac{S_Y^2}{S_X^2} \overset{H_0}{\sim} F_{n-1, m-1}, \quad \text{当 } \sigma_1^2 = \sigma_2^2 \text{ 时}.
 $$
 对于 $H_0: \sigma_2^2 / \sigma_1^2 = 1 \ \text{vs.} \ H_1: \sigma_2^2 / \sigma_1^2 \neq 1$，拒绝域为：
 $$
@@ -260,24 +260,24 @@ $$
 
 检验统计量：
 $$
-F_k = \frac{S_{Y*}^2}{S_{X*}^2} = \frac{\frac{1}{n}\sum_{i=1}^n (Y_i - \mu_2)^2}{\frac{1}{m}\sum_{i=1}^m (X_i - \mu_1)^2} \stackrel{H_0}{\sim} F_{n, m}.
+F_k = \frac{S_{Y*}^2}{S_{X*}^2} = \frac{\frac{1}{n}\sum_{i=1}^n (Y_i - \mu_2)^2}{\frac{1}{m}\sum_{i=1}^m (X_i - \mu_1)^2} \overset{H_0}{\sim} F_{n, m}.
 $$
 拒绝域形式类似，但自由度不同。
 
 ### 5.2.4. 成对比较 (Paired Comparison)
 
-当成对数据 $(X_i, Y_i)$ 存在相依性时（如治疗前后比较），可考虑差值 $Z_i = Y_i - X_i$。若 $Z_i \stackrel{\text{i.i.d.}}{\sim} N(\mu, \sigma^2)$，则检验 $H_0: \mu = 0$ 可化为单样本 $t$ 检验：
+当成对数据 $(X_i, Y_i)$ 存在相依性时（如治疗前后比较），可考虑差值 $Z_i = Y_i - X_i$。若 $Z_i \overset{\text{iid}}{\sim} \mathcal{N}(\mu, \sigma^2)$，则检验 $H_0: \mu = 0$ 可化为单样本 $t$ 检验：
 $$
-T = \frac{\sqrt{n}\bar{Z}}{S_Z} \stackrel{H_0}{\sim} t_{n-1}.
+T = \frac{\sqrt{n}\bar{Z}}{S_Z} \overset{H_0}{\sim} t_{n-1}.
 $$
 
 ### 5.2.5. 大样本理论下的假设检验 (Hypothesis Testing Based on Large Sample Theory)
 
 #### 5.2.5.1. 中心极限定理的应用 (Application of CLT)
 
-设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} F$，$\mathbb{E}[X_i] = \mu$，$\operatorname{Var}(X_i) = \sigma^2 < \infty$。由中心极限定理及 Slutsky 定理，当 $n$ 较大时，
+设 $X_1, \cdots, X_n \overset{\text{iid}}{\sim} F$，$\mathbb{E}[X_i] = \mu$，$\operatorname{Var}(X_i) = \sigma^2 < \infty$。由中心极限定理及 Slutsky 定理，当 $n$ 较大时，
 $$
-\frac{\sqrt{n}(\bar{X} - \mu)}{S} \overset{d}{\to} N(0,1).
+\frac{\sqrt{n}(\bar{X} - \mu)}{S} \xrightarrow{d} \mathcal{N}(0,1).
 $$
 因此，对于均值的检验，即使总体分布非正态，也可使用基于正态近似的 $U$ 检验。
 
@@ -285,22 +285,22 @@ $$
 
 当 $m, n$ 都较大时，
 $$
-U^* = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_X^2/m + S_Y^2/n}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1).
+U^* = \frac{(\bar{X} - \bar{Y}) - \mu_0}{\sqrt{S_X^2/m + S_Y^2/n}} \overset{H_0}{\overset{\text{approx}}{\sim}} \mathcal{N}(0,1).
 $$
 拒绝域同基于正态的检验。
 
-#### 5.2.5.3. 二项分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $B(1, \theta)$)
+#### 5.2.5.3. 二项分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $\mathrm{Bin}(1, \theta)$)
 
 当 $n$ 较大时，
 $$
-U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1).
+U = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0(1-\theta_0)}} \overset{H_0}{\overset{\text{approx}}{\sim}} \mathcal{N}(0,1).
 $$
 
-#### 5.2.5.4. 泊松分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $\mathbb{P}(\theta)$)
+#### 5.2.5.4. 泊松分布参数的大样本检验 (Large Sample Test for the Mean $\theta$ of $\mathrm{Poi}(\theta)$)
 
 当 $n$ 较大时，
 $$
-U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \stackrel{H_0}{\overset{\text{approx}}{\sim}} N(0,1).
+U_0 = \frac{\sqrt{n}(\bar{X} - \theta_0)}{\sqrt{\theta_0}} \overset{H_0}{\overset{\text{approx}}{\sim}} \mathcal{N}(0,1).
 $$
 
 ## 5.3. 似然比检验 (Likelihood Ratio Test)
@@ -311,17 +311,17 @@ $$
 
 ### 5.3.2. 似然比检验的定义 (Definition of Likelihood Ratio Test)
 
-设样本 $X$ 的似然函数为 $L(\theta) = f(X; \theta)$，$\hat{\theta}_{\text{MLE},0}$ 为 $\Theta_0$ 上的极大似然估计，$\hat{\theta}_{\text{MLE}}$ 为 $\Theta$ 上的极大似然估计。则似然比统计量为：
+设样本 $\boldsymbol{X}$ 的似然函数为 $L(\theta) = f(\boldsymbol{X}; \theta)$，$\hat{\theta}_{\text{MLE},0}$ 为 $\Theta_0$ 上的极大似然估计，$\hat{\theta}_{\text{MLE}}$ 为 $\Theta$ 上的极大似然估计。则似然比统计量为：
 $$
-\lambda(X) = \frac{L(\hat{\theta}_{\text{MLE},0})}{L(\hat{\theta}_{\text{MLE}})} = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)}.
+\lambda(\boldsymbol{X}) = \frac{L(\hat{\theta}_{\text{MLE},0})}{L(\hat{\theta}_{\text{MLE}})} = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)}.
 $$
-由于 $\lambda(X) \in [0,1]$，当 $\lambda(X)$ 过小时拒绝 $H_0$。拒绝域通常取 $\{ \lambda(X) < \lambda_0 \}$ 或等价地 $\{ -2\log \lambda(X) > C \}$。
+由于 $\lambda(\boldsymbol{X}) \in [0,1]$，当 $\lambda(\boldsymbol{X})$ 过小时拒绝 $H_0$。拒绝域通常取 $\{ \lambda(\boldsymbol{X}) < \lambda_0 \}$ 或等价地 $\{ -2\log \lambda(\boldsymbol{X}) > C \}$。
 
 ### 5.3.3. 例子与应用 (Examples and Applications)
 
 #### 5.3.3.1. 柯西分布的例子 (Example with Cauchy Distribution)
 
-设 $X \sim \text{Cauchy}(\theta)$，p.d.f. 为 $f(x;\theta) = \frac{1}{\pi} \cdot \frac{1}{1+(x-\theta)^2}$。检验 $H_0: \theta = 0 \ \text{vs.} \ H_1: \theta \neq 0$。
+设 $X \sim \mathrm{Cauchy}(\theta)$，p.d.f. 为 $f(x;\theta) = \frac{1}{\pi} \cdot \frac{1}{1+(x-\theta)^2}$。检验 $H_0: \theta = 0 \ \text{vs.} \ H_1: \theta \neq 0$。
 易得 $\hat{\theta}_{\text{MLE}} = X$，故
 $$
 \lambda = \frac{f(X;0)}{f(X;X)} = \frac{1/(1+X^2)}{1} = \frac{1}{1+X^2}.
@@ -330,34 +330,34 @@ $$
 
 #### 5.3.3.2. 负指数分布的例子 (Example with Negative Exponential Distribution)
 
-设 $X_1, \cdots, X_n \stackrel{\text{i.i.d.}}{\sim} \text{Exp}(\theta)$，p.d.f. 为 $f(x;\theta) = \theta \mathrm{e}^{-\theta x}, x>0$。检验 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$。
+设 $X_1, \cdots, X_n \overset{\text{iid}}{\sim} \mathrm{Exp}(\theta)$，p.d.f. 为 $f(x;\theta) = \theta \mathrm{e}^{-\theta x}, x>0$。检验 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$。
 似然函数 $L(\theta) = \theta^n \mathrm{e}^{-\theta T}$，其中 $T = \sum_{i=1}^n X_i$。MLE 为 $\hat{\theta} = n/T$。
 似然比：
 $$
-\lambda = \frac{\theta_0^n \mathrm{e}^{-\theta_0 T}}{(n/T)^n \mathrm{e}^{-n}} = \left( \frac{e\theta_0}{n} \right)^n T^n \mathrm{e}^{-\theta_0 T}.
+\lambda = \frac{\theta_0^n \mathrm{e}^{-\theta_0 T}}{(n/T)^n \mathrm{e}^{-n}} = \left( \frac{\mathrm{e}\theta_0}{n} \right)^n T^n \mathrm{e}^{-\theta_0 T}.
 $$
-拒绝域 $\lambda < \lambda_0$ 等价于 $T \mathrm{e}^{-(\theta_0/n)T} < C_0$，进一步可化为 $T < C_1$ 或 $T > C_2$，其中 $C_1, C_2$ 由 $P_{\theta_0}(T < C_1) = P_{\theta_0}(T > C_2) = \alpha/2$ 确定。
+拒绝域 $\lambda < \lambda_0$ 等价于 $T \mathrm{e}^{-(\theta_0/n)T} < C_0$，进一步可化为 $T < C_1$ 或 $T > C_2$，其中 $C_1, C_2$ 由 $\mathbb{P}_{\theta_0}(T < C_1) = \mathbb{P}_{\theta_0}(T > C_2) = \alpha/2$ 确定。
 
 ### 5.3.4. 线性回归中的似然比检验 (Likelihood Ratio Test in Linear Regression)
-在线性回归模型 $Y = X\beta + \epsilon$ 中，假设随机误差 $\epsilon_i \stackrel{\text{i.i.d.}}{\sim} N(0, \sigma^2)$。检验单个回归系数 $\beta_j$ 的显著性，即 $H_{0j}: \beta_j = 0$。
+在线性回归模型 $\boldsymbol{Y} = X\boldsymbol{\beta} + \boldsymbol{\epsilon}$ 中，假设随机误差 $\epsilon_i \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)$。检验单个回归系数 $\beta_j$ 的显著性，即 $H_{0j}: \beta_j = 0$。
 
 **参数空间与似然函数**：
-- 全参数空间 $\Theta = \{(\beta, \sigma^2)\} \in \mathbb{R}^{p+2}$，维度 $k = p+2$。
-- 零假设参数空间 $\Theta_0 = \{(\beta, \sigma^2): \beta_j=0\} \in \mathbb{R}^{p+1}$，维度 $s = p+1$。
-- 似然函数：$L(\beta, \sigma^2) = (2\pi\sigma^2)^{-n/2} \exp\left\{ -\frac{||Y - X\beta||_2^2}{2\sigma^2} \right\}$。
+- 全参数空间 $\Theta = \{(\boldsymbol{\beta}, \sigma^2)\} \subset \mathbb{R}^{p+2}$，维度 $k = p+2$。
+- 零假设参数空间 $\Theta_0 = \{(\boldsymbol{\beta}, \sigma^2): \beta_j=0\} \subset \mathbb{R}^{p+1}$，维度 $s = p+1$。
+- 似然函数：$L(\boldsymbol{\beta}, \sigma^2) = (2\pi\sigma^2)^{-n/2} \exp\left\{ -\frac{\|\boldsymbol{Y} - X\boldsymbol{\beta}\|_2^2}{2\sigma^2} \right\}$。
 
 **最大似然估计**：
-- $\Theta$ 上的 MLE：$\hat{\beta}_{\text{MLE}} = (X^{\mathsf T}X)^{-1}X^{\mathsf T}Y$，$\hat{\sigma}^2_{\text{MLE}} = \frac{1}{n} ||Y - X\hat{\beta}_{\text{MLE}}||_2^2$。
-- $\Theta_0$ 上的 MLE：记 $\beta_{-j}$ 为去掉 $\beta_j$ 的向量，$X_{-j}$ 为去掉第 $j$ 列的设计矩阵。$\hat{\beta}_{\text{MLE},0} = (X_{-j}^{\mathsf T} X_{-j})^{-1}X_{-j}^{\mathsf T}Y$，$\hat{\sigma}^2_{\text{MLE},0} = \frac{1}{n} ||Y - X_{-j}\hat{\beta}_{\text{MLE},0}||_2^2$。
+- $\Theta$ 上的 MLE：$\hat{\boldsymbol{\beta}}_{\text{MLE}} = (X^{\mathsf T}X)^{-1}X^{\mathsf T}\boldsymbol{Y}$，$\hat{\sigma}^2_{\text{MLE}} = \frac{1}{n} \|\boldsymbol{Y} - X\hat{\boldsymbol{\beta}}_{\text{MLE}}\|_2^2$。
+- $\Theta_0$ 上的 MLE：记 $\boldsymbol{\beta}_{-j}$ 为去掉 $\beta_j$ 的向量，$X_{-j}$ 为去掉第 $j$ 列的设计矩阵。$\hat{\boldsymbol{\beta}}_{\text{MLE},0} = (X_{-j}^{\mathsf T} X_{-j})^{-1}X_{-j}^{\mathsf T}\boldsymbol{Y}$，$\hat{\sigma}^2_{\text{MLE},0} = \frac{1}{n} \|\boldsymbol{Y} - X_{-j}\hat{\boldsymbol{\beta}}_{\text{MLE},0}\|_2^2$。
 
 **似然比统计量**：
 $$
-\lambda = \left( \frac{\hat{\sigma}^2_{\text{MLE}}}{\hat{\sigma}^2_{\text{MLE},0}} \right)^{n/2} = \left( \frac{||Y - X\hat{\beta}_{\text{MLE}}||_2^2}{||Y - X_{-j}\hat{\beta}_{\text{MLE},0}||_2^2} \right)^{n/2}
+\lambda = \left( \frac{\hat{\sigma}^2_{\text{MLE}}}{\hat{\sigma}^2_{\text{MLE},0}} \right)^{n/2} = \left( \frac{\|\boldsymbol{Y} - X\hat{\boldsymbol{\beta}}_{\text{MLE}}\|_2^2}{\|\boldsymbol{Y} - X_{-j}\hat{\boldsymbol{\beta}}_{\text{MLE},0}\|_2^2} \right)^{n/2}
 $$
 
 **大样本性质**：由定理1，当 $n \to \infty$ 时，在原假设 $H_{0j}$ 下，
 $$
--2\log\lambda \overset{d}{\to} \chi_1^2.
+-2\log\lambda \xrightarrow{d} \chi_1^2.
 $$
 近似水平为 $\alpha$ 的拒绝域为：$-2\log\lambda > \chi^2_{1,\alpha}$。
 
@@ -369,31 +369,31 @@ $$
 - 零假设参数空间 $\Theta_0 = \{(\beta_0, \sigma^2)\}$ 维度 $s = 2$。
 
 **最大似然估计**：
-- $\Theta_0$ 上的 MLE：$\hat{\beta}_0 = \bar{y}$，$\hat{\sigma}^2_0 = \frac{1}{n} ||Y - \bar{y}||_2^2$。
+- $\Theta_0$ 上的 MLE：$\hat{\beta}_0 = \bar{y}$，$\hat{\sigma}^2_0 = \frac{1}{n} \|\boldsymbol{Y} - \bar{y}\boldsymbol{1}\|_2^2$。
 
 **似然比统计量**：
 $$
-\lambda = \left( \frac{\hat{\sigma}^2_{\text{MLE}}}{\hat{\sigma}^2_0} \right)^{n/2} = \left( \frac{||Y - X\hat{\beta}_{\text{MLE}}||_2^2}{||Y - \bar{y}||_2^2} \right)^{n/2}
+\lambda = \left( \frac{\hat{\sigma}^2_{\text{MLE}}}{\hat{\sigma}^2_0} \right)^{n/2} = \left( \frac{\|\boldsymbol{Y} - X\hat{\boldsymbol{\beta}}_{\text{MLE}}\|_2^2}{\|\boldsymbol{Y} - \bar{y}\boldsymbol{1}\|_2^2} \right)^{n/2}
 $$
 
 **精确检验（F检验）**：
-利用平方和分解 $||Y - \bar{y}||_2^2 = ||Y - X\hat{\beta}_{\text{MLE}}||_2^2 + ||X\hat{\beta}_{\text{MLE}} - \bar{y}||_2^2$。
+利用平方和分解 $\|\boldsymbol{Y} - \bar{y}\boldsymbol{1}\|_2^2 = \|\boldsymbol{Y} - X\hat{\boldsymbol{\beta}}_{\text{MLE}}\|_2^2 + \|X\hat{\boldsymbol{\beta}}_{\text{MLE}} - \bar{y}\boldsymbol{1}\|_2^2$。
 可以证明，在原假设 $H_0$ 下：
 $$
-F = \frac{||X\hat{\beta}_{\text{MLE}} - \bar{y}||_2^2 / p}{||Y - X\hat{\beta}_{\text{MLE}}||_2^2 / (n-p-1)} \sim F_{p, n-p-1}.
+F = \frac{\|X\hat{\boldsymbol{\beta}}_{\text{MLE}} - \bar{y}\boldsymbol{1}\|_2^2 / p}{\|\boldsymbol{Y} - X\hat{\boldsymbol{\beta}}_{\text{MLE}}\|_2^2 / (n-p-1)} \sim F_{p, n-p-1}.
 $$
 水平为 $\alpha$ 的拒绝域为：$F > F_{p, n-p-1, \alpha}$。
 
 ### 5.3.6. 双因素方差分析中的似然比检验 (Likelihood Ratio Test in Two-Way ANOVA)
-考虑模型：$Y_{ij} = \mu + \alpha_i + \beta_j + e_{ij}$，其中 $i=1,\ldots,I$, $j=1,\ldots,J$，$e_{ij} \stackrel{\text{i.i.d.}}{\sim} N(0, \sigma^2)$，且满足 $\sum_i \alpha_i = 0$，$\sum_j \beta_j = 0$。
+考虑模型：$Y_{ij} = \mu + \alpha_i + \beta_j + e_{ij}$，其中 $i=1,\ldots,I$, $j=1,\ldots,J$，$e_{ij} \overset{\text{iid}}{\sim} \mathcal{N}(0, \sigma^2)$，且满足 $\sum_i \alpha_i = 0$，$\sum_j \beta_j = 0$。
 
 **检验行效应**：$H_{0,A}: \alpha_1 = \cdots = \alpha_I = 0$。
 - 全模型参数空间维度：$I + J$（考虑约束条件后）。
 - 零假设（无行效应）模型参数空间维度：$J + 1$。
-- 可以构造基于平方和 $SS_A$（行间平方和）和 $SS_e$（误差平方和）的似然比检验。
+- 可以构造基于平方和 $\mathrm{SS}_A$（行间平方和）和 $\mathrm{SS}_e$（误差平方和）的似然比检验。
 - 在原假设 $H_{0,A}$ 下，可以证明：
   $$
-  F_A = \frac{SS_A / (I-1)}{SS_e / [(I-1)(J-1)]} \sim F_{I-1, (I-1)(J-1)}.
+  F_A = \frac{\mathrm{SS}_A / (I-1)}{\mathrm{SS}_e / [(I-1)(J-1)]} \sim F_{I-1, (I-1)(J-1)}.
   $$
   拒绝域为 $F_A > F_{I-1, (I-1)(J-1), \alpha}$。
 
@@ -419,9 +419,9 @@ r, & f(\boldsymbol{x}; \theta_1) = C f(\boldsymbol{x}; \theta_0), \\
 0, & f(\boldsymbol{x}; \theta_1) < C f(\boldsymbol{x}; \theta_0).
 \end{cases}
 $$
-其中常数 $C \geq 0$ 和 $r \in [0, 1]$ 由条件 $E_{\theta_0}[\varphi(\boldsymbol{X})] = \alpha$ 确定。则：
+其中常数 $C \geq 0$ 和 $r \in [0, 1]$ 由条件 $\mathbb{E}_{\theta_0}[\varphi(\boldsymbol{X})] = \alpha$ 确定。则：
 1. 这样的 $C$ 和 $r$ 存在。
-2. 检验 $\varphi$ 是此检验问题的 **最有效（MP）检验**，即在所有水平不超过 $\alpha$ 的检验中，其功效 $E_{\theta_1}[\varphi(\boldsymbol{X})]$ 最大。
+2. 检验 $\varphi$ 是此检验问题的 **最有效（MP）检验**，即在所有水平不超过 $\alpha$ 的检验中，其功效 $\mathbb{E}_{\theta_1}[\varphi(\boldsymbol{X})]$ 最大。
 - 若总体分布连续，通常可取 $r=0$。
 - N-P引理是构造UMP检验的基石。
 
@@ -430,7 +430,7 @@ $$
 1. 在 $\Theta_0$ 中选一个“边界点” $\theta_0$，在 $\Theta_1$ 中任选一点 $\theta_1$。
 2. 利用N-P引理构造 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta = \theta_1$ 的MP检验 $\varphi_{\theta_1}$。
 3. 如果 $\varphi_{\theta_1}$ 的形式 **不依赖于** 所选取的 $\theta_1$（例如，拒绝域只依赖于样本和 $\theta_0$，而与 $\theta_1$ 的具体值无关），则此检验 $\varphi$ 就是原复合假设 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \in \Theta_1$ 的UMP检验。
-4. 进一步，如果还能证明该检验 $\varphi$ 对于所有 $\theta \in \Theta_0$（不仅是 $\theta_0$）都有 $E_\theta[\varphi(\boldsymbol{X})] \leq \alpha$，那么它也是原复合假设 $H_0: \theta \in \Theta_0 \ \text{vs.} \ H_1: \theta \in \Theta_1$ 的UMP检验。
+4. 进一步，如果还能证明该检验 $\varphi$ 对于所有 $\theta \in \Theta_0$（不仅是 $\theta_0$）都有 $\mathbb{E}_\theta[\varphi(\boldsymbol{X})] \leq \alpha$，那么它也是原复合假设 $H_0: \theta \in \Theta_0 \ \text{vs.} \ H_1: \theta \in \Theta_1$ 的UMP检验。
 
 **例子**：设 $X \sim f(x;\theta) = \theta x^{\theta-1}, 0<x<1, \theta>1$。对于 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$，利用N-P引理得到的MP检验拒绝域为 $x > (1-\alpha)^{1/\theta_0}$，该形式不依赖于 $\theta_1$，因此它是 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$ 的UMP检验。
 
@@ -447,12 +447,12 @@ $$
    0, & V(\boldsymbol{x}) < C.
    \end{cases}
    $$
-   其中 $C$ 和 $r$ 由 $E_{\theta_0}[\varphi(\boldsymbol{X})] = \alpha$ 决定。
+   其中 $C$ 和 $r$ 由 $\mathbb{E}_{\theta_0}[\varphi(\boldsymbol{X})] = \alpha$ 决定。
 2. 对于检验问题 $H_0: \theta \geq \theta_0 \ \text{vs.} \ H_1: \theta < \theta_0$，UMP检验拒绝域形式为 $V(\boldsymbol{x}) < C$。
 
 **应用实例**：
-- **二项分布** $B(1, \theta)$：$T(x)=x$，$V=\sum X_i \sim B(n, \theta)$。检验 $H_0: \theta \leq \theta_0$ 的UMP检验基于 $V$，拒绝域为 $V > C$（或带随机化）。
-- **正态分布（方差已知）** $N(\theta, \sigma^2)$：$T(x)=x$，$V=\sum X_i$，$Q(\theta)=\theta/\sigma^2$ 单调增。检验 $H_0: \theta \leq \theta_0$ 的UMP检验等价于我们熟知的 $Z$ 检验，拒绝域为 $\sqrt{n}(\bar{X}-\theta_0)/\sigma > z_\alpha$。
+- **二项分布** $\mathrm{Bin}(1, \theta)$：$T(x)=x$，$V=\sum X_i \sim \mathrm{Bin}(n, \theta)$。检验 $H_0: \theta \leq \theta_0$ 的UMP检验基于 $V$，拒绝域为 $V > C$（或带随机化）。
+- **正态分布（方差已知）** $\mathcal{N}(\theta, \sigma^2)$：$T(x)=x$，$V=\sum X_i$，$Q(\theta)=\theta/\sigma^2$ 单调增。检验 $H_0: \theta \leq \theta_0$ 的UMP检验等价于我们熟知的 $Z$ 检验，拒绝域为 $\sqrt{n}(\bar{X}-\theta_0)/\sigma > z_\alpha$。
 
 **双边检验与无偏检验 (Two-Sided Test and Unbiased Test)**：
 对于双边检验问题 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$，通常不存在UMP检验。此时，可以寻找 **一致最大功效无偏 (UMPU) 检验**。无偏检验要求其功效函数在备择假设上处处不低于水平 $\alpha$，即 $\pi(\theta) \geq \alpha, \forall \theta \in \Theta_1$。对于指数族，存在构造UMPU检验的方法。
@@ -465,21 +465,21 @@ $$
 ### 5.5.2. 由假设检验构造置信区间 (Constructing Confidence Interval from Hypothesis Test)
 **基本思想**：对于一个未知参数 $\theta$，其 $1-\alpha$ 置信区间由所有那些在水平 $\alpha$ 下不会被样本数据拒绝的假设值 $\theta_0$ 构成。
 
-**定理**：设 $X$ 是来自总体 $\{f(x; \theta), \theta \in \Theta\}$ 的样本。对于每个可能的 $\theta \in \Theta$，考虑检验问题 $H_{0,\theta}: \theta^* = \theta \ \text{vs.} \ H_{1,\theta}: \theta^* \neq \theta$，并设 $A(\theta)$ 为该检验在水平 $\alpha$ 下的 **接受域**。定义样本观测值 $x$ 对应的集合：
+**定理**：设 $\boldsymbol{X}$ 是来自总体 $\{f(x; \theta), \theta \in \Theta\}$ 的样本。对于每个可能的 $\theta \in \Theta$，考虑检验问题 $H_{0,\theta}: \theta^* = \theta \ \text{vs.} \ H_{1,\theta}: \theta^* \neq \theta$，并设 $A(\theta)$ 为该检验在水平 $\alpha$ 下的 **接受域**。定义样本观测值 $\boldsymbol{x}$ 对应的集合：
 $$
-T(x) = \{\theta \in \Theta: x \in A(\theta)\}.
+T(\boldsymbol{x}) = \{\theta \in \Theta: \boldsymbol{x} \in A(\theta)\}.
 $$
-则 $T(X)$ 是 $\theta$ 的一个置信水平为 $1-\alpha$ 的 **置信域**。
-**证明**：$P_\theta(\theta \in T(X)) = P_\theta(X \in A(\theta)) = 1-\alpha$。
+则 $T(\boldsymbol{X})$ 是 $\theta$ 的一个置信水平为 $1-\alpha$ 的 **置信域**。
+**证明**：$\mathbb{P}_\theta(\theta \in T(\boldsymbol{X})) = \mathbb{P}_\theta(\boldsymbol{X} \in A(\theta)) = 1-\alpha$。
 
 **操作方法（以构造双侧置信区间为例）**：
-1. 写出检验 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$ 的接受域 $D^c(\theta_0)$。
-2. 接受域通常可表示为关于样本统计量和 $\theta_0$ 的不等式，例如 $a(X) \leq \theta_0 \leq b(X)$。
-3. 将此不等式中的 $\theta_0$ 替换为 $\theta$，即得到 $\theta$ 的置信区间 $[a(X), b(X)]$。
+1. 写出检验 $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$ 的接受域 $D^{\mathsf c}(\theta_0)$。
+2. 接受域通常可表示为关于样本统计量和 $\theta_0$ 的不等式，例如 $a(\boldsymbol{X}) \leq \theta_0 \leq b(\boldsymbol{X})$。
+3. 将此不等式中的 $\theta_0$ 替换为 $\theta$，即得到 $\theta$ 的置信区间 $[a(\boldsymbol{X}), b(\boldsymbol{X})]$。
 
 **单侧置信限**：
-- 检验 $H_0: \theta \geq \theta_0 \ \text{vs.} \ H_1: \theta < \theta_0$ 的接受域可导出 $\theta$ 的 **下置信限** $\hat{\theta}_L(X)$，满足 $\mathbb{P}(\theta \geq \hat{\theta}_L(X)) = 1-\alpha$。
-- 检验 $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$ 的接受域可导出 $\theta$ 的 **上置信限** $\hat{\theta}_U(X)$，满足 $\mathbb{P}(\theta \leq \hat{\theta}_U(X)) = 1-\alpha$。
+- 检验 $H_0: \theta \geq \theta_0 \ \text{vs.} \ H_1: \theta < \theta_0$ 的接受域可导出 $\theta$ 的 **下置信限** $\hat{\theta}_L(\boldsymbol{X})$，满足 $\mathbb{P}(\theta \geq \hat{\theta}_L(\boldsymbol{X})) = 1-\alpha$。
+- 检验 $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$ 的接受域可导出 $\theta$ 的 **上置信限** $\hat{\theta}_U(\boldsymbol{X})$，满足 $\mathbb{P}(\theta \leq \hat{\theta}_U(\boldsymbol{X})) = 1-\alpha$。
 
 ### 5.5.3. 由置信区间进行假设检验 (Hypothesis Testing Based on Confidence Interval)
 反之，给定一个置信水平为 $1-\alpha$ 的置信区间（或置信限），可以立即对参数进行相应的假设检验。
@@ -487,7 +487,7 @@ $$
 **操作方法**：
 1. **双侧检验** $H_0: \theta = \theta_0 \ \text{vs.} \ H_1: \theta \neq \theta_0$：
    - 若 $\theta_0$ 落在 $1-\alpha$ 置信区间之外，则在水平 $\alpha$ 下拒绝 $H_0$。
-   - 因为 $P_{\theta_0}(\text{reject } H_0) = P_{\theta_0}(\theta_0 \notin CI) = \alpha$。
+   - 因为 $\mathbb{P}_{\theta_0}(\text{拒绝 } H_0) = \mathbb{P}_{\theta_0}(\theta_0 \notin \mathrm{CI}) = \alpha$。
 2. **左侧单边检验** $H_0: \theta \geq \theta_0 \ \text{vs.} \ H_1: \theta < \theta_0$：
    - 若 $\theta_0$ 大于 $1-\alpha$ **上置信限** $\hat{\theta}_U$，则拒绝 $H_0$。
 3. **右侧单边检验** $H_0: \theta \leq \theta_0 \ \text{vs.} \ H_1: \theta > \theta_0$：
@@ -514,5 +514,5 @@ $$
 - 两独立样本（方差齐）$t$ 检验：$T = \frac{(\bar{X}-\bar{Y})-\delta_0}{S_p\sqrt{1/m+1/n}} \sim t_{m+n-2}$
 - 方差比检验：$F = S_X^2/S_Y^2 \sim F_{m-1,n-1}$ （在 $H_0: \sigma_1^2=\sigma_2^2$ 下）
 - 似然比统计量：$\lambda = \frac{\sup_{\theta \in \Theta_0} L(\theta)}{\sup_{\theta \in \Theta} L(\theta)}$
-- N-P引理检验形式：拒绝当 $f(x;\theta_1) > C f(x;\theta_0)$
+- N-P引理检验形式：拒绝当 $f(\boldsymbol{x};\theta_1) > C f(\boldsymbol{x};\theta_0)$
 - 置信区间与检验的关系：$1-\alpha$ 置信区间包含所有在水平 $\alpha$ 下不被拒绝的 $\theta_0$ 值。

@@ -1,6 +1,6 @@
 ---
 title: Introduction and Basic Concepts
-source_hash: bbddc90935b5
+source_hash: 41f86785070e
 ---
 
 This chapter is the starting point of the graph theory course. We first explain where graph theory sits within discrete mathematics and how it began, then introduce the basic notions of graphs, vertex degrees, subgraphs, graph operations and isomorphism, and finally describe several algebraic representations of graphs used in computers (the adjacency matrix, the incidence matrix, edge lists, forward stars and so on). The walks, trees, planarity, matchings and connectivity discussed in later chapters are all built on these concepts and representations.
@@ -108,7 +108,7 @@ $$
 
 ### 1.3.9. Graph Isomorphism
 
-**Definition 1.3.8 (Graph Isomorphism)** Two graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ are isomorphic, written $G_1 \cong G_2$, if there is a **bijection** $f: V_1 \to V_2$ such that $(u, v) \in E_1$ if and only if $(f(u), f(v)) \in E_2$. For multigraphs we further require that corresponding pairs of vertices be joined by the same number of edges.
+**Definition 1.3.8 (Graph Isomorphism)** Two graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ are isomorphic, written $G_1 \cong G_2$, if there is a **bijection** $f\colon V_1 \to V_2$ such that $(u, v) \in E_1$ if and only if $(f(u), f(v)) \in E_2$. For multigraphs we further require that corresponding pairs of vertices be joined by the same number of edges.
 
 Isomorphic graphs differ only in the names of their vertices or in the way they are drawn; their structure is identical. Having the same number of vertices, the same number of edges and the same degree sequence is necessary for isomorphism, but not sufficient.
 

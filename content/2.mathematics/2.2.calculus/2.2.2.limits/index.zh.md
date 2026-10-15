@@ -4,7 +4,7 @@ title: 极限论
 
 **2.1 数列极限的概念和性质**
 
--   **数列极限的定义**：$\{a_n\}$ 收敛于 $A$，即 $\forall \varepsilon > 0, \exists N \in \mathbb{Z}^{+}, \forall n > N, |a_n - A| < \varepsilon$。
+-   **数列极限的定义**：$\{a_n\}$ 收敛于 $A$，即 $\forall \varepsilon > 0, \exists N \in \mathbb{N}_+, \forall n > N, |a_n - A| < \varepsilon$。
 -   **基本数列极限**：$\lim_{n\to\infty} q^n = 0 \ (|q|<1)$，$\lim_{n\to\infty} a^{1/n} = 1 \ (a>0)$，$\lim_{n\to\infty} \sqrt[n]{n} = 1$，$\lim_{n\to\infty} \frac{n}{a^n} = 0 \ (a>1)$。
 -   **数列极限的性质**：唯一性、有界性、保号性、保序性等。
 -   **子列**：$\lim_{n\to\infty} a_n = A \Leftrightarrow$ 所有子列收敛于 $A$。常用于判定极限不存在。
@@ -14,7 +14,7 @@ title: 极限论
 
 -   **运算法则**：四则运算、乘方、开方。
 -   **夹逼原理**：若 $a_n \leq b_n \leq c_n$ 且 $a_n, c_n \to A$，则 $b_n \to A$。
--   **单调收敛原理**：单调有界数列必有极限。重要极限：$\lim_{n\to\infty} (1+\frac{1}{n})^n = e$。
+-   **单调收敛原理**：单调有界数列必有极限。重要极限：$\lim_{n\to\infty} (1+\frac{1}{n})^n = \mathrm{e}$。
 -   **柯西收敛准则**：$\{a_n\}$ 收敛 $\Leftrightarrow \forall \varepsilon > 0, \exists N, \forall n,m > N, |a_n - a_m| < \varepsilon$。该准则基于实数完备性（区间套定理、列紧性定理）。
 
 **2.3 函数极限的概念和性质**

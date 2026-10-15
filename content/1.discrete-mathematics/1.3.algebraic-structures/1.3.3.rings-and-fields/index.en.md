@@ -1,6 +1,6 @@
 ---
 title: Rings and Fields
-source_hash: 5f6360b226b9
+source_hash: 7942db87e122
 ---
 
 A group has a single operation, whereas integers, polynomials and matrices all have both addition and multiplication, linked by the **distributive law** (Section 1.3.3). A ring is the abstraction of such systems in which one can add, subtract and multiply; a field further requires multiplication to be commutative and every nonzero element to be invertible, so that one can also divide.
@@ -147,13 +147,13 @@ For example, the ring of residue classes modulo $n$, $\mathbb{Z}_n$, is the quot
 
 ### 3.3.1. Definition of a Ring Homomorphism
 
-**Definition 3.3.1** Let $R$ and $S$ be rings (with addition and multiplication written the same way in both) and let $f: R \to S$ be a map. If $f(a + b) = f(a) + f(b)$ (preservation of addition) and $f(ab) = f(a)f(b)$ (preservation of multiplication) for all $a, b \in R$, then $f$ is called a **ring homomorphism** from $R$ to $S$. If $f$ is injective, surjective or bijective, it is called a **monomorphism**, an **epimorphism** or an **isomorphism**, respectively.
+**Definition 3.3.1** Let $R$ and $S$ be rings (with addition and multiplication written the same way in both) and let $f\colon R \to S$ be a map. If $f(a + b) = f(a) + f(b)$ (preservation of addition) and $f(ab) = f(a)f(b)$ (preservation of multiplication) for all $a, b \in R$, then $f$ is called a **ring homomorphism** from $R$ to $S$. If $f$ is injective, surjective or bijective, it is called a **monomorphism**, an **epimorphism** or an **isomorphism**, respectively.
 
 This is exactly the definition of a homomorphism for several operations in Section 1.4.3. In particular, a ring homomorphism is a group homomorphism between the additive groups, so all the results of Chapter 2 on group homomorphisms apply to its additive part.
 
 ### 3.3.2. Basic Properties of Ring Homomorphisms
 
-**Theorem 3.3.1** Let $f: R \to S$ be a ring homomorphism. Then:
+**Theorem 3.3.1** Let $f\colon R \to S$ be a ring homomorphism. Then:
 
 1. $f(0_R) = 0_S$ (the image of zero is zero);
 2. $f(-a) = -f(a)$ (the image of an additive inverse is the additive inverse of the image);
@@ -161,9 +161,9 @@ This is exactly the definition of a homomorphism for several operations in Secti
 
 ### 3.3.3. The Kernel of a Ring Homomorphism
 
-**Definition 3.3.2** Let $f: R \to S$ be a ring homomorphism. The set $\ker f = \{a \in R \mid f(a) = 0_S\}$ is called the kernel of the ring homomorphism $f$.
+**Definition 3.3.2** Let $f\colon R \to S$ be a ring homomorphism. The set $\ker f = \{a \in R \mid f(a) = 0_S\}$ is called the kernel of the ring homomorphism $f$.
 
-**Theorem 3.3.2** Let $f: R \to S$ be a ring homomorphism. Then $\ker f$ is an ideal of $R$.
+**Theorem 3.3.2** Let $f\colon R \to S$ be a ring homomorphism. Then $\ker f$ is an ideal of $R$.
 
 **Proof**: $\ker f$ is the kernel of a homomorphism of additive groups and hence a subgroup of $(R, +)$. For any $r \in R$ and $k \in \ker f$,
 
@@ -177,7 +177,7 @@ The kernel of a group homomorphism is a **normal subgroup** (Theorem 2.7.4), and
 
 ### 3.3.4. The Fundamental Homomorphism Theorem for Rings
 
-**Theorem 3.3.3 (Fundamental Homomorphism Theorem for Rings, or First Isomorphism Theorem)** Let $R$ and $S$ be rings and $f: R \to S$ a surjective ring homomorphism. Then
+**Theorem 3.3.3 (Fundamental Homomorphism Theorem for Rings, or First Isomorphism Theorem)** Let $R$ and $S$ be rings and $f\colon R \to S$ a surjective ring homomorphism. Then
 
 $$
 R / \ker f \cong S,
@@ -233,7 +233,7 @@ An integral domain keeps the main properties of multiplication of integers (comm
 
 A division ring need not be commutative. A division ring always has no zero divisors: if $a \neq 0$ and $ab = 0$, then $b = a^{-1}ab = 0$.
 
-For example, Hamilton's quaternions $\{a + bi + cj + dk \mid a, b, c, d \in \mathbb{R}\}$ (with $i^2 = j^2 = k^2 = ijk = -1$) form a noncommutative division ring.
+For example, Hamilton's quaternions $\{a + b\mathrm{i} + c\mathrm{j} + d\mathrm{k} \mid a, b, c, d \in \mathbb{R}\}$ (with $\mathrm{i}^2 = \mathrm{j}^2 = \mathrm{k}^2 = \mathrm{i}\mathrm{j}\mathrm{k} = -1$) form a noncommutative division ring.
 
 ### 3.4.4. Relations among Types of Rings
 
@@ -315,7 +315,7 @@ Lagrange's theorem in group theory (Theorem 2.5.3) restricts the orders of subgr
 
 ### 3.6.1. Fields of Fractions
 
-**Theorem 3.6.1** Every integral domain $R$ can be embedded in a field; that is, there are a field $F$ and a monomorphism $\varphi: R \to F$. The smallest such field consists of all "fractions" $a/b$ ($a, b \in R$, $b \neq 0$) and is called the *field of fractions* of $R$. The construction of the field of rational numbers $\mathbb{Q}$ from the ring of integers $\mathbb{Z}$ is a special case.
+**Theorem 3.6.1** Every integral domain $R$ can be embedded in a field; that is, there are a field $F$ and a monomorphism $\varphi\colon R \to F$. The smallest such field consists of all "fractions" $a/b$ ($a, b \in R$, $b \neq 0$) and is called the *field of fractions* of $R$. The construction of the field of rational numbers $\mathbb{Q}$ from the ring of integers $\mathbb{Z}$ is a special case.
 
 ### 3.6.2. Field Extensions
 

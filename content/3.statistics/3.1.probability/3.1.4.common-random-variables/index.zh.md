@@ -22,7 +22,7 @@ $$
 $$
 \mathbb{P}(X = 1) = p = 1 - \mathbb{P}(X = 0)
 $$
-则称$X$服从**两点分布**，记作$X \sim B(1,p)$或$X \sim B(p)$。
+则称$X$服从**两点分布**，记作$X \sim \mathrm{Bin}(1,p)$或$X \sim \mathrm{Ber}(p)$。
 
 **分布列**：
 $$
@@ -39,15 +39,15 @@ $$
 $$
 \mathbb{P}(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k = 0, 1, \ldots, n
 $$
-则称$X$服从**二项分布**，记作$X \sim B(n,p)$。
+则称$X$服从**二项分布**，记作$X \sim \mathrm{Bin}(n,p)$。
 
 **性质**：
-- 如果$X_1, \ldots, X_n$相互独立且都服从$B(1,p)$，则$S = X_1 + \cdots + X_n \sim B(n,p)$
-- 如果$X \sim B(n,p)$，$Y \sim B(m,p)$且相互独立，则$X + Y \sim B(m+n,p)$
+- 如果$X_1, \ldots, X_n$相互独立且都服从$\mathrm{Bin}(1,p)$，则$S = X_1 + \cdots + X_n \sim \mathrm{Bin}(n,p)$
+- 如果$X \sim \mathrm{Bin}(n,p)$，$Y \sim \mathrm{Bin}(m,p)$且相互独立，则$X + Y \sim \mathrm{Bin}(m+n,p)$
 
 **最大可能值**：
 - 当$(n+1)p$为整数时，$b((n+1)p,n,p)$与$b((n+1)p-1,n,p)$均为最大项
-- 当$(n+1)p$不为整数时，$b([(n+1)p],n,p)$为唯一最大项
+- 当$(n+1)p$不为整数时，$b(\lfloor (n+1)p \rfloor,n,p)$为唯一最大项
 
 ### 4.1.4. 几何分布
 
@@ -55,9 +55,9 @@ $$
 $$
 \mathbb{P}(X = k) = (1-p)^{k-1}p, \quad k = 1, 2, \ldots
 $$
-则称$X$服从**几何分布**，记作$X \sim G(p)$。
+则称$X$服从**几何分布**，记作$X \sim \mathrm{Geo}(p)$。
 
-**无记忆性**：取正整数值的随机变量$X \sim G(p)$的充要条件是对每个$k \geq 1$，
+**无记忆性**：取正整数值的随机变量$X \sim \mathrm{Geo}(p)$的充要条件是对每个$k \geq 1$，
 $$
 \mathbb{P}(X = k + 1 | X > k) = \mathbb{P}(X = 1)
 $$
@@ -78,7 +78,7 @@ $$
 $$
 \mathbb{P}(Y = k) = \binom{k+r-1}{r-1} (1-p)^k p^r, \quad k = 0, 1, \ldots
 $$
-称$Y$服从**负二项分布**，记作$Y \sim NB(r,p)$。
+称$Y$服从**负二项分布**，记作$Y \sim \mathrm{NB}(r,p)$。
 
 ### 4.1.7. 超几何分布
 
@@ -86,7 +86,7 @@ $$
 $$
 \mathbb{P}(X = k) = \frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}, \quad k = 0, 1, \ldots, \min\{n, M\}
 $$
-则称$X$服从**超几何分布**，记作$X \sim H(n, M, N)$。
+则称$X$服从**超几何分布**，记作$X \sim \mathrm{H}(n, M, N)$。
 
 **近似性质**：当$N$很大时，超几何分布可用二项分布近似：
 $$
@@ -99,7 +99,7 @@ $$
 $$
 \mathbb{P}(X = k) = \frac{\binom{k+r-1}{k}\binom{N-k-r}{M-r}}{\binom{N}{M}}, \quad k = 0, 1, \ldots, N-M
 $$
-则称$X$服从**负超几何分布**，记作$X \sim NH(r, M, N)$。
+则称$X$服从**负超几何分布**，记作$X \sim \mathrm{NH}(r, M, N)$。
 
 ### 4.1.9. 泊松分布
 
@@ -107,14 +107,14 @@ $$
 $$
 \mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}, \quad k = 0, 1, 2, \ldots
 $$
-则称$X$服从**泊松分布**，记作$X \sim \mathcal{P}(\lambda)$。
+则称$X$服从**泊松分布**，记作$X \sim \mathrm{Poi}(\lambda)$。
 
 **应用**：
 - 某段高速公路一年内交通事故数
 - 某市场一天中到达的顾客次数
 - 某办公室一天中收到的电话数
 
-**与二项分布的关系**：如果$n$很大，$p$很小，且$np \approx \lambda$，则可用$\mathcal{P}(\lambda)$近似$B(n,p)$
+**与二项分布的关系**：如果$n$很大，$p$很小，且$np \approx \lambda$，则可用$\mathrm{Poi}(\lambda)$近似$\mathrm{Bin}(n,p)$
 
 ## 4.2. 连续型随机变量
 
@@ -141,7 +141,7 @@ f(x) =
 0, & x \notin (a, b)
 \end{cases}
 $$
-称$X$服从**均匀分布**，记作$X \sim U(a,b)$。
+称$X$服从**均匀分布**，记作$X \sim \mathrm{U}(a,b)$。
 
 **推广**：对Borel集$A$，如果$X$的密度为
 $$
@@ -151,7 +151,7 @@ f(x) =
 0, & x \notin A
 \end{cases}
 $$
-称$X$服从$A$上的均匀分布，记作$X \sim U(A)$。
+称$X$服从$A$上的均匀分布，记作$X \sim \mathrm{U}(A)$。
 
 ### 4.2.3. 指数分布
 
@@ -163,7 +163,7 @@ f(x) =
 0, & x < 0
 \end{cases}
 $$
-称$X$服从**指数分布**，记作$X \sim \mathcal{E}(\lambda)$。
+称$X$服从**指数分布**，记作$X \sim \mathrm{Exp}(\lambda)$。
 
 **无记忆性**：连续型非负随机变量$X$服从指数分布的充要条件是对任意的$s, t \geq 0$，
 $$
@@ -180,9 +180,9 @@ $$
 $$
 f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right), \quad x \in \mathbb{R}
 $$
-称$X$服从**正态分布**，记作$X \sim N(\mu, \sigma^2)$。
+称$X$服从**正态分布**，记作$X \sim \mathcal{N}(\mu, \sigma^2)$。
 
-**标准正态分布**：当$X \sim N(0,1)$时，密度函数为
+**标准正态分布**：当$X \sim \mathcal{N}(0,1)$时，密度函数为
 $$
 \varphi(x) = \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{x^2}{2}\right), \quad x \in \mathbb{R}
 $$
@@ -193,7 +193,7 @@ $$
 - $f(x)$在$x = \mu \pm \sigma$处有拐点
 
 **背景与应用**：
-- De Moive-Laplace中心极限定理
+- De Moivre-Laplace中心极限定理
 - 天文学中的测量误差
 - Brown运动研究
 - 产品质量指标、生理指标等
@@ -203,13 +203,13 @@ $$
 #### 4.2.5.1. Beta分布
 **定义**：如果$X$的密度为
 $$
-f(x) = \frac{1}{B(\alpha, \beta)} x^{\alpha-1}(1-x)^{\beta-1}, \quad 0 < x < 1
+f(x) = \frac{1}{\mathrm{B}(\alpha, \beta)} x^{\alpha-1}(1-x)^{\beta-1}, \quad 0 < x < 1
 $$
-其中$B(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$，称$X$服从**Beta分布**，记作$X \sim Beta(\alpha, \beta)$。
+其中$\mathrm{B}(\alpha, \beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$，称$X$服从**Beta分布**，记作$X \sim \mathrm{Beta}(\alpha, \beta)$。
 $$
 \Gamma (x) = \int_0^{+\infty} \mathrm{e}^{-t} t^{x-1} \mathrm{d}t \quad (x > 0)
 $$
-**特例**：当$\alpha = \beta = 1$时，为均匀分布$U(0,1)$
+**特例**：当$\alpha = \beta = 1$时，为均匀分布$\mathrm{U}(0,1)$
 
 #### 4.2.5.2. Gamma分布
 **定义**：如果$X$的密度为
@@ -225,7 +225,7 @@ $$
 #### 4.2.5.3. Weibull分布
 **定义**：如果$X$的密度为
 $$
-f(x) = \lambda a x^{\alpha-1} \exp(-\lambda x^\alpha), \quad x \geq 0
+f(x) = \lambda \alpha x^{\alpha-1} \exp(-\lambda x^\alpha), \quad x \geq 0
 $$
 称$X$服从**Weibull分布**。
 
@@ -240,7 +240,7 @@ f(x) = x \mathrm{e}^{-\frac{x^2}{2}}, \quad x \geq 0
 $$
 称$X$服从**Rayleigh分布**。
 
-**性质**：设$X,Y$独立且都服从$N(0,1)$，则$(X,Y)$服从二元正态分布，$R=\sqrt{X^2+Y^2}$服从Rayleigh分布。
+**性质**：设$X,Y$独立且都服从$\mathcal{N}(0,1)$，则$(X,Y)$服从二元正态分布，$R=\sqrt{X^2+Y^2}$服从Rayleigh分布。
 
 #### 4.2.5.5. 卡方分布
 **定义**：如果$X$的密度为
@@ -249,7 +249,7 @@ f(x) = \frac{1}{2^{v/2} \Gamma(v/2)} x^{\frac{v}{2}-1} \mathrm{e}^{-\frac{x}{2}}
 $$
 称$X$服从**卡方分布**，记作$X \sim \chi_v^2$。
 
-**性质**：如果$Z_1, \ldots, Z_n$ i.i.d. $\sim N(0,1)$，则$X = Z_1^2 + \cdots + Z_n^2 \sim \chi_n^2$
+**性质**：如果$Z_1, \ldots, Z_n \overset{\text{iid}}{\sim} \mathcal{N}(0,1)$，则$X = Z_1^2 + \cdots + Z_n^2 \sim \chi_n^2$
 
 #### 4.2.5.6. t分布
 **定义**：如果$X$的密度为
@@ -258,7 +258,7 @@ f(x) = \frac{\Gamma\left(\frac{v+1}{2}\right)}{\sqrt{v\pi} \Gamma\left(\frac{v}{
 $$
 称$X$服从**t分布**，记作$X \sim t_v$。
 
-**性质**：若$Z \sim N(0,1)$，$X \sim \chi_n^2$且独立，则$T = \frac{Z}{\sqrt{X/n}} \sim t_n$
+**性质**：若$Z \sim \mathcal{N}(0,1)$，$X \sim \chi_n^2$且独立，则$T = \frac{Z}{\sqrt{X/n}} \sim t_n$
 
 **特例**：若$v = 1$，则$X \sim t_1$为Cauchy分布
 
@@ -276,9 +276,9 @@ $$
 $$
 f(x) = \frac{\Gamma\left(\frac{m+n}{2}\right) m^{m/2} n^{n/2} x^{\frac{m}{2}-1}}{\Gamma\left(\frac{m}{2}\right) \Gamma\left(\frac{n}{2}\right) (mx+n)^{\frac{(m+n)}{2}}}, \quad x \geq 0
 $$
-称$X$服从**F分布**，记作$X \sim F(m,n)$。
+称$X$服从**F分布**，记作$X \sim F_{m,n}$。
 
-**性质**：设有独立同分布 (i.i.d) 的变量$X_i \sim N(0,1), \quad i=1,\dots,m$和独立同分布的变量$Y_j \sim N(0,1), \quad j=1,\dots,n$，令$F=\frac{\frac{\sum_i{X_i^2}}{m}}{\frac{\sum_j{Y_j^2}}{n}}$，则$F \sim F(m,n)$
+**性质**：设有独立同分布 (i.i.d) 的变量$X_i \sim \mathcal{N}(0,1), \quad i=1,\dots,m$和独立同分布的变量$Y_j \sim \mathcal{N}(0,1), \quad j=1,\dots,n$，令$F=\frac{\frac{\sum_i{X_i^2}}{m}}{\frac{\sum_j{Y_j^2}}{n}}$，则$F \sim F_{m,n}$
 
 ## 小结
 
@@ -302,6 +302,6 @@ $$
 - 二项分布：$\mathbb{P}(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$
 - 几何分布：$\mathbb{P}(X = k) = (1-p)^{k-1}p$
 - 泊松分布：$\mathbb{P}(X = k) = \frac{\lambda^k}{k!} \mathrm{e}^{-\lambda}$
-- 均匀分布：$f(x) = \frac{1}{b-a}I_{(a,b)}(x)$
-- 指数分布：$f(x) = \lambda \mathrm{e}^{-\lambda x}I_{[0,\infty)}(x)$
+- 均匀分布：$f(x) = \frac{1}{b-a}\boldsymbol{1}_{(a,b)}(x)$
+- 指数分布：$f(x) = \lambda \mathrm{e}^{-\lambda x}\boldsymbol{1}_{[0,\infty)}(x)$
 - 正态分布：$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$

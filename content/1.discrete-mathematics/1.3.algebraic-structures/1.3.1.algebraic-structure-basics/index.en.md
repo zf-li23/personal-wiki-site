@@ -1,6 +1,6 @@
 ---
 title: Fundamentals of Algebraic Structures
-source_hash: 9058eadae890
+source_hash: dd81166d3f26
 ---
 
 Algebraic structures are "sets equipped with operations": we do not care what the elements are, only which laws the operations obey. Addition of integers, multiplication of matrices, composition of permutations, and intersection and union of sets look unrelated, yet they obey the same laws of associativity, identity elements and inverses. If we isolate these laws and study them on their own, every conclusion we reach applies at once to all objects that satisfy them.
@@ -31,7 +31,7 @@ $$
 
 ### 1.1.2. Definition of a Map
 
-**Definition 1.1.1** Let $S$ and $T$ be two given sets. If there is a rule $f$ that assigns to every element $x \in S$ a unique element $y \in T$, then $f$ is called a **map** from $S$ to $T$, written $f: S \to T$ and $y = f(x)$ (or $f: x \mapsto y$). The set $S$ is called the domain of $f$ and $T$ its codomain (some texts call it the range); $y$ is called the image of $x$, and $x$ a preimage of $y$.
+**Definition 1.1.1** Let $S$ and $T$ be two given sets. If there is a rule $f$ that assigns to every element $x \in S$ a unique element $y \in T$, then $f$ is called a **map** from $S$ to $T$, written $f\colon S \to T$ and $y = f(x)$ (or $f\colon x \mapsto y$). The set $S$ is called the domain of $f$ and $T$ its codomain (some texts call it the range); $y$ is called the image of $x$, and $x$ a preimage of $y$.
 
 By definition:
 
@@ -41,7 +41,7 @@ By definition:
 
 ### 1.1.3. Equality of Maps
 
-**Definition 1.1.2** Let $f: A_1 \to B_1$ and $g: A_2 \to B_2$ be maps. We say that $f$ and $g$ are **equal maps**, written $f = g$, if and only if $A_1 = A_2$, $B_1 = B_2$, and $f(x) = g(x)$ for every $x \in A_1$.
+**Definition 1.1.2** Let $f\colon A_1 \to B_1$ and $g\colon A_2 \to B_2$ be maps. We say that $f$ and $g$ are **equal maps**, written $f = g$, if and only if $A_1 = A_2$, $B_1 = B_2$, and $f(x) = g(x)$ for every $x \in A_1$.
 
 ### 1.1.4. Injections, Surjections and Bijections
 
@@ -53,13 +53,13 @@ By definition:
 
 ### 1.1.5. Composition of Maps
 
-**Definition 1.1.4** Let $A$, $B$, $C$ be sets and let $f: A \to B$ and $g: B \to C$ be maps. Then $f$ and $g$ determine a map $h: A \to C$, $a \mapsto g(f(a))$, called the **composition** of $f$ and $g$ and written $h = gf$ (or $g \circ f$); that is,
+**Definition 1.1.4** Let $A$, $B$, $C$ be sets and let $f\colon A \to B$ and $g\colon B \to C$ be maps. Then $f$ and $g$ determine a map $h\colon A \to C$, $a \mapsto g(f(a))$, called the **composition** of $f$ and $g$ and written $h = gf$ (or $g \circ f$); that is,
 
 $$
 h(a) = (gf)(a) = g(f(a)).
 $$
 
-Composition of maps is in general not commutative, but it is associative: if $\alpha: A \to B$, $\beta: B \to C$ and $\gamma: C \to D$, then
+Composition of maps is in general not commutative, but it is associative: if $\alpha\colon A \to B$, $\beta\colon B \to C$ and $\gamma\colon C \to D$, then
 
 $$
 \gamma(\beta\alpha) = (\gamma\beta)\alpha.
@@ -67,7 +67,7 @@ $$
 
 ### 1.1.6. Identity Maps
 
-The map $I_A: A \to A$, $a \mapsto a$, is called the **identity map** on $A$.
+The map $I_A\colon A \to A$, $a \mapsto a$, is called the **identity map** on $A$.
 
 **Theorem 1.1.1** Let $f$ be a map from $A$ to $B$, and let $I_A$ and $I_B$ be the identity maps on $A$ and $B$. Then
 
@@ -77,16 +77,16 @@ $$
 
 ### 1.1.7. Invertible Maps
 
-**Definition 1.1.5** Let $f: A \to B$ and $g: B \to A$ be maps. If $gf = I_A$, then $f$ is called a **left invertible map** and $g$ a **right invertible map**; $g$ is called a left inverse of $f$, and $f$ a right inverse of $g$. If in addition $fg = I_B$, then $f$ and $g$ are both called **invertible maps**, and $g$ is called the inverse of $f$.
+**Definition 1.1.5** Let $f\colon A \to B$ and $g\colon B \to A$ be maps. If $gf = I_A$, then $f$ is called a **left invertible map** and $g$ a **right invertible map**; $g$ is called a left inverse of $f$, and $f$ a right inverse of $g$. If in addition $fg = I_B$, then $f$ and $g$ are both called **invertible maps**, and $g$ is called the inverse of $f$.
 
 **Theorem 1.1.2** Let $A$ be a nonempty set and $f$ a map from $A$ to $B$. Then:
 
 - $f$ is left invertible if and only if $f$ is injective;
 - $f$ is right invertible if and only if $f$ is surjective.
 
-**Corollary**: A map $f: A \to B$ is invertible if and only if $f$ is a bijection.
+**Corollary**: A map $f\colon A \to B$ is invertible if and only if $f$ is a bijection.
 
-**Theorem 1.1.3** Let $f$ be a map from $A$ to $B$, and let $g, h: B \to A$ satisfy $gf = I_A$ and $fh = I_B$. Then $g = h$. Consequently the inverse of an invertible map is unique; it is denoted $f^{-1}$.
+**Theorem 1.1.3** Let $f$ be a map from $A$ to $B$, and let $g, h\colon B \to A$ satisfy $gf = I_A$ and $fh = I_B$. Then $g = h$. Consequently the inverse of an invertible map is unique; it is denoted $f^{-1}$.
 
 **Proof**: $g = g I_B = g(fh) = (gf)h = I_A h = h$. $\square$
 
@@ -142,7 +142,7 @@ $$
 
 To indicate that this family is determined by $\sim$, we usually write it as $A/{\sim}$ and call it the **quotient set** of $A$ by $\sim$.
 
-Once the quotient set $A/{\sim}$ is fixed, each $a \in A$ belongs to exactly one equivalence class $\bar{a}$. The map $\gamma: A \to A/{\sim}$, $a \mapsto \bar{a}$, is called the **canonical map** from $A$ to $A/{\sim}$. The canonical map is surjective.
+Once the quotient set $A/{\sim}$ is fixed, each $a \in A$ belongs to exactly one equivalence class $\bar{a}$. The map $\gamma\colon A \to A/{\sim}$, $a \mapsto \bar{a}$, is called the **canonical map** from $A$ to $A/{\sim}$. The canonical map is surjective.
 
 ### 1.2.5. Partitions and Equivalence Relations
 
@@ -160,9 +160,9 @@ Every $x \in A$ lies in some $A_i$, so $xRx$; the definition of $R$ is symmetric
 
 ### 1.3.1. Algebraic Operations
 
-**Definition 1.3.1** Let $A$ be a nonempty set. A map $f: A^2 \to A$ from $A^2 = A \times A$ to $A$ is called a **binary algebraic operation** on $A$, or simply a **binary operation**.
+**Definition 1.3.1** Let $A$ be a nonempty set. A map $f\colon A^2 \to A$ from $A^2 = A \times A$ to $A$ is called a **binary algebraic operation** on $A$, or simply a **binary operation**.
 
-**Definition 1.3.2** Let $A$ be a nonempty set. A map $f: A^n \to A$ is called an **$n$-ary algebraic operation** on $A$, or simply an **$n$-ary operation**.
+**Definition 1.3.2** Let $A$ be a nonempty set. A map $f\colon A^n \to A$ is called an **$n$-ary algebraic operation** on $A$, or simply an **$n$-ary operation**.
 
 Binary operations are usually written in infix form: $f(a, b)$ is written $a \cdot b$ or $ab$.
 
@@ -204,11 +204,11 @@ we say that $\cdot$ satisfies the *distributive law* over $+$. The distributive 
 
 ### 1.3.4. Identity Elements
 
-**Definition 1.3.4 (Identity Element)** Let $V = (X, \cdot)$ be an algebraic system. If there is $e_L \in X$ such that $e_L \cdot x = x$ for every $x \in X$, then $e_L$ is called a **left identity** of $X$ with respect to $\cdot$; similarly, an element $e_R$ with $x \cdot e_R = x$ for every $x \in X$ is called a **right identity**. An element that is both a left and a right identity is called an identity element.
+**Definition 1.3.4 (Identity Element)** Let $V = (X, \cdot)$ be an algebraic system. If there is $e_{\mathrm{L}} \in X$ such that $e_{\mathrm{L}} \cdot x = x$ for every $x \in X$, then $e_{\mathrm{L}}$ is called a **left identity** of $X$ with respect to $\cdot$; similarly, an element $e_{\mathrm{R}}$ with $x \cdot e_{\mathrm{R}} = x$ for every $x \in X$ is called a **right identity**. An element that is both a left and a right identity is called an identity element.
 
-**Theorem 1.3.2** If an algebraic system $V = (X, \cdot)$ has both a left identity $e_L$ and a right identity $e_R$, then $e_L = e_R$; this element, denoted $e$, is the unique identity element of $X$.
+**Theorem 1.3.2** If an algebraic system $V = (X, \cdot)$ has both a left identity $e_{\mathrm{L}}$ and a right identity $e_{\mathrm{R}}$, then $e_{\mathrm{L}} = e_{\mathrm{R}}$; this element, denoted $e$, is the unique identity element of $X$.
 
-**Proof**: $e_L = e_L \cdot e_R = e_R$. If $e'$ is also an identity element, then $e' = e' \cdot e = e$. $\square$
+**Proof**: $e_{\mathrm{L}} = e_{\mathrm{L}} \cdot e_{\mathrm{R}} = e_{\mathrm{R}}$. If $e'$ is also an identity element, then $e' = e' \cdot e = e$. $\square$
 
 For example:
 
@@ -254,13 +254,13 @@ Associativity cannot be dropped here: in a system without the associative law, c
 
 ### 1.4.2. Isomorphisms
 
-**Definition 1.4.2 (Isomorphism)** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems of the same type and let $f: X \to Y$ be a bijection. If $f(a \cdot b) = f(a) * f(b)$ for all $a, b \in X$, then $f$ is called an **isomorphism** from $(X, \cdot)$ to $(Y, *)$, and $(X, \cdot)$ and $(Y, *)$ are said to be isomorphic, written $X \cong Y$.
+**Definition 1.4.2 (Isomorphism)** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems of the same type and let $f\colon X \to Y$ be a bijection. If $f(a \cdot b) = f(a) * f(b)$ for all $a, b \in X$, then $f$ is called an **isomorphism** from $(X, \cdot)$ to $(Y, *)$, and $(X, \cdot)$ and $(Y, *)$ are said to be isomorphic, written $X \cong Y$.
 
 Isomorphic algebraic systems differ only in the "names" of their elements; their operations obey exactly the same laws.
 
 ### 1.4.3. Homomorphisms
 
-**Definition 1.4.3 (Homomorphism)** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems of the same type and let $f: X \to Y$ be a map. If $f(a \cdot b) = f(a) * f(b)$ for all $a, b \in X$, then $f$ is called a **homomorphism** from $(X, \cdot)$ to $(Y, *)$.
+**Definition 1.4.3 (Homomorphism)** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems of the same type and let $f\colon X \to Y$ be a map. If $f(a \cdot b) = f(a) * f(b)$ for all $a, b \in X$, then $f$ is called a **homomorphism** from $(X, \cdot)$ to $(Y, *)$.
 
 An isomorphism is precisely a bijective homomorphism.
 
@@ -276,20 +276,20 @@ Ring homomorphisms (Definition 3.3.1), which preserve both addition and multipli
 
 **Definition 1.4.4** Let $(X, \cdot)$ be an algebraic system and $R$ a nonempty subset of $X$. If $R$ is **closed** under $\cdot$ (that is, $a, b \in R$ implies $a \cdot b \in R$), then $(R, \cdot)$ is called a **subalgebra** (or subsystem) of $(X, \cdot)$.
 
-**Theorem 1.4.1** Let $f: X \to Y$ be a homomorphism from the algebraic system $(X, \cdot)$ to $(Y, *)$. Then $(f(X), *)$ is a subalgebra of $(Y, *)$, and $f(X)$ is called the *homomorphic image* of $X$ under $f$.
+**Theorem 1.4.1** Let $f\colon X \to Y$ be a homomorphism from the algebraic system $(X, \cdot)$ to $(Y, *)$. Then $(f(X), *)$ is a subalgebra of $(Y, *)$, and $f(X)$ is called the *homomorphic image* of $X$ under $f$.
 
 **Proof**: $f(X)$ is nonempty, and for $f(a), f(b) \in f(X)$ we have $f(a) * f(b) = f(a \cdot b) \in f(X)$. $\square$
 
 ### 1.4.5. Monomorphisms and Epimorphisms
 
-**Definition 1.4.5** Let $f: X \to Y$ be a homomorphism from the algebraic system $(X, \cdot)$ to $(Y, *)$.
+**Definition 1.4.5** Let $f\colon X \to Y$ be a homomorphism from the algebraic system $(X, \cdot)$ to $(Y, *)$.
 
 - If $f$ is injective, $f$ is called a **monomorphism** (an injective homomorphism);
 - if $f$ is surjective, $f$ is called an **epimorphism**, written $X \sim Y$; in this case $Y = f(X)$ is a homomorphic image of $X$.
 
 ### 1.4.6. Basic Properties of Homomorphisms
 
-**Theorem 1.4.2** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems in which $\cdot$ and $*$ are binary operations, and let $f: X \to Y$ be an epimorphism from $(X, \cdot)$ to $(Y, *)$. Then:
+**Theorem 1.4.2** Let $(X, \cdot)$ and $(Y, *)$ be algebraic systems in which $\cdot$ and $*$ are binary operations, and let $f\colon X \to Y$ be an epimorphism from $(X, \cdot)$ to $(Y, *)$. Then:
 
 1. if $\cdot$ satisfies the commutative (associative) law, so does $*$;
 2. if $(X, \cdot)$ has an identity element $e$, then $f(e)$ is the identity element of $(Y, *)$;
@@ -299,7 +299,7 @@ Surjectivity cannot be dropped: in general, for instance, the image $f(e)$ of th
 
 ### 1.4.7. Endomorphisms and Automorphisms
 
-**Definition 1.4.6** A homomorphism $f: X \to X$ from an algebraic system $(X, \cdot)$ to itself is called an **endomorphism**; if $f$ is moreover an isomorphism, it is called an **automorphism**.
+**Definition 1.4.6** A homomorphism $f\colon X \to X$ from an algebraic system $(X, \cdot)$ to itself is called an **endomorphism**; if $f$ is moreover an isomorphism, it is called an **automorphism**.
 
 The automorphisms of a system form a group under composition (Chapter 2). This group describes the "symmetries" of the system: the ways of renaming its elements that leave the whole operational structure unchanged.
 
@@ -317,7 +317,7 @@ $$
 \bar{a} \cdot \bar{b} = \overline{a \cdot b}
 $$
 
-is a well-defined binary operation on the quotient set $X/{\sim}$, and the canonical map $\gamma: a \mapsto \bar{a}$ is an epimorphism from $(X, \cdot)$ onto $(X/{\sim}, \cdot)$. The system $(X/{\sim}, \cdot)$ is called the *quotient algebra* of $X$ by $\sim$.
+is a well-defined binary operation on the quotient set $X/{\sim}$, and the canonical map $\gamma\colon a \mapsto \bar{a}$ is an epimorphism from $(X, \cdot)$ onto $(X/{\sim}, \cdot)$. The system $(X/{\sim}, \cdot)$ is called the *quotient algebra* of $X$ by $\sim$.
 
 **Proof**: If $\bar{a} = \bar{a}'$ and $\bar{b} = \bar{b}'$, that is, $a \sim a'$ and $b \sim b'$, then by the congruence property $a \cdot b \sim a' \cdot b'$, that is, $\overline{a \cdot b} = \overline{a' \cdot b'}$; so the result does not depend on the choice of representatives. The map $\gamma$ is surjective (Section 1.2.4), and $\gamma(a \cdot b) = \overline{a \cdot b} = \bar{a} \cdot \bar{b} = \gamma(a) \cdot \gamma(b)$. $\square$
 
@@ -325,7 +325,7 @@ By Theorem 1.4.2, a quotient algebra automatically inherits the commutative and 
 
 Conversely, every homomorphism gives rise to a congruence relation:
 
-**Theorem 1.4.4** Let $f: X \to Y$ be a homomorphism from $(X, \cdot)$ to $(Y, *)$. Define $a \sim_f b \iff f(a) = f(b)$ on $X$. Then $\sim_f$ is a congruence relation, and $\varphi: \bar{a} \mapsto f(a)$ is an isomorphism from the quotient algebra $X/{\sim_f}$ onto the homomorphic image $f(X)$.
+**Theorem 1.4.4** Let $f\colon X \to Y$ be a homomorphism from $(X, \cdot)$ to $(Y, *)$. Define $a \sim_f b \iff f(a) = f(b)$ on $X$. Then $\sim_f$ is a congruence relation, and $\varphi\colon \bar{a} \mapsto f(a)$ is an isomorphism from the quotient algebra $X/{\sim_f}$ onto the homomorphic image $f(X)$.
 
 **Proof**: Clearly $\sim_f$ is reflexive, symmetric and transitive. If $f(a) = f(a')$ and $f(b) = f(b')$, then $f(a \cdot b) = f(a) * f(b) = f(a') * f(b') = f(a' \cdot b')$, so $\sim_f$ is a congruence relation. By the definition of $\sim_f$, $\bar{a} = \bar{b} \iff f(a) = f(b)$, so $\varphi$ does not depend on representatives and is injective; it is clearly surjective onto $f(X)$; and $\varphi(\bar{a} \cdot \bar{b}) = \varphi(\overline{a \cdot b}) = f(a \cdot b) = f(a) * f(b) = \varphi(\bar{a}) * \varphi(\bar{b})$. $\square$
 

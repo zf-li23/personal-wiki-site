@@ -66,7 +66,7 @@ $$
 
 分母取正是必要的：$1/2 \leq 1/1$，但若写成 $1/2$ 与 $(-1)/(-1)$，则 $1 \cdot (-1) \leq 2 \cdot (-1)$ 不成立。
 
-**定义 4.1.7（基本函数）** 如果 $f: \mathbb{N} \rightarrow \mathbb{Q}$ 满足条件：
+**定义 4.1.7（基本函数）** 如果 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 满足条件：
 
 1. $(\exists x)(x \in \mathbb{Q} \land (\forall n)(n \in \mathbb{N} \rightarrow f(n) \leq x))$；
 2. $(\exists n)(n \in \mathbb{N} \land (\forall m)(\forall i)((m \in \mathbb{N} \land i \in \mathbb{N} \land n \leq m \leq i) \rightarrow f(m) \leq f(i)))$，
@@ -79,7 +79,7 @@ $$
 
 称为一个基本序列，有时写为 $r_0, r_1, r_2, \cdots, r_n, \cdots$。以下用 $B$ 表示所有基本函数组成的集合，用 $BF(f)$ 表示 $f$ 是一个基本函数。
 
-**定理 4.1.2** 当 $f: \mathbb{N} \rightarrow \mathbb{Q}$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in \mathbb{Q}$，$r, r, r, \cdots$ 是一个基本序列。
+**定理 4.1.2** 当 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 取常数值时，$f$ 是基本函数。即对任意的 $r \in \mathbb{Q}$，$r, r, r, \cdots$ 是一个基本序列。
 
 **定理 4.1.3** 存在不是常值函数的基本函数。
 
@@ -93,7 +93,7 @@ $$
 
 **定理 4.1.4** $B$ 上的关系 $\sim$ 是等价关系。
 
-**定理 4.1.5** 设 $f: \mathbb{N} \rightarrow \mathbb{Q}$ 和 $g: \mathbb{N} \rightarrow \mathbb{Q}$ 都是常值函数，且 $f \sim g$，则 $f = g$。
+**定理 4.1.5** 设 $f\colon \mathbb{N} \rightarrow \mathbb{Q}$ 和 $g\colon \mathbb{N} \rightarrow \mathbb{Q}$ 都是常值函数，且 $f \sim g$，则 $f = g$。
 
 **定义 4.1.9（实数）** 令 $\mathbb{R} = B/{\sim}$，即 $\mathbb{R}$ 是集合 $B$ 关于等价关系 $\sim$ 的商集，则称 $\mathbb{R}$ 的元素为**实数**，称 $\mathbb{R}$ 为实数集合。
 
@@ -123,12 +123,12 @@ $$
 **定理 4.2.1** 对任意的集合 $A$，有
 
 $$
-P(A) \approx {}^{A}2,
+\mathcal{P}(A) \approx {}^{A}2,
 $$
 
 其中 $2 = \{0, 1\}$，${}^{A}2$ 是从 $A$ 到 $\{0, 1\}$ 的所有函数的集合。
 
-把每个子集 $B \subseteq A$ 对应到它的特征函数 $\chi_B$（定义 3.1.10），就得到 $P(A)$ 到 ${}^{A}2$ 的双射。
+把每个子集 $B \subseteq A$ 对应到它的特征函数 $\chi_B$（定义 3.1.10），就得到 $\mathcal{P}(A)$ 到 ${}^{A}2$ 的双射。
 
 **定理 4.2.2** 对任意的集合 $A$、$B$ 和 $C$，
 
@@ -141,17 +141,17 @@ $$
 **定理 4.2.3（Cantor 定理）**
 
 1. $\mathbb{N} \not\approx \mathbb{R}$；
-2. 对任意的集合 $A$，$A \not\approx P(A)$。
+2. 对任意的集合 $A$，$A \not\approx \mathcal{P}(A)$。
 
-**证明** (2) 设 $f: A \rightarrow P(A)$ 是任一函数，令
+**证明** (2) 设 $f\colon A \rightarrow \mathcal{P}(A)$ 是任一函数，令
 
 $$
-D = \{x \mid x \in A \land x \notin f(x)\} \in P(A).
+D = \{x \mid x \in A \land x \notin f(x)\} \in \mathcal{P}(A).
 $$
 
 若存在 $a \in A$ 使 $f(a) = D$，则 $a \in D \Leftrightarrow a \notin f(a) \Leftrightarrow a \notin D$，矛盾。所以 $D \notin \operatorname{ran}(f)$，$f$ 不是**满射**，更不是双射。
 
-(1) 用对角线法：设 $f: \mathbb{N} \rightarrow \mathbb{R}$ 是任一函数。对每个 $n$，若 $f(n) \in [0, 1)$，把它写成十进制小数 $0.a_{n0}a_{n1}a_{n2}\cdots$（不以 $9$ 无限循环结尾，这样的写法唯一），否则令 $a_{nn} = 0$。令 $b_n = 5$（若 $a_{nn} \neq 5$），$b_n = 4$（若 $a_{nn} = 5$），则 $b = 0.b_0b_1b_2\cdots \in [0, 1)$。对每个 $n$，若 $f(n) \in [0, 1)$，则 $b$ 与 $f(n)$ 的第 $n$ 位小数不同（$b$ 的各位都不是 $0$ 或 $9$，其十进制写法也唯一），故 $b \neq f(n)$；若 $f(n) \notin [0, 1)$，显然 $b \neq f(n)$。所以 $b \notin \operatorname{ran}(f)$，$f$ 不是满射，从而 $\mathbb{N} \not\approx \mathbb{R}$。$\square$
+(1) 用对角线法：设 $f\colon \mathbb{N} \rightarrow \mathbb{R}$ 是任一函数。对每个 $n$，若 $f(n) \in [0, 1)$，把它写成十进制小数 $0.a_{n0}a_{n1}a_{n2}\cdots$（不以 $9$ 无限循环结尾，这样的写法唯一），否则令 $a_{nn} = 0$。令 $b_n = 5$（若 $a_{nn} \neq 5$），$b_n = 4$（若 $a_{nn} = 5$），则 $b = 0.b_0b_1b_2\cdots \in [0, 1)$。对每个 $n$，若 $f(n) \in [0, 1)$，则 $b$ 与 $f(n)$ 的第 $n$ 位小数不同（$b$ 的各位都不是 $0$ 或 $9$，其十进制写法也唯一），故 $b \neq f(n)$；若 $f(n) \notin [0, 1)$，显然 $b \neq f(n)$。所以 $b \notin \operatorname{ran}(f)$，$f$ 不是满射，从而 $\mathbb{N} \not\approx \mathbb{R}$。$\square$
 
 ## 4.3. 有限集合与无限集合
 
@@ -199,11 +199,11 @@ $$
 
 **定义 4.5.1（基数的运算）** 对任意的基数 $k$ 和 $l$，取集合 $K$ 和 $L$ 使 $\operatorname{card}(K) = k$，$\operatorname{card}(L) = l$，定义
 
-1. 若 $K \cap L = \emptyset$，则 $k + l = \operatorname{card}(K \cup L)$；
+1. 若 $K \cap L = \varnothing$，则 $k + l = \operatorname{card}(K \cup L)$；
 2. $k \cdot l = \operatorname{card}(K \times L)$；
 3. $k^l = \operatorname{card}({}^{L}K)$，其中 ${}^{L}K$ 是从 $L$ 到 $K$ 的所有函数的集合。
 
-这些定义与 $K$、$L$ 的选取无关；求和时总可以取到不相交的 $K$、$L$（例如用 $K \times \{0\}$ 和 $L \times \{1\}$ 代替）。由定理 4.2.1，$\operatorname{card}(P(A)) = 2^{\operatorname{card}(A)}$。
+这些定义与 $K$、$L$ 的选取无关；求和时总可以取到不相交的 $K$、$L$（例如用 $K \times \{0\}$ 和 $L \times \{1\}$ 代替）。由定理 4.2.1，$\operatorname{card}(\mathcal{P}(A)) = 2^{\operatorname{card}(A)}$。
 
 **定理 4.5.1** 对任意的基数 $k$、$l$ 和 $m$，
 
@@ -265,7 +265,7 @@ $$
 
 1. 可数集的任何子集是可数集；
 2. 两个可数集的并集和**笛卡儿积**是可数集；
-3. 若 $K$ 是无限集合，则 $P(K)$ 是不可数的；
+3. 若 $K$ 是无限集合，则 $\mathcal{P}(K)$ 是不可数的；
 4. 可数个可数集的并集是可数集，即：若 $A$ 是可数集，$A$ 的元素都是可数集，则 $\bigcup A$ 是可数集。
 
 第 4 条的证明需要为每个元素集合选定一个枚举，要用到**选择公理**。

@@ -34,7 +34,7 @@ title: 匹配与网络流
 
 1. 给 $X$ 中所有饱和点标记 $1$，其余标记 $0$。
 2. 若 $X$ 中所有结点的标记都非零，则 $M$ 为最大匹配，结束；否则取一个标记为 $0$ 的结点 $x_0 \in X$。
-3. 令 $X_0 \leftarrow \{x_0\}$，$Y_0 \leftarrow \emptyset$。
+3. 令 $X_0 \leftarrow \{x_0\}$，$Y_0 \leftarrow \varnothing$。
 4. 若 $\Gamma(X_0) \subseteq Y_0$，则从 $x_0$ 出发不存在可增广道路，给 $x_0$ 标记 $2$，转步骤 2。否则任取 $y \in \Gamma(X_0) - Y_0$：
    - 若 $y$ 是饱和点，设 $(y, z) \in M$，令 $X_0 \leftarrow X_0 \cup \{z\}$，$Y_0 \leftarrow Y_0 \cup \{y\}$，转步骤 4；
    - 若 $y$ 是非饱和点，则得到一条从 $x_0$ 到 $y$ 的可增广道路 $P$，令 $M \leftarrow M \oplus P$，给 $x_0$ 标记 $1$，转步骤 2。

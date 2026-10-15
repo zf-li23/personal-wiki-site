@@ -2,7 +2,7 @@
 title: 矩阵函数
 ---
 
-本章回答两个问题。第一，复数有极形式 $z = r\mathrm{e}^{i\theta}$，矩阵能否也写成"伸缩乘以旋转"的形式 $A = R\mathrm{e}^{iM}$？这需要先定义 $\mathrm{e}^{iM}$，答案在 [第 13 章](/2.1.13)的极分解。第二，一元方程 $x'(t) = kx(t)$ 的解是 $x(t) = x(0)\mathrm{e}^{kt}$；方程组 $X'(t) = AX(t)$ 的解能否写成 $X(t) = \mathrm{e}^{At}X(0)$？两个问题都要求把复函数 $f: \mathbb{C} \to \mathbb{C}$ 推广为矩阵上的映射 $f: M_n(\mathbb{C}) \to M_n(\mathbb{C})$。
+本章回答两个问题。第一，复数有极形式 $z = r\mathrm{e}^{\mathrm{i}\theta}$，矩阵能否也写成"伸缩乘以旋转"的形式 $A = R\mathrm{e}^{\mathrm{i}M}$？这需要先定义 $\mathrm{e}^{\mathrm{i}M}$，答案在 [第 13 章](/2.1.13)的极分解。第二，一元方程 $x'(t) = kx(t)$ 的解是 $x(t) = x(0)\mathrm{e}^{kt}$；方程组 $\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$ 的解能否写成 $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{X}(0)$？两个问题都要求把复函数 $f\colon \mathbb{C} \to \mathbb{C}$ 推广为矩阵上的映射 $f\colon \mathbb{C}^{n\times n} \to \mathbb{C}^{n\times n}$。
 
 离散数学中已经用幂级数定义过**矩阵指数**并讨论了它与李群的关系（[1.3.5](/1.3.5)）。本章给出 $f(A)$ 的三种等价定义——Jordan 标准形上的谱定义、插值多项式、幂级数——以及相应的三种算法，并比较它们的代价。准备工作是把微积分（[2.2](/2.2)）中的极限、导数、级数搬到矩阵上；主要工具是[上一章](/2.1.10)的 Jordan 标准形与极小多项式，以及[第 9 章](/2.1.9)的 **Lagrange 插值多项式**。核心结论是：$f(A)$ 只依赖于 $f$ 及其导数在 $A$ 的特征值处的有限个值，因此计算 $f(A)$ 可以归结为解一个线性方程组。最后一节用矩阵指数求解线性常系数微分方程组，它是常微分方程（[2.4](/2.4)）的起点。
 
@@ -33,35 +33,35 @@ $$
 
 ## 11.2. 函数向量的线性相关性
 
-**定义 11.2.1** 设 $\alpha_1(x), \dots, \alpha_m(x)$ 是 $[a, b]$ 上连续的 $n$ 维函数向量。若存在不全为零的实数 $k_1, \dots, k_m$，使 $k_1\alpha_1(x) + \cdots + k_m\alpha_m(x) = 0$ 对所有 $x \in [a, b]$ 成立，则称它们在 $[a, b]$ 上线性相关，否则称为线性无关。
+**定义 11.2.1** 设 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 是 $[a, b]$ 上连续的 $n$ 维函数向量。若存在不全为零的实数 $k_1, \dots, k_m$，使 $k_1\boldsymbol{\alpha}_1(x) + \cdots + k_m\boldsymbol{\alpha}_m(x) = \boldsymbol{0}$ 对所有 $x \in [a, b]$ 成立，则称它们在 $[a, b]$ 上线性相关，否则称为线性无关。
 
 系数必须是常数。按定义判断需要对无穷多个 $x$ 同时成立，下面两种方法把它化成一个数字矩阵的秩。
 
-**定义 11.2.2** 称 $m$ 阶矩阵 $G = (g_{ij})$，$g_{ij} = \displaystyle\int_a^b \alpha_i^{\mathsf T}(x)\alpha_j(x)\,\mathrm{d}x$ 为 $\alpha_1(x), \dots, \alpha_m(x)$ 的 **Gram 矩阵**，$\det G$ 称为 Gram 行列式。
+**定义 11.2.2** 称 $m$ 阶矩阵 $G = (g_{ij})$，$g_{ij} = \displaystyle\int_a^b \boldsymbol{\alpha}_i^{\mathsf T}(x)\boldsymbol{\alpha}_j(x)\,\mathrm{d}x$ 为 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 的 **Gram 矩阵**，$\det G$ 称为 Gram 行列式。
 
-**定理 11.2.1** $[a, b]$ 上连续的函数向量 $\alpha_1(x), \dots, \alpha_m(x)$ 线性无关 $\Leftrightarrow$ 它们的 Gram 矩阵满秩。
+**定理 11.2.1** $[a, b]$ 上连续的函数向量 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 线性无关 $\Leftrightarrow$ 它们的 Gram 矩阵满秩。
 
-**证明** 设 $\sum_j k_j\alpha_j(x) = 0$ (\*)。左乘 $\alpha_i^{\mathsf T}(x)$ 并积分，得 $\sum_j g_{ij}k_j = 0$，即 $Gk = 0$，$k = (k_1, \dots, k_m)^{\mathsf T}$。若 $G$ 满秩，则 $k = 0$，向量组线性无关。若 $G$ 不满秩，取 $Gk = 0$ 的非零解，令 $\alpha(x) = \sum_i k_i\alpha_i(x)$，则
+**证明** 设 $\sum_j k_j\boldsymbol{\alpha}_j(x) = \boldsymbol{0}$ (\*)。左乘 $\boldsymbol{\alpha}_i^{\mathsf T}(x)$ 并积分，得 $\sum_j g_{ij}k_j = 0$，即 $G\boldsymbol{k} = \boldsymbol{0}$，$\boldsymbol{k} = (k_1, \dots, k_m)^{\mathsf T}$。若 $G$ 满秩，则 $\boldsymbol{k} = \boldsymbol{0}$，向量组线性无关。若 $G$ 不满秩，取 $G\boldsymbol{k} = \boldsymbol{0}$ 的非零解，令 $\boldsymbol{\alpha}(x) = \sum_i k_i\boldsymbol{\alpha}_i(x)$，则
 
 $$
-\int_a^b \alpha^{\mathsf T}(x)\alpha(x)\,\mathrm{d}x = k^{\mathsf T}Gk = 0.
+\int_a^b \boldsymbol{\alpha}^{\mathsf T}(x)\boldsymbol{\alpha}(x)\,\mathrm{d}x = \boldsymbol{k}^{\mathsf T}G\boldsymbol{k} = 0.
 $$
 
-被积函数 $\|\alpha(x)\|^2$ 连续且非负，所以 $\alpha(x) \equiv 0$，(\*) 有非零解，向量组线性相关。 $\square$
+被积函数 $\|\boldsymbol{\alpha}(x)\|^2$ 连续且非负，所以 $\boldsymbol{\alpha}(x) \equiv \boldsymbol{0}$，(\*) 有非零解，向量组线性相关。 $\square$
 
-$g_{ij}$ 是 $\alpha_i, \alpha_j$ 在积分内积下的内积，[下一章](/2.1.12)将看到 Gram 矩阵就是一般内积空间中一组向量的度量矩阵。若函数向量足够光滑，还可以用导数判别。
+$g_{ij}$ 是 $\boldsymbol{\alpha}_i, \boldsymbol{\alpha}_j$ 在积分内积下的内积，[下一章](/2.1.12)将看到 Gram 矩阵就是一般内积空间中一组向量的度量矩阵。若函数向量足够光滑，还可以用导数判别。
 
-**定义 11.2.3** 设 $\alpha_1(x), \dots, \alpha_m(x)$ 在 $[a, b]$ 上有 $m - 1$ 阶导数，$A(x)$ 是以 $\alpha_i^{\mathsf T}(x)$ 为第 $i$ 行的 $m \times n$ 函数矩阵。称 $m \times mn$ 矩阵 $W(x) = \left(A(x), A'(x), \dots, A^{(m-1)}(x)\right)$ 为 $\alpha_1(x), \dots, \alpha_m(x)$ 的 **Wronski 矩阵**。
+**定义 11.2.3** 设 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 在 $[a, b]$ 上有 $m - 1$ 阶导数，$A(x)$ 是以 $\boldsymbol{\alpha}_i^{\mathsf T}(x)$ 为第 $i$ 行的 $m \times n$ 函数矩阵。称 $m \times mn$ 矩阵 $W(x) = \left(A(x), A'(x), \dots, A^{(m-1)}(x)\right)$ 为 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 的 **Wronski 矩阵**。
 
-**定理 11.2.2** 若存在 $x_0 \in [a, b]$ 使数字矩阵 $W(x_0)$ 的秩为 $m$，则 $\alpha_1(x), \dots, \alpha_m(x)$ 在 $[a, b]$ 上线性无关。
+**定理 11.2.2** 若存在 $x_0 \in [a, b]$ 使数字矩阵 $W(x_0)$ 的秩为 $m$，则 $\boldsymbol{\alpha}_1(x), \dots, \boldsymbol{\alpha}_m(x)$ 在 $[a, b]$ 上线性无关。
 
-**证明** 反证。若 $\sum_j k_j\alpha_j(x) = 0$ 有非零解 $k$，逐次求导得 $\sum_j k_j\alpha_j^{(l)}(x) = 0$（$l = 0, \dots, m - 1$），在 $x_0$ 处写成矩阵形式为 $W^{\mathsf T}(x_0)k = 0$，于是 $\operatorname{rank}(W(x_0)) < m$，矛盾。 $\square$
+**证明** 反证。若 $\sum_j k_j\boldsymbol{\alpha}_j(x) = \boldsymbol{0}$ 有非零解 $\boldsymbol{k}$，逐次求导得 $\sum_j k_j\boldsymbol{\alpha}_j^{(l)}(x) = \boldsymbol{0}$（$l = 0, \dots, m - 1$），在 $x_0$ 处写成矩阵形式为 $W^{\mathsf T}(x_0)\boldsymbol{k} = \boldsymbol{0}$，于是 $\operatorname{rank}(W(x_0)) < m$，矛盾。 $\square$
 
-这个条件只是充分的。取 $n = 1$，$\alpha_1(x) = x^2$，$\alpha_2(x) = x|x|$，它们在 $[-1, 1]$ 上线性无关（在 $[0, 1]$ 上相等，在 $[-1, 0]$ 上相反），但 $W(x) = \begin{pmatrix} x^2 & 2x \\ x|x| & 2|x| \end{pmatrix}$ 的行列式 $2x^2|x| - 2x^2|x|$ 恒为零。
+这个条件只是充分的。取 $n = 1$，$\boldsymbol{\alpha}_1(x) = x^2$，$\boldsymbol{\alpha}_2(x) = x|x|$，它们在 $[-1, 1]$ 上线性无关（在 $[0, 1]$ 上相等，在 $[-1, 0]$ 上相反），但 $W(x) = \begin{pmatrix} x^2 & 2x \\ x|x| & 2|x| \end{pmatrix}$ 的行列式 $2x^2|x| - 2x^2|x|$ 恒为零。
 
 ## 11.3. 矩阵序列与矩阵级数
 
-**定义 11.3.1** 设 $A_k = (a_{ij}^{(k)}) \in M_n(\mathbb{C})$。若 $n^2$ 个数列 $\{a_{ij}^{(k)}\}$ 都收敛到 $a_{ij}$，则称矩阵序列 $\{A_k\}$ 收敛，$A = (a_{ij})$ 为它的极限，记作 $\lim_{k \to \infty}A_k = A$；否则称为发散。
+**定义 11.3.1** 设 $A_k = (a_{ij}^{(k)}) \in \mathbb{C}^{n\times n}$。若 $n^2$ 个数列 $\{a_{ij}^{(k)}\}$ 都收敛到 $a_{ij}$，则称矩阵序列 $\{A_k\}$ 收敛，$A = (a_{ij})$ 为它的极限，记作 $\lim_{k \to \infty}A_k = A$；否则称为发散。
 
 **性质 11.3.1** 若 $A_k \to A$，$B_k \to B$，则
 
@@ -72,7 +72,7 @@ $g_{ij}$ 是 $\alpha_i, \alpha_j$ 在积分内积下的内积，[下一章](/2.1
 
 矩阵幂 $A^k$ 的收敛性只取决于特征值。
 
-**定义 11.3.2** $A \in M_n(\mathbb{C})$ 的**谱半径**是 $\rho(A) = \max\{|\lambda| : \lambda \text{ 是 } A \text{ 的特征值}\}$。
+**定义 11.3.2** $A \in \mathbb{C}^{n\times n}$ 的**谱半径**是 $\rho(A) = \max\{|\lambda| : \lambda \text{ 是 } A \text{ 的特征值}\}$。
 
 **定理 11.3.1** $\lim_{k \to \infty}A^k = O$ $\Leftrightarrow$ $\rho(A) < 1$。
 
@@ -84,7 +84,7 @@ $$
 
 它的元素是 $\binom{k}{j}\lambda^{k-j}$（$0 \le j \le m - 1$）。若 $|\lambda| < 1$，$k$ 的多项式乘以 $|\lambda|^k$ 趋于零；若 $|\lambda| \ge 1$，对角元 $\lambda^k$ 不趋于零。 $\square$
 
-谱半径与范数的关系：对任一特征值 $\lambda$ 与单位特征向量 $x$，$|\lambda| = \|Ax\| \le \|A\|_2$，所以 $\rho(A)$ 不超过**谱范数**；可以证明 $\rho(A) = \lim_{k\to\infty}\|A^k\|_2^{1/k}$。$\rho(A)$ 决定 $A^k$ 最终的指数增长率，但前若干步的行为还取决于 $A$ 偏离"正规"的程度：下图中两个矩阵的谱半径都是 $0.9$，上三角那个的 $\|A^k\|_2$ 先增长到 $6$ 左右才开始衰减。这一现象与[下一章](/2.1.12)的正规矩阵有关。
+谱半径与范数的关系：对任一特征值 $\lambda$ 与单位特征向量 $\boldsymbol{x}$，$|\lambda| = \|A\boldsymbol{x}\| \le \|A\|_2$，所以 $\rho(A)$ 不超过**谱范数**；可以证明 $\rho(A) = \lim_{k\to\infty}\|A^k\|_2^{1/k}$。$\rho(A)$ 决定 $A^k$ 最终的指数增长率，但前若干步的行为还取决于 $A$ 偏离"正规"的程度：下图中两个矩阵的谱半径都是 $0.9$，上三角那个的 $\|A^k\|_2$ 先增长到 $6$ 左右才开始衰减。这一现象与[下一章](/2.1.12)的正规矩阵有关。
 
 ![三个 2 阶矩阵的幂的谱范数随 k 的变化：谱半径决定极限行为，非正规矩阵有暂态增长](./plots/matrix-powers-spectral-radius.py)
 
@@ -92,7 +92,7 @@ $$
 
 显然，矩阵级数收敛当且仅当 $n^2$ 个数项级数都收敛，和的元素就是它们的和。
 
-**定理 11.3.2** 设 $A \in M_n(\mathbb{C})$，则 $\sum_{k=0}^\infty A^k$ 收敛 $\Leftrightarrow$ $\rho(A) < 1$，此时 $\sum_{k=0}^\infty A^k = (I - A)^{-1}$。
+**定理 11.3.2** 设 $A \in \mathbb{C}^{n\times n}$，则 $\sum_{k=0}^\infty A^k$ 收敛 $\Leftrightarrow$ $\rho(A) < 1$，此时 $\sum_{k=0}^\infty A^k = (I - A)^{-1}$。
 
 **证明** 若级数收敛，一般项 $A^k \to O$，由定理 11.3.1 得 $\rho(A) < 1$。反之，若 $\rho(A) < 1$，则 $1$ 不是 $A$ 的特征值，$I - A$ 可逆。由 $(I - A)(I + A + \cdots + A^k) = I - A^{k+1} \to I$，得部分和趋于 $(I - A)^{-1}$。 $\square$
 
@@ -128,7 +128,7 @@ $$
 
 ## 11.5. 矩阵函数的谱定义
 
-**定义 11.5.1（矩阵的谱）** 设 $A \in M_n(\mathbb{C})$ 的极小多项式为 $m_A(\lambda) = (\lambda - \mu_1)^{m_1}\cdots(\lambda - \mu_s)^{m_s}$，$\mu_i$ 互不相同。称 $\sigma(A) = \{\mu_1, \dots, \mu_s\}$ 为 $A$ 的**谱**。设 $f$ 是复函数，若
+**定义 11.5.1（矩阵的谱）** 设 $A \in \mathbb{C}^{n\times n}$ 的极小多项式为 $m_A(\lambda) = (\lambda - \mu_1)^{m_1}\cdots(\lambda - \mu_s)^{m_s}$，$\mu_i$ 互不相同。称 $\sigma(A) = \{\mu_1, \dots, \mu_s\}$ 为 $A$ 的**谱**。设 $f$ 是复函数，若
 
 $$
 f(\mu_i), f'(\mu_i), \dots, f^{(m_i - 1)}(\mu_i), \qquad i = 1, \dots, s
@@ -257,7 +257,7 @@ $$
 \mathrm{e}^z = \sum_{p=0}^\infty \frac{z^p}{p!}, \quad \sin z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p+1}}{(2p+1)!}, \quad \cos z = \sum_{p=0}^\infty \frac{(-1)^pz^{2p}}{(2p)!} \quad (R = +\infty), \qquad \ln(1 + z) = \sum_{p=1}^\infty \frac{(-1)^{p-1}z^p}{p} \quad (R = 1).
 $$
 
-**定义 11.7.1** 对 $A \in M_n(\mathbb{C})$，令 $S(A) = \sum_{p=0}^\infty a_pA^p$；若部分和 $S_p(A) = a_0I + \cdots + a_pA^p$ 收敛，则称 $S(A)$ 收敛。
+**定义 11.7.1** 对 $A \in \mathbb{C}^{n\times n}$，令 $S(A) = \sum_{p=0}^\infty a_pA^p$；若部分和 $S_p(A) = a_0I + \cdots + a_pA^p$ 收敛，则称 $S(A)$ 收敛。
 
 **定理 11.7.1** 设幂级数 $S(z)$ 的收敛半径为 $R$，在 $|z| < R$ 内的和函数为 $f(z)$。若 $A$ 的所有特征值满足 $|\mu_i| < R$（即 $\rho(A) < R$），则 $S(A)$ 绝对收敛，且 $S(A) = f(A)$，其中 $f(A)$ 按谱定义计算。若有某个 $|\mu_i| > R$，则 $S(A)$ 发散。
 
@@ -270,12 +270,12 @@ $$
 **例 11.7.1** 若 $A^2 = O$，则 $\mathrm{e}^A = I + A$，$\sin A = A$，$\cos A = I$（与例 11.5.3 一致）。若 $A^2 = A$，则 $A^k = A$（$k \ge 1$），
 
 $$
-\mathrm{e}^A = I + \left(1 + \frac{1}{2!} + \frac{1}{3!} + \cdots\right)A = I + (e - 1)A.
+\mathrm{e}^A = I + \left(1 + \frac{1}{2!} + \frac{1}{3!} + \cdots\right)A = I + (\mathrm{e} - 1)A.
 $$
 
 ## 11.8. 矩阵指数
 
-**定义 11.8.1（矩阵指数）** 对 $A \in M_n(\mathbb{C})$ 与 $t \in \mathbb{R}$（或 $\mathbb{C}$），
+**定义 11.8.1（矩阵指数）** 对 $A \in \mathbb{C}^{n\times n}$ 与 $t \in \mathbb{R}$（或 $\mathbb{C}$），
 
 $$
 \mathrm{e}^{At} = \sum_{k=0}^\infty \frac{t^k}{k!}A^k = I + tA + \frac{t^2}{2!}A^2 + \cdots.
@@ -283,7 +283,7 @@ $$
 
 由定理 11.7.1，级数对一切 $A$、$t$ 绝对收敛，且等于 $f(z) = \mathrm{e}^{tz}$ 在 $A$ 处的矩阵函数。
 
-**定理 11.8.1** 设 $A, B \in M_n(\mathbb{C})$，$P$ 可逆。
+**定理 11.8.1** 设 $A, B \in \mathbb{C}^{n\times n}$，$P$ 可逆。
 
 1. 若 $AB = BA$，则 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；
 2. $\mathrm{e}^{P^{-1}AP} = P^{-1}\mathrm{e}^AP$；
@@ -302,13 +302,13 @@ $$
 
 这也是 $f(z) = \mathrm{e}^{tz}$ 代入式 (11.1) 的结果（$f^{(j)}(\lambda) = t^j\mathrm{e}^{\lambda t}$）。注意 $tJ_{\lambda,m}$ 的上对角线是 $t$，它本身不是 Jordan 块，不能把它当作 Jordan 块再套用式 (11.1)。
 
-**例 11.8.1** $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{i, -i\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + ia_1 = \mathrm{e}^{it}$，$a_0 - ia_1 = \mathrm{e}^{-it}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
+**例 11.8.1** $A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$，$m_A = \lambda^2 + 1$，谱为 $\{\mathrm{i}, -\mathrm{i}\}$。用插值法，设 $r(z) = a_0 + a_1z$，由 $a_0 + \mathrm{i}a_1 = \mathrm{e}^{\mathrm{i}t}$，$a_0 - \mathrm{i}a_1 = \mathrm{e}^{-\mathrm{i}t}$ 得 $a_0 = \cos t$，$a_1 = \sin t$，所以
 
 $$
 \mathrm{e}^{At} = \cos t\,I + \sin t\,A = \begin{pmatrix} \cos t & \sin t \\ -\sin t & \cos t \end{pmatrix}.
 $$
 
-$A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧拉公式** $\mathrm{e}^{it} = \cos t + i\sin t$ 的矩阵版本；$\{\mathrm{e}^{At}\}$ 是平面旋转构成的**单参数子群**。
+$A^2 = -I$，$A$ 在这里扮演虚数单位的角色，这个等式就是**欧拉公式** $\mathrm{e}^{\mathrm{i}t} = \cos t + \mathrm{i}\sin t$ 的矩阵版本；$\{\mathrm{e}^{At}\}$ 是平面旋转构成的**单参数子群**。
 
 **例 11.8.2** 若 $P^{-1}AP = J = \operatorname{diag}(J_{2,1}, J_{4,2})$，则由式 (11.2)，
 
@@ -316,7 +316,7 @@ $$
 \mathrm{e}^{At} = P\begin{pmatrix} \mathrm{e}^{2t} & 0 & 0 \\ 0 & \mathrm{e}^{4t} & t\mathrm{e}^{4t} \\ 0 & 0 & \mathrm{e}^{4t} \end{pmatrix}P^{-1}.
 $$
 
-**定理 11.8.2** 设 $B \in M_n(\mathbb{C})$，则存在 $X$ 使 $\mathrm{e}^X = B$ $\Leftrightarrow$ $B$ 可逆。
+**定理 11.8.2** 设 $B \in \mathbb{C}^{n\times n}$，则存在 $X$ 使 $\mathrm{e}^X = B$ $\Leftrightarrow$ $B$ 可逆。
 
 **证明** 必要性：$\det \mathrm{e}^X = \mathrm{e}^{\operatorname{tr}X} \ne 0$。充分性：由定理 11.8.1 的第 2 条，只需对 $B$ 的每个 Jordan 块 $J_{\lambda,k}$（$\lambda \ne 0$）找到 $X$。写 $J_{\lambda,k} = \lambda(I + M)$，$M = \lambda^{-1}N$ 幂零。取 $\lambda$ 的一个对数 $\ell$（$\mathrm{e}^\ell = \lambda$），令
 
@@ -326,29 +326,29 @@ $$
 
 级数因 $M^k = O$ 而有限。形式幂级数恒等式 $\exp(\ln(1 + z)) = 1 + z$ 对幂零矩阵代入后成立，所以 $\mathrm{e}^L = I + M$；$\ell I$ 与 $L$ 可交换，$\mathrm{e}^X = \mathrm{e}^\ell \mathrm{e}^L = \lambda(I + M) = J_{\lambda,k}$。 $\square$
 
-对数不唯一：$\mathrm{e}^{2\pi i I} = I = \mathrm{e}^O$。实矩阵也未必有实对数，例如 $\operatorname{diag}(-1, 2)$ 没有实对数：对实矩阵 $X$，$\mathrm{e}^X$ 关于负特征值的 Jordan 块总是成对出现（来自 $X$ 的一对共轭复特征值 $\ell, \bar\ell$）。
+对数不唯一：$\mathrm{e}^{2\pi \mathrm{i} I} = I = \mathrm{e}^O$。实矩阵也未必有实对数，例如 $\operatorname{diag}(-1, 2)$ 没有实对数：对实矩阵 $X$，$\mathrm{e}^X$ 关于负特征值的 Jordan 块总是成对出现（来自 $X$ 的一对共轭复特征值 $\ell, \bar\ell$）。
 
 ## 11.9. 线性常系数微分方程组
 
-设 $X(t) = (x_1(t), \dots, x_n(t))^{\mathsf T}$，$A \in M_n(\mathbb{C})$ 是常数矩阵，求解 $X'(t) = AX(t)$。仿照一元方程：$\mathrm{e}^{-At}$ 与 $A$ 可交换，由性质 11.1.1 与定理 11.8.1，
+设 $\boldsymbol{X}(t) = (x_1(t), \dots, x_n(t))^{\mathsf T}$，$A \in \mathbb{C}^{n\times n}$ 是常数矩阵，求解 $\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$。仿照一元方程：$\mathrm{e}^{-At}$ 与 $A$ 可交换，由性质 11.1.1 与定理 11.8.1，
 
 $$
-\left(\mathrm{e}^{-At}X(t)\right)' = -A\mathrm{e}^{-At}X(t) + \mathrm{e}^{-At}X'(t) = \mathrm{e}^{-At}\left(X'(t) - AX(t)\right).
+\left(\mathrm{e}^{-At}\boldsymbol{X}(t)\right)' = -A\mathrm{e}^{-At}\boldsymbol{X}(t) + \mathrm{e}^{-At}\boldsymbol{X}'(t) = \mathrm{e}^{-At}\left(\boldsymbol{X}'(t) - A\boldsymbol{X}(t)\right).
 $$
 
-**定理 11.9.1** 方程组 $X'(t) = AX(t)$ 满足初值 $X(0) = x_0$ 的解存在且唯一，为 $X(t) = \mathrm{e}^{At}x_0$。因此通解是 $X(t) = \mathrm{e}^{At}c$，即 $\mathrm{e}^{At}$ 各列的任意线性组合。
+**定理 11.9.1** 方程组 $\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$ 满足初值 $\boldsymbol{X}(0) = \boldsymbol{x}_0$ 的解存在且唯一，为 $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{x}_0$。因此通解是 $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{c}$，即 $\mathrm{e}^{At}$ 各列的任意线性组合。
 
-**证明** 由定理 11.8.1 的第 4 条，$\mathrm{e}^{At}x_0$ 是解。反之若 $X(t)$ 是解，则上式右边为零，$\mathrm{e}^{-At}X(t)$ 是常向量，等于 $X(0) = x_0$，于是 $X(t) = \mathrm{e}^{At}x_0$。 $\square$
+**证明** 由定理 11.8.1 的第 4 条，$\mathrm{e}^{At}\boldsymbol{x}_0$ 是解。反之若 $\boldsymbol{X}(t)$ 是解，则上式右边为零，$\mathrm{e}^{-At}\boldsymbol{X}(t)$ 是常向量，等于 $\boldsymbol{X}(0) = \boldsymbol{x}_0$，于是 $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{x}_0$。 $\square$
 
-**推论 11.9.1** 设 $P^{-1}AP = J$。$X'(t) = AX(t)$ 的通解为 $X(t) = P\mathrm{e}^{Jt}c$（$c = P^{-1}x_0$ 为任意常向量）。具体地，若 $p_1, \dots, p_k$ 是关于特征值 $\lambda$ 的一条 Jordan 链（$p_1$ 是特征向量），则它给出 $k$ 个线性无关的解
+**推论 11.9.1** 设 $P^{-1}AP = J$。$\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$ 的通解为 $\boldsymbol{X}(t) = P\mathrm{e}^{Jt}\boldsymbol{c}$（$\boldsymbol{c} = P^{-1}\boldsymbol{x}_0$ 为任意常向量）。具体地，若 $\boldsymbol{p}_1, \dots, \boldsymbol{p}_k$ 是关于特征值 $\lambda$ 的一条 Jordan 链（$\boldsymbol{p}_1$ 是特征向量），则它给出 $k$ 个线性无关的解
 
 $$
-\mathrm{e}^{\lambda t}p_1, \quad \mathrm{e}^{\lambda t}(tp_1 + p_2), \quad \mathrm{e}^{\lambda t}\left(\frac{t^2}{2!}p_1 + tp_2 + p_3\right), \quad \dots, \quad \mathrm{e}^{\lambda t}\sum_{j=1}^{k}\frac{t^{k-j}}{(k-j)!}p_j.
+\mathrm{e}^{\lambda t}\boldsymbol{p}_1, \quad \mathrm{e}^{\lambda t}(t\boldsymbol{p}_1 + \boldsymbol{p}_2), \quad \mathrm{e}^{\lambda t}\left(\frac{t^2}{2!}\boldsymbol{p}_1 + t\boldsymbol{p}_2 + \boldsymbol{p}_3\right), \quad \dots, \quad \mathrm{e}^{\lambda t}\sum_{j=1}^{k}\frac{t^{k-j}}{(k-j)!}\boldsymbol{p}_j.
 $$
 
-**证明** $P\mathrm{e}^{Jt}c = \mathrm{e}^{At}Pc$ 是解，$Pc$ 取遍 $\mathbb{C}^n$。$P\mathrm{e}^{Jt}$ 的列由式 (11.2) 直接写出。 $\square$
+**证明** $P\mathrm{e}^{Jt}\boldsymbol{c} = \mathrm{e}^{At}P\boldsymbol{c}$ 是解，$P\boldsymbol{c}$ 取遍 $\mathbb{C}^n$。$P\mathrm{e}^{Jt}$ 的列由式 (11.2) 直接写出。 $\square$
 
-可以验证，形如 $\mathrm{e}^{\lambda t}\left(\frac{t^{k-1}}{(k-1)!}\alpha_1 + \cdots + t\alpha_{k-1} + \alpha_k\right)$（$\alpha_1 \ne 0$）的函数是解，当且仅当 $\alpha_1, \dots, \alpha_k$ 是关于 $\lambda$ 的 Jordan 链。所以解方程组就是求 Jordan 链。
+可以验证，形如 $\mathrm{e}^{\lambda t}\left(\frac{t^{k-1}}{(k-1)!}\boldsymbol{\alpha}_1 + \cdots + t\boldsymbol{\alpha}_{k-1} + \boldsymbol{\alpha}_k\right)$（$\boldsymbol{\alpha}_1 \ne \boldsymbol{0}$）的函数是解，当且仅当 $\boldsymbol{\alpha}_1, \dots, \boldsymbol{\alpha}_k$ 是关于 $\lambda$ 的 Jordan 链。所以解方程组就是求 Jordan 链。
 
 **例 11.9.1** 求解
 
@@ -356,27 +356,27 @@ $$
 \begin{cases} x_1' = 6x_1 + 2x_2 + 2x_3, \\ x_2' = -2x_1 + 2x_2, \\ x_3' = 2x_3, \end{cases} \qquad A = \begin{pmatrix} 6 & 2 & 2 \\ -2 & 2 & 0 \\ 0 & 0 & 2 \end{pmatrix}.
 $$
 
-$\det(\lambda I - A) = (\lambda - 2)(\lambda - 4)^2$，$\operatorname{rank}(A - 4I) = 2$，关于 $4$ 只有一个块，$J = \operatorname{diag}(2, J_{4,2})$。$(A - 2I)x = 0$ 得 $p_1 = (0, -1, 1)^{\mathsf T}$；$(A - 4I)x = 0$ 得 $p_2 = (2, -2, 0)^{\mathsf T}$；$(A - 4I)x = p_2$ 得 $p_3 = (1, 0, 0)^{\mathsf T}$。通解为
+$\det(\lambda I - A) = (\lambda - 2)(\lambda - 4)^2$，$\operatorname{rank}(A - 4I) = 2$，关于 $4$ 只有一个块，$J = \operatorname{diag}(2, J_{4,2})$。$(A - 2I)\boldsymbol{x} = \boldsymbol{0}$ 得 $\boldsymbol{p}_1 = (0, -1, 1)^{\mathsf T}$；$(A - 4I)\boldsymbol{x} = \boldsymbol{0}$ 得 $\boldsymbol{p}_2 = (2, -2, 0)^{\mathsf T}$；$(A - 4I)\boldsymbol{x} = \boldsymbol{p}_2$ 得 $\boldsymbol{p}_3 = (1, 0, 0)^{\mathsf T}$。通解为
 
 $$
-X(t) = c_1\mathrm{e}^{2t}\begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} + c_2\mathrm{e}^{4t}\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + c_3\mathrm{e}^{4t}\left(t\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\right).
+\boldsymbol{X}(t) = c_1\mathrm{e}^{2t}\begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix} + c_2\mathrm{e}^{4t}\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + c_3\mathrm{e}^{4t}\left(t\begin{pmatrix} 2 \\ -2 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\right).
 $$
 
-给定初值 $X(0) = x_0$ 时，$c = P^{-1}x_0$，$P = (p_1, p_2, p_3)$。例如 $x_0 = (1, 0, 0)^{\mathsf T} = p_3$ 时 $c = (0, 0, 1)^{\mathsf T}$，$X(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。
+给定初值 $\boldsymbol{X}(0) = \boldsymbol{x}_0$ 时，$\boldsymbol{c} = P^{-1}\boldsymbol{x}_0$，$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$。例如 $\boldsymbol{x}_0 = (1, 0, 0)^{\mathsf T} = \boldsymbol{p}_3$ 时 $\boldsymbol{c} = (0, 0, 1)^{\mathsf T}$，$\boldsymbol{X}(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。
 
 非齐次方程组的解由齐次解加上输入的"累积响应"组成。
 
-**定理 11.9.2** 设 $B \in \mathbb{C}^{n \times m}$，$u(t)$ 是连续的 $m$ 维函数向量。方程组 $X'(t) = AX(t) + Bu(t)$ 满足 $X(0) = x_0$ 的解存在且唯一，为
+**定理 11.9.2** 设 $B \in \mathbb{C}^{n \times m}$，$\boldsymbol{u}(t)$ 是连续的 $m$ 维函数向量。方程组 $\boldsymbol{X}'(t) = A\boldsymbol{X}(t) + B\boldsymbol{u}(t)$ 满足 $\boldsymbol{X}(0) = \boldsymbol{x}_0$ 的解存在且唯一，为
 
 $$
-X(t) = \mathrm{e}^{At}x_0 + \int_0^t \mathrm{e}^{A(t-\tau)}Bu(\tau)\,\mathrm{d}\tau. \tag{11.3}
+\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{x}_0 + \int_0^t \mathrm{e}^{A(t-\tau)}B\boldsymbol{u}(\tau)\,\mathrm{d}\tau. \tag{11.3}
 $$
 
-**证明** 设 $X(t)$ 是解，则 $\left(\mathrm{e}^{-At}X(t)\right)' = \mathrm{e}^{-At}\left(X' - AX\right) = \mathrm{e}^{-At}Bu(t)$。从 $0$ 到 $t$ 积分：$\mathrm{e}^{-At}X(t) - x_0 = \int_0^t \mathrm{e}^{-A\tau}Bu(\tau)\,\mathrm{d}\tau$，两边左乘 $\mathrm{e}^{At}$ 即得式 (11.3)，这同时证明了唯一性；直接求导可验证式 (11.3) 确实是解。 $\square$
+**证明** 设 $\boldsymbol{X}(t)$ 是解，则 $\left(\mathrm{e}^{-At}\boldsymbol{X}(t)\right)' = \mathrm{e}^{-At}\left(\boldsymbol{X}' - A\boldsymbol{X}\right) = \mathrm{e}^{-At}B\boldsymbol{u}(t)$。从 $0$ 到 $t$ 积分：$\mathrm{e}^{-At}\boldsymbol{X}(t) - \boldsymbol{x}_0 = \int_0^t \mathrm{e}^{-A\tau}B\boldsymbol{u}(\tau)\,\mathrm{d}\tau$，两边左乘 $\mathrm{e}^{At}$ 即得式 (11.3)，这同时证明了唯一性；直接求导可验证式 (11.3) 确实是解。 $\square$
 
-式 (11.3) 称为常数变易公式（variation of constants formula）：把齐次解 $\mathrm{e}^{At}c$ 中的常向量 $c$ 换成函数 $c(t)$ 代入方程，就得到 $c'(t) = \mathrm{e}^{-At}Bu(t)$。它是控制理论中线性系统响应的基本公式。
+式 (11.3) 称为常数变易公式（variation of constants formula）：把齐次解 $\mathrm{e}^{At}\boldsymbol{c}$ 中的常向量 $\boldsymbol{c}$ 换成函数 $\boldsymbol{c}(t)$ 代入方程，就得到 $\boldsymbol{c}'(t) = \mathrm{e}^{-At}B\boldsymbol{u}(t)$。它是控制理论中线性系统响应的基本公式。
 
-系数随时间变化的方程组 $X'(t) = A(t)X(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$\mathrm{e}^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $\mathrm{e}^{At}$，它满足 $\det\Phi(t) = \mathrm{e}^{\int_0^t\operatorname{tr}A(s)\,\mathrm{d}s}$，非齐次方程的解为 $X(t) = \Phi(t)x_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)u(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
+系数随时间变化的方程组 $\boldsymbol{X}'(t) = A(t)\boldsymbol{X}(t)$ 一般不能写成矩阵指数：只有当 $A(t)$ 与 $\int_0^tA(s)\,\mathrm{d}s$ 可交换时，$\mathrm{e}^{\int_0^tA(s)\mathrm{d}s}$ 才是解。一般情形用基本解矩阵 $\Phi(t)$（$\Phi' = A\Phi$，$\Phi(0) = I$）代替 $\mathrm{e}^{At}$，它满足 $\det\Phi(t) = \mathrm{e}^{\int_0^t\operatorname{tr}A(s)\,\mathrm{d}s}$，非齐次方程的解为 $\boldsymbol{X}(t) = \Phi(t)\boldsymbol{x}_0 + \Phi(t)\int_0^t\Phi^{-1}(\tau)B(\tau)\boldsymbol{u}(\tau)\,\mathrm{d}\tau$。这些内容留给常微分方程课程。
 
 ## 小结
 
@@ -387,7 +387,7 @@ $$
 | 矩阵序列与级数 | $A^k \to O \Leftrightarrow \rho(A) < 1$；$\sum A^k = (I - A)^{-1} \Leftrightarrow \rho(A) < 1$；绝对收敛看 $\sum \lvert A_k\rvert$ |
 | 矩阵函数 | 只依赖于 $f^{(j)}(\mu_i)$，$j < m_i$；三种定义一致（定理 11.6.1、11.7.1） |
 | 矩阵指数 | 可交换时 $\mathrm{e}^{A+B} = \mathrm{e}^A\mathrm{e}^B$；$\det \mathrm{e}^A = \mathrm{e}^{\operatorname{tr}A}$；$\mathrm{e}^X = B$ 可解 $\Leftrightarrow$ $B$ 可逆 |
-| 微分方程组 | $X' = AX$：$X = \mathrm{e}^{At}x_0$，基本解由 Jordan 链给出；非齐次：常数变易公式 (11.3) |
+| 微分方程组 | $\boldsymbol{X}' = A\boldsymbol{X}$：$\boldsymbol{X} = \mathrm{e}^{At}\boldsymbol{x}_0$，基本解由 Jordan 链给出；非齐次：常数变易公式 (11.3) |
 
 计算 $f(A)$ 的三种方法比较如下。
 

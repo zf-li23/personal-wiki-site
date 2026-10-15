@@ -1,6 +1,6 @@
 ---
 title: Group Theory
-source_hash: 134524ca54e6
+source_hash: 483db6eb03ba
 ---
 
 A group is an algebraic system with a single binary operation that can be "undone". It is the basic language of symmetry: the symmetries of an object (the transformations preserving its structure) always form a group under composition. The previous chapter gave the general definitions of **algebraic systems**, **identity elements**, **inverse elements** and **homomorphisms**; this chapter develops these notions concretely for the most important class of systems.
@@ -57,7 +57,7 @@ For example:
 
 ### 2.1.6. Homomorphisms of Semigroups
 
-Homomorphisms, monomorphisms, epimorphisms and isomorphisms of semigroups are special cases of Definitions 1.4.3, 1.4.5 and 1.4.2: maps $f: A \to B$ with $f(a \cdot b) = f(a) * f(b)$. By Theorem 1.4.2, an epimorphism carries associativity and the identity element over to the image, so we have:
+Homomorphisms, monomorphisms, epimorphisms and isomorphisms of semigroups are special cases of Definitions 1.4.3, 1.4.5 and 1.4.2: maps $f\colon A \to B$ with $f(a \cdot b) = f(a) * f(b)$. By Theorem 1.4.2, an epimorphism carries associativity and the identity element over to the image, so we have:
 
 **Theorem 2.1.2** Let $f$ be an epimorphism from the algebraic system $(A, \cdot)$ onto $(B, *)$, let $S$ be a nonempty subset of $A$, and let $f(S) = \{f(a) \mid a \in S\}$. Then:
 
@@ -84,7 +84,7 @@ then $(G, \cdot)$ is called a group, also written $(G, \cdot, e)$.
 
 By Theorems 1.3.2 and 1.3.3, the identity of a group and the inverse of each element are unique; by Section 1.3.6, both the left and the right **cancellation laws** hold in a group.
 
-For example, $(\mathbb{Z}, +)$, $(\mathbb{Z}_n, +)$ and $(\mathbb{R}^+, \cdot)$ are groups. The set $\operatorname{GL}(n, \mathbb{R})$ of invertible real matrices of order $n$ is a group under matrix multiplication, called the *general linear group* (for invertible matrices see [Linear Algebra](/2.1.2#def-2.2.3)); $(M_n(\mathbb{R}), \cdot)$, on the other hand, is only a monoid, because singular matrices are not invertible.
+For example, $(\mathbb{Z}, +)$, $(\mathbb{Z}_n, +)$ and $(\mathbb{R}_+, \cdot)$ are groups. The set $\operatorname{GL}(n, \mathbb{R})$ of invertible real matrices of order $n$ is a group under matrix multiplication, called the *general linear group* (for invertible matrices see [Linear Algebra](/2.1.2#def-2.2.3)); $(M_n(\mathbb{R}), \cdot)$, on the other hand, is only a monoid, because singular matrices are not invertible.
 
 **Definition 2.2.3 (Abelian Group)** If the operation of a group $G$ satisfies the commutative law ($ab = ba$ for all $a, b \in G$), then $G$ is called a commutative group, or an **abelian group**.
 
@@ -169,9 +169,9 @@ For example, the generators of $\mathbb{Z}_6$ are $\bar{1}$ and $\bar{5}$, $\var
 
 ### 2.3.4. Isomorphisms of Groups
 
-An isomorphism of groups is an isomorphism in the sense of Definition 1.4.2: a bijection $f: G \to G'$ with $f(ab) = f(a) * f(b)$; we write $G \cong G'$. Isomorphic groups are the same group in the abstract sense.
+An isomorphism of groups is an isomorphism in the sense of Definition 1.4.2: a bijection $f\colon G \to G'$ with $f(ab) = f(a) * f(b)$; we write $G \cong G'$. Isomorphic groups are the same group in the abstract sense.
 
-**Example 2.3.1** Let $G = (\mathbb{R}^+, \cdot)$ (the multiplicative group of positive reals) and $G' = (\mathbb{R}, +)$, and let $f: x \mapsto \ln x$. Then $f$ is a bijection and
+**Example 2.3.1** Let $G = (\mathbb{R}_+, \cdot)$ (the multiplicative group of positive reals) and $G' = (\mathbb{R}, +)$, and let $f\colon x \mapsto \ln x$. Then $f$ is a bijection and
 
 $$
 f(xy) = \ln(xy) = \ln x + \ln y = f(x) + f(y),
@@ -206,7 +206,7 @@ When $A$ is a finite set with $|A| = n$, a bijective transformation of $A$ is ca
 
 **Example 2.4.1** Label the vertices of an equilateral triangle $1, 2, 3$. There are $6$ rigid motions of the plane that map the triangle to itself: the three rotations through $0^\circ$, $120^\circ$ and $240^\circ$, and the three reflections in the axes of symmetry. Each motion permutes the three vertices, and every permutation in $S_3$ is realized by exactly one motion, so the symmetry group of the equilateral triangle is isomorphic to $S_3$: the rotation through $120^\circ$ corresponds to the cycle $(1\ 2\ 3)$, and the reflection in the axis through vertex $1$ corresponds to $(2\ 3)$. This group is not commutative: performing $(2\ 3)$ first and then $(1\ 2\ 3)$ gives $(1\ 2\ 3)(2\ 3) = (1\ 2)$, whereas $(2\ 3)(1\ 2\ 3) = (1\ 3)$.
 
-This is exactly how chemistry describes the symmetry of molecules: the ammonia molecule $\mathrm{NH_3}$ is a trigonal pyramid, and its symmetry operations (rotations about the central axis and reflections in three mirror planes) form the point group $C_{3v}$, which is isomorphic to the $S_3$ above.
+This is exactly how chemistry describes the symmetry of molecules: the ammonia molecule $\ce{NH3}$ is a trigonal pyramid, and its symmetry operations (rotations about the central axis and reflections in three mirror planes) form the point group $C_{3\mathrm{v}}$, which is isomorphic to the $S_3$ above.
 
 ### 2.4.4. Cycles and Transpositions
 
@@ -238,7 +238,7 @@ The parity of a permutation is therefore well defined: a permutation that is a p
 
 **Theorem 2.4.4 (Cayley's Theorem)** Every group $G$ is isomorphic to a transformation group.
 
-**Proof**: For each $a \in G$ define the transformation $f_a: x \mapsto ax$ of $G$. Each $f_a$ is a bijective transformation with inverse $f_{a^{-1}}$, and $f_a f_b = f_{ab}$. Hence $\bar{G} = \{f_a \mid a \in G\}$ is a subgroup of $E(G)$, that is, a transformation group. The map $\varphi: a \mapsto f_a$ preserves the operation; and if $f_a = f_b$, then $a = f_a(e) = f_b(e) = b$. So $\varphi$ is an isomorphism from $G$ onto $\bar{G}$. $\square$
+**Proof**: For each $a \in G$ define the transformation $f_a\colon x \mapsto ax$ of $G$. Each $f_a$ is a bijective transformation with inverse $f_{a^{-1}}$, and $f_a f_b = f_{ab}$. Hence $\bar{G} = \{f_a \mid a \in G\}$ is a subgroup of $E(G)$, that is, a transformation group. The map $\varphi\colon a \mapsto f_a$ preserves the operation; and if $f_a = f_b$, then $a = f_a(e) = f_b(e) = b$. So $\varphi$ is an isomorphism from $G$ onto $\bar{G}$. $\square$
 
 **Corollary**: A finite group $G$ of order $n$ is isomorphic to a subgroup of $S_n$; that is, every finite group is isomorphic to a permutation group.
 
@@ -308,7 +308,7 @@ Groups most often appear as a family of transformations of some set; for example
 
 then we say that $G$ acts on $A$.
 
-By conditions 1 and 2, the transformation $\sigma_g: x \mapsto g \cdot x$ determined by each $g$ is a bijective transformation (with inverse $\sigma_{g^{-1}}$), and $g \mapsto \sigma_g$ is a homomorphism from $G$ to the group of bijective transformations $E(A)$; conversely, every homomorphism $G \to E(A)$ defines a group action. The proof of Cayley's theorem uses precisely the action of $G$ on itself by left multiplication, $g \cdot x = gx$.
+By conditions 1 and 2, the transformation $\sigma_g\colon x \mapsto g \cdot x$ determined by each $g$ is a bijective transformation (with inverse $\sigma_{g^{-1}}$), and $g \mapsto \sigma_g$ is a homomorphism from $G$ to the group of bijective transformations $E(A)$; conversely, every homomorphism $G \to E(A)$ defines a group action. The proof of Cayley's theorem uses precisely the action of $G$ on itself by left multiplication, $g \cdot x = gx$.
 
 **Definition 2.5.4 (Orbit and Stabilizer)** Let a group $G$ act on a set $A$ and let $x \in A$. The set $G \cdot x = \{g \cdot x \mid g \in G\}$ is called the **orbit** of $x$, and $G_x = \{g \in G \mid g \cdot x = x\}$ is called the **stabilizer** of $x$.
 
@@ -324,7 +324,7 @@ in particular, the length of every orbit divides $|G|$.
 
 **Proof**: For $g, h \in G$, $g \cdot x = h \cdot x \iff (h^{-1}g) \cdot x = x \iff h^{-1}g \in G_x \iff gG_x = hG_x$ (property 5 of Theorem 2.5.1). Hence $gG_x \mapsto g \cdot x$ is a bijection from the set of left cosets of $G_x$ onto the orbit $G \cdot x$. $\square$
 
-**Example 2.5.1** In Example 2.4.1, the symmetry group of the triangle acting on the three vertices has a single orbit (any vertex can be moved to any other), and the stabilizer of vertex $1$ is $\{e, (2\ 3)\}$. Check: $|G \cdot 1| = 3 = 6/2 = [G : G_1]$. For a molecule, the symmetry group acts on the atoms, and atoms in the same orbit are equivalent under symmetry, such as the three hydrogen atoms of $\mathrm{NH_3}$.
+**Example 2.5.1** In Example 2.4.1, the symmetry group of the triangle acting on the three vertices has a single orbit (any vertex can be moved to any other), and the stabilizer of vertex $1$ is $\{e, (2\ 3)\}$. Check: $|G \cdot 1| = 3 = 6/2 = [G : G_1]$. For a molecule, the symmetry group acts on the atoms, and atoms in the same orbit are equivalent under symmetry, such as the three hydrogen atoms of $\ce{NH3}$.
 
 ## 2.6. Normal Subgroups and Quotient Groups
 
@@ -382,17 +382,17 @@ For example, $A_3 = \{e, (1\ 2\ 3), (1\ 3\ 2)\} \triangleleft S_3$, and $S_3/A_3
 
 ### 2.7.1. Definition of a Group Homomorphism
 
-A group homomorphism is a homomorphism in the sense of Definition 1.4.3: a map $f: G_1 \to G_2$ with $f(ab) = f(a)f(b)$ (the right-hand side being computed in $G_2$); monomorphisms, epimorphisms and isomorphisms are as in Definition 1.4.5. We write $G_1 \sim G_2$ when there is an epimorphism from $G_1$ onto $G_2$, and call $G_2$ a **homomorphic image** of $G_1$.
+A group homomorphism is a homomorphism in the sense of Definition 1.4.3: a map $f\colon G_1 \to G_2$ with $f(ab) = f(a)f(b)$ (the right-hand side being computed in $G_2$); monomorphisms, epimorphisms and isomorphisms are as in Definition 1.4.5. We write $G_1 \sim G_2$ when there is an epimorphism from $G_1$ onto $G_2$, and call $G_2$ a **homomorphic image** of $G_1$.
 
-For example, the determinant $\det: \operatorname{GL}(n, \mathbb{R}) \to (\mathbb{R} \setminus \{0\}, \cdot)$ is an epimorphism ($\det(AB) = \det A \det B$); the sign map $\operatorname{sgn}: S_n \to (\{1, -1\}, \cdot)$, sending even permutations to $1$ and odd permutations to $-1$, is a homomorphism; and $k \mapsto \bar{k}$ is an epimorphism from $(\mathbb{Z}, +)$ onto $(\mathbb{Z}_n, +)$.
+For example, the determinant $\det\colon \operatorname{GL}(n, \mathbb{R}) \to (\mathbb{R} \setminus \{0\}, \cdot)$ is an epimorphism ($\det(AB) = \det A \det B$); the sign map $\operatorname{sgn}\colon S_n \to (\{1, -1\}, \cdot)$, sending even permutations to $1$ and odd permutations to $-1$, is a homomorphism; and $k \mapsto \bar{k}$ is an epimorphism from $(\mathbb{Z}, +)$ onto $(\mathbb{Z}_n, +)$.
 
 ### 2.7.2. Basic Properties of Homomorphisms
 
-**Lemma 2.7.1** If $H \triangleleft G$, then the **canonical map** $\gamma: a \mapsto aH$ is an epimorphism from $G$ onto $G/H$.
+**Lemma 2.7.1** If $H \triangleleft G$, then the **canonical map** $\gamma\colon a \mapsto aH$ is an epimorphism from $G$ onto $G/H$.
 
 **Theorem 2.7.1** If $f$ is a homomorphism from $G_1$ to $G_2$ and $g$ is a homomorphism from $G_2$ to $G_3$, then $gf$ is a homomorphism from $G_1$ to $G_3$.
 
-**Theorem 2.7.2** Let $G$ be a group and $(G', \cdot)$ an algebraic system with a binary operation. If $f: G \to G'$ is surjective and preserves the operation, then $G'$ is also a group, and $G \sim G'$. In other words, a homomorphic image of a group under an epimorphism is again a group.
+**Theorem 2.7.2** Let $G$ be a group and $(G', \cdot)$ an algebraic system with a binary operation. If $f\colon G \to G'$ is surjective and preserves the operation, then $G'$ is also a group, and $G \sim G'$. In other words, a homomorphic image of a group under an epimorphism is again a group.
 
 **Theorem 2.7.3** Let $f$ be a homomorphism from $G$ to $G'$ and let $e'$ be the identity of $G'$. Then:
 
@@ -402,7 +402,7 @@ For example, the determinant $\det: \operatorname{GL}(n, \mathbb{R}) \to (\mathb
 
 ### 2.7.3. The Kernel of a Homomorphism
 
-**Definition 2.7.2 (Kernel)** Let $f: G \to G'$ be a homomorphism and $e'$ the identity of $G'$. The set $K = \{a \in G \mid f(a) = e'\}$ is called the kernel of $f$, written $\ker f$.
+**Definition 2.7.2 (Kernel)** Let $f\colon G \to G'$ be a homomorphism and $e'$ the identity of $G'$. The set $K = \{a \in G \mid f(a) = e'\}$ is called the kernel of $f$, written $\ker f$.
 
 **Theorem 2.7.4** $\ker f$ is a normal subgroup of $G$.
 
@@ -427,7 +427,7 @@ That is, elements of the same coset have the same image, and elements of differe
 1. every quotient group of $G$ is a homomorphic image of $G$;
 2. conversely, if $f$ is an epimorphism from $G$ onto $G'$ and $K = \ker f$, then $G' \cong G/K$.
 
-**Proof**: Statement 1 is Lemma 2.7.1. For 2, define $\varphi: G/K \to G'$ by $\varphi(aK) = f(a)$. By Theorem 2.7.5, $aK = bK \iff f(a) = f(b)$, so $\varphi$ does not depend on the choice of representatives and is injective; since $f$ is surjective, so is $\varphi$; and $\varphi(aK \cdot bK) = \varphi(abK) = f(ab) = f(a)f(b) = \varphi(aK)\varphi(bK)$. Hence $\varphi$ is an isomorphism. $\square$
+**Proof**: Statement 1 is Lemma 2.7.1. For 2, define $\varphi\colon G/K \to G'$ by $\varphi(aK) = f(a)$. By Theorem 2.7.5, $aK = bK \iff f(a) = f(b)$, so $\varphi$ does not depend on the choice of representatives and is injective; since $f$ is surjective, so is $\varphi$; and $\varphi(aK \cdot bK) = \varphi(abK) = f(ab) = f(a)f(b) = \varphi(aK)\varphi(bK)$. Hence $\varphi$ is an isomorphism. $\square$
 
 In other words, up to isomorphism the homomorphic images of a group $G$ are exactly its quotient groups: a homomorphic image is isomorphic to the quotient group by the kernel. This is a concrete instance of Theorem 1.4.4: the equivalence classes of the congruence relation $\sim_f$ determined by $f$ are exactly the cosets of $\ker f$ (Theorem 2.7.5).
 

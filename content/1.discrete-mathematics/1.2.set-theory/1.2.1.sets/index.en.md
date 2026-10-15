@@ -1,6 +1,6 @@
 ---
 title: Sets
-source_hash: 09b59758a19b
+source_hash: f91d2d5b58dd
 ---
 
 This chapter introduces the basic language of set theory: how sets are described, the relations between sets, the operations on sets and the laws they obey, and the cardinality of finite sets; it closes with a brief introduction to the ZF axioms of set theory. The relations, functions and cardinal numbers of the later chapters are all built on these notions: ordered pairs and Cartesian products give the definition of a relation, and the cardinality of finite sets is extended to arbitrary sets in Chapter 4.
@@ -56,13 +56,13 @@ $$
 A \text{ and } B \text{ are disjoint} \Leftrightarrow \lnot(\exists x)(x \in A \land x \in B).
 $$
 
-**Definition 1.2.5 (Empty Set)** The set that has no elements is called the **empty set** and is denoted by $\emptyset$. In symbols,
+**Definition 1.2.5 (Empty Set)** The set that has no elements is called the **empty set** and is denoted by $\varnothing$. In symbols,
 
 $$
-\emptyset = \{x \mid x \neq x\}.
+\varnothing = \{x \mid x \neq x\}.
 $$
 
-**Theorem 1.2.3** The empty set is a subset of every set: $\emptyset \subseteq A$ for every set $A$.
+**Theorem 1.2.3** The empty set is a subset of every set: $\varnothing \subseteq A$ for every set $A$.
 
 **Definition 1.2.6 (Universal Set)** In a given problem, the set of all objects under consideration is called the **universal set** and is denoted by $E$. Equivalently, if all sets occurring in a particular problem are subsets of some set, that set is called the universal set. Formally,
 
@@ -79,7 +79,7 @@ The universal set is relative: different problems have different universal sets,
 1. **Union**: $A \cup B = \{x \mid x \in A \lor x \in B\}$;
 2. **Intersection**: $A \cap B = \{x \mid x \in A \land x \in B\}$;
 3. **Set difference**: $A - B = \{x \mid x \in A \land x \notin B\}$, also called the relative complement of $B$ in $A$;
-4. **Complement**: $-A = E - A = \{x \mid x \in E \land x \notin A\}$, where $E$ is the universal set; the complement of $A$ is also called the absolute complement of $A$, that is, the relative complement of $A$ in $E$;
+4. **Complement**: $A^{\mathsf c} = E - A = \{x \mid x \in E \land x \notin A\}$, where $E$ is the universal set; the complement of $A$ is also called the absolute complement of $A$, that is, the relative complement of $A$ in $E$;
 5. **Symmetric difference**: $A \oplus B = (A - B) \cup (B - A) = \{x \mid (x \in A \land x \notin B) \lor (x \notin A \land x \in B)\}$.
 
 **Definition 1.3.2 (Generalized Union and Generalized Intersection)** Let $A$ be a set. The set of all elements of elements of $A$ is called the **generalized union** of $A$, written $\bigcup A$. Let $A$ be a nonempty set. The set of all objects that belong to every element of $A$ is called the **generalized intersection** of $A$, written $\bigcap A$. In symbols,
@@ -91,15 +91,15 @@ $$
 \end{aligned}
 $$
 
-The generalized union of the empty set also makes sense: $\bigcup \emptyset = \emptyset$. But $\bigcap \emptyset$ is not a set (by the formula above it would contain every set), so it is left undefined.
+The generalized union of the empty set also makes sense: $\bigcup \varnothing = \varnothing$. But $\bigcap \varnothing$ is not a set (by the formula above it would contain every set), so it is left undefined.
 
-**Definition 1.3.3 (Power Set)** Let $A$ be a set. The set of all subsets of $A$ is called the **power set** of $A$, written $P(A)$. In symbols,
+**Definition 1.3.3 (Power Set)** Let $A$ be a set. The set of all subsets of $A$ is called the **power set** of $A$, written $\mathcal{P}(A)$. In symbols,
 
 $$
-P(A) = \{x \mid x \subseteq A\}.
+\mathcal{P}(A) = \{x \mid x \subseteq A\}.
 $$
 
-For every set $A$ we have $\emptyset \subseteq A$ and $A \subseteq A$, hence $\emptyset \in P(A)$ and $A \in P(A)$.
+For every set $A$ we have $\varnothing \subseteq A$ and $A \subseteq A$, hence $\varnothing \in \mathcal{P}(A)$ and $A \in \mathcal{P}(A)$.
 
 A pair formed by two objects $x$ and $y$ (possibly $x = y$) arranged in a given order is called an *ordered pair* and is written $\langle x, y \rangle$; $x$ is its first coordinate and $y$ its second coordinate. Ordered pairs have the following properties:
 
@@ -132,7 +132,7 @@ $$
 
 The precedence of set operations is fixed as follows:
 
-- Generalized union, generalized intersection, power set and absolute complement ($\bigcup A, \bigcap A, P(A), -A$) are operations of the first kind; union, intersection, symmetric difference, Cartesian product and relative complement ($\cup, \cap, \oplus, \times, -$) are operations of the second kind.
+- Generalized union, generalized intersection, power set and absolute complement ($\bigcup A, \bigcap A, \mathcal{P}(A), A^{\mathsf c}$) are operations of the first kind; union, intersection, symmetric difference, Cartesian product and relative complement ($\cup, \cap, \oplus, \times, -$) are operations of the second kind.
 - Operations of the first kind take precedence over those of the second kind; operations of the second kind take precedence over set relations ($=, \subseteq, \subset, \in$); and all of these take precedence over the logical connectives ($\lnot, \land, \lor, \rightarrow, \leftrightarrow, \Rightarrow$).
 - Expressions inside parentheses are evaluated first. Within the same pair of parentheses, operations of equal precedence are evaluated from right to left for operations of the first kind and from left to right otherwise.
 
@@ -153,21 +153,21 @@ The *Venn diagram* is named after the English logician J. Venn (1834–1923), wh
    $$
    \begin{aligned}
    A - (B \cup C) &= (A - B) \cap (A - C), & A - (B \cap C) &= (A - B) \cup (A - C), \\
-   -(B \cup C) &= -B \cap -C, & -(B \cap C) &= -B \cup -C.
+   (B \cup C)^{\mathsf c} &= B^{\mathsf c} \cap C^{\mathsf c}, & (B \cap C)^{\mathsf c} &= B^{\mathsf c} \cup C^{\mathsf c}.
    \end{aligned}
    $$
-7. Identity laws: $A \cup \emptyset = A$, $A \cap E = A$.
-8. Domination laws: $A \cup E = E$, $A \cap \emptyset = \emptyset$.
-9. Complement laws: $A \cup -A = E$ (excluded middle), $A \cap -A = \emptyset$ (contradiction).
-10. Complements of $\emptyset$ and $E$: $-\emptyset = E$, $-E = \emptyset$.
-11. Double complement law: $-(-A) = A$.
+7. Identity laws: $A \cup \varnothing = A$, $A \cap E = A$.
+8. Domination laws: $A \cup E = E$, $A \cap \varnothing = \varnothing$.
+9. Complement laws: $A \cup A^{\mathsf c} = E$ (excluded middle), $A \cap A^{\mathsf c} = \varnothing$ (contradiction).
+10. Complements of $\varnothing$ and $E$: $\varnothing^{\mathsf c} = E$, $E^{\mathsf c} = \varnothing$.
+11. Double complement law: $(A^{\mathsf c})^{\mathsf c} = A$.
 
 **Theorem 1.5.2 (Properties of Set Difference)** For all sets $A$, $B$ and $C$,
 
 $$
 \begin{aligned}
 A - B &= A - (A \cap B), \\
-A - B &= A \cap -B, \\
+A - B &= A \cap B^{\mathsf c}, \\
 A \cup (B - A) &= A \cup B, \\
 A \cap (B - C) &= (A \cap B) - C.
 \end{aligned}
@@ -178,8 +178,8 @@ $$
 1. commutative law: $A \oplus B = B \oplus A$;
 2. associative law: $(A \oplus B) \oplus C = A \oplus (B \oplus C)$;
 3. distributive law: $A \cap (B \oplus C) = (A \cap B) \oplus (A \cap C)$;
-4. identity law: $A \oplus \emptyset = A$;
-5. inverse law: $A \oplus A = \emptyset$;
+4. identity law: $A \oplus \varnothing = A$;
+5. inverse law: $A \oplus A = \varnothing$;
 6. cancellation law: $A \oplus (A \oplus B) = B$.
 
 **Theorem 1.5.4 (Properties of Inclusion)** For all sets $A$, $B$, $C$ and $D$,
@@ -199,30 +199,30 @@ $$
 
 $$
 \begin{aligned}
-A \subseteq B &\Leftrightarrow P(A) \subseteq P(B), \\
-A = B &\Leftrightarrow P(A) = P(B).
+A \subseteq B &\Leftrightarrow \mathcal{P}(A) \subseteq \mathcal{P}(B), \\
+A = B &\Leftrightarrow \mathcal{P}(A) = \mathcal{P}(B).
 \end{aligned}
 $$
 
 **Theorem 1.5.6 (Properties of Power Sets, II)** For all sets $A$ and $B$,
 
 $$
-P(A) \in P(B) \Rightarrow A \in B.
+\mathcal{P}(A) \in \mathcal{P}(B) \Rightarrow A \in B.
 $$
 
 **Theorem 1.5.7 (Properties of Power Sets, III)** For all sets $A$ and $B$,
 
 $$
 \begin{aligned}
-P(A) \cap P(B) &= P(A \cap B), \\
-P(A) \cup P(B) &\subseteq P(A \cup B).
+\mathcal{P}(A) \cap \mathcal{P}(B) &= \mathcal{P}(A \cap B), \\
+\mathcal{P}(A) \cup \mathcal{P}(B) &\subseteq \mathcal{P}(A \cup B).
 \end{aligned}
 $$
 
 **Theorem 1.5.8 (Properties of Power Sets, IV)** For all sets $A$ and $B$,
 
 $$
-P(A - B) \subseteq (P(A) - P(B)) \cup \{\emptyset\}.
+\mathcal{P}(A - B) \subseteq (\mathcal{P}(A) - \mathcal{P}(B)) \cup \{\varnothing\}.
 $$
 
 **Definition 1.5.1 (Transitive Set)** A set $A$ is called a **transitive set** if every element of an element of $A$ is an element of $A$. In symbols,
@@ -231,16 +231,16 @@ $$
 A \text{ is a transitive set} \Leftrightarrow (\forall x)(\forall y)((x \in y \land y \in A) \rightarrow x \in A).
 $$
 
-**Theorem 1.5.9 (Properties of Transitive Sets, I)** For every set $A$, $A$ is a transitive set $\Leftrightarrow A \subseteq P(A)$.
+**Theorem 1.5.9 (Properties of Transitive Sets, I)** For every set $A$, $A$ is a transitive set $\Leftrightarrow A \subseteq \mathcal{P}(A)$.
 
-**Theorem 1.5.10 (Properties of Transitive Sets, II)** For every set $A$, $A$ is a transitive set $\Leftrightarrow P(A)$ is a transitive set.
+**Theorem 1.5.10 (Properties of Transitive Sets, II)** For every set $A$, $A$ is a transitive set $\Leftrightarrow \mathcal{P}(A)$ is a transitive set.
 
 **Theorem 1.5.11 (Properties of Generalized Unions and Intersections, I)** For families of sets $A$ and $B$,
 
 $$
 \begin{aligned}
 A \subseteq B &\Rightarrow \textstyle\bigcup A \subseteq \bigcup B, \\
-A \subseteq B &\Rightarrow \textstyle\bigcap B \subseteq \bigcap A \quad (A \neq \emptyset).
+A \subseteq B &\Rightarrow \textstyle\bigcap B \subseteq \bigcap A \quad (A \neq \varnothing).
 \end{aligned}
 $$
 
@@ -249,27 +249,27 @@ $$
 $$
 \begin{aligned}
 \textstyle\bigcup (A \cup B) &= \left(\textstyle\bigcup A\right) \cup \left(\textstyle\bigcup B\right), \\
-\textstyle\bigcap (A \cup B) &= \left(\textstyle\bigcap A\right) \cap \left(\textstyle\bigcap B\right) \quad (A \neq \emptyset,\ B \neq \emptyset).
+\textstyle\bigcap (A \cup B) &= \left(\textstyle\bigcap A\right) \cap \left(\textstyle\bigcap B\right) \quad (A \neq \varnothing,\ B \neq \varnothing).
 \end{aligned}
 $$
 
 **Theorem 1.5.13 (Generalized Union of a Power Set)** For every set $A$,
 
 $$
-\textstyle\bigcup P(A) = A.
+\textstyle\bigcup \mathcal{P}(A) = A.
 $$
 
 **Theorem 1.5.14 (Properties of Transitive Sets, III)** If $A$ is a transitive set, then $\bigcup A$ is a transitive set.
 
 **Theorem 1.5.15 (Properties of Transitive Sets, IV)** If every element of a set $A$ is a transitive set, then $\bigcup A$ is a transitive set.
 
-**Theorem 1.5.16 (Properties of Transitive Sets, V)** If $A$ is a nonempty transitive set, then $\bigcap A = \emptyset$; in particular, $\bigcap A$ is a transitive set.
+**Theorem 1.5.16 (Properties of Transitive Sets, V)** If $A$ is a nonempty transitive set, then $\bigcap A = \varnothing$; in particular, $\bigcap A$ is a transitive set.
 
-The equality $\bigcap A = \emptyset$ relies on the axiom of regularity: by Theorem 1.7.8 a nonempty transitive set $A$ contains $\emptyset$, so $\bigcap A \subseteq \emptyset$.
+The equality $\bigcap A = \varnothing$ relies on the axiom of regularity: by Theorem 1.7.8 a nonempty transitive set $A$ contains $\varnothing$, so $\bigcap A \subseteq \varnothing$.
 
 **Theorem 1.5.17 (Properties of Transitive Sets, VI)** If $A$ is a nonempty set every element of which is a transitive set, then $\bigcap A$ is a transitive set.
 
-**Theorem 1.5.18 (Ordered Pairs and Power Sets)** If $A$ is a set, $x \in A$ and $y \in A$, then $\langle x, y \rangle \in P(P(A))$.
+**Theorem 1.5.18 (Ordered Pairs and Power Sets)** If $A$ is a set, $x \in A$ and $y \in A$, then $\langle x, y \rangle \in \mathcal{P}(\mathcal{P}(A))$.
 
 **Theorem 1.5.19 (Distributivity of the Cartesian Product over Union and Intersection)** For all sets $A$, $B$ and $C$,
 
@@ -282,7 +282,7 @@ A \times (B \cap C) &= (A \times B) \cap (A \times C), \\
 \end{aligned}
 $$
 
-**Theorem 1.5.20 (Cartesian Products and Inclusion, I)** For all sets $A$, $B$ and $C$ with $C \neq \emptyset$,
+**Theorem 1.5.20 (Cartesian Products and Inclusion, I)** For all sets $A$, $B$ and $C$ with $C \neq \varnothing$,
 
 $$
 A \subseteq B \Leftrightarrow A \times C \subseteq B \times C \Leftrightarrow C \times A \subseteq C \times B.
@@ -294,18 +294,18 @@ $$
 A \times B \subseteq C \times D \Leftrightarrow (A \subseteq C \land B \subseteq D).
 $$
 
-The nonemptiness hypothesis cannot be dropped: if $A = \emptyset$, then $A \times B = \emptyset \subseteq C \times D$ always holds, whereas $B \subseteq D$ need not.
+The nonemptiness hypothesis cannot be dropped: if $A = \varnothing$, then $A \times B = \varnothing \subseteq C \times D$ always holds, whereas $B \subseteq D$ need not.
 
 ## 1.6. Cardinality of Finite Sets
 
-**Definition 1.6.1 (Cardinality of a Finite Set)** If there is an $n \in \mathbb{N}$ such that there is a bijection between the set $A$ and the set $\{x \mid x \in \mathbb{N} \land x < n\} = \{0, 1, \cdots, n - 1\}$ (that is, the two sets are equinumerous; see Definition 4.2.1), we say that the cardinality of $A$ is $n$ and write $|A| = n$ or $\operatorname{card}(A) = n$. The cardinality of the empty set $\emptyset$ is $0$.
+**Definition 1.6.1 (Cardinality of a Finite Set)** If there is an $n \in \mathbb{N}$ such that there is a bijection between the set $A$ and the set $\{x \mid x \in \mathbb{N} \land x < n\} = \{0, 1, \cdots, n - 1\}$ (that is, the two sets are equinumerous; see Definition 4.2.1), we say that the cardinality of $A$ is $n$ and write $|A| = n$ or $\operatorname{card}(A) = n$. The cardinality of the empty set $\varnothing$ is $0$.
 
 **Definition 1.6.2 (Finite Set)** If there is an $n \in \mathbb{N}$ such that $n$ is the cardinality of the set $A$, then $A$ is called a **finite set**; if there is no such $n$, then $A$ is called an **infinite set**.
 
 **Theorem 1.6.1 (Cardinality of a Power Set)** For every finite set $A$,
 
 $$
-|P(A)| = 2^{|A|}.
+|\mathcal{P}(A)| = 2^{|A|}.
 $$
 
 **Theorem 1.6.2 (Cardinality of a Cartesian Product)** For finite sets $A$ and $B$,
@@ -359,7 +359,7 @@ An axiomatic set theory extends the **axiomatic system** of **first-order logic*
    $$
    (\forall x)(\forall y)((\forall z)(z \in x \leftrightarrow z \in y) \rightarrow x = y)
    $$
-2. *Empty set axiom*: there is a set with no elements (the empty set $\emptyset$).
+2. *Empty set axiom*: there is a set with no elements (the empty set $\varnothing$).
    $$
    (\exists x)(\forall y)(y \notin x)
    $$
@@ -381,11 +381,11 @@ An axiomatic set theory extends the **axiomatic system** of **first-order logic*
    $$
 7. *Axiom of regularity*: every nonempty set $x$ has an element that is disjoint from $x$.
    $$
-   (\forall x)(x \neq \emptyset \rightarrow (\exists y)(y \in x \land x \cap y = \emptyset))
+   (\forall x)(x \neq \varnothing \rightarrow (\exists y)(y \in x \land x \cap y = \varnothing))
    $$
-8. *Axiom of infinity*: there is a set that contains $\emptyset$ and, together with each of its elements $y$, also contains $y \cup \{y\}$; such a set therefore contains all natural numbers (see Definition 1.7.4).
+8. *Axiom of infinity*: there is a set that contains $\varnothing$ and, together with each of its elements $y$, also contains $y \cup \{y\}$; such a set therefore contains all natural numbers (see Definition 1.7.4).
    $$
-   (\exists x)(\emptyset \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
+   (\exists x)(\varnothing \in x \land (\forall y)(y \in x \rightarrow y \cup \{y\} \in x))
    $$
 9. *Axiom schema of replacement*: for any formula $P(x, y)$, if for every $x$ there is a unique $y$ such that $P(x, y)$ is true, then for every set $t$ there is a set $s$ whose elements are exactly the $y$ corresponding to the elements $x$ of $t$.
    $$
@@ -407,13 +407,13 @@ An axiomatic set theory extends the **axiomatic system** of **first-order logic*
 
 **Theorem 1.7.5 (Nonexistence of a Universal Set)** There is no set $A$ such that every set is an element of $A$.
 
-**Definition 1.7.1 ($\in$-Minimal Element)** For sets $A$ and $B$, if $A \in B$ and $A \cap B = \emptyset$, then $A$ is called an **$\in$-minimal element** of $B$. The axiom of regularity asserts precisely that every nonempty set has an $\in$-minimal element.
+**Definition 1.7.1 ($\in$-Minimal Element)** For sets $A$ and $B$, if $A \in B$ and $A \cap B = \varnothing$, then $A$ is called an **$\in$-minimal element** of $B$. The axiom of regularity asserts precisely that every nonempty set has an $\in$-minimal element.
 
 **Theorem 1.7.6 (Basic Properties of Sets, I)** For every set $A$, $A \notin A$.
 
 **Theorem 1.7.7 (Basic Properties of Sets, II)** For all sets $A$ and $B$, $\lnot(A \in B \land B \in A)$.
 
-**Theorem 1.7.8 (Properties of Transitive Sets, VII)** Every nonempty transitive set $A$ satisfies $\emptyset \in A$.
+**Theorem 1.7.8 (Properties of Transitive Sets, VII)** Every nonempty transitive set $A$ satisfies $\varnothing \in A$.
 
 **Definition 1.7.2 (Ill-Founded Set)** If a set $A$ contains a sequence of sets $A_0, A_1, \cdots, A_n, \cdots$ (each $A_n \in A$) such that
 
@@ -429,7 +429,7 @@ then $A$ is called an ill-founded set.
 
 **Definition 1.7.3 (Predecessor and Successor)** For every set $A$, define $A^+ = A \cup \{A\}$; $A^+$ is called the **successor** of $A$, and $A$ is called the **predecessor** of $A^+$.
 
-**Definition 1.7.4 (Natural Numbers via Successors)** The set $0 = \emptyset$ is a **natural number**; if the set $n$ is a natural number, then the set $n + 1 = n^+$ is also a natural number; and the natural numbers are exactly the sets obtained in this way. Thus $1 = \{0\}$, $2 = \{0, 1\}$, and in general $n = \{0, 1, \cdots, n - 1\}$.
+**Definition 1.7.4 (Natural Numbers via Successors)** The set $0 = \varnothing$ is a **natural number**; if the set $n$ is a natural number, then the set $n + 1 = n^+$ is also a natural number; and the natural numbers are exactly the sets obtained in this way. Thus $1 = \{0\}$, $2 = \{0, 1\}$, and in general $n = \{0, 1, \cdots, n - 1\}$.
 
 **Definition 1.7.5 (Order of the Natural Numbers)** For all natural numbers $m$ and $n$,
 

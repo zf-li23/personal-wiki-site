@@ -62,20 +62,20 @@ $$
 
 ## 1.2. 线性映射
 
-先回顾**映射**（[1.2.3](/1.2.3) 中的函数）：设 $X, Y$ 是集合，若 $X$ 中每个元素 $x$ 都按某种法则 $f$ 对应 $Y$ 中唯一的元素 $f(x)$，则称 $f: X \to Y$ 是一个映射。$X$ 是 $f$ 的**定义域**，$Y$ 是 $f$ 的陪域；$y = f(x)$ 称为 $x$ 的像，$x$ 称为 $y$ 的原像；集合 $f(X) = \{f(x) \mid x \in X\} \subseteq Y$ 称为 $f$ 的像集或**值域**。两个映射 $f, g: X \to Y$ 相等当且仅当 $f(x) = g(x)$ 对所有 $x \in X$ 成立。$X$ 中每个元素的像唯一，但 $Y$ 中的元素不一定有原像，有原像时也可以不唯一。定义域与陪域相同的映射称为 $X$ 上的变换；**恒等映射** $\mathrm{id}_X$（课件称恒同变换）把每个 $x$ 映到自身。
+先回顾**映射**（[1.2.3](/1.2.3) 中的函数）：设 $X, Y$ 是集合，若 $X$ 中每个元素 $x$ 都按某种法则 $f$ 对应 $Y$ 中唯一的元素 $f(x)$，则称 $f\colon X \to Y$ 是一个映射。$X$ 是 $f$ 的**定义域**，$Y$ 是 $f$ 的陪域；$y = f(x)$ 称为 $x$ 的像，$x$ 称为 $y$ 的原像；集合 $f(X) = \{f(x) \mid x \in X\} \subseteq Y$ 称为 $f$ 的像集或**值域**。两个映射 $f, g\colon X \to Y$ 相等当且仅当 $f(x) = g(x)$ 对所有 $x \in X$ 成立。$X$ 中每个元素的像唯一，但 $Y$ 中的元素不一定有原像，有原像时也可以不唯一。定义域与陪域相同的映射称为 $X$ 上的变换；**恒等映射** $\mathrm{id}_X$（课件称恒同变换）把每个 $x$ 映到自身。
 
-**定义 1.2.1（线性映射）** 若映射 $f: \mathbb{R}^n \to \mathbb{R}^m$ 满足叠加原理，则称 $f$ 是从 $\mathbb{R}^n$ 到 $\mathbb{R}^m$ 的线性映射；从 $\mathbb{R}^n$ 到自身的线性映射称为 $\mathbb{R}^n$ 上的**线性变换**。叠加原理是指以下两条性质：
+**定义 1.2.1（线性映射）** 若映射 $f\colon \mathbb{R}^n \to \mathbb{R}^m$ 满足叠加原理，则称 $f$ 是从 $\mathbb{R}^n$ 到 $\mathbb{R}^m$ 的线性映射；从 $\mathbb{R}^n$ 到自身的线性映射称为 $\mathbb{R}^n$ 上的**线性变换**。叠加原理是指以下两条性质：
 
 1. 可加性：对任意 $\boldsymbol{x}, \boldsymbol{x}' \in \mathbb{R}^n$，$f(\boldsymbol{x} + \boldsymbol{x}') = f(\boldsymbol{x}) + f(\boldsymbol{x}')$；
 2. 齐次性：对任意 $\boldsymbol{x} \in \mathbb{R}^n$，$k \in \mathbb{R}$，$f(k\boldsymbol{x}) = kf(\boldsymbol{x})$。
 
-两条性质可以合写为 $f(k\boldsymbol{x} + \ell\boldsymbol{y}) = kf(\boldsymbol{x}) + \ell f(\boldsymbol{y})$。取 $k = 0$ 得 $f(\boldsymbol{0}_n) = \boldsymbol{0}_m$：线性映射把零向量映到零向量。恒等变换 $I = \mathrm{id}: \boldsymbol{x} \mapsto \boldsymbol{x}$ 是线性变换。
+两条性质可以合写为 $f(k\boldsymbol{x} + \ell\boldsymbol{y}) = kf(\boldsymbol{x}) + \ell f(\boldsymbol{y})$。取 $k = 0$ 得 $f(\boldsymbol{0}_n) = \boldsymbol{0}_m$：线性映射把零向量映到零向量。恒等变换 $I = \mathrm{id}\colon \boldsymbol{x} \mapsto \boldsymbol{x}$ 是线性变换。
 
-**例 1.2.1** 映射 $f: \mathbb{R} \to \mathbb{R}$ 中，$f(x) = 3x$ 与 $f(x) = 0$ 是线性映射；$f(x) = x + 1$、$f(x) = x^2$、$f(x) = |x|$、$f(x) = 1$ 都不是。由齐次性，$\mathbb{R} \to \mathbb{R}$ 的线性映射一定形如 $f(x) = f(1)\,x$，即正比例函数。
+**例 1.2.1** 映射 $f\colon \mathbb{R} \to \mathbb{R}$ 中，$f(x) = 3x$ 与 $f(x) = 0$ 是线性映射；$f(x) = x + 1$、$f(x) = x^2$、$f(x) = |x|$、$f(x) = 1$ 都不是。由齐次性，$\mathbb{R} \to \mathbb{R}$ 的线性映射一定形如 $f(x) = f(1)\,x$，即正比例函数。
 
 **例 1.2.2（平面上的变换）**
 
-- 平移 $T_{\boldsymbol{a}}: \boldsymbol{x} \mapsto \boldsymbol{x} + \boldsymbol{a}$（$\boldsymbol{a} \ne \boldsymbol{0}$）不是线性变换，因为 $T_{\boldsymbol{a}}(\boldsymbol{0}) = \boldsymbol{a} \ne \boldsymbol{0}$。
+- 平移 $T_{\boldsymbol{a}}\colon \boldsymbol{x} \mapsto \boldsymbol{x} + \boldsymbol{a}$（$\boldsymbol{a} \ne \boldsymbol{0}$）不是线性变换，因为 $T_{\boldsymbol{a}}(\boldsymbol{0}) = \boldsymbol{a} \ne \boldsymbol{0}$。
 - 绕原点逆时针旋转 $\theta$ 角的旋转变换 $R_\theta$ 是线性变换。它把 $\boldsymbol{e}_1, \boldsymbol{e}_2$ 分别转到 $[\cos\theta\ \sin\theta]^{\mathsf T}$、$[-\sin\theta\ \cos\theta]^{\mathsf T}$，由线性性
 
   $$
@@ -85,7 +85,7 @@ $$
   所以只要知道标准坐标向量的像，旋转就完全确定。
 - 关于过原点的直线 $\ell_\theta: x_2\cos\theta - x_1\sin\theta = 0$（与 $x_1$ 轴夹角为 $\theta$）的反射 $H_\theta$ 是线性变换；直线不过原点时，反射不是线性映射。
 
-旋转的例子说明了一般规律。设 $f: \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，记 $\boldsymbol{a}_i = f(\boldsymbol{e}_i) \in \mathbb{R}^m$。对 $\boldsymbol{x} = x_1\boldsymbol{e}_1 + \cdots + x_n\boldsymbol{e}_n$，
+旋转的例子说明了一般规律。设 $f\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，记 $\boldsymbol{a}_i = f(\boldsymbol{e}_i) \in \mathbb{R}^m$。对 $\boldsymbol{x} = x_1\boldsymbol{e}_1 + \cdots + x_n\boldsymbol{e}_n$，
 
 $$
 f(\boldsymbol{x}) = x_1f(\boldsymbol{e}_1) + \cdots + x_nf(\boldsymbol{e}_n) = x_1\boldsymbol{a}_1 + \cdots + x_n\boldsymbol{a}_n,
@@ -93,7 +93,7 @@ $$
 
 即 $f$ 由标准坐标向量组的像完全决定。
 
-**定理 1.2.1（线性映射由标准坐标向量的像决定）** 任取 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_n \in \mathbb{R}^m$，存在唯一的线性映射 $f: \mathbb{R}^n \to \mathbb{R}^m$，使得 $f(\boldsymbol{e}_i) = \boldsymbol{a}_i$（$i = 1, \dots, n$）。
+**定理 1.2.1（线性映射由标准坐标向量的像决定）** 任取 $\boldsymbol{a}_1, \dots, \boldsymbol{a}_n \in \mathbb{R}^m$，存在唯一的线性映射 $f\colon \mathbb{R}^n \to \mathbb{R}^m$，使得 $f(\boldsymbol{e}_i) = \boldsymbol{a}_i$（$i = 1, \dots, n$）。
 
 **证明** 存在性：定义 $f(\boldsymbol{x}) = x_1\boldsymbol{a}_1 + \cdots + x_n\boldsymbol{a}_n$。由向量运算法则，$f(k\boldsymbol{x} + \ell\boldsymbol{y}) = \sum_i (kx_i + \ell y_i)\boldsymbol{a}_i = kf(\boldsymbol{x}) + \ell f(\boldsymbol{y})$，故 $f$ 线性，且 $f(\boldsymbol{e}_i) = \boldsymbol{a}_i$。唯一性：若线性映射 $f, g$ 满足 $f(\boldsymbol{e}_i) = g(\boldsymbol{e}_i)$，则对任意 $\boldsymbol{x}$，$f(\boldsymbol{x}) = \sum_i x_if(\boldsymbol{e}_i) = \sum_i x_ig(\boldsymbol{e}_i) = g(\boldsymbol{x})$，所以 $f = g$。$\square$
 
@@ -115,7 +115,7 @@ $$
 A = [\boldsymbol{a}_1\ \boldsymbol{a}_2\ \cdots\ \boldsymbol{a}_n] = \begin{bmatrix} \tilde{\boldsymbol{a}}_1^{\mathsf T} \\ \vdots \\ \tilde{\boldsymbol{a}}_m^{\mathsf T} \end{bmatrix}, \qquad \boldsymbol{a}_j = \begin{bmatrix} a_{1j} \\ \vdots \\ a_{mj} \end{bmatrix} \in \mathbb{R}^m, \quad \tilde{\boldsymbol{a}}_i^{\mathsf T} = [a_{i1}\ \cdots\ a_{in}].
 $$
 
-**定义 1.3.2（表示矩阵）** 设 $f: \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$\boldsymbol{a}_i = f(\boldsymbol{e}_i)$（$i = 1, \dots, n$），称 $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 为 $f$ 在标准坐标向量下的**表示矩阵**。
+**定义 1.3.2（表示矩阵）** 设 $f\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$\boldsymbol{a}_i = f(\boldsymbol{e}_i)$（$i = 1, \dots, n$），称 $m \times n$ 矩阵 $A = [\boldsymbol{a}_1\ \cdots\ \boldsymbol{a}_n]$ 为 $f$ 在标准坐标向量下的**表示矩阵**。
 
 由定理 1.2.1，线性映射 $\mathbb{R}^n \to \mathbb{R}^m$ 与 $m \times n$ 矩阵一一对应：每个线性映射由它的表示矩阵完全决定，每个矩阵也唯一确定一个线性映射。常用与矩阵同名的黑体字母 $\boldsymbol{A}$ 表示这个映射。
 
@@ -404,10 +404,10 @@ $$
 
 线性映射可以相加、数乘、复合；矩阵的运算就按"表示矩阵跟随映射"的原则来定义。
 
-**定义 1.9.1（映射的线性运算）** 设 $\boldsymbol{A}, \boldsymbol{B}: \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$k \in \mathbb{R}$，定义映射
+**定义 1.9.1（映射的线性运算）** 设 $\boldsymbol{A}, \boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，$k \in \mathbb{R}$，定义映射
 
 $$
-\boldsymbol{A} + \boldsymbol{B}: \boldsymbol{x} \mapsto \boldsymbol{A}(\boldsymbol{x}) + \boldsymbol{B}(\boldsymbol{x}), \qquad k\boldsymbol{A}: \boldsymbol{x} \mapsto k\boldsymbol{A}(\boldsymbol{x}),
+\boldsymbol{A} + \boldsymbol{B}\colon \boldsymbol{x} \mapsto \boldsymbol{A}(\boldsymbol{x}) + \boldsymbol{B}(\boldsymbol{x}), \qquad k\boldsymbol{A}\colon \boldsymbol{x} \mapsto k\boldsymbol{A}(\boldsymbol{x}),
 $$
 
 分别称为 $\boldsymbol{A}$ 与 $\boldsymbol{B}$ 的和、数 $k$ 与 $\boldsymbol{A}$ 的数乘。
@@ -448,11 +448,11 @@ $$
 
 ## 1.10. 矩阵乘法
 
-**定义 1.10.1（映射的复合）** 设 $f: X \to Y$，$g: Y \to Z$ 是映射，映射 $h: X \to Z$，$x \mapsto g(f(x))$ 称为 $g$ 与 $f$ 的复合，记为 $h = g \circ f$。
+**定义 1.10.1（映射的复合）** 设 $f\colon X \to Y$，$g\colon Y \to Z$ 是映射，映射 $h\colon X \to Z$，$x \mapsto g(f(x))$ 称为 $g$ 与 $f$ 的复合，记为 $h = g \circ f$。
 
-要定义 $g \circ f$，$g$ 的定义域必须是 $f$ 的陪域。复合满足结合律：对 $f: X \to Y$，$g: Y \to Z$，$h: Z \to W$，有 $h \circ (g \circ f) = (h \circ g) \circ f$，因为两边都把 $x$ 映到 $h(g(f(x)))$。
+要定义 $g \circ f$，$g$ 的定义域必须是 $f$ 的陪域。复合满足结合律：对 $f\colon X \to Y$，$g\colon Y \to Z$，$h\colon Z \to W$，有 $h \circ (g \circ f) = (h \circ g) \circ f$，因为两边都把 $x$ 映到 $h(g(f(x)))$。
 
-**命题 1.10.1** 设 $\boldsymbol{B}: \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}: \mathbb{R}^m \to \mathbb{R}^\ell$ 是线性映射，则 $\boldsymbol{A} \circ \boldsymbol{B}: \mathbb{R}^n \to \mathbb{R}^\ell$ 也是线性映射。并且对线性映射 $\boldsymbol{B}, \boldsymbol{B}': \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}, \boldsymbol{A}': \mathbb{R}^m \to \mathbb{R}^\ell$ 和 $k \in \mathbb{R}$，有
+**命题 1.10.1** 设 $\boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 是线性映射，则 $\boldsymbol{A} \circ \boldsymbol{B}\colon \mathbb{R}^n \to \mathbb{R}^\ell$ 也是线性映射。并且对线性映射 $\boldsymbol{B}, \boldsymbol{B}'\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{A}, \boldsymbol{A}'\colon \mathbb{R}^m \to \mathbb{R}^\ell$ 和 $k \in \mathbb{R}$，有
 
 $$
 (\boldsymbol{A} + \boldsymbol{A}') \circ \boldsymbol{B} = \boldsymbol{A} \circ \boldsymbol{B} + \boldsymbol{A}' \circ \boldsymbol{B}, \quad \boldsymbol{A} \circ (\boldsymbol{B} + \boldsymbol{B}') = \boldsymbol{A} \circ \boldsymbol{B} + \boldsymbol{A} \circ \boldsymbol{B}', \quad k(\boldsymbol{A} \circ \boldsymbol{B}) = (k\boldsymbol{A}) \circ \boldsymbol{B} = \boldsymbol{A} \circ (k\boldsymbol{B}).
@@ -529,14 +529,14 @@ $$
 
 最后定义一个常用的数值特征。
 
-**定义 1.10.3（迹）** 方阵 $A = [a_{ij}]_{n \times n}$ 的对角元素之和称为 $A$ 的**迹**，记为 $\operatorname{trace}(A) = a_{11} + a_{22} + \cdots + a_{nn}$。
+**定义 1.10.3（迹）** 方阵 $A = [a_{ij}]_{n \times n}$ 的对角元素之和称为 $A$ 的**迹**，记为 $\operatorname{tr}(A) = a_{11} + a_{22} + \cdots + a_{nn}$。
 
-**性质 1.10.1** 迹是线性的：$\operatorname{trace}(kA + \ell B) = k\operatorname{trace}(A) + \ell\operatorname{trace}(B)$；$\operatorname{trace}(A^{\mathsf T}) = \operatorname{trace}(A)$。设 $A, B$ 分别是 $m \times n$、$n \times m$ 矩阵，则 $\operatorname{trace}(AB) = \operatorname{trace}(BA)$。
+**性质 1.10.1** 迹是线性的：$\operatorname{tr}(kA + \ell B) = k\operatorname{tr}(A) + \ell\operatorname{tr}(B)$；$\operatorname{tr}(A^{\mathsf T}) = \operatorname{tr}(A)$。设 $A, B$ 分别是 $m \times n$、$n \times m$ 矩阵，则 $\operatorname{tr}(AB) = \operatorname{tr}(BA)$。
 
 **证明** 前两条由定义直接得到。$AB$ 是 $m$ 阶方阵，$BA$ 是 $n$ 阶方阵，
 
 $$
-\operatorname{trace}(AB) = \sum_{i=1}^m\sum_{j=1}^n a_{ij}b_{ji} = \sum_{j=1}^n\sum_{i=1}^m b_{ji}a_{ij} = \operatorname{trace}(BA). \qquad \square
+\operatorname{tr}(AB) = \sum_{i=1}^m\sum_{j=1}^n a_{ij}b_{ji} = \sum_{j=1}^n\sum_{i=1}^m b_{ji}a_{ij} = \operatorname{tr}(BA). \qquad \square
 $$
 
 ## 小结
@@ -546,7 +546,7 @@ $$
 | 类别 | 内容 |
 |---|---|
 | 定义 | $m$ 维向量与线性运算（定义 1.1.1、1.1.2）；线性组合、标准坐标向量组（定义 1.1.3）；线性映射与线性变换（定义 1.2.1）；矩阵、表示矩阵、矩阵与向量的乘积（定义 1.3.1–1.3.3）；单位矩阵、对角矩阵、三角矩阵（定义 1.4.1）；线性方程组（定义 1.5.1）；初等变换与增广矩阵（定义 1.6.1）；阶梯形、行简化阶梯形、主变量与自由变量（定义 1.7.1–1.7.3）；齐次线性方程组（定义 1.8.1）；矩阵的线性运算、转置、对称与反对称矩阵（定义 1.9.2–1.9.4）；矩阵乘法（定义 1.10.2）；迹（定义 1.10.3） |
-| 定理 | 线性映射由标准坐标向量的像唯一决定（定理 1.2.1）；初等变换同解（定理 1.6.1）；任意矩阵可化为（行简化）阶梯形（定理 1.7.1）；判定定理（定理 1.7.2）；方程数少于未知量数的齐次方程组有非零解（推论 1.8.2）；对称–反对称分解（命题 1.9.2）；矩阵乘法的运算法则（命题 1.10.2）；$\operatorname{trace}(AB) = \operatorname{trace}(BA)$（性质 1.10.1） |
+| 定理 | 线性映射由标准坐标向量的像唯一决定（定理 1.2.1）；初等变换同解（定理 1.6.1）；任意矩阵可化为（行简化）阶梯形（定理 1.7.1）；判定定理（定理 1.7.2）；方程数少于未知量数的齐次方程组有非零解（推论 1.8.2）；对称–反对称分解（命题 1.9.2）；矩阵乘法的运算法则（命题 1.10.2）；$\operatorname{tr}(AB) = \operatorname{tr}(BA)$（性质 1.10.1） |
 | 算法 | 回代法与前代法（算法 1.5.1、1.5.2，约 $n^2$ 次运算）；Gauss 消元法（算法 1.7.1，约 $\frac23n^3$ 次）；Gauss–Jordan 消元法（算法 1.7.2，约 $n^3$ 次） |
 
 | 观点 | $A\boldsymbol{x}$ | $AB$ |

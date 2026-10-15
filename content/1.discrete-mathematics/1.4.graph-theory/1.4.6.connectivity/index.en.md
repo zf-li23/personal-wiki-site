@@ -1,6 +1,6 @@
 ---
 title: Graph Connectivity
-source_hash: ed2105722e0f
+source_hash: 8fa4a17f150e
 ---
 
 Chapter 2 used walks to define **connected graphs** and **connected components**, distinguishing only between "connected" and "disconnected". Applications such as communication networks, transportation planning and circuit design call for a finer measure of how well a graph is connected: if some nodes or links fail, does the network remain connected? In this chapter we introduce vertex connectivity and edge connectivity, establish Whitney's inequality relating them to the minimum degree, present Menger's theorem, which characterizes connectivity, together with its connection to network flows, and discuss $k$-connected graphs and applications of connectivity to network design.
@@ -11,7 +11,7 @@ Chapter 2 used walks to define **connected graphs** and **connected components**
 
 To measure connectivity we must first make precise what it means to destroy it: deleting some vertices or edges increases the number of connected components.
 
-**Definition 6.1.1 (Vertex Cut)** Let $G = (V, E)$ be a connected undirected graph and $\emptyset \ne V' \subset V$. If $G - V'$ is disconnected, but the graph remains connected after deleting any proper subset of $V'$, then $V'$ is called a **vertex cut** of $G$. A vertex cut with $k$ vertices is called a **$k$-vertex cut**. The vertex cuts of a graph may have different sizes.
+**Definition 6.1.1 (Vertex Cut)** Let $G = (V, E)$ be a connected undirected graph and $\varnothing \ne V' \subset V$. If $G - V'$ is disconnected, but the graph remains connected after deleting any proper subset of $V'$, then $V'$ is called a **vertex cut** of $G$. A vertex cut with $k$ vertices is called a **$k$-vertex cut**. The vertex cuts of a graph may have different sizes.
 
 **Definition 6.1.2 (Cut Vertex)** If $\{v\}$ is a vertex cut of $G$, that is, deleting the vertex $v$ disconnects the graph, then $v$ is called a **cut vertex** (or articulation point) of $G$.
 
@@ -21,7 +21,7 @@ To measure connectivity we must first make precise what it means to destroy it: 
 
 ### 6.1.2. Edge Cuts and Bridges
 
-**Definition 6.1.4 (Edge Cut)** Let $G = (V, E)$ be a connected undirected graph and $\emptyset \ne E' \subseteq E$. If $G - E'$ is disconnected, but the graph remains connected after deleting any proper subset of $E'$, then $E'$ is called an **edge cut** of $G$; this is the **cut set** of Definition 3.4.4 in the undirected setting. An edge cut with $k$ edges is called a **$k$-edge cut**.
+**Definition 6.1.4 (Edge Cut)** Let $G = (V, E)$ be a connected undirected graph and $\varnothing \ne E' \subseteq E$. If $G - E'$ is disconnected, but the graph remains connected after deleting any proper subset of $E'$, then $E'$ is called an **edge cut** of $G$; this is the **cut set** of Definition 3.4.4 in the undirected setting. An edge cut with $k$ edges is called a **$k$-edge cut**.
 
 **Definition 6.1.5 (Bridge)** If $\{e\}$ is an edge cut of $G$, that is, deleting the edge $e$ disconnects the graph, then $e$ is called a **bridge** of $G$, which is the same as a **cut edge**.
 
@@ -97,7 +97,7 @@ Similarly, Theorem 6.3.2 shows that $G$ is $k$-edge-connected ($\lambda(G) \ge k
 
 ### 6.3.3. Menger's Theorem and Network Flows
 
-Menger's theorem is closely related to the **max-flow min-cut theorem** (Theorem 5.5.2); each can be derived from the other. Take the edge form as an example: replace each edge of the undirected graph by two oppositely directed edges of capacity $1$, and take $x$ as the source and $y$ as the sink. Then the maximum flow value is the maximum number of edge-disjoint paths between $x$ and $y$, and the minimum cut capacity is the minimum number of edges whose deletion disconnects $x$ from $y$. For the vertex form, we additionally split each vertex $v$ other than $x, y$ into two vertices $v_{\text{in}}$ and $v_{\text{out}}$ joined by an edge $(v_{\text{in}}, v_{\text{out}})$ of capacity $1$; edges that entered $v$ now enter $v_{\text{in}}$, edges that left $v$ now leave $v_{\text{out}}$, and these directed edges coming from edges of the original graph receive capacity $\infty$ (or a sufficiently large number). Then each vertex carries at most one unit of flow, so the maximum flow value is the maximum number of internally disjoint paths; and a cut of finite capacity can consist only of edges of the form $(v_{\text{in}}, v_{\text{out}})$, so the minimum cut capacity is the minimum number of vertices whose deletion disconnects $x$ from $y$.
+Menger's theorem is closely related to the **max-flow min-cut theorem** (Theorem 5.5.2); each can be derived from the other. Take the edge form as an example: replace each edge of the undirected graph by two oppositely directed edges of capacity $1$, and take $x$ as the source and $y$ as the sink. Then the maximum flow value is the maximum number of edge-disjoint paths between $x$ and $y$, and the minimum cut capacity is the minimum number of edges whose deletion disconnects $x$ from $y$. For the vertex form, we additionally split each vertex $v$ other than $x, y$ into two vertices $v_{\mathrm{in}}$ and $v_{\mathrm{out}}$ joined by an edge $(v_{\mathrm{in}}, v_{\mathrm{out}})$ of capacity $1$; edges that entered $v$ now enter $v_{\mathrm{in}}$, edges that left $v$ now leave $v_{\mathrm{out}}$, and these directed edges coming from edges of the original graph receive capacity $\infty$ (or a sufficiently large number). Then each vertex carries at most one unit of flow, so the maximum flow value is the maximum number of internally disjoint paths; and a cut of finite capacity can consist only of edges of the form $(v_{\mathrm{in}}, v_{\mathrm{out}})$, so the minimum cut capacity is the minimum number of vertices whose deletion disconnects $x$ from $y$.
 
 ## 6.4. $k$-Connected Graphs
 

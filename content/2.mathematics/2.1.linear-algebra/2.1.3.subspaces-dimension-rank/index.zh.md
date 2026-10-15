@@ -8,7 +8,7 @@ title: 子空间、维数与秩
 
 ## 3.1. 线性映射的像与原像
 
-矩阵 $A$ 确定线性映射 $\boldsymbol{A}: \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{x} \mapsto A\boldsymbol{x}$。方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 解的存在与唯一，直接对应于这个映射的像与原像的性质。
+矩阵 $A$ 确定线性映射 $\boldsymbol{A}\colon \mathbb{R}^n \to \mathbb{R}^m$，$\boldsymbol{x} \mapsto A\boldsymbol{x}$。方程组 $A\boldsymbol{x} = \boldsymbol{b}$ 解的存在与唯一，直接对应于这个映射的像与原像的性质。
 
 **命题 3.1.1** 设 $A$ 是 $m \times n$ 矩阵。
 
@@ -315,7 +315,7 @@ $$
 
 列满秩矩阵满足 $n \le m$（"高"矩阵），行满秩矩阵满足 $m \le n$（"宽"矩阵），满秩矩阵一定是方阵；行满秩或列满秩的方阵一定满秩。
 
-**命题 3.8.2** 设 $A$ 是 $m \times n$ 矩阵，$\boldsymbol{A}: \boldsymbol{x} \mapsto A\boldsymbol{x}$，则
+**命题 3.8.2** 设 $A$ 是 $m \times n$ 矩阵，$\boldsymbol{A}\colon \boldsymbol{x} \mapsto A\boldsymbol{x}$，则
 
 1. $\boldsymbol{A}$ 是满射当且仅当 $A$ 行满秩；
 2. $\boldsymbol{A}$ 是单射当且仅当 $A$ 列满秩；

@@ -37,10 +37,10 @@ $$
 令 $\boldsymbol{x}_n = (F_{n+1}, F_n)^{\mathsf T}$，则：
 
 $$
-\boldsymbol{x}_{n+1} = \boldsymbol{A} \boldsymbol{x}_n, \quad \boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
+\boldsymbol{x}_{n+1} = A \boldsymbol{x}_n, \quad A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}
 $$
 
-这就是一个**离散线性动力系统**。斐波那契数列的增长，本质上是矩阵 $\boldsymbol{A}$ 反复作用于初始向量的结果。
+这就是一个**离散线性动力系统**。斐波那契数列的增长，本质上是矩阵 $A$ 反复作用于初始向量的结果。
 
 ### 2.1.2. Leslie矩阵：年龄结构化种群的投影
 
@@ -62,16 +62,16 @@ $$
 2. **存活**：第 $i$ 组个体以概率 $s_i$ 存活并进入第 $i+1$ 组（$i = 1, \cdots, m-1$）。
 3. **繁殖**：第 $i$ 组个体平均产生 $f_i$ 个新个体（这些新生个体进入第1组）。
 
-这些过程可用 **Leslie矩阵** $\boldsymbol{L}$ 表示为：
+这些过程可用 **Leslie矩阵** $L$ 表示为：
 
 $$
-\boldsymbol{n}(t+1) = \boldsymbol{L} \boldsymbol{n}(t)
+\boldsymbol{n}(t+1) = L \boldsymbol{n}(t)
 $$
 
-其中 $\boldsymbol{L}$ 的形式为：
+其中 $L$ 的形式为：
 
 $$
-\boldsymbol{L} = 
+L = 
 \begin{pmatrix}
 f_1 & f_2 & \cdots & f_{m-1} & f_m \\
 s_1 & k_2 & \cdots & 0 & 0 \\
@@ -88,13 +88,13 @@ $$
 实际种群有可能不如Leslie矩阵这么理想，在单个时间跨度内，个体的存活有可能跨越阶段，一些新繁殖的个体也可能会迅速长大，所以有推广到一个一般的矩阵的必要。另外，由于雌性个体的数量有时才是决定种群繁殖能力的主导因素，有时建模时还只考虑雌性个体，这里我们忽略这一细节。我们考虑一个一般化的矩阵：
 
 $$
-\boldsymbol{n}(t+1) = \boldsymbol{A} \boldsymbol{n}(t)
+\boldsymbol{n}(t+1) = A \boldsymbol{n}(t)
 $$
 
-其中 $\boldsymbol{A}$ 的形式为：
+其中 $A$ 的形式为：
 
 $$
-\boldsymbol{A} = 
+A = 
 \begin{pmatrix}
 a_{11} & a_{12} & \cdots & a_{1m} \\
 a_{21} & a_{22} & \cdots & a_{2m}\\
@@ -107,21 +107,21 @@ $$
 
 ### 2.2.1. 矩阵的特征值与特征向量
 
-矩阵模型是线性系统：$\boldsymbol{n}(t) = \boldsymbol{A}^t \boldsymbol{n}(0)$。要理解长期行为，我们需要分析 $\boldsymbol{A}^t$。这由矩阵的**特征值和特征向量**决定。
+矩阵模型是线性系统：$\boldsymbol{n}(t) = A^t \boldsymbol{n}(0)$。要理解长期行为，我们需要分析 $A^t$。这由矩阵的**特征值和特征向量**决定。
 
-对于矩阵 $\boldsymbol{A}$，若存在标量 $\lambda$ 和非零向量 $\boldsymbol{w}$ 使得：
-
-$$
-\boldsymbol{A} \boldsymbol{w} = \lambda \boldsymbol{w}
-$$
-
-则称 $\lambda$ 为 $\boldsymbol{L}$ 的特征值，$\boldsymbol{w}$ 为对应的右特征向量。特征值满足特征方程：
+对于矩阵 $A$，若存在标量 $\lambda$ 和非零向量 $\boldsymbol{w}$ 使得：
 
 $$
-\det(\boldsymbol{A} - \lambda \boldsymbol{I}) = 0
+A \boldsymbol{w} = \lambda \boldsymbol{w}
 $$
 
-若矩阵 $\boldsymbol{A}$ 有 $m$ 个线性无关的特征向量 $\boldsymbol{w}_1, \ldots, \boldsymbol{w}_m$，对应特征值 $\lambda_1, \ldots, \lambda_m$，则初始向量可表示为：
+则称 $\lambda$ 为 $L$ 的特征值，$\boldsymbol{w}$ 为对应的右特征向量。特征值满足特征方程：
+
+$$
+\det(A - \lambda I) = 0
+$$
+
+若矩阵 $A$ 有 $m$ 个线性无关的特征向量 $\boldsymbol{w}_1, \ldots, \boldsymbol{w}_m$，对应特征值 $\lambda_1, \ldots, \lambda_m$，则初始向量可表示为：
 
 $$
 \boldsymbol{n}(0) = c_1 \boldsymbol{w}_1 + c_2 \boldsymbol{w}_2 + \cdots + c_m \boldsymbol{w}_m
@@ -139,15 +139,15 @@ $$
 |\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_m|
 $$
 
-则存在主特征值 $\lambda_1$ 满足当 $t \rightarrow \infin$ 时：
+则存在主特征值 $\lambda_1$ 满足当 $t \to \infty$ 时：
 
 $$
 \boldsymbol{n}(t) \approx c_1 \lambda_1^t \boldsymbol{w}_1
 $$
 
-即种群结构趋近于 $w_1$ 的方向，其增长或衰减速率由 $\lambda_1$ 决定。
+即种群结构趋近于 $\boldsymbol{w}_1$ 的方向，其增长或衰减速率由 $\lambda_1$ 决定。
 
-根据 Perron–Frobenius 定理，若矩阵 $\boldsymbol{A}$ 为非负幂正方阵则：
+根据 Perron–Frobenius 定理，若矩阵 $A$ 为非负幂正方阵则：
 
 - 其存在唯一的主特征值 $\lambda_1 > 0$；
 - 其对应的特征向量 $\boldsymbol{w}_1$ 的所有分量均为正；
@@ -162,27 +162,27 @@ $$
 
 ### 2.2.2. Leslie矩阵特征值与特征向量的生物学意义
 
-对于Leslie矩阵 $\boldsymbol{L}$，在合理的生物学假设下（即至少有一个年龄组具有生育能力 $f_i > 0$，且所有年龄组间的存活率 $s_i > 0$），存在大量 $\boldsymbol{L}$ 是非负且幂正的矩阵（但存在一定的特例），对于这些种群，其具备以下性质：
+对于Leslie矩阵 $L$，在合理的生物学假设下（即至少有一个年龄组具有生育能力 $f_i > 0$，且所有年龄组间的存活率 $s_i > 0$），存在大量 $L$ 是非负且幂正的矩阵（但存在一定的特例），对于这些种群，其具备以下性质：
 1. 存在唯一的**主正实特征值** $\lambda_1$，且 $|\lambda_1| > |\lambda_i|$（$i \neq 1$）。
 2. $\lambda_1$ 决定了**长期增长率**：
    - $\lambda_1 > 1$：种群增长
    - $\lambda_1 = 1$：种群稳定
    - $\lambda_1 < 1$：种群衰退
 3. 对应的**右特征向量** $\boldsymbol{w}_1$ 给出了**稳定年龄结构**：无论初始结构如何，长期而言各年龄组的比例将收敛于 $\boldsymbol{w}_1$ 的比例。
-4. **左特征向量** $\boldsymbol{v}_1$（满足 $\boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$）的各个分量则表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的贡献。
+4. **左特征向量** $\boldsymbol{v}_1$（满足 $\boldsymbol{v}_1^{\mathsf T} L = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$）的各个分量则表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的贡献。
 
 ### 2.2.3. 以斐波那契数列为例
 
 回顾斐波那契数列的矩阵形式：
 $$
-\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}, \quad \boldsymbol{x}_{n+1} = \boldsymbol{A} \boldsymbol{x}_n
+A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}, \quad \boldsymbol{x}_{n+1} = A \boldsymbol{x}_n
 $$
 
 **步骤1：计算特征值与特征向量**
 
 特征方程：
 $$
-\det(\boldsymbol{A} - \lambda \boldsymbol{I}) = \det\begin{pmatrix} 1-\lambda & 1 \\ 1 & -\lambda \end{pmatrix} = \lambda^2 - \lambda - 1 = 0
+\det(A - \lambda I) = \det\begin{pmatrix} 1-\lambda & 1 \\ 1 & -\lambda \end{pmatrix} = \lambda^2 - \lambda - 1 = 0
 $$
 解得：
 $$
@@ -195,8 +195,8 @@ $$
 
 **步骤2：验证非负性与幂正性**
 
-- $\boldsymbol{A}$ 为非负矩阵。
-- 计算 $\boldsymbol{A}^2 = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} > 0$，故 $\boldsymbol{A}$ 是幂正矩阵。
+- $A$ 为非负矩阵。
+- 计算 $A^2 = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} > 0$，故 $A$ 是幂正矩阵。
 
 **步骤3：长期行为分析**
 
@@ -220,23 +220,23 @@ $$
 $$
 这正是斐波那契数列著名的渐近性质。
 
-斐波那契数列作为一个简化的年龄结构模型（仅两个“年龄组”：成熟与未成熟），其矩阵 $\boldsymbol{A}$ 满足Perron–Frobenius定理的条件。主特征值 $\lambda_1$ 决定了数列的长期指数增长率，而对应的特征向量 $\boldsymbol{w}_1$ 给出了“稳定状态”下两项的比例关系。这一例子生动展示了特征值与特征向量在刻画线性离散动力系统长期行为中的核心作用。
+斐波那契数列作为一个简化的年龄结构模型（仅两个“年龄组”：成熟与未成熟），其矩阵 $A$ 满足Perron–Frobenius定理的条件。主特征值 $\lambda_1$ 决定了数列的长期指数增长率，而对应的特征向量 $\boldsymbol{w}_1$ 给出了“稳定状态”下两项的比例关系。这一例子生动展示了特征值与特征向量在刻画线性离散动力系统长期行为中的核心作用。
 
 ## 2.3. 左特征向量与繁殖价值
 
-对于投影矩阵 $\boldsymbol{L}$，除了右特征向量外，左特征向量也具有重要的生物学意义。左特征向量 $\boldsymbol{v}_1^{\mathsf T}$ 定义为满足下式的非零行向量：
+对于投影矩阵 $L$，除了右特征向量外，左特征向量也具有重要的生物学意义。左特征向量 $\boldsymbol{v}_1^{\mathsf T}$ 定义为满足下式的非零行向量：
 
 $$
-\boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
+\boldsymbol{v}_1^{\mathsf T} L = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
 $$
 
 其各个分量表示相应年龄组个体的**繁殖价值**，即该组个体对未来种群增长的相对贡献。繁殖价值量化了不同年龄或阶段个体对种群长期增长的重要性，是种群生物学和进化生态学中的一个核心概念。
 
 ### 2.3.1. 以斐波那契数列为例
 
-回顾斐波那契模型的矩阵 $\boldsymbol{A} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$，现在计算对应于 $\lambda_1$ 的左特征向量 $\boldsymbol{v}_1^{\mathsf T}$。
+回顾斐波那契模型的矩阵 $A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$，现在计算对应于 $\lambda_1$ 的左特征向量 $\boldsymbol{v}_1^{\mathsf T}$。
 
-设 $\boldsymbol{v}_1^{\mathsf T} = (x, y)$，由 $\boldsymbol{v}_1^{\mathsf T} \boldsymbol{A} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$ 得：
+设 $\boldsymbol{v}_1^{\mathsf T} = (x, y)$，由 $\boldsymbol{v}_1^{\mathsf T} A = \lambda_1 \boldsymbol{v}_1^{\mathsf T}$ 得：
 
 $$
 (x, y) \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} = \lambda_1 (x, y)
@@ -278,10 +278,10 @@ $$
 ### 2.3.2. 繁殖价值的应用
 
 左特征向量的计算方式：
-1. 计算 $\boldsymbol{L}$ 的特征值和右特征向量。
+1. 计算 $L$ 的特征值和右特征向量。
 2. 求解 $\boldsymbol{v}_1^{\mathsf T}$，使得：
   $$
-  \boldsymbol{v}_1^{\mathsf T} \boldsymbol{L} = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
+  \boldsymbol{v}_1^{\mathsf T} L = \lambda_1 \boldsymbol{v}_1^{\mathsf T}
   $$
 3. 归一化 $\boldsymbol{v}_1^{\mathsf T}$，使得分量最小值为 $1$。
 
@@ -293,14 +293,14 @@ $$
    $$
    其中分母为归一化常数。长期种群数量为 $\boldsymbol{n}(t) \approx c_1 \lambda_1^t \boldsymbol{w}_1$。因此，繁殖价值高的年龄组对 $c_1$ 的贡献更大，即这些组别的初始数量对长期种群规模影响更大。
 
-2. **指导种群管理**：在保护生物学中，繁殖价值指示了不同年龄组对种群长期存续的重要性。例如，若某个年龄组的繁殖价值很高，则保护该组个体对种群恢复更有效。繁殖价值依赖于矩阵 $\boldsymbol{L}$，可以通过生态学数据估计。
+2. **指导种群管理**：在保护生物学中，繁殖价值指示了不同年龄组对种群长期存续的重要性。例如，若某个年龄组的繁殖价值很高，则保护该组个体对种群恢复更有效。繁殖价值依赖于矩阵 $L$，可以通过生态学数据估计。
 
 ## 思考题
-1. （选做）试讨论 $\boldsymbol{L}$ 在哪些约束下是非负且幂正的，能不能举出一个年龄比例不趋稳的反例并进行模拟？*提示：我们的 Leslie 矩阵定义考虑了保持当前年龄阶段的可能，与知乎和 AI 工具常见的回答稍有不同*
+1. （选做）试讨论 $L$ 在哪些约束下是非负且幂正的，能不能举出一个年龄比例不趋稳的反例并进行模拟？*提示：我们的 Leslie 矩阵定义考虑了保持当前年龄阶段的可能，与知乎和 AI 工具常见的回答稍有不同*
 2. 虎鲸（Orcinus orca）是长寿的海洋哺乳动物，生活在被称为"群体"的稳定社会群体中。它们稳定的社会结构和个体可通过照片识别的特点使其特别适合科学研究。自1973年以来，已收集了不列颠哥伦比亚省和华盛顿州沿海水域虎鲸种群的统计数据。Brault和Caswell（1993）使用1973-1987年的数据和阶段结构矩阵模型研究了与鲸鱼有关的几个人口统计学问题。他们使用混合年龄阶段分类对雌性进行建模：幼崽、幼年（过了第一年但未成熟）、成熟和繁殖后。投影矩阵A如下所示：
 
 $$
-\boldsymbol{A} = 
+A = 
 \begin{bmatrix}
 0 & 0.0043 & 0.1132 & 0 \\
 0.9775 & 0.9111 & 0 & 0 \\
@@ -309,24 +309,24 @@ $$
 \end{bmatrix}
 $$
 
-- **a)** 计算虎鲸种群的主特征值 $\lambda$ 和稳定阶段分布 $w$ ；
-- **b)** 假设当前种群向量为 $x_0 = (10, 60, 110, 70)$，预测未来50年的种群动态；
+- **a)** 计算虎鲸种群的主特征值 $\lambda$ 和稳定阶段分布 $\boldsymbol{w}$ ；
+- **b)** 假设当前种群向量为 $\boldsymbol{x}_0 = (10, 60, 110, 70)$，预测未来50年的种群动态；
 - **c)** 在三张独立的图上绘制以下随时间变化的过程：
   - 第t年的总种群规模 $N(t)$，
   - 年种群增长率 $\lambda(t) = N(t+1)/N(t)$，
   - 每个阶段个体的比例。
-- **d)** 使用以下初始种群向量重新运行虎鲸种群动态脚本：$x_0 = (250, 0, 0, 0), (0, 250, 0, 0), (0, 0, 250, 0), (0, 0, 0, 250)$。比较和对比四个种群预测：
+- **d)** 使用以下初始种群向量重新运行虎鲸种群动态脚本：$\boldsymbol{x}_0 = (250, 0, 0, 0), (0, 250, 0, 0), (0, 0, 250, 0), (0, 0, 0, 250)$。比较和对比四个种群预测：
   - 阶段分布及其稳定性，
   - 哪个阶段似乎对种群未来增长最重要？
 - **e)** 考虑从虎鲸种群中进行可能的收获（捕鲸），收获个体来自单个阶段，例如所有幼年个体或所有繁殖个体。假设初始种群结构为稳定分布 $\boldsymbol{w}$，总个体数为250。
   - 每年最多可以收获多少幼年个体而不导致种群灭绝？
   - 最多可以收获多少繁殖成年个体？
 
-*提示：假设收获发生在繁殖季节之后，因此模型变为 $\boldsymbol{x}(t+1) = \boldsymbol{A}\boldsymbol{x}(t) - \boldsymbol{h}$，其中 $\boldsymbol{h} = (h_1, h_2, h_3, h_4)$ 是每年从每个阶段收获的个体数向量。假设 $h$ 是常数：每年收获相同数量。*
+*提示：假设收获发生在繁殖季节之后，因此模型变为 $\boldsymbol{x}(t+1) = A\boldsymbol{x}(t) - \boldsymbol{h}$，其中 $\boldsymbol{h} = (h_1, h_2, h_3, h_4)$ 是每年从每个阶段收获的个体数向量。假设 $\boldsymbol{h}$ 是常数：每年收获相同数量。*
 
 **选做题**：TODO
 
-**a)** 对于投影矩阵$A$，主特征值$\lambda_1$满足$| \lambda_1 | > | \lambda_i | (i \neq 1)$，对应的右特征向量$w$给出稳定阶段分布。
+**a)** 对于投影矩阵$A$，主特征值$\lambda_1$满足$| \lambda_1 | > | \lambda_i | (i \neq 1)$，对应的右特征向量$\boldsymbol{w}$给出稳定阶段分布。
 
 ```python
 import numpy as np
@@ -387,13 +387,13 @@ $$
 
 还可以使用左特征向量的方法：
 
-对于投影矩阵$A$，左特征向量$v$满足：
+对于投影矩阵$A$，左特征向量$\boldsymbol{v}$满足：
 $$
-v^{\mathsf T} A = \lambda v^{\mathsf T}
+\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}
 $$
 等价于：
 $$
-A^{\mathsf T} v = \lambda v
+A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}
 $$
 因此，左特征向量是$A^{\mathsf T}$对应于特征值 $\lambda$ 的右特征向量。
 
@@ -559,9 +559,9 @@ Post-reproductive    -0.0000            -0.000000
 
 左特征向量计算的补充说明：
 
-对于主特征值 $\lambda$ 和对应的右特征向量$w$（满足$Aw = \lambda w$），左特征向量$v$满足$v^{\mathsf T} A = \lambda v^{\mathsf T}$。
+对于主特征值 $\lambda$ 和对应的右特征向量$\boldsymbol{w}$（满足$A\boldsymbol{w} = \lambda \boldsymbol{w}$），左特征向量$\boldsymbol{v}$满足$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$。
 
-由于$v^{\mathsf T} A = \lambda v^{\mathsf T}$等价于$A^{\mathsf T} v = \lambda v$，我们可以通过求解$A^{\mathsf T}$的特征值问题来获得$v$。
+由于$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$等价于$A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}$，我们可以通过求解$A^{\mathsf T}$的特征值问题来获得$\boldsymbol{v}$。
 
 在数值计算中，需要注意以下数值稳定性问题：
 
@@ -573,11 +573,11 @@ Post-reproductive    -0.0000            -0.000000
 
 计算完成后，应验证：
 $$
-\| v^{\mathsf T} A - \lambda v^{\mathsf T} \| < \epsilon
+\| \boldsymbol{v}^{\mathsf T} A - \lambda \boldsymbol{v}^{\mathsf T} \| < \epsilon
 $$
 其中$\epsilon$是一个小的容差（如$10^{-10}$）。
 
-同时，应验证$v^{\mathsf T} w \neq 0$，因为$v$和$w$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
+同时，应验证$\boldsymbol{v}^{\mathsf T} \boldsymbol{w} \neq 0$，因为$\boldsymbol{v}$和$\boldsymbol{w}$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
 
 
 **结果分析**：
@@ -593,9 +593,9 @@ $$
 **数学原理**：
 特征值$ \lambda $对矩阵元素$a_{ij}$的灵敏度为：
 $$
-\frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{v^{\mathsf T} w}
+\frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{\boldsymbol{v}^{\mathsf T} \boldsymbol{w}}
 $$
-其中$v$和$w$分别是左、右特征向量。
+其中$\boldsymbol{v}$和$\boldsymbol{w}$分别是左、右特征向量。
 
 对于对角线元素$a_{ii}$，收获相当于减少该元素。设收获率为$h_i$（占该阶段个体数的比例），则修改后的特征值为：
 $$
@@ -608,21 +608,21 @@ $$
 最大可持续收获个体数：$H_i = h_i \cdot x_i$，其中$x_i$为该阶段在稳定分布下的个体数。
 
 **推导**：
-由特征值定义：$A w = \lambda w$，对$a_{ij}$求偏导：
+由特征值定义：$A \boldsymbol{w} = \lambda \boldsymbol{w}$，对$a_{ij}$求偏导：
 $$
-\frac{\partial}{\partial a_{ij}} (A w) = \frac{\partial}{\partial a_{ij}} (\lambda w)
+\frac{\partial}{\partial a_{ij}} (A \boldsymbol{w}) = \frac{\partial}{\partial a_{ij}} (\lambda \boldsymbol{w})
 $$
 展开：
 $$
-\frac{\partial A}{\partial a_{ij}} w + A \frac{\partial w}{\partial a_{ij}} = \frac{\partial \lambda}{\partial a_{ij}} w + \lambda \frac{\partial w}{\partial a_{ij}}
+\frac{\partial A}{\partial a_{ij}} \boldsymbol{w} + A \frac{\partial \boldsymbol{w}}{\partial a_{ij}} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{w} + \lambda \frac{\partial \boldsymbol{w}}{\partial a_{ij}}
 $$
-两边左乘$v^{\mathsf T}$，利用$v^{\mathsf T} A = \lambda v^{\mathsf T}$：
+两边左乘$\boldsymbol{v}^{\mathsf T}$，利用$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$：
 $$
-v^{\mathsf T} \frac{\partial A}{\partial a_{ij}} w = \frac{\partial \lambda}{\partial a_{ij}} v^{\mathsf T} w
+\boldsymbol{v}^{\mathsf T} \frac{\partial A}{\partial a_{ij}} \boldsymbol{w} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
 $$
 由于$\frac{\partial A}{\partial a_{ij}}$仅在$(i,j)$位置为1，其余为0，故：
 $$
-v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} v^{\mathsf T} w
+v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
 $$
 即得灵敏度公式。
 

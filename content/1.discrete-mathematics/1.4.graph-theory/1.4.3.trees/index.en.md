@@ -1,6 +1,6 @@
 ---
 title: Trees
-source_hash: d73cae9cc30a
+source_hash: 16975a047083
 ---
 
 Trees are among the most important notions in graph theory and have wide applications in computer science (file systems, coding, searching, games and more). In the mid-nineteenth century the British mathematician Cayley studied the enumeration of trees and used it to count the isomers of chemical compounds, one of the earliest applications of trees. In this chapter we first give the definition of a tree and several equivalent characterizations. We then study spanning trees algebraically by means of the incidence matrix, the cycle matrix and the cut-set matrix, including how to count and generate spanning trees. Finally we discuss two optimization problems involving trees: Huffman trees and minimum spanning trees.
@@ -76,11 +76,11 @@ To study trees algebraically, we first examine the linear dependence and the ran
 
 **Theorem 3.2.3** If $B$ is the incidence matrix of a connected directed graph $G$, then $\operatorname{rank} B = n-1$.
 
-**Proof** Let the row vector $x = (x_1, \dots, x_n)$ satisfy $xB = 0$. For each edge $e = (v_i, v_j)$, the component of $xB$ corresponding to $e$ is $x_i - x_j$, so adjacent vertices have equal values of $x_i$; since $G$ is connected, $x_1 = x_2 = \cdots = x_n$. Thus the solution space of $xB = 0$ is one-dimensional, and $\operatorname{rank} B = n - 1$. $\square$
+**Proof** Let the row vector $\boldsymbol{x} = (x_1, \dots, x_n)$ satisfy $\boldsymbol{x}B = \boldsymbol{0}$. For each edge $e = (v_i, v_j)$, the component of $\boldsymbol{x}B$ corresponding to $e$ is $x_i - x_j$, so adjacent vertices have equal values of $x_i$; since $G$ is connected, $x_1 = x_2 = \cdots = x_n$. Thus the solution space of $\boldsymbol{x}B = \boldsymbol{0}$ is one-dimensional, and $\operatorname{rank} B = n - 1$. $\square$
 
 **Theorem 3.2.4** The reduced incidence matrix $B_k$ of a connected directed graph $G$ has rank $\operatorname{rank} B_k = n-1$; that is, the $n-1$ rows of $B_k$ are linearly independent.
 
-**Proof** If a nontrivial linear combination of the rows of $B_k$ were zero, then setting the coefficient $x_k = 0$ would give a solution $x$ of $xB = 0$ whose components are not all equal, contradicting the proof of Theorem 3.2.3. $\square$
+**Proof** If a nontrivial linear combination of the rows of $B_k$ were zero, then setting the coefficient $x_k = 0$ would give a solution $\boldsymbol{x}$ of $\boldsymbol{x}B = \boldsymbol{0}$ whose components are not all equal, contradicting the proof of Theorem 3.2.3. $\square$
 
 ### 3.2.3. Reduced Incidence Matrices and Cycles
 
@@ -286,8 +286,8 @@ The idea of *Kruskal's algorithm* is to sort the edges by weight in increasing o
 
 **Algorithm 3.7.1 (Kruskal's Algorithm)**
 
-1. Set $T \leftarrow \emptyset$ and sort the edges of $E$ by weight in nondecreasing order.
-2. While $|T| < n-1$ and $E \ne \emptyset$: remove the currently shortest edge $e$ from $E$, setting $E \leftarrow E - \{e\}$; if $T \cup \{e\}$ contains no cycle, set $T \leftarrow T \cup \{e\}$.
+1. Set $T \leftarrow \varnothing$ and sort the edges of $E$ by weight in nondecreasing order.
+2. While $|T| < n-1$ and $E \ne \varnothing$: remove the currently shortest edge $e$ from $E$, setting $E \leftarrow E - \{e\}$; if $T \cup \{e\}$ contains no cycle, set $T \leftarrow T \cup \{e\}$.
 3. If $|T| < n-1$, then $G$ is disconnected; otherwise $T$ is a minimum spanning tree.
 
 **Theorem 3.7.1** A spanning tree $T = (V, E')$ of a connected weighted graph $G$ is a minimum spanning tree if and only if, for every chord $e \in E - E'$, the fundamental cycle $C^e \subseteq E' \cup \{e\}$ of $e$ satisfies $w(e) \ge w(a)$ for all $a \in C^e$ with $a \ne e$.
@@ -300,7 +300,7 @@ The idea of *Prim's algorithm* is to grow the tree from a single vertex: at each
 
 **Algorithm 3.7.2 (Prim's Algorithm)**
 
-1. Set $U \leftarrow \{v_1\}$ and $T \leftarrow \emptyset$.
+1. Set $U \leftarrow \{v_1\}$ and $T \leftarrow \varnothing$.
 2. While $U \ne V$: choose $u \in U$ and $v \in V - U$ with $w(u, v)$ minimal; set $T \leftarrow T \cup \{(u, v)\}$ and $U \leftarrow U \cup \{v\}$; and update, for each $x \in V - U$, its shortest distance to $U$.
 
 **Theorem 3.7.3** Let $U$ be a nonempty proper subset of the vertex set of a connected weighted graph $G$, and let $e$ be an edge of minimum weight among the edges with one endpoint in $U$ and the other in $V - U$. Then $G$ has a minimum spanning tree containing $e$. If such a minimum-weight edge is unique, then every minimum spanning tree of $G$ contains $e$.

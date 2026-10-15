@@ -27,8 +27,8 @@ $$
 **高阶系统**：对于多变量系统，我们有方程组
 $$
 \begin{cases}
-\frac{dx_1}{dt} &= f_1(x_1, x_2, \ldots, x_n) \\
-\frac{dx_2}{dt} &= f_2(x_1, x_2, \ldots, x_n) \\
+\frac{\mathrm{d}x_1}{\mathrm{d}t} &= f_1(x_1, x_2, \ldots, x_n) \\
+\frac{\mathrm{d}x_2}{\mathrm{d}t} &= f_2(x_1, x_2, \ldots, x_n) \\
 &\vdots \\
 \frac{dx_n}{dt} &= f_n(x_1, x_2, \ldots, x_n)
 \end{cases}
@@ -41,7 +41,7 @@ $$
 **稳定性分析**：
 1. **线性稳定性理论**：在平衡点$x^*$附近线性化系统
    $$
-   \frac{d(\delta x)}{dt} = J(x^*) \delta x
+   \frac{\mathrm{d}(\delta x)}{\mathrm{d}t} = J(x^*) \delta x
    $$
    其中$J(x^*)$是雅可比矩阵$J_{ij} = \frac{\partial f_i}{\partial x_j}\big|_{x=x^*}$
 
@@ -55,9 +55,9 @@ $$
    - 稳定结点：$\lambda_1, \lambda_2 < 0$（实数）
    - 不稳定结点：$\lambda_1, \lambda_2 > 0$（实数）
    - 鞍点：$\lambda_1 < 0 < \lambda_2$（实数）
-   - 稳定焦点：$\text{Re}(\lambda_{1,2}) < 0$（复数）
-   - 不稳定焦点：$\text{Re}(\lambda_{1,2}) > 0$（复数）
-   - 中心：$\text{Re}(\lambda_{1,2}) = 0$（纯虚数）
+   - 稳定焦点：$\operatorname{Re}(\lambda_{1,2}) < 0$（复数）
+   - 不稳定焦点：$\operatorname{Re}(\lambda_{1,2}) > 0$（复数）
+   - 中心：$\operatorname{Re}(\lambda_{1,2}) = 0$（纯虚数）
 
 ### 4.1.3. 数值求解方法
 
@@ -107,7 +107,7 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}t} \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} f_1(x,y) \\ f_2(x,y) \end{pmatrix}
 $$
 
-**零增长线（Nullclines）**：满足$dx/dt=0$或$dy/dt=0$的曲线。零增长线的交点即为平衡点。
+**零增长线（Nullclines）**：满足$\mathrm{d}x/\mathrm{d}t=0$或$\mathrm{d}y/\mathrm{d}t=0$的曲线。零增长线的交点即为平衡点。
 
 ## 4.2. Lotka-Volterra种间竞争模型
 
@@ -119,8 +119,8 @@ $$
 
 $$
 \begin{split}
-\frac{dN_1}{dt} &= r_1 N_1 \left(1 - \frac{N_1}{K_1}\right) \\
-\frac{dN_2}{dt} &= r_2 N_2 \left(1 - \frac{N_2}{K_2}\right)
+\frac{\mathrm{d}N_1}{\mathrm{d}t} &= r_1 N_1 \left(1 - \frac{N_1}{K_1}\right) \\
+\frac{\mathrm{d}N_2}{\mathrm{d}t} &= r_2 N_2 \left(1 - \frac{N_2}{K_2}\right)
 \end{split}
 $$
 
@@ -134,8 +134,8 @@ $$
 
 $$
 \begin{aligned}
-\frac{dN_1}{dt} &= r_1 N_1 \left(1 - \frac{N_1}{K_1} - \frac{\alpha_{12} N_2}{K_1}\right) \\
-\frac{dN_2}{dt} &= r_2 N_2 \left(1 - \frac{N_2}{K_2} - \frac{\alpha_{21} N_1}{K_2}\right)
+\frac{\mathrm{d}N_1}{\mathrm{d}t} &= r_1 N_1 \left(1 - \frac{N_1}{K_1} - \frac{\alpha_{12} N_2}{K_1}\right) \\
+\frac{\mathrm{d}N_2}{\mathrm{d}t} &= r_2 N_2 \left(1 - \frac{N_2}{K_2} - \frac{\alpha_{21} N_1}{K_2}\right)
 \end{aligned}
 $$
 
@@ -155,21 +155,21 @@ $$
 
 $$
 \begin{aligned}
-\frac{dx}{d\tau} &= x(1 - x - a y) \\
-\frac{dy}{d\tau} &= \rho y(1 - y - b x)
+\frac{\mathrm{d}x}{\mathrm{d}\tau} &= x(1 - x - a y) \\
+\frac{\mathrm{d}y}{\mathrm{d}\tau} &= \rho y(1 - y - b x)
 \end{aligned}
 $$
 
 ### 4.2.2. 平衡点与零增长线分析
 
-**零增长线**（nullcline）是相平面中满足$\frac{dx}{d\tau} = 0$或$\frac{dy}{d\tau} = 0$的曲线：
+**零增长线**（nullcline）是相平面中满足$\frac{\mathrm{d}x}{\mathrm{d}\tau} = 0$或$\frac{\mathrm{d}y}{\mathrm{d}\tau} = 0$的曲线：
 
-1. $x$-零增长线：$\frac{dx}{d\tau} = 0 \Rightarrow x = 0$或$y = \frac{1-x}{a}$
-2. $y$-零增长线：$\frac{dy}{d\tau} = 0 \Rightarrow y = 0$或$y = 1 - b x$
+1. $x$-零增长线：$\frac{\mathrm{d}x}{\mathrm{d}\tau} = 0 \Rightarrow x = 0$或$y = \frac{1-x}{a}$
+2. $y$-零增长线：$\frac{\mathrm{d}y}{\mathrm{d}\tau} = 0 \Rightarrow y = 0$或$y = 1 - b x$
 
 这些直线将相平面划分为不同区域，在每个区域内，$x$和$y$的变化方向是确定的。
 
-**平衡点**（equilibrium）是系统不再变化的状态，即同时满足$\frac{dx}{d\tau} = 0$和$\frac{dy}{d\tau} = 0$的点：
+**平衡点**（equilibrium）是系统不再变化的状态，即同时满足$\frac{\mathrm{d}x}{\mathrm{d}\tau} = 0$和$\frac{\mathrm{d}y}{\mathrm{d}\tau} = 0$的点：
 
 1. $(0,0)$：两个物种灭绝
 2. $(1,0)$：物种1达到最大容量，物种2灭绝
@@ -184,27 +184,27 @@ $$
 
 **运行结果说明**：上述代码生成的原理图清晰地展示了Lotka-Volterra竞争模型的四种可能结果。每个子图中：
 
-1. 红色实线表示物种1的零增长线($dx/dτ=0$)，蓝色实线表示物种2的零增长线($dy/dτ=0$)
+1. 红色实线表示物种1的零增长线($\mathrm{d}x/\mathrm{d}\tau=0$)，蓝色实线表示物种2的零增长线($\mathrm{d}y/\mathrm{d}\tau=0$)
 2. 关键点标注包括：
    - $K_1$: 物种1单独存在时的最大容量
    - $K_2$: 物种2单独存在时的最大容量
-   - $K_1/α$: 物种1零增长线与y轴的交点
-   - $K_2/β$: 物种2零增长线与x轴的交点
+   - $K_1/\alpha$: 物种1零增长线与y轴的交点
+   - $K_2/\beta$: 物种2零增长线与x轴的交点
 3. 箭头指示了相平面不同区域的向量场方向
 4. 文本框显示了每种情况对应的参数条件
 
 这四种结果可以总结为：
 
-1. **物种1获胜**：当$K_1 > K_2/β$且$K_2 < K_1/α$（$a<1$且$b>1$）时，物种2无法在竞争中生存
-2. **物种2获胜**：当$K_2 > K_1/α$且$K_1 < K_2/β$（$a>1$且$b<1$）时，物种1无法在竞争中生存
-3. **不稳定共存**：当$K_1 > K_2/β$且$K_2 > K_1/α$（$a>1$且$b>1$）时，初始条件决定最终获胜者
-4. **稳定共存**：当$K_1 < K_2/β$且$K_2 < K_1/α$（$a<1$且$b<1$）时，两个物种可以长期共存
+1. **物种1获胜**：当$K_1 > K_2/\beta$且$K_2 < K_1/\alpha$（$a<1$且$b>1$）时，物种2无法在竞争中生存
+2. **物种2获胜**：当$K_2 > K_1/\alpha$且$K_1 < K_2/\beta$（$a>1$且$b<1$）时，物种1无法在竞争中生存
+3. **不稳定共存**：当$K_1 > K_2/\beta$且$K_2 > K_1/\alpha$（$a>1$且$b>1$）时，初始条件决定最终获胜者
+4. **稳定共存**：当$K_1 < K_2/\beta$且$K_2 < K_1/\alpha$（$a<1$且$b<1$）时，两个物种可以长期共存
 
 ### 4.2.4. 竞争系数的生物学意义
 
 竞争系数 $a$ 和 $b$ 反映了物种间的竞争强度：
 - 当 $a < 1$ 时，种内竞争强于种间竞争，物种1对自身的影响大于物种2对它的影响
-- 当 $α > 1$ 时，种间竞争强于种内竞争，物种2对物种1的影响大于物种1对自身的影响
+- 当 $\alpha > 1$ 时，种间竞争强于种内竞争，物种2对物种1的影响大于物种1对自身的影响
 - $b$ 的意义与 $a$ 类似，但表示物种1对物种2的影响
 
 竞争结果取决于相对竞争强度而非绝对数值。这种相对性体现了生态位理论的核心思想：生态位重叠越小（竞争系数越小），共存的可能性越大。
@@ -347,16 +347,16 @@ $$
 
 $$
 \begin{aligned}
-\frac{dx}{d\tau} &= x(1 - y) \\
-\frac{dy}{d\tau} &= \alpha y(x - 1)
+\frac{\mathrm{d}x}{\mathrm{d}\tau} &= x(1 - y) \\
+\frac{\mathrm{d}y}{\mathrm{d}\tau} &= \alpha y(x - 1)
 \end{aligned}
 $$
 
 ### 4.3.2. 零增长线与平衡点分析
 
 **零增长线**：
-1. 猎物零增长线：$\frac{dx}{d\tau} = 0 \Rightarrow x = 0$或$y = 1$
-2. 捕食者零增长线：$\frac{dy}{d\tau} = 0 \Rightarrow y = 0$或$x = 1$
+1. 猎物零增长线：$\frac{\mathrm{d}x}{\mathrm{d}\tau} = 0 \Rightarrow x = 0$或$y = 1$
+2. 捕食者零增长线：$\frac{\mathrm{d}y}{\mathrm{d}\tau} = 0 \Rightarrow y = 0$或$x = 1$
 
 **平衡点**：
 1. $(0,0)$：灭绝（鞍点）
@@ -379,7 +379,7 @@ J^* = \begin{pmatrix}
 \theta r/\varepsilon & 0
 \end{pmatrix}
 $$
-特征值为 $\lambda = \pm i\sqrt{r\mu}$，为纯虚数，表明该平衡点是**中心**。在非线性系统中，这通常意味着存在**周期解**。
+特征值为 $\lambda = \pm \mathrm{i}\sqrt{r\mu}$，为纯虚数，表明该平衡点是**中心**。在非线性系统中，这通常意味着存在**周期解**。
 
 在经典的Lotka-Volterra模型中，曲线是全闭的，但如果遇到其他类型的动力学（这在现实场景中是普遍现象）将会诱发**极限环**现象，即系统的震荡轨道会被汇聚到这个环上。
 
@@ -391,15 +391,15 @@ $$
 V(x,y) = \alpha(x - \ln x) + (y - \ln y)
 $$
 
-满足$dV/d\tau = 0$，表明所有轨迹都是闭曲线，系统具有周期性解。这种周期性振荡反映了捕食者与猎物数量的相互制约关系。
+满足$\mathrm{d}V/\mathrm{d}\tau = 0$，表明所有轨迹都是闭曲线，系统具有周期性解。这种周期性振荡反映了捕食者与猎物数量的相互制约关系。
 
 ![捕食者-猎物模型的零增长线、振荡与极限环示意图](./plots/predator-prey-schematic.py)
 
 **运行结果说明**：上述代码生成了捕食者-猎物模型的四种原理图：
 
 1. **经典Lotka-Volterra模型相平面**：
-   - 红色水平线表示猎物零增长线($dx/dτ=0$)
-   - 蓝色垂直线表示捕食者零增长线($dy/dτ=0$)
+   - 红色水平线表示猎物零增长线($\mathrm{d}x/\mathrm{d}\tau=0$)
+   - 蓝色垂直线表示捕食者零增长线($\mathrm{d}y/\mathrm{d}\tau=0$)
    - 绿色点表示中心平衡点(1,1)
    - 紫色闭合曲线表示周期性轨道
 
@@ -424,8 +424,8 @@ $$
 更现实的模型包含猎物的密度制约（逻辑斯谛增长）：
 $$
 \begin{aligned}
-\frac{dx}{d\tau} &= x(1 - x - y) \\
-\frac{dy}{d\tau} &= \alpha y(x - \beta)
+\frac{\mathrm{d}x}{\mathrm{d}\tau} &= x(1 - x - y) \\
+\frac{\mathrm{d}y}{\mathrm{d}\tau} &= \alpha y(x - \beta)
 \end{aligned}
 $$
 其中$\beta = \mu/(rK\theta)$，$K$为猎物环境容纳量。
@@ -517,8 +517,8 @@ Limit cycle:
 
 $$
 \begin{aligned}
-\frac{dx_1}{dt} &= r_1 x_1 \left(1 - \frac{x_1}{K_1} - \alpha_{12}\frac{x_2}{K_1}\right) - \varepsilon_1 x_1 y \\
-\frac{dx_2}{dt} &= r_2 x_2 \left(1 - \frac{x_2}{K_2} - \alpha_{21}\frac{x_1}{K_2}\right) - \varepsilon_2 x_2 y \\
+\frac{\mathrm{d}x_1}{\mathrm{d}t} &= r_1 x_1 \left(1 - \frac{x_1}{K_1} - \alpha_{12}\frac{x_2}{K_1}\right) - \varepsilon_1 x_1 y \\
+\frac{\mathrm{d}x_2}{\mathrm{d}t} &= r_2 x_2 \left(1 - \frac{x_2}{K_2} - \alpha_{21}\frac{x_1}{K_2}\right) - \varepsilon_2 x_2 y \\
 \frac{\mathrm{d}y}{\mathrm{d}t} &= -\mu y + \theta_1 x_1 y + \theta_2 x_2 y
 \end{aligned}
 $$
@@ -542,9 +542,9 @@ $$
 
 $$
 \begin{aligned}
-\frac{du_1}{d\tau} &= u_1(1 - u_1 - a u_2 - v) \\
-\frac{du_2}{d\tau} &= \rho u_2(1 - u_2 - b u_1 - \frac{c_2}{c_1} v) \\
-\frac{dv}{d\tau} &= -d v + e_1 u_1 v + e_2 u_2 v
+\frac{\mathrm{d}u_1}{\mathrm{d}\tau} &= u_1(1 - u_1 - a u_2 - v) \\
+\frac{\mathrm{d}u_2}{\mathrm{d}\tau} &= \rho u_2(1 - u_2 - b u_1 - \frac{c_2}{c_1} v) \\
+\frac{\mathrm{d}v}{\mathrm{d}\tau} &= -d v + e_1 u_1 v + e_2 u_2 v
 \end{aligned}
 $$
 
@@ -639,8 +639,8 @@ $$
 则系统化为：
 $$
 \begin{aligned}
-\frac{dx}{d\tau} &= x(1 - x) - xy = x(1 - x - y) \\
-\frac{dy}{d\tau} &= \alpha y(\beta x - 1)
+\frac{\mathrm{d}x}{\mathrm{d}\tau} &= x(1 - x) - xy = x(1 - x - y) \\
+\frac{\mathrm{d}y}{\mathrm{d}\tau} &= \alpha y(\beta x - 1)
 \end{aligned}
 $$
 其中 $\alpha = \mu/r$，$\beta = \theta K / r$。这里 $\beta$ 可视为捕食者成功捕食并繁殖的效率与猎物承载力的综合参数。

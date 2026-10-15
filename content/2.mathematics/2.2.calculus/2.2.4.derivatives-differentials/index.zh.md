@@ -13,7 +13,7 @@ title: 导数与微分
 -   **四则运算**：$(u \pm v)' = u' \pm v'$；$(uv)' = u'v + uv'$；$(u/v)' = (u'v - uv')/v^2$。
 -   **复合函数求导**：链式法则 $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{d}y}{\mathrm{d}u} \cdot \frac{\mathrm{d}u}{\mathrm{d}x}$。
 -   **对数求导法**：用于幂指函数 $u(x)^{v(x)}$。
--   **反函数求导**：$\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{dy/dx}$。
+-   **反函数求导**：$\frac{\mathrm{d}x}{\mathrm{d}y} = \frac{1}{\mathrm{d}y/\mathrm{d}x}$。
 
 **4.3 特殊的求导法则**
 
@@ -22,12 +22,12 @@ title: 导数与微分
 
 **4.4 高阶导数**
 
--   **概念**：$f^{(n)}(x) = \frac{d^n f}{dx^n}$。
+-   **概念**：$f^{(n)}(x) = \frac{\mathrm{d}^n f}{\mathrm{d}x^n}$。
 -   **常见高阶导数**：$(\sin x)^{(n)} = \sin(x + n\pi/2)$；$(\ln x)^{(n)} = (-1)^{n-1}(n-1)!/x^n$。
 -   **莱布尼茨公式**：$(uv)^{(n)} = \sum_{k=0}^{n} \binom{n}{k} u^{(k)} v^{(n-k)}$。
 
 **4.5 微分**
 
--   **概念**：$dy = f'(x) dx$。
--   **一阶微分形式不变性**：无论 $x$ 是自变量还是中间变量，$dy = f'(u) du$ 的形式不变。
+-   **概念**：$\mathrm{d}y = f'(x)\,\mathrm{d}x$。
+-   **一阶微分形式不变性**：无论 $x$ 是自变量还是中间变量，$\mathrm{d}y = f'(u)\,\mathrm{d}u$ 的形式不变。
 -   **近似计算**：$f(x_0 + \Delta x) \approx f(x_0) + f'(x_0) \Delta x$。
