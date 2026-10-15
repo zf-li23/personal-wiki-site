@@ -135,6 +135,12 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
 }
 
 describe('markdown rendering', () => {
+  it('keeps a paragraph written directly under display math inside the statement', async () => {
+    const { html } = await render('## 13.1. A\n\n**定义 13.1.1** 设\n\n$$\nAx = \\lambda x\n$$\n则称 $\\lambda$ 为**特征值**。\n\n另一段。');
+    const block = html.slice(html.indexOf('id="def-13.1.1"'), html.indexOf('另一段'));
+    assert.match(block, /则称/);
+    assert.match(html, /<\/div>\s*<p>另一段/);
+  });
   it('warns about Chinese text left on an English page', async () => {
     const { messages } = await render('## 13.1. Basics\n\nA set 集合 and $\\text{若}$.', { lang: 'en' });
     assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);

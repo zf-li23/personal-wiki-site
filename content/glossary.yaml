@@ -538,7 +538,7 @@ terms:
   - { zh: 线性相关, en: linear dependence, aliases: [linearly dependent] }
   - { zh: 线性无关, en: linear independence, aliases: [linearly independent] }
   - { zh: 基, en: basis }
-  - { zh: 标准基, en: standard basis }
+  - { zh: 标准基, en: standard basis, aliases: [标准坐标向量组, standard unit vectors] }
   - { zh: 极大线性无关部分组, en: maximal linearly independent subset, aliases: [极大线性无关组] }
   - { zh: 维数, en: dimension }
   - { zh: 秩, en: rank, aliases: [矩阵的秩, 向量组的秩] }
@@ -673,7 +673,7 @@ terms:
   - { zh: 正规变换, en: normal operator }
   - { zh: 正规矩阵, en: normal matrix }
   - { zh: 谱定理, en: spectral theorem }
-  - { zh: 自伴随算子, en: self-adjoint operator }
+  - { zh: 自伴随算子, en: self-adjoint operator, aliases: [对称变换, symmetric transformation] }
   - { zh: Hermite 变换, en: Hermitian operator, aliases: [埃尔米特变换] }
   - { zh: Hermite 矩阵, en: Hermitian matrix, aliases: [埃尔米特矩阵] }
   - { zh: 反 Hermite 矩阵, en: skew-Hermitian matrix }
@@ -693,6 +693,26 @@ terms:
   - { zh: 自由变量, en: free variable, scope: ["2"] }
   - { zh: 矩阵, en: matrix }
   - { zh: 欧拉公式, en: "Euler's formula", scope: ["2"] }
+  - { zh: 前代法, en: forward substitution }
+  - { zh: LDU 分解, en: LDU decomposition }
+  - { zh: 长度, en: Euclidean norm, aliases: [向量的长度, 欧氏范数, length], scope: ["2"] }
+  - { zh: 正交向量组, en: orthogonal set }
+  - { zh: 正交单位向量组, en: orthonormal set, aliases: [标准正交向量组] }
+  - { zh: 正交基, en: orthogonal basis }
+  - { zh: 列正交矩阵, en: matrix with orthonormal columns, aliases: [semi-orthogonal matrix] }
+  - { zh: 特征对, en: eigenpair }
+  - { zh: 单特征值, en: simple eigenvalue }
+  - { zh: 负定矩阵, en: negative definite matrix, aliases: [负定] }
+  - { zh: 半负定矩阵, en: negative semidefinite matrix, aliases: [半负定] }
+  - { zh: 奇异向量, en: singular vector, aliases: [左奇异向量, 右奇异向量, left singular vector, right singular vector] }
+  - { zh: 条件数, en: condition number }
+  - { zh: Frobenius 范数, en: Frobenius norm }
+  - { zh: Eckart–Young 定理, en: Eckart–Young theorem }
+  - { zh: 整除, en: divisibility, scope: ["2"] }
+  - { zh: 复数的模, en: modulus of a complex number, aliases: [模], scope: ["2"] }
+  - { zh: 常数变易公式, en: variation of constants formula, aliases: [常数变易法, variation of parameters] }
+  - { zh: Legendre 多项式, en: Legendre polynomials, aliases: [勒让德多项式] }
+  - { zh: Lorentz 群, en: Lorentz group }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数

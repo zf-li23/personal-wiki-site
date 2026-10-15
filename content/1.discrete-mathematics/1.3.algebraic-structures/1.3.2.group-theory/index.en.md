@@ -1,6 +1,6 @@
 ---
 title: Group Theory
-source_hash: 0e7c3203750b
+source_hash: 134524ca54e6
 ---
 
 A group is an algebraic system with a single binary operation that can be "undone". It is the basic language of symmetry: the symmetries of an object (the transformations preserving its structure) always form a group under composition. The previous chapter gave the general definitions of **algebraic systems**, **identity elements**, **inverse elements** and **homomorphisms**; this chapter develops these notions concretely for the most important class of systems.
@@ -84,7 +84,7 @@ then $(G, \cdot)$ is called a group, also written $(G, \cdot, e)$.
 
 By Theorems 1.3.2 and 1.3.3, the identity of a group and the inverse of each element are unique; by Section 1.3.6, both the left and the right **cancellation laws** hold in a group.
 
-For example, $(\mathbb{Z}, +)$, $(\mathbb{Z}_n, +)$ and $(\mathbb{R}^+, \cdot)$ are groups. The set $\operatorname{GL}(n, \mathbb{R})$ of invertible real matrices of order $n$ is a group under matrix multiplication, called the *general linear group* (for invertible matrices see [Linear Algebra](/2.1.2)); $(M_n(\mathbb{R}), \cdot)$, on the other hand, is only a monoid, because singular matrices are not invertible.
+For example, $(\mathbb{Z}, +)$, $(\mathbb{Z}_n, +)$ and $(\mathbb{R}^+, \cdot)$ are groups. The set $\operatorname{GL}(n, \mathbb{R})$ of invertible real matrices of order $n$ is a group under matrix multiplication, called the *general linear group* (for invertible matrices see [Linear Algebra](/2.1.2#def-2.2.3)); $(M_n(\mathbb{R}), \cdot)$, on the other hand, is only a monoid, because singular matrices are not invertible.
 
 **Definition 2.2.3 (Abelian Group)** If the operation of a group $G$ satisfies the commutative law ($ab = ba$ for all $a, b \in G$), then $G$ is called a commutative group, or an **abelian group**.
 

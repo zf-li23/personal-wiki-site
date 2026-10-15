@@ -1,6 +1,6 @@
 ---
 title: Representation Theory
-source_hash: 879ba06b155b
+source_hash: cadf2a418612
 ---
 
 *Representation theory* is the end point of the main line of this course. Cayley's theorem (Theorem 2.4.4) says that every group can be realized as a transformation group of some set; representation theory asks for more: to realize a group (or a Lie algebra) by linear transformations of a vector space, that is, by transformations preserving vector addition and scalar multiplication, which become matrices once a basis is chosen. Abstract group operations then turn into matrix multiplication, structural questions turn into questions of linear algebra, and the whole toolkit of **eigenvalues**, traces and direct sum decompositions becomes available. The groups $SO(3)$ and $\mathfrak{so}(3)$ of the previous chapter already consist of matrices; this chapter extends that situation to general groups and Lie algebras.
@@ -11,7 +11,7 @@ Abstractly, a representation is just a **homomorphism** (Definition 1.4.3): a gr
 
 ### 6.1.1. Definition of a Group Representation
 
-**Definition 6.1.1** Let $G$ be a group, $V$ a vector space over a field $F$, and $\operatorname{GL}(V)$ the group of all invertible linear transformations of $V$ under composition (the **general linear group** of $V$; see Section 3.6.3). A group homomorphism $\rho: G \to \operatorname{GL}(V)$ is called a (linear) **representation** of $G$ on $V$; $V$ is called the **representation space**, and the dimension of $V$ is called the **dimension** of the representation.
+**Definition 6.1.1** Let $G$ be a group, $V$ a vector space over a field $F$, and $\operatorname{GL}(V)$ the group of all invertible linear transformations of $V$ under composition (the **general linear group** of $V$; see Section 3.6.3). A group homomorphism $\rho: G \to \operatorname{GL}(V)$ is called a (linear) **representation** of $G$ on $V$; $V$ is called the **representation space**, and the dimension of $V$ is called the dimension of the representation.
 
 When $V$ is $n$-dimensional and a basis is fixed, the elements of $\operatorname{GL}(V)$ are invertible matrices of order $n$, so a representation $\rho$ assigns an invertible matrix to each element of $G$; that is, it is a homomorphism $G \to \operatorname{GL}(n, F)$. The homomorphism condition $\rho(gh) = \rho(g)\rho(h)$ ensures that the group operation agrees with matrix multiplication; by Theorem 2.7.3, $\rho(e) = I_V$ and $\rho(g^{-1}) = \rho(g)^{-1}$.
 
@@ -37,7 +37,7 @@ Conditions 2 and 3 are the definition of a **group action** (Definition 2.5.3), 
 
 **Definition 6.1.3** Let $\rho_1: G \to \operatorname{GL}(V_1)$ and $\rho_2: G \to \operatorname{GL}(V_2)$ be two representations of a group $G$. If there is a linear isomorphism $\varphi: V_1 \to V_2$ such that $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$ for every $g \in G$, the two representations are called **equivalent**. In the finite-dimensional case, after fixing bases, this means that there is a single invertible matrix $P$ with $\rho_2(g) = P\rho_1(g)P^{-1}$ for all $g$.
 
-Equivalent representations differ only in the choice of basis, just as isomorphic algebraic systems differ only in the names of their elements (Section 1.4.2); for similarity of matrices see [Linear Algebra](/2.1.6). A linear map satisfying $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$ ($\varphi$ need not be invertible) is called a $G$-*equivariant map*; it is a "homomorphism between representations".
+Equivalent representations differ only in the choice of basis, just as isomorphic algebraic systems differ only in the names of their elements (Section 1.4.2); for similarity of matrices see [Linear Algebra](/2.1.6#def-6.8.1). A linear map satisfying $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$ ($\varphi$ need not be invertible) is called a $G$-*equivariant map*; it is a "homomorphism between representations".
 
 **Definition 6.1.4 (Irreducible Representation)** Let $\rho: G \to \operatorname{GL}(V)$ be a representation. A subspace $W \subseteq V$ with $\rho(g)W \subseteq W$ for all $g \in G$ is called an **invariant subspace**. If $V \neq \{0\}$ and $V$ has no invariant subspaces other than $\{0\}$ and $V$, the representation is called irreducible; otherwise (if $V$ has a nontrivial invariant subspace) it is called **reducible**.
 
@@ -118,14 +118,14 @@ The character is the most important invariant of a group representation; it is g
 
 **Definition 6.4.1 (Character)** Let $\rho: G \to \operatorname{GL}(V)$ be a representation of a finite group $G$ on a finite-dimensional vector space $V$. The function $\chi_\rho: G \to F$, $\chi_\rho(g) = \operatorname{tr}(\rho(g))$ ($g \in G$), is called the **character** of the representation $\rho$.
 
-From the property $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ of the trace ([trace of a matrix](/2.1.1)), $\chi_\rho(e) = \dim V$ and $\chi_\rho(hgh^{-1}) = \chi_\rho(g)$, so a character is constant on each **conjugacy class** (Definition 2.6.2); moreover, equivalent representations have the same character. The character of a direct sum is the sum of the characters: $\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$.
+From the property $\operatorname{tr}(AB) = \operatorname{tr}(BA)$ of the trace ([trace of a matrix](/2.1.1#def-1.10.3)), $\chi_\rho(e) = \dim V$ and $\chi_\rho(hgh^{-1}) = \chi_\rho(g)$, so a character is constant on each **conjugacy class** (Definition 2.6.2); moreover, equivalent representations have the same character. The character of a direct sum is the sum of the characters: $\chi_{\rho_1 \oplus \rho_2} = \chi_{\rho_1} + \chi_{\rho_2}$.
 
 **Theorem 6.4.1 (Schur's Lemma)** Let $(\rho_1, V_1)$ and $(\rho_2, V_2)$ be irreducible representations of a group $G$, and let $\varphi: V_1 \to V_2$ be a $G$-equivariant linear map, that is, $\varphi \circ \rho_1(g) = \rho_2(g) \circ \varphi$ for every $g \in G$. Then:
 
 1. either $\varphi = 0$ or $\varphi$ is a linear isomorphism; in particular, $\varphi = 0$ if the two representations are not equivalent;
 2. if $V_1 = V_2 = V$ is finite-dimensional, $\rho_1 = \rho_2$, and the field $F$ is algebraically closed (such as $\mathbb{C}$), then $\varphi = \lambda I_V$ ($\lambda \in F$) is a scalar transformation.
 
-**Proof**: $\ker \varphi$ is an invariant subspace of $V_1$, and $\varphi(V_1)$ is an invariant subspace of $V_2$. By irreducibility, $\ker \varphi = V_1$ (that is, $\varphi = 0$) or $\ker \varphi = \{0\}$; in the latter case $\varphi(V_1) \neq \{0\}$, so $\varphi(V_1) = V_2$ and $\varphi$ is an isomorphism. This proves 1. For 2, take an eigenvalue $\lambda$ of $\varphi$ (it exists over an algebraically closed field; see [eigenvalues](/2.1.6)). Then $\varphi - \lambda I_V$ is also equivariant and is not an isomorphism, so by 1, $\varphi = \lambda I_V$. $\square$
+**Proof**: $\ker \varphi$ is an invariant subspace of $V_1$, and $\varphi(V_1)$ is an invariant subspace of $V_2$. By irreducibility, $\ker \varphi = V_1$ (that is, $\varphi = 0$) or $\ker \varphi = \{0\}$; in the latter case $\varphi(V_1) \neq \{0\}$, so $\varphi(V_1) = V_2$ and $\varphi$ is an isomorphism. This proves 1. For 2, take an eigenvalue $\lambda$ of $\varphi$ (it exists over an algebraically closed field; see [eigenvalues](/2.1.6#def-6.3.1)). Then $\varphi - \lambda I_V$ is also equivariant and is not an isomorphism, so by 1, $\varphi = \lambda I_V$. $\square$
 
 Schur's lemma expresses the "rigidity" of irreducible representations and is the basis for deriving the orthogonality relations and classifying irreducible representations. It yields the following orthogonality relations.
 

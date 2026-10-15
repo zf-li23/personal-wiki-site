@@ -358,6 +358,14 @@ function rehypeStatements(state: State) {
           last = end++;
           continue;
         }
+        // A paragraph written directly under display math (no blank line) continues the statement:
+        //   $$ … $$
+        //   则称 λ 为 A 的特征值。
+        const prev = children[last];
+        if (c.type === 'element' && c.tagName === 'p' && isDisplayMath(prev) && !leadingStrong(c) && prev.position && c.position && c.position.start.line === prev.position.end.line + 1) {
+          last = end++;
+          continue;
+        }
         break;
       }
       wrapper.children = children.slice(i, last + 1) as ElementContent[];
