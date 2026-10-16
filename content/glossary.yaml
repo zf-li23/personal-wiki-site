@@ -970,6 +970,10 @@ terms:
   - { zh: 二次曲面, en: quadric surface }
   - { zh: Fubini 定理, en: "Fubini's theorem", aliases: [富比尼定理] }
   - { zh: 积分号下求导, en: differentiation under the integral sign, aliases: [Leibniz 积分法则, Leibniz integral rule] }
+  - { zh: Green 第一公式, en: "Green's first identity", aliases: [第一 Green 公式, Green 第一恒等式] }
+  - { zh: Möbius 带, en: Möbius strip, aliases: [莫比乌斯带] }
+  - { zh: 方向场, en: direction field, aliases: [斜率场, slope field] }
+  - { zh: Liouville 公式, en: "Liouville's formula", aliases: [Abel 公式, "Abel's identity"] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数
