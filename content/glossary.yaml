@@ -1042,7 +1042,7 @@ terms:
   - { zh: Bessel 方程, en: Bessel equation, aliases: [贝塞尔方程] }
   - { zh: 第一类 Bessel 函数, en: Bessel function of the first kind, aliases: [Bessel 函数, Bessel function] }
   - { zh: 第二类 Bessel 函数, en: Bessel function of the second kind, aliases: [Neumann 函数, Neumann function] }
-  - { zh: Lyapunov 稳定, en: Lyapunov stability, aliases: [李雅普诺夫稳定] }
+  - { zh: Lyapunov 稳定, en: Lyapunov stability, aliases: [李雅普诺夫稳定, Lyapunov stable] }
   - { zh: 渐近稳定, en: asymptotic stability, aliases: [asymptotically stable] }
   - { zh: 稳定多项式, en: Hurwitz polynomial, aliases: [Hurwitz 多项式, stable polynomial] }
   - { zh: 平衡点, en: equilibrium point, aliases: [equilibrium] }
@@ -1090,3 +1090,7 @@ terms:
   - { zh: 完全积分, en: complete integral }
   - { zh: 奇积分, en: singular integral, scope: ["2.4", "2.5"] }
   - { zh: 特征函数, en: eigenfunction, scope: ["2.4", "2.5"] }
+  - { zh: 鞍点, en: saddle, scope: ["2.4", "7.4"] }
+  - { zh: 结点, en: node, scope: ["2.4", "7.4"] }
+  - { zh: 焦点, en: focus, aliases: [spiral point], scope: ["2.4", "7.4"] }
+  - { zh: 中心, en: center, scope: ["2.4", "7.4"] }

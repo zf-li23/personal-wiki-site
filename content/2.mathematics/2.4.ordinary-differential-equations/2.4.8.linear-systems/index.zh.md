@@ -29,7 +29,7 @@ $$
 $$
 \|A\boldsymbol{x}\|\le\|A\|\,\|\boldsymbol{x}\|,\qquad\|A+B\|\le\|A\|+\|B\|,\qquad\|AB\|\le\|A\|\,\|B\|,
 $$
-并且对向量值函数有 $\big\|\int_a^b\boldsymbol{g}(s)\,\mathrm{d}s\big\|\le\int_a^b\|\boldsymbol{g}(s)\|\,\mathrm{d}s$。梳理中使用的 $\sum_{i,j}\lvert a_{ij}\rvert$ 不是算子范数，但同样满足后两条不等式，下面的论证对它也成立。
+并且对向量值函数有 $\big\|\int_a^b\boldsymbol{g}(s)\,\mathrm{d}s\big\|\le\int_a^b\|\boldsymbol{g}(s)\|\,\mathrm{d}s$。常用的 $\sum_{i,j}\lvert a_{ij}\rvert$ 不是算子范数，但同样满足后两条不等式，下面的论证对它也成立。
 
 ### 8.1.2. 存在唯一性定理
 
@@ -64,7 +64,7 @@ $$
 \|\boldsymbol{x}(t)\|\le\Big(\|\boldsymbol{\eta}\|+\Big\lvert\int_{t_0}^t\|\boldsymbol{f}(s)\|\,\mathrm{d}s\Big\rvert\Big)\mathrm{e}^{L\lvert t-t_0\rvert},\qquad t\in J.
 $$
 
-**注 8.1.1** 线性是关键。$x'=x^2$ 的右端在全平面上光滑，但满足 $x(0)=1$ 的解 $x=\frac1{1-t}$ 只存在于 $t<1$。线性方程组的解则在 $I$ 内处处存在，奇性只能出现在系数的奇点处（例如 $t^2y''-2ty'+2y=0$ 的系数在 $t=0$ 处不连续）。
+**注 8.1.1** 线性是关键。$x'=x^2$ 的右端在全平面上光滑，但满足 $x(0)=1$ 的解 $x=\frac1{1-t}$ 只存在于 $t<1$。线性方程组的解则在 $I$ 内处处存在，奇性只能出现在系数的奇点处（例如 $t^2y''-2ty'+2y=0$ 化为标准形式后，系数在 $t=0$ 处不连续）。
 
 复系数方程组的实部、虚部满足实系数方程组；反过来，$A$、$\boldsymbol{f}$ 为实值且 $\boldsymbol{\eta}$ 为实向量时，由唯一性解是实值的（它的共轭也是解）。
 
@@ -171,7 +171,7 @@ $$
 
 验证：记 (8.4) 右端为 $\boldsymbol{x}(t)=\Phi(t)\boldsymbol{c}(t)$，$\boldsymbol{c}(t)=\Phi^{-1}(t_0)\boldsymbol{\eta}+\int_{t_0}^t\Phi^{-1}(s)\boldsymbol{f}(s)\,\mathrm{d}s$。则 $\boldsymbol{x}'=A\Phi\boldsymbol{c}+\Phi\Phi^{-1}(t)\boldsymbol{f}(t)=A\boldsymbol{x}+\boldsymbol{f}$，且 $\boldsymbol{x}(t_0)=\boldsymbol{\eta}$。由定理 8.1.1 的唯一性，它就是所求的解。通解的形式由定理 8.2.1 得到。 $\square$
 
-梳理中的通解公式写作 $\Phi(t)\big(\boldsymbol{c}+\Phi(t)\int_{t_0}^t\Phi^{-1}\boldsymbol{f}\big)$，括号内多了一个 $\Phi(t)$；正确的是 (8.4)。
+通解公式有时被误写作 $\Phi(t)\big(\boldsymbol{c}+\Phi(t)\int_{t_0}^t\Phi^{-1}\boldsymbol{f}\big)$，括号内多了一个 $\Phi(t)$；正确的是 (8.4)。
 
 式 (8.4) 有清楚的含义：解 = 初值经齐次方程组演化的结果 + 每一时刻 $s$ 的输入 $\boldsymbol{f}(s)\,\mathrm{d}s$ 从时刻 $s$ 演化到时刻 $t$ 的结果之和。$R(t,s)=\Phi(t)\Phi^{-1}(s)$ 就是在时刻 $s$ 施加单位"冲量"后系统的响应，这一叠加原则在物理中称为 Duhamel 原理。由 (8.4) 还可以看出：非齐次方程组的解在 $\boldsymbol{\eta}$ 与 $\boldsymbol{f}$ 两个输入上都是线性的。
 
@@ -349,5 +349,5 @@ $$
 | 非齐次方程组 | $\boldsymbol{x}=\Phi(t)\Phi^{-1}(t_0)\boldsymbol{\eta}+\int_{t_0}^t\Phi(t)\Phi^{-1}(s)\boldsymbol{f}(s)\,\mathrm{d}s$（式 (8.4)） |
 | 矩阵指数 | 级数在有界区间上一致绝对收敛；可交换时 $\mathrm{e}^{A+B}=\mathrm{e}^A\mathrm{e}^B$；$\det\mathrm{e}^{tA}=\mathrm{e}^{t\operatorname{tr}(A)}$ |
 | 常系数方程组 | $\mathrm{e}^{tA}$ 是标准基解矩阵；$\mathrm{e}^{tA}=P\mathrm{e}^{tJ}P^{-1}$，Jordan 块给出 $t^k\mathrm{e}^{\lambda t}$ |
-| 增长估计 | $\|\mathrm{e}^{tA}\|\le C\mathrm{e}^{(\mu+\varepsilon)t}$，$\mu=\max\operatorname{Re}\lambda$（推论 8.5.1） |
+| 增长估计 | $\Vert\mathrm{e}^{tA}\Vert\le C\mathrm{e}^{(\mu+\varepsilon)t}$，$\mu=\max\operatorname{Re}\lambda$（推论 8.5.1） |
 | 计算方法 | Jordan 基；根子空间分解 (8.6)；插值法；先求任一 $\Phi$ 再算 $\Phi(t)\Phi^{-1}(0)$ |
