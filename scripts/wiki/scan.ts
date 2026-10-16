@@ -141,6 +141,9 @@ export function sourceLangOf(files: Partial<Record<Lang, PageFile>>): Lang {
   const stamped = withBody.filter((l) => files[l]!.frontMatter.source_hash);
   if (withBody.length > 1 && stamped.length === 1) return withBody.find((l) => l !== stamped[0])!;
   if (withBody.length === 1) return withBody[0];
+  // Not stamped yet: the sources (courses, books) live in the source file.
+  const withSources = withBody.filter((l) => files[l]!.frontMatter.courses || files[l]!.frontMatter.textbooks);
+  if (withBody.length > 1 && stamped.length === 0 && withSources.length === 1) return withSources[0];
   return siteConfig.sourceLanguage;
 }
 

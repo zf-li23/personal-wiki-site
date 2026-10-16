@@ -382,7 +382,7 @@ terms:
   - { zh: Kruskal 算法, en: Kruskal's algorithm }
   - { zh: Prim 算法, en: Prim's algorithm }
   - { zh: 平面图, en: planar graph, aliases: [可平面图] }
-  - { zh: 欧拉公式, en: "Euler's formula", aliases: ["Euler's formula for planar graphs"], scope: ["1.4"] }
+  - { zh: 欧拉公式, en: "Euler's formula", aliases: [Euler 公式, "Euler's formula for planar graphs"], scope: ["1.4"] }
   - { zh: 极大平面图, en: maximal planar graph }
   - { zh: 二分图, en: bipartite graph }
   - { zh: Kuratowski 定理, en: Kuratowski's theorem }
@@ -692,7 +692,7 @@ terms:
   - { zh: 多重线性型, en: multilinear form }
   - { zh: 自由变量, en: free variable, scope: ["2"] }
   - { zh: 矩阵, en: matrix }
-  - { zh: 欧拉公式, en: "Euler's formula", scope: ["2"] }
+  - { zh: 欧拉公式, en: "Euler's formula", aliases: [Euler 公式], scope: ["2"] }
   - { zh: 前代法, en: forward substitution }
   - { zh: LDU 分解, en: LDU decomposition }
   - { zh: 长度, en: Euclidean norm, aliases: [向量的长度, 欧氏范数, length], scope: ["2"] }
@@ -1168,6 +1168,7 @@ terms:
   - { zh: 复势, en: complex potential }
   - { zh: 流函数, en: stream function }
   - { zh: 单值分支, en: branch, aliases: [分支], scope: ["2.3"] }
+  - { zh: 广义圆周, en: generalized circle, scope: ["2.3"] }
 
   # partial differential equations (2.5)
   - { zh: 古典解, en: classical solution }
@@ -1241,3 +1242,5 @@ terms:
   - { zh: Dirichlet 原理, en: "Dirichlet's principle" }
   - { zh: 镜像法, en: method of images }
   - { zh: 特征方程, en: characteristic equation, scope: ["2.5"] }
+  - { zh: Fourier 定律, en: "Fourier's law", aliases: [Fourier 热传导定律] }
+  - { zh: Fick 定律, en: "Fick's law" }

@@ -107,6 +107,8 @@ describe('source language', () => {
     assert.equal(sourceLangOf({ zh: file('中文'), en: file('English', 'abc') }), 'zh');
     assert.equal(sourceLangOf({ zh: file('中文'), en: file('English') }), 'zh');
     assert.equal(sourceLangOf({ zh: file(''), en: file('') }), 'zh');
+    const withCourses = { ...file('English'), frontMatter: { title: 't', courses: [{ code: '1', name: 'c' }] } };
+    assert.equal(sourceLangOf({ zh: file('中文'), en: withCourses }), 'en');
   });
 });
 
