@@ -1,6 +1,6 @@
 ---
 title: Multiple Integrals and Integrals Depending on a Parameter
-source_hash: 8a960a86bed6
+source_hash: 2cf595dd7dc2
 ---
 
 The definite integral is the quantity obtained on an interval by "partition, approximate, sum, take the limit". Replacing the interval by a plane or spatial region, the same four steps give double and triple integrals, collectively called multiple integrals: the volume of a solid under a curved top, the mass of a nonuniform plate or body, centers of mass and moments of inertia are all expressed by them. The definition and properties of multiple integrals are copied almost verbatim from those of the definite integral; the difficulty lies in computation. There are two basic strategies. One is to reduce the integral to iterated integrals, that is, to compute definite integrals one after another, the key being to read off the limits of integration from the shape of the region. The other is a change of variables that transforms the region into a simple shape, at the cost of multiplying the area or volume element by the absolute value of the **Jacobian determinant**; this is the local manifestation of the meaning of the **determinant** in linear algebra as a [volume scaling factor](/2.1.5#sec-5.3.1).
@@ -29,7 +29,7 @@ $f$ is called the integrand and $\mathrm{d}\sigma$ the area element. The sum abo
 
 **Definition 12.1.2 (Triple Integral)** Let $\Omega\subset\mathbb{R}^3$ be a bounded closed region. Divide $\Omega$ arbitrarily into small regions $\Omega_1,\dots,\Omega_k$ of volumes $\Delta V_i$ and choose arbitrary $P_i\in\Omega_i$. If $\sum f(P_i)\Delta V_i$ has a limit as $\lambda(T)\to0$ (independent of the partition and the sample points), $f$ is said to be integrable on $\Omega$, and the limit is called the **triple integral** of $f$ over $\Omega$, written $\iiint_\Omega f(x,y,z)\,\mathrm{d}V$.
 
-Double and triple integrals are collectively called **multiple integrals**. $\iint_D1\,\mathrm{d}\sigma$ is the area of $D$ and $\iiint_\Omega1\,\mathrm{d}V$ the volume of $\Omega$; for $f\ge0$, $\iint_Df\,\mathrm{d}\sigma$ is the volume of the solid under the graph, and $\iiint_\Omega\rho\,\mathrm{d}V$ is the mass of a body with density $\rho$.
+Double and triple integrals are collectively called *multiple integrals*. $\iint_D1\,\mathrm{d}\sigma$ is the area of $D$ and $\iiint_\Omega1\,\mathrm{d}V$ the volume of $\Omega$; for $f\ge0$, $\iint_Df\,\mathrm{d}\sigma$ is the volume of the solid under the graph, and $\iiint_\Omega\rho\,\mathrm{d}V$ is the mass of a body with density $\rho$.
 
 ### 12.1.2. Integrability and Properties
 
@@ -77,7 +77,7 @@ The table compares the properties of definite and multiple integrals (for line a
 
 ### 12.2.1. Iterated Integrals over Rectangles
 
-The basic method of evaluating a double integral is to reduce it to an **iterated integral**: fix one variable and integrate with respect to the other, then integrate with respect to the remaining variable. Intuitively, cutting the solid by the plane $x=x_0$ gives a cross section of area $A(x_0)=\int_c^df(x_0,y)\,\mathrm{d}y$, and the formula for the "volume of a solid with known cross-sectional areas" $V=\int_a^bA(x)\,\mathrm{d}x$ ([2.2.7](/2.2.7)) then gives the volume.
+The basic method of evaluating a double integral is to reduce it to an *iterated integral*: fix one variable and integrate with respect to the other, then integrate with respect to the remaining variable. Intuitively, cutting the solid by the plane $x=x_0$ gives a cross section of area $A(x_0)=\int_c^df(x_0,y)\,\mathrm{d}y$, and the formula for the "volume of a solid with known cross-sectional areas" $V=\int_a^bA(x)\,\mathrm{d}x$ ([2.2.7](/2.2.7)) then gives the volume.
 
 **Theorem 12.2.1** Let $f$ be continuous on the rectangle $D=[a,b]\times[c,d]$. Then
 
@@ -93,7 +93,7 @@ $$
 
 Integrating in $x$ and summing over $i$ gives $\sum_{i,j}m_{ij}\Delta x_i\Delta y_j\le\int_a^bF(x)\,\mathrm{d}x\le\sum_{i,j}M_{ij}\Delta x_i\Delta y_j$. The two sides are **Darboux sums** of the double integral, and both tend to $\iint_Df\,\mathrm{d}\sigma$ as the partition is refined. The other order is similar. $\square$
 
-The iterated integral $\int_a^b\Big(\int_c^df\,\mathrm{d}y\Big)\mathrm{d}x$ is usually abbreviated $\int_a^b\mathrm{d}x\int_c^df(x,y)\,\mathrm{d}y$ and called the iterated integral first in $y$, then in $x$. In Cartesian coordinates the area element is written $\mathrm{d}\sigma=\mathrm{d}x\,\mathrm{d}y$, corresponding to a partition of the region by lines parallel to the coordinate axes. Theorems of this kind, reducing a multiple integral to iterated integrals, are generally called Fubini's theorem.
+The iterated integral $\int_a^b\Big(\int_c^df\,\mathrm{d}y\Big)\mathrm{d}x$ is usually abbreviated $\int_a^b\mathrm{d}x\int_c^df(x,y)\,\mathrm{d}y$ and called the iterated integral first in $y$, then in $x$. In Cartesian coordinates the area element is written $\mathrm{d}\sigma=\mathrm{d}x\,\mathrm{d}y$, corresponding to a partition of the region by lines parallel to the coordinate axes. Theorems of this kind, reducing a multiple integral to iterated integrals, are generally called *Fubini's theorem*.
 
 ### 12.2.2. Iterated Integrals over General Regions
 
@@ -209,7 +209,7 @@ The substitution $x=\sqrt t$ gives $\Gamma\big(\frac12\big)=\int_0^{+\infty}t^{-
 
 ### 12.3.1. Preliminaries: Quadric Surfaces and Projections
 
-The regions of triple integrals are often bounded by quadric surfaces; to determine the limits, one must know their shapes and the projections of their intersection curves onto the coordinate planes.
+The regions of triple integrals are often bounded by *quadric surfaces*; to determine the limits, one must know their shapes and the projections of their intersection curves onto the coordinate planes.
 
 | Name | Standard equation | Features |
 |---|---|---|

@@ -217,7 +217,7 @@ function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): stri
   // The annotation may use the English name or any English alias, but not a bare abbreviation:
   // "常微分方程（ODE）" only introduces the abbreviation, it does not mark the definition.
   const en = conceptNames(concept, 'en')
-    .filter((n) => !/^[A-Z]{2,6}s?$/.test(n))
+    .filter((n) => n === concept.en || !/^[A-Z]{2,6}s?$/.test(n))
     .map(escapeRe)
     .join('|');
   const enRe = new RegExp(`^\\s*[（(]\\s*(?:${en})\\s*[）)]`, 'i');

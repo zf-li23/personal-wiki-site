@@ -1,6 +1,6 @@
 ---
 title: Series of Functions, Power Series and Fourier Series
-source_hash: 85cb3d0f3e64
+source_hash: 834ad15937d7
 ---
 
 Every term of the series in [Chapter 8](/2.2.8) is a number; in this chapter every term is a function, as in $\sum x^n$ or $\sum\frac{\sin nx}{n}$. For each fixed $x$ such a series is a numerical series, and the tests of Chapter 8 still apply. The new questions concern the properties of the sum: is an infinite sum of continuous functions continuous? May we integrate or differentiate term by term? The answer is in general no, and the crucial additional hypothesis is uniform convergence (9.1).
@@ -121,7 +121,7 @@ The hypothesis for termwise differentiation is imposed on the series of derivati
 
 **Proof** Take any $x_0 > 0$ and let $\delta = x_0/2$. On $[\delta, +\infty)$ we have $n\mathrm{e}^{-nx} \le n\mathrm{e}^{-n\delta}$, and $\sum n\mathrm{e}^{-n\delta}$ converges (ratio test), so by the Weierstrass M-test the series converges uniformly on $[\delta, +\infty)$, and $S$ is continuous at $x_0$. The series of derivatives $\sum(-n^2\mathrm{e}^{-nx})$ has the majorant $\sum n^2\mathrm{e}^{-n\delta}$, so likewise $S$ is differentiable at $x_0$. $\square$
 
-Neither series converges uniformly on $(0, +\infty)$ (as $x \to 0^+$ the terms are not uniformly small), but continuity and differentiability are local properties: it suffices to have uniform convergence on a closed interval around each point. This is called uniform convergence on compact subsets (or locally uniform convergence).
+Neither series converges uniformly on $(0, +\infty)$ (as $x \to 0^+$ the terms are not uniformly small), but continuity and differentiability are local properties: it suffices to have uniform convergence on a closed interval around each point. This is called *uniform convergence on compact subsets* (or locally uniform convergence).
 
 ## 9.2. Power Series
 

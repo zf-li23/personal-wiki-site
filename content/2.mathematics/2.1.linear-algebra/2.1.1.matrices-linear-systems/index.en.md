@@ -1,6 +1,6 @@
 ---
 title: Matrices and Systems of Linear Equations
-source_hash: 984a3e28c163
+source_hash: 0c4cfac9b207
 ---
 
 Linear algebra studies linear relations among variables in many dimensions. Single-variable calculus deals with nonlinear functions of one variable; linear algebra deals with functions $\boldsymbol{y} = A\boldsymbol{x}$ whose inputs and outputs are vectors but whose rule is linear. Multivariable calculus ([2.2](/2.2)) combines the two, and its central technique is precisely local linearization. This chapter starts from vectors and linear operations in $\mathbb{R}^m$ and introduces linear maps and the matrices that represent them. The most basic problem of linear algebra, solving a system of linear equations, asks for the preimage of a given image. We reduce a system to echelon form by elementary operations, which yields a standard procedure for solving it (Gaussian elimination and Gauss–Jordan elimination) together with a criterion for solvability. Finally, the sum, scalar multiple and composition of maps lead to the linear operations on matrices, the transpose and matrix multiplication.
@@ -292,7 +292,7 @@ $$
 
 and read off the solution $x_1 = x_2 = x_3 = 1$ directly. If the right-hand side of the fourth equation is changed to $3$, the same elimination produces the last row $[0\ 0\ 0\ 3]$, that is, the contradictory equation $0 = 3$, and the system has no solution.
 
-**Definition 1.7.1 (Row Echelon Form)** A row whose entries are all zero is called a zero row, and any other row a nonzero row; the first nonzero entry from the left in a nonzero row is called the **pivot** of that row. A matrix is said to be in **row echelon form** if all zero rows lie below all nonzero rows and the column indices of the pivots increase strictly with the row index. The number of nonzero rows is called the number of pivots (or steps) of the echelon form; the columns containing pivots are called pivot columns, and the others free columns.
+**Definition 1.7.1 (Row Echelon Form)** A row whose entries are all zero is called a zero row, and any other row a nonzero row; the first nonzero entry from the left in a nonzero row is called the **pivot** of that row. A matrix is said to be in **row echelon form** if all zero rows lie below all nonzero rows and the column indices of the pivots increase strictly with the row index. The number of nonzero rows is called the number of pivots (or steps) of the echelon form; the columns containing pivots are called **pivot columns**, and the others free columns.
 
 **Definition 1.7.2 (Reduced Row Echelon Form)** A matrix in row echelon form is in **reduced row echelon form** if all its pivots equal $1$ and every entry of a pivot column other than the pivot is $0$. The reduced row echelon form obtained from a matrix $A$ is denoted by $\operatorname{rref}(A)$.
 

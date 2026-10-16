@@ -120,7 +120,7 @@ $$
 
 **证明** 任取 $x_0 > 0$，令 $\delta = x_0/2$。在 $[\delta, +\infty)$ 上 $n\mathrm{e}^{-nx} \le n\mathrm{e}^{-n\delta}$，$\sum n\mathrm{e}^{-n\delta}$ 收敛（比值判别法），由 Weierstrass 判别法，级数在 $[\delta, +\infty)$ 上一致收敛，$S$ 在 $x_0$ 处连续。导数级数 $\sum(-n^2\mathrm{e}^{-nx})$ 有优级数 $\sum n^2\mathrm{e}^{-n\delta}$，同理 $S$ 在 $x_0$ 处可导。$\square$
 
-两个级数在 $(0, +\infty)$ 上都不一致收敛（$x \to 0^+$ 时通项不一致地小），但连续、可导是局部性质，只需在每一点附近的闭区间上一致收敛，这称为内闭一致收敛。
+两个级数在 $(0, +\infty)$ 上都不一致收敛（$x \to 0^+$ 时通项不一致地小），但连续、可导是局部性质，只需在每一点附近的闭区间上一致收敛，这称为内闭一致收敛（uniform convergence on compact subsets）。
 
 ## 9.2. 幂级数
 

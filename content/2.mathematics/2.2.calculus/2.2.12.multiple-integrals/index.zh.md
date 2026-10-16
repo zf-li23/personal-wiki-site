@@ -28,7 +28,7 @@ $f$ 称为被积函数，$\mathrm{d}\sigma$ 称为面积元。上面的和式是
 
 **定义 12.1.2（三重积分）** 设 $\Omega\subset\mathbb{R}^3$ 是有界闭区域，把 $\Omega$ 任意分成小区域 $\Omega_1,\dots,\Omega_k$，体积为 $\Delta V_i$，任取 $P_i\in\Omega_i$。若 $\lambda(T)\to0$ 时 $\sum f(P_i)\Delta V_i$ 有（与分割、取点无关的）极限，则称 $f$ 在 $\Omega$ 上可积，极限称为 $f$ 在 $\Omega$ 上的**三重积分**，记作 $\iiint_\Omega f(x,y,z)\,\mathrm{d}V$。
 
-二重积分与三重积分统称**重积分**。$\iint_D1\,\mathrm{d}\sigma$ 是 $D$ 的面积，$\iiint_\Omega1\,\mathrm{d}V$ 是 $\Omega$ 的体积；$f\ge0$ 时 $\iint_Df\,\mathrm{d}\sigma$ 是曲顶柱体的体积，$\iiint_\Omega\rho\,\mathrm{d}V$ 是密度为 $\rho$ 的物体的质量。
+二重积分与三重积分统称重积分（multiple integral）。$\iint_D1\,\mathrm{d}\sigma$ 是 $D$ 的面积，$\iiint_\Omega1\,\mathrm{d}V$ 是 $\Omega$ 的体积；$f\ge0$ 时 $\iint_Df\,\mathrm{d}\sigma$ 是曲顶柱体的体积，$\iiint_\Omega\rho\,\mathrm{d}V$ 是密度为 $\rho$ 的物体的质量。
 
 ### 12.1.2. 可积性与性质
 
@@ -76,7 +76,7 @@ $f$ 称为被积函数，$\mathrm{d}\sigma$ 称为面积元。上面的和式是
 
 ### 12.2.1. 矩形区域上的累次积分
 
-计算二重积分的基本方法是化为**累次积分**：先固定一个变量对另一个变量做定积分，再对剩下的变量做定积分。直观地看，用平面 $x=x_0$ 截曲顶柱体，截面面积为 $A(x_0)=\int_c^df(x_0,y)\,\mathrm{d}y$，再由"截面面积已知的立体体积" $V=\int_a^bA(x)\,\mathrm{d}x$（[2.2.7](/2.2.7)）得到体积。
+计算二重积分的基本方法是化为累次积分（iterated integral）：先固定一个变量对另一个变量做定积分，再对剩下的变量做定积分。直观地看，用平面 $x=x_0$ 截曲顶柱体，截面面积为 $A(x_0)=\int_c^df(x_0,y)\,\mathrm{d}y$，再由"截面面积已知的立体体积" $V=\int_a^bA(x)\,\mathrm{d}x$（[2.2.7](/2.2.7)）得到体积。
 
 **定理 12.2.1** 设 $f$ 在矩形 $D=[a,b]\times[c,d]$ 上连续，则
 
@@ -92,7 +92,7 @@ $$
 
 对 $x$ 积分并对 $i$ 求和，得 $\sum_{i,j}m_{ij}\Delta x_i\Delta y_j\le\int_a^bF(x)\,\mathrm{d}x\le\sum_{i,j}M_{ij}\Delta x_i\Delta y_j$。两端是二重积分的 **Darboux 和**，分割加细时都趋于 $\iint_Df\,\mathrm{d}\sigma$。另一个次序同理。$\square$
 
-累次积分 $\int_a^b\Big(\int_c^df\,\mathrm{d}y\Big)\mathrm{d}x$ 通常简写为 $\int_a^b\mathrm{d}x\int_c^df(x,y)\,\mathrm{d}y$，称为先 $y$ 后 $x$ 的累次积分。在直角坐标系中，面积元记作 $\mathrm{d}\sigma=\mathrm{d}x\,\mathrm{d}y$，相当于用平行于坐标轴的直线"横平竖直"地分割区域。把重积分化为累次积分的这类定理一般称为 Fubini 定理。
+累次积分 $\int_a^b\Big(\int_c^df\,\mathrm{d}y\Big)\mathrm{d}x$ 通常简写为 $\int_a^b\mathrm{d}x\int_c^df(x,y)\,\mathrm{d}y$，称为先 $y$ 后 $x$ 的累次积分。在直角坐标系中，面积元记作 $\mathrm{d}\sigma=\mathrm{d}x\,\mathrm{d}y$，相当于用平行于坐标轴的直线"横平竖直"地分割区域。把重积分化为累次积分的这类定理一般称为 Fubini 定理（Fubini's theorem）。
 
 ### 12.2.2. 一般区域上的累次积分
 
@@ -208,7 +208,7 @@ $$
 
 ### 12.3.1. 预备：二次曲面与投影
 
-三重积分的积分区域常由二次曲面围成，定限时要知道它们的形状以及交线在坐标面上的投影。
+三重积分的积分区域常由二次曲面（quadric surface）围成，定限时要知道它们的形状以及交线在坐标面上的投影。
 
 | 名称 | 标准方程 | 特征 |
 |---|---|---|

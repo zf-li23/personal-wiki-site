@@ -94,7 +94,7 @@ $$
 a_n = \sum_{k=1}^{n-1}\Bigl[\frac1k-\ln\Bigl(1+\frac1k\Bigr)\Bigr]+\frac1n>0,
 $$
 
-$\{a_n\}$ 有下界。由**单调收敛定理** $\{a_n\}$ 收敛，其极限记为 $\gamma$（Euler 常数，$\gamma\approx0.5772$），即 $1+\frac12+\cdots+\frac1n = \ln n+\gamma+o(1)$。 $\square$
+$\{a_n\}$ 有下界。由**单调收敛定理** $\{a_n\}$ 收敛，其极限记为 $\gamma$（Euler 常数（Euler–Mascheroni constant），$\gamma\approx0.5772$），即 $1+\frac12+\cdots+\frac1n = \ln n+\gamma+o(1)$。 $\square$
 
 **例 5.1.4** 证明 $f(x) = \bigl(1+\frac1x\bigr)^x$ 在 $(0,+\infty)$ 上单调增加。
 

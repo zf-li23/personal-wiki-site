@@ -1,6 +1,6 @@
 ---
 title: Higher-Order Linear Differential Equations and Linear Systems
-source_hash: 874d7b975982
+source_hash: 6891fadde32f
 ---
 
 The first-order linear equations of the [previous chapter](/2.2.15) have two features: the solution set has the structure "one particular solution plus the general solution of the homogeneous equation", and the solutions of the homogeneous equation form a one-dimensional vector space. This chapter extends both features to $n$th-order linear equations and to linear systems: the solution set of the homogeneous equation is an $n$-dimensional **vector space**, finding the general solution means finding a **basis** of it, and deciding whether $n$ solutions form a basis requires the Wronskian. The language of linear algebra ([2.1](/2.1)) here is not a metaphor but literal: differentiation is a linear map, a linear differential equation is an equation for a linear map, and the superposition principle, the structure of solutions, bases and dimension are all concrete instances of the results of [2.1.3](/2.1.3) and [2.1.8](/2.1.8).
@@ -77,7 +77,7 @@ For two solutions we can compute more concretely: $W=y_1y_2'-y_1'y_2$ satisfies 
 $$
 W(x)=W(x_0)\,\mathrm{e}^{-\int_{x_0}^xa_1(t)\,\mathrm{d}t}.
 $$
-This is called Liouville's formula (it holds for $n$th-order equations as well), and it shows directly that $W$ is either identically zero or nowhere zero. For the case of systems, see Theorem 16.6.2.
+This is called *Liouville's formula* (it holds for $n$th-order equations as well), and it shows directly that $W$ is either identically zero or nowhere zero. For the case of systems, see Theorem 16.6.2.
 
 ### 16.1.3. The Solution Space and the General Solution
 
@@ -317,7 +317,7 @@ $$
 
 ### 16.4.2. The Operator Method
 
-Factoring and "inverting" $P(\mathrm{D})$ as if it were a polynomial gives another set of techniques for finding particular solutions, called the **operator method**.
+Factoring and "inverting" $P(\mathrm{D})$ as if it were a polynomial gives another set of techniques for finding particular solutions, called the *operator method*.
 
 Method (1): successive reduction of order ("peeling off" factors). A polynomial $P$ with real coefficients factors into real linear and quadratic factors. If $P(\mathrm{D})=(\mathrm{D}-\lambda_1)R(\mathrm{D})$, let $z=R(\mathrm{D})y$; first solve the first-order linear equation $z'-\lambda_1z=f$ (Eq. (15.3)), then solve the equation $R(\mathrm{D})y=z$ of one lower order. A quadratic factor $\mathrm{D}^2+s\mathrm{D}+t$ is handled in the same way, using variation of parameters for second-order equations. Each step uses only methods for first- and second-order equations, so in principle every nonhomogeneous equation with constant coefficients can be solved this way. The method places no restriction on the right-hand side.
 

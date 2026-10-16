@@ -1,6 +1,6 @@
 ---
 title: Studying Functions with Derivatives
-source_hash: 58fcf68a51bf
+source_hash: 5e2595c28ed8
 ---
 
 The previous chapter ([2.2.4](/2.2.4)) defined the **derivative** and established the rules of differentiation; this chapter uses derivatives to study functions themselves: monotonicity, local and global extrema, convexity and inflection points, asymptotes and curve sketching, as well as computing limits with derivatives (L'Hôpital's rule), proving inequalities, and approximating functions by polynomials (Taylor's formula). The bridge between derivatives (local information) and function values (global information) is the mean value theorem, which relies on the **extreme value theorem** for **continuous functions** on closed intervals ([2.2.3](/2.2.3)); almost everything else in the chapter follows from it. Taylor's formula is the other core topic of the chapter: it pushes the idea of **equivalent infinitesimals** to arbitrary order, is a powerful tool for computing limits and estimating errors, and underlies the Taylor series of [2.2.9](/2.2.9) as well as the multivariable Taylor formula and the tests for extrema in [2.2.11](/2.2.11). Convex functions and Jensen's inequality are also used frequently in probability theory.
@@ -95,7 +95,7 @@ $$
 a_n = \sum_{k=1}^{n-1}\Bigl[\frac1k-\ln\Bigl(1+\frac1k\Bigr)\Bigr]+\frac1n>0,
 $$
 
-and $\{a_n\}$ is bounded below. By the **monotone convergence theorem**, $\{a_n\}$ converges; its limit is denoted $\gamma$ (the Euler–Mascheroni constant, $\gamma\approx0.5772$), that is, $1+\frac12+\cdots+\frac1n = \ln n+\gamma+o(1)$. $\square$
+and $\{a_n\}$ is bounded below. By the **monotone convergence theorem**, $\{a_n\}$ converges; its limit is denoted $\gamma$ (the *Euler–Mascheroni constant*, $\gamma\approx0.5772$), that is, $1+\frac12+\cdots+\frac1n = \ln n+\gamma+o(1)$. $\square$
 
 **Example 5.1.4** Prove that $f(x) = \bigl(1+\frac1x\bigr)^x$ is strictly increasing on $(0,+\infty)$.
 

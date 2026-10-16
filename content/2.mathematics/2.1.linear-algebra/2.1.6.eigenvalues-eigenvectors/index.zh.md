@@ -221,7 +221,7 @@ $$
 
 **证明** 1. $A^k\boldsymbol{x} = A^{k-1}(\lambda_0\boldsymbol{x}) = \cdots = \lambda_0^k\boldsymbol{x}$，再由线性组合得 $f(A)\boldsymbol{x} = f(\lambda_0)\boldsymbol{x}$。2. 对 $A\boldsymbol{x} = \lambda_0\boldsymbol{x}$ 两边左乘 $\lambda_0^{-1}A^{-1}$。3. 由 1，$\boldsymbol{0} = f(A)\boldsymbol{x} = f(\lambda_0)\boldsymbol{x}$，而 $\boldsymbol{x} \ne \boldsymbol{0}$，故 $f(\lambda_0) = 0$。$\square$
 
-例如幂零矩阵（$A^k = O$）的特征值全为 $0$，幂等矩阵（$A^2 = A$）的特征值只能是 $0$ 或 $1$。
+例如幂零矩阵（nilpotent matrix），即存在正整数 $k$ 使 $A^k = O$ 的方阵，它的特征值全为 $0$；幂等矩阵（$A^2 = A$）的特征值只能是 $0$ 或 $1$。
 
 **例 6.4.1（秩一矩阵的特征值）** 设 $\boldsymbol{a}, \boldsymbol{b} \in \mathbb{R}^n$ 非零，$n \ge 2$，求 $A = \boldsymbol{a}\boldsymbol{b}^{\mathsf T}$ 的特征值。
 

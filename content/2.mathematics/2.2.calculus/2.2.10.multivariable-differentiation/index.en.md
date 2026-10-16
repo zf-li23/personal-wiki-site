@@ -1,6 +1,6 @@
 ---
 title: Limits, Continuity and Differentiation in Several Variables
-source_hash: 7a0b1e4f6eb8
+source_hash: 62fc2ed2a789
 ---
 
 With this chapter we enter multivariable calculus. It is a direct generalization of single-variable calculus: limits, continuity, derivatives and differentials all have multivariable versions, and most of the rules of computation keep their form. Once the independent variable ranges over the plane or space instead of a line, however, there are infinitely many ways to "approach a point", and phenomena appear that have no counterpart in one variable: a function may have the same limit along every line through a point and still have no limit there, and a function may have all its partial derivatives and still be discontinuous. The guiding thread of the chapter is to compare, at every step, what changes and what stays the same relative to the one-variable case.
@@ -259,7 +259,6 @@ A function of one variable is differentiable when $f(x_0+\Delta x)-f(x_0)=a\Delt
 $$
 f(x_0+\boldsymbol{h})-f(x_0)=a_1h_1+\cdots+a_nh_n+o(\|\boldsymbol{h}\|)\qquad(\boldsymbol{h}\to\boldsymbol{0}),
 $$
-
 then $f$ is said to be differentiable at $x_0$, and the linear part $a_1h_1+\cdots+a_nh_n$ is called the **total differential** of $f$ at $x_0$, denoted $\mathrm{d}f(x_0)$. If $f$ is differentiable at every point of a region $D$, it is said to be differentiable on $D$.
 
 **Theorem 10.5.1 (Necessary Conditions for Differentiability)** If $f$ is differentiable at $x_0$, then

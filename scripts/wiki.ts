@@ -10,6 +10,7 @@
  *   new <parent-id|root> <slug> <zh-title> <en-title>
  *                                    create the next page under a parent, with both language files
  *   terms                            concept report: concepts without a definition, uses before the definition
+ *   terms <id-prefix>...             a course's checklist: concepts used there without a definition site (exit 1)
  *   terms --bold [<id-prefix>...]    list bold text that is not a concept name (and so does not link)
  *   fix [<id>...] [--dry-run]        rewrite heading / statement-label formats and formula notation into the canonical form
  *   freeze <plots/script.py>...      render once and commit the images; the script is never run again
@@ -158,6 +159,20 @@ async function terms() {
     const report = new Diagnostics();
     report.items.push(...own);
     console.log(report.format());
+  }
+  // `terms <id-prefix>...` narrows the report to concepts used on those pages (a course's checklist).
+  const inScope = (id: string) => positional.some((p) => id === p || id.startsWith(`${p}.`));
+  if (positional.length) {
+    const missing = concepts.filter((c) => !c.site && c.usedIn.some(inScope));
+    for (const c of missing) console.log(`  ${c.zh}（${c.en}）  used on ${c.usedIn.filter(inScope).join(', ')} but defined nowhere`);
+    const early = forwardUses.filter((f) => inScope(f.pageId));
+    for (const f of early) {
+      const c = concepts.find((x) => x.id === f.conceptId)!;
+      console.log(`  ${f.pageId} uses ${c.zh}（${c.en}） before its definition on ${c.site!.pageId}`);
+    }
+    console.log(`${missing.length} concept(s) used in ${positional.join(', ')} without a definition site (must be 0); ${early.length} forward use(s)`);
+    if (missing.length) process.exitCode = 1;
+    return;
   }
   const undefinedConcepts = concepts.filter((c) => !c.site);
   if (undefinedConcepts.length) {

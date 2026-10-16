@@ -258,7 +258,6 @@ $$
 $$
 f(x_0+\boldsymbol{h})-f(x_0)=a_1h_1+\cdots+a_nh_n+o(\|\boldsymbol{h}\|)\qquad(\boldsymbol{h}\to\boldsymbol{0}),
 $$
-
 则称 $f$ 在 $x_0$ **可微**，称线性部分 $a_1h_1+\cdots+a_nh_n$ 为 $f$ 在 $x_0$ 的**全微分**，记作 $\mathrm{d}f(x_0)$。若 $f$ 在区域 $D$ 的每一点可微，则称 $f$ 在 $D$ 上可微。
 
 **定理 10.5.1（可微的必要条件）** 若 $f$ 在 $x_0$ 可微，则

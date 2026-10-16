@@ -1,6 +1,6 @@
 ---
 title: Eigenvalues and Eigenvectors
-source_hash: 84ece7e67c21
+source_hash: 3619608d5a53
 ---
 
 The previous chapters studied a single linear map $\boldsymbol{x} \mapsto A\boldsymbol{x}$: its range, its zeros (solution sets) and best approximation. This chapter studies the iteration of a linear transformation: how does $A^t\boldsymbol{x}$ behave for large $t$, and are there directions that stay fixed? The key is the equation $A\boldsymbol{x} = \lambda\boldsymbol{x}$: if we can find $n$ linearly independent vectors along each of which $A$ acts merely as a stretch, then in this basis $A$ is a diagonal matrix, and $A^t$ becomes transparent.
@@ -222,7 +222,7 @@ These two identities are often used in exercises to determine unknown parameters
 
 **Proof** 1. $A^k\boldsymbol{x} = A^{k-1}(\lambda_0\boldsymbol{x}) = \cdots = \lambda_0^k\boldsymbol{x}$, and taking linear combinations gives $f(A)\boldsymbol{x} = f(\lambda_0)\boldsymbol{x}$. 2. Multiply both sides of $A\boldsymbol{x} = \lambda_0\boldsymbol{x}$ on the left by $\lambda_0^{-1}A^{-1}$. 3. By 1, $\boldsymbol{0} = f(A)\boldsymbol{x} = f(\lambda_0)\boldsymbol{x}$, and $\boldsymbol{x} \ne \boldsymbol{0}$, so $f(\lambda_0) = 0$. $\square$
 
-For example, all eigenvalues of a nilpotent matrix ($A^k = O$) are $0$, and the eigenvalues of an idempotent matrix ($A^2 = A$) can only be $0$ or $1$.
+For example, a *nilpotent matrix*, that is, a square matrix with $A^k = O$ for some positive integer $k$, has only the eigenvalue $0$; the eigenvalues of an idempotent matrix ($A^2 = A$) can only be $0$ or $1$.
 
 **Example 6.4.1 (Eigenvalues of a Rank-One Matrix)** Let $\boldsymbol{a}, \boldsymbol{b} \in \mathbb{R}^n$ be nonzero, $n \ge 2$. Find the eigenvalues of $A = \boldsymbol{a}\boldsymbol{b}^{\mathsf T}$.
 

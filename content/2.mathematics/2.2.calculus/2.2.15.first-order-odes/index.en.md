@@ -1,6 +1,6 @@
 ---
 title: First-Order Differential Equations
-source_hash: 1e37bee77b7a
+source_hash: 06d1992f1ef6
 ---
 
 Many problems in geometry and physics do not give the unknown function itself but a relation between the function and its derivatives: the slope of the tangent line at each point of a curve, the velocity and acceleration of a body, the growth rate of a population. Such a relation is a differential equation, and finding the functions that satisfy it is "solving the differential equation". Single-variable integration ([2.2.6](/2.2.6), [2.2.7](/2.2.7)) finds antiderivatives, which amounts to solving the simplest equation $y'=f(x)$; this chapter extends that task to the case where the unknown function also appears on the right-hand side.
@@ -127,7 +127,7 @@ This is a separable equation, and the constant solutions $P=0$ and $P=K$ are its
 $$
 P(t)=\frac{K}{1+A\mathrm{e}^{-kt}},\qquad A=\frac{K-P_0}{P_0},
 $$
-where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the **logistic growth** of biology ([7.4.3](/7.4.3)).
+where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the *logistic growth* of biology (modelled in [7.4.3](/7.4.3)).
 
 ![Direction field and solution curves of the logistic equation P' = kP(1 - P/K) (k = 1, K = 1): P = 0 and P = K are equilibrium solutions, and every other positive solution tends monotonically to K; solutions starting from P_0 < K/2 are S-shaped and grow fastest at P = K/2](./plots/logistic.py)
 
