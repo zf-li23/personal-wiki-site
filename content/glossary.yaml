@@ -492,7 +492,7 @@ terms:
   - { zh: 特征向量, en: eigenvector }
   - { zh: 行列式, en: determinant }
   - { zh: 内积, en: inner product, aliases: [标准内积, 点积, 数量积, dot product, standard inner product] }
-  - { zh: 一致连续, en: uniform continuity }
+  - { zh: 一致连续, en: uniform continuity, aliases: [uniformly continuous] }
   - { zh: 泰勒公式, en: "Taylor's formula", aliases: [Taylor 公式, "Taylor's theorem"] }
   - { zh: 线性组合, en: linear combination }
   - { zh: 线性变换, en: linear transformation, aliases: [linear operator] }
@@ -754,9 +754,9 @@ terms:
   - { zh: 等价无穷小, en: equivalent infinitesimals }
   - { zh: 高阶无穷小, en: higher-order infinitesimal, aliases: [little-o notation] }
   - { zh: 同阶无穷小, en: infinitesimals of the same order }
-  - { zh: 连续函数, en: continuous function, aliases: [连续, continuity] }
-  - { zh: 左连续, en: left-continuous function, aliases: [left continuity] }
-  - { zh: 右连续, en: right-continuous function, aliases: [right continuity] }
+  - { zh: 连续函数, en: continuous function, aliases: [连续, continuity, continuous] }
+  - { zh: 左连续, en: left-continuous function, aliases: [left continuity, left-continuous] }
+  - { zh: 右连续, en: right-continuous function, aliases: [right continuity, right-continuous] }
   - { zh: 间断点, en: point of discontinuity, aliases: [discontinuity] }
   - { zh: 第一类间断点, en: discontinuity of the first kind }
   - { zh: 第二类间断点, en: discontinuity of the second kind, aliases: [essential discontinuity] }
@@ -769,7 +769,7 @@ terms:
   - { zh: 最大最小值定理, en: extreme value theorem, aliases: [最值定理] }
   - { zh: Heine–Cantor 定理, en: Heine–Cantor theorem }
   - { zh: 导数, en: derivative, aliases: [可导, differentiable, 导函数] }
-  - { zh: 单侧导数, en: one-sided derivative, aliases: [左导数, 右导数] }
+  - { zh: 单侧导数, en: one-sided derivative, aliases: [左导数, 右导数, left derivative, right derivative] }
   - { zh: 切线, en: tangent line }
   - { zh: 法线, en: normal line }
   - { zh: 链式法则, en: chain rule, aliases: [链式求导法则, 复合函数求导法则] }
@@ -804,7 +804,7 @@ terms:
   - { zh: 换元积分法, en: integration by substitution, aliases: [第一换元法, 第二换元法, 凑微分法] }
   - { zh: 分部积分法, en: integration by parts, aliases: [分部积分] }
   - { zh: 有理函数, en: rational function, aliases: [有理分式函数, 有理分式] }
-  - { zh: 部分分式, en: partial fraction decomposition, aliases: [最简分式, 部分分式分解] }
+  - { zh: 部分分式, en: partial fraction decomposition, aliases: [最简分式, 部分分式分解, partial fractions] }
   - { zh: 万能代换, en: Weierstrass substitution, aliases: [万能公式, tangent half-angle substitution] }
   - { zh: 定积分, en: definite integral, aliases: [Riemann 积分, 黎曼积分, Riemann integral, 可积] }
   - { zh: Riemann 和, en: Riemann sum, aliases: [黎曼和, 积分和] }
@@ -974,6 +974,9 @@ terms:
   - { zh: Möbius 带, en: Möbius strip, aliases: [莫比乌斯带] }
   - { zh: 方向场, en: direction field, aliases: [斜率场, slope field] }
   - { zh: Liouville 公式, en: "Liouville's formula", aliases: [Abel 公式, "Abel's identity"] }
+  - { zh: 优级数, en: majorant, scope: ["2.2"] }
+  - { zh: 内闭一致收敛, en: uniform convergence on compact subsets, aliases: [locally uniform convergence] }
+  - { zh: Euler 常数, en: Euler–Mascheroni constant, aliases: [欧拉常数] }
   # probability and statistics
   - { zh: 条件期望, en: conditional expectation }
   - { zh: 特征函数, en: characteristic function, scope: ["3"] }   # 集合论中的"特征函数"是指示函数

@@ -43,9 +43,12 @@ export function fixMarkdown(body: string, lang: 'zh' | 'en', pageId = ''): FixRe
     if (!m) return line;
     const label = parseStatementLabel(m[2]);
     if (!label) return line;
-    const name = label.name ?? m[4]?.trim();
+    // "（1）", "(ii)", "（a）" after a label number sub-items, they are not the statement's name.
+    const following = m[4]?.trim();
+    const isItemMarker = !!following && /^([0-9]{1,2}|[ivx]{1,4}|[a-z]|[一二三四五六七八九十])$/i.test(following);
+    const name = label.name ?? (isItemMarker ? undefined : following);
     const canonical = `**${formatStatementLabel({ kind: label.kind, number: label.number, name }, lang)}**`;
-    const replaced = m[1] + canonical + (label.name || !m[3] ? (m[3] ?? '') : '');
+    const replaced = m[1] + canonical + (label.name || !m[3] || isItemMarker ? (m[3] ?? '') : '');
     if (replaced === m[0]) return line;
     changes++;
     return replaced + line.slice(m[0].length);

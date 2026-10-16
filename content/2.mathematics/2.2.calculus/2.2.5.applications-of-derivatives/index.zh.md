@@ -52,7 +52,7 @@ $$
 
 ![Lagrange 中值定理：在 ξ₁、ξ₂ 处曲线的切线平行于连接 (a, f(a)) 与 (b, f(b)) 的弦](./plots/mean-value-theorem.py)
 
-**推论 5.1.1（1）** 若在区间 $I$ 上 $f'(x)\equiv0$，则 $f$ 在 $I$ 上是常数；(2) 若在 $I$ 上 $f'(x)\equiv g'(x)$，则 $f(x) = g(x)+c$，$c$ 为常数。
+**推论 5.1.1**（1） 若在区间 $I$ 上 $f'(x)\equiv0$，则 $f$ 在 $I$ 上是常数；(2) 若在 $I$ 上 $f'(x)\equiv g'(x)$，则 $f(x) = g(x)+c$，$c$ 为常数。
 
 **证明** (1) 任取 $x_1<x_2$ 属于 $I$，$f(x_2)-f(x_1) = f'(\xi)(x_2-x_1) = 0$。(2) 对 $f-g$ 用 (1)。 $\square$
 
@@ -234,7 +234,7 @@ $$
 
 **例 5.2.4** 证明 $\lim\limits_{x\to+\infty}\frac{x^\alpha}{a^x} = 0$（$a>1$，$\alpha>0$）。
 
-**证明** 取正整数 $k$ 使 $k-1<\alpha\le k$，连续使用 $k$ 次 L'Hôpital 法则（前 $k-1$ 次都是 $\frac\infty\infty$ 型）：
+**证明** 取正整数 $k$ 使 $k-1<\alpha\le k$，连续使用 $k$ 次 L'Hôpital 法则（每次都是 $\frac\infty\infty$ 型）：
 
 $$
 \lim_{x\to+\infty}\frac{x^\alpha}{a^x} = \lim_{x\to+\infty}\frac{\alpha x^{\alpha-1}}{a^x\ln a} = \cdots = \lim_{x\to+\infty}\frac{\alpha(\alpha-1)\cdots(\alpha-k+1)x^{\alpha-k}}{(\ln a)^ka^x} = 0. \qquad\square
@@ -691,7 +691,7 @@ $$
 
 **例 5.5.6** 用 Taylor 公式求 $\sin10^\circ$ 的近似值。
 
-解：$10^\circ = \frac{\pi}{18}\approx0.174533$。用一阶 Taylor 多项式 $\sin10^\circ\approx0.174533$，误差 $|R_1| = \bigl\lvert\frac{\sin(\xi+\pi)}{2!}\bigr\rvert(0.174533)^2<0.02$；用三阶 Taylor 多项式 $\sin10^\circ\approx0.174533-\frac16(0.174533)^3\approx0.173647$，误差 $|R_3| = \bigl\lvert\frac{\sin(\xi+2\pi)}{4!}\bigr\rvert(0.174533)^4<10^{-5}$（由于 $P_3 = P_4$，误差实际上不超过 $\frac{(0.174533)^5}{5!}\approx1.4\times10^{-6}$）。若要求误差不超过 $10^{-6}$，求使 $\frac{(0.174533)^{n+1}}{(n+1)!}<10^{-6}$ 的最小 $n$，得 $n = 5$（$n = 4$ 时约为 $1.4\times10^{-6}$，$n = 5$ 时约为 $3.9\times10^{-8}$）。
+解：$10^\circ = \frac{\pi}{18}\approx0.174533$。用一阶 Taylor 多项式 $\sin10^\circ\approx0.174533$，误差 $|R_1| = \bigl\lvert\frac{\sin(\xi+\pi)}{2!}\bigr\rvert(0.174533)^2<0.02$；用三阶 Taylor 多项式 $\sin10^\circ\approx0.174533-\frac16(0.174533)^3\approx0.173647$，误差 $|R_3| = \bigl\lvert\frac{\sin(\xi+2\pi)}{4!}\bigr\rvert(0.174533)^4\le\frac{(0.174533)^5}{4!}<10^{-5}$（这里 $0<\xi<0.174533$，$|\sin\xi|\le\xi$；由于 $P_3 = P_4$，误差实际上不超过 $\frac{(0.174533)^5}{5!}\approx1.4\times10^{-6}$）。若要求误差不超过 $10^{-6}$，求使 $\frac{(0.174533)^{n+1}}{(n+1)!}<10^{-6}$ 的最小 $n$，得 $n = 5$（$n = 4$ 时约为 $1.4\times10^{-6}$，$n = 5$ 时约为 $3.9\times10^{-8}$）。
 
 求极限。把分子分母展开到同一阶，就把不定式化为多项式之比；它是等价无穷小替换的精确化，可以处理加减运算中的抵消。
 

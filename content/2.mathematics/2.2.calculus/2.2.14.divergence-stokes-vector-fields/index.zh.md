@@ -330,7 +330,7 @@ f+2x^2f'=2-f+2y^2f',\qquad\text{即}\qquad tf'(t)+f(t)=1\quad(t=x^2-y^2).
 $$
 于是 $(tf(t))'=1$，$tf(t)=t+C$，由 $f(1)=0$ 得 $C=-1$，$f(t)=1-\frac1t$。
 
-**例 14.4.7（1）**$\int_{(0,2)}^{(2,3)}x\,\mathrm{d}y+y\,\mathrm{d}x=xy\big|_{(0,2)}^{(2,3)}=6$。（2）$\int_{(0,0)}^{(a,b)}\mathrm{e}^x(\cos y\,\mathrm{d}x-\sin y\,\mathrm{d}y)=\mathrm{e}^x\cos y\big|_{(0,0)}^{(a,b)}=\mathrm{e}^a\cos b-1$。（3）在不含原点的路径上，$\int_{A}^{B}\dfrac{x\,\mathrm{d}x+y\,\mathrm{d}y+z\,\mathrm{d}z}{x^2+y^2+z^2}=\frac12\ln(x^2+y^2+z^2)\Big|_A^B=\ln\dfrac{\|B\|}{\|A\|}$，其中 $\|A\|$ 是点 $A$ 到原点的距离。
+**例 14.4.7**（1）$\int_{(0,2)}^{(2,3)}x\,\mathrm{d}y+y\,\mathrm{d}x=xy\big|_{(0,2)}^{(2,3)}=6$。（2）$\int_{(0,0)}^{(a,b)}\mathrm{e}^x(\cos y\,\mathrm{d}x-\sin y\,\mathrm{d}y)=\mathrm{e}^x\cos y\big|_{(0,0)}^{(a,b)}=\mathrm{e}^a\cos b-1$。（3）在不含原点的路径上，$\int_{A}^{B}\dfrac{x\,\mathrm{d}x+y\,\mathrm{d}y+z\,\mathrm{d}z}{x^2+y^2+z^2}=\frac12\ln(x^2+y^2+z^2)\Big|_A^B=\ln\dfrac{\|B\|}{\|A\|}$，其中 $\|A\|$ 是点 $A$ 到原点的距离。
 
 **例 14.4.8** $\boldsymbol{v}=(x+yz,\,y+zx,\,z+xy)$：$\operatorname{rot}\boldsymbol{v}=(x-x,\,y-y,\,z-z)=\boldsymbol{0}$，$\mathbb{R}^3$ 单连通，势函数为 $f=\frac12(x^2+y^2+z^2)+xyz$。所以沿任意从原点到 $(1,1,1)$ 的曲线，$\int\boldsymbol{v}\cdot\mathrm{d}\boldsymbol{l}=f(1,1,1)-f(0,0,0)=\frac52$。
 

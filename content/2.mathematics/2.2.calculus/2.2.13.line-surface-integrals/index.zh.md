@@ -68,7 +68,7 @@ $$
 **例 13.1.3** 曲线 $L\colon x^2+y^2+z^2=4$，$x^2+y^2=2x$，$z\ge0$ 上点 $(x,y,z)$ 处的线密度为 $|xyz|$，求 $L$ 的质量。参数方程为 $x=1+\cos t$，$y=\sin t$，$z=\sqrt{4-2x}=2\sin\frac t2$（$0\le t\le2\pi$），$\mathrm{d}l=\sqrt{1+\cos^2\frac t2}\,\mathrm{d}t$。用半角写 $x=2\cos^2\frac t2$，$y=2\sin\frac t2\cos\frac t2$，令 $u=\frac t2$，
 
 $$
-m=\int_0^{\pi}16\,|\cos^3u|\sin^2u\sqrt{1+\cos^2u}\cdot2\,\mathrm{d}u=32\int_0^{\pi/2}\cos^3u\sin^2u\sqrt{1+\cos^2u}\,\mathrm{d}u.
+m=\int_0^{\pi}8\,|\cos^3u|\sin^2u\sqrt{1+\cos^2u}\cdot2\,\mathrm{d}u=32\int_0^{\pi/2}\cos^3u\sin^2u\sqrt{1+\cos^2u}\,\mathrm{d}u.
 $$
 令 $s=\sin u$，化为 $32\int_0^1(1-s^2)s^2\sqrt{2-s^2}\,\mathrm{d}s$；再令 $s=\sqrt2\sin\varphi$，被积式变为 $\cos2\varphi\sin^22\varphi\,\mathrm{d}\varphi$，所以
 
@@ -240,7 +240,7 @@ $$
 
 计算方法就是"代入"：把曲线方程代入被积表达式，$\mathrm{d}x=x'(t)\,\mathrm{d}t$ 等，定积分的下限对应起点、上限对应终点。平面曲线 $y=y(x)$ 从 $x=a$ 到 $x=b$ 时，$\int_LX\,\mathrm{d}x+Y\,\mathrm{d}y=\int_a^b[X(x,y(x))+Y(x,y(x))y'(x)]\,\mathrm{d}x$。
 
-**例 13.3.1（1）**$L\colon y=x^2$ 从 $x=0$ 到 $x=2$，$\int_L(x^2-y^2)\,\mathrm{d}x=\int_0^2(x^2-x^4)\,\mathrm{d}x=\frac83-\frac{32}5=-\frac{56}{15}$。
+**例 13.3.1**（1）$L\colon y=x^2$ 从 $x=0$ 到 $x=2$，$\int_L(x^2-y^2)\,\mathrm{d}x=\int_0^2(x^2-x^4)\,\mathrm{d}x=\frac83-\frac{32}5=-\frac{56}{15}$。
 
 （2）$L$ 为椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的上半部分，逆时针方向（从 $(a,0)$ 到 $(-a,0)$）。取 $x=a\cos t$，$y=b\sin t$，$t$ 从 $0$ 到 $\pi$：
 

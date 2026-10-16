@@ -360,7 +360,7 @@ $$
 
 先换元再分部积分也很常见：
 
-**例 6.3.4（1）** $\int\frac{\ln^2x\cos(\ln x)}{x}\,\mathrm{d}x\overset{u = \ln x}{=}\int u^2\cos u\,\mathrm{d}u = u^2\sin u+2u\cos u-2\sin u+C$，即 $(\ln^2x-2)\sin\ln x+2\ln x\cos\ln x+C$。
+**例 6.3.4**（1） $\int\frac{\ln^2x\cos(\ln x)}{x}\,\mathrm{d}x\overset{u = \ln x}{=}\int u^2\cos u\,\mathrm{d}u = u^2\sin u+2u\cos u-2\sin u+C$，即 $(\ln^2x-2)\sin\ln x+2\ln x\cos\ln x+C$。
 
 (2) $\int\frac{\arctan x\,\mathrm{e}^{\arctan x}}{1+x^2}\,\mathrm{d}x\overset{u = \arctan x}{=}\int u\mathrm{e}^u\,\mathrm{d}u = (u-1)\mathrm{e}^u+C = (\arctan x-1)\mathrm{e}^{\arctan x}+C$。
 

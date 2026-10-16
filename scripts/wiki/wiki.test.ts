@@ -135,6 +135,13 @@ async function render(body: string, opts: { pages?: PageSource[]; plots?: PlotRe
   return { out, html: renderHtml(out), diag, messages: diag.items.map((d) => `${d.level}:${d.line}:${d.message}`) };
 }
 
+describe('fix: sub-item markers', () => {
+  it('keeps "（1）" after a label out of the statement name', () => {
+    assert.equal(fixMarkdown('**例 1.2.5**（1）设 x', 'zh').text, '**例 1.2.5**（1）设 x');
+    assert.equal(fixMarkdown('**推论1**（标准化平方和）：若', 'zh').text, '**推论 1（标准化平方和）**：若');
+  });
+});
+
 describe('notation', () => {
   it('rewrites unambiguous forms and respects scopes', () => {
     assert.equal(fixNotation(String.raw`\vec{x}^T A\vec x + Ae^{At} + a_1,...,a_n`, '2.1.1'), String.raw`\boldsymbol{x}^{\mathsf T} A\boldsymbol{x} + A\mathrm{e}^{At} + a_1,\dots,a_n`);

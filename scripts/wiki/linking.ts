@@ -103,12 +103,22 @@ function nameKeys(text: string, lang: Lang): string[] {
   if (lang !== 'en') return [t];
   const l = t.toLowerCase();
   const keys = [l];
-  if (l.endsWith('ies')) keys.push(`${l.slice(0, -3)}y`);
-  if (l.endsWith('ices')) keys.push(`${l.slice(0, -4)}ix`, `${l.slice(0, -4)}ex`); // matrices, vertices
-  if (l.endsWith('ses')) keys.push(`${l.slice(0, -2)}is`); // bases, hypotheses
-  if (/(s|x|z|ch|sh)es$/.test(l)) keys.push(l.slice(0, -2));
-  if (l.endsWith('s') && !l.endsWith('ss')) keys.push(l.slice(0, -1));
+  // Any one word may be plural: "groups", "discontinuities of the first kind".
+  const words = l.split(' ');
+  words.forEach((w, i) => {
+    for (const s of singulars(w)) keys.push([...words.slice(0, i), s, ...words.slice(i + 1)].join(' '));
+  });
   return keys;
+}
+
+function singulars(w: string): string[] {
+  const out: string[] = [];
+  if (w.endsWith('ies')) out.push(`${w.slice(0, -3)}y`);
+  if (w.endsWith('ices')) out.push(`${w.slice(0, -4)}ix`, `${w.slice(0, -4)}ex`); // matrices, vertices
+  if (w.endsWith('ses')) out.push(`${w.slice(0, -2)}is`); // bases, hypotheses
+  if (/(s|x|z|ch|sh)es$/.test(w)) out.push(w.slice(0, -2));
+  if (w.endsWith('s') && !w.endsWith('ss')) out.push(w.slice(0, -1));
+  return out;
 }
 
 /** Concepts by name in one language (only those in scope for the page, when given). */

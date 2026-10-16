@@ -206,7 +206,7 @@ g(f(x)) = \begin{cases} \ln(3x), & 0 < x \leq 3, \\ 2\ln x, & 3 < x \leq 5. \end
 $$
 注意 $g(f(x))$ 的定义域要去掉使 $f(x) = 0$ 的 $x = 0$。
 
-**例 1.2.5（1）** 设 $f\left(x + \frac1x\right) = x^2 + \frac1{x^2}$，求 $f(x)$。(2) 设 $f\left(\frac{x - 1}{x + 1}\right) = 3x$，求 $f(x)$。
+**例 1.2.5**（1） 设 $f\left(x + \frac1x\right) = x^2 + \frac1{x^2}$，求 $f(x)$。(2) 设 $f\left(\frac{x - 1}{x + 1}\right) = 3x$，求 $f(x)$。
 
 **解** (1) 令 $u = x + \frac1x$，则 $x^2 + \frac1{x^2} = u^2 - 2$，故 $f(x) = x^2 - 2$。由于 $\left|x + \frac1x\right| \geq 2$，这里 $f$ 的定义域是 $|x| \geq 2$。(2) 令 $u = \frac{x - 1}{x + 1}$，解得 $x = \frac{1 + u}{1 - u}$，故 $f(x) = \frac{3(1 + x)}{1 - x}$，$x \ne 1$。
 
