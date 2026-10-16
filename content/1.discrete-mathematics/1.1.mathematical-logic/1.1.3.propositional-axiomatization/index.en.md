@@ -1,6 +1,6 @@
 ---
 title: Axiomatization of Propositional Logic
-source_hash: 9f5826efc8d6
+source_hash: b9d0277f98f0
 ---
 
 What is the most economical way to present a formal science? Euclid's *Elements* perhaps offers one answer: Book I opens with 23 definitions, 5 postulates, and 5 common notions, and every book that follows is filled with propositions, each of which can be proved from the axioms and the propositions before it. This is an axiomatic deductive system. An axiomatic system of logic must discard every notion that is not made explicit, truth values included, and prescribe only the derivability relations between strings of symbols. So let us now forget all the equivalence laws and rules of inference of the previous two chapters and enter a universe defined by Russell's axiom system alone. At the end we present another system, better suited to computers: Wang's algorithm.
@@ -119,8 +119,6 @@ Whether a given formula is a tautology can always be decided in finitely many st
 The *deduction theorem* is the counterpart, within the axiomatic system, of the **conditional proof** rule of 1.1.2, and it can greatly simplify proofs in the axiomatic system. Besides Russell's axiom system, there are other axiomatic systems with these properties.
 
 ## 3.4. Wang Hao's Algorithm
-
-> Author's note: I am not very interested in Wang's algorithm, and it strays rather far from the main line of logic, so the summary in this section was prepared with the help of AI tools. Please read it critically.
 
 *Wang's algorithm* is another formal system for propositional logic, one that makes theorem proving automatic and is better suited to computer implementation. It has only one axiom, but uses the five common connectives directly; it defines sequents, together with five left rules and five right rules, ten transformation rules in all.
 

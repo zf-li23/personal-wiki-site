@@ -1,6 +1,6 @@
 ---
 title: First-Order Differential Equations
-source_hash: 06d1992f1ef6
+source_hash: dcfc5c810798
 ---
 
 Many problems in geometry and physics do not give the unknown function itself but a relation between the function and its derivatives: the slope of the tangent line at each point of a curve, the velocity and acceleration of a body, the growth rate of a population. Such a relation is a differential equation, and finding the functions that satisfy it is "solving the differential equation". Single-variable integration ([2.2.6](/2.2.6), [2.2.7](/2.2.7)) finds antiderivatives, which amounts to solving the simplest equation $y'=f(x)$; this chapter extends that task to the case where the unknown function also appears on the right-hand side.
@@ -74,7 +74,7 @@ If $f_y$ is continuous and bounded on a convex region $D$ (for example, a rectan
 
 **Theorem 15.1.1 (Existence and Uniqueness Theorem)** Suppose $f(x,y)$ is continuous on the rectangle $D=\{(x,y)\mid\lvert x-x_0\rvert\le a,\ \lvert y-y_0\rvert\le b\}$ and satisfies a Lipschitz condition with respect to $y$. Let $M=\max_D\lvert f(x,y)\rvert$ and $h=\min\{a,b/M\}$. Then the initial value problem $y'=f(x,y)$, $y(x_0)=y_0$ has exactly one solution on the interval $[x_0-h,x_0+h]$.
 
-This course does not prove the theorem; the proof (by Picard iteration) is given in [2.4](/2.4). The choice of $h$ guarantees that the integral curve does not leave the rectangle for $\lvert x-x_0\rvert\le h$: the slope is at most $M$ in absolute value, so over a horizontal distance $h$ the curve rises or falls by at most $Mh\le b$. Geometrically, the theorem says that in a region where the hypotheses hold, exactly one integral curve passes through each point, and distinct integral curves do not intersect.
+This course does not prove the theorem; the proof (by Picard iteration) is given in [2.4.4](/2.4.4). The choice of $h$ guarantees that the integral curve does not leave the rectangle for $\lvert x-x_0\rvert\le h$: the slope is at most $M$ in absolute value, so over a horizontal distance $h$ the curve rises or falls by at most $Mh\le b$. Geometrically, the theorem says that in a region where the hypotheses hold, exactly one integral curve passes through each point, and distinct integral curves do not intersect.
 
 **Example 15.1.4** Let $p(x)$ be continuous on an interval $I$. If an integral curve of the equation $y'=p(x)y$ meets the $x$-axis, then it coincides with the $x$-axis.
 
