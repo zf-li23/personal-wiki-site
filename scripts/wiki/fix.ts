@@ -48,10 +48,13 @@ export function fixMarkdown(body: string, lang: 'zh' | 'en', pageId = ''): FixRe
     const isItemMarker = !!following && /^([0-9]{1,2}|[ivx]{1,4}|[a-z]|[一二三四五六七八九十])$/i.test(following);
     const name = label.name ?? (isItemMarker ? undefined : following);
     const canonical = `**${formatStatementLabel({ kind: label.kind, number: label.number, name }, lang)}**`;
-    const replaced = m[1] + canonical + (label.name || !m[3] || isItemMarker ? (m[3] ?? '') : '');
+    const keepsTail = label.name || !m[3] || isItemMarker;
+    const replaced = m[1] + canonical + (keepsTail ? (m[3] ?? '') : '');
     if (replaced === m[0]) return line;
     changes++;
-    return replaced + line.slice(m[0].length);
+    // The name moved into the bold label: keep the label separated from the text that follows.
+    const rest = line.slice(m[0].length);
+    return replaced + (!keepsTail && /^[^\s：:，,。.;；]/.test(rest) ? ' ' : '') + rest;
   });
   return { text: lines.join('\n'), changes };
 }

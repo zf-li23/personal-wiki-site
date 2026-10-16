@@ -942,7 +942,7 @@ terms:
   - { zh: 初值问题, en: initial value problem, aliases: [Cauchy 问题, 定解问题] }
   - { zh: 积分曲线, en: integral curve }
   - { zh: Lipschitz 条件, en: Lipschitz condition, aliases: [利普希茨条件] }
-  - { zh: 存在唯一性定理, en: Picard–Lindelöf theorem, aliases: [解的存在唯一性定理, existence and uniqueness theorem] }
+  - { zh: 存在唯一性定理, en: Picard–Lindelöf theorem, aliases: [解的存在唯一性定理, existence and uniqueness theorem, Picard 定理, Picard theorem] }
   - { zh: 变量分离方程, en: separable equation, aliases: [可分离变量方程, separable differential equation] }
   - { zh: Bernoulli 方程, en: Bernoulli differential equation, aliases: [伯努利方程, Bernoulli equation] }
   - { zh: 全微分方程, en: exact differential equation, aliases: [恰当方程, exact equation] }
@@ -972,7 +972,7 @@ terms:
   - { zh: 积分号下求导, en: differentiation under the integral sign, aliases: [Leibniz 积分法则, Leibniz integral rule] }
   - { zh: Green 第一公式, en: "Green's first identity", aliases: [第一 Green 公式, Green 第一恒等式] }
   - { zh: Möbius 带, en: Möbius strip, aliases: [莫比乌斯带] }
-  - { zh: 方向场, en: direction field, aliases: [斜率场, slope field] }
+  - { zh: 方向场, en: direction field, aliases: [斜率场, slope field, 线素场] }
   - { zh: Liouville 公式, en: "Liouville's formula", aliases: [Abel 公式, "Abel's identity"] }
   - { zh: 优级数, en: majorant, scope: ["2.2"] }
   - { zh: 内闭一致收敛, en: uniform convergence on compact subsets, aliases: [locally uniform convergence] }
@@ -998,3 +998,95 @@ terms:
   - { zh: 反应扩散方程, en: reaction-diffusion equation }
   - { zh: 图灵斑图, en: Turing pattern }
   - { zh: 行波解, en: traveling wave solution }
+
+  # ordinary differential equations (2.4)
+  - { zh: 通积分, en: general integral }
+  - { zh: 等斜线, en: isocline }
+  - { zh: 周期解, en: periodic solution }
+  - { zh: Riccati 方程, en: Riccati equation, aliases: [里卡蒂方程] }
+  - { zh: 等角轨线, en: isogonal trajectory }
+  - { zh: 正交轨线, en: orthogonal trajectory }
+  - { zh: 齐次型方程, en: homogeneous differential equation, aliases: [齐次方程], scope: ["2.2", "2.4"] }
+  - { zh: 局部 Lipschitz 条件, en: local Lipschitz condition, aliases: [locally Lipschitz] }
+  - { zh: Picard 序列, en: Picard iteration, aliases: [逐次逼近, 逐次逼近法, successive approximations] }
+  - { zh: Osgood 条件, en: Osgood condition }
+  - { zh: Euler 折线, en: Euler polygon, aliases: [欧拉折线] }
+  - { zh: 一致有界, en: uniformly bounded, aliases: [uniform boundedness] }
+  - { zh: 等度连续, en: equicontinuity, aliases: [equicontinuous] }
+  - { zh: Ascoli 引理, en: Arzelà–Ascoli theorem, aliases: [Arzelà–Ascoli 定理] }
+  - { zh: Peano 存在定理, en: Peano existence theorem }
+  - { zh: 饱和解, en: noncontinuable solution, aliases: [不可延伸解, saturated solution] }
+  - { zh: 最大存在区间, en: maximal interval of existence }
+  - { zh: 延伸定理, en: extension theorem, aliases: [解的延伸定理, continuation theorem] }
+  - { zh: 最大解, en: maximal solution }
+  - { zh: 最小解, en: minimal solution }
+  - { zh: 第一比较定理, en: first comparison theorem }
+  - { zh: 第二比较定理, en: second comparison theorem }
+  - { zh: Clairaut 方程, en: "Clairaut's equation", aliases: [Clairaut equation] }
+  - { zh: 奇解, en: singular solution }
+  - { zh: p-判别式, en: p-discriminant }
+  - { zh: C-判别式, en: C-discriminant }
+  - { zh: 包络, en: envelope, scope: ["2"] }
+  - { zh: 渐屈线, en: evolute, aliases: [渐缩线] }
+  - { zh: 渐伸线, en: involute, aliases: [渐开线] }
+  - { zh: 星形线, en: astroid }
+  - { zh: Gronwall 不等式, en: "Grönwall's inequality", aliases: [Gronwall 引理, "Gronwall's inequality"] }
+  - { zh: 变分方程, en: variational equation, aliases: [equation of variations] }
+  - { zh: 解对初值和参数的连续依赖性, en: continuous dependence on initial conditions and parameters, aliases: [连续依赖性, continuous dependence] }
+  - { zh: 标准基解矩阵, en: principal fundamental matrix, aliases: [状态转移矩阵, state transition matrix] }
+  - { zh: Cauchy 核, en: Cauchy function, aliases: [Cauchy 函数], scope: ["2.4"] }
+  - { zh: 常点, en: ordinary point, scope: ["2.4"] }
+  - { zh: 正则奇点, en: regular singular point }
+  - { zh: 指标方程, en: indicial equation }
+  - { zh: Legendre 方程, en: Legendre equation, aliases: [勒让德方程] }
+  - { zh: Bessel 方程, en: Bessel equation, aliases: [贝塞尔方程] }
+  - { zh: 第一类 Bessel 函数, en: Bessel function of the first kind, aliases: [Bessel 函数, Bessel function] }
+  - { zh: 第二类 Bessel 函数, en: Bessel function of the second kind, aliases: [Neumann 函数, Neumann function] }
+  - { zh: Lyapunov 稳定, en: Lyapunov stability, aliases: [李雅普诺夫稳定] }
+  - { zh: 渐近稳定, en: asymptotic stability, aliases: [asymptotically stable] }
+  - { zh: 稳定多项式, en: Hurwitz polynomial, aliases: [Hurwitz 多项式, stable polynomial] }
+  - { zh: 平衡点, en: equilibrium point, aliases: [equilibrium] }
+  - { zh: 双曲平衡点, en: hyperbolic equilibrium point }
+  - { zh: 正定函数, en: positive definite function }
+  - { zh: Lyapunov 函数, en: Lyapunov function, aliases: [李雅普诺夫函数] }
+  - { zh: 相平面, en: phase plane }
+  - { zh: 轨线, en: trajectory, aliases: [相轨线, phase trajectory] }
+  - { zh: 相图, en: phase portrait }
+  - { zh: 极限集, en: limit set, aliases: [ω 极限集, omega-limit set] }
+  - { zh: 自伴形式, en: self-adjoint form, aliases: [Sturm–Liouville 形式] }
+  - { zh: Sturm 分离定理, en: Sturm separation theorem }
+  - { zh: Sturm 比较定理, en: Sturm comparison theorem }
+  - { zh: Sturm–Picone 比较定理, en: Sturm–Picone comparison theorem }
+  - { zh: 振动解, en: oscillatory solution, aliases: [振动的, 非振动的, oscillatory, nonoscillatory], scope: ["2.4", "2.5"] }
+  - { zh: 振动方程, en: oscillatory equation, scope: ["2.4", "2.5"] }
+  - { zh: Prüfer 变换, en: Prüfer transformation }
+  - { zh: 边值问题, en: boundary value problem, aliases: [两点边值问题, 边界问题, two-point boundary value problem] }
+  - { zh: 特征值问题, en: eigenvalue problem, scope: ["2.4", "2.5"] }
+  - { zh: Dirichlet 边界条件, en: Dirichlet boundary condition, aliases: [第一类边界条件] }
+  - { zh: Neumann 边界条件, en: Neumann boundary condition, aliases: [第二类边界条件] }
+  - { zh: Green 函数, en: "Green's function", aliases: [格林函数] }
+  - { zh: Fredholm 二择一, en: Fredholm alternative }
+  - { zh: Sturm–Liouville 问题, en: Sturm–Liouville problem, aliases: [正则 Sturm–Liouville 问题, regular Sturm–Liouville problem] }
+  - { zh: 特征函数展开, en: eigenfunction expansion }
+  - { zh: 泛函, en: functional }
+  - { zh: 变分法, en: calculus of variations }
+  - { zh: 一阶变分, en: first variation }
+  - { zh: 变分学基本引理, en: fundamental lemma of the calculus of variations }
+  - { zh: Euler–Lagrange 方程, en: Euler–Lagrange equation }
+  - { zh: 极值曲线, en: extremal }
+  - { zh: Beltrami 恒等式, en: Beltrami identity }
+  - { zh: 悬链线, en: catenary }
+  - { zh: 悬链面, en: catenoid }
+  - { zh: 旋轮线, en: cycloid, aliases: [摆线] }
+  - { zh: 测地线, en: geodesic }
+  - { zh: 等周问题, en: isoperimetric problem }
+  - { zh: 首次积分, en: first integral }
+  - { zh: 可积组合, en: integrable combination }
+  - { zh: 特征线, en: characteristic curve }
+  - { zh: Pfaff 方程, en: Pfaffian equation, aliases: [多元全微分方程, Pfaff equation] }
+  - { zh: 积分曲面, en: integral surface }
+  - { zh: 完全可积, en: completely integrable, aliases: [完全可积的], scope: ["2.4", "2.5"] }
+  - { zh: Frobenius 定理, en: Frobenius theorem, scope: ["2.4", "2.5"] }
+  - { zh: 完全积分, en: complete integral }
+  - { zh: 奇积分, en: singular integral, scope: ["2.4", "2.5"] }
+  - { zh: 特征函数, en: eigenfunction, scope: ["2.4", "2.5"] }

@@ -139,6 +139,7 @@ describe('fix: sub-item markers', () => {
   it('keeps "（1）" after a label out of the statement name', () => {
     assert.equal(fixMarkdown('**例 1.2.5**（1）设 x', 'zh').text, '**例 1.2.5**（1）设 x');
     assert.equal(fixMarkdown('**推论1**（标准化平方和）：若', 'zh').text, '**推论 1（标准化平方和）**：若');
+    assert.equal(fixMarkdown('**例 12.4.1**（Green 函数）求解', 'zh').text, '**例 12.4.1（Green 函数）** 求解');
   });
 });
 
