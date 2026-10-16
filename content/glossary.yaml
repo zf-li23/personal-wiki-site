@@ -954,7 +954,7 @@ terms:
   - { zh: 特征方程, en: characteristic equation, scope: ["2.2", "2.4"] }
   - { zh: 特征根, en: characteristic root, scope: ["2.2", "2.4"] }
   - { zh: 微分算子法, en: operator method, aliases: [算子法, differential operator method] }
-  - { zh: Euler 方程, en: Cauchy–Euler equation, aliases: [欧拉方程, Euler–Cauchy equation], scope: ["2.2", "2.4"] }
+  - { zh: Euler 方程, en: Cauchy–Euler equation, aliases: [欧拉方程, Euler–Cauchy equation], scope: ["2.2", "2.4", "2.5"] }
   - { zh: 共振, en: resonance }
   - { zh: 线性微分方程组, en: system of linear differential equations, aliases: [linear system of ODEs] }
   - { zh: 邻域, en: neighborhood, aliases: [ε 邻域] }
@@ -1094,3 +1094,150 @@ terms:
   - { zh: 结点, en: node, scope: ["2.4", "7.4"] }
   - { zh: 焦点, en: focus, aliases: [spiral point], scope: ["2.4", "7.4"] }
   - { zh: 中心, en: center, scope: ["2.4", "7.4"] }
+
+  # complex analysis (2.3)
+  - { zh: 辐角主值, en: principal argument, aliases: [主辐角] }
+  - { zh: De Moivre 公式, en: "de Moivre's formula", aliases: [棣莫弗公式] }
+  - { zh: 无穷远点, en: point at infinity }
+  - { zh: 扩充复平面, en: extended complex plane }
+  - { zh: 球极投影, en: stereographic projection }
+  - { zh: Riemann 球面, en: Riemann sphere, aliases: [黎曼球面, 复球面] }
+  - { zh: Jordan 曲线, en: Jordan curve, aliases: [简单闭曲线, simple closed curve] }
+  - { zh: Jordan 曲线定理, en: Jordan curve theorem }
+  - { zh: 分段光滑曲线, en: piecewise smooth curve, aliases: [围道, contour] }
+  - { zh: 复变函数, en: complex function, aliases: [function of a complex variable] }
+  - { zh: 复导数, en: complex derivative }
+  - { zh: Cauchy–Riemann 方程, en: Cauchy–Riemann equations, aliases: [C-R 方程, 柯西-黎曼方程] }
+  - { zh: 解析函数, en: analytic function, aliases: [全纯函数, holomorphic function] }
+  - { zh: 整函数, en: entire function }
+  - { zh: 奇点, en: singular point, aliases: [singularity], scope: ["2.3"] }
+  - { zh: Wirtinger 导数, en: Wirtinger derivative }
+  - { zh: 共轭调和函数, en: harmonic conjugate }
+  - { zh: 复指数函数, en: complex exponential function }
+  - { zh: 复对数, en: complex logarithm, aliases: [对数函数] }
+  - { zh: 对数主值, en: principal logarithm, aliases: [主值支] }
+  - { zh: 支点, en: branch point }
+  - { zh: 支割线, en: branch cut }
+  - { zh: Riemann 面, en: Riemann surface, aliases: [黎曼面] }
+  - { zh: 复积分, en: complex integral, aliases: [contour integral, 围道积分] }
+  - { zh: 长大不等式, en: ML inequality, aliases: [估值不等式, estimation lemma] }
+  - { zh: Cauchy 积分定理, en: "Cauchy's integral theorem", aliases: [Cauchy 定理, Cauchy–Goursat 定理, "Cauchy's theorem"] }
+  - { zh: Goursat 定理, en: "Goursat's theorem" }
+  - { zh: 闭路变形原理, en: deformation principle }
+  - { zh: Cauchy 积分公式, en: "Cauchy's integral formula" }
+  - { zh: 高阶导数公式, en: "Cauchy's integral formula for derivatives" }
+  - { zh: 平均值性质, en: mean value property, aliases: [平均值定理] }
+  - { zh: Cauchy 估计, en: "Cauchy's estimate", aliases: [Cauchy 不等式, "Cauchy's inequality"], scope: ["2.3"] }
+  - { zh: Liouville 定理, en: "Liouville's theorem", scope: ["2.3", "2.5"] }
+  - { zh: Morera 定理, en: "Morera's theorem" }
+  - { zh: 最大模原理, en: maximum modulus principle }
+  - { zh: 收敛圆, en: disk of convergence, aliases: [收敛圆盘, circle of convergence, 收敛圆周] }
+  - { zh: Cauchy–Hadamard 公式, en: Cauchy–Hadamard formula, aliases: [柯西-阿达马公式] }
+  - { zh: 零点的阶, en: order of a zero, aliases: [order of the zero, 零点的级] }
+  - { zh: 单零点, en: simple zero, aliases: [一阶零点] }
+  - { zh: 唯一性定理, en: identity theorem, aliases: [解析函数的唯一性定理], scope: ["2.3"] }
+  - { zh: 解析延拓, en: analytic continuation }
+  - { zh: Laurent 级数, en: Laurent series, aliases: [洛朗级数, Laurent 展开式, Laurent expansion] }
+  - { zh: Laurent 定理, en: "Laurent's theorem", aliases: [洛朗定理] }
+  - { zh: 收敛圆环, en: annulus of convergence, aliases: [收敛圆环域] }
+  - { zh: 孤立奇点, en: isolated singularity }
+  - { zh: 主要部分, en: principal part, aliases: [主部], scope: ["2.3"] }
+  - { zh: 可去奇点, en: removable singularity }
+  - { zh: 极点, en: pole, scope: ["2.3", "2.5"] }
+  - { zh: 极点的阶, en: order of the pole, aliases: [极点的级, order of a pole] }
+  - { zh: 单极点, en: simple pole, aliases: [一阶极点] }
+  - { zh: 本性奇点, en: essential singularity }
+  - { zh: Riemann 可去奇点定理, en: "Riemann's removable singularity theorem" }
+  - { zh: Casorati–Weierstrass 定理, en: Casorati–Weierstrass theorem }
+  - { zh: Picard 大定理, en: "Picard's great theorem" }
+  - { zh: 亚纯函数, en: meromorphic function }
+  - { zh: 留数, en: residue, aliases: [残数], scope: ["2.3", "2.5"] }
+  - { zh: 留数定理, en: residue theorem }
+  - { zh: Jordan 引理, en: "Jordan's lemma", aliases: [约当引理] }
+  - { zh: Cauchy 主值, en: Cauchy principal value, aliases: [主值积分, principal value] }
+  - { zh: 辐角原理, en: argument principle }
+  - { zh: Rouché 定理, en: "Rouché's theorem", aliases: [儒歇定理] }
+  - { zh: 开映射定理, en: open mapping theorem }
+  - { zh: 共形映射, en: conformal mapping, aliases: [保角映射, conformal map] }
+  - { zh: 分式线性变换, en: Möbius transformation, aliases: [分式线性映射, Möbius 变换, fractional linear transformation, linear fractional transformation] }
+  - { zh: 对称点, en: symmetric points, scope: ["2.3"] }
+  - { zh: 交比, en: cross-ratio }
+  - { zh: Riemann 映射定理, en: Riemann mapping theorem, aliases: [黎曼映射定理] }
+  - { zh: Joukowski 映射, en: Joukowski map, aliases: [茹科夫斯基映射, Joukowski transformation] }
+  - { zh: Schwarz 引理, en: Schwarz lemma, aliases: [施瓦茨引理] }
+  - { zh: 复势, en: complex potential }
+  - { zh: 流函数, en: stream function }
+  - { zh: 单值分支, en: branch, aliases: [分支], scope: ["2.3"] }
+
+  # partial differential equations (2.5)
+  - { zh: 古典解, en: classical solution }
+  - { zh: 半线性方程, en: semilinear equation }
+  - { zh: 拟线性方程, en: quasilinear equation }
+  - { zh: 完全非线性方程, en: fully nonlinear equation }
+  - { zh: 波动方程, en: wave equation, aliases: [弦振动方程] }
+  - { zh: 热方程, en: heat equation, aliases: [热传导方程, 扩散方程, diffusion equation] }
+  - { zh: Laplace 方程, en: Laplace equation, aliases: [拉普拉斯方程, "Laplace's equation"] }
+  - { zh: Poisson 方程, en: Poisson equation, aliases: [泊松方程, "Poisson's equation"] }
+  - { zh: Robin 边界条件, en: Robin boundary condition, aliases: [第三类边界条件] }
+  - { zh: 初边值问题, en: initial-boundary value problem, aliases: [混合问题, mixed problem] }
+  - { zh: 适定, en: well-posed, aliases: [适定性, 适定问题, well-posedness, well-posed problem] }
+  - { zh: 双曲型方程, en: hyperbolic equation }
+  - { zh: 抛物型方程, en: parabolic equation }
+  - { zh: 椭圆型方程, en: elliptic equation }
+  - { zh: 标准形, en: canonical form, scope: ["2.5"] }
+  - { zh: 输运方程, en: transport equation, aliases: [对流方程, advection equation] }
+  - { zh: 非特征条件, en: noncharacteristic condition }
+  - { zh: Burgers 方程, en: "Burgers' equation", aliases: [无粘 Burgers 方程, Burgers equation, inviscid Burgers equation] }
+  - { zh: 守恒律, en: conservation law }
+  - { zh: 弱解, en: weak solution }
+  - { zh: 激波, en: shock wave, aliases: [shock] }
+  - { zh: 稀疏波, en: rarefaction wave, aliases: [膨胀波, rarefaction fan] }
+  - { zh: Rankine–Hugoniot 条件, en: Rankine–Hugoniot condition }
+  - { zh: 熵条件, en: entropy condition }
+  - { zh: Charpit 方法, en: "Charpit's method", aliases: [Lagrange–Charpit 方法, Lagrange–Charpit method] }
+  - { zh: 特征线法, en: method of characteristics }
+  - { zh: d'Alembert 公式, en: "d'Alembert's formula", aliases: [达朗贝尔公式] }
+  - { zh: 依赖区间, en: domain of dependence }
+  - { zh: 决定区域, en: domain of determinacy }
+  - { zh: 影响区域, en: range of influence, aliases: [region of influence, domain of influence] }
+  - { zh: 有限传播速度, en: finite speed of propagation }
+  - { zh: Duhamel 原理, en: "Duhamel's principle", aliases: [齐次化原理] }
+  - { zh: 能量法, en: energy method }
+  - { zh: 球面平均, en: spherical mean, aliases: [spherical means] }
+  - { zh: Kirchhoff 公式, en: "Kirchhoff's formula" }
+  - { zh: Huygens 原理, en: "Huygens' principle" }
+  - { zh: 降维法, en: method of descent }
+  - { zh: 分离变量法, en: separation of variables, aliases: [method of separation of variables] }
+  - { zh: 驻波, en: standing wave }
+  - { zh: 固有频率, en: natural frequency, aliases: [本征频率, eigenfrequency] }
+  - { zh: 光滑化效应, en: smoothing effect }
+  - { zh: Helmholtz 方程, en: Helmholtz equation }
+  - { zh: Fourier–Bessel 级数, en: Fourier–Bessel series, aliases: [傅里叶–贝塞尔级数] }
+  - { zh: 连带 Legendre 函数, en: associated Legendre functions, aliases: [连带勒让德函数] }
+  - { zh: 球面调和函数, en: spherical harmonics, aliases: [球谐函数] }
+  - { zh: Fourier 积分, en: Fourier integral }
+  - { zh: Fourier 变换, en: Fourier transform, aliases: [傅里叶变换] }
+  - { zh: Fourier 逆变换, en: inverse Fourier transform }
+  - { zh: Riemann–Lebesgue 引理, en: Riemann–Lebesgue lemma }
+  - { zh: 卷积, en: convolution }
+  - { zh: 卷积定理, en: convolution theorem }
+  - { zh: δ 函数, en: Dirac delta function, aliases: [Dirac δ 函数, Dirac delta] }
+  - { zh: Fourier 反演定理, en: Fourier inversion theorem, aliases: [Fourier 反演公式] }
+  - { zh: Plancherel 定理, en: "Plancherel's theorem", aliases: [Parseval 等式] }
+  - { zh: 不确定性原理, en: uncertainty principle, aliases: [测不准原理] }
+  - { zh: 误差函数, en: error function }
+  - { zh: 热核, en: heat kernel }
+  - { zh: Laplace 变换, en: Laplace transform, aliases: [拉普拉斯变换] }
+  - { zh: Bromwich 积分, en: Bromwich integral, aliases: [Bromwich 反演公式, Bromwich inversion formula] }
+  - { zh: 基本解, en: fundamental solution, scope: ["2.5"] }
+  - { zh: 抛物边界, en: parabolic boundary }
+  - { zh: 极值原理, en: maximum principle, aliases: [弱极值原理, weak maximum principle, 最大值原理] }
+  - { zh: 强极值原理, en: strong maximum principle }
+  - { zh: Green 第二公式, en: "Green's second identity", aliases: [第二 Green 公式] }
+  - { zh: Green 表示公式, en: "Green's representation formula" }
+  - { zh: Poisson 核, en: Poisson kernel, aliases: [泊松核] }
+  - { zh: Poisson 积分公式, en: "Poisson's integral formula", aliases: [Poisson 公式] }
+  - { zh: Harnack 不等式, en: "Harnack's inequality" }
+  - { zh: Dirichlet 原理, en: "Dirichlet's principle" }
+  - { zh: 镜像法, en: method of images }
+  - { zh: 特征方程, en: characteristic equation, scope: ["2.5"] }
