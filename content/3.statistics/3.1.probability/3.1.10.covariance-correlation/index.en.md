@@ -1,6 +1,6 @@
 ---
 title: Covariance and Correlation
-source_hash: d63ae40af82c
+source_hash: 3a21c3933e7a
 ---
 
 Expectation and variance summarize a single random variable; this chapter introduces numerical characteristics that summarize the relationship between two random variables. In portfolio theory, Markowitz (Nobel Memorial Prize in Economics, 1990) measured the return of a portfolio by its expectation and its risk by its variance, and the variance of a portfolio depends not only on the variances of the individual assets but also on the covariances between them; in neuroscience, the "functional connectivity" between the signals of two brain regions is often measured by a correlation coefficient. We first define the covariance and establish its properties, then standardize it into the correlation coefficient, discuss the relation between uncorrelatedness and independence, the geometric meaning of the correlation coefficient (the cosine of an angle) and the best linear predictor, and finally extend these notions to random vectors by defining the covariance matrix. The chapter uses the expectation and variance of [3.1.8](/3.1.8) and the conditional expectation of [3.1.9](/3.1.9); the covariance matrix is the foundation of the multivariate normal distribution ([3.1.15](/3.1.15)), linear regression ([3.3](/3.3)) and multivariate statistical analysis.
@@ -192,7 +192,7 @@ By Example 9.3.7 the last two coincide under the bivariate normal distribution; 
 
 ### 10.4.3. Correlation and Causation
 
-Correlation does not imply causation. A rooster's crowing is highly correlated with sunrise, yet the sun rises whether or not the rooster crows; the signals of two brain regions may be correlated because a third region drives both, not because one influences the other. The correlation coefficient summarizes how two variables vary together, and it must be interpreted within its limits: it reflects only linear association and says nothing about the direction of influence. On the other hand, under suitable model assumptions the correlation structure can help uncover causal relations; for example, under a multivariate normal assumption, directed dependencies between variables can be inferred from the covariance matrix (learning gene regulatory networks is one instance). The systematic theory belongs to causal inference ([3.7](/3.7)).
+Correlation does not imply causation. A rooster's crowing is highly correlated with sunrise, yet the sun rises whether or not the rooster crows; the signals of two brain regions may be correlated because a third region drives both, not because one influences the other. The correlation coefficient summarizes how two variables vary together, and it must be interpreted within its limits: it reflects only linear association and says nothing about the direction of influence. On the other hand, under suitable model assumptions the correlation structure can help uncover causal relations; for example, under a multivariate normal assumption, directed dependencies between variables can be inferred from the covariance matrix (learning gene regulatory networks is one instance). The systematic theory belongs to causal inference ([3.9](/3.9)).
 
 ## 10.5. Expectation and Covariance Matrix of a Random Vector
 

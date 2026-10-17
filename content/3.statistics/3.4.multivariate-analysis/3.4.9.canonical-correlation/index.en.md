@@ -1,0 +1,3 @@
+---
+title: Canonical Correlation Analysis
+---
