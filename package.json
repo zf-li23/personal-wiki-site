@@ -9,11 +9,11 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -p . && vite build",
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 vite",
+    "build": "tsc -p . && NODE_OPTIONS=--max-old-space-size=8192 vite build",
     "preview": "vite preview",
-    "wiki": "node scripts/wiki.ts",
-    "check": "node scripts/wiki.ts build --strict && tsc -p . && eslint . && node --test \"scripts/**/*.test.ts\"",
+    "wiki": "node --max-old-space-size=8192 scripts/wiki.ts",
+    "check": "node --max-old-space-size=8192 scripts/wiki.ts build --strict && tsc -p . && eslint . && node --test \"scripts/**/*.test.ts\"",
     "typecheck": "tsc -p .",
     "lint": "eslint .",
     "test": "node --test \"scripts/**/*.test.ts\"",

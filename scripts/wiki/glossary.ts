@@ -82,7 +82,8 @@ export function loadConcepts(diag: Diagnostics, file = GLOSSARY_FILE): Concept[]
     if (seen.some((other) => conflicts(other, scope))) diag.error(file, `"${term.en}" duplicates another concept with that English name; give them scopes that do not overlap`);
     const id = scope.length && (seen.length || unscopedIds.has(base)) ? `${base}-${conceptId(scope.join(' '))}` : base;
     sameEn.set(base, [...seen, scope]);
-    for (const name of [term.zh, ...aliases, term.en]) {
+    // A name may repeat within one concept (zh and en are both "Lasso"); only other concepts clash.
+    for (const name of new Set([term.zh, ...aliases, term.en])) {
       if (name === term.en && /\p{Script=Han}/u.test(name)) continue;
       const clash = names.get(name)?.find((other) => conflicts(other.scope, scope));
       if (clash) diag.error(file, `name "${name}" is used by two concepts (${clash.en} and ${term.en}); give them non-overlapping scopes`);

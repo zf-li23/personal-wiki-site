@@ -987,9 +987,164 @@ terms:
   - { zh: 依概率收敛, en: convergence in probability }
   - { zh: 几乎处处收敛, en: almost sure convergence }
   - { zh: 多元正态分布, en: multivariate normal distribution }
-  - { zh: 极大似然估计, en: maximum likelihood estimation, aliases: [最大似然估计] }
+  - { zh: 极大似然估计, en: maximum likelihood estimation, aliases: [最大似然估计, 极大似然估计量, maximum likelihood estimator, MLE] }
   - { zh: 置信区间, en: confidence interval }
   - { zh: 假设检验, en: hypothesis testing }
+  # statistical inference (3.2)
+  - { zh: 总体, en: population, scope: ["3"] }
+  - { zh: 个体, en: individual, scope: ["3"] }
+  - { zh: 样本, en: sample, scope: ["3"] }
+  - { zh: 样本量, en: sample size, aliases: [样本容量] }
+  - { zh: 简单随机样本, en: simple random sample, aliases: [随机样本, random sample] }
+  - { zh: 样本分布, en: sample distribution }
+  - { zh: 统计模型, en: statistical model }
+  - { zh: 总体参数, en: population parameter }
+  - { zh: 参数空间, en: parameter space }
+  - { zh: 分布族, en: distribution family, aliases: [family of distributions] }
+  - { zh: 统计推断, en: statistical inference }
+  - { zh: 参数推断, en: parametric inference }
+  - { zh: 非参数推断, en: nonparametric inference }
+  - { zh: 统计量, en: statistic }
+  - { zh: 样本均值, en: sample mean }
+  - { zh: 样本方差, en: sample variance }
+  - { zh: 样本标准差, en: sample standard deviation }
+  - { zh: 样本原点矩, en: sample origin moment, aliases: [样本矩, sample moment, sample raw moment] }
+  - { zh: 样本中心矩, en: sample central moment }
+  - { zh: 样本协方差, en: sample covariance }
+  - { zh: 次序统计量, en: order statistic, aliases: [顺序统计量] }
+  - { zh: 样本中位数, en: sample median }
+  - { zh: 样本极差, en: sample range, aliases: [极差] }
+  - { zh: 样本变异系数, en: sample coefficient of variation }
+  - { zh: 样本偏度, en: sample skewness }
+  - { zh: 样本峰度, en: sample kurtosis }
+  - { zh: 经验分布函数, en: empirical distribution function, aliases: [经验分布] }
+  - { zh: Glivenko–Cantelli 定理, en: Glivenko–Cantelli theorem, aliases: [格利文科定理] }
+  - { zh: 抽样分布, en: sampling distribution }
+  - { zh: 卡方分布, en: chi-square distribution, aliases: [χ² 分布, chi-squared distribution] }
+  - { zh: 自由度, en: degrees of freedom }
+  - { zh: 上分位数, en: upper quantile, aliases: [上 α 分位数, 上侧分位数, upper α quantile] }
+  - { zh: t 分布, en: t-distribution, aliases: [学生氏分布, Student t 分布, "Student's t-distribution"] }
+  - { zh: F 分布, en: F-distribution }
+  - { zh: 极限分布, en: limiting distribution, aliases: [大样本分布, large-sample distribution] }
+  - { zh: Slutsky 定理, en: "Slutsky's theorem" }
+  - { zh: 指数族, en: exponential family }
+  - { zh: 自然形式, en: natural form, scope: ["3"] }
+  - { zh: 自然参数, en: natural parameter }
+  - { zh: 自然参数空间, en: natural parameter space }
+  - { zh: 充分统计量, en: sufficient statistic }
+  - { zh: 因子分解定理, en: factorization theorem, aliases: [Fisher–Neyman 因子分解定理, Fisher–Neyman factorization theorem] }
+  - { zh: 极小充分统计量, en: minimal sufficient statistic, aliases: [最小充分统计量] }
+  - { zh: 完全统计量, en: complete statistic, aliases: [完备统计量] }
+  - { zh: 有界完全统计量, en: bounded complete statistic, aliases: [有界完备统计量] }
+  - { zh: 辅助统计量, en: ancillary statistic }
+  - { zh: Basu 定理, en: "Basu's theorem" }
+  - { zh: 点估计量, en: point estimator, aliases: [估计量, estimator] }
+  - { zh: 无偏估计, en: unbiased estimator, aliases: [无偏估计量] }
+  - { zh: 均方误差, en: mean squared error, aliases: [MSE] }
+  - { zh: 偏差–方差权衡, en: bias–variance trade-off, aliases: [偏差-方差权衡] }
+  - { zh: 相合估计, en: consistent estimator, aliases: [相合性] }
+  - { zh: 相合渐近正态估计, en: consistent asymptotically normal estimator }
+  - { zh: 矩估计法, en: method of moments, aliases: [矩估计, moment estimator] }
+  - { zh: 似然函数, en: likelihood function, aliases: [似然, likelihood] }
+  - { zh: 对数似然函数, en: log-likelihood function, aliases: [对数似然, log-likelihood] }
+  - { zh: 似然方程, en: likelihood equation }
+  - { zh: 一致最小方差无偏估计, en: uniformly minimum variance unbiased estimator, aliases: [UMVUE] }
+  - { zh: Rao–Blackwell 定理, en: Rao–Blackwell theorem }
+  - { zh: Lehmann–Scheffé 定理, en: Lehmann–Scheffé theorem }
+  - { zh: Cramér–Rao 正则分布族, en: Cramér–Rao regular family, aliases: [C-R 正则分布族] }
+  - { zh: Fisher 信息量, en: Fisher information, aliases: [Fisher 信息] }
+  - { zh: Fisher 信息矩阵, en: Fisher information matrix }
+  - { zh: 得分函数, en: score function }
+  - { zh: Cramér–Rao 不等式, en: Cramér–Rao inequality, aliases: [C-R 不等式, Cramér–Rao 下界, Cramér–Rao lower bound] }
+  - { zh: 有效估计, en: efficient estimator }
+  - { zh: 设计矩阵, en: design matrix }
+  - { zh: Gauss–Markov 定理, en: Gauss–Markov theorem }
+  - { zh: 简单线性回归模型, en: simple linear regression model }
+  - { zh: 核密度估计, en: kernel density estimation, aliases: [核密度估计量, kernel density estimator] }
+  - { zh: 核函数, en: kernel function, scope: ["3"] }
+  - { zh: 带宽, en: bandwidth, scope: ["3"] }
+  - { zh: Lasso, en: Lasso, aliases: [least absolute shrinkage and selection operator] }
+  - { zh: 置信水平, en: confidence level }
+  - { zh: 置信系数, en: confidence coefficient }
+  - { zh: 置信上限, en: upper confidence limit }
+  - { zh: 置信下限, en: lower confidence limit }
+  - { zh: 置信域, en: confidence region }
+  - { zh: 枢轴量, en: pivotal quantity, aliases: [枢轴变量] }
+  - { zh: 渐近有效置信区间, en: asymptotically valid confidence interval }
+  - { zh: Behrens–Fisher 问题, en: Behrens–Fisher problem }
+  - { zh: Bonferroni 校正, en: Bonferroni correction }
+  - { zh: Šidák 校正, en: Šidák correction }
+  - { zh: 原假设, en: null hypothesis, aliases: [零假设] }
+  - { zh: 备择假设, en: alternative hypothesis, aliases: [对立假设] }
+  - { zh: 简单假设, en: simple hypothesis }
+  - { zh: 复合假设, en: composite hypothesis }
+  - { zh: 检验统计量, en: test statistic }
+  - { zh: 拒绝域, en: rejection region, aliases: [否定域, critical region] }
+  - { zh: 接受域, en: acceptance region }
+  - { zh: 临界值, en: critical value }
+  - { zh: 检验函数, en: test function }
+  - { zh: 随机化检验, en: randomized test }
+  - { zh: 非随机化检验, en: nonrandomized test }
+  - { zh: 第一类错误, en: type I error, aliases: [弃真错误] }
+  - { zh: 第二类错误, en: type II error, aliases: [取伪错误] }
+  - { zh: 显著性水平, en: level of significance, aliases: [significance level, 检验水平] }
+  - { zh: 功效函数, en: power function }
+  - { zh: p 值, en: p-value, aliases: [P 值] }
+  - { zh: Neyman–Pearson 原则, en: Neyman–Pearson principle }
+  - { zh: 双侧检验, en: two-sided test }
+  - { zh: 单侧检验, en: one-sided test }
+  - { zh: Z 检验, en: Z-test, aliases: [U 检验, U-test] }
+  - { zh: t 检验, en: t-test }
+  - { zh: F 检验, en: F-test }
+  - { zh: Welch t 检验, en: "Welch's t-test" }
+  - { zh: 成对比较, en: paired comparison }
+  - { zh: 似然比, en: likelihood ratio }
+  - { zh: 似然比检验, en: likelihood ratio test }
+  - { zh: Wilks 定理, en: "Wilks' theorem" }
+  - { zh: 一致最大功效检验, en: uniformly most powerful test, aliases: [UMP 检验, UMP test] }
+  - { zh: 最大功效检验, en: most powerful test, aliases: [MP 检验, MP test, 最优势检验] }
+  - { zh: Neyman–Pearson 引理, en: Neyman–Pearson lemma, aliases: [Neyman–Pearson 基本引理, NP 引理] }
+  - { zh: 无偏检验, en: unbiased test }
+  - { zh: 一致最大功效无偏检验, en: uniformly most powerful unbiased test, aliases: [UMPU 检验] }
+  - { zh: 单调似然比, en: monotone likelihood ratio }
+  - { zh: Karlin–Rubin 定理, en: Karlin–Rubin theorem }
+  - { zh: 方差分析, en: analysis of variance, aliases: [ANOVA] }
+  - { zh: 非参数假设检验, en: nonparametric hypothesis test, aliases: [非参数检验, nonparametric test] }
+  - { zh: 参数假设检验, en: parametric hypothesis test, aliases: [参数检验, parametric test] }
+  - { zh: 符号检验, en: sign test }
+  - { zh: Wilcoxon 符号秩检验, en: Wilcoxon signed-rank test, aliases: [符号秩检验, signed-rank test] }
+  - { zh: Wilcoxon 秩和检验, en: Wilcoxon rank-sum test, aliases: [秩和检验, Mann–Whitney U 检验, Mann–Whitney U test, Wilcoxon–Mann–Whitney test] }
+  - { zh: 拟合优度检验, en: goodness-of-fit test }
+  - { zh: 列联表, en: contingency table }
+  - { zh: 独立性检验, en: test of independence }
+  - { zh: 齐一性检验, en: test of homogeneity, aliases: [homogeneity test] }
+  - { zh: Kolmogorov–Smirnov 检验, en: Kolmogorov–Smirnov test, aliases: [KS 检验, KS test] }
+  - { zh: Shapiro–Wilk 检验, en: Shapiro–Wilk test }
+  - { zh: 正态 QQ 图, en: normal Q–Q plot, aliases: [QQ 图, Q–Q plot] }
+  - { zh: 似然原理, en: likelihood principle }
+  - { zh: 先验分布, en: prior distribution, aliases: [先验, prior] }
+  - { zh: 后验分布, en: posterior distribution, aliases: [后验, posterior] }
+  - { zh: 边际似然, en: marginal likelihood }
+  - { zh: 贝叶斯推断, en: Bayesian inference }
+  - { zh: 共轭先验, en: conjugate prior }
+  - { zh: 广义先验, en: improper prior }
+  - { zh: 无信息先验, en: non-informative prior }
+  - { zh: Jeffreys 先验, en: "Jeffreys' prior", aliases: [Jeffreys prior] }
+  - { zh: 最大熵先验, en: maximum entropy prior }
+  - { zh: 分层模型, en: hierarchical model }
+  - { zh: 最大后验估计, en: maximum a posteriori estimate, aliases: [后验众数估计, MAP 估计, MAP estimate] }
+  - { zh: 后验均值, en: posterior mean }
+  - { zh: 后验中位数, en: posterior median }
+  - { zh: 后验均方误差, en: posterior mean squared error, aliases: [PMSE] }
+  - { zh: 可信区间, en: credible interval, aliases: [贝叶斯可信区间] }
+  - { zh: 最高后验密度, en: highest posterior density, aliases: [HPD 区间, HPD interval] }
+  - { zh: 后验优势比, en: posterior odds }
+  - { zh: 贝叶斯因子, en: Bayes factor }
+  - { zh: 后验预测分布, en: posterior predictive distribution }
+  - { zh: Beta-二项分布, en: beta-binomial distribution }
+  - { zh: 损失函数, en: loss function }
+  - { zh: 贝叶斯行动, en: Bayes action }
+
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
   - { zh: 分岔, en: bifurcation }
