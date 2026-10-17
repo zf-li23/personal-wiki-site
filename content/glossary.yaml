@@ -136,7 +136,7 @@ terms:
   - { zh: 满射, en: surjection }
   - { zh: 双射, en: bijection }
   - { zh: 反函数, en: inverse function }
-  - { zh: 集合的特征函数, en: indicator function, aliases: [characteristic function of a set] }
+  - { zh: 集合的特征函数, en: indicator function, aliases: [指示函数, 示性函数, characteristic function of a set] }
   - { zh: 模糊子集, en: fuzzy subset, aliases: [模糊集] }
   - { zh: 等势, en: equinumerosity, aliases: [equinumerous] }
   - { zh: 基数, en: cardinal number }
@@ -990,6 +990,121 @@ terms:
   - { zh: 极大似然估计, en: maximum likelihood estimation, aliases: [最大似然估计, 极大似然估计量, maximum likelihood estimator, MLE] }
   - { zh: 置信区间, en: confidence interval }
   - { zh: 假设检验, en: hypothesis testing }
+  # probability (3.1)
+  - { zh: 样本空间, en: sample space, scope: ["3"] }
+  - { zh: 事件, en: event, scope: ["3"] }
+  - { zh: 概率模型, en: probability model }
+  - { zh: 概率公理, en: axioms of probability, aliases: [Kolmogorov 公理, Kolmogorov axioms] }
+  - { zh: 可列可加性, en: countable additivity, aliases: [σ-可加性] }
+  - { zh: 古典概型, en: classical probability model }
+  - { zh: 几何概型, en: geometric probability }
+  - { zh: 多项式系数, en: multinomial coefficient }
+  - { zh: σ-代数, en: sigma-algebra, aliases: [事件域, σ-域, sigma-field] }
+  - { zh: 可测空间, en: measurable space }
+  - { zh: 概率测度, en: probability measure }
+  - { zh: 概率空间, en: probability space }
+  - { zh: 几乎必然, en: almost surely, aliases: [以概率 1] }
+  - { zh: 事件列的上极限, en: limit superior of events, scope: ["3"] }
+  - { zh: 事件列的下极限, en: limit inferior of events, scope: ["3"] }
+  - { zh: Borel–Cantelli 引理, en: Borel–Cantelli lemma }
+  - { zh: 条件概率, en: conditional probability }
+  - { zh: 乘法公式, en: multiplication rule, aliases: [乘法法则], scope: ["3"] }
+  - { zh: 全概率公式, en: law of total probability }
+  - { zh: Bayes 公式, en: "Bayes' theorem", aliases: [贝叶斯公式, 贝叶斯法则, "Bayes' rule"] }
+  - { zh: 独立性, en: independence, aliases: [相互独立], scope: ["3"] }
+  - { zh: 条件独立, en: conditional independence }
+  - { zh: 两两独立, en: pairwise independence }
+  - { zh: 随机变量, en: random variable }
+  - { zh: Borel 集, en: Borel set }
+  - { zh: 可测函数, en: measurable function, aliases: [Borel 可测函数] }
+  - { zh: 随机变量的独立性, en: independence of random variables }
+  - { zh: 独立同分布, en: independent and identically distributed, aliases: [i.i.d.] }
+  - { zh: 离散型随机变量, en: discrete random variable }
+  - { zh: 分布列, en: probability mass function, aliases: [概率分布列, PMF] }
+  - { zh: 两点分布, en: Bernoulli distribution, aliases: [Bernoulli 分布] }
+  - { zh: 二项分布, en: binomial distribution }
+  - { zh: 几何分布, en: geometric distribution }
+  - { zh: Pascal 分布, en: Pascal distribution, aliases: [帕斯卡分布] }
+  - { zh: 负二项分布, en: negative binomial distribution }
+  - { zh: 超几何分布, en: hypergeometric distribution }
+  - { zh: 负超几何分布, en: negative hypergeometric distribution }
+  - { zh: Poisson 分布, en: Poisson distribution, aliases: [泊松分布] }
+  - { zh: Poisson 定理, en: Poisson limit theorem }
+  - { zh: 无记忆性, en: memorylessness, aliases: [memoryless property] }
+  - { zh: 连续型随机变量, en: continuous random variable }
+  - { zh: 概率密度, en: probability density function, aliases: [概率密度函数, PDF] }
+  - { zh: 均匀分布, en: uniform distribution }
+  - { zh: 指数分布, en: exponential distribution }
+  - { zh: 正态分布, en: normal distribution, aliases: [Gauss 分布, 高斯分布, Gaussian distribution] }
+  - { zh: 标准正态分布, en: standard normal distribution }
+  - { zh: Beta 分布, en: beta distribution }
+  - { zh: Gamma 分布, en: gamma distribution }
+  - { zh: Erlang 分布, en: Erlang distribution }
+  - { zh: Weibull 分布, en: Weibull distribution }
+  - { zh: Rayleigh 分布, en: Rayleigh distribution }
+  - { zh: Cauchy 分布, en: Cauchy distribution }
+  - { zh: 分布函数, en: cumulative distribution function, aliases: [累积分布函数, 概率分布函数, CDF, distribution function] }
+  - { zh: 奇异分布, en: singular distribution }
+  - { zh: 随机向量, en: random vector }
+  - { zh: 联合分布函数, en: joint distribution function, aliases: [联合分布, joint CDF, joint distribution] }
+  - { zh: 边缘分布, en: marginal distribution, aliases: [边际分布] }
+  - { zh: 离散型随机向量, en: discrete random vector }
+  - { zh: 联合分布列, en: joint probability mass function, aliases: [joint PMF] }
+  - { zh: 边缘分布列, en: marginal probability mass function, aliases: [marginal PMF] }
+  - { zh: 连续型随机向量, en: continuous random vector }
+  - { zh: 联合密度, en: joint probability density function, aliases: [联合概率密度, joint density, joint PDF] }
+  - { zh: 边缘密度, en: marginal density, aliases: [边际密度, marginal PDF] }
+  - { zh: 多项分布, en: multinomial distribution }
+  - { zh: 二元正态分布, en: bivariate normal distribution }
+  - { zh: 条件分布列, en: conditional probability mass function, aliases: [conditional PMF] }
+  - { zh: 条件分布函数, en: conditional distribution function, aliases: [条件分布, conditional distribution] }
+  - { zh: 条件密度, en: conditional density, aliases: [条件概率密度, conditional PDF] }
+  - { zh: 卷积公式, en: convolution formula }
+  - { zh: 分位数, en: quantile, aliases: [p 分位数, 分位数函数, quantile function] }
+  - { zh: 中位数, en: median }
+  - { zh: 逆变换法, en: inverse transform sampling, aliases: [inverse transform method] }
+  - { zh: 概率积分变换, en: probability integral transform }
+  - { zh: Box–Muller 方法, en: Box–Muller transform, aliases: [Box–Muller method] }
+  - { zh: 数学期望, en: expectation, aliases: [期望, expected value] }
+  - { zh: 方差, en: variance }
+  - { zh: 标准差, en: standard deviation }
+  - { zh: 标准化, en: standardization, scope: ["3"] }
+  - { zh: 原点矩, en: raw moment, aliases: [矩, moment] }
+  - { zh: 中心矩, en: central moment }
+  - { zh: 偏度, en: skewness }
+  - { zh: 峰度, en: kurtosis, aliases: [超额峰度, excess kurtosis] }
+  - { zh: Markov 不等式, en: "Markov's inequality", aliases: [马尔可夫不等式] }
+  - { zh: Chebyshev 不等式, en: "Chebyshev's inequality", aliases: [切比雪夫不等式] }
+  - { zh: 全期望公式, en: law of total expectation, aliases: [重期望公式, tower property, law of iterated expectations] }
+  - { zh: 最佳预测, en: best predictor }
+  - { zh: 条件方差, en: conditional variance }
+  - { zh: 全方差公式, en: law of total variance }
+  - { zh: 协方差, en: covariance }
+  - { zh: 相关系数, en: correlation coefficient, aliases: [Pearson 相关系数, Pearson correlation coefficient] }
+  - { zh: 最佳线性预测, en: best linear predictor }
+  - { zh: 协方差矩阵, en: covariance matrix }
+  - { zh: 概率母函数, en: probability generating function, aliases: [PGF] }
+  - { zh: 逆转公式, en: inversion formula, aliases: [反演公式], scope: ["3"] }
+  - { zh: 连续性定理, en: continuity theorem, aliases: [Lévy 连续性定理, "Lévy's continuity theorem"], scope: ["3"] }
+  - { zh: 弱收敛, en: weak convergence, scope: ["3"] }
+  - { zh: 弱大数定律, en: weak law of large numbers, aliases: [WLLN] }
+  - { zh: 强大数定律, en: strong law of large numbers, aliases: [SLLN] }
+  - { zh: Khinchin 大数定律, en: "Khinchin's law of large numbers", aliases: [辛钦大数定律] }
+  - { zh: Markov 大数定律, en: "Markov's law of large numbers", aliases: [马尔可夫大数定律] }
+  - { zh: 蒙特卡洛方法, en: Monte Carlo method, aliases: [随机模拟方法, Monte Carlo 方法] }
+  - { zh: Lindeberg–Feller 中心极限定理, en: Lindeberg–Feller central limit theorem }
+  - { zh: Lindeberg 条件, en: Lindeberg condition }
+  - { zh: Lyapunov 中心极限定理, en: Lyapunov central limit theorem }
+  - { zh: Lyapunov 条件, en: Lyapunov condition }
+  - { zh: de Moivre–Laplace 中心极限定理, en: de Moivre–Laplace theorem, aliases: [棣莫弗–拉普拉斯定理] }
+  - { zh: 连续性修正, en: continuity correction }
+  - { zh: Berry–Esseen 定理, en: Berry–Esseen theorem }
+  - { zh: r 阶矩收敛, en: convergence in r-th mean, aliases: [均方收敛, convergence in L^r] }
+  - { zh: 连续映射定理, en: continuous mapping theorem }
+  - { zh: Delta 方法, en: delta method }
+  - { zh: Cramér–Wold 定理, en: Cramér–Wold theorem, aliases: [Cramér–Wold 方法, Cramér–Wold device] }
+  - { zh: 唯一性定理, en: uniqueness theorem, scope: ["3"] }
+
   # statistical inference (3.2)
   - { zh: 总体, en: population, scope: ["3"] }
   - { zh: 个体, en: individual, scope: ["3"] }
