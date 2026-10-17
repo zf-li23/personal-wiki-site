@@ -999,7 +999,7 @@ terms:
   - { zh: 古典概型, en: classical probability model }
   - { zh: 几何概型, en: geometric probability }
   - { zh: 多项式系数, en: multinomial coefficient }
-  - { zh: σ-代数, en: sigma-algebra, aliases: [事件域, σ-域, sigma-field] }
+  - { zh: σ-代数, en: sigma-algebra, aliases: [事件域, σ-域, sigma-field, σ-algebra, σ-field] }
   - { zh: 可测空间, en: measurable space }
   - { zh: 概率测度, en: probability measure }
   - { zh: 概率空间, en: probability space }
