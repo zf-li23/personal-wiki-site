@@ -1260,6 +1260,136 @@ terms:
   - { zh: 损失函数, en: loss function }
   - { zh: 贝叶斯行动, en: Bayes action }
 
+  # multivariate analysis (3.4)
+  - { zh: 数据矩阵, en: data matrix }
+  - { zh: 马氏距离, en: Mahalanobis distance, aliases: [Mahalanobis 距离, 统计距离, statistical distance] }
+  - { zh: 探索性数据分析, en: exploratory data analysis, aliases: [EDA] }
+  - { zh: 箱线图, en: boxplot, aliases: [箱形图, box plot] }
+  - { zh: 平方根矩阵, en: square root matrix, aliases: [矩阵平方根, matrix square root] }
+  - { zh: 推广的 Cauchy–Schwarz 不等式, en: extended Cauchy–Schwarz inequality }
+  - { zh: 最大化引理, en: maximization lemma }
+  - { zh: 分子布局, en: numerator layout }
+  - { zh: 分母布局, en: denominator layout }
+  - { zh: 样本均值向量, en: sample mean vector }
+  - { zh: 样本协方差矩阵, en: sample covariance matrix }
+  - { zh: 样本相关矩阵, en: sample correlation matrix }
+  - { zh: 中心化矩阵, en: centering matrix }
+  - { zh: 广义样本方差, en: generalized sample variance, aliases: [广义方差, generalized variance] }
+  - { zh: Wishart 分布, en: Wishart distribution }
+  - { zh: Hotelling T² 统计量, en: "Hotelling's T² statistic", aliases: [Hotelling T², "Hotelling's T²", Hotelling T² 检验, "Hotelling's T² test"] }
+  - { zh: 联合置信区间, en: simultaneous confidence intervals, aliases: [同时置信区间, simultaneous confidence interval] }
+  - { zh: 合并样本协方差矩阵, en: pooled sample covariance matrix, aliases: [合并协方差矩阵, pooled covariance matrix] }
+  - { zh: 双样本 Hotelling T² 检验, en: two-sample Hotelling T² test }
+  - { zh: Box M 检验, en: "Box's M test" }
+  - { zh: 卡方图, en: chi-square plot }
+  - { zh: Box–Cox 变换, en: Box–Cox transformation }
+  - { zh: 主成分分析, en: principal component analysis, aliases: [PCA] }
+  - { zh: 主成分, en: principal component }
+  - { zh: 样本主成分, en: sample principal component }
+  - { zh: 总体总方差, en: total population variance }
+  - { zh: 碎石图, en: scree plot, aliases: [elbow plot] }
+  - { zh: 邻近矩阵, en: proximity matrix }
+  - { zh: 欧氏距离矩阵, en: Euclidean distance matrix }
+  - { zh: 多维标度, en: multidimensional scaling, aliases: [MDS] }
+  - { zh: 度量多维标度, en: metric multidimensional scaling }
+  - { zh: 非度量多维标度, en: nonmetric multidimensional scaling }
+  - { zh: 经典多维标度, en: classical multidimensional scaling, aliases: [CMDS] }
+  - { zh: 主坐标分析, en: principal coordinates analysis, aliases: [PCoA] }
+  - { zh: 潜在语义索引, en: latent semantic indexing, aliases: [LSI] }
+  - { zh: 正定核, en: positive definite kernel }
+  - { zh: 多项式核, en: polynomial kernel }
+  - { zh: Gauss 核, en: Gaussian kernel, aliases: [RBF 核, RBF kernel, radial basis function kernel] }
+  - { zh: 核主成分分析, en: kernel principal component analysis, aliases: [kernel PCA, 核 PCA] }
+  - { zh: t 分布随机邻域嵌入, en: t-distributed stochastic neighbor embedding, aliases: [t-SNE] }
+  - { zh: 困惑度, en: perplexity }
+  - { zh: Kullback–Leibler 散度, en: Kullback–Leibler divergence, aliases: [KL 散度, KL divergence] }
+  - { zh: 拟合值, en: fitted value }
+  - { zh: 残差, en: residual, scope: ["3"] }
+  - { zh: 帽子矩阵, en: hat matrix }
+  - { zh: 残差平方和, en: residual sum of squares, aliases: [RSS] }
+  - { zh: Gauss–Markov 模型, en: Gauss–Markov model }
+  - { zh: 正态线性模型, en: normal linear model }
+  - { zh: 预测区间, en: prediction interval }
+  - { zh: 过拟合, en: overfitting }
+  - { zh: 调节参数, en: tuning parameter }
+  - { zh: 岭回归, en: ridge regression }
+  - { zh: 主成分回归, en: principal component regression, aliases: [PCR] }
+  - { zh: 因子分析, en: factor analysis }
+  - { zh: 正交因子模型, en: orthogonal factor model, aliases: [因子模型, factor model] }
+  - { zh: 公共因子, en: common factor }
+  - { zh: 特殊因子, en: specific factor }
+  - { zh: 因子载荷, en: factor loading, aliases: [loading] }
+  - { zh: 共同度, en: communality, aliases: [公因子方差] }
+  - { zh: 特殊方差, en: specific variance, aliases: [uniqueness] }
+  - { zh: Heywood 情形, en: Heywood case }
+  - { zh: 主成分法, en: principal component method, scope: ["3.4"] }
+  - { zh: 方差最大旋转, en: varimax rotation, aliases: [varimax] }
+  - { zh: 加权最小二乘因子得分, en: weighted least squares factor score, aliases: [Bartlett 因子得分, Bartlett factor score] }
+  - { zh: 回归因子得分, en: regression factor score, aliases: [Thomson 因子得分, Thomson factor score] }
+  - { zh: 探索性因子分析, en: exploratory factor analysis }
+  - { zh: 验证性因子分析, en: confirmatory factor analysis }
+  - { zh: 典型相关分析, en: canonical correlation analysis, aliases: [CCA] }
+  - { zh: 典型变量, en: canonical variate }
+  - { zh: 典型相关系数, en: canonical correlation, aliases: [典型相关] }
+  - { zh: 复相关系数, en: multiple correlation coefficient }
+  - { zh: 判别分析, en: discriminant analysis }
+  - { zh: Fisher 线性判别, en: "Fisher's linear discriminant", aliases: [Fisher 判别, Fisher discriminant] }
+  - { zh: 期望误判代价, en: expected cost of misclassification, aliases: [ECM] }
+  - { zh: 总误判概率, en: total probability of misclassification, aliases: [TPM] }
+  - { zh: 贝叶斯分类器, en: Bayes classifier }
+  - { zh: 线性判别分析, en: linear discriminant analysis, aliases: [LDA] }
+  - { zh: 二次判别分析, en: quadratic discriminant analysis, aliases: [QDA] }
+  - { zh: 最优误判率, en: optimum error rate }
+  - { zh: 实际误判率, en: actual error rate, aliases: [AER] }
+  - { zh: 表观误判率, en: apparent error rate, aliases: [APER] }
+  - { zh: 混淆矩阵, en: confusion matrix }
+  - { zh: 交叉验证, en: cross-validation }
+  - { zh: 留一交叉验证, en: leave-one-out cross-validation, aliases: [留一法, LOOCV] }
+  - { zh: 准确率, en: accuracy, scope: ["3.4"] }
+  - { zh: 精确率, en: precision, scope: ["3.4"] }
+  - { zh: 召回率, en: recall, aliases: [灵敏度, sensitivity], scope: ["3.4"] }
+  - { zh: 特异度, en: specificity, scope: ["3.4"] }
+  - { zh: ROC 曲线, en: ROC curve, aliases: [receiver operating characteristic curve] }
+  - { zh: 曲线下面积, en: area under the curve, aliases: [AUC] }
+  - { zh: 多元方差分析, en: multivariate analysis of variance, aliases: [MANOVA] }
+  - { zh: 支持向量机, en: support vector machine, aliases: [SVM] }
+  - { zh: 聚类分析, en: cluster analysis, aliases: [聚类, clustering] }
+  - { zh: 无监督学习, en: unsupervised learning }
+  - { zh: 有监督学习, en: supervised learning, aliases: [监督学习] }
+  - { zh: 层次聚类, en: hierarchical clustering }
+  - { zh: 树状图, en: dendrogram, aliases: [谱系图] }
+  - { zh: 余弦相似度, en: cosine similarity }
+  - { zh: 单连接, en: single linkage, aliases: [最短距离法] }
+  - { zh: 全连接, en: complete linkage, aliases: [最长距离法] }
+  - { zh: 平均连接, en: average linkage, aliases: [类平均法] }
+  - { zh: 重心连接, en: centroid linkage, aliases: [重心法] }
+  - { zh: Ward 法, en: "Ward's method", aliases: [离差平方和法, Ward linkage] }
+  - { zh: 划分聚类, en: partitioning clustering }
+  - { zh: k 均值聚类, en: k-means clustering, aliases: [k 均值, k-means] }
+  - { zh: 肘部法则, en: elbow method }
+  - { zh: 轮廓系数, en: silhouette coefficient }
+  - { zh: 间隙统计量, en: gap statistic }
+  - { zh: 高斯混合模型, en: Gaussian mixture model, aliases: [GMM, 高斯混合] }
+  - { zh: 软聚类, en: soft clustering }
+  - { zh: 硬聚类, en: hard clustering }
+  - { zh: EM 算法, en: EM algorithm, aliases: [期望最大化算法, expectation–maximization algorithm] }
+  - { zh: 贝叶斯信息准则, en: Bayesian information criterion, aliases: [BIC] }
+  - { zh: 赤池信息准则, en: Akaike information criterion, aliases: [AIC] }
+  - { zh: 族错误率, en: family-wise error rate, aliases: [FWER, familywise error rate] }
+  - { zh: 错误发现率, en: false discovery rate, aliases: [FDR] }
+  - { zh: Benjamini–Hochberg 方法, en: Benjamini–Hochberg procedure, aliases: [BH 方法, BH procedure] }
+  - { zh: 对应分析, en: correspondence analysis }
+  - { zh: 对应矩阵, en: correspondence matrix }
+  - { zh: 卡方距离, en: chi-square distance }
+  - { zh: 稀疏主成分分析, en: sparse PCA, aliases: [sparse principal component analysis, 稀疏 PCA] }
+  - { zh: logistic 主成分分析, en: logistic PCA }
+  - { zh: 正则化判别分析, en: regularized discriminant analysis, aliases: [RDA] }
+  - { zh: logistic 回归, en: logistic regression, aliases: [逻辑斯谛回归, 逻辑回归] }
+  - { zh: k 近邻, en: k-nearest neighbors, aliases: [KNN, k-nearest neighbor] }
+  - { zh: 随机块模型, en: stochastic block model, aliases: [SBM] }
+  - { zh: 社区发现, en: community detection }
+  - { zh: 矩阵因子模型, en: matrix factor model }
+
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
   - { zh: 分岔, en: bifurcation }
