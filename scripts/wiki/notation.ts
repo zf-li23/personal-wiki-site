@@ -73,7 +73,7 @@ export const NOTATION_RULES: NotationRule[] = [
   { id: 'accent-braces', advice: String.raw`\bar{\boldsymbol{x}} (an accent needs braces around a command argument)`, pattern: /\\(bar|hat|tilde|dot|ddot|vec)\s*\\(boldsymbol|mathbf|mathrm|mathcal|mathbb)\s*\{([^{}]*)\}/g, fix: (_m, acc, font, arg) => `\\${acc}{\\${font}{${arg}}}` },
   { id: 'probability', advice: String.raw`\mathbb{P} for probability`, pattern: /\\Pr\b/g, fix: String.raw`\mathbb{P}` },
   // Not in discrete mathematics, where e is also the identity element of a group (e^{-1} = e).
-  { id: 'euler-e', advice: String.raw`\mathrm{e} for Euler's number`, pattern: /(?<!\\(?:boldsymbol|mathbf|mathrm|operatorname|text)\{)(?<!\\[A-Za-z]*)e(?=\s*\^)/g, fix: String.raw`\mathrm{e}`, scope: ['2', '3', '7'] },
+  { id: 'euler-e', advice: String.raw`\mathrm{e} for Euler's number`, pattern: /(?<!\\(?:boldsymbol|mathbf|mathrm|operatorname|text)\{)(?<!\\[A-Za-z]*)e(?=\s*\^)(?!\s*\^\s*\{?\s*(?:\*|\\ast|\\prime|\\dagger|\\mathsf))/g, fix: String.raw`\mathrm{e}`, scope: ['2', '3', '7'] },
   { id: 'indicator', advice: String.raw`\boldsymbol{1}_A for the indicator (KaTeX has no blackboard 1)`, pattern: /\\mathbb\s*\{\s*1\s*\}/g, fix: String.raw`\boldsymbol{1}` },
   {
     id: 'differential',

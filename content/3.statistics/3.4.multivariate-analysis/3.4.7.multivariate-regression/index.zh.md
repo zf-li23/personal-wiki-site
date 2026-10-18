@@ -1,7 +1,7 @@
 ---
 title: 线性回归模型
 description: 从多元的角度看经典线性回归模型：最小二乘及其作为正交投影的几何，Gauss–Markov 假定与正态假定下的性质、t 与 F 推断和预测区间，以及岭回归、主成分回归与 Lasso 等正则化方法。
-source_hash: 1cbf4135a61b
+source_hash: 86458a1df6c6
 ---
 
 统计与机器学习中的许多问题都在问：响应如何依赖于若干个协变量？例如明年的收入如何依赖于年龄、受教育程度和过去的收入，孩子的身高如何依赖于父母的身高。线性回归模型是最简单而又不平凡的回答。它自然地属于多元统计课程，因为它的一切都是矩阵代数：最小二乘拟合是到**设计矩阵**列空间上的**正交投影**，其分布由 [3.4.2](/3.4.2) 的**多元正态分布**得出，检验一组系数的统计量与 [3.4.3](/3.4.3) 中的 Hotelling $T^2$ 是同一类二次型。本章先建立模型与最小二乘估计，再在三层逐渐加强的假定（无假定、Gauss–Markov 模型、正态误差）下研究它的性质，最后讨论协变量很多的情形：岭回归、主成分回归（建立在 [3.4.5](/3.4.5) 的**主成分分析**之上）和 **Lasso** 以少量偏差换取方差的大幅减小。估计理论与 [3.2.3](/3.2.3) 有重叠，检验与 [3.2.5](/3.2.5) 有重叠；模型诊断、变量选择与一般线性模型在线性回归课程 [3.3](/3.3) 中展开。
@@ -156,7 +156,7 @@ $$
 
 于是在 Gauss–Markov 模型下，几何上的正交 $\hat{\boldsymbol{Y}}\perp\hat{\boldsymbol{\varepsilon}}$ 变成了 $\operatorname{Cov}(\hat{\boldsymbol{Y}},\hat{\boldsymbol{\varepsilon}})=O$。
 
-为估计 $\sigma^2$，记 $\hat y_i=\boldsymbol{x}_i^{\mathsf T}\hat{\boldsymbol{\beta}}$，$\hat\varepsilon_i=y_i-\hat y_i$；残差 $\hat\varepsilon_i$ 是数据点到拟合直线的竖直距离，$\sigma$ 是 $y$ 围绕总体回归直线的散布程度。自然的选择是 $\tilde\sigma^2=\operatorname{RSS}/n$，其中残差平方和（residual sum of squares）为
+为估计 $\sigma^2$，记 $\hat y_i=\boldsymbol{x}_i^{\mathsf T}\hat{\boldsymbol{\beta}}$，$\hat\varepsilon_i=y_i-\hat y_i$；残差 $\hat\varepsilon_i$ 是数据点到拟合直线的竖直距离，$\sigma$ 是 $y$ 围绕总体回归直线的散布程度。自然的选择是 $\tilde\sigma^2=\operatorname{RSS}/n$，其中残差平方和为
 
 $$
 \operatorname{RSS}=\sum_{i=1}^n\hat\varepsilon_i^2=\hat{\boldsymbol{\varepsilon}}^{\mathsf T}\hat{\boldsymbol{\varepsilon}}.
@@ -234,7 +234,7 @@ $$
 $$
 \hat y^*\pm t_{n-p,\alpha/2}\,\hat\sigma\sqrt{\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*}.
 $$
-新的响应 $y^*=\boldsymbol{x}^{*\mathsf T}\boldsymbol{\beta}+\varepsilon^*$（$\varepsilon^*\sim\mathcal{N}(0,\sigma^2)$ 与数据独立）满足 $y^*-\hat y^*\sim\mathcal{N}\big(0,\sigma^2(1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*)\big)$，由此得到预测区间（prediction interval）
+新的响应 $y^*=\boldsymbol{x}^{*\mathsf T}\boldsymbol{\beta}+\varepsilon^*$（$\varepsilon^*\sim\mathcal{N}(0,\sigma^2)$ 与数据独立）满足 $y^*-\hat y^*\sim\mathcal{N}\big(0,\sigma^2(1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*)\big)$，由此得到预测区间
 
 $$
 \hat y^*\pm t_{n-p,\alpha/2}\,\hat\sigma\sqrt{1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*}.
@@ -268,7 +268,7 @@ $$
 
 ### 7.3.1. 协变量很多的情形
 
-把无用的协变量放进模型会降低估计的精度。协变量总数相对样本量很小时，这无关紧要；但在许多现代应用中并非如此，例如 DNA 测序可以对几百个受试者产生数以百万计的协变量。这时上面的理论就失效了。当 $X$ 的各列高度相关（多重共线性）时，$X^{\mathsf T}X$ 接近奇异，$\operatorname{Cov}(\hat{\boldsymbol{\beta}})=\sigma^2(X^{\mathsf T}X)^{-1}$ 巨大；当 $p>n$ 时，$X^{\mathsf T}X$ 奇异，OLS 估计甚至不唯一。参数很多的模型可以把训练数据拟合得很好，对新数据却预测得很差，这称为过拟合（overfitting）。
+把无用的协变量放进模型会降低估计的精度。协变量总数相对样本量很小时，这无关紧要；但在许多现代应用中并非如此，例如 DNA 测序可以对几百个受试者产生数以百万计的协变量。这时上面的理论就失效了。当 $X$ 的各列高度相关（多重共线性）时，$X^{\mathsf T}X$ 接近奇异，$\operatorname{Cov}(\hat{\boldsymbol{\beta}})=\sigma^2(X^{\mathsf T}X)^{-1}$ 巨大；当 $p>n$ 时，$X^{\mathsf T}X$ 奇异，OLS 估计甚至不唯一。参数很多的模型可以把训练数据拟合得很好，对新数据却预测得很差，这称为过拟合。
 
 可用的补救办法包括方差膨胀因子等诊断指标；RSS、$R^2$ 与调整 $R^2$、信息准则（AIC、BIC）和交叉验证等模型选择准则；以及前向、后向选择等变量选择程序。这些在 [3.3](/3.3) 中展开。这里讨论三种直接修改估计量本身的方法。它们大多最小化带惩罚的目标函数
 

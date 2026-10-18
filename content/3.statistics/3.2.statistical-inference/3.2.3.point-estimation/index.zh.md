@@ -750,7 +750,7 @@ $$
 Gauss–Markov 假定为：
 
 1. 零均值：$\mathbb{E}(\varepsilon_i\mid\boldsymbol{x}_i)=0$，从而 $\mathbb{E}(y_i\mid\boldsymbol{x}_i)=\boldsymbol{x}_i^{\mathsf T}\boldsymbol{\beta}$；
-2. 同方差：对一切 $i$，$\operatorname{Var}(\varepsilon_i)=\sigma^2$；
+2. 同方差性（homoscedasticity）：对一切 $i$，$\operatorname{Var}(\varepsilon_i)=\sigma^2$；
 3. 误差不相关：$i\ne j$ 时 $\operatorname{Cov}(\varepsilon_i,\varepsilon_j)=0$。
 
 最小二乘估计极小化 $\operatorname{RSS}(\boldsymbol{\beta})=\sum_{i=1}^n(y_i-\boldsymbol{x}_i^{\mathsf T}\boldsymbol{\beta})^2=\|\boldsymbol{Y}-X\boldsymbol{\beta}\|^2$。若 $\operatorname{rank}(X)=p+1$，极小值点唯一，由**正规方程** $X^{\mathsf T}X\boldsymbol{\beta}=X^{\mathsf T}\boldsymbol{Y}$（[2.1](/2.1)）给出：

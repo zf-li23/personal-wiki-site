@@ -1260,6 +1260,126 @@ terms:
   - { zh: 损失函数, en: loss function }
   - { zh: 贝叶斯行动, en: Bayes action }
 
+  # linear regression (3.3)
+  - { zh: 回归均值, en: regression toward the mean, aliases: [向均值回归, regression to the mean] }
+  - { zh: 回归函数, en: regression function }
+  - { zh: Galton 板, en: Galton board, aliases: [高尔顿板, quincunx] }
+  - { zh: 响应变量, en: response variable, aliases: [因变量, dependent variable] }
+  - { zh: 解释变量, en: explanatory variable, aliases: [自变量, 预测变量, predictor, independent variable] }
+  - { zh: 正态误差回归模型, en: normal error regression model }
+  - { zh: 误差均方, en: error mean square, aliases: [残差均方] }
+  - { zh: 残差图, en: residual plot }
+  - { zh: 标准误, en: standard error }
+  - { zh: 最佳线性无偏估计, en: best linear unbiased estimator, aliases: [BLUE, 最佳线性无偏估计量] }
+  - { zh: 非中心 t 分布, en: noncentral t-distribution, aliases: [non-central t-distribution] }
+  - { zh: 非中心参数, en: noncentrality parameter }
+  - { zh: 置信带, en: confidence band, aliases: [Working–Hotelling 置信带, Working–Hotelling confidence band] }
+  - { zh: 总平方和, en: total sum of squares, aliases: [SSTO, SST] }
+  - { zh: 回归平方和, en: regression sum of squares, aliases: [SSR] }
+  - { zh: 均方, en: mean square }
+  - { zh: 方差分析表, en: ANOVA table, aliases: [analysis of variance table] }
+  - { zh: 完全模型, en: full model, scope: ["3"] }
+  - { zh: 简化模型, en: reduced model, scope: ["3"] }
+  - { zh: 一般线性检验, en: general linear test, aliases: [GLT, 偏 F 检验, partial F-test] }
+  - { zh: 决定系数, en: coefficient of determination, aliases: [判定系数, R²] }
+  - { zh: 回归诊断, en: regression diagnostics }
+  - { zh: 补救措施, en: remedial measure, aliases: [remedial measures] }
+  - { zh: 尖峰分布, en: leptokurtic distribution, aliases: [尖峰态] }
+  - { zh: 低峰分布, en: platykurtic distribution, aliases: [低峰态] }
+  - { zh: 序列图, en: sequence plot }
+  - { zh: 同方差性, en: homoscedasticity, aliases: [同方差, 方差齐性] }
+  - { zh: 异方差性, en: heteroscedasticity, aliases: [异方差] }
+  - { zh: Bartlett 检验, en: "Bartlett's test" }
+  - { zh: Levene 检验, en: "Levene's test" }
+  - { zh: Brown–Forsythe 检验, en: Brown–Forsythe test }
+  - { zh: Breusch–Pagan 检验, en: Breusch–Pagan test }
+  - { zh: Cramér–von Mises 检验, en: Cramér–von Mises test }
+  - { zh: Anderson–Darling 检验, en: Anderson–Darling test }
+  - { zh: Durbin–Watson 检验, en: Durbin–Watson test }
+  - { zh: Ljung–Box 检验, en: Ljung–Box test }
+  - { zh: 杠杆值, en: leverage, aliases: [杠杆] }
+  - { zh: 离群值, en: outlier, aliases: [离群点], scope: ["3"] }
+  - { zh: 高杠杆点, en: high-leverage point }
+  - { zh: 强影响点, en: influential observation, aliases: [influential point] }
+  - { zh: 半学生化残差, en: semistudentized residual }
+  - { zh: 标准化残差, en: standardized residual, aliases: [内学生化残差, 学生化残差, internally studentized residual, studentized residual] }
+  - { zh: 删除残差, en: deleted residual }
+  - { zh: 学生化删除残差, en: studentized deleted residual, aliases: [外学生化残差, externally studentized residual] }
+  - { zh: Cook 距离, en: "Cook's distance", aliases: ["Cook's D"] }
+  - { zh: 纯误差平方和, en: pure error sum of squares, aliases: [SSPE] }
+  - { zh: 失拟平方和, en: lack-of-fit sum of squares, aliases: [SSLF] }
+  - { zh: 非线性回归, en: nonlinear regression }
+  - { zh: 广义线性模型, en: generalized linear model, aliases: [GLM] }
+  - { zh: 联系函数, en: link function }
+  - { zh: 方差稳定化变换, en: variance-stabilizing transformation }
+  - { zh: 过原点的回归, en: regression through the origin }
+  - { zh: 反向预测, en: inverse prediction, aliases: [校准, calibration] }
+  - { zh: 多元线性回归模型, en: multiple linear regression model, aliases: [多重线性回归模型] }
+  - { zh: 偏回归系数, en: partial regression coefficient }
+  - { zh: 虚拟变量, en: dummy variable, aliases: [哑变量, 指示变量, indicator variable] }
+  - { zh: 多重决定系数, en: coefficient of multiple determination, aliases: [复决定系数] }
+  - { zh: 调整的决定系数, en: adjusted coefficient of determination, aliases: [调整 R², adjusted R², 修正的决定系数] }
+  - { zh: Jarque–Bera 检验, en: Jarque–Bera test }
+  - { zh: 额外平方和, en: extra sum of squares, aliases: [extra sums of squares] }
+  - { zh: 序贯平方和, en: sequential sums of squares, aliases: [第 I 类平方和, Type I sums of squares, sequential sum of squares] }
+  - { zh: 偏决定系数, en: coefficient of partial determination, aliases: [偏 R², partial R²] }
+  - { zh: 偏相关系数, en: partial correlation coefficient, aliases: [偏相关, partial correlation] }
+  - { zh: Frisch–Waugh–Lovell 定理, en: Frisch–Waugh–Lovell theorem, aliases: [FWL 定理, FWL theorem] }
+  - { zh: 相关变换, en: correlation transformation }
+  - { zh: 标准化回归模型, en: standardized regression model }
+  - { zh: 标准化回归系数, en: standardized regression coefficient }
+  - { zh: 抑制变量, en: suppressor variable }
+  - { zh: 多重共线性, en: multicollinearity, aliases: [共线性, collinearity] }
+  - { zh: 遗漏变量偏差, en: omitted variable bias }
+  - { zh: Simpson 悖论, en: "Simpson's paradox", aliases: [辛普森悖论] }
+  - { zh: 多项式回归, en: polynomial regression, aliases: [多项式回归模型, polynomial regression model] }
+  - { zh: 交互效应, en: interaction effect, aliases: [交互作用], scope: ["3"] }
+  - { zh: 欠拟合, en: underfitting }
+  - { zh: 最优子集回归, en: best subsets regression, aliases: [best subset selection] }
+  - { zh: 逐步回归, en: stepwise regression }
+  - { zh: 向前选择, en: forward selection, aliases: [前向选择] }
+  - { zh: 向后剔除, en: backward elimination, aliases: [后向剔除, backward selection] }
+  - { zh: Mallows Cp, en: "Mallows' Cp", aliases: [Cp 准则] }
+  - { zh: PRESS, en: PRESS, aliases: [预测平方和, prediction sum of squares] }
+  - { zh: 预测 R², en: predicted R² }
+  - { zh: 附加变量图, en: added-variable plot, aliases: [偏回归图, partial regression plot] }
+  - { zh: DFFITS, en: DFFITS }
+  - { zh: DFBETAS, en: DFBETAS }
+  - { zh: 方差膨胀因子, en: variance inflation factor, aliases: [VIF] }
+  - { zh: 容许度, en: tolerance, scope: ["3.3"] }
+  - { zh: White 估计量, en: White estimator, aliases: [三明治估计量, 异方差稳健估计量, sandwich estimator, heteroscedasticity-consistent estimator] }
+  - { zh: 加权最小二乘, en: weighted least squares, aliases: [WLS, 加权最小二乘法] }
+  - { zh: 广义最小二乘, en: generalized least squares, aliases: [GLS] }
+  - { zh: 迭代重加权最小二乘, en: iteratively reweighted least squares, aliases: [IRLS] }
+  - { zh: 岭迹, en: ridge trace }
+  - { zh: 弹性网络, en: elastic net }
+  - { zh: 稳健回归, en: robust regression }
+  - { zh: 最小绝对偏差, en: least absolute deviations, aliases: [LAD, 最小绝对残差, least absolute residuals] }
+  - { zh: 最小中位数平方, en: least median of squares, aliases: [LMS] }
+  - { zh: 非参数回归, en: nonparametric regression }
+  - { zh: 回归树, en: regression tree }
+  - { zh: 自助法, en: bootstrap }
+  - { zh: 因子, en: factor, scope: ["3.3", "3.8"] }
+  - { zh: 因子水平, en: factor level, scope: ["3.3", "3.8"] }
+  - { zh: 单元格均值模型, en: cell means model }
+  - { zh: 因子效应模型, en: factor effects model }
+  - { zh: 处理效应, en: treatment effect, aliases: [因子水平效应, factor level effect], scope: ["3.3", "3.8"] }
+  - { zh: 处理平方和, en: treatment sum of squares, aliases: [SSTR] }
+  - { zh: 可估函数, en: estimable function }
+  - { zh: 逐比较错误率, en: comparisonwise error rate, aliases: [per-comparison error rate] }
+  - { zh: 最小显著差数, en: least significant difference, aliases: [Fisher 最小显著差数, "Fisher's least significant difference", LSD] }
+  - { zh: 学生化极差分布, en: studentized range distribution }
+  - { zh: Tukey 方法, en: "Tukey's method", aliases: ["Tukey's HSD", Tukey HSD] }
+  - { zh: Scheffé 方法, en: "Scheffé's method" }
+  - { zh: 对照, en: contrast, scope: ["3.3", "3.8"] }
+  - { zh: 对照平方和, en: contrast sum of squares, aliases: [SSC] }
+  - { zh: 主效应, en: main effect, scope: ["3.3", "3.8"] }
+  - { zh: 交互作用图, en: interaction plot }
+  - { zh: 边际均值, en: marginal mean, scope: ["3.3", "3.8"] }
+  - { zh: 最小二乘均值, en: least squares mean, aliases: [LS 均值, LS-mean, 估计边际均值, estimated marginal mean] }
+  - { zh: Hartley 检验, en: "Hartley's test", aliases: [F_max 检验] }
+  - { zh: Kruskal–Wallis 检验, en: Kruskal–Wallis test }
+
   # multivariate analysis (3.4)
   - { zh: 数据矩阵, en: data matrix }
   - { zh: 马氏距离, en: Mahalanobis distance, aliases: [Mahalanobis 距离, 统计距离, statistical distance] }
@@ -1306,7 +1426,7 @@ terms:
   - { zh: 拟合值, en: fitted value }
   - { zh: 残差, en: residual, scope: ["3"] }
   - { zh: 帽子矩阵, en: hat matrix }
-  - { zh: 残差平方和, en: residual sum of squares, aliases: [RSS] }
+  - { zh: 残差平方和, en: residual sum of squares, aliases: [RSS, 误差平方和, error sum of squares, SSE] }
   - { zh: Gauss–Markov 模型, en: Gauss–Markov model }
   - { zh: 正态线性模型, en: normal linear model }
   - { zh: 预测区间, en: prediction interval }

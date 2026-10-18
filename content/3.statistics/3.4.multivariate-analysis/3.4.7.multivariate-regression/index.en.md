@@ -155,7 +155,7 @@ The mean is $(HX\boldsymbol{\beta},(I_n-H)X\boldsymbol{\beta})=(X\boldsymbol{\be
 
 So under the Gauss–Markov model the geometric orthogonality $\hat{\boldsymbol{Y}}\perp\hat{\boldsymbol{\varepsilon}}$ becomes $\operatorname{Cov}(\hat{\boldsymbol{Y}},\hat{\boldsymbol{\varepsilon}})=O$.
 
-To estimate $\sigma^2$, write $\hat y_i=\boldsymbol{x}_i^{\mathsf T}\hat{\boldsymbol{\beta}}$ and $\hat\varepsilon_i=y_i-\hat y_i$; the residual $\hat\varepsilon_i$ is the vertical distance from the point to the fitted line, and $\sigma$ is the spread of $y$ around the population line. A natural choice is $\tilde\sigma^2=\operatorname{RSS}/n$ with the *residual sum of squares*
+To estimate $\sigma^2$, write $\hat y_i=\boldsymbol{x}_i^{\mathsf T}\hat{\boldsymbol{\beta}}$ and $\hat\varepsilon_i=y_i-\hat y_i$; the residual $\hat\varepsilon_i$ is the vertical distance from the point to the fitted line, and $\sigma$ is the spread of $y$ around the population line. A natural choice is $\tilde\sigma^2=\operatorname{RSS}/n$ with the residual sum of squares
 
 $$
 \operatorname{RSS}=\sum_{i=1}^n\hat\varepsilon_i^2=\hat{\boldsymbol{\varepsilon}}^{\mathsf T}\hat{\boldsymbol{\varepsilon}}.
@@ -233,7 +233,7 @@ For prediction at a new covariate vector $\boldsymbol{x}^*$ there are two target
 $$
 \hat y^*\pm t_{n-p,\alpha/2}\,\hat\sigma\sqrt{\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*}.
 $$
-A new response $y^*=\boldsymbol{x}^{*\mathsf T}\boldsymbol{\beta}+\varepsilon^*$, with $\varepsilon^*\sim\mathcal{N}(0,\sigma^2)$ independent of the data, satisfies $y^*-\hat y^*\sim\mathcal{N}\big(0,\sigma^2(1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*)\big)$, which gives the *prediction interval*
+A new response $y^*=\boldsymbol{x}^{*\mathsf T}\boldsymbol{\beta}+\varepsilon^*$, with $\varepsilon^*\sim\mathcal{N}(0,\sigma^2)$ independent of the data, satisfies $y^*-\hat y^*\sim\mathcal{N}\big(0,\sigma^2(1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*)\big)$, which gives the prediction interval
 
 $$
 \hat y^*\pm t_{n-p,\alpha/2}\,\hat\sigma\sqrt{1+\boldsymbol{x}^{*\mathsf T}(X^{\mathsf T}X)^{-1}\boldsymbol{x}^*}.
@@ -267,7 +267,7 @@ Although normality is a strong assumption, the procedures derived from it are ro
 
 ### 7.3.1. Many Covariates
 
-Including useless covariates makes the estimators less precise. This is harmless when the number of covariates is small compared with the sample size, but in many modern applications it is not: DNA sequencing, for instance, produces millions of covariates for a few hundred subjects. The theory above then breaks down. When the columns of $X$ are highly correlated (multicollinearity), $X^{\mathsf T}X$ is nearly singular and $\operatorname{Cov}(\hat{\boldsymbol{\beta}})=\sigma^2(X^{\mathsf T}X)^{-1}$ is huge; when $p>n$, $X^{\mathsf T}X$ is singular and the OLS estimator is not even unique. A model with many parameters can fit the training data very well and still predict new data poorly, which is called *overfitting*.
+Including useless covariates makes the estimators less precise. This is harmless when the number of covariates is small compared with the sample size, but in many modern applications it is not: DNA sequencing, for instance, produces millions of covariates for a few hundred subjects. The theory above then breaks down. When the columns of $X$ are highly correlated (multicollinearity), $X^{\mathsf T}X$ is nearly singular and $\operatorname{Cov}(\hat{\boldsymbol{\beta}})=\sigma^2(X^{\mathsf T}X)^{-1}$ is huge; when $p>n$, $X^{\mathsf T}X$ is singular and the OLS estimator is not even unique. A model with many parameters can fit the training data very well and still predict new data poorly, which is called overfitting.
 
 Remedies include diagnostic indices such as the variance inflation factor; model selection criteria such as the RSS, $R^2$ and adjusted $R^2$, information criteria (AIC, BIC) and cross-validation; and variable selection procedures such as forward and backward selection. These are developed in [3.3](/3.3). Here we discuss three methods that modify the estimator itself. Most of them minimize a penalized objective
 
