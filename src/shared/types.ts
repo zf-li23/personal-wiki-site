@@ -63,6 +63,8 @@ export interface TextbookRef {
   edition?: string | number;
   /** For a book not in English: English title / romanised authors, shown on English pages. */
   title_en?: string;
+  /** Chinese rendering of a book whose original title is not Chinese (shown on Chinese pages). */
+  title_zh?: string;
   author_en?: string;
 }
 

@@ -343,6 +343,9 @@ describe('knowledge sources', () => {
     assert.equal(sourceLines(undefined, textbooks, 'en')[0].value, '概率论基础, 李贤平, 3rd ed.');
     const translated = [{ title: '图论与代数结构', author: '崔勇、张小平', edition: 2, title_en: 'Graph Theory and Algebraic Structures', author_en: 'Yong Cui, Xiaoping Zhang' }];
     assert.equal(sourceLines(undefined, translated, 'en')[0].value, 'Graph Theory and Algebraic Structures, Yong Cui, Xiaoping Zhang, 2nd ed. (in Chinese)');
+    const foreign = [{ title: 'Applied Multivariate Statistical Analysis', author: 'Richard A. Johnson, Dean W. Wichern', edition: 6, title_zh: '实用多元统计分析' }];
+    assert.equal(sourceLines(undefined, foreign, 'zh')[0].value, '《实用多元统计分析》，Richard A. Johnson, Dean W. Wichern，第 6 版');
+    assert.equal(sourceLines(undefined, foreign, 'en')[0].value, 'Applied Multivariate Statistical Analysis, Richard A. Johnson, Dean W. Wichern, 6th ed.');
     assert.equal(sourceLines([{ code: 1, name: '离散数学(2)', name_en: 'Discrete Mathematics (2)' }], undefined, 'en')[0].value, '1 Discrete Mathematics (2)');
     assert.equal(sourceLines(undefined, [{ title: 'Algebra', author: 'Artin' }], 'zh')[0].value, 'Algebra，Artin');
     assert.equal(serializePageFile(parsed.value!.frontMatter, '').includes('note: 概率论部分'), true);

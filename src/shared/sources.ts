@@ -22,7 +22,10 @@ export function formatCourse(c: CourseRef, lang: Lang): string {
 
 export function formatTextbook(b: TextbookRef, lang: Lang): string {
   const edition = b.edition === undefined ? '' : typeof b.edition === 'number' ? (lang === 'zh' ? `第 ${b.edition} 版` : `${ordinal(b.edition)} ed.`) : String(b.edition);
-  if (lang === 'zh') return [HAN.test(b.title) ? `《${b.title}》` : b.title, b.author, edition].filter(Boolean).join('，');
+  if (lang === 'zh') {
+    const title = b.title_zh ?? b.title;
+    return [HAN.test(title) ? `《${title}》` : title, b.author, edition].filter(Boolean).join('，');
+  }
   if (!b.title_en) return [b.title, b.author, edition].filter(Boolean).join(', ');
   // A translated title is not the book's real title: say which language the book is in.
   return `${[b.title_en, b.author_en ?? b.author, edition].filter(Boolean).join(', ')}${HAN.test(b.title) ? ' (in Chinese)' : ''}`;

@@ -68,7 +68,7 @@ textbooks:                   # 参考书：原书的书名、作者、版次（�
 ---
 ```
 
-中文页显示为"对应课程：40160713 初等概率论；10420803 概率论与数理统计（概率论部分）"和"参考书：《概率论基础》，李贤平，第 3 版"；英文页显示 `name_en`、`title_en`、`author_en`（缺省时显示原文），中文书后注明 (in Chinese)。英文原版书只写原书名和作者。没有对应课程或参考书就不写该字段；不要把这些信息写进正文。翻译时补上 `name_en`、`title_en`、`author_en`（作者用拼音，名在前、姓在后）。
+中文页显示为"对应课程：40160713 初等概率论；10420803 概率论与数理统计（概率论部分）"和"参考书：《概率论基础》，李贤平，第 3 版"；英文页显示 `name_en`、`title_en`、`author_en`（缺省时显示原文），中文书后注明 (in Chinese)。英文原版书写原书名和作者（作者保持原文），可加 `title_zh` 作为中文页显示的译名，如 `{ title: Applied Multivariate Statistical Analysis, author: "Richard A. Johnson, Dean W. Wichern", edition: 6, title_zh: 实用多元统计分析 }`。没有对应课程或参考书就不写该字段；不要把这些信息写进正文。翻译时补上 `name_en`、`title_en`、`author_en`（作者用拼音，名在前、姓在后）。
 
 ## 3. 正文写法
 
