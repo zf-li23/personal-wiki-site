@@ -189,6 +189,25 @@
   color: var(--muted-foreground);
   font-family: var(--font-mono);
 }
+.wiki-article .wiki-code-tablist {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+.wiki-article .wiki-code-tablist button {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  color: var(--muted-foreground);
+  background: transparent;
+  cursor: pointer;
+}
+.wiki-article .wiki-code-tablist button.active {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
 
 .wiki-article .wiki-mermaid {
   display: flex;

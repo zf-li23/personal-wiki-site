@@ -15,8 +15,11 @@
  *   fix [<id>...] [--dry-run]        rewrite heading / statement-label formats and formula notation into the canonical form
  *   freeze <plots/script.py>...      render once and commit the images; the script is never run again
  *   unfreeze <plots/script.py>...    delete the frozen images; the script renders normally again
+ *   check-r [<id-prefix>...]         run the R companions (plots/*.R) with Rscript, if installed (local check only)
  */
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { LANGUAGES, type Lang, isLang } from '../site.config.ts';
 import { compareIds, idSegments } from '../src/shared/page-id.ts';
@@ -237,6 +240,36 @@ function unfreeze() {
   }
 }
 
-const commands: Record<string, () => void | Promise<void>> = { build, status, stamp, new: newPage, terms, fix, freeze, unfreeze };
+/** R companions are never run by the build (CI has no R); this checks locally that they still run. */
+function checkR() {
+  const probe = spawnSync('Rscript', ['--version'], { encoding: 'utf8' });
+  if (probe.error) {
+    console.log('Rscript not found: install R to check the R companions (skipped)');
+    return;
+  }
+  const tree = scanContent(new Diagnostics());
+  const match = (id: string) => !positional.length || positional.some((p) => id === p || id.startsWith(`${p}.`));
+  const failed: string[] = [];
+  let count = 0;
+  for (const page of [...tree.pages.values()].sort((a, b) => compareIds(a.id, b.id))) {
+    if (!match(page.id)) continue;
+    for (const name of page.plotFiles.filter((f) => f.endsWith('.R'))) {
+      const file = path.join(page.dir, 'plots', name);
+      // Run in a scratch directory so graphics devices (Rplots.pdf) never land in content/.
+      const cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-r-'));
+      const res = spawnSync('Rscript', ['--vanilla', file], { cwd, encoding: 'utf8', timeout: 300_000 });
+      fs.rmSync(cwd, { recursive: true, force: true });
+      count++;
+      if (res.status !== 0) {
+        failed.push(rel(file));
+        console.log(`FAIL ${rel(file)}\n${(res.stderr || res.error?.message || '').trim().split('\n').slice(-5).join('\n')}`);
+      }
+    }
+  }
+  console.log(`${count - failed.length}/${count} R companion(s) ran without error`);
+  if (failed.length) process.exitCode = 1;
+}
+
+const commands: Record<string, () => void | Promise<void>> = { build, status, stamp, new: newPage, terms, fix, freeze, unfreeze, 'check-r': checkR };
 const run = commands[command ?? ''] ?? (() => fail(`unknown command "${command ?? ''}". Commands: ${Object.keys(commands).join(', ')}`));
 await run();

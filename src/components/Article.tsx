@@ -2,6 +2,7 @@
  * Renders a page's pre-built HTML (see scripts/wiki/markdown.ts for the markup
  * contract) and adds the few interactive behaviours it needs:
  *   button[data-copy]   copies the code of its .code-block
+ *   button[data-code-tab]  switches the Python / R tabs of a plot's source
  *   a[data-internal]    client-side navigation between wiki pages
  *   .wiki-mermaid       rendered with Mermaid (lazy-loaded), re-rendered on theme change
  */
@@ -49,6 +50,17 @@ export function Article({ html, lang, readerLang, pageId }: ArticleProps & { rea
           },
           () => undefined,
         );
+        return;
+      }
+      const tab = target.closest<HTMLButtonElement>('button[data-code-tab]');
+      if (tab) {
+        const group = tab.closest('.wiki-code-tabs');
+        for (const b of group?.querySelectorAll<HTMLButtonElement>('button[data-code-tab]') ?? []) {
+          const on = b === tab;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', String(on));
+        }
+        for (const p of group?.querySelectorAll<HTMLElement>('[data-code-panel]') ?? []) p.hidden = p.dataset.codePanel !== tab.dataset.codeTab;
         return;
       }
       const link = target.closest<HTMLAnchorElement>('a[data-internal]');

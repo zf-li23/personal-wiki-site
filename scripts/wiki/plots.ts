@@ -40,6 +40,8 @@ export interface PlotResult {
   frozen: boolean;
   figures: PlotFigure[];
   source: string;
+  /** Optional companion `<name>.R`: the same figure in R, shown next to the Python source (never run). */
+  rSource?: string;
   error?: string;
 }
 
@@ -71,6 +73,13 @@ export type PlotResults = Map<string, PlotResult>;
 const CJK_RE = /[\u3000-\u303F\u3400-\u9FFF\uFF00-\uFFEF]/;
 
 /** Static checks that keep plot scripts deterministic and language-neutral. */
+/** R companions are shown on both language versions, so like plot scripts they are English-only. */
+export function lintRCompanion(file: string, source: string, diag: Diagnostics): void {
+  source.split('\n').forEach((line, i) => {
+    if (/\p{Script=Han}/u.test(line)) diag.warn(file, 'R companion contains Chinese characters (keep code and comments English)', i + 1);
+  });
+}
+
 export function lintPlotScript(file: string, source: string, diag: Diagnostics): void {
   source.split('\n').forEach((line, i) => {
     const code = line.replace(/#.*$/, '');
@@ -170,21 +179,28 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
     if (!page.plotFiles.length) continue;
     const plotDir = path.join(page.dir, 'plots');
     const dataFiles = page.plotFiles
-      .filter((f) => !f.endsWith('.py') && !FROZEN_RE.test(f))
+      .filter((f) => !f.endsWith('.py') && !f.endsWith('.R') && !FROZEN_RE.test(f))
       .map((f) => fs.readFileSync(path.join(plotDir, f)));
+    for (const name of page.plotFiles.filter((f) => f.endsWith('.R'))) {
+      const file = path.join(plotDir, name);
+      if (!page.plotFiles.includes(name.replace(/\.R$/, '.py'))) diag.warn(file, `R companion without a plot script: add ${name.replace(/\.R$/, '.py')} (the figure is always drawn by Python)`);
+      lintRCompanion(file, fs.readFileSync(file, 'utf8'), diag);
+    }
     for (const name of page.plotFiles.filter((f) => f.endsWith('.py'))) {
       const script = path.join(plotDir, name);
       const source = fs.readFileSync(script, 'utf8');
+      const rName = name.replace(/\.py$/, '.R');
+      const rSource = page.plotFiles.includes(rName) ? fs.readFileSync(path.join(plotDir, rName), 'utf8') : undefined;
       lintPlotScript(script, source, diag);
       const prefix = frozenPrefix(script);
       if (page.plotFiles.includes(`${prefix}json`) && !opts.ignoreFrozen?.has(script)) {
-        results.set(script, loadFrozen(script, source, plotDir, prefix, diag));
+        results.set(script, { ...loadFrozen(script, source, plotDir, prefix, diag), rSource });
         continue;
       }
       const key = hashFiles([...common, source, ...dataFiles]);
       const cacheDir = path.join(PLOT_CACHE_DIR, key);
       const cached = readMeta(cacheDir);
-      const result: PlotResult = { key, imageDir: cacheDir, imagePrefix: '', frozen: false, figures: cached ?? [], source };
+      const result: PlotResult = { key, imageDir: cacheDir, imagePrefix: '', frozen: false, figures: cached ?? [], source, rSource };
       results.set(script, result);
       if (!cached) todo.push({ script, result });
     }

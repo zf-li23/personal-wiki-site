@@ -12,7 +12,7 @@ This file is for changing the code.
 | `pnpm dev` | Dev server; rebuilds content on every change under `content/` |
 | `pnpm build` | `tsc`, then `vite build` (content pipeline + bundle + prerender) → `dist/` |
 | `pnpm check` | Strict content build + typecheck + eslint + unit tests. Run before every commit |
-| `pnpm wiki <cmd>` | Content CLI: `build [--strict]`, `status`, `stamp <id>`, `new …`, `terms`, `freeze`/`unfreeze <script>` (see `scripts/wiki.ts`) |
+| `pnpm wiki <cmd>` | Content CLI: `build [--strict]`, `status`, `stamp <id>`, `new …`, `terms`, `freeze`/`unfreeze <script>`, `check-r` (see `scripts/wiki.ts`) |
 | `pnpm test` | Pipeline unit tests (`node --test`) |
 
 Node ≥ 22.18 runs the TypeScript in `scripts/` directly (type stripping): no build step for tooling.
@@ -42,6 +42,7 @@ Key decisions (keep them):
 - **Page id = numeric hierarchy = URL** (`/<lang>/<id>/`). Validation lives in `src/shared/page-id.ts`, shared by pipeline and client.
 - **Contracts are typed** in `src/shared/types.ts` (pipeline output ⇄ client input). Change both sides together.
 - **Static per-route HTML** (`dist/<lang>/<id>/index.html`) so Pages serves 200s with real titles/hreflang; the client adopts the prerendered page from `#wiki-initial` without refetching.
+- **R companions** (`plots/<name>.R`) are shown next to the Python source but never run by the build (CI has no R) and are excluded from the plot cache key; `pnpm wiki check-r` runs them locally when Rscript is installed.
 - **Plots** run in a separate Python process per script, both themes, cached by content hash in `.cache/plots/`. Never commit rendered images, except *frozen* plots (`pnpm wiki freeze`, for scripts too slow to re-render; see CONTENT_GUIDE §4).
 - Changing `scripts/wiki/plot/render_plot.py` or `requirements.txt` invalidates every cached plot (a full re-render takes ~25 min). Batch such changes.
 - **Site URL/base path** only in `site.config.ts`. Never hard-code `/personal-wiki-site/`; use `BASE_PATH` or `import.meta.env.BASE_URL`.

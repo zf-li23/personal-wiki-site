@@ -516,12 +516,26 @@ function plotFigure(scriptName: string, alt: string, result: PlotResult): Elemen
   });
   const children: ElementContent[] = [el('div', { className: ['wiki-plot-images'] }, images)];
   if (alt.trim()) children.push(el('figcaption', {}, [text(alt)]));
-  children.push(
-    el('details', { className: ['wiki-plot-source'] }, [
-      el('summary', {}, [text(`Python · ${scriptName}`)]),
-      el('pre', {}, [el('code', { className: ['language-python'] }, [text(result.source.trimEnd())])]),
-    ]),
-  );
+  const python = el('pre', {}, [el('code', { className: ['language-python'] }, [text(result.source.trimEnd())])]);
+  if (result.rSource === undefined) {
+    children.push(el('details', { className: ['wiki-plot-source'] }, [el('summary', {}, [text(`Python · ${scriptName}`)]), python]));
+  } else {
+    // Python draws the figure; the R companion shows the same analysis in R (Article.tsx switches the tabs).
+    const r = el('pre', {}, [el('code', { className: ['language-r'] }, [text(result.rSource.trimEnd())])]);
+    children.push(
+      el('details', { className: ['wiki-plot-source'] }, [
+        el('summary', {}, [text(`Python · R · ${scriptName.replace(/\.py$/, '')}`)]),
+        el('div', { className: ['wiki-code-tabs'] }, [
+          el('div', { className: ['wiki-code-tablist'], role: 'tablist' }, [
+            el('button', { type: 'button', role: 'tab', className: ['active'], dataCodeTab: 'python', ariaSelected: 'true' }, [text('Python')]),
+            el('button', { type: 'button', role: 'tab', dataCodeTab: 'r', ariaSelected: 'false' }, [text('R')]),
+          ]),
+          el('div', { dataCodePanel: 'python' }, [python]),
+          el('div', { dataCodePanel: 'r', hidden: true }, [r]),
+        ]),
+      ]),
+    );
+  }
   return el('figure', { className: ['wiki-plot'] }, children);
 }
 
