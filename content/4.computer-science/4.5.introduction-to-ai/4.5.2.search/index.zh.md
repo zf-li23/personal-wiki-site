@@ -524,7 +524,7 @@ $\mathbb{P}(O)$ 与 $S$ 无关；对拼音输入，汉字串一旦给定，拼�
 $$
 \mathbb{P}(S) = \prod_{i=1}^{n} \mathbb{P}(w_i \mid w_1 \cdots w_{i-1}) \approx \prod_{i=1}^{n} \mathbb{P}(w_i \mid w_{i-1}),
 $$
-取负对数，最大化 $\mathbb{P}(S)$ 就是最小化 $\sum_i -\log \mathbb{P}(w_i \mid w_{i-1})$。把第 $i$ 个音节的候选汉字作为第 $i$ 层的结点，$-\log \mathbb{P}(w_i \mid w_{i-1})$ 作为边的代价，问题就是分层图上的最短路。条件概率由语料库中的频数估计，$\mathbb{P}(w_i \mid w_{i-1}) = \operatorname{count}(w_{i-1} w_i) / \operatorname{count}(w_{i-1})$；没有在语料中同现过的字对会得到概率 0，所以要平滑，最简单的是与一元概率插值：
+取负对数，最大化 $\mathbb{P}(S)$ 就是最小化 $\sum_i -\log \mathbb{P}(w_i \mid w_{i-1})$。把第 $i$ 个音节的候选汉字作为第 $i$ 层的结点，$-\log \mathbb{P}(w_i \mid w_{i-1})$ 作为边的代价，问题就是分层图上的最短路。**条件概率**由语料库中的频数估计，$\mathbb{P}(w_i \mid w_{i-1}) = \operatorname{count}(w_{i-1} w_i) / \operatorname{count}(w_{i-1})$；没有在语料中同现过的字对会得到概率 0，所以要平滑，最简单的是与一元概率插值：
 
 $$
 \mathbb{P}_\lambda(w_i \mid w_{i-1}) = \lambda\,\mathbb{P}(w_i \mid w_{i-1}) + (1 - \lambda)\,\mathbb{P}(w_i), \qquad 0 < \lambda < 1.
