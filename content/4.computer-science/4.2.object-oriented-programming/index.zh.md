@@ -1,7 +1,7 @@
 ---
 title: 面向对象程序设计基础
 courses:
-  - { code: "30240532", name: 面向对象程序设计基础 }
+  - { code: "30240532", name: 面向对象程序设计基础, name_en: Fundamentals of Object-Oriented Programming }
 textbooks:
   - { title: Thinking in C++, author: Bruce Eckel, edition: 2, title_zh: C++ 编程思想 }
   - { title: "Design Patterns: Elements of Reusable Object-Oriented Software", author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides", title_zh: 设计模式：可复用面向对象软件的基础 }
