@@ -1955,3 +1955,21 @@ terms:
   - { zh: 特征方程, en: characteristic equation, scope: ["2.5"] }
   - { zh: Fourier 定律, en: "Fourier's law", aliases: [Fourier 热传导定律] }
   - { zh: Fick 定律, en: "Fick's law" }
+
+  # programming and AI-assisted programming (4.1–4.4)
+  - { zh: 编程智能体, en: coding agent, aliases: [AI 编程智能体] }
+  - { zh: harness, en: agent harness, aliases: [智能体运行框架] }
+  - { zh: 词元, en: token, scope: ["4.2", "4.5", "4.6", "4.7"] }
+  - { zh: 上下文窗口, en: context window }
+  - { zh: 工具调用, en: tool calling, aliases: [function calling] }
+  - { zh: 智能体循环, en: agent loop }
+  - { zh: 推理模型, en: reasoning model }
+  - { zh: 模型上下文协议, en: Model Context Protocol, aliases: [MCP] }
+  - { zh: 子智能体, en: subagent }
+  - { zh: 提示注入, en: prompt injection }
+  - { zh: 幻觉, en: hallucination, scope: ["4"] }
+  - { zh: 奖励投机, en: reward hacking }
+  - { zh: 基于可验证奖励的强化学习, en: reinforcement learning with verifiable rewards, aliases: [RLVR] }
+  - { zh: 上下文压缩, en: context compaction, aliases: [compaction] }
+  - { zh: 提示缓存, en: prompt caching }
+  - { zh: 程序合成, en: program synthesis }
