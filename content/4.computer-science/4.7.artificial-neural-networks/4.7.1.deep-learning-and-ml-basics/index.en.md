@@ -27,7 +27,7 @@ The ideas behind deep learning are old; what changed after 2010 is the scale of 
 |---|---|---|
 | 1943 | McCulloch and Pitts: the threshold neuron as a model of the "nerve net"; networks of such units compute any Boolean function | [4.7.2](/4.7.2) |
 | 1958 | Rosenblatt's perceptron, a neuron that learns its weights from examples | [4.7.2](/4.7.2) |
-| 1969 | Minsky and Papert, *Perceptrons*: single-layer networks cannot represent XOR; interest in neural networks declines | [4.7.2](/4.7.2) |
+| 1969 | Minsky and Papert's book "Perceptrons": single-layer networks cannot represent XOR; interest in neural networks declines | [4.7.2](/4.7.2) |
 | 1970–1986 | Reverse-mode differentiation (Linnainmaa 1970), its use for networks (Werbos 1974), and the paper of Rumelhart, Hinton and Williams (1986) that made backpropagation widely known | [4.7.2](/4.7.2) |
 | 1980–1998 | Fukushima's Neocognitron; LeCun's convolutional networks trained by backpropagation, ending in LeNet-5 for reading checks | [4.7.3](/4.7.3) |
 | 1997 | Long short-term memory (Hochreiter and Schmidhuber) | [4.7.5](/4.7.5) |

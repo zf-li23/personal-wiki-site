@@ -398,3 +398,10 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+
+## Summary
+
+- A structure packs the data describing one object into a single type; use an array of structures instead of parallel arrays.
+- A linked list strings scattered nodes together with pointers. Insertion and deletion only change pointers, but there is no **random access**; a circular linked list suits problems where things "stand in a ring". Before deleting a node, update its predecessor's pointer, and free the nodes one by one when done.
+- Files keep data outside the program. Check that opening succeeded; let the read operation itself control the loop instead of `eof()`; state the encoding of text files; binary files that write whole structures depend on the platform.
+- Stepwise refinement: write the rough steps in a few sentences first and refine them level by level; hide the details that may change in lower-level functions.

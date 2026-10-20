@@ -512,6 +512,12 @@ describe('cross-page linking', () => {
     assert.equal(s.index.conceptSites.get('law-of-large-numbers'), undefined);
     assert.match(s.diag.items[0]?.message ?? '', /not recognized as the definition of "大数定律"/);
   });
+  it('links a bold Latin alias on a Chinese page', async () => {
+    concepts.push({ id: 'relu', zh: '线性整流单元', en: 'rectified linear unit', aliases: ['ReLU'] });
+    const s = await site({ '4.7.2': '## 2.1. A\n\n**定义 2.1.1（线性整流单元）** 设……', '4.7.3': '## 3.1. B\n\n每层之后接 **ReLU**。' });
+    concepts.pop();
+    assert.match(s.html('4.7.3'), /data-concept="relu"/);
+  });
   it('keeps "+" apart in concept ids', () => {
     assert.notEqual(conceptId('B+ tree'), conceptId('B-tree'));
   });

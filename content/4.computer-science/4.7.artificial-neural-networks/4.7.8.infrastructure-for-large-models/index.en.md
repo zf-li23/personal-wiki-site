@@ -154,7 +154,7 @@ The first three lines show the trade-off of the two 16-bit formats: FP16 keeps t
 
 FP16 has the opposite problem: small gradients underflow. Micikevicius et al. found that in an SSD object detector most activation gradients were below $2^{-24}$ and became zero in FP16, so that the network did not train, while the upper part of the FP16 range was unused.
 
-**Definition 8.2.3 (Loss Scaling)** **Loss scaling** multiplies the loss by a constant $S$ before the backward pass, so that by the **chain rule** every gradient is multiplied by $S$ and shifted into the representable range, and divides the gradients by $S$ (in FP32) before the optimizer step. In *dynamic* loss scaling, $S$ is halved and the step is skipped whenever an infinity or NaN appears in the gradients, and doubled after a fixed number of steps (2,000 in PyTorch's `GradScaler`) without overflow.
+**Definition 8.2.3 (Loss Scaling)** **Loss scaling** multiplies the loss by a constant $S$ before the backward pass, so that by the chain rule every gradient is multiplied by $S$ and shifted into the representable range, and divides the gradients by $S$ (in FP32) before the optimizer step. In *dynamic* loss scaling, $S$ is halved and the step is skipped whenever an infinity or NaN appears in the gradients, and doubled after a fixed number of steps (2,000 in PyTorch's `GradScaler`) without overflow.
 
 For SSD a factor of 8 sufficed (77.1% mAP against 76.9% in FP32). Since the scaling is undone before the update, the learning rate and other **hyperparameters** do not change.
 

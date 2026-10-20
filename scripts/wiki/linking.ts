@@ -93,7 +93,9 @@ function hrefTo(target: Target, linkLang: Lang, fromPage: string): string {
 
 function conceptNames(concept: Concept, lang: Lang): string[] {
   const isHan = (s: string) => /\p{Script=Han}/u.test(s);
-  const names = lang === 'zh' ? [concept.zh, ...concept.aliases.filter(isHan)] : [concept.en, ...concept.aliases.filter((a) => !isHan(a))];
+  // Chinese text writes many concepts by their Latin abbreviation (**ReLU**, **LSTM**), so a
+  // Chinese page accepts every alias; an English page only the non-Han ones.
+  const names = lang === 'zh' ? [concept.zh, ...concept.aliases] : [concept.en, ...concept.aliases.filter((a) => !isHan(a))];
   return [...new Set(names)].filter(Boolean);
 }
 
