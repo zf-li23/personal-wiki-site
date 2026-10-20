@@ -208,6 +208,16 @@
   color: var(--foreground);
   border-color: var(--foreground);
 }
+/* Code-tab groups (```cpp tab / ```python tab): the tab names the language. */
+.wiki-article .wiki-code-tabs:not(.wiki-plot-source *) {
+  margin: 1em 0;
+}
+.wiki-article .wiki-code-tabs > [data-code-panel] > .code-block {
+  margin: 0.25rem 0 0;
+}
+.wiki-article .wiki-code-tabs > [data-code-panel] .code-lang {
+  display: none;
+}
 
 .wiki-article .wiki-mermaid {
   display: flex;

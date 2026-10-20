@@ -2,7 +2,8 @@
  * Renders a page's pre-built HTML (see scripts/wiki/markdown.ts for the markup
  * contract) and adds the few interactive behaviours it needs:
  *   button[data-copy]   copies the code of its .code-block
- *   button[data-code-tab]  switches the Python / R tabs of a plot's source
+ *   button[data-code-tab]  switches code tabs (C++ / Python, a plot's Python / R); the chosen
+ *                       language applies to every tab group and is remembered
  *   a[data-internal]    client-side navigation between wiki pages
  *   .wiki-mermaid       rendered with Mermaid (lazy-loaded), re-rendered on theme change
  */
@@ -22,6 +23,22 @@ interface ArticleProps {
   lang: string;
 }
 
+const CODE_LANG_KEY = 'wiki-code-lang';
+
+/** Show `lang` in every tab group of the article that has it. */
+function selectCodeTab(root: HTMLElement, lang: string): void {
+  for (const group of root.querySelectorAll<HTMLElement>('.wiki-code-tabs')) {
+    const tabs = [...group.querySelectorAll<HTMLButtonElement>(':scope > .wiki-code-tablist > button[data-code-tab]')];
+    if (!tabs.some((b) => b.dataset.codeTab === lang)) continue;
+    for (const b of tabs) {
+      const on = b.dataset.codeTab === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', String(on));
+    }
+    for (const p of group.querySelectorAll<HTMLElement>(':scope > [data-code-panel]')) p.hidden = p.dataset.codePanel !== lang;
+  }
+}
+
 // Memoised on `html` so React never re-applies innerHTML (which would discard rendered diagrams).
 const ArticleBody = memo(function ArticleBody({ html, lang }: ArticleProps) {
   return <div className={ARTICLE_CLASS} lang={lang} dangerouslySetInnerHTML={{ __html: html }} />;
@@ -38,6 +55,12 @@ export function Article({ html, lang, readerLang, pageId }: ArticleProps & { rea
     if (!root) return;
     // The build emits English button labels; localise them.
     for (const b of root.querySelectorAll<HTMLButtonElement>('button[data-copy]')) b.textContent = t.copy;
+    try {
+      const preferred = localStorage.getItem(CODE_LANG_KEY);
+      if (preferred) selectCodeTab(root, preferred);
+    } catch {
+      // storage unavailable: keep the first tab
+    }
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const copy = target.closest<HTMLButtonElement>('button[data-copy]');
@@ -53,14 +76,13 @@ export function Article({ html, lang, readerLang, pageId }: ArticleProps & { rea
         return;
       }
       const tab = target.closest<HTMLButtonElement>('button[data-code-tab]');
-      if (tab) {
-        const group = tab.closest('.wiki-code-tabs');
-        for (const b of group?.querySelectorAll<HTMLButtonElement>('button[data-code-tab]') ?? []) {
-          const on = b === tab;
-          b.classList.toggle('active', on);
-          b.setAttribute('aria-selected', String(on));
+      if (tab?.dataset.codeTab) {
+        selectCodeTab(root, tab.dataset.codeTab);
+        try {
+          localStorage.setItem(CODE_LANG_KEY, tab.dataset.codeTab);
+        } catch {
+          // storage unavailable: the choice lasts for this page only
         }
-        for (const p of group?.querySelectorAll<HTMLElement>('[data-code-panel]') ?? []) p.hidden = p.dataset.codePanel !== tab.dataset.codeTab;
         return;
       }
       const link = target.closest<HTMLAnchorElement>('a[data-internal]');

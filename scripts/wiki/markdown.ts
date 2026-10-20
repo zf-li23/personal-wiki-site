@@ -5,7 +5,7 @@
  *
  * Pipeline: remark-parse -> gfm -> math -> (checks, incl. heading numbering) -> rehype ->
  * raw HTML -> wiki transforms (ids, links, images, plots, mermaid) -> statements and
- * equations -> highlight -> KaTeX -> finalize (code-block chrome).
+ * equations -> highlight -> KaTeX -> finalize (code-block chrome, code tabs).
  *
  * The result keeps the HAST: cross-page references and concept links need every page
  * rendered first, so linking.ts mutates the trees and only then are they stringified.
@@ -21,7 +21,7 @@ import latex from 'highlight.js/lib/languages/latex';
 import 'katex/contrib/mhchem';
 import matlab from 'highlight.js/lib/languages/matlab';
 import { common } from 'lowlight';
-import type { Root as MdastRoot } from 'mdast';
+import type { Code, Root as MdastRoot, RootContent as MdastContent } from 'mdast';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
@@ -137,6 +137,41 @@ function lineOf(state: State, node: { position?: { start: { line: number } } }):
 /* ------------------------------------------------------------------ remark */
 
 /** Source-level rules that need the Markdown AST (code-aware). */
+/** A fenced block marked as one tab of a group: ```cpp tab */
+const isTabCode = (n: MdastContent): n is Code => n.type === 'code' && /(^|\s)tab(\s|$)/.test(n.meta ?? '');
+
+/**
+ * Adjacent ```cpp tab / ```python tab blocks become one block with a tab per language
+ * (div.wiki-code-tabs; rehypeFinalize adds the tab list, Article.tsx switches the tabs).
+ */
+function remarkCodeTabs(state: State) {
+  return (tree: MdastRoot) => {
+    visit(tree, (node) => {
+      if ((node.type as string) === 'codeTabs') return 'skip';
+      if (!('children' in node)) return undefined;
+      const children = node.children as MdastContent[];
+      for (let i = 0; i < children.length; i++) {
+        if (!isTabCode(children[i])) continue;
+        let j = i;
+        while (j + 1 < children.length && isTabCode(children[j + 1])) j++;
+        const run = children.slice(i, j + 1) as Code[];
+        const line = run[0].position ? run[0].position.start.line + state.ctx.lineOffset : undefined;
+        const langs = run.map((c) => c.lang ?? '');
+        if (run.length < 2) {
+          state.ctx.diag.warn(state.ctx.file, 'a ```<lang> tab block needs a neighbour: write the tabs as adjacent code blocks (e.g. ```cpp tab then ```python tab)', line);
+          continue;
+        }
+        if (langs.some((l) => !l) || new Set(langs).size !== langs.length) {
+          state.ctx.diag.warn(state.ctx.file, `the code blocks of a tab group need different languages (got ${langs.map((l) => l || '(none)').join(', ')})`, line);
+        }
+        const group = { type: 'codeTabs', children: run, data: { hName: 'div', hProperties: { className: ['wiki-code-tabs'] } } };
+        children.splice(i, run.length, group as unknown as MdastContent);
+      }
+      return undefined;
+    });
+  };
+}
+
 function remarkWikiChecks(state: State) {
   return (tree: MdastRoot, file: VFile) => {
     const source = String(file.value);
@@ -576,21 +611,42 @@ function transformLink(state: State, node: Element, line?: number) {
   ctx.diag.error(ctx.file, `unsupported link "${href}": link pages as /<page-id> (e.g. /7.4.1.5 or /7.4.1.5#section), files as ./assets/<file>`, line);
 }
 
-/** After highlighting and KaTeX: code-block chrome. */
+/** Tab labels for code languages (others show the fence name). */
+const TAB_LABELS: Record<string, string> = { cpp: 'C++', 'c++': 'C++', c: 'C', python: 'Python', py: 'Python', r: 'R', js: 'JavaScript', javascript: 'JavaScript', ts: 'TypeScript', typescript: 'TypeScript', sql: 'SQL', bash: 'Bash', sh: 'Shell', verilog: 'Verilog', systemverilog: 'SystemVerilog', java: 'Java', rust: 'Rust', go: 'Go' };
+
+const codeLang = (pre: Element): string | undefined => {
+  const code = pre.children.find((c): c is Element => c.type === 'element' && c.tagName === 'code');
+  const cls = (code?.properties?.className as string[] | undefined) ?? [];
+  return cls.find((c) => c.startsWith('language-'))?.slice('language-'.length);
+};
+
+function codeBlock(pre: Element): Element {
+  const lang = codeLang(pre);
+  const header: ElementContent[] = [];
+  if (lang && lang !== 'math') header.push(el('span', { className: ['code-lang'] }, [text(lang)]));
+  header.push(el('button', { type: 'button', className: ['copy-button'], dataCopy: '' }, [text('Copy')]));
+  return el('div', { className: ['code-block'] }, [el('div', { className: ['code-block-header'] }, header), pre]);
+}
+
+/** After highlighting and KaTeX: code-block chrome, and the tab list of code-tab groups. */
 function rehypeFinalize() {
   return (tree: HastRoot) => {
     visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName === 'div' && hasClass(node, 'wiki-code-tabs') && node.children.some((c) => c.type === 'element' && c.tagName === 'pre')) {
+        const pres = node.children.filter((c): c is Element => c.type === 'element' && c.tagName === 'pre');
+        const langs = pres.map((p) => codeLang(p) ?? 'text');
+        node.children = [
+          el(
+            'div',
+            { className: ['wiki-code-tablist'], role: 'tablist' },
+            langs.map((l, i) => el('button', { type: 'button', role: 'tab', ...(i === 0 ? { className: ['active'] } : {}), dataCodeTab: l, ariaSelected: String(i === 0) }, [text(TAB_LABELS[l] ?? l)])),
+          ),
+          ...pres.map((p, i) => el('div', { dataCodePanel: langs[i], ...(i ? { hidden: true } : {}) }, [codeBlock(p)])),
+        ];
+        return 'skip';
+      }
       if (node.tagName === 'pre' && parent && index !== undefined && !(parent.type === 'element' && hasClass(parent, 'wiki-mermaid'))) {
-        const code = node.children.find((c): c is Element => c.type === 'element' && c.tagName === 'code');
-        const cls = (code?.properties?.className as string[] | undefined) ?? [];
-        const lang = cls.find((c) => c.startsWith('language-'))?.slice('language-'.length);
-        const header: ElementContent[] = [];
-        if (lang && lang !== 'math') header.push(el('span', { className: ['code-lang'] }, [text(lang)]));
-        header.push(el('button', { type: 'button', className: ['copy-button'], dataCopy: '' }, [text('Copy')]));
-        (parent.children as RootContent[])[index] = el('div', { className: ['code-block'] }, [
-          el('div', { className: ['code-block-header'] }, header),
-          node,
-        ]);
+        (parent.children as RootContent[])[index] = codeBlock(node);
         return 'skip';
       }
       return undefined;
@@ -618,6 +674,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(remarkGfm)
     .use(remarkMath)
     .use(remarkWikiChecks, state)
+    .use(remarkCodeTabs, state)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeWiki, state)

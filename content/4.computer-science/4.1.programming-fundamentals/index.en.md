@@ -1,3 +1,3 @@
 ---
-title: Fundamentals of Programming
+title: Programming Fundamentals
 ---

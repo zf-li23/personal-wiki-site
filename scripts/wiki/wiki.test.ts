@@ -178,6 +178,14 @@ describe('markdown rendering', () => {
     assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);
     assert.equal((await render('## 13.1. 基本\n\n集合')).messages.length, 0);
   });
+  it('groups adjacent ```<lang> tab blocks into one tabbed block', async () => {
+    const { html, messages } = await render('```cpp tab\nint x = 1;\n```\n\n```python tab\nx = 1\n```\n\n```r\nx <- 1\n```\n\n```text\n1\n```\n\n```cpp tab\nalone\n```');
+    assert.equal((html.match(/class="wiki-code-tabs"/g) ?? []).length, 1);
+    assert.match(html, /<button type="button" role="tab" class="active" data-code-tab="cpp" aria-selected="true">C\+\+<\/button><button type="button" role="tab" data-code-tab="python" aria-selected="false">Python<\/button>/);
+    assert.match(html, /<div data-code-panel="python" hidden><div class="code-block">/);
+    assert.equal((html.match(/class="code-block"/g) ?? []).length, 5, 'untagged neighbours stay ordinary blocks');
+    assert.deepEqual(messages.filter((m) => m.includes('tab block needs a neighbour')).length, 1);
+  });
   it('rewrites internal links into the reader language and checks targets', async () => {
     const { out, html, messages } = await render('[a](/3.1.12#x) and [b](/9)', { pages: [fakePage('3.1.12')] });
     assert.match(html, new RegExp(`href="${BASE_PATH}en/3.1.12/#x" data-internal`));
