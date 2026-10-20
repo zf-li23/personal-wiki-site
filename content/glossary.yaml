@@ -1510,6 +1510,197 @@ terms:
   - { zh: 社区发现, en: community detection }
   - { zh: 矩阵因子模型, en: matrix factor model }
 
+  # statistical computing (3.5)
+  - { zh: 统计计算, en: statistical computing, aliases: [计算统计, computational statistics] }
+  - { zh: 比特, en: bit, aliases: [二进制位, binary digit] }
+  - { zh: 字节, en: byte }
+  - { zh: 字, en: word, aliases: [存储单元, storage unit], scope: ["3.5"] }
+  - { zh: 字符编码, en: character encoding }
+  - { zh: 定点数, en: fixed-point number, aliases: [定点表示, fixed-point representation] }
+  - { zh: 补码, en: "two's complement" }
+  - { zh: 溢出, en: overflow }
+  - { zh: 浮点数, en: floating-point number, aliases: [浮点表示, floating-point representation] }
+  - { zh: 规格化数, en: normalized number, aliases: [规格化, normalized], scope: ["3.5"] }
+  - { zh: 隐藏位, en: hidden bit }
+  - { zh: 指数偏移, en: exponent bias, aliases: [偏移量] }
+  - { zh: IEEE 754 标准, en: IEEE 754 standard, aliases: [IEEE 754] }
+  - { zh: 单精度, en: single precision }
+  - { zh: 双精度, en: double precision }
+  - { zh: 非数, en: NaN, aliases: [not a number] }
+  - { zh: 非规格化数, en: subnormal number, aliases: [次正规数, denormalized number] }
+  - { zh: 下溢, en: underflow, aliases: [渐进下溢, gradual underflow] }
+  - { zh: 机器精度, en: machine epsilon }
+  - { zh: 单位舍入误差, en: unit roundoff }
+  - { zh: 舍入误差, en: rounding error, aliases: [round-off error] }
+  - { zh: 前向误差, en: forward error }
+  - { zh: 后向误差, en: backward error }
+  - { zh: 稳定性, en: stability, aliases: [稳定, stable], scope: ["3.5"] }
+  - { zh: 后向稳定性, en: backward stability, aliases: [后向稳定, backward stable] }
+  - { zh: 良性抵消, en: benign cancellation }
+  - { zh: 灾难性抵消, en: catastrophic cancellation }
+  - { zh: 保护位, en: guard digit }
+  - { zh: 吸收, en: absorption, scope: ["3.5"] }
+  - { zh: 良态问题, en: well-conditioned problem, aliases: [良态, well-conditioned] }
+  - { zh: 病态问题, en: ill-conditioned problem, aliases: [病态, ill-conditioned] }
+  - { zh: 绝对条件数, en: absolute condition number }
+  - { zh: 相对条件数, en: relative condition number }
+  - { zh: Wilkinson 多项式, en: "Wilkinson's polynomial" }
+  - { zh: 诱导范数, en: induced norm, aliases: [算子范数, operator norm] }
+  - { zh: 对偶范数, en: dual norm }
+  - { zh: 浮点运算, en: flop, aliases: [flops, floating-point operation, 浮点运算次数] }
+  - { zh: 前向差分, en: forward difference }
+  - { zh: 后向差分, en: backward difference }
+  - { zh: 中心差分, en: central difference }
+  - { zh: 原子向量, en: atomic vector }
+  - { zh: 列表, en: list, aliases: [递归向量, recursive vector], scope: ["3.5"] }
+  - { zh: 属性, en: attribute, scope: ["3.5"] }
+  - { zh: 强制类型转换, en: coercion, aliases: [强制转换] }
+  - { zh: 数据框, en: data frame }
+  - { zh: 循环回收, en: recycling, aliases: [recycling rule], scope: ["3.5"] }
+  - { zh: 向量化, en: vectorization }
+  - { zh: 递归, en: recursion, scope: ["3.5"] }
+  - { zh: 散点图矩阵, en: scatterplot matrix }
+  - { zh: 等高线图, en: contour plot }
+  - { zh: 列主元, en: partial pivoting, aliases: [部分选主元, 列主元 Gauss 消元法] }
+  - { zh: 全主元, en: complete pivoting, aliases: [全选主元] }
+  - { zh: 投影算子, en: projector, aliases: [幂等矩阵, idempotent matrix] }
+  - { zh: 互补投影, en: complementary projector }
+  - { zh: 约化 QR 分解, en: reduced QR decomposition, aliases: [简化 QR 分解, thin QR decomposition] }
+  - { zh: 完全 QR 分解, en: full QR decomposition, aliases: [完整 QR 分解] }
+  - { zh: 修正 Gram–Schmidt 正交化, en: modified Gram–Schmidt, aliases: [MGS, 改进 Gram–Schmidt] }
+  - { zh: 经典 Gram–Schmidt 正交化, en: classical Gram–Schmidt, aliases: [CGS] }
+  - { zh: 约化 SVD, en: reduced SVD, aliases: [简化 SVD, thin SVD] }
+  - { zh: 亏损矩阵, en: defective matrix }
+  - { zh: Schur 分解, en: Schur decomposition, aliases: [实 Schur 分解, real Schur decomposition] }
+  - { zh: 幂迭代法, en: power method, aliases: [幂法, power iteration] }
+  - { zh: QR 算法, en: QR algorithm }
+  - { zh: Bauer–Fike 定理, en: Bauer–Fike theorem }
+  - { zh: 收敛阶, en: order of convergence }
+  - { zh: 收敛率, en: rate of convergence, aliases: [收敛速率] }
+  - { zh: 线性收敛, en: linear convergence }
+  - { zh: 超线性收敛, en: superlinear convergence }
+  - { zh: 二次收敛, en: quadratic convergence }
+  - { zh: 轮廓似然, en: profile likelihood, aliases: [集中似然, concentrated likelihood] }
+  - { zh: 块松弛法, en: block relaxation }
+  - { zh: 单峰函数, en: unimodal function }
+  - { zh: 黄金分割法, en: golden-section search, aliases: [golden section search] }
+  - { zh: 逐次抛物线插值, en: successive parabolic interpolation }
+  - { zh: Nelder–Mead 方法, en: Nelder–Mead method, aliases: [单纯形搜索法, simplex search method] }
+  - { zh: 二分法, en: bisection method, aliases: [bisection] }
+  - { zh: 不动点, en: fixed point }
+  - { zh: 不动点迭代, en: fixed-point iteration }
+  - { zh: 压缩映射, en: contraction mapping, aliases: [contraction] }
+  - { zh: Banach 不动点定理, en: Banach fixed-point theorem, aliases: [压缩映射原理, contraction mapping principle] }
+  - { zh: Jacobi 迭代法, en: Jacobi method }
+  - { zh: Gauss–Seidel 迭代法, en: Gauss–Seidel method }
+  - { zh: 逐次超松弛迭代法, en: successive over-relaxation, aliases: [SOR, 超松弛迭代] }
+  - { zh: 坐标下降法, en: coordinate descent, aliases: [backfitting, 后向拟合] }
+  - { zh: 弦截法, en: secant method, aliases: [割线法] }
+  - { zh: 逆二次插值, en: inverse quadratic interpolation, aliases: [IQI] }
+  - { zh: Brent 法, en: "Brent's method", aliases: [Brent–Dekker 方法, Brent–Dekker method] }
+  - { zh: 生存时间, en: survival time }
+  - { zh: 生存函数, en: survival function, aliases: [survivor function] }
+  - { zh: 风险函数, en: hazard function, aliases: [危险率函数, hazard rate] }
+  - { zh: 比例风险模型, en: proportional hazards model, aliases: [Cox 模型, Cox proportional hazards model] }
+  - { zh: 牛顿法, en: "Newton's method", aliases: [Newton–Raphson 法, Newton–Raphson method, 牛顿-拉弗森法] }
+  - { zh: 观测信息, en: observed information, aliases: [观测信息矩阵, observed information matrix] }
+  - { zh: Fisher 得分法, en: Fisher scoring, aliases: [得分法, "Fisher's scoring", method of scoring] }
+  - { zh: 下降方向, en: descent direction }
+  - { zh: 阻尼牛顿法, en: damped Newton method }
+  - { zh: 割线条件, en: secant condition, aliases: [拟牛顿条件, quasi-Newton condition, secant equation] }
+  - { zh: 拟牛顿法, en: quasi-Newton method }
+  - { zh: 对称秩一更新, en: symmetric rank-one update, aliases: [SR1, Davidon 更新, "Davidon's update"] }
+  - { zh: BFGS 更新, en: BFGS update, aliases: [BFGS, BFGS 方法, BFGS method] }
+  - { zh: DFP 更新, en: DFP update, aliases: [DFP, DFP 方法, Davidon–Fletcher–Powell method] }
+  - { zh: 曲率条件, en: curvature condition }
+  - { zh: 强凸函数, en: strongly convex function, aliases: [强凸, strongly convex, strong convexity] }
+  - { zh: 置信域法, en: trust-region method, aliases: [信赖域法, trust region method] }
+  - { zh: Gauss–Newton 法, en: Gauss–Newton method, aliases: [高斯-牛顿法] }
+  - { zh: Levenberg–Marquardt 法, en: Levenberg–Marquardt method, aliases: [LM 法, LMF 法, Levenberg–Marquardt–Fletcher 法, 阻尼最小二乘法, damped least squares] }
+  - { zh: 梯度下降法, en: gradient descent, aliases: [梯度下降, gradient descent method] }
+  - { zh: 线搜索, en: line search, aliases: [直线搜索] }
+  - { zh: 精确线搜索, en: exact line search, aliases: [精确直线搜索] }
+  - { zh: 回溯线搜索, en: backtracking line search, aliases: [回溯直线搜索] }
+  - { zh: Armijo 条件, en: Armijo condition, aliases: [充分下降条件, sufficient decrease condition] }
+  - { zh: 最速下降法, en: steepest descent method, aliases: [最速下降, steepest descent] }
+  - { zh: 能量范数, en: energy norm, aliases: [A-范数, A-norm] }
+  - { zh: 随机梯度下降, en: stochastic gradient descent, aliases: [SGD] }
+  - { zh: 小批量梯度下降, en: mini-batch gradient descent }
+  - { zh: 共轭方向, en: conjugate directions, aliases: [A-共轭, A-conjugate, conjugate direction] }
+  - { zh: 共轭方向定理, en: conjugate direction theorem }
+  - { zh: 扩展子空间定理, en: expanding subspace theorem, aliases: [子空间扩张定理] }
+  - { zh: 共轭梯度法, en: conjugate gradient method, aliases: [CG, 共轭梯度] }
+  - { zh: Krylov 子空间, en: Krylov subspace }
+  - { zh: Fletcher–Reeves 方法, en: Fletcher–Reeves method }
+  - { zh: Polak–Ribière 方法, en: Polak–Ribière method }
+  - { zh: 隐变量, en: latent variable, aliases: [潜变量, hidden variable] }
+  - { zh: 完全数据, en: complete data }
+  - { zh: 不完全数据, en: incomplete data }
+  - { zh: Q 函数, en: Q-function, scope: ["3.5.6"] }
+  - { zh: 证据下界, en: evidence lower bound, aliases: [ELBO] }
+  - { zh: 广义 EM 算法, en: generalized EM algorithm, aliases: [广义 EM, GEM] }
+  - { zh: 平均场近似, en: mean-field approximation, aliases: [平均场假设, mean-field assumption] }
+  - { zh: 变分 EM 算法, en: variational EM algorithm, aliases: [VBEM, 变分贝叶斯 EM, variational Bayesian EM] }
+  - { zh: 缺失信息原理, en: missing information principle }
+  - { zh: Louis 加速, en: "Louis's acceleration", aliases: [Louis 加速法] }
+  - { zh: 有限混合模型, en: finite mixture model, aliases: [mixture model] }
+  - { zh: 责任度, en: responsibility, scope: ["3"] }
+  - { zh: 偏差, en: bias, aliases: [估计量的偏差], scope: ["3"] }
+  - { zh: 自助样本, en: bootstrap sample }
+  - { zh: 自助分布, en: bootstrap distribution }
+  - { zh: 非参数自助法, en: nonparametric bootstrap }
+  - { zh: 参数自助法, en: parametric bootstrap }
+  - { zh: Hadamard 可微, en: Hadamard differentiable, aliases: [Hadamard 可微性, Hadamard differentiability] }
+  - { zh: 泛函 Delta 方法, en: functional delta method }
+  - { zh: 正态自助区间, en: normal bootstrap interval }
+  - { zh: 基本自助区间, en: basic bootstrap interval, aliases: [经验自助区间, empirical bootstrap interval] }
+  - { zh: 百分位区间, en: percentile interval, aliases: [百分位自助区间, percentile bootstrap interval] }
+  - { zh: 偏差校正加速区间, en: bias-corrected and accelerated interval, aliases: [BCa 区间, BCa interval] }
+  - { zh: 刀切法, en: jackknife }
+  - { zh: 误差界, en: margin of error, aliases: [边际误差] }
+  - { zh: 平滑自助法, en: smoothed bootstrap }
+  - { zh: m-out-of-n 自助法, en: m-out-of-n bootstrap }
+  - { zh: 伪随机数发生器, en: pseudorandom number generator, aliases: [PRNG, 伪随机数生成器] }
+  - { zh: 线性同余发生器, en: linear congruential generator, aliases: [LCG, 线性同余生成器] }
+  - { zh: 乘同余发生器, en: multiplicative congruential generator, aliases: [MCG] }
+  - { zh: Hull–Dobell 定理, en: Hull–Dobell theorem }
+  - { zh: 拒绝抽样, en: rejection sampling, aliases: [舍选法, 接受–拒绝法, acceptance–rejection method] }
+  - { zh: 包络拒绝抽样, en: envelope rejection sampling }
+  - { zh: 提议分布, en: proposal distribution, aliases: [提议密度, proposal density, 建议分布] }
+  - { zh: 模拟基本定理, en: fundamental theorem of simulation }
+  - { zh: 均匀比方法, en: ratio of uniforms, aliases: [ratio-of-uniforms method, 均匀分布比方法] }
+  - { zh: 混合分布, en: mixture distribution }
+  - { zh: Markov 链 Monte Carlo, en: Markov chain Monte Carlo, aliases: [MCMC, 马尔可夫链蒙特卡洛] }
+  - { zh: 投点法, en: hit-or-miss method }
+  - { zh: 均值法, en: mean-value method, aliases: [crude Monte Carlo, 朴素蒙特卡洛] }
+  - { zh: 重要性抽样, en: importance sampling, aliases: [重要性采样, IS] }
+  - { zh: 重要性权重, en: importance weight }
+  - { zh: 自归一化重要性抽样, en: self-normalized importance sampling }
+  - { zh: 有效样本量, en: effective sample size, aliases: [ESS] }
+  - { zh: Markov 链, en: Markov chain, aliases: [马尔可夫链, 马氏链] }
+  - { zh: Markov 性, en: Markov property, aliases: [马氏性] }
+  - { zh: 转移矩阵, en: transition matrix, aliases: [转移概率矩阵, transition probability matrix], scope: ["3"] }
+  - { zh: 平稳分布, en: stationary distribution }
+  - { zh: 细致平衡条件, en: detailed balance condition, aliases: [细致平衡, detailed balance] }
+  - { zh: 可逆 Markov 链, en: reversible Markov chain }
+  - { zh: 不可约, en: irreducible, aliases: [不可约链, irreducible Markov chain], scope: ["3"] }
+  - { zh: 非周期, en: aperiodic }
+  - { zh: 常返, en: recurrent, aliases: [常返态, recurrent state] }
+  - { zh: 暂态, en: transient, aliases: [非常返, transient state] }
+  - { zh: 正常返, en: positive recurrent }
+  - { zh: 零常返, en: null recurrent }
+  - { zh: 遍历, en: ergodic, aliases: [遍历性, ergodicity], scope: ["3"] }
+  - { zh: 基本极限定理, en: basic limit theorem }
+  - { zh: Metropolis–Hastings 算法, en: Metropolis–Hastings algorithm, aliases: [MH 算法, M-H 算法] }
+  - { zh: Metropolis 算法, en: Metropolis algorithm }
+  - { zh: 随机游走 Metropolis 算法, en: random walk Metropolis }
+  - { zh: 独立抽样器, en: independence sampler }
+  - { zh: Gibbs 抽样, en: Gibbs sampler, aliases: [Gibbs 采样, Gibbs sampling] }
+  - { zh: 完全条件分布, en: full conditional distribution }
+  - { zh: 预烧期, en: burn-in, aliases: [烧入期] }
+  - { zh: 准确性, en: accuracy, aliases: [准确, accurate], scope: ["3.5"] }
+  - { zh: 因子, en: factor, scope: ["3.5"] }
+
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
   - { zh: 分岔, en: bifurcation }
