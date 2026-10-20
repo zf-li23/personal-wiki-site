@@ -1,5 +1,7 @@
 ---
 title: Statistical Computing and Software
+courses:
+  - { code: "30160294", name: 统计计算与软件, name_en: Statistical Computing and Software }
 textbooks:
   - { title: 统计计算, author: 李东风, edition: 1, title_en: Statistical Computing, author_en: Dongfeng Li }
   - { title: Numerical Linear Algebra, author: "Lloyd N. Trefethen, David Bau III", title_zh: 数值线性代数 }
