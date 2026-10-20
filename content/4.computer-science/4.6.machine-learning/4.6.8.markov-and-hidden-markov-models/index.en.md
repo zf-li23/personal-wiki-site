@@ -1,7 +1,7 @@
 ---
 title: "Sequence Models: Markov and Hidden Markov Models"
 description: The first-order Markov assumption, Markov models and their parameter estimation; the definition and three basic problems of hidden Markov models; the forward and backward algorithms, the Viterbi algorithm and the Baum–Welch algorithm; applications to pinyin input methods, part-of-speech tagging, speech recognition and biological sequences.
-source_hash: 7a244bb60577
+source_hash: 8596bad7e896
 ---
 
 The preceding chapters all assumed that examples are independent and identically distributed, but much data comes in sequences with an order: the weather, the number of infections in an epidemic, speech, text, gene sequences, the clicks and purchases of a user, the sensor readings of a robot. Adjacent elements of a sequence depend on one another, and ignoring the order discards the most important information. This chapter introduces the most classical sequence models: the Markov model assumes that the next state depends only on the current state; the hidden Markov model (HMM) assumes further that the state itself cannot be observed and can only be inferred indirectly from the observations it generates. All three basic problems of the HMM can be solved efficiently by **dynamic programming** ([4.1.13](/4.1.13)), exploiting the special structure of the model, and the learning problem is a special case of the **EM algorithm** ([3.5.6](/3.5.6)). The probability theory of Markov chains is in [3.5.9](/3.5.9); methods that model sequences with neural networks (recurrent neural networks, the Transformer) are in [4.7.5](/4.7.5) and [4.7.6](/4.7.6).
@@ -143,7 +143,7 @@ By the law of total probability and Eq. (8.1),
 $$
 \mathbb{P}(O \mid \lambda) = \sum_X\mathbb{P}(O \mid X, \lambda)\,\mathbb{P}(X \mid \lambda) = \sum_{x_1, \dots, x_T}\pi_{x_1}b_{x_1}(o_1)\prod_{t=2}^T a_{x_{t-1}x_t}\,b_{x_t}(o_t).
 $$
-Direct computation lists all $N^{T}$ state sequences, each requiring about $2T$ multiplications, for a total of $O(2TN^{T})$, which is already infeasible for $N = 5$ and $T = 100$. But different state sequences share many prefixes, and the chain structure of the HMM suggests using dynamic programming.
+Direct computation lists all $N^{T\,}$ state sequences, each requiring about $2T$ multiplications, for a total of $O(2TN^{T\,})$, which is already infeasible for $N = 5$ and $T = 100$. But different state sequences share many prefixes, and the chain structure of the HMM suggests using dynamic programming.
 
 ### 8.3.2. The Forward Algorithm
 
@@ -350,7 +350,7 @@ The figure below is a longer example: the "occasionally dishonest casino" altern
 
 If the training data give both the observation sequences and the state sequences (for example, a corpus annotated with parts of speech by hand), learning is the counting of Sec. 8.1.2: $\hat a_{ij}$ is the frequency with which $s_i$ is immediately followed by $s_j$, and $\hat b_j(k)$ is the frequency of outputting $k$ in state $s_j$.
 
-With only observation sequences, this is the hardest of the three problems: the states are missing data, the likelihood $\mathbb{P}(O \mid \lambda)$ is a sum of $N^{T}$ terms with no analytic maximizer, and we can only seek a local optimum: given the model and the observation sequence, adjust the parameters repeatedly so that the model fits the observation sequence better. This is exactly the **maximum likelihood estimation** problem with latent variables that the **EM algorithm** handles: the E step computes the posterior distribution of the hidden states with the current parameters, and the M step re-estimates the parameters with expected counts in place of true counts. The EM algorithm for HMMs is called the Baum–Welch algorithm (Baum et al., 1970), and its E step is done by the forward–backward algorithm.
+With only observation sequences, this is the hardest of the three problems: the states are missing data, the likelihood $\mathbb{P}(O \mid \lambda)$ is a sum of $N^{T\,}$ terms with no analytic maximizer, and we can only seek a local optimum: given the model and the observation sequence, adjust the parameters repeatedly so that the model fits the observation sequence better. This is exactly the **maximum likelihood estimation** problem with latent variables that the **EM algorithm** handles: the E step computes the posterior distribution of the hidden states with the current parameters, and the M step re-estimates the parameters with expected counts in place of true counts. The EM algorithm for HMMs is called the Baum–Welch algorithm (Baum et al., 1970), and its E step is done by the forward–backward algorithm.
 
 ### 8.5.2. The Algorithm
 
@@ -483,4 +483,4 @@ For the second point, conditional random fields (CRFs, Lafferty et al., 2001) mo
 | Decoding | $\arg\max_X\mathbb{P}(X \mid O, \lambda)$ | Viterbi algorithm (replace the sum by a maximum, then backtrack) | $O(N^2T)$ |
 | Learning | $\arg\max_\lambda\mathbb{P}(O \mid \lambda)$ | Baum–Welch algorithm (a special case of EM, with the forward–backward algorithm as the E step) | $O(N^2T)$ per iteration |
 
-The Markov model uses the first-order Markov assumption to factor the joint distribution of a sequence into a product of transition probabilities; the HMM further introduces unobservable states and output probabilities. All three basic problems exploit the chain structure and turn a sum or maximization over $N^{T}$ state sequences into a recursion over time.
+The Markov model uses the first-order Markov assumption to factor the joint distribution of a sequence into a product of transition probabilities; the HMM further introduces unobservable states and output probabilities. All three basic problems exploit the chain structure and turn a sum or maximization over $N^{T\,}$ state sequences into a recursion over time.
