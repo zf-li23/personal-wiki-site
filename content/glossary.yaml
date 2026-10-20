@@ -1555,7 +1555,7 @@ terms:
   - { zh: 列表, en: list, aliases: [递归向量, recursive vector], scope: ["3.5"] }
   - { zh: 属性, en: attribute, scope: ["3.5"] }
   - { zh: 强制类型转换, en: coercion, aliases: [强制转换], scope: ["3.5"] }
-  - { zh: 数据框, en: data frame }
+  - { zh: 数据框, en: data frame, aliases: [DataFrame] }
   - { zh: 循环回收, en: recycling, aliases: [recycling rule], scope: ["3.5"] }
   - { zh: 向量化, en: vectorization }
   - { zh: 递归, en: recursion, scope: ["3.5"] }
@@ -2379,3 +2379,67 @@ terms:
   - { zh: 遍历, en: traversal, aliases: [tree traversal], scope: ["4"] }
   - { zh: 聚集, en: clustering, scope: ["4.3"] }
   - { zh: 轴点, en: pivot, aliases: [枢轴], scope: ["4.1", "4.3"] }
+
+  # scientific computing with Python (4.4)
+  - { zh: 胶水语言, en: glue language }
+  - { zh: 双语言问题, en: two-language problem }
+  - { zh: 包管理器, en: package manager }
+  - { zh: 分发包, en: distribution package }
+  - { zh: wheel 包, en: wheel, aliases: [wheel 文件], scope: ["4"] }
+  - { zh: 源码分发包, en: source distribution, aliases: [sdist] }
+  - { zh: 虚拟环境, en: virtual environment }
+  - { zh: 依赖解析, en: dependency resolution }
+  - { zh: 锁文件, en: lock file }
+  - { zh: 内联脚本元数据, en: inline script metadata }
+  - { zh: Jupyter 笔记本, en: Jupyter notebook, aliases: [notebook, 笔记本] }
+  - { zh: 类型标注, en: type annotation, aliases: [类型注解, type hint, type annotations] }
+  - { zh: 类型检查器, en: type checker }
+  - { zh: N 维数组, en: ndarray, aliases: [n-dimensional array, NumPy 数组] }
+  - { zh: 数据类型对象, en: dtype, aliases: [dtype 对象] }
+  - { zh: 类型提升, en: type promotion }
+  - { zh: 步长, en: stride, aliases: [strides], scope: ["4"] }
+  - { zh: 列主序, en: column-major order, aliases: [Fortran order, Fortran 序] }
+  - { zh: 视图, en: view, scope: ["4.4"] }
+  - { zh: 花式索引, en: fancy indexing, aliases: [整数数组索引, integer array indexing, advanced indexing, 高级索引] }
+  - { zh: 布尔索引, en: boolean indexing }
+  - { zh: 通用函数, en: universal function, aliases: [ufunc] }
+  - { zh: 成对求和, en: pairwise summation, aliases: [级联求和, cascade summation] }
+  - { zh: 广播, en: broadcasting, scope: ["4"] }
+  - { zh: 数组 API 标准, en: Python array API standard, aliases: [array API standard] }
+  - { zh: BLAS, en: BLAS, aliases: [Basic Linear Algebra Subprograms, 基本线性代数子程序] }
+  - { zh: LAPACK, en: LAPACK, aliases: [Linear Algebra PACKage] }
+  - { zh: Einstein 求和约定, en: Einstein summation convention, aliases: [爱因斯坦求和约定, einsum] }
+  - { zh: 随机种子, en: seed, aliases: [random seed, 种子], scope: ["3.5", "4.4"] }
+  - { zh: 刚性, en: stiffness, aliases: [刚性方程, stiff equation, 刚性问题, stiff problem] }
+  - { zh: 三次样条, en: cubic spline, aliases: [三次样条插值, cubic spline interpolation] }
+  - { zh: 稀疏矩阵, en: sparse matrix }
+  - { zh: 离散 Fourier 变换, en: discrete Fourier transform, aliases: [DFT, 离散傅里叶变换] }
+  - { zh: 快速 Fourier 变换, en: fast Fourier transform, aliases: [FFT, 快速傅里叶变换] }
+  - { zh: pandas Series, en: pandas Series, scope: ["4.4"] }
+  - { zh: 索引, en: index, scope: ["4.4"] }
+  - { zh: 索引对齐, en: index alignment, scope: ["4.4"] }
+  - { zh: 缺失值, en: missing value }
+  - { zh: 整洁数据, en: tidy data }
+  - { zh: 长格式, en: long format }
+  - { zh: 宽格式, en: wide format }
+  - { zh: 拆分-应用-合并, en: split-apply-combine }
+  - { zh: 内连接, en: inner join }
+  - { zh: 左连接, en: left join, aliases: [左外连接, left outer join] }
+  - { zh: 全外连接, en: full outer join, aliases: [外连接, outer join] }
+  - { zh: 写时复制, en: copy-on-write, aliases: [CoW] }
+  - { zh: 惰性求值, en: lazy evaluation }
+  - { zh: 颜色映射, en: colormap, aliases: [色图, color map] }
+  - { zh: 顺序颜色映射, en: sequential colormap }
+  - { zh: 发散颜色映射, en: diverging colormap }
+  - { zh: 定性颜色映射, en: qualitative colormap }
+  - { zh: 感知均匀颜色映射, en: perceptually uniform colormap, aliases: [perceptually uniform] }
+  - { zh: 小多图, en: small multiples }
+  - { zh: 图形语法, en: grammar of graphics }
+  - { zh: 性能分析, en: profiling }
+  - { zh: 即时编译, en: just-in-time compilation, aliases: [JIT, JIT compilation] }
+  - { zh: 全局解释器锁, en: global interpreter lock, aliases: [GIL] }
+  - { zh: 进程池, en: process pool }
+  - { zh: 易并行, en: embarrassingly parallel, aliases: [易并行问题] }
+  - { zh: Amdahl 定律, en: "Amdahl's law", aliases: [阿姆达尔定律] }
+  - { zh: Gillespie 算法, en: Gillespie algorithm, aliases: [随机模拟算法, stochastic simulation algorithm, SSA] }
+  - { zh: 连接, en: join, scope: ["4"] }
