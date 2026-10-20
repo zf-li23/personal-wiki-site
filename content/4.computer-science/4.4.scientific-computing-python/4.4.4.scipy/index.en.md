@@ -92,7 +92,7 @@ print(res.x, res.nit, res.nfev, res.success)   # [1. 1.] 32 39 True
 
 With finite differences, BFGS needs three function evaluations per iteration (one value, two for the gradient in two dimensions) and is less accurate. Bounds are passed as a list of `(low, high)` pairs; for example, with `bounds=[(-2, 0.5), (-2, 2)]`, L-BFGS-B returns the constrained minimum $(0.5, 0.25)$ on the boundary. Constraints are passed as dictionaries such as `{"type": "ineq", "fun": lambda x: 1 - x[0]**2 - x[1]**2}`, meaning $1 - x^2 - y^2 \ge 0$; with it, SLSQP finds the minimum $(0.7864, 0.6177)$ on the unit circle.
 
-All these methods find *local* minima. For functions with many local minima, `optimize.differential_evolution`, `dual_annealing` and `basinhopping` search globally, at a much higher cost, and restarting a local method from many starting points is a simple alternative. A one-dimensional function is minimized with `optimize.minimize_scalar`, which uses Brent's method combining **golden-section search** and parabolic interpolation ([3.5.4](/3.5.4#sec-4.2.1)).
+All these methods find *local* minima. For functions with many local minima, `optimize.differential_evolution`, `dual_annealing` and `basinhopping` search globally, at a much higher cost, and restarting a local method from many starting points is a simple alternative. A one-dimensional function is minimized with `optimize.minimize_scalar`, which uses **Brent's method** combining **golden-section search** and parabolic interpolation ([3.5.4](/3.5.4#sec-4.2.1)).
 
 ### 4.2.2. Root Finding
 
@@ -106,7 +106,7 @@ s = optimize.root_scalar(f, x0=2.0, fprime=lambda x: 3 * x ** 2 - 2, method="new
 print(s.root, s.iterations)               # 2.0945514815423265 4
 ```
 
-`brentq` (**Brent's method**, [3.5.4](/3.5.4#sec-4.3.6)) combines the **bisection method** with the **secant method** and inverse quadratic interpolation; it is the method of choice whenever a bracket is known. **Newton's method** ([3.5.5](/3.5.5#sec-5.1.1)) converges quadratically from a good starting point but may diverge from a bad one. For systems of equations $\boldsymbol{F}(\boldsymbol{x}) = \boldsymbol{0}$, `optimize.root` uses a modified Powell hybrid method by default:
+`brentq` (**Brent's method**, [3.5.4](/3.5.4#sec-4.3.6)) combines the **bisection method** with the **secant method** and **inverse quadratic interpolation**; it is the method of choice whenever a bracket is known. **Newton's method** ([3.5.5](/3.5.5#sec-5.1.1)) converges quadratically from a good starting point but may diverge from a bad one. For systems of equations $\boldsymbol{F}(\boldsymbol{x}) = \boldsymbol{0}$, `optimize.root` uses a modified Powell hybrid method by default:
 
 ```python
 def F(v):
@@ -119,7 +119,7 @@ print(sol.x, sol.success)                 # [ 1.00416874 -1.72963729] True
 
 ### 4.2.3. Curve Fitting
 
-Fitting a nonlinear model $y \approx f(x; \boldsymbol{\theta})$ to data by least squares is the most common optimization task in experimental science. `optimize.curve_fit(f, xdata, ydata, p0)` minimizes $\sum_i (y_i - f(x_i; \boldsymbol{\theta}))^2$ with the **Levenberg–Marquardt method** ([3.5.5](/3.5.5#sec-5.1.5.3)) and returns the estimate together with an estimated covariance matrix, from which approximate standard errors follow. For the Michaelis–Menten model of enzyme kinetics, $v = V_{\max} S / (K_{\mathrm{m}} + S)$:
+Fitting a nonlinear model $y \approx f(x; \boldsymbol{\theta})$ to data by **least squares** is the most common optimization task in experimental science. `optimize.curve_fit(f, xdata, ydata, p0)` minimizes $\sum_i (y_i - f(x_i; \boldsymbol{\theta}))^2$ with the **Levenberg–Marquardt method** ([3.5.5](/3.5.5#sec-5.1.5.3)) and returns the estimate together with an estimated **covariance matrix**, from which approximate **standard errors** follow. For the Michaelis–Menten model of enzyme kinetics, $v = V_{\max} S / (K_{\mathrm{m}} + S)$:
 
 ```python
 def michaelis_menten(S, Vmax, Km):
@@ -152,7 +152,7 @@ val, err = integrate.quad(lambda x, a: x ** a, 0, 1, args=(2,))
 print(val)                                 # 0.33333333333333337
 ```
 
-The error estimate is reliable for smooth integrands; for integrands with singularities, discontinuities or sharp peaks, the location should be given with `points=[...]`, or the interval split. Multiple integrals are computed by `dblquad`, `tplquad` and `nquad`, and `quad_vec` integrates vector-valued functions.
+The error estimate is reliable for smooth integrands; for integrands with singularities, discontinuities or sharp peaks, the location should be given with `points=[...]`, or the interval split. **Multiple integrals** are computed by `dblquad`, `tplquad` and `nquad`, and `quad_vec` integrates vector-valued functions.
 
 When the integrand is known only at sample points, for example a measured time series, we use the composite rules: `integrate.trapezoid(y, x=x)` and `integrate.simpson(y, x=x)` give the integral, and `integrate.cumulative_trapezoid(y, x=x, initial=0)` the running integral. For $\int_0^\pi \sin x\,\mathrm{d}x = 2$ with 11 points, the trapezoidal rule gives $1.9835$ and Simpson's rule $2.0001$, reflecting their errors of order $h^2$ and $h^4$.
 
@@ -225,7 +225,7 @@ This difficulty is called *stiffness*: a problem is stiff when it contains proce
 | `BDF` | 539 | 1 902 | 0.14 s |
 | `LSODA` | 728 | 1 803 | 0.01 s |
 
-All four succeed, but the explicit method needs 3000 times more steps. Implicit methods solve a nonlinear system with the Jacobian matrix $\partial\boldsymbol{f}/\partial\boldsymbol{y}$ at each step; supplying it through `jac=` saves the finite-difference approximation, and `jac_sparsity=` helps for large sparse systems such as discretized partial differential equations. The practical rule: start with `RK45`; if it is unexpectedly slow or takes very many steps, try `BDF`, `Radau` or `LSODA`.
+All four succeed, but the explicit method needs 3000 times more steps. Implicit methods solve a nonlinear system with the **Jacobian matrix** $\partial\boldsymbol{f}/\partial\boldsymbol{y}$ at each step; supplying it through `jac=` saves the finite-difference approximation, and `jac_sparsity=` helps for large sparse systems such as discretized **partial differential equations**. The practical rule: start with `RK45`; if it is unexpectedly slow or takes very many steps, try `BDF`, `Radau` or `LSODA`.
 
 ## 4.4. Interpolation
 
@@ -262,7 +262,7 @@ The interpolant objects are callable and have methods for derivatives, antideriv
 
 ### 4.5.1. Distribution Objects
 
-`scipy.stats` contains about 110 continuous and 20 discrete distributions. Each is an object with methods for the density (`pdf`, or `pmf` for discrete distributions), the **cumulative distribution function** (`cdf`), the survival function (`sf`, $1 - F$, accurate in the far tail), the **quantile** function (`ppf`, the inverse of the CDF), moments, random variates (`rvs`) and fitting (`fit`). All continuous distributions are parameterized by shape parameters together with `loc` and `scale`, so that $X = \mathrm{loc} + \mathrm{scale}\cdot Z$ for a standard variable $Z$. As with NumPy's `Generator` ([4.4.3](/4.4.3#sec-3.4.2)), this means that `scale` is the standard deviation for the **normal distribution** and the mean $1/\lambda$ for the exponential distribution:
+`scipy.stats` contains about 110 continuous and 20 discrete distributions. Each is an object with methods for the density (`pdf`, or `pmf` for discrete distributions), the **cumulative distribution function** (`cdf`), the **survival function** (`sf`, $1 - F$, accurate in the far tail), the **quantile** function (`ppf`, the inverse of the CDF), **moments**, random variates (`rvs`) and fitting (`fit`). All continuous distributions are parameterized by shape parameters together with `loc` and `scale`, so that $X = \mathrm{loc} + \mathrm{scale}\cdot Z$ for a standard variable $Z$. As with NumPy's `Generator` ([4.4.3](/4.4.3#sec-3.4.2)), this means that `scale` is the standard deviation for the **normal distribution** and the mean $1/\lambda$ for the **exponential distribution**:
 
 ```python
 from scipy import stats
@@ -276,7 +276,7 @@ rng = np.random.default_rng(0)
 print(X.rvs(size=3, random_state=rng))       # draws use a NumPy Generator
 ```
 
-SciPy 1.15 introduced a new interface for distributions, in which distributions are classes with named parameters (`stats.Normal(mu=1.0, sigma=2.0)`, with methods `pdf`, `cdf`, `icdf`, `sample`), and random variables can be transformed arithmetically: `2 * stats.Normal(mu=1.0, sigma=2.0) + 1` is again a distribution object with mean 3 and standard deviation 4. `stats.make_distribution` turns other distributions into this form. The classical interface remains fully supported, and most code and documentation still use it.
+SciPy 1.15 introduced a new interface for distributions, in which distributions are classes with named parameters (`stats.Normal(mu=1.0, sigma=2.0)`, with methods `pdf`, `cdf`, `icdf`, `sample`), and **random variables** can be transformed arithmetically: `2 * stats.Normal(mu=1.0, sigma=2.0) + 1` is again a distribution object with mean 3 and standard deviation 4. `stats.make_distribution` turns other distributions into this form. The classical interface remains fully supported, and most code and documentation still use it.
 
 ### 4.5.2. Estimation and Tests
 
@@ -287,7 +287,7 @@ data = stats.gamma(a=3.0, scale=0.5).rvs(size=500, random_state=rng)
 print(stats.gamma.fit(data, floc=0))   # (3.213..., 0, 0.455...): shape, loc, scale
 ```
 
-The hypothesis tests return result objects with the statistic, the **p-value** and, for many tests, further information such as degrees of freedom or a confidence interval:
+The hypothesis tests return result objects with the statistic, the **p-value** and, for many tests, further information such as **degrees of freedom** or a **confidence interval**:
 
 ```python
 a = rng.normal(0.0, 1.0, 30)
@@ -304,7 +304,7 @@ Other frequently used functions are `pearsonr`, `spearmanr`, `linregress`, `chi2
 
 ### 4.6.1. Storage Formats
 
-Many large matrices in science have mostly zero entries: the discretization of a differential equation couples only neighboring grid points, the adjacency matrix of a network has one entry per edge, and a gene-by-cell count matrix in single-cell sequencing is typically over 90% zeros. A *sparse matrix* is a matrix stored in a format that records only the nonzero entries, so that memory and computation scale with the number of nonzeros instead of with $mn$. `scipy.sparse` provides several formats, each efficient for different operations:
+Many large matrices in science have mostly zero entries: the discretization of a differential equation couples only neighboring grid points, the **adjacency matrix** of a network has one entry per edge, and a gene-by-cell count matrix in single-cell sequencing is typically over 90% zeros. A *sparse matrix* is a matrix stored in a format that records only the nonzero entries, so that memory and computation scale with the number of nonzeros instead of with $mn$. `scipy.sparse` provides several formats, each efficient for different operations:
 
 | Format | Stores | Good for |
 |---|---|---|
@@ -333,7 +333,7 @@ print(coo.toarray())                       # [[0. 0. 1.]  [5. 0. 0.]]: entry (1,
 
 ### 4.6.2. Sparse Linear Algebra
 
-`scipy.sparse.linalg` contains solvers that exploit sparsity. The tridiagonal matrix above, scaled by $1/h^2$, is the discretization of $-u''$ on a grid with spacing $h$, so solving $L\boldsymbol{u} = \boldsymbol{f}$ approximates the boundary value problem $-u'' = f$, $u(0) = u(1) = 0$, a one-dimensional **Poisson equation**. For $f = 1$ the exact solution is $u(x) = x(1 - x)/2$, which the discretization reproduces exactly up to rounding:
+`scipy.sparse.linalg` contains solvers that exploit sparsity. The tridiagonal matrix above, scaled by $1/h^2$, is the discretization of $-u''$ on a grid with spacing $h$, so solving $L\boldsymbol{u} = \boldsymbol{f}$ approximates the **boundary value problem** $-u'' = f$, $u(0) = u(1) = 0$, a one-dimensional **Poisson equation**. For $f = 1$ the exact solution is $u(x) = x(1 - x)/2$, which the discretization reproduces exactly up to rounding:
 
 ```python
 from scipy.sparse import linalg as spla
@@ -363,7 +363,7 @@ The sparse matrix with $n = 10^5$ occupies 4 MB and is solved in 0.1 s; the same
 | a few singular values | `svds(A, k)` | |
 | matrix-free operators | `LinearOperator(shape, matvec=...)` | iterative methods only need products $A\boldsymbol{v}$ |
 
-Iterative methods converge at a rate determined by the condition number. For $n = 1000$, $\kappa(A) \approx 4 \times 10^5$, and conjugate gradients needs 500 iterations to reach a relative residual of $10^{-10}$, while the direct solver takes 2 ms; for this one-dimensional problem the direct method is clearly better. For large two- and three-dimensional problems, direct solvers suffer from fill-in, and iterative methods with a preconditioner become the method of choice. The smallest eigenvalues of $A$ for $n = 1000$, computed by `spla.eigsh(A, k=3, sigma=0)` with the shift-invert mode, agree with the exact values $\frac{4}{h^2}\sin^2\frac{k\pi h}{2} \approx (k\pi)^2$, $k = 1, 2, 3$, to all printed digits. Graph algorithms on sparse adjacency matrices (shortest paths, connected components, minimum spanning trees, as in [4.3.11](/4.3.11)) are in `scipy.sparse.csgraph`.
+Iterative methods converge at a rate determined by the **condition number**. For $n = 1000$, $\kappa(A) \approx 4 \times 10^5$, and conjugate gradients needs 500 iterations to reach a relative residual of $10^{-10}$, while the direct solver takes 2 ms; for this one-dimensional problem the direct method is clearly better. For large two- and three-dimensional problems, direct solvers suffer from fill-in, and iterative methods with a preconditioner become the method of choice. The smallest eigenvalues of $A$ for $n = 1000$, computed by `spla.eigsh(A, k=3, sigma=0)` with the shift-invert mode, agree with the exact values $\frac{4}{h^2}\sin^2\frac{k\pi h}{2} \approx (k\pi)^2$, $k = 1, 2, 3$, to all printed digits. Graph algorithms on sparse adjacency matrices (shortest paths, **connected components**, **minimum spanning trees**, as in [4.3.11](/4.3.11)) are in `scipy.sparse.csgraph`.
 
 ## 4.7. The Fast Fourier Transform
 
@@ -372,7 +372,7 @@ The *discrete Fourier transform* (DFT) of a sequence $x_0, \dots, x_{N-1}$ is
 $$
 X_k = \sum_{n=0}^{N-1} x_n\,\mathrm{e}^{-2\pi\mathrm{i}kn/N}, \qquad k = 0, 1, \dots, N - 1,
 $$
-the discrete analogue of the **Fourier transform**; it decomposes the sequence into oscillations with frequencies $k/N$ cycles per sample. Evaluated directly, it costs $O(N^2)$ operations; the *fast Fourier transform* (FFT) computes it in $O(N \log N)$ operations by recursively splitting it into transforms of smaller sizes, a **divide and conquer** algorithm ([4.1.11](/4.1.11)). The FFT is one of the most important algorithms in scientific computing: it underlies spectral analysis, fast convolution, image processing and the numerical solution of partial differential equations.
+the discrete analogue of the **Fourier transform**; it decomposes the sequence into oscillations with frequencies $k/N$ cycles per sample. Evaluated directly, it costs $O(N^2)$ operations; the *fast Fourier transform* (FFT) computes it in $O(N \log N)$ operations by recursively splitting it into transforms of smaller sizes, a **divide and conquer** algorithm ([4.1.11](/4.1.11)). The FFT is one of the most important algorithms in scientific computing: it underlies spectral analysis, fast **convolution**, image processing and the numerical solution of **partial differential equations**.
 
 `scipy.fft` (and the similar but smaller `numpy.fft`) provides:
 
@@ -409,10 +409,10 @@ The two components, invisible by eye in the noisy signal, stand out as peaks of 
 ## Summary
 
 - SciPy is a collection of subpackages built on NumPy and on established compiled libraries; import subpackages (`from scipy import optimize`) and prefer `scipy.linalg` over `numpy.linalg`.
-- `optimize.minimize` finds local minima; choose the method by what is available (values, gradients, Hessians) and by the constraints, and supply gradients when possible. Use `root_scalar` with a bracket (`brentq`) for scalar equations, `curve_fit` or `least_squares` for nonlinear regression.
+- `optimize.minimize` finds local minima; choose the method by what is available (values, gradients, Hessians) and by the constraints, and supply gradients when possible. Use `root_scalar` with a bracket (`brentq`) for scalar equations, `curve_fit` or `least_squares` for **nonlinear regression**.
 - `quad` integrates functions adaptively with an error estimate; `trapezoid` and `simpson` integrate samples.
 - `solve_ivp(fun(t, y), t_span, y0)` solves initial value problems with adaptive steps; set tolerances explicitly, use `dense_output` or `t_eval` for output, `events` to locate crossings, and an implicit method (`BDF`, `Radau`, `LSODA`) for stiff problems.
 - Cubic splines are smooth but may overshoot; PCHIP and modified Akima preserve monotonicity. `interp1d` is legacy.
-- `scipy.stats` distributions use `loc` and `scale`; tests return result objects with statistics, p-values and often confidence intervals.
+- `scipy.stats` distributions use `loc` and `scale`; tests return result objects with statistics, **p-values** and often **confidence intervals**.
 - Use sparse arrays (`csr_array`) rather than sparse matrices; assemble in COO, compute in CSR or CSC; `spsolve` for direct and `cg` or `gmres` for iterative solution.
 - The FFT computes the discrete Fourier transform in $O(N \log N)$; use `rfft` and `rfftfreq` for real signals and check normalization conventions.

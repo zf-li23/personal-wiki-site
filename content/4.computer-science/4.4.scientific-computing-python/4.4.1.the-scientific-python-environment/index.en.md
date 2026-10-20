@@ -11,7 +11,7 @@ Tool versions change quickly. The version numbers quoted in this chapter are tho
 
 ### 1.1.1. Why Python
 
-Pure Python is slow for numerical work. A loop that adds a million floating-point numbers runs one bytecode instruction after another, and each addition must look up the types of its operands at run time (**dynamic typing**, [4.1.2](/4.1.2#sec-2.1.2)) and allocate a new float object. A compiled C++ loop does the same work in a few machine instructions per element and is typically 30 to 100 times faster.
+Pure Python is slow for numerical work. A loop that adds a million **floating-point numbers** runs one bytecode instruction after another, and each addition must look up the types of its operands at run time (**dynamic typing**, [4.1.2](/4.1.2#sec-2.1.2)) and allocate a new float object. A compiled C++ loop does the same work in a few machine instructions per element and is typically 30 to 100 times faster.
 
 Python nevertheless dominates scientific computing because it is used as a *glue language*: the program logic is written in Python, while every expensive operation is delegated to compiled code written in C, C++ or Fortran. When we write `A @ B` for two NumPy matrices, Python spends a microsecond dispatching the call; the multiplication itself runs in an optimized BLAS library ([4.4.3](/4.4.3#sec-3.1.2)) at nearly the peak speed of the processor. This division of labor works as long as each call into compiled code does a large amount of work, which is the idea behind **vectorization** ([4.4.2](/4.4.2#sec-2.7)).
 
@@ -259,7 +259,7 @@ The `src/` layout, which `uv init` creates by default, ensures that tests and no
 
 ### 1.6.2. Type Annotations
 
-Python is dynamically typed, but since Python 3.5 we can attach *type annotations* to variables, parameters and return values. The interpreter ignores them at run time; external *type checkers* such as mypy, Pyright or the newer ty read them and report inconsistencies before the program runs, and editors use them for completion. Generic types were introduced in [4.2.9](/4.2.9#sec-9.7).
+Python is **dynamically typed**, but since Python 3.5 we can attach *type annotations* to variables, parameters and return values. The interpreter ignores them at run time; external *type checkers* such as mypy, Pyright or the newer ty read them and report inconsistencies before the program runs, and editors use them for completion. Generic types were introduced in [4.2.9](/4.2.9#sec-9.7).
 
 ```python
 from collections.abc import Sequence
@@ -285,7 +285,7 @@ def mean_final_size(runs: Sequence[NDArray[np.float64]]) -> float:
 Three tools cover most quality checks, and all of them can be run through `uv run`:
 
 - *Formatting*: `ruff format` rewrites code in a uniform style (compatible with Black), which ends discussions about style and keeps diffs small.
-- *Linting*: `ruff check` finds unused imports and variables, undefined names, mutable default arguments and hundreds of other common mistakes; `ruff check --fix` corrects many of them.
+- *Linting*: `ruff check` finds unused imports and variables, undefined names, mutable **default arguments** and hundreds of other common mistakes; `ruff check --fix` corrects many of them.
 - *Testing*: pytest runs every function named `test_*` in the `tests/` directory (**unit testing**, [4.1.5](/4.1.5)).
 
 Numerical tests must not compare **floating-point numbers** with `==` ([4.1.2](/4.1.2#sec-2.2.3)). NumPy provides comparison functions with tolerances; good tests check against cases with known answers or against mathematical properties:

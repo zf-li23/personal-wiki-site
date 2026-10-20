@@ -3,11 +3,11 @@ title: "NumPy: Arrays and Vectorization"
 description: Why Python lists are unsuitable for numerical data; the ndarray and its dtype; type promotion in NumPy 2; memory layout, strides and contiguity; basic indexing and views; fancy and boolean indexing; universal functions, reductions and pairwise summation; broadcasting; thinking in whole arrays; NumPy and other array libraries (array API standard, DLPack).
 ---
 
-NumPy is the foundation of the scientific Python stack ([4.4.1](/4.4.1#sec-1.1.2)): it provides one data structure, the n-dimensional array, together with fast operations on whole arrays. Everything else in the ecosystem, from SciPy to pandas and scikit-learn, exchanges data as NumPy arrays. This chapter explains what an array is in memory, because almost every surprise in NumPy (an assignment that changes another variable, an operation that is unexpectedly slow, an integer that silently overflows) follows from the memory model. We then study the operations that make NumPy fast: universal functions, reductions and broadcasting, and the style of programming they support, called vectorization. The chapter continues the discussion of memory layout from [4.1.8](/4.1.8#sec-8.2.3) and of Python's reference semantics from [4.1.8](/4.1.8#sec-8.5). Linear algebra and random numbers follow in [4.4.3](/4.4.3). The examples use NumPy 2.5 (October 2026); everything except a few noted details also holds for NumPy 2.0 and later.
+NumPy is the foundation of the scientific Python stack ([4.4.1](/4.4.1#sec-1.1.2)): it provides one data structure, the n-dimensional array, together with fast operations on whole arrays. Everything else in the ecosystem, from SciPy to pandas and scikit-learn, exchanges data as NumPy arrays. This chapter explains what an array is in memory, because almost every surprise in NumPy (an assignment that changes another variable, an operation that is unexpectedly slow, an integer that silently overflows) follows from the memory model. We then study the operations that make NumPy fast: universal functions, reductions and broadcasting, and the style of programming they support, called **vectorization**. The chapter continues the discussion of memory layout from [4.1.8](/4.1.8#sec-8.2.3) and of Python's reference semantics from [4.1.8](/4.1.8#sec-8.5). Linear algebra and random numbers follow in [4.4.3](/4.4.3). The examples use NumPy 2.5 (October 2026); everything except a few noted details also holds for NumPy 2.0 and later.
 
 ## 2.1. Why NumPy
 
-A Python list of numbers is an **array** of references, each pointing to a separate float object somewhere on the heap ([4.1.8](/4.1.8#sec-8.5)). Each float object stores, besides its 8-byte value, a reference count and a pointer to its type, so it occupies 24 bytes, and the list adds an 8-byte pointer per element:
+A Python list of numbers is an **array** of references, each pointing to a separate float object somewhere on the heap ([4.1.8](/4.1.8#sec-8.5)). Each float object stores, besides its 8-byte value, a reference count and a **pointer** to its type, so it occupies 24 bytes, and the list adds an 8-byte pointer per element:
 
 ```python
 import sys
@@ -63,7 +63,7 @@ print(a.sum())         # 21        all elements
 print(a.sum(axis=1, keepdims=True).shape)   # (2, 1): the axis is kept with length 1
 ```
 
-`keepdims=True` keeps the reduced axis with length 1, so that the result can be combined with the original array by broadcasting (§2.6). A useful convention in data analysis is to store observations along axis 0 and variables along axis 1, so that a data matrix with $n$ observations of $p$ variables has shape `(n, p)`, as in statistics texts.
+`keepdims=True` keeps the reduced axis with length 1, so that the result can be combined with the original array by broadcasting (§2.6). A useful convention in data analysis is to store observations along axis 0 and variables along axis 1, so that a **data matrix** with $n$ observations of $p$ variables has shape `(n, p)`, as in statistics texts.
 
 ### 2.2.3. The dtype
 
@@ -89,7 +89,7 @@ print(np.iinfo(np.int8).max)              # 127
 print(np.finfo(np.float32).eps, np.finfo(np.float64).eps)   # 1.1920929e-07 2.220446049250313e-16
 ```
 
-`np.finfo` reports the **machine epsilon** and the range of a floating-point type ([3.5.1](/3.5.1#sec-1.2.5)). Overflow is a real danger in practice: an image stored as `uint8` wraps around when two pixel values are added, and products of large `int32` counts overflow quickly. Converting with `a.astype(np.float64)` before arithmetic avoids both.
+`np.finfo` reports the **machine epsilon** and the range of a floating-point type ([3.5.1](/3.5.1#sec-1.2.5)). **Overflow** is a real danger in practice: an image stored as `uint8` wraps around when two pixel values are added, and products of large `int32` counts overflow quickly. Converting with `a.astype(np.float64)` before arithmetic avoids both.
 
 When an operation combines arrays of different dtypes, NumPy chooses the result dtype by *type promotion*: the smallest type that can represent both operands, so `int8 + int16` gives `int16` and `int64 + float64` gives `float64`. NumPy 2 changed the rule for Python scalars (NEP 50). A Python `int`, `float` or `complex` is now "weak": it adopts the dtype of the array it is combined with instead of influencing the result type by its value.
 
@@ -102,7 +102,7 @@ print(np.float32(0.1) + 0.2)                       # 0.3, a float32
 print(np.array([1, 2, 3]) / 2)                     # [0.5 1.  1.5]: true division gives float64
 ```
 
-The rule makes results predictable, at the cost that `float32` data stay in single precision when combined with Python floats. When accuracy matters, convert explicitly.
+The rule makes results predictable, at the cost that `float32` data stay in **single precision** when combined with Python floats. When accuracy matters, convert explicitly.
 
 ## 2.3. Memory Layout and Strides
 
@@ -173,7 +173,7 @@ print(a.strides, t.strides, a[:, ::2].strides)  # (32, 8) (8, 32) (32, 16)
 
 ### 2.3.2. Contiguity and Performance
 
-An array is *C-contiguous* if its elements occupy one block of memory in row-major order, and *F-contiguous* if they do so in column-major order; `a.flags` reports both. `b` above is C-contiguous, `b.T` is F-contiguous, and `b[:, ::2]` is neither.
+An array is *C-contiguous* if its elements occupy one block of memory in **row-major order**, and *F-contiguous* if they do so in column-major order; `a.flags` reports both. `b` above is C-contiguous, `b.T` is F-contiguous, and `b[:, ::2]` is neither.
 
 Strides do not change the number of operations, but they change the speed. Memory is transferred to the CPU cache in lines of 64 bytes; traversing an array along its last axis (in C order) uses every byte of each line, while traversing along the first axis uses 8 bytes of each line and jumps elsewhere. On the test machine, with a $4000 \times 4000$ `float64` array (128 MB):
 
@@ -289,7 +289,7 @@ print(out)                                    # [1.         2.71828183 7.3890561
 print(isinstance(np.sin, np.ufunc), np.add.nin)   # True 2
 ```
 
-Floating-point exceptions do not raise errors. Division by zero gives `inf` or `nan` (**NaN**) with a `RuntimeWarning`, following IEEE 754; the context manager `np.errstate` changes this behavior locally, for example to silence the warning or to raise an exception:
+Floating-point exceptions do not raise errors. Division by zero gives `inf` or `nan` (**NaN**) with a `RuntimeWarning`, following IEEE 754; the **context manager** `np.errstate` changes this behavior locally, for example to silence the warning or to raise an exception:
 
 ```python
 with np.errstate(divide="ignore", invalid="ignore"):
@@ -309,7 +309,7 @@ Binary ufuncs have methods that apply the operation repeatedly:
 | `outer` | `np.multiply.outer([1, 2, 3], [1, 10])` | the $3 \times 2$ table of products |
 | `at` | `np.add.at(c, idx, 1)` | unbuffered in-place operation, correct for repeated indices |
 
-The common reductions have their own functions and methods: `sum`, `prod`, `mean`, `std`, `var`, `min`, `max`, `argmin`, `argmax`, `any`, `all`, `cumsum`, all with an `axis` argument. Note that `np.std` and `np.var` divide by $n$ by default; the unbiased sample variance with divisor $n - 1$ needs `ddof=1`. Functions such as `np.nanmean` and `np.nansum` ignore `nan` entries.
+The common reductions have their own functions and methods: `sum`, `prod`, `mean`, `std`, `var`, `min`, `max`, `argmin`, `argmax`, `any`, `all`, `cumsum`, all with an `axis` argument. Note that `np.std` and `np.var` divide by $n$ by default; the unbiased **sample variance** with divisor $n - 1$ needs `ddof=1`. Functions such as `np.nanmean` and `np.nansum` ignore `nan` entries.
 
 The method `at` solves a subtle problem. In `c[idx] += 1`, NumPy evaluates `c[idx] + 1` first and then assigns, so an index that appears several times in `idx` is incremented only once:
 
@@ -322,7 +322,7 @@ print(np.bincount(idx))                                       # [1 3 1]
 
 For counting, `np.bincount` is the fastest solution; `np.add.at` is the general one (for example for assembling a matrix from element contributions).
 
-Summation of floating-point numbers is not exact, and the order matters ([3.5.1](/3.5.1#sec-1.3.3)). A naive loop accumulates a **rounding error** that can grow proportionally to $n\varepsilon$. `np.sum` on floating-point data uses *pairwise summation*: it splits the array into halves recursively (with small blocks summed directly), which reduces the error bound to order $\varepsilon \log n$ at no extra cost. For the rare cases that need a correctly rounded sum, the standard library provides `math.fsum`.
+Summation of **floating-point numbers** is not exact, and the order matters ([3.5.1](/3.5.1#sec-1.3.3)). A naive loop accumulates a **rounding error** that can grow proportionally to $n\varepsilon$. `np.sum` on floating-point data uses *pairwise summation*: it splits the array into halves recursively (with small blocks summed directly), which reduces the error bound to order $\varepsilon \log n$ at no extra cost. For the rare cases that need a correctly rounded sum, the standard library provides `math.fsum`.
 
 ## 2.6. Broadcasting
 
@@ -384,7 +384,7 @@ print(D.shape)     # (5, 3): D[i, j] is the distance from P[i] to Q[j]
 
 The intermediate array has $m k d$ elements. For $m = k = 10^4$ and $d = 3$ that is 2.4 GB, so for large problems a specialized function such as `scipy.spatial.distance.cdist` or a loop over blocks is preferable. Broadcasting trades memory for speed; it is not free.
 
-*Evaluating a function on a grid.* `x[None, :]` and `y[:, None]` broadcast to a 2-D grid, which replaces `np.meshgrid` in most cases. The following figure is computed this way: the complex numbers $c$ of a grid are iterated by $z \mapsto z^2 + c$, and a boolean array keeps track of the points that have not yet escaped, so that the whole picture is computed with one Python loop over 60 iterations instead of a loop over 648 000 pixels.
+*Evaluating a function on a grid.* `x[None, :]` and `y[:, None]` broadcast to a 2-D grid, which replaces `np.meshgrid` in most cases. The following figure is computed this way: the **complex numbers** $c$ of a grid are iterated by $z \mapsto z^2 + c$, and a boolean array keeps track of the points that have not yet escaped, so that the whole picture is computed with one Python loop over 60 iterations instead of a loop over 648 000 pixels.
 
 ![The Mandelbrot set computed with broadcasting and boolean masks: the color of a point c is the number of iterations of z -> z^2 + c (starting at z = 0) until |z| > 2](./plots/mandelbrot.py)
 

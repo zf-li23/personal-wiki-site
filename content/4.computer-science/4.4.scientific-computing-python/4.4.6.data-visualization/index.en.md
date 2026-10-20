@@ -11,7 +11,7 @@ The figures in this chapter are drawn with Matplotlib 3.10 from synthetic data; 
 
 ### 6.1.1. Two Interfaces
 
-Matplotlib offers two ways to draw. The *pyplot* interface (`plt.plot`, `plt.xlabel`, …) imitates MATLAB: it keeps a hidden "current figure" and "current axes" and directs each call to them. It is convenient for a quick look in a notebook, but in scripts with several panels the implicit state makes it hard to know where a call draws. The *object-oriented* interface creates the objects explicitly and calls their methods; it is the recommended style for anything that is kept.
+Matplotlib offers two ways to draw. The *pyplot* interface (`plt.plot`, `plt.xlabel`, …) imitates MATLAB: it keeps a hidden "current figure" and "current axes" and directs each call to them. It is convenient for a quick look in a **notebook**, but in scripts with several panels the implicit state makes it hard to know where a call draws. The *object-oriented* interface creates the objects explicitly and calls their methods; it is the recommended style for anything that is kept.
 
 The objects form a tree:
 
@@ -69,7 +69,7 @@ The type of chart follows from the question the figure answers and from the kind
 | How is one quantity distributed? | one numeric | histogram, **kernel density estimation**, ECDF; for several groups: strip plot or beeswarm (all points), **boxplot**, violin plot |
 | How do two quantities relate? | two numeric | scatter plot; hexbin or 2D histogram when points overlap heavily; **scatterplot matrix** for several |
 | How does a quantity change along an ordered variable? | numeric vs time, dose, position | line plot, with a band or error bars for the uncertainty |
-| How do groups compare? | numeric vs categorical | dot plot of estimates with intervals; points with a box plot; a bar chart only for counts and other quantities that start at zero |
+| How do groups compare? | numeric vs categorical | dot plot of estimates with intervals; points with a **box plot**; a bar chart only for counts and other quantities that start at zero |
 | How large are the parts of a whole? | counts or proportions | stacked bars; a pie chart only for two or three parts |
 | What is the structure of a matrix? | numeric matrix | heatmap, with rows and columns ordered by **hierarchical clustering**; a **contour plot** for a smooth function of two variables |
 | How do many series behave? | many lines or groups | small multiples (§6.4) |
@@ -78,7 +78,7 @@ A bar chart of group means with error bars, still common in biology, is a poor c
 
 ![Three samples of 30 cells that have exactly the same mean and standard deviation. As bars of means with standard errors (left) they are indistinguishable; shown as points over a box plot (right), sample A is unimodal, sample B consists of two subpopulations, and in sample C two outliers produce the whole spread.](./plots/bar-of-means.py)
 
-Whenever the number of observations is moderate (up to a few hundred per group), show the observations themselves. When error bars are used, state what they are: the standard deviation describes the spread of the data, the standard error of the mean describes the precision of the mean and shrinks like $1/\sqrt{n}$, and a 95 % confidence interval is roughly twice the standard error. Without the label the reader cannot interpret the figure, since the three differ by a factor that depends on $n$.
+Whenever the number of observations is moderate (up to a few hundred per group), show the observations themselves. When error bars are used, state what they are: the **standard deviation** describes the spread of the data, the **standard error** of the mean describes the precision of the mean and shrinks like $1/\sqrt{n}$, and a 95 % **confidence interval** is roughly twice the standard error. Without the label the reader cannot interpret the figure, since the three differ by a factor that depends on $n$.
 
 ## 6.3. Color
 
@@ -138,7 +138,7 @@ A useful test before publishing a figure is to ask what a reader would conclude 
 
 ## 6.6. Statistical Graphics with seaborn
 
-seaborn builds on Matplotlib and pandas: its functions take a long-format DataFrame ([4.4.5](/4.4.5)) and map columns to visual properties (position, color, size, panel), computing the necessary statistics (means, confidence intervals, density estimates, regression fits) on the way. Its classic API has two levels:
+seaborn builds on Matplotlib and pandas: its functions take a long-format **DataFrame** ([4.4.5](/4.4.5)) and map columns to visual properties (position, color, size, panel), computing the necessary statistics (means, confidence intervals, density estimates, regression fits) on the way. Its classic API has two levels:
 
 - *axes-level* functions (`scatterplot`, `lineplot`, `histplot`, `kdeplot`, `boxplot`, `violinplot`, `stripplot`, `heatmap`) draw into one Matplotlib Axes, passed as `ax=`, so they can be mixed with Matplotlib code in a custom layout;
 - *figure-level* functions (`relplot`, `displot`, `catplot`, `lmplot`, and `pairplot` for a **scatterplot matrix**, `clustermap` for a clustered heatmap) create a whole figure, including small multiples via `row=` and `col=`, and return a grid object.
@@ -205,7 +205,7 @@ Interactive figures complement but do not replace static ones: journals print st
 5. Color: a perceptually uniform or diverging colormap as appropriate, centered when diverging; red–green avoided; identity also encoded by labels or shapes; the figure still works in grayscale.
 6. Layout: panels are aligned and lettered; legends are replaced by direct labels where possible; no 3D effects, shadows or unnecessary gridlines and frames.
 7. Export: final size, vector format for line art, raster at 300–600 dpi for images, fonts embedded.
-8. Reproducibility: the figure is produced by a script from the data, with fixed random seeds, so it can be regenerated when the data or the reviewers change.
+8. Reproducibility: the figure is produced by a script from the data, with fixed **random seeds**, so it can be regenerated when the data or the reviewers change.
 
 ## Summary
 

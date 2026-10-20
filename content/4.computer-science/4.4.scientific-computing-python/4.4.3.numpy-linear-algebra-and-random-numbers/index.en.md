@@ -26,7 +26,7 @@ print(np.outer(v, v))   # [[1. 1.]  [1. 1.]]
 
 A 1-D array is neither a row nor a column vector ([4.4.2](/4.4.2#sec-2.4.1)): in `A @ v` it is treated as a column, in `v @ A` as a row, and `v.T` is the same 1-D array. When the distinction matters, we use 2-D arrays of shape `(n, 1)` or `(1, n)`.
 
-`matmul` also works on stacks of matrices: for arrays of shape `(..., m, k)` and `(..., k, n)`, it multiplies the matrices in the last two axes and broadcasts over the leading axes. This batch operation is common in statistics (one covariance matrix per group) and in machine learning. NumPy 2 added further functions in the same spirit:
+`matmul` also works on stacks of matrices: for arrays of shape `(..., m, k)` and `(..., k, n)`, it multiplies the matrices in the last two axes and broadcasts over the leading axes. This batch operation is common in statistics (one **covariance matrix** per group) and in machine learning. NumPy 2 added further functions in the same spirit:
 
 | Function | Operation on the last axes | Shapes |
 |---|---|---|
@@ -91,7 +91,7 @@ When the same matrix is used with many right-hand sides, we either pass them all
 
 ### 3.2.2. Least Squares
 
-For an overdetermined system $A\boldsymbol{\beta} \approx \boldsymbol{y}$ with $A \in \mathbb{R}^{n \times p}$, $n > p$, the **least squares** solution minimizes $\Vert \boldsymbol{y} - A\boldsymbol{\beta} \Vert_2$. `np.linalg.lstsq(A, y)` computes it from the **singular value decomposition** and returns the solution, the residual sum of squares, the numerical rank and the singular values. Forming the **normal equations** $A^{\mathsf T}A\boldsymbol{\beta} = A^{\mathsf T}\boldsymbol{y}$ instead squares the condition number ([3.5.3](/3.5.3#sec-3.2.8)). A polynomial fit of degree 12 on 50 equispaced points in $[0, 1]$ makes the difference visible:
+For an overdetermined system $A\boldsymbol{\beta} \approx \boldsymbol{y}$ with $A \in \mathbb{R}^{n \times p}$, $n > p$, the **least squares** solution minimizes $\Vert \boldsymbol{y} - A\boldsymbol{\beta} \Vert_2$. `np.linalg.lstsq(A, y)` computes it from the **singular value decomposition** and returns the solution, the **residual sum of squares**, the numerical rank and the singular values. Forming the **normal equations** $A^{\mathsf T}A\boldsymbol{\beta} = A^{\mathsf T}\boldsymbol{y}$ instead squares the condition number ([3.5.3](/3.5.3#sec-3.2.8)). A polynomial fit of degree 12 on 50 equispaced points in $[0, 1]$ makes the difference visible:
 
 ```python
 x = np.linspace(0, 1, 50)
@@ -125,7 +125,7 @@ The main functions of `numpy.linalg`, with the sections of [3.5.3](/3.5.3) that 
 A few details are easily overlooked:
 
 - For a symmetric matrix, always use `eigh`. It is faster, it returns real eigenvalues in ascending order, and the eigenvectors are exactly orthonormal; `eig` treats the matrix as general and may return slightly complex results caused by rounding. Since NumPy 2.5, `eig` and `eigvals` always return complex arrays, even when all eigenvalues happen to be real; earlier versions returned real arrays when possible, so the dtype of the result depended on the values.
-- Determinants are rarely what we want numerically. `np.linalg.det(0.1 * np.eye(500))` returns `0.0` because $10^{-500}$ underflows, while `slogdet` returns the logarithm $-1151.29$ correctly. Log-likelihoods of multivariate normal distributions need $\log\det\Sigma$ and should use `slogdet` or the Cholesky factor ($\log\det\Sigma = 2\sum_i \log L_{ii}$).
+- Determinants are rarely what we want numerically. `np.linalg.det(0.1 * np.eye(500))` returns `0.0` because $10^{-500}$ underflows, while `slogdet` returns the logarithm $-1151.29$ correctly. Log-likelihoods of **multivariate normal distributions** need $\log\det\Sigma$ and should use `slogdet` or the Cholesky factor ($\log\det\Sigma = 2\sum_i \log L_{ii}$).
 - All functions accept stacks of matrices: `np.linalg.solve` with `A` of shape `(k, n, n)` solves $k$ systems at once.
 
 `scipy.linalg` contains everything in `numpy.linalg` and more: LU with access to the factors, triangular solves (`solve_triangular`), Schur and QZ decompositions, matrix functions such as the matrix exponential `expm`, and solvers for structured matrices (banded, Toeplitz, circulant). When SciPy is available, it is generally the better choice ([4.4.4](/4.4.4#sec-4.1)).
@@ -160,7 +160,7 @@ The value of `einsum` is that it states exactly which indices are contracted, wh
 
 ### 3.3.2. Contraction Order
 
-For more than two operands, the order of contraction matters, as in the matrix chain multiplication problem of dynamic programming ([4.1.13](/4.1.13)). For matrices of shapes $10 \times 100$, $100 \times 5$ and $5 \times 1000$, computing $(AB)C$ costs about $10 \cdot 100 \cdot 5 + 10 \cdot 5 \cdot 1000 = 55\,000$ multiplications, while the naive simultaneous sum over $j$ and $k$ in `einsum` costs $10 \cdot 100 \cdot 5 \cdot 1000 = 5 \times 10^6$. With `optimize=True`, `einsum` searches for a good order and dispatches pairwise contractions to BLAS; `np.einsum_path` shows the plan:
+For more than two operands, the order of contraction matters, as in the matrix chain multiplication problem of **dynamic programming** ([4.1.13](/4.1.13)). For matrices of shapes $10 \times 100$, $100 \times 5$ and $5 \times 1000$, computing $(AB)C$ costs about $10 \cdot 100 \cdot 5 + 10 \cdot 5 \cdot 1000 = 55\,000$ multiplications, while the naive simultaneous sum over $j$ and $k$ in `einsum` costs $10 \cdot 100 \cdot 5 \cdot 1000 = 5 \times 10^6$. With `optimize=True`, `einsum` searches for a good order and dispatches pairwise contractions to BLAS; `np.einsum_path` shows the plan:
 
 ```python
 rng = np.random.default_rng(0)
@@ -190,7 +190,7 @@ print(rng.permutation(5))                # random permutation of 0, ..., 4
 print(rng.choice(10, size=4, replace=False))       # sampling without replacement
 ```
 
-The older interface, `np.random.seed(0)` followed by functions such as `np.random.rand` or `np.random.normal`, uses one hidden global `RandomState` object with the Mersenne Twister. It is kept for backward compatibility (its streams are frozen and never change between versions) but should not be used in new code: global state means that any library function that draws random numbers changes the stream of every other part of the program, which makes results hard to reproduce and impossible to parallelize safely. The `Generator` methods also use better algorithms (for example the ziggurat method for normal variates, faster than the Box–Muller transform of [3.5.8](/3.5.8#sec-8.4.2)). A good convention is that every function that needs randomness takes a `rng` argument:
+The older interface, `np.random.seed(0)` followed by functions such as `np.random.rand` or `np.random.normal`, uses one hidden global `RandomState` object with the Mersenne Twister. It is kept for backward compatibility (its streams are frozen and never change between versions) but should not be used in new code: global state means that any library function that draws random numbers changes the stream of every other part of the program, which makes results hard to reproduce and impossible to parallelize safely. The `Generator` methods also use better algorithms (for example the ziggurat method for normal variates, faster than the **Box–Muller transform** of [3.5.8](/3.5.8#sec-8.4.2)). A good convention is that every function that needs randomness takes a `rng` argument:
 
 ```python
 def bootstrap_means(data, n_boot, rng):
@@ -262,17 +262,17 @@ print([round(float(estimate_pi(n, rng)), 4) for n in (100, 10_000, 1_000_000)])
 # [3.28, 3.1304, 3.142]
 ```
 
-The indicator of the quarter disk is a Bernoulli variable with $p = \pi/4$, so the estimator $4\bar X$ has standard deviation $4\sqrt{p(1-p)/n} = \sqrt{\pi(4 - \pi)/n} \approx 1.64/\sqrt{n}$. By the **central limit theorem** the error is approximately normal with this standard deviation: to gain one decimal digit we need 100 times more samples. The figure shows 100 independent estimates for each $n$; their root mean square error follows the predicted line.
+The indicator of the quarter disk is a Bernoulli variable with $p = \pi/4$, so the estimator $4\bar X$ has **standard deviation** $4\sqrt{p(1-p)/n} = \sqrt{\pi(4 - \pi)/n} \approx 1.64/\sqrt{n}$. By the **central limit theorem** the error is approximately normal with this standard deviation: to gain one decimal digit we need 100 times more samples. The figure shows 100 independent estimates for each $n$; their root mean square error follows the predicted line.
 
 ![Absolute error of 100 independent Monte Carlo estimates of pi for each number of points n, with the root mean square error and the theoretical standard error sqrt(pi (4 - pi) / n)](./plots/monte-carlo-error.py)
 
-The rate $n^{-1/2}$ does not depend on the dimension, which is why Monte Carlo methods are the method of choice for high-dimensional integrals and for the simulation studies of statistics; in one or two dimensions, deterministic quadrature ([4.4.4](/4.4.4#sec-4.3.1)) is far more accurate for the same work.
+The rate $n^{-1/2}$ does not depend on the dimension, which is why **Monte Carlo methods** are the method of choice for high-dimensional integrals and for the simulation studies of statistics; in one or two dimensions, deterministic quadrature ([4.4.4](/4.4.4#sec-4.3.1)) is far more accurate for the same work.
 
 ## 3.5. Vectorization versus Loops
 
 ### 3.5.1. Measuring Run Time
 
-Statements about speed must be measured, not guessed. The standard library module `timeit` runs a statement many times and reports the total time; it disables garbage collection during the measurement and uses the most precise clock available. In IPython and Jupyter, `%timeit stmt` does this automatically and chooses the number of repetitions:
+Statements about speed must be measured, not guessed. The standard library module `timeit` runs a statement many times and reports the total time; it disables **garbage collection** during the measurement and uses the most precise clock available. In IPython and Jupyter, `%timeit stmt` does this automatically and chooses the number of repetitions:
 
 ```python
 import timeit
@@ -308,7 +308,7 @@ On the test machine (Python 3.14, NumPy 2.5) the results were as follows; the fi
 
 A simple model explains the figure: the time of an operation on $n$ elements is approximately $a + bn$, with a fixed overhead $a$ and a cost $b$ per element.
 
-- For the Python loop, $a$ is small but $b$ is about 20 ns: each iteration executes several bytecode instructions, each `v * v` and `s += ...` dispatches on the types of the operands (**dynamic typing**), and each intermediate result is a newly allocated float object, later freed by **reference counting**. The generator expression adds the overhead of resuming the generator for each element.
+- For the Python loop, $a$ is small but $b$ is about 20 ns: each iteration executes several **bytecode** instructions, each `v * v` and `s += ...` dispatches on the types of the operands (**dynamic typing**), and each intermediate result is a newly allocated float object, later freed by **reference counting**. The generator expression adds the overhead of resuming the generator for each element.
 - For NumPy, $a$ is about 1 µs: argument parsing, dtype resolution, allocating the result array of `x * x`. But $b$ is about 1 ns, since the compiled loop works on raw `float64` values, uses SIMD instructions that process several elements per instruction, and reads memory sequentially.
 
 Hence NumPy loses for very small arrays (below a few dozen elements) and wins by a factor of about 20 for large ones. Several consequences guide the design of numerical Python code:
@@ -322,8 +322,8 @@ Hence NumPy loses for very small arrays (below a few dozen elements) and wins by
 
 - `@` is matrix multiplication, `*` is elementwise; `matmul`, `vecdot`, `matvec` and `.mT` work on stacks of matrices. 1-D arrays are neither rows nor columns.
 - Dense linear algebra runs in BLAS and LAPACK; only matrix–matrix operations reach high speed, and BLAS threads should be limited when parallelizing at a higher level.
-- Solve linear systems with `solve` (or a reusable factorization), never with `inv`; use `lstsq` or QR instead of the normal equations; use `eigh` for symmetric matrices and `slogdet` instead of `det`. The condition number predicts the attainable accuracy.
+- Solve linear systems with `solve` (or a reusable factorization), never with `inv`; use `lstsq` or QR instead of the normal equations; use `eigh` for symmetric matrices and `slogdet` instead of `det`. The **condition number** predicts the attainable accuracy.
 - `einsum` expresses sums of products by index strings; `optimize=True` chooses the contraction order.
 - Create one `Generator` with `np.random.default_rng(seed)` and pass it to every function that needs randomness; check parameterizations (scale versus rate, standard deviation versus variance); spawn child generators for parallel streams; record the NumPy version for exact reproducibility.
 - Monte Carlo errors decrease like $n^{-1/2}$.
-- Measure with `timeit`; the time of an operation is roughly overhead plus per-element cost, which explains when vectorization pays off.
+- Measure with `timeit`; the time of an operation is roughly overhead plus per-element cost, which explains when **vectorization** pays off.

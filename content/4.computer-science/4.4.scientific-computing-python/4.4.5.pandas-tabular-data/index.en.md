@@ -3,9 +3,9 @@ title: "pandas: Tabular Data"
 description: "Tabular data in Python with pandas 3: Series, DataFrame and the index, reading and writing files, missing values, tidy data and reshaping, split-apply-combine with groupby, joins, Copy-on-Write semantics, and a short introduction to polars."
 ---
 
-Most data in computational biology arrive as tables: a sample sheet with one row per sample, a count matrix with one row per gene, a plate-reader export with one row per well and time point. NumPy arrays ([4.4.2](/4.4.2)) hold such data only if every column has the same type and the meaning of rows and columns is kept in the programmer's head. pandas adds the two missing ingredients: columns of different types, and *labels* on rows and columns that travel with the data through every operation. This chapter covers the core of pandas (the objects, input and output, missing values, reshaping, grouping and joining), the Copy-on-Write model that defines what an assignment does in pandas 3, and closes with polars, a newer library with a different design. The R counterpart of the pandas DataFrame is the **data frame** of [3.5.2](/3.5.2); the statistical methods applied to these tables are developed in the statistics courses (regression in [3.3](/3.3), multivariate analysis in [3.4](/3.4)), and the next chapter turns tables into figures.
+Most data in computational biology arrive as tables: a sample sheet with one row per sample, a count matrix with one row per gene, a plate-reader export with one row per well and time point. NumPy **ndarrays** ([4.4.2](/4.4.2)) hold such data only if every column has the same type and the meaning of rows and columns is kept in the programmer's head. pandas adds the two missing ingredients: columns of different types, and *labels* on rows and columns that travel with the data through every operation. This chapter covers the core of pandas (the objects, input and output, missing values, reshaping, grouping and joining), the Copy-on-Write model that defines what an assignment does in pandas 3, and closes with polars, a newer library with a different design. The R counterpart of the pandas DataFrame is the **data frame** of [3.5.2](/3.5.2); the statistical methods applied to these tables are developed in the statistics courses (regression in [3.3](/3.3), multivariate analysis in [3.4](/3.4)), and the next chapter turns tables into figures.
 
-All outputs below were produced with pandas 3.0.6, NumPy 2.5.4 and PyArrow 26.0.0 on CPython 3.14.5. pandas 3.0 (January 2026) changed two defaults that older tutorials and many answers online still contradict: strings get a dedicated `str` dtype, and Copy-on-Write is always on (§5.7). Code written for pandas 2 mostly runs unchanged, but code that relied on chained assignment silently stops working.
+All outputs below were produced with pandas 3.0.6, NumPy 2.5.4 and PyArrow 26.0.0 on CPython 3.14.5. pandas 3.0 (January 2026) changed two defaults that older tutorials and many answers online still contradict: strings get a dedicated `str` **dtype**, and Copy-on-Write is always on (§5.7). Code written for pandas 2 mostly runs unchanged, but code that relied on chained assignment silently stops working.
 
 ## 5.1. Series and DataFrame
 
@@ -13,7 +13,7 @@ All outputs below were produced with pandas 3.0.6, NumPy 2.5.4 and PyArrow 26.0.
 
 **Definition 5.1.1 (pandas Series)** A `Series` is a one-dimensional array of values of a single dtype together with an array of labels of the same length, the **index**, and an optional name.
 
-The index is what distinguishes a `Series` from a NumPy array. Elements can be selected by label or by position, and a Boolean mask selects a subset as in NumPy:
+The index is what distinguishes a `Series` from a NumPy **ndarray**. Elements can be selected by label or by position, and a Boolean mask selects a subset as in NumPy:
 
 ```python
 import numpy as np
@@ -86,7 +86,7 @@ od600     float64
 dtype: object
 ```
 
-No row labels were given, so the index is the default `RangeIndex` $0, 1, \dots, 5$. The text columns have dtype `str`: since pandas 3.0 strings are stored in a dedicated string dtype (backed by PyArrow when it is installed, otherwise by NumPy object arrays) instead of the generic `object` dtype of earlier versions. Code that tests `dtype == object` to find text columns must be changed to `pd.api.types.is_string_dtype(...)`.
+No row labels were given, so the index is the default `RangeIndex` $0, 1, \dots, 5$. The text columns have **dtype** `str`: since pandas 3.0 strings are stored in a dedicated string dtype (backed by PyArrow when it is installed, otherwise by NumPy object arrays) instead of the generic `object` dtype of earlier versions. Code that tests `dtype == object` to find text columns must be changed to `pd.api.types.is_string_dtype(...)`.
 
 | Attribute or method | Returns |
 |---|---|
@@ -144,9 +144,9 @@ print(growth.assign(log2_od=np.log2(pd.col("od600"))).head(3))
 
 The arguments of `read_csv` that matter most in practice are `sep` (`"\t"` for TSV files), `index_col` (use a column as the row index, e.g. gene identifiers), `usecols` (read only some columns), `dtype` (fix the type of identifier columns, so that a sample called `0012` is not read as the integer 12), `na_values` (extra strings meaning "missing"), `parse_dates`, and `comment`. A frequent error in biology deserves a sentence: spreadsheet programs silently convert some gene symbols to dates (`SEPT2`, `MARCH1`), which is one reason the HGNC renamed such genes in 2020 and a good reason not to pass tables through a spreadsheet.
 
-For intermediate results, Parquet is the better default: it stores the dtypes, so that a reloaded table equals the saved one, and because it is columnar a reader can load a few columns of a large file without parsing the rest. Passing `dtype_backend="pyarrow"` to a reader makes every column an Arrow-backed array (`int64[pyarrow]`, `string[pyarrow]`, …), which supports missing values in every type; the default NumPy-backed dtypes remain the standard choice and are what the rest of the scientific stack expects.
+For intermediate results, Parquet is the better default: it stores the **dtypes**, so that a reloaded table equals the saved one, and because it is columnar a reader can load a few columns of a large file without parsing the rest. Passing `dtype_backend="pyarrow"` to a reader makes every column an Arrow-backed array (`int64[pyarrow]`, `string[pyarrow]`, …), which supports missing values in every type; the default NumPy-backed dtypes remain the standard choice and are what the rest of the scientific stack expects.
 
-Columns with a small set of repeated values (strain, condition, batch) can be stored as `category` dtype, which keeps each distinct value once and an integer code per row, like a factor in R. It saves memory, fixes the order of the levels (useful for plots and model contrasts) and speeds up grouping.
+Columns with a small set of repeated values (strain, condition, batch) can be stored as `category` **dtype**, which keeps each distinct value once and an integer code per row, like a factor in R. It saves memory, fixes the order of the levels (useful for plots and model contrasts) and speeds up grouping.
 
 ## 5.3. Missing Values
 
@@ -176,7 +176,7 @@ float64 [3, <NA>, 5]
 | replace | `fillna(value)`, `ffill()`, `bfill()`, `interpolate()` |
 | summarize | reductions skip missing values by default (`skipna=True`); `count()` counts non-missing entries |
 
-Reductions skipping missing values is convenient and dangerous at once: the mean above is the mean of five wells, not six, and nothing in the output says so. Missing values are part of the data and should be decided on explicitly. Dropping rows is unbiased only when values are missing for reasons unrelated to the values themselves (a pipetting error, not a culture that died because the mutant grows poorly); replacing them by a mean or zero shrinks variances and distorts correlations; a zero count in sequencing data is an observation, not a missing value. Statistical treatments of missing data, such as the EM algorithm of [3.5.6](/3.5.6), start from this distinction.
+Reductions skipping missing values is convenient and dangerous at once: the mean above is the mean of five wells, not six, and nothing in the output says so. Missing values are part of the data and should be decided on explicitly. Dropping rows is unbiased only when values are missing for reasons unrelated to the values themselves (a pipetting error, not a culture that died because the mutant grows poorly); replacing them by a mean or zero shrinks variances and distorts correlations; a zero count in sequencing data is an observation, not a missing value. Statistical treatments of missing data, such as the **EM algorithm** of [3.5.6](/3.5.6), start from this distinction.
 
 ## 5.4. Tidy Data and Reshaping
 
@@ -305,7 +305,7 @@ TP53          22.0     21.7
 
 (With four genes the CPM values are large; real libraries have tens of thousands of genes.) Built-in aggregations given by name (`"sum"`, `"mean"`, `"std"`, `"quantile"`) run in compiled code; passing a Python function to `agg`, `transform` or `apply` calls it once per group and can be orders of magnitude slower on many small groups. The same advice as for NumPy applies: express the computation with whole-column operations where possible ([4.4.7](/4.4.7) measures the difference). Groupings by a column of `category` dtype include unobserved categories only when `observed=False` is passed; the default since pandas 3.0 is `observed=True`.
 
-pandas computes descriptive statistics (`describe`, `corr`, `cov`, `quantile`, `rank`, `value_counts`) but no models. For regression and ANOVA ([3.3](/3.3)) the usual tools are statsmodels, whose formula interface takes a long-format DataFrame (`smf.ols("od600 ~ C(strain) * time_h", data=df)`), and scikit-learn; both accept DataFrames directly.
+pandas computes descriptive statistics (`describe`, `corr`, `cov`, `quantile`, `rank`, `value_counts`) but no models. For regression and **ANOVA** ([3.3](/3.3)) the usual tools are statsmodels, whose formula interface takes a long-format DataFrame (`smf.ols("od600 ~ C(strain) * time_h", data=df)`), and scikit-learn; both accept DataFrames directly.
 
 ## 5.6. Combining Tables
 
@@ -341,7 +341,7 @@ If a key occurs $m$ times on the left and $n$ times on the right, the join produ
 
 ## 5.7. Copy-on-Write
 
-Older pandas versions made the result of an indexing operation sometimes a view of the original data and sometimes a copy, depending on internal details, and warned with `SettingWithCopyWarning` when an assignment might or might not propagate. pandas 3.0 replaced these rules with a single one.
+Older pandas versions made the result of an indexing operation sometimes a **view** of the original data and sometimes a copy, depending on internal details, and warned with `SettingWithCopyWarning` when an assignment might or might not propagate. pandas 3.0 replaced these rules with a single one.
 
 **Definition 5.7.1 (Copy-on-Write)** Under **Copy-on-Write**, every DataFrame or Series obtained from another one, by indexing or by a method, behaves as an independent copy: modifying it never modifies the original, and vice versa. Internally the two objects share memory, and the data are copied only when one of them is first modified.
 

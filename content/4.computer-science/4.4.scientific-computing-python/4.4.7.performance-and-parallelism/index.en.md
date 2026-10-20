@@ -3,7 +3,7 @@ title: Performance and Parallelism
 description: "Making scientific Python code fast: timing and profiling (cProfile, line_profiler, sampling profilers), vectorization revisited, just-in-time compilation with Numba, the global interpreter lock, process pools and joblib, multiprocessing start methods, free-threaded Python, Amdahl's law, and measured comparisons."
 ---
 
-Python is slow at the level of individual operations and fast at the level of whole programs when the heavy work runs in compiled libraries. The previous chapters exploited this through **vectorization**: NumPy, SciPy and pandas do the arithmetic in compiled loops, and the interpreter only orchestrates. This chapter is about the cases where that is not enough: code that cannot be vectorized (a stochastic simulation in which each step depends on the previous one), code that is fast but must run thousands of times (parameter scans, bootstrap replicates, many samples), and code whose bottleneck is not where its author believes. The tools are measurement (timing and profiling), compilation (Numba) and parallel execution (processes, threads and the new free-threaded build of CPython). The numerical reasons why some computations are expensive or unstable are the subject of [3.5](/3.5); processes and threads as objects of the operating system are treated in [4.11](/4.11).
+Python is slow at the level of individual operations and fast at the level of whole programs when the heavy work runs in compiled libraries. The previous chapters exploited this through **vectorization**: NumPy, SciPy and pandas do the arithmetic in compiled loops, and the interpreter only orchestrates. This chapter is about the cases where that is not enough: code that cannot be vectorized (a stochastic simulation in which each step depends on the previous one), code that is fast but must run thousands of times (parameter scans, **bootstrap** replicates, many samples), and code whose bottleneck is not where its author believes. The tools are measurement (timing and profiling), compilation (Numba) and parallel execution (processes, threads and the new free-threaded build of CPython). The numerical reasons why some computations are expensive or unstable are the subject of [3.5](/3.5); processes and threads as objects of the operating system are treated in [4.11](/4.11).
 
 All measurements in this chapter were taken on one laptop (Intel Core Ultra 7 258V, 8 cores, Linux under WSL 2) with CPython 3.14.5, NumPy 2.5.4, Numba 0.68.0 and joblib 1.6.0. Absolute times depend on the machine, the versions and the load, and repeated runs differed by up to 20 %; the ratios are what matter, and even they should be measured again on the machine where the code will run.
 
@@ -105,11 +105,11 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 | `profiling.sampling` (Python 3.15) | sampling | built-in sampling profiler, with flame graphs and a live view |
 | `tracemalloc`, memray | memory | where memory is allocated; leaks and peak usage |
 
-A *deterministic* (tracing) profiler hooks every call and return, which is exact but adds overhead to every call, distorting programs with many small functions. A *sampling* profiler interrupts the program at regular intervals and records the call stack, which costs almost nothing and also sees time spent in compiled extensions. Python 3.15 (October 2026) collects the built-in profilers in a new `profiling` package: `profiling.tracing` is the former `cProfile` (which remains as an alias) and `profiling.sampling` is a new statistical profiler; the pure-Python `profile` module is deprecated.
+A *deterministic* (tracing) profiler hooks every call and return, which is exact but adds overhead to every call, distorting programs with many small functions. A *sampling* profiler interrupts the program at regular intervals and records the **call stack**, which costs almost nothing and also sees time spent in compiled extensions. Python 3.15 (October 2026) collects the built-in profilers in a new `profiling` package: `profiling.tracing` is the former `cProfile` (which remains as an alias) and `profiling.sampling` is a new statistical profiler; the pure-Python `profile` module is deprecated.
 
 ## 7.2. Vectorization Revisited
 
-The profile above shows the typical pattern: a Python loop over elements is slow because every iteration executes several bytecode instructions in the **interpreter**, each of which looks up types, creates and destroys Python objects and manages reference counts. A NumPy operation pays this overhead once per array and runs a compiled loop over raw machine numbers ([4.4.2](/4.4.2)). For a simple elementwise reduction, $\sum_i \log_2(x_i + 1)$ over $10^7$ Poisson counts:
+The profile above shows the typical pattern: a Python loop over elements is slow because every iteration executes several **bytecode** instructions in the **interpreter**, each of which looks up types, creates and destroys Python objects and manages reference counts. A NumPy operation pays this overhead once per array and runs a compiled loop over raw machine numbers ([4.4.2](/4.4.2)). For a simple elementwise reduction, $\sum_i \log_2(x_i + 1)$ over $10^7$ Poisson counts:
 
 | Implementation | Time | Relative |
 |---|---|---|
@@ -117,7 +117,7 @@ The profile above shows the typical pattern: a Python loop over elements is slow
 | NumPy: `np.log2(x + 1.0).sum()` | 78 ms | 1.2 |
 | Numba-compiled loop (§7.3) | 66 ms | 1 |
 
-Vectorization has two limits. First, it creates temporary arrays: `np.log2(x + 1.0).sum()` allocates two arrays of 80 MB each, and for large data memory traffic rather than arithmetic becomes the cost (the compiled loop needs no temporaries, which is why it is slightly faster here). In-place operations (`out=`), `np.einsum` ([4.4.3](/4.4.3)) and processing in chunks reduce the problem. Second, and more fundamentally, some algorithms are sequential. The *Gillespie algorithm* (stochastic simulation algorithm) simulates a chemical reaction network exactly: in each step it draws the waiting time to the next reaction from an **exponential distribution** whose rate is the sum of the current reaction propensities, then chooses which reaction occurs with probabilities proportional to them, and updates the state. For a birth–death process of mRNA molecules (production at rate $k_b$, degradation at rate $k_d n$ when $n$ molecules are present), whose stationary distribution is the **Poisson distribution** with mean $k_b / k_d$:
+Vectorization has two limits. First, it creates temporary arrays: `np.log2(x + 1.0).sum()` allocates two arrays of 80 MB each, and for large data memory traffic rather than arithmetic becomes the cost (the compiled loop needs no temporaries, which is why it is slightly faster here). In-place operations (`out=`), `np.einsum` ([4.4.3](/4.4.3)) and processing in chunks reduce the problem. Second, and more fundamentally, some algorithms are sequential. The *Gillespie algorithm* (stochastic simulation algorithm) simulates a chemical reaction network exactly: in each step it draws the waiting time to the next reaction from an **exponential distribution** whose rate is the sum of the current reaction propensities, then chooses which reaction occurs with probabilities proportional to them, and updates the state. For a birth–death process of mRNA molecules (production at rate $k_b$, degradation at rate $k_d n$ when $n$ molecules are present), whose **stationary distribution** is the **Poisson distribution** with mean $k_b / k_d$:
 
 ```python
 import math
@@ -144,7 +144,7 @@ Each step depends on the state after the previous one, so there is no array over
 
 ## 7.3. Compiling Python with Numba
 
-Numba compiles Python functions that work on numbers and NumPy arrays to machine code with LLVM, at the moment they are first called with arguments of given types; this is just-in-time compilation ([4.1.1](/4.1.1)). The compiled function never touches the interpreter: variables become machine integers and floats, loops become machine loops.
+Numba compiles Python functions that work on numbers and NumPy arrays to **machine code** with LLVM, at the moment they are first called with arguments of given types; this is **just-in-time compilation** ([4.1.1](/4.1.1)). The compiled function never touches the interpreter: variables become machine integers and floats, loops become machine loops.
 
 ```python
 import math
@@ -193,11 +193,11 @@ Measured (best of five runs after compilation):
 
 The first call of `log_sum` took 0.80 s, almost all of it compilation; `@njit(cache=True)` stores the machine code on disk so that later processes skip this step. The rules for using Numba well:
 
-- `@njit` (no-Python mode, the default of `@jit` since Numba 0.59) compiles the whole function or fails with a typing error; it supports scalars, NumPy arrays and a large part of the NumPy API, tuples, and typed lists and dictionaries, but not pandas objects or arbitrary Python classes. Pass arrays (`df["x"].to_numpy()`), not DataFrames.
+- `@njit` (no-Python mode, the default of `@jit` since Numba 0.59) compiles the whole function or fails with a typing error; it supports scalars, NumPy arrays and a large part of the NumPy API, tuples, and typed lists and dictionaries, but not pandas objects or arbitrary Python classes. Pass arrays (`df["x"].to_numpy()`), not **DataFrames**.
 - Write plain loops: inside a compiled function a loop is as fast as in C, and often faster than a chain of NumPy calls that creates temporaries.
 - Keep types stable: a variable that is an integer in one branch and a float in another forces a slower common type or a compilation error.
-- `parallel=True` with `prange` runs independent loop iterations on several threads; `@vectorize` turns a scalar function into a NumPy ufunc; `fastmath=True` permits reordering of floating-point operations (faster, but results change in the last digits).
-- Random numbers inside compiled code come from Numba's own generator, with one state per thread, seeded inside compiled code (as above), not by NumPy's global seed.
+- `parallel=True` with `prange` runs independent loop iterations on several threads; `@vectorize` turns a scalar function into a NumPy **ufunc**; `fastmath=True` permits reordering of **floating-point operations** (faster, but results change in the last digits).
+- Random numbers inside compiled code come from Numba's own generator, with one state per thread, **seed**ed inside compiled code (as above), not by NumPy's global seed.
 
 Other routes to compiled speed serve different needs: Cython (Python with C type declarations, compiled ahead of time; good for wrapping C libraries), C++ extensions with pybind11 or nanobind (when the core is written in C++, [4.2](/4.2)), JAX (array programs compiled with XLA for CPU and GPU, with automatic differentiation), CuPy (a NumPy-compatible array library on NVIDIA GPUs), and PyPy (an alternative Python implementation with a tracing JIT, fast on pure-Python code but less compatible with C extensions). CPython itself contains an experimental JIT compiler since version 3.13; it is disabled by default and so far gives modest speed-ups, nothing comparable to Numba for numerical loops.
 
@@ -207,18 +207,18 @@ Other routes to compiled speed serve different needs: Cython (Python with C type
 
 A process is a running program with its own memory; a thread is a sequence of execution inside a process, sharing the memory of the process with its other threads ([4.11](/4.11)). Threads are cheap and communicate through shared objects; processes are isolated and must copy (serialize) data to exchange them. In CPython the choice between them is decided by one design element.
 
-**Definition 7.4.1 (Global Interpreter Lock)** The **global interpreter lock** (GIL) of CPython is a mutual-exclusion lock that a thread must hold to execute Python bytecode. In a process with a GIL, at most one thread runs Python code at any moment.
+**Definition 7.4.1 (Global Interpreter Lock)** The **global interpreter lock** (GIL) of CPython is a mutual-exclusion lock that a thread must hold to execute Python **bytecode**. In a process with a GIL, at most one thread runs Python code at any moment.
 
 The GIL makes the interpreter's internal state, above all the **reference counting** of every object (the basis of CPython's memory management and **garbage collection**, [4.2.12](/4.2.12)), safe without fine-grained locks, and it makes single-threaded code fast. Its consequence is that threads do not speed up CPU-bound Python code: in the measurement of §7.4.4, eight threads running the pure-Python Gillespie simulation took almost as long as one. Threads are still useful in two cases:
 
 - I/O-bound work (downloads, database queries, reading many files): a thread waiting for I/O releases the GIL;
 - calls into compiled code that release the GIL: NumPy, SciPy, scikit-learn, Numba (`@njit(nogil=True)`) and most compression and I/O libraries release it during long operations. Sorting 16 arrays of $4 \times 10^6$ floats took 1.2–1.6 s serially and 0.4–0.5 s with 8 threads.
 
-Note that NumPy's linear algebra calls a multithreaded BLAS (OpenBLAS or MKL), which already uses all cores; running such calls in parallel threads or processes oversubscribes the machine and can be slower than serial execution. Environment variables such as `OMP_NUM_THREADS=1` (or the `threadpoolctl` package) limit the BLAS threads when parallelizing at a higher level.
+Note that NumPy's linear algebra calls a multithreaded **BLAS** (OpenBLAS or MKL), which already uses all cores; running such calls in parallel threads or processes oversubscribes the machine and can be slower than serial execution. Environment variables such as `OMP_NUM_THREADS=1` (or the `threadpoolctl` package) limit the BLAS threads when parallelizing at a higher level.
 
 ### 7.4.2. Process Pools and joblib
 
-Many computational tasks consist of independent pieces: simulation replicates, bootstrap resamples ([3.5.7](/3.5.7)), parameter sets, samples, chromosomes. A problem is *embarrassingly parallel* if it splits into tasks that need no communication with each other, only a final collection of the results. Such problems are parallelized with a *process pool*: a fixed set of worker processes that receive tasks from the parent, compute them and return the results.
+Many computational tasks consist of independent pieces: simulation replicates, **bootstrap** resamples ([3.5.7](/3.5.7)), parameter sets, samples, chromosomes. A problem is *embarrassingly parallel* if it splits into tasks that need no communication with each other, only a final collection of the results. Such problems are parallelized with a *process pool*: a fixed set of worker processes that receive tasks from the parent, compute them and return the results.
 
 ```python
 from concurrent.futures import ProcessPoolExecutor
@@ -238,7 +238,7 @@ Arguments and results are pickled and sent between processes, so the tasks shoul
 | `forkserver` | forked from a clean server process started early | Linux since Python 3.14 (and other POSIX systems except macOS) |
 | `spawn` | fresh interpreter that imports the main module | Windows; macOS since Python 3.8 |
 
-`fork` is fast but copies the state of all threads at the moment of the fork, which can deadlock when the parent runs threads (as libraries such as BLAS do); Python 3.12 started warning about forking a multithreaded process, and 3.14 changed the default on Linux to `forkserver`. Code that relied on workers inheriting global variables set up in the parent (configured loggers, data loaded at module level after the imports) behaves differently under the new default; explicit arguments, or `multiprocessing.get_context("fork")` where forking is known to be safe, fix it. Even under `fork`, CPython's **reference counting** writes to every object a worker touches, so the copy-on-write pages of the parent are gradually copied.
+`fork` is fast but copies the state of all threads at the moment of the fork, which can deadlock when the parent runs threads (as libraries such as BLAS do); Python 3.12 started warning about forking a multithreaded process, and 3.14 changed the default on Linux to `forkserver`. Code that relied on workers inheriting **global variables** set up in the parent (configured loggers, data loaded at module level after the imports) behaves differently under the new default; explicit arguments, or `multiprocessing.get_context("fork")` where forking is known to be safe, fix it. Even under `fork`, CPython's **reference counting** writes to every object a worker touches, so the **copy-on-write** pages of the parent are gradually copied.
 
 joblib, the parallel backend of scikit-learn, wraps this pattern in a compact API, uses the robust `loky` process pool by default (with cloudpickle, so that functions defined interactively in Jupyter also work), and adds a disk cache for expensive function calls (`joblib.Memory`):
 
@@ -248,7 +248,7 @@ from joblib import Parallel, delayed
 finals = Parallel(n_jobs=8)(delayed(birth_death)(seed) for seed in range(32))
 ```
 
-Parallel random simulations need independent random streams. Using the seeds $0, 1, 2, \dots$ as above is common, but the reliable method with NumPy is to derive the streams from one seed, `rngs = np.random.default_rng(seed).spawn(n)` (or `np.random.SeedSequence(seed).spawn(n)`), and pass one generator or child seed to each task, so that the results are reproducible and do not depend on the number of workers ([4.4.3](/4.4.3), and **pseudorandom number generator** in [3.5.8](/3.5.8)).
+Parallel random simulations need independent random streams. Using the **seeds** $0, 1, 2, \dots$ as above is common, but the reliable method with NumPy is to derive the streams from one seed, `rngs = np.random.default_rng(seed).spawn(n)` (or `np.random.SeedSequence(seed).spawn(n)`), and pass one generator or child seed to each task, so that the results are reproducible and do not depend on the number of workers ([4.4.3](/4.4.3), and **pseudorandom number generator** in [3.5.8](/3.5.8)).
 
 ### 7.4.3. Free-Threaded Python
 
@@ -287,7 +287,7 @@ This bound is *Amdahl's law*: with $f = 0.9$, no number of workers achieves more
 ## 7.5. Choosing a Strategy
 
 1. Measure: time the whole program, profile it, and find the part that dominates.
-2. Use a better algorithm or library: a lower complexity, a vectorized NumPy or pandas operation, a SciPy routine, a sparse matrix. This is usually the largest gain.
+2. Use a better algorithm or library: a lower complexity, a vectorized NumPy or pandas operation, a SciPy routine, a **sparse matrix**. This is usually the largest gain.
 3. Compile what cannot be vectorized: Numba for numerical loops over arrays; Cython or C++ for larger components.
 4. Parallelize independent tasks: a process pool or joblib for CPU-bound Python code; threads for I/O and for code that releases the GIL; free-threaded Python where the dependencies support it; a cluster scheduler or a workflow manager (Snakemake, Nextflow) when the tasks are whole programs on many samples.
 5. Check after every step that the results are unchanged and that the gain is real on the machine where the code runs.
