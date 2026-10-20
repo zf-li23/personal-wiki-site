@@ -17,7 +17,7 @@ import { sourceHash, translationStatus } from './build.ts';
 import { Diagnostics } from './diagnostics.ts';
 import type { Lang } from '../../site.config.ts';
 import { parsePageFile, serializePageFile } from './frontmatter.ts';
-import type { Concept } from './glossary.ts';
+import { type Concept, conceptId } from './glossary.ts';
 import { buildLinkIndex, linkPage } from './linking.ts';
 import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
@@ -506,6 +506,18 @@ describe('cross-page linking', () => {
     concepts.pop();
     assert.equal(s.index.conceptSites.get('matrix')?.anchor, 'concept-matrix');
     assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'concept-convergence-in-distribution');
+  });
+  it('keeps "+" apart in concept ids', () => {
+    assert.notEqual(conceptId('B+ tree'), conceptId('B-tree'));
+  });
+  it('lets only the scoped homonym take an annotated definition inside its scope', async () => {
+    concepts.push({ id: 'rank', zh: '秩', en: 'rank', aliases: [] });
+    concepts.push({ id: 'rank-4-3', zh: '秩', en: 'rank', aliases: [], scope: ['4.3'] });
+    const s = await site({ '2.1.3': '## 3.1. A\n\n秩（rank）是……', '4.3.2': '## 2.1. B\n\n元素的秩（rank）是……' });
+    concepts.splice(-2);
+    assert.deepEqual(s.diag.items, []);
+    assert.equal(s.index.conceptSites.get('rank')?.pageId, '2.1.3');
+    assert.equal(s.index.conceptSites.get('rank-4-3')?.pageId, '4.3.2');
   });
   it('allows restating a definition but not a second English annotation', async () => {
     const s = await site({

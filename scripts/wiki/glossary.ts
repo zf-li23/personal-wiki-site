@@ -34,6 +34,7 @@ export function inScope(concept: Concept, pageId: string): boolean {
 export function conceptId(en: string): string {
   return en
     .toLowerCase()
+    .replace(/\+/g, ' plus ') // "B+ tree" must not collide with "B-tree"
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/'s\b/g, 's')

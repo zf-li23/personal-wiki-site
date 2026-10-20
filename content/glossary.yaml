@@ -376,7 +376,7 @@ terms:
   - { zh: 割边, en: cut edge, aliases: [桥] }
   - { zh: 基本关联矩阵, en: reduced incidence matrix }
   - { zh: 割集, en: cut set, aliases: [边割集], scope: ["1.4"] }
-  - { zh: 外向树, en: arborescence, aliases: [根树] }
+  - { zh: 外向树, en: arborescence, aliases: [根树, 有根树, rooted tree] }
   - { zh: 最优二叉树, en: Huffman tree, aliases: [Huffman 树] }
   - { zh: 最小生成树, en: minimum spanning tree, aliases: [最短树] }
   - { zh: Kruskal 算法, en: Kruskal's algorithm }
@@ -443,8 +443,8 @@ terms:
   - { zh: Bellman–Ford 算法, en: Bellman–Ford algorithm, aliases: [Ford 算法] }
   - { zh: 拓扑排序, en: topological sorting }
   - { zh: 关键路径, en: critical path }
-  - { zh: 树, en: tree, scope: ["1.4"] }
-  - { zh: 树叶, en: leaf, scope: ["1.4"] }
+  - { zh: 树, en: tree, scope: ["1.4", "4"] }
+  - { zh: 树叶, en: leaf, scope: ["1.4", "4"] }
   - { zh: 余树, en: cotree }
   - { zh: 余树枝, en: chord, scope: ["1.4"] }
   - { zh: 完全回路矩阵, en: cycle matrix, aliases: [回路矩阵] }
@@ -475,7 +475,7 @@ terms:
   - { zh: 增流路径, en: flow augmenting path }
   - { zh: 最小费用流, en: minimum-cost flow }
   - { zh: 最小费用最大流, en: minimum-cost maximum flow }
-  - { zh: 不可分图, en: nonseparable graph }
+  - { zh: 不可分图, en: nonseparable graph, aliases: [双连通图, biconnected graph] }
   - { zh: 块, en: block, scope: ["1.4"] }
   - { zh: 内部点不交, en: internally disjoint }
   - { zh: 边不交, en: edge-disjoint }
@@ -2191,3 +2191,191 @@ terms:
   - { zh: 强制类型转换, en: cast, aliases: [显式类型转换, type cast], scope: ["4"] }
   - { zh: 覆盖, en: overriding, aliases: [重写覆盖, override], scope: ["4"] }
   - { zh: 容器, en: container, scope: ["4"] }
+
+  # data structures and algorithms (4.3)
+  - { zh: 数据结构, en: data structure }
+  - { zh: 图灵机, en: Turing machine }
+  - { zh: 随机存取机, en: random-access machine, aliases: [RAM 模型] }
+  - { zh: 时间复杂度, en: time complexity }
+  - { zh: 空间复杂度, en: space complexity }
+  - { zh: 渐近记号, en: asymptotic notation }
+  - { zh: 大 O 记号, en: big O notation, aliases: [大O记号, 大 O 符号] }
+  - { zh: 大 Ω 记号, en: big Omega notation }
+  - { zh: 大 Θ 记号, en: big Theta notation }
+  - { zh: 递归跟踪, en: recursion trace }
+  - { zh: 递推方程, en: recurrence relation, aliases: [递推式] }
+  - { zh: 主定理, en: master theorem }
+  - { zh: Akra–Bazzi 定理, en: Akra–Bazzi theorem, aliases: [Akra–Bazzi method] }
+  - { zh: 封底估算, en: back-of-the-envelope calculation }
+  - { zh: 最大子段和问题, en: maximum subarray problem, aliases: [最大子数组问题] }
+  - { zh: 最长公共子序列, en: longest common subsequence, aliases: [LCS] }
+  - { zh: 抽象数据类型, en: abstract data type, aliases: [ADT] }
+  - { zh: 向量, en: vector, scope: ["4.3"] }
+  - { zh: 循秩访问, en: call-by-rank }
+  - { zh: 装填因子, en: load factor, aliases: [负载因子] }
+  - { zh: 分摊分析, en: amortized analysis, aliases: [摊还分析, 分摊复杂度, amortized complexity] }
+  - { zh: 平均分析, en: average-case analysis, aliases: [平均复杂度, average-case complexity] }
+  - { zh: 输入敏感, en: input-sensitive, aliases: [输入敏感性, input sensitivity] }
+  - { zh: 有序向量, en: sorted vector, scope: ["4.3"] }
+  - { zh: 双指针法, en: two-pointer technique }
+  - { zh: Fibonacci 查找, en: Fibonacci search, aliases: [斐波那契查找] }
+  - { zh: 插值查找, en: interpolation search }
+  - { zh: 稳定排序, en: stable sorting, aliases: [stable sort, 排序的稳定性], scope: ["4"] }
+  - { zh: 就地算法, en: in-place algorithm, aliases: [原地算法] }
+  - { zh: 比较树, en: comparison tree, aliases: [判定树] }
+  - { zh: 位图, en: bitmap, aliases: [位向量, bit array, bit vector], scope: ["4.3"] }
+  - { zh: 稀疏集合, en: sparse set }
+  - { zh: 循位置访问, en: call-by-position }
+  - { zh: 双向链表, en: doubly linked list, aliases: [双链表] }
+  - { zh: 哨兵节点, en: sentinel node, aliases: [哨兵, sentinel] }
+  - { zh: 选择排序, en: selection sort }
+  - { zh: 插入排序, en: insertion sort }
+  - { zh: 在线算法, en: online algorithm }
+  - { zh: 栈, en: stack, scope: ["4"] }
+  - { zh: 尾递归, en: tail recursion }
+  - { zh: 栈混洗, en: stack permutation }
+  - { zh: Catalan 数, en: Catalan number, aliases: [卡特兰数] }
+  - { zh: 调度场算法, en: shunting-yard algorithm }
+  - { zh: 队列, en: queue, scope: ["4"] }
+  - { zh: 双端队列, en: double-ended queue, aliases: [deque] }
+  - { zh: 循环数组, en: circular buffer, aliases: [环形缓冲区, ring buffer, 循环队列] }
+  - { zh: 循环分配, en: round-robin scheduling, aliases: [轮转调度, round robin] }
+  - { zh: 单调栈, en: monotonic stack }
+  - { zh: 聚合分析, en: aggregate analysis, aliases: [聚合法] }
+  - { zh: 记账法, en: accounting method }
+  - { zh: 势能法, en: potential method, aliases: [势能函数] }
+  - { zh: 有序树, en: ordered tree }
+  - { zh: 深度, en: depth, scope: ["4"] }
+  - { zh: 高度, en: height, scope: ["4"] }
+  - { zh: 祖先, en: ancestor, scope: ["4"] }
+  - { zh: 后代, en: descendant, scope: ["4"] }
+  - { zh: 叶节点, en: leaf node, aliases: [叶子], scope: ["4"] }
+  - { zh: 子树, en: subtree }
+  - { zh: 长子-兄弟表示法, en: left-child right-sibling representation, aliases: [first-child next-sibling representation] }
+  - { zh: 满二叉树, en: perfect binary tree, scope: ["4"] }
+  - { zh: 真二叉树, en: proper binary tree, scope: ["4"] }
+  - { zh: 先序遍历, en: preorder traversal, aliases: [前序遍历] }
+  - { zh: 中序遍历, en: inorder traversal }
+  - { zh: 后序遍历, en: postorder traversal }
+  - { zh: 层次遍历, en: level-order traversal, aliases: [层序遍历] }
+  - { zh: 前缀码, en: prefix code, aliases: [前缀编码, prefix-free code] }
+  - { zh: Huffman 编码, en: Huffman coding, aliases: [哈夫曼编码, Huffman code] }
+  - { zh: 基于比较的算法, en: comparison-based algorithm }
+  - { zh: 代数判定树, en: algebraic decision tree }
+  - { zh: 线性归约, en: linear-time reduction }
+  - { zh: 二叉搜索树, en: binary search tree, aliases: [BST, 二叉查找树, 二叉排序树] }
+  - { zh: 平衡二叉搜索树, en: balanced binary search tree, aliases: [BBST] }
+  - { zh: 旋转, en: tree rotation, scope: ["4"] }
+  - { zh: AVL 树, en: AVL tree }
+  - { zh: 平衡因子, en: balance factor }
+  - { zh: 3+4 重构, en: trinode restructuring }
+  - { zh: 穿刺查询, en: stabbing query }
+  - { zh: 区间树, en: interval tree }
+  - { zh: 基本区间, en: elementary interval }
+  - { zh: 线段树, en: segment tree }
+  - { zh: 范围查询, en: range query, aliases: [正交范围查询, orthogonal range query, range searching] }
+  - { zh: 输出敏感, en: output-sensitive, aliases: [输出敏感算法, output-sensitive algorithm] }
+  - { zh: 多层搜索树, en: multi-level search tree }
+  - { zh: 范围树, en: range tree }
+  - { zh: 分散层叠, en: fractional cascading }
+  - { zh: kd 树, en: k-d tree, aliases: [kd-tree, 2d-tree, k 维树] }
+  - { zh: 四叉树, en: quadtree }
+  - { zh: 局部性, en: locality of reference, aliases: [locality, 时间局部性, 空间局部性, temporal locality, spatial locality] }
+  - { zh: 伸展树, en: splay tree }
+  - { zh: B 树, en: B-tree, aliases: [B-树] }
+  - { zh: B+ 树, en: B+ tree, aliases: [B+-树] }
+  - { zh: 红黑树, en: red-black tree }
+  - { zh: 词典, en: dictionary, aliases: [字典], scope: ["4"] }
+  - { zh: 散列表, en: hash table, aliases: [哈希表] }
+  - { zh: 散列函数, en: hash function, aliases: [哈希函数] }
+  - { zh: 冲突, en: collision, aliases: [散列冲突, hash collision], scope: ["4"] }
+  - { zh: 生日问题, en: birthday problem, aliases: [生日悖论, birthday paradox] }
+  - { zh: 完美散列, en: perfect hashing }
+  - { zh: 除余法, en: division method }
+  - { zh: 通用散列, en: universal hashing, aliases: [全域散列, universal family] }
+  - { zh: 散列码, en: hash code }
+  - { zh: 散列洪泛, en: hash flooding }
+  - { zh: 链地址法, en: separate chaining, aliases: [独立链法, 拉链法, chaining] }
+  - { zh: 开放定址法, en: open addressing, aliases: [封闭散列, closed hashing] }
+  - { zh: 试探链, en: probe sequence, aliases: [试探序列] }
+  - { zh: 线性试探, en: linear probing }
+  - { zh: 懒惰删除, en: lazy deletion, aliases: [惰性删除] }
+  - { zh: 重散列, en: rehashing }
+  - { zh: 平方试探, en: quadratic probing, aliases: [二次试探] }
+  - { zh: 双散列, en: double hashing }
+  - { zh: 桶排序, en: bucket sort }
+  - { zh: 计数排序, en: counting sort }
+  - { zh: 基数排序, en: radix sort }
+  - { zh: 跳表, en: skip list, aliases: [跳转表] }
+  - { zh: 稀疏图, en: sparse graph }
+  - { zh: 稠密图, en: dense graph }
+  - { zh: 邻接表, en: adjacency list }
+  - { zh: BFS 树, en: breadth-first tree, aliases: [BFS tree] }
+  - { zh: 树边, en: tree edge }
+  - { zh: 回边, en: back edge, aliases: [后向边] }
+  - { zh: 前向边, en: forward edge }
+  - { zh: 跨边, en: cross edge, aliases: [横跨边] }
+  - { zh: 括号引理, en: parenthesis theorem, aliases: [parenthesis lemma, 括号定理] }
+  - { zh: 白路径定理, en: white-path theorem }
+  - { zh: 有向无环图, en: directed acyclic graph, aliases: [DAG] }
+  - { zh: 双连通分量, en: biconnected component, aliases: [BCC, 双连通分支] }
+  - { zh: 最高连通祖先, en: highest connected ancestor, aliases: [low 值, low-link value] }
+  - { zh: 强连通分量, en: strongly connected component, aliases: [SCC, 强连通分支] }
+  - { zh: 优先级搜索, en: priority-first search, aliases: [PFS] }
+  - { zh: 最短路径树, en: shortest-path tree, aliases: [SPT] }
+  - { zh: 松弛, en: relaxation, scope: ["4"] }
+  - { zh: 割性质, en: cut property }
+  - { zh: 环路性质, en: cycle property }
+  - { zh: 并查集, en: disjoint-set data structure, aliases: [union–find, union-find, 不相交集合] }
+  - { zh: 按大小合并, en: union by size }
+  - { zh: 按秩合并, en: union by rank }
+  - { zh: 路径压缩, en: path compression }
+  - { zh: 路径减半, en: path halving }
+  - { zh: Floyd–Warshall 算法, en: Floyd–Warshall algorithm, aliases: [Floyd 算法] }
+  - { zh: 优先级队列, en: priority queue }
+  - { zh: 完全二叉堆, en: binary heap, aliases: [堆, 二叉堆, heap, complete binary heap] }
+  - { zh: 堆序性, en: heap property, aliases: [堆序, heap order] }
+  - { zh: 上滤, en: percolate up, aliases: [sift up, sift-up] }
+  - { zh: 下滤, en: percolate down, aliases: [sift down, sift-down] }
+  - { zh: Floyd 建堆算法, en: "Floyd's heap construction", aliases: [批量建堆, heapify] }
+  - { zh: 堆排序, en: heapsort, aliases: [heap sort] }
+  - { zh: 锦标赛树, en: tournament tree, aliases: [胜者树, winner tree] }
+  - { zh: 锦标赛排序, en: tournament sort }
+  - { zh: 败者树, en: loser tree }
+  - { zh: 多叉堆, en: d-ary heap, aliases: [d 叉堆, d-heap] }
+  - { zh: 左式堆, en: leftist heap, aliases: [左倾堆, leftist tree] }
+  - { zh: 空节点路径长度, en: null path length, aliases: [npl, NPL] }
+  - { zh: 优先级搜索树, en: priority search tree }
+  - { zh: 串匹配, en: string matching, aliases: [模式匹配, 字符串匹配, string searching], scope: ["4"] }
+  - { zh: 文本串, en: text string, aliases: [text], scope: ["4.3"] }
+  - { zh: 模式串, en: pattern string, aliases: [pattern], scope: ["4.3"] }
+  - { zh: KMP 算法, en: Knuth–Morris–Pratt algorithm, aliases: [KMP algorithm] }
+  - { zh: next 表, en: failure function, aliases: [失效函数, 前缀函数, prefix function, next table] }
+  - { zh: BM 算法, en: Boyer–Moore algorithm, aliases: [Boyer–Moore 算法, Boyer–Moore string-search algorithm] }
+  - { zh: 坏字符, en: bad character, aliases: [坏字符规则, bad character rule] }
+  - { zh: 好后缀, en: good suffix, aliases: [好后缀规则, good suffix rule] }
+  - { zh: Karp–Rabin 算法, en: Rabin–Karp algorithm, aliases: [Rabin–Karp 算法, Karp–Rabin algorithm] }
+  - { zh: 指纹, en: fingerprint, scope: ["4"] }
+  - { zh: 滚动散列, en: rolling hash }
+  - { zh: 快速幂, en: exponentiation by squaring, aliases: [反复平方法, binary exponentiation] }
+  - { zh: Trie, en: trie, aliases: [字典树, 前缀树, 键树, prefix tree, digital tree] }
+  - { zh: 基数树, en: radix tree, aliases: [PATRICIA 树, 压缩 Trie, Patricia tree, compressed trie] }
+  - { zh: 三叉搜索树, en: ternary search tree, aliases: [ternary search trie] }
+  - { zh: 后缀树, en: suffix tree }
+  - { zh: 后缀数组, en: suffix array }
+  - { zh: 三路划分, en: three-way partitioning }
+  - { zh: 选取问题, en: selection problem, aliases: [k-选取, k-selection] }
+  - { zh: 多数元素, en: majority element, aliases: [主元素] }
+  - { zh: 多数投票算法, en: majority vote algorithm, aliases: [Boyer–Moore 多数投票算法, Boyer–Moore majority vote algorithm] }
+  - { zh: 快速选取, en: quickselect, aliases: [Hoare 选择算法] }
+  - { zh: 线性时间选取, en: median of medians, aliases: [中位数的中位数, BFPRT 算法, BFPRT algorithm] }
+  - { zh: 希尔排序, en: Shellsort, aliases: [Shell 排序, Shell sort] }
+  - { zh: 增量序列, en: gap sequence, aliases: [步长序列, increment sequence] }
+  - { zh: 内省排序, en: introsort, aliases: [introspective sort] }
+  - { zh: 秩, en: rank, scope: ["4.3"] }
+  - { zh: 列表, en: list, scope: ["4.3"] }
+  - { zh: 逆序对, en: inversion, scope: ["4"] }
+  - { zh: 完全二叉树, en: complete binary tree, scope: ["4"] }
+  - { zh: 遍历, en: traversal, aliases: [tree traversal], scope: ["4"] }
+  - { zh: 聚集, en: clustering, scope: ["4.3"] }
+  - { zh: 轴点, en: pivot, aliases: [枢轴], scope: ["4.1", "4.3"] }

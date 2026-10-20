@@ -139,6 +139,16 @@ function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: str
   };
 }
 
+/**
+ * Unscoped concepts that a scoped homonym overrides on this page (the lattice "complement"
+ * inside its scope): only the scoped one may take a definition site there.
+ */
+function shadowedConcepts(concepts: Concept[], pageId: string): Set<string> {
+  const keys = (c: Concept) => [...conceptNames(c, 'zh'), ...conceptNames(c, 'en').map((n) => nameKeys(n, 'en')[0])];
+  const scopedNames = new Set(concepts.filter((c) => c.scope?.length && inScope(c, pageId)).flatMap(keys));
+  return new Set(concepts.filter((c) => !c.scope?.length && keys(c).some((k) => scopedNames.has(k))).map((c) => c.id));
+}
+
 /* ------------------------------------------------------------------ index */
 
 interface SiteCandidate extends Target {
@@ -176,8 +186,9 @@ export function buildLinkIndex(
       if (concept && def) add(concept.id, { pageId, anchor: def, file });
     });
     const mayBeMarked = annotationCandidates(out.hast, out.contentLang);
+    const shadowed = shadowedConcepts(concepts, pageId);
     for (const concept of concepts) {
-      if (!inScope(concept, pageId) || !mayBeMarked(concept)) continue;
+      if (!inScope(concept, pageId) || shadowed.has(concept.id) || !mayBeMarked(concept)) continue;
       const anchor = markAnnotatedDefinition(out.hast, concept, out.contentLang);
       if (anchor) {
         out.anchors.add(anchor);
