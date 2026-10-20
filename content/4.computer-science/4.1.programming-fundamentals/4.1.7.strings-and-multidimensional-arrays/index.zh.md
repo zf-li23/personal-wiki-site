@@ -88,17 +88,17 @@ Python 的字符串 `str` 是不可变的：`s[0] = "b"` 是错误，`s += …`�
 #include <string>
 
 int main() {
-    std::string s = "清华 THU";               // the source file is saved as UTF-8
+    std::string s = "\u6e05\u534e THU";      // two Chinese characters (Tsinghua) + " THU"
     std::cout << s.size() << '\n';            // 10: bytes, not characters
     return 0;
 }
 ```
 
 ```python tab
-s = "清华 THU"
+s = "\u6e05\u534e THU"         # two Chinese characters (Tsinghua) + " THU"
 print(len(s))                    # 6: code points
 print(len(s.encode("utf-8")))    # 10: bytes in UTF-8
-print(hex(ord("清")))            # 0x6e05
+print(hex(ord("\u6e05")))      # 0x6e05
 ```
 
 C++ 的 `std::string` 只是一串字节，`size()` 数的是字节，`s[0]` 是"清"的三个字节中的第一个；按字符处理中文文本需要专门的库。Python 3 的 `str` 是码位的序列，`len` 数的是码位，只有在读写文件或网络时才需要指定编码（`open(path, encoding="utf-8")`、`s.encode()`、`b.decode()`）。源文件、终端和数据文件统一使用 UTF-8，可以避免绝大多数"乱码"问题。
