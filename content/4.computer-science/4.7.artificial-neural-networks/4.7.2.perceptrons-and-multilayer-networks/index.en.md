@@ -3,9 +3,9 @@ title: Perceptrons and Multilayer Networks
 description: The artificial neuron and the main network structures; Rosenblatt's perceptron, linear separability and the perceptron convergence theorem with proof; the XOR problem; multilayer perceptrons and the universal approximation theorem; computational graphs, the backpropagation equations in matrix form and reverse-mode automatic differentiation; loss functions, activation functions from sigmoid to GELU and SwiGLU, and weight initialization; implementations in NumPy and PyTorch.
 ---
 
-This chapter builds the basic model of deep learning, the multilayer perceptron, and the algorithm that trains it, backpropagation. We start from a single artificial neuron and Rosenblatt's perceptron, the first neural network that learned from examples, and prove that it finds a separating hyperplane whenever one exists. The XOR problem shows what a single layer cannot do, and adding hidden layers with nonlinear activations removes the limitation: a network with one hidden layer can approximate any continuous function. To train such networks we need the gradient of the loss with respect to every weight. Backpropagation computes all of them at the cost of about two forward passes; we derive it in matrix form and then see it as a special case of reverse-mode automatic differentiation on a computational graph, which is how PyTorch and JAX compute gradients for any model. The chapter ends with the practical choices that decide whether training works: the loss function, the activation function and the initialization of the weights.
+This chapter builds the basic model of **deep learning**, the multilayer perceptron, and the algorithm that trains it, backpropagation. We start from a single artificial neuron and Rosenblatt's perceptron, the first neural network that learned from examples, and prove that it finds a separating hyperplane whenever one exists. The XOR problem shows what a single layer cannot do, and adding hidden layers with nonlinear activations removes the limitation: a network with one hidden layer can approximate any continuous function. To train such networks we need the gradient of the loss with respect to every weight. Backpropagation computes all of them at the cost of about two forward passes; we derive it in matrix form and then see it as a special case of reverse-mode automatic differentiation on a computational graph, which is how PyTorch and JAX compute gradients for any model. The chapter ends with the practical choices that decide whether training works: the loss function, the activation function and the initialization of the weights.
 
-The intuitive picture of neurons, gradient descent and backpropagation is in [4.5.4](/4.5.4); the loss functions come from maximum likelihood ([4.7.1](/4.7.1#sec-1.5)); gradient descent itself and its stochastic version are analyzed in [3.5.5](/3.5.5). The optimizers and training techniques built on top of backpropagation are the subject of [4.7.4](/4.7.4).
+The intuitive picture of neurons, **gradient descent** and backpropagation is in [4.5.4](/4.5.4); the loss functions come from maximum likelihood ([4.7.1](/4.7.1#sec-1.5)); gradient descent itself and its stochastic version are analyzed in [3.5.5](/3.5.5). The optimizers and training techniques built on top of backpropagation are the subject of [4.7.4](/4.7.4).
 
 ## 2.1. Neurons and Network Structures
 
@@ -67,7 +67,7 @@ For a finite separable set the minimum is positive, so a separating $\boldsymbol
 
 ### 2.2.3. The Perceptron Convergence Theorem
 
-**Theorem 2.2.1 (Perceptron Convergence Theorem)** Suppose that $\|\tilde{\boldsymbol{x}}^{(i)}\| \le R$ for all $i$, and that there is a unit vector $\boldsymbol{u}$ with $y^{(i)}\boldsymbol{u}^{\mathsf T}\tilde{\boldsymbol{x}}^{(i)} \ge \gamma > 0$ for all $i$. Then the perceptron learning algorithm started from $\boldsymbol{w} = \boldsymbol{0}$ makes at most
+**Theorem 2.2.1 (Perceptron Convergence Theorem)** Suppose that $\|\tilde{\boldsymbol{x}}^{(i)}\| \le R$ for all $i$, and that there is a unit vector $\boldsymbol{u}$ with $y^{(i)}\boldsymbol{u}^{\mathsf T}\tilde{\boldsymbol{x}}^{(i)} \ge \gamma > 0$ for all $i$. Then the perceptron **learning algorithm** started from $\boldsymbol{w} = \boldsymbol{0}$ makes at most
 
 $$
 k \le \left(\frac{R}{\gamma}\right)^2
@@ -87,7 +87,7 @@ because the middle term is $\le 0$ on a mistake; hence $\|\boldsymbol{w}_k\|^2 \
 
 By the Cauchy–Schwarz inequality and $\|\boldsymbol{u}\| = 1$, $k\gamma \le \boldsymbol{u}^{\mathsf T}\boldsymbol{w}_k \le \|\boldsymbol{w}_k\| \le \sqrt{k}R$, so $\sqrt{k} \le R/\gamma$. Since every epoch without convergence contains at least one update, the number of epochs is at most $k + 1$. $\square$
 
-The theorem, due to Novikoff (1962), is remarkable in that the bound does not depend on the number of examples or on the dimension, only on the geometry: well-separated data (large $\gamma/R$) are learned quickly. It says nothing, however, about which separating hyperplane is found, and the hyperplane found may have a tiny margin and generalize poorly. If the data are not linearly separable the algorithm never stops and the weights cycle. Practical variants address both issues: the *pocket algorithm* keeps the best weights seen so far, and the *averaged perceptron* returns the average of all intermediate weight vectors, which has generalization guarantees similar to those of the support vector machine (Freund and Schapire 1999). The mistake bound is also the starting point of online learning theory.
+The theorem, due to Novikoff (1962), is remarkable in that the bound does not depend on the number of examples or on the dimension, only on the geometry: well-separated data (large $\gamma/R$) are learned quickly. It says nothing, however, about which separating hyperplane is found, and the hyperplane found may have a tiny margin and generalize poorly. If the data are not linearly separable the algorithm never stops and the weights cycle. Practical variants address both issues: the *pocket algorithm* keeps the best weights seen so far, and the *averaged perceptron* returns the average of all intermediate weight vectors, which has generalization guarantees similar to those of the **support vector machine** (Freund and Schapire 1999). The mistake bound is also the starting point of online learning theory.
 
 ### 2.2.4. A NumPy Implementation
 
@@ -172,7 +172,7 @@ The hidden layer maps the four points to $(0,1)$, $(1,1)$, $(1,1)$, $(1,0)$, whe
 
 ### 2.3.1. Why Smooth Nonlinear Activations
 
-Two obstacles prevent us from simply stacking perceptrons and training them by gradient descent.
+Two obstacles prevent us from simply stacking perceptrons and training them by **gradient descent**.
 
 - The step function has derivative $0$ wherever it is differentiable and none at $0$. Every gradient through a step unit is zero, so gradient descent receives no signal about how to change the weights of earlier layers.
 - Replacing the step by the identity does not help, because depth then adds nothing: $W_2(W_1\boldsymbol{x} + \boldsymbol{b}_1) + \boldsymbol{b}_2 = (W_2W_1)\boldsymbol{x} + (W_2\boldsymbol{b}_1 + \boldsymbol{b}_2)$, and by induction any composition of affine maps is a single affine map. A deep linear network represents exactly the same functions as one linear layer (although its training dynamics differ).
@@ -188,7 +188,7 @@ $$
 $$
 with weight matrices $W^{(l)} \in \mathbb{R}^{n_l \times n_{l-1}}$, bias vectors $\boldsymbol{b}^{(l)} \in \mathbb{R}^{n_l}$ and activation functions $\varphi^{(l)}$ applied componentwise (except possibly at the output layer). The output is $\hat{\boldsymbol{y}} = \boldsymbol{a}^{(L)}$; layers $1, \dots, L-1$ are hidden layers.
 
-The entry $w^{(l)}_{jk}$ is the weight of the connection from neuron $k$ of layer $l-1$ to neuron $j$ of layer $l$, so that $z^{(l)}_j = \sum_k w^{(l)}_{jk}a^{(l-1)}_k + b^{(l)}_j$. The network has $\sum_{l=1}^L n_l(n_{l-1} + 1)$ parameters. Every neuron of a layer receives input from every neuron of the previous layer and from no other layer; there are no connections within a layer and no feedback. The output activation is chosen by the task, following [4.7.1](/4.7.1#sec-1.5.2): the identity for regression, a sigmoid for binary and a softmax for multiclass classification.
+The entry $w^{(l)}_{jk}$ is the weight of the connection from neuron $k$ of layer $l-1$ to neuron $j$ of layer $l$, so that $z^{(l)}_j = \sum_k w^{(l)}_{jk}a^{(l-1)}_k + b^{(l)}_j$. The network has $\sum_{l=1}^L n_l(n_{l-1} + 1)$ parameters. Every neuron of a layer receives input from every neuron of the previous layer and from no other layer; there are no connections within a layer and no feedback. The output activation is chosen by the task, following [4.7.1](/4.7.1#sec-1.5.2): the identity for regression, a sigmoid for binary and a **softmax** for multiclass classification.
 
 ```mermaid
 flowchart LR
@@ -223,7 +223,7 @@ $$
 Z^{(l)} = A^{(l-1)}W^{(l)\mathsf T} + \boldsymbol{1}\boldsymbol{b}^{(l)\mathsf T}, \qquad A^{(l)} = \varphi^{(l)}\bigl(Z^{(l)}\bigr),
 $$
 
-which is the form that runs efficiently on GPUs and the convention of deep learning libraries (`torch.nn.Linear` stores $W$ with shape $(n_{\mathrm{out}}, n_{\mathrm{in}})$ and computes $XW^{\mathsf T} + \boldsymbol{b}$). A forward pass costs about $B\sum_l n_ln_{l-1}$ multiply-adds.
+which is the form that runs efficiently on GPUs and the convention of **deep learning** libraries (`torch.nn.Linear` stores $W$ with shape $(n_{\mathrm{out}}, n_{\mathrm{in}})$ and computes $XW^{\mathsf T} + \boldsymbol{b}$). A forward pass costs about $B\sum_l n_ln_{l-1}$ multiply-adds.
 
 ### 2.3.3. Universal Approximation
 
@@ -243,7 +243,7 @@ The theorem is an existence statement and has three important limitations.
 - It says nothing about whether gradient descent finds the approximating weights, or about generalization from finite data.
 - Depth can be exponentially more efficient than width: there are functions computable by small deep networks that need exponentially many neurons in any shallow one (Telgarsky 2016; Eldan and Shamir 2016). Conversely, depth with bounded width is also universal: ReLU networks of width $n + 1$ approximate any continuous function on a compact subset of $\mathbb{R}^n$ (Hanin and Sellke 2017).
 
-The figure shows the simplest case: a network with one hidden layer of four tanh neurons and a sigmoid output, trained by gradient descent on the cross-entropy, solves XOR by learning a curved decision boundary.
+The figure shows the simplest case: a network with one hidden layer of four tanh neurons and a sigmoid output, trained by gradient descent on the **cross-entropy**, solves XOR by learning a curved decision boundary.
 
 ![XOR learned by a 2-4-1 MLP: the four points (left), the learned probability of class 1 with the decision boundary P = 0.5 that separates the two diagonal pairs (middle), and the cross-entropy loss falling over 3000 epochs (right)](./plots/xor-mlp.py)
 
@@ -251,7 +251,7 @@ The figure shows the simplest case: a network with one hidden layer of four tanh
 
 ### 2.4.1. Gradient-Based Training
 
-Training an MLP means minimizing the average loss $E(\boldsymbol{\theta}) = \frac{1}{m}\sum_{i=1}^m E_i(\boldsymbol{\theta})$ over all weights and biases $\boldsymbol{\theta}$, where $E_i$ is the loss on the $i$-th example. As in [3.5.5](/3.5.5), **gradient descent** iterates $\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} - \eta\nabla E(\boldsymbol{\theta})$ with a learning rate $\eta$, and **stochastic gradient descent** replaces the full gradient by the gradient on one example or, in **mini-batch gradient descent**, on a random batch $\mathcal{B}$, $\frac{1}{\lvert\mathcal{B}\rvert}\sum_{i \in \mathcal{B}}\nabla E_i$, an unbiased estimate obtained at a fraction of the cost. The loss of a network is not convex in its weights: it has many **saddle points** and local minima, and many global minima related by symmetries (permuting the hidden neurons of a layer leaves the function unchanged). In high dimensions most critical points with high loss are saddle points rather than poor local minima, and stochastic gradient methods escape them; why they nevertheless find good solutions is still only partly understood ([4.7.4](/4.7.4)).
+Training an MLP means minimizing the average loss $E(\boldsymbol{\theta}) = \frac{1}{m}\sum_{i=1}^m E_i(\boldsymbol{\theta})$ over all weights and biases $\boldsymbol{\theta}$, where $E_i$ is the loss on the $i$-th example. As in [3.5.5](/3.5.5), **gradient descent** iterates $\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} - \eta\nabla E(\boldsymbol{\theta})$ with a learning rate $\eta$, and **stochastic gradient descent** replaces the full gradient by the gradient on one example or, in **mini-batch gradient descent**, on a random batch $\mathcal{B}$, $\frac{1}{\lvert\mathcal{B}\rvert}\sum_{i \in \mathcal{B}}\nabla E_i$, an unbiased estimate obtained at a fraction of the cost. The loss of a network is not convex in its weights: it has many **saddle points** and local minima, and many global minima related by symmetries (permuting the hidden neurons of a layer leaves the function unchanged). In high dimensions most critical points with high loss are **saddle points** rather than poor local minima, and stochastic gradient methods escape them; why they nevertheless find good solutions is still only partly understood ([4.7.4](/4.7.4)).
 
 Whatever the optimizer, it needs $\nabla E_i$, the derivative of the loss with respect to each of possibly billions of parameters. Approximating each partial derivative by a finite difference would cost one forward pass per parameter. Backpropagation computes all of them exactly in one backward pass.
 
@@ -297,7 +297,7 @@ and write $\odot$ for the componentwise product.
    \frac{\partial E}{\partial W^{(l)}} = \boldsymbol{\delta}^{(l)}\boldsymbol{a}^{(l-1)\mathsf T}, \qquad \frac{\partial E}{\partial\boldsymbol{b}^{(l)}} = \boldsymbol{\delta}^{(l)} .
    $$
 
-**Proof** (1) is the chain rule for the map $\boldsymbol{z}^{(L)} \mapsto \boldsymbol{a}^{(L)} \mapsto E$; if $a^{(L)}_j$ depends only on $z^{(L)}_j$, the Jacobian is the diagonal matrix $\operatorname{diag}(\varphi^{(L)\prime}(\boldsymbol{z}^{(L)}))$. For (2), $E$ depends on $z^{(l)}_j$ only through $a^{(l)}_j = \varphi(z^{(l)}_j)$, which enters every $z^{(l+1)}_k = \sum_i w^{(l+1)}_{ki}a^{(l)}_i + b^{(l+1)}_k$. By the multivariable chain rule,
+**Proof** (1) is the **chain rule** for the map $\boldsymbol{z}^{(L)} \mapsto \boldsymbol{a}^{(L)} \mapsto E$; if $a^{(L)}_j$ depends only on $z^{(L)}_j$, the Jacobian is the diagonal matrix $\operatorname{diag}(\varphi^{(L)\prime}(\boldsymbol{z}^{(L)}))$. For (2), $E$ depends on $z^{(l)}_j$ only through $a^{(l)}_j = \varphi(z^{(l)}_j)$, which enters every $z^{(l+1)}_k = \sum_i w^{(l+1)}_{ki}a^{(l)}_i + b^{(l+1)}_k$. By the multivariable chain rule,
 
 $$
 \delta^{(l)}_j = \sum_{k=1}^{n_{l+1}}\frac{\partial E}{\partial z^{(l+1)}_k}\frac{\partial z^{(l+1)}_k}{\partial a^{(l)}_j}\frac{\partial a^{(l)}_j}{\partial z^{(l)}_j} = \Bigl(\sum_{k=1}^{n_{l+1}} w^{(l+1)}_{kj}\delta^{(l+1)}_k\Bigr)\varphi'\bigl(z^{(l)}_j\bigr),
@@ -308,7 +308,7 @@ The error signal propagates backward through the transposed weight matrices, the
 
 **Proposition 2.4.1** (a) If $\hat{\boldsymbol{y}} = \operatorname{softmax}(\boldsymbol{z}^{(L)})$ and $E = -\sum_j y_j\log\hat y_j$ with $\sum_j y_j = 1$, then $\boldsymbol{\delta}^{(L)} = \hat{\boldsymbol{y}} - \boldsymbol{y}$. (b) If $\hat{\boldsymbol{y}} = \sigma(\boldsymbol{z}^{(L)})$ componentwise and $E = \frac12\|\hat{\boldsymbol{y}} - \boldsymbol{y}\|^2$, then $\boldsymbol{\delta}^{(L)} = (\hat{\boldsymbol{y}} - \boldsymbol{y}) \odot \hat{\boldsymbol{y}} \odot (\boldsymbol{1} - \hat{\boldsymbol{y}})$.
 
-**Proof** (a) The softmax Jacobian is $\partial\hat y_j/\partial z_i = \hat y_j(\boldsymbol{1}\{i = j\} - \hat y_i)$, so
+**Proof** (a) The **softmax** Jacobian is $\partial\hat y_j/\partial z_i = \hat y_j(\boldsymbol{1}\{i = j\} - \hat y_i)$, so
 
 $$
 \frac{\partial E}{\partial z_i} = -\sum_j\frac{y_j}{\hat y_j}\,\hat y_j\bigl(\boldsymbol{1}\{i = j\} - \hat y_i\bigr) = -y_i + \hat y_i\sum_j y_j = \hat y_i - y_i .
@@ -318,11 +318,11 @@ $$
 **Algorithm 2.4.1 (Backpropagation)** For a mini-batch with inputs $X$ (rows are examples) and loss $E = \frac{1}{B}\sum_{i=1}^B E_i$:
 
 1. Forward pass: compute and store $Z^{(l)}$ and $A^{(l)}$ for $l = 1, \dots, L$ with fixed weights.
-2. Output error: $\Delta^{(L)} = \partial E/\partial Z^{(L)}$, for softmax with cross-entropy $\Delta^{(L)} = \frac{1}{B}(\hat Y - Y)$ with one-hot targets $Y$.
+2. Output error: $\Delta^{(L)} = \partial E/\partial Z^{(L)}$, for softmax with **cross-entropy** $\Delta^{(L)} = \frac{1}{B}(\hat Y - Y)$ with one-hot targets $Y$.
 3. Backward pass, for $l = L, \dots, 1$: $\dfrac{\partial E}{\partial W^{(l)}} = \Delta^{(l)\mathsf T}A^{(l-1)}$, $\dfrac{\partial E}{\partial\boldsymbol{b}^{(l)}} = \Delta^{(l)\mathsf T}\boldsymbol{1}$, and, if $l > 1$, $\Delta^{(l-1)} = \bigl(\Delta^{(l)}W^{(l)}\bigr) \odot \varphi'\bigl(Z^{(l-1)}\bigr)$.
 4. Update: $W^{(l)} \leftarrow W^{(l)} - \eta\,\partial E/\partial W^{(l)}$ and $\boldsymbol{b}^{(l)} \leftarrow \boldsymbol{b}^{(l)} - \eta\,\partial E/\partial\boldsymbol{b}^{(l)}$, or a more refined optimizer step ([4.7.4](/4.7.4)).
 
-The row-wise formulas are the transposes of Theorem 2.4.1 summed over the batch. The backward pass needs two matrix products per layer (one for the weight gradient, one for the error signal) against one in the forward pass, so a training step costs about three forward passes; for large language models this gives the rule of thumb of about $6N$ floating-point operations per training token for $N$ parameters ([4.7.8](/4.7.8)). The stored activations $A^{(l)}$ are what makes training memory-hungry.
+The row-wise formulas are the transposes of Theorem 2.4.1 summed over the batch. The backward pass needs two matrix products per layer (one for the weight gradient, one for the error signal) against one in the forward pass, so a training step costs about three forward passes; for large language models this gives the rule of thumb of about $6N$ **floating-point operations** per training **token** for $N$ parameters ([4.7.8](/4.7.8)). The stored activations $A^{(l)}$ are what makes training memory-hungry.
 
 **Definition 2.4.2 (Backpropagation)** **Backpropagation** is the computation of the gradient of a scalar loss with respect to all parameters of a network by propagating error signals backward from the output through the computational graph, applying the chain rule at each node, as in Algorithm 2.4.1.
 
@@ -345,7 +345,7 @@ Frameworks implement reverse mode in two styles. PyTorch records the graph dynam
 
 ### 2.4.5. Implementations
 
-The following NumPy code implements an MLP with ReLU hidden layers, a softmax output and the cross-entropy loss, with the backward pass of Algorithm 2.4.1, checks one partial derivative against a central difference, and trains the network by mini-batch SGD on the two-moons dataset.
+The following NumPy code implements an MLP with ReLU hidden layers, a softmax output and the **cross-entropy loss**, with the backward pass of Algorithm 2.4.1, checks one partial derivative against a central difference, and trains the network by mini-batch **SGD** on the two-moons dataset.
 
 ```python
 import numpy as np
@@ -446,7 +446,7 @@ epoch 199  loss 0.0045  accuracy 1.000
 test accuracy 0.987
 ```
 
-Here the ReLU derivative is evaluated as `A_prev > 0`, which equals $\boldsymbol{1}\{z > 0\}$ because $\operatorname{ReLU}(z) > 0$ exactly when $z > 0$. The training accuracy reaches 100% while the test accuracy is 98.7%: with noisy labels near the boundary, a perfect fit of the training set is slightly too flexible, the generalization gap of [4.7.1](/4.7.1#sec-1.3).
+Here the ReLU derivative is evaluated as `A_prev > 0`, which equals $\boldsymbol{1}\{z > 0\}$ because $\operatorname{ReLU}(z) > 0$ exactly when $z > 0$. The training accuracy reaches 100% while the test accuracy is 98.7%: with noisy labels near the boundary, a perfect fit of the **training set** is slightly too flexible, the **generalization gap** of [4.7.1](/4.7.1#sec-1.3).
 
 The same model in PyTorch (version 2.14, CPU) needs no hand-written backward pass. The first lines also reproduce the scalar example of §2.4.2.
 
@@ -504,7 +504,7 @@ The loss compares the network output with the target. Following [4.7.1](/4.7.1#s
 | cross-entropy | $-\sum_j y_j\log\hat y_j$ | softmax | $\hat{\boldsymbol{y}} - \boldsymbol{y}$ | multiclass classification, language modeling |
 | hinge | $\max(0, 1 - yz)$, $y \in \{-1, +1\}$ | identity (score $z$) | $-y\,\boldsymbol{1}\{yz < 1\}$ (a subgradient) | margin-based classification, as in the SVM |
 
-Why not use squared error for classification? With a sigmoid output and squared error, Proposition 2.4.1(b) gives $\delta^{(L)} = (\hat y - y)\hat y(1 - \hat y)$, which is tiny whenever the output saturates, including when it is confidently wrong. For $z = -5$ and $y = 1$, $\hat y = \sigma(-5) \approx 0.0067$ and $\delta^{(L)} \approx -0.0066$, while the cross-entropy gives $\delta^{(L)} = \hat y - y \approx -0.993$, a gradient 150 times larger exactly where learning is most needed. The logarithm in the cross-entropy cancels the exponential flatness of the sigmoid and softmax. Squared error remains the default for regression, sometimes replaced by the Huber loss, which is quadratic for small and linear for large errors and therefore less sensitive to outliers.
+Why not use squared error for classification? With a sigmoid output and squared error, Proposition 2.4.1(b) gives $\delta^{(L)} = (\hat y - y)\hat y(1 - \hat y)$, which is tiny whenever the output saturates, including when it is confidently wrong. For $z = -5$ and $y = 1$, $\hat y = \sigma(-5) \approx 0.0067$ and $\delta^{(L)} \approx -0.0066$, while the **cross-entropy** gives $\delta^{(L)} = \hat y - y \approx -0.993$, a gradient 150 times larger exactly where learning is most needed. The logarithm in the cross-entropy cancels the exponential flatness of the sigmoid and **softmax**. Squared error remains the default for regression, sometimes replaced by the Huber loss, which is quadratic for small and linear for large errors and therefore less sensitive to outliers.
 
 ## 2.6. Activation Functions
 
@@ -554,22 +554,22 @@ To keep the variance of the pre-activations constant from layer to layer we need
 | Xavier (Glorot) | $2/(n_{\mathrm{in}} + n_{\mathrm{out}})$ | the same, compromising between the forward condition $n_{\mathrm{in}}\sigma_w^2 = 1$ and the backward condition $n_{\mathrm{out}}\sigma_w^2 = 1$ | Glorot and Bengio 2010 |
 | He (Kaiming) | $2/n_{\mathrm{in}}$ | ReLU, by Proposition 2.7.1 | He et al. 2015 |
 
-The weights are drawn from a normal distribution with this variance or from the uniform distribution $\mathrm{U}(-c, c)$ with $c^2/3 = \sigma_w^2$. The NumPy MLP above uses He initialization; PyTorch's `nn.Linear` uses by default a uniform distribution with variance $1/(3n_{\mathrm{in}})$, a conservative choice that works well in combination with normalization layers. Very deep networks need more than a good variance: residual connections ([4.7.3](/4.7.3)) and normalization ([4.7.4](/4.7.4)) keep the signal stable, and Transformers are typically initialized with a small standard deviation such as $0.02$, with the output projections of residual blocks scaled by $1/\sqrt{2L}$ so that the sum of $2L$ residual branches does not grow with depth (as in GPT-2). Parameterizations such as μP (Yang and Hu 2021) go further and scale initialization and learning rates with the width so that hyperparameters tuned on a small model transfer to a large one.
+The weights are drawn from a normal distribution with this variance or from the uniform distribution $\mathrm{U}(-c, c)$ with $c^2/3 = \sigma_w^2$. The NumPy MLP above uses He initialization; PyTorch's `nn.Linear` uses by default a uniform distribution with variance $1/(3n_{\mathrm{in}})$, a conservative choice that works well in combination with normalization layers. Very deep networks need more than a good variance: residual connections ([4.7.3](/4.7.3)) and normalization ([4.7.4](/4.7.4)) keep the signal stable, and Transformers are typically initialized with a small standard deviation such as $0.02$, with the output projections of residual blocks scaled by $1/\sqrt{2L}$ so that the sum of $2L$ residual branches does not grow with depth (as in GPT-2). Parameterizations such as μP (Yang and Hu 2021) go further and scale initialization and learning rates with the width so that **hyperparameters** tuned on a small model transfer to a large one.
 
 ## 2.8. Training in Practice
 
 The pieces combine into the training loop of Algorithm 2.4.1. A few practical points, developed further in [4.7.4](/4.7.4):
 
-- Modes. One pass over the training set is an epoch, with the examples shuffled anew each time. Online (or sequential) training updates after every example and is classic stochastic gradient descent; full-batch training updates once per epoch; mini-batch training, the standard, updates after each batch of $B$ examples (typically $32$ to several thousand, and millions of tokens for language models), trading gradient noise against hardware efficiency.
+- Modes. One pass over the **training set** is an epoch, with the examples shuffled anew each time. Online (or sequential) training updates after every example and is classic **stochastic gradient descent**; full-batch training updates once per epoch; mini-batch training, the standard, updates after each batch of $B$ examples (typically $32$ to several thousand, and millions of **tokens** for language models), trading gradient noise against hardware efficiency.
 - Learning rate. A smaller $\eta$ gives smaller weight changes and a smoother, more stable trajectory, at the price of slower progress; too large an $\eta$ makes the loss oscillate or diverge. In practice $\eta$ is scheduled, with a warm-up followed by a decay.
-- Stopping. Training stops when the norm of the gradient falls below a threshold, when the relative decrease of the loss per epoch becomes small, or, most commonly for networks that can overfit, by early stopping on the validation error ([4.7.1](/4.7.1#sec-1.4.3)).
+- Stopping. Training stops when the norm of the gradient falls below a threshold, when the relative decrease of the loss per epoch becomes small, or, most commonly for networks that can overfit, by **early stopping** on the validation error ([4.7.1](/4.7.1#sec-1.4.3)).
 - Checking. A new implementation should first be able to overfit a tiny subset of the data; if it cannot, there is a bug. Hand-written gradients are compared with finite differences, as in §2.4.5.
 
 ## Summary
 
 - An artificial neuron computes $\varphi(\boldsymbol{w}^{\mathsf T}\boldsymbol{x} + b)$. The perceptron adds the rule $\boldsymbol{w} \leftarrow \boldsymbol{w} + \eta y\tilde{\boldsymbol{x}}$ on mistakes, which makes at most $(R/\gamma)^2$ updates on linearly separable data (Novikoff), but cannot represent XOR.
 - Hidden layers with nonlinear differentiable activations remove the limitation. An MLP computes $\boldsymbol{a}^{(l)} = \varphi(W^{(l)}\boldsymbol{a}^{(l-1)} + \boldsymbol{b}^{(l)})$; with one wide hidden layer and any non-polynomial continuous activation it approximates any continuous function on a compact set, while depth makes many functions exponentially cheaper to represent.
-- Backpropagation computes all gradients in one backward pass: $\boldsymbol{\delta}^{(l)} = (W^{(l+1)\mathsf T}\boldsymbol{\delta}^{(l+1)}) \odot \varphi'(\boldsymbol{z}^{(l)})$, $\partial E/\partial W^{(l)} = \boldsymbol{\delta}^{(l)}\boldsymbol{a}^{(l-1)\mathsf T}$; with softmax and cross-entropy the output error is $\hat{\boldsymbol{y}} - \boldsymbol{y}$. It is reverse-mode automatic differentiation on the computational graph, costing a small multiple of the forward pass but storing the activations.
+- Backpropagation computes all gradients in one backward pass: $\boldsymbol{\delta}^{(l)} = (W^{(l+1)\mathsf T}\boldsymbol{\delta}^{(l+1)}) \odot \varphi'(\boldsymbol{z}^{(l)})$, $\partial E/\partial W^{(l)} = \boldsymbol{\delta}^{(l)}\boldsymbol{a}^{(l-1)\mathsf T}$; with **softmax** and **cross-entropy** the output error is $\hat{\boldsymbol{y}} - \boldsymbol{y}$. It is reverse-mode automatic differentiation on the computational graph, costing a small multiple of the forward pass but storing the activations.
 - Losses are negative log-likelihoods paired with output activations; cross-entropy avoids the saturation that squared error suffers with sigmoid outputs.
 - ReLU replaced sigmoid and tanh in hidden layers because it does not saturate; GELU and the gated SwiGLU are standard in Transformers.
 - Random initialization breaks symmetry; Xavier ($2/(n_{\mathrm{in}} + n_{\mathrm{out}})$) and He ($2/n_{\mathrm{in}}$) variances keep activations and gradients from exploding or vanishing with depth.

@@ -3,7 +3,7 @@ title: Infrastructure for Large Models
 description: Where GPU memory goes in training (model states at 16 bytes per parameter, activations, recomputation); floating-point formats from FP32 to BF16, FP8 and NVFP4, mixed-precision training and loss scaling; collective communication and ring all-reduce; data parallelism, ZeRO and FSDP, tensor, pipeline, context and expert parallelism and how to combine them; the GPU memory hierarchy, the roofline model and FlashAttention; estimating training compute with 6ND and MFU; serving language models with prefill and decode, continuous batching, PagedAttention and speculative decoding.
 ---
 
-The previous chapter treated a pre-trained model as a mathematical object: a network, a loss and an optimizer. This chapter is about what it takes to actually train and serve one. The numbers are the starting point. Llama 3 405B has 405 billion parameters; its weights alone take 810 GB in 16-bit precision, ten times the memory of one H100 GPU, and its training took $3.8 \times 10^{25}$ **floating-point operations**, about 3,000 years of one H100 or more than two months of 16,384 of them. Memory forces us to split the model, and compute forces us to use thousands of accelerators in parallel. The chapter answers the questions this raises in order: where the memory of a training run goes (§8.1); how lower-precision number formats save memory and time without spoiling the optimization (§8.2); how GPUs exchange data (§8.3) and how training is divided among them by data, tensor and pipeline parallelism (§8.4–§8.6); why attention is limited by memory traffic rather than arithmetic and how FlashAttention fixes it (§8.7); how to estimate the compute and duration of a training run (§8.8); and how a trained model is served efficiently (§8.9). The numerical background on **floating-point numbers** is in [3.5.1](/3.5.1), matrix multiplication libraries such as **BLAS** are introduced in [4.4.3](/4.4.3), and the Transformer and its KV cache in [4.7.6](/4.7.6). How much compute should be spent on parameters versus data, the scaling laws, is the subject of [4.7.9](/4.7.9).
+The previous chapter treated a pre-trained model as a mathematical object: a network, a loss and an optimizer. This chapter is about what it takes to actually train and serve one. The numbers are the starting point. Llama 3 405B has 405 billion parameters; its weights alone take 810 GB in 16-bit precision, ten times the memory of one H100 GPU, and its training took $3.8 \times 10^{25}$ **floating-point operations**, about 3,000 years of one H100 or more than two months of 16,384 of them. Memory forces us to split the model, and compute forces us to use thousands of accelerators in parallel. The chapter answers the questions this raises in order: where the memory of a training run goes (§8.1); how lower-precision number formats save memory and time without spoiling the optimization (§8.2); how GPUs exchange data (§8.3) and how training is divided among them by data, tensor and pipeline parallelism (§8.4–§8.6); why attention is limited by memory traffic rather than arithmetic and how FlashAttention fixes it (§8.7); how to estimate the compute and duration of a training run (§8.8); and how a trained model is served efficiently (§8.9). The numerical background on **floating-point numbers** is in [3.5.1](/3.5.1), matrix multiplication libraries such as **BLAS** are introduced in [4.4.3](/4.4.3), and the **Transformer** and its **KV cache** in [4.7.6](/4.7.6). How much compute should be spent on parameters versus data, the scaling laws, is the subject of [4.7.9](/4.7.9).
 
 ## 8.1. Where GPU Memory Goes
 
@@ -17,7 +17,7 @@ Besides these there are temporary buffers (communication buffers, workspace of m
 
 ### 8.1.2. Model States: 16 Bytes per Parameter
 
-With mixed-precision training and Adam (§8.2.2) every parameter costs
+With mixed-precision training and **Adam** (§8.2.2) every parameter costs
 
 | Quantity | Format | Bytes |
 |---|---|---|
@@ -32,7 +32,7 @@ The optimizer states (the last three rows) are three quarters of the total, and 
 
 ### 8.1.3. Activations
 
-For a Transformer layer with hidden size $h$, $a$ attention heads and a sequence of $s$ tokens, Korthikanti et al. (2023) counted the stored activations in 16-bit precision exactly: the inputs of the matrix multiplications, the normalizations and the activation functions take $34\,sh$ bytes per layer and sequence, and standard attention adds the $a$ score matrices of size $s \times s$, $5as^2$ bytes with dropout (the scores, the softmax output and the dropout mask) or $2as^2$ without. The second term grows quadratically in the sequence length: for Llama-3-8B (32 heads) one layer at 32K tokens would need $2 \times 32 \times 32768^2$ bytes $\approx 69$ GB of scores. FlashAttention (§8.7) never stores the score matrices, leaving the linear term. For Llama-3-8B ($h = 4096$, 32 layers) and one sequence of 8,192 tokens, this is $34 \times 8192 \times 4096$ bytes $= 1.14$ GB per layer, 36.5 GB in total, more than twice the 16 GB of the weights. The logits for the loss add $4 \times s \times V$ bytes in FP32, 4.2 GB for the vocabulary of $V = 128{,}256$ tokens.
+For a **Transformer** layer with hidden size $h$, $a$ attention heads and a sequence of $s$ **tokens**, Korthikanti et al. (2023) counted the stored activations in 16-bit precision exactly: the inputs of the matrix multiplications, the normalizations and the **activation functions** take $34\,sh$ bytes per layer and sequence, and standard attention adds the $a$ score matrices of size $s \times s$, $5as^2$ bytes with **dropout** (the scores, the **softmax** output and the dropout mask) or $2as^2$ without. The second term grows quadratically in the sequence length: for Llama-3-8B (32 heads) one layer at 32K tokens would need $2 \times 32 \times 32768^2$ bytes $\approx 69$ GB of scores. FlashAttention (§8.7) never stores the score matrices, leaving the linear term. For Llama-3-8B ($h = 4096$, 32 layers) and one sequence of 8,192 tokens, this is $34 \times 8192 \times 4096$ bytes $= 1.14$ GB per layer, 36.5 GB in total, more than twice the 16 GB of the weights. The logits for the loss add $4 \times s \times V$ bytes in FP32, 4.2 GB for the vocabulary of $V = 128{,}256$ tokens.
 
 Activations grow linearly with the number of tokens per *micro-batch* (the sequences a GPU processes in one forward–backward pass): four sequences instead of one quadruple them, while the model states stay the same.
 
@@ -90,7 +90,7 @@ With roughly 76 of the 80 GB of an H100 usable after runtime overhead, and sever
 
 ### 8.2.1. Floating-Point Formats
 
-A binary **floating-point number** is $\pm 1.f \times 2^{e}$ with an exponent field of $E$ bits and a fraction (mantissa) field of $M$ bits ([3.5.1](/3.5.1#sec-1.2.3)). The exponent bits set the range, the largest and smallest representable magnitudes; the mantissa bits set the precision, the **machine epsilon** $2^{-M}$, which is the gap between $1$ and the next larger number. Deep learning uses several formats besides the FP32 of the **IEEE 754 standard** (**single precision**), written ExMy for $x$ exponent and $y$ mantissa bits.
+A binary **floating-point number** is $\pm 1.f \times 2^{e}$ with an exponent field of $E$ bits and a fraction (mantissa) field of $M$ bits ([3.5.1](/3.5.1#sec-1.2.3)). The exponent bits set the range, the largest and smallest representable magnitudes; the mantissa bits set the precision, the **machine epsilon** $2^{-M}$, which is the gap between $1$ and the next larger number. **Deep learning** uses several formats besides the FP32 of the **IEEE 754 standard** (**single precision**), written ExMy for $x$ exponent and $y$ mantissa bits.
 
 | Format | Bits (E, M) | Largest | Smallest normal | Machine epsilon | Main use |
 |---|---|---|---|---|---|
@@ -113,7 +113,7 @@ Smaller formats pay off on two counts. They halve or quarter the memory and the 
 
 **Definition 8.2.2 (Mixed-Precision Training)** **Mixed-precision training** (Micikevicius et al., ICLR 2018) performs the forward and backward passes, and stores the activations and gradients, in a 16-bit format (BF16 or FP16), with matrix products accumulated in FP32, while keeping an FP32 *master copy* of the weights: the optimizer updates the master weights in FP32 and then copies them, rounded, to 16 bits for the next step.
 
-The master copy is needed because of **rounding error** in the update $w \leftarrow w + \Delta w$. When $\lvert\Delta w\rvert$ is less than half the gap between $w$ and its neighbors in the 16-bit format, the sum rounds back to $w$ and the update is lost entirely. In BF16 the gap at $w$ is about $2^{-7}\lvert w\rvert$, so this happens as soon as $\lvert w\rvert$ exceeds about $256\,\lvert\Delta w\rvert$ (in FP16 about $2{,}048\,\lvert\Delta w\rvert$). The ratio is easily reached: Adam's steps are about the size of the learning rate, so a weight of $0.02$ with a learning rate decayed to $3 \times 10^{-5}$ has a ratio of about 670, and in pure BF16 it would stop moving. NumPy has no BF16 type, but rounding FP32 to its upper 16 bits emulates it exactly:
+The master copy is needed because of **rounding error** in the update $w \leftarrow w + \Delta w$. When $\lvert\Delta w\rvert$ is less than half the gap between $w$ and its neighbors in the 16-bit format, the sum rounds back to $w$ and the update is lost entirely. In BF16 the gap at $w$ is about $2^{-7}\lvert w\rvert$, so this happens as soon as $\lvert w\rvert$ exceeds about $256\,\lvert\Delta w\rvert$ (in FP16 about $2{,}048\,\lvert\Delta w\rvert$). The ratio is easily reached: **Adam**'s steps are about the size of the learning rate, so a weight of $0.02$ with a learning rate decayed to $3 \times 10^{-5}$ has a ratio of about 670, and in pure BF16 it would stop moving. NumPy has no BF16 type, but rounding FP32 to its upper 16 bits emulates it exactly:
 
 ```python
 import numpy as np
@@ -167,7 +167,7 @@ BF16 has the speed of FP16 on tensor cores and the range of FP32: values from $1
 FP8 doubles the peak matrix-multiplication throughput of BF16 on H100 and later GPUs, but E4M3 covers only magnitudes from about $0.016$ (normal) to $448$. FP8 training therefore multiplies each group of numbers by a scale factor before the conversion, chosen so that the group's largest absolute value maps to the format's maximum, and divides the result of the matrix product by the scales; this is loss scaling applied to every tensor.
 
 - *Per-tensor* scaling (the default of NVIDIA's Transformer Engine on Hopper) uses one scale per tensor, often taken from the maximum of recent steps ("delayed scaling"). An outlier channel with very large values forces a small scale, and the many small values of the tensor then underflow.
-- *Fine-grained* scaling, introduced at scale by DeepSeek-V3 (December 2024), uses one scale per tile of $1 \times 128$ elements for activations (one token, 128 channels) and per block of $128 \times 128$ for weights, so that an outlier spoils only its own tile. DeepSeek-V3 used E4M3 for all inputs of its FP8 matrix products, promoted partial sums to FP32 at short intervals because the FP8 tensor cores of the H800 accumulate with limited precision, and kept master weights, weight gradients and optimizer states in higher precision. Its pre-training loss stayed within 0.25% of a BF16 baseline.
+- *Fine-grained* scaling, introduced at scale by DeepSeek-V3 (December 2024), uses one scale per tile of $1 \times 128$ elements for activations (one **token**, 128 channels) and per block of $128 \times 128$ for weights, so that an outlier spoils only its own tile. DeepSeek-V3 used E4M3 for all inputs of its FP8 matrix products, promoted partial sums to FP32 at short intervals because the FP8 tensor cores of the H800 accumulate with limited precision, and kept master weights, weight gradients and optimizer states in higher precision. Its **pre-training** loss stayed within 0.25% of a BF16 baseline.
 - Blackwell GPUs (2025) support such block scaling in hardware with the *microscaling* formats of the Open Compute Project: MXFP8 uses blocks of 32 values with a shared power-of-two scale stored in 8 bits (E8M0).
 
 ### 8.2.6. Four-Bit Formats
@@ -178,7 +178,7 @@ Four bits are too few for a single floating-point format to be usable on its own
 
 ### 8.3.1. Collective Operations
 
-Parallel training needs GPUs to combine data: to sum gradients, to share parameters, to send tokens to experts. These operations are *collectives*, calls that all GPUs in a group join, implemented on NVIDIA GPUs by the NCCL library. Let each of $p$ GPUs hold a buffer of $n$ elements.
+Parallel training needs GPUs to combine data: to sum gradients, to share parameters, to send **tokens** to experts. These operations are *collectives*, calls that all GPUs in a group join, implemented on NVIDIA GPUs by the NCCL library. Let each of $p$ GPUs hold a buffer of $n$ elements.
 
 **Definition 8.3.1 (All-Reduce)** An **all-reduce** leaves on every GPU the elementwise sum (or another associative reduction) of the $p$ buffers. A **reduce-scatter** leaves on GPU $i$ only the $i$-th of $p$ equal slices of the sum, and an **all-gather** concatenates one slice from every GPU and leaves the whole result on every GPU. An all-reduce equals a reduce-scatter followed by an all-gather.
 
@@ -262,7 +262,7 @@ $$
 \frac{1}{p}\sum_{k=1}^{p}\nabla_{\boldsymbol{\theta}}\Bigl(\frac{p}{B}\sum_{i \in \mathcal{B}_k}\ell_i(\boldsymbol{\theta})\Bigr) = \frac{1}{B}\sum_{k=1}^{p}\sum_{i \in \mathcal{B}_k}\nabla_{\boldsymbol{\theta}}\ell_i(\boldsymbol{\theta}) = \nabla_{\boldsymbol{\theta}}\Bigl(\frac{1}{B}\sum_{i \in \mathcal{B}}\ell_i(\boldsymbol{\theta})\Bigr). \qquad \square
 $$
 
-(Operations that couple examples within a slice, such as batch normalization, break the identity unless their statistics are synchronized too.) Adding GPUs therefore means a larger batch, and the learning rate must be adjusted to it ([4.7.4](/4.7.4)). The communication is one all-reduce of all gradients per step, about $2 \times 2N$ bytes per GPU for $N$ parameters in BF16, and it can be hidden: PyTorch's `DistributedDataParallel` groups gradients into buckets of about 25 MB in the order the backward pass produces them and starts the all-reduce of each bucket while the backward pass continues on earlier layers. For a 7-billion-parameter model the 14 GB of gradients take about 50–75 ms on a well-connected cluster, less than the backward pass. The problem of plain data parallelism is memory: every GPU stores all 16 bytes per parameter, 112 GB for 7 billion parameters, and adding GPUs does not reduce it.
+(Operations that couple examples within a slice, such as **batch normalization**, break the identity unless their statistics are synchronized too.) Adding GPUs therefore means a larger batch, and the learning rate must be adjusted to it ([4.7.4](/4.7.4)). The communication is one all-reduce of all gradients per step, about $2 \times 2N$ bytes per GPU for $N$ parameters in BF16, and it can be hidden: PyTorch's `DistributedDataParallel` groups gradients into buckets of about 25 MB in the order the backward pass produces them and starts the all-reduce of each bucket while the backward pass continues on earlier layers. For a 7-billion-parameter model the 14 GB of gradients take about 50–75 ms on a well-connected cluster, less than the backward pass. The problem of plain data parallelism is memory: every GPU stores all 16 bytes per parameter, 112 GB for 7 billion parameters, and adding GPUs does not reduce it.
 
 ## 8.5. Sharding the Model States: ZeRO and FSDP
 
@@ -270,7 +270,7 @@ $$
 
 **Definition 8.5.1 (ZeRO)** The **Zero Redundancy Optimizer** (ZeRO; Rajbhandari et al., SC 2020) is data parallelism in which the model states are partitioned (*sharded*) across the $p$ data-parallel GPUs instead of replicated: each GPU stores, and updates, only its $1/p$ share. Stage 1 shards the optimizer states (including the FP32 master weights), stage 2 also the gradients, and stage 3 also the 16-bit parameters.
 
-ZeRO is not a new optimizer: the result of every step is the same as with plain Adam. Its trick is that an all-reduce is a reduce-scatter followed by an all-gather, and the update can be done between the two. After the reduce-scatter each GPU has the summed gradients of its own slice of the parameters, updates that slice with its optimizer states, and the all-gather then distributes the updated 16-bit parameters. Stages 1 and 2 therefore send exactly as much as plain data parallelism. Stage 3 frees each layer's parameters after use in the forward pass and must all-gather them again for the backward pass, three transfers of the model size instead of two, 1.5 times the traffic of data parallelism.
+ZeRO is not a new optimizer: the result of every step is the same as with plain **Adam**. Its trick is that an all-reduce is a reduce-scatter followed by an all-gather, and the update can be done between the two. After the reduce-scatter each GPU has the summed gradients of its own slice of the parameters, updates that slice with its optimizer states, and the all-gather then distributes the updated 16-bit parameters. Stages 1 and 2 therefore send exactly as much as plain data parallelism. Stage 3 frees each layer's parameters after use in the forward pass and must all-gather them again for the backward pass, three transfers of the model size instead of two, 1.5 times the traffic of data parallelism.
 
 | Strategy | Bytes per parameter on each GPU | Llama-3-70B, 64 GPUs | 512 GPUs | Communication relative to DP |
 |---|---|---|---|---|
@@ -293,7 +293,7 @@ Communication runs on a separate stream and is *prefetched*: the all-gather of u
 
 **Definition 8.6.1 (Tensor Parallelism)** **Tensor parallelism** (TP) splits the weight matrices of each layer across a group of GPUs (of size the *TP degree*), so that each GPU stores and multiplies only a slice of every matrix, and combines the partial results with collective operations inside the layer.
 
-Megatron-LM (Shoeybi et al. 2019) splits a Transformer's feed-forward block $Y = \operatorname{GeLU}(XW_1)W_2$ so that it needs only one all-reduce. $W_1 = [W_1^{(1)}, \dots, W_1^{(p)}]$ is split by columns; since GeLU acts elementwise, GPU $i$ computes $\operatorname{GeLU}(XW_1^{(i)})$ without communication. $W_2$ is split by the matching rows, and
+Megatron-LM (Shoeybi et al. 2019) splits a **Transformer**'s feed-forward block $Y = \operatorname{GeLU}(XW_1)W_2$ so that it needs only one all-reduce. $W_1 = [W_1^{(1)}, \dots, W_1^{(p)}]$ is split by columns; since GeLU acts elementwise, GPU $i$ computes $\operatorname{GeLU}(XW_1^{(i)})$ without communication. $W_2$ is split by the matching rows, and
 
 $$
 Y = \operatorname{GeLU}(XW_1)\,W_2 = \sum_{i=1}^{p}\operatorname{GeLU}\bigl(XW_1^{(i)}\bigr)\,W_2^{(i)},
@@ -325,7 +325,7 @@ print("sum of partial outputs (one all-reduce) is exact:",
 sum of partial outputs (one all-reduce) is exact: True
 ```
 
-Attention is split by heads in the same way: the query, key and value projections by columns, so that each GPU computes complete heads, and the output projection by rows, followed by one all-reduce. A Transformer layer thus needs two all-reduces in the forward pass and two in the backward pass, each of the size of the layer's activations. *Sequence parallelism* additionally splits the normalization and dropout regions, which TP alone replicates, along the token dimension, replacing each all-reduce by a reduce-scatter and an all-gather with the same total traffic; activation memory per GPU then shrinks by the TP degree.
+Attention is split by heads in the same way: the query, key and value projections by columns, so that each GPU computes complete heads, and the output projection by rows, followed by one all-reduce. A Transformer layer thus needs two all-reduces in the forward pass and two in the backward pass, each of the size of the layer's activations. *Sequence parallelism* additionally splits the normalization and **dropout** regions, which TP alone replicates, along the **token** dimension, replacing each all-reduce by a reduce-scatter and an all-gather with the same total traffic; activation memory per GPU then shrinks by the TP degree.
 
 The cost is that this communication lies on the critical path. For Llama-3-70B with TP degree 8 and a micro-batch of 4,096 tokens each GPU sends about $4 \times 2 \cdot \tfrac78 \times 4096 \times 8192 \times 2$ bytes $\approx 470$ MB per layer, and since both the traffic and the computation grow with the number of tokens, a larger batch does not dilute it. Over NVLink (450 GB/s) this is a fraction of the compute time; over a 50 GB/s network link it would be as long as the computation or longer. Tensor parallelism is therefore used within one server, with a degree of at most 8, and Megatron's measurements (a 162-billion-parameter GPT on 64 A100s) are fastest exactly at TP degree 8.
 
@@ -378,11 +378,11 @@ A GPU consists of many streaming multiprocessors (SMs), each with a small, fast 
 
 **Definition 8.7.1 (Arithmetic Intensity)** The **arithmetic intensity** of a computation is the number of floating-point operations it performs per byte of memory traffic. In the **roofline model** (Williams et al. 2009), a computation of intensity $I$ on a processor with peak compute $\pi$ (FLOP/s) and memory bandwidth $\beta$ (bytes/s) runs at most at $\min(\pi, I\beta)$; it is *memory-bound* if $I < \pi/\beta$ and *compute-bound* otherwise.
 
-For an A100, $\pi/\beta = 312\ \mathrm{TFLOP/s} \div 1.555\ \mathrm{TB/s} \approx 200$ FLOPs per byte; for an H100 about 295. Large **matrix multiplication** has intensity proportional to the matrix dimensions and is compute-bound. Elementwise operations, normalization and softmax have an intensity of a few FLOPs per byte and are memory-bound.
+For an A100, $\pi/\beta = 312\ \mathrm{TFLOP/s} \div 1.555\ \mathrm{TB/s} \approx 200$ **FLOPs** per byte; for an H100 about 295. Large **matrix multiplication** has intensity proportional to the matrix dimensions and is compute-bound. Elementwise operations, normalization and **softmax** have an intensity of a few FLOPs per byte and are memory-bound.
 
 ### 8.7.2. Why Standard Attention Is Memory-Bound
 
-Standard attention for one head computes $S = QK^{\mathsf T}/\sqrt{d}$, $P = \operatorname{softmax}(S)$ and $O = PV$ with $Q, K, V \in \mathbb{R}^{N \times d}$ as separate kernels. Each kernel writes its result to HBM and the next reads it back, so the two $N \times N$ matrices $S$ and $P$ make a round trip through HBM, and the backward pass reads $P$ again. Per score this is about $4d$ FLOPs (the two matrix products) for 8 bytes of BF16 traffic, an intensity of $d/2 = 32$–$64$ for head dimensions 64–128, far below 200. For Llama-3-8B with 8K tokens, $P$ alone is $32 \times 8192^2 \times 2$ bytes $\approx 4.3$ GB per layer, and keeping it for the backward pass of 32 layers would take 137 GB.
+Standard attention for one head computes $S = QK^{\mathsf T}/\sqrt{d}$, $P = \operatorname{softmax}(S)$ and $O = PV$ with $Q, K, V \in \mathbb{R}^{N \times d}$ as separate kernels. Each kernel writes its result to HBM and the next reads it back, so the two $N \times N$ matrices $S$ and $P$ make a round trip through HBM, and the backward pass reads $P$ again. Per score this is about $4d$ FLOPs (the two matrix products) for 8 bytes of BF16 traffic, an intensity of $d/2 = 32$–$64$ for head dimensions 64–128, far below 200. For Llama-3-8B with 8K **tokens**, $P$ alone is $32 \times 8192^2 \times 2$ bytes $\approx 4.3$ GB per layer, and keeping it for the backward pass of 32 layers would take 137 GB.
 
 ### 8.7.3. Tiling and the Online Softmax
 
@@ -445,15 +445,15 @@ Each GPU generation has required a new version. FlashAttention-2 (2023) reduced 
 
 ### 8.8.1. Counting FLOPs: $C \approx 6ND$
 
-For a dense Transformer with $N$ parameters trained on $D$ tokens, the training compute is approximately
+For a dense **Transformer** with $N$ parameters trained on $D$ **tokens**, the training compute is approximately
 
 $$
 C \approx 6ND \ \text{FLOPs}.
 $$
 
-In the forward pass every weight takes part in one multiplication and one addition per token, 2 FLOPs. The backward pass of a linear layer $\boldsymbol{y} = W\boldsymbol{x}$ computes two products of the same size, $W^{\mathsf T}\nabla_{\boldsymbol{y}}$ for the input gradient that is passed back and $\nabla_{\boldsymbol{y}}\boldsymbol{x}^{\mathsf T}$ for the weight gradient, 4 FLOPs per weight and token. Inference needs only the forward pass, about $2N$ FLOPs per token. For GPT-3, $6 \times 175 \times 10^9 \times 300 \times 10^9 = 3.15 \times 10^{23}$ FLOPs, close to the $3.14 \times 10^{23}$ reported. The rule has three refinements:
+In the forward pass every weight takes part in one multiplication and one addition per token, 2 **FLOPs**. The backward pass of a linear layer $\boldsymbol{y} = W\boldsymbol{x}$ computes two products of the same size, $W^{\mathsf T}\nabla_{\boldsymbol{y}}$ for the input gradient that is passed back and $\nabla_{\boldsymbol{y}}\boldsymbol{x}^{\mathsf T}$ for the weight gradient, 4 FLOPs per weight and token. Inference needs only the forward pass, about $2N$ FLOPs per token. For GPT-3, $6 \times 175 \times 10^9 \times 300 \times 10^9 = 3.15 \times 10^{23}$ FLOPs, close to the $3.14 \times 10^{23}$ reported. The rule has three refinements:
 
-- the attention products $QK^{\mathsf T}$ and $PV$ have no weights and are not counted; their share relative to $6ND$ is about $s/(12h)$ for sequence length $s$ and hidden size $h$ with a causal mask, 4% for Llama-3-405B at 8K tokens but 67% at 128K;
+- the attention products $QK^{\mathsf T}$ and $PV$ have no weights and are not counted; their share relative to $6ND$ is about $s/(12h)$ for sequence length $s$ and hidden size $h$ with a **causal mask**, 4% for Llama-3-405B at 8K tokens but 67% at 128K;
 - for a mixture of experts, $N$ is the number of *activated* parameters per token (37 billion for DeepSeek-V3, not 671 billion);
 - recomputation makes the hardware execute about $8ND$ FLOPs, but the useful work remains $6ND$.
 
@@ -482,7 +482,7 @@ Well-tuned large runs reach about 40% MFU; the rest goes to communication that i
 | GPU-hours | $1024 \times 4320$ | 4.4 million |
 | cost at an assumed \$2 per GPU-hour | | about \$8.8 million |
 
-The result is sensitive to the assumptions: using the sparse peak by mistake halves the estimated time, and if the 40% were HFU with full recomputation, the run would take a third longer. Meta reported 6.4 million H100-hours for the pre-training of Llama-3-70B.
+The result is sensitive to the assumptions: using the sparse peak by mistake halves the estimated time, and if the 40% were HFU with full recomputation, the run would take a third longer. Meta reported 6.4 million H100-hours for the **pre-training** of Llama-3-70B.
 
 ### 8.8.3. Checking Published Runs
 
@@ -502,7 +502,7 @@ Both runs used their GPUs about equally well; DeepSeek-V3 was about 11 times che
 
 ### 8.9.1. Prefill and Decode
 
-Generating a response has two phases with very different costs. In the **prefill** phase the whole prompt is processed in one forward pass: each weight read from HBM is used for all prompt tokens, so prefill is compute-bound. In the *decode* phase each sequence produces one token per step, and every step reads all weights and the sequence's KV cache from HBM ([4.7.6](/4.7.6)). With BF16 weights (2 bytes) used for 2 FLOPs per sequence in the batch, the arithmetic intensity of decoding is about the batch size, far below the H100's $\pi/\beta \approx 295$: decoding is memory-bound. An upper bound on the speed of one sequence is therefore
+Generating a response has two phases with very different costs. In the **prefill** phase the whole **prompt** is processed in one forward pass: each weight read from HBM is used for all prompt **tokens**, so **prefill** is compute-bound. In the *decode* phase each sequence produces one token per step, and every step reads all weights and the sequence's **KV cache** from HBM ([4.7.6](/4.7.6)). With BF16 weights (2 bytes) used for 2 **FLOPs** per sequence in the batch, the arithmetic intensity of decoding is about the batch size, far below the H100's $\pi/\beta \approx 295$: decoding is memory-bound. An upper bound on the speed of one sequence is therefore
 
 $$
 \text{tokens per second per sequence} \le \frac{\text{HBM bandwidth}}{\text{bytes read per decode step}}.
@@ -510,7 +510,7 @@ $$
 
 For Llama-3-70B in BF16 on 8 H100s with tensor parallelism (aggregate bandwidth 26.8 TB/s), 141 GB of weights per step give at most about 189 tokens per second for a single sequence; FP8 weights and KV cache double this. A batch of 256 sequences shares the weight reads, but each sequence reads its own KV cache, 320 KiB per token for this model, 344 GB in total at 4K tokens of context: the batch produces about 14,000 tokens per second in total, but each user gets only about 55. Batching raises throughput, not the speed of each sequence. Measured systems typically reach a fraction of these bounds.
 
-The KV cache is therefore the central resource of serving, and many architectural changes aim at shrinking it: grouped-query attention ([4.7.6](/4.7.6)), multi-head latent attention and linear-attention hybrids ([4.7.9](/4.7.9)), and quantizing the cache to 8 or 4 bits. Large services also separate the two phases onto different GPUs (*disaggregated* prefill and decode), since they need different hardware balances.
+The KV cache is therefore the central resource of serving, and many architectural changes aim at shrinking it: **grouped-query attention** ([4.7.6](/4.7.6)), **multi-head latent attention** and linear-attention hybrids ([4.7.9](/4.7.9)), and quantizing the cache to 8 or 4 bits. Large services also separate the two phases onto different GPUs (*disaggregated* prefill and decode), since they need different hardware balances.
 
 ### 8.9.2. Continuous Batching
 
@@ -572,10 +572,10 @@ The draft model can be a small model of the same family, or lightweight extra he
 
 ## Summary
 
-- Training with mixed-precision Adam stores 16 bytes per parameter of model states (BF16 weights and gradients, FP32 master weights and two moments); activations take about $34\,sh$ bytes per layer and sequence with FlashAttention and can be traded for computation by recomputation (+33% FLOPs for full recomputation).
+- Training with mixed-precision **Adam** stores 16 bytes per parameter of model states (BF16 weights and gradients, FP32 master weights and two moments); activations take about $34\,sh$ bytes per layer and sequence with FlashAttention and can be traded for computation by recomputation (+33% **FLOPs** for full recomputation).
 - BF16 has the range of FP32 and 7 mantissa bits; mixed precision computes in 16 bits but accumulates and updates in FP32, because small updates are rounded away in 16 bits. FP16 needs loss scaling against underflow. FP8 and 4-bit formats (MXFP4, NVFP4) work with fine-grained block scales; frontier models are now pre-trained in FP8 and NVFP4.
 - An all-reduce is a reduce-scatter plus an all-gather; the ring algorithm sends $2(p-1)/p$ times the data per GPU, the optimum. Bandwidth falls by about ten times from HBM to NVLink to the network.
-- Data parallelism equals large-batch SGD and communicates once per step; ZeRO shards optimizer states, gradients and parameters (stage 3 = FSDP, 1.5 times the traffic); tensor parallelism splits matrices and must stay inside a server; pipeline parallelism splits layers and pays a bubble of $(p-1)/(m+p-1)$. Practice: TP inside the server, PP until the model fits, DP for the rest, plus context and expert parallelism.
-- Attention is memory-bound; FlashAttention tiles it in SRAM with an exact online softmax and recomputes scores in the backward pass, using linear instead of quadratic memory and running several times faster.
+- Data parallelism equals large-batch **SGD** and communicates once per step; ZeRO shards optimizer states, gradients and parameters (stage 3 = FSDP, 1.5 times the traffic); tensor parallelism splits matrices and must stay inside a server; pipeline parallelism splits layers and pays a bubble of $(p-1)/(m+p-1)$. Practice: TP inside the server, PP until the model fits, DP for the rest, plus context and expert parallelism.
+- Attention is memory-bound; FlashAttention tiles it in SRAM with an exact online **softmax** and recomputes scores in the backward pass, using linear instead of quadratic memory and running several times faster.
 - Training compute is $C \approx 6ND$ (activated parameters for MoE); time is $C$ divided by GPUs, dense peak and MFU (about 40% in good runs).
-- Decoding is memory-bound: tokens per second per sequence are bounded by bandwidth divided by the bytes read per step. Continuous batching, PagedAttention (paged KV cache, under 4% waste) and speculative decoding (exact, 2–3 times faster) are the standard serving techniques.
+- Decoding is memory-bound: **tokens** per second per sequence are bounded by bandwidth divided by the bytes read per step. Continuous batching, PagedAttention (paged **KV cache**, under 4% waste) and speculative decoding (exact, 2–3 times faster) are the standard serving techniques.

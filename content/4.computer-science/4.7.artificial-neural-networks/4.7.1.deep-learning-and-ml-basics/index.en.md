@@ -3,13 +3,13 @@ title: Deep Learning and Machine Learning Basics
 description: What deep learning is and how it developed, from the McCulloch–Pitts neuron to the frontier models of 2026; learning algorithms described by task, performance measure and experience; capacity, generalization error, underfitting, overfitting and double descent; regularization and weight decay; hyperparameters, validation and early stopping; maximum likelihood, conditional log-likelihood, cross-entropy and the softmax function as the common origin of the standard loss functions.
 ---
 
-This course is about neural networks trained on data: how they are built, how their parameters are found, and why the resulting models work as well as they do. The first chapter sets the stage in two ways. Its first part describes what deep learning is, how it grew out of seventy years of research on artificial neurons, and what models trained this way can do as of October 2026, from writing machine-checked proofs to working as autonomous coding agents. Its second part collects the machine learning concepts on which every later chapter relies: a learning algorithm is described by a task, a performance measure and a kind of experience; the central difficulty is generalization, the gap between doing well on the training data and doing well on new data; and most loss functions in deep learning are negative log-likelihoods. These ideas are treated at more length elsewhere in this wiki: the classical machine learning view in 4.6 ([4.6.1](/4.6.1), [4.6.2](/4.6.2)), and the statistical theory in 3.2 (**maximum likelihood estimation**, [3.2.3](/3.2.3)) and 3.3 (model selection, [3.3.11](/3.3.11)); here we state them in the form deep learning uses. The intuitive picture of a neuron and of gradient descent from [4.5.4](/4.5.4) is made precise in the next chapter, [4.7.2](/4.7.2).
+This course is about neural networks trained on data: how they are built, how their parameters are found, and why the resulting models work as well as they do. The first chapter sets the stage in two ways. Its first part describes what deep learning is, how it grew out of seventy years of research on artificial neurons, and what models trained this way can do as of October 2026, from writing machine-checked proofs to working as autonomous **coding agents**. Its second part collects the **machine learning** concepts on which every later chapter relies: a learning algorithm is described by a task, a performance measure and a kind of experience; the central difficulty is generalization, the gap between doing well on the training data and doing well on new data; and most loss functions in deep learning are negative log-likelihoods. These ideas are treated at more length elsewhere in this wiki: the classical machine learning view in 4.6 ([4.6.1](/4.6.1), [4.6.2](/4.6.2)), and the statistical theory in 3.2 (**maximum likelihood estimation**, [3.2.3](/3.2.3)) and 3.3 (model selection, [3.3.11](/3.3.11)); here we state them in the form deep learning uses. The intuitive picture of a neuron and of **gradient descent** from [4.5.4](/4.5.4) is made precise in the next chapter, [4.7.2](/4.7.2).
 
 ## 1.1. What Deep Learning Is
 
 ### 1.1.1. Artificial Intelligence, Machine Learning and Deep Learning
 
-Artificial intelligence (4.5) is the broad goal of building systems that act intelligently. Early systems encoded human knowledge directly as rules and knowledge bases; machine learning (4.6) replaces hand-written rules by programs that improve with data, but classical methods such as **support vector machines** or naive Bayes still depend on features designed by people. Deep learning removes this last hand-designed stage as well.
+**Artificial intelligence** (4.5) is the broad goal of building systems that act intelligently. Early systems encoded human knowledge directly as rules and knowledge bases; **machine learning** (4.6) replaces hand-written rules by programs that improve with data, but classical methods such as **support vector machines** or **naive Bayes** still depend on features designed by people. Deep learning removes this last hand-designed stage as well.
 
 **Definition 1.1.1 (Deep Learning)** **Deep learning** is the family of machine learning methods that learn a composition of many parameterized, differentiable transformations (layers), $f = f^{(L)} \circ \cdots \circ f^{(1)}$, end to end from data, typically by gradient-based optimization of a single objective. The intermediate outputs of the layers are learned *representations* of the input.
 
@@ -48,10 +48,10 @@ A network with one hidden layer can already approximate any continuous function 
 
 ### 1.1.4. The State of the Field in 2026
 
-The systems that dominate public attention in 2026 are large Transformer-based models ([4.7.6](/4.7.6)), pre-trained on trillions of tokens of text, images and video ([4.7.7](/4.7.7)), then post-trained with supervised fine-tuning and reinforcement learning ([4.7.9](/4.7.9)). Some indications of what they can do, as of October 2026:
+The systems that dominate public attention in 2026 are large Transformer-based models ([4.7.6](/4.7.6)), pre-trained on trillions of **tokens** of text, images and video ([4.7.7](/4.7.7)), then post-trained with supervised fine-tuning and **reinforcement learning** ([4.7.9](/4.7.9)). Some indications of what they can do, as of October 2026:
 
 - Mathematics: In July 2025 experimental models of OpenAI and Google DeepMind reached gold-medal level at the International Mathematical Olympiad. In September 2026 Anthropic reported that Claude, working largely autonomously for 11 days, produced the first complete formalization of Fermat's Last Theorem in the proof assistant Lean, following the Darmon–Diamond–Taylor exposition of Wiles's proof; the result is checked by Lean using only its standard axioms. This is a translation of a known proof into a machine-checkable form, not a new proof, but at a scale (millions of lines of Lean) that human formalization projects had planned over many years.
-- Programming: At the ICPC World Finals in September 2025, an advanced version of Gemini 2.5 Deep Think solved 10 of the 12 problems, a gold-medal result that would have ranked second among the human teams, and an OpenAI system solved all 12. Coding agents such as Claude Code (released as a research preview in February 2025) and OpenAI Codex now find the relevant files in a codebase, edit them, run tests and iterate on the feedback.
+- Programming: At the ICPC World Finals in September 2025, an advanced version of Gemini 2.5 Deep Think solved 10 of the 12 problems, a gold-medal result that would have ranked second among the human teams, and an OpenAI system solved all 12. **Coding agents** such as Claude Code (released as a research preview in February 2025) and OpenAI Codex now find the relevant files in a codebase, edit them, run tests and iterate on the feedback.
 - Agents: A model in a loop with tools (search, a code interpreter, a browser, a terminal) can carry out tasks of many steps. The open-source personal agent OpenClaw, which spread in early 2026, became one of the most-starred projects on GitHub within months.
 - Frontier models: Among the most capable proprietary models in October 2026 are OpenAI's GPT-6 Astra (released on 3 September 2026) and Anthropic's Claude Fable 5.1 (1 September 2026). OpenAI has not published GPT-6's architecture; press reports that it uses *recurrent depth* (a looped Transformer, the same blocks applied several times) are unconfirmed.
 - Open-weight models: The strongest open models are sparse mixtures of experts with hybrid attention: Alibaba's Qwen3.5 (February 2026; up to 397 billion parameters with 17 billion active per token; three linear-attention Gated DeltaNet layers for every full attention layer), NVIDIA's Nemotron 3 Ultra (June 2026; 550 billion parameters, 55 billion active; mostly Mamba-2 layers with a few attention layers; pre-trained in 4-bit NVFP4 arithmetic) and Moonshot AI's Kimi K3 (July 2026; 2.8 trillion parameters, 104 billion active, 16 of 896 experts routed per token, a context of one million tokens).
@@ -66,7 +66,7 @@ The classical definition of learning, due to Mitchell (1997), separates three in
 
 **Definition 1.2.1 (Machine Learning)** A computer program is said to learn from experience $E$ with respect to some class of tasks $T$ and performance measure $P$ if its performance at tasks in $T$, as measured by $P$, improves with experience $E$. A program that learns in this sense is a **learning algorithm**; studying such programs is **machine learning**.
 
-Adding the model $M$, the family of functions from which the program chooses, gives the four components $(T, P, E, M)$ in terms of which any learning method can be described. The unit of data is an example: a collection of features measured on an object or event, usually written as a vector $\boldsymbol{x} \in \mathbb{R}^n$ (the color, diameter and height of a bucket; the pixel intensities of an image; the tokens of a sentence).
+Adding the model $M$, the family of functions from which the program chooses, gives the four components $(T, P, E, M)$ in terms of which any learning method can be described. The unit of data is an example: a collection of features measured on an object or event, usually written as a vector $\boldsymbol{x} \in \mathbb{R}^n$ (the color, diameter and height of a bucket; the pixel intensities of an image; the **tokens** of a sentence).
 
 ### 1.2.2. The Task T
 
@@ -90,7 +90,7 @@ The boundaries are not sharp. A language model ([4.7.7](/4.7.7)) estimates the d
 
 For classification the natural measures are the accuracy, the fraction of examples classified correctly, and the error rate $1 - \text{accuracy}$, which is the average of the 0–1 loss $\boldsymbol{1}\{\hat y \ne y\}$. For regression one uses the **mean squared error** or the mean absolute error. For density estimation one uses the average log-probability that the model assigns to the examples (§1.5). Three remarks apply to all of them.
 
-- Performance is measured on a test set of examples not used for training, because the goal is performance on new data (§1.3).
+- Performance is measured on a **test set** of examples not used for training, because the goal is performance on new data (§1.3).
 - The quantity we report is often not the one we optimize. Accuracy is piecewise constant in the parameters, so its gradient is zero almost everywhere; training minimizes a differentiable surrogate such as the cross-entropy (§1.5), and accuracy is computed only for evaluation.
 - Choosing $P$ is part of the problem: a medical test values false negatives and false positives differently, and the quality of a translation or of a chatbot answer has no simple formula (human preference judgments and model-based graders are used). Evaluation measures for classifiers and rankers are treated in [4.6.2](/4.6.2).
 
@@ -100,20 +100,20 @@ The experience is the data the algorithm is allowed to see during training.
 
 - In **supervised learning** each example $\boldsymbol{x}$ comes with a target $y$ provided by a teacher, and the algorithm learns to predict $y$ from $\boldsymbol{x}$, in probabilistic terms to estimate $p(y \mid \boldsymbol{x})$.
 - In **unsupervised learning** there are only examples $\boldsymbol{x}$, and the algorithm learns something about their distribution: a density, clusters, a low-dimensional representation.
-- In self-supervised learning the targets are parts of the data itself: a masked word, the next token, a hidden patch of an image. This turns unlabeled text and images into a supervised problem of essentially unlimited size and is how large models are pre-trained ([4.7.7](/4.7.7)).
-- In reinforcement learning the algorithm interacts with an environment and receives rewards for its actions rather than correct answers; it is used to post-train language models on human preferences and on problems with checkable answers ([4.7.9](/4.7.9)).
+- In **self-supervised learning** the targets are parts of the data itself: a masked word, the next token, a hidden patch of an image. This turns unlabeled text and images into a supervised problem of essentially unlimited size and is how large models are pre-trained ([4.7.7](/4.7.7)).
+- In **reinforcement learning** the algorithm interacts with an environment and receives rewards for its actions rather than correct answers; it is used to post-train language models on human preferences and on problems with checkable answers ([4.7.9](/4.7.9)).
 
 A dataset of $m$ examples is often written as a **design matrix** $X \in \mathbb{R}^{m \times n}$ whose $i$-th row is $\boldsymbol{x}^{(i)\mathsf T}$, together with a target vector $\boldsymbol{y} \in \mathbb{R}^m$ in the supervised case. Examples of variable size (images of different resolutions, sentences of different lengths) are represented instead as a set $\{\boldsymbol{x}^{(1)}, \dots, \boldsymbol{x}^{(m)}\}$.
 
 ### 1.2.5. Example: Linear Regression
 
-Linear regression shows all components in their simplest form. The task is to predict $y \in \mathbb{R}$ from $\boldsymbol{x} \in \mathbb{R}^n$; the model is the family of linear functions $\hat y = \boldsymbol{w}^{\mathsf T}\boldsymbol{x}$ with parameters $\boldsymbol{w} \in \mathbb{R}^n$ (an intercept is absorbed by appending a constant feature $1$ to $\boldsymbol{x}$); the performance measure is the mean squared error on the test set,
+Linear regression shows all components in their simplest form. The task is to predict $y \in \mathbb{R}$ from $\boldsymbol{x} \in \mathbb{R}^n$; the model is the family of linear functions $\hat y = \boldsymbol{w}^{\mathsf T}\boldsymbol{x}$ with parameters $\boldsymbol{w} \in \mathbb{R}^n$ (an intercept is absorbed by appending a constant feature $1$ to $\boldsymbol{x}$); the performance measure is the **mean squared error** on the test set,
 
 $$
 \mathrm{MSE}_{\mathrm{test}} = \frac{1}{m^{\mathrm{test}}} \sum_{i=1}^{m^{\mathrm{test}}} \bigl(\hat y^{(i)}_{\mathrm{test}} - y^{(i)}_{\mathrm{test}}\bigr)^2 = \frac{1}{m^{\mathrm{test}}} \bigl\|X^{\mathrm{test}}\boldsymbol{w} - \boldsymbol{y}^{\mathrm{test}}\bigr\|^2 ;
 $$
 
-the experience is a training set $(X^{\mathrm{train}}, \boldsymbol{y}^{\mathrm{train}})$. Since the test set may not be used, the algorithm minimizes the training error $\mathrm{MSE}_{\mathrm{train}} = \frac{1}{m}\|X^{\mathrm{train}}\boldsymbol{w} - \boldsymbol{y}^{\mathrm{train}}\|^2$ instead. Setting its **gradient** $\frac{2}{m}X^{\mathrm{train}\mathsf T}(X^{\mathrm{train}}\boldsymbol{w} - \boldsymbol{y}^{\mathrm{train}})$ to zero gives the normal equations and, when $X^{\mathrm{train}\mathsf T}X^{\mathrm{train}}$ is invertible,
+the experience is a **training set** $(X^{\mathrm{train}}, \boldsymbol{y}^{\mathrm{train}})$. Since the test set may not be used, the algorithm minimizes the training error $\mathrm{MSE}_{\mathrm{train}} = \frac{1}{m}\|X^{\mathrm{train}}\boldsymbol{w} - \boldsymbol{y}^{\mathrm{train}}\|^2$ instead. Setting its **gradient** $\frac{2}{m}X^{\mathrm{train}\mathsf T}(X^{\mathrm{train}}\boldsymbol{w} - \boldsymbol{y}^{\mathrm{train}})$ to zero gives the normal equations and, when $X^{\mathrm{train}\mathsf T}X^{\mathrm{train}}$ is invertible,
 
 $$
 \boldsymbol{w} = \bigl(X^{\mathrm{train}\mathsf T}X^{\mathrm{train}}\bigr)^{-1}X^{\mathrm{train}\mathsf T}\boldsymbol{y}^{\mathrm{train}},
@@ -132,9 +132,9 @@ To connect training and test performance we need an assumption about how the dat
 $$
 R(f) = \mathbb{E}_{(\boldsymbol{x}, y) \sim p_{\mathrm{data}}}\bigl[L(f(\boldsymbol{x}), y)\bigr],
 $$
-and the **training error** (or empirical risk) on a training set $\{(\boldsymbol{x}^{(i)}, y^{(i)})\}_{i=1}^m$ is $\hat R_m(f) = \frac{1}{m}\sum_{i=1}^m L(f(\boldsymbol{x}^{(i)}), y^{(i)})$. The difference $R(f) - \hat R_m(f)$ is the **generalization gap**.
+and the **training error** (or empirical risk) on a **training set** $\{(\boldsymbol{x}^{(i)}, y^{(i)})\}_{i=1}^m$ is $\hat R_m(f) = \frac{1}{m}\sum_{i=1}^m L(f(\boldsymbol{x}^{(i)}), y^{(i)})$. The difference $R(f) - \hat R_m(f)$ is the **generalization gap**.
 
-The test error is an unbiased estimate of $R(f)$ as long as the test set was not used to choose $f$. For a fixed $f$, $\hat R_m(f)$ is also an unbiased estimate of $R(f)$; but the learned $\hat f$ is chosen to make $\hat R_m$ small, so $\mathbb{E}[\hat R_m(\hat f)] \le \mathbb{E}[R(\hat f)]$ and the training error is optimistic. Choosing $\hat f$ by minimizing $\hat R_m$ over a model class is called **empirical risk minimization**. Two goals follow, and they pull in opposite directions:
+The test error is an unbiased estimate of $R(f)$ as long as the **test set** was not used to choose $f$. For a fixed $f$, $\hat R_m(f)$ is also an unbiased estimate of $R(f)$; but the learned $\hat f$ is chosen to make $\hat R_m$ small, so $\mathbb{E}[\hat R_m(\hat f)] \le \mathbb{E}[R(\hat f)]$ and the training error is optimistic. Choosing $\hat f$ by minimizing $\hat R_m$ over a model class is called **empirical risk minimization**. Two goals follow, and they pull in opposite directions:
 
 1. make the training error small, which requires a sufficiently rich model;
 2. make the generalization gap small, which requires that the model cannot simply memorize the training set.
@@ -151,8 +151,8 @@ The typical behavior is the U-shaped curve on the right: as capacity grows, the 
 
 Two observations qualify this picture for deep networks.
 
-- Averaged over all possible data-generating distributions, every learning algorithm has the same expected error on unseen points; this is the *no free lunch theorem* (Wolpert 1996). A learning algorithm works only because its assumptions, its *inductive bias*, match the problems we care about; the architecture of a network (convolution for images, [4.7.3](/4.7.3); attention for sequences, [4.7.6](/4.7.6)) is such an assumption.
-- Modern networks often have far more parameters than training examples and can fit even randomly relabeled data perfectly (Zhang et al. 2017), yet they generalize well on real data. When the capacity is increased past the point where the model can interpolate the training set, the test error frequently decreases again, a phenomenon called *double descent* (Belkin et al. 2019; Nakkiran et al. 2020 for deep networks). Among the many functions that fit the data, gradient descent from a small initialization tends to find simple ones, an implicit regularization that the parameter count alone does not capture. The classical U-curve thus describes the regime below the interpolation threshold, and in practice the capacity of deep networks is controlled less by their size than by data, regularization and training time.
+- Averaged over all possible data-generating distributions, every learning algorithm has the same expected error on unseen points; this is the *no free lunch theorem* (Wolpert 1996). A learning algorithm works only because its assumptions, its *inductive bias*, match the problems we care about; the architecture of a network (**convolution** for images, [4.7.3](/4.7.3); attention for sequences, [4.7.6](/4.7.6)) is such an assumption.
+- Modern networks often have far more parameters than training examples and can fit even randomly relabeled data perfectly (Zhang et al. 2017), yet they generalize well on real data. When the capacity is increased past the point where the model can interpolate the training set, the test error frequently decreases again, a phenomenon called *double descent* (Belkin et al. 2019; Nakkiran et al. 2020 for deep networks). Among the many functions that fit the data, **gradient descent** from a small initialization tends to find simple ones, an implicit regularization that the parameter count alone does not capture. The classical U-curve thus describes the regime below the interpolation threshold, and in practice the capacity of deep networks is controlled less by their size than by data, regularization and training time.
 
 ### 1.3.3. Regularization
 
@@ -172,11 +172,11 @@ With $\Omega(\boldsymbol{w}) = \frac12\|\boldsymbol{w}\|^2$ this is **ridge regr
 
 **Definition 1.4.1 (Hyperparameter)** A **hyperparameter** is a setting that controls the behavior of a learning algorithm and is not adapted by the algorithm itself during training.
 
-The degree of the polynomial and the penalty weight $\lambda$ above are hyperparameters; so are the number and width of the layers of a network, the learning rate and its schedule, the batch size, the number of training steps and the dropout rate. A setting is made a hyperparameter rather than a parameter either because it is hard to optimize (the number of layers is discrete) or, more fundamentally, because learning it on the training set would always choose the most complex option: $\lambda = 0$ and the highest degree minimize the training error.
+The degree of the polynomial and the penalty weight $\lambda$ above are **hyperparameters**; so are the number and width of the layers of a network, the learning rate and its schedule, the batch size, the number of training steps and the dropout rate. A setting is made a hyperparameter rather than a parameter either because it is hard to optimize (the number of layers is discrete) or, more fundamentally, because learning it on the **training set** would always choose the most complex option: $\lambda = 0$ and the highest degree minimize the training error.
 
 ### 1.4.2. Validation Sets and Cross-Validation
 
-Hyperparameters must therefore be chosen on data that the model is not trained on, and the test set cannot be used for this, since an error estimate computed on data that influenced the choice is optimistic. The usual solution splits the available data into three parts:
+Hyperparameters must therefore be chosen on data that the model is not trained on, and the **test set** cannot be used for this, since an error estimate computed on data that influenced the choice is optimistic. The usual solution splits the available data into three parts:
 
 | Part | Used for | Typical share |
 |---|---|---|
@@ -184,19 +184,19 @@ Hyperparameters must therefore be chosen on data that the model is not trained o
 | validation set | comparing hyperparameter settings and deciding when to stop | 10–20% |
 | test set | one final estimate of the generalization error, after all choices are made | 10–20% |
 
-A single hold-out split is cheap but spends data, and with a small validation set the comparison is noisy. **Cross-validation** uses the data more efficiently: in $k$-fold cross-validation the training data are divided into $k$ folds, the model is trained $k$ times, each time validated on a different fold, and the $k$ validation errors are averaged ($k = 5$ or $10$ is common). It costs $k$ trainings, which is acceptable for classical models (see [4.6.2](/4.6.2) and [3.4.10](/3.4.10)) but rarely for large networks, where datasets are big enough that a single validation set gives a precise estimate. Whatever the method, the test set stays untouched until the end; benchmark test sets that a whole research community has tuned against for years are, in effect, validation sets, and their error estimates become optimistic for the same reason.
+A single hold-out split is cheap but spends data, and with a small **validation set** the comparison is noisy. **Cross-validation** uses the data more efficiently: in $k$-fold **cross-validation** the training data are divided into $k$ folds, the model is trained $k$ times, each time validated on a different fold, and the $k$ validation errors are averaged ($k = 5$ or $10$ is common). It costs $k$ trainings, which is acceptable for classical models (see [4.6.2](/4.6.2) and [3.4.10](/3.4.10)) but rarely for large networks, where datasets are big enough that a single validation set gives a precise estimate. Whatever the method, the test set stays untouched until the end; benchmark test sets that a whole research community has tuned against for years are, in effect, validation sets, and their error estimates become optimistic for the same reason.
 
 ### 1.4.3. Hyperparameter Search and Early Stopping
 
 With few hyperparameters a grid search over all combinations is feasible. With many, random search is more efficient, because usually only a few hyperparameters matter and a grid wastes most trials on varying the unimportant ones (Bergstra and Bengio 2012); Bayesian optimization and successive-halving methods spend more trials on promising regions. For large models the search is done on small models, and the best settings are transferred to the large one by empirical scaling rules ([4.7.9](/4.7.9)).
 
-The number of training steps is a hyperparameter that comes almost for free. During training of a high-capacity model the training error keeps decreasing, while the validation error typically decreases, flattens and then rises as the model starts to overfit. *Early stopping* monitors the validation error periodically, keeps a copy of the parameters with the lowest value seen so far, and stops when it has not improved for a given number of evaluations (the patience); the saved parameters are returned. For a linear model with squared loss and gradient descent from zero, early stopping is approximately equivalent to an $L^2$ penalty whose weight decreases with the number of steps, so it is a regularizer in the sense of Definition 1.3.3.
+The number of training steps is a hyperparameter that comes almost for free. During training of a high-capacity model the training error keeps decreasing, while the validation error typically decreases, flattens and then rises as the model starts to overfit. *Early stopping* monitors the validation error periodically, keeps a copy of the parameters with the lowest value seen so far, and stops when it has not improved for a given number of evaluations (the patience); the saved parameters are returned. For a linear model with squared loss and **gradient descent** from zero, early stopping is approximately equivalent to an $L^2$ penalty whose weight decreases with the number of steps, so it is a regularizer in the sense of Definition 1.3.3.
 
 ## 1.5. Maximum Likelihood and Loss Functions
 
 ### 1.5.1. Maximum Likelihood Estimation
 
-Where do loss functions come from? Most of those used in deep learning are derived from one principle, **maximum likelihood estimation** ([3.2.3](/3.2.3)). Consider a parametric family $p_{\mathrm{model}}(\boldsymbol{x}; \boldsymbol{\theta})$ and i.i.d. examples $\boldsymbol{x}^{(1)}, \dots, \boldsymbol{x}^{(m)}$ from $p_{\mathrm{data}}$. The maximum likelihood estimator is
+Where do loss functions come from? Most of those used in deep learning are derived from one principle, **maximum likelihood estimation** ([3.2.3](/3.2.3)). Consider a parametric family $p_{\mathrm{model}}(\boldsymbol{x}; \boldsymbol{\theta})$ and i.i.d. examples $\boldsymbol{x}^{(1)}, \dots, \boldsymbol{x}^{(m)}$ from $p_{\mathrm{data}}$. The **maximum likelihood estimator** is
 
 $$
 \boldsymbol{\theta}_{\mathrm{ML}} = \operatorname*{arg\,max}_{\boldsymbol{\theta}} \prod_{i=1}^m p_{\mathrm{model}}(\boldsymbol{x}^{(i)}; \boldsymbol{\theta}) = \operatorname*{arg\,max}_{\boldsymbol{\theta}} \sum_{i=1}^m \log p_{\mathrm{model}}(\boldsymbol{x}^{(i)}; \boldsymbol{\theta}).
@@ -215,7 +215,7 @@ where $\hat p_{\mathrm{data}}$ is the empirical distribution that puts mass $1/m
 $$
 H(p, q) = -\mathbb{E}_{\boldsymbol{x} \sim p}\log q(\boldsymbol{x}),
 $$
-and the entropy of $p$ is $H(p) = H(p, p)$.
+and the **entropy** of $p$ is $H(p) = H(p, p)$.
 
 In information-theoretic terms, $H(p, q)$ is the expected code length (in nats) when data from $p$ are encoded with a code optimized for $q$. Its excess over the optimum $H(p)$ is the **Kullback–Leibler divergence**,
 
@@ -225,13 +225,13 @@ $$
 
 with equality if and only if $p = q$ (Gibbs' inequality, from Jensen's inequality applied to the concave logarithm). Since $H(\hat p_{\mathrm{data}})$ does not depend on $\boldsymbol{\theta}$:
 
-**Proposition 1.5.1** Maximizing the likelihood is equivalent to minimizing the cross-entropy $H(\hat p_{\mathrm{data}}, p_{\mathrm{model}})$, and to minimizing the Kullback–Leibler divergence $D_{\mathrm{KL}}(\hat p_{\mathrm{data}} \,\|\, p_{\mathrm{model}})$, over $\boldsymbol{\theta}$.
+**Proposition 1.5.1** Maximizing the likelihood is equivalent to minimizing the cross-entropy $H(\hat p_{\mathrm{data}}, p_{\mathrm{model}})$, and to minimizing the **Kullback–Leibler divergence** $D_{\mathrm{KL}}(\hat p_{\mathrm{data}} \,\|\, p_{\mathrm{model}})$, over $\boldsymbol{\theta}$.
 
-So every negative log-likelihood is a cross-entropy between the empirical distribution and the model; the phrase "cross-entropy loss" usually refers to the categorical case below. Under regularity conditions the maximum likelihood estimator is consistent and asymptotically efficient ([3.2.3](/3.2.3)), which is the theoretical reason to prefer it. A language model is trained in exactly this way: its loss is the average negative log-probability of the next token, and $\exp$ of this loss is the perplexity reported in [4.7.7](/4.7.7).
+So every negative log-likelihood is a cross-entropy between the empirical distribution and the model; the phrase "cross-entropy loss" usually refers to the categorical case below. Under regularity conditions the maximum likelihood estimator is consistent and asymptotically efficient ([3.2.3](/3.2.3)), which is the theoretical reason to prefer it. A language model is trained in exactly this way: its loss is the average negative log-probability of the next **token**, and $\exp$ of this loss is the perplexity reported in [4.7.7](/4.7.7).
 
 ### 1.5.2. Conditional Log-Likelihood
 
-In supervised learning we model the conditional distribution $p_{\mathrm{model}}(y \mid \boldsymbol{x}; \boldsymbol{\theta})$ rather than the distribution of $\boldsymbol{x}$. The conditional maximum likelihood estimator is
+In **supervised learning** we model the conditional distribution $p_{\mathrm{model}}(y \mid \boldsymbol{x}; \boldsymbol{\theta})$ rather than the distribution of $\boldsymbol{x}$. The conditional maximum likelihood estimator is
 
 $$
 \boldsymbol{\theta}_{\mathrm{ML}} = \operatorname*{arg\,max}_{\boldsymbol{\theta}} \sum_{i=1}^m \log p_{\mathrm{model}}\bigl(y^{(i)} \mid \boldsymbol{x}^{(i)}; \boldsymbol{\theta}\bigr),
@@ -244,7 +244,7 @@ and the training loss is the negative conditional log-likelihood $-\frac{1}{m}\s
 $$
 \sum_{i=1}^m \log p\bigl(y^{(i)} \mid \boldsymbol{x}^{(i)}\bigr) = -m\log\sigma - \frac{m}{2}\log(2\pi) - \sum_{i=1}^m \frac{\bigl(\hat y^{(i)} - y^{(i)}\bigr)^2}{2\sigma^2},
 $$
-and maximizing it over $\boldsymbol{\theta}$ is the same as minimizing the mean squared error. Least squares is maximum likelihood under Gaussian noise; minimizing the mean absolute error instead corresponds to Laplace noise.
+and maximizing it over $\boldsymbol{\theta}$ is the same as minimizing the **mean squared error**. Least squares is maximum likelihood under Gaussian noise; minimizing the mean absolute error instead corresponds to Laplace noise.
 
 **Example 1.5.2 (Bernoulli output: binary cross-entropy)** For $y \in \{0, 1\}$ let the network compute a real score $z(\boldsymbol{x}; \boldsymbol{\theta})$ and set $p(y = 1 \mid \boldsymbol{x}) = \sigma(z)$ with the logistic sigmoid $\sigma(z) = 1/(1 + \mathrm{e}^{-z})$. The negative log-likelihood of one example is the binary cross-entropy
 
@@ -286,7 +286,7 @@ $$
 \boldsymbol{\theta}_{\mathrm{MAP}} = \operatorname*{arg\,max}_{\boldsymbol{\theta}} \Bigl[\sum_{i=1}^m \log p\bigl(y^{(i)} \mid \boldsymbol{x}^{(i)}; \boldsymbol{\theta}\bigr) + \log p(\boldsymbol{\theta})\Bigr].
 $$
 
-A Gaussian prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{0}, \tau^2 I)$ contributes $-\|\boldsymbol{\theta}\|^2/(2\tau^2)$ plus a constant, that is, weight decay with $\lambda$ proportional to $1/\tau^2$; a Laplace prior gives the $L^1$ penalty of the Lasso. A strong prior (small $\tau$) means strong regularization, and as $m \to \infty$ the likelihood dominates and the prior's influence vanishes. Full Bayesian treatment, which keeps the whole posterior instead of its mode, is the subject of [4.6.3](/4.6.3) and of 3.2.7; for large networks it is rarely affordable, and the MAP view mainly serves to interpret regularizers.
+A Gaussian prior $\boldsymbol{\theta} \sim \mathcal{N}(\boldsymbol{0}, \tau^2 I)$ contributes $-\|\boldsymbol{\theta}\|^2/(2\tau^2)$ plus a constant, that is, weight decay with $\lambda$ proportional to $1/\tau^2$; a Laplace prior gives the $L^1$ penalty of the **Lasso**. A strong prior (small $\tau$) means strong regularization, and as $m \to \infty$ the likelihood dominates and the prior's influence vanishes. Full Bayesian treatment, which keeps the whole posterior instead of its mode, is the subject of [4.6.3](/4.6.3) and of 3.2.7; for large networks it is rarely affordable, and the MAP view mainly serves to interpret regularizers.
 
 ### 1.5.4. The Supervised Learning Recipe
 
@@ -303,16 +303,16 @@ flowchart LR
     V["validation data"] -.->|"hyperparameters, early stopping"| O
 ```
 
-1. a dataset, split into training, validation and test sets;
+1. a dataset, split into training, validation and **test sets**;
 2. a model $f(\boldsymbol{x}; \boldsymbol{\theta})$, here a neural network whose architecture encodes prior assumptions;
 3. a loss, usually a negative log-likelihood, plus regularization;
 4. an optimizer that minimizes the loss by **stochastic gradient descent** or a variant ([3.5.5](/3.5.5), [4.7.4](/4.7.4)), with gradients computed by backpropagation ([4.7.2](/4.7.2));
-5. hyperparameters chosen on the validation set, and a single final evaluation on the test set.
+5. **hyperparameters** chosen on the **validation set**, and a single final evaluation on the test set.
 
 ## Summary
 
-- Deep learning learns a deep composition of differentiable layers end to end, so that the features are learned along with the predictor. Its success since 2012 rests on data, computation and techniques for training deep networks stably; by 2026 the largest models are sparse Transformer-based mixtures of experts with hybrid attention, trained on trillions of tokens and post-trained by reinforcement learning, and they formalize proofs, solve contest problems and act as agents.
+- Deep learning learns a deep composition of differentiable layers end to end, so that the features are learned along with the predictor. Its success since 2012 rests on data, computation and techniques for training deep networks stably; by 2026 the largest models are sparse Transformer-based mixtures of experts with hybrid attention, trained on trillions of **tokens** and post-trained by **reinforcement learning**, and they formalize proofs, solve contest problems and act as agents.
 - A learning algorithm is specified by a task $T$, a performance measure $P$ and experience $E$ (supervised, unsupervised, self-supervised, reinforcement), together with a model family $M$.
 - The goal is a small generalization error. Training error falls with capacity, while test error traces a U-shape (and, beyond the interpolation threshold, often a second descent). Regularization, for example weight decay, reduces the generalization error without aiming at the training error.
-- Hyperparameters are chosen on a validation set or by cross-validation; early stopping chooses the training time; the test set is used once.
-- Maximum likelihood is equivalent to minimizing cross-entropy and the KL divergence from the empirical distribution. Gaussian outputs give squared error, Bernoulli outputs the binary cross-entropy, and softmax outputs the cross-entropy loss with gradient $\hat{\boldsymbol{y}} - \boldsymbol{y}$; a prior on the weights turns maximum likelihood into MAP estimation and gives weight decay.
+- **Hyperparameters** are chosen on a **validation set** or by **cross-validation**; early stopping chooses the training time; the **test set** is used once.
+- Maximum likelihood is equivalent to minimizing cross-entropy and the **KL divergence** from the empirical distribution. Gaussian outputs give squared error, Bernoulli outputs the binary cross-entropy, and softmax outputs the cross-entropy loss with gradient $\hat{\boldsymbol{y}} - \boldsymbol{y}$; a prior on the weights turns maximum likelihood into MAP estimation and gives weight decay.

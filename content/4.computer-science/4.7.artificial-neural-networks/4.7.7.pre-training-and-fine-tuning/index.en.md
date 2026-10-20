@@ -3,7 +3,7 @@ title: Pre-training and Fine-tuning
 description: Supervised and self-supervised pre-training; from static to contextualized word representations (ELMo); BERT and masked language modeling; generative pre-training (GPT-1 to GPT-3), language models and decoding; encoder, decoder and encoder–decoder models (BERT, GPT, T5, GLM); fine-tuning with task-specific heads and with prompts; in-context learning and instruction tuning; parameter-efficient fine-tuning with adapters, prefix and prompt tuning, LoRA and QLoRA; perplexity and benchmarks.
 ---
 
-Training a deep network from scratch for every task needs a large labeled dataset for that task, and labels are expensive. The idea that changed natural language processing after 2018, and later most of deep learning, is to separate learning in two stages: first *pre-train* one large model on a huge amount of data that need no human labels, so that it learns general representations of language (or images), and then *adapt* it to each task with little labeled data, or with none at all. This chapter follows that idea from its beginnings to the present. It starts from supervised pre-training in computer vision and from the static word vectors of [4.7.5](/4.7.5), explains why a word's representation must depend on its context, and then studies the two families of Transformer-based pre-trained models ([4.7.6](/4.7.6)): bidirectional encoders such as BERT, which are pre-trained by filling in masked words, and autoregressive decoders such as GPT, which are pre-trained by predicting the next **token**. The second half is about adaptation: fine-tuning with a task-specific output layer, reformulating tasks as text with prompts, in-context learning without any gradient step, instruction tuning, and parameter-efficient methods such as LoRA that train less than one percent of the parameters. How such models are trained on thousands of GPUs is the subject of [4.7.8](/4.7.8); how pre-trained language models are scaled up and aligned with human intentions, which turns them into assistants and reasoning models, is the subject of [4.7.9](/4.7.9).
+Training a deep network from scratch for every task needs a large labeled dataset for that task, and labels are expensive. The idea that changed natural language processing after 2018, and later most of **deep learning**, is to separate learning in two stages: first *pre-train* one large model on a huge amount of data that need no human labels, so that it learns general representations of language (or images), and then *adapt* it to each task with little labeled data, or with none at all. This chapter follows that idea from its beginnings to the present. It starts from supervised pre-training in computer vision and from the static **word vectors** of [4.7.5](/4.7.5), explains why a word's representation must depend on its context, and then studies the two families of Transformer-based pre-trained models ([4.7.6](/4.7.6)): bidirectional encoders such as BERT, which are pre-trained by filling in masked words, and autoregressive decoders such as GPT, which are pre-trained by predicting the next **token**. The second half is about adaptation: fine-tuning with a task-specific output layer, reformulating tasks as text with prompts, in-context learning without any gradient step, instruction tuning, and parameter-efficient methods such as LoRA that train less than one percent of the parameters. How such models are trained on thousands of GPUs is the subject of [4.7.8](/4.7.8); how pre-trained **language models** are scaled up and aligned with human intentions, which turns them into assistants and **reasoning models**, is the subject of [4.7.9](/4.7.9).
 
 ## 7.1. The Pre-training Paradigm
 
@@ -21,7 +21,7 @@ In **supervised learning** ([4.7.1](/4.7.1#sec-1.2.4)) each task comes with its 
 
 **Definition 7.1.2 (Pre-training and Fine-tuning)** **Pre-training** is the training of a model on a large, general source dataset with an objective that does not depend on any particular target task. **Fine-tuning** is the continued training of a pre-trained model, usually with a smaller learning rate and possibly an added output layer, on the data of a target task. A large model pre-trained on broad data so that it can be adapted to a wide range of tasks is called a **foundation model**.
 
-In computer vision the source task was long a supervised one: a **convolutional neural network** ([4.7.3](/4.7.3)) such as ResNet is trained to classify ImageNet, its last layer is removed, and the remaining network serves as the *backbone* of an object detector (Faster R-CNN) or a segmentation network (U-Net), which is then fine-tuned on a much smaller detection or segmentation dataset. This works because the early and middle layers of the classifier compute edges, textures and object parts, which are useful for any visual task. The paradigm has three advantages that recur throughout this chapter:
+In computer vision the source task was long a supervised one: a **convolutional neural network** ([4.7.3](/4.7.3)) such as **ResNet** is trained to classify ImageNet, its last layer is removed, and the remaining network serves as the *backbone* of an object detector (Faster R-CNN) or a segmentation network (U-Net), which is then fine-tuned on a much smaller detection or segmentation dataset. This works because the early and middle layers of the classifier compute edges, textures and object parts, which are useful for any visual task. The paradigm has three advantages that recur throughout this chapter:
 
 1. the model benefits from large-scale data and learns general representations;
 2. the features are task-agnostic and transfer to many tasks that share the input format;
@@ -31,7 +31,7 @@ In computer vision the source task was long a supervised one: a **convolutional 
 
 Supervised pre-training still needs one large labeled dataset. Text is different: the web offers trillions of words without labels, and the structure of language itself provides a training signal.
 
-The way out is **self-supervised learning** ([4.6.1](/4.6.1)): hide or corrupt part of each example and train the model to predict the hidden part from the rest. The targets are constructed automatically from the data, so the problem is formally supervised, but no human annotation is required. Typical self-supervised tasks are: predicting the next word of a text from the words before it; predicting a masked word from the words around it ("I like deep [MASK] very much" → "learning"); in vision, reconstructing masked patches of an image (masked autoencoders) or recognizing that two random crops come from the same image (contrastive learning). The word2vec models of [4.7.5](/4.7.5) were already self-supervised: CBOW predicts a word from its context and skip-gram predicts the context from the word, so word vectors are trained on raw text. Because the data are essentially unlimited, self-supervised pre-training can train far larger models than any labeled dataset would support, and the scale of the model and the data becomes the main lever on quality ([4.7.9](/4.7.9)).
+The way out is **self-supervised learning** ([4.6.1](/4.6.1)): hide or corrupt part of each example and train the model to predict the hidden part from the rest. The targets are constructed automatically from the data, so the problem is formally supervised, but no human annotation is required. Typical self-supervised tasks are: predicting the next word of a text from the words before it; predicting a masked word from the words around it ("I like deep [MASK] very much" → "learning"); in vision, reconstructing masked patches of an image (masked autoencoders) or recognizing that two random crops come from the same image (contrastive learning). The **word2vec** models of [4.7.5](/4.7.5) were already self-supervised: **CBOW** predicts a word from its context and **skip-gram** predicts the context from the word, so **word vectors** are trained on raw text. Because the data are essentially unlimited, self-supervised pre-training can train far larger models than any labeled dataset would support, and the scale of the model and the data becomes the main lever on quality ([4.7.9](/4.7.9)).
 
 ```mermaid
 flowchart LR
@@ -45,7 +45,7 @@ flowchart LR
 
 ### 7.2.1. Static Word Vectors and Their Limitation
 
-Word vectors such as word2vec map each word type to one fixed vector. They can be plugged into any neural text model, are cheap to train, and capture semantic similarity and analogies (the vector arithmetic $\text{king} - \text{man} + \text{woman} \approx \text{queen}$). Their limitation is that they are *static*: the vector of a word is the same in every sentence. In
+**Word vectors** such as **word2vec** map each word type to one fixed vector. They can be plugged into any neural text model, are cheap to train, and capture semantic similarity and analogies (the vector arithmetic $\text{king} - \text{man} + \text{woman} \approx \text{queen}$). Their limitation is that they are *static*: the vector of a word is the same in every sentence. In
 
 1. "I go to the bank to deposit some money" and
 2. "The little girl fell off the bank of the river"
@@ -54,7 +54,7 @@ the word "bank" has different meanings, but word2vec gives it a single vector, a
 
 ### 7.2.2. ELMo
 
-ELMo (Embeddings from Language Models; Peters et al., NAACL 2018) was the first widely used contextualized word representation. It pre-trains two LSTM language models ([4.7.5](/4.7.5)) on a large corpus, a forward model that predicts each word from the words to its left and a backward model that predicts it from the words to its right, each with $L = 2$ layers on top of a character-based token encoder. For token $k$, let $\boldsymbol{h}_{k,0}$ be the token encoding and $\boldsymbol{h}_{k,j}$, $j = 1, \dots, L$, the concatenation of the forward and backward hidden states in layer $j$. A downstream task uses the weighted combination
+ELMo (Embeddings from **Language Models**; Peters et al., NAACL 2018) was the first widely used contextualized word representation. It pre-trains two **LSTM** language models ([4.7.5](/4.7.5)) on a large corpus, a forward model that predicts each word from the words to its left and a backward model that predicts it from the words to its right, each with $L = 2$ layers on top of a character-based **token** encoder. For token $k$, let $\boldsymbol{h}_{k,0}$ be the token encoding and $\boldsymbol{h}_{k,j}$, $j = 1, \dots, L$, the concatenation of the forward and backward hidden states in layer $j$. A downstream task uses the weighted combination
 
 $$
 \mathrm{ELMo}_k = \gamma \sum_{j=0}^{L} s_j\,\boldsymbol{h}_{k,j},
@@ -64,9 +64,9 @@ where the weights $\boldsymbol{s} = \operatorname{softmax}(\boldsymbol{w})$ and 
 
 ### 7.2.3. Why Transformers
 
-From 2017 to 2018 the field moved from recurrent networks to Transformers ([4.7.6](/4.7.6)) as the architecture for pre-training, for three reasons.
+From 2017 to 2018 the field moved from recurrent networks to **Transformers** ([4.7.6](/4.7.6)) as the architecture for pre-training, for three reasons.
 
-- Generality: full self-attention connects every position to every other and makes no strong assumption about the data format, whereas a recurrent network assumes sequential processing and a convolutional network assumes locality and translation invariance.
+- Generality: full **self-attention** connects every position to every other and makes no strong assumption about the data format, whereas a recurrent network assumes sequential processing and a convolutional network assumes locality and translation invariance.
 - Scalability: Transformers keep improving as parameters and data grow, to 175 billion parameters in GPT-3 and far beyond.
 - Parallelism: all positions of a sequence are processed at once during training, which suits GPUs and TPUs; a recurrent network must process the positions one after another.
 
@@ -89,9 +89,9 @@ The next two sections study the first two rows in detail. Since about 2020 the d
 
 **Definition 7.3.1 (BERT)** **BERT** (Bidirectional Encoder Representations from Transformers; Devlin et al., NAACL 2019) is a stack of Transformer encoder layers with full bidirectional self-attention, pre-trained on unlabeled text with masked language modeling and next-sentence prediction, and then fine-tuned with a small task-specific output layer.
 
-The input is one or two text segments, tokenized into WordPiece tokens (a vocabulary of 30,000), framed by two special tokens: `[CLS] segment A [SEP] segment B [SEP]`. The input vector of each position is the sum of three learned embeddings: the token embedding, a segment embedding (A or B) and a learned position embedding (up to 512 positions). The final hidden vector of `[CLS]` serves as a summary of the whole input for classification. Two sizes were released: BERT-base with 12 layers, hidden size 768 and 12 heads (110 million parameters), and BERT-large with 24 layers, hidden size 1,024 and 16 heads (340 million parameters). They were pre-trained on BooksCorpus and English Wikipedia, about 3.3 billion words.
+The input is one or two text segments, tokenized into WordPiece **tokens** (a vocabulary of 30,000), framed by two special tokens: `[CLS] segment A [SEP] segment B [SEP]`. The input vector of each position is the sum of three learned embeddings: the token embedding, a segment embedding (A or B) and a learned **position embedding** (up to 512 positions). The final hidden vector of `[CLS]` serves as a summary of the whole input for classification. Two sizes were released: BERT-base with 12 layers, hidden size 768 and 12 heads (110 million parameters), and BERT-large with 24 layers, hidden size 1,024 and 16 heads (340 million parameters). They were pre-trained on BooksCorpus and English Wikipedia, about 3.3 billion words.
 
-Bidirectional attention is what distinguishes BERT from a language model: the representation of every position depends on the words on both sides, in every layer. A left-to-right language model cannot use bidirectional attention, because predicting the next word would then be trivial: the word could attend to itself. BERT therefore needs a different pre-training task.
+Bidirectional attention is what distinguishes BERT from a **language model**: the representation of every position depends on the words on both sides, in every layer. A left-to-right language model cannot use bidirectional attention, because predicting the next word would then be trivial: the word could attend to itself. BERT therefore needs a different pre-training task.
 
 ### 7.3.2. Masked Language Modeling
 
@@ -100,7 +100,7 @@ Bidirectional attention is what distinguishes BERT from a language model: the re
 $$
 \mathcal{L}_{\mathrm{MLM}}(\boldsymbol{\theta}) = -\mathbb{E}_{\boldsymbol{x},M}\sum_{t \in M}\log p_{\boldsymbol{\theta}}\bigl(x_t \mid \tilde{\boldsymbol{x}}\bigr),
 $$
-where $p_{\boldsymbol{\theta}}(\cdot \mid \tilde{\boldsymbol{x}})$ is a softmax over the vocabulary computed from the final hidden vector at position $t$.
+where $p_{\boldsymbol{\theta}}(\cdot \mid \tilde{\boldsymbol{x}})$ is a **softmax** over the vocabulary computed from the final hidden vector at position $t$.
 
 BERT selects 15% of the tokens. Of the selected positions, 80% are replaced by the special token `[MASK]`, 10% by a random token and 10% are left unchanged:
 
@@ -112,7 +112,7 @@ BERT selects 15% of the tokens. Of the selected positions, 80% are replaced by t
 
 The mixture addresses a mismatch between pre-training and fine-tuning: `[MASK]` never appears in downstream inputs. Since the model does not know which tokens have been replaced or kept, it must maintain a good contextual representation of *every* token, not only of the masked ones. The objective is a denoising autoencoder on text: corrupt the input, reconstruct it. The loss is computed only on the 15% of selected positions, which is the main inefficiency of MLM compared with next-token prediction, where every position contributes a target. ELECTRA (Clark et al. 2020) recovers this efficiency by *replaced-token detection*: a small generator fills the masked positions with plausible tokens, and the main model classifies every position as original or replaced.
 
-The corruption procedure is a few lines of NumPy; the labels mark with $-100$ the positions that are not predicted, the convention of PyTorch's cross-entropy loss.
+The corruption procedure is a few lines of NumPy; the labels mark with $-100$ the positions that are not predicted, the convention of PyTorch's **cross-entropy loss**.
 
 ```python
 import numpy as np
@@ -153,7 +153,7 @@ Later work showed that NSP is not needed. RoBERTa (Liu et al. 2019) retrained BE
 
 ### 7.3.4. Results
 
-Fine-tuned BERT-large raised the GLUE benchmark score (nine sentence-level understanding tasks) to 80.5, an absolute improvement of 7.7 points over the previous best, and reached an F1 score of 93.2 on the SQuAD v1.1 reading comprehension task, above the human baseline. The architecture of the task models no longer had to be designed: one pre-trained network plus one output layer was enough. Encoder models of the BERT family remain in wide use where an input must be mapped to a label or a vector, for example in classification and in the embedding models of search and retrieval systems.
+Fine-tuned BERT-large raised the GLUE benchmark score (nine sentence-level understanding tasks) to 80.5, an absolute improvement of 7.7 points over the previous best, and reached an **F1 score** of 93.2 on the SQuAD v1.1 reading comprehension task, above the human baseline. The architecture of the task models no longer had to be designed: one pre-trained network plus one output layer was enough. Encoder models of the BERT family remain in wide use where an input must be mapped to a label or a vector, for example in classification and in the embedding models of search and retrieval systems.
 
 ## 7.4. Generative Pre-training
 
@@ -164,7 +164,7 @@ Fine-tuned BERT-large raised the GLUE benchmark score (nine sentence-level under
 $$
 p_{\boldsymbol{\theta}}(x_1, \dots, x_T) = \prod_{t=1}^{T} p_{\boldsymbol{\theta}}(x_t \mid x_1, \dots, x_{t-1}),
 $$
-and models each conditional, the distribution of the next token given the prefix, by a neural network with a softmax output over the vocabulary.
+and models each conditional, the distribution of the next **token** given the prefix, by a neural network with a **softmax** output over the vocabulary.
 
 Training by **maximum likelihood estimation** minimizes the average negative log-likelihood of the next token,
 
@@ -172,7 +172,7 @@ $$
 \mathcal{L}_{\mathrm{LM}}(\boldsymbol{\theta}) = -\frac{1}{T}\sum_{t=1}^{T}\log p_{\boldsymbol{\theta}}(x_t \mid x_{<t}),
 $$
 
-which is the **cross-entropy loss** of [4.7.1](/4.7.1#sec-1.5) applied at every position. In a Transformer decoder the conditionals are computed with *causal* (masked) self-attention, in which position $t$ attends only to positions $1, \dots, t$ ([4.7.6](/4.7.6)). Consequently one forward pass over a training sequence computes all $T$ conditionals at once, and the loss is obtained at every position in parallel; a recurrent language model obtains the same loss but must process the positions sequentially.
+which is the **cross-entropy loss** of [4.7.1](/4.7.1#sec-1.5) applied at every position. In a **Transformer** decoder the conditionals are computed with *causal* (masked) **self-attention**, in which position $t$ attends only to positions $1, \dots, t$ ([4.7.6](/4.7.6)). Consequently one forward pass over a training sequence computes all $T$ conditionals at once, and the loss is obtained at every position in parallel; a recurrent **language model** obtains the same loss but must process the positions sequentially.
 
 **Definition 7.4.2 (Generative Pre-training)** **Generative pre-training** is the pre-training of a Transformer decoder as an autoregressive language model on a large unlabeled corpus, by minimizing $\mathcal{L}_{\mathrm{LM}}$. The name comes from the first GPT paper (Radford et al. 2018, "Improving Language Understanding by Generative Pre-Training").
 
@@ -193,11 +193,11 @@ GPT-1 appeared a few months before BERT and was the first Transformer pre-traine
 A pre-trained language model generates text by repeatedly sampling a token from $p_{\boldsymbol{\theta}}(\cdot \mid x_{<t})$, appending it to the input and continuing, until an end-of-sequence token or a length limit. With logits $\boldsymbol{z} \in \mathbb{R}^{V}$ at the last position, the common decoding rules are:
 
 - greedy decoding: choose $\arg\max_v z_v$; deterministic, but long greedy outputs tend to repeat themselves;
-- temperature sampling: sample from $\operatorname{softmax}(\boldsymbol{z}/\tau)$; $\tau < 1$ sharpens the distribution, $\tau > 1$ flattens it, and $\tau \to 0$ recovers greedy decoding;
+- **temperature** sampling: sample from $\operatorname{softmax}(\boldsymbol{z}/\tau)$; $\tau < 1$ sharpens the distribution, $\tau > 1$ flattens it, and $\tau \to 0$ recovers greedy decoding;
 - top-$k$ sampling: keep the $k$ most probable tokens, renormalize and sample;
 - **nucleus sampling** (top-$p$; Holtzman et al. 2020): keep the smallest set of most probable tokens whose total probability is at least $p$ (for example $0.9$), renormalize and sample, so that the candidate set adapts to how peaked the distribution is.
 
-Only the newly generated token must be processed at each step, because the keys and values of the earlier tokens are kept in the KV cache ([4.7.6](/4.7.6)). The cost of generation on real hardware is analyzed in [4.7.8](/4.7.8#sec-8.9).
+Only the newly generated token must be processed at each step, because the keys and values of the earlier tokens are kept in the **KV cache** ([4.7.6](/4.7.6)). The cost of generation on real hardware is analyzed in [4.7.8](/4.7.8#sec-8.9).
 
 ### 7.4.4. Encoder–Decoder and Blank-Infilling Models
 
@@ -207,7 +207,7 @@ GLM (Du et al., ACL 2022) combines the two kinds of attention in one Transformer
 
 ### 7.4.5. Why Decoder-Only Models Prevailed
 
-Encoder models are strong at understanding but cannot generate fluently; encoder–decoder models need a division of every task into input and output. A decoder-only model does everything with one architecture and one objective, and several practical properties favor it at scale:
+Encoder models are strong at understanding but cannot generate fluently; **encoder–decoder models** need a division of every task into input and output. A decoder-only model does everything with one architecture and one objective, and several practical properties favor it at scale:
 
 - every token is a training target, whereas MLM learns from 15% of the positions;
 - generation reuses the cached keys and values of the whole context, and a conversation can be extended without re-encoding it;
@@ -245,9 +245,9 @@ The head adds few new parameters ($768 \times 2$ for binary classification with 
 
 **Definition 7.5.1 (Prompt)** A **prompt** is the text given to a language model as input, from which the model's continuation is computed. In the narrower sense used for adapting models, it is a template that rewrites an instance of a task as a text whose continuation, or whose masked word, gives the answer.
 
-Prompts remove the mismatch between pre-training and the task. For sentiment classification of "I like deep learning very much.":
+Prompts remove the mismatch between pre-training and the task. For sentiment classification of "I like **deep learning** very much.":
 
-- with a masked language model: "I like deep learning very much. It was a `[MASK]` sentiment." The model's probabilities for "good" and "bad" at the masked position decide the label; a *verbalizer* maps label words to classes (good → positive, bad → negative);
+- with a masked **language model**: "I like deep learning very much. It was a `[MASK]` sentiment." The model's probabilities for "good" and "bad" at the masked position decide the label; a *verbalizer* maps label words to classes (good → positive, bad → negative);
 - with an autoregressive model: "I like deep learning very much. It is so", and the probabilities of the continuations "good" and "bad" are compared.
 
 Fine-tuning through a prompt (pattern-exploiting training, Schick and Schütze 2021) updates the model with the same language modeling head it was pre-trained with and needs no new parameters. It is markedly better than fine-tuning with a head when only tens of labeled examples are available, and it lets autoregressive models compete with BERT on understanding tasks.
@@ -275,7 +275,7 @@ plush giraffe => girafe peluche
 cheese =>
 ```
 
-In the GPT-3 paper (Brown et al. 2020) few-shot performance improved much more steeply with model size than zero-shot performance; on some benchmarks the 175-billion-parameter model with 32 examples approached fine-tuned models, and on few-shot translation into English it surpassed earlier unsupervised translation systems. In-context learning is limited by the **context window** and is sensitive to the choice, format and even order of the demonstrations. How a network learns from examples without changing its weights is still studied; one mechanism that has been identified in small Transformers is the **induction head**, a pair of attention heads that finds an earlier occurrence of the current token and copies what followed it. The ability matters well beyond benchmarks: every instruction, document or tool result placed in the context of an assistant or a **coding agent** ([4.2.14](/4.2.14)) is used in this way.
+In the GPT-3 paper (Brown et al. 2020) few-shot performance improved much more steeply with model size than zero-shot performance; on some benchmarks the 175-billion-parameter model with 32 examples approached fine-tuned models, and on few-shot translation into English it surpassed earlier unsupervised translation systems. In-context learning is limited by the **context window** and is sensitive to the choice, format and even order of the demonstrations. How a network learns from examples without changing its weights is still studied; one mechanism that has been identified in small **Transformers** is the **induction head**, a pair of attention heads that finds an earlier occurrence of the current **token** and copies what followed it. The ability matters well beyond benchmarks: every instruction, document or tool result placed in the context of an assistant or a **coding agent** ([4.2.14](/4.2.14)) is used in this way.
 
 ### 7.5.4. Instruction Tuning
 
@@ -289,7 +289,7 @@ FLAN (Wei et al., ICLR 2022, "Finetuned Language Models Are Zero-Shot Learners")
 - quality and diversity matter more than quantity: LIMA (Zhou et al. 2023) obtained a competitive assistant from 1,000 carefully chosen examples, and data selection methods filter out low-quality pairs;
 - the format matters: conversations are serialized with a *chat template* that marks system, user and assistant turns with special tokens, and a model must be used with the template it was trained with.
 
-Instruction tuning is the first stage of post-training. Making the responses helpful, honest and harmless beyond what demonstrations can teach requires preference data and reinforcement learning, the alignment methods of [4.7.9](/4.7.9).
+Instruction tuning is the first stage of post-training. Making the responses helpful, honest and harmless beyond what demonstrations can teach requires preference data and **reinforcement learning**, the alignment methods of [4.7.9](/4.7.9).
 
 ## 7.6. Parameter-Efficient Fine-tuning
 
@@ -297,7 +297,7 @@ Instruction tuning is the first stage of post-training. Making the responses hel
 
 Fine-tuning all parameters of a large model is expensive in two ways.
 
-- Memory: training with Adam needs, besides the weights, their gradients and two optimizer states per parameter, kept in FP32 for numerical stability; in mixed precision this is 16 bytes per parameter, eight times the 2 bytes of the weights alone ([4.7.8](/4.7.8#sec-8.1)). A 7-billion-parameter model then needs about 112 GB before any activations, more than one 80 GB GPU.
+- Memory: training with **Adam** needs, besides the weights, their gradients and two optimizer states per parameter, kept in FP32 for numerical stability; in mixed precision this is 16 bytes per parameter, eight times the 2 bytes of the weights alone ([4.7.8](/4.7.8#sec-8.1)). A 7-billion-parameter model then needs about 112 GB before any activations, more than one 80 GB GPU.
 - Storage: every task gets its own copy of all weights, about 20 GB for a 10-billion-parameter model in 16-bit precision; serving a hundred customized models means storing and loading a hundred such copies.
 
 **Definition 7.6.1 (Parameter-Efficient Fine-tuning)** **Parameter-efficient fine-tuning** (PEFT) adapts a pre-trained model to a task by training only a small number of parameters, either a small subset of the existing ones or a small number of new ones, while all other pre-trained parameters stay frozen.
@@ -311,13 +311,13 @@ Gradients and optimizer states are then needed only for the trainable parameters
 $$
 \boldsymbol{h} \mapsto \boldsymbol{h} + W_{\mathrm{up}}\,\varphi\bigl(W_{\mathrm{down}}\boldsymbol{h}\bigr), \qquad W_{\mathrm{down}} \in \mathbb{R}^{m \times d},\ W_{\mathrm{up}} \in \mathbb{R}^{d \times m},\ m \ll d,
 $$
-with a nonlinearity $\varphi$; during fine-tuning only the adapters (and the layer normalizations) are trained.
+with a nonlinearity $\varphi$; during fine-tuning only the adapters (and the **layer normalizations**) are trained.
 
 The residual form means that an adapter initialized near zero leaves the pre-trained network unchanged at the start. With bottleneck widths of a few dozen, adapters train a few percent of the parameters or less and reached within 0.4 points of full fine-tuning on GLUE in the original paper. Their drawback is that they add sequential computation to every layer and therefore latency at inference.
 
 ### 7.6.3. Prefix Tuning and Prompt Tuning
 
-Instead of searching for a good prompt in words, one can learn it. *Prompt tuning* (Lester et al., EMNLP 2021) prepends $l$ trainable vectors, *soft tokens* that correspond to no word, to the input embeddings and trains only them. *Prefix tuning* (Li and Liang, ACL 2021) prepends trainable key and value vectors to the attention of every layer, so that every layer attends to a learned prefix. Only the prefix is stored per task, a few hundred kilobytes. Prompt tuning has a notable scaling behavior: for small models it is far worse than fine-tuning, but with T5 models of about 10 billion parameters it matches full fine-tuning. Its costs are that the soft tokens occupy part of the context and that optimization is less stable than for the other methods.
+Instead of searching for a good prompt in words, one can learn it. *Prompt tuning* (Lester et al., EMNLP 2021) prepends $l$ trainable vectors, *soft tokens* that correspond to no word, to the input embeddings and trains only them. *Prefix tuning* (Li and Liang, ACL 2021) prepends trainable key and value vectors to the attention of every layer, so that every layer attends to a learned prefix. Only the prefix is stored per task, a few hundred kilobytes. Prompt tuning has a notable scaling behavior: for small models it is far worse than fine-tuning, but with T5 models of about 10 billion parameters it matches full fine-tuning. Its costs are that the soft **tokens** occupy part of the context and that optimization is less stable than for the other methods.
 
 ### 7.6.4. Low-Rank Adaptation
 
@@ -328,11 +328,11 @@ LoRA starts from the observation that fine-tuning can be written as adding a cha
 $$
 \boldsymbol{y} = W_0\boldsymbol{x} + \frac{\alpha}{r}\,BA\boldsymbol{x}, \qquad B \in \mathbb{R}^{d \times r},\ A \in \mathbb{R}^{r \times k},\ r \ll \min(d, k),
 $$
-where $A$ is initialized randomly, $B$ is initialized to zero, and the scale $\alpha$ is a hyperparameter.
+where $A$ is initialized randomly, $B$ is initialized to zero, and the scale $\alpha$ is a **hyperparameter**.
 
 Several properties follow directly from the form.
 
-- The update $BA$ has **rank** at most $r$. By the **Eckart–Young theorem** the best rank-$r$ approximation of a full update is given by its truncated singular value decomposition; LoRA does not compute that decomposition but learns a rank-$r$ update directly.
+- The update $BA$ has **rank** at most $r$. By the **Eckart–Young theorem** the best rank-$r$ approximation of a full update is given by its truncated **singular value decomposition**; LoRA does not compute that decomposition but learns a rank-$r$ update directly.
 - Since $B = O$ initially, the model starts exactly at the pre-trained one, and the update grows from zero.
 - A $d \times k$ matrix receives $r(d + k)$ trainable parameters instead of $dk$; for $d = k = 4096$ and $r = 8$ this is $0.39\%$. Dividing by $r$ keeps the effective learning rate roughly unchanged when $r$ is varied.
 - After training, the update can be merged, $W = W_0 + \frac{\alpha}{r}BA$, so inference costs exactly as much as for the original model; alternatively many task-specific $(A, B)$ pairs can be kept and swapped on one shared base model.
@@ -451,16 +451,16 @@ He et al. (ICLR 2022) observed that the three approaches have a common form: eac
 
 ### 7.7.1. Perplexity
 
-The training objective of a language model gives a task-independent measure of its quality.
+The training objective of a **language model** gives a task-independent measure of its quality.
 
 **Definition 7.7.1 (Perplexity)** The **perplexity** of a language model on a held-out token sequence $x_1, \dots, x_T$ is
 
 $$
 \operatorname{PPL} = \exp\Bigl(-\frac{1}{T}\sum_{t=1}^{T}\log p_{\boldsymbol{\theta}}(x_t \mid x_{<t})\Bigr),
 $$
-the exponential of the average cross-entropy loss per token.
+the exponential of the average **cross-entropy loss** per **token**.
 
-Perplexity is the effective number of equally likely choices the model faces at each step: a model that spreads its probability uniformly over $V$ tokens has perplexity $V$, and a perfect model has perplexity 1. It is the exponential of the cross-entropy between the empirical distribution of the text and the model, and therefore measures how far the model is from the data in the sense of the **Kullback–Leibler divergence** ([4.7.1](/4.7.1#sec-1.5.1)). Two cautions apply: perplexities are comparable only for the same tokenizer and the same test text, because a different vocabulary changes what one "step" is; and lower perplexity does not guarantee better behavior on the tasks users care about. Masked language models such as BERT do not define a left-to-right probability and are not evaluated this way.
+Perplexity is the effective number of equally likely choices the model faces at each step: a model that spreads its probability uniformly over $V$ tokens has perplexity $V$, and a perfect model has perplexity 1. It is the exponential of the **cross-entropy** between the empirical distribution of the text and the model, and therefore measures how far the model is from the data in the sense of the **Kullback–Leibler divergence** ([4.7.1](/4.7.1#sec-1.5.1)). Two cautions apply: perplexities are comparable only for the same tokenizer and the same test text, because a different vocabulary changes what one "step" is; and lower perplexity does not guarantee better behavior on the tasks users care about. Masked language models such as BERT do not define a left-to-right probability and are not evaluated this way.
 
 ### 7.7.2. Benchmarks
 
@@ -477,9 +477,9 @@ Each generation was saturated within a few years; GLUE was surpassed by human-le
 ## Summary
 
 - Pre-training learns general representations from large, cheap data; fine-tuning adapts them to a task with little labeled data. In vision the source task was long ImageNet classification; in language it is self-supervised: predicting hidden parts of text from the rest.
-- Static word vectors give one vector per word type; contextualized representations, first with ELMo's bidirectional LSTM language models, give one vector per occurrence. Transformers replaced recurrent networks because they are general, scale well and train in parallel.
-- BERT is a bidirectional Transformer encoder pre-trained by masked language modeling (15% of tokens; 80% `[MASK]`, 10% random, 10% unchanged). Next-sentence prediction turned out to be unnecessary (RoBERTa). Fine-tuning one pre-trained encoder with a small head set the state of the art across understanding tasks.
+- Static **word vectors** give one vector per word type; contextualized representations, first with ELMo's bidirectional **LSTM** **language models**, give one vector per occurrence. **Transformers** replaced recurrent networks because they are general, scale well and train in parallel.
+- BERT is a bidirectional Transformer encoder pre-trained by masked language modeling (15% of **tokens**; 80% `[MASK]`, 10% random, 10% unchanged). Next-sentence prediction turned out to be unnecessary (RoBERTa). Fine-tuning one pre-trained encoder with a small head set the state of the art across understanding tasks.
 - GPT models are Transformer decoders pre-trained as autoregressive language models, with the loss computed at every position in parallel. From GPT-1 to GPT-3 the architecture barely changed while scale grew by a factor of 1,500, and the mode of use changed from fine-tuning to zero-shot prompting to few-shot in-context learning. Decoder-only models now dominate.
 - Tasks can be adapted through heads, through prompts (no new parameters, strong with few examples), through in-context learning (no training at all) and through instruction tuning (fine-tuning on many instruction–response pairs, the first stage of post-training).
 - Parameter-efficient fine-tuning trains a small set of parameters: adapters (bottleneck layers), prefix and prompt tuning (learned soft tokens), and LoRA (a low-rank update $\frac{\alpha}{r}BA$ with $B$ initialized to zero, mergeable into the weights). QLoRA trains LoRA adapters on a 4-bit base model.
-- Language models are evaluated intrinsically by perplexity, the exponential of the per-token cross-entropy, and extrinsically by benchmarks, which saturate quickly and suffer from contamination and format sensitivity.
+- Language models are evaluated intrinsically by perplexity, the exponential of the per-token **cross-entropy**, and extrinsically by benchmarks, which saturate quickly and suffer from contamination and format sensitivity.
