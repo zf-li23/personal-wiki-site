@@ -1068,7 +1068,7 @@ terms:
   - { zh: 数学期望, en: expectation, aliases: [期望, expected value] }
   - { zh: 方差, en: variance }
   - { zh: 标准差, en: standard deviation }
-  - { zh: 标准化, en: standardization, scope: ["3"] }
+  - { zh: 标准化, en: standardization, scope: ["3", "4"] }
   - { zh: 原点矩, en: raw moment, aliases: [矩, moment] }
   - { zh: 中心矩, en: central moment }
   - { zh: 偏度, en: skewness }
@@ -1645,7 +1645,7 @@ terms:
   - { zh: Louis 加速, en: "Louis's acceleration", aliases: [Louis 加速法] }
   - { zh: 有限混合模型, en: finite mixture model, aliases: [mixture model] }
   - { zh: 责任度, en: responsibility, scope: ["3"] }
-  - { zh: 偏差, en: bias, aliases: [估计量的偏差], scope: ["3"] }
+  - { zh: 偏差, en: bias, aliases: [估计量的偏差], scope: ["3", "4"] }
   - { zh: 自助样本, en: bootstrap sample }
   - { zh: 自助分布, en: bootstrap distribution }
   - { zh: 非参数自助法, en: nonparametric bootstrap }
@@ -1679,7 +1679,7 @@ terms:
   - { zh: 有效样本量, en: effective sample size, aliases: [ESS] }
   - { zh: Markov 链, en: Markov chain, aliases: [马尔可夫链, 马氏链] }
   - { zh: Markov 性, en: Markov property, aliases: [马氏性] }
-  - { zh: 转移矩阵, en: transition matrix, aliases: [转移概率矩阵, transition probability matrix], scope: ["3"] }
+  - { zh: 转移矩阵, en: transition matrix, aliases: [转移概率矩阵, transition probability matrix], scope: ["3", "4.6"] }
   - { zh: 平稳分布, en: stationary distribution }
   - { zh: 细致平衡条件, en: detailed balance condition, aliases: [细致平衡, detailed balance] }
   - { zh: 可逆 Markov 链, en: reversible Markov chain }
@@ -2397,7 +2397,7 @@ terms:
   - { zh: N 维数组, en: ndarray, aliases: [n-dimensional array, NumPy 数组] }
   - { zh: 数据类型对象, en: dtype, aliases: [dtype 对象] }
   - { zh: 类型提升, en: type promotion }
-  - { zh: 步长, en: stride, aliases: [strides], scope: ["4"] }
+  - { zh: 步长, en: stride, aliases: [strides], scope: ["4.4"] }
   - { zh: 列主序, en: column-major order, aliases: [Fortran order, Fortran 序] }
   - { zh: 视图, en: view, scope: ["4.4"] }
   - { zh: 花式索引, en: fancy indexing, aliases: [整数数组索引, integer array indexing, advanced indexing, 高级索引] }
@@ -2443,3 +2443,179 @@ terms:
   - { zh: Amdahl 定律, en: "Amdahl's law", aliases: [阿姆达尔定律] }
   - { zh: Gillespie 算法, en: Gillespie algorithm, aliases: [随机模拟算法, stochastic simulation algorithm, SSA] }
   - { zh: 连接, en: join, scope: ["4"] }
+
+  # artificial intelligence (4.5–4.7)
+  - { zh: 人工智能, en: artificial intelligence, aliases: [AI] }
+  - { zh: 图灵测试, en: Turing test, aliases: [模仿游戏, imitation game] }
+  - { zh: 中文屋, en: Chinese room, aliases: [中文屋论证, Chinese room argument] }
+  - { zh: 专家系统, en: expert system }
+  - { zh: 知识表示, en: knowledge representation }
+  - { zh: 搜索问题, en: search problem, scope: ["4"] }
+  - { zh: 盲目搜索, en: uninformed search, aliases: [无信息搜索, blind search] }
+  - { zh: 迭代加深搜索, en: iterative deepening search, aliases: [iterative deepening] }
+  - { zh: 一致代价搜索, en: uniform-cost search }
+  - { zh: 启发式搜索, en: heuristic search }
+  - { zh: 启发函数, en: heuristic function, aliases: [heuristic] }
+  - { zh: A 算法, en: algorithm A }
+  - { zh: A* 算法, en: "A* algorithm", aliases: ["A* 搜索", "A* search"] }
+  - { zh: 可采纳, en: admissible heuristic, aliases: [可采纳性, admissibility, admissible], scope: ["4.5"] }
+  - { zh: 有效分支因子, en: effective branching factor, aliases: [平均分叉数] }
+  - { zh: 爬山法, en: hill climbing, aliases: [爬山算法] }
+  - { zh: 博弈树, en: game tree }
+  - { zh: 极小极大算法, en: minimax algorithm, aliases: [极小极大值, minimax, minimax value, 极小-极大方法] }
+  - { zh: 估值函数, en: evaluation function, aliases: [局面评估函数] }
+  - { zh: α-β 剪枝, en: alpha–beta pruning, aliases: [alpha-beta pruning, α-β 剪枝算法] }
+  - { zh: 多臂老虎机, en: multi-armed bandit, aliases: [多臂老虎机问题, multi-armed bandit problem] }
+  - { zh: 遗憾, en: regret, scope: ["4"] }
+  - { zh: UCB1, en: UCB1, aliases: [信心上限算法, 置信上界算法, upper confidence bound] }
+  - { zh: 蒙特卡洛树搜索, en: Monte Carlo tree search, aliases: [MCTS, Monte Carlo 树搜索] }
+  - { zh: UCT, en: UCT, aliases: [信心上限树算法, upper confidence bounds applied to trees] }
+  - { zh: 强化学习, en: reinforcement learning }
+  - { zh: 神经元, en: neuron, aliases: [人工神经元, artificial neuron], scope: ["4"] }
+  - { zh: 激活函数, en: activation function }
+  - { zh: softmax 函数, en: softmax function, aliases: [softmax, 归一化指数函数] }
+  - { zh: 全连接网络, en: fully connected network, aliases: [前馈网络, feedforward network] }
+  - { zh: 万能逼近定理, en: universal approximation theorem, aliases: [通用近似定理] }
+  - { zh: 交叉熵损失, en: cross-entropy loss, aliases: [交叉熵损失函数] }
+  - { zh: 反向传播, en: backpropagation, aliases: [BP 算法, 误差反向传播, back propagation, 反向传播算法] }
+  - { zh: 经验风险最小化, en: empirical risk minimization, aliases: [ERM] }
+  - { zh: 结构风险最小化, en: structural risk minimization, aliases: [SRM] }
+  - { zh: 线性可分, en: linear separability, aliases: [linearly separable, 线性可分性] }
+  - { zh: 函数间隔, en: functional margin }
+  - { zh: 几何间隔, en: geometric margin }
+  - { zh: 间隔, en: margin, scope: ["3.4", "4"] }
+  - { zh: 硬间隔, en: hard margin, aliases: [硬间隔支持向量机, hard-margin SVM] }
+  - { zh: 支持向量, en: support vector }
+  - { zh: 对偶问题, en: dual problem, aliases: [Lagrange 对偶问题, Lagrange dual problem] }
+  - { zh: Slater 条件, en: "Slater's condition" }
+  - { zh: KKT 条件, en: KKT conditions, aliases: [Karush–Kuhn–Tucker 条件, Karush–Kuhn–Tucker conditions] }
+  - { zh: 软间隔, en: soft margin, aliases: [软间隔支持向量机, soft-margin SVM] }
+  - { zh: 合页损失, en: hinge loss, aliases: [铰链损失] }
+  - { zh: 核技巧, en: kernel trick }
+  - { zh: 决策树, en: decision tree }
+  - { zh: 信息熵, en: entropy, aliases: [熵, Shannon 熵, Shannon entropy], scope: ["3", "4"] }
+  - { zh: 条件熵, en: conditional entropy }
+  - { zh: 信息增益, en: information gain }
+  - { zh: 增益率, en: gain ratio, aliases: [信息增益比, information gain ratio] }
+  - { zh: Gini 指数, en: Gini index, aliases: [基尼指数, Gini impurity] }
+  - { zh: 决策树剪枝, en: decision tree pruning }
+  - { zh: 预剪枝, en: pre-pruning }
+  - { zh: 后剪枝, en: post-pruning }
+  - { zh: ID3 算法, en: ID3 algorithm, aliases: [ID3] }
+  - { zh: 代价复杂度剪枝, en: cost-complexity pruning, aliases: [最弱连接剪枝, weakest link pruning] }
+  - { zh: 机器学习, en: machine learning }
+  - { zh: 自监督学习, en: self-supervised learning }
+  - { zh: 目标函数, en: target function, aliases: [目标概念, target concept], scope: ["4.6"] }
+  - { zh: 假设, en: hypothesis, scope: ["4.6"] }
+  - { zh: 假设空间, en: hypothesis space }
+  - { zh: 训练集, en: training set }
+  - { zh: 验证集, en: validation set }
+  - { zh: 测试集, en: test set }
+  - { zh: 超参数, en: hyperparameter }
+  - { zh: 留出法, en: holdout method, aliases: [hold-out method] }
+  - { zh: 错误率, en: error rate, scope: ["4"] }
+  - { zh: F1 值, en: F1 score, aliases: [F1 分数, F-measure] }
+  - { zh: 精确率–召回率曲线, en: precision–recall curve, aliases: [PR 曲线, PR curve] }
+  - { zh: 平均精度, en: average precision }
+  - { zh: 归一化折损累计增益, en: normalized discounted cumulative gain, aliases: [NDCG] }
+  - { zh: 数据泄漏, en: data leakage, aliases: [数据泄露, leakage] }
+  - { zh: 极大后验假设, en: maximum a posteriori hypothesis, aliases: [MAP 假设, MAP hypothesis] }
+  - { zh: 极大似然假设, en: maximum likelihood hypothesis, aliases: [ML 假设, ML hypothesis] }
+  - { zh: Bayes 最优分类器, en: Bayes optimal classifier, aliases: [贝叶斯最优分类器] }
+  - { zh: Gibbs 算法, en: Gibbs algorithm }
+  - { zh: 朴素 Bayes 分类器, en: naive Bayes classifier, aliases: [朴素贝叶斯, 朴素 Bayes, naive Bayes] }
+  - { zh: 拉普拉斯平滑, en: Laplace smoothing, aliases: [Laplace 平滑, 加一平滑, add-one smoothing] }
+  - { zh: Dirichlet 分布, en: Dirichlet distribution, aliases: [狄利克雷分布] }
+  - { zh: 词义消歧, en: word sense disambiguation, aliases: [WSD] }
+  - { zh: 基于实例的学习, en: instance-based learning, aliases: [基于记忆的学习, memory-based learning] }
+  - { zh: 惰性学习, en: lazy learning }
+  - { zh: Voronoi 图, en: Voronoi diagram, aliases: [沃罗诺伊图, Voronoi tessellation, Dirichlet tessellation] }
+  - { zh: Minkowski 距离, en: Minkowski distance }
+  - { zh: 欧氏距离, en: Euclidean distance }
+  - { zh: 曼哈顿距离, en: Manhattan distance, aliases: [城市街区距离, taxicab distance] }
+  - { zh: Chebyshev 距离, en: Chebyshev distance, aliases: [切比雪夫距离, 棋盘距离] }
+  - { zh: 维数灾难, en: curse of dimensionality, aliases: [维度灾难] }
+  - { zh: 近似最近邻, en: approximate nearest neighbor, aliases: [近似最近邻搜索, approximate nearest neighbor search] }
+  - { zh: 距离加权 k 近邻, en: distance-weighted k-nearest neighbors, aliases: [distance-weighted KNN] }
+  - { zh: 核回归, en: kernel regression, aliases: [Nadaraya–Watson 核回归, Nadaraya–Watson estimator] }
+  - { zh: 局部加权回归, en: locally weighted regression, aliases: [局部回归, local regression, LOESS, LOWESS] }
+  - { zh: 半监督学习, en: semi-supervised learning }
+  - { zh: k 中心聚类, en: k-medoids clustering, aliases: [k 中心点, k 中心点聚类, k-medoids] }
+  - { zh: 中心点, en: medoid, scope: ["3.4", "4.6"] }
+  - { zh: PAM, en: PAM, aliases: [PAM 算法, Partitioning Around Medoids] }
+  - { zh: CLARA, en: CLARA, aliases: [Clustering LARge Applications] }
+  - { zh: DIANA, en: DIANA, aliases: [DIvisive ANAlysis] }
+  - { zh: k-means++, en: k-means++ }
+  - { zh: DBSCAN, en: DBSCAN }
+  - { zh: 核心点, en: core point }
+  - { zh: 密度可达, en: density-reachable }
+  - { zh: 集成学习, en: ensemble learning }
+  - { zh: 弱学习器, en: weak learner }
+  - { zh: 强学习器, en: strong learner }
+  - { zh: 加权多数算法, en: weighted majority algorithm }
+  - { zh: Stacking, en: stacking, aliases: [堆叠, stacked generalization] }
+  - { zh: Bagging, en: bagging, aliases: [bootstrap aggregating] }
+  - { zh: 袋外误差, en: out-of-bag error, aliases: [OOB 误差, OOB error] }
+  - { zh: 随机森林, en: random forest }
+  - { zh: Boosting, en: boosting, aliases: [提升法] }
+  - { zh: AdaBoost, en: AdaBoost, aliases: [Adaptive Boosting] }
+  - { zh: 梯度提升, en: gradient boosting, aliases: [梯度提升树, GBDT, gradient boosted decision trees] }
+  - { zh: 样本错误率, en: sample error }
+  - { zh: 真实错误率, en: true error }
+  - { zh: McNemar 检验, en: "McNemar's test" }
+  - { zh: 配对 t 检验, en: paired t-test, aliases: [成对 t 检验] }
+  - { zh: 5×2 交叉验证 t 检验, en: 5×2 cross-validation t-test, aliases: [5×2cv t 检验, 5x2cv paired t-test] }
+  - { zh: Markov 模型, en: Markov model, aliases: [马尔可夫模型] }
+  - { zh: 隐 Markov 模型, en: hidden Markov model, aliases: [隐马尔可夫模型, HMM] }
+  - { zh: 前向算法, en: forward algorithm }
+  - { zh: 后向算法, en: backward algorithm }
+  - { zh: 前向变量, en: forward variable }
+  - { zh: 后向变量, en: backward variable }
+  - { zh: Viterbi 算法, en: Viterbi algorithm, aliases: [维特比算法] }
+  - { zh: Baum–Welch 算法, en: Baum–Welch algorithm, aliases: [Baum-Welch 算法] }
+  - { zh: 深度学习, en: deep learning }
+  - { zh: 表示学习, en: representation learning }
+  - { zh: 学习算法, en: learning algorithm }
+  - { zh: 数据生成分布, en: data-generating distribution }
+  - { zh: 泛化误差, en: generalization error }
+  - { zh: 训练误差, en: training error, aliases: [经验风险, empirical risk] }
+  - { zh: 泛化差距, en: generalization gap }
+  - { zh: 没有免费午餐定理, en: no free lunch theorem }
+  - { zh: 归纳偏置, en: inductive bias }
+  - { zh: 双下降, en: double descent }
+  - { zh: 正则化, en: regularization }
+  - { zh: 权重衰减, en: weight decay }
+  - { zh: 早停, en: early stopping, aliases: [提前停止] }
+  - { zh: 交叉熵, en: cross-entropy }
+  - { zh: 感知机, en: perceptron, aliases: [感知器] }
+  - { zh: 感知机学习算法, en: perceptron learning algorithm }
+  - { zh: 感知机收敛定理, en: perceptron convergence theorem }
+  - { zh: 口袋算法, en: pocket algorithm }
+  - { zh: 平均感知机, en: averaged perceptron }
+  - { zh: 计算图, en: computational graph }
+  - { zh: 自动微分, en: automatic differentiation, aliases: [autodiff] }
+  - { zh: 线性整流单元, en: rectified linear unit, aliases: [ReLU, 修正线性单元] }
+  - { zh: 权重初始化, en: weight initialization }
+  - { zh: 互相关, en: cross-correlation }
+  - { zh: 特征图, en: feature map, scope: ["4.7"] }
+  - { zh: 卷积层, en: convolutional layer }
+  - { zh: 卷积神经网络, en: convolutional neural network, aliases: [CNN] }
+  - { zh: 填充, en: padding, scope: ["4.7"] }
+  - { zh: 参数共享, en: parameter sharing, aliases: [权值共享, weight sharing] }
+  - { zh: 1×1 卷积, en: 1×1 convolution, aliases: [逐点卷积, pointwise convolution] }
+  - { zh: 深度可分离卷积, en: depthwise separable convolution }
+  - { zh: 转置卷积, en: transposed convolution, aliases: [反卷积] }
+  - { zh: 池化, en: pooling }
+  - { zh: 最大池化, en: max pooling }
+  - { zh: 全局平均池化, en: global average pooling }
+  - { zh: 感受野, en: receptive field }
+  - { zh: 有效感受野, en: effective receptive field }
+  - { zh: Inception 模块, en: Inception module }
+  - { zh: 残差连接, en: residual connection, aliases: [跳跃连接, skip connection] }
+  - { zh: 残差网络, en: residual network, aliases: [ResNet] }
+  - { zh: 一致, en: consistent heuristic, aliases: [一致性, 单调, 单调性, consistency, monotone heuristic], scope: ["4.5"] }
+  - { zh: 准确率, en: accuracy, scope: ["4"] }
+  - { zh: 精确率, en: precision, aliases: [查准率], scope: ["4"] }
+  - { zh: 召回率, en: recall, aliases: [查全率], scope: ["4"] }
+  - { zh: 多层感知机, en: multilayer perceptron, aliases: [MLP, 多层感知器] }
+  - { zh: 步幅, en: stride, scope: ["4.7"] }
