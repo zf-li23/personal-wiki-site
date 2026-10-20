@@ -1,7 +1,7 @@
 ---
 title: Programs and Programming Languages
 description: Programs and algorithms; the von Neumann architecture and the instruction cycle; machine language, assembly language and high-level languages; compilation and interpretation; the C++ and Python toolchains; the structure of a first program; standard input and output and online judges; code style and kinds of program errors.
-source_hash: 92be3fe18143
+source_hash: de32d3afbc94
 ---
 
 This chapter answers three basic questions: what a program is, how a computer executes it, and what tools we use to write it. We first distinguish algorithms from programs, then start from the von Neumann architecture to explain why programming languages are needed and how compilation and interpretation turn a high-level language into machine actions. Finally we set up the C++ and Python toolchains and write a first program. The ideas of this chapter run through the whole course: from [4.1.2](/4.1.2) on we treat data, control structures and functions step by step, [4.2](/4.2) covers object-oriented programming, [4.3](/4.3) studies algorithms and data structures systematically, and [4.4](/4.4) uses Python for scientific computing; the internal details of the computer are left to [4.10 Computer Organization](/4.10) and [4.11 Operating Systems](/4.11).
@@ -115,7 +115,7 @@ The standard implementation of Python, CPython, takes a hybrid approach: it firs
 | After a change | Recompile and relink | Simply rerun; interactive experiments are possible |
 | Distribution | Executables are platform specific | Source code is cross-platform, but an interpreter must be installed |
 
-Compilation and interpretation are ways of implementing a language, not properties of the language itself: PyPy executes Python with just-in-time compilation (JIT), CPython has included an experimental JIT since 3.13, and conversely there are tools that interpret C++. A common practice in scientific computing is to combine the two: write the body of the program in Python and hand the time-consuming computations to libraries precompiled from C, C++ or Fortran ([4.4](/4.4)).
+Compilation and interpretation are ways of implementing a language, not properties of the language itself: PyPy executes Python with *just-in-time compilation* (JIT), CPython has included an experimental JIT since 3.13, and conversely there are tools that interpret C++. A common practice in scientific computing is to combine the two: write the body of the program in Python and hand the time-consuming computations to libraries precompiled from C, C++ or Fortran ([4.4](/4.4)).
 
 By the ideas used to organize programs, languages can also be divided into paradigms: procedural (C, organizing the steps of operations with functions), object-oriented (encapsulating data and operations into objects, [4.2.1](/4.2.1)), functional (Haskell, based mainly on the composition of functions) and logic (Prolog, describing facts and rules and letting the system do the inference). C++ and Python are both multi-paradigm languages. In this course, [4.1](/4.1) covers the procedural approach and [4.2](/4.2) the object-oriented approach.
 
