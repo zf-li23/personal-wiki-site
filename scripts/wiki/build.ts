@@ -30,6 +30,11 @@ export interface BuildOptions {
   /** Skip writing .generated/ (used by checks that only need diagnostics). */
   dryRun?: boolean;
   log?: (message: string) => void;
+  /**
+   * Render and link only these pages (`pnpm wiki lint`): fast, no output written, no build lock.
+   * Checks that need the whole site (definition sites in other courses) are left to full builds.
+   */
+  only?: Set<string>;
 }
 
 export interface BuildResult {
@@ -65,6 +70,7 @@ function titleOf(page: PageSource, lang: Lang): string {
 }
 
 export async function buildContent(opts: BuildOptions = {}): Promise<BuildResult> {
+  if (opts.only) return buildContentLocked({ ...opts, dryRun: true });
   const release = acquireBuildLock(opts.log ?? console.log);
   try {
     return await buildContentLocked(opts);
@@ -77,7 +83,8 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
   const log = opts.log ?? (() => {});
   const diag = new Diagnostics();
   const tree = scanContent(diag);
-  const plots = await renderPlots(tree, diag, { log });
+  const plots = await renderPlots(tree, diag, { log, pages: opts.only });
+  const included = (id: string) => !opts.only || opts.only.has(id);
 
   const rendered = new Map<string, RenderOutput>();
   const renderDiag = new Map<string, Diagnostics>();
@@ -86,6 +93,7 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
 
   // 1. render every page in every language
   for (const page of tree.pages.values()) {
+    if (!included(page.id)) continue;
     usedAssets.set(page.id, new Set());
     for (const lang of LANGUAGES) {
       const status = translationStatus(page, lang);
@@ -113,13 +121,14 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
   }
 
   // 2. index statements and concept definitions across the site, 3. link every page
-  const readingOrder = tree.rootIds.flatMap(function walk(id: string): string[] {
+  const fullOrder = tree.rootIds.flatMap(function walk(id: string): string[] {
     return [id, ...tree.pages.get(id)!.childIds.flatMap(walk)];
   });
+  const readingOrder = fullOrder.filter(included);
   const order = new Map(readingOrder.map((id, i) => [id, i]));
   const concepts = loadConcepts(diag);
   for (const c of concepts) {
-    for (const s of c.scope ?? []) if (!tree.pages.has(s)) diag.error(GLOSSARY_FILE, `"${c.en}": scope "${s}" is not a page id`);
+    for (const s of opts.only ? [] : (c.scope ?? [])) if (!tree.pages.has(s)) diag.error(GLOSSARY_FILE, `"${c.en}": scope "${s}" is not a page id`);
   }
   const sourceKey = (id: string) => `${tree.pages.get(id)!.sourceLang}/${id}`;
   const sourceRenders = new Map(readingOrder.map((id) => [id, rendered.get(sourceKey(id))!]));
@@ -178,8 +187,8 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
   // Concept links in every language point at the definition site; a translation must keep it.
   for (const [id, site] of index.conceptSites) {
     for (const lang of LANGUAGES) {
-      const out = rendered.get(`${lang}/${site.pageId}`)!;
-      if (out.contentLang !== lang || out.anchors.has(site.anchor) || !site.anchor.startsWith('concept-')) continue;
+      const out = rendered.get(`${lang}/${site.pageId}`);
+      if (!out || out.contentLang !== lang || out.anchors.has(site.anchor) || !site.anchor.startsWith('concept-')) continue;
       const page = tree.pages.get(site.pageId)!;
       diag.warn(page.files[lang]?.path ?? page.dir, `the definition of concept "${id}" is not marked in this translation (italicise *term* in English, or write 名称（English） in Chinese, at the defining occurrence)`);
     }
@@ -188,7 +197,7 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
 
   const site: SiteData = {
     buildId: '',
-    nav: tree.rootIds.map((id) => navNode(tree, id)),
+    nav: (opts.only ? [] : tree.rootIds).map((id) => navNode(tree, id)),
   };
   site.buildId = crypto
     .createHash('sha256')
@@ -235,6 +244,7 @@ function navNode(tree: ContentTree, id: string): NavNode {
 
 function checkCrossPageAnchors(tree: ContentTree, rendered: Map<string, RenderOutput>, diag: Diagnostics): void {
   for (const page of tree.pages.values()) {
+    if (!rendered.has(`${LANGUAGES[0]}/${page.id}`)) continue;
     for (const lang of LANGUAGES) {
       if (translationStatus(page, lang) === 'untranslated') continue; // reported for the source file
       const out = rendered.get(`${lang}/${page.id}`)!;
@@ -261,6 +271,7 @@ function checkUnused(
     if (!usedPlots.has(script)) diag.warn(script, 'plot script is not referenced by any page (embed it with ![caption](./plots/<name>.py) or delete it)');
   }
   for (const page of tree.pages.values()) {
+    if (!usedAssets.has(page.id)) continue;
     for (const name of page.assets) {
       if (!usedAssets.get(page.id)!.has(name)) diag.warn(path.join(page.dir, 'assets', name), 'asset is not referenced by the page');
     }

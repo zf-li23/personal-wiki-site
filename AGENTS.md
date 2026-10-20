@@ -12,8 +12,10 @@ This file is for changing the code.
 | `pnpm dev` | Dev server; rebuilds content on every change under `content/` |
 | `pnpm build` | `tsc`, then `vite build` (content pipeline + bundle + prerender) → `dist/` |
 | `pnpm check` | Strict content build + typecheck + eslint + unit tests. Run before every commit |
-| `pnpm wiki <cmd>` | Content CLI: `build [--strict]`, `status`, `stamp <id>`, `new …`, `terms`, `freeze`/`unfreeze <script>`, `check-r` (see `scripts/wiki.ts`) |
+| `pnpm wiki <cmd>` | Content CLI: `build [--strict]`, `lint <ids>` (fast: renders only those courses), `status`, `stamp <id>`, `new …`, `terms`, `freeze`/`unfreeze <script>`, `check-r` (see `scripts/wiki.ts`) |
 | `pnpm test` | Pipeline unit tests (`node --test`) |
+| `python3 scripts/prep_sources.py` | Orchestrator: extract `sources/` materials to text + low-res images of flagged pages (`sources/text/INDEX.md`) |
+| `python3 scripts/merge_terms.py <yaml> "<section>" [--apply]` | Orchestrator: add glossary proposals; reports conflicts, never edits existing entries |
 
 Node ≥ 22.18 runs the TypeScript in `scripts/` directly (type stripping): no build step for tooling.
 

@@ -175,8 +175,9 @@ export function buildLinkIndex(
       const concept = def ? lookup(hastToString(strong)) : undefined;
       if (concept && def) add(concept.id, { pageId, anchor: def, file });
     });
+    const mayBeMarked = annotationCandidates(out.hast, out.contentLang);
     for (const concept of concepts) {
-      if (!inScope(concept, pageId)) continue;
+      if (!inScope(concept, pageId) || !mayBeMarked(concept)) continue;
       const anchor = markAnnotatedDefinition(out.hast, concept, out.contentLang);
       if (anchor) {
         out.anchors.add(anchor);
@@ -204,6 +205,30 @@ export function buildLinkIndex(
   }
   void tree;
   return { statements, concepts, conceptSites };
+}
+
+/**
+ * A cheap necessary condition for markAnnotatedDefinition, so that it runs only for the few
+ * concepts that can be marked on a page (instead of walking the page once per concept):
+ * in English an emphasised run must spell one of the names, in Chinese the page text must
+ * contain both a Chinese and an English name.
+ */
+function annotationCandidates(root: Root, lang: Lang): (concept: Concept) => boolean {
+  if (lang === 'en') {
+    const keys = new Set<string>();
+    const walk = (parent: Root | Element) => {
+      for (const child of parent.children) {
+        if (child.type !== 'element' || skippable(child)) continue;
+        if (child.tagName === 'em' || child.tagName === 'i') for (const k of nameKeys(hastToString(child), 'en')) keys.add(k);
+        walk(child);
+      }
+    };
+    walk(root);
+    return (concept) => conceptNames(concept, 'en').some((n) => keys.has(nameKeys(n, 'en')[0]));
+  }
+  const text = hastToString(root);
+  const lower = text.toLowerCase();
+  return (concept) => conceptNames(concept, 'zh').some((n) => text.includes(n)) && conceptNames(concept, 'en').some((n) => lower.includes(n.toLowerCase()));
 }
 
 /**

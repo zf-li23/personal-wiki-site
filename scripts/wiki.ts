@@ -2,6 +2,8 @@
  * Wiki command line. Run with `pnpm wiki <command>` (Node >= 22.18 runs TypeScript directly).
  *
  *   build [--strict]                 content/ -> .generated/ ; exits 1 on errors (and on warnings with --strict)
+ *   lint <id>...                     fast check for writers: renders only the pages' courses, reports problems
+ *                                    in those pages and bold text outside definitions that does not link
  *   status [--all]                   translation status per page (stale / untranslated / ...)
  *   stamp <id>... [--from <lang>] | --all
  *                                    mark translations as up to date with the current source text;
@@ -23,6 +25,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { LANGUAGES, type Lang, isLang } from '../site.config.ts';
 import { compareIds, idSegments } from '../src/shared/page-id.ts';
+import { courseOf } from './wiki/numbering.ts';
 import { buildContent, sourceHash, translationStatus } from './wiki/build.ts';
 import { Diagnostics } from './wiki/diagnostics.ts';
 import { fixMarkdown } from './wiki/fix.ts';
@@ -57,6 +60,36 @@ async function build() {
   const summary = `${tree.pages.size} pages, ${diag.errorCount} error(s), ${diag.warningCount} warning(s) in ${((Date.now() - started) / 1000).toFixed(1)}s`;
   if (diag.errorCount || (flags.has('--strict') && diag.warningCount)) fail(`content build failed: ${summary}`);
   console.log(`\x1b[32mcontent build ok:\x1b[0m ${summary}`);
+}
+
+/**
+ * Fast check of some pages for writers: renders and links only their courses (both languages),
+ * reports the problems in the given pages, and the bold runs outside definitions that do not link.
+ * Definition sites in other courses and site-wide concept checks need a full `build`.
+ */
+async function lint() {
+  if (!positional.length) fail('usage: pnpm wiki lint <id>...  (a chapter, a course, or a discipline)');
+  const started = Date.now();
+  const tree = scanOrFail();
+  const under = (id: string, p: string) => id === p || id.startsWith(`${p}.`);
+  for (const p of positional) if (!tree.pages.has(p)) fail(`unknown page id "${p}"`);
+  const courses = positional.map((p) => courseOf(p));
+  const only = new Set([...tree.pages.keys()].filter((id) => courses.some((c) => under(id, c))));
+  const { diag, plainBold } = await buildContent({ only });
+  const dirs = positional.map((p) => `${rel(tree.pages.get(p)!.dir)}/`);
+  const report = new Diagnostics();
+  report.items.push(...diag.items.filter((d) => dirs.some((dir) => d.file.startsWith(dir))));
+  for (const [key, list] of plainBold) {
+    const [, id] = key.split('/') as [Lang, string];
+    if (!positional.some((p) => under(id, p))) continue;
+    const page = tree.pages.get(id)!;
+    const outside = list.filter((b) => !b.inDefinition).map((b) => `**${b.text}**`);
+    if (outside.length) report.warn(page.files[key.split('/')[0] as Lang]!.path, `bold outside definitions that is not a concept name (make it a concept, rephrase, or drop the bold): ${outside.join('  ')}`);
+  }
+  if (report.items.length) console.log(report.format());
+  const summary = `${only.size} pages rendered, ${report.errorCount} error(s), ${report.warningCount} warning(s) in ${positional.join(', ')} (${((Date.now() - started) / 1000).toFixed(1)}s)`;
+  if (report.items.length) fail(`lint: ${summary}`);
+  console.log(`\x1b[32mlint ok:\x1b[0m ${summary}`);
 }
 
 function status() {
@@ -270,6 +303,6 @@ function checkR() {
   if (failed.length) process.exitCode = 1;
 }
 
-const commands: Record<string, () => void | Promise<void>> = { build, status, stamp, new: newPage, terms, fix, freeze, unfreeze, 'check-r': checkR };
+const commands: Record<string, () => void | Promise<void>> = { build, lint, status, stamp, new: newPage, terms, fix, freeze, unfreeze, 'check-r': checkR };
 const run = commands[command ?? ''] ?? (() => fail(`unknown command "${command ?? ''}". Commands: ${Object.keys(commands).join(', ')}`));
 await run();

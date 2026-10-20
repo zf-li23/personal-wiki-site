@@ -167,6 +167,8 @@ export interface RenderPlotsOptions {
   ignoreFrozen?: Set<string>;
   /** Delete cache entries not used by this run (default true; tests on temporary trees pass false). */
   prune?: boolean;
+  /** Only these pages' scripts (and no pruning); used by `pnpm wiki lint`. */
+  pages?: Set<string>;
 }
 
 export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: RenderPlotsOptions = {}): Promise<PlotResults> {
@@ -176,7 +178,7 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
   const todo: { script: string; result: PlotResult }[] = [];
 
   for (const page of tree.pages.values()) {
-    if (!page.plotFiles.length) continue;
+    if (!page.plotFiles.length || (opts.pages && !opts.pages.has(page.id))) continue;
     const plotDir = path.join(page.dir, 'plots');
     const dataFiles = page.plotFiles
       .filter((f) => !f.endsWith('.py') && !f.endsWith('.R') && !FROZEN_RE.test(f))
@@ -243,7 +245,7 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
 
   // Prune cache entries no longer referenced, but only when every plot is available,
   // so a broken environment never wipes a good cache.
-  if (opts.prune !== false && [...results.values()].every((r) => !r.error) && fs.existsSync(PLOT_CACHE_DIR)) {
+  if (opts.prune !== false && !opts.pages && [...results.values()].every((r) => !r.error) && fs.existsSync(PLOT_CACHE_DIR)) {
     const live = new Set([...results.values()].filter((r) => !r.frozen).map((r) => r.key));
     for (const name of fs.readdirSync(PLOT_CACHE_DIR)) {
       if (!live.has(name)) fs.rmSync(path.join(PLOT_CACHE_DIR, name), { recursive: true, force: true });

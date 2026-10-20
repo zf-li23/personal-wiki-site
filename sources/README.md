@@ -8,6 +8,8 @@ sources/
   slides/          课件（PDF、PPT/PPTX）——范围、术语、编号的依据
   notes/           梳理（自己或别人的笔记、提纲）——格式与重点的参考，内容需要核实
   textbooks/       教材（PDF 等）——查证、补全证明与例题、缺少课件时的主材料
+  text/            编排者用 scripts/prep_sources.py 生成：资料的文字版与 INDEX.md
+  pages/           同上：文字不够用的页面的低分辨率图片
   REQUEST.md       可选：作者对这门课程的说明（想写成什么样、哪些重要、已知的问题）
   PLAN.md          章节规划（编排者写，作者确认后执行；随资料一起删除）
 ```

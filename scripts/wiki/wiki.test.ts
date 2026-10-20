@@ -489,6 +489,16 @@ describe('cross-page linking', () => {
     assert.ok(!s.html('1.2.3').includes('concept-ref'));
     assert.match(s.html('3.1.11'), /data-concept="characteristic-function"/);
   });
+  it('finds annotated definitions whatever the case or plural of the English name', async () => {
+    concepts.push({ id: 'matrix', zh: '矩阵', en: 'matrix', aliases: [] });
+    const s = await site({
+      '2.1.1': 'en:## 1.1. A\n\nRectangular arrays are *Matrices*.',
+      '3.1.13': '## 13.1. B\n\n依分布收敛（Convergence in Distribution）是……',
+    });
+    concepts.pop();
+    assert.equal(s.index.conceptSites.get('matrix')?.anchor, 'concept-matrix');
+    assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'concept-convergence-in-distribution');
+  });
   it('allows restating a definition but not a second English annotation', async () => {
     const s = await site({
       '3.1.12': '## 12.1. A\n\n大数定律（law of large numbers）',
