@@ -1554,7 +1554,7 @@ terms:
   - { zh: 原子向量, en: atomic vector }
   - { zh: 列表, en: list, aliases: [递归向量, recursive vector], scope: ["3.5"] }
   - { zh: 属性, en: attribute, scope: ["3.5"] }
-  - { zh: 强制类型转换, en: coercion, aliases: [强制转换] }
+  - { zh: 强制类型转换, en: coercion, aliases: [强制转换], scope: ["3.5"] }
   - { zh: 数据框, en: data frame }
   - { zh: 循环回收, en: recycling, aliases: [recycling rule], scope: ["3.5"] }
   - { zh: 向量化, en: vectorization }
@@ -1973,3 +1973,221 @@ terms:
   - { zh: 上下文压缩, en: context compaction, aliases: [compaction] }
   - { zh: 提示缓存, en: prompt caching }
   - { zh: 程序合成, en: program synthesis }
+  - { zh: 程序, en: program, scope: ["4"] }
+  - { zh: 算法, en: algorithm }
+  - { zh: 冯·诺依曼结构, en: von Neumann architecture, aliases: [冯诺依曼结构, 冯·诺依曼体系结构] }
+  - { zh: 机器语言, en: machine language, aliases: [machine code] }
+  - { zh: 汇编语言, en: assembly language }
+  - { zh: 高级语言, en: high-level language, aliases: [高级程序设计语言] }
+  - { zh: 源代码, en: source code, aliases: [源程序] }
+  - { zh: 编译器, en: compiler }
+  - { zh: 解释器, en: interpreter }
+  - { zh: 字节码, en: bytecode }
+  - { zh: 集成开发环境, en: integrated development environment, aliases: [IDE] }
+  - { zh: 退出状态, en: exit status, aliases: [exit code, 返回码] }
+  - { zh: 在线评测, en: online judge, aliases: [OJ, 在线评测系统] }
+  - { zh: 变量, en: variable, scope: ["4"] }
+  - { zh: 静态类型, en: static typing, aliases: [statically typed] }
+  - { zh: 动态类型, en: dynamic typing, aliases: [dynamically typed] }
+  - { zh: 数据类型, en: data type }
+  - { zh: 整数溢出, en: integer overflow }
+  - { zh: 未定义行为, en: undefined behavior, aliases: [UB] }
+  - { zh: 表达式, en: expression, scope: ["4"] }
+  - { zh: 隐式类型转换, en: implicit conversion, aliases: [隐式转换] }
+  - { zh: 窄化转换, en: narrowing conversion }
+  - { zh: 转义序列, en: escape sequence, aliases: [转义字符] }
+  - { zh: 结构化程序设计, en: structured programming }
+  - { zh: 短路求值, en: short-circuit evaluation }
+  - { zh: 掩码, en: mask, aliases: [bitmask, 位掩码], scope: ["4"] }
+  - { zh: 循环不变式, en: loop invariant }
+  - { zh: 枚举法, en: exhaustive search, aliases: [穷举法, 蛮力法, brute-force search, brute force] }
+  - { zh: 副作用, en: side effect }
+  - { zh: 纯函数, en: pure function }
+  - { zh: 形式参数, en: parameter, aliases: [形参, formal parameter], scope: ["4"] }
+  - { zh: 值传递, en: pass by value, aliases: [call by value, 按值传递] }
+  - { zh: 引用传递, en: pass by reference, aliases: [call by reference, 按引用传递] }
+  - { zh: 传递对象引用, en: call by sharing, aliases: [pass by object reference] }
+  - { zh: 局部变量, en: local variable }
+  - { zh: 全局变量, en: global variable }
+  - { zh: 遮蔽, en: shadowing, aliases: [name shadowing], scope: ["4"] }
+  - { zh: 生存期, en: lifetime, aliases: [生命周期], scope: ["4"] }
+  - { zh: 调用栈, en: call stack }
+  - { zh: 栈帧, en: stack frame, aliases: [活动记录, activation record] }
+  - { zh: 栈溢出, en: stack overflow }
+  - { zh: 逐步求精, en: stepwise refinement, aliases: [自顶向下逐步求精, top-down design] }
+  - { zh: 调试, en: debugging }
+  - { zh: 调试器, en: debugger }
+  - { zh: 断点, en: breakpoint, aliases: [条件断点, conditional breakpoint] }
+  - { zh: 监视点, en: watchpoint }
+  - { zh: 事后调试, en: post-mortem debugging }
+  - { zh: 测试用例, en: test case }
+  - { zh: 差一错误, en: off-by-one error }
+  - { zh: 单元测试, en: unit testing, aliases: [unit test] }
+  - { zh: 对拍, en: differential testing }
+  - { zh: 防御性编程, en: defensive programming }
+  - { zh: 断言, en: assertion }
+  - { zh: 数组, en: array }
+  - { zh: 随机访问, en: random access }
+  - { zh: Eratosthenes 筛法, en: sieve of Eratosthenes, aliases: [埃拉托斯特尼筛法, 筛法] }
+  - { zh: 顺序查找, en: linear search, aliases: [线性查找, sequential search] }
+  - { zh: 二分查找, en: binary search, aliases: [折半查找] }
+  - { zh: 字符串, en: string, aliases: [串], scope: ["4"] }
+  - { zh: 缓冲区溢出, en: buffer overflow }
+  - { zh: 字典序, en: lexicographic order, aliases: [lexicographical order] }
+  - { zh: 码位, en: code point }
+  - { zh: 行主序, en: row-major order }
+  - { zh: 冒泡排序, en: bubble sort, aliases: [起泡排序] }
+  - { zh: 严格弱序, en: strict weak ordering }
+  - { zh: 指针, en: pointer, scope: ["4"] }
+  - { zh: 空指针, en: null pointer }
+  - { zh: 动态内存分配, en: dynamic memory allocation, aliases: [动态分配] }
+  - { zh: 悬垂指针, en: dangling pointer, aliases: [野指针] }
+  - { zh: 内存泄漏, en: memory leak }
+  - { zh: 垃圾回收, en: garbage collection }
+  - { zh: 结构体, en: structure, aliases: [struct, 结构], scope: ["4"] }
+  - { zh: 链表, en: linked list }
+  - { zh: 循环链表, en: circular linked list }
+  - { zh: 文件, en: file, scope: ["4"] }
+  - { zh: 递归基, en: base case }
+  - { zh: 减治, en: decrease and conquer, aliases: [减而治之] }
+  - { zh: 与或图, en: AND-OR graph }
+  - { zh: 记忆化, en: memoization, aliases: [备忘录法, 记忆化搜索] }
+  - { zh: 分治, en: divide and conquer, aliases: [分而治之] }
+  - { zh: 归并排序, en: merge sort, aliases: [mergesort] }
+  - { zh: 快速排序, en: quicksort, aliases: [quick sort] }
+  - { zh: 回溯, en: backtracking, aliases: [回溯法] }
+  - { zh: 剪枝, en: pruning, scope: ["4"] }
+  - { zh: 动态规划, en: dynamic programming }
+  - { zh: 最优子结构, en: optimal substructure }
+  - { zh: 重叠子问题, en: overlapping subproblems }
+  - { zh: 状态转移方程, en: state transition equation, aliases: [状态转移], scope: ["4"] }
+  - { zh: 状态空间, en: state space, scope: ["4"] }
+  - { zh: 编程范式, en: programming paradigm, aliases: [paradigm] }
+  - { zh: 面向过程编程, en: procedural programming, aliases: [面向过程程序设计, 过程式编程] }
+  - { zh: 面向对象编程, en: object-oriented programming, aliases: [面向对象程序设计, OOP] }
+  - { zh: 抽象, en: abstraction, scope: ["4"] }
+  - { zh: 过程抽象, en: procedural abstraction }
+  - { zh: 数据抽象, en: data abstraction }
+  - { zh: 对象, en: object, aliases: [实例, instance], scope: ["4"] }
+  - { zh: 封装, en: encapsulation }
+  - { zh: 信息隐藏, en: information hiding }
+  - { zh: 不变式, en: class invariant, aliases: [类不变式, invariant], scope: ["4"] }
+  - { zh: 零开销抽象, en: zero-overhead abstraction, aliases: [zero-cost abstraction] }
+  - { zh: 编译单元, en: translation unit, aliases: [翻译单元] }
+  - { zh: 声明, en: declaration, scope: ["4"] }
+  - { zh: 定义, en: definition, scope: ["4"] }
+  - { zh: 单一定义规则, en: one definition rule, aliases: [ODR] }
+  - { zh: 头文件, en: header file }
+  - { zh: 链接, en: linking, scope: ["4"] }
+  - { zh: 外部链接, en: external linkage }
+  - { zh: 内部链接, en: internal linkage }
+  - { zh: 静态库, en: static library }
+  - { zh: 动态库, en: dynamic library, aliases: [共享库, shared library] }
+  - { zh: 宏, en: macro, scope: ["4"] }
+  - { zh: 构建系统, en: build system }
+  - { zh: 函数重载, en: function overloading, aliases: [重载, overloading], scope: ["4"] }
+  - { zh: 默认实参, en: default argument, aliases: [缺省参数, 默认参数] }
+  - { zh: 类, en: class, scope: ["4"] }
+  - { zh: 数据成员, en: data member, aliases: [成员变量, member variable] }
+  - { zh: 成员函数, en: member function, aliases: [method], scope: ["4"] }
+  - { zh: 访问控制, en: access control, aliases: [访问权限, access specifier] }
+  - { zh: 内联函数, en: inline function }
+  - { zh: 构造函数, en: constructor }
+  - { zh: 成员初始化列表, en: member initializer list, aliases: [初始化列表] }
+  - { zh: 默认成员初始化, en: default member initializer }
+  - { zh: 委托构造函数, en: delegating constructor }
+  - { zh: 默认构造函数, en: default constructor }
+  - { zh: 析构函数, en: destructor }
+  - { zh: 存储期, en: storage duration }
+  - { zh: 静态成员, en: static member, aliases: [静态数据成员, 静态成员函数, static data member, static member function] }
+  - { zh: 常量成员函数, en: const member function }
+  - { zh: const 正确性, en: const correctness }
+  - { zh: 友元, en: friend, aliases: [友元函数, 友元类, friend function, friend class] }
+  - { zh: RAII, en: resource acquisition is initialization, aliases: [资源获取即初始化] }
+  - { zh: 栈展开, en: stack unwinding }
+  - { zh: 上下文管理器, en: context manager }
+  - { zh: 运算符重载, en: operator overloading }
+  - { zh: 三路比较运算符, en: three-way comparison operator, aliases: [太空船运算符, spaceship operator] }
+  - { zh: 特殊方法, en: special method, aliases: [魔术方法, dunder method, magic method] }
+  - { zh: 引用, en: reference, aliases: [左值引用, lvalue reference], scope: ["4"] }
+  - { zh: 值类别, en: value category }
+  - { zh: 左值, en: lvalue }
+  - { zh: 右值, en: rvalue }
+  - { zh: 右值引用, en: rvalue reference }
+  - { zh: 拷贝构造函数, en: copy constructor, aliases: [复制构造函数] }
+  - { zh: 浅拷贝, en: shallow copy }
+  - { zh: 深拷贝, en: deep copy }
+  - { zh: 拷贝赋值运算符, en: copy assignment operator, aliases: [复制赋值运算符] }
+  - { zh: 移动语义, en: move semantics }
+  - { zh: 移动构造函数, en: move constructor }
+  - { zh: 移动赋值运算符, en: move assignment operator }
+  - { zh: 复制消除, en: copy elision, aliases: [返回值优化, return value optimization, RVO, NRVO] }
+  - { zh: 特殊成员函数, en: special member function }
+  - { zh: 三法则, en: rule of three }
+  - { zh: 五法则, en: rule of five }
+  - { zh: 零法则, en: rule of zero }
+  - { zh: 转换构造函数, en: converting constructor }
+  - { zh: 类型转换运算符, en: conversion operator, aliases: [conversion function, 转换函数] }
+  - { zh: 组合, en: composition, scope: ["4"] }
+  - { zh: 继承, en: inheritance, scope: ["4"] }
+  - { zh: 基类, en: base class, aliases: [父类, superclass] }
+  - { zh: 派生类, en: derived class, aliases: [子类, subclass] }
+  - { zh: 多重继承, en: multiple inheritance }
+  - { zh: 虚继承, en: virtual inheritance }
+  - { zh: 菱形继承, en: diamond inheritance, aliases: [diamond problem] }
+  - { zh: 名字隐藏, en: name hiding, aliases: [重写隐藏] }
+  - { zh: 继承构造函数, en: inheriting constructor }
+  - { zh: 方法解析顺序, en: method resolution order, aliases: [MRO] }
+  - { zh: 向上转型, en: upcast, aliases: [upcasting] }
+  - { zh: 向下转型, en: downcast, aliases: [downcasting] }
+  - { zh: 对象切片, en: object slicing }
+  - { zh: 动态绑定, en: dynamic binding, aliases: [晚绑定, late binding] }
+  - { zh: 虚函数, en: virtual function }
+  - { zh: 虚函数表, en: virtual method table, aliases: [vtable, 虚表] }
+  - { zh: 协变返回类型, en: covariant return type }
+  - { zh: 运行时类型识别, en: run-time type information, aliases: [RTTI] }
+  - { zh: 纯虚函数, en: pure virtual function }
+  - { zh: 抽象类, en: abstract class }
+  - { zh: 多态, en: polymorphism, scope: ["4"] }
+  - { zh: 表达式问题, en: expression problem }
+  - { zh: 鸭子类型, en: duck typing }
+  - { zh: 泛型编程, en: generic programming }
+  - { zh: 模板, en: template, scope: ["4"] }
+  - { zh: 实例化, en: instantiation, aliases: [模板实例化, template instantiation], scope: ["4"] }
+  - { zh: 模板特化, en: template specialization }
+  - { zh: 类型特征, en: type trait }
+  - { zh: 概念, en: concept, scope: ["4"] }
+  - { zh: 类型擦除, en: type erasure }
+  - { zh: 命名空间, en: namespace }
+  - { zh: 标准模板库, en: Standard Template Library, aliases: [STL] }
+  - { zh: 顺序容器, en: sequence container }
+  - { zh: 关联容器, en: associative container }
+  - { zh: 迭代器, en: iterator }
+  - { zh: 迭代器失效, en: iterator invalidation }
+  - { zh: 流, en: stream, scope: ["4"] }
+  - { zh: 正则表达式, en: regular expression, aliases: [regex] }
+  - { zh: 函数对象, en: function object, aliases: [仿函数, functor] }
+  - { zh: lambda 表达式, en: lambda expression }
+  - { zh: 闭包, en: closure, scope: ["4"] }
+  - { zh: 智能指针, en: smart pointer }
+  - { zh: 引用计数, en: reference counting }
+  - { zh: 设计模式, en: design pattern }
+  - { zh: 开闭原则, en: open–closed principle, aliases: [开放封闭原则] }
+  - { zh: 单一职责原则, en: single-responsibility principle, aliases: [单一责任原则] }
+  - { zh: Liskov 替换原则, en: Liskov substitution principle, aliases: [里氏替换原则] }
+  - { zh: 接口隔离原则, en: interface segregation principle }
+  - { zh: 依赖倒置原则, en: dependency inversion principle }
+  - { zh: 合成复用原则, en: composite reuse principle }
+  - { zh: 迪米特法则, en: law of Demeter, aliases: [最少知识原则] }
+  - { zh: 非虚接口, en: non-virtual interface, aliases: [NVI] }
+  - { zh: 模板方法模式, en: template method pattern }
+  - { zh: 策略模式, en: strategy pattern }
+  - { zh: 适配器模式, en: adapter pattern }
+  - { zh: 装饰器模式, en: decorator pattern }
+  - { zh: 函数, en: function, aliases: [子程序, subroutine], scope: ["4"] }
+  - { zh: 实际参数, en: argument, aliases: [实参, actual argument], scope: ["4"] }
+  - { zh: 作用域, en: scope, scope: ["4"] }
+  - { zh: 递归, en: recursion, scope: ["4"] }
+  - { zh: 强制类型转换, en: cast, aliases: [显式类型转换, type cast], scope: ["4"] }
+  - { zh: 覆盖, en: overriding, aliases: [重写覆盖, override], scope: ["4"] }
+  - { zh: 容器, en: container, scope: ["4"] }

@@ -311,7 +311,7 @@ The bound $u$ does not depend on $r$ and is a characteristic of the machine; thi
 
 ### 1.3.2. Accuracy and Stability
 
-We can regard a computation as a function. Let $X$ and $Y$ be normed vector spaces. A mathematical *problem* is a map $f\colon X\to Y$ from data to solutions, and an *algorithm* for it is another map $\tilde f\colon X\to Y$, namely what the computer actually computes, rounding errors included. The rounding function $\operatorname{fl}$ itself is the simplest example: $f$ is the identity and $\tilde f=\operatorname{fl}$.
+We can regard a computation as a function. Let $X$ and $Y$ be normed vector spaces. A mathematical *problem* is a map $f\colon X\to Y$ from data to solutions, and an algorithm for it is another map $\tilde f\colon X\to Y$, namely what the computer actually computes, rounding errors included. The rounding function $\operatorname{fl}$ itself is the simplest example: $f$ is the identity and $\tilde f=\operatorname{fl}$.
 
 **Definition 1.3.2 (Forward and Backward Error)** Let $y=f(x)$ be the exact solution and $\tilde y=\tilde f(x)$ the computed one. The **forward error** of $\tilde f$ at $x$ is the difference $\Delta y=\tilde y-y=\tilde f(x)-f(x)$. The **backward error** is the smallest perturbation $\Delta x=|\tilde x-x|$ of the data for which the computed result is the exact solution, $f(\tilde x)=\tilde f(x)$.
 
