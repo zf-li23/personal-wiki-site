@@ -229,7 +229,7 @@ int get() { return counter + helper(); }  // external linkage: callable from oth
 
 ### 2.4.4. 库
 
-把一组目标文件打包成库，可以供多个程序复用。静态库（static library，Linux 上的 `.a`，Windows 上的 `.lib`）在链接时被复制进可执行文件；动态库（dynamic library，`.so`、`.dll`、`.dylib`）在程序运行时才被加载，多个程序可以共享同一份。标准库本身就是一个库：链接 C++ 程序时 `g++` 会自动链接 `libstdc++`，这也是用 `gcc`（C 编译器的驱动程序）链接 C++ 目标文件会报一堆未定义引用的原因。
+把一组目标文件打包成库，可以供多个程序复用。静态库（static library）（Linux 上的 `.a`，Windows 上的 `.lib`）在链接时被复制进可执行文件；动态库（dynamic library）（`.so`、`.dll`、`.dylib`）在程序运行时才被加载，多个程序可以共享同一份。标准库本身就是一个库：链接 C++ 程序时 `g++` 会自动链接 `libstdc++`，这也是用 `gcc`（C 编译器的驱动程序）链接 C++ 目标文件会报一堆未定义引用的原因。
 
 ## 2.5. 预处理器与宏
 

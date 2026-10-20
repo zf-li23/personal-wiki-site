@@ -1,7 +1,7 @@
 ---
 title: Functions and Modularity
 description: Functions in programs and their four elements; declaration, definition and call; parameters and arguments, pass by value and pass by reference, and Python's passing of object references; scope, local and global variables, lifetime; the call stack and stack frames; modular design by top-down stepwise refinement; eliminating repetition with functions (the calendar program); multiple files and modules.
-source_hash: 6aeb2b74e328
+source_hash: 1422dc1e8b08
 ---
 
 Loops eliminate "the same piece of code repeated consecutively", but programs contain another kind of repetition: the same computation appears in different places with different data, such as testing whether a number is prime in several places. A function packages a computation, gives it a name, and calls it with different arguments wherever it is needed. The function is the basic unit of procedural programming: a complex problem is decomposed into several subproblems, each solved by one function, which is modularity. This chapter covers defining and calling functions, how arguments are passed, where variables are visible, how calls are implemented with the call stack, and how to organize programs with functions. A function that calls itself is recursion ([4.1.10](/4.1.10)); organizing functions together with the data they operate on leads to the object-oriented programming of [4.2](/4.2); the call stack as a data structure is in [4.3.4](/4.3.4).
@@ -91,7 +91,7 @@ Python defines functions with `def`; the function object is created when the `de
 
 ### 4.2.1. Parameters and Arguments
 
-The parameters in a function definition are called formal *parameters*, and the values supplied at the call are called actual arguments. When `is_prime(i)` is called, C++ allocates a new storage unit for the parameter `n` and initializes it with the value of the argument `i`; after the function returns, the storage unit of `n` is released. Parameters and arguments are different variables, and it does not matter whether their names are the same; an argument may be any expression, such as `is_prime(2 * k + 1)`; when the type of an argument differs from that of the parameter, an **implicit conversion** takes place according to the rules of [4.1.2](/4.1.2).
+The parameters in a function definition are called formal *parameters*, and the values supplied at the call are called actual *arguments*. When `is_prime(i)` is called, C++ allocates a new storage unit for the parameter `n` and initializes it with the value of the argument `i`; after the function returns, the storage unit of `n` is released. Parameters and arguments are different variables, and it does not matter whether their names are the same; an argument may be any expression, such as `is_prime(2 * k + 1)`; when the type of an argument differs from that of the parameter, an **implicit conversion** takes place according to the rules of [4.1.2](/4.1.2).
 
 ### 4.2.2. Pass by Value and Pass by Reference
 

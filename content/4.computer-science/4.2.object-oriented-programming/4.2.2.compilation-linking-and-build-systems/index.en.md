@@ -1,7 +1,7 @@
 ---
 title: Compilation, Linking and Build Systems
 description: The four stages from source code to executable; translation units; declarations and definitions and the one definition rule; header files and include guards; linking, symbols and common linker errors; internal and external linkage; the preprocessor and macros; how Make works, and CMake; command-line arguments; debugging with gdb, lldb and VS Code; modules and packages in Python.
-source_hash: 286a10b79c40
+source_hash: 7d995c7a70e5
 ---
 
 An object-oriented program almost always consists of several files: each class usually has a header file and an implementation file, and a program is assembled from dozens or hundreds of such files. To read and organize such a program, we must first understand how a C++ program turns from a set of source files into an executable. The compiler looks at only one source file at a time and uses declarations to check calls to functions in other files; the linker then joins the object files and finds the unique definition for every call. This chapter covers, in turn, the compilation process, declarations and definitions, header files, linking and the preprocessor, then the build tools Make and CMake, and finally command-line arguments and debuggers. At the end we compare with Python, which has no linking step and imports modules at run time. [4.1.1](/4.1.1) has already introduced the difference between compilation and interpretation, and [4.1.5](/4.1.5) the general methods of debugging and testing; for the command line and the shell see [4.11 Operating Systems](/4.11), and for version-control tools such as Git see [4.14 Software Engineering](/4.14).

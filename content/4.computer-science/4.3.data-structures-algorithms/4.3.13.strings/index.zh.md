@@ -825,8 +825,8 @@ print("random tests passed")
 ### 13.6.2. 变体
 
 - 基数树（radix tree）：Trie 中常有长长的单链（如上图的 roads），把每条只有一个孩子的链压缩成一条边、边上标一个子串，节点数就只与串的数目成正比。D. R. Morrison（1968）的 PATRICIA 树是它的二进制版本，广泛用于 IP 路由表和操作系统内核。
-- 三叉搜索树（ternary search tree，J. Bentley 与 R. Sedgewick，1997）：每个节点存一个字符和三个孩子，分别指向较小、相等、较大的字符，相当于把 Trie 中每个节点的孩子组织成一棵二叉搜索树。它的空间效率接近二叉搜索树，又保留了 Trie 按字符逐步前进的特点。
-- 后缀树（suffix tree）：一个文本串的所有后缀构成的压缩 Trie。它可以在 $O(n)$ 时间内构造（Weiner，1973；McCreight，1976；Ukkonen，1995），此后任何模式串的查找都只需 $O(m)$，与文本长度无关；后缀数组（suffix array，Manber 与 Myers，1990）是它更节省空间的替代，已成为生物信息学中基因组索引的基础。
+- 三叉搜索树（ternary search tree）（J. Bentley 与 R. Sedgewick，1997）：每个节点存一个字符和三个孩子，分别指向较小、相等、较大的字符，相当于把 Trie 中每个节点的孩子组织成一棵二叉搜索树。它的空间效率接近二叉搜索树，又保留了 Trie 按字符逐步前进的特点。
+- 后缀树（suffix tree）：一个文本串的所有后缀构成的压缩 Trie。它可以在 $O(n)$ 时间内构造（Weiner，1973；McCreight，1976；Ukkonen，1995），此后任何模式串的查找都只需 $O(m)$，与文本长度无关；后缀数组（suffix array）（Manber 与 Myers，1990）是它更节省空间的替代，已成为生物信息学中基因组索引的基础。
 
 ## 13.7. 标准库中的串匹配
 

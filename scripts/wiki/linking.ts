@@ -168,6 +168,8 @@ export function buildLinkIndex(
   const statements = new Map<string, Target>();
   const candidates = new Map<string, SiteCandidate[]>();
   const add = (id: string, c: SiteCandidate) => candidates.set(id, [...(candidates.get(id) ?? []), c]);
+  // "名称（English，简称 X）" does not mark a definition; reported if the concept ends up with none.
+  const nearMisses: { concept: Concept; file: string; text: string }[] = [];
 
   for (const [pageId, out] of sourceRenders) {
     const course = courseOf(pageId);
@@ -193,6 +195,9 @@ export function buildLinkIndex(
       if (anchor) {
         out.anchors.add(anchor);
         add(concept.id, { pageId, anchor, file });
+      } else if (out.contentLang === 'zh') {
+        const text = nearMissAnnotation(hastToString(out.hast), concept);
+        if (text) nearMisses.push({ concept, file, text });
       }
     }
   }
@@ -213,6 +218,10 @@ export function buildLinkIndex(
     for (const extra of list.filter((c) => c.pageId !== chosen.pageId && c.anchor.startsWith('concept-'))) {
       diag.error(extra.file, `concept "${concept.zh}（${concept.en}）" is already defined on page ${chosen.pageId}; keep the defining mark (English annotation, or italics in English) only at the definition`);
     }
+  }
+  for (const { concept, file, text } of nearMisses) {
+    if (conceptSites.has(concept.id)) continue;
+    diag.warn(file, `"${text}" is not recognized as the definition of "${concept.zh}", which is defined nowhere: write ${concept.zh}（${concept.en}） with nothing else inside the parentheses, and put "简称…" or other notes outside`);
   }
   void tree;
   return { statements, concepts, conceptSites };
@@ -240,6 +249,16 @@ function annotationCandidates(root: Root, lang: Lang): (concept: Concept) => boo
   const text = hastToString(root);
   const lower = text.toLowerCase();
   return (concept) => conceptNames(concept, 'zh').some((n) => text.includes(n)) && conceptNames(concept, 'en').some((n) => lower.includes(n.toLowerCase()));
+}
+
+/** "名称（English，简称 X）": an annotation with extra text inside the parentheses, which does not mark the definition. */
+function nearMissAnnotation(text: string, concept: Concept): string | null {
+  const en = conceptNames(concept, 'en').map(escapeRe).join('|');
+  for (const name of conceptNames(concept, 'zh')) {
+    const m = new RegExp(`${escapeRe(name)}[（(]\\s*(?:${en})\\s*[，,；;、][^）)]*[）)]`, 'i').exec(text);
+    if (m) return m[0];
+  }
+  return null;
 }
 
 /**

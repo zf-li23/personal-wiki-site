@@ -131,7 +131,7 @@ Python 的标准实现 CPython 采用混合方式：先把源代码编译成与�
 | 构建 | 单文件直接调用编译器；多文件用 CMake（[4.2.2](/4.2.2)） | 不需要构建；用虚拟环境管理依赖 |
 | 调试器 | GDB、LLDB（[4.1.5](/4.1.5)） | pdb、VS Code 内置调试（[4.1.5](/4.1.5)） |
 
-集成开发环境（integrated development environment，IDE）把编辑、构建、调试集成在一个界面中，如 Visual Studio、CLion、PyCharm；VS Code 本身是编辑器，装上扩展后起到 IDE 的作用。Windows 上写 C++ 可以用 Visual Studio，或在 WSL（Windows 中的 Linux 子系统）里使用 GCC，与 Linux 服务器上的环境一致。
+集成开发环境（integrated development environment），简称 IDE，把编辑、构建、调试集成在一个界面中，如 Visual Studio、CLion、PyCharm；VS Code 本身是编辑器，装上扩展后起到 IDE 的作用。Windows 上写 C++ 可以用 Visual Studio，或在 WSL（Windows 中的 Linux 子系统）里使用 GCC，与 Linux 服务器上的环境一致。
 
 在命令行中编译并运行一个 C++ 程序：
 

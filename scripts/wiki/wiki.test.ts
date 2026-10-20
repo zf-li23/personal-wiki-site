@@ -507,6 +507,11 @@ describe('cross-page linking', () => {
     assert.equal(s.index.conceptSites.get('matrix')?.anchor, 'concept-matrix');
     assert.equal(s.index.conceptSites.get('convergence-in-distribution')?.anchor, 'concept-convergence-in-distribution');
   });
+  it('warns about an annotation with extra text inside the parentheses', async () => {
+    const s = await site({ '3.1.12': '## 12.1. A\n\n大数定律（law of large numbers，LLN）描述均值。' });
+    assert.equal(s.index.conceptSites.get('law-of-large-numbers'), undefined);
+    assert.match(s.diag.items[0]?.message ?? '', /not recognized as the definition of "大数定律"/);
+  });
   it('keeps "+" apart in concept ids', () => {
     assert.notEqual(conceptId('B+ tree'), conceptId('B-tree'));
   });
