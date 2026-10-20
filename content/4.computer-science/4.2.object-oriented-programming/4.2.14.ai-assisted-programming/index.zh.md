@@ -312,7 +312,7 @@ AI 调试。把完整的报错信息、复现步骤和相关代码交给智能�
 
 ### 14.4.6. 一个具体的工作流
 
-作者注：下面是我自己的使用习惯，作为一个具体工作流的例子。我编程主要用 VS Code，用集成在 VS Code 生态中的插件作为 harness，目前主要是 Claude Code，模型通常选 Opus。模型方面，除了 Claude，我还比较喜欢 DeepSeek 的 Flash 模型（`deepseek-flash`），因为它响应快、定价便宜。在 Claude Code 的工作流中，如果额度用完又急着用，我会换用 DeepSeek 的模型（DeepSeek 提供 Anthropic 兼容接口，Claude Code 可以直接接入）；不能使用 Claude 的时候，我比较喜欢用 GitHub Copilot 搭配 DeepSeek Flash。我也用过 Cline，但觉得不如 Copilot。DeepSeek 推出了官方的 DeepSeek Harness 之后，我觉得它的 Windows 桌面端比较好用，又因为是官方推出的，所以在 WSL 之外的 Windows 环境中办公时会用它。由于 DeepSeek Harness 开源、一切皆插件，VS Code 中接入它的插件也很多，但都不是官方提供的，我暂时不打算尝试，等市场用脚投票选出最好的实践。我还用过 Kimi，但觉得定价太贵。最早我用过智谱的 CodeGeeX，它与清华关系紧密，有时可以提供免费的 token，所以也很实用。
+下面以一个在 Windows 与 WSL 环境中做计算生物学研究的开发者的日常配置为例，看前面几节的原则怎样落到具体的工具选择上。日常编程在 VS Code 中进行，以集成在 VS Code 生态中的插件作为 harness，主力是 Claude Code。模型与 harness 分开选择：除 Claude 外，DeepSeek 的 Flash 模型（`deepseek-flash`）响应快、价格低，是常用的补充。由于 DeepSeek 提供 Anthropic 兼容接口，Claude Code 的额度用完而又急需时，可以直接在其中换用 DeepSeek 的模型；不能使用 Claude 时，则改用 GitHub Copilot 搭配 DeepSeek Flash。同样可以自选模型的开源插件 Cline 也是一种选择，但在这套配置中 Copilot 的体验更好。在 WSL 之外的 Windows 环境中办公时，使用 DeepSeek 官方推出的 DeepSeek Harness 桌面端。DeepSeek Harness 开源，奉行"一切皆插件"的设计，社区里已经有不少把它接入 VS Code 的第三方插件，但它们不是官方提供的，在市场选出公认的最佳实践之前暂不采用。其他模型方面，Kimi 的定价相对较高；智谱的 CodeGeeX 与清华大学渊源很深，有时能获得免费的额度，在早期是很实用的选择。
 
 这个例子体现了前面几节的几个要点：harness 与模型可以分开选择（Claude Code 接 DeepSeek 的模型、Copilot 接 DeepSeek 的模型）；按任务的紧急程度和额度在强模型与快而便宜的模型之间切换；在不同的操作系统环境中选用合适的 harness 形态；对非官方的第三方扩展保持谨慎。
 
