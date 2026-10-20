@@ -2619,3 +2619,129 @@ terms:
   - { zh: 召回率, en: recall, aliases: [查全率], scope: ["4"] }
   - { zh: 多层感知机, en: multilayer perceptron, aliases: [MLP, 多层感知器] }
   - { zh: 步幅, en: stride, scope: ["4.7"] }
+  - { zh: 指数移动平均, en: exponential moving average, aliases: [EMA, 指数滑动平均] }
+  - { zh: 动量法, en: momentum, aliases: [动量, 重球法, heavy-ball method], scope: ["4"] }
+  - { zh: Nesterov 加速梯度法, en: Nesterov accelerated gradient, aliases: [NAG, Nesterov 动量, Nesterov momentum] }
+  - { zh: AdaGrad, en: AdaGrad }
+  - { zh: RMSProp, en: RMSProp }
+  - { zh: Adam, en: Adam, aliases: [Adam 优化器, adaptive moment estimation] }
+  - { zh: AdamW, en: AdamW }
+  - { zh: 学习率调度, en: learning-rate schedule, aliases: [学习率计划, learning rate schedule] }
+  - { zh: 学习率预热, en: learning-rate warmup, aliases: [预热, warmup, learning rate warmup] }
+  - { zh: 梯度消失, en: vanishing gradient, aliases: [梯度消失问题, vanishing gradient problem] }
+  - { zh: 梯度爆炸, en: exploding gradient, aliases: [梯度爆炸问题, exploding gradient problem] }
+  - { zh: 梯度裁剪, en: gradient clipping }
+  - { zh: 内部协变量偏移, en: internal covariate shift }
+  - { zh: 批归一化, en: batch normalization, aliases: [批量归一化, BN, BatchNorm] }
+  - { zh: 层归一化, en: layer normalization, aliases: [LN, LayerNorm] }
+  - { zh: 实例归一化, en: instance normalization }
+  - { zh: 组归一化, en: group normalization }
+  - { zh: RMSNorm, en: RMSNorm, aliases: [均方根归一化, root mean square layer normalization] }
+  - { zh: 数据增强, en: data augmentation }
+  - { zh: 随机失活, en: dropout, aliases: [Dropout, 暂退法, 丢弃法] }
+  - { zh: 随机深度, en: stochastic depth, aliases: [DropPath] }
+  - { zh: 模式连通性, en: mode connectivity }
+  - { zh: 稳定性边缘, en: edge of stability }
+  - { zh: 循环神经网络, en: recurrent neural network, aliases: [RNN] }
+  - { zh: 随时间反向传播, en: backpropagation through time, aliases: [BPTT] }
+  - { zh: 截断的随时间反向传播, en: truncated BPTT, aliases: [truncated backpropagation through time] }
+  - { zh: 长短期记忆网络, en: long short-term memory, aliases: [LSTM, 长短期记忆] }
+  - { zh: 恒定误差传送带, en: constant error carousel }
+  - { zh: 门控循环单元, en: gated recurrent unit, aliases: [GRU] }
+  - { zh: 双向循环神经网络, en: bidirectional RNN, aliases: [双向 RNN, bidirectional recurrent neural network, BiRNN] }
+  - { zh: 语言模型, en: language model, aliases: [LM, 自回归语言模型, autoregressive language model, causal language model] }
+  - { zh: 序列到序列模型, en: sequence-to-sequence model, aliases: [seq2seq, 编码器–解码器模型, encoder–decoder model] }
+  - { zh: 教师强制, en: teacher forcing }
+  - { zh: 暴露偏差, en: exposure bias }
+  - { zh: 束搜索, en: beam search, aliases: [集束搜索] }
+  - { zh: 温度, en: temperature, scope: ["4"] }
+  - { zh: 核采样, en: nucleus sampling, aliases: [top-p 采样, top-p sampling] }
+  - { zh: 独热向量, en: one-hot vector, aliases: [独热编码, one-hot encoding, one-hot representation] }
+  - { zh: 词袋, en: bag of words, aliases: [词袋模型, bag-of-words model] }
+  - { zh: 分布假设, en: distributional hypothesis, aliases: [分布式假设] }
+  - { zh: 点互信息, en: pointwise mutual information, aliases: [PMI] }
+  - { zh: 词嵌入, en: word embedding, aliases: [词向量, word vector] }
+  - { zh: 嵌入矩阵, en: embedding matrix }
+  - { zh: word2vec, en: word2vec }
+  - { zh: 连续词袋模型, en: continuous bag-of-words, aliases: [CBOW] }
+  - { zh: 跳字模型, en: skip-gram, aliases: [Skip-gram, 跳词模型, skip-gram model] }
+  - { zh: 层次 softmax, en: hierarchical softmax, aliases: [分层 softmax] }
+  - { zh: 负采样, en: negative sampling }
+  - { zh: GloVe, en: GloVe, aliases: [global vectors] }
+  - { zh: 分词, en: tokenization, aliases: [词元化], scope: ["4"] }
+  - { zh: 字节对编码, en: byte-pair encoding, aliases: [BPE] }
+  - { zh: 字节级 BPE, en: byte-level BPE }
+  - { zh: 一元语言模型分词, en: unigram language model, scope: ["4.7"] }
+  - { zh: 子词正则化, en: subword regularization }
+  - { zh: 注意力机制, en: attention mechanism, aliases: [注意力] }
+  - { zh: 缩放点积注意力, en: scaled dot-product attention }
+  - { zh: 自注意力, en: self-attention, aliases: [自注意力机制] }
+  - { zh: 交叉注意力, en: cross-attention, aliases: [编码器–解码器注意力, encoder–decoder attention] }
+  - { zh: 多头注意力, en: multi-head attention, aliases: [MHA] }
+  - { zh: 归纳头, en: induction head }
+  - { zh: Transformer, en: Transformer, aliases: [Transformer 模型] }
+  - { zh: 残差流, en: residual stream }
+  - { zh: 后归一化, en: post-norm, aliases: [Post-LN] }
+  - { zh: 前归一化, en: pre-norm, aliases: [Pre-LN] }
+  - { zh: 位置编码, en: positional encoding, aliases: [位置嵌入, position embedding] }
+  - { zh: 正弦位置编码, en: sinusoidal positional encoding }
+  - { zh: 旋转位置编码, en: rotary position embedding, aliases: [RoPE, 旋转位置嵌入] }
+  - { zh: 因果掩码, en: causal mask, aliases: [look-ahead mask] }
+  - { zh: KV 缓存, en: KV cache, aliases: [键值缓存, key–value cache] }
+  - { zh: 预填充, en: prefill, scope: ["4.7"] }
+  - { zh: 分组查询注意力, en: grouped-query attention, aliases: [GQA] }
+  - { zh: 多查询注意力, en: multi-query attention, aliases: [MQA] }
+  - { zh: 多头潜在注意力, en: multi-head latent attention, aliases: [MLA] }
+  - { zh: 视觉 Transformer, en: vision Transformer, aliases: [ViT] }
+  - { zh: 迁移学习, en: transfer learning }
+  - { zh: 预训练, en: pre-training, aliases: [pretraining] }
+  - { zh: 微调, en: fine-tuning, aliases: [finetuning] }
+  - { zh: 基础模型, en: foundation model }
+  - { zh: BERT, en: BERT }
+  - { zh: 掩码语言建模, en: masked language modeling, aliases: [MLM, 掩码语言模型, masked language model] }
+  - { zh: 生成式预训练, en: generative pre-training }
+  - { zh: 提示, en: prompt, aliases: [提示词], scope: ["4"] }
+  - { zh: 上下文学习, en: in-context learning, aliases: [ICL, 语境学习] }
+  - { zh: 指令微调, en: instruction tuning, aliases: [监督微调, supervised fine-tuning, SFT] }
+  - { zh: 参数高效微调, en: parameter-efficient fine-tuning, aliases: [PEFT] }
+  - { zh: 适配器, en: adapter, scope: ["4.7"] }
+  - { zh: 低秩适配, en: low-rank adaptation, aliases: [LoRA] }
+  - { zh: 模型状态, en: model states }
+  - { zh: 激活重计算, en: activation recomputation, aliases: [梯度检查点, gradient checkpointing, activation checkpointing] }
+  - { zh: BF16, en: BF16, aliases: [bfloat16] }
+  - { zh: 混合精度训练, en: mixed-precision training, aliases: [mixed precision] }
+  - { zh: 损失缩放, en: loss scaling }
+  - { zh: 全规约, en: all-reduce, aliases: [AllReduce] }
+  - { zh: 规约散射, en: reduce-scatter }
+  - { zh: 全收集, en: all-gather }
+  - { zh: 数据并行, en: data parallelism }
+  - { zh: ZeRO, en: ZeRO, aliases: [Zero Redundancy Optimizer, 零冗余优化器] }
+  - { zh: 全分片数据并行, en: fully sharded data parallelism, aliases: [FSDP] }
+  - { zh: 张量并行, en: tensor parallelism }
+  - { zh: 流水线并行, en: pipeline parallelism }
+  - { zh: 算术强度, en: arithmetic intensity }
+  - { zh: Roofline 模型, en: roofline model }
+  - { zh: FlashAttention, en: FlashAttention }
+  - { zh: 模型浮点运算利用率, en: model FLOPs utilization, aliases: [MFU] }
+  - { zh: 连续批处理, en: continuous batching, aliases: [iteration-level scheduling] }
+  - { zh: 分页注意力, en: PagedAttention }
+  - { zh: 投机解码, en: speculative decoding, aliases: [推测解码, speculative sampling] }
+  - { zh: 规模定律, en: scaling law, aliases: [缩放定律, 尺度定律, neural scaling law] }
+  - { zh: 计算最优训练, en: compute-optimal training, aliases: [compute-optimal] }
+  - { zh: 对齐, en: alignment, scope: ["4"] }
+  - { zh: 基于人类反馈的强化学习, en: reinforcement learning from human feedback, aliases: [RLHF] }
+  - { zh: 奖励模型, en: reward model }
+  - { zh: 近端策略优化, en: proximal policy optimization, aliases: [PPO] }
+  - { zh: 宪法式 AI, en: constitutional AI, aliases: [宪法 AI] }
+  - { zh: 直接偏好优化, en: direct preference optimization, aliases: [DPO] }
+  - { zh: 过程奖励模型, en: process reward model, aliases: [PRM] }
+  - { zh: 思维链, en: chain-of-thought, aliases: [CoT, chain of thought] }
+  - { zh: 测试时计算, en: test-time compute, aliases: [test-time scaling, 测试时扩展, 推理时扩展] }
+  - { zh: 知识蒸馏, en: knowledge distillation, aliases: [蒸馏, distillation] }
+  - { zh: 混合专家模型, en: mixture of experts, aliases: [MoE, 混合专家, mixture-of-experts] }
+  - { zh: 负载均衡, en: load balancing, scope: ["4.7"] }
+  - { zh: 线性注意力, en: linear attention }
+  - { zh: 状态空间模型, en: state space model, aliases: [SSM] }
+  - { zh: Mamba, en: Mamba }
+  - { zh: 预热-稳定-衰减调度, en: warmup-stable-decay, aliases: [WSD 调度, WSD schedule] }
+  - { zh: 困惑度, en: perplexity, scope: ["4.5", "4.6", "4.7"] }
