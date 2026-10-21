@@ -92,7 +92,7 @@ terms:
   - { zh: 可靠性, en: soundness, aliases: [可靠的], scope: ["1.1"] }
   - { zh: 完备性, en: completeness, aliases: [完备的], scope: ["1.1"] }
   - { zh: 无矛盾性, en: consistency, aliases: [无矛盾的, 一致性], scope: ["1.1"] }
-  - { zh: 可判定性, en: decidability, aliases: [可判定的] }
+  - { zh: 可判定性, en: decidability, aliases: [可判定的, decidable] }
   - { zh: 个体词, en: individual term }
   - { zh: 个体常项, en: individual constant, aliases: [个体常元] }
   - { zh: 个体变项, en: individual variable, aliases: [个体变元] }
@@ -2190,7 +2190,7 @@ terms:
   - { zh: 递归, en: recursion, scope: ["4"] }
   - { zh: 强制类型转换, en: cast, aliases: [显式类型转换, type cast], scope: ["4"] }
   - { zh: 覆盖, en: overriding, aliases: [重写覆盖, override], scope: ["4"] }
-  - { zh: 容器, en: container, scope: ["4"] }
+  - { zh: 容器, en: container, scope: ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7"] }
 
   # data structures and algorithms (4.3)
   - { zh: 数据结构, en: data structure }
@@ -2223,7 +2223,7 @@ terms:
   - { zh: 稳定排序, en: stable sorting, aliases: [stable sort, 排序的稳定性], scope: ["4"] }
   - { zh: 就地算法, en: in-place algorithm, aliases: [原地算法] }
   - { zh: 比较树, en: comparison tree, aliases: [判定树] }
-  - { zh: 位图, en: bitmap, aliases: [位向量, bit array, bit vector], scope: ["4.3"] }
+  - { zh: 位图, en: bitmap, aliases: [位向量, bit array, bit vector], scope: ["4.3", "4.11"] }
   - { zh: 稀疏集合, en: sparse set }
   - { zh: 循位置访问, en: call-by-position }
   - { zh: 双向链表, en: doubly linked list, aliases: [双链表] }
@@ -2914,7 +2914,7 @@ terms:
   - { zh: 指令集体系结构, en: instruction set architecture, aliases: [ISA, 指令系统, 指令集, instruction set] }
   - { zh: 微体系结构, en: microarchitecture, aliases: [计算机组成] }
   - { zh: 应用二进制接口, en: application binary interface, aliases: [ABI] }
-  - { zh: 响应时间, en: response time, aliases: [执行时间, execution time], scope: ["4.10", "4.11"] }
+  - { zh: 响应时间, en: response time, aliases: [执行时间, execution time], scope: ["4.10"] }
   - { zh: 吞吐率, en: throughput, aliases: [吞吐量], scope: ["4.10", "4.11"] }
   - { zh: 时钟周期, en: clock cycle time, aliases: [clock period, clock cycle] }
   - { zh: 时钟频率, en: clock rate, aliases: [clock frequency] }
@@ -3008,10 +3008,220 @@ terms:
   - { zh: 恢复余数除法, en: restoring division }
   - { zh: 不恢复余数除法, en: non-restoring division, aliases: [加减交替法] }
   - { zh: 舍入位, en: round bit }
-  - { zh: 粘滞位, en: sticky bit }
+  - { zh: 粘滞位, en: sticky bit, scope: ["4.10"] }
   - { zh: 融合乘加, en: fused multiply-add, aliases: [FMA] }
   - { zh: 数据通路, en: datapath }
   - { zh: 控制单元, en: control unit, aliases: [控制器], scope: ["4"] }
   - { zh: 单周期处理器, en: single-cycle processor, aliases: [单周期 CPU] }
   - { zh: 立即数生成器, en: immediate generator }
   - { zh: 关键路径, en: critical path, scope: ["4.9", "4.10"] }
+  - { zh: 操作系统, en: operating system, aliases: [OS] }
+  - { zh: 内核, en: kernel, aliases: [操作系统内核, operating system kernel], scope: ["4.10", "4.11"] }
+  - { zh: 用户态, en: user mode, aliases: [用户模式, 目态] }
+  - { zh: 内核态, en: kernel mode, aliases: [核心态, 管态, supervisor mode] }
+  - { zh: 特权指令, en: privileged instruction }
+  - { zh: 异常控制流, en: exceptional control flow }
+  - { zh: 异常, en: exception, scope: ["4.10", "4.11"] }
+  - { zh: 异常处理程序, en: exception handler, aliases: [中断处理程序, interrupt handler, 中断服务程序, interrupt service routine] }
+  - { zh: 异常表, en: exception table, aliases: [中断向量表, interrupt vector table, interrupt descriptor table, IDT] }
+  - { zh: 中断, en: interrupt, aliases: [interrupts], scope: ["4.10", "4.11"] }
+  - { zh: 陷阱, en: trap, aliases: [陷入, 自陷], scope: ["4.10", "4.11"] }
+  - { zh: 故障, en: fault, scope: ["4.10", "4.11"] }
+  - { zh: 终止, en: abort, scope: ["4.10", "4.11"] }
+  - { zh: 宏内核, en: monolithic kernel, aliases: [单内核] }
+  - { zh: 微内核, en: microkernel }
+  - { zh: 系统调用, en: system call, aliases: [syscall] }
+  - { zh: 多道程序设计, en: multiprogramming }
+  - { zh: 分时, en: time-sharing, aliases: [分时系统, time sharing] }
+  - { zh: 机制与策略分离, en: separation of mechanism and policy }
+  - { zh: vDSO, en: vDSO, aliases: [virtual dynamic shared object] }
+  - { zh: Linux 发行版, en: Linux distribution, aliases: [发行版] }
+  - { zh: 初始内存文件系统, en: initramfs }
+  - { zh: 进程, en: process, scope: ["4"] }
+  - { zh: 进程标识符, en: process ID, aliases: [PID, 进程号] }
+  - { zh: 进程状态, en: process state, scope: ["4.11"] }
+  - { zh: 进程控制块, en: process control block, aliases: [PCB] }
+  - { zh: fork, en: fork, scope: ["4.11"] }
+  - { zh: exec, en: exec, aliases: [execve, exec family], scope: ["4.11"] }
+  - { zh: 僵尸进程, en: zombie, aliases: [zombie process, 僵尸], scope: ["4.11"] }
+  - { zh: 孤儿进程, en: orphan, aliases: [orphan process], scope: ["4.11"] }
+  - { zh: 受限直接执行, en: limited direct execution }
+  - { zh: 上下文切换, en: context switch, aliases: [进程切换] }
+  - { zh: 信号, en: signal, scope: ["4.11"] }
+  - { zh: 信号处理程序, en: signal handler }
+  - { zh: 异步信号安全, en: async-signal-safe }
+  - { zh: 周转时间, en: turnaround time }
+  - { zh: 响应时间, en: response time, scope: ["4.11"] }
+  - { zh: 饥饿, en: starvation, scope: ["4.11"] }
+  - { zh: 先来先服务调度, en: FIFO scheduling, aliases: [先来先服务, first-come first-served, FCFS] }
+  - { zh: 短作业优先, en: SJF scheduling, aliases: [shortest job first, SJF, 最短作业优先] }
+  - { zh: 最短完成时间优先, en: STCF scheduling, aliases: [shortest time-to-completion first, STCF, shortest remaining time first, SRTF, 最短剩余时间优先] }
+  - { zh: 时间片, en: time slice, aliases: [quantum, 时间配额], scope: ["4.11"] }
+  - { zh: 护航效应, en: convoy effect }
+  - { zh: 多级反馈队列, en: multi-level feedback queue, aliases: [MLFQ, multilevel feedback queue] }
+  - { zh: 彩票调度, en: lottery scheduling }
+  - { zh: 步长调度, en: stride scheduling }
+  - { zh: 完全公平调度器, en: Completely Fair Scheduler, aliases: [CFS] }
+  - { zh: 虚拟运行时间, en: virtual runtime, aliases: [vruntime] }
+  - { zh: nice 值, en: nice value }
+  - { zh: EEVDF 调度, en: EEVDF scheduling, aliases: [EEVDF, earliest eligible virtual deadline first] }
+  - { zh: 调度类, en: scheduling class }
+  - { zh: 缓存亲和性, en: cache affinity, aliases: [处理器亲和性, CPU affinity, processor affinity] }
+  - { zh: 工作窃取, en: work stealing }
+  - { zh: 超额订阅, en: oversubscription }
+  - { zh: 成组调度, en: gang scheduling, aliases: [协同调度, co-scheduling] }
+  - { zh: 地址空间, en: address space }
+  - { zh: 虚拟地址, en: virtual address, aliases: [逻辑地址] }
+  - { zh: 物理地址, en: physical address }
+  - { zh: 虚拟内存, en: virtual memory, aliases: [虚拟存储器] }
+  - { zh: 地址转换, en: address translation, aliases: [地址翻译, 地址映射] }
+  - { zh: 内存管理单元, en: memory management unit, aliases: [MMU, 存储管理部件] }
+  - { zh: 动态重定位, en: dynamic relocation, aliases: [base and bounds, 基址与界限] }
+  - { zh: 分段, en: segmentation, aliases: [段式存储管理], scope: ["4.10", "4.11"] }
+  - { zh: 外部碎片, en: external fragmentation, aliases: [外碎片] }
+  - { zh: 地址空间布局随机化, en: address space layout randomization, aliases: [ASLR] }
+  - { zh: 分页, en: paging, aliases: [页式存储管理], scope: ["4.10", "4.11"] }
+  - { zh: 页, en: page, aliases: [页面], scope: ["4.10", "4.11"] }
+  - { zh: 页框, en: page frame, aliases: [物理页, 页帧] }
+  - { zh: 页表, en: page table }
+  - { zh: 页表项, en: page table entry, aliases: [PTE] }
+  - { zh: 快表, en: translation lookaside buffer, aliases: [TLB, 转换后备缓冲器, 地址变换高速缓存] }
+  - { zh: 地址空间标识符, en: address space identifier, aliases: [ASID, PCID] }
+  - { zh: TLB 击落, en: TLB shootdown }
+  - { zh: 大页, en: huge page, aliases: [巨页, transparent huge page, 透明大页] }
+  - { zh: 多级页表, en: multi-level page table, aliases: [multilevel page table] }
+  - { zh: 反置页表, en: inverted page table, aliases: [倒排页表] }
+  - { zh: 缺页, en: page fault, aliases: [缺页异常, 缺页中断] }
+  - { zh: 请求调页, en: demand paging, aliases: [按需调页] }
+  - { zh: 交换空间, en: swap space, aliases: [交换区, swap] }
+  - { zh: 驻留集大小, en: resident set size }
+  - { zh: OOM 杀手, en: out-of-memory killer, aliases: [OOM killer] }
+  - { zh: 页面置换算法, en: page replacement policy, aliases: [replacement policy, 页面置换策略, 置换算法] }
+  - { zh: 最优置换算法, en: optimal replacement policy, aliases: [OPT, "Belady's MIN", 最佳置换算法] }
+  - { zh: 最近最少使用, en: least recently used, aliases: [LRU, 最近最久未使用] }
+  - { zh: Belady 异常, en: "Belady's anomaly" }
+  - { zh: 栈算法, en: stack algorithm }
+  - { zh: 时钟算法, en: clock algorithm, aliases: [second-chance algorithm, 二次机会算法, CLOCK 算法] }
+  - { zh: 工作集, en: working set }
+  - { zh: 抖动, en: thrashing, aliases: [颠簸] }
+  - { zh: 内存映射, en: memory mapping, aliases: [mmap, 内存映射文件, memory-mapped file] }
+  - { zh: 位置无关代码, en: position-independent code, aliases: [PIC] }
+  - { zh: 动态内存分配器, en: dynamic memory allocator, aliases: [内存分配器, allocator] }
+  - { zh: 内部碎片, en: internal fragmentation, aliases: [内碎片] }
+  - { zh: 隐式空闲链表, en: implicit free list }
+  - { zh: 边界标记, en: boundary tag }
+  - { zh: 显式空闲链表, en: explicit free list }
+  - { zh: 首次适配, en: first fit, aliases: [首次适应] }
+  - { zh: 下次适配, en: next fit, aliases: [循环首次适应] }
+  - { zh: 最佳适配, en: best fit, aliases: [最佳适应] }
+  - { zh: 分离空闲链表, en: segregated free lists, aliases: [segregated fits, 分离适配] }
+  - { zh: 伙伴系统, en: buddy system, aliases: [binary buddy system, 伙伴算法] }
+  - { zh: slab 分配器, en: slab allocator, aliases: [slab allocation] }
+  - { zh: 可达, en: reachable, aliases: [reachability, 可达性], scope: ["4.11"] }
+  - { zh: 标记-清除, en: mark-and-sweep, aliases: [标记清除, mark and sweep] }
+  - { zh: 复制式回收, en: copying collector, aliases: [copying garbage collection] }
+  - { zh: 分代回收, en: generational collector, aliases: [generational garbage collection, 分代垃圾回收] }
+  - { zh: 写屏障, en: write barrier }
+  - { zh: 线程, en: thread, scope: ["4"] }
+  - { zh: 竞态条件, en: race condition, aliases: [竞争条件] }
+  - { zh: 数据竞争, en: data race }
+  - { zh: 临界区, en: critical section }
+  - { zh: 互斥, en: mutual exclusion }
+  - { zh: 原子操作, en: atomic operation, aliases: [atomic, atomicity, 原子性], scope: ["4.10", "4.11"] }
+  - { zh: 互斥锁, en: mutex, aliases: [lock, 锁, mutual exclusion lock], scope: ["4"] }
+  - { zh: 自旋锁, en: spin lock, aliases: [spinlock] }
+  - { zh: 票据锁, en: ticket lock, aliases: [排队自旋锁] }
+  - { zh: 测试并设置, en: test-and-set, aliases: [TAS] }
+  - { zh: 比较并交换, en: compare-and-swap, aliases: [CAS] }
+  - { zh: 取并加, en: fetch-and-add }
+  - { zh: 链接加载/条件存储, en: load-linked / store-conditional, aliases: [LL/SC] }
+  - { zh: Peterson 算法, en: "Peterson's algorithm" }
+  - { zh: futex, en: futex, aliases: [fast user-space mutex] }
+  - { zh: 细粒度锁, en: fine-grained locking }
+  - { zh: 粗粒度锁, en: coarse-grained locking }
+  - { zh: 条件变量, en: condition variable }
+  - { zh: Mesa 语义, en: Mesa semantics }
+  - { zh: 虚假唤醒, en: spurious wakeup }
+  - { zh: 生产者-消费者问题, en: producer–consumer problem, aliases: [producer–consumer, 有界缓冲区问题, bounded buffer] }
+  - { zh: 信号量, en: semaphore }
+  - { zh: 读写锁, en: reader–writer lock, aliases: [readers–writer lock, rwlock] }
+  - { zh: 哲学家就餐问题, en: dining philosophers problem, aliases: [dining philosophers] }
+  - { zh: 原子性违例, en: atomicity violation }
+  - { zh: 顺序违例, en: order violation }
+  - { zh: 死锁, en: deadlock }
+  - { zh: 资源分配图, en: resource allocation graph }
+  - { zh: Coffman 条件, en: Coffman conditions, aliases: [死锁的必要条件] }
+  - { zh: 活锁, en: livelock }
+  - { zh: 银行家算法, en: "banker's algorithm" }
+  - { zh: 优先级反转, en: priority inversion, aliases: [优先级翻转] }
+  - { zh: 优先级继承, en: priority inheritance }
+  - { zh: 事件循环, en: event loop }
+  - { zh: 文件系统, en: file system, aliases: [filesystem], scope: ["4"] }
+  - { zh: 目录, en: directory, aliases: [directories, 文件夹], scope: ["4"] }
+  - { zh: 目录树, en: directory tree }
+  - { zh: 路径名, en: path name, aliases: [pathname, 路径], scope: ["4"] }
+  - { zh: 文件描述符, en: file descriptor, aliases: [fd] }
+  - { zh: 硬链接, en: hard link }
+  - { zh: 符号链接, en: symbolic link, aliases: [软链接, soft link, symlink] }
+  - { zh: 挂载, en: mount, aliases: [挂载点, mount point], scope: ["4.11"] }
+  - { zh: 虚拟文件系统, en: virtual file system, aliases: [VFS] }
+  - { zh: 超级块, en: superblock }
+  - { zh: 索引节点, en: inode, aliases: [i 节点, i-node, index node] }
+  - { zh: 间接块, en: indirect block, aliases: [多级索引, multi-level index], scope: ["4.11"] }
+  - { zh: 区段, en: extent, scope: ["4.11"] }
+  - { zh: 页缓存, en: page cache, aliases: [页高速缓存] }
+  - { zh: 崩溃一致性, en: crash consistency, aliases: [crash-consistent] }
+  - { zh: 日志, en: journaling, aliases: [日志文件系统, journaling file system, 预写日志, write-ahead logging], scope: ["4"] }
+  - { zh: 日志结构文件系统, en: log-structured file system, aliases: [LFS] }
+  - { zh: 轮询, en: polling, scope: ["4"] }
+  - { zh: 直接存储器访问, en: direct memory access, aliases: [DMA, 直接内存访问] }
+  - { zh: 存储器映射 I/O, en: memory-mapped I/O, aliases: [内存映射 I/O, MMIO] }
+  - { zh: 程序控制 I/O, en: programmed I/O, aliases: [PIO] }
+  - { zh: 设备驱动程序, en: device driver, aliases: [驱动程序, driver] }
+  - { zh: 寻道时间, en: seek time }
+  - { zh: 旋转延迟, en: rotational latency }
+  - { zh: 磁盘调度, en: disk scheduling }
+  - { zh: 电梯算法, en: elevator algorithm, aliases: [SCAN, 扫描算法] }
+  - { zh: 最短寻道时间优先, en: shortest seek time first, aliases: [SSTF] }
+  - { zh: 闪存转换层, en: flash translation layer, aliases: [FTL] }
+  - { zh: 写放大, en: write amplification }
+  - { zh: 磨损均衡, en: wear leveling }
+  - { zh: 独立磁盘冗余阵列, en: RAID, aliases: [磁盘阵列, redundant array of inexpensive disks, redundant array of independent disks] }
+  - { zh: 小写问题, en: small-write problem }
+  - { zh: 不足值, en: short count }
+  - { zh: 虚拟机, en: virtual machine, aliases: [VM] }
+  - { zh: 虚拟机监控器, en: hypervisor, aliases: [虚拟机管理程序, virtual machine monitor, VMM] }
+  - { zh: 敏感指令, en: sensitive instruction }
+  - { zh: Popek–Goldberg 定理, en: Popek–Goldberg theorem }
+  - { zh: 陷入并模拟, en: trap-and-emulate }
+  - { zh: 二进制翻译, en: binary translation }
+  - { zh: 半虚拟化, en: paravirtualization, aliases: [准虚拟化] }
+  - { zh: 硬件辅助虚拟化, en: hardware-assisted virtualization }
+  - { zh: 影子页表, en: shadow page table }
+  - { zh: 嵌套分页, en: nested paging, aliases: [扩展页表, EPT, NPT] }
+  - { zh: Linux 命名空间, en: Linux namespace, scope: ["4.11"] }
+  - { zh: 控制组, en: control group, aliases: [cgroup, cgroups] }
+  - { zh: 容器, en: container, aliases: [操作系统级虚拟化, OS-level virtualization], scope: ["4.11"] }
+  - { zh: 容器镜像, en: container image, aliases: [镜像], scope: ["4.11"] }
+  - { zh: Shell, en: shell, aliases: [命令解释器, 外壳], scope: ["4"] }
+  - { zh: 终端模拟器, en: terminal emulator }
+  - { zh: 通配符, en: glob, aliases: [wildcard, globbing], scope: ["4"] }
+  - { zh: 标准流, en: standard streams, aliases: [标准输入, 标准输出, 标准错误, standard input, standard output, stdin, stdout, stderr] }
+  - { zh: 重定向, en: redirection, aliases: [I/O 重定向, I/O redirection] }
+  - { zh: 管道, en: pipe, scope: ["4"] }
+  - { zh: 管道线, en: pipeline, aliases: [管线], scope: ["4.11"] }
+  - { zh: 权限位, en: permission bits, aliases: [文件权限, file permissions] }
+  - { zh: 作业控制, en: job control }
+  - { zh: 环境变量, en: environment variable }
+  - { zh: SSH, en: SSH, aliases: [Secure Shell, 安全外壳协议] }
+  - { zh: 终端复用器, en: terminal multiplexer }
+  - { zh: 命令替换, en: command substitution }
+  - { zh: 计算集群, en: computing cluster, aliases: [集群, HPC 集群, HPC cluster], scope: ["4"] }
+  - { zh: 批处理作业, en: batch job, aliases: [batch jobs] }
+  - { zh: 工作负载管理器, en: workload manager, aliases: [作业调度系统, batch system, job scheduler] }
+  - { zh: 环境模块, en: environment module, aliases: [Lmod] }
+  - { zh: 作业数组, en: job array }
+  - { zh: 公平共享调度, en: fair-share scheduling, aliases: [fair share] }
+  - { zh: 回填调度, en: backfill scheduling, aliases: [backfill, 回填] }
+  - { zh: 消息传递接口, en: MPI, aliases: [Message Passing Interface] }
+  - { zh: 工作流管理系统, en: workflow management system, aliases: [workflow manager, 工作流管理器] }
