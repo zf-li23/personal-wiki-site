@@ -205,7 +205,7 @@ $$
 $$
 \boldsymbol{g}=\frac{\boldsymbol{S}}{c^2}=\frac{\boldsymbol{E}\times\boldsymbol{H}}{c^2}.
 $$
-这也可以由 Maxwell 方程组与 Lorentz 力直接导出（电场使物体中的电荷振动，磁场对振动电荷的 Lorentz 力沿传播方向）。电磁波照射到物体上时，动量的转移表现为压强，称为辐射压（radiation pressure），对光也称光压。真空中强度为 $I$ 的电磁波垂直入射到物体表面，单位时间内单位面积上入射的动量为 $gc=I/c$。若完全吸收，压强为 $p_{\mathrm{r}}=I/c$；若完**全反射**，动量的变化加倍，$p_{\mathrm{r}}=2I/c$。
+这也可以由 Maxwell 方程组与 Lorentz 力直接导出（电场使物体中的电荷振动，磁场对振动电荷的 Lorentz 力沿传播方向）。电磁波照射到物体上时，动量的转移表现为压强，称为辐射压（radiation pressure），对光也称光压。真空中强度为 $I$ 的电磁波垂直入射到物体表面，单位时间内单位面积上入射的动量为 $gc=I/c$。若完全吸收，压强为 $p_{\mathrm{r}}=I/c$；若完全反射，动量的变化加倍，$p_{\mathrm{r}}=2I/c$。
 
 辐射压通常很小：地球轨道处的太阳光对全吸收表面的压强约为 $1361/(3\times10^8)\,\mathrm{Pa}\approx4.5\,\mu\mathrm{Pa}$；即使把一个 $100\,\mathrm{W}$ 灯泡的功率全部当作光，$1\,\mathrm{m}$ 外的强度也只有 $100/(4\pi)\approx8\,\mathrm{W/m^2}$，光压约 $3\times10^{-8}\,\mathrm{Pa}$。1899–1901 年 Lebedev 以及 Nichols 与 Hull 用真空中悬挂的轻小镜片的扭秤，首次测出了光压。
 

@@ -133,7 +133,7 @@ $$
 $$
 称为碰撞截面（collision cross section）。单位时间内圆柱扫过的体积为 $\sigma\bar v_{\mathrm{rel}}$，其中 $\bar v_{\mathrm{rel}}$ 是分子间的平均相对速率，因此 $\bar z = \sigma\bar v_{\mathrm{rel}}n_V$。
 
-其他分子实际上也在运动。两个分子**速度**之差 $\boldsymbol{v}_1 - \boldsymbol{v}_2$ 的每个分量是两个独立的 $\mathcal{N}(0, k_{\mathrm{B}}T/m)$ 之差，服从 $\mathcal{N}(0, 2k_{\mathrm{B}}T/m)$，所以**相对速度**也服从 Maxwell 分布，只是 $m$ 换成**约化质量** $m/2$：$\bar v_{\mathrm{rel}} = \sqrt{2}\,\bar v$。（课件中的直观说法是：两分子的速度夹角平均为 $90^\circ$，相对速率约为 $\sqrt{2}\,\bar v$。）于是
+其他分子实际上也在运动。两个分子**速度**之差 $\boldsymbol{v}_1 - \boldsymbol{v}_2$ 的每个分量是两个独立的 $\mathcal{N}(0, k_{\mathrm{B}}T/m)$ 之差，服从 $\mathcal{N}(0, 2k_{\mathrm{B}}T/m)$，所以**相对速度**也服从 Maxwell 分布，只是 $m$ 换成**约化质量** $m/2$：$\bar v_{\mathrm{rel}} = \sqrt{2}\,\bar v$。（常见的直观说法是：两分子的速度夹角平均为 $90^\circ$，相对速率约为 $\sqrt{2}\,\bar v$。）于是
 
 **公式 2.3.1**
 $$
@@ -196,13 +196,13 @@ $$
 
 由于 $\rho \propto n_V$、$\bar\lambda \propto 1/n_V$，$\kappa$ 与压强（密度）无关，只随温度增大（$\bar v \propto \sqrt{T}$）。直观上，压强降低时传递能量的分子少了，但每个分子一次飞得更远，两者恰好抵消。实验证实了 $\kappa$ 在相当大的压强范围内与压强无关。
 
-压强低到一定程度后实验结果不同：$\kappa \propto p$。原因是 $\bar\lambda$ 不能超过容器的线度 $l$：当 $p$ 低于使 $\bar\lambda = l$ 的压强 $p_{\mathrm{c}} = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 l}$ 时，$\bar\lambda = l$ 不再变化，于是 $\kappa \propto \rho \propto p$。
+压强低到一定程度后实验结果不同：$\kappa \propto p$。原因是 $\bar\lambda$ 不能超过容器的线度 $l$：当 $p$ 低于使 $\bar\lambda = l$ 的压强 $p^{*} = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 l}$ 时，$\bar\lambda = l$ 不再变化，于是 $\kappa \propto \rho \propto p$。
 
 **例 2.4.1（保温瓶）** 保温瓶胆夹层厚 $l = 5\,\mathrm{mm}$，要抽空到多大压强以下才能有效保温？
 
-解：压强高于 $p_{\mathrm{c}}$ 时抽气并不减小导热；低于 $p_{\mathrm{c}}$ 后 $\kappa \propto p$，真空度越高，保温越好。取 $T = 350\,\mathrm{K}$、空气分子 $d \approx 3.3 \times 10^{-10}\,\mathrm{m}$，
+解：压强高于 $p^{*}$ 时抽气并不减小导热；低于 $p^{*}$ 后 $\kappa \propto p$，真空度越高，保温越好。取 $T = 350\,\mathrm{K}$、空气分子 $d \approx 3.3 \times 10^{-10}\,\mathrm{m}$，
 $$
-p_{\mathrm{c}} = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 l} \approx 2\,\mathrm{Pa},
+p^{*} = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 l} \approx 2\,\mathrm{Pa},
 $$
 即约 $2 \times 10^{-5}$ 个大气压，夹层的压强要远低于这个值。
 

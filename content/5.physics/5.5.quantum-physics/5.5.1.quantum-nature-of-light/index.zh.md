@@ -66,7 +66,7 @@ $$
 M(T)=\sigma T^4,\qquad\sigma=5.670\times10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}.\tag{1.2}
 $$
 
-$\sigma$ 称为 Stefan–**Boltzmann 常量**。Stefan 在 1879 年由实验总结出这一规律，Boltzmann 在 1884 年由热力学和电磁**辐射压**的关系从理论上证明了它。
+$\sigma$ 称为 Stefan–Boltzmann 常量。Stefan 在 1879 年由实验总结出这一规律，Boltzmann 在 1884 年由热力学和电磁**辐射压**的关系从理论上证明了它。
 
 **定理 1.1.3（Wien 位移定律）** 黑体单色辐出度 $M_\nu(T)$ 的峰值频率 $\nu_{\mathrm{m}}$ 与温度成正比：
 
@@ -140,7 +140,7 @@ $$
 $$
 代入 (1.4) 即得 (1.5)。$\square$
 
-经典的结果 $\bar\varepsilon=k_{\mathrm{B}}T$ 来**自能**量可以连续取值（[注 1.7.1](/5.2.1#rem-1.7.1)）。能量分立后，$h\nu\gg k_{\mathrm{B}}T$ 的高频模式连一个能量子都难以激发（概率约为 $\mathrm{e}^{-h\nu/(k_{\mathrm{B}}T)}$），它们被"冻结"，紫外灾难就此消失。由 Planck 公式可以导出前面所有的热辐射公式：
+经典的结果 $\bar\varepsilon=k_{\mathrm{B}}T$ 来自能量可以连续取值（[注 1.7.1](/5.2.1#rem-1.7.1)）。能量分立后，$h\nu\gg k_{\mathrm{B}}T$ 的高频模式连一个能量子都难以激发（概率约为 $\mathrm{e}^{-h\nu/(k_{\mathrm{B}}T)}$），它们被"冻结"，紫外灾难就此消失。由 Planck 公式可以导出前面所有的热辐射公式：
 
 | 运算 | 结果 |
 |---|---|

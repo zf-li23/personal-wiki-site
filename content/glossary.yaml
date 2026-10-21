@@ -4046,7 +4046,7 @@ terms:
   - { zh: 电阻率, en: electrical resistivity, aliases: [resistivity] }
   - { zh: 电导率, en: electrical conductivity }
   - { zh: 非静电力, en: non-electrostatic force }
-  - { zh: 电源, en: source of electromotive force, aliases: [seat of emf], scope: ["5", "6", "7"] }
+  - { zh: 电源, en: source of electromotive force, aliases: [seat of emf, power source], scope: ["5", "6", "7"] }
   - { zh: 电动势, en: electromotive force, aliases: [emf] }
   - { zh: Seebeck 效应, en: Seebeck effect, aliases: [塞贝克效应, 温差电效应] }
   - { zh: Drude 模型, en: Drude model }
@@ -4304,3 +4304,4 @@ terms:
   - { zh: 概率幅, en: probability amplitude }
   - { zh: Born 诠释, en: Born rule, aliases: [玻恩诠释, Born interpretation] }
   - { zh: 归一化条件, en: normalization condition }
+  - { zh: 碰壁数, en: wall collision rate }
