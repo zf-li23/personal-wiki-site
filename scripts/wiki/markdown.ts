@@ -655,6 +655,12 @@ function rehypeFinalize() {
         (parent.children as RootContent[])[index] = codeBlock(node);
         return 'skip';
       }
+      // KaTeX output is final and linking skips it, but its element trees dominate the memory the build
+      // holds for all pages at once; keep each formula as one pre-serialized node instead.
+      if ((hasClass(node, 'katex-display') || hasClass(node, 'katex')) && parent && index !== undefined) {
+        (parent.children as RootContent[])[index] = { type: 'raw', value: toHtml(node) };
+        return 'skip';
+      }
       return undefined;
     });
   };
@@ -725,5 +731,5 @@ export function emptyRender(contentLang: Lang): RenderOutput {
 }
 
 export function renderHtml(out: RenderOutput): string {
-  return out.hast.children.length ? toHtml(out.hast) : '';
+  return out.hast.children.length ? toHtml(out.hast, { allowDangerousHtml: true }) : '';
 }

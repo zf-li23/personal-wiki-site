@@ -488,7 +488,7 @@ terms:
   - { zh: 饱和点, en: saturated vertex, scope: ["1.4"] }
   - { zh: 树枝, en: branch, scope: ["1.4.3"] }
   # linear algebra and calculus
-  - { zh: 特征值, en: eigenvalue }
+  - { zh: 特征值, en: eigenvalue, aliases: [本征值] }
   - { zh: 特征向量, en: eigenvector }
   - { zh: 行列式, en: determinant }
   - { zh: 内积, en: inner product, aliases: [标准内积, 点积, 数量积, dot product, standard inner product] }
@@ -1800,7 +1800,7 @@ terms:
   - { zh: Frobenius 定理, en: Frobenius theorem, scope: ["2.4", "2.5"] }
   - { zh: 完全积分, en: complete integral }
   - { zh: 奇积分, en: singular integral, scope: ["2.4", "2.5"] }
-  - { zh: 特征函数, en: eigenfunction, scope: ["2.4", "2.5"] }
+  - { zh: 特征函数, en: eigenfunction, aliases: [本征函数], scope: ["2.4", "2.5", "5", "6"] }
   - { zh: 鞍点, en: saddle, scope: ["2.4", "7.4"] }
   - { zh: 结点, en: node, scope: ["2.4", "7.4"] }
   - { zh: 焦点, en: focus, aliases: [spiral point], scope: ["2.4", "7.4"] }
@@ -1917,7 +1917,7 @@ terms:
   - { zh: 能量法, en: energy method }
   - { zh: 球面平均, en: spherical mean, aliases: [spherical means] }
   - { zh: Kirchhoff 公式, en: "Kirchhoff's formula" }
-  - { zh: Huygens 原理, en: "Huygens' principle" }
+  - { zh: Huygens 原理, en: "Huygens' principle", scope: ["2.5"] }
   - { zh: 降维法, en: method of descent }
   - { zh: 分离变量法, en: separation of variables, aliases: [method of separation of variables] }
   - { zh: 驻波, en: standing wave }
@@ -1951,7 +1951,7 @@ terms:
   - { zh: Poisson 积分公式, en: "Poisson's integral formula", aliases: [Poisson 公式] }
   - { zh: Harnack 不等式, en: "Harnack's inequality" }
   - { zh: Dirichlet 原理, en: "Dirichlet's principle" }
-  - { zh: 镜像法, en: method of images }
+  - { zh: 镜像法, en: method of images, aliases: [电像法] }
   - { zh: 特征方程, en: characteristic equation, scope: ["2.5"] }
   - { zh: Fourier 定律, en: "Fourier's law", aliases: [Fourier 热传导定律] }
   - { zh: Fick 定律, en: "Fick's law" }
@@ -2243,7 +2243,7 @@ terms:
   - { zh: 单调栈, en: monotonic stack }
   - { zh: 聚合分析, en: aggregate analysis, aliases: [聚合法] }
   - { zh: 记账法, en: accounting method }
-  - { zh: 势能法, en: potential method, aliases: [势能函数] }
+  - { zh: 势能法, en: potential method, aliases: [势能函数], scope: ["4"] }
   - { zh: 有序树, en: ordered tree }
   - { zh: 深度, en: depth, scope: ["4"] }
   - { zh: 高度, en: height, scope: ["4"] }
@@ -2874,7 +2874,7 @@ terms:
   - { zh: 建立时间, en: setup time }
   - { zh: 保持时间, en: hold time }
   - { zh: 时钟到输出延迟, en: clock-to-Q delay, aliases: [clock-to-output delay] }
-  - { zh: 亚稳态, en: metastability }
+  - { zh: 亚稳态, en: metastability, scope: ["4"] }
   - { zh: 同步器, en: synchronizer, scope: ["4.9", "4.10"] }
   - { zh: 特性方程, en: characteristic equation, scope: ["4.9", "4.10"] }
   - { zh: 同步时序电路, en: synchronous sequential circuit }
@@ -3740,3 +3740,567 @@ terms:
   - { zh: 项目说明文件, en: project instruction file, aliases: [AGENTS.md, CLAUDE.md] }
   - { zh: 编排者-工作者模式, en: orchestrator–worker pattern, aliases: [orchestrator-worker pattern, 编排者-执行者模式] }
   - { zh: 致命三要素, en: lethal trifecta }
+
+  # physics (5)
+  - { zh: 自由度, en: degrees of freedom, scope: ["5", "6"] }   # mechanical degrees of freedom; the statistical sense is unscoped
+  - { zh: 熵, en: entropy }   # thermodynamic entropy; 信息熵 (alias 熵) is scoped to 3 and 4
+  - { zh: Bernoulli 方程, en: "Bernoulli's equation", aliases: [伯努利方程], scope: ["5"] }   # fluid flow; the ODE sense is unscoped
+  - { zh: Huygens 原理, en: "Huygens' principle", aliases: [惠更斯原理], scope: ["5"] }   # secondary wavelets; 2.5 has the sharp (PDE) sense
+  - { zh: Lorentz 变换, en: Lorentz transformation, aliases: [洛伦兹变换] }
+  - { zh: Coriolis 力, en: Coriolis force, aliases: [科里奥利力] }
+  - { zh: 能量均分定理, en: equipartition theorem }
+  - { zh: Maxwell 速率分布, en: Maxwell speed distribution, aliases: [麦克斯韦速率分布律, Maxwell 速率分布律] }
+  - { zh: Boltzmann 分布, en: Boltzmann distribution }
+  - { zh: Huygens–Fresnel 原理, en: Huygens–Fresnel principle, aliases: [惠更斯–菲涅耳原理] }
+  - { zh: 哈密顿量, en: Hamiltonian, aliases: [哈密顿算符, Hamiltonian operator] }
+  - { zh: 不确定关系, en: Heisenberg uncertainty relation, aliases: [海森伯不确定关系, 测不准关系] }
+  - { zh: 静电唯一性定理, en: uniqueness theorem of electrostatics }
+  - { zh: 高斯定理, en: "Gauss's law", aliases: [电场的高斯定理] }
+  - { zh: 场强叠加原理, en: superposition principle of electric fields }
+  - { zh: 态叠加原理, en: superposition principle of quantum states }
+  - { zh: 机械波, en: mechanical wave }
+  - { zh: 横波, en: transverse wave }
+  - { zh: 纵波, en: longitudinal wave }
+  - { zh: 波面, en: wave surface, aliases: [等相面] }
+  - { zh: 波前, en: wavefront, aliases: [波阵面] }
+  - { zh: 波长, en: wavelength }
+  - { zh: 角波数, en: angular wavenumber }
+  - { zh: 波矢, en: wave vector }
+  - { zh: 行波, en: traveling wave }
+  - { zh: 简谐波, en: harmonic wave, aliases: [单色波, monochromatic wave] }
+  - { zh: 相速度, en: phase velocity }
+  - { zh: Young 模量, en: "Young's modulus", aliases: [杨氏模量] }
+  - { zh: 切变模量, en: shear modulus }
+  - { zh: 体积模量, en: bulk modulus }
+  - { zh: 能流密度, en: energy flux density }
+  - { zh: 波的强度, en: wave intensity }
+  - { zh: 特性阻抗, en: characteristic impedance, aliases: [声阻抗, acoustic impedance] }
+  - { zh: 衍射, en: diffraction }
+  - { zh: 折射定律, en: law of refraction, aliases: [Snell 定律, "Snell's law"] }
+  - { zh: 全反射, en: total internal reflection }
+  - { zh: 色散, en: dispersion }
+  - { zh: 干涉, en: interference }
+  - { zh: 相干条件, en: coherence conditions }
+  - { zh: 波腹, en: antinode }
+  - { zh: 半波损失, en: half-wave loss }
+  - { zh: 简正模式, en: normal mode, aliases: [简正模态] }
+  - { zh: 声压, en: sound pressure }
+  - { zh: 声强级, en: sound intensity level }
+  - { zh: Doppler 效应, en: Doppler effect, aliases: [多普勒效应] }
+  - { zh: Mach 锥, en: Mach cone, aliases: [马赫锥] }
+  - { zh: Mach 数, en: Mach number, aliases: [马赫数] }
+  - { zh: Cherenkov 辐射, en: Cherenkov radiation, aliases: [切连科夫辐射] }
+  - { zh: 色散关系, en: dispersion relation }
+  - { zh: 群速度, en: group velocity }
+  - { zh: Newton 相对性原理, en: Galilean principle of relativity, aliases: [力学相对性原理] }
+  - { zh: Galilei 变换, en: Galilean transformation, aliases: [伽利略变换] }
+  - { zh: Einstein 相对性原理, en: principle of relativity, aliases: [相对性原理] }
+  - { zh: 光速不变原理, en: invariance of the speed of light }
+  - { zh: Einstein 对钟, en: Einstein synchronization }
+  - { zh: 同时性的相对性, en: relativity of simultaneity }
+  - { zh: Lorentz 因子, en: Lorentz factor, aliases: [洛伦兹因子] }
+  - { zh: 原时, en: proper time, aliases: [固有时] }
+  - { zh: 时间延缓, en: time dilation, aliases: [时间膨胀] }
+  - { zh: 原长, en: proper length, aliases: [固有长度] }
+  - { zh: 长度收缩, en: length contraction }
+  - { zh: 时空间隔, en: spacetime interval }
+  - { zh: 相对论动量, en: relativistic momentum }
+  - { zh: 静能, en: rest energy, aliases: [静止能量] }
+  - { zh: 质能关系, en: mass–energy relation, aliases: [质能等价, mass–energy equivalence] }
+  - { zh: 质量亏损, en: mass defect }
+  - { zh: 四维动量, en: four-momentum }
+  - { zh: 波节, en: node, scope: ["5"] }   # the ODE/population "结点" (node) is scoped to 2.4 and 7.4
+  - { zh: 事件, en: event, scope: ["5"] }   # spacetime event; the probability sense is scoped to 3
+  - { zh: 运动学, en: kinematics }
+  - { zh: 平动, en: translation, aliases: [平移运动], scope: ["5", "6", "7"] }
+  - { zh: 参考系, en: reference frame, aliases: [frame of reference] }
+  - { zh: 质点, en: particle, aliases: [point mass], scope: ["5", "6", "7"] }
+  - { zh: 位置矢量, en: position vector, aliases: [位矢] }
+  - { zh: 位移, en: displacement }
+  - { zh: 加速度, en: acceleration }
+  - { zh: 自然坐标系, en: intrinsic coordinates, aliases: [path coordinates] }
+  - { zh: 切向加速度, en: tangential acceleration }
+  - { zh: 法向加速度, en: normal acceleration, aliases: [向心加速度, centripetal acceleration] }
+  - { zh: 角速度, en: angular velocity }
+  - { zh: 角加速度, en: angular acceleration }
+  - { zh: 绝对速度, en: absolute velocity }
+  - { zh: 相对速度, en: relative velocity }
+  - { zh: 牵连速度, en: transport velocity }
+  - { zh: Galilei 速度变换, en: Galilean velocity transformation, aliases: [伽利略速度变换] }
+  - { zh: 动力学, en: dynamics, scope: ["5", "6", "7"] }
+  - { zh: Newton 第二定律, en: "Newton's second law", aliases: [牛顿第二定律] }
+  - { zh: Newton 第三定律, en: "Newton's third law", aliases: [牛顿第三定律] }
+  - { zh: Newton 运动定律, en: "Newton's laws of motion", aliases: [牛顿运动定律] }
+  - { zh: 惯性系, en: inertial frame, aliases: [惯性参考系, inertial reference frame] }
+  - { zh: 非惯性系, en: non-inertial frame, aliases: [非惯性参考系] }
+  - { zh: 惯性质量, en: inertial mass }
+  - { zh: 量纲, en: dimension of a quantity, aliases: [quantity dimension] }
+  - { zh: 基本相互作用, en: fundamental interaction }
+  - { zh: 收尾速率, en: terminal velocity, aliases: [终极速度, terminal speed] }
+  - { zh: 惯性力, en: inertial force, aliases: [fictitious force] }
+  - { zh: 等效原理, en: equivalence principle }
+  - { zh: 惯性离心力, en: centrifugal force, aliases: [离心力] }
+  - { zh: Coriolis 加速度, en: Coriolis acceleration, aliases: [科里奥利加速度] }
+  - { zh: 冲量, en: impulse, scope: ["5", "6", "7"] }
+  - { zh: 动量定理, en: impulse–momentum theorem, aliases: [质点动量定理, 质点系动量定理] }
+  - { zh: 动量守恒定律, en: law of conservation of momentum, aliases: [conservation of momentum] }
+  - { zh: Tsiolkovsky 公式, en: Tsiolkovsky rocket equation, aliases: [火箭方程, rocket equation, 齐奥尔科夫斯基公式] }
+  - { zh: 质心运动定理, en: center-of-mass theorem }
+  - { zh: 质心系, en: center-of-mass frame, aliases: [质心参考系, 零动量参考系, zero-momentum frame] }
+  - { zh: 角动量, en: angular momentum }
+  - { zh: 力矩, en: torque, aliases: [moment of force] }
+  - { zh: 冲量矩, en: angular impulse, aliases: [角冲量] }
+  - { zh: 角动量定理, en: angular momentum theorem, aliases: [质点角动量定理, 质点系角动量定理] }
+  - { zh: 角动量守恒定律, en: law of conservation of angular momentum, aliases: [conservation of angular momentum] }
+  - { zh: Kepler 第二定律, en: "Kepler's second law", aliases: [开普勒第二定律, 面积定律] }
+  - { zh: 速度, en: velocity }
+  - { zh: 速率, en: speed }   # 4.14 速率 (velocity, agile) is scoped
+  - { zh: Newton 第一定律, en: "Newton's first law", aliases: [牛顿第一定律, 惯性定律, law of inertia], scope: ["5", "6", "7"] }
+  - { zh: 动量, en: momentum }   # 动量法 (alias 动量) is scoped to 4
+  - { zh: 热力学系统, en: thermodynamic system }
+  - { zh: 孤立系统, en: isolated system }
+  - { zh: 封闭系统, en: closed system }
+  - { zh: 开放系统, en: open system }
+  - { zh: 绝热系统, en: adiabatic system }
+  - { zh: 平衡态, en: equilibrium state, aliases: [热力学平衡态, thermodynamic equilibrium] }
+  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7"] }
+  - { zh: 宏观量, en: macroscopic quantity }
+  - { zh: 微观量, en: microscopic quantity }
+  - { zh: 广延量, en: extensive quantity, aliases: [extensive property] }
+  - { zh: 强度量, en: intensive quantity, aliases: [intensive property] }
+  - { zh: 态参量, en: state variable, aliases: [物态参量, 状态参量, state parameter] }
+  - { zh: 物态方程, en: equation of state, aliases: [状态方程] }
+  - { zh: 热力学第零定律, en: zeroth law of thermodynamics, aliases: [热平衡定律] }
+  - { zh: 热力学温标, en: thermodynamic temperature scale, aliases: [开尔文温标, Kelvin scale] }
+  - { zh: 理想气体, en: ideal gas }
+  - { zh: Boltzmann 常量, en: Boltzmann constant, aliases: [玻尔兹曼常量, 玻耳兹曼常量, Boltzmann 常数] }
+  - { zh: 热运动, en: thermal motion }
+  - { zh: 涨落, en: fluctuation, scope: ["5", "6", "7"] }
+  - { zh: 内能, en: internal energy }
+  - { zh: 速率分布函数, en: speed distribution function }
+  - { zh: 最概然速率, en: most probable speed, aliases: [最可几速率] }
+  - { zh: 平均速率, en: mean speed, aliases: [average speed], scope: ["5"] }
+  - { zh: 方均根速率, en: root-mean-square speed, aliases: [rms speed] }
+  - { zh: Maxwell 速度分布, en: Maxwell velocity distribution, aliases: [麦克斯韦速度分布律] }
+  - { zh: Boltzmann 因子, en: Boltzmann factor, aliases: [玻尔兹曼因子] }
+  - { zh: 恒温气压公式, en: barometric formula, aliases: [等温气压公式] }
+  - { zh: 临界点, en: critical point, scope: ["5", "6"] }
+  - { zh: 临界温度, en: critical temperature }
+  - { zh: 饱和蒸气压, en: saturated vapor pressure, aliases: [饱和蒸汽压, vapor pressure] }
+  - { zh: van der Waals 方程, en: van der Waals equation, aliases: [范德瓦耳斯方程, 范德华方程] }
+  - { zh: 平均碰撞频率, en: mean collision frequency }
+  - { zh: 平均自由程, en: mean free path }
+  - { zh: 碰撞截面, en: collision cross section }
+  - { zh: 输运过程, en: transport process, aliases: [transport phenomena] }
+  - { zh: 导热系数, en: thermal conductivity, aliases: [热导率] }
+  - { zh: 黏度, en: viscosity, aliases: [黏滞系数, 粘度, 动力黏度, dynamic viscosity] }
+  - { zh: 准静态过程, en: quasi-static process }
+  - { zh: 弛豫时间, en: relaxation time }
+  - { zh: 体积功, en: pressure–volume work, aliases: [volume work] }
+  - { zh: 热量, en: heat }
+  - { zh: 热力学第一定律, en: first law of thermodynamics }
+  - { zh: 第一类永动机, en: perpetual motion machine of the first kind }
+  - { zh: 热容, en: heat capacity, aliases: [热容量] }
+  - { zh: 摩尔热容, en: molar heat capacity }
+  - { zh: Mayer 公式, en: "Mayer's relation", aliases: [迈耶公式] }
+  - { zh: 比热容比, en: heat capacity ratio, aliases: [热容比, 绝热指数, adiabatic index] }
+  - { zh: 绝热过程, en: adiabatic process }
+  - { zh: 多方过程, en: polytropic process }
+  - { zh: 节流过程, en: throttling process }
+  - { zh: Joule–Thomson 效应, en: Joule–Thomson effect, aliases: [焦耳–汤姆孙效应] }
+  - { zh: 焓, en: enthalpy }
+  - { zh: 循环过程, en: thermodynamic cycle }
+  - { zh: 热机效率, en: thermal efficiency, aliases: [效率], scope: ["5", "6"] }
+  - { zh: 制冷系数, en: coefficient of performance, aliases: [COP] }
+  - { zh: Carnot 循环, en: Carnot cycle, aliases: [卡诺循环] }
+  - { zh: 热力学第二定律, en: second law of thermodynamics }
+  - { zh: Kelvin 表述, en: Kelvin statement, aliases: [开尔文表述, Kelvin–Planck statement] }
+  - { zh: Clausius 表述, en: Clausius statement, aliases: [克劳修斯表述] }
+  - { zh: 第二类永动机, en: perpetual motion machine of the second kind }
+  - { zh: 可逆过程, en: reversible process }
+  - { zh: 不可逆过程, en: irreversible process }
+  - { zh: Carnot 定理, en: "Carnot's theorem", aliases: [卡诺定理] }
+  - { zh: Clausius 等式, en: Clausius equality }
+  - { zh: Clausius 不等式, en: Clausius inequality }
+  - { zh: 等熵过程, en: isentropic process }
+  - { zh: 熵增加原理, en: principle of entropy increase, aliases: [熵增原理] }
+  - { zh: 微观态, en: microstate, aliases: [微观状态] }
+  - { zh: 宏观态, en: macrostate, aliases: [宏观状态] }
+  - { zh: 等概率原理, en: principle of equal a priori probabilities }
+  - { zh: 热力学概率, en: thermodynamic probability }
+  - { zh: Boltzmann 熵公式, en: Boltzmann entropy formula, aliases: [玻尔兹曼熵公式] }
+  - { zh: 能量退降, en: energy degradation }
+  - { zh: 温度, en: temperature }   # physical temperature; the sampling temperature is scoped to 4
+  - { zh: 功, en: work, scope: ["5", "6", "7"] }
+  - { zh: 功率, en: power, scope: ["5", "6", "7"] }
+  - { zh: 动能, en: kinetic energy }
+  - { zh: 动能定理, en: work–energy theorem, aliases: [质点系的动能定理, work-energy theorem] }
+  - { zh: 保守力, en: conservative force }
+  - { zh: 耗散力, en: dissipative force }
+  - { zh: 势能, en: potential energy }
+  - { zh: 势能曲线, en: potential energy curve }
+  - { zh: 机械能, en: mechanical energy }
+  - { zh: 功能原理, en: work–energy principle }
+  - { zh: 机械能守恒定律, en: law of conservation of mechanical energy }
+  - { zh: 能量守恒定律, en: law of conservation of energy, aliases: [conservation of energy] }
+  - { zh: 有心力, en: central force }
+  - { zh: 有效势能, en: effective potential, aliases: [有效势] }
+  - { zh: Noether 定理, en: "Noether's theorem", aliases: [诺特定理] }
+  - { zh: 弹性碰撞, en: elastic collision }
+  - { zh: 非弹性碰撞, en: inelastic collision }
+  - { zh: 完全非弹性碰撞, en: perfectly inelastic collision, aliases: [completely inelastic collision] }
+  - { zh: 约化质量, en: reduced mass }
+  - { zh: 两体问题, en: two-body problem }
+  - { zh: 理想流体, en: ideal fluid }
+  - { zh: 稳定流动, en: steady flow, aliases: [定常流动] }
+  - { zh: 流线, en: streamline, scope: ["5", "6", "7"] }
+  - { zh: 流管, en: stream tube, aliases: [flow tube] }
+  - { zh: 连续性方程, en: continuity equation, scope: ["5", "6", "7"] }
+  - { zh: 刚体, en: rigid body }
+  - { zh: 定点转动, en: rotation about a fixed point }
+  - { zh: 定轴转动, en: rotation about a fixed axis, aliases: [fixed-axis rotation] }
+  - { zh: 平面运动, en: plane motion, aliases: [planar motion], scope: ["5", "6", "7"] }
+  - { zh: 转动定律, en: law of rotation, aliases: [定轴转动定律] }
+  - { zh: 平行轴定理, en: parallel axis theorem, aliases: [Steiner 定理] }
+  - { zh: 垂直轴定理, en: perpendicular axis theorem, aliases: [正交轴定理] }
+  - { zh: 转动动能, en: rotational kinetic energy }
+  - { zh: 进动, en: precession }
+  - { zh: 章动, en: nutation }
+  - { zh: Euler 角, en: Euler angles, aliases: [欧拉角] }
+  - { zh: 瞬心, en: instantaneous center of rotation, aliases: [瞬时转动中心] }
+  - { zh: 纯滚动, en: rolling without slipping, aliases: [pure rolling] }
+  - { zh: 简谐振动, en: simple harmonic motion, aliases: [谐振动, harmonic oscillation] }
+  - { zh: 角频率, en: angular frequency, aliases: [圆频率] }
+  - { zh: 相位, en: phase, scope: ["5", "6", "7"] }
+  - { zh: 初相, en: initial phase, aliases: [初相位] }
+  - { zh: 旋转矢量, en: phasor, aliases: [相量] }
+  - { zh: 拍, en: beat, aliases: [beats], scope: ["5"] }
+  - { zh: Lissajous 图形, en: Lissajous figure, aliases: [李萨如图形] }
+  - { zh: 锁频, en: frequency locking, aliases: [频率锁定] }
+  - { zh: 阻尼振动, en: damped oscillation }
+  - { zh: 品质因数, en: quality factor, aliases: [Q 值, Q factor] }
+  - { zh: 受迫振动, en: forced oscillation, aliases: [强迫振动, driven oscillation] }
+  - { zh: König 定理, en: "König's theorem", aliases: [克尼希定理, 柯尼希定理], scope: ["5"] }   # kinetic-energy decomposition; the unscoped one is the graph-theory theorem
+  - { zh: 振幅, en: amplitude, scope: ["5", "6", "7"] }   # 2.2 振幅 (oscillation of a function) is scoped
+  - { zh: 电荷, en: electric charge }
+  - { zh: 元电荷, en: elementary charge }
+  - { zh: 电荷量子化, en: charge quantization, aliases: [quantization of charge] }
+  - { zh: 电荷守恒定律, en: law of conservation of charge, aliases: [电荷守恒, charge conservation] }
+  - { zh: 点电荷, en: point charge }
+  - { zh: Coulomb 定律, en: "Coulomb's law", aliases: [库仑定律] }
+  - { zh: 真空介电常量, en: vacuum permittivity, aliases: [真空电容率, electric constant] }
+  - { zh: 电场, en: electric field }
+  - { zh: 电场强度, en: electric field strength, aliases: [场强, electric field intensity] }
+  - { zh: 检验电荷, en: test charge }
+  - { zh: 电荷密度, en: charge density }
+  - { zh: 电偶极子, en: electric dipole }
+  - { zh: 电偶极矩, en: electric dipole moment }
+  - { zh: 电场线, en: electric field line, aliases: [电力线] }
+  - { zh: 电通量, en: electric flux }
+  - { zh: 立体角, en: solid angle }
+  - { zh: 静电场环路定理, en: circulation theorem for the electrostatic field, aliases: [静电场的环路定理] }
+  - { zh: 电势差, en: potential difference, aliases: [electric potential difference] }
+  - { zh: 电势, en: electric potential, aliases: [电位] }
+  - { zh: 电势叠加原理, en: superposition principle of electric potential }
+  - { zh: 等势面, en: equipotential surface }
+  - { zh: 电势梯度, en: potential gradient }
+  - { zh: Earnshaw 定理, en: "Earnshaw's theorem", aliases: [恩肖定理] }
+  - { zh: 静电势能, en: electrostatic potential energy, aliases: [电势能] }
+  - { zh: 静电能, en: electrostatic energy }
+  - { zh: 互能, en: interaction energy, scope: ["5"] }
+  - { zh: 自能, en: self-energy, scope: ["5"] }
+  - { zh: 电场能量密度, en: energy density of the electric field, aliases: [静电场的能量密度] }
+  - { zh: 导体, en: conductor, scope: ["5", "6"] }
+  - { zh: 静电平衡, en: electrostatic equilibrium }
+  - { zh: 尖端放电, en: point discharge }
+  - { zh: 静电屏蔽, en: electrostatic shielding }
+  - { zh: 像电荷, en: image charge }
+  - { zh: 电介质, en: dielectric }
+  - { zh: 电介质极化, en: dielectric polarization }
+  - { zh: 极化电荷, en: bound charge, aliases: [束缚电荷, polarization charge] }
+  - { zh: 有极分子, en: polar molecule }
+  - { zh: 无极分子, en: nonpolar molecule }
+  - { zh: 位移极化, en: electronic polarization, aliases: [电子位移极化, displacement polarization] }
+  - { zh: 取向极化, en: orientation polarization, aliases: [orientational polarization] }
+  - { zh: 极化强度, en: electric polarization, aliases: [电极化强度, polarization density] }
+  - { zh: 线性电介质, en: linear dielectric }
+  - { zh: 电极化率, en: electric susceptibility }
+  - { zh: 电介质击穿, en: dielectric breakdown }
+  - { zh: 介电强度, en: dielectric strength, aliases: [击穿场强] }
+  - { zh: 电位移, en: electric displacement field, aliases: [电位移矢量, electric displacement] }
+  - { zh: 相对电容率, en: relative permittivity, aliases: [相对介电常量, 相对介电常数, dielectric constant] }
+  - { zh: 电容率, en: permittivity, aliases: [介电常量, 介电常数] }
+  - { zh: 电容, en: capacitance }
+  - { zh: 电容器, en: capacitor }
+  - { zh: 电流, en: electric current }
+  - { zh: 电流密度, en: current density }
+  - { zh: 漂移速度, en: drift velocity }
+  - { zh: 电流连续性方程, en: charge continuity equation }
+  - { zh: 恒定电流, en: steady current, aliases: [稳恒电流] }
+  - { zh: 恒定电场, en: steady electric field }
+  - { zh: Kirchhoff 第一定律, en: "Kirchhoff's current law", aliases: [基尔霍夫第一定律, 节点电流定律, KCL] }
+  - { zh: Kirchhoff 第二定律, en: "Kirchhoff's voltage law", aliases: [基尔霍夫第二定律, 回路电压定律, KVL] }
+  - { zh: Ohm 定律, en: "Ohm's law", aliases: [欧姆定律] }
+  - { zh: 电阻, en: electrical resistance, aliases: [resistance] }
+  - { zh: 电导, en: electrical conductance, aliases: [conductance] }
+  - { zh: 电阻率, en: electrical resistivity, aliases: [resistivity] }
+  - { zh: 电导率, en: electrical conductivity }
+  - { zh: 非静电力, en: non-electrostatic force }
+  - { zh: 电源, en: source of electromotive force, aliases: [seat of emf], scope: ["5", "6", "7"] }
+  - { zh: 电动势, en: electromotive force, aliases: [emf] }
+  - { zh: Seebeck 效应, en: Seebeck effect, aliases: [塞贝克效应, 温差电效应] }
+  - { zh: Drude 模型, en: Drude model }
+  - { zh: Matthiessen 规则, en: "Matthiessen's rule" }
+  - { zh: Joule 定律, en: "Joule's law", aliases: [焦耳定律, Joule heating] }
+  - { zh: 时间常量, en: time constant, aliases: [时间常数] }
+  - { zh: 磁感应强度, en: magnetic flux density, aliases: [magnetic induction, 磁感强度] }
+  - { zh: Lorentz 力, en: Lorentz force, aliases: [洛伦兹力, 洛仑兹力] }
+  - { zh: 磁感线, en: magnetic field line, aliases: [磁感应线, magnetic induction line] }
+  - { zh: 磁通量, en: magnetic flux }
+  - { zh: 磁通连续定理, en: "Gauss's law for magnetism", aliases: [磁场的高斯定理] }
+  - { zh: Biot–Savart 定律, en: Biot–Savart law, aliases: [毕奥–萨伐尔定律] }
+  - { zh: 真空磁导率, en: vacuum permeability, aliases: [磁常量, magnetic constant] }
+  - { zh: 磁单极子, en: magnetic monopole }
+  - { zh: 磁偶极子, en: magnetic dipole }
+  - { zh: Helmholtz 线圈, en: Helmholtz coil, aliases: [亥姆霍兹线圈] }
+  - { zh: Ampère 环路定理, en: "Ampère's circuital law", aliases: [安培环路定理] }
+  - { zh: 极矢量, en: polar vector }
+  - { zh: 轴矢量, en: axial vector, aliases: [赝矢量, pseudovector] }
+  - { zh: 位移电流, en: displacement current }
+  - { zh: 全电流, en: total current }
+  - { zh: 全电流 Ampère 环路定理, en: Ampère–Maxwell law, aliases: [全电流安培环路定理] }
+  - { zh: 相干光, en: coherent light }
+  - { zh: 分波面法, en: division of wavefront, aliases: [分波阵面法, wavefront division] }
+  - { zh: 分振幅法, en: division of amplitude, aliases: [amplitude division] }
+  - { zh: 衬比度, en: fringe visibility, aliases: [对比度, 可见度, 条纹衬比度, visibility, fringe contrast], scope: ["5"] }
+  - { zh: 准单色光, en: quasi-monochromatic light }
+  - { zh: 谱线宽度, en: spectral linewidth, aliases: [谱线宽, linewidth] }
+  - { zh: 时间相干性, en: temporal coherence }
+  - { zh: 相干长度, en: coherence length }
+  - { zh: 相干时间, en: coherence time }
+  - { zh: 空间相干性, en: spatial coherence }
+  - { zh: 相干间隔, en: transverse coherence length, aliases: [coherence width] }
+  - { zh: 相干孔径角, en: coherence aperture angle }
+  - { zh: 光程, en: optical path length, aliases: [optical path] }
+  - { zh: 光程差, en: optical path difference }
+  - { zh: 等厚干涉, en: fringes of equal thickness, aliases: [等厚条纹, equal-thickness fringes] }
+  - { zh: 劈尖, en: wedge film, aliases: [劈形膜, 空气劈尖, air wedge] }
+  - { zh: Newton 环, en: "Newton's rings", aliases: [牛顿环] }
+  - { zh: 等倾干涉, en: fringes of equal inclination, aliases: [等倾条纹, equal-inclination fringes] }
+  - { zh: 增透膜, en: anti-reflection coating, aliases: [减反射膜, antireflection coating] }
+  - { zh: Michelson 干涉仪, en: Michelson interferometer, aliases: [迈克耳孙干涉仪] }
+  - { zh: Schrödinger 方程, en: Schrödinger equation, aliases: [薛定谔方程] }
+  - { zh: 定态 Schrödinger 方程, en: time-independent Schrödinger equation, aliases: [能量本征方程, 定态薛定谔方程, energy eigenvalue equation] }
+  - { zh: 定态, en: stationary state, scope: ["5", "6"] }
+  - { zh: 束缚态, en: bound state }
+  - { zh: 无限深方势阱, en: infinite square well, aliases: [无限深势阱, particle in a box] }
+  - { zh: 零点能, en: zero-point energy }
+  - { zh: 对应原理, en: correspondence principle, aliases: [Bohr 对应原理, 玻尔对应原理] }
+  - { zh: 势垒, en: potential barrier }
+  - { zh: 隧道效应, en: tunnel effect, aliases: [势垒穿透, 量子隧穿, quantum tunneling, tunneling] }
+  - { zh: 穿透系数, en: transmission coefficient, aliases: [透射系数], scope: ["5", "6", "7"] }
+  - { zh: 扫描隧道显微镜, en: scanning tunneling microscope, aliases: [STM] }
+  - { zh: 量子谐振子, en: quantum harmonic oscillator, aliases: [一维谐振子] }
+  - { zh: Hermite 多项式, en: Hermite polynomials, aliases: [厄米多项式, 埃尔米特多项式] }
+  - { zh: Rydberg 常量, en: Rydberg constant, aliases: [里德伯常量, 里德伯常数] }
+  - { zh: Balmer 系, en: Balmer series, aliases: [巴耳末系] }
+  - { zh: Bohr 模型, en: Bohr model, aliases: [玻尔模型, 玻尔理论] }
+  - { zh: Bohr 半径, en: Bohr radius, aliases: [玻尔半径] }
+  - { zh: 主量子数, en: principal quantum number }
+  - { zh: 角量子数, en: azimuthal quantum number, aliases: [轨道量子数, orbital angular momentum quantum number] }
+  - { zh: 磁量子数, en: magnetic quantum number }
+  - { zh: 空间量子化, en: space quantization }
+  - { zh: 简并, en: degeneracy, aliases: [能级简并], scope: ["5", "6"] }
+  - { zh: 电子云, en: electron cloud }
+  - { zh: 原子轨道, en: atomic orbital }
+  - { zh: 径向概率密度, en: radial probability density }
+  - { zh: 精细结构, en: fine structure }
+  - { zh: Bohr 磁子, en: Bohr magneton, aliases: [玻尔磁子] }
+  - { zh: Zeeman 效应, en: Zeeman effect, aliases: [塞曼效应] }
+  - { zh: Stern–Gerlach 实验, en: Stern–Gerlach experiment, aliases: [施特恩–盖拉赫实验] }
+  - { zh: 电子自旋, en: electron spin }
+  - { zh: 自旋量子数, en: spin quantum number }
+  - { zh: 自旋磁量子数, en: spin magnetic quantum number }
+  - { zh: 自旋–轨道耦合, en: spin–orbit coupling, aliases: [旋轨耦合, spin-orbit coupling] }
+  - { zh: 光谱项, en: term symbol, aliases: [spectroscopic term] }
+  - { zh: 原子实, en: atomic core }
+  - { zh: 量子数亏损, en: quantum defect }
+  - { zh: 全同粒子, en: identical particles }
+  - { zh: 费米子, en: fermion }
+  - { zh: 玻色子, en: boson }
+  - { zh: Pauli 不相容原理, en: Pauli exclusion principle, aliases: [泡利不相容原理] }
+  - { zh: Fermi–Dirac 分布, en: Fermi–Dirac distribution, aliases: [费米–狄拉克分布, Fermi–Dirac 统计, 费米统计] }
+  - { zh: Bose–Einstein 分布, en: Bose–Einstein distribution, aliases: [玻色–爱因斯坦分布, Bose–Einstein 统计, 玻色统计] }
+  - { zh: Bose–Einstein 凝聚, en: Bose–Einstein condensation, aliases: [玻色–爱因斯坦凝聚, BEC] }
+  - { zh: 壳层, en: electron shell, aliases: [电子壳层] }
+  - { zh: 支壳层, en: subshell, aliases: [次壳层, 亚层] }
+  - { zh: 电子组态, en: electron configuration, aliases: [电子构型] }
+  - { zh: 能量最低原理, en: aufbau principle }
+  - { zh: Hund 规则, en: "Hund's rule", aliases: [洪特规则, "Hund's rules"] }
+  - { zh: 互补原理, en: complementarity principle, aliases: [complementarity] }
+  - { zh: Fresnel 衍射, en: Fresnel diffraction, aliases: [菲涅耳衍射, near-field diffraction] }
+  - { zh: Fraunhofer 衍射, en: Fraunhofer diffraction, aliases: [夫琅禾费衍射, far-field diffraction] }
+  - { zh: Poisson 亮斑, en: Poisson spot, aliases: [泊松亮斑, Arago spot] }
+  - { zh: 光栅, en: diffraction grating, aliases: [grating], scope: ["5", "6", "7"] }
+  - { zh: 光栅常数, en: grating constant, aliases: [grating period] }
+  - { zh: 缺级, en: missing order }
+  - { zh: Airy 斑, en: Airy disk, aliases: [艾里斑] }
+  - { zh: Rayleigh 判据, en: Rayleigh criterion, aliases: [瑞利判据] }
+  - { zh: 色散本领, en: angular dispersion, aliases: [角色散本领, dispersive power] }
+  - { zh: 色分辨本领, en: chromatic resolving power }
+  - { zh: X 射线, en: X-ray, aliases: [伦琴射线, X-rays] }
+  - { zh: Laue 斑, en: Laue spot, aliases: [劳厄斑] }
+  - { zh: 晶面族, en: family of lattice planes }
+  - { zh: 偏振, en: polarization, aliases: [光的偏振, polarization of light], scope: ["5", "6", "7"] }
+  - { zh: 线偏振光, en: linearly polarized light, aliases: [平面偏振光, plane-polarized light] }
+  - { zh: 圆偏振光, en: circularly polarized light }
+  - { zh: 椭圆偏振光, en: elliptically polarized light }
+  - { zh: 自然光, en: unpolarized light, aliases: [非偏振光, natural light] }
+  - { zh: 部分偏振光, en: partially polarized light }
+  - { zh: 偏振度, en: degree of polarization }
+  - { zh: Malus 定律, en: "Malus's law", aliases: [马吕斯定律] }
+  - { zh: Brewster 定律, en: "Brewster's law", aliases: [布儒斯特定律] }
+  - { zh: Brewster 角, en: "Brewster's angle", aliases: [布儒斯特角, 起偏角, polarizing angle] }
+  - { zh: Rayleigh 散射, en: Rayleigh scattering, aliases: [瑞利散射] }
+  - { zh: Rayleigh 散射定律, en: Rayleigh scattering law, aliases: [瑞利散射定律] }
+  - { zh: 双折射, en: birefringence, aliases: [double refraction] }
+  - { zh: 寻常光, en: ordinary ray, aliases: [o 光, o ray] }
+  - { zh: 非常光, en: extraordinary ray, aliases: [e 光, e ray] }
+  - { zh: 光轴, en: optic axis, aliases: [晶体光轴, optic axis of a crystal], scope: ["5", "6", "7"] }
+  - { zh: 主平面, en: principal plane, scope: ["5.4"] }
+  - { zh: 正晶体, en: positive crystal, aliases: [positive uniaxial crystal] }
+  - { zh: 负晶体, en: negative crystal, aliases: [negative uniaxial crystal] }
+  - { zh: 波片, en: wave plate, aliases: [waveplate, retarder] }
+  - { zh: 色偏振, en: chromatic polarization }
+  - { zh: 光弹效应, en: photoelastic effect, aliases: [应力双折射, stress birefringence] }
+  - { zh: Kerr 效应, en: Kerr effect, aliases: [克尔效应, 二次电光效应, quadratic electro-optic effect] }
+  - { zh: Pockels 效应, en: Pockels effect, aliases: [泡克尔斯效应, 线性电光效应, linear electro-optic effect] }
+  - { zh: 旋光性, en: optical activity, aliases: [旋光现象] }
+  - { zh: Faraday 效应, en: Faraday effect, aliases: [法拉第效应, 磁致旋光, Faraday rotation] }
+  - { zh: Maxwell 方程组, en: "Maxwell's equations", aliases: [麦克斯韦方程组] }
+  - { zh: 回旋频率, en: cyclotron frequency }
+  - { zh: 回旋加速器, en: cyclotron }
+  - { zh: 质谱仪, en: mass spectrometer }
+  - { zh: 磁聚焦, en: magnetic focusing }
+  - { zh: 磁镜, en: magnetic mirror }
+  - { zh: 磁约束, en: magnetic confinement }
+  - { zh: Hall 效应, en: Hall effect, aliases: [霍尔效应] }
+  - { zh: Hall 系数, en: Hall coefficient, aliases: [霍尔系数] }
+  - { zh: 量子 Hall 效应, en: quantum Hall effect, aliases: [量子霍尔效应] }
+  - { zh: von Klitzing 常量, en: von Klitzing constant, aliases: [克里青常量] }
+  - { zh: Ampère 力, en: Ampère force, aliases: [安培力] }
+  - { zh: 磁矩, en: magnetic moment, aliases: [磁偶极矩, magnetic dipole moment] }
+  - { zh: 相对磁导率, en: relative permeability }
+  - { zh: 磁介质, en: magnetic material, aliases: [magnetic medium] }
+  - { zh: 顺磁质, en: paramagnetic substance, aliases: [顺磁体, paramagnet] }
+  - { zh: 抗磁质, en: diamagnetic substance, aliases: [抗磁体, diamagnet] }
+  - { zh: 铁磁质, en: ferromagnetic substance, aliases: [铁磁体, ferromagnet] }
+  - { zh: 旋磁比, en: gyromagnetic ratio }
+  - { zh: Larmor 进动, en: Larmor precession, aliases: [拉莫尔进动] }
+  - { zh: 磁化强度, en: magnetization }
+  - { zh: 磁化电流, en: magnetization current, aliases: [束缚电流, bound current] }
+  - { zh: 磁场强度, en: magnetic field strength, aliases: [H-field, magnetic field intensity] }
+  - { zh: 磁化率, en: magnetic susceptibility }
+  - { zh: 磁导率, en: permeability, scope: ["5", "6", "7"] }
+  - { zh: 磁畴, en: magnetic domain }
+  - { zh: 剩磁, en: remanence, aliases: [剩余磁感应强度, remanent flux density] }
+  - { zh: 矫顽力, en: coercivity, aliases: [coercive force] }
+  - { zh: 磁滞回线, en: hysteresis loop }
+  - { zh: Curie 温度, en: Curie temperature, aliases: [居里温度, 居里点, Curie point] }
+  - { zh: 磁路, en: magnetic circuit }
+  - { zh: 磁通势, en: magnetomotive force }
+  - { zh: 磁阻, en: reluctance, aliases: [magnetic reluctance] }
+  - { zh: 电磁感应, en: electromagnetic induction }
+  - { zh: Faraday 电磁感应定律, en: "Faraday's law of induction", aliases: [法拉第电磁感应定律] }
+  - { zh: Lenz 定律, en: "Lenz's law", aliases: [楞次定律] }
+  - { zh: 磁链, en: magnetic flux linkage, aliases: [flux linkage] }
+  - { zh: 动生电动势, en: motional electromotive force, aliases: [motional emf] }
+  - { zh: 感生电动势, en: induced electromotive force, aliases: [induced emf] }
+  - { zh: 感生电场, en: induced electric field, aliases: [涡旋电场] }
+  - { zh: 涡流, en: eddy current }
+  - { zh: 电子感应加速器, en: betatron }
+  - { zh: 趋肤效应, en: skin effect }
+  - { zh: 互感, en: mutual inductance }
+  - { zh: 自感, en: self-inductance, aliases: [电感, inductance] }
+  - { zh: 超导电性, en: superconductivity }
+  - { zh: Meissner 效应, en: Meissner effect, aliases: [迈斯纳效应] }
+  - { zh: 电磁波, en: electromagnetic wave }
+  - { zh: 折射率, en: refractive index, aliases: [index of refraction] }
+  - { zh: Poynting 矢量, en: Poynting vector, aliases: [坡印亭矢量, 坡印廷矢量] }
+  - { zh: 辐射压, en: radiation pressure, aliases: [光压] }
+  - { zh: 轫致辐射, en: bremsstrahlung, aliases: [韧致辐射, braking radiation] }
+  - { zh: 截止波长, en: cutoff wavelength, aliases: [短波限, short-wavelength limit], scope: ["5"] }
+  - { zh: 特征 X 射线, en: characteristic X-ray, aliases: [标识谱, 特征谱, characteristic X-rays] }
+  - { zh: Moseley 定律, en: "Moseley's law", aliases: [莫塞莱定律] }
+  - { zh: 自发辐射, en: spontaneous emission }
+  - { zh: 受激吸收, en: stimulated absorption }
+  - { zh: 受激辐射, en: stimulated emission, aliases: [受激发射] }
+  - { zh: Einstein 系数, en: Einstein coefficients, aliases: [爱因斯坦系数] }
+  - { zh: 粒子数反转, en: population inversion, aliases: [粒子数布居反转] }
+  - { zh: 激光, en: laser }
+  - { zh: 光学谐振腔, en: optical resonator, aliases: [谐振腔, optical cavity] }
+  - { zh: 纵模, en: longitudinal mode }
+  - { zh: 横模, en: transverse mode }
+  - { zh: 分子光谱, en: molecular spectrum, aliases: [molecular spectra] }
+  - { zh: 带状光谱, en: band spectrum }
+  - { zh: 选择定则, en: selection rule, aliases: [selection rules] }
+  - { zh: 晶体, en: crystal }
+  - { zh: 非晶体, en: amorphous solid }
+  - { zh: 准晶体, en: quasicrystal }
+  - { zh: 自由电子气, en: free electron gas, aliases: [自由电子模型, Sommerfeld 模型, free electron model] }
+  - { zh: Fermi 能量, en: Fermi energy, aliases: [费米能量, 费米能, Fermi 能, Fermi 能级, Fermi level] }
+  - { zh: Fermi 速度, en: Fermi velocity, aliases: [费米速度] }
+  - { zh: Fermi 温度, en: Fermi temperature, aliases: [费米温度] }
+  - { zh: 态密度, en: density of states }
+  - { zh: 能带, en: energy band }
+  - { zh: Bloch 定理, en: "Bloch's theorem", aliases: [布洛赫定理] }
+  - { zh: Brillouin 区, en: Brillouin zone, aliases: [布里渊区, 第一 Brillouin 区, first Brillouin zone] }
+  - { zh: 有效质量, en: effective mass }
+  - { zh: 紧束缚模型, en: tight-binding model, aliases: [紧束缚近似, tight-binding approximation] }
+  - { zh: 满带, en: filled band }
+  - { zh: 空带, en: empty band }
+  - { zh: 价带, en: valence band }
+  - { zh: 导带, en: conduction band }
+  - { zh: 禁带, en: band gap, aliases: [能隙, 带隙, energy gap, bandgap] }
+  - { zh: 半导体, en: semiconductor }
+  - { zh: 绝缘体, en: insulator, scope: ["5", "6"] }
+  - { zh: 本征半导体, en: intrinsic semiconductor }
+  - { zh: 空穴, en: hole, scope: ["5", "6"] }
+  - { zh: 施主, en: donor, scope: ["5", "6"] }
+  - { zh: 受主, en: acceptor, scope: ["5", "6"] }
+  - { zh: n 型半导体, en: n-type semiconductor }
+  - { zh: p 型半导体, en: p-type semiconductor }
+  - { zh: 质量作用定律, en: law of mass action, scope: ["5"] }
+  - { zh: p-n 结, en: p–n junction, aliases: [PN 结, pn 结, p-n junction] }
+  - { zh: 耗尽层, en: depletion region, aliases: [空间电荷区, depletion layer] }
+  - { zh: 内建电场, en: built-in electric field }
+  - { zh: Shockley 二极管方程, en: Shockley diode equation, aliases: [肖克利方程] }
+  - { zh: 发光二极管, en: light-emitting diode, aliases: [LED] }
+  - { zh: 场效应管, en: field-effect transistor, aliases: [场效应晶体管, FET] }
+  - { zh: 亚稳态, en: metastable state }   # long-lived excited state; the digital-logic sense is scoped to 4
+  - { zh: 热辐射, en: thermal radiation }
+  - { zh: 单色辐出度, en: spectral exitance, aliases: [光谱辐出度, spectral radiant exitance] }
+  - { zh: 黑体, en: black body, aliases: [绝对黑体, blackbody] }
+  - { zh: Kirchhoff 辐射定律, en: "Kirchhoff's law of thermal radiation", aliases: [基尔霍夫辐射定律] }
+  - { zh: Stefan–Boltzmann 定律, en: Stefan–Boltzmann law, aliases: [斯特藩–玻尔兹曼定律] }
+  - { zh: Wien 位移定律, en: "Wien's displacement law", aliases: [维恩位移定律] }
+  - { zh: 紫外灾难, en: ultraviolet catastrophe }
+  - { zh: Planck 辐射公式, en: "Planck's law", aliases: [Planck 公式, 普朗克公式, Planck radiation law] }
+  - { zh: 能量子, en: energy quantum }
+  - { zh: Planck 常量, en: Planck constant, aliases: [普朗克常量] }
+  - { zh: 光电效应, en: photoelectric effect }
+  - { zh: 遏止电压, en: stopping voltage, aliases: [截止电压, stopping potential] }
+  - { zh: 截止频率, en: threshold frequency, aliases: [红限频率], scope: ["5"] }
+  - { zh: 光子, en: photon, aliases: [光量子, light quantum] }
+  - { zh: 逸出功, en: work function, aliases: [功函数] }
+  - { zh: 光电效应方程, en: photoelectric equation, aliases: ["Einstein's photoelectric equation"] }
+  - { zh: 波粒二象性, en: wave–particle duality }
+  - { zh: Compton 散射, en: Compton scattering, aliases: [康普顿散射, Compton 效应, Compton effect] }
+  - { zh: Compton 波长, en: Compton wavelength, aliases: [康普顿波长] }
+  - { zh: 物质波, en: matter wave, aliases: [de Broglie 波, 德布罗意波, de Broglie wave] }
+  - { zh: de Broglie 波长, en: de Broglie wavelength, aliases: [德布罗意波长] }
+  - { zh: 约化 Planck 常量, en: reduced Planck constant }
+  - { zh: 波函数, en: wave function, aliases: [wavefunction], scope: ["5.5", "6"] }
+  - { zh: 概率幅, en: probability amplitude }
+  - { zh: Born 诠释, en: Born rule, aliases: [玻恩诠释, Born interpretation] }
+  - { zh: 归一化条件, en: normalization condition }

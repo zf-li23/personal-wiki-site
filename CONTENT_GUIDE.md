@@ -266,8 +266,30 @@ terms:
 
 ### 7.4 物理、化学与生物
 
-- **物理**：物理量斜体（$m, t, E$），矢量粗斜体（$\boldsymbol{F}, \boldsymbol{v}$），算符加帽（$\hat H$）；单位直立，与数值间留细空格（$3\,\mathrm{m\,s^{-1}}$）；常数斜体（$c, h, k_{\mathrm{B}}$，元电荷 $e$）；粒子符号直立；复共轭与厄米共轭按物理惯例写 $z^*$、$A^\dagger$。
-- **化学**：化学式与反应式写在 `\ce{}` 中（$\ce{H2O}$、$\ce{2H2 + O2 -> 2H2O}$），元素与电子 $\ce{e-}$ 自动直立；浓度 $[\ce{A}]$ 或 $c_{\mathrm{A}}$。
+物理与化学共用一套量、单位与符号，依据 SI（《国际单位制》第 9 版，2019 年起以固定常数定义）、**ISO 80000**（各部分的量与单位）和 IUPAC《物理化学中的量、单位和符号》（绿皮书）。物理课程先写成，化学课程沿用；资料（包括教材）的记号与下表不同时一律改写，必要时在第一次出现处用一句话说明教材的写法。
+
+**写法**
+
+- 物理量斜体（$m, t, E$），矢量粗斜体（$\boldsymbol{F}, \boldsymbol{v}$），其大小写普通斜体（$v = \lvert\boldsymbol{v}\rvert$）；单位矢量写 $\boldsymbol{e}_x$、$\boldsymbol{e}_r$、$\boldsymbol{e}_{\mathrm{t}}$、$\boldsymbol{e}_{\mathrm{n}}$（帽子只留给算符）；时间导数可写 $\dot{x}$、$\ddot{\boldsymbol{r}}$。
+- 单位直立，与数值之间留细空格，乘积用细空格、除法用负指数：$9.8\,\mathrm{m\,s^{-2}}$、$8.314\,\mathrm{J\,mol^{-1}\,K^{-1}}$；百分号和角度符号紧跟数值（$30^\circ$）。表头与坐标轴写"量/单位"：$T/\mathrm{K}$、$p/\mathrm{kPa}$。只用 SI 及其认可的单位（$\mathrm{eV}$、$\mathrm{L}$、$\mathrm{min}$、$\mathrm{h}$、$\mathrm{d}$、$^\circ$、$\mathrm{u}$ 即 $\mathrm{Da}$）；atm、mmHg、cal、Å、Gs 等只在说明历史或资料时出现并给出换算。电磁学一律用 SI（不用 Gauss 制）。
+- **量纲**按 ISO 80000-1 用无衬线正体：$\dim F = \mathsf{L}\,\mathsf{M}\,\mathsf{T}^{-2}$，七个基本量纲 $\mathsf{L}, \mathsf{M}, \mathsf{T}, \mathsf{I}, \Theta, \mathsf{N}, \mathsf{J}$，量纲一的量 $\dim Q = 1$。
+- 常数斜体：$c, h, \hbar, e, k_{\mathrm{B}}, N_{\mathrm{A}}, R = N_{\mathrm{A}}k_{\mathrm{B}}, \varepsilon_0, \mu_0, G, m_{\mathrm{e}}, m_{\mathrm{p}}$；SI 定义常数（$c, h, e, k_{\mathrm{B}}, N_{\mathrm{A}}$ 等）是精确值，写数值时说明这一点。粒子与核素符号直立（$\mathrm{e}^-$、$\mathrm{p}$、$\mathrm{n}$、$^{133}\mathrm{Cs}$），光子在正文中直接写"光子"。
+- 微分：全微分 $\mathrm{d}U$，过程量的无穷小写 $\delta Q$、$\delta W$；偏导数注明保持不变的量 $\left(\frac{\partial U}{\partial T}\right)_V$。平均值在物理中写 $\bar v$ 或 $\langle v\rangle$（统计物理与量子力学），概率论语境仍写 $\mathbb{E}$。
+- 复共轭与厄米共轭按物理惯例写 $z^*$、$A^\dagger$；算符加帽 $\hat{H}$、$\hat{p}_x$。
+
+**量的符号**（同一符号在不同学科的另一含义见 §7.5）
+
+| 领域 | 符号 |
+|---|---|
+| 力学 | 位矢 $\boldsymbol{r}$，位移 $\Delta\boldsymbol{r}$，路程 $s$，速度 $\boldsymbol{v}$，加速度 $\boldsymbol{a}$，质量 $m$，密度 $\rho$，力 $\boldsymbol{F}$，动量 $\boldsymbol{p}$，冲量 $\boldsymbol{I}$，功 $W$，功率 $P$，动能 $E_{\mathrm{k}}$，势能 $E_{\mathrm{p}}$，机械能 $E$；角位置 $\theta$，角速度 $\boldsymbol{\omega}$，角加速度 $\boldsymbol{\alpha}$，力矩 $\boldsymbol{M}$，角动量 $\boldsymbol{L}$，转动惯量 $J$；劲度系数 $k$，周期 $T$，频率 $\nu$，角频率 $\omega$，约化质量 $\mu$，压强 $p$ |
+| 振动与波 | 振幅 $A$，相位 $\varphi$（初相 $\varphi_0$），波长 $\lambda$，角波数 $k = 2\pi/\lambda$，波矢 $\boldsymbol{k}$，波数 $\tilde\nu = 1/\lambda$（光谱学），相速度 $u$，群速度 $v_{\mathrm{g}}$，强度 $I$，声强级 $L_I$（单位 $\mathrm{dB}$），品质因数 $Q$ |
+| 相对论 | $\beta = v/c$，$\gamma = 1/\sqrt{1-\beta^2}$；质量 $m$ 只指不变质量，$\boldsymbol{p} = \gamma m\boldsymbol{v}$，$E = \gamma mc^2$，静能 $E_0 = mc^2$，$E^2 = p^2c^2 + m^2c^4$（不用"运动质量"，教材的 $m(v)$ 在注中说明） |
+| 热学 | 热力学温度 $T$（$\mathrm{K}$），摄氏温度 $t$（$^\circ\mathrm{C}$），压强 $p$，体积 $V$，物质的量 $n$，分子数 $N$，数密度 $n_V$ 或 $n$（不与物质的量同时出现），摩尔质量 $M$，分子质量 $m$，摩尔体积 $V_{\mathrm{m}}$；热量 $Q$、功 $W$，**均以系统得到为正**：第一定律写 $\Delta U = Q + W$，体积功 $W = -\int p\,\mathrm{d}V$（系统对外做功为 $-W$，与 IUPAC、化学一致；物理教材的 $Q = \Delta U + W'$ 在 5.2 中说明一次）；热容 $C$，摩尔热容 $C_{p,\mathrm{m}}$、$C_{V,\mathrm{m}}$，比热容 $c$，$\gamma = C_p/C_V$；内能 $U$，焓 $H$，熵 $S$，Helmholtz 自由能 $A$，Gibbs 自由能 $G$，化学势 $\mu$；微观态数 $\Omega$（$S = k_{\mathrm{B}}\ln\Omega$），分布函数 $f(v)$，最概然速率 $v_{\mathrm{p}}$，平均速率 $\bar v$，方均根速率 $v_{\mathrm{rms}}$，平均自由程 $\bar\lambda$，效率 $\eta$，制冷系数 $\varepsilon$；标准态 $p^\circ = 10^5\,\mathrm{Pa}$，标准量加 $^\circ$（$\Delta_{\mathrm{r}}H^\circ$） |
+| 电磁学 | 电荷 $q$、$Q$，电荷密度 $\rho$、$\sigma$、$\lambda$（体、面、线），电场强度 $\boldsymbol{E}$，电位移 $\boldsymbol{D} = \varepsilon_0\boldsymbol{E} + \boldsymbol{P}$，极化强度 $\boldsymbol{P}$，电势 $\varphi$，电压 $U$，电动势 $\mathcal{E}$，电通量 $\Phi_{\mathrm{e}}$，电偶极矩 $\boldsymbol{p}$，电容 $C$，电流 $I$，电流密度 $\boldsymbol{J}$，电阻 $R$，电阻率 $\rho$，电导率 $\sigma$；磁感应强度 $\boldsymbol{B}$，磁场强度 $\boldsymbol{H} = \boldsymbol{B}/\mu_0 - \boldsymbol{M}$，磁化强度 $\boldsymbol{M}$，磁通量 $\Phi$，磁矩 $\boldsymbol{m}$，自感 $L$，互感 $M$；相对电容率 $\varepsilon_{\mathrm{r}}$，相对磁导率 $\mu_{\mathrm{r}}$，电极化率 $\chi_{\mathrm{e}}$，磁化率 $\chi_{\mathrm{m}}$；能量密度 $w$，Poynting 矢量 $\boldsymbol{S}$ |
+| 光学 | 折射率 $n$，光程差 $\Delta$，相位差 $\Delta\varphi$，光强 $I$，波长 $\lambda$（真空中 $\lambda_0$），频率 $\nu$，焦距 $f$，光栅常数 $d$ |
+| 量子 | 波函数 $\Psi(\boldsymbol{r}, t)$，定态波函数 $\psi(\boldsymbol{r})$，算符 $\hat{x}, \hat{p}, \hat{H}$，期望值 $\langle \hat{A}\rangle$；能级 $E_n$，量子数 $n, l, m_l, s, m_s, j, m_j$（与化学的原子结构相同），轨道与壳层直立（$1\mathrm{s}$、$2\mathrm{p}$、$\mathrm{K}$ 壳层），光谱项 $^{2S+1}L_J$ 中的 $L$ 写直立字母（$^2\mathrm{P}_{3/2}$）；Bohr 半径 $a_0$，Rydberg 常量 $R_\infty$，Bohr 磁子 $\mu_{\mathrm{B}}$，功函数 $W_0$，Fermi 能 $E_{\mathrm{F}}$，禁带宽度 $E_{\mathrm{g}}$；分子光谱按 IUPAC：转动量子数 $J$、振动量子数 $v$、转动惯量 $I$、转动常量 $\tilde B$（波数），与化学一致 |
+
+- **化学**：化学式与反应式写在 `\ce{}` 中（$\ce{H2O}$、$\ce{2H2 + O2 -> 2H2O}$），元素与电子 $\ce{e-}$ 自动直立；浓度 $[\ce{A}]$ 或 $c_{\mathrm{A}}$。热力学与量子的量沿用上表。
 - **生物**（正文，不是公式）：基因名斜体（*lacZ*），蛋白质名正体（LacZ）；物种学名斜体（*Escherichia coli*）。
 
 ### 7.5 已知的重名
@@ -282,6 +304,16 @@ terms:
 | $P$ | 置换矩阵 / 可逆矩阵（相似变换 $P^{-1}AP$） | 语境；需要时写 $P_\sigma$ |
 | $\sigma$ | 坐标同构（2.1.8）/ 矩阵的谱 $\sigma(A)$ / 标准差 | 学科与参数 |
 | $F$ / $\mathbb{F}$ | 名为 $F$ 的矩阵、抽象代数中的域 / 线性代数的标量域 | 字体 |
+| $\mathcal{E}$ | 集族 / 电动势 | 学科 |
+| $T$ | 周期 / 热力学温度 / 动能（不用，写 $E_{\mathrm{k}}$） | 章节；同时出现时周期写 $\tau$ 并说明 |
+| $M$、$\boldsymbol{M}$ | 摩尔质量、互感 / 力矩、磁化强度 | 学科；标量与矢量 |
+| $\boldsymbol{p}$ / $p$ | 动量、电偶极矩 / 压强 | 学科；矢量与标量 |
+| $\rho$、$\sigma$ | 质量密度、电荷密度、电阻率 / 面电荷密度、电导率、Stefan–Boltzmann 常量 | 章节，同一章内不混用 |
+| $R$ | 摩尔气体常量 / 电阻 | 学科 |
+| $\mu$ | 约化质量、化学势、磁导率 $\mu_0, \mu_{\mathrm{r}}$ / 期望 | 下标与学科 |
+| $\boldsymbol{S}$ / $S$ | Poynting 矢量 / 熵 | 矢量与标量 |
+| $J$ / $I$ | 力学中的转动惯量 $J$ / 分子光谱与化学中的转动量子数 $J$（此时转动惯量写 $I$） | 学科；分子光谱一节开头说明一次 |
+| $\dim$ | 量纲 $\dim F$ / 线性空间的维数 $\dim V$ | 学科 |
 
 ## 8. 提交前
 
