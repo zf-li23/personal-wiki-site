@@ -3,7 +3,7 @@ title: Software Architecture and Quality Attributes
 description: "What software architecture is and why it decides the qualities of a system; quality attributes (performance, availability, modifiability, security, testability, usability) and the tactics that achieve them; availability arithmetic and fault tolerance (TMR, N-version programming, recovery blocks); software product lines; the design principles KISS, modularity with coupling and cohesion, separation of concerns, design for change and design for reuse; and the classic architectural styles: event-based, pipes and filters, repository and layered."
 ---
 
-Requirements ([4.14.4](/4.14.4)) say what a system must do and how well; architecture is the first and most consequential answer to the question of how. Two systems with identical functions can differ by orders of magnitude in how many users they serve, how often they fail and how expensive they are to change, and these differences are fixed largely by the system's high-level structure, long before the first line of code is written. This chapter defines software architecture (5.1), the quality attributes that architecture serves and the design tactics that achieve them (5.2), the techniques of fault tolerance (5.3), and software product lines, an architectural answer to the cost of change (5.4). It then states the general design principles (5.5) and describes four classic architectural styles: event-based, pipes and filters, repository and layered (5.6). The next chapter ([4.14.6](/4.14.6)) continues with the distributed styles of Internet services (client–server, peer-to-peer, microservices, REST) and the patterns large websites use for performance, availability and scalability. At the level of classes and objects, the same ideas appear as **design patterns** ([4.2.13](/4.2.13)); at the level of code, as the principles of code quality ([4.14.10](/4.14.10)).
+**Requirements** ([4.14.4](/4.14.4)) say what a system must do and how well; architecture is the first and most consequential answer to the question of how. Two systems with identical functions can differ by orders of magnitude in how many users they serve, how often they fail and how expensive they are to change, and these differences are fixed largely by the system's high-level structure, long before the first line of code is written. This chapter defines software architecture (5.1), the quality attributes that architecture serves and the design tactics that achieve them (5.2), the techniques of fault tolerance (5.3), and software product lines, an architectural answer to the cost of change (5.4). It then states the general design principles (5.5) and describes four classic architectural styles: event-based, pipes and filters, repository and layered (5.6). The next chapter ([4.14.6](/4.14.6)) continues with the distributed styles of Internet services (client–server, peer-to-peer, microservices, REST) and the patterns large websites use for performance, availability and scalability. At the level of classes and objects, the same ideas appear as **design patterns** ([4.2.13](/4.2.13)); at the level of code, as the principles of code quality ([4.14.10](/4.14.10)).
 
 ## 5.1. What Software Architecture Is
 
@@ -13,13 +13,13 @@ Requirements ([4.14.4](/4.14.4)) say what a system must do and how well; archite
 
 This definition comes from IEEE Std 1471-2000, *Recommended Practice for Architectural Description of Software-Intensive Systems*. The standard has been superseded by ISO/IEC/IEEE 42010 (2011, revised 2022), which phrases architecture as the "fundamental concepts or properties of an entity in its environment and governing principles for the realization and evolution of this entity"; the substance is unchanged. Three points matter. Architecture is about structure (components and their relationships), not about the internals of components. It includes the *environment*: the users, the hardware, the other systems the software talks to. And it includes *principles*, the rules that keep the structure intact while the system evolves.
 
-The distinction between programming in the small and in the large expresses the same idea. In the small, a programmer chooses data structures and algorithms. In the large, an architect chooses components and connectors and hides how each component is implemented.
+The distinction between programming in the small and in the large expresses the same idea. In the small, a programmer chooses **data structures** and algorithms. In the large, an architect chooses components and connectors and hides how each component is implemented.
 
 **Definition 5.1.2 (Component and Connector)** In an architectural description, a **component** is a unit of computation or data storage with a defined interface, such as a process, a service, a library or a database. A **connector** is an interaction mechanism between components, such as a procedure call, a pipe, an event bus, a message queue, a shared database or a network protocol.
 
 **Definition 5.1.3 (Architectural Style)** An **architectural style** (or architectural pattern) is a named family of architectures that share a vocabulary of component and connector types and a set of constraints on how they may be combined. It records a proven way of connecting subsystems to meet a class of functional and non-functional requirements.
 
-No single diagram shows an architecture. Architects describe a system in several *views*, each for one set of concerns: a module view (code units and their dependencies), a component-and-connector view (the run-time components and their interactions) and an allocation view (how software maps to hardware, teams and files). The views are drawn informally as boxes and arrows, in the C4 model (context, containers, components, code), or with UML component and deployment diagrams.
+No single diagram shows an architecture. Architects describe a system in several *views*, each for one set of concerns: a module view (code units and their dependencies), a component-and-connector view (the run-time components and their interactions) and an allocation view (how software maps to hardware, teams and files). The views are drawn informally as boxes and arrows, in the C4 model (context, containers, components, code), or with **UML** component and deployment diagrams.
 
 ### 5.1.2. Why Architecture Matters
 
@@ -131,7 +131,7 @@ The goal of all availability tactics is to ensure that faults do not result in f
 |---|---|---|
 | fault prevention | how to prevent the occurrence or introduction of faults | requirements reviews, type systems, coding standards, safe languages |
 | fault tolerance | how to deliver correct service in the presence of faults | redundancy, replication, failover, retries, graceful degradation |
-| fault removal | how to reduce the number and severity of faults | testing, static analysis, code review, formal verification |
+| fault removal | how to reduce the number and severity of faults | testing, static analysis, **code review**, formal verification |
 | fault forecasting | how to estimate the present number, the future incidence and the likely consequences of faults | reliability growth models, failure mode and effects analysis, chaos experiments |
 
 ### 5.2.4. Modifiability
@@ -400,7 +400,7 @@ timeout
 | maintenance and reuse | filters can be added, replaced and reordered; each filter is a black box, reusable wherever the agreed data format is used | every filter must parse its input and unparse its output, a cost in time and a source of errors |
 | performance | filters can run in parallel, as concurrent processes or threads | with finite buffers, filters that wait on each other can **deadlock** |
 
-Modern data processing uses the style at a large scale: extract-transform-load jobs, stream processing engines such as Apache Flink ([4.14.6](/4.14.6)), and the build and deployment pipelines of continuous integration.
+Modern data processing uses the style at a large scale: extract-transform-load jobs, stream processing engines such as Apache Flink ([4.14.6](/4.14.6)), and the build and deployment pipelines of **continuous integration**.
 
 ### 5.6.3. Repository Style
 
@@ -435,7 +435,7 @@ flowchart LR
 | the sharing model is published as the repository schema, so new tools integrate easily if they are compatible with it | difficult to distribute efficiently; replication brings redundancy and inconsistency problems |
 | | forces the same policy (security, backup) on all subsystems |
 
-Version control systems such as Git ([4.14.3](/4.14.3)), integrated development environments and most business information systems built around one database are repository architectures.
+**Version control systems** such as Git ([4.14.3](/4.14.3)), integrated development environments and most business information systems built around one database are repository architectures.
 
 ### 5.6.4. Layered Style
 

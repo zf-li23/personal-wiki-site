@@ -3,7 +3,7 @@ title: Architecture of Internet Services
 description: "Distributed architectural styles and the patterns of large Internet services: client–server and peer-to-peer (with file distribution times), cloud computing and software as a service, service-oriented architecture and microservices, REST and RPC; patterns for high performance (performance metrics, read/write splitting, sharding, NoSQL and NewSQL, caching, load balancing, message queues), for high availability (the CAP theorem, replication, failover, active–active sites) and for scalability (splitting by process, service and function); and three case studies: the evolution of a large e-commerce site, a real-time data warehouse and video streaming."
 ---
 
-The styles of the previous chapter ([4.14.5](/4.14.5)) were described without regard to where components run. Internet services run on many machines, connected by a network that is slow compared with memory, that loses messages and that partitions; they serve millions of users whose number can grow tenfold in a month; and they must stay up while they are changed every day. This chapter treats the architectures that have evolved under these constraints. It begins with the two basic distributed styles, client–server and peer-to-peer (6.1), the cloud platforms on which most services now run (6.2), and the service-based architectures built on them: service-oriented architecture and microservices (6.3), together with their two main connectors, REST and RPC (6.4). It then collects the architectural patterns large websites use to reach the quality attributes of [4.14.5](/4.14.5): high performance (6.5), high availability (6.6) and scalability (6.7). Three case studies show the patterns combined (6.8). The details of HTTP APIs, authentication and web security follow in [4.14.7](/4.14.7); the operation of such systems in production is the subject of [4.14.13](/4.14.13). Many of the data-management techniques used here (indexes, partitioning, transactions, distributed databases) are treated from the database side in [4.13](/4.13).
+The styles of the previous chapter ([4.14.5](/4.14.5)) were described without regard to where **components** run. Internet services run on many machines, connected by a network that is slow compared with memory, that loses messages and that partitions; they serve millions of users whose number can grow tenfold in a month; and they must stay up while they are changed every day. This chapter treats the architectures that have evolved under these constraints. It begins with the two basic distributed styles, client–server and peer-to-peer (6.1), the cloud platforms on which most services now run (6.2), and the service-based architectures built on them: service-oriented architecture and microservices (6.3), together with their two main **connectors**, REST and RPC (6.4). It then collects the **architectural patterns** large websites use to reach the quality attributes of [4.14.5](/4.14.5): high performance (6.5), high availability (6.6) and scalability (6.7). Three case studies show the patterns combined (6.8). The details of HTTP APIs, authentication and web security follow in [4.14.7](/4.14.7); the operation of such systems in production is the subject of [4.14.13](/4.14.13). Many of the data-management techniques used here (indexes, partitioning, transactions, distributed databases) are treated from the database side in [4.13](/4.13).
 
 ## 6.1. Client–Server and Peer-to-Peer
 
@@ -13,7 +13,7 @@ The styles of the previous chapter ([4.14.5](/4.14.5)) were described without re
 
 The style captures the reusable behavior of specialized servers and clients without specifying how either is implemented. It suits applications with distributed data and processing across a range of components; file servers, database servers, mail servers and web servers are examples. A server is always on and has a permanent, known address; clients may come and go, may have changing addresses and do not communicate with each other directly.
 
-When the server side itself becomes complex, it is divided into tiers: in the common *three-tier architecture*, a presentation tier (the browser or mobile app), an application tier (the business logic) and a data tier (the database) run on separate machines and can be scaled and replaced independently. This is the layered style of [4.14.5](/4.14.5) distributed over a network.
+When the server side itself becomes complex, it is divided into tiers: in the common *three-tier architecture*, a presentation tier (the browser or mobile app), an application tier (the business logic) and a data tier (the database) run on separate machines and can be scaled and replaced independently. This is the **layered style** of [4.14.5](/4.14.5) distributed over a network.
 
 ### 6.1.2. Peer-to-Peer
 
@@ -62,13 +62,13 @@ SaaS has three advantages over shrink-wrapped software:
 
 1. Data is stored safely in the cloud: losing a device does not mean losing data, and groups can easily share and collaborate.
 2. There is one copy of the software, in a single hardware and operating-system environment: developers and users have no compatibility hassles, upgrading means deploying to the cloud, and a new feature can be tried on 1% of users first.
-3. Continuous customer feedback is possible, and the developers can respond by rolling out changes quickly: the service is in "forever beta". This matches agile development ([4.14.2](/4.14.2)) well, and frameworks and cloud tools have removed many obstacles to practicing it, which levels the field for small teams.
+3. Continuous customer feedback is possible, and the developers can respond by rolling out changes quickly: the service is in "forever beta". This matches **agile development** ([4.14.2](/4.14.2)) well, and frameworks and cloud tools have removed many obstacles to practicing it, which levels the field for small teams.
 
 In return, SaaS places three demands on the infrastructure: communication (users everywhere must reach the service), scalability and elasticity (capacity must follow demand, which can grow or shrink quickly), and dependability ("24 × 7" service, since there is no maintenance window when users are worldwide).
 
 ### 6.2.2. Warehouse-Scale Computers and Utility Computing
 
-The infrastructure that meets these demands is the warehouse-scale computer: clusters of (mostly) commodity computers connected by (mostly) commodity Ethernet switches. Compared with conventional large servers they are more scalable and much cheaper per unit of computation; they reach dependability through extensive redundancy rather than through reliable hardware; and few operators can run thousands of servers, thanks to careful selection of identical hardware and software and to automation with **virtual machines** and containers, orchestrated by systems such as Kubernetes ([4.11.9](/4.11.9)).
+The infrastructure that meets these demands is the warehouse-scale computer: clusters of (mostly) commodity computers connected by (mostly) commodity Ethernet switches. Compared with conventional large servers they are more scalable and much cheaper per unit of computation; they reach dependability through extensive redundancy rather than through reliable hardware; and few operators can run thousands of servers, thanks to careful selection of identical hardware and software and to automation with **virtual machines** and **containers**, orchestrated by systems such as Kubernetes ([4.11.9](/4.11.9)).
 
 Driven by the demand for SaaS, clusters grew from about 1,000 to 100,000 servers and more, and economies of scale lowered the cost per server of the largest data centers by factors of 3 to 8. Traditional data centers, however, were only 10–20% utilized. The idea of cloud computing was to sell the spare capacity: offer pay-as-you-go use of as many computers as a customer needs, at less than the customer's own cost.
 
@@ -147,7 +147,7 @@ flowchart TB
   end
 ```
 
-Microservices are a means to an end: enabling continuous delivery and deployment. Lewis and Fowler list their characteristics:
+Microservices are a means to an end: enabling **continuous delivery** and deployment. Lewis and Fowler list their characteristics:
 
 - Componentization via services: services are the building blocks, used through published interfaces, and can be replaced and upgraded independently.
 - Organized around business capabilities: each team owns a capability end to end (user interface, logic, data) rather than one technical layer.
@@ -163,7 +163,7 @@ Industrial systems are large: WeChat reported more than 3,000 services on over 2
 | Generation | What is added | Concerns moved out of the service |
 |---|---|---|
 | container orchestration | services in containers, scheduled by an orchestrator (Kubernetes) | deployment, placement, restart |
-| service discovery and fault tolerance | registry and client libraries (Netflix Eureka, Hystrix) | finding instances, timeouts, circuit breaking |
+| service discovery and **fault tolerance** | registry and client libraries (Netflix Eureka, Hystrix) | finding instances, timeouts, circuit breaking |
 | sidecar and service mesh | a proxy next to every service (Envoy, Istio, Linkerd) | traffic management, encryption, retries, telemetry |
 | serverless | functions as a service | servers, scaling, even the long-running process |
 
@@ -270,7 +270,7 @@ Performance can be seen from three perspectives, each with its own measures and 
 | Perspective | What is measured | Means of optimization |
 |---|---|---|
 | user | response speed felt in the browser: communication time between the user's computer and the server, server processing time, time for the browser to construct requests and render responses | front-end architecture, page structure, concurrent and asynchronous loading, browser caching, CDNs, reverse proxies |
-| developer | the application and its subsystems: latency, throughput, concurrency, stability | caching, clusters, asynchronous message queues, code optimization |
+| developer | the application and its subsystems: latency, **throughput**, concurrency, stability | caching, clusters, asynchronous message queues, code optimization |
 | operator | infrastructure performance and utilization: network bandwidth, server hardware, data center network, resource utilization | backbone networks, customized servers, virtualization |
 
 Designing for performance requires a feeling for the cost of basic operations. Typical orders of magnitude on current hardware (after Jeff Dean's well-known table, updated):
@@ -290,7 +290,7 @@ Designing for performance requires a feeling for the cost of basic operations. T
 
 **Definition 6.5.1 (Throughput and Concurrency)** The **throughput** of a system is the number of requests it processes per unit of time, measured as transactions per second (TPS), HTTP requests per second, queries per second (QPS), pages per second or business transactions per hour. Its **concurrency** is the number of requests it is handling at the same time.
 
-Concurrency must be distinguished from the number of users: registered users far outnumber online users, who far outnumber users with a request in progress at a given moment. Throughput, concurrency and response time are linked by Little's law: in a stable system, the average number of requests in the system equals the arrival rate times the average time a request spends in the system, $L = \lambda W$. A service handling $\lambda = 2000$ requests per second with an average response time of $W = 50$ ms has on average $L = 2000 \times 0.05 = 100$ requests in progress, so it needs at least 100 concurrent workers (threads, connections, coroutines); if the response time doubles under load, so does the required concurrency. Besides these measures, operators watch *performance counters* of servers and operating systems: the system load (the number of processes running or waiting to run on the CPU), the numbers of objects and threads, memory and CPU usage, and disk and network I/O.
+Concurrency must be distinguished from the number of users: registered users far outnumber online users, who far outnumber users with a request in progress at a given moment. Throughput, concurrency and response time are linked by **Little's law**: in a stable system, the average number of requests in the system equals the arrival rate times the average time a request spends in the system, $L = \lambda W$. A service handling $\lambda = 2000$ requests per second with an average response time of $W = 50$ ms has on average $L = 2000 \times 0.05 = 100$ requests in progress, so it needs at least 100 concurrent workers (threads, connections, coroutines); if the response time doubles under load, so does the required concurrency. Besides these measures, operators watch *performance counters* of servers and operating systems: the system load (the number of processes running or waiting to run on the CPU), the numbers of objects and threads, memory and CPU usage, and disk and network I/O.
 
 ### 6.5.2. Read/Write Splitting
 
@@ -316,7 +316,7 @@ The routing of statements to nodes can be implemented in two ways:
 
 ### 6.5.3. Sharding
 
-Read/write splitting relieves reads, but all writes and all data still go to one primary. The next step divides the data itself. Dividing a database by business module is called vertical partitioning of the database: users, products and orders go to separate database servers. As a rough guide, one database server supports a business with about a hundred thousand users; splitting by business supports millions or tens of millions. The cost is that operations become more complex (no joins or transactions across databases), the amount of code grows, and so does the cost.
+Read/write splitting relieves reads, but all writes and all data still go to one primary. The next step divides the data itself. Dividing a database by business module is called vertical partitioning of the database: users, products and orders go to separate database servers. As a rough guide, one database server supports a business with about a hundred thousand users; splitting by business supports millions or tens of millions. The cost is that operations become more complex (no joins or **transactions** across databases), the amount of code grows, and so does the cost.
 
 Even the data of one business can exceed a single server, as the user table of a site with hundreds of millions of users does. Tables are then split themselves:
 
@@ -327,15 +327,15 @@ Even the data of one business can exceed a single server, as the user table of a
 
 | Routing | Rule | Advantage | Disadvantage |
 |---|---|---|---|
-| range | consecutive ranges of the key (user IDs 1–10 million on shard 1, …) | easy to add shards as data grows; range queries stay on few shards | uneven load: the newest range is often the busiest |
+| range | consecutive ranges of the key (user IDs 1–10 million on **shard** 1, …) | easy to add shards as data grows; range queries stay on few shards | uneven load: the newest range is often the busiest |
 | hash | $\text{shard} = h(\text{key}) \bmod n$ with a **hash function** $h$ | even distribution | changing $n$ moves most rows (consistent hashing reduces this); range queries touch every shard |
 | configuration (directory) | a lookup table maps each key or key range to a shard | full flexibility, shards can be rebalanced individually | the lookup table is an extra component and a potential bottleneck |
 
-Sharding brings the problems of a distributed database into the application: joins and aggregations across shards, transactions spanning shards, globally unique IDs (the auto-increment counter of one server no longer suffices, hence schemes such as Snowflake IDs or UUIDs), and re-sharding when the data grows. This is why distributed SQL databases (below) that shard automatically have become attractive.
+Sharding brings the problems of a distributed database into the application: joins and aggregations across shards, transactions spanning shards, globally unique IDs (the auto-increment counter of one server no longer suffices, hence schemes such as Snowflake IDs or UUIDs), and re-sharding when the data grows. This is why distributed **SQL** databases (below) that shard automatically have become attractive.
 
 ### 6.5.4. NoSQL and NewSQL
 
-Relational databases are not the right tool for every kind of data. The non-relational systems known as NoSQL ("not only SQL") each address one limitation of the relational model; they complement relational databases rather than replace them:
+Relational databases are not the right tool for every kind of data. The non-relational systems known as **NoSQL** ("not only SQL") each address one limitation of the **relational model**; they complement relational databases rather than replace them:
 
 | Kind | Problem of relational databases it addresses | Representatives |
 |---|---|---|
@@ -345,7 +345,7 @@ Relational databases are not the right tool for every kind of data. The non-rela
 | full-text search engine | the poor performance of full-text search | Elasticsearch, OpenSearch |
 | graph database | the performance of queries over graphs (paths, neighborhoods) | Neo4j |
 
-Many enterprise systems that handle high-value data, such as financial and order-processing systems, are too large for a conventional single-server relational database, but have transactional and consistency requirements that NoSQL systems cannot meet. NewSQL, or distributed SQL, systems seek to provide the scalability of NoSQL systems for online transaction processing while keeping the ACID guarantees of a traditional database: Google Spanner, CockroachDB, TiDB and OceanBase shard and replicate data automatically and run distributed transactions.
+Many enterprise systems that handle high-value data, such as financial and order-processing systems, are too large for a conventional single-server relational database, but have transactional and consistency requirements that NoSQL systems cannot meet. **NewSQL**, or distributed SQL, systems seek to provide the scalability of NoSQL systems for **online transaction processing** while keeping the ACID guarantees of a traditional database: Google Spanner, CockroachDB, TiDB and OceanBase shard and replicate data automatically and run distributed transactions.
 
 ### 6.5.5. Caching
 
@@ -421,7 +421,7 @@ Asynchronous processing also *shaves peaks*: the burst of transactions produced 
 
 ## 6.6. Patterns for High Availability
 
-Failures are inevitable in a system of thousands of machines, so high availability must be designed in. The basic method is redundancy ([4.14.5](/4.14.5)); in a distributed system, redundancy of data raises the question of consistency.
+**Failures** are inevitable in a system of thousands of machines, so high **availability** must be designed in. The basic method is redundancy ([4.14.5](/4.14.5)); in a distributed system, redundancy of data raises the question of consistency.
 
 ### 6.6.1. The CAP Theorem
 
@@ -479,7 +479,7 @@ The highest level of availability is *active–active across sites*: the busines
 
 **Definition 6.7.1 (Scalability)** **Scalability** is the ability of a system to accommodate growth, expected or not, in load (more users, more data, more requests) while continuing to deliver the expected quality of service, at a cost that grows roughly in proportion to the load. *Vertical scaling* (scaling up) uses bigger machines; *horizontal scaling* (scaling out) adds more machines.
 
-Scalability is distinct from performance: a fast system may collapse under ten times the load, and a scalable system may be slow for a single user. Two related properties are *openness* (new components can be integrated with existing ones) and support for *heterogeneity* (of hardware, operating systems, networks and programming languages). A second meaning of the same word, *extensibility*, is the ability to give a system new functions and features by modification and extension, to meet new requirements or follow technology trends.
+Scalability is distinct from **performance**: a fast system may collapse under ten times the load, and a scalable system may be slow for a single user. Two related properties are *openness* (new components can be integrated with existing ones) and support for *heterogeneity* (of hardware, operating systems, networks and programming languages). A second meaning of the same word, *extensibility*, is the ability to give a system new functions and features by modification and extension, to meet new requirements or follow technology trends.
 
 The basic idea behind all designs for extensibility can be summed up in one word: split. A large, unified system is split into smaller parts, so that an extension changes only one part instead of the whole system, which reduces the scope and risk of each change. Three ways of splitting differ in what is split, from large to small: process > service > function.
 
@@ -540,7 +540,7 @@ The same history yields lessons about values and misconceptions. The core value 
 
 ### 6.8.2. A Real-Time Data Warehouse
 
-The music streaming service NetEase Cloud Music built a real-time data warehouse whose goal is to collect logs as they are produced, run common extract-transform-load (ETL) processing, global aggregation and window aggregation in real time, and store the results. Stream platforms of this kind share a general architecture of three parts, a pipes-and-filters system at data-center scale ([4.14.5](/4.14.5)):
+The music streaming service NetEase Cloud Music built a real-time **data warehouse** whose goal is to collect logs as they are produced, run common extract-transform-load (ETL) processing, global aggregation and window aggregation in real time, and store the results. Stream platforms of this kind share a general architecture of three parts, a **pipes-and-filters** system at data-center scale ([4.14.5](/4.14.5)):
 
 ```mermaid
 flowchart LR
@@ -550,7 +550,7 @@ flowchart LR
   S --> Q[Dashboards, queries, recommendations]
 ```
 
-Logs from clients and web servers are collected into the message queue; the computation engine processes the data in the queue in real time; and the results are stored in a real-time storage system by appending or updating. The requirements on each part follow from the quality attributes. The message queue (typically Apache Kafka) needs high throughput with low latency (hundreds of thousands of messages per second with millisecond latency), high concurrency (thousands of clients reading and writing simultaneously), fault tolerance (replicated data, so that losing a node loses nothing) and scalability (adding nodes without affecting the running business). The computation engine (typically Apache Flink) needs high throughput and low latency, flexible streaming windows, exactly-once semantics for stateful computation, lightweight fault tolerance (periodic checkpoints of the state), support for event time and out-of-order events, and one engine for both stream and batch processing.
+Logs from clients and web servers are collected into the message queue; the computation engine processes the data in the queue in real time; and the results are stored in a real-time storage system by appending or updating. The requirements on each part follow from the **quality attributes**. The message queue (typically Apache Kafka) needs high throughput with low latency (hundreds of thousands of messages per second with millisecond latency), high concurrency (thousands of clients reading and writing simultaneously), fault tolerance (replicated data, so that losing a node loses nothing) and scalability (adding nodes without affecting the running business). The computation engine (typically Apache Flink) needs high throughput and low latency, flexible streaming windows, exactly-once semantics for stateful computation, lightweight fault tolerance (periodic checkpoints of the state), support for event time and out-of-order events, and one engine for both stream and batch processing.
 
 ### 6.8.3. Video Streaming
 
@@ -591,7 +591,7 @@ Netflix shows how the pieces fit together. Its control plane (registration, acco
 
 ## 6.9. Internet Services and AI Agents
 
-The patterns of this chapter carry knowledge that is not visible in any single file: why reads of an account go to the primary, why a consumer must be idempotent, which data may be stale for how long. A **coding agent** ([4.2.14](/4.2.14)) that changes one service sees only that service, and the typical failures it introduces are distributed-systems failures: a new call to another service without a timeout, a retry loop that turns a slow dependency into an outage, a cache that is never invalidated, a database query that bypasses the read/write routing, an API change that breaks clients. Three practices make agent-made changes safe in such systems. Interfaces are written down as machine-checkable contracts (OpenAPI documents, Protocol Buffers definitions) and checked for backward compatibility in continuous integration. Cross-cutting rules (every outbound call has a timeout, every queue consumer is idempotent, every new endpoint is authenticated) are stated in the project instructions and enforced by shared libraries, linters or a service mesh, rather than left to each change. And changes reach production gradually (canary releases, feature flags) with monitoring that can stop them ([4.14.13](/4.14.13)), because the effects of a change on a distributed system often appear only under real load. Agents are also useful on the operational side, for example for summarizing traces and logs during an incident, but decisions about consistency, availability and cost remain architectural decisions made by people.
+The patterns of this chapter carry knowledge that is not visible in any single file: why reads of an account go to the primary, why a consumer must be idempotent, which data may be stale for how long. A **coding agent** ([4.2.14](/4.2.14)) that changes one service sees only that service, and the typical failures it introduces are distributed-systems failures: a new call to another service without a timeout, a retry loop that turns a slow dependency into an outage, a cache that is never invalidated, a database query that bypasses the read/write routing, an API change that breaks clients. Three practices make agent-made changes safe in such systems. Interfaces are written down as machine-checkable contracts (OpenAPI documents, Protocol Buffers definitions) and checked for backward compatibility in **continuous integration**. Cross-cutting rules (every outbound call has a timeout, every queue consumer is idempotent, every new endpoint is authenticated) are stated in the project instructions and enforced by shared libraries, linters or a service mesh, rather than left to each change. And changes reach production gradually (canary releases, feature flags) with monitoring that can stop them ([4.14.13](/4.14.13)), because the effects of a change on a distributed system often appear only under real load. Agents are also useful on the operational side, for example for summarizing traces and logs during an incident, but decisions about consistency, availability and cost remain architectural decisions made by people.
 
 ## Summary
 

@@ -3,7 +3,7 @@ title: Operations and Site Reliability Engineering
 description: "Running software in production: why operations dominate the life of a service, the costs of the sysadmin model, and site reliability engineering (SRE) as Google's answer; embracing risk, service level indicators, objectives and agreements, error budgets and burn-rate alerts; eliminating toil; monitoring with black-box and white-box signals and the four golden signals; time-series alerting from Borgmon to Prometheus, with a tested alerting rule; on-call, troubleshooting, incident management and blameless postmortems; progressive rollouts of containerized services; and operations when AI agents make the changes."
 ---
 
-A service spends most of its life in production. Requirements, design, implementation and testing ([4.14.4](/4.14.4)–[4.14.12](/4.14.12)) produce a system that works on the day of its release; operations keep it working for years while its code, its configuration, its load and the machines under it all change. This chapter treats operations as an engineering discipline. It follows the approach of *site reliability engineering* (SRE) as described by Google's engineers in Beyer et al., *Site Reliability Engineering: How Google Runs Production Systems* (2016), the main reference of the chapter. The first part explains why operations need engineering at all and what SRE is; the second gives the principles: embracing risk, service level objectives and error budgets, eliminating toil, and monitoring; the third covers practice: alerting, on-call, troubleshooting, incident management and postmortems, and the safe release of changes. **DevOps** and the practices of **continuous integration**, **continuous delivery** and **continuous deployment**, introduced in [4.14.2](/4.14.2#sec-2.4.2) and [4.14.3](/4.14.3#sec-3.8), are the background: they bring changes to production quickly, and this chapter is about keeping production healthy while they do. Containers ([4.11.9](/4.11.9)) and clusters ([4.11.11](/4.11.11)) are the platform on which the services run.
+A service spends most of its life in production. Requirements, design, implementation and testing ([4.14.4](/4.14.4)–[4.14.12](/4.14.12)) produce a system that works on the day of its release; operations keep it working for years while its code, its configuration, its load and the machines under it all change. This chapter treats operations as an engineering discipline. It follows the approach of *site reliability engineering* (SRE) as described by Google's engineers in Beyer et al., *Site Reliability Engineering: How Google Runs Production Systems* (2016), the main reference of the chapter. The first part explains why operations need engineering at all and what SRE is; the second gives the principles: embracing risk, service level objectives and error budgets, eliminating toil, and monitoring; the third covers practice: alerting, on-call, troubleshooting, incident management and postmortems, and the safe release of changes. **DevOps** and the practices of **continuous integration**, **continuous delivery** and **continuous deployment**, introduced in [4.14.2](/4.14.2#sec-2.4.2) and [4.14.3](/4.14.3#sec-3.8), are the background: they bring changes to production quickly, and this chapter is about keeping production healthy while they do. **Containers** ([4.11.9](/4.11.9)) and clusters ([4.11.11](/4.11.11)) are the platform on which the services run.
 
 ## 13.1. Software Operations and SRE
 
@@ -39,7 +39,7 @@ In the words of Ben Treynor Sloss, who founded Google's SRE team in 2003, SRE "i
 
 SREs run *services*: sets of related systems operated for users, internal or external, and they are ultimately responsible for the health of these services. This involves developing monitoring, planning capacity, responding to incidents, making sure that the root causes of outages are fixed, and more.
 
-SRE and **DevOps** ([4.14.2](/4.14.2#sec-2.4.2)) arose independently and share their main ideas: shared ownership of production between developers and operators, automation, small and frequent changes, and measurement. DevOps is a broad set of principles and cultural values; SRE is one concrete way of implementing them, with specific practices (service level objectives, error budgets, the cap on toil, blameless postmortems). Google's *Site Reliability Workbook* (2018) summarizes the relation with a programmer's joke: "class SRE implements interface DevOps".
+SRE and **DevOps** ([4.14.2](/4.14.2#sec-2.4.2)) arose independently and share their main ideas: shared ownership of production between developers and operators, automation, small and frequent changes, and measurement. **DevOps** is a broad set of principles and cultural values; SRE is one concrete way of implementing them, with specific practices (service level objectives, error budgets, the cap on toil, blameless postmortems). Google's *Site Reliability Workbook* (2018) summarizes the relation with a programmer's joke: "class SRE implements interface DevOps".
 
 ### 13.1.4. Tenets of SRE
 
@@ -114,7 +114,7 @@ Good SLOs follow a few rules. Start from what users need, not from what is easy 
 
 **Definition 13.2.4 (Error Budget)** The **error budget** of a service for a period is the amount of unreliability its SLO permits: $1 - \text{SLO}$, expressed as a number of failed requests (or minutes of downtime) over the SLO period. It is spent by outages, by failed changes and by background errors; while budget remains, the team may release changes; when it is exhausted, releases stop except for reliability fixes until the service is back within its SLO.
 
-The error budget turns the conflict of §13.1.2 into a shared, objective number. Product developers and SREs no longer argue about whether a release is "too risky": the SLO is agreed with the product owners, the monitoring system measures how much budget is left, and the remaining budget decides. Both sides gain an incentive to balance speed and stability: a team that wants to release often has a reason to invest in testing and gradual rollouts, which make releases cheaper in budget. Error budgets also defuse discussions about outages with stakeholders, since a planned amount of unreliability is not a failure but the price of innovation.
+The error budget turns the conflict of §13.1.2 into a shared, objective number. Product developers and SREs no longer argue about whether a release is "too risky": the SLO is agreed with the **product owners**, the monitoring system measures how much budget is left, and the remaining budget decides. Both sides gain an incentive to balance speed and stability: a team that wants to release often has a reason to invest in testing and gradual rollouts, which make releases cheaper in budget. Error budgets also defuse discussions about outages with stakeholders, since a planned amount of unreliability is not a failure but the price of innovation.
 
 **Example 13.2.2** A web service handles on average 200 requests per second and has an SLO of 99.9% successful requests over 30 days. In one window it has a background error rate of 0.05% and one incident in which 25% of requests failed for 30 minutes:
 
@@ -164,7 +164,7 @@ Typical SRE activities fall into four categories:
 
 | Category | Examples |
 |---|---|
-| software engineering | writing or modifying code, with its design and documentation: automation scripts, tools, frameworks, adding scalability features to a service |
+| software engineering | writing or modifying code, with its design and documentation: automation scripts, tools, frameworks, adding **scalability** features to a service |
 | systems engineering | configuring production systems and changing their configurations, documenting them, with a lasting effect: monitoring setup, load-balancer configuration, server tuning |
 | toil | work directly tied to running a service that is repetitive and manual: handling routine requests, manual deployments, responding to non-actionable alerts |
 | overhead | administrative work not tied directly to running a service: meetings, hiring, training, performance reviews |
@@ -184,7 +184,7 @@ Further terms:
 - *Dashboard*: a (usually web) application that summarizes a view of a service's core metrics.
 - *Alert*: a notification intended to be read by a human and pushed to a system such as a ticket queue, e-mail or a pager. A notification that wakes someone is a *page*.
 - *Root cause*: a defect in a software or human system that, if repaired, gives confidence that the event will not happen again in the same way. An incident may have several root causes, all of which should be fixed.
-- *Node* (or machine): a single instance of a running kernel, on a physical server, a virtual machine or a container ([4.11.9](/4.11.9#def-9.4.1)).
+- *Node* (or machine): a single instance of a running kernel, on a physical server, a **virtual machine** or a **container** ([4.11.9](/4.11.9#def-9.4.1)).
 
 ### 13.4.2. Why Monitor
 
@@ -194,7 +194,7 @@ Monitoring serves several purposes:
 - comparing over time or between experiment groups (is a query faster with the new version of a library? how much better is the cache hit rate with an extra node?);
 - alerting: something is broken, and somebody needs to fix it right now, or something might break soon, and somebody should look at it soon;
 - building dashboards that answer basic questions about the service;
-- ad hoc retrospective analysis, that is, debugging: latency just went up; what else happened at the same time?
+- ad hoc retrospective analysis, that is, **debugging**: latency just went up; what else happened at the same time?
 
 Alerting must be done carefully. Effective alerting systems have good signal and very low noise. Paging a human is an expensive use of an employee's time, and pages that come too often, or for things that need no action, cause *pager fatigue*: people start to ignore alerts, and real outages last longer. Dashboards should not require someone to stare at a screen to find problems; that is what alerts are for.
 
@@ -398,7 +398,7 @@ $ promtool test rules slo-rules-test.yml
 
 Alerts are sent to a central Alertmanager (Borgmon's was called the same), which routes each notification to the right recipients (the on-call pager for `severity: page`, a ticket queue for lower severities), groups related alerts into one notification, silences alerts during planned maintenance, and *inhibits* dependent alerts: when a whole data center is down, the hundreds of per-service alerts it causes are suppressed in favor of the one that names the cause.
 
-For scale, monitoring is *sharded* hierarchically. Each data center runs one monitoring server per shard of targets and a data-center-level server that aggregates them; a global level aggregates the data centers. Each level keeps the detail its users need: the global view shows service-level rates, the cluster level keeps per-task series for debugging.
+For scale, monitoring is *sharded* hierarchically. Each data center runs one monitoring server per **shard** of targets and a data-center-level server that aggregates them; a global level aggregates the data centers. Each level keeps the detail its users need: the global view shows service-level rates, the cluster level keeps per-task series for debugging.
 
 ### 13.5.4. Logs, Traces and Observability
 
@@ -467,7 +467,7 @@ To *examine* the system, the troubleshooter looks at each component's behavior:
 - change logs: deployments, configuration changes, flag flips;
 - workflow logs of automation that acts on the system.
 
-In a typical enterprise setup these data sit in layers: business metrics (transaction volume, response time, number of failed transactions) at the top; middleware and module metrics (database reads and writes, response times, custom checks) in the middle; server and network metrics (CPU, memory, disk, network) at the bottom; and the change information (configuration changes, new releases) across all of them. Sources include agents such as Zabbix, packet capture, instrumentation in the application, web server logs (Apache, Nginx) and syslog.
+In a typical enterprise setup these data sit in layers: business metrics (transaction volume, response time, number of failed transactions) at the top; **middleware** and module metrics (database reads and writes, response times, custom checks) in the middle; server and network metrics (CPU, memory, disk, network) at the bottom; and the change information (configuration changes, new releases) across all of them. Sources include agents such as Zabbix, packet capture, instrumentation in the application, web server logs (Apache, Nginx) and syslog.
 
 To *diagnose*, several techniques narrow the search:
 
@@ -479,9 +479,9 @@ To *diagnose*, several techniques narrow the search:
 
 | Step | Question and answer |
 |---|---|
-| symptom | a Spanner cluster has high latency, and RPCs to its servers time out |
+| symptom | a Spanner cluster has high latency, and **RPCs** to its servers time out |
 | why? | the Spanner server tasks use all their CPU time and cannot make progress on all client requests |
-| where in the server is the CPU time used? | profiling shows it is sorting entries in logs checkpointed to disk |
+| where in the server is the CPU time used? | **profiling** shows it is sorting entries in logs checkpointed to disk |
 | where in the log-sorting code? | when evaluating a regular expression against paths to log files |
 | solutions | rewrite the regular expression to avoid backtracking; look for similar patterns in the code base; consider RE2, which does not backtrack and guarantees running time linear in the input size |
 
@@ -602,7 +602,7 @@ A postmortem culture is built deliberately. Practices include a "postmortem of t
 
 ### 13.10.1. Progressive Rollouts
 
-Since roughly 70% of outages are due to changes in a live system (§13.1.4), the safest change is one that reaches users gradually, is watched automatically, and can be undone in seconds. Continuous delivery and deployment ([4.14.3](/4.14.3#sec-3.8)) make changes small and frequent; the techniques of this section make each one safe to release.
+Since roughly 70% of outages are due to changes in a live system (§13.1.4), the safest change is one that reaches users gradually, is watched automatically, and can be undone in seconds. **Continuous delivery** and deployment ([4.14.3](/4.14.3#sec-3.8)) make changes small and frequent; the techniques of this section make each one safe to release.
 
 **Definition 13.10.1 (Progressive Rollout)** A **progressive rollout** releases a change to production in stages, to an increasing fraction of servers or users, with a check of the service's health (its SLIs) between stages, and stops and rolls back automatically when the check fails.
 
@@ -619,7 +619,7 @@ A canary is a small experiment: a change that breaks 1% of instances for ten min
 
 ### 13.10.2. Containers and Orchestration
 
-Modern services are packaged as container images ([4.11.9](/4.11.9#def-9.4.4)) and run as containers on a **computing cluster** ([4.11.11](/4.11.11)) managed by an orchestrator, almost always Kubernetes, an open-source system designed by Google engineers on the experience of Borg. An image built once in the CI pipeline is the same artifact in testing, staging and production, which removes a whole class of "works on my machine" failures; the orchestrator places containers on nodes, restarts failed ones, and carries out rollouts. In contrast to the batch jobs of an HPC cluster ([4.11.11](/4.11.11)), which run to completion, a service runs indefinitely as a set of identical replicas behind a load balancer.
+Modern services are packaged as **container images** ([4.11.9](/4.11.9#def-9.4.4)) and run as containers on a **computing cluster** ([4.11.11](/4.11.11)) managed by an orchestrator, almost always Kubernetes, an open-source system designed by Google engineers on the experience of Borg. An image built once in the **CI** pipeline is the same artifact in testing, staging and production, which removes a whole class of "works on my machine" failures; the orchestrator places containers on nodes, restarts failed ones, and carries out rollouts. In contrast to the batch jobs of an HPC cluster ([4.11.11](/4.11.11)), which run to completion, a service runs indefinitely as a set of identical replicas behind a load balancer.
 
 A Kubernetes *Deployment* declares the desired state: which image, how many replicas, and how to replace them. The following manifest (written after the Kubernetes documentation; not run here) declares a rolling update that adds at most one new pod at a time and never reduces the number of ready pods; a pod receives traffic only after its readiness probe succeeds:
 
@@ -663,7 +663,7 @@ When **coding agents** ([4.2.14](/4.2.14)) write much of the code, the rate of c
 ## Summary
 
 - Most of a service's life and cost come after its release. The sysadmin model scales linearly and sets developers (who want change) against operators (who want stability); most outages are caused by changes.
-- SRE has software engineers run services and automate operations, with at most 50% of their time on ops work; it is one concrete implementation of DevOps.
+- SRE has software engineers run services and automate operations, with at most 50% of their time on ops work; it is one concrete implementation of **DevOps**.
 - 100% is the wrong reliability target. SLIs measure the service, SLOs set targets for them, SLAs attach consequences. The error budget $1 - \text{SLO}$ decides how fast changes may be released; burn-rate alerts page when it is spent too fast.
 - Toil is manual, repetitive, automatable, tactical work without enduring value that scales with the service; SRE keeps it below half of each engineer's time.
 - Monitoring distinguishes symptoms from causes and black-box from white-box signals; the four golden signals are latency, traffic, errors and saturation; percentiles, not means, describe latency. Every page must be urgent, actionable and require intelligence.

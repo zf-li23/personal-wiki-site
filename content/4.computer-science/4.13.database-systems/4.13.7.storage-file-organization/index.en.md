@@ -3,15 +3,15 @@ title: Storage and File Organization
 description: "How a DBMS stores relations on disk: the storage hierarchy and the I/O cost model; pages and the buffer pool (pinning, dirty pages, LRU and clock-sweep replacement, scan rings, why not mmap); fixed- and variable-length records, the PostgreSQL tuple layout and TOAST; slotted pages and record identifiers; heap, sequential, clustered, hashed and partitioned file organizations with their costs; row stores, column stores, PAX, compression and Parquet; the system catalog."
 ---
 
-The chapters so far treated a relation as a mathematical set of tuples and SQL as a language for describing the tuples we want. From this chapter on we open the box and ask how a database management system actually keeps those tuples, finds them and changes them safely. The first question is physical: a table of a hundred million rows does not fit in memory, must survive a power failure and is read by queries that touch either one row or all of them. The answer is a layered design. At the bottom, files on a storage device are divided into fixed-size pages; a buffer pool keeps the pages currently in use in memory; inside a page, records are laid out so that they can grow, shrink and move without breaking the references to them; and a file organization decides which records go into which page. The same ideas appear one level lower in the operating system ([4.11.4](/4.11.4) for paging and page replacement, [4.11.7](/4.11.7) for file systems, [4.11.8](/4.11.8) for devices), but a DBMS knows far more about its access patterns than an operating system can, and it uses that knowledge. Indexes, which are additional structures for finding records quickly, are the subject of [4.13.8](/4.13.8); the cost model introduced here is the basis of query optimization in [4.13.9](/4.13.9), and the rules for writing dirty pages back to disk are completed by logging and recovery in [4.13.10](/4.13.10).
+The chapters so far treated a **relation** as a mathematical set of **tuples** and **SQL** as a language for describing the tuples we want. From this chapter on we open the box and ask how a database management system actually keeps those tuples, finds them and changes them safely. The first question is physical: a table of a hundred million rows does not fit in memory, must survive a power failure and is read by queries that touch either one row or all of them. The answer is a layered design. At the bottom, files on a storage device are divided into fixed-size pages; a buffer pool keeps the pages currently in use in memory; inside a page, records are laid out so that they can grow, shrink and move without breaking the references to them; and a file organization decides which records go into which page. The same ideas appear one level lower in the operating system ([4.11.4](/4.11.4) for paging and page replacement, [4.11.7](/4.11.7) for file systems, [4.11.8](/4.11.8) for devices), but a DBMS knows far more about its access patterns than an operating system can, and it uses that knowledge. Indexes, which are additional structures for finding records quickly, are the subject of [4.13.8](/4.13.8); the cost model introduced here is the basis of query optimization in [4.13.9](/4.13.9), and the rules for writing dirty pages back to disk are completed by logging and recovery in [4.13.10](/4.13.10).
 
-The running example is the gene-expression database of [4.13.3](/4.13.3#sec-3.2.3): tables `gene`, `sample` and `measurement(sample_id, gene_id, tpm)` among others. For measurements of storage we use a synthetic version of the same schema with 5,000 genes and 100 samples, that is, 500,000 rows in `measurement`.
+The running example is the gene-expression **database** of [4.13.3](/4.13.3#sec-3.2.3): tables `gene`, `sample` and `measurement(sample_id, gene_id, tpm)` among others. For measurements of storage we use a synthetic version of the same **schema** with 5,000 genes and 100 samples, that is, 500,000 rows in `measurement`.
 
 ## 7.1. The Storage Hierarchy
 
 ### 7.1.1. Devices and Their Costs
 
-A database lives on several kinds of storage at once. The table gives typical orders of magnitude for current hardware; the exact numbers change every few years, the ratios much more slowly.
+A **database** lives on several kinds of storage at once. The table gives typical orders of magnitude for current hardware; the exact numbers change every few years, the ratios much more slowly.
 
 | Storage | Random access latency | Sequential bandwidth | Persistent | Role in a DBMS |
 |---|---|---|---|---|
@@ -21,13 +21,13 @@ A database lives on several kinds of storage at once. The table gives typical or
 | Hard disk drive | 5–10 ms | 150–300 MB/s | yes | bulk and archival data, backups |
 | Cloud object storage (e.g. Amazon S3) | 10–100 ms to first byte | high in aggregate | yes | data lakes, cloud warehouses |
 
-Two facts dominate the design of storage engines. First, persistent storage is between two and five orders of magnitude slower than memory, so the number of page transfers between disk and memory, not the number of CPU instructions, usually determines the running time of a query on data that is not cached. Second, sequential access is much cheaper than random access. On a hard disk a random read pays a **seek time** and a **rotational latency** of several milliseconds, after which the next megabyte streams in about as fast; on a flash SSD the gap is smaller but still present, because the **flash translation layer** and the device's internal parallelism favour large, aligned requests ([4.11.8](/4.11.8#sec-8.3)). Database systems therefore prefer algorithms that read and write long runs of consecutive pages, and they use **RAID** or replication across machines for capacity and availability.
+Two facts dominate the design of storage engines. First, persistent storage is between two and five orders of magnitude slower than memory, so the number of page transfers between disk and memory, not the number of CPU instructions, usually determines the running time of a query on data that is not cached. Second, sequential access is much cheaper than **random access**. On a hard disk a random read pays a **seek time** and a **rotational latency** of several milliseconds, after which the next megabyte streams in about as fast; on a flash SSD the gap is smaller but still present, because the **flash translation layer** and the device's internal parallelism favour large, aligned requests ([4.11.8](/4.11.8#sec-8.3)). **Database systems** therefore prefer algorithms that read and write long runs of consecutive pages, and they use **RAID** or replication across machines for capacity and availability.
 
 ### 7.1.2. Pages and the I/O Cost Model
 
 **Definition 7.1.1 (Page)** A **page** (also called a **block**) is the unit of data transfer between persistent storage and memory in a DBMS: a contiguous, fixed-size piece of a database file, identified by a **page identifier** such as (file number, page number). All reads and writes of the storage manager are reads and writes of whole pages.
 
-Typical page sizes are 8 KiB in PostgreSQL, 16 KiB in MySQL's InnoDB engine and 4 KiB by default in SQLite (configurable from 512 bytes to 64 KiB). A database page usually consists of one or several file-system blocks and is unrelated to the virtual-memory page of [4.11.4](/4.11.4), although both are commonly 4 KiB or a multiple of it.
+Typical **page** sizes are 8 KiB in PostgreSQL, 16 KiB in MySQL's InnoDB engine and 4 KiB by default in SQLite (configurable from 512 bytes to 64 KiB). A database page usually consists of one or several file-system blocks and is unrelated to the virtual-memory page of [4.11.4](/4.11.4), although both are commonly 4 KiB or a multiple of it.
 
 Because transfers dominate, the cost model of the following chapters counts pages.
 
@@ -41,7 +41,7 @@ For a hard disk with $t_S = 4\,\mathrm{ms}$ and a bandwidth of $200\,\mathrm{MB/
 
 ### 7.2.1. Structure and Interface
 
-A DBMS does not read a page from disk every time an operator needs it. It keeps recently used pages in a region of main memory that it manages itself.
+A **DBMS** does not read a **page** from disk every time an operator needs it. It keeps recently used pages in a region of main memory that it manages itself.
 
 **Definition 7.2.1 (Buffer Pool)** The **buffer pool** is an array of page-sized memory slots called **frames**, managed by the **buffer manager**. For each frame the buffer manager records which page it holds, a **pin count** (the number of current users of the page; a pinned page may not be evicted), a **dirty flag** (whether the page was modified since it was read), and the bookkeeping of the replacement policy. A hash table, the **buffer table**, maps page identifiers to frames.
 
@@ -50,19 +50,19 @@ The interface is small. An operator asks for a page with `pin(page_id)` and rece
 **Algorithm 7.2.1 (Fetching a Page)** To pin page $p$:
 
 1. Look up $p$ in the buffer table. If it is present, increment the pin count of its frame and return the frame (a *hit*).
-2. Otherwise (a *miss*), choose a victim frame with pin count $0$ according to the replacement policy. If no such frame exists, wait or report an error.
-3. If the victim is dirty, write its page back to disk first. In a system with write-ahead logging the log records describing the changes to that page must reach stable storage before the page itself ([4.13.10](/4.13.10)).
+2. Otherwise (a *miss*), choose a victim frame with pin count $0$ according to the **replacement policy**. If no such frame exists, wait or report an error.
+3. If the victim is dirty, write its page back to disk first. In a system with **write-ahead logging** the log records describing the changes to that page must reach stable storage before the page itself ([4.13.10](/4.13.10)).
 4. Read $p$ into the frame, update the buffer table, set the pin count to $1$ and clear the dirty flag.
 
-In PostgreSQL the buffer pool is the shared memory area `shared_buffers` (128 MB by default; production servers commonly give it about a quarter of RAM), shared by all server processes; in InnoDB it is the *buffer pool* sized by `innodb_buffer_pool_size`; in SQLite each connection has its own page cache. A modified page is normally written back long after it was changed, by a background writer or at a checkpoint, so that many changes to the same page cost one write. Since PostgreSQL 18, reads can also be issued asynchronously (setting `io_method`: `worker` by default, `io_uring` on Linux builds that support it, or `sync`), so that a sequential scan or `VACUUM` keeps several page reads in flight instead of waiting for each one.
+In PostgreSQL the **buffer pool** is the shared memory area `shared_buffers` (128 MB by default; production servers commonly give it about a quarter of RAM), shared by all server **processes**; in InnoDB it is the *buffer pool* sized by `innodb_buffer_pool_size`; in SQLite each connection has its own **page cache**. A modified page is normally written back long after it was changed, by a background writer or at a checkpoint, so that many changes to the same page cost one write. Since PostgreSQL 18, reads can also be issued asynchronously (setting `io_method`: `worker` by default, `io_uring` on Linux builds that support it, or `sync`), so that a sequential scan or `VACUUM` keeps several page reads in flight instead of waiting for each one.
 
 ### 7.2.2. Replacement Policies
 
-When the buffer pool is full, the buffer manager must decide which unpinned page to evict. This is the **page replacement policy** problem of virtual memory ([4.11.4](/4.11.4#sec-4.6.2)) again, and the classical answers carry over: **least recently used** (LRU) evicts the page whose last use lies furthest in the past, and the **clock algorithm** approximates LRU cheaply with one reference bit per frame and a rotating hand. Two features of database workloads change the picture.
+When the buffer pool is full, the **buffer manager** must decide which unpinned page to evict. This is the **page replacement policy** problem of **virtual memory** ([4.11.4](/4.11.4#sec-4.6.2)) again, and the classical answers carry over: **least recently used** (LRU) evicts the page whose last use lies furthest in the past, and the **clock algorithm** approximates LRU cheaply with one reference bit per frame and a rotating hand. Two features of **database** workloads change the picture.
 
-The first is *sequential flooding*. A query that scans a large table touches each page once, never again. Under LRU, every page of the scan enters the pool as the most recently used page and pushes out pages that other queries use repeatedly, such as the root pages of indexes. Worse, if a table of $B + 1$ pages is scanned repeatedly with a pool of $B$ frames, LRU evicts exactly the page that will be needed next and every access misses, while a policy that evicts the most recently used page would hit on almost every access.
+The first is *sequential flooding*. A query that scans a large table touches each page once, never again. Under **LRU**, every page of the scan enters the pool as the most recently used page and pushes out pages that other queries use repeatedly, such as the root pages of indexes. Worse, if a table of $B + 1$ pages is scanned repeatedly with a pool of $B$ frames, LRU evicts exactly the page that will be needed next and every access misses, while a policy that evicts the most recently used page would hit on almost every access.
 
-The second is that the DBMS knows the access pattern in advance: the query plan says which pages will be scanned once, which index pages are hot and which pages a nested-loop join will reread. Real systems exploit this in several ways.
+The second is that the DBMS knows the access pattern in advance: the query plan says which pages will be scanned once, which index pages are hot and which pages a nested-loop **join** will reread. Real systems exploit this in several ways.
 
 | System | Policy |
 |---|---|
@@ -169,30 +169,30 @@ The best possible hit rate here is about 0.9, since the 10% of point accesses to
 
 ### 7.2.3. Why Not Let the Operating System Do It?
 
-The operating system already caches file pages in its **page cache** ([4.11.7](/4.11.7#sec-7.2.5)), and **memory mapping** a database file with `mmap` would let the kernel's virtual-memory system play the role of the buffer pool. Most database systems nevertheless manage their own buffers, for reasons that follow from the requirements of later chapters:
+The **operating system** already caches file pages in its **page cache** ([4.11.7](/4.11.7#sec-7.2.5)), and **memory mapping** a database file with `mmap` would let the kernel's virtual-memory system play the role of the buffer pool. Most **database systems** nevertheless manage their own buffers, for reasons that follow from the requirements of later chapters:
 
 - *Write ordering.* Recovery requires that a dirty page is not written before its log records ([4.13.10](/4.13.10)). With `mmap` the kernel may write a modified page back at any moment, and the DBMS cannot prevent it.
 - *Replacement and prefetching.* The kernel does not know that a page belongs to a one-time scan or to the root of an index; the DBMS does.
-- *Errors and stalls.* With `mmap`, an I/O error arrives as a signal and a page fault stalls the thread invisibly; with explicit reads the DBMS can schedule I/O asynchronously and handle errors as return values.
+- *Errors and stalls.* With `mmap`, an I/O error arrives as a signal and a **page fault** stalls the **thread** invisibly; with explicit reads the DBMS can schedule I/O asynchronously and handle errors as return values.
 - *Double buffering.* If the DBMS caches a page and the kernel caches the same page, memory is wasted. InnoDB avoids it with direct I/O (`O_DIRECT`); PostgreSQL traditionally relies on buffered I/O and accepts some double caching, sizing `shared_buffers` well below RAM so that the page cache holds the rest.
 
-A 2022 study by Crotty, Leis and Pavlo ("Are You Sure You Want to Use MMAP in Your Database Management System?") measured these problems in practice. Systems that use `mmap` successfully, such as LMDB and SQLite's optional memory-mapped I/O mode, are designs in which the write path is controlled separately (for instance by **copy-on-write**), or in which `mmap` is used only for reading.
+A 2022 study by Crotty, Leis and Pavlo ("Are You Sure You Want to Use MMAP in Your Database Management System?") measured these problems in practice. Systems that use `mmap` successfully, such as LMDB and SQLite's optional **memory-mapped I/O** mode, are designs in which the write path is controlled separately (for instance by **copy-on-write**), or in which `mmap` is used only for reading.
 
 ## 7.3. Record Formats
 
 ### 7.3.1. Fixed-Length Records
 
-A *record* is the stored representation of one tuple. If every attribute has a fixed size (integers, floating-point numbers, fixed-length character strings), every record of the relation has the same length $s$, and record $i$ of a page starts at byte $h + i\,s$, where $h$ is the size of the page header. Deletion leaves a hole. Moving the following records up costs work and changes their addresses; moving only the last record into the hole changes one address; the usual solution is to leave the hole and chain all free record positions into a *free list* whose head is stored in the page header, so that the next insertion reuses one of them.
+A *record* is the stored representation of one **tuple**. If every **attribute** has a fixed size (integers, floating-point numbers, fixed-length character strings), every record of the **relation** has the same length $s$, and record $i$ of a page starts at byte $h + i\,s$, where $h$ is the size of the page header. Deletion leaves a hole. Moving the following records up costs work and changes their addresses; moving only the last record into the hole changes one address; the usual solution is to leave the hole and chain all free record positions into a *free list* whose head is stored in the page header, so that the next insertion reuses one of them.
 
 ### 7.3.2. Variable-Length Records
 
 Strings of variable length, nullable attributes, arrays and JSON values make records variable in length. The standard layout has three parts.
 
-1. A *header* with the record length, a *null bitmap* with one bit per attribute (a null attribute occupies no further space), and system information (in PostgreSQL the transaction identifiers needed for concurrency control, [4.13.11](/4.13.11)).
+1. A *header* with the record length, a *null bitmap* with one bit per attribute (a **null** attribute occupies no further space), and system information (in PostgreSQL the transaction identifiers needed for concurrency control, [4.13.11](/4.13.11)).
 2. A fixed-size part: the values of the fixed-length attributes and, for each variable-length attribute, an (offset, length) pair or a length prefix.
 3. The variable-length values themselves.
 
-The layout of a heap tuple in PostgreSQL, from the documentation of the page format, is a concrete case. Each tuple starts with a 23-byte header (`t_xmin` and `t_xmax`, the identifiers of the inserting and deleting transactions; `t_cid`; `t_ctid`, the location of this or a newer version of the row; two words of flags with the number of attributes; and `t_hoff`, the offset of the user data), followed by the null bitmap if any attribute is null, padded so that the data starts at a multiple of the platform's maximum alignment, 8 bytes on current 64-bit machines. Each value is aligned according to its type: a `double precision` or `bigint` starts at a multiple of 8, an `integer` at a multiple of 4, while a short `text` value (under 127 bytes) has a 1-byte length header and needs no alignment.
+The layout of a **heap** tuple in PostgreSQL, from the documentation of the **page** format, is a concrete case. Each tuple starts with a 23-byte header (`t_xmin` and `t_xmax`, the identifiers of the inserting and deleting transactions; `t_cid`; `t_ctid`, the location of this or a newer version of the row; two words of flags with the number of attributes; and `t_hoff`, the offset of the user data), followed by the null **bitmap** if any attribute is null, padded so that the data starts at a multiple of the platform's maximum alignment, 8 bytes on current 64-bit machines. Each value is aligned according to its type: a `double precision` or `bigint` starts at a multiple of 8, an `integer` at a multiple of 4, while a short `text` value (under 127 bytes) has a 1-byte length header and needs no alignment.
 
 **Example 7.3.1** A row of `measurement(sample_id text, gene_id text, tpm numeric(10, 2))` such as `('S01', 'ENSG00000141510', 35.20)` takes 24 bytes of header (23 rounded up to 8), 4 bytes for `sample_id` (1-byte length and 3 characters), 16 bytes for `gene_id` and about 7 bytes for `tpm` (a `numeric` value is variable-length: a 1-byte length, a 2-byte header and one 2-byte digit in base 10,000 for each of `35` and `.20`): 51 bytes, which the next tuple's alignment rounds to 56. A `double precision` column would instead take 8 bytes aligned to a multiple of 8, with 4 bytes of padding before it, and also give 56. With the 4-byte slot of §7.3.3 and a 24-byte page header, an 8 KiB page holds about $\lfloor 8168 / 60 \rfloor = 136$ such rows, and the 500,000 rows of the synthetic data set need about 3,700 pages, 30 MB. The values themselves amount to only $3 + 15 + 8 = 26$ bytes per row: per-row overhead of this kind is one reason why analytical systems use the column layouts of §7.5.
 
@@ -208,33 +208,33 @@ Inside a page, variable-length records must be able to grow, shrink and move (fo
 
 ![A slotted page. Each slot points to its record; slot 3 is unused because its record was deleted. Records can move inside the page as long as their slots are updated, so a record identifier stays valid.](./plots/slotted-page.py)
 
-Insertion takes a new slot (or reuses an unused one) and places the record at the end of the free space. Deletion marks the slot unused; the space of the record can be reclaimed by compacting the records towards the end of the page and updating their offsets, which leaves every RID valid. If a record grows and no longer fits, it is moved to another page and its old slot keeps a *forwarding address*.
+Insertion takes a new slot (or reuses an unused one) and places the record at the end of the free space. Deletion marks the slot unused; the space of the record can be reclaimed by compacting the records towards the end of the page and updating their offsets, which leaves every **RID** valid. If a record grows and no longer fits, it is moved to another page and its old slot keeps a *forwarding address*.
 
-In PostgreSQL every page has this form: a 24-byte page header (with `pd_lower` and `pd_upper` delimiting the free space and `pd_lsn`, the log position of the last change, used in recovery), 4-byte *line pointers* as slots, and the tuples from the end of the page. The RID is called a *tuple identifier* and is visible as the system column `ctid`: the query `SELECT ctid, * FROM measurement` shows values such as `(0,1)`, `(0,2)`, meaning page 0, line pointers 1, 2. An update in PostgreSQL writes a new version of the row with a new `ctid` and links the old version to it ([4.13.11](/4.13.11)). SQLite's B-tree pages are slotted pages too: a *cell pointer array* of 2-byte offsets follows the page header and the cells fill the page from the end.
+In PostgreSQL every page has this form: a 24-byte page header (with `pd_lower` and `pd_upper` delimiting the free space and `pd_lsn`, the log position of the last change, used in recovery), 4-byte *line pointers* as slots, and the tuples from the end of the page. The RID is called a *tuple identifier* and is visible as the system column `ctid`: the query `SELECT ctid, * FROM measurement` shows values such as `(0,1)`, `(0,2)`, meaning page 0, line pointers 1, 2. An update in PostgreSQL writes a new version of the row with a new `ctid` and links the old version to it ([4.13.11](/4.13.11)). SQLite's **B-tree** pages are **slotted pages** too: a *cell pointer array* of 2-byte offsets follows the page header and the cells fill the page from the end.
 
 ## 7.4. File Organization
 
-How records are assigned to pages determines which operations are cheap. A relation is stored as one or more files (in PostgreSQL, the file `base/<database oid>/<relfilenode>`, split into 1 GB segments, together with a free space map and a visibility map stored as separate forks; in SQLite, the whole database is a single file).
+How records are assigned to **pages** determines which operations are cheap. A **relation** is stored as one or more files (in PostgreSQL, the file `base/<database oid>/<relfilenode>`, split into 1 GB segments, together with a free space map and a visibility map stored as separate forks; in SQLite, the whole **database** is a single file).
 
 ### 7.4.1. Heap Files
 
 **Definition 7.4.1 (Heap File)** A **heap file** stores the records of a relation in no particular order: a new record goes into any page with enough free space, and the file supports scanning all records, fetching a record by its RID, insertion and deletion.
 
-To find a page with room for a new record without reading the whole file, the DBMS maintains a directory of free space. PostgreSQL's *free space map* records the approximate free space of each page in a small tree, and its *visibility map* records which pages contain only rows visible to all transactions; the latter lets `VACUUM` skip pages and lets index-only scans avoid visiting the heap ([4.13.8](/4.13.8)). Heap files are the default table organization in PostgreSQL, Oracle and SQL Server (for tables without a clustered index).
+To find a page with room for a new record without reading the whole file, the **DBMS** maintains a directory of free space. PostgreSQL's *free space map* records the approximate free space of each page in a small tree, and its *visibility map* records which pages contain only rows visible to all transactions; the latter lets `VACUUM` skip pages and lets index-only scans avoid visiting the **heap** ([4.13.8](/4.13.8)). **Heap files** are the default table organization in PostgreSQL, Oracle and SQL Server (for tables without a clustered index).
 
 ### 7.4.2. Sequential Files
 
 **Definition 7.4.2 (Sequential File)** A **sequential file** stores the records of a relation sorted by a *search key*, one or more attributes chosen for this purpose, so that the records can be read in key order and a range of keys occupies consecutive pages.
 
-Searching by key can use binary search over the pages, and a range query reads only the pages of the range. The price is insertion: a new record belongs at a fixed position. If its page is full, it goes to an *overflow page* chained from there, and after many insertions the file must be *reorganized*, that is, rewritten in order. Pure sequential files are rare today; their role is taken over by B+-tree organizations, which keep the order dynamically ([4.13.8](/4.13.8)).
+Searching by key can use **binary search** over the pages, and a range query reads only the pages of the range. The price is insertion: a new record belongs at a fixed position. If its page is full, it goes to an *overflow page* chained from there, and after many insertions the file must be *reorganized*, that is, rewritten in order. Pure **sequential files** are rare today; their role is taken over by B+-tree organizations, which keep the order dynamically ([4.13.8](/4.13.8)).
 
 ### 7.4.3. Clustered Organizations
 
-An organization in which records with equal or neighbouring key values are stored physically together is called *clustered*. The most important form today stores the table itself in the leaves of a **B+ tree** on the primary key.
+An organization in which records with equal or neighbouring key values are stored physically together is called *clustered*. The most important form today stores the table itself in the leaves of a **B+ tree** on the **primary key**.
 
 **Definition 7.4.3 (Index-Organized Table)** An **index-organized table** (or clustered table) stores its records in the leaf pages of a B+ tree ordered by a key, usually the primary key; there is no separate heap file. Other indexes on the table refer to a record by its key value instead of by a RID.
 
-InnoDB stores every table in this way, clustered on the primary key (or on a hidden row identifier if the table has none), and its secondary indexes store primary-key values. SQLite stores an ordinary table as a B-tree keyed by its 64-bit `rowid`; a table declared `WITHOUT ROWID` is instead a B-tree keyed by its primary key. PostgreSQL has only heap files; its `CLUSTER` command sorts a table once according to an index, but later insertions do not maintain the order.
+InnoDB stores every table in this way, clustered on the primary key (or on a hidden row identifier if the table has none), and its secondary indexes store primary-key values. SQLite stores an ordinary table as a **B-tree** keyed by its 64-bit `rowid`; a table declared `WITHOUT ROWID` is instead a B-tree keyed by its primary key. PostgreSQL has only heap files; its `CLUSTER` command sorts a table once according to an index, but later insertions do not maintain the order.
 
 The difference is visible in SQLite. The `measurement` table of the running example has a composite primary key on `(sample_id, gene_id)`. Stored normally, it is a rowid B-tree plus a separate index that enforces the primary key and repeats both key columns; stored `WITHOUT ROWID`, the records are kept in key order in one tree. With the synthetic data set (500,000 rows, 4 KiB pages), the virtual table `dbstat` reports the pages of each B-tree:
 
@@ -264,9 +264,9 @@ ORDER BY name;
 +--------------------------------+-------+
 ```
 
-The clustered table needs 4,730 pages instead of $4{,}550 + 4{,}060 = 8{,}610$, and a query for all measurements of one sample reads a few consecutive leaf pages. In exchange, insertions in random key order split pages in the middle of the tree, and every secondary index lookup costs a second tree descent through the primary key.
+The **clustered table** needs 4,730 pages instead of $4{,}550 + 4{,}060 = 8{,}610$, and a query for all measurements of one sample reads a few consecutive leaf pages. In exchange, insertions in random key order split pages in the middle of the tree, and every secondary index lookup costs a second tree descent through the primary key.
 
-A related idea is *multitable clustering*: storing the rows of several relations that are usually joined (each sample followed by its measurements, say) in the same pages. It speeds up that join and slows down everything else, and today it survives mainly in specialized systems.
+A related idea is *multitable clustering*: storing the rows of several relations that are usually joined (each sample followed by its measurements, say) in the same pages. It speeds up that **join** and slows down everything else, and today it survives mainly in specialized systems.
 
 ### 7.4.4. Hashed and Partitioned Files
 
@@ -274,7 +274,7 @@ A *hashed file* computes the page of a record from a **hash function** of a key,
 
 **Definition 7.4.4 (Partitioning)** **Partitioning** divides a table into disjoint parts, the partitions, according to the value of a *partition key*: by ranges of values (*range partitioning*), by lists of values (*list partitioning*) or by a hash of the key (*hash partitioning*). Each partition is stored as a separate table, and the system routes each row to its partition.
 
-PostgreSQL supports declarative partitioning with all three methods:
+PostgreSQL supports declarative **partitioning** with all three methods:
 
 ```sql
 CREATE TABLE measurement_log (
@@ -310,11 +310,11 @@ No organization wins everywhere; this is why tables are usually stored as heaps 
 
 ### 7.5.1. Three Layouts
 
-Everything so far stored each record contiguously. That is ideal for transactional workloads (OLTP, online transaction processing), whose queries read or write a few complete rows: one page access fetches the whole row. Analytical workloads (OLAP, online analytical processing) are different: a query such as "average TPM per tissue over all measurements" reads millions of rows but only two or three columns. With rows stored contiguously, it reads every byte of every row from disk and through the CPU caches, almost all of it useless.
+Everything so far stored each record contiguously. That is ideal for transactional workloads (**OLTP**, **online transaction processing**), whose queries read or write a few complete rows: one **page** access fetches the whole row. Analytical workloads (OLAP, online analytical processing) are different: a query such as "average TPM per tissue over all measurements" reads millions of rows but only two or three columns. With rows stored contiguously, it reads every byte of every row from disk and through the CPU caches, almost all of it useless.
 
 **Definition 7.5.1 (Row Store and Column Store)** In the **N-ary storage model** (NSM, *row store*), the values of all attributes of a record are stored together and pages hold whole records. In the **decomposition storage model** (DSM, *column store*), the values of each attribute are stored together, in record order, in a separate sequence of pages; the $i$-th values of all columns together form the $i$-th record. The **PAX** layout (Partition Attributes Across) is a hybrid: records are assigned to pages (or larger *row groups*) as in NSM, but inside each, the values are grouped by column as in DSM.
 
-The column layout is the database analogue of storing a table in **long format** and processing it column by column, as NumPy and pandas do ([4.4.5](/4.4.5)): an operator reads one contiguous array of values of one type, which is ideal for CPU caches, SIMD instructions and compression. Its cost is in reconstructing rows and in updates: inserting one row touches every column. Column stores therefore buffer insertions in a row-oriented area and merge them into the columns in batches.
+The column layout is the **database** analogue of storing a table in **long format** and processing it column by column, as NumPy and pandas do ([4.4.5](/4.4.5)): an operator reads one contiguous array of values of one type, which is ideal for CPU caches, SIMD instructions and compression. Its cost is in reconstructing rows and in updates: inserting one row touches every column. **Column stores** therefore buffer insertions in a row-oriented area and merge them into the columns in batches.
 
 | | Row store | Column store |
 |---|---|---|
@@ -392,15 +392,15 @@ measurement.parquet 1954422
 big.db 35749888
 ```
 
-The rows are ordered by sample, so within a row group the column `sample_id` consists of a few long runs and its column chunk occupies 234 bytes for over 100,000 values; `gene_id` repeats the same 5,000 identifiers and is dictionary-encoded; `tpm`, a decimal with two digits after the point, is stored as integers counting hundredths and bit-packed. The Parquet file takes 2.0 MB, against 13.2 MB for the same data as CSV and 35.7 MB for the SQLite database, which stores each row with its header and the primary-key index besides. A Parquet file is itself a PAX layout: row groups contain one *column chunk* per column, chunks consist of pages, and a footer records the schema and, per chunk, statistics such as the minimum and maximum value, which let a reader skip row groups that cannot satisfy a predicate.
+The rows are ordered by sample, so within a row group the column `sample_id` consists of a few long runs and its column chunk occupies 234 bytes for over 100,000 values; `gene_id` repeats the same 5,000 identifiers and is dictionary-encoded; `tpm`, a decimal with two digits after the point, is stored as integers counting hundredths and bit-packed. The Parquet file takes 2.0 MB, against 13.2 MB for the same data as CSV and 35.7 MB for the SQLite database, which stores each row with its header and the primary-key index besides. A Parquet file is itself a **PAX** layout: row groups contain one *column chunk* per column, chunks consist of pages, and a footer records the **schema** and, per chunk, statistics such as the minimum and maximum value, which let a reader skip row groups that cannot satisfy a predicate.
 
-Between the two worlds, *hybrid transactional/analytical processing* (HTAP) systems keep a row store for transactions and a column copy for analytics, synchronized continuously; examples are SQL Server's columnstore indexes, Oracle's In-Memory option and TiDB's TiFlash replicas.
+Between the two worlds, *hybrid transactional/analytical processing* (HTAP) systems keep a **row store** for transactions and a column copy for analytics, synchronized continuously; examples are SQL Server's columnstore indexes, Oracle's In-Memory option and TiDB's TiFlash replicas.
 
 ## 7.6. The System Catalog
 
-A DBMS stores the description of the database (tables, columns and their types, constraints, indexes, views, users and privileges, statistics) in the database itself, as ordinary relations: the system catalog or data dictionary of [4.13.1](/4.13.1#sec-1.4). The storage manager needs it to interpret the bytes of a page: the catalog says how many attributes a record has, their types and order, and which file and pages hold which relation.
+A **DBMS** stores the description of the **database** (tables, columns and their types, constraints, indexes, views, users and **privileges**, statistics) in the database itself, as ordinary relations: the system catalog or data dictionary of [4.13.1](/4.13.1#sec-1.4). The storage manager needs it to interpret the bytes of a page: the catalog says how many attributes a record has, their types and order, and which file and pages hold which relation.
 
-In SQLite the catalog is a single table, `sqlite_schema`, stored in page 1 of the database file. Its column `rootpage` gives the page on which each B-tree starts; for the synthetic database:
+In SQLite the catalog is a single table, `sqlite_schema`, stored in **page** 1 of the database file. Its column `rootpage` gives the page on which each **B-tree** starts; for the synthetic database:
 
 ```sql
 SELECT type, name, tbl_name, rootpage FROM sqlite_schema;
@@ -461,11 +461,11 @@ ORDER BY pages DESC;
 
 The table `measurement` was filled by appending rows in rowid order, and SQLite packs the leaves of such a tree almost completely (0.6% unused); the index B-trees are balanced differently and leave 12–18% of their pages free, which makes later insertions in the middle cheaper. The cell count of `measurement` exceeds the number of rows because interior pages of a rowid tree also contain cells (one per child pointer).
 
-PostgreSQL's catalog consists of tables such as `pg_class` (one row per table, index, sequence or view, with the estimated number of pages `relpages` and of rows `reltuples`), `pg_attribute` (one row per column) and `pg_index`. The SQL standard defines a portable view of the catalog, the `information_schema`, which PostgreSQL, MySQL and DuckDB implement; SQLite offers `PRAGMA table_info(...)` and table-valued functions such as `pragma_table_info('gene')` instead.
+PostgreSQL's catalog consists of tables such as `pg_class` (one row per table, index, sequence or view, with the estimated number of pages `relpages` and of rows `reltuples`), `pg_attribute` (one row per column) and `pg_index`. The **SQL** standard defines a portable view of the catalog, the `information_schema`, which PostgreSQL, MySQL and DuckDB implement; SQLite offers `PRAGMA table_info(...)` and table-valued functions such as `pragma_table_info('gene')` instead.
 
 ## Summary
 
-- Storage is a hierarchy in which persistent devices are orders of magnitude slower than memory and random access is slower than sequential access; the I/O cost model therefore counts page transfers, separating seeks when necessary.
+- Storage is a hierarchy in which persistent devices are orders of magnitude slower than memory and **random access** is slower than sequential access; the **I/O cost model** therefore counts **page** transfers, separating seeks when necessary.
 - The buffer pool caches pages in frames with pin counts and dirty flags. Database workloads defeat plain LRU through sequential flooding, so systems use clock sweep with usage counts, scan rings (PostgreSQL) or a split LRU list (InnoDB). DBMSs manage their own buffers instead of relying on `mmap`, mainly to control write ordering for recovery.
 - Records carry a header with a null bitmap and system information; alignment padding and per-row headers make small rows expensive. Large values go out of line (TOAST, overflow pages).
 - Slotted pages give each record a stable identifier (page, slot) while allowing records to move within the page.

@@ -3,7 +3,7 @@ title: Code Quality
 description: "Writing code that other people can read, change and trust: defensive programming and its trade-offs; layout and coding standards, with formatters; naming conventions and bad names; self-documenting code; comments that explain why; code smells, cyclomatic complexity and the ABC metric, linters and type checkers with real output; refactoring as a sequence of behavior-preserving steps, with a worked example under tests; design smells, design patterns and the SOLID principles; and code quality when AI agents write the code."
 ---
 
-A program is read far more often than it is written: by reviewers, by colleagues who extend it, by the maintainer who fixes it years later, and by the author, who after a few months is a stranger to it as well. Code quality is the property of code that keeps this reading cheap and safe. This chapter belongs to the "good code" line of the course ([4.14.1](/4.14.1)): it starts with defensive programming, which keeps code from failing when its assumptions are violated (10.1); then turns to the presentation of code, its layout (10.2), names (10.3), structure (10.4) and comments (10.5). Section 10.6 shows how to detect bad code by its smells, by metrics and by static analysis tools; 10.7 explains how to improve it safely by refactoring; and 10.8 lifts the discussion from functions to classes, where code smells become design smells and the remedies are **design patterns** and the SOLID principles ([4.2.13](/4.2.13)). The tests that make refactoring safe are the subject of the next two chapters ([4.14.11](/4.14.11), [4.14.12](/4.14.12)). Examples are in Python and were run with Python 3.14, ruff 0.17, radon 6.0, mypy 2.4 and pytest 9.1; the C fragments illustrate layout only.
+A program is read far more often than it is written: by reviewers, by colleagues who extend it, by the maintainer who fixes it years later, and by the author, who after a few months is a stranger to it as well. Code quality is the property of code that keeps this reading cheap and safe. This chapter belongs to the "good code" line of the course ([4.14.1](/4.14.1)): it starts with **defensive programming**, which keeps code from failing when its assumptions are violated (10.1); then turns to the presentation of code, its layout (10.2), names (10.3), structure (10.4) and comments (10.5). Section 10.6 shows how to detect bad code by its smells, by metrics and by static analysis tools; 10.7 explains how to improve it safely by refactoring; and 10.8 lifts the discussion from functions to classes, where code smells become design smells and the remedies are **design patterns** and the SOLID principles ([4.2.13](/4.2.13)). The tests that make refactoring safe are the subject of the next two chapters ([4.14.11](/4.14.11), [4.14.12](/4.14.12)). Examples are in Python and were run with Python 3.14, ruff 0.17, radon 6.0, mypy 2.4 and pytest 9.1; the C fragments illustrate layout only.
 
 ## 10.1. Defensive Programming
 
@@ -64,13 +64,13 @@ def parse_line(text: str) -> OrderLine:
     return OrderLine(sku.strip(), int(qty))
 ```
 
-The class validates itself in its constructor, so that every function receiving an `OrderLine` can rely on its invariants without checking them again; this is the "no garbage allowed in" strategy realized with types. Checking at the boundary and trusting inside is the usual compromise between safety and duplication.
+The class validates itself in its **constructor**, so that every function receiving an `OrderLine` can rely on its **invariants** without checking them again; this is the "no garbage allowed in" strategy realized with types. Checking at the boundary and trusting inside is the usual compromise between safety and duplication.
 
 ### 10.1.3. Costs and Benefits
 
 | Against | For |
 |---|---|
-| Checks cost some run time | Checks save hours of debugging, because a failure is reported where it starts |
+| Checks cost some run time | Checks save hours of **debugging**, because a failure is reported where it starts |
 | Each check is extra code to write, test and read | Working code that is slightly slower is far superior to code that works most of the time and occasionally fails spectacularly |
 | Too many checks obscure the main logic | Checks document the assumptions that would otherwise remain unwritten |
 
@@ -291,7 +291,7 @@ The techniques of self-documenting code:
 
 - Make the normal path obvious. Order `if`–`else` chains consistently, for example always the normal case first and the error case second, or always errors first as *guard clauses* that return early.
 - Avoid deep nesting. The second `fibonacci` returns early for small positions; a version with a single exit point would have to nest the whole loop inside `if (position >= 2)`. Structured programming once insisted on a single entry and a single exit; today the usual balance is to accept several early exits in exchange for flat code.
-- Do not optimize at the expense of clarity. Never optimize code unless you have shown that it is a bottleneck for acceptable performance (profiling is treated in [4.4.7](/4.4.7)); keep the clear version as the reference and the test oracle.
+- Do not optimize at the expense of clarity. Never optimize code unless you have shown that it is a bottleneck for acceptable performance (**profiling** is treated in [4.4.7](/4.4.7)); keep the clear version as the reference and the test oracle.
 - Decompose into atomic functions: one function, one action, short, with no surprising **side effects**.
 - Make important code stand out, and group related information using the language's features (a class, a data class, a module) rather than relying on proximity.
 - Choose meaningful names (10.3) and descriptive types: an `OrderLine` or an enumeration says more than a tuple or a string, and a type checker can verify it.
@@ -360,7 +360,7 @@ Further guidance:
 
 - Choose a low-maintenance style. Boxes of asterisks with a right border, and column-aligned tables of variables in comments, must be re-aligned after every edit and soon decay; plain block comments do not.
 - A file header comment describes the purpose and contents of the file, and carries a legal notice where required. It should not list every function, class and global variable of the file (such a list is out of date immediately), nor the version and modification history, which the **version control system** records ([4.14.3](/4.14.3)).
-- Interface documentation is a comment of a special kind: docstrings in Python, Javadoc, Doxygen. It documents the contract of a function (what it does, its parameters, return value, errors, preconditions) for callers who do not read its body, and it is extracted into reference documentation by tools.
+- Interface documentation is a comment of a special kind: docstrings in Python, Javadoc, Doxygen. It documents the contract of a function (what it does, its parameters, return value, errors, **preconditions**) for callers who do not read its body, and it is extracted into reference documentation by tools.
 
 Good programmers write a few really good comments that explain why, and concentrate on writing good code rather than a plethora of comments. Bad programmers cannot tell good comments from bad ones, explain how, write comments that make sense only to themselves, bolster bad code with many comments, and fill files with redundant information.
 
@@ -395,7 +395,7 @@ Fowler's catalog names more than twenty smells; the most common, with the names 
 | Refused Bequest | a subclass that does not want what it inherits |
 | Comments | comments used as deodorant for unclear code (10.5) |
 
-Divergent change and shotgun surgery are the two faces of bad modularity: the first is weak **cohesion**, the second strong **coupling** (Definition 5.5.2). The Long Parameter List smell deserves a closer look because it is so common. A function with many parameters is hard to cover by tests, since the number of combinations grows quickly, and hard to replace by a test double in the tests of its callers. A Boolean parameter is a warning sign: if a function behaves differently depending on its value, it should probably be two functions. And if the same arguments travel in a pack through many functions, they form a data clump that should become a class of its own (the refactoring Introduce Parameter Object).
+Divergent change and shotgun surgery are the two faces of bad **modularity**: the first is weak **cohesion**, the second strong **coupling** (Definition 5.5.2). The Long Parameter List smell deserves a closer look because it is so common. A function with many parameters is hard to cover by tests, since the number of combinations grows quickly, and hard to replace by a test double in the tests of its callers. A Boolean parameter is a warning sign: if a function behaves differently depending on its value, it should probably be two functions. And if the same arguments travel in a pack through many functions, they form a data clump that should become a class of its own (the refactoring Introduce Parameter Object).
 
 ### 10.6.2. Complexity Metrics
 
@@ -412,7 +412,7 @@ For a single function ($P = 1$) with structured control flow, three ways of comp
 - $V(G)$ = the number of decisions $+ 1$, where each `if`, `elif`, loop (`for`, `while`), `case` and `except` counts as one decision;
 - $V(G)$ = the number of regions into which the graph, drawn in the plane, divides the plane, counting the outer region.
 
-A sequence of statements has $V = 1$; an `if`–`then`–`else`, a `while` loop and a repeat–until loop each have $V = 2$. The number $V(G)$ is also the size of a basis of paths, from which every path can be combined, and therefore the number of test cases needed in basis path testing ([4.14.11](/4.14.11)).
+A sequence of statements has $V = 1$; an `if`–`then`–`else`, a `while` loop and a repeat–until loop each have $V = 2$. The number $V(G)$ is also the size of a basis of paths, from which every path can be combined, and therefore the number of **test cases** needed in basis path testing ([4.14.11](/4.14.11)).
 
 The following function computes a shipping cost:
 
@@ -481,7 +481,7 @@ Found 9 errors.
 [*] 3 fixable with `--fix` (2 unsafe fixes available with `--fix --unsafe-fixes`).
 ```
 
-Several of these are real bugs: the mutable **default argument** `[]` is shared between calls, so a caller who appends to the returned default changes it for everybody ([4.4.1](/4.4.1)); the bare `except` also catches `KeyboardInterrupt` and hides programming errors such as a misspelled name; and the file is never closed. The rule codes name their origin: `E` and `F` come from pycodestyle and Pyflakes, `B` from flake8-bugbear, `SIM` from flake8-simplify, all reimplemented in ruff. Rules are selected in the project configuration, so that every developer and the CI pipeline apply the same ones:
+Several of these are real bugs: the mutable **default argument** `[]` is shared between calls, so a caller who appends to the returned default changes it for everybody ([4.4.1](/4.4.1)); the bare `except` also catches `KeyboardInterrupt` and hides programming errors such as a misspelled name; and the file is never closed. The rule codes name their origin: `E` and `F` come from pycodestyle and Pyflakes, `B` from flake8-bugbear, `SIM` from flake8-simplify, all reimplemented in ruff. Rules are selected in the project configuration, so that every developer and the **CI** pipeline apply the same ones:
 
 ```toml
 # pyproject.toml
@@ -521,7 +521,7 @@ The main static analysis tools by language:
 | Java | google-java-format | Checkstyle, PMD | SpotBugs, Error Prone |
 | multi-language | | | SonarQube, CodeQL, Semgrep |
 
-Static analysis is most effective when it runs continuously: in the editor as one types, in a pre-commit hook before each commit, and in the CI pipeline as a quality gate on every pull request ([4.14.3](/4.14.3)). Continuous inspection services such as SonarQube track the health of a code base over time: duplicated code, violations of coding standards, complexity, comments, likely bugs and security vulnerabilities. When a team adopts a linter on an existing code base, it usually enables the rules for new code first, or records the existing violations as a baseline, so that the number of warnings can only fall.
+Static analysis is most effective when it runs continuously: in the editor as one types, in a pre-commit hook before each commit, and in the CI pipeline as a quality gate on every **pull request** ([4.14.3](/4.14.3)). Continuous inspection services such as SonarQube track the health of a code base over time: duplicated code, violations of coding standards, complexity, comments, likely bugs and security vulnerabilities. When a team adopts a linter on an existing code base, it usually enables the rules for new code first, or records the existing violations as a baseline, so that the number of warnings can only fall.
 
 ## 10.7. Refactoring
 
@@ -664,13 +664,13 @@ shipping.py
     F 29:0 international_surcharge - A (2)
 ```
 
-The behavior is unchanged, as the same nine tests confirm. The total complexity is about the same, since the decisions are inherent in the business rules, but it is now spread over five functions, each of which can be read, named, tested and changed on its own; `shipping_cost` itself reads as a summary of the pricing policy, and a change to the surcharges for one country touches only a table.
+The behavior is unchanged, as the same nine tests confirm. The total complexity is about the same, since the decisions are inherent in the **business rules**, but it is now spread over five functions, each of which can be read, named, tested and changed on its own; `shipping_cost` itself reads as a summary of the pricing policy, and a change to the surcharges for one country touches only a table.
 
 ## 10.8. From Code Smells to Design Smells
 
 ### 10.8.1. Design Patterns and Antipatterns
 
-The ideas of 10.6 and 10.7 apply within a function or a class. At the level of the relationships between classes, the corresponding notions are design smells and design patterns. The architect Christopher Alexander described a pattern as a problem that occurs over and over again, together with the core of a tried solution to it; his book *A Pattern Language* (1977) contains 253 patterns of building and planning, from the distribution of towns to the details of a roof, organized into a *pattern language* in which larger patterns are completed by smaller ones. The 23 **design patterns** of the "Gang of Four" (Gamma, Helm, Johnson and Vlissides, 1994) carry the idea to object-oriented software, in three categories ([4.2.13](/4.2.13)):
+The ideas of 10.6 and 10.7 apply within a function or a class. At the level of the relationships between classes, the corresponding notions are design smells and **design patterns**. The architect Christopher Alexander described a pattern as a problem that occurs over and over again, together with the core of a tried solution to it; his book *A Pattern Language* (1977) contains 253 patterns of building and planning, from the distribution of towns to the details of a roof, organized into a *pattern language* in which larger patterns are completed by smaller ones. The 23 **design patterns** of the "Gang of Four" (Gamma, Helm, Johnson and Vlissides, 1994) carry the idea to object-oriented software, in three categories ([4.2.13](/4.2.13)):
 
 | Creational | Structural | Behavioral |
 |---|---|---|
@@ -697,14 +697,14 @@ The SOLID principles, collected by Robert C. Martin around 2000 and named by Mic
 | Principle | Statement | Symptom of violation | Remedies |
 |---|---|---|---|
 | **Single-responsibility principle** | a class has one and only one reason to change | a very large class; several unrelated groups of methods; one cannot state its responsibility in 25 words | Extract Class |
-| **Open–closed principle** | adding functionality should require adding code, not modifying existing code | `switch` or `if` chains on the type of an object or on a property that never changes after creation | Replace Conditional with Polymorphism; Strategy, Template Method, Decorator, Abstract Factory |
-| **Liskov substitution principle** | an instance of a subtype can always be substituted for an instance of its supertype | Refused Bequest: a subclass has no meaningful way to implement an inherited operation | replace inheritance by composition and explicit delegation |
+| **Open–closed principle** | adding functionality should require adding code, not modifying existing code | `switch` or `if` chains on the type of an object or on a property that never changes after creation | Replace Conditional with **Polymorphism**; Strategy, Template Method, Decorator, Abstract Factory |
+| **Liskov substitution principle** | an instance of a subtype can always be substituted for an instance of its supertype | Refused Bequest: a subclass has no meaningful way to implement an inherited operation | replace **inheritance** by composition and explicit delegation |
 | **Interface segregation principle** | clients should not depend on methods they do not use | "fat" interfaces whose implementers leave many methods empty or raising errors | split the interface into role interfaces |
 | **Dependency inversion principle** | high-level modules depend on abstractions, not on low-level modules | one cannot add a variant of a dependency, or test a class in isolation, without modifying it | introduce an interface between the two; inject the dependency; Adapter |
 
 A model with many sets of behaviors is the typical violator of single responsibility: a `User` class that is at once a customer, an authentication principal and a member of a social network has three axes of change. A metric detects such classes. In LCOM4 (Hitz and Montazeri, 1995), the methods of a class are the vertices of a graph, and two methods are joined by an edge if one calls the other or both use the same field; LCOM4 is the number of connected components of this graph. A cohesive class has LCOM4 $= 1$; a value of 2 or more suggests that the class consists of several "cliques" of methods that could be separate classes (Extract Class).
 
-The dependency inversion principle is usually realized by *dependency injection*: a class receives the objects it depends on, through its constructor or parameters, instead of creating them itself. This one change makes the class both extensible and testable:
+The **dependency inversion principle** is usually realized by *dependency injection*: a class receives the objects it depends on, through its constructor or parameters, instead of creating them itself. This one change makes the class both extensible and testable:
 
 ```python
 from datetime import datetime
@@ -737,7 +737,7 @@ Patterns and principles are tools, not goals. Introducing abstractions for chang
 
 When a **coding agent** ([4.2.14](/4.2.14)) writes much of the code, the readers of code change, but the need for readable code does not: people still review every change and own the system, and the agent itself is a reader, which understands a code base through its names, structure and comments. Clear names and small functions help agents as much as people, and a misleading name misleads both. Three practices of this chapter become more important.
 
-- Make the conventions executable. A rule that exists only in a style document is applied inconsistently by people and unreliably by agents; a rule in the formatter, linter and type checker configuration is applied every time. A pre-commit hook and a CI quality gate that run `ruff format --check`, `ruff check` and a type checker turn the coding standard into a check that the agent can run after each change and fix by itself, before anyone reviews it.
+- Make the conventions executable. A rule that exists only in a style document is applied inconsistently by people and unreliably by agents; a rule in the formatter, linter and **type checker** configuration is applied every time. A pre-commit hook and a CI quality gate that run `ruff format --check`, `ruff check` and a type checker turn the coding standard into a check that the agent can run after each change and fix by itself, before anyone reviews it.
 - Watch for the smells that agents tend to produce. Generated code often duplicates an existing helper instead of finding it, adds defensive checks and comments that repeat the code, catches exceptions broadly to make an error disappear, and adds speculative options that nobody asked for. Duplicate-code detectors, complexity limits and rules against bare `except` catch part of this; the rest is found in review, which should read the diff and not only the agent's summary.
 - Refactor under tests, in small steps. Agents are good at mechanical refactorings across many files, and they also make plausible-looking changes that alter behavior. The safeguard is the one of 10.7: characterization tests first, one refactoring per commit, all tests after each step, and an explicit instruction not to change the tests while refactoring.
 

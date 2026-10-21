@@ -105,12 +105,12 @@ Separation is not always the right choice, and the reasons for it are best seen 
 Now let the requirements grow: the service is opened to the whole university, a hundred thousand users; most of them are not programmers and need a polished interface comparable to commercial chat products; there must be a mobile web interface, a mini program inside a messaging app and desktop clients; and developers should be able to call the service through a public API. Then:
 
 - the interface needs complex interaction and a smooth experience, hence a modern front-end framework;
-- page load time no longer allows rendering templates per request: the interface must be static files served from a content delivery network (CDN, [4.14.6](/4.14.6#sec-6.8.3));
+- page load time no longer allows rendering templates per request: the interface must be static files served from a **content delivery network** (CDN, [4.14.6](/4.14.6#sec-6.8.3));
 - the back end needs to scale, perhaps to be rewritten in a faster language, and to run as several identical replicas on a cluster such as Kubernetes, which requires it to be stateless, with all state in the database;
 - several different clients must call the same back end;
 - separate front-end and back-end teams must be able to work at the same time, which server-side templates, mixing both concerns in one file, make difficult.
 
-Requirements drive the architecture: these non-functional requirements ([4.14.4](/4.14.4)) lead to separation.
+Requirements drive the architecture: these **non-functional requirements** ([4.14.4](/4.14.4)) lead to separation.
 
 **Definition 7.2.1 (Front-End/Back-End Separation)** In **front-end/back-end separation**, a web application is split into a *front end*, the client-side program that renders the user interface and handles interaction (a single-page application, a mobile or desktop app), and a *back end*, a server that implements the business logic and owns the persistent data, which it exposes only through an API (usually HTTP with JSON). The two are developed, built, tested and deployed independently, and the API is the only contract between them.
 
@@ -165,7 +165,7 @@ sequenceDiagram
   B-->>U: 7. Rendered page
 ```
 
-The proxy (Nginx, Caddy, Traefik, or the load balancer of a cloud provider) also terminates TLS, compresses responses, caches static files, limits request rates and spreads API requests over several back-end replicas. In development, the dev server of the front-end tool plays this role: Vite forwards `/api` to the Django development server ([4.14.8](/4.14.8#sec-8.4.2)). At a larger scale the pieces become the architecture of the slide's second scenario:
+The proxy (Nginx, Caddy, Traefik, or the load balancer of a cloud provider) also terminates TLS, compresses responses, caches static files, limits request rates and spreads API requests over several back-end replicas. In development, the dev server of the front-end tool plays this role: Vite forwards `/api` to the Django development server ([4.14.8](/4.14.8#sec-8.4.2)). At a larger scale the pieces become the architecture of the second scenario above:
 
 ```mermaid
 flowchart LR
@@ -194,7 +194,7 @@ flowchart LR
   P3 --> DB
 ```
 
-The back-end replicas are interchangeable because they keep no session state in memory: anything that must survive a request lives in the database or in a shared cache. This is the statelessness constraint of REST ([4.14.6](/4.14.6#sec-6.4.1)) paying off operationally.
+The back-end replicas are interchangeable because they keep no session state in memory: anything that must survive a request lives in the database or in a shared cache. This is the statelessness constraint of **REST** ([4.14.6](/4.14.6#sec-6.4.1)) paying off operationally.
 
 ## 7.3. API Design Conventions
 
@@ -256,7 +256,7 @@ components:
 
 ### 7.3.2. Resources, URLs and JSON
 
-For most web APIs the recommended style is REST ([4.14.6](/4.14.6#sec-6.4.1)): URLs name resources (plural nouns, `/api/messages/`, `/api/messages/4/`), and the HTTP methods name the operations. Alternatives exist for other needs: GraphQL lets clients query a typed graph of data with one endpoint, and gRPC ([4.14.6](/4.14.6#sec-6.4.2)) is the usual choice between internal services. The data format of almost all web APIs is JSON.
+For most web APIs the recommended style is **REST** ([4.14.6](/4.14.6#sec-6.4.1)): URLs name resources (plural nouns, `/api/messages/`, `/api/messages/4/`), and the HTTP methods name the operations. Alternatives exist for other needs: GraphQL lets clients query a typed graph of data with one endpoint, and gRPC ([4.14.6](/4.14.6#sec-6.4.2)) is the usual choice between internal services. The data format of almost all web APIs is JSON.
 
 **Definition 7.3.1 (JSON)** **JSON** (JavaScript Object Notation, RFC 8259) is a text format for structured data. A JSON value is an object (an unordered set of name–value pairs in braces, with string names), an array (an ordered list in brackets), a *number*, a string (Unicode, in double quotes), `true`, `false` or `null`.
 
@@ -442,7 +442,7 @@ The output makes the essential properties visible.
 - A JWT is signed, not encrypted: Base64url is an encoding, and anyone holding the token can read the payload. Never put secrets (passwords, personal data the client should not see) in it. (Encrypted tokens exist, JWE, but are rarely needed.)
 - Nobody without the key can produce a valid token: changing the payload invalidates the signature. The comparison uses `hmac.compare_digest`, whose running time does not depend on where the strings differ, so that an attacker cannot guess the signature byte by byte from timings.
 - The server must fix the accepted algorithm itself instead of trusting the header: libraries that honored `"alg": "none"` or let an attacker switch from `RS256` to `HS256` (using the public key as the HMAC secret) caused real vulnerabilities. In practice use a maintained library (PyJWT, `djangorestframework-simplejwt`, `jose` in JavaScript) rather than code like the above.
-- Verification needs no database, which suits stateless replicas and microservices ([4.14.6](/4.14.6#sec-6.3.3)); but for the same reason a JWT cannot be revoked before it expires, unless the server keeps a deny list, which brings the lookup back.
+- Verification needs no database, which suits stateless replicas and **microservices** ([4.14.6](/4.14.6#sec-6.3.3)); but for the same reason a JWT cannot be revoked before it expires, unless the server keeps a deny list, which brings the lookup back.
 
 The usual compromise is a pair of tokens: a short-lived *access token* (minutes) that authorizes API requests, and a long-lived *refresh token*, kept more carefully and checked against the database, with which the client obtains new access tokens; revoking the refresh token logs the user out within minutes. Where the browser should store tokens is a trade-off of its own: JavaScript-readable storage (`localStorage`) is exposed to any XSS on the site, while an `HttpOnly` cookie is not readable by scripts but brings back CSRF (§7.5.4). For a browser front end served from the same site as its API, a session cookie is usually the simpler and safer choice; tokens fit mobile apps, command-line clients, third-party API access and service-to-service calls.
 
@@ -497,7 +497,7 @@ Validation in the front end exists for the user's convenience (immediate feedbac
 
 ### 7.5.2. Injection and Cross-Site Scripting
 
-Untrusted input becomes dangerous when it reaches an interpreter as code instead of data. The comment `Wow <script>alert("XSS")</script>`, if inserted unescaped into a page, runs as a script in every visitor's browser; a file `shell.php` containing `<?php system($_GET["cmd"]); ?>`, if uploaded into a directory that the web server executes, gives the attacker a shell on the server; a request `/user?id=1%3B%20DROP%20DATABASE%3B` (the decoded parameter is `1; DROP DATABASE;`), if pasted into an SQL string, may destroy the database. The last is SQL injection, treated with its defense, the parameterized query, in [4.13.4](/4.13.4#sec-4.9.2). The general rule is the same for every interpreter: keep code and data apart by passing data through an interface that cannot interpret it (query parameters, argument lists for `subprocess` instead of a **shell** command string, templating that escapes), and never build code by string concatenation.
+Untrusted input becomes dangerous when it reaches an interpreter as code instead of data. The comment `Wow <script>alert("XSS")</script>`, if inserted unescaped into a page, runs as a script in every visitor's browser; a file `shell.php` containing `<?php system($_GET["cmd"]); ?>`, if uploaded into a directory that the web server executes, gives the attacker a shell on the server; a request `/user?id=1%3B%20DROP%20DATABASE%3B` (the decoded parameter is `1; DROP DATABASE;`), if pasted into an **SQL** string, may destroy the database. The last is **SQL injection**, treated with its defense, the **parameterized query**, in [4.13.4](/4.13.4#sec-4.9.2). The general rule is the same for every interpreter: keep code and data apart by passing data through an interface that cannot interpret it (query parameters, argument lists for `subprocess` instead of a **shell** command string, templating that escapes), and never build code by string concatenation.
 
 **Definition 7.5.1 (Cross-Site Scripting)** **Cross-site scripting** (XSS) is an injection attack in which an attacker causes a web page to include script that the victim's browser executes in the context of the page's site, with access to its data, cookies not marked `HttpOnly`, tokens in storage and the ability to send requests as the user. In *stored* XSS the script is saved on the server (in a comment) and served to every visitor; in *reflected* XSS it travels in a request parameter that the server echoes into the response; in *DOM-based* XSS front-end code inserts untrusted data into the page itself.
 

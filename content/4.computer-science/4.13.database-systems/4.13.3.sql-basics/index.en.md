@@ -3,7 +3,7 @@ title: "SQL: Definition and Basic Queries"
 description: "The SQL language as standardized and as implemented by PostgreSQL, SQLite, DuckDB and MySQL: data types, CREATE TABLE and constraints, the running example schema of genes, samples, measurements and pathways, SELECT–FROM–WHERE and its relational-algebra meaning, inner, natural and outer joins, ordering and limiting, aggregation with GROUP BY and HAVING, NULL in SQL, and the logical order in which a query is evaluated."
 ---
 
-SQL is the language through which almost every program talks to a relational database. It puts the relational model of the previous chapter, [4.13.2](/4.13.2), into practice: a table is a relation (with the difference that a table may hold duplicate rows), and a query is a declarative description of the result from which the system derives a relational-algebra plan. This chapter covers the part of SQL that every user needs: defining tables with their data types and constraints, and writing queries with selection, projection, joins, ordering and aggregation. It also introduces the *running example* of the course, a small gene-expression database that the later chapters use for advanced queries ([4.13.4](/4.13.4)), design ([4.13.5](/4.13.5), [4.13.6](/4.13.6)) and implementation ([4.13.7](/4.13.7)–[4.13.12](/4.13.12)). Readers who know pandas ([4.4.5](/4.4.5)) will recognize most operations: a `merge` is a **join**, and `groupby(...).agg(...)` is `GROUP BY` with aggregate functions.
+SQL is the language through which almost every program talks to a relational **database**. It puts the **relational model** of the previous chapter, [4.13.2](/4.13.2), into practice: a table is a **relation** (with the difference that a table may hold duplicate rows), and a query is a declarative description of the result from which the system derives a relational-algebra plan. This chapter covers the part of SQL that every user needs: defining tables with their data types and constraints, and writing queries with selection, projection, joins, ordering and aggregation. It also introduces the *running example* of the course, a small gene-expression database that the later chapters use for advanced queries ([4.13.4](/4.13.4)), design ([4.13.5](/4.13.5), [4.13.6](/4.13.6)) and implementation ([4.13.7](/4.13.7)–[4.13.12](/4.13.12)). Readers who know pandas ([4.4.5](/4.4.5)) will recognize most operations: a `merge` is a **join**, and `groupby(...).agg(...)` is `GROUP BY` with aggregate functions.
 
 ## 3.1. The SQL Language
 
@@ -11,7 +11,7 @@ SQL is the language through which almost every program talks to a relational dat
 
 **Definition 3.1.1 (SQL)** **SQL** is the standard language for defining, querying and modifying relational databases. It is specified by the international standard ISO/IEC 9075, whose current edition is SQL:2023.
 
-SQL began as SEQUEL in IBM's System R project in the mid-1970s. The first standard appeared in 1986 (SQL-86), followed by SQL-92, which fixed the core still taught today; later editions added recursive queries and triggers (SQL:1999), window functions (SQL:2003), XML (SQL:2006), temporal tables (SQL:2011), JSON functions (SQL:2016) and, in SQL:2023, a native JSON type and property-graph queries (Part 16, SQL/PGQ).
+**SQL** began as SEQUEL in IBM's System R project in the mid-1970s. The first standard appeared in 1986 (SQL-86), followed by SQL-92, which fixed the core still taught today; later editions added recursive queries and triggers (SQL:1999), window functions (SQL:2003), XML (SQL:2006), temporal tables (SQL:2011), JSON functions (SQL:2016) and, in SQL:2023, a native JSON type and property-graph queries (Part 16, SQL/PGQ).
 
 No product implements the whole standard, and every product adds extensions. This course uses PostgreSQL as the reference dialect because it follows the standard closely and is the most widely used open-source server system; the examples are executed with SQLite and DuckDB, which are embedded libraries that need no server.
 
@@ -27,7 +27,7 @@ No product implements the whole standard, and every product adds extensions. Thi
 
 SQL contains several sublanguages:
 
-- the data-definition language (DDL): `CREATE`, `ALTER` and `DROP` for tables, views, indexes and other schema objects;
+- the **data-definition language** (**DDL**): `CREATE`, `ALTER` and `DROP` for tables, views, indexes and other **schema** objects;
 - the data-manipulation language (DML): `SELECT` for queries, and `INSERT`, `UPDATE`, `DELETE` and `MERGE` for modifications ([4.13.4](/4.13.4#sec-4.5));
 - statements for access control (`GRANT`, `REVOKE`, [4.13.4](/4.13.4#sec-4.8)) and for transaction control (`BEGIN`, `COMMIT`, `ROLLBACK`, [4.13.4](/4.13.4#sec-4.7)).
 
@@ -35,7 +35,7 @@ SQL is *declarative*: a query states which rows the result contains, not how to 
 
 ### 3.1.3. Running the Examples
 
-Every query in this chapter was executed, and its output is shown below it. Unless stated otherwise the output comes from SQLite 3.45 (command-line shell with `.mode table` and `.nullvalue NULL`, so that a null value is printed as `NULL`); outputs marked as DuckDB come from DuckDB 1.5 through its Python API. PostgreSQL's `psql` prints the same rows in a slightly different frame. The three clients are started as follows:
+Every query in this chapter was executed, and its output is shown below it. Unless stated otherwise the output comes from SQLite 3.45 (command-line shell with `.mode table` and `.nullvalue NULL`, so that a **null value** is printed as `NULL`); outputs marked as DuckDB come from DuckDB 1.5 through its Python API. PostgreSQL's `psql` prints the same rows in a slightly different frame. The three clients are started as follows:
 
 ```bash
 psql -d expr              # PostgreSQL: connect to the database "expr" on a server
@@ -47,7 +47,7 @@ duckdb expr.duckdb        # DuckDB command-line client
 
 ### 3.2.1. Data Types
 
-Each column of a table has a data type, which determines the domain of the corresponding attribute ([4.13.2](/4.13.2#sec-2.1)). The most common types are:
+Each column of a table has a data type, which determines the **domain** of the corresponding **attribute** ([4.13.2](/4.13.2#sec-2.1)). The most common types are:
 
 | Standard type | PostgreSQL | Values | Remarks |
 |---|---|---|---|
@@ -110,7 +110,7 @@ The constraints used in this course are:
 
 A constraint written after a column applies to that column; one written as a separate item can involve several columns. Constraints, their actions on deletion (`ON DELETE CASCADE` and others) and their enforcement are the subject of [4.13.6](/4.13.6#sec-6.1).
 
-A surrogate key, a meaningless number generated by the system, is declared in standard SQL (and PostgreSQL 10 and later) as an *identity column*:
+A **surrogate key**, a meaningless number generated by the system, is declared in standard **SQL** (and PostgreSQL 10 and later) as an *identity column*:
 
 ```sql
 CREATE TABLE run (
@@ -121,7 +121,7 @@ CREATE TABLE run (
 
 The older PostgreSQL shorthand is `serial`; MySQL writes `AUTO_INCREMENT`, and in SQLite a column declared `INTEGER PRIMARY KEY` is an alias for the internal row number and is filled automatically.
 
-Two SQLite defaults differ from the standard and catch many users. Foreign keys are not enforced unless each connection executes `PRAGMA foreign_keys = ON`; and a `PRIMARY KEY` column of an ordinary table accepts nulls unless it is also declared `NOT NULL` (an old bug kept for compatibility; `STRICT` and `WITHOUT ROWID` tables do not have it):
+Two SQLite defaults differ from the standard and catch many users. **Foreign keys** are not enforced unless each connection executes `PRAGMA foreign_keys = ON`; and a `PRIMARY KEY` column of an ordinary table accepts **nulls** unless it is also declared `NOT NULL` (an old bug kept for compatibility; `STRICT` and `WITHOUT ROWID` tables do not have it):
 
 ```sql
 CREATE TABLE p (k text PRIMARY KEY);
@@ -139,7 +139,7 @@ SELECT count(*) AS rows_with_null_key FROM p;
 
 ### 3.2.3. The Running Example
 
-The examples of this course use a small gene-expression database of the kind produced by an RNA-sequencing experiment: tissue samples from donors, some treated with a drug and some not, in each of which the expression of a set of genes was measured. Genes are annotated with the biological pathways they belong to, and pathways form a hierarchy. The gene identifiers and coordinates are those of the human reference genome (Ensembl, GRCh38); the expression values are invented for illustration.
+The examples of this course use a small gene-expression **database** of the kind produced by an RNA-sequencing experiment: tissue samples from donors, some treated with a drug and some not, in each of which the expression of a set of genes was measured. Genes are annotated with the biological pathways they belong to, and pathways form a hierarchy. The gene identifiers and coordinates are those of the human reference genome (Ensembl, GRCh38); the expression values are invented for illustration.
 
 | Table | One row per | Primary key | Foreign keys |
 |---|---|---|---|
@@ -149,7 +149,7 @@ The examples of this course use a small gene-expression database of the kind pro
 | `pathway` | pathway with its name and parent pathway (null for a top-level pathway) | `pathway_id` | `parent_id` → `pathway` |
 | `gene_pathway` | membership of a gene in a pathway | `(gene_id, pathway_id)` | `gene_id` → `gene`, `pathway_id` → `pathway` |
 
-The relationships are many-to-many: a sample has many measurements and a gene is measured in many samples, so `measurement` connects the two; likewise `gene_pathway` connects genes and pathways. [4.13.5](/4.13.5#sec-5.8) derives exactly this schema from an entity–relationship diagram.
+The relationships are many-to-many: a sample has many measurements and a gene is measured in many samples, so `measurement` connects the two; likewise `gene_pathway` connects genes and pathways. [4.13.5](/4.13.5#sec-5.8) derives exactly this **schema** from an entity–relationship diagram.
 
 ```sql
 CREATE TABLE gene (
@@ -190,7 +190,7 @@ CREATE TABLE gene_pathway (
 );
 ```
 
-A few choices deserve comment. The column is called `treatment` rather than `condition` because `CONDITION` is a reserved word in standard SQL and MySQL. `tpm` is `numeric` because PostgreSQL defines `round(x, digits)` only for `numeric`. In MySQL, `text` columns cannot be keys without a prefix length; there the identifier columns would be declared `varchar(20)`. The data are loaded with `INSERT` ([4.13.4](/4.13.4#sec-4.5) treats it fully); the last statement inserts measurements listed by gene symbol and looks up each `gene_id` with a join, a form that the following sections explain:
+A few choices deserve comment. The column is called `treatment` rather than `condition` because `CONDITION` is a reserved word in standard SQL and MySQL. `tpm` is `numeric` because PostgreSQL defines `round(x, digits)` only for `numeric`. In MySQL, `text` columns cannot be keys without a prefix length; there the identifier columns would be declared `varchar(20)`. The data are loaded with `INSERT` ([4.13.4](/4.13.4#sec-4.5) treats it fully); the last statement inserts measurements listed by gene symbol and looks up each `gene_id` with a **join**, a form that the following sections explain:
 
 ```sql
 INSERT INTO gene VALUES
@@ -281,7 +281,7 @@ Parse error near line 2: near "CONSTRAINT": syntax error
 
 SQLite supports only some forms of `ALTER TABLE` (adding, renaming and dropping columns) and rejects the second statement; other changes are made there by creating a new table, copying the rows and renaming it. PostgreSQL refuses to drop a table that a foreign key or a view depends on (`DROP TABLE sample` fails while `measurement` refers to it); `DROP TABLE sample CASCADE` drops the dependent constraints and views as well.
 
-A server database contains schemas in the sense of name spaces (`CREATE SCHEMA lab;` then `CREATE TABLE lab.sample ...`); PostgreSQL looks up unqualified names along the `search_path`, which starts with `public`. The description of all tables, columns and constraints is itself stored in tables, the system catalog ([4.13.1](/4.13.1#sec-1.4)). The standard view of it is `information_schema`, available in PostgreSQL, MySQL and DuckDB (output from DuckDB):
+A server database contains schemas in the sense of name spaces (`CREATE SCHEMA lab;` then `CREATE TABLE lab.sample ...`); PostgreSQL looks up unqualified names along the `search_path`, which starts with `public`. The description of all tables, columns and constraints is itself stored in tables, the **system catalog** ([4.13.1](/4.13.1#sec-1.4)). The standard view of it is `information_schema`, available in PostgreSQL, MySQL and DuckDB (output from DuckDB):
 
 ```sql
 SELECT table_name, column_name, data_type, is_nullable
@@ -317,13 +317,13 @@ FROM r1, r2, ..., rm
 WHERE P;
 ```
 
-where the $r_i$ are tables, the $A_j$ are expressions over their columns and $P$ is a condition. Its meaning is defined by the relational algebra ([4.13.2](/4.13.2#sec-2.3)): form the **Cartesian product** of the tables, keep the rows that satisfy $P$, and compute the listed expressions,
+where the $r_i$ are tables, the $A_j$ are expressions over their columns and $P$ is a condition. Its meaning is defined by the **relational algebra** ([4.13.2](/4.13.2#sec-2.3)): form the **Cartesian product** of the tables, keep the rows that satisfy $P$, and compute the listed expressions,
 
 $$
 \Pi_{A_1,\dots,A_n}\bigl(\sigma_P(r_1 \times r_2 \times \cdots \times r_m)\bigr),
 $$
 
-except that SQL does not remove duplicate rows from the result (§3.3.3). `SELECT *` selects all columns; `WHERE` may be omitted. An expression in the `SELECT` list may be named with `AS`:
+except that **SQL** does not remove duplicate rows from the result (§3.3.3). `SELECT *` selects all columns; `WHERE` may be omitted. An expression in the `SELECT` list may be named with `AS`:
 
 ```sql
 SELECT symbol, chrom, end_pos - start_pos + 1 AS length_bp
@@ -342,7 +342,7 @@ ORDER BY length_bp DESC;
 +--------+-------+-----------+
 ```
 
-This is the evaluation the definition prescribes, not the one a system performs: a database system never materializes a Cartesian product when it can avoid it, and chooses among equivalent plans with an optimizer ([4.13.9](/4.13.9)). Declarativeness is what gives it this freedom.
+This is the evaluation the definition prescribes, not the one a system performs: a **database system** never materializes a **Cartesian product** when it can avoid it, and chooses among equivalent plans with an optimizer ([4.13.9](/4.13.9)). Declarativeness is what gives it this freedom.
 
 ### 3.3.2. Expressions and Predicates
 
@@ -416,7 +416,7 @@ PostgreSQL returns no row for the first query, like DuckDB. Portable code compar
 
 ### 3.3.3. Duplicates
 
-A relation is a set, but an SQL table and an SQL query result are *multisets* (bags): rows may repeat. SQL keeps duplicates because removing them costs a sort or a hash, and because counts are often wanted. `SELECT DISTINCT` removes them:
+A **relation** is a set, but an SQL table and an SQL query result are *multisets* (bags): rows may repeat. SQL keeps duplicates because removing them costs a sort or a hash, and because counts are often wanted. `SELECT DISTINCT` removes them:
 
 ```sql
 SELECT tissue FROM sample;
@@ -444,13 +444,13 @@ SELECT DISTINCT tissue, treatment FROM sample;
 +--------+-----------+
 ```
 
-`DISTINCT` applies to the whole row of the result, not to the first column. A table with a primary key cannot contain two equal rows, but a query result can, as soon as its columns do not include a key.
+`DISTINCT` applies to the whole row of the result, not to the first column. A table with a **primary key** cannot contain two equal rows, but a query result can, as soon as its columns do not include a key.
 
 ## 3.4. Joins
 
 ### 3.4.1. Inner Joins
 
-Most queries combine tables. Listing several tables in `FROM` and the matching condition in `WHERE` works, but the explicit `JOIN` syntax of SQL-92 keeps the join conditions next to the tables they connect:
+Most queries combine tables. Listing several tables in `FROM` and the matching condition in `WHERE` works, but the explicit `JOIN` syntax of SQL-92 keeps the **join** conditions next to the tables they connect:
 
 ```sql
 SELECT s.sample_id, s.tissue, s.treatment, m.tpm
@@ -474,12 +474,12 @@ ORDER BY s.sample_id;
 +-----------+--------+-----------+-------+
 ```
 
-The *aliases* `m`, `g`, `s` (also called correlation names or tuple variables) name the tables within the query; a column is qualified as `g.gene_id` whenever its name occurs in more than one table. `JOIN ... ON` is the **inner join**, the relational-algebra theta join $r \bowtie_\theta s$: it pairs the rows of the two tables that satisfy the condition, and drops rows without a partner. The output shows the effect of the treatment: CDKN1A (p21), a target gene of p53, is strongly induced in the treated samples.
+The *aliases* `m`, `g`, `s` (also called correlation names or **tuple** variables) name the tables within the query; a column is qualified as `g.gene_id` whenever its name occurs in more than one table. `JOIN ... ON` is the **inner join**, the relational-algebra **theta join** $r \bowtie_\theta s$: it pairs the rows of the two tables that satisfy the condition, and drops rows without a partner. The output shows the effect of the treatment: CDKN1A (p21), a target gene of p53, is strongly induced in the treated samples.
 
 When the join columns have the same name in both tables, two shorthands exist:
 
 - `JOIN gene USING (gene_id)` equates the listed columns and keeps one copy of each;
-- `NATURAL JOIN` equates *all* columns with the same name: it is the natural join of the relational algebra.
+- `NATURAL JOIN` equates *all* columns with the same name: it is the **natural join** of the **relational algebra**.
 
 ```sql
 SELECT symbol, pathway_id FROM gene NATURAL JOIN gene_pathway WHERE chrom = 'chr17';
@@ -524,7 +524,7 @@ ORDER BY child.pathway_id;
 
 (The `LEFT JOIN`, explained next, keeps the top-level pathways, which have no parent.) A self join follows one level of the hierarchy; following all levels needs a recursive query ([4.13.4](/4.13.4#sec-4.3)).
 
-`CROSS JOIN` is the Cartesian product. It is rarely what one wants, but it generates all combinations, for instance every (sample, gene) pair, from which the missing measurements can be found ([4.13.4](/4.13.4#sec-4.2)):
+`CROSS JOIN` is the **Cartesian product**. It is rarely what one wants, but it generates all combinations, for instance every (sample, gene) pair, from which the missing measurements can be found ([4.13.4](/4.13.4#sec-4.2)):
 
 ```sql
 SELECT count(*) AS pairs FROM gene CROSS JOIN sample;
@@ -540,7 +540,7 @@ SELECT count(*) AS pairs FROM gene CROSS JOIN sample;
 
 ### 3.4.3. Outer Joins
 
-An inner join loses the rows that have no partner. An outer join keeps them and fills the columns of the missing partner with nulls: the **left join** (`LEFT [OUTER] JOIN`) keeps all rows of the left table, the right join keeps those of the right table, and the **full outer join** (`FULL [OUTER] JOIN`) keeps both. ACTB belongs to no pathway, so it appears only in the outer join:
+An **inner join** loses the rows that have no partner. An outer join keeps them and fills the columns of the missing partner with **nulls**: the **left join** (`LEFT [OUTER] JOIN`) keeps all rows of the left table, the right join keeps those of the right table, and the **full outer join** (`FULL [OUTER] JOIN`) keeps both. ACTB belongs to no pathway, so it appears only in the outer join:
 
 ```sql
 SELECT g.symbol, gp.pathway_id
@@ -565,7 +565,7 @@ ORDER BY g.symbol;
 +--------+------------+
 ```
 
-A full outer join over three tables shows both kinds of unmatched rows, the gene without a pathway and the pathway (Metabolism) without a directly annotated gene:
+A **full outer join** over three tables shows both kinds of unmatched rows, the gene without a pathway and the pathway (Metabolism) without a directly annotated gene:
 
 ```sql
 SELECT p.name AS pathway, g.symbol
@@ -593,7 +593,7 @@ ORDER BY p.name, g.symbol;
 +-------------------------+--------+
 ```
 
-SQLite sorts strings by their bytes, so lower-case `p53-...` comes after the capitalized names, and it places nulls first in ascending order; PostgreSQL sorts under the database's collation (typically case-insensitive at the first level) and places nulls last (§3.5). `RIGHT JOIN` and `FULL JOIN` are available in SQLite since version 3.39; MySQL has no `FULL JOIN`.
+SQLite sorts strings by their bytes, so lower-case `p53-...` comes after the capitalized names, and it places nulls first in ascending order; PostgreSQL sorts under the **database**'s collation (typically case-insensitive at the first level) and places nulls last (§3.5). `RIGHT JOIN` and `FULL JOIN` are available in SQLite since version 3.39; MySQL has no `FULL JOIN`.
 
 The placement of a condition matters in an outer join. A condition in `ON` decides which rows are partners; a condition in `WHERE` filters the joined result afterwards, and a `WHERE` condition on the right table rejects the null-extended rows, turning the outer join back into an inner join:
 
@@ -633,7 +633,7 @@ ORDER BY g.symbol;
 +--------+------------+
 ```
 
-The anti-join pattern, "rows of $r$ without a partner in $s$", is a left join followed by `WHERE s.key IS NULL`:
+The anti-join pattern, "rows of $r$ without a partner in $s$", is a **left join** followed by `WHERE s.key IS NULL`:
 
 ```sql
 SELECT g.symbol
@@ -664,7 +664,7 @@ The same question can be asked with `NOT EXISTS` ([4.13.4](/4.13.4#sec-4.1)).
 
 The rows of a table have no order, and neither do the rows of a query result unless the query ends with `ORDER BY`. A result that "came out sorted" yesterday may come out differently after the data grow or the plan changes. `ORDER BY` takes a list of expressions, each with `ASC` (the default) or `DESC`, and may refer to output names such as `length_bp` above.
 
-Where nulls go is not portable: PostgreSQL treats null as larger than every value (last in ascending order, first in descending order), SQLite and MySQL treat it as smaller, and DuckDB puts nulls last in both directions. The standard clause `NULLS FIRST` / `NULLS LAST` (PostgreSQL, SQLite, DuckDB) makes the intent explicit:
+Where **nulls** go is not portable: PostgreSQL treats null as larger than every value (last in ascending order, first in descending order), SQLite and MySQL treat it as smaller, and DuckDB puts nulls last in both directions. The standard clause `NULLS FIRST` / `NULLS LAST` (PostgreSQL, SQLite, DuckDB) makes the intent explicit:
 
 ```sql
 SELECT sample_id, donor_age FROM sample ORDER BY donor_age DESC;
@@ -697,7 +697,7 @@ In PostgreSQL the first query would list S05 first. `LIMIT n OFFSET k` (PostgreS
 
 ### 3.6.1. Aggregate Functions
 
-An *aggregate function* maps a multiset of values to a single value. The standard ones are `count`, `sum`, `avg`, `min` and `max`; PostgreSQL and DuckDB add many more (`stddev_samp`, `var_samp`, `string_agg`, `array_agg`, `percentile_cont`, `bool_and`, ...). Every aggregate except `count(*)` ignores nulls: `count(*)` counts rows, `count(e)` counts the rows in which `e` is not null, and `count(DISTINCT e)` counts distinct non-null values.
+An *aggregate function* maps a multiset of values to a single value. The standard ones are `count`, `sum`, `avg`, `min` and `max`; PostgreSQL and DuckDB add many more (`stddev_samp`, `var_samp`, `string_agg`, `array_agg`, `percentile_cont`, `bool_and`, ...). Every aggregate except `count(*)` ignores **nulls**: `count(*)` counts rows, `count(e)` counts the rows in which `e` is not null, and `count(DISTINCT e)` counts distinct non-null values.
 
 ```sql
 SELECT count(*) AS n_samples, count(donor_age) AS n_with_age,
@@ -777,7 +777,7 @@ ORDER BY mean_tpm DESC;
 +--------+-----------+----------+
 ```
 
-The count of 4 for EGFR shows the two missing measurements. Because one output row stands for a whole group, the `SELECT` list of a grouped query may contain only grouping expressions, aggregates, and expressions built from them. The standard relaxes this rule slightly: a column that is functionally determined by the grouping columns ([4.13.6](/4.13.6#sec-6.3)) is allowed, and PostgreSQL applies the relaxation when the grouping columns include a table's primary key (`GROUP BY g.gene_id` permits `g.symbol`). The systems differ on violations:
+The count of 4 for EGFR shows the two missing measurements. Because one output row stands for a whole group, the `SELECT` list of a grouped query may contain only grouping expressions, aggregates, and expressions built from them. The standard relaxes this rule slightly: a column that is functionally determined by the grouping columns ([4.13.6](/4.13.6#sec-6.3)) is allowed, and PostgreSQL applies the relaxation when the grouping columns include a table's **primary key** (`GROUP BY g.gene_id` permits `g.symbol`). The systems differ on violations:
 
 ```sql
 SELECT tissue, sample_id, max(donor_age) FROM sample GROUP BY tissue;
@@ -840,7 +840,7 @@ The two direct targets of p53, CDKN1A and MDM2, are induced; the housekeeping ge
 
 ## 3.7. NULL in SQL
 
-The null value `NULL` stands for a missing or inapplicable value, and comparisons with it follow the three-valued logic of [4.13.2](/4.13.2#sec-2.6): `x = NULL` is neither true nor false but *unknown*, even when `x` is null. `WHERE` and `HAVING` keep a row only when the condition is *true*, so a row with an unknown condition is dropped. Sample S05, whose donor age is unknown, satisfies neither `donor_age > 50` nor `NOT (donor_age > 50)`:
+The **null value** `NULL` stands for a missing or inapplicable value, and comparisons with it follow the **three-valued logic** of [4.13.2](/4.13.2#sec-2.6): `x = NULL` is neither true nor false but *unknown*, even when `x` is **null**. `WHERE` and `HAVING` keep a row only when the condition is *true*, so a row with an unknown condition is dropped. Sample S05, whose donor age is unknown, satisfies neither `donor_age > 50` nor `NOT (donor_age > 50)`:
 
 ```sql
 SELECT sample_id FROM sample WHERE donor_age > 50;
@@ -912,16 +912,16 @@ flowchart LR
 
 Many rules follow from this order:
 
-- `WHERE` cannot use aggregates (groups do not exist yet) and, in standard SQL and PostgreSQL, cannot use output names defined in `SELECT`; `ORDER BY` can use both. SQLite and DuckDB accept `WHERE length_bp > 50000` with `length_bp` defined in the `SELECT` list, as an extension.
+- `WHERE` cannot use aggregates (groups do not exist yet) and, in standard **SQL** and PostgreSQL, cannot use output names defined in `SELECT`; `ORDER BY` can use both. SQLite and DuckDB accept `WHERE length_bp > 50000` with `length_bp` defined in the `SELECT` list, as an extension.
 - A condition that does not involve aggregates belongs in `WHERE`, not in `HAVING`: the result is the same, but filtering early is clearer and lets the system discard rows before grouping.
 - `LIMIT` applies to the sorted, final result.
 
-The logical order specifies the result, not the execution: an optimizer may evaluate parts of `WHERE` inside a join, use an index to produce rows already sorted, or stop after the first $n$ rows of a `LIMIT`. How it does so is the subject of [4.13.9](/4.13.9).
+The logical order specifies the result, not the execution: an optimizer may evaluate parts of `WHERE` inside a **join**, use an index to produce rows already sorted, or stop after the first $n$ rows of a `LIMIT`. How it does so is the subject of [4.13.9](/4.13.9).
 
 ## Summary
 
-- SQL (ISO/IEC 9075, current edition SQL:2023) is declarative; PostgreSQL follows the standard closely, SQLite and DuckDB are embedded engines, and every system has its own extensions and defaults.
-- `CREATE TABLE` declares columns with types and constraints: `NOT NULL`, `PRIMARY KEY`, `UNIQUE`, `REFERENCES`, `CHECK`, `DEFAULT`; identity columns generate surrogate keys. SQLite enforces types only in `STRICT` tables and foreign keys only after `PRAGMA foreign_keys = ON`.
+- **SQL** (ISO/IEC 9075, current edition SQL:2023) is declarative; PostgreSQL follows the standard closely, SQLite and DuckDB are embedded engines, and every system has its own extensions and defaults.
+- `CREATE TABLE` declares columns with types and constraints: `NOT NULL`, `PRIMARY KEY`, `UNIQUE`, `REFERENCES`, `CHECK`, `DEFAULT`; **identity columns** generate **surrogate keys**. SQLite enforces types only in `STRICT` tables and foreign keys only after `PRAGMA foreign_keys = ON`.
 - The running example has five tables: `gene`, `sample`, `measurement` (sample × gene), `pathway` (a hierarchy through `parent_id`) and `gene_pathway` (gene × pathway).
 - `SELECT A FROM r WHERE P` means $\Pi_A(\sigma_P(r_1\times\cdots\times r_m))$ evaluated on multisets; `DISTINCT` removes duplicates.
 - `JOIN ... ON` is the inner join; `USING` and `NATURAL JOIN` equate same-named columns; `LEFT`, `RIGHT` and `FULL` outer joins keep unmatched rows with nulls. Conditions on the optional side belong in `ON`.

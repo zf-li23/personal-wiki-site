@@ -3,26 +3,26 @@ title: Transactions and Recovery
 description: "Transactions and the ACID properties; schedules, conflicts, conflict serializability and the precedence-graph test (with proof and a checker), view serializability; recoverable, cascadeless and strict schedules; failure classes, stable storage and the steal/no-force buffer policies; log-based recovery with write-ahead logging, checkpoints, redo and undo phases, a correctness argument and a simulated recovery trace; ARIES; recovery in PostgreSQL, InnoDB and SQLite, with a crash test of SQLite's WAL mode."
 ---
 
-A database is shared by many users and must outlive the failures of the machine it runs on. Both facts threaten its correctness. Two programs that read and update the same rows at the same time can interleave their steps so that one overwrites the other's work, and a crash in the middle of a multi-step update can leave the database half changed. The *transaction* is the abstraction that removes both problems from the application programmer's concerns: a group of operations that the system executes as if it ran alone and either completely or not at all. This chapter defines transactions and their guarantees, develops the theory of schedules that says when an interleaved execution is as good as a serial one, and then treats the half of the problem concerned with failures: logging and recovery. The other half, the protocols that produce only good interleavings, is the subject of [4.13.11](/4.13.11). The SQL statements that delimit transactions appeared in [4.13.4](/4.13.4#sec-4.7); the buffer pool whose write-back policy recovery must control is that of [4.13.7](/4.13.7#sec-7.2). The same ideas appear in file systems, where **journaling** protects metadata against crashes ([4.11.7](/4.11.7#sec-7.4)); databases apply them to arbitrary user data with stronger guarantees.
+A **database** is shared by many users and must outlive the failures of the machine it runs on. Both facts threaten its correctness. Two programs that read and update the same rows at the same time can interleave their steps so that one overwrites the other's work, and a crash in the middle of a multi-step update can leave the database half changed. The *transaction* is the abstraction that removes both problems from the application programmer's concerns: a group of operations that the system executes as if it ran alone and either completely or not at all. This chapter defines transactions and their guarantees, develops the theory of schedules that says when an interleaved execution is as good as a serial one, and then treats the half of the problem concerned with failures: logging and recovery. The other half, the protocols that produce only good interleavings, is the subject of [4.13.11](/4.13.11). The **SQL** statements that delimit transactions appeared in [4.13.4](/4.13.4#sec-4.7); the **buffer pool** whose write-back policy recovery must control is that of [4.13.7](/4.13.7#sec-7.2). The same ideas appear in file systems, where **journaling** protects metadata against crashes ([4.11.7](/4.11.7#sec-7.4)); databases apply them to arbitrary user data with stronger guarantees.
 
 ## 10.1. Transactions
 
 ### 10.1.1. The Concept and the ACID Properties
 
-For the theory we abstract a database as a set of named *data items* $A, B, \dots$ (a value, a row or a page) and a transaction as a sequence of two kinds of operations: $\operatorname{read}(X)$ copies item $X$ into a local variable of the transaction, and $\operatorname{write}(X)$ copies a local value back into the database. Computations on local variables are invisible to the system.
+For the theory we abstract a **database** as a set of named *data items* $A, B, \dots$ (a value, a row or a **page**) and a transaction as a sequence of two kinds of operations: $\operatorname{read}(X)$ copies item $X$ into a local variable of the transaction, and $\operatorname{write}(X)$ copies a local value back into the database. Computations on local variables are invisible to the system.
 
 **Definition 10.1.1 (Transaction)** A **transaction** is a unit of program execution that accesses and possibly updates data items, delimited by a begin operation and ending either with a **commit**, which makes its effects permanent, or with an **abort** (rollback), which undoes them.
 
 **Definition 10.1.2 (ACID)** A DBMS guarantees for each transaction:
 
-1. **Atomicity**: either all operations of the transaction are reflected in the database or none are.
-2. **Consistency**: executed alone on a consistent database (one that satisfies the integrity constraints and the application's invariants), the transaction leaves the database consistent.
+1. **Atomicity**: either all operations of the **transaction** are reflected in the database or none are.
+2. **Consistency**: executed alone on a consistent database (one that satisfies the **integrity constraints** and the application's invariants), the transaction leaves the database consistent.
 3. **Isolation**: although transactions may run concurrently, each transaction is unaware of the others; for every pair $T_i, T_j$ it appears to $T_i$ that $T_j$ finished before $T_i$ started or started after $T_i$ finished.
 4. **Durability**: once a transaction has committed, its changes persist, even if the system fails afterwards.
 
-Consistency is largely the responsibility of the programmer, who writes transactions that preserve the invariants, assisted by the integrity constraints the DBMS checks ([4.13.6](/4.13.6)). Atomicity and durability are provided by the *recovery system* (§10.4–§10.7), isolation by *concurrency control* ([4.13.11](/4.13.11)).
+**Consistency** is largely the responsibility of the programmer, who writes transactions that preserve the invariants, assisted by the integrity constraints the **DBMS** checks ([4.13.6](/4.13.6)). **Atomicity** and durability are provided by the *recovery system* (§10.4–§10.7), isolation by *concurrency control* ([4.13.11](/4.13.11)).
 
-**Example 10.1.1** A laboratory re-processes sample `S03` and replaces its measurements: the transaction deletes the old rows of `measurement` for `S03`, inserts the new ones, and updates a processing date. Without atomicity, a crash after the deletion leaves a sample without data; without isolation, a concurrent query computing the mean expression per tissue may see the sample with no rows, with some new rows, or with both old and new rows; without durability, a report already sent to collaborators may refer to measurements that disappear after a restart. In abstract form the transaction is $\operatorname{read}(X)$, $\operatorname{write}(X)$, $\operatorname{read}(Y)$, $\operatorname{write}(Y)$ on two data items.
+**Example 10.1.1** A laboratory re-processes sample `S03` and replaces its measurements: the transaction deletes the old rows of `measurement` for `S03`, inserts the new ones, and updates a processing date. Without atomicity, a crash after the deletion leaves a sample without data; without **isolation**, a concurrent query computing the mean expression per tissue may see the sample with no rows, with some new rows, or with both old and new rows; without **durability**, a report already sent to collaborators may refer to measurements that disappear after a restart. In abstract form the transaction is $\operatorname{read}(X)$, $\operatorname{write}(X)$, $\operatorname{read}(Y)$, $\operatorname{write}(Y)$ on two data items.
 
 ### 10.1.2. Transaction States
 
@@ -38,7 +38,7 @@ stateDiagram-v2
     Aborted --> [*]
 ```
 
-A transaction is *active* while it executes, *partially committed* after its last statement, *committed* once the system has made its effects durable, *failed* when it can no longer proceed (an error, a violated constraint, a deadlock, or an explicit `ROLLBACK`), and *aborted* after its effects have been undone. An aborted transaction can be restarted as a new transaction if the failure was not caused by its own logic, as after a deadlock. External actions that cannot be undone, such as printing a result or sending a message, should be performed only after commit.
+A transaction is *active* while it executes, *partially committed* after its last statement, *committed* once the system has made its effects durable, *failed* when it can no longer proceed (an error, a violated constraint, a **deadlock**, or an explicit `ROLLBACK`), and *aborted* after its effects have been undone. An aborted transaction can be restarted as a new transaction if the failure was not caused by its own logic, as after a deadlock. External actions that cannot be undone, such as printing a result or sending a message, should be performed only after **commit**.
 
 ## 10.2. Schedules and Serializability
 
@@ -46,7 +46,7 @@ A transaction is *active* while it executes, *partially committed* after its las
 
 **Definition 10.2.1 (Schedule)** A **schedule** of a set of transactions is a sequence of all their operations (including commit and abort) that preserves the order of the operations within each transaction. A schedule is **serial** if the operations of each transaction are consecutive, that is, if the transactions run one after another.
 
-A serial schedule of consistent transactions always preserves consistency, since each transaction starts from a consistent state. Running transactions concurrently is nevertheless essential: while one waits for a disk read or for the client, others can use the CPU and the other disks, which raises throughput and keeps short transactions from waiting behind long ones. The question is which interleavings are acceptable.
+A serial **schedule** of consistent **transactions** always preserves **consistency**, since each transaction starts from a consistent state. Running transactions concurrently is nevertheless essential: while one waits for a disk read or for the client, others can use the CPU and the other disks, which raises throughput and keeps short transactions from waiting behind long ones. The question is which interleavings are acceptable.
 
 Below, $R_i(X)$ and $W_i(X)$ denote $\operatorname{read}(X)$ and $\operatorname{write}(X)$ by transaction $T_i$. Consider $T_1$, which moves 50 units from $A$ to $B$, and $T_2$, which adds 10% interest to $A$.
 
@@ -63,7 +63,7 @@ With $A = 1000$ and $B = 2000$ initially, the two serial schedules end with $(A,
 
 **Definition 10.2.2 (Serializable Schedule)** A schedule is **serializable** if its effect on every database state is the same as that of some serial schedule of the same transactions.
 
-Serializability in this semantic sense depends on what the transactions compute and cannot be decided from the sequence of reads and writes alone. The theory therefore uses a sufficient condition that depends only on the order of conflicting operations.
+**Serializability** in this semantic sense depends on what the transactions compute and cannot be decided from the sequence of reads and writes alone. The theory therefore uses a sufficient condition that depends only on the order of conflicting operations.
 
 ### 10.2.2. Conflict Serializability
 
@@ -73,7 +73,7 @@ The pairs $R_i(X), W_j(X)$ and $W_i(X), W_j(X)$ conflict; $R_i(X), R_j(X)$ and o
 
 **Definition 10.2.4 (Conflict Serializability)** Two schedules of the same transactions are **conflict equivalent** if one can be transformed into the other by a sequence of swaps of adjacent non-conflicting operations; equivalently, if every pair of conflicting operations appears in the same order in both. A schedule is **conflict serializable** if it is conflict equivalent to a serial schedule.
 
-Every conflict serializable schedule is serializable, since conflict equivalent schedules read the same values and write the same final values. The converse fails: some serializable schedules are not conflict serializable (§10.2.4).
+Every **conflict serializable** schedule is serializable, since **conflict equivalent** schedules read the same values and write the same final values. The converse fails: some serializable schedules are not conflict serializable (§10.2.4).
 
 ### 10.2.3. The Precedence Graph
 
@@ -81,13 +81,13 @@ Every conflict serializable schedule is serializable, since conflict equivalent 
 
 An edge $T_i \to T_j$ says that in any conflict equivalent serial schedule, $T_i$ must come before $T_j$.
 
-**Theorem 10.2.1** A schedule is conflict serializable if and only if its precedence graph is acyclic. In that case, every **topological sorting** of the precedence graph gives a conflict equivalent serial schedule.
+**Theorem 10.2.1** A schedule is conflict serializable if and only if its **precedence graph** is acyclic. In that case, every **topological sorting** of the precedence graph gives a conflict equivalent serial schedule.
 
 **Proof** Suppose $S$ is conflict equivalent to a serial schedule $S'$ in which the transactions appear in the order $T_{\pi(1)}, \dots, T_{\pi(n)}$. If $T_i \to T_j$ is an edge, some operation of $T_i$ precedes a conflicting operation of $T_j$ in $S$, hence also in $S'$, so $T_i$ precedes $T_j$ in the serial order. Every edge thus goes forward in a linear order of the vertices, and the graph has no cycle.
 
-Conversely, suppose the graph is acyclic, so it is a **directed acyclic graph** and has a topological order $T_{\pi(1)}, \dots, T_{\pi(n)}$, in which every edge goes from an earlier to a later transaction. Let $S'$ be the serial schedule in this order. Take any pair of conflicting operations $o_i$ of $T_i$ and $o_j$ of $T_j$ with $o_i$ before $o_j$ in $S$. Then $T_i \to T_j$ is an edge, so $T_i$ precedes $T_j$ in the topological order, and $o_i$ precedes $o_j$ in $S'$. All conflicting pairs are therefore in the same order in $S$ and $S'$, and the schedules are conflict equivalent. $\square$
+Conversely, suppose the graph is acyclic, so it is a **directed acyclic graph** and has a topological order $T_{\pi(1)}, \dots, T_{\pi(n)}$, in which every edge goes from an earlier to a later transaction. Let $S'$ be the serial schedule in this order. Take any pair of **conflicting operations** $o_i$ of $T_i$ and $o_j$ of $T_j$ with $o_i$ before $o_j$ in $S$. Then $T_i \to T_j$ is an edge, so $T_i$ precedes $T_j$ in the topological order, and $o_i$ precedes $o_j$ in $S'$. All conflicting pairs are therefore in the same order in $S$ and $S'$, and the schedules are conflict equivalent. $\square$
 
-Building the graph takes time quadratic in the length of the schedule (linear per item with an index of the last reads and writes), and cycle detection is linear in its size. The following checker builds the graph and returns a serial order or a cycle.
+Building the graph takes time quadratic in the length of the schedule (linear per item with an **index** of the last reads and writes), and cycle detection is linear in its size. The following checker builds the graph and returns a serial order or a cycle.
 
 ```python
 from graphlib import TopologicalSorter, CycleError
@@ -136,31 +136,31 @@ S3 [('T1', 'T2'), ('T3', 'T1'), ('T3', 'T2')] -> ['T3', 'T1', 'T2']
 S4 [('T1', 'T2'), ('T2', 'T3')] -> ['T1', 'T2', 'T3']
 ```
 
-**Example 10.2.1** Schedule $S_2$ is the lost update of §10.2.1 restricted to $A$ and $B$: $R_2(A)$ precedes $W_1(A)$, giving $T_2 \to T_1$, and $W_1(A)$ precedes $W_2(A)$, giving $T_1 \to T_2$. The cycle shows that no serial order is equivalent. In $S_3$, $T_3$ reads $B$ before $T_2$ writes it and writes $C$ before $T_1$ reads it, so $T_3$ must come first, although its first operation occurs after operations of $T_1$ and $T_2$: the equivalent serial order need not be the order in which the transactions started. $S_4$ interleaves all three transactions and is equivalent to $T_1, T_2, T_3$.
+**Example 10.2.1** Schedule $S_2$ is the **lost update** of §10.2.1 restricted to $A$ and $B$: $R_2(A)$ precedes $W_1(A)$, giving $T_2 \to T_1$, and $W_1(A)$ precedes $W_2(A)$, giving $T_1 \to T_2$. The cycle shows that no serial order is equivalent. In $S_3$, $T_3$ reads $B$ before $T_2$ writes it and writes $C$ before $T_1$ reads it, so $T_3$ must come first, although its first operation occurs after operations of $T_1$ and $T_2$: the equivalent serial order need not be the order in which the transactions started. $S_4$ interleaves all three transactions and is equivalent to $T_1, T_2, T_3$.
 
 ### 10.2.4. View Serializability
 
 **Definition 10.2.6 (View Serializability)** Two schedules of the same transactions are **view equivalent** if (1) each transaction reads the initial value of an item in one schedule if and only if it does so in the other, (2) each read reads the value written by the same write in both, and (3) the same transaction performs the final write of each item in both. A schedule is **view serializable** if it is view equivalent to a serial schedule.
 
-Conflict serializability implies view serializability. The schedule $R_1(A), W_2(A), W_1(A), W_3(A)$ is view equivalent to the serial schedule $T_1, T_2, T_3$ (only $T_1$ reads, and it reads the initial value; $T_3$ writes last), but its precedence graph has the cycle $T_1 \to T_2 \to T_1$. The writes of $T_2$ and $T_1$ are *blind writes* (writes without a preceding read of the item by the same transaction) that $T_3$ overwrites. Testing view serializability is NP-complete (Papadimitriou, 1979), and since the additional schedules it admits are rare and of little practical value, concurrency control protocols aim at conflict serializability.
+Conflict serializability implies **view serializability**. The schedule $R_1(A), W_2(A), W_1(A), W_3(A)$ is **view equivalent** to the serial schedule $T_1, T_2, T_3$ (only $T_1$ reads, and it reads the initial value; $T_3$ writes last), but its precedence graph has the cycle $T_1 \to T_2 \to T_1$. The writes of $T_2$ and $T_1$ are *blind writes* (writes without a preceding read of the item by the same transaction) that $T_3$ overwrites. Testing view serializability is **NP-complete** (Papadimitriou, 1979), and since the additional schedules it admits are rare and of little practical value, concurrency control protocols aim at conflict serializability.
 
 ## 10.3. Recoverability
 
-Serializability considers only committed transactions. When a transaction aborts, the system must undo its effects, and the interleaving may make this impossible.
+**Serializability** considers only committed **transactions**. When a transaction **aborts**, the system must undo its effects, and the interleaving may make this impossible.
 
 **Definition 10.3.1 (Recoverable, Cascadeless and Strict Schedules)** In a schedule, $T_j$ *reads from* $T_i$ if $T_j$ reads an item $X$ whose last write before the read was performed by $T_i$, and $T_i$ has not aborted before the read. A schedule is
 
-1. **recoverable** if, whenever $T_j$ reads from $T_i$, the commit of $T_i$ precedes the commit of $T_j$;
+1. **recoverable** if, whenever $T_j$ reads from $T_i$, the **commit** of $T_i$ precedes the commit of $T_j$;
 2. **cascadeless** if, whenever $T_j$ reads an item written by $T_i$, the commit of $T_i$ precedes the read;
 3. **strict** if no transaction reads or writes an item written by another transaction until that transaction has committed or aborted.
 
-In the schedule $W_1(A)$, $R_2(A)$, $C_2$, $A_1$ (where $C$ and $A$ stand for commit and abort), $T_2$ committed a result computed from a value of $T_1$ that never officially existed. Since $T_2$ is committed, durability forbids undoing it, and atomicity of $T_1$ cannot be achieved: the schedule is not recoverable. In $W_1(A)$, $R_2(A)$, $W_2(B)$, $A_1$, the abort of $T_1$ forces the abort of $T_2$, which read from it, and possibly of further transactions that read from $T_2$: a *cascading rollback*. Cascadeless schedules avoid cascades by letting transactions read only committed data; strict schedules also forbid overwriting uncommitted data, which is what allows undo by restoring old values (§10.5).
+In the **schedule** $W_1(A)$, $R_2(A)$, $C_2$, $A_1$ (where $C$ and $A$ stand for commit and abort), $T_2$ committed a result computed from a value of $T_1$ that never officially existed. Since $T_2$ is committed, **durability** forbids undoing it, and **atomicity** of $T_1$ cannot be achieved: the schedule is not recoverable. In $W_1(A)$, $R_2(A)$, $W_2(B)$, $A_1$, the abort of $T_1$ forces the abort of $T_2$, which read from it, and possibly of further transactions that read from $T_2$: a *cascading rollback*. Cascadeless schedules avoid cascades by letting transactions read only committed data; strict schedules also forbid overwriting uncommitted data, which is what allows undo by restoring old values (§10.5).
 
 **Proposition 10.3.1** Every strict schedule is cascadeless, and every cascadeless schedule is recoverable.
 
 **Proof** Strictness forbids in particular reading an item written by an uncommitted transaction, which is the cascadeless condition. In a cascadeless schedule, if $T_j$ reads from $T_i$, then $T_i$ committed before the read, hence before the commit of $T_j$, which follows the read. $\square$
 
-The inclusions are strict: $W_1(A), W_2(A), C_1, C_2$ is cascadeless but not strict, and $W_1(A), R_2(A), C_1, C_2$ is recoverable but not cascadeless. The strict two-phase locking protocol of [4.13.11](/4.13.11) produces schedules that are both conflict serializable and strict.
+The inclusions are strict: $W_1(A), W_2(A), C_1, C_2$ is cascadeless but not strict, and $W_1(A), R_2(A), C_1, C_2$ is recoverable but not cascadeless. The strict two-phase locking protocol of [4.13.11](/4.13.11) produces schedules that are both **conflict serializable** and strict.
 
 ## 10.4. Failures and Storage
 
@@ -172,13 +172,13 @@ The inclusions are strict: $W_1(A), W_2(A), C_1, C_2$ is cascadeless but not str
 | System crash | power failure, operating-system or DBMS crash | main memory (buffer pool, in-memory state); persistent storage survives | recovery from the log at restart |
 | Media failure | disk failure, corrupted device | part of persistent storage | restore a backup and replay the archived log; replication |
 
-The recovery system assumes *fail-stop* behaviour: a crash halts the system without corrupting persistent storage. Partial writes of a page (a *torn page*) do happen, and systems detect them with page checksums and repair them from a full-page image in the log (PostgreSQL's `full_page_writes`) or from a second copy (InnoDB's doublewrite buffer).
+The recovery system assumes *fail-stop* behaviour: a crash halts the system without corrupting persistent storage. Partial writes of a **page** (a *torn page*) do happen, and systems detect them with page checksums and repair them from a full-page image in the log (PostgreSQL's `full_page_writes`) or from a second copy (InnoDB's doublewrite buffer).
 
 ### 10.4.2. Stable Storage and Buffer Policies
 
 **Definition 10.4.1 (Stable Storage)** **Stable storage** is an idealized storage medium whose contents are never lost. It is approximated by writing each block to several independent devices (mirroring, **RAID**, replicas in other machines or data centers) and by completing a write only after the device has confirmed it is persistent (`fsync`, with the device's volatile write cache flushed).
 
-Recovery is shaped by two decisions of the buffer manager.
+Recovery is shaped by two decisions of the **buffer manager**.
 
 **Definition 10.4.2 (Steal and Force Policies)** Under a **steal** policy, the buffer manager may write a page modified by an uncommitted transaction to disk (to free its frame); under **no-steal**, such pages stay in memory until the transaction ends. Under a **force** policy, all pages modified by a transaction are written to disk before it commits; under **no-force**, they may be written any time later.
 
@@ -189,7 +189,7 @@ Recovery is shaped by two decisions of the buffer manager.
 | no-steal, no-force | no | yes | |
 | steal, no-force | yes | yes | best performance; used by almost all systems |
 
-Steal requires the ability to *undo* uncommitted changes found on disk after a crash; no-force requires the ability to *redo* committed changes that never reached the disk. Both are provided by a log.
+**Steal** requires the ability to *undo* uncommitted changes found on disk after a crash; **no-force** requires the ability to *redo* committed changes that never reached the disk. Both are provided by a log.
 
 ## 10.5. Log-Based Recovery
 
@@ -202,19 +202,19 @@ Steal requires the ability to *undo* uncommitted changes found on disk after a c
 - $\langle T_i\ \mathrm{commit} \rangle$ and $\langle T_i\ \mathrm{abort} \rangle$ when $T_i$ ends;
 - *redo-only* records $\langle T_i, X, V \rangle$ written while undoing an update of $T_i$ (in ARIES called *compensation log records*), and checkpoint records (§10.5.3).
 
-A transaction is regarded as committed exactly when its commit record has reached stable storage. Log records are appended to an in-memory log buffer and forced to stable storage in batches; one `fsync` of the log can make the commits of many concurrent transactions durable at once, a technique called *group commit*.
+A **transaction** is regarded as committed exactly when its **commit** record has reached **stable storage**. Log records are appended to an in-memory log buffer and forced to stable storage in batches; one `fsync` of the log can make the commits of many concurrent transactions durable at once, a technique called *group commit*.
 
 **Definition 10.5.2 (Write-Ahead Logging)** A recovery scheme follows **write-ahead logging** (WAL) if
 
-1. before a modified data page is written to stable storage, all log records describing changes to that page have been written to stable storage; and
-2. before a transaction commits, all its log records, including the commit record, have been written to stable storage.
+1. before a modified data **page** is written to stable storage, all **log records** describing changes to that page have been written to stable storage; and
+2. before a transaction commits, all its **log** records, including the commit record, have been written to stable storage.
 
-The first rule makes steal safe: whatever uncommitted value reaches the disk, its before-image is already in the log. The second makes no-force safe: whatever committed value is missing from the disk, its after-image is in the log. The buffer manager enforces rule 1 by comparing the LSN of the last change to a page (PostgreSQL's `pd_lsn`, [4.13.7](/4.13.7#sec-7.3.3)) with the LSN up to which the log has been flushed before writing the page.
+The first rule makes **steal** safe: whatever uncommitted value reaches the disk, its before-image is already in the log. The second makes **no-force** safe: whatever committed value is missing from the disk, its after-image is in the log. The **buffer manager** enforces rule 1 by comparing the LSN of the last change to a page (PostgreSQL's `pd_lsn`, [4.13.7](/4.13.7#sec-7.3.3)) with the LSN up to which the log has been flushed before writing the page.
 
 ### 10.5.2. Undo, Redo and Rollback
 
 - $\operatorname{redo}(\langle T_i, X, V_1, V_2 \rangle)$ sets $X$ to $V_2$; $\operatorname{undo}$ sets $X$ to $V_1$. Both write *values*, not differences, so applying them twice has the same effect as applying them once: they are idempotent, which matters if the system crashes during recovery.
-- A *rollback* of $T_i$ during normal operation scans the log backwards; for each update record $\langle T_i, X, V_1, V_2 \rangle$ it restores $X := V_1$ and logs a redo-only record $\langle T_i, X, V_1 \rangle$; at $\langle T_i\ \mathrm{start} \rangle$ it logs $\langle T_i\ \mathrm{abort} \rangle$. Logging the undo actions turns rollback itself into ordinary history that can be repeated by redo.
+- A *rollback* of $T_i$ during normal operation scans the log backwards; for each update record $\langle T_i, X, V_1, V_2 \rangle$ it restores $X := V_1$ and logs a redo-only record $\langle T_i, X, V_1 \rangle$; at $\langle T_i\ \mathrm{start} \rangle$ it logs $\langle T_i\ \mathrm{abort} \rangle$. Logging the undo actions turns **rollback** itself into ordinary history that can be repeated by redo.
 
 ### 10.5.3. Checkpoints
 
@@ -227,13 +227,13 @@ Without checkpoints, recovery would have to scan the log from the beginning of t
 1. *Redo phase.* Find the last $\langle \mathrm{checkpoint}\ L \rangle$ record and set the *undo list* to $L$. Scan the log forward from the checkpoint. For every update record and every redo-only record, redo it. For $\langle T_i\ \mathrm{start} \rangle$ add $T_i$ to the undo list; for $\langle T_i\ \mathrm{commit} \rangle$ or $\langle T_i\ \mathrm{abort} \rangle$ remove it.
 2. *Undo phase.* Scan the log backward from the end. For every update record $\langle T_i, X, V_1, V_2 \rangle$ with $T_i$ in the undo list, restore $X := V_1$ and log $\langle T_i, X, V_1 \rangle$. At $\langle T_i\ \mathrm{start} \rangle$ for $T_i$ in the undo list, log $\langle T_i\ \mathrm{abort} \rangle$ and remove $T_i$. Stop when the undo list is empty.
 
-The redo phase *repeats history*: it brings the database to the exact state at the time of the crash, including the changes of transactions that will be rolled back; the undo phase then rolls back the incomplete transactions, the *losers*, exactly as a normal rollback would.
+The redo phase *repeats history*: it brings the **database** to the exact state at the time of the crash, including the changes of transactions that will be rolled back; the undo phase then rolls back the incomplete transactions, the *losers*, exactly as a normal rollback would.
 
-**Theorem 10.5.1 (Correctness of WAL Recovery)** Assume that the schedule is strict, that the system follows write-ahead logging and the checkpoint procedure of §10.5.3, and that update records carry before- and after-images. Then after Algorithm 10.5.1 completes, every data item has the value written by the last committed transaction that wrote it (or its initial value if none did); that is, the database reflects exactly the committed transactions (atomicity and durability). This holds whatever subset of the dirty pages had reached the disk before the crash, and also if the system crashes during recovery and recovery is restarted.
+**Theorem 10.5.1 (Correctness of WAL Recovery)** Assume that the **schedule** is strict, that the system follows write-ahead logging and the checkpoint procedure of §10.5.3, and that update records carry before- and after-images. Then after Algorithm 10.5.1 completes, every data item has the value written by the last committed transaction that wrote it (or its initial value if none did); that is, the database reflects exactly the committed transactions (**atomicity** and **durability**). This holds whatever subset of the dirty pages had reached the disk before the crash, and also if the system crashes during recovery and recovery is restarted.
 
 **Proof** (sketch) Fix a data item $X$.
 
-*After the redo phase.* Updates logged before the checkpoint were on disk when the checkpoint was taken. After the checkpoint, by WAL rule 1, the disk can contain only values whose update records are in the stable log. The redo phase reapplies, in log order, every update and redo-only record of $X$ after the checkpoint. Since redo sets values, after the last such record $X$ holds that record's after-image regardless of the value found on disk; if there is no such record, the disk value is the value at the checkpoint, which is also the last logged value. So after redo, $X$ has the value of the last logged write of $X$, the value it had in memory at the crash.
+*After the redo phase.* Updates logged before the checkpoint were on disk when the checkpoint was taken. After the checkpoint, by **WAL** rule 1, the disk can contain only values whose update records are in the stable log. The redo phase reapplies, in log order, every update and redo-only record of $X$ after the checkpoint. Since redo sets values, after the last such record $X$ holds that record's after-image regardless of the value found on disk; if there is no such record, the disk value is the value at the checkpoint, which is also the last logged value. So after redo, $X$ has the value of the last logged write of $X$, the value it had in memory at the crash.
 
 *Committed writes are present.* By WAL rule 2, every committed transaction has all its update records in the stable log, so its writes were reapplied in the redo phase in their original order.
 
@@ -367,13 +367,13 @@ after recovery: {'A': 950, 'B': 2000, 'C': 600, 'D': 50}
 8 possible disk states, distinct outcomes: {(('A', 950), ('B', 2000), ('C', 600), ('D', 50))}
 ```
 
-The redo phase starts after the checkpoint and repeats the updates of all transactions, the losers' included. The undo list $\{T_2, T_4\}$ consists of $T_2$ from the checkpoint record and $T_4$, which started later and never committed, while $T_3$ was added and removed again. The undo phase crosses the checkpoint backwards to reach $T_2$'s update of $B$ at LSN 4, which is why the checkpoint must record the active transactions. The result reflects $T_1$ ($A = 950$) and $T_3$ ($C = 600$) and nothing of $T_2$ and $T_4$, for every possible disk state, as Theorem 10.5.1 asserts.
+The redo phase starts after the checkpoint and repeats the updates of all transactions, the losers' included. The undo list $\{T_2, T_4\}$ consists of $T_2$ from the checkpoint record and $T_4$, which started later and never committed, while $T_3$ was added and removed again. The undo phase crosses the checkpoint backwards to reach $T_2$'s update of $B$ at **LSN** 4, which is why the checkpoint must record the active transactions. The result reflects $T_1$ ($A = 950$) and $T_3$ ($C = 600$) and nothing of $T_2$ and $T_4$, for every possible disk state, as Theorem 10.5.1 asserts.
 
 ## 10.6. ARIES
 
-The algorithm above is a simplified form of ARIES (Algorithms for Recovery and Isolation Exploiting Semantics; Mohan and others, 1992), the recovery method of IBM Db2, SQL Server and many other systems, and the standard reference design. ARIES adds the following.
+The algorithm above is a simplified form of ARIES (Algorithms for Recovery and **Isolation** Exploiting Semantics; Mohan and others, 1992), the recovery method of IBM Db2, SQL Server and many other systems, and the standard reference design. ARIES adds the following.
 
-- *LSNs on pages.* Each page stores the *pageLSN*, the LSN of the last log record whose change is reflected on the page. Redo applies a record only if its LSN is greater than the pageLSN, which makes redo correct for *physiological* log records ("insert this tuple into slot 5 of page 42"), which, unlike value records, are not idempotent.
+- *LSNs on pages.* Each **page** stores the *pageLSN*, the **LSN** of the last **log record** whose change is reflected on the page. Redo applies a record only if its LSN is greater than the pageLSN, which makes redo correct for *physiological* log records ("insert this tuple into slot 5 of page 42"), which, unlike value records, are not idempotent.
 - *Per-transaction chains.* Every log record stores the LSN of the previous record of the same transaction (*PrevLSN*), so undo follows a transaction's records without scanning the whole log.
 - Compensation log records (CLRs) for undo actions, each with an *UndoNextLSN* pointing to the next record of the transaction still to be undone. CLRs are redo-only and are never undone, so a crash during rollback never undoes an undo, and the work of recovery is bounded even under repeated crashes.
 - *Fuzzy checkpointing.* A checkpoint record contains the *transaction table* (active transactions and their last LSN) and the *dirty page table* (each dirty page in the buffer pool with its *recLSN*, the LSN of the first record that dirtied it); pages are flushed continuously in the background, never all at once.
@@ -382,11 +382,11 @@ The algorithm above is a simplified form of ARIES (Algorithms for Recovery and I
 
 ## 10.7. Recovery in Practice
 
-*PostgreSQL* writes its write-ahead log to the directory `pg_wal` in segment files of 16 MB. After the first modification of a page following a checkpoint, the log contains a full image of the page (`full_page_writes`, protection against torn pages); later records describe changes physiologically. Checkpoints are spread out over time and occur every `checkpoint_timeout` (5 minutes by default) or when `max_wal_size` (1 GB) of log has accumulated. PostgreSQL needs no undo phase: because of its multiversion design ([4.13.11](/4.13.11)), an update writes a new row version instead of overwriting the old one, and whether a version is visible depends on the commit status of the transaction that created it, which is recorded in the commit log `pg_xact`. Recovery replays the WAL (redo only), and the versions written by transactions that never committed simply stay invisible until `VACUUM` removes them. With `synchronous_commit = off`, commits return before the log is flushed, which risks losing the last few hundred milliseconds of committed transactions in a crash but never corrupts the database. The same log stream serves for streaming replication to standby servers and, archived, for point-in-time recovery.
+*PostgreSQL* writes its write-ahead **log** to the directory `pg_wal` in segment files of 16 MB. After the first modification of a **page** following a checkpoint, the log contains a full image of the page (`full_page_writes`, protection against torn pages); later records describe changes physiologically. Checkpoints are spread out over time and occur every `checkpoint_timeout` (5 minutes by default) or when `max_wal_size` (1 GB) of log has accumulated. PostgreSQL needs no undo phase: because of its multiversion design ([4.13.11](/4.13.11)), an update writes a new row version instead of overwriting the old one, and whether a version is visible depends on the **commit** status of the transaction that created it, which is recorded in the commit log `pg_xact`. Recovery replays the WAL (redo only), and the versions written by transactions that never committed simply stay invisible until `VACUUM` removes them. With `synchronous_commit = off`, commits return before the log is flushed, which risks losing the last few hundred milliseconds of committed transactions in a crash but never corrupts the database. The same log stream serves for streaming replication to standby servers and, archived, for point-in-time recovery.
 
-*MySQL's InnoDB* keeps a redo log (sized by `innodb_redo_log_capacity`) and separate undo logs in undo tablespaces; the undo logs serve both rollback and the reconstruction of old row versions for consistent reads. Pages are written through a *doublewrite buffer* so that a torn page can be repaired from its second copy.
+*MySQL's InnoDB* keeps a redo log (sized by `innodb_redo_log_capacity`) and separate undo logs in undo tablespaces; the undo logs serve both **rollback** and the reconstruction of old row versions for consistent reads. Pages are written through a *doublewrite buffer* so that a torn page can be repaired from its second copy.
 
-*SQLite* has two journaling methods. In the default rollback-journal mode, before a page of the database file is changed, its original content is copied to a journal file; a transaction commits when the journal is deleted (or invalidated), and after a crash a remaining journal is played back to undo the incomplete transaction: an undo log with a force policy. In WAL mode, changed pages are appended to a `-wal` file instead and the database file is untouched until a *checkpoint* copies the pages back; readers combine the database file with the WAL, using an index in the shared-memory file `-shm`. The following program commits one transaction in WAL mode, starts a second one, and kills the process without committing or closing the database.
+*SQLite* has two **journaling** methods. In the default rollback-journal mode, before a page of the **database** file is changed, its original content is copied to a journal file; a **transaction** commits when the journal is deleted (or invalidated), and after a crash a remaining journal is played back to undo the incomplete transaction: an undo log with a force policy. In WAL mode, changed pages are appended to a `-wal` file instead and the database file is untouched until a *checkpoint* copies the pages back; readers combine the database file with the WAL, using an index in the shared-memory file `-shm`. The following program commits one transaction in WAL mode, starts a second one, and kills the process without committing or closing the database.
 
 ```python
 import os, sqlite3, subprocess, sys
@@ -430,11 +430,11 @@ lab.db-wal     8272 bytes
 integrity: ok
 ```
 
-The WAL file holds a 32-byte header and two frames of $24 + 4096$ bytes, the two pages changed by the committed insertion (the table B-tree of `sample` and its primary-key index). The uncommitted insertion and update were still in the crashed process's page cache and never reached the WAL; had they been spilled to it, they would lack a commit frame and be ignored. Reopening the database recovers it: the committed sample `S07` is present, `S08` and the changed age of `S01` are not. Note that durability also depends on the setting `PRAGMA synchronous`: in WAL mode with `synchronous = NORMAL`, a commit is not flushed to the device immediately and may be lost in a power failure (though never corrupting the database), while `FULL` syncs the WAL at every commit.
+The **WAL** file holds a 32-byte header and two frames of $24 + 4096$ bytes, the two pages changed by the committed insertion (the table **B-tree** of `sample` and its primary-key **index**). The uncommitted insertion and update were still in the crashed process's page cache and never reached the WAL; had they been spilled to it, they would lack a commit frame and be ignored. Reopening the database recovers it: the committed sample `S07` is present, `S08` and the changed age of `S01` are not. Note that durability also depends on the setting `PRAGMA synchronous`: in WAL mode with `synchronous = NORMAL`, a commit is not flushed to the device immediately and may be lost in a power failure (though never corrupting the database), while `FULL` syncs the WAL at every commit.
 
 ## Summary
 
-- A transaction is a unit of work with the ACID properties; the recovery system provides atomicity and durability, concurrency control provides isolation, and consistency follows from correct transactions and integrity constraints.
+- A **transaction** is a unit of work with the **ACID properties**; the recovery system provides **atomicity** and durability, concurrency control provides isolation, and consistency follows from correct transactions and integrity constraints.
 - A schedule is conflict serializable if and only if its precedence graph is acyclic; a topological order gives an equivalent serial schedule. View serializability is more permissive but NP-complete to test.
 - Schedules must be recoverable, should be cascadeless, and in practice are strict, which makes undo by before-images correct.
 - With the steal and no-force buffer policies, recovery needs both undo and redo information, provided by a log written ahead of the data (WAL) and forced at commit.

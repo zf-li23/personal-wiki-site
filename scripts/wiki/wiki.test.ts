@@ -518,6 +518,14 @@ describe('cross-page linking', () => {
     concepts.pop();
     assert.match(s.html('4.7.3'), /data-concept="relu"/);
   });
+  it('marks a Latin-named concept with italics on a Chinese page', async () => {
+    concepts.push({ id: 'nosql', zh: 'NoSQL', en: 'NoSQL', aliases: [] });
+    const s = await site({ '4.13.1': '## 1.1. A\n\n*NoSQL* 系统放弃了关系模型。', '4.13.2': '## 2.1. B\n\n与 **NoSQL** 相比……' });
+    concepts.pop();
+    assert.deepEqual(s.diag.items, []);
+    assert.equal(s.index.conceptSites.get('nosql')?.pageId, '4.13.1');
+    assert.match(s.html('4.13.2'), /data-concept="nosql"/);
+  });
   it('keeps "+" apart in concept ids', () => {
     assert.notEqual(conceptId('B+ tree'), conceptId('B-tree'));
   });

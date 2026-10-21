@@ -250,7 +250,10 @@ function annotationCandidates(root: Root, lang: Lang): (concept: Concept) => boo
   }
   const text = hastToString(root);
   const lower = text.toLowerCase();
-  return (concept) => conceptNames(concept, 'zh').some((n) => text.includes(n)) && conceptNames(concept, 'en').some((n) => lower.includes(n.toLowerCase()));
+  const latin = annotationCandidates(root, 'en');
+  return (concept) =>
+    (!/\p{Script=Han}/u.test(concept.zh) && latin(concept)) ||
+    (conceptNames(concept, 'zh').some((n) => text.includes(n)) && conceptNames(concept, 'en').some((n) => lower.includes(n.toLowerCase())));
 }
 
 /** "名称（English，简称 X）": an annotation with extra text inside the parentheses, which does not mark the definition. */
@@ -271,6 +274,9 @@ function nearMissAnnotation(text: string, concept: Concept): string | null {
 function markAnnotatedDefinition(root: Root, concept: Concept, lang: Lang): string | null {
   const anchor = `concept-${concept.id}`;
   if (lang === 'en') return markEmphasis(root, concept, anchor, ['em', 'i']) ? anchor : null;
+  // A concept whose Chinese name is the Latin name itself (NoSQL, Scrum) cannot take
+  // "名称（English）" without repeating the name, so Chinese pages mark it with italics too.
+  if (!/\p{Script=Han}/u.test(concept.zh) && markEmphasis(root, concept, anchor, ['em', 'i'])) return anchor;
   // The annotation may use the English name or any English alias, but not a bare abbreviation:
   // "常微分方程（ODE）" only introduces the abbreviation, it does not mark the definition.
   const en = conceptNames(concept, 'en')

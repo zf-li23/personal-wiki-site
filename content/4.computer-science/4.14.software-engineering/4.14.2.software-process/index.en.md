@@ -3,7 +3,7 @@ title: Software Process
 description: "Software process models: plan-and-document, the waterfall model and when it fits, incremental development, prototyping, the spiral model and process maturity (CMMI); the Agile Manifesto and iterative development; Scrum with its accountabilities, events, artifacts and commitments as in the 2020 Scrum Guide; user stories, epics and INVEST; a worked sprint with velocity and a burndown chart; Kanban, WIP limits and Little's law; DevOps, CI/CD pipelines and the DORA metrics; project planning with work breakdown, estimation (planning poker, COCOMO II, Brooks's law), activity networks, the critical path and Gantt charts."
 ---
 
-A team of programmers who start coding as soon as they hear an idea will, sooner or later, build the wrong thing, build it twice, or never finish. A process answers the questions that this approach leaves open: what is done in which order, who decides what to build next, how progress is measured, and how the team reacts when requirements change. This chapter follows the evolution of process models from the plan-driven waterfall model to agile methods, describes Scrum and Kanban in enough detail to run a team project with them, introduces DevOps, which extends the process to delivery and operation, and ends with the classical tools of project planning: work breakdown, estimation and the critical path. It builds on the life cycle of [4.14.1](/4.14.1); the next chapter adds the tool that every process relies on, version control.
+A team of programmers who start coding as soon as they hear an idea will, sooner or later, build the wrong thing, build it twice, or never finish. A process answers the questions that this approach leaves open: what is done in which order, who decides what to build next, how progress is measured, and how the team reacts when requirements change. This chapter follows the evolution of process models from the plan-driven waterfall model to agile methods, describes Scrum and Kanban in enough detail to run a team project with them, introduces DevOps, which extends the process to delivery and operation, and ends with the classical tools of project planning: work breakdown, estimation and the **critical path**. It builds on the life cycle of [4.14.1](/4.14.1); the next chapter adds the tool that every process relies on, version control.
 
 ## 2.1. Software Process Models
 
@@ -134,7 +134,7 @@ Scrum is characterized by strong adaptability (short iterations and adjustments 
 | *Scrum Master* | establishes Scrum as defined, coaches the team, removes impediments and helps the organization understand Scrum; serves the team rather than managing it |
 | Developers | the people who create the increment in each sprint: plan the sprint, keep to the Definition of Done, and adapt their plan daily |
 
-Stakeholders (users, customers, managers) are not part of the Scrum Team; they take part in the Sprint Review. Older descriptions, including many slides, call the Developers the "Development Team" or "team members"; the 2020 guide uses one team with three accountabilities.
+Stakeholders (users, customers, managers) are not part of the Scrum Team; they take part in the Sprint Review. Older descriptions call the Developers the "Development Team" or "team members"; the 2020 guide uses one team with three accountabilities.
 
 ### 2.3.2. Events
 
@@ -226,13 +226,13 @@ The flat stretch in the first days is typical, because stories are only counted 
 |---|---|---|---|---|
 | S7, S8, S9, … | S4, S6 | S3, S5 | S2 | S1 |
 
-WIP limits make bottlenecks visible: if Review is full, developers stop starting new items and help review instead. The quantitative basis is *Little's law* from queueing theory: in a stable system, the average number of items in progress equals throughput times average cycle time, so
+WIP limits make bottlenecks visible: if Review is full, developers stop starting new items and help review instead. The quantitative basis is *Little's law* from queueing theory: in a stable system, the average number of items in progress equals **throughput** times average cycle time, so
 
 $$
 \text{average cycle time} = \frac{\text{average WIP}}{\text{average throughput}}.
 $$
 
-A team that finishes 5 items per week with 15 items in progress has an average cycle time of 3 weeks; lowering the WIP to 5 items, with the same throughput, makes each item flow through in about 1 week. Kanban has no sprints, so it suits work that arrives continuously, such as maintenance and operations; Scrum teams often use a Kanban-style board for their Sprint Backlog. Platforms such as GitLab and GitHub combine boards, issues, code repositories and pipelines in one tool.
+A team that finishes 5 items per week with 15 items in progress has an average cycle time of 3 weeks; lowering the WIP to 5 items, with the same throughput, makes each item flow through in about 1 week. Kanban has no sprints, so it suits work that arrives continuously, such as maintenance and operations; **Scrum** teams often use a Kanban-style board for their Sprint Backlog. Platforms such as GitLab and GitHub combine boards, issues, code repositories and pipelines in one tool.
 
 ### 2.4.2. DevOps
 
@@ -364,12 +364,12 @@ In agile projects the critical path matters less inside an iteration, where the 
 
 ## 2.6. Process When Agents Do the Implementation
 
-With **coding agents** ([4.2.14](/4.2.14)) the cost of implementing a well-specified story drops sharply, while the costs of deciding what to build, specifying it and verifying the result stay. The process adapts accordingly. Backlog items need sharper acceptance criteria, because an agent cannot negotiate a vague story in conversation the way a team member can; the INVEST properties, especially Small and Testable, become prerequisites for delegating an item at all. The Definition of Done becomes executable: tests, type checks and linters in the pipeline are the part of the standard that an agent can check by itself, and human review of design and diffs is the part it cannot. Estimates in story points lose some meaning when implementation is fast, and the bottleneck moves to review and integration, which is exactly where Kanban's WIP limits and Little's law apply: generating more changes than reviewers can absorb lengthens the cycle time of every change. Finally, the DORA finding that small batches give both speed and stability holds more strongly when changes are cheap to produce; [4.14.14](/4.14.14) develops these points.
+With **coding agents** ([4.2.14](/4.2.14)) the cost of implementing a well-specified story drops sharply, while the costs of deciding what to build, specifying it and verifying the result stay. The process adapts accordingly. Backlog items need sharper **acceptance criteria**, because an agent cannot negotiate a vague story in conversation the way a team member can; the INVEST properties, especially Small and Testable, become prerequisites for delegating an item at all. The **Definition of Done** becomes executable: tests, type checks and linters in the pipeline are the part of the standard that an agent can check by itself, and human review of design and diffs is the part it cannot. Estimates in **story points** lose some meaning when implementation is fast, and the bottleneck moves to review and integration, which is exactly where Kanban's WIP limits and Little's law apply: generating more changes than reviewers can absorb lengthens the cycle time of every change. Finally, the DORA finding that small batches give both speed and stability holds more strongly when changes are cheap to produce; [4.14.14](/4.14.14) develops these points.
 
 ## Summary
 
-- A software process orders the activities of the life cycle; models range from ad hoc to heavyweight plan-and-document processes and lightweight agile ones.
-- The waterfall model completes each phase before the next; it suits small, stable, compliance-heavy projects and fails under changing requirements. Incremental, prototyping and spiral models introduce early feedback and risk management; CMMI assesses process maturity.
+- A **software process** orders the activities of the life cycle; models range from ad hoc to heavyweight plan-and-document processes and lightweight agile ones.
+- The **waterfall model** completes each phase before the next; it suits small, stable, compliance-heavy projects and fails under changing requirements. Incremental, prototyping and spiral models introduce early feedback and risk management; CMMI assesses process maturity.
 - The Agile Manifesto values individuals, working software, collaboration and responding to change; agile teams deliver tested increments in short iterations.
 - Scrum (2020 guide): Product Owner, Scrum Master and Developers; sprints with Planning, Daily Scrum, Review and Retrospective; Product Backlog, Sprint Backlog and Increment with their commitments Product Goal, Sprint Goal and Definition of Done.
 - User stories ("As a…, I want…, so that…") carry acceptance criteria and should satisfy INVEST; velocity and burndown charts track progress.

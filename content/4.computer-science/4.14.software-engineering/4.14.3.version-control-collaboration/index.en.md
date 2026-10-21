@@ -3,7 +3,7 @@ title: Version Control and Collaboration
 description: "Why teams need version control; software configuration management and version numbering (release.version.revision, Semantic Versioning); a short history from SCCS to Git and centralized versus distributed systems; Git's four areas, its object model (blobs, trees, commits, tags) and references; everyday commands with real output; branches, fast-forward and three-way merges, conflicts and rebasing; remotes, fetch, pull and push; GitHub flow, Git flow and trunk-based development; pull requests, code review and commit conventions; continuous integration, delivery and deployment with a GitHub Actions example; and version control as the safety net for AI coding agents."
 ---
 
-Every process of [4.14.2](/4.14.2), from a sprint to a DevOps pipeline, assumes that the team's work lives in one place where each change is recorded, attributed, reviewable and reversible. Version control provides this place. This chapter explains what problem version control solves and how it fits into software configuration management, then studies Git, the system used by almost all software projects today: first its data model, because Git's commands make sense only once one knows what they do to the history, then everyday commands, branching and merging, and collaboration through remote repositories. The second half turns to team practice: branching strategies, pull requests and code review, and continuous integration, the automated checks that every change passes. All Git sessions in this chapter were run in a throwaway repository (with Git 2.43; the commands and their output are essentially unchanged in the current 2.5x releases), with fixed dates so that the hashes are reproducible; the `$` is the shell prompt ([4.11.10](/4.11.10)).
+Every process of [4.14.2](/4.14.2), from a **sprint** to a **DevOps** pipeline, assumes that the team's work lives in one place where each change is recorded, attributed, reviewable and reversible. Version control provides this place. This chapter explains what problem version control solves and how it fits into software configuration management, then studies Git, the system used by almost all software projects today: first its data model, because Git's commands make sense only once one knows what they do to the history, then everyday commands, branching and merging, and collaboration through remote repositories. The second half turns to team practice: branching strategies, pull requests and code review, and continuous integration, the automated checks that every change passes. All Git sessions in this chapter were run in a throwaway repository (with Git 2.43; the commands and their output are essentially unchanged in the current 2.5x releases), with fixed dates so that the hashes are reproducible; the `$` is the shell prompt ([4.11.10](/4.11.10)).
 
 ## 3.1. Why Version Control
 
@@ -21,7 +21,7 @@ What they need is a system that records every version and the differences betwee
 
 ### 3.1.2. Configuration Management and Version Numbers
 
-Version control is the core of a broader activity, one of the knowledge areas of SWEBOK ([4.14.1](/4.14.1)).
+Version control is the core of a broader activity, one of the knowledge areas of **SWEBOK** ([4.14.1](/4.14.1)).
 
 **Definition 3.1.2 (Software Configuration Management)** **Software configuration management** (SCM) is the discipline of identifying the configuration of a software system (its **configuration items**: source code, documents, test cases, build scripts, configuration files) at distinct points in time, controlling changes to it, and keeping its integrity and traceability throughout the life cycle. Its activities are configuration identification, version control, change control (proposing, evaluating, approving and tracking changes), status accounting and configuration auditing. An approved configuration that serves as the basis for further development and can be changed only through change control is a **baseline**.
 
@@ -162,7 +162,7 @@ $ cat .git/refs/heads/main
 1d8335f8db514cedcf8705af077316b4899213e4
 ```
 
-A tag (`refs/tags/v0.1.0`) is a reference that does not move; remote-tracking references (`refs/remotes/origin/main`) record where the branches of a remote repository were at the last synchronization. Since every commit points to its parents, the commits form a **directed acyclic graph**: an ordinary commit has one parent, the first commit none, and a merge commit two or more. (It is a DAG rather than a tree, because merges join lines of development.) Creating a branch costs one small file, which is why Git encourages many short-lived branches. Commits that are no longer reachable from any reference are not lost immediately: the *reflog* records where `HEAD` and each branch have been, so a commit "lost" by a bad reset can be found again with `git reflog` for weeks, until garbage collection removes it.
+A tag (`refs/tags/v0.1.0`) is a reference that does not move; remote-tracking references (`refs/remotes/origin/main`) record where the branches of a remote repository were at the last synchronization. Since every commit points to its parents, the commits form a **directed acyclic graph**: an ordinary commit has one parent, the first commit none, and a merge commit two or more. (It is a **DAG** rather than a tree, because merges join lines of development.) Creating a branch costs one small file, which is why Git encourages many short-lived branches. Commits that are no longer reachable from any reference are not lost immediately: the *reflog* records where `HEAD` and each branch have been, so a commit "lost" by a bad reset can be found again with `git reflog` for weeks, until garbage collection removes it.
 
 ## 3.4. Everyday Commands
 
@@ -174,7 +174,7 @@ A tag (`refs/tags/v0.1.0`) is a reference that does not move; remote-tracking re
 | create a repository | `git init` (in an existing directory), `git clone <url>` (copy an existing one, including all history) |
 | inspect | `git status`, `git diff` (working tree vs staging area), `git diff --staged` (staging area vs last commit), `git log --oneline --graph --all`, `git show <commit>`, `git blame <file>` (last change of each line) |
 | record | `git add <paths>`, `git add -p` (stage selected parts of a file), `git commit -m "…"`, `git commit -am "…"` (stage all tracked modified files and commit) |
-| ignore files | list patterns in `.gitignore` (build outputs, virtual environments, secrets) |
+| ignore files | list patterns in `.gitignore` (build outputs, **virtual environments**, secrets) |
 | switch | `git switch <branch>`, `git switch -c <new-branch>`, `git switch --detach <commit>` |
 
 Since Git 2.23, `git switch` (change branches) and `git restore` (restore files) split the overloaded `git checkout`, which did both; older tutorials still use `checkout` for everything.
@@ -215,7 +215,7 @@ The rule behind the table: commits that others may already have (pushed commits)
 
 ### 3.5.1. Why Branches
 
-The commands so far do not solve the problem of several people working at once. Suppose a feature takes seven days. If everyone works on one line of development, the half-finished feature breaks the build for everybody; if its developer does not commit for seven days, version control gives no protection (no rollback to yesterday); if they commit but do not push, there is no backup; and otherwise they must resolve conflicts constantly. Branches let each line of work proceed in isolation and be integrated when it is ready. The main branch should be stable, deployable and released at any time; new features are developed on their own branches and merged into the main branch when they are complete and tested.
+The commands so far do not solve the problem of several people working at once. Suppose a feature takes seven days. If everyone works on one line of development, the half-finished feature breaks the build for everybody; if its developer does not commit for seven days, **version control** gives no protection (no rollback to yesterday); if they commit but do not push, there is no backup; and otherwise they must resolve conflicts constantly. Branches let each line of work proceed in isolation and be integrated when it is ready. The main branch should be stable, deployable and released at any time; new features are developed on their own branches and merged into the main branch when they are complete and tested.
 
 ### 3.5.2. Fast-Forward and Three-Way Merges
 
@@ -346,7 +346,7 @@ gitGraph
 
 **Definition 3.5.3 (Rebase)** **Rebasing** a branch onto a commit $C$ replays the commits of the branch that are not in $C$'s history, one by one, on top of $C$. Each replayed commit is a new commit with the same changes and message but a different parent, hence a different hash; the branch is then moved to the last of them.
 
-Merging preserves history exactly as it happened, with all its forks and merge commits; rebasing produces a linear history, as if the work had been started on the latest version. A common use is to bring a feature branch up to date before it is merged (`git rebase main`), so that the final merge is a fast-forward and the log reads as a sequence of complete changes. Interactive rebase (`git rebase -i`) also lets one reorder, edit, squash or drop commits to clean up a branch before review.
+Merging preserves history exactly as it happened, with all its forks and merge commits; rebasing produces a linear history, as if the work had been started on the latest version. A common use is to bring a feature branch up to date before it is merged (`git rebase main`), so that the final merge is a **fast-forward** and the log reads as a sequence of complete changes. Interactive rebase (`git rebase -i`) also lets one reorder, edit, squash or drop commits to clean up a branch before review.
 
 | | `git merge` | `git rebase` |
 |---|---|---|
@@ -488,17 +488,17 @@ jobs:
       - run: uv run pytest --cov       # tests with coverage (pytest-cov)
 ```
 
-Each push triggers a run on fresh virtual machines, once per Python version in the matrix; the result appears as a status check on the commit and the pull request, and a protected `main` refuses to merge a pull request whose checks fail. GitLab CI works the same way with a `.gitlab-ci.yml` file and runners. For security, workflows from forks run without access to secrets, and many organizations pin third-party actions to a full commit hash instead of a movable tag such as `v10`.
+Each push triggers a run on fresh **virtual machines**, once per Python version in the matrix; the result appears as a status check on the commit and the pull request, and a protected `main` refuses to merge a pull request whose checks fail. GitLab CI works the same way with a `.gitlab-ci.yml` file and runners. For security, workflows from forks run without access to secrets, and many organizations pin third-party actions to a full commit hash instead of a movable tag such as `v10`.
 
 A pipeline can also inspect code quality continuously: static analysis services such as SonarQube report, for every change, duplicated code, violations of coding standards, code complexity, missing comments, likely bugs and security vulnerabilities, and can block a merge that makes them worse (a *quality gate*). The rules of CI are simple and demanding: commit to the main line often; keep the build fast (minutes, not hours); fix a broken build immediately, before anything else; and never merge on a red build.
 
 ## 3.9. Version Control When Agents Write Code
 
-For a **coding agent** ([4.2.14](/4.2.14)), Git is the safety net and the review interface at once. An agent should work on its own branch (or in a separate *worktree*, a second working directory of the same repository created with `git worktree add`, so that several agents can work in parallel without touching each other's files); every change it makes is then visible in `git diff`, reviewable as a pull request and reversible with one command. The practices of this chapter carry over with sharper reasons: small, single-purpose commits with messages that explain why let a human reviewer follow what the agent did; a CI pipeline that every branch must pass is the check that does not depend on the agent's own claim that "the tests pass"; and protected branches and the rule against force-pushing shared history guard against an agent "resolving" a rejected push by overwriting other people's work. Merge conflicts between parallel agents are avoided best in the same way as between people: by splitting the work into independent tasks that touch different files.
+For a **coding agent** ([4.2.14](/4.2.14)), Git is the safety net and the review interface at once. An agent should work on its own branch (or in a separate *worktree*, a second working directory of the same repository created with `git worktree add`, so that several agents can work in parallel without touching each other's files); every change it makes is then visible in `git diff`, reviewable as a pull request and reversible with one command. The practices of this chapter carry over with sharper reasons: small, single-purpose commits with messages that explain why let a human reviewer follow what the agent did; a CI pipeline that every branch must pass is the check that does not depend on the agent's own claim that "the tests pass"; and protected branches and the rule against force-pushing shared history guard against an agent "resolving" a rejected push by overwriting other people's work. **Merge conflicts** between parallel agents are avoided best in the same way as between people: by splitting the work into independent tasks that touch different files.
 
 ## Summary
 
-- A version control system records versions with who, when and why, and supports parallel work; it is the core of software configuration management (configuration items, baselines, change control). Semantic versioning makes version numbers a compatibility promise.
+- A **version control system** records versions with who, when and why, and supports parallel work; it is the core of **software configuration management** (configuration items, baselines, change control). Semantic versioning makes version numbers a compatibility promise.
 - Git is distributed: every clone holds the full history. Files move from the working tree through the staging area into commits; the remote repository is shared.
 - Git stores blobs, trees, commits and tags under the hash of their content; commits form a DAG; branches and HEAD are movable references, tags fixed ones.
 - Merges are fast-forward or three-way; conflicts arise when both sides change the same lines and are resolved by editing, staging and committing. Rebasing rewrites commits into a linear history and must not be applied to shared commits.

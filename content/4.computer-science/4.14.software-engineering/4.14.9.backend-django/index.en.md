@@ -3,13 +3,13 @@ title: Back-End Development with Django
 description: "What a back end does and the parts of a back-end framework (routing, models, views, templates, tests; MVC and Django's MTV); Django 6 projects and apps, settings, middleware and the life of a request; URL routing; models, object–relational mapping, migrations, querysets, the N+1 problem and transactions; views; Django REST framework serializers, viewsets, routers, token authentication and permissions; debugging with curl, Postman and the debugger; unit tests of an API; and deployment with production settings, Gunicorn, a reverse proxy and containers; with the back end of the message board example."
 ---
 
-This chapter builds the back end of the separated architecture of [4.14.7](/4.14.7): the server that owns the data, enforces the rules and answers the API requests of the React front end of [4.14.8](/4.14.8). It uses Django, a mature Python web framework ("the web framework for perfectionists with deadlines", first released in 2005), together with Django REST framework (DRF) for the API. As in the previous chapter the aim is the structure rather than the syntax: which jobs a back-end framework divides among which parts, how a request travels through them, how classes become database tables, and how a back end is debugged, tested and deployed. The concepts carry over to other frameworks (Flask and FastAPI in Python, Spring in Java, Express in JavaScript, Rails in Ruby, Gin in Go) under other names. All code is the message board's back end, run with Python 3.14, Django 6.1 and DRF 3.18; Django 5.2 is the long-term support release (supported until April 2028), and the next one, 6.2, is due in April 2027. The databases themselves, SQL and its query processing are the subject of [4.13](/4.13).
+This chapter builds the back end of the separated architecture of [4.14.7](/4.14.7): the server that owns the data, enforces the rules and answers the API requests of the React front end of [4.14.8](/4.14.8). It uses Django, a mature Python web framework ("the web framework for perfectionists with deadlines", first released in 2005), together with Django REST framework (DRF) for the API. As in the previous chapter the aim is the structure rather than the syntax: which jobs a back-end framework divides among which parts, how a request travels through them, how classes become database tables, and how a back end is debugged, tested and deployed. The concepts carry over to other frameworks (Flask and FastAPI in Python, Spring in Java, Express in JavaScript, Rails in Ruby, Gin in Go) under other names. All code is the message board's back end, run with Python 3.14, Django 6.1 and DRF 3.18; Django 5.2 is the long-term support release (supported until April 2028), and the next one, 6.2, is due in April 2027. The databases themselves, **SQL** and its query processing are the subject of [4.13](/4.13).
 
 ## 9.1. What a Back End Does
 
 ### 9.1.1. Two Jobs
 
-A back end has two jobs. It exchanges data with the front end: for query requests (`GET`) it returns the data the front end needs to render a page, such as the recommended videos on a home page or the user's profile; for modification requests (`POST` to create, `PUT` or `PATCH` to update, `DELETE` to delete) it checks the request and then performs it, such as uploading a video, posting a comment or deleting an account. The data travels as JSON ([4.14.7](/4.14.7#sec-7.3.2)), which Python's `json` module converts to and from dictionaries and lists. And it manages persistent storage: it organizes users' data so that it can be queried and modified efficiently later, and keeps it consistent. For a very simple application, files may be enough; for anything larger, a database management system ([4.13.1](/4.13.1)) is indispensable: SQLite, a library that keeps a whole database in one file and is ideal for development, tests and small applications, or a server such as PostgreSQL or MySQL in production, possibly with a document store such as MongoDB or a cache such as Redis beside it.
+A back end has two jobs. It exchanges data with the front end: for query requests (`GET`) it returns the data the front end needs to render a page, such as the recommended videos on a home page or the user's profile; for modification requests (`POST` to create, `PUT` or `PATCH` to update, `DELETE` to delete) it checks the request and then performs it, such as uploading a video, posting a comment or deleting an account. The data travels as JSON ([4.14.7](/4.14.7#sec-7.3.2)), which Python's `json` module converts to and from dictionaries and lists. And it manages persistent storage: it organizes users' data so that it can be queried and modified efficiently later, and keeps it consistent. For a very simple application, files may be enough; for anything larger, a **database management system** ([4.13.1](/4.13.1)) is indispensable: SQLite, a library that keeps a whole database in one file and is ideal for development, tests and small applications, or a server such as PostgreSQL or MySQL in production, possibly with a document store such as MongoDB or a cache such as Redis beside it.
 
 ### 9.1.2. The Parts of a Back-End Framework
 
@@ -89,11 +89,11 @@ INSTALLED_APPS = [
 
 ### 9.2.2. Settings and Middleware
 
-`settings.py` is an ordinary Python module, and everything configurable lives there: `INSTALLED_APPS`; `DATABASES` (by default an SQLite file `db.sqlite3`); `SECRET_KEY`, the key used for signing sessions, CSRF tokens and password-reset links; `DEBUG`; `ALLOWED_HOSTS`; time zone settings (`USE_TZ = True`: store times in UTC); and the middleware.
+`settings.py` is an ordinary Python module, and everything configurable lives there: `INSTALLED_APPS`; `DATABASES` (by default an SQLite file `db.sqlite3`); `SECRET_KEY`, the key used for signing sessions, **CSRF** tokens and password-reset links; `DEBUG`; `ALLOWED_HOSTS`; time zone settings (`USE_TZ = True`: store times in UTC); and the middleware.
 
 **Definition 9.2.2 (Middleware)** **Middleware** in a web framework is a layer of code that wraps the handling of every request: each middleware receives the request before the view, can modify it or answer it directly, passes it on to the next layer, and receives the response on its way back, which it can also modify. The middleware form an ordered chain around the views.
 
-Middleware is where crosscutting concerns ([4.14.5](/4.14.5#sec-5.5.3)) are implemented once instead of in every view; each layer is an instance of the **decorator pattern**. Django's default chain:
+Middleware is where **crosscutting concerns** ([4.14.5](/4.14.5#sec-5.5.3)) are implemented once instead of in every view; each layer is an instance of the **decorator pattern**. Django's default chain:
 
 ```python
 MIDDLEWARE = [
@@ -133,7 +133,7 @@ sequenceDiagram
   S-->>C: HTTP response
 ```
 
-A Python web application talks to the HTTP server through a standard interface: WSGI (synchronous, PEP 3333) or ASGI (asynchronous, which also supports WebSockets and long-lived connections). During development, `python manage.py runserver` starts a simple server that reloads the code on every change; in production an application server runs the project (§9.8).
+A Python web application talks to the **HTTP** server through a standard interface: WSGI (synchronous, PEP 3333) or ASGI (asynchronous, which also supports WebSockets and long-lived connections). During development, `python manage.py runserver` starts a simple server that reloads the code on every change; in production an application server runs the project (§9.8).
 
 ## 9.3. Routing
 
@@ -225,7 +225,7 @@ class Message(models.Model):
         return f"{self.author}: {self.content[:20]}"
 ```
 
-Django adds an automatic primary key `id` (a 64-bit `BigAutoField`). `CharField(max_length=280)` becomes `varchar(280)` and is also the validation rule for forms and serializers; `DateTimeField(auto_now_add=True)` stores the creation time, in UTC, when the object is first saved; the `ForeignKey` to the user model becomes a column `author_id` with a foreign-key constraint and an index, and `on_delete=models.CASCADE` deletes a user's messages with the user (alternatives: `PROTECT`, `SET_NULL`; Django 6.1 adds `DB_CASCADE`, which leaves the cascade to the database). `related_name` gives the reverse direction: `alice.messages.all()`. `Meta.ordering` is the default order of queries. The users themselves come from the app `django.contrib.auth`, whose `User` model stores passwords only as salted hashes ([4.14.7](/4.14.7#sec-7.4.1)); an application should use it (or a custom user model derived from `AbstractUser`, set as `AUTH_USER_MODEL` at the start of a project) instead of a home-made model with a password column.
+Django adds an automatic **primary key** `id` (a 64-bit `BigAutoField`). `CharField(max_length=280)` becomes `varchar(280)` and is also the validation rule for forms and serializers; `DateTimeField(auto_now_add=True)` stores the creation time, in UTC, when the object is first saved; the `ForeignKey` to the user model becomes a column `author_id` with a foreign-key constraint and an index, and `on_delete=models.CASCADE` deletes a user's messages with the user (alternatives: `PROTECT`, `SET_NULL`; Django 6.1 adds `DB_CASCADE`, which leaves the cascade to the database). `related_name` gives the reverse direction: `alice.messages.all()`. `Meta.ordering` is the default order of queries. The users themselves come from the app `django.contrib.auth`, whose `User` model stores passwords only as salted hashes ([4.14.7](/4.14.7#sec-7.4.1)); an application should use it (or a custom user model derived from `AbstractUser`, set as `AUTH_USER_MODEL` at the start of a project) instead of a home-made model with a password column.
 
 ### 9.4.2. Migrations
 
@@ -262,7 +262,7 @@ CREATE INDEX "board_message_author_id_83908abc" ON "board_message" ("author_id")
 COMMIT;
 ```
 
-Migrations are source code: they are committed to Git with the model change, reviewed in the pull request, and applied by the deployment before the new code starts. Rules that avoid trouble: never edit a migration that has been applied anywhere else, but add a new one; resolve two migrations created on parallel branches with `makemigrations --merge`; write *data migrations* (`RunPython`) when existing rows must be transformed; and on a database in use, make changes in compatible steps (add a nullable column, fill it, then make it required), so that the old and the new version of the code can run against the same schema during a rolling deployment.
+Migrations are source code: they are committed to Git with the model change, reviewed in the **pull request**, and applied by the deployment before the new code starts. Rules that avoid trouble: never edit a migration that has been applied anywhere else, but add a new one; resolve two migrations created on parallel branches with `makemigrations --merge`; write *data migrations* (`RunPython`) when existing rows must be transformed; and on a database in use, make changes in compatible steps (add a nullable column, fill it, then make it required), so that the old and the new version of the code can run against the same schema during a rolling deployment.
 
 ### 9.4.3. Queries
 
@@ -292,7 +292,7 @@ SELECT "board_message"."id", "board_message"."author_id", "board_message"."conte
 <QuerySet ['Lunch at noon?', 'Hello, board!']>
 ```
 
-The printed SQL shows the value `alice` inline only for display; the query actually sent to the database is parameterized, with the value bound separately, which is why ORM queries are not open to SQL injection ([4.13.4](/4.13.4#sec-4.9.2)). Raw SQL remains available (`Message.objects.raw(...)`, `connection.cursor()`) for queries the ORM cannot express, with the same obligation to pass parameters separately. Other common operations: `get(pk=4)` (exactly one object, else an exception), `update()` and `delete()` on a whole queryset in one statement, aggregation with `aggregate(Count("id"))` and `annotate()`, and `F()` expressions that refer to columns, such as `update(likes=F("likes") + 1)`, which increments in the database and avoids a lost update between two concurrent requests.
+The printed SQL shows the value `alice` inline only for display; the query actually sent to the database is parameterized, with the value bound separately, which is why ORM queries are not open to **SQL injection** ([4.13.4](/4.13.4#sec-4.9.2)). Raw SQL remains available (`Message.objects.raw(...)`, `connection.cursor()`) for queries the ORM cannot express, with the same obligation to pass parameters separately. Other common operations: `get(pk=4)` (exactly one object, else an exception), `update()` and `delete()` on a whole queryset in one statement, aggregation with `aggregate(Count("id"))` and `annotate()`, and `F()` expressions that refer to columns, such as `update(likes=F("likes") + 1)`, which increments in the database and avoids a lost update between two concurrent requests.
 
 ### 9.4.4. The N+1 Problem and Transactions
 
@@ -316,9 +316,9 @@ print(len(connection.queries), names)
 1 ['alice', 'bob', 'alice']
 ```
 
-With $N$ messages the first loop issues $N+1$ queries, each a round trip to the database server; the second issues one query with a join. `select_related` follows foreign keys with a join; `prefetch_related` loads many-to-many and reverse relations with one extra query per relation; Django 6.1's *fetch modes* (`Message.objects.fetch_mode(models.FETCH_PEERS)`) load a missing related field for all objects of the queryset at once when it is first accessed. Such problems are found by counting queries: in tests with `assertNumQueries`, in development with django-debug-toolbar.
+With $N$ messages the first loop issues $N+1$ queries, each a round trip to the database server; the second issues one query with a join. `select_related` follows **foreign keys** with a join; `prefetch_related` loads many-to-many and reverse relations with one extra query per relation; Django 6.1's *fetch modes* (`Message.objects.fetch_mode(models.FETCH_PEERS)`) load a missing related field for all objects of the queryset at once when it is first accessed. Such problems are found by counting queries: in tests with `assertNumQueries`, in development with django-debug-toolbar.
 
-Several changes that must succeed or fail together are wrapped in a transaction ([4.13.10](/4.13.10)) with `transaction.atomic()`, as a decorator or context manager; if an exception escapes the block, all its changes are rolled back:
+Several changes that must succeed or fail together are wrapped in a **transaction** ([4.13.10](/4.13.10)) with `transaction.atomic()`, as a decorator or context manager; if an exception escapes the block, all its changes are rolled back:
 
 ```python
 from django.db import transaction
@@ -508,9 +508,9 @@ For deeper **debugging**: with `DEBUG = True`, an unhandled exception produces a
 
 ### 9.7.2. Unit Tests
 
-Manual requests check a change once; automated tests check it after every change. In a large project, a change in one place often breaks a function elsewhere, and a fixed set of test programs and test cases, run on every commit by continuous integration ([4.14.3](/4.14.3#sec-3.8)), ensures that only versions that pass reach users. For a back end, a test plays the role of the front end and of a database inspector at once: it treats the routing and the views as a black box, sends simulated requests, and asserts what the response must be and how the database must have changed, much like the test data of an **online judge** that define what the output for each input must be. The tests should cover the normal cases and as many corner cases as possible: invalid and missing fields, boundary lengths, missing credentials, someone else's object.
+Manual requests check a change once; automated tests check it after every change. In a large project, a change in one place often breaks a function elsewhere, and a fixed set of test programs and **test cases**, run on every commit by **continuous integration** ([4.14.3](/4.14.3#sec-3.8)), ensures that only versions that pass reach users. For a back end, a test plays the role of the front end and of a database inspector at once: it treats the routing and the views as a black box, sends simulated requests, and asserts what the response must be and how the database must have changed, much like the test data of an **online judge** that define what the output for each input must be. The tests should cover the normal cases and as many corner cases as possible: invalid and missing fields, boundary lengths, missing credentials, someone else's object.
 
-Django's `TestCase` creates a separate test database, runs each test inside a transaction that is rolled back afterwards (so that tests do not see each other's data), and provides a `Client` that sends requests to the application without a network; DRF's `APITestCase` and `APIClient` add JSON handling and `force_authenticate`. The tests of the message board:
+Django's `TestCase` creates a separate test database, runs each test inside a **transaction** that is rolled back afterwards (so that tests do not see each other's data), and provides a `Client` that sends requests to the application without a network; DRF's `APITestCase` and `APIClient` add JSON handling and `force_authenticate`. The tests of the message board:
 
 ```python
 from django.contrib.auth.models import User
@@ -642,7 +642,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 ```
 
-`ALLOWED_HOSTS` makes Django reject requests whose `Host` header names another site (`400 Bad Request`), which defeats attacks based on forged host names. In production, the database is a server such as PostgreSQL, configured through a connection URL in an environment variable; static files (the admin's CSS) are collected with `collectstatic` and served by the reverse proxy, a CDN or the package WhiteNoise; `SECURE_SSL_REDIRECT`, `SECURE_HSTS_SECONDS` and secure cookies enforce HTTPS ([4.14.7](/4.14.7#sec-7.5.5)).
+`ALLOWED_HOSTS` makes Django reject requests whose `Host` header names another site (`400 Bad Request`), which defeats attacks based on forged host names. In production, the database is a server such as PostgreSQL, configured through a connection URL in an **environment variable**; static files (the admin's CSS) are collected with `collectstatic` and served by the **reverse proxy**, a CDN or the package WhiteNoise; `SECURE_SSL_REDIRECT`, `SECURE_HSTS_SECONDS` and secure cookies enforce HTTPS ([4.14.7](/4.14.7#sec-7.5.5)).
 
 The project is run by a production application server: Gunicorn for WSGI, with several worker **processes** so that requests are handled in parallel, or Uvicorn (or Gunicorn with Uvicorn workers) for ASGI. With `DEBUG` off and a random secret key:
 
@@ -692,7 +692,7 @@ server {
 }
 ```
 
-Today the back end is usually shipped as a container image ([4.11.9](/4.11.9#sec-9.4)), which packages the code with exactly the interpreter and libraries it was tested with; the same image runs on a developer's machine, in CI and on a cluster:
+Today the back end is usually shipped as a **container image** ([4.11.9](/4.11.9#sec-9.4)), which packages the code with exactly the interpreter and libraries it was tested with; the same image runs on a developer's machine, in CI and on a cluster:
 
 ```dockerfile
 FROM python:3.14-slim

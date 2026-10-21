@@ -3,7 +3,7 @@ title: Concurrency Control
 description: "How a DBMS achieves isolation: shared and exclusive locks and the lock manager; two-phase locking with the proof that it guarantees conflict serializability, strict and rigorous 2PL; deadlock detection with wait-for graphs and prevention by wait-die and wound-wait (a runnable lock manager); multiple-granularity locking with intention locks; phantoms, predicate and next-key locking; timestamp ordering, the Thomas write rule and optimistic validation; multiversion concurrency control, snapshot isolation, write skew and serializable snapshot isolation; SQL isolation levels and their implementation in PostgreSQL, MySQL, SQLite and DuckDB, with measured behaviour."
 ---
 
-[4.13.10](/4.13.10) defined what a correct concurrent execution is: a schedule that is conflict serializable and, in practice, strict. It did not say how a system produces such schedules while transactions arrive, run and finish unpredictably. This chapter presents the protocols that do so. *Locking* makes transactions wait for each other, and two-phase locking is the classical protocol that guarantees serializability; its price is waiting and deadlocks, which the system must detect or prevent. *Timestamp* and *optimistic* protocols order transactions in advance or check them at the end instead of waiting. *Multiversion* concurrency control keeps old versions of data so that readers never wait for writers; it is how PostgreSQL, MySQL's InnoDB, Oracle, DuckDB and most modern systems work, and it leads to *snapshot isolation*, a weaker guarantee than serializability with its own anomalies. The chapter ends with the isolation levels of SQL and what they mean in each system. The synchronization primitives of operating systems, the **mutex**, the reader–writer lock and **deadlock** handling ([4.11.6](/4.11.6)), are the building blocks underneath; the database protocols add the transaction as the unit of protection.
+[4.13.10](/4.13.10) defined what a correct concurrent execution is: a **schedule** that is **conflict serializable** and, in practice, strict. It did not say how a system produces such schedules while **transactions** arrive, run and finish unpredictably. This chapter presents the protocols that do so. *Locking* makes transactions wait for each other, and two-phase locking is the classical protocol that guarantees serializability; its price is waiting and deadlocks, which the system must detect or prevent. *Timestamp* and *optimistic* protocols order transactions in advance or check them at the end instead of waiting. *Multiversion* concurrency control keeps old versions of data so that readers never wait for writers; it is how PostgreSQL, MySQL's InnoDB, Oracle, DuckDB and most modern systems work, and it leads to *snapshot isolation*, a weaker guarantee than serializability with its own anomalies. The chapter ends with the isolation levels of SQL and what they mean in each system. The synchronization primitives of operating systems, the mutex, the reader–writer lock and **deadlock** handling ([4.11.6](/4.11.6)), are the building blocks underneath; the database protocols add the transaction as the unit of protection.
 
 ## 11.1. Lock-Based Protocols
 
@@ -16,9 +16,9 @@ description: "How a DBMS achieves isolation: shared and exclusive locks and the 
 | S | compatible | conflict |
 | X | conflict | conflict |
 
-Any number of transactions may hold S locks on an item at once, an X lock excludes every other lock: this is the semantics of the **reader–writer lock** of [4.11.6](/4.11.6). The *lock manager* keeps a hash table, the *lock table*, from data items to records listing the granted locks and a queue of waiting requests; a request is granted if it is compatible with all granted locks and, to avoid starving writers, if no earlier request is waiting. A transaction that holds an S lock and wants to write may request an *upgrade* to X.
+Any number of **transactions** may hold **S locks** on an item at once, an **X lock** excludes every other lock: this is the semantics of the **reader–writer lock** of [4.11.6](/4.11.6). The *lock manager* keeps a hash table, the *lock table*, from data items to records listing the granted locks and a queue of waiting requests; a request is granted if it is compatible with all granted locks and, to avoid starving writers, if no earlier request is waiting. A transaction that holds an S lock and wants to write may request an *upgrade* to X.
 
-**Remark 11.1.1 (Locks and Latches)** Database systems distinguish locks, which protect the logical contents of the database between transactions, from *latches*, which protect in-memory data structures between threads.
+**Remark 11.1.1 (Locks and Latches)** **Database systems** distinguish locks, which protect the logical contents of the **database** between transactions, from *latches*, which protect in-memory data structures between **threads**.
 
 | | Locks | Latches |
 |---|---|---|
@@ -28,11 +28,11 @@ Any number of transactions may hold S locks on an item at once, an X lock exclud
 | Deadlocks | detected and resolved by the DBMS | avoided by a fixed acquisition order |
 | Implementation | entries in the lock manager | a mutex or spin lock in the object |
 
-The concurrency-control protocols of this chapter concern locks; latches are the operating-system kind of locking applied inside the DBMS ([4.13.8](/4.13.8#sec-8.2.5)).
+The concurrency-control protocols of this chapter concern locks; latches are the operating-system kind of locking applied inside the **DBMS** ([4.13.8](/4.13.8#sec-8.2.5)).
 
 ### 11.1.2. Why Locking Alone Is Not Enough
 
-Locking each item only while it is accessed does not ensure serializability. Let $T_1$ move 50 units from $A$ to $B$ and $T_2$ print $A + B$, each locking an item just before accessing it and unlocking it right afterwards:
+Locking each item only while it is accessed does not ensure **serializability**. Let $T_1$ move 50 units from $A$ to $B$ and $T_2$ print $A + B$, each locking an item just before accessing it and unlocking it right afterwards:
 
 | Step | $T_1$ | $T_2$ |
 |---|---|---|
@@ -41,7 +41,7 @@ Locking each item only while it is accessed does not ensure serializability. Let
 | 3 | | S-lock($B$); $R_2(B)$; unlock($B$) |
 | 4 | X-lock($B$); $R_1(B)$; $W_1(B)$; unlock($B$) | |
 
-Every access is protected by a lock, yet $T_2$ sees the new value of $A$ and the old value of $B$ and prints a sum that is 50 too small. The precedence graph has the edges $T_1 \to T_2$ (on $A$) and $T_2 \to T_1$ (on $B$). The cure is a discipline on *when* locks may be released.
+Every access is protected by a lock, yet $T_2$ sees the new value of $A$ and the old value of $B$ and prints a sum that is 50 too small. The **precedence graph** has the edges $T_1 \to T_2$ (on $A$) and $T_2 \to T_1$ (on $B$). The cure is a discipline on *when* locks may be released.
 
 ## 11.2. Two-Phase Locking
 
@@ -49,25 +49,25 @@ Every access is protected by a lock, yet $T_2$ sees the new value of $A$ and the
 
 **Definition 11.2.1 (Two-Phase Locking)** A transaction follows **two-phase locking** (2PL) if all its lock requests precede all its unlock operations. Its execution has a *growing phase*, in which it acquires locks and releases none, and a *shrinking phase*, in which it releases locks and acquires none. The moment of its last lock acquisition is its *lock point*.
 
-**Theorem 11.2.1** If every transaction of a schedule follows two-phase locking, the schedule is conflict serializable; an equivalent serial order is the order of the lock points.
+**Theorem 11.2.1** If every **transaction** of a **schedule** follows **two-phase locking**, the schedule is conflict serializable; an equivalent serial order is the order of the lock points.
 
-**Proof** Let $T_i \to T_j$ be an edge of the precedence graph: an operation of $T_i$ on an item $Q$ precedes a conflicting operation of $T_j$ on $Q$. The two operations need incompatible locks on $Q$, so $T_i$ must release its lock on $Q$ at some time $r$ before $T_j$ obtains its lock on $Q$ at some time $a$, with $r < a$. Since $T_i$ follows 2PL, it releases no lock before its lock point, so $\mathrm{LP}(T_i) \le r$; since $T_j$ acquires its lock on $Q$ no later than its lock point, $a \le \mathrm{LP}(T_j)$. Hence $\mathrm{LP}(T_i) < \mathrm{LP}(T_j)$. Every edge goes from an earlier to a later lock point, so the graph has no cycle, and by Theorem 10.2.1 the schedule is conflict serializable, with the transactions in the order of their lock points as an equivalent serial order. $\square$
+**Proof** Let $T_i \to T_j$ be an edge of the **precedence graph**: an operation of $T_i$ on an item $Q$ precedes a conflicting operation of $T_j$ on $Q$. The two operations need incompatible locks on $Q$, so $T_i$ must release its lock on $Q$ at some time $r$ before $T_j$ obtains its lock on $Q$ at some time $a$, with $r < a$. Since $T_i$ follows 2PL, it releases no lock before its **lock point**, so $\mathrm{LP}(T_i) \le r$; since $T_j$ acquires its lock on $Q$ no later than its lock point, $a \le \mathrm{LP}(T_j)$. Hence $\mathrm{LP}(T_i) < \mathrm{LP}(T_j)$. Every edge goes from an earlier to a later lock point, so the graph has no cycle, and by Theorem 10.2.1 the schedule is **conflict serializable**, with the transactions in the order of their lock points as an equivalent serial order. $\square$
 
-The converse does not hold: some conflict serializable schedules cannot be produced by 2PL. Nor does 2PL avoid cascading rollbacks: a transaction may release an X lock in its shrinking phase, before it commits, and another transaction may read the uncommitted value.
+The converse does not hold: some conflict **serializable schedules** cannot be produced by 2PL. Nor does 2PL avoid **cascading rollbacks**: a transaction may release an **X lock** in its shrinking phase, before it commits, and another transaction may read the uncommitted value.
 
 **Definition 11.2.2 (Strict and Rigorous 2PL)** Under **strict two-phase locking**, a transaction follows 2PL and holds all its exclusive locks until it commits or aborts. Under **rigorous two-phase locking**, it holds all its locks, shared and exclusive, until it commits or aborts.
 
-Strict 2PL produces schedules that are conflict serializable and strict ([4.13.10](/4.13.10#sec-10.3)), so recovery by before-images is correct. Rigorous 2PL additionally makes the commit order an equivalent serial order, which is convenient for replication and distributed transactions. Lock-based systems almost always use rigorous 2PL; the application never writes lock or unlock operations, the DBMS acquires the locks as statements touch rows and releases them all at commit. SQL lets a transaction take row locks explicitly while reading, with `SELECT ... FOR UPDATE` (X) and `SELECT ... FOR SHARE` (S), which is the standard way to avoid lost updates under weaker isolation levels (§11.7).
+**Strict 2PL** produces schedules that are conflict serializable and strict ([4.13.10](/4.13.10#sec-10.3)), so recovery by before-images is correct. **Rigorous 2PL** additionally makes the **commit** order an equivalent serial order, which is convenient for replication and distributed transactions. Lock-based systems almost always use rigorous 2PL; the application never writes lock or unlock operations, the DBMS acquires the locks as statements touch rows and releases them all at commit. SQL lets a transaction take row locks explicitly while reading, with `SELECT ... FOR UPDATE` (X) and `SELECT ... FOR SHARE` (S), which is the standard way to avoid lost updates under weaker isolation levels (§11.7).
 
 ### 11.2.2. Deadlocks
 
-Two-phase locking does not prevent deadlocks: if $T_1$ holds an S lock on $A$ and requests X on $B$ while $T_2$ holds S on $B$ and requests X on $A$, both wait forever. All four **Coffman conditions** of [4.11.6](/4.11.6#sec-6.5.2) hold, and the DBMS, which knows all locks, handles deadlocks itself.
+Two-phase locking does not prevent **deadlocks**: if $T_1$ holds an **S lock** on $A$ and requests X on $B$ while $T_2$ holds S on $B$ and requests X on $A$, both wait forever. All four **Coffman conditions** of [4.11.6](/4.11.6#sec-6.5.2) hold, and the **DBMS**, which knows all locks, handles deadlocks itself.
 
 **Definition 11.2.3 (Wait-For Graph)** The **wait-for graph** of a set of transactions has an edge $T_i \to T_j$ whenever $T_i$ is waiting for a lock held by $T_j$.
 
-A deadlock exists if and only if the wait-for graph has a cycle. *Deadlock detection* checks the graph for cycles, either whenever a request has to wait or periodically, and breaks each cycle by aborting a *victim*, typically the youngest transaction or the one that has done the least work; the victim's locks are released and its client receives an error and can retry. PostgreSQL runs the check when a transaction has waited for `deadlock_timeout` (1 second by default), so that the common case of a short wait costs nothing; InnoDB checks immediately on every wait.
+A deadlock exists if and only if the **wait-for graph** has a cycle. *Deadlock detection* checks the graph for cycles, either whenever a request has to wait or periodically, and breaks each cycle by aborting a *victim*, typically the youngest transaction or the one that has done the least work; the victim's locks are released and its client receives an error and can retry. PostgreSQL runs the check when a transaction has waited for `deadlock_timeout` (1 second by default), so that the common case of a short wait costs nothing; InnoDB checks immediately on every wait.
 
-The following lock manager implements strict 2PL with first-come first-served queues and detects deadlocks with a depth-first search for a cycle in the wait-for graph.
+The following **lock manager** implements strict 2PL with first-come first-served queues and detects deadlocks with a **depth-first search** for a cycle in the wait-for graph.
 
 ```python
 from collections import defaultdict, deque
@@ -184,7 +184,7 @@ $T_2$'s request for an X lock on $A$ must wait for both readers of $A$, $T_1$ an
 - *wait-die*: if $T_i$ is older ($\mathrm{TS}(T_i) < \mathrm{TS}(T_j)$), $T_i$ waits; otherwise $T_i$ is rolled back ("dies");
 - *wound-wait*: if $T_i$ is older, $T_j$ is rolled back ("wounded"); otherwise $T_i$ waits.
 
-**Proposition 11.2.1** Under wait-die and under wound-wait no deadlock occurs, and every transaction eventually completes.
+**Proposition 11.2.1** Under **wait-die** and under **wound-wait** no deadlock occurs, and every transaction eventually completes.
 
 **Proof** Under wait-die, a transaction waits only for a younger one, so every edge $T_i \to T_j$ of the wait-for graph satisfies $\mathrm{TS}(T_i) < \mathrm{TS}(T_j)$; timestamps strictly increase along every path, so there is no cycle. Under wound-wait, a transaction waits only for an older one, and timestamps strictly decrease along every path. Since a restarted transaction keeps its timestamp, it eventually becomes the oldest active transaction, which under wait-die never dies and under wound-wait is never wounded, so it completes. $\square$
 
@@ -192,17 +192,17 @@ A simple alternative used by many systems is a *lock timeout*: a request that wa
 
 ## 11.3. Phantoms and Predicate Locking
 
-Locking the rows a transaction has read is not enough when the transaction reads a set of rows defined by a condition. Suppose $T_1$ counts the liver samples twice, and between the two counts $T_2$ inserts a new liver sample and commits. $T_2$ wrote no row that $T_1$ had locked, yet the two counts of $T_1$ differ, and no serial order explains them: $T_1$ conflicts with $T_2$ on a row that did not exist when $T_1$ first read. Such a row is a *phantom*.
+Locking the rows a **transaction** has read is not enough when the transaction reads a set of rows defined by a condition. Suppose $T_1$ counts the liver samples twice, and between the two counts $T_2$ inserts a new liver sample and **commits**. $T_2$ wrote no row that $T_1$ had locked, yet the two counts of $T_1$ differ, and no serial order explains them: $T_1$ conflicts with $T_2$ on a row that did not exist when $T_1$ first read. Such a row is a *phantom*.
 
 The conflict is on the condition `tissue = 'liver'`. *Predicate locking* locks the condition itself, so that an insertion of a row satisfying a locked predicate conflicts with the lock; deciding whether two predicates overlap is expensive in general, and systems lock approximations instead:
 
-- *Index locking*: a query that finds rows through an index locks the index leaf pages or entries it scans, and an insertion must lock the leaf entry where the new key goes; a query without a suitable index locks the whole table.
+- *Index locking*: a query that finds rows through an **index** locks the index leaf **pages** or entries it scans, and an insertion must lock the leaf entry where the new key goes; a query without a suitable index locks the whole table.
 - *Next-key locking* (InnoDB): locking an index record also locks the gap before it, so that a range scan over `tissue BETWEEN 'kidney' AND 'liver'` blocks insertions into the scanned key range. InnoDB uses next-key locks for locking reads and updates at its default `REPEATABLE READ` level.
-- PostgreSQL's serializable level (§11.6.3) records *SIRead* predicate locks on the index pages and tuples read; they never block, but feed the detection of dangerous dependency patterns.
+- PostgreSQL's serializable level (§11.6.3) records *SIRead* predicate locks on the index pages and **tuples** read; they never block, but feed the detection of dangerous dependency patterns.
 
 ## 11.4. Multiple Granularity
 
-Locking every row of a table to scan it costs a lock-table entry per row; locking the whole table to update one row blocks everyone. A system therefore locks items of several sizes: the database, tables, pages and rows, organized as a tree in which locking a node implicitly locks all its descendants. To check quickly whether a table lock conflicts with row locks below it, transactions announce their intentions on the ancestors.
+Locking every row of a table to scan it costs a lock-table entry per row; locking the whole table to update one row blocks everyone. A system therefore locks items of several sizes: the **database**, tables, **pages** and rows, organized as a tree in which locking a node implicitly locks all its descendants. To check quickly whether a table lock conflicts with row locks below it, **transactions** announce their intentions on the ancestors.
 
 **Definition 11.4.1 (Intention Locks)** In **multiple-granularity locking**, besides S and X there are three **intention lock** modes: *intention-shared* (IS) and *intention-exclusive* (IX), which announce that the transaction will lock some descendant of the node in S mode, respectively in X (or S) mode, and *shared and intention-exclusive* (SIX), which locks the node in S mode and announces X locks on descendants. The compatibility of the modes is:
 
@@ -214,9 +214,9 @@ Locking every row of a table to scan it costs a lock-table entry per row; lockin
 | SIX | yes | no | no | no | no |
 | X | no | no | no | no | no |
 
-The protocol: locks are acquired from the root downwards; a node may be locked in S or IS mode only if its parent is held in IS or IX mode, and in X, SIX or IX mode only if its parent is held in IX or SIX mode; locks are released from the leaves upwards, and the transaction follows two-phase locking. A transaction that scans a table and updates a few rows takes SIX on the table and X on those rows; a concurrent reader of single rows takes IS on the table and S on rows, which is compatible with SIX. If a transaction acquires too many row locks, the system may replace them with one table lock (*lock escalation*; SQL Server does so at about 5,000 locks on one object).
+The protocol: locks are acquired from the root downwards; a node may be locked in S or IS mode only if its parent is held in IS or IX mode, and in X, SIX or IX mode only if its parent is held in IX or SIX mode; locks are released from the leaves upwards, and the transaction follows **two-phase locking**. A transaction that scans a table and updates a few rows takes SIX on the table and X on those rows; a concurrent reader of single rows takes IS on the table and S on rows, which is compatible with SIX. If a transaction acquires too many row locks, the system may replace them with one table lock (*lock escalation*; SQL Server does so at about 5,000 locks on one object).
 
-PostgreSQL has eight table-level lock modes (from `ACCESS SHARE`, taken by every `SELECT`, through `ROW EXCLUSIVE`, taken by `INSERT`, `UPDATE` and `DELETE`, to `ACCESS EXCLUSIVE`, taken by `DROP TABLE` and most `ALTER TABLE` forms), which play the role of intention locks, and four row-level modes (`FOR UPDATE`, `FOR NO KEY UPDATE`, `FOR SHARE`, `FOR KEY SHARE`). Row locks are recorded in the row version itself (in `xmax`), not in the shared lock table, so PostgreSQL never needs lock escalation; the price is a disk write for every locked row.
+PostgreSQL has eight table-level lock modes (from `ACCESS SHARE`, taken by every `SELECT`, through `ROW EXCLUSIVE`, taken by `INSERT`, `UPDATE` and `DELETE`, to `ACCESS EXCLUSIVE`, taken by `DROP TABLE` and most `ALTER TABLE` forms), which play the role of **intention locks**, and four row-level modes (`FOR UPDATE`, `FOR NO KEY UPDATE`, `FOR SHARE`, `FOR KEY SHARE`). Row locks are recorded in the row version itself (in `xmax`), not in the **shared lock** table, so PostgreSQL never needs **lock escalation**; the price is a disk write for every locked row.
 
 ## 11.5. Timestamp-Based Protocols
 
@@ -226,16 +226,16 @@ Instead of discovering a serial order through waiting, a timestamp protocol fixe
 
 **Definition 11.5.1 (Timestamp-Ordering Protocol)** Each transaction $T_i$ receives a unique timestamp $\mathrm{TS}(T_i)$ when it starts, and each data item $Q$ carries $\mathrm{W\text{-}TS}(Q)$ and $\mathrm{R\text{-}TS}(Q)$, the largest timestamps of transactions that wrote and read it. The **timestamp-ordering protocol** handles operations as follows:
 
-1. $T_i$ issues $\operatorname{read}(Q)$: if $\mathrm{TS}(T_i) < \mathrm{W\text{-}TS}(Q)$, $T_i$ would read a value written by a younger transaction, so it is rolled back; otherwise the read is executed and $\mathrm{R\text{-}TS}(Q) := \max(\mathrm{R\text{-}TS}(Q), \mathrm{TS}(T_i))$.
+1. $T_i$ issues $\operatorname{read}(Q)$: if $\mathrm{TS}(T_i) < \mathrm{W\text{-}TS}(Q)$, $T_i$ would read a value written by a younger **transaction**, so it is rolled back; otherwise the read is executed and $\mathrm{R\text{-}TS}(Q) := \max(\mathrm{R\text{-}TS}(Q), \mathrm{TS}(T_i))$.
 2. $T_i$ issues $\operatorname{write}(Q)$: if $\mathrm{TS}(T_i) < \mathrm{R\text{-}TS}(Q)$, a younger transaction has already read the old value, and $T_i$ is rolled back; if $\mathrm{TS}(T_i) < \mathrm{W\text{-}TS}(Q)$, $T_i$ would overwrite a younger write, and $T_i$ is rolled back; otherwise the write is executed and $\mathrm{W\text{-}TS}(Q) := \mathrm{TS}(T_i)$.
 
 A rolled-back transaction restarts with a new, larger timestamp.
 
-**Proposition 11.5.1** Every schedule produced by the timestamp-ordering protocol is conflict serializable, with the timestamp order as an equivalent serial order, and the protocol is free of deadlocks.
+**Proposition 11.5.1** Every **schedule** produced by the **timestamp-ordering protocol** is **conflict serializable**, with the timestamp order as an equivalent serial order, and the protocol is free of deadlocks.
 
-**Proof** Suppose operations $o_i$ of $T_i$ and $o_j$ of $T_j$ on $Q$ conflict and $o_i$ is executed first. If $o_i$ is a write, then $\mathrm{W\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$ afterwards, and $o_j$ (a read or a write) is executed only if $\mathrm{TS}(T_j) > \mathrm{W\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$ (timestamps are unique). If $o_i$ is a read, then $o_j$ is a write, $\mathrm{R\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$, and $o_j$ is executed only if $\mathrm{TS}(T_j) > \mathrm{TS}(T_i)$. Thus every edge $T_i \to T_j$ of the precedence graph has $\mathrm{TS}(T_i) < \mathrm{TS}(T_j)$, and the graph is acyclic. No transaction ever waits, so there are no deadlocks. $\square$
+**Proof** Suppose operations $o_i$ of $T_i$ and $o_j$ of $T_j$ on $Q$ conflict and $o_i$ is executed first. If $o_i$ is a write, then $\mathrm{W\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$ afterwards, and $o_j$ (a read or a write) is executed only if $\mathrm{TS}(T_j) > \mathrm{W\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$ (timestamps are unique). If $o_i$ is a read, then $o_j$ is a write, $\mathrm{R\text{-}TS}(Q) \ge \mathrm{TS}(T_i)$, and $o_j$ is executed only if $\mathrm{TS}(T_j) > \mathrm{TS}(T_i)$. Thus every edge $T_i \to T_j$ of the **precedence graph** has $\mathrm{TS}(T_i) < \mathrm{TS}(T_j)$, and the graph is acyclic. No transaction ever waits, so there are no **deadlocks**. $\square$
 
-Basic timestamp ordering may produce unrecoverable schedules, since a transaction can read a value written by an uncommitted older one; it is made recoverable by delaying reads of uncommitted data or commits. The *Thomas write rule* weakens rule 2: if $\mathrm{TS}(T_i) < \mathrm{W\text{-}TS}(Q)$ but $\mathrm{TS}(T_i) \ge \mathrm{R\text{-}TS}(Q)$, the write is obsolete (no one will read it in the timestamp order) and is ignored instead of rolling back $T_i$. The resulting schedules are view serializable but not always conflict serializable.
+Basic timestamp ordering may produce unrecoverable schedules, since a transaction can read a value written by an uncommitted older one; it is made recoverable by delaying reads of uncommitted data or **commits**. The *Thomas write rule* weakens rule 2: if $\mathrm{TS}(T_i) < \mathrm{W\text{-}TS}(Q)$ but $\mathrm{TS}(T_i) \ge \mathrm{R\text{-}TS}(Q)$, the write is obsolete (no one will read it in the timestamp order) and is ignored instead of rolling back $T_i$. The resulting schedules are **view serializable** but not always conflict serializable.
 
 ### 11.5.2. Optimistic Concurrency Control
 
@@ -245,11 +245,11 @@ When conflicts are rare, checking at the end is cheaper than locking. In *valida
 
 ### 11.6.1. Versions and Snapshots
 
-Under locking, a reader of a row waits for the writer that holds an X lock on it, and a writer waits for readers. *Multiversion concurrency control* (MVCC) removes both waits by keeping several versions of each item: a write creates a new version, and a reader is directed to the version that is appropriate for it, without any lock. The cost is storage for old versions and their garbage collection.
+Under locking, a reader of a row waits for the writer that holds an **X lock** on it, and a writer waits for readers. *Multiversion concurrency control* (MVCC) removes both waits by keeping several versions of each item: a write creates a new version, and a reader is directed to the version that is appropriate for it, without any lock. The cost is storage for old versions and their **garbage collection**.
 
-In PostgreSQL each row version (tuple) stores the identifier of the transaction that created it, `xmin`, and of the transaction that deleted or replaced it, `xmax` (0 if none); an `UPDATE` marks the old version with its `xmax` and inserts a new version with its `xmin`, linked through `ctid` ([4.13.7](/4.13.7#sec-7.3.2)). A *snapshot* records which transactions count as committed for a reader: all transaction identifiers below a bound `xmin`, none at or above a bound `xmax`, and, in between, those not in a list of transactions that were in progress when the snapshot was taken. A version is *visible* in a snapshot if its creating transaction is committed in the snapshot and its deleting transaction (if any) is not. Committed status comes from the commit log `pg_xact`.
+In PostgreSQL each row version (**tuple**) stores the identifier of the **transaction** that created it, `xmin`, and of the transaction that deleted or replaced it, `xmax` (0 if none); an `UPDATE` marks the old version with its `xmax` and inserts a new version with its `xmin`, linked through `ctid` ([4.13.7](/4.13.7#sec-7.3.2)). A *snapshot* records which transactions count as committed for a reader: all transaction identifiers below a bound `xmin`, none at or above a bound `xmax`, and, in between, those not in a list of transactions that were in progress when the snapshot was taken. A version is *visible* in a snapshot if its creating transaction is committed in the snapshot and its deleting transaction (if any) is not. Committed status comes from the **commit** log `pg_xact`.
 
-**Example 11.6.1** Transaction 100 updates the age of sample `S01` from 54 to 55 and commits; transaction 101 took its snapshot while 100 was still running (100 is in its in-progress list), and transaction 102 started after the commit.
+**Example 11.6.1** Transaction 100 updates the age of sample `S01` from 54 to 55 and commits; transaction 101 took its **snapshot** while 100 was still running (100 is in its in-progress list), and transaction 102 started after the commit.
 
 | Version | `xmin` | `xmax` | Visible to 101 | Visible to 102 |
 |---|---|---|---|---|
@@ -264,9 +264,9 @@ InnoDB and Oracle update rows in place and keep the previous versions in *undo l
 
 **Definition 11.6.1 (Snapshot Isolation)** Under **snapshot isolation** (SI), each transaction reads from a snapshot of the committed data as of its start (it sees its own writes as well) and is never blocked by writers. A transaction $T$ may commit only if no other transaction that was concurrent with $T$ (one that committed after $T$ started) has written an item that $T$ also wrote; otherwise $T$ is rolled back (*first-committer-wins*; systems that detect the conflict at the second write instead of at commit use *first-updater-wins*).
 
-Snapshot isolation prevents dirty reads, nonrepeatable reads, phantoms (a snapshot does not change) and lost updates (two concurrent writes to the same row cannot both commit). It does not guarantee serializability. The characteristic anomaly is *write skew*: two concurrent transactions read an overlapping set of rows, make disjoint updates based on what they read, and both commit, producing a state that no serial order produces.
+**Snapshot isolation** prevents dirty reads, nonrepeatable reads, **phantoms** (a snapshot does not change) and **lost updates** (two concurrent writes to the same row cannot both commit). It does not guarantee serializability. The characteristic anomaly is *write skew*: two concurrent transactions read an overlapping set of rows, make disjoint updates based on what they read, and both commit, producing a state that no serial order produces.
 
-**Example 11.6.2** The laboratory requires that every tissue keep at least one control sample. Two transactions each check that there are two liver controls and then each converts a different one, `S01` and `S02`, to a treated sample. DuckDB 1.5 implements snapshot isolation with MVCC; on the running example:
+**Example 11.6.2** The laboratory requires that every tissue keep at least one control sample. Two transactions each check that there are two liver controls and then each converts a different one, `S01` and `S02`, to a treated sample. DuckDB 1.5 implements snapshot **isolation** with MVCC; on the running example:
 
 ```python
 import duckdb
@@ -310,11 +310,11 @@ TransactionException: TransactionContext Error: Conflict on update!
 (59,)
 ```
 
-Both transactions commit, because they wrote different rows, and the rule is violated: in either serial order the second transaction would have seen only one control and refrained. The second part shows the first-updater-wins rule: the concurrent increments of the same row cannot both succeed, so there is no lost update, and the age goes from 58 to 59 exactly once. Under SI, write skew is prevented by making the conflict explicit, for example with `SELECT ... FOR UPDATE` on the rows read (in systems that support it), by materializing the constraint as a row that both transactions update, or by running at a serializable level.
+Both transactions commit, because they wrote different rows, and the rule is violated: in either serial order the second transaction would have seen only one control and refrained. The second part shows the first-updater-wins rule: the concurrent increments of the same row cannot both succeed, so there is no lost update, and the age goes from 58 to 59 exactly once. Under SI, **write skew** is prevented by making the conflict explicit, for example with `SELECT ... FOR UPDATE` on the rows read (in systems that support it), by materializing the constraint as a row that both transactions update, or by running at a serializable level.
 
 ### 11.6.3. Serializable Snapshot Isolation
 
-Fekete and others (2005) characterized the non-serializable executions under SI: every cycle in the dependency graph of such an execution contains two consecutive *rw-antidependencies* (a transaction reads a version that a concurrent transaction overwrites) between concurrent transactions, with a pivot transaction in the middle. *Serializable snapshot isolation* (SSI; Cahill, Röhm and Fekete, 2008) runs transactions under SI, tracks rw-antidependencies with non-blocking predicate locks, and aborts a transaction when it detects such a dangerous structure. It may abort some transactions unnecessarily but never allows a non-serializable execution, and readers still never block. PostgreSQL implements its `SERIALIZABLE` level this way since version 9.1; in Example 11.6.2 one of the two transactions would fail with the error "could not serialize access due to read/write dependencies among transactions", and the application would retry it. CockroachDB also runs serializable transactions by default.
+Fekete and others (2005) characterized the non-serializable executions under SI: every cycle in the dependency graph of such an execution contains two consecutive *rw-antidependencies* (a transaction reads a version that a concurrent transaction overwrites) between concurrent transactions, with a pivot transaction in the middle. *Serializable snapshot isolation* (SSI; Cahill, Röhm and Fekete, 2008) runs transactions under SI, tracks rw-antidependencies with non-blocking predicate locks, and **aborts** a transaction when it detects such a dangerous structure. It may abort some transactions unnecessarily but never allows a non-serializable execution, and readers still never block. PostgreSQL implements its `SERIALIZABLE` level this way since version 9.1; in Example 11.6.2 one of the two transactions would fail with the error "could not serialize access due to read/write dependencies among transactions", and the application would retry it. CockroachDB also runs serializable transactions by default.
 
 ## 11.7. Anomalies and SQL Isolation Levels
 
@@ -331,7 +331,7 @@ Fekete and others (2005) characterized the non-serializable executions under SI:
 
 ### 11.7.2. Isolation Levels in the Standard and in PostgreSQL
 
-The SQL standard defines four isolation levels by the anomalies they prohibit, set with `SET TRANSACTION ISOLATION LEVEL` or `BEGIN ISOLATION LEVEL ...` ([4.13.4](/4.13.4#sec-4.7)). The standard requires only that `SERIALIZABLE` be serializable; Berenson and others ("A Critique of ANSI SQL Isolation Levels", 1995) showed that the anomaly-based definitions are ambiguous and that snapshot isolation falls between the standard's levels. The table gives the standard's definition and PostgreSQL's behaviour, following its documentation.
+The **SQL** standard defines four **isolation** levels by the anomalies they prohibit, set with `SET TRANSACTION ISOLATION LEVEL` or `BEGIN ISOLATION LEVEL ...` ([4.13.4](/4.13.4#sec-4.7)). The standard requires only that `SERIALIZABLE` be serializable; Berenson and others ("A Critique of ANSI SQL Isolation Levels", 1995) showed that the anomaly-based definitions are ambiguous and that **snapshot isolation** falls between the standard's levels. The table gives the standard's definition and PostgreSQL's behaviour, following its documentation.
 
 | Level | Dirty read | Nonrepeatable read | Phantom | Serialization anomaly | PostgreSQL implementation |
 |---|---|---|---|---|---|
@@ -340,7 +340,7 @@ The SQL standard defines four isolation levels by the anomalies they prohibit, s
 | `REPEATABLE READ` | not possible | not possible | possible (not in PostgreSQL) | possible | snapshot isolation: one snapshot per transaction; a concurrent update of a row it wants to modify aborts it ("could not serialize access due to concurrent update") |
 | `SERIALIZABLE` | not possible | not possible | not possible | not possible | serializable snapshot isolation (§11.6.3) |
 
-In PostgreSQL's `READ COMMITTED`, an `UPDATE` that finds its target row being updated by a concurrent transaction waits for it to finish and then re-evaluates its condition on the new version; a read-modify-write sequence of separate statements can still lose updates, which is why `UPDATE sample SET donor_age = donor_age + 1` in one statement, or `SELECT ... FOR UPDATE`, is the safe idiom.
+In PostgreSQL's `READ COMMITTED`, an `UPDATE` that finds its target row being updated by a concurrent **transaction** waits for it to finish and then re-evaluates its condition on the new version; a read-modify-write sequence of separate statements can still lose updates, which is why `UPDATE sample SET donor_age = donor_age + 1` in one statement, or `SELECT ... FOR UPDATE`, is the safe idiom.
 
 ### 11.7.3. Other Systems
 
@@ -352,7 +352,7 @@ In PostgreSQL's `READ COMMITTED`, an `UPDATE` that finds its target row being up
 | SQLite | serializable | one writer at a time for the whole database; in WAL mode readers use a snapshot and do not block the writer |
 | DuckDB | snapshot isolation | optimistic MVCC; concurrent updates of the same row fail at the second write (Example 11.6.2) |
 
-SQLite's coarse approach shows that serializability can be cheap when there is only one writer at a time. The following program opens three connections to a database in WAL mode: a reader that starts a transaction and reads, a writer that updates the same row and commits, and a second writer that is refused immediately (`timeout=0`; by default SQLite would retry for 5 seconds).
+SQLite's coarse approach shows that **serializability** can be cheap when there is only one writer at a time. The following program opens three connections to a **database** in **WAL** mode: a reader that starts a transaction and reads, a writer that updates the same row and commits, and a second writer that is refused immediately (`timeout=0`; by default SQLite would retry for 5 seconds).
 
 ```python
 import os, sqlite3
@@ -392,15 +392,15 @@ reader, second read: 54
 reader, new txn:     55
 ```
 
-The reader keeps its snapshot across the writer's commit and sees the new value only in its next transaction; the second writer gets `SQLITE_BUSY` ("database is locked"). Applications that use SQLite with several writing threads or processes should start write transactions with `BEGIN IMMEDIATE` and set a busy timeout, and long-running analytical workloads with many concurrent writers belong in a client–server system.
+The reader keeps its **snapshot** across the writer's **commit** and sees the new value only in its next transaction; the second writer gets `SQLITE_BUSY` ("database is locked"). Applications that use SQLite with several writing **threads** or processes should start write transactions with `BEGIN IMMEDIATE` and set a busy timeout, and long-running analytical workloads with many concurrent writers belong in a client–server system.
 
 ### 11.7.4. Choosing a Level
 
-Serializability is the only level at which the correctness argument "each transaction is correct when run alone" carries over to concurrent execution. Weaker levels are faster or block less, but every application invariant that spans several rows must then be checked by hand against the anomalies the level permits. A reasonable practice is to use `SERIALIZABLE` (in PostgreSQL, SSI) for transactions that maintain such invariants, to write the application so that it retries transactions that fail with a serialization error (SQLSTATE `40001`) or a deadlock (`40P01` in PostgreSQL), and to use `READ COMMITTED` with single-statement updates or explicit row locks where performance requires it.
+Serializability is the only level at which the correctness argument "each transaction is correct when run alone" carries over to concurrent execution. Weaker levels are faster or block less, but every application invariant that spans several rows must then be checked by hand against the anomalies the level permits. A reasonable practice is to use `SERIALIZABLE` (in PostgreSQL, SSI) for transactions that maintain such invariants, to write the application so that it retries transactions that fail with a serialization error (SQLSTATE `40001`) or a **deadlock** (`40P01` in PostgreSQL), and to use `READ COMMITTED` with single-statement updates or explicit row locks where performance requires it.
 
 ## Summary
 
-- Locks in S and X modes, managed in a lock table, protect data items between transactions; latches protect in-memory structures between threads.
+- Locks in S and X modes, managed in a **lock table**, protect data items between **transactions**; latches protect in-memory structures between **threads**.
 - Two-phase locking guarantees conflict serializability, with the lock points giving the serial order; strict 2PL also gives strict schedules, and rigorous 2PL makes the commit order the serial order.
 - Deadlocks are cycles in the wait-for graph; they are detected and broken by aborting a victim, or prevented by wait-die and wound-wait using timestamps.
 - Phantoms require locking predicates, approximated by index and next-key locking. Intention locks (IS, IX, SIX) let transactions lock tables, pages and rows consistently.

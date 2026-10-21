@@ -2023,7 +2023,7 @@ terms:
   - { zh: 测试用例, en: test case }
   - { zh: 差一错误, en: off-by-one error }
   - { zh: 单元测试, en: unit testing, aliases: [unit test] }
-  - { zh: 对拍, en: differential testing }
+  - { zh: 对拍, en: differential testing, aliases: [差分测试] }
   - { zh: 防御性编程, en: defensive programming }
   - { zh: 断言, en: assertion }
   - { zh: 数组, en: array }
@@ -3186,7 +3186,7 @@ terms:
   - { zh: 闪存转换层, en: flash translation layer, aliases: [FTL] }
   - { zh: 写放大, en: write amplification }
   - { zh: 磨损均衡, en: wear leveling }
-  - { zh: 独立磁盘冗余阵列, en: RAID, aliases: [磁盘阵列, redundant array of inexpensive disks, redundant array of independent disks] }
+  - { zh: 独立磁盘冗余阵列, en: RAID, aliases: [RAID, 磁盘阵列, redundant array of inexpensive disks, redundant array of independent disks] }
   - { zh: 小写问题, en: small-write problem }
   - { zh: 不足值, en: short count }
   - { zh: 虚拟机, en: virtual machine, aliases: [VM] }
@@ -3489,7 +3489,7 @@ terms:
   - { zh: 微内核架构, en: microkernel architecture, aliases: [插件化架构, plug-in architecture] }
   - { zh: 基于 HTTP 的动态自适应流, en: DASH, aliases: [dynamic adaptive streaming over HTTP] }
   - { zh: 内容分发网络, en: content delivery network, aliases: [CDN, 内容分发网] }
-  - { zh: 超文本传输协议, en: HTTP, aliases: [Hypertext Transfer Protocol] }
+  - { zh: 超文本传输协议, en: HTTP, aliases: [HTTP, Hypertext Transfer Protocol] }
   - { zh: 安全方法, en: safe method, scope: ["4.14"] }
   - { zh: 幂等方法, en: idempotent method, aliases: [idempotent, 幂等], scope: ["4.14"] }
   - { zh: 单页应用, en: single-page application, aliases: [SPA] }

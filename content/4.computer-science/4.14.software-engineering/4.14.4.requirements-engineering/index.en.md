@@ -3,7 +3,7 @@ title: Requirements Engineering
 description: "What requirements are and why projects fail without them; the requirements engineering process; elicitation, user classes and stakeholders; models (data flow diagrams, swimlane diagrams, decision tables, use cases, user stories, sequence diagrams); levels and types of requirements and the SRS; well-formed requirement statements, EARS and the characteristics of good requirements; change control and traceability; writing specifications for AI coding agents."
 ---
 
-Every software project begins with someone wanting something, and most failed projects fail there: the team builds the wrong thing, or the right thing with the wrong constraints, and finds out only after the code is written. Requirements engineering is the part of software engineering that turns vague wishes into a precise, agreed and checkable description of what a system must do and how well it must do it. This chapter follows the activities in their usual order: what a requirement is and why it matters (4.1), how requirements are obtained from users and other stakeholders (4.2), how they are analyzed with models (4.3), how they are written down (4.4), and how they are kept under control while they change (4.5). The last section (4.6) applies the same ideas to a new reader of specifications, the AI **coding agent**, which implements exactly what it is told and therefore makes the quality of the specification more important, not less. Throughout the chapter we use one running case, the Chemical Tracking System from Wiegers and Beatty's *Software Requirements*. The process models in which requirements work is embedded (waterfall, Scrum, user stories) are the subject of [4.14.2](/4.14.2); the design that follows from the requirements is the subject of [4.14.5](/4.14.5); and requirements reappear in testing, where every test checks some requirement ([4.14.11](/4.14.11)).
+Every software project begins with someone wanting something, and most failed projects fail there: the team builds the wrong thing, or the right thing with the wrong constraints, and finds out only after the code is written. Requirements engineering is the part of **software engineering** that turns vague wishes into a precise, agreed and checkable description of what a system must do and how well it must do it. This chapter follows the activities in their usual order: what a requirement is and why it matters (4.1), how requirements are obtained from users and other stakeholders (4.2), how they are analyzed with models (4.3), how they are written down (4.4), and how they are kept under control while they change (4.5). The last section (4.6) applies the same ideas to a new reader of specifications, the AI **coding agent**, which implements exactly what it is told and therefore makes the quality of the specification more important, not less. Throughout the chapter we use one running case, the Chemical Tracking System from Wiegers and Beatty's *Software Requirements*. The process models in which requirements work is embedded (waterfall, **Scrum**, user stories) are the subject of [4.14.2](/4.14.2); the design that follows from the requirements is the subject of [4.14.5](/4.14.5); and requirements reappear in testing, where every test checks some requirement ([4.14.11](/4.14.11)).
 
 ## 4.1. Basic Concepts
 
@@ -55,7 +55,7 @@ Requirements engineering mediates between three groups: users, who have goals an
 | *Requirements elicitation* and analysis | What do the stakeholders need? Which needs conflict? | Lists of needs, priorities, open issues |
 | Requirements modeling | How do data and control flow, who interacts with the system and how? | Models: data flow diagrams, use cases, sequence diagrams |
 | *Requirements specification* | How is each requirement stated precisely? | Software requirements specification (SRS) |
-| *Requirements validation* | Do the written requirements describe what the stakeholders actually need? | Reviewed, approved requirements (a baseline) |
+| *Requirements validation* | Do the written requirements describe what the stakeholders actually need? | Reviewed, approved requirements (a **baseline**) |
 | Requirements management | How are changes controlled and requirements traced? | Change records, traceability information |
 
 ```mermaid
@@ -118,7 +118,7 @@ Typical disputes and the usual ways to resolve them (after Wiegers and Beatty) a
 
 | Disagreement between | Resolution |
 |---|---|
-| Individual users | The product champion or product owner decides |
+| Individual users | The product champion or **product owner** decides |
 | User classes | Favored user classes get priority |
 | Market segments | The segment with the greatest impact on business success gets priority |
 | Corporate customers | Business objectives dictate the direction |
@@ -181,7 +181,7 @@ Natural language is flexible but ambiguous, and long prose hides gaps. Models ex
 | Data flow diagram | Data flow | Where does data come from, how is it transformed, where is it stored? |
 | Swimlane diagram | Cross-functional process | Who does which step of a business process, in what order? |
 | Decision table, decision tree | Condition and response | What must the system do under each combination of conditions? |
-| Use case diagram, user story | Functional decomposition from the user's view | Who uses the system, and for what goals? |
+| Use case diagram, **user story** | Functional decomposition from the user's view | Who uses the system, and for what goals? |
 | Sequence diagram | Interaction between objects | In what order are messages exchanged in one scenario? |
 
 ### 4.3.1. Data Flow Diagrams
@@ -289,7 +289,7 @@ Each path from the root to a leaf becomes one rule of the decision table:
 | R1 Approve request | | | X | | X |
 | R2 Reject request | X | X | | X | |
 
-The table is complete and consistent: with four Boolean conditions there are $2^4 = 16$ combinations, and the rules cover $8 + 4 + 2 + 1 + 1 = 16$ of them, each exactly once (a rule with $k$ don't-care entries covers $2^k$ combinations). Checks of this kind are mechanical, which is one reason decision tables are also a standard source of black-box test cases ([4.14.11](/4.14.11)); 4.6.3 turns this very table into an executable test.
+The table is complete and consistent: with four Boolean conditions there are $2^4 = 16$ combinations, and the rules cover $8 + 4 + 2 + 1 + 1 = 16$ of them, each exactly once (a rule with $k$ don't-care entries covers $2^k$ combinations). Checks of this kind are mechanical, which is one reason decision tables are also a standard source of black-box **test cases** ([4.14.11](/4.14.11)); 4.6.3 turns this very table into an executable test.
 
 A decision tree is easier to read when the conditions are naturally asked in sequence; a decision table is easier to check for completeness and scales better when many conditions interact.
 
@@ -368,7 +368,7 @@ Writing the description forces exactly the questions that the diagram hides: wha
 
 ### 4.3.5. Use Cases and User Stories
 
-Agile teams usually express user requirements as user stories rather than use cases ([4.14.2](/4.14.2)). A user story is written on a card in the form "As a ⟨role⟩, I can ⟨activity⟩ so that ⟨business value⟩", and is accompanied by acceptance criteria, the conditions that the implementation must meet for the story to count as done. For example:
+Agile teams usually express user requirements as user stories rather than use cases ([4.14.2](/4.14.2)). A **user story** is written on a card in the form "As a ⟨role⟩, I can ⟨activity⟩ so that ⟨business value⟩", and is accompanied by **acceptance criteria**, the conditions that the implementation must meet for the story to count as done. For example:
 
 > As an energy consumer, I want to see my daily energy use so that I can reduce my energy costs and usage.
 >
@@ -548,9 +548,9 @@ Defects in requirements are expensive. Beizer (1990) observed that requirements 
 | Acceptance testing | 5 |
 | Maintenance | 20 |
 
-The exact ratios come from plan-driven projects of the 1970s and 1980s and have been questioned since; short iterations, automated tests and continuous delivery flatten the curve. The direction is not in doubt: the later a misunderstanding is found, the more work has been built on it.
+The exact ratios come from plan-driven projects of the 1970s and 1980s and have been questioned since; short iterations, automated tests and **continuous delivery** flatten the curve. The direction is not in doubt: the later a misunderstanding is found, the more work has been built on it.
 
-ISO/IEC/IEEE 29148 lists the characteristics a requirement should have. The 2011 edition, which most textbooks and course slides follow, lists nine:
+ISO/IEC/IEEE 29148 lists the characteristics a requirement should have. The 2011 edition, which most textbooks still follow, lists nine:
 
 | Characteristic | Meaning |
 |---|---|
@@ -655,13 +655,13 @@ flowchart TB
 
 *Impact analysis* evaluates the feasibility and cost of a change for every activity of the project (requirements, design, coding, testing, project management) and estimates the effort as a list of tasks: update the SRS or requirements repository; create new and modify existing design components; create new and modify existing user interface components; write new user documentation and help screens; write new and modify existing source code; acquire, license and integrate third-party software; write new and modify existing unit and integration tests; and so on, summed to a total estimated effort. A change costs people (more staff), time (schedule delays) and money (additional hardware and software). Everyone affected must know about and confirm the change: users decide whether it is necessary and valuable to the business, the development team commits to delivering it, and management allocates the resources.
 
-Change control is not bureaucracy for its own sake. Without it, requirements creep in through hallway conversations, the schedule slips without anyone having decided to slip it, and the specification no longer describes the system. In agile processes the same function is served by the product owner and the product backlog: a change is a new or reprioritized backlog item, accepted into a sprint only through planning ([4.14.2](/4.14.2)).
+Change control is not bureaucracy for its own sake. Without it, requirements creep in through hallway conversations, the schedule slips without anyone having decided to slip it, and the specification no longer describes the system. In agile processes the same function is served by the **product owner** and the **product backlog**: a change is a new or reprioritized backlog item, accepted into a sprint only through planning ([4.14.2](/4.14.2)).
 
 ## 4.6. Specifications for AI Coding Agents
 
 ### 4.6.1. Why Specifications Matter More
 
-When a **coding agent** ([4.2.14](/4.2.14)) writes most of the code, the bottleneck of a project moves from writing code to deciding what the code should do. Three properties of agents make requirements engineering more important rather than less:
+When a **coding agent** ([4.2.14](/4.2.14)) writes most of the code, the bottleneck of a project moves from writing code to deciding what the code should do. Three properties of agents make **requirements engineering** more important rather than less:
 
 - An agent fills gaps by guessing. A human developer who meets an unclear requirement often asks; an agent tends to choose a plausible interpretation and implement it confidently. Every ambiguity of 4.4.5 becomes a decision the agent makes silently.
 - An agent works from the text it is given. It does not attend the meetings, does not know the stakeholders, and starts each session without the context of the last one unless that context is written down in the repository.
@@ -671,7 +671,7 @@ The practice of writing a specification first, reviewing it, and then letting ag
 
 ### 4.6.2. Anatomy of a Specification
 
-A specification for an agent is a short document kept in the repository, next to the code, under version control. A practical structure is:
+A specification for an agent is a short document kept in the repository, next to the code, under **version control**. A practical structure is:
 
 | Section | Content | Requirements concept |
 |---|---|---|
@@ -786,7 +786,7 @@ The requirements management practices of 4.5 carry over directly.
 - Traceability: requirement IDs appear in test names, docstrings and commit messages (`CTS-REQ-12` above), so that forward and backward tracing is a text search, which an agent can also perform when asked "what implements REQ-12.3?".
 - Validation by people: agents can draft a spec from a conversation, generate questions about it, and find gaps such as the missing cases of Example 4.4.2. Deciding what the system should do remains the stakeholders' job: an agent may propose the answer to an open question, but the person who owns the requirement approves it.
 
-Tools have begun to build this workflow in. AWS's Kiro, for instance, produces a `requirements.md` with user stories and acceptance criteria in EARS notation, then a `design.md` and a `tasks.md` from which the agent implements, with review between the steps; GitHub's open-source Spec Kit organizes work into similar stages (project principles, specification, technical plan, task list, implementation) that run inside several coding agents. The tools differ, but the stages are the classical ones of this chapter: elicit, specify, validate, then build, and keep the documents in step with the code.
+Tools have begun to build this workflow in. AWS's Kiro, for instance, produces a `requirements.md` with user stories and **acceptance criteria** in EARS notation, then a `design.md` and a `tasks.md` from which the agent implements, with review between the steps; GitHub's open-source Spec Kit organizes work into similar stages (project principles, specification, technical plan, task list, implementation) that run inside several **coding agents**. The tools differ, but the stages are the classical ones of this chapter: elicit, specify, validate, then build, and keep the documents in step with the code.
 
 ## Summary
 

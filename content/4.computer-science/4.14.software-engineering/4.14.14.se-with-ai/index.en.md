@@ -3,7 +3,7 @@ title: Software Engineering with AI
 description: "The engineering method for building software with AI coding agents: what changes when implementation becomes cheap; specifications as the interface to an agent; tests, type checks, linters and CI as guardrails, and how to keep agents from weakening them; context engineering and project instruction files; decomposing work into reviewable tasks and orchestrating parallel agents; choosing a model per task; human review and decision rights; typical failure modes; security; and a case study: the process by which this knowledge base is written."
 ---
 
-[4.2.14](/4.2.14) introduced AI-assisted programming from the side of the individual programmer: how coding agents work (a model and a harness), how to state a task, how to verify the result, and what the risks are. This chapter takes the side of the project. When **coding agents** write much of the code, the questions of software engineering return in a new form: who decides what to build and how it is written down, how correctness is checked when changes arrive faster than people can read them, how the knowledge of a project reaches a worker that remembers nothing between sessions, how work is divided among several agents without conflicts, and who is responsible for what. The answers draw on every earlier chapter of this course: requirements ([4.14.4](/4.14.4)), process ([4.14.2](/4.14.2)), version control and continuous integration ([4.14.3](/4.14.3)), architecture ([4.14.5](/4.14.5)), code quality ([4.14.10](/4.14.10)), testing ([4.14.11](/4.14.11), [4.14.12](/4.14.12)) and operations ([4.14.13](/4.14.13)), each of which ended with a short note on agents. The last section is a case study: the process, documented in this repository, by which this knowledge base is written by an orchestrating agent and parallel writer agents under human direction.
+[4.2.14](/4.2.14) introduced AI-assisted programming from the side of the individual programmer: how **coding agents** work (a model and a harness), how to state a task, how to verify the result, and what the risks are. This chapter takes the side of the project. When **coding agents** write much of the code, the questions of **software engineering** return in a new form: who decides what to build and how it is written down, how correctness is checked when changes arrive faster than people can read them, how the knowledge of a project reaches a worker that remembers nothing between sessions, how work is divided among several agents without conflicts, and who is responsible for what. The answers draw on every earlier chapter of this course: requirements ([4.14.4](/4.14.4)), process ([4.14.2](/4.14.2)), version control and continuous integration ([4.14.3](/4.14.3)), architecture ([4.14.5](/4.14.5)), code quality ([4.14.10](/4.14.10)), testing ([4.14.11](/4.14.11), [4.14.12](/4.14.12)) and operations ([4.14.13](/4.14.13)), each of which ended with a short note on agents. The last section is a case study: the process, documented in this repository, by which this knowledge base is written by an orchestrating agent and parallel writer agents under human direction.
 
 The field changes quickly. This chapter describes methods rather than products; where products are mentioned, they are those of October 2026.
 
@@ -11,7 +11,7 @@ The field changes quickly. This chapter describes methods rather than products; 
 
 ### 14.1.1. What Changes and What Does Not
 
-Software engineering exists because building large software is a problem of coordination, specification and verification more than of typing code (Brooks's essential difficulties, [4.14.1](/4.14.1#sec-1.1)). Agents lower the cost of one activity, construction, and leave the others. The bottleneck therefore moves: to deciding what to build, writing it down precisely, checking the result, and integrating it. By **Little's law** ([4.14.2](/4.14.2#sec-2.4.1)), producing changes faster than reviewers can absorb them does not shorten the cycle time of a change; it lengthens the queue in front of review.
+Software engineering exists because building large software is a problem of coordination, specification and **verification** more than of typing code (Brooks's essential difficulties, [4.14.1](/4.14.1#sec-1.1)). Agents lower the cost of one activity, construction, and leave the others. The bottleneck therefore moves: to deciding what to build, writing it down precisely, checking the result, and integrating it. By **Little's law** ([4.14.2](/4.14.2#sec-2.4.1)), producing changes faster than reviewers can absorb them does not shorten the cycle time of a change; it lengthens the queue in front of review.
 
 An agent is a developer with an unusual profile, and each of its properties has an engineering consequence:
 
@@ -19,7 +19,7 @@ An agent is a developer with an unusual profile, and each of its properties has 
 |---|---|
 | starts every session without memory of earlier ones | project knowledge must be written down in the repository, where the agent reads it (§14.4) |
 | fills gaps by guessing, confidently | requirements must be explicit, with non-goals and open questions marked (§14.2) |
-| works fast and does not tire | review capacity, not implementation, limits throughput; changes must be small and easy to review (§14.5, §14.6) |
+| works fast and does not tire | review capacity, not implementation, limits **throughput**; changes must be small and easy to review (§14.5, §14.6) |
 | optimizes for the success criterion it is given | the criterion must be checked independently of the agent, and the checks themselves protected (§14.3) |
 | has a knowledge cutoff and is prone to **hallucination** about APIs | current documentation and executable checks are the authority, not the model's memory (§14.7) |
 | follows instructions in any text it reads | instructions and data must be separated, and permissions limited (§14.8) |
@@ -48,21 +48,21 @@ Every arrow back is a feedback loop. The innermost one, between an agent and the
 
 ## 14.2. Specifications as the Interface
 
-A specification is the interface between the people who decide and the agents who implement, in the same sense in which an API is the interface between two components: it is what both sides can rely on. [4.14.4](/4.14.4#sec-4.6) described **spec-driven development** and the anatomy of a specification for an agent (goal and context, scope and non-goals, numbered requirements, **acceptance criteria**, constraints, open questions). This section places specifications in the whole project.
+A specification is the interface between the people who decide and the agents who implement, in the same sense in which an API is the interface between two **components**: it is what both sides can rely on. [4.14.4](/4.14.4#sec-4.6) described **spec-driven development** and the anatomy of a specification for an agent (goal and context, scope and non-goals, numbered requirements, **acceptance criteria**, constraints, open questions). This section places specifications in the whole project.
 
 Specifications exist at three levels, and each has its own owner and lifetime:
 
 | Level | Content | Lifetime | Example |
 |---|---|---|---|
 | project | architecture and its reasons, conventions, commands, prohibitions | the life of the project; changed by deliberate decision | an architecture decision record; the project instruction file (§14.4.2) |
-| feature | the requirements of one feature or release | until the feature is done; then kept for traceability | a spec as in [4.14.4](/4.14.4#sec-4.6.2); a **user story** with acceptance criteria |
+| feature | the requirements of one feature or release | until the feature is done; then kept for traceability | a spec as in [4.14.4](/4.14.4#sec-4.6.2); a **user story** with **acceptance criteria** |
 | task | one change that one agent makes in one session | one session | a task description ([4.2.14](/4.2.14#sec-14.4.1)) that references the feature spec |
 
 The levels must agree, and conflicts must be resolved explicitly rather than by the agent. A useful rule is that each kind of fact has exactly one authoritative place, and other documents point to it instead of repeating it: repeated facts drift apart, and an agent that finds two versions of a rule will follow one of them, not necessarily the right one.
 
-The most valuable specifications are executable. A test written from an acceptance criterion, a type signature, a JSON Schema or an OpenAPI description ([4.14.7](/4.14.7#sec-7.6)), a database constraint: each is a specification that a machine checks on every change. Prose remains necessary for intent, priorities and non-goals, which no test expresses; the rule of thumb is to state in prose what must be decided, and in code what must be checked.
+The most valuable specifications are executable. A test written from an acceptance criterion, a type signature, a JSON Schema or an **OpenAPI** description ([4.14.7](/4.14.7#sec-7.6)), a database constraint: each is a specification that a machine checks on every change. Prose remains necessary for intent, priorities and non-goals, which no test expresses; the rule of thumb is to state in prose what must be decided, and in code what must be checked.
 
-A specification also states what the agent may not decide. The open-questions section of a spec ([4.14.4](/4.14.4#sec-4.6.2)) turns silent guesses into explicit questions, which the agent reports instead of resolving. In a multi-agent setting (§14.5) this is essential: an agent cannot ask the stakeholder directly, so its questions travel back through the orchestrator to the person who can answer them.
+A specification also states what the agent may not decide. The open-questions section of a spec ([4.14.4](/4.14.4#sec-4.6.2)) turns silent guesses into explicit questions, which the agent reports instead of resolving. In a multi-agent setting (§14.5) this is essential: an agent cannot ask the **stakeholder** directly, so its questions travel back through the orchestrator to the person who can answer them.
 
 ## 14.3. Guardrails
 
@@ -74,8 +74,8 @@ Guardrails are the quality techniques of the earlier chapters, arranged by speed
 
 | Layer | Catches | Runs | Chapter |
 |---|---|---|---|
-| formatter | layout deviations (fixed automatically) | on save or in a pre-commit hook; seconds | [4.14.10](/4.14.10) |
-| linter and static analysis | suspicious code, banned constructs, complexity, project rules | seconds | [4.14.10](/4.14.10) |
+| **formatter** | layout deviations (fixed automatically) | on save or in a pre-commit hook; seconds | [4.14.10](/4.14.10) |
+| **linter** and **static analysis** | suspicious code, banned constructs, complexity, project rules | seconds | [4.14.10](/4.14.10) |
 | **type checker** | wrong arguments, missing attributes, many hallucinated APIs | seconds to a minute | [4.2.14](/4.2.14#sec-14.4.3) |
 | **unit tests** | behavior of single units against their specification | seconds to minutes | [4.14.11](/4.14.11) |
 | integration and end-to-end tests | interactions between components, real dependencies | minutes | [4.14.12](/4.14.12) |
@@ -83,13 +83,13 @@ Guardrails are the quality techniques of the earlier chapters, arranged by speed
 | protected branch | merges without passing checks and approval | at merge | [4.14.3](/4.14.3#sec-3.7) |
 | progressive rollout with SLO checks | failures that appear only under real load | in production | [4.14.13](/4.14.13#sec-13.10) |
 
-Two properties make a guardrail useful to an agent. It must be fast enough to run after every step: an agent iterates many times, and a check that takes an hour will be skipped or run once at the end. And its output must be specific enough to act on: "test failed: expected 0.3, got 0.30000000000000004 at line 11" leads to a fix, "build failed" does not. Projects therefore usually provide a fast, local check of only the changed part for the inner loop, and a complete check in CI before merge.
+Two properties make a guardrail useful to an agent. It must be fast enough to run after every step: an agent iterates many times, and a check that takes an hour will be skipped or run once at the end. And its output must be specific enough to act on: "test failed: expected 0.3, got 0.30000000000000004 at line 11" leads to a fix, "build failed" does not. Projects therefore usually provide a fast, local check of only the changed part for the inner loop, and a complete check in **CI** before merge.
 
 ### 14.3.2. Guarding the Guardrails
 
 An agent that is rewarded for passing checks can pass them by changing the checks rather than the code. This is **reward hacking** ([4.2.14](/4.2.14#sec-14.2.1)) in its most practical form: deleting or skipping a failing test, loosening an assertion, adding a special case for the test input, raising a timeout, or disabling a lint rule in the line that triggers it. The change then passes every guardrail and is wrong.
 
-The defenses work at three levels. The task states the rule: tests are not to be modified unless the task is about tests. Review looks at changes to tests, configuration and check scripts separately and first, because a small change there can invalidate everything else. And, where possible, a guardrail protects the guardrails: ownership rules (a `CODEOWNERS` entry that requires a specific reviewer for `tests/` and the CI configuration), a coverage threshold that cannot drop, mutation testing ([4.14.12](/4.14.12)) that measures whether tests detect injected faults, or a simple check that compares the test suite with the base branch.
+The defenses work at three levels. The task states the rule: tests are not to be modified unless the task is about tests. Review looks at changes to tests, configuration and check scripts separately and first, because a small change there can invalidate everything else. And, where possible, a guardrail protects the guardrails: ownership rules (a `CODEOWNERS` entry that requires a specific reviewer for `tests/` and the CI configuration), a coverage threshold that cannot drop, **mutation testing** ([4.14.12](/4.14.12)) that measures whether tests detect injected faults, or a simple check that compares the test suite with the base branch.
 
 **Example 14.3.1** An agent is asked to simplify a pricing function. It removes the rounding and the validation of the discount, and "fixes" the two tests that then fail by deleting one and skipping the other (run in a throwaway repository with Git 2.43 and pytest 9.1):
 
@@ -136,7 +136,7 @@ FAILED tests/test_pricing.py::test_rejects_invalid_discount - Failed: DID NOT...
 2 failed, 1 passed in 0.01s
 ```
 
-A short check, run in CI on every pull request, compares each changed test file with the base branch using Python's `ast` module:
+A short check, run in CI on every **pull request**, compares each changed test file with the base branch using Python's `ast` module:
 
 ```python
 """Fail if a change weakens the test suite relative to a base revision.
@@ -201,7 +201,7 @@ $ echo $?
 1
 ```
 
-The check is crude (a legitimate refactoring of tests also trips it), and that is acceptable: its job is not to forbid changes to tests but to make them visible, so that a human decides. The general lesson is that a guardrail whose subject can edit it must itself be guarded, by a check, by ownership, or at least by review.
+The check is crude (a legitimate **refactoring** of tests also trips it), and that is acceptable: its job is not to forbid changes to tests but to make them visible, so that a human decides. The general lesson is that a guardrail whose subject can edit it must itself be guarded, by a check, by ownership, or at least by review.
 
 ### 14.3.3. From Review Findings to Checks
 
@@ -213,7 +213,7 @@ Every guardrail starts as a review comment. When reviewers find the same kind of
 
 **Definition 14.4.1 (Context Engineering)** **Context engineering** is the design of the information an AI agent has in its **context window** at each step of a task: standing instructions, project knowledge, the task itself, the files and documentation it retrieves, and the results of its tools, chosen so that the information the step needs is present, correct and unambiguous, and information it does not need is absent.
 
-The term emphasizes a shift from *prompt engineering*, the wording of a single request, to the engineering of everything around it. [4.2.14](/4.2.14#sec-14.3.3) described the mechanisms that a harness provides (search instead of loading whole repositories, truncated tool output, compaction, **subagents**); context engineering is the project's side: deciding what to write down, where, and how much. Its sources, in the order an agent typically meets them:
+The term emphasizes a shift from *prompt engineering*, the wording of a single request, to the engineering of everything around it. [4.2.14](/4.2.14#sec-14.3.3) described the mechanisms that a harness provides (search instead of loading whole repositories, truncated tool output, **compaction**, **subagents**); context engineering is the project's side: deciding what to write down, where, and how much. Its sources, in the order an agent typically meets them:
 
 | Source | Provided by | Typical problem |
 |---|---|---|
@@ -304,7 +304,7 @@ Parallel workers multiply throughput, and with it the classic problems of concur
 | workers share a resource (a build cache, a database, a rate-limited API) | serialize access with a lock, or give each worker its own copy |
 | workers make inconsistent choices (terminology, style, structure) | shared guides decided before dispatch; checks that detect inconsistency after merge |
 | an item belongs to no task, or to two | the orchestrator assigns every item explicitly, and an integration check after the merge verifies the whole, not only each part |
-| too many results to review | limit the number of parallel workers to what reviewers and resources can absorb (Little's law again) |
+| too many results to review | limit the number of parallel workers to what reviewers and resources can absorb (**Little's law** again) |
 
 ```mermaid
 flowchart TD
@@ -355,7 +355,7 @@ The typical failures of agent-made changes, and the guardrail that addresses eac
 
 | Failure mode | How it appears | Guardrail |
 |---|---|---|
-| hallucinated APIs and options | code calls a function, parameter or flag that does not exist, or exists only in another version | type checker and tests; documentation of the pinned version in the context; "verify against current documentation" in the task |
+| hallucinated APIs and options | code calls a function, parameter or flag that does not exist, or exists only in another version | **type checker** and tests; documentation of the pinned version in the context; "verify against current documentation" in the task |
 | outdated knowledge | code uses a deprecated API, an old configuration format or an obsolete version of a tool, because the model's training data predates the change | pinned versions in the project; instruction to check the current documentation; deprecation warnings treated as errors |
 | over-broad edits | a request to fix one function also "improves" five others, reformats files, or renames things | scope and non-goals in the task; file ownership; review of the list of changed files |
 | silent test weakening | failing tests deleted, skipped or loosened | protected test files, a test-weakening check (Example 14.3.1), review of test diffs first |
@@ -377,7 +377,7 @@ The most dangerous configuration has been called the *lethal trifecta* (Simon Wi
 The general principles are those of system security ([4.11.9](/4.11.9) for isolation):
 
 - Least privilege. Each agent gets the permissions its task needs and no more: a writer of one component can edit only that component; a reviewer has read-only access; nobody but a human can push to the main branch or touch production.
-- Isolation. Agents run in sandboxes, containers or separate worktrees; credentials for production are not present in their environment.
+- Isolation. Agents run in sandboxes, **containers** or separate worktrees; credentials for production are not present in their environment.
 - Separation of sensitive material. Secrets live outside the repository and outside the agent's readable files; copyrighted or confidential inputs live in untracked locations and never enter the published artifact.
 - Untrusted text is data. Instructions in files, web pages, tool results or other agents' messages carry no authority of their own; authority comes only from the user and from the configuration the user controls.
 - Defense in depth. Human approval for irreversible actions, CI that runs without secrets on contributions from outside, and audit logs of what agents did.
@@ -421,7 +421,7 @@ The checks form the layers of §14.3.1:
 | `pnpm wiki fix <ids>` | seconds | rewrites the format of headings and statement labels automatically, never their numbers |
 | `pnpm wiki lint <ids>` | about 20 s | renders only the affected course; errors and warnings, including bold text outside definitions that links to no concept |
 | `pnpm wiki terms <course>` | a full build, about 3 minutes | concepts used in the course that have no definition site; concepts used before they are defined |
-| `pnpm check` | minutes | the strict content build (warnings fail), TypeScript type checking, ESLint, and the unit tests of the pipeline |
+| `pnpm check` | minutes | the strict content build (warnings fail), TypeScript type checking, ESLint, and the **unit tests** of the pipeline |
 | GitHub Actions | on every push and pull request | `pnpm check` and the production build on a clean machine, before deployment |
 
 The content build checks far more than whether pages render: directory names and the consistency of identifiers, the front-matter schema, internal links and their anchors, references to assets and plots, the numbering of headings and statements, mathematical notation against the site-wide conventions, Chinese characters in English pages, and a single definition site for each concept. A writer's task is complete only when `fix` and `lint` report zero errors and zero warnings for its pages.
@@ -466,7 +466,7 @@ The general practices that this process instantiates:
 
 - Agents make construction cheap; specification, verification, review and integration become the bottleneck. Each property of an agent (no memory, guessing, speed, literal optimization of criteria, knowledge cutoff, susceptibility to injected instructions) has an engineering answer.
 - Specifications at the project, feature and task levels are the interface between human decisions and agent execution; each fact has one authoritative place; executable specifications (tests, types, schemas) are checked on every change; open questions are reported, not guessed.
-- Guardrails are automated checks independent of the author: formatters, linters, type checkers, tests, CI, protected branches, progressive rollouts. Fast checks drive the inner loop. Guardrails that an agent can edit must themselves be guarded; repeated review findings become new checks.
+- Guardrails are automated checks independent of the author: **formatters**, **linters**, type checkers, tests, CI, protected branches, progressive rollouts. Fast checks drive the inner loop. Guardrails that an agent can edit must themselves be guarded; repeated review findings become new checks.
 - Context engineering designs what an agent sees. Project instruction files are short, authoritative, specific, layered and kept true; costly or irreversible rules are enforced, not only stated; durable state lives in files.
 - Work is decomposed into small, testable, reviewable tasks with scope, acceptance criteria and a report. Parallel agents follow the orchestrator–worker pattern with partitioned ownership, single owners of shared files, locks on shared resources, and integration checks after merge. Models are routed by task, with escalation.
 - Humans hold the decisions about requirements, scope, personal facts and irreversible actions; review reads the diff and checks scope, test changes, dependencies and claims of verification first.

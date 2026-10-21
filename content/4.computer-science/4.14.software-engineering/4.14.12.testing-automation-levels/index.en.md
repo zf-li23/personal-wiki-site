@@ -3,7 +3,7 @@ title: "Software Testing II: Test Automation and Test Levels"
 description: "The xUnit family and the four-phase test; unittest and pytest with real output: assertions, parametrization and fixtures with setup and teardown; test doubles (dummy, stub, spy, mock, fake) with unittest.mock; test-driven development and its three laws, with a worked red–green–refactor session; integration testing: big bang, top-down with stubs, bottom-up with drivers, sandwich; system testing, with performance, load, stress, soak, spike and configuration testing; acceptance testing: UAT, alpha and beta, Given–When–Then; benchmarks, smoke and regression testing, fuzzing and property-based testing with Hypothesis, canary releases and A/B tests; testing in continuous integration; and testing when AI agents write the code."
 ---
 
-The previous chapter ([4.14.11](/4.14.11)) asked which test cases to choose. This chapter asks how to run them, again and again, at every level of a system. Tests that are run by hand are run rarely; tests that are code run on every change, in seconds, and turn testing from a phase at the end of a project into a continuous activity. We begin with the frameworks that make unit tests cheap to write and run (12.1) and the test doubles that isolate a unit from its dependencies (12.2), and then with test-driven development, which writes the tests first (12.3). The rest of the chapter climbs the levels of testing: integration testing, which checks that units work together (12.4); system testing, including the non-functional tests of performance and load (12.5); and acceptance testing, which decides whether the customer accepts the system (12.6). Section 12.7 surveys other kinds of tests (smoke, regression, fuzz, canary, A/B), 12.8 shows how all of them fit into a continuous integration pipeline, and 12.9 discusses testing when coding agents write the code. Examples were run with Python 3.14, pytest 9.1 and Hypothesis 6.170.
+The previous chapter ([4.14.11](/4.14.11)) asked which **test cases** to choose. This chapter asks how to run them, again and again, at every level of a system. Tests that are run by hand are run rarely; tests that are code run on every change, in seconds, and turn testing from a phase at the end of a project into a continuous activity. We begin with the frameworks that make **unit tests** cheap to write and run (12.1) and the test doubles that isolate a unit from its dependencies (12.2), and then with test-driven development, which writes the tests first (12.3). The rest of the chapter climbs the levels of testing: integration testing, which checks that units work together (12.4); system testing, including the non-functional tests of performance and load (12.5); and acceptance testing, which decides whether the customer accepts the system (12.6). Section 12.7 surveys other kinds of tests (smoke, regression, fuzz, canary, A/B), 12.8 shows how all of them fit into a continuous integration pipeline, and 12.9 discusses testing when coding agents write the code. Examples were run with Python 3.14, pytest 9.1 and Hypothesis 6.170.
 
 ## 12.1. Unit Testing Frameworks
 
@@ -252,7 +252,7 @@ How can we test a unit when a component it depends on cannot be used in a test? 
 
 **Definition 12.2.1 (Test Double)** A **test double** is a test-specific replacement for a component on which the system under test depends. It need not behave exactly like the real DOC; it merely has to provide the same interface, so that the SUT cannot tell the difference.
 
-The name comes from the stunt double of the film industry (Meszaros). Test doubles can be substituted only if the SUT lets them in: through dependency injection of its collaborators (10.8.2, [4.14.10](/4.14.10)), through a factory, or, in dynamic languages, by patching the module where the SUT looks the dependency up.
+The name comes from the stunt double of the film industry (Meszaros). Test doubles can be substituted only if the SUT lets them in: through **dependency injection** of its collaborators (10.8.2, [4.14.10](/4.14.10)), through a factory, or, in dynamic languages, by patching the module where the SUT looks the dependency up.
 
 ### 12.2.2. Kinds of Test Doubles
 
@@ -350,7 +350,7 @@ flowchart LR
 
 - Red phase. Each new feature begins with writing a test. This makes the developer focus on the requirement, on what the code should do and how it will be called, before writing the code; the test describes "the code you wish you had". Seeing the test fail also checks the test itself: a test that passes before the feature exists tests nothing.
 - Green phase. Implement code to make the test pass. The goal is to find a solution, without worrying yet about elegance or efficiency.
-- Refactor phase. Move code from where it was convenient for passing the test to where it logically belongs, remove duplication, and improve the implementation (refactoring, Definition 10.7.1); the tests make each step safe.
+- Refactor phase. Move code from where it was convenient for passing the test to where it logically belongs, remove duplication, and improve the implementation (**refactoring**, Definition 10.7.1); the tests make each step safe.
 
 Robert C. Martin summarized the discipline in three laws:
 
@@ -489,7 +489,7 @@ The structure can be expanded *depth-first*, integrating all components on a maj
 
 *Sandwich integration* (hybrid integration) combines the two: top-down for the upper layers and bottom-up for the lower ones, meeting at a middle layer.
 
-In modern service-based systems ([4.14.6](/4.14.6)), the same ideas take other forms. Integration tests run a component against real instances of its dependencies, often in containers started by the test itself (the Testcontainers libraries start a database or message broker in Docker for each test session; containers are treated in [4.11.9](/4.11.9)). *Contract testing* checks the interface between two services without deploying both: the consumer's tests record the requests it makes and the responses it expects as a contract, and the provider's tests verify that it fulfills the contract (Pact is a common tool). Had the units of the Mars Climate Orbiter's interface been part of a checked contract, the mismatch would have been found on the ground.
+In modern service-based systems ([4.14.6](/4.14.6)), the same ideas take other forms. Integration tests run a component against real instances of its dependencies, often in **containers** started by the test itself (the Testcontainers libraries start a database or message broker in Docker for each test session; containers are treated in [4.11.9](/4.11.9)). *Contract testing* checks the interface between two services without deploying both: the consumer's tests record the requests it makes and the responses it expects as a contract, and the provider's tests verify that it fulfills the contract (Pact is a common tool). Had the units of the Mars Climate Orbiter's interface been part of a checked contract, the mismatch would have been found on the ground.
 
 ## 12.5. System Testing
 
@@ -501,7 +501,7 @@ In modern service-based systems ([4.14.6](/4.14.6)), the same ideas take other f
 
 The factors with the most impact on system performance are the raw capabilities of the hardware platform; the maturity of the underlying software platform (operating system, runtime, database); the design and implementation of the application; and third-party services and APIs. Even well-designed software may not perform and scale optimally on fast hardware without a full cycle of measurement, optimization and tuning, and understanding the performance of a system quantitatively requires understanding how it is built inside out.
 
-Performance tests measure response time (often as percentiles, such as the 95th or 99th percentile, not only the mean), throughput (transactions per second), and resource utilization (CPU, memory, disk and network) as functions of the load. A typical result is that throughput does not scale linearly with the number of threads. In one measurement, the throughput with 8 threads was about 4 times the single-threaded throughput, with no substantial gain beyond 8 threads. By **Amdahl's law**, a speedup of 4 on 8 processors corresponds to a serial fraction $s$ with
+Performance tests measure response time (often as percentiles, such as the 95th or 99th percentile, not only the mean), **throughput** (transactions per second), and resource utilization (CPU, memory, disk and network) as functions of the load. A typical result is that throughput does not scale linearly with the number of threads. In one measurement, the throughput with 8 threads was about 4 times the single-threaded throughput, with no substantial gain beyond 8 threads. By **Amdahl's law**, a speedup of 4 on 8 processors corresponds to a serial fraction $s$ with
 $$
 \frac{1}{s + (1 - s)/8} = 4, \quad\text{that is,}\quad s = \frac{1}{7} \approx 14\%,
 $$
@@ -525,7 +525,7 @@ Load is generated by tools that simulate many users, such as JMeter, Gatling, k6
 
 **Definition 12.6.1 (Acceptance Testing)** **Acceptance testing** is formal testing with respect to user needs, requirements and business processes, conducted to determine whether a system satisfies its acceptance criteria and to enable the users, customers or another authorized entity to determine whether to accept the system. It is the last level of testing, performed after system testing and before the system is made available for actual use.
 
-*Functional acceptance testing* verifies that the system satisfies its prescribed functional requirements; *non-functional acceptance testing* validates its quality attributes, such as performance, security and usability, against the agreed criteria. Several further kinds are distinguished, and in some references alpha, beta, operational, contract, regulation and business acceptance testing together make up user acceptance testing:
+*Functional acceptance testing* verifies that the system satisfies its prescribed functional requirements; *non-functional acceptance testing* validates its **quality attributes**, such as performance, security and usability, against the agreed criteria. Several further kinds are distinguished, and in some references alpha, beta, operational, contract, regulation and business acceptance testing together make up user acceptance testing:
 
 - *User acceptance testing* (UAT), also called end-user testing, verifies that a solution works for its users. It is not system testing, which ensures that the software does not crash and meets the documented requirements; it ensures that the users accept the solution. It concentrates on the functions the users actually use most often, in their business processes.
 - *Alpha testing* is performed in the development organization's environment by a specialized team of testers, internal employees who simulate real users. Its aim is to find as many problems as possible before release, by identifying the tasks that a typical user might perform and testing them.
@@ -535,7 +535,7 @@ Load is generated by tools that simulate many users, such as JMeter, Gatling, k6
 | Aspect | System testing | Acceptance testing |
 |---|---|---|
 | Purpose | checks whether the product meets its specified requirements | checks whether it meets the customer's needs |
-| Performed by | developers and testers | testers, stakeholders and customers |
+| Performed by | developers and testers | testers, **stakeholders** and customers |
 | Kinds of test | functional and non-functional | mainly functional, sometimes non-functional |
 | Order | before acceptance testing | after system testing |
 | Test cases | positive and negative test cases | mainly positive test cases, in realistic scenarios |
@@ -544,7 +544,7 @@ Load is generated by tools that simulate many users, such as JMeter, Gatling, k6
 
 ### 12.6.2. Automated Acceptance Tests
 
-In agile development, the **acceptance criteria** of each **user story** ([4.14.2](/4.14.2)) are written so that they can be automated, and the automated acceptance tests are run in the CI pipeline like any other test. The Given–When–Then form of *behavior-driven development* (BDD) maps directly onto the phases of a test: *given* sets up the fixture, *when* exercises the system, *then* verifies the outcome. The third acceptance criterion of Example 2.3.1, "Given an account without orders, when the report is generated, then it lists the account with zero revenue", becomes:
+In **agile development**, the **acceptance criteria** of each **user story** ([4.14.2](/4.14.2)) are written so that they can be automated, and the automated acceptance tests are run in the **CI** pipeline like any other test. The Given–When–Then form of *behavior-driven development* (BDD) maps directly onto the phases of a test: *given* sets up the fixture, *when* exercises the system, *then* verifies the outcome. The third acceptance criterion of Example 2.3.1, "Given an account without orders, when the report is generated, then it lists the account with zero revenue", becomes:
 
 ```python
 from datetime import date
@@ -640,11 +640,11 @@ A/B tests answer questions about user engagement and satisfaction that no test s
 
 ## 12.8. Testing in Continuous Integration
 
-**Continuous integration** ([4.14.3](/4.14.3)) is where automated tests pay off: every push and pull request triggers a pipeline that builds the system and runs the tests, and a failure blocks the merge. A pipeline is organized by speed and scope, following the test pyramid:
+**Continuous integration** ([4.14.3](/4.14.3)) is where automated tests pay off: every push and **pull request** triggers a pipeline that builds the system and runs the tests, and a failure blocks the merge. A pipeline is organized by speed and scope, following the test pyramid:
 
 | Stage | When | Tests | Duration |
 |---|---|---|---|
-| Local and pre-commit | before each commit | formatter, linter, the fast unit tests of the changed code | seconds |
+| Local and pre-commit | before each commit | formatter, **linter**, the fast unit tests of the changed code | seconds |
 | Pull request | on every push | all unit tests, integration tests with containers, static analysis, coverage | minutes |
 | Main branch, after merge | on every merge | the above plus end-to-end and acceptance tests, then deployment to a staging environment and a smoke test | tens of minutes |
 | Scheduled | nightly or weekly | long performance, soak and fuzzing runs, dependency and security scans | hours |
@@ -664,14 +664,14 @@ markers = [
 
 A test is marked with `@pytest.mark.slow`; the pull-request stage runs `pytest -m "not slow and not integration"`, and `--strict-markers` turns a misspelled marker into an error instead of a silently unselected test. `--durations=5` lists the slowest tests, so that slow tests are noticed before they slow down everyone. Plug-ins such as pytest-xdist (`pytest -n auto`) run tests in parallel on all cores.
 
-Two problems undermine a test suite in CI. A *flaky test* is a test that passes and fails on the same code, typically because it depends on timing, ordering, shared state, randomness or the network. Flaky tests teach a team to ignore red builds, so they are fixed or quarantined immediately, never simply rerun until green. And a slow suite is run less often: keeping the unit tests fast (the F of FIRST) is a requirement, not a luxury.
+Two problems undermine a test suite in **CI**. A *flaky test* is a test that passes and fails on the same code, typically because it depends on timing, ordering, shared state, randomness or the network. Flaky tests teach a team to ignore red builds, so they are fixed or quarantined immediately, never simply rerun until green. And a slow suite is run less often: keeping the unit tests fast (the F of FIRST) is a requirement, not a luxury.
 
 ## 12.9. Testing When Agents Write Code
 
-For a **coding agent** ([4.2.14](/4.2.14)), the test suite is the most important source of feedback: the agent can run it after each change and repair its own mistakes, which makes tests the guardrails of agent-written code ([4.14.4](/4.14.4) shows acceptance criteria turned into such a test). This raises the stakes on the properties of this chapter.
+For a **coding agent** ([4.2.14](/4.2.14)), the test suite is the most important source of feedback: the agent can run it after each change and repair its own mistakes, which makes tests the guardrails of agent-written code ([4.14.4](/4.14.4) shows **acceptance criteria** turned into such a test). This raises the stakes on the properties of this chapter.
 
 - Fast, deterministic tests. An agent runs the tests many times per task; a suite that takes minutes or fails randomly wastes its effort and teaches it to ignore failures. Markers that select the relevant fast subset, and a documented command for running it, belong in the project instructions the agent reads.
-- Test first, in the TDD rhythm. Asking the agent first for a failing test that reproduces a bug or specifies a feature, and reviewing that test before the implementation, gives the person a cheap checkpoint: the test states in code what the agent understood the task to be. A test that already passes before the change tests nothing.
+- Test first, in the **TDD** rhythm. Asking the agent first for a failing test that reproduces a bug or specifies a feature, and reviewing that test before the implementation, gives the person a cheap checkpoint: the test states in code what the agent understood the task to be. A test that already passes before the change tests nothing.
 - Protect the tests. An agent that cannot make a test pass may be tempted, like a hurried person, to weaken an assertion, mark a test as skipped, mock away the code under test, or special-case the test inputs. Instructions should forbid modifying existing tests without approval, and reviewers should read changes to test files and fixtures with special care.
 - Keep real interactions in the suite. Mocks written by the same agent that wrote the code encode its assumptions about the dependencies twice; integration tests against real databases in containers, contract tests and end-to-end tests check those assumptions against reality.
 - Let CI have the last word. The agent's own report that the tests pass is a claim; the pipeline run on the pushed commit is the evidence.

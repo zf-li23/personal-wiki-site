@@ -3,7 +3,7 @@ title: Advanced SQL
 description: "SQL beyond SELECT–FROM–WHERE: scalar, IN, EXISTS and correlated subqueries and the NOT IN null trap, LATERAL; UNION, INTERSECT and EXCEPT and relational division in SQL; common table expressions and recursive queries over a pathway hierarchy; window functions for ranking, running and moving aggregates; INSERT, UPDATE, DELETE, upsert, MERGE and RETURNING; views and materialized views; transactions and savepoints; privileges, roles and row-level security; and database access from Python through the DB-API with parameterized queries against SQL injection."
 ---
 
-The basic query block of [4.13.3](/4.13.3) is the building block of everything else in SQL. This chapter combines query blocks: nested inside each other as subqueries, connected by set operations, named and reused in `WITH` clauses, and applied recursively to follow a hierarchy to any depth. It then introduces window functions, which compute aggregates without collapsing rows and are indispensable in analytical work, and the statements that change data. The second half turns from queries to the database as a shared resource: views that give users their own external schema ([4.13.1](/4.13.1#sec-1.3.1)), transactions as SQL exposes them, access rights, and the way programs send SQL to a database safely. All examples use the running example of [4.13.3](/4.13.3#sec-3.2.3); as there, output comes from SQLite 3.45 unless it is marked as DuckDB 1.5.
+The basic query block of [4.13.3](/4.13.3) is the building block of everything else in **SQL**. This chapter combines query blocks: nested inside each other as subqueries, connected by set operations, named and reused in `WITH` clauses, and applied recursively to follow a hierarchy to any depth. It then introduces window functions, which compute aggregates without collapsing rows and are indispensable in analytical work, and the statements that change data. The second half turns from queries to the **database** as a shared resource: views that give users their own **external schema** ([4.13.1](/4.13.1#sec-1.3.1)), transactions as SQL exposes them, access rights, and the way programs send SQL to a database safely. All examples use the running example of [4.13.3](/4.13.3#sec-3.2.3); as there, output comes from SQLite 3.45 unless it is marked as DuckDB 1.5.
 
 ## 4.1. Subqueries
 
@@ -11,7 +11,7 @@ The basic query block of [4.13.3](/4.13.3) is the building block of everything e
 
 **Definition 4.1.1 (Subquery)** A **subquery** is a `SELECT` expression nested inside another statement. It may appear wherever a value, a set of values or a table is expected: in the `SELECT` list or a condition as a *scalar subquery* returning one value, after `IN` or `EXISTS` as a set, or in `FROM` as a *derived table*.
 
-Membership in the result of a subquery is tested with `IN`. The genes annotated to pathway PW3:
+Membership in the result of a **subquery** is tested with `IN`. The genes annotated to pathway PW3:
 
 ```sql
 SELECT symbol FROM gene
@@ -63,7 +63,7 @@ WHERE collected_on = (SELECT max(s2.collected_on) FROM sample AS s2 WHERE s2.tis
 +-----------+--------+--------------+
 ```
 
-"Evaluated once per row" is the semantics, not the execution plan: optimizers routinely turn correlated `EXISTS` and `IN` subqueries into joins, *semijoins* (keep a row of $r$ if it has at least one partner in $s$) and *antijoins* (keep it if it has none), which can be computed with the hash and merge algorithms of [4.13.9](/4.13.9). A scalar subquery must return at most one row, or the statement fails at run time; with no row it yields null.
+"Evaluated once per row" is the semantics, not the execution plan: optimizers routinely turn correlated `EXISTS` and `IN` subqueries into **joins**, *semijoins* (keep a row of $r$ if it has at least one partner in $s$) and *antijoins* (keep it if it has none), which can be computed with the hash and merge algorithms of [4.13.9](/4.13.9). A scalar subquery must return at most one row, or the statement fails at run time; with no row it yields **null**.
 
 The comparison operators can also be combined with `ANY` (`SOME`) and `ALL`: `x > ALL (subquery)` is true if `x` is larger than every value returned. SQLite does not support them (output from DuckDB):
 
@@ -159,7 +159,7 @@ ORDER BY s.sample_id, top.tpm DESC;
 
 ### 4.2.1. UNION, INTERSECT and EXCEPT
 
-The set operations of the relational algebra combine the results of two queries with the same number of columns and compatible types: `UNION`, `INTERSECT` and `EXCEPT` (Oracle before 21c: `MINUS`). They eliminate duplicates; the `ALL` variants keep them, with multiset semantics: if a row occurs $m$ times in the first and $n$ times in the second input, `UNION ALL` returns it $m + n$ times, `INTERSECT ALL` $\min(m, n)$ times and `EXCEPT ALL` $\max(m - n, 0)$ times. SQLite supports only `UNION ALL` among the `ALL` forms.
+The set operations of the **relational algebra** combine the results of two queries with the same number of columns and compatible types: `UNION`, `INTERSECT` and `EXCEPT` (Oracle before 21c: `MINUS`). They eliminate duplicates; the `ALL` variants keep them, with **multiset** semantics: if a row occurs $m$ times in the first and $n$ times in the second input, `UNION ALL` returns it $m + n$ times, `INTERSECT ALL` $\min(m, n)$ times and `EXCEPT ALL` $\max(m - n, 0)$ times. SQLite supports only `UNION ALL` among the `ALL` forms.
 
 ```sql
 SELECT tissue FROM sample WHERE treatment = 'treated'
@@ -191,7 +191,7 @@ SELECT tissue FROM sample WHERE donor_age > 60;
 
 `UNION ALL` is much cheaper than `UNION` because it needs no duplicate elimination; it is the right choice whenever the inputs cannot overlap or duplicates are wanted. The column names of the result are those of the first query, and an `ORDER BY` at the end applies to the combined result.
 
-`EXCEPT` expresses negation directly. All (sample, gene) combinations that were *not* measured are the Cartesian product minus the measured pairs:
+`EXCEPT` expresses negation directly. All (sample, gene) combinations that were *not* measured are the **Cartesian product** minus the measured pairs:
 
 ```sql
 SELECT s.sample_id, g.symbol FROM sample AS s CROSS JOIN gene AS g
@@ -210,7 +210,7 @@ SELECT m.sample_id, g.symbol FROM measurement AS m JOIN gene AS g USING (gene_id
 
 ### 4.2.2. Division in SQL
 
-SQL has no division operator ([4.13.2](/4.13.2#sec-2.3.2)). "Samples in which every gene was measured" is written in one of two ways. The first follows the logic of the definition: a sample qualifies if the set of all genes, minus the genes measured in it, is empty.
+**SQL** has no **division** operator ([4.13.2](/4.13.2#sec-2.3.2)). "Samples in which every gene was measured" is written in one of two ways. The first follows the logic of the definition: a sample qualifies if the set of all genes, minus the genes measured in it, is empty.
 
 ```sql
 SELECT s.sample_id FROM sample AS s
@@ -231,7 +231,7 @@ WHERE NOT EXISTS (
 +-----------+
 ```
 
-The equivalent double negation, "no gene exists that was not measured in the sample", replaces `EXCEPT` by a second `NOT EXISTS`. The second way counts, and is correct only because the primary key of `measurement` guarantees at most one row per (sample, gene) pair and the foreign key guarantees that every measured gene exists:
+The equivalent double negation, "no gene exists that was not measured in the sample", replaces `EXCEPT` by a second `NOT EXISTS`. The second way counts, and is correct only because the **primary key** of `measurement` guarantees at most one row per (sample, gene) pair and the **foreign key** guarantees that every measured gene exists:
 
 ```sql
 SELECT sample_id FROM measurement
@@ -256,7 +256,7 @@ HAVING count(*) = (SELECT count(*) FROM gene);
 
 **Definition 4.3.1 (Common Table Expression)** A **common table expression** (CTE) is a named query defined in a `WITH` clause before the main statement, `WITH name (columns) AS (query) statement`; within the statement, and within later CTEs of the same clause, the name denotes the result of the query.
 
-CTEs are the SQL form of the assignment operation of the relational algebra. They let a long query be read top to bottom as a sequence of steps instead of inside out. The treated samples in which a gene is more than three times as high as the mean of the control samples of the same tissue:
+**CTEs** are the **SQL** form of the assignment operation of the **relational algebra**. They let a long query be read top to bottom as a sequence of steps instead of inside out. The treated samples in which a gene is more than three times as high as the mean of the control samples of the same tissue:
 
 ```sql
 WITH ctrl AS (
@@ -287,11 +287,11 @@ ORDER BY ratio DESC;
 +--------+-----------+--------+-------+-------+
 ```
 
-Whether a CTE is computed once and stored or expanded into the main query like a view is up to the system. PostgreSQL 12 and later inline a CTE that is referenced once and has no side effects, and accept `AS MATERIALIZED` and `AS NOT MATERIALIZED` to override the choice. A CTE may also contain `INSERT`, `UPDATE` or `DELETE ... RETURNING` in PostgreSQL ("data-modifying CTEs").
+Whether a CTE is computed once and stored or expanded into the main query like a view is up to the system. PostgreSQL 12 and later inline a CTE that is referenced once and has no **side effects**, and accept `AS MATERIALIZED` and `AS NOT MATERIALIZED` to override the choice. A CTE may also contain `INSERT`, `UPDATE` or `DELETE ... RETURNING` in PostgreSQL ("data-modifying CTEs").
 
 ### 4.3.2. Recursive Queries
 
-The relational algebra cannot compute the transitive closure of a relation ([4.13.2](/4.13.2#sec-2.5)), yet hierarchies and graphs are everywhere: pathways within pathways, a gene ontology, a phylogenetic tree, the prerequisites of courses. SQL:1999 added recursion to the `WITH` clause.
+The relational algebra cannot compute the **transitive closure** of a **relation** ([4.13.2](/4.13.2#sec-2.5)), yet hierarchies and graphs are everywhere: pathways within pathways, a gene ontology, a phylogenetic tree, the prerequisites of courses. SQL:1999 added recursion to the `WITH` clause.
 
 **Definition 4.3.2 (Recursive Query)** A **recursive query** is a common table expression introduced by `WITH RECURSIVE` whose query is the union of a nonrecursive *base* query and a *recursive* query that refers to the CTE itself. Its value is the smallest relation $T$ that contains the result of the base query and is closed under the recursive query, that is, the least fixed point of $T = \mathit{base} \cup f(T)$.
 
@@ -321,7 +321,7 @@ SELECT * FROM ancestor ORDER BY pathway_id, depth;
 +------------+-------------+-------+
 ```
 
-The first round finds the parents, the second the grandparent of PW3, and the third round finds nothing, because PW1 has no parent. A common application in annotation databases is to count a gene as a member of a pathway when it is annotated to any of its sub-pathways. All genes in "Cell cycle" or below it:
+The first round finds the parents, the second the grandparent of PW3, and the third round finds nothing, because PW1 has no parent. A common application in annotation **databases** is to count a gene as a member of a pathway when it is annotated to any of its sub-pathways. All genes in "Cell cycle" or below it:
 
 ```sql
 WITH RECURSIVE sub (pathway_id) AS (
@@ -348,17 +348,17 @@ ORDER BY g.symbol;
 
 Directly annotated to "Cell cycle" is only MYC; the other four genes come from the checkpoint pathways beneath it.
 
-The standard restricts the recursive query so that the fixed point exists: the recursive reference may occur only once, and not inside an aggregate, `NOT EXISTS`, `EXCEPT` or the nullable side of an outer join. These are exactly the non-monotone constructs of [4.13.2](/4.13.2#sec-2.4); with monotone $f$, adding rows to $T$ can only add rows to $f(T)$, and the iteration converges to the least fixed point. In data with cycles (a general graph rather than a tree) `UNION ALL` would loop forever; `UNION` stops because revisited rows are discarded, as long as the rows do not carry a growing value such as `depth`. PostgreSQL 14 and later also provide the standard `CYCLE` clause, which marks and stops at revisited rows, and `SEARCH DEPTH FIRST` / `BREADTH FIRST` for the output order.
+The standard restricts the **recursive query** so that the fixed point exists: the recursive reference may occur only once, and not inside an aggregate, `NOT EXISTS`, `EXCEPT` or the nullable side of an outer **join**. These are exactly the non-monotone constructs of [4.13.2](/4.13.2#sec-2.4); with monotone $f$, adding rows to $T$ can only add rows to $f(T)$, and the iteration converges to the least fixed point. In data with cycles (a general graph rather than a tree) `UNION ALL` would loop forever; `UNION` stops because revisited rows are discarded, as long as the rows do not carry a growing value such as `depth`. PostgreSQL 14 and later also provide the standard `CYCLE` clause, which marks and stops at revisited rows, and `SEARCH DEPTH FIRST` / `BREADTH FIRST` for the output order.
 
 ## 4.4. Window Functions
 
 ### 4.4.1. Windows
 
-Aggregation with `GROUP BY` returns one row per group. Many analytical questions need the aggregate next to each row instead: the rank of a gene within its sample, its share of the sample's total, the change from the previous time point.
+**Aggregation** with `GROUP BY` returns one row per group. Many analytical questions need the aggregate next to each row instead: the rank of a gene within its sample, its share of the sample's total, the change from the previous time point.
 
 **Definition 4.4.1 (Window Function)** A **window function** computes, for each row of a query result, a value from a set of related rows, its *window*, without merging the rows. The window is specified by `OVER (PARTITION BY ... ORDER BY ... frame)`: the partition consists of the rows with the same values of the `PARTITION BY` expressions, ordered by `ORDER BY`, and the optional *frame* restricts the window to rows near the current one in that order.
 
-Window functions are evaluated after `WHERE`, `GROUP BY` and `HAVING`, and before `DISTINCT`, `ORDER BY` and `LIMIT` ([4.13.3](/4.13.3#sec-3.8)). They may therefore appear only in the `SELECT` list and in `ORDER BY`; to filter on them, a derived table or CTE is needed. They were added in SQL:2003 and are supported by PostgreSQL, SQLite (3.25 and later), DuckDB and MySQL 8.
+**Window functions** are evaluated after `WHERE`, `GROUP BY` and `HAVING`, and before `DISTINCT`, `ORDER BY` and `LIMIT` ([4.13.3](/4.13.3#sec-3.8)). They may therefore appear only in the `SELECT` list and in `ORDER BY`; to filter on them, a derived table or **CTE** is needed. They were added in SQL:2003 and are supported by PostgreSQL, SQLite (3.25 and later), DuckDB and MySQL 8.
 
 ### 4.4.2. Ranking
 
@@ -419,7 +419,7 @@ This replaces the non-portable "bare column" query of [4.13.3](/4.13.3#sec-3.6.2
 
 ### 4.4.3. Aggregates over Windows
 
-Every aggregate function can be used as a window function. Without `ORDER BY` in the window, it is computed over the whole partition, which gives each gene's share of the sample's total:
+Every **aggregate function** can be used as a window function. Without `ORDER BY` in the window, it is computed over the whole partition, which gives each gene's share of the sample's total:
 
 ```sql
 SELECT m.sample_id, g.symbol, m.tpm,
@@ -502,13 +502,13 @@ ORDER BY s.collected_on, s.sample_id;
 +-----------+--------------+------+------------+--------+
 ```
 
-The first row has no predecessor, so `lag` returns null and so does the difference. The ordering includes `sample_id` to make it total: S01 and S02 were collected on the same day, and without the tie-breaker their order, and with it the moving average, would be unspecified. The default `RANGE` frame treats such peers as one unit, which is why `last_value` over the default frame often surprises: it returns the last peer of the current row, not the last row of the partition.
+The first row has no predecessor, so `lag` returns **null** and so does the difference. The ordering includes `sample_id` to make it total: S01 and S02 were collected on the same day, and without the tie-breaker their order, and with it the moving average, would be unspecified. The default `RANGE` frame treats such peers as one unit, which is why `last_value` over the default frame often surprises: it returns the last peer of the current row, not the last row of the partition.
 
 ## 4.5. Modifying Data
 
 ### 4.5.1. INSERT, UPDATE and DELETE
 
-`INSERT INTO t (columns) VALUES (...), (...)` adds rows; omitted columns receive their default (null if none is declared). `INSERT INTO t (columns) SELECT ...` adds the result of a query, as the measurements were loaded in [4.13.3](/4.13.3#sec-3.2.3). `UPDATE t SET column = expression WHERE condition` changes the rows satisfying the condition, and `DELETE FROM t WHERE condition` removes them; without `WHERE`, every row is affected. The clause `RETURNING` (PostgreSQL, SQLite 3.35 and later, DuckDB; not MySQL) returns the inserted, updated or deleted rows, for example the values filled in by defaults or identity columns; in PostgreSQL 18 it can return both the `OLD` and the `NEW` values of an updated row.
+`INSERT INTO t (columns) VALUES (...), (...)` adds rows; omitted columns receive their default (**null** if none is declared). `INSERT INTO t (columns) SELECT ...` adds the result of a query, as the measurements were loaded in [4.13.3](/4.13.3#sec-3.2.3). `UPDATE t SET column = expression WHERE condition` changes the rows satisfying the condition, and `DELETE FROM t WHERE condition` removes them; without `WHERE`, every row is affected. The clause `RETURNING` (PostgreSQL, SQLite 3.35 and later, DuckDB; not MySQL) returns the inserted, updated or deleted rows, for example the values filled in by defaults or **identity columns**; in PostgreSQL 18 it can return both the `OLD` and the `NEW` values of an updated row.
 
 ```sql
 INSERT INTO sample (sample_id, tissue, treatment, collected_on)
@@ -621,7 +621,7 @@ The two forms differ under concurrency: `ON CONFLICT` relies on a unique index a
 
 **Definition 4.6.1 (View)** A **view** is a named query stored in the catalog, `CREATE VIEW name AS query`. A view is a virtual relation: it stores no rows, and a query that refers to it is evaluated as if the view's definition were substituted for its name.
 
-Views serve two purposes. They simplify: the three-way join that almost every analysis of the running example begins with can be defined once. And they are the external schemas of the three-schema architecture ([4.13.1](/4.13.1#sec-1.3)): a user can be given access to a view without access to the underlying tables, for example to expression values without the donor ages. When the base tables change, so does the content of the view, and a changed base schema can be hidden behind a view with the old shape, which is how logical data independence is achieved in practice.
+Views serve two purposes. They simplify: the three-way **join** that almost every analysis of the running example begins with can be defined once. And they are the **external schemas** of the **three-schema architecture** ([4.13.1](/4.13.1#sec-1.3)): a user can be given access to a view without access to the underlying tables, for example to expression values without the donor ages. When the base tables change, so does the content of the view, and a changed base schema can be hidden behind a view with the old shape, which is how logical data independence is achieved in practice.
 
 ```sql
 CREATE VIEW expression AS
@@ -649,15 +649,15 @@ UPDATE expression SET tpm = 0 WHERE symbol = 'MDM2';
 Parse error near line 11: cannot modify expression because it is a view
 ```
 
-Updates through a view are a problem in general: an update of a join or an aggregate does not determine a unique change of the base tables. SQLite views are read-only (an `INSTEAD OF` trigger can implement updates by hand, [4.13.6](/4.13.6#sec-6.1.4)). PostgreSQL automatically makes a view updatable if it selects from a single table without aggregation, `DISTINCT`, set operations or `LIMIT`; `WITH CHECK OPTION` then rejects inserted or updated rows that would not be visible through the view.
+Updates through a view are a problem in general: an update of a join or an aggregate does not determine a unique change of the base tables. SQLite views are read-only (an `INSTEAD OF` trigger can implement updates by hand, [4.13.6](/4.13.6#sec-6.1.4)). PostgreSQL automatically makes a view updatable if it selects from a single table without **aggregation**, `DISTINCT`, set operations or `LIMIT`; `WITH CHECK OPTION` then rejects inserted or updated rows that would not be visible through the view.
 
 A *materialized view* stores its result like a table: `CREATE MATERIALIZED VIEW gene_summary AS SELECT ...` in PostgreSQL, recomputed by `REFRESH MATERIALIZED VIEW gene_summary`. It trades freshness for speed, and is used for expensive summaries that are read often and may be slightly out of date. Keeping a materialized view up to date incrementally, by applying only the changes of the base tables, is called *view maintenance*; PostgreSQL recomputes the whole view, whereas commercial systems and some extensions maintain views incrementally.
 
 ## 4.7. Transactions in SQL
 
-A transaction is a sequence of statements that the DBMS executes as a unit: either all of their effects become permanent or none do, and concurrent transactions do not see each other's intermediate states. Their theory, the ACID properties, schedules and serializability, is the subject of [4.13.10](/4.13.10); this section shows the statements.
+A transaction is a sequence of statements that the **DBMS** executes as a unit: either all of their effects become permanent or none do, and concurrent transactions do not see each other's intermediate states. Their theory, the ACID properties, schedules and serializability, is the subject of [4.13.10](/4.13.10); this section shows the statements.
 
-In standard SQL a transaction begins implicitly with the first statement; in PostgreSQL, SQLite, DuckDB and MySQL every statement outside an explicit transaction is its own transaction (*autocommit*), and `BEGIN` (standard: `START TRANSACTION`) starts a multi-statement one. `COMMIT` makes its changes permanent, `ROLLBACK` undoes all of them:
+In standard **SQL** a transaction begins implicitly with the first statement; in PostgreSQL, SQLite, DuckDB and MySQL every statement outside an explicit transaction is its own transaction (*autocommit*), and `BEGIN` (standard: `START TRANSACTION`) starts a multi-statement one. `COMMIT` makes its changes permanent, `ROLLBACK` undoes all of them:
 
 ```sql
 BEGIN;
@@ -700,13 +700,13 @@ SELECT (SELECT count(*) FROM sample) AS samples, (SELECT count(*) FROM measureme
 +---------+--------------+
 ```
 
-The new sample is kept and its measurement is not. In PostgreSQL, a failed statement aborts the whole transaction (every later statement is refused until `ROLLBACK`), so savepoints are also used to recover from an expected error inside a transaction. Most DDL statements are transactional in PostgreSQL and SQLite, so even a schema migration can be rolled back; in MySQL and Oracle a DDL statement commits implicitly.
+The new sample is kept and its measurement is not. In PostgreSQL, a failed statement aborts the whole transaction (every later statement is refused until `ROLLBACK`), so **savepoints** are also used to recover from an expected error inside a transaction. Most **DDL** statements are transactional in PostgreSQL and SQLite, so even a **schema** migration can be rolled back; in MySQL and Oracle a DDL statement commits implicitly.
 
 How much concurrent transactions may see of each other is set per transaction, `BEGIN ISOLATION LEVEL SERIALIZABLE` or `SET TRANSACTION ISOLATION LEVEL REPEATABLE READ` in PostgreSQL. The levels and the anomalies they allow are explained in [4.13.11](/4.13.11); the PostgreSQL default is `READ COMMITTED`.
 
 ## 4.8. Authorization
 
-A database server knows its users and checks every statement against their *privileges*. The SQL privileges on a table are `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `REFERENCES` (to declare a foreign key to it) and `TRIGGER`; `SELECT`, `INSERT` and `UPDATE` can be restricted to columns. Privileges are given with `GRANT` and withdrawn with `REVOKE` (PostgreSQL syntax; these statements need a server and were not run here):
+A **database** server knows its users and checks every statement against their *privileges*. The **SQL** privileges on a table are `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `REFERENCES` (to declare a **foreign key** to it) and `TRIGGER`; `SELECT`, `INSERT` and `UPDATE` can be restricted to columns. Privileges are given with `GRANT` and withdrawn with `REVOKE` (PostgreSQL syntax; these statements need a server and were not run here):
 
 ```sql
 CREATE ROLE analyst;                          -- a group of users
@@ -725,7 +725,7 @@ The principle of least privilege applies: an application should connect with a r
 
 ### 4.9.1. The Python DB-API
 
-SQL is not a general-purpose language, and applications send SQL statements to the DBMS from a host language through a database interface: JDBC in Java, ODBC in C, and in Python the DB-API (PEP 249), which drivers such as `sqlite3` (standard library), `psycopg` (PostgreSQL) and `duckdb` implement. The pattern is the same everywhere: open a *connection*, execute statements through it (or through a *cursor*), fetch the result rows, and commit or roll back.
+**SQL** is not a general-purpose language, and applications send SQL statements to the **DBMS** from a host language through a **database** interface: JDBC in Java, ODBC in C, and in Python the DB-API (PEP 249), which drivers such as `sqlite3` (standard library), `psycopg` (PostgreSQL) and `duckdb` implement. The pattern is the same everywhere: open a *connection*, execute statements through it (or through a *cursor*), fetch the result rows, and commit or roll back.
 
 ```python
 import sqlite3
@@ -777,7 +777,7 @@ rolled back: FOREIGN KEY constraint failed
 (8,)
 ```
 
-Rows arrive as Python tuples, with SQL types converted to Python types (`numeric` becomes a `float` in SQLite, a `decimal.Decimal` in psycopg) and `NULL` to `None`. The second `with` block shows the transaction at work: the failing measurement rolls back the sample inserted just before it, and the count stays at 8. The DB-API does not fix the placeholder syntax: `sqlite3` uses `?` or `:name`, `psycopg` uses `%s` or `%(name)s`. A minimal psycopg 3 program has the same shape (not run here, since it needs a PostgreSQL server):
+Rows arrive as Python **tuples**, with SQL types converted to Python types (`numeric` becomes a `float` in SQLite, a `decimal.Decimal` in psycopg) and `NULL` to `None`. The second `with` block shows the transaction at work: the failing measurement rolls back the sample inserted just before it, and the count stays at 8. The DB-API does not fix the placeholder syntax: `sqlite3` uses `?` or `:name`, `psycopg` uses `%s` or `%(name)s`. A minimal psycopg 3 program has the same shape (not run here, since it needs a PostgreSQL server):
 
 ```python
 import psycopg
@@ -788,7 +788,7 @@ with psycopg.connect("dbname=expr") as conn:          # commits when the block e
     ).fetchall()
 ```
 
-For analysis, `pandas.read_sql(query, con, params=...)` returns a data frame ([4.4.5](/4.4.5)), and DuckDB queries pandas data frames and Parquet files directly. A server connection is expensive to open (in PostgreSQL it starts a process), so web applications keep a *connection pool* of open connections and lend them to requests.
+For analysis, `pandas.read_sql(query, con, params=...)` returns a data frame ([4.4.5](/4.4.5)), and DuckDB queries pandas data frames and Parquet files directly. A server connection is expensive to open (in PostgreSQL it starts a **process**), so web applications keep a *connection pool* of open connections and lend them to requests.
 
 ### 4.9.2. SQL Injection
 
@@ -825,12 +825,12 @@ The quote in the input closes the string literal, and the rest becomes SQL: the 
 
 Logic can also run inside the DBMS. User-defined functions and *stored procedures* are written in SQL or in a procedural extension (PL/pgSQL in PostgreSQL, also PL/Python; PL/SQL in Oracle; T-SQL in SQL Server) and called from queries or with `CALL`. They reduce round trips between application and server and keep rules next to the data, at the cost of a second code base in a less convenient language. Triggers, procedures that run automatically when data change, are treated in [4.13.6](/4.13.6#sec-6.1.4).
 
-At the other end, object–relational mappers (SQLAlchemy, the Django ORM) let a program define classes that correspond to tables and generate the SQL for loading and saving objects. They remove repetitive code and the risk of injection, but hide which queries are executed: loading 100 objects and then their related rows one by one issues 101 queries instead of one join (the "N+1 problem"). Their use in web applications is part of software engineering ([4.14](/4.14)).
+At the other end, object–relational mappers (SQLAlchemy, the Django ORM) let a program define classes that correspond to tables and generate the SQL for loading and saving objects. They remove repetitive code and the risk of injection, but hide which queries are executed: loading 100 objects and then their related rows one by one issues 101 queries instead of one **join** (the "N+1 problem"). Their use in web applications is part of software engineering ([4.14](/4.14)).
 
 ## Summary
 
-- Subqueries return a value, a set or a table. `IN`, `EXISTS` and `NOT EXISTS` test membership and existence; correlated subqueries refer to the outer row. `NOT IN` is never true when the subquery returns a null: use `NOT EXISTS`.
-- `UNION`, `INTERSECT` and `EXCEPT` remove duplicates, their `ALL` forms follow multiset counts. Division is written with `NOT EXISTS ... EXCEPT` or by counting under a key constraint.
+- Subqueries return a value, a set or a table. `IN`, `EXISTS` and `NOT EXISTS` test membership and existence; correlated subqueries refer to the outer row. `NOT IN` is never true when the **subquery** returns a **null**: use `NOT EXISTS`.
+- `UNION`, `INTERSECT` and `EXCEPT` remove duplicates, their `ALL` forms follow **multiset** counts. Division is written with `NOT EXISTS ... EXCEPT` or by counting under a key constraint.
 - `WITH` names intermediate results; `WITH RECURSIVE` computes the least fixed point of a monotone query, which expresses transitive closure (ancestors, sub-pathways).
 - Window functions compute ranks, running and moving aggregates and offsets over a partition without collapsing rows; they are evaluated after grouping and before `ORDER BY`.
 - `INSERT`, `UPDATE`, `DELETE`, `ON CONFLICT` and `MERGE` change data; `RETURNING` reports the affected rows.

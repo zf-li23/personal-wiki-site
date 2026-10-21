@@ -3,7 +3,7 @@ title: Introduction to Software Engineering
 description: Why software is hard to build at scale; the software crisis and the 1968 NATO conference; failures caused by software and by software changes (Ariane 5, change-induced outages); definitions of software engineering; the layered view, the software life cycle and the cost of maintenance; the 18 knowledge areas of SWEBOK v4; the plan of the course; and what changes when AI agents write much of the code.
 ---
 
-Writing a program that works for its author is a matter of programming: the earlier courses taught how to express algorithms in C++ and Python, how to structure code with classes and **design patterns**, and how to check it with **unit testing**. Building software that many people develop together, that thousands or millions of people use, and that keeps changing for years is a different problem. It needs agreement about what to build, a process for building it, ways of keeping the work of many people consistent, systematic testing, and care for the system after it is released. Software engineering is the discipline that studies these problems. This chapter explains why the discipline exists, defines it, surveys its body of knowledge as organized by SWEBOK, and sets out the plan of the course: the next chapter treats the software process, [4.14.3](/4.14.3) version control, and the later chapters follow the life cycle from requirements ([4.14.4](/4.14.4)) through architecture, implementation and testing to operations ([4.14.13](/4.14.13)), ending with software engineering with AI ([4.14.14](/4.14.14)).
+Writing a program that works for its author is a matter of programming: the earlier courses taught how to express algorithms in C++ and Python, how to structure code with classes and **design patterns**, and how to check it with **unit testing**. Building software that many people develop together, that thousands or millions of people use, and that keeps changing for years is a different problem. It needs agreement about what to build, a process for building it, ways of keeping the work of many people consistent, systematic testing, and care for the system after it is released. Software engineering is the discipline that studies these problems. This chapter explains why the discipline exists, defines it, surveys its body of knowledge as organized by SWEBOK, and sets out the plan of the course: the next chapter treats the software process, [4.14.3](/4.14.3) version control, and the later chapters follow the life cycle from requirements ([4.14.4](/4.14.4)) through architecture, implementation and testing to operations ([4.14.13](/4.14.13)), ending with software engineering with **AI** ([4.14.14](/4.14.14)).
 
 ## 1.1. Software and Its Difficulties
 
@@ -24,7 +24,7 @@ Changeability is also software's strength. A system that can evolve can follow i
 
 ### 1.1.2. The Software Crisis and the Birth of the Discipline
 
-In the 1960s computers became powerful enough for large programs, such as operating systems (IBM OS/360), airline reservation systems and the Apollo flight software. Projects were late, over budget, unreliable and hard to change. The term *software crisis* names these difficulties of developing large, complex systems with methods that had worked for small programs.
+In the 1960s computers became powerful enough for large programs, such as **operating systems** (IBM OS/360), airline reservation systems and the Apollo flight software. Projects were late, over budget, unreliable and hard to change. The term *software crisis* names these difficulties of developing large, complex systems with methods that had worked for small programs.
 
 The NATO Science Committee organized a conference in Garmisch, Germany, in October 1968 to discuss the crisis, under the deliberately provocative title "Software Engineering"; a second conference followed in Rome in 1969. The name expressed a program: software should be built with the discipline of the established engineering fields. Margaret Hamilton, who led the team that wrote the on-board flight software of the Apollo program, used the same term in that period to claim the status of an engineering discipline for her team's work. The famous photograph of 1969 shows her next to a printout of that code, as tall as she is.
 
@@ -105,7 +105,7 @@ The *Software Engineering Body of Knowledge* (SWEBOK) is the generally accepted 
 | Software Requirements | what the software must do (functions) and what standards it must meet (non-functional requirements); elicitation, analysis, specification, validation and management | [4.14.4](/4.14.4) |
 | Software Architecture | high-level structure: core components, their interactions and principles chosen to meet quality attributes such as scalability and availability; architectural styles and their trade-offs | [4.14.5](/4.14.5), [4.14.6](/4.14.6) |
 | Software Design | the bridge from architecture to code: module decomposition, interface design, design principles (SOLID, DRY) and patterns, UML diagrams | [4.14.7](/4.14.7), [4.14.10](/4.14.10); patterns in [4.2.13](/4.2.13) |
-| Software Construction | turning design into code: coding, unit testing, debugging, code review, refactoring | [4.14.8](/4.14.8)–[4.14.10](/4.14.10) |
+| Software Construction | turning design into code: coding, **unit testing**, **debugging**, code review, refactoring | [4.14.8](/4.14.8)–[4.14.10](/4.14.10) |
 | Software Testing | checking that software meets its requirements and finding defects: unit, integration, system and acceptance testing | [4.14.11](/4.14.11), [4.14.12](/4.14.12) |
 | Software Engineering Operations | continuous delivery and deployment, containerization and orchestration, monitoring and alerting | [4.14.13](/4.14.13) |
 | Software Maintenance | modification after delivery (§1.2.3) | [4.14.10](/4.14.10), [4.14.13](/4.14.13) |
@@ -128,7 +128,7 @@ The chapters follow the life cycle. After the process ([4.14.2](/4.14.2)) and ve
 ## Summary
 
 - Software is large, interconnected and constantly changing; its essential difficulties are complexity, conformity, changeability and invisibility.
-- The software crisis of the 1960s led to the 1968 NATO conference and the name "software engineering"; the discipline concerns multi-person, multi-version development over time.
+- The **software crisis** of the 1960s led to the 1968 NATO conference and the name "software engineering"; the discipline concerns multi-person, multi-version development over time.
 - Many failures come from reused code whose assumptions were not rechecked (Ariane 5) and from changes to running systems; small, tested, gradual and reversible changes reduce the risk.
 - Software engineering is the systematic, disciplined, quantifiable approach to the development, operation and maintenance of software; maintenance dominates the cost of the life cycle.
 - SWEBOK v4 (2024) organizes the discipline into 18 knowledge areas; this course covers the life-cycle areas from requirements to operations, together with process, management and quality.
