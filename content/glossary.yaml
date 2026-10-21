@@ -40,8 +40,8 @@ terms:
   - { zh: 德摩根律, en: "De Morgan's laws", aliases: [摩根律, De Morgan 律] }
   - { zh: 联结词的完备集, en: functionally complete set }
   - { zh: 对偶式, en: dual formula }
-  - { zh: 极小项, en: minterm }
-  - { zh: 极大项, en: maxterm }
+  - { zh: 极小项, en: minterm, aliases: [最小项] }
+  - { zh: 极大项, en: maxterm, aliases: [最大项] }
   - { zh: 主析取范式, en: principal disjunctive normal form }
   - { zh: 主合取范式, en: principal conjunctive normal form }
   - { zh: 重言蕴含, en: tautological implication }
@@ -79,8 +79,8 @@ terms:
   - { zh: 等值, en: logical equivalence, aliases: [logically equivalent] }
   - { zh: 置换规则, en: replacement rule }
   - { zh: 异或, en: exclusive or, aliases: [不可兼或] }
-  - { zh: 与非, en: NAND }
-  - { zh: 或非, en: NOR }
+  - { zh: 与非, en: NAND, aliases: [与非门, NAND gate] }
+  - { zh: 或非, en: NOR, aliases: [或非门, NOR gate] }
   - { zh: 文字, en: literal, scope: ["1.1"] }
   - { zh: 简单析取式, en: clause, aliases: [子句] }
   - { zh: 逻辑推论, en: logical consequence }
@@ -1538,7 +1538,7 @@ terms:
   - { zh: 后向稳定性, en: backward stability, aliases: [后向稳定, backward stable] }
   - { zh: 良性抵消, en: benign cancellation }
   - { zh: 灾难性抵消, en: catastrophic cancellation }
-  - { zh: 保护位, en: guard digit }
+  - { zh: 保护位, en: guard digit, aliases: [guard bit] }
   - { zh: 吸收, en: absorption, scope: ["3.5"] }
   - { zh: 良态问题, en: well-conditioned problem, aliases: [良态, well-conditioned] }
   - { zh: 病态问题, en: ill-conditioned problem, aliases: [病态, ill-conditioned] }
@@ -2165,7 +2165,7 @@ terms:
   - { zh: 迭代器, en: iterator }
   - { zh: 迭代器失效, en: iterator invalidation }
   - { zh: 流, en: stream, scope: ["4"] }
-  - { zh: 正则表达式, en: regular expression, aliases: [regex] }
+  - { zh: 正则表达式, en: regular expression, aliases: [regex, 正规表达式] }
   - { zh: 函数对象, en: function object, aliases: [仿函数, functor] }
   - { zh: lambda 表达式, en: lambda expression }
   - { zh: 闭包, en: closure, scope: ["4"] }
@@ -2728,7 +2728,7 @@ terms:
   - { zh: 投机解码, en: speculative decoding, aliases: [推测解码, speculative sampling] }
   - { zh: 规模定律, en: scaling law, aliases: [缩放定律, 尺度定律, neural scaling law] }
   - { zh: 计算最优训练, en: compute-optimal training, aliases: [compute-optimal] }
-  - { zh: 对齐, en: alignment, scope: ["4"] }
+  - { zh: 对齐, en: alignment, scope: ["4.5", "4.6", "4.7"] }
   - { zh: 基于人类反馈的强化学习, en: reinforcement learning from human feedback, aliases: [RLHF] }
   - { zh: 奖励模型, en: reward model }
   - { zh: 近端策略优化, en: proximal policy optimization, aliases: [PPO] }
@@ -2745,3 +2745,273 @@ terms:
   - { zh: Mamba, en: Mamba }
   - { zh: 预热-稳定-衰减调度, en: warmup-stable-decay, aliases: [WSD 调度, WSD schedule] }
   - { zh: 困惑度, en: perplexity, scope: ["4.5", "4.6", "4.7"] }
+
+  # computation theory and systems (4.8–4.11)
+  - { zh: 字母表, en: alphabet, scope: ["4.8"] }
+  - { zh: 空串, en: empty string }
+  - { zh: 连接运算, en: concatenation, scope: ["4.8"] }
+  - { zh: 前缀, en: prefix, scope: ["4"] }
+  - { zh: 后缀, en: suffix, scope: ["4"] }
+  - { zh: 子串, en: substring, scope: ["4"] }
+  - { zh: 反转, en: reversal, scope: ["4.8"] }
+  - { zh: 形式语言, en: formal language, aliases: [语言], scope: ["4.8"] }
+  - { zh: Kleene 闭包, en: Kleene closure, aliases: [星闭包, Kleene star] }
+  - { zh: 正闭包, en: positive closure, scope: ["4.8"] }
+  - { zh: 归纳定义, en: inductive definition }
+  - { zh: 结构归纳法, en: structural induction, aliases: [结构归纳] }
+  - { zh: 互归纳, en: mutual induction }
+  - { zh: 上下文无关文法, en: context-free grammar, aliases: [CFG] }
+  - { zh: 非终结符, en: nonterminal, aliases: [变元, nonterminal symbol], scope: ["4"] }
+  - { zh: 终结符, en: terminal, aliases: [terminal symbol], scope: ["4"] }
+  - { zh: 产生式, en: production, aliases: [production rule], scope: ["4"] }
+  - { zh: 开始符号, en: start symbol }
+  - { zh: 推导, en: derivation, scope: ["4.8"] }
+  - { zh: 递归推理, en: recursive inference }
+  - { zh: 最左推导, en: leftmost derivation }
+  - { zh: 最右推导, en: rightmost derivation }
+  - { zh: 句型, en: sentential form }
+  - { zh: 句子, en: sentence, scope: ["4.8"] }
+  - { zh: 上下文无关语言, en: context-free language, aliases: [CFL] }
+  - { zh: 语法分析树, en: parse tree, aliases: [分析树, 推导树, derivation tree] }
+  - { zh: 果实, en: yield, scope: ["4.8"] }
+  - { zh: 二义文法, en: ambiguous grammar, aliases: [二义性, ambiguity] }
+  - { zh: 固有二义, en: inherently ambiguous, aliases: [固有二义语言, inherently ambiguous language] }
+  - { zh: 文法, en: grammar, aliases: [短语结构文法, phrase-structure grammar], scope: ["4"] }
+  - { zh: Chomsky 体系, en: Chomsky hierarchy, aliases: [乔姆斯基体系] }
+  - { zh: 0 型文法, en: unrestricted grammar, aliases: [无限制文法, type-0 grammar] }
+  - { zh: 上下文有关文法, en: context-sensitive grammar, aliases: [1 型文法] }
+  - { zh: 正规文法, en: regular grammar, aliases: [右线性文法, right-linear grammar, 3 型文法] }
+  - { zh: 正规语言, en: regular language }
+  - { zh: 有限自动机, en: finite automaton, aliases: [有限状态自动机, finite automata] }
+  - { zh: 确定有限自动机, en: deterministic finite automaton, aliases: [DFA] }
+  - { zh: 转移函数, en: transition function, scope: ["4.8"] }
+  - { zh: 接受状态, en: accepting state, aliases: [终态, final state], scope: ["4.8"] }
+  - { zh: 转移图, en: transition diagram }
+  - { zh: 转移表, en: transition table }
+  - { zh: 扩展转移函数, en: extended transition function }
+  - { zh: 死状态, en: dead state }
+  - { zh: 非确定有限自动机, en: nondeterministic finite automaton, aliases: [NFA] }
+  - { zh: 子集构造, en: subset construction, aliases: [子集构造法, powerset construction] }
+  - { zh: 带 ε 转移的非确定有限自动机, en: NFA with ε-transitions, aliases: [ε-NFA] }
+  - { zh: ε 闭包, en: ε-closure, aliases: [ECLOSE] }
+  - { zh: Thompson 构造, en: "Thompson's construction", aliases: [Thompson 构造法] }
+  - { zh: 路径迭代法, en: "Kleene's algorithm", aliases: [Kleene 构造法] }
+  - { zh: 状态消去法, en: state elimination }
+  - { zh: Kleene 定理, en: "Kleene's theorem" }
+  - { zh: 正则表达式拒绝服务, en: regular expression denial of service, aliases: [ReDoS] }
+  - { zh: 正规语言的泵引理, en: pumping lemma for regular languages }
+  - { zh: 封闭性, en: closure property, aliases: [closure properties], scope: ["4.8"] }
+  - { zh: 乘积构造, en: product construction, aliases: [乘积自动机, product automaton] }
+  - { zh: 字符串同态, en: string homomorphism }
+  - { zh: 逆同态, en: inverse homomorphism }
+  - { zh: 等价状态, en: equivalent states }
+  - { zh: 可区分状态, en: distinguishable states, aliases: [可区分] }
+  - { zh: 填表算法, en: table-filling algorithm }
+  - { zh: DFA 极小化, en: DFA minimization, aliases: [DFA 最小化] }
+  - { zh: 商自动机, en: quotient automaton }
+  - { zh: 右不变等价关系, en: right-invariant equivalence relation, aliases: [右不变, right congruence] }
+  - { zh: Nerode 等价关系, en: Nerode equivalence, aliases: [Nerode congruence] }
+  - { zh: Myhill–Nerode 定理, en: Myhill–Nerode theorem }
+  - { zh: 极小 DFA, en: minimal DFA }
+  - { zh: 下推自动机, en: pushdown automaton, aliases: [PDA] }
+  - { zh: 瞬时描述, en: instantaneous description, scope: ["4.8"] }
+  - { zh: 终态接受, en: acceptance by final state }
+  - { zh: 空栈接受, en: acceptance by empty stack }
+  - { zh: 确定下推自动机, en: deterministic pushdown automaton, aliases: [DPDA] }
+  - { zh: 前缀性质, en: prefix property }
+  - { zh: 确定上下文无关语言, en: deterministic context-free language, aliases: [DCFL] }
+  - { zh: 无用符号, en: useless symbol }
+  - { zh: 生成符号, en: generating symbol }
+  - { zh: 可达符号, en: reachable symbol }
+  - { zh: ε 产生式, en: ε-production, aliases: [epsilon-production] }
+  - { zh: 可致空符号, en: nullable symbol }
+  - { zh: 单位产生式, en: unit production }
+  - { zh: 单位偶对, en: unit pair }
+  - { zh: Chomsky 范式, en: Chomsky normal form, scope: ["4.8"] }
+  - { zh: Greibach 范式, en: Greibach normal form }
+  - { zh: CKY 算法, en: CYK algorithm, aliases: [CKY algorithm, Cocke–Younger–Kasami algorithm] }
+  - { zh: Earley 算法, en: Earley parser, aliases: [Earley algorithm] }
+  - { zh: Earley 项, en: Earley item }
+  - { zh: 上下文无关语言的泵引理, en: pumping lemma for context-free languages }
+  - { zh: Ogden 引理, en: "Ogden's lemma" }
+  - { zh: 替换, en: substitution, scope: ["4.8"] }
+  - { zh: 递归可枚举语言, en: recursively enumerable language, aliases: [RE 语言] }
+  - { zh: 递归语言, en: recursive language }
+  - { zh: 多带图灵机, en: multitape Turing machine }
+  - { zh: 非确定图灵机, en: nondeterministic Turing machine }
+  - { zh: 半无穷带, en: semi-infinite tape }
+  - { zh: 多栈机, en: multistack machine }
+  - { zh: 计数器机, en: counter machine }
+  - { zh: Church–Turing 论题, en: Church–Turing thesis, aliases: [Church 论题] }
+  - { zh: 不可判定问题, en: undecidable problem }
+  - { zh: 对角语言, en: diagonalization language }
+  - { zh: 通用语言, en: universal language }
+  - { zh: 通用图灵机, en: universal Turing machine }
+  - { zh: 归约, en: reduction, scope: ["4.8.11"] }
+  - { zh: 停机问题, en: halting problem }
+  - { zh: 非平凡性质, en: nontrivial property }
+  - { zh: Rice 定理, en: "Rice's theorem" }
+  - { zh: Post 对应问题, en: "Post's correspondence problem", aliases: [PCP] }
+  - { zh: P 类, en: class P }
+  - { zh: NP 类, en: class NP }
+  - { zh: 多项式时间归约, en: polynomial-time reduction }
+  - { zh: NP 完全, en: NP-complete, aliases: [NP 完全问题, NP-completeness] }
+  - { zh: NP 难, en: NP-hard, aliases: [NP 难问题] }
+  - { zh: 可满足性问题, en: Boolean satisfiability problem, aliases: [SAT] }
+  - { zh: Cook–Levin 定理, en: Cook–Levin theorem, aliases: [Cook 定理] }
+  - { zh: 时序逻辑电路, en: sequential logic circuit, aliases: [时序电路, sequential circuit] }
+  - { zh: 双稳态电路, en: bistable circuit }
+  - { zh: 锁存器, en: latch, scope: ["4"] }
+  - { zh: 触发器, en: flip-flop, scope: ["4"] }
+  - { zh: RS 锁存器, en: SR latch, aliases: [基本 RS 锁存器, RS latch, 基本 RS 触发器] }
+  - { zh: D 锁存器, en: D latch, aliases: [电位型 D 触发器] }
+  - { zh: D 触发器, en: D flip-flop }
+  - { zh: 边沿触发, en: edge triggering, aliases: [edge-triggered] }
+  - { zh: 主从触发器, en: master-slave flip-flop }
+  - { zh: JK 触发器, en: JK flip-flop }
+  - { zh: T 触发器, en: T flip-flop, aliases: [toggle flip-flop] }
+  - { zh: 激励表, en: excitation table }
+  - { zh: 建立时间, en: setup time }
+  - { zh: 保持时间, en: hold time }
+  - { zh: 时钟到输出延迟, en: clock-to-Q delay, aliases: [clock-to-output delay] }
+  - { zh: 亚稳态, en: metastability }
+  - { zh: 同步器, en: synchronizer, scope: ["4.9", "4.10"] }
+  - { zh: 特性方程, en: characteristic equation, scope: ["4.9", "4.10"] }
+  - { zh: 同步时序电路, en: synchronous sequential circuit }
+  - { zh: 有限状态机, en: finite-state machine, aliases: [FSM, finite state machine, 状态机] }
+  - { zh: Moore 机, en: Moore machine, aliases: [Moore 型状态机] }
+  - { zh: Mealy 机, en: Mealy machine, aliases: [Mealy 型状态机] }
+  - { zh: 状态表, en: state table, aliases: [状态转移表, state transition table], scope: ["4.8", "4.9", "4.10"] }
+  - { zh: 状态图, en: state diagram, scope: ["4.8", "4.9", "4.10"] }
+  - { zh: 自启动, en: self-starting, aliases: [self-correcting] }
+  - { zh: 状态化简, en: state minimization, aliases: [状态最小化, state reduction] }
+  - { zh: 状态编码, en: state assignment, aliases: [状态分配, state encoding] }
+  - { zh: 独热码, en: one-hot encoding, aliases: [独热编码, one-hot code], scope: ["4.9", "4.10"] }
+  - { zh: 计数器, en: counter, scope: ["4.9", "4.10"] }
+  - { zh: 寄存器, en: register, scope: ["4.9", "4.10", "4.11"] }
+  - { zh: 移位寄存器, en: shift register }
+  - { zh: 环形计数器, en: ring counter }
+  - { zh: Johnson 计数器, en: Johnson counter, aliases: [扭环形计数器, twisted-ring counter] }
+  - { zh: 可编程逻辑器件, en: programmable logic device, aliases: [PLD] }
+  - { zh: 只读存储器, en: read-only memory, aliases: [ROM] }
+  - { zh: 可编程逻辑阵列, en: programmable logic array, aliases: [PLA] }
+  - { zh: 可编程阵列逻辑, en: programmable array logic, aliases: [PAL] }
+  - { zh: 通用阵列逻辑, en: generic array logic, aliases: [GAL] }
+  - { zh: 复杂可编程逻辑器件, en: complex programmable logic device, aliases: [CPLD] }
+  - { zh: 现场可编程门阵列, en: field-programmable gate array, aliases: [FPGA] }
+  - { zh: 查找表, en: lookup table, aliases: [LUT, look-up table], scope: ["4.9", "4.10"] }
+  - { zh: 硬件描述语言, en: hardware description language, aliases: [HDL] }
+  - { zh: Verilog, en: Verilog }
+  - { zh: SystemVerilog, en: SystemVerilog }
+  - { zh: VHDL, en: VHDL }
+  - { zh: 测试平台, en: testbench }
+  - { zh: 综合, en: logic synthesis, aliases: [synthesis, 逻辑综合], scope: ["4.9", "4.10"] }
+  - { zh: 同步设计, en: synchronous design }
+  - { zh: 摩尔定律, en: "Moore's law" }
+  - { zh: 哈佛结构, en: Harvard architecture }
+  - { zh: 程序计数器, en: program counter, aliases: [PC], scope: ["4"] }
+  - { zh: 指令周期, en: instruction cycle }
+  - { zh: 指令集体系结构, en: instruction set architecture, aliases: [ISA, 指令系统, 指令集, instruction set] }
+  - { zh: 微体系结构, en: microarchitecture, aliases: [计算机组成] }
+  - { zh: 应用二进制接口, en: application binary interface, aliases: [ABI] }
+  - { zh: 响应时间, en: response time, aliases: [执行时间, execution time], scope: ["4.10", "4.11"] }
+  - { zh: 吞吐率, en: throughput, aliases: [吞吐量], scope: ["4.10", "4.11"] }
+  - { zh: 时钟周期, en: clock cycle time, aliases: [clock period, clock cycle] }
+  - { zh: 时钟频率, en: clock rate, aliases: [clock frequency] }
+  - { zh: CPI, en: CPI, aliases: [clock cycles per instruction, 每条指令周期数] }
+  - { zh: MIPS, en: MIPS, aliases: [million instructions per second], scope: ["4.10"] }
+  - { zh: 基准测试, en: benchmark, scope: ["4.10"] }
+  - { zh: 功耗墙, en: power wall }
+  - { zh: 指令, en: instruction, scope: ["4.10", "4.11"] }
+  - { zh: 操作码, en: opcode, aliases: [operation code] }
+  - { zh: 指令格式, en: instruction format }
+  - { zh: 指令字长, en: instruction length }
+  - { zh: 机器字长, en: word size, aliases: [machine word length] }
+  - { zh: 寻址方式, en: addressing mode }
+  - { zh: 有效地址, en: effective address, aliases: [EA] }
+  - { zh: 立即数寻址, en: immediate addressing }
+  - { zh: 寄存器寻址, en: register addressing }
+  - { zh: 直接寻址, en: direct addressing, aliases: [absolute addressing] }
+  - { zh: 间接寻址, en: indirect addressing }
+  - { zh: 寄存器间接寻址, en: register indirect addressing }
+  - { zh: 变址寻址, en: indexed addressing }
+  - { zh: 基址寻址, en: base addressing, aliases: [displacement addressing, 位移量寻址] }
+  - { zh: PC 相对寻址, en: PC-relative addressing, aliases: [相对寻址] }
+  - { zh: 堆栈寻址, en: stack addressing }
+  - { zh: 复杂指令集计算机, en: complex instruction set computer, aliases: [CISC, 复杂指令集] }
+  - { zh: 精简指令集计算机, en: reduced instruction set computer, aliases: [RISC, 精简指令集] }
+  - { zh: RISC-V, en: RISC-V }
+  - { zh: 寄存器堆, en: register file, aliases: [寄存器文件] }
+  - { zh: 字节序, en: endianness, aliases: [byte order] }
+  - { zh: 数据对齐, en: data alignment, aliases: [对齐, 内存对齐, memory alignment] }
+  - { zh: 大端序, en: big-endian, aliases: [大端] }
+  - { zh: 小端序, en: little-endian, aliases: [小端] }
+  - { zh: 伪指令, en: pseudoinstruction }
+  - { zh: 调用约定, en: calling convention }
+  - { zh: 调用者保存寄存器, en: caller-saved register }
+  - { zh: 被调用者保存寄存器, en: callee-saved register }
+  - { zh: 模拟信号, en: analog signal }
+  - { zh: 数字信号, en: digital signal }
+  - { zh: BCD 码, en: binary-coded decimal, aliases: [BCD, 二–十进制码, 8421 码] }
+  - { zh: Gray 码, en: Gray code, aliases: [格雷码, 反射 Gray 码, reflected binary code] }
+  - { zh: 奇偶校验码, en: parity code, aliases: [奇偶校验, parity check, 奇偶校验位, parity bit] }
+  - { zh: 汉明距离, en: Hamming distance, aliases: [海明距离, 码距, minimum distance] }
+  - { zh: 逻辑代数, en: switching algebra, aliases: [开关代数] }
+  - { zh: 逻辑函数, en: Boolean function, aliases: [布尔函数, switching function, 开关函数] }
+  - { zh: 逻辑门, en: logic gate, aliases: [门电路] }
+  - { zh: 一致性定理, en: consensus theorem, aliases: [包含律, 一致项, consensus] }
+  - { zh: 反演定理, en: complementation theorem, aliases: [反演规则] }
+  - { zh: 对偶定理, en: duality principle, aliases: [对偶规则], scope: ["4.9", "4.10"] }
+  - { zh: Shannon 展开定理, en: Shannon expansion, aliases: [展开定理, "Boole's expansion theorem"] }
+  - { zh: 标准与或式, en: canonical sum of products, aliases: [sum of minterms] }
+  - { zh: 标准或与式, en: canonical product of sums, aliases: [product of maxterms] }
+  - { zh: 最简与或式, en: minimal sum of products }
+  - { zh: 卡诺图, en: Karnaugh map, aliases: [K-map] }
+  - { zh: 蕴涵项, en: implicant }
+  - { zh: 素蕴涵项, en: prime implicant, aliases: [质蕴涵项] }
+  - { zh: 本质素蕴涵项, en: essential prime implicant, aliases: [必要质蕴涵项] }
+  - { zh: 无关项, en: "don't-care term", aliases: ["don't care", 约束项] }
+  - { zh: Quine–McCluskey 方法, en: Quine–McCluskey algorithm, aliases: [Q-M 方法, 表格法] }
+  - { zh: CMOS, en: CMOS, aliases: [互补 MOS, complementary MOS, CMOS 门] }
+  - { zh: 噪声容限, en: noise margin }
+  - { zh: 扇出, en: fan-out }
+  - { zh: 传播延迟, en: propagation delay, aliases: [传输延迟] }
+  - { zh: 三态门, en: tri-state buffer, aliases: [三态缓冲器, 三态输出, tri-state gate] }
+  - { zh: 组合逻辑电路, en: combinational logic circuit, aliases: [组合电路, combinational circuit] }
+  - { zh: 译码器, en: decoder, scope: ["4.9", "4.10"] }
+  - { zh: 编码器, en: encoder, scope: ["4.9", "4.10"] }
+  - { zh: 优先编码器, en: priority encoder }
+  - { zh: 数据选择器, en: multiplexer, aliases: [多路选择器, MUX] }
+  - { zh: 数值比较器, en: magnitude comparator, aliases: [比较器, comparator], scope: ["4.9", "4.10"] }
+  - { zh: 竞争, en: race, scope: ["4.9", "4.10"] }
+  - { zh: 冒险, en: hazard, aliases: [静态冒险, 动态冒险, static hazard, dynamic hazard, glitch, 毛刺], scope: ["4.9", "4.10"] }
+  - { zh: 半加器, en: half adder }
+  - { zh: 全加器, en: full adder }
+  - { zh: 串行进位加法器, en: ripple-carry adder, aliases: [行波进位加法器] }
+  - { zh: 超前进位加法器, en: carry-lookahead adder, aliases: [并行进位加法器, CLA] }
+  - { zh: 并行前缀加法器, en: parallel-prefix adder, aliases: [Kogge–Stone 加法器, Brent–Kung 加法器] }
+  - { zh: 算术逻辑单元, en: arithmetic logic unit, aliases: [ALU] }
+  - { zh: 原码, en: sign-magnitude representation, aliases: [sign-magnitude] }
+  - { zh: 反码, en: "ones' complement" }
+  - { zh: 符号扩展, en: sign extension }
+  - { zh: 零扩展, en: zero extension }
+  - { zh: 移码, en: biased representation, aliases: [excess-K, offset binary] }
+  - { zh: 海明码, en: Hamming code, aliases: [汉明码] }
+  - { zh: 扩展海明码, en: extended Hamming code, aliases: [SECDED 码, SECDED] }
+  - { zh: 循环冗余校验码, en: cyclic redundancy check, aliases: [CRC, 循环冗余校验] }
+  - { zh: 生成多项式, en: generator polynomial, scope: ["4"] }
+  - { zh: 纠删码, en: erasure code }
+  - { zh: 桶形移位器, en: barrel shifter }
+  - { zh: Booth 算法, en: "Booth's algorithm", aliases: [布斯算法, Booth algorithm] }
+  - { zh: 基 4 Booth 编码, en: radix-4 Booth encoding, aliases: [改进的 Booth 算法, modified Booth encoding] }
+  - { zh: 进位保留加法器, en: carry-save adder }
+  - { zh: 恢复余数除法, en: restoring division }
+  - { zh: 不恢复余数除法, en: non-restoring division, aliases: [加减交替法] }
+  - { zh: 舍入位, en: round bit }
+  - { zh: 粘滞位, en: sticky bit }
+  - { zh: 融合乘加, en: fused multiply-add, aliases: [FMA] }
+  - { zh: 数据通路, en: datapath }
+  - { zh: 控制单元, en: control unit, aliases: [控制器], scope: ["4"] }
+  - { zh: 单周期处理器, en: single-cycle processor, aliases: [单周期 CPU] }
+  - { zh: 立即数生成器, en: immediate generator }
+  - { zh: 关键路径, en: critical path, scope: ["4.9", "4.10"] }

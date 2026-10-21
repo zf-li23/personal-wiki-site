@@ -20,6 +20,9 @@ import latex from 'highlight.js/lib/languages/latex';
 // Registers \ce / \pu (chemistry) on the KaTeX instance rehype-katex uses (versions are pinned equal, see tests).
 import 'katex/contrib/mhchem';
 import matlab from 'highlight.js/lib/languages/matlab';
+import tcl from 'highlight.js/lib/languages/tcl';
+import verilog from 'highlight.js/lib/languages/verilog';
+import vhdl from 'highlight.js/lib/languages/vhdl';
 import { common } from 'lowlight';
 import type { Code, Root as MdastRoot, RootContent as MdastContent } from 'mdast';
 import rehypeHighlight from 'rehype-highlight';
@@ -679,7 +682,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(rehypeRaw)
     .use(rehypeWiki, state)
     .use(rehypeStatements, state)
-    .use(rehypeHighlight, { languages: { ...common, matlab, latex }, plainText: ['text', 'txt', 'plain', 'math'] })
+    .use(rehypeHighlight, { languages: { ...common, matlab, latex, verilog, vhdl, tcl }, aliases: { verilog: ['systemverilog'] }, plainText: ['text', 'txt', 'plain', 'math', 'asm'] })
     .use(rehypeKatex, { strict: 'ignore', output: 'html' })
     .use(rehypeFinalize);
 
