@@ -2,6 +2,8 @@
 title: 数字逻辑电路
 courses:
   - { code: "30240343", name: 数字逻辑电路, name_en: Digital Logic Circuits }
+textbooks:
+  - { title: 数字逻辑与数字集成电路, author: 王尔乾、杨士强、巴林凤, edition: 2, title_en: Digital Logic and Digital Integrated Circuits, author_en: "Erqian Wang, Shiqiang Yang, Linfeng Ba" }
 ---
 
 本课程研究怎样用只有两种取值的信号和由晶体管搭成的开关网络，实现计算、控制与存储。它处在计算机硬件的最底层：处理器中的加法器、译码器、寄存器、计数器和控制状态机，最终都是门电路与触发器的组合。课程围绕两个核心问题展开。一是功能：怎样把一个用真值表或状态图描述的需求，系统地变成一个正确的电路，并使它尽量简单。二是物理：实际的门有电平范围、延迟和功耗，电路因此会出现冒险，时钟频率也有上限，设计必须在这些约束下仍然可靠。课程最后从手工连线走向现代的设计方式，用硬件描述语言写出电路，在 FPGA 上实现。

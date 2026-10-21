@@ -2,6 +2,8 @@
 title: 形式语言与自动机
 courses:
   - { code: "40240432", name: 形式语言与自动机, name_en: Formal Languages and Automata }
+textbooks:
+  - { title: "Introduction to Automata Theory, Languages, and Computation", author: "John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman", edition: 3, title_zh: 自动机理论、语言和计算导论 }
 ---
 
 本课程研究怎样用有限的规则描述一个通常无限的字符串集合，以及怎样用机器判定一个字符串是否属于它。描述语言有两条互为表里的路线：一条是生成，用一组改写规则（**文法**）产生全部合法的句子；另一条是识别，用一台抽象的机器（自动机）逐个读入符号，决定接受还是拒绝。课程的大部分定理都在说明某一类文法与某一类自动机描述的恰好是同一族语言，并沿着机器的记忆能力由弱到强排成一个层级。走到这个层级的顶端，问题就从"怎样描述语言"变成了"算法能做什么"：哪些问题根本没有算法，哪些问题有算法却可能无法高效地求解。

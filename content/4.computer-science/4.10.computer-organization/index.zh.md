@@ -2,6 +2,8 @@
 title: 计算机组成原理
 courses:
   - { code: "40240354", name: 计算机组成原理, name_en: Principles of Computer Organization }
+textbooks:
+  - { title: "Computer Organization and Design RISC-V Edition: The Hardware/Software Interface", author: "David A. Patterson, John L. Hennessy", edition: 2, title_zh: 计算机组成与设计：硬件/软件接口（RISC-V 版） }
 ---
 
 本课程研究计算机的硬件怎样执行程序。程序员看到的是一组指令及其语义，即**指令集体系结构**；硬件设计者要回答的是，怎样用运算器、控制器、存储器和输入输出设备实现这组指令，又怎样使它执行得更快。课程的核心问题因此有两个：软件与硬件之间的接口应当怎样设计，以及在给定接口之下怎样组织硬件。评价一切设计的标准是性能，CPU 时间等于指令数、CPI 与时钟周期三者之积：指令系统、编译器与微体系结构各自影响其中的因子，只有乘积才说明快慢。

@@ -1455,7 +1455,7 @@ terms:
   - { zh: 判别分析, en: discriminant analysis }
   - { zh: Fisher 线性判别, en: "Fisher's linear discriminant", aliases: [Fisher 判别, Fisher discriminant] }
   - { zh: 期望误判代价, en: expected cost of misclassification, aliases: [ECM] }
-  - { zh: 总误判概率, en: total probability of misclassification, aliases: [TPM] }
+  - { zh: 总误判概率, en: total probability of misclassification, aliases: [TPM], scope: ["3"] }
   - { zh: 贝叶斯分类器, en: Bayes classifier }
   - { zh: 线性判别分析, en: linear discriminant analysis, aliases: [LDA] }
   - { zh: 二次判别分析, en: quadratic discriminant analysis, aliases: [QDA] }
@@ -2223,7 +2223,7 @@ terms:
   - { zh: 稳定排序, en: stable sorting, aliases: [stable sort, 排序的稳定性], scope: ["4"] }
   - { zh: 就地算法, en: in-place algorithm, aliases: [原地算法] }
   - { zh: 比较树, en: comparison tree, aliases: [判定树] }
-  - { zh: 位图, en: bitmap, aliases: [位向量, bit array, bit vector], scope: ["4.3", "4.11"] }
+  - { zh: 位图, en: bitmap, aliases: [位向量, bit array, bit vector], scope: ["4.3", "4.11", "4.13"] }
   - { zh: 稀疏集合, en: sparse set }
   - { zh: 循位置访问, en: call-by-position }
   - { zh: 双向链表, en: doubly linked list, aliases: [双链表] }
@@ -2425,7 +2425,7 @@ terms:
   - { zh: 拆分-应用-合并, en: split-apply-combine }
   - { zh: 内连接, en: inner join }
   - { zh: 左连接, en: left join, aliases: [左外连接, left outer join] }
-  - { zh: 全外连接, en: full outer join, aliases: [外连接, outer join] }
+  - { zh: 全外连接, en: full outer join }
   - { zh: 写时复制, en: copy-on-write, aliases: [CoW] }
   - { zh: 惰性求值, en: lazy evaluation }
   - { zh: 颜色映射, en: colormap, aliases: [色图, color map] }
@@ -2861,8 +2861,8 @@ terms:
   - { zh: Cook–Levin 定理, en: Cook–Levin theorem, aliases: [Cook 定理] }
   - { zh: 时序逻辑电路, en: sequential logic circuit, aliases: [时序电路, sequential circuit] }
   - { zh: 双稳态电路, en: bistable circuit }
-  - { zh: 锁存器, en: latch, scope: ["4"] }
-  - { zh: 触发器, en: flip-flop, scope: ["4"] }
+  - { zh: 锁存器, en: latch, scope: ["4.9", "4.10"] }
+  - { zh: 触发器, en: flip-flop, scope: ["4.9", "4.10"] }
   - { zh: RS 锁存器, en: SR latch, aliases: [基本 RS 锁存器, RS latch, 基本 RS 触发器] }
   - { zh: D 锁存器, en: D latch, aliases: [电位型 D 触发器] }
   - { zh: D 触发器, en: D flip-flop }
@@ -2915,7 +2915,7 @@ terms:
   - { zh: 微体系结构, en: microarchitecture, aliases: [计算机组成] }
   - { zh: 应用二进制接口, en: application binary interface, aliases: [ABI] }
   - { zh: 响应时间, en: response time, aliases: [执行时间, execution time], scope: ["4.10"] }
-  - { zh: 吞吐率, en: throughput, aliases: [吞吐量], scope: ["4.10", "4.11"] }
+  - { zh: 吞吐率, en: throughput, aliases: [吞吐量], scope: ["4.10", "4.11", "4.14"] }
   - { zh: 时钟周期, en: clock cycle time, aliases: [clock period, clock cycle] }
   - { zh: 时钟频率, en: clock rate, aliases: [clock frequency] }
   - { zh: CPI, en: CPI, aliases: [clock cycles per instruction, 每条指令周期数] }
@@ -3128,7 +3128,7 @@ terms:
   - { zh: 临界区, en: critical section }
   - { zh: 互斥, en: mutual exclusion }
   - { zh: 原子操作, en: atomic operation, aliases: [atomic, atomicity, 原子性], scope: ["4.10", "4.11"] }
-  - { zh: 互斥锁, en: mutex, aliases: [lock, 锁, mutual exclusion lock], scope: ["4"] }
+  - { zh: 互斥锁, en: mutex, aliases: [lock, 锁, mutual exclusion lock], scope: ["4.1", "4.2", "4.3", "4.4", "4.11", "4.14"] }
   - { zh: 自旋锁, en: spin lock, aliases: [spinlock] }
   - { zh: 票据锁, en: ticket lock, aliases: [排队自旋锁] }
   - { zh: 测试并设置, en: test-and-set, aliases: [TAS] }
@@ -3171,7 +3171,7 @@ terms:
   - { zh: 区段, en: extent, scope: ["4.11"] }
   - { zh: 页缓存, en: page cache, aliases: [页高速缓存] }
   - { zh: 崩溃一致性, en: crash consistency, aliases: [crash-consistent] }
-  - { zh: 日志, en: journaling, aliases: [日志文件系统, journaling file system, 预写日志, write-ahead logging], scope: ["4"] }
+  - { zh: 日志, en: journaling, aliases: [日志文件系统, journaling file system], scope: ["4"] }
   - { zh: 日志结构文件系统, en: log-structured file system, aliases: [LFS] }
   - { zh: 轮询, en: polling, scope: ["4"] }
   - { zh: 直接存储器访问, en: direct memory access, aliases: [DMA, 直接内存访问] }
@@ -3201,8 +3201,8 @@ terms:
   - { zh: 嵌套分页, en: nested paging, aliases: [扩展页表, EPT, NPT] }
   - { zh: Linux 命名空间, en: Linux namespace, scope: ["4.11"] }
   - { zh: 控制组, en: control group, aliases: [cgroup, cgroups] }
-  - { zh: 容器, en: container, aliases: [操作系统级虚拟化, OS-level virtualization], scope: ["4.11"] }
-  - { zh: 容器镜像, en: container image, aliases: [镜像], scope: ["4.11"] }
+  - { zh: 容器, en: container, aliases: [操作系统级虚拟化, OS-level virtualization], scope: ["4.11", "4.14"] }
+  - { zh: 容器镜像, en: container image, aliases: [镜像], scope: ["4.11", "4.14"] }
   - { zh: Shell, en: shell, aliases: [命令解释器, 外壳], scope: ["4"] }
   - { zh: 终端模拟器, en: terminal emulator }
   - { zh: 通配符, en: glob, aliases: [wildcard, globbing], scope: ["4"] }
@@ -3225,3 +3225,518 @@ terms:
   - { zh: 回填调度, en: backfill scheduling, aliases: [backfill, 回填] }
   - { zh: 消息传递接口, en: MPI, aliases: [Message Passing Interface] }
   - { zh: 工作流管理系统, en: workflow management system, aliases: [workflow manager, 工作流管理器] }
+
+  # databases and software engineering (4.13–4.14)
+  - { zh: 数据库, en: database }
+  - { zh: 数据库管理系统, en: database management system, aliases: [DBMS] }
+  - { zh: 数据库系统, en: database system }
+  - { zh: 数据模型, en: data model }
+  - { zh: 模式, en: schema, aliases: [database schema, 数据库模式], scope: ["4.13"] }
+  - { zh: 三级模式结构, en: three-schema architecture, aliases: [三级模式] }
+  - { zh: 外模式, en: external schema, aliases: [子模式] }
+  - { zh: 概念模式, en: conceptual schema, aliases: [逻辑模式] }
+  - { zh: 内模式, en: internal schema, aliases: [存储模式, physical schema] }
+  - { zh: 数据独立性, en: data independence }
+  - { zh: 物理数据独立性, en: physical data independence }
+  - { zh: 逻辑数据独立性, en: logical data independence }
+  - { zh: 数据定义语言, en: data-definition language, aliases: [DDL] }
+  - { zh: 数据操纵语言, en: data-manipulation language, aliases: [DML] }
+  - { zh: 查询语言, en: query language }
+  - { zh: 数据字典, en: data dictionary, aliases: [system catalog, 系统目录] }
+  - { zh: 元数据, en: metadata }
+  - { zh: 查询处理器, en: query processor }
+  - { zh: 存储管理器, en: storage manager }
+  - { zh: 事务管理器, en: transaction manager }
+  - { zh: 数据库管理员, en: database administrator, aliases: [DBA] }
+  - { zh: 联机事务处理, en: online transaction processing, aliases: [OLTP] }
+  - { zh: 联机分析处理, en: online analytical processing, aliases: [OLAP] }
+  - { zh: 数据仓库, en: data warehouse }
+  - { zh: NoSQL, en: NoSQL }
+  - { zh: NewSQL, en: NewSQL }
+  - { zh: 关系模型, en: relational model }
+  - { zh: 关系模式, en: relation schema }
+  - { zh: 元组, en: tuple, scope: ["4.13"] }
+  - { zh: 关系, en: relation, scope: ["4.13"] }
+  - { zh: 超码, en: superkey, aliases: [超键] }
+  - { zh: 候选码, en: candidate key, aliases: [候选键] }
+  - { zh: 主码, en: primary key, aliases: [主键] }
+  - { zh: 外码, en: foreign key, aliases: [外键] }
+  - { zh: 参照完整性, en: referential integrity, aliases: [referential integrity constraint, 参照完整性约束] }
+  - { zh: 代理键, en: surrogate key, aliases: [代理码] }
+  - { zh: 模式图, en: schema diagram }
+  - { zh: 关系代数, en: relational algebra }
+  - { zh: 选择, en: selection, scope: ["4.13"] }
+  - { zh: 投影, en: projection, scope: ["4.13"] }
+  - { zh: θ 连接, en: theta join, aliases: [theta 连接] }
+  - { zh: 等值连接, en: equijoin }
+  - { zh: 自然连接, en: natural join }
+  - { zh: 除, en: division, aliases: [除法], scope: ["4.13"] }
+  - { zh: 元组关系演算, en: tuple relational calculus }
+  - { zh: 域关系演算, en: domain relational calculus }
+  - { zh: 关系完备性, en: relational completeness, aliases: [relationally complete] }
+  - { zh: 空值, en: null value, aliases: ["NULL"], scope: ["4.13", "4.14"] }
+  - { zh: 三值逻辑, en: three-valued logic }
+  - { zh: SQL, en: SQL, aliases: [Structured Query Language, 结构化查询语言] }
+  - { zh: 多重集, en: multiset, aliases: [bag, 包] }
+  - { zh: 聚集函数, en: aggregate function, aliases: [聚合函数] }
+  - { zh: 标识列, en: identity column }
+  - { zh: 子查询, en: subquery }
+  - { zh: 相关子查询, en: correlated subquery }
+  - { zh: 半连接, en: semijoin, aliases: [semi-join] }
+  - { zh: 反连接, en: antijoin, aliases: [anti-join] }
+  - { zh: 公用表表达式, en: common table expression, aliases: [CTE] }
+  - { zh: 递归查询, en: recursive query }
+  - { zh: 窗口函数, en: window function, aliases: [开窗函数] }
+  - { zh: 物化视图, en: materialized view }
+  - { zh: 自动提交, en: autocommit }
+  - { zh: 保存点, en: savepoint }
+  - { zh: 权限, en: privilege, scope: ["4.13"] }
+  - { zh: 角色, en: role, scope: ["4.13"] }
+  - { zh: 行级安全, en: row-level security }
+  - { zh: 游标, en: cursor, scope: ["4.13"] }
+  - { zh: 连接池, en: connection pool }
+  - { zh: SQL 注入, en: SQL injection }
+  - { zh: 参数化查询, en: parameterized query }
+  - { zh: 预备语句, en: prepared statement, aliases: [预编译语句] }
+  - { zh: 存储过程, en: stored procedure }
+  - { zh: 实体–联系模型, en: entity–relationship model, aliases: [E-R 模型, E-R model, ER model, entity-relationship model] }
+  - { zh: 实体, en: entity, scope: ["4.13"] }
+  - { zh: 实体集, en: entity set }
+  - { zh: 复合属性, en: composite attribute }
+  - { zh: 多值属性, en: multivalued attribute }
+  - { zh: 派生属性, en: derived attribute }
+  - { zh: 联系, en: relationship, scope: ["4.13"] }
+  - { zh: 联系集, en: relationship set }
+  - { zh: 描述性属性, en: descriptive attribute }
+  - { zh: 映射基数, en: mapping cardinality, aliases: [cardinality ratio] }
+  - { zh: 全部参与, en: total participation }
+  - { zh: 部分参与, en: partial participation }
+  - { zh: 弱实体集, en: weak entity set }
+  - { zh: 标识性联系, en: identifying relationship }
+  - { zh: 分辨符, en: discriminator, aliases: [partial key, 部分码], scope: ["4.13"] }
+  - { zh: 特化, en: specialization, scope: ["4.13"] }
+  - { zh: 概化, en: generalization, scope: ["4.13"] }
+  - { zh: E-R 图, en: E-R diagram, aliases: [ER diagram, entity–relationship diagram, 实体–联系图] }
+  - { zh: 关联实体, en: associative entity }
+  - { zh: 生成列, en: generated column }
+  - { zh: 完整性约束, en: integrity constraint }
+  - { zh: 实体完整性, en: entity integrity }
+  - { zh: 更新异常, en: update anomaly }
+  - { zh: 插入异常, en: insertion anomaly }
+  - { zh: 删除异常, en: deletion anomaly }
+  - { zh: 规范化, en: normalization, scope: ["4.13"] }
+  - { zh: 函数依赖, en: functional dependency }
+  - { zh: 函数依赖集的闭包, en: closure of a set of functional dependencies }
+  - { zh: Armstrong 公理, en: "Armstrong's axioms", aliases: [Armstrong 公理系统] }
+  - { zh: 属性闭包, en: attribute closure, aliases: [属性集闭包, closure of an attribute set] }
+  - { zh: 无关属性, en: extraneous attribute }
+  - { zh: 正则覆盖, en: canonical cover, aliases: [最小覆盖, minimal cover, 最小函数依赖集] }
+  - { zh: 无损分解, en: lossless decomposition, aliases: [无损连接分解, lossless-join decomposition] }
+  - { zh: 保持依赖, en: dependency preservation, aliases: [依赖保持, dependency preserving] }
+  - { zh: 第一范式, en: first normal form, aliases: [1NF] }
+  - { zh: 第二范式, en: second normal form, aliases: [2NF] }
+  - { zh: 第三范式, en: third normal form, aliases: [3NF] }
+  - { zh: BC 范式, en: Boyce–Codd normal form, aliases: [BCNF, Boyce-Codd normal form, Boyce–Codd 范式] }
+  - { zh: 主属性, en: prime attribute }
+  - { zh: 多值依赖, en: multivalued dependency, aliases: [MVD] }
+  - { zh: 第四范式, en: fourth normal form, aliases: [4NF] }
+  - { zh: 星型模式, en: star schema }
+  - { zh: 软件工程, en: software engineering }
+  - { zh: 软件危机, en: software crisis }
+  - { zh: 软件生命周期, en: software life cycle, aliases: [软件生存周期, software lifecycle] }
+  - { zh: 软件维护, en: software maintenance }
+  - { zh: 纠正性维护, en: corrective maintenance, aliases: [改正性维护] }
+  - { zh: 适应性维护, en: adaptive maintenance }
+  - { zh: 完善性维护, en: perfective maintenance }
+  - { zh: 预防性维护, en: preventive maintenance }
+  - { zh: 遗留系统, en: legacy system, aliases: [legacy software, 遗留软件] }
+  - { zh: 软件工程知识体系, en: Software Engineering Body of Knowledge, aliases: [SWEBOK] }
+  - { zh: 软件过程, en: software process }
+  - { zh: 软件过程模型, en: software process model }
+  - { zh: 瀑布模型, en: waterfall model }
+  - { zh: 增量开发, en: incremental development, aliases: [增量模型, incremental model] }
+  - { zh: 原型法, en: prototyping, aliases: [原型模型] }
+  - { zh: 螺旋模型, en: spiral model }
+  - { zh: 能力成熟度模型集成, en: Capability Maturity Model Integration, aliases: [CMMI, 能力成熟度模型, CMM] }
+  - { zh: 敏捷宣言, en: Agile Manifesto, aliases: [Manifesto for Agile Software Development, 敏捷软件开发宣言] }
+  - { zh: 敏捷开发, en: agile software development, aliases: [敏捷软件开发, agile development] }
+  - { zh: 范围蔓延, en: scope creep }
+  - { zh: Scrum, en: Scrum }
+  - { zh: 冲刺, en: sprint, aliases: [Sprint], scope: ["4.14"] }
+  - { zh: 产品负责人, en: Product Owner }
+  - { zh: Scrum Master, en: Scrum Master }
+  - { zh: 冲刺计划会议, en: Sprint Planning }
+  - { zh: 每日站会, en: Daily Scrum, aliases: [daily stand-up, 每日 Scrum] }
+  - { zh: 冲刺评审, en: Sprint Review }
+  - { zh: 冲刺回顾, en: Sprint Retrospective, aliases: [retrospective, 回顾会议] }
+  - { zh: 产品待办列表, en: Product Backlog, aliases: [产品待办事项列表] }
+  - { zh: 冲刺待办列表, en: Sprint Backlog }
+  - { zh: 产品目标, en: Product Goal }
+  - { zh: 冲刺目标, en: Sprint Goal }
+  - { zh: 完成的定义, en: Definition of Done, aliases: [DoD] }
+  - { zh: 用户故事, en: user story }
+  - { zh: 验收标准, en: acceptance criteria, aliases: [acceptance criterion] }
+  - { zh: 史诗, en: epic, scope: ["4.14"] }
+  - { zh: 故事点, en: story point }
+  - { zh: 速率, en: velocity, scope: ["4.14"] }
+  - { zh: 燃尽图, en: burndown chart }
+  - { zh: 看板, en: Kanban }
+  - { zh: 在制品限制, en: work-in-progress limit, aliases: [WIP limit, WIP 限制] }
+  - { zh: Little 定律, en: "Little's law", aliases: [利特尔法则] }
+  - { zh: DevOps, en: DevOps }
+  - { zh: 工作分解结构, en: work breakdown structure, aliases: [WBS] }
+  - { zh: 计划扑克, en: planning poker }
+  - { zh: 不确定性锥, en: cone of uncertainty }
+  - { zh: Brooks 定律, en: "Brooks's law", aliases: [布鲁克斯定律] }
+  - { zh: 活动网络, en: activity network, aliases: [任务网络图, task network diagram] }
+  - { zh: 时差, en: slack, aliases: [浮动时间, float, 松弛时间], scope: ["4.14"] }
+  - { zh: 甘特图, en: Gantt chart }
+  - { zh: 版本控制系统, en: version control system, aliases: [VCS, 版本控制, version control] }
+  - { zh: 软件配置管理, en: software configuration management, aliases: [SCM, 配置管理, configuration management] }
+  - { zh: 配置项, en: configuration item }
+  - { zh: 基线, en: baseline, scope: ["4.14"] }
+  - { zh: 语义化版本, en: semantic versioning, aliases: [SemVer, 语义化版本控制] }
+  - { zh: 暂存区, en: staging area }
+  - { zh: 数据对象, en: blob, scope: ["4.14"] }
+  - { zh: 树对象, en: tree object }
+  - { zh: 提交, en: commit, scope: ["4.14"] }
+  - { zh: 标签, en: tag, scope: ["4.14"] }
+  - { zh: HEAD, en: HEAD, scope: ["4.14"] }
+  - { zh: 合并基, en: merge base }
+  - { zh: 快进合并, en: fast-forward merge, aliases: [fast-forward] }
+  - { zh: 三方合并, en: three-way merge }
+  - { zh: 合并冲突, en: merge conflict }
+  - { zh: 变基, en: rebase, aliases: [rebasing] }
+  - { zh: 拉取请求, en: pull request, aliases: [合并请求, merge request, PR] }
+  - { zh: 代码评审, en: code review, aliases: [代码审查] }
+  - { zh: 持续集成, en: continuous integration, aliases: [CI] }
+  - { zh: 持续交付, en: continuous delivery }
+  - { zh: 持续部署, en: continuous deployment }
+  - { zh: 需求, en: requirement, scope: ["4.14"] }
+  - { zh: 功能需求, en: functional requirement, aliases: [功能性需求] }
+  - { zh: 非功能需求, en: non-functional requirement, aliases: [非功能性需求] }
+  - { zh: 需求工程, en: requirements engineering }
+  - { zh: 需求获取, en: requirements elicitation }
+  - { zh: 需求规约, en: requirements specification, aliases: [需求规格说明] }
+  - { zh: 需求确认, en: requirements validation }
+  - { zh: 用户类, en: user class }
+  - { zh: 干系人, en: stakeholder, aliases: [利益相关者, 共利益者] }
+  - { zh: 需求基线, en: requirements baseline }
+  - { zh: 数据流图, en: data flow diagram, aliases: [DFD] }
+  - { zh: 泳道图, en: swimlane diagram, aliases: [跨职能流程图, cross-functional diagram] }
+  - { zh: 活动图, en: activity diagram }
+  - { zh: 判定表, en: decision table, aliases: [决策表] }
+  - { zh: 统一建模语言, en: Unified Modeling Language, aliases: [UML] }
+  - { zh: 参与者, en: actor, scope: ["4.14"] }
+  - { zh: 用例, en: use case }
+  - { zh: 用例图, en: use case diagram }
+  - { zh: 用例描述, en: use case description, aliases: [用例说明] }
+  - { zh: 前置条件, en: precondition, scope: ["4.14"] }
+  - { zh: 后置条件, en: postcondition, scope: ["4.14"] }
+  - { zh: 顺序图, en: sequence diagram, aliases: [时序图] }
+  - { zh: 软件需求规格说明, en: software requirements specification, aliases: [SRS, 软件需求规约] }
+  - { zh: 业务需求, en: business requirement }
+  - { zh: 用户需求, en: user requirement }
+  - { zh: 业务规则, en: business rule }
+  - { zh: 系统需求, en: system requirement }
+  - { zh: 外部接口需求, en: external interface requirement }
+  - { zh: 约束, en: constraint, scope: ["4.14"] }
+  - { zh: 简易需求语法, en: Easy Approach to Requirements Syntax, aliases: [EARS] }
+  - { zh: 需求跟踪, en: requirements traceability, aliases: [需求可追溯性] }
+  - { zh: 需求跟踪矩阵, en: traceability matrix }
+  - { zh: 变更控制委员会, en: change control board, aliases: [CCB] }
+  - { zh: 影响分析, en: impact analysis, scope: ["4.14"] }
+  - { zh: 规格驱动开发, en: spec-driven development }
+  - { zh: 软件架构, en: software architecture, aliases: [软件体系结构] }
+  - { zh: 构件, en: component, aliases: [组件], scope: ["4.14"] }
+  - { zh: 连接件, en: connector, scope: ["4.14"] }
+  - { zh: 架构风格, en: architectural style, aliases: [架构模式, architectural pattern] }
+  - { zh: 质量属性, en: quality attribute }
+  - { zh: 质量属性场景, en: quality attribute scenario }
+  - { zh: 架构战术, en: architectural tactic, aliases: [战术] }
+  - { zh: 性能, en: performance, scope: ["4.14"] }
+  - { zh: 错误, en: error, scope: ["4.14"] }
+  - { zh: 失效, en: failure, scope: ["4.14"] }
+  - { zh: 可用性, en: availability, scope: ["4.14"] }
+  - { zh: 可修改性, en: modifiability }
+  - { zh: 容错, en: fault tolerance, aliases: [容错性] }
+  - { zh: 三模冗余, en: triple modular redundancy, aliases: [TMR] }
+  - { zh: N 版本程序设计, en: N-version programming, aliases: [N 版本编程] }
+  - { zh: 恢复块, en: recovery blocks, aliases: [recovery block] }
+  - { zh: 软件产品线, en: software product line, aliases: [产品线] }
+  - { zh: 模块化, en: modularity }
+  - { zh: 耦合, en: coupling, scope: ["4"] }
+  - { zh: 内聚, en: cohesion, scope: ["4"] }
+  - { zh: 关注点分离, en: separation of concerns }
+  - { zh: 横切关注点, en: crosscutting concern }
+  - { zh: 事件驱动架构, en: event-based architecture, aliases: [隐式调用, implicit invocation, event-driven architecture, 基于事件的架构] }
+  - { zh: 发布-订阅, en: publish–subscribe, aliases: [发布/订阅, pub/sub, publish-subscribe] }
+  - { zh: 管道-过滤器, en: pipes and filters, aliases: [管道-过滤器风格, pipes-and-filters] }
+  - { zh: 仓库风格, en: repository architecture, aliases: [仓库架构, repository style, 共享数据风格] }
+  - { zh: 分层架构, en: layered architecture, aliases: [分层风格, layered style] }
+  - { zh: 客户端-服务器架构, en: client–server architecture, aliases: [客户/服务器, C/S, client-server architecture, client–server] }
+  - { zh: 对等网络, en: peer-to-peer, aliases: [P2P, 对等架构, peer-to-peer architecture] }
+  - { zh: 软件即服务, en: software as a service, aliases: [SaaS] }
+  - { zh: 云计算, en: cloud computing }
+  - { zh: 面向服务的架构, en: service-oriented architecture, aliases: [SOA] }
+  - { zh: 微服务架构, en: microservice architecture, aliases: [微服务, microservices] }
+  - { zh: 表述性状态转移, en: representational state transfer, aliases: [REST, RESTful] }
+  - { zh: 远程过程调用, en: remote procedure call, aliases: [RPC] }
+  - { zh: 并发数, en: concurrency, scope: ["4.14"] }
+  - { zh: 分片, en: sharding, aliases: [shard, 分库分表] }
+  - { zh: CAP 定理, en: CAP theorem }
+  - { zh: 可伸缩性, en: scalability, aliases: [可扩展性] }
+  - { zh: 微内核架构, en: microkernel architecture, aliases: [插件化架构, plug-in architecture] }
+  - { zh: 基于 HTTP 的动态自适应流, en: DASH, aliases: [dynamic adaptive streaming over HTTP] }
+  - { zh: 内容分发网络, en: content delivery network, aliases: [CDN, 内容分发网] }
+  - { zh: 超文本传输协议, en: HTTP, aliases: [Hypertext Transfer Protocol] }
+  - { zh: 安全方法, en: safe method, scope: ["4.14"] }
+  - { zh: 幂等方法, en: idempotent method, aliases: [idempotent, 幂等], scope: ["4.14"] }
+  - { zh: 单页应用, en: single-page application, aliases: [SPA] }
+  - { zh: 前后端分离, en: front-end/back-end separation }
+  - { zh: 反向代理, en: reverse proxy }
+  - { zh: OpenAPI, en: OpenAPI, aliases: [OpenAPI Specification, Swagger] }
+  - { zh: JSON, en: JSON, aliases: [JavaScript Object Notation] }
+  - { zh: 身份认证, en: authentication, aliases: [认证, 鉴权], scope: ["4.14"] }
+  - { zh: 授权, en: authorization, scope: ["4.14"] }
+  - { zh: Cookie, en: cookie, aliases: [HTTP cookie] }
+  - { zh: 会话, en: session, scope: ["4.14"] }
+  - { zh: 持有者令牌, en: bearer token, aliases: [Bearer 令牌] }
+  - { zh: JSON Web 令牌, en: JSON Web Token, aliases: [JWT] }
+  - { zh: OAuth 2.0, en: OAuth 2.0, aliases: [OAuth] }
+  - { zh: OpenID Connect, en: OpenID Connect, aliases: [OIDC] }
+  - { zh: 跨站脚本, en: cross-site scripting, aliases: [XSS, 跨站脚本攻击] }
+  - { zh: 同源策略, en: same-origin policy }
+  - { zh: 跨源资源共享, en: cross-origin resource sharing, aliases: [CORS, 跨域资源共享] }
+  - { zh: 跨站请求伪造, en: cross-site request forgery, aliases: [CSRF] }
+  - { zh: 文档对象模型, en: Document Object Model, aliases: [DOM] }
+  - { zh: TypeScript, en: TypeScript }
+  - { zh: 构建工具, en: build tool, scope: ["4.14"] }
+  - { zh: React 组件, en: React component, scope: ["4.14.8"] }
+  - { zh: 状态, en: state, aliases: [React 状态], scope: ["4.14.8"] }
+  - { zh: Hook, en: hook, aliases: [React Hook, 钩子], scope: ["4.14.8"] }
+  - { zh: Effect, en: effect, aliases: [副作用钩子, React effect], scope: ["4.14.8"] }
+  - { zh: 模型-视图-控制器, en: model–view–controller, aliases: [MVC] }
+  - { zh: Django 项目与应用, en: Django project and app, aliases: [Django 项目, Django 应用] }
+  - { zh: 中间件, en: middleware, scope: ["4.14"] }
+  - { zh: 对象关系映射, en: object–relational mapping, aliases: [ORM, 对象-关系映射, object-relational mapping] }
+  - { zh: 迁移, en: schema migration, aliases: [数据库迁移, migration], scope: ["4.13", "4.14"] }
+  - { zh: 序列化, en: serialization, aliases: [反序列化, deserialization] }
+  - { zh: I/O 代价模型, en: I/O cost model }
+  - { zh: 缓冲池, en: buffer pool }
+  - { zh: 缓冲区管理器, en: buffer manager, aliases: [缓冲管理器] }
+  - { zh: 分槽页, en: slotted page, aliases: [槽式页] }
+  - { zh: 记录标识符, en: record identifier, aliases: [RID, 元组标识符, tuple identifier, TID] }
+  - { zh: 堆文件, en: heap file }
+  - { zh: 顺序文件, en: sequential file }
+  - { zh: 索引组织表, en: index-organized table, aliases: [聚簇表, clustered table] }
+  - { zh: 分区, en: partitioning, aliases: [表分区, table partitioning], scope: ["4.13"] }
+  - { zh: 行存储, en: row store, aliases: [行存, N-ary storage model, NSM] }
+  - { zh: 列存储, en: column store, aliases: [列存, decomposition storage model, DSM] }
+  - { zh: PAX 布局, en: PAX, aliases: [Partition Attributes Across] }
+  - { zh: 搜索码, en: search key, aliases: [查找码] }
+  - { zh: 索引项, en: index entry }
+  - { zh: 聚集索引, en: clustering index, aliases: [聚簇索引, 主索引, primary index, clustered index] }
+  - { zh: 辅助索引, en: secondary index, aliases: [二级索引, 非聚集索引, non-clustering index] }
+  - { zh: 稠密索引, en: dense index }
+  - { zh: 稀疏索引, en: sparse index }
+  - { zh: 可扩展散列, en: extendible hashing, aliases: [可扩充散列] }
+  - { zh: 全局深度, en: global depth }
+  - { zh: 局部深度, en: local depth }
+  - { zh: 线性散列, en: linear hashing }
+  - { zh: 日志结构合并树, en: log-structured merge tree, aliases: [LSM 树, LSM tree] }
+  - { zh: 内存表, en: memtable }
+  - { zh: 有序字符串表, en: sorted string table, aliases: [SSTable] }
+  - { zh: 墓碑标记, en: tombstone }
+  - { zh: Bloom 过滤器, en: Bloom filter, aliases: [布隆过滤器] }
+  - { zh: 位图索引, en: bitmap index }
+  - { zh: 倒排索引, en: inverted index }
+  - { zh: 查询执行计划, en: query evaluation plan, aliases: [执行计划, 查询计划, query plan, physical plan, 物理计划] }
+  - { zh: 物理算子, en: physical operator }
+  - { zh: 迭代器模型, en: iterator model, aliases: [Volcano 模型, Volcano model] }
+  - { zh: 流水线执行, en: pipelining, scope: ["4.13"] }
+  - { zh: 物化, en: materialization, scope: ["4.13"] }
+  - { zh: 阻塞算子, en: blocking operator }
+  - { zh: 外部归并排序, en: external merge sort, aliases: [外排序, external sorting] }
+  - { zh: 嵌套循环连接, en: nested-loop join }
+  - { zh: 块嵌套循环连接, en: block nested-loop join }
+  - { zh: 索引嵌套循环连接, en: index nested-loop join }
+  - { zh: 排序归并连接, en: sort-merge join, aliases: [归并连接, merge join] }
+  - { zh: 散列连接, en: hash join, aliases: [哈希连接] }
+  - { zh: 选择率, en: selectivity, aliases: [选择度] }
+  - { zh: 等宽直方图, en: equi-width histogram }
+  - { zh: 等深直方图, en: equi-depth histogram, aliases: [等高直方图, equi-height histogram] }
+  - { zh: 选择下推, en: selection pushdown, aliases: [谓词下推, predicate pushdown] }
+  - { zh: 感兴趣的序, en: interesting order }
+  - { zh: 事务, en: transaction, scope: ["4.13", "4.14"] }
+  - { zh: ACID 特性, en: ACID, aliases: [ACID properties] }
+  - { zh: 隔离性, en: isolation, scope: ["4.13"] }
+  - { zh: 持久性, en: durability }
+  - { zh: 调度, en: schedule, scope: ["4.13"] }
+  - { zh: 串行调度, en: serial schedule }
+  - { zh: 可串行化调度, en: serializable schedule, aliases: [可串行化, serializability] }
+  - { zh: 冲突操作, en: conflict, aliases: [conflicting operations], scope: ["4.13"] }
+  - { zh: 冲突可串行化, en: conflict serializability, aliases: [conflict serializable, 冲突等价, conflict equivalent] }
+  - { zh: 优先图, en: precedence graph, aliases: [前驱图, 串行化图, serialization graph] }
+  - { zh: 视图可串行化, en: view serializability, aliases: [view serializable, 视图等价, view equivalent] }
+  - { zh: 可恢复调度, en: recoverable schedule }
+  - { zh: 无级联调度, en: cascadeless schedule }
+  - { zh: 严格调度, en: strict schedule }
+  - { zh: 级联回滚, en: cascading rollback }
+  - { zh: 丢失更新, en: lost update }
+  - { zh: 稳定存储器, en: stable storage }
+  - { zh: 窃取策略, en: steal, aliases: [no-steal, 非窃取], scope: ["4.13"] }
+  - { zh: 强制策略, en: force, aliases: [no-force, 非强制], scope: ["4.13"] }
+  - { zh: 事务日志, en: log, aliases: [log record, 日志记录], scope: ["4.13"] }
+  - { zh: 日志序列号, en: log sequence number, aliases: [LSN] }
+  - { zh: 预写日志, en: write-ahead logging, aliases: [WAL, 预写式日志] }
+  - { zh: 组提交, en: group commit }
+  - { zh: 补偿日志记录, en: compensation log record, aliases: [CLR] }
+  - { zh: 模糊检查点, en: fuzzy checkpoint }
+  - { zh: 共享锁, en: shared lock, aliases: [S 锁, S lock, 读锁] }
+  - { zh: 排他锁, en: exclusive lock, aliases: [X 锁, X lock, 排它锁, 写锁] }
+  - { zh: 锁管理器, en: lock manager }
+  - { zh: 锁表, en: lock table }
+  - { zh: 两阶段锁, en: two-phase locking, aliases: [两阶段封锁, 2PL, 两阶段锁协议] }
+  - { zh: 封锁点, en: lock point }
+  - { zh: 严格两阶段锁, en: strict two-phase locking, aliases: [strict 2PL] }
+  - { zh: 强两阶段锁, en: rigorous two-phase locking, aliases: [rigorous 2PL] }
+  - { zh: 等待图, en: wait-for graph }
+  - { zh: 等待-死亡, en: wait-die }
+  - { zh: 受伤-等待, en: wound-wait }
+  - { zh: 幻影, en: phantom, aliases: [幻读, phantom read] }
+  - { zh: 谓词锁, en: predicate locking, aliases: [predicate lock] }
+  - { zh: 索引封锁, en: index locking }
+  - { zh: 临键锁, en: next-key locking, aliases: [next-key lock] }
+  - { zh: 多粒度封锁, en: multiple-granularity locking, aliases: [多粒度锁] }
+  - { zh: 意向锁, en: intention lock }
+  - { zh: 锁升级, en: lock escalation }
+  - { zh: 时间戳排序协议, en: timestamp-ordering protocol, aliases: [timestamp ordering] }
+  - { zh: Thomas 写规则, en: Thomas write rule }
+  - { zh: 多版本并发控制, en: multiversion concurrency control, aliases: [MVCC] }
+  - { zh: 快照, en: snapshot, scope: ["4.13"] }
+  - { zh: 快照隔离, en: snapshot isolation, aliases: [SI] }
+  - { zh: 写偏斜, en: write skew, aliases: [写偏序] }
+  - { zh: 可串行化快照隔离, en: serializable snapshot isolation, aliases: [SSI] }
+  - { zh: 复制, en: replication, scope: ["4.13"] }
+  - { zh: 两阶段提交, en: two-phase commit, aliases: [two-phase commit protocol, 2PC, 两阶段提交协议] }
+  - { zh: 最终一致性, en: eventual consistency }
+  - { zh: 事实表, en: fact table }
+  - { zh: 维表, en: dimension table }
+  - { zh: 湖仓一体, en: lakehouse }
+  - { zh: 嵌入向量, en: embedding vector }
+  - { zh: 属性, en: attribute, scope: ["4.13"] }
+  - { zh: 域, en: domain, scope: ["4.13"] }
+  - { zh: 聚集, en: aggregation, scope: ["4.13"] }
+  - { zh: 视图, en: view, scope: ["4.13"] }
+  - { zh: 断言, en: assertion, scope: ["4.13"] }
+  - { zh: 触发器, en: trigger, scope: ["4.13"] }
+  - { zh: 分支, en: branch, scope: ["4.14"] }
+  - { zh: 故障, en: fault, scope: ["4.14"] }
+  - { zh: 负载均衡, en: load balancing, scope: ["4.14"] }
+  - { zh: 视图, en: view, aliases: [Django 视图], scope: ["4.14.9"] }
+  - { zh: 页, en: page, aliases: [数据页, 磁盘页, disk page], scope: ["4.13"] }
+  - { zh: 索引, en: index, scope: ["4.13"] }
+  - { zh: 提交, en: commit, scope: ["4.13"] }
+  - { zh: 中止, en: abort, aliases: [回滚, rollback], scope: ["4.13"] }
+  - { zh: 原子性, en: atomicity, scope: ["4.13"] }
+  - { zh: 一致性, en: consistency, scope: ["4.13"] }
+  - { zh: 闩锁, en: latch, scope: ["4.13"] }
+  - { zh: 压实, en: compaction, aliases: [LSM 合并], scope: ["4.13"] }
+  - { zh: 外连接, en: outer join }
+  - { zh: 代码坏味道, en: code smell, aliases: [代码异味, 坏味道] }
+  - { zh: 圈复杂度, en: cyclomatic complexity, aliases: [McCabe 复杂度, 环路复杂度] }
+  - { zh: ABC 度量, en: ABC metric, aliases: [ABC score, ABC 分数] }
+  - { zh: 静态分析, en: static analysis, aliases: [静态代码分析, static code analysis] }
+  - { zh: 代码检查工具, en: linter, aliases: [lint 工具] }
+  - { zh: 重构, en: refactoring }
+  - { zh: 编码规范, en: coding standard, aliases: [编码标准, 代码规范] }
+  - { zh: 代码格式化工具, en: formatter, aliases: [格式化工具], scope: ["4.14"] }
+  - { zh: 自文档化代码, en: self-documenting code }
+  - { zh: 卫语句, en: guard clause, aliases: [guard clauses] }
+  - { zh: 魔数, en: magic number, aliases: [魔法数字] }
+  - { zh: 面条代码, en: spaghetti code, aliases: [意大利面条式代码] }
+  - { zh: 特征测试, en: characterization test }
+  - { zh: 模式语言, en: pattern language }
+  - { zh: 反模式, en: antipattern, aliases: [anti-pattern] }
+  - { zh: 技术债务, en: technical debt, aliases: [技术债] }
+  - { zh: 依赖注入, en: dependency injection }
+  - { zh: 质量保证, en: quality assurance, aliases: [QA, 软件质量保证, software quality assurance] }
+  - { zh: 验证, en: verification, scope: ["4.14"] }
+  - { zh: 确认, en: validation, scope: ["4.14"] }
+  - { zh: 软件测试, en: software testing }
+  - { zh: 测试预言, en: test oracle, aliases: [测试谕示] }
+  - { zh: 黑盒测试, en: black-box testing, aliases: [基于规格说明的测试, specification-based testing] }
+  - { zh: 白盒测试, en: white-box testing, aliases: [结构测试, structure-based testing, glass-box testing, 玻璃盒测试] }
+  - { zh: 测试覆盖率, en: test coverage, aliases: [代码覆盖率, code coverage, 覆盖率], scope: ["4.14"] }
+  - { zh: 覆盖准则, en: coverage criterion }
+  - { zh: 控制流图, en: control-flow graph, aliases: [control flow graph] }
+  - { zh: 语句覆盖, en: statement coverage }
+  - { zh: 判定覆盖, en: decision coverage, aliases: [分支覆盖, branch coverage] }
+  - { zh: 条件覆盖, en: condition coverage, aliases: [predicate coverage] }
+  - { zh: 判定/条件覆盖, en: decision/condition coverage, aliases: [判定-条件覆盖] }
+  - { zh: 多重条件覆盖, en: multiple-condition coverage, aliases: [条件组合覆盖, multiple condition coverage] }
+  - { zh: 修正条件/判定覆盖, en: modified condition/decision coverage, aliases: [MC/DC] }
+  - { zh: 路径覆盖, en: path coverage }
+  - { zh: 基本路径测试, en: basis path testing }
+  - { zh: 等价类划分, en: equivalence partitioning, aliases: [equivalence class partitioning] }
+  - { zh: 边界值分析, en: boundary value analysis, aliases: [BVA] }
+  - { zh: 变异测试, en: mutation testing }
+  - { zh: 变异分数, en: mutation score }
+  - { zh: 被测系统, en: system under test, aliases: [SUT] }
+  - { zh: 被依赖组件, en: depended-on component, aliases: [DOC] }
+  - { zh: 测试夹具, en: test fixture, aliases: [夹具, 测试固件, fixture], scope: ["4.14"] }
+  - { zh: 测试替身, en: test double }
+  - { zh: 哑对象, en: dummy object }
+  - { zh: 测试桩, en: test stub, aliases: [桩, stub, stubs], scope: ["4.14"] }
+  - { zh: 测试间谍, en: test spy }
+  - { zh: 模拟对象, en: mock object, aliases: [mock, 模拟], scope: ["4.14"] }
+  - { zh: 伪对象, en: fake object }
+  - { zh: 测试驱动开发, en: test-driven development, aliases: [TDD] }
+  - { zh: 集成测试, en: integration testing, aliases: [integration test] }
+  - { zh: 大爆炸集成, en: big bang integration }
+  - { zh: 自顶向下集成, en: top-down integration }
+  - { zh: 自底向上集成, en: bottom-up integration }
+  - { zh: 三明治集成, en: sandwich integration, aliases: [混合集成, hybrid integration] }
+  - { zh: 测试驱动程序, en: test driver, aliases: [驱动模块] }
+  - { zh: 契约测试, en: contract testing }
+  - { zh: 系统测试, en: system testing }
+  - { zh: 负载测试, en: load testing }
+  - { zh: 压力测试, en: stress testing }
+  - { zh: 验收测试, en: acceptance testing }
+  - { zh: 用户验收测试, en: user acceptance testing, aliases: [UAT] }
+  - { zh: Alpha 测试, en: alpha testing }
+  - { zh: Beta 测试, en: beta testing }
+  - { zh: 行为驱动开发, en: behavior-driven development, aliases: [BDD] }
+  - { zh: 冒烟测试, en: smoke testing, aliases: [smoke test] }
+  - { zh: 回归测试, en: regression testing, aliases: [regression test] }
+  - { zh: 模糊测试, en: fuzzing, aliases: [fuzz testing] }
+  - { zh: 基于属性的测试, en: property-based testing }
+  - { zh: 金丝雀发布, en: canary release, aliases: [灰度发布, canary deployment] }
+  - { zh: A/B 测试, en: A/B testing, aliases: [A/B test] }
+  - { zh: 不稳定测试, en: flaky test, aliases: [flaky tests] }
+  - { zh: 站点可靠性工程, en: site reliability engineering, aliases: [SRE, 网站可靠性工程] }
+  - { zh: 服务等级指标, en: service level indicator, aliases: [SLI, 服务水平指标] }
+  - { zh: 服务等级目标, en: service level objective, aliases: [SLO, 服务水平目标] }
+  - { zh: 服务等级协议, en: service level agreement, aliases: [SLA, 服务水平协议] }
+  - { zh: 错误预算, en: error budget }
+  - { zh: 消耗速率, en: burn rate, aliases: [燃烧率, 错误预算消耗速率] }
+  - { zh: 琐事, en: toil }
+  - { zh: 监控, en: monitoring, scope: ["4.14"] }
+  - { zh: 白盒监控, en: white-box monitoring }
+  - { zh: 黑盒监控, en: black-box monitoring }
+  - { zh: 四个黄金信号, en: four golden signals, aliases: [黄金信号, golden signals] }
+  - { zh: 可观测性, en: observability, scope: ["4.14"] }
+  - { zh: 值班, en: on-call, aliases: [on call, 轮值] }
+  - { zh: 事故, en: incident, scope: ["4.14"] }
+  - { zh: 事故管理, en: incident management }
+  - { zh: 事后复盘, en: postmortem, aliases: [事后分析, 故障复盘, post-mortem] }
+  - { zh: 无责复盘, en: blameless postmortem, aliases: [无责文化, blamelessness] }
+  - { zh: 混沌工程, en: chaos engineering }
+  - { zh: 渐进式发布, en: progressive rollout, aliases: [分阶段发布, staged rollout] }
+  - { zh: 蓝绿部署, en: blue–green deployment, aliases: [blue-green deployment] }
+  - { zh: 护栏, en: guardrail, scope: ["4.14"] }
+  - { zh: 上下文工程, en: context engineering }
+  - { zh: 项目说明文件, en: project instruction file, aliases: [AGENTS.md, CLAUDE.md] }
+  - { zh: 编排者-工作者模式, en: orchestrator–worker pattern, aliases: [orchestrator-worker pattern, 编排者-执行者模式] }
+  - { zh: 致命三要素, en: lethal trifecta }

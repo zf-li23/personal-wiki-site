@@ -2,6 +2,9 @@
 title: Operating Systems
 courses:
   - { code: "30240243", name: 操作系统, name_en: Operating Systems }
+textbooks:
+  - { title: "Operating Systems: Three Easy Pieces", author: "Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau", title_zh: 操作系统导论 }
+  - { title: "Computer Systems: A Programmer's Perspective", author: "Randal E. Bryant, David R. O'Hallaron", edition: 3, title_zh: 深入理解计算机系统 }
 ---
 
 This course studies the layer of software between programs and hardware. A program sees a private processor, a large private memory, files that survive a reboot and devices it can simply read and write; the hardware offers a few cores, a limited physical memory shared by everyone, storage that reads and writes numbered blocks, and devices driven through registers and interrupts. The **operating system** builds the first picture out of the second. Its central questions follow the three themes of the classical treatment in OSTEP: virtualization, how one machine is shared among many programs so that each believes it owns the processor and the memory; concurrency, how several flows of control can cooperate on shared data correctly; and persistence, how data are stored reliably and quickly on devices that may fail or lose power mid-update. Throughout, the course takes the view of a programmer and system user rather than of a kernel developer, with Linux on x86-64 as the running example, and it ends with the practical use of Linux on workstations, servers and clusters, the environment in which computational biology is actually done.

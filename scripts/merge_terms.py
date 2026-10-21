@@ -20,7 +20,7 @@ ENTRY = re.compile(r"^  - (\{.*\})\s*(#.*)?$")
 
 
 def quote(s: str) -> str:
-    return f'"{s}"' if re.search(r"[:'#,\[\]{}*]", s) else s
+    return f'"{s}"' if re.search(r"[:'#,\[\]{}*]", s) or s.lower() in ("null", "yes", "no", "true", "false", "on", "off") else s
 
 
 def fmt(e: dict) -> str:
@@ -33,7 +33,8 @@ def fmt(e: dict) -> str:
 
 
 def names(e: dict) -> set[str]:
-    return {e["zh"], *e.get("aliases", []), e["en"].lower(), *(a.lower() for a in e.get("aliases", []))}
+    aliases = [str(a) for a in e.get("aliases") or []]
+    return {e["zh"], *aliases, str(e["en"]).lower(), *(a.lower() for a in aliases)}
 
 
 def main() -> None:
@@ -41,6 +42,8 @@ def main() -> None:
     if len(args) != 2:
         sys.exit(__doc__)
     proposals, section = yaml.safe_load(Path(args[0]).read_text(encoding="utf-8")) or [], args[1]
+    for p in proposals:  # YAML turns bare NULL / yes / 1.0 into non-strings
+        p["aliases"] = [str(a) if a is not None else "NULL" for a in p.get("aliases", [])]
     lines = GLOSSARY.read_text(encoding="utf-8").split("\n")
     existing = [(i, yaml.safe_load(m.group(1))) for i, l in enumerate(lines) if (m := ENTRY.match(l))]
     added, conflicts, seen = [], 0, set()

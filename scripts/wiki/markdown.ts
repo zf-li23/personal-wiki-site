@@ -19,7 +19,10 @@ import { toString as mdastToString } from 'mdast-util-to-string';
 import latex from 'highlight.js/lib/languages/latex';
 // Registers \ce / \pu (chemistry) on the KaTeX instance rehype-katex uses (versions are pinned equal, see tests).
 import 'katex/contrib/mhchem';
+import dockerfile from 'highlight.js/lib/languages/dockerfile';
+import http from 'highlight.js/lib/languages/http';
 import matlab from 'highlight.js/lib/languages/matlab';
+import protobuf from 'highlight.js/lib/languages/protobuf';
 import tcl from 'highlight.js/lib/languages/tcl';
 import verilog from 'highlight.js/lib/languages/verilog';
 import vhdl from 'highlight.js/lib/languages/vhdl';
@@ -682,7 +685,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(rehypeRaw)
     .use(rehypeWiki, state)
     .use(rehypeStatements, state)
-    .use(rehypeHighlight, { languages: { ...common, matlab, latex, verilog, vhdl, tcl }, aliases: { verilog: ['systemverilog'] }, plainText: ['text', 'txt', 'plain', 'math', 'asm'] })
+    .use(rehypeHighlight, { languages: { ...common, matlab, latex, verilog, vhdl, tcl, http, protobuf, dockerfile }, aliases: { verilog: ['systemverilog'] }, plainText: ['text', 'txt', 'plain', 'math', 'asm'] })
     .use(rehypeKatex, { strict: 'ignore', output: 'html' })
     .use(rehypeFinalize);
 
