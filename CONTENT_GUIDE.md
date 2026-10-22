@@ -57,7 +57,7 @@ description: 可选。一句话摘要，用于搜索引擎和链接预览；缺�
 ```yaml
 ---
 title: 概率论
-courses:                     # 对应课程：课程号 + 课程名，可多门；note 可选
+courses:                     # 对应课程：课程号 + 课程名，可多门；note 可选（note_en：英文页显示的备注）
   - { code: "40160713", name: 初等概率论 }
   - { code: "10420803", name: 概率论与数理统计, note: 概率论部分 }
   - { code: "20240023", name: 离散数学(2), name_en: Discrete Mathematics (2) }   # name_en：英文页显示的课程名

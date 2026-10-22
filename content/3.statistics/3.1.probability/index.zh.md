@@ -2,7 +2,7 @@
 title: 概率论
 courses:
   - { code: "40160713", name: 初等概率论, name_en: Elementary Probability Theory }
-  - { code: "10420803", name: 概率论与数理统计, note: 概率论部分, name_en: Probability and Mathematical Statistics }
+  - { code: "10420803", name: 概率论与数理统计, note: 概率论部分, name_en: Probability and Mathematical Statistics, note_en: probability part }
 textbooks:
   - { title: 概率论（上）, author: 李增沪、张梅、何辉, edition: 1, title_en: "Probability Theory, Vol. 1", author_en: "Zenghu Li, Mei Zhang, Hui He" }
   - { title: 概率论（下）, author: 李增沪、张梅、何辉, edition: 1, title_en: "Probability Theory, Vol. 2", author_en: "Zenghu Li, Mei Zhang, Hui He" }

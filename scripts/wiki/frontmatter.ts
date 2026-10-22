@@ -7,7 +7,7 @@ import type { CourseRef, TextbookRef } from '../../src/shared/types.ts';
  *   title        required  page title in this language
  *   description  optional  one-sentence summary used for search engines and link previews
  *   courses      optional  source-language file only: where the knowledge comes from (shown under the title)
- *                            courses: [{ code: "20240013", name: 离散数学(1), name_en?: Discrete Mathematics (1), note?: 备注 }]
+ *                            courses: [{ code: "20240013", name: 离散数学(1), name_en?: Discrete Mathematics (1), note?: 备注, note_en?: note }]
  *   textbooks    optional  source-language file only: reference books (shown under the title)
  *                            textbooks: [{ title: 离散数学, author: 屈婉玲, edition: 3, title_en?: …, author_en?: … }]
  *                            (a foreign book: original title and author, title_zh: Chinese rendering)
@@ -82,7 +82,7 @@ export function parsePageFile(raw: string): { value?: ParsedPageFile; errors: st
     }
   }
   if (!('title' in record)) errors.push('front matter "title" is required');
-  if ('courses' in record) checkList(record.courses, 'courses', { code: 'required', name: 'required', name_en: 'optional', note: 'optional' }, errors);
+  if ('courses' in record) checkList(record.courses, 'courses', { code: 'required', name: 'required', name_en: 'optional', note: 'optional', note_en: 'optional' }, errors);
   if ('textbooks' in record) checkList(record.textbooks, 'textbooks', { title: 'required', author: 'required', edition: 'optional', title_en: 'optional', author_en: 'optional', title_zh: 'optional' }, errors);
   if (errors.length) return { errors };
 

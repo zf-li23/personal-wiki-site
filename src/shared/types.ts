@@ -53,6 +53,7 @@ export interface CourseRef {
   name_en?: string;
   /** e.g. "概率论部分" when the page covers only part of the course. */
   note?: string;
+  note_en?: string;
 }
 
 /** A reference book (front matter `textbooks`). */

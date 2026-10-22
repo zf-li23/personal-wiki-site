@@ -16,8 +16,9 @@ const HAN = /\p{Script=Han}/u;
 
 export function formatCourse(c: CourseRef, lang: Lang): string {
   const base = `${c.code} ${lang === 'en' && c.name_en ? c.name_en : c.name}`;
-  if (!c.note) return base;
-  return lang === 'zh' ? `${base}（${c.note}）` : `${base} (${c.note})`;
+  const note = lang === 'en' ? (c.note_en ?? c.note) : c.note;
+  if (!note) return base;
+  return lang === 'zh' ? `${base}（${note}）` : `${base} (${note})`;
 }
 
 export function formatTextbook(b: TextbookRef, lang: Lang): string {
