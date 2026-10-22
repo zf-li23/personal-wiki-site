@@ -235,7 +235,7 @@ Cr、Cu 等的例外可以用半满、全满的稳定性理解；但这只是经
 
 **例 2.3.3** 写出 Ti、$\ce{Ti^3+}$、Ni、$\ce{Ni^2+}$、Fe、$\ce{Fe^3+}$ 的基态电子组态。
 
-解：Ti $[\ce{Ar}]\,3\mathrm{d}^2\,4\mathrm{s}^2$，失去 3 个电子时先失去两个 4s 电子，再失去一个 3d 电子，$\ce{Ti^3+}$ 为 $[\ce{Ar}]\,3\mathrm{d}^1$。Ni $[\ce{Ar}]\,3\mathrm{d}^8\,4\mathrm{s}^2$，$\ce{Ni^2+}$ $[\ce{Ar}]\,3\mathrm{d}^8$。Fe $[\ce{Ar}]\,3\mathrm{d}^6\,4\mathrm{s}^2$，$\ce{Fe^2+}$ $[\ce{Ar}]\,3\mathrm{d}^6$，$\ce{Fe^3+}$ $[\ce{Ar}]\,3\mathrm{d}^5$（半满，$\ce{Fe^3+}$ 比 $\ce{Fe^2+}$ 更难被还原的原因之一）。
+解：Ti $[\ce{Ar}]\,3\mathrm{d}^2\,4\mathrm{s}^2$，失去 3 个电子时先失去两个 4s 电子，再失去一个 3d 电子，$\ce{Ti^3+}$ 为 $[\ce{Ar}]\,3\mathrm{d}^1$。Ni $[\ce{Ar}]\,3\mathrm{d}^8\,4\mathrm{s}^2$，$\ce{Ni^2+}$ $[\ce{Ar}]\,3\mathrm{d}^8$。Fe $[\ce{Ar}]\,3\mathrm{d}^6\,4\mathrm{s}^2$，$\ce{Fe^2+}$ $[\ce{Ar}]\,3\mathrm{d}^6$，$\ce{Fe^3+}$ $[\ce{Ar}]\,3\mathrm{d}^5$（半满，是 $\ce{Fe^3+}$ 得到额外稳定的因素之一）。
 
 ### 2.3.3. 电子层结构与元素周期系
 

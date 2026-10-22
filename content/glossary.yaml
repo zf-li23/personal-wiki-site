@@ -4192,8 +4192,8 @@ terms:
   - { zh: 磁矩, en: magnetic moment, aliases: [磁偶极矩, magnetic dipole moment] }
   - { zh: 相对磁导率, en: relative permeability }
   - { zh: 磁介质, en: magnetic material, aliases: [magnetic medium] }
-  - { zh: 顺磁质, en: paramagnetic substance, aliases: [顺磁体, paramagnet] }
-  - { zh: 抗磁质, en: diamagnetic substance, aliases: [抗磁体, diamagnet] }
+  - { zh: 顺磁质, en: paramagnetic substance, aliases: [顺磁体, paramagnet, paramagnetic] }
+  - { zh: 抗磁质, en: diamagnetic substance, aliases: [抗磁体, diamagnet, diamagnetic] }
   - { zh: 铁磁质, en: ferromagnetic substance, aliases: [铁磁体, ferromagnet] }
   - { zh: 旋磁比, en: gyromagnetic ratio }
   - { zh: Larmor 进动, en: Larmor precession, aliases: [拉莫尔进动] }
