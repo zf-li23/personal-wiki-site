@@ -649,7 +649,7 @@ $$
 
 ```smiles
 OB(O)O H3BO3
-O[B-]12O[B-](O)(OB(O)O1)OB(O)O2 [B4O5(OH)4]2-
+O[B-]12O[B-](O)(OB(O)O1)OB(O)O2 [B4O5(OH)4]^2-
 ```
 
 硼酸是一元弱酸（$K_{\mathrm{a}} = 5.4\times10^{-10}$，$\mathrm{p}K_{\mathrm{a}} = 9.27$），但它不是给出自身的质子，而是 B 的空 p 轨道接受水中 $\ce{OH-}$ 的孤对电子（**Lewis 酸**）：

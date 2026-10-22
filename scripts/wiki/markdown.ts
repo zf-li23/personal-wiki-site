@@ -18,6 +18,7 @@ import { toString as hastToString } from 'hast-util-to-string';
 import { toString as mdastToString } from 'mdast-util-to-string';
 import latex from 'highlight.js/lib/languages/latex';
 // Registers \ce / \pu (chemistry) on the KaTeX instance rehype-katex uses (versions are pinned equal, see tests).
+import katex from 'katex';
 import 'katex/contrib/mhchem';
 import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import http from 'highlight.js/lib/languages/http';
@@ -378,7 +379,10 @@ function rehypeChem(state: State) {
               return undefined;
             }
             const raw = { type: 'raw', value: svg } as unknown as ElementContent;
-            return el('div', { className: ['wiki-chem-item'] }, l.label ? [raw, el('span', { className: ['wiki-chem-label'] }, [text(l.label)])] : [raw]);
+            if (!l.label) return el('div', { className: ['wiki-chem-item'] }, [raw]);
+            // Labels are formulas, ion charges or compound numbers: typeset them with mhchem (NO3- → NO₃⁻).
+            const label = { type: 'raw', value: katex.renderToString(`\\ce{${l.label}}`, { output: 'html', throwOnError: false, strict: 'ignore' }) } as unknown as ElementContent;
+            return el('div', { className: ['wiki-chem-item'] }, [raw, el('span', { className: ['wiki-chem-label'] }, [label])]);
           }),
         ).then((items) => {
           block.children = items.filter((i): i is Element => i !== undefined);

@@ -251,9 +251,9 @@ describe('markdown rendering', () => {
     assert.match(html, /<div class="code-block"><div class="code-block-header"><span class="code-lang">python<\/span><button type="button" class="copy-button" data-copy="">Copy<\/button>/);
   });
   it('draws ```smiles blocks as themable SVG at build time and reports bad SMILES', async () => {
-    const { html, messages } = await render('```smiles\nCC(=O)O 1\n# comment\nCCO.CC(=O)O>>CC(=O)OCC.O\n```\n\n```smiles\nC1CC 化合物\n```');
+    const { html, messages } = await render('```smiles\nCC(=O)O NO3^-\n# comment\nCCO.CC(=O)O>>CC(=O)OCC.O\n```\n\n```smiles\nC1CC 化合物\n```');
     assert.equal((html.match(/class="wiki-chem-item"/g) ?? []).length, 2);
-    assert.match(html, /<span class="wiki-chem-label">1<\/span>/);
+    assert.match(html, /<span class="wiki-chem-label"><span class="katex">/);
     assert.match(html, /class='wiki-chem-svg'/);
     assert.doesNotMatch(html, /#000000|<\?xml/);
     assert.ok(messages.some((m) => m.includes('cannot parse the SMILES "C1CC"')));

@@ -1,7 +1,7 @@
 ---
 title: The p-Block Elements
 description: General trends of the p-block elements, the inert-pair effect, Frost diagrams and the nomenclature of oxoacids with Pauling's rules; the elements and important compounds of the halogens, chalcogens, pnictogens, carbon group and boron group, including oxoacids of the halogens, hydrogen peroxide, sulfides and oxoacids of sulfur, nitric acid and aqua regia, oxoacids of phosphorus, allotropes of carbon and silicates, redox chemistry of tin and lead, boranes and the three-center two-electron bond, boric acid and aluminum compounds.
-source_hash: c478b791de9e
+source_hash: 0362a39c298a
 ---
 
 The p block (Groups 13–18, $n\mathrm{s}^2\,n\mathrm{p}^{1\text{–}6}$) is the richest part of descriptive chemistry: it contains all the nonmetals (except H), almost all the metalloids and a number of "poor metals", and the character of the elements changes gradually from metallic at the lower left to typical nonmetallic at the upper right. This chapter first discusses the trends common to all the groups (Section 14.1): the special features of the second-period elements, oxidation states and the inert-pair effect, reading oxidizing and reducing behavior from Frost diagrams, and the nomenclature and acidity of oxoacids. We then proceed group by group, from the typical nonmetals of the halogens (Section 14.2) through the chalcogens (Section 14.3), the pnictogens (Section 14.4) and the carbon group (Section 14.5) to the electron-deficient boron group (Section 14.6). Many principles of the earlier chapters are applied here: molecular structure (hybridization, VSEPR, molecular orbitals and delocalized π bonds in [6.1.3](/6.1.3)), crystal structure ([6.1.4](/6.1.4)), the four types of equilibria ([6.1.8](/6.1.8)–[6.1.10](/6.1.10)), and above all electrode potentials and Latimer diagrams ([6.1.11](/6.1.11), [6.1.12](/6.1.12)). For each group we first give a table of general properties and then describe the substances one by one; similar reactions are collected in tables and only representative equations are kept. The s block is covered in [6.1.13](/6.1.13), and the d and f blocks in [6.1.15](/6.1.15). The organic chemistry of p-block elements (hydroboration, organosilicon and organophosphorus compounds) belongs to [Organic Chemistry](/6.5), and the symmetry of oxoanion structures to [Structural Chemistry](/6.2).
@@ -650,7 +650,7 @@ Boric acid $\ce{H3BO3}$, that is, $\ce{B(OH)3}$: B is $\mathrm{sp}^2$ hybridized
 
 ```smiles
 OB(O)O H3BO3
-O[B-]12O[B-](O)(OB(O)O1)OB(O)O2 [B4O5(OH)4]2-
+O[B-]12O[B-](O)(OB(O)O1)OB(O)O2 [B4O5(OH)4]^2-
 ```
 
 Boric acid is a weak monoprotic acid ($K_{\mathrm{a}} = 5.4\times10^{-10}$, $\mathrm{p}K_{\mathrm{a}} = 9.27$), but it does not donate a proton of its own: the empty p orbital of B accepts the lone pair of $\ce{OH-}$ from water (**Lewis acid**):
