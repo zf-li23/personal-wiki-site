@@ -46,7 +46,7 @@ Key decisions (keep them):
 - **Static per-route HTML** (`dist/<lang>/<id>/index.html`) so Pages serves 200s with real titles/hreflang; the client adopts the prerendered page from `#wiki-initial` without refetching.
 - **R companions** (`plots/<name>.R`) are shown next to the Python source but never run by the build (CI has no R) and are excluded from the plot cache key; `pnpm wiki check-r` runs them locally when Rscript is installed.
 - **Plots** run in a separate Python process per script, both themes, cached by content hash in `.cache/plots/`. Never commit rendered images, except *frozen* plots (`pnpm wiki freeze`, for scripts too slow to re-render; see CONTENT_GUIDE §4).
-- Changing `scripts/wiki/plot/render_plot.py` or `requirements.txt` invalidates every cached plot (a full re-render takes ~25 min). Batch such changes.
+- Changing `scripts/wiki/plot/render_plot.py` or `requirements.txt` invalidates every cached plot (a full re-render takes ~30 min). Batch such changes. A helper in `PLOT_HELPERS` only invalidates the scripts that import it.
 - **Site URL/base path** only in `site.config.ts`. Never hard-code `/personal-wiki-site/`; use `BASE_PATH` or `import.meta.env.BASE_URL`.
 
 ## Where to change what
@@ -54,6 +54,7 @@ Key decisions (keep them):
 | Task | Place |
 |---|---|
 | New Markdown syntax / HTML transform | `scripts/wiki/markdown.ts` (`rehypeWiki`, `rehypeStatements`), plus CSS in `src/styles/index.css`, plus a test |
+| Chemical structures (```smiles, RDKit WASM at build time) / mechanism helper for plots | `scripts/wiki/chem.ts` / `scripts/wiki/plot/wikichem.py` (listed in `PLOT_HELPERS`, `paths.ts`: scripts that import it re-render when it changes) |
 | Page roles, heading / statement numbering rules | `scripts/wiki/numbering.ts` (pure, shared by checker, `pnpm wiki fix` in `fix.ts`, tests) |
 | Cross-page references, concept definitions & links, backlinks | `scripts/wiki/linking.ts` (runs after all pages render; then `build.ts` stringifies) |
 | Hover previews, concept index, page connections | `src/components/LinkPreview.tsx`, `src/pages/ConceptsPage.tsx`, `src/components/PageParts.tsx` |

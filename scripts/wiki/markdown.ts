@@ -4,7 +4,7 @@
  * Markdown itself.
  *
  * Pipeline: remark-parse -> gfm -> math -> (checks, incl. heading numbering) -> rehype ->
- * raw HTML -> wiki transforms (ids, links, images, plots, mermaid) -> statements and
+ * raw HTML -> wiki transforms (ids, links, images, plots, mermaid) -> chemical structures -> statements and
  * equations -> highlight -> KaTeX -> finalize (code-block chrome, code tabs).
  *
  * The result keeps the HAST: cross-page references and concept links need every page
@@ -40,6 +40,7 @@ import { visit } from 'unist-util-visit';
 import { VFile } from 'vfile';
 import { BASE_PATH, type Lang } from '../../site.config.ts';
 import type { TocHeading } from '../../src/shared/types.ts';
+import { drawStructure, parseChemBlock } from './chem.ts';
 import type { Diagnostics } from './diagnostics.ts';
 import {
   type HeadingInput,
@@ -352,6 +353,43 @@ function leadingStrong(p: Element): Element | undefined {
  * that directly follow it into <div class="wiki-stmt …">, which is also what previews show.
  * Display math with \tag{X} gets the anchor eq-X.
  */
+/** ```smiles blocks: structures drawn by RDKit at build time (chem.ts), kept as pre-serialized SVG. */
+function rehypeChem(state: State) {
+  return async (tree: HastRoot) => {
+    const jobs: Promise<void>[] = [];
+    visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName !== 'pre' || !parent || index === undefined) return undefined;
+      const code = node.children.find((c): c is Element => c.type === 'element' && c.tagName === 'code');
+      if (!code || !hasClass(code, 'language-smiles')) return 'skip';
+      const line = lineOf(state, node);
+      const lines = parseChemBlock(hastToString(code));
+      const block = el('div', { className: ['wiki-chem'] });
+      parent.children[index] = block;
+      if (!lines.length) state.ctx.diag.warn(state.ctx.file, 'empty smiles block', line);
+      jobs.push(
+        Promise.all(
+          lines.map(async (l) => {
+            if (l.label && /\p{Script=Han}/u.test(l.label)) {
+              state.ctx.diag.warn(state.ctx.file, `structure label "${l.label}" must be language-neutral (both languages share the drawing)`, line);
+            }
+            const svg = await drawStructure(l);
+            if (!svg) {
+              state.ctx.diag.error(state.ctx.file, `RDKit cannot parse the ${l.reaction ? 'reaction ' : ''}SMILES "${l.smiles}"`, line);
+              return undefined;
+            }
+            const raw = { type: 'raw', value: svg } as unknown as ElementContent;
+            return el('div', { className: ['wiki-chem-item'] }, l.label ? [raw, el('span', { className: ['wiki-chem-label'] }, [text(l.label)])] : [raw]);
+          }),
+        ).then((items) => {
+          block.children = items.filter((i): i is Element => i !== undefined);
+        }),
+      );
+      return 'skip';
+    });
+    await Promise.all(jobs);
+  };
+}
+
 function rehypeStatements(state: State) {
   const { ctx, out } = state;
   return (tree: HastRoot) => {
@@ -690,6 +728,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeWiki, state)
+    .use(rehypeChem, state)
     .use(rehypeStatements, state)
     .use(rehypeHighlight, { languages: { ...common, matlab, latex, verilog, vhdl, tcl, http, protobuf, dockerfile }, aliases: { verilog: ['systemverilog'] }, plainText: ['text', 'txt', 'plain', 'math', 'asm'] })
     .use(rehypeKatex, { strict: 'ignore', output: 'html' })

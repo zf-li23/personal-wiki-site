@@ -33,6 +33,9 @@ importers:
       '@eslint/js':
         specifier: ^9.39.5
         version: 9.39.5
+      '@rdkit/rdkit':
+        specifier: 2026.3.6
+        version: 2026.3.6
       '@tailwindcss/typography':
         specifier: ^0.5.20
         version: 0.5.20(tailwindcss@4.3.3)
@@ -476,6 +479,9 @@ packages:
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+
+  '@rdkit/rdkit@2026.3.6':
+    resolution: {integrity: sha512-JkMi2PfVjRFuy3ZCDAoTUJeTGyNsgtmq4hDUduLnnbobxsOfSydfpa6lhZGYYaisfMSEAgE1iAT95W4ZsUCMrA==}
 
   '@rolldown/pluginutils@1.0.0-rc.3':
     resolution: {integrity: sha512-eybk3TjzzzV97Dlj5c+XrBFW57eTNhzod66y9HrBlzJ6NsCrWCp/2kaPS3K9wJmurBC0Tdw4yPjXKZqlznim3Q==}
@@ -2561,6 +2567,8 @@ snapshots:
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     optional: true
+
+  '@rdkit/rdkit@2026.3.6': {}
 
   '@rolldown/pluginutils@1.0.0-rc.3': {}
 

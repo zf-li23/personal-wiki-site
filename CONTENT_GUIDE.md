@@ -81,6 +81,7 @@ textbooks:                   # 参考书：原书的书名、作者、版次（�
 | 代码 | ```` ```python ```` | 写明语言以获得高亮；代码注释用英文。统计学课程中课上的 R 代码写成 ```` ```r ```` 代码块，运行结果写成 ```` ```text ```` 或表格（构建不运行 R） |
 | 多语言代码 | 相邻的 ```` ```cpp tab ````、```` ```python tab ```` 代码块 | 合成一个代码块，每种语言一个标签页；读者选一次语言，全站的标签页都跟着切换。用于同一段程序的不同语言实现（计算机课程的 C++ / Python），语言必须各不相同 |
 | 流程图 | ```` ```mermaid ```` | 文字随语言各写一份（见 §5） |
+| 化学结构 | ```` ```smiles ```` 代码块，每行一个 SMILES 或反应 SMILES（`A.B>>C`），可在空格后加标签 | 构建时由 RDKit 画成键线式（黑白、随主题变色、全站同一键长），同一块内的结构排成一行；标签两种语言共用，只写编号或式子（`1`、`(R)`）；化学式与反应式写 `$\ce{…}$`，反应机理用绘图脚本（§4） |
 | 站内链接 | `[中心极限定理](/3.1.13)`、`[某节](/3.1.13#cond-exp)` | 只写编号；自动指向读者当前语言；目标不存在会报错 |
 | 外部链接 | `[KaTeX](https://katex.org)` | 自动在新标签页打开 |
 | 图片 | `![图注](./assets/name.png)` | 文件放 `assets/`；**图注必写**；单独成段时显示为带图注的图 |
@@ -142,6 +143,7 @@ textbooks:                   # 参考书：原书的书名、作者、版次（�
 - 结果按内容哈希缓存（`.cache/plots/`），只有脚本、同目录数据或渲染环境变化时才重新渲染。渲染超过 5 分钟会在日志中提示，请尽量调小参数。
 - **冻结（freeze）**：渲染极慢的脚本可以冻结——`pnpm wiki freeze content/…/plots/name.py` 把图片写成 `name.frozen.json` 与 `name.frozen.<i>-<主题>.webp` 并随仓库提交，之后任何构建都不再运行该脚本。冻结后修改脚本会产生警告（`pnpm check` 失败），此时要么再次 `freeze`（会重新渲染），要么撤销修改；`pnpm wiki unfreeze …` 恢复正常渲染。目前冻结的：`7.4.5/plots/advection-competition-coexistence.py`（约 25 分钟）。
 - **R 配套代码**（统计学课程）：图一律由 Python 脚本生成；展示统计分析的图（模拟、拟合、诊断图、数据可视化）可以在同一目录放一个同名的 `name.R`，写出同一分析与作图的 R 版本（base R 或 ggplot2，代码与注释英文）。构建不运行它，只在图下方的源码面板里与 Python 并列成两个标签页；它不影响绘图缓存。纯示意图（几何示意、概念图）不配 R 版本。`pnpm wiki check-r [编号…]` 在装有 R 时逐个运行这些文件检查能否跑通（本地检查，不在 CI 中）。
+- **化学结构与反应机理**：绘图脚本可以 `from wikichem import Scheme`（`scripts/wiki/plot/wikichem.py`，RDKit 算坐标、matplotlib 画线）。`s.molecule(smiles, at=(x, y), lone_pairs=…)` 放置分子（坐标以键长为单位），`s.curly(起点, 终点, bend=…, single=…)` 画电子转移的弯箭头（`mol.atom(k)` 指原子，从朝向目标的孤对电子出发；`mol.bond(j, k)` 指键的中点；原子按 SMILES 顺序从 0 编号，或按原子映射号 `[CH3:1]`），`s.arrow(…, kind="forward"|"equilibrium"|"resonance"|"retro")` 画反应箭头，`s.text`、`s.plus` 写文字，最后 `s.draw()`。图中文字同样只用英文或式子。用法见模块开头的说明。
 - 第一次使用前安装 Python 环境：`pnpm setup:python`（需要 uv）。
 
 ## 5. 双语约定

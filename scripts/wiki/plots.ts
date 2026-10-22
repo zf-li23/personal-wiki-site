@@ -16,7 +16,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import type { Diagnostics } from './diagnostics.ts';
-import { PLOT_CACHE_DIR, PLOT_RENDERER, PLOT_REQUIREMENTS, REPO_ROOT, rel } from './paths.ts';
+import { PLOT_CACHE_DIR, PLOT_HELPERS, PLOT_RENDERER, PLOT_REQUIREMENTS, REPO_ROOT, rel } from './paths.ts';
 import type { ContentTree } from './scan.ts';
 
 /** Bump to invalidate every cached plot (e.g. after changing how results are post-processed). */
@@ -199,7 +199,9 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
         results.set(script, { ...loadFrozen(script, source, plotDir, prefix, diag), rSource });
         continue;
       }
-      const key = hashFiles([...common, source, ...dataFiles]);
+      // A script that uses a shared helper re-renders when the helper changes.
+      const helpers = PLOT_HELPERS.filter((h) => new RegExp(`\\b${path.basename(h, '.py')}\\b`).test(source)).map((h) => fs.readFileSync(h));
+      const key = hashFiles([...common, source, ...helpers, ...dataFiles]);
       const cacheDir = path.join(PLOT_CACHE_DIR, key);
       const cached = readMeta(cacheDir);
       const result: PlotResult = { key, imageDir: cacheDir, imagePrefix: '', frozen: false, figures: cached ?? [], source, rSource };

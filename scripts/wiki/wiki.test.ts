@@ -250,6 +250,15 @@ describe('markdown rendering', () => {
     assert.match(html, /<div class="wiki-mermaid"><pre class="wiki-mermaid-source">graph TD; A-->B;/);
     assert.match(html, /<div class="code-block"><div class="code-block-header"><span class="code-lang">python<\/span><button type="button" class="copy-button" data-copy="">Copy<\/button>/);
   });
+  it('draws ```smiles blocks as themable SVG at build time and reports bad SMILES', async () => {
+    const { html, messages } = await render('```smiles\nCC(=O)O 1\n# comment\nCCO.CC(=O)O>>CC(=O)OCC.O\n```\n\n```smiles\nC1CC 化合物\n```');
+    assert.equal((html.match(/class="wiki-chem-item"/g) ?? []).length, 2);
+    assert.match(html, /<span class="wiki-chem-label">1<\/span>/);
+    assert.match(html, /class='wiki-chem-svg'/);
+    assert.doesNotMatch(html, /#000000|<\?xml/);
+    assert.ok(messages.some((m) => m.includes('cannot parse the SMILES "C1CC"')));
+    assert.ok(messages.some((m) => m.includes('must be language-neutral')));
+  });
 });
 
 describe('plot script lint', () => {
@@ -276,6 +285,15 @@ describe('plot renderer (needs the Python env; skipped without it)', () => {
     const [bg, line] = [...probe.stdout.matchAll(/\((\d+), (\d+), (\d+)\)/g)].map((m) => m.slice(1).map(Number));
     assert.ok(Math.max(...bg) < 60, `axes background should stay dark, got ${bg}`);
     assert.ok(Math.min(...line) > 180, `black ink should become light, got ${line}`);
+  });
+  const chem = available && spawnSync(python, ['-c', 'import rdkit'], { encoding: 'utf8' }).status === 0;
+  it('draws wikichem schemes (structures and curved arrows) in both themes', { skip: !chem }, () => {
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'wiki-chem-'));
+    const script = path.join(dir, 'm.py');
+    fs.writeFileSync(script, 'from wikichem import Scheme\ns = Scheme()\na = s.molecule("[OH-]", at=(0, 0), lone_pairs=True)\nb = s.molecule("CC(=O)OC", at=(2.5, 0))\ns.curly(a.atom(0), b.atom(1))\ns.curly(b.bond(1, 2), b.atom(2))\ns.arrow((4.2, 0), (5.4, 0), kind="equilibrium")\ns.draw()\n');
+    const r = spawnSync(python, [PLOT_RENDERER, script, path.join(dir, 'out')], { encoding: 'utf8' });
+    assert.equal(r.status, 0, r.stderr);
+    assert.deepEqual(fs.readdirSync(path.join(dir, 'out')).sort(), ['0-dark.webp', '0-light.webp', 'meta.json']);
   });
 });
 
@@ -356,6 +374,7 @@ describe('knowledge sources', () => {
     assert.equal(sourceLines(undefined, foreign, 'zh')[0].value, '《实用多元统计分析》，Richard A. Johnson, Dean W. Wichern，第 6 版');
     assert.equal(sourceLines(undefined, foreign, 'en')[0].value, 'Applied Multivariate Statistical Analysis, Richard A. Johnson, Dean W. Wichern, 6th ed.');
     assert.equal(sourceLines([{ code: 1, name: '离散数学(2)', name_en: 'Discrete Mathematics (2)' }], undefined, 'en')[0].value, '1 Discrete Mathematics (2)');
+    assert.equal(sourceLines([{ code: 2, name: '大学物理B1', note: '力学部分', note_en: 'mechanics part' }], undefined, 'en')[0].value, '2 大学物理B1 (mechanics part)');
     assert.equal(sourceLines(undefined, [{ title: 'Algebra', author: 'Artin' }], 'zh')[0].value, 'Algebra，Artin');
     assert.equal(serializePageFile(parsed.value!.frontMatter, '').includes('note: 概率论部分'), true);
     assert.match(parsePageFile('---\ntitle: x\ntextbooks:\n  - { title: A }\n---\n').errors[0], /"author" is required/);

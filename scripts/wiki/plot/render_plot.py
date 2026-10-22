@@ -164,6 +164,8 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     os.chdir(os.path.dirname(script))
     sys.path.insert(0, os.path.dirname(script))
+    # Shared helpers next to this file (wikichem: chemical structures and mechanisms).
+    sys.path.insert(1, os.path.dirname(os.path.abspath(__file__)))
     plt.show = lambda *a, **k: None
     plt.savefig = _forbidden_savefig
     Figure.savefig = _forbidden_savefig
