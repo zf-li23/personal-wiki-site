@@ -421,7 +421,7 @@ $$
 
 | 接触角 | 粘附 | 浸湿 | 铺展 | 习惯说法 |
 |---|---|---|---|---|
-| $\theta = 0^\circ$ | 自发 | 自发 | $S = 0$（$\gamma_{\mathrm{sg}} - \gamma_{\mathrm{sl}} > \gamma_{\mathrm{lg}}$ 时无平衡接触角，完全铺展） | 完全润湿 |
+| $\theta = 0^\circ$ | 自发 | 自发 | $S \ge 0$（$S = 0$ 时 Young 方程给出 $\theta = 0^\circ$；$S > 0$ 即 $\gamma_{\mathrm{sg}} - \gamma_{\mathrm{sl}} > \gamma_{\mathrm{lg}}$ 时无平衡接触角，完全铺展） | 完全润湿 |
 | $0^\circ < \theta \le 90^\circ$ | 自发 | 自发 | 不能 | 润湿 |
 | $90^\circ < \theta < 180^\circ$ | 自发 | 不能 | 不能 | 不润湿 |
 | $\theta = 180^\circ$ | $W_{\mathrm{a}} = 0$ | 不能 | 不能 | 完全不润湿 |

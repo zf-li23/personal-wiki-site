@@ -4798,7 +4798,7 @@ terms:
   - { zh: Lambert–Beer 定律, en: Beer–Lambert law, aliases: [朗伯–比尔定律, Beer 定律, Lambert–Beer law, "Beer's law"] }
   - { zh: 吸光度, en: absorbance }
   - { zh: 摩尔吸收系数, en: molar absorption coefficient, aliases: [摩尔吸光系数, molar absorptivity, molar extinction coefficient] }
-  - { zh: 量子产率, en: quantum yield, aliases: [量子效率] }
+  - { zh: 量子产率, en: quantum yield }
   - { zh: 光化学初级过程, en: primary photochemical process, aliases: [初级过程], scope: ["6"] }
   - { zh: 单线态, en: singlet state, aliases: [单重态, singlet] }
   - { zh: 三线态, en: triplet state, aliases: [三重态, triplet] }
@@ -5071,7 +5071,7 @@ terms:
   - { zh: 统计熵, en: statistical entropy, aliases: [光谱熵, spectroscopic entropy] }
   - { zh: 残余熵, en: residual entropy }
   - { zh: 细致平衡原理, en: principle of detailed balance, scope: ["6"] }   # 细致平衡条件 (MCMC) keeps the bare aliases
-  - { zh: 选择性, en: selectivity, aliases: [催化选择性], scope: ["6"] }
+  - { zh: 选择性, en: selectivity, aliases: [催化选择性], scope: ["6.3"] }
   - { zh: 覆盖度, en: fractional coverage, aliases: [表面覆盖度, surface coverage], scope: ["6"] }
   - { zh: 吸附滞后, en: adsorption hysteresis, aliases: [吸脱附滞后, 滞后回线] }
   - { zh: 分散系统, en: disperse system, aliases: [分散体系] }
@@ -5126,3 +5126,333 @@ terms:
   - { zh: Polanyi 规则, en: Polanyi rules }
   - { zh: Traube 规则, en: "Traube's rule" }
   - { zh: Flory–Huggins 理论, en: Flory–Huggins theory }
+
+  # chemistry: analytical chemistry (6.4)
+  - { zh: 定性分析, en: qualitative analysis }
+  - { zh: 定量分析, en: quantitative analysis }
+  - { zh: 仪器分析, en: instrumental analysis, aliases: [instrumental methods of analysis] }
+  - { zh: 系统误差, en: systematic error, aliases: [可测误差, determinate error] }
+  - { zh: 随机误差, en: random error, aliases: [偶然误差, 未定误差, indeterminate error] }
+  - { zh: 过失误差, en: gross error, aliases: [过失] }
+  - { zh: 相对标准偏差, en: relative standard deviation, aliases: [RSD] }
+  - { zh: 重复性, en: repeatability }
+  - { zh: 再现性, en: reproducibility }
+  - { zh: 空白试验, en: blank determination, aliases: [空白, blank test] }
+  - { zh: 回收率, en: recovery, aliases: [加标回收率, spike recovery], scope: ["6"] }
+  - { zh: 标准物质, en: reference material, aliases: [有证标准物质, certified reference material, CRM] }
+  - { zh: Grubbs 检验, en: Grubbs test, aliases: ["Grubbs's test", 格鲁布斯检验] }
+  - { zh: Q 检验, en: "Dixon's Q test", aliases: [Dixon 检验, Q test] }
+  - { zh: 误差传递, en: propagation of error, aliases: [误差传播, propagation of uncertainty] }
+  - { zh: 测量不确定度, en: measurement uncertainty, aliases: [不确定度] }
+  - { zh: 有效数字, en: significant figures, aliases: [significant digits] }
+  - { zh: 数字修约, en: rounding of numbers, aliases: [修约, 四舍六入五成双, round half to even] }
+  - { zh: 校准曲线, en: calibration curve, aliases: [工作曲线, 标准曲线, working curve] }
+  - { zh: 检出限, en: limit of detection, aliases: [检测限, LOD, detection limit] }
+  - { zh: 定量限, en: limit of quantification, aliases: [LOQ, 测定下限] }
+  - { zh: 线性范围, en: linear range, aliases: [线性动态范围, linear dynamic range] }
+  - { zh: 基体效应, en: matrix effect, aliases: [基体干扰, matrix interference] }
+  - { zh: 标准加入法, en: standard addition method, aliases: [标准加入, standard addition] }
+  - { zh: 内标法, en: internal standard method, aliases: [内标, internal standard] }
+  - { zh: 外标法, en: external standard method, aliases: [external standard] }
+  - { zh: 滴定剂, en: titrant }
+  - { zh: 滴定度, en: titer, aliases: [titre] }
+  - { zh: 返滴定, en: back titration, aliases: [回滴定, 剩余滴定] }
+  - { zh: 置换滴定, en: displacement titration, aliases: [replacement titration] }
+  - { zh: 间接滴定, en: indirect titration }
+  - { zh: 分析浓度, en: analytical concentration, aliases: [总浓度, formal concentration] }
+  - { zh: 平衡浓度, en: equilibrium concentration }
+  - { zh: 浓度常数, en: concentration equilibrium constant, aliases: [concentration constant] }
+  - { zh: 混合指示剂, en: mixed indicator }
+  - { zh: 双指示剂法, en: double-indicator titration, aliases: [double indicator method] }
+  - { zh: 终点误差公式, en: end-point error formula, aliases: [林邦误差公式, Ringbom 误差公式, Ringbom error formula] }
+  - { zh: Kjeldahl 定氮法, en: Kjeldahl method, aliases: [凯氏定氮法, Kjeldahl 法, Kjeldahl nitrogen determination] }
+  - { zh: 两性离子, en: zwitterion, aliases: [偶极离子, dipolar ion] }
+  - { zh: 等电点, en: isoelectric point, aliases: [pI] }
+  - { zh: Good 缓冲液, en: "Good's buffers", aliases: [Good buffers, 生物缓冲剂] }
+  - { zh: 配位滴定, en: complexometric titration, aliases: [络合滴定, compleximetric titration] }
+  - { zh: EDTA, en: EDTA, aliases: [乙二胺四乙酸, ethylenediaminetetraacetic acid] }
+  - { zh: 氨羧配位剂, en: aminopolycarboxylic acid, aliases: [氨羧络合剂, complexone] }
+  - { zh: 副反应系数, en: side-reaction coefficient, aliases: [α 系数, alpha coefficient] }
+  - { zh: 酸效应系数, en: acid-effect coefficient, aliases: [EDTA 的酸效应系数] }
+  - { zh: 条件稳定常数, en: conditional stability constant, aliases: [条件形成常数, 表观稳定常数, conditional formation constant, effective formation constant] }
+  - { zh: 酸效应曲线, en: Ringbom curve, aliases: [林邦曲线] }
+  - { zh: 金属指示剂, en: metallochromic indicator, aliases: [金属离子指示剂, metal ion indicator] }
+  - { zh: 指示剂的封闭, en: blocking of an indicator, aliases: [指示剂封闭, indicator blocking] }
+  - { zh: 指示剂的僵化, en: indicator ossification, aliases: [指示剂僵化] }
+  - { zh: 掩蔽, en: masking, aliases: [掩蔽剂, masking agent] }
+  - { zh: 解蔽, en: demasking, aliases: [解蔽剂, demasking agent] }
+  - { zh: 水的硬度, en: water hardness, aliases: [硬度] }
+  - { zh: 固有溶解度, en: intrinsic solubility, aliases: [分子溶解度] }
+  - { zh: 活度积, en: activity product, aliases: [热力学溶度积, thermodynamic solubility product] }
+  - { zh: 条件溶度积, en: conditional solubility product }
+  - { zh: 晶形沉淀, en: crystalline precipitate }
+  - { zh: 无定形沉淀, en: amorphous precipitate, aliases: [非晶形沉淀, 胶状沉淀, gelatinous precipitate] }
+  - { zh: 相对过饱和度, en: relative supersaturation, aliases: [von Weimarn ratio] }
+  - { zh: 共沉淀, en: coprecipitation }
+  - { zh: 后沉淀, en: postprecipitation, aliases: [继沉淀] }
+  - { zh: 吸留, en: occlusion, aliases: [包藏] }
+  - { zh: 混晶, en: mixed crystal, aliases: [混晶共沉淀, isomorphous inclusion] }
+  - { zh: 陈化, en: digestion, aliases: [沉淀的陈化, digestion of precipitates], scope: ["6"] }
+  - { zh: 均匀沉淀, en: homogeneous precipitation, aliases: [均相沉淀, precipitation from homogeneous solution] }
+  - { zh: 重量分析, en: gravimetric analysis, aliases: [重量分析法, 重量法, gravimetry] }
+  - { zh: 沉淀形, en: precipitation form, aliases: [沉淀形式] }
+  - { zh: 称量形, en: weighing form, aliases: [称量形式] }
+  - { zh: 换算因数, en: gravimetric factor, aliases: [化学因数] }
+  - { zh: 沉淀滴定, en: precipitation titration, aliases: [沉淀滴定法, 容量沉淀法] }
+  - { zh: 银量法, en: argentometry, aliases: [argentometric titration] }
+  - { zh: Mohr 法, en: Mohr method, aliases: [莫尔法] }
+  - { zh: Volhard 法, en: Volhard method, aliases: [佛尔哈德法] }
+  - { zh: Fajans 法, en: Fajans method, aliases: [法扬司法] }
+  - { zh: 吸附指示剂, en: adsorption indicator }
+  - { zh: 条件电极电势, en: formal potential, aliases: [条件电势, 条件电位, 式量电势, conditional potential] }
+  - { zh: 条件平衡常数, en: conditional equilibrium constant }
+  - { zh: 氧化还原滴定, en: redox titration, aliases: [氧化还原滴定法] }
+  - { zh: 氧化还原指示剂, en: redox indicator }
+  - { zh: 自身指示剂, en: self-indicator }
+  - { zh: 专属指示剂, en: specific indicator }
+  - { zh: 预氧化, en: preoxidation, aliases: [预还原, prereduction] }
+  - { zh: 高锰酸钾法, en: permanganometry, aliases: [permanganate titration] }
+  - { zh: 重铬酸钾法, en: dichromate titration, aliases: [dichromatometry] }
+  - { zh: 碘量法, en: iodometric titration, aliases: [碘量法滴定] }
+  - { zh: 直接碘量法, en: iodimetry }
+  - { zh: 间接碘量法, en: iodometry }
+  - { zh: 电化学分析, en: electroanalytical chemistry, aliases: [电分析化学, electrochemical analysis] }
+  - { zh: 碱差, en: alkaline error, aliases: [钠差, sodium error] }
+  - { zh: 酸差, en: acid error }
+  - { zh: Nikolsky–Eisenman 方程, en: Nikolsky–Eisenman equation, aliases: [Nikolsky 方程, Nikolsky equation] }
+  - { zh: 电位选择性系数, en: potentiometric selectivity coefficient, aliases: [选择性系数, 选择系数, selectivity coefficient] }
+  - { zh: 气敏电极, en: gas-sensing electrode, aliases: [gas-sensing probe] }
+  - { zh: 酶电极, en: enzyme electrode }
+  - { zh: 生物传感器, en: biosensor }
+  - { zh: 直接电位法, en: direct potentiometry }
+  - { zh: 总离子强度调节缓冲液, en: total ionic strength adjustment buffer, aliases: [TISAB] }
+  - { zh: Gran 作图, en: Gran plot, aliases: [Gran 法, Gran method] }
+  - { zh: 电位滴定, en: potentiometric titration, aliases: [电位滴定法] }
+  - { zh: 电重量法, en: electrogravimetry, aliases: [电解分析法, electrogravimetric analysis] }
+  - { zh: 库仑分析, en: coulometry, aliases: [库仑分析法, coulometric analysis] }
+  - { zh: 库仑滴定, en: coulometric titration }
+  - { zh: 永停终点法, en: biamperometric titration, aliases: [永停法, 死停终点法, dead-stop end point] }
+  - { zh: 伏安法, en: voltammetry }
+  - { zh: 半波电势, en: half-wave potential, aliases: [半波电位] }
+  - { zh: 支持电解质, en: supporting electrolyte, aliases: [background electrolyte] }
+  - { zh: 充电电流, en: charging current, aliases: [电容电流, capacitive current, non-faradaic current] }
+  - { zh: Randles–Ševčík 方程, en: Randles–Ševčík equation, aliases: [Randles–Sevcik equation] }
+  - { zh: 循环伏安法, en: cyclic voltammetry, aliases: [CV] }
+  - { zh: 差分脉冲伏安法, en: differential pulse voltammetry, aliases: [DPV] }
+  - { zh: 方波伏安法, en: square-wave voltammetry, aliases: [方波极谱法, square-wave polarography, SWV] }
+  - { zh: 溶出伏安法, en: stripping voltammetry, aliases: [阳极溶出伏安法, anodic stripping voltammetry] }
+  - { zh: 电流型传感器, en: amperometric sensor }
+  - { zh: 扫描电化学显微镜, en: scanning electrochemical microscopy, aliases: [SECM] }
+  - { zh: 膜片钳, en: patch clamp, aliases: [patch-clamp technique] }
+  - { zh: 纳米孔测序, en: nanopore sequencing }
+  - { zh: 原子发射光谱法, en: atomic emission spectrometry, aliases: [原子发射光谱, AES, optical emission spectrometry, OES] }
+  - { zh: 共振线, en: resonance line }
+  - { zh: 自吸, en: self-absorption }
+  - { zh: 自蚀, en: self-reversal }
+  - { zh: 电感耦合等离子体, en: inductively coupled plasma, aliases: [ICP] }
+  - { zh: 激光诱导击穿光谱, en: laser-induced breakdown spectroscopy, aliases: [LIBS] }
+  - { zh: 倒线色散率, en: reciprocal linear dispersion }
+  - { zh: 闪耀光栅, en: blazed grating, aliases: [闪耀波长, blaze wavelength] }
+  - { zh: 中阶梯光栅, en: echelle grating, aliases: [echelle] }
+  - { zh: 光电倍增管, en: photomultiplier tube, aliases: [PMT] }
+  - { zh: 暗电流, en: dark current }
+  - { zh: 电荷耦合器件, en: charge-coupled device, aliases: [CCD] }
+  - { zh: 灵敏线, en: sensitive line }
+  - { zh: 最后线, en: last line, aliases: [persistent line] }
+  - { zh: 分析线, en: analytical line }
+  - { zh: Lomakin–Scheibe 公式, en: Lomakin–Scheibe equation, aliases: [罗马金–赛伯公式] }
+  - { zh: 原子吸收光谱法, en: atomic absorption spectrometry, aliases: [原子吸收, AAS] }
+  - { zh: 空心阴极灯, en: hollow cathode lamp, aliases: [HCL] }
+  - { zh: Doppler 变宽, en: Doppler broadening, aliases: [多普勒变宽, 热变宽] }
+  - { zh: 压力变宽, en: pressure broadening, aliases: [碰撞变宽, collisional broadening, Lorentz 变宽, Lorentz broadening] }
+  - { zh: 振子强度, en: oscillator strength }
+  - { zh: 积分吸收, en: integrated absorption }
+  - { zh: 峰值吸收, en: peak absorption }
+  - { zh: 火焰原子化, en: flame atomization, aliases: [火焰原子化器, flame atomizer] }
+  - { zh: 石墨炉原子化, en: graphite furnace atomization, aliases: [电热原子化, electrothermal atomization, 石墨炉] }
+  - { zh: 氢化物发生, en: hydride generation, aliases: [氢化物发生法] }
+  - { zh: 化学干扰, en: chemical interference }
+  - { zh: 电离干扰, en: ionization interference }
+  - { zh: 释放剂, en: releasing agent }
+  - { zh: 保护剂, en: protective agent, aliases: [protecting agent], scope: ["6.4"] }
+  - { zh: 消电离剂, en: ionization suppressor, aliases: [ionization buffer] }
+  - { zh: 基体改进剂, en: matrix modifier, aliases: [chemical modifier] }
+  - { zh: 背景校正, en: background correction }
+  - { zh: 特征浓度, en: characteristic concentration, aliases: [特征质量, characteristic mass] }
+  - { zh: 原子荧光光谱法, en: atomic fluorescence spectrometry, aliases: [原子荧光, AFS] }
+  - { zh: X 射线荧光光谱法, en: X-ray fluorescence spectrometry, aliases: [X 射线荧光, XRF] }
+  - { zh: X 射线衍射, en: X-ray diffraction, aliases: [XRD, 粉末衍射, powder diffraction] }
+  - { zh: 紫外–可见吸收光谱法, en: ultraviolet–visible spectrophotometry, aliases: [紫外–可见分光光度法, UV–Vis spectroscopy, 分光光度法, spectrophotometry] }
+  - { zh: 生色团, en: chromophore, aliases: [发色团] }
+  - { zh: 助色团, en: auxochrome }
+  - { zh: 红移, en: bathochromic shift, aliases: [red shift, 长移], scope: ["6"] }
+  - { zh: 蓝移, en: hypsochromic shift, aliases: [blue shift, 短移], scope: ["6"] }
+  - { zh: 增色效应, en: hyperchromic effect, aliases: [hyperchromism] }
+  - { zh: 减色效应, en: hypochromic effect, aliases: [hypochromism] }
+  - { zh: 电荷转移跃迁, en: charge-transfer transition, aliases: [电荷迁移跃迁, 荷移跃迁, charge-transfer band] }
+  - { zh: 透射比, en: transmittance, aliases: [透光率, 透射率] }
+  - { zh: 等吸收点, en: isosbestic point }
+  - { zh: 双波长分光光度法, en: dual-wavelength spectrophotometry }
+  - { zh: 导数光谱, en: derivative spectrophotometry, aliases: [导数分光光度法, derivative spectrum] }
+  - { zh: 摩尔比法, en: mole-ratio method }
+  - { zh: 连续变化法, en: method of continuous variations, aliases: [等摩尔连续变化法, Job 法, "Job's method", Job plot] }
+  - { zh: 表面等离子体共振, en: surface plasmon resonance, aliases: [表面等离子共振, SPR, 局域表面等离子体共振, localized surface plasmon resonance, LSPR] }
+  - { zh: 圆二色谱, en: circular dichroism, aliases: [圆二色性, CD 光谱, circular dichroism spectroscopy] }
+  - { zh: 摩尔椭圆度, en: molar ellipticity }
+  - { zh: 光致发光, en: photoluminescence }
+  - { zh: 激发光谱, en: excitation spectrum }
+  - { zh: 发射光谱, en: emission spectrum, aliases: [荧光光谱, fluorescence spectrum] }
+  - { zh: Stokes 位移, en: Stokes shift, aliases: [斯托克斯位移] }
+  - { zh: 镜像规则, en: mirror-image rule }
+  - { zh: 荧光寿命, en: fluorescence lifetime, aliases: [激发态寿命, excited-state lifetime] }
+  - { zh: 内滤效应, en: inner filter effect, aliases: [自吸收效应] }
+  - { zh: Förster 共振能量转移, en: Förster resonance energy transfer, aliases: [荧光共振能量转移, FRET, fluorescence resonance energy transfer] }
+  - { zh: 共聚焦显微镜, en: confocal microscope, aliases: [激光扫描共聚焦显微镜, confocal laser scanning microscopy, CLSM] }
+  - { zh: 超分辨荧光显微术, en: super-resolution fluorescence microscopy, aliases: [超分辨显微术, super-resolution microscopy, STED, PALM, STORM] }
+  - { zh: 量子点, en: quantum dot, aliases: [quantum dots] }
+  - { zh: 绿色荧光蛋白, en: green fluorescent protein, aliases: [GFP, 荧光蛋白, fluorescent protein] }
+  - { zh: 生物发光, en: bioluminescence }
+  - { zh: 红外吸收光谱法, en: infrared spectroscopy, aliases: [红外光谱, 红外光谱法, IR spectroscopy] }
+  - { zh: 伸缩振动, en: stretching vibration }
+  - { zh: 弯曲振动, en: bending vibration, aliases: [变形振动, deformation vibration] }
+  - { zh: 红外活性, en: infrared active, aliases: [IR active, 红外非活性, infrared inactive] }
+  - { zh: 基频, en: fundamental band, aliases: [基频峰, fundamental], scope: ["6"] }
+  - { zh: 倍频, en: overtone, aliases: [倍频峰, overtone band], scope: ["6"] }
+  - { zh: 合频, en: combination band, aliases: [合频峰] }
+  - { zh: 振动耦合, en: vibrational coupling }
+  - { zh: Fermi 共振, en: Fermi resonance, aliases: [费米共振] }
+  - { zh: 基团频率, en: group frequency, aliases: [特征吸收频率, characteristic group frequency, characteristic absorption] }
+  - { zh: 官能团区, en: functional group region }
+  - { zh: 指纹区, en: fingerprint region }
+  - { zh: 不饱和度, en: degree of unsaturation, aliases: [index of hydrogen deficiency, 缺氢指数, double bond equivalent, DBE] }
+  - { zh: Fourier 变换红外光谱, en: Fourier-transform infrared spectroscopy, aliases: [FTIR, 傅里叶变换红外光谱] }
+  - { zh: 干涉图, en: interferogram }
+  - { zh: 衰减全反射, en: attenuated total reflectance, aliases: [ATR, 衰减全反射光谱] }
+  - { zh: 近红外光谱, en: near-infrared spectroscopy, aliases: [近红外光谱法, NIR spectroscopy, NIRS] }
+  - { zh: Raman 散射, en: Raman scattering, aliases: [拉曼散射, Raman 效应, Raman effect, Raman 光谱, Raman spectroscopy] }
+  - { zh: Stokes 线, en: Stokes line, aliases: [反 Stokes 线, anti-Stokes line] }
+  - { zh: Raman 位移, en: Raman shift, aliases: [拉曼位移] }
+  - { zh: Raman 活性, en: Raman active }
+  - { zh: 互斥规则, en: rule of mutual exclusion, aliases: [mutual exclusion rule] }
+  - { zh: 去偏振度, en: depolarization ratio, aliases: [退偏比, 退偏振度] }
+  - { zh: 共振 Raman, en: resonance Raman spectroscopy, aliases: [共振拉曼, resonance Raman] }
+  - { zh: 表面增强 Raman 散射, en: surface-enhanced Raman scattering, aliases: [SERS, 表面增强拉曼散射, surface-enhanced Raman spectroscopy] }
+  - { zh: 核磁共振, en: nuclear magnetic resonance, aliases: [NMR, 核磁共振波谱法, NMR spectroscopy] }
+  - { zh: 核自旋量子数, en: nuclear spin quantum number, aliases: [核自旋, nuclear spin] }
+  - { zh: 纵向弛豫, en: longitudinal relaxation, aliases: [自旋–晶格弛豫, spin–lattice relaxation, T1 弛豫] }
+  - { zh: 横向弛豫, en: transverse relaxation, aliases: [自旋–自旋弛豫, spin–spin relaxation, T2 弛豫] }
+  - { zh: 核屏蔽常数, en: nuclear shielding constant, aliases: [nuclear shielding, 化学屏蔽] }
+  - { zh: 化学位移, en: chemical shift }
+  - { zh: 环电流效应, en: ring-current effect, aliases: [环电流, ring current, 磁各向异性, magnetic anisotropy] }
+  - { zh: 自旋–自旋耦合, en: spin–spin coupling, aliases: [J 耦合, J coupling, 自旋耦合, scalar coupling] }
+  - { zh: 耦合常数, en: coupling constant, aliases: [J 值] }
+  - { zh: Karplus 关系, en: Karplus equation, aliases: [Karplus 方程, Karplus relation] }
+  - { zh: 化学等价, en: chemical equivalence, aliases: [化学等价核, chemically equivalent] }
+  - { zh: 磁等价, en: magnetic equivalence, aliases: [磁等价核, magnetically equivalent] }
+  - { zh: 去耦, en: decoupling, aliases: [双照射, double irradiation, 去偶], scope: ["6"] }
+  - { zh: 脉冲 Fourier 变换核磁共振, en: pulsed Fourier-transform NMR, aliases: [FT-NMR, 脉冲傅里叶变换核磁共振] }
+  - { zh: 自由感应衰减, en: free induction decay }
+  - { zh: 核 Overhauser 效应, en: nuclear Overhauser effect, aliases: [NOE, 核欧沃豪斯效应, NOESY] }
+  - { zh: 二维核磁共振, en: two-dimensional NMR, aliases: [二维核磁共振谱, 2D NMR, COSY, HSQC, HMBC] }
+  - { zh: 魔角旋转, en: magic-angle spinning, aliases: [MAS, 魔角] }
+  - { zh: 交叉极化, en: cross polarization, aliases: [CP] }
+  - { zh: 磁共振成像, en: magnetic resonance imaging, aliases: [MRI, 核磁共振成像, 功能磁共振成像, fMRI] }
+  - { zh: 色谱法, en: chromatography, aliases: [色谱, 色谱分析法] }
+  - { zh: 固定相, en: stationary phase }
+  - { zh: 流动相, en: mobile phase }
+  - { zh: 色谱图, en: chromatogram, aliases: [色谱流出曲线] }
+  - { zh: 保留时间, en: retention time, aliases: [调整保留时间, adjusted retention time, 保留体积, retention volume] }
+  - { zh: 死时间, en: hold-up time, aliases: [dead time, 死体积, hold-up volume] }
+  - { zh: 保留因子, en: retention factor, aliases: [容量因子, capacity factor, 容量比] }
+  - { zh: 选择因子, en: separation factor, aliases: [相对保留值, relative retention, selectivity factor] }
+  - { zh: 分离度, en: chromatographic resolution, scope: ["6.4"] }
+  - { zh: 塔板理论, en: plate theory }
+  - { zh: 理论塔板数, en: plate number, aliases: [塔板数, theoretical plate number, number of theoretical plates, 有效塔板数, effective plate number] }
+  - { zh: 塔板高度, en: plate height, aliases: [理论塔板高度, height equivalent to a theoretical plate, HETP] }
+  - { zh: van Deemter 方程, en: van Deemter equation, aliases: [速率理论, rate theory, 范第姆特方程] }
+  - { zh: 涡流扩散, en: eddy diffusion, aliases: [多径扩散, multipath dispersion] }
+  - { zh: 纵向扩散, en: longitudinal diffusion, aliases: [分子扩散, longitudinal molecular diffusion] }
+  - { zh: 传质阻力, en: mass-transfer resistance, aliases: [传质阻力项, resistance to mass transfer] }
+  - { zh: 柱外效应, en: extracolumn band broadening, aliases: [extra-column effect, 柱外展宽] }
+  - { zh: 气相色谱, en: gas chromatography, aliases: [GC, 气相色谱法] }
+  - { zh: 固定液, en: stationary liquid, aliases: [liquid stationary phase] }
+  - { zh: 程序升温, en: temperature programming, aliases: [程序升温气相色谱, programmed-temperature gas chromatography] }
+  - { zh: 裂解气相色谱, en: pyrolysis gas chromatography, aliases: [Py-GC] }
+  - { zh: 热导检测器, en: thermal conductivity detector, aliases: [TCD, 热导池] }
+  - { zh: 氢火焰离子化检测器, en: flame ionization detector, aliases: [火焰离子化检测器] }
+  - { zh: 电子捕获检测器, en: electron capture detector, aliases: [电子俘获检测器, ECD] }
+  - { zh: 火焰光度检测器, en: flame photometric detector, aliases: [FPD] }
+  - { zh: 保留指数, en: retention index, aliases: [Kováts 指数, Kováts retention index] }
+  - { zh: 定量校正因子, en: response factor, aliases: [校正因子, 相对校正因子, relative response factor] }
+  - { zh: 归一化法, en: normalization method, aliases: [面积归一化法, area normalization] }
+  - { zh: 高效液相色谱, en: high-performance liquid chromatography, aliases: [HPLC, 高效液相色谱法] }
+  - { zh: 超高效液相色谱, en: ultra-high-performance liquid chromatography, aliases: [UHPLC, UPLC] }
+  - { zh: 梯度洗脱, en: gradient elution, aliases: [等度洗脱, isocratic elution] }
+  - { zh: 蒸发光散射检测器, en: evaporative light-scattering detector, aliases: [ELSD] }
+  - { zh: 吸附色谱, en: adsorption chromatography, aliases: [液固吸附色谱] }
+  - { zh: 分配色谱, en: partition chromatography, aliases: [液液分配色谱] }
+  - { zh: 键合相, en: bonded phase, aliases: [化学键合相, bonded stationary phase, ODS, C18] }
+  - { zh: 正相色谱, en: normal-phase chromatography, aliases: [正相 HPLC] }
+  - { zh: 反相色谱, en: reversed-phase chromatography, aliases: [反相 HPLC, RP-HPLC] }
+  - { zh: 亲水作用色谱, en: hydrophilic interaction chromatography, aliases: [HILIC] }
+  - { zh: 离子交换色谱, en: ion-exchange chromatography, aliases: [IEC, IEX] }
+  - { zh: 离子色谱, en: ion chromatography, aliases: [抑制型离子色谱, suppressed ion chromatography, 抑制器, suppressor] }
+  - { zh: 体积排阻色谱, en: size-exclusion chromatography, aliases: [SEC, 凝胶色谱, 凝胶过滤色谱, gel filtration chromatography, 凝胶渗透色谱, gel permeation chromatography] }
+  - { zh: 亲和色谱, en: affinity chromatography }
+  - { zh: 手性色谱, en: chiral chromatography, aliases: [手性固定相, chiral stationary phase] }
+  - { zh: 超临界流体色谱, en: supercritical fluid chromatography, aliases: [SFC] }
+  - { zh: 超临界流体萃取, en: supercritical fluid extraction, aliases: [SFE] }
+  - { zh: 制备色谱, en: preparative chromatography }
+  - { zh: 毛细管电泳, en: capillary electrophoresis, aliases: [CE, 毛细管区带电泳, capillary zone electrophoresis, CZE] }
+  - { zh: 电渗流, en: electroosmotic flow, aliases: [EOF] }
+  - { zh: 胶束电动色谱, en: micellar electrokinetic chromatography, aliases: [MEKC, 胶束电动毛细管色谱] }
+  - { zh: 毛细管电色谱, en: capillary electrochromatography, aliases: [CEC] }
+  - { zh: SDS-聚丙烯酰胺凝胶电泳, en: SDS–polyacrylamide gel electrophoresis, aliases: [SDS-PAGE, SDS–PAGE, 凝胶电泳, gel electrophoresis] }
+  - { zh: 等电聚焦, en: isoelectric focusing, aliases: [IEF, 二维电泳, two-dimensional gel electrophoresis] }
+  - { zh: 质谱法, en: mass spectrometry, aliases: [质谱, MS, 质谱分析] }
+  - { zh: 质荷比, en: mass-to-charge ratio, aliases: [m/z] }
+  - { zh: 精确质量, en: exact mass, aliases: [单同位素质量, monoisotopic mass, 名义质量, nominal mass] }
+  - { zh: 质量分辨率, en: mass resolving power, aliases: [质谱分辨率, mass resolution] }
+  - { zh: 离子源, en: ion source }
+  - { zh: 电子电离, en: electron ionization, aliases: [EI, 电子轰击电离, electron impact ionization] }
+  - { zh: 电喷雾电离, en: electrospray ionization, aliases: [ESI, 电喷雾] }
+  - { zh: 大气压化学电离, en: atmospheric pressure chemical ionization, aliases: [APCI] }
+  - { zh: 基质辅助激光解吸电离, en: matrix-assisted laser desorption/ionization, aliases: [MALDI, 基质辅助激光解吸附电离] }
+  - { zh: 软电离, en: soft ionization, aliases: [硬电离, hard ionization] }
+  - { zh: 质量分析器, en: mass analyzer }
+  - { zh: 四极杆质量分析器, en: quadrupole mass analyzer, aliases: [四极杆, 四极质谱, quadrupole mass filter] }
+  - { zh: 离子阱, en: ion trap, aliases: [Paul 阱, Paul trap, 四极离子阱, quadrupole ion trap] }
+  - { zh: Orbitrap, en: Orbitrap, aliases: [轨道阱, orbitrap mass analyzer] }
+  - { zh: Fourier 变换离子回旋共振质谱, en: Fourier-transform ion cyclotron resonance mass spectrometry, aliases: [FT-ICR MS, FTICR] }
+  - { zh: 串联质谱, en: tandem mass spectrometry, aliases: [MS/MS, 多级质谱, MSn] }
+  - { zh: 碰撞诱导解离, en: collision-induced dissociation, aliases: [CID, 碰撞活化解离, collisionally activated dissociation] }
+  - { zh: 选择离子监测, en: selected ion monitoring, aliases: [SIM, 单离子监测] }
+  - { zh: 分子离子, en: molecular ion, aliases: [分子离子峰] }
+  - { zh: 准分子离子, en: quasi-molecular ion, aliases: [pseudomolecular ion, 质子化分子, protonated molecule] }
+  - { zh: 碎片离子, en: fragment ion, aliases: [碎片离子峰] }
+  - { zh: 同位素峰, en: isotope peak, aliases: [同位素离子峰, isotopic pattern, 同位素峰型] }
+  - { zh: 氮规则, en: nitrogen rule, aliases: [氮律] }
+  - { zh: McLafferty 重排, en: McLafferty rearrangement, aliases: [麦氏重排, 麦克拉弗蒂重排] }
+  - { zh: α 断裂, en: alpha cleavage, aliases: [α-cleavage, α-裂解] }
+  - { zh: 同位素稀释法, en: isotope dilution, aliases: [同位素稀释质谱法, isotope dilution mass spectrometry, IDMS] }
+  - { zh: 蛋白质组学, en: proteomics }
+  - { zh: 质谱成像, en: mass spectrometry imaging, aliases: [MSI, MALDI 成像, imaging mass spectrometry] }
+  - { zh: 电感耦合等离子体质谱, en: inductively coupled plasma mass spectrometry, aliases: [ICP-MS] }
+  - { zh: 真值, en: true value, scope: ["6"] }   # the logic 真值 (truth value) is unscoped
+  - { zh: 准确度, en: accuracy, scope: ["6"] }
+  - { zh: 精密度, en: precision, scope: ["6"] }
+  - { zh: 偏差, en: deviation, scope: ["6"] }   # the statistical 偏差 (bias) is scoped to 3 and 4
+  - { zh: 灵敏度, en: sensitivity, scope: ["6"] }
+  - { zh: 选择性, en: selectivity, scope: ["6.4"] }   # analytical selectivity; 6.3 has the catalytic sense
+  - { zh: 诱导反应, en: induced reaction }
+  - { zh: 化学电离, en: chemical ionization }
+  - { zh: 飞行时间质谱, en: time-of-flight mass spectrometry, aliases: [飞行时间分析器, 反射式飞行时间, reflectron] }
+  - { zh: 选择反应监测, en: selected reaction monitoring, aliases: [多反应监测, multiple reaction monitoring] }
+  - { zh: 肽质量指纹, en: peptide mass fingerprinting, aliases: [肽质量指纹图谱] }
+  - { zh: 结构分析, en: structural analysis, scope: ["6"] }
+  - { zh: 对照试验, en: control determination, aliases: [对照实验] }
+  - { zh: 混合常数, en: mixed equilibrium constant, aliases: [mixed constant] }
+  - { zh: 化学需氧量, en: chemical oxygen demand, aliases: [COD] }
+  - { zh: 等离子体, en: plasma }
+  - { zh: 不对称电势, en: asymmetry potential, aliases: [不对称电位] }
+  - { zh: Karl Fischer 滴定法, en: Karl Fischer titration, aliases: [Karl Fischer 法, 卡尔·费休法] }

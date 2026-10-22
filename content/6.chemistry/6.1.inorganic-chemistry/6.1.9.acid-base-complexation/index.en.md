@@ -1,6 +1,6 @@
 ---
 title: Acid–Base and Complexation Equilibria
-source_hash: aa58d0c168cb
+source_hash: 1698cfc34f71
 ---
 
 Most inorganic reactions take place in aqueous solution, where acids, bases, and salts dissociate into ions and the reactions between ions give rise to the four main types of equilibrium in solution: acid–base equilibria and complexation equilibria (this chapter), precipitation–dissolution equilibria ([6.1.10](/6.1.10)), and redox equilibria ([6.1.11](/6.1.11)). All of them are specific forms of the **chemical equilibrium** of [6.1.8](/6.1.8) in solution: the equilibrium constants are all **standard equilibrium constants**, the direction of reaction is always decided by comparing the **reaction quotient** with the equilibrium constant, and every equilibrium constant can be linked to thermodynamic data through $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$. We first compare the three theories of acids and bases (9.1), then treat the equilibrium calculations for water and pH (9.2), weak acids and bases (9.3), salt solutions (9.4), and buffer solutions (9.5). Acid–base titration is introduced briefly (9.6), and the chapter ends with the dissociation equilibria of complexes in solution (9.7). The common method of calculation is to write down all the equilibria, identify the dominant one, make a reasonable approximation, and finally check that the approximation holds; if it does not, we write the equations of charge balance and mass balance and solve them numerically. A systematic treatment of the proton condition and distribution fractions, titration curves and end-point errors, and EDTA and conditional stability constants are found in [Analytical Chemistry](/6.4); activity coefficients and ionic strength are found in [Physical Chemistry](/6.3).
@@ -181,7 +181,7 @@ The actual transition range is determined by visual observation; because the eye
 | Methyl red | 4.4–6.2 | red → yellow |
 | Litmus | 5.0–8.0 | red → blue |
 | Bromothymol blue | 6.0–7.6 | yellow → blue |
-| Phenolphthalein | 8.0–10.0 | colorless → red |
+| Phenolphthalein | 8.2–10.0 | colorless → red |
 
 The color change reflects a change in structure. In acidic and neutral solutions phenolphthalein exists as the colorless lactone form (1), in which the three benzene rings are not conjugated; in basic solution the ring opens to the quinoid dianion (2), forming a conjugated system that extends through the whole molecule, so the absorption shifts into the visible region and the solution appears red. The base form (3) of methyl orange is a yellow azo compound; in acid the N of the azo group is protonated to give the quinoid structure (4) with a longer conjugated system, which is red:
 

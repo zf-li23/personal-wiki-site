@@ -64,7 +64,7 @@ $$
 
 **例 9.1.1** A、B 形成理想液态混合物，纯 A 与纯 B 的沸点分别为 $393\,\mathrm{K}$ 与 $358\,\mathrm{K}$；$p^\circ$ 下组成 $x_{\mathrm{B}} = 0.4$ 的溶液在 $373\,\mathrm{K}$ 沸腾，气相组成 $y_{\mathrm{B}} = 0.8$。在 $373\,\mathrm{K}$、$p^\circ$ 下把 $90\,\mathrm{mol}$ B 的蒸气缓慢通入 $10\,\mathrm{mol}$ 液态 A 中，说明系统状态的变化。
 
-解：温度与压力都不变，物系点沿 $373\,\mathrm{K}$ 的水平线由 $X_{\mathrm{B}} = 0$ 向 $X_{\mathrm{B}} = 90/100 = 0.9$ 移动。
+**解** 温度与压力都不变，物系点沿 $373\,\mathrm{K}$ 的水平线由 $X_{\mathrm{B}} = 0$ 向 $X_{\mathrm{B}} = 90/100 = 0.9$ 移动。
 
 1. $0 < X_{\mathrm{B}} < 0.4$：$373\,\mathrm{K}$ 低于这些溶液的沸点，通入的 B 全部溶入液相（放出凝结热，由恒温器移走），系统只有液相。
 2. $X_{\mathrm{B}} = 0.4$（共通入 $6.67\,\mathrm{mol}$ B）：液相到达泡点，开始产生组成 $y_{\mathrm{B}} = 0.8$ 的气相。
@@ -110,7 +110,7 @@ $$
 
 为什么极值点处气、液组成必然相同？答案来自 **Gibbs–Duhem 方程**（[6.3.4](/6.3.4)）对两组分蒸气压的约束。
 
-**定理 9.2.1（Duhem–Margules 方程）** 在恒温下，与二组分液态混合物平衡的理想蒸气中，两组分的分压满足
+**定理 9.2.1（Duhem–Margules 方程）** 在恒温下，与二组分液态混合物平衡的理想蒸气中（忽略总压变化对液相化学势的影响，即略去 $V_{\mathrm{m}}\,\mathrm{d}p$ 项），两组分的分压满足
 
 $$
 x_{\mathrm{A}}\,\mathrm{d}\ln p_{\mathrm{A}} + x_{\mathrm{B}}\,\mathrm{d}\ln p_{\mathrm{B}} = 0, \qquad \text{即} \qquad \left(\frac{\partial\ln p_{\mathrm{A}}}{\partial\ln x_{\mathrm{A}}}\right)_T = \left(\frac{\partial\ln p_{\mathrm{B}}}{\partial\ln x_{\mathrm{B}}}\right)_T.
@@ -155,7 +155,7 @@ $$
 
 **定义 9.3.1（共轭溶液）** 两种液体部分互溶时，平衡共存的两个组成不同的液层称为**共轭溶液**。升高（或降低）温度时，两个液层的组成逐渐接近，在某一温度下合为一相，这个温度称为**会溶温度**（临界溶解温度）。
 
-恒压下的溶解度图（$T$–$x$ 图）中，两条溶解度曲线围成"帽形"的两相区，帽顶就是会溶点。会溶温度的高低反映两种液体相互溶解能力的强弱。实际系统有三种类型：
+恒压下的溶解度图（$T$–$x$ 图）中，两条溶解度曲线围成"帽形"的两相区，帽顶就是会溶点。会溶温度的高低反映两种液体相互溶解能力的强弱。实际系统大致分为以下几种类型：
 
 | 类型 | 例子 | 会溶温度 |
 |---|---|---|
@@ -277,7 +277,7 @@ $$
 
 **例 9.4.2** 在生成稳定化合物 C 的系统中，同一温度下分处化合物两侧液相线上的两个溶液 M、N 都与 C(s) 平衡。把它们倒在一起，会不会形成共轭溶液？
 
-解：不会。共轭溶液要求 $\mu_{\mathrm{A}}(\mathrm{M}) = \mu_{\mathrm{A}}(\mathrm{N})$ 且 $\mu_{\mathrm{B}}(\mathrm{M}) = \mu_{\mathrm{B}}(\mathrm{N})$，而 M、N 只满足 $\mu_{\mathrm{A}}(\mathrm{M}) + \mu_{\mathrm{B}}(\mathrm{M}) = \mu_{\mathrm{C}} = \mu_{\mathrm{A}}(\mathrm{N}) + \mu_{\mathrm{B}}(\mathrm{N})$（都与 C 处于化学平衡）。M、N 并不互相平衡。混合后物系点落在 M、N 之间，即该温度下的 $\mathrm{l} + \mathrm{C(s)}$ 两相区，结果是析出固体 C，剩下一个液相。
+**解** 不会。共轭溶液要求 $\mu_{\mathrm{A}}(\mathrm{M}) = \mu_{\mathrm{A}}(\mathrm{N})$ 且 $\mu_{\mathrm{B}}(\mathrm{M}) = \mu_{\mathrm{B}}(\mathrm{N})$，而 M、N 只满足 $\mu_{\mathrm{A}}(\mathrm{M}) + \mu_{\mathrm{B}}(\mathrm{M}) = \mu_{\mathrm{C}} = \mu_{\mathrm{A}}(\mathrm{N}) + \mu_{\mathrm{B}}(\mathrm{N})$（都与 C 处于化学平衡）。M、N 并不互相平衡。混合后物系点落在 M、N 之间，即该温度下的 $\mathrm{l} + \mathrm{C(s)}$ 两相区，结果是析出固体 C，剩下一个液相。
 
 ### 9.4.5. 生成不稳定化合物的系统
 
