@@ -143,7 +143,7 @@ textbooks:                   # 参考书：原书的书名、作者、版次（�
 - 结果按内容哈希缓存（`.cache/plots/`），只有脚本、同目录数据或渲染环境变化时才重新渲染。渲染超过 5 分钟会在日志中提示，请尽量调小参数。
 - **冻结（freeze）**：渲染极慢的脚本可以冻结——`pnpm wiki freeze content/…/plots/name.py` 把图片写成 `name.frozen.json` 与 `name.frozen.<i>-<主题>.webp` 并随仓库提交，之后任何构建都不再运行该脚本。冻结后修改脚本会产生警告（`pnpm check` 失败），此时要么再次 `freeze`（会重新渲染），要么撤销修改；`pnpm wiki unfreeze …` 恢复正常渲染。目前冻结的：`7.4.5/plots/advection-competition-coexistence.py`（约 25 分钟）。
 - **R 配套代码**（统计学课程）：图一律由 Python 脚本生成；展示统计分析的图（模拟、拟合、诊断图、数据可视化）可以在同一目录放一个同名的 `name.R`，写出同一分析与作图的 R 版本（base R 或 ggplot2，代码与注释英文）。构建不运行它，只在图下方的源码面板里与 Python 并列成两个标签页；它不影响绘图缓存。纯示意图（几何示意、概念图）不配 R 版本。`pnpm wiki check-r [编号…]` 在装有 R 时逐个运行这些文件检查能否跑通（本地检查，不在 CI 中）。
-- **化学结构与反应机理**：绘图脚本可以 `from wikichem import Scheme`（`scripts/wiki/plot/wikichem.py`，RDKit 算坐标、matplotlib 画线）。`s.molecule(smiles, at=(x, y), lone_pairs=…)` 放置分子（坐标以键长为单位），`s.curly(起点, 终点, bend=…, single=…)` 画电子转移的弯箭头（`mol.atom(k)` 指原子，从朝向目标的孤对电子出发；`mol.bond(j, k)` 指键的中点；原子按 SMILES 顺序从 0 编号，或按原子映射号 `[CH3:1]`），`s.arrow(…, kind="forward"|"equilibrium"|"resonance"|"retro")` 画反应箭头，`s.text`、`s.plus` 写文字，最后 `s.draw()`。图中文字同样只用英文或式子。用法见模块开头的说明。
+- **化学结构与反应机理**：绘图脚本可以 `from wikichem import Scheme`（`scripts/wiki/plot/wikichem.py`，RDKit 算坐标、matplotlib 画线）。`s.molecule(smiles, at=(x, y), lone_pairs=…, explicit_h=…)` 放置分子（坐标以键长为单位；`explicit_h=True` 把 H 画成单独的原子，用于 Lewis 结构），`s.curly(起点, 终点, bend=…, single=…)` 画电子转移的弯箭头（`mol.atom(k)` 指原子，从朝向目标的孤对电子出发；`mol.bond(j, k)` 指键的中点；原子按 SMILES 顺序从 0 编号，或按原子映射号 `[CH3:1]`），`s.arrow(…, kind="forward"|"equilibrium"|"resonance"|"retro")` 画反应箭头，`s.text`、`s.plus` 写文字，最后 `s.draw()`。图中文字同样只用英文或式子。用法见模块开头的说明。
 - 第一次使用前安装 Python 环境：`pnpm setup:python`（需要 uv）。
 
 ## 5. 双语约定
@@ -291,7 +291,14 @@ terms:
 | 光学 | 折射率 $n$，光程差 $\Delta$，相位差 $\Delta\varphi$，光强 $I$，波长 $\lambda$（真空中 $\lambda_0$），频率 $\nu$，焦距 $f$，光栅常数 $d$ |
 | 量子 | 波函数 $\Psi(\boldsymbol{r}, t)$，定态波函数 $\psi(\boldsymbol{r})$，算符 $\hat{x}, \hat{p}, \hat{H}$，期望值 $\langle \hat{A}\rangle$；能级 $E_n$，量子数 $n, l, m_l, s, m_s, j, m_j$（与化学的原子结构相同），轨道与壳层直立（$1\mathrm{s}$、$2\mathrm{p}$、$\mathrm{K}$ 壳层），光谱项 $^{2S+1}L_J$ 中的 $L$ 写直立字母（$^2\mathrm{P}_{3/2}$）；Bohr 半径 $a_0$，Rydberg 常量 $R_\infty$，Bohr 磁子 $\mu_{\mathrm{B}}$，功函数 $W_0$，Fermi 能 $E_{\mathrm{F}}$，禁带宽度 $E_{\mathrm{g}}$；分子光谱按 IUPAC：转动量子数 $J$、振动量子数 $v$、转动惯量 $I$、转动常量 $\tilde B$（波数），与化学一致 |
 
-- **化学**：化学式与反应式写在 `\ce{}` 中（$\ce{H2O}$、$\ce{2H2 + O2 -> 2H2O}$），元素与电子 $\ce{e-}$ 自动直立；浓度 $[\ce{A}]$ 或 $c_{\mathrm{A}}$。热力学与量子的量沿用上表。
+- **化学**：化学式与反应式写在 `\ce{}` 中（$\ce{H2O}$、$\ce{2H2 + O2 -> 2H2O}$、$\ce{<=>}$），元素与电子 $\ce{e-}$ 自动直立；溶液中的氨写 $\ce{NH3(aq)}$。热力学与量子的量沿用上表，另有（IUPAC 绿皮书）：
+  - 化学计量数 $\nu_{\mathrm{B}}$（反应物为负），反应进度 $\xi$，$\Delta\nu_{\mathrm{g}} = \sum_{\mathrm{B(g)}}\nu_{\mathrm{B}}$；摩尔量下标 $_{\mathrm{m}}$，过程下标直立：$\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}}$、$\Delta_{\mathrm{f}}G^\circ$、$\Delta_{\mathrm{c}}H^\circ$、$\Delta_{\mathrm{vap}}H_{\mathrm{m}}$、晶格焓 $\Delta_{\mathrm{latt}}H^\circ$（不用 $U$）；标准浓度 $c^\circ = 1\,\mathrm{mol\,L^{-1}}$。
+  - 浓度 $c_{\mathrm{B}}$ 或 $[\ce{B}]$，活度 $a_{\mathrm{B}}$，标准平衡常数 $K^\circ$（量纲一），$K_{\mathrm{a}}$、$K_{\mathrm{b}}$、$K_{\mathrm{w}}$、$K_{\mathrm{sp}}$、稳定常数 $K_{\mathrm{f}}$ 与累积稳定常数 $\beta_n$，$\mathrm{p}K_{\mathrm{a}}$，$\mathrm{pH} = -\lg a_{\ce{H+}}$；反应商 $Q$（与热量同形，章节内说明）。
+  - 电化学：电极电势 $E$、$E^\circ(\ce{Cu^2+}/\ce{Cu})$，电池电动势 $E_{\mathrm{cell}} = E_+ - E_-$（即零电流时电池的电动势 $\mathcal{E}$，5.3.5），转移电子数 $z$，Faraday 常量 $F = N_{\mathrm{A}}e$（精确），$\Delta_{\mathrm{r}}G = -zFE_{\mathrm{cell}}$。
+  - 动力学：反应速率 $v$，速率常数 $k$（Boltzmann 常量写 $k_{\mathrm{B}}$），活化能 $E_{\mathrm{a}}$，指前因子 $A$，反应级数 $n$ 或分级数 $\alpha$、$\beta$。
+  - 结构：电偶极矩按站内写 $\boldsymbol{p}$（化学文献常写 $\mu$，第一次出现时说明），有效核电荷 $Z_{\mathrm{eff}}$，电负性 $\chi$，分裂能 $\Delta_{\mathrm{o}}$、$\Delta_{\mathrm{t}}$，有效磁矩 $\mu_{\mathrm{eff}}$（单位 $\mu_{\mathrm{B}}$）；族号用 IUPAC 1–18 族，括注中国教材的 A/B 族。
+  - 数据：热力学数据与平衡常数统一取 CRC Handbook of Chemistry and Physics 现行版（物理常量取 CODATA 2022），同一常数全课程只用一个值。
+  - 结构式与 Lewis 结构：键线式用 ```` ```smiles ````（§3），需要画出孤对电子的 Lewis 结构与反应机理用绘图辅助 `wikichem`（§4，`lone_pairs=True`）；VSEPR 构型、配合物立体异构与晶胞用 matplotlib 三维图。
 - **生物**（正文，不是公式）：基因名斜体（*lacZ*），蛋白质名正体（LacZ）；物种学名斜体（*Escherichia coli*）。
 
 ### 7.5 已知的重名
@@ -316,6 +323,11 @@ terms:
 | $\boldsymbol{S}$ / $S$ | Poynting 矢量 / 熵 | 矢量与标量 |
 | $J$ / $I$ | 力学中的转动惯量 $J$ / 分子光谱与化学中的转动量子数 $J$（此时转动惯量写 $I$） | 学科；分子光谱一节开头说明一次 |
 | $\dim$ | 量纲 $\dim F$ / 线性空间的维数 $\dim V$ | 学科 |
+| $E$ / $\boldsymbol{E}$ | 能量、电极电势 $E^\circ$ / 电场强度 | 下标与语境；矢量加粗 |
+| $\nu$ / $\nu_{\mathrm{B}}$ | 频率 / 化学计量数 | 下标 |
+| $\chi$ | 电负性 / 磁化率 $\chi_{\mathrm{m}}$、电极化率 $\chi_{\mathrm{e}}$ | 下标与学科 |
+| $Q$ | 热量 / 反应商 / 品质因数 | 章节内说明 |
+| $n$ / $z$ | 物质的量、反应级数、主量子数 / 转移电子数 | 化学中电子数一律写 $z$ |
 
 ## 8. 提交前
 

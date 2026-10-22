@@ -156,7 +156,7 @@ describe('notation', () => {
     assert.equal(fixNotation(String.raw`e^*_{b1} + e^{\prime} + e^{-t}`, '3.3.12'), String.raw`e^*_{b1} + e^{\prime} + \mathrm{e}^{-t}`);
     assert.deepEqual(checkNotation(String.raw`\mathbf{R}^n`, '2.1.1').map((r) => r.id), ['number-set']);
     // T as a variable: integral bounds, powers, the Poisson distribution, closures in set theory
-    assert.equal(fixNotation(String.raw`\int_{-T}^T f + n^T + P(\lambda) + tr(R)`, '3.1.1'), String.raw`\int_{-T}^T f + n^T + P(\lambda) + \operatorname{tr}(R)`);
+    assert.equal(fixNotation(String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + tr(R)`, '3.1.1'), String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + \operatorname{tr}(R)`);
     assert.equal(fixNotation(String.raw`tr(R)`, '1.2.2'), 'tr(R)');
   });
   it('only touches formulas', () => {

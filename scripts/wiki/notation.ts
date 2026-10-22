@@ -46,11 +46,12 @@ export const NOTATION_RULES: NotationRule[] = [
     advice: String.raw`A^{\mathsf T} for the transpose (and A^{\mathsf H} for the conjugate transpose)`,
     // `^T` takes the single token T, so `x^TAx` is x^{T}Ax as well. A bare T counts only after a
     // matrix-like base (capital letter, `}` of \boldsymbol{x}, `)`), not after a subscript
-    // (\int_{-T}^T, \sum_{t=1}^T) or a lowercase letter (n^T is a power).
-    pattern: /(?<!_\{[^{}]*\}|_[A-Za-z0-9])(?<=[A-Z)\]}])\^\s*(?:\{\s*(?:T|\\top|\\intercal|\\mathrm\s*\{T\}|\\rm\s*T|\\text\s*\{T\})\s*\}|T)|\^\s*(?:\\top|\\intercal)/g,
+    // (\int_{-T}^T, \sum_{t=1}^T, also with two levels of nested braces: \int_{T_{\mathrm{b}}}^T) or a
+    // lowercase letter (n^T is a power).
+    pattern: /(?<!_\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}|_[A-Za-z0-9])(?<=[A-Z)\]}])\^\s*(?:\{\s*(?:T|\\top|\\intercal|\\mathrm\s*\{T\}|\\rm\s*T|\\text\s*\{T\})\s*\}|T)|\^\s*(?:\\top|\\intercal)/g,
     fix: String.raw`^{\mathsf T}`,
   },
-  { id: 'transpose', advice: String.raw`A^{\mathsf H} for the conjugate transpose`, pattern: /(?<!_\{[^{}]*\}|_[A-Za-z0-9])(?<=[A-Z)\]}])\^\s*(?:\{\s*(?:H|\\mathrm\s*\{H\}|\\text\s*\{H\})\s*\}|H)/g, fix: String.raw`^{\mathsf H}` },
+  { id: 'transpose', advice: String.raw`A^{\mathsf H} for the conjugate transpose`, pattern: /(?<!_\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}|_[A-Za-z0-9])(?<=[A-Z)\]}])\^\s*(?:\{\s*(?:H|\\mathrm\s*\{H\}|\\text\s*\{H\})\s*\}|H)/g, fix: String.raw`^{\mathsf H}` },
   // A space after \dots only when a letter follows (`...x` → `\dots x`, not `\dotsx`).
   { id: 'ellipsis', advice: String.raw`\dots or \cdots (not ...)`, pattern: /\.\.\.(?=([A-Za-z])?)/g, fix: (_m, letter) => (letter ? '\\dots ' : '\\dots') },
   {

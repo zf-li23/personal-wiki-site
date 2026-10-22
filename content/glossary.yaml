@@ -3827,7 +3827,7 @@ terms:
   - { zh: 相对速度, en: relative velocity }
   - { zh: 牵连速度, en: transport velocity }
   - { zh: Galilei 速度变换, en: Galilean velocity transformation, aliases: [伽利略速度变换] }
-  - { zh: 动力学, en: dynamics, scope: ["5", "6", "7"] }
+  - { zh: 动力学, en: dynamics, scope: ["5", "7"] }
   - { zh: Newton 第二定律, en: "Newton's second law", aliases: [牛顿第二定律] }
   - { zh: Newton 第三定律, en: "Newton's third law", aliases: [牛顿第三定律] }
   - { zh: Newton 运动定律, en: "Newton's laws of motion", aliases: [牛顿运动定律] }
@@ -3857,17 +3857,17 @@ terms:
   - { zh: 速率, en: speed }   # 4.14 速率 (velocity, agile) is scoped
   - { zh: Newton 第一定律, en: "Newton's first law", aliases: [牛顿第一定律, 惯性定律, law of inertia], scope: ["5", "6", "7"] }
   - { zh: 动量, en: momentum }   # 动量法 (alias 动量) is scoped to 4
-  - { zh: 热力学系统, en: thermodynamic system }
-  - { zh: 孤立系统, en: isolated system }
-  - { zh: 封闭系统, en: closed system }
-  - { zh: 开放系统, en: open system }
+  - { zh: 热力学系统, en: thermodynamic system, aliases: [体系] }
+  - { zh: 孤立系统, en: isolated system, aliases: [孤立体系] }
+  - { zh: 封闭系统, en: closed system, aliases: [封闭体系] }
+  - { zh: 开放系统, en: open system, aliases: [敞开体系, 敞开系统] }
   - { zh: 绝热系统, en: adiabatic system }
   - { zh: 平衡态, en: equilibrium state, aliases: [热力学平衡态, thermodynamic equilibrium] }
   - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7"] }
   - { zh: 宏观量, en: macroscopic quantity }
   - { zh: 微观量, en: microscopic quantity }
-  - { zh: 广延量, en: extensive quantity, aliases: [extensive property] }
-  - { zh: 强度量, en: intensive quantity, aliases: [intensive property] }
+  - { zh: 广延量, en: extensive quantity, aliases: [extensive property, 广度性质, 广度量, 容量性质] }
+  - { zh: 强度量, en: intensive quantity, aliases: [intensive property, 强度性质] }
   - { zh: 态参量, en: state variable, aliases: [物态参量, 状态参量, state parameter] }
   - { zh: 物态方程, en: equation of state, aliases: [状态方程] }
   - { zh: 热力学第零定律, en: zeroth law of thermodynamics, aliases: [热平衡定律] }
@@ -3876,7 +3876,7 @@ terms:
   - { zh: Boltzmann 常量, en: Boltzmann constant, aliases: [玻尔兹曼常量, 玻耳兹曼常量, Boltzmann 常数] }
   - { zh: 热运动, en: thermal motion }
   - { zh: 涨落, en: fluctuation, scope: ["5", "6", "7"] }
-  - { zh: 内能, en: internal energy }
+  - { zh: 内能, en: internal energy, aliases: [热力学能] }
   - { zh: 速率分布函数, en: speed distribution function }
   - { zh: 最概然速率, en: most probable speed, aliases: [最可几速率] }
   - { zh: 平均速率, en: mean speed, aliases: [average speed], scope: ["5"] }
@@ -3994,7 +3994,7 @@ terms:
   - { zh: 检验电荷, en: test charge }
   - { zh: 电荷密度, en: charge density }
   - { zh: 电偶极子, en: electric dipole }
-  - { zh: 电偶极矩, en: electric dipole moment }
+  - { zh: 电偶极矩, en: electric dipole moment, aliases: [偶极矩, dipole moment] }
   - { zh: 电场线, en: electric field line, aliases: [电力线] }
   - { zh: 电通量, en: electric flux }
   - { zh: 立体角, en: solid angle }
@@ -4018,8 +4018,8 @@ terms:
   - { zh: 电介质, en: dielectric }
   - { zh: 电介质极化, en: dielectric polarization }
   - { zh: 极化电荷, en: bound charge, aliases: [束缚电荷, polarization charge] }
-  - { zh: 有极分子, en: polar molecule }
-  - { zh: 无极分子, en: nonpolar molecule }
+  - { zh: 有极分子, en: polar molecule, aliases: [极性分子] }
+  - { zh: 无极分子, en: nonpolar molecule, aliases: [非极性分子] }
   - { zh: 位移极化, en: electronic polarization, aliases: [电子位移极化, displacement polarization] }
   - { zh: 取向极化, en: orientation polarization, aliases: [orientational polarization] }
   - { zh: 极化强度, en: electric polarization, aliases: [电极化强度, polarization density] }
@@ -4113,7 +4113,7 @@ terms:
   - { zh: 简并, en: degeneracy, aliases: [能级简并], scope: ["5", "6"] }
   - { zh: 电子云, en: electron cloud }
   - { zh: 原子轨道, en: atomic orbital }
-  - { zh: 径向概率密度, en: radial probability density }
+  - { zh: 径向概率密度, en: radial probability density, aliases: [径向分布函数] }
   - { zh: 精细结构, en: fine structure }
   - { zh: Bohr 磁子, en: Bohr magneton, aliases: [玻尔磁子] }
   - { zh: Zeeman 效应, en: Zeeman effect, aliases: [塞曼效应] }
@@ -4135,7 +4135,7 @@ terms:
   - { zh: 壳层, en: electron shell, aliases: [电子壳层] }
   - { zh: 支壳层, en: subshell, aliases: [次壳层, 亚层] }
   - { zh: 电子组态, en: electron configuration, aliases: [电子构型] }
-  - { zh: 能量最低原理, en: aufbau principle }
+  - { zh: 能量最低原理, en: aufbau principle, aliases: [构造原理] }
   - { zh: Hund 规则, en: "Hund's rule", aliases: [洪特规则, "Hund's rules"] }
   - { zh: 互补原理, en: complementarity principle, aliases: [complementarity] }
   - { zh: Fresnel 衍射, en: Fresnel diffraction, aliases: [菲涅耳衍射, near-field diffraction] }
@@ -4305,3 +4305,351 @@ terms:
   - { zh: Born 诠释, en: Born rule, aliases: [玻恩诠释, Born interpretation] }
   - { zh: 归一化条件, en: normalization condition }
   - { zh: 碰壁数, en: wall collision rate }
+  - { zh: 化学动力学, en: chemical kinetics, scope: ["6", "7"] }   # 动力学 (dynamics) is scoped to 5 and 7
+
+  # chemistry: principles (6.1)
+  - { zh: 分压, en: partial pressure }
+  - { zh: Dalton 分压定律, en: "Dalton's law of partial pressures", aliases: [道尔顿分压定律, 分压定律] }
+  - { zh: 摩尔分数, en: mole fraction, aliases: [物质的量分数, amount fraction] }
+  - { zh: Graham 定律, en: "Graham's law", aliases: [格雷厄姆定律, 气体扩散定律, "Graham's law of effusion"] }
+  - { zh: 泻流, en: effusion }
+  - { zh: 临界压力, en: critical pressure }
+  - { zh: 临界体积, en: critical volume }
+  - { zh: 超临界流体, en: supercritical fluid }
+  - { zh: 三相点, en: triple point }
+  - { zh: Clausius–Clapeyron 方程, en: Clausius–Clapeyron equation, aliases: [克劳修斯–克拉佩龙方程, 克劳修斯-克拉贝龙方程] }
+  - { zh: 摩尔蒸发焓, en: molar enthalpy of vaporization, aliases: [蒸发热, 汽化热] }
+  - { zh: 沸点, en: boiling point }
+  - { zh: 正常沸点, en: normal boiling point }
+  - { zh: 过冷, en: supercooling }
+  - { zh: 液晶, en: liquid crystal }
+  - { zh: 点阵, en: crystal lattice, aliases: [晶格, 空间点阵, space lattice], scope: ["5", "6", "7"] }
+  - { zh: 结构基元, en: structural motif, aliases: [motif], scope: ["6"] }
+  - { zh: 晶胞, en: unit cell }
+  - { zh: 晶胞参数, en: lattice parameters, aliases: [unit cell parameters, 点阵参数] }
+  - { zh: 晶系, en: crystal system }
+  - { zh: Bravais 点阵, en: Bravais lattice, aliases: [布拉维点阵, 布拉维格子] }
+  - { zh: 实原子轨道, en: real atomic orbital, aliases: [real orbital] }
+  - { zh: 节面, en: nodal plane, aliases: [角节面, angular node] }
+  - { zh: 径向节点, en: radial node }
+  - { zh: 屏蔽效应, en: shielding effect, aliases: [screening effect] }
+  - { zh: 屏蔽常数, en: shielding constant, aliases: [screening constant] }
+  - { zh: 有效核电荷, en: effective nuclear charge }
+  - { zh: Slater 规则, en: "Slater's rules", aliases: [斯莱特规则] }
+  - { zh: 钻穿效应, en: penetration effect, aliases: [orbital penetration] }
+  - { zh: 能级交错, en: energy level crossing }
+  - { zh: 价电子, en: valence electron, aliases: [valence electrons] }
+  - { zh: 主族元素, en: main-group element, aliases: [main-group elements] }
+  - { zh: 过渡元素, en: transition element, aliases: [过渡金属, transition metal, transition elements] }
+  - { zh: 镧系元素, en: lanthanoid, aliases: [镧系, lanthanide, lanthanoids] }
+  - { zh: 锕系元素, en: actinoid, aliases: [锕系, actinide, actinoids] }
+  - { zh: 原子半径, en: atomic radius }
+  - { zh: 共价半径, en: covalent radius }
+  - { zh: 金属半径, en: metallic radius }
+  - { zh: van der Waals 半径, en: van der Waals radius, aliases: [范德华半径] }
+  - { zh: 镧系收缩, en: lanthanide contraction, aliases: [lanthanoid contraction] }
+  - { zh: 电离能, en: ionization energy, aliases: [第一电离能, first ionization energy, ionization potential] }
+  - { zh: 电子亲和能, en: electron affinity, aliases: [电子亲合能] }
+  - { zh: 电负性, en: electronegativity }
+  - { zh: 化学键, en: chemical bond }
+  - { zh: 离子键, en: ionic bond }
+  - { zh: 共价键, en: covalent bond }
+  - { zh: 离子半径, en: ionic radius }
+  - { zh: Lewis 结构式, en: Lewis structure, aliases: [路易斯结构式, Lewis 结构] }
+  - { zh: 八隅律, en: octet rule, aliases: [八电子规则] }
+  - { zh: 孤对电子, en: lone pair, aliases: [孤电子对] }
+  - { zh: 形式电荷, en: formal charge }
+  - { zh: 价键理论, en: valence bond theory, aliases: [VB 理论, 电子配对理论] }
+  - { zh: 最大重叠原理, en: principle of maximum overlap }
+  - { zh: σ 键, en: sigma bond, aliases: [σ bond] }
+  - { zh: π 键, en: pi bond, aliases: [π bond] }
+  - { zh: δ 键, en: delta bond, aliases: [δ bond] }
+  - { zh: 配位键, en: coordinate bond, aliases: [配位共价键, dative bond, coordinate covalent bond] }
+  - { zh: 键长, en: bond length }
+  - { zh: 键角, en: bond angle }
+  - { zh: 键能, en: bond energy }
+  - { zh: 杂化轨道, en: hybrid orbital, aliases: [轨道杂化, 杂化, hybridization] }
+  - { zh: 等性杂化, en: equivalent hybridization }
+  - { zh: 不等性杂化, en: nonequivalent hybridization }
+  - { zh: 离域 π 键, en: delocalized pi bond, aliases: [大 π 键, 离域键, delocalized π bond] }
+  - { zh: 价层电子对互斥理论, en: valence shell electron pair repulsion theory, aliases: [VSEPR 理论, VSEPR] }
+  - { zh: 分子轨道, en: molecular orbital }
+  - { zh: 分子轨道理论, en: molecular orbital theory, aliases: [MO 理论] }
+  - { zh: 原子轨道线性组合, en: linear combination of atomic orbitals, aliases: [LCAO] }
+  - { zh: 成键轨道, en: bonding orbital, aliases: [成键分子轨道] }
+  - { zh: 反键轨道, en: antibonding orbital, aliases: [反键分子轨道] }
+  - { zh: 键级, en: bond order }
+  - { zh: 前线轨道, en: frontier orbital, aliases: [frontier molecular orbital] }
+  - { zh: 最高占据分子轨道, en: highest occupied molecular orbital, aliases: [HOMO] }
+  - { zh: 最低未占分子轨道, en: lowest unoccupied molecular orbital, aliases: [LUMO, 最低未占据分子轨道] }
+  - { zh: 极性键, en: polar bond, aliases: [极性共价键, polar covalent bond] }
+  - { zh: 非极性键, en: nonpolar bond, aliases: [非极性共价键, nonpolar covalent bond] }
+  - { zh: 配位数, en: coordination number }
+  - { zh: 最密堆积, en: close packing, aliases: [密堆积, closest packing] }
+  - { zh: 六方最密堆积, en: hexagonal close packing, aliases: [hcp] }
+  - { zh: 面心立方最密堆积, en: cubic close packing, aliases: [ccp, 面心立方堆积, face-centered cubic packing] }
+  - { zh: 体心立方堆积, en: body-centered cubic packing, aliases: [体心立方, body-centered cubic] }
+  - { zh: 空间利用率, en: packing efficiency, aliases: [packing fraction, 堆积系数] }
+  - { zh: 四面体空隙, en: tetrahedral hole, aliases: [tetrahedral interstice, tetrahedral site] }
+  - { zh: 八面体空隙, en: octahedral hole, aliases: [octahedral interstice, octahedral site] }
+  - { zh: 金属键, en: metallic bond, aliases: [metallic bonding] }
+  - { zh: 金属晶体, en: metallic crystal }
+  - { zh: 离子晶体, en: ionic crystal }
+  - { zh: 分子晶体, en: molecular crystal }
+  - { zh: 原子晶体, en: covalent network crystal, aliases: [共价晶体, network solid, covalent crystal] }
+  - { zh: 合金, en: alloy }
+  - { zh: 晶格焓, en: lattice enthalpy, aliases: [晶格能, lattice energy] }
+  - { zh: 半径比规则, en: radius ratio rule }
+  - { zh: 离子极化, en: ionic polarization, aliases: [离子的极化, polarization of ions], scope: ["6"] }
+  - { zh: 极化力, en: polarizing power }
+  - { zh: 极化率, en: polarizability, aliases: [变形性] }
+  - { zh: 分子间作用力, en: intermolecular force, aliases: [分子间力, intermolecular forces] }
+  - { zh: van der Waals 力, en: van der Waals force, aliases: [范德华力, van der Waals forces] }
+  - { zh: 取向力, en: Keesom force, aliases: [dipole–dipole interaction, 偶极–偶极作用] }
+  - { zh: 诱导力, en: Debye force, aliases: [dipole–induced dipole interaction, 诱导作用] }
+  - { zh: 色散力, en: London dispersion force, aliases: [dispersion force, London force, 伦敦力] }
+  - { zh: 诱导偶极, en: induced dipole }
+  - { zh: 瞬间偶极, en: instantaneous dipole, aliases: [瞬时偶极] }
+  - { zh: 氢键, en: hydrogen bond, aliases: [hydrogen bonding] }
+  - { zh: 晶体缺陷, en: crystal defect, aliases: [crystallographic defect] }
+  - { zh: 配位化合物, en: coordination compound, aliases: [配合物, 络合物, coordination complex] }
+  - { zh: 中心原子, en: central atom, aliases: [中心离子, 形成体, central metal ion] }
+  - { zh: 配体, en: ligand, aliases: [配位体] }
+  - { zh: 配位原子, en: donor atom, aliases: [ligating atom] }
+  - { zh: 多齿配体, en: polydentate ligand, aliases: [多基配体, multidentate ligand] }
+  - { zh: 螯合物, en: chelate, aliases: [chelate complex, 螯合剂, chelating agent] }
+  - { zh: 羰基配合物, en: metal carbonyl, aliases: [羰合物, carbonyl complex] }
+  - { zh: 反馈 π 键, en: π back-bonding, aliases: [反馈键, back-bonding, π backbonding] }
+  - { zh: 配位多面体, en: coordination polyhedron }
+  - { zh: 几何异构, en: geometric isomerism, aliases: [顺反异构, cis–trans isomerism] }
+  - { zh: 旋光异构, en: optical isomerism }
+  - { zh: 对映体, en: enantiomer, aliases: [对映异构体, enantiomers] }
+  - { zh: 手性, en: chirality, aliases: [chiral] }
+  - { zh: 外消旋体, en: racemate, aliases: [外消旋混合物, racemic mixture] }
+  - { zh: 非对映体, en: diastereomer, aliases: [非对映异构体, diastereomers] }
+  - { zh: 内轨型配合物, en: inner-orbital complex }
+  - { zh: 外轨型配合物, en: outer-orbital complex }
+  - { zh: 高自旋配合物, en: high-spin complex }
+  - { zh: 低自旋配合物, en: low-spin complex }
+  - { zh: 有效磁矩, en: effective magnetic moment, aliases: [仅自旋磁矩, spin-only magnetic moment] }
+  - { zh: 晶体场理论, en: crystal field theory, aliases: [CFT] }
+  - { zh: 晶体场分裂能, en: crystal field splitting energy, aliases: [分裂能, crystal field splitting] }
+  - { zh: 光谱化学序列, en: spectrochemical series }
+  - { zh: 电子成对能, en: pairing energy, aliases: [成对能, electron pairing energy] }
+  - { zh: 晶体场稳定化能, en: crystal field stabilization energy, aliases: [CFSE] }
+  - { zh: Jahn–Teller 效应, en: Jahn–Teller effect, aliases: [姜–泰勒效应] }
+  - { zh: 状态函数, en: state function, aliases: [state functions] }
+  - { zh: 热化学, en: thermochemistry }
+  - { zh: 反应热, en: heat of reaction, aliases: [化学反应热效应, reaction heat] }
+  - { zh: 反应进度, en: extent of reaction, aliases: [advancement of reaction] }
+  - { zh: 化学计量数, en: stoichiometric number }
+  - { zh: 摩尔反应焓, en: molar enthalpy of reaction, aliases: [反应的摩尔焓变, reaction enthalpy] }
+  - { zh: 标准态, en: standard state }
+  - { zh: 标准压力, en: standard pressure }
+  - { zh: 热化学方程式, en: thermochemical equation }
+  - { zh: Hess 定律, en: "Hess's law", aliases: [盖斯定律, 赫斯定律] }
+  - { zh: 标准摩尔生成焓, en: standard molar enthalpy of formation, aliases: [生成焓, 生成热, standard enthalpy of formation] }
+  - { zh: 标准摩尔燃烧焓, en: standard molar enthalpy of combustion, aliases: [燃烧焓, 燃烧热, standard enthalpy of combustion] }
+  - { zh: 键焓, en: bond enthalpy, aliases: [平均键焓, mean bond enthalpy] }
+  - { zh: Born–Haber 循环, en: Born–Haber cycle, aliases: [玻恩–哈伯循环] }
+  - { zh: 自发过程, en: spontaneous process }
+  - { zh: 热力学第三定律, en: third law of thermodynamics }
+  - { zh: 标准摩尔熵, en: standard molar entropy, aliases: [规定熵, 绝对熵] }
+  - { zh: Gibbs 自由能, en: Gibbs energy, aliases: [吉布斯自由能, Gibbs 函数, Gibbs free energy, 自由焓] }
+  - { zh: 非体积功, en: non-expansion work, aliases: [非膨胀功, other work] }
+  - { zh: 标准摩尔生成 Gibbs 自由能, en: standard molar Gibbs energy of formation, aliases: [标准生成 Gibbs 自由能, standard Gibbs energy of formation] }
+  - { zh: 反应速率, en: rate of reaction, aliases: [化学反应速率, reaction rate] }
+  - { zh: 瞬时速率, en: instantaneous rate }
+  - { zh: 碰撞理论, en: collision theory, aliases: [简单碰撞理论, simple collision theory] }
+  - { zh: 有效碰撞, en: effective collision }
+  - { zh: 活化能, en: activation energy }
+  - { zh: 活化分子, en: activated molecule }
+  - { zh: 方位因子, en: steric factor, aliases: [概率因子, orientation factor] }
+  - { zh: 过渡态理论, en: transition state theory, aliases: [活化络合物理论, activated complex theory] }
+  - { zh: 过渡态, en: transition state, aliases: [活化络合物, activated complex] }
+  - { zh: 反应中间体, en: reaction intermediate, aliases: [中间体, intermediate], scope: ["6", "7"] }
+  - { zh: 速率方程, en: rate law, aliases: [速率方程式, rate equation] }
+  - { zh: 速率常数, en: rate constant, aliases: [反应速率常数, 速率系数, rate coefficient] }
+  - { zh: 反应级数, en: order of reaction, aliases: [reaction order, 分级数] }
+  - { zh: 初始速率法, en: method of initial rates, aliases: [initial rate method] }
+  - { zh: 基元反应, en: elementary reaction, aliases: [elementary step, 基元步骤] }
+  - { zh: 反应分子数, en: molecularity }
+  - { zh: 复杂反应, en: complex reaction, aliases: [非基元反应, composite reaction] }
+  - { zh: 反应机理, en: reaction mechanism, aliases: [反应历程] }
+  - { zh: 速控步, en: rate-determining step, aliases: [速率控制步骤, rate-limiting step] }
+  - { zh: 前平衡近似, en: pre-equilibrium approximation, aliases: [快速平衡近似, rapid-equilibrium approximation] }
+  - { zh: 半衰期, en: half-life }
+  - { zh: 放射性测年, en: radiometric dating, aliases: [放射性碳定年, radiocarbon dating] }
+  - { zh: Arrhenius 方程, en: Arrhenius equation, aliases: [阿伦尼乌斯方程, 阿累尼乌斯方程] }
+  - { zh: 指前因子, en: pre-exponential factor, aliases: [频率因子, frequency factor] }
+  - { zh: van 't Hoff 规则, en: "van 't Hoff rule", aliases: [范特霍夫规则] }
+  - { zh: 催化剂, en: catalyst }
+  - { zh: 催化作用, en: catalysis }
+  - { zh: 均相催化, en: homogeneous catalysis }
+  - { zh: 多相催化, en: heterogeneous catalysis }
+  - { zh: 催化剂中毒, en: catalyst poisoning }
+  - { zh: 酶催化, en: enzyme catalysis, aliases: [enzymatic catalysis] }
+  - { zh: 可逆反应, en: reversible reaction }
+  - { zh: 化学平衡, en: chemical equilibrium }
+  - { zh: 平衡常数, en: equilibrium constant, aliases: [经验平衡常数] }
+  - { zh: 标准平衡常数, en: standard equilibrium constant, aliases: [热力学平衡常数, thermodynamic equilibrium constant] }
+  - { zh: 多重平衡规则, en: rule of multiple equilibria }
+  - { zh: 反应商, en: reaction quotient }
+  - { zh: 转化率, en: conversion, aliases: [平衡转化率, fractional conversion], scope: ["6"] }
+  - { zh: 化学反应等温式, en: reaction isotherm, aliases: ["van 't Hoff 等温式", 范特霍夫等温式, "van 't Hoff isotherm"] }
+  - { zh: 活度, en: activity, aliases: [相对活度, relative activity], scope: ["6", "7"] }
+  - { zh: van 't Hoff 方程, en: "van 't Hoff equation", aliases: [范特霍夫方程, "van 't Hoff 等压方程"] }
+  - { zh: Le Chatelier 原理, en: "Le Chatelier's principle", aliases: [勒夏特列原理, 平衡移动原理] }
+  - { zh: 电离理论, en: Arrhenius theory of acids and bases, aliases: [酸碱电离理论, 电离说] }
+  - { zh: 电离度, en: degree of dissociation, aliases: [解离度, degree of ionization] }
+  - { zh: 酸碱质子理论, en: Brønsted–Lowry theory, aliases: [质子理论, Brønsted 酸碱理论, Brønsted–Lowry acid–base theory] }
+  - { zh: 共轭酸碱对, en: conjugate acid–base pair, aliases: [共轭酸, 共轭碱, conjugate acid, conjugate base] }
+  - { zh: 两性物质, en: amphiprotic substance, aliases: [两性物, ampholyte, amphoteric substance] }
+  - { zh: 拉平效应, en: leveling effect }
+  - { zh: 区分效应, en: differentiating effect }
+  - { zh: Lewis 酸, en: Lewis acid, aliases: [路易斯酸] }
+  - { zh: Lewis 碱, en: Lewis base, aliases: [路易斯碱] }
+  - { zh: 软硬酸碱原理, en: hard and soft acids and bases, aliases: [HSAB, 软硬酸碱, HSAB principle] }
+  - { zh: 水的离子积, en: ion product of water, aliases: [水的离子积常数, ionic product of water] }
+  - { zh: pH, en: pH }
+  - { zh: 酸碱指示剂, en: acid–base indicator, aliases: [指示剂, pH indicator] }
+  - { zh: 变色范围, en: transition range, aliases: [指示剂变色范围, color change interval] }
+  - { zh: 酸解离常数, en: acid dissociation constant, aliases: [酸常数, 解离常数, acidity constant, K_a] }
+  - { zh: 碱解离常数, en: base dissociation constant, aliases: [碱常数, basicity constant] }
+  - { zh: 稀释定律, en: "Ostwald's dilution law", aliases: [Ostwald 稀释定律, dilution law] }
+  - { zh: 同离子效应, en: common-ion effect }
+  - { zh: 多元弱酸, en: polyprotic acid, aliases: [多元酸, polyprotic weak acid] }
+  - { zh: 盐的水解, en: salt hydrolysis, aliases: [水解, hydrolysis], scope: ["6"] }
+  - { zh: 质子条件, en: proton condition, aliases: [质子条件式, 质子平衡式, proton balance] }
+  - { zh: 电荷平衡, en: charge balance, aliases: [电中性条件, electroneutrality condition], scope: ["6"] }
+  - { zh: 物料平衡, en: mass balance, aliases: [质量守恒式, material balance], scope: ["6"] }
+  - { zh: 缓冲溶液, en: buffer solution, aliases: [缓冲液, 缓冲体系, buffer] }
+  - { zh: Henderson–Hasselbalch 方程, en: Henderson–Hasselbalch equation, aliases: [亨德森–哈塞尔巴尔赫方程] }
+  - { zh: 缓冲容量, en: buffer capacity }
+  - { zh: 滴定, en: titration }
+  - { zh: 标准溶液, en: standard solution }
+  - { zh: 化学计量点, en: stoichiometric point, aliases: [等当点, equivalence point] }
+  - { zh: 滴定终点, en: end point, aliases: [终点, titration end point] }
+  - { zh: 滴定误差, en: titration error, aliases: [终点误差, end-point error] }
+  - { zh: 滴定突跃, en: titration jump, aliases: [突跃范围, pH jump] }
+  - { zh: 基准物质, en: primary standard }
+  - { zh: 标定, en: standardization of a solution, scope: ["6"] }
+  - { zh: 滴定曲线, en: titration curve }
+  - { zh: 配位平衡, en: complexation equilibrium, aliases: [配位解离平衡, complex formation equilibrium] }
+  - { zh: 稳定常数, en: stability constant, aliases: [生成常数, formation constant, 累积稳定常数, cumulative stability constant] }
+  - { zh: 逐级稳定常数, en: stepwise stability constant, aliases: [逐级生成常数, stepwise formation constant] }
+  - { zh: 不稳定常数, en: instability constant, aliases: [dissociation constant of a complex] }
+  - { zh: 难溶电解质, en: sparingly soluble electrolyte, aliases: [难溶盐, sparingly soluble salt] }
+  - { zh: 沉淀溶解平衡, en: precipitation–dissolution equilibrium, aliases: [溶解平衡, solubility equilibrium] }
+  - { zh: 溶度积, en: solubility product, aliases: [溶度积常数, solubility product constant] }
+  - { zh: 溶解度, en: solubility, scope: ["6", "7"] }
+  - { zh: 溶度积规则, en: solubility product rule }
+  - { zh: 离子积, en: ion product, scope: ["6"] }
+  - { zh: 盐效应, en: salt effect }
+  - { zh: 酸效应, en: acid effect, scope: ["6"] }
+  - { zh: 配位效应, en: complexation effect, aliases: [络合效应, complexing effect] }
+  - { zh: 分步沉淀, en: fractional precipitation, aliases: [selective precipitation] }
+  - { zh: 沉淀的转化, en: conversion of precipitates, aliases: [沉淀转化, precipitate conversion] }
+  - { zh: 氧化还原反应, en: redox reaction, aliases: [氧化还原, oxidation–reduction reaction, redox] }
+  - { zh: 氧化, en: oxidation, scope: ["6", "7"] }
+  - { zh: 氧化数, en: oxidation number, aliases: [氧化态, oxidation state] }
+  - { zh: 氧化剂, en: oxidizing agent, aliases: [oxidant] }
+  - { zh: 还原剂, en: reducing agent, aliases: [reductant] }
+  - { zh: 歧化反应, en: disproportionation, aliases: [歧化, disproportionation reaction] }
+  - { zh: 归中反应, en: comproportionation, aliases: [反歧化, 归中, comproportionation reaction] }
+  - { zh: 氧化还原电对, en: redox couple, aliases: [电对, redox pair] }
+  - { zh: 半反应, en: half-reaction, aliases: [半反应式, half-equation] }
+  - { zh: 离子–电子法, en: ion–electron method, aliases: [半反应法, half-reaction method] }
+  - { zh: 电化学, en: electrochemistry }
+  - { zh: 原电池, en: galvanic cell, aliases: [伽伐尼电池, voltaic cell] }
+  - { zh: 电解池, en: electrolytic cell }
+  - { zh: 盐桥, en: salt bridge }
+  - { zh: 半电池, en: half-cell }
+  - { zh: 电池符号, en: cell diagram, aliases: [电池图式, cell notation] }
+  - { zh: 双电层, en: electric double layer, aliases: [electrical double layer] }
+  - { zh: 电极电势, en: electrode potential, aliases: [电极电位] }
+  - { zh: 液接电势, en: liquid junction potential, aliases: [液体接界电势, 扩散电势] }
+  - { zh: 标准电极电势, en: standard electrode potential, aliases: [standard reduction potential, 标准还原电势] }
+  - { zh: 标准氢电极, en: standard hydrogen electrode, aliases: [SHE] }
+  - { zh: 参比电极, en: reference electrode }
+  - { zh: 甘汞电极, en: calomel electrode, aliases: [饱和甘汞电极, saturated calomel electrode, SCE] }
+  - { zh: Faraday 常量, en: Faraday constant, aliases: [法拉第常量, 法拉第常数, Faraday 常数] }
+  - { zh: Nernst 方程, en: Nernst equation, aliases: [能斯特方程, 奈斯特方程] }
+  - { zh: 浓差电池, en: concentration cell }
+  - { zh: 元素电势图, en: Latimer diagram, aliases: [Latimer 图, 拉蒂默图, 元素电位图] }
+  - { zh: Frost 图, en: Frost diagram, aliases: [弗罗斯特图, 氧化态图, oxidation state diagram] }
+  - { zh: 电势–pH 图, en: Pourbaix diagram, aliases: [Pourbaix 图, 电位–pH 图, potential–pH diagram] }
+  - { zh: 电解, en: electrolysis }
+  - { zh: 分解电压, en: decomposition voltage }
+  - { zh: 过电势, en: overpotential, aliases: [超电势, overvoltage] }
+  - { zh: Faraday 电解定律, en: "Faraday's laws of electrolysis", aliases: [法拉第电解定律, 法拉第定律] }
+  - { zh: 电流效率, en: current efficiency, aliases: [Faradaic efficiency, 法拉第效率] }
+  - { zh: 化学电源, en: electrochemical power source, aliases: [电池, battery], scope: ["6"] }
+  - { zh: 一次电池, en: primary cell, aliases: [primary battery] }
+  - { zh: 二次电池, en: secondary cell, aliases: [蓄电池, 可充电电池, rechargeable battery, secondary battery] }
+  - { zh: 锂离子电池, en: lithium-ion battery, aliases: [Li-ion battery] }
+  - { zh: 碱金属, en: alkali metal, aliases: [alkali metals] }
+  - { zh: 碱土金属, en: alkaline earth metal, aliases: [alkaline earth metals] }
+  - { zh: 过氧化物, en: peroxide }
+  - { zh: 超氧化物, en: superoxide }
+  - { zh: 对角线规则, en: diagonal relationship, aliases: [对角线关系] }
+  - { zh: 离子势, en: ionic potential }
+  - { zh: 氢化物, en: hydride }
+  - { zh: 储氢材料, en: hydrogen storage material }
+  - { zh: 惰性电子对效应, en: inert-pair effect, aliases: [惰性电子对, inert pair effect] }
+  - { zh: 含氧酸, en: oxoacid, aliases: [oxyacid] }
+  - { zh: 同多酸, en: isopolyacid, aliases: [isopoly acid] }
+  - { zh: 杂多酸, en: heteropolyacid, aliases: [heteropoly acid] }
+  - { zh: 同素异形体, en: allotrope, aliases: [allotropes, 同素异形] }
+  - { zh: 卤素, en: halogen, aliases: [halogens] }
+  - { zh: 王水, en: aqua regia }
+  - { zh: 钝化, en: passivation }
+  - { zh: 缺电子化合物, en: electron-deficient compound }
+  - { zh: 三中心两电子键, en: three-center two-electron bond, aliases: [3c–2e 键, 氢桥键] }
+  - { zh: 富勒烯, en: fullerene, aliases: [C60, buckminsterfullerene] }
+  - { zh: 分子筛, en: molecular sieve, aliases: [沸石, zeolite] }
+  - { zh: 稀土元素, en: rare-earth element, aliases: [稀土, rare earths] }
+  - { zh: 汞齐, en: amalgam }
+  - { zh: 相图, en: phase diagram, scope: ["5", "6"] }   # the unscoped 相图 is a phase portrait (2.4, 7.4)
+  - { zh: 质量作用定律, en: law of mass action, scope: ["6", "7"] }
+  - { zh: 还原, en: reduction, scope: ["6", "7"] }
+  - { zh: 反应坐标, en: reaction coordinate }
+  - { zh: 一级反应, en: first-order reaction }
+  - { zh: 二级反应, en: second-order reaction }
+  - { zh: 零级反应, en: zeroth-order reaction, aliases: [zero-order reaction] }
+  - { zh: 压缩因子, en: compressibility factor }
+  - { zh: 原子序数, en: atomic number }
+  - { zh: 同位素, en: isotope, aliases: [isotopes] }
+  - { zh: 内消旋化合物, en: meso compound, aliases: [内消旋体] }
+  - { zh: 分布系数, en: distribution fraction, aliases: [分布分数, fraction of species], scope: ["6"] }
+  - { zh: 第二电子亲和能, en: second electron affinity }
+  - { zh: 逐级电离能, en: successive ionization energies }
+  - { zh: 内过渡元素, en: inner transition element, aliases: [inner transition elements] }
+  - { zh: Mulliken 电负性, en: Mulliken electronegativity }
+  - { zh: 电子亲和焓, en: electron gain enthalpy }
+  - { zh: Trouton 规则, en: "Trouton's rule" }
+  - { zh: 单晶, en: single crystal }
+  - { zh: 多晶, en: polycrystal }
+  - { zh: 素晶胞, en: primitive cell, aliases: [简单晶胞, primitive unit cell] }
+  - { zh: 晶面夹角守恒定律, en: law of constancy of interfacial angles }
+  - { zh: 向列相, en: nematic phase }
+  - { zh: 近晶相, en: smectic phase }
+  - { zh: 胆甾相, en: cholesteric phase }
+  - { zh: 螯合效应, en: chelate effect }
+  - { zh: 两可配体, en: ambidentate ligand }
+  - { zh: 三中心四电子键, en: three-center four-electron bond, aliases: [3c–4e 键] }
+  - { zh: 超价分子, en: hypervalent molecule }
+  - { zh: 等电子体, en: isoelectronic species }
+  - { zh: 固溶体, en: solid solution }
+  - { zh: 金属间化合物, en: intermetallic compound }
+  - { zh: Schottky 缺陷, en: Schottky defect, aliases: [肖特基缺陷] }
+  - { zh: Frenkel 缺陷, en: Frenkel defect, aliases: [弗仑克尔缺陷] }
+  - { zh: 量子尺寸效应, en: quantum size effect, aliases: [量子限域效应, quantum confinement] }
+  - { zh: 硼烷, en: borane, aliases: [boranes] }
+  - { zh: 硅酸盐, en: silicate, aliases: [silicates] }
+  - { zh: 石墨烯, en: graphene }
+  - { zh: 碳纳米管, en: carbon nanotube, aliases: [carbon nanotubes] }
+  - { zh: 多硫化物, en: polysulfide }
+  - { zh: 铂系金属, en: platinum group metals, aliases: [铂族金属, platinum-group metal] }
+  - { zh: 动力学同位素效应, en: kinetic isotope effect }
+  - { zh: Landé 因子, en: Landé g-factor, aliases: [朗德因子, Landé g factor] }

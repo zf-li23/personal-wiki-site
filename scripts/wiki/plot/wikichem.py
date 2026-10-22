@@ -78,11 +78,15 @@ class Scheme:
 
     # ---------------------------------------------------------------- molecules
 
-    def molecule(self, smiles, at=(0, 0), rotate=0, flip=False, lone_pairs=False, show_carbons=()):
-        """Place a structure. ``lone_pairs``: True for every N, O, S and halogen, or a list of atom numbers."""
+    def molecule(self, smiles, at=(0, 0), rotate=0, flip=False, lone_pairs=False, show_carbons=(), explicit_h=False):
+        """Place a structure. ``lone_pairs``: True for every N, O, S and halogen, or a list of atom numbers;
+        ``explicit_h``: draw hydrogens as atoms with bonds (Lewis structures) instead of folding them into labels."""
         mol = Chem.MolFromSmiles(smiles)
         if mol is None:
             raise ValueError(f"RDKit cannot parse SMILES {smiles!r}")
+        if explicit_h:
+            # Lewis structures draw every hydrogen as an atom with its own bond; they are numbered after the heavy atoms.
+            mol = Chem.AddHs(mol)
         Chem.Kekulize(mol, clearAromaticFlags=True)
         rdDepictor.SetPreferCoordGen(True)
         rdDepictor.Compute2DCoords(mol)
@@ -107,6 +111,7 @@ class Scheme:
 
         placed = Placed(mol, xy, labelled, pairs)
         self.points.extend(xy)
+        self.points.extend(xy[i] + 0.55 * d for i, dirs in pairs.items() for d in dirs)  # keep lone pairs inside the figure
         self.items.append(lambda ax: _draw_molecule(ax, placed))
         return placed
 
