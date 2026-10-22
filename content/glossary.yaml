@@ -3971,7 +3971,7 @@ terms:
   - { zh: 纯滚动, en: rolling without slipping, aliases: [pure rolling] }
   - { zh: 简谐振动, en: simple harmonic motion, aliases: [谐振动, harmonic oscillation] }
   - { zh: 角频率, en: angular frequency, aliases: [圆频率] }
-  - { zh: 相位, en: phase, scope: ["5", "6", "7"] }
+  - { zh: 相位, en: phase, scope: ["5", "7"] }
   - { zh: 初相, en: initial phase, aliases: [初相位] }
   - { zh: 旋转矢量, en: phasor, aliases: [相量] }
   - { zh: 拍, en: beat, aliases: [beats], scope: ["5"] }
@@ -4110,7 +4110,7 @@ terms:
   - { zh: 角量子数, en: azimuthal quantum number, aliases: [轨道量子数, orbital angular momentum quantum number] }
   - { zh: 磁量子数, en: magnetic quantum number }
   - { zh: 空间量子化, en: space quantization }
-  - { zh: 简并, en: degeneracy, aliases: [能级简并], scope: ["5", "6"] }
+  - { zh: 简并, en: degeneracy, aliases: [能级简并, 简并度, 统计权重], scope: ["5", "6"] }
   - { zh: 电子云, en: electron cloud }
   - { zh: 原子轨道, en: atomic orbital }
   - { zh: 径向概率密度, en: radial probability density, aliases: [径向分布函数] }
@@ -4653,3 +4653,476 @@ terms:
   - { zh: 铂系金属, en: platinum group metals, aliases: [铂族金属, platinum-group metal] }
   - { zh: 动力学同位素效应, en: kinetic isotope effect }
   - { zh: Landé 因子, en: Landé g-factor, aliases: [朗德因子, Landé g factor] }
+
+  # chemistry: physical chemistry (6.3)
+  - { zh: 电解质, en: electrolyte }
+  - { zh: 强电解质, en: strong electrolyte }
+  - { zh: 弱电解质, en: weak electrolyte }
+  - { zh: 电子导体, en: electronic conductor, aliases: [第一类导体] }
+  - { zh: 离子导体, en: ionic conductor, aliases: [第二类导体] }
+  - { zh: 阳极, en: anode }
+  - { zh: 阴极, en: cathode }
+  - { zh: 电迁移, en: electromigration, aliases: [离子的电迁移] }
+  - { zh: 电迁移率, en: electric mobility, aliases: [淌度, 离子迁移率, ionic mobility] }
+  - { zh: 迁移数, en: transport number, aliases: [离子迁移数, transference number] }
+  - { zh: Hittorf 法, en: Hittorf method }
+  - { zh: 界面移动法, en: moving boundary method }
+  - { zh: 摩尔电导率, en: molar conductivity }
+  - { zh: 极限摩尔电导率, en: limiting molar conductivity, aliases: [无限稀释摩尔电导率, molar conductivity at infinite dilution] }
+  - { zh: 电导池常数, en: cell constant }
+  - { zh: Kohlrausch 平方根定律, en: "Kohlrausch's law", aliases: ["Kohlrausch's square-root law"] }
+  - { zh: 离子独立迁移定律, en: law of independent migration of ions, aliases: [Kohlrausch 离子独立迁移定律] }
+  - { zh: 离子摩尔电导率, en: ionic molar conductivity, aliases: [离子的摩尔电导率] }
+  - { zh: Walden 规则, en: "Walden's rule" }
+  - { zh: 电导滴定, en: conductometric titration }
+  - { zh: 平均活度, en: mean ionic activity, aliases: [离子平均活度] }
+  - { zh: 平均活度因子, en: mean ionic activity coefficient, aliases: [平均活度系数, 离子平均活度系数] }
+  - { zh: 平均质量摩尔浓度, en: mean ionic molality }
+  - { zh: 离子强度, en: ionic strength }
+  - { zh: 离子氛, en: ionic atmosphere, aliases: [ion atmosphere] }
+  - { zh: Debye–Hückel 理论, en: Debye–Hückel theory, aliases: [离子互吸理论] }
+  - { zh: Debye–Hückel 极限公式, en: Debye–Hückel limiting law, aliases: [Debye–Hückel 极限定律] }
+  - { zh: Debye 长度, en: Debye length, aliases: [Debye 屏蔽长度, Debye screening length] }
+  - { zh: Poisson–Boltzmann 方程, en: Poisson–Boltzmann equation }
+  - { zh: 弛豫效应, en: relaxation effect, scope: ["6"] }
+  - { zh: 电泳效应, en: electrophoretic effect }
+  - { zh: Debye–Hückel–Onsager 电导理论, en: Debye–Hückel–Onsager theory, aliases: [Onsager 极限定律, Debye–Hückel–Onsager equation] }
+  - { zh: 可逆电池, en: reversible cell }
+  - { zh: 可逆电极, en: reversible electrode }
+  - { zh: 第一类电极, en: electrode of the first kind }
+  - { zh: 第二类电极, en: electrode of the second kind }
+  - { zh: 氧化还原电极, en: redox electrode }
+  - { zh: 端电压, en: terminal voltage }
+  - { zh: 对消法, en: compensation method, aliases: [补偿法, potentiometric compensation] }
+  - { zh: 标准电池, en: standard cell, aliases: [Weston 标准电池, Weston cell] }
+  - { zh: 标准电动势, en: standard cell potential, aliases: [standard electromotive force] }
+  - { zh: 电动势的温度系数, en: temperature coefficient of the cell potential }
+  - { zh: 内电势, en: inner electric potential, aliases: [内电位, Galvani potential] }
+  - { zh: 外电势, en: outer electric potential, aliases: [外电位, Volta potential] }
+  - { zh: 表面电势, en: surface electric potential, aliases: [surface potential], scope: ["6"] }
+  - { zh: 电化学势, en: electrochemical potential }
+  - { zh: Galvani 电势差, en: Galvani potential difference, aliases: [内电势差] }
+  - { zh: Volta 电势差, en: Volta potential difference, aliases: [外电势差, contact potential difference] }
+  - { zh: 电动势法, en: potentiometry, aliases: [电势法, 电位法, potentiometric method] }
+  - { zh: 膜电势, en: membrane potential, aliases: [膜电位] }
+  - { zh: 膜平衡, en: membrane equilibrium }
+  - { zh: 离子选择性电极, en: ion-selective electrode, aliases: [ISE] }
+  - { zh: 玻璃电极, en: glass electrode }
+  - { zh: 指示电极, en: indicator electrode }
+  - { zh: 电极极化, en: electrode polarization, aliases: [极化, 极化作用], scope: ["6.3"] }
+  - { zh: 浓差极化, en: concentration polarization }
+  - { zh: 电化学极化, en: activation polarization, aliases: [活化极化, electrochemical polarization] }
+  - { zh: 欧姆极化, en: ohmic polarization, aliases: [电阻极化, ohmic drop] }
+  - { zh: 极化曲线, en: polarization curve }
+  - { zh: 交换电流密度, en: exchange current density }
+  - { zh: 传递系数, en: transfer coefficient, aliases: [charge transfer coefficient] }
+  - { zh: Butler–Volmer 方程, en: Butler–Volmer equation }
+  - { zh: Tafel 方程, en: Tafel equation, aliases: [Tafel 公式] }
+  - { zh: 电荷转移电阻, en: charge-transfer resistance, aliases: [反应电阻] }
+  - { zh: 理想极化电极, en: ideally polarizable electrode }
+  - { zh: 三电极体系, en: three-electrode cell, aliases: [三电极电池] }
+  - { zh: 工作电极, en: working electrode }
+  - { zh: 对电极, en: counter electrode, aliases: [辅助电极, auxiliary electrode] }
+  - { zh: 析氢反应, en: hydrogen evolution reaction, aliases: [氢析出反应, HER] }
+  - { zh: 极限扩散电流, en: limiting current, aliases: [极限电流, limiting diffusion current] }
+  - { zh: Cottrell 方程, en: Cottrell equation }
+  - { zh: 极谱法, en: polarography }
+  - { zh: 电化学窗口, en: electrochemical window, aliases: [electrochemical stability window] }
+  - { zh: 电化学腐蚀, en: electrochemical corrosion, aliases: [腐蚀, corrosion] }
+  - { zh: 析氢腐蚀, en: hydrogen-evolution corrosion }
+  - { zh: 吸氧腐蚀, en: oxygen-absorption corrosion, aliases: [oxygen-reduction corrosion] }
+  - { zh: 腐蚀电势, en: corrosion potential, aliases: [混合电势, mixed potential] }
+  - { zh: 牺牲阳极保护, en: sacrificial anode protection, aliases: [牺牲阳极法, galvanic protection] }
+  - { zh: 阴极保护, en: cathodic protection, aliases: [外加电流阴极保护, impressed current cathodic protection] }
+  - { zh: 缓蚀剂, en: corrosion inhibitor }
+  - { zh: 比容量, en: specific capacity }
+  - { zh: 比能量, en: specific energy, aliases: [质量能量密度, gravimetric energy density], scope: ["6"] }
+  - { zh: 嵌入反应, en: intercalation reaction, aliases: [插层反应, intercalation] }
+  - { zh: 燃料电池, en: fuel cell }
+  - { zh: 电合成, en: electrosynthesis, aliases: [电化学合成] }
+  - { zh: 三级反应, en: third-order reaction }
+  - { zh: 准一级反应, en: pseudo-first-order reaction, aliases: [假一级反应] }
+  - { zh: 孤立法, en: isolation method, aliases: [隔离法, Ostwald 孤立法] }
+  - { zh: 半衰期法, en: half-life method }
+  - { zh: 积分法, en: integral method, scope: ["6"] }
+  - { zh: 微分法, en: differential method, scope: ["6"] }
+  - { zh: 对峙反应, en: opposing reaction, aliases: [对行反应, opposing reactions] }
+  - { zh: 平行反应, en: parallel reaction, aliases: [竞争反应, competing reactions, parallel reactions] }
+  - { zh: 连续反应, en: consecutive reaction, aliases: [连串反应, consecutive reactions] }
+  - { zh: 微观可逆性原理, en: principle of microscopic reversibility }
+  - { zh: 表观活化能, en: apparent activation energy, aliases: [实验活化能] }
+  - { zh: 稳态近似, en: steady-state approximation, aliases: [稳态假设, 准稳态近似, quasi-steady-state approximation] }
+  - { zh: 链反应, en: chain reaction }
+  - { zh: 链引发, en: chain initiation }
+  - { zh: 链传递, en: chain propagation, aliases: [链增长] }
+  - { zh: 链终止, en: chain termination }
+  - { zh: 链载体, en: chain carrier }
+  - { zh: 直链反应, en: straight-chain reaction, aliases: [non-branching chain reaction] }
+  - { zh: 支链反应, en: branched-chain reaction, aliases: [chain-branching reaction] }
+  - { zh: 爆炸界限, en: explosion limit, aliases: [explosion limits] }
+  - { zh: 热爆炸, en: thermal explosion }
+  - { zh: 自由基, en: radical, aliases: [游离基, free radical] }
+  - { zh: Rice–Herzfeld 机理, en: Rice–Herzfeld mechanism }
+  - { zh: 弛豫法, en: relaxation method, aliases: [化学弛豫, chemical relaxation] }
+  - { zh: 温度跳跃法, en: temperature-jump method, aliases: [T-jump] }
+  - { zh: 停流法, en: stopped-flow method }
+  - { zh: 闪光光解, en: flash photolysis }
+  - { zh: 碰撞直径, en: collision diameter }
+  - { zh: 碰撞数, en: collision density, aliases: [碰撞频率因子, 双分子碰撞数], scope: ["6"] }
+  - { zh: 碰撞参数, en: impact parameter }
+  - { zh: 反应截面, en: reaction cross section }
+  - { zh: 阈能, en: threshold energy, aliases: [临界能, critical energy] }
+  - { zh: 势能面, en: potential energy surface, aliases: [PES] }
+  - { zh: Morse 势, en: Morse potential, aliases: [Morse 函数] }
+  - { zh: 最小能量路径, en: minimum energy path }
+  - { zh: Eyring 方程, en: Eyring equation, aliases: [Eyring–Polanyi equation] }
+  - { zh: 活化 Gibbs 自由能, en: Gibbs energy of activation, aliases: [活化自由能, 标准摩尔活化 Gibbs 自由能, free energy of activation] }
+  - { zh: 活化焓, en: enthalpy of activation, aliases: [标准摩尔活化焓] }
+  - { zh: 活化熵, en: entropy of activation, aliases: [标准摩尔活化熵] }
+  - { zh: 单分子反应, en: unimolecular reaction }
+  - { zh: Lindemann 机理, en: Lindemann mechanism, aliases: [Lindemann–Hinshelwood 机理, Lindemann–Hinshelwood mechanism] }
+  - { zh: RRKM 理论, en: RRKM theory, aliases: [Rice–Ramsperger–Kassel–Marcus theory] }
+  - { zh: 分子反应动态学, en: molecular reaction dynamics, aliases: [reaction dynamics] }
+  - { zh: 态–态反应, en: state-to-state reaction }
+  - { zh: 交叉分子束, en: crossed molecular beams, aliases: [crossed molecular beam] }
+  - { zh: 溶剂效应, en: solvent effect }
+  - { zh: 笼效应, en: cage effect, aliases: [溶剂笼效应, Franck–Rabinowitch effect] }
+  - { zh: 遭遇对, en: encounter pair, aliases: [encounter complex] }
+  - { zh: 扩散控制反应, en: diffusion-controlled reaction, aliases: [扩散控制, diffusion-limited reaction] }
+  - { zh: 活化控制反应, en: activation-controlled reaction }
+  - { zh: Stokes–Einstein 方程, en: Stokes–Einstein equation, aliases: [Stokes–Einstein 关系, Stokes–Einstein relation] }
+  - { zh: 原盐效应, en: primary kinetic salt effect, aliases: [kinetic salt effect] }
+  - { zh: 光化学反应, en: photochemical reaction }
+  - { zh: 光化学第一定律, en: Grotthuss–Draper law, aliases: [Grotthuss–Draper 定律, first law of photochemistry] }
+  - { zh: 光化学第二定律, en: Stark–Einstein law, aliases: [Stark–Einstein 定律, 光化当量定律, second law of photochemistry] }
+  - { zh: Lambert–Beer 定律, en: Beer–Lambert law, aliases: [朗伯–比尔定律, Beer 定律, Lambert–Beer law, "Beer's law"] }
+  - { zh: 吸光度, en: absorbance }
+  - { zh: 摩尔吸收系数, en: molar absorption coefficient, aliases: [摩尔吸光系数, molar absorptivity, molar extinction coefficient] }
+  - { zh: 量子产率, en: quantum yield, aliases: [量子效率] }
+  - { zh: 光化学初级过程, en: primary photochemical process, aliases: [初级过程], scope: ["6"] }
+  - { zh: 单线态, en: singlet state, aliases: [单重态, singlet] }
+  - { zh: 三线态, en: triplet state, aliases: [三重态, triplet] }
+  - { zh: 自旋多重度, en: spin multiplicity, aliases: [多重度], scope: ["5", "6"] }
+  - { zh: Jablonski 图, en: Jablonski diagram, aliases: [雅布伦斯基图] }
+  - { zh: 振动弛豫, en: vibrational relaxation }
+  - { zh: 内转换, en: internal conversion, aliases: [内部转变, 内转变] }
+  - { zh: 系间窜越, en: intersystem crossing, aliases: [系间窜跃, ISC] }
+  - { zh: 荧光, en: fluorescence }
+  - { zh: 磷光, en: phosphorescence }
+  - { zh: 猝灭, en: quenching, aliases: [淬灭, 荧光猝灭], scope: ["6", "7"] }
+  - { zh: Stern–Volmer 方程, en: Stern–Volmer equation }
+  - { zh: 光敏剂, en: photosensitizer, aliases: [感光剂, sensitizer] }
+  - { zh: 光敏化, en: photosensitization, aliases: [感光反应, photosensitized reaction] }
+  - { zh: 光稳态, en: photostationary state, aliases: [光化学平衡, photochemical equilibrium] }
+  - { zh: 化学发光, en: chemiluminescence }
+  - { zh: 助催化剂, en: promoter, scope: ["6"] }
+  - { zh: 酸碱催化, en: acid–base catalysis }
+  - { zh: Brønsted 催化定律, en: Brønsted catalysis law, aliases: [Brønsted 关系, Brønsted relation] }
+  - { zh: Michaelis–Menten 方程, en: Michaelis–Menten equation, aliases: [米氏方程, Michaelis–Menten kinetics] }
+  - { zh: 米氏常数, en: Michaelis constant, aliases: [Michaelis 常数] }
+  - { zh: 催化常数, en: catalytic constant, aliases: [转换数, turnover number] }
+  - { zh: Lineweaver–Burk 作图, en: Lineweaver–Burk plot, aliases: [双倒数作图, double-reciprocal plot] }
+  - { zh: 界面, en: interface, scope: ["6"] }
+  - { zh: 比表面积, en: specific surface area, aliases: [比表面] }
+  - { zh: 表面功, en: surface work }
+  - { zh: 表面张力, en: surface tension, aliases: [界面张力, 表面张力系数, interfacial tension] }
+  - { zh: 比表面 Gibbs 自由能, en: specific surface Gibbs energy, aliases: [表面 Gibbs 自由能, 比表面能, surface Gibbs energy, surface free energy] }
+  - { zh: Eötvös 规则, en: Eötvös rule }
+  - { zh: Antonoff 规则, en: "Antonoff's rule" }
+  - { zh: 附加压力, en: Laplace pressure, aliases: [Laplace 压力, excess pressure] }
+  - { zh: Young–Laplace 方程, en: Young–Laplace equation }
+  - { zh: 毛细现象, en: capillarity, aliases: [毛细作用, capillary action] }
+  - { zh: Kelvin 方程, en: Kelvin equation, aliases: [Kelvin 公式, 开尔文方程] }
+  - { zh: Ostwald–Freundlich 方程, en: Ostwald–Freundlich equation }
+  - { zh: Gibbs–Thomson 方程, en: Gibbs–Thomson equation, aliases: [Gibbs–Thomson 效应, Gibbs–Thomson effect] }
+  - { zh: 均相成核, en: homogeneous nucleation }
+  - { zh: 非均相成核, en: heterogeneous nucleation }
+  - { zh: 临界半径, en: critical radius, aliases: [临界成核半径, critical nucleus radius], scope: ["6"] }
+  - { zh: 吸附, en: adsorption }
+  - { zh: 表面活性物质, en: surface-active substance }
+  - { zh: 表面惰性物质, en: surface-inactive substance }
+  - { zh: Szyszkowski 方程, en: Szyszkowski equation }
+  - { zh: 表面过剩, en: surface excess, aliases: [表面吸附量, 表面超量, surface excess amount] }
+  - { zh: Gibbs 分界面, en: Gibbs dividing surface }
+  - { zh: Gibbs 吸附等温式, en: Gibbs adsorption isotherm, aliases: [Gibbs 吸附方程, Gibbs adsorption equation] }
+  - { zh: 正吸附, en: positive adsorption }
+  - { zh: 负吸附, en: negative adsorption }
+  - { zh: 铺展系数, en: spreading coefficient }
+  - { zh: 单分子膜, en: monolayer, aliases: [不溶性单分子膜, Langmuir 膜, Langmuir film] }
+  - { zh: 表面压, en: surface pressure }
+  - { zh: Langmuir–Blodgett 膜, en: Langmuir–Blodgett film, aliases: [LB 膜] }
+  - { zh: 润湿, en: wetting }
+  - { zh: 粘附功, en: work of adhesion, aliases: [黏附功, 粘湿功] }
+  - { zh: 浸湿功, en: work of immersion }
+  - { zh: 内聚功, en: work of cohesion }
+  - { zh: 接触角, en: contact angle, aliases: [润湿角] }
+  - { zh: Young 方程, en: Young equation, aliases: [润湿方程, "Young's equation"] }
+  - { zh: 超疏水, en: superhydrophobicity, aliases: [超疏水性, 荷叶效应, lotus effect] }
+  - { zh: 表面活性剂, en: surfactant, aliases: [surface-active agent] }
+  - { zh: 两亲分子, en: amphiphile, aliases: [双亲分子, amphiphilic molecule] }
+  - { zh: 胶束, en: micelle }
+  - { zh: 临界胶束浓度, en: critical micelle concentration, aliases: [CMC] }
+  - { zh: 反胶束, en: reverse micelle, aliases: [反相胶束] }
+  - { zh: 亲水亲油平衡值, en: hydrophile–lipophile balance, aliases: [HLB 值, HLB] }
+  - { zh: Krafft 点, en: Krafft point, aliases: [Krafft 温度, Krafft temperature] }
+  - { zh: 浊点, en: cloud point }
+  - { zh: 增溶作用, en: solubilization, aliases: [增溶] }
+  - { zh: 泡沫, en: foam }
+  - { zh: 脱附, en: desorption, aliases: [解吸] }
+  - { zh: 吸附剂, en: adsorbent }
+  - { zh: 吸附质, en: adsorbate }
+  - { zh: 吸附等温线, en: adsorption isotherm, aliases: [吸附等温式] }
+  - { zh: 吸附等压线, en: adsorption isobar }
+  - { zh: 吸附等量线, en: adsorption isostere }
+  - { zh: 物理吸附, en: physisorption, aliases: [physical adsorption] }
+  - { zh: 化学吸附, en: chemisorption, aliases: [chemical adsorption] }
+  - { zh: 吸附热, en: heat of adsorption, aliases: [吸附焓, enthalpy of adsorption] }
+  - { zh: 等量吸附热, en: isosteric heat of adsorption, aliases: [isosteric enthalpy of adsorption] }
+  - { zh: Langmuir 吸附等温式, en: Langmuir isotherm, aliases: [Langmuir 等温式, Langmuir 方程, Langmuir adsorption isotherm] }
+  - { zh: 解离吸附, en: dissociative adsorption, aliases: [dissociative chemisorption] }
+  - { zh: 竞争吸附, en: competitive adsorption }
+  - { zh: Freundlich 吸附等温式, en: Freundlich isotherm, aliases: [Freundlich 等温式] }
+  - { zh: Temkin 吸附等温式, en: Temkin isotherm, aliases: [Temkin 等温式] }
+  - { zh: Elovich 方程, en: Elovich equation }
+  - { zh: BET 吸附等温式, en: BET isotherm, aliases: [BET 公式, BET 方程, BET equation, Brunauer–Emmett–Teller isotherm] }
+  - { zh: 单分子层吸附, en: monolayer adsorption }
+  - { zh: 多分子层吸附, en: multilayer adsorption, aliases: [多层吸附] }
+  - { zh: 毛细凝聚, en: capillary condensation, aliases: [毛细凝结] }
+  - { zh: 微孔, en: micropore }
+  - { zh: 介孔, en: mesopore, aliases: [中孔] }
+  - { zh: 大孔, en: macropore }
+  - { zh: 孔径分布, en: pore size distribution }
+  - { zh: 黏附系数, en: sticking coefficient, aliases: [凝聚系数, sticking probability] }
+  - { zh: 催化活性, en: catalytic activity }
+  - { zh: 转换频率, en: turnover frequency, aliases: [TOF] }
+  - { zh: 空速, en: space velocity }
+  - { zh: 活性位, en: active site, aliases: [活性中心, 表面活性位], scope: ["6"] }
+  - { zh: Sabatier 原理, en: Sabatier principle, aliases: [火山曲线, volcano plot] }
+  - { zh: Langmuir–Hinshelwood 机理, en: Langmuir–Hinshelwood mechanism, aliases: [L–H 机理] }
+  - { zh: Eley–Rideal 机理, en: Eley–Rideal mechanism, aliases: [Rideal 机理, E–R 机理] }
+  - { zh: 分散相, en: dispersed phase }
+  - { zh: 分散介质, en: dispersion medium }
+  - { zh: 胶体, en: colloid, aliases: [胶体分散系统, colloidal system] }
+  - { zh: 溶胶, en: sol }
+  - { zh: 憎液溶胶, en: lyophobic sol, aliases: [lyophobic colloid] }
+  - { zh: 亲液溶胶, en: lyophilic sol, aliases: [lyophilic colloid] }
+  - { zh: 粗分散系统, en: coarse dispersion, aliases: [悬浮液, suspension] }
+  - { zh: 胶团, en: colloidal micelle }
+  - { zh: 胶核, en: colloidal core }
+  - { zh: 胶粒, en: colloidal particle }
+  - { zh: 渗析, en: dialysis, aliases: [透析] }
+  - { zh: 超滤, en: ultrafiltration, aliases: [超过滤] }
+  - { zh: Ostwald 熟化, en: Ostwald ripening }
+  - { zh: Brown 运动, en: Brownian motion, aliases: [布朗运动] }
+  - { zh: Einstein–Smoluchowski 关系, en: Einstein–Smoluchowski relation, aliases: [Einstein 关系, Einstein relation] }
+  - { zh: 沉降, en: sedimentation }
+  - { zh: 沉降平衡, en: sedimentation equilibrium }
+  - { zh: 超离心, en: ultracentrifugation }
+  - { zh: 沉降系数, en: sedimentation coefficient, aliases: [Svedberg 系数] }
+  - { zh: Tyndall 效应, en: Tyndall effect, aliases: [丁铎尔效应] }
+  - { zh: 浊度, en: turbidity }
+  - { zh: 动态光散射, en: dynamic light scattering, aliases: [DLS] }
+  - { zh: Helmholtz 双电层模型, en: Helmholtz double-layer model, aliases: [Helmholtz 模型] }
+  - { zh: Gouy–Chapman 模型, en: Gouy–Chapman model, aliases: [扩散双电层模型] }
+  - { zh: Stern 模型, en: Stern model, aliases: [Gouy–Chapman–Stern 模型, GCS 模型] }
+  - { zh: 外 Helmholtz 面, en: outer Helmholtz plane, aliases: [OHP, Stern 面] }
+  - { zh: 滑动面, en: slipping plane, aliases: [滑移面, shear plane], scope: ["6"] }
+  - { zh: ζ 电势, en: zeta potential, aliases: [电动电势, ζ potential] }
+  - { zh: 电动现象, en: electrokinetic phenomena }
+  - { zh: 电泳, en: electrophoresis }
+  - { zh: 电渗, en: electro-osmosis, aliases: [electroosmosis] }
+  - { zh: 沉降电势, en: sedimentation potential, aliases: [Dorn 效应] }
+  - { zh: 流动电势, en: streaming potential }
+  - { zh: 电泳迁移率, en: electrophoretic mobility }
+  - { zh: 聚沉, en: coagulation, scope: ["6"] }
+  - { zh: 聚沉值, en: critical coagulation concentration, aliases: [临界聚沉浓度, CCC] }
+  - { zh: Schulze–Hardy 规则, en: Schulze–Hardy rule }
+  - { zh: 感胶离子序, en: Hofmeister series, aliases: [Hofmeister 序列, lyotropic series] }
+  - { zh: 絮凝, en: flocculation }
+  - { zh: 空间稳定, en: steric stabilization, aliases: [空间稳定作用] }
+  - { zh: DLVO 理论, en: DLVO theory }
+  - { zh: Hamaker 常数, en: Hamaker constant }
+  - { zh: 乳状液, en: emulsion }
+  - { zh: 乳化剂, en: emulsifier, aliases: [emulsifying agent] }
+  - { zh: 微乳液, en: microemulsion }
+  - { zh: 凝胶, en: gel }
+  - { zh: 水凝胶, en: hydrogel }
+  - { zh: 气凝胶, en: aerogel }
+  - { zh: 触变, en: thixotropy, aliases: [触变性] }
+  - { zh: 大分子溶液, en: macromolecular solution, aliases: [高分子溶液, polymer solution] }
+  - { zh: 数均摩尔质量, en: number-average molar mass, aliases: [数均分子量] }
+  - { zh: 质均摩尔质量, en: mass-average molar mass, aliases: [重均分子量, weight-average molar mass] }
+  - { zh: Z 均摩尔质量, en: z-average molar mass }
+  - { zh: 黏均摩尔质量, en: viscosity-average molar mass, aliases: [粘均摩尔质量] }
+  - { zh: 特性黏度, en: intrinsic viscosity, aliases: [特性粘度, limiting viscosity number] }
+  - { zh: Mark–Houwink 方程, en: Mark–Houwink equation }
+  - { zh: 聚电解质, en: polyelectrolyte }
+  - { zh: Donnan 平衡, en: Donnan equilibrium, aliases: [Donnan 膜平衡] }
+  - { zh: 对比参量, en: reduced variables, aliases: [约化参量, reduced variable] }
+  - { zh: 对应状态原理, en: principle of corresponding states, aliases: [对比状态原理, 对应态定律, law of corresponding states] }
+  - { zh: 位力方程, en: virial equation of state, aliases: [维里方程, virial equation] }
+  - { zh: 位力系数, en: virial coefficient, aliases: [维里系数] }
+  - { zh: Boyle 温度, en: Boyle temperature, aliases: [玻意耳温度] }
+  - { zh: 内压, en: internal pressure }
+  - { zh: Joule–Thomson 系数, en: Joule–Thomson coefficient, aliases: [焦耳–汤姆孙系数] }
+  - { zh: 转换温度, en: inversion temperature, aliases: [转化温度] }
+  - { zh: 相变焓, en: enthalpy of transition, aliases: [相变热, 相变潜热, latent heat] }
+  - { zh: Kirchhoff 定律, en: "Kirchhoff's law", aliases: [基尔霍夫定律], scope: ["6"] }
+  - { zh: 绝热火焰温度, en: adiabatic flame temperature, aliases: [最高火焰温度] }
+  - { zh: 量热计, en: calorimeter, aliases: [量热器] }
+  - { zh: 弹式量热计, en: bomb calorimeter }
+  - { zh: 差示扫描量热法, en: differential scanning calorimetry, aliases: [DSC] }
+  - { zh: 混合熵, en: entropy of mixing }
+  - { zh: Nernst 热定理, en: Nernst heat theorem, aliases: [能斯特热定理] }
+  - { zh: 完美晶体, en: perfect crystal }
+  - { zh: 量热熵, en: calorimetric entropy }
+  - { zh: Debye T³ 定律, en: Debye T³ law, aliases: [德拜立方定律, Debye 立方定律] }
+  - { zh: 熵产生, en: entropy production }
+  - { zh: 熵流, en: entropy flux, aliases: [entropy flow] }
+  - { zh: 局域平衡假设, en: local equilibrium hypothesis, aliases: [local equilibrium assumption] }
+  - { zh: 耗散结构, en: dissipative structure }
+  - { zh: Onsager 倒易关系, en: Onsager reciprocal relations, aliases: [昂萨格倒易关系] }
+  - { zh: 最小熵产生原理, en: principle of minimum entropy production }
+  - { zh: Helmholtz 自由能, en: Helmholtz energy, aliases: [亥姆霍兹自由能, Helmholtz 函数, Helmholtz free energy] }
+  - { zh: 热力学基本方程, en: fundamental equation of thermodynamics, aliases: [热力学基本关系式, fundamental thermodynamic relation] }
+  - { zh: Legendre 变换, en: Legendre transform, aliases: [勒让德变换, Legendre transformation] }
+  - { zh: Maxwell 关系, en: Maxwell relations, aliases: [麦克斯韦关系式, Maxwell 关系式] }
+  - { zh: 热力学状态方程, en: thermodynamic equation of state }
+  - { zh: 等压热膨胀系数, en: expansion coefficient, aliases: [体膨胀系数, thermal expansion coefficient, cubic expansion coefficient] }
+  - { zh: 等温压缩系数, en: isothermal compressibility, aliases: [等温压缩率] }
+  - { zh: Gibbs–Helmholtz 方程, en: Gibbs–Helmholtz equation, aliases: [吉布斯–亥姆霍兹方程] }
+  - { zh: 质量摩尔浓度, en: molality }
+  - { zh: 物质的量浓度, en: amount concentration, aliases: [体积摩尔浓度, molarity, molar concentration] }
+  - { zh: 偏摩尔量, en: partial molar quantity, aliases: [partial molar quantities] }
+  - { zh: 偏摩尔体积, en: partial molar volume }
+  - { zh: Gibbs–Duhem 方程, en: Gibbs–Duhem equation, aliases: [Gibbs–Duhem 公式, 吉布斯–杜亥姆方程] }
+  - { zh: 化学势, en: chemical potential }
+  - { zh: 逸度, en: fugacity }
+  - { zh: 逸度因子, en: fugacity coefficient, aliases: [逸度系数] }
+  - { zh: Lewis–Randall 规则, en: Lewis–Randall rule }
+  - { zh: Raoult 定律, en: "Raoult's law", aliases: [拉乌尔定律] }
+  - { zh: 理想液态混合物, en: ideal liquid mixture, aliases: [理想溶液, 理想液体混合物, ideal solution] }
+  - { zh: Henry 定律, en: "Henry's law", aliases: [亨利定律] }
+  - { zh: Henry 常数, en: "Henry's law constant", aliases: [亨利常数] }
+  - { zh: 理想稀溶液, en: ideal dilute solution, aliases: [理想稀薄溶液] }
+  - { zh: 依数性, en: colligative properties, aliases: [稀溶液的依数性, colligative property] }
+  - { zh: 蒸气压降低, en: vapor-pressure lowering }
+  - { zh: 凝固点降低, en: freezing-point depression }
+  - { zh: 凝固点降低常数, en: cryoscopic constant, aliases: [freezing-point depression constant] }
+  - { zh: 沸点升高, en: boiling-point elevation }
+  - { zh: 沸点升高常数, en: ebullioscopic constant, aliases: [boiling-point elevation constant] }
+  - { zh: 渗透压, en: osmotic pressure }
+  - { zh: 半透膜, en: semipermeable membrane }
+  - { zh: 反渗透, en: reverse osmosis }
+  - { zh: 混合 Gibbs 自由能, en: Gibbs energy of mixing }
+  - { zh: 活度因子, en: activity coefficient, aliases: [活度系数], scope: ["6", "7"] }
+  - { zh: 超额函数, en: excess function, aliases: [过量函数, excess functions] }
+  - { zh: 超额 Gibbs 自由能, en: excess Gibbs energy }
+  - { zh: 正规溶液, en: regular solution }
+  - { zh: 无热溶液, en: athermal solution }
+  - { zh: Margules 方程, en: Margules equation }
+  - { zh: Nernst 分配定律, en: Nernst distribution law, aliases: [分配定律, distribution law] }
+  - { zh: 分配系数, en: partition coefficient, aliases: [distribution coefficient], scope: ["6", "7"] }
+  - { zh: 萃取, en: extraction, aliases: [溶剂萃取, solvent extraction], scope: ["6", "7"] }
+  - { zh: 摩尔反应 Gibbs 自由能, en: reaction Gibbs energy, aliases: [反应的摩尔 Gibbs 自由能变, molar Gibbs energy of reaction] }
+  - { zh: 标准摩尔反应 Gibbs 自由能, en: standard reaction Gibbs energy, aliases: [标准摩尔 Gibbs 自由能变, standard molar Gibbs energy of reaction] }
+  - { zh: 分解压, en: decomposition pressure }
+  - { zh: 同时平衡, en: simultaneous equilibria }
+  - { zh: 耦合反应, en: coupled reactions, aliases: [反应耦合, coupled reaction] }
+  - { zh: 相平衡, en: phase equilibrium }
+  - { zh: 独立组分数, en: number of components, aliases: [组分数] }
+  - { zh: 相律, en: phase rule, aliases: [Gibbs 相律, Gibbs phase rule] }
+  - { zh: Clapeyron 方程, en: Clapeyron equation, aliases: [克拉佩龙方程, 克拉贝龙方程] }
+  - { zh: 一级相变, en: first-order phase transition }
+  - { zh: 二级相变, en: second-order phase transition, aliases: [连续相变, continuous phase transition] }
+  - { zh: Ehrenfest 方程, en: Ehrenfest equations, aliases: [埃伦菲斯特方程] }
+  - { zh: 杠杆规则, en: lever rule }
+  - { zh: 精馏, en: fractional distillation, aliases: [分馏, rectification] }
+  - { zh: 恒沸物, en: azeotrope, aliases: [共沸物, 恒沸混合物] }
+  - { zh: Duhem–Margules 方程, en: Duhem–Margules equation }
+  - { zh: Konovalov 规则, en: "Konovalov's rules", aliases: [柯诺瓦洛夫规则] }
+  - { zh: 共轭溶液, en: conjugate solutions }
+  - { zh: 会溶温度, en: critical solution temperature, aliases: [临界溶解温度, consolute temperature] }
+  - { zh: 水蒸气蒸馏, en: steam distillation }
+  - { zh: 步冷曲线, en: cooling curve }
+  - { zh: 低共熔点, en: eutectic point, aliases: [共晶点] }
+  - { zh: 低共熔混合物, en: eutectic mixture, aliases: [共晶体] }
+  - { zh: 相合熔点, en: congruent melting point }
+  - { zh: 不相合熔点, en: incongruent melting point, aliases: [转熔温度, peritectic temperature] }
+  - { zh: 转熔反应, en: peritectic reaction, aliases: [包晶反应] }
+  - { zh: 区域熔炼, en: zone refining, aliases: [区域提纯, zone melting] }
+  - { zh: 定域子系, en: system of localized particles, aliases: [定位系统, 可别粒子系统] }
+  - { zh: 离域子系, en: system of nonlocalized particles, aliases: [非定位系统, 等同粒子系统] }
+  - { zh: 独立子系, en: system of independent particles, aliases: [近独立粒子系统] }
+  - { zh: Stirling 公式, en: "Stirling's approximation", aliases: [斯特林公式, "Stirling's formula"] }
+  - { zh: 最概然分布, en: most probable distribution, aliases: [最可几分布] }
+  - { zh: 配分函数, en: partition function }
+  - { zh: 分子配分函数, en: molecular partition function }
+  - { zh: 平动配分函数, en: translational partition function }
+  - { zh: 转动配分函数, en: rotational partition function }
+  - { zh: 振动配分函数, en: vibrational partition function }
+  - { zh: 电子配分函数, en: electronic partition function }
+  - { zh: 核配分函数, en: nuclear partition function, aliases: [核自旋配分函数] }
+  - { zh: 转动特征温度, en: characteristic rotational temperature }
+  - { zh: 振动特征温度, en: characteristic vibrational temperature }
+  - { zh: 对称数, en: symmetry number }
+  - { zh: 热波长, en: thermal wavelength, aliases: [热 de Broglie 波长, thermal de Broglie wavelength] }
+  - { zh: Sackur–Tetrode 方程, en: Sackur–Tetrode equation }
+  - { zh: 统计熵, en: statistical entropy, aliases: [光谱熵, spectroscopic entropy] }
+  - { zh: 残余熵, en: residual entropy }
+  - { zh: 细致平衡原理, en: principle of detailed balance, scope: ["6"] }   # 细致平衡条件 (MCMC) keeps the bare aliases
+  - { zh: 选择性, en: selectivity, aliases: [催化选择性], scope: ["6"] }
+  - { zh: 覆盖度, en: fractional coverage, aliases: [表面覆盖度, surface coverage], scope: ["6"] }
+  - { zh: 吸附滞后, en: adsorption hysteresis, aliases: [吸脱附滞后, 滞后回线] }
+  - { zh: 分散系统, en: disperse system, aliases: [分散体系] }
+  - { zh: 特性函数, en: characteristic function, scope: ["6"] }   # thermodynamic potential sense; 3 has the probability sense
+  - { zh: 相, en: phase, scope: ["6"] }   # 相位 (wave phase) is scoped to 5 and 7
+  - { zh: 自由度数, en: variance, aliases: [相律自由度, number of degrees of freedom of a phase system], scope: ["6.3"] }
+  - { zh: 条件自由度, en: conditional variance, scope: ["6.3"] }
+  - { zh: 混合物, en: mixture, scope: ["6"] }
+  - { zh: 溶液, en: solution, scope: ["6"] }
+  - { zh: 溶剂, en: solvent, scope: ["6"] }
+  - { zh: 溶质, en: solute, scope: ["6"] }
+  - { zh: 质量分数, en: mass fraction }
+  - { zh: 自然变量, en: natural variables, aliases: [特征变量], scope: ["6"] }
+  - { zh: 连结线, en: tie line }
+  - { zh: 泡点, en: bubble point }
+  - { zh: 露点, en: dew point }
+  - { zh: 旋节线, en: spinodal, aliases: [spinodal curve, 亚稳极限线] }
+  - { zh: 褶点, en: plait point }
+  - { zh: 枝晶偏析, en: coring, aliases: [dendritic segregation] }
+  - { zh: 相依子系, en: system of interacting particles, aliases: [相依粒子系统] }
+  - { zh: Schottky 反常, en: Schottky anomaly }
+  - { zh: Einstein 函数, en: Einstein function }
+  - { zh: 亲和势, en: affinity, aliases: [化学亲和势, chemical affinity, affinity of reaction], scope: ["6"] }
+  - { zh: 热力学力, en: thermodynamic force, aliases: [thermodynamic forces] }
+  - { zh: 热力学通量, en: thermodynamic flux, aliases: [thermodynamic fluxes] }
+  - { zh: 唯象系数, en: phenomenological coefficient, aliases: [phenomenological coefficients, 唯象系数矩阵] }
+  - { zh: Curie 原理, en: Curie principle, aliases: [居里原理, "Curie's principle"] }
+  - { zh: Peltier 效应, en: Peltier effect, aliases: [珀耳帖效应] }
+  - { zh: 热扩散, en: thermal diffusion, aliases: [Soret 效应, Soret effect, Ludwig–Soret effect] }
+  - { zh: 反射系数, en: reflection coefficient, aliases: [Staverman 反射系数], scope: ["6", "7"] }
+  - { zh: Kedem–Katchalsky 方程, en: Kedem–Katchalsky equations }
+  - { zh: 耦合度, en: degree of coupling }
+  - { zh: 主动运输, en: active transport, aliases: [主动转运] }
+  - { zh: 继发性主动运输, en: secondary active transport, aliases: [次级主动运输] }
+  - { zh: 热力学分支, en: thermodynamic branch }
+  - { zh: 超熵产生, en: excess entropy production }
+  - { zh: 自催化, en: autocatalysis, aliases: [自催化反应, autocatalytic reaction] }
+  - { zh: 化学振荡, en: chemical oscillation, aliases: [化学振荡反应, oscillating reaction] }
+  - { zh: Brusselator, en: Brusselator, aliases: [布鲁塞尔子, Brusselator 模型] }
+  - { zh: Belousov–Zhabotinsky 反应, en: Belousov–Zhabotinsky reaction, aliases: [BZ 反应, BZ reaction] }
+  - { zh: 糖酵解振荡, en: glycolytic oscillation, aliases: [glycolytic oscillations] }
+  - { zh: 负熵, en: negentropy, aliases: [negative entropy] }
+  - { zh: 动力学校对, en: kinetic proofreading }
+  - { zh: Landauer 原理, en: "Landauer's principle", aliases: [兰道尔原理] }
+  - { zh: Hopf 分岔, en: Hopf bifurcation, aliases: [霍普夫分岔] }
+  - { zh: 正氢, en: orthohydrogen }
+  - { zh: 仲氢, en: parahydrogen }
+  - { zh: Brønsted–Bjerrum 方程, en: Brønsted–Bjerrum equation }
+  - { zh: Smoluchowski 方程, en: Smoluchowski equation, scope: ["6"] }
+  - { zh: Kasha 规则, en: "Kasha's rule" }
+  - { zh: 专一性常数, en: specificity constant }
+  - { zh: Polanyi 规则, en: Polanyi rules }
+  - { zh: Traube 规则, en: "Traube's rule" }
+  - { zh: Flory–Huggins 理论, en: Flory–Huggins theory }

@@ -257,7 +257,7 @@ $$
 
 ### 5.6.2. 经典模型：Schnakenberg 系统
 
-Schnakenberg 模型（Brusselator 的简化版）是产生图灵斑图的经典例子：
+Schnakenberg 模型（Schnakenberg 1979 年提出的三分子反应模型，与 Brusselator 同属简单的自催化模型）是产生图灵斑图的经典例子：
 $$
 \begin{aligned}
 f(u,v) &= a - u + u^2 v,\\

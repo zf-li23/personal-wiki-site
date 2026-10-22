@@ -1,6 +1,6 @@
 ---
 title: Stability and Qualitative Theory
-source_hash: 4d05c2811fb4
+source_hash: 4de419948fba
 ---
 
 Most nonlinear equations cannot be solved in closed form, yet in applications what matters is often not a formula for the solution but its long-term behavior: whether an equilibrium recovers from a small perturbation, whether the system settles into a sustained oscillation, where the trajectories eventually go. Qualitative theory answers these questions directly from the equation, without solving it. The approach was founded by Poincaré and Lyapunov at the end of the nineteenth century and today underlies dynamical systems, control theory and mathematical biology.
@@ -341,7 +341,7 @@ When a parameter of a parameter-dependent system passes through a critical value
 $$
 r'=r(\mu-r^2),\qquad\theta'=1.
 $$
-For $\mu<0$ the origin is a stable focus and there are no closed trajectories; for $\mu>0$ the origin becomes an unstable focus and a stable limit cycle of radius $\sqrt\mu$ appears. The linear approximation at the origin has eigenvalues $\mu\pm\mathrm{i}$, and as $\mu$ increases, a pair of complex eigenvalues crosses the imaginary axis from left to right. In general, when a pair of complex eigenvalues at an equilibrium of a planar system crosses the imaginary axis with nonzero speed, then under a nondegeneracy condition a limit cycle of small amplitude is created or destroyed; this is called the Hopf bifurcation (stated without proof). The same happens for the van der Pol equation as $\mu$ passes through $0$ from negative to positive values. In biological models, the transition of populations from stable coexistence to sustained oscillation is often exactly this bifurcation ([7.4.4](/7.4.4)).
+For $\mu<0$ the origin is a stable focus and there are no closed trajectories; for $\mu>0$ the origin becomes an unstable focus and a stable limit cycle of radius $\sqrt\mu$ appears. The linear approximation at the origin has eigenvalues $\mu\pm\mathrm{i}$, and as $\mu$ increases, a pair of complex eigenvalues crosses the imaginary axis from left to right. In general, when a pair of complex eigenvalues at an equilibrium of a planar system crosses the imaginary axis with nonzero speed, then under a nondegeneracy condition a limit cycle of small amplitude is created or destroyed; this is called the *Hopf bifurcation* (stated without proof). The same happens for the van der Pol equation as $\mu$ passes through $0$ from negative to positive values. In biological models, the transition of populations from stable coexistence to sustained oscillation is often exactly this bifurcation ([7.4.4](/7.4.4)).
 
 ## Summary
 

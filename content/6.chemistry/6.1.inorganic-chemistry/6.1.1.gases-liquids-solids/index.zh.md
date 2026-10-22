@@ -183,7 +183,7 @@ $\ce{CO2}$ 的三相点为 $216.6\,\mathrm{K}$、$518\,\mathrm{kPa}$，高于大
 
 **定义 1.2.1** 在一定温度与相应的饱和蒸气压下，$1\,\mathrm{mol}$ 液体蒸发为同温同压的蒸气所吸收的热量（等于这一过程的摩尔焓变），称为**摩尔蒸发焓**（蒸发热），记作 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}$。
 
-恒压下吸收的热量等于体系**焓**的增加（[5.2.3](/5.2.3#sec-3.5.5)），所以蒸发焓可以直接由量热测定。水的 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}$ 在 $25\,{}^\circ\mathrm{C}$ 为 $44.0\,\mathrm{kJ\,mol^{-1}}$，在 $100\,{}^\circ\mathrm{C}$ 为 $40.7\,\mathrm{kJ\,mol^{-1}}$：温度越高，液体与蒸气越接近，蒸发焓越小，到临界点时为零。蒸气压随温度变化的定量关系由两相平衡的条件推出。这里需要预先使用 [6.1.6](/6.1.6) 才正式引入的 **Gibbs 自由能** $G = H - TS$ 及其性质：恒温恒压下，纯物质的两相平衡共存的条件是两相的摩尔 Gibbs 自由能相等，$G_{\mathrm{m}}(\mathrm{l}) = G_{\mathrm{m}}(\mathrm{g})$（严格的论证要用化学势，属于 [6.3](/6.3)）。
+恒压下吸收的热量等于体系**焓**的增加（[5.2.3](/5.2.3#sec-3.5.5)），所以蒸发焓可以直接由量热测定。水的 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}$ 在 $25\,{}^\circ\mathrm{C}$ 为 $44.0\,\mathrm{kJ\,mol^{-1}}$，在 $100\,{}^\circ\mathrm{C}$ 为 $40.7\,\mathrm{kJ\,mol^{-1}}$：温度越高，液体与蒸气越接近，蒸发焓越小，到临界点时为零。蒸气压随温度变化的定量关系由两相平衡的条件推出。这里需要预先使用 [6.1.6](/6.1.6) 才正式引入的 **Gibbs 自由能** $G = H - TS$ 及其性质：等温等压下，纯物质的两相平衡共存的条件是两相的摩尔 Gibbs 自由能相等，$G_{\mathrm{m}}(\mathrm{l}) = G_{\mathrm{m}}(\mathrm{g})$（严格的论证要用化学势，属于 [6.3](/6.3)）。
 
 **定理 1.2.1（Clapeyron 方程）** 纯物质两相 $\alpha$、$\beta$ 平衡共存时，平衡压力随温度的变化率为
 
@@ -197,7 +197,7 @@ $$
 $$
 -S_{\mathrm{m}}^{\alpha}\,\mathrm{d}T + V_{\mathrm{m}}^{\alpha}\,\mathrm{d}p = -S_{\mathrm{m}}^{\beta}\,\mathrm{d}T + V_{\mathrm{m}}^{\beta}\,\mathrm{d}p \quad\Longrightarrow\quad \frac{\mathrm{d}p}{\mathrm{d}T} = \frac{\Delta S_{\mathrm{m}}}{\Delta V_{\mathrm{m}}}.
 $$
-相变在恒温恒压下可逆地进行，吸收的热量等于焓变，$\Delta S_{\mathrm{m}} = \Delta H_{\mathrm{m}}/T$，代入即得。$\square$
+相变在等温等压下可逆地进行，吸收的热量等于焓变，$\Delta S_{\mathrm{m}} = \Delta H_{\mathrm{m}}/T$，代入即得。$\square$
 
 Clapeyron 方程对蒸发、升华、熔化都成立。对熔化，$\Delta V_{\mathrm{m}}$ 很小，$\mathrm{d}p/\mathrm{d}T$ 很大，熔化曲线几乎竖直；水结冰时体积增大，$\Delta_{\mathrm{fus}}V_{\mathrm{m}} < 0$，所以水的熔化曲线斜率为负（相图中冰的熔点随压力升高而降低）。对蒸发与升华可以进一步化简：
 

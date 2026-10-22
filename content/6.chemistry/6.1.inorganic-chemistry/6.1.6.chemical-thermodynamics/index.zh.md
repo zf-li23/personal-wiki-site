@@ -22,7 +22,7 @@ title: 化学热力学基础
 
 ### 6.1.3. 过程与途径
 
-系统从始态变到终态，经历了一个热力学过程。化学中常见的过程有：恒温过程（始、终态温度相同且等于恒定的环境温度）、恒压过程（系统压力始终等于恒定的外压）、恒容过程，以及绝热过程。实现同一过程的具体方式称为途径。例如一定量理想气体从 $(p_1, V_1, T)$ 变到 $(p_2, V_2, T)$，可以一步恒外压膨胀，也可以分两步或可逆地膨胀：各途径的 $\Delta p$、$\Delta V$、$\Delta U$ 相同，但热量与功不同。
+系统从始态变到终态，经历了一个热力学过程。化学中常见的过程有：等温过程（始、终态温度相同且等于恒定的环境温度；全程温度不变的称为恒温过程，见 [6.3.1](/6.3.1)）、恒压过程（系统压力始终等于恒定的外压）、恒容过程，以及绝热过程。实现同一过程的具体方式称为途径。例如一定量理想气体从 $(p_1, V_1, T)$ 变到 $(p_2, V_2, T)$，可以一步恒外压膨胀，也可以分两步或可逆地膨胀：各途径的 $\Delta p$、$\Delta V$、$\Delta U$ 相同，但热量与功不同。
 
 ### 6.1.4. 热与功
 
@@ -390,7 +390,7 @@ $$
 \end{cases}
 $$
 
-用它判断反应方向还要知道环境的熵变。在恒温恒压、只做体积功的条件下，系统从环境吸收热量 $Q_p = \Delta H_{\text{系统}}$，环境就放出同样多的热。环境通常是一个温度为 $T$ 的巨大热源，有限的热量流入或流出不改变它的温度与内部平衡，对环境而言可以看作可逆的传热，所以
+用它判断反应方向还要知道环境的熵变。在等温等压、只做体积功的条件下，系统从环境吸收热量 $Q_p = \Delta H_{\text{系统}}$，环境就放出同样多的热。环境通常是一个温度为 $T$ 的巨大热源，有限的热量流入或流出不改变它的温度与内部平衡，对环境而言可以看作可逆的传热，所以
 $$
 \Delta S_{\text{环境}} = -\frac{\Delta H_{\text{系统}}}{T}.
 $$
@@ -408,7 +408,7 @@ $$
 $$
 系统的熵减小，但反应放出的大量热使环境的熵增加得更多，总熵增加，反应能自发进行。
 
-把 $\Delta S_{\text{环境}} = -\Delta H/T$ 代入 $\Delta S_{\text{总}} \ge 0$ 并乘以 $T$，得到只含系统性质的判据：恒温恒压、只做体积功时，
+把 $\Delta S_{\text{环境}} = -\Delta H/T$ 代入 $\Delta S_{\text{总}} \ge 0$ 并乘以 $T$，得到只含系统性质的判据：等温等压、只做体积功时，
 $$
 T\Delta S_{\text{总}} = T\Delta S - \Delta H \ge 0.
 $$
@@ -423,17 +423,17 @@ G = H - TS
 $$
 称为系统的 **Gibbs 自由能**（IUPAC 称 Gibbs 能，旧称自由焓），单位 J。
 
-$H$、$T$、$S$ 都是状态函数，所以 $G$ 也是状态函数，并且是广延量。恒温时 $\Delta G = \Delta H - T\Delta S$，与上一小节比较，恒温恒压、只做体积功时 $\Delta G = -T\Delta S_{\text{总}}$：Gibbs 自由能的减少就是总熵增加的另一种表达。
+$H$、$T$、$S$ 都是状态函数，所以 $G$ 也是状态函数，并且是广延量。恒温时 $\Delta G = \Delta H - T\Delta S$，与上一小节比较，等温等压、只做体积功时 $\Delta G = -T\Delta S_{\text{总}}$：Gibbs 自由能的减少就是总熵增加的另一种表达。
 
-**定理 6.4.2（Gibbs 判据）** 封闭系统在恒温恒压、不做非体积功的条件下：
+**定理 6.4.2（Gibbs 判据）** 封闭系统在等温等压、不做非体积功的条件下：
 
 - $\Delta G < 0$，过程能自发进行；
 - $\Delta G = 0$，系统处于平衡；
 - $\Delta G > 0$，过程不能自发进行（其逆过程能自发进行）。
 
-换句话说，恒温恒压、不做非体积功时，系统总是向 Gibbs 自由能减小的方向变化，到 Gibbs 自由能最小时达到平衡，这称为最小 Gibbs 自由能原理。化学平衡就是反应系统的 $G$ 随反应进度 $\xi$ 变化的极小点（[6.1.8](/6.1.8)）。
+换句话说，等温等压、不做非体积功时，系统总是向 Gibbs 自由能减小的方向变化，到 Gibbs 自由能最小时达到平衡，这称为最小 Gibbs 自由能原理。化学平衡就是反应系统的 $G$ 随反应进度 $\xi$ 变化的极小点（[6.1.8](/6.1.8)）。
 
-$\Delta G$ 还有更直接的物理意义。系统在温度为 $T$ 的环境中吸热 $\delta Q$ 时，由 Clausius 不等式 $\mathrm{d}S \ge \delta Q/T$（[5.2.4](/5.2.4#sec-4.6.1)），$\delta Q \le T\,\mathrm{d}S$。恒压下系统得到的功为 $\delta W = -p\,\mathrm{d}V + \delta W'$，由第一定律 $\mathrm{d}U = \delta Q - p\,\mathrm{d}V + \delta W'$。于是恒温恒压下
+$\Delta G$ 还有更直接的物理意义。系统在温度为 $T$ 的环境中吸热 $\delta Q$ 时，由 Clausius 不等式 $\mathrm{d}S \ge \delta Q/T$（[5.2.4](/5.2.4#sec-4.6.1)），$\delta Q \le T\,\mathrm{d}S$。恒压下系统得到的功为 $\delta W = -p\,\mathrm{d}V + \delta W'$，由第一定律 $\mathrm{d}U = \delta Q - p\,\mathrm{d}V + \delta W'$。于是等温等压下
 $$
 \mathrm{d}G = \mathrm{d}U + p\,\mathrm{d}V - T\,\mathrm{d}S = \delta Q - T\,\mathrm{d}S + \delta W' \le \delta W',
 $$
@@ -441,7 +441,7 @@ $$
 
 **公式 6.4.1**
 $$
-\Delta G \le W' \qquad (\text{恒温恒压}),
+\Delta G \le W' \qquad (\text{等温等压}),
 $$
 等号对可逆过程成立。这里 $W'$ 是环境对系统做的非体积功。它有两层含义：不做非体积功（$W' = 0$）时，它就是 Gibbs 判据 $\Delta G \le 0$；一个 $\Delta G < 0$ 的过程，系统对外所能做的非体积功 $-W'$ 最多等于 $-\Delta G$，只有可逆进行时才能达到。例如 $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ 的 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -237.1\,\mathrm{kJ\,mol^{-1}}$，若让这个反应在原电池中进行，每摩尔反应最多可得 $237.1\,\mathrm{kJ}$ 电功，而不是全部的 $285.8\,\mathrm{kJ}$ 反应焓。原电池的电动势正是由这个关系 $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$ 而来（[6.1.11](/6.1.11)）。反过来，$\Delta G > 0$ 的过程必须由外界做非体积功才能实现，如电解。
 
@@ -517,7 +517,7 @@ $$
 |---|---|---|
 | 反应热 | $Q_V = \Delta U$，$Q_p = \Delta H$，$Q_p = Q_V + \Delta n_{\mathrm{g}}RT$ | Hess 定律；$\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\Delta_{\mathrm{f}}H^\circ = -\sum\nu_{\mathrm{B}}\Delta_{\mathrm{c}}H^\circ$；键焓估算（气态）；Born–Haber 循环 |
 | 熵变 | 第三定律给出 $S^\circ_{\mathrm{m}}$ 的绝对值 | $\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}} = \sum\nu_{\mathrm{B}}S^\circ_{\mathrm{m}}$；气体分子数增加则 $\Delta S > 0$ |
-| 方向 | 孤立系统 $\Delta S_{\text{总}} \ge 0$；恒温恒压、无非体积功 $\Delta G \le 0$ | $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\Delta_{\mathrm{f}}G^\circ = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} - T\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$ |
+| 方向 | 孤立系统 $\Delta S_{\text{总}} \ge 0$；等温等压、无非体积功 $\Delta G \le 0$ | $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\Delta_{\mathrm{f}}G^\circ = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} - T\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$ |
 | 最大有用功 | $\Delta G \le W'$ | 原电池的电功（[6.1.11](/6.1.11)） |
 | 温度的影响 | $T_{\text{转}} \approx \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}}/\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$ | 式 (6.4)，忽略热容变化 |
 

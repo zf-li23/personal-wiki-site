@@ -1,6 +1,6 @@
 ---
 title: Applications of Electrode Potentials and Electrochemistry
-source_hash: 9daa37c5d8b0
+source_hash: 02e7b452655f
 ---
 
 [6.1.11](/6.1.11) established the concept of the electrode potential and obtained from thermodynamics $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$ and the **Nernst equation**. In this chapter we use these two relations to solve practical problems in chemistry: comparing the strengths of oxidizing and reducing agents, calculating equilibrium constants of redox reactions, finding solubility products from electromotive forces, and deciding the direction and extent of reactions (12.1). We then plot the standard electrode potentials among the oxidation states of an element as a Latimer diagram and a Frost diagram, from which one can see at a glance which oxidation states are stable and which disproportionate (12.2), and plot electrode potential against pH on the same diagram to decide whether a substance can exist stably in water (12.3). Finally we discuss two technological directions of electrochemistry: electrolysis, in which electrical energy drives nonspontaneous reactions (12.4), and electrochemical power sources, which store chemical energy and convert it to electrical energy on demand (12.5). Latimer and Frost diagrams are the main tools of the descriptive chemistry of the elements in [6.1.13](/6.1.13)–[6.1.15](/6.1.15). The theory of electrode kinetics and overpotential, and corrosion and its prevention, are found in [Physical Chemistry](/6.3); redox titration and potentiometric analysis are found in [Analytical Chemistry](/6.4).
@@ -127,7 +127,7 @@ $$
 $$
 E^\circ_{\mathrm{B}}:\quad \ce{MnO4^- ->[0.56] MnO4^2- ->[0.60] MnO2 ->[-0.20] Mn(OH)3 ->[0.10] Mn(OH)2 ->[-1.56] Mn}
 $$
-Couples between nonadjacent species are also often marked on the diagram (drawn above or below the main line), such as, in acidic solution, $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 1.69\,\mathrm{V}$, $E^\circ(\ce{MnO4-}/\ce{Mn^2+}) = 1.51\,\mathrm{V}$, and $E^\circ(\ce{MnO2}/\ce{Mn^2+}) = 1.23\,\mathrm{V}$; and in basic solution $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 0.59\,\mathrm{V}$ and $E^\circ(\ce{MnO2}/\ce{Mn(OH)2}) = -0.05\,\mathrm{V}$. They can be calculated from the adjacent couples (12.2.2).
+Couples between nonadjacent species are also often marked on the diagram (drawn above or below the main line), such as, in acidic solution, $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 1.68\,\mathrm{V}$, $E^\circ(\ce{MnO4-}/\ce{Mn^2+}) = 1.51\,\mathrm{V}$, and $E^\circ(\ce{MnO2}/\ce{Mn^2+}) = 1.23\,\mathrm{V}$; and in basic solution $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 0.59\,\mathrm{V}$ and $E^\circ(\ce{MnO2}/\ce{Mn(OH)2}) = -0.05\,\mathrm{V}$. They can be calculated from the adjacent couples (12.2.2).
 
 Comparing the two rows, the potential of the same couple is generally much higher in acidic than in basic solution (except for the couples below $\ce{MnO2}$): oxoanions are strong oxidizing agents in acidic solution, while low oxidation states ($\ce{Mn(OH)2}$) are fairly strong reducing agents in basic solution and are readily oxidized by air.
 
@@ -214,7 +214,7 @@ The two lines are parallel and are $1.229\,\mathrm{V}$ apart (the electromotive 
 - Any point on line a represents equilibrium between $\ce{H+}$ and $\ce{H2}$ at that pH. A couple with an electrode potential below line a has a reduced form that can reduce water ($\ce{H+}$), releasing $\ce{H2}$; the region below line a is the stability region of $\ce{H2}$.
 - Between lines a and b lies the region of thermodynamic stability of $\ce{H2O}$: oxidizing and reducing agents with electrode potentials in this region can exist stably in water. In neutral solution (pH 7) this interval is $-0.41$ to $0.82\,\mathrm{V}$.
 
-In reality the decomposition of water also has kinetic barriers: evolving $\ce{H2}$ and $\ce{O2}$ at an electrode both require exceeding the equilibrium potential by a certain amount (the **overpotential**, 12.4.2). The actual stability region is therefore wider than that between lines a and b, and in the diagram two dashed lines c and d indicate it (each extended by about $0.5\,\mathrm{V}$; the exact values depend on the electrode material and the current density). For example, $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.358\,\mathrm{V}$ lies above line b at pH 0, so $\ce{Cl2}$ can in theory oxidize water, but the reaction is very slow and chlorine water can be kept for some time; the same is true of $\ce{KMnO4}$ solution.
+In reality the decomposition of water also has kinetic barriers: evolving $\ce{H2}$ and $\ce{O2}$ at an electrode both require the electrode potential to depart from its equilibrium value by a certain amount (the **overpotential**, 12.4.2: lower for $\ce{H2}$ evolution, higher for $\ce{O2}$ evolution). The actual stability region is therefore wider than that between lines a and b, and in the diagram two dashed lines c and d indicate it (each extended by about $0.5\,\mathrm{V}$; the exact values depend on the electrode material and the current density). For example, $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.358\,\mathrm{V}$ lies above line b at pH 0, so $\ce{Cl2}$ can in theory oxidize water, but the reaction is very slow and chlorine water can be kept for some time; the same is true of $\ce{KMnO4}$ solution.
 
 ![Potential–pH diagram of water (298.15 K, p(H₂) = p(O₂) = p°): between lines a and b is the region of thermodynamic stability of water, and the dashed lines c and d indicate the range extended by overpotential; the potentials of F₂/F⁻ and Na⁺/Na are independent of pH and are horizontal lines, far above line d and far below line c respectively](./plots/water-stability.py)
 
@@ -255,18 +255,25 @@ In an electrolytic cell the electrode connected to the positive terminal of the 
 
 The theoretical decomposition voltage in the example above is $1.615\,\mathrm{V}$ (standard conditions). The actual decomposition voltage is always larger than the theoretical value. For example, for the electrolysis of $1\,\mathrm{mol\,L^{-1}}$ $\ce{H2SO4}$ solution (that is, of water) at platinum electrodes, the theoretical decomposition voltage is $1.23\,\mathrm{V}$ and the actual value is about $1.7\,\mathrm{V}$. Besides the voltage drop $IR$ caused by the resistance of the electrolyte and contact resistance, the main reason is the overpotential at the electrodes.
 
-**Definition 12.4.3 (Overpotential)** The absolute value of the difference between the actual potential of an electrode when current flows and its equilibrium potential (the value calculated from the Nernst equation) is called the **overpotential** of that electrode, denoted $\eta$.
-
-Overpotential arises from the finite rate of the electrode reaction itself (electron transfer and bubble formation must cross energy barriers, like the **activation energy** of a reaction) and from concentration changes near the electrode surface. It varies with electrode material, current density, and temperature: it is larger when gases are evolved and smaller when metals are deposited; the overpotential of $\ce{H2}$ is very small on Pt and very large on Hg, Pb, and Zn. Thus
+**Definition 12.4.3 (Overpotential)** When current flows, the difference between the actual potential $E$ of an electrode and its equilibrium potential $E_{\mathrm{eq}}$ (the value calculated from the Nernst equation)
 
 $$
-E_{\text{decomp., actual}} = E_{\text{decomp., theoretical}} + \eta_{\text{anode}} + \eta_{\text{cathode}} + IR.
+\eta = E - E_{\mathrm{eq}}
 $$
-Overpotential has both advantages and disadvantages. It wastes electrical energy, but it also makes possible some electrolyses that are thermodynamically unfavorable: $E^\circ(\ce{Zn^2+}/\ce{Zn}) = -0.762\,\mathrm{V}$ is far lower than that of $\ce{H+}/\ce{H2}$, yet because of the large overpotential of $\ce{H2}$ on Zn, zinc can still be obtained by electrolysis of acidic $\ce{ZnSO4}$ solution; in the electrolysis of brine, although the equilibrium potential of $\ce{O2}/\ce{H2O}$ is lower than that of $\ce{Cl2}/\ce{Cl-}$, the overpotential of $\ce{O2}$ is larger, and $\ce{Cl2}$ is mainly evolved at the anode. The quantitative theory of overpotential (the Tafel and Butler–Volmer equations) is found in [Physical Chemistry](/6.3).
+is called the **overpotential** of that electrode.
+
+With this signed IUPAC definition, $\eta > 0$ at an anode (oxidation) and $\eta < 0$ at a cathode (reduction): to drive oxidation at a finite rate the electrode potential must be raised above its equilibrium value, and to drive reduction it must be lowered below it. Many textbooks take the absolute value and define the overpotential as a positive quantity.
+
+Overpotential arises from the finite rate of the electrode reaction itself (electron transfer and bubble formation must cross energy barriers, like the **activation energy** of a reaction) and from concentration changes near the electrode surface. Its magnitude $\lvert\eta\rvert$ varies with electrode material, current density, and temperature: it is larger when gases are evolved and smaller when metals are deposited; the overpotential for $\ce{H2}$ evolution is very small on Pt and very large on Hg, Pb, and Zn. The anode potential is raised by $\eta_{\text{anode}}$ and the cathode potential lowered by $\lvert\eta_{\text{cathode}}\rvert$, so
+
+$$
+E_{\text{decomp., actual}} = E_{\text{decomp., theoretical}} + \eta_{\text{anode}} - \eta_{\text{cathode}} + IR = E_{\text{decomp., theoretical}} + \eta_{\text{anode}} + \lvert\eta_{\text{cathode}}\rvert + IR.
+$$
+Overpotential has both advantages and disadvantages. It wastes electrical energy, but it also makes possible some electrolyses that are thermodynamically unfavorable: $E^\circ(\ce{Zn^2+}/\ce{Zn}) = -0.762\,\mathrm{V}$ is far lower than that of $\ce{H+}/\ce{H2}$, yet because the overpotential for $\ce{H2}$ evolution on Zn is large in magnitude, zinc can still be obtained by electrolysis of acidic $\ce{ZnSO4}$ solution; in the electrolysis of brine, although the equilibrium potential of $\ce{O2}/\ce{H2O}$ is lower than that of $\ce{Cl2}/\ce{Cl-}$, the overpotential of $\ce{O2}$ is larger, and $\ce{Cl2}$ is mainly evolved at the anode. The quantitative theory of overpotential (the Tafel and Butler–Volmer equations) is found in [Physical Chemistry](/6.3).
 
 ### 12.4.3. Faraday's Laws of Electrolysis
 
-In 1834 Faraday found experimentally that the amount of substance deposited or dissolved at an electrode during electrolysis is proportional to the quantity of charge passed and independent of other factors.
+In 1833–1834 Faraday found experimentally that the amount of substance deposited or dissolved at an electrode during electrolysis is proportional to the quantity of charge passed and independent of other factors.
 
 **Theorem 12.4.1 (Faraday's Laws of Electrolysis)** In electrolysis, the amount of substance B that reacts at an electrode is proportional to the charge $Q = It$ passed through the electrode:
 
