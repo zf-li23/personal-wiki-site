@@ -1,7 +1,7 @@
 ---
 title: Conductors in Electrostatic Fields
 description: Conditions for electrostatic equilibrium of a conductor, charge distribution and surface field at equilibrium, point discharge, computing electrostatic fields in the presence of conductors, conducting shells and electrostatic shielding, the uniqueness theorem of electrostatics and numerical solution of Laplace's equation, and the method of images (grounded plane and grounded sphere).
-source_hash: 15fb796bc521
+source_hash: 5055dbb4d260
 ---
 
 The previous two chapters treated electrostatic fields of given charge distributions in vacuum. Real electric fields always involve matter, which can be classified by its electrical behavior. A conductor contains a large number of charges that are free to move (free electrons in metals, ions in electrolytes); an insulator (dielectric) has almost no freely moving charges; a semiconductor lies between the two; a superconductor has zero resistance and also expels magnetic fields. There are also plasmas, with equal densities of positive and negative charged particles. This chapter treats an isotropic, homogeneous metallic conductor placed in an electrostatic field: the free charges redistribute under the electric force until the field inside the conductor vanishes. The charge distribution on the surface in turn changes the external field; it is not known in advance and has to be determined from the condition that the conductor is an equipotential body. Mathematically this is a **boundary value problem** for Laplace's equation ([2.5.8](/2.5.8)): the uniqueness theorem of §3.5 guarantees that the solution is unique once suitable boundary conditions are given, and the **method of images** of §3.6 exploits this to construct closed-form solutions for special geometries. Dielectrics are left to [5.3.4](/5.3.4); the band-theory explanation of conductors, semiconductors and insulators is in [5.5.6](/5.5.6), and superconductivity in [5.3.9](/5.3.9). Section 3.5 is optional.
@@ -215,17 +215,43 @@ If the sphere is insulated and carries charge $Q$ instead of being grounded, pla
 
 **Example 3.6.3 (Conducting Sphere in a Uniform Field)** [Example 5.4.2](/2.5.5#ex-5.4.2) in [2.5.5](/2.5.5) used separation of variables to find the potential outside a grounded conducting sphere (radius $R$) in a uniform field $\boldsymbol{E}_0=E_0\boldsymbol{e}_z$, $\varphi=-E_0\Big(r-\frac{R^3}{r^2}\Big)\cos\theta$. The second term is the potential of an **electric dipole** at the center with **electric dipole moment** $\boldsymbol{p}=4\pi\varepsilon_0R^3\boldsymbol{E}_0$ ([Example 2.3.1](/5.3.2#ex-2.3.1)); it is the "image" for this problem. The induced charge on the sphere is $\sigma=-\varepsilon_0\frac{\partial\varphi}{\partial r}\Big|_{r=R}=3\varepsilon_0E_0\cos\theta$, with zero total, so an insulated uncharged conducting sphere gives the same result.
 
+## Summary
+
+- Conditions for electrostatic equilibrium (Theorem 3.1.1): $\boldsymbol{E} = \boldsymbol{0}$ inside the conductor and the field just outside is normal to the surface; the conductor is an equipotential body. Consequently the net charge resides only on the surface (Property 3.2.1), the field just outside is $\boldsymbol{E} = \frac{\sigma}{\varepsilon_0}\boldsymbol{e}_{\mathrm{n}}$ (Property 3.2.2), and on an isolated conductor the surface charge density is largest where the curvature is largest (corona discharge at sharp points).
+- The tools for finding the field in the presence of conductors are superposition, Gauss's law and the circulation theorem, conservation of charge, and the equilibrium conditions; the strategy is to find the surface charge distribution that makes the total field inside the conductor vanish (Example 3.3.1).
+- Conducting shells:
+
+| Case | Charge on the inner surface | Field in the cavity | Field outside |
+|---|---|---|---|
+| No charge in the cavity (Theorem 3.4.1) | Zero everywhere | Zero, unaffected by outside charges | Set by the outer-surface charge and the outside charges |
+| Charge $q$ in the cavity (Theorem 3.4.2) | Total $-q$, distribution depends on where $q$ is | Set only by $q$ and the inner-surface charge | Outer-surface charge $Q + q$, changes with the magnitude of $q$ |
+| Grounded (Theorem 3.4.3) | $-q$ | As above | Set only by the outside charges, independent of the charge in the cavity |
+
+- Uniqueness theorem of electrostatics (Theorem 3.5.1): the field is uniquely determined once the charge in the region, the potential or its normal derivative on the outer boundary, and the potential or total charge of each conductor are given; the proof uses Green's first identity.
+- The method of images rests on the uniqueness theorem: image charges placed outside the region of interest keep the boundary conditions unchanged. The image of a point charge $q$ outside a grounded plane is $-q$ (Example 3.6.1); the image of $q$ at distance $l$ from the center of a grounded sphere is $q' = -\frac{R}{l}q$ at $l' = R^2/l$ (Example 3.6.2); the conducting sphere in a uniform field is treated in Example 3.6.3.
+
 ## Questions
 
 1. Is the field inside a conductor in electrostatic equilibrium zero only for spherical conductors?
-   Hint: no. For a conductor of any shape the field inside is zero in electrostatic equilibrium; this is the equilibrium condition and is independent of the shape.
+
+   **Answer** no. For a conductor of any shape the field inside is zero in electrostatic equilibrium; this is the equilibrium condition and is independent of the shape.
+
 2. After an isolated conductor is given a positive charge, does its mass increase, decrease or stay the same?
-   Hint: it decreases. Becoming positively charged means losing electrons, but the decrease (each electron has mass $9.1\times10^{-31}\,\mathrm{kg}$) is minuscule.
+
+   **Answer** it decreases. Becoming positively charged means losing electrons, but the decrease (each electron has mass $9.1\times10^{-31}\,\mathrm{kg}$) is minuscule.
+
 3. When a charged body is brought near a conducting shell, is the field that the body alone produces in the cavity zero? How does electrostatic shielding come about?
-   Hint: it is not zero. The body induces charge on the outer surface, and the field of the induced charge in the cavity exactly cancels that of the body; shielding is the result of this superposition.
+
+   **Answer** it is not zero. The body induces charge on the outer surface, and the field of the induced charge in the cavity exactly cancels that of the body; shielding is the result of this superposition.
+
 4. A point charge is placed at the center of an isolated conducting spherical shell. Is the charge distribution on the inner and outer surfaces uniform? What if the charge is off-center?
-   Hint: at the center both surfaces are uniform; off-center the inner surface is nonuniform while the outer surface is still uniform (Example 3.4.1).
+
+   **Answer** at the center both surfaces are uniform; off-center the inner surface is nonuniform while the outer surface is still uniform (Example 3.4.1).
+
 5. The field is stronger where the surface of a charged conductor has greater curvature. Starting at a point $a$ on a conductor, go along a field line for some distance, then go perpendicular to the field lines onto another field line, follow it back to a point $b$ on the conductor, and finally return to $a$ along the conductor surface. The field at $a$ is stronger than at $b$. Is the circulation along this closed path nonzero, violating the circulation theorem?
-   Hint: no. The segment perpendicular to the field lines lies on an equipotential surface, and the integrals along the two field-line segments both equal the potential difference between the conductor and this equipotential surface, so they are equal; the field is stronger at $a$, but that segment is also shorter (the equipotential surfaces are denser there). The integrals along the conductor surface and along the perpendicular segment vanish, so the total circulation is zero.
+
+   **Answer** no. The segment perpendicular to the field lines lies on an equipotential surface, and the integrals along the two field-line segments both equal the potential difference between the conductor and this equipotential surface, so they are equal; the field is stronger at $a$, but that segment is also shorter (the equipotential surfaces are denser there). The integrals along the conductor surface and along the perpendicular segment vanish, so the total circulation is zero.
+
 6. Find the image charges for the following problems, or show that they do not exist: (1) a point charge $q$ inside the right angle formed by two perpendicular grounded conducting half-planes; (2) an infinitely long uniformly charged line (linear density $\lambda$) parallel to a grounded conducting plane; (3) a point charge inside the $270^\circ$ angle formed by two grounded conducting half-planes; (4) a point charge midway between two parallel grounded conducting plates; (5) a point charge $q$ outside an insulated conducting sphere carrying charge $Q$.
-   Hint: (1) Three image charges: the mirror images $-q$, $-q$ in the two planes, and $+q$ at the point symmetric about the line of intersection. (2) The mirror image $-\lambda$ in the plane. (3) No finite set of point image charges exists: only when the angle between the planes is $\pi/n$ ($n$ a positive integer) can the problem be solved with $2n-1$ image charges. (4) Infinitely many image charges are needed: place $-q,+q,-q,\dots$ alternately at $\pm2d,\pm4d,\pm6d,\dots$ ($d$ is the distance from the charge to each plate). (5) Put $-\frac{R}{l}q$ at $\frac{R^2}{l}$ and $Q+\frac{R}{l}q$ at the center of the sphere.
+
+   **Answer** (1) Three image charges: the mirror images $-q$, $-q$ in the two planes, and $+q$ at the point symmetric about the line of intersection. (2) The mirror image $-\lambda$ in the plane. (3) No finite set of point image charges exists: only when the angle between the planes is $\pi/n$ ($n$ a positive integer) can the problem be solved with $2n-1$ image charges. (4) Infinitely many image charges are needed: place $-q,+q,-q,\dots$ alternately at $\pm2d,\pm4d,\pm6d,\dots$ ($d$ is the distance from the charge to each plate). (5) Put $-\frac{R}{l}q$ at $\frac{R^2}{l}$ and $Q+\frac{R}{l}q$ at the center of the sphere.

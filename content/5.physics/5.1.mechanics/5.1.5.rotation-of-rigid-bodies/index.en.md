@@ -1,7 +1,7 @@
 ---
 title: Rotation of Rigid Bodies
 description: Motion of a rigid body and its angular velocity; the law of rotation about a fixed axis and the moment of inertia (parallel- and perpendicular-axis theorems); work, energy and angular momentum conservation for fixed-axis rotation; the relation between angular momentum and angular velocity, precession and nutation; degrees of freedom and Euler angles; plane motion of a rigid body (instantaneous center, rolling without slipping, König's theorem).
-source_hash: 8f7c13efd694
+source_hash: 12a483b9271a
 ---
 
 A rigid body is an idealized system of **particles** whose mutual distances never change. Hence all the laws for systems of particles in [5.1.3](/5.1.3) and [5.1.4](/5.1.4) (the **center-of-mass theorem**, the **angular momentum theorem**, the **work–energy principle**) apply to it without change, and the rigidity constraint reduces them to especially simple forms. For rotation about a fixed axis a single angular coordinate suffices; the **dynamics** equation $M=J\alpha$ corresponds one-to-one to **Newton's second law** $F=ma$, with the moment of inertia playing the role of mass. This chapter begins with the **kinematics** of a rigid body (the **angular velocity** does not depend on the base point), then treats the law of rotation about a fixed axis, the computation of moments of inertia, and the work–energy and angular momentum relations. It next discusses precession, which arises when the **angular momentum** is not parallel to the angular velocity, and from there introduces the notion of degrees of freedom. It ends with a short account of the plane motion of a rigid body (rolling). The mathematics used includes the **cross product** ($\boldsymbol{v}=\boldsymbol{\omega}\times\boldsymbol{r}$), the **moment of inertia** as an integral ([2.2.12](/2.2.12)), and the principal axes of a **symmetric matrix** (the inertia tensor). The notion of degrees of freedom is used again in the equipartition theorem of thermal physics ([5.2.1](/5.2.1)).
@@ -430,6 +430,9 @@ Plane motion is the translation of the center of mass (center-of-mass theorem) p
 ## Questions
 
 1. How can one measure the moment of inertia of an irregularly shaped object in the laboratory?
-   Hint: the falling-body method of Example 5.4.1; or treat the object as a physical pendulum or torsion pendulum and measure the period of small oscillations ([5.1.6](/5.1.6)), from which $J$ follows.
+
+   **Answer** the falling-body method of Example 5.4.1; or treat the object as a physical pendulum or torsion pendulum and measure the period of small oscillations ([5.1.6](/5.1.6)), from which $J$ follows.
+
 2. In Example 5.6.2, how should the interaction force between the clay and the disk be handled if the clay and the disk are analyzed as separate free bodies?
-   Hint: after sticking there is an unknown internal force between them; write Newton's equation for the clay and the law of rotation and center-of-mass theorem for the disk separately, and the internal force cancels when they are added, giving the same result as using the center-of-mass theorem for the whole system.
+
+   **Answer** after sticking there is an unknown internal force between them; write Newton's equation for the clay and the law of rotation and center-of-mass theorem for the disk separately, and the internal force cancels when they are added, giving the same result as using the center-of-mass theorem for the whole system.

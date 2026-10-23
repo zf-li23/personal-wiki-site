@@ -1,7 +1,7 @@
 ---
 title: Advanced Search Trees
 description: Splay trees (locality, single-level and double-level splaying, and amortized analysis by the potential method), B-trees (the memory hierarchy and I/O, structure and height, search, splitting on insertion, rotation and merging on deletion), red-black trees (the correspondence with (2,4)-trees, the height bound, double-red repair on insertion and double-black repair on deletion), and the ordered containers of standard libraries.
-source_hash: a7ff29df80b7
+source_hash: f3d060ca96a7
 ---
 
 **AVL trees** ([4.3.6](/4.3.6)) guarantee $O(\log n)$ performance in the worst case, but they treat every node alike, take no account of the level of memory in which the data reside, and a deletion may cause $\Theta(\log n)$ rotations. The three kinds of search trees in this chapter improve on this from three angles:
@@ -1430,3 +1430,16 @@ Python has no built-in balanced search tree: `dict` and `set` are hash tables ([
 | B-tree | $\approx \log_{m/2} n$ | worst case $O(\log_m n)$ I/Os | amortized $O(1)$ splits or merges | node size | external-memory indexes, cache-friendly in-memory containers |
 
 Red-black trees have many variants. The left-leaning red-black tree of Sedgewick (2008) requires that red edges lean only to the left, corresponding to 2-3 trees, and simplifies the code considerably; the AA tree follows a similar idea. The WAVL tree (weak AVL tree) of Haeupler, Sen and Tarjan (2015) unifies AVL trees and red-black trees: with insertions only, it is an AVL tree; with deletions, its height does not exceed that of a red-black tree, and each modification performs at most two rotations. There are also the treap and the skip list ([4.3.9](/4.3.9)), which stay balanced by relying on randomness; their expected performance is comparable to that of balanced trees, and they are simpler to implement.
+
+## Summary
+
+| | Splay tree | B-tree | Red-black tree |
+|---|---|---|---|
+| Motivation | Locality of access (Definition 8.1.1) | Memory hierarchy, cost counted in I/Os | Only $O(1)$ structural changes per update |
+| Structure | An ordinary binary search tree with no balance information | An $m$-way search tree, non-root nodes with at least $\lceil m/2 \rceil$ branches, all external nodes at the same depth (Definition 8.2.1) | A binary search tree with colors, corresponding to a $(2, 4)$-tree (Definition 8.3.1) |
+| Height | No guarantee; a single operation may cost $\Theta(n)$ | $\log_m (N+1) \le h \le \log_{\lceil m/2 \rceil} \frac{N+1}{2} + 1$ (Theorem 8.2.1) | $h \le 2\log_2(n+1)$ (Theorem 8.3.1) |
+| Adjustment | Double-level splaying (zig-zig rotates about $g$ first) moves the accessed node to the root | Overflow on insertion: split; underflow on deletion: rotation (borrow a key) or merge | Insertion: double-red repair (RR-1 restructuring, RR-2 recoloring = split); deletion: double-black repair (BB-1, BB-2R, BB-2B, BB-3) |
+| Cost | Amortized $O(\log n)$ (Theorem 8.1.2, potential method) | $O(\log_m N)$ I/Os | $O(\log n)$; at most $2$ rotations per insertion and $3$ per deletion |
+| Applications | Concentrated access patterns, caches | Database and file-system indexes (B+ trees), in-memory `BTreeMap` | C++ `std::map` / `std::set`, Java `TreeMap`; concurrency and persistence |
+
+Methods of analysis: the **potential method** (Definition 8.1.2) charges expensive operations to stored potential, with $\Phi = \sum_v \log_2 s(v)$ for splay trees (Lemma 8.1.1); the cost of B-trees is counted in I/Os rather than instructions; every case of the red-black tree can be understood by translating it into a split, rotation or merge in the $(2, 4)$-tree.

@@ -1,6 +1,6 @@
 ---
 title: Axiomatization of Propositional Logic
-source_hash: b9d0277f98f0
+source_hash: 7e767e380d72
 ---
 
 What is the most economical way to present a formal science? Euclid's *Elements* perhaps offers one answer: Book I opens with 23 definitions, 5 postulates, and 5 common notions, and every book that follows is filled with propositions, each of which can be proved from the axioms and the propositions before it. This is an axiomatic deductive system. An axiomatic system of logic must discard every notion that is not made explicit, truth values included, and prescribe only the derivability relations between strings of symbols. So let us now forget all the equivalence laws and rules of inference of the previous two chapters and enter a universe defined by Russell's axiom system alone. At the end we present another system, better suited to computers: Wang's algorithm.
@@ -197,3 +197,18 @@ Lines 6 and 7 contain no connectives and have a propositional variable in common
 - Goal-directed: the transformation rules are applied backward from the conclusion to be proved, and each step depends only on the connectives in the current sequent; there is no need to search for suitable substitutions as in Russell's axiom system.
 
 One chapter of such abstract material is enough. Next we turn to a more concrete language: predicate logic.
+
+## Summary
+
+| Aspect | Russell's axiom system (Section 3.2) | Wang Hao's algorithm (Section 3.4) |
+| :-- | :-- | :-- |
+| Basic objects | Formulas; $\vdash A$ means $A$ is a theorem | Sequents $\alpha \Rightarrow \beta$ (Definition 3.4.1) |
+| Primitive connectives | $\lnot, \lor$; the others introduced by Definitions 3.2.1–3.2.3 | $\lnot, \land, \lor, \to, \leftrightarrow$ |
+| Axioms | Four axioms | One: both sides contain only propositional variables and share one of them |
+| Transformation rules | Substitution, replacement, modus ponens | Ten left and right rules, each eliminating one connective |
+| Style of proof | Forward derivation; suitable substitutions must be found | Mechanical backward derivation from the goal (Algorithm 3.4.1), always terminating |
+
+- An axiom system consists of primitive symbols, formation rules, axioms, transformation rules and theorems (Definition 3.1.1); derivations follow the formal rules alone, without appeal to the meaning of truth values.
+- Russell's axiom system is sound, consistent and complete (Definition 3.3.1, Definition 3.3.2, Theorem 3.3.1): its theorems are exactly the tautologies.
+- The deduction theorem (Theorem 3.3.2) turns "deriving $B$ from $\Gamma$ and $A$" into "deriving $A \to B$ from $\Gamma$"; it justifies conditional proof inside the axiom system.
+- Wang Hao's algorithm is likewise sound and complete, and it is a decision procedure that a computer can carry out.

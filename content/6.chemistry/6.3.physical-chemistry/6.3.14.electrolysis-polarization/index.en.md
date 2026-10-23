@@ -1,7 +1,7 @@
 ---
 title: Electrolysis and Polarization
 description: Decomposition voltage and the electrochemical window; electrode polarization and the signed overpotential, exchange current density, concentration, activation and ohmic polarization, and the three-electrode cell; the Butler–Volmer equation from the transition-state picture, the Tafel equation and charge-transfer resistance, and the hydrogen evolution reaction; the diffusion layer and the limiting current, the Cottrell equation from the diffusion equation, polarography and the Ilkovič equation; deposition and separation of metals, and electrosynthesis; electrochemical corrosion, the corrosion potential and protection; performance parameters of electrochemical power sources, intercalation reactions, lithium-ion batteries and fuel cells.
-source_hash: e7b0f90e2064
+source_hash: d864c8ede0a0
 ---
 
 [6.3.13](/6.3.13) studied the equilibrium of electrodes when the current tends to zero: the potential of each electrode is determined by the Nernst equation, and the cell potential by $\Delta_{\mathrm{r}}G_{\mathrm{m}}$. Real electrolysis and battery discharge involve a finite current, so electrode reactions must proceed at a finite rate and the electrode potentials depart from their equilibrium values; this phenomenon is called polarization. Electrolysis requires a higher voltage than the thermodynamic value, and a discharging battery delivers a lower voltage than its electromotive force; in both cases the difference is caused by polarization. This chapter is about electrochemical kinetics. We first discuss the minimum voltage required for electrolysis (14.1) and the kinds of polarization (14.2); we then derive the relation between current and overpotential from the transition-state picture, namely the Butler–Volmer and Tafel equations (14.3), and the limiting current set by mass transport together with the Cottrell equation (14.4); finally we discuss applications to electrolysis (14.5), corrosion (14.6) and electrochemical power sources (14.7).
@@ -453,9 +453,26 @@ Many reactions in living organisms are electrochemical in nature: in the mitocho
 
 ## Questions
 
-1. Why does polarization raise the anode potential and lower the cathode potential in both electrolytic and galvanic cells? Why are its effects on the two kinds of device opposite? (For the anode to oxidize at a finite rate it needs $\eta > 0$, and the cathode the opposite. The anode of an electrolytic cell is the positive electrode, so polarization increases the cell voltage; the anode of a galvanic cell is the negative electrode, so polarization decreases the terminal voltage.)
-2. Why is an electrode with a large exchange current density suitable as a reference electrode? (When a small current passes, its overpotential is very small, its potential is stable, and it is not easily disturbed by reactions of impurities.)
-3. What can be inferred from Tafel slopes of $b = 0.12\,\mathrm{V}$ and $b = 0.03\,\mathrm{V}$, respectively? (The former corresponds to control by the first electron-transfer step with $\alpha \approx 0.5$; the latter to control by a chemical step following electron transfer (such as the recombination of H), 14.3.5.)
-4. Why can the diffusion current at a planar electrode in quiescent solution not reach a steady state? Why can the dropping mercury electrode give a steady mean current? (The Cottrell current decays as $t^{-1/2}$ to zero; the dropping mercury electrode renews the surface and the diffusion layer periodically.)
-5. After the coating is damaged, which rusts more readily, zinc-coated iron or tin-coated iron? (Tin-coated iron: the potential of Sn is higher than that of Fe, so Fe becomes the anode at the damaged spot.)
-6. Why does $\ce{LiFePO4}$ have a flat discharge plateau, whereas the discharge voltage of $\ce{LiCoO2}$ falls gradually with capacity? (The former is a two-phase reaction with constant chemical potential of the guest; the latter is a solid-solution reaction over most of the range, with the potential varying continuously with $x$, Eq. (14.5).)
+1. Why does polarization raise the anode potential and lower the cathode potential in both electrolytic and galvanic cells? Why are its effects on the two kinds of device opposite?
+
+   **Answer** For the anode to oxidize at a finite rate it needs $\eta > 0$, and the cathode the opposite. The anode of an electrolytic cell is the positive electrode, so polarization increases the cell voltage; the anode of a galvanic cell is the negative electrode, so polarization decreases the terminal voltage.
+
+2. Why is an electrode with a large exchange current density suitable as a reference electrode?
+
+   **Answer** When a small current passes, its overpotential is very small, its potential is stable, and it is not easily disturbed by reactions of impurities.
+
+3. What can be inferred from Tafel slopes of $b = 0.12\,\mathrm{V}$ and $b = 0.03\,\mathrm{V}$, respectively?
+
+   **Answer** The former corresponds to control by the first electron-transfer step with $\alpha \approx 0.5$; the latter to control by a chemical step following electron transfer (such as the recombination of H), 14.3.5.
+
+4. Why can the diffusion current at a planar electrode in quiescent solution not reach a steady state? Why can the dropping mercury electrode give a steady mean current?
+
+   **Answer** The Cottrell current decays as $t^{-1/2}$ to zero; the dropping mercury electrode renews the surface and the diffusion layer periodically.
+
+5. After the coating is damaged, which rusts more readily, zinc-coated iron or tin-coated iron?
+
+   **Answer** Tin-coated iron: the potential of Sn is higher than that of Fe, so Fe becomes the anode at the damaged spot.
+
+6. Why does $\ce{LiFePO4}$ have a flat discharge plateau, whereas the discharge voltage of $\ce{LiCoO2}$ falls gradually with capacity?
+
+   **Answer** The former is a two-phase reaction with constant chemical potential of the guest; the latter is a solid-solution reaction over most of the range, with the potential varying continuously with $x$, Eq. (14.5).

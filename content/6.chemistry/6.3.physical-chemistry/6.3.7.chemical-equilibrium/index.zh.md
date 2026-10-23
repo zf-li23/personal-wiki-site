@@ -362,8 +362,13 @@ $$
 ## 思考题
 
 1. 对反应 $\ce{2H2(g) + O2(g) <=> 2H2O(g)}$，若三种物质的量之比分别为 $1:1:1$ 与 $2:1:2$，其他条件相同，$K^\circ$、$Q$、$\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$、$\Delta_{\mathrm{r}}G_{\mathrm{m}}$ 中哪些相同？
-   答：$K^\circ$ 与 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ 只与温度有关，相同；$Q$ 与 $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ 随组成而变，不同。
+
+   **答** $K^\circ$ 与 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ 只与温度有关，相同；$Q$ 与 $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ 随组成而变，不同。
+
 2. "若选不同的标准态，$\mu^\circ_{\mathrm{B}}$ 不同，所以 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ 不同，但 $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ 相同"对吗？"平衡移动了，平衡常数一定改变"对吗？
-   答：前者对，$\Delta_{\mathrm{r}}G_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\mu_{\mathrm{B}}$ 由系统的状态决定；后者错，改变压力或浓度可使平衡移动而 $K^\circ$ 不变。
+
+   **答** 前者对，$\Delta_{\mathrm{r}}G_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\mu_{\mathrm{B}}$ 由系统的状态决定；后者错，改变压力或浓度可使平衡移动而 $K^\circ$ 不变。
+
 3. 能否说所有化学反应都存在化学平衡，"不能反应"的平衡常数为零，"完全反应"的平衡常数为无穷大？
-   答：不能。$K^\circ = \exp(-\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/RT)$ 总是有限的正数，只是可以极大或极小。另一方面，反应物与产物都是互不混合的纯凝聚相时（7.1.1），系统没有组成可以调节，除了 $K^\circ$ 恰好等于 1 的温度外不存在平衡态，反应要么进行到底，要么不进行。
+
+   **答** 不能。$K^\circ = \exp(-\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/RT)$ 总是有限的正数，只是可以极大或极小。另一方面，反应物与产物都是互不混合的纯凝聚相时（7.1.1），系统没有组成可以调节，除了 $K^\circ$ 恰好等于 1 的温度外不存在平衡态，反应要么进行到底，要么不进行。

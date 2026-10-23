@@ -1,6 +1,6 @@
 ---
 title: Foundations of Special Relativity
-source_hash: 8bcd2838fbb6
+source_hash: dfaa164cb731
 ---
 
 By the end of the 19th century, Newtonian mechanics, heat and the kinetic theory of molecules, wave optics and Maxwell's electromagnetic theory had all been enormously successful: Newtonian mechanics had predicted Neptune from the perturbations of the orbit of Uranus, and Maxwell's equations had predicted electromagnetic waves. In a 1900 lecture Kelvin said that only "two clouds" floated in the clear sky of physics: the null result of the ether-drift experiments and the difficulty of equipartition of energy in blackbody radiation. The first led to special relativity (1905) and the second to the quantum theory ([5.5.1](/5.5.1)); together with general relativity (1916), which revealed the relation between spacetime and gravitation, and quantum mechanics (1925), these conceptual revolutions of the early 20th century completely changed our understanding of time, space and matter.
@@ -490,7 +490,18 @@ the component of force along the direction of motion is unchanged, and the perpe
 
 ## Questions
 
-1. Time dilation says "moving clocks run slow", and S and S′ each consider the other's clocks to be slow. Is this self-contradictory? Hint: the two judgments compare different pairs of events; each reference frame uses its own row of synchronized clocks, and the other frame considers this row not to be synchronized ([Section 8.3](#sec-8.3)).
-2. Can the mass of a particle be changed by accelerating it? What is wrong with the statement that "the mass of a moving body increases"? Hint: the mass $m$ is a Lorentz invariant ($E^2-p^2c^2=m^2c^4$); what increases is the energy $\gamma mc^2$ and the momentum (Remark 8.7.1).
-3. Does the mass of a box change when the gas in it is heated? Hint: yes, $\Delta m=\Delta E_0/c^2$, but for everyday amounts of heat $\Delta m$ is too small to measure ($1\,\mathrm{J}$ corresponds to $1.1\times10^{-17}\,\mathrm{kg}$).
-4. The spot of a searchlight sweeping across distant clouds can move faster than $c$. Does this violate relativity? Hint: the illumination of different positions on the spot consists of different events with no causal connection; no signal or energy is transmitted, and $c$ imposes no limit.
+1. Time dilation says "moving clocks run slow", and S and S′ each consider the other's clocks to be slow. Is this self-contradictory?
+
+   **Answer** the two judgments compare different pairs of events; each reference frame uses its own row of synchronized clocks, and the other frame considers this row not to be synchronized ([Section 8.3](#sec-8.3)).
+
+2. Can the mass of a particle be changed by accelerating it? What is wrong with the statement that "the mass of a moving body increases"?
+
+   **Answer** the mass $m$ is a Lorentz invariant ($E^2-p^2c^2=m^2c^4$); what increases is the energy $\gamma mc^2$ and the momentum (Remark 8.7.1).
+
+3. Does the mass of a box change when the gas in it is heated?
+
+   **Answer** yes, $\Delta m=\Delta E_0/c^2$, but for everyday amounts of heat $\Delta m$ is too small to measure ($1\,\mathrm{J}$ corresponds to $1.1\times10^{-17}\,\mathrm{kg}$).
+
+4. The spot of a searchlight sweeping across distant clouds can move faster than $c$. Does this violate relativity?
+
+   **Answer** the illumination of different positions on the spot consists of different events with no causal connection; no signal or energy is transmitted, and $c$ imposes no limit.

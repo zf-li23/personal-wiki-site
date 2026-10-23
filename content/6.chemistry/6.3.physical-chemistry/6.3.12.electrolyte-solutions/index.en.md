@@ -1,7 +1,7 @@
 ---
 title: Electrolyte Solutions
 description: Ionic conductors and Faraday's laws of electrolysis; electric mobility, transport numbers and the Hittorf method; conductivity, molar conductivity and Kohlrausch's law; the law of independent migration of ions and applications of conductometry; the chemical potential of electrolytes, mean ionic activity coefficients and ionic strength; Debye–Hückel theory from the linearized Poisson–Boltzmann equation, and the Debye–Hückel–Onsager theory of conductivity.
-source_hash: 3ec3e024d888
+source_hash: 828f8cb72437
 ---
 
 Electrochemistry studies the interconversion of chemical and electrical energy. Its history is almost as long as that of electricity itself: Galvani (1791) observed "animal electricity" in a frog's leg; Volta (1800) built the first sustained source of current from a pile of zinc and copper disks separated by brine-soaked cardboard; Faraday (1833–1834) found that the amount of product in electrolysis is proportional to the quantity of electricity passed; Kohlrausch (1875–1879) measured the conductivity of a great many solutions; Arrhenius (1884–1887) proposed the theory of electrolytic dissociation; Nernst (1889) related the cell potential to the Gibbs energy of the cell reaction; and Tafel (1905) gave the empirical relation between overpotential and current. An electrochemical system consists of an electrolyte, two electrodes and an external circuit. These correspond to this chapter, to [6.3.13](/6.3.13) (the equilibrium at the electrode–solution interface at zero current) and to [6.3.14](/6.3.14) (the kinetics of electrode processes when current flows).
@@ -673,9 +673,26 @@ Both effects depend on the ionic atmosphere having time to form. In a high-frequ
 
 ## Questions
 
-1. True or false: the electric mobility of an ion in an electrolyte solution is a property of the ion itself. (False. The mobility depends on the concentration and on the other ions present; only the limiting mobility is a characteristic parameter of the ion in a given solvent at a given temperature.)
-2. Why is alternating current used to measure conductance, whereas the measurement of the cell potential requires the current to tend to zero? (The former avoids electrode reactions and polarization; the latter keeps the electrodes at equilibrium, [6.3.13](/6.3.13).)
-3. In a solution of a weak electrolyte, what do $\Lambda_{\mathrm{m}} = \sigma/c$ and $\sigma/(c\alpha)$ represent? (The former is the molar conductivity calculated from the total concentration of the electrolyte; the latter is calculated from the actual ion concentration and is approximately equal to $\Lambda^\infty_{\mathrm{m}}$.)
-4. The Hittorf method gives $t(\ce{H+}) \approx 0.82$ in $\ce{HCl}$. Is this consistent with the $\lambda^\infty$ values in the table? (Yes: $349.65/(349.65 + 76.31) = 0.821$.)
-5. What kind of electrolyte solution can be called "ideal"? Must $\gamma_\pm$ be considered in solutions of sparingly soluble salts and weak electrolytes? (Only an infinitely dilute solution is ideal; in calculating thermodynamic equilibrium constants one must still correct with the Debye–Hückel equation according to the actual ionic strength, Example 12.5.1.)
-6. Why is the charge number squared in the definition of ionic strength? (The screening comes from the linear expansion of the Boltzmann factor: each kind of ion contributes $z_i \times z_i$, one factor $z_i$ from its charge and the other from its response to the potential.)
+1. True or false: the electric mobility of an ion in an electrolyte solution is a property of the ion itself.
+
+   **Answer** False. The mobility depends on the concentration and on the other ions present; only the limiting mobility is a characteristic parameter of the ion in a given solvent at a given temperature.
+
+2. Why is alternating current used to measure conductance, whereas the measurement of the cell potential requires the current to tend to zero?
+
+   **Answer** The former avoids electrode reactions and polarization; the latter keeps the electrodes at equilibrium, [6.3.13](/6.3.13).
+
+3. In a solution of a weak electrolyte, what do $\Lambda_{\mathrm{m}} = \sigma/c$ and $\sigma/(c\alpha)$ represent?
+
+   **Answer** The former is the molar conductivity calculated from the total concentration of the electrolyte; the latter is calculated from the actual ion concentration and is approximately equal to $\Lambda^\infty_{\mathrm{m}}$.
+
+4. The Hittorf method gives $t(\ce{H+}) \approx 0.82$ in $\ce{HCl}$. Is this consistent with the $\lambda^\infty$ values in the table?
+
+   **Answer** Yes: $349.65/(349.65 + 76.31) = 0.821$.
+
+5. What kind of electrolyte solution can be called "ideal"? Must $\gamma_\pm$ be considered in solutions of sparingly soluble salts and weak electrolytes?
+
+   **Answer** Only an infinitely dilute solution is ideal; in calculating thermodynamic equilibrium constants one must still correct with the Debye–Hückel equation according to the actual ionic strength, Example 12.5.1.
+
+6. Why is the charge number squared in the definition of ionic strength?
+
+   **Answer** The screening comes from the linear expansion of the Boltzmann factor: each kind of ion contributes $z_i \times z_i$, one factor $z_i$ from its charge and the other from its response to the potential.

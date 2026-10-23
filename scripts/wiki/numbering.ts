@@ -113,6 +113,52 @@ export function checkHeadings(headings: HeadingInput[], prefix: string[]): Numbe
   return problems;
 }
 
+/**
+ * The only unnumbered ## sections of a chapter page, in this order, after all numbered ones.
+ * Pages with numbered sections must end with a summary; questions are optional.
+ */
+export const END_SECTIONS = {
+  summary: { zh: '小结', en: 'Summary' },
+  questions: { zh: '思考题', en: 'Questions' },
+} as const;
+
+/** Opens the folded answer of a question: a paragraph starting with **答** / **Answer**. */
+export const ANSWER_LABEL = { zh: '答', en: 'Answer' } as const;
+
+export function endSection(title: string): keyof typeof END_SECTIONS | null {
+  const t = title.trim();
+  for (const [key, names] of Object.entries(END_SECTIONS) as [keyof typeof END_SECTIONS, { zh: string; en: string }][]) {
+    if (t === names.zh || t === names.en) return key;
+  }
+  return null;
+}
+
+export function checkEndSections(headings: HeadingInput[], lang: 'zh' | 'en'): NumberingProblem[] {
+  const problems: NumberingProblem[] = [];
+  const names = `"${END_SECTIONS.summary[lang]}" and "${END_SECTIONS.questions[lang]}"`;
+  const seen: (keyof typeof END_SECTIONS)[] = [];
+  let numbered = false;
+  for (const h of headings) {
+    if (h.depth !== 2) continue;
+    if (parseHeadingNumber(h.text).number) {
+      numbered = true;
+      if (seen.length) problems.push({ line: h.line, message: `numbered section "${h.text}" comes after "${END_SECTIONS[seen[0]][lang]}": ${names} close the page` });
+      continue;
+    }
+    const key = endSection(h.text);
+    if (!key || h.text.trim() !== END_SECTIONS[key][lang]) {
+      problems.push({ line: h.line, message: `unnumbered heading "${h.text}": the only unnumbered sections are ${names}; number it, or merge it into one of them` });
+    } else if (seen.includes(key)) {
+      problems.push({ line: h.line, message: `"${h.text}" appears twice` });
+    } else if (key === 'summary' && seen.includes('questions')) {
+      problems.push({ line: h.line, message: `"${END_SECTIONS.summary[lang]}" must come before "${END_SECTIONS.questions[lang]}"` });
+    }
+    if (key) seen.push(key);
+  }
+  if (numbered && !seen.includes('summary')) problems.push({ message: `chapter pages end with "## ${END_SECTIONS.summary[lang]}"` });
+  return problems;
+}
+
 /* --------------------------------------------------------------- statements */
 
 /** Numbered statement kinds; the key is the language-neutral anchor prefix (thm-13.2.1). */

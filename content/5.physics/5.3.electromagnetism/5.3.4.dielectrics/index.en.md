@@ -1,7 +1,7 @@
 ---
 title: Dielectrics in Electrostatic Fields
 description: The effect of dielectrics on electric fields, electronic and orientation polarization, polarization, electric susceptibility and bound charge, the electric displacement and its Gauss's law, interface conditions, capacitors and capacitance, and electrostatic energy in the presence of dielectrics.
-source_hash: bd8c7ea06766
+source_hash: fa025dfdbf68
 ---
 
 The previous two chapters studied electrostatic fields in vacuum and in the presence of **conductors**, which contain a large number of free charges and in which the **electric field strength** vanishes at **electrostatic equilibrium**. This chapter studies the other class of matter, insulators, also called dielectrics. A dielectric contains almost no free charges, but its molecules are "stretched" or "turned" by an electric field, and bound charges that cannot move freely appear inside the medium and on its surface. The field of the bound charges only partly cancels the external field, so the field strength in the medium is reduced but not zero. Describing this requires two new macroscopic quantities, the polarization $\boldsymbol{P}$ and the electric displacement $\boldsymbol{D}$; the latter makes **Gauss's law** in a medium involve free charge only. On this basis we discuss capacitors, the most important application of dielectrics, and the electrostatic energy in the presence of dielectrics.
@@ -390,10 +390,17 @@ The total bound charge next to the lower hemisphere is $\sigma'\cdot2\pi R^2 = -
 ## Questions
 
 1. When the charges on the two plates of a capacitor are not equal and opposite (say $Q_1$ and $Q_2$), how is the capacitance computed from $C = Q/U$?
-   Hint: capacitance is a structural parameter independent of the charging state. For a parallel-plate capacitor, superposition gives the field between the plates $E = \frac{Q_1 - Q_2}{2\varepsilon_0S}$, which depends only on half the difference of the charges; with $Q = \frac{Q_1 - Q_2}{2}$ we still have $U = Q/C$. The same holds for unequal charges of the same sign: the extra $\frac{Q_1 + Q_2}{2}$ is distributed on the outer sides of the two plates and does not affect the voltage between them.
+
+   **Answer** capacitance is a structural parameter independent of the charging state. For a parallel-plate capacitor, superposition gives the field between the plates $E = \frac{Q_1 - Q_2}{2\varepsilon_0S}$, which depends only on half the difference of the charges; with $Q = \frac{Q_1 - Q_2}{2}$ we still have $U = Q/C$. The same holds for unequal charges of the same sign: the extra $\frac{Q_1 + Q_2}{2}$ is distributed on the outer sides of the two plates and does not affect the voltage between them.
+
 2. Use the circulation theorem for the electrostatic field to show that the field at the edge of a parallel-plate capacitor cannot drop abruptly from a uniform value to zero.
-   Hint: take a rectangular loop with one long side between the plates parallel to the field and the other outside, where the field is zero, and the two short sides perpendicular to the plates. If the field dropped abruptly to zero at the edge, the loop integral would equal $El \ne 0$, contradicting the circulation theorem. So there must be a fringing field that weakens gradually.
+
+   **Answer** take a rectangular loop with one long side between the plates parallel to the field and the other outside, where the field is zero, and the two short sides perpendicular to the plates. If the field dropped abruptly to zero at the edge, the loop integral would equal $El \ne 0$, contradicting the circulation theorem. So there must be a fringing field that weakens gradually.
+
 3. Why can the field inside a conductor be zero while the field inside a dielectric can be nonzero?
-   Hint: free charges in a conductor can move any distance and keep moving as long as there is a field inside, until the external field is canceled completely; bound charges in a dielectric are held in molecules and can only be displaced slightly, the degree of polarization is determined by the total field, and at equilibrium the total field is nonzero.
+
+   **Answer** free charges in a conductor can move any distance and keep moving as long as there is a field inside, until the external field is canceled completely; bound charges in a dielectric are held in molecules and can only be displaced slightly, the degree of polarization is determined by the total field, and at equilibrium the total field is nonzero.
+
 4. Does the circulation theorem for $\boldsymbol{E}$ hold in the presence of dielectrics? Must the loop integral of $\boldsymbol{D}$ vanish?
-   Hint: the circulation theorem for $\boldsymbol{E}$ holds because all the charges are stationary. The loop integral of $\boldsymbol{D}$ need not vanish: at the interface of two media $E_{\mathrm{t}}$ is continuous, so $D_{\mathrm{t}} = \varepsilon E_{\mathrm{t}}$ is discontinuous, and on a rectangular loop across the interface $\oint\boldsymbol{D}\cdot\mathrm{d}\boldsymbol{l} = (\varepsilon_1 - \varepsilon_2)E_{\mathrm{t}}\Delta l \ne 0$.
+
+   **Answer** the circulation theorem for $\boldsymbol{E}$ holds because all the charges are stationary. The loop integral of $\boldsymbol{D}$ need not vanish: at the interface of two media $E_{\mathrm{t}}$ is continuous, so $D_{\mathrm{t}} = \varepsilon E_{\mathrm{t}}$ is discontinuous, and on a rectangular loop across the interface $\oint\boldsymbol{D}\cdot\mathrm{d}\boldsymbol{l} = (\varepsilon_1 - \varepsilon_2)E_{\mathrm{t}}\Delta l \ne 0$.

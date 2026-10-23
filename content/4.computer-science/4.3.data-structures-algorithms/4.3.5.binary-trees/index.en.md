@@ -1,7 +1,7 @@
 ---
 title: Binary Trees
 description: Terminology and representations of rooted and ordered trees; properties of binary trees, perfect, proper and complete binary trees; recursive and iterative algorithms for preorder, inorder, postorder and level-order traversal and their analysis; reconstructing a binary tree from traversal sequences; prefix codes and Huffman coding; lower bounds and reductions for comparison-based algorithms.
-source_hash: 95253e41cb16
+source_hash: 03b86dee8212
 ---
 
 A **vector** ([4.3.2](/4.3.2)) lets us access an element by **rank** in constant time, but insertion and deletion must move many elements; a **list** ([4.3.3](/4.3.3)) supports insertion and deletion in constant time, but access by rank must count from the head. Trees combine the strengths of both: as long as a tree is "short" enough, search, insertion and deletion all take only logarithmic time. Trees are also the natural tool for representing hierarchical relations: expressions, file systems, URLs and the syntactic structure of programs are all trees. A tree is not a linear structure, but once an access order (a traversal) is fixed it acquires linear features, which is why it is called a semilinear structure.
@@ -937,3 +937,17 @@ Besides decision trees, reduction is also a powerful tool for determining lower 
 If $A \le_N B$ and the lower bound of $A$ is $\Omega(f(n))$ (with $f(n) = \Omega(n)$), then the lower bound of $B$ is also $\Omega(f(n))$: otherwise, joining a fast algorithm for $B$ with the two linear conversions would give a faster algorithm for $A$. Polynomial-time reduction in complexity theory (NP-completeness) is the use of the same idea on a coarser scale.
 
 **Example 5.6.1** The element uniqueness problem: given $n$ real numbers, decide whether any two are equal. Ben-Or (1983) proved that it needs $\Omega(n \log n)$ time in the algebraic decision tree model, so the $O(n \log n)$ algorithm that sorts first and then checks adjacent elements is optimal. The closest pair problem in the plane (find the two closest among $n$ points) can be reduced from it: regard each real number $x_i$ as the point $(x_i, 0)$ in the plane, and the distance of the closest pair is $0$ if and only if some elements are equal. So the closest pair problem also needs $\Omega(n \log n)$ time.
+
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Rooted trees (Definitions 5.1.1, 5.1.2) | Depth, height (the empty tree has height $-1$), ancestors and descendants; parent, child, and parent + child representations |
+| Left-child right-sibling representation (Definition 5.2.1) | Every ordered tree and forest can be represented as a binary tree |
+| Properties of binary trees | $n_0 = n_2 + 1$ (Property 5.2.1); $h + 1 \le n \le 2^{h+1} - 1$, so $h \ge \lfloor \log_2 n \rfloor$ (Property 5.2.2); adding external nodes gives a proper binary tree, with $n + 1$ external nodes for $n$ internal ones (Proposition 5.2.3) |
+| Perfect, proper and complete binary trees (Definitions 5.2.2–5.2.4) | Every level full / every degree $0$ or $2$ / only the bottom level incomplete and filled from the left; a complete binary tree can be stored in a vector in level order, the children of rank $i$ having ranks $2i + 1$ and $2i + 2$ (Property 5.3.2) |
+| Preorder, inorder and postorder traversal (Definition 5.3.1) | Recursive versions in $O(n)$; iterative versions decompose along the left chain with a stack, each node pushed and popped once, $O(n)$ (Algorithms 5.3.1–5.3.3, Proposition 5.3.1); inorder successor in $O(h)$ |
+| Level-order traversal (Definition 5.3.2) | Uses a queue: breadth-first search on a tree |
+| Reconstruction (Theorem 5.4.1) | Inorder + preorder (or postorder) determines the binary tree uniquely, in $O(n)$; preorder + postorder does not; an augmented preorder sequence alone does |
+| Huffman coding (Definition 5.5.1, Algorithm 5.5.1) | Prefix codes = coding trees with characters at the leaves; greedily merging the two lightest trees gives an optimal coding tree; implemented with a heap or "sort + two queues" in $O(n \log n)$; average code length $H \le \bar\ell < H + 1$ |
+| Lower bounds (Definitions 5.6.1–5.6.3) | The height of an algebraic decision tree is a worst-case lower bound: comparison-based sorting needs $\Omega(n \log n)$ comparisons (Theorem 5.6.1); linear reductions transfer lower bounds to other problems (Example 5.6.1) |

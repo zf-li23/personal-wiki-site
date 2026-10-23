@@ -1,7 +1,7 @@
 ---
 title: The d-Block and f-Block Elements
 description: Electron configurations, physical properties, the lanthanide contraction, oxidation states and colors of the d-block elements; redox chemistry of the titanium, vanadium, chromium and manganese groups and the iron triad (Frost diagrams, the chromate–dichromate equilibrium, potassium permanganate); chemistry and ion identification of copper, silver, zinc and mercury; valence structure, oxidation states, colors, magnetism and compounds of the lanthanoids and rare-earth elements.
-source_hash: 975ced6de76a
+source_hash: 1e93bc1d9a01
 ---
 
 The d-block elements (Groups 3–12) form the large block of metals in the middle of the periodic table, and the f-block elements (the lanthanoids and actinoids) are the two rows inserted into the sixth and seventh periods. Unlike those of the s and p blocks, their additional electrons enter the penultimate $(n-1)\mathrm{d}$ subshell or the antepenultimate $(n-2)\mathrm{f}$ subshell while the outermost shell hardly changes, so the properties change much more gradually across a period; the d and f electrons also bring properties rare among the main-group elements: several oxidation states and a rich redox chemistry, colored compounds, paramagnetism and a very strong tendency to form complexes. This chapter first discusses the general features of the d block (Section 15.1), then introduces the representative elements of the first transition series group by group (Sections 15.2–15.8), and finally the lanthanoids (Section 15.9). Three groups of tools from the earlier chapters are used here extensively: crystal field theory of complexes ([6.1.5](/6.1.5)) explains colors, magnetism and the stability of certain oxidation states; Latimer and Frost diagrams ([6.1.12](/6.1.12)) summarize redox behavior; and coordination and precipitation equilibria ([6.1.9](/6.1.9), [6.1.10](/6.1.10)) explain the identification and separation of ions. The magnetism of the lanthanoids requires the term symbols of atoms ([5.5.4](/5.5.4)). The bioinorganic chemistry of metalloenzymes, hemoglobin and so on is covered in chemical biology ([6.6](/6.6)) and biochemistry ([7.1](/7.1)), and the bonding theories of coordination compounds in [Structural Chemistry](/6.2).
@@ -538,10 +538,17 @@ The chemistry of the d-block elements is determined by the d electrons: the numb
 ## Questions
 
 1. Why is $\ce{Fe^3+}$ stable in acidic solution whereas $\ce{Co^3+}$ is not? Why is $\ce{[Co(NH3)6]^3+}$ nevertheless very stable?
-   Answer: $E^\circ(\ce{Co^3+}/\ce{Co^2+}) = 1.92\,\mathrm{V}$ is larger than $1.229\,\mathrm{V}$, so $\ce{Co^3+}$ can oxidize water, whereas $E^\circ(\ce{Fe^3+}/\ce{Fe^2+}) = 0.771\,\mathrm{V}$ cannot. $\ce{NH3}$ is a strong-field ligand, the low-spin $t_{2g}^6$ configuration of $\ce{Co^3+}$ has a large crystal field stabilization energy, and $\ce{[Co(NH3)6]^3+}$ is far more stable than $\ce{[Co(NH3)6]^2+}$, which lowers the electrode potential to about $0.1\,\mathrm{V}$.
+
+   **Answer** $E^\circ(\ce{Co^3+}/\ce{Co^2+}) = 1.92\,\mathrm{V}$ is larger than $1.229\,\mathrm{V}$, so $\ce{Co^3+}$ can oxidize water, whereas $E^\circ(\ce{Fe^3+}/\ce{Fe^2+}) = 0.771\,\mathrm{V}$ cannot. $\ce{NH3}$ is a strong-field ligand, the low-spin $t_{2g}^6$ configuration of $\ce{Co^3+}$ has a large crystal field stabilization energy, and $\ce{[Co(NH3)6]^3+}$ is far more stable than $\ce{[Co(NH3)6]^2+}$, which lowers the electrode potential to about $0.1\,\mathrm{V}$.
+
 2. Why do a white precipitate and a brown solution form when KI is added to a $\ce{CuSO4}$ solution?
-   Answer: $\ce{2Cu^2+ + 4I- -> 2CuI v + I2}$ gives white CuI and $\ce{I2}$ (which forms brown $\ce{I3-}$ with excess $\ce{I-}$); the low solubility of CuI raises $E^\circ(\ce{Cu^2+}/\ce{CuI})$ to $0.86\,\mathrm{V}$, which is larger than $E^\circ(\ce{I2}/\ce{I-})$.
+
+   **Answer** $\ce{2Cu^2+ + 4I- -> 2CuI v + I2}$ gives white CuI and $\ce{I2}$ (which forms brown $\ce{I3-}$ with excess $\ce{I-}$); the low solubility of CuI raises $E^\circ(\ce{Cu^2+}/\ce{CuI})$ to $0.86\,\mathrm{V}$, which is larger than $E^\circ(\ce{I2}/\ce{I-})$.
+
 3. Why are Zr and Hf, and Nb and Ta, difficult to separate? Why are the lanthanoids even more difficult to separate?
-   Answer: In the former case the lanthanide contraction makes the radii of the fifth- and sixth-period elements of the same group almost equal; within the lanthanoids, adjacent elements differ in electron configuration by only one 4f electron, which hardly takes part in bonding, and the radii differ by only about $1\,\mathrm{pm}$, so the differences in chemical properties are even smaller.
+
+   **Answer** In the former case the lanthanide contraction makes the radii of the fifth- and sixth-period elements of the same group almost equal; within the lanthanoids, adjacent elements differ in electron configuration by only one 4f electron, which hardly takes part in bonding, and the radii differ by only about $1\,\mathrm{pm}$, so the differences in chemical properties are even smaller.
+
 4. Why does $\ce{Gd^3+} $, which has the most unpaired electrons, not have the largest magnetic moment among the lanthanoid ions?
-   Answer: For $\ce{Gd^3+}$ ($4\mathrm{f}^7$) $L = 0$, and the magnetic moment comes from spin alone ($7.9\,\mu_{\mathrm{B}}$); for the ions in the second half of the series $J = L + S$, the orbital and spin magnetic moments add, and $\ce{Dy^3+}$ and $\ce{Ho^3+}$ reach about $10.6\,\mu_{\mathrm{B}}$.
+
+   **Answer** For $\ce{Gd^3+}$ ($4\mathrm{f}^7$) $L = 0$, and the magnetic moment comes from spin alone ($7.9\,\mu_{\mathrm{B}}$); for the ions in the second half of the series $J = L + S$, the orbital and spin magnetic moments add, and $\ce{Dy^3+}$ and $\ce{Ho^3+}$ reach about $10.6\,\mu_{\mathrm{B}}$.

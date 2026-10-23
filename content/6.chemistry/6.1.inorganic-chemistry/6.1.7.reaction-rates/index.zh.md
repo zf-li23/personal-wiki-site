@@ -451,17 +451,6 @@ $\ce{H2O2 + I- -> H2O + IO-}$（慢），$\ce{H2O2 + IO- -> H2O + O2 + I-}$（�
 
 酶催化反应的速率随底物浓度的变化是一条饱和曲线：底物浓度低时近似一级，高时趋于零级（酶的活性部位饱和），由 Michaelis–Menten 方程描述，用实验数据拟合其参数的方法见 [4.4.4](/4.4.4#sec-4.2.3)。这一方程的推导（前平衡或稳态近似）与酶动力学见[物理化学](/6.3)和[生物化学](/7.1)。
 
-## 思考题
-
-1. 反应 $\ce{2W + X -> Y + Z}$ 的下列关系式中哪些正确？(a) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$；(b) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$；(c) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$；(d) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$。
-   答：(a)、(c) 正确。W 的消耗速率是 X 的两倍，(b)、(d) 都差一个因子 2，正确的写法是 $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{1}{2}\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$。
-2. 在一张两步反应的势能图上，怎样区分反应中间体与过渡态？
-   答：中间体位于两个能垒之间的能谷（势能的局部极小），过渡态位于能垒的顶点（沿反应坐标的极大）。中间体有确定的寿命，原则上可以检测；过渡态只是一个瞬间的构型。
-3. 某反应的速率常数单位是 $\mathrm{L\,mol^{-1}\,s^{-1}}$，它的半衰期与初始浓度有什么关系？
-   答：单位表明总级数为 2；若只有一种反应物，$t_{1/2} = 1/(kc_0)$，与初始浓度成反比。
-4. 为什么说"反应级数等于系数之和"不能证明反应是基元反应？
-   答：不同的机理可以给出同样的速率方程，如 $\ce{H2 + I2}$ 的原子机理在前平衡近似下给出 $v = kc(\ce{H2})c(\ce{I2})$（例 7.3.3）。
-
 ## 小结
 
 | 内容 | 要点 |
@@ -474,3 +463,21 @@ $\ce{H2O2 + I- -> H2O + IO-}$（慢），$\ce{H2O2 + IO- -> H2O + O2 + I-}$（�
 | 积分速率方程 | 0、1、2 级：$c$、$\ln c$、$1/c$ 对 $t$ 为直线；一级反应 $t_{1/2} = \ln 2/k$ 与浓度无关，用于放射性测年 |
 | 温度 | $k = A\mathrm{e}^{-E_{\mathrm{a}}/RT}$；$E_{\mathrm{a}} = RT^2\,\mathrm{d}\ln k/\mathrm{d}T$ 是反应分子与全体分子平均能量之差；每升 10 K 约 2–4 倍 |
 | 催化剂 | 改变途径、降低活化能；不改变 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ 与平衡常数，同等加快正逆反应；有选择性，会中毒；均相、多相、酶催化 |
+
+## 思考题
+
+1. 反应 $\ce{2W + X -> Y + Z}$ 的下列关系式中哪些正确？(a) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$；(b) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$；(c) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$；(d) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$。
+
+   **答** (a)、(c) 正确。W 的消耗速率是 X 的两倍，(b)、(d) 都差一个因子 2，正确的写法是 $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{1}{2}\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$。
+
+2. 在一张两步反应的势能图上，怎样区分反应中间体与过渡态？
+
+   **答** 中间体位于两个能垒之间的能谷（势能的局部极小），过渡态位于能垒的顶点（沿反应坐标的极大）。中间体有确定的寿命，原则上可以检测；过渡态只是一个瞬间的构型。
+
+3. 某反应的速率常数单位是 $\mathrm{L\,mol^{-1}\,s^{-1}}$，它的半衰期与初始浓度有什么关系？
+
+   **答** 单位表明总级数为 2；若只有一种反应物，$t_{1/2} = 1/(kc_0)$，与初始浓度成反比。
+
+4. 为什么说"反应级数等于系数之和"不能证明反应是基元反应？
+
+   **答** 不同的机理可以给出同样的速率方程，如 $\ce{H2 + I2}$ 的原子机理在前平衡近似下给出 $v = kc(\ce{H2})c(\ce{I2})$（例 7.3.3）。

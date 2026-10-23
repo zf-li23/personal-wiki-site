@@ -1,6 +1,6 @@
 ---
 title: Reactions in Solution, Photochemistry and Catalysis
-source_hash: bc0dfe54e2a5
+source_hash: ce2e58b88cbf
 ---
 
 The rate theories of [6.3.16](/6.3.16) treat isolated collisions in the gas phase. Real chemistry, and especially the chemistry of living systems, mostly takes place in solution, is often driven by light, and almost always involves a catalyst. This chapter discusses how these three factors change reaction rates. For reactions in solution (17.1) we must account for the surrounding solvent molecules: the reactants first have to diffuse together, and diffusion itself may be the rate-determining step; reactions between ions are also affected by ionic strength and by the dielectric constant, where we use the Debye–Hückel theory of [6.3.12](/6.3.12) and the transition state theory of [6.3.16](/6.3.16). Photochemistry (17.2) studies excited-state molecules produced by the absorption of photons: their energy comes from light rather than from thermal motion, so they can undergo reactions with $\Delta_{\mathrm{r}}G > 0$, as in photosynthesis; the decay processes of excited states (fluorescence, phosphorescence, quenching) are also the basis of fluorescence spectroscopy, a basic tool of biology. Catalytic kinetics (17.3) makes the qualitative description of catalysts in [6.1.7](/6.1.7#sec-7.3.4) quantitative, and ends with the Michaelis–Menten kinetics of enzymes.
@@ -472,17 +472,6 @@ The double-reciprocal plot is intuitive and helps to distinguish different types
 
 Temperature and pH also affect enzymes markedly: on heating, the reaction first speeds up according to the Arrhenius equation, and beyond a certain temperature the spatial structure of the enzyme is destroyed (denaturation) and the activity falls rapidly, hence the optimum temperature (the "increase then decrease" type in the table of [6.3.15](/6.3.15#sec-15.5.1)); the protonation state of the ionizable groups in the active center makes the activity a bell-shaped function of pH, with an optimum pH. Enzyme inhibition, allosteric regulation and multi-substrate mechanisms belong to biochemistry.
 
-## Questions
-
-1. Why is the rate constant of a diffusion-controlled reaction almost independent of the size of the reactant molecules?
-   Answer: $k_{\mathrm{d}} \propto (D_{\mathrm{A}} + D_{\mathrm{B}})r_{\mathrm{AB}}$ and $D \propto 1/r$: the larger a molecule, the more slowly it diffuses, but the larger its collision radius, and the two effects approximately cancel.
-2. The rate constant of an ionic reaction decreases as the ionic strength increases. What is the relation between the charges of the two ions in the rate-determining step?
-   Answer: $z_{\mathrm{A}}z_{\mathrm{B}} < 0$, ions of opposite sign; the value of $z_{\mathrm{A}}z_{\mathrm{B}}$ can also be estimated from the slope of $\lg(k/k_0)$ against $\sqrt{I_b}$.
-3. The $\Delta_{\mathrm{r}}G$ of a photochemical reaction can be greater than zero. Does this violate the second law of thermodynamics?
-   Answer: No. In $\Delta_{\mathrm{r}}G \le W'$ the $W'$ is the work done on the system by the light; the entropy of the whole system including the light source still increases.
-4. How can fluorescence lifetime measurements be used to distinguish dynamic from static quenching?
-   Answer: Dynamic quenching shortens the lifetime according to the Stern–Volmer equation; static quenching only reduces the number of luminescent molecules, and the lifetime of the remaining luminescent molecules is unchanged.
-
 ## Summary
 
 | Topic | Key points |
@@ -499,3 +488,21 @@ Temperature and pH also affect enzymes markedly: on heating, the reaction first 
 | Catalysts | Do not change the equilibrium; $E_{\mathrm{a}} = E_1 + E_2 - E_{-1}$; may also change the activation entropy; selectivity, promoters, poisons |
 | Acid–base catalysis | $k = k_0 + k_{\ce{H+}}[\ce{H+}] + k_{\ce{OH-}}[\ce{OH-}]$, with a minimum in the rate–pH profile; Brønsted law $k_{\ce{HA}} = G_{\mathrm{a}}K_{\mathrm{a}}^{\alpha}$ |
 | Enzyme catalysis | $v = \frac{k_{\mathrm{cat}}[\ce{E}]_0[\ce{S}]}{K_{\mathrm{M}} + [\ce{S}]}$, $K_{\mathrm{M}} = \frac{k_{-1} + k_2}{k_1}$; fit the parameters by nonlinear regression, not by the double-reciprocal plot |
+
+## Questions
+
+1. Why is the rate constant of a diffusion-controlled reaction almost independent of the size of the reactant molecules?
+
+   **Answer** $k_{\mathrm{d}} \propto (D_{\mathrm{A}} + D_{\mathrm{B}})r_{\mathrm{AB}}$ and $D \propto 1/r$: the larger a molecule, the more slowly it diffuses, but the larger its collision radius, and the two effects approximately cancel.
+
+2. The rate constant of an ionic reaction decreases as the ionic strength increases. What is the relation between the charges of the two ions in the rate-determining step?
+
+   **Answer** $z_{\mathrm{A}}z_{\mathrm{B}} < 0$, ions of opposite sign; the value of $z_{\mathrm{A}}z_{\mathrm{B}}$ can also be estimated from the slope of $\lg(k/k_0)$ against $\sqrt{I_b}$.
+
+3. The $\Delta_{\mathrm{r}}G$ of a photochemical reaction can be greater than zero. Does this violate the second law of thermodynamics?
+
+   **Answer** No. In $\Delta_{\mathrm{r}}G \le W'$ the $W'$ is the work done on the system by the light; the entropy of the whole system including the light source still increases.
+
+4. How can fluorescence lifetime measurements be used to distinguish dynamic from static quenching?
+
+   **Answer** Dynamic quenching shortens the lifetime according to the Stern–Volmer equation; static quenching only reduces the number of luminescent molecules, and the lifetime of the remaining luminescent molecules is unchanged.

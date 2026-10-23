@@ -1,6 +1,6 @@
 ---
 title: Trees
-source_hash: 16975a047083
+source_hash: 39db23ce1c23
 ---
 
 Trees are among the most important notions in graph theory and have wide applications in computer science (file systems, coding, searching, games and more). In the mid-nineteenth century the British mathematician Cayley studied the enumeration of trees and used it to count the isomers of chemical compounds, one of the earliest applications of trees. In this chapter we first give the definition of a tree and several equivalent characterizations. We then study spanning trees algebraically by means of the incidence matrix, the cycle matrix and the cut-set matrix, including how to count and generate spanning trees. Finally we discuss two optimization problems involving trees: Huffman trees and minimum spanning trees.
@@ -330,3 +330,28 @@ For hand computation one can also start from the graph $G$ itself (assumed conne
 **Definition 3.8.1 (Branching)** A subgraph of a directed graph that contains no cycle and in which every vertex has **in-degree** at most $1$ is called a **branching**.
 
 A branching is exactly a union of pairwise disjoint arborescences. The problem of finding a branching of maximum total weight in a weighted directed graph is called the maximum branching problem. It can be viewed as a generalization of the minimum spanning tree problem to directed graphs and is usually solved by Edmonds' algorithm (also known as the Chu–Liu/Edmonds algorithm).
+
+## Summary
+
+- A tree is a connected graph without cycles (Definition 3.1.1). Theorem 3.1.2 gives six equivalent characterizations: connected and acyclic; connected with every edge a cut edge; connected with $n-1$ edges; $n-1$ edges and acyclic; a unique path between any two vertices; acyclic, but adding any edge creates exactly one cycle. A nontrivial tree has at least two leaves (Theorem 3.1.3). Every connected graph has a spanning tree, with $n-1$ branches and $m-n+1$ chords (Definition 3.1.3).
+- Algebraic characterization: the incidence matrix and the reduced incidence matrix $B_k$ of a connected directed graph both have rank $n-1$ (Theorems 3.2.3 and 3.2.4), and every square submatrix has determinant $0$ or $\pm 1$ (Theorem 3.2.2); an $(n-1) \times (n-1)$ submatrix of $B_k$ is nonsingular if and only if the corresponding edges form a spanning tree (Theorem 3.2.6).
+- The three matrices compared ($G$ a connected directed graph, edges in the same order):
+
+  | Matrix | Rows | Rank | Nonsingular maximal square submatrices correspond to | Orthogonality |
+  | :-- | :-- | :-- | :-- | :-- |
+  | Reduced incidence matrix $B_k$ | The $n-1$ vertices left after deleting one | $n-1$ (Theorem 3.2.4) | Spanning trees (Theorem 3.2.6) | $B_k C_f^{\mathsf T} = 0$ |
+  | Cycle matrices $C_e$, $C_f$ | Cycles (the fundamental cycle matrix $C_f$ has the $m-n+1$ fundamental cycles) | $m-n+1$ (Theorem 3.4.2) | Cotrees (Theorem 3.4.3) | $B C_e^{\mathsf T} = 0$ (Theorem 3.4.1) |
+  | Cut-set matrices $S_e$, $S_f$ | Cut sets (the fundamental cut-set matrix $S_f$ has the $n-1$ fundamental cut sets) | $n-1$ (Theorem 3.4.6) | Spanning trees (Theorem 3.4.7) | $S_e C_e^{\mathsf T} = 0$ (Theorem 3.4.5) |
+
+  Once a spanning tree is fixed, both $C_f$ and $S_f$ can be computed from $B_k$ (Theorems 3.4.4 and 3.4.8, Corollary 3.4.1).
+- Counting spanning trees: by the Binet–Cauchy theorem (Theorem 3.3.1), the number of spanning trees is $\det(B_k B_k^{\mathsf T})$ (Theorem 3.3.2), that is, any principal cofactor of the Laplacian matrix (the matrix-tree theorem); the number of arborescences rooted at $v_k$ is $\det(\bar{B}_k B_k^{\mathsf T})$ (Theorem 3.3.3).
+- Generating spanning trees: two spanning trees at distance $1$ differ by one elementary tree transformation, and the edge brought in must lie in the fundamental cut set of the branch taken out (Theorems 3.5.1 and 3.5.2); this lists all neighbors of a reference tree without repetition (Theorem 3.5.3).
+- Two optimization problems:
+
+  | Problem | Method | Correctness | Complexity |
+  | :-- | :-- | :-- | :-- |
+  | Optimal binary tree (minimum WPL) | Huffman's algorithm (Algorithm 3.6.1): repeatedly merge the two lightest vertices | Theorem 3.6.1 | — |
+  | Minimum spanning tree | Kruskal's algorithm (Algorithm 3.7.1): add edges in increasing order of weight, never closing a cycle | Theorem 3.7.1 | $O(m \log m)$, suited to sparse graphs |
+  | Minimum spanning tree | Prim's algorithm (Algorithm 3.7.2): grow from one vertex, each time adding the lightest edge leaving the chosen part | Theorems 3.7.3 and 3.7.4 | $O(n^2)$, suited to dense graphs |
+  | Minimum spanning tree | Cycle-breaking method: repeatedly delete the heaviest edge on a cycle | — | Hand computation |
+  | Maximum branching (digraphs) | Edmonds' algorithm (Chu–Liu/Edmonds) | — | — |

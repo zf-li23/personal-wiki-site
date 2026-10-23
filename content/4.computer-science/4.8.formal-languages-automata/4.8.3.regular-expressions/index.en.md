@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions and Regular Languages
 description: Syntax and semantics of regular expressions, operator precedence and derived operations; comparison with practical regex; the inductive definition of regular languages; methods for designing regular expressions; algebraic laws, the concretization test for laws, and Arden's lemma.
-source_hash: 7a9a26c1ac3e
+source_hash: 5cd16cd20d26
 ---
 
 The simplest class of **grammars** (type 3) in Chapter 2 generates the regular languages. This chapter describes these languages from another angle: starting from single symbols and using only three operations, union, concatenation, and **Kleene closure**, we construct languages, and the algebraic expressions we write down are regular expressions. They are the most common way, besides finite automata, to describe regular languages, and they are the mathematical core of the **regular expressions** ([4.2.11](/4.2.11)) familiar to programmers; most constructs of practical regular expressions can be reduced to these three operations. This chapter defines regular expressions and their languages, practices designing expressions for given languages, and then discusses the algebraic laws of regular expressions. Chapter 4 introduces finite automata, and Chapter 5 proves that the two describe the same family of languages.
@@ -130,7 +130,19 @@ By Chapter 6, whether two variable-free regular expressions are equivalent is de
 
 Arden's lemma is the basis of another method for converting finite automata into regular expressions: introduce an unknown language $X_q$ for each state $q$ (the strings leading from $q$ to an accepting state), write a system of linear equations according to the transitions, and eliminate the unknowns one by one with Arden's lemma (Chapter 5).
 
-## Exercises
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Regular expressions (Definitions 3.1.1, 3.1.2) | Built inductively from $\varepsilon$, $\varnothing$, $a$ by union $+$, concatenation and closure $^*$; precedence: closure > concatenation > union; $E^+$, $E^?$, $E^n$ are abbreviations |
+| Practical regexes | The bar in `a\|b` is union and `+` is $E^+$; character classes and counted repetition reduce to the three basic operations; backreferences go beyond regular languages |
+| Regular languages (Definition 3.2.1) | The languages obtained from the basic languages by union, concatenation and closure, exactly those denoted by regular expressions; every finite language is regular |
+| Design techniques | Find the skeleton and fill both sides (Example 3.3.1), union of cases (Example 3.3.2), positional conditions (Example 3.3.3), forbidden substrings (Example 3.3.4), cutting by counts (Example 3.3.5), splitting the string into a left and a right part (Example 3.3.6) |
+| Algebraic laws (Theorem 3.4.1) | Commutativity, associativity and idempotence of union; associativity and distributivity of concatenation; identities $\varnothing$, $\varepsilon$ and annihilator $\varnothing$; closure laws; concatenation is not commutative |
+| Concretization test (Theorem 3.4.2) | Replace the variables by distinct symbols: a candidate law holds if and only if the concrete expressions are equivalent; fails for expressions with intersection |
+| Arden's lemma (Theorem 3.4.3) | If $\varepsilon \notin A$, the unique solution of $X = AX \cup B$ is $A^*B$; used to convert automata into regular expressions |
+
+## Questions
 
 1. Write regular expressions for the following languages (alphabet $\{0, 1\}$): (1) every 0 is immediately followed by at least one 1; (2) the number of 0s is divisible by 3; (3) at least three 1s, and the third symbol from the end is 1; (4) even length and no substring 00.
 2. Simplify: $(\varepsilon + 1)(\varepsilon + 1)^*$, $\varnothing^* + 0^*$, $(0^*1^*)^*0$.

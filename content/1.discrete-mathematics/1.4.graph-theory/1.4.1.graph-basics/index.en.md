@@ -1,6 +1,6 @@
 ---
 title: Introduction and Basic Concepts
-source_hash: 41f86785070e
+source_hash: dcb58754506d
 ---
 
 This chapter is the starting point of the graph theory course. We first explain where graph theory sits within discrete mathematics and how it began, then introduce the basic notions of graphs, vertex degrees, subgraphs, graph operations and isomorphism, and finally describe several algebraic representations of graphs used in computers (the adjacency matrix, the incidence matrix, edge lists, forward stars and so on). The walks, trees, planarity, matchings and connectivity discussed in later chapters are all built on these concepts and representations.
@@ -201,3 +201,19 @@ A reverse star is the opposite of a forward star: it stores the predecessors of 
 ### 1.4.7. Adjacency List
 
 An adjacency list represents a graph by singly linked lists: each vertex has its own list, whose nodes record the successors of that vertex one by one, each node holding three fields, namely the vertex index, the weight of the edge and the address of the next node.
+
+## Summary
+
+- A graph $G = (V, E)$ consists of a vertex set and an edge set (Definition 1.3.1); Section 1.3.10 lists the basic terminology of this chapter. The most frequently used counting result is the handshaking lemma $\sum_{v} d(v) = 2m$ (Property 1.3.1), which implies that the number of vertices of odd degree is even (Property 1.3.2); in a digraph the sum of out-degrees equals the sum of in-degrees (Property 1.3.3).
+- Subgraphs, spanning subgraphs and induced subgraphs (Definition 1.3.5), graph operations (Definition 1.3.6) and isomorphism (Definition 1.3.8) form the basic language in which later chapters describe the structure of graphs.
+- Representations of graphs in a computer (Section 1.4):
+
+  | Representation | Size | Features |
+  | :-- | :-- | :-- |
+  | Adjacency matrix, weight matrix | $n \times n$ | Fastest test of adjacency; can represent loops but not multiple edges |
+  | Incidence matrix | $n \times m$ | One column per edge; cannot represent loops |
+  | Edge list | $2m$ (plus $m$ for weights) | A compressed form of the incidence matrix that can represent loops |
+  | Forward star, reverse star | $(n+1) + m$ | Compress the rows and columns of the adjacency matrix, respectively; $d^+(v_i) = A(i+1) - A(i)$ |
+  | Adjacency list | $n$ linked lists | One singly linked list per vertex, recording its direct successors in turn |
+
+Judging by size, sparse graphs ($m$ much smaller than $n^2$) are best stored as edge lists, forward stars or adjacency lists, while dense graphs, or applications that test adjacency frequently, call for the adjacency matrix.

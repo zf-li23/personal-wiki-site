@@ -1,7 +1,7 @@
 ---
 title: Kinematics of a Particle
 description: Reference frames and the particle model; position, displacement, velocity and acceleration; uniformly accelerated motion and projectiles; tangential and normal acceleration in intrinsic coordinates and angular quantities of circular motion; plane polar coordinates; relative motion and the Galilean velocity transformation.
-source_hash: b75edc5a0233
+source_hash: e49a28abf6de
 ---
 
 Mechanics studies the motion of bodies, that is, the change of their positions with time. This chapter is the first step. *Kinematics* describes motion itself (where a body is at each instant, how fast it moves, and how its velocity changes) without asking why the motion changes; the cause, force, is the subject of the next chapter, [5.1.2](/5.1.2). The language of this description is the calculus of vectors and **vector-valued functions**: position is a vector function of time, and velocity and acceleration are its first and second derivatives ([2.2.11](/2.2.11)). The **inner product** and the **cross product** from vector algebra ([2.2.11](/2.2.11#def-11.1.1)) appear throughout this and the following chapters. We discuss in turn reference frames and the particle model, the description in Cartesian coordinates, uniformly accelerated motion, intrinsic coordinates and circular motion, plane polar coordinates, and finally the transformation of velocities between reference frames, which relativity will correct in [5.1.8](/5.1.8).
@@ -361,10 +361,17 @@ Alternatively, take $P$ as the reference point: $P$ is instantaneously at rest, 
 ## Questions
 
 1. A particle moves in a plane with $x = x(t)$, $y = y(t)$. One person first computes $r = \sqrt{x^2 + y^2}$ and then uses $v = \dot r$, $a = \ddot r$ for the magnitudes of the velocity and acceleration; another uses $v = \sqrt{\dot x^2 + \dot y^2}$, $a = \sqrt{\ddot x^2 + \ddot y^2}$. Which method is correct?
-   Hint: The second is correct. $\dot r$ is only the radial velocity and omits the transverse velocity $r\dot\theta$; nor is $\ddot r$ the magnitude of the acceleration (Section 1.6).
+
+   **Answer** The second is correct. $\dot r$ is only the radial velocity and omits the transverse velocity $r\dot\theta$; nor is $\ddot r$ the magnitude of the acceleration (Section 1.6).
+
 2. At some instant a particle has velocity $\boldsymbol{v}$. In which directions can its acceleration point?
-   Hint: Given only the velocity at one instant, the acceleration can point in any direction. The component of the acceleration along $\boldsymbol{v}$ determines whether the speed increases or decreases, and the component perpendicular to $\boldsymbol{v}$ determines to which side the path bends and how sharply ($\rho = v^2/a_{\mathrm{n}}$). Conversely, if the trajectory near this point is known, the acceleration cannot point to the outer side of the bend.
+
+   **Answer** Given only the velocity at one instant, the acceleration can point in any direction. The component of the acceleration along $\boldsymbol{v}$ determines whether the speed increases or decreases, and the component perpendicular to $\boldsymbol{v}$ determines to which side the path bends and how sharply ($\rho = v^2/a_{\mathrm{n}}$). Conversely, if the trajectory near this point is known, the acceleration cannot point to the outer side of the bend.
+
 3. A planet moves on an elliptical orbit, with its acceleration always directed toward the focus occupied by the Sun. Does its speed increase or decrease as it moves from aphelion to perihelion?
-   Hint: The projection of the acceleration on the velocity is the tangential acceleration. From aphelion to perihelion the distance to the Sun decreases, the velocity makes an acute angle with the acceleration directed toward the Sun, and the speed increases; the reverse holds from perihelion to aphelion.
+
+   **Answer** The projection of the acceleration on the velocity is the tangential acceleration. From aphelion to perihelion the distance to the Sun decreases, the velocity makes an acute angle with the acceleration directed toward the Sun, and the speed increases; the reverse holds from perihelion to aphelion.
+
 4. Is the acceleration of a particle in circular motion necessarily perpendicular to its velocity?
-   Hint: No. Only in uniform circular motion, where the tangential acceleration is zero, does the acceleration point to the center.
+
+   **Answer** No. Only in uniform circular motion, where the tangential acceleration is zero, does the acceleration point to the center.

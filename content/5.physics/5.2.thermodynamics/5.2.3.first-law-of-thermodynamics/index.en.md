@@ -1,6 +1,6 @@
 ---
 title: The First Law of Thermodynamics
-source_hash: b2c11e82205b
+source_hash: 663b6e0dea92
 ---
 
 The previous two chapters used a molecular model to study the properties of **equilibrium states**; from this chapter on we turn to the methods of thermodynamics, which study the changes of the state of a system starting only from macroscopic experimental laws, without relying on any microscopic model. The core of this chapter is the first law of thermodynamics, the **law of conservation of energy** extended to include thermal phenomena. It generalizes **work** in mechanics ([5.1.4](/5.1.4)) to **thermodynamic systems**, defines **internal energy** through adiabatic work, and then defines heat in terms of internal energy and work. With this law we can compute the work, heat and change of internal energy of an **ideal gas** in various processes, and it leads to the concepts of heat capacity, enthalpy and cycle efficiency; the upper bound on the efficiency of the Carnot cycle prepares the way for the second law of thermodynamics in the next chapter ([5.2.4](/5.2.4)). The concepts of this chapter (internal energy, heat, enthalpy, heat capacity) and its sign conventions are shared with physical chemistry.
@@ -325,9 +325,21 @@ The coefficient of performance need not be less than 1. Taking room temperature 
 
 The lower the temperature of the low-temperature reservoir, the smaller the coefficient of performance and the harder the refrigeration: to extract $1\,\mathrm{J}$ of heat from a body at $1\,\mathrm{K}$, at least about $300\,\mathrm{J}$ of work must be done. The coefficient of performance of an ordinary household refrigerator is about 2–7. The same machine used to heat a room is a heat pump, whose heating coefficient $\lvert Q_1\rvert/W = T_1/(T_1 - T_2)$ is always greater than 1: a heat pump delivers more heat into the room than the electrical energy it consumes. This does not violate energy conservation, since the surplus is carried from the low-temperature reservoir outdoors.
 
+## Summary
+
+- A quasi-static process (Definition 3.1.1) can be drawn as a curve on a state diagram; the pressure–volume work is $W = -\int p\,\mathrm{d}V$ (Eq. (3.1)). Work and heat are process quantities, while the internal energy $U$ is a state function defined through adiabatic work (Definition 3.3.1).
+- First law of thermodynamics (Theorem 3.3.1): $\Delta U = Q + W$, with both $Q$ and $W$ counted positive when received by the system (Eq. (3.2); for the convention of physics textbooks see Remark 3.3.1).
+- The internal energy of an ideal gas depends only on temperature (Property 3.3.2), and $\mathrm{d}U = nC_{V,\mathrm{m}}\,\mathrm{d}T$ in any process (Formula 3.4.1); Mayer's relation $C_{p,\mathrm{m}} - C_{V,\mathrm{m}} = R$ (Formula 3.4.2), $\gamma = C_p/C_V$.
+- Quasi-static adiabatic process: $pV^\gamma = \text{const}$ (Eq. (3.3)); the polytropic process $pV^k = \text{const}$ unifies the isobaric ($k = 0$), isothermal ($k = 1$), adiabatic ($k = \gamma$) and isochoric ($k \to \infty$) processes; $\Delta U$, $W$ and $Q$ for each are listed in the table of §3.5.3.
+- Adiabatic free expansion is not quasi-static, and the temperature of an ideal gas does not change; throttling is isenthalpic, $H = U + pV$ (Definition 3.5.4), and real gases show the Joule–Thomson effect. $C_V = (\partial U/\partial T)_V$, $C_p = (\partial H/\partial T)_p$ (Formula 3.5.2).
+- Cycles: engine efficiency $\eta = -W/Q_1 = 1 - \lvert Q_2\rvert/Q_1$, coefficient of performance $\varepsilon = Q_2/W$ (Definition 3.6.2). The Carnot cycle (Definition 3.7.1) has $\eta_{\mathrm{C}} = 1 - T_2/T_1$ (Formula 3.7.1) and $\varepsilon_{\mathrm{C}} = T_2/(T_1 - T_2)$ (Formula 3.8.1); the relation $Q_1/T_1 + Q_2/T_2 = 0$ is the starting point for entropy in the next chapter.
+
 ## Questions
 
 1. Why is $C_{p,\mathrm{m}} > C_{V,\mathrm{m}}$? Why is the difference very small for solids and liquids?
-   Hint: in isobaric heating, work $p\,\mathrm{d}V$ must be done on the surroundings; the thermal expansion of solids and liquids is very small, so this work can be neglected.
+
+   **Answer** in isobaric heating, work $p\,\mathrm{d}V$ must be done on the surroundings; the thermal expansion of solids and liquids is very small, so this work can be neglected.
+
 2. In a closed, adiabatic room, the refrigerator door is opened and the refrigerator is left running. How does the temperature of the room change?
-   Hint: take the room as the system; the power supply does work $W > 0$ on it, $Q = 0$, so $\Delta U = W > 0$ and the temperature rises.
+
+   **Answer** take the room as the system; the power supply does work $W > 0$ on it, $Q = 0$, so $\Delta U = W > 0$ and the temperature rises.

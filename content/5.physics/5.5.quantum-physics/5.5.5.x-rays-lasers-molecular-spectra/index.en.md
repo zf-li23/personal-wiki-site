@@ -1,7 +1,7 @@
 ---
 title: X-Rays, Lasers and Molecular Spectra
 description: The continuous X-ray spectrum (bremsstrahlung and the cutoff wavelength) and the characteristic spectrum (K and L series, Moseley's law) with applications; spontaneous emission, stimulated absorption, stimulated emission and the Einstein coefficients, population inversion, the He–Ne laser, longitudinal and transverse modes of the optical resonator; electronic, vibrational and rotational levels of molecules, rotational spectra, rovibrational spectra and band spectra.
-source_hash: 5ea7dd7480ba
+source_hash: 902629ec3ba2
 ---
 
 The previous chapter ([5.5.4](/5.5.4)) treated the electrons in atoms with quantum mechanics: energy levels, quantum numbers, the structure of **electron shells** and the **Pauli exclusion principle**. This chapter discusses three important applications of atomic and molecular energy levels, each an example of atomic physics moving from "explaining spectra" to "using spectra". Section 5.1 treats X-ray spectra: the continuous spectrum comes from the radiation of electrons decelerating in the target, and its short-wavelength limit is another piece of evidence for the **photon** theory; the characteristic spectrum comes from transitions of inner-shell electrons, and Moseley used it to establish the physical meaning of the atomic number. The discovery of X-rays, their wave nature and their **diffraction** by crystals were covered in [5.4.2](/5.4.2#sec-2.5), so here we discuss only the spectra. Section 5.2 treats lasers: in 1916–1917 Einstein introduced stimulated emission in order to bring atoms and radiation into thermal equilibrium, and some forty years later it became the principle of the laser; the coherence of laser light was already used in [5.4.1](/5.4.1#sec-1.2). Section 5.3 (optional) treats molecular spectra: a molecule has two kinds of motion beyond those of an atom, vibration and rotation, whose energy levels are those of the **quantum harmonic oscillator** of [5.5.3](/5.5.3) and of the quantized rigid rotor, respectively; the resulting infrared and microwave spectra are basic tools in chemistry for identifying molecular structure.
@@ -357,12 +357,21 @@ The spectra of the three kinds of motion are interwoven and quite complex, but t
 ## Questions
 
 1. Why does raising the voltage of an X-ray tube shorten the cutoff wavelength of the continuous spectrum without changing the wavelengths of the characteristic lines?
-   Hint: the cutoff wavelength is determined by the conversion of the entire kinetic energy of one electron into one photon; the wavelengths of the characteristic lines are determined by the differences between inner levels of the target atom.
+
+   **Answer** the cutoff wavelength is determined by the conversion of the entire kinetic energy of one electron into one photon; the wavelengths of the characteristic lines are determined by the differences between inner levels of the target atom.
+
 2. Use Moseley's law to estimate the wavelength of the $\mathrm{K}_\alpha$ line of iron ($Z=26$).
-   Answer: $h\nu\approx10.2\,\mathrm{eV}\times25^2=6.4\,\mathrm{keV}$, $\lambda\approx0.194\,\mathrm{nm}$ (measured $0.194\,\mathrm{nm}$).
+
+   **Answer** $h\nu\approx10.2\,\mathrm{eV}\times25^2=6.4\,\mathrm{keV}$, $\lambda\approx0.194\,\mathrm{nm}$ (measured $0.194\,\mathrm{nm}$).
+
 3. Why can population inversion not be achieved in a two-level system by optical pumping?
-   Hint: the pump light causes absorption and stimulated emission alike, $B_{12}=B_{21}$, so the stronger the pumping, the closer $N_2$ approaches $N_1$, but it cannot exceed it.
+
+   **Answer** the pump light causes absorption and stimulated emission alike, $B_{12}=B_{21}$, so the stronger the pumping, the closer $N_2$ approaches $N_1$, but it cannot exceed it.
+
 4. Where does the monochromaticity of laser light come from? Why does shortening the cavity give a single longitudinal mode?
-   Hint: the mode spacing $c/(2nL)$ is inversely proportional to the cavity length; when it exceeds the width of the gain curve, only one longitudinal mode can oscillate.
+
+   **Answer** the mode spacing $c/(2nL)$ is inversely proportional to the cavity length; when it exceeds the width of the gain curve, only one longitudinal mode can oscillate.
+
 5. Why do $\ce{N2}$ and $\ce{O2}$ not absorb infrared radiation, whereas $\ce{CO2}$ and $\ce{H2O}$ are greenhouse gases?
-   Hint: in a homonuclear diatomic molecule the electric dipole moment stays zero during vibration, so there is no infrared activity; the antisymmetric stretching and bending vibrations of $\ce{CO2}$ and all the vibrations of $\ce{H2O}$ change the dipole moment.
+
+   **Answer** in a homonuclear diatomic molecule the electric dipole moment stays zero during vibration, so there is no infrared activity; the antisymmetric stretching and bending vibrations of $\ce{CO2}$ and all the vibrations of $\ce{H2O}$ change the dipole moment.

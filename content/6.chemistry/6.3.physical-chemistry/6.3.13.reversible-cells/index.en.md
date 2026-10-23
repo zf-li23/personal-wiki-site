@@ -1,7 +1,7 @@
 ---
 title: Reversible Cells and Electromotive Force
 description: Reversible cells and the three kinds of reversible electrodes; terminal voltage, the compensation method and the standard cell; the Nernst equation from the reaction isotherm, and the relations of the cell potential to ΔrG, K°, ΔrS, ΔrH and the reversible heat; inner and outer potentials and the electrochemical potential, the components of the cell potential and the liquid junction potential; electrode potentials and reference electrodes; concentration cells and the design of cells for given reactions; potentiometric determination of equilibrium constants, activity coefficients, standard electrode potentials, transport numbers and pH; the Fe–H₂O potential–pH diagram; membrane potentials, the resting potential of cells and the glass electrode.
-source_hash: 7bbdb41ed3e4
+source_hash: 97494b92a34e
 ---
 
 [6.3.12](/6.3.12) studied the electrolyte solution itself; this chapter studies the equilibrium properties of a cell when the current tends to zero. The chemical reaction in the cell then proceeds reversibly, and the measured cell potential gives the molar Gibbs energy of the reaction directly: $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$. The cell potential can be measured to $10^{-5}\,\mathrm{V}$ or better, so electrochemical measurement is an accurate method for determining $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, $K^\circ$, $\Delta_{\mathrm{r}}S_{\mathrm{m}}$, $\Delta_{\mathrm{r}}H_{\mathrm{m}}$, mean activity coefficients and pH.
@@ -576,9 +576,26 @@ Changing the material of the sensing membrane gives other ion-selective electrod
 
 ## Questions
 
-1. Can the electromotive force of a reversible cell be measured with an ordinary voltmeter? (No. A voltmeter draws a finite current and measures the terminal voltage; the compensation method or an electrometer of high input impedance must be used.)
-2. Does the cell potential depend on the stoichiometric coefficients of the cell reaction? Does $z$ affect $E$? (No; $z$ changes in proportion to $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ and their ratio $E$ is unchanged. But if the same overall reaction proceeds through different electrode reactions, $z$ differs and so does $E$, 13.3.2.)
-3. What cell should be designed to measure the solubility product of $\ce{AgCl}$? ($\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$; the cell reaction $\ce{Ag+ + Cl- -> AgCl}$ is the reverse of the dissolution equilibrium, Example 13.7.1.)
-4. By what methods can the standard equilibrium constant of a cell reaction be found? (Thermodynamics: from $\Delta_{\mathrm{f}}G^\circ$ or from $\Delta_{\mathrm{r}}H^\circ$ and $\Delta_{\mathrm{r}}S^\circ$; electrochemistry: from $E^\circ_{\mathrm{cell}}$; statistical mechanics: from partition functions, [6.3.11](/6.3.11); kinetics: from the ratio of the forward and reverse rate constants, [6.3.15](/6.3.15).)
-5. Why is $E'$ extrapolated against $\sqrt b$ rather than $b$? (By the Debye–Hückel limiting law, $\ln\gamma_\pm \propto \sqrt b$ in dilute solution, so $E'$ is a straight line in $\sqrt b$ with a known slope.)
-6. Can an endothermic cell reaction proceed spontaneously and do work? (Yes, provided $\Delta_{\mathrm{r}}G_{\mathrm{m}} < 0$; part of the energy for the work comes from heat of the surroundings, Example 13.3.2.)
+1. Can the electromotive force of a reversible cell be measured with an ordinary voltmeter?
+
+   **Answer** No. A voltmeter draws a finite current and measures the terminal voltage; the compensation method or an electrometer of high input impedance must be used.
+
+2. Does the cell potential depend on the stoichiometric coefficients of the cell reaction? Does $z$ affect $E$?
+
+   **Answer** No; $z$ changes in proportion to $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ and their ratio $E$ is unchanged. But if the same overall reaction proceeds through different electrode reactions, $z$ differs and so does $E$, 13.3.2.
+
+3. What cell should be designed to measure the solubility product of $\ce{AgCl}$?
+
+   **Answer** $\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$; the cell reaction $\ce{Ag+ + Cl- -> AgCl}$ is the reverse of the dissolution equilibrium, Example 13.7.1.
+
+4. By what methods can the standard equilibrium constant of a cell reaction be found?
+
+   **Answer** Thermodynamics: from $\Delta_{\mathrm{f}}G^\circ$ or from $\Delta_{\mathrm{r}}H^\circ$ and $\Delta_{\mathrm{r}}S^\circ$; electrochemistry: from $E^\circ_{\mathrm{cell}}$; statistical mechanics: from partition functions, [6.3.11](/6.3.11); kinetics: from the ratio of the forward and reverse rate constants, [6.3.15](/6.3.15).
+
+5. Why is $E'$ extrapolated against $\sqrt b$ rather than $b$?
+
+   **Answer** By the Debye–Hückel limiting law, $\ln\gamma_\pm \propto \sqrt b$ in dilute solution, so $E'$ is a straight line in $\sqrt b$ with a known slope.
+
+6. Can an endothermic cell reaction proceed spontaneously and do work?
+
+   **Answer** Yes, provided $\Delta_{\mathrm{r}}G_{\mathrm{m}} < 0$; part of the energy for the work comes from heat of the surroundings, Example 13.3.2.

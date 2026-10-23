@@ -1,6 +1,6 @@
 ---
 title: Graph Connectivity
-source_hash: 8fa4a17f150e
+source_hash: 291f2fb9b5b7
 ---
 
 Chapter 2 used walks to define **connected graphs** and **connected components**, distinguishing only between "connected" and "disconnected". Applications such as communication networks, transportation planning and circuit design call for a finer measure of how well a graph is connected: if some nodes or links fail, does the network remain connected? In this chapter we introduce vertex connectivity and edge connectivity, establish Whitney's inequality relating them to the minimum degree, present Menger's theorem, which characterizes connectivity, together with its connection to network flows, and discuss $k$-connected graphs and applications of connectivity to network design.
@@ -171,7 +171,7 @@ The $w$-wide distance reflects the best communication delay achievable when tran
 
 In the evaluation of interconnection networks, the $w$-wide diameter is an important measure, capturing both the fault tolerance of the network (through $w$) and its transmission efficiency (through the diameter): when some nodes or links fail, the remaining disjoint paths can still be used for transmission. The wide diameters of common network topologies such as generalized Petersen graphs and Harary graphs have been studied in depth, providing a theoretical basis for the design of practical interconnection networks.
 
-## 6.7. Summary
+## Summary
 
 - Vertex cuts and edge cuts: minimal sets of vertices or edges whose deletion destroys connectivity; cut vertices and bridges are special cases.
 - Vertex connectivity $\kappa(G)$ and edge connectivity $\lambda(G)$: the minimum numbers of vertices and of edges whose deletion makes the graph disconnected (or trivial); they are the two quantitative measures of how well a graph is connected.

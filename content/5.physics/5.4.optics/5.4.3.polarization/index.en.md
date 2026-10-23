@@ -1,7 +1,7 @@
 ---
 title: Polarization of Light
 description: Linearly, circularly and elliptically polarized light, unpolarized and partially polarized light; polarizers and Malus's law; polarization of reflected and refracted light and Brewster's law; Rayleigh scattering and the polarization of scattered light; birefringence, o and e rays, polarizing prisms; wave plates; interference of polarized light and chromatic polarization; artificial birefringence (photoelastic, Kerr and Pockels effects); optical activity and the Faraday effect.
-source_hash: "08e936421843"
+source_hash: 6d1efcff8ef5
 ---
 
 Interference and **diffraction** show that light is a wave, but they cannot distinguish a **longitudinal wave** from a **transverse wave**; polarization shows that light is a **transverse wave**. Light is an **electromagnetic wave** ([5.3.10](/5.3.10#sec-10.4.3)), and the light vector $\boldsymbol{E}$ is perpendicular to the direction of propagation; within the plane perpendicular to the direction of propagation it can still vibrate in different ways, and this is the polarization of light. This chapter first describes the various states of polarization (Section 3.1) and then discusses several ways to produce and analyze polarized light: polarizers (Section 3.2), reflection and refraction at interfaces (Section 3.3), scattering (Section 3.4) and birefringence in crystals (Section 3.5). We then use crystal plates to convert linearly polarized light into elliptically and circularly polarized light (Section 3.6) and discuss the interference of polarized light (Section 3.7). The last two sections (optional) introduce artificial birefringence caused by applied stress and electric fields (Section 3.8) and optical activity (Section 3.9). Mathematically, the polarization states are just the superposition of two mutually perpendicular **simple harmonic motions** of the same frequency, the same as the case of frequency ratio $1$ of the **Lissajous figures** in [5.1.6](/5.1.6#sec-6.2.3); the optical anisotropy of crystals comes from the tensor nature of the **permittivity** ([5.3.4](/5.3.4#sec-4.2.5)). Polarization is widely used in stereoscopic films, liquid-crystal displays, photography, stress analysis, optical communication and chemical analysis (a polarimeter measures the concentration of sugar).
@@ -496,9 +496,26 @@ This nonreciprocity can be used to make an optical isolator: behind a polarizing
 
 ## Questions
 
-1. How can one distinguish the two kinds of partially polarized light, "unpolarized + elliptically polarized" and "unpolarized + linearly polarized"? Hint: with a polarizing sheet alone, both show varying intensity without extinction. First find with the sheet the direction of maximum intensity, place the optic axis of a quarter-wave plate along this direction, and rotate the sheet again. For the latter, the direction of vibration of the linearly polarized part lies along the optic axis and is unchanged by the plate, so the direction of maximum intensity does not change; for the former, the major axis of the elliptically polarized part lies along the optic axis and the plate turns it into linearly polarized light oblique to the optic axis, so the direction of maximum intensity turns through some angle.
-2. How can one distinguish partially polarized light consisting of "unpolarized + circularly polarized" light from unpolarized light? Hint: first pass it through a quarter-wave plate of any orientation, which turns the circularly polarized part into linearly polarized light, and then rotate a polarizing sheet: the intensity of unpolarized light stays constant, while that of the partially polarized light varies without extinction.
-3. What happens when circularly polarized light passes through a half-wave plate? Hint: it is still circularly polarized, but the handedness is reversed.
-4. Is there necessarily no birefringence when unpolarized light enters a crystal along the optic axis? Hint: when light propagates along the optic axis inside the crystal, the o and e rays have the same speed and there is no birefringence. But if the light strikes the crystal surface obliquely, after refraction its direction of propagation in the crystal is no longer along the optic axis, and birefringence still occurs. In addition, in an optically active crystal such as quartz there is "circular birefringence" of left- and right-handed circularly polarized light for propagation along the optic axis (Section 3.9.2).
-5. Asphalt roads in summer sunlight give a dazzling glare. Can polarizing glasses replace ordinary sunglasses, and what is the advantage? Hint: the s component (horizontal vibration) predominates in the light reflected from the road, and polarizing glasses with a vertical transmission axis selectively weaken the glare, while the diffuse light from other objects is reduced by only about half, so one sees more clearly.
-6. Why is the sky blue? Why is the Sun red at sunrise and sunset? Hint: see Section 3.4.2.
+1. How can one distinguish the two kinds of partially polarized light, "unpolarized + elliptically polarized" and "unpolarized + linearly polarized"?
+
+   **Answer** with a polarizing sheet alone, both show varying intensity without extinction. First find with the sheet the direction of maximum intensity, place the optic axis of a quarter-wave plate along this direction, and rotate the sheet again. For the latter, the direction of vibration of the linearly polarized part lies along the optic axis and is unchanged by the plate, so the direction of maximum intensity does not change; for the former, the major axis of the elliptically polarized part lies along the optic axis and the plate turns it into linearly polarized light oblique to the optic axis, so the direction of maximum intensity turns through some angle.
+
+2. How can one distinguish partially polarized light consisting of "unpolarized + circularly polarized" light from unpolarized light?
+
+   **Answer** first pass it through a quarter-wave plate of any orientation, which turns the circularly polarized part into linearly polarized light, and then rotate a polarizing sheet: the intensity of unpolarized light stays constant, while that of the partially polarized light varies without extinction.
+
+3. What happens when circularly polarized light passes through a half-wave plate?
+
+   **Answer** it is still circularly polarized, but the handedness is reversed.
+
+4. Is there necessarily no birefringence when unpolarized light enters a crystal along the optic axis?
+
+   **Answer** when light propagates along the optic axis inside the crystal, the o and e rays have the same speed and there is no birefringence. But if the light strikes the crystal surface obliquely, after refraction its direction of propagation in the crystal is no longer along the optic axis, and birefringence still occurs. In addition, in an optically active crystal such as quartz there is "circular birefringence" of left- and right-handed circularly polarized light for propagation along the optic axis (Section 3.9.2).
+
+5. Asphalt roads in summer sunlight give a dazzling glare. Can polarizing glasses replace ordinary sunglasses, and what is the advantage?
+
+   **Answer** the s component (horizontal vibration) predominates in the light reflected from the road, and polarizing glasses with a vertical transmission axis selectively weaken the glare, while the diffuse light from other objects is reduced by only about half, so one sees more clearly.
+
+6. Why is the sky blue? Why is the Sun red at sunrise and sunset?
+
+   **Answer** see Section 3.4.2.

@@ -238,9 +238,25 @@ $D \propto 1/p$、$D \propto T^{3/2}$。Fick 定律与质量守恒结合也得�
 
 三个输运系数之间有简单的关系 $\eta = \rho D$、$\kappa = \eta c_V$。平均自由程理论正确地给出了各系数对压强、温度的依赖，但数值系数只是近似：严格的理论（Chapman–Enskog）给出的 $\kappa/(\eta c_V)$ 对单原子气体约为 $2.5$，而不是 1，因为速率快的分子既飞得远又携带更多能量，简化模型忽略了这种关联。
 
+## 小结
+
+| 内容 | 结论 |
+|---|---|
+| 真实气体的等温线 | 临界温度以下有汽液共存的水平段，其压强为饱和蒸气压；临界点、临界温度见定义 2.1.1 |
+| van der Waals 方程 | 式 (2.1)：$\left(p + \frac{a}{V_{\mathrm{m}}^2}\right)(V_{\mathrm{m}} - b) = RT$；$a$ 修正分子间引力（内压强 $a/V_{\mathrm{m}}^2$），$b$ 修正分子本身的体积 |
+| 内能 | $U = \frac{i}{2}nRT - \frac{n^2a}{V}$，与体积有关，自由膨胀后温度降低 |
+| 临界参量 | 公式 2.2.1：$V_{\mathrm{m,c}} = 3b$，$T_{\mathrm{c}} = \frac{8a}{27Rb}$，$p_{\mathrm{c}} = \frac{a}{27b^2}$；约化方程不含 $a$、$b$（对应态定律） |
+| 等温线的回弯 | $\left(\frac{\partial p}{\partial V}\right)_T > 0$ 的一段不稳定；过饱和蒸气、过热液体是亚稳态；水平段由 Maxwell 等面积法则确定 |
+| 碰撞频率与平均自由程 | 公式 2.3.1：$\bar z = \sqrt{2}\,\pi d^2\bar v\,n_V$，$\bar\lambda = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 p}$ |
+| 输运系数 | 公式 2.4.1、公式 2.4.2、公式 2.4.3：$\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$，$\eta = \frac{1}{3}\rho\bar v\bar\lambda$，$D = \frac{1}{3}\bar v\bar\lambda$ |
+| 对压强与温度的依赖 | $\kappa$、$\eta$ 与压强无关、随 $\sqrt{T}$ 增大，直到 $\bar\lambda$ 达到容器线度后 $\kappa \propto p$；$D \propto T^{3/2}/p$；$\eta = \rho D$，$\kappa = \eta c_V$（数值系数只是近似） |
+
 ## 思考题
 
 1. 为什么降低压强在开始时不能减小气体的导热，而高真空却能很好地保温？
-   提示：$\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ 中 $\rho\bar\lambda$ 与压强无关，直到 $\bar\lambda$ 达到容器线度（例 2.4.1）。
+
+   **答** $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ 中 $\rho\bar\lambda$ 与压强无关，直到 $\bar\lambda$ 达到容器线度（例 2.4.1）。
+
 2. 液体与气体的黏度随温度的变化相反，为什么？
-   提示：气体的内摩擦来自分子在层间的迁移，温度越高 $\bar v$ 越大；液体的内摩擦来自分子间的吸引，温度升高时分子更容易挣脱近邻。
+
+   **答** 气体的内摩擦来自分子在层间的迁移，温度越高 $\bar v$ 越大；液体的内摩擦来自分子间的吸引，温度升高时分子更容易挣脱近邻。

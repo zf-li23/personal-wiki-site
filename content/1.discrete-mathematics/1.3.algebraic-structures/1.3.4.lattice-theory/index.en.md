@@ -1,6 +1,6 @@
 ---
 title: Lattice Theory
-source_hash: ed8b31577db6
+source_hash: 37cdf19461d3
 ---
 
 The groups, rings and fields of the previous two chapters all come from "computation": addition, multiplication, composition of maps. Mathematics and computer science have another, equally basic, kind of structure that comes from "comparison": inclusion between sets, divisibility between integers, implication between propositions, inclusion between subgroups. All of these are **partial orders**. When any two elements have a "least common upper bound" and a "greatest common lower bound", taking suprema and infima become two binary operations, and the poset turns into an **algebraic system**: a **lattice**. The notion of a lattice goes back to Dedekind's work at the end of the nineteenth century; from the 1930s on, Garrett Birkhoff developed lattice theory systematically.

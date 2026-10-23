@@ -295,523 +295,538 @@ $$
 
 2. **指导种群管理**：在保护生物学中，繁殖价值指示了不同年龄组对种群长期存续的重要性。例如，若某个年龄组的繁殖价值很高，则保护该组个体对种群恢复更有效。繁殖价值依赖于矩阵 $L$，可以通过生态学数据估计。
 
+## 小结
+
+- 离散线性种群模型写成 $\boldsymbol{n}(t+1) = A\boldsymbol{n}(t)$，于是 $\boldsymbol{n}(t) = A^t\boldsymbol{n}(0)$。斐波那契数列是最简单的例子（$A = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}$，2.1.1）；Leslie 矩阵以第一行的生育率 $f_i$、次对角线的存活率 $s_i$、对角线的保持率 $k_i$ 描述年龄结构（2.1.2），一般的阶段结构矩阵允许任意转移（2.1.3）。
+- 长期行为由特征值决定：若 $A$ 可对角化，$\boldsymbol{n}(t) = \sum_i c_i\lambda_i^t\boldsymbol{w}_i \approx c_1\lambda_1^t\boldsymbol{w}_1$。Perron–Frobenius 定理保证非负幂正矩阵有唯一的正主特征值，对应的特征向量各分量为正（2.2.1）。
+- 投影矩阵各特征量的生物学意义（2.2.2、2.3）：
+
+  | 量 | 定义 | 意义 |
+  |---|---|---|
+  | 主特征值 $\lambda_1$ | 模最大的特征值 | 长期增长率：$\lambda_1 > 1$ 增长，$= 1$ 稳定，$< 1$ 衰退 |
+  | 右特征向量 $\boldsymbol{w}_1$ | $A\boldsymbol{w}_1 = \lambda_1\boldsymbol{w}_1$ | 稳定年龄（阶段）结构 |
+  | 左特征向量 $\boldsymbol{v}_1$ | $\boldsymbol{v}_1^{\mathsf T}A = \lambda_1\boldsymbol{v}_1^{\mathsf T}$ | 各组个体的繁殖价值 |
+
+- 初始种群对长期规模的贡献由繁殖价值加权：$c_1 = \boldsymbol{v}_1^{\mathsf T}\boldsymbol{n}(0)/(\boldsymbol{v}_1^{\mathsf T}\boldsymbol{w}_1)$（2.3.2），这为种群管理中优先保护哪一年龄组提供了依据。
+- 斐波那契模型中 $\lambda_1 = (1+\sqrt5)/2$ 即黄金比例，相邻项之比趋于 $\lambda_1$；成熟个体与未成熟个体的繁殖价值之比为 $\lambda_1 : 1$（2.2.3、2.3.1）。
+
 ## 思考题
+
 1. （选做）试讨论 $L$ 在哪些约束下是非负且幂正的，能不能举出一个年龄比例不趋稳的反例并进行模拟？*提示：我们的 Leslie 矩阵定义考虑了保持当前年龄阶段的可能，与知乎和 AI 工具常见的回答稍有不同*
+
 2. 虎鲸（Orcinus orca）是长寿的海洋哺乳动物，生活在被称为"群体"的稳定社会群体中。它们稳定的社会结构和个体可通过照片识别的特点使其特别适合科学研究。自1973年以来，已收集了不列颠哥伦比亚省和华盛顿州沿海水域虎鲸种群的统计数据。Brault和Caswell（1993）使用1973-1987年的数据和阶段结构矩阵模型研究了与鲸鱼有关的几个人口统计学问题。他们使用混合年龄阶段分类对雌性进行建模：幼崽、幼年（过了第一年但未成熟）、成熟和繁殖后。投影矩阵A如下所示：
 
-$$
-A = 
-\begin{bmatrix}
-0 & 0.0043 & 0.1132 & 0 \\
-0.9775 & 0.9111 & 0 & 0 \\
-0 & 0.0736 & 0.9534 & 0 \\
-0 & 0 & 0.0452 & 0.9804
-\end{bmatrix}
-$$
+   $$
+   A = 
+   \begin{bmatrix}
+   0 & 0.0043 & 0.1132 & 0 \\
+   0.9775 & 0.9111 & 0 & 0 \\
+   0 & 0.0736 & 0.9534 & 0 \\
+   0 & 0 & 0.0452 & 0.9804
+   \end{bmatrix}
+   $$
 
-- **a)** 计算虎鲸种群的主特征值 $\lambda$ 和稳定阶段分布 $\boldsymbol{w}$ ；
-- **b)** 假设当前种群向量为 $\boldsymbol{x}_0 = (10, 60, 110, 70)$，预测未来50年的种群动态；
-- **c)** 在三张独立的图上绘制以下随时间变化的过程：
-  - 第t年的总种群规模 $N(t)$，
-  - 年种群增长率 $\lambda(t) = N(t+1)/N(t)$，
-  - 每个阶段个体的比例。
-- **d)** 使用以下初始种群向量重新运行虎鲸种群动态脚本：$\boldsymbol{x}_0 = (250, 0, 0, 0), (0, 250, 0, 0), (0, 0, 250, 0), (0, 0, 0, 250)$。比较和对比四个种群预测：
-  - 阶段分布及其稳定性，
-  - 哪个阶段似乎对种群未来增长最重要？
-- **e)** 考虑从虎鲸种群中进行可能的收获（捕鲸），收获个体来自单个阶段，例如所有幼年个体或所有繁殖个体。假设初始种群结构为稳定分布 $\boldsymbol{w}$，总个体数为250。
-  - 每年最多可以收获多少幼年个体而不导致种群灭绝？
-  - 最多可以收获多少繁殖成年个体？
+   - **a)** 计算虎鲸种群的主特征值 $\lambda$ 和稳定阶段分布 $\boldsymbol{w}$ ；
+   - **b)** 假设当前种群向量为 $\boldsymbol{x}_0 = (10, 60, 110, 70)$，预测未来50年的种群动态；
+   - **c)** 在三张独立的图上绘制以下随时间变化的过程：
+     - 第t年的总种群规模 $N(t)$，
+     - 年种群增长率 $\lambda(t) = N(t+1)/N(t)$，
+     - 每个阶段个体的比例。
+   - **d)** 使用以下初始种群向量重新运行虎鲸种群动态脚本：$\boldsymbol{x}_0 = (250, 0, 0, 0), (0, 250, 0, 0), (0, 0, 250, 0), (0, 0, 0, 250)$。比较和对比四个种群预测：
+     - 阶段分布及其稳定性，
+     - 哪个阶段似乎对种群未来增长最重要？
+   - **e)** 考虑从虎鲸种群中进行可能的收获（捕鲸），收获个体来自单个阶段，例如所有幼年个体或所有繁殖个体。假设初始种群结构为稳定分布 $\boldsymbol{w}$，总个体数为250。
+     - 每年最多可以收获多少幼年个体而不导致种群灭绝？
+     - 最多可以收获多少繁殖成年个体？
 
-*提示：假设收获发生在繁殖季节之后，因此模型变为 $\boldsymbol{x}(t+1) = A\boldsymbol{x}(t) - \boldsymbol{h}$，其中 $\boldsymbol{h} = (h_1, h_2, h_3, h_4)$ 是每年从每个阶段收获的个体数向量。假设 $\boldsymbol{h}$ 是常数：每年收获相同数量。*
+   *提示：假设收获发生在繁殖季节之后，因此模型变为 $\boldsymbol{x}(t+1) = A\boldsymbol{x}(t) - \boldsymbol{h}$，其中 $\boldsymbol{h} = (h_1, h_2, h_3, h_4)$ 是每年从每个阶段收获的个体数向量。假设 $\boldsymbol{h}$ 是常数：每年收获相同数量。*
 
-**选做题**：TODO
+   **答** **a)** 对于投影矩阵$A$，主特征值$\lambda_1$满足$| \lambda_1 | > | \lambda_i | (i \neq 1)$，对应的右特征向量$\boldsymbol{w}$给出稳定阶段分布。
 
-**a)** 对于投影矩阵$A$，主特征值$\lambda_1$满足$| \lambda_1 | > | \lambda_i | (i \neq 1)$，对应的右特征向量$\boldsymbol{w}$给出稳定阶段分布。
+   ```python
+   import numpy as np
 
-```python
-import numpy as np
+   # 定义虎鲸矩阵
+   A = np.array([
+       [0, 0.0043, 0.1132, 0],
+       [0.9775, 0.9111, 0, 0],
+       [0, 0.0736, 0.9534, 0],
+       [0, 0, 0.0452, 0.9804]
+   ])
 
-# 定义虎鲸矩阵
-A = np.array([
-    [0, 0.0043, 0.1132, 0],
-    [0.9775, 0.9111, 0, 0],
-    [0, 0.0736, 0.9534, 0],
-    [0, 0, 0.0452, 0.9804]
-])
+   # 计算特征值和特征向量
+   eigenvalues, eigenvectors = np.linalg.eig(A)
 
-# 计算特征值和特征向量
-eigenvalues, eigenvectors = np.linalg.eig(A)
+   # 找到主特征值（模最大的特征值）
+   dominant_idx = np.argmax(np.abs(eigenvalues))
+   lambda1 = eigenvalues[dominant_idx].real
+   w = eigenvectors[:, dominant_idx].real
 
-# 找到主特征值（模最大的特征值）
-dominant_idx = np.argmax(np.abs(eigenvalues))
-lambda1 = eigenvalues[dominant_idx].real
-w = eigenvectors[:, dominant_idx].real
+   # 归一化稳定阶段分布
+   w = w / np.sum(w)
 
-# 归一化稳定阶段分布
-w = w / np.sum(w)
+   print("Dominant eigenvalue λ = {:.6f}".format(lambda1))
+   print("Stable stage distribution w:")
+   stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
+   for i, (name, val) in enumerate(zip(stage_names, w)):
+       print(f"  {name}: {val:.6f} ({val*100:.2f}%)")
+   ```
 
-print("Dominant eigenvalue λ = {:.6f}".format(lambda1))
-print("Stable stage distribution w:")
-stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
-for i, (name, val) in enumerate(zip(stage_names, w)):
-    print(f"  {name}: {val:.6f} ({val*100:.2f}%)")
-```
+   运行结果：
 
-运行结果：
+   ```
+   Dominant eigenvalue λ = 1.025441
+   Stable stage distribution w:
+     Calf: 0.036972 (3.70%)
+     Juvenile: 0.316071 (31.61%)
+     Mature: 0.322910 (32.29%)
+     Post-reproductive: 0.324047 (32.40%)
+   ```
 
-```
-Dominant eigenvalue λ = 1.025441
-Stable stage distribution w:
-  Calf: 0.036972 (3.70%)
-  Juvenile: 0.316071 (31.61%)
-  Mature: 0.322910 (32.29%)
-  Post-reproductive: 0.324047 (32.40%)
-```
+   即主特征值 $\lambda_1 \approx 1.0254$，对应稳定阶段分布为：
+   $$
+   \boldsymbol{w} = \begin{pmatrix} 0.036972 & 0.316071 & 0.322910 & 0.324047 \end{pmatrix}^{\mathsf T}
+   $$
 
-即主特征值 $\lambda_1 \approx 1.0254$，对应稳定阶段分布为：
-$$
-\boldsymbol{w} = \begin{pmatrix} 0.036972 & 0.316071 & 0.322910 & 0.324047 \end{pmatrix}^{\mathsf T}
-$$
+   **b)** 预测未来50年的种群动态：
 
-**b)** 预测未来50年的种群动态：
+   ![虎鲸种群 50 年动态：各阶段个体数与总数随时间变化](./plots/killer-whale-population-50y.py)
 
-![虎鲸种群 50 年动态：各阶段个体数与总数随时间变化](./plots/killer-whale-population-50y.py)
+   **c)** 绘制总种群规模、年种群增长率和每个阶段个体的比例。增加一个对数比例图，展示各阶段个体数的对数尺度变化，以更清晰观察增长趋势：
 
-**c)** 绘制总种群规模、年种群增长率和每个阶段个体的比例。增加一个对数比例图，展示各阶段个体数的对数尺度变化，以更清晰观察增长趋势：
+   ![虎鲸种群分析：总规模、年增长率、各阶段比例及对数尺度种群规模](./plots/killer-whale-growth-and-proportions.py)
 
-![虎鲸种群分析：总规模、年增长率、各阶段比例及对数尺度种群规模](./plots/killer-whale-growth-and-proportions.py)
+   **d)** 绘制种群规模随时间变化的累积分布图：
 
-**d)** 绘制种群规模随时间变化的累积分布图：
+   ![四种初始向量下虎鲸各阶段比例随时间的变化，均收敛至稳定阶段分布](./plots/killer-whale-initial-conditions.py)
 
-![四种初始向量下虎鲸各阶段比例随时间的变化，均收敛至稳定阶段分布](./plots/killer-whale-initial-conditions.py)
+   还可以使用左特征向量的方法：
 
-还可以使用左特征向量的方法：
+   对于投影矩阵$A$，左特征向量$\boldsymbol{v}$满足：
+   $$
+   \boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}
+   $$
+   等价于：
+   $$
+   A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}
+   $$
+   因此，左特征向量是$A^{\mathsf T}$对应于特征值 $\lambda$ 的右特征向量。
 
-对于投影矩阵$A$，左特征向量$\boldsymbol{v}$满足：
-$$
-\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}
-$$
-等价于：
-$$
-A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}
-$$
-因此，左特征向量是$A^{\mathsf T}$对应于特征值 $\lambda$ 的右特征向量。
+   ```python
+   import numpy as np
+   import matplotlib.pyplot as plt
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
+   # 定义虎鲸矩阵
+   A = np.array([
+       [0, 0.0043, 0.1132, 0],
+       [0.9775, 0.9111, 0, 0],
+       [0, 0.0736, 0.9534, 0],
+       [0, 0, 0.0452, 0.9804]
+   ])
 
-# 定义虎鲸矩阵
-A = np.array([
-    [0, 0.0043, 0.1132, 0],
-    [0.9775, 0.9111, 0, 0],
-    [0, 0.0736, 0.9534, 0],
-    [0, 0, 0.0452, 0.9804]
-])
+   # 计算右特征向量和主特征值
+   eigenvalues, eigenvectors = np.linalg.eig(A)
+   dominant_idx = np.argmax(np.real(eigenvalues))
+   lambda1 = np.real(eigenvalues[dominant_idx])
+   w = np.real(eigenvectors[:, dominant_idx])
 
-# 计算右特征向量和主特征值
-eigenvalues, eigenvectors = np.linalg.eig(A)
-dominant_idx = np.argmax(np.real(eigenvalues))
-lambda1 = np.real(eigenvalues[dominant_idx])
-w = np.real(eigenvectors[:, dominant_idx])
+   # 归一化右特征向量（稳定阶段分布）
+   w = w / np.sum(w)
+   stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
+   # 计算左特征向量（繁殖价值）
+   # 注意：左特征向量满足 A^T v = λ v，因此计算A^T的特征向量
+   A_T = A.T
+   eigenvalues_T, eigenvectors_T = np.linalg.eig(A_T)
 
-# 归一化右特征向量（稳定阶段分布）
-w = w / np.sum(w)
-stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
-# 计算左特征向量（繁殖价值）
-# 注意：左特征向量满足 A^T v = λ v，因此计算A^T的特征向量
-A_T = A.T
-eigenvalues_T, eigenvectors_T = np.linalg.eig(A_T)
+   # 找到对应于主特征值λ的左特征向量
+   # 由于数值误差，特征值可能不完全相等，我们找最接近的那个
+   idx_T = np.argmin(np.abs(eigenvalues_T - lambda1))
+   v = eigenvectors_T[:, idx_T]
 
-# 找到对应于主特征值λ的左特征向量
-# 由于数值误差，特征值可能不完全相等，我们找最接近的那个
-idx_T = np.argmin(np.abs(eigenvalues_T - lambda1))
-v = eigenvectors_T[:, idx_T]
+   # 取实部并确保所有分量非负
+   v = np.real(v)
 
-# 取实部并确保所有分量非负
-v = np.real(v)
+   # 处理可能的符号问题：确保主要分量是正的
+   # 如果大多数分量为负，则乘以-1
+   if np.sum(v < 0) > len(v) / 2:
+       v = -v
 
-# 处理可能的符号问题：确保主要分量是正的
-# 如果大多数分量为负，则乘以-1
-if np.sum(v < 0) > len(v) / 2:
-    v = -v
+   # 归一化左特征向量：使最小正分量为1
+   # 首先找出所有非零分量
+   non_zero_mask = np.abs(v) > 1e-10
+   if np.any(non_zero_mask):
+       # 找到非零分量的最小值
+       min_nonzero = np.min(np.abs(v[non_zero_mask]))
+       v = v / min_nonzero
+   else:
+       # 所有分量都接近0，使用另一种归一化
+       v = v / np.linalg.norm(v)
 
-# 归一化左特征向量：使最小正分量为1
-# 首先找出所有非零分量
-non_zero_mask = np.abs(v) > 1e-10
-if np.any(non_zero_mask):
-    # 找到非零分量的最小值
-    min_nonzero = np.min(np.abs(v[non_zero_mask]))
-    v = v / min_nonzero
-else:
-    # 所有分量都接近0，使用另一种归一化
-    v = v / np.linalg.norm(v)
+   print("\nReproductive value vector v (normalized):")
+   for i, (name, val) in enumerate(zip(stage_names, v)):
+       print(f"  {name}: {val:.6f}")
 
-print("\nReproductive value vector v (normalized):")
-for i, (name, val) in enumerate(zip(stage_names, v)):
-    print(f"  {name}: {val:.6f}")
+   # 验证左特征向量条件：v^T A ≈ λ v^T
+   left_side = v.T @ A
+   right_side = lambda1 * v.T
+   error = np.linalg.norm(left_side - right_side)
+   print(f"\nVerification error: ||v^T A - λ v^T|| = {error:.6e}")
+   print("(Should be close to zero)")
 
-# 验证左特征向量条件：v^T A ≈ λ v^T
-left_side = v.T @ A
-right_side = lambda1 * v.T
-error = np.linalg.norm(left_side - right_side)
-print(f"\nVerification error: ||v^T A - λ v^T|| = {error:.6e}")
-print("(Should be close to zero)")
+   # 验证左右特征向量的点积不为零
+   vTw = np.dot(v, w)
+   print(f"\nv^T w = {vTw:.6f}")
+   print("(Should not be zero)")
 
-# 验证左右特征向量的点积不为零
-vTw = np.dot(v, w)
-print(f"\nv^T w = {vTw:.6f}")
-print("(Should not be zero)")
+   # 四个初始向量
+   initial_vectors = [
+       np.array([250, 0, 0, 0]),    # All calves
+       np.array([0, 250, 0, 0]),    # All juveniles
+       np.array([0, 0, 250, 0]),    # All mature
+       np.array([0, 0, 0, 250])     # All post-reproductive
+   ]
+   labels = ['All calves', 'All juveniles', 'All mature', 'All post-reproductive']
+   years = 50
 
-# 四个初始向量
-initial_vectors = [
-    np.array([250, 0, 0, 0]),    # All calves
-    np.array([0, 250, 0, 0]),    # All juveniles
-    np.array([0, 0, 250, 0]),    # All mature
-    np.array([0, 0, 0, 250])     # All post-reproductive
-]
-labels = ['All calves', 'All juveniles', 'All mature', 'All post-reproductive']
-years = 50
+   # 计算每个初始向量的主导模式系数c1
+   print("\n" + "="*60)
+   print("Coefficient c1 for each initial condition:")
+   print("c1 = (v^T * x0) / (v^T * w)")
 
-# 计算每个初始向量的主导模式系数c1
-print("\n" + "="*60)
-print("Coefficient c1 for each initial condition:")
-print("c1 = (v^T * x0) / (v^T * w)")
+   for i, (x0, label) in enumerate(zip(initial_vectors, labels)):
+       c1 = np.dot(v, x0) / np.dot(v, w)
+       print(f"\n{label}:")
+       print(f"  c1 = {c1:.2f}")
+       print(f"  Long-term population after {years} years ≈ {c1 * lambda1**years:.2f}")
 
-for i, (x0, label) in enumerate(zip(initial_vectors, labels)):
-    c1 = np.dot(v, x0) / np.dot(v, w)
-    print(f"\n{label}:")
-    print(f"  c1 = {c1:.2f}")
-    print(f"  Long-term population after {years} years ≈ {c1 * lambda1**years:.2f}")
+   # 繁殖价值分析
+   print("\n" + "="*60)
+   print("Reproductive value analysis:")
+   print("(Higher reproductive value means greater contribution to long-term growth)")
 
-# 繁殖价值分析
-print("\n" + "="*60)
-print("Reproductive value analysis:")
-print("(Higher reproductive value means greater contribution to long-term growth)")
+   # 计算每个阶段对主导模式系数c1的贡献
+   print("\nContribution of each stage to c1 for different initial conditions:")
+   print("Stage".ljust(20) + "Reproductive value".ljust(20) + "Contribution to c1".ljust(20))
+   print("-" * 60)
 
-# 计算每个阶段对主导模式系数c1的贡献
-print("\nContribution of each stage to c1 for different initial conditions:")
-print("Stage".ljust(20) + "Reproductive value".ljust(20) + "Contribution to c1".ljust(20))
-print("-" * 60)
+   # 计算归一化因子
+   norm_factor = np.dot(v, w)
 
-# 计算归一化因子
-norm_factor = np.dot(v, w)
-
-for i, name in enumerate(stage_names):
-    # 繁殖价值
-    reproductive_value = v[i]
+   for i, name in enumerate(stage_names):
+       # 繁殖价值
+       reproductive_value = v[i]
     
-    # 计算该阶段对c1的贡献权重
-    # 对于单位数量的该阶段个体，对c1的贡献为 v[i] / norm_factor
-    contribution_per_individual = v[i] / norm_factor
+       # 计算该阶段对c1的贡献权重
+       # 对于单位数量的该阶段个体，对c1的贡献为 v[i] / norm_factor
+       contribution_per_individual = v[i] / norm_factor
     
-    print(f"{name.ljust(20)} {reproductive_value:.4f}".ljust(40) + 
-          f"{contribution_per_individual:.6f}")
-```
+       print(f"{name.ljust(20)} {reproductive_value:.4f}".ljust(40) + 
+             f"{contribution_per_individual:.6f}")
+   ```
 
-运行结果：
+   运行结果：
 
-```
-Reproductive value vector v (normalized):
-  Calf: 1.000000
-  Juvenile: 1.049045
-  Mature: 1.571320
-  Post-reproductive: -0.000000
+   ```
+   Reproductive value vector v (normalized):
+     Calf: 1.000000
+     Juvenile: 1.049045
+     Mature: 1.571320
+     Post-reproductive: -0.000000
 
-Verification error: ||v^T A - λ v^T|| = 9.155134e-16
-(Should be close to zero)
+   Verification error: ||v^T A - λ v^T|| = 9.155134e-16
+   (Should be close to zero)
 
-v^T w = 0.875939
-(Should not be zero)
+   v^T w = 0.875939
+   (Should not be zero)
 
-============================================================
-Coefficient c1 for each initial condition:
-c1 = (v^T * x0) / (v^T * w)
+   ============================================================
+   Coefficient c1 for each initial condition:
+   c1 = (v^T * x0) / (v^T * w)
 
-All calves:
-  c1 = 285.41
-  Long-term population after 50 years ≈ 1002.32
+   All calves:
+     c1 = 285.41
+     Long-term population after 50 years ≈ 1002.32
 
-All juveniles:
-  c1 = 299.41
-  Long-term population after 50 years ≈ 1051.48
+   All juveniles:
+     c1 = 299.41
+     Long-term population after 50 years ≈ 1051.48
 
-All mature:
-  c1 = 448.47
-  Long-term population after 50 years ≈ 1574.97
+   All mature:
+     c1 = 448.47
+     Long-term population after 50 years ≈ 1574.97
 
-All post-reproductive:
-  c1 = 0.00
-  Long-term population after 50 years ≈ 0.00
+   All post-reproductive:
+     c1 = 0.00
+     Long-term population after 50 years ≈ 0.00
 
-============================================================
-Reproductive value analysis:
-(Higher reproductive value means greater contribution to long-term growth)
+   ============================================================
+   Reproductive value analysis:
+   (Higher reproductive value means greater contribution to long-term growth)
 
-Contribution of each stage to c1 for different initial conditions:
-Stage               Reproductive value  Contribution to c1
-------------------------------------------------------------
-Calf                 1.0000             1.141632
-Juvenile             1.0490             1.197623
-Mature               1.5713             1.793869
-Post-reproductive    -0.0000            -0.000000
-```
+   Contribution of each stage to c1 for different initial conditions:
+   Stage               Reproductive value  Contribution to c1
+   ------------------------------------------------------------
+   Calf                 1.0000             1.141632
+   Juvenile             1.0490             1.197623
+   Mature               1.5713             1.793869
+   Post-reproductive    -0.0000            -0.000000
+   ```
 
-左特征向量计算的补充说明：
+   左特征向量计算的补充说明：
 
-对于主特征值 $\lambda$ 和对应的右特征向量$\boldsymbol{w}$（满足$A\boldsymbol{w} = \lambda \boldsymbol{w}$），左特征向量$\boldsymbol{v}$满足$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$。
+   对于主特征值 $\lambda$ 和对应的右特征向量$\boldsymbol{w}$（满足$A\boldsymbol{w} = \lambda \boldsymbol{w}$），左特征向量$\boldsymbol{v}$满足$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$。
 
-由于$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$等价于$A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}$，我们可以通过求解$A^{\mathsf T}$的特征值问题来获得$\boldsymbol{v}$。
+   由于$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$等价于$A^{\mathsf T} \boldsymbol{v} = \lambda \boldsymbol{v}$，我们可以通过求解$A^{\mathsf T}$的特征值问题来获得$\boldsymbol{v}$。
 
-在数值计算中，需要注意以下数值稳定性问题：
+   在数值计算中，需要注意以下数值稳定性问题：
 
-1. **特征值匹配**：由于数值误差，$A$和$A^{\mathsf T}$计算出的特征值可能不完全相等。我们需要找到最接近的特征值。
+   1. **特征值匹配**：由于数值误差，$A$和$A^{\mathsf T}$计算出的特征值可能不完全相等。我们需要找到最接近的特征值。
 
-2. **特征向量符号**：特征向量的符号是任意的。我们通常选择使主要分量为正的方向。
+   2. **特征向量符号**：特征向量的符号是任意的。我们通常选择使主要分量为正的方向。
 
-3. **归一化**：左特征向量可以任意缩放。我们通常将其归一化，使得最小正分量为1，或者使其范数为1。
+   3. **归一化**：左特征向量可以任意缩放。我们通常将其归一化，使得最小正分量为1，或者使其范数为1。
 
-计算完成后，应验证：
-$$
-\| \boldsymbol{v}^{\mathsf T} A - \lambda \boldsymbol{v}^{\mathsf T} \| < \varepsilon
-$$
-其中$\varepsilon$是一个小的容差（如$10^{-10}$）。
+   计算完成后，应验证：
+   $$
+   \| \boldsymbol{v}^{\mathsf T} A - \lambda \boldsymbol{v}^{\mathsf T} \| < \varepsilon
+   $$
+   其中$\varepsilon$是一个小的容差（如$10^{-10}$）。
 
-同时，应验证$\boldsymbol{v}^{\mathsf T} \boldsymbol{w} \neq 0$，因为$\boldsymbol{v}$和$\boldsymbol{w}$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
+   同时，应验证$\boldsymbol{v}^{\mathsf T} \boldsymbol{w} \neq 0$，因为$\boldsymbol{v}$和$\boldsymbol{w}$需要是非正交的（根据Perron-Frobenius定理，对于本原矩阵，左右特征向量都是正向量，因此点积为正）。
 
 
-**结果分析**：
+   **结果分析**：
 
-1. **阶段分布稳定性**：除了初始全部为繁殖后个体的情形外，其他初始种群的阶段分布最终都趋于稳定分布。初始全部为繁殖后个体的种群最终会灭绝，因为该阶段没有繁殖能力。
-2. **最重要阶段**：基于繁殖价值分析，成熟阶段对种群未来增长最重要，因为其繁殖价值最高（1.1521）。
-3. **系数$c_1$的意义**：$c_1$反映了初始种群在主导模式上的"强度"。成熟阶段初始种群的$c_1$最大（288.02），验证了其重要性。
+   1. **阶段分布稳定性**：除了初始全部为繁殖后个体的情形外，其他初始种群的阶段分布最终都趋于稳定分布。初始全部为繁殖后个体的种群最终会灭绝，因为该阶段没有繁殖能力。
+   2. **最重要阶段**：基于繁殖价值分析，成熟阶段对种群未来增长最重要，因为其繁殖价值最高（1.1521）。
+   3. **系数$c_1$的意义**：$c_1$反映了初始种群在主导模式上的"强度"。成熟阶段初始种群的$c_1$最大（288.02），验证了其重要性。
 
-**e)** 最大可持续收获量分析的两种方法：
+   **e)** 最大可持续收获量分析的两种方法：
 
-**方法1：特征值灵敏度公式**
+   **方法1：特征值灵敏度公式**
 
-**数学原理**：
-特征值$ \lambda $对矩阵元素$a_{ij}$的灵敏度为：
-$$
-\frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{\boldsymbol{v}^{\mathsf T} \boldsymbol{w}}
-$$
-其中$\boldsymbol{v}$和$\boldsymbol{w}$分别是左、右特征向量。
+   **数学原理**：
+   特征值$ \lambda $对矩阵元素$a_{ij}$的灵敏度为：
+   $$
+   \frac{\partial \lambda}{\partial a_{ij}} = \frac{v_i w_j}{\boldsymbol{v}^{\mathsf T} \boldsymbol{w}}
+   $$
+   其中$\boldsymbol{v}$和$\boldsymbol{w}$分别是左、右特征向量。
 
-对于对角线元素$a_{ii}$，收获相当于减少该元素。设收获率为$h_i$（占该阶段个体数的比例），则修改后的特征值为：
-$$
-\lambda' \approx \lambda - h_i \cdot \frac{\partial \lambda}{\partial a_{ii}}
-$$
-要求$\lambda' \geq 1$（种群不衰退），解得：
-$$
-h_i \leq (\lambda - 1) / \left( \frac{\partial \lambda}{\partial a_{ii}} \right)
-$$
-最大可持续收获个体数：$H_i = h_i \cdot x_i$，其中$x_i$为该阶段在稳定分布下的个体数。
+   对于对角线元素$a_{ii}$，收获相当于减少该元素。设收获率为$h_i$（占该阶段个体数的比例），则修改后的特征值为：
+   $$
+   \lambda' \approx \lambda - h_i \cdot \frac{\partial \lambda}{\partial a_{ii}}
+   $$
+   要求$\lambda' \geq 1$（种群不衰退），解得：
+   $$
+   h_i \leq (\lambda - 1) / \left( \frac{\partial \lambda}{\partial a_{ii}} \right)
+   $$
+   最大可持续收获个体数：$H_i = h_i \cdot x_i$，其中$x_i$为该阶段在稳定分布下的个体数。
 
-**推导**：
-由特征值定义：$A \boldsymbol{w} = \lambda \boldsymbol{w}$，对$a_{ij}$求偏导：
-$$
-\frac{\partial}{\partial a_{ij}} (A \boldsymbol{w}) = \frac{\partial}{\partial a_{ij}} (\lambda \boldsymbol{w})
-$$
-展开：
-$$
-\frac{\partial A}{\partial a_{ij}} \boldsymbol{w} + A \frac{\partial \boldsymbol{w}}{\partial a_{ij}} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{w} + \lambda \frac{\partial \boldsymbol{w}}{\partial a_{ij}}
-$$
-两边左乘$\boldsymbol{v}^{\mathsf T}$，利用$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$：
-$$
-\boldsymbol{v}^{\mathsf T} \frac{\partial A}{\partial a_{ij}} \boldsymbol{w} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
-$$
-由于$\frac{\partial A}{\partial a_{ij}}$仅在$(i,j)$位置为1，其余为0，故：
-$$
-v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
-$$
-即得灵敏度公式。
+   **推导**：
+   由特征值定义：$A \boldsymbol{w} = \lambda \boldsymbol{w}$，对$a_{ij}$求偏导：
+   $$
+   \frac{\partial}{\partial a_{ij}} (A \boldsymbol{w}) = \frac{\partial}{\partial a_{ij}} (\lambda \boldsymbol{w})
+   $$
+   展开：
+   $$
+   \frac{\partial A}{\partial a_{ij}} \boldsymbol{w} + A \frac{\partial \boldsymbol{w}}{\partial a_{ij}} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{w} + \lambda \frac{\partial \boldsymbol{w}}{\partial a_{ij}}
+   $$
+   两边左乘$\boldsymbol{v}^{\mathsf T}$，利用$\boldsymbol{v}^{\mathsf T} A = \lambda \boldsymbol{v}^{\mathsf T}$：
+   $$
+   \boldsymbol{v}^{\mathsf T} \frac{\partial A}{\partial a_{ij}} \boldsymbol{w} = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
+   $$
+   由于$\frac{\partial A}{\partial a_{ij}}$仅在$(i,j)$位置为1，其余为0，故：
+   $$
+   v_i w_j = \frac{\partial \lambda}{\partial a_{ij}} \boldsymbol{v}^{\mathsf T} \boldsymbol{w}
+   $$
+   即得灵敏度公式。
 
-**方法2：二分搜索法**
+   **方法2：二分搜索法**
 
-直接模拟收获过程，通过二分搜索找到最大可持续收获量。
+   直接模拟收获过程，通过二分搜索找到最大可持续收获量。
 
-```python
-import numpy as np
+   ```python
+   import numpy as np
 
-# 定义虎鲸矩阵
-A = np.array([
-    [0, 0.0043, 0.1132, 0],
-    [0.9775, 0.9111, 0, 0],
-    [0, 0.0736, 0.9534, 0],
-    [0, 0, 0.0452, 0.9804]
-])
+   # 定义虎鲸矩阵
+   A = np.array([
+       [0, 0.0043, 0.1132, 0],
+       [0.9775, 0.9111, 0, 0],
+       [0, 0.0736, 0.9534, 0],
+       [0, 0, 0.0452, 0.9804]
+   ])
 
-# 计算稳定分布
-eigenvalues, eigenvectors = np.linalg.eig(A)
-dominant_idx = np.argmax(np.abs(eigenvalues))
-lambda1 = eigenvalues[dominant_idx].real
-w = eigenvectors[:, dominant_idx].real
-w = w / np.sum(w)
+   # 计算稳定分布
+   eigenvalues, eigenvectors = np.linalg.eig(A)
+   dominant_idx = np.argmax(np.abs(eigenvalues))
+   lambda1 = eigenvalues[dominant_idx].real
+   w = eigenvectors[:, dominant_idx].real
+   w = w / np.sum(w)
 
-# 总个体数
-N_total = 250
-x_stable = w * N_total
+   # 总个体数
+   N_total = 250
+   x_stable = w * N_total
 
-print("Population at stable distribution (total=250):")
-stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
-for i, (name, val) in enumerate(zip(stage_names, x_stable)):
-    print(f"  {name}: {val:.2f}")
+   print("Population at stable distribution (total=250):")
+   stage_names = ['Calf', 'Juvenile', 'Mature', 'Post-reproductive']
+   for i, (name, val) in enumerate(zip(stage_names, x_stable)):
+       print(f"  {name}: {val:.2f}")
 
-print("\n" + "="*60)
-print("Method 1: Using eigenvalue sensitivity formula")
+   print("\n" + "="*60)
+   print("Method 1: Using eigenvalue sensitivity formula")
 
-# 计算左特征向量
-A_T = A.T
-eigenvalues_T, eigenvectors_T = np.linalg.eig(A_T)
-idx_T = np.argmin(np.abs(eigenvalues_T - lambda1))
-v = eigenvectors_T[:, idx_T].real
+   # 计算左特征向量
+   A_T = A.T
+   eigenvalues_T, eigenvectors_T = np.linalg.eig(A_T)
+   idx_T = np.argmin(np.abs(eigenvalues_T - lambda1))
+   v = eigenvectors_T[:, idx_T].real
 
-# 计算灵敏度
-vTw = np.dot(v, w)
-sensitivity = np.zeros(4)
-for i in range(4):
-    sensitivity[i] = (v[i] * w[i]) / vTw
+   # 计算灵敏度
+   vTw = np.dot(v, w)
+   sensitivity = np.zeros(4)
+   for i in range(4):
+       sensitivity[i] = (v[i] * w[i]) / vTw
 
-print("\nSensitivity of λ to diagonal elements:")
-for i, (name, sens) in enumerate(zip(stage_names, sensitivity)):
-    print(f"  ∂λ/∂a_{{" + f"{i+1}{i+1}" + f"}} = {sens:.6f}")
+   print("\nSensitivity of λ to diagonal elements:")
+   for i, (name, sens) in enumerate(zip(stage_names, sensitivity)):
+       print(f"  ∂λ/∂a_{{" + f"{i+1}{i+1}" + f"}} = {sens:.6f}")
 
-# 计算最大可持续收获率
-max_harvest_rate = np.zeros(4)
-for i in range(4):
-    if sensitivity[i] > 0:
-        max_harvest_rate[i] = min(1.0, (lambda1 - 1) / sensitivity[i])
-    else:
-        max_harvest_rate[i] = float('inf')
+   # 计算最大可持续收获率
+   max_harvest_rate = np.zeros(4)
+   for i in range(4):
+       if sensitivity[i] > 0:
+           max_harvest_rate[i] = min(1.0, (lambda1 - 1) / sensitivity[i])
+       else:
+           max_harvest_rate[i] = float('inf')
 
-print("\nMaximum sustainable harvest rate (fraction of stage population):")
-for i, (name, rate) in enumerate(zip(stage_names, max_harvest_rate)):
-    if rate == float('inf'):
-        print(f"  {name}: infinite (harvest does not affect λ)")
-    else:
-        print(f"  {name}: {rate:.4f}")
+   print("\nMaximum sustainable harvest rate (fraction of stage population):")
+   for i, (name, rate) in enumerate(zip(stage_names, max_harvest_rate)):
+       if rate == float('inf'):
+           print(f"  {name}: infinite (harvest does not affect λ)")
+       else:
+           print(f"  {name}: {rate:.4f}")
 
-# 计算最大可持续收获个体数
-max_harvest_individuals = np.zeros(4)
-for i in range(4):
-    if max_harvest_rate[i] == float('inf'):
-        max_harvest_individuals[i] = float('inf')
-    else:
-        max_harvest_individuals[i] = max_harvest_rate[i] * x_stable[i]
+   # 计算最大可持续收获个体数
+   max_harvest_individuals = np.zeros(4)
+   for i in range(4):
+       if max_harvest_rate[i] == float('inf'):
+           max_harvest_individuals[i] = float('inf')
+       else:
+           max_harvest_individuals[i] = max_harvest_rate[i] * x_stable[i]
 
-print("\nMaximum sustainable harvest (individuals per year):")
-for i, (name, harvest) in enumerate(zip(stage_names, max_harvest_individuals)):
-    if harvest == float('inf'):
-        print(f"  {name}: infinite")
-    else:
-        print(f"  {name}: {harvest:.2f}")
+   print("\nMaximum sustainable harvest (individuals per year):")
+   for i, (name, harvest) in enumerate(zip(stage_names, max_harvest_individuals)):
+       if harvest == float('inf'):
+           print(f"  {name}: infinite")
+       else:
+           print(f"  {name}: {harvest:.2f}")
 
-print("\n" + "="*60)
-print("Method 2: Binary search method")
+   print("\n" + "="*60)
+   print("Method 2: Binary search method")
 
-# 模拟函数，给定收获向量h，模拟T年，返回是否可持续（最终总个体数不下降）
-def is_sustainable(h, T=100):
-    x = x_stable.copy()
-    for t in range(T):
-        x = A @ x - h
-        x = np.maximum(x, 0)  # 确保非负
-        if np.sum(x) < 1:  # 种群灭绝
-            return False
-    # 检查最终种群是否稳定或增长
-    final_pop = np.sum(x)
-    initial_pop = np.sum(x_stable)
-    return final_pop >= initial_pop
+   # 模拟函数，给定收获向量h，模拟T年，返回是否可持续（最终总个体数不下降）
+   def is_sustainable(h, T=100):
+       x = x_stable.copy()
+       for t in range(T):
+           x = A @ x - h
+           x = np.maximum(x, 0)  # 确保非负
+           if np.sum(x) < 1:  # 种群灭绝
+               return False
+       # 检查最终种群是否稳定或增长
+       final_pop = np.sum(x)
+       initial_pop = np.sum(x_stable)
+       return final_pop >= initial_pop
 
-# 对于每个阶段，二分搜索最大收获量
-max_harvest_binary = np.zeros(4)
-for i in range(4):
-    if x_stable[i] == 0:
-        max_harvest_binary[i] = 0
-        continue
+   # 对于每个阶段，二分搜索最大收获量
+   max_harvest_binary = np.zeros(4)
+   for i in range(4):
+       if x_stable[i] == 0:
+           max_harvest_binary[i] = 0
+           continue
     
-    # 二分搜索
-    low = 0
-    high = x_stable[i]  # 最多不能超过该阶段个体数
-    for _ in range(50):  # 二分50次
-        mid = (low + high) / 2
-        h = np.zeros(4)
-        h[i] = mid
-        if is_sustainable(h):
-            low = mid
-        else:
-            high = mid
-    max_harvest_binary[i] = low
+       # 二分搜索
+       low = 0
+       high = x_stable[i]  # 最多不能超过该阶段个体数
+       for _ in range(50):  # 二分50次
+           mid = (low + high) / 2
+           h = np.zeros(4)
+           h[i] = mid
+           if is_sustainable(h):
+               low = mid
+           else:
+               high = mid
+       max_harvest_binary[i] = low
 
-print("\nMaximum sustainable harvest (binary search, individuals per year):")
-for i, (name, harvest) in enumerate(zip(stage_names, max_harvest_binary)):
-    print(f"  {name}: {harvest:.2f}")
+   print("\nMaximum sustainable harvest (binary search, individuals per year):")
+   for i, (name, harvest) in enumerate(zip(stage_names, max_harvest_binary)):
+       print(f"  {name}: {harvest:.2f}")
 
-# 比较两种方法
-print("\n" + "="*60)
-print("Comparison of two methods:")
-print("Stage          Method 1     Method 2     Difference")
-print("-" * 50)
-for i, name in enumerate(stage_names):
-    if max_harvest_individuals[i] == float('inf'):
-        m1_str = "inf"
-    else:
-        m1_str = f"{max_harvest_individuals[i]:.2f}"
-    m2_str = f"{max_harvest_binary[i]:.2f}"
-    if max_harvest_individuals[i] == float('inf'):
-        diff_str = "N/A"
-    else:
-        diff = abs(max_harvest_individuals[i] - max_harvest_binary[i])
-        diff_str = f"{diff:.2f}"
-    print(f"{name:15} {m1_str:12} {m2_str:12} {diff_str:12}")
-```
+   # 比较两种方法
+   print("\n" + "="*60)
+   print("Comparison of two methods:")
+   print("Stage          Method 1     Method 2     Difference")
+   print("-" * 50)
+   for i, name in enumerate(stage_names):
+       if max_harvest_individuals[i] == float('inf'):
+           m1_str = "inf"
+       else:
+           m1_str = f"{max_harvest_individuals[i]:.2f}"
+       m2_str = f"{max_harvest_binary[i]:.2f}"
+       if max_harvest_individuals[i] == float('inf'):
+           diff_str = "N/A"
+       else:
+           diff = abs(max_harvest_individuals[i] - max_harvest_binary[i])
+           diff_str = f"{diff:.2f}"
+       print(f"{name:15} {m1_str:12} {m2_str:12} {diff_str:12}")
+   ```
 
-运行结果：
+   运行结果：
 
-```
-Population at stable distribution (total=250):
-  Calf: 9.24
-  Juvenile: 79.02
-  Mature: 80.73
-  Post-reproductive: 81.01
+   ```
+   Population at stable distribution (total=250):
+     Calf: 9.24
+     Juvenile: 79.02
+     Mature: 80.73
+     Post-reproductive: 81.01
 
-============================================================
-Method 1: Using eigenvalue sensitivity formula
+   ============================================================
+   Method 1: Using eigenvalue sensitivity formula
 
-Sensitivity of λ to diagonal elements:
-  ∂λ/∂a_{11} = 0.042208
-  ∂λ/∂a_{22} = 0.378534
-  ∂λ/∂a_{33} = 0.579258
-  ∂λ/∂a_{44} = -0.000000
+   Sensitivity of λ to diagonal elements:
+     ∂λ/∂a_{11} = 0.042208
+     ∂λ/∂a_{22} = 0.378534
+     ∂λ/∂a_{33} = 0.579258
+     ∂λ/∂a_{44} = -0.000000
 
-Maximum sustainable harvest rate (fraction of stage population):
-  Calf: 0.6028
-  Juvenile: 0.0672
-  Mature: 0.0439
-  Post-reproductive: infinite (harvest does not affect λ)
+   Maximum sustainable harvest rate (fraction of stage population):
+     Calf: 0.6028
+     Juvenile: 0.0672
+     Mature: 0.0439
+     Post-reproductive: infinite (harvest does not affect λ)
 
-Maximum sustainable harvest (individuals per year):
-  Calf: 5.57
-  Juvenile: 5.31
-  Mature: 3.55
-  Post-reproductive: infinite
+   Maximum sustainable harvest (individuals per year):
+     Calf: 5.57
+     Juvenile: 5.31
+     Mature: 3.55
+     Post-reproductive: infinite
 
-============================================================
-Method 2: Binary search method
+   ============================================================
+   Method 2: Binary search method
 
-Maximum sustainable harvest (binary search, individuals per year):
-  Calf: 5.80
-  Juvenile: 5.52
-  Mature: 3.65
-  Post-reproductive: 81.01
+   Maximum sustainable harvest (binary search, individuals per year):
+     Calf: 5.80
+     Juvenile: 5.52
+     Mature: 3.65
+     Post-reproductive: 81.01
 
-============================================================
-Comparison of two methods:
-Stage          Method 1     Method 2     Difference
---------------------------------------------------
-Calf            5.57         5.80         0.23
-Juvenile        5.31         5.52         0.21
-Mature          3.55         3.65         0.10
-Post-reproductive inf          81.01        N/A
-```
+   ============================================================
+   Comparison of two methods:
+   Stage          Method 1     Method 2     Difference
+   --------------------------------------------------
+   Calf            5.57         5.80         0.23
+   Juvenile        5.31         5.52         0.21
+   Mature          3.55         3.65         0.10
+   Post-reproductive inf          81.01        N/A
+   ```
 
-可见特征值灵敏度法和二分搜索法结果非常接近，均为幼年阶段5.6只左右，成熟阶段3.6只左右，验证了灵敏度公式的有效性。对于最后一个阶段，由于其对λ的灵敏度为零（理论上不影响λ），所以该方法认为该阶段的最大可持续收获为无限。二分搜索法在这种情况下给出了一个近似值作为上限。
+   可见特征值灵敏度法和二分搜索法结果非常接近，均为幼年阶段5.6只左右，成熟阶段3.6只左右，验证了灵敏度公式的有效性。对于最后一个阶段，由于其对λ的灵敏度为零（理论上不影响λ），所以该方法认为该阶段的最大可持续收获为无限。二分搜索法在这种情况下给出了一个近似值作为上限。

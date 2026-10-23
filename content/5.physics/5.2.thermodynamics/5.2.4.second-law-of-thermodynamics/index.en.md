@@ -1,6 +1,6 @@
 ---
 title: The Second Law of Thermodynamics
-source_hash: b31dc2b7f946
+source_hash: 79f6b1d61b09
 ---
 
 Thermodynamics rests on three laws drawn from experiment: the zeroth law gives **temperature** ([5.2.1](/5.2.1)), the first law gives **internal energy** and energy conservation ([5.2.3](/5.2.3)), and the second law, the subject of this chapter, gives the direction of natural processes; in thermal physics they play the role that Newton's laws play in mechanics. The first law says only that energy is conserved in transformations and places no restriction on their direction: at the end of the previous chapter we saw that turning all the absorbed **heat** into **work** does not violate energy conservation, yet it has never been achieved. This chapter first states the second law in the two forms due to Kelvin and Clausius, and derives from it Carnot's theorem and the **thermodynamic temperature scale**; it then introduces a new state function, the entropy, from the Clausius equality, and writes the second law in the quantitative form of the principle of increase of entropy; finally it uses Boltzmann's statistical viewpoint to explain the microscopic meaning of entropy: entropy is the logarithm of the number of microstates, and the second law is a statistical law. The concept of entropy will reappear in physical chemistry (chemical equilibrium and free energy), information theory and statistical learning.
@@ -333,9 +333,34 @@ The increase of entropy is a measure of energy degradation.
 
 Energy degradation is a consequence of the second law and reflects the passage of natural processes from order to disorder. In the 19th century Clausius extended the principle of increase of entropy to the whole universe, arguing that the universe would eventually reach a "heat death" in which the temperature is the same everywhere and no macroscopic process occurs any more. On the other hand, the world we see is full of processes that go from disorder to order: the evolution of life, the development of organisms, the growth of crystals, the regular patterns formed in convection. This does not violate the second law: living organisms and other self-organizing systems are all **open systems**; they obtain low-entropy energy from the environment (for the Earth, radiation from the hot Sun) and discharge high-entropy heat and matter into the environment, so that their own entropy can decrease while the total entropy of system and environment still increases. Whether the universe as a whole can be regarded as an isolated system and whether the "heat death" hypothesis holds involve the expansion of the universe and the peculiar thermodynamic properties of gravitating systems; these are questions of cosmology and cannot simply be deduced from the principle of increase of entropy.
 
+## Summary
+
+```mermaid
+flowchart LR
+  A["Second law: Kelvin ⇔ Clausius statement"] --> B["Carnot's theorem: η ≤ 1 − T₂/T₁"]
+  B --> C["Thermodynamic temperature scale"]
+  B --> D["Clausius equality ∮δQ/T = 0"]
+  D --> E["Entropy dS = δQ_rev/T"]
+  E --> F["Clausius inequality, increase of entropy"]
+  F --> G["Statistical meaning: S = k_B ln Ω"]
+  F --> H["Energy degradation E_d = T₀ΔS"]
+```
+
+| Topic | Result |
+|---|---|
+| Second law of thermodynamics | Theorem 4.2.1: the Kelvin statement (no perpetual motion machine of the second kind) and the Clausius statement are equivalent; every real process involving heat is irreversible (Definition 4.3.1), and the various irreversibilities imply one another |
+| Carnot's theorem | Theorem 4.4.1: all reversible engines have efficiency $1 - T_2/T_1$ and no irreversible engine exceeds it; this defines the thermodynamic temperature scale (Definition 4.4.1), and Corollary 4.4.1 bounds the efficiency of any reversible cycle |
+| Entropy | Defined through the Clausius equality (Theorem 4.5.1) as $\mathrm{d}S = \delta Q_{\mathrm{rev}}/T$ (Definition 4.5.1); $\mathrm{d}U = T\,\mathrm{d}S - p\,\mathrm{d}V$ (Eq. (4.2)); entropy of an ideal gas in Formula 4.5.2; the entropy change of an irreversible process is computed along a reversible path joining the same end states |
+| Principle of increase of entropy | Clausius inequality (Theorem 4.6.1) $\oint\delta Q/T_{\mathrm{e}} \le 0$; $\Delta S \ge 0$ for adiabatic processes and isolated systems (Theorem 4.6.2) |
+| Statistical meaning | Under equal a priori probabilities (Property 4.7.1), an isolated system evolves toward the macrostate of largest thermodynamic probability $\Omega$; Boltzmann entropy formula $S = k_{\mathrm{B}}\ln\Omega$ (Eq. (4.3)) |
+| $T$–$S$ diagram and energy degradation | The area under a curve on the $T$–$S$ diagram is the heat, and the Carnot cycle is a rectangle; the energy degraded by an irreversible process is $E_{\mathrm{d}} = T_0\,\Delta S$ (Formula 4.10.1) |
+
 ## Questions
 
 1. A cup of hot water cools at room temperature, and the entropy of the water decreases. Does this contradict the principle of increase of entropy?
-   Hint: the water is not an isolated system; the entropy of the isolated system consisting of the water and the surrounding air increases (compare Example 4.5.1).
+
+   **Answer** the water is not an isolated system; the entropy of the isolated system consisting of the water and the surrounding air increases (compare Example 4.5.1).
+
 2. In summer an air conditioner moves heat from the room to the hotter outdoors. Does this violate the Clausius statement?
-   Hint: no, the surroundings (the power grid) do work on it, and the transfer of heat is not the "only effect".
+
+   **Answer** no, the surroundings (the power grid) do work on it, and the transfer of heat is not the "only effect".

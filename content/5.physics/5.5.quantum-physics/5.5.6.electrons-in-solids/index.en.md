@@ -1,7 +1,7 @@
 ---
 title: Electrons in Solids
 description: Classification of solids; the free electron gas model of metals (three-dimensional potential well, Fermi energy, Fermi velocity and Fermi temperature, density of states); formation of energy bands, periodic potentials and Bloch's theorem, the tight-binding model (an eigenvalue problem for a tridiagonal matrix) and the Kronig–Penney model; filled, valence and conduction bands and the band gap, conductors, semiconductors and insulators; intrinsic semiconductors and holes, n-type and p-type semiconductors; band bending and the current–voltage characteristic of the p–n junction; light-emitting diodes, semiconductor lasers, photovoltaic cells, transistors and the measurement of energy bands.
-source_hash: 375871f8a7c1
+source_hash: 931bacd8360c
 ---
 
 The previous chapters studied single particles and the electrons in a single atom. A solid contains of order $10^{23}$ atoms, with interactions among the electrons and between the electrons and the nuclei, and an exact solution is impossible. In this chapter we use two complementary simplified models to understand electrons in solids. The first treats the valence electrons of a metal as an ideal Fermi gas confined in a potential well (§6.1); it uses the **infinite square well** of [5.5.3](/5.5.3) and the **Fermi–Dirac distribution** of [5.5.4](/5.5.4#sec-4.3.3). The second takes into account the periodic potential of the lattice, so that the energy levels of isolated atoms broaden into energy bands (§6.2); the core here is Bloch's theorem, and the tight-binding model turns it into an **eigenvalue** problem for a tridiagonal matrix in linear algebra ([2.1.6](/2.1.6)). Band theory explains the enormous differences in conductivity among conductors, semiconductors and insulators (§6.3) and also the difficulties of the classical theory of **electrical conductance** in [5.3.5](/5.3.5). Sections 6.4–6.6 treat semiconductors, the p–n junction and semiconductor devices, which are the physical basis of digital circuits ([4.9.3](/4.9.3)) and of modern information technology; light-emitting diodes and semiconductor lasers connect with the lasers of the previous chapter ([5.5.5](/5.5.5#sec-5.2)).
@@ -364,12 +364,21 @@ where $W_0$ is the work function; as the electron crosses the surface, the momen
 ## Questions
 
 1. Why does the resistance of a metal increase with temperature while that of a semiconductor decreases?
-   Hint: the number of carriers in a metal is almost constant and scattering by lattice vibrations strengthens with temperature; the number of carriers in a semiconductor increases rapidly with temperature as $\mathrm{e}^{-E_{\mathrm{g}}/(2k_{\mathrm{B}}T)}$.
+
+   **Answer** the number of carriers in a metal is almost constant and scattering by lattice vibrations strengthens with temperature; the number of carriers in a semiconductor increases rapidly with temperature as $\mathrm{e}^{-E_{\mathrm{g}}/(2k_{\mathrm{B}}T)}$.
+
 2. The valence-electron number density of sodium is $2.65\times10^{28}\,\mathrm{m^{-3}}$. Estimate its Fermi energy and Fermi temperature.
-   Answer: from Eq. (6.2), $E_{\mathrm{F}}\approx3.2\,\mathrm{eV}$, $T_{\mathrm{F}}\approx3.8\times10^4\,\mathrm{K}$.
+
+   **Answer** from Eq. (6.2), $E_{\mathrm{F}}\approx3.2\,\mathrm{eV}$, $T_{\mathrm{F}}\approx3.8\times10^4\,\mathrm{K}$.
+
 3. According to classical theory the free electrons in a metal should increase the molar heat capacity by $\frac32R$; why is this not observed experimentally?
-   Hint: only electrons within a range of about $k_{\mathrm{B}}T$ near the Fermi level, a fraction of about $T/T_{\mathrm{F}}$, can be thermally excited.
+
+   **Answer** only electrons within a range of about $k_{\mathrm{B}}T$ near the Fermi level, a fraction of about $T/T_{\mathrm{F}}$, can be thermally excited.
+
 4. Divalent magnesium has two 3s electrons per atom, which exactly fill the 3s band; why is it still a metal?
-   Hint: the 3s band overlaps the 3p band.
+
+   **Answer** the 3s band overlaps the 3p band.
+
 5. Why is silicon unsuitable for making light-emitting diodes?
-   Hint: silicon is an indirect-gap semiconductor; recombination of an electron and a hole must also conserve momentum and requires the participation of lattice vibrations, so the probability of radiative recombination is very small.
+
+   **Answer** silicon is an indirect-gap semiconductor; recombination of an electron and a hole must also conserve momentum and requires the participation of lattice vibrations, so the probability of radiative recombination is very small.

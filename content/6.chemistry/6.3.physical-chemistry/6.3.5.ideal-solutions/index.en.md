@@ -1,6 +1,6 @@
 ---
 title: Ideal Liquid Mixtures and Ideal Dilute Solutions
-source_hash: 544a9855edc2
+source_hash: d9af9c340230
 ---
 
 [6.3.4](/6.3.4) established the language of multicomponent systems, namely **partial molar quantities**, the **chemical potential** and the **fugacity**, and gave expressions for the chemical potentials of gases (ideal and real). This chapter applies that language to the liquid phase. The chemical potential of a liquid cannot be measured directly, but when a liquid is in equilibrium with its vapor the chemical potential of each substance is the same in the two phases, so the chemical potential in the liquid can be expressed through the gas phase, and the problem reduces to how the partial pressure of the vapor above a solution varies with composition. Two empirical laws hold in dilute solutions: the solvent obeys Raoult's law, and a volatile solute obeys Henry's law. On this basis we define two idealized kinds of solution, the ideal liquid mixture (5.1) and the ideal dilute solution (5.2), write down the chemical potentials of the components, and from them derive rigorously the colligative properties of dilute solutions (5.3): vapor-pressure lowering, freezing-point depression, boiling-point elevation and osmotic pressure. These results are the starting point for real solutions: [6.3.6](/6.3.6) uses activities to correct for deviations from ideal behavior, [6.3.7](/6.3.7) derives equilibrium constants in solution from chemical potentials, and [6.3.9](/6.3.9) draws binary phase diagrams from Raoult's law; osmotic pressure is also the physical basis of the regulation of water in cells and body fluids.
@@ -358,8 +358,13 @@ If a pressure greater than $\varPi$ is applied to the solution side, solvent flo
 ## Questions
 
 1. If two liquids can be mixed in any proportion, must they form an ideal liquid mixture? Must the total vapor pressure of a binary ideal liquid mixture exceed the saturated vapor pressure of either pure component?
-   Answer: Neither is necessary. Water and ethanol mix in any proportion but deviate markedly from Raoult's law ([6.3.6](/6.3.6)); conversely, $\Delta_{\mathrm{mix}}G < 0$ for an ideal liquid mixture at all compositions, so such liquids must mix in any proportion. The total pressure of an ideal liquid mixture lies between the vapor pressures of the two pure components.
+
+   **Answer** Neither is necessary. Water and ethanol mix in any proportion but deviate markedly from Raoult's law ([6.3.6](/6.3.6)); conversely, $\Delta_{\mathrm{mix}}G < 0$ for an ideal liquid mixture at all compositions, so such liquids must mix in any proportion. The total pressure of an ideal liquid mixture lies between the vapor pressures of the two pure components.
+
 2. A glass of pure water and a glass of sugar water are placed under an evacuated glass bell jar at constant temperature. What happens after a long enough time?
-   Answer: The vapor pressure of pure water is higher than the partial pressure of water over the sugar water, so water keeps evaporating from the pure-water glass and condensing in the sugar-water glass until the pure-water glass is dry (or until the sugar water has been diluted to the same vapor pressure as pure water, which is impossible for a nonvolatile solute).
+
+   **Answer** The vapor pressure of pure water is higher than the partial pressure of water over the sugar water, so water keeps evaporating from the pure-water glass and condensing in the sugar-water glass until the pure-water glass is dry (or until the sugar water has been diluted to the same vapor pressure as pure water, which is impossible for a nonvolatile solute).
+
 3. Which of the four colligative properties of an ideal dilute solution also hold for a volatile solute?
-   Answer: Freezing-point depression (as long as pure solid solvent separates) and osmotic pressure (as long as the semipermeable membrane does not let the solute through) depend only on the chemical potential of the solvent in the solution and hold equally for volatile solutes; the formulas for vapor-pressure lowering and boiling-point elevation require a nonvolatile solute.
+
+   **Answer** Freezing-point depression (as long as pure solid solvent separates) and osmotic pressure (as long as the semipermeable membrane does not let the solute through) depend only on the chemical potential of the solvent in the solution and hold equally for volatile solutes; the formulas for vapor-pressure lowering and boiling-point elevation require a nonvolatile solute.

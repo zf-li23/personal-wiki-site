@@ -1,6 +1,6 @@
 ---
 title: Group Theory
-source_hash: 483db6eb03ba
+source_hash: c6f2c0b49191
 ---
 
 A group is an algebraic system with a single binary operation that can be "undone". It is the basic language of symmetry: the symmetries of an object (the transformations preserving its structure) always form a group under composition. The previous chapter gave the general definitions of **algebraic systems**, **identity elements**, **inverse elements** and **homomorphisms**; this chapter develops these notions concretely for the most important class of systems.

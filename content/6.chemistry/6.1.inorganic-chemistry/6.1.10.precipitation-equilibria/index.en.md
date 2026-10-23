@@ -1,6 +1,6 @@
 ---
 title: Precipitation–Dissolution Equilibria
-source_hash: 71464b7fdd57
+source_hash: c7cfb6a7c9bd
 ---
 
 Many important chemical processes involve the formation and dissolution of sparingly soluble substances: gravimetric analysis and the separation and identification of ions in analytical chemistry, impurity removal and hydrometallurgy in industry, the formation and removal of boiler scale, the formation of minerals, bone, and teeth in nature, and even the colloidal synthesis of size-uniform semiconductor nanocrystals such as CdS and PbS (whose nucleation and growth are likewise governed by precipitation–dissolution equilibrium and supersaturation). This chapter applies the equilibrium principles of [6.1.8](/6.1.8) to the heterogeneous ionic equilibrium between a solid and its saturated solution. We first define the solubility product and discuss its relation to solubility (10.1), then derive from the comparison of the reaction quotient with the solubility product the criteria for precipitation and dissolution (10.2). Next we discuss the effects of the common ion, of added salt, of acid, and of oxidation–reduction and complexation on the equilibrium (10.3), which draw on the acid–base and complexation equilibria of [6.1.9](/6.1.9), and finally treat fractional precipitation, the conversion of precipitates, and the separation of metal ions (10.4). The quantitative treatment of the effective concentration of ions (activity) and of ionic strength is found in [Physical Chemistry](/6.3); gravimetric analysis, precipitation titration, and systematic qualitative analysis are found in [Analytical Chemistry](/6.4).
@@ -337,15 +337,6 @@ With the pH controlled between 2.2 and 6.2 (for example with an HAc–NaAc buffe
 
 The same calculation for the separation of $\ce{Cd^2+}$ and $\ce{Zn^2+}$ (each $0.10\,\mathrm{mol\,L^{-1}}$) shows that complete precipitation of CdS requires $[\ce{H+}] \le 1.1\,\mathrm{mol\,L^{-1}}$ and non-precipitation of ZnS requires $[\ce{H+}] \ge 0.58\,\mathrm{mol\,L^{-1}}$, a very narrow window. In actual qualitative analysis, CdS, PbS, CuS, HgS, and so on are precipitated by passing $\ce{H2S}$ into about $0.3\,\mathrm{mol\,L^{-1}}$ HCl (the hydrogen sulfide group). By the data in the table above, ZnS is already supersaturated under these conditions (the $[\ce{Zn^2+}]$ allowed to remain in solution is only about $0.03\,\mathrm{mol\,L^{-1}}$), but ZnS nucleates very slowly from acidic solution and does not precipitate in the usual working time: the separation exploits differences in rate as well as in equilibrium. This again shows that sulfide data can be used only as order-of-magnitude estimates. The systematic grouping scheme of qualitative analysis is found in [Analytical Chemistry](/6.4).
 
-## Questions
-
-1. Why can $\ce{BaSO4}$ be used as a contrast agent for the digestive tract (a "barium meal") while $\ce{BaCO3}$ cannot, although their $K_{\mathrm{sp}}$ values differ by only a factor of about 24?
-   Answer: Gastric acid (about $0.1\,\mathrm{mol\,L^{-1}}$ HCl) converts $\ce{CO3^2-}$ to $\ce{CO2}$, so $\ce{BaCO3}$ dissolves through the acid effect and releases toxic $\ce{Ba^2+}$; $\ce{SO4^2-}$ is an extremely weak base ($\mathrm{p}K_{\mathrm{a}}$ of $\ce{HSO4-}$ is 1.99), and the solubility of $\ce{BaSO4}$ is hardly affected by gastric acid.
-2. Tooth enamel is mainly hydroxyapatite, $\ce{Ca5(PO4)3OH}$. Why do acids in the mouth after eating sugar corrode teeth, while fluoride toothpaste prevents caries?
-   Answer: Acid combines with $\ce{OH-}$ and $\ce{PO4^3-}$, and the acid effect dissolves hydroxyapatite; $\ce{F-}$ replaces $\ce{OH-}$ to form fluorapatite, $\ce{Ca5(PO4)3F}$, which is less soluble and whose anions do not react with acid (conversion of precipitates).
-3. AgCl dissolves in aqueous ammonia; why does AgI not? What reagent can dissolve AgI?
-   Answer: The equilibrium constant $K_{\mathrm{sp}}\beta_2$ of the dissolution reaction is only $1.4 \times 10^{-9}$ for AgI (10.3.5). A softer base ligand that binds $\ce{Ag+}$ more strongly is required, such as $\ce{CN-}$ ($K \approx 10^5$).
-
 ## Summary
 
 | Topic | Key points |
@@ -359,3 +350,17 @@ The same calculation for the separation of $\ce{Cd^2+}$ and $\ce{Zn^2+}$ (each $
 | Fractional precipitation | The ion whose ion product first reaches the solubility product precipitates first |
 | Conversion of precipitates | $K = K_{\mathrm{sp}}(\text{old})/K_{\mathrm{sp}}(\text{new})$ (same type); conversion toward the less soluble precipitate is easy, and the reverse is also possible when the $K_{\mathrm{sp}}$ values do not differ much |
 | Separation of ions | Control the pH so that hydroxides or sulfides precipitate stepwise |
+
+## Questions
+
+1. Why can $\ce{BaSO4}$ be used as a contrast agent for the digestive tract (a "barium meal") while $\ce{BaCO3}$ cannot, although their $K_{\mathrm{sp}}$ values differ by only a factor of about 24?
+
+   **Answer** Gastric acid (about $0.1\,\mathrm{mol\,L^{-1}}$ HCl) converts $\ce{CO3^2-}$ to $\ce{CO2}$, so $\ce{BaCO3}$ dissolves through the acid effect and releases toxic $\ce{Ba^2+}$; $\ce{SO4^2-}$ is an extremely weak base ($\mathrm{p}K_{\mathrm{a}}$ of $\ce{HSO4-}$ is 1.99), and the solubility of $\ce{BaSO4}$ is hardly affected by gastric acid.
+
+2. Tooth enamel is mainly hydroxyapatite, $\ce{Ca5(PO4)3OH}$. Why do acids in the mouth after eating sugar corrode teeth, while fluoride toothpaste prevents caries?
+
+   **Answer** Acid combines with $\ce{OH-}$ and $\ce{PO4^3-}$, and the acid effect dissolves hydroxyapatite; $\ce{F-}$ replaces $\ce{OH-}$ to form fluorapatite, $\ce{Ca5(PO4)3F}$, which is less soluble and whose anions do not react with acid (conversion of precipitates).
+
+3. AgCl dissolves in aqueous ammonia; why does AgI not? What reagent can dissolve AgI?
+
+   **Answer** The equilibrium constant $K_{\mathrm{sp}}\beta_2$ of the dissolution reaction is only $1.4 \times 10^{-9}$ for AgI (10.3.5). A softer base ligand that binds $\ce{Ag+}$ more strongly is required, such as $\ce{CN-}$ ($K \approx 10^5$).

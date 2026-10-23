@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: 6abc80c771ef
+source_hash: bbe44af2379e
 ---
 
 [6.1.6](/6.1.6) gave the criterion for the direction of a reaction: at constant temperature and pressure, with no **non-expansion work**, a reaction with $\Delta_{\mathrm{r}}G_{\mathrm{m}} < 0$ can proceed spontaneously. Most reactions, however, do not go to completion but stop at a state in which reactants and products coexist, after which the macroscopic composition no longer changes. This state has two equivalent descriptions. Kinetically ([6.1.7](/6.1.7)), the rates of the forward and reverse reactions are equal; thermodynamically, the **Gibbs free energy** of the system passes through a minimum as a function of the extent of reaction, so that $\Delta_{\mathrm{r}}G_{\mathrm{m}} = 0$. This chapter first describes chemical equilibrium and the equilibrium constant (8.1, 8.2), then derives from thermodynamics the reaction isotherm and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$ (8.3), which connects the thermodynamic data of Chapter 6 with equilibrium compositions, and finally discusses the effects of concentration, pressure, and temperature on equilibrium (8.4). The standard equilibrium constant and the isotherm of this chapter are the common basis of the four great equilibria that follow (acid–base, complexation, precipitation, and redox, [6.1.9](/6.1.9)–[6.1.12](/6.1.12)). A rigorous treatment of chemical potential, activity coefficients and fugacity, and phase equilibria and the phase rule is given in [Physical Chemistry](/6.3).
@@ -373,15 +373,6 @@ which is positive when $x_{\ce{N2}} = n_{\ce{N2}}/n > \frac{1}{2}$: adding $\ce{
 
 A catalyst accelerates the forward and reverse reactions equally ([6.1.7](/6.1.7)) and does not change $K^\circ$, so it does not shift the equilibrium and only shortens the time needed to reach it.
 
-## Questions
-
-1. Given $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -4.73\,\mathrm{kJ\,mol^{-1}}$ for $\ce{2NO2(g) <=> N2O4(g)}$ at $298\,\mathrm{K}$, in which direction does the reaction proceed when a gas mixture with $p_{\ce{NO2}} = p_{\ce{N2O4}} = 50\,\mathrm{kPa}$ is placed in a container?
-   Answer: $K^\circ = \mathrm{e}^{4730/(8.314 \times 298)} = 6.7$ and $Q = \frac{0.5}{0.5^2} = 2 < K^\circ$, so the reaction proceeds toward the formation of $\ce{N2O4}$.
-2. Why is it wrong to say that "the larger $K^\circ$ is, the faster the reaction"?
-   Answer: $K^\circ$ is determined by $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ and is a thermodynamic quantity; the rate is determined by the activation energy and is a kinetic quantity. $K^\circ \approx 10^{25}$ for $\ce{2SO2 + O2}$, yet the reaction hardly proceeds at room temperature.
-3. For an endothermic reaction, raising the temperature accelerates both the forward and the reverse reaction. Why does the equilibrium still shift in the forward direction?
-   Answer: From $K = k_+/k_-$ and $E_{\mathrm{a}} - E_{\mathrm{a}}' = \Delta_{\mathrm{r}}H_{\mathrm{m}} > 0$, the forward reaction has the larger activation energy and $k_+$ increases faster with temperature ([6.1.7](/6.1.7)), so $K$ increases.
-
 ## Summary
 
 | Topic | Key points |
@@ -394,3 +385,17 @@ A catalyst accelerates the forward and reverse reactions equally ([6.1.7](/6.1.7
 | Concentration and pressure | change $Q$ but not $K^\circ$; increasing the pressure shifts the equilibrium toward fewer gas molecules; an inert gas added at constant volume does not shift it, and at constant pressure is equivalent to lowering the pressure |
 | Temperature | changes $K^\circ$: $\frac{\mathrm{d}\ln K^\circ}{\mathrm{d}T} = \frac{\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}}}{RT^2}$; raising the temperature shifts the equilibrium in the endothermic direction |
 | Le Chatelier's principle | the equilibrium shifts in the direction that counteracts the change; a qualitative rule, the comparison of $Q$ with $K^\circ$ is decisive; a catalyst does not affect the equilibrium |
+
+## Questions
+
+1. Given $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -4.73\,\mathrm{kJ\,mol^{-1}}$ for $\ce{2NO2(g) <=> N2O4(g)}$ at $298\,\mathrm{K}$, in which direction does the reaction proceed when a gas mixture with $p_{\ce{NO2}} = p_{\ce{N2O4}} = 50\,\mathrm{kPa}$ is placed in a container?
+
+   **Answer** $K^\circ = \mathrm{e}^{4730/(8.314 \times 298)} = 6.7$ and $Q = \frac{0.5}{0.5^2} = 2 < K^\circ$, so the reaction proceeds toward the formation of $\ce{N2O4}$.
+
+2. Why is it wrong to say that "the larger $K^\circ$ is, the faster the reaction"?
+
+   **Answer** $K^\circ$ is determined by $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ and is a thermodynamic quantity; the rate is determined by the activation energy and is a kinetic quantity. $K^\circ \approx 10^{25}$ for $\ce{2SO2 + O2}$, yet the reaction hardly proceeds at room temperature.
+
+3. For an endothermic reaction, raising the temperature accelerates both the forward and the reverse reaction. Why does the equilibrium still shift in the forward direction?
+
+   **Answer** From $K = k_+/k_-$ and $E_{\mathrm{a}} - E_{\mathrm{a}}' = \Delta_{\mathrm{r}}H_{\mathrm{m}} > 0$, the forward reaction has the larger activation energy and $k_+$ increases faster with temperature ([6.1.7](/6.1.7)), so $K$ increases.

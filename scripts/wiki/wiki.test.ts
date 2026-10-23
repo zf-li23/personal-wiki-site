@@ -12,7 +12,7 @@ import { search } from '../../src/shared/search.ts';
 import { sourceLines } from '../../src/shared/sources.ts';
 import { fixMarkdown } from './fix.ts';
 import { checkNotation, fixNotation, fixNotationInMarkdown } from './notation.ts';
-import { checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
+import { checkEndSections, checkHeadings, parseHeadingNumber, parseStatementLabel } from './numbering.ts';
 import { sourceHash, translationStatus } from './build.ts';
 import { Diagnostics } from './diagnostics.ts';
 import type { Lang } from '../../site.config.ts';
@@ -166,6 +166,30 @@ describe('notation', () => {
   });
 });
 
+describe('end sections', () => {
+  it('allows only 小结 and 思考题 after the numbered sections, and requires 小结', () => {
+    const msgs = (hs: [number, string][], lang: 'zh' | 'en' = 'zh') => checkEndSections(hs.map(([depth, text]) => ({ depth, text })), lang).map((p) => p.message);
+    assert.deepEqual(msgs([[2, '13.1. A'], [2, '小结'], [2, '思考题']]), []);
+    assert.deepEqual(msgs([[2, '13.1. A'], [2, 'Summary']], 'en'), []);
+    assert.match(msgs([[2, '13.1. A'], [2, '习题'], [2, '小结']])[0], /only unnumbered sections/);
+    assert.match(msgs([[2, '13.1. A'], [2, '思考题'], [2, '小结']])[0], /must come before/);
+    assert.match(msgs([[2, '13.1. A'], [2, '小结'], [2, '13.2. B']])[0], /comes after/);
+    assert.match(msgs([[2, '13.1. A']])[0], /end with "## 小结"/);
+    assert.match(msgs([[2, '13.1. A'], [2, 'Summary']])[0], /only unnumbered sections/); // English name on a Chinese page
+    assert.deepEqual(msgs([[2, '小结']]), []); // pages without numbered sections need no summary
+  });
+  it('folds **答** paragraphs in 思考题 and warns about other answer forms', async () => {
+    const body = '## 13.1. A\n\n正文。\n\n## 小结\n\n要点。\n\n## 思考题\n\n1. 为什么？\n\n   **答** 因为如此。\n\n   第二段。\n\n2. 另一题。\n\n   答：直接写。\n\n3. **答** 只有答案。\n';
+    const { html, messages } = await render(body);
+    assert.match(html, /<li>\s*<p>为什么？<\/p>\s*<details class="wiki-answer"><summary>答案<\/summary>\s*<p>因为如此。<\/p>\s*<p>第二段。<\/p>\s*<\/details>/);
+    assert.equal(messages.filter((m) => m.includes('own paragraph starting with **答**')).length, 1);
+    assert.equal(messages.filter((m) => m.includes('answer without a question')).length, 1);
+    const en = await render('## 13.1. A\n\nText.\n\n## Summary\n\nPoints.\n\n## Questions\n\n1. Why?\n\n   **Answer** Because.\n', { lang: 'en' });
+    assert.match(en.html, /<summary>Answer<\/summary>\s*<p>Because\.<\/p>/);
+    assert.deepEqual(en.messages, []);
+  });
+});
+
 describe('markdown rendering', () => {
   it('keeps a paragraph written directly under display math inside the statement', async () => {
     const { html } = await render('## 13.1. A\n\n**定义 13.1.1** 设\n\n$$\nAx = \\lambda x\n$$\n则称 $\\lambda$ 为**特征值**。\n\n另一段。');
@@ -176,7 +200,7 @@ describe('markdown rendering', () => {
   it('warns about Chinese text left on an English page', async () => {
     const { messages } = await render('## 13.1. Basics\n\nA set 集合 and $\\text{若}$.', { lang: 'en' });
     assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);
-    assert.equal((await render('## 13.1. 基本\n\n集合')).messages.length, 0);
+    assert.equal((await render('## 13.1. 基本\n\n集合\n\n## 小结\n\n要点')).messages.length, 0);
   });
   it('groups adjacent ```<lang> tab blocks into one tabbed block', async () => {
     const { html, messages } = await render('```cpp tab\nint x = 1;\n```\n\n```python tab\nx = 1\n```\n\n```r\nx <- 1\n```\n\n```text\n1\n```\n\n```cpp tab\nalone\n```');

@@ -1,7 +1,7 @@
 ---
 title: Properties of Regular Languages
 description: The pumping lemma for regular languages and its applications (including an example showing that the pumping lemma is not sufficient); closure under union, concatenation, closure, complement, intersection, difference, reversal, homomorphism, and inverse homomorphism, and the product automaton; decision problems of emptiness, membership, finiteness, and equivalence; equivalence and distinguishability of states, the table-filling algorithm and its correctness, DFA minimization; the Myhill–Nerode theorem and uniqueness of the minimal DFA.
-source_hash: 0b8c0d5383ac
+source_hash: c36a2b6ce102
 ---
 
 The previous two chapters proved that **regular expressions**, **DFAs**, NFAs, and ε-NFAs describe the same family of languages. This chapter studies the properties of this family as a whole and answers four kinds of questions. Which languages are not regular? The pumping lemma and the Myhill–Nerode theorem provide tools for proofs: finitely many states can remember only finite information. Under which operations do regular languages stay regular? Union, intersection, complement, reversal, homomorphism, and others all work; these closure properties are both a means of constructing automata and a means of proving nonregularity. Which questions about regular languages have algorithms? Emptiness, membership, finiteness, and equivalence are all decidable. Finally, a regular language has infinitely many DFAs, among which the one with the fewest states is essentially unique and can be found by the table-filling algorithm. Chapter 9 discusses the same questions for context-free languages, where many answers differ: context-free languages are not closed under intersection and complement, and equivalence is undecidable.
@@ -378,7 +378,7 @@ The **Myhill–Nerode theorem** is also the most powerful tool for proving nonre
 | Decision | Graph search | Emptiness (reachability), finiteness (cycles), membership (simulation), equivalence (empty symmetric difference or table filling) |
 | Minimization | **Table-filling algorithm** + **quotient automaton** | The number of states of the result equals the index of $\equiv_L$; the minimal DFA is unique up to isomorphism |
 
-## Exercises
+## Questions
 
 1. Use the pumping lemma to prove that the following languages are not regular: (1) the strings over $\{0,1\}$ in which the number of 0s is twice the number of 1s; (2) the strings with more 0s than 1s; (3) $\{0^{m^2} \mid m \ge 0\}$; (4) the palindromes over $\{0,1\}$.
 2. Let $h(a) = 01$, $h(b) = 10$, and $M = L((01 + 10)^*0)$. Find a regular expression for $h^{-1}(M)$.

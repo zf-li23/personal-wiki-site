@@ -1,6 +1,6 @@
 ---
 title: Singular Solutions and Envelopes
-source_hash: c259fd8708ac
+source_hash: 8fc513fb4669
 ---
 
 A first-order equation usually has a **general solution** containing one arbitrary constant, and it may also have special solutions that are not contained in the general solution. One class of such solutions has a striking geometric feature: at each of its points another solution is tangent to it, so uniqueness fails everywhere along it. Such solutions are called singular solutions. This chapter first completes the treatment of implicit first-order equations $F(x,y,y')=0$, which elementary integration has not yet covered (the differentiation method, the parametric method, Clairaut's equation). We then study singular solutions from two points of view: without knowing the general solution, we look for singular solutions through the $p$-discriminant; when the general solution is known, a singular solution is the envelope of the family of integral curves and is found from the $C$-discriminant. Finally we turn to geometric applications of envelopes: curves determined by properties of their tangent lines, the astroid, evolutes and involutes, and envelopes of families of surfaces.
@@ -313,3 +313,16 @@ $$
 2xz-(y-1)^2=0,
 $$
 which is homogeneous of degree two in $(x,y-1,z)$: a cone with vertex $(0,1,0)$.
+
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Implicit equations | Differentiation method: differentiating $y=f(x,p)$ with respect to $x$ gives an explicit equation in $x,p$; parameter method: parametrize $F(y,p)=0$ and integrate $\mathrm{d}y=p\,\mathrm{d}x$; solutions coming from factors free of derivatives must be checked separately |
+| Clairaut equation (Definition 6.1.1) | $y=xp+f(p)$: the general solution is the family of lines $y=Cx+f(C)$; if $f''\ne0$, (6.3) is a special solution, the envelope of the lines, and a singular solution (Proposition 6.3.1) |
+| Singular solution (Definition 6.2.1) | At every point another solution is tangent to it; possible only where uniqueness fails |
+| $p$-discriminant (Definition 6.2.2) | A singular solution satisfies $F=F_p=0$ (Theorem 6.2.1); a solution on the discriminant curve with $F_y\ne0$, $F_{pp}\ne0$ is singular (Theorem 6.2.2) |
+| $C$-discriminant (Definition 6.3.2) | An envelope satisfies $V=V_C=0$ (Theorem 6.3.1); under the nondegeneracy conditions the discriminant curve is an envelope (Theorem 6.3.2); the envelope of the integral curves is a singular solution (Theorem 6.3.3) |
+| Spurious branches | The $p$-discriminant curve may contain loci of cusps, the $C$-discriminant curve loci of nodes (Example 6.3.1); a solution not contained in the general solution need not be singular (Example 6.3.3) |
+| Geometric applications | Tangent conditions lead to Clairaut equations whose singular solutions are the required curves: constant area gives hyperbolas (Example 6.4.1), constant length gives the astroid (Example 6.4.2); the evolute is the locus of centers of curvature (6.7) (Theorem 6.4.1), involutes are traced by an unwinding string |
+| Envelopes of surface families (Definition 6.5.1) | Satisfy $F=F_\alpha=0$ (6.9); the characteristic curves sweep out the envelope |

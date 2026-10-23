@@ -1,7 +1,7 @@
 ---
 title: Electrons in Atoms
 description: The hydrogen spectrum and Bohr's theory; the quantum-mechanical hydrogen atom (angular momentum, energy levels and degeneracy, electron clouds and radial probability); fine structure, the Zeeman effect, the Stern–Gerlach experiment, electron spin, spin–orbit coupling, term symbols and alkali-metal levels; identical particles, fermions and bosons, the Pauli exclusion principle, Fermi–Dirac and Bose–Einstein distributions; electron configurations of atoms; a summary of quantum mechanics.
-source_hash: 960d50ad7eb5
+source_hash: f1a5d893b0e5
 ---
 
 Atomic spectra are where quantum theory began, and they were its first real test. From Balmer's empirical formula for the hydrogen spectrum in 1885, through Bohr's atomic theory of 1913, the matrix mechanics of Heisenberg and Born and the wave mechanics of Schrödinger in 1925–1926, to the **Heisenberg uncertainty relation** of 1927 and the debates at the fifth Solvay Conference, the development of quantum mechanics revolved almost entirely around the electron in the atom. In this chapter we first solve the hydrogen atom with the methods of the previous chapter ([5.5.3](/5.5.3)): in spherical coordinates the **time-independent Schrödinger equation** separates, the angular part is the mathematical **spherical harmonics** ([2.5.5](/2.5.5#sec-5.4.2)), and the radial part gives the energy levels; the results of Bohr's theory are contained automatically. We then introduce electron spin (§4.2) and the symmetry of identical particles (§4.3), and use the Pauli exclusion principle to explain the electron configurations behind the periodic table (§4.4). The Fermi–Dirac and Bose–Einstein distributions of §4.3 are the quantum generalizations of Maxwell–Boltzmann statistics ([5.2.1](/5.2.1)) and are needed for the theory of metals and semiconductors in [5.5.6](/5.5.6); the electronic structure of atoms is also the physical basis of atomic structure and chemical bonding in chemistry. Section 4.5 summarizes the whole of quantum mechanics as treated here.
@@ -422,10 +422,17 @@ In 1935 Einstein, Podolsky and Rosen argued, with a thought experiment on two en
 ## Questions
 
 1. Why does a beam of ground-state silver atoms ($l=0$) split into two beams, rather than one or three, in the Stern–Gerlach experiment?
-   Hint: the splitting comes from the spin of the 5s valence electron, with the two orientations $m_s=\pm\frac12$; the number of components due to orbital angular momentum, $2l+1$, is always odd.
+
+   **Answer** the splitting comes from the spin of the 5s valence electron, with the two orientations $m_s=\pm\frac12$; the number of components due to orbital angular momentum, $2l+1$, is always odd.
+
 2. How are the electrons of a copper atom ($Z=29$) arranged?
-   Hint: $[\ce{Ar}]\,3\mathrm{d}^{10}\,4\mathrm{s}^1$; a filled 3d subshell is more stable than $3\mathrm{d}^9\,4\mathrm{s}^2$.
+
+   **Answer** $[\ce{Ar}]\,3\mathrm{d}^{10}\,4\mathrm{s}^1$; a filled 3d subshell is more stable than $3\mathrm{d}^9\,4\mathrm{s}^2$.
+
 3. How many states (including spin) does the level of principal quantum number $n$ have in the hydrogen atom? Do these states still have the same energy in alkali-metal atoms?
-   Hint: $2n^2$. In the alkali metals levels of different $l$ are separated by orbital penetration and core polarization, and levels with $l\ge1$ are further split into two according to $j$ by spin–orbit coupling.
+
+   **Answer** $2n^2$. In the alkali metals levels of different $l$ are separated by orbital penetration and core polarization, and levels with $l\ge1$ are further split into two according to $j$ by spin–orbit coupling.
+
 4. Why can air molecules at room temperature be treated with classical statistics, whereas the electrons in a metal cannot?
-   Hint: compare $n\lambda_{\mathrm{th}}^3$; electrons have small mass and hence a large thermal wavelength, and the electron density in a metal is high, so $n\lambda_{\mathrm{th}}^3\gg1$.
+
+   **Answer** compare $n\lambda_{\mathrm{th}}^3$; electrons have small mass and hence a large thermal wavelength, and the electron density in a metal is high, so $n\lambda_{\mathrm{th}}^3\gg1$.

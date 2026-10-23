@@ -1,7 +1,7 @@
 ---
 title: Binary Search Trees
 description: Access by key and entries, the ordering property and monotone inorder sequence of binary search trees, search, insertion and deletion, expected height under random insertion versus random shape, ideal and asymptotic balance, equivalence transformations (rotations), and AVL trees with their height bound, rebalancing after insertion and deletion, and trinode restructuring.
-source_hash: 21a5cbb62883
+source_hash: 218186c80cb0
 ---
 
 **Vectors** and lists both organize data by position (**rank**), so neither supports efficient search and efficient modification at once. A sorted vector admits **binary search**, but insertion and deletion take $O(n)$ time; a list supports insertion and deletion in $O(1)$ time, but search takes $O(n)$. The binary search trees of this chapter organize data by key and carry the idea of binary search over to binary trees: as long as the height stays $O(\log n)$, search, insertion and deletion all take only $O(\log n)$ time.
@@ -698,3 +698,15 @@ The advantages of AVL trees are that search, insertion and deletion are all $O(\
 Red-black trees reduce the structural change per modification to $O(1)$, splay trees record no balance information at all and rely on amortization for efficiency, and B-trees are designed for external memory; these are the subject of [4.3.8](/4.3.8).
 
 In actual languages, the C++ standard library's `std::set` and `std::map` and their `multi` versions are implemented as red-black trees. Python has no built-in balanced search tree: `dict` and `set` are hash tables ([4.3.9](/4.3.9)); when order is needed, one can use the `bisect` module for binary search and insertion in a sorted list (insertion is $O(n)$, but the constant for moving elements is very small) or the third-party library `sortedcontainers` (see [4.2.10](/4.2.10)).
+
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Binary search tree (Definition 6.1.1) | Every node is no less than all keys in its left subtree and no greater than all keys in its right subtree; equivalently, the inorder sequence is nondecreasing (Theorem 6.1.1) |
+| Search, insertion, deletion | Each descends along one path, $O(h)$; the empty position returned by an unsuccessful search is where to insert; deletion of a node with two children first swaps it with its inorder successor |
+| Average height | Random insertion order: average depth $2\ln n + O(1)$ (Theorem 6.3.1), expected height $O(\log n)$ (Theorem 6.3.2); uniformly random shape: expected height about $2\sqrt{\pi n}$; in the worst case the tree degenerates into a list of height $n - 1$ |
+| Balanced binary search tree (Definition 6.4.1) | Height always $O(\log n)$; after one update only $O(\log n)$ places are out of balance, and they can be repaired in $O(\log n)$ time |
+| Equivalence transformations and rotations (Definitions 6.4.2, 6.4.3) | zig / zag preserve the inorder sequence in $O(1)$ time; any two equivalent trees can be transformed into each other by at most $2n - 2$ rotations (Proposition 6.4.1) |
+| AVL tree (Definition 6.5.1) | Balance factor $\lvert\operatorname{balFac}(v)\rvert \le 1$; height $< 1.4405 \log_2(n+1)$ (Theorem 6.5.1) |
+| Rebalancing AVL trees | Insertion: at most one single or double rotation restores the whole tree; deletion: imbalance may propagate upward, $O(\log n)$ rotations in the worst case; the four cases are unified by trinode restructuring |

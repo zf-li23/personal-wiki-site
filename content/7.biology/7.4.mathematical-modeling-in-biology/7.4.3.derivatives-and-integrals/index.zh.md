@@ -333,363 +333,378 @@ $$
 
 实际上，直接非线性拟合更为方便可靠，线性化方法可能会引入偏差（因为变换会改变误差结构）。但在某些情况下，线性化可以提供快速的参数估计。
 
+## 小结
+
+- 离散的逻辑斯谛映射 $x_{t+1} = f(x_t) = rx_t(1-x_t)$ 虽然简单，却随 $r$ 依次出现稳定平衡、倍周期分岔与混沌（3.1）。平衡点 $\bar x$ 的稳定性由导数决定：$\lvert f'(\bar x)\rvert < 1$ 稳定，$> 1$ 不稳定。
+
+  | $r$ 的范围 | 长期行为 |
+  |---|---|
+  | $0 < r < 1$ | 收敛到 $\bar x_0 = 0$，种群衰落 |
+  | $1 < r < 3$ | 收敛到 $\bar x_1 = 1 - 1/r$（$f'(\bar x_1) = 2 - r$） |
+  | $3 < r < 1 + \sqrt6$ | 稳定的周期 2 振荡 |
+  | 更大的 $r$ | 周期 4、8、…… 的倍周期级联，直至混沌（如 $r = 4$） |
+
+- 蛛网图与分岔图是观察一维映射的两种工具（3.1.2、3.1.3）。分岔图具有自相似性，可用重整化群 $\mathcal{R}[f](x) = \alpha f(f(x/\alpha))$ 解释；Feigenbaum 常数 $\delta \approx 4.669$、$\alpha \approx -2.503$ 对一大类单峰映射普适，正弦映射的分岔图因此与逻辑斯谛映射几乎相同（3.1.4）。
+- 李雅普诺夫指数 $\lambda = \lim_{n\to\infty}\frac1n\sum_{i=0}^{n-1}\ln\lvert f'(x_i)\rvert$ 度量相邻轨道的分离速率：$\lambda > 0$ 为混沌，$\lambda < 0$ 为稳定周期或平衡点，$\lambda = 0$ 出现在分岔点（3.1.5）。
+- 连续时间模型中，导数是瞬时变化率，积分由变化率还原数量（3.2）：指数增长 $\frac{\mathrm{d}N}{\mathrm{d}t} = rN$ 的解为 $N_0\mathrm{e}^{rt}$；逻辑斯谛增长 $\frac{\mathrm{d}N}{\mathrm{d}t} = rN(1 - N/K)$ 经分离变量与部分分式积分得 S 形曲线 $N(t) = K/\bigl(1 + \frac{K-N_0}{N_0}\mathrm{e}^{-rt}\bigr)$。
+- 拟合增长曲线有两种做法（3.3）：直接用非线性最小二乘（`scipy.optimize.curve_fit`）；或用等间隔三点估计 $K$，再对 $\ln\frac{K-N}{N}$ 关于 $t$ 作线性回归。线性化改变了误差结构，通常不如直接非线性拟合可靠。
+
 ## 思考题
 
 1. （选做）取我们在文档中写下的重整化群变换。你会如何编写程序来数值计算普适函数？
 
-回答可以参考文档中的作图代码。
+   **答** 可以参考正文中的作图代码。
 
 2. 逻辑斯蒂映射的倍周期分岔与混沌
 
-注：本题中已出现在文档中的部分将不再重新给出回答。
+   注：本题中已出现在文档中的部分将不再重新给出回答。
 
-混沌通常与某种非线性动力学相关。我们在文档中已经看到，简单的逻辑斯蒂映射如何导致复杂的动力学行为。动力系统的研究通常关注长期行为（特别是稳态和其他"吸引子"）。我们可以通过改变系统参数 $r$ 来研究逻辑斯蒂映射中混沌的发生。
+   混沌通常与某种非线性动力学相关。我们在文档中已经看到，简单的逻辑斯蒂映射如何导致复杂的动力学行为。动力系统的研究通常关注长期行为（特别是稳态和其他"吸引子"）。我们可以通过改变系统参数 $r$ 来研究逻辑斯蒂映射中混沌的发生。
 
-当处于某些参数范围时，逻辑斯蒂映射为我们提供了一个动力学"不可预测"的例子。在本练习中，我们将通过观察逻辑斯蒂映射在长时间下沿吸引子运动的行为来研究其动力学特性。
-- **a)** 固定点与周期 8 吸引子
+   当处于某些参数范围时，逻辑斯蒂映射为我们提供了一个动力学"不可预测"的例子。在本练习中，我们将通过观察逻辑斯蒂映射在长时间下沿吸引子运动的行为来研究其动力学特性。
 
-对于 $r = 0.75$，使用几个初始条件 $x_0$ 迭代映射。最终，所有解都应趋于零（固定点）。在同一图上绘制 $f(x) = rx(1-x)$ 与 $x$ 以及对角线 $y = x$。然后编写一个简短的程序来绘制"蛛网图"，正如我在黑板上的演示。通过多次迭代逻辑斯蒂映射，我们可以找到吸引子上的点。找到一个 $r$ 值，使得吸引子具有周期 8。提交图形（并标出 $r$ 的值）。
+   - **a)** 固定点与周期 8 吸引子
 
-**解答：**
+     对于 $r = 0.75$，使用几个初始条件 $x_0$ 迭代映射。最终，所有解都应趋于零（固定点）。在同一图上绘制 $f(x) = rx(1-x)$ 与 $x$ 以及对角线 $y = x$。然后编写一个简短的程序来绘制"蛛网图"，正如我在黑板上的演示。通过多次迭代逻辑斯蒂映射，我们可以找到吸引子上的点。找到一个 $r$ 值，使得吸引子具有周期 8。提交图形（并标出 $r$ 的值）。
 
-可以先尝试采用数值模拟的方式，得到的结果可能对模拟的初值有一定的敏感性：
+     **答** 可以先尝试采用数值模拟的方式，得到的结果可能对模拟的初值有一定的敏感性：
 
-![搜索得到的周期 8 吸引子蛛网图](./plots/period-8-search-cobweb.py)
+     ![搜索得到的周期 8 吸引子蛛网图](./plots/period-8-search-cobweb.py)
 
-对于逻辑斯蒂映射 $x_{n+1} = f(x_n) = r x_n (1 - x_n)$，周期8吸引子对应参数 $r$ 使得系统存在稳定的周期8轨道。寻找周期8吸引子可以通过最小化李雅普诺夫指数来实现，因为在周期窗口内，李雅普诺夫指数为负，且在窗口中心达到最小值（最负）。
+     对于逻辑斯蒂映射 $x_{n+1} = f(x_n) = r x_n (1 - x_n)$，周期8吸引子对应参数 $r$ 使得系统存在稳定的周期8轨道。寻找周期8吸引子可以通过最小化李雅普诺夫指数来实现，因为在周期窗口内，李雅普诺夫指数为负，且在窗口中心达到最小值（最负）。
 
-李雅普诺夫指数定义为：
-$$
-\lambda(r) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(x_i)|
-$$
-其中 $f'(x) = r(1 - 2x)$。数值计算时，取充分大的 $n$，并舍弃瞬态过程。
+     李雅普诺夫指数定义为：
+     $$
+     \lambda(r) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(x_i)|
+     $$
+     其中 $f'(x) = r(1 - 2x)$。数值计算时，取充分大的 $n$，并舍弃瞬态过程。
 
-在周期8窗口内，$\lambda(r)$ 为负值，且关于窗口中心对称，在中心处达到最小。因此，在给定区间 $[r_{\min}, r_{\max}]$ 上通过优化算法寻找 $\lambda(r)$ 的最小值点，即可找到周期8窗口中最稳定的参数。查找的区间来源于此前模拟出的经验值，此外再尝试在 $3.6<r<3.65$ 中进行查找，验证此方法的适用性。
+     在周期8窗口内，$\lambda(r)$ 为负值，且关于窗口中心对称，在中心处达到最小。因此，在给定区间 $[r_{\min}, r_{\max}]$ 上通过优化算法寻找 $\lambda(r)$ 的最小值点，即可找到周期8窗口中最稳定的参数。查找的区间来源于此前模拟出的经验值，此外再尝试在 $3.6<r<3.65$ 中进行查找，验证此方法的适用性。
 
-```python
-import numpy as np
-from scipy.optimize import minimize_scalar
+     ```python
+     import numpy as np
+     from scipy.optimize import minimize_scalar
 
-def logistic_map(r, x):
-    return r * x * (1 - x)
+     def logistic_map(r, x):
+         return r * x * (1 - x)
 
-def lyapunov_exponent(r, x0=0.5, n_transient=10000, n_iter=50000):
-    """计算逻辑斯蒂映射的李雅普诺夫指数"""
-    # 舍弃瞬态
-    x = x0
-    for _ in range(n_transient):
-        x = logistic_map(r, x)
+     def lyapunov_exponent(r, x0=0.5, n_transient=10000, n_iter=50000):
+         """计算逻辑斯蒂映射的李雅普诺夫指数"""
+         # 舍弃瞬态
+         x = x0
+         for _ in range(n_transient):
+             x = logistic_map(r, x)
     
-    # 计算李雅普诺夫指数
-    lyap_sum = 0.0
-    for _ in range(n_iter):
-        x = logistic_map(r, x)
-        df = abs(r * (1 - 2 * x))
-        if df > 1e-12:  # 避免log(0)
-            lyap_sum += np.log(df)
-    return lyap_sum / n_iter
+         # 计算李雅普诺夫指数
+         lyap_sum = 0.0
+         for _ in range(n_iter):
+             x = logistic_map(r, x)
+             df = abs(r * (1 - 2 * x))
+             if df > 1e-12:  # 避免log(0)
+                 lyap_sum += np.log(df)
+         return lyap_sum / n_iter
 
-# 在区间 [3.6, 3.65] 内最小化李雅普诺夫指数
-res = minimize_scalar(lyapunov_exponent, bounds=(3.6, 3.65), method='bounded')
-r_opt = res.x
-lyap_opt = res.fun
+     # 在区间 [3.6, 3.65] 内最小化李雅普诺夫指数
+     res = minimize_scalar(lyapunov_exponent, bounds=(3.6, 3.65), method='bounded')
+     r_opt = res.x
+     lyap_opt = res.fun
 
-print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
-print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
+     print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
+     print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
 
-# 验证周期8：检查最后若干次迭代是否呈现周期8
-def check_period(r, x0=0.5, n_transient=10000, n_check=200, tol=1e-8):
-    x = x0
-    for _ in range(n_transient):
-        x = logistic_map(r, x)
+     # 验证周期8：检查最后若干次迭代是否呈现周期8
+     def check_period(r, x0=0.5, n_transient=10000, n_check=200, tol=1e-8):
+         x = x0
+         for _ in range(n_transient):
+             x = logistic_map(r, x)
     
-    # 记录轨迹
-    trajectory = []
-    for _ in range(n_check):
-        x = logistic_map(r, x)
-        trajectory.append(x)
+         # 记录轨迹
+         trajectory = []
+         for _ in range(n_check):
+             x = logistic_map(r, x)
+             trajectory.append(x)
     
-    # 检查周期，从1到20
-    for period in range(1, 21):
-        if period < n_check:
-            # 检查最后period个点是否与前面period个点一致
-            diff = np.array(trajectory[-period:]) - np.array(trajectory[-2*period:-period])
-            if np.max(np.abs(diff)) < tol:
-                return period
-    return None
+         # 检查周期，从1到20
+         for period in range(1, 21):
+             if period < n_check:
+                 # 检查最后period个点是否与前面period个点一致
+                 diff = np.array(trajectory[-period:]) - np.array(trajectory[-2*period:-period])
+                 if np.max(np.abs(diff)) < tol:
+                     return period
+         return None
 
-period = check_period(r_opt)
-print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
+     period = check_period(r_opt)
+     print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
 
-# 在区间 [3.66, 3.67] 内最小化李雅普诺夫指数
-res = minimize_scalar(lyapunov_exponent, bounds=(3.66, 3.67), method='bounded')
-r_opt = res.x
-lyap_opt = res.fun
+     # 在区间 [3.66, 3.67] 内最小化李雅普诺夫指数
+     res = minimize_scalar(lyapunov_exponent, bounds=(3.66, 3.67), method='bounded')
+     r_opt = res.x
+     lyap_opt = res.fun
 
-print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
-print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
+     print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
+     print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
 
-period = check_period(r_opt)
-print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
-```
+     period = check_period(r_opt)
+     print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
+     ```
 
-运行结果：
+     运行结果：
 
-```
-最小李雅普诺夫指数对应的 r = 3.627558
-对应的李雅普诺夫指数 λ = -1.765538
-在 r = 3.627558 处检测到的周期为 6
-最小李雅普诺夫指数对应的 r = 3.662190
-对应的李雅普诺夫指数 λ = -0.513869
-在 r = 3.662190 处检测到的周期为 8
-```
+     ```
+     最小李雅普诺夫指数对应的 r = 3.627558
+     对应的李雅普诺夫指数 λ = -1.765538
+     在 r = 3.627558 处检测到的周期为 6
+     最小李雅普诺夫指数对应的 r = 3.662190
+     对应的李雅普诺夫指数 λ = -0.513869
+     在 r = 3.662190 处检测到的周期为 8
+     ```
 
-作图进行验证：
+     作图进行验证：
 
-![r = 3.627558 与 r = 3.662190 时的蛛网图对比](./plots/period-8-cobweb-comparison.py)
+     ![r = 3.627558 与 r = 3.662190 时的蛛网图对比](./plots/period-8-cobweb-comparison.py)
 
-- **b)** 稳态解的稳定性与周期 2 解
+   - **b)** 稳态解的稳定性与周期 2 解
 
-正如我们在文档中看到的，对于 $r > 3$，稳态解 $x^* = 1 - \frac{1}{r}$ 不再稳定。这可以通过证明导数 $\left|f^{\prime}\left(x^{*}\right)\right| > 1$ 来证明。可选练习：通过观察映射的第二次迭代并检查 $x = f(f(x))$ 的不动点。证明周期 2 解在 $3 < r < 1 + \sqrt{6}$ 时是稳定的。
+     正如我们在文档中看到的，对于 $r > 3$，稳态解 $x^* = 1 - \frac{1}{r}$ 不再稳定。这可以通过证明导数 $\left|f^{\prime}\left(x^{*}\right)\right| > 1$ 来证明。可选练习：通过观察映射的第二次迭代并检查 $x = f(f(x))$ 的不动点。证明周期 2 解在 $3 < r < 1 + \sqrt{6}$ 时是稳定的。
 
-**解答：**
+     **答** 对于逻辑斯蒂映射 $x_{n+1} = f(x) = r x (1 - x)$，稳态解满足 $x = f(x)$，解得 $x_0^* = 0$ 和 $x_1^* = 1 - 1/r$（当 $r > 1$ 时）。
 
-对于逻辑斯蒂映射 $x_{n+1} = f(x) = r x (1 - x)$，稳态解满足 $x = f(x)$，解得 $x_0^* = 0$ 和 $x_1^* = 1 - 1/r$（当 $r > 1$ 时）。
+     稳态解的线性稳定性由导数 $f'(x^*) = r(1 - 2x^*)$ 的绝对值决定：
+     - 对于 $x_0^* = 0$，$f'(0) = r$，故当 $0 < r < 1$ 时稳定，$r > 1$ 时不稳定。
+     - 对于 $x_1^* = 1 - 1/r$，$f'(x_1^*) = r(1 - 2(1 - 1/r)) = 2 - r$。稳定性条件为 $|2 - r| < 1$，即 $1 < r < 3$。因此当 $r > 3$ 时，稳态解 $x_1^*$ 失稳。
 
-稳态解的线性稳定性由导数 $f'(x^*) = r(1 - 2x^*)$ 的绝对值决定：
-- 对于 $x_0^* = 0$，$f'(0) = r$，故当 $0 < r < 1$ 时稳定，$r > 1$ 时不稳定。
-- 对于 $x_1^* = 1 - 1/r$，$f'(x_1^*) = r(1 - 2(1 - 1/r)) = 2 - r$。稳定性条件为 $|2 - r| < 1$，即 $1 < r < 3$。因此当 $r > 3$ 时，稳态解 $x_1^*$ 失稳。
+     当 $r > 3$ 时，系统出现周期2解，满足 $x = f^{(2)}(x) = f(f(x))$ 且 $x \neq f(x)$。周期2解对应方程 $f^{(2)}(x) - x = 0$ 的两个根（除去 $x_0^*$ 和 $x_1^*$）。记周期2解为 $p$ 和 $q$，满足 $q = f(p)$，$p = f(q)$。
 
-当 $r > 3$ 时，系统出现周期2解，满足 $x = f^{(2)}(x) = f(f(x))$ 且 $x \neq f(x)$。周期2解对应方程 $f^{(2)}(x) - x = 0$ 的两个根（除去 $x_0^*$ 和 $x_1^*$）。记周期2解为 $p$ 和 $q$，满足 $q = f(p)$，$p = f(q)$。
+     周期2解的稳定性由复合函数 $f^{(2)}$ 在 $p$ 和 $q$ 处的导数乘积决定：
+     $$
+     \frac{\mathrm{d}}{\mathrm{d}x} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
+     $$
+     同理在 $q$ 处相同。由于 $f'(x) = r(1 - 2x)$，故稳定性条件为 $|f'(p) f'(q)| < 1$。
 
-周期2解的稳定性由复合函数 $f^{(2)}$ 在 $p$ 和 $q$ 处的导数乘积决定：
-$$
-\frac{\mathrm{d}}{\mathrm{d}x} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
-$$
-同理在 $q$ 处相同。由于 $f'(x) = r(1 - 2x)$，故稳定性条件为 $|f'(p) f'(q)| < 1$。
+     通过求解 $f^{(2)}(x) - x = 0$，可得 $p$ 和 $q$ 满足二次方程：
+     $$
+     r^2 x^2 - r(r+1) x + (r+1) = 0
+     $$
+     利用韦达定理：$p + q = \frac{r+1}{r}$，$pq = \frac{r+1}{r^2}$。计算：
+     $$
+     f'(p) f'(q) = r^2 (1 - 2p)(1 - 2q) = r^2 \left[1 - 2(p+q) + 4pq\right] = -r^2 + 2r + 4
+     $$
+     稳定性条件 $| -r^2 + 2r + 4 | < 1$ 等价于：
+     1. $-r^2 + 2r + 4 < 1$ 即 $r^2 - 2r - 3 > 0$，解得 $r > 3$ 或 $r < -1$，结合 $r>0$ 得 $r>3$。
+     2. $-r^2 + 2r + 4 > -1$ 即 $r^2 - 2r - 5 < 0$，解得 $1 - \sqrt{6} < r < 1 + \sqrt{6}$。
 
-通过求解 $f^{(2)}(x) - x = 0$，可得 $p$ 和 $q$ 满足二次方程：
-$$
-r^2 x^2 - r(r+1) x + (r+1) = 0
-$$
-利用韦达定理：$p + q = \frac{r+1}{r}$，$pq = \frac{r+1}{r^2}$。计算：
-$$
-f'(p) f'(q) = r^2 (1 - 2p)(1 - 2q) = r^2 \left[1 - 2(p+q) + 4pq\right] = -r^2 + 2r + 4
-$$
-稳定性条件 $| -r^2 + 2r + 4 | < 1$ 等价于：
-1. $-r^2 + 2r + 4 < 1$ 即 $r^2 - 2r - 3 > 0$，解得 $r > 3$ 或 $r < -1$，结合 $r>0$ 得 $r>3$。
-2. $-r^2 + 2r + 4 > -1$ 即 $r^2 - 2r - 5 < 0$，解得 $1 - \sqrt{6} < r < 1 + \sqrt{6}$。
+     综合得 $3 < r < 1 + \sqrt{6}$。证毕。
 
-综合得 $3 < r < 1 + \sqrt{6}$。证毕。
+     选取几个值进行模拟：
 
-选取几个值进行模拟：
+     ![f(f(x)) 的不动点及周期 2 解的稳定性分析](./plots/period-2-stability.py)
 
-![f(f(x)) 的不动点及周期 2 解的稳定性分析](./plots/period-2-stability.py)
+   - **c)** 分岔图与自相似性
+     - 让我们尝试构建逻辑斯蒂映射的分岔图。这里，分岔图是吸引子作为 $r$ 的函数的图，其中 $0 < r < 4$。一种方法是选取均匀间隔的 $\delta r$，运行 $n_{\mathrm{transient}}$ 步，记录 $n_{\mathrm{period}}$ 步，然后绘制记录的点。开始时使用较小的 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}}$。确保你的 MATLAB 程序正常工作后，可以尝试 $\delta r < 0.01$ 且 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}} > 100$。制作一个图形并提交。
+     - 对于 $r = 3.2$，在同一图上绘制 $f(f(x))$ 和对角线 $y = x$。你能看出 $f(x)$ 的周期 2 解变成了 $f(f(x))$ 的一对稳定不动点吗？
+     - 将此图与 $r = 2$ 时的 $f(x)$ 进行比较。注意，对于 $f(f(x))$，$x = \frac{1}{2}$ 附近的区域看起来像是 $r = 2$ 时映射的倒置版本。对于 $r = 3.5$，绘制 $f^{(4)}(x)$。注意在 $x = \frac{1}{2}$ 附近的相似映射。事实上，在我们改变 $r$ 以获得倍周期分岔后，单峰映射以缩放形式重新出现，这是每个后续倍周期分岔相互跟随的基本原因。普适性来自于这样一个事实：经过几次倍周期分岔后，这些单峰映射的形状变得与原始映射无关。
+   - **d)** 正弦映射的分岔图
 
-- **c)** 分岔图与自相似性
-  - 让我们尝试构建逻辑斯蒂映射的分岔图。这里，分岔图是吸引子作为 $r$ 的函数的图，其中 $0 < r < 4$。一种方法是选取均匀间隔的 $\delta r$，运行 $n_{\mathrm{transient}}$ 步，记录 $n_{\mathrm{period}}$ 步，然后绘制记录的点。开始时使用较小的 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}}$。确保你的 MATLAB 程序正常工作后，可以尝试 $\delta r < 0.01$ 且 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}} > 100$。制作一个图形并提交。
-  - 对于 $r = 3.2$，在同一图上绘制 $f(f(x))$ 和对角线 $y = x$。你能看出 $f(x)$ 的周期 2 解变成了 $f(f(x))$ 的一对稳定不动点吗？
-  - 将此图与 $r = 2$ 时的 $f(x)$ 进行比较。注意，对于 $f(f(x))$，$x = \frac{1}{2}$ 附近的区域看起来像是 $r = 2$ 时映射的倒置版本。对于 $r = 3.5$，绘制 $f^{(4)}(x)$。注意在 $x = \frac{1}{2}$ 附近的相似映射。事实上，在我们改变 $r$ 以获得倍周期分岔后，单峰映射以缩放形式重新出现，这是每个后续倍周期分岔相互跟随的基本原因。普适性来自于这样一个事实：经过几次倍周期分岔后，这些单峰映射的形状变得与原始映射无关。
-- **d)** 正弦映射的分岔图
-
-绘制正弦映射的分岔图：
-$$
-x_{n + 1} = \mu \sin (\pi x_n)
-$$
-其中 $0 < \mu < 1$。它看起来与逻辑斯蒂映射的分岔图相似吗？
+     绘制正弦映射的分岔图：
+     $$
+     x_{n + 1} = \mu \sin (\pi x_n)
+     $$
+     其中 $0 < \mu < 1$。它看起来与逻辑斯蒂映射的分岔图相似吗？
 
 3. 在实验室中，研究人员对草履虫（*Paramecium caudatum*）种群的增长进行了监测。每隔24小时测量一次种群密度，得到以下数据：
 
-| 时间 t (h)             | 0   | 1    | 2    | 3    | 4    | 5     | 6     | 7     | 8     |
-| ---------------------- | --- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ----- |
-| 种群密度 N (个体数/mL) | 9.6 | 18.3 | 29.0 | 47.2 | 71.1 | 119.1 | 174.6 | 257.3 | 350.7 |
+   | 时间 t (h)             | 0   | 1    | 2    | 3    | 4    | 5     | 6     | 7     | 8     |
+   | ---------------------- | --- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ----- |
+   | 种群密度 N (个体数/mL) | 9.6 | 18.3 | 29.0 | 47.2 | 71.1 | 119.1 | 174.6 | 257.3 | 350.7 |
 
-| 9     | 10    | 11    | 12    | 13    | 14    | 15    | 16    | 17    | 18    |
-| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| 441.0 | 513.3 | 559.7 | 594.8 | 629.4 | 640.9 | 651.1 | 655.9 | 659.6 | 661.8 |
+   | 9     | 10    | 11    | 12    | 13    | 14    | 15    | 16    | 17    | 18    |
+   | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+   | 441.0 | 513.3 | 559.7 | 594.8 | 629.4 | 640.9 | 651.1 | 655.9 | 659.6 | 661.8 |
 
-**一、问题描述**
+   **一、问题描述**
 
-使用以下两种方法拟合逻辑斯谛增长模型，并估计参数 $K$（环境容纳量）、$r$（内禀增长率）和 $N_0$（初始种群密度）：
-1. **非线性最小二乘拟合**：直接最小化原始数据的残差平方和。
-2. **线性化拟合（三点法）**：使用等间隔三点的数据计算 $K$，然后线性回归得到其他参数。
+   使用以下两种方法拟合逻辑斯谛增长模型，并估计参数 $K$（环境容纳量）、$r$（内禀增长率）和 $N_0$（初始种群密度）：
+   1. **非线性最小二乘拟合**：直接最小化原始数据的残差平方和。
+   2. **线性化拟合（三点法）**：使用等间隔三点的数据计算 $K$，然后线性回归得到其他参数。
 
-**二、模型与方法**
+   **答**
 
-**1. 逻辑斯谛增长模型**
+   **二、模型与方法**
 
-逻辑斯谛微分方程及其解析解为：
-$$
-\frac{\mathrm{d}N}{\mathrm{d}t} = r N \left(1 - \frac{N}{K}\right), \quad
-N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) \mathrm{e}^{-rt}}.
-$$
+   **1. 逻辑斯谛增长模型**
 
-**2. 拟合方法**
+   逻辑斯谛微分方程及其解析解为：
+   $$
+   \frac{\mathrm{d}N}{\mathrm{d}t} = r N \left(1 - \frac{N}{K}\right), \quad
+   N(t) = \frac{K}{1 + \left(\dfrac{K - N_0}{N_0}\right) \mathrm{e}^{-rt}}.
+   $$
 
-**(1) 非线性最小二乘拟合**
-直接使用 `scipy.optimize.curve_fit` 函数拟合 $N(t)$，最小化残差平方和：
-$$
-\min_{K, r, N_0} \sum_{i=1}^{n} \left[N_i - N(t_i; K, r, N_0)\right]^2.
-$$
+   **2. 拟合方法**
 
-**(2) 线性化拟合（三点法）**
-- **三点法计算 $K$**：选取等间隔的三个时间点 $t_0, t_1 = t_0 + \Delta t, t_2 = t_0 + 2\Delta t$，对应的种群数量为 $N_0, N_1, N_2$。由解析解的性质可得：
-$$
-K = \frac{N_1^2 (N_0 + N_2) - 2 N_0 N_1 N_2}{N_1^2 - N_0 N_2}.
-$$
-这里我们选择 $t_0 = 0$（$N_0 = 9.6$），$t_1 = 9$（$N_1 = 441.0$），$t_2 = 18$（$N_2 = 661.8$），$\Delta t = 9$ 小时。
+   **(1) 非线性最小二乘拟合**
+   直接使用 `scipy.optimize.curve_fit` 函数拟合 $N(t)$，最小化残差平方和：
+   $$
+   \min_{K, r, N_0} \sum_{i=1}^{n} \left[N_i - N(t_i; K, r, N_0)\right]^2.
+   $$
 
-- **线性回归求 $r$ 和 $N_0$**：对变换后的方程进行线性回归：
-$$
-\ln\left(\frac{K - N}{N}\right) = \ln\left(\frac{K - N_0}{N_0}\right) - r t.
-$$
-令 $y = \ln\left(\dfrac{K - N}{N}\right)$，则 $y = a - r t$，其中 $a = \ln\left(\dfrac{K - N_0}{N_0}\right)$。通过线性回归得到 $a$ 和 $r$，然后：
-$$
-N_0 = \frac{K}{1 + \mathrm{e}^{a}}.
-$$
+   **(2) 线性化拟合（三点法）**
+   - **三点法计算 $K$**：选取等间隔的三个时间点 $t_0, t_1 = t_0 + \Delta t, t_2 = t_0 + 2\Delta t$，对应的种群数量为 $N_0, N_1, N_2$。由解析解的性质可得：
+   $$
+   K = \frac{N_1^2 (N_0 + N_2) - 2 N_0 N_1 N_2}{N_1^2 - N_0 N_2}.
+   $$
+   这里我们选择 $t_0 = 0$（$N_0 = 9.6$），$t_1 = 9$（$N_1 = 441.0$），$t_2 = 18$（$N_2 = 661.8$），$\Delta t = 9$ 小时。
 
-**三、代码实现与结果**
+   - **线性回归求 $r$ 和 $N_0$**：对变换后的方程进行线性回归：
+   $$
+   \ln\left(\frac{K - N}{N}\right) = \ln\left(\frac{K - N_0}{N_0}\right) - r t.
+   $$
+   令 $y = \ln\left(\dfrac{K - N}{N}\right)$，则 $y = a - r t$，其中 $a = \ln\left(\dfrac{K - N_0}{N_0}\right)$。通过线性回归得到 $a$ 和 $r$，然后：
+   $$
+   N_0 = \frac{K}{1 + \mathrm{e}^{a}}.
+   $$
 
-![草履虫种群增长的逻辑斯谛拟合：拟合曲线、残差与拟合优度](./plots/paramecium-logistic-fit.py)
+   **三、代码实现与结果**
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.optimize import curve_fit
-from scipy.stats import linregress
-from sklearn.metrics import r2_score
+   ![草履虫种群增长的逻辑斯谛拟合：拟合曲线、残差与拟合优度](./plots/paramecium-logistic-fit.py)
 
-# 实验数据
-t = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
-N = np.array([9.6, 18.3, 29.0, 47.2, 71.1, 119.1, 174.6, 257.3, 350.7, 
-              441.0, 513.3, 559.7, 594.8, 629.4, 640.9, 651.1, 655.9, 659.6, 661.8])
+   ```python
+   import numpy as np
+   import matplotlib.pyplot as plt
+   from scipy.optimize import curve_fit
+   from scipy.stats import linregress
+   from sklearn.metrics import r2_score
 
-# ====================== 方法1：非线性最小二乘拟合 ======================
-def logistic_model(t, K, r, N0):
-    """逻辑斯谛增长模型"""
-    return K / (1 + ((K - N0) / N0) * np.exp(-r * t))
+   # 实验数据
+   t = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
+   N = np.array([9.6, 18.3, 29.0, 47.2, 71.1, 119.1, 174.6, 257.3, 350.7, 
+                 441.0, 513.3, 559.7, 594.8, 629.4, 640.9, 651.1, 655.9, 659.6, 661.8])
 
-# 初始参数猜测（K ≈ 660, r ≈ 0.5, N0 ≈ 10）
-initial_guess = [660, 0.5, 10]
-params_nonlin, cov_nonlin = curve_fit(logistic_model, t, N, p0=initial_guess, maxfev=5000)
-K_nonlin, r_nonlin, N0_nonlin = params_nonlin
-# 计算参数的标准误差
-params_err_nonlin = np.sqrt(np.diag(cov_nonlin))
+   # ====================== 方法1：非线性最小二乘拟合 ======================
+   def logistic_model(t, K, r, N0):
+       """逻辑斯谛增长模型"""
+       return K / (1 + ((K - N0) / N0) * np.exp(-r * t))
 
-# 计算预测值和拟合优度
-N_pred_nonlin = logistic_model(t, K_nonlin, r_nonlin, N0_nonlin)
-SSE_nonlin = np.sum((N - N_pred_nonlin)**2)
-R2_nonlin = r2_score(N, N_pred_nonlin)
-RMSE_nonlin = np.sqrt(SSE_nonlin / len(N))
+   # 初始参数猜测（K ≈ 660, r ≈ 0.5, N0 ≈ 10）
+   initial_guess = [660, 0.5, 10]
+   params_nonlin, cov_nonlin = curve_fit(logistic_model, t, N, p0=initial_guess, maxfev=5000)
+   K_nonlin, r_nonlin, N0_nonlin = params_nonlin
+   # 计算参数的标准误差
+   params_err_nonlin = np.sqrt(np.diag(cov_nonlin))
 
-# ====================== 方法2：线性化拟合（三点法） ======================
-# 选择三个等间隔的点：t=0, t=9, t=18
-idx0, idx1, idx2 = 0, 9, 18
-N0_data, N1_data, N2_data = N[idx0], N[idx1], N[idx2]
-Δt = t[idx1] - t[idx0]
+   # 计算预测值和拟合优度
+   N_pred_nonlin = logistic_model(t, K_nonlin, r_nonlin, N0_nonlin)
+   SSE_nonlin = np.sum((N - N_pred_nonlin)**2)
+   R2_nonlin = r2_score(N, N_pred_nonlin)
+   RMSE_nonlin = np.sqrt(SSE_nonlin / len(N))
 
-# 三点法计算K
-K_linear = (N1_data**2 * (N0_data + N2_data) - 2 * N0_data * N1_data * N2_data) / (N1_data**2 - N0_data * N2_data)
-print(f"三点法计算的 K = {K_linear:.2f}")
+   # ====================== 方法2：线性化拟合（三点法） ======================
+   # 选择三个等间隔的点：t=0, t=9, t=18
+   idx0, idx1, idx2 = 0, 9, 18
+   N0_data, N1_data, N2_data = N[idx0], N[idx1], N[idx2]
+   Δt = t[idx1] - t[idx0]
 
-# 线性回归求 r 和 N0
-# 注意：当 N 接近 K 时，(K-N)/N 可能为负或零，这里仅使用 N < K 的数据点进行回归
-valid_mask = N < K_linear * 0.999  # 避免对数中出现非正数
-t_valid = t[valid_mask]
-N_valid = N[valid_mask]
+   # 三点法计算K
+   K_linear = (N1_data**2 * (N0_data + N2_data) - 2 * N0_data * N1_data * N2_data) / (N1_data**2 - N0_data * N2_data)
+   print(f"三点法计算的 K = {K_linear:.2f}")
 
-# 计算 y = ln((K-N)/N)
-y = np.log((K_linear - N_valid) / N_valid)
+   # 线性回归求 r 和 N0
+   # 注意：当 N 接近 K 时，(K-N)/N 可能为负或零，这里仅使用 N < K 的数据点进行回归
+   valid_mask = N < K_linear * 0.999  # 避免对数中出现非正数
+   t_valid = t[valid_mask]
+   N_valid = N[valid_mask]
 
-# 线性回归：y = a - r*t
-slope, intercept, r_value, p_value, std_err = linregress(t_valid, y)
-r_linear = -slope
-a = intercept
-# 计算 N0
-N0_linear = K_linear / (1 + np.exp(a))
+   # 计算 y = ln((K-N)/N)
+   y = np.log((K_linear - N_valid) / N_valid)
 
-# 计算预测值和拟合优度
-N_pred_linear = logistic_model(t, K_linear, r_linear, N0_linear)
-SSE_linear = np.sum((N - N_pred_linear)**2)
-R2_linear = r2_score(N, N_pred_linear)
-RMSE_linear = np.sqrt(SSE_linear / len(N))
+   # 线性回归：y = a - r*t
+   slope, intercept, r_value, p_value, std_err = linregress(t_valid, y)
+   r_linear = -slope
+   a = intercept
+   # 计算 N0
+   N0_linear = K_linear / (1 + np.exp(a))
 
-# ====================== 结果输出 ======================
-print("=" * 60)
-print("非线性最小二乘拟合结果：")
-print(f"  K = {K_nonlin:.2f} ± {params_err_nonlin[0]:.2f}")
-print(f"  r = {r_nonlin:.4f} ± {params_err_nonlin[1]:.4f}")
-print(f"  N0 = {N0_nonlin:.2f} ± {params_err_nonlin[2]:.2f}")
-print(f"  SSE = {SSE_nonlin:.2f}, R² = {R2_nonlin:.6f}, RMSE = {RMSE_nonlin:.2f}")
+   # 计算预测值和拟合优度
+   N_pred_linear = logistic_model(t, K_linear, r_linear, N0_linear)
+   SSE_linear = np.sum((N - N_pred_linear)**2)
+   R2_linear = r2_score(N, N_pred_linear)
+   RMSE_linear = np.sqrt(SSE_linear / len(N))
 
-print("\n" + "=" * 60)
-print("线性化拟合（三点法）结果：")
-print(f"  K = {K_linear:.2f} (由三点法直接计算)")
-print(f"  r = {r_linear:.4f}")
-print(f"  N0 = {N0_linear:.2f}")
-print(f"  SSE = {SSE_linear:.2f}, R² = {R2_linear:.6f}, RMSE = {RMSE_linear:.2f}")
+   # ====================== 结果输出 ======================
+   print("=" * 60)
+   print("非线性最小二乘拟合结果：")
+   print(f"  K = {K_nonlin:.2f} ± {params_err_nonlin[0]:.2f}")
+   print(f"  r = {r_nonlin:.4f} ± {params_err_nonlin[1]:.4f}")
+   print(f"  N0 = {N0_nonlin:.2f} ± {params_err_nonlin[2]:.2f}")
+   print(f"  SSE = {SSE_nonlin:.2f}, R² = {R2_nonlin:.6f}, RMSE = {RMSE_nonlin:.2f}")
 
-print("\n" + "=" * 60)
-print("拟合效果比较：")
-print(f"  非线性拟合SSE减少：{((SSE_linear - SSE_nonlin) / SSE_linear * 100):.2f}%")
-print(f"  非线性拟合R²提高：{((R2_nonlin - R2_linear) * 100):.4f}%")
-```
+   print("\n" + "=" * 60)
+   print("线性化拟合（三点法）结果：")
+   print(f"  K = {K_linear:.2f} (由三点法直接计算)")
+   print(f"  r = {r_linear:.4f}")
+   print(f"  N0 = {N0_linear:.2f}")
+   print(f"  SSE = {SSE_linear:.2f}, R² = {R2_linear:.6f}, RMSE = {RMSE_linear:.2f}")
 
-运行结果：
+   print("\n" + "=" * 60)
+   print("拟合效果比较：")
+   print(f"  非线性拟合SSE减少：{((SSE_linear - SSE_nonlin) / SSE_linear * 100):.2f}%")
+   print(f"  非线性拟合R²提高：{((R2_nonlin - R2_linear) * 100):.4f}%")
+   ```
 
-```
-三点法计算的 K = 664.29
-============================================================
-非线性最小二乘拟合结果：
-  K = 663.04 ± 1.70
-  r = 0.5470 ± 0.0056
-  N0 = 9.14 ± 0.38
-  SSE = 194.23, R² = 0.999846, RMSE = 3.20
+   运行结果：
 
-============================================================
-线性化拟合结果：
-  K = 664.29 (由三点法直接计算)
-  r = 0.5386
-  N0 = 9.79
-  SSE = 231.70, R² = 0.999816, RMSE = 3.49
+   ```
+   三点法计算的 K = 664.29
+   ============================================================
+   非线性最小二乘拟合结果：
+     K = 663.04 ± 1.70
+     r = 0.5470 ± 0.0056
+     N0 = 9.14 ± 0.38
+     SSE = 194.23, R² = 0.999846, RMSE = 3.20
 
-============================================================
-拟合效果比较：
-  非线性拟合SSE减少：16.18%
-  非线性拟合R²提高：0.0030%
-```
+   ============================================================
+   线性化拟合结果：
+     K = 664.29 (由三点法直接计算)
+     r = 0.5386
+     N0 = 9.79
+     SSE = 231.70, R² = 0.999816, RMSE = 3.49
 
-我们得到以下拟合结果：
+   ============================================================
+   拟合效果比较：
+     非线性拟合SSE减少：16.18%
+     非线性拟合R²提高：0.0030%
+   ```
 
-**1. 非线性最小二乘拟合**
-- $K = 663.04 \pm 1.70$（个体/mL）
-- $r = 0.5470 \pm 0.0056$（/小时）
-- $N_0 = 9.14 \pm 0.38$（个体/mL）
-- $\mathrm{SSE} = 194.23$，$R^2 = 0.999846$，$\mathrm{RMSE} = 3.20$
+   我们得到以下拟合结果：
 
-**2. 线性化拟合**
-- $K = 664.29$（个体/mL）（由三点法直接计算）
-- $r = 0.5386$（/小时）
-- $N_0 = 9.79$（个体/mL）
-- $\mathrm{SSE} = 231.70$，$R^2 = 0.999816$，$\mathrm{RMSE} = 3.49$
+   **1. 非线性最小二乘拟合**
+   - $K = 663.04 \pm 1.70$（个体/mL）
+   - $r = 0.5470 \pm 0.0056$（/小时）
+   - $N_0 = 9.14 \pm 0.38$（个体/mL）
+   - $\mathrm{SSE} = 194.23$，$R^2 = 0.999846$，$\mathrm{RMSE} = 3.20$
 
-**3. 拟合效果比较**
-- 非线性拟合的 $\mathrm{SSE}$ 比线性化拟合低 **16.18%**，$R^2$ 提高 **0.003%**。
-- 从残差图可以看出，非线性拟合的残差略小，分布较随机，而线性化拟合在中段存在一定系统偏差。
+   **2. 线性化拟合**
+   - $K = 664.29$（个体/mL）（由三点法直接计算）
+   - $r = 0.5386$（/小时）
+   - $N_0 = 9.79$（个体/mL）
+   - $\mathrm{SSE} = 231.70$，$R^2 = 0.999816$，$\mathrm{RMSE} = 3.49$
 
-**五、讨论与总结**
+   **3. 拟合效果比较**
+   - 非线性拟合的 $\mathrm{SSE}$ 比线性化拟合低 **16.18%**，$R^2$ 提高 **0.003%**。
+   - 从残差图可以看出，非线性拟合的残差略小，分布较随机，而线性化拟合在中段存在一定系统偏差。
 
-1. **参数估计的准确性**：
-   - 非线性最小二乘拟合直接最小化原始数据的残差，通常更准确可靠，特别是当数据存在测量误差时。
-   - 三点法对所选数据点较为敏感，如果选取的点受噪声影响较大，$K$ 的估计会产生较大偏差。本例中三点法得到的 $K$ 与非线性拟合相近，但 $r$ 和 $N_0$ 略有差异。
+   **五、讨论与总结**
 
-2. **方法适用性**：
-   - **非线性拟合**：适用于具有完整增长曲线的数据，能够充分利用所有数据点信息，但需要较好的初始猜测。
-   - **线性化拟合（+三点法）**：计算简单，适用于快速估算，但精度较低，且要求数据点等间隔、噪声小。
+   1. **参数估计的准确性**：
+      - 非线性最小二乘拟合直接最小化原始数据的残差，通常更准确可靠，特别是当数据存在测量误差时。
+      - 三点法对所选数据点较为敏感，如果选取的点受噪声影响较大，$K$ 的估计会产生较大偏差。本例中三点法得到的 $K$ 与非线性拟合相近，但 $r$ 和 $N_0$ 略有差异。
 
-3. **生物学意义**：
-   - 两种方法得到的 $K$ 均约为 660 个体/mL，表明培养环境的最大容纳量约为 660 个体/mL。
-   - 内禀增长率 $r$ 约为 0.54/小时，意味着在无密度制约下，种群每小时增加约 54%。
-   - 初始密度 $N_0$ 约为 9 个体/mL，与实验起始值一致。
+   2. **方法适用性**：
+      - **非线性拟合**：适用于具有完整增长曲线的数据，能够充分利用所有数据点信息，但需要较好的初始猜测。
+      - **线性化拟合（+三点法）**：计算简单，适用于快速估算，但精度较低，且要求数据点等间隔、噪声小。
 
-**结论**：对于草履虫种群增长数据，非线性最小二乘拟合在统计指标上略优于线性化拟合，但线性拟合具有其便利性，可作为快速估算的辅助手段。
+   3. **生物学意义**：
+      - 两种方法得到的 $K$ 均约为 660 个体/mL，表明培养环境的最大容纳量约为 660 个体/mL。
+      - 内禀增长率 $r$ 约为 0.54/小时，意味着在无密度制约下，种群每小时增加约 54%。
+      - 初始密度 $N_0$ 约为 9 个体/mL，与实验起始值一致。
+
+   **结论**：对于草履虫种群增长数据，非线性最小二乘拟合在统计指标上略优于线性化拟合，但线性拟合具有其便利性，可作为快速估算的辅助手段。

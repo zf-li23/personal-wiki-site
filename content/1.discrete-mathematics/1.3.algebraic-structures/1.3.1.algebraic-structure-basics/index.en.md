@@ -1,6 +1,6 @@
 ---
 title: Fundamentals of Algebraic Structures
-source_hash: dd81166d3f26
+source_hash: 6d293fcb52d1
 ---
 
 Algebraic structures are "sets equipped with operations": we do not care what the elements are, only which laws the operations obey. Addition of integers, multiplication of matrices, composition of permutations, and intersection and union of sets look unrelated, yet they obey the same laws of associativity, identity elements and inverses. If we isolate these laws and study them on their own, every conclusion we reach applies at once to all objects that satisfy them.

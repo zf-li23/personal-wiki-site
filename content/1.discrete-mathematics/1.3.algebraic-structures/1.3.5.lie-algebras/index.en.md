@@ -1,6 +1,6 @@
 ---
 title: Lie Algebras
-source_hash: 98625469a3e8
+source_hash: a39029510b16
 ---
 
 Most of the groups in Chapter 2 are finite, such as the $6$ symmetries of an equilateral triangle (Example 2.4.1). Symmetries such as rotations and rigid motions of space, however, vary continuously: one can rotate about an axis through any angle, and all rotations together form a "smooth" infinite group. Such groups are hard to study directly. The idea of the Norwegian mathematician Sophus Lie in the 1870s was to look only at the "infinitesimal transformations" near the identity: they form a vector space, and the noncommutativity of the group leaves on this space a bilinear operation, the **Lie bracket**. The resulting structure is a Lie algebra, which can be viewed as the linearization of a continuous group; such continuous groups are now called *Lie groups*.

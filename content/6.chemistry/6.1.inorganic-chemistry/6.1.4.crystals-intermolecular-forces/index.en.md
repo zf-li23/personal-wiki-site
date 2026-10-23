@@ -1,6 +1,6 @@
 ---
 title: Crystal Structures and Intermolecular Forces
-source_hash: 10b78d507f87
+source_hash: 6d1e25582604
 ---
 
 The previous chapter dealt with chemical bonds within single molecules; this chapter deals with how large numbers of particles aggregate into solids. By the type of force between the particles, crystals fall into four classes: metallic, ionic, molecular and covalent network crystals. The first two are held together by the nondirectional metallic and ionic bonds, and their particles pack as closely as rigid spheres; molecular crystals are held together by van der Waals forces and hydrogen bonds, which are much weaker than chemical bonds; covalent network crystals are joined into a single whole by directional covalent bonds. This chapter discusses in turn the packing of equal spheres (the geometric basis of metallic and ionic crystal structures), metallic bonding and energy bands, lattice enthalpy and structure types of ionic crystals, ionic polarization, intermolecular forces and hydrogen bonding, and finally covalent network crystals and crystal defects.
@@ -398,7 +398,18 @@ Defects are often decisive for the properties of materials: dislocations make th
 
 ## Questions
 
-1. Why are metals ductile and malleable while ionic crystals are brittle? (When layers of metal slide, the electron sea still holds the ions together; after a layer of an ionic crystal is displaced, ions of like charge face each other and the repulsion fractures the crystal.)
-2. $\ce{SiO2}$ and $\ce{CO2}$ have similar compositions; why is one a high-melting solid and the other a gas? (The Si atom is large and Si–O pi bonding is very weak, so Si tends to form four Si–O single bonds and joins into a covalent network; C and O form stable C=O double bonds, and $\ce{CO2}$ consists of discrete nonpolar molecules with only dispersion forces between them.)
-3. Why is the boiling point of $\ce{HF}$ higher than that of $\ce{HCl}$, whereas that of $\ce{HCl}$ is lower than that of $\ce{HBr}$? (There are strong hydrogen bonds between $\ce{HF}$ molecules; between $\ce{HCl}$ and $\ce{HBr}$ molecules dispersion forces dominate, and $\ce{HBr}$ has the larger polarizability.)
-4. The melting point of $\ce{FeCl3}$ ($307\,{}^\circ\mathrm{C}$) is lower than that of $\ce{FeCl2}$ ($677\,{}^\circ\mathrm{C}$); why? ($\ce{Fe^3+}$ has a higher charge and smaller radius and a stronger polarizing power than $\ce{Fe^2+}$, the bonds in $\ce{FeCl3}$ are more covalent, and in the gas phase it exists as $\ce{Fe2Cl6}$ molecules.)
+1. Why are metals ductile and malleable while ionic crystals are brittle?
+
+   **Answer** When layers of metal slide, the electron sea still holds the ions together; after a layer of an ionic crystal is displaced, ions of like charge face each other and the repulsion fractures the crystal.
+
+2. $\ce{SiO2}$ and $\ce{CO2}$ have similar compositions; why is one a high-melting solid and the other a gas?
+
+   **Answer** The Si atom is large and Si–O pi bonding is very weak, so Si tends to form four Si–O single bonds and joins into a covalent network; C and O form stable C=O double bonds, and $\ce{CO2}$ consists of discrete nonpolar molecules with only dispersion forces between them.
+
+3. Why is the boiling point of $\ce{HF}$ higher than that of $\ce{HCl}$, whereas that of $\ce{HCl}$ is lower than that of $\ce{HBr}$?
+
+   **Answer** There are strong hydrogen bonds between $\ce{HF}$ molecules; between $\ce{HCl}$ and $\ce{HBr}$ molecules dispersion forces dominate, and $\ce{HBr}$ has the larger polarizability.
+
+4. The melting point of $\ce{FeCl3}$ ($307\,{}^\circ\mathrm{C}$) is lower than that of $\ce{FeCl2}$ ($677\,{}^\circ\mathrm{C}$); why?
+
+   **Answer** $\ce{Fe^3+}$ has a higher charge and smaller radius and a stronger polarizing power than $\ce{Fe^2+}$, the bonds in $\ce{FeCl3}$ are more covalent, and in the gas phase it exists as $\ce{Fe2Cl6}$ molecules.

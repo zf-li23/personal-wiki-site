@@ -47,6 +47,9 @@ import {
   type HeadingInput,
   type StatementKind,
   checkHeadings,
+  checkEndSections,
+  endSection,
+  ANSWER_LABEL,
   equationAnchor,
   formatStatementLabel,
   numberPrefix,
@@ -243,6 +246,7 @@ function checkPageHeadings(state: State, headings: HeadingInput[]) {
   }
   if (role !== 'chapter') return; // depth errors are reported by scan.ts
   for (const p of checkHeadings(headings, numberPrefix(ctx.page.id))) ctx.diag.error(ctx.file, p.message, p.line);
+  for (const p of checkEndSections(headings, ctx.contentLang === 'en' ? 'en' : 'zh')) ctx.diag.warn(ctx.file, `${p.message} (CONTENT_GUIDE §3)`, p.line);
 }
 
 /* ------------------------------------------------------------------- rehype */
@@ -355,6 +359,78 @@ function leadingStrong(p: Element): Element | undefined {
  * Display math with \tag{X} gets the anchor eq-X.
  */
 /** ```smiles blocks: structures drawn by RDKit at build time (chem.ts), kept as pre-serialized SVG. */
+const ANSWER_SUMMARY = { zh: '答案', en: 'Answer' } as const;
+// Answer openers that are not the canonical **答** / **Answer** paragraph.
+const LOOSE_ANSWER_RE = /^\s*(答案?|简答|解答?|Answers?|Solution)\s*[:：]/;
+const LOOSE_ANSWER_WORD = /^(答案?|简答|解答?|Answers?|Solution)[:：.]?$/;
+
+/**
+ * In "## 思考题" / "## Questions", a list item's answer is the paragraph that starts with **答** /
+ * **Answer** and everything after it in the item; it is folded into <details class="wiki-answer">.
+ */
+function rehypeQuestions(state: State) {
+  const { ctx } = state;
+  const lang = ctx.contentLang === 'en' ? 'en' : 'zh';
+  return (tree: HastRoot) => {
+    let inQuestions = false;
+    for (const node of tree.children) {
+      if (node.type !== 'element') continue;
+      if (node.tagName === 'h2') {
+        // rehypeWiki has appended the "#" heading anchor
+        const title = node.children.filter((c) => !(c.type === 'element' && hasClass(c, 'heading-anchor')));
+        inQuestions = endSection(title.map((c) => hastToString(c)).join('')) === 'questions';
+        continue;
+      }
+      if (!inQuestions) continue;
+      visit(node, 'element', (li) => {
+        if (li.tagName === 'li') foldAnswer(state, li, lang);
+      });
+    }
+  };
+}
+
+function foldAnswer(state: State, li: Element, lang: 'zh' | 'en') {
+  const { ctx } = state;
+  const line = lineOf(state, li);
+  const isLabel = (n: ElementContent | undefined): n is Element =>
+    n?.type === 'element' && n.tagName === 'strong' && hastToString(n).trim() === ANSWER_LABEL[lang];
+  const at = li.children.findIndex((c) => {
+    if (c.type !== 'element' || c.tagName !== 'p') return false;
+    const first = c.children.find((k) => !(k.type === 'text' && !k.value.trim()));
+    return isLabel(first);
+  });
+  if (at < 0) {
+    // Answers written some other way: own-line "答：", a **解** label, or **答** inside the question paragraph.
+    for (const c of li.children) {
+      if (c.type === 'element' && (c.tagName === 'ol' || c.tagName === 'ul')) continue;
+      const loose = c.type === 'text' ? LOOSE_ANSWER_RE.test(c.value) : c.type === 'element' && c.tagName === 'p' && LOOSE_ANSWER_RE.test(hastToString(c));
+      let label = false;
+      if (c.type === 'element') {
+        visit(c, 'element', (s) => {
+          if (s.tagName === 'strong' && (isLabel(s) || LOOSE_ANSWER_WORD.test(hastToString(s).trim()))) label = true;
+        });
+      }
+      if (loose || label) {
+        ctx.diag.warn(ctx.file, `write an answer as its own paragraph starting with **${ANSWER_LABEL[lang]}**, indented under the question (CONTENT_GUIDE §3)`, line);
+        return;
+      }
+    }
+    return;
+  }
+  const question = li.children.slice(0, at);
+  if (!question.some((c) => hastToString(c as Element).trim())) {
+    ctx.diag.warn(ctx.file, `answer without a question: write the question first, then the **${ANSWER_LABEL[lang]}** paragraph (CONTENT_GUIDE §3)`, line);
+  }
+  const p = li.children[at] as Element;
+  const labelIndex = p.children.findIndex((k) => isLabel(k));
+  p.children.splice(0, labelIndex + 1);
+  const head = p.children[0];
+  if (head?.type === 'text') head.value = head.value.replace(/^\s*[:：]?\s*/, '');
+  if (!p.children.length) li.children.splice(at, 1);
+  const details = el('details', { className: ['wiki-answer'] }, [el('summary', {}, [text(ANSWER_SUMMARY[lang])]), ...li.children.slice(at)]);
+  li.children = [...question, details];
+}
+
 function rehypeChem(state: State) {
   return async (tree: HastRoot) => {
     const jobs: Promise<void>[] = [];
@@ -732,6 +808,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeWiki, state)
+    .use(rehypeQuestions, state)
     .use(rehypeChem, state)
     .use(rehypeStatements, state)
     .use(rehypeHighlight, { languages: { ...common, matlab, latex, verilog, vhdl, tcl, http, protobuf, dockerfile }, aliases: { verilog: ['systemverilog'] }, plainText: ['text', 'txt', 'plain', 'math', 'asm'] })

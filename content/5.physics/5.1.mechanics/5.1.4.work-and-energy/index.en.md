@@ -1,7 +1,7 @@
 ---
 title: Work and Energy
 description: Work and the work-kinetic energy theorem, the work of a pair of forces, conservative forces and potential energy, forces from potential energy and potential energy curves, the work-energy principle and conservation of mechanical energy, central force fields and the effective potential, conservation laws and symmetry, collisions, König's theorem and the two-body problem, the continuity equation and Bernoulli's equation for ideal fluids.
-source_hash: df99eda6a5b3
+source_hash: c09edd91f230
 ---
 
 [The previous chapter](/5.1.3) discussed the accumulation of force over time: **impulse** changes **momentum**, and **angular impulse** changes **angular momentum**. This chapter discusses the accumulation of force over space: the integral of a force along a path is work, and work changes kinetic energy. A force whose work is independent of the path can be replaced by a scalar function (the potential energy), which leads to the law of conservation of mechanical energy; together with conservation of momentum and of angular momentum, it forms the three conservation laws of mechanics. Mathematically, work is a **line integral of a vector field**, a conservative force is a **conservative vector field**, the potential energy is a **potential function** (up to a sign), and finding the force from the potential energy means taking a **gradient**; all of this was covered in [2.2.14](/2.2.14), and this chapter stresses the physical meaning: whether each quantity belongs to a **particle** or to a system, and whether it depends on the **reference frame**. The central-force problem uses the two conserved quantities, energy and angular momentum, to reduce the equations of motion to first order, a typical application of the method of **first integrals** ([2.4.14](/2.4.14)). The last two sections apply the work-energy relations to fluids and lead to Bernoulli's equation. The next chapter, [5.1.5](/5.1.5), applies these laws to rigid bodies; the first law of thermodynamics in the thermal physics part ([5.2.3](/5.2.3)) is the extension of the law of conservation of energy to thermal phenomena.
@@ -434,10 +434,17 @@ Several phenomena are often explained qualitatively by "low pressure where the f
 ## Questions
 
 1. Does the calculation of work depend on the reference frame? What about potential energy?
-   Hint: Work depends on the reference frame; potential energy is defined by the work of a pair of conservative forces and does not depend on the reference frame.
+
+   **Answer** Work depends on the reference frame; potential energy is defined by the work of a pair of conservative forces and does not depend on the reference frame.
+
 2. Does the conservation of mechanical energy depend on the choice of inertial frame?
-   Hint: Yes. For example, when a body slides down a smooth incline in a carriage moving at constant velocity, the support force of the incline does no work in the carriage frame and mechanical energy is conserved; in the ground frame the support force does work and the mechanical energy of the system (body plus Earth) is not conserved, unless the carriage is included in the system.
+
+   **Answer** Yes. For example, when a body slides down a smooth incline in a carriage moving at constant velocity, the support force of the incline does no work in the carriage frame and mechanical energy is conserved; in the ground frame the support force does work and the mechanical energy of the system (body plus Earth) is not conserved, unless the carriage is included in the system.
+
 3. Does frictional heating depend on the reference frame?
-   Hint: No; it equals the negative of the work of the pair of sliding friction forces.
+
+   **Answer** No; it equals the negative of the work of the pair of sliding friction forces.
+
 4. In Example 4.7.1, how does the force of the block on the ground vary while the block slides up?
-   Hint: The block has a downward vertical component of acceleration (it decelerates while rising), the vertical momentum of the system is decreasing, so the support force of the ground is smaller than $(m+M)g$.
+
+   **Answer** The block has a downward vertical component of acceleration (it decelerates while rising), the vertical momentum of the system is decreasing, so the support force of the ground is smaller than $(m+M)g$.

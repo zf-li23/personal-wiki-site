@@ -1,6 +1,6 @@
 ---
 title: Representation Theory
-source_hash: f63966c37925
+source_hash: 51b408861243
 ---
 
 *Representation theory* is the end point of the main line of this course. Cayley's theorem (Theorem 2.4.4) says that every group can be realized as a transformation group of some set; representation theory asks for more: to realize a group (or a Lie algebra) by linear transformations of a vector space, that is, by transformations preserving vector addition and scalar multiplication, which become matrices once a basis is chosen. Abstract group operations then turn into matrix multiplication, structural questions turn into questions of linear algebra, and the whole toolkit of **eigenvalues**, traces and direct sum decompositions becomes available. The groups $\operatorname{SO}(3)$ and $\mathfrak{so}(3)$ of the previous chapter already consist of matrices; this chapter extends that situation to general groups and Lie algebras.

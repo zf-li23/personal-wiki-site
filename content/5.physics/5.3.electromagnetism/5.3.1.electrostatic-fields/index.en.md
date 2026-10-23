@@ -1,7 +1,7 @@
 ---
 title: Electrostatic Fields
 description: Basic properties of electric charge, Coulomb's law, electric field strength and the superposition principle, fields of dipoles and continuous charge distributions, field lines and flux, solid angle and the proof of Gauss's law, and applications of Gauss's law to symmetric charge distributions.
-source_hash: 1e4d9c9f3289
+source_hash: 6804abeb9b2e
 ---
 
 Electromagnetism studies how charges and currents produce electric and magnetic fields, how these fields act on charges and currents, how electric and magnetic fields convert into each other, and how electromagnetic fields interact with matter. Its viewpoint differs from that of mechanics and thermodynamics. Mechanics follows the motion of individual particles, and thermodynamics treats the random motion of huge numbers of particles statistically. The main actors of electromagnetism are fields: vectors $\boldsymbol{E}(\boldsymbol{r},t)$ and $\boldsymbol{B}(\boldsymbol{r},t)$ defined at every point of space and varying in time, with charged particles serving only as sources of the fields. A **vector field** has two basic global quantities, the **flux** through a surface and the **circulation** along a closed path, together with their local counterparts, the **divergence** and the **curl**; all of these were treated in [2.2.13](/2.2.13) and [2.2.14](/2.2.14). The fundamental laws of electromagnetism are written in terms of exactly these quantities. In this chapter Gauss's law gives the flux of the electrostatic field; the circulation theorem of the next chapter, [5.3.2](/5.3.2), gives its circulation. Together they determine the electrostatic field completely, and in [5.3.10](/5.3.10) they are generalized to Maxwell's equations.
@@ -323,17 +323,43 @@ Procedure for finding a field with Gauss's law:
 3. Obtain the field distribution from Gauss's law.
 4. When the symmetry is insufficient (a finite charged line, a charged disk), Gauss's law still holds but cannot by itself determine the field, and we must return to the superposition principle.
 
+## Summary
+
+- Charge: charge quantization $q = Ne$ (Property 1.1.1), conservation of charge (Theorem 1.1.1), and charge is a relativistic invariant.
+- Coulomb's law (Theorem 1.2.1), $\boldsymbol{F}_{21} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r_{21}^2}\boldsymbol{e}_{21}$, together with the superposition principle, forms the experimental basis of electrostatics.
+- The field strength $\boldsymbol{E} = \boldsymbol{F}/q_0$ (Definition 1.3.1) is a property of the field itself. There are three ways to compute it:
+
+| Method | When to use | Examples |
+|---|---|---|
+| Point-charge field + superposition (Property 1.4.1), integrated over continuous distributions (Definition 1.4.1) | Any distribution, usually with symmetry to eliminate components | Electric dipole (Example 1.4.1, Example 1.4.2, Formula 1.4.1), axis of an annulus (Example 1.4.4) |
+| Far-field expansion | $r$ much larger than the size of the charge system | Looks like a point charge if the total charge is nonzero, otherwise like a dipole $\boldsymbol{p}$ (Definition 1.4.2) with field $\propto 1/r^3$ |
+| Gauss's law (Theorem 1.6.1) | Spherical, cylindrical or planar symmetry | Spherical shell (Example 1.7.1), infinite line (Example 1.7.2), infinite plane (Example 1.7.3) |
+
+- Field lines (Definition 1.5.1) start on positive charges and end on negative charges, never cross, and do not break off where there is no charge; electric flux $\Phi_{\mathrm{e}} = \iint_S\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}$ (Definition 1.5.2).
+- Gauss's law $\oiint_S\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S} = q_{\mathrm{enc}}/\varepsilon_0$ follows from the inverse-square law and the solid angle (Definition 1.6.1); its differential form $\nabla\cdot\boldsymbol{E} = \rho/\varepsilon_0$ (Theorem 1.6.2) says that charges are the sources of the electrostatic field.
+
 ## Questions
 
 1. Why does the far field of an electric dipole not obey the inverse-square law?
-   Hint: the fields of $+q$ and $-q$ almost cancel at large distances, and what remains is their difference, which amounts to a derivative of the point-charge field and so carries an extra factor $1/r$ (§1.4.4).
+
+   **Answer** the fields of $+q$ and $-q$ almost cancel at large distances, and what remains is their difference, which amounts to a derivative of the point-charge field and so carries an extra factor $1/r$ (§1.4.4).
+
 2. Can electric field lines intersect? Can they be tangent to each other?
-   Hint: neither (except at points where the field vanishes). Intersection or tangency would mean that the field has two directions at the common point.
+
+   **Answer** neither (except at points where the field vanishes). Intersection or tangency would mean that the field has two directions at the common point.
+
 3. Why can the field lines of an electrostatic field not close?
-   Hint: for a closed field line the circulation $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$ along it, contradicting the circulation theorem of the electrostatic field ([5.3.2](/5.3.2)).
+
+   **Answer** for a closed field line the circulation $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$ along it, contradicting the circulation theorem of the electrostatic field ([5.3.2](/5.3.2)).
+
 4. What is the relation between Gauss's law and Coulomb's law?
-   Hint: for stationary charges, Gauss's law follows from Coulomb's law and superposition; conversely, Gauss's law together with the spherical symmetry of the field of a point charge gives Coulomb's law. But Gauss's law also holds for moving charges, for which Coulomb's law fails.
+
+   **Answer** for stationary charges, Gauss's law follows from Coulomb's law and superposition; conversely, Gauss's law together with the spherical symmetry of the field of a point charge gives Coulomb's law. But Gauss's law also holds for moving charges, for which Coulomb's law fails.
+
 5. Two large parallel plates a distance $d$ apart, each of area $S$, carry charges $+q$ and $-q$. One person says that by Coulomb's law the force between the plates is $\frac{q^2}{4\pi\varepsilon_0d^2}$; another says the field between the plates is $\frac{q}{\varepsilon_0S}$ and hence the force is $\frac{q^2}{\varepsilon_0S}$; a third says the field of one plate at the other is $\frac{q}{2\varepsilon_0S}$ and hence the force is $\frac{q^2}{2\varepsilon_0S}$. Which is right?
-   Hint: the third. The plates cannot be treated as point charges ($d\ll\sqrt S$), so the first is wrong; the field $\frac{q}{\varepsilon_0S}$ between the plates includes the field of the plate being acted on, and the field of a charged body exerts no net force on itself, so the second is wrong.
+
+   **Answer** the third. The plates cannot be treated as point charges ($d\ll\sqrt S$), so the first is wrong; the field $\frac{q}{\varepsilon_0S}$ between the plates includes the field of the plate being acted on, and the field of a charged body exerts no net force on itself, so the second is wrong.
+
 6. A circular hole of radius $R$ is cut out of an infinite uniformly charged plane of surface charge density $\sigma$. Find the field on the axis of the hole.
-   Hint: in Example 1.4.4 set $R_1=R$ and $R_2\to\infty$ to get $E_x=\dfrac{\sigma x}{2\varepsilon_0\sqrt{x^2+R^2}}$; alternatively, take the field of the infinite plane minus that of a disk of radius $R$.
+
+   **Answer** in Example 1.4.4 set $R_1=R$ and $R_2\to\infty$ to get $E_x=\dfrac{\sigma x}{2\varepsilon_0\sqrt{x^2+R^2}}$; alternatively, take the field of the infinite plane minus that of a disk of radius $R$.

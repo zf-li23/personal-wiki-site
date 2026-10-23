@@ -1,7 +1,7 @@
 ---
 title: Foundations of Statistical Thermodynamics
 description: Macrostates and microstates; systems of localized and nonlocalized particles, independent systems; the number of microstates of a distribution, Stirling's approximation and the dominance of the most probable distribution; the Boltzmann distribution from Lagrange multipliers and the identification β = 1/(kT); the probabilistic meaning of the molecular partition function, mean energy and energy fluctuations; the system partition function and its relations to U, S, A, G, H, p, C_V, and the choice of energy zero; the statistical meaning of heat, work, entropy and the third law.
-source_hash: c1fdb08baa05
+source_hash: e9bc74c0c928
 ---
 
 The chemical thermodynamics of the previous nine chapters starts from a few empirical laws and discusses energy conversion, direction and limits using only macroscopic quantities such as $T$, $p$, $V$, $U$ and $S$, without any reference to what matter is made of ([6.3.1](/6.3.1)). The conclusions are general and reliable, but at a price: every property datum, whether a heat capacity, a standard molar entropy or an equilibrium constant, has to be measured. Statistical thermodynamics takes the opposite route. It regards a macroscopic system as a large collection of molecules and, starting from the molecular energy levels, uses probability to compute the statistical averages that make up the macroscopic properties. It answers questions that thermodynamics cannot: why the $U$ of an ideal gas depends only on $T$, why the $C_{V,\mathrm{m}}$ of a diatomic gas is $\frac{5}{2}R$ at ordinary temperatures, what entropy means microscopically, and how to compute standard molar entropies and equilibrium constants from spectroscopic data alone.
@@ -400,10 +400,17 @@ The factor $N!$ arises from the indistinguishability of the particles and merely
 ## Questions
 
 1. Which of the following are characteristics of Boltzmann statistics? (A) It treats a system with given $N$, $V$, $U$; (B) the energy of the system satisfies $\sum_i N_i\varepsilon_i = U$; (C) the number of particles in each quantum state is limited by the Pauli exclusion principle; (D) all possible microstates occur with equal probability.
-   Answer: A, B and D. C is a characteristic of Fermi–Dirac statistics; Boltzmann statistics is the limit $g_i \gg N_i$, in which the restriction of the Pauli principle plays no role.
+
+   **Answer** A, B and D. C is a characteristic of Fermi–Dirac statistics; Boltzmann statistics is the limit $g_i \gg N_i$, in which the restriction of the Pauli principle plays no role.
+
 2. If the following functions are computed with $q$ and with $q^{(0)}$, which results differ: $U$, $H$, $S$, $A$, $G$, $p$, $C_V$?
-   Answer: $U$, $H$, $A$ and $G$ differ by $U_0 = N\varepsilon_0$; $S$, $p$ and $C_V$ are the same.
+
+   **Answer** $U$, $H$, $A$ and $G$ differ by $U_0 = N\varepsilon_0$; $S$, $p$ and $C_V$ are the same.
+
 3. Using the statistical meaning of entropy, determine the sign of the entropy change in each process: (1) water vapor condenses to water; (2) $\ce{CaCO3}$ decomposes on heating; (3) ethylene polymerizes to polyethylene; (4) a gas adsorbs on a catalyst surface; (5) a phospholipid membrane changes from the gel state to the fluid liquid-crystalline state.
-   Answer: (1) the molecules lose translation throughout the container, $\Delta S < 0$; (2) a gas is formed, and the number of molecules and of translational degrees of freedom increases, $\Delta S > 0$; (3) the number of molecules decreases, $\Delta S < 0$; (4) the molecules are confined to the surface and translation decreases, $\Delta S < 0$; (5) the hydrocarbon chains of the lipid molecules change from ordered to disordered, and lateral motion in the plane of the membrane and rotation of chain segments increase, $\Delta S > 0$ (this transition is endothermic and entropy-driven).
+
+   **Answer** (1) the molecules lose translation throughout the container, $\Delta S < 0$; (2) a gas is formed, and the number of molecules and of translational degrees of freedom increases, $\Delta S > 0$; (3) the number of molecules decreases, $\Delta S < 0$; (4) the molecules are confined to the surface and translation decreases, $\Delta S < 0$; (5) the hydrocarbon chains of the lipid molecules change from ordered to disordered, and lateral motion in the plane of the membrane and rotation of chain segments increase, $\Delta S > 0$ (this transition is endothermic and entropy-driven).
+
 4. Why is the statement "statistical thermodynamics can compute the absolute entropy of a system with given $N$, $V$, $U$" not entirely accurate?
-   Answer: $S = k_{\mathrm{B}}\ln\Omega$ in principle gives the absolute value of the entropy, but in practice the calculation always omits degrees of freedom that are "frozen" in the temperature range considered and do not change in chemical and physical processes, the most typical being the nuclear spin ([6.3.11](/6.3.11#sec-11.5)). The statistical entropy usually quoted is therefore also a conventional entropy: it follows the same convention as the calorimetric entropy with the perfect crystal at $0\,\mathrm{K}$ as zero, so the two can be compared directly, and their difference is the residual entropy.
+
+   **Answer** $S = k_{\mathrm{B}}\ln\Omega$ in principle gives the absolute value of the entropy, but in practice the calculation always omits degrees of freedom that are "frozen" in the temperature range considered and do not change in chemical and physical processes, the most typical being the nuclear spin ([6.3.11](/6.3.11#sec-11.5)). The statistical entropy usually quoted is therefore also a conventional entropy: it follows the same convention as the calorimetric entropy with the perfect crystal at $0\,\mathrm{K}$ as zero, so the two can be compared directly, and their difference is the residual entropy.

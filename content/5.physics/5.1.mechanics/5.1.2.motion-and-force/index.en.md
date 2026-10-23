@@ -1,7 +1,7 @@
 ---
 title: Motion and Force
 description: Newton's laws of motion and inertial frames; the defining constants of the 2019 SI and dimensional analysis; common forces and the four fundamental interactions; applications of Newton's laws; inertial forces in translating and rotating non-inertial frames, the equivalence principle, tides, the centrifugal force and the Coriolis force.
-source_hash: 0c4e2701be91
+source_hash: c9fbf921cf82
 ---
 
 The previous chapter, [5.1.1](/5.1.1), only described motion; this chapter discusses the causes of changes in motion. *Dynamics* studies how the interactions (forces) between bodies determine the **acceleration** of a body. Newton's laws of motion are the foundation of classical mechanics, and the momentum theorem ([5.1.3](/5.1.3)), the work-energy theorem and energy conservation ([5.1.4](/5.1.4)), and the law of rotation of rigid bodies ([5.1.5](/5.1.5)) in the following chapters are all consequences of them. We first state the three laws and the concept of an inertial frame, then introduce the International System of Units and dimensions, the common forces and the four fundamental interactions, and use worked examples to show the general procedure for solving problems with Newton's laws; the equations one writes down are often a **differential equation** ([2.2.15](/2.2.15)), which can be solved analytically or numerically ([4.4.4](/4.4.4)). Finally we discuss non-inertial frames: in an accelerating or rotating **reference frame** we introduce inertial forces so that Newton's laws can still be used, which explains weightlessness, the tides, the variation of gravity with latitude, and the many phenomena of the Coriolis force.
@@ -363,8 +363,13 @@ where $T_0 \approx 23.93\,\mathrm{h}$ is the time for one rotation of the Earth 
 ## Questions
 
 1. A body is pressed against a rough vertical wall by a horizontal force $F$ and stays at rest. How does the static friction on the body change as $F$ gradually increases?
-   Hint: It does not change; it always equals the weight of the body. Static friction is determined by the equilibrium condition, and what increases with $F$ is only the maximum static friction $\mu_{\mathrm{s}}F$.
+
+   **Answer** It does not change; it always equals the weight of the body. Static friction is determined by the equilibrium condition, and what increases with $F$ is only the maximum static friction $\mu_{\mathrm{s}}F$.
+
 2. A spring with mass is hung at its upper end from a string and is in equilibrium. Is the extension the same in every segment of the spring? How does the spring move at the instant the string is cut?
-   Hint: The higher a segment, the more weight below it it must bear and the greater its extension. At the instant of cutting, the deformation of the spring has no time to change; the elastic force on the lower end still balances gravity, so it stays at rest, while the upper end is acted on by a downward elastic force and gravity, with acceleration greater than $g$; the spring begins to contract from the upper end, and the acceleration of the center of mass of the whole spring is always $g$ (the center-of-mass motion theorem of [5.1.3](/5.1.3)).
+
+   **Answer** The higher a segment, the more weight below it it must bear and the greater its extension. At the instant of cutting, the deformation of the spring has no time to change; the elastic force on the lower end still balances gravity, so it stays at rest, while the upper end is acted on by a downward elastic force and gravity, with acceleration greater than $g$; the spring begins to contract from the upper end, and the acceleration of the center of mass of the whole spring is always $g$ (the center-of-mass motion theorem of [5.1.3](/5.1.3)).
+
 3. Which causes larger tides, the Sun or the Moon?
-   Hint: The Moon. The tidal force is proportional to the mass of the body and inversely proportional to the cube of its distance (Section 2.6.4).
+
+   **Answer** The Moon. The tidal force is proportional to the mass of the body and inversely proportional to the cube of its distance (Section 2.6.4).

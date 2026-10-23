@@ -1,6 +1,6 @@
 ---
 title: Interfacial Phenomena and Surface Thermodynamics
-source_hash: b428f97adf6e
+source_hash: facd22fa027b
 ---
 
 The systems treated in the preceding chapters tacitly assumed that the molecules at interfaces can be neglected: in a glass of water only about $10^{-8}$ of the molecules are at the surface. Once matter is highly dispersed, the situation is different: 1 g of water in the form of one sphere has a surface area of about $5\,\mathrm{cm^2}$ and a surface energy of about $3.5 \times 10^{-5}\,\mathrm{J}$; divided into droplets of radius $1\,\mathrm{nm}$, the surface area grows to about $3000\,\mathrm{m^2}$ and the surface energy to about $220\,\mathrm{J}$, enough to heat that 1 g of water by $50\,\mathrm{K}$. This chapter treats interfaces with the thermodynamics established earlier (the **fundamental equations of thermodynamics**, the **chemical potential** and the **Gibbs–Duhem equation**, [6.3.3](/6.3.3), [6.3.4](/6.3.4)): we first define the surface tension and write the fundamental equations including surface work (19.1); then discuss the additional pressure caused by curved interfaces, the changes of vapor pressure and solubility, and the metastable states and nucleation when a new phase forms (19.2); then follow the measurement of surface tension (19.3), adsorption at solution surfaces and the Gibbs adsorption isotherm (19.4), spreading and monolayers at liquid–liquid interfaces (19.5), wetting at solid–liquid interfaces (19.6), and finally surfactants and micelles (19.7). This chapter is the basis of the next two: a solid surface can lower its surface energy only by adsorption, which is the subject of [6.3.20](/6.3.20); colloids are dispersed systems with significant interfacial energy, treated in [6.3.21](/6.3.21). In biology, the lipid bilayer of the cell membrane, pulmonary surfactant, capillary action in plants and ice-nucleating proteins are all direct applications of the principles of this chapter.
@@ -560,13 +560,16 @@ Preparation of nanomaterials. The core of a reverse micelle in oil is a nanomete
 
 1. By what routes do a pure liquid, a solution and a solid lower their surface Gibbs free energy?
 
-   A pure liquid can only reduce its surface area; a solution can also change the surface composition through surface adsorption, with surface-active substances positively adsorbed and surface-inactive substances negatively adsorbed; the surface atoms of a solid cannot move, and a solid relies mainly on adsorbing gas or solution molecules ([6.3.20](/6.3.20)).
+   **Answer** A pure liquid can only reduce its surface area; a solution can also change the surface composition through surface adsorption, with surface-active substances positively adsorbed and surface-inactive substances negatively adsorbed; the surface atoms of a solid cannot move, and a solid relies mainly on adsorbing gas or solution molecules ([6.3.20](/6.3.20)).
+
 2. When the adsorption of a solute at the surface of a solution is positive, the surface tension rises with increasing solute concentration. Is this correct?
 
-   No. By the Gibbs adsorption isotherm, $\Gamma > 0$ corresponds to $(\partial\gamma/\partial c)_{T,p} < 0$, and the surface tension decreases with increasing concentration; solutes that raise the surface tension are negatively adsorbed.
+   **Answer** No. By the Gibbs adsorption isotherm, $\Gamma > 0$ corresponds to $(\partial\gamma/\partial c)_{T,p} < 0$, and the surface tension decreases with increasing concentration; solutes that raise the surface tension are negatively adsorbed.
+
 3. Why, after the stopcock is opened in a glass tube with a soap bubble at each end, does the small bubble become smaller and the large bubble larger?
 
-   The additional pressure $4\gamma/r$ of the small bubble is larger, and gas flows from the small bubble to the large one; as the small bubble shrinks its curvature increases further, so the process accelerates by itself until the small bubble is only a spherical cap with the same radius of curvature as the large bubble.
+   **Answer** The additional pressure $4\gamma/r$ of the small bubble is larger, and gas flows from the small bubble to the large one; as the small bubble shrinks its curvature increases further, so the process accelerates by itself until the small bubble is only a spherical cap with the same radius of curvature as the large bubble.
+
 4. Which metastable state do artificial rain-making and bumping respectively exploit or avoid?
 
-   Artificial rain-making seeds supersaturated water vapor with condensation nuclei or ice nuclei and removes the supersaturation; bumping is the sudden vaporization of a superheated liquid and can be avoided by adding boiling chips to provide bubble nuclei.
+   **Answer** Artificial rain-making seeds supersaturated water vapor with condensation nuclei or ice nuclei and removes the supersaturation; bumping is the sudden vaporization of a superheated liquid and can be avoided by adding boiling chips to provide bubble nuclei.

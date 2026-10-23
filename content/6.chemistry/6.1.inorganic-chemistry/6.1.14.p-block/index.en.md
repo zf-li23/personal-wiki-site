@@ -1,7 +1,7 @@
 ---
 title: The p-Block Elements
 description: General trends of the p-block elements, the inert-pair effect, Frost diagrams and the nomenclature of oxoacids with Pauling's rules; the elements and important compounds of the halogens, chalcogens, pnictogens, carbon group and boron group, including oxoacids of the halogens, hydrogen peroxide, sulfides and oxoacids of sulfur, nitric acid and aqua regia, oxoacids of phosphorus, allotropes of carbon and silicates, redox chemistry of tin and lead, boranes and the three-center two-electron bond, boric acid and aluminum compounds.
-source_hash: 0362a39c298a
+source_hash: 298699e4ef5d
 ---
 
 The p block (Groups 13–18, $n\mathrm{s}^2\,n\mathrm{p}^{1\text{–}6}$) is the richest part of descriptive chemistry: it contains all the nonmetals (except H), almost all the metalloids and a number of "poor metals", and the character of the elements changes gradually from metallic at the lower left to typical nonmetallic at the upper right. This chapter first discusses the trends common to all the groups (Section 14.1): the special features of the second-period elements, oxidation states and the inert-pair effect, reading oxidizing and reducing behavior from Frost diagrams, and the nomenclature and acidity of oxoacids. We then proceed group by group, from the typical nonmetals of the halogens (Section 14.2) through the chalcogens (Section 14.3), the pnictogens (Section 14.4) and the carbon group (Section 14.5) to the electron-deficient boron group (Section 14.6). Many principles of the earlier chapters are applied here: molecular structure (hybridization, VSEPR, molecular orbitals and delocalized π bonds in [6.1.3](/6.1.3)), crystal structure ([6.1.4](/6.1.4)), the four types of equilibria ([6.1.8](/6.1.8)–[6.1.10](/6.1.10)), and above all electrode potentials and Latimer diagrams ([6.1.11](/6.1.11), [6.1.12](/6.1.12)). For each group we first give a table of general properties and then describe the substances one by one; similar reactions are collected in tables and only representative equations are kept. The s block is covered in [6.1.13](/6.1.13), and the d and f blocks in [6.1.15](/6.1.15). The organic chemistry of p-block elements (hydroboration, organosilicon and organophosphorus compounds) belongs to [Organic Chemistry](/6.5), and the symmetry of oxoanion structures to [Structural Chemistry](/6.2).
@@ -704,10 +704,17 @@ Down the p block the nonmetallic character decreases and the metallic character 
 ## Questions
 
 1. Why is $\ce{H3PO3}$ a diprotic acid and $\ce{H3PO4}$ a triprotic acid? Why are their $\mathrm{p}K_{\mathrm{a1}}$ values similar?
-   Answer: The structure of $\ce{H3PO3}$ is $\ce{HPO(OH)2}$; it has only two O–H groups, and the H on P does not dissociate. Both acids have only one non-hydroxyl oxygen ($m = 1$), so by Pauling's rules both have $\mathrm{p}K_{\mathrm{a1}}$ of about 2.
+
+   **Answer** The structure of $\ce{H3PO3}$ is $\ce{HPO(OH)2}$; it has only two O–H groups, and the H on P does not dissociate. Both acids have only one non-hydroxyl oxygen ($m = 1$), so by Pauling's rules both have $\mathrm{p}K_{\mathrm{a1}}$ of about 2.
+
 2. Use electrode potentials to explain why $\ce{MnO2}$ reacts only with concentrated hydrochloric acid to give chlorine.
-   Answer: $E^\circ(\ce{MnO2}/\ce{Mn^2+}) = 1.23\,\mathrm{V}$ is smaller than $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.36\,\mathrm{V}$, so the reaction does not proceed under standard conditions. In concentrated hydrochloric acid the concentrations of both $\ce{H+}$ and $\ce{Cl-}$ are large; by the Nernst equation the former raises the potential of the $\ce{MnO2}$ couple and the latter lowers that of the $\ce{Cl2}$ couple, and heating and the prompt escape of $\ce{Cl2}$ allow the reaction to proceed.
+
+   **Answer** $E^\circ(\ce{MnO2}/\ce{Mn^2+}) = 1.23\,\mathrm{V}$ is smaller than $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.36\,\mathrm{V}$, so the reaction does not proceed under standard conditions. In concentrated hydrochloric acid the concentrations of both $\ce{H+}$ and $\ce{Cl-}$ are large; by the Nernst equation the former raises the potential of the $\ce{MnO2}$ couple and the latter lowers that of the $\ce{Cl2}$ couple, and heating and the prompt escape of $\ce{Cl2}$ allow the reaction to proceed.
+
 3. $\ce{B2H6}$ and $\ce{Al2Cl6}$ both have bridge bonds. How do they differ?
-   Answer: The B–H–B bridge in $\ce{B2H6}$ is a three-center two-electron bond (the bridging H has no lone pair), whereas the Al–Cl–Al bridge in $\ce{Al2Cl6}$ consists of two ordinary two-center two-electron bonds formed by the bridging Cl with its lone pairs (one of them a coordinate bond).
+
+   **Answer** The B–H–B bridge in $\ce{B2H6}$ is a three-center two-electron bond (the bridging H has no lone pair), whereas the Al–Cl–Al bridge in $\ce{Al2Cl6}$ consists of two ordinary two-center two-electron bonds formed by the bridging Cl with its lone pairs (one of them a coordinate bond).
+
 4. Why must hydrofluoric acid and concentrated NaOH solution not be stored in glass containers (or closed with glass stoppers)?
-   Answer: $\ce{SiO2 + 4HF -> SiF4 + 2H2O}$; $\ce{SiO2 + 2NaOH -> Na2SiO3 + H2O}$, and the sodium silicate formed cements the stopper to the neck of the bottle.
+
+   **Answer** $\ce{SiO2 + 4HF -> SiF4 + 2H2O}$; $\ce{SiO2 + 2NaOH -> Na2SiO3 + H2O}$, and the sodium silicate formed cements the stopper to the neck of the bottle.

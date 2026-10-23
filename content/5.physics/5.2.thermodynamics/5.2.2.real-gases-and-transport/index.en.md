@@ -1,6 +1,6 @@
 ---
 title: Real Gases and Transport Processes
-source_hash: 272b294993d3
+source_hash: 544f40ba1840
 ---
 
 The **ideal gas** of the previous chapter rests on two idealizations: the molecules have no size, and there is no interaction between molecules apart from collisions. This chapter removes both idealizations and leaves the ideal gas in two directions. The first concerns the **equation of state** of an **equilibrium state**: at high pressure and low temperature, the volume of the molecules and the attraction between them can no longer be neglected, the gas deviates from $pV = nRT$ and eventually liquefies; the van der Waals equation describes this deviation, the liquefaction and the critical point with just two parameters. The second concerns nonequilibrium states: because molecules have size, they collide with one another, and the collisions determine the mean free path, which in turn determines how fast the three transport processes of heat conduction, viscosity and diffusion proceed. The macroscopic laws of transport (Fourier's law and Fick's law) are the physical origin of the heat equation in the partial differential equations course ([2.5.1](/2.5.1)); here we compute their coefficients from the kinetic theory. The next chapter, [5.2.3](/5.2.3), returns to equilibrium states and turns to the methods of thermodynamics.
@@ -239,9 +239,25 @@ Here $D \propto 1/p$ and $D \propto T^{3/2}$. Combined with conservation of mass
 
 The three transport coefficients are related by the simple relations $\eta = \rho D$ and $\kappa = \eta c_V$. The mean-free-path theory correctly gives the dependence of each coefficient on pressure and temperature, but the numerical factors are only approximate: the rigorous theory (Chapman–Enskog) gives $\kappa/(\eta c_V)$ of about $2.5$ for a monatomic gas, not 1, because fast molecules both travel farther and carry more energy, a correlation that the simplified model neglects.
 
+## Summary
+
+| Topic | Result |
+|---|---|
+| Isotherms of real gases | Below the critical temperature there is a horizontal liquid–vapor coexistence segment at the saturated vapor pressure; critical point and critical temperature in Definition 2.1.1 |
+| van der Waals equation | Eq. (2.1): $\left(p + \frac{a}{V_{\mathrm{m}}^2}\right)(V_{\mathrm{m}} - b) = RT$; $a$ corrects for intermolecular attraction (internal pressure $a/V_{\mathrm{m}}^2$), $b$ for the volume of the molecules themselves |
+| Internal energy | $U = \frac{i}{2}nRT - \frac{n^2a}{V}$ depends on volume, so the gas cools in a free expansion |
+| Critical constants | Formula 2.2.1: $V_{\mathrm{m,c}} = 3b$, $T_{\mathrm{c}} = \frac{8a}{27Rb}$, $p_{\mathrm{c}} = \frac{a}{27b^2}$; the reduced equation contains no $a$ or $b$ (law of corresponding states) |
+| Loop of the isotherm | The part with $\left(\frac{\partial p}{\partial V}\right)_T > 0$ is unstable; supersaturated vapor and superheated liquid are metastable; the horizontal segment follows from Maxwell's equal-area rule |
+| Collision frequency and mean free path | Formula 2.3.1: $\bar z = \sqrt{2}\,\pi d^2\bar v\,n_V$, $\bar\lambda = \frac{k_{\mathrm{B}}T}{\sqrt{2}\,\pi d^2 p}$ |
+| Transport coefficients | Formula 2.4.1, Formula 2.4.2, Formula 2.4.3: $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$, $\eta = \frac{1}{3}\rho\bar v\bar\lambda$, $D = \frac{1}{3}\bar v\bar\lambda$ |
+| Dependence on pressure and temperature | $\kappa$ and $\eta$ are independent of pressure and grow as $\sqrt{T}$, until $\bar\lambda$ reaches the size of the container and then $\kappa \propto p$; $D \propto T^{3/2}/p$; $\eta = \rho D$, $\kappa = \eta c_V$ (the numerical factors are only approximate) |
+
 ## Questions
 
 1. Why does lowering the pressure not reduce the thermal conductivity of a gas at first, while a high vacuum provides very good insulation?
-   Hint: in $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ the product $\rho\bar\lambda$ is independent of pressure until $\bar\lambda$ reaches the linear size of the container (Example 2.4.1).
+
+   **Answer** in $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ the product $\rho\bar\lambda$ is independent of pressure until $\bar\lambda$ reaches the linear size of the container (Example 2.4.1).
+
 2. Why do the viscosities of liquids and gases vary with temperature in opposite ways?
-   Hint: the internal friction of a gas comes from the transfer of molecules between layers, and the higher the temperature, the larger $\bar v$; the internal friction of a liquid comes from attraction between molecules, and as the temperature rises the molecules break free of their neighbors more easily.
+
+   **Answer** the internal friction of a gas comes from the transfer of molecules between layers, and the higher the temperature, the larger $\bar v$; the internal friction of a liquid comes from attraction between molecules, and as the temperature rises the molecules break free of their neighbors more easily.

@@ -1,6 +1,6 @@
 ---
 title: Equivalence and Inference in Predicate Logic
-source_hash: a507b3322145
+source_hash: c171bbb512c5
 ---
 
 Much of this chapter can be learned by analogy with propositional logic: the notions of equivalence, normal forms, rules of inference, and resolution are all carried over from [1.1.2](/1.1.2), and what is new is how to handle quantifiers. For the same reason, this chapter also serves as a review of propositional logic.
@@ -292,3 +292,16 @@ Resolution in predicate logic requires *unification*: finding a substitution (su
 **Example 5.6.1** Let $C_1 = P(x) \lor Q(x)$ and $C_2 = \lnot P(a) \lor R(y)$. After applying the substitution $\{x / a\}$ to $C_1$, $P(a)$ and $\lnot P(a)$ form a complementary pair, and resolution yields $Q(a) \lor R(y)$.
 
 The heart of resolution in predicate logic is the handling of atomic formulas containing variables: unification finds a substitution that makes atomic formulas complementary, and then the resolution rule is applied. This lets resolution handle inferences involving quantifiers and lays the foundation for automated theorem proving. Resolution in predicate logic is complete: if $G$ is unsatisfiable, the empty clause can always be derived in finitely many steps; but if $G$ is satisfiable, the process may never terminate. This is consistent with the undecidability of first-order logic (Theorem 4.6.1).
+
+## Summary
+
+| Topic | Key results |
+| :-- | :-- |
+| Logical equivalence (Definition 5.1.1) | $A \leftrightarrow B$ is valid, written $A = B$ |
+| Quantifier negation laws (Formula 5.1.1) | $\lnot (\forall x)P(x) = (\exists x)\lnot P(x)$, $\lnot (\exists x)P(x) = (\forall x)\lnot P(x)$ |
+| Extending and shrinking the scope (Formulas 5.2.1 and 5.2.2) | A part not involving $x$ can be moved out of the quantifier; if $x$ occurs only in the antecedent of an implication, the quantifier flips when moved |
+| Distribution of quantifiers (Formulas 5.2.3 and 5.2.4) | $\forall$ distributes over $\land$ and $\exists$ over $\lor$; for $\forall$ over $\lor$ and $\exists$ over $\land$ only a one-way implication holds |
+| Prenex normal form (Definition 5.3.1, Theorem 5.3.1) | Every formula has an equivalent prenex normal form: eliminate $\to, \leftrightarrow$, move negations inward, rename variables if needed, then move the quantifiers to the far left |
+| Skolem normal forms (Definitions 5.3.2–5.3.4) | The $\exists$-prenex normal form preserves validity (Theorem 5.3.2) and the $\forall$-prenex normal form preserves unsatisfiability (Theorem 5.3.3), but neither is equivalent to the original formula |
+| Inference (Sections 5.4 and 5.5) | Basic inference formulas plus the four quantifier rules UI, UG, EI, EG: remove quantifiers, reason propositionally, then reintroduce quantifiers |
+| Resolution (Algorithm 5.6.1) | Convert the premises and the negated conclusion into a clause set of a $\forall$-prenex normal form and resolve using unification; an unsatisfiable set always yields the empty clause, while for a satisfiable one the process may not terminate |

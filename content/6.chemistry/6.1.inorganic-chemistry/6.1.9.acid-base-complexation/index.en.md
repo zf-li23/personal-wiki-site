@@ -1,6 +1,6 @@
 ---
 title: Acid–Base and Complexation Equilibria
-source_hash: 1698cfc34f71
+source_hash: f9dbcf6b046e
 ---
 
 Most inorganic reactions take place in aqueous solution, where acids, bases, and salts dissociate into ions and the reactions between ions give rise to the four main types of equilibrium in solution: acid–base equilibria and complexation equilibria (this chapter), precipitation–dissolution equilibria ([6.1.10](/6.1.10)), and redox equilibria ([6.1.11](/6.1.11)). All of them are specific forms of the **chemical equilibrium** of [6.1.8](/6.1.8) in solution: the equilibrium constants are all **standard equilibrium constants**, the direction of reaction is always decided by comparing the **reaction quotient** with the equilibrium constant, and every equilibrium constant can be linked to thermodynamic data through $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$. We first compare the three theories of acids and bases (9.1), then treat the equilibrium calculations for water and pH (9.2), weak acids and bases (9.3), salt solutions (9.4), and buffer solutions (9.5). Acid–base titration is introduced briefly (9.6), and the chapter ends with the dissociation equilibria of complexes in solution (9.7). The common method of calculation is to write down all the equilibria, identify the dominant one, make a reasonable approximation, and finally check that the approximation holds; if it does not, we write the equations of charge balance and mass balance and solve them numerically. A systematic treatment of the proton condition and distribution fractions, titration curves and end-point errors, and EDTA and conditional stability constants are found in [Analytical Chemistry](/6.4); activity coefficients and ionic strength are found in [Physical Chemistry](/6.3).
@@ -688,17 +688,6 @@ Finally, complexation equilibria often coexist with other equilibria, and the eq
 - With precipitation equilibria: complexation dissolves sparingly soluble salts (for example $\ce{AgCl + 2NH3 <=> [Ag(NH3)2]+ + Cl-}$, $K = K_{\mathrm{sp}}\beta_2$), and a precipitant can in turn destroy a complex ion (CuS forms when $\ce{Na2S}$ is added to $\ce{[Cu(NH3)4]^2+}$); see [6.1.10](/6.1.10).
 - With redox equilibria: complexation lowers the concentration of the metal ion and thereby changes the electrode potential of the couple; for example, $\ce{Au}$ can be oxidized and dissolved by $\ce{O2}$ in the presence of $\ce{CN-}$; see [6.1.11](/6.1.11).
 
-## Questions
-
-1. In liquid ammonia, is HAc a strong or a weak acid? In glacial acetic acid, is $\ce{NH3}$ a strong or a weak base?
-   Answer: Liquid ammonia is more basic than water, and HAc transfers its proton completely to $\ce{NH3}$ there, so it is a strong acid (liquid ammonia is a leveling solvent). Glacial acetic acid is more acidic than water, and $\ce{NH3}$ accepts a proton completely in it, so it is a strong base.
-2. Is the pH of a $10^{-8}\,\mathrm{mol\,L^{-1}}$ HCl solution equal to 8?
-   Answer: No. The dissociation of water cannot be neglected here. The charge balance $[\ce{H+}] = 10^{-8} + K_{\mathrm{w}}/[\ce{H+}]$ gives $[\ce{H+}] = 1.05 \times 10^{-7}$ and $\mathrm{pH} = 6.98$: however dilute an acid solution is, it remains acidic.
-3. Why are hydrochloric acid and tin granules added when a $\ce{SnCl2}$ solution is prepared?
-   Answer: The hydrochloric acid suppresses hydrolysis ($\ce{SnCl2 + H2O <=> Sn(OH)Cl v + HCl}$); the tin reduces any $\ce{Sn^4+}$ formed by air oxidation back to $\ce{Sn^2+}$ ([6.1.11](/6.1.11)).
-4. Does the pH of an HAc–NaAc buffer change when it is diluted tenfold with water? Does the buffer capacity change?
-   Answer: The concentration ratio is unchanged, so by Eq. (9.5) the pH is essentially unchanged (it changes only when the solution is so dilute that the approximation fails); the buffer capacity is proportional to the total concentration and falls to about 1/10.
-
 ## Summary
 
 | Topic | Key points |
@@ -711,3 +700,21 @@ Finally, complexation equilibria often coexist with other equilibria, and the eq
 | Buffer solutions | $\mathrm{pH} = \mathrm{p}K_{\mathrm{a}} + \lg(c_{\mathrm{b}}/c_{\mathrm{a}})$; buffer capacity greatest at $c_{\mathrm{a}} = c_{\mathrm{b}}$ ($0.576c$), effective range $\mathrm{p}K_{\mathrm{a}} \pm 1$ |
 | Acid–base titration | The sharp pH change within ±0.1% of the stoichiometric point is the titration jump (0.1 mol/L strong acid–strong base: 4.30–9.70); the indicator transition range should lie within the jump range |
 | Complexation equilibria | Overall stability constant $\beta_n = K_1\cdots K_n$, instability constant $1/\beta_n$; complex ions convert toward the more stable one; competition with acid–base, precipitation, and redox equilibria |
+
+## Questions
+
+1. In liquid ammonia, is HAc a strong or a weak acid? In glacial acetic acid, is $\ce{NH3}$ a strong or a weak base?
+
+   **Answer** Liquid ammonia is more basic than water, and HAc transfers its proton completely to $\ce{NH3}$ there, so it is a strong acid (liquid ammonia is a leveling solvent). Glacial acetic acid is more acidic than water, and $\ce{NH3}$ accepts a proton completely in it, so it is a strong base.
+
+2. Is the pH of a $10^{-8}\,\mathrm{mol\,L^{-1}}$ HCl solution equal to 8?
+
+   **Answer** No. The dissociation of water cannot be neglected here. The charge balance $[\ce{H+}] = 10^{-8} + K_{\mathrm{w}}/[\ce{H+}]$ gives $[\ce{H+}] = 1.05 \times 10^{-7}$ and $\mathrm{pH} = 6.98$: however dilute an acid solution is, it remains acidic.
+
+3. Why are hydrochloric acid and tin granules added when a $\ce{SnCl2}$ solution is prepared?
+
+   **Answer** The hydrochloric acid suppresses hydrolysis ($\ce{SnCl2 + H2O <=> Sn(OH)Cl v + HCl}$); the tin reduces any $\ce{Sn^4+}$ formed by air oxidation back to $\ce{Sn^2+}$ ([6.1.11](/6.1.11)).
+
+4. Does the pH of an HAc–NaAc buffer change when it is diluted tenfold with water? Does the buffer capacity change?
+
+   **Answer** The concentration ratio is unchanged, so by Eq. (9.5) the pH is essentially unchanged (it changes only when the solution is so dilute that the approximation fails); the buffer capacity is proportional to the total concentration and falls to about 1/10.

@@ -1,6 +1,6 @@
 ---
 title: Temperature and the Kinetic Theory of Gases
-source_hash: 5622e2469e5e
+source_hash: 8a93015ba924
 ---
 
 Thermal physics studies phenomena related to temperature. Macroscopically, these appear as changes in the temperature, pressure, volume and phase of a body; microscopically, they arise from the perpetual random motion of a very large number of molecules. There are two complementary ways to study them. Thermodynamics starts from a few macroscopic experimental laws and derives general, reliable conclusions by logical reasoning, without any reference to the microscopic structure of matter ([5.2.3](/5.2.3), [5.2.4](/5.2.4)). Statistical mechanics starts from a microscopic model of the molecules and computes macroscopic quantities by statistical methods; it reveals the nature of thermal phenomena, but its conclusions are limited by the model. This chapter is an introduction to the statistical method. We first set up the concepts specific to thermal physics, such as temperature and equilibrium, and then use Newtonian mechanics ([5.1](/5.1)) and probability theory ([3.1](/3.1)) to derive the pressure of an ideal gas, the microscopic meaning of temperature, the equipartition theorem, the Maxwell speed distribution and the Boltzmann distribution. The next chapter, [5.2.2](/5.2.2), treats real gases, which deviate from the ideal gas, and nonequilibrium transport processes. The Boltzmann distribution obtained here will reappear repeatedly in blackbody radiation, lasers and physical chemistry.
@@ -401,13 +401,6 @@ $$
 $$
 The first excited level has 4 orbital states while the ground level has only 1 (spin not counted), so the total population of the level must be multiplied by the degeneracy ratio 4; the conclusion is unchanged: at room temperature the number of atoms in the excited state is negligible, and almost all atoms are in the ground state. To make the excited state more populated than the ground state (population inversion, the condition for lasing), the system must be driven away from equilibrium with energy from outside.
 
-## Questions
-
-1. At a fixed temperature, how do the Maxwell speed distribution curves of two gases with molecular masses $m_2 > m_1$ differ?
-   Hint: $v_{\mathrm{p}} \propto 1/\sqrt{m}$, so the peak moves left; $f(v_{\mathrm{p}}) \propto \sqrt{m}$, so the peak is higher; the areas under both curves are 1.
-2. At room temperature, which has the larger mean translational kinetic energy, an $\ce{N2}$ or an $\ce{O2}$ molecule in air? Which has the larger root-mean-square speed?
-   Hint: the mean translational kinetic energy depends only on temperature, so they are equal; $v_{\mathrm{rms}} \propto 1/\sqrt{M}$, so that of $\ce{N2}$ is slightly larger.
-
 ## Summary
 
 | Topic | Result |
@@ -420,3 +413,13 @@ The first excited level has 4 orbital states while the ground level has only 1 (
 | Characteristic speeds | $v_{\mathrm{p}} = \sqrt{2k_{\mathrm{B}}T/m}$, $\bar v = \sqrt{8k_{\mathrm{B}}T/(\pi m)}$, $v_{\mathrm{rms}} = \sqrt{3k_{\mathrm{B}}T/m}$ |
 | Wall collision rate | $\Gamma = \frac{1}{4}n_V\bar v$ |
 | Boltzmann distribution | $\mathrm{d}N_{\boldsymbol{r}} = n_0\mathrm{e}^{-\varepsilon_{\mathrm{p}}/(k_{\mathrm{B}}T)}\mathrm{d}^3r$; isothermal barometric formula $p = p_0\mathrm{e}^{-Mgz/(RT)}$ |
+
+## Questions
+
+1. At a fixed temperature, how do the Maxwell speed distribution curves of two gases with molecular masses $m_2 > m_1$ differ?
+
+   **Answer** $v_{\mathrm{p}} \propto 1/\sqrt{m}$, so the peak moves left; $f(v_{\mathrm{p}}) \propto \sqrt{m}$, so the peak is higher; the areas under both curves are 1.
+
+2. At room temperature, which has the larger mean translational kinetic energy, an $\ce{N2}$ or an $\ce{O2}$ molecule in air? Which has the larger root-mean-square speed?
+
+   **Answer** the mean translational kinetic energy depends only on temperature, so they are equal; $v_{\mathrm{rms}} \propto 1/\sqrt{M}$, so that of $\ce{N2}$ is slightly larger.

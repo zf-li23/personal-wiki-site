@@ -1,7 +1,7 @@
 ---
 title: The Quantum Nature of Light
 description: Thermal radiation and black bodies, Kirchhoff's law, the Stefan–Boltzmann law and Wien's displacement law, the ultraviolet catastrophe, Planck's law and the energy quantum; the photoelectric effect, Einstein's photon theory and the photoelectric equation; photon energy and momentum, wave–particle duality of light; Compton scattering and the Compton wavelength.
-source_hash: c4fab6f50793
+source_hash: 630f55ebd1cd
 ---
 
 By the end of the nineteenth century classical physics seemed nearly complete: Newtonian and analytical mechanics handled mechanical problems, Maxwell's theory unified electricity, magnetism and light, and thermodynamics and statistical mechanics explained thermal phenomena. Yet one of the "two clouds" that Kelvin saw on the horizon, the distribution of thermal radiation over frequency, could not be explained correctly by classical theory (the other led to special relativity, see [5.1.8](/5.1.8)). In 1900 Planck proposed the energy quantum hypothesis to solve this problem, and quantum theory was born. In 1905 Einstein introduced the light quantum; in 1913 Bohr applied quantization to the atom; in 1923 Compton scattering confirmed the momentum of the photon. In 1924 de Broglie proposed matter waves; in 1925–1926 Heisenberg's matrix mechanics and Schrödinger's wave mechanics were established one after the other, and Born gave the statistical interpretation of the wave function. In 1927 electron **diffraction** confirmed matter waves and Heisenberg stated the uncertainty relation, and in 1928 Dirac wrote down the relativistic **wave equation** of the electron. Together with relativity, quantum mechanics forms one of the two pillars of modern physics; it underlies atomic, molecular, solid-state and nuclear physics, as well as the theory of the chemical bond and physical chemistry.
@@ -363,9 +363,26 @@ Compton received the 1927 Nobel Prize in Physics for this work. Today Compton sc
 
 ## Questions
 
-1. When an iron block is heated, why does its color change from dull red to orange, yellow-white and blue-white? Hint: by Wien's displacement law, the peak of the radiation spectrum moves toward shorter wavelengths as the temperature rises, while by the Stefan–Boltzmann law the total radiation increases sharply. At about $800\,\mathrm{K}$ only the long-wavelength tail enters the visible region, and we see dull red; at higher temperatures the proportions of the visible wavelengths become more even, the color turns white, and finally bluish.
-2. Why do some people in the African deserts wear black robes? Hint: a black robe absorbs more sunlight and its outer surface becomes very hot, but it is held at some distance from the skin and the heat is carried away mainly by air convecting between the robe and the body; black is also a good emitter in the infrared (Kirchhoff's law) and blocks more ultraviolet light.
-3. What is the role of the accelerating voltage in the photoelectric experiment? Why is there still a photocurrent at zero or even reverse voltage? Hint: the accelerating voltage collects the emitted photoelectrons at the anode; photoelectrons leave with initial kinetic energy, so as long as the reverse voltage is less than the stopping voltage, some of them still reach the anode.
-4. When light of a given wavelength shines on a metal, why do the emitted photoelectrons have different speeds? Hint: the electrons in the metal are in different energy states and at different depths, and the work done to overcome the binding differs when they escape; $h\nu-W_0$ is only the maximum initial kinetic energy.
-5. Are the bright colors of bird feathers thermal radiation? Hint: no. The colors of feathers come from selective absorption of sunlight (pigments) or from interference caused by microstructures (structural color, [5.4.1](/5.4.1)); at room temperature the thermal radiation of the feathers themselves lies in the infrared.
-6. In Compton scattering, the shorter the wavelength of the incident photon, the larger the fraction of the incident energy that the recoil electron receives. Why? Hint: $\frac{E_{\mathrm{k}}}{h\nu_0}=\frac{\Delta\lambda}{\lambda_0+\Delta\lambda}$, and $\Delta\lambda$ is independent of $\lambda_0$, so the smaller $\lambda_0$ is, the larger the fraction.
+1. When an iron block is heated, why does its color change from dull red to orange, yellow-white and blue-white?
+
+   **Answer** by Wien's displacement law, the peak of the radiation spectrum moves toward shorter wavelengths as the temperature rises, while by the Stefan–Boltzmann law the total radiation increases sharply. At about $800\,\mathrm{K}$ only the long-wavelength tail enters the visible region, and we see dull red; at higher temperatures the proportions of the visible wavelengths become more even, the color turns white, and finally bluish.
+
+2. Why do some people in the African deserts wear black robes?
+
+   **Answer** a black robe absorbs more sunlight and its outer surface becomes very hot, but it is held at some distance from the skin and the heat is carried away mainly by air convecting between the robe and the body; black is also a good emitter in the infrared (Kirchhoff's law) and blocks more ultraviolet light.
+
+3. What is the role of the accelerating voltage in the photoelectric experiment? Why is there still a photocurrent at zero or even reverse voltage?
+
+   **Answer** the accelerating voltage collects the emitted photoelectrons at the anode; photoelectrons leave with initial kinetic energy, so as long as the reverse voltage is less than the stopping voltage, some of them still reach the anode.
+
+4. When light of a given wavelength shines on a metal, why do the emitted photoelectrons have different speeds?
+
+   **Answer** the electrons in the metal are in different energy states and at different depths, and the work done to overcome the binding differs when they escape; $h\nu-W_0$ is only the maximum initial kinetic energy.
+
+5. Are the bright colors of bird feathers thermal radiation?
+
+   **Answer** no. The colors of feathers come from selective absorption of sunlight (pigments) or from interference caused by microstructures (structural color, [5.4.1](/5.4.1)); at room temperature the thermal radiation of the feathers themselves lies in the infrared.
+
+6. In Compton scattering, the shorter the wavelength of the incident photon, the larger the fraction of the incident energy that the recoil electron receives. Why?
+
+   **Answer** $\frac{E_{\mathrm{k}}}{h\nu_0}=\frac{\Delta\lambda}{\lambda_0+\Delta\lambda}$, and $\Delta\lambda$ is independent of $\lambda_0$, so the smaller $\lambda_0$ is, the larger the fraction.

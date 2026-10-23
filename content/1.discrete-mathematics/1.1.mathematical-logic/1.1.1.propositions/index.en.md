@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Propositions
-source_hash: 9bd289019bb1
+source_hash: a2a7ff623245
 ---
 
 The core of mathematical logic is the symbolization of logical reasoning. This chapter starts with the simplest case, *propositional logic*: we first explain what a proposition is, then introduce the connectives that combine propositions, define the legitimate formulas and their truth tables, and finally present tautologies and the substitution rule. The next chapter builds on this to discuss equivalence between formulas, normal forms, and inference.
@@ -106,3 +106,11 @@ Store a propositional formula as a tree: the leaves are propositional variables 
 | Postfix | $p \lnot q \land$ |
 
 Thus in converting between notations, the order of the propositional variables never changes; only the positions of the connectives move. The conversion can proceed from the outside in or from the inside out, but it is best to stick to one method; after a few exercises the pattern becomes clear.
+
+## Summary
+
+- A proposition is a declarative sentence that is either true or false (Definition 1.1.1); its truth value is written 1 or 0 (Definition 1.1.2). Propositions without connectives are atomic; those built with connectives are compound (Definition 1.2.1).
+- The meanings of the five common connectives $\lnot, \land, \lor, \to, \leftrightarrow$ are fixed by the truth table in Section 1.4. Only implication is directional: $p \to q$ is false only when the antecedent is true and the consequent false (Remark 1.2.1).
+- Well-formed formulas are built recursively (Definition 1.3.1). Assigning truth values to all propositional variables gives an assignment (Definition 1.3.2); $n$ variables have $2^n$ assignments, and a truth table lists the value of the formula under each of them.
+- According to the last column of the truth table, formulas are tautologies, contradictions or satisfiable formulas (Definitions 1.5.1–1.5.3). The substitution rule (Theorem 1.5.1) lets us obtain complicated tautologies from simple ones.
+- Infix, prefix (Polish) and postfix (reverse Polish) notation (Definition 1.6.1) correspond to the in-order, pre-order and post-order traversals of the formula tree; the latter two need no parentheses.

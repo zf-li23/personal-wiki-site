@@ -1,7 +1,7 @@
 ---
 title: Multistage Decisions and State-Space Search
 description: Mathematical models of multistage decision problems (states, decisions, and state transitions); digitizing the states of the people-and-ghosts river-crossing problem; the state space and state graph; depth-first search with visited marks and breadth-first search for the fewest steps; a summary of problem-solving strategies and search in artificial intelligence.
-source_hash: 8b47f3198b9a
+source_hash: bc46d823be83
 ---
 
 In the problems of the previous chapters (going downstairs, the knight's path, book assignment, eight queens), every step moves the problem toward its goal: the stairs decrease, the knight moves rightward, the number of people with books grows. Many problems are not like this. In crossing a river, the boat carries some people across and must also carry some back; in a maze one meets forks and dead ends; in jigsaw puzzles, Rubik's cubes, and board games, the same position can recur through different sequences of moves. This chapter discusses a general modeling method for such multistage decision problems: abstract the situation of the problem at each moment into a "state" and each operation into a "transition" between states, so that solving the problem becomes finding a path from the initial state to the goal state in the space of all states. Using the people-and-ghosts river-crossing problem as an example, we explain in turn how to digitize a game, how to avoid going in circles with depth-first search with visited marks, and how to find the plan with the fewest steps by breadth-first search. State-space search is one of the basic methods of artificial intelligence; [4.5 Introduction to Artificial Intelligence](/4.5) builds on it to discuss heuristic search and game-tree search, and graph traversal algorithms themselves are discussed systematically in [4.3.10](/4.3.10). At the end of the chapter we summarize the problem-solving strategies met since [4.1.10](/4.1.10).
@@ -262,7 +262,11 @@ The state space of the people-and-ghosts problem has only a dozen or so states, 
 
 These methods are the content of [4.5 Introduction to Artificial Intelligence](/4.5). The significance of this chapter lies in modeling: once a problem is represented as a state space, a whole set of general search algorithms can be applied, without designing a separate solution for each problem.
 
-## Summary: Problem-Solving Strategies
+## Summary
+
+This chapter models multistage decision problems as a state space (Definition 14.1.1): the states are digitized as a set of variables, decisions cause state transitions, and the problem becomes finding a path from the initial state to a goal state in the state graph. Depth-first search with visited marks avoids going around in circles in a state graph with cycles and finds one solution; breadth-first search expands the states level by level, so the first time it reaches a goal it gives a solution with the fewest steps.
+
+### Problem-Solving Strategies
 
 The strategies from [4.1.10](/4.1.10) to this chapter all start from the idea of "reducing the problem to a smaller or closer problem"; they differ in the relation between subproblems:
 

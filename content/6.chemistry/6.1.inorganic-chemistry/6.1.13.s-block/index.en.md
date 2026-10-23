@@ -1,7 +1,7 @@
 ---
 title: Hydrogen and the s-Block Elements
 description: General properties of the alkali and alkaline earth metals, their reactions with oxygen and water, hydroxide basicity and ionic potential, melting points, solubility and thermal stability of salts, the anomalous behavior of lithium and beryllium and the diagonal relationship; isotopes and position of hydrogen, molecular, ionic and metallic hydrides, hydrogen storage materials.
-source_hash: a6568d025d27
+source_hash: f8bb23010a0b
 ---
 
 From this chapter on we turn to descriptive inorganic chemistry: following the blocks of the periodic table, we survey the elements and their important compounds group by group and explain their properties with the principles of the earlier chapters. The s block comprises Groups 1 and 2 ($n\mathrm{s}^{1\text{–}2}$) together with hydrogen. These are the most typical metals, and their chemistry is determined almost entirely by the ease with which they lose their s electrons to form cations with a noble-gas configuration. The main tools of this chapter are therefore the periodicity of **ionization energy** and radius ([6.1.2](/6.1.2)), ionic crystals and **ionic polarization** ([6.1.4](/6.1.4)), thermochemical cycles ([6.1.6](/6.1.6)) and **standard electrode potentials** ([6.1.11](/6.1.11)). Hydrogen occupies a special position; it is treated separately in Section 13.2, together with the hydrides of the other blocks. The spectra of the alkali metals are discussed in [5.5.4](/5.5.4#sec-4.2.5); the roles of $\ce{Na+}$, $\ce{K+}$, $\ce{Mg^2+}$ and $\ce{Ca^2+}$ in living organisms belong to biology ([7](/7)). The p-, d- and f-block elements are treated in [6.1.14](/6.1.14) and [6.1.15](/6.1.15).
@@ -222,8 +222,13 @@ Only two explanations run through this chapter. The smaller the ion and the high
 ## Questions
 
 1. Why can a fire of sodium or magnesium not be extinguished with a $\ce{CO2}$ extinguisher? What should be used instead?
-   Answer: The $\ce{Na2O2}$ formed when Na burns reacts with $\ce{CO2}$ to release $\ce{O2}$, and Mg burns in $\ce{CO2}$ ($\ce{2Mg + CO2 -> 2MgO + C}$); water cannot be used either (it reacts to release $\ce{H2}$). The fire should be smothered with dry sand or a special metal-fire extinguishing agent.
+
+   **Answer** The $\ce{Na2O2}$ formed when Na burns reacts with $\ce{CO2}$ to release $\ce{O2}$, and Mg burns in $\ce{CO2}$ ($\ce{2Mg + CO2 -> 2MgO + C}$); water cannot be used either (it reacts to release $\ce{H2}$). The fire should be smothered with dry sand or a special metal-fire extinguishing agent.
+
 2. $\ce{BeCl2}$ and $\ce{BaCl2}$ are both chlorides of Group 2 elements. Why does the former have a low melting point and dissolve in organic solvents, whereas the latter is a typical ionic crystal?
-   Answer: $\ce{Be^2+}$ has a very small radius and a high charge, so its polarizing power is very strong and it distorts $\ce{Cl-}$ strongly; the Be–Cl bond is predominantly covalent. $\ce{Ba^2+}$ has a large radius and a weak polarizing power, so the bond is essentially ionic.
+
+   **Answer** $\ce{Be^2+}$ has a very small radius and a high charge, so its polarizing power is very strong and it distorts $\ce{Cl-}$ strongly; the Be–Cl bond is predominantly covalent. $\ce{Ba^2+}$ has a large radius and a weak polarizing power, so the bond is essentially ionic.
+
 3. What are the oxidation numbers of H in NaH and in HCl? What happens when NaH is added to water?
-   Answer: −1 and +1, respectively. The $\ce{H-}$ in NaH and the $\ce{H+}$ of water comproportionate to give $\ce{H2}$: $\ce{NaH + H2O -> NaOH + H2 ^}$.
+
+   **Answer** −1 and +1, respectively. The $\ce{H-}$ in NaH and the $\ce{H+}$ of water comproportionate to give $\ce{H2}$: $\ce{NaH + H2O -> NaOH + H2 ^}$.

@@ -344,3 +344,17 @@ The extensions of this chapter are of four kinds: the same problem with a better
 | correlation → causality | [Causal Inference](/3.9) | network analysis |
 | priors and posterior inference | [Bayesian Statistics](/3.7) | Bayes classifier, Bayesian Gaussian mixtures |
 | algorithms | [Statistical Computing](/3.5) | EM algorithm, SVD, iterative clustering |
+
+## Summary
+
+| Extension | Problem it addresses | Idea |
+|---|---|---|
+| FDR and Benjamini–Hochberg (Definition 12.2.2, Algorithm 12.2.1) | Thousands of simultaneous tests, where controlling the FWER (Definition 12.2.1) is too conservative | Control the expected proportion of false rejections; under independence BH gives $\mathrm{FDR} = \frac{m_0}{m}\alpha \le \alpha$ (Theorem 12.2.1) |
+| Correspondence analysis (Definition 12.3.1) | Association in a contingency table | SVD of the standardized residuals of the $\chi^2$ statistic; rows and columns as points in a biplot; a special case of CCA (Remark 12.3.1) |
+| Sparse PCA | Components involving all $p$ variables are hard to interpret | $\ell_1$ penalties on loadings and scores in the low-rank formulation of PCA |
+| Logistic PCA | Binary data | Logistic loss instead of squared error; in general a Bregman divergence from an exponential family |
+| RDA | Choosing between LDA and QDA | Shrink $\hat\Sigma_k$ toward the pooled covariance matrix, with $\alpha$ chosen by cross-validation |
+| Logistic regression (Definition 12.5.1) | Classification without a model for $\boldsymbol{x}$ | Model the log posterior odds as linear in $\boldsymbol{x}$, the same form as LDA, estimated by conditional likelihood |
+| $k$-nearest neighbors (Algorithm 12.5.1) | Nonlinear boundaries without assumptions | Majority vote among the $k$ nearest training points; $k$ controls flexibility |
+| Stochastic block model (Definition 12.6.1) | Relational (network) data | Edge probabilities determined by community labels; communities recovered by community detection (e.g. spectral methods) |
+| Matrix factor model (Definition 12.7.1) | Matrix-valued time series | $Y_t = \Lambda F_t\Gamma^{\mathsf T} + U_t$: separate row and column loadings, far fewer parameters than vectorizing |

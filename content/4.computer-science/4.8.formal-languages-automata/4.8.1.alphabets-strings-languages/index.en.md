@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Alphabets, Strings, and Languages"
 description: The two main lines of formal languages and automata (grammars that generate languages, automata that recognize them) and a map of the course; alphabets, strings, languages and their operations (concatenation, Kleene closure, reversal); Σ* is countable while the set of languages is not; proof methods used throughout the course (deduction, contrapositive, contradiction, inductive definitions and structural induction, mutual induction).
-source_hash: 06bac0140560
+source_hash: be98640d014b
 ---
 
 Formal languages and automata address the following question: how can we describe, by finitely many rules, a set of strings that is usually infinite, and how can a machine decide whether a given string belongs to the set? There are two routes. The first is generation: write down a set of rewriting rules (a grammar), and call a sentence valid if the rules can produce it. The second is recognition: design a machine with only finitely many states (an automaton) that reads symbols one at a time, and call a sentence valid if the machine is in an "accepting" state when the input is exhausted. The two routes are two sides of one coin, and most theorems of this course say that a certain class of grammars and a certain class of automata describe exactly the same family of languages. The theory underlies lexical and syntactic analysis in compilers ([4.2.2](/4.2.2)), and is the mathematics behind practical **regular expressions** ([4.2.11](/4.2.11)), string matching algorithms ([4.3.13](/4.3.13)), and computability theory (the **Turing machine** introduced in [4.3.1](/4.3.1)). This chapter first looks at an intuitive example of each route, then defines the basic objects of the whole course (alphabets, strings, languages, and their operations), and finally reviews the proof methods that will be used again and again.
@@ -211,7 +211,17 @@ Induction: suppose $S_1(n)$ and $S_2(n)$ hold. For $S_1(n+1)$: if $n + 1$ is eve
 
 The two statements support each other: $S_1(n+1)$ depends on $S_2(n)$, and $S_2(n+1)$ depends on $S_1(n)$. When Chapter 4 proves what language a finite automaton accepts, one such statement is written for each state, and all of them are proved by induction together.
 
-## Exercises
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Two approaches | Grammars generate languages, automata recognize them; each of the four classes of the Chomsky hierarchy has a generating model and a recognizing model |
+| Basic objects | Alphabets (Definition 1.2.1), strings and length (Definition 1.2.2), concatenation (Definition 1.2.3), prefixes and suffixes (Definition 1.2.4); $\Sigma^*$, $\Sigma^+$ (Definition 1.2.5); languages $L \subseteq \Sigma^*$ (Definition 1.2.6) |
+| Countability | $\Sigma^*$ is countable, the set of all languages is not (Theorem 1.2.1): most languages have no finite description |
+| Operations on languages | Set operations and complement; concatenation and powers (Definition 1.3.1), Kleene closure and positive closure (Definition 1.3.2), reversal; $L^+ = LL^*$, $(L^*)^* = L^*$, concatenation distributes over union but not over intersection (Property 1.3.1) |
+| Proof methods | Deduction, contrapositive, contradiction; set equality requires both inclusions; inductive definitions (Definition 1.4.1) and structural induction (Theorem 1.4.1); strong induction on string length; mutual induction (Example 1.4.3) for proving automata correct |
+
+## Questions
 
 1. Use mutual induction to prove that, over the alphabet $\{0, 1\}$, the automaton below is in state 2 after reading $w$ if and only if $w$ contains an odd number of 0s (hint: simultaneously prove "it is in state 1 if and only if $w$ contains an even number of 0s").
 

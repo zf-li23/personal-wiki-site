@@ -1,7 +1,7 @@
 ---
 title: Molecular Partition Functions and Ideal-Gas Properties
 description: Factorization of the molecular partition function into translational, rotational, vibrational, electronic and nuclear parts; thermal wavelength, rotational and vibrational characteristic temperatures, symmetry number and the correction series for the rotational partition function; internal energy, heat capacity and the Einstein function of an ideal gas; the Sackur–Tetrode equation and statistical entropy, comparison with calorimetric entropy, and residual entropy; vapor pressure from statistical entropy; standard equilibrium constants from partition functions (dissociation of I₂, H₂ + D₂ exchange).
-source_hash: 2c23a2b9504a
+source_hash: ff8d20e5cc4f
 ---
 
 The previous chapter ([6.3.10](/6.3.10)) set up the framework of statistical thermodynamics: once the energy levels of a molecule are known, we can compute the **molecular partition function** $q$, and from the system partition function $Z = q^N/N!$ all the thermodynamic functions of an ideal gas. This chapter carries the program through. The energy of a molecule can be approximately decomposed into translational, rotational, vibrational, electronic and nuclear parts, and $q$ factorizes accordingly into five factors. Each factor can be computed from the mass, moments of inertia, vibrational frequencies and electronic levels of the molecule, all of which come from spectroscopy ([5.5.5](/5.5.5#sec-5.3)). The results explain how heat capacities vary with temperature (when the equipartition theorem holds, and why vibrations are "frozen out" at ordinary temperatures), give statistical entropies that are independent of calorimetry and often more accurate, and reveal the origin of residual entropy. The last section computes standard equilibrium constants directly from partition functions. This connects the $K^\circ$ of [6.3.7](/6.3.7) with molecular structure and is the starting point of transition state theory in [6.3.16](/6.3.16).
@@ -452,10 +452,17 @@ This is the ratio of the numbers of combinations for random pairing of H and D a
 ## Questions
 
 1. Can the Sackur–Tetrode equation for a monatomic ideal gas be used to compute the translational entropy of a diatomic gas? On what factors does the molar translational entropy at the standard pressure depend?
-   Answer: Yes. Translation involves only the motion of the center of mass, so one simply takes $m$ to be the mass of the molecule. For a given $p = p^\circ$, $S^\circ_{\mathrm{m},\mathrm{t}}$ depends only on $T$ and the molecular mass $m$; the volume is already fixed by $V^\circ_{\mathrm{m}} = RT/p^\circ$ and is not an independent factor.
+
+   **Answer** Yes. Translation involves only the motion of the center of mass, so one simply takes $m$ to be the mass of the molecule. For a given $p = p^\circ$, $S^\circ_{\mathrm{m},\mathrm{t}}$ depends only on $T$ and the molecular mass $m$; the volume is already fixed by $V^\circ_{\mathrm{m}} = RT/p^\circ$ and is not an independent factor.
+
 2. Why is it unwise to compute the rotational partition function of $\ce{H2}$ as $T/(\sigma\Theta_{\mathrm{r}})$ even at ordinary temperatures?
-   Answer: $\Theta_{\mathrm{r}} = 85.3\,\mathrm{K}$, so at $298\,\mathrm{K}$ $\Theta_{\mathrm{r}}/T \approx 0.29$ and the integral approximation is in error by about $10\%$; one must use the correction series (11.5) or sum directly. At lower temperatures ortho- and parahydrogen must in addition be treated separately.
+
+   **Answer** $\Theta_{\mathrm{r}} = 85.3\,\mathrm{K}$, so at $298\,\mathrm{K}$ $\Theta_{\mathrm{r}}/T \approx 0.29$ and the integral approximation is in error by about $10\%$; one must use the correction series (11.5) or sum directly. At lower temperatures ortho- and parahydrogen must in addition be treated separately.
+
 3. Does the choice of the zero of energy affect the $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ of a reaction computed from partition functions?
-   Answer: Not as long as the energies of all species are measured from the same zero. If each species' $q^{(0)}$ is computed with its own ground state as the zero, the term $\Delta_{\mathrm{r}}U_0$ must be added, otherwise the result is meaningless.
+
+   **Answer** Not as long as the energies of all species are measured from the same zero. If each species' $q^{(0)}$ is computed with its own ground state as the zero, the term $\Delta_{\mathrm{r}}U_0$ must be added, otherwise the result is meaningless.
+
 4. Using the data of Example 11.7.1, explain why both raising the temperature and lowering the pressure favor the dissociation of $\ce{I2}$.
-   Answer: $\Delta_{\mathrm{r}}U_0 > 0$, and a higher temperature increases $\mathrm{e}^{-\Delta_{\mathrm{r}}U_0/(RT)}$ (an endothermic reaction, van 't Hoff equation). $\Delta\nu_{\mathrm{g}} = 1$, and lowering the pressure amounts to increasing the number of translational states accessible to each molecule, which favors the side with more molecules.
+
+   **Answer** $\Delta_{\mathrm{r}}U_0 > 0$, and a higher temperature increases $\mathrm{e}^{-\Delta_{\mathrm{r}}U_0/(RT)}$ (an endothermic reaction, van 't Hoff equation). $\Delta\nu_{\mathrm{g}} = 1$, and lowering the pressure amounts to increasing the number of translational states accessible to each molecule, which favors the side with more molecules.

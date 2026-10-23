@@ -1,7 +1,7 @@
 ---
 title: Equivalence of Regular Expressions and Finite Automata
 description: Kleene's theorem, that regular expressions and finite automata describe the same family of languages. Thompson's construction from regular expressions to ε-NFAs; Kleene's algorithm, state elimination, and the system-of-equations method (Arden's lemma) from DFAs to regular expressions; equivalence of regular grammars and finite automata; the cost of the conversions, and three implementations of regex engines (NFA simulation, DFA, backtracking).
-source_hash: f3b323935ae0
+source_hash: 617b2654c7f5
 ---
 
 Chapter 3 defined the **regular languages** algebraically: the languages denoted by **regular expressions**. Chapter 4 defined another family of languages by machines: the languages accepted by finite automata (DFAs, NFAs, or ε-NFAs, which are equivalent). This chapter proves that the two families coincide, a result called Kleene's theorem; together with the type-3 grammars of Chapter 2, the regular languages thus have three equivalent descriptions: algebraic, machine, and grammatical. Both directions of the proof are constructive: starting from a regular expression, we can assemble an ε-NFA according to the structure of the expression (Thompson's construction), which is the starting point of practical regex engines; starting from a DFA, we can write down a regular expression by path iteration, state elimination, or solving equations. Finally we discuss the cost of these conversions and how they determine the matching algorithms of practical regular expressions ([4.2.11](/4.2.11)).
@@ -297,7 +297,7 @@ Each increase of $n$ by 2 roughly quadruples the time. Matching the same pattern
 - **Regular grammars**: nonterminals are states, and $A \to aB$ is the transition $A \xrightarrow{a} B$.
 - Practical engines: **NFA** simulation in $O(nm)$, lazy DFA in linear time, and backtracking, which supports extensions but takes exponential time in the worst case.
 
-## Exercises
+## Questions
 
 1. Convert $(0 + 1)^*01$ and $(ab + a)^*$ to ε-NFAs by Thompson's construction, and then to DFAs by the modified subset construction.
 2. Find a regular expression for the DFA of Example 4.1.4 (binary numbers divisible by 3) by path iteration, find one again by state elimination, and compare the results.

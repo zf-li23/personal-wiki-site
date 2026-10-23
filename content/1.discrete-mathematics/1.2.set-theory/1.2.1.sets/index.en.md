@@ -1,6 +1,6 @@
 ---
 title: Sets
-source_hash: c94c3904abd1
+source_hash: 3720c3a32814
 ---
 
 This chapter introduces the basic language of set theory: how sets are described, the relations between sets, the operations on sets and the laws they obey, and the cardinality of finite sets; it closes with a brief introduction to the ZF axioms of set theory. The relations, functions and cardinal numbers of the later chapters are all built on these notions: ordered pairs and Cartesian products give the definition of a relation, and the cardinality of finite sets is extended to arbitrary sets in Chapter 4.
@@ -453,3 +453,15 @@ $$
 $$
 (\forall m)(\forall n)(m \in \mathbb{N} \land n \in \mathbb{N} \to m < n \lor m = n \lor m > n).
 $$
+
+## Summary
+
+| Topic | Key content |
+| :-- | :-- |
+| Basic relations (Section 1.2) | Equality is determined by elements (Definition 1.2.1) and amounts to mutual inclusion (Theorem 1.2.1); the empty set is a subset of every set (Theorem 1.2.3) |
+| Operations (Section 1.3) | Union, intersection, difference, complement and symmetric difference (Definition 1.3.1), generalized unions and intersections (Definition 1.3.2), the power set $\mathcal{P}(A)$ (Definition 1.3.3); ordered pairs $\langle x, y\rangle$ and Cartesian products (Definitions 1.3.4 and 1.3.6) |
+| Properties of the operations (Section 1.5) | Set identities (Theorem 1.5.1) and properties of differences, symmetric differences, power sets and Cartesian products; transitive sets (Definition 1.5.1) can be characterized by power sets (Theorem 1.5.9) |
+| Cardinality of finite sets (Section 1.6) | $\lvert\mathcal{P}(A)\rvert = 2^{\lvert A\rvert}$ (Theorem 1.6.1), $\lvert A \times B\rvert = \lvert A\rvert \cdot \lvert B\rvert$ (Theorem 1.6.2), the inclusion–exclusion principle (Theorem 1.6.4) |
+| Axiomatic set theory (Section 1.7) | The ten ZF axioms guarantee that the usual sets exist (Theorems 1.7.1–1.7.4) and rule out a universal set (Theorem 1.7.5); the axiom of regularity gives $A \notin A$ (Theorem 1.7.6) and excludes ill-founded sets (Theorem 1.7.9); natural numbers are built from successors $A^+ = A \cup \{A\}$ (Definition 1.7.4), and $\mathbb{N}$ has the property of trichotomy (Theorem 1.7.11) |
+
+There are two basic ways to prove a set identity: show from the definitions that each side is a subset of the other, or transform one side into the other using known set identities. Venn diagrams (Section 1.4) suggest ideas but cannot replace a proof.

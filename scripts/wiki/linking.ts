@@ -410,7 +410,7 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
 }
 
 /** Unnumbered proof / solution openers are labels, not emphasis. */
-const PROOF_WORD = /^(证明|解|Proof|Solution)[:：.]?$/i;
+const PROOF_WORD = /^(证明|解|答|Proof|Solution|Answer)[:：.]?$/i;
 
 /**
  * Visit bold runs that may refer to concepts (not labels, not inside links, headings or code).

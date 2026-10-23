@@ -1,6 +1,6 @@
 ---
 title: Functions
-source_hash: 3a4fef7fb7db
+source_hash: d252c9e9800a
 ---
 
 A function is a special kind of **binary relation**: each element of the domain corresponds to exactly one element of the range. Building on the theory of relations from the previous chapter, this chapter defines functions together with injections, surjections and bijections, discusses composition and inverses of functions and the compatibility of functions, then uses the language of functions to introduce open and closed sets of real numbers, and finally passes from characteristic functions to fuzzy subsets. Bijections are the basic tool of the next chapter for comparing the sizes of sets (equinumerosity and cardinal numbers).
@@ -255,3 +255,19 @@ Indeed, when $\lambda \leq \mu_A(u)$ we have $u \in A_\lambda$ and $\min(\lambda
 **Definition 3.5.4 (Support, Core, Boundary and Normal Fuzzy Set)** Let $E$ be the universal set and $A \in F(E)$. The set $\operatorname{supp} A = \{u \mid u \in E \land \mu_A(u) > 0\}$ is called the **support** of $A$, the cut $A_1$ is called the core of $A$, and $(\operatorname{supp} A) - A_1$ is called the boundary of $A$. If $A_1 \neq \varnothing$, then $A$ is called a **normal fuzzy set**; if $A_1 = \varnothing$, then $A$ is called a subnormal fuzzy set.
 
 The elements of the core $A_1$ belong to $A$ fully, while the elements of the boundary belong to $A$ only partially.
+
+## Summary
+
+- A function is a relation whose domain is $A$ and in which each $x$ has exactly one image (Definition 3.1.1); injections, surjections and bijections (Definition 3.1.4) describe how it relates to its codomain. The axiom of choice guarantees that from any relation we can select a function with the same domain (Section 3.1).
+- Main results on composition and inverses:
+
+  | Result | Reference |
+  | :-- | :-- |
+  | Injectivity, surjectivity and bijectivity are preserved under composition | Theorem 3.2.2 |
+  | $f \circ g$ surjective $\Rightarrow$ $f$ surjective; $f \circ g$ injective $\Rightarrow$ $g$ injective | Theorem 3.2.3 |
+  | The inverse of a bijection is a bijection, $f^{-1} \circ f = I_A$, $f \circ f^{-1} = I_B$ | Theorems 3.2.5–3.2.7 |
+  | Left inverse $\Leftrightarrow$ injective, right inverse $\Leftrightarrow$ surjective (the latter uses the axiom of choice) | Theorem 3.2.8 |
+
+- Two functions are compatible if and only if their union is again a function (Theorem 3.3.1); a function compatible with an equivalence relation induces a unique function on the quotient set (Theorem 3.3.4).
+- On $\mathbb{R}$, neighborhoods are used to define limit points, closed sets and open sets (Definitions 3.4.3–3.4.7): arbitrary intersections and finite unions of closed sets are closed (Theorem 3.4.4), and arbitrary unions and finite intersections of open sets are open (Theorem 3.4.5).
+- Relaxing the values of the characteristic function $\chi_A$ (Definition 3.1.10) from $\{0, 1\}$ to $[0, 1]$ gives the membership function of a fuzzy subset (Definition 3.5.1); the decomposition theorem (Theorem 3.5.4) shows that a fuzzy subset is determined by all of its cuts.

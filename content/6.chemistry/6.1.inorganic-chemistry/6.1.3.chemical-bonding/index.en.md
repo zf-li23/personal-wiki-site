@@ -1,6 +1,6 @@
 ---
 title: Chemical Bonding and Molecular Structure
-source_hash: 2c5ed20a89dd
+source_hash: 744ee70cb10e
 ---
 
 What holds atoms together in molecules and crystals, and what shape the resulting molecules have, are among the central questions of chemistry. The strong interactions between adjacent atoms (or ions) in a molecule or crystal are called *chemical bonds*, with bond energies generally in the range $100$–$800\,\mathrm{kJ\,mol^{-1}}$; the van der Waals forces and hydrogen bonds between molecules are weaker by one to two orders of magnitude and are left to the next chapter. This chapter presents several theories of chemical bonding in historical and logical order: the ionic bond theory (Kossel); the classical valence bond theory centered on the shared electron pair (Lewis); the modern valence bond theory that explains the shared pair by quantum mechanics (Heitler–London, Pauling) and its extension, hybrid orbital theory; valence shell electron pair repulsion theory, which predicts molecular geometry from electron-pair repulsion alone; and molecular orbital theory, which regards electrons as belonging to the whole molecule. Finally we discuss bond polarity and molecular polarity.
@@ -504,7 +504,18 @@ The dipole moment is the source of the orientation (Keesom) and induction (Debye
 
 ## Questions
 
-1. Why does $\ce{PCl5}$ exist while $\ce{NCl5}$ does not? (N is a second-period element whose valence shell has only the four orbitals 2s and 2p, so it can form at most 4 covalent bonds, and the N atom is too small to accommodate 5 Cl; the larger P atom can form a hypervalent molecule, in the three-center four-electron bond picture.)
-2. Why is $\ce{BF3}$ trigonal planar and $\ce{NF3}$ trigonal pyramidal? (B has 3 valence-shell electron pairs and no lone pair; N has 4 pairs including one lone pair.)
-3. Use molecular orbital theory to decide which has the stronger bond, $\ce{N2+}$ or $\ce{N2}$, and $\ce{O2+}$ or $\ce{O2}$. ($\ce{N2+}$ has lost a bonding electron from $\sigma_{2\mathrm{p}}$, with bond order 2.5 < 3, weaker than $\ce{N2}$; $\ce{O2+}$ has lost an antibonding electron, with bond order 2.5 > 2, stronger than $\ce{O2}$.)
-4. $\ce{CO2}$ and $\ce{SO2}$ are both triatomic molecules; why is one nonpolar and the other polar? (C in $\ce{CO2}$ has no lone pair and the molecule is linear, so the dipoles of the two C=O bonds cancel; S in $\ce{SO2}$ has one lone pair and the molecule is V-shaped, so they cannot cancel.)
+1. Why does $\ce{PCl5}$ exist while $\ce{NCl5}$ does not?
+
+   **Answer** N is a second-period element whose valence shell has only the four orbitals 2s and 2p, so it can form at most 4 covalent bonds, and the N atom is too small to accommodate 5 Cl; the larger P atom can form a hypervalent molecule, in the three-center four-electron bond picture.
+
+2. Why is $\ce{BF3}$ trigonal planar and $\ce{NF3}$ trigonal pyramidal?
+
+   **Answer** B has 3 valence-shell electron pairs and no lone pair; N has 4 pairs including one lone pair.
+
+3. Use molecular orbital theory to decide which has the stronger bond, $\ce{N2+}$ or $\ce{N2}$, and $\ce{O2+}$ or $\ce{O2}$.
+
+   **Answer** $\ce{N2+}$ has lost a bonding electron from $\sigma_{2\mathrm{p}}$, with bond order 2.5 < 3, weaker than $\ce{N2}$; $\ce{O2+}$ has lost an antibonding electron, with bond order 2.5 > 2, stronger than $\ce{O2}$.
+
+4. $\ce{CO2}$ and $\ce{SO2}$ are both triatomic molecules; why is one nonpolar and the other polar?
+
+   **Answer** C in $\ce{CO2}$ has no lone pair and the molecule is linear, so the dipoles of the two C=O bonds cancel; S in $\ce{SO2}$ has one lone pair and the molecule is V-shaped, so they cannot cancel.

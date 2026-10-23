@@ -1,7 +1,7 @@
 ---
 title: Maxwell's Equations and Electromagnetic Radiation
 description: The displacement current and the symmetry of the electromagnetic field; Maxwell's equations in integral form, differential form and as boundary conditions; the electromagnetic wave equation, properties of plane electromagnetic waves, energy density, the Poynting vector and Poynting's theorem, momentum and radiation pressure; radiation from an oscillating electric dipole; light as an electromagnetic wave.
-source_hash: aab28d607aab
+source_hash: c0235fdb0a60
 ---
 
 This chapter is a summary of electromagnetism. The previous nine chapters established, one by one, the electrostatic **Gauss's law** and circulation theorem ([5.3.1](/5.3.1), [5.3.2](/5.3.2)), $\boldsymbol{D}$ and $\boldsymbol{H}$ in media ([5.3.4](/5.3.4), [5.3.8](/5.3.8)), the flux and circulation theorems of the magnetic field ([5.3.6](/5.3.6)), and the law of **electromagnetic induction** ([5.3.9](/5.3.9)). In 1865 Maxwell generalized them to time-dependent situations, supplied the crucial displacement-current term, and wrote them as one complete set of equations. These equations show that a changing electric field and a changing magnetic field excite each other and can propagate as a wave, detached from charges and currents, with a speed exactly equal to the speed of light. Electricity, magnetism and light are thereby unified in a single theory. This chapter first reviews the displacement current and writes Maxwell's equations in integral and differential form (using the **divergence**, the **curl**, the **divergence theorem** and **Stokes' theorem** of [2.2.14](/2.2.14)); it then derives from them the **wave equation** ([2.5.3](/2.5.3)), discusses the properties, energy and momentum of plane electromagnetic waves, and finally discusses how an oscillating electric dipole radiates electromagnetic waves. The general concepts of a **mechanical wave** are given in [5.1.7](/5.1.7); the conclusion of this chapter, "light is an electromagnetic wave", is the starting point of wave optics ([5.4](/5.4)).
@@ -280,10 +280,17 @@ When two light waves meet in space, since Maxwell's equations are linear, the re
 ## Questions
 
 1. When a parallel-plate capacitor is being charged, the displacement current between the plates equals the conduction current in the wire. How does the magnetic field between the plates differ from that around the wire?
-   Hint: By the Ampère–Maxwell law, for circular plates the field between the plates is circumferential and, at radius $r$ smaller than the plate radius $R$, proportional to $r$; for $r>R$ it is the same as the field around the wire, $\frac{\mu_0I}{2\pi r}$.
+
+   **Answer** By the Ampère–Maxwell law, for circular plates the field between the plates is circumferential and, at radius $r$ smaller than the plate radius $R$, proportional to $r$; for $r>R$ it is the same as the field around the wire, $\frac{\mu_0I}{2\pi r}$.
+
 2. How does energy enter a capacitor while it is being charged?
-   Hint: The electric field between the plates increases along the axis, the magnetic field at the edge is circumferential, and the Poynting vector points radially from the lateral side into the capacitor; the power flowing in equals the rate of increase of the electric field energy.
+
+   **Answer** The electric field between the plates increases along the axis, the magnetic field at the edge is circumferential, and the Poynting vector points radially from the lateral side into the capacitor; the power flowing in equals the rate of increase of the electric field energy.
+
 3. Why is the antenna of a radio broadcast station raised high, while the magnetic antenna in a radio receiver (a coil wound on a magnetic rod) is very small?
-   Hint: A transmitting antenna must have dimensions comparable to the wavelength to radiate effectively; a receiving antenna only needs to pick up the magnetic field of the wave, and the high **permeability** of the magnetic rod concentrates the flux and raises the induced **electromotive force**.
+
+   **Answer** A transmitting antenna must have dimensions comparable to the wavelength to radiate effectively; a receiving antenna only needs to pick up the magnetic field of the wave, and the high **permeability** of the magnetic rod concentrates the flux and raises the induced **electromotive force**.
+
 4. Why do neither a charge at rest nor a charge in uniform motion radiate electromagnetic waves?
-   Hint: The radiation field is proportional to the acceleration. In its rest frame a charge in uniform motion has only an electrostatic field, and there is no outward flow of energy.
+
+   **Answer** The radiation field is proportional to the acceleration. In its rest frame a charge in uniform motion has only an electrostatic field, and there is no outward flow of energy.

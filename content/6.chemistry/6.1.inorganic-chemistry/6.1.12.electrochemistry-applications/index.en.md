@@ -1,6 +1,6 @@
 ---
 title: Applications of Electrode Potentials and Electrochemistry
-source_hash: 02e7b452655f
+source_hash: 70b0a53c976d
 ---
 
 [6.1.11](/6.1.11) established the concept of the electrode potential and obtained from thermodynamics $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$ and the **Nernst equation**. In this chapter we use these two relations to solve practical problems in chemistry: comparing the strengths of oxidizing and reducing agents, calculating equilibrium constants of redox reactions, finding solubility products from electromotive forces, and deciding the direction and extent of reactions (12.1). We then plot the standard electrode potentials among the oxidation states of an element as a Latimer diagram and a Frost diagram, from which one can see at a glance which oxidation states are stable and which disproportionate (12.2), and plot electrode potential against pH on the same diagram to decide whether a substance can exist stably in water (12.3). Finally we discuss two technological directions of electrochemistry: electrolysis, in which electrical energy drives nonspontaneous reactions (12.4), and electrochemical power sources, which store chemical energy and convert it to electrical energy on demand (12.5). Latimer and Frost diagrams are the main tools of the descriptive chemistry of the elements in [6.1.13](/6.1.13)–[6.1.15](/6.1.15). The theory of electrode kinetics and overpotential, and corrosion and its prevention, are found in [Physical Chemistry](/6.3); redox titration and potentiometric analysis are found in [Analytical Chemistry](/6.4).
@@ -385,12 +385,12 @@ Batteries containing cadmium or mercury have been restricted or phased out by re
 
 1. Why can the $E^\circ$ values of adjacent couples in a Latimer diagram not simply be added to obtain the $E^\circ$ of a nonadjacent couple?
 
-   Answer: $E^\circ$ is an intensive quantity; what can be added is $zE^\circ$, which is proportional to $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, and the sum is then divided by the total number of electrons.
+   **Answer** $E^\circ$ is an intensive quantity; what can be added is $zE^\circ$, which is proportional to $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, and the sum is then divided by the total number of electrons.
 
 2. Use the Frost diagram of manganese to explain why $\ce{KMnO4}$ is reduced to $\ce{Mn^2+}$ in acidic solution but usually only to $\ce{MnO2}$ in basic solution.
 
-   Answer: In the acidic diagram $\ce{Mn^2+}$ is the lowest point; in the basic diagram $\ce{MnO2}$ is the lowest point ($\ce{Mn(OH)2}$ is close to it), and the line from $\ce{MnO4-}$ to $\ce{MnO2}$ is already quite flat, so the driving force for reduction beyond $\ce{MnO2}$ is small.
+   **Answer** In the acidic diagram $\ce{Mn^2+}$ is the lowest point; in the basic diagram $\ce{MnO2}$ is the lowest point ($\ce{Mn(OH)2}$ is close to it), and the line from $\ce{MnO4-}$ to $\ce{MnO2}$ is already quite flat, so the driving force for reduction beyond $\ce{MnO2}$ is small.
 
 3. Why is $\ce{H2}$ rather than Na obtained at the cathode in the electrolysis of aqueous $\ce{NaCl}$?
 
-   Answer: $E^\circ(\ce{Na+}/\ce{Na}) = -2.71\,\mathrm{V}$ is far below the potential at which water is reduced (about $-0.41\,\mathrm{V}$ in neutral solution, only about $-1\,\mathrm{V}$ even with overpotential), so water is reduced preferentially. Sodium can be obtained only with a mercury cathode (Na dissolves in mercury to form an amalgam, which shifts the potential positively, and the overpotential of $\ce{H2}$ on mercury is very large) or by electrolysis of molten $\ce{NaCl}$.
+   **Answer** $E^\circ(\ce{Na+}/\ce{Na}) = -2.71\,\mathrm{V}$ is far below the potential at which water is reduced (about $-0.41\,\mathrm{V}$ in neutral solution, only about $-1\,\mathrm{V}$ even with overpotential), so water is reduced preferentially. Sodium can be obtained only with a mercury cathode (Na dissolves in mercury to form an amalgam, which shifts the potential positively, and the overpotential of $\ce{H2}$ on mercury is very large) or by electrolysis of molten $\ce{NaCl}$.

@@ -1,6 +1,6 @@
 ---
 title: Colloidal Dispersions and Macromolecular Solutions
-source_hash: d5b7c60fcd7b
+source_hash: a98d58a40462
 ---
 
 Colloids are the field of application of interface chemistry: the particles of the dispersed phase are small enough that interfacial energy is significant and Brownian motion is pronounced, yet large enough that they no longer form a true solution of dispersed molecules. Milk, blood, ink, paint, fog and smoke, cytoplasm and solutions of biological macromolecules are all colloidal dispersions. This chapter first gives the classification of dispersions and the structure of sols (21.1), and the preparation and aging of sols (21.2); it then discusses three classes of properties: kinetic properties (21.3: Brownian motion, diffusion, sedimentation and ultracentrifugation), optical properties (21.4: light scattering) and electrical properties (21.5: the electric double layer and electrokinetic phenomena); on this basis we understand why sols can be stable and how they coagulate (21.6, DLVO theory); then introduce emulsions and microemulsions (21.7) and gels (21.8); the last topic is the average molar mass, osmotic pressure, viscosity and Donnan equilibrium of macromolecular solutions (21.9). This chapter uses results from many earlier chapters: the surface tension, **Kelvin equation** and **surfactants** of [6.3.19](/6.3.19), the **Debye length** of [6.3.12](/6.3.12), the **osmotic pressure** of [6.3.5](/6.3.5), the random walk and diffusion equation of [2.5.7](/2.5.7), the **central limit theorem** of [3.1.13](/3.1.13), and the **Rayleigh scattering law** of [5.4.3](/5.4.3). Ultracentrifugation, electrophoresis, gels and the Donnan equilibrium are basic tools and concepts of biochemistry and cell biology.
@@ -540,13 +540,16 @@ The Donnan equilibrium is important in physiology. Cells contain large amounts o
 
 1. Why is the sky blue on a clear day and a cloud white? Explain with the optical properties of sols.
 
-   Atmospheric molecules and fine aerosol particles are much smaller than the wavelength of light, the scattering obeys Rayleigh's law, and blue light is scattered most strongly; the water droplets in a cloud have diameters of about $10\,\mu\mathrm{m}$, far larger than the wavelength, and scatter all wavelengths about equally, so a cloud is white.
+   **Answer** Atmospheric molecules and fine aerosol particles are much smaller than the wavelength of light, the scattering obeys Rayleigh's law, and blue light is scattered most strongly; the water droplets in a cloud have diameters of about $10\,\mu\mathrm{m}$, far larger than the wavelength, and scatter all wavelengths about equally, so a cloud is white.
+
 2. An AgI sol is prepared from $\ce{AgNO3}$ and a slight excess of KI. To which electrode do the colloidal particles move in electrophoresis? Which of NaCl, $\ce{MgSO4}$ and $\ce{AlCl3}$ coagulates it most effectively?
 
-   With excess KI the colloidal particles adsorb $\ce{I-}$ and are negatively charged, so they move toward the anode. The ions that cause coagulation are the cations, $\ce{Al^3+}$ has the highest valence, and $\ce{AlCl3}$ is the most effective.
+   **Answer** With excess KI the colloidal particles adsorb $\ce{I-}$ and are negatively charged, so they move toward the anode. The ions that cause coagulation are the cations, $\ce{Al^3+}$ has the highest valence, and $\ce{AlCl3}$ is the most effective.
+
 3. Does the electrophoretic mobility of a protein in free solution depend on molecular size? Why must DNA be electrophoresed in a gel to be separated by size?
 
-   It does: the mobility of a protein depends on charge and hydrodynamic radius, both of which vary from protein to protein. Both the charge and the friction coefficient of DNA are proportional to chain length, so in free solution the mobility is almost independent of length, and separation by size is possible only in a gel, through the sieving action of the network.
+   **Answer** It does: the mobility of a protein depends on charge and hydrodynamic radius, both of which vary from protein to protein. Both the charge and the friction coefficient of DNA are proportional to chain length, so in free solution the mobility is almost independent of length, and separation by size is possible only in a gel, through the sieving action of the network.
+
 4. When the molar mass of a protein is determined by osmotic pressure, why is the measurement made near the isoelectric point and with a fairly concentrated salt solution outside the membrane?
 
-   Near the isoelectric point the net charge of the protein is close to zero and $z$ is small; adding a large amount of salt so that $c_1 \gg zc_2$ suppresses the Donnan effect, the osmotic pressure tends to $c_2RT$, and the molar mass calculated from it is then the true one.
+   **Answer** Near the isoelectric point the net charge of the protein is close to zero and $z$ is small; adding a large amount of salt so that $c_1 \gg zc_2$ suppresses the Donnan effect, the osmotic pressure tends to $c_2RT$, and the molar mass calculated from it is then the true one.

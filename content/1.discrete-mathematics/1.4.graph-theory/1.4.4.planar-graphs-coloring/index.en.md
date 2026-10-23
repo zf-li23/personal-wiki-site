@@ -1,6 +1,6 @@
 ---
 title: Planar Graphs and Graph Coloring
-source_hash: ef436d4fef10
+source_hash: ff3f7f78140a
 ---
 
 Problems such as wiring printed circuit boards and drawing maps require a graph to be drawn in the plane without crossing edges; this is the problem of planar graphs. In this chapter we first introduce planar graphs, faces and Euler's formula, and derive from it an upper bound on the number of edges of a planar graph. We then present the two basic nonplanar graphs $K_5$ and $K_{3,3}$, Kuratowski's theorem characterizing planar graphs, and the ideas behind planarity testing. Finally we discuss dual graphs and, starting from map coloring, the coloring of graphs: the five color theorem, bounds on the chromatic number, and the chromatic polynomial.
@@ -272,9 +272,25 @@ $$
 
 This recursion follows the same idea as Theorem 4.6.4: the colorings of $G$ split into two classes according to whether $v_i, v_j$ receive different colors or the same color, corresponding to the colorings of $\overline{G_{ij}}$ and of $G_{ij}$ respectively. Applying it repeatedly eventually expresses $f(G, t)$ as a sum of chromatic polynomials of complete graphs.
 
-### 4.6.6. Summary
+## Summary
 
-- The chromatic number is the minimum number of colors needed for adjacent vertices to receive different colors; for common graphs it can be written down directly.
-- Upper bounds on the chromatic number: $\gamma(G) \le d_0 + 1$, and the sharper bound $1 + \max \delta(G')$.
-- The chromatic number can be computed recursively by adding edges and merging vertices.
-- The chromatic polynomial $f(G, t)$ counts the colorings with $t$ colors and satisfies the same recursion.
+- Basic relations for planar graphs:
+
+  | Result | Statement | Use |
+  | :-- | :-- | :-- |
+  | Euler's formula (Theorem 4.1.1) | $n - m + d = 2$ for a connected plane graph; $n - m + d = k + 1$ with $k$ components (Corollary 4.1.1) | The basic relation among vertices, edges and faces |
+  | Bound on edges (Theorem 4.1.2) | $m \le \frac{t(n-2)}{t-2}$ if there is no cut edge and every face has boundary length $\ge t$ | Bipartite graphs allow $t = 4$; the same argument shows that $K_{3,3}$ is nonplanar (Theorem 4.3.2) |
+  | Maximal planar graphs (Theorem 4.2.1) | $m = 3n - 6$, $d = 2n - 4$; $m \le 3n - 6$ for every simple planar graph (Corollary 4.2.1) | A necessary condition for planarity, ruling out $K_5$ and $K_7$ (Theorem 4.3.1, Example 4.2.1) |
+  | Minimum degree (Theorem 4.2.2) | A simple planar graph has a vertex of degree less than $6$ | The induction step of the five color theorem |
+  | Kuratowski's theorem (Theorem 4.3.3) | Planar if and only if there is no $K$-type subgraph | A complete characterization of planar graphs |
+
+- Planarity testing (Section 4.4): after splitting into components, deleting loops and multiple edges, splitting at cut vertices into blocks and reducing series vertices, a graph with $m < 9$ or $n < 5$ is planar and one with $m > 3n - 6$ is nonplanar; the remaining cases are handled by the DMP algorithm, which embeds the graph step by step.
+- Dual graphs: every plane graph has a dual (Property 4.5.1), with $m = m^*$, $d = n^*$, $n = d^*$ (Property 4.5.4); cycles of $G$ correspond to cut sets of $G^*$ (Property 4.5.5). Coloring the faces of a map thus becomes coloring the vertices of the dual graph, and the five color theorem (Theorem 4.5.2) states that every loopless planar graph is $5$-colorable.
+- Coloring:
+
+  | Result | Statement |
+  | :-- | :-- |
+  | Two-colorable graphs (Theorem 4.6.1) | $\gamma(G) = 2$ if and only if $G$ has an edge and no odd cycle |
+  | Upper bounds (Theorems 4.6.2 and 4.6.3) | $\gamma(G) \le d_0 + 1$, and the sharper $\gamma(G) \le 1 + \max_{G'} \delta(G')$ |
+  | Recursive computation (Theorem 4.6.4) | $\gamma(G) = \min\{\gamma(\overline{G_{ij}}), \gamma(G_{ij})\}$: add an edge between, or merge, two nonadjacent vertices |
+  | Chromatic polynomial (Definition 4.6.4, Theorem 4.6.7) | $f(G, t) = f(\overline{G_{ij}}, t) + f(G_{ij}, t)$, eventually a sum of chromatic polynomials of complete graphs; $\gamma(G)$ is the least positive integer $t$ with $f(G, t) > 0$ |

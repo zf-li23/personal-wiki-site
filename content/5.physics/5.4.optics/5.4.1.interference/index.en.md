@@ -1,7 +1,7 @@
 ---
 title: Interference of Light
 description: The branches of optics and the debate over the nature of light; Young's double-slit interference, coherent light and fringe visibility, temporal and spatial coherence, optical path length, fringes of equal thickness (wedge, Newton's rings) and of equal inclination, anti-reflection coatings, and the Michelson interferometer.
-source_hash: 6b7373139e09
+source_hash: 029734f46965
 ---
 
 Optics studies the production and propagation of light and its interaction with matter. It is usually divided into three parts. Geometrical optics rests on the rectilinear propagation of light, reflection and the **law of refraction**, and treats imaging instruments. Wave optics studies the wave nature of light: interference, **diffraction** and polarization. Quantum optics builds on the quantum theory of light and studies how light interacts with matter. The nature of light was debated for a long time from the seventeenth century on. Newton favored the corpuscular theory, explaining reflection and refraction by forces acting on light particles and deriving that light travels faster in water than in air. In his *Treatise on Light* of 1690, Huygens proposed the wave theory and explained reflection and refraction with a construction of secondary wavelets (**Huygens' principle**), concluding that light travels more slowly in water. Grimaldi observed diffraction in the middle of the seventeenth century (his book appeared in 1665), and in 1676 Rømer inferred from the timing of the eclipses of Jupiter's moons that the speed of light is finite. In the early nineteenth century Young demonstrated the interference of light with his double-slit (double-pinhole) experiment, and Fresnel combined the principle of interference with the wavelet construction to explain diffraction quantitatively. In 1818 Poisson deduced from Fresnel's theory that a bright spot should appear at the center of the shadow of a circular disk, and Arago promptly observed it. In 1850 Foucault measured a lower speed of light in water than in air, which settled the debate. In 1865 Maxwell predicted **electromagnetic waves** from his electromagnetic theory, computed that their speed equals the speed of light, and concluded that light is an **electromagnetic wave**; Hertz produced such waves experimentally in 1887–1888. At the beginning of the twentieth century, blackbody radiation and the photoelectric effect revealed the particle nature of light ([5.5.1](/5.5.1)): light has both wave and particle aspects.
@@ -506,10 +506,30 @@ To analyze an interference problem, first identify which two beams interfere; th
 
 ## Questions
 
-1. A thin lens is cut in two along a line through its center, and the two halves are displaced by a small distance $h$ perpendicular to the cut (a Billet split lens). A point source $S$ is placed at $2f$ in front of the lens, and the screen is at $10f$ behind it. Are interference fringes seen on the screen? What is the fringe spacing? Hint: each half-lens images $S$ at $2f$ behind the lens with magnification $-1$; the two real images are $2h$ apart and are two coherent point sources, equivalent to a double slit with slit separation $d=2h$ and slit-to-screen distance $D=8f$, so $\Delta x=4f\lambda/h$.
-2. In double-slit interference, how do the fringes change when the slit separation $d$ increases? What if the source $S$ is moved down perpendicular to the axis? Hint: as $d$ increases the fringes become denser; when the source moves down, the zeroth-order bright fringe (where the optical path difference is zero) moves up and the whole set of fringes shifts upward with unchanged spacing.
-3. When a soap bubble is blown, colors first appear on it, then change continually everywhere as the bubble expands, and finally it turns black and immediately bursts. Explain. Hint: as the bubble expands the film gets thinner, and the wavelengths satisfying the constructive condition change accordingly; when the film thickness is much smaller than the wavelength, $\delta\approx\lambda/2$ (only the reflection from the outer surface has a half-wave loss), all wavelengths cancel and the film appears black; the film is by then extremely thin and bursts soon.
-4. In double-slit interference, a thin mica sheet is placed over one slit. Do the fringe spacing and the position of the central fringe change? Hint: the spacing is unchanged and the central bright fringe moves toward the side with the mica (Example 1.5.1).
-5. Why is the edge of an air wedge dark? How can one tell on which side the edge lies? Hint: at the edge $e=0$, only the $\lambda/2$ from the half-wave loss remains, and the two reflected beams cancel. Raise the upper plate slightly in parallel: the thickness increases everywhere and the fringes move toward the edge as a whole. Alternatively, use white light: the edge is dark, outside it are colored fringes whose colors fade at higher orders, and the side where the fringes are sharper is nearer the edge.
-6. Observe Newton's rings and fringes of equal inclination with the same monochromatic light. Both are concentric rings; how do they differ? Hint: Newton's rings have the lowest order at the center, are fringes of equal thickness and are localized at the film surface; fringes of equal inclination have the highest order at the center and are localized at infinity; both are sparse inside and dense outside.
-7. Can fringes still be seen in a Michelson interferometer without the compensating plate, with monochromatic light? With white light? Hint: with monochromatic light they can still be seen, only the position of zero optical path difference shifts; glass has **dispersion**, so the extra optical path difference differs for different wavelengths, and without the compensating plate the zeroth-order fringes of different wavelengths do not coincide, so white-light fringes are not seen.
+1. A thin lens is cut in two along a line through its center, and the two halves are displaced by a small distance $h$ perpendicular to the cut (a Billet split lens). A point source $S$ is placed at $2f$ in front of the lens, and the screen is at $10f$ behind it. Are interference fringes seen on the screen? What is the fringe spacing?
+
+   **Answer** each half-lens images $S$ at $2f$ behind the lens with magnification $-1$; the two real images are $2h$ apart and are two coherent point sources, equivalent to a double slit with slit separation $d=2h$ and slit-to-screen distance $D=8f$, so $\Delta x=4f\lambda/h$.
+
+2. In double-slit interference, how do the fringes change when the slit separation $d$ increases? What if the source $S$ is moved down perpendicular to the axis?
+
+   **Answer** as $d$ increases the fringes become denser; when the source moves down, the zeroth-order bright fringe (where the optical path difference is zero) moves up and the whole set of fringes shifts upward with unchanged spacing.
+
+3. When a soap bubble is blown, colors first appear on it, then change continually everywhere as the bubble expands, and finally it turns black and immediately bursts. Explain.
+
+   **Answer** as the bubble expands the film gets thinner, and the wavelengths satisfying the constructive condition change accordingly; when the film thickness is much smaller than the wavelength, $\delta\approx\lambda/2$ (only the reflection from the outer surface has a half-wave loss), all wavelengths cancel and the film appears black; the film is by then extremely thin and bursts soon.
+
+4. In double-slit interference, a thin mica sheet is placed over one slit. Do the fringe spacing and the position of the central fringe change?
+
+   **Answer** the spacing is unchanged and the central bright fringe moves toward the side with the mica (Example 1.5.1).
+
+5. Why is the edge of an air wedge dark? How can one tell on which side the edge lies?
+
+   **Answer** at the edge $e=0$, only the $\lambda/2$ from the half-wave loss remains, and the two reflected beams cancel. Raise the upper plate slightly in parallel: the thickness increases everywhere and the fringes move toward the edge as a whole. Alternatively, use white light: the edge is dark, outside it are colored fringes whose colors fade at higher orders, and the side where the fringes are sharper is nearer the edge.
+
+6. Observe Newton's rings and fringes of equal inclination with the same monochromatic light. Both are concentric rings; how do they differ?
+
+   **Answer** Newton's rings have the lowest order at the center, are fringes of equal thickness and are localized at the film surface; fringes of equal inclination have the highest order at the center and are localized at infinity; both are sparse inside and dense outside.
+
+7. Can fringes still be seen in a Michelson interferometer without the compensating plate, with monochromatic light? With white light?
+
+   **Answer** with monochromatic light they can still be seen, only the position of zero optical path difference shifts; glass has **dispersion**, so the extra optical path difference differs for different wavelengths, and without the compensating plate the zeroth-order fringes of different wavelengths do not coincide, so white-light fringes are not seen.

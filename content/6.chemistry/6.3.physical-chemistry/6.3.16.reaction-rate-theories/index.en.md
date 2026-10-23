@@ -1,6 +1,6 @@
 ---
 title: Theories of Reaction Rates
-source_hash: e4639c005abc
+source_hash: 9ef37e4b498f
 ---
 
 [6.3.15](/6.3.15) treated rate constants as parameters determined by experiment. A theory of reaction rates must answer the question whether rate constants can be calculated from the properties of molecules (size, mass, structure, interaction potential energy). A satisfactory theory must at least yield the **law of mass action** and the **Arrhenius equation**, and explain the physical meaning of the activation energy and of the **pre-exponential factor**. [6.1.7](/6.1.7#sec-7.2) gave qualitative pictures of **collision theory** and **transition state theory**; this chapter makes them quantitative.
@@ -335,15 +335,6 @@ In a direct reaction the collision time is shorter than the rotational period (a
 
 These experiments gave the connection between the dynamics of reactions and the shape of the potential energy surface, known as the *Polanyi rules*: for an exothermic reaction whose barrier lies on the reactant side (an early barrier), translational energy is more effective in crossing the barrier and the energy released appears mostly as vibrational energy of the products (which can therefore be used in chemical lasers); when the barrier lies on the product side (a late barrier), the vibrational energy of the reactants is more effective. Herschbach, Y. T. Lee (crossed molecular beams) and Polanyi (infrared chemiluminescence) received the 1986 Nobel Prize in Chemistry for this work; Zewail used femtosecond lasers to observe directly the breaking of chemical bonds and the motion in the region of the transition state (femtochemistry), for which he received the 1999 Nobel Prize in Chemistry.
 
-## Questions
-
-1. Why is the fraction of effective collisions in collision theory $\mathrm{e}^{-E_{\mathrm{c}}/RT}$, and not the fraction of molecular pairs whose relative translational energy exceeds $E_{\mathrm{c}}$?
-   Answer: See 16.1.3: flux weighting and the energy dependence of the reaction cross section together give exactly the Boltzmann factor.
-2. What is the physical meaning of $k_{\mathrm{B}}T/h$ in the rate constant of transition state theory? Why is it independent of the kind of molecule?
-   Answer: It is the frequency scale at which the activated complex crosses the saddle point along the reaction coordinate; in the derivation the frequency (or mass) of the reaction coordinate cancels exactly.
-3. A unimolecular reaction becomes second order at low pressure. Does this mean that it has become a bimolecular reaction?
-   Answer: No. The rate-determining step changes from the decomposition to the activating collision, the latter being bimolecular; the decomposition step is always unimolecular.
-
 ## Summary
 
 | Topic | Key points |
@@ -356,3 +347,17 @@ These experiments gave the connection between the dynamics of reactions and the 
 | Thermodynamic form | $k = \frac{k_{\mathrm{B}}T}{h}(c^\circ)^{1-n}\mathrm{e}^{\Delta^{\ddagger}S^\circ/R}\mathrm{e}^{-\Delta^{\ddagger}H^\circ/RT}$; $E_{\mathrm{a}} = \Delta^{\ddagger}H^\circ + RT$ (condensed phase), $+nRT$ (gas phase) |
 | Unimolecular reactions | Lindemann: $k_{\mathrm{uni}} = \frac{k_1k_2[\ce{M}]}{k_{-1}[\ce{M}] + k_2}$, first order at high pressure and second order at low pressure; RRKM accounts for the distribution of energy among vibrational modes |
 | Molecular reaction dynamics | State-to-state reactions; crossed molecular beams (stripping, rebound, complex), infrared chemiluminescence, laser-induced fluorescence |
+
+## Questions
+
+1. Why is the fraction of effective collisions in collision theory $\mathrm{e}^{-E_{\mathrm{c}}/RT}$, and not the fraction of molecular pairs whose relative translational energy exceeds $E_{\mathrm{c}}$?
+
+   **Answer** See 16.1.3: flux weighting and the energy dependence of the reaction cross section together give exactly the Boltzmann factor.
+
+2. What is the physical meaning of $k_{\mathrm{B}}T/h$ in the rate constant of transition state theory? Why is it independent of the kind of molecule?
+
+   **Answer** It is the frequency scale at which the activated complex crosses the saddle point along the reaction coordinate; in the derivation the frequency (or mass) of the reaction coordinate cancels exactly.
+
+3. A unimolecular reaction becomes second order at low pressure. Does this mean that it has become a bimolecular reaction?
+
+   **Answer** No. The rate-determining step changes from the decomposition to the activating collision, the latter being bimolecular; the decomposition step is always unimolecular.

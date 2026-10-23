@@ -250,7 +250,7 @@ $$
 
 于是 $\operatorname{SE}(3)$ 是 $\operatorname{GL}(4, \mathbb{R})$ 的矩阵李群，其李代数由 $\begin{pmatrix} \hat{\omega} & \boldsymbol{v} \\ \boldsymbol{0}^{\mathsf{T}} & 0 \end{pmatrix}$（$\boldsymbol{\omega}, \boldsymbol{v} \in \mathbb{R}^3$）构成，维数为 $6$，对应刚体的 $3$ 个转动自由度和 $3$ 个平动自由度。分子对接要在 $\operatorname{SE}(3)$ 中搜索配体相对受体的位姿；AlphaFold2 等蛋白质结构模型把每个残基的主链表示为一个局部坐标系，也就是 $\operatorname{SE}(3)$ 的一个元素。
 
-## 本章小结
+## 小结
 
 | 主题 | 核心概念 |
 |------|----------|

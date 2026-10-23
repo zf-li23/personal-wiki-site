@@ -1,6 +1,6 @@
 ---
 title: Rate Laws and Composite Reactions
-source_hash: 96313d99f2a7
+source_hash: 2fd3df555a5e
 ---
 
 [6.1.7](/6.1.7) gave the framework of chemical kinetics: the **rate of reaction**, the **rate law**, the **elementary reaction** and the **reaction mechanism**, the integrated forms for first- and second-order reactions, the **Arrhenius equation** and the **pre-equilibrium approximation**. This chapter makes that framework systematic and quantitative. A reaction mechanism is a set of ordinary differential equations for the concentrations of the species, and the "phenomenological" part of chemical kinetics comes down to solving, or approximately solving, these equations ([2.4](/2.4)). The integrated forms for simple reactions of integer order (15.2) and the determination of the order from experimental data (15.3) are the simplest cases. The three typical kinds of composite reactions, opposing, parallel and consecutive (15.4), lead to linear systems that can be treated uniformly with the **matrix exponential**. The influence of temperature and the **principle of microscopic reversibility** (15.5) connect kinetics with the chemical equilibrium of [6.3.7](/6.3.7). When the equations are nonlinear and have no analytical solution, the rate-determining step, the **steady-state approximation** and the pre-equilibrium approximation (15.6) use the disparity of time scales to eliminate intermediates; these are the main tools of mechanism derivation (15.7 chain reactions, 15.8 proposing a mechanism). Finally, the relaxation methods for fast reactions (15.9) are a direct application of linearization near the equilibrium point.
@@ -641,17 +641,6 @@ Flash photolysis was developed by Norrish and Porter in 1949; Eigen (relaxation 
 | Temperature jump, pressure jump | $10^{-8}$–$1\,\mathrm{s}$ | Relaxation observed after perturbing equilibrium |
 | Flash photolysis | $10^{-12}$–$10^{-3}\,\mathrm{s}$ (down to $10^{-14}\,\mathrm{s}$ with lasers) | Light pulse produces transient species |
 
-## Questions
-
-1. For the 2-2 order parallel reactions $\ce{A ->[k_1] B}$ and $\ce{A ->[k_2] C}$ (both second order in A) with $E_{\mathrm{a},1} > E_{\mathrm{a},2}$, starting from pure A, which of the following measures can change the ratio of the products B and C? (1) raising the temperature; (2) prolonging the reaction time; (3) adding a suitable catalyst; (4) lowering the temperature; (5) raising the initial concentration of A.
-   Answer: (1), (3) and (4). The two reactions have the same order, $[\ce{B}]/[\ce{C}] = k_1/k_2$ depends only on temperature and catalyst, and time and initial concentration do not change this ratio.
-2. For a given reaction, can adding a catalyst change the order of reaction?
-   Answer: It can. The catalyst changes the mechanism, the rate law may be entirely different, and the catalyst itself often appears in the rate law ($\ce{Br-}$ in 15.8.3).
-3. Why is the rate of a chain reaction sensitive to the shape and wall material of the vessel?
-   Answer: Chain carriers can be deactivated at the wall, and the rate of termination at the wall depends on the specific surface area and the nature of the wall; for branched-chain reactions the first explosion limit is determined by termination at the wall.
-4. Does a negative apparent activation energy of a reaction contradict the statement that "the activation energy is an energy barrier"?
-   Answer: It does not. The activation energy of an elementary reaction is positive; the apparent activation energy is the algebraic sum of the activation energies of the steps and can be negative when the pre-equilibrium is exothermic (15.5.4).
-
 ## Summary
 
 | Topic | Key points |
@@ -668,3 +657,21 @@ Flash photolysis was developed by Norrish and Porter in 1949; Eigen (relaxation 
 | Chain reactions | Initiation, propagation, termination; in a straight-chain steady state initiation = termination; in $\ce{H2 + Br2}$ the inhibition by HBr comes from the competition of $\ce{H + HBr}$ and $\ce{H + Br2}$ |
 | Branching and explosion | $\dot n = w_0 + (f - g)n$; three explosion limits; thermal explosion |
 | Fast reactions | Stopped flow; relaxation $1/\tau = k_1 + k_{-1}$ (linearized); flash photolysis |
+
+## Questions
+
+1. For the 2-2 order parallel reactions $\ce{A ->[k_1] B}$ and $\ce{A ->[k_2] C}$ (both second order in A) with $E_{\mathrm{a},1} > E_{\mathrm{a},2}$, starting from pure A, which of the following measures can change the ratio of the products B and C? (1) raising the temperature; (2) prolonging the reaction time; (3) adding a suitable catalyst; (4) lowering the temperature; (5) raising the initial concentration of A.
+
+   **Answer** (1), (3) and (4). The two reactions have the same order, $[\ce{B}]/[\ce{C}] = k_1/k_2$ depends only on temperature and catalyst, and time and initial concentration do not change this ratio.
+
+2. For a given reaction, can adding a catalyst change the order of reaction?
+
+   **Answer** It can. The catalyst changes the mechanism, the rate law may be entirely different, and the catalyst itself often appears in the rate law ($\ce{Br-}$ in 15.8.3).
+
+3. Why is the rate of a chain reaction sensitive to the shape and wall material of the vessel?
+
+   **Answer** Chain carriers can be deactivated at the wall, and the rate of termination at the wall depends on the specific surface area and the nature of the wall; for branched-chain reactions the first explosion limit is determined by termination at the wall.
+
+4. Does a negative apparent activation energy of a reaction contradict the statement that "the activation energy is an energy barrier"?
+
+   **Answer** It does not. The activation energy of an elementary reaction is positive; the apparent activation energy is the algebraic sum of the activation energies of the steps and can be negative when the pre-equilibrium is exothermic (15.5.4).

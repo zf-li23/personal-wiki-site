@@ -400,13 +400,6 @@ $$
 $$
 第一激发态有 4 个轨道状态而基态只有 1 个（不计自旋），能级的总布居还要乘以简并度之比 4，结论不变：室温下处于激发态的原子微乎其微，几乎全部处于基态。要使激发态的原子数多于基态（粒子数反转，激光的条件），必须用外界的能量把系统推离平衡态。
 
-## 思考题
-
-1. 温度一定时，分子质量 $m_2 > m_1$ 的两种气体的 Maxwell 速率分布曲线有什么不同？
-   提示：$v_{\mathrm{p}} \propto 1/\sqrt{m}$，峰左移；$f(v_{\mathrm{p}}) \propto \sqrt{m}$，峰变高；曲线下的面积都是 1。
-2. 室温下空气中 $\ce{N2}$ 与 $\ce{O2}$ 分子的平均平动动能哪个大？方均根速率呢？
-   提示：平均平动动能只由温度决定，两者相同；$v_{\mathrm{rms}} \propto 1/\sqrt{M}$，$\ce{N2}$ 的稍大。
-
 ## 小结
 
 | 内容 | 结论 |
@@ -419,3 +412,13 @@ $$
 | 特征速率 | $v_{\mathrm{p}} = \sqrt{2k_{\mathrm{B}}T/m}$，$\bar v = \sqrt{8k_{\mathrm{B}}T/(\pi m)}$，$v_{\mathrm{rms}} = \sqrt{3k_{\mathrm{B}}T/m}$ |
 | 碰壁数 | $\Gamma = \frac{1}{4}n_V\bar v$ |
 | Boltzmann 分布 | $\mathrm{d}N_{\boldsymbol{r}} = n_0\mathrm{e}^{-\varepsilon_{\mathrm{p}}/(k_{\mathrm{B}}T)}\mathrm{d}^3r$；恒温气压公式 $p = p_0\mathrm{e}^{-Mgz/(RT)}$ |
+
+## 思考题
+
+1. 温度一定时，分子质量 $m_2 > m_1$ 的两种气体的 Maxwell 速率分布曲线有什么不同？
+
+   **答** $v_{\mathrm{p}} \propto 1/\sqrt{m}$，峰左移；$f(v_{\mathrm{p}}) \propto \sqrt{m}$，峰变高；曲线下的面积都是 1。
+
+2. 室温下空气中 $\ce{N2}$ 与 $\ce{O2}$ 分子的平均平动动能哪个大？方均根速率呢？
+
+   **答** 平均平动动能只由温度决定，两者相同；$v_{\mathrm{rms}} \propto 1/\sqrt{M}$，$\ce{N2}$ 的稍大。

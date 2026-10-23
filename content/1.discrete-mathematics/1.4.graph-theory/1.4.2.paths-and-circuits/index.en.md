@@ -1,6 +1,6 @@
 ---
 title: Paths and Cycles
-source_hash: "240322952817"
+source_hash: 0f250b5abca0
 ---
 
 Walks, paths and cycles are the most basic structures in graph theory. In this chapter we first define walks, closed walks and connectivity in directed and undirected graphs, and present matrix methods and search methods for deciding whether a walk exists. We then discuss two classical traversal problems and the conditions under which they can be solved: Eulerian circuits, which traverse every edge, and Hamiltonian cycles, which visit every vertex. Finally we turn to optimization problems involving paths: the traveling salesman problem, shortest paths, critical paths and the Chinese postman problem.
@@ -374,3 +374,17 @@ A PERT graph (program evaluation and review technique) is the reverse of a PT gr
 ## 2.8. The Chinese Postman Problem
 
 The *Chinese postman problem* was posed by the Chinese mathematician Guan Meigu: a postman leaves the post office, walks along every street in his district at least once and returns to the post office; how should he choose his route to minimize the total distance? In a connected weighted undirected graph, this asks for a shortest closed walk that traverses every edge at least once. If every vertex has even degree, any Eulerian circuit is optimal. Otherwise some edges must be traversed more than once: the problem reduces to pairing up the odd vertices and adding duplicate edges along shortest paths between paired vertices so that the total added length is minimal, and then finding an Eulerian circuit in the new graph. The problem thus combines Eulerian circuits with shortest paths.
+
+## Summary
+
+| Problem | Criterion or algorithm | Result and complexity |
+| :-- | :-- | :-- |
+| Is there a walk between two vertices? | Powers of the adjacency matrix, Warshall's algorithm (Algorithm 2.2.1), BFS / DFS | Warshall's algorithm yields the reachability matrix (Theorem 2.2.1) in $O(n^3)$ |
+| Eulerian circuit | Connected with all degrees even (Theorem 2.3.1); exactly two odd vertices give an Eulerian trail (Corollary 2.3.1); in a digraph every in-degree must equal the out-degree (Corollary 2.3.2) | Necessary and sufficient, easy to check |
+| Hamiltonian path and cycle | Degree sums $\ge n-1$ give a Hamiltonian path (Theorem 2.4.1); degree sums $\ge n$ or minimum degree $\ge n/2$ give a Hamiltonian cycle (Corollaries 2.4.1 and 2.4.2); $G$ has a Hamiltonian cycle if and only if its Hamiltonian closure $C(G)$ does (Theorem 2.4.2) | No simple necessary and sufficient condition; mainly sufficient conditions are used |
+| Traveling salesman problem | Branch and bound; under the triangle inequality, the cheapest-insertion algorithm (Algorithm 2.5.1) | NP-hard; cheapest insertion has approximation ratio below 2 (Theorem 2.5.1) |
+| Single-source shortest paths | Positive weights: Dijkstra's algorithm (Algorithm 2.6.1); unit weights: BFS; arbitrary real weights without negative cycles: Ford's algorithm (Algorithm 2.6.2) | $O(n^2)$, $O(n+m)$, $O(nm)$ |
+| Critical path | Topological sort, then the longest-path recurrence (Algorithm 2.7.1) | $O(n+m)$; tasks with zero slack are the critical tasks |
+| Chinese postman problem | Pair up the odd vertices, duplicate edges along shortest paths, then find an Eulerian circuit (Section 2.8) | Combines Eulerian circuits with shortest paths |
+
+The Eulerian and Hamiltonian problems look alike but differ sharply in difficulty: the former depends only on vertex degrees and has a simple necessary and sufficient condition; the latter still has no simple one.

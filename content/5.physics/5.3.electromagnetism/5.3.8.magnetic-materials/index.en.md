@@ -1,7 +1,7 @@
 ---
 title: Magnetic Materials in Magnetic Fields
 description: Paramagnetic, diamagnetic and ferromagnetic substances; orbital, spin and nuclear magnetic moments, Larmor precession and diamagnetism; magnetization and magnetization current; the magnetic field strength H, its circulation theorem, boundary conditions and magnetic shielding; magnetic domains, magnetization curves, hysteresis loops and the Curie temperature; simple magnetic circuits.
-source_hash: 35d2c444a795
+source_hash: d9469a7ddd14
 ---
 
 The preceding chapters dealt with magnetic fields in vacuum. Real magnetic fields always involve matter, and any substance is magnetized in a magnetic field and in turn modifies the field; from this point of view all substances are called magnetic materials. The structure of this chapter runs completely parallel to that of the **dielectrics** in [5.3.4](/5.3.4): we first explain microscopically why matter is magnetized (the magnetic moments of atoms, corresponding to the **electric dipole moments** of molecules), then use the magnetization to describe the degree of magnetization and the magnetization current to describe the contribution of magnetization to the field (corresponding to the **electric polarization** and the **bound charge**), and finally introduce the auxiliary quantity, the magnetic field strength $\boldsymbol{H}$, so that only conduction currents, which can be controlled, appear in the circulation theorem (corresponding to the **electric displacement field** $\boldsymbol{D}$). What differs from dielectrics is the ferromagnetic substance: its magnetization can make the field thousands of times stronger than the applied field, and it depends on the history of magnetization; this is the basis of electromagnets, transformers and permanent magnets. Magnetism is in the end a quantum phenomenon; the classical picture in this chapter is only a usable model, and the quantum theory of electron spin and atomic magnetic moments is given in [5.5.4](/5.5.4). Section 8.6 is optional.
@@ -315,12 +315,21 @@ The correspondence in the table is formal: physically the fundamental field corr
 ## Questions
 
 1. Why can a magnet attract a piece of iron that has not been magnetized?
-   Hint: The iron is magnetized in the nonuniform field of the magnet; its moment is parallel to the field, and the force $\nabla(\boldsymbol{m}\cdot\boldsymbol{B})$ points toward the strong-field region.
+
+   **Answer** The iron is magnetized in the nonuniform field of the magnet; its moment is parallel to the field, and the force $\nabla(\boldsymbol{m}\cdot\boldsymbol{B})$ points toward the strong-field region.
+
 2. The permeability of paramagnetic and ferromagnetic substances depends markedly on temperature, while that of diamagnetic substances is almost independent of temperature. Why?
-   Hint: Paramagnetism and ferromagnetism are both orientational order of intrinsic moments, which thermal motion destroys; diamagnetism comes from the induced moment produced by Larmor precession and has nothing to do with the thermal motion of the molecules.
+
+   **Answer** Paramagnetism and ferromagnetism are both orientational order of intrinsic moments, which thermal motion destroys; diamagnetism comes from the induced moment produced by Larmor precession and has nothing to do with the thermal motion of the molecules.
+
 3. There is no conduction current in a short cylindrical permanent magnet magnetized uniformly along its axis, and the circulation theorem for $\boldsymbol{H}$ gives $\oint\boldsymbol{H}\cdot\mathrm{d}\boldsymbol{l}=0$. Can one conclude that $\boldsymbol{H}=\boldsymbol{0}$?
-   Hint: No. The circulation of $\boldsymbol{H}$ is zero, but its divergence $-\nabla\cdot\boldsymbol{M}$ is nonzero on the two end faces (equivalent to "magnetic charge"); $\boldsymbol{H}$ exists both inside and outside the magnet, and inside the magnet $\boldsymbol{H}$ is antiparallel to $\boldsymbol{M}$ (the demagnetizing field).
+
+   **Answer** No. The circulation of $\boldsymbol{H}$ is zero, but its divergence $-\nabla\cdot\boldsymbol{M}$ is nonzero on the two end faces (equivalent to "magnetic charge"); $\boldsymbol{H}$ exists both inside and outside the magnet, and inside the magnet $\boldsymbol{H}$ is antiparallel to $\boldsymbol{M}$ (the demagnetizing field).
+
 4. Why do magnetic domains exist inside a ferromagnet?
-   Hint: See Section 8.5.1: dividing into domains lowers the magnetostatic energy, while the domain walls cost exchange energy, and the two compete.
+
+   **Answer** See Section 8.5.1: dividing into domains lowers the magnetostatic energy, while the domain walls cost exchange energy, and the two compete.
+
 5. Why is the core of a transformer made of a soft magnetic material, while permanent magnets are made of hard magnetic materials?
-   Hint: A core is magnetized repeatedly, and the hysteresis loss is proportional to the area of the loop, so a soft magnetic material with a narrow loop is needed; a permanent magnet must retain a large remanence after the external field is removed and must resist demagnetization, so a hard magnetic material with large remanence and large coercivity is needed.
+
+   **Answer** A core is magnetized repeatedly, and the hysteresis loss is proportional to the area of the loop, so a soft magnetic material with a narrow loop is needed; a permanent magnet must retain a large remanence after the external field is removed and must resist demagnetization, so a hard magnetic material with large remanence and large coercivity is needed.

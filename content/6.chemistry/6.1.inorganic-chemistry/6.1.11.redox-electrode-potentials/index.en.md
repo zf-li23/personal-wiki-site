@@ -1,6 +1,6 @@
 ---
 title: Redox Reactions and Electrode Potentials
-source_hash: 3ca1673486df
+source_hash: 37167bf2e24a
 ---
 
 The acid–base, complexation, and precipitation reactions of the preceding chapters are all recombinations of ions or protons, and the charge state of each element is unchanged by the reaction. Another large class of reactions involves the transfer of electrons from one substance to another: redox reactions. Combustion, the smelting and corrosion of metals, photosynthesis and respiration, batteries and electrolysis are all redox reactions. In this chapter we first use oxidation numbers to describe electron transfer and to balance equations (11.1, 11.2). We then let the oxidizing and reducing agents react at two separate electrodes, so that electron transfer becomes a current in an external circuit; this is the galvanic cell (11.3). The electromotive force of a galvanic cell can be measured precisely, and this gives the standard electrode potential, a measure of the oxidizing or reducing power of a redox couple (11.4). Its relation to the **Gibbs energy** of [6.1.6](/6.1.6) is $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, and translating the **reaction isotherm** of [6.1.8](/6.1.8) into electrical language gives the Nernst equation, treated in 11.5, which treats in a unified way the effects of concentration, acidity, precipitation, and complexation on the electrode potential. Applications of electrode potentials, Latimer diagrams, electrolysis, and electrochemical power sources are found in [6.1.12](/6.1.12). Cell thermodynamics, the rigorous form of activities and the Nernst equation, and the kinetics of electrode processes are found in [Physical Chemistry](/6.3); potentiometric analysis and redox titration are found in [Analytical Chemistry](/6.4).
@@ -573,12 +573,12 @@ The electromotive force of a concentration cell depends only on the concentratio
 
 1. Why can the electrode potential of a single electrode not be measured, whereas the electromotive force of a cell can be measured precisely?
 
-   Answer: Measuring the potential difference at a single interface requires introducing another metal–solution interface, so what is measured is always a combination of two interfacial potential differences; the electromotive force of a cell is the potential difference between two metal terminals and can be measured with leads of the same metal.
+   **Answer** Measuring the potential difference at a single interface requires introducing another metal–solution interface, so what is measured is always a combination of two interfacial potential differences; the electromotive force of a cell is the potential difference between two metal terminals and can be measured with leads of the same metal.
 
 2. If the equation of the Cu–Zn galvanic cell is written $\ce{2Zn + 2Cu^2+ -> 2Zn^2+ + 2Cu}$, how do $E^\circ_{\mathrm{cell}}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, and $K^\circ$ change?
 
-   Answer: $E^\circ_{\mathrm{cell}}$ is unchanged (intensive quantity); $z$ becomes 4 and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ doubles; $K^\circ$ becomes the square of its former value.
+   **Answer** $E^\circ_{\mathrm{cell}}$ is unchanged (intensive quantity); $z$ becomes 4 and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ doubles; $K^\circ$ becomes the square of its former value.
 
 3. Why is $\ce{KMnO4}$ reduced to $\ce{Mn^2+}$ in acidic solution, only to $\ce{MnO2}$ in neutral solution, and only to $\ce{MnO4^2-}$ in strongly basic solution?
 
-   Answer: The reduction of $\ce{MnO4-}$ to $\ce{Mn^2+}$ consumes 8 $\ce{H+}$, and its electrode potential falls rapidly as pH rises (by about $0.095\,\mathrm{V}$ per pH unit); in basic solution $\ce{Mn^2+}$ cannot exist either. Lower-oxidation-state reduction products that require no $\ce{H+}$, or less of it, are favored under basic conditions (see the Latimer diagram of Mn in [6.1.12](/6.1.12)).
+   **Answer** The reduction of $\ce{MnO4-}$ to $\ce{Mn^2+}$ consumes 8 $\ce{H+}$, and its electrode potential falls rapidly as pH rises (by about $0.095\,\mathrm{V}$ per pH unit); in basic solution $\ce{Mn^2+}$ cannot exist either. Lower-oxidation-state reduction products that require no $\ce{H+}$, or less of it, are favored under basic conditions (see the Latimer diagram of Mn in [6.1.12](/6.1.12)).

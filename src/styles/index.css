@@ -189,6 +189,19 @@
   color: var(--muted-foreground);
   font-family: var(--font-mono);
 }
+.wiki-article .wiki-answer {
+  margin: 0.5em 0 1em;
+  padding: 0.25em 0.75em;
+  border-left: 2px solid var(--border);
+}
+.wiki-article .wiki-answer > summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+.wiki-article .wiki-answer[open] > summary {
+  margin-bottom: 0.5em;
+}
 .wiki-article .wiki-code-tablist {
   display: flex;
   gap: 0.25rem;

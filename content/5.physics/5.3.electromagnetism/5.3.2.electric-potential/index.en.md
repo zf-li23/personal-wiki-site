@@ -1,7 +1,7 @@
 ---
 title: Electric Potential
 description: Conservative nature of the electrostatic field and its circulation theorem, potential difference and electric potential, superposition of potentials, equipotential surfaces, the potential gradient and Poisson's equation, Earnshaw's theorem, electrostatic potential energy of charges and dipoles in an external field, electrostatic energy of charge systems, energy density of the electrostatic field, and the theoretical structure of electrostatics.
-source_hash: 510df0d0ca9c
+source_hash: 30a2ad5dd09b
 ---
 
 [The previous chapter](/5.3.1) used **Gauss's law** to describe the flux of the electrostatic field; this chapter studies its circulation. The work done by electrostatic forces is independent of the path, so the electrostatic field is a **conservative vector field**, and just as potential energy is introduced from a conservative force in mechanics ([5.1.4](/5.1.4)), we can introduce a scalar function, the electric potential, that describes the electrostatic field equivalently. The potential is a scalar and adds algebraically, which makes it easier to compute than the **electric field strength**; taking the **gradient** of the potential gives the field strength. Combining Gauss's law with $\boldsymbol{E}=-\nabla\varphi$ reduces electrostatics to the **Poisson equation** for the potential, the very equation studied in [2.5.8](/2.5.8). The chapter ends with the electrostatic energy of charge systems and shows that this energy is stored in the electric field. The next chapter, [5.3.3](/5.3.3), uses these tools to treat conductors; in steady currents ([5.3.5](/5.3.5)) the potential generalizes to voltage. Section 2.6 is optional.
@@ -324,14 +324,25 @@ flowchart LR
 ## Questions
 
 1. Are the potentials at any two points on the same field line equal?
-   Hint: no. Along a field line the potential decreases monotonically.
+
+   **Answer** no. Along a field line the potential decreases monotonically.
+
 2. Is the electrostatic potential energy of a charge always larger where the potential is higher?
-   Hint: not necessarily. $E_{\mathrm{p}}=q\varphi$, and for a negative charge the higher the potential, the lower the energy.
+
+   **Answer** not necessarily. $E_{\mathrm{p}}=q\varphi$, and for a negative charge the higher the potential, the lower the energy.
+
 3. Can the field lines of an electrostatic field close?
-   Hint: no. Along a closed field line $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$, contradicting the circulation theorem.
+
+   **Answer** no. Along a closed field line $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$, contradicting the circulation theorem.
+
 4. Show that the potential is zero at every point of the perpendicular bisector plane of an electric dipole.
-   Hint: every point of the plane is equidistant from $+q$ and $-q$, whose potentials there are equal and opposite (with the zero at infinity).
+
+   **Answer** every point of the plane is equidistant from $+q$ and $-q$, whose potentials there are equal and opposite (with the zero at infinity).
+
 5. Is the potential necessarily zero where the field strength is zero? Is the field strength necessarily zero where the potential is zero?
-   Hint: neither. Inside a uniformly charged spherical surface $E=0$ but $\varphi\ne0$; on the perpendicular bisector plane of a dipole $\varphi=0$ but $E\ne0$. The field strength is determined only by the spatial rate of change of the potential.
+
+   **Answer** neither. Inside a uniformly charged spherical surface $E=0$ but $\varphi\ne0$; on the perpendicular bisector plane of a dipole $\varphi=0$ but $E\ne0$. The field strength is determined only by the spatial rate of change of the potential.
+
 6. Where the field strength is larger, is the energy density of the field higher? And where the potential is higher?
-   Hint: the former, yes, since $w_{\mathrm{e}}=\frac12\varepsilon_0E^2$; the latter, not necessarily, since the value of the potential depends on the choice of zero and is not directly related to the energy density.
+
+   **Answer** the former, yes, since $w_{\mathrm{e}}=\frac12\varepsilon_0E^2$; the latter, not necessarily, since the value of the potential depends on the choice of zero and is not directly related to the energy density.

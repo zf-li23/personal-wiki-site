@@ -1,7 +1,7 @@
 ---
 title: Magnetic Forces
 description: Cyclotron and helical motion of charged particles in magnetic fields and magnetic confinement, the relativity of electric and magnetic fields, the Hall effect and the quantum Hall effect, the Ampère force on a current-carrying wire and the definition of the ampere, the magnetic moment of a current loop and the torque and potential energy in a magnetic field.
-source_hash: 6b26dfc7ac6a
+source_hash: 42af553e1705
 ---
 
 The previous chapter ([5.3.6](/5.3.6)) discussed how a magnetic field is produced by currents; this chapter discusses how a magnetic field acts on moving charges and currents. There is only one basic law: a charge $q$ with velocity $\boldsymbol{v}$ experiences the **Lorentz force** $q\boldsymbol{v}\times\boldsymbol{B}$. Starting from it, this chapter discusses in turn the motion of a single charged particle (cyclotrons, mass spectrometers, magnetic confinement), two macroscopic manifestations of the force on the many charge carriers in a **conductor** (the Hall effect and the Ampère force on a current-carrying wire), and the torque on a current-carrying coil. A section in the middle uses special relativity ([5.1.8](/5.1.8)) to show that the magnetic and electric forces are manifestations of one interaction in different reference frames. The magnetic moment introduced here is the starting point for understanding the magnetism of matter in the next chapter ([5.3.8](/5.3.8)); the calculation of torque and energy runs completely parallel to that of an **electric dipole** in an electric field ([5.3.2](/5.3.2)).
@@ -253,10 +253,17 @@ As long as the distributions of charge and mass are proportional, any rotating c
 ## Questions
 
 1. A beam of electrons is accelerated from rest through a voltage $U$ and then enters a uniform magnetic field perpendicularly. How do the cyclotron radius and period change when the voltage is doubled (nonrelativistic case)?
-   Hint: $v\propto\sqrt U$, so the radius $R=mv/(eB)$ becomes $\sqrt2$ times as large; the period $2\pi m/(eB)$ is unchanged.
+
+   **Answer** $v\propto\sqrt U$, so the radius $R=mv/(eB)$ becomes $\sqrt2$ times as large; the period $2\pi m/(eB)$ is unchanged.
+
 2. Can a magnetic field set a charged particle at rest into motion? Can a steady magnetic field change the kinetic energy of a charged particle?
-   Hint: Neither. A charge at rest experiences no magnetic force; the force of a steady magnetic field is perpendicular to the velocity and does no work. A changing magnetic field, however, produces an electric field ([5.3.9](/5.3.9)), which can accelerate particles, as in the betatron.
+
+   **Answer** Neither. A charge at rest experiences no magnetic force; the force of a steady magnetic field is perpendicular to the velocity and does no work. A changing magnetic field, however, produces an electric field ([5.3.9](/5.3.9)), which can accelerate particles, as in the betatron.
+
 3. The net force on a closed current-carrying coil in a uniform magnetic field is zero. What about in a nonuniform field?
-   Hint: In general it is not zero; the force is $\nabla(\boldsymbol{m}\cdot\boldsymbol{B})$. A small coil whose moment is parallel to the field is pulled toward the strong-field region, for example a bar magnet attracting a small current-carrying coil.
+
+   **Answer** In general it is not zero; the force is $\nabla(\boldsymbol{m}\cdot\boldsymbol{B})$. A small coil whose moment is parallel to the field is pulled toward the strong-field region, for example a bar magnet attracting a small current-carrying coil.
+
 4. The Hall voltage measured in a semiconductor sample has the opposite sign to that expected for conduction by electrons. What does this show?
-   Hint: The majority carriers are positively charged; the sample is a p-type semiconductor and the carriers are holes ([5.5.6](/5.5.6)).
+
+   **Answer** The majority carriers are positively charged; the sample is a p-type semiconductor and the carriers are holes ([5.5.6](/5.5.6)).

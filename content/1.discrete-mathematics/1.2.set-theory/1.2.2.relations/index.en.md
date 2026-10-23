@@ -1,6 +1,6 @@
 ---
 title: Relations
-source_hash: 48c64a3b7d1e
+source_hash: dac319737807
 ---
 
 Relations describe connections between the elements of sets. This chapter defines a relation as a set of ordered pairs (see Definition 1.3.4), introduces the representations of relations (matrices and graphs), their operations (inverse, composition, restriction and image), their basic properties (reflexivity, symmetry, antisymmetry and transitivity) and their closures, and then discusses three important kinds of relations: equivalence relations and their correspondence with partitions, compatibility relations and covers, and partial orders and partially ordered sets. The functions of the next chapter are a special kind of relation.
@@ -459,3 +459,26 @@ The *well-ordering theorem* is equivalent to the **axiom of choice**. $(\mathbb{
 2. $(a, b) = \{x \mid x \in \mathbb{R} \land a < x < b\}$ is called the **open interval** from $a$ to $b$;
 3. $[a, b) = \{x \mid x \in \mathbb{R} \land a \leq x < b\}$ and $(a, b] = \{x \mid x \in \mathbb{R} \land a < x \leq b\}$ are both called **half-open intervals** from $a$ to $b$;
 4. infinite intervals can also be defined: $(-\infty, a] = \{x \mid x \in \mathbb{R} \land x \leq a\}$, $(-\infty, a) = \{x \mid x \in \mathbb{R} \land x < a\}$, $[a, +\infty) = \{x \mid x \in \mathbb{R} \land a \leq x\}$, $(a, +\infty) = \{x \mid x \in \mathbb{R} \land a < x\}$, $(-\infty, +\infty) = \mathbb{R}$.
+
+## Summary
+
+- A binary relation is a subset of a Cartesian product (Definition 2.1.1); relations on finite sets can be represented by relation matrices or relation graphs (Definitions 2.2.1 and 2.2.2). The inverse, composition, restriction and image of relations (Definition 2.3.1) satisfy $(S \circ R)^{-1} = R^{-1} \circ S^{-1}$ (Theorem 2.3.1), and composition is associative (Theorem 2.3.2).
+- How the properties of relations (Definitions 2.4.1–2.4.3) behave under operations:
+
+  | Operation | Reflexive | Symmetric | Transitive | Antisymmetric |
+  | :-- | :-: | :-: | :-: | :-: |
+  | Inverse $R^{-1}$ | preserved | preserved | preserved | preserved |
+  | Intersection $R_1 \cap R_2$ | preserved | preserved | preserved | preserved |
+  | Union $R_1 \cup R_2$ | preserved | preserved | not necessarily | not necessarily |
+
+  See Theorems 2.4.1–2.4.4.
+- A closure (Definition 2.5.2) is the smallest relation containing $R$ that has a given property: $r(R) = R \cup I_A$, $s(R) = R \cup R^{-1}$, $t(R) = \bigcup_{i \geq 1} R^i$ (Theorems 2.5.7–2.5.9); when $\lvert A\rvert = n$, the union for the transitive closure stops at some $R^k$ with $k \leq n$ (Theorem 2.5.10).
+- Three important kinds of relations:
+
+  | Relation | Properties | Associated structure |
+  | :-- | :-- | :-- |
+  | Equivalence relation (Definition 2.6.1) | reflexive, symmetric, transitive | equivalence classes, quotient set $A/R$; in one-to-one correspondence with partitions (Theorem 2.6.4) |
+  | Compatibility relation (Definition 2.7.1) | reflexive, symmetric | the maximal compatibility classes form the complete cover (Theorem 2.7.2) |
+  | Partial order (Definition 2.8.1) | reflexive, antisymmetric, transitive | posets and Hasse diagrams; removing $I_A$ gives a strict partial order (Theorem 2.8.3) |
+
+- In a poset, greatest (least) elements must be distinguished from maximal (minimal) elements, and upper (lower) bounds from suprema (infima) (Definitions 2.8.5 and 2.8.6). A finite poset can be partitioned into as many antichains as the length of its longest chain (Theorem 2.8.4); hence among $mn + 1$ elements there is an antichain of length $m + 1$ or a chain of length $n + 1$ (Theorem 2.8.5). Every well-ordered set is totally ordered (Theorem 2.8.6), and the well-ordering theorem (Theorem 2.8.8) asserts that every set can be well-ordered.

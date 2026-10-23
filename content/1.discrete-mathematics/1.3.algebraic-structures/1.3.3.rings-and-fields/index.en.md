@@ -1,6 +1,6 @@
 ---
 title: Rings and Fields
-source_hash: 7942db87e122
+source_hash: e29cc4989f25
 ---
 
 A group has a single operation, whereas integers, polynomials and matrices all have both addition and multiplication, linked by the **distributive law** (Section 1.3.3). A ring is the abstraction of such systems in which one can add, subtract and multiply; a field further requires multiplication to be commutative and every nonzero element to be invertible, so that one can also divide.

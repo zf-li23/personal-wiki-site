@@ -1,7 +1,7 @@
 ---
 title: Electromagnetic Induction
 description: Faraday's law of induction and Lenz's law, flux linkage and induced charge; motional emf and the Lorentz force; the induced electric field, eddy currents, the betatron and the skin effect; mutual inductance, self-inductance and RL circuits; magnetic field energy and energy density; superconductivity and the Meissner effect.
-source_hash: 867c7cad64d9
+source_hash: 051e359e0ff6
 ---
 
 After Ørsted discovered that an electric current produces a magnetic field, it was natural to ask about the inverse effect: can a magnetic field produce a current? After nearly a decade of searching, Faraday discovered electromagnetic induction in 1831: a steady magnetic field produces no current, but a changing magnetic flux does. Electromagnetic induction truly ties the electric and magnetic fields together, and it is the principle of generators, transformers, inductors and wireless charging. This chapter first gives Faraday's law and Lenz's law, which determines the direction, and then analyzes two mechanisms of the induced **electromotive force**: when a **conductor** moves in a magnetic field, the **non-electrostatic force** is the **Lorentz force** (motional emf, [5.3.7](/5.3.7)); when the conductor is at rest and the magnetic field changes, the non-electrostatic force comes from the induced electric field that the changing magnetic field excites in space. The latter is the first of Maxwell's equations ([5.3.10](/5.3.10)). Next we discuss induction in a circuit by itself and between circuits (self-inductance and mutual inductance), from which the energy of the magnetic field is derived; RL circuits and LC circuits correspond to first-order and second-order linear differential equations with constant coefficients, respectively ([2.4](/2.4)). Finally we give a brief introduction to superconductivity; Section 9.7 is optional.
@@ -350,12 +350,21 @@ Room-temperature superconductivity at ambient pressure has not yet been achieved
 ## Questions
 
 1. What is the working principle of an induction cooktop? Why is an ordinary aluminum pot unsuitable for it?
-   Hint: The high-frequency alternating current in the coil produces eddy currents in the bottom of the pot, which heat it. Iron is a ferromagnetic substance with a small skin depth, so the eddy currents concentrate in a very thin surface layer, the equivalent resistance is large, and the heating is efficient; aluminum has a low resistivity and is not ferromagnetic, so the skin depth is large, the equivalent resistance is small, and for the same induced current less heat is produced (some newer cooktops use higher frequencies to heat aluminum pots).
+
+   **Answer** The high-frequency alternating current in the coil produces eddy currents in the bottom of the pot, which heat it. Iron is a ferromagnetic substance with a small skin depth, so the eddy currents concentrate in a very thin surface layer, the equivalent resistance is large, and the heating is efficient; aluminum has a low resistivity and is not ferromagnetic, so the skin depth is large, the equivalent resistance is small, and for the same induced current less heat is produced (some newer cooktops use higher frequencies to heat aluminum pots).
+
 2. Why is the core of a transformer made of thin sheets coated with insulating varnish and separated from one another? How should the sheets be arranged?
-   Hint: To reduce eddy-current loss. The sheets are placed parallel to the direction of the field, and the paths of the eddy currents (closed loops in planes perpendicular to the field) are cut by the insulating layers.
+
+   **Answer** To reduce eddy-current loss. The sheets are placed parallel to the direction of the field, and the paths of the eddy currents (closed loops in planes perpendicular to the field) are cut by the insulating layers.
+
 3. The rates of change of the magnetic flux through an iron ring and an aluminum ring of the same size are equal. Are the induced emfs, induced currents and induced electric fields in the two rings the same?
-   Hint: The induced electric field is determined by the change of the magnetic field and is independent of the material of the ring, so the induced emfs are equal; the resistances differ, so the induced currents differ (neglecting the magnetic field of the induced currents themselves).
+
+   **Answer** The induced electric field is determined by the change of the magnetic field and is independent of the material of the ring, so the induced emfs are equal; the resistances differ, so the induced currents differ (neglecting the magnetic field of the induced currents themselves).
+
 4. The centers of three small coils lie on a straight line, close to one another. How should they be placed so that the mutual inductance between every pair is zero?
-   Hint: Make the axes of the three coils mutually perpendicular, with the axis of one coil along the line joining the centers. Small coils can be regarded as **magnetic dipoles**; the field of the coil whose axis lies along the line is parallel to the line at the other two coils and does not pass through them; the axes of the other two coils are both perpendicular to the line, and the field of each at the other is parallel to its own axis and perpendicular to the axis of the other.
+
+   **Answer** Make the axes of the three coils mutually perpendicular, with the axis of one coil along the line joining the centers. Small coils can be regarded as **magnetic dipoles**; the field of the coil whose axis lies along the line is parallel to the line at the other two coils and does not pass through them; the axes of the other two coils are both perpendicular to the line, and the field of each at the other is parallel to its own axis and perpendicular to the axis of the other.
+
 5. How do a perfect conductor and a superconductor differ when cooled in a magnetic field?
-   Hint: See Section 9.7.2. If the field is applied first and the sample is then cooled, a perfect conductor freezes the field inside the body, while a superconductor expels it.
+
+   **Answer** See Section 9.7.2. If the field is applied first and the sample is then cooled, a perfect conductor freezes the field inside the body, while a superconductor expels it.

@@ -146,3 +146,17 @@ The Bayesian approach respects the likelihood principle, which $p$-values violat
 3. Tests. For simple hypotheses use the Neyman–Pearson likelihood ratio; for one-sided hypotheses in a monotone exponential family, the corresponding one-sided test in $T$ is UMP; in general use the likelihood ratio test with Wilks' $\chi^2$ approximation. Determine the critical value from the null distribution at level $\alpha$, or report the $p$-value.
 4. Without a parametric model, use signs and ranks for location problems, Pearson's $\chi^2$ for counts and tables, and the Kolmogorov–Smirnov or Shapiro–Wilk test for distributional hypotheses.
 5. Bayesian analysis. Write likelihood $\times$ prior, recognize the kernel of a known distribution (conjugacy), and read off posterior means, quantiles and probabilities.
+
+## Summary
+
+The course rests on a small number of results; each problem above is solved by one of them.
+
+| Question | Key results |
+|---|---|
+| What do the statistics look like under normality? | Theorem 2.1.3 ($\bar X$ and $S^2$ independent, with normal and $\chi^2$ distributions); Theorem 2.1.4 (Slutsky) for large samples |
+| How far can the data be reduced? | Theorem 2.3.1 (factorization), Theorem 2.3.2 (completeness in exponential families), Theorem 2.3.3 (Basu) |
+| How good can an estimator be? | Theorem 3.4.4 (Cramér–Rao lower bound); Theorems 3.4.1 and 3.4.3 (Rao–Blackwell, Lehmann–Scheffé) for the UMVUE; Theorem 3.3.5 (asymptotic normality and efficiency of the MLE) |
+| How is an interval built? | A pivot (Definition 4.2.1), or an asymptotically normal estimator; duality with tests |
+| Which test is best? | Theorem 5.4.1 (Neyman–Pearson lemma), Theorem 5.4.4 (Karlin–Rubin) for one-sided UMP tests; Theorem 5.3.1 (Wilks) for likelihood ratio tests |
+| What if there is no parametric model? | Signs and ranks; Theorem 6.3.1 (Pearson's $\chi^2$) for counts; Kolmogorov–Smirnov and Shapiro–Wilk for distributions |
+| How does the Bayesian answer differ? | Posterior $\propto$ likelihood $\times$ prior; Theorem 7.3.1 (conjugate priors in exponential families); Bayes estimators and HPD intervals from the posterior |

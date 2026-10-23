@@ -1,7 +1,7 @@
 ---
 title: Oscillations
 description: Definition, criteria, characteristic quantities and phasor representation of simple harmonic motion; small oscillations near a stable equilibrium; superposition of simple harmonic motions (beats, Lissajous figures, normal modes of coupled oscillators); harmonic analysis and spectra; damped oscillation and the quality factor; forced oscillation and resonance.
-source_hash: a208c825b1b3
+source_hash: "443e75311359"
 ---
 
 A process in which a physical quantity varies back and forth about some value is called an oscillation. Oscillations are not confined to mechanical motion: the current in an alternating-current circuit, the electric field in an electromagnetic wave and the positions of atoms in a molecule all oscillate, and they satisfy equations of the same form. According to the forces involved, oscillations are classified as undamped free oscillation, damped free oscillation and forced oscillation. The simplest and most fundamental case is simple harmonic motion in undamped free oscillation, which is the focus of this chapter: on the one hand, many small oscillations in practice can be treated as simple harmonic; on the other hand, any complicated oscillation can be decomposed into a superposition of simple harmonic motions.
@@ -359,8 +359,13 @@ Superposition of simple harmonic motions: collinear motions of the same frequenc
 ## Questions
 
 1. Why is the period of a damped oscillation longer than that of the undamped one?
-   Hint: $\omega_{\mathrm{d}}=\sqrt{\omega_0^2-\beta^2}<\omega_0$; physically, resistance always slows the motion of the particle.
+
+   **Answer** $\omega_{\mathrm{d}}=\sqrt{\omega_0^2-\beta^2}<\omega_0$; physically, resistance always slows the motion of the particle.
+
 2. When a spring oscillator hangs vertically, does gravity change the period of oscillation?
-   Hint: No. Taking the new equilibrium position (where the spring is already stretched by $mg/k$) as origin, the restoring force is still $-kx$ and $\omega=\sqrt{k/m}$ is unchanged; only the equilibrium position moves down.
+
+   **Answer** No. Taking the new equilibrium position (where the spring is already stretched by $mg/k$) as origin, the restoring force is still $-kx$ and $\omega=\sqrt{k/m}$ is unchanged; only the equilibrium position moves down.
+
 3. After a forced oscillation has reached the steady state, where does the work done by the driving force over one period go?
-   Hint: It is entirely dissipated by the resistance (converted into heat), and the average mechanical energy of the system stays constant.
+
+   **Answer** It is entirely dissipated by the resistance (converted into heat), and the average mechanical energy of the system stays constant.

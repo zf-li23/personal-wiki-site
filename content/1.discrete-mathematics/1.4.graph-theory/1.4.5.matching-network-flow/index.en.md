@@ -1,6 +1,6 @@
 ---
 title: Matching and Network Flow
-source_hash: 7690bc3c1f06
+source_hash: b54e49fe03d3
 ---
 
 Matching problems and network flow problems are two classes of graph-theoretic problems with rich practical backgrounds: the former include job assignment and marriage problems, the latter the transportation of goods and the routing of communication traffic. In this chapter we first discuss maximum matchings in bipartite graphs, complete matchings (Hall's theorem) and optimal matchings; we then treat maximum flows in networks, the max-flow min-cut theorem and the algorithms based on it; and finally we explain the connection between the two classes of problems.
@@ -229,3 +229,26 @@ Suppose that, in addition, each edge $(i, j)$ of a flow network carries a cost $
 ## 5.9. The Connection Between Matching and Network Flow
 
 The maximum matching problem for a **bipartite graph** can be transformed into a maximum flow problem: add a source $s$ and a sink $t$, add an edge of capacity $1$ from $s$ to each vertex of $X$ and from each vertex of $Y$ to $t$, and turn each edge of the bipartite graph into a directed edge of capacity $1$ from $X$ to $Y$. In an integral maximum flow, the original edges carrying flow $1$ form a maximum matching, and the maximum flow value equals the number of edges of a maximum matching. Similarly, by assigning costs to the edges, the optimal matching problem can be transformed into a minimum-cost maximum flow problem.
+
+## Summary
+
+- Matchings:
+
+  | Problem | Key result | Algorithm |
+  | :-- | :-- | :-- |
+  | Maximum matching in a bipartite graph | Berge's theorem (Theorem 5.1.1): $M$ is maximum if and only if there is no augmenting path | The Hungarian algorithm (Algorithm 5.1.1), repeatedly replacing $M$ by $M \oplus P$ along an augmenting path |
+  | Complete matching | Hall's theorem (Theorem 5.2.1): $\lvert\Gamma(A)\rvert \ge \lvert A\rvert$ for every $A \subseteq X$; a degree condition in Corollary 5.2.1 | — |
+  | Maximum matching and covers | König's theorem (Theorem 5.2.3): the size of a maximum matching equals the minimum cover number of the adjacency matrix | — |
+  | Optimal matching (maximum-weight perfect matching) | Labels with $l(x_i) + l(y_j) \ge c_{ij}$; a perfect matching on the tight edges is optimal (Theorem 5.3.1) | The Kuhn–Munkres algorithm (Algorithm 5.3.1) |
+  | Maximum matching in a general graph | Still based on augmenting paths, but odd cycles must be handled | Edmonds' blossom algorithm (Section 5.4) |
+
+- Network flows: a feasible flow satisfies the capacity constraints, flow conservation and equality of the flow out of the source and into the sink; every flow value is at most the capacity of every cut (Theorem 5.5.1), and the maximum flow value equals the minimum cut capacity (Theorem 5.5.2).
+- Maximum-flow algorithms:
+
+  | Algorithm | Augmentation | Complexity |
+  | :-- | :-- | :-- |
+  | Ford–Fulkerson labeling algorithm (Algorithm 5.6.1) | Any flow augmenting path (unsaturated forward edges, backward edges with positive flow) | Terminates for integer capacities, but the number of steps may be of the order of the maximum flow value; may fail to terminate for irrational capacities |
+  | Edmonds–Karp algorithm (Section 5.7) | Shortest augmenting paths found by breadth-first search | At most $\frac{m(n+2)}{2}$ augmentations (Theorem 5.7.1), $O(nm^2)$ in total |
+  | Minimum-cost flow (Section 5.8) | Augment along shortest augmenting paths with costs as lengths | — |
+
+- The connection between the two problems (Section 5.9): after adding a source, a sink and unit capacities to a bipartite graph, the size of a maximum matching equals the value of an integer maximum flow; optimal matchings correspond to minimum-cost maximum flows.

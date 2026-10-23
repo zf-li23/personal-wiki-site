@@ -1,6 +1,6 @@
 ---
 title: Rates of Chemical Reactions
-source_hash: 30e980a472a1
+source_hash: 20e1c9b8a7b7
 ---
 
 The criterion based on the **Gibbs free energy** in the previous chapter ([6.1.6](/6.1.6)) answers the question "can the reaction proceed spontaneously?" but not "how fast does it proceed?" For $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -237.1\,\mathrm{kJ\,mol^{-1}}$ and the driving force is large, yet a mixture of hydrogen and oxygen can be kept at room temperature for a long time. For $\ce{2NO2(g) -> N2O4(g)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -4.7\,\mathrm{kJ\,mol^{-1}}$ and the driving force is small, yet the reaction is complete almost instantly. The study of the rates and mechanisms of chemical reactions and of how they depend on concentration, temperature, catalysts, and other conditions is called *chemical kinetics*. Thermodynamics speaks of possibility and kinetics of actuality: whether a thermodynamically allowed reaction takes place in the required time is decided by kinetics.
@@ -452,17 +452,6 @@ Enzymes are the catalysts of living organisms; the great majority are proteins (
 
 The rate of an enzyme-catalyzed reaction as a function of substrate concentration is a saturation curve: approximately first order at low substrate concentration and tending to zeroth order at high concentration (the active sites of the enzyme are saturated), described by the Michaelis–Menten equation; a method for fitting its parameters to experimental data is given in [4.4.4](/4.4.4#sec-4.2.3). The derivation of this equation (pre-equilibrium or steady-state approximation) and enzyme kinetics are treated in [Physical Chemistry](/6.3) and [Biochemistry](/7.1).
 
-## Questions
-
-1. Which of the following relations for the reaction $\ce{2W + X -> Y + Z}$ are correct? (a) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$; (b) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$; (c) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$; (d) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$.
-   Answer: (a) and (c) are correct. W is consumed twice as fast as X, so (b) and (d) are off by a factor of 2; the correct form is $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{1}{2}\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$.
-2. On the potential energy diagram of a two-step reaction, how do we distinguish a reaction intermediate from a transition state?
-   Answer: An intermediate lies in the valley between two barriers (a local minimum of the potential energy), and a transition state lies at the top of a barrier (a maximum along the reaction coordinate). An intermediate has a definite lifetime and can in principle be detected; a transition state is merely an instantaneous configuration.
-3. The unit of the rate constant of a reaction is $\mathrm{L\,mol^{-1}\,s^{-1}}$. How does its half-life depend on the initial concentration?
-   Answer: The unit shows that the overall order is 2; with a single reactant, $t_{1/2} = 1/(kc_0)$, inversely proportional to the initial concentration.
-4. Why does "the order of reaction equals the sum of the coefficients" not prove that a reaction is elementary?
-   Answer: Different mechanisms can give the same rate law; for example, the atomic mechanism of $\ce{H2 + I2}$ gives $v = kc(\ce{H2})c(\ce{I2})$ under the pre-equilibrium approximation (Example 7.3.3).
-
 ## Summary
 
 | Topic | Key points |
@@ -475,3 +464,21 @@ The rate of an enzyme-catalyzed reaction as a function of substrate concentratio
 | Integrated rate laws | orders 0, 1, 2: $c$, $\ln c$, $1/c$ against $t$ are straight lines; for first-order reactions $t_{1/2} = \ln 2/k$ is independent of concentration, which is used in radiometric dating |
 | Temperature | $k = A\mathrm{e}^{-E_{\mathrm{a}}/RT}$; $E_{\mathrm{a}} = RT^2\,\mathrm{d}\ln k/\mathrm{d}T$ is the difference between the average energy of reacting molecules and of all molecules; about 2–4 times per 10 K |
 | Catalysts | change the path and lower the activation energy; do not change $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ or the equilibrium constant and accelerate the forward and reverse reactions equally; selective, subject to poisoning; homogeneous, heterogeneous, and enzyme catalysis |
+
+## Questions
+
+1. Which of the following relations for the reaction $\ce{2W + X -> Y + Z}$ are correct? (a) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$; (b) $-\frac{\mathrm{d}c_{\mathrm{X}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$; (c) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = \frac{\mathrm{d}c_{\mathrm{Y}}}{\mathrm{d}t}$; (d) $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$.
+
+   **Answer** (a) and (c) are correct. W is consumed twice as fast as X, so (b) and (d) are off by a factor of 2; the correct form is $\frac{\mathrm{d}c_{\mathrm{Z}}}{\mathrm{d}t} = -\frac{1}{2}\frac{\mathrm{d}c_{\mathrm{W}}}{\mathrm{d}t}$.
+
+2. On the potential energy diagram of a two-step reaction, how do we distinguish a reaction intermediate from a transition state?
+
+   **Answer** An intermediate lies in the valley between two barriers (a local minimum of the potential energy), and a transition state lies at the top of a barrier (a maximum along the reaction coordinate). An intermediate has a definite lifetime and can in principle be detected; a transition state is merely an instantaneous configuration.
+
+3. The unit of the rate constant of a reaction is $\mathrm{L\,mol^{-1}\,s^{-1}}$. How does its half-life depend on the initial concentration?
+
+   **Answer** The unit shows that the overall order is 2; with a single reactant, $t_{1/2} = 1/(kc_0)$, inversely proportional to the initial concentration.
+
+4. Why does "the order of reaction equals the sum of the coefficients" not prove that a reaction is elementary?
+
+   **Answer** Different mechanisms can give the same rate law; for example, the atomic mechanism of $\ce{H2 + I2}$ gives $v = kc(\ce{H2})c(\ce{I2})$ under the pre-equilibrium approximation (Example 7.3.3).

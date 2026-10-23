@@ -1,6 +1,6 @@
 ---
 title: Waves
-source_hash: 8aab186e9243
+source_hash: 2250134e989f
 ---
 
 The propagation of oscillations through space is a wave. The previous chapter ([5.1.6](/5.1.6)) studied a single oscillator; this chapter studies a continuous medium made of innumerable coupled oscillators: the oscillation of one mass element drags its neighbors along through elastic coupling, so that the state of oscillation spreads at a finite speed. We first describe the geometry and characteristic quantities of mechanical waves and write down the wave functions of traveling waves and harmonic waves. We then derive the **wave equation** and the wave speed from the elasticity of the medium and discuss the energy carried by waves, Huygens' principle (reflection, refraction, diffraction), the superposition of waves (interference, standing waves, reflection and transmission at interfaces, normal modes), sound waves, the Doppler effect and group velocity. Mathematically, most of this chapter is a physical reading of [2.5.3](/2.5.3) (d'Alembert's formula) and [2.5.4](/2.5.4) (separation of variables and standing waves), and the derivations are not repeated here; the Doppler effect for electromagnetic waves requires special relativity, and its derivation is given in the next chapter, [5.1.8](/5.1.8#sec-8.5.7). The superposition and diffraction of waves are the basis of wave optics ([5.4](/5.4)), and group velocity and the dispersion relation reappear for matter waves in quantum physics ([5.5.2](/5.5.2)).
@@ -509,6 +509,14 @@ So after a stone is thrown into deep water, the group of waves forming a ring of
 
 ## Questions
 
-1. Why must one often adjust the length of the string (or the tension, or the driving frequency) in standing-wave experiments? Hint: a stable, pronounced standing wave forms only when the driving frequency equals one of the normal-mode frequencies; changing the length or tension changes the normal-mode frequencies.
-2. In a plane harmonic wave, what are the kinetic and potential energies of an element as it passes through the equilibrium position? How does this differ from a spring oscillator? Hint: both are maximal at the same time; see [Section 7.5.1](#sec-7.5.1).
-3. A sound source and an observer move with the same **speed** $v$, in one case "the source moves toward the observer" and in the other "the observer moves toward the source". Is the received frequency the same? What about light? Hint: for sound the former gives $\frac{u}{u-v}\nu_{\mathrm{S}}$ and the latter $\frac{u+v}{u}\nu_{\mathrm{S}}$, the former being higher; for light only the relative velocity matters and the two are the same.
+1. Why must one often adjust the length of the string (or the tension, or the driving frequency) in standing-wave experiments?
+
+   **Answer** a stable, pronounced standing wave forms only when the driving frequency equals one of the normal-mode frequencies; changing the length or tension changes the normal-mode frequencies.
+
+2. In a plane harmonic wave, what are the kinetic and potential energies of an element as it passes through the equilibrium position? How does this differ from a spring oscillator?
+
+   **Answer** both are maximal at the same time; see [Section 7.5.1](#sec-7.5.1).
+
+3. A sound source and an observer move with the same **speed** $v$, in one case "the source moves toward the observer" and in the other "the observer moves toward the source". Is the received frequency the same? What about light?
+
+   **Answer** for sound the former gives $\frac{u}{u-v}\nu_{\mathrm{S}}$ and the latter $\frac{u+v}{u}\nu_{\mathrm{S}}$, the former being higher; for light only the relative velocity matters and the two are the same.

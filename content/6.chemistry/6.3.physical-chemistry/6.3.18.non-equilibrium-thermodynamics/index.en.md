@@ -1,7 +1,7 @@
 ---
 title: Nonequilibrium Thermodynamics
 description: Entropy flow and entropy production, local equilibrium and the entropy balance equation; phenomenological relations in the linear region, Onsager reciprocal relations, cross effects, membrane transport and active transport, the principle of minimum entropy production; dissipative structures far from equilibrium, Brusselator oscillation and Hopf bifurcation, the BZ reaction, Turing patterns; negative entropy flow in living systems.
-source_hash: 371cd77d6bdb
+source_hash: 3bc47d54d877
 ---
 
 The thermodynamics of the preceding chapters deals only with equilibrium states and with reversible processes that connect them: for irreversible processes it gives only the direction ($\Delta S_{\text{isolated}} > 0$, $\Delta G < 0$) and does not answer "how fast" or "how coupled". Yet almost all the striking phenomena in nature occur under nonequilibrium conditions: heat conduction along a temperature gradient, transport of matter across a membrane, chemical reactions that go on continuously, and also chemical oscillations, spatial patterns and life itself. This chapter extends thermodynamics to nonequilibrium systems. Section 18.1 decomposes the change of entropy into entropy flow and entropy production and, under the local equilibrium hypothesis, writes the entropy balance equation, from which the entropy production is expressed as a sum of "flux × force"; Section 18.2 discusses the near-equilibrium linear region: phenomenological relations, the Onsager reciprocal relations and their microscopic basis, cross effects such as thermoelectricity and thermal diffusion, the equations of membrane transport and active transport across biological membranes, and the principle of minimum entropy production; Section 18.3 enters the far-from-equilibrium nonlinear region and uses the kinetics of the previous three chapters ([6.3.15](/6.3.15)–[6.3.17](/6.3.17)) together with the stability theory of ordinary differential equations ([2.4.11](/2.4.11)) to analyze chemical oscillations and Turing patterns, showing how ordered structures are maintained by continuous dissipation; Section 18.4 returns to living systems and ties in with the **principle of entropy increase** in physics ([5.2.4](/5.2.4#thm-4.6.2)) and with the prelude at the end of [6.3.2](/6.3.2). This is the chapter in which physical chemistry connects most closely with biophysics: a cell is an open system far from equilibrium, and its energy conversion, transport and timekeeping all have to be described in the language developed here.
@@ -546,8 +546,13 @@ The three are unified in statistical mechanics: the Gibbs entropy $S = -k_{\math
 ## Questions
 
 1. A cup of hot water cools at room temperature and its entropy decreases. Analyze this process using $\mathrm{d}_{\mathrm{e}}S$ and $\mathrm{d}_{\mathrm{i}}S$ and indicate where the entropy production occurs.
+
 2. Why is the Gibbs free energy criterion a special case of Theorem 18.1.1? How should the entropy production be written at constant temperature and volume when the non-volume work is nonzero (such as the electrical work done by a discharging battery)?
+
 3. For $\ce{A <=> B}$ at $298\,\mathrm{K}$ let $\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$. Compute $v/v_+$ with the exact form of Eq. (18.9) and with the linear approximation; how large is the relative error of the linear approximation?
+
 4. If a transporter accompanies each glucose transported by only 1 $\ce{Na+}$, what is the maximum ratio of glucose concentrations inside and outside the cell, with the data of Example 18.2.2?
+
 5. For the Brusselator with $a = 2$, at what value of $b$ does the Hopf bifurcation occur? What is the approximate period of the oscillation near the bifurcation point (in dimensionless time)?
+
 6. Why do Turing patterns require the inhibitor to diffuse faster than the activator? If $D_x = D_y$, can the Brusselator show a Turing instability?

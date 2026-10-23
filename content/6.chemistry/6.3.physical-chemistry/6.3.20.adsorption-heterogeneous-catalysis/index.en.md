@@ -1,6 +1,6 @@
 ---
 title: Adsorption on Solid Surfaces and Heterogeneous Catalysis
-source_hash: ada92d2b3ac4
+source_hash: 50226ebb3873
 ---
 
 A liquid can lower its surface Gibbs free energy by contracting its surface and changing its surface composition ([6.3.19](/6.3.19)), but the atoms at a solid surface can hardly move, and the surface energy can be lowered only by capturing molecules from a gas or a solution. This adsorption is the common basis of heterogeneous catalysis, gas separation and purification, drying and decolorization, chromatography and sensing, and is also the method of determining the specific surface area and pore structure of solids. This chapter first introduces the amount adsorbed and adsorption curves (20.1), compares physical adsorption with chemical adsorption and discusses heats of adsorption (20.2); then establishes the Langmuir theory of monolayer adsorption (20.3), extends it to nonuniform surfaces in 20.4 (the Freundlich and Temkin isotherms), and establishes the BET theory of multilayer adsorption (20.5), the standard method for determining specific surface area; next it discusses capillary condensation and pore size distributions in porous solids (20.6, using the **Kelvin equation** of [6.3.19](/6.3.19)) and the kinetics of chemisorption (20.7, using the **effusion** flux of [5.2.1](/5.2.1)); finally it applies these results to the kinetics of gas–solid catalytic reactions (20.8), making the qualitative introduction to **heterogeneous catalysis** in [6.1.7](/6.1.7#sec-7.3.4) quantitative.
@@ -528,13 +528,16 @@ The slowest step is the dissociative adsorption of $\ce{N2}$ (sticking coefficie
 
 1. Which of the following statements agree with the basic assumptions of the Langmuir adsorption theory: (A) the solid surface is uniform and all sites have the same adsorption capacity; (B) adsorption can be monolayer or multilayer; (C) adsorbed molecules interact with one another; (D) adsorption equilibrium is a dynamic equilibrium?
 
-   A and D. The Langmuir theory assumes monolayer adsorption without interaction between adsorbed molecules, so their probability of desorption is not affected by the surrounding molecules.
+   **Answer** A and D. The Langmuir theory assumes monolayer adsorption without interaction between adsorbed molecules, so their probability of desorption is not affected by the surrounding molecules.
+
 2. The adsorption of oxygen on a solid surface proceeds very slowly at 400 K and still more slowly at 350 K. Is this mainly physical or chemical adsorption?
 
-   Chemical adsorption. Physical adsorption needs almost no activation energy and is fast and insensitive to temperature; adsorption that is slow and speeds up as the temperature rises shows that an activation energy is needed.
+   **Answer** Chemical adsorption. Physical adsorption needs almost no activation energy and is fast and insensitive to temperature; adsorption that is slow and speeds up as the temperature rises shows that an activation energy is needed.
+
 3. Why does the BET method for measuring specific surface area use $\ce{N2}$ as adsorbate at the temperature of liquid nitrogen rather than at room temperature?
 
-   Room temperature is far above the critical temperature of $\ce{N2}$, the amount of physical adsorption is extremely small and no multilayer can form; at the boiling point of $\ce{N2}$ (77 K), $p/p^*$ can be varied between 0 and 1, physical adsorption is significant, and $\ce{N2}$ is not chemisorbed.
+   **Answer** Room temperature is far above the critical temperature of $\ce{N2}$, the amount of physical adsorption is extremely small and no multilayer can form; at the boiling point of $\ce{N2}$ (77 K), $p/p^*$ can be varied between 0 and 1, physical adsorption is significant, and $\ce{N2}$ is not chemisorbed.
+
 4. Explain from competitive adsorption why a reaction following the L–H mechanism often has a reactant ratio at which the rate is maximal.
 
-   The two reactants compete for the same active sites, and the rate is proportional to $\theta_{\mathrm{A}}\theta_{\mathrm{B}}$; too much of either displaces the other from the surface, and at fixed $p_{\mathrm{B}}$ the product $\theta_{\mathrm{A}}\theta_{\mathrm{B}}$ is largest at $a_{\mathrm{A}}p_{\mathrm{A}} = 1 + a_{\mathrm{B}}p_{\mathrm{B}}$ (where $\theta_{\mathrm{A}} = 1/2$).
+   **Answer** The two reactants compete for the same active sites, and the rate is proportional to $\theta_{\mathrm{A}}\theta_{\mathrm{B}}$; too much of either displaces the other from the surface, and at fixed $p_{\mathrm{B}}$ the product $\theta_{\mathrm{A}}\theta_{\mathrm{B}}$ is largest at $a_{\mathrm{A}}p_{\mathrm{A}} = 1 + a_{\mathrm{B}}p_{\mathrm{B}}$ (where $\theta_{\mathrm{A}} = 1/2$).

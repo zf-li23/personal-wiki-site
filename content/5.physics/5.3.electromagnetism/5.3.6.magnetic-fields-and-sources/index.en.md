@@ -1,7 +1,7 @@
 ---
 title: Magnetic Fields and Their Sources
 description: The connection between magnetic phenomena and moving charges, the Lorentz force and the magnetic flux density, magnetic field lines, magnetic flux and Gauss's law for magnetism, the Biot–Savart law and its applications (straight wires, current loops and magnetic dipoles, Helmholtz coils, solenoids, moving charges), Ampère's circuital law and its applications, polar and axial vectors, displacement current and the Ampère–Maxwell law.
-source_hash: 7358b3c39a19
+source_hash: bf15ff1a9a4e
 ---
 
 The previous five chapters studied the electric fields of static charges and **steady currents**. This chapter turns to another effect of electric current, the magnetic field. In 1820 Ørsted discovered that an electric current deflects a compass needle, and within half a year it was recognized that all magnetic phenomena originate in the motion of electric charges: a magnetic field is produced by moving charges (currents) and exerts forces only on moving charges. The basic quantity describing a magnetic field is the magnetic flux density $\boldsymbol{B}$, which is defined through the Lorentz force on a moving charge; the law by which currents produce magnetic fields is the Biot–Savart law. From it follow the two fundamental theorems of the magnetic field, which are exactly "complementary" to the two fundamental theorems of the electrostatic field ([5.3.1](/5.3.1), [5.3.2](/5.3.2)):
@@ -407,10 +407,17 @@ The field between the plates is exactly the same as when the current $I_{\mathrm
 ## Questions
 
 1. A closed surface encloses only one pole of a bar magnet. What is the magnetic flux through it?
-   Hint: Zero. The field lines are closed curves that run inside the magnet from the S pole to the N pole, so as many field lines leave the surface as enter it. This is exactly Gauss's law for magnetism, and it also shows that isolated magnetic poles do not exist.
+
+   **Answer** Zero. The field lines are closed curves that run inside the magnet from the S pole to the N pole, so as many field lines leave the surface as enter it. This is exactly Gauss's law for magnetism, and it also shows that isolated magnetic poles do not exist.
+
 2. In a region without currents, if the field lines are parallel straight lines, must the magnetic field be uniform?
-   Hint: Yes. Let the field lines run along the $z$ direction. From $\nabla\cdot\boldsymbol{B} = 0$ we get $\partial B_z/\partial z = 0$, so $B$ is constant along a field line; from $\nabla\times\boldsymbol{B} = \boldsymbol{0}$ we get $\partial B_z/\partial x = \partial B_z/\partial y = 0$, so $B$ is also constant in the perpendicular directions (this can also be shown with the circulation around a rectangular loop).
+
+   **Answer** Yes. Let the field lines run along the $z$ direction. From $\nabla\cdot\boldsymbol{B} = 0$ we get $\partial B_z/\partial z = 0$, so $B$ is constant along a field line; from $\nabla\times\boldsymbol{B} = \boldsymbol{0}$ we get $\partial B_z/\partial x = \partial B_z/\partial y = 0$, so $B$ is also constant in the perpendicular directions (this can also be shown with the circulation around a rectangular loop).
+
 3. Can the magnetic field between magnetic poles drop abruptly to zero at the edge of the poles?
-   Hint: No. Take a rectangular loop with one side between the poles, parallel to the field, and the other side outside, where the field is zero. The loop is linked with no current, yet the circulation is nonzero, contradicting Ampère's circuital law. There must be a fringing field that weakens gradually at the edge, similar to the fringing field of a parallel-plate capacitor ([5.3.4](/5.3.4)).
+
+   **Answer** No. Take a rectangular loop with one side between the poles, parallel to the field, and the other side outside, where the field is zero. The loop is linked with no current, yet the circulation is nonzero, contradicting Ampère's circuital law. There must be a fringing field that weakens gradually at the edge, similar to the fringing field of a parallel-plate capacitor ([5.3.4](/5.3.4)).
+
 4. Why does Ampère's circuital law fail for nonsteady currents?
-   Hint: In the nonsteady case $\nabla\cdot\boldsymbol{J} \ne 0$, and the conduction currents through different surfaces bounded by the same loop differ, so "the current enclosed by the loop" has no definite meaning. Mathematically, taking the divergence of both sides of $\nabla\times\boldsymbol{B} = \mu_0\boldsymbol{J}$ gives $\nabla\cdot\boldsymbol{J} = 0$, which contradicts the conservation of charge. The contradiction disappears once the displacement current is added.
+
+   **Answer** In the nonsteady case $\nabla\cdot\boldsymbol{J} \ne 0$, and the conduction currents through different surfaces bounded by the same loop differ, so "the current enclosed by the loop" has no definite meaning. Mathematically, taking the divergence of both sides of $\nabla\times\boldsymbol{B} = \mu_0\boldsymbol{J}$ gives $\nabla\cdot\boldsymbol{J} = 0$, which contradicts the conservation of charge. The contradiction disappears once the displacement current is added.

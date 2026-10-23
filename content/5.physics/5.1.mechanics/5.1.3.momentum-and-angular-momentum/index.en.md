@@ -1,7 +1,7 @@
 ---
 title: Momentum and Angular Momentum
 description: Impulse and the momentum theorem; the momentum theorem and conservation of momentum for systems of particles; variable-mass systems and the rocket equation; the center of mass, the center-of-mass motion theorem and the center-of-mass frame; angular momentum and torque of a particle and of a system, the angular momentum theorem, conservation of angular momentum and Kepler's second law; the angular momentum theorem in the center-of-mass frame.
-source_hash: e938d8476245
+source_hash: 74fadff212ac
 ---
 
 **Newton's second law** ([5.1.2](/5.1.2)) is an instantaneous relation between force and **acceleration**. In many problems we care not about the force at each instant but about its cumulative effect over an interval: the accumulation of force over time changes the momentum of a body, and the accumulation of torque over time changes its angular momentum. In this chapter we derive the momentum theorem and the angular momentum theorem from Newton's laws and extend them to systems of **particles**. The internal forces of a system occur in pairs and cancel in the sum, which yields two conservation laws: the momentum of a system on which no external force acts is conserved, and the angular momentum of a system on which no external torque acts is conserved. They are more widely applicable than Newton's laws and remain valid in relativity ([5.1.8](/5.1.8)) and quantum physics ([5.5](/5.5)); by Noether's theorem they correspond to the translational and rotational symmetry of space, respectively ([5.1.4](/5.1.4)). The **center of mass** ([2.2.12](/2.2.12#def-12.5.1)) is the other central concept of this chapter: the overall motion of a system of particles resembles that of a single particle located at the center of mass and carrying the entire mass. The next chapter, [5.1.4](/5.1.4), discusses the accumulation of force over space (work) and energy, and [5.1.5](/5.1.5) applies the angular momentum theorem of this chapter to rigid bodies.
@@ -501,8 +501,13 @@ The motion of a system of particles can therefore be treated completely in two p
 ## Questions
 
 1. A small ball rests on a sheet of paper on a table, and the paper is pulled quickly out to the right. Which way does the ball move?
-   Hint: To the right. The friction of the paper on the ball points to the right, so by the center-of-mass motion theorem the center of mass of the ball accelerates to the right relative to the table, even though it slides to the left relative to the paper (and begins to roll backward).
+
+   **Answer** To the right. The friction of the paper on the ball points to the right, so by the center-of-mass motion theorem the center of mass of the ball accelerates to the right relative to the table, even though it slides to the left relative to the paper (and begins to roll backward).
+
 2. Can the center of mass lie outside the body?
-   Hint: Yes, as for a ring or a semicircular wire (Example 3.5.2).
+
+   **Answer** Yes, as for a ring or a semicircular wire (Example 3.5.2).
+
 3. Regard a system of particles at some instant as a whole. What is the net torque about the center of mass of the gravitational forces on the particles? Use this to explain why the torque of the inertial forces about the center of mass is zero.
-   Hint: It is zero in a uniform gravitational field, because $\sum_i\boldsymbol{r}'_i\times m_i\boldsymbol{g} = \big(\sum_im_i\boldsymbol{r}'_i\big)\times\boldsymbol{g} = \boldsymbol{0}$; the inertial forces $-m_i\boldsymbol{a}_C$ have exactly the same structure (Section 3.10.2).
+
+   **Answer** It is zero in a uniform gravitational field, because $\sum_i\boldsymbol{r}'_i\times m_i\boldsymbol{g} = \big(\sum_im_i\boldsymbol{r}'_i\big)\times\boldsymbol{g} = \boldsymbol{0}$; the inertial forces $-m_i\boldsymbol{a}_C$ have exactly the same structure (Section 3.10.2).

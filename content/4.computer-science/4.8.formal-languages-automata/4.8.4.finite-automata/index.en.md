@@ -1,7 +1,7 @@
 ---
 title: Finite Automata
 description: Definition of deterministic finite automata (DFA), transition diagrams and tables, the extended transition function and language, DFA design; nondeterministic finite automata (NFA); the subset construction and its correctness, equivalence of DFA and NFA, and the exponential lower bound on the number of states; automata for text search (relation to KMP and Aho–Corasick); NFAs with ε-transitions, ε-closure, and the modified subset construction.
-source_hash: 3670c8bb9f96
+source_hash: c02b27fe2c2e
 ---
 
 [Chapter 1](/4.8.1) explained that the second route to describing a language is recognition: design a machine with only finitely many states that reads symbols one at a time, and say that a string belongs to the language if the machine is in an "accepting" state when the input is exhausted. This chapter formalizes such a machine as the *finite automaton* and discusses three models in turn: the **deterministic finite automaton** (DFA), which has exactly one move at each step; the nondeterministic finite automaton (NFA), which may have several moves at each step; and the ε-NFA, which may also change state without reading input. Nondeterminism makes design easier but adds no recognition power: the subset construction turns any NFA into an equivalent DFA, the central theorem of this chapter, at the price of a possibly exponential growth in the number of states. Finite automata are the common model of lexical analyzers, regular-expression engines, string-matching algorithms (the KMP algorithm of [4.3.13](/4.3.13) is a special DFA), and sequential circuits in digital logic ([4.9.7](/4.9.7)). Chapter 5 proves that finite automata describe the same family of languages as the regular expressions of Chapter 3, and Chapter 6 studies the properties of this family and gives an algorithm for minimizing DFAs.
@@ -387,7 +387,7 @@ Each of the two segments of arcs from $a$ to $c$ may read a 1 or nothing, which 
 - Correctness: characterize, for each state, the strings that reach it, and induct on the string length (**mutual induction**).
 - The subset construction needs to compute only the subsets reachable from the start state; direct simulation of an NFA (maintaining the current set of states) processes an input of length $m$ in $O(m s^2)$ time ($s$ the number of NFA states), without first constructing a DFA.
 
-## Exercises
+## Questions
 
 1. Give DFAs accepting the following languages over $\{a, b\}$: (1) no substring aa; (2) exactly an odd number of occurrences of the substring ab; (3) an even number of $a$s and even length; (4) containing the substring ab but not the substring bb; (5) equally many $a$s and $b$s, and in every prefix the difference between the numbers of $a$s and $b$s is at most 1.
 2. Prove that the DFA of Example 4.1.4 accepts exactly the binary numbers divisible by 3.

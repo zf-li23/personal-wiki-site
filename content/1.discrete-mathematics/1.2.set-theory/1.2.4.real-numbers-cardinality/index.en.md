@@ -1,6 +1,6 @@
 ---
 title: The Real Numbers and Cardinality
-source_hash: f120980b34e4
+source_hash: 7b4f50d471f2
 ---
 
 This chapter first constructs the integers, the rational numbers and the real numbers in turn within set theory, and then uses **bijections** to compare the sizes of arbitrary sets: it introduces equinumerosity, finite and infinite sets, cardinal numbers with their arithmetic and comparison, and finally discusses countable sets and the continuum hypothesis. The cardinality of finite sets from Chapter 1 (Definition 1.6.1) is extended here to arbitrary sets.
@@ -284,3 +284,19 @@ $$
 $$
 
 In ZFC it is equivalent to $2^{\aleph_0} = \aleph_1$, and also to the statement that every infinite subset of $\mathbb{R}$ is equinumerous either to $\mathbb{N}$ or to $\mathbb{R}$. Gödel (1940) proved that the continuum hypothesis cannot be refuted in ZFC, and Cohen (1963) proved that it cannot be proved in ZFC either: on the basis of the existing **axiomatic system**, it can be shown neither true nor false.
+
+## Summary
+
+- The construction of the number systems (Section 4.1) starts from $\mathbb{N}$: $\mathbb{Z}$ consists of the positive integers and negative integers of the form $\langle 0, n\rangle$ (Definition 4.1.1); $\mathbb{Q} = Q_1/{\approx}$ is a quotient set of pairs of integers (Definition 4.1.5); and $\mathbb{R} = B/{\sim}$ consists of equivalence classes of basic functions, that is, sequences of rationals that are bounded above and eventually nondecreasing (Definition 4.1.9).
+- Equinumerosity (Definition 4.2.1) compares the sizes of sets by bijections. Cantor's theorem (Theorem 4.2.3) gives $\mathbb{N} \not\approx \mathbb{R}$ and $A \not\approx \mathcal{P}(A)$, proved by the diagonal argument and by the set $D = \{x \in A \mid x \notin f(x)\}$, respectively.
+- A finite set is not equinumerous to any of its proper subsets (Corollary 4.3.1), and a set equinumerous to a proper subset must be infinite (Corollary 4.3.2).
+- Cardinal numbers (Definition 4.4.1) and their operations (Definition 4.5.1) obey the usual arithmetic laws (Theorem 4.5.1); the sum and product of infinite cardinals equal the larger one (Theorem 4.6.3).
+
+  | Cardinal | Examples |
+  | :-- | :-- |
+  | $\aleph_0$, the smallest infinite cardinal (Theorem 4.6.4) | $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{N} \times \mathbb{N}$ |
+  | $\aleph = 2^{\aleph_0}$ | $\mathbb{R}$, $[0, 1]$, $(0, 1)$, $\mathcal{P}(\mathbb{N})$ |
+  | $2^{\aleph}$ | $\mathcal{P}(\mathbb{R})$ |
+
+- The order of cardinals (Definition 4.6.1) is defined by injections; its antisymmetry is the Schröder–Bernstein theorem (Theorem 4.6.1), the most common tool for proving that two sets are equinumerous. By Cantor's theorem, $k < 2^k$ for every cardinal $k$.
+- Subsets, finite unions and Cartesian products of countable sets (Definition 4.7.1) are countable (Theorem 4.7.1). The continuum hypothesis asserts that there is no cardinal strictly between $\aleph_0$ and $2^{\aleph_0}$; it is independent of ZFC.

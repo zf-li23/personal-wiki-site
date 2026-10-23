@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Predicate Logic
-source_hash: d45735179c06
+source_hash: e7026f3182ee
 ---
 
 Propositional logic treats simple propositions as indivisible wholes, so it cannot analyze their internal logical structure (such as the relation between subject and predicate) or quantitative relations (such as "all" and "some"). To overcome these limitations we introduce *predicate logic*. Predicate logic can be viewed as an extension of propositional logic: it introduces **individual terms**, **predicates**, and **quantifiers**, which allow a finer description of the structure of sentences and of reasoning. This chapter deals only with first-order predicate logic, historically also called the restricted predicate calculus; the next chapter treats equivalence and inference in it.
@@ -266,3 +266,12 @@ The *decision problem* for predicate logic asks, for an arbitrary given predicat
 - formulas containing only unary predicate variables;
 - formulas of the form $(\forall x_1)(\forall x_2)\cdots(\forall x_n)P(x_1, x_2, \cdots, x_n)$ and $(\exists x_1)(\exists x_2)\cdots(\exists x_n)P(x_1, x_2, \cdots, x_n)$, where $P$ contains no quantifiers and no other free variables;
 - predicate formulas over a finite domain (which can be decided by enumerating all interpretations).
+
+## Summary
+
+- Predicate logic splits a proposition into individual terms and predicates: individual constants and variables (Definition 4.1.2) range over a domain of discourse (Definition 4.1.3), and $n$-ary predicates (Definitions 4.1.4 and 4.1.6) describe properties of and relations between individuals. Nullary predicates are propositions (Definition 4.1.7), so propositional logic is a special case of predicate logic.
+- The quantifiers are the universal quantifier $\forall$ and the existential quantifier $\exists$ (Definitions 4.2.2 and 4.2.3); variables bound within the scope of a quantifier are bound variables, the others are free (Definition 4.2.4). First-order logic lets quantifiers act only on individual variables (Definition 4.3.1), and its well-formed formulas are built recursively by Definition 4.3.2.
+- The key to formalization: a universal quantifier goes with an implication, $(\forall x)(M(x) \to F(x))$, and an existential quantifier with a conjunction, $(\exists x)(M(x) \land G(x))$, where $M$ is a characteristic predicate (Definition 4.4.1).
+- Over a finite domain $\{a_1, \dots, a_k\}$, $\forall$ expands into a conjunction and $\exists$ into a disjunction (Section 4.5).
+- By their truth values under all interpretations, formulas are valid, unsatisfiable or satisfiable (Definitions 4.6.1–4.6.3); over finite domains, validity and satisfiability depend only on the number of individuals (Property 4.6.1).
+- First-order logic is undecidable (Theorem 4.6.1), but several classes, such as formulas with only unary predicate variables and formulas over finite domains, are decidable (Theorem 4.6.2).

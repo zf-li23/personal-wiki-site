@@ -1,7 +1,7 @@
 ---
 title: Matter Waves and the Uncertainty Relation
 description: The de Broglie hypothesis and matter waves, electron diffraction experiments, phase and group velocities of matter waves, calculation of the de Broglie wavelength; the single-electron double-slit experiment, the wave function and Born's statistical interpretation, superposition of probability amplitudes and the superposition principle of states, plane waves of a free particle; the position–momentum and energy–time uncertainty relations and order-of-magnitude estimates.
-source_hash: 93b5d5edc0a0
+source_hash: 892b096040a0
 ---
 
 The previous chapter ([5.5.1](/5.5.1)) showed that light is both a wave and a particle: the energy and momentum of a **photon**, $\varepsilon=h\nu$ and $p=h/\lambda$, connect its particle nature with its wave nature. This chapter asks the converse question: do massive particles such as electrons and protons also have a wave nature? De Broglie answered yes in 1924, and electron diffraction experiments confirmed it three years later (Section 2.1). What kind of wave is a matter wave? The single-electron double-slit experiment and Born's statistical interpretation show that it is a probability wave describing the probability of finding the particle at each point in space, and that the essence of the wave nature is the coherent superposition of probability amplitudes (Section 2.2). The coexistence of particle and wave nature invalidates the classical concept of a "trajectory", and its quantitative expression is Heisenberg's uncertainty relation (Section 2.3).
@@ -311,8 +311,22 @@ Comparing Example 2.3.1 with Example 2.3.5 shows that whether the concept of a t
 
 ## Questions
 
-1. Which has the larger de Broglie wavelength, an electron or a proton of the same speed? What if they have the same kinetic energy? Hint: in both cases the electron's is larger. For the same speed $\lambda=h/(mv)\propto1/m$; for the same kinetic energy (nonrelativistic) $\lambda=h/\sqrt{2mE_{\mathrm{k}}}\propto1/\sqrt{m}$.
-2. Is a matter wave an **electromagnetic wave**? Hint: no. An electromagnetic wave is an oscillation of the electromagnetic field, whereas a matter wave is an oscillation of the probability amplitude; uncharged particles such as neutrons also have matter waves.
-3. Is the wave nature more pronounced the larger the momentum of the particle? Hint: on the contrary, the larger the momentum, the shorter the wavelength, the harder it is to observe diffraction at obstacles of a given size, and the more pronounced the particle nature.
-4. In the single-electron double-slit experiment, what happens to the pattern on the screen if a detector is placed behind one slit to determine through which slit each electron passes? Hint: the interference fringes disappear and the distribution becomes $P_1+P_2$. A measurement that can distinguish the paths necessarily disturbs the electron, so that the probability amplitudes of the two paths are no longer coherent.
-5. Is the uncertainty relation caused by insufficiently precise measuring instruments? Hint: no. It comes from the properties of the wave function itself: the more concentrated the coordinate wave function, the more spread out its Fourier transform (the momentum probability amplitude), independently of the means of measurement.
+1. Which has the larger de Broglie wavelength, an electron or a proton of the same speed? What if they have the same kinetic energy?
+
+   **Answer** in both cases the electron's is larger. For the same speed $\lambda=h/(mv)\propto1/m$; for the same kinetic energy (nonrelativistic) $\lambda=h/\sqrt{2mE_{\mathrm{k}}}\propto1/\sqrt{m}$.
+
+2. Is a matter wave an **electromagnetic wave**?
+
+   **Answer** no. An electromagnetic wave is an oscillation of the electromagnetic field, whereas a matter wave is an oscillation of the probability amplitude; uncharged particles such as neutrons also have matter waves.
+
+3. Is the wave nature more pronounced the larger the momentum of the particle?
+
+   **Answer** on the contrary, the larger the momentum, the shorter the wavelength, the harder it is to observe diffraction at obstacles of a given size, and the more pronounced the particle nature.
+
+4. In the single-electron double-slit experiment, what happens to the pattern on the screen if a detector is placed behind one slit to determine through which slit each electron passes?
+
+   **Answer** the interference fringes disappear and the distribution becomes $P_1+P_2$. A measurement that can distinguish the paths necessarily disturbs the electron, so that the probability amplitudes of the two paths are no longer coherent.
+
+5. Is the uncertainty relation caused by insufficiently precise measuring instruments?
+
+   **Answer** no. It comes from the properties of the wave function itself: the more concentrated the coordinate wave function, the more spread out its Fourier transform (the momentum probability amplitude), independently of the means of measurement.

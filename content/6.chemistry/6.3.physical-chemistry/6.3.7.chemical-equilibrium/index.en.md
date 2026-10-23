@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: 13361d9461f2
+source_hash: 892d80605e6d
 ---
 
 [6.1.8](/6.1.8) started from the empirical equilibrium constant and, with the help of ideal-gas and dilute-solution approximations, wrote down the **reaction isotherm** and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$, and discussed the effects of concentration, pressure, and temperature on equilibrium. With the **chemical potential** ([6.3.4](/6.3.4)) and the **activity** ([6.3.6](/6.3.6)) in hand, these results can be derived rigorously for any system. This chapter answers three questions: why a chemical reaction in general cannot go to completion and what the condition for equilibrium is (7.1); how the standard equilibrium constant is defined from chemical potentials and what form it takes for gases, solutions, and heterogeneous reactions (7.2–7.3); and how $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ is obtained and used (7.4). We then revisit the shift of equilibrium within the rigorous framework, including the van 't Hoff equation for $\Delta_{\mathrm{r}}C_p \ne 0$, the fugacity correction at high pressure, and the precise statement of Le Chatelier's principle (7.5). Finally we discuss simultaneous equilibria and coupled reactions, taking biochemical reactions driven by ATP hydrolysis as the example (7.6).
@@ -363,8 +363,13 @@ much more negative than the standard value: the cell continually regenerates ATP
 ## Questions
 
 1. For the reaction $\ce{2H2(g) + O2(g) <=> 2H2O(g)}$, if the amounts of the three substances are in the ratios $1:1:1$ and $2:1:2$, with other conditions the same, which of $K^\circ$, $Q$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ are the same?
-   Answer: $K^\circ$ and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ depend only on temperature and are the same; $Q$ and $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ vary with composition and are different.
+
+   **Answer** $K^\circ$ and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ depend only on temperature and are the same; $Q$ and $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ vary with composition and are different.
+
 2. Is it correct that "if different standard states are chosen, $\mu^\circ_{\mathrm{B}}$ differs, so $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ differs, but $\Delta_{\mathrm{r}}G_{\mathrm{m}}$ is the same"? Is it correct that "if the equilibrium has shifted, the equilibrium constant must have changed"?
-   Answer: The former is correct, since $\Delta_{\mathrm{r}}G_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\mu_{\mathrm{B}}$ is determined by the state of the system; the latter is wrong, since changing the pressure or concentration can shift the equilibrium while $K^\circ$ stays the same.
+
+   **Answer** The former is correct, since $\Delta_{\mathrm{r}}G_{\mathrm{m}} = \sum\nu_{\mathrm{B}}\mu_{\mathrm{B}}$ is determined by the state of the system; the latter is wrong, since changing the pressure or concentration can shift the equilibrium while $K^\circ$ stays the same.
+
 3. Can one say that every chemical reaction has a chemical equilibrium, that the equilibrium constant of a reaction that "cannot occur" is zero, and that that of a reaction that "goes to completion" is infinite?
-   Answer: No. $K^\circ = \exp(-\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/RT)$ is always a finite positive number, though it can be very large or very small. On the other hand, when reactants and products are all pure condensed phases that do not mix (7.1.1), the system has no composition to adjust, and apart from the temperature at which $K^\circ$ happens to equal 1 there is no equilibrium state: the reaction either goes to completion or does not proceed.
+
+   **Answer** No. $K^\circ = \exp(-\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/RT)$ is always a finite positive number, though it can be very large or very small. On the other hand, when reactants and products are all pure condensed phases that do not mix (7.1.1), the system has no composition to adjust, and apart from the temperature at which $K^\circ$ happens to equal 1 there is no equilibrium state: the reaction either goes to completion or does not proceed.

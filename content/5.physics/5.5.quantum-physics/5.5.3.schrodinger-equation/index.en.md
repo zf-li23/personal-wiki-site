@@ -1,7 +1,7 @@
 ---
 title: The Schrödinger Equation
 description: The Schrödinger equation and its linearity, the basic postulates of quantum mechanics and the Hamiltonian, stationary states and the energy eigenvalue equation; energy levels, zero-point energy and standing waves of the infinite square well; step potentials and finite barriers, the tunnel effect, the transmission coefficient, alpha decay and the scanning tunneling microscope; equally spaced levels, Hermite polynomials and the probability distribution of the one-dimensional quantum harmonic oscillator.
-source_hash: cea384552553
+source_hash: 4d1e80c8bd2f
 ---
 
 The previous two chapters ([5.5.1](/5.5.1), [5.5.2](/5.5.2)) showed that both light and massive particles have **wave–particle duality**, that the state of a particle is described by a **wave function**, and that $\lvert\Psi\rvert^2$ is the probability density of finding the particle. What is still missing is a dynamical law: given the force field in which the particle moves, how does the wave function change with time? The Schrödinger equation of this chapter answers this question, and its role in quantum mechanics is that of **Newton's second law** in classical mechanics. When the potential energy does not depend on time, **separation of variables** ([2.5.4](/2.5.4)) turns it into an **eigenvalue** problem, and the quantization of energy appears as the fact that the equation has physically acceptable solutions only at certain discrete energies; mathematically this is the same thing as a vibrating string having only a series of natural frequencies ([2.5.4](/2.5.4#sec-4.1.3)). Three one-dimensional models then illustrate the basic features of quantum mechanics: the infinite square well (energy quantization and zero-point energy), the potential barrier (the tunnel effect) and the harmonic oscillator (equally spaced levels). The next chapter ([5.5.4](/5.5.4)) treats the three-dimensional hydrogen atom by the same method; the harmonic oscillator is the basis of molecular vibrational spectra ([5.5.5](/5.5.5)) and of lattice vibrations in solids, and the well model is generalized to the free electron gas in metals in [5.5.6](/5.5.6).
@@ -340,12 +340,21 @@ The error is about $10^{-5}$ and decreases as $h^2$. The condition $\psi=0$ at t
 ## Questions
 
 1. Is the Schrödinger equation rigorously derived?
-   Hint: no. The argument in Section 3.1.1 only shows that it is compatible with the plane wave of a free particle; it is a basic postulate, tested by experiment.
+
+   **Answer** no. The argument in Section 3.1.1 only shows that it is compatible with the plane wave of a free particle; it is a basic postulate, tested by experiment.
+
 2. How does the Schrödinger equation guarantee that wave functions obey the superposition principle?
-   Hint: the equation is linear and homogeneous in $\Psi$, so linear combinations of solutions are again solutions.
+
+   **Answer** the equation is linear and homogeneous in $\Psi$, so linear combinations of solutions are again solutions.
+
 3. For a particle in the ground state of an infinite square well and of a harmonic oscillator, how many points other than the boundary have zero probability density? What about the $n$th excited state?
-   Hint: the ground state has no nodes; $\psi_n$ of the square well has $n-1$ nodes, and $\psi_n$ of the oscillator has $n$ nodes (the oscillator is numbered from $n=0$), so in both cases the $k$th excited state has $k$ nodes.
+
+   **Answer** the ground state has no nodes; $\psi_n$ of the square well has $n-1$ nodes, and $\psi_n$ of the oscillator has $n$ nodes (the oscillator is numbered from $n=0$), so in both cases the $k$th excited state has $k$ nodes.
+
 4. In an infinite well of width $2a$ the bottom of the right half is raised by $U_0$ ($E>U_0$). On which side is the wavelength larger? On which side is the amplitude of the wave function larger?
-   Hint: on the right the kinetic energy $E-U_0$ is smaller, so the momentum is smaller and the wavelength larger; the particle moves more slowly on the right and stays longer there, so the amplitude is also larger.
+
+   **Answer** on the right the kinetic energy $E-U_0$ is smaller, so the momentum is smaller and the wavelength larger; the particle moves more slowly on the right and stays longer there, so the amplitude is also larger.
+
 5. Compare the classical and quantum one-dimensional harmonic oscillators.
-   Hint: continuous versus equally spaced discrete energies; minimum energy zero versus zero-point energy $\frac12\hbar\omega$; probability largest at the two ends versus ground state largest at the center; particle cannot enter versus can enter the region $U>E$.
+
+   **Answer** continuous versus equally spaced discrete energies; minimum energy zero versus zero-point energy $\frac12\hbar\omega$; probability largest at the two ends versus ground state largest at the center; particle cannot enter versus can enter the region $U>E$.
