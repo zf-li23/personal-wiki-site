@@ -365,8 +365,9 @@ const LOOSE_ANSWER_RE = /^\s*(答案?|简答|解答?|Answers?|Solution)\s*[:：]
 const LOOSE_ANSWER_WORD = /^(答案?|简答|解答?|Answers?|Solution)[:：.]?$/;
 
 /**
- * In "## 思考题" / "## Questions", a list item's answer is the paragraph that starts with **答** /
- * **Answer** and everything after it in the item; it is folded into <details class="wiki-answer">.
+ * "## 思考题" / "## Questions" is one numbered list; every item is a question followed by its answer:
+ * the paragraph that starts with **答** / **Answer** and everything after it in the item, folded into
+ * <details class="wiki-answer">.
  */
 function rehypeQuestions(state: State) {
   const { ctx } = state;
@@ -382,9 +383,14 @@ function rehypeQuestions(state: State) {
         continue;
       }
       if (!inQuestions) continue;
-      visit(node, 'element', (li) => {
-        if (li.tagName === 'li') foldAnswer(state, li, lang);
-      });
+      // Each question is an item of one numbered list; anything else here has lost its indentation.
+      if (node.tagName !== 'ol') {
+        ctx.diag.warn(ctx.file, 'write the questions as one numbered list; indent formulas, sub-items and answers under their question (CONTENT_GUIDE §3)', lineOf(state, node));
+        continue;
+      }
+      for (const li of node.children) {
+        if (li.type === 'element' && li.tagName === 'li') foldAnswer(state, li, lang);
+      }
     }
   };
 }
@@ -415,6 +421,7 @@ function foldAnswer(state: State, li: Element, lang: 'zh' | 'en') {
         return;
       }
     }
+    ctx.diag.warn(ctx.file, `question without an answer: add a paragraph starting with **${ANSWER_LABEL[lang]}** under it (CONTENT_GUIDE §3)`, line);
     return;
   }
   const question = li.children.slice(0, at);

@@ -380,9 +380,86 @@ $$
 ## 思考题
 
 1. 用泵引理证明下列语言不是正规语言：(1) 0 的个数是 1 的个数的两倍的 $\{0,1\}$ 串；(2) 0 的个数多于 1 的个数的串；(3) $\{0^{m^2} \mid m \ge 0\}$；(4) $\{0,1\}$ 上的回文。
+
+   **答** 四个证明的框架相同：假设 $L$ 是正规语言，$n$ 是定理 6.1.1 给出的常数；选一个 $w \in L$，$\lvert w\rvert \ge n$；对任意满足 $y \ne \varepsilon$、$\lvert xy\rvert \le n$ 的分解 $w = xyz$，找出 $k$ 使 $xy^kz \notin L$，与泵引理矛盾。
+
+   (1) 取 $w = 0^{2n}1^n \in L$，$\lvert w\rvert = 3n \ge n$。由 $\lvert xy\rvert \le n$，$y$ 落在开头的 0 中，$y = 0^t$，$1 \le t \le n$。取 $k = 0$：$xz = 0^{2n-t}1^n$，0 的个数 $2n - t \ne 2n$，不属于 $L$，矛盾。$\square$
+
+   (2) 取 $w = 0^{n+1}1^n \in L$。同样 $y = 0^t$，$t \ge 1$。取 $k = 0$：$xz = 0^{n+1-t}1^n$，$n + 1 - t \le n$，0 不再多于 1，不属于 $L$，矛盾（向上泵没有用，见例 6.1.5）。$\square$
+
+   (3) 取 $w = 0^{n^2} \in L$，$\lvert w\rvert = n^2 \ge n$。$y = 0^t$，$1 \le t \le \lvert xy\rvert \le n$。取 $k = 2$：$\lvert xy^2z\rvert = n^2 + t$，而
+
+   $$
+   n^2 < n^2 + t \le n^2 + n < n^2 + 2n + 1 = (n + 1)^2,
+   $$
+   $n^2 + t$ 夹在两个相邻的平方数之间，不是平方数，$xy^2z \notin L$，矛盾。$\square$
+
+   (4) 取 $w = 0^n10^n \in L$。$y = 0^t$ 落在第一段 0 中，$t \ge 1$。取 $k = 0$：$xz = 0^{n-t}10^n$，它的反转是 $0^n10^{n-t} \ne xz$（唯一的 1 前后的 0 的个数不同），不是回文，矛盾。$\square$
 2. 设 $h(a) = 01$，$h(b) = 10$，$M = L((01 + 10)^*0)$，求 $h^{-1}(M)$ 的正规表达式。
+
+   **答** 对任意 $w \in \{a, b\}^*$，$h(w)$ 由长度为 2 的块拼成，长度 $2\lvert w\rvert$ 是偶数；而 $M$ 中的串是若干个长度为 2 的块再加一个 0，长度都是奇数。所以不存在 $w$ 使 $h(w) \in M$，$h^{-1}(M) = \varnothing$，正规表达式为 $\varnothing$。
 3. 设 $h(a) = \varepsilon$，$h(b) = 10$，$E = \varepsilon + (a + b)(ba)^*$。(1) 写出 $E^{\mathrm{R}}$；(2) 写出 $h(E)$；(3) 构造接受 $\overline{L(h(E))}$ 的 DFA。
+
+   **答** (1) 按 $(E_1 + E_2)^{\mathrm{R}} = E_1^{\mathrm{R}} + E_2^{\mathrm{R}}$、$(E_1E_2)^{\mathrm{R}} = E_2^{\mathrm{R}}E_1^{\mathrm{R}}$、$(E_1^*)^{\mathrm{R}} = (E_1^{\mathrm{R}})^*$ 递归地反转：$E^{\mathrm{R}} = \varepsilon + (ab)^*(a + b)$。
+
+   (2) 把 $a$ 换成 $\varepsilon$、$b$ 换成 $10$：$h(E) = \varepsilon + (\varepsilon + 10)(\varepsilon\,10)^* = \varepsilon + (\varepsilon + 10)(10)^*$，化简为 $(10)^*$。
+
+   (3) 字母表 $\{0, 1\}$ 上接受 $(10)^*$ 的 DFA 有状态 $p$（开始、接受）、$q$（刚读完一个 1）和死状态 $d$；交换接受与不接受的状态（定理 6.2.2）即得接受补集的 DFA：
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to p$ | $d$ | $q$ |
+   | $* q$ | $p$ | $d$ |
+   | $* d$ | $d$ | $d$ |
+
+   （对长度不超过 10 的全部串用程序核对过。）
 4. 给出判定 $L(A) = \Sigma^*$ 的算法，其中 $A$ 是 DFA；再给出判定 $L(A) \cup L(B) = \Sigma^*$ 的算法。
+
+   **答** $L(A) = \Sigma^*$ 当且仅当 $\overline{L(A)} = \varnothing$。把 $A$ 的接受与不接受状态交换得到接受补集的 DFA（定理 6.2.2），再按 6.3.1 节判断空性；等价地说，从开始状态作一次图搜索，$L(A) = \Sigma^*$ 当且仅当每个可达状态都是接受状态。时间 $O(\lvert Q\rvert\,\lvert\Sigma\rvert)$。
+
+   设 $B$ 也是 DFA（若是 NFA 或正规表达式，先转换为 DFA）。$L(A) \cup L(B) = \Sigma^*$ 当且仅当 $\overline{L(A)} \cap \overline{L(B)} = \varnothing$。作乘积自动机（定理 6.2.3），从 $(q_A, q_B)$ 出发搜索可达的状态对；结论成立当且仅当不存在可达的 $(p, q)$ 使 $p \notin F_A$ 且 $q \notin F_B$。时间 $O(\lvert Q_A\rvert\,\lvert Q_B\rvert\,\lvert\Sigma\rvert)$。只检查两台 DFA 各自的可达状态是不够的：两者都有不接受的可达状态时，它们未必能被同一个串同时到达。
 5. 极小化例 4.1.1 的 DFA 与例 4.5.2 得到的 DFA，并说明结果为什么是极小的。
+
+   **答** 例 4.1.1：四个状态都可达。第 0 轮标记接受状态 $q_0, q_3$ 与不接受状态 $q_1, q_2$ 之间的 4 对。剩下 $\{q_0, q_3\}$：读 0 到 $\{q_2, q_1\}$、读 1 到 $\{q_1, q_2\}$，未标记；$\{q_1, q_2\}$：读 0 到 $\{q_3, q_0\}$、读 1 到 $\{q_0, q_3\}$，未标记。第 1 轮没有新标记，算法结束：$q_0 \equiv q_3$，$q_1 \equiv q_2$。商自动机有两个状态 $[q_0]$（开始、接受）与 $[q_1]$，读 0、1 都在两者之间切换，接受的是长度为偶数的串（$\lvert w\rvert_0$ 与 $\lvert w\rvert_1$ 奇偶性相同当且仅当 $\lvert w\rvert$ 是偶数，与定理 4.1.1 一致）。
+
+   例 4.5.2：记 $P = \{q_0, q_1\}$、$B = \{q_1\}$、$C = \{q_1, q_4\}$、$D = \{q_2\}$、$E = \{q_2, q_3, q_5\}$、$F = \{q_3, q_5\}$、$N = \varnothing$，接受状态为 $E$、$F$，全部可达。
+
+   - 第 0 轮：标记 $\{E, F\}$ 中的状态与其余 5 个状态的对。
+   - 第 1 轮：读数字时 $D \to F$ 是接受状态，而 $P, B, C \to C$、$N \to N$ 不是，标记 $D$ 与 $P, B, C, N$ 的对；读小数点时 $C \to E$ 是接受状态，而 $P, B \to D$、$N \to N$ 不是，标记 $C$ 与 $P, B, N$ 的对。
+   - 第 2 轮：$\{P, N\}$、$\{B, N\}$ 读数字到 $\{C, N\}$，已标记。
+   - 第 3 轮：$\{P, B\}$ 读正负号到 $\{B, N\}$，已标记。
+   - $\{E, F\}$：读正负号、小数点都到 $N$，读数字都到 $F$，始终不被标记。
+
+   所以只有 $E \equiv F$（两者都已构成合法的小数，此后只能再读数字），极小 DFA 有 6 个状态：$P, B, C, D, [E] = \{E, F\}, N$。
+
+   两个结果都是极小的：由定理 6.4.1，填表结束后未合并的状态两两可区分，且它们都可达；由定理 6.4.2 与 6.5.2，极小化算法得到的 DFA 的状态数等于 $\equiv_L$ 的指标，任何接受同一语言的 DFA 都不会更少。（两次极小化也用程序核对过。）
 6. 求 $L = \{w \in \{a, b\}^* \mid w \text{ 的倒数第 2 个符号是 } a\}$ 的 $\equiv_L$ 的全部等价类，由此写出极小 DFA。
+
+   **答** $wz \in L$ 只取决于 $wz$ 的末两位，而 $wz$ 的末两位由 $w$ 的末两位与 $z$ 决定；把长度不足 2 的 $w$ 在左边补 $b$（补上的 $b$ 不会成为倒数第 2 位的 $a$），可知末两位（补齐后）相同的串等价。于是至多 4 个等价类：
+
+   - $C_{bb}$：$\varepsilon$、$b$ 与以 $bb$ 结尾的串；
+   - $C_{ba}$：$a$ 与以 $ba$ 结尾的串；
+   - $C_{ab}$：以 $ab$ 结尾的串；
+   - $C_{aa}$：以 $aa$ 结尾的串。
+
+   它们两两不等价：后缀 $\varepsilon$ 区分 $C_{ab}, C_{aa}$（属于 $L$）与 $C_{bb}, C_{ba}$（不属于 $L$）；后缀 $b$ 区分 $C_{bb}$ 与 $C_{ba}$（$bbb \notin L$，$bab \in L$），也区分 $C_{ab}$ 与 $C_{aa}$（$abb \notin L$，$aab \in L$）。所以 $\equiv_L$ 恰有 4 个等价类。按 $\delta([x], c) = [xc]$，即末两位 $uv$ 读 $c$ 变为 $vc$，得到极小 DFA：
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to C_{bb}$ | $C_{ba}$ | $C_{bb}$ |
+   | $C_{ba}$ | $C_{aa}$ | $C_{ab}$ |
+   | $* C_{ab}$ | $C_{ba}$ | $C_{bb}$ |
+   | $* C_{aa}$ | $C_{aa}$ | $C_{ab}$ |
+
+   这与定理 4.3.3（$n = 2$，符号 $a$ 代替 1）的下界 $2^2 = 4$ 一致。
 7. 证明：若 $L$ 是正规语言，则 $\operatorname{half}(L) = \{x \mid \text{存在 } y,\ \lvert y\rvert = \lvert x\rvert,\ xy \in L\}$ 也是正规语言。（提示：同时模拟"从开始状态读 $x$"和"猜测一个状态、向后读 $y$"。）
+
+   **答** 设 DFA $A = (Q, \Sigma, \delta, q_0, F)$ 接受 $L$。$x \in \operatorname{half}(L)$ 当且仅当存在长为 $\lvert x\rvert$ 的路径从 $\hat\delta(q_0, x)$ 到 $F$ 中的某个状态。构造 NFA $N$ 同时追踪两件事：第一个分量从 $q_0$ 出发正向读 $x$；第二个分量从猜测的接受状态出发，每读 $x$ 的一个符号，就沿 $A$ 的某条弧（符号任意）倒退一步，相当于从后往前"读"一个长度与 $x$ 相同的 $y$。
+
+   - 状态集 $Q \times Q$；开始状态为全体 $(q_0, f)$，$f \in F$（多个开始状态可以用一个新开始状态加 ε 弧实现）；
+   - 转移：$\delta_N((q, r), a) = \{(\delta(q, a), r') \mid \text{存在 } b \in \Sigma \text{ 使 } \delta(r', b) = r\}$；
+   - 接受状态：$\{(q, q) \mid q \in Q\}$。
+
+   对 $\lvert x\rvert$ 归纳可证：读完 $x$ 后 $N$ 可以处于 $(q, r)$，当且仅当 $q = \hat\delta(q_0, x)$，且存在 $y$，$\lvert y\rvert = \lvert x\rvert$，使 $\hat\delta(r, y) \in F$（$y$ 由倒退时选用的弧的符号按相反次序组成）。于是 $N$ 接受 $x$，当且仅当存在这样的 $y$ 使 $\hat\delta(q_0, x) = r$ 且 $\hat\delta(r, y) \in F$，即 $\hat\delta(q_0, xy) \in F$、$xy \in L$。所以 $L(N) = \operatorname{half}(L)$，由定理 4.3.2 它是正规语言。$\square$
+
+   也可以直接构造 DFA：令 $\operatorname{pre}(S) = \{p \mid \text{存在 } b \text{ 使 } \delta(p, b) \in S\}$，状态为 $(q, S) \in Q \times \mathcal{P}(Q)$，开始 $(q_0, F)$，$(q, S) \xrightarrow{a} (\delta(q, a), \operatorname{pre}(S))$，接受 $q \in S$ 的状态；读完 $x$ 后 $S$ 恰是能用长为 $\lvert x\rvert$ 的串到达 $F$ 的状态集合，这正是对上面 NFA 作子集构造的结果。

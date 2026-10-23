@@ -1,7 +1,7 @@
 ---
 title: Equivalence of Regular Expressions and Finite Automata
 description: Kleene's theorem, that regular expressions and finite automata describe the same family of languages. Thompson's construction from regular expressions to ε-NFAs; Kleene's algorithm, state elimination, and the system-of-equations method (Arden's lemma) from DFAs to regular expressions; equivalence of regular grammars and finite automata; the cost of the conversions, and three implementations of regex engines (NFA simulation, DFA, backtracking).
-source_hash: 617b2654c7f5
+source_hash: 856357f575d9
 ---
 
 Chapter 3 defined the **regular languages** algebraically: the languages denoted by **regular expressions**. Chapter 4 defined another family of languages by machines: the languages accepted by finite automata (DFAs, NFAs, or ε-NFAs, which are equivalent). This chapter proves that the two families coincide, a result called Kleene's theorem; together with the type-3 grammars of Chapter 2, the regular languages thus have three equivalent descriptions: algebraic, machine, and grammatical. Both directions of the proof are constructive: starting from a regular expression, we can assemble an ε-NFA according to the structure of the expression (Thompson's construction), which is the starting point of practical regex engines; starting from a DFA, we can write down a regular expression by path iteration, state elimination, or solving equations. Finally we discuss the cost of these conversions and how they determine the matching algorithms of practical regular expressions ([4.2.11](/4.2.11)).
@@ -300,8 +300,163 @@ Each increase of $n$ by 2 roughly quadruples the time. Matching the same pattern
 ## Questions
 
 1. Convert $(0 + 1)^*01$ and $(ab + a)^*$ to ε-NFAs by Thompson's construction, and then to DFAs by the modified subset construction.
+
+   **Answer** (1) $(0 + 1)^*01$. The basic automata are $c \xrightarrow{0} d$, $e \xrightarrow{1} f$, $i \xrightarrow{0} j$, $k \xrightarrow{1} l$; the union $0 + 1$ adds $b$ and $g$; the closure adds $a$ and $h$; the two concatenations add the arcs $h \to i$ and $j \to k$. There are 12 states, with start state $a$ and accepting state $l$:
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| a((a))
+       a -->|ε| b((b))
+       a -->|ε| h((h))
+       b -->|ε| c((c))
+       b -->|ε| e((e))
+       c -->|0| d((d))
+       e -->|1| f((f))
+       d -->|ε| g((g))
+       f -->|ε| g
+       g -->|ε| b
+       g -->|ε| h
+       h -->|ε| i((i))
+       i -->|0| j((j))
+       j -->|ε| k((k))
+       k -->|1| l(((l)))
+       style st fill:none,stroke:none
+   ```
+
+   The modified subset construction starts from $\operatorname{ECLOSE}(a) = \{a, b, c, e, h, i\}$:
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to P = \{a, b, c, e, h, i\}$ | $Q$ | $R$ |
+   | $Q = \{b, c, d, e, g, h, i, j, k\}$ | $Q$ | $T$ |
+   | $R = \{b, c, e, f, g, h, i\}$ | $Q$ | $R$ |
+   | $* T = \{b, c, e, f, g, h, i, l\}$ | $Q$ | $R$ |
+
+   For example, $\delta_D(P, 0) = \operatorname{ECLOSE}(\{d, j\})$: from $d$ we go through $g$ back to $b, c, e$ and on to $h, i$, and from $j$ to $k$. $Q$ means the string ends in 0, $T$ means it ends in 01, and $P$ and $R$ both mean "ends neither in 0 nor in 01"; they have the same transitions and acceptance and are equivalent. Merging them gives the 3-state minimal DFA, the same as the DFA for strings ending in 01 in Section 4.3.
+
+   (2) $(ab + a)^*$. The basic automata are $c \xrightarrow{a} d$, $e \xrightarrow{b} f$, $g \xrightarrow{a} h$; the concatenation $ab$ adds the arc $d \to e$; the union adds $b$ and $i$; the closure adds $a$ and $j$. There are 10 states, with start state $a$ and accepting state $j$:
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| a((a))
+       a -->|ε| b((b))
+       a -->|ε| j(((j)))
+       b -->|ε| c((c))
+       b -->|ε| g((g))
+       c -->|a| d((d))
+       d -->|ε| e((e))
+       e -->|b| f((f))
+       g -->|a| h((h))
+       f -->|ε| i((i))
+       h -->|ε| i
+       i -->|ε| b
+       i -->|ε| j
+       style st fill:none,stroke:none
+   ```
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to * P = \{a, b, c, g, j\}$ | $Q$ | $\varnothing$ |
+   | $* Q = \{b, c, d, e, g, h, i, j\}$ | $Q$ | $R$ |
+   | $* R = \{b, c, f, g, i, j\}$ | $Q$ | $\varnothing$ |
+   | $\varnothing$ | $\varnothing$ | $\varnothing$ |
+
+   $P$ and $R$ are equivalent; after merging them the minimal DFA has 3 states: $\{P, R\}$ (start and accepting: the empty string or a string ending in $b$), $Q$ (accepting: ending in $a$), and the dead state $\varnothing$. It accepts the strings that do not begin with $b$ and contain no bb, in agreement with the meaning of $(ab + a)^*$ (every $b$ is immediately preceded by an $a$). Both DFAs were checked by a program against all strings of length at most 12.
 2. Find a regular expression for the DFA of Example 4.1.4 (binary numbers divisible by 3) by path iteration, find one again by state elimination, and compare the results.
+
+   **Answer** Number the states for the remainders 0, 1, 2 as 1, 2, 3; state 1 is both the start and the accepting state. The transitions are $1 \xrightarrow{0} 1$, $1 \xrightarrow{1} 2$, $2 \xrightarrow{0} 3$, $2 \xrightarrow{1} 1$, $3 \xrightarrow{0} 2$, $3 \xrightarrow{1} 3$. We need $R_{11}^{(3)}$.
+
+   $k = 0$: $R_{11} = \varepsilon + 0$, $R_{12} = 1$, $R_{13} = \varnothing$, $R_{21} = 1$, $R_{22} = \varepsilon$, $R_{23} = 0$, $R_{31} = \varnothing$, $R_{32} = 0$, $R_{33} = \varepsilon + 1$.
+
+   $k = 1$ (with $(R_{11}^{(0)})^* = 0^*$): $R_{11} = 0^*$, $R_{12} = 0^*1$, $R_{13} = \varnothing$, $R_{21} = 10^*$, $R_{22} = \varepsilon + 10^*1$, $R_{23} = 0$; the $R_{3j}$ are unchanged (since $R_{31}^{(0)} = \varnothing$).
+
+   $k = 2$ (with $(R_{22}^{(1)})^* = (10^*1)^*$, written $Y = (10^*1)^*$):
+
+   $$
+   \begin{aligned}
+   R_{11}^{(2)} &= 0^* + 0^*1Y10^*, & R_{13}^{(2)} &= 0^*1Y0,\\
+   R_{31}^{(2)} &= 0Y10^*, & R_{33}^{(2)} &= \varepsilon + 1 + 0Y0.
+   \end{aligned}
+   $$
+
+   $k = 3$: $R_{11}^{(3)} = R_{11}^{(2)} + R_{13}^{(2)}\bigl(R_{33}^{(2)}\bigr)^*R_{31}^{(2)}$, that is,
+
+   $$
+   0^* + 0^*1(10^*1)^*10^* + 0^*1(10^*1)^*0\bigl(1 + 0(10^*1)^*0\bigr)^*0(10^*1)^*10^*.
+   $$
+
+   State elimination: first eliminate state 3 (self-loop 1; its only predecessor and successor is 2, both arcs labeled 0), which gives the self-loop $01^*0$ on 2; then eliminate 2 (entered from 1 on 1, returning to 1 on 1), which turns the self-loop on 1 into $0 + 1(01^*0)^*1$. Only the start state remains, and the result is
+
+   $$
+   \bigl(0 + 1(01^*0)^*1\bigr)^*.
+   $$
+
+   Comparison: the two expressions are equivalent (both come from the same DFA; they were also checked by a program against all strings of length at most 12), but the path-iteration result is much longer. Path iteration proceeds in a fixed order of state numbers, so $R_{11}^{(3)}$ has to write "not passing through 3" and "passing through 3" separately, and the same subexpression $(10^*1)^*$ recurs; state elimination merges each loop into a closure directly at every step and is better suited to hand computation.
 3. Find a regular expression for the DFA of Example 4.1.2 (ending in 00) by the system-of-equations method.
+
+   **Answer** With states $p_0$ (start), $p_1$, $p_2$ (accepting), the system is
+
+   $$
+   X_0 = 1X_0 + 0X_1, \qquad X_1 = 1X_0 + 0X_2, \qquad X_2 = 0X_2 + 1X_0 + \varepsilon.
+   $$
+   By Arden's lemma the third equation gives $X_2 = 0^*(1X_0 + \varepsilon)$. Substituting into the second: $X_1 = 1X_0 + 00^*1X_0 + 00^* = (1 + 00^*1)X_0 + 00^*$. Substituting into the first:
+
+   $$
+   X_0 = (1 + 01 + 000^*1)X_0 + 000^*.
+   $$
+   The coefficient $1 + 01 + 000^*1 = (\varepsilon + 0 + 000^*)1 = 0^*1$ does not contain $\varepsilon$, so another application of Arden's lemma gives
+
+   $$
+   X_0 = (0^*1)^*000^* = (0^*1)^*0^*00 = (0 + 1)^*00,
+   $$
+   where the last step uses $(0^*1)^*0^* = (0 + 1)^*$ (cut any string after each 1).
 4. Suppose the closure step of Thompson's construction adds no new states, only the ε-arcs $s_1 \to f_1$ and $f_1 \to s_1$, with $s_1$ and $f_1$ as the start and accepting states. Show that for the expression $(a^*b)^*$ the resulting automaton accepts $a$. Which property is violated?
+
+   **Answer** With the modified construction: the basic automaton for $a$ is $1 \xrightarrow{a} 2$, and the closure adds $1 \xrightarrow{\varepsilon} 2$ and $2 \xrightarrow{\varepsilon} 1$, giving $a^*$ (start 1, accepting 2); the basic automaton for $b$ is $3 \xrightarrow{b} 4$, and the concatenation adds $2 \xrightarrow{\varepsilon} 3$, giving $a^*b$ (start 1, accepting 4); the outer closure adds $1 \xrightarrow{\varepsilon} 4$ and $4 \xrightarrow{\varepsilon} 1$, with start 1 and accepting state 4.
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| n1((1))
+       n1 -->|a| n2((2))
+       n1 -->|ε| n2
+       n2 -->|ε| n1
+       n2 -->|ε| n3((3))
+       n3 -->|b| n4(((4)))
+       n1 -->|ε| n4
+       n4 -->|ε| n1
+       style st fill:none,stroke:none
+   ```
+
+   The path $1 \xrightarrow{a} 2 \xrightarrow{\varepsilon} 1 \xrightarrow{\varepsilon} 4$ is labeled $a$, so $a$ is accepted; but every nonempty string of $L((a^*b)^*)$ ends in $b$, so $a$ does not belong to it.
+
+   The violated property is property 2 (no arcs into the start state): the automaton for the inner $a^*$ has the back arc $2 \to 1$ into its start state 1 (the same arc leaves its accepting state 2, so property 3 is violated as well). The shortcut $1 \xrightarrow{\varepsilon} 4$ of the outer closure is meant to be used only when no copy of $a^*b$ is read at all, but state 1 can be re-entered after some $a$s have been read, so a path can loop inside $a^*$ and then jump past the $b$ straight to the accepting state. The proof of Theorem 5.1.1 needs "a subautomaton can be entered only through its start state and left only through its accepting state", which is exactly what the two properties guarantee.
 5. Give a regular grammar generating "strings with an even number of 0s", and draw the ε-NFA constructed in Theorem 5.3.1.
+
+   **Answer** The DFA of Example 5.2.3 ($E$: an even number of 0s read so far, $O$: an odd number) gives the grammar
+
+   $$
+   E \to 1E \mid 0O \mid \varepsilon, \qquad O \to 1O \mid 0E,
+   $$
+   with start symbol $E$; $E \to \varepsilon$ is the case $a = \varepsilon$ of $A \to a$. The construction of Theorem 5.3.1 takes the nonterminals as states and adds an accepting state $f$: $A \to aB$ gives the arc $A \xrightarrow{a} B$, and $E \to \varepsilon$ gives the ε-arc $E \to f$:
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| E((E))
+       E -->|1| E
+       E -->|0| O((O))
+       O -->|1| O
+       O -->|0| E
+       E -->|ε| f(((f)))
+       style st fill:none,stroke:none
+   ```
+
+   A path from $E$ to $f$ moves between $E$ and $O$ for a while and must end in $E$, that is, it reads an even number of 0s.
 6. Prove that $S \to 0A \mid \varepsilon$, $A \to S1$ generates $\{0^n1^n \mid n \ge 0\}$.
+
+   **Answer** Every sentential form contains at most one nonterminal, and $A$ has only the production $A \to S1$, so a derivation from $S$ is either $S \Rightarrow \varepsilon$ or begins with $S \Rightarrow 0A \Rightarrow 0S1$.
+
+   ($\subseteq$) Induction on the number of derivation steps: a one-step derivation yields only $\varepsilon = 0^01^0$. Otherwise $S \Rightarrow 0A \Rightarrow 0S1 \overset{*}{\Rightarrow} 0u1$, where $S \overset{*}{\Rightarrow} u$ takes two steps fewer; by the induction hypothesis $u = 0^m1^m$, so $w = 0^{m+1}1^{m+1}$.
+
+   ($\supseteq$) Induction on $n$: for $n = 0$, $S \Rightarrow \varepsilon$; for $n \ge 1$, the induction hypothesis gives $S \overset{*}{\Rightarrow} 0^{n-1}1^{n-1}$, so $S \Rightarrow 0A \Rightarrow 0S1 \overset{*}{\Rightarrow} 0^n1^n$. $\square$
+
+   The grammar mixes the right-linear production $S \to 0A$ with the left-linear production $A \to S1$, so it is not a regular grammar; by Example 6.1.1 the language it generates is not regular either.

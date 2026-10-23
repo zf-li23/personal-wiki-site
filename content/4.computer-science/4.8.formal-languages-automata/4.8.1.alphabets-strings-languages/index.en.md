@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Alphabets, Strings, and Languages"
 description: The two main lines of formal languages and automata (grammars that generate languages, automata that recognize them) and a map of the course; alphabets, strings, languages and their operations (concatenation, Kleene closure, reversal); Σ* is countable while the set of languages is not; proof methods used throughout the course (deduction, contrapositive, contradiction, inductive definitions and structural induction, mutual induction).
-source_hash: be98640d014b
+source_hash: 96cb9b0f2722
 ---
 
 Formal languages and automata address the following question: how can we describe, by finitely many rules, a set of strings that is usually infinite, and how can a machine decide whether a given string belongs to the set? There are two routes. The first is generation: write down a set of rewriting rules (a grammar), and call a sentence valid if the rules can produce it. The second is recognition: design a machine with only finitely many states (an automaton) that reads symbols one at a time, and call a sentence valid if the machine is in an "accepting" state when the input is exhausted. The two routes are two sides of one coin, and most theorems of this course say that a certain class of grammars and a certain class of automata describe exactly the same family of languages. The theory underlies lexical and syntactic analysis in compilers ([4.2.2](/4.2.2)), and is the mathematics behind practical **regular expressions** ([4.2.11](/4.2.11)), string matching algorithms ([4.3.13](/4.3.13)), and computability theory (the **Turing machine** introduced in [4.3.1](/4.3.1)). This chapter first looks at an intuitive example of each route, then defines the basic objects of the whole course (alphabets, strings, languages, and their operations), and finally reviews the proof methods that will be used again and again.
@@ -235,5 +235,19 @@ The two statements support each other: $S_1(n+1)$ depends on $S_2(n)$, and $S_2(
        style s0 fill:none,stroke:none
    ```
 
+   **Answer** Let $q(w)$ denote the state after reading $w$. We prove by induction on $\lvert w\rvert$ the two statements
+
+   - $S_1(w)$: $q(w) = 1$ if and only if $\lvert w\rvert_0$ is even;
+   - $S_2(w)$: $q(w) = 2$ if and only if $\lvert w\rvert_0$ is odd.
+
+   Basis $w = \varepsilon$: $q(\varepsilon) = 1$ is the start state and $\lvert \varepsilon\rvert_0 = 0$ is even, so both sides of $S_1(\varepsilon)$ are true; $q(\varepsilon) \ne 2$ and 0 is not odd, so both sides of $S_2(\varepsilon)$ are false and the equivalence holds.
+
+   Induction: let $w = xa$ and assume $S_1(x)$ and $S_2(x)$. If $a = 1$, both states stay put on 1, so $q(w) = q(x)$, while $\lvert w\rvert_0 = \lvert x\rvert_0$; $S_1(w)$ and $S_2(w)$ follow directly from $S_1(x)$ and $S_2(x)$. If $a = 0$, reading 0 switches between the two states: $q(w) = 1$ if and only if $q(x) = 2$, which by $S_2(x)$ holds if and only if $\lvert x\rvert_0$ is odd, that is, if and only if $\lvert w\rvert_0 = \lvert x\rvert_0 + 1$ is even; this is $S_1(w)$. Likewise $q(w) = 2$ if and only if $q(x) = 1$, which by $S_1(x)$ holds if and only if $\lvert x\rvert_0$ is even, that is, if and only if $\lvert w\rvert_0$ is odd; this is $S_2(w)$. Since $S_1(w)$ uses $S_2(x)$ and $S_2(w)$ uses $S_1(x)$, this is exactly a mutual induction. $\square$
 2. Prove that $(L^*)^* = L^*$, and give an example showing that in general $(LM)^* \ne L^*M^*$.
+
+   **Answer** ($\supseteq$) $L^* = (L^*)^1 \subseteq (L^*)^*$. ($\subseteq$) Let $w \in (L^*)^*$. Then $w = u_1 u_2 \cdots u_k$ with $k \ge 0$, and each $u_i \in L^*$ is in turn a concatenation $u_i = v_{i1} \cdots v_{im_i}$ of finitely many strings of $L$. Hence $w$ is a concatenation of $m_1 + \cdots + m_k$ strings of $L$ and lies in $L^*$ (for $k = 0$, $w = \varepsilon \in L^*$).
+
+   Counterexample: $L = \{a\}$, $M = \{b\}$. Then $(LM)^* = \{\varepsilon, ab, abab, \dots\}$ and $L^*M^* = \{a^ib^j \mid i, j \ge 0\}$. We have $a \in L^*M^*$ but $a \notin (LM)^*$, and $abab \in (LM)^*$ but $abab \notin L^*M^*$, so neither inclusion holds.
 3. Let $\Sigma = \{a, b\}$. How many strings over $\Sigma$ have length at most $n$?
+
+   **Answer** There are $\lvert\Sigma\rvert^i = 2^i$ strings of length exactly $i$, so there are $\sum_{i=0}^{n} 2^i = 2^{n+1} - 1$ in total.

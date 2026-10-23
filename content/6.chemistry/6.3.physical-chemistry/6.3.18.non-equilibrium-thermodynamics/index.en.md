@@ -1,7 +1,7 @@
 ---
 title: Nonequilibrium Thermodynamics
 description: Entropy flow and entropy production, local equilibrium and the entropy balance equation; phenomenological relations in the linear region, Onsager reciprocal relations, cross effects, membrane transport and active transport, the principle of minimum entropy production; dissipative structures far from equilibrium, Brusselator oscillation and Hopf bifurcation, the BZ reaction, Turing patterns; negative entropy flow in living systems.
-source_hash: 3bc47d54d877
+source_hash: a8e34ffc1649
 ---
 
 The thermodynamics of the preceding chapters deals only with equilibrium states and with reversible processes that connect them: for irreversible processes it gives only the direction ($\Delta S_{\text{isolated}} > 0$, $\Delta G < 0$) and does not answer "how fast" or "how coupled". Yet almost all the striking phenomena in nature occur under nonequilibrium conditions: heat conduction along a temperature gradient, transport of matter across a membrane, chemical reactions that go on continuously, and also chemical oscillations, spatial patterns and life itself. This chapter extends thermodynamics to nonequilibrium systems. Section 18.1 decomposes the change of entropy into entropy flow and entropy production and, under the local equilibrium hypothesis, writes the entropy balance equation, from which the entropy production is expressed as a sum of "flux × force"; Section 18.2 discusses the near-equilibrium linear region: phenomenological relations, the Onsager reciprocal relations and their microscopic basis, cross effects such as thermoelectricity and thermal diffusion, the equations of membrane transport and active transport across biological membranes, and the principle of minimum entropy production; Section 18.3 enters the far-from-equilibrium nonlinear region and uses the kinetics of the previous three chapters ([6.3.15](/6.3.15)–[6.3.17](/6.3.17)) together with the stability theory of ordinary differential equations ([2.4.11](/2.4.11)) to analyze chemical oscillations and Turing patterns, showing how ordered structures are maintained by continuous dissipation; Section 18.4 returns to living systems and ties in with the **principle of entropy increase** in physics ([5.2.4](/5.2.4#thm-4.6.2)) and with the prelude at the end of [6.3.2](/6.3.2). This is the chapter in which physical chemistry connects most closely with biophysics: a cell is an open system far from equilibrium, and its energy conversion, transport and timekeeping all have to be described in the language developed here.
@@ -547,12 +547,38 @@ The three are unified in statistical mechanics: the Gibbs entropy $S = -k_{\math
 
 1. A cup of hot water cools at room temperature and its entropy decreases. Analyze this process using $\mathrm{d}_{\mathrm{e}}S$ and $\mathrm{d}_{\mathrm{i}}S$ and indicate where the entropy production occurs.
 
+   **Answer** Take the water as the system, with a roughly uniform temperature $T_{\mathrm{w}}$. The water releases heat, $\delta Q < 0$, so the entropy flow is $\mathrm{d}_{\mathrm{e}}S = \delta Q/T_{\mathrm{w}} < 0$; temperature differences inside the water are small, so $\mathrm{d}_{\mathrm{i}}S \approx 0$ and $\mathrm{d}S \approx \delta Q/T_{\mathrm{w}} < 0$, in no conflict with Theorem 18.1.1. The entropy is produced where the temperature drops from $T_{\mathrm{w}}$ to the room temperature $T_0$, that is, in the wall of the cup and in the air boundary layer above the water surface and outside the cup: just as for the conducting rod of Example 18.1.1, this layer produces entropy $\lvert\delta Q\rvert(1/T_0 - 1/T_{\mathrm{w}}) > 0$ for every $\lvert\delta Q\rvert$ of heat passed through it. The entropy gained by the surroundings, $\lvert\delta Q\rvert/T_0$, exceeds the entropy lost by the water, and the total entropy of water, boundary layer and surroundings increases.
+
 2. Why is the Gibbs free energy criterion a special case of Theorem 18.1.1? How should the entropy production be written at constant temperature and volume when the non-volume work is nonzero (such as the electrical work done by a discharging battery)?
+
+   **Answer** For a closed system at constant temperature and pressure with only volume work, $\delta Q = \mathrm{d}H$ and $\mathrm{d}_{\mathrm{e}}S = \mathrm{d}H/T$, so $T\,\mathrm{d}_{\mathrm{i}}S = T\,\mathrm{d}S - \mathrm{d}H = -\mathrm{d}G$; the statement $\mathrm{d}_{\mathrm{i}}S \ge 0$ is exactly $\mathrm{d}G \le 0$, which is the relation $T\,\mathrm{d}_{\mathrm{i}}S = \mathcal{A}\,\mathrm{d}\xi = -\mathrm{d}G$ of Section 18.1.3.
+
+   At constant temperature and volume, with non-volume work $\delta W'$ done on the system by the surroundings, $\mathrm{d}U = \delta Q + \delta W'$ and $\mathrm{d}_{\mathrm{e}}S = \delta Q/T$, so
+
+   $$
+   T\,\mathrm{d}_{\mathrm{i}}S = T\,\mathrm{d}S - \mathrm{d}U + \delta W' = -\mathrm{d}A + \delta W' \ge 0 .
+   $$
+   For a cell in which a single reaction takes place, $-\mathrm{d}A = \mathcal{A}\,\mathrm{d}\xi$ at constant $T$ and $V$; on discharge the cell does electrical work $zFE_{\mathrm{cell}}\,\mathrm{d}\xi$ on the external circuit, i.e. $\delta W' = -zFE_{\mathrm{cell}}\,\mathrm{d}\xi$, and therefore
+
+   $$
+   \mathrm{d}_{\mathrm{i}}S = \frac{(\mathcal{A} - zFE_{\mathrm{cell}})\,\mathrm{d}\xi}{T} \ge 0 ,
+   $$
+   where $E_{\mathrm{cell}}$ is the voltage across the terminals during operation. In reversible discharge (current tending to zero) $E_{\mathrm{cell}} = \mathcal{A}/(zF)$, the entropy production vanishes and the electrical work is maximal, equal to $-\Delta A$; the larger the current, the lower the voltage and the larger the part of $\mathcal{A}$ dissipated as Joule heat and overpotential.
 
 3. For $\ce{A <=> B}$ at $298\,\mathrm{K}$ let $\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$. Compute $v/v_+$ with the exact form of Eq. (18.9) and with the linear approximation; how large is the relative error of the linear approximation?
 
+   **Answer** $\mathcal{A}/RT = 5000/(8.314 \times 298.15) = 2.017$. The exact form gives $v/v_+ = 1 - \mathrm{e}^{-2.017} = 0.867$; the linear approximation (taking $v_+$ as $v_{\mathrm{eq}}$ and $1 - \mathrm{e}^{-x} \approx x$) gives $v/v_+ \approx 2.017$, a relative error of $(2.017 - 0.867)/0.867 \approx 133\%$. The linear approximation even gives $v > v_+$, which is impossible (the reverse rate cannot be negative): $\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$ is about $2RT$, already outside the linear region.
+
 4. If a transporter accompanies each glucose transported by only 1 $\ce{Na+}$, what is the maximum ratio of glucose concentrations inside and outside the cell, with the data of Example 18.2.2?
+
+   **Answer** Glucose is uncharged, so at equilibrium its chemical potential difference $RT\ln(c_{\text{in}}/c_{\text{out}})$ equals the drop of the electrochemical potential of one $\ce{Na+}$ entering the cell, $13.2\,\mathrm{kJ\,mol^{-1}}$; hence $c_{\text{in}}/c_{\text{out}} \le \exp(13.2/2.58) \approx 1.7\times10^2$. This is two orders of magnitude below the value of about $3\times10^4$ for 2 $\ce{Na+}$: the stoichiometry enters the exponent, which is why the transporter of the intestinal epithelium uses a 2:1 stoichiometry.
 
 5. For the Brusselator with $a = 2$, at what value of $b$ does the Hopf bifurcation occur? What is the approximate period of the oscillation near the bifurcation point (in dimensionless time)?
 
+   **Answer** $b_{\mathrm{c}} = 1 + a^2 = 5$. At the bifurcation point the eigenvalues are $\pm\mathrm{i}a = \pm 2\mathrm{i}$, so the period is about $2\pi/a = \pi \approx 3.14$. A numerical integration confirms this: the period of the limit cycle is $3.19$ at $b = 5.05$ and grows to $3.98$ at $b = 5.5$, consistent with the statement in Section 18.3.2 that the period starts from $2\pi/a$ and increases.
+
 6. Why do Turing patterns require the inhibitor to diffuse faster than the activator? If $D_x = D_y$, can the Brusselator show a Turing instability?
+
+   **Answer** The activator X is autocatalytic ($J_{11} > 0$), so a local fluctuation amplifies itself; for it to form isolated peaks rather than grow everywhere, the inhibitor must carry its suppressing effect quickly to the neighborhood ("short-range activation, long-range inhibition"), which requires $D_y > D_x$. Mathematically, stability of the homogeneous system requires $\operatorname{tr}J = J_{11} + J_{22} < 0$, while the Turing instability requires $D_yJ_{11} + D_xJ_{22} > 0$; both can hold only if $D_y/D_x > -J_{22}/J_{11} > 1$.
+
+   If $D_x = D_y = D$, the eigenvalues of $J - q^2DI$ are those of $J$ shifted by $-Dq^2$, so every mode with $q \ne 0$ decays faster than the homogeneous mode and no Turing instability is possible. The result of Example 18.3.2 shows the same: with $\eta = 1$, $b_{\mathrm{T}} = (1 + a)^2 > 1 + a^2 = b_{\mathrm{c}}$, so as $b$ increases the Hopf instability always comes first.

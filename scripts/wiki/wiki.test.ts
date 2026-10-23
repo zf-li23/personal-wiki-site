@@ -178,12 +178,14 @@ describe('end sections', () => {
     assert.match(msgs([[2, '13.1. A'], [2, 'Summary']])[0], /only unnumbered sections/); // English name on a Chinese page
     assert.deepEqual(msgs([[2, '小结']]), []); // pages without numbered sections need no summary
   });
-  it('folds **答** paragraphs in 思考题 and warns about other answer forms', async () => {
-    const body = '## 13.1. A\n\n正文。\n\n## 小结\n\n要点。\n\n## 思考题\n\n1. 为什么？\n\n   **答** 因为如此。\n\n   第二段。\n\n2. 另一题。\n\n   答：直接写。\n\n3. **答** 只有答案。\n';
+  it('folds **答** paragraphs in 思考题 and requires an answer for every question', async () => {
+    const body = '## 13.1. A\n\n正文。\n\n## 小结\n\n要点。\n\n## 思考题\n\n1. 为什么？\n\n   **答** 因为如此。\n\n   第二段。\n\n2. 另一题。\n\n   答：直接写。\n\n3. **答** 只有答案。\n4. 没有答案。\n\n未缩进的段落。\n';
     const { html, messages } = await render(body);
     assert.match(html, /<li>\s*<p>为什么？<\/p>\s*<details class="wiki-answer"><summary>答案<\/summary>\s*<p>因为如此。<\/p>\s*<p>第二段。<\/p>\s*<\/details>/);
     assert.equal(messages.filter((m) => m.includes('own paragraph starting with **答**')).length, 1);
     assert.equal(messages.filter((m) => m.includes('answer without a question')).length, 1);
+    assert.equal(messages.filter((m) => m.includes('question without an answer')).length, 1);
+    assert.equal(messages.filter((m) => m.includes('one numbered list')).length, 1);
     const en = await render('## 13.1. A\n\nText.\n\n## Summary\n\nPoints.\n\n## Questions\n\n1. Why?\n\n   **Answer** Because.\n', { lang: 'en' });
     assert.match(en.html, /<summary>Answer<\/summary>\s*<p>Because\.<\/p>/);
     assert.deepEqual(en.messages, []);

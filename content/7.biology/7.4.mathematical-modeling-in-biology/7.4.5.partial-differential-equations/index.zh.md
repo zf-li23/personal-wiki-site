@@ -337,10 +337,309 @@ $$
 
 1. **单种群引理数值验证**：取一维区域 $\Omega=[0,1]$，设资源函数 $m(x)=2+\sin(2\pi x)$，用有限差分法求解平衡态方程，计算总生物量 $\int_0^1\theta(x)\,\mathrm{d}x$ 随扩散系数 $d$ 的变化曲线。
 
+   **答** 用有限体积法离散 $[0, 1]$（$N = 400$ 个单元，两端零通量），平衡态方程 $d\theta'' + \theta(m - \theta) = 0$ 化为非线性方程组，用 Newton 法求解；$d$ 从 $10^{-3}$ 到 $10^2$ 取对数等距的 101 个值，每个 $d$ 以上一个 $d$ 的解为初值（延拓）：
+
+   ```python
+   import numpy as np
+   from scipy.sparse import diags
+   from scipy.sparse.linalg import spsolve
+
+   N = 400
+   h = 1.0 / N
+   x = (np.arange(N) + 0.5) * h                # cell centres
+   m = 2 + np.sin(2 * np.pi * x)
+   # Neumann Laplacian (finite volume, zero flux at both ends)
+   main = -2 * np.ones(N); main[0] = main[-1] = -1
+   Lap = diags([np.ones(N - 1), main, np.ones(N - 1)], [-1, 0, 1]) / h**2
+
+   def steady_state(d, theta0, tol=1e-12):
+       """Newton's method for d*theta'' + theta*(m - theta) = 0."""
+       th = theta0.copy()
+       for _ in range(100):
+           F = d * (Lap @ th) + th * (m - th)
+           J = d * Lap + diags(m - 2 * th)
+           step = spsolve(J.tocsc(), -F)
+           th += step
+           if np.max(np.abs(step)) < tol:
+               return th
+       raise RuntimeError('Newton did not converge')
+
+   ds = np.logspace(-3, 2, 101)
+   biomass = []
+   th = m.copy()
+   for d in ds:                                # continuation from small to large d
+       th = steady_state(d, th)
+       biomass.append(th.sum() * h)
+   biomass = np.array(biomass)
+   k = biomass.argmax()
+   print(f"int m = {m.sum() * h:.4f}")
+   print(f"max biomass {biomass[k]:.4f} at d = {ds[k]:.4f}")
+   for d in [1e-3, 1e-2, 0.1, 1, 10, 100]:
+       i = np.argmin(np.abs(ds - d))
+       print(f"d = {ds[i]:g}: biomass = {biomass[i]:.5f}")
+   ```
+
+   结果（$\int_0^1 m = 2$）：
+
+   | $d$ | $10^{-3}$ | $10^{-2}$ | $0.1$ | $1$ | $10$ | $100$ |
+   |---|---|---|---|---|---|---|
+   | $\int_0^1\theta$ | 2.0050 | 2.0243 | 2.0490 | 2.0265 | 2.0037 | 2.0004 |
+
+   总生物量对所有 $d$ 都大于 $\int_0^1 m$，在 $d \approx 0.16$ 处达到最大值 $2.0505$（比总资源量多约 $2.5\%$），$d \to 0^+$ 与 $d \to \infty$ 时都回到 $2$，与 5.4 的结论一致；把网格加密到 $N = 800$，结果不变（四位有效数字）。直观上，$d$ 很小时 $\theta \approx m$，各处只用本地资源；$d$ 很大时 $\theta$ 几乎是常数，等于 $m$ 的平均值；适中的扩散把个体从资源丰富处输送到贫乏处，而贫乏处的人均增长率 $m - \theta$ 又因密度低而较高，所以总量超过 $\int m$。$d$ 很大时 $\int\theta - \int m$ 大约按 $1/d$ 衰减（$d = 10$ 与 $d = 100$ 相差约 10 倍）。
+
 2. **竞争模型的模拟**：在对称竞争 $b=c=1$ 下，取不同的 $(d,D)$，从随机初始条件出发，试验证扩散较慢的物种获胜的结论。
+
+   **答** 取与第 1 题相同的 $m(x) = 2 + \sin(2\pi x)$、$\Omega = [0, 1]$、零通量边界。时间推进用 IMEX 格式：扩散项隐式（每步解一个三对角方程组，系数矩阵预先做 LU 分解），反应项显式，$\Delta t = 0.05$；初值在每个网格上取 $\mathrm{U}(0.5, 1.5)$ 的独立随机数：
+
+   ```python
+   import numpy as np
+   from scipy.sparse import diags, identity
+   from scipy.sparse.linalg import splu
+
+   N = 200
+   h = 1.0 / N
+   x = (np.arange(N) + 0.5) * h
+   m = 2 + np.sin(2 * np.pi * x)
+   main = -2 * np.ones(N); main[0] = main[-1] = -1
+   Lap = diags([np.ones(N - 1), main, np.ones(N - 1)], [-1, 0, 1]) / h**2
+
+   def compete(d, D, T=3000.0, dt=0.05, seed=0):
+       """IMEX Euler: implicit diffusion, explicit reaction; b = c = 1."""
+       rng = np.random.default_rng(seed)
+       u = rng.uniform(0.5, 1.5, N)
+       v = rng.uniform(0.5, 1.5, N)
+       Au = splu((identity(N) - dt * d * Lap).tocsc())
+       Av = splu((identity(N) - dt * D * Lap).tocsc())
+       for _ in range(int(T / dt)):
+           r = m - u - v
+           u, v = Au.solve(u + dt * u * r), Av.solve(v + dt * v * r)
+       return u.sum() * h, v.sum() * h
+
+   for d, D in [(0.01, 0.1), (0.1, 0.01), (0.1, 1.0), (1.0, 0.1), (0.05, 0.07)]:
+       for seed in (0, 1):
+           U, V = compete(d, D, seed=seed)
+           print(f"d = {d}, D = {D}, seed {seed}: int u = {U:.4f}, int v = {V:.4f}")
+   ```
+
+   积分到 $t = 3000$ 的结果（两个随机种子结果相同）：
+
+   | $(d, D)$ | $\int u$ | $\int v$ | 获胜者 |
+   |---|---|---|---|
+   | $(0.01, 0.1)$ | 2.0243 | 0 | $u$（扩散慢） |
+   | $(0.1, 0.01)$ | 0 | 2.0243 | $v$（扩散慢） |
+   | $(0.1, 1)$ | 2.0490 | 0 | $u$ |
+   | $(1, 0.1)$ | 0 | 2.0490 | $v$ |
+   | $(0.05, 0.07)$ | 2.0426 | 0 | $u$ |
+
+   每一组都是扩散较慢的物种获胜，与初值无关；交换 $d$ 与 $D$，结局随之交换。获胜者的总量正好是它单独存在时的 $\int\theta$（与第 1 题的 $d = 0.01$、$d = 0.1$ 的数值相同），说明系统收敛到半平凡平衡态 $(u^*, 0)$ 或 $(0, v^*)$。排斥的速度取决于两个扩散系数的差距：败者的总量降到 $10^{-3}$ 以下所需的时间，$(0.1, 1)$ 约为 $160$，$(0.01, 0.1)$ 约为 $315$，$(0.05, 0.07)$ 约为 $650$；$d = D$ 时（定理的第三种情形）不发生排斥，任何初值都停在一族共存平衡解 $u + v = \theta$ 中的某一个上。
+
+   直观上，扩散慢的物种分布更贴近 $m(x)$，在资源丰富处密度高；扩散快的物种把较多个体"浪费"在资源贫乏处。在对方的单种平衡下，扩散慢的物种处处面对 $m - \theta$ 的分布，它的入侵率为正，而扩散快的物种的入侵率为负（Dockery 等 1998 年的结果）。
 
 3. **图灵斑图参数分析**：针对 Schnakenberg 模型，通过线性稳定性分析推导图灵不稳定的参数条件，并用数值模拟验证不同参数下斑图类型（点状、条纹状）的转变。
 
+   **答** 线性稳定性分析。均匀稳态为 $u^* = a + b$，$v^* = b/(a + b)^2$，雅可比矩阵的元素为
+
+   $$
+   f_u = \frac{b - a}{a + b}, \quad f_v = (a + b)^2, \quad g_u = -\frac{2b}{a + b}, \quad g_v = -(a + b)^2, \qquad \det J = (a + b)^2 > 0 .
+   $$
+   扰动 $\propto \mathrm{e}^{\mathrm{i}\boldsymbol{k}\cdot\boldsymbol{x} + \lambda t}$ 的增长率是 $J - k^2\operatorname{diag}(D_u, D_v)$ 的特征值；行列式 $h(k^2) = D_uD_vk^4 - (D_vf_u + D_ug_v)k^2 + \det J$ 对某个 $k$ 为负时失稳。于是图灵不稳定的条件是
+
+   1. 无扩散时稳定：$f_u + g_v < 0$，即 $b - a < (a + b)^3$；
+   2. $D_vf_u + D_ug_v > 0$，即 $D_v(b - a) > D_u(a + b)^3$，特别要求 $b > a$（$u$ 是自催化的激活子，$f_u > 0$，$v$ 是被消耗的底物，$g_v < 0$），并且 $D_v > D_u$；
+   3. $h$ 的极小值为负：$(D_vf_u + D_ug_v)^2 > 4D_uD_v\det J$。
+
+   记 $\delta = D_v/D_u$，条件 3 的等号给出临界扩散比 $\delta_{\mathrm{c}} = \bigl[(a + b)(1 + \sqrt{1 + f_u})/f_u\bigr]^2$，$\delta > \delta_{\mathrm{c}}$ 时失稳；阈值处的临界波数 $k_{\mathrm{c}}^2 = \sqrt{\det J/(D_uD_v)} = (a + b)/\sqrt{D_uD_v}$，斑图的波长约为 $2\pi/k_{\mathrm{c}}$。正文取 $a = 0.1$、$b = 0.9$，$f_u = 0.8$，$\delta_{\mathrm{c}} = 8.57$；正文的 $D_u = 0.1$、$D_v = 1$ 给出 $\delta = 10 > \delta_{\mathrm{c}}$，$k_{\mathrm{c}} = 1.78$，波长 $3.53$，边长 $20$ 的区域中约有 $5.7$ 个波长。作为对照，$a = 0.1$、$b = 2$、$\delta = 30$ 时 $\delta_{\mathrm{c}} = 30.5$，在阈值以下，数值模拟中扰动衰减，解保持均匀（$u$ 的变化范围小于 $10^{-5}$）。
+
+   数值模拟。取 $D_u = 1$，在边长为 8 个临界波长的周期正方形上用半隐式谱方法（扩散项在 Fourier 空间隐式处理，反应项显式），$128 \times 128$ 网格，$\Delta t = 0.05$，从均匀态加 $10^{-2}$ 的随机扰动出发积分到 $t = 4000$。按 $u > \bar u$ 的连通区域个数与面积分数区分斑图：点状斑图是许多小块，面积约三分之一；条纹是少数贯通的带，面积约一半。
+
+   ```python
+   import numpy as np
+   from scipy import ndimage
+
+   def turing_info(a, b, Du, Dv):
+       """Linear stability of the homogeneous state; returns (Turing unstable?, k_c, critical Dv/Du)."""
+       fu, fv, gu, gv = (b - a) / (a + b), (a + b)**2, -2 * b / (a + b), -(a + b)**2
+       det = fu * gv - fv * gu
+       unstable = (fu + gv < 0) and (Dv * fu + Du * gv > 2 * np.sqrt(Du * Dv * det))
+       kc = (det / (Du * Dv)) ** 0.25
+       dc = ((a + b) * (1 + np.sqrt(1 + fu)) / fu) ** 2 if fu > 0 else np.inf
+       return unstable, kc, dc
+
+   def simulate(a, b, Du, Dv, n=128, waves=8, T=2000.0, dt=0.05, seed=0):
+       """Semi-implicit spectral scheme on a periodic square holding about `waves` wavelengths."""
+       _, kc, _ = turing_info(a, b, Du, Dv)
+       L = waves * 2 * np.pi / kc
+       k = 2 * np.pi * np.fft.fftfreq(n, L / n)
+       K2 = k[:, None]**2 + k[None, :]**2
+       rng = np.random.default_rng(seed)
+       u = a + b + 0.01 * rng.standard_normal((n, n))
+       v = b / (a + b)**2 + 0.01 * rng.standard_normal((n, n))
+       Eu, Ev = 1 / (1 + dt * Du * K2), 1 / (1 + dt * Dv * K2)
+       for _ in range(int(T / dt)):
+           f = a - u + u * u * v
+           g = b - u * u * v
+           u = np.real(np.fft.ifft2(Eu * np.fft.fft2(u + dt * f)))
+           v = np.real(np.fft.ifft2(Ev * np.fft.fft2(v + dt * g)))
+       return u
+
+   def classify(u):
+       """Spots: many small blobs of high u; stripes: few long bands covering half of the domain."""
+       mask = u > u.mean()
+       _, n_regions = ndimage.label(mask, structure=np.ones((3, 3)))
+       return n_regions, mask.mean()
+
+   a, b, Du = 0.1, 0.9, 1.0
+   for Dv in [9.0, 10.0, 12.0, 15.0, 30.0]:
+       unstable, kc, dc = turing_info(a, b, Du, Dv)
+       u = simulate(a, b, Du, Dv, T=4000.0)
+       print(f"Dv/Du = {Dv}: Turing = {unstable}, k_c = {kc:.3f}, d_c = {dc:.3f}, "
+             f"regions = {classify(u)[0]}, area fraction = {classify(u)[1]:.2f}")
+   ```
+
+   | $\delta = D_v/D_u$ | $\delta/\delta_{\mathrm{c}}$ | 连通区域数 | 面积分数 | 斑图 |
+   |---|---|---|---|---|
+   | 9 | 1.05 | 10 | 0.50 | 条纹 |
+   | 10 | 1.17 | 14 | 0.49 | 条纹（局部有断裂） |
+   | 12 | 1.40 | 81 | 0.39 | 六角排列的点 |
+   | 15 | 1.75 | 85 | 0.38 | 六角排列的点 |
+   | 30 | 3.50 | 100 | 0.33 | 点（更尖锐、更稀疏的高 $u$ 斑点） |
+
+   另取 $b = 1.6$、$\delta = 30$（$\delta/\delta_{\mathrm{c}} = 1.44$）也得到点状斑图。所以在这组参数下，刚越过阈值时出现条纹，离阈值较远（$\delta/\delta_{\mathrm{c}}$ 在 $1.2$ 与 $1.4$ 之间）时转变为点状。线性分析只决定哪些波数失稳以及波长；点与条纹的选择由非线性项决定：弱非线性分析中，振幅方程的二次项有利于六角形（点），三次项有利于条纹，两者的相对大小随参数变化。斑图的具体排布（缺陷、条纹的走向）还与初始扰动有关。
+
 4. **移流系数的影响**：在移流模型中固定 $d=D=1$，逐渐增大 $\alpha$，观察竞争结果从 $u$ 占优到共存的变化。
 
+   **答** 仍取 $\Omega = [0, 1]$、$m(x) = 2 + \sin(2\pi x)$。移流项 $\nabla\cdot(d\nabla u - \alpha u\nabla m)$ 在 $\alpha$ 大时以对流为主，中心差分会产生振荡，所以用 Scharfetter–Gummel 通量（指数拟合的迎风格式），它对任意 Péclet 数稳定，并且在零通量边界下精确守恒。除了直接模拟，更干净的判据是两个半平凡平衡态的入侵率：$v$ 能否入侵 $(u^*, 0)$ 由算子 $D\Delta + (m - u^*)$ 的主特征值 $\lambda_v$ 的符号决定，$u$ 能否入侵 $(0, v^*)$ 由算子 $\varphi \mapsto \nabla\cdot(d\nabla\varphi - \alpha\varphi\nabla m) + (m - v^*)\varphi$ 的主特征值 $\lambda_u$ 决定。
+
+   ```python
+   import numpy as np
+   from scipy.sparse import diags, identity
+   from scipy.sparse.linalg import spsolve, splu
+   from scipy.optimize import brentq
+
+   N = 400
+   h = 1.0 / N
+   x = (np.arange(N) + 0.5) * h
+   m = 2 + np.sin(2 * np.pi * x)
+
+   def bern(z):
+       """Bernoulli function z / (e^z - 1), safe near z = 0."""
+       out = np.ones_like(z)
+       nz = np.abs(z) > 1e-8
+       out[nz] = z[nz] / np.expm1(z[nz])
+       return out
+
+   def transport(d, alpha):
+       """div(d grad u - alpha u grad m) with Scharfetter-Gummel fluxes and zero flux at both ends."""
+       P = alpha * np.diff(m) / d              # cell Peclet numbers at the interfaces
+       bp, bm = bern(-P), bern(P)              # flux J_{i+1/2} = d/h * (bp*u_i - bm*u_{i+1})
+       main = np.zeros(N)
+       main[:-1] -= bp
+       main[1:] -= bm
+       return diags([bp, main, bm], [-1, 0, 1]) * d / h**2
+
+   def single(d, alpha):
+       """Single-species steady state by Newton's method."""
+       A = transport(d, alpha)
+       u = m.copy()
+       for _ in range(200):
+           F = A @ u + u * (m - u)
+           step = spsolve((A + diags(m - 2 * u)).tocsc(), -F)
+           u = np.maximum(u + step, 1e-12)
+           if np.abs(step).max() < 1e-11:
+               return u
+       raise RuntimeError('Newton did not converge')
+
+   def principal(A, q):
+       """Principal eigenvalue (largest real part) of A + diag(q): the invasion rate of a rare species."""
+       return np.linalg.eigvals((A + diags(q)).toarray()).real.max()
+
+   def simulate(d, D, alpha, T=3000.0, dt=0.05):
+       """IMEX time stepping of the competition model from u = v = 1."""
+       Su = splu((identity(N) - dt * transport(d, alpha)).tocsc())
+       Sv = splu((identity(N) - dt * transport(D, 0.0)).tocsc())
+       u, v = np.ones(N), np.ones(N)
+       for _ in range(int(T / dt)):
+           r = m - u - v
+           u, v = Su.solve(u + dt * u * r), Sv.solve(v + dt * v * r)
+       return u.sum() * h, v.sum() * h
+
+   d = D = 1.0
+   vstar = single(D, 0.0)
+   for alpha in [0.0, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]:
+       ustar = single(d, alpha)
+       lam_v = principal(transport(D, 0.0), m - ustar)     # can v invade (u*, 0)?
+       lam_u = principal(transport(d, alpha), m - vstar)   # can u invade (0, v*)?
+       print(f"alpha = {alpha:5}: lambda_v = {lam_v:+.4f}, lambda_u = {lam_u:+.4f}")
+
+   alpha_c = brentq(lambda al: principal(transport(D, 0.0), m - single(d, al)), 0.5, 1.0)
+   print(f"alpha_c = {alpha_c:.3f}")
+   for alpha in [0.25, 2.0, 8.0]:
+       print(alpha, simulate(d, D, alpha))
+   ```
+
+   $d = D = 1$ 时的结果：
+
+   | $\alpha$ | $\lambda_v$（$v$ 入侵 $u^*$） | $\lambda_u$（$u$ 入侵 $v^*$） | 结局 |
+   |---|---|---|---|
+   | 0 | 0 | 0 | 中性：两物种相同 |
+   | 0.25 | $-0.053$ | $+0.107$ | $u$ 获胜 |
+   | 0.5 | $-0.003$ | $+0.208$ | $u$ 获胜 |
+   | 1 | $+0.262$ | $+0.380$ | 共存 |
+   | 2 | $+0.752$ | $+0.591$ | 共存 |
+   | 4 | $+1.136$ | $+0.735$ | 共存 |
+   | 8 | $+1.329$ | $+0.801$ | 共存 |
+   | 16 | $+1.545$ | $+0.832$ | 共存 |
+
+   $\lambda_v$ 在 $\alpha_{\mathrm{c}} \approx 0.508$ 处由负变正（网格加密到 $N = 800$ 时不变），所以 $0 < \alpha < \alpha_{\mathrm{c}}$ 时 $(u^*, 0)$ 稳定、$(0, v^*)$ 不稳定，移流物种 $u$ 获胜；$\alpha > \alpha_{\mathrm{c}}$ 时两个半平凡平衡态都不稳定，两物种共存，与 5.7.2 的结论一致。直接模拟（从 $u = v = 1$ 积分到 $t = 3000$）给出：$\alpha = 0.25$ 时 $\int u = 2.059$、$\int v \to 0$；$\alpha = 2$ 时 $\int u = 0.583$、$\int v = 1.419$；$\alpha = 8$ 时 $\int u = 0.226$、$\int v = 1.786$。
+
+   解释：$\alpha = 0$ 时两物种完全相同；小的 $\alpha$ 让 $u$ 稍微向资源丰富处聚集，它比单纯扩散更好地匹配 $m(x)$，于是占优（$u^*$ 的峰值随 $\alpha$ 从 $2.16$ 升到 $\alpha = 0.5$ 时的 $3.11$，峰的位置移到 $m$ 的极大点 $x = \frac14$）。$\alpha$ 继续增大，$u$ 过度集中在 $m$ 的极大点附近，其他地方的资源无法利用，$v$ 就能在那里入侵：共存时 $u$ 的总量随 $\alpha$ 减小，$v$ 占了大部分资源。这就是"过强的定向运动反而削弱竞争优势"的含义。
+
 5. **无量纲化练习**：将带有 Allee 效应的反应-扩散方程 $\partial_t u = D\partial_{xx}u + ru(u-a)(1-u/K)$ 无量纲化，并讨论无量纲参数的生态学含义。
+
+   **答** 先确定量纲：$u$ 是密度，$t$ 是时间，$x$ 是长度，$D$ 的量纲为长度$^2$/时间；$u(u - a)(1 - u/K)$ 的量纲是密度$^2$，所以这里的 $r$ 的量纲为 1/（时间 $\times$ 密度）。令
+
+   $$
+   \bar u = \frac{u}{K}, \qquad \bar t = rKt, \qquad \bar x = x\sqrt{\frac{rK}{D}}, \qquad \bar a = \frac{a}{K},
+   $$
+   代入 $\partial_t u = K\,rK\,\partial_{\bar t}\bar u$、$D\partial_{xx}u = K\,rK\,\partial_{\bar x\bar x}\bar u$、$ru(u - a)(1 - u/K) = rK^2\,\bar u(\bar u - \bar a)(1 - \bar u)$，两边除以 $rK^2$，得到
+
+   $$
+   \frac{\partial \bar u}{\partial \bar t} = \frac{\partial^2 \bar u}{\partial \bar x^2} + \bar u(\bar u - \bar a)(1 - \bar u), \qquad 0 < \bar a < 1 .
+   $$
+   四个参数 $D, r, a, K$ 只剩下一个 $\bar a$。各尺度的生态学含义：
+
+   - $\bar a = a/K$：Allee 阈值占环境容纳量的比例，度量种群在低密度时"难以起步"的程度（如配偶难找、群体防御失效）；
+   - $1/(rK)$：时间尺度，$rK$ 是密度接近 $K$ 时人均增长率的量级（密度 $u$ 时人均增长率 $r(u - a)(1 - u/K)$ 的尺度）；
+   - $\sqrt{D/(rK)}$：长度尺度，即个体在一个增长时间内随机扩散的距离。
+
+   无量纲化后立刻可以讨论入侵：这是双稳的方程（$\bar u = 0$ 与 $\bar u = 1$ 都稳定，$\bar u = \bar a$ 不稳定），连接 $1$ 与 $0$ 的行波有唯一的速度 $c = (1 - 2\bar a)/\sqrt2$。$\bar a < \frac12$ 时种群向外扩张，$\bar a > \frac12$ 时前沿后退（种群退缩），$\bar a = \frac12$ 时前沿静止；回到原变量，速度为 $c\sqrt{DrK}$。与 Fisher-KPP 方程（5.3）不同，这个速度不由前沿最前端的低密度部分决定，低密度个体负增长，所以入侵需要足够大的初始种群。数值验证（从阶跃初值出发，测量 $\bar u = \frac12$ 处的位置随时间的变化）：
+
+   ```python
+   import numpy as np
+   from scipy.sparse import diags, identity
+   from scipy.sparse.linalg import splu
+
+   def front_speed(A, Lx=400.0, N=4000, T=150.0, dt=0.02):
+       """Speed of the front of u_t = u_xx + u(u - A)(1 - u) started from a step."""
+       h = Lx / N
+       x = (np.arange(N) + 0.5) * h
+       main = -2 * np.ones(N); main[0] = main[-1] = -1
+       Lap = diags([np.ones(N - 1), main, np.ones(N - 1)], [-1, 0, 1]) / h**2
+       S = splu((identity(N) - dt * Lap).tocsc())
+       u = (x < Lx / 2).astype(float)
+       pos = []
+       for n in range(int(T / dt)):
+           u = S.solve(u + dt * u * (u - A) * (1 - u))
+           if (n + 1) % int(10 / dt) == 0:
+               pos.append(x[np.argmin(np.abs(u - 0.5))])
+       t = 10 * np.arange(1, len(pos) + 1)
+       return np.polyfit(t[len(t) // 2:], pos[len(t) // 2:], 1)[0]
+
+   for A in [0.1, 0.25, 0.4, 0.5, 0.6]:
+       print(f"a/K = {A}: simulated c = {front_speed(A):+.4f}, theory (1 - 2a/K)/sqrt(2) = {(1 - 2 * A) / np.sqrt(2):+.4f}")
+   ```
+
+   | $\bar a$ | 0.1 | 0.25 | 0.4 | 0.5 | 0.6 |
+   |---|---|---|---|---|---|
+   | 模拟的 $c$ | 0.5648 | 0.3527 | 0.1418 | 0.0000 | $-0.1418$ |
+   | $(1 - 2\bar a)/\sqrt2$ | 0.5657 | 0.3536 | 0.1414 | 0 | $-0.1414$ |

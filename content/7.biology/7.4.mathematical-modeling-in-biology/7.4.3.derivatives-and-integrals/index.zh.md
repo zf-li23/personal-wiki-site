@@ -367,137 +367,9 @@ $$
 
      对于 $r = 0.75$，使用几个初始条件 $x_0$ 迭代映射。最终，所有解都应趋于零（固定点）。在同一图上绘制 $f(x) = rx(1-x)$ 与 $x$ 以及对角线 $y = x$。然后编写一个简短的程序来绘制"蛛网图"，正如我在黑板上的演示。通过多次迭代逻辑斯蒂映射，我们可以找到吸引子上的点。找到一个 $r$ 值，使得吸引子具有周期 8。提交图形（并标出 $r$ 的值）。
 
-     **答** 可以先尝试采用数值模拟的方式，得到的结果可能对模拟的初值有一定的敏感性：
-
-     ![搜索得到的周期 8 吸引子蛛网图](./plots/period-8-search-cobweb.py)
-
-     对于逻辑斯蒂映射 $x_{n+1} = f(x_n) = r x_n (1 - x_n)$，周期8吸引子对应参数 $r$ 使得系统存在稳定的周期8轨道。寻找周期8吸引子可以通过最小化李雅普诺夫指数来实现，因为在周期窗口内，李雅普诺夫指数为负，且在窗口中心达到最小值（最负）。
-
-     李雅普诺夫指数定义为：
-     $$
-     \lambda(r) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(x_i)|
-     $$
-     其中 $f'(x) = r(1 - 2x)$。数值计算时，取充分大的 $n$，并舍弃瞬态过程。
-
-     在周期8窗口内，$\lambda(r)$ 为负值，且关于窗口中心对称，在中心处达到最小。因此，在给定区间 $[r_{\min}, r_{\max}]$ 上通过优化算法寻找 $\lambda(r)$ 的最小值点，即可找到周期8窗口中最稳定的参数。查找的区间来源于此前模拟出的经验值，此外再尝试在 $3.6<r<3.65$ 中进行查找，验证此方法的适用性。
-
-     ```python
-     import numpy as np
-     from scipy.optimize import minimize_scalar
-
-     def logistic_map(r, x):
-         return r * x * (1 - x)
-
-     def lyapunov_exponent(r, x0=0.5, n_transient=10000, n_iter=50000):
-         """计算逻辑斯蒂映射的李雅普诺夫指数"""
-         # 舍弃瞬态
-         x = x0
-         for _ in range(n_transient):
-             x = logistic_map(r, x)
-    
-         # 计算李雅普诺夫指数
-         lyap_sum = 0.0
-         for _ in range(n_iter):
-             x = logistic_map(r, x)
-             df = abs(r * (1 - 2 * x))
-             if df > 1e-12:  # 避免log(0)
-                 lyap_sum += np.log(df)
-         return lyap_sum / n_iter
-
-     # 在区间 [3.6, 3.65] 内最小化李雅普诺夫指数
-     res = minimize_scalar(lyapunov_exponent, bounds=(3.6, 3.65), method='bounded')
-     r_opt = res.x
-     lyap_opt = res.fun
-
-     print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
-     print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
-
-     # 验证周期8：检查最后若干次迭代是否呈现周期8
-     def check_period(r, x0=0.5, n_transient=10000, n_check=200, tol=1e-8):
-         x = x0
-         for _ in range(n_transient):
-             x = logistic_map(r, x)
-    
-         # 记录轨迹
-         trajectory = []
-         for _ in range(n_check):
-             x = logistic_map(r, x)
-             trajectory.append(x)
-    
-         # 检查周期，从1到20
-         for period in range(1, 21):
-             if period < n_check:
-                 # 检查最后period个点是否与前面period个点一致
-                 diff = np.array(trajectory[-period:]) - np.array(trajectory[-2*period:-period])
-                 if np.max(np.abs(diff)) < tol:
-                     return period
-         return None
-
-     period = check_period(r_opt)
-     print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
-
-     # 在区间 [3.66, 3.67] 内最小化李雅普诺夫指数
-     res = minimize_scalar(lyapunov_exponent, bounds=(3.66, 3.67), method='bounded')
-     r_opt = res.x
-     lyap_opt = res.fun
-
-     print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
-     print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
-
-     period = check_period(r_opt)
-     print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
-     ```
-
-     运行结果：
-
-     ```
-     最小李雅普诺夫指数对应的 r = 3.627558
-     对应的李雅普诺夫指数 λ = -1.765538
-     在 r = 3.627558 处检测到的周期为 6
-     最小李雅普诺夫指数对应的 r = 3.662190
-     对应的李雅普诺夫指数 λ = -0.513869
-     在 r = 3.662190 处检测到的周期为 8
-     ```
-
-     作图进行验证：
-
-     ![r = 3.627558 与 r = 3.662190 时的蛛网图对比](./plots/period-8-cobweb-comparison.py)
-
    - **b)** 稳态解的稳定性与周期 2 解
 
      正如我们在文档中看到的，对于 $r > 3$，稳态解 $x^* = 1 - \frac{1}{r}$ 不再稳定。这可以通过证明导数 $\left|f^{\prime}\left(x^{*}\right)\right| > 1$ 来证明。可选练习：通过观察映射的第二次迭代并检查 $x = f(f(x))$ 的不动点。证明周期 2 解在 $3 < r < 1 + \sqrt{6}$ 时是稳定的。
-
-     **答** 对于逻辑斯蒂映射 $x_{n+1} = f(x) = r x (1 - x)$，稳态解满足 $x = f(x)$，解得 $x_0^* = 0$ 和 $x_1^* = 1 - 1/r$（当 $r > 1$ 时）。
-
-     稳态解的线性稳定性由导数 $f'(x^*) = r(1 - 2x^*)$ 的绝对值决定：
-     - 对于 $x_0^* = 0$，$f'(0) = r$，故当 $0 < r < 1$ 时稳定，$r > 1$ 时不稳定。
-     - 对于 $x_1^* = 1 - 1/r$，$f'(x_1^*) = r(1 - 2(1 - 1/r)) = 2 - r$。稳定性条件为 $|2 - r| < 1$，即 $1 < r < 3$。因此当 $r > 3$ 时，稳态解 $x_1^*$ 失稳。
-
-     当 $r > 3$ 时，系统出现周期2解，满足 $x = f^{(2)}(x) = f(f(x))$ 且 $x \neq f(x)$。周期2解对应方程 $f^{(2)}(x) - x = 0$ 的两个根（除去 $x_0^*$ 和 $x_1^*$）。记周期2解为 $p$ 和 $q$，满足 $q = f(p)$，$p = f(q)$。
-
-     周期2解的稳定性由复合函数 $f^{(2)}$ 在 $p$ 和 $q$ 处的导数乘积决定：
-     $$
-     \frac{\mathrm{d}}{\mathrm{d}x} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
-     $$
-     同理在 $q$ 处相同。由于 $f'(x) = r(1 - 2x)$，故稳定性条件为 $|f'(p) f'(q)| < 1$。
-
-     通过求解 $f^{(2)}(x) - x = 0$，可得 $p$ 和 $q$ 满足二次方程：
-     $$
-     r^2 x^2 - r(r+1) x + (r+1) = 0
-     $$
-     利用韦达定理：$p + q = \frac{r+1}{r}$，$pq = \frac{r+1}{r^2}$。计算：
-     $$
-     f'(p) f'(q) = r^2 (1 - 2p)(1 - 2q) = r^2 \left[1 - 2(p+q) + 4pq\right] = -r^2 + 2r + 4
-     $$
-     稳定性条件 $| -r^2 + 2r + 4 | < 1$ 等价于：
-     1. $-r^2 + 2r + 4 < 1$ 即 $r^2 - 2r - 3 > 0$，解得 $r > 3$ 或 $r < -1$，结合 $r>0$ 得 $r>3$。
-     2. $-r^2 + 2r + 4 > -1$ 即 $r^2 - 2r - 5 < 0$，解得 $1 - \sqrt{6} < r < 1 + \sqrt{6}$。
-
-     综合得 $3 < r < 1 + \sqrt{6}$。证毕。
-
-     选取几个值进行模拟：
-
-     ![f(f(x)) 的不动点及周期 2 解的稳定性分析](./plots/period-2-stability.py)
 
    - **c)** 分岔图与自相似性
      - 让我们尝试构建逻辑斯蒂映射的分岔图。这里，分岔图是吸引子作为 $r$ 的函数的图，其中 $0 < r < 4$。一种方法是选取均匀间隔的 $\delta r$，运行 $n_{\mathrm{transient}}$ 步，记录 $n_{\mathrm{period}}$ 步，然后绘制记录的点。开始时使用较小的 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}}$。确保你的 MATLAB 程序正常工作后，可以尝试 $\delta r < 0.01$ 且 $n_{\mathrm{transient}}$ 和 $n_{\mathrm{period}} > 100$。制作一个图形并提交。
@@ -510,6 +382,178 @@ $$
      x_{n + 1} = \mu \sin (\pi x_n)
      $$
      其中 $0 < \mu < 1$。它看起来与逻辑斯蒂映射的分岔图相似吗？
+
+   **答** a) 可以先尝试采用数值模拟的方式，得到的结果可能对模拟的初值有一定的敏感性：
+
+   ![搜索得到的周期 8 吸引子蛛网图](./plots/period-8-search-cobweb.py)
+
+   对于逻辑斯蒂映射 $x_{n+1} = f(x_n) = r x_n (1 - x_n)$，周期8吸引子对应参数 $r$ 使得系统存在稳定的周期8轨道。寻找周期8吸引子可以通过最小化李雅普诺夫指数来实现，因为在周期窗口内，李雅普诺夫指数为负，且在窗口中心达到最小值（最负）。
+
+   李雅普诺夫指数定义为：
+   $$
+   \lambda(r) = \lim_{n\to\infty} \frac{1}{n} \sum_{i=0}^{n-1} \ln |f'(x_i)|
+   $$
+   其中 $f'(x) = r(1 - 2x)$。数值计算时，取充分大的 $n$，并舍弃瞬态过程。
+
+   在周期8窗口内，$\lambda(r)$ 为负值，且关于窗口中心对称，在中心处达到最小。因此，在给定区间 $[r_{\min}, r_{\max}]$ 上通过优化算法寻找 $\lambda(r)$ 的最小值点，即可找到周期8窗口中最稳定的参数。查找的区间来源于此前模拟出的经验值，此外再尝试在 $3.6<r<3.65$ 中进行查找，验证此方法的适用性。
+
+   ```python
+   import numpy as np
+   from scipy.optimize import minimize_scalar
+
+   def logistic_map(r, x):
+       return r * x * (1 - x)
+
+   def lyapunov_exponent(r, x0=0.5, n_transient=10000, n_iter=50000):
+       """计算逻辑斯蒂映射的李雅普诺夫指数"""
+       # 舍弃瞬态
+       x = x0
+       for _ in range(n_transient):
+           x = logistic_map(r, x)
+
+       # 计算李雅普诺夫指数
+       lyap_sum = 0.0
+       for _ in range(n_iter):
+           x = logistic_map(r, x)
+           df = abs(r * (1 - 2 * x))
+           if df > 1e-12:  # 避免log(0)
+               lyap_sum += np.log(df)
+       return lyap_sum / n_iter
+
+   # 在区间 [3.6, 3.65] 内最小化李雅普诺夫指数
+   res = minimize_scalar(lyapunov_exponent, bounds=(3.6, 3.65), method='bounded')
+   r_opt = res.x
+   lyap_opt = res.fun
+
+   print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
+   print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
+
+   # 验证周期8：检查最后若干次迭代是否呈现周期8
+   def check_period(r, x0=0.5, n_transient=10000, n_check=200, tol=1e-8):
+       x = x0
+       for _ in range(n_transient):
+           x = logistic_map(r, x)
+
+       # 记录轨迹
+       trajectory = []
+       for _ in range(n_check):
+           x = logistic_map(r, x)
+           trajectory.append(x)
+
+       # 检查周期，从1到20
+       for period in range(1, 21):
+           if period < n_check:
+               # 检查最后period个点是否与前面period个点一致
+               diff = np.array(trajectory[-period:]) - np.array(trajectory[-2*period:-period])
+               if np.max(np.abs(diff)) < tol:
+                   return period
+       return None
+
+   period = check_period(r_opt)
+   print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
+
+   # 在区间 [3.66, 3.67] 内最小化李雅普诺夫指数
+   res = minimize_scalar(lyapunov_exponent, bounds=(3.66, 3.67), method='bounded')
+   r_opt = res.x
+   lyap_opt = res.fun
+
+   print(f"最小李雅普诺夫指数对应的 r = {r_opt:.6f}")
+   print(f"对应的李雅普诺夫指数 λ = {lyap_opt:.6f}")
+
+   period = check_period(r_opt)
+   print(f"在 r = {r_opt:.6f} 处检测到的周期为 {period}")
+   ```
+
+   运行结果：
+
+   ```
+   最小李雅普诺夫指数对应的 r = 3.627558
+   对应的李雅普诺夫指数 λ = -1.765538
+   在 r = 3.627558 处检测到的周期为 6
+   最小李雅普诺夫指数对应的 r = 3.662190
+   对应的李雅普诺夫指数 λ = -0.513869
+   在 r = 3.662190 处检测到的周期为 8
+   ```
+
+   作图进行验证：
+
+   ![r = 3.627558 与 r = 3.662190 时的蛛网图对比](./plots/period-8-cobweb-comparison.py)
+
+   b) 对于逻辑斯蒂映射 $x_{n+1} = f(x) = r x (1 - x)$，稳态解满足 $x = f(x)$，解得 $x_0^* = 0$ 和 $x_1^* = 1 - 1/r$（当 $r > 1$ 时）。
+
+   稳态解的线性稳定性由导数 $f'(x^*) = r(1 - 2x^*)$ 的绝对值决定：
+   - 对于 $x_0^* = 0$，$f'(0) = r$，故当 $0 < r < 1$ 时稳定，$r > 1$ 时不稳定。
+   - 对于 $x_1^* = 1 - 1/r$，$f'(x_1^*) = r(1 - 2(1 - 1/r)) = 2 - r$。稳定性条件为 $|2 - r| < 1$，即 $1 < r < 3$。因此当 $r > 3$ 时，稳态解 $x_1^*$ 失稳。
+
+   当 $r > 3$ 时，系统出现周期2解，满足 $x = f^{(2)}(x) = f(f(x))$ 且 $x \neq f(x)$。周期2解对应方程 $f^{(2)}(x) - x = 0$ 的两个根（除去 $x_0^*$ 和 $x_1^*$）。记周期2解为 $p$ 和 $q$，满足 $q = f(p)$，$p = f(q)$。
+
+   周期2解的稳定性由复合函数 $f^{(2)}$ 在 $p$ 和 $q$ 处的导数乘积决定：
+   $$
+   \frac{\mathrm{d}}{\mathrm{d}x} f^{(2)}(x)\bigg|_{x=p} = f'(f(p)) f'(p) = f'(q) f'(p)
+   $$
+   同理在 $q$ 处相同。由于 $f'(x) = r(1 - 2x)$，故稳定性条件为 $|f'(p) f'(q)| < 1$。
+
+   通过求解 $f^{(2)}(x) - x = 0$，可得 $p$ 和 $q$ 满足二次方程：
+   $$
+   r^2 x^2 - r(r+1) x + (r+1) = 0
+   $$
+   利用韦达定理：$p + q = \frac{r+1}{r}$，$pq = \frac{r+1}{r^2}$。计算：
+   $$
+   f'(p) f'(q) = r^2 (1 - 2p)(1 - 2q) = r^2 \left[1 - 2(p+q) + 4pq\right] = -r^2 + 2r + 4
+   $$
+   稳定性条件 $| -r^2 + 2r + 4 | < 1$ 等价于：
+   1. $-r^2 + 2r + 4 < 1$ 即 $r^2 - 2r - 3 > 0$，解得 $r > 3$ 或 $r < -1$，结合 $r>0$ 得 $r>3$。
+   2. $-r^2 + 2r + 4 > -1$ 即 $r^2 - 2r - 5 < 0$，解得 $1 - \sqrt{6} < r < 1 + \sqrt{6}$。
+
+   综合得 $3 < r < 1 + \sqrt{6}$。证毕。
+
+   选取几个值进行模拟：
+
+   ![f(f(x)) 的不动点及周期 2 解的稳定性分析](./plots/period-2-stability.py)
+
+   c) 分岔图的作图代码与结果见正文 3.1.3 的图（逻辑斯谛映射的分岔图）。关键是对所有 $r$ 同时迭代（向量化），舍弃瞬态后记录吸引子上的点：
+
+   ```python
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   def bifurcation(f, params, n_transient=1000, n_record=200, x0=0.3):
+       """Iterate the map for all parameter values at once; return the attractor points."""
+       x = np.full_like(params, x0)
+       for _ in range(n_transient):
+           x = f(params, x)
+       P, X = [], []
+       for _ in range(n_record):
+           x = f(params, x)
+           P.append(params)
+           X.append(x)
+       return np.concatenate(P), np.concatenate(X)
+
+   logistic = lambda r, x: r * x * (1 - x)
+   sine = lambda mu, x: mu * np.sin(np.pi * x)
+
+   fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+   for ax, f, grid, label in [(axes[0], logistic, np.linspace(2.5, 4.0, 3000), 'r'),
+                              (axes[1], sine, np.linspace(0.6, 1.0, 3000), 'mu')]:
+       p, x = bifurcation(f, grid)
+       ax.plot(p, x, ',', alpha=0.3)
+       ax.set_xlabel(label)
+       ax.set_ylabel('x')
+   ```
+
+   这里 $\delta r = 5\times10^{-4}$，$n_{\mathrm{transient}} = 1000$，$n_{\mathrm{period}} = 200$。图中依次可见 $r_1 = 3$、$r_2 = 1 + \sqrt6 \approx 3.4495$、$r_3 \approx 3.5441$、$r_4 \approx 3.5644$ 处的倍周期分岔，它们在 $r_\infty \approx 3.5699$ 处累积，之后是混沌带与其中的周期窗口（最宽的是从 $r = 1 + 2\sqrt2 \approx 3.8284$ 开始的周期 3 窗口）。
+
+   $r = 3.2$ 时，$f(f(x)) = x$ 有四个解：$0$ 与 $1 - 1/r = 0.6875$ 是 $f$ 的不动点，在那里 $f(f(x))$ 的斜率分别为 $r^2 = 10.24$ 与 $(2 - r)^2 = 1.44$，都不稳定；另外两个解由 b) 中的二次方程给出，$p = 0.5130$、$q = 0.7995$，那里的斜率 $-r^2 + 2r + 4 = 0.16$，绝对值小于 1，所以 $f$ 的周期 2 解正是 $f(f(x))$ 的一对稳定不动点。
+
+   $f(f(x))$ 在 $x = \frac12$ 附近有一个极小值（$f$ 把 $\frac12$ 映到极大值点 $r/4$，再由 $f$ 的下降段映回较小的值），这一段像倒过来的单峰映射；把它在包含 $p$ 的小方框内放大并翻转，就得到与 $r = 2$ 时的 $f$ 相似的图形（$r = 2$ 时不动点恰为 $x = \frac12$，是超稳定的）。$r = 3.5$ 时 $f^{(4)}$ 在 $x = \frac12$ 附近又出现一个更小、方向又翻转一次的单峰。这就是 3.1.4 中重整化变换 $\mathcal{R}[f](x) = \alpha f(f(x/\alpha))$ 的几何含义（见正文中 $f$、$f(f(x))$ 与 $f^{(4)}$ 的比较图），每翻转一次放大 $\lvert\alpha\rvert \approx 2.5$ 倍。
+
+   d) 用上面的 `bifurcation(sine, …)` 即可，结果见正文 3.1.3 的正弦映射分岔图。$0 < \mu < 1$ 时 $x \mapsto \mu\sin(\pi x)$ 把 $[0, 1]$ 映入自身，在 $x = \frac12$ 处有唯一的二次极大值，与逻辑斯谛映射同属一类单峰映射，所以分岔图的形状几乎相同，只是参数轴的刻度不同。数值计算（周期 $2^k$ 轨道的乘子 $\prod f'(x_i)$ 等于 $-1$ 处）给出正弦映射的倍周期分岔点：
+
+   | $k$ | 1 | 2 | 3 | 4 | 5 |
+   |---|---|---|---|---|---|
+   | $\mu_k$ | 0.7200 | 0.8333 | 0.8587 | 0.8641 | 0.8653 |
+
+   第一个分岔点也可以直接求：不动点 $x^* = \mu\sin(\pi x^*)$ 处 $\mu\pi\cos(\pi x^*) = -1$，解得 $\mu_1 = 0.71996$。相邻间隔之比 $(\mu_k - \mu_{k-1})/(\mu_{k+1} - \mu_k)$ 依次为 $4.45$、$4.76$、$4.55$，在数值误差内趋于 Feigenbaum 常数 $\delta \approx 4.669$，累积点约为 $\mu_\infty \approx 0.8655$。两个映射的分岔点位置不同，但收敛的比值相同，周期窗口出现的先后次序也相同：这正是 3.1.4 所说的普适性。
 
 3. 在实验室中，研究人员对草履虫（*Paramecium caudatum*）种群的增长进行了监测。每隔24小时测量一次种群密度，得到以下数据：
 

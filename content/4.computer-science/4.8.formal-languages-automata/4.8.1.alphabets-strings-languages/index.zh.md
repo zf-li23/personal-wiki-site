@@ -234,5 +234,19 @@ flowchart LR
        style s0 fill:none,stroke:none
    ```
 
+   **答** 记 $q(w)$ 为读完 $w$ 后所处的状态，对 $\lvert w\rvert$ 归纳，同时证明
+
+   - $S_1(w)$：$q(w) = 1$ 当且仅当 $\lvert w\rvert_0$ 是偶数；
+   - $S_2(w)$：$q(w) = 2$ 当且仅当 $\lvert w\rvert_0$ 是奇数。
+
+   基础 $w = \varepsilon$：$q(\varepsilon) = 1$ 是开始状态，$\lvert \varepsilon\rvert_0 = 0$ 是偶数，$S_1(\varepsilon)$ 两边都真；$q(\varepsilon) \ne 2$ 且 0 不是奇数，$S_2(\varepsilon)$ 两边都假，等价式成立。
+
+   归纳：设 $w = xa$，$S_1(x)$、$S_2(x)$ 成立。若 $a = 1$，两个状态读 1 都留在原地，$q(w) = q(x)$，而 $\lvert w\rvert_0 = \lvert x\rvert_0$，由 $S_1(x)$、$S_2(x)$ 直接得到 $S_1(w)$、$S_2(w)$。若 $a = 0$，读 0 在两个状态之间切换：$q(w) = 1$ 当且仅当 $q(x) = 2$，由 $S_2(x)$ 当且仅当 $\lvert x\rvert_0$ 是奇数，当且仅当 $\lvert w\rvert_0 = \lvert x\rvert_0 + 1$ 是偶数，这就是 $S_1(w)$；同理 $q(w) = 2$ 当且仅当 $q(x) = 1$，由 $S_1(x)$ 当且仅当 $\lvert x\rvert_0$ 是偶数，当且仅当 $\lvert w\rvert_0$ 是奇数，这就是 $S_2(w)$。$S_1(w)$ 用到 $S_2(x)$，$S_2(w)$ 用到 $S_1(x)$，正是互归纳。$\square$
 2. 证明 $(L^*)^* = L^*$，并举例说明一般 $(LM)^* \ne L^*M^*$。
+
+   **答** （$\supseteq$）$L^* = (L^*)^1 \subseteq (L^*)^*$。（$\subseteq$）设 $w \in (L^*)^*$，则 $w = u_1 u_2 \cdots u_k$（$k \ge 0$），每个 $u_i \in L^*$ 又是 $L$ 中有限个串的连接 $u_i = v_{i1} \cdots v_{im_i}$。于是 $w$ 是 $L$ 中 $m_1 + \cdots + m_k$ 个串的连接，属于 $L^*$（$k = 0$ 时 $w = \varepsilon \in L^*$）。
+
+   反例：$L = \{a\}$，$M = \{b\}$。$(LM)^* = \{\varepsilon, ab, abab, \dots\}$，$L^*M^* = \{a^ib^j \mid i, j \ge 0\}$。$a \in L^*M^*$ 而 $a \notin (LM)^*$，$abab \in (LM)^*$ 而 $abab \notin L^*M^*$，两个方向的包含都不成立。
 3. 设 $\Sigma = \{a, b\}$。$\Sigma$ 上长度不超过 $n$ 的串共有多少个？
+
+   **答** 长度恰为 $i$ 的串有 $\lvert\Sigma\rvert^i = 2^i$ 个，所以共有 $\sum_{i=0}^{n} 2^i = 2^{n+1} - 1$ 个。

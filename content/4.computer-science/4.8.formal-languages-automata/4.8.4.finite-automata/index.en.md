@@ -1,7 +1,7 @@
 ---
 title: Finite Automata
 description: Definition of deterministic finite automata (DFA), transition diagrams and tables, the extended transition function and language, DFA design; nondeterministic finite automata (NFA); the subset construction and its correctness, equivalence of DFA and NFA, and the exponential lower bound on the number of states; automata for text search (relation to KMP and Aho–Corasick); NFAs with ε-transitions, ε-closure, and the modified subset construction.
-source_hash: c02b27fe2c2e
+source_hash: fcd56760a83b
 ---
 
 [Chapter 1](/4.8.1) explained that the second route to describing a language is recognition: design a machine with only finitely many states that reads symbols one at a time, and say that a string belongs to the language if the machine is in an "accepting" state when the input is exhausted. This chapter formalizes such a machine as the *finite automaton* and discusses three models in turn: the **deterministic finite automaton** (DFA), which has exactly one move at each step; the nondeterministic finite automaton (NFA), which may have several moves at each step; and the ε-NFA, which may also change state without reading input. Nondeterminism makes design easier but adds no recognition power: the subset construction turns any NFA into an equivalent DFA, the central theorem of this chapter, at the price of a possibly exponential growth in the number of states. Finite automata are the common model of lexical analyzers, regular-expression engines, string-matching algorithms (the KMP algorithm of [4.3.13](/4.3.13) is a special DFA), and sequential circuits in digital logic ([4.9.7](/4.9.7)). Chapter 5 proves that finite automata describe the same family of languages as the regular expressions of Chapter 3, and Chapter 6 studies the properties of this family and gives an algorithm for minimizing DFAs.
@@ -390,8 +390,123 @@ Each of the two segments of arcs from $a$ to $c$ may read a 1 or nothing, which 
 ## Questions
 
 1. Give DFAs accepting the following languages over $\{a, b\}$: (1) no substring aa; (2) exactly an odd number of occurrences of the substring ab; (3) an even number of $a$s and even length; (4) containing the substring ab but not the substring bb; (5) equally many $a$s and $b$s, and in every prefix the difference between the numbers of $a$s and $b$s is at most 1.
+
+   **Answer** We give transition tables ($\to$ marks the start state, $*$ the accepting states); each DFA was checked by a program against all strings of length at most 10.
+
+   (1) $s$: the string does not end in $a$ (including the empty string); $t$: it ends in $a$; $d$: aa has occurred (dead state).
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to * s$ | $t$ | $s$ |
+   | $* t$ | $d$ | $s$ |
+   | $d$ | $d$ | $d$ |
+
+   (2) The state records the parity of the number of occurrences of ab so far and whether the string ends in $a$: $(p, x)$ with $p \in \{0, 1\}$ and $x \in \{\mathrm{a}, \mathrm{n}\}$. Reading $a$ leads to $(p, \mathrm{a})$; reading $b$ in $(p, \mathrm{a})$ completes an ab and leads to $(1 - p, \mathrm{n})$; reading $b$ in $(p, \mathrm{n})$ stays put.
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to (0, \mathrm{n})$ | $(0, \mathrm{a})$ | $(0, \mathrm{n})$ |
+   | $(0, \mathrm{a})$ | $(0, \mathrm{a})$ | $(1, \mathrm{n})$ |
+   | $* (1, \mathrm{n})$ | $(1, \mathrm{a})$ | $(1, \mathrm{n})$ |
+   | $* (1, \mathrm{a})$ | $(1, \mathrm{a})$ | $(0, \mathrm{n})$ |
+
+   (3) The state $(i, j)$ records $\lvert w\rvert_a \bmod 2$ and $\lvert w\rvert \bmod 2$: reading $a$ flips both components, reading $b$ flips only the second. The start state and the only accepting state is $(0, 0)$.
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to * (0, 0)$ | $(1, 1)$ | $(0, 1)$ |
+   | $(0, 1)$ | $(1, 0)$ | $(0, 0)$ |
+   | $(1, 0)$ | $(0, 1)$ | $(1, 1)$ |
+   | $(1, 1)$ | $(0, 0)$ | $(1, 0)$ |
+
+   (4) The strings without ab have the form $b^*a^*$; if they also avoid bb, they can only be $\varepsilon$, $b$ or $(\varepsilon + b)a^+$. States: $S$ the empty string, $B$ a single $b$ read, $A$ no ab yet and ending in $a$, $C$ ab has occurred and the string ends in $b$, $D$ ab has occurred and the string ends in $a$, $X$ bb has occurred (dead state).
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to S$ | $A$ | $B$ |
+   | $B$ | $A$ | $X$ |
+   | $A$ | $A$ | $C$ |
+   | $* C$ | $D$ | $X$ |
+   | $* D$ | $D$ | $C$ |
+   | $X$ | $X$ | $X$ |
+
+   The minimization algorithm of Chapter 6 confirms that these 6 states are pairwise distinguishable, so this DFA is minimal.
+
+   (5) The state records the difference $\lvert w\rvert_a - \lvert w\rvert_b \in \{-1, 0, 1\}$ of the prefix read so far; when the difference would leave this range, the DFA enters the dead state $X$. The accepting state is difference 0. The language accepted is $L((ab + ba)^*)$.
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to * 0$ | $+1$ | $-1$ |
+   | $+1$ | $X$ | $0$ |
+   | $-1$ | $0$ | $X$ |
+   | $X$ | $X$ | $X$ |
 2. Prove that the DFA of Example 4.1.4 accepts exactly the binary numbers divisible by 3.
+
+   **Answer** Let $v(w)$ be the number represented by the binary string $w$, so $v(\varepsilon) = 0$ and $v(wa) = 2v(w) + a$. We prove $\hat\delta(0, w) = v(w) \bmod 3$ by induction on $\lvert w\rvert$. For $w = \varepsilon$, $\hat\delta(0, \varepsilon) = 0 = v(\varepsilon) \bmod 3$. Let $w = xa$; by the induction hypothesis $\hat\delta(0, x) = r = v(x) \bmod 3$, so
+
+   $$
+   \hat\delta(0, xa) = \delta(r, a) = (2r + a) \bmod 3 = \bigl(2v(x) + a\bigr) \bmod 3 = v(xa) \bmod 3,
+   $$
+   where the third equality uses $2r + a \equiv 2v(x) + a \pmod 3$. Hence $w$ is accepted if and only if $\hat\delta(0, w) = 0$, that is, if and only if $3 \mid v(w)$. $\square$
 3. Give an NFA for the strings over $\{0, 1\}$ of length at least 2 whose last two symbols differ, and convert it to a DFA by the subset construction.
+
+   **Answer** NFA: $q$ stays in $q$ on both 0 and 1, and in addition on 0 it may guess "this is the second-to-last symbol" and move to $x$, on 1 to $y$; $x$ on 1 and $y$ on 0 move to the only accepting state $f$, which has no outgoing arcs. It accepts $w$ if and only if $w = u01$ or $w = u10$.
+
+   ```mermaid
+   flowchart LR
+       s0[" "] -->|start| q((q))
+       q -->|0, 1| q
+       q -->|0| x((x))
+       q -->|1| y((y))
+       x -->|1| f(((f)))
+       y -->|0| f
+       style s0 fill:none,stroke:none
+   ```
+
+   The lazy subset construction starting from $\{q\}$ yields 5 reachable states:
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to \{q\}$ | $\{q, x\}$ | $\{q, y\}$ |
+   | $\{q, x\}$ | $\{q, x\}$ | $\{q, y, f\}$ |
+   | $\{q, y\}$ | $\{q, x, f\}$ | $\{q, y\}$ |
+   | $* \{q, x, f\}$ | $\{q, x\}$ | $\{q, y, f\}$ |
+   | $* \{q, y, f\}$ | $\{q, x, f\}$ | $\{q, y\}$ |
+
+   A state containing $x$ means the string ends in 0, one containing $y$ means it ends in 1, and one containing $f$ means the last two symbols differ. The 5 states are pairwise distinguishable (for instance, the suffix 1 distinguishes $\{q\}$ from $\{q, x\}$), so the resulting DFA is already minimal.
 4. Give an ε-NFA for the strings over $\{a, b, c\}$ of length at least 1 with at least one non-$c$ symbol among the last 3 symbols.
+
+   **Answer** The condition says that the last non-$c$ symbol of the string is followed by at most two $c$s, that is, $(a + b + c)^*(a + b)(\varepsilon + c)(\varepsilon + c)$ (such strings automatically have length at least 1; for strings shorter than 3, "the last 3 symbols" means the whole string). The ε-transitions express "an optional $c$":
+
+   ```mermaid
+   flowchart LR
+       s0[" "] -->|start| p0((p0))
+       p0 -->|"a, b, c"| p0
+       p0 -->|"a, b"| p1((p1))
+       p1 -->|"c, ε"| p2((p2))
+       p2 -->|"c, ε"| p3(((p3)))
+       style s0 fill:none,stroke:none
+   ```
+
+   $p_0$ guesses that the $a$ or $b$ just read is the last non-$c$ symbol; after that, each of the two steps $p_1 \to p_2 \to p_3$ reads one $c$ or nothing. $p_3$ has no outgoing arcs, so no further symbols may follow.
 5. Prove that for every NFA $N$ there is an ε-NFA with only one accepting state accepting the same language. Does this conclusion still hold if only NFAs (without ε-transitions) are allowed?
+
+   **Answer** Let $N = (Q, \Sigma, \delta, q_0, F)$. Take a new state $f \notin Q$ and let $E = (Q \cup \{f\}, \Sigma, \delta_E, q_0, \{f\})$, where $\delta_E$ keeps all transitions of $N$ and adds an ε-arc $q \to f$ for every $q \in F$; $f$ has no outgoing arcs. The paths in $E$ from $q_0$ to $f$ labeled $w$ are exactly the paths in $N$ from $q_0$ to some $q \in F$ labeled $w$, followed by one ε-arc, so $L(E) = L(N)$.
+
+   Without ε-transitions the conclusion fails in general. Counterexample $L = \{\varepsilon, a\}$: suppose an NFA with a single accepting state $p$ accepts $L$. Since $\varepsilon \in L$, $p$ is the start state $q_0$; since $a \in L$, there is an arc $q_0 \xrightarrow{a} q_0$; but then $aa$ is accepted too, a contradiction. (If $\varepsilon \notin L(N)$, the conclusion does hold for NFAs: add a new accepting state $f$ without outgoing arcs, add an arc $q \xrightarrow{a} f$ wherever there is an arc $q \xrightarrow{a} p$ with $p \in F$, and take $\{f\}$ as the set of accepting states.)
 6. Apply the subset construction to the NFA of Theorem 4.3.3 with $n = 3$, and verify that the resulting DFA has exactly 8 reachable states.
+
+   **Answer** The NFA has states $q_0, q_1, q_2, q_3$ with $q_0 \xrightarrow{0, 1} q_0$, $q_0 \xrightarrow{1} q_1$, $q_1 \xrightarrow{0, 1} q_2 \xrightarrow{0, 1} q_3$, and accepting state $q_3$. Write the subset $\{q_0\} \cup \{q_i \mid i \in I\}$ as the string of its indices (for example, $\{q_0, q_1, q_3\}$ as $013$):
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to 0$ | $0$ | $01$ |
+   | $01$ | $02$ | $012$ |
+   | $02$ | $03$ | $013$ |
+   | $012$ | $023$ | $0123$ |
+   | $* 03$ | $0$ | $01$ |
+   | $* 013$ | $02$ | $012$ |
+   | $* 023$ | $03$ | $013$ |
+   | $* 0123$ | $023$ | $0123$ |
+
+   The reachable states are exactly $\{q_0\} \cup S$ for all 8 subsets $S$ of $\{q_1, q_2, q_3\}$. In general, after reading $w$ the state is $\{q_0\} \cup \{q_i \mid \text{the } i\text{th symbol from the end of } w \text{ is } 1,\ 1 \le i \le 3\}$: reading 0 moves each $q_i$ to $q_{i+1}$ ($q_3$ drops out), and reading 1 additionally adds $q_1$. The 8 strings of length 3 give 8 different subsets, so all 8 are reachable; the 4 containing $q_3$ are accepting. By the lower bound of Theorem 4.3.3, this 8-state DFA is minimal.

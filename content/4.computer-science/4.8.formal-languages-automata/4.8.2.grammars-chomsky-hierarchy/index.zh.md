@@ -334,7 +334,58 @@ $$
 ## 思考题
 
 1. 给出下列语言的上下文无关文法：(1) $\{a^n b^{2n} c^m \mid n, m \ge 0\}$；(2) $\{a^n b^{n+m} c^m \mid n, m \ge 0\}$；(3) $\{a^m b^n c^p d^q \mid m + n = p + q\}$；(4) $\{a, b\}$ 上 $a$、$b$ 个数不等的串；(5) $\{a^i b^j c^k \mid i + j \ge k\}$。
+
+   **答** 各文法的开始符号都是 $S$（每个文法都对长度不超过 7 的全部串用程序核对过）。
+
+   (1) $S \to AC$，$A \to aAbb \mid \varepsilon$，$C \to cC \mid \varepsilon$。$A$ 生成 $a^nb^{2n}$（每用一次 $A \to aAbb$ 配一个 $a$ 与两个 $b$），$C$ 生成 $c^m$，两段拼接。
+
+   (2) 把 $b^{n+m}$ 拆成 $b^nb^m$：$S \to AB$，$A \to aAb \mid \varepsilon$，$B \to bBc \mid \varepsilon$，$A$ 生成 $a^nb^n$，$B$ 生成 $b^mc^m$。
+
+   (3) $S \to aSd \mid A \mid B$，$A \to aAc \mid C$，$B \to bBd \mid C$，$C \to bCc \mid \varepsilon$。$S$ 先把 $a$ 与 $d$ 从外向内配对 $i$ 次；然后若 $a$ 有剩余（$m \ge q$），用 $A$ 把剩下的 $a$ 与 $c$ 配对，若 $d$ 有剩余（$m < q$），用 $B$ 把 $b$ 与剩下的 $d$ 配对；最后 $C$ 把 $b$ 与 $c$ 配对。经 $A$ 得到 $a^{i+j}b^kc^{k+j}d^i$，经 $B$ 得到 $a^ib^{j+k}c^kd^{i+j}$，两种情况都满足 $m + n = p + q$。反之，设 $m + n = p + q$：若 $m \ge q$，取 $i = q$、$j = m - q$、$k = n$，此时 $p = m + n - q = j + k$；若 $m < q$，取 $i = m$、$j = q - m$、$k = p$，此时 $n = p + q - m = j + k$。
+
+   (4) 设 $E \to aEbE \mid bEaE \mid \varepsilon$ 是例 2.3.5 的文法，它生成 $a$、$b$ 个数相等的串（例 2.3.7）。令
+
+   $$
+   S \to U \mid V, \qquad U \to EaE \mid EaU, \qquad V \to EbE \mid EbV.
+   $$
+   $U$ 生成 $(Ea)^kE$（$k \ge 1$）形式的串，其中 $a$ 比 $b$ 多 $k$ 个；$V$ 对称。反之设 $d(w) = \lvert w\rvert_a - \lvert w\rvert_b = k > 0$。令 $t_j$ 为前缀的 $d$ 值第一次达到 $j$ 的位置（$j = 1, \dots, k$），该位置的符号是 $a$；相邻两个 $t_j$ 之间、$t_k$ 之后的各段的 $d$ 值都是 0，由 $E$ 生成。于是 $w = e_0ae_1a \cdots ae_k$，$e_i \in L(E)$，由 $U$ 生成。$k < 0$ 时对称地由 $V$ 生成。
+
+   (5) $S \to aSc \mid aS \mid B$，$B \to bBc \mid bB \mid \varepsilon$。$S$ 生成 $a^iBc^{k_1}$（$k_1 \le i$），$B$ 生成 $b^jc^{k_2}$（$k_2 \le j$），合起来是 $a^ib^jc^{k_1 + k_2}$，$k = k_1 + k_2 \le i + j$。反之若 $k \le i + j$，取 $k_1 = \min(k, i)$、$k_2 = k - k_1 \le j$ 即可生成。
 2. 证明文法 $S \to aS \mid aSb \mid \varepsilon$ 生成 $\{a^n b^m \mid n \ge m \ge 0\}$，并说明它是二义的；给出这个语言的一个无二义文法。
+
+   **答** 记 $L = \{a^nb^m \mid n \ge m \ge 0\}$。
+
+   （$L(G) \subseteq L$）对推导步数归纳。一步推导只能是 $S \Rightarrow \varepsilon = a^0b^0$。多步时第一步为 $S \Rightarrow aS$ 或 $S \Rightarrow aSb$，其后 $S$ 用更少的步数推出 $u$，由归纳假设 $u = a^nb^m$，$n \ge m$；于是 $w = a^{n+1}b^m$ 或 $w = a^{n+1}b^{m+1}$，都满足 $a$ 的个数不少于 $b$ 的个数。
+
+   （$L \subseteq L(G)$）对 $n$ 归纳。$n = 0$ 时 $m = 0$，$S \Rightarrow \varepsilon$。$n \ge 1$ 时，若 $m = 0$，由归纳假设 $S \overset{*}{\Rightarrow} a^{n-1}$，于是 $S \Rightarrow aS \overset{*}{\Rightarrow} a^n$；若 $m \ge 1$，则 $n - 1 \ge m - 1$，由归纳假设 $S \overset{*}{\Rightarrow} a^{n-1}b^{m-1}$，于是 $S \Rightarrow aSb \overset{*}{\Rightarrow} a^nb^m$。
+
+   二义性：$aab$ 有两个最左推导 $S \Rightarrow aS \Rightarrow aaSb \Rightarrow aab$ 与 $S \Rightarrow aSb \Rightarrow aaSb \Rightarrow aab$（多出的 $a$ 可以放在外层，也可以放在内层），由定理 2.5.1 文法是二义的。
+
+   无二义文法：先生成多出的 $a$，再生成配对的部分，
+
+   $$
+   S \to aS \mid T, \qquad T \to aTb \mid \varepsilon.
+   $$
+   $T$ 恰好生成 $a^kb^k$，且推导唯一（用 $k$ 次 $T \to aTb$ 再用 $T \to \varepsilon$）；$S$ 的推导形如 $S \overset{*}{\Rightarrow} a^rT \overset{*}{\Rightarrow} a^{r+k}b^k$。对 $a^nb^m$，$k = m$、$r = n - m$ 都被串唯一确定，所以每个串只有一个最左推导。
 3. 证明文法 $S \to 1 \mid 1T1$，$T \to 0 \mid 0S0$ 生成的每个串中 1 比 0 多一个。
+
+   **答** 用互归纳，对推导步数同时证明：若 $S \overset{*}{\Rightarrow} w$（$w$ 是终结符串），则 $\lvert w\rvert_1 = \lvert w\rvert_0 + 1$；若 $T \overset{*}{\Rightarrow} w$，则 $\lvert w\rvert_0 = \lvert w\rvert_1 + 1$。一步推导只能是 $S \Rightarrow 1$ 或 $T \Rightarrow 0$，成立。多步时看第一步：若 $S \Rightarrow 1T1 \overset{*}{\Rightarrow} 1u1$，其中 $T$ 用更少的步数推出 $u$，由归纳假设 $\lvert u\rvert_0 = \lvert u\rvert_1 + 1$，于是 $\lvert w\rvert_1 = \lvert u\rvert_1 + 2 = \lvert u\rvert_0 + 1 = \lvert w\rvert_0 + 1$；若 $T \Rightarrow 0S0 \overset{*}{\Rightarrow} 0u0$，由归纳假设 $\lvert u\rvert_1 = \lvert u\rvert_0 + 1$，于是 $\lvert w\rvert_0 = \lvert u\rvert_0 + 2 = \lvert u\rvert_1 + 1 = \lvert w\rvert_1 + 1$。$\square$
 4. 给出与 $S \to SaS \mid SbS \mid ScS \mid d$ 生成同一语言的无二义文法。
+
+   **答** 这个文法生成的是 $d$ 与运算符交替出现、以 $d$ 开头和结尾的串，即 $L(d((a + b + c)d)^*)$：对推导步数归纳，$SaS$ 等把两个这样的串用一个运算符连起来，结果仍是这种形式；反之对串中 $d$ 的个数归纳，$x\,o\,d$（$o \in \{a, b, c\}$）由 $S \Rightarrow SoS$ 得到。二义性来自运算符的结合方式没有规定（$dadad$ 有两棵树）。规定左结合：
+
+   $$
+   S \to Sad \mid Sbd \mid Scd \mid d.
+   $$
+   它生成的语言相同。在任一句型 $S\,o_1d \cdots o_kd$ 中，下一步用哪个产生式由串中从右往左数的下一个运算符唯一决定（没有运算符时用 $S \to d$），所以每个串只有一个最左推导，文法无二义。（右线性的 $S \to d \mid daS \mid dbS \mid dcS$ 同样可以。）
 5. 说明例 2.3.7 的文法是二义的（找出一个有两棵分析树的串）。
+
+   **答** 文法 $S \to aSbS \mid bSaS \mid \varepsilon$ 中，$abab$ 有两个最左推导：
+
+   $$
+   \begin{aligned}
+   &S \Rightarrow aSbS \Rightarrow abS \Rightarrow abaSbS \Rightarrow ababS \Rightarrow abab,\\
+   &S \Rightarrow aSbS \Rightarrow abSaSbS \Rightarrow abaSbS \Rightarrow ababS \Rightarrow abab.
+   \end{aligned}
+   $$
+   第一个把 $abab$ 分成 $a\,\varepsilon\,b\,(ab)$（根的第一个 $S$ 推出 $\varepsilon$，第二个推出 $ab$），第二个分成 $a\,(ba)\,b\,\varepsilon$（第一个 $S$ 推出 $ba$，第二个推出 $\varepsilon$）。两棵分析树根的孩子相同，但子树不同；由定理 2.5.1，文法是二义的。

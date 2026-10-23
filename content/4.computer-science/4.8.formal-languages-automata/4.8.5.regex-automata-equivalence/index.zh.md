@@ -299,8 +299,163 @@ $n$ 每增加 2，时间约变为 4 倍。用 NFA 模拟或 DFA 匹配同一个�
 ## 思考题
 
 1. 用 Thompson 构造把 $(0 + 1)^*01$ 和 $(ab + a)^*$ 转换为 ε-NFA，再用修改的子集构造化为 DFA。
+
+   **答** (1) $(0 + 1)^*01$。基础自动机 $c \xrightarrow{0} d$、$e \xrightarrow{1} f$、$i \xrightarrow{0} j$、$k \xrightarrow{1} l$；$0 + 1$ 用并的构造新增 $b$、$g$；闭包新增 $a$、$h$；两次连接加弧 $h \to i$、$j \to k$。共 12 个状态，开始状态 $a$，接受状态 $l$：
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| a((a))
+       a -->|ε| b((b))
+       a -->|ε| h((h))
+       b -->|ε| c((c))
+       b -->|ε| e((e))
+       c -->|0| d((d))
+       e -->|1| f((f))
+       d -->|ε| g((g))
+       f -->|ε| g
+       g -->|ε| b
+       g -->|ε| h
+       h -->|ε| i((i))
+       i -->|0| j((j))
+       j -->|ε| k((k))
+       k -->|1| l(((l)))
+       style st fill:none,stroke:none
+   ```
+
+   修改的子集构造从 $\operatorname{ECLOSE}(a) = \{a, b, c, e, h, i\}$ 出发：
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to P = \{a, b, c, e, h, i\}$ | $Q$ | $R$ |
+   | $Q = \{b, c, d, e, g, h, i, j, k\}$ | $Q$ | $T$ |
+   | $R = \{b, c, e, f, g, h, i\}$ | $Q$ | $R$ |
+   | $* T = \{b, c, e, f, g, h, i, l\}$ | $Q$ | $R$ |
+
+   例如 $\delta_D(P, 0) = \operatorname{ECLOSE}(\{d, j\})$：从 $d$ 经 $g$ 回到 $b, c, e$ 并到 $h, i$，从 $j$ 到 $k$。$Q$ 表示末尾是 0，$T$ 表示末尾是 01，$P$ 与 $R$ 都表示"末尾不是 0 也不是 01"，转移与接受性都相同，是等价状态；合并后得到 3 个状态的极小 DFA，与 4.3 节以 01 结尾的 DFA 相同。
+
+   (2) $(ab + a)^*$。基础自动机 $c \xrightarrow{a} d$、$e \xrightarrow{b} f$、$g \xrightarrow{a} h$；连接 $ab$ 加弧 $d \to e$；并新增 $b$、$i$；闭包新增 $a$、$j$。共 10 个状态，开始状态 $a$，接受状态 $j$：
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| a((a))
+       a -->|ε| b((b))
+       a -->|ε| j(((j)))
+       b -->|ε| c((c))
+       b -->|ε| g((g))
+       c -->|a| d((d))
+       d -->|ε| e((e))
+       e -->|b| f((f))
+       g -->|a| h((h))
+       f -->|ε| i((i))
+       h -->|ε| i
+       i -->|ε| b
+       i -->|ε| j
+       style st fill:none,stroke:none
+   ```
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to * P = \{a, b, c, g, j\}$ | $Q$ | $\varnothing$ |
+   | $* Q = \{b, c, d, e, g, h, i, j\}$ | $Q$ | $R$ |
+   | $* R = \{b, c, f, g, i, j\}$ | $Q$ | $\varnothing$ |
+   | $\varnothing$ | $\varnothing$ | $\varnothing$ |
+
+   $P$ 与 $R$ 等价，合并后极小 DFA 有 3 个状态：$\{P, R\}$（开始、接受，表示空串或末尾是 $b$）、$Q$（接受，末尾是 $a$）、死状态 $\varnothing$。它接受的语言是"不以 $b$ 开头且不含 bb"的串，与 $(ab + a)^*$ 的含义（每个 $b$ 前面紧挨着一个 $a$）一致。两个 DFA 都对长度不超过 12 的全部串用程序核对过。
 2. 用路径迭代法求例 4.1.4（被 3 整除的二进制数）的 DFA 的正规表达式，再用状态消去法求一遍，比较结果。
+
+   **答** 把余数 0、1、2 的状态编号为 1、2、3，开始与接受状态都是 1；转移为 $1 \xrightarrow{0} 1$、$1 \xrightarrow{1} 2$、$2 \xrightarrow{0} 3$、$2 \xrightarrow{1} 1$、$3 \xrightarrow{0} 2$、$3 \xrightarrow{1} 3$。所求为 $R_{11}^{(3)}$。
+
+   $k = 0$：$R_{11} = \varepsilon + 0$，$R_{12} = 1$，$R_{13} = \varnothing$，$R_{21} = 1$，$R_{22} = \varepsilon$，$R_{23} = 0$，$R_{31} = \varnothing$，$R_{32} = 0$，$R_{33} = \varepsilon + 1$。
+
+   $k = 1$（$(R_{11}^{(0)})^* = 0^*$）：$R_{11} = 0^*$，$R_{12} = 0^*1$，$R_{13} = \varnothing$，$R_{21} = 10^*$，$R_{22} = \varepsilon + 10^*1$，$R_{23} = 0$；$R_{3j}$ 不变（$R_{31}^{(0)} = \varnothing$）。
+
+   $k = 2$（$(R_{22}^{(1)})^* = (10^*1)^*$，记 $Y = (10^*1)^*$）：
+
+   $$
+   \begin{aligned}
+   R_{11}^{(2)} &= 0^* + 0^*1Y10^*, & R_{13}^{(2)} &= 0^*1Y0,\\
+   R_{31}^{(2)} &= 0Y10^*, & R_{33}^{(2)} &= \varepsilon + 1 + 0Y0.
+   \end{aligned}
+   $$
+
+   $k = 3$：$R_{11}^{(3)} = R_{11}^{(2)} + R_{13}^{(2)}\bigl(R_{33}^{(2)}\bigr)^*R_{31}^{(2)}$，即
+
+   $$
+   0^* + 0^*1(10^*1)^*10^* + 0^*1(10^*1)^*0\bigl(1 + 0(10^*1)^*0\bigr)^*0(10^*1)^*10^*.
+   $$
+
+   状态消去法：先消去状态 3（自环 1，前驱与后继都是 2，弧上都是 0），2 上得到自环 $01^*0$；再消去 2（从 1 经 1 进入、经 1 回到 1），1 上的自环成为 $0 + 1(01^*0)^*1$。只剩开始状态，结果为
+
+   $$
+   \bigl(0 + 1(01^*0)^*1\bigr)^*.
+   $$
+
+   比较：两个表达式等价（都由同一台 DFA 得到；也对长度不超过 12 的全部串用程序核对过），但路径迭代法的结果长得多：它按固定的编号顺序递推，$R_{11}^{(3)}$ 要把"不经过 3"与"经过 3"两部分分开写，同样的子表达式 $(10^*1)^*$ 反复出现；状态消去法每一步都直接把回路合并成闭包，适合手算。
 3. 用方程组法求例 4.1.2（以 00 结尾）的 DFA 的正规表达式。
+
+   **答** 状态 $p_0$（开始）、$p_1$、$p_2$（接受），方程组为
+
+   $$
+   X_0 = 1X_0 + 0X_1, \qquad X_1 = 1X_0 + 0X_2, \qquad X_2 = 0X_2 + 1X_0 + \varepsilon.
+   $$
+   由 Arden 引理，第三个方程给出 $X_2 = 0^*(1X_0 + \varepsilon)$。代入第二个：$X_1 = 1X_0 + 00^*1X_0 + 00^* = (1 + 00^*1)X_0 + 00^*$。再代入第一个：
+
+   $$
+   X_0 = (1 + 01 + 000^*1)X_0 + 000^*.
+   $$
+   系数 $1 + 01 + 000^*1 = (\varepsilon + 0 + 000^*)1 = 0^*1$ 不含 $\varepsilon$，再用一次 Arden 引理，
+
+   $$
+   X_0 = (0^*1)^*000^* = (0^*1)^*0^*00 = (0 + 1)^*00,
+   $$
+   最后一步用到 $(0^*1)^*0^* = (0 + 1)^*$（任一串在每个 1 之后切开）。
 4. 若 Thompson 构造的闭包一步不新增状态，只加 ε 弧 $s_1 \to f_1$ 与 $f_1 \to s_1$，并以 $s_1$、$f_1$ 为开始状态与接受状态，说明对表达式 $(a^*b)^*$ 得到的自动机会接受 $a$。问题出在哪一条性质被破坏？
+
+   **答** 按修改后的构造：$a$ 的基础自动机 $1 \xrightarrow{a} 2$，闭包加 $1 \xrightarrow{\varepsilon} 2$、$2 \xrightarrow{\varepsilon} 1$，得到 $a^*$（开始 1、接受 2）；$b$ 的基础自动机 $3 \xrightarrow{b} 4$，连接加 $2 \xrightarrow{\varepsilon} 3$，得到 $a^*b$（开始 1、接受 4）；外层闭包加 $1 \xrightarrow{\varepsilon} 4$、$4 \xrightarrow{\varepsilon} 1$，开始 1、接受 4。
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| n1((1))
+       n1 -->|a| n2((2))
+       n1 -->|ε| n2
+       n2 -->|ε| n1
+       n2 -->|ε| n3((3))
+       n3 -->|b| n4(((4)))
+       n1 -->|ε| n4
+       n4 -->|ε| n1
+       style st fill:none,stroke:none
+   ```
+
+   路径 $1 \xrightarrow{a} 2 \xrightarrow{\varepsilon} 1 \xrightarrow{\varepsilon} 4$ 的标记是 $a$，所以 $a$ 被接受；但 $L((a^*b)^*)$ 中的非空串都以 $b$ 结尾，$a$ 不属于它。
+
+   被破坏的是性质 2（没有弧进入开始状态）：内层 $a^*$ 的自动机有回弧 $2 \to 1$ 进入它的开始状态 1（这条弧同时离开了接受状态 2，也破坏了性质 3）。外层闭包的捷径 $1 \xrightarrow{\varepsilon} 4$ 本意只在"一个 $a^*b$ 都不读"时使用，可是状态 1 在读了若干个 $a$ 之后又能回到，于是路径在 $a^*$ 内部绕了一圈后跳过 $b$ 直接到达接受状态。定理 5.1.1 的证明需要"进入一个子自动机只能经过它的开始状态、离开只能经过它的接受状态"，正是这两条性质保证的。
 5. 给出生成"0 的个数为偶数的串"的正规文法，并画出定理 5.3.1 构造的 ε-NFA。
+
+   **答** 由例 5.2.3 的 DFA（$E$ 表示已读偶数个 0，$O$ 表示奇数个）得到文法
+
+   $$
+   E \to 1E \mid 0O \mid \varepsilon, \qquad O \to 1O \mid 0E,
+   $$
+   开始符号 $E$；$E \to \varepsilon$ 是 $A \to a$ 中 $a = \varepsilon$ 的情形。定理 5.3.1 的构造以非终结符为状态，另加接受状态 $f$：$A \to aB$ 给出弧 $A \xrightarrow{a} B$，$E \to \varepsilon$ 给出 ε 弧 $E \to f$：
+
+   ```mermaid
+   flowchart LR
+       st[" "] -->|start| E((E))
+       E -->|1| E
+       E -->|0| O((O))
+       O -->|1| O
+       O -->|0| E
+       E -->|ε| f(((f)))
+       style st fill:none,stroke:none
+   ```
+
+   从 $E$ 出发到达 $f$ 的路径先在 $E$、$O$ 之间走若干步，最后必须停在 $E$，即读了偶数个 0。
 6. 证明：$S \to 0A \mid \varepsilon$，$A \to S1$ 生成 $\{0^n1^n \mid n \ge 0\}$。
+
+   **答** 每个句型至多含一个非终结符，$A$ 只有产生式 $A \to S1$，所以从 $S$ 出发的推导或者是 $S \Rightarrow \varepsilon$，或者以 $S \Rightarrow 0A \Rightarrow 0S1$ 开头。
+
+   （$\subseteq$）对推导步数归纳：一步推导只能得到 $\varepsilon = 0^01^0$。否则 $S \Rightarrow 0A \Rightarrow 0S1 \overset{*}{\Rightarrow} 0u1$，其中 $S \overset{*}{\Rightarrow} u$ 少用了两步，由归纳假设 $u = 0^m1^m$，于是 $w = 0^{m+1}1^{m+1}$。
+
+   （$\supseteq$）对 $n$ 归纳：$n = 0$ 时 $S \Rightarrow \varepsilon$；$n \ge 1$ 时由归纳假设 $S \overset{*}{\Rightarrow} 0^{n-1}1^{n-1}$，于是 $S \Rightarrow 0A \Rightarrow 0S1 \overset{*}{\Rightarrow} 0^n1^n$。$\square$
+
+   这个文法混用了右线性产生式 $S \to 0A$ 与左线性产生式 $A \to S1$，所以不是正规文法；由例 6.1.1，它生成的语言也不是正规语言。

@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions and Regular Languages
 description: Syntax and semantics of regular expressions, operator precedence and derived operations; comparison with practical regex; the inductive definition of regular languages; methods for designing regular expressions; algebraic laws, the concretization test for laws, and Arden's lemma.
-source_hash: 5cd16cd20d26
+source_hash: 170efa52c45b
 ---
 
 The simplest class of **grammars** (type 3) in Chapter 2 generates the regular languages. This chapter describes these languages from another angle: starting from single symbols and using only three operations, union, concatenation, and **Kleene closure**, we construct languages, and the algebraic expressions we write down are regular expressions. They are the most common way, besides finite automata, to describe regular languages, and they are the mathematical core of the **regular expressions** ([4.2.11](/4.2.11)) familiar to programmers; most constructs of practical regular expressions can be reduced to these three operations. This chapter defines regular expressions and their languages, practices designing expressions for given languages, and then discusses the algebraic laws of regular expressions. Chapter 4 introduces finite automata, and Chapter 5 proves that the two describe the same family of languages.
@@ -145,6 +145,44 @@ Arden's lemma is the basis of another method for converting finite automata into
 ## Questions
 
 1. Write regular expressions for the following languages (alphabet $\{0, 1\}$): (1) every 0 is immediately followed by at least one 1; (2) the number of 0s is divisible by 3; (3) at least three 1s, and the third symbol from the end is 1; (4) even length and no substring 00.
+
+   **Answer** Each expression below was checked by a program against all strings of length at most 12.
+
+   (1) $(1 + 01)^*$. The condition says that every 0 forms $01$ with the 1 after it, so the string is built from $1$ and $01$; the empty string satisfies the condition.
+
+   (2) $(1^*01^*01^*0)^*1^*$: as in Example 3.3.5, cut after every third 0.
+
+   (3) Split into cases by the last two symbols and count how many 1s are still needed before them:
+
+   $$
+   (0 + 1)^*111 + (0 + 1)^*1(0 + 1)^*1(01 + 10) + (0 + 1)^*1(0 + 1)^*1(0 + 1)^*100.
+   $$
+   If the last three symbols are $111$, there are already three 1s; if they are $101$ or $110$, at least one more is needed in front; if they are $100$, at least two more.
+
+   (4) Group the string into pairs from the left. A pair can only be $01$, $10$ or $11$ ($00$ itself is forbidden), and 00 appears across the boundary of two pairs exactly when $10$ is immediately followed by $01$. So $10$ can only be followed by $10$, $11$ or the end of the string:
+
+   $$
+   \bigl(01 + 11 + 10(10)^*11\bigr)^*(10)^*.
+   $$
 2. Simplify: $(\varepsilon + 1)(\varepsilon + 1)^*$, $\varnothing^* + 0^*$, $(0^*1^*)^*0$.
+
+   **Answer** $(\varepsilon + 1)^* = 1^*$ and $(\varepsilon + 1)1^* = 1^* + 11^* = 1^*$, so the first is $1^*$. $\varnothing^* = \varepsilon$ and $\varepsilon \in L(0^*)$, so the second is $0^*$. $(0^*1^*)^* = (0 + 1)^*$ (the law $(L^*M^*)^* = (L + M)^*$ of Example 3.4.1), so the third is $(0 + 1)^*0$, the strings ending in 0.
 3. Use the concretization test to decide whether each of the following equations is a law: (1) $(L^*)^* = L^*$; (2) $(LM)^* = L^*M^*$; (3) $(L + M)^* = L^*(ML^*)^*$; (4) $L^*M = M + L^*LM$.
+
+   **Answer** Replace $L$ and $M$ by the symbols $a$ and $b$ (Theorem 3.4.2).
+
+   (1) $(a^*)^*$ and $a^*$ both denote $\{a^n \mid n \ge 0\}$: a law.
+
+   (2) $(ab)^*$ and $a^*b^*$: $a \in L(a^*b^*)$ but $a \notin L((ab)^*)$: not a law.
+
+   (3) $(a + b)^*$ denotes all strings; every string can be written as "an initial block of $a$s, then each $b$ followed by a block of $a$s", that is, it lies in $L(a^*(ba^*)^*)$, and the converse is obvious. The two sides are equal: a law.
+
+   (4) $b + a^*ab = b + a^+b = a^*b$: a law.
 4. Prove that when $\varepsilon \in A$, the solution in Arden's lemma is not unique.
+
+   **Answer** Let $\varepsilon \in A$; then $A^+ = A^*$. For any language $C \supseteq B$, let $X = A^*C$. Then
+
+   $$
+   AX \cup B = A^+C \cup B = A^*C \cup B = A^*C = X
+   $$
+   (the last step uses $B \subseteq C \subseteq A^*C$), so every $A^*C$ is a solution; in particular $X = \Sigma^*$ is always a solution. Whenever $A^*B \ne \Sigma^*$, $A^*B$ and $\Sigma^*$ are two different solutions. For example, with $A = \{\varepsilon\}$ and $B = \varnothing$ the equation becomes $X = X$, and every language is a solution. (The part "$A^*B \subseteq X$" of the proof of Theorem 3.4.3 does not use $\varepsilon \notin A$, so $A^*B$ is still the least solution; what fails is the other half, since $A^{n+1}X$ may now contain short strings.)

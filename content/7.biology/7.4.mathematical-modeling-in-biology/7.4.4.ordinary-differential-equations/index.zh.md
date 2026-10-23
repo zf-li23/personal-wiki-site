@@ -621,6 +621,70 @@ $$
    d) 稳定共存
    对于每种情况，绘制相图并标注平衡点，解释参数条件如何导致该结果。
 
+   **答** 结果由两个半平凡平衡点能否被"入侵"决定。在 $(1, 0)$ 处，雅可比矩阵的特征值为 $-1$ 与 $\rho(1 - b)$：$b > 1$ 时稀少的物种 2 的人均增长率 $\rho(1 - b) < 0$，它无法入侵，$(1, 0)$ 稳定。同理 $(0, 1)$ 的特征值为 $-\rho$ 与 $1 - a$，$a > 1$ 时稳定。共存点 $(x^*, y^*)$ 处 $J = \begin{pmatrix} -x^* & -ax^* \\ -\rho by^* & -\rho y^* \end{pmatrix}$，$\operatorname{tr}J < 0$，$\det J = \rho x^*y^*(1 - ab)$：$a, b < 1$ 时它在第一象限且稳定，$a, b > 1$ 时是鞍点。几何上，两条零增长线的截距比较就是这四个不等式（$x$-零增长线截 $y$ 轴于 $1/a$，$y$-零增长线截 $x$ 轴于 $1/b$）。
+
+   取正文 4.2.5 的参数（$\rho = 1$）：a) $a = 0.5$、$b = 1.5$；b) $a = 1.5$、$b = 0.5$；c) $a = 1.4$、$b = 1.6$；d) $a = 0.4$、$b = 0.6$。下面的代码画出零增长线、几条轨线和平衡点（实心为稳定，空心为不稳定），并打印特征值与终点：
+
+   ```python
+   import numpy as np
+   import matplotlib.pyplot as plt
+   from scipy.integrate import solve_ivp
+
+   def rhs(t, z, a, b, rho):
+       x, y = z
+       return [x * (1 - x - a * y), rho * y * (1 - y - b * x)]
+
+   def equilibria(a, b, rho):
+       pts = [(0.0, 0.0), (1.0, 0.0), (0.0, 1.0)]
+       if a * b != 1:
+           xs, ys = (1 - a) / (1 - a * b), (1 - b) / (1 - a * b)
+           if xs > 0 and ys > 0:
+               pts.append((xs, ys))
+       out = []
+       for x, y in pts:
+           J = np.array([[1 - 2 * x - a * y, -a * x],
+                         [-rho * b * y, rho * (1 - 2 * y - b * x)]])
+           ev = np.linalg.eigvals(J)
+           out.append(((x, y), ev, bool(np.all(ev.real < 0))))
+       return out
+
+   cases = {'a) species 1 wins': (0.5, 1.5), 'b) species 2 wins': (1.5, 0.5),
+            'c) unstable coexistence': (1.4, 1.6), 'd) stable coexistence': (0.4, 0.6)}
+   rho = 1.0
+   fig, axes = plt.subplots(2, 2, figsize=(9, 9))
+   starts = [(0.05, 0.9), (0.9, 0.05), (0.2, 0.2), (0.8, 0.8), (0.1, 0.4), (0.4, 0.1)]
+   for ax, (name, (a, b)) in zip(axes.flat, cases.items()):
+       xs = np.linspace(0, 1.2, 50)
+       ax.plot(xs, (1 - xs) / a, 'r', label='dx/dt = 0')
+       ax.plot(xs, 1 - b * xs, 'b', label='dy/dt = 0')
+       for z0 in starts:
+           sol = solve_ivp(rhs, [0, 60], z0, args=(a, b, rho), max_step=0.1)
+           ax.plot(*sol.y, 'k', lw=0.7)
+       for (x, y), ev, stable in equilibria(a, b, rho):
+           ax.plot(x, y, 'o', mfc='k' if stable else 'w', mec='k', ms=8)
+       ax.set(xlim=(0, 1.2), ylim=(0, 1.2), xlabel='x', ylabel='y', title=f'{name}: a={a}, b={b}')
+   axes[0, 0].legend()
+
+   for name, (a, b) in cases.items():
+       print(name)
+       for (x, y), ev, stable in equilibria(a, b, rho):
+           print(f'  ({x:.3f}, {y:.3f})  eigenvalues {np.round(ev.real, 3)}  stable={stable}')
+       for z0 in [(0.3, 0.6), (0.6, 0.3)]:
+           sol = solve_ivp(rhs, [0, 200], z0, args=(a, b, rho), rtol=1e-8)
+           print(f'  from {z0} -> ({sol.y[0, -1]:.3f}, {sol.y[1, -1]:.3f})')
+   ```
+
+   运行结果（略去处处不稳定的 $(0, 0)$，其特征值为 $1, \rho$）：
+
+   | 情形 | $(1, 0)$ 的特征值 | $(0, 1)$ 的特征值 | 共存点 | 从 $(0.3, 0.6)$ / $(0.6, 0.3)$ 出发的终点 |
+   |---|---|---|---|---|
+   | a) $a < 1 < b$ | $-1, -0.5$，稳定 | $-1, 0.5$，鞍点 | 无 | 都到 $(1, 0)$ |
+   | b) $b < 1 < a$ | $-1, 0.5$，鞍点 | $-1, -0.5$，稳定 | 无 | 都到 $(0, 1)$ |
+   | c) $a, b > 1$ | $-1, -0.6$，稳定 | $-1, -0.4$，稳定 | $(0.323, 0.484)$，特征值 $0.194, -1$，鞍点 | 分别到 $(0, 1)$ 与 $(1, 0)$ |
+   | d) $a, b < 1$ | $-1, 0.4$，鞍点 | $-1, 0.6$，鞍点 | $(0.789, 0.526)$，特征值 $-1, -0.316$，稳定 | 都到 $(0.789, 0.526)$ |
+
+   解释：a) 物种 1 对物种 2 的种间抑制（$b > 1$）强于物种 2 的种内抑制，而它自己受到的种间抑制弱（$a < 1$），所以物种 1 能入侵物种 2 的单种平衡，物种 2 不能入侵物种 1 的；b) 相反。c) 两者都是种间竞争强于种内竞争，谁先占多数谁获胜：共存点是鞍点，它的稳定流形把相平面分成两个吸引域，所以从相近的初值出发可以得到相反的结局。d) 两者都是种内竞争强于种间竞争，各自都能在对方的单种平衡下入侵，于是稳定共存（$\rho$ 只改变趋近的速度与轨线的形状，不改变结局）。
+
 2. 修改捕食者-猎物模型，加入猎物密度制约（即猎物单独增长为逻辑斯谛型）：
    $$
    \frac{\mathrm{d}N}{\mathrm{d}t} = rN\left(1-\frac{N}{K}\right) - \varepsilon NP
@@ -822,3 +886,77 @@ $$
    因此，尽管 Lotka-Volterra 模型是理解捕食者-猎物相互作用的基础，但用于实际数据拟合和预测时需谨慎。更现实的模型（如带密度制约、Holling 功能反应、随机微分方程等）可能提供更好的拟合，但也会引入更多参数，增加复杂性。
 
 4. 考虑一个包含两个竞争物种和一个捕食者的三物种系统。设计数值实验，探究在什么条件下捕食者可以促进竞争物种的共存。绘制三维相图展示不同动力学状态。
+
+   **答** 思路：用 4.4.2 的无量纲模型，记 $\kappa = c_2/c_1$（物种 2 方程中 $v$ 的系数）：
+
+   $$
+   \begin{aligned}
+   \frac{\mathrm{d}u_1}{\mathrm{d}\tau} &= u_1(1 - u_1 - au_2 - v), \\
+   \frac{\mathrm{d}u_2}{\mathrm{d}\tau} &= \rho u_2(1 - u_2 - bu_1 - \kappa v), \\
+   \frac{\mathrm{d}v}{\mathrm{d}\tau} &= v(-d + e_1u_1 + e_2u_2).
+   \end{aligned}
+   $$
+   先让没有捕食者时物种 1 必胜（$a < 1 < b$，第 1 题的情形 a），再问加入捕食者后物种 2 能否存活。判断共存的工具是互相入侵：每个物种在"自己缺席、其余物种处于平衡"时的人均增长率都为正，系统就不会失去任何一个物种。
+
+   入侵条件：
+
+   - 捕食者只靠物种 1 生存的平衡为 $u_1^* = d/e_1$，$v^* = 1 - d/e_1$（要求 $d < e_1$；这是带密度制约的捕食者-猎物系统，平衡稳定）。物种 2 在这里的人均增长率为 $\rho\bigl(1 - bd/e_1 - \kappa(1 - d/e_1)\bigr)$，它能入侵当且仅当
+     $$
+     d < e_1\frac{1 - \kappa}{b - \kappa} .
+     $$
+     这要求 $\kappa < 1$：捕食者对优势竞争者的压力相对更大。捕食者把物种 1 压到 $d/e_1$ 以下，空出的资源留给物种 2。
+   - 反过来，捕食者只靠物种 2 生存的平衡为 $u_2^* = d/e_2$，$v^* = (1 - d/e_2)/\kappa$（要求 $d < e_2$）。物种 1 能入侵当且仅当 $1 - ad/e_2 - (1 - d/e_2)/\kappa > 0$，即
+     $$
+     d > e_2\frac{1 - \kappa}{1 - a\kappa} ;
+     $$
+     $d \ge e_2$ 时捕食者不能只靠物种 2 维持，而 $(0, 1, 0)$ 总能被物种 1 入侵（$a < 1$）。
+
+   于是三物种共存的窗口是 $e_2(1 - \kappa)/(1 - a\kappa) < d < e_1(1 - \kappa)/(b - \kappa)$：捕食压力（$d$ 越小，压力越大）必须适中。$d > e_1$ 时捕食者灭绝，物种 1 排除物种 2；$d$ 略小于 $e_1$ 时捕食者存在但压力不足，仍是物种 1 加捕食者；$d$ 过小时捕食者把物种 1 吃到无法恢复，剩下物种 2 加捕食者。这就是生态学中的关键种捕食（keystone predation，Paine 1966 的潮间带实验）：捕食者偏好优势竞争者时，适度的捕食提高物种多样性。
+
+   数值实验：取 $a = 0.5$、$b = 1.5$、$\rho = 1$、$e_1 = 1$、$e_2 = 0.2$，从 $(0.3, 0.3, 0.1)$ 出发积分到 $\tau = 1500$，按终点哪些物种大于 $10^{-3}$ 分类，在 $(d, \kappa)$ 平面上扫描 $60 \times 46$ 个参数点：
+
+   ```python
+   import numpy as np
+   from scipy.integrate import solve_ivp
+
+   a, b, rho, e1, e2 = 0.5, 1.5, 1.0, 1.0, 0.2
+
+   def rhs(t, z, d, kappa):
+       u1, u2, v = z
+       return [u1 * (1 - u1 - a * u2 - v),
+               rho * u2 * (1 - u2 - b * u1 - kappa * v),
+               v * (-d + e1 * u1 + e2 * u2)]
+
+   def outcome(d, kappa, T=1500.0, z0=(0.3, 0.3, 0.1)):
+       """0: species 1 alone, 1: species 1 + predator, 2: all three, 3: species 2 + predator."""
+       y = solve_ivp(rhs, [0, T], z0, args=(d, kappa), method='LSODA',
+                     rtol=1e-7, atol=1e-10).y[:, -1]
+       alive = y > 1e-3
+       if alive.all():
+           return 2
+       if alive[0] and alive[2]:
+           return 1
+       if alive[1] and alive[2]:
+           return 3
+       return 0
+
+   ds = np.linspace(0.02, 1.2, 60)
+   ks = np.linspace(0.05, 0.95, 46)
+   grid = np.array([[outcome(d, k) for d in ds] for k in ks])
+   # invasion boundaries for comparison
+   upper = e1 * (1 - ks) / (b - ks)       # species 2 can invade below this d
+   lower = e2 * (1 - ks) / (1 - a * ks)   # species 1 can invade above this d
+   ```
+
+   ![捕食者介导的共存：左为 κ = 0.3 时四种捕食者死亡率下的三维轨线，右为 (d, κ) 平面上的长期结局与入侵边界（实线、虚线），点线为 d = e1](./plots/predator-mediated-coexistence.py)
+
+   结果：数值分类的边界在网格分辨率内与上面两条入侵边界重合（右图；紧贴边界处入侵率接近零，收敛很慢）。$\kappa = 0.3$ 时共存窗口为 $0.165 < d < 0.583$，四条代表性轨线的终点为：
+
+   | $d$ | 终点 $(u_1, u_2, v)$ | 状态 |
+   |---|---|---|
+   | 0.1 | $(0, 0.5, 1.667)$ | 物种 1 被排除（捕食过强） |
+   | 0.35 | $(0.258, 0.459, 0.512)$ | 三物种共存，内部平衡点的特征值 $-0.515$、$-0.101 \pm 0.248\mathrm{i}$，稳定焦点（阻尼振荡趋近） |
+   | 0.8 | $(0.8, 0, 0.2)$ | 物种 2 被排除（捕食过弱） |
+   | 1.1 | $(1, 0, 0)$ | 捕食者灭绝，回到竞争排斥 |
+
+   在扫描的范围内所有轨线都趋于平衡点，没有出现持续振荡：线性功能反应加上猎物的密度制约使系统稳定。要看到 4.4.3 所说的周期振荡与混沌，需要换成饱和的 Holling II 型功能反应 $\varepsilon u v/(1 + hu)$，或去掉猎物的密度制约，可以作为这个实验的延伸。

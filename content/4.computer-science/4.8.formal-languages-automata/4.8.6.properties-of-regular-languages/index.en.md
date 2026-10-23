@@ -1,7 +1,7 @@
 ---
 title: Properties of Regular Languages
 description: The pumping lemma for regular languages and its applications (including an example showing that the pumping lemma is not sufficient); closure under union, concatenation, closure, complement, intersection, difference, reversal, homomorphism, and inverse homomorphism, and the product automaton; decision problems of emptiness, membership, finiteness, and equivalence; equivalence and distinguishability of states, the table-filling algorithm and its correctness, DFA minimization; the Myhill–Nerode theorem and uniqueness of the minimal DFA.
-source_hash: c36a2b6ce102
+source_hash: 2aa5aa605e73
 ---
 
 The previous two chapters proved that **regular expressions**, **DFAs**, NFAs, and ε-NFAs describe the same family of languages. This chapter studies the properties of this family as a whole and answers four kinds of questions. Which languages are not regular? The pumping lemma and the Myhill–Nerode theorem provide tools for proofs: finitely many states can remember only finite information. Under which operations do regular languages stay regular? Union, intersection, complement, reversal, homomorphism, and others all work; these closure properties are both a means of constructing automata and a means of proving nonregularity. Which questions about regular languages have algorithms? Emptiness, membership, finiteness, and equivalence are all decidable. Finally, a regular language has infinitely many DFAs, among which the one with the fewest states is essentially unique and can be found by the table-filling algorithm. Chapter 9 discusses the same questions for context-free languages, where many answers differ: context-free languages are not closed under intersection and complement, and equivalence is undecidable.
@@ -381,9 +381,86 @@ The **Myhill–Nerode theorem** is also the most powerful tool for proving nonre
 ## Questions
 
 1. Use the pumping lemma to prove that the following languages are not regular: (1) the strings over $\{0,1\}$ in which the number of 0s is twice the number of 1s; (2) the strings with more 0s than 1s; (3) $\{0^{m^2} \mid m \ge 0\}$; (4) the palindromes over $\{0,1\}$.
+
+   **Answer** All four proofs share the same frame: suppose $L$ is regular and let $n$ be the constant of Theorem 6.1.1; choose some $w \in L$ with $\lvert w\rvert \ge n$; for every decomposition $w = xyz$ with $y \ne \varepsilon$ and $\lvert xy\rvert \le n$, find a $k$ with $xy^kz \notin L$, contradicting the pumping lemma.
+
+   (1) Take $w = 0^{2n}1^n \in L$, with $\lvert w\rvert = 3n \ge n$. Since $\lvert xy\rvert \le n$, $y$ lies in the leading 0s: $y = 0^t$ with $1 \le t \le n$. Take $k = 0$: $xz = 0^{2n-t}1^n$ has $2n - t \ne 2n$ zeros and is not in $L$, a contradiction. $\square$
+
+   (2) Take $w = 0^{n+1}1^n \in L$. Again $y = 0^t$ with $t \ge 1$. Take $k = 0$: $xz = 0^{n+1-t}1^n$ with $n + 1 - t \le n$, so the 0s no longer outnumber the 1s and $xz \notin L$, a contradiction (pumping up does not help; see Example 6.1.5). $\square$
+
+   (3) Take $w = 0^{n^2} \in L$, with $\lvert w\rvert = n^2 \ge n$. Then $y = 0^t$ with $1 \le t \le \lvert xy\rvert \le n$. Take $k = 2$: $\lvert xy^2z\rvert = n^2 + t$, and
+
+   $$
+   n^2 < n^2 + t \le n^2 + n < n^2 + 2n + 1 = (n + 1)^2,
+   $$
+   so $n^2 + t$ lies strictly between two consecutive squares and is not a square; $xy^2z \notin L$, a contradiction. $\square$
+
+   (4) Take $w = 0^n10^n \in L$. Then $y = 0^t$ lies in the first block of 0s, with $t \ge 1$. Take $k = 0$: the reversal of $xz = 0^{n-t}10^n$ is $0^n10^{n-t} \ne xz$ (the numbers of 0s before and after the only 1 differ), so $xz$ is not a palindrome, a contradiction. $\square$
 2. Let $h(a) = 01$, $h(b) = 10$, and $M = L((01 + 10)^*0)$. Find a regular expression for $h^{-1}(M)$.
+
+   **Answer** For every $w \in \{a, b\}^*$, $h(w)$ is built from blocks of length 2, so its length $2\lvert w\rvert$ is even; the strings of $M$ consist of blocks of length 2 followed by one 0, so they all have odd length. Hence no $w$ satisfies $h(w) \in M$, and $h^{-1}(M) = \varnothing$, with regular expression $\varnothing$.
 3. Let $h(a) = \varepsilon$, $h(b) = 10$, and $E = \varepsilon + (a + b)(ba)^*$. (1) Write $E^{\mathrm{R}}$; (2) write $h(E)$; (3) construct a DFA accepting $\overline{L(h(E))}$.
+
+   **Answer** (1) Reverse recursively by $(E_1 + E_2)^{\mathrm{R}} = E_1^{\mathrm{R}} + E_2^{\mathrm{R}}$, $(E_1E_2)^{\mathrm{R}} = E_2^{\mathrm{R}}E_1^{\mathrm{R}}$, $(E_1^*)^{\mathrm{R}} = (E_1^{\mathrm{R}})^*$: $E^{\mathrm{R}} = \varepsilon + (ab)^*(a + b)$.
+
+   (2) Replace $a$ by $\varepsilon$ and $b$ by $10$: $h(E) = \varepsilon + (\varepsilon + 10)(\varepsilon\,10)^* = \varepsilon + (\varepsilon + 10)(10)^*$, which simplifies to $(10)^*$.
+
+   (3) Over the alphabet $\{0, 1\}$, a DFA for $(10)^*$ has states $p$ (start, accepting), $q$ (a 1 has just been read) and a dead state $d$; swapping accepting and nonaccepting states (Theorem 6.2.2) gives a DFA for the complement:
+
+   | | $0$ | $1$ |
+   |---|---|---|
+   | $\to p$ | $d$ | $q$ |
+   | $* q$ | $p$ | $d$ |
+   | $* d$ | $d$ | $d$ |
+
+   (Checked by a program against all strings of length at most 10.)
 4. Give an algorithm to decide $L(A) = \Sigma^*$, where $A$ is a DFA; then give an algorithm to decide $L(A) \cup L(B) = \Sigma^*$.
+
+   **Answer** $L(A) = \Sigma^*$ if and only if $\overline{L(A)} = \varnothing$. Swap the accepting and nonaccepting states of $A$ to obtain a DFA for the complement (Theorem 6.2.2) and test emptiness as in Section 6.3.1; equivalently, run one graph search from the start state: $L(A) = \Sigma^*$ if and only if every reachable state is accepting. The time is $O(\lvert Q\rvert\,\lvert\Sigma\rvert)$.
+
+   Let $B$ also be a DFA (convert it first if it is an NFA or a regular expression). $L(A) \cup L(B) = \Sigma^*$ if and only if $\overline{L(A)} \cap \overline{L(B)} = \varnothing$. Build the product automaton (Theorem 6.2.3) and search the pairs reachable from $(q_A, q_B)$; the equation holds if and only if there is no reachable pair $(p, q)$ with $p \notin F_A$ and $q \notin F_B$. The time is $O(\lvert Q_A\rvert\,\lvert Q_B\rvert\,\lvert\Sigma\rvert)$. Checking the reachable states of the two DFAs separately is not enough: when both have reachable nonaccepting states, these need not be reached by the same string.
 5. Minimize the DFA of Example 4.1.1 and the DFA obtained in Example 4.5.2, and explain why the results are minimal.
+
+   **Answer** Example 4.1.1: all four states are reachable. Round 0 marks the 4 pairs between the accepting states $q_0, q_3$ and the nonaccepting states $q_1, q_2$. For the remaining pairs, $\{q_0, q_3\}$ goes to $\{q_2, q_1\}$ on 0 and to $\{q_1, q_2\}$ on 1, which are unmarked, and $\{q_1, q_2\}$ goes to $\{q_3, q_0\}$ on 0 and to $\{q_0, q_3\}$ on 1, also unmarked. Round 1 marks nothing new and the algorithm stops: $q_0 \equiv q_3$ and $q_1 \equiv q_2$. The quotient automaton has two states, $[q_0]$ (start, accepting) and $[q_1]$, and both 0 and 1 switch between them; it accepts the strings of even length ($\lvert w\rvert_0$ and $\lvert w\rvert_1$ have the same parity if and only if $\lvert w\rvert$ is even, in agreement with Theorem 4.1.1).
+
+   Example 4.5.2: write $P = \{q_0, q_1\}$, $B = \{q_1\}$, $C = \{q_1, q_4\}$, $D = \{q_2\}$, $E = \{q_2, q_3, q_5\}$, $F = \{q_3, q_5\}$, $N = \varnothing$; the accepting states are $E$ and $F$, and all states are reachable.
+
+   - Round 0: mark the pairs between $E$ or $F$ and the other 5 states.
+   - Round 1: on a digit, $D \to F$ is accepting while $P, B, C \to C$ and $N \to N$ are not, so the pairs of $D$ with $P, B, C, N$ are marked; on the decimal point, $C \to E$ is accepting while $P, B \to D$ and $N \to N$ are not, so the pairs of $C$ with $P, B, N$ are marked.
+   - Round 2: $\{P, N\}$ and $\{B, N\}$ go to the marked pair $\{C, N\}$ on a digit.
+   - Round 3: $\{P, B\}$ goes to the marked pair $\{B, N\}$ on a sign.
+   - $\{E, F\}$: signs and the decimal point lead both to $N$, digits lead both to $F$; this pair is never marked.
+
+   So the only equivalence is $E \equiv F$ (both already form a valid decimal number, and from then on only digits may follow), and the minimal DFA has 6 states: $P, B, C, D, [E] = \{E, F\}, N$.
+
+   Both results are minimal: by Theorem 6.4.1 the states left unmerged by the table-filling algorithm are pairwise distinguishable, and they are all reachable; by Theorems 6.4.2 and 6.5.2, the DFA produced by the minimization algorithm has as many states as the index of $\equiv_L$, and no DFA accepting the same language has fewer. (Both minimizations were also checked by a program.)
 6. Find all equivalence classes of $\equiv_L$ for $L = \{w \in \{a, b\}^* \mid \text{the second-to-last symbol of } w \text{ is } a\}$ and write down the minimal DFA from them.
+
+   **Answer** Whether $wz \in L$ depends only on the last two symbols of $wz$, which are determined by the last two symbols of $w$ together with $z$. Padding strings $w$ shorter than 2 on the left with $b$ (a padded $b$ never becomes a second-to-last $a$), strings with the same (padded) last two symbols are equivalent. So there are at most 4 classes:
+
+   - $C_{bb}$: $\varepsilon$, $b$, and the strings ending in $bb$;
+   - $C_{ba}$: $a$ and the strings ending in $ba$;
+   - $C_{ab}$: the strings ending in $ab$;
+   - $C_{aa}$: the strings ending in $aa$.
+
+   They are pairwise inequivalent: the suffix $\varepsilon$ separates $C_{ab}, C_{aa}$ (in $L$) from $C_{bb}, C_{ba}$ (not in $L$); the suffix $b$ separates $C_{bb}$ from $C_{ba}$ ($bbb \notin L$, $bab \in L$) and $C_{ab}$ from $C_{aa}$ ($abb \notin L$, $aab \in L$). Hence $\equiv_L$ has exactly 4 classes. With $\delta([x], c) = [xc]$, that is, last two symbols $uv$ become $vc$ on reading $c$, the minimal DFA is
+
+   | | $a$ | $b$ |
+   |---|---|---|
+   | $\to C_{bb}$ | $C_{ba}$ | $C_{bb}$ |
+   | $C_{ba}$ | $C_{aa}$ | $C_{ab}$ |
+   | $* C_{ab}$ | $C_{ba}$ | $C_{bb}$ |
+   | $* C_{aa}$ | $C_{aa}$ | $C_{ab}$ |
+
+   This agrees with the lower bound $2^2 = 4$ of Theorem 4.3.3 (with $n = 2$ and the symbol $a$ in place of 1).
 7. Prove that if $L$ is a regular language, then $\operatorname{half}(L) = \{x \mid \text{there is } y \text{ with } \lvert y\rvert = \lvert x\rvert \text{ and } xy \in L\}$ is also a regular language. (Hint: simultaneously simulate "reading $x$ from the start state" and "guessing a state and reading $y$ backward".)
+
+   **Answer** Let the DFA $A = (Q, \Sigma, \delta, q_0, F)$ accept $L$. Then $x \in \operatorname{half}(L)$ if and only if there is a path of length $\lvert x\rvert$ from $\hat\delta(q_0, x)$ to some state of $F$. We build an NFA $N$ that tracks two things at once: the first component reads $x$ forward from $q_0$; the second starts from a guessed accepting state and, for each symbol of $x$, moves one step backward along some arc of $A$ (with any symbol), which amounts to "reading" a string $y$ of the same length as $x$ from back to front.
+
+   - States $Q \times Q$; start states all $(q_0, f)$ with $f \in F$ (several start states can be realized by a new start state with ε-arcs);
+   - transitions: $\delta_N((q, r), a) = \{(\delta(q, a), r') \mid \delta(r', b) = r \text{ for some } b \in \Sigma\}$;
+   - accepting states: $\{(q, q) \mid q \in Q\}$.
+
+   By induction on $\lvert x\rvert$: after reading $x$, $N$ can be in $(q, r)$ if and only if $q = \hat\delta(q_0, x)$ and there is a $y$ with $\lvert y\rvert = \lvert x\rvert$ and $\hat\delta(r, y) \in F$ ($y$ consists of the symbols of the arcs chosen while moving backward, in reverse order). Hence $N$ accepts $x$ if and only if there is such a $y$ with $\hat\delta(q_0, x) = r$ and $\hat\delta(r, y) \in F$, that is, $\hat\delta(q_0, xy) \in F$ and $xy \in L$. So $L(N) = \operatorname{half}(L)$, which is regular by Theorem 4.3.2. $\square$
+
+   A DFA can also be built directly: let $\operatorname{pre}(S) = \{p \mid \delta(p, b) \in S \text{ for some } b\}$, take states $(q, S) \in Q \times \mathcal{P}(Q)$, start $(q_0, F)$, transitions $(q, S) \xrightarrow{a} (\delta(q, a), \operatorname{pre}(S))$, and accept the states with $q \in S$. After reading $x$, $S$ is exactly the set of states from which $F$ can be reached by a string of length $\lvert x\rvert$; this is precisely the result of the subset construction applied to the NFA above.

@@ -546,12 +546,38 @@ $$
 
 1. 一杯热水在室温下冷却，熵减少了。用 $\mathrm{d}_{\mathrm{e}}S$ 与 $\mathrm{d}_{\mathrm{i}}S$ 分析这一过程，并指出熵产生发生在何处。
 
+   **答** 取水为系统，水温 $T_{\mathrm{w}}$ 大致均匀。水放热 $\delta Q < 0$，熵流 $\mathrm{d}_{\mathrm{e}}S = \delta Q/T_{\mathrm{w}} < 0$；水内部的温度差很小，$\mathrm{d}_{\mathrm{i}}S \approx 0$，所以 $\mathrm{d}S \approx \delta Q/T_{\mathrm{w}} < 0$，与定理 18.1.1 不矛盾。熵产生发生在温度从 $T_{\mathrm{w}}$ 降到室温 $T_0$ 的地方，即杯壁和水面、杯外的空气边界层：与例 18.1.1 的导热杆相同，这一层每传过热量 $\lvert\delta Q\rvert$ 产生熵 $\lvert\delta Q\rvert(1/T_0 - 1/T_{\mathrm{w}}) > 0$。环境得到的熵 $\lvert\delta Q\rvert/T_0$ 大于水失去的熵，水、边界层与环境合起来的熵增加。
+
 2. 为什么说 Gibbs 自由能判据是定理 18.1.1 的特例？在等温等容、非体积功不为零（如电池放电做电功）时，熵产生应怎样写？
+
+   **答** 封闭系统在等温等压、只做体积功时，$\delta Q = \mathrm{d}H$，$\mathrm{d}_{\mathrm{e}}S = \mathrm{d}H/T$，于是 $T\,\mathrm{d}_{\mathrm{i}}S = T\,\mathrm{d}S - \mathrm{d}H = -\mathrm{d}G$；$\mathrm{d}_{\mathrm{i}}S \ge 0$ 就是 $\mathrm{d}G \le 0$，即 18.1.3 节的 $T\,\mathrm{d}_{\mathrm{i}}S = \mathcal{A}\,\mathrm{d}\xi = -\mathrm{d}G$。
+
+   等温等容、环境对系统做非体积功 $\delta W'$ 时，$\mathrm{d}U = \delta Q + \delta W'$，$\mathrm{d}_{\mathrm{e}}S = \delta Q/T$，所以
+
+   $$
+   T\,\mathrm{d}_{\mathrm{i}}S = T\,\mathrm{d}S - \mathrm{d}U + \delta W' = -\mathrm{d}A + \delta W' \ge 0 .
+   $$
+   对只进行一个反应的电池，等温等容下 $-\mathrm{d}A = \mathcal{A}\,\mathrm{d}\xi$；放电时电池对外电路做电功 $zFE_{\mathrm{cell}}\,\mathrm{d}\xi$，即 $\delta W' = -zFE_{\mathrm{cell}}\,\mathrm{d}\xi$，于是
+
+   $$
+   \mathrm{d}_{\mathrm{i}}S = \frac{(\mathcal{A} - zFE_{\mathrm{cell}})\,\mathrm{d}\xi}{T} \ge 0 ,
+   $$
+   $E_{\mathrm{cell}}$ 为工作时两极间的电压。可逆放电（电流趋于零）时 $E_{\mathrm{cell}} = \mathcal{A}/(zF)$，熵产生为零，电功最大，等于 $-\Delta A$；电流越大，电压越低，$\mathcal{A}$ 中耗散为焦耳热和过电势的部分越多。
 
 3. 设 $\ce{A <=> B}$ 在 $298\,\mathrm{K}$ 下 $\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$。用式 (18.9) 的精确形式与线性近似分别计算 $v/v_+$，线性近似的相对误差有多大？
 
+   **答** $\mathcal{A}/RT = 5000/(8.314 \times 298.15) = 2.017$。精确形式 $v/v_+ = 1 - \mathrm{e}^{-2.017} = 0.867$；线性近似（把 $v_+$ 看作 $v_{\mathrm{eq}}$，$1 - \mathrm{e}^{-x} \approx x$）给出 $v/v_+ \approx 2.017$，相对误差 $(2.017 - 0.867)/0.867 \approx 133\%$。线性近似甚至给出 $v > v_+$，这是不可能的（逆反应速率不能为负）：$\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$ 约为 $2RT$，已经在线性区之外。
+
 4. 若某转运体每转运 1 个葡萄糖只伴随 1 个 $\ce{Na+}$，按例 18.2.2 的数据，葡萄糖在胞内外的最大浓度比是多少？
+
+   **答** 葡萄糖不带电，平衡时它的化学势之差 $RT\ln(c_{\text{内}}/c_{\text{外}})$ 等于 1 个 $\ce{Na+}$ 进入细胞时电化学势的降低 $13.2\,\mathrm{kJ\,mol^{-1}}$，所以 $c_{\text{内}}/c_{\text{外}} \le \exp(13.2/2.58) \approx 1.7\times10^2$。比 2 个 $\ce{Na+}$ 时的约 $3\times10^4$ 小两个数量级：化学计量比进入指数，这正是小肠上皮的转运体采用 2:1 计量的原因。
 
 5. Brusselator 中若 $a = 2$，Hopf 分岔发生在 $b$ 为多少时？分岔点附近振荡的周期约为多少（以无量纲时间计）？
 
+   **答** $b_{\mathrm{c}} = 1 + a^2 = 5$。分岔点处特征值为 $\pm\mathrm{i}a = \pm 2\mathrm{i}$，周期约 $2\pi/a = \pi \approx 3.14$。数值积分验证：$b = 5.05$ 时极限环周期为 $3.19$，$b = 5.5$ 时增至 $3.98$，与 18.3.2 节所说周期从 $2\pi/a$ 开始增长一致。
+
 6. 为什么 Turing 斑图要求抑制子比激活子扩散快？若 $D_x = D_y$，Brusselator 能否出现 Turing 失稳？
+
+   **答** 激活子 X 自催化（$J_{11} > 0$），局部的涨落会自我放大；要使它不扩展成整体的增长、而只形成孤立的峰，必须由抑制子把抑制作用迅速带到周围，即"短程激活、长程抑制"，这要求 $D_y > D_x$。数学上，均匀系统稳定要求 $\operatorname{tr}J = J_{11} + J_{22} < 0$，而 Turing 失稳要求 $D_yJ_{11} + D_xJ_{22} > 0$；两者同时成立必须有 $D_y/D_x > -J_{22}/J_{11} > 1$。
+
+   若 $D_x = D_y = D$，矩阵 $J - q^2DI$ 的特征值就是 $J$ 的特征值减去 $Dq^2$，任何 $q \ne 0$ 的模都比均匀模衰减得更快，不可能出现 Turing 失稳。用例 18.3.2 的结果也能看出：$\eta = 1$ 时 $b_{\mathrm{T}} = (1 + a)^2 > 1 + a^2 = b_{\mathrm{c}}$，$b$ 增大时总是先发生 Hopf 失稳。
