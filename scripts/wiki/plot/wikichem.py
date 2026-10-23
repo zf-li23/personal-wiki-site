@@ -145,6 +145,7 @@ class Scheme:
         rdDepictor.Compute2DCoords(mol)
         conf = mol.GetConformer()
         xy = np.array([[conf.GetAtomPosition(i).x, conf.GetAtomPosition(i).y] for i in range(mol.GetNumAtoms())])
+        xy = np.nan_to_num(xy)  # RDKit leaves a lone ion such as [H-] without coordinates
         lengths = [np.linalg.norm(xy[b.GetBeginAtomIdx()] - xy[b.GetEndAtomIdx()]) for b in mol.GetBonds()]
         xy = (xy - xy.mean(axis=0)) / (np.mean(lengths) if lengths else 1.0)
         if flip:
