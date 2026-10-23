@@ -1138,7 +1138,7 @@ terms:
   - { zh: 卡方分布, en: chi-square distribution, aliases: [χ² 分布, chi-squared distribution] }
   - { zh: 自由度, en: degrees of freedom }
   - { zh: 上分位数, en: upper quantile, aliases: [上 α 分位数, 上侧分位数, upper α quantile] }
-  - { zh: t 分布, en: t-distribution, aliases: [学生氏分布, Student t 分布, "Student's t-distribution"] }
+  - { zh: t 分布, en: t-distribution, aliases: [学生氏分布, Student t 分布, "Student's t-distribution", t distribution] }
   - { zh: F 分布, en: F-distribution }
   - { zh: 极限分布, en: limiting distribution, aliases: [大样本分布, large-sample distribution] }
   - { zh: Slutsky 定理, en: "Slutsky's theorem" }
@@ -1209,8 +1209,8 @@ terms:
   - { zh: 双侧检验, en: two-sided test }
   - { zh: 单侧检验, en: one-sided test }
   - { zh: Z 检验, en: Z-test, aliases: [U 检验, U-test] }
-  - { zh: t 检验, en: t-test }
-  - { zh: F 检验, en: F-test }
+  - { zh: t 检验, en: t-test, aliases: [t test] }
+  - { zh: F 检验, en: F-test, aliases: [F test] }
   - { zh: Welch t 检验, en: "Welch's t-test" }
   - { zh: 成对比较, en: paired comparison }
   - { zh: 似然比, en: likelihood ratio }
@@ -4044,7 +4044,7 @@ terms:
   - { zh: 电阻, en: electrical resistance, aliases: [resistance] }
   - { zh: 电导, en: electrical conductance, aliases: [conductance] }
   - { zh: 电阻率, en: electrical resistivity, aliases: [resistivity] }
-  - { zh: 电导率, en: electrical conductivity }
+  - { zh: 电导率, en: electrical conductivity, aliases: [conductivity] }
   - { zh: 非静电力, en: non-electrostatic force }
   - { zh: 电源, en: source of electromotive force, aliases: [seat of emf, power source], scope: ["5", "6", "7"] }
   - { zh: 电动势, en: electromotive force, aliases: [emf] }
@@ -4533,7 +4533,7 @@ terms:
   - { zh: 滴定误差, en: titration error, aliases: [终点误差, end-point error] }
   - { zh: 滴定突跃, en: titration jump, aliases: [突跃范围, pH jump] }
   - { zh: 基准物质, en: primary standard }
-  - { zh: 标定, en: standardization of a solution, scope: ["6"] }
+  - { zh: 标定, en: standardization of a solution, aliases: [standardization], scope: ["6"] }
   - { zh: 滴定曲线, en: titration curve }
   - { zh: 配位平衡, en: complexation equilibrium, aliases: [配位解离平衡, complex formation equilibrium] }
   - { zh: 稳定常数, en: stability constant, aliases: [生成常数, formation constant, 累积稳定常数, cumulative stability constant] }
@@ -4720,7 +4720,7 @@ terms:
   - { zh: Tafel 方程, en: Tafel equation, aliases: [Tafel 公式] }
   - { zh: 电荷转移电阻, en: charge-transfer resistance, aliases: [反应电阻] }
   - { zh: 理想极化电极, en: ideally polarizable electrode }
-  - { zh: 三电极体系, en: three-electrode cell, aliases: [三电极电池] }
+  - { zh: 三电极体系, en: three-electrode cell, aliases: [三电极电池, three-electrode system] }
   - { zh: 工作电极, en: working electrode }
   - { zh: 对电极, en: counter electrode, aliases: [辅助电极, auxiliary electrode] }
   - { zh: 析氢反应, en: hydrogen evolution reaction, aliases: [氢析出反应, HER] }
@@ -5408,7 +5408,8 @@ terms:
   - { zh: 胶束电动色谱, en: micellar electrokinetic chromatography, aliases: [MEKC, 胶束电动毛细管色谱] }
   - { zh: 毛细管电色谱, en: capillary electrochromatography, aliases: [CEC] }
   - { zh: SDS-聚丙烯酰胺凝胶电泳, en: SDS–polyacrylamide gel electrophoresis, aliases: [SDS-PAGE, SDS–PAGE, 凝胶电泳, gel electrophoresis] }
-  - { zh: 等电聚焦, en: isoelectric focusing, aliases: [IEF, 二维电泳, two-dimensional gel electrophoresis] }
+  - { zh: 等电聚焦, en: isoelectric focusing, aliases: [IEF] }
+  - { zh: 二维电泳, en: two-dimensional gel electrophoresis, aliases: [2D 电泳, 2-DE, two-dimensional electrophoresis] }
   - { zh: 质谱法, en: mass spectrometry, aliases: [质谱, MS, 质谱分析] }
   - { zh: 质荷比, en: mass-to-charge ratio, aliases: [m/z] }
   - { zh: 精确质量, en: exact mass, aliases: [单同位素质量, monoisotopic mass, 名义质量, nominal mass] }
@@ -5456,3 +5457,19 @@ terms:
   - { zh: 等离子体, en: plasma }
   - { zh: 不对称电势, en: asymmetry potential, aliases: [不对称电位] }
   - { zh: Karl Fischer 滴定法, en: Karl Fischer titration, aliases: [Karl Fischer 法, 卡尔·费休法] }
+  - { zh: 偏最小二乘回归, en: partial least squares regression, aliases: [偏最小二乘, PLS] }
+  - { zh: Voigt 轮廓, en: Voigt profile }
+  - { zh: 同步辐射, en: synchrotron radiation }
+  - { zh: 形态分析, en: speciation analysis, aliases: [元素形态分析, chemical speciation] }
+  - { zh: 荧光产额, en: fluorescence yield, scope: ["6.4"] }
+  - { zh: 直接化学发光, en: direct chemiluminescence }
+  - { zh: 间接化学发光, en: indirect chemiluminescence, aliases: [敏化化学发光, sensitized chemiluminescence] }
+  - { zh: 化学分析, en: chemical analysis, scope: ["6.4"] }
+  - { zh: 绝对误差, en: absolute error }
+  - { zh: 相对误差, en: relative error }
+  - { zh: 直接滴定, en: direct titration }
+  - { zh: 浓度型检测器, en: concentration-sensitive detector }
+  - { zh: 质量型检测器, en: mass-flow-sensitive detector, aliases: [mass-sensitive detector] }
+  - { zh: 统一原子质量单位, en: unified atomic mass unit, aliases: [道尔顿, dalton, 原子质量单位, atomic mass unit] }
+  - { zh: 天然质谱, en: native mass spectrometry, aliases: [native MS] }
+  - { zh: 离子抑制, en: ion suppression }
