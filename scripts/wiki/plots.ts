@@ -81,6 +81,7 @@ export function lintRCompanion(file: string, source: string, diag: Diagnostics):
 }
 
 export function lintPlotScript(file: string, source: string, diag: Diagnostics): void {
+  const usesWikichem = /\bwikichem\b/.test(source);
   source.split('\n').forEach((line, i) => {
     const code = line.replace(/#.*$/, '');
     if (CJK_RE.test(line)) {
@@ -89,6 +90,9 @@ export function lintPlotScript(file: string, source: string, diag: Diagnostics):
     if (/\bsavefig\s*\(/.test(code)) diag.error(file, 'do not call savefig(); every open figure is saved automatically', i + 1);
     if (/\bplt\.show\s*\(/.test(code)) diag.error(file, 'do not call plt.show(); leave figures open instead', i + 1);
     if (/\bmatplotlib\.use\s*\(/.test(code)) diag.error(file, 'do not call matplotlib.use(); the renderer selects the backend', i + 1);
+    if (usesWikichem && /\bwikichem\._|\bPlaced\b|\.(items|points)\b(?!\s*\()/.test(code)) {
+      diag.warn(file, 'use only the public wikichem API (coords=, like=, s.partial, …); internals change without notice', i + 1);
+    }
     if (/style\.use\s*\(|font\.(sans-serif|family)/.test(code)) {
       diag.warn(file, 'avoid global styles and fonts; the renderer applies the light/dark themes', i + 1);
     }

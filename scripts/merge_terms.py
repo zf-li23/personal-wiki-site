@@ -19,12 +19,13 @@ GLOSSARY = Path(__file__).resolve().parent.parent / "content" / "glossary.yaml"
 ENTRY = re.compile(r"^  - (\{.*\})\s*(#.*)?$")
 
 
-def quote(s: str) -> str:
+def quote(s) -> str:
+    s = str(s)
     return f'"{s}"' if re.search(r"[:'#,\[\]{}*]", s) or s.lower() in ("null", "yes", "no", "true", "false", "on", "off") else s
 
 
 def fmt(e: dict) -> str:
-    parts = [f"zh: {e['zh']}", f"en: {quote(e['en'])}"]
+    parts = [f"zh: {quote(e['zh'])}", f"en: {quote(e['en'])}"]
     if e.get("aliases"):
         parts.append("aliases: [" + ", ".join(quote(a) for a in e["aliases"]) + "]")
     if e.get("scope"):

@@ -293,6 +293,11 @@ describe('plot script lint', () => {
     lintPlotScript('/x.py', "plt.title('增长')\nplt.savefig('a.png')\nplt.show()\n# plt.show() in a comment is fine\n", diag);
     assert.deepEqual(diag.items.map((d) => d.line), [1, 2, 3]);
   });
+  it('flags wikichem internals but not dict.items()', () => {
+    const diag = new Diagnostics();
+    lintPlotScript('/x.py', 'from wikichem import Scheme\nimport wikichem\nn = wikichem._lone_pair_count(a)\ns.points.append(p)\nfor k, v in d.items():\n    pass\n', diag);
+    assert.deepEqual(diag.items.map((d) => d.line), [3, 4]);
+  });
 });
 
 describe('plot renderer (needs the Python env; skipped without it)', () => {

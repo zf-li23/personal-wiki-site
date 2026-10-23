@@ -17,13 +17,28 @@ drawings follow both themes like any other plot.
 Atoms are numbered in SMILES order from 0, or by atom-map number when the SMILES has them
 (``[CH3:1]``): ``atom(1)`` then means the atom mapped 1, and map numbers are not drawn.
 Coordinates are in bond lengths; ``at`` places the molecule's centre.
+
+Radicals come from the SMILES (``[CH3]``, ``C=C[CH2]``) and are drawn as a single dot; a fishhook
+leaving such an atom starts at its dot. ``show_h=[k]`` draws the hydrogens of atom k as atoms, so an
+arrow can take one of them: ``mol.h(k)`` (``mol.h(k, 1)`` for the second). ``s.label(mol.atom(k), "δ+")``
+writes a small label beside an atom (partial charges, numbering), and ``s.orbital(mol.atom(k))`` draws
+a p orbital on it (``angle`` of the axis in degrees, ``phase=-1`` shades the other lobe).
+
+Cyclic transition states and other hand-made geometries: ``s.molecule(smiles, coords=[(x, y), ...])``
+places the atoms at the given coordinates (SMILES order, bond lengths, shifted by ``at``; explicit
+``[H]`` atoms are kept and need coordinates too), and ``s.partial(p, q)`` draws a dashed forming or
+breaking bond between two atoms or points. ``singlet=[k]`` draws the two unpaired electrons of a
+carbene written ``[C]`` / ``Cl[C]Cl`` as a lone pair (singlet) instead of two dots (triplet).
+``like=mol`` reuses the layout of an earlier molecule with the same atoms in the same SMILES order,
+so resonance structures line up: ``b = s.molecule("C=C[CH2]", ...); s.molecule("[CH2]C=C", at=(4, 0), like=b)``
+needs the atoms listed in the same order, e.g. ``"[CH2:1][CH:2]=[CH2:3]"`` against ``"[CH2:1]=[CH:2][CH2:3]"``.
 """
 
 import math
 
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib.patches import PathPatch, Polygon
+from matplotlib.patches import Ellipse, PathPatch, Polygon
 from matplotlib.path import Path
 from rdkit import Chem
 from rdkit.Chem import rdDepictor
@@ -47,11 +62,12 @@ class Point:
 class Placed:
     """A molecule drawn at a position; hands out arrow endpoints by atom number."""
 
-    def __init__(self, mol, coords, labelled, pairs):
+    def __init__(self, mol, coords, labelled, pairs, radicals):
         self.mol = mol
         self.coords = coords
         self.labelled = labelled
         self.pairs = pairs  # atom index -> list of lone-pair unit vectors
+        self.radicals = radicals  # atom index -> list of unit vectors of single electrons
         maps = {a.GetAtomMapNum(): a.GetIdx() for a in mol.GetAtoms() if a.GetAtomMapNum()}
         self._index = (lambda k: maps[k]) if maps else (lambda k: k)
 
@@ -61,8 +77,16 @@ class Placed:
     def atom(self, k, pair=None):
         """The atom numbered k. An arrow leaving it starts from the drawn lone pair facing its target, or the i-th with ``pair=i``."""
         i = self._index(k)
-        pairs = self.pairs.get(i, [])
+        pairs = self.pairs.get(i, []) + self.radicals.get(i, [])
         return Point(self.coords[i], [pairs[pair]] if pair is not None else pairs)
+
+    def h(self, k, n=0):
+        """The n-th hydrogen drawn on atom k (the molecule must be placed with ``show_h`` including k)."""
+        i = self._index(k)
+        hs = [a.GetIdx() for a in self.mol.GetAtomWithIdx(i).GetNeighbors() if a.GetSymbol() == "H"]
+        if not hs:
+            raise ValueError(f"atom {k} has no drawn hydrogens: place the molecule with show_h=[{k}]")
+        return Point(self.coords[hs[n]])
 
     def bond(self, j, k):
         return Point((self.xy(j) + self.xy(k)) / 2)
@@ -78,15 +102,35 @@ class Scheme:
 
     # ---------------------------------------------------------------- molecules
 
-    def molecule(self, smiles, at=(0, 0), rotate=0, flip=False, lone_pairs=False, show_carbons=(), explicit_h=False):
+    def molecule(self, smiles, at=(0, 0), rotate=0, flip=False, lone_pairs=False, show_carbons=(), explicit_h=False, show_h=(),
+                 coords=None, singlet=(), like=None):
         """Place a structure. ``lone_pairs``: True for every N, O, S and halogen, or a list of atom numbers;
-        ``explicit_h``: draw hydrogens as atoms with bonds (Lewis structures) instead of folding them into labels."""
-        mol = Chem.MolFromSmiles(smiles)
+        ``explicit_h``: draw hydrogens as atoms with bonds (Lewis structures) instead of folding them into labels;
+        ``show_h``: atom numbers whose hydrogens alone are drawn as atoms (for arrows to or from one H)."""
+        if like is not None:  # resonance structures: reuse the layout of an earlier drawing of the same atoms
+            coords = like.coords - like.coords.mean(axis=0)
+        params = Chem.SmilesParserParams()
+        params.removeHs = coords is None  # with given coordinates, written [H] atoms stay atoms
+        mol = Chem.MolFromSmiles(smiles, params)
         if mol is None:
             raise ValueError(f"RDKit cannot parse SMILES {smiles!r}")
+        maps = {a.GetAtomMapNum(): a.GetIdx() for a in mol.GetAtoms() if a.GetAtomMapNum()}
+        idx = (lambda k: maps.get(k, k)) if maps else (lambda k: k)
+        if coords is not None:
+            Chem.Kekulize(mol, clearAromaticFlags=True)
+            xy = np.asarray(coords, dtype=float)
+            if xy.shape != (mol.GetNumAtoms(), 2):
+                raise ValueError(f"coords needs one (x, y) per atom: {mol.GetNumAtoms()} for {smiles!r}")
+            if flip:
+                xy[:, 0] = -xy[:, 0]
+            t = math.radians(rotate)
+            xy = xy @ np.array([[math.cos(t), math.sin(t)], [-math.sin(t), math.cos(t)]]) + np.asarray(at, dtype=float)
+            return self._place(mol, xy, lone_pairs, show_carbons, idx, singlet)
         if explicit_h:
             # Lewis structures draw every hydrogen as an atom with its own bond; they are numbered after the heavy atoms.
             mol = Chem.AddHs(mol)
+        elif show_h:
+            mol = Chem.AddHs(mol, onlyOnAtoms=tuple(idx(k) for k in show_h))
         Chem.Kekulize(mol, clearAromaticFlags=True)
         rdDepictor.SetPreferCoordGen(True)
         rdDepictor.Compute2DCoords(mol)
@@ -99,19 +143,34 @@ class Scheme:
         t = math.radians(rotate)
         xy = xy @ np.array([[math.cos(t), math.sin(t)], [-math.sin(t), math.cos(t)]]) + np.asarray(at, dtype=float)
         Chem.WedgeMolBonds(mol, conf)
+        return self._place(mol, xy, lone_pairs, show_carbons, idx, singlet)
 
-        labelled = {a.GetIdx() for a in mol.GetAtoms() if _needs_label(a) or a.GetIdx() in set(show_carbons)}
+    def _place(self, mol, xy, lone_pairs, show_carbons, idx, singlet):
+        labelled = {a.GetIdx() for a in mol.GetAtoms() if _needs_label(a) or a.GetIdx() in {idx(k) for k in show_carbons}}
         wanted = set()
         if lone_pairs is True:
             wanted = {a.GetIdx() for a in mol.GetAtoms() if a.GetSymbol() in ("N", "O", "S", "F", "Cl", "Br", "I")}
         elif lone_pairs:
-            maps = {a.GetAtomMapNum(): a.GetIdx() for a in mol.GetAtoms() if a.GetAtomMapNum()}
-            wanted = {maps.get(k, k) if maps else k for k in lone_pairs}
-        pairs = {i: _pair_directions(mol, xy, i) for i in wanted}
+            wanted = {idx(k) for k in lone_pairs}
+        paired = {idx(k) for k in singlet}
+        pairs, radicals = {}, {}
+        for a in mol.GetAtoms():
+            i, rad = a.GetIdx(), a.GetNumRadicalElectrons()
+            if i not in wanted and not rad:
+                continue
+            n = _lone_pair_count(a) if i in wanted else 0
+            if i in paired:  # a singlet carbene: its two nonbonding electrons form one more pair
+                n, rad = n + rad // 2, rad % 2
+            dirs = _gap_directions(mol, xy, i, n + rad)
+            if n:
+                pairs[i] = dirs[:n]
+            if rad:
+                radicals[i] = dirs[n:]
 
-        placed = Placed(mol, xy, labelled, pairs)
+        placed = Placed(mol, xy, labelled, pairs, radicals)
         self.points.extend(xy)
-        self.points.extend(xy[i] + 0.55 * d for i, dirs in pairs.items() for d in dirs)  # keep lone pairs inside the figure
+        # keep lone pairs and radical dots inside the figure
+        self.points.extend(xy[i] + 0.55 * d for group in (pairs, radicals) for i, dirs in group.items() for d in dirs)
         self.items.append(lambda ax: _draw_molecule(ax, placed))
         return placed
 
@@ -142,6 +201,30 @@ class Scheme:
     def plus(self, at):
         self.text(at, "+")
 
+    def partial(self, p, q):
+        """A dashed partial bond (forming or breaking) between two atoms or points."""
+        a = p.xy if isinstance(p, Point) else np.asarray(p, float)
+        b = q.xy if isinstance(q, Point) else np.asarray(q, float)
+        self.points.extend([a, b])
+        self.items.append(lambda ax: ax.plot(*zip(a, b), color=INK, lw=LINE * 0.9, ls=(0, (3, 3))))
+
+    def label(self, point, s, angle=None, dist=0.5, size=None):
+        """A small label beside an atom or point (``δ+``, ``δ−``, a number); ``angle`` in degrees, default up and to the right."""
+        p = point.xy if isinstance(point, Point) else np.asarray(point, float)
+        t = math.radians(45 if angle is None else angle)
+        q = p + dist * np.array([math.cos(t), math.sin(t)])
+        self.points.append(q)
+        self.items.append(lambda ax: ax.text(*q, s, ha="center", va="center", fontsize=size or 0.75 * FONT * self.scale / 0.42, color=INK))
+
+    def orbital(self, point, angle=90, phase=1, size=0.55):
+        """A p orbital on an atom: two lobes along ``angle`` (degrees); the lobe on the ``phase`` side is shaded."""
+        p = point.xy if isinstance(point, Point) else np.asarray(point, float)
+        t = math.radians(angle)
+        u = np.array([math.cos(t), math.sin(t)])
+        lobes = [(p + s * 0.5 * size * u, s == phase) for s in (1, -1)]
+        self.points.extend(c + s * 0.5 * size * u for (c, _), s in zip(lobes, (1, -1)))
+        self.items.append(lambda ax: _draw_orbital(ax, lobes, size, angle))
+
     # --------------------------------------------------------------------- draw
 
     def draw(self, margin=0.6):
@@ -167,13 +250,8 @@ _font = FONT
 
 
 def _needs_label(atom):
-    return (
-        atom.GetSymbol() != "C"
-        or atom.GetFormalCharge() != 0
-        or atom.GetNumRadicalElectrons() > 0
-        or atom.GetIsotope() > 0
-        or atom.GetDegree() == 0
-    )
+    # Charged and radical carbons stay bare vertices, as in skeletal formulas; the sign and dot are drawn beside them.
+    return atom.GetSymbol() != "C" or atom.GetIsotope() > 0 or atom.GetDegree() == 0
 
 
 def _label_text(atom, xy, mol):
@@ -190,14 +268,17 @@ def _label_text(atom, xy, mol):
     return sym, hs, left, sup
 
 
-def _pair_directions(mol, xy, i):
-    """Unit vectors for the atom's lone pairs, spread through the largest gaps between its bonds."""
-    atom = mol.GetAtomWithIdx(i)
+def _lone_pair_count(atom):
     v = VALENCE_ELECTRONS.get(atom.GetSymbol())
     if v is None:
-        return []
+        return 0
     used = sum(b.GetBondTypeAsDouble() for b in atom.GetBonds()) + atom.GetTotalNumHs()
-    n = int(max(0, v - atom.GetFormalCharge() - used - atom.GetNumRadicalElectrons()) // 2)
+    return int(max(0, v - atom.GetFormalCharge() - used - atom.GetNumRadicalElectrons()) // 2)
+
+
+def _gap_directions(mol, xy, i, n):
+    """n unit vectors spread through the largest gaps between the atom's bonds (lone pairs, then radical electrons)."""
+    atom = mol.GetAtomWithIdx(i)
     if n == 0:
         return []
     angles = sorted(math.atan2(*(xy[nb.GetIdx()] - xy[i])[::-1]) for nb in atom.GetNeighbors())
@@ -279,6 +360,29 @@ def _draw_molecule(ax, placed):
             for s in (-1, 1):
                 p = c + s * 0.06 * t
                 ax.plot(*p, marker="o", ms=1.8, color=INK, mec=INK, mfc=INK)
+    for i, dirs in placed.radicals.items():
+        for d in dirs:
+            ax.plot(*(xy[i] + _pair_radius(d) * d), marker="o", ms=2.4, color=INK, mec=INK, mfc=INK)
+    for atom in mol.GetAtoms():
+        i, charge = atom.GetIdx(), atom.GetFormalCharge()
+        if not charge or i in placed.labelled:
+            continue
+        # an unlabelled (carbon) vertex: write the sign in the open space, beside any dot or lone pair there
+        d = -sum((xy[n.GetIdx()] - xy[i]) / np.linalg.norm(xy[n.GetIdx()] - xy[i]) for n in atom.GetNeighbors())
+        d = d / np.linalg.norm(d) if np.linalg.norm(d) > 1e-6 else np.array([0.0, 1.0])
+        if i in placed.radicals or i in placed.pairs:
+            t = math.radians(50)
+            d = np.array([d[0] * math.cos(t) - d[1] * math.sin(t), d[0] * math.sin(t) + d[1] * math.cos(t)])
+        sign = ("+" if charge > 0 else "\N{MINUS SIGN}") if abs(charge) == 1 else f"{abs(charge)}{'+' if charge > 0 else chr(0x2212)}"
+        ax.text(*(xy[i] + 0.36 * d), sign, ha="center", va="center", fontsize=_font * 0.8, color=INK)
+
+
+def _draw_orbital(ax, lobes, size, angle):
+    for centre, shaded in lobes:
+        ax.add_patch(Ellipse(centre, size, 0.55 * size, angle=angle, fill=shaded, facecolor=INK if shaded else "none",
+                             edgecolor=INK, alpha=None, lw=LINE * 0.7, zorder=0))
+        if shaded:
+            ax.patches[-1].set_facecolor((*plt.matplotlib.colors.to_rgb(INK), 0.3))
 
 
 def _line(ax, a, b):
