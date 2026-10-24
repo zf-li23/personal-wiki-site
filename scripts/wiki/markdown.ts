@@ -61,7 +61,7 @@ import {
 } from './numbering.ts';
 import { checkNotation } from './notation.ts';
 import { PUBLIC_PATHS } from './paths.ts';
-import type { PlotResult, PlotResults } from './plots.ts';
+import { iconCredits, type PlotResult, type PlotResults } from './plots.ts';
 import type { ContentTree, PageSource } from './scan.ts';
 
 export interface RenderContext {
@@ -626,7 +626,7 @@ function transformImage(state: State, node: Element, parent: HastRoot | Element 
       ctx.diag.error(ctx.file, `plot script not found: ${src} (expected ${path.join(path.basename(ctx.page.dir), local)})`, line);
       return undefined;
     }
-    return replaceParagraph(plotFigure(path.basename(script), alt, result));
+    return replaceParagraph(plotFigure(path.basename(script), alt, result, state.ctx.contentLang));
   }
 
   if (local.startsWith('assets/')) {
@@ -660,7 +660,7 @@ function transformImage(state: State, node: Element, parent: HastRoot | Element 
   }
 }
 
-function plotFigure(scriptName: string, alt: string, result: PlotResult): Element {
+function plotFigure(scriptName: string, alt: string, result: PlotResult, lang: Lang): Element {
   const images: ElementContent[] = [];
   if (result.error || !result.figures.length) {
     images.push(el('div', { className: ['wiki-plot-error'] }, [text(`Plot ${scriptName} could not be rendered. Run "pnpm wiki build" for details.`)]));
@@ -682,6 +682,18 @@ function plotFigure(scriptName: string, alt: string, result: PlotResult): Elemen
   });
   const children: ElementContent[] = [el('div', { className: ['wiki-plot-images'] }, images)];
   if (alt.trim()) children.push(el('figcaption', {}, [text(alt)]));
+  // Icons from open libraries (BIO_FIGURES.md §5): CC BY requires naming the author and the licence.
+  const credits = iconCredits(result.source);
+  if (credits.length) {
+    const parts: ElementContent[] = [text(lang === 'zh' ? '图标：' : 'Icons: ')];
+    credits.forEach((c, i) => {
+      if (i) parts.push(text(lang === 'zh' ? '；' : '; '));
+      parts.push(text(`${c.author} (`));
+      parts.push(c.url ? el('a', { href: c.url, target: '_blank', rel: ['noopener'] }, [text(c.license)]) : text(c.license));
+      parts.push(text(')'));
+    });
+    children.push(el('p', { className: ['wiki-plot-credit'] }, parts));
+  }
   const python = el('pre', {}, [el('code', { className: ['language-python'] }, [text(result.source.trimEnd())])]);
   if (result.rSource === undefined) {
     children.push(el('details', { className: ['wiki-plot-source'] }, [el('summary', {}, [text(`Python · ${scriptName}`)]), python]));

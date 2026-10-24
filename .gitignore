@@ -21,3 +21,4 @@ dist/
 # course materials (slides, notes, textbooks): copyrighted, never committed (see sources/README.md)
 sources/*
 !sources/README.md
+scripts/wiki/plot/icons/manifest.json.lock

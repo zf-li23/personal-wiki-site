@@ -179,6 +179,15 @@
   color: #dc2626;
   font-size: 0.875rem;
 }
+.wiki-article .wiki-plot-credit {
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+.wiki-article .wiki-plot-credit a {
+  color: inherit;
+}
 .wiki-article .wiki-plot-source {
   margin-top: 0.5rem;
   text-align: left;

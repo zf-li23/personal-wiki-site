@@ -21,7 +21,7 @@ import { type Concept, conceptId } from './glossary.ts';
 import { buildLinkIndex, linkPage } from './linking.ts';
 import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
-import { lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
+import { iconCredits, iconIds, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
 import { PLOT_RENDERER } from './paths.ts';
 import { type ContentTree, type PageSource, scanContent, sourceLangOf } from './scan.ts';
 
@@ -292,6 +292,15 @@ describe('plot script lint', () => {
     const diag = new Diagnostics();
     lintPlotScript('/x.py', "plt.title('增长')\nplt.savefig('a.png')\nplt.show()\n# plt.show() in a comment is fine\n", diag);
     assert.deepEqual(diag.items.map((d) => d.line), [1, 2, 3]);
+  });
+  it('finds icon ids (literals of library sources) and their credits', () => {
+    const src = 'import wikibio as bio\nbio.icon(ax, "servier/heart", at=(1, 1))\nTIPS = {"Mus": "phylopic/mouse"}\nx = "foo/bar"\n';
+    assert.deepEqual(iconIds(src), ['phylopic/mouse', 'servier/heart']);
+    const credits = iconCredits(src).map((c) => `${c.author}|${c.license}`);
+    assert.ok(credits.includes('Servier Medical Art|CC BY 3.0'));
+    const diag = new Diagnostics();
+    lintPlotScript('/x.py', 'import wikibio as bio\nbio.icon(ax, "servier/no-such-icon")\n', diag);
+    assert.match(diag.items[0].message, /not in the library/);
   });
   it('flags wikichem internals but not dict.items()', () => {
     const diag = new Diagnostics();

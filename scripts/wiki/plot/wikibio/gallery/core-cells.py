@@ -1,0 +1,27 @@
+import numpy as np
+import wikibio as bio
+
+fig, ax = bio.canvas(16, 9)
+bio.cell(ax, (4.2, 4.6), 3.8, 3.2, kind="animal")
+bio.nucleus(ax, (3.6, 5.0), 1.25)
+bio.mitochondrion(ax, (6.0, 3.2), 1.6, 0.6, angle=25)
+bio.mitochondrion(ax, (2.2, 2.6), 1.3, 0.5, angle=-15)
+bio.golgi(ax, (5.9, 6.2), 1.4, angle=-20)
+bio.er(ax, (2.0, 6.4), 1.3, 0.8, angle=30)
+bio.lysosome(ax, (5.0, 1.9), 0.3)
+bio.vesicle(ax, (6.9, 5.0), 0.2)
+bio.label(ax, (4.2, 0.6), "Animal cell", size="normal", bold=True)
+bio.cell(ax, (11.2, 6.2), 2.4, 2.0, kind="plant")
+bio.chloroplast(ax, (10.3, 7.0), 1.1, 0.5, angle=20)
+bio.chloroplast(ax, (12.4, 5.3), 1.0, 0.45, angle=-30)
+bio.label(ax, (11.2, 3.75), "Plant cell", bold=True)
+bio.cell(ax, (14.3, 7.6), 1.2, 0.45, kind="bacterium")
+bio.label(ax, (14.3, 6.75), "Bacterium", bold=True)
+bio.bilayer(ax, [(8.6, 2.2), (15.6, 2.2)])
+bio.receptor(ax, 10.0, 2.2, "gpcr", text="GPCR")
+bio.receptor(ax, 12.2, 2.2, "rtk", text="RTK")
+bio.receptor(ax, 14.3, 2.2, "channel", text="Channel")
+for i, k in enumerate(["ca", "na", "k"]):
+    bio.ion(ax, (13.3 + 0.95 * i, 3.4), k)
+bio.callout(ax, (2.55, 4.3), (0.5, 1.2), "Nucleus")
+bio.callout(ax, (6.0, 3.2), (8.0, 4.2), "Mitochondrion")

@@ -1,0 +1,4874 @@
+{
+ "bioicons/arabidopsis": {
+  "source": "bioicons",
+  "name": "Arabidopsis_plant",
+  "category": "Plants_Algae",
+  "author": "Frédéric Bouché",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Frédéric_Bouché/Arabidopsis_plant.svg",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
+ "bioicons/arabidopsis-flower": {
+  "source": "bioicons",
+  "name": "Arabidopsis_Flower",
+  "category": "Plants_Algae",
+  "author": "Frédéric Bouché",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Frédéric_Bouché/Arabidopsis_Flower.svg",
+  "tags": [
+   "plant",
+   "flower"
+  ]
+ },
+ "bioicons/arabidopsis-inflorescence": {
+  "source": "bioicons",
+  "name": "Arabidopsis_Inflorescence",
+  "category": "Plants_Algae",
+  "author": "Frédéric Bouché",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Frédéric_Bouché/Arabidopsis_Inflorescence.svg",
+  "tags": [
+   "plant",
+   "flower"
+  ]
+ },
+ "bioicons/arabidopsis-seedlings": {
+  "source": "bioicons",
+  "name": "ArabidopsisSeedlings",
+  "category": "Plants_Algae",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Plants_Algae/James-Lloyd/ArabidopsisSeedlings.svg",
+  "tags": [
+   "plant",
+   "lab"
+  ]
+ },
+ "bioicons/bacterial-colonies": {
+  "source": "bioicons",
+  "name": "Bacteria_colonies",
+  "category": "Cell_culture",
+  "author": "B  Gideon Bergheim",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Cell_culture/B--Gideon-Bergheim/Bacteria_colonies.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "bioicons/bacterium-flagellum": {
+  "source": "bioicons",
+  "name": "Bacteria_Swimming",
+  "category": "Microbiology",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Microbiology/James-Lloyd/Bacteria_Swimming.svg",
+  "tags": [
+   "bacterium",
+   "microbe"
+  ]
+ },
+ "bioicons/flow-cytometer": {
+  "source": "bioicons",
+  "name": "flow-cytometer-cell-sorter",
+  "category": "Lab_apparatus",
+  "author": "Derek Croote",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/Derek-Croote/flow-cytometer-cell-sorter.svg",
+  "tags": [
+   "lab",
+   "immune"
+  ]
+ },
+ "bioicons/fungal-germination": {
+  "source": "bioicons",
+  "name": "Conidia_germlings_myeclium_colour",
+  "category": "Microbiology",
+  "author": "Andi Wilson",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/Andi-Wilson/Conidia_germlings_myeclium_colour.svg",
+  "tags": [
+   "fungus",
+   "microbe"
+  ]
+ },
+ "bioicons/hplc": {
+  "source": "bioicons",
+  "name": "chromatography",
+  "category": "Lab_apparatus",
+  "author": "Graham Delafield",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/Graham-Delafield/chromatography.svg",
+  "tags": [
+   "lab",
+   "protein"
+  ]
+ },
+ "bioicons/inoculation-loop": {
+  "source": "bioicons",
+  "name": "bacteria_culture_loop",
+  "category": "Cell_culture",
+  "author": "B  Gideon Bergheim",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Cell_culture/B--Gideon-Bergheim/bacteria_culture_loop.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "bioicons/liquid-nitrogen-tank": {
+  "source": "bioicons",
+  "name": "ln2_tank",
+  "category": "Lab_apparatus",
+  "author": "KeHan",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/KeHan/ln2_tank.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "bioicons/maize-plant": {
+  "source": "bioicons",
+  "name": "Maize_Plant",
+  "category": "Plants_Algae",
+  "author": "Guillaume Lobet",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Guillaume_Lobet/Maize_Plant.svg",
+  "tags": [
+   "plant",
+   "monocot"
+  ]
+ },
+ "bioicons/mast-cell": {
+  "source": "bioicons",
+  "name": "mast_cell_1",
+  "category": "Blood_Immunology",
+  "author": "Sebastian Reinig",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Blood_Immunology/Sebastian-Reinig/mast_cell_1.svg",
+  "tags": [
+   "cell",
+   "immune"
+  ]
+ },
+ "bioicons/mast-cell-degranulation": {
+  "source": "bioicons",
+  "name": "mast_cell_degranulation_1",
+  "category": "Blood_Immunology",
+  "author": "Sebastian Reinig",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Blood_Immunology/Sebastian-Reinig/mast_cell_degranulation_1.svg",
+  "tags": [
+   "cell",
+   "immune"
+  ]
+ },
+ "bioicons/mhc-i": {
+  "source": "bioicons",
+  "name": "mhc1",
+  "category": "Blood_Immunology",
+  "author": "Helicase 11",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Blood_Immunology/Helicase_11/mhc1.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "bioicons/mhc-ii": {
+  "source": "bioicons",
+  "name": "MHC2",
+  "category": "Blood_Immunology",
+  "author": "Helicase 11",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Blood_Immunology/Helicase_11/MHC2.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "bioicons/moss-gametophore": {
+  "source": "bioicons",
+  "name": "Moss_Gametophore",
+  "category": "Plants_Algae",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Plants_Algae/James-Lloyd/Moss_Gametophore.svg",
+  "tags": [
+   "plant",
+   "bryophyte"
+  ]
+ },
+ "bioicons/nanopore-sequencing": {
+  "source": "bioicons",
+  "name": "ont_sequencing",
+  "category": "Genomics",
+  "author": "Geert van Geest",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Genomics/Geert-van-Geest/ont_sequencing.svg",
+  "tags": [
+   "lab",
+   "sequencing"
+  ]
+ },
+ "bioicons/nephron": {
+  "source": "bioicons",
+  "name": "nephron_2d",
+  "category": "Tissues",
+  "author": "EmilyADaniel",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Tissues/EmilyADaniel/nephron_2d.svg",
+  "tags": [
+   "organ",
+   "excretion",
+   "kidney"
+  ]
+ },
+ "bioicons/neuron-pyramidal": {
+  "source": "bioicons",
+  "name": "Pyramidal_Neuron",
+  "category": "Human_physiology",
+  "author": "Fabian Mikulasch",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Human_physiology/Fabian-Mikulasch/Pyramidal_Neuron.svg",
+  "tags": [
+   "cell",
+   "neuro"
+  ]
+ },
+ "bioicons/nicotiana-benthamiana": {
+  "source": "bioicons",
+  "name": "Nicotiana_benthamiana",
+  "category": "Plants_Algae",
+  "author": "Connor Tansley",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Connor-Tansley/Nicotiana_benthamiana.svg",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
+ "bioicons/organoid": {
+  "source": "bioicons",
+  "name": "organoid",
+  "category": "Cell_culture",
+  "author": "Marcel Tisch",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Cell_culture/Marcel_Tisch/organoid.svg",
+  "tags": [
+   "lab",
+   "cell-culture",
+   "development"
+  ]
+ },
+ "bioicons/patch-pipette": {
+  "source": "bioicons",
+  "name": "recording_pipette",
+  "category": "Lab_apparatus",
+  "author": "Marcel Tisch",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/Marcel_Tisch/recording_pipette.svg",
+  "tags": [
+   "lab",
+   "neuro",
+   "electrophysiology"
+  ]
+ },
+ "bioicons/phage": {
+  "source": "bioicons",
+  "name": "Phage",
+  "category": "Microbiology",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Microbiology/James-Lloyd/Phage.svg",
+  "tags": [
+   "virus",
+   "bacterium"
+  ]
+ },
+ "bioicons/physcomitrella": {
+  "source": "bioicons",
+  "name": "Physcomitrella_patens",
+  "category": "Plants_Algae",
+  "author": "Plant illustrations",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Plant_illustrations/Physcomitrella_patens.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "model-organism"
+  ]
+ },
+ "bioicons/plant-embryogenesis": {
+  "source": "bioicons",
+  "name": "Arabidopsis_Embryonic_Development",
+  "category": "Plants_Algae",
+  "author": "Erin Sparks",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Erin_Sparks/Arabidopsis_Embryonic_Development.svg",
+  "tags": [
+   "plant",
+   "development"
+  ]
+ },
+ "bioicons/polysome": {
+  "source": "bioicons",
+  "name": "Bacterial_Ribosomes_with_mRNA",
+  "category": "Intracellular_components",
+  "author": "Rahel Khdhr",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Intracellular_components/Rahel-Khdhr/Bacterial_Ribosomes_with_mRNA.svg",
+  "tags": [
+   "translation",
+   "bacterium"
+  ]
+ },
+ "bioicons/prokaryotic-cell": {
+  "source": "bioicons",
+  "name": "Average_prokaryote_cell-_unlabled",
+  "category": "Intracellular_components",
+  "author": "Mariana RuizVillareal",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Intracellular_components/Mariana_RuizVillareal/Average_prokaryote_cell-_unlabled.svg",
+  "tags": [
+   "cell",
+   "bacterium"
+  ]
+ },
+ "bioicons/proteasome": {
+  "source": "bioicons",
+  "name": "proteasome",
+  "category": "Intracellular_components",
+  "author": "jaiganesh",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Intracellular_components/jaiganesh/proteasome.svg",
+  "tags": [
+   "organelle",
+   "protein"
+  ]
+ },
+ "bioicons/qpcr-machine": {
+  "source": "bioicons",
+  "name": "qpcr_machine",
+  "category": "Lab_apparatus",
+  "author": "KeHan",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/KeHan/qpcr_machine.svg",
+  "tags": [
+   "lab",
+   "dna"
+  ]
+ },
+ "bioicons/ribosome": {
+  "source": "bioicons",
+  "name": "ribosome",
+  "category": "Intracellular_components",
+  "author": "jaiganesh",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Intracellular_components/jaiganesh/ribosome.svg",
+  "tags": [
+   "organelle",
+   "translation"
+  ]
+ },
+ "bioicons/shark": {
+  "source": "bioicons",
+  "name": "shark",
+  "category": "Animals",
+  "author": "Lucien Hinderling and Roman Schwob",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/Lucien-Hinderling-and-Roman-Schwob/shark.svg",
+  "tags": [
+   "fish"
+  ]
+ },
+ "bioicons/stem-cell-colony": {
+  "source": "bioicons",
+  "name": "stem_cell_colony",
+  "category": "Cell_culture",
+  "author": "Marcel Tisch",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Cell_culture/Marcel_Tisch/stem_cell_colony.svg",
+  "tags": [
+   "lab",
+   "stem-cell"
+  ]
+ },
+ "bioicons/tcr": {
+  "source": "bioicons",
+  "name": "t_cell_receptor",
+  "category": "Blood_Immunology",
+  "author": "Helicase 11",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Blood_Immunology/Helicase_11/t_cell_receptor.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "bioicons/tcr-cd3": {
+  "source": "bioicons",
+  "name": "TCR-CD3",
+  "category": "Intracellular_components",
+  "author": "Margot Riggi",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Intracellular_components/Margot_Riggi/TCR-CD3.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "bioicons/tomato-fruit": {
+  "source": "bioicons",
+  "name": "TomatoFruit",
+  "category": "Plants_Algae",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Plants_Algae/James-Lloyd/TomatoFruit.svg",
+  "tags": [
+   "plant",
+   "fruit"
+  ]
+ },
+ "bioicons/transcription-machinery": {
+  "source": "bioicons",
+  "name": "transcription_machinery",
+  "category": "Epigenetics",
+  "author": "Xi Chen",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Epigenetics/Xi-Chen/transcription_machinery.svg",
+  "tags": [
+   "transcription",
+   "regulation"
+  ]
+ },
+ "bioicons/trna-cloverleaf": {
+  "source": "bioicons",
+  "name": "tRNA_secondary_structure",
+  "category": "Nucleic_acids",
+  "author": "James Lloyd",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Nucleic_acids/James-Lloyd/tRNA_secondary_structure.svg",
+  "tags": [
+   "molecule",
+   "rna"
+  ]
+ },
+ "bioicons/vortex": {
+  "source": "bioicons",
+  "name": "vortex_mixer",
+  "category": "Lab_apparatus",
+  "author": "KeHan",
+  "license": "CC0 1.0",
+  "url": "https://bioicons.com/icons/cc-0/Lab_apparatus/KeHan/vortex_mixer.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/alpha-helix": {
+  "source": "bioicons",
+  "name": "alpha-helix",
+  "category": "Intracellular_components",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Intracellular_components/DBCLS/alpha-helix.svg",
+  "tags": [
+   "molecule",
+   "protein"
+  ]
+ },
+ "dbcls/arabidopsis": {
+  "source": "bioicons",
+  "name": "Arabidopsis_thaliana",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/Arabidopsis_thaliana.svg",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
+ "dbcls/autoclave": {
+  "source": "bioicons",
+  "name": "autoclave",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/autoclave.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "dbcls/b-dna": {
+  "source": "bioicons",
+  "name": "B-DNA",
+  "category": "Nucleic_acids",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Nucleic_acids/DBCLS/B-DNA.svg",
+  "tags": [
+   "molecule",
+   "dna"
+  ]
+ },
+ "dbcls/bacillus-subtilis": {
+  "source": "bioicons",
+  "name": "Bacillus_subtilis",
+  "category": "Microbiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/DBCLS/Bacillus_subtilis.svg",
+  "tags": [
+   "bacterium",
+   "microbe",
+   "model-organism"
+  ]
+ },
+ "dbcls/beehive": {
+  "source": "bioicons",
+  "name": "honey_bee_hive",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/honey_bee_hive.svg",
+  "tags": [
+   "behaviour",
+   "insect",
+   "social"
+  ]
+ },
+ "dbcls/benchtop-sequencer": {
+  "source": "bioicons",
+  "name": "Illumina_miseq",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/Illumina_miseq.svg",
+  "tags": [
+   "lab",
+   "sequencing"
+  ]
+ },
+ "dbcls/blastula": {
+  "source": "bioicons",
+  "name": "blastula_embryo",
+  "category": "Cell_culture",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Cell_culture/DBCLS/blastula_embryo.svg",
+  "tags": [
+   "development",
+   "embryo"
+  ]
+ },
+ "dbcls/brain-hippocampus": {
+  "source": "bioicons",
+  "name": "Frontal_plane_of_the_brain_hippocampus",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Frontal_plane_of_the_brain_hippocampus.svg",
+  "tags": [
+   "organ",
+   "neuro"
+  ]
+ },
+ "dbcls/brain-horizontal-section": {
+  "source": "bioicons",
+  "name": "Horizontal_plane_of_the_brain",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Horizontal_plane_of_the_brain.svg",
+  "tags": [
+   "organ",
+   "neuro"
+  ]
+ },
+ "dbcls/chromatin": {
+  "source": "bioicons",
+  "name": "Chromatin_structure",
+  "category": "Nucleic_acids",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Nucleic_acids/DBCLS/Chromatin_structure.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "epigenetics"
+  ]
+ },
+ "dbcls/cricket-song": {
+  "source": "bioicons",
+  "name": "cricket_calling_song",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/cricket_calling_song.svg",
+  "tags": [
+   "behaviour",
+   "insect",
+   "communication"
+  ]
+ },
+ "dbcls/crispr-cas9": {
+  "source": "bioicons",
+  "name": "CRISPR-CAS9-pink",
+  "category": "Nucleic_acids",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Nucleic_acids/DBCLS/CRISPR-CAS9-pink.svg",
+  "tags": [
+   "molecule",
+   "genome-editing"
+  ]
+ },
+ "dbcls/cyanobacteria": {
+  "source": "bioicons",
+  "name": "Cyanobacteria",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/Cyanobacteria.svg",
+  "tags": [
+   "bacterium",
+   "photosynthesis"
+  ]
+ },
+ "dbcls/deletion": {
+  "source": "bioicons",
+  "name": "deletion",
+  "category": "Genetics",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Genetics/DBCLS/deletion.svg",
+  "tags": [
+   "genetics",
+   "mutation"
+  ]
+ },
+ "dbcls/dna-sequencer": {
+  "source": "bioicons",
+  "name": "DNA_sequencer",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/DNA_sequencer.svg",
+  "tags": [
+   "lab",
+   "dna",
+   "sequencing"
+  ]
+ },
+ "dbcls/drosophila": {
+  "source": "bioicons",
+  "name": "fruit_fly",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fruit_fly.svg",
+  "tags": [
+   "model-organism",
+   "insect"
+  ]
+ },
+ "dbcls/drosophila-antennapedia": {
+  "source": "bioicons",
+  "name": "fly_antennapedia_complex",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_antennapedia_complex.svg",
+  "tags": [
+   "development",
+   "genetics",
+   "hox"
+  ]
+ },
+ "dbcls/drosophila-egg": {
+  "source": "bioicons",
+  "name": "fly_egg",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_egg.svg",
+  "tags": [
+   "model-organism",
+   "insect",
+   "development"
+  ]
+ },
+ "dbcls/drosophila-larva": {
+  "source": "bioicons",
+  "name": "fly_larva",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_larva.svg",
+  "tags": [
+   "model-organism",
+   "insect",
+   "development"
+  ]
+ },
+ "dbcls/drosophila-pupa": {
+  "source": "bioicons",
+  "name": "fly_pupa",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_pupa.svg",
+  "tags": [
+   "model-organism",
+   "insect",
+   "development"
+  ]
+ },
+ "dbcls/drosophila-vestigial": {
+  "source": "bioicons",
+  "name": "fly_vestigial_wings",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_vestigial_wings.svg",
+  "tags": [
+   "genetics",
+   "insect",
+   "mutant"
+  ]
+ },
+ "dbcls/drosophila-white-eye": {
+  "source": "bioicons",
+  "name": "fly_white_eye",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/fly_white_eye.svg",
+  "tags": [
+   "genetics",
+   "insect",
+   "mutant"
+  ]
+ },
+ "dbcls/duplication": {
+  "source": "bioicons",
+  "name": "Duplication",
+  "category": "Genetics",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Genetics/DBCLS/Duplication.svg",
+  "tags": [
+   "genetics",
+   "mutation"
+  ]
+ },
+ "dbcls/ear-structure": {
+  "source": "bioicons",
+  "name": "Ear_structure",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Ear_structure.svg",
+  "tags": [
+   "organ",
+   "sense",
+   "hearing"
+  ]
+ },
+ "dbcls/electron-microscope": {
+  "source": "bioicons",
+  "name": "transmission-electron-microscope-tem",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/transmission-electron-microscope-tem.svg",
+  "tags": [
+   "lab",
+   "microscopy"
+  ]
+ },
+ "dbcls/fission-yeast": {
+  "source": "bioicons",
+  "name": "fission_yeast",
+  "category": "Microbiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/DBCLS/fission_yeast.svg",
+  "tags": [
+   "fungus",
+   "microbe",
+   "model-organism"
+  ]
+ },
+ "dbcls/forced-swim-test": {
+  "source": "bioicons",
+  "name": "porsolt_forced_swim_test",
+  "category": "Procedures",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Procedures/DBCLS/porsolt_forced_swim_test.svg",
+  "tags": [
+   "behaviour",
+   "lab"
+  ]
+ },
+ "dbcls/freezer": {
+  "source": "bioicons",
+  "name": "freezer",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/freezer.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/gastrula": {
+  "source": "bioicons",
+  "name": "gastrula",
+  "category": "Cell_culture",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Cell_culture/DBCLS/gastrula.svg",
+  "tags": [
+   "development",
+   "embryo"
+  ]
+ },
+ "dbcls/gel": {
+  "source": "bioicons",
+  "name": "electrophoresis-gel",
+  "category": "Microbiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/DBCLS/electrophoresis-gel.svg",
+  "tags": [
+   "lab",
+   "dna"
+  ]
+ },
+ "dbcls/genome-sequencer": {
+  "source": "bioicons",
+  "name": "genomesequencer-1",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/genomesequencer-1.svg",
+  "tags": [
+   "lab",
+   "sequencing"
+  ]
+ },
+ "dbcls/ginkgo": {
+  "source": "bioicons",
+  "name": "Ginkgo",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/Ginkgo.svg",
+  "tags": [
+   "plant",
+   "gymnosperm"
+  ]
+ },
+ "dbcls/gram-negative": {
+  "source": "bioicons",
+  "name": "Negative_Bacteria",
+  "category": "Microbiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/DBCLS/Negative_Bacteria.svg",
+  "tags": [
+   "bacterium",
+   "microbe"
+  ]
+ },
+ "dbcls/gram-positive": {
+  "source": "bioicons",
+  "name": "Positive_Bacteria",
+  "category": "Microbiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Microbiology/DBCLS/Positive_Bacteria.svg",
+  "tags": [
+   "bacterium",
+   "microbe"
+  ]
+ },
+ "dbcls/hand-bones": {
+  "source": "bioicons",
+  "name": "Anterior_view_of_bones_of_right_hand",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_bones_of_right_hand.svg",
+  "tags": [
+   "bone",
+   "skeleton"
+  ]
+ },
+ "dbcls/inversion": {
+  "source": "bioicons",
+  "name": "Inversion",
+  "category": "Genetics",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Genetics/DBCLS/Inversion.svg",
+  "tags": [
+   "genetics",
+   "mutation"
+  ]
+ },
+ "dbcls/knee-joint": {
+  "source": "bioicons",
+  "name": "Anterior_view_of_knee_joint",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_knee_joint.svg",
+  "tags": [
+   "bone",
+   "skeleton"
+  ]
+ },
+ "dbcls/lc-ms": {
+  "source": "bioicons",
+  "name": "Liquid_Chromatograph_Mass_Spectrometer",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/Liquid_Chromatograph_Mass_Spectrometer.svg",
+  "tags": [
+   "lab",
+   "chemistry",
+   "proteomics"
+  ]
+ },
+ "dbcls/microscopist": {
+  "source": "bioicons",
+  "name": "light-microscope-male",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/light-microscope-male.svg",
+  "tags": [
+   "lab",
+   "microscopy",
+   "people"
+  ]
+ },
+ "dbcls/moss": {
+  "source": "bioicons",
+  "name": "earthmoss_adult_gametophore_with_mature_sporophyte",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/earthmoss_adult_gametophore_with_mature_sporophyte.svg",
+  "tags": [
+   "plant",
+   "bryophyte"
+  ]
+ },
+ "dbcls/moss-protonema": {
+  "source": "bioicons",
+  "name": "earthmoss_chloronema",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/earthmoss_chloronema.svg",
+  "tags": [
+   "plant",
+   "bryophyte"
+  ]
+ },
+ "dbcls/neuron": {
+  "source": "bioicons",
+  "name": "neuron",
+  "category": "Cell_culture",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Cell_culture/DBCLS/neuron.svg",
+  "tags": [
+   "cell",
+   "neuro"
+  ]
+ },
+ "dbcls/neuron-motor": {
+  "source": "bioicons",
+  "name": "Motor_neuron",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Motor_neuron.svg",
+  "tags": [
+   "cell",
+   "neuro"
+  ]
+ },
+ "dbcls/neuron-sensory": {
+  "source": "bioicons",
+  "name": "Sensory_neuron",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Sensory_neuron.svg",
+  "tags": [
+   "cell",
+   "neuro"
+  ]
+ },
+ "dbcls/nmr": {
+  "source": "bioicons",
+  "name": "nmr-spectrometer",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/nmr-spectrometer.svg",
+  "tags": [
+   "lab",
+   "chemistry",
+   "structure"
+  ]
+ },
+ "dbcls/nucleosome": {
+  "source": "bioicons",
+  "name": "histone",
+  "category": "Nucleic_acids",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Nucleic_acids/DBCLS/histone.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "epigenetics"
+  ]
+ },
+ "dbcls/oligodendrocyte": {
+  "source": "bioicons",
+  "name": "oligodendrocyte",
+  "category": "Cell_culture",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Cell_culture/DBCLS/oligodendrocyte.svg",
+  "tags": [
+   "cell",
+   "neuro",
+   "glia"
+  ]
+ },
+ "dbcls/pcr-machine": {
+  "source": "bioicons",
+  "name": "thermalcycler-pcr",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/thermalcycler-pcr.svg",
+  "tags": [
+   "lab",
+   "dna"
+  ]
+ },
+ "dbcls/pelvis-female": {
+  "source": "bioicons",
+  "name": "Anterior_view_of_female_pelvis",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/Anterior_view_of_female_pelvis.svg",
+  "tags": [
+   "bone",
+   "skeleton"
+  ]
+ },
+ "dbcls/ph-meter": {
+  "source": "bioicons",
+  "name": "ph-meter",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/ph-meter.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/pipetting": {
+  "source": "bioicons",
+  "name": "Pipetting_Female",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/Pipetting_Female.svg",
+  "tags": [
+   "lab",
+   "people"
+  ]
+ },
+ "dbcls/plasmid-insert": {
+  "source": "bioicons",
+  "name": "plasmid-s-insert-dna",
+  "category": "Nucleic_acids",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Nucleic_acids/DBCLS/plasmid-s-insert-dna.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "lab",
+   "cloning"
+  ]
+ },
+ "dbcls/protein": {
+  "source": "bioicons",
+  "name": "Protein_colored",
+  "category": "Intracellular_components",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Intracellular_components/DBCLS/Protein_colored.svg",
+  "tags": [
+   "molecule",
+   "protein"
+  ]
+ },
+ "dbcls/protein-purification": {
+  "source": "bioicons",
+  "name": "Protein_purification_colored",
+  "category": "Procedures",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Procedures/DBCLS/Protein_purification_colored.svg",
+  "tags": [
+   "lab",
+   "protein"
+  ]
+ },
+ "dbcls/reagent-bottle": {
+  "source": "bioicons",
+  "name": "Reagent_bottle",
+  "category": "Chemistry",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Chemistry/DBCLS/Reagent_bottle.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/rice": {
+  "source": "bioicons",
+  "name": "Rice",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/Rice.svg",
+  "tags": [
+   "plant",
+   "crop",
+   "monocot"
+  ]
+ },
+ "dbcls/sea-anemone": {
+  "source": "bioicons",
+  "name": "anemone_adult",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/anemone_adult.svg",
+  "tags": [
+   "cnidarian",
+   "model-organism"
+  ]
+ },
+ "dbcls/silkworm": {
+  "source": "bioicons",
+  "name": "Silkworm",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/Silkworm.svg",
+  "tags": [
+   "insect",
+   "model-organism"
+  ]
+ },
+ "dbcls/spinal-cord-motor": {
+  "source": "bioicons",
+  "name": "spinal-cord_anterior-horn-cells_motor-nerves_muscles",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/spinal-cord_anterior-horn-cells_motor-nerves_muscles.svg",
+  "tags": [
+   "organ",
+   "neuro",
+   "muscle"
+  ]
+ },
+ "dbcls/stem-cell": {
+  "source": "bioicons",
+  "name": "stem_cell",
+  "category": "Cell_culture",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Cell_culture/DBCLS/stem_cell.svg",
+  "tags": [
+   "cell",
+   "stem-cell"
+  ]
+ },
+ "dbcls/stereo-microscope": {
+  "source": "bioicons",
+  "name": "microscope-stereo",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/microscope-stereo.svg",
+  "tags": [
+   "lab",
+   "microscopy"
+  ]
+ },
+ "dbcls/thoracic-skeleton": {
+  "source": "bioicons",
+  "name": "view_of_thoracic_skelton",
+  "category": "Human_physiology",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Human_physiology/DBCLS/view_of_thoracic_skelton.svg",
+  "tags": [
+   "bone",
+   "skeleton"
+  ]
+ },
+ "dbcls/tobacco": {
+  "source": "bioicons",
+  "name": "tobacco",
+  "category": "Plants_Algae",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/DBCLS/tobacco.svg",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
+ "dbcls/translocation": {
+  "source": "bioicons",
+  "name": "translocation",
+  "category": "Genetics",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Genetics/DBCLS/translocation.svg",
+  "tags": [
+   "genetics",
+   "mutation"
+  ]
+ },
+ "dbcls/tube-rack": {
+  "source": "bioicons",
+  "name": "tube-rack",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/tube-rack.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/ultracentrifuge": {
+  "source": "bioicons",
+  "name": "centrifuge-big",
+  "category": "Lab_apparatus",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Lab_apparatus/DBCLS/centrifuge-big.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "dbcls/waggle-dance": {
+  "source": "bioicons",
+  "name": "honey_bee_waggle_dance",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/honey_bee_waggle_dance.svg",
+  "tags": [
+   "behaviour",
+   "insect",
+   "communication"
+  ]
+ },
+ "dbcls/worm-plate": {
+  "source": "bioicons",
+  "name": "on_Nematode_Growth_Medium_petri_plate",
+  "category": "Procedures",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Procedures/DBCLS/on_Nematode_Growth_Medium_petri_plate.svg",
+  "tags": [
+   "lab",
+   "model-organism"
+  ]
+ },
+ "dbcls/zebrafish-simple": {
+  "source": "bioicons",
+  "name": "zebrafish_simplified",
+  "category": "Animals",
+  "author": "DBCLS TogoTV",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Animals/DBCLS/zebrafish_simplified.svg",
+  "tags": [
+   "model-organism",
+   "fish"
+  ]
+ },
+ "phylopic/african-elephant": {
+  "source": "phylopic",
+  "name": "Loxodonta africana",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/62398ac0-f0c3-48f8-8455-53512a05fbc4",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/amborella": {
+  "source": "phylopic",
+  "name": "Amborella trichopoda",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/30049b3c-eb09-4459-a34e-1963e13e2711",
+  "tags": [
+   "plant",
+   "angiosperm",
+   "evolution"
+  ]
+ },
+ "phylopic/amoeba": {
+  "source": "phylopic",
+  "name": "Amoeba proteus",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/83b732d5-5534-4d68-8dcd-e07eec765e11",
+  "tags": [
+   "protist"
+  ]
+ },
+ "phylopic/amphioxus": {
+  "source": "phylopic",
+  "name": "Branchiostoma",
+  "author": "Yan Wong from illustration by Jules Richard (1907)",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2e265034-1a52-4a5d-8b3c-2435079fa38b",
+  "tags": [
+   "chordate",
+   "cephalochordate"
+  ]
+ },
+ "phylopic/anole": {
+  "source": "phylopic",
+  "name": "Anolis carolinensis",
+  "author": "Sarah Werning",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/f94f7523-3c95-4520-a8cf-a8313ca95b5a",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/ant": {
+  "source": "phylopic",
+  "name": "Formicidae",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f4d28481-3b28-4cdb-9877-9b9d4f07e5f2",
+  "tags": [
+   "insect",
+   "social"
+  ]
+ },
+ "phylopic/aplysia": {
+  "source": "phylopic",
+  "name": "Aplysia californica",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/859692a0-3318-4556-83e3-1921989959c9",
+  "tags": [
+   "mollusc",
+   "neuro",
+   "model-organism"
+  ]
+ },
+ "phylopic/arabidopsis": {
+  "source": "phylopic",
+  "name": "Arabidopsis thaliana",
+  "author": "Jake Warner",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7fb6a9de-0024-4e45-bb8d-1cc32fb2470f",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
+ "phylopic/archaeopteryx": {
+  "source": "phylopic",
+  "name": "Archaeopteryx",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/045279d5-24e5-4838-bec9-0bea86812e35",
+  "tags": [
+   "bird",
+   "dinosaur",
+   "evolution"
+  ]
+ },
+ "phylopic/aspergillus": {
+  "source": "phylopic",
+  "name": "Aspergillus",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/c98aba13-4ba8-4448-bda1-cf3500264954",
+  "tags": [
+   "fungus"
+  ]
+ },
+ "phylopic/axolotl": {
+  "source": "phylopic",
+  "name": "Ambystoma mexicanum",
+  "author": "Jake Warner",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/575eaa51-6c9b-4d36-9881-b8463c68ebbc",
+  "tags": [
+   "amphibian",
+   "regeneration",
+   "model-organism"
+  ]
+ },
+ "phylopic/bacillus": {
+  "source": "phylopic",
+  "name": "Bacillus subtilis",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/c17f0551-1f30-4b82-af58-ee3c550161aa",
+  "tags": [
+   "bacterium",
+   "model-organism"
+  ]
+ },
+ "phylopic/baleen-whale": {
+  "source": "phylopic",
+  "name": "Mysticeti",
+  "author": "Jonathan Pople",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/93d5c0be-5e91-4b88-a8be-8e24fd91fd42",
+  "tags": [
+   "mammal",
+   "cetacean",
+   "marine"
+  ]
+ },
+ "phylopic/bat": {
+  "source": "phylopic",
+  "name": "Chiroptera",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/0d386ce5-28e2-407c-b985-c1aac350bd1a",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/beetle": {
+  "source": "phylopic",
+  "name": "Coleoptera",
+  "author": "Takahashi (modified by T. Michael Keesey)",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f8c4e148-3f5f-4a0c-ae7f-f0374fdc7c90",
+  "tags": [
+   "insect"
+  ]
+ },
+ "phylopic/bivalve": {
+  "source": "phylopic",
+  "name": "Bivalvia",
+  "author": "Scott Hartman",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/d92d2313-359a-4649-9cb8-5c4d84474f4b",
+  "tags": [
+   "mollusc"
+  ]
+ },
+ "phylopic/bluefin-tuna": {
+  "source": "phylopic",
+  "name": "Thunnus thynnus",
+  "author": "Stuart Humphries",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/16989401-0080-4502-828d-e85a45a262be",
+  "tags": [
+   "fish",
+   "marine"
+  ]
+ },
+ "phylopic/c-elegans": {
+  "source": "phylopic",
+  "name": "Caenorhabditis elegans",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/7a056405-8d3e-4b1e-9368-4df1e9437e47",
+  "tags": [
+   "nematode",
+   "model-organism"
+  ]
+ },
+ "phylopic/cattle": {
+  "source": "phylopic",
+  "name": "Bos",
+  "author": "Zimices",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/7833503a-b14c-4894-8cfe-653b481232f9",
+  "tags": [
+   "mammal",
+   "livestock"
+  ]
+ },
+ "phylopic/centipede": {
+  "source": "phylopic",
+  "name": "Myriapoda",
+  "author": "Ralf Janssen, Nikola-Michael Prpic & Wim G. M. Damen (vectorized by T. Michael Keesey)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/fbb34126-2757-4201-9717-c5a0df3fdfb7",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/chicken": {
+  "source": "phylopic",
+  "name": "Gallus gallus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/aff847b0-ecbd-4d41-98ce-665921a6d96e",
+  "tags": [
+   "bird",
+   "model-organism"
+  ]
+ },
+ "phylopic/chimpanzee": {
+  "source": "phylopic",
+  "name": "Pan troglodytes",
+  "author": "T. Michael Keesey (vectorization) and Tony Hisgett (photography)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/2f7da8c8-897a-445e-b003-b3955ad08850",
+  "tags": [
+   "mammal",
+   "primate"
+  ]
+ },
+ "phylopic/chlamydomonas": {
+  "source": "phylopic",
+  "name": "Chlamydomonas reinhardtii",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/56538f18-f0db-4323-b969-594357da11fe",
+  "tags": [
+   "alga",
+   "model-organism"
+  ]
+ },
+ "phylopic/choanoflagellate": {
+  "source": "phylopic",
+  "name": "Choanoflagellata",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6933d88f-db69-4f6c-94da-602acf028961",
+  "tags": [
+   "protist",
+   "evolution"
+  ]
+ },
+ "phylopic/ciona": {
+  "source": "phylopic",
+  "name": "Ciona intestinalis",
+  "author": "Christoph Schomburg",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/e48ba6be-fea3-46f7-a923-143afa4ff09f",
+  "tags": [
+   "chordate",
+   "tunicate",
+   "model-organism"
+  ]
+ },
+ "phylopic/cod": {
+  "source": "phylopic",
+  "name": "Gadus morhua",
+  "author": "Milton Tan",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/bba1800a-dd86-451d-a79b-c5944cfe5231",
+  "tags": [
+   "fish",
+   "marine"
+  ]
+ },
+ "phylopic/coelacanth": {
+  "source": "phylopic",
+  "name": "Latimeria chalumnae",
+  "author": "Danny Anduza",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9785c4ca-e881-4e42-b359-212dd9c38aee",
+  "tags": [
+   "fish",
+   "evolution"
+  ]
+ },
+ "phylopic/comb-jelly": {
+  "source": "phylopic",
+  "name": "Ctenophora",
+  "author": "Filippo Nicolini",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/dc13a5ca-32ba-4a02-9624-9221df170dac",
+  "tags": [
+   "ctenophore"
+  ]
+ },
+ "phylopic/copepod": {
+  "source": "phylopic",
+  "name": "Calanus finmarchicus",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/105eb7d2-fb59-4620-9efb-69f127dd8e36",
+  "tags": [
+   "crustacean",
+   "zooplankton",
+   "marine"
+  ]
+ },
+ "phylopic/cricket": {
+  "source": "phylopic",
+  "name": "Gryllus",
+  "author": "Thomas Hegna",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/b80d830b-155a-4ca5-9119-9a9fde019cc6",
+  "tags": [
+   "insect",
+   "behaviour"
+  ]
+ },
+ "phylopic/crocodile": {
+  "source": "phylopic",
+  "name": "Crocodylus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a796420f-5158-4e96-acbe-e30ef36b26d6",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/cyanobacterium": {
+  "source": "phylopic",
+  "name": "Cyanobacteria",
+  "author": "Ben Liebeskind",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/258c3e3c-42d3-49a6-9cbd-6c410dcf8aa0",
+  "tags": [
+   "bacterium",
+   "photosynthesis"
+  ]
+ },
+ "phylopic/cycad": {
+  "source": "phylopic",
+  "name": "Cycadales",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/67971386-bf17-4c2e-89ef-a3f4ad4668a3",
+  "tags": [
+   "plant",
+   "gymnosperm"
+  ]
+ },
+ "phylopic/daphnia": {
+  "source": "phylopic",
+  "name": "Daphnia",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/ef7610ee-e767-46d5-a2e5-9e474ed50c10",
+  "tags": [
+   "crustacean",
+   "ecology"
+  ]
+ },
+ "phylopic/darwin-finch": {
+  "source": "phylopic",
+  "name": "Geospiza",
+  "author": "Ryan Cupo",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/19f3f55c-f942-464b-a61f-27794b9000f7",
+  "tags": [
+   "bird",
+   "evolution"
+  ]
+ },
+ "phylopic/diatom": {
+  "source": "phylopic",
+  "name": "Bacillariophyceae",
+  "author": "Emily Jane McTavish, from Haeckel, E. H. P. A. (1904).Kunstformen der Natur. Bibliographisches",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/4924b6bd-cfb8-4d60-a32a-442d02afbe85",
+  "tags": [
+   "protist",
+   "alga"
+  ]
+ },
+ "phylopic/dictyostelium": {
+  "source": "phylopic",
+  "name": "Dictyostelium discoideum",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/cc9f966b-dd88-40b6-986f-e4d328fc6855",
+  "tags": [
+   "protist",
+   "model-organism"
+  ]
+ },
+ "phylopic/dragonfly": {
+  "source": "phylopic",
+  "name": "Odonata",
+  "author": "Maxime Dahirel",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/8af9c80d-92f9-4ba8-87c0-8ffa026c770c",
+  "tags": [
+   "insect"
+  ]
+ },
+ "phylopic/drosophila": {
+  "source": "phylopic",
+  "name": "Drosophila melanogaster",
+  "author": "Thomas Hegna",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/ea8fa530-d856-4423-a81d-a74342cd1875",
+  "tags": [
+   "insect",
+   "model-organism"
+  ]
+ },
+ "phylopic/e-coli": {
+  "source": "phylopic",
+  "name": "Escherichia coli",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/27d35deb-98bb-4833-8121-8750f35cd09b",
+  "tags": [
+   "bacterium",
+   "model-organism"
+  ]
+ },
+ "phylopic/earthworm": {
+  "source": "phylopic",
+  "name": "Lumbricus terrestris",
+  "author": "Carlo De Rito",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f0d839a1-5a3e-42b2-828a-c5e536f0f7b7",
+  "tags": [
+   "annelid"
+  ]
+ },
+ "phylopic/euglena": {
+  "source": "phylopic",
+  "name": "Euglena",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9c80947d-eb46-4a7e-b29a-208a6f0c0f93",
+  "tags": [
+   "protist"
+  ]
+ },
+ "phylopic/fern": {
+  "source": "phylopic",
+  "name": "Polypodiopsida",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2d2bd6f4-be5e-48de-a61a-510f09692e48",
+  "tags": [
+   "plant",
+   "fern"
+  ]
+ },
+ "phylopic/frog": {
+  "source": "phylopic",
+  "name": "Rana",
+  "author": "Sharp Photography, sharpphotography.co.uk",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/e63285f9-4a46-4e5c-8394-a65815b3ab0d",
+  "tags": [
+   "amphibian"
+  ]
+ },
+ "phylopic/great-white-shark": {
+  "source": "phylopic",
+  "name": "Carcharodon carcharias",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/545d45f0-0dd1-4cfd-aad6-2b835223ea0d",
+  "tags": [
+   "vertebrate",
+   "chondrichthyes"
+  ]
+ },
+ "phylopic/green-turtle": {
+  "source": "phylopic",
+  "name": "Chelonia mydas",
+  "author": "James R. Spotila and Ray Chatterji",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/95a56d8c-896f-44ed-bf00-5f07d64ca6f8",
+  "tags": [
+   "vertebrate",
+   "reptile",
+   "turtle"
+  ]
+ },
+ "phylopic/harbour-seal": {
+  "source": "phylopic",
+  "name": "Phoca vitulina",
+  "author": "Andy Wilson",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/1925a9aa-bf33-4270-824c-b8f781f8ec82",
+  "tags": [
+   "mammal",
+   "marine"
+  ]
+ },
+ "phylopic/herring": {
+  "source": "phylopic",
+  "name": "Clupea harengus",
+  "author": "Nathan Hermann",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/381e7e19-bb44-4432-85ce-627f05d159a3",
+  "tags": [
+   "fish",
+   "marine"
+  ]
+ },
+ "phylopic/honey-bee": {
+  "source": "phylopic",
+  "name": "Apis mellifera",
+  "author": "Adrian Reich",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/956cf95f-9cbd-459b-a457-c80ba19877a4",
+  "tags": [
+   "insect",
+   "social"
+  ]
+ },
+ "phylopic/horseshoe-crab": {
+  "source": "phylopic",
+  "name": "Limulus polyphemus",
+  "author": "Andy Wilson",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9a9a0cd0-2fb0-4ab7-b0bc-5984d11e5c13",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/horsetail": {
+  "source": "phylopic",
+  "name": "Equisetum",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/aca3357f-a8fc-4ab9-a9b3-ae456f54d0a7",
+  "tags": [
+   "plant",
+   "fern"
+  ]
+ },
+ "phylopic/human": {
+  "source": "phylopic",
+  "name": "Homo sapiens",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9c6af553-390c-4bdd-baeb-6992cbc540b1",
+  "tags": [
+   "mammal",
+   "primate"
+  ]
+ },
+ "phylopic/hydra": {
+  "source": "phylopic",
+  "name": "Hydra",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/02d00693-af87-4323-889a-8afc7d8529f3",
+  "tags": [
+   "cnidarian",
+   "regeneration"
+  ]
+ },
+ "phylopic/jellyfish": {
+  "source": "phylopic",
+  "name": "Scyphozoa",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6f25228d-34f6-4a84-b52d-ce03d3fcd152",
+  "tags": [
+   "cnidarian"
+  ]
+ },
+ "phylopic/kangaroo": {
+  "source": "phylopic",
+  "name": "Macropus giganteus",
+  "author": "Michael Scroggie",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/624e3d80-cba2-4465-8f3a-c9ae4025198b",
+  "tags": [
+   "mammal",
+   "marsupial"
+  ]
+ },
+ "phylopic/krill": {
+  "source": "phylopic",
+  "name": "Euphausiacea",
+  "author": "Steven Haddock • Jellywatch.org",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/44a3628d-aafd-45cc-97a6-1cb74bd43dec",
+  "tags": [
+   "crustacean",
+   "marine",
+   "zooplankton"
+  ]
+ },
+ "phylopic/lamprey": {
+  "source": "phylopic",
+  "name": "Petromyzon marinus",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/f9313512-3ce4-4349-86bc-060d4faa013e",
+  "tags": [
+   "vertebrate",
+   "jawless",
+   "fish"
+  ]
+ },
+ "phylopic/leaf-compound": {
+  "source": "phylopic",
+  "name": "Rosaceae",
+  "author": "Pablo Castro Sánchez-Bermejo",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7086d4fe-c37c-4901-b426-752851f4685c",
+  "tags": [
+   "plant",
+   "eudicot"
+  ]
+ },
+ "phylopic/leaf-simple": {
+  "source": "phylopic",
+  "name": "Populus",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a6ea366c-a098-4a25-90df-7ce321750a87",
+  "tags": [
+   "plant",
+   "eudicot",
+   "tree"
+  ]
+ },
+ "phylopic/lizard": {
+  "source": "phylopic",
+  "name": "Lacertilia",
+  "author": "Gopal Murali",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/02811a3f-1a4f-4bbf-b4bb-b9ad7b60ecc0",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/lungfish": {
+  "source": "phylopic",
+  "name": "Neoceratodus forsteri",
+  "author": "Roberto Díaz Sibaja",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/3bfadee3-c4c5-408e-a1b8-e09bec80bc7f",
+  "tags": [
+   "vertebrate",
+   "sarcopterygii"
+  ]
+ },
+ "phylopic/macaque": {
+  "source": "phylopic",
+  "name": "Macaca mulatta",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba",
+  "tags": [
+   "mammal",
+   "primate"
+  ]
+ },
+ "phylopic/magnolia": {
+  "source": "phylopic",
+  "name": "Magnolia",
+  "author": "Luna L Sanchez-Reyes",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/b1574f09-14fa-4042-8f37-7d31c2f08743",
+  "tags": [
+   "plant",
+   "angiosperm"
+  ]
+ },
+ "phylopic/medaka": {
+  "source": "phylopic",
+  "name": "Oryzias latipes",
+  "author": "seung9park",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/b7ae3bbf-c0a1-43bf-80ac-babf90554073",
+  "tags": [
+   "fish",
+   "model-organism"
+  ]
+ },
+ "phylopic/mosquito": {
+  "source": "phylopic",
+  "name": "Anopheles",
+  "author": "Brian Bourke",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f538aa99-5c08-4f96-97d9-2e094ef5d84f",
+  "tags": [
+   "insect",
+   "parasite-vector"
+  ]
+ },
+ "phylopic/moss": {
+  "source": "phylopic",
+  "name": "Bryophyta",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/4557977d-1b23-4a68-8e82-4de1b030e04b",
+  "tags": [
+   "plant",
+   "bryophyte"
+  ]
+ },
+ "phylopic/moth": {
+  "source": "phylopic",
+  "name": "Lepidoptera",
+  "author": "Curtis (modified by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/0fde2bb6-0472-4273-bf46-2d6073fa8fbc",
+  "tags": [
+   "insect"
+  ]
+ },
+ "phylopic/mouse": {
+  "source": "phylopic",
+  "name": "Mus musculus",
+  "author": "Madeleine Price Ball",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/6b2b98f6-f879-445f-9ac2-2c2563157025",
+  "tags": [
+   "mammal",
+   "model-organism"
+  ]
+ },
+ "phylopic/naked-mole-rat": {
+  "source": "phylopic",
+  "name": "Heterocephalus glaber",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7a7d8226-aa19-4f6f-8afa-f039cc860d7e",
+  "tags": [
+   "mammal",
+   "social"
+  ]
+ },
+ "phylopic/nematostella": {
+  "source": "phylopic",
+  "name": "Nematostella vectensis",
+  "author": "Jake Warner",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8318deda-0d99-481b-b306-a0f8d98abe67",
+  "tags": [
+   "cnidarian",
+   "model-organism"
+  ]
+ },
+ "phylopic/nile-crocodile": {
+  "source": "phylopic",
+  "name": "Crocodylus niloticus",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2fa0c118-f96c-407e-91eb-522065829f14",
+  "tags": [
+   "vertebrate",
+   "reptile",
+   "archosaur"
+  ]
+ },
+ "phylopic/octopus": {
+  "source": "phylopic",
+  "name": "Octopus vulgaris",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f400b519-3564-4183-b4bd-c3b922cc7c5e",
+  "tags": [
+   "mollusc",
+   "cephalopod"
+  ]
+ },
+ "phylopic/opossum": {
+  "source": "phylopic",
+  "name": "Didelphis virginiana",
+  "author": "Sarah Werning",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/91324e57-b3f1-42e0-abe3-43e5bc8aa4c6",
+  "tags": [
+   "mammal",
+   "marsupial"
+  ]
+ },
+ "phylopic/orca": {
+  "source": "phylopic",
+  "name": "Orcinus",
+  "author": "Chris Forbes",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/1e65d877-520c-4cf5-afea-3e94f28abafa",
+  "tags": [
+   "mammal",
+   "cetacean",
+   "marine"
+  ]
+ },
+ "phylopic/orchid": {
+  "source": "phylopic",
+  "name": "Orchidaceae",
+  "author": "Leonardo Ancillotto",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/4128df49-da1c-4759-86c2-e4242acecbdf",
+  "tags": [
+   "plant",
+   "monocot"
+  ]
+ },
+ "phylopic/paramecium": {
+  "source": "phylopic",
+  "name": "Paramecium",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/595359bd-6638-4900-8536-82b2ed511a25",
+  "tags": [
+   "protist"
+  ]
+ },
+ "phylopic/penguin": {
+  "source": "phylopic",
+  "name": "Aptenodytes forsteri",
+  "author": "Edwin Price",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/9e11df09-bd24-463a-9020-bdce4111537f",
+  "tags": [
+   "bird"
+  ]
+ },
+ "phylopic/penicillium": {
+  "source": "phylopic",
+  "name": "Penicillium",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/410b4773-dfe7-4c7c-a4d8-75dbb8ec555f",
+  "tags": [
+   "fungus"
+  ]
+ },
+ "phylopic/pigeon": {
+  "source": "phylopic",
+  "name": "Columba livia",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/93124ce1-73c9-4278-bfd4-a29886bc7ca7",
+  "tags": [
+   "bird"
+  ]
+ },
+ "phylopic/placozoan": {
+  "source": "phylopic",
+  "name": "Trichoplax adhaerens",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7db8a203-8b70-496e-9f04-5f65441ebf2c",
+  "tags": [
+   "placozoa"
+  ]
+ },
+ "phylopic/planarian": {
+  "source": "phylopic",
+  "name": "Schmidtea mediterranea",
+  "author": "Markus A. Grohme",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/fb16134d-47c9-42f0-bafe-f63bccf2d58b",
+  "tags": [
+   "flatworm",
+   "regeneration",
+   "model-organism"
+  ]
+ },
+ "phylopic/platypus": {
+  "source": "phylopic",
+  "name": "Ornithorhynchus anatinus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/61932f57-1fd2-49d9-bb86-042d6005581a",
+  "tags": [
+   "mammal",
+   "monotreme"
+  ]
+ },
+ "phylopic/rat": {
+  "source": "phylopic",
+  "name": "Rattus norvegicus",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4",
+  "tags": [
+   "mammal",
+   "model-organism"
+  ]
+ },
+ "phylopic/rhizobium": {
+  "source": "phylopic",
+  "name": "Rhizobium",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/0b2e0b7e-3f98-4787-b224-5013fa83c362",
+  "tags": [
+   "bacterium",
+   "symbiosis"
+  ]
+ },
+ "phylopic/salmon": {
+  "source": "phylopic",
+  "name": "Salmo salar",
+  "author": "Domino Joyce",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f6c6590d-8aa1-4d08-a25f-e6c90727c071",
+  "tags": [
+   "fish"
+  ]
+ },
+ "phylopic/scorpion": {
+  "source": "phylopic",
+  "name": "Scorpiones",
+  "author": "Dean Schnabel",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7742cd64-4c67-443c-942c-fdf1c2681adf",
+  "tags": [
+   "arachnid"
+  ]
+ },
+ "phylopic/sea-urchin": {
+  "source": "phylopic",
+  "name": "Strongylocentrotus purpuratus",
+  "author": "Christoph Schomburg and Kurtis Wothe",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a6125e0d-c627-40e3-9966-5ad288277545",
+  "tags": [
+   "echinoderm",
+   "model-organism",
+   "development"
+  ]
+ },
+ "phylopic/selaginella": {
+  "source": "phylopic",
+  "name": "Selaginella",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a84e7362-a1da-4782-bf8e-640096e70269",
+  "tags": [
+   "plant",
+   "lycophyte"
+  ]
+ },
+ "phylopic/snail": {
+  "source": "phylopic",
+  "name": "Helix pomatia",
+  "author": "Martin R. Smith, from photo by Jürgen Schoner",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/d8f236a7-e36b-4313-9162-8f2dead31a8a",
+  "tags": [
+   "mollusc"
+  ]
+ },
+ "phylopic/snake": {
+  "source": "phylopic",
+  "name": "Serpentes",
+  "author": "Jessica Tingle",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/73bbff9f-ddea-4478-b32b-27ba61327a30",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/soybean": {
+  "source": "phylopic",
+  "name": "Glycine",
+  "author": "Dave Merrills",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/b2fed6ab-ea5d-4670-ad18-3d663aec68e4",
+  "tags": [
+   "plant",
+   "eudicot",
+   "legume"
+  ]
+ },
+ "phylopic/spider": {
+  "source": "phylopic",
+  "name": "Araneae",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/882a9d18-5724-44a9-b439-1b2686339a00",
+  "tags": [
+   "arachnid"
+  ]
+ },
+ "phylopic/sponge": {
+  "source": "phylopic",
+  "name": "Porifera",
+  "author": "Apokryltaros (original drawing), T. Michael Keesey (vectorization)",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/e3dfdfb1-6e2e-4f9b-99bc-7b3e9cb2dab0",
+  "tags": [
+   "sponge"
+  ]
+ },
+ "phylopic/squid": {
+  "source": "phylopic",
+  "name": "Loligo",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/d5d78e19-e0e6-4726-9083-c3008d3e6ff1",
+  "tags": [
+   "mollusc",
+   "cephalopod",
+   "neuro"
+  ]
+ },
+ "phylopic/starfish": {
+  "source": "phylopic",
+  "name": "Asteroidea",
+  "author": "Birgit Lang",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7e27ce06-1f4f-45d8-a359-dcba8fc54b9b",
+  "tags": [
+   "echinoderm"
+  ]
+ },
+ "phylopic/stickleback": {
+  "source": "phylopic",
+  "name": "Gasterosteus aculeatus",
+  "author": "Fidji Berio",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/addc129c-d78f-4250-aba7-eb229f0b57e6",
+  "tags": [
+   "fish",
+   "evolution",
+   "behaviour"
+  ]
+ },
+ "phylopic/streptococcus": {
+  "source": "phylopic",
+  "name": "Streptococcus",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/e5bdf92d-8441-4136-b1a7-44bc79bf82a1",
+  "tags": [
+   "bacterium"
+  ]
+ },
+ "phylopic/tardigrade": {
+  "source": "phylopic",
+  "name": "Tardigrada",
+  "author": "Kenneth W. Cooper",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/a9d22f46-16fd-47c4-85b4-96611a3a4660",
+  "tags": [
+   "invertebrate"
+  ]
+ },
+ "phylopic/tomato": {
+  "source": "phylopic",
+  "name": "Solanum lycopersicum",
+  "author": "Aviad Perry",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/46eca6a3-9e8c-4198-bf6d-c650427a1ad8",
+  "tags": [
+   "plant",
+   "eudicot",
+   "crop"
+  ]
+ },
+ "phylopic/tree": {
+  "source": "phylopic",
+  "name": "Quercus robur",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/36b044cf-4958-4c84-9fae-4634444af874",
+  "tags": [
+   "plant",
+   "tree",
+   "angiosperm"
+  ]
+ },
+ "phylopic/trilobite": {
+  "source": "phylopic",
+  "name": "Trilobita",
+  "author": "Sam Gon III",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/f73e5698-3cbe-4921-86fb-42a070918b41",
+  "tags": [
+   "arthropod",
+   "evolution",
+   "fossil"
+  ]
+ },
+ "phylopic/turtle": {
+  "source": "phylopic",
+  "name": "Testudines",
+  "author": "Dean Schnabel",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/215dda48-68c5-4f1c-893f-6eb00155d5fa",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/tyrannosaurus": {
+  "source": "phylopic",
+  "name": "Tyrannosaurus rex",
+  "author": "Richard Rich",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ccb9b896-20b5-4e0b-8979-001742a884c5",
+  "tags": [
+   "reptile",
+   "dinosaur",
+   "evolution"
+  ]
+ },
+ "phylopic/velvet-worm": {
+  "source": "phylopic",
+  "name": "Onychophora",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f0cb6437-59e1-4df9-be3b-c10e1bbe238d",
+  "tags": [
+   "invertebrate"
+  ]
+ },
+ "phylopic/volvox": {
+  "source": "phylopic",
+  "name": "Volvox",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ab5abba0-21b6-4e25-9fe5-29e09c96f4c7",
+  "tags": [
+   "alga"
+  ]
+ },
+ "phylopic/water-lily": {
+  "source": "phylopic",
+  "name": "Nymphaea",
+  "author": "Dr. Thomas G. Barnes, USFWS",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/57753dfb-6477-4b2d-bfe8-53a50abd7fb6",
+  "tags": [
+   "plant",
+   "angiosperm"
+  ]
+ },
+ "phylopic/wheat": {
+  "source": "phylopic",
+  "name": "Triticum",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/97dba9dc-2e33-4a8c-a961-52e8e7f5e6f7",
+  "tags": [
+   "plant",
+   "monocot",
+   "crop"
+  ]
+ },
+ "phylopic/wolf": {
+  "source": "phylopic",
+  "name": "Canis lupus",
+  "author": "David Orr",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/da5faa63-085f-4523-a542-e71cb386c999",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/xenopus": {
+  "source": "phylopic",
+  "name": "Xenopus laevis",
+  "author": "Sarah Werning",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/cd0f49a1-4adf-448e-859c-b703a73b9481",
+  "tags": [
+   "amphibian",
+   "model-organism"
+  ]
+ },
+ "phylopic/yeast": {
+  "source": "phylopic",
+  "name": "Saccharomyces cerevisiae",
+  "author": "Wayne Decatur",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/347bc4ab-c1e0-4313-9ea1-939c2ad71232",
+  "tags": [
+   "fungus",
+   "model-organism"
+  ]
+ },
+ "phylopic/zebra-finch": {
+  "source": "phylopic",
+  "name": "Taeniopygia guttata",
+  "author": "Andy Wilson",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7bf8ca33-0fef-4985-a4d4-a147bff6e98c",
+  "tags": [
+   "bird",
+   "behaviour",
+   "model-organism"
+  ]
+ },
+ "phylopic/zebrafish": {
+  "source": "phylopic",
+  "name": "Danio rerio",
+  "author": "Ian Quigley",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/5155f7c4-4609-44ed-a5e9-b3ba64b574e3",
+  "tags": [
+   "fish",
+   "model-organism"
+  ]
+ },
+ "servier/6-well-plate": {
+  "source": "bioicons",
+  "name": "6-well-plate",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/6-well-plate.svg",
+  "tags": [
+   "lab",
+   "cell-culture"
+  ]
+ },
+ "servier/96-well-plate": {
+  "source": "bioicons",
+  "name": "multiwell-plate-3d",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/multiwell-plate-3d.svg",
+  "tags": [
+   "lab",
+   "cell-culture"
+  ]
+ },
+ "servier/actin-filament": {
+  "source": "bioicons",
+  "name": "actine-filament",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/actine-filament.svg",
+  "tags": [
+   "cytoskeleton"
+  ]
+ },
+ "servier/actin-myosin": {
+  "source": "bioicons",
+  "name": "actin-myosin",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/actin-myosin.svg",
+  "tags": [
+   "muscle",
+   "molecule",
+   "cytoskeleton"
+  ]
+ },
+ "servier/adenovirus": {
+  "source": "bioicons",
+  "name": "adeno-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/adeno-virus.svg",
+  "tags": [
+   "virus"
+  ]
+ },
+ "servier/adipocyte": {
+  "source": "bioicons",
+  "name": "adipocyte-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/adipocyte-1.svg",
+  "tags": [
+   "cell",
+   "metabolism"
+  ]
+ },
+ "servier/adipose-tissue": {
+  "source": "bioicons",
+  "name": "fat-tissue",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/fat-tissue.svg",
+  "tags": [
+   "tissue",
+   "metabolism"
+  ]
+ },
+ "servier/alveolar-gas-exchange": {
+  "source": "bioicons",
+  "name": "gas-exchange-pulmonary",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/gas-exchange-pulmonary.svg",
+  "tags": [
+   "respiration",
+   "capillary"
+  ]
+ },
+ "servier/angiogenesis": {
+  "source": "bioicons",
+  "name": "angiogenesis",
+  "category": "Oncology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Oncology/Servier/angiogenesis.svg",
+  "tags": [
+   "circulation",
+   "oncology"
+  ]
+ },
+ "servier/antibody-2": {
+  "source": "bioicons",
+  "name": "antibody-3",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/antibody-3.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "servier/aorta": {
+  "source": "bioicons",
+  "name": "aorta",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/aorta.svg",
+  "tags": [
+   "circulation",
+   "vessel"
+  ]
+ },
+ "servier/artery-wall": {
+  "source": "bioicons",
+  "name": "vascular-tunic-artery",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/vascular-tunic-artery.svg",
+  "tags": [
+   "circulation",
+   "vessel",
+   "tissue"
+  ]
+ },
+ "servier/b-cell": {
+  "source": "bioicons",
+  "name": "b-lymphocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/b-lymphocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/bacteriophage": {
+  "source": "bioicons",
+  "name": "phage-2",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/phage-2.svg",
+  "tags": [
+   "virus",
+   "bacterium"
+  ]
+ },
+ "servier/bacterium": {
+  "source": "bioicons",
+  "name": "bacterium",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/bacterium.svg",
+  "tags": [
+   "bacterium",
+   "microbe"
+  ]
+ },
+ "servier/bacterium-interior": {
+  "source": "bioicons",
+  "name": "bacterium-interior",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/bacterium-interior.svg",
+  "tags": [
+   "bacterium",
+   "microbe",
+   "cell"
+  ]
+ },
+ "servier/balance": {
+  "source": "bioicons",
+  "name": "scale",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/scale.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/basophil": {
+  "source": "bioicons",
+  "name": "basophil-granulocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/basophil-granulocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/beaker": {
+  "source": "bioicons",
+  "name": "beaker-empty",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/beaker-empty.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/beaker-filled": {
+  "source": "bioicons",
+  "name": "beaker-orange",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/beaker-orange.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/bladder": {
+  "source": "bioicons",
+  "name": "bladder",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/bladder.svg",
+  "tags": [
+   "organ",
+   "excretion"
+  ]
+ },
+ "servier/brain": {
+  "source": "bioicons",
+  "name": "brain-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/brain-1.svg",
+  "tags": [
+   "organ",
+   "neuro"
+  ]
+ },
+ "servier/brain-side": {
+  "source": "bioicons",
+  "name": "brain-2",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/brain-2.svg",
+  "tags": [
+   "organ",
+   "neuro"
+  ]
+ },
+ "servier/bunsen-burner": {
+  "source": "bioicons",
+  "name": "bunsen-burner",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/bunsen-burner.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "servier/cancer-cell": {
+  "source": "bioicons",
+  "name": "cancerous-cell-1",
+  "category": "Oncology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Oncology/Servier/cancerous-cell-1.svg",
+  "tags": [
+   "cell",
+   "disease",
+   "oncology"
+  ]
+ },
+ "servier/capillary": {
+  "source": "bioicons",
+  "name": "capillary",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/capillary.svg",
+  "tags": [
+   "circulation",
+   "vessel"
+  ]
+ },
+ "servier/cardiomyocyte": {
+  "source": "bioicons",
+  "name": "cardiac-muscle-cell",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/cardiac-muscle-cell.svg",
+  "tags": [
+   "cell",
+   "muscle",
+   "heart"
+  ]
+ },
+ "servier/carrier-protein": {
+  "source": "bioicons",
+  "name": "carrier-protein-membrane-1",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/carrier-protein-membrane-1.svg",
+  "tags": [
+   "transport",
+   "membrane"
+  ]
+ },
+ "servier/cat": {
+  "source": "bioicons",
+  "name": "cat",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/cat.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/cell": {
+  "source": "bioicons",
+  "name": "normal-cell-1",
+  "category": "Oncology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Oncology/Servier/normal-cell-1.svg",
+  "tags": [
+   "cell"
+  ]
+ },
+ "servier/cell-scraper": {
+  "source": "bioicons",
+  "name": "cell-scraper",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/cell-scraper.svg",
+  "tags": [
+   "lab",
+   "cell-culture"
+  ]
+ },
+ "servier/centrifuge": {
+  "source": "bioicons",
+  "name": "centrifuge",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/centrifuge.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/centriole": {
+  "source": "bioicons",
+  "name": "centriole",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/centriole.svg",
+  "tags": [
+   "organelle",
+   "cytoskeleton",
+   "cell-cycle"
+  ]
+ },
+ "servier/chief-cell": {
+  "source": "bioicons",
+  "name": "main-cell-stomach-wall",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/main-cell-stomach-wall.svg",
+  "tags": [
+   "cell",
+   "digestion"
+  ]
+ },
+ "servier/chromosome": {
+  "source": "bioicons",
+  "name": "chromosome-blue",
+  "category": "Genetics",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Genetics/Servier/chromosome-blue.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "genetics"
+  ]
+ },
+ "servier/circulatory-system": {
+  "source": "bioicons",
+  "name": "venous-circulation-body",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/venous-circulation-body.svg",
+  "tags": [
+   "circulation",
+   "body"
+  ]
+ },
+ "servier/collagen-fibre": {
+  "source": "bioicons",
+  "name": "collagen-3d",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/collagen-3d.svg",
+  "tags": [
+   "molecule",
+   "tissue",
+   "extracellular-matrix"
+  ]
+ },
+ "servier/colon": {
+  "source": "bioicons",
+  "name": "colon",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/colon.svg",
+  "tags": [
+   "organ",
+   "digestion"
+  ]
+ },
+ "servier/columnar-cell": {
+  "source": "bioicons",
+  "name": "cell-column-1",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/cell-column-1.svg",
+  "tags": [
+   "cell",
+   "epithelium"
+  ]
+ },
+ "servier/cone-cell": {
+  "source": "bioicons",
+  "name": "retina-cone-cell",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/retina-cone-cell.svg",
+  "tags": [
+   "cell",
+   "sense",
+   "vision"
+  ]
+ },
+ "servier/cow": {
+  "source": "bioicons",
+  "name": "ox",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/ox.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/cuboidal-cell": {
+  "source": "bioicons",
+  "name": "cell-cuboid-1",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/cell-cuboid-1.svg",
+  "tags": [
+   "cell",
+   "epithelium"
+  ]
+ },
+ "servier/culture-flask": {
+  "source": "bioicons",
+  "name": "culture-flask-filled-lid",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/culture-flask-filled-lid.svg",
+  "tags": [
+   "lab",
+   "cell-culture"
+  ]
+ },
+ "servier/culture-tube": {
+  "source": "bioicons",
+  "name": "tube-filled-greencap",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/tube-filled-greencap.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/cuvette": {
+  "source": "bioicons",
+  "name": "cuvette-filled",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/cuvette-filled.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/dendritic-cell": {
+  "source": "bioicons",
+  "name": "dendritic-cell-1",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/dendritic-cell-1.svg",
+  "tags": [
+   "cell",
+   "immune"
+  ]
+ },
+ "servier/desmosome": {
+  "source": "bioicons",
+  "name": "spot-desmosome",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/spot-desmosome.svg",
+  "tags": [
+   "cell",
+   "junction"
+  ]
+ },
+ "servier/digestive-system": {
+  "source": "bioicons",
+  "name": "digestive-system",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/digestive-system.svg",
+  "tags": [
+   "organ",
+   "digestion"
+  ]
+ },
+ "servier/dna": {
+  "source": "bioicons",
+  "name": "dna-nucleotides",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/dna-nucleotides.svg",
+  "tags": [
+   "molecule",
+   "dna"
+  ]
+ },
+ "servier/dna-replication-fork": {
+  "source": "bioicons",
+  "name": "dna-nucleotides-forked",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/dna-nucleotides-forked.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "replication"
+  ]
+ },
+ "servier/dna-ribbon": {
+  "source": "bioicons",
+  "name": "dna-double-stranded-ribbon",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/dna-double-stranded-ribbon.svg",
+  "tags": [
+   "molecule",
+   "dna"
+  ]
+ },
+ "servier/dog": {
+  "source": "bioicons",
+  "name": "dog",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/dog.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/drosophila": {
+  "source": "bioicons",
+  "name": "fruitfly_drosophila-redeyes",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/fruitfly_drosophila-redeyes.svg",
+  "tags": [
+   "insect",
+   "model-organism"
+  ]
+ },
+ "servier/ear": {
+  "source": "bioicons",
+  "name": "ear",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/ear.svg",
+  "tags": [
+   "organ",
+   "sense",
+   "hearing"
+  ]
+ },
+ "servier/electrophoresis-chamber": {
+  "source": "bioicons",
+  "name": "electrophoresis-chamber",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/electrophoresis-chamber.svg",
+  "tags": [
+   "lab",
+   "dna"
+  ]
+ },
+ "servier/empty-cell": {
+  "source": "bioicons",
+  "name": "emptycell-1",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/emptycell-1.svg",
+  "tags": [
+   "cell"
+  ]
+ },
+ "servier/empty-cell-vacuole": {
+  "source": "bioicons",
+  "name": "emptycell-vacuole-orange-1",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/emptycell-vacuole-orange-1.svg",
+  "tags": [
+   "cell"
+  ]
+ },
+ "servier/endocytosis": {
+  "source": "bioicons",
+  "name": "endocytosis-2d",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/endocytosis-2d.svg",
+  "tags": [
+   "membrane",
+   "transport"
+  ]
+ },
+ "servier/enzyme": {
+  "source": "bioicons",
+  "name": "enzyme-blue",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/enzyme-blue.svg",
+  "tags": [
+   "molecule",
+   "enzyme"
+  ]
+ },
+ "servier/eosinophil": {
+  "source": "bioicons",
+  "name": "eosinophil-granulocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/eosinophil-granulocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/epithelium-columnar": {
+  "source": "bioicons",
+  "name": "epithelium-cell-column",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithelium-cell-column.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/epithelium-cuboidal": {
+  "source": "bioicons",
+  "name": "epithelium-cell-cuboid",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithelium-cell-cuboid.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/epithelium-goblet": {
+  "source": "bioicons",
+  "name": "epithelium-gobelet-cell",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithelium-gobelet-cell.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/epithelium-pseudostratified": {
+  "source": "bioicons",
+  "name": "epithel-pseudostratified-columnar",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithel-pseudostratified-columnar.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/epithelium-squamous": {
+  "source": "bioicons",
+  "name": "epithelium-squamos",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithelium-squamos.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/epithelium-stratified-squamous": {
+  "source": "bioicons",
+  "name": "epithel-squamos-stratiedifed",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/epithel-squamos-stratiedifed.svg",
+  "tags": [
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/er": {
+  "source": "bioicons",
+  "name": "endoplasmatic-reticulum-medium",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/endoplasmatic-reticulum-medium.svg",
+  "tags": [
+   "organelle",
+   "secretion"
+  ]
+ },
+ "servier/erlenmeyer-flask": {
+  "source": "bioicons",
+  "name": "erlenmeyer-glass",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/erlenmeyer-glass.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/erlenmeyer-flask-filled": {
+  "source": "bioicons",
+  "name": "erlenmeyer-blue",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/erlenmeyer-blue.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/exocytosis": {
+  "source": "bioicons",
+  "name": "exocytosis-2d",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/exocytosis-2d.svg",
+  "tags": [
+   "membrane",
+   "transport",
+   "secretion"
+  ]
+ },
+ "servier/eye-section": {
+  "source": "bioicons",
+  "name": "eye-crosssection",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/eye-crosssection.svg",
+  "tags": [
+   "organ",
+   "sense",
+   "vision"
+  ]
+ },
+ "servier/falcon-tube": {
+  "source": "bioicons",
+  "name": "falcon-15ml-pink",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/falcon-15ml-pink.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/fibroblast": {
+  "source": "bioicons",
+  "name": "fibroblast-1",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/fibroblast-1.svg",
+  "tags": [
+   "cell",
+   "tissue"
+  ]
+ },
+ "servier/fibrocyte": {
+  "source": "bioicons",
+  "name": "fibrocyte-1",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/fibrocyte-1.svg",
+  "tags": [
+   "cell",
+   "tissue"
+  ]
+ },
+ "servier/fish": {
+  "source": "bioicons",
+  "name": "fish-1",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/fish-1.svg",
+  "tags": [
+   "fish",
+   "vertebrate"
+  ]
+ },
+ "servier/foam-cell": {
+  "source": "bioicons",
+  "name": "foam-cell-1",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/foam-cell-1.svg",
+  "tags": [
+   "cell",
+   "immune",
+   "disease"
+  ]
+ },
+ "servier/gap-junction": {
+  "source": "bioicons",
+  "name": "gap-junction",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/gap-junction.svg",
+  "tags": [
+   "cell",
+   "junction"
+  ]
+ },
+ "servier/gated-channel": {
+  "source": "bioicons",
+  "name": "3state-channel-membrane-1",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/3state-channel-membrane-1.svg",
+  "tags": [
+   "channel",
+   "membrane"
+  ]
+ },
+ "servier/gel-electrophoresis": {
+  "source": "bioicons",
+  "name": "gel-electrophoresis",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/gel-electrophoresis.svg",
+  "tags": [
+   "lab",
+   "dna"
+  ]
+ },
+ "servier/giardia": {
+  "source": "bioicons",
+  "name": "giardia_intestinalis-trophozoite",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/giardia_intestinalis-trophozoite.svg",
+  "tags": [
+   "protist",
+   "parasite"
+  ]
+ },
+ "servier/glass-slide": {
+  "source": "bioicons",
+  "name": "glass-slide-top",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/glass-slide-top.svg",
+  "tags": [
+   "lab",
+   "microscopy"
+  ]
+ },
+ "servier/goblet-cell": {
+  "source": "bioicons",
+  "name": "gobelet-cell-1",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/gobelet-cell-1.svg",
+  "tags": [
+   "cell",
+   "tissue",
+   "epithelium"
+  ]
+ },
+ "servier/golgi": {
+  "source": "bioicons",
+  "name": "golgi-2d-1",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/golgi-2d-1.svg",
+  "tags": [
+   "organelle",
+   "secretion"
+  ]
+ },
+ "servier/gpcr": {
+  "source": "bioicons",
+  "name": "7helix-receptor-membrane",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/7helix-receptor-membrane.svg",
+  "tags": [
+   "receptor",
+   "membrane",
+   "signalling"
+  ]
+ },
+ "servier/guinea-pig": {
+  "source": "bioicons",
+  "name": "guineapig-orange",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/guineapig-orange.svg",
+  "tags": [
+   "mammal",
+   "lab"
+  ]
+ },
+ "servier/hand": {
+  "source": "bioicons",
+  "name": "hand",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/hand.svg",
+  "tags": [
+   "body"
+  ]
+ },
+ "servier/heart": {
+  "source": "bioicons",
+  "name": "heart-front",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/heart-front.svg",
+  "tags": [
+   "organ",
+   "circulation",
+   "heart"
+  ]
+ },
+ "servier/heart-conduction": {
+  "source": "bioicons",
+  "name": "heart-conduction-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/heart-conduction-1.svg",
+  "tags": [
+   "organ",
+   "circulation",
+   "heart",
+   "electrophysiology"
+  ]
+ },
+ "servier/heart-interior": {
+  "source": "bioicons",
+  "name": "heart-interior-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/heart-interior-1.svg",
+  "tags": [
+   "organ",
+   "circulation",
+   "heart"
+  ]
+ },
+ "servier/hematopoietic-stem-cell": {
+  "source": "bioicons",
+  "name": "hematopoetic-stem-cell",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/hematopoetic-stem-cell.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "stem-cell"
+  ]
+ },
+ "servier/hepatitis-virus": {
+  "source": "bioicons",
+  "name": "hepatits-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/hepatits-virus.svg",
+  "tags": [
+   "virus"
+  ]
+ },
+ "servier/herpesvirus": {
+  "source": "bioicons",
+  "name": "herpes-simplex-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/herpes-simplex-virus.svg",
+  "tags": [
+   "virus"
+  ]
+ },
+ "servier/hiv": {
+  "source": "bioicons",
+  "name": "hiv-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/hiv-virus.svg",
+  "tags": [
+   "virus",
+   "immune"
+  ]
+ },
+ "servier/horse": {
+  "source": "bioicons",
+  "name": "horse",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/horse.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/iga": {
+  "source": "bioicons",
+  "name": "igA-immunoglobulin",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/igA-immunoglobulin.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "servier/igm": {
+  "source": "bioicons",
+  "name": "igM-immunoglobulin",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/igM-immunoglobulin.svg",
+  "tags": [
+   "molecule",
+   "immune"
+  ]
+ },
+ "servier/incubator": {
+  "source": "bioicons",
+  "name": "incubator",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/incubator.svg",
+  "tags": [
+   "lab",
+   "cell-culture"
+  ]
+ },
+ "servier/influenza-virus": {
+  "source": "bioicons",
+  "name": "influenza-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/influenza-virus.svg",
+  "tags": [
+   "virus"
+  ]
+ },
+ "servier/intermediate-filament": {
+  "source": "bioicons",
+  "name": "intermediate-filament",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/intermediate-filament.svg",
+  "tags": [
+   "cytoskeleton"
+  ]
+ },
+ "servier/intestine": {
+  "source": "bioicons",
+  "name": "intestine",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/intestine.svg",
+  "tags": [
+   "organ",
+   "digestion"
+  ]
+ },
+ "servier/ion-channel": {
+  "source": "bioicons",
+  "name": "channel-membrane-blue",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/channel-membrane-blue.svg",
+  "tags": [
+   "channel",
+   "membrane"
+  ]
+ },
+ "servier/keratinocyte": {
+  "source": "bioicons",
+  "name": "keratinocyte-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/keratinocyte-1.svg",
+  "tags": [
+   "cell",
+   "skin"
+  ]
+ },
+ "servier/kidney": {
+  "source": "bioicons",
+  "name": "kidney-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/kidney-1.svg",
+  "tags": [
+   "organ",
+   "excretion"
+  ]
+ },
+ "servier/kidney-section": {
+  "source": "bioicons",
+  "name": "kidney-2",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/kidney-2.svg",
+  "tags": [
+   "organ",
+   "excretion"
+  ]
+ },
+ "servier/langerhans-cell": {
+  "source": "bioicons",
+  "name": "langerhans-cell",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/langerhans-cell.svg",
+  "tags": [
+   "cell",
+   "skin",
+   "immune"
+  ]
+ },
+ "servier/larynx": {
+  "source": "bioicons",
+  "name": "larynx",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/larynx.svg",
+  "tags": [
+   "organ",
+   "respiration"
+  ]
+ },
+ "servier/ldl": {
+  "source": "bioicons",
+  "name": "ldl-1",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/ldl-1.svg",
+  "tags": [
+   "molecule",
+   "lipid",
+   "blood"
+  ]
+ },
+ "servier/liver": {
+  "source": "bioicons",
+  "name": "liver",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/liver.svg",
+  "tags": [
+   "organ",
+   "digestion",
+   "metabolism"
+  ]
+ },
+ "servier/liver-fluke": {
+  "source": "bioicons",
+  "name": "liver-fluke-adult",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/liver-fluke-adult.svg",
+  "tags": [
+   "parasite",
+   "flatworm"
+  ]
+ },
+ "servier/lungs": {
+  "source": "bioicons",
+  "name": "healthy-lung",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/healthy-lung.svg",
+  "tags": [
+   "organ",
+   "respiration"
+  ]
+ },
+ "servier/macrophage": {
+  "source": "bioicons",
+  "name": "macrophage",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/macrophage.svg",
+  "tags": [
+   "cell",
+   "immune"
+  ]
+ },
+ "servier/magnetic-stirrer": {
+  "source": "bioicons",
+  "name": "magnet-stirringplate",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/magnet-stirringplate.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/maize-ear": {
+  "source": "bioicons",
+  "name": "corn",
+  "category": "General_items",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/General_items/Servier/corn.svg",
+  "tags": [
+   "plant",
+   "crop"
+  ]
+ },
+ "servier/measuring-cylinder": {
+  "source": "bioicons",
+  "name": "measuringcylinder-empty",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/measuringcylinder-empty.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/megakaryocyte": {
+  "source": "bioicons",
+  "name": "megakaryocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/megakaryocyte.svg",
+  "tags": [
+   "cell",
+   "blood"
+  ]
+ },
+ "servier/meiosis": {
+  "source": "bioicons",
+  "name": "meiosis",
+  "category": "Genetics",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Genetics/Servier/meiosis.svg",
+  "tags": [
+   "cell-cycle",
+   "genetics",
+   "reproduction"
+  ]
+ },
+ "servier/melanocyte": {
+  "source": "bioicons",
+  "name": "melanocyte",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/melanocyte.svg",
+  "tags": [
+   "cell",
+   "skin"
+  ]
+ },
+ "servier/membrane": {
+  "source": "bioicons",
+  "name": "membrane-2d-yelloworange",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/membrane-2d-yelloworange.svg",
+  "tags": [
+   "membrane"
+  ]
+ },
+ "servier/micropipette": {
+  "source": "bioicons",
+  "name": "micropipette",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/micropipette.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/microscope": {
+  "source": "bioicons",
+  "name": "microscope",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/microscope.svg",
+  "tags": [
+   "lab",
+   "microscopy"
+  ]
+ },
+ "servier/microtube": {
+  "source": "bioicons",
+  "name": "microtube-closed-blue",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/microtube-closed-blue.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/microtubule": {
+  "source": "bioicons",
+  "name": "microtubule",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/microtubule.svg",
+  "tags": [
+   "cytoskeleton"
+  ]
+ },
+ "servier/mitochondrion": {
+  "source": "bioicons",
+  "name": "mitochondrium-3",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/mitochondrium-3.svg",
+  "tags": [
+   "organelle"
+  ]
+ },
+ "servier/monkey": {
+  "source": "bioicons",
+  "name": "monkey",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/monkey.svg",
+  "tags": [
+   "mammal",
+   "primate",
+   "lab"
+  ]
+ },
+ "servier/monocyte": {
+  "source": "bioicons",
+  "name": "monocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/monocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/mosquito": {
+  "source": "bioicons",
+  "name": "anopheles",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/anopheles.svg",
+  "tags": [
+   "insect",
+   "parasite-vector"
+  ]
+ },
+ "servier/mouse": {
+  "source": "bioicons",
+  "name": "mouse-gray",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/mouse-gray.svg",
+  "tags": [
+   "model-organism",
+   "mammal",
+   "lab"
+  ]
+ },
+ "servier/mouse-embryo": {
+  "source": "bioicons",
+  "name": "mouse-embryolate",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/mouse-embryolate.svg",
+  "tags": [
+   "development",
+   "mammal",
+   "embryo"
+  ]
+ },
+ "servier/multichannel-pipette": {
+  "source": "bioicons",
+  "name": "micropipette-multi",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/micropipette-multi.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/muscle": {
+  "source": "bioicons",
+  "name": "muscle-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/muscle-1.svg",
+  "tags": [
+   "organ",
+   "muscle"
+  ]
+ },
+ "servier/muscle-fibre": {
+  "source": "bioicons",
+  "name": "muscle-fiber",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/muscle-fiber.svg",
+  "tags": [
+   "cell",
+   "muscle"
+  ]
+ },
+ "servier/musculature": {
+  "source": "bioicons",
+  "name": "musculature-front",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/musculature-front.svg",
+  "tags": [
+   "organ",
+   "muscle",
+   "body"
+  ]
+ },
+ "servier/mushroom": {
+  "source": "bioicons",
+  "name": "mushroom",
+  "category": "General_items",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/General_items/Servier/mushroom.svg",
+  "tags": [
+   "fungus"
+  ]
+ },
+ "servier/myofibril": {
+  "source": "bioicons",
+  "name": "muscle-myofibril",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/muscle-myofibril.svg",
+  "tags": [
+   "muscle",
+   "cytoskeleton"
+  ]
+ },
+ "servier/na-k-pump": {
+  "source": "bioicons",
+  "name": "sodium-potassium-pump-membrane-ions",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/sodium-potassium-pump-membrane-ions.svg",
+  "tags": [
+   "transport",
+   "membrane",
+   "ion"
+  ]
+ },
+ "servier/nasal-cavity": {
+  "source": "bioicons",
+  "name": "nasal-cavity",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/nasal-cavity.svg",
+  "tags": [
+   "organ",
+   "respiration",
+   "sense"
+  ]
+ },
+ "servier/neutrophil": {
+  "source": "bioicons",
+  "name": "neutrophil-granulocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/neutrophil-granulocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/nk-cell": {
+  "source": "bioicons",
+  "name": "nk-cell",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/nk-cell.svg",
+  "tags": [
+   "cell",
+   "immune"
+  ]
+ },
+ "servier/nucleus": {
+  "source": "bioicons",
+  "name": "nucleus-full-3d",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/nucleus-full-3d.svg",
+  "tags": [
+   "organelle",
+   "nucleus"
+  ]
+ },
+ "servier/olfactory-bulb": {
+  "source": "bioicons",
+  "name": "olfactory-bulb",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/olfactory-bulb.svg",
+  "tags": [
+   "organ",
+   "neuro",
+   "sense"
+  ]
+ },
+ "servier/organ-of-corti": {
+  "source": "bioicons",
+  "name": "corti-organ",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/corti-organ.svg",
+  "tags": [
+   "organ",
+   "sense",
+   "hearing"
+  ]
+ },
+ "servier/pancreas": {
+  "source": "bioicons",
+  "name": "pancreas",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/pancreas.svg",
+  "tags": [
+   "organ",
+   "digestion",
+   "endocrine"
+  ]
+ },
+ "servier/pancreatic-islet": {
+  "source": "bioicons",
+  "name": "langerhans-islet-pancreas",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/langerhans-islet-pancreas.svg",
+  "tags": [
+   "endocrine",
+   "tissue"
+  ]
+ },
+ "servier/paper-chromatography": {
+  "source": "bioicons",
+  "name": "paper-chromatography-run",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/paper-chromatography-run.svg",
+  "tags": [
+   "lab",
+   "chemistry"
+  ]
+ },
+ "servier/petri-dish": {
+  "source": "bioicons",
+  "name": "petri-dish-blue",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/petri-dish-blue.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "servier/petri-dish-colonies": {
+  "source": "bioicons",
+  "name": "petri-dish-with-colony-lightyellow",
+  "category": "Microbiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Microbiology/Servier/petri-dish-with-colony-lightyellow.svg",
+  "tags": [
+   "lab",
+   "microbe"
+  ]
+ },
+ "servier/phagocytosis": {
+  "source": "bioicons",
+  "name": "phagocytosis-2d",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/phagocytosis-2d.svg",
+  "tags": [
+   "membrane",
+   "immune"
+  ]
+ },
+ "servier/phospholipid": {
+  "source": "bioicons",
+  "name": "lipid-orangeyellow",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/lipid-orangeyellow.svg",
+  "tags": [
+   "molecule",
+   "lipid",
+   "membrane"
+  ]
+ },
+ "servier/pig": {
+  "source": "bioicons",
+  "name": "pig-pink",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/pig-pink.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/pipette-plastic": {
+  "source": "bioicons",
+  "name": "pipette-plastic",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/pipette-plastic.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/plasmid": {
+  "source": "bioicons",
+  "name": "plasmid",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/plasmid.svg",
+  "tags": [
+   "molecule",
+   "dna",
+   "bacterium",
+   "lab"
+  ]
+ },
+ "servier/plasmodium-gametocyte": {
+  "source": "bioicons",
+  "name": "plasmodium-female",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/plasmodium-female.svg",
+  "tags": [
+   "protist",
+   "parasite"
+  ]
+ },
+ "servier/platelet": {
+  "source": "bioicons",
+  "name": "platetelet-1",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/platetelet-1.svg",
+  "tags": [
+   "cell",
+   "blood"
+  ]
+ },
+ "servier/pluripotent-stem-cell": {
+  "source": "bioicons",
+  "name": "pluripotent-stem-cell",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/pluripotent-stem-cell.svg",
+  "tags": [
+   "cell",
+   "stem-cell",
+   "development"
+  ]
+ },
+ "servier/potato": {
+  "source": "bioicons",
+  "name": "potato",
+  "category": "Plants_Algae",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Plants_Algae/Servier/potato.svg",
+  "tags": [
+   "plant",
+   "tuber"
+  ]
+ },
+ "servier/rabbit": {
+  "source": "bioicons",
+  "name": "rabbit-brown",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/rabbit-brown.svg",
+  "tags": [
+   "mammal",
+   "lab"
+  ]
+ },
+ "servier/rat": {
+  "source": "bioicons",
+  "name": "rat-white",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/rat-white.svg",
+  "tags": [
+   "model-organism",
+   "mammal",
+   "lab"
+  ]
+ },
+ "servier/receptor-ligand": {
+  "source": "bioicons",
+  "name": "receptor-membrane-ligand",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/receptor-membrane-ligand.svg",
+  "tags": [
+   "receptor",
+   "membrane",
+   "signalling"
+  ]
+ },
+ "servier/red-blood-cell": {
+  "source": "bioicons",
+  "name": "erythrocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/erythrocyte.svg",
+  "tags": [
+   "cell",
+   "blood"
+  ]
+ },
+ "servier/rna": {
+  "source": "bioicons",
+  "name": "rna",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/rna.svg",
+  "tags": [
+   "molecule",
+   "rna"
+  ]
+ },
+ "servier/rod-cell": {
+  "source": "bioicons",
+  "name": "retina-rod-cell",
+  "category": "Human_physiology",
+  "author": "ModifiedFrom Servier",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/ModifiedFrom_Servier/retina-rod-cell.svg",
+  "tags": [
+   "cell",
+   "sense",
+   "vision"
+  ]
+ },
+ "servier/rough-er": {
+  "source": "bioicons",
+  "name": "endoplasmatic-reticulum-rough-3d",
+  "category": "Intracellular_components",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Intracellular_components/Servier/endoplasmatic-reticulum-rough-3d.svg",
+  "tags": [
+   "organelle",
+   "secretion"
+  ]
+ },
+ "servier/round-flask": {
+  "source": "bioicons",
+  "name": "flask-empty",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/flask-empty.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/roundworm": {
+  "source": "bioicons",
+  "name": "ascaris-lumbricoides-female-adult",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/ascaris-lumbricoides-female-adult.svg",
+  "tags": [
+   "parasite",
+   "nematode"
+  ]
+ },
+ "servier/separating-funnel": {
+  "source": "bioicons",
+  "name": "separating-funnel",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/separating-funnel.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/shaker": {
+  "source": "bioicons",
+  "name": "agitator",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/agitator.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/sheep": {
+  "source": "bioicons",
+  "name": "sheep",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/sheep.svg",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "servier/sickle-cell": {
+  "source": "bioicons",
+  "name": "falciform-erythrocytes",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/falciform-erythrocytes.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "genetics",
+   "disease"
+  ]
+ },
+ "servier/skin": {
+  "source": "bioicons",
+  "name": "skin",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/skin.svg",
+  "tags": [
+   "organ",
+   "tissue",
+   "skin"
+  ]
+ },
+ "servier/small-intestine": {
+  "source": "bioicons",
+  "name": "small-intestine",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/small-intestine.svg",
+  "tags": [
+   "organ",
+   "digestion"
+  ]
+ },
+ "servier/smooth-muscle-cell": {
+  "source": "bioicons",
+  "name": "smooth-muscle-fiber",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/smooth-muscle-fiber.svg",
+  "tags": [
+   "cell",
+   "muscle"
+  ]
+ },
+ "servier/snail": {
+  "source": "bioicons",
+  "name": "snail",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/snail.svg",
+  "tags": [
+   "mollusc",
+   "invertebrate"
+  ]
+ },
+ "servier/spectrophotometer": {
+  "source": "bioicons",
+  "name": "spectrophotometer",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/spectrophotometer.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/spleen": {
+  "source": "bioicons",
+  "name": "spleen-1",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/spleen-1.svg",
+  "tags": [
+   "organ",
+   "immune"
+  ]
+ },
+ "servier/squamous-cell": {
+  "source": "bioicons",
+  "name": "cell-squamos",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/cell-squamos.svg",
+  "tags": [
+   "cell",
+   "epithelium"
+  ]
+ },
+ "servier/stomach": {
+  "source": "bioicons",
+  "name": "stomach",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/stomach.svg",
+  "tags": [
+   "organ",
+   "digestion"
+  ]
+ },
+ "servier/syringe": {
+  "source": "bioicons",
+  "name": "syringe",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/syringe.svg",
+  "tags": [
+   "lab",
+   "medicine"
+  ]
+ },
+ "servier/t-cell": {
+  "source": "bioicons",
+  "name": "t-lymphocyte",
+  "category": "Blood_Immunology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Blood_Immunology/Servier/t-lymphocyte.svg",
+  "tags": [
+   "cell",
+   "blood",
+   "immune"
+  ]
+ },
+ "servier/tapeworm": {
+  "source": "bioicons",
+  "name": "taenia-t_solium",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/taenia-t_solium.svg",
+  "tags": [
+   "parasite",
+   "flatworm"
+  ]
+ },
+ "servier/test-tube": {
+  "source": "bioicons",
+  "name": "testtube-glass",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/testtube-glass.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/test-tube-filled": {
+  "source": "bioicons",
+  "name": "testtube-pink",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/testtube-pink.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/tight-junction": {
+  "source": "bioicons",
+  "name": "tight-junction",
+  "category": "Tissues",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Tissues/Servier/tight-junction.svg",
+  "tags": [
+   "cell",
+   "junction"
+  ]
+ },
+ "servier/tobacco-mosaic-virus": {
+  "source": "bioicons",
+  "name": "tobacco-mosaic-virus",
+  "category": "Viruses",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Viruses/Servier/tobacco-mosaic-virus.svg",
+  "tags": [
+   "virus",
+   "plant"
+  ]
+ },
+ "servier/trachea-bronchi": {
+  "source": "bioicons",
+  "name": "trachea-bronchi",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/trachea-bronchi.svg",
+  "tags": [
+   "organ",
+   "respiration"
+  ]
+ },
+ "servier/transcription": {
+  "source": "bioicons",
+  "name": "transkription",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/transkription.svg",
+  "tags": [
+   "transcription",
+   "dna",
+   "rna"
+  ]
+ },
+ "servier/translation": {
+  "source": "bioicons",
+  "name": "translation",
+  "category": "Nucleic_acids",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Nucleic_acids/Servier/translation.svg",
+  "tags": [
+   "translation",
+   "rna"
+  ]
+ },
+ "servier/transmembrane-receptor": {
+  "source": "bioicons",
+  "name": "transmembrane-receptor-ligand",
+  "category": "Receptors_channels",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Receptors_channels/Servier/transmembrane-receptor-ligand.svg",
+  "tags": [
+   "receptor",
+   "membrane",
+   "signalling"
+  ]
+ },
+ "servier/trypanosome": {
+  "source": "bioicons",
+  "name": "trypanosoma",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/trypanosoma.svg",
+  "tags": [
+   "protist",
+   "parasite"
+  ]
+ },
+ "servier/tumor": {
+  "source": "bioicons",
+  "name": "tumor",
+  "category": "Oncology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Oncology/Servier/tumor.svg",
+  "tags": [
+   "disease",
+   "oncology"
+  ]
+ },
+ "servier/tweezers": {
+  "source": "bioicons",
+  "name": "tweezer",
+  "category": "Chemistry",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Chemistry/Servier/tweezer.svg",
+  "tags": [
+   "lab"
+  ]
+ },
+ "servier/vein": {
+  "source": "bioicons",
+  "name": "vein",
+  "category": "Human_physiology",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Human_physiology/Servier/vein.svg",
+  "tags": [
+   "circulation",
+   "vessel"
+  ]
+ },
+ "servier/vesicle": {
+  "source": "bioicons",
+  "name": "vacuole-round",
+  "category": "Cell_membrane",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Cell_membrane/Servier/vacuole-round.svg",
+  "tags": [
+   "organelle",
+   "transport"
+  ]
+ },
+ "servier/water-bath": {
+  "source": "bioicons",
+  "name": "bath_filled",
+  "category": "Lab_apparatus",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/bath_filled.svg",
+  "tags": [
+   "lab"
+  ]
+ }
+}

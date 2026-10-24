@@ -82,6 +82,11 @@ export function lintRCompanion(file: string, source: string, diag: Diagnostics):
 
 export function lintPlotScript(file: string, source: string, diag: Diagnostics): void {
   const usesWikichem = /\bwikichem\b/.test(source);
+  if (/\bwikibio\b/.test(source)) {
+    for (const id of iconIds(source)) {
+      if (!fs.existsSync(iconFile(id))) diag.error(file, `icon "${id}" is not in the library; add it with scripts/icons.py (BIO_FIGURES.md §5)`);
+    }
+  }
   source.split('\n').forEach((line, i) => {
     const code = line.replace(/#.*$/, '');
     if (CJK_RE.test(line)) {
@@ -90,6 +95,9 @@ export function lintPlotScript(file: string, source: string, diag: Diagnostics):
     if (/\bsavefig\s*\(/.test(code)) diag.error(file, 'do not call savefig(); every open figure is saved automatically', i + 1);
     if (/\bplt\.show\s*\(/.test(code)) diag.error(file, 'do not call plt.show(); leave figures open instead', i + 1);
     if (/\bmatplotlib\.use\s*\(/.test(code)) diag.error(file, 'do not call matplotlib.use(); the renderer selects the backend', i + 1);
+    if (/\bwikibio\b/.test(source) && !iconIds(source).length && /\bicon\(\s*[A-Za-z_]\w*\s*,\s*(?!["'])[A-Za-z_]/.test(code)) {
+      diag.warn(file, 'pass icon ids to icon() as string literals (the build reads them for caching and attribution)', i + 1);
+    }
     if (usesWikichem && /\bwikichem\._|\bPlaced\b|\.(items|points)\b(?!\s*\()/.test(code)) {
       diag.warn(file, 'use only the public wikichem API (coords=, like=, s.partial, …); internals change without notice', i + 1);
     }
@@ -116,21 +124,64 @@ function checkPython(python: string): string | null {
 function helperFiles(helper: string): Buffer[] {
   if (!fs.statSync(helper, { throwIfNoEntry: false })?.isDirectory()) return fs.existsSync(helper) ? [fs.readFileSync(helper)] : [];
   return (fs.readdirSync(helper, { recursive: true }) as string[])
-    .filter((f) => f.endsWith('.py'))
+    // gallery/ holds sample figures, not library code: editing them must not re-render every plot
+    .filter((f) => f.endsWith('.py') && !f.split(path.sep).some((part) => part === 'gallery' || part === '__pycache__'))
     .sort()
     .map((f) => fs.readFileSync(path.join(helper, f)));
 }
 
-/** Icon ids a plot script draws: string literals passed to `icon(...)` (wikibio requires literals for this). */
+/**
+ * Icon ids a plot script uses: every string literal of the form "<source>/<name>" whose source is a
+ * folder of the icon library (servier/heart, phylopic/mouse…), whether passed to icon() directly or
+ * listed in a dict for a helper such as phylo.tree. wikibio requires literals for this.
+ */
 export function iconIds(source: string): string[] {
+  const sources = iconSources();
   const ids = new Set<string>();
-  for (const m of source.matchAll(/\bicon\(\s*["']([a-z0-9][\w./-]*)["']/g)) ids.add(m[1]);
+  for (const m of source.matchAll(/["']([a-z0-9][a-z0-9-]*)\/([a-z0-9][a-z0-9-]*)["']/g)) if (sources.has(m[1])) ids.add(`${m[1]}/${m[2]}`);
   return [...ids].sort();
+}
+
+let iconSourceSet: Set<string> | null = null;
+function iconSources(): Set<string> {
+  iconSourceSet ??= new Set(
+    fs.existsSync(ICON_DIR) ? fs.readdirSync(ICON_DIR, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name) : [],
+  );
+  return iconSourceSet;
 }
 
 export function iconFile(id: string): string {
   return path.join(ICON_DIR, `${id}.json`);
 }
+
+export interface IconCredit {
+  author: string;
+  license: string;
+  url?: string;
+}
+
+let manifest: Record<string, IconCredit & { source?: string }> | null = null;
+
+/** Authors and licences of the icons a plot script draws (from icons/manifest.json), one entry per author+licence. */
+export function iconCredits(source: string): IconCredit[] {
+  if (manifest === null) {
+    const file = path.join(ICON_DIR, 'manifest.json');
+    manifest = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+  }
+  const seen = new Map<string, IconCredit>();
+  for (const id of iconIds(source)) {
+    const m = manifest![id];
+    if (m && !seen.has(`${m.author}|${m.license}`)) seen.set(`${m.author}|${m.license}`, { author: m.author, license: m.license, url: LICENSE_URLS[m.license] });
+  }
+  return [...seen.values()];
+}
+
+const LICENSE_URLS: Record<string, string> = {
+  'CC0 1.0': 'https://creativecommons.org/publicdomain/zero/1.0/',
+  'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
+  'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/',
+  'Public domain': 'https://creativecommons.org/publicdomain/mark/1.0/',
+};
 
 function hashFiles(parts: (string | Buffer)[]): string {
   const h = crypto.createHash('sha256');
