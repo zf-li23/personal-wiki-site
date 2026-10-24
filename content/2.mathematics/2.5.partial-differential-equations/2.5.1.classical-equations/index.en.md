@@ -40,7 +40,7 @@ Each class contains the previous one. The following table lists equations that a
 | $\operatorname{div}\Big(\dfrac{\nabla u}{\sqrt{1+\lvert\nabla u\rvert^2}}\Big)=0$ | minimal surface equation | 2 | quasilinear |
 | $u_t+6uu_x+u_{xxx}=0$ | Korteweg–de Vries equation | 3 | semilinear |
 
-The Fisher–KPP equation is the simplest **reaction-diffusion equation**; such equations model spreading populations and chemical patterns ([7.4](/7.4)).
+The Fisher–KPP equation is the simplest **reaction-diffusion equation**; such equations model spreading populations and chemical patterns ([Ecology](/7.19), [Developmental Biology](/7.5)).
 
 ### 1.1.2. The Superposition Principle
 

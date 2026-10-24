@@ -42,7 +42,7 @@ $$
 $$
 \Phi(x,y)=\delta x-\gamma\ln x+\beta y-\alpha\ln y,
 $$
-可以直接用 (14.2) 验证。$\Phi$ 在平衡点 $(\gamma/\delta,\alpha/\beta)$ 处取严格最小值，等值线是围绕它的闭曲线，所以所有正解都是周期的（参见 [7.4.4](/7.4.4)）。
+可以直接用 (14.2) 验证。$\Phi$ 在平衡点 $(\gamma/\delta,\alpha/\beta)$ 处取严格最小值，等值线是围绕它的闭曲线，所以所有正解都是周期的（参见 [生态学](/7.19)）。
 
 非自治方程组 $\boldsymbol{x}'=\boldsymbol{f}(t,\boldsymbol{x})$ 可以把 $t$ 当作第 $n+1$ 个未知函数（$t'=1$）化为自治方程组，首次积分相应地是 $\Phi(t,\boldsymbol{x})$，判别条件为 $\frac{\partial\Phi}{\partial t}+\sum_if_i\frac{\partial\Phi}{\partial x_i}=0$。
 

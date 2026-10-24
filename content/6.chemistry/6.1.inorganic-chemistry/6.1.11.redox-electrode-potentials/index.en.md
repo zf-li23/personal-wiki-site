@@ -1,6 +1,6 @@
 ---
 title: Redox Reactions and Electrode Potentials
-source_hash: 37167bf2e24a
+source_hash: 292ace7871d8
 ---
 
 The acid–base, complexation, and precipitation reactions of the preceding chapters are all recombinations of ions or protons, and the charge state of each element is unchanged by the reaction. Another large class of reactions involves the transfer of electrons from one substance to another: redox reactions. Combustion, the smelting and corrosion of metals, photosynthesis and respiration, batteries and electrolysis are all redox reactions. In this chapter we first use oxidation numbers to describe electron transfer and to balance equations (11.1, 11.2). We then let the oxidizing and reducing agents react at two separate electrodes, so that electron transfer becomes a current in an external circuit; this is the galvanic cell (11.3). The electromotive force of a galvanic cell can be measured precisely, and this gives the standard electrode potential, a measure of the oxidizing or reducing power of a redox couple (11.4). Its relation to the **Gibbs energy** of [6.1.6](/6.1.6) is $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, and translating the **reaction isotherm** of [6.1.8](/6.1.8) into electrical language gives the Nernst equation, treated in 11.5, which treats in a unified way the effects of concentration, acidity, precipitation, and complexation on the electrode potential. Applications of electrode potentials, Latimer diagrams, electrolysis, and electrochemical power sources are found in [6.1.12](/6.1.12). Cell thermodynamics, the rigorous form of activities and the Nernst equation, and the kinetics of electrode processes are found in [Physical Chemistry](/6.3); potentiometric analysis and redox titration are found in [Analytical Chemistry](/6.4).
@@ -555,7 +555,7 @@ E_{\mathrm{cell}} = \frac{0.05916\,\mathrm{V}}{2}\left[\lg(10^{-2})^2 - \lg(10^{
 $$
 The cell reaction is $\ce{H+}(10^{-2}) \to \ce{H+}(10^{-3})$, that is, ions are "transferred" from the concentrated solution to the dilute one, and the driving force comes entirely from the concentration difference (the entropy of mixing). $\square$
 
-The electromotive force of a concentration cell depends only on the concentration ratio; at $298.15\,\mathrm{K}$, each tenfold concentration difference corresponds to $0.0592/z\,\mathrm{V}$. Membrane potentials produced by differences in ion concentration on the two sides of a biological membrane arise in the same way; the resting potential of cells and nerve impulses both start from the Nernst equation, as discussed in [Cell Biology](/7.2) and [Neurobiology](/7.16).
+The electromotive force of a concentration cell depends only on the concentration ratio; at $298.15\,\mathrm{K}$, each tenfold concentration difference corresponds to $0.0592/z\,\mathrm{V}$. Membrane potentials produced by differences in ion concentration on the two sides of a biological membrane arise in the same way; the resting potential of cells and nerve impulses both start from the Nernst equation, as discussed in [Cell Biology](/7.3) and [Computational Neuroscience](/7.16).
 
 ## Summary
 

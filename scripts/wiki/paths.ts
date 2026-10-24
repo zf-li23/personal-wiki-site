@@ -19,7 +19,12 @@ export const PLOT_CACHE_DIR = path.join(REPO_ROOT, '.cache', 'plots');
 export const PLOT_RENDERER = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'render_plot.py');
 export const PLOT_REQUIREMENTS = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'requirements.txt');
 /** Helper modules plot scripts may import (on the renderer's path); part of the cache key of scripts that use them. */
-export const PLOT_HELPERS = [path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikichem.py')];
+export const PLOT_HELPERS = [
+  path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikichem.py'),
+  path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikibio'), // a package: every .py file inside counts
+];
+/** Vector icons for biology figures (`wikibio.icon("<id>")`), converted from open SVG libraries; see BIO_FIGURES.md. */
+export const ICON_DIR = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'icons');
 
 /** Paths inside the published site (relative to the base URL). */
 export const PUBLIC_PATHS = {

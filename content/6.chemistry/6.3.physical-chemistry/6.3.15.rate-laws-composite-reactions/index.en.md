@@ -1,6 +1,6 @@
 ---
 title: Rate Laws and Composite Reactions
-source_hash: 2fd3df555a5e
+source_hash: 541df423e5e4
 ---
 
 [6.1.7](/6.1.7) gave the framework of chemical kinetics: the **rate of reaction**, the **rate law**, the **elementary reaction** and the **reaction mechanism**, the integrated forms for first- and second-order reactions, the **Arrhenius equation** and the **pre-equilibrium approximation**. This chapter makes that framework systematic and quantitative. A reaction mechanism is a set of ordinary differential equations for the concentrations of the species, and the "phenomenological" part of chemical kinetics comes down to solving, or approximately solving, these equations ([2.4](/2.4)). The integrated forms for simple reactions of integer order (15.2) and the determination of the order from experimental data (15.3) are the simplest cases. The three typical kinds of composite reactions, opposing, parallel and consecutive (15.4), lead to linear systems that can be treated uniformly with the **matrix exponential**. The influence of temperature and the **principle of microscopic reversibility** (15.5) connect kinetics with the chemical equilibrium of [6.3.7](/6.3.7). When the equations are nonlinear and have no analytical solution, the rate-determining step, the **steady-state approximation** and the pre-equilibrium approximation (15.6) use the disparity of time scales to eliminate intermediates; these are the main tools of mechanism derivation (15.7 chain reactions, 15.8 proposing a mechanism). Finally, the relaxation methods for fast reactions (15.9) are a direct application of linearization near the equilibrium point.
@@ -520,7 +520,7 @@ Semenov's analysis of the heat balance: the rate of heat generation increases wi
 1. Write the stoichiometric equation of the reaction and determine the products (including by-products).
 2. Determine the rate law by experiment and the order for each substance.
 3. Measure the activation energy.
-4. Detect intermediates and determine their composition by electron paramagnetic resonance (EPR, which detects radicals), nuclear magnetic resonance, mass spectrometry and transient spectroscopy in flash photolysis; if a radical lives too short a time, add a spin trap to convert it into a stable radical adduct for detection, or use isotopic labeling to trace the fate of atoms.
+4. Detect intermediates and determine their composition by **electron paramagnetic resonance** (which detects radicals), nuclear magnetic resonance, mass spectrometry and transient spectroscopy in flash photolysis; if a radical lives too short a time, add a spin trap to convert it into a stable radical adduct for detection, or use isotopic labeling to trace the fate of atoms.
 5. Propose a mechanism on the basis of chemical knowledge (bond energies, molecularity, steric factors).
 6. Derive the rate law from the mechanism using approximations such as the rate-determining step, the steady state and pre-equilibrium, and compare it with experiment.
 7. Calculate the apparent activation energy from the activation energies of the elementary steps and compare it with experiment.

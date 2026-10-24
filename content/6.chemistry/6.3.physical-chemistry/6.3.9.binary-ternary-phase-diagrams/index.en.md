@@ -190,7 +190,7 @@ For the symmetric model, the compositions of the two phases satisfy $\ln\dfrac{x
 
 ![Symmetric regular solution. Left: Gibbs energy of mixing against composition for W/RT = 0, 1.5, 2 and 2.8; for W/RT > 2 the curve has two minima and the common tangent gives the compositions of the two coexisting liquids. Right: coexistence curve and spinodal in reduced temperature T/Tc, with Tc = W/(2R) the upper critical solution temperature; a tie line l1–l2 is shown at T/Tc = 0.8](./plots/regular-solution-miscibility.py)
 
-The same thermodynamics (extended to polymers as Flory–Huggins theory) is used to understand liquid–liquid phase separation of proteins and RNA in cells: proteins containing low-complexity sequences separate from the cytoplasm at certain concentrations and temperatures as protein-rich droplets, forming membraneless organelles (biomolecular condensates) such as the nucleolus and stress granules ([7.2](/7.2)).
+The same thermodynamics (extended to polymers as Flory–Huggins theory) is used to understand liquid–liquid phase separation of proteins and RNA in cells: proteins containing low-complexity sequences separate from the cytoplasm at certain concentrations and temperatures as protein-rich droplets, forming membraneless organelles (biomolecular condensates) such as the nucleolus and stress granules ([7.2](/7.3)).
 
 ### 9.3.3. Completely Immiscible Systems and Steam Distillation
 

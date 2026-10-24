@@ -1,6 +1,6 @@
 ---
 title: First Integrals and Pfaffian Equations
-source_hash: 4539db37b208
+source_hash: f83f281e7a75
 ---
 
 The general integral $u(x,y)=C$ of a first-order equation $M\,\mathrm{d}x+N\,\mathrm{d}y=0$ is a function that stays constant along every integral curve ([2.4.2](/2.4.2)). This chapter extends this point of view to higher dimensions in two directions.
@@ -44,7 +44,7 @@ Geometrically, Eq. (14.2) says that the vector field $\boldsymbol{f}$ is everywh
 $$
 \Phi(x,y)=\delta x-\gamma\ln x+\beta y-\alpha\ln y,
 $$
-which can be verified directly with Eq. (14.2). $\Phi$ attains a strict minimum at the equilibrium $(\gamma/\delta,\alpha/\beta)$, and its level curves are closed curves around it, so every positive solution is periodic (see [7.4.4](/7.4.4)).
+which can be verified directly with Eq. (14.2). $\Phi$ attains a strict minimum at the equilibrium $(\gamma/\delta,\alpha/\beta)$, and its level curves are closed curves around it, so every positive solution is periodic (see [Systems Biology](/7.9) and [Ecology](/7.19)).
 
 A nonautonomous system $\boldsymbol{x}'=\boldsymbol{f}(t,\boldsymbol{x})$ can be made autonomous by treating $t$ as an $(n+1)$st unknown function ($t'=1$). First integrals are then functions $\Phi(t,\boldsymbol{x})$, and the criterion becomes $\frac{\partial\Phi}{\partial t}+\sum_if_i\frac{\partial\Phi}{\partial x_i}=0$.
 

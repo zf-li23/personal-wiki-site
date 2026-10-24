@@ -16,7 +16,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import type { Diagnostics } from './diagnostics.ts';
-import { PLOT_CACHE_DIR, PLOT_HELPERS, PLOT_RENDERER, PLOT_REQUIREMENTS, REPO_ROOT, rel } from './paths.ts';
+import { ICON_DIR, PLOT_CACHE_DIR, PLOT_HELPERS, PLOT_RENDERER, PLOT_REQUIREMENTS, REPO_ROOT, rel } from './paths.ts';
 import type { ContentTree } from './scan.ts';
 
 /** Bump to invalidate every cached plot (e.g. after changing how results are post-processed). */
@@ -112,6 +112,26 @@ function checkPython(python: string): string | null {
   return null;
 }
 
+/** Contents of a helper: one module, or every .py file of a helper package (sorted, so the key is stable). */
+function helperFiles(helper: string): Buffer[] {
+  if (!fs.statSync(helper, { throwIfNoEntry: false })?.isDirectory()) return fs.existsSync(helper) ? [fs.readFileSync(helper)] : [];
+  return (fs.readdirSync(helper, { recursive: true }) as string[])
+    .filter((f) => f.endsWith('.py'))
+    .sort()
+    .map((f) => fs.readFileSync(path.join(helper, f)));
+}
+
+/** Icon ids a plot script draws: string literals passed to `icon(...)` (wikibio requires literals for this). */
+export function iconIds(source: string): string[] {
+  const ids = new Set<string>();
+  for (const m of source.matchAll(/\bicon\(\s*["']([a-z0-9][\w./-]*)["']/g)) ids.add(m[1]);
+  return [...ids].sort();
+}
+
+export function iconFile(id: string): string {
+  return path.join(ICON_DIR, `${id}.json`);
+}
+
 function hashFiles(parts: (string | Buffer)[]): string {
   const h = crypto.createHash('sha256');
   for (const p of parts) {
@@ -204,8 +224,10 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
         continue;
       }
       // A script that uses a shared helper re-renders when the helper changes.
-      const helpers = PLOT_HELPERS.filter((h) => new RegExp(`\\b${path.basename(h, '.py')}\\b`).test(source)).map((h) => fs.readFileSync(h));
-      const key = hashFiles([...common, source, ...helpers, ...dataFiles]);
+      const helpers = PLOT_HELPERS.filter((h) => new RegExp(`\\b${path.basename(h, '.py')}\\b`).test(source)).flatMap(helperFiles);
+      // Icons a script draws are part of its key too, so re-converting an icon re-renders its figures.
+      const icons = iconIds(source).map(iconFile).filter((f) => fs.existsSync(f)).map((f) => fs.readFileSync(f));
+      const key = hashFiles([...common, source, ...helpers, ...icons, ...dataFiles]);
       const cacheDir = path.join(PLOT_CACHE_DIR, key);
       const cached = readMeta(cacheDir);
       const result: PlotResult = { key, imageDir: cacheDir, imagePrefix: '', frozen: false, figures: cached ?? [], source, rSource };

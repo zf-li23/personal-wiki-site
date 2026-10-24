@@ -302,7 +302,7 @@ $$
 
 ![Schematic molar Gibbs energy (chemical potential), molar entropy and heat capacity against temperature at constant pressure for a first-order transition (kinked μ, entropy jump equal to the enthalpy of transition divided by T, delta-function peak in Cp), an Ehrenfest second-order transition (continuous μ and S, finite jump in Cp) and a lambda transition (Cp diverges on both sides)](./plots/transition-order.py)
 
-生物膜中的磷脂双分子层在升温时由排列整齐的凝胶相转变为烃链无序的液晶相（主相变，二棕榈酰磷脂酰胆碱 DPPC 约 $41\,{}^\circ\mathrm{C}$），这是一个较弱的一级相变，用差示扫描量热法测到的尖锐吸热峰说明转变是高度协同的；细胞通过调节脂肪酸链的长度与不饱和度，使膜在生理温度下保持流动性（[7.5](/7.5)）。
+生物膜中的磷脂双分子层在升温时由排列整齐的凝胶相转变为烃链无序的液晶相（主相变，二棕榈酰磷脂酰胆碱 DPPC 约 $41\,{}^\circ\mathrm{C}$），这是一个较弱的一级相变，用差示扫描量热法测到的尖锐吸热峰说明转变是高度协同的；细胞通过调节脂肪酸链的长度与不饱和度，使膜在生理温度下保持流动性（[7.5](/7.6)）。
 
 ## 8.5. 单组分系统的相图
 

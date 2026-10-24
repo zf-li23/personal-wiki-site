@@ -303,7 +303,7 @@ But most transitions of this kind do not fit Ehrenfest's picture. Liquid helium 
 
 ![Schematic molar Gibbs energy (chemical potential), molar entropy and heat capacity against temperature at constant pressure for a first-order transition (kinked μ, entropy jump equal to the enthalpy of transition divided by T, delta-function peak in Cp), an Ehrenfest second-order transition (continuous μ and S, finite jump in Cp) and a lambda transition (Cp diverges on both sides)](./plots/transition-order.py)
 
-When heated, the phospholipid bilayer of a biological membrane changes from an ordered gel phase to a liquid-crystalline phase with disordered hydrocarbon chains (the main transition, about $41\,{}^\circ\mathrm{C}$ for dipalmitoylphosphatidylcholine, DPPC). This is a weak first-order transition, and the sharp endothermic peak measured by differential scanning calorimetry shows that the transition is highly cooperative; cells regulate the length and degree of unsaturation of the fatty acid chains so that the membrane remains fluid at physiological temperature ([7.5](/7.5)).
+When heated, the phospholipid bilayer of a biological membrane changes from an ordered gel phase to a liquid-crystalline phase with disordered hydrocarbon chains (the main transition, about $41\,{}^\circ\mathrm{C}$ for dipalmitoylphosphatidylcholine, DPPC). This is a weak first-order transition, and the sharp endothermic peak measured by differential scanning calorimetry shows that the transition is highly cooperative; cells regulate the length and degree of unsaturation of the fatty acid chains so that the membrane remains fluid at physiological temperature ([7.5](/7.6)).
 
 ## 8.5. Phase Diagrams of One-Component Systems
 

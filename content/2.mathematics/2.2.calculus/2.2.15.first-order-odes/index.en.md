@@ -1,11 +1,11 @@
 ---
 title: First-Order Differential Equations
-source_hash: dcfc5c810798
+source_hash: b71ee27b8d49
 ---
 
 Many problems in geometry and physics do not give the unknown function itself but a relation between the function and its derivatives: the slope of the tangent line at each point of a curve, the velocity and acceleration of a body, the growth rate of a population. Such a relation is a differential equation, and finding the functions that satisfy it is "solving the differential equation". Single-variable integration ([2.2.6](/2.2.6), [2.2.7](/2.2.7)) finds antiderivatives, which amounts to solving the simplest equation $y'=f(x)$; this chapter extends that task to the case where the unknown function also appears on the right-hand side.
 
-We first set up the basic concepts (solutions, general solutions, initial value problems, integral curves) and state the existence and uniqueness theorem. We then present several classes of first-order equations whose solutions can be found in closed form by elementary integration: separable equations and equations reducible to them, first-order linear equations and Bernoulli equations, exact equations and integrating factors; finally we treat several classes of higher-order equations whose order can be reduced to one. The common idea behind all these methods is a change of variables that transforms the equation into a type we already know how to solve. Exact equations use the antiderivatives of differential forms from [2.2.10](/2.2.10) and the conservative fields of [2.2.14](/2.2.14). The [next chapter](/2.2.16) treats higher-order linear equations and linear systems, where the language of linear algebra takes the leading role. The general theory of ordinary differential equations (continuation of solutions, dependence on initial values, stability and so on) is left to [2.4](/2.4); ordinary differential equations in biological modeling appear in [7.4.4](/7.4.4).
+We first set up the basic concepts (solutions, general solutions, initial value problems, integral curves) and state the existence and uniqueness theorem. We then present several classes of first-order equations whose solutions can be found in closed form by elementary integration: separable equations and equations reducible to them, first-order linear equations and Bernoulli equations, exact equations and integrating factors; finally we treat several classes of higher-order equations whose order can be reduced to one. The common idea behind all these methods is a change of variables that transforms the equation into a type we already know how to solve. Exact equations use the antiderivatives of differential forms from [2.2.10](/2.2.10) and the conservative fields of [2.2.14](/2.2.14). The [next chapter](/2.2.16) treats higher-order linear equations and linear systems, where the language of linear algebra takes the leading role. The general theory of ordinary differential equations (continuation of solutions, dependence on initial values, stability and so on) is left to [2.4](/2.4); ordinary differential equations in biology appear in [Systems Biology](/7.9).
 
 ## 15.1. Basic Concepts of Differential Equations
 
@@ -127,7 +127,7 @@ This is a separable equation, and the constant solutions $P=0$ and $P=K$ are its
 $$
 P(t)=\frac{K}{1+A\mathrm{e}^{-kt}},\qquad A=\frac{K-P_0}{P_0},
 $$
-where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the *logistic growth* of biology (modelled in [7.4.3](/7.4.3)).
+where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the *logistic growth* of biology (modelled in [Ecology](/7.19)).
 
 ![Direction field and solution curves of the logistic equation P' = kP(1 - P/K) (k = 1, K = 1): P = 0 and P = K are equilibrium solutions, and every other positive solution tends monotonically to K; solutions starting from P_0 < K/2 are S-shaped and grow fastest at P = K/2](./plots/logistic.py)
 
