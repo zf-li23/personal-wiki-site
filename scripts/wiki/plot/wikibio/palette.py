@@ -127,6 +127,15 @@ ALIASES = {
     "actin": "muscle", "myosin": "protein",
     "mhc": "protein", "mhc_b": "enzyme", "b2m": "metabolite", "tcr_a": "channel", "tcr_b": "dna2",
     "cd3": "neutral", "cd4": "drug", "cd8": "positive", "peptide": "highlight",
+    # germ layers (the usual convention: ectoderm blue, mesoderm red, endoderm yellow) and body cavities
+    "ectoderm": "channel", "mesoderm": "muscle", "endoderm": "highlight", "mesoglea": "neutral",
+    "coelom": "cl", "pseudocoel": "k",
+    # photosynthetic electron transport chain
+    "psii": "enzyme", "psi": "plant", "lhc": "chloroplast", "plastoquinone": "lipid", "cytb6f": "protein",
+    "plastocyanin": "channel", "ferredoxin": "drug", "fnr": "antibody", "atp_synthase": "receptor",
+    # bacterial cell envelope (Gram stain: positive purple, negative pink, as the stain itself)
+    "gram_pos": "protein", "gram_neg": "receptor", "nag": "carbohydrate", "nam": "plant", "teichoic": "antibody",
+    "lipid_a": "lipid", "o_antigen": "sepal", "porin": "channel", "flagellum": "neutral",
 }
 
 
