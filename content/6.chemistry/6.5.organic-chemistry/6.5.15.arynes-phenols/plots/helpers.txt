@@ -1,0 +1,18 @@
+# Shared helpers for the curved-arrow figures of this chapter (loaded with exec by the plot scripts).
+import numpy as np
+from wikichem import Scheme
+
+
+def ring_centre(mol, ring):
+    return np.mean([mol.xy(k) for k in ring], axis=0)
+
+
+def charge(s, mol, k, ring, sign="+", inside=0.42, size=None):
+    """A charge sign on ring atom k, written just inside the ring."""
+    v = ring_centre(mol, ring) - mol.xy(k)
+    s.text(mol.xy(k) + inside * v / np.linalg.norm(v), sign, size)
+
+
+def bond_to(mol, k, point):
+    """Midpoint between atom k and another point (e.g. a drawn hydrogen)."""
+    return (mol.xy(k) + point.xy) / 2

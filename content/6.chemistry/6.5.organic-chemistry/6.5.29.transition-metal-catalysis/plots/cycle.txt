@@ -1,0 +1,101 @@
+# Shared helpers for the catalytic-cycle figures of this chapter (loaded with exec by the plot scripts).
+# Intermediates are small wikichem structures (a metal with labelled ligands) placed on a circle; the
+# cycle runs clockwise, each arc carries the name of the elementary step (inside the circle) and the
+# species that enter or leave (outside the circle). Near-black ink is lightened by the renderer in the
+# dark theme, so everything is drawn in "k".
+import math
+
+import numpy as np
+
+from wikichem import Scheme
+
+INK = "k"
+
+
+def _width(text):
+    for ch in "${}_":
+        text = text.replace(ch, "")
+    return 0.13 * len(text)
+
+
+def _clear(text, ux):
+    return 0.27 + max(0.0, _width(text) - 0.2) * abs(ux)
+
+
+def polar(r, deg, centre=(0.0, 0.0)):
+    t = math.radians(deg)
+    return np.array([centre[0] + r * math.cos(t), centre[1] + r * math.sin(t)])
+
+
+def complex_at(s, metal, ligands, at, ox=None, ox_angle=45, bond=0.5, label=None):
+    """A metal with ligands [(angle, label) or (angle, label, extra length)] at the given directions.
+    ``ox`` writes the formal oxidation state small beside the metal; ``label`` replaces the metal symbol."""
+    m = label or metal
+    coords = [(0.0, 0.0)]
+    for a, t, *extra in ligands:
+        u = (math.cos(math.radians(a)), math.sin(math.radians(a)))
+        d = _clear(m, u[0]) + _clear(t, u[0]) + bond + (extra[0] if extra else 0.0)
+        coords.append((d * u[0], d * u[1]))
+    labels = {i + 1: lig[1] for i, lig in enumerate(ligands)}
+    if label:
+        labels[0] = label
+    smiles = f"[{metal}]" + "".join("(*)" for _ in ligands[:-1]) + ("*" if ligands else "")
+    mol = s.molecule(smiles, coords=coords, at=at, labels=labels)
+    if ox is not None:
+        s.label(mol.atom(0), ox, angle=ox_angle, dist=0.62)
+    return mol
+
+
+def alkene(s, metal, angle, dist=1.25, subst=None, half=0.62):
+    """An eta-2 alkene on ``metal`` (a placed complex) in direction ``angle``: a C=C bond perpendicular to
+    the metal-alkene direction and a line from the metal to its middle; ``subst`` = label on one carbon."""
+    m = metal.xy(0)
+    u = np.array([math.cos(math.radians(angle)), math.sin(math.radians(angle))])
+    n = np.array([-u[1], u[0]])
+    mid = m + dist * u
+    a, b = mid + half * n, mid - half * n
+    if subst:
+        tip = b - 0.85 * n + 0.45 * u
+        s.molecule("C=C*", coords=[tuple(a), tuple(b), tuple(tip)], labels={2: subst})
+    else:
+        s.molecule("C=C", coords=[tuple(a), tuple(b)])
+    p, q = m + 0.36 * u, mid - 0.1 * u
+    s.points.extend([p, q])
+    s.items.append(lambda ax: ax.plot(*zip(p, q), color=INK, lw=1.4))
+
+
+def _arc(r, a0, a1, centre, n=48):
+    return np.array([polar(r, a0 + (a1 - a0) * i / (n - 1), centre) for i in range(n)])
+
+
+def _head(ax, pts, lw):
+    ax.plot(pts[:-1, 0], pts[:-1, 1], color=INK, lw=lw, solid_capstyle="round")
+    ax.annotate("", xy=pts[-1], xytext=pts[-4], arrowprops=dict(arrowstyle="-|>,head_length=0.6,head_width=0.3",
+                                                                color=INK, lw=lw, shrinkA=0, shrinkB=0))
+
+
+def cycle_arc(s, r, a0, a1, step=None, enter=None, leave=None, centre=(0.0, 0.0), step_r=None, species_r=None,
+              size=11, enter_at=0.3, leave_at=0.7):
+    """Arrow along the circle from angle a0 to a1 (degrees; a1 < a0 runs clockwise) with optional labels:
+    the step name inside the circle, entering and leaving species outside it."""
+    pts = _arc(r, a0, a1, centre)
+    s.points.extend(pts)
+    s.items.append(lambda ax: _head(ax, pts, 1.6))
+    mid = (a0 + a1) / 2
+    if step:
+        s.text(polar(step_r if step_r is not None else r - 1.3, mid, centre), step, size=size)
+    sr = species_r if species_r is not None else r + 1.5
+    turn = 8 if a1 < a0 else -8
+    for sign, text, frac in ((1, enter, enter_at), (-1, leave, leave_at)):
+        if not text:
+            continue
+        a = a0 + (a1 - a0) * frac
+        on, off = polar(r, a, centre), polar(sr, a + sign * turn, centre)
+        tail, head = (off, on) if sign > 0 else (on, off)
+        ctrl = polar(0.5 * (sr + r), a, centre)
+        curve = np.array([(1 - t) ** 2 * tail + 2 * (1 - t) * t * ctrl + t ** 2 * head for t in np.linspace(0, 1, 30)])
+        s.points.extend(curve)
+        s.items.append(lambda ax, curve=curve: _head(ax, curve, 1.3))
+        u = polar(1.0, a + sign * turn)
+        w = _width(text)
+        s.text(off + (0.45 + 0.5 * w * abs(u[0]) + 0.1 * abs(u[1])) * u, text, size=size + 1)

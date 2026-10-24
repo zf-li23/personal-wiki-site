@@ -1,0 +1,55 @@
+# Shared helpers for the mechanism figures of this chapter (loaded with exec by the plot scripts).
+# Metal complexes are written as a metal atom with dummy (*) ligands carrying group labels (L, CO,
+# PPh3, Ar ...); bond lengths grow with the label widths so that a visible line stays between labels.
+import math
+
+import numpy as np
+
+from wikichem import Scheme
+
+
+def _width(text):
+    for ch in "${}_":
+        text = text.replace(ch, "")
+    return 0.13 * len(text)
+
+
+def _clear(text, ux):
+    return 0.27 + max(0.0, _width(text) - 0.2) * abs(ux)
+
+
+def spokes(metal, ligands, bond=0.5):
+    """Coordinates for a metal at the origin and ligands [(angle, label) or (angle, label, extra length), ...];
+    returns (coords, labels)."""
+    coords = [(0.0, 0.0)]
+    for a, t, *extra in ligands:
+        u = (math.cos(math.radians(a)), math.sin(math.radians(a)))
+        d = _clear(metal, u[0]) + _clear(t, u[0]) + bond + (extra[0] if extra else 0.0)
+        coords.append((d * u[0], d * u[1]))
+    return coords, {i + 1: lig[1] for i, lig in enumerate(ligands)}
+
+
+def complex_at(s, metal, ligands, at, metal_label=None, bond=0.5):
+    """A metal with labelled ligands only (no ligand is a real atom)."""
+    coords, labels = spokes(metal_label or metal, ligands, bond)
+    if metal_label:
+        labels[0] = metal_label
+    smiles = f"[{metal}]" + "".join("(*)" for _ in ligands[:-1]) + ("*" if ligands else "")
+    return s.molecule(smiles, coords=coords, at=at, labels=labels)
+
+
+def eta2(s, metal_xy, a, b, gap=0.32):
+    """A solid line from the metal to the middle of a pi bond (eta-2 coordination)."""
+    m = np.asarray(metal_xy, float)
+    mid = (a.xy + b.xy) / 2
+    u = (mid - m) / np.linalg.norm(mid - m)
+    p, q = m + gap * u, mid - 0.12 * u
+    s.points.extend([p, q])
+    s.items.append(lambda ax: ax.plot(*zip(p, q), color="k", lw=1.4))
+
+
+def between(p, q, t=0.5):
+    """A point between two atoms (Points) or coordinates."""
+    a = p.xy if hasattr(p, "xy") else np.asarray(p, float)
+    b = q.xy if hasattr(q, "xy") else np.asarray(q, float)
+    return a + t * (b - a)

@@ -4402,7 +4402,7 @@ terms:
   - { zh: 半径比规则, en: radius ratio rule }
   - { zh: 离子极化, en: ionic polarization, aliases: [离子的极化, polarization of ions], scope: ["6"] }
   - { zh: 极化力, en: polarizing power }
-  - { zh: 极化率, en: polarizability, aliases: [变形性] }
+  - { zh: 极化率, en: polarizability, aliases: [变形性, 可极化性, 极化性] }
   - { zh: 分子间作用力, en: intermolecular force, aliases: [分子间力, intermolecular forces] }
   - { zh: van der Waals 力, en: van der Waals force, aliases: [范德华力, van der Waals forces] }
   - { zh: 取向力, en: Keesom force, aliases: [dipole–dipole interaction, 偶极–偶极作用] }
@@ -4638,7 +4638,7 @@ terms:
   - { zh: 螯合效应, en: chelate effect }
   - { zh: 两可配体, en: ambidentate ligand }
   - { zh: 三中心四电子键, en: three-center four-electron bond, aliases: [3c–4e 键] }
-  - { zh: 超价分子, en: hypervalent molecule }
+  - { zh: 超价分子, en: hypervalent molecule, aliases: [高价分子, 高价化合物, hypervalent compound] }
   - { zh: 等电子体, en: isoelectronic species }
   - { zh: 固溶体, en: solid solution }
   - { zh: 金属间化合物, en: intermetallic compound }
@@ -5473,3 +5473,461 @@ terms:
   - { zh: 统一原子质量单位, en: unified atomic mass unit, aliases: [道尔顿, dalton, 原子质量单位, atomic mass unit] }
   - { zh: 天然质谱, en: native mass spectrometry, aliases: [native MS] }
   - { zh: 离子抑制, en: ion suppression }
+
+  # chemistry: organic chemistry (6.5)
+  - { zh: 共振论, en: resonance theory }
+  - { zh: 共振式, en: resonance structure, aliases: [共振结构, 极限式, resonance contributor, resonance form] }
+  - { zh: 构型, en: configuration, scope: ["6", "7"] }
+  - { zh: 构象, en: conformation, scope: ["6", "7"] }
+  - { zh: 迁移插入, en: migratory insertion }
+  - { zh: 同分异构体, en: isomer, aliases: [isomers, 异构体] }
+  - { zh: 构造异构体, en: constitutional isomer, aliases: [constitutional isomers, 构造异构] }
+  - { zh: 立体异构体, en: stereoisomer, aliases: [stereoisomers, 立体异构] }
+  - { zh: 构象异构体, en: conformer, aliases: [conformers, conformational isomer] }
+  - { zh: 构象分析, en: conformational analysis }
+  - { zh: Newman 投影式, en: Newman projection, aliases: [纽曼投影式] }
+  - { zh: 扭转角, en: torsion angle, aliases: [二面角, dihedral angle], scope: ["6", "7"] }
+  - { zh: 交叉式, en: staggered conformation, aliases: [交叉式构象, staggered] }
+  - { zh: 重叠式, en: eclipsed conformation, aliases: [重叠式构象, eclipsed] }
+  - { zh: 扭转张力, en: torsional strain }
+  - { zh: 空间张力, en: steric strain, aliases: [van der Waals 张力, 空间排斥] }
+  - { zh: 邻位交叉效应, en: gauche effect }
+  - { zh: 角张力, en: angle strain, aliases: [Baeyer 张力, Baeyer strain] }
+  - { zh: 环张力, en: ring strain, aliases: [张力能, strain energy] }
+  - { zh: 弯曲键, en: bent bond, aliases: [香蕉键, banana bond] }
+  - { zh: 信封式, en: envelope conformation }
+  - { zh: 半椅式, en: half-chair conformation, aliases: [half-chair] }
+  - { zh: 假旋转, en: pseudorotation }
+  - { zh: 椅式构象, en: chair conformation, aliases: [椅式] }
+  - { zh: 船式构象, en: boat conformation, aliases: [船式] }
+  - { zh: 扭船式构象, en: twist-boat conformation, aliases: [扭船式] }
+  - { zh: 直立键, en: axial bond, aliases: [a 键] }
+  - { zh: 平伏键, en: equatorial bond, aliases: [e 键] }
+  - { zh: 翻环, en: ring flip, aliases: [环反转, ring inversion] }
+  - { zh: "1,3-双直立相互作用", en: "1,3-diaxial interaction", aliases: ["1,3-二直立键相互作用"] }
+  - { zh: A 值, en: A value, aliases: [A-value] }
+  - { zh: CIP 顺序规则, en: Cahn–Ingold–Prelog priority rules, aliases: [顺序规则, CIP rules, sequence rules] }
+  - { zh: Z/E 命名, en: E–Z notation, aliases: [Z/E 构型, E/Z notation] }
+  - { zh: 手性中心, en: stereocenter, aliases: [不对称原子, 手性碳原子, 不对称碳原子, chirality center, stereogenic center] }
+  - { zh: R/S 命名, en: R/S nomenclature, aliases: [绝对构型, absolute configuration] }
+  - { zh: Fischer 投影式, en: Fischer projection, aliases: [费歇尔投影式] }
+  - { zh: D/L 命名, en: D/L nomenclature, aliases: [D/L 构型, D/L system] }
+  - { zh: 差向异构体, en: epimer, aliases: [epimers, 差向异构化, epimerization] }
+  - { zh: 假不对称中心, en: pseudoasymmetric center, aliases: [假不对称碳原子] }
+  - { zh: 轴手性, en: axial chirality }
+  - { zh: 阻转异构体, en: atropisomer, aliases: [atropisomers, 阻转异构, atropisomerism] }
+  - { zh: 面手性, en: planar chirality, aliases: [平面手性] }
+  - { zh: 螺旋手性, en: helicity, aliases: [helical chirality] }
+  - { zh: 比旋光度, en: specific rotation }
+  - { zh: 外消旋化, en: racemization }
+  - { zh: 拆分, en: chiral resolution, aliases: [外消旋体的拆分, resolution of racemates], scope: ["6", "7"] }
+  - { zh: 动力学拆分, en: kinetic resolution }
+  - { zh: 对映体过量, en: enantiomeric excess, aliases: [ee, 对映体过量值] }
+  - { zh: 非对映体过量, en: diastereomeric excess, aliases: [de] }
+  - { zh: 立体专一性, en: stereospecificity, aliases: [立体专一性反应, stereospecific] }
+  - { zh: 立体选择性, en: stereoselectivity, aliases: [立体选择性反应, stereoselective] }
+  - { zh: 不对称合成, en: asymmetric synthesis, aliases: [enantioselective synthesis] }
+  - { zh: 不对称催化, en: asymmetric catalysis }
+  - { zh: 同位, en: homotopic, aliases: [同位基团] }
+  - { zh: 对映异位, en: enantiotopic, aliases: [对映异位基团] }
+  - { zh: 非对映异位, en: diastereotopic, aliases: [非对映异位基团] }
+  - { zh: 前手性, en: prochirality, aliases: [潜手性, 原手性, prochiral] }
+  - { zh: Re 面, en: Re face, aliases: [Si 面, Si face] }
+  - { zh: 官能团, en: functional group }
+  - { zh: 键线式, en: skeletal formula, aliases: [骨架式, bond-line formula] }
+  - { zh: 弯箭头, en: curly arrow, aliases: [弯曲箭头, curved arrow, 鱼钩箭头, fishhook arrow] }
+  - { zh: 取代命名法, en: substitutive nomenclature }
+  - { zh: 母体氢化物, en: parent hydride }
+  - { zh: 主特性基团, en: principal characteristic group }
+  - { zh: 螺环化合物, en: spiro compound }
+  - { zh: 桥环化合物, en: bridged compound, aliases: [bridged ring compound] }
+  - { zh: 共振杂化体, en: resonance hybrid }
+  - { zh: Hückel 分子轨道法, en: Hückel molecular orbital method, aliases: [Hückel 方法, HMO, Hückel method] }
+  - { zh: 离域能, en: delocalization energy }
+  - { zh: 诱导效应, en: inductive effect }
+  - { zh: 共轭效应, en: conjugation effect, aliases: [中介效应, mesomeric effect] }
+  - { zh: 超共轭, en: hyperconjugation, aliases: [超共轭效应] }
+  - { zh: 场效应, en: field effect, scope: ["6"] }
+  - { zh: 碳负离子, en: carbanion }
+  - { zh: 线性自由能关系, en: linear free-energy relationship, aliases: [LFER] }
+  - { zh: Hammett 方程, en: Hammett equation }
+  - { zh: 取代基常数, en: substituent constant, aliases: [Hammett 取代基常数] }
+  - { zh: 反应常数, en: reaction constant, scope: ["6.5"] }
+  - { zh: 化学选择性, en: chemoselectivity }
+  - { zh: 区域选择性, en: regioselectivity }
+  - { zh: 动力学控制, en: kinetic control }
+  - { zh: 热力学控制, en: thermodynamic control }
+  - { zh: Curtin–Hammett 原理, en: Curtin–Hammett principle }
+  - { zh: Hammond 假说, en: Hammond postulate, aliases: [Hammond 假设] }
+  - { zh: 交叉实验, en: crossover experiment }
+  - { zh: 选择性, en: selectivity, scope: ["6.5"] }   # reaction selectivity (chemo-, regio-, stereo-)
+  - { zh: 亲电加成, en: electrophilic addition }
+  - { zh: Markovnikov 规则, en: "Markovnikov's rule", aliases: [马氏规则, Markovnikov rule] }
+  - { zh: 溴鎓离子, en: bromonium ion, aliases: [卤鎓离子, halonium ion] }
+  - { zh: 硼氢化, en: hydroboration, aliases: [硼氢化反应, 硼氢化–氧化, hydroboration–oxidation] }
+  - { zh: "1,2-加成", en: "1,2-addition" }
+  - { zh: "1,4-加成", en: "1,4-addition" }
+  - { zh: 过氧化物效应, en: peroxide effect, aliases: [Kharasch 效应] }
+  - { zh: 臭氧化, en: ozonolysis, aliases: [臭氧化反应, 臭氧解] }
+  - { zh: 卡宾, en: carbene, aliases: [碳烯, carbenes] }
+  - { zh: 环丙烷化, en: cyclopropanation }
+  - { zh: 加成聚合, en: addition polymerization, aliases: [加聚反应, 链增长聚合, chain-growth polymerization] }
+  - { zh: Ziegler–Natta 催化剂, en: Ziegler–Natta catalyst, aliases: [齐格勒-纳塔催化剂] }
+  - { zh: 周环反应, en: pericyclic reaction }
+  - { zh: 前线轨道理论, en: frontier molecular orbital theory, aliases: [FMO 理论, frontier orbital theory] }
+  - { zh: 电环化反应, en: electrocyclic reaction, aliases: [电环化] }
+  - { zh: 顺旋, en: conrotatory }
+  - { zh: 对旋, en: disrotatory }
+  - { zh: 能级相关图, en: correlation diagram, aliases: [轨道相关图, orbital correlation diagram] }
+  - { zh: 环加成反应, en: cycloaddition, aliases: [环加成, cycloaddition reaction] }
+  - { zh: 同面, en: suprafacial }
+  - { zh: 异面, en: antarafacial }
+  - { zh: Diels–Alder 反应, en: Diels–Alder reaction, aliases: [狄尔斯-阿尔德反应, D-A 反应] }
+  - { zh: endo 规则, en: endo rule, aliases: [内型规则, Alder 规则] }
+  - { zh: "1,3-偶极环加成", en: "1,3-dipolar cycloaddition", aliases: [Huisgen 环加成, Huisgen cycloaddition] }
+  - { zh: σ 迁移反应, en: sigmatropic rearrangement, aliases: [σ 迁移, sigmatropic reaction, sigmatropic shift] }
+  - { zh: Cope 重排, en: Cope rearrangement }
+  - { zh: Claisen 重排, en: Claisen rearrangement }
+  - { zh: 芳香过渡态, en: aromatic transition state }
+  - { zh: Woodward–Hoffmann 规则, en: Woodward–Hoffmann rules, aliases: [轨道对称守恒原理, conservation of orbital symmetry] }
+  - { zh: Shoolery 规则, en: "Shoolery's rule" }
+  - { zh: 无畸变极化转移增强, en: distortionless enhancement by polarization transfer, aliases: [DEPT] }
+  - { zh: Woodward–Fieser 规则, en: Woodward–Fieser rules }
+  - { zh: 合并温度, en: coalescence temperature, aliases: [聚并温度] }
+  - { zh: 单占据分子轨道, en: singly occupied molecular orbital, aliases: [SOMO] }
+  - { zh: 自由基离子, en: radical ion, aliases: [自由基正离子, 自由基负离子, radical cation, radical anion] }
+  - { zh: 均裂, en: homolysis, aliases: [homolytic cleavage] }
+  - { zh: 异裂, en: heterolysis, aliases: [heterolytic cleavage] }
+  - { zh: 键解离能, en: bond dissociation energy, aliases: [键解离焓, BDE, bond dissociation enthalpy] }
+  - { zh: 自由基引发剂, en: radical initiator }
+  - { zh: 单电子转移, en: single electron transfer }
+  - { zh: 自氧化, en: autoxidation }
+  - { zh: 持久自由基, en: persistent radical }
+  - { zh: 电子顺磁共振, en: electron paramagnetic resonance, aliases: [EPR, 电子自旋共振, ESR, electron spin resonance] }
+  - { zh: g 因子, en: g-factor, scope: ["6"] }
+  - { zh: 超精细耦合, en: hyperfine coupling, aliases: [超精细耦合常数, hyperfine coupling constant] }
+  - { zh: 氢原子转移, en: hydrogen atom transfer, aliases: [HAT, 夺氢反应, hydrogen abstraction] }
+  - { zh: β 断裂, en: β-scission, aliases: [beta-scission] }
+  - { zh: 自由基钟, en: radical clock }
+  - { zh: 自旋捕获, en: spin trapping }
+  - { zh: 反应性–选择性原理, en: reactivity–selectivity principle }
+  - { zh: Wohl–Ziegler 反应, en: Wohl–Ziegler reaction, aliases: [Wohl–Ziegler 溴代] }
+  - { zh: 亲核试剂, en: nucleophile, aliases: [nucleophiles] }
+  - { zh: 亲电试剂, en: electrophile, aliases: [electrophiles] }
+  - { zh: 离去基团, en: leaving group }
+  - { zh: 亲核取代反应, en: nucleophilic substitution, aliases: [亲核取代] }
+  - { zh: SN2 反应, en: SN2 reaction, aliases: [SN2, 双分子亲核取代, bimolecular nucleophilic substitution] }
+  - { zh: SN1 反应, en: SN1 reaction, aliases: [SN1, 单分子亲核取代, unimolecular nucleophilic substitution] }
+  - { zh: 溶剂解, en: solvolysis }
+  - { zh: 碳正离子, en: carbocation, aliases: [正碳离子, carbocations, carbenium ion] }
+  - { zh: Walden 翻转, en: Walden inversion, aliases: [瓦尔登翻转, 瓦尔登转化, Walden 转化] }
+  - { zh: 离子对, en: ion pair, aliases: [紧密离子对, 溶剂分隔离子对, contact ion pair] }
+  - { zh: 亲核性, en: nucleophilicity }
+  - { zh: 质子性溶剂, en: protic solvent, aliases: [质子溶剂, protic solvents] }
+  - { zh: 非质子极性溶剂, en: polar aprotic solvent, aliases: [极性非质子溶剂, aprotic polar solvent] }
+  - { zh: 邻基参与, en: neighboring group participation, aliases: [邻基效应, anchimeric assistance] }
+  - { zh: 消除反应, en: elimination reaction, aliases: [消除, β-消除, beta-elimination], scope: ["6", "7"] }
+  - { zh: Zaitsev 规则, en: "Zaitsev's rule", aliases: [扎依采夫规则, 查依采夫规则, Saytzeff rule, Zaitsev rule] }
+  - { zh: Hofmann 规则, en: Hofmann rule, aliases: ["Hofmann's rule"] }
+  - { zh: E1 反应, en: E1 reaction, aliases: [E1, 单分子消除] }
+  - { zh: E2 反应, en: E2 reaction, aliases: [E2, 双分子消除] }
+  - { zh: E1cb 反应, en: E1cB reaction, aliases: [E1cb, E1cB, 共轭碱单分子消除] }
+  - { zh: 反式共平面, en: antiperiplanar, aliases: [反叠, anti-periplanar] }
+  - { zh: SNi 机理, en: SNi mechanism, aliases: [SNi, 分子内亲核取代, internal nucleophilic substitution] }
+  - { zh: 环氧化合物, en: epoxide, aliases: [epoxides, 环氧乙烷类化合物, oxirane] }
+  - { zh: Williamson 醚合成, en: Williamson ether synthesis, aliases: [Williamson 合成] }
+  - { zh: Grignard 试剂, en: Grignard reagent, aliases: [格氏试剂, Grignard reagents] }
+  - { zh: Schlenk 平衡, en: Schlenk equilibrium }
+  - { zh: 有机锂试剂, en: organolithium reagent, aliases: [有机锂, organolithium, organolithiums] }
+  - { zh: Gilman 试剂, en: Gilman reagent, aliases: [二烷基铜锂, 有机铜锂试剂, lithium dialkylcuprate] }
+  - { zh: 频哪醇重排, en: pinacol rearrangement, aliases: [嚬哪醇重排] }
+  - { zh: 芳香性, en: aromaticity, aliases: [芳香化合物, aromatic compound] }
+  - { zh: Hückel 规则, en: "Hückel's rule", aliases: [4n+2 规则, Hückel rule] }
+  - { zh: 非芳香性, en: nonaromaticity }
+  - { zh: 反芳香性, en: antiaromaticity }
+  - { zh: Frost 圆, en: Frost circle, aliases: [Frost–Musulin 图] }
+  - { zh: 核独立化学位移, en: nucleus-independent chemical shift, aliases: [NICS] }
+  - { zh: 轮烯, en: annulene, aliases: [annulenes] }
+  - { zh: 同芳香性, en: homoaromaticity }
+  - { zh: 芳香亲电取代, en: electrophilic aromatic substitution, aliases: [SEAr, 亲电芳香取代] }
+  - { zh: σ 络合物, en: σ complex, aliases: [sigma complex, arenium ion, Wheland 中间体, Wheland intermediate] }
+  - { zh: 定位效应, en: directing effect, aliases: [定位基, 定位规则] }
+  - { zh: 活化基团, en: activating group, scope: ["6"] }
+  - { zh: 钝化基团, en: deactivating group, scope: ["6"] }
+  - { zh: 偏速率因子, en: partial rate factor }
+  - { zh: Friedel–Crafts 反应, en: Friedel–Crafts reaction, aliases: [傅克反应, Friedel–Crafts 烷基化, Friedel–Crafts 酰基化, Friedel–Crafts alkylation, Friedel–Crafts acylation] }
+  - { zh: Gattermann–Koch 反应, en: Gattermann–Koch reaction }
+  - { zh: 芳香亲核取代, en: nucleophilic aromatic substitution, aliases: [SNAr] }
+  - { zh: Meisenheimer 络合物, en: Meisenheimer complex }
+  - { zh: 苯炔, en: benzyne, aliases: [芳炔, aryne, 邻苯炔] }
+  - { zh: Birch 还原, en: Birch reduction }
+  - { zh: 苄位, en: benzylic position, aliases: [苄基位] }
+  - { zh: 多环芳烃, en: polycyclic aromatic hydrocarbon, aliases: [稠环芳烃, PAH] }
+  - { zh: Fries 重排, en: Fries rearrangement }
+  - { zh: Reimer–Tiemann 反应, en: Reimer–Tiemann reaction }
+  - { zh: Kolbe–Schmitt 反应, en: Kolbe–Schmitt reaction }
+  - { zh: 亲核加成, en: nucleophilic addition }
+  - { zh: Bürgi–Dunitz 角, en: Bürgi–Dunitz angle, aliases: [Bürgi–Dunitz 轨迹, Bürgi–Dunitz trajectory] }
+  - { zh: Felkin–Anh 模型, en: Felkin–Anh model }
+  - { zh: 半缩醛, en: hemiacetal, aliases: [半缩酮, hemiketal, hemiacetals] }
+  - { zh: 缩醛, en: acetal, aliases: [缩酮, ketal, acetals] }
+  - { zh: 保护基, en: protecting group, aliases: [protecting groups] }
+  - { zh: 硫缩醛, en: thioacetal, aliases: [硫缩酮, thioketal, dithioacetal] }
+  - { zh: 氰醇, en: cyanohydrin, aliases: [α-羟基腈, cyanohydrins] }
+  - { zh: 叶立德, en: ylide, aliases: [ylides] }
+  - { zh: Wittig 反应, en: Wittig reaction }
+  - { zh: Horner–Wadsworth–Emmons 反应, en: Horner–Wadsworth–Emmons reaction, aliases: [HWE 反应, HWE reaction] }
+  - { zh: Corey–Chaykovsky 反应, en: Corey–Chaykovsky reaction }
+  - { zh: 亚胺, en: imine, aliases: [Schiff 碱, Schiff base, imines] }
+  - { zh: 烯胺, en: enamine, aliases: [enamines] }
+  - { zh: Wolff–Kishner 还原, en: Wolff–Kishner reduction, aliases: [Wolff–Kishner–黄鸣龙还原, 黄鸣龙还原, Huang Minlon modification] }
+  - { zh: 极性反转, en: umpolung, aliases: [极性翻转, polarity inversion] }
+  - { zh: 苯偶姻缩合, en: benzoin condensation, aliases: [安息香缩合] }
+  - { zh: Breslow 中间体, en: Breslow intermediate }
+  - { zh: Luche 还原, en: Luche reduction }
+  - { zh: CBS 还原, en: CBS reduction, aliases: [Corey–Bakshi–Shibata 还原, Corey–Bakshi–Shibata reduction] }
+  - { zh: Meerwein–Ponndorf–Verley 还原, en: Meerwein–Ponndorf–Verley reduction, aliases: [MPV 还原, MPV reduction] }
+  - { zh: Oppenauer 氧化, en: Oppenauer oxidation }
+  - { zh: 羰游基, en: ketyl, aliases: [ketyl radical anion] }
+  - { zh: 频哪醇偶联, en: pinacol coupling, aliases: [频哪醇还原] }
+  - { zh: McMurry 反应, en: McMurry reaction, aliases: [McMurry 偶联, McMurry coupling] }
+  - { zh: Clemmensen 还原, en: Clemmensen reduction }
+  - { zh: Cannizzaro 反应, en: Cannizzaro reaction }
+  - { zh: Tollens 试剂, en: "Tollens' reagent", aliases: [银镜反应, silver mirror test] }
+  - { zh: Fehling 试剂, en: "Fehling's solution", aliases: ["Fehling's reagent"] }
+  - { zh: Baeyer–Villiger 氧化, en: Baeyer–Villiger oxidation }
+  - { zh: 共轭加成, en: conjugate addition }
+  - { zh: Michael 加成, en: Michael addition, aliases: [Michael 反应, Michael reaction] }
+  - { zh: 醌, en: quinone, aliases: [quinones] }
+  - { zh: 半醌, en: semiquinone }
+  - { zh: 烯酮, en: ketene, aliases: [ketenes] }
+  - { zh: 羧酸, en: carboxylic acid, aliases: [carboxylic acids] }
+  - { zh: 酰基, en: acyl group }
+  - { zh: 羧酸衍生物, en: carboxylic acid derivative, aliases: [carboxylic acid derivatives] }
+  - { zh: 奇偶效应, en: odd–even effect, scope: ["6"] }
+  - { zh: 邻位效应, en: ortho effect, scope: ["6"] }
+  - { zh: 脱羧, en: decarboxylation, aliases: [脱羧反应] }
+  - { zh: Hell–Volhard–Zelinsky 反应, en: Hell–Volhard–Zelinsky reaction, aliases: [HVZ 反应, HVZ reaction] }
+  - { zh: 内酯, en: lactone, aliases: [lactones] }
+  - { zh: 交酯, en: lactide, aliases: [丙交酯] }
+  - { zh: 酰卤, en: acyl halide, aliases: [酰氯, acyl chloride, acid chloride] }
+  - { zh: 酸酐, en: acid anhydride, aliases: [anhydride, 羧酸酐] }
+  - { zh: 酯, en: ester, aliases: [esters] }
+  - { zh: 酰胺, en: amide, aliases: [amides] }
+  - { zh: 亲核酰基取代, en: nucleophilic acyl substitution, aliases: [酰基转移, acyl transfer] }
+  - { zh: 四面体中间体, en: tetrahedral intermediate }
+  - { zh: Fischer 酯化, en: Fischer esterification, aliases: [Fischer–Speier 酯化] }
+  - { zh: 皂化, en: saponification, aliases: [皂化反应] }
+  - { zh: 酯交换, en: transesterification, aliases: [酯交换反应] }
+  - { zh: 硫酯, en: thioester, aliases: [thioesters] }
+  - { zh: 甘油三酯, en: triglyceride, aliases: [三酰甘油, triacylglycerol] }
+  - { zh: Hofmann 重排, en: Hofmann rearrangement, aliases: [Hofmann 降解, Hofmann degradation] }
+  - { zh: 腈, en: nitrile, aliases: [nitriles] }
+  - { zh: Ritter 反应, en: Ritter reaction }
+  - { zh: 异腈, en: isocyanide, aliases: [胩, isonitrile] }
+  - { zh: 逆合成分析, en: retrosynthetic analysis, aliases: [逆合成, retrosynthesis] }
+  - { zh: 合成子, en: synthon }
+  - { zh: 等价试剂, en: synthetic equivalent, aliases: [合成等价物] }
+  - { zh: 互变异构, en: tautomerism, aliases: [互变异构体, tautomer, tautomers] }
+  - { zh: 酮–烯醇互变异构, en: keto–enol tautomerism, aliases: [酮式–烯醇式互变异构, 烯醇化, enolization] }
+  - { zh: 烯醇, en: enol, aliases: [enols, 烯醇式], scope: ["6", "7"] }
+  - { zh: 烯醇负离子, en: enolate, aliases: [烯醇盐, enolates, enolate ion] }
+  - { zh: 动力学烯醇负离子, en: kinetic enolate }
+  - { zh: 热力学烯醇负离子, en: thermodynamic enolate }
+  - { zh: 两可亲核试剂, en: ambident nucleophile, aliases: [两位亲核试剂] }
+  - { zh: 卤仿反应, en: haloform reaction, aliases: [碘仿反应, iodoform reaction] }
+  - { zh: Mannich 反应, en: Mannich reaction, aliases: [曼尼希反应] }
+  - { zh: Mannich 碱, en: Mannich base }
+  - { zh: 手性辅基, en: chiral auxiliary, aliases: [手性助剂, chiral auxiliaries] }
+  - { zh: Stork 烯胺反应, en: Stork enamine reaction, aliases: [Stork 烯胺合成, Stork enamine synthesis] }
+  - { zh: 缩合反应, en: condensation reaction, aliases: [缩合], scope: ["6", "7"] }
+  - { zh: 羟醛反应, en: aldol reaction, aliases: [羟醛缩合, 羟醛加成, aldol condensation, aldol addition, 醇醛缩合] }
+  - { zh: 逆羟醛反应, en: retro-aldol reaction, aliases: [retro-aldol] }
+  - { zh: Claisen–Schmidt 缩合, en: Claisen–Schmidt condensation }
+  - { zh: Claisen 缩合, en: Claisen condensation, aliases: [Claisen 酯缩合, 酯缩合] }
+  - { zh: Dieckmann 缩合, en: Dieckmann condensation, aliases: [Dieckmann 环化] }
+  - { zh: Perkin 反应, en: Perkin reaction }
+  - { zh: Knoevenagel 缩合, en: Knoevenagel condensation, aliases: [Knoevenagel 反应] }
+  - { zh: Reformatsky 反应, en: Reformatsky reaction }
+  - { zh: Darzens 反应, en: Darzens reaction, aliases: [Darzens 缩合, Darzens condensation] }
+  - { zh: Robinson 环化, en: Robinson annulation, aliases: [Robinson 增环反应, 鲁宾逊环化] }
+  - { zh: Zimmerman–Traxler 模型, en: Zimmerman–Traxler model }
+  - { zh: Mukaiyama 羟醛反应, en: Mukaiyama aldol reaction, aliases: [Mukaiyama aldol] }
+  - { zh: 有机催化, en: organocatalysis, aliases: [有机小分子催化] }
+  - { zh: "1,3-二羰基化合物", en: "1,3-dicarbonyl compound", aliases: [β-二羰基化合物, "1,3-dicarbonyl compounds", β-dicarbonyl compound] }
+  - { zh: 活泼亚甲基化合物, en: active methylene compound, aliases: [活泼亚甲基] }
+  - { zh: 酮式分解, en: ketonic cleavage }
+  - { zh: 酸式分解, en: acid cleavage, scope: ["6.5"] }
+  - { zh: 乙酰乙酸乙酯合成法, en: acetoacetic ester synthesis, aliases: [三乙合成法] }
+  - { zh: 丙二酸酯合成法, en: malonic ester synthesis, aliases: [丙二酸二乙酯合成法] }
+  - { zh: 醛缩酶, en: aldolase, aliases: [aldolases] }
+  - { zh: 聚酮, en: polyketide, aliases: [聚酮化合物, polyketides] }
+  - { zh: 烯醇硅醚, en: silyl enol ether, aliases: [silyl enol ethers] }
+  - { zh: 二异丙基氨基锂, en: lithium diisopropylamide, aliases: [LDA], scope: ["6"] }   # LDA elsewhere = linear discriminant analysis
+  - { zh: 胺, en: amine, aliases: [amines, 伯胺, 仲胺, 叔胺] }
+  - { zh: 生物碱, en: alkaloid, aliases: [alkaloids] }
+  - { zh: 氮翻转, en: nitrogen inversion, aliases: [胺的翻转, pyramidal inversion] }
+  - { zh: Gabriel 合成, en: Gabriel synthesis, aliases: [Gabriel 合成法] }
+  - { zh: 还原胺化, en: reductive amination, aliases: [还原氨化] }
+  - { zh: 季铵盐, en: quaternary ammonium salt, aliases: [季铵碱, 季铵离子, quaternary ammonium ion] }
+  - { zh: 相转移催化, en: phase-transfer catalysis, aliases: [相转移催化剂, phase-transfer catalyst] }
+  - { zh: Hofmann 消除, en: Hofmann elimination, aliases: [霍夫曼消除] }
+  - { zh: 重氮盐, en: diazonium salt, aliases: [芳基重氮盐, arenediazonium salt, 重氮离子] }
+  - { zh: 重氮化合物, en: diazo compound, aliases: [diazo compounds] }
+  - { zh: 重氮化, en: diazotization, aliases: [重氮化反应] }
+  - { zh: Sandmeyer 反应, en: Sandmeyer reaction, aliases: [桑德迈尔反应] }
+  - { zh: Balz–Schiemann 反应, en: Balz–Schiemann reaction, aliases: [Schiemann 反应, 席曼反应, Schiemann reaction] }
+  - { zh: 重氮甲烷, en: diazomethane }
+  - { zh: Wolff 重排, en: Wolff rearrangement, aliases: [沃尔夫重排] }
+  - { zh: Arndt–Eistert 合成, en: Arndt–Eistert synthesis, aliases: [Arndt–Eistert 反应, Arndt–Eistert homologation] }
+  - { zh: 偶氮化合物, en: azo compound, aliases: [azo compounds] }
+  - { zh: 偶氮偶联, en: azo coupling }
+  - { zh: 硝基化合物, en: nitro compound, aliases: [nitro compounds] }
+  - { zh: Henry 反应, en: Henry reaction, aliases: [硝基羟醛反应, nitroaldol reaction] }
+  - { zh: 叠氮化合物, en: azide, aliases: [azides, 有机叠氮] }
+  - { zh: Curtius 重排, en: Curtius rearrangement }
+  - { zh: Schmidt 反应, en: Schmidt reaction, aliases: [Schmidt 重排] }
+  - { zh: 杂环化合物, en: heterocyclic compound, aliases: [杂环, heterocycle, heterocycles] }
+  - { zh: 吡咯, en: pyrrole }
+  - { zh: 吡啶, en: pyridine }
+  - { zh: 吲哚, en: indole }
+  - { zh: Chichibabin 反应, en: Chichibabin reaction, aliases: [齐齐巴宾反应] }
+  - { zh: Minisci 反应, en: Minisci reaction }
+  - { zh: Paal–Knorr 合成, en: Paal–Knorr synthesis, aliases: [Paal–Knorr 吡咯合成, Paal–Knorr pyrrole synthesis] }
+  - { zh: Fischer 吲哚合成, en: Fischer indole synthesis }
+  - { zh: Hantzsch 吡啶合成, en: Hantzsch pyridine synthesis, aliases: [Hantzsch 合成] }
+  - { zh: 嘧啶, en: pyrimidine, aliases: [pyrimidines] }
+  - { zh: 嘌呤, en: purine, aliases: [purines] }
+  - { zh: 内酰胺, en: lactam, aliases: [lactams, β-内酰胺, β-lactam] }
+  - { zh: 元素有机化合物, en: organoelement compound }
+  - { zh: 膦, en: phosphine, aliases: [phosphines, 叔膦] }
+  - { zh: 负超共轭, en: negative hyperconjugation }
+  - { zh: Staudinger 还原, en: Staudinger reduction }
+  - { zh: Arbuzov 反应, en: Arbuzov reaction, aliases: [Michaelis–Arbuzov 反应, Michaelis–Arbuzov reaction] }
+  - { zh: Mitsunobu 反应, en: Mitsunobu reaction, aliases: [光延反应] }
+  - { zh: Appel 反应, en: Appel reaction }
+  - { zh: 硫醇, en: thiol, aliases: [thiols, mercaptan] }
+  - { zh: 二硫键, en: disulfide bond, aliases: [二硫桥, disulfide bridge] }
+  - { zh: 亚砜, en: sulfoxide, aliases: [sulfoxides] }
+  - { zh: 砜, en: sulfone, aliases: [sulfones] }
+  - { zh: Swern 氧化, en: Swern oxidation }
+  - { zh: Julia 烯化, en: Julia olefination, aliases: [Julia–Lythgoe 烯化, Julia–Kocienski 烯化, Julia–Lythgoe olefination, Julia–Kocienski olefination] }
+  - { zh: 锂–卤交换, en: lithium–halogen exchange, aliases: [锂卤交换, metal–halogen exchange] }
+  - { zh: 定向邻位金属化, en: directed ortho metalation, aliases: [directed ortho-metalation, 邻位锂化] }
+  - { zh: "1,2-金属迁移", en: "1,2-metallate rearrangement", aliases: ["1,2-metallate shift"] }
+  - { zh: Matteson 同系化, en: Matteson homologation }
+  - { zh: 硅醚, en: silyl ether, aliases: [silyl ethers, 硅醚保护基] }
+  - { zh: β-硅效应, en: β-silicon effect, aliases: [beta-silicon effect] }
+  - { zh: Hosomi–Sakurai 反应, en: Hosomi–Sakurai reaction, aliases: [Sakurai 反应, Sakurai reaction] }
+  - { zh: Peterson 烯化, en: Peterson olefination, aliases: [Peterson 反应, Peterson reaction] }
+  - { zh: 高价碘化合物, en: hypervalent iodine compound, aliases: [高价碘试剂, hypervalent iodine reagent] }
+  - { zh: Dess–Martin 氧化, en: Dess–Martin oxidation, aliases: [DMP 氧化] }
+  - { zh: 金属有机化合物, en: organometallic compound, aliases: [有机金属化合物, organometallic, organometallics] }
+  - { zh: 齿合度, en: hapticity, aliases: [η 配位, hapto] }
+  - { zh: L 型配体, en: L-type ligand }
+  - { zh: X 型配体, en: X-type ligand }
+  - { zh: 18 电子规则, en: 18-electron rule, aliases: [十八电子规则, 有效原子序数规则, EAN rule] }
+  - { zh: 配位不饱和, en: coordinative unsaturation, aliases: [coordinatively unsaturated] }
+  - { zh: Tolman 锥角, en: Tolman cone angle, aliases: [锥角, cone angle] }
+  - { zh: Tolman 电子参数, en: Tolman electronic parameter, aliases: [TEP] }
+  - { zh: Dewar–Chatt–Duncanson 模型, en: Dewar–Chatt–Duncanson model, aliases: [DCD 模型] }
+  - { zh: 反位效应, en: trans effect }
+  - { zh: 氧化加成, en: oxidative addition }
+  - { zh: 还原消除, en: reductive elimination }
+  - { zh: β-氢消除, en: β-hydride elimination, aliases: [β-H 消除, beta-hydride elimination] }
+  - { zh: 转金属化, en: transmetalation, aliases: [金属交换, transmetallation] }
+  - { zh: 茂金属, en: metallocene, aliases: [metallocenes, 夹心配合物, sandwich compound] }
+  - { zh: Fischer 卡宾, en: Fischer carbene }
+  - { zh: Schrock 卡宾, en: Schrock carbene, aliases: [亚烷基配合物, alkylidene complex] }
+  - { zh: 抓氢键, en: agostic interaction, aliases: [抓氢相互作用, agostic bond] }
+  - { zh: Wilkinson 催化剂, en: "Wilkinson's catalyst" }
+  - { zh: Wacker 氧化, en: Wacker oxidation, aliases: [Wacker 法, Wacker process, Tsuji–Wacker 氧化] }
+  - { zh: 交叉偶联反应, en: cross-coupling reaction, aliases: [交叉偶联, cross-coupling] }
+  - { zh: Heck 反应, en: Heck reaction, aliases: [Mizoroki–Heck 反应, Mizoroki–Heck reaction] }
+  - { zh: Suzuki–Miyaura 偶联, en: Suzuki–Miyaura coupling, aliases: [Suzuki 偶联, Suzuki coupling, Suzuki 反应] }
+  - { zh: Sonogashira 偶联, en: Sonogashira coupling, aliases: [Sonogashira 反应] }
+  - { zh: Buchwald–Hartwig 胺化, en: Buchwald–Hartwig amination, aliases: [Buchwald–Hartwig 偶联] }
+  - { zh: Tsuji–Trost 反应, en: Tsuji–Trost reaction, aliases: [烯丙基烷基化, allylic alkylation] }
+  - { zh: 烯烃复分解, en: olefin metathesis, aliases: [烯烃易位, alkene metathesis] }
+  - { zh: Franck–Condon 原理, en: Franck–Condon principle }
+  - { zh: El-Sayed 规则, en: "El-Sayed's rule", aliases: [El-Sayed rules] }
+  - { zh: Dexter 能量转移, en: Dexter energy transfer, aliases: [电子交换能量转移, exchange energy transfer] }
+  - { zh: 光致异构化, en: photoisomerization, aliases: [光异构化] }
+  - { zh: 分子光开关, en: molecular photoswitch, aliases: [光开关, photoswitch] }
+  - { zh: 光环加成, en: photocycloaddition, aliases: [光环加成反应] }
+  - { zh: Norrish I 型反应, en: Norrish type I reaction }
+  - { zh: Norrish II 型反应, en: Norrish type II reaction }
+  - { zh: Norrish–Yang 反应, en: Norrish–Yang reaction, aliases: [Yang 环化, Norrish–Yang cyclization, Yang cyclization] }
+  - { zh: 光烯醇化, en: photoenolization }
+  - { zh: Paternò–Büchi 反应, en: Paternò–Büchi reaction, aliases: [Paterno–Buchi reaction] }
+  - { zh: 激发态氧化还原电势, en: excited-state redox potential, aliases: [激发态电势] }
+  - { zh: Rehm–Weller 方程, en: Rehm–Weller equation }
+  - { zh: 光氧化还原催化, en: photoredox catalysis, aliases: [光氧化还原催化剂, photoredox catalyst] }
+  - { zh: 氧化猝灭, en: oxidative quenching }
+  - { zh: 还原猝灭, en: reductive quenching }
+  - { zh: 光笼化合物, en: caged compound, aliases: [光笼, photocage, photocaged compound] }
+  - { zh: 光亲和标记, en: photoaffinity labeling }
+  - { zh: 有机电化学, en: organic electrochemistry, aliases: [有机电合成, organic electrosynthesis] }
+  - { zh: 直接电解, en: direct electrolysis }
+  - { zh: 间接电解, en: indirect electrolysis, aliases: [媒介电解, mediated electrolysis] }
+  - { zh: 氧化还原媒介体, en: redox mediator, aliases: [媒介体] }
+  - { zh: 机械化学, en: mechanochemistry, aliases: [机械力化学] }
+  - { zh: 力敏基团, en: mechanophore }
+  - { zh: 重排反应, en: rearrangement, aliases: [重排, rearrangement reaction], scope: ["6", "7"] }
+  - { zh: 迁移倾向, en: migratory aptitude, aliases: [迁移能力] }
+  - { zh: Wagner–Meerwein 重排, en: Wagner–Meerwein rearrangement, aliases: [Meerwein 重排] }
+  - { zh: Demjanov 重排, en: Demjanov rearrangement }
+  - { zh: Tiffeneau–Demjanov 重排, en: Tiffeneau–Demjanov rearrangement, aliases: [Tiffeneau–Demjanov 扩环] }
+  - { zh: 半频哪醇重排, en: semipinacol rearrangement, aliases: [semi-pinacol rearrangement] }
+  - { zh: Meinwald 重排, en: Meinwald rearrangement }
+  - { zh: 二苯乙醇酸重排, en: benzilic acid rearrangement, aliases: [二苯羟乙酸重排, 乙二酮重排] }
+  - { zh: Beckmann 重排, en: Beckmann rearrangement, aliases: [贝克曼重排] }
+  - { zh: Lossen 重排, en: Lossen rearrangement, aliases: [洛森重排] }
+  - { zh: "[1,2]-Wittig 重排", en: "[1,2]-Wittig rearrangement" }
+  - { zh: "[2,3]-Wittig 重排", en: "[2,3]-Wittig rearrangement" }
+  - { zh: Stevens 重排, en: Stevens rearrangement }
+  - { zh: Sommelet–Hauser 重排, en: Sommelet–Hauser rearrangement }
+  - { zh: Mislow–Evans 重排, en: Mislow–Evans rearrangement }
+  - { zh: Favorskii 重排, en: Favorskii rearrangement, aliases: [法沃斯基重排] }
+  - { zh: 氧负离子 Cope 重排, en: anionic oxy-Cope rearrangement }
+  - { zh: Ireland–Claisen 重排, en: Ireland–Claisen rearrangement, aliases: [Claisen–Ireland 重排] }
+  - { zh: 肟, en: oxime, aliases: [oximes] }
+  - { zh: 碳水化合物, en: carbohydrate, aliases: [糖类, saccharide] }
+  - { zh: 单糖, en: monosaccharide }
+  - { zh: 寡糖, en: oligosaccharide, aliases: [低聚糖] }
+  - { zh: 二糖, en: disaccharide, aliases: [双糖] }
+  - { zh: 多糖, en: polysaccharide }
+  - { zh: 醛糖, en: aldose }
+  - { zh: 酮糖, en: ketose }
+  - { zh: 异头碳, en: anomeric carbon }
+  - { zh: 异头物, en: anomer, aliases: [anomers, 端基异构体] }
+  - { zh: 吡喃糖, en: pyranose }
+  - { zh: 呋喃糖, en: furanose }
+  - { zh: Haworth 投影式, en: Haworth projection, aliases: [哈沃斯透视式] }
+  - { zh: 变旋现象, en: mutarotation, aliases: [变旋] }
+  - { zh: 异头效应, en: anomeric effect, aliases: [端基效应] }
+  - { zh: 还原糖, en: reducing sugar }
+  - { zh: 糖脎, en: osazone }
+  - { zh: Kiliani–Fischer 合成, en: Kiliani–Fischer synthesis, aliases: [递升反应] }
+  - { zh: Wohl 降解, en: Wohl degradation }
+  - { zh: Ruff 降解, en: Ruff degradation }
+  - { zh: 糖苷, en: glycoside, aliases: [glycosides] }
+  - { zh: 糖苷键, en: glycosidic bond, aliases: [苷键, glycosidic linkage] }
+  - { zh: 糖苷化反应, en: glycosylation, aliases: [糖基化反应, 糖苷化], scope: ["6"] }
+  - { zh: 糖基供体, en: glycosyl donor }
+  - { zh: 糖基受体, en: glycosyl acceptor }
+  - { zh: 氨基酸, en: amino acid, aliases: [α-氨基酸, amino acids, α-amino acid] }
+  - { zh: Strecker 合成, en: Strecker synthesis, aliases: [Strecker 反应, Strecker reaction] }
+  - { zh: 肽键, en: peptide bond, aliases: [peptide bonds] }
+  - { zh: Edman 降解, en: Edman degradation }
+  - { zh: 偶联试剂, en: coupling reagent, aliases: [肽缩合剂, coupling reagents] }
+  - { zh: 固相肽合成, en: solid-phase peptide synthesis, aliases: [SPPS, 固相合成] }
+  - { zh: 天然化学连接, en: native chemical ligation, aliases: [NCL, 自然化学连接] }
+  - { zh: 生物正交反应, en: bioorthogonal reaction, aliases: [生物正交化学, bioorthogonal chemistry] }
+  - { zh: 核苷, en: nucleoside, aliases: [nucleosides] }
+  - { zh: 核苷酸, en: nucleotide, aliases: [nucleotides] }
+  - { zh: 磷酸二酯键, en: phosphodiester bond, aliases: [phosphodiester linkage] }
+  - { zh: 亚磷酰胺法, en: phosphoramidite method, aliases: [亚磷酰胺固相合成, phosphoramidite synthesis] }
+  - { zh: 配位饱和, en: coordinatively saturated }
+  - { zh: α 碳, en: alpha carbon, aliases: [α-碳], scope: ["6"] }
+  - { zh: α-氢, en: alpha hydrogen, aliases: [α 氢], scope: ["6"] }

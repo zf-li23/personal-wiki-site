@@ -1,0 +1,43 @@
+"""Benzyne mechanism (elimination-addition) for chlorobenzene and amide ion in liquid ammonia.
+(1) Amide removes the H ortho to Cl; the aryl anion (lone pair in an sp2 orbital in the ring plane)
+expels chloride to give benzyne. (2) Amide adds to either benzyne carbon; the new aryl anion takes a
+proton from ammonia. The starred carbon (14C label, C1 of the chlorobenzene) ends up carrying NH2 in
+half of the product and next to NH2 in the other half."""
+
+exec(open("helpers.txt").read())
+
+s = Scheme()
+ar = s.molecule("[Cl:9][C:1]1=[CH:2]C=CC=C1", at=(0, 0), show_h=[2], rotate=0)
+s.label(ar.atom(1), "*", angle=200, dist=0.45)
+h = ar.h(2)
+nh2 = s.molecule("[NH2-]", at=h.xy + (0.3, 1.6), lone_pairs=True)
+s.curly(nh2.atom(0), h, bend=0.5)
+s.curly(bond_to(ar, 2, h), ar.atom(2), bend=-1.2)
+s.arrow((2.6, 0), (3.8, 0), above=r"$-$NH$_3$")
+an = s.molecule("[Cl:9][C:1]1=[C-:2]C=CC=C1", at=(5.6, 0), lone_pairs=[2])
+s.curly(an.atom(2), an.bond(1, 2), bend=0.9)
+s.curly(an.bond(1, 9), an.atom(9), bend=0.6)
+s.arrow((7.4, 0), (8.6, 0), above=r"$-$Cl$^-$")
+bz = s.molecule("[C:1]1#[C:2]C=CC=C1", at=(10.0, 0))
+s.label(bz.atom(1), "*", angle=200, dist=0.45)
+s.text((10.0, -1.6), "benzyne", size=10)
+s.draw()
+
+s = Scheme()
+bz = s.molecule("[C:1]1#[C:2]C=CC=C1", at=(0, 0))
+s.label(bz.atom(1), "*", angle=200, dist=0.45)
+nh2 = s.molecule("[NH2-]", at=bz.xy(2) + (1.2, 0.9), lone_pairs=True)
+s.curly(nh2.atom(0), bz.atom(2), bend=0.3)
+s.curly(bz.bond(1, 2), bz.atom(1), bend=0.9)
+s.arrow((1.9, 0), (3.1, 0))
+an = s.molecule("N[C:2]1=[C-:1]C=CC=C1", at=(4.8, 0), lone_pairs=[1])
+s.label(an.atom(1), "*", angle=200, dist=0.6)
+s.arrow((6.6, 0), (7.8, 0), above=r"NH$_3$")
+p1 = s.molecule("Nc1[cH:1]cccc1", at=(9.2, 0))
+s.label(p1.atom(1), "*", angle=270, dist=0.45)
+s.text((9.2, -1.6), "NH2 next to C*", size=9)
+s.text((10.8, 0), "+", size=12)
+p2 = s.molecule("N[c:1]1ccccc1", at=(12.3, 0))
+s.label(p2.atom(1), "*", angle=200, dist=0.45)
+s.text((12.3, -1.6), "NH2 on C*", size=9)
+s.draw()

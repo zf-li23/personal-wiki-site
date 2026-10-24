@@ -1,0 +1,21 @@
+# Shared helper for the curved-arrow figures of this chapter (loaded with exec): place a structure at
+# hand-chosen coordinates, so that cyclic transition-state arrangements can be drawn as rings.
+import numpy as np
+import matplotlib.pyplot as plt
+from wikichem import Scheme
+
+
+def fixed(s, smiles, coords, at=(0, 0), lone_pairs=()):
+    """Place a structure at given atom coordinates (SMILES atom order, explicit [H] kept, in bond lengths)."""
+    return s.molecule(smiles, at=at, coords=coords, lone_pairs=list(lone_pairs))
+
+
+def mid(placed, j, k):
+    return (placed.xy(j) + placed.xy(k)) / 2
+
+
+def ring(n, r=None, start=90.0, centre=(0, 0)):
+    """Vertices of a regular n-gon with unit edges, counter-clockwise from angle `start`."""
+    r = r or 1 / (2 * np.sin(np.pi / n))
+    t = np.radians(start + 360.0 / n * np.arange(n))
+    return [(centre[0] + r * np.cos(a), centre[1] + r * np.sin(a)) for a in t]

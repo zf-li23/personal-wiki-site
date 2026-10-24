@@ -1,0 +1,91 @@
+# Shared drawing helpers for the orbital figures of this chapter (loaded by the plot scripts with exec).
+# p orbitals are drawn as two lobes; the lobe of positive phase is shaded, the other is left open.
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Ellipse, FancyArrowPatch
+
+PHASE = "#5b8bd9"  # fill of the positive lobe (the same in both themes)
+OPEN = "white"  # fill of the negative lobe (the renderer darkens it in the dark theme)
+
+
+def ink():
+    return plt.rcParams["text.color"]
+
+
+def porb(ax, xy, c, angle=90.0, scale=0.55, alpha=1.0, z=3):
+    """A p orbital at xy with coefficient c, its positive lobe pointing along `angle` (degrees) when c > 0."""
+    if abs(c) < 1e-6:
+        return
+    x, y = xy
+    r = scale * (0.35 + 0.65 * min(abs(c), 1.0) / 0.7)
+    t = np.radians(angle)
+    d = np.array([np.cos(t), np.sin(t)])
+    for sign in (1, -1):
+        cx, cy = np.array([x, y]) + sign * d * r * 0.5
+        filled = (sign > 0) == (c > 0)
+        ax.add_patch(Ellipse((cx, cy), width=r * 0.62, height=r, angle=angle - 90, facecolor=PHASE if filled else OPEN,
+                             edgecolor=ink(), lw=1.0, alpha=alpha, zorder=z))
+
+
+def sorb(ax, xy, c, scale=0.3, z=3):
+    """An s orbital (hydrogen 1s) with coefficient sign c."""
+    ax.add_patch(plt.Circle(xy, scale, facecolor=PHASE if c > 0 else OPEN, edgecolor=ink(), lw=1.0, zorder=z))
+
+
+def atom_chain(ax, pts, lw=1.4, z=2, dashed=()):
+    """Sigma framework through the given atom positions; segments whose index is in `dashed` are drawn dashed."""
+    for i in range(len(pts) - 1):
+        (x0, y0), (x1, y1) = pts[i], pts[i + 1]
+        ax.plot([x0, x1], [y0, y1], color=ink(), lw=lw, zorder=z, ls=(0, (3, 2.5)) if i in dashed else "-")
+
+
+def bond_hint(ax, a, b, good=True, z=4):
+    """Dotted line marking a bonding (good=True) or antibonding (cross) interaction between two lobes."""
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    ax.plot(*zip(a, b), color=ink(), lw=1.1, ls=(0, (1, 2)), zorder=z)
+    m = (a + b) / 2
+    if not good:
+        s = 0.12
+        ax.plot([m[0] - s, m[0] + s], [m[1] - s, m[1] + s], color="#d1495b", lw=2, zorder=z + 1)
+        ax.plot([m[0] - s, m[0] + s], [m[1] + s, m[1] - s], color="#d1495b", lw=2, zorder=z + 1)
+
+
+def turn(ax, xy, clockwise=True, r=0.42, z=5):
+    """A curved arrow showing the rotation of a terminal group about the bond axis."""
+    x, y = xy
+    a0, a1 = (150, 30) if clockwise else (30, 150)
+    p0 = (x + r * np.cos(np.radians(a0)), y + r * np.sin(np.radians(a0)))
+    p1 = (x + r * np.cos(np.radians(a1)), y + r * np.sin(np.radians(a1)))
+    ax.add_patch(FancyArrowPatch(p0, p1, connectionstyle=f"arc3,rad={-0.5 if clockwise else 0.5}", arrowstyle="-|>",
+                                 mutation_scale=10, color=ink(), lw=1.2, zorder=z))
+
+
+def level(ax, x, e, w=0.5, n=0, label=None, color=None, lw=2.0, side="right", fs=9):
+    """An energy level centred at x with n electrons (0, 1, 2) drawn as half-arrows."""
+    ax.plot([x - w / 2, x + w / 2], [e, e], color=color or ink(), lw=lw)
+    for k, up in enumerate([True, False][:n]):
+        dx = (-0.07 if n == 2 else 0.0) + 0.14 * k
+        y0, y1 = (e - 0.22, e + 0.22) if up else (e + 0.22, e - 0.22)
+        ax.annotate("", xy=(x + dx, y1), xytext=(x + dx, y0), arrowprops=dict(arrowstyle="-|>", lw=1.0, color=ink(), mutation_scale=7))
+    if label:
+        ax.text(x + (w / 2 + 0.08 if side == "right" else -w / 2 - 0.08), e, label, ha="left" if side == "right" else "right",
+                va="center", fontsize=fs, color=ink())
+
+
+def huckel_chain(n):
+    """Hueckel pi MOs of a linear chain of n carbons: energies in units of beta (alpha = 0, beta = -1), coefficient columns."""
+    H = np.zeros((n, n))
+    for i in range(n - 1):
+        H[i, i + 1] = H[i + 1, i] = -1.0
+    e, v = np.linalg.eigh(H)
+    for k in range(n):  # fix the arbitrary sign: first coefficient positive
+        if v[0, k] < 0:
+            v[:, k] = -v[:, k]
+    return e, v
+
+
+def clean(ax, xlim, ylim):
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
+    ax.set_aspect("equal")
+    ax.axis("off")
