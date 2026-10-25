@@ -6334,3 +6334,46 @@ terms:
   - { zh: 溶原性, en: lysogeny, aliases: [溶原] }
   - { zh: 原噬菌体, en: prophage }
   - { zh: 热力学模型, en: thermodynamic model, aliases: [启动子占据率的热力学模型], scope: ["7"] }
+  - { zh: 分解代谢, en: catabolism }
+  - { zh: 合成代谢, en: anabolism, aliases: [biosynthesis] }
+  - { zh: 生物能学, en: bioenergetics }
+  - { zh: 生化标准态, en: biochemical standard state }
+  - { zh: 质量作用比, en: mass-action ratio }
+  - { zh: 磷酸化势, en: phosphorylation potential }
+  - { zh: 高能化合物, en: high-energy compound, aliases: [high-energy compounds] }
+  - { zh: 磷酰基转移势, en: phosphoryl group transfer potential }
+  - { zh: 核苷二磷酸激酶, en: nucleoside diphosphate kinase }
+  - { zh: 腺苷酸激酶, en: adenylate kinase, aliases: [myokinase] }
+  - { zh: 磷酸肌酸, en: phosphocreatine, aliases: [creatine phosphate] }
+  - { zh: 烟酰胺腺嘌呤二核苷酸, en: nicotinamide adenine dinucleotide, aliases: [NAD, NAD+, NADH] }
+  - { zh: 烟酰胺腺嘌呤二核苷酸磷酸, en: nicotinamide adenine dinucleotide phosphate, aliases: [NADP, NADP+, NADPH] }
+  - { zh: 黄素单核苷酸, en: flavin mononucleotide, aliases: [FMN] }
+  - { zh: 黄素腺嘌呤二核苷酸, en: flavin adenine dinucleotide, aliases: [FAD, FADH2] }
+  - { zh: 黄素蛋白, en: flavoprotein, aliases: [flavoproteins] }
+  - { zh: 维生素, en: vitamin, aliases: [vitamins] }
+  - { zh: 辅酶 A, en: coenzyme A, aliases: [CoA] }
+  - { zh: 硫辛酸, en: lipoate, aliases: [lipoic acid, lipoamide] }
+  - { zh: 硫胺素焦磷酸, en: thiamine pyrophosphate, aliases: [TPP, thiamine diphosphate] }
+  - { zh: 磷酸吡哆醛, en: pyridoxal phosphate, aliases: [PLP] }
+  - { zh: 生物素, en: biotin }
+  - { zh: 四氢叶酸, en: tetrahydrofolate, aliases: [THF] }
+  - { zh: S-腺苷甲硫氨酸, en: S-adenosylmethionine, aliases: [SAM, AdoMet] }
+  - { zh: 钴胺素, en: cobalamin, aliases: [vitamin B12, coenzyme B12] }
+  - { zh: 代谢途径, en: metabolic pathway, aliases: [metabolic pathways] }
+  - { zh: 代谢通量, en: metabolic flux }
+  - { zh: 定向步骤, en: committed step }
+  - { zh: 底物循环, en: substrate cycle, aliases: [futile cycle, 无效循环] }
+  - { zh: 能荷, en: energy charge }
+  - { zh: 代谢控制分析, en: metabolic control analysis, aliases: [MCA] }
+  - { zh: 通量控制系数, en: flux control coefficient }
+  - { zh: 弹性系数, en: elasticity coefficient, aliases: [elasticity], scope: ["7"] }
+  - { zh: 糖酵解, en: glycolysis }
+  - { zh: 底物水平磷酸化, en: substrate-level phosphorylation }
+  - { zh: 发酵, en: fermentation }
+  - { zh: 乳酸发酵, en: lactic acid fermentation }
+  - { zh: 乙醇发酵, en: alcoholic fermentation, aliases: [alcohol fermentation, 酒精发酵] }
+  - { zh: Pasteur 效应, en: Pasteur effect, aliases: [巴斯德效应] }
+  - { zh: Warburg 效应, en: Warburg effect, aliases: [aerobic glycolysis, 瓦尔堡效应] }
+  - { zh: 磷酸戊糖途径, en: pentose phosphate pathway, aliases: [phosphogluconate pathway, hexose monophosphate shunt] }
+  - { zh: 转酮醇酶, en: transketolase }
+  - { zh: 转醛醇酶, en: transaldolase }
