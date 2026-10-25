@@ -541,12 +541,13 @@ describe('cross-page linking', () => {
     assert.match(s.html('1.3.3'), /1\.3\.2\/#def-2\.2\.1" class="concept-ref"/);
     assert.equal((s.html('1.3.4').match(/class="concept-ref"/g) ?? []).length, 2);
   });
-  it('reads a short stem as an abbreviation plural only when it is written in capitals', async () => {
+  it('matches an English abbreviation only in capitals, so gene names in italics are not definitions', async () => {
     concepts.push({ id: 'continuous-integration', zh: '持续集成', en: 'continuous integration', aliases: ['CI'] });
+    concepts.push({ id: 'glycosaminoglycan', zh: '糖胺聚糖', en: 'glycosaminoglycan', aliases: ['GAG'] });
     const s = await site({
-      '1.3.2': 'en:## 2.1. A\n\nThe *cis* isomer.\n\nTwo **CIs** run.',
+      '1.3.2': 'en:## 2.1. A\n\nThe *cis* isomer and the *gag* gene.\n\nTwo **CIs** run.',
     });
-    concepts.pop();
+    concepts.splice(-2);
     assert.ok(!s.html('1.3.2').includes('wiki-dfn'));
     assert.match(s.html('1.3.2'), /data-concept="continuous-integration"/);
   });

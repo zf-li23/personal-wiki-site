@@ -107,14 +107,8 @@ function nameKeys(text: string, lang: Lang): string[] {
   const keys = [l];
   // Any one word may be plural: "groups", "discontinuities of the first kind".
   const words = l.split(' ');
-  const written = t.split(' ');
   words.forEach((w, i) => {
-    for (const s of singulars(w)) {
-      // A one- or two-letter stem is an abbreviation's plural only when written in capitals ("CIs"):
-      // otherwise "cis" would be read as the plural of the alias CI.
-      if (s.length <= 2 && written[i].slice(0, s.length) !== written[i].slice(0, s.length).toUpperCase()) continue;
-      keys.push([...words.slice(0, i), s, ...words.slice(i + 1)].join(' '));
-    }
+    for (const s of singulars(w)) keys.push([...words.slice(0, i), s, ...words.slice(i + 1)].join(' '));
   });
   return keys;
 }
@@ -129,16 +123,30 @@ function singulars(w: string): string[] {
   return out;
 }
 
+/** An abbreviation in capitals (letters, digits, hyphens; no lower case): "CI", "GAG", "V(D)J" is not one. */
+function isAbbreviation(name: string): boolean {
+  return /^[A-Z0-9-]*[A-Z][A-Z0-9-]*$/.test(name);
+}
+
 /** Concepts by name in one language (only those in scope for the page, when given). */
 function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: string) => Concept | undefined {
   const map = new Map<string, Concept>();
+  // English abbreviations (CI, GAL, GAG, PCR) match only as written, in capitals: lower-case italics
+  // are gene names and Latin words (*gal*, *gag*, *cis*), not the abbreviation.
+  const abbreviations = new Map<string, Concept>();
   // Scoped concepts last, so that inside their scope they win over an unscoped homonym.
   const ordered = [...concepts].sort((a, b) => Number(!!a.scope?.length) - Number(!!b.scope?.length));
   for (const c of ordered) {
     if (pageId && !inScope(c, pageId)) continue;
-    for (const n of conceptNames(c, lang)) map.set(nameKeys(n, lang)[0], c);
+    for (const n of conceptNames(c, lang)) {
+      if (lang === 'en' && isAbbreviation(n)) abbreviations.set(n, c);
+      else map.set(nameKeys(n, lang)[0], c);
+    }
   }
   return (text) => {
+    const t = text.trim();
+    const abbreviation = abbreviations.get(t) ?? (t.endsWith('s') ? abbreviations.get(t.slice(0, -1)) : undefined);
+    if (abbreviation) return abbreviation;
     for (const k of nameKeys(text, lang)) {
       const c = map.get(k);
       if (c) return c;

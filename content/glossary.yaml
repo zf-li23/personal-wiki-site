@@ -2896,7 +2896,7 @@ terms:
   - { zh: 只读存储器, en: read-only memory, aliases: [ROM] }
   - { zh: 可编程逻辑阵列, en: programmable logic array, aliases: [PLA] }
   - { zh: 可编程阵列逻辑, en: programmable array logic, aliases: [PAL] }
-  - { zh: 通用阵列逻辑, en: generic array logic, aliases: [GAL] }
+  - { zh: 通用阵列逻辑, en: generic array logic, aliases: [GAL], scope: ["4"] }
   - { zh: 复杂可编程逻辑器件, en: complex programmable logic device, aliases: [CPLD] }
   - { zh: 现场可编程门阵列, en: field-programmable gate array, aliases: [FPGA] }
   - { zh: 查找表, en: lookup table, aliases: [LUT, look-up table], scope: ["4.9", "4.10"] }
@@ -6147,3 +6147,156 @@ terms:
   - { zh: 酶联免疫吸附测定, en: ELISA, aliases: [enzyme-linked immunosorbent assay] }
   - { zh: 模体, en: motif, aliases: [fold, 折叠模式, 超二级结构, protein motif], scope: ["7"] }
   - { zh: 解离常数, en: dissociation constant, aliases: [K_d], scope: ["7"] }
+  - { zh: 半保留复制, en: semiconservative replication }
+  - { zh: 复制叉, en: replication fork }
+  - { zh: 复制起点, en: origin of replication, aliases: [replication origin, 复制原点] }
+  - { zh: 复制子, en: replicon }
+  - { zh: 前导链, en: leading strand }
+  - { zh: 后随链, en: lagging strand, aliases: [滞后链] }
+  - { zh: 冈崎片段, en: Okazaki fragment, aliases: [Okazaki fragments] }
+  - { zh: 引发酶, en: primase }
+  - { zh: DNA 聚合酶, en: DNA polymerase, aliases: [DNA polymerases] }
+  - { zh: 校对, en: proofreading, scope: ["7"] }
+  - { zh: 外切核酸酶, en: exonuclease }
+  - { zh: 内切核酸酶, en: endonuclease }
+  - { zh: 持续合成能力, en: processivity }
+  - { zh: 滑动夹, en: sliding clamp }
+  - { zh: 夹子装载复合物, en: clamp loader }
+  - { zh: 解旋酶, en: helicase }
+  - { zh: 单链 DNA 结合蛋白, en: single-stranded DNA-binding protein, aliases: [SSB] }
+  - { zh: 复制体, en: replisome }
+  - { zh: 复制起点许可, en: origin licensing }
+  - { zh: 前复制复合物, en: prereplicative complex, aliases: [pre-RC] }
+  - { zh: 端粒酶, en: telomerase }
+  - { zh: DNA 损伤, en: DNA lesion, aliases: [DNA 损伤位点] }
+  - { zh: 突变, en: mutation, aliases: [mutations], scope: ["7"] }
+  - { zh: 转换, en: transition, scope: ["7"] }
+  - { zh: 颠换, en: transversion }
+  - { zh: 碱基切除修复, en: base-excision repair, aliases: [BER] }
+  - { zh: DNA 糖基化酶, en: DNA glycosylase }
+  - { zh: AP 位点, en: AP site, aliases: [无碱基位点, abasic site] }
+  - { zh: 核苷酸切除修复, en: nucleotide-excision repair, aliases: [NER] }
+  - { zh: 切除核酸酶, en: excinuclease }
+  - { zh: 转录偶联修复, en: transcription-coupled repair }
+  - { zh: 错配修复, en: mismatch repair, aliases: [MMR] }
+  - { zh: 非同源末端连接, en: nonhomologous end joining, aliases: [NHEJ] }
+  - { zh: 跨损伤合成, en: translesion synthesis, aliases: [TLS] }
+  - { zh: SOS 反应, en: SOS response }
+  - { zh: 同源重组, en: homologous recombination }
+  - { zh: 位点特异性重组, en: site-specific recombination }
+  - { zh: Chi 位点, en: Chi site }
+  - { zh: D 环, en: displacement loop, aliases: [D loop, 置换环] }
+  - { zh: Holliday 连接, en: Holliday junction, aliases: [Holliday 结构, Holliday intermediate] }
+  - { zh: 分支迁移, en: branch migration }
+  - { zh: Holliday 连接解离酶, en: Holliday junction resolvase, aliases: [解离酶, resolvase], scope: ["7"] }
+  - { zh: 合成依赖的链退火, en: synthesis-dependent strand annealing, aliases: [SDSA] }
+  - { zh: 双 Holliday 连接, en: double Holliday junction }
+  - { zh: 位点特异性重组酶, en: site-specific recombinase }
+  - { zh: V(D)J 重排, en: V(D)J recombination, aliases: [V(D)J 重组] }
+  - { zh: 重组信号序列, en: recombination signal sequence }
+  - { zh: 转座子, en: transposon, aliases: [transposons, transposable element, 转座元件] }
+  - { zh: DNA 转座子, en: DNA transposon, aliases: [DNA transposons] }
+  - { zh: 反转录转座子, en: retrotransposon, aliases: [retrotransposons] }
+  - { zh: 靶位点重复, en: target-site duplication }
+  - { zh: 转座, en: transposition, scope: ["7"] }
+  - { zh: 酶, en: enzyme, aliases: [enzymes] }
+  - { zh: 核酶, en: ribozyme, aliases: [ribozymes] }
+  - { zh: 全酶, en: holoenzyme }
+  - { zh: 脱辅基酶, en: apoenzyme, aliases: [酶蛋白] }
+  - { zh: EC 编号, en: EC number, aliases: [酶学委员会编号, Enzyme Commission number] }
+  - { zh: 底物, en: substrate, aliases: [substrates], scope: ["7"] }
+  - { zh: 结合能, en: binding energy, scope: ["7"] }
+  - { zh: 过渡态类似物, en: transition-state analog, aliases: [transition-state analogs] }
+  - { zh: 广义酸碱催化, en: general acid–base catalysis, aliases: [一般酸碱催化, general acid-base catalysis] }
+  - { zh: 共价催化, en: covalent catalysis }
+  - { zh: 金属离子催化, en: metal ion catalysis }
+  - { zh: 丝氨酸蛋白酶, en: serine protease, aliases: [serine proteases] }
+  - { zh: 催化三联体, en: catalytic triad }
+  - { zh: 氧负离子穴, en: oxyanion hole, aliases: [氧阴离子洞] }
+  - { zh: 初速度, en: initial velocity, aliases: [初速率, initial rate], scope: ["7"] }
+  - { zh: 同工酶, en: isozyme, aliases: [isozymes, isoenzyme, 同工酶类] }
+  - { zh: 序列机制, en: sequential mechanism, aliases: [顺序机制] }
+  - { zh: 乒乓机制, en: ping-pong mechanism, aliases: [双置换机制, double-displacement mechanism] }
+  - { zh: 前稳态动力学, en: pre-steady-state kinetics }
+  - { zh: 酶抑制剂, en: enzyme inhibitor, aliases: [enzyme inhibitors] }
+  - { zh: 抑制常数, en: inhibition constant, aliases: [inhibition constants, K_I] }
+  - { zh: 竞争性抑制, en: competitive inhibition }
+  - { zh: 反竞争性抑制, en: uncompetitive inhibition }
+  - { zh: 混合型抑制, en: mixed inhibition }
+  - { zh: 非竞争性抑制, en: noncompetitive inhibition }
+  - { zh: 不可逆抑制剂, en: irreversible inhibitor, aliases: [irreversible inhibitors] }
+  - { zh: 自杀性失活剂, en: suicide inactivator, aliases: [自杀性抑制剂, mechanism-based inactivator, suicide inactivators] }
+  - { zh: 调节酶, en: regulatory enzyme, aliases: [regulatory enzymes] }
+  - { zh: 变构酶, en: allosteric enzyme, aliases: [别构酶, allosteric enzymes] }
+  - { zh: 变构调节物, en: allosteric modulator, aliases: [别构效应物, allosteric effector] }
+  - { zh: 反馈抑制, en: feedback inhibition }
+  - { zh: 蛋白激酶, en: protein kinase, aliases: [protein kinases] }
+  - { zh: 蛋白磷酸酶, en: protein phosphatase, aliases: [protein phosphatases, phosphoprotein phosphatase] }
+  - { zh: 酶原, en: zymogen, aliases: [zymogens, proenzyme] }
+  - { zh: 调节级联, en: regulatory cascade, aliases: [级联放大, enzyme cascade] }
+  - { zh: 零级超敏, en: zero-order ultrasensitivity, aliases: [Goldbeter–Koshland 开关] }
+  - { zh: 氨基糖, en: amino sugar, aliases: [amino sugars] }
+  - { zh: 糖醛酸, en: uronic acid, aliases: [uronic acids] }
+  - { zh: 唾液酸, en: sialic acid, aliases: [sialic acids, N-乙酰神经氨酸, Neu5Ac] }
+  - { zh: 糖化, en: glycation, aliases: [非酶糖基化, nonenzymatic glycosylation] }
+  - { zh: 还原端, en: reducing end }
+  - { zh: 同多糖, en: homopolysaccharide, aliases: [homopolysaccharides] }
+  - { zh: 杂多糖, en: heteropolysaccharide, aliases: [heteropolysaccharides] }
+  - { zh: 淀粉, en: starch }
+  - { zh: 直链淀粉, en: amylose }
+  - { zh: 支链淀粉, en: amylopectin }
+  - { zh: 糖原, en: glycogen }
+  - { zh: 纤维素, en: cellulose }
+  - { zh: 几丁质, en: chitin, aliases: [甲壳素] }
+  - { zh: 肽聚糖, en: peptidoglycan, aliases: [胞壁质, murein] }
+  - { zh: 糖胺聚糖, en: glycosaminoglycan, aliases: [glycosaminoglycans, GAG, 黏多糖] }
+  - { zh: 糖缀合物, en: glycoconjugate, aliases: [glycoconjugates, 糖复合物] }
+  - { zh: 蛋白聚糖, en: proteoglycan, aliases: [proteoglycans] }
+  - { zh: 糖蛋白, en: glycoprotein, aliases: [glycoproteins] }
+  - { zh: N-连接糖链, en: N-linked glycan, aliases: [N-linked, N-糖链, N-glycan] }
+  - { zh: O-连接糖链, en: O-linked glycan, aliases: [O-linked, O-糖链, O-glycan] }
+  - { zh: 糖脂, en: glycolipid, aliases: [glycolipids] }
+  - { zh: 脂多糖, en: lipopolysaccharide, aliases: [lipopolysaccharides, LPS] }
+  - { zh: 糖生物学, en: glycobiology }
+  - { zh: 糖密码, en: sugar code }
+  - { zh: 凝集素, en: lectin, aliases: [lectins] }
+  - { zh: 脱氧核糖核酸, en: deoxyribonucleic acid, aliases: [DNA] }
+  - { zh: 核糖核酸, en: ribonucleic acid, aliases: [RNA] }
+  - { zh: Chargaff 规则, en: "Chargaff's rules", aliases: [查加夫法则, Chargaff 法则] }
+  - { zh: 碱基对, en: base pair, aliases: [base pairs, bp] }
+  - { zh: 双螺旋, en: double helix, aliases: [DNA 双螺旋] }
+  - { zh: 大沟, en: major groove }
+  - { zh: 小沟, en: minor groove }
+  - { zh: B 型 DNA, en: B-DNA, aliases: [B-form DNA] }
+  - { zh: A 型 DNA, en: A-DNA, aliases: [A-form DNA] }
+  - { zh: Z 型 DNA, en: Z-DNA, aliases: [Z-form DNA] }
+  - { zh: 回文序列, en: palindrome, aliases: [回文结构, palindromes], scope: ["7"] }
+  - { zh: 发夹结构, en: hairpin, aliases: [发夹, hairpins, stem-loop], scope: ["7"] }
+  - { zh: 十字形结构, en: cruciform }
+  - { zh: Hoogsteen 配对, en: Hoogsteen pairing, aliases: [Hoogsteen base pair] }
+  - { zh: G-四链体, en: G-quadruplex, aliases: [G-quadruplexes, G 四联体, G tetraplex] }
+  - { zh: 解链温度, en: melting temperature, aliases: [熔解温度, T_m], scope: ["7"] }
+  - { zh: 脱氨基作用, en: deamination, aliases: [脱氨] }
+  - { zh: 脱嘌呤, en: depurination }
+  - { zh: 嘧啶二聚体, en: pyrimidine dimer, aliases: [pyrimidine dimers, 胸腺嘧啶二聚体] }
+  - { zh: DNA 甲基化, en: DNA methylation }
+  - { zh: 脂质, en: lipid, aliases: [lipids, 脂类] }
+  - { zh: 脂肪酸, en: fatty acid, aliases: [fatty acids] }
+  - { zh: 蜡, en: wax, aliases: [waxes] }
+  - { zh: 甘油磷脂, en: glycerophospholipid, aliases: [glycerophospholipids, 磷酸甘油酯, phosphoglyceride] }
+  - { zh: 磷脂酸, en: phosphatidic acid }
+  - { zh: 缩醛磷脂, en: plasmalogen, aliases: [plasmalogens] }
+  - { zh: 鞘脂, en: sphingolipid, aliases: [sphingolipids] }
+  - { zh: 神经酰胺, en: ceramide, aliases: [ceramides] }
+  - { zh: 鞘磷脂, en: sphingomyelin, aliases: [sphingomyelins] }
+  - { zh: 脑苷脂, en: cerebroside, aliases: [cerebrosides] }
+  - { zh: 神经节苷脂, en: ganglioside, aliases: [gangliosides] }
+  - { zh: 固醇, en: sterol, aliases: [sterols, 甾醇] }
+  - { zh: 胆固醇, en: cholesterol }
+  - { zh: 胆汁酸, en: bile acid, aliases: [bile acids, 胆汁酸盐, bile salts] }
+  - { zh: 类二十烷酸, en: eicosanoid, aliases: [eicosanoids, 二十碳烷酸类] }
+  - { zh: 前列腺素, en: prostaglandin, aliases: [prostaglandins, PG] }
+  - { zh: 类固醇激素, en: steroid hormone, aliases: [steroid hormones, 甾体激素] }
+  - { zh: 类异戊二烯, en: isoprenoid, aliases: [isoprenoids, 萜类, terpenoid, terpenoids] }
+  - { zh: 糖基化, en: glycosylation, scope: ["7"] }
+  - { zh: 杂交, en: hybridization, aliases: [核酸杂交, nucleic acid hybridization], scope: ["7"] }
