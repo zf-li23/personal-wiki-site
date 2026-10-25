@@ -6377,3 +6377,51 @@ terms:
   - { zh: 磷酸戊糖途径, en: pentose phosphate pathway, aliases: [phosphogluconate pathway, hexose monophosphate shunt] }
   - { zh: 转酮醇酶, en: transketolase }
   - { zh: 转醛醇酶, en: transaldolase }
+  - { zh: RNA 剪接, en: RNA splicing, aliases: [剪接, splicing] }
+  - { zh: 前体 mRNA, en: pre-mRNA, aliases: [mRNA 前体, hnRNA] }
+  - { zh: 5′ 剪接位点, en: 5′ splice site, aliases: [供体位点, donor site] }
+  - { zh: 3′ 剪接位点, en: 3′ splice site, aliases: [受体位点, acceptor site] }
+  - { zh: 套索, en: lariat, aliases: [套索结构] }
+  - { zh: 核小核糖核蛋白, en: small nuclear ribonucleoprotein, aliases: [snRNP, 小核核糖核蛋白] }
+  - { zh: 剪接体, en: spliceosome }
+  - { zh: 外显子定义, en: exon definition }
+  - { zh: 内含子定义, en: intron definition }
+  - { zh: 外显子连接复合物, en: exon junction complex, aliases: [EJC] }
+  - { zh: 可变剪接, en: alternative splicing, aliases: [选择性剪接] }
+  - { zh: 外显子剪接增强子, en: exonic splicing enhancer, aliases: [ESE] }
+  - { zh: 外显子剪接沉默子, en: exonic splicing silencer }
+  - { zh: SR 蛋白, en: SR protein, aliases: [SR proteins] }
+  - { zh: 环状 RNA, en: circular RNA, aliases: [circRNA] }
+  - { zh: 自剪接内含子, en: self-splicing intron, aliases: [self-splicing introns] }
+  - { zh: I 类内含子, en: group I intron, aliases: [group I introns] }
+  - { zh: II 类内含子, en: group II intron, aliases: [group II introns] }
+  - { zh: 5′ 帽, en: 5′ cap, aliases: [帽子结构] }
+  - { zh: 多聚腺苷酸化, en: polyadenylation, aliases: [加尾] }
+  - { zh: poly(A) 聚合酶, en: poly(A) polymerase, aliases: [PAP, 多聚腺苷酸聚合酶] }
+  - { zh: 加尾信号, en: polyadenylation signal, aliases: [多聚腺苷酸化信号, poly(A) signal, PAS] }
+  - { zh: 共转录加工, en: cotranscriptional processing }
+  - { zh: torpedo 模型, en: torpedo model, aliases: [鱼雷模型] }
+  - { zh: 核仁小 RNA, en: small nucleolar RNA, aliases: [snoRNA] }
+  - { zh: 核糖核酸酶 P, en: RNase P }
+  - { zh: 反式剪接, en: trans-splicing }
+  - { zh: RNA 编辑, en: RNA editing }
+  - { zh: mRNA 半衰期, en: mRNA half-life }
+  - { zh: 去腺苷酸化, en: deadenylation }
+  - { zh: 去帽, en: decapping }
+  - { zh: RNA 外切体, en: RNA exosome, aliases: [外切体] }
+  - { zh: 无义介导的 mRNA 降解, en: nonsense-mediated decay, aliases: [NMD, nonsense-mediated mRNA decay] }
+  - { zh: P 小体, en: processing body, aliases: [P-body, P-bodies, 加工小体] }
+  - { zh: 应激颗粒, en: stress granule, aliases: [stress granules] }
+  - { zh: 富含 AU 元件, en: AU-rich element, aliases: [ARE] }
+  - { zh: 铁反应元件, en: iron-responsive element, aliases: [IRE] }
+  - { zh: RNA 干扰, en: RNA interference, aliases: [RNAi] }
+  - { zh: 小干扰 RNA, en: small interfering RNA, aliases: [siRNA] }
+  - { zh: Argonaute 蛋白, en: Argonaute, aliases: [AGO] }
+  - { zh: 微 RNA, en: microRNA, aliases: [miRNA, 微小 RNA] }
+  - { zh: 种子序列, en: seed sequence, aliases: [种子区, seed region] }
+  - { zh: RNA 诱导的沉默复合物, en: RNA-induced silencing complex, aliases: [miRISC] }
+  - { zh: piRNA, en: PIWI-interacting RNA, aliases: [piRNA, PIWI-interacting RNAs] }
+  - { zh: 长非编码 RNA, en: long noncoding RNA, aliases: [lncRNA] }
+  - { zh: 核糖开关, en: riboswitch, aliases: [riboswitches] }
+  - { zh: 细菌小 RNA, en: small RNA, aliases: [sRNA, small RNAs], scope: ["7"] }
+  - { zh: 分支点, en: branch point, aliases: [branchpoint, 分支位点], scope: ["7"] }
