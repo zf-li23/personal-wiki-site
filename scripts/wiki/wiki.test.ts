@@ -21,7 +21,7 @@ import { type Concept, conceptId } from './glossary.ts';
 import { buildLinkIndex, linkPage } from './linking.ts';
 import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
-import { iconCredits, iconIds, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
+import { iconCredits, iconIds, licenseUrl, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
 import { PLOT_RENDERER } from './paths.ts';
 import { type ContentTree, type PageSource, scanContent, sourceLangOf } from './scan.ts';
 
@@ -301,6 +301,12 @@ describe('plot script lint', () => {
     const diag = new Diagnostics();
     lintPlotScript('/x.py', 'import wikibio as bio\nbio.icon(ax, "servier/no-such-icon")\n', diag);
     assert.match(diag.items[0].message, /not in the library/);
+  });
+  it('links licence deeds, share-alike included', () => {
+    assert.equal(licenseUrl('CC BY-SA 3.0'), 'https://creativecommons.org/licenses/by-sa/3.0/');
+    assert.equal(licenseUrl('CC BY 2.5'), 'https://creativecommons.org/licenses/by/2.5/');
+    assert.equal(licenseUrl('CC0 1.0'), 'https://creativecommons.org/publicdomain/zero/1.0/');
+    assert.equal(licenseUrl('GFDL'), undefined);
   });
   it('flags wikichem internals but not dict.items()', () => {
     const diag = new Diagnostics();

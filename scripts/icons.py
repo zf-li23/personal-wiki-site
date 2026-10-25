@@ -7,6 +7,9 @@
     uv run --with svgelements python scripts/icons.py add phylopic:"Pinus#2" --id phylopic/pine     # 2nd allowed image
     uv run --with svgelements python scripts/icons.py list
 
+Specs: bioicons:Category/Author/name, phylopic:"Taxon[#n]", wikimedia:"File name.svg", or svg:<url> with
+--license/--author/--page. Templates: `colors ID` lists fill colours, `name ID part=#hex|i-j …` names parts.
+
 Sources (see BIO_FIGURES.md §licences): bioicons.com (Servier Medical Art CC BY 3.0/4.0, DBCLS CC BY 4.0,
 CC0 and other CC BY sets; CC BY-SA is refused) and PhyloPic (CC0 / public domain / CC BY only).
 Converted icons go to scripts/wiki/plot/icons/<id>.json and are recorded with author, licence and
@@ -31,14 +34,20 @@ BIOICONS_INDEX = "https://bioicons.com/icons/icons.json"
 BIOICONS_FILE = "https://bioicons.com/icons/{license}/{category}/{author}/{name}.svg"
 PHYLOPIC_API = "https://api.phylopic.org"
 
+# Share-alike is allowed (the figure is then shared under CC BY-SA 4.0, BIO_FIGURES §5); non-commercial
+# and no-derivatives licences are refused.
 ALLOWED = {
     "cc-0": "CC0 1.0", "cc0": "CC0 1.0", "public-domain": "Public domain", "pd": "Public domain",
-    "cc-by-3.0": "CC BY 3.0", "cc-by-4.0": "CC BY 4.0", "mit": "MIT", "bsd": "BSD",
+    "cc-by-3.0": "CC BY 3.0", "cc-by-4.0": "CC BY 4.0", "cc-by-sa-3.0": "CC BY-SA 3.0", "cc-by-sa-4.0": "CC BY-SA 4.0",
+    "mit": "MIT", "bsd": "BSD",
 }
+WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php"
 LICENSE_URL = {
     "CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
     "CC BY 3.0": "https://creativecommons.org/licenses/by/3.0/",
     "CC BY 4.0": "https://creativecommons.org/licenses/by/4.0/",
+    "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
     "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/",
 }
 
@@ -202,7 +211,33 @@ def _num(x):
     return int(x) if x == int(x) else x
 
 
-def convert(svg_text):
+# group ids that editors generate (g123, path456, layer1, svg_2…) carry no meaning
+_AUTO_ID = re.compile(r"^(g|path|layer|svg|rect|circle|ellipse|polygon|polyline|use|text|tspan|defs|clip|mask|"
+                      r"group|shape|object|_x[0-9a-f]+_|[a-z]{0,3})[-_\d.]*$", re.I)
+
+
+def _part_name(el):
+    for key in ("{http://www.inkscape.org/namespaces/inkscape}label", "inkscape:label", "id"):
+        v = el.values.get(key) if key != "id" else el.id
+        if v and not _AUTO_ID.match(str(v)):
+            return re.sub(r"[^a-z0-9]+", "-", str(v).lower()).strip("-")
+    return None
+
+
+def _shapes(node, part=None):
+    """Shapes in document order with the name of their innermost named group (the anatomical part)."""
+    import svgelements as se
+
+    for child in node:
+        if isinstance(child, se.Group):
+            yield from _shapes(child, _part_name(child) or part)
+        elif isinstance(child, se.Shape) and not isinstance(child, se.Image):
+            yield child, _part_name(child) or part
+
+
+def convert(svg_text, drop=None, keep=None):
+    """SVG → {box, items, mono, parts}. Items keep their part name ("p") when the SVG names its groups;
+    ``drop`` / ``keep`` are regexes on part names (leave out labels and leader lines, keep one organ…)."""
     import svgelements as se
 
     svg_text = _flatten_gradients(svg_text)
@@ -211,8 +246,10 @@ def convert(svg_text):
     doc = se.SVG.parse(io.StringIO(svg_text), reify=True)
     items = []
     xs, ys = [], []
-    for el in doc.elements():
-        if not isinstance(el, se.Shape) or isinstance(el, se.Image):
+    for el, part in _shapes(doc):
+        if drop and part and re.search(drop, part):
+            continue
+        if keep and not (part and re.search(keep, part)):
             continue
         if getattr(el, "values", {}).get("visibility") == "hidden" or el.values.get("display") == "none":
             continue
@@ -240,6 +277,8 @@ def convert(svg_text):
         if fill is None and stroke is None:
             continue
         item = {"v": verts, "c": codes}
+        if part:
+            item["p"] = part
         if fill is not None:
             item["f"] = fill.hex[:7]
         if stroke is not None:
@@ -268,7 +307,11 @@ def convert(svg_text):
     if len(colours) > 1:  # silhouettes stay pure black: the dark theme shows them in the ink colour
         _keep_dark_fills(items)
     box = [0, 0, _num((max(xs) - x0) * k), _num((max(ys) - y0) * k)]
-    return {"box": box, "items": items, "mono": len(colours) <= 1}
+    parts = sorted({i["p"] for i in items if "p" in i})
+    data = {"box": box, "items": items, "mono": len(colours) <= 1}
+    if parts:
+        data["parts"] = parts
+    return data
 
 
 # ------------------------------------------------------------------ sources
@@ -281,7 +324,7 @@ def resolve_bioicons(spec):
         if e["name"] == parts[-1] and e["author"] == parts[-2] and (len(parts) < 3 or e["category"] == parts[-3]):
             lic = e["license"]
             if lic not in ALLOWED:
-                raise SystemExit(f"licence {lic} is not allowed (CC BY-SA and non-commercial licences are refused)")
+                raise SystemExit(f"licence {lic} is not allowed (non-commercial and no-derivatives licences are refused)")
             # bioicons.com serves spaces in catalogue names as underscores ("Helicase 11" → Helicase_11)
             u = {k: e[k].replace(" ", "_") for k in ("category", "author", "name")}
             url = BIOICONS_FILE.format(license=lic, **u)
@@ -292,10 +335,12 @@ def resolve_bioicons(spec):
 
 
 def _phylopic_licence(lic_url):
-    if "-nc" in lic_url or "-sa" in lic_url:
+    if "-nc" in lic_url or "-nd" in lic_url:
         return None
-    return ("CC0 1.0" if "zero" in lic_url else "Public domain" if "mark" in lic_url else
-            "CC BY 4.0" if "by/4.0" in lic_url else "CC BY 3.0" if "by/3.0" in lic_url else None)
+    m = re.search(r"/licenses/(by(?:-sa)?)/(\d\.\d)", lic_url)
+    if m:
+        return f"CC {m.group(1).upper()} {m.group(2)}"
+    return "CC0 1.0" if "zero" in lic_url else "Public domain" if "mark" in lic_url else None
 
 
 def resolve_phylopic(taxon):
@@ -322,7 +367,7 @@ def resolve_phylopic(taxon):
             break
         try:
             page = json.loads(fetch(f"{PHYLOPIC_API}/images?build={build}&{filt}={uuid}&filter_license_nc=false"
-                                    f"&filter_license_sa=false&embed_items=true&embed_contributor=true&page=0"))
+                                    f"&embed_items=true&embed_contributor=true&page=0"))
         except urllib.error.HTTPError as e:  # the API answers 404 when no image matches
             if e.code != 404:
                 raise
@@ -341,6 +386,47 @@ def resolve_phylopic(taxon):
     author = img.get("attribution") or contributor or "PhyloPic contributor"
     return svg, {"source": "phylopic", "name": taxon, "author": author, "license": lic,
                  "url": f"https://www.phylopic.org/images/{img['uuid']}"}
+
+
+def _plain(html_text):
+    """Commons metadata fields are HTML: keep the text."""
+    t = re.sub(r"<[^>]+>", "", html_text or "")
+    return re.sub(r"\s+", " ", urllib.parse.unquote(t).replace("&amp;", "&")).strip()
+
+
+def _wikimedia_licence(short, url):
+    s = (short or "").strip().lower().replace("_", " ")
+    if "nc" in s.split() or "-nc" in s or "nd" in s.split() or "-nd" in s:
+        return None
+    if s.startswith("public domain") or s in ("pd", "pdm") or "pd-" in s:
+        return "Public domain"
+    if s.startswith("cc0") or s.startswith("cc-zero"):
+        return "CC0 1.0"
+    m = re.match(r"cc[ -](by(?:-sa)?)[ -](\d\.\d)", s)
+    if m:
+        return f"CC {m.group(1).upper()} {m.group(2)}"
+    return None  # GFDL-only, Free Art, unclear: refused
+
+
+def resolve_wikimedia(title):
+    """title = "Flower anatomy.svg" (with or without "File:"); the file must be an SVG with an allowed licence."""
+    title = title if title.startswith("File:") else "File:" + title
+    q = urllib.parse.urlencode({"action": "query", "titles": title, "prop": "imageinfo", "iiprop": "url|extmetadata|mime",
+                                "format": "json"})
+    pages = json.loads(fetch(f"{WIKIMEDIA_API}?{q}"))["query"]["pages"]
+    page = next(iter(pages.values()))
+    if "imageinfo" not in page:
+        raise SystemExit(f"no Commons file {title!r}")
+    info = page["imageinfo"][0]
+    if info.get("mime") != "image/svg+xml":
+        raise SystemExit(f"{title} is {info.get('mime')}, not an SVG")
+    md = info.get("extmetadata", {})
+    lic = _wikimedia_licence(md.get("LicenseShortName", {}).get("value"), md.get("LicenseUrl", {}).get("value"))
+    if lic is None:
+        raise SystemExit(f"licence {md.get('LicenseShortName', {}).get('value')!r} of {title} is not allowed")
+    author = _plain(md.get("Artist", {}).get("value")) or "Wikimedia Commons contributor"
+    return info["url"], {"source": "wikimedia", "name": title[5:], "author": author, "license": lic,
+                         "url": info.get("descriptionurl") or info["url"]}
 
 
 def _phylopic_build():
@@ -367,9 +453,21 @@ def cmd_add(args):
         url, meta = resolve_bioicons(spec)
     elif src == "phylopic":
         url, meta = resolve_phylopic(spec)
+    elif src == "wikimedia":
+        url, meta = resolve_wikimedia(spec)
+    elif src == "svg":
+        # any other library (SciDraw, NIH BioArt, Reactome…): the caller states the licence it read on the page
+        lic = args.license
+        if lic not in set(ALLOWED.values()) | {"CC BY 2.0", "CC BY 2.5", "CC BY-SA 2.0", "CC BY-SA 2.5"}:
+            raise SystemExit("svg: needs --license (e.g. 'CC BY 4.0', 'CC BY-SA 4.0', 'CC0 1.0', 'Public domain')")
+        if not args.author or not args.page:
+            raise SystemExit("svg: needs --author and --page (the page that states the licence)")
+        url = spec
+        meta = {"source": args.id.split("/")[0], "name": os.path.basename(urllib.parse.urlsplit(spec).path),
+                "author": args.author, "license": lic, "url": args.page}
     else:
-        raise SystemExit("spec must start with bioicons: or phylopic:")
-    data = convert(fetch(url))
+        raise SystemExit("spec must start with bioicons:, phylopic:, wikimedia: or svg:")
+    data = convert(fetch(url), drop=args.drop, keep=args.keep)
     icon_id = args.id
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]*/[a-z0-9][a-z0-9-]*", icon_id):
         raise SystemExit("--id must look like 'servier/mitochondrion' (lower case, one slash)")
@@ -388,6 +486,57 @@ def cmd_add(args):
         m[icon_id] = meta
         save_manifest(m)
     print(f"added {icon_id}: {len(data['items'])} shapes, {meta['license']}, {meta['author']}")
+    if data.get("parts"):
+        print(f"  parts: {', '.join(data['parts'])}")
+    size = os.path.getsize(out)
+    if size > 600_000:
+        print(f"  warning: {size // 1000} kB; prefer a simpler drawing or --keep the parts you need", file=sys.stderr)
+
+
+def _load_icon(icon_id):
+    path = os.path.join(ICON_DIR, icon_id + ".json")
+    if not os.path.exists(path):
+        raise SystemExit(f"no icon {icon_id}")
+    with open(path) as f:
+        return path, json.load(f)
+
+
+def cmd_colors(args):
+    """List the fill colours of an icon with their item indices and extent: the basis for naming parts."""
+    _, data = _load_icon(args.id)
+    groups = {}
+    for k, it in enumerate(data["items"]):
+        groups.setdefault(it.get("f") or ("stroke " + str(it.get("s"))), []).append(k)
+    for colour, ks in sorted(groups.items(), key=lambda g: -len(g[1])):
+        v = [p for k in ks for p in data["items"][k]["v"]]
+        xs, ys = [p[0] for p in v], [p[1] for p in v]
+        parts = sorted({data["items"][k].get("p", "") for k in ks} - {""})
+        print(f"{colour:16s} {len(ks):4d} items  x {min(xs):6.0f}-{max(xs):6.0f}  y {min(ys):6.0f}-{max(ys):6.0f}  "
+              f"items {ks[0]}..{ks[-1]}  {','.join(parts)}")
+
+
+def cmd_name(args):
+    """Assign part names: `name ID petal=#f4a9c4 sepal=#8bc34a stamen=12-30,41` (colours or item ranges)."""
+    path, data = _load_icon(args.id)
+    for rule in args.rules:
+        name, _, sel = rule.partition("=")
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", name):
+            raise SystemExit(f"part names are lower case with hyphens: {name!r}")
+        idx = set()
+        for term in sel.split(","):
+            if term.startswith("#"):
+                idx |= {k for k, it in enumerate(data["items"]) if (it.get("f") or "").lower() == term.lower()}
+            elif "-" in term:
+                a, b = map(int, term.split("-"))
+                idx |= set(range(a, b + 1))
+            elif term:
+                idx.add(int(term))
+        for k in idx:
+            data["items"][k]["p"] = name
+        print(f"{name}: {len(idx)} items")
+    data["parts"] = sorted({i["p"] for i in data["items"] if "p" in i})
+    with open(path, "w") as f:
+        json.dump(data, f, separators=(",", ":"))
 
 
 def cmd_list(_args):
@@ -400,8 +549,15 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("search"); s.add_argument("query"); s.add_argument("--limit", type=int, default=40); s.set_defaults(fn=cmd_search)
     a = sub.add_parser("add"); a.add_argument("spec"); a.add_argument("--id", required=True); a.add_argument("--tags", default="")
+    a.add_argument("--drop", default=None, help="regex: leave out parts whose name matches (labels, leader lines)")
+    a.add_argument("--keep", default=None, help="regex: keep only parts whose name matches")
+    a.add_argument("--license", default=None, help="svg: sources only: licence stated on --page")
+    a.add_argument("--author", default=None, help="svg: sources only")
+    a.add_argument("--page", default=None, help="svg: sources only: page that states author and licence")
     a.add_argument("--mono", type=lambda v: v.lower() in ("1", "true", "yes"), default=None); a.set_defaults(fn=cmd_add)
     l = sub.add_parser("list"); l.set_defaults(fn=cmd_list)
+    c = sub.add_parser("colors"); c.add_argument("id"); c.set_defaults(fn=cmd_colors)
+    n = sub.add_parser("name"); n.add_argument("id"); n.add_argument("rules", nargs="+"); n.set_defaults(fn=cmd_name)
     args = ap.parse_args()
     args.fn(args)
 

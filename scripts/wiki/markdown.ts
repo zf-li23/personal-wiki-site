@@ -61,7 +61,7 @@ import {
 } from './numbering.ts';
 import { checkNotation } from './notation.ts';
 import { PUBLIC_PATHS } from './paths.ts';
-import { iconCredits, type PlotResult, type PlotResults } from './plots.ts';
+import { iconCredits, SHARE_ALIKE, type PlotResult, type PlotResults } from './plots.ts';
 import type { ContentTree, PageSource } from './scan.ts';
 
 export interface RenderContext {
@@ -692,6 +692,11 @@ function plotFigure(scriptName: string, alt: string, result: PlotResult, lang: L
       parts.push(c.url ? el('a', { href: c.url, target: '_blank', rel: ['noopener'] }, [text(c.license)]) : text(c.license));
       parts.push(text(')'));
     });
+    if (credits.some((c) => c.license.startsWith('CC BY-SA'))) {
+      parts.push(text(lang === 'zh' ? '。本图按 ' : '. This figure is licensed under '));
+      parts.push(el('a', { href: SHARE_ALIKE.url, target: '_blank', rel: ['noopener'] }, [text(SHARE_ALIKE.license)]));
+      parts.push(text(lang === 'zh' ? ' 发布' : ''));
+    }
     children.push(el('p', { className: ['wiki-plot-credit'] }, parts));
   }
   const python = el('pre', {}, [el('code', { className: ['language-python'] }, [text(result.source.trimEnd())])]);

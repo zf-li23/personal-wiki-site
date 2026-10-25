@@ -125,10 +125,15 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 |---|---|---|
 | Servier Medical Art（经 bioicons.com） | CC BY 3.0 / 4.0 | 器官、组织、细胞、细胞器、实验器材，风格接近 BioRender |
 | DBCLS TogoTV（经 bioicons.com） | CC BY 4.0 | 生物、实验、分子 |
-| bioicons.com 其他作者 | 只用 CC0、CC BY、MIT、BSD | |
-| PhyloPic | 只用 CC0、公有领域、CC BY | 各类群的生物剪影（系统发育树、动植物、微生物） |
+| bioicons.com 其他作者 | CC0、CC BY、CC BY-SA、MIT、BSD | |
+| PhyloPic | CC0、公有领域、CC BY、CC BY-SA | 各类群的生物剪影（系统发育树、动植物、微生物） |
+| Wikimedia Commons | 公有领域、CC0、CC BY、CC BY-SA | 动植物形态与解剖图解（如 LadyofHats 的公有领域图解），用作带部件的模板（§5.1） |
+| SciDraw、NIH BioArt、Reactome 等 | CC BY、公有领域 | 实验动物、行为装置、生物医学插图（`svg:` 来源，许可由添加者从原页面核实） |
 
-**不用** CC BY-SA、任何 NC（非商用）许可的图标，也不用 BioRender、教材、网络图片等有版权的素材。
+许可：
+- **可以用**：公有领域、CC0、CC BY、CC BY-SA（2.0 及以上）、MIT、BSD。
+- **用了 CC BY-SA 部件的图，整张图片按 CC BY-SA 4.0 发布**：构建在图下的署名行自动注明。SA 只约束这张图片，不影响网站其他内容与代码。
+- **不用**：任何 NC（非商用）、ND（禁止演绎）许可，只有 GFDL 的文件，以及 BioRender、**教材**、论文、网络图片等未授予许可的素材。从教材 PDF 中提取的矢量图也不行：能提取不等于可以使用。教材只用来确定画什么（哪些结构、什么视角、标注哪些部件），画法由我们的模板与原生元素组合，不描摹任何一张受版权保护的图。
 
 - 查找与添加（需要网络与 uv）：
 
@@ -136,14 +141,26 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
   uv run --with svgelements python scripts/icons.py search heart
   uv run --with svgelements python scripts/icons.py add bioicons:Human_physiology/Servier/heart-front --id servier/heart --tags organ,circulation
   uv run --with svgelements python scripts/icons.py add "phylopic:Mus musculus" --id phylopic/mouse --tags mammal,model-organism
+  uv run --with svgelements python scripts/icons.py add "wikimedia:Mature flower diagram.svg" --id wikimedia/flower-section --drop '^label'
+  uv run --with svgelements python scripts/icons.py add svg:https://…/mouse.svg --id scidraw/mouse-rearing \
+      --license "CC BY 4.0" --author "…" --page https://scidraw.io/drawing/…
   ```
 
 - PhyloPic 的首选图像许可不合格时，工具会自动在该类群的其他图像、再在整个类群中找许可合格的；`phylopic:"Taxon#2"` 取第 2 个合格图像。类群回退可能选到外形不符的近缘种，加入后要看图确认。`add` 对清单加锁，可以并行运行。
 - 图标 id 是 `<来源>/<英文名>`，小写、连字符：`servier/heart`、`dbcls/zebrafish`、`phylopic/arabidopsis`。同一对象有多种画法时加后缀（`servier/neuron-pyramidal`）。
-- 在脚本中**必须以字符串字面量**调用：`bio.icon(ax, "servier/heart", ...)`。构建据此把图标计入缓存键，并在图下方自动注明来源与许可（CC BY 要求署名）；全站的图标致谢汇总在致谢页。
+- 在脚本中**必须以字符串字面量**调用：`bio.icon(ax, "servier/heart", ...)`。构建据此把图标计入缓存键，并在图下方自动注明作者与许可（CC BY 要求署名）。
 - 单色剪影（PhyloPic）用 `color=` 着色为调色板标记（`color="plant"`）；多色插图保持原色，深色主题中黑色轮廓自动变浅、明暗层保持。
 
-### 5.1 图库的空缺（用原生元素画）
+### 5.1 带部件的模板
+
+结构复杂、视图标准的形态与解剖图（花的纵剖面、叶片横切、昆虫外形、骨骼、内部解剖）用**模板**：一张图标，其中的图形按部件命名。
+
+- 转换时保留 SVG 中有意义的分组名（`id` 或 Inkscape 标签）作为部件名；编辑器自动生成的 id（`g123`、`path45`）忽略。`--drop` / `--keep` 按部件名的正则去掉标签、引线或只保留一部分。
+- 原图分组没有语义时按颜色或序号命名：`icons.py colors <id>` 列出各填充色的图形与范围，`icons.py name <id> petal=#f4a9c4 sepal=#8bc34a stamen=12-30` 写入部件名。部件名用英文解剖学术语，小写、连字符（`petal`、`ovary`、`compound-eye`、`femur`）。
+- 使用：`bio.icon(ax, id, …, parts={"stamen": "anther"}, mute="neutral")` 只给指定部件着色、其余淡化；`hide=[…]` 不画某些部件；`bio.icon_part(id, "ovary", <与 icon 相同的位置参数>)` 返回部件上的一点，供 `bio.callout` 引线标注。
+- 模板里不能有文字：标签一律由脚本用 `bio.callout` 写（英文，随图注翻译）。原图的文字在转换时被跳过，残留的引线用 `--drop` 去掉。
+
+### 5.2 图库的空缺（用原生元素画）
 
 现有图库中没有合格图标、应在 wikibio 中原生绘制的对象（扩展时优先补这些）：溶酶体、过氧化物酶体与叶绿体以外的细胞器整体图（中心体、全细胞骨架）、星形胶质细胞、浆细胞、精子与卵细胞、卵裂各期胚胎；胎盘、肾上腺、甲状腺、生殖器官、全身骨骼与骨组织；木质部与韧皮部、茎根叶横切、花、种子、花粉与果实；球菌、螺菌、弧菌与古菌细胞、冠状病毒；行为学装置（迷宫、笼）。Western blot、GWAS、测序读段等用真实的数据图画，不用图标。
 

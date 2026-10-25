@@ -171,17 +171,24 @@ export function iconCredits(source: string): IconCredit[] {
   const seen = new Map<string, IconCredit>();
   for (const id of iconIds(source)) {
     const m = manifest![id];
-    if (m && !seen.has(`${m.author}|${m.license}`)) seen.set(`${m.author}|${m.license}`, { author: m.author, license: m.license, url: LICENSE_URLS[m.license] });
+    if (m && !seen.has(`${m.author}|${m.license}`)) seen.set(`${m.author}|${m.license}`, { author: m.author, license: m.license, url: licenseUrl(m.license) });
   }
   return [...seen.values()];
 }
 
 const LICENSE_URLS: Record<string, string> = {
   'CC0 1.0': 'https://creativecommons.org/publicdomain/zero/1.0/',
-  'CC BY 3.0': 'https://creativecommons.org/licenses/by/3.0/',
-  'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/',
   'Public domain': 'https://creativecommons.org/publicdomain/mark/1.0/',
 };
+
+/** Deed URL of a licence name as the manifest writes it ("CC BY 4.0", "CC BY-SA 3.0", "CC0 1.0"…). */
+export function licenseUrl(license: string): string | undefined {
+  const cc = /^CC (BY(?:-SA)?) (\d\.\d)$/.exec(license);
+  return cc ? `https://creativecommons.org/licenses/${cc[1].toLowerCase()}/${cc[2]}/` : LICENSE_URLS[license];
+}
+
+/** A figure that uses a share-alike icon is itself shared under CC BY-SA 4.0 (later versions are allowed). */
+export const SHARE_ALIKE = { license: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' };
 
 function hashFiles(parts: (string | Buffer)[]): string {
   const h = crypto.createHash('sha256');

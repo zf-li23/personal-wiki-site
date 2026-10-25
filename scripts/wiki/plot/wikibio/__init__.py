@@ -13,13 +13,13 @@ Colours come from tokens (``bio.P.fill("nucleus")``); every figure works in the 
 from . import palette as P
 from .cell import bilayer, cell, chloroplast, er, golgi, lysosome, membrane, mitochondrion, nucleus, vacuole, vesicle
 from .core import arrow, blob, box, callout, canvas, label, panel, polyline, reaction, scale_bar, shape, smooth_closed
-from .icons import icon
+from .icons import icon, icon_part
 from .molecules import dna, domains, ion, molecule, protein, receptor, strand
 from .structures import actin, antibody, microtubule, neuron, ribosome, synapse, virus
 
 __all__ = [
     "P", "canvas", "label", "callout", "panel", "scale_bar", "arrow", "reaction", "box", "shape", "blob", "smooth_closed",
     "polyline", "bilayer", "membrane", "cell", "nucleus", "mitochondrion", "er", "golgi", "vesicle", "lysosome",
-    "chloroplast", "vacuole", "dna", "strand", "protein", "domains", "receptor", "ion", "molecule", "icon",
+    "chloroplast", "vacuole", "dna", "strand", "protein", "domains", "receptor", "ion", "molecule", "icon", "icon_part",
     "ribosome", "actin", "microtubule", "antibody", "virus", "neuron", "synapse",
 ]
