@@ -136,6 +136,18 @@ ALIASES = {
     # bacterial cell envelope (Gram stain: positive purple, negative pink, as the stain itself)
     "gram_pos": "protein", "gram_neg": "receptor", "nag": "carbohydrate", "nam": "plant", "teichoic": "antibody",
     "lipid_a": "lipid", "o_antigen": "sepal", "porin": "channel", "flagellum": "neutral",
+    # plant tissues
+    "xylem": "channel", "phloem": "lipid_head", "cambium": "highlight", "parenchyma": "cytoplasm",
+    "collenchyma": "ovule", "sclerenchyma": "protein", "endodermis": "golgi", "pericycle": "metabolite",
+    "cork": "animal", "earlywood": "bone", "latewood": "animal", "heartwood": "animal", "sapwood": "bone",
+    "kranz": "thylakoid", "bulliform": "dna2",
+    # insect parts (antenna and wing parts stay local: "flagellum", "membrane", "pedicel" mean other things here)
+    "labrum": "antibody", "mandible": "drug", "maxilla": "channel", "labium": "positive",
+    "coxa": "antibody", "trochanter": "drug", "femur": "channel", "tibia": "positive", "tarsus": "protein",
+    "elytron": "drug", "tegmen": "bract", "haltere": "receptor",
+    # forelimb bones (one colour per homologous bone across vertebrates)
+    "humerus": "channel", "radius": "antibody", "ulna": "receptor", "carpals": "positive", "metacarpals": "protein",
+    "phalanges": "drug",
 }
 
 
@@ -149,6 +161,7 @@ def _token(name):
 
 
 def fill(name) -> str:
+    name = ALIASES.get(name, name)  # compartments look up their dark tint by the real token name
     f, e, kind = _token(name)
     if is_dark() and kind == "space":
         return _safe(DARK_FILL.get(name) or mix(e, DARK_SURFACE, 0.72))
