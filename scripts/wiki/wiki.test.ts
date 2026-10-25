@@ -604,6 +604,11 @@ describe('cross-page linking', () => {
   it('keeps "+" apart in concept ids', () => {
     assert.notEqual(conceptId('B+ tree'), conceptId('B-tree'));
   });
+  it('spells out Greek letters in concept ids', () => {
+    assert.equal(conceptId('σ factor'), 'sigma-factor');
+    assert.notEqual(conceptId('ρ factor'), conceptId('σ factor'));
+    assert.equal(conceptId('α-complementation'), 'alpha-complementation');
+  });
   it('lets only the scoped homonym take an annotated definition inside its scope', async () => {
     concepts.push({ id: 'rank', zh: '秩', en: 'rank', aliases: [] });
     concepts.push({ id: 'rank-4-3', zh: '秩', en: 'rank', aliases: [], scope: ['4.3'] });

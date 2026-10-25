@@ -31,9 +31,17 @@ export function inScope(concept: Concept, pageId: string): boolean {
   return !concept.scope?.length || concept.scope.some((s) => pageId === s || pageId.startsWith(`${s}.`));
 }
 
+// Greek letters are spelt out so that "σ factor" and "ρ factor" (or "α helix" and "helix") get distinct ids.
+const GREEK: Record<string, string> = {
+  α: 'alpha', β: 'beta', γ: 'gamma', δ: 'delta', ε: 'epsilon', ζ: 'zeta', η: 'eta', θ: 'theta', ι: 'iota',
+  κ: 'kappa', λ: 'lambda', μ: 'mu', ν: 'nu', ξ: 'xi', ο: 'omicron', π: 'pi', ρ: 'rho', σ: 'sigma', ς: 'sigma',
+  τ: 'tau', υ: 'upsilon', φ: 'phi', χ: 'chi', ψ: 'psi', ω: 'omega',
+};
+
 export function conceptId(en: string): string {
   return en
     .toLowerCase()
+    .replace(/[α-ω]/g, (g) => ` ${GREEK[g] ?? ''} `)
     .replace(/\+/g, ' plus ') // "B+ tree" must not collide with "B-tree"
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')

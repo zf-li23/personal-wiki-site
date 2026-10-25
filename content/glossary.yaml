@@ -6300,3 +6300,37 @@ terms:
   - { zh: 类异戊二烯, en: isoprenoid, aliases: [isoprenoids, 萜类, terpenoid, terpenoids] }
   - { zh: 糖基化, en: glycosylation, scope: ["7"] }
   - { zh: 杂交, en: hybridization, aliases: [核酸杂交, nucleic acid hybridization], scope: ["7"] }
+  - { zh: RNA 聚合酶, en: RNA polymerase, aliases: [RNAP] }
+  - { zh: 模板链, en: template strand }
+  - { zh: 编码链, en: coding strand, aliases: [nontemplate strand, 非模板链] }
+  - { zh: 核心酶, en: core polymerase, aliases: [core enzyme], scope: ["7"] }
+  - { zh: σ 因子, en: σ factor, aliases: [sigma factor, σ 亚基] }
+  - { zh: RNA 聚合酶全酶, en: RNA polymerase holoenzyme }
+  - { zh: UP 元件, en: UP element }
+  - { zh: 闭合复合物, en: closed complex, scope: ["7"] }
+  - { zh: 开放复合物, en: open complex, scope: ["7"] }
+  - { zh: 流产起始, en: abortive initiation, aliases: [流产转录, abortive transcription] }
+  - { zh: scrunching, en: scrunching, aliases: [DNA 挤压] }
+  - { zh: 转录泡, en: transcription bubble }
+  - { zh: 内在终止子, en: intrinsic terminator, aliases: [不依赖 ρ 的终止子, ρ-independent terminator] }
+  - { zh: ρ 因子, en: ρ factor, aliases: [rho factor, Rho] }
+  - { zh: 抗终止, en: antitermination }
+  - { zh: 螺旋–转角–螺旋, en: helix–turn–helix, aliases: [HTH, helix-turn-helix] }
+  - { zh: 调节子, en: regulon }
+  - { zh: 操纵子, en: operon }
+  - { zh: 多顺反子 mRNA, en: polycistronic mRNA, aliases: [多顺反子信使] }
+  - { zh: 阻遏物, en: repressor, aliases: [阻遏蛋白] }
+  - { zh: 操纵基因, en: operator, aliases: [操纵序列], scope: ["7"] }
+  - { zh: 激活因子, en: activator, aliases: [激活蛋白], scope: ["7"] }
+  - { zh: 诱导物, en: inducer, scope: ["7"] }
+  - { zh: 辅阻遏物, en: corepressor }
+  - { zh: 顺式作用元件, en: cis-acting element }
+  - { zh: 反式作用因子, en: trans-acting factor }
+  - { zh: 分解代谢物阻遏, en: catabolite repression }
+  - { zh: 分解代谢物激活蛋白, en: catabolite activator protein, aliases: [CAP, cAMP 受体蛋白, cAMP receptor protein, CRP] }
+  - { zh: 诱导物排斥, en: inducer exclusion }
+  - { zh: 衰减, en: attenuation, aliases: [转录衰减, transcriptional attenuation], scope: ["7"] }
+  - { zh: 温和噬菌体, en: temperate phage }
+  - { zh: 溶原性, en: lysogeny, aliases: [溶原] }
+  - { zh: 原噬菌体, en: prophage }
+  - { zh: 热力学模型, en: thermodynamic model, aliases: [启动子占据率的热力学模型], scope: ["7"] }
