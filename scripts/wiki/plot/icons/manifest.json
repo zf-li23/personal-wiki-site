@@ -1543,6 +1543,16 @@
    "arthropod"
   ]
  },
+ "phylopic/chara": {
+  "source": "phylopic",
+  "name": "Chara",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/65414989-e801-4d0e-acc1-4309cd35ab7e",
+  "tags": [
+   "plant"
+  ]
+ },
  "phylopic/chicken": {
   "source": "phylopic",
   "name": "Gallus gallus",
@@ -1597,6 +1607,16 @@
    "chordate",
    "tunicate",
    "model-organism"
+  ]
+ },
+ "phylopic/clubmoss": {
+  "source": "phylopic",
+  "name": "Lycopodium",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/3ba1c08e-2b91-4b1d-9264-81cc0e0355e1",
+  "tags": [
+   "plant"
   ]
  },
  "phylopic/cod": {
@@ -1803,6 +1823,16 @@
    "amphibian"
   ]
  },
+ "phylopic/ginkgo": {
+  "source": "phylopic",
+  "name": "Ginkgo biloba",
+  "author": "Joe Schneid (vectorized by T. Michael Keesey)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/098b93a4-b9aa-4a80-9698-4528466fdb61",
+  "tags": [
+   "plant"
+  ]
+ },
  "phylopic/great-white-shark": {
   "source": "phylopic",
   "name": "Carcharodon carcharias",
@@ -1857,6 +1887,16 @@
   "tags": [
    "insect",
    "social"
+  ]
+ },
+ "phylopic/hornwort": {
+  "source": "phylopic",
+  "name": "Anthoceros",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/643bdb61-caf5-4238-a453-f4c95405eef5",
+  "tags": [
+   "plant"
   ]
  },
  "phylopic/horseshoe-crab": {
@@ -1968,6 +2008,16 @@
    "plant",
    "eudicot",
    "tree"
+  ]
+ },
+ "phylopic/liverwort": {
+  "source": "phylopic",
+  "name": "Marchantia polymorpha",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/18488552-5276-4249-875a-6ef9f5c40200",
+  "tags": [
+   "plant"
   ]
  },
  "phylopic/lizard": {
@@ -2477,6 +2527,16 @@
   "tags": [
    "plant",
    "angiosperm"
+  ]
+ },
+ "phylopic/welwitschia": {
+  "source": "phylopic",
+  "name": "Welwitschia",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a32ae9a6-2f11-410f-821b-6c5230934644",
+  "tags": [
+   "plant"
   ]
  },
  "phylopic/wheat": {
@@ -4869,6 +4929,1101 @@
   "url": "https://bioicons.com/icons/cc-by-3.0/Lab_apparatus/Servier/bath_filled.svg",
   "tags": [
    "lab"
+  ]
+ },
+ "wikimedia/amphipod": {
+  "source": "wikimedia",
+  "name": "Scheme amphipod anatomy-en.svg",
+  "author": "Hans Hillewaert",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Scheme_amphipod_anatomy-en.svg",
+  "tags": [
+   "crustacean",
+   "amphipod",
+   "arthropod",
+   "template"
+  ]
+ },
+ "wikimedia/ant-worker": {
+  "source": "wikimedia",
+  "name": "Scheme ant worker anatomy-en.svg",
+  "author": "Mariana Ruiz (LadyofHats)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Scheme_ant_worker_anatomy-en.svg",
+  "tags": [
+   "insect",
+   "hymenoptera",
+   "ant",
+   "external-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/anther": {
+  "source": "wikimedia",
+  "name": "Anther-schematic.svg",
+  "author": "Original: Ben Stefanowitsch Vector: TilmannR",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Anther-schematic.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "stamen",
+   "template"
+  ]
+ },
+ "wikimedia/bird-topography": {
+  "source": "wikimedia",
+  "name": "Bird parts - en.svg",
+  "author": "Habib M'henni",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Bird_parts_-_en.svg",
+  "tags": [
+   "bird",
+   "topography",
+   "plumage",
+   "template"
+  ]
+ },
+ "wikimedia/brain-fish-dorsal": {
+  "source": "wikimedia",
+  "name": "Fish brain.svg",
+  "author": "Fish_brain.png: The original uploader was Neale Monks at English Wikipedia. derivative work: WhiskeyedJack (talk)",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fish_brain.svg",
+  "tags": [
+   "brain",
+   "fish",
+   "neuroanatomy",
+   "template"
+  ]
+ },
+ "wikimedia/cat-anatomy": {
+  "source": "wikimedia",
+  "name": "Scheme cat anatomy-en.svg",
+  "author": "en:User:Persian Poet Gal (original PNG version); Surachit (SVG version)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Scheme_cat_anatomy-en.svg",
+  "tags": [
+   "mammal",
+   "cat",
+   "internal-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/centipede": {
+  "source": "wikimedia",
+  "name": "Centipede-Scolopendra-morsitans.svg",
+  "author": "J. Sterling Kingsley",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Centipede-Scolopendra-morsitans.svg",
+  "tags": [
+   "myriapod",
+   "chilopoda",
+   "centipede",
+   "line-art"
+  ]
+ },
+ "wikimedia/choanocyte": {
+  "source": "wikimedia",
+  "name": "2023 ChoanocyteYEpk.svg",
+  "author": "Keeling PJ, Eglit Y",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:2023_ChoanocyteYEpk.svg",
+  "tags": [
+   "sponge",
+   "porifera",
+   "cell",
+   "template"
+  ]
+ },
+ "wikimedia/cod": {
+  "source": "wikimedia",
+  "name": "Cod-english.svg",
+  "author": "Salvör Gissurardóttir",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Cod-english.svg",
+  "tags": [
+   "fish",
+   "teleost",
+   "external-anatomy",
+   "fins",
+   "template"
+  ]
+ },
+ "wikimedia/ctenophore": {
+  "source": "wikimedia",
+  "name": "Ctenophore diagram - en.svg",
+  "author": "Kaidor",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Ctenophore_diagram_-_en.svg",
+  "tags": [
+   "ctenophore",
+   "comb-jelly",
+   "body-plan",
+   "template"
+  ]
+ },
+ "wikimedia/disc-floret": {
+  "source": "wikimedia",
+  "name": "Asteraceae disc floret.svg",
+  "author": "BotaFlo",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Asteraceae_disc_floret.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "asteraceae",
+   "template"
+  ]
+ },
+ "wikimedia/earthworm-segments": {
+  "source": "wikimedia",
+  "name": "Oligochaeta anatomy.svg",
+  "author": "Reytan",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Oligochaeta_anatomy.svg",
+  "tags": [
+   "annelid",
+   "earthworm",
+   "oligochaete",
+   "coelom",
+   "template"
+  ]
+ },
+ "wikimedia/embryo-sac": {
+  "source": "wikimedia",
+  "name": "Embryosac-en.svg",
+  "author": "Vector version:Lokal_Profil Original:Tameeria",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Embryosac-en.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "ovule",
+   "template"
+  ]
+ },
+ "wikimedia/fern-gametophyte": {
+  "source": "wikimedia",
+  "name": "Alternation of generations in ferns.svg",
+  "author": "Jeffrey Finkelstein",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Alternation_of_generations_in_ferns.svg",
+  "tags": [
+   "plant",
+   "fern",
+   "template"
+  ]
+ },
+ "wikimedia/fern-sporophyte": {
+  "source": "wikimedia",
+  "name": "Alternation of generations in ferns.svg",
+  "author": "Jeffrey Finkelstein",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Alternation_of_generations_in_ferns.svg",
+  "tags": [
+   "plant",
+   "fern",
+   "template"
+  ]
+ },
+ "wikimedia/fish-internal": {
+  "source": "wikimedia",
+  "name": "Internal organs of a fish.svg",
+  "author": "Pixelsquid (vector), after Sharon High School taxonomy wiki",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Internal_organs_of_a_fish.svg",
+  "tags": [
+   "fish",
+   "teleost",
+   "internal-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/flower-section": {
+  "source": "wikimedia",
+  "name": "Mature flower cropped-eg.svg",
+  "author": "LadyofHats",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Mature_flower_cropped-eg.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "template"
+  ]
+ },
+ "wikimedia/forelimb-bird": {
+  "source": "wikimedia",
+  "name": "Homology vertebrates-de.svg",
+  "author": "Волков Владислав Петрович (Vladlen666); derivative by Angelito7",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Homology_vertebrates-de.svg",
+  "tags": [
+   "skeleton",
+   "forelimb",
+   "homology",
+   "vertebrate"
+  ]
+ },
+ "wikimedia/forelimb-dog": {
+  "source": "wikimedia",
+  "name": "Homology vertebrates-de.svg",
+  "author": "Волков Владислав Петрович (Vladlen666); derivative by Angelito7",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Homology_vertebrates-de.svg",
+  "tags": [
+   "skeleton",
+   "forelimb",
+   "homology",
+   "vertebrate"
+  ]
+ },
+ "wikimedia/forelimb-human": {
+  "source": "wikimedia",
+  "name": "Homology vertebrates-de.svg",
+  "author": "Волков Владислав Петрович (Vladlen666); derivative by Angelito7",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Homology_vertebrates-de.svg",
+  "tags": [
+   "skeleton",
+   "forelimb",
+   "homology",
+   "vertebrate"
+  ]
+ },
+ "wikimedia/forelimb-whale": {
+  "source": "wikimedia",
+  "name": "Homology vertebrates-de.svg",
+  "author": "Волков Владислав Петрович (Vladlen666); derivative by Angelito7",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Homology_vertebrates-de.svg",
+  "tags": [
+   "skeleton",
+   "forelimb",
+   "homology",
+   "vertebrate"
+  ]
+ },
+ "wikimedia/frog-life-stages": {
+  "source": "wikimedia",
+  "name": "Greenfrog life stages.svg",
+  "author": "LadyofHats",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Greenfrog_life_stages.svg",
+  "tags": [
+   "amphibian",
+   "frog",
+   "life-cycle",
+   "metamorphosis",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-accessory-strawberry": {
+  "source": "wikimedia",
+  "name": "Fruit morphology fruit type - achenecetum Fragaria.svg",
+  "author": "RoRo",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fruit_morphology_fruit_type_-_achenecetum_Fragaria.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "aggregate",
+   "accessory",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-aggregate-rubus": {
+  "source": "wikimedia",
+  "name": "Fruit morphology fruit type - drupecetum Rubus.svg",
+  "author": "RoRo",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fruit_morphology_fruit_type_-_drupecetum_Rubus.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "aggregate",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-berry-kiwi": {
+  "source": "wikimedia",
+  "name": "Kiwi's morphology.svg",
+  "author": "Dixy52",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Kiwi%27s_morphology.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-drupe": {
+  "source": "wikimedia",
+  "name": "Drupe fruit diagram no text.svg",
+  "author": "LadyofHats/Vierge Marie",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Drupe_fruit_diagram_no_text.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "drupe",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-legume-pod": {
+  "source": "wikimedia",
+  "name": "Pea pod.svg",
+  "author": "yamachem",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Pea_pod.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "legume",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-multiple-pineapple": {
+  "source": "wikimedia",
+  "name": "Fruit morphology fruit type - sorosis Ananas comosus.svg",
+  "author": "RoRo",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fruit_morphology_fruit_type_-_sorosis_Ananas_comosus.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "multiple",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-pome-apple": {
+  "source": "wikimedia",
+  "name": "Apple's composition.svg",
+  "author": "Dixy52",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Apple%27s_composition.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "template"
+  ]
+ },
+ "wikimedia/fruit-pome-pear": {
+  "source": "wikimedia",
+  "name": "Pear's morphology.svg",
+  "author": "Dixy52",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Pear%27s_morphology.svg",
+  "tags": [
+   "plant",
+   "fruit",
+   "template"
+  ]
+ },
+ "wikimedia/grasshopper": {
+  "source": "wikimedia",
+  "name": "Orthoptera morphology-de.svg",
+  "author": "Giancarlo Dessì, German translation by Furfur",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Orthoptera_morphology-de.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "external-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/grasshopper-adult": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/grasshopper-instar-1": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/grasshopper-instar-2": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/grasshopper-instar-3": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/grasshopper-instar-4": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/grasshopper-instar-5": {
+  "source": "wikimedia",
+  "name": "Grasshoppermetasnodgrass.svg",
+  "author": "S.E. Snodgrass",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Grasshoppermetasnodgrass.svg",
+  "tags": [
+   "insect",
+   "orthoptera",
+   "metamorphosis",
+   "hemimetabolous",
+   "line-art"
+  ]
+ },
+ "wikimedia/heart-amphibian": {
+  "source": "wikimedia",
+  "name": "Amphibian heart * Corazón de anfibio.svg",
+  "author": "Cscanlon15",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Amphibian_heart_*_Coraz%C3%B3n_de_anfibio.svg",
+  "tags": [
+   "heart",
+   "amphibian",
+   "circulation",
+   "template"
+  ]
+ },
+ "wikimedia/heart-fish": {
+  "source": "wikimedia",
+  "name": "Two chamber heart.svg",
+  "author": "Ahnode",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Two_chamber_heart.svg",
+  "tags": [
+   "heart",
+   "fish",
+   "circulation",
+   "template"
+  ]
+ },
+ "wikimedia/heart-mammal": {
+  "source": "wikimedia",
+  "name": "Diagram of the human heart (no text).svg",
+  "author": "Wapcaplet, Yaddah, Wnauta",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Diagram_of_the_human_heart_(no_text).svg",
+  "tags": [
+   "heart",
+   "mammal",
+   "circulation",
+   "template"
+  ]
+ },
+ "wikimedia/insect-leg": {
+  "source": "wikimedia",
+  "name": "Insect leg scheme.svg",
+  "author": "user:Carstor",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Insect_leg_scheme.svg",
+  "tags": [
+   "insect",
+   "arthropod",
+   "leg",
+   "template"
+  ]
+ },
+ "wikimedia/lancelet": {
+  "source": "wikimedia",
+  "name": "BranchiostomaLanceolatum PioM.svg",
+  "author": "Piotr Michał Jaworski; PioM EN DE PL",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:BranchiostomaLanceolatum_PioM.svg",
+  "tags": [
+   "chordate",
+   "cephalochordata",
+   "lancelet",
+   "amphioxus",
+   "template"
+  ]
+ },
+ "wikimedia/leaf-eudicot": {
+  "source": "wikimedia",
+  "name": "202004 leaf dicot.svg",
+  "author": "DataBase Center for Life Science (DBCLS)",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:202004_leaf_dicot.svg",
+  "tags": [
+   "plant",
+   "leaf",
+   "eudicot",
+   "template"
+  ]
+ },
+ "wikimedia/leaf-monocot": {
+  "source": "wikimedia",
+  "name": "202004 leaf monocot.svg",
+  "author": "DataBase Center for Life Science (DBCLS)",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:202004_leaf_monocot.svg",
+  "tags": [
+   "plant",
+   "leaf",
+   "monocot",
+   "template"
+  ]
+ },
+ "wikimedia/leaf-stipules": {
+  "source": "wikimedia",
+  "name": "Leaf morphology attachment petiolate with Stipulae.svg",
+  "author": "Afanasovich",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leaf_morphology_attachment_petiolate_with_Stipulae.svg",
+  "tags": [
+   "plant",
+   "leaf",
+   "template"
+  ]
+ },
+ "wikimedia/moss-antheridial-head": {
+  "source": "wikimedia",
+  "name": "Lifecycle moss svg diagram.svg",
+  "author": "LadyofHats translator: Manlleus (ca)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lifecycle_moss_svg_diagram.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss",
+   "template"
+  ]
+ },
+ "wikimedia/moss-archegonial-head": {
+  "source": "wikimedia",
+  "name": "Lifecycle moss svg diagram.svg",
+  "author": "LadyofHats translator: Manlleus (ca)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lifecycle_moss_svg_diagram.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss",
+   "template"
+  ]
+ },
+ "wikimedia/moss-capsule": {
+  "source": "wikimedia",
+  "name": "Lifecycle moss svg diagram.svg",
+  "author": "LadyofHats translator: Manlleus (ca)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lifecycle_moss_svg_diagram.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss",
+   "sporangium",
+   "template"
+  ]
+ },
+ "wikimedia/moss-gametophyte-sporophyte": {
+  "source": "wikimedia",
+  "name": "Lifecycle moss svg diagram.svg",
+  "author": "LadyofHats translator: Manlleus (ca)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lifecycle_moss_svg_diagram.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss",
+   "template"
+  ]
+ },
+ "wikimedia/moss-protonema": {
+  "source": "wikimedia",
+  "name": "Lifecycle moss svg diagram.svg",
+  "author": "LadyofHats translator: Manlleus (ca)",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lifecycle_moss_svg_diagram.svg",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss",
+   "template"
+  ]
+ },
+ "wikimedia/mouthparts-bee": {
+  "source": "wikimedia",
+  "name": "Evolution insect mouthparts coloured.svg",
+  "author": "Evolution_insect_mouthparts_coloured.png: Xavier Vázquez derivative work: ecelan (talk)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Evolution_insect_mouthparts_coloured.svg",
+  "tags": [
+   "insect",
+   "mouthparts",
+   "template"
+  ]
+ },
+ "wikimedia/mouthparts-butterfly": {
+  "source": "wikimedia",
+  "name": "Evolution insect mouthparts coloured.svg",
+  "author": "Evolution_insect_mouthparts_coloured.png: Xavier Vázquez derivative work: ecelan (talk)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Evolution_insect_mouthparts_coloured.svg",
+  "tags": [
+   "insect",
+   "mouthparts",
+   "template"
+  ]
+ },
+ "wikimedia/mouthparts-grasshopper": {
+  "source": "wikimedia",
+  "name": "Evolution insect mouthparts coloured.svg",
+  "author": "Evolution_insect_mouthparts_coloured.png: Xavier Vázquez derivative work: ecelan (talk)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Evolution_insect_mouthparts_coloured.svg",
+  "tags": [
+   "insect",
+   "mouthparts",
+   "template"
+  ]
+ },
+ "wikimedia/mouthparts-mosquito": {
+  "source": "wikimedia",
+  "name": "Evolution insect mouthparts coloured.svg",
+  "author": "Evolution_insect_mouthparts_coloured.png: Xavier Vázquez derivative work: ecelan (talk)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Evolution_insect_mouthparts_coloured.svg",
+  "tags": [
+   "insect",
+   "mouthparts",
+   "template"
+  ]
+ },
+ "wikimedia/nematode-male": {
+  "source": "wikimedia",
+  "name": "Nematoda-Anatomy.svg",
+  "author": "Uwe Gille",
+  "license": "CC BY 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Nematoda-Anatomy.svg",
+  "tags": [
+   "nematode",
+   "roundworm",
+   "pseudocoelomate",
+   "template"
+  ]
+ },
+ "wikimedia/ovary-half-inferior": {
+  "source": "wikimedia",
+  "name": "Ovary position half-inferior by Ulf Mehlig.svg",
+  "author": "Ulf Mehlig, Andreas Plank",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Ovary_position_half-inferior_by_Ulf_Mehlig.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "ovary",
+   "template"
+  ]
+ },
+ "wikimedia/ovary-inferior": {
+  "source": "wikimedia",
+  "name": "Ovary position inferior by Ulf Mehlig.svg",
+  "author": "Ulf Mehlig, Andreas Plank",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Ovary_position_inferior_by_Ulf_Mehlig.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "ovary",
+   "template"
+  ]
+ },
+ "wikimedia/ovary-superior": {
+  "source": "wikimedia",
+  "name": "Ovary position superior by Ulf Mehlig.svg",
+  "author": "Ulf Mehlig, Andreas Plank",
+  "license": "CC BY-SA 2.5",
+  "url": "https://commons.wikimedia.org/wiki/File:Ovary_position_superior_by_Ulf_Mehlig.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "ovary",
+   "template"
+  ]
+ },
+ "wikimedia/ovule-double-fertilization": {
+  "source": "wikimedia",
+  "name": "Angiosperm life cycle diagram-en.svg",
+  "author": "LadyofHats Mariana Ruiz",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Angiosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "ovule",
+   "fertilization",
+   "template"
+  ]
+ },
+ "wikimedia/ovule-gymno-angio": {
+  "source": "wikimedia",
+  "name": "Ovule-Gymno-Angio-en (cropped).svg",
+  "author": "Qef Translation and vectorisation by Cehagenmerak.",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Ovule-Gymno-Angio-en_(cropped).svg",
+  "tags": [
+   "plant",
+   "ovule",
+   "seed-plant",
+   "template"
+  ]
+ },
+ "wikimedia/pine-branch-cone": {
+  "source": "wikimedia",
+  "name": "Gymnosperm life cycle diagram-en.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Gymnosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer",
+   "template"
+  ]
+ },
+ "wikimedia/pine-pollen-cone": {
+  "source": "wikimedia",
+  "name": "Gymnosperm life cycle diagram-en.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Gymnosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer",
+   "cone",
+   "template"
+  ]
+ },
+ "wikimedia/pine-seed-cone-section": {
+  "source": "wikimedia",
+  "name": "Gymnosperm life cycle diagram-en.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Gymnosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer",
+   "cone",
+   "template"
+  ]
+ },
+ "wikimedia/pine-tree": {
+  "source": "wikimedia",
+  "name": "Gymnosperm life cycle diagram-en.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Gymnosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer",
+   "tree",
+   "template"
+  ]
+ },
+ "wikimedia/pistil-pollination": {
+  "source": "wikimedia",
+  "name": "Angiosperm life cycle diagram-en.svg",
+  "author": "LadyofHats Mariana Ruiz",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Angiosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "pollination",
+   "template"
+  ]
+ },
+ "wikimedia/planarian": {
+  "source": "wikimedia",
+  "name": "Dugesia schematic.svg",
+  "author": "Andreas Neudecker",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Dugesia_schematic.svg",
+  "tags": [
+   "flatworm",
+   "platyhelminthes",
+   "planarian",
+   "template"
+  ]
+ },
+ "wikimedia/plant-body": {
+  "source": "wikimedia",
+  "name": "FloweringPlant-schematic.svg",
+  "author": "chris 論",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:FloweringPlant-schematic.svg",
+  "tags": [
+   "plant",
+   "angiosperm",
+   "template"
+  ]
+ },
+ "wikimedia/pollen-grain": {
+  "source": "wikimedia",
+  "name": "Angiosperm life cycle diagram-en.svg",
+  "author": "LadyofHats Mariana Ruiz",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Angiosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "pollen",
+   "template"
+  ]
+ },
+ "wikimedia/polychaete-segments": {
+  "source": "wikimedia",
+  "name": "Polychaeta anatomy en.svg",
+  "author": "Hans Hillewaert",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Polychaeta_anatomy_en.svg",
+  "tags": [
+   "annelid",
+   "polychaete",
+   "parapodium",
+   "template"
+  ]
+ },
+ "wikimedia/potato-tuber": {
+  "source": "wikimedia",
+  "name": "Potato tuber morphology.svg",
+  "author": "Smartse",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Potato_tuber_morphology.svg",
+  "tags": [
+   "plant",
+   "stem",
+   "tuber",
+   "template"
+  ]
+ },
+ "wikimedia/root-systems": {
+  "source": "wikimedia",
+  "name": "Root Systems.svg",
+  "author": "KaitlinLiu",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Root_Systems.svg",
+  "tags": [
+   "plant",
+   "root",
+   "template"
+  ]
+ },
+ "wikimedia/sea-star-arm": {
+  "source": "wikimedia",
+  "name": "Krossfiskur-thverskurdur.svg",
+  "author": "Salvör Gissurardóttir",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Krossfiskur-thverskurdur.svg",
+  "tags": [
+   "echinoderm",
+   "sea-star",
+   "water-vascular",
+   "template"
+  ]
+ },
+ "wikimedia/sea-urchin-section": {
+  "source": "wikimedia",
+  "name": "Sea Urchin Anatomy.svg",
+  "author": "Erinlandry",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Sea_Urchin_Anatomy.svg",
+  "tags": [
+   "echinoderm",
+   "sea-urchin",
+   "radial-symmetry",
+   "template"
+  ]
+ },
+ "wikimedia/seed-section": {
+  "source": "wikimedia",
+  "name": "Angiosperm life cycle diagram-en.svg",
+  "author": "LadyofHats Mariana Ruiz",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Angiosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "seed",
+   "template"
+  ]
+ },
+ "wikimedia/skull-human-lateral": {
+  "source": "wikimedia",
+  "name": "Human skull side simplified (bones).svg",
+  "author": "LadyofHats Mariana Ruiz Villarreal",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Human_skull_side_simplified_(bones).svg",
+  "tags": [
+   "skull",
+   "mammal",
+   "human",
+   "bones",
+   "template"
+  ]
+ },
+ "wikimedia/snail-anatomy": {
+  "source": "wikimedia",
+  "name": "Scheme snail anatomy-numbers.svg",
+  "author": "Al2",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Scheme_snail_anatomy-numbers.svg",
+  "tags": [
+   "mollusc",
+   "gastropod",
+   "snail",
+   "internal-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/spider-internal": {
+  "source": "wikimedia",
+  "name": "Spider internal anatomy-en.svg",
+  "author": "Original: John Henry Comstock Vector: Pbroks13 (Ryan Wilson)",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Spider_internal_anatomy-en.svg",
+  "tags": [
+   "arachnid",
+   "spider",
+   "internal-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/sponge-asconoid": {
+  "source": "wikimedia",
+  "name": "Porifera body structures.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Porifera_body_structures.svg",
+  "tags": [
+   "sponge",
+   "porifera",
+   "body-plan",
+   "template"
+  ]
+ },
+ "wikimedia/sponge-leuconoid": {
+  "source": "wikimedia",
+  "name": "Porifera body structures.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Porifera_body_structures.svg",
+  "tags": [
+   "sponge",
+   "porifera",
+   "body-plan",
+   "template"
+  ]
+ },
+ "wikimedia/sponge-syconoid": {
+  "source": "wikimedia",
+  "name": "Porifera body structures.svg",
+  "author": "SiliconProphet",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Porifera_body_structures.svg",
+  "tags": [
+   "sponge",
+   "porifera",
+   "body-plan",
+   "template"
+  ]
+ },
+ "wikimedia/sponge-wall-cells": {
+  "source": "wikimedia",
+  "name": "Asconoide-it.svg",
+  "author": "Esculapio",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Asconoide-it.svg",
+  "tags": [
+   "sponge",
+   "porifera",
+   "cell",
+   "template"
+  ]
+ },
+ "wikimedia/stamen": {
+  "source": "wikimedia",
+  "name": "Angiosperm life cycle diagram-en.svg",
+  "author": "LadyofHats Mariana Ruiz",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Angiosperm_life_cycle_diagram-en.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "stamen",
+   "template"
+  ]
+ },
+ "wikimedia/stem-thorn": {
+  "source": "wikimedia",
+  "name": "Stem morphology type thorn.svg",
+  "author": "RoRo",
+  "license": "CC0 1.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Stem_morphology_type_thorn.svg",
+  "tags": [
+   "plant",
+   "stem",
+   "template"
+  ]
+ },
+ "wikimedia/teeth-types": {
+  "source": "wikimedia",
+  "name": "Types of teeth.svg",
+  "author": "Bizhan Khodabandeh",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Types_of_teeth.svg",
+  "tags": [
+   "mammal",
+   "teeth",
+   "dentition",
+   "template"
   ]
  }
 }

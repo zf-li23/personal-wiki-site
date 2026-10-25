@@ -84,6 +84,12 @@ def _placement(icon_id, at, height, width, anchor, flip, rotate):
     return tf, s, corners
 
 
+def _points_per_unit(ax):
+    """Line-width points per canvas unit of ``ax`` (strokes are stored in icon units)."""
+    x0, x1 = ax.get_xlim()
+    return ax.get_position().width * ax.figure.get_figwidth() * 72 / abs(x1 - x0)
+
+
 def icon(ax, icon_id, at=(0, 0), height=1.0, width=None, anchor="center", color=None, flip=False, rotate=0.0, alpha=1.0,
          zorder=10, parts=None, hide=(), mute=None):
     """Draw an icon with its ``anchor`` ("center", "bottom", "left", …) at ``at``, scaled to ``height``.
@@ -99,6 +105,7 @@ def icon(ax, icon_id, at=(0, 0), height=1.0, width=None, anchor="center", color=
     tf, s, corners = _placement(icon_id, at, height, width, anchor, flip, rotate)
     parts = parts or {}
     mono = d.get("mono", False)
+    pt = _points_per_unit(ax)
     for item in d["items"]:
         part = item.get("p")
         if part in hide:
@@ -122,7 +129,7 @@ def icon(ax, icon_id, at=(0, 0), height=1.0, width=None, anchor="center", color=
         # fill=False (not facecolor="none") and alpha only when < 1: the dark-theme recolouring would
         # otherwise turn an invisible face opaque.
         ax.add_patch(PathPatch(path, fill=fc is not None, facecolor=fc or (0, 0, 0, 0), edgecolor=ec or (0, 0, 0, 0),
-                               lw=item.get("w", 0) * s * 72 / 100 if ec else 0, alpha=a if a < 0.999 else None,
+                               lw=item.get("w", 0) * s * pt if ec else 0, alpha=a if a < 0.999 else None,
                                zorder=zorder, joinstyle="round", capstyle="round"))
     # bounding box (x, y, w, h) of the drawn icon, rotation included (it turns about ``at``)
     lo, hi = corners.min(axis=0), corners.max(axis=0)
@@ -136,7 +143,7 @@ def parts(icon_id):
 
 def icon_part(icon_id, part, at=(0, 0), height=1.0, width=None, anchor="center", flip=False, rotate=0.0, where="center"):
     """Canvas point on a named part of an icon placed with the same arguments as ``icon()``, for callouts:
-    ``bio.callout(ax, bio.icon_part("wikimedia/flower", "ovary", at=…, height=…), text_xy, "Ovary")``.
+    ``bio.callout(ax, bio.icon_part("wikimedia/flower-section", "pistil", at=…, height=…), text_xy, "Pistil")``.
     ``where`` is "center" (the point of the part nearest its centroid, so a part made of separate pieces
     still gets a point on itself) or "top" / "bottom" / "left" / "right"."""
     d = load(icon_id)
