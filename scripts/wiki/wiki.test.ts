@@ -541,6 +541,15 @@ describe('cross-page linking', () => {
     assert.match(s.html('1.3.3'), /1\.3\.2\/#def-2\.2\.1" class="concept-ref"/);
     assert.equal((s.html('1.3.4').match(/class="concept-ref"/g) ?? []).length, 2);
   });
+  it('reads a short stem as an abbreviation plural only when it is written in capitals', async () => {
+    concepts.push({ id: 'continuous-integration', zh: '持续集成', en: 'continuous integration', aliases: ['CI'] });
+    const s = await site({
+      '1.3.2': 'en:## 2.1. A\n\nThe *cis* isomer.\n\nTwo **CIs** run.',
+    });
+    concepts.pop();
+    assert.ok(!s.html('1.3.2').includes('wiki-dfn'));
+    assert.match(s.html('1.3.2'), /data-concept="continuous-integration"/);
+  });
   it('does not take an unnumbered statement label for a concept of the same name', async () => {
     concepts.push({ id: 'proposition', zh: '命题', en: 'proposition', aliases: [] });
     const s = await site({ '1.1.1': '## 1.1. A\n\n**定义 1.1.1（命题）** 设……', '1.1.2': '## 2.1. B\n\n**命题**：任意……\n\n每个**命题**都有真值。' });

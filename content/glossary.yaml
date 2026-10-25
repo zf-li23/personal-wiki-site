@@ -3409,7 +3409,7 @@ terms:
   - { zh: 变基, en: rebase, aliases: [rebasing] }
   - { zh: 拉取请求, en: pull request, aliases: [合并请求, merge request, PR] }
   - { zh: 代码评审, en: code review, aliases: [代码审查] }
-  - { zh: 持续集成, en: continuous integration, aliases: [CI] }
+  - { zh: 持续集成, en: continuous integration, aliases: [CI], scope: ["4"] }
   - { zh: 持续交付, en: continuous delivery }
   - { zh: 持续部署, en: continuous deployment }
   - { zh: 需求, en: requirement, scope: ["4.14"] }
@@ -3812,7 +3812,7 @@ terms:
   - { zh: 波节, en: node, scope: ["5"] }   # the ODE/population "结点" (node) is scoped to 2.4 and 7.4
   - { zh: 事件, en: event, scope: ["5"] }   # spacetime event; the probability sense is scoped to 3
   - { zh: 运动学, en: kinematics }
-  - { zh: 平动, en: translation, aliases: [平移运动], scope: ["5", "6", "7"] }
+  - { zh: 平动, en: translation, aliases: [平移运动], scope: ["5", "6"] }
   - { zh: 参考系, en: reference frame, aliases: [frame of reference] }
   - { zh: 质点, en: particle, aliases: [point mass], scope: ["5", "6", "7"] }
   - { zh: 位置矢量, en: position vector, aliases: [位矢] }
@@ -4859,7 +4859,7 @@ terms:
   - { zh: Young 方程, en: Young equation, aliases: [润湿方程, "Young's equation"] }
   - { zh: 超疏水, en: superhydrophobicity, aliases: [超疏水性, 荷叶效应, lotus effect] }
   - { zh: 表面活性剂, en: surfactant, aliases: [surface-active agent] }
-  - { zh: 两亲分子, en: amphiphile, aliases: [双亲分子, amphiphilic molecule] }
+  - { zh: 两亲分子, en: amphiphile, aliases: [双亲分子, amphiphilic molecule, amphipathic compound] }
   - { zh: 胶束, en: micelle }
   - { zh: 临界胶束浓度, en: critical micelle concentration, aliases: [CMC] }
   - { zh: 反胶束, en: reverse micelle, aliases: [反相胶束] }
@@ -5929,5 +5929,221 @@ terms:
   - { zh: 磷酸二酯键, en: phosphodiester bond, aliases: [phosphodiester linkage] }
   - { zh: 亚磷酰胺法, en: phosphoramidite method, aliases: [亚磷酰胺固相合成, phosphoramidite synthesis] }
   - { zh: 配位饱和, en: coordinatively saturated }
-  - { zh: α 碳, en: alpha carbon, aliases: [α-碳], scope: ["6"] }
+  - { zh: α 碳, en: alpha carbon, aliases: [α-碳, α carbon], scope: ["6", "7"] }
   - { zh: α-氢, en: alpha hydrogen, aliases: [α 氢], scope: ["6"] }
+
+  # biology: biochemistry and molecular biology (7.1–7.2); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 复制, en: replication, aliases: [DNA 复制, DNA replication], scope: ["7"] }
+  - { zh: 转录, en: transcription, scope: ["7"] }
+  - { zh: 翻译, en: translation, scope: ["7"] }
+  - { zh: 启动子, en: promoter, scope: ["7"] }
+  - { zh: 结构域, en: domain, aliases: [蛋白质结构域, protein domain], scope: ["7"] }
+  - { zh: 配体, en: ligand, scope: ["7"] }
+  - { zh: 活性部位, en: active site, aliases: [活性中心], scope: ["7"] }
+  - { zh: 辅因子, en: cofactor, scope: ["6", "7"] }
+  - { zh: 中心法则, en: central dogma }
+  - { zh: 基因, en: gene, aliases: [genes], scope: ["7"] }
+  - { zh: 基因组, en: genome, aliases: [genomes] }
+  - { zh: 转录组, en: transcriptome }
+  - { zh: 蛋白质组, en: proteome }
+  - { zh: 逆转录, en: reverse transcription, aliases: [反转录] }
+  - { zh: 热能, en: thermal energy, aliases: [k_BT], scope: ["7"] }
+  - { zh: C 值, en: C value }
+  - { zh: C 值悖论, en: C-value paradox, aliases: [C 值矛盾] }
+  - { zh: 重复 DNA, en: repetitive DNA, aliases: [重复序列] }
+  - { zh: 卫星 DNA, en: satellite DNA }
+  - { zh: 小卫星, en: minisatellite, aliases: [minisatellites, 小卫星 DNA] }
+  - { zh: 微卫星, en: microsatellite, aliases: [microsatellites, 短串联重复, short tandem repeat, STR] }
+  - { zh: 长散在核元件, en: LINE, aliases: [LINEs, long interspersed nuclear element] }
+  - { zh: 短散在核元件, en: SINE, aliases: [SINEs, short interspersed nuclear element] }
+  - { zh: 假基因, en: pseudogene, aliases: [pseudogenes] }
+  - { zh: 着丝粒, en: centromere }
+  - { zh: 端粒, en: telomere, aliases: [telomeres] }
+  - { zh: 内含子, en: intron, aliases: [introns] }
+  - { zh: 外显子, en: exon, aliases: [exons] }
+  - { zh: 开放阅读框, en: open reading frame, aliases: [ORF] }
+  - { zh: 非编码 RNA, en: noncoding RNA, aliases: [ncRNA, non-coding RNA] }
+  - { zh: 连环数, en: linking number, aliases: [连接数] }
+  - { zh: 扭转数, en: twist, scope: ["7"] }
+  - { zh: 超螺旋数, en: writhe, aliases: [缠绕数, writhing number] }
+  - { zh: 超螺旋密度, en: superhelical density, aliases: [比连环差, specific linking difference] }
+  - { zh: 连环差, en: linking difference }
+  - { zh: 拓扑异构体, en: topoisomer, aliases: [topoisomers] }
+  - { zh: 拓扑异构酶, en: topoisomerase, aliases: [topoisomerases, DNA 拓扑异构酶] }
+  - { zh: DNA 旋转酶, en: DNA gyrase, aliases: [旋转酶, gyrase] }
+  - { zh: 超螺旋, en: supercoiled, aliases: [supercoiling, DNA supercoiling], scope: ["7"] }
+  - { zh: 螺旋–线团转变, en: helix–coil transition, aliases: [螺旋-线团转变, helix-coil transition] }
+  - { zh: 生物化学, en: biochemistry }
+  - { zh: 原核生物, en: prokaryote }
+  - { zh: 真核生物, en: eukaryote }
+  - { zh: 光能营养生物, en: phototroph }
+  - { zh: 化能营养生物, en: chemotroph }
+  - { zh: 自养生物, en: autotroph }
+  - { zh: 异养生物, en: heterotroph }
+  - { zh: 生物大分子, en: macromolecule, aliases: [大分子] }
+  - { zh: 超分子复合体, en: supramolecular complex }
+  - { zh: 动态稳态, en: dynamic steady state }
+  - { zh: 代谢, en: metabolism, aliases: [新陈代谢] }
+  - { zh: 大分子拥挤, en: macromolecular crowding }
+  - { zh: RNA 世界假说, en: RNA world hypothesis, aliases: [RNA 世界, RNA world] }
+  - { zh: 内共生学说, en: endosymbiotic theory, aliases: [内共生假说] }
+  - { zh: 疏水效应, en: hydrophobic effect, aliases: [疏水作用, hydrophobic interaction] }
+  - { zh: 非共价相互作用, en: noncovalent interaction, aliases: [弱相互作用, weak interaction] }
+  - { zh: 渗透, en: osmosis }
+  - { zh: 渗透浓度, en: osmolarity, aliases: [渗透摩尔浓度] }
+  - { zh: 碳酸氢盐缓冲体系, en: bicarbonate buffer system }
+  - { zh: 酸中毒, en: acidosis }
+  - { zh: 碱中毒, en: alkalosis }
+  - { zh: 侧链, en: side chain, aliases: [R 基, R group], scope: ["7"] }
+  - { zh: 标准氨基酸, en: standard amino acid, aliases: [common amino acid] }
+  - { zh: 亲水性指数, en: hydropathy index, aliases: [疏水性指数] }
+  - { zh: 翻译后修饰, en: post-translational modification, aliases: [PTM] }
+  - { zh: 肽, en: peptide }
+  - { zh: 寡肽, en: oligopeptide }
+  - { zh: 多肽, en: polypeptide }
+  - { zh: 蛋白质, en: protein }
+  - { zh: 结合蛋白, en: conjugated protein }
+  - { zh: 辅基, en: prosthetic group }
+  - { zh: 辅酶, en: coenzyme }
+  - { zh: 差速离心, en: differential centrifugation }
+  - { zh: 盐析, en: salting out }
+  - { zh: 比活力, en: specific activity }
+  - { zh: 一级结构, en: primary structure }
+  - { zh: 同源蛋白, en: homolog, aliases: [同源物, homologous protein] }
+  - { zh: 直系同源物, en: ortholog }
+  - { zh: 旁系同源物, en: paralog }
+  - { zh: 共有序列, en: consensus sequence }
+  - { zh: 残基, en: residue, scope: ["6", "7"] }
+  - { zh: 染色质, en: chromatin }
+  - { zh: 组蛋白, en: histone }
+  - { zh: 核小体, en: nucleosome }
+  - { zh: 核小体核心颗粒, en: nucleosome core particle }
+  - { zh: 组蛋白八聚体, en: histone octamer }
+  - { zh: 连接 DNA, en: linker DNA }
+  - { zh: 核小体重复长度, en: nucleosome repeat length }
+  - { zh: 组蛋白折叠, en: histone fold }
+  - { zh: 连接组蛋白, en: linker histone, aliases: [H1] }
+  - { zh: 染色小体, en: chromatosome }
+  - { zh: 拓扑关联域, en: topologically associating domain, aliases: [TAD] }
+  - { zh: 环挤出, en: loop extrusion }
+  - { zh: 常染色质, en: euchromatin }
+  - { zh: 异染色质, en: heterochromatin }
+  - { zh: 核小体定位, en: nucleosome positioning }
+  - { zh: DNase I 超敏位点, en: DNase I hypersensitive site, aliases: [DNase 超敏位点] }
+  - { zh: 限制性内切酶, en: restriction endonuclease, aliases: [限制酶, restriction enzyme] }
+  - { zh: 限制–修饰系统, en: restriction–modification system }
+  - { zh: 黏性末端, en: sticky end, aliases: [cohesive end] }
+  - { zh: 平末端, en: blunt end }
+  - { zh: 同裂酶, en: isoschizomer }
+  - { zh: IIS 型限制酶, en: type IIS restriction enzyme }
+  - { zh: DNA 连接酶, en: DNA ligase }
+  - { zh: 克隆载体, en: cloning vector }
+  - { zh: 质粒, en: plasmid }
+  - { zh: 多克隆位点, en: multiple cloning site, aliases: [MCS] }
+  - { zh: 转化, en: transformation, scope: ["7"] }
+  - { zh: α 互补, en: α-complementation }
+  - { zh: 蓝白斑筛选, en: blue–white screening }
+  - { zh: 定向克隆, en: directional cloning }
+  - { zh: 表达载体, en: expression vector }
+  - { zh: 黏粒, en: cosmid }
+  - { zh: 细菌人工染色体, en: bacterial artificial chromosome, aliases: [BAC] }
+  - { zh: 酵母人工染色体, en: yeast artificial chromosome, aliases: [YAC] }
+  - { zh: 基因组文库, en: genomic library }
+  - { zh: 互补 DNA, en: complementary DNA, aliases: [cDNA] }
+  - { zh: cDNA 文库, en: cDNA library }
+  - { zh: 严谨性, en: stringency, aliases: [杂交严谨性] }
+  - { zh: 引物, en: primer, scope: ["7"] }
+  - { zh: 切口平移, en: nick translation }
+  - { zh: 末端脱氧核苷酸转移酶, en: terminal deoxynucleotidyl transferase, aliases: [TdT, 末端转移酶] }
+  - { zh: Gibson 组装, en: Gibson assembly }
+  - { zh: Southern 印迹, en: Southern blot }
+  - { zh: Northern 印迹, en: Northern blot }
+  - { zh: 荧光原位杂交, en: fluorescence in situ hybridization, aliases: [FISH] }
+  - { zh: 定量 PCR, en: quantitative PCR, aliases: [qPCR, 实时荧光定量 PCR, real-time PCR] }
+  - { zh: 定量循环数, en: quantification cycle, aliases: [循环阈值, threshold cycle, Ct, Cq] }
+  - { zh: 水解探针, en: hydrolysis probe, aliases: [TaqMan 探针, TaqMan probe] }
+  - { zh: 数字 PCR, en: digital PCR }
+  - { zh: 核转录延伸测定, en: nuclear run-on assay }
+  - { zh: S1 作图, en: S1 mapping }
+  - { zh: 引物延伸, en: primer extension }
+  - { zh: 凝胶阻滞测定, en: electrophoretic mobility shift assay, aliases: [EMSA, 凝胶迁移率变动分析, gel shift assay] }
+  - { zh: DNase I 足迹法, en: DNase I footprinting, aliases: [足迹法] }
+  - { zh: 染色质免疫沉淀, en: chromatin immunoprecipitation, aliases: [ChIP] }
+  - { zh: ChIP-seq, en: ChIP-seq }
+  - { zh: 核糖体图谱, en: ribosome profiling, aliases: [Ribo-seq] }
+  - { zh: Sanger 测序, en: Sanger sequencing, aliases: [双脱氧测序, dideoxy sequencing] }
+  - { zh: 边合成边测序, en: sequencing by synthesis }
+  - { zh: 焦磷酸测序, en: pyrosequencing }
+  - { zh: 可逆终止子, en: reversible terminator }
+  - { zh: Phred 质量值, en: Phred quality score }
+  - { zh: 单分子实时测序, en: single-molecule real-time sequencing, aliases: [SMRT] }
+  - { zh: 模板转换, en: template switching }
+  - { zh: 测序覆盖度, en: sequencing coverage, aliases: [测序深度, sequencing depth] }
+  - { zh: 聚合酶链式反应, en: polymerase chain reaction, aliases: [PCR], scope: ["7"] }
+  - { zh: 天然构象, en: native conformation, aliases: [native protein, 天然蛋白质] }
+  - { zh: 二级结构, en: secondary structure }
+  - { zh: α 螺旋, en: α helix, aliases: [alpha helix, α-螺旋] }
+  - { zh: β 折叠, en: β sheet, aliases: [β-pleated sheet, β 片层, beta sheet] }
+  - { zh: β 构象, en: β conformation }
+  - { zh: β 链, en: β strand, aliases: [beta strand] }
+  - { zh: β 转角, en: β turn, aliases: [β-转角, beta turn] }
+  - { zh: Ramachandran 图, en: Ramachandran plot, aliases: [拉氏图] }
+  - { zh: 三级结构, en: tertiary structure }
+  - { zh: 纤维状蛋白, en: fibrous protein }
+  - { zh: 球状蛋白, en: globular protein }
+  - { zh: 卷曲螺旋, en: coiled coil }
+  - { zh: 胶原蛋白, en: collagen, aliases: [胶原] }
+  - { zh: 内在无序蛋白, en: intrinsically disordered protein, aliases: [固有无序蛋白] }
+  - { zh: 四级结构, en: quaternary structure }
+  - { zh: 亚基, en: subunit }
+  - { zh: 寡聚体, en: oligomer, aliases: [multimer, 多聚体], scope: ["7"] }
+  - { zh: 原聚体, en: protomer }
+  - { zh: 蛋白质数据库, en: Protein Data Bank, aliases: [PDB] }
+  - { zh: 蛋白质家族, en: protein family }
+  - { zh: 疏水矩, en: hydrophobic moment }
+  - { zh: 螺旋轮, en: helical wheel }
+  - { zh: 蛋白质稳态, en: proteostasis }
+  - { zh: 变性, en: denaturation, scope: ["7"] }
+  - { zh: 复性, en: renaturation, scope: ["7"] }
+  - { zh: 热力学假说, en: thermodynamic hypothesis, aliases: [Anfinsen 法则, "Anfinsen's dogma"] }
+  - { zh: 两态模型, en: two-state model, scope: ["7.1"] }
+  - { zh: 蛋白质稳定性曲线, en: protein stability curve, aliases: [stability curve] }
+  - { zh: Levinthal 悖论, en: "Levinthal's paradox", aliases: [莱文索尔悖论] }
+  - { zh: 折叠漏斗, en: folding funnel, aliases: [energy landscape, 能量地形] }
+  - { zh: 熔球态, en: molten globule }
+  - { zh: chevron 图, en: chevron plot, aliases: [V 形图] }
+  - { zh: 分子伴侣, en: molecular chaperone, aliases: [chaperone] }
+  - { zh: 伴侣蛋白, en: chaperonin }
+  - { zh: 热激蛋白, en: heat shock protein, aliases: [热休克蛋白, Hsp] }
+  - { zh: 淀粉样纤维, en: amyloid fibril, aliases: [amyloid, 淀粉样蛋白] }
+  - { zh: 淀粉样变性, en: amyloidosis, aliases: [amyloidoses] }
+  - { zh: 朊病毒, en: prion, aliases: [朊粒] }
+  - { zh: 冷冻电镜, en: cryo-electron microscopy, aliases: [cryo-EM, 冷冻电子显微术] }
+  - { zh: 相位问题, en: phase problem }
+  - { zh: 结合部位, en: binding site }
+  - { zh: 饱和分数, en: fractional saturation }
+  - { zh: 诱导契合, en: induced fit }
+  - { zh: 构象选择, en: conformational selection }
+  - { zh: 血红素, en: heme, aliases: [haem] }
+  - { zh: T 态, en: T state }
+  - { zh: R 态, en: R state }
+  - { zh: 别构蛋白, en: allosteric protein, aliases: [变构蛋白] }
+  - { zh: 协同性, en: cooperativity, aliases: [cooperative binding, 协同结合] }
+  - { zh: Hill 方程, en: Hill equation, aliases: [希尔方程] }
+  - { zh: Hill 系数, en: Hill coefficient }
+  - { zh: Hill 图, en: Hill plot }
+  - { zh: 协同模型, en: MWC model, aliases: [concerted model, 齐变模型] }
+  - { zh: 序变模型, en: sequential model, aliases: [KNF model] }
+  - { zh: Bohr 效应, en: Bohr effect, aliases: [波尔效应] }
+  - { zh: "2,3-二磷酸甘油酸", en: "2,3-bisphosphoglycerate", aliases: [BPG, "2,3-BPG"] }
+  - { zh: 镰状细胞贫血, en: sickle cell anemia, aliases: [镰刀型细胞贫血症] }
+  - { zh: 抗原, en: antigen }
+  - { zh: 表位, en: epitope, aliases: [抗原决定簇, antigenic determinant] }
+  - { zh: 半抗原, en: hapten }
+  - { zh: 抗体, en: antibody, aliases: [immunoglobulin, 免疫球蛋白] }
+  - { zh: 多克隆抗体, en: polyclonal antibody }
+  - { zh: 单克隆抗体, en: monoclonal antibody }
+  - { zh: Western 印迹, en: Western blot, aliases: [免疫印迹, immunoblot] }
+  - { zh: 酶联免疫吸附测定, en: ELISA, aliases: [enzyme-linked immunosorbent assay] }
+  - { zh: 模体, en: motif, aliases: [fold, 折叠模式, 超二级结构, protein motif], scope: ["7"] }
+  - { zh: 解离常数, en: dissociation constant, aliases: [K_d], scope: ["7"] }

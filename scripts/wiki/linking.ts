@@ -107,8 +107,14 @@ function nameKeys(text: string, lang: Lang): string[] {
   const keys = [l];
   // Any one word may be plural: "groups", "discontinuities of the first kind".
   const words = l.split(' ');
+  const written = t.split(' ');
   words.forEach((w, i) => {
-    for (const s of singulars(w)) keys.push([...words.slice(0, i), s, ...words.slice(i + 1)].join(' '));
+    for (const s of singulars(w)) {
+      // A one- or two-letter stem is an abbreviation's plural only when written in capitals ("CIs"):
+      // otherwise "cis" would be read as the plural of the alias CI.
+      if (s.length <= 2 && written[i].slice(0, s.length) !== written[i].slice(0, s.length).toUpperCase()) continue;
+      keys.push([...words.slice(0, i), s, ...words.slice(i + 1)].join(' '));
+    }
   });
   return keys;
 }
