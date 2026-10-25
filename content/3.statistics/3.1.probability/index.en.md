@@ -1,6 +1,6 @@
 ---
 title: Probability Theory
-source_hash: 9382f5ae5994
+source_hash: f9e062d89607
 ---
 
 Probability theory studies the quantitative laws of random phenomena: given a completely specified probability model, it computes the probabilities of events and the distributions and numerical characteristics of random variables, and it studies the deterministic regularities that emerge when many random influences add up. It has four central problems: how to describe a random experiment rigorously; how to characterize the distributions of random variables and random vectors, and of functions of them; how to summarize a distribution by a few numbers such as the expectation and the variance; and how sequences of random variables behave in the limit. This subject corresponds to the course Elementary Probability Theory and also covers the probability part of Probability and Mathematical Statistics. It is developed within Kolmogorov's axiomatic framework; compared with the latter course its definitions are more rigorous, its distributions and tools are richer, and its demands on the limit theorems are higher.

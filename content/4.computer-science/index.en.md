@@ -1,6 +1,6 @@
 ---
 title: Computer Science
-source_hash: b72be7d957c8
+source_hash: a54590d03971
 ---
 
 Computer science studies how machines represent information and carry out computation, and how computation is organized into reliable systems and software. Its questions come at three levels: what can be computed and at what cost; how a computer is built up, layer by layer, from logic gates into a system that runs programs; and how people write the problems of a domain as programs and keep those programs correct while many people collaborate on them and maintain them for years. This discipline collects fourteen courses, organized as one foundation and three branches.

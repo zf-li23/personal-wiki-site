@@ -1,6 +1,6 @@
 ---
 title: Quantum Physics
-source_hash: 4a4b681b31a0
+source_hash: c85bb6f28b3f
 ---
 
 Quantum physics studies the laws of motion of microscopic particles. At the end of the nineteenth century, classical physics could explain most phenomena in mechanics, thermal physics and electromagnetism, but it never gave the correct law for the frequency distribution of thermal radiation; from Planck's energy quantum hypothesis in 1900 to the establishment of quantum mechanics in the 1920s, physics replaced the classical deterministic picture with an entirely new set of concepts: energy can be quantized, light and matter particles both show **wave–particle duality**, the state of a particle is described by a **wave function**, and the results of measurement can only be predicted probabilistically. This course corresponds to the quantum physics part of University Physics B (2), and its core questions are: where classical theory fails, how the state of a microscopic particle is described and how it evolves in time; and how to use this theory to understand the properties of atoms, molecules and solids.

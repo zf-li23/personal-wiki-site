@@ -1,6 +1,6 @@
 ---
 title: Statistics
-source_hash: 2438f9b7fc4d
+source_hash: e865b94a9377
 ---
 
 Statistics studies how to draw reliable conclusions from data that are subject to randomness, and how to quantify the uncertainty of those conclusions. Its language is probability theory: probability theory starts from a known model and deduces the behavior of data, while statistical inference runs the other way, from observed data to the model that produced them. This section contains nine courses: [probability theory](/3.1), [statistical inference](/3.2), [linear regression analysis](/3.3), [multivariate statistical analysis](/3.4), [statistical computing and software](/3.5), [nonparametric statistics](/3.6), [Bayesian statistics](/3.7), [design and analysis of experiments](/3.8) and [causal inference](/3.9). The first two are the theoretical foundation; the third and fourth extend inference to relations among several variables; and the remaining five branch out in different directions: computation, relaxing distributional assumptions, a different paradigm of inference, the way data are generated, and causal relations. Together they roughly make up the curriculum of the statistics minor.

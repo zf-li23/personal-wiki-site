@@ -1,7 +1,7 @@
 ---
 title: Phase Diagrams of Binary and Ternary Systems
 description: Phase-rule analysis of binary systems; p–x and T–x diagrams of ideal liquid mixtures, system points and phase points, the lever rule and fractional distillation; nonideal systems and azeotropes, the Duhem–Margules equation and Konovalov's rules; partially miscible liquids, critical solution temperatures and phase separation in regular solutions, immiscible liquids and steam distillation; thermal analysis and cooling curves, simple eutectic systems and the ideal solubility equation, water–salt systems, congruent and incongruent compounds, solid solutions and zone refining; the seven basic types of phase diagrams and how to read complex ones, the Fe–C diagram; triangular coordinates for ternary systems and extraction.
-source_hash: e60673e68393
+source_hash: e3bc0dbeef98
 ---
 
 The previous chapter used the phase rule and the Clapeyron equation to treat one-component systems. This chapter turns to binary systems, the part of phase equilibrium used most in chemical engineering, metallurgy, materials science, and pharmacy: distillation and fractional distillation, extraction, purification by crystallization, and alloy design are all based on phase diagrams. The phase diagram of a binary system can be computed from the solution thermodynamics of the preceding chapters: ideal systems follow **Raoult's law** ([6.3.5](/6.3.5)), nonideal systems are described by **activity coefficients** and the **regular solution** model ([6.3.6](/6.3.6)), and solid–liquid equilibria use the same formula as **freezing-point depression**. The diagrams in this chapter were all computed in this way with Python. For real, complex systems, however, phase diagrams are determined mainly by experiment, and one must learn to read them. The chapter treats gas–liquid, liquid–liquid, and solid–liquid equilibria in turn, then summarizes the rules for reading complex phase diagrams, and finally gives a brief introduction to the triangular coordinates and extraction of ternary systems.
@@ -190,7 +190,7 @@ For the symmetric model, the compositions of the two phases satisfy $\ln\dfrac{x
 
 ![Symmetric regular solution. Left: Gibbs energy of mixing against composition for W/RT = 0, 1.5, 2 and 2.8; for W/RT > 2 the curve has two minima and the common tangent gives the compositions of the two coexisting liquids. Right: coexistence curve and spinodal in reduced temperature T/Tc, with Tc = W/(2R) the upper critical solution temperature; a tie line l1–l2 is shown at T/Tc = 0.8](./plots/regular-solution-miscibility.py)
 
-The same thermodynamics (extended to polymers as Flory–Huggins theory) is used to understand liquid–liquid phase separation of proteins and RNA in cells: proteins containing low-complexity sequences separate from the cytoplasm at certain concentrations and temperatures as protein-rich droplets, forming membraneless organelles (biomolecular condensates) such as the nucleolus and stress granules ([7.2](/7.3)).
+The same thermodynamics (extended to polymers as Flory–Huggins theory) is used to understand liquid–liquid phase separation of proteins and RNA in cells: proteins containing low-complexity sequences separate from the cytoplasm at certain concentrations and temperatures as protein-rich droplets, forming membraneless organelles (biomolecular condensates) such as the nucleolus and stress granules ([7.3](/7.3)).
 
 ### 9.3.3. Completely Immiscible Systems and Steam Distillation
 

@@ -1,6 +1,6 @@
 ---
 title: Optics
-source_hash: a3480d431ac2
+source_hash: efef8d4c719c
 ---
 
 Optics studies the generation and propagation of light and its interaction with matter, and is usually divided into geometric optics, wave optics and quantum optics. This course corresponds to the optics part of University Physics B (2) and covers wave optics: light is an **electromagnetic wave**, and its wave nature appears in three kinds of phenomena, interference, diffraction and polarization. The core questions are: under what conditions two or more light beams can superpose coherently and how the intensity is distributed after superposition; how light deviates from rectilinear propagation when it meets an obstacle or an aperture, and how this limits the resolving power of optical instruments; and what states of vibration light has as a transverse wave, and how to produce, test and convert them.

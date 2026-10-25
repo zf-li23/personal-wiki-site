@@ -1,6 +1,6 @@
 ---
 title: Thermal Physics
-source_hash: 10d7513b1b83
+source_hash: 3deaaf17c66b
 ---
 
 Thermal physics studies phenomena related to temperature: macroscopically they appear as changes in temperature, pressure, volume and phase, and microscopically they originate in the incessant random motion of a great many molecules. There are two complementary approaches to thermal phenomena. The statistical approach starts from a microscopic model of the molecules and uses probability to obtain macroscopic quantities, which reveals the nature of thermal phenomena; the thermodynamic approach starts from a few macroscopic experimental laws without reference to the microscopic structure of matter, and its conclusions are general and reliable. This course corresponds to the thermal part of University Physics B (1), and its core questions are: what are the microscopic meanings of temperature and pressure, and how are molecular speeds and energies distributed; what laws govern the conversion of energy between heat and work; and why do natural processes always proceed in one direction.

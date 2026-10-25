@@ -189,7 +189,7 @@ $$
 
 ![Symmetric regular solution. Left: Gibbs energy of mixing against composition for W/RT = 0, 1.5, 2 and 2.8; for W/RT > 2 the curve has two minima and the common tangent gives the compositions of the two coexisting liquids. Right: coexistence curve and spinodal in reduced temperature T/Tc, with Tc = W/(2R) the upper critical solution temperature; a tie line l1–l2 is shown at T/Tc = 0.8](./plots/regular-solution-miscibility.py)
 
-同样的热力学（推广到高分子的 Flory–Huggins 理论）用来理解细胞中蛋白质与 RNA 的液–液相分离：一些含有低复杂度序列的蛋白质在一定浓度与温度下从胞质中分出富含蛋白质的液滴，形成没有膜包围的细胞器（生物分子凝聚体），如核仁与应激颗粒（[7.2](/7.3)）。
+同样的热力学（推广到高分子的 Flory–Huggins 理论）用来理解细胞中蛋白质与 RNA 的液–液相分离：一些含有低复杂度序列的蛋白质在一定浓度与温度下从胞质中分出富含蛋白质的液滴，形成没有膜包围的细胞器（生物分子凝聚体），如核仁与应激颗粒（[7.3](/7.3)）。
 
 ### 9.3.3. 完全不互溶系统与水蒸气蒸馏
 
