@@ -65,7 +65,7 @@ There is an optimum. A protein that never binds DNA nonspecifically searches onl
 
 ### 22.2.3. Three Proteins, Three Answers
 
-**Facilitated diffusion** is not a universal law; single-molecule experiments on DNA "curtains" (DNA molecules aligned on a **lipid** surface and imaged by total internal reflection fluorescence) and in living cells show that different proteins solve the search differently.
+Facilitated diffusion is not a universal law; single-molecule experiments on DNA "curtains" (DNA molecules aligned on a **lipid** surface and imaged by total internal reflection fluorescence) and in living cells show that different proteins solve the search differently.
 
 | Protein | Search mechanism observed | Consequence |
 |---|---|---|

@@ -57,7 +57,7 @@ A repeating dinucleotide gives an alternating dipeptide whatever the frame, a re
 | U | UUA Leu, UUG Leu | UCA Ser, UCG Ser | UAA stop, UAG stop | UGA stop, UGG Trp | A, G |
 | C | CUU Leu, CUC Leu | CCU Pro, CCC Pro | CAU His, CAC His | CGU Arg, CGC Arg | U, C |
 | C | CUA Leu, CUG Leu | CCA Pro, CCG Pro | CAA Gln, CAG Gln | CGA Arg, CGG Arg | A, G |
-| A | AUU Ile, AUC Ile | ACU Thr, **ACC** Thr | AAU Asn, AAC Asn | AGU Ser, AGC Ser | U, C |
+| A | AUU Ile, AUC Ile | ACU Thr, ACC Thr | AAU Asn, AAC Asn | AGU Ser, AGC Ser | U, C |
 | A | AUA Ile, AUG Met | ACA Thr, ACG Thr | AAA Lys, AAG Lys | AGA Arg, AGG Arg | A, G |
 | G | GUU Val, GUC Val | GCU Ala, GCC Ala | GAU Asp, GAC Asp | GGU Gly, GGC Gly | U, C |
 | G | GUA Val, GUG Val | GCA Ala, GCG Ala | GAA Glu, GAG Glu | GGA Gly, GGG Gly | A, G |

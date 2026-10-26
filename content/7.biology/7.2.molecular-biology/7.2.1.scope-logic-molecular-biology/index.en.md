@@ -23,7 +23,7 @@ Crick classified all nine conceivable transfers among the three polymers into th
 |---|---|---|
 | General (in all cells) | DNA → DNA, DNA → RNA, RNA → protein | Replication, transcription, translation |
 | Special (in particular systems) | RNA → DNA | Retroviruses, **retrotransposons** (LINE-1 and its relatives make up about a fifth of the human genome, [7.2.2](/7.2.2)), **telomerase** ([7.2.7](/7.2.7)) |
-| | RNA → RNA | RNA viruses (RNA-dependent **RNA polymerases**), RNA-templated amplification of **small RNAs** in plants and worms ([7.2.18](/7.2.18)) |
+| | RNA → RNA | RNA viruses (RNA-dependent **RNA polymerases**), RNA-templated amplification of small RNAs in plants and worms ([7.2.18](/7.2.18)) |
 | | DNA → protein | Only in vitro (single-stranded DNA read directly by **ribosomes** in the presence of antibiotics) |
 | Never observed | Protein → protein, protein → RNA, protein → DNA | — |
 

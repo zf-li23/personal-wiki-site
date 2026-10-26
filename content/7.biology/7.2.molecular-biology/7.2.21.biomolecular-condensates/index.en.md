@@ -30,7 +30,7 @@ The definition is deliberately descriptive: "condensate" names the structure, wh
 | HP1 foci | Heterochromatin | HP1α, H3K9me3 **nucleosomes** | Compaction and silencing (21.5, [7.2.15](/7.2.15)) |
 | Stress granules | Cytoplasm, after stress | G3BP1/2, untranslated mRNA, TIA-1 | Storage of stalled translation initiation complexes ([7.2.18](/7.2.18)) |
 | P-bodies | Cytoplasm | DDX6, EDC4, LSm14, mRNA | Storage of repressed mRNAs, decay factors ([7.2.18](/7.2.18)) |
-| Germ granules (P granules) | Germ-line cytoplasm | PGL-1/3, LAF-1, mRNA | Germ-line mRNA regulation, **small RNA** pathways |
+| Germ granules (P granules) | Germ-line cytoplasm | PGL-1/3, LAF-1, mRNA | Germ-line mRNA regulation, small RNA pathways |
 
 Condensates serve two broad purposes. Some are factories: concentrating enzymes and substrates speeds a reaction (the nucleolus makes ribosomes) or couples successive steps. Others are depots: sequestering molecules stops their activity until the condensate dissolves (stress granules hold mRNAs and **initiation factors** during stress). Assembly and disassembly are reversible and regulated: the nucleolus dissolves in mitosis and reforms in early interphase by the fusion of droplets that appear on each nucleolus organizer region; replication, repair and transcription "factories" appear only where and when these processes take place.
 

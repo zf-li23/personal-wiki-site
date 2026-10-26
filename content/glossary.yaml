@@ -6673,7 +6673,7 @@ terms:
   - { zh: Kok 循环, en: Kok cycle, aliases: [S-state cycle, S 态循环] }
   - { zh: 光合磷酸化, en: photophosphorylation }
   - { zh: 液–液相分离, en: liquid–liquid phase separation, aliases: [LLPS, 液液相分离] }
-  - { zh: 生物大分子凝聚体, en: biomolecular condensate, aliases: [biomolecular condensates, condensate, 无膜细胞器, membraneless organelle], scope: ["7"] }
+  - { zh: 生物大分子凝聚体, en: biomolecular condensate, aliases: [生物分子凝聚体, biomolecular condensates, condensate, 无膜细胞器, membraneless organelle], scope: ["7"] }
   - { zh: 多价性, en: multivalency, scope: ["7"] }
   - { zh: 内在无序区, en: intrinsically disordered region, aliases: [IDR, IDRs, 固有无序区] }
   - { zh: 饱和浓度, en: saturation concentration, aliases: [C_sat], scope: ["7"] }
@@ -6794,3 +6794,12 @@ terms:
   - { zh: 酮症酸中毒, en: ketoacidosis, aliases: [diabetic ketoacidosis, 糖尿病酮症酸中毒] }
   - { zh: 胰岛素抵抗, en: insulin resistance }
   - { zh: 代谢综合征, en: metabolic syndrome }
+  - { zh: 全保留复制, en: conservative replication }
+  - { zh: 弥散复制, en: dispersive replication, aliases: [分散复制] }
+  - { zh: 高度重复 DNA, en: highly repetitive DNA }
+  - { zh: 中度重复 DNA, en: moderately repetitive DNA }
+  - { zh: 加工假基因, en: processed pseudogene, aliases: [processed pseudogenes] }
+  - { zh: 非加工假基因, en: unprocessed pseudogene, aliases: [unprocessed pseudogenes] }
+  - { zh: I 型拓扑异构酶, en: type I topoisomerase, aliases: [type I topoisomerases] }
+  - { zh: II 型拓扑异构酶, en: type II topoisomerase, aliases: [type II topoisomerases] }
+  - { zh: 双链断裂修复, en: double-strand-break repair, aliases: [DSBR], scope: ["7"] }
