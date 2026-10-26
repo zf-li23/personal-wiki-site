@@ -6758,3 +6758,39 @@ terms:
   - { zh: 脱靶效应, en: off-target effect, aliases: [脱靶, off-target effects] }
   - { zh: R 环, en: R loop, aliases: [R-loop], scope: ["7"] }
   - { zh: 原间隔序列邻近基序, en: protospacer adjacent motif, aliases: [PAM], scope: ["7"] }
+  - { zh: 从头合成途径, en: de novo pathway, aliases: [de novo synthesis, 从头合成], scope: ["7"] }
+  - { zh: 补救途径, en: salvage pathway, aliases: [salvage pathways, 补救合成] }
+  - { zh: 5-磷酸核糖-1-焦磷酸, en: PRPP, aliases: [5-phosphoribosyl 1-pyrophosphate, phosphoribosyl pyrophosphate] }
+  - { zh: 次黄嘌呤核苷酸, en: IMP, aliases: [inosinate, inosine monophosphate, 肌苷酸] }
+  - { zh: 氨基甲酰磷酸合成酶 II, en: carbamoyl phosphate synthetase II, aliases: [CPS II] }
+  - { zh: 核糖核苷酸还原酶, en: ribonucleotide reductase, aliases: [RNR] }
+  - { zh: 胸苷酸合酶, en: thymidylate synthase, aliases: [TS] }
+  - { zh: 二氢叶酸还原酶, en: dihydrofolate reductase, aliases: [DHFR] }
+  - { zh: 黄嘌呤氧化酶, en: xanthine oxidase, aliases: [xanthine oxidoreductase] }
+  - { zh: 尿酸, en: uric acid, aliases: [urate] }
+  - { zh: 痛风, en: gout }
+  - { zh: Lesch–Nyhan 综合征, en: Lesch–Nyhan syndrome, aliases: [Lesch-Nyhan syndrome, 自毁容貌综合征] }
+  - { zh: 嘌呤体, en: purinosome, aliases: [purinosomes] }
+  - { zh: 激素, en: hormone, aliases: [hormones], scope: ["7"] }
+  - { zh: 内分泌, en: endocrine }
+  - { zh: 旁分泌, en: paracrine }
+  - { zh: 自分泌, en: autocrine }
+  - { zh: 米色脂肪组织, en: beige adipose tissue, aliases: [beige fat, 米色脂肪] }
+  - { zh: 胰岛素, en: insulin }
+  - { zh: ATP 敏感钾通道, en: ATP-sensitive K⁺ channel, aliases: [K_ATP channel, ATP-sensitive potassium channel] }
+  - { zh: 胰高血糖素, en: glucagon }
+  - { zh: 肾上腺素, en: epinephrine, aliases: [adrenaline] }
+  - { zh: 皮质醇, en: cortisol, aliases: [hydrocortisone] }
+  - { zh: 脂肪因子, en: adipokine, aliases: [adipokines] }
+  - { zh: 瘦素, en: leptin }
+  - { zh: 脂联素, en: adiponectin }
+  - { zh: AMP 活化蛋白激酶, en: AMP-activated protein kinase, aliases: [AMPK] }
+  - { zh: mTORC1, en: mTORC1, aliases: [mechanistic target of rapamycin complex 1, mTOR complex 1] }
+  - { zh: 过氧化物酶体增殖物激活受体, en: PPAR, aliases: [PPARs, peroxisome proliferator-activated receptor] }
+  - { zh: 糖尿病, en: diabetes mellitus, aliases: [diabetes] }
+  - { zh: 1 型糖尿病, en: type 1 diabetes, aliases: [type 1 diabetes mellitus] }
+  - { zh: 2 型糖尿病, en: type 2 diabetes, aliases: [type 2 diabetes mellitus] }
+  - { zh: 糖化血红蛋白, en: glycated hemoglobin, aliases: [HbA1c, A1C] }
+  - { zh: 酮症酸中毒, en: ketoacidosis, aliases: [diabetic ketoacidosis, 糖尿病酮症酸中毒] }
+  - { zh: 胰岛素抵抗, en: insulin resistance }
+  - { zh: 代谢综合征, en: metabolic syndrome }
