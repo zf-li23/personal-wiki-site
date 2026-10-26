@@ -6735,3 +6735,26 @@ terms:
   - { zh: 胆红素, en: bilirubin }
   - { zh: 生物胺, en: biogenic amine, aliases: [biogenic amines] }
   - { zh: 一氧化氮合酶, en: nitric oxide synthase, aliases: [NOS, NO 合酶] }
+  - { zh: 体外选择, en: in vitro selection, aliases: [SELEX, 指数富集的配体系统进化] }
+  - { zh: 适配体, en: aptamer, aliases: [核酸适配体, aptamers] }
+  - { zh: 逆转录酶, en: reverse transcriptase, aliases: [反转录酶, reverse transcriptases] }
+  - { zh: 原细胞, en: protocell, aliases: [protocells, 原始细胞] }
+  - { zh: 误差阈值, en: error threshold, aliases: ["Eigen's error threshold", Eigen 误差阈值], scope: ["7"] }
+  - { zh: 基因组编辑, en: genome editing, aliases: [基因编辑, gene editing] }
+  - { zh: 锌指核酸酶, en: zinc finger nuclease, aliases: [ZFN, zinc finger nucleases] }
+  - { zh: TALEN, en: TALEN, aliases: [TALENs, 转录激活因子样效应物核酸酶] }
+  - { zh: CRISPR–Cas9, en: CRISPR–Cas9, aliases: [CRISPR-Cas9, CRISPR/Cas9] }
+  - { zh: 单向导 RNA, en: single guide RNA, aliases: [sgRNA] }
+  - { zh: 原间隔序列, en: protospacer, aliases: [protospacers] }
+  - { zh: CRISPR 干扰, en: CRISPR interference, aliases: [CRISPRi] }
+  - { zh: CRISPR 激活, en: CRISPR activation, aliases: [CRISPRa] }
+  - { zh: 碱基编辑器, en: base editor, aliases: [碱基编辑, base editing, base editors] }
+  - { zh: 胞嘧啶碱基编辑器, en: cytosine base editor, aliases: [CBE] }
+  - { zh: 腺嘌呤碱基编辑器, en: adenine base editor, aliases: [ABE] }
+  - { zh: 先导编辑, en: prime editing }
+  - { zh: 先导编辑向导 RNA, en: prime editing guide RNA, aliases: [pegRNA] }
+  - { zh: 向导 RNA 介导的 RNA 编辑, en: guide-directed RNA editing }
+  - { zh: 混合文库筛选, en: pooled screen, aliases: [pooled screening, 混合筛选] }
+  - { zh: 脱靶效应, en: off-target effect, aliases: [脱靶, off-target effects] }
+  - { zh: R 环, en: R loop, aliases: [R-loop], scope: ["7"] }
+  - { zh: 原间隔序列邻近基序, en: protospacer adjacent motif, aliases: [PAM], scope: ["7"] }
