@@ -6425,3 +6425,90 @@ terms:
   - { zh: 核糖开关, en: riboswitch, aliases: [riboswitches] }
   - { zh: 细菌小 RNA, en: small RNA, aliases: [sRNA, small RNAs], scope: ["7"] }
   - { zh: 分支点, en: branch point, aliases: [branchpoint, 分支位点], scope: ["7"] }
+  - { zh: 脂双层, en: lipid bilayer, aliases: [lipid bilayers, 磷脂双分子层] }
+  - { zh: 脂质体, en: liposome }
+  - { zh: 整合膜蛋白, en: integral membrane protein, aliases: [integral protein, 内在膜蛋白] }
+  - { zh: 外周膜蛋白, en: peripheral membrane protein, aliases: [peripheral protein] }
+  - { zh: 两栖蛋白, en: amphitropic protein }
+  - { zh: 疏水性图, en: hydropathy plot, aliases: [亲水性图] }
+  - { zh: 正电荷在内规则, en: positive-inside rule }
+  - { zh: β 桶, en: β barrel, aliases: [beta barrel] }
+  - { zh: 翻转酶, en: flippase }
+  - { zh: 外翻酶, en: floppase }
+  - { zh: 混杂酶, en: scramblase, aliases: [磷脂爬行酶] }
+  - { zh: 光漂白后荧光恢复, en: fluorescence recovery after photobleaching, aliases: [FRAP] }
+  - { zh: 脂筏, en: lipid raft, aliases: [membrane raft, 膜筏] }
+  - { zh: SNARE 蛋白, en: SNARE, aliases: [SNAREs] }
+  - { zh: 整联蛋白, en: integrin, aliases: [integrins, 整合素] }
+  - { zh: 转运蛋白, en: transporter, aliases: [carrier, 载体蛋白], scope: ["7"] }
+  - { zh: 离子通道, en: ion channel, aliases: [ion channels] }
+  - { zh: 被动运输, en: passive transport, aliases: [易化扩散, facilitated diffusion, 被动转运] }
+  - { zh: 单向转运体, en: uniporter, aliases: [uniport] }
+  - { zh: 同向转运体, en: symporter, aliases: [symport] }
+  - { zh: 反向转运体, en: antiporter, aliases: [antiport] }
+  - { zh: 协同转运体, en: cotransporter, aliases: [cotransport] }
+  - { zh: 生电性, en: electrogenic }
+  - { zh: 交替通达机制, en: alternating-access mechanism }
+  - { zh: P 型 ATP 酶, en: P-type ATPase, aliases: [P-type ATPases] }
+  - { zh: 钠钾泵, en: Na⁺/K⁺-ATPase, aliases: [Na+/K+-ATPase, 钠钾 ATP 酶, sodium pump] }
+  - { zh: F 型 ATP 酶, en: F-type ATPase }
+  - { zh: ABC 转运体, en: ABC transporter, aliases: [ABC transporters, ATP 结合盒转运体] }
+  - { zh: 离子载体, en: ionophore, aliases: [ionophores] }
+  - { zh: 水通道蛋白, en: aquaporin, aliases: [aquaporins, AQP] }
+  - { zh: 选择性过滤器, en: selectivity filter }
+  - { zh: 信号转导, en: signal transduction }
+  - { zh: 受体, en: receptor, aliases: [receptors], scope: ["7"] }
+  - { zh: 激动剂, en: agonist, aliases: [agonists, partial agonist, 部分激动剂] }
+  - { zh: 拮抗剂, en: antagonist, aliases: [antagonists] }
+  - { zh: G 蛋白偶联受体, en: G protein–coupled receptor, aliases: [GPCR, GPCRs, G protein-coupled receptor] }
+  - { zh: 异三聚体 G 蛋白, en: heterotrimeric G protein, aliases: [G protein, G 蛋白] }
+  - { zh: 鸟苷酸交换因子, en: guanine nucleotide-exchange factor, aliases: [GEF] }
+  - { zh: GTP 酶激活蛋白, en: GTPase-activating protein, aliases: [GAP] }
+  - { zh: G 蛋白信号调节蛋白, en: regulator of G-protein signaling, aliases: [regulators of G-protein signaling, RGS] }
+  - { zh: 第二信使, en: second messenger, aliases: [second messengers] }
+  - { zh: 腺苷酸环化酶, en: adenylyl cyclase }
+  - { zh: 环腺苷酸, en: cyclic AMP, aliases: [cAMP] }
+  - { zh: 环核苷酸磷酸二酯酶, en: cyclic nucleotide phosphodiesterase, aliases: [phosphodiesterase] }
+  - { zh: 蛋白激酶 A, en: protein kinase A, aliases: [PKA, cAMP-dependent protein kinase] }
+  - { zh: 脱敏, en: desensitization, scope: ["7"] }
+  - { zh: G 蛋白偶联受体激酶, en: G protein–coupled receptor kinase, aliases: [GRK, G protein–coupled receptor kinases] }
+  - { zh: 抑制蛋白, en: arrestin, aliases: [arrestins, β-arrestin] }
+  - { zh: A 激酶锚定蛋白, en: A kinase anchoring protein, aliases: [AKAP, AKAPs] }
+  - { zh: 磷脂酶 C, en: phospholipase C, aliases: [PLC] }
+  - { zh: 肌醇三磷酸, en: "inositol 1,4,5-trisphosphate", aliases: [IP3, IP₃] }
+  - { zh: 二酰甘油, en: diacylglycerol }
+  - { zh: 蛋白激酶 C, en: protein kinase C, aliases: [PKC] }
+  - { zh: 钙调蛋白, en: calmodulin, aliases: [CaM] }
+  - { zh: 鸟苷酸环化酶, en: guanylyl cyclase, aliases: [guanylyl cyclases] }
+  - { zh: 蛋白激酶 G, en: protein kinase G, aliases: [PKG] }
+  - { zh: 视紫红质, en: rhodopsin }
+  - { zh: 转导蛋白, en: transducin }
+  - { zh: 门控离子通道, en: gated ion channel, aliases: [ligand-gated channel, voltage-gated channel, 配体门控通道, 电压门控通道] }
+  - { zh: 离子型受体, en: ionotropic receptor, aliases: [ionotropic] }
+  - { zh: 代谢型受体, en: metabotropic receptor, aliases: [metabotropic] }
+  - { zh: 电压门控钠通道, en: voltage-gated Na⁺ channel, aliases: [voltage-gated sodium channel] }
+  - { zh: 烟碱型乙酰胆碱受体, en: nicotinic acetylcholine receptor, aliases: [nAChR] }
+  - { zh: 受体酪氨酸激酶, en: receptor tyrosine kinase, aliases: [RTK, RTKs] }
+  - { zh: 胰岛素受体, en: insulin receptor, aliases: [INSR] }
+  - { zh: SH2 结构域, en: SH2 domain, aliases: [SH2 domains] }
+  - { zh: 衔接蛋白, en: adaptor protein, aliases: [adaptor proteins, 接头蛋白] }
+  - { zh: 小 G 蛋白, en: small G protein, aliases: [small GTPase, Ras] }
+  - { zh: MAP 激酶级联, en: MAP kinase cascade, aliases: [MAPK cascade, MAPK] }
+  - { zh: 磷脂酰肌醇 3-激酶, en: phosphoinositide 3-kinase, aliases: [PI3K, PI 3-kinase] }
+  - { zh: 蛋白激酶 B, en: protein kinase B, aliases: [PKB, Akt] }
+  - { zh: JAK–STAT 通路, en: JAK–STAT pathway, aliases: [JAK-STAT pathway] }
+  - { zh: 支架蛋白, en: scaffold protein, aliases: [scaffold proteins] }
+  - { zh: 核受体, en: nuclear receptor, aliases: [nuclear receptors, nuclear hormone receptor] }
+  - { zh: 激素应答元件, en: hormone response element, aliases: [hormone response elements, HRE] }
+  - { zh: 双组分系统, en: two-component system, aliases: [two-component systems] }
+  - { zh: 泛素, en: ubiquitin, aliases: [ubiquitination, 泛素化] }
+  - { zh: 蛋白酶体, en: proteasome, aliases: [26S proteasome] }
+  - { zh: 周期蛋白, en: cyclin, aliases: [cyclins] }
+  - { zh: 周期蛋白依赖性激酶, en: cyclin-dependent kinase, aliases: [CDK, CDKs] }
+  - { zh: 原癌基因, en: proto-oncogene }
+  - { zh: 癌基因, en: oncogene, aliases: [oncogenes] }
+  - { zh: 抑癌基因, en: tumor suppressor gene, aliases: [tumor suppressor genes, 肿瘤抑制基因] }
+  - { zh: 细胞凋亡, en: apoptosis, aliases: [programmed cell death, 程序性细胞死亡] }
+  - { zh: 胱天蛋白酶, en: caspase, aliases: [caspases] }
+  - { zh: 双分子荧光互补, en: bimolecular fluorescence complementation, aliases: [BiFC] }
+  - { zh: 酵母双杂交, en: yeast two-hybrid system, aliases: [yeast two-hybrid, Y2H] }
