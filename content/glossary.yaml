@@ -6686,3 +6686,52 @@ terms:
   - { zh: 内在噪声, en: intrinsic noise }
   - { zh: 外在噪声, en: extrinsic noise }
   - { zh: 响应时间, en: response time, scope: ["7"] }
+  - { zh: 碳同化, en: carbon assimilation, aliases: [CO₂ 同化, CO2 assimilation] }
+  - { zh: 碳固定, en: carbon fixation, aliases: [CO₂ 固定, CO2 fixation] }
+  - { zh: 卡尔文循环, en: Calvin cycle, aliases: [Calvin 循环, Calvin–Benson cycle, 还原性磷酸戊糖途径, reductive pentose phosphate pathway] }
+  - { zh: "核酮糖-1,5-二磷酸羧化酶/加氧酶", en: rubisco, aliases: [Rubisco, RuBisCO, "ribulose 1,5-bisphosphate carboxylase/oxygenase"] }
+  - { zh: 硫氧还蛋白, en: thioredoxin }
+  - { zh: 光呼吸, en: photorespiration }
+  - { zh: 专一性因子, en: specificity factor, aliases: [特异性因子], scope: ["7"] }
+  - { zh: CO₂ 补偿点, en: CO₂ compensation point, aliases: [CO2 compensation point, 二氧化碳补偿点] }
+  - { zh: C4 途径, en: C4 pathway, aliases: [C4 光合作用, C4 photosynthesis] }
+  - { zh: 景天酸代谢, en: crassulacean acid metabolism }
+  - { zh: ADP-葡萄糖焦磷酸化酶, en: ADP-glucose pyrophosphorylase, aliases: [AGPase] }
+  - { zh: 淀粉合酶, en: starch synthase }
+  - { zh: 蔗糖-6-磷酸合酶, en: sucrose 6-phosphate synthase, aliases: [SPS, 蔗糖磷酸合酶] }
+  - { zh: 纤维素合酶, en: cellulose synthase, aliases: [CesA] }
+  - { zh: 乙酰 CoA 羧化酶, en: acetyl-CoA carboxylase, aliases: [ACC] }
+  - { zh: 丙二酸单酰 CoA, en: malonyl-CoA, aliases: [丙二酰 CoA] }
+  - { zh: 脂肪酸合酶, en: fatty acid synthase, aliases: [FAS] }
+  - { zh: 酰基载体蛋白, en: acyl carrier protein, aliases: [ACP] }
+  - { zh: 柠檬酸穿梭, en: citrate shuttle }
+  - { zh: 脂酰 CoA 去饱和酶, en: fatty acyl-CoA desaturase, aliases: [desaturase, 去饱和酶] }
+  - { zh: 必需脂肪酸, en: essential fatty acid, aliases: [essential fatty acids] }
+  - { zh: 细胞色素 P-450, en: cytochrome P-450, aliases: [cytochrome P450, P-450, CYP] }
+  - { zh: 环加氧酶, en: cyclooxygenase, aliases: [COX, 环氧合酶, prostaglandin H₂ synthase] }
+  - { zh: 三酰甘油循环, en: triacylglycerol cycle }
+  - { zh: CDP-二酰甘油途径, en: CDP-diacylglycerol pathway }
+  - { zh: Kennedy 途径, en: Kennedy pathway }
+  - { zh: HMG-CoA 还原酶, en: HMG-CoA reductase, aliases: [HMGCR] }
+  - { zh: 甲羟戊酸, en: mevalonate, aliases: [mevalonic acid] }
+  - { zh: 脂蛋白, en: lipoprotein, aliases: [lipoproteins, plasma lipoprotein] }
+  - { zh: 载脂蛋白, en: apolipoprotein, aliases: [apolipoproteins] }
+  - { zh: 极低密度脂蛋白, en: very-low-density lipoprotein, aliases: [VLDL] }
+  - { zh: 低密度脂蛋白, en: low-density lipoprotein, aliases: [LDL] }
+  - { zh: 高密度脂蛋白, en: high-density lipoprotein }
+  - { zh: LDL 受体, en: LDL receptor, aliases: [低密度脂蛋白受体, LDLR] }
+  - { zh: 胆固醇逆向转运, en: reverse cholesterol transport }
+  - { zh: 固醇调节元件结合蛋白, en: sterol regulatory element-binding protein, aliases: [SREBP] }
+  - { zh: 他汀, en: statin, aliases: [statins, 他汀类药物] }
+  - { zh: 氮循环, en: nitrogen cycle }
+  - { zh: 固氮作用, en: nitrogen fixation, aliases: [生物固氮] }
+  - { zh: 固氮酶, en: nitrogenase, aliases: [nitrogenase complex, 固氮酶复合体] }
+  - { zh: 谷氨酰胺合成酶, en: glutamine synthetase, aliases: [GS] }
+  - { zh: 谷氨酸合酶, en: glutamate synthase, aliases: [GOGAT] }
+  - { zh: 谷氨酰胺酰胺转移酶, en: glutamine amidotransferase, aliases: [glutamine amidotransferases, 酰胺转移酶] }
+  - { zh: 必需氨基酸, en: essential amino acid, aliases: [essential amino acids] }
+  - { zh: 莽草酸途径, en: shikimate pathway }
+  - { zh: 卟啉, en: porphyrin, aliases: [porphyrins] }
+  - { zh: 胆红素, en: bilirubin }
+  - { zh: 生物胺, en: biogenic amine, aliases: [biogenic amines] }
+  - { zh: 一氧化氮合酶, en: nitric oxide synthase, aliases: [NOS, NO 合酶] }
