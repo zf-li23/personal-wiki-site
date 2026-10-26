@@ -101,6 +101,7 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 | `microbio` | 细菌形态与鞭毛、革兰氏阳性/阴性细胞包膜、分批培养生长模型 | 7.11 |
 | `phylo` | 系统发育树（Newick；矩形、斜线、环形；剪影、类群带、性状标记）、ICS 地质年代表 | 7.10、7.17 |
 | `photosynthesis` | 类囊体膜复合体、Z 图式、Farquhar 光合模型、叶片气体交换 | 7.13 |
+| `bioenergetics` | 线粒体内膜、呼吸链复合体 I–IV、ATP 合酶、结合变化与 c 环、质子动力势与 P/O 模型 | 7.1、7.3、7.6 |
 | `immuno` | MHC I/II、TCR、CD4/CD8、BCR、免疫细胞、细胞因子 | 7.15 |
 | `neuro` | 离子通道与膜片、电极、电路元件、Hodgkin–Huxley 与 LIF 模型 | 7.6、7.16 |
 | `plant` | 花图式与花程式、蕨类等植物形态、世代交替 | 7.12 |

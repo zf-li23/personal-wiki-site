@@ -6618,3 +6618,71 @@ terms:
   - { zh: 降解决定子, en: degron, aliases: [degrons] }
   - { zh: N 端降解决定子, en: N-degron, aliases: [N-end rule, N 端规则] }
   - { zh: 简并性, en: degeneracy, aliases: [密码子简并性], scope: ["7"] }
+  - { zh: 转氨基作用, en: transamination }
+  - { zh: 转氨酶, en: aminotransferase, aliases: [aminotransferases, transaminase, 氨基转移酶] }
+  - { zh: 氧化脱氨基作用, en: oxidative deamination }
+  - { zh: 葡萄糖–丙氨酸循环, en: glucose–alanine cycle, aliases: [glucose-alanine cycle, 丙氨酸–葡萄糖循环] }
+  - { zh: 尿素循环, en: urea cycle, aliases: [鸟氨酸循环, ornithine cycle, Krebs–Henseleit cycle] }
+  - { zh: 氨基甲酰磷酸, en: carbamoyl phosphate }
+  - { zh: 生糖氨基酸, en: glucogenic amino acid, aliases: [glucogenic] }
+  - { zh: 生酮氨基酸, en: ketogenic amino acid, aliases: [ketogenic] }
+  - { zh: 先天性代谢缺陷, en: inborn error of metabolism, aliases: [inborn errors of metabolism, 先天代谢缺陷] }
+  - { zh: 苯丙酮尿症, en: phenylketonuria, aliases: [PKU] }
+  - { zh: 尿黑酸症, en: alkaptonuria }
+  - { zh: 枫糖尿症, en: maple syrup urine disease, aliases: [MSUD, branched-chain ketoaciduria] }
+  - { zh: 呼吸链, en: respiratory chain, aliases: [electron-transport chain, 电子传递链] }
+  - { zh: 泛醌, en: ubiquinone, aliases: [coenzyme Q, 辅酶 Q, ubiquinol, 泛醇] }
+  - { zh: 细胞色素, en: cytochrome, aliases: [cytochromes] }
+  - { zh: 铁硫蛋白, en: iron–sulfur protein, aliases: [iron-sulfur protein, Fe–S protein] }
+  - { zh: 复合体 I, en: Complex I, aliases: [NADH dehydrogenase, "NADH:ubiquinone oxidoreductase"] }
+  - { zh: 复合体 II, en: Complex II }
+  - { zh: 复合体 III, en: Complex III, aliases: [cytochrome bc1 complex] }
+  - { zh: 复合体 IV, en: Complex IV, aliases: [cytochrome oxidase, cytochrome c oxidase, 细胞色素氧化酶] }
+  - { zh: Q 循环, en: Q cycle }
+  - { zh: 呼吸体, en: respirasome, aliases: [呼吸链超复合体] }
+  - { zh: 活性氧, en: reactive oxygen species, aliases: [ROS] }
+  - { zh: 氧化磷酸化, en: oxidative phosphorylation }
+  - { zh: 呼吸控制, en: respiratory control, aliases: [acceptor control, 受体控制] }
+  - { zh: 呼吸控制比, en: respiratory control ratio }
+  - { zh: 化学渗透学说, en: chemiosmotic theory, aliases: [化学渗透假说, chemiosmotic coupling] }
+  - { zh: 质子动力势, en: proton-motive force, aliases: [proton motive force, 质子驱动力] }
+  - { zh: 解偶联剂, en: uncoupler, aliases: [uncouplers] }
+  - { zh: ATP 合酶, en: ATP synthase, aliases: [F₀F₁, Complex V] }
+  - { zh: 结合变化机制, en: binding-change mechanism, aliases: [binding-change model] }
+  - { zh: 旋转催化, en: rotational catalysis }
+  - { zh: P/O 比, en: P/O ratio }
+  - { zh: 苹果酸–天冬氨酸穿梭, en: malate–aspartate shuttle, aliases: [malate-aspartate shuttle] }
+  - { zh: 甘油-3-磷酸穿梭, en: glycerol 3-phosphate shuttle, aliases: [α-磷酸甘油穿梭] }
+  - { zh: 褐色脂肪组织, en: brown adipose tissue, aliases: [BAT, 棕色脂肪] }
+  - { zh: 产热素, en: thermogenin, aliases: [UCP1, uncoupling protein 1, 解偶联蛋白 1] }
+  - { zh: 线粒体异质性, en: heteroplasmy, aliases: [异质性] }
+  - { zh: 光合作用, en: photosynthesis }
+  - { zh: 叶绿素, en: chlorophyll, aliases: [chlorophylls] }
+  - { zh: 辅助色素, en: accessory pigment, aliases: [accessory pigments] }
+  - { zh: 捕光复合体, en: light-harvesting complex, aliases: [LHC, 天线复合体, antenna complex] }
+  - { zh: 激子传递, en: exciton transfer }
+  - { zh: 反应中心, en: reaction center, aliases: [photochemical reaction center], scope: ["7"] }
+  - { zh: 光系统 II, en: photosystem II, aliases: [PSII] }
+  - { zh: 光系统 I, en: photosystem I, aliases: [PSI] }
+  - { zh: Z 图式, en: Z scheme, aliases: [Z 方案] }
+  - { zh: 质体醌, en: plastoquinone, aliases: [PQ] }
+  - { zh: 细胞色素 b₆f 复合体, en: cytochrome b6f complex, aliases: [cytochrome b₆f complex, b₆f] }
+  - { zh: 质体蓝素, en: plastocyanin }
+  - { zh: 循环电子流, en: cyclic electron flow, aliases: [cyclic electron transfer, 环式电子传递] }
+  - { zh: 放氧复合体, en: oxygen-evolving complex, aliases: [water-oxidizing complex, OEC] }
+  - { zh: Kok 循环, en: Kok cycle, aliases: [S-state cycle, S 态循环] }
+  - { zh: 光合磷酸化, en: photophosphorylation }
+  - { zh: 液–液相分离, en: liquid–liquid phase separation, aliases: [LLPS, 液液相分离] }
+  - { zh: 生物大分子凝聚体, en: biomolecular condensate, aliases: [biomolecular condensates, condensate, 无膜细胞器, membraneless organelle], scope: ["7"] }
+  - { zh: 多价性, en: multivalency, scope: ["7"] }
+  - { zh: 内在无序区, en: intrinsically disordered region, aliases: [IDR, IDRs, 固有无序区] }
+  - { zh: 饱和浓度, en: saturation concentration, aliases: [C_sat], scope: ["7"] }
+  - { zh: 旋节分解, en: spinodal decomposition, aliases: [调幅分解] }
+  - { zh: 超级增强子, en: super-enhancer, aliases: [super-enhancers] }
+  - { zh: 靶搜索, en: target search }
+  - { zh: 基因调控函数, en: gene regulation function, aliases: [输入函数, input function] }
+  - { zh: 转录爆发, en: transcriptional burst, aliases: [transcriptional bursting, 转录突发] }
+  - { zh: Fano 因子, en: Fano factor }
+  - { zh: 内在噪声, en: intrinsic noise }
+  - { zh: 外在噪声, en: extrinsic noise }
+  - { zh: 响应时间, en: response time, scope: ["7"] }
