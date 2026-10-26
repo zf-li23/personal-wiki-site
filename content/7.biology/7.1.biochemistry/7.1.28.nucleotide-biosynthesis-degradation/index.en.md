@@ -136,7 +136,7 @@ $$
 \text{NDP} + \text{thioredoxin}(\ce{SH})_2 \to \text{dNDP} + \text{thioredoxin}(\ce{S-S}) + \ce{H2O}. \tag{28.3}
 $$
 
-The class I enzyme of *E. coli* and of mammals is an $\alpha_2\beta_2$ complex (figure below). The α subunits (R1; RRM1 in humans) contain the **active sites**, with three essential cysteines, and two kinds of allosteric site; the β subunits (R2; RRM2) contain a diferric centre ($\ce{F\mathrm{e}^3+}$–O–$\ce{F\mathrm{e}^3+}$) that reacts with $\ce{O2}$ to generate a stable tyrosyl radical on Tyr122 and keeps it stable for days. Tyr122 lies about 3.5 nm from the active site; each time a substrate binds, the radical travels to Cys439 of α along a chain of aromatic **residues** by proton-coupled electron transfer, and returns after the reaction. The proposed mechanism (Stubbe):
+The class I enzyme of *E. coli* and of mammals is an $\alpha_2\beta_2$ complex (figure below). The α subunits (R1; RRM1 in humans) contain the **active sites**, with three essential cysteines, and two kinds of allosteric site; the β subunits (R2; RRM2) contain a diferric centre ($\ce{Fe^3+}$–O–$\ce{Fe^3+}$) that reacts with $\ce{O2}$ to generate a stable tyrosyl radical on Tyr122 and keeps it stable for days. Tyr122 lies about 3.5 nm from the active site; each time a substrate binds, the radical travels to Cys439 of α along a chain of aromatic **residues** by proton-coupled electron transfer, and returns after the reaction. The proposed mechanism (Stubbe):
 
 1. the thiyl radical of Cys439 abstracts the 3′-hydrogen of the ribose;
 2. the 3′-radical promotes the loss of the 2′-hydroxyl as water, protonated by Cys225 (the 3′ radical stabilizes the developing cation at C-2′, which becomes a 3′-keto radical);

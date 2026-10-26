@@ -243,7 +243,7 @@ Skeletal muscle contains about 30 mM PCr, roughly four times its ATP, and other 
 
 The flow of electrons in **redox reactions** is responsible, directly or indirectly, for all the work done by living organisms. In a battery, electrons flow spontaneously through a wire from the chemical species of low electron affinity to the one of high affinity, driven by the **electromotive force**, and a motor in the circuit converts part of the energy into work. In a cell the source of electrons is a reduced fuel such as glucose; as it is oxidized, the electrons flow through a series of carriers to an acceptor of high affinity, usually $\ce{O2}$, and membrane-bound proteins convert the energy of this flow into a proton gradient that drives ATP synthesis (7.1.23) or flagellar rotation. Each redox reaction can be written as two half-reactions, each a conjugate **redox pair** (electron donor ⇌ $n\,\ce{e-}$ + electron acceptor; [6.1.11](/6.1.11#sec-11.1.4)), just as an acid–base reaction combines two conjugate acid–**base pairs**.
 
-Electrons are transferred in four ways in cells: directly as electrons (between metal ions, as from $\ce{F\mathrm{e}^2+}$ to $\ce{Cu^2+}$ in **cytochrome oxidase**); as hydrogen atoms (a proton and an electron: $\ce{AH2 + B -> A + BH2}$); as a hydride ion ($\ce{:H-}$, two electrons and a proton), in the NAD-linked dehydrogenases; and by direct combination with oxygen, in which an oxygen atom is incorporated into the product (oxygenases). The neutral term reducing equivalent designates one electron equivalent in any of these forms.
+Electrons are transferred in four ways in cells: directly as electrons (between metal ions, as from $\ce{Fe^2+}$ to $\ce{Cu^2+}$ in **cytochrome oxidase**); as hydrogen atoms (a proton and an electron: $\ce{AH2 + B -> A + BH2}$); as a hydride ion ($\ce{:H-}$, two electrons and a proton), in the NAD-linked dehydrogenases; and by direct combination with oxygen, in which an oxygen atom is incorporated into the product (oxygenases). The neutral term reducing equivalent designates one electron equivalent in any of these forms.
 
 ### 16.4.2. Oxidation States of Carbon
 
@@ -263,12 +263,12 @@ The tendency of the oxidized member of a redox pair to accept electrons is measu
 | Half-reaction (written as a reduction) | $E'^{\circ}/\mathrm{V}$ |
 |---|---|
 | $\tfrac12\ce{O2} + 2\ce{H+} + 2\ce{e-} \to \ce{H2O}$ | $+0.816$ |
-| $\ce{F\mathrm{e}^3+ + e- -> F\mathrm{e}^2+}$ | $+0.771$ |
+| $\ce{Fe^3+ + e- -> Fe^2+}$ | $+0.771$ |
 | $\ce{NO3- + 2H+ + 2e- -> NO2- + H2O}$ | $+0.421$ |
-| **cytochrome** $a_3$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $a_3$ ($\ce{F\mathrm{e}^2+}$) | $+0.35$ |
+| **cytochrome** $a_3$ ($\ce{Fe^3+}$) + $\ce{e-}$ → cytochrome $a_3$ ($\ce{Fe^2+}$) | $+0.35$ |
 | $\ce{O2 + 2H+ + 2e- -> H2O2}$ | $+0.295$ |
-| cytochrome $c$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $c$ ($\ce{F\mathrm{e}^2+}$) | $+0.254$ |
-| cytochrome $b$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $b$ ($\ce{F\mathrm{e}^2+}$) | $+0.077$ |
+| cytochrome $c$ ($\ce{Fe^3+}$) + $\ce{e-}$ → cytochrome $c$ ($\ce{Fe^2+}$) | $+0.254$ |
+| cytochrome $b$ ($\ce{Fe^3+}$) + $\ce{e-}$ → cytochrome $b$ ($\ce{Fe^2+}$) | $+0.077$ |
 | **ubiquinone** + $2\ce{H+} + 2\ce{e-}$ → ubiquinol | $+0.045$ |
 | fumarate + $2\ce{H+} + 2\ce{e-}$ → succinate | $+0.031$ |
 | oxaloacetate + $2\ce{H+} + 2\ce{e-}$ → malate | $-0.166$ |
@@ -281,7 +281,7 @@ The tendency of the oxidized member of a redox pair to accept electrons is measu
 | acetoacetate + $2\ce{H+} + 2\ce{e-}$ → β-hydroxybutyrate | $-0.346$ |
 | α-ketoglutarate + $\ce{CO2}$ + $2\ce{H+} + 2\ce{e-}$ → isocitrate | $-0.38$ |
 | $2\ce{H+} + 2\ce{e-} \to \ce{H2}$ (at pH 7) | $-0.414$ |
-| ferredoxin ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → ferredoxin ($\ce{F\mathrm{e}^2+}$) | $-0.432$ |
+| ferredoxin ($\ce{Fe^3+}$) + $\ce{e-}$ → ferredoxin ($\ce{Fe^2+}$) | $-0.432$ |
 
 (Values from Lehninger 8e, Table 13-7.) The actual potential depends on the ratio of the concentrations of the two members by the **Nernst equation** ([6.1.11](/6.1.11#sec-11.5.1), [6.3.13](/6.3.13#sec-13.3.1)):
 

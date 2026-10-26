@@ -196,7 +196,7 @@ In animals and fungi all the carbons and nitrogens of porphyrins come from glyci
 1. δ-Aminolevulinate synthase (ALAS), a PLP enzyme of the mitochondrial matrix, condenses glycine with succinyl-CoA and decarboxylates the product to δ-aminolevulinate (ALA), the committed step. Plants and most bacteria make ALA instead from glutamate by the C5 pathway, through glutamyl-tRNA^Glu (the same **tRNA** used for protein synthesis) and glutamate 1-semialdehyde.
 2. In the cytosol, ALA dehydratase, a Zn enzyme strongly inhibited by lead, joins two ALA to the pyrrole porphobilinogen (PBG).
 3. PBG deaminase (hydroxymethylbilane synthase) links four PBG head to tail into the linear hydroxymethylbilane; uroporphyrinogen III synthase closes the ring, inverting the last pyrrole to give the asymmetric III isomer of all natural porphyrins (without the synthase the bilane cyclizes spontaneously to the useless symmetric uroporphyrinogen I).
-4. Uroporphyrinogen decarboxylase converts the four acetate **side chains** to methyls; back in the mitochondrion, coproporphyrinogen oxidase and protoporphyrinogen oxidase give protoporphyrin IX, and ferrochelatase (also inhibited by lead) inserts $\ce{F\mathrm{e}^2+}$.
+4. Uroporphyrinogen decarboxylase converts the four acetate **side chains** to methyls; back in the mitochondrion, coproporphyrinogen oxidase and protoporphyrinogen oxidase give protoporphyrin IX, and ferrochelatase (also inhibited by lead) inserts $\ce{Fe^2+}$.
 
 Heme represses the synthesis of the liver **isozyme** ALAS1, inhibits its import into mitochondria and promotes its degradation. The erythroid isozyme ALAS2 is regulated instead by iron, through an **iron-responsive element** in its **mRNA** ([7.2.18](/7.2.18)); its **mutations** cause X-linked sideroblastic anemia. Defects of the later enzymes cause the porphyrias, in which intermediates accumulate.
 
@@ -211,7 +211,7 @@ The photosensitivity has a photophysical cause: porphyrins absorb visible light 
 
 ### 27.3.2. Heme Degradation and Bilirubin
 
-An adult breaks down about 6 g of hemoglobin a day, mostly in macrophages of the spleen that engulf aged red cells. Heme oxygenase (inducible HO-1 and constitutive HO-2) opens the ring at the α-methine bridge with $\ce{O2}$ and **NADPH**, releasing the bridge carbon as CO and the iron as $\ce{F\mathrm{e}^2+}$ (stored by ferritin), and giving the green linear tetrapyrrole biliverdin; biliverdin reductase reduces it to bilirubin.
+An adult breaks down about 6 g of hemoglobin a day, mostly in macrophages of the spleen that engulf aged red cells. Heme oxygenase (inducible HO-1 and constitutive HO-2) opens the ring at the α-methine bridge with $\ce{O2}$ and **NADPH**, releasing the bridge carbon as CO and the iron as $\ce{Fe^2+}$ (stored by ferritin), and giving the green linear tetrapyrrole biliverdin; biliverdin reductase reduces it to bilirubin.
 
 **Definition 27.3.2 (Bilirubin)** **Bilirubin** is the yellow-orange linear tetrapyrrole formed from heme by heme oxygenase and biliverdin reductase. It is poorly soluble in water and travels in the blood bound to serum albumin; in the liver, UDP-glucuronosyltransferase 1A1 (UGT1A1) conjugates it with two glucuronates to the water-soluble bilirubin diglucuronide, which is secreted into bile.
 
@@ -274,7 +274,7 @@ The pathway cards ([7.1.16](/7.1.16#sec-16.1.3)):
 | Field | Nitrogen fixation | Ammonia assimilation (GS–GOGAT) | Amino acid synthesis | Heme synthesis |
 |---|---|---|---|---|
 | Location | diazotrophs (heterocysts, bacteroids in nodules) | all organisms (GOGAT: bacteria, plants) | cytosol; plastids in plants | mitochondria and cytosol (liver, erythroid cells) |
-| Net reaction | $\ce{N2}$ + 10 $\ce{H+}$ + 8 e⁻ + 16 ATP → 2 $\ce{NH4+}$ + $\ce{H2}$ + 16 ADP + 16 $\mathrm{P_i}$ (Eq. (27.1)) | α-KG + $\ce{NH4+}$ + ATP + NAD(P)H → glutamate + ADP + $\mathrm{P_i}$ + NAD(P)⁺ | six families from glycolytic, citric acid cycle and pentose phosphate intermediates | 8 glycine + 8 succinyl-CoA + $\ce{F\mathrm{e}^2+}$ → heme + 8 **CoA** + 14 $\ce{CO2}$ + 4 $\ce{NH4+}$ |
+| Net reaction | $\ce{N2}$ + 10 $\ce{H+}$ + 8 e⁻ + 16 ATP → 2 $\ce{NH4+}$ + $\ce{H2}$ + 16 ADP + 16 $\mathrm{P_i}$ (Eq. (27.1)) | α-KG + $\ce{NH4+}$ + ATP + NAD(P)H → glutamate + ADP + $\mathrm{P_i}$ + NAD(P)⁺ | six families from glycolytic, citric acid cycle and pentose phosphate intermediates | 8 glycine + 8 succinyl-CoA + $\ce{Fe^2+}$ → heme + 8 **CoA** + 14 $\ce{CO2}$ + 4 $\ce{NH4+}$ |
 | Energy account | about 13 ATP equivalents per $\ce{NH3}$ (Example 27.1.1) | 1 ATP + 1 NAD(P)H | from about 12 (Gly, Ala) to 74 (Trp) high-energy bonds | — |
 | Committed and regulated steps | nitrogenase (Definition 27.1.2) | glutamine synthetase (Definition 27.1.3) | first enzyme after each branch point; aspartokinase, DAHP synthase, threonine dehydratase | ALA synthase |
 | Activators | ATP; low $\ce{NH4+}$ | α-ketoglutarate, ATP (via PII–UMP) | — | — |

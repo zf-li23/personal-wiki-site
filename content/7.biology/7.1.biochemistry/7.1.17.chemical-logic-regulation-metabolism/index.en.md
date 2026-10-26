@@ -87,7 +87,7 @@ The table collects the coenzymes of Part II. Each is described below by the chem
 | $\mathrm{B_7}$ biotin | biotin bound to Lys (biocytin) | $\ce{CO2}$ | N-1′ of the ureido ring carries a carboxyl group on a long swinging arm | pyruvate carboxylase (7.1.19), **acetyl-CoA carboxylase** (7.1.26), propionyl-CoA carboxylase (7.1.21) | rare (raw egg white avidin): dermatitis, hair loss |
 | $\mathrm{B_9}$ folate | tetrahydrofolate (THF) | one-carbon units (formyl, methenyl, methylene, methyl) | N-5 and N-10 carry the unit at several oxidation levels | serine hydroxymethyltransferase, **thymidylate synthase**, purine synthesis (7.1.27–7.1.28) | megaloblastic anemia; neural tube defects |
 | $\mathrm{B_{12}}$ cobalamin | 5′-deoxyadenosylcobalamin, methylcobalamin | H atoms and alkyl groups | weak Co–C bond breaks homolytically (radical); $\ce{Co^+}$ is a supernucleophile | **methylmalonyl-CoA mutase** (7.1.21), methionine synthase (7.1.22) | pernicious anemia, neurological damage |
-| C ascorbate | (cosubstrate) | electrons | keeps the $\ce{F\mathrm{e}^2+}$ of hydroxylases reduced | prolyl and lysyl hydroxylases (**collagen**) | scurvy |
+| C ascorbate | (cosubstrate) | electrons | keeps the $\ce{Fe^2+}$ of hydroxylases reduced | prolyl and lysyl hydroxylases (**collagen**) | scurvy |
 | (not required by animals) | lipoate (lipoamide) | electrons and acyl groups | dithiolane ring on a Lys swinging arm | PDH and α-ketoglutarate dehydrogenase (7.1.20) | (arsenite poisoning blocks it) |
 | (made from Met + ATP) | S-adenosylmethionine (SAM) | methyl groups; 5′-deoxyadenosyl radical | sulfonium ion: methyl is an excellent electrophile | DNA, **RNA**, protein and small-molecule methyltransferases | — |
 

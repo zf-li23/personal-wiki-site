@@ -34,7 +34,7 @@ Some enzymes need nothing but their amino acid **residues**. Others require a **
 |---|---|---|---|---|
 | $\ce{Mg^2+}$ | hexokinase, enolase, pyruvate kinase | **NAD**, **NADP** | hydride ion ($\ce{H-}$) | niacin ($\mathrm{B_3}$) |
 | $\ce{Zn^2+}$ | carbonic anhydrase, alcohol dehydrogenase, carboxypeptidases A and B | **FAD** | electrons | riboflavin ($\mathrm{B_2}$) |
-| $\ce{F\mathrm{e}^2+}$ / $\ce{F\mathrm{e}^3+}$ | **cytochrome oxidase**, catalase, peroxidase | **coenzyme A** | acyl groups | pantothenate ($\mathrm{B_5}$) |
+| $\ce{Fe^2+}$ / $\ce{Fe^3+}$ | **cytochrome oxidase**, catalase, peroxidase | **coenzyme A** | acyl groups | pantothenate ($\mathrm{B_5}$) |
 | $\ce{Cu^2+}$ | cytochrome oxidase | **pyridoxal phosphate** | amino groups | pyridoxine ($\mathrm{B_6}$) |
 | $\ce{Mn^2+}$ | arginase, **ribonucleotide reductase** | **thiamine pyrophosphate** | aldehydes | thiamine ($\mathrm{B_1}$) |
 | $\ce{K+}$ | pyruvate kinase | biocytin | $\ce{CO2}$ | **biotin** ($\mathrm{B_7}$) |

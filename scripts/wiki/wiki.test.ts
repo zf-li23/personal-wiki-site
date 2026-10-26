@@ -154,6 +154,9 @@ describe('notation', () => {
     // logic predicates, the group identity and power sets keep their letters
     assert.equal(fixNotation(String.raw`P(x) \land e^{-1} = e`, '1.3.2'), String.raw`P(x) \land e^{-1} = e`);
     assert.equal(fixNotation(String.raw`e^*_{b1} + e^{\prime} + e^{-t}`, '3.3.12'), String.raw`e^*_{b1} + e^{\prime} + \mathrm{e}^{-t}`);
+    // chemical formulas follow mhchem: the e of Fe is not Euler's number
+    assert.equal(fixNotation(String.raw`\ce{Fe^2+} + \ce{[Fe(CN)6]^3-} e^{x}`, '7.1.8'), String.raw`\ce{Fe^2+} + \ce{[Fe(CN)6]^3-} \mathrm{e}^{x}`);
+    assert.deepEqual(checkNotation(String.raw`\ce{Fe^3+}`, '7.1.8'), []);
     assert.deepEqual(checkNotation(String.raw`\mathbf{R}^n`, '2.1.1').map((r) => r.id), ['number-set']);
     // T as a variable: integral bounds, powers, the Poisson distribution, closures in set theory
     assert.equal(fixNotation(String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + tr(R)`, '3.1.1'), String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + \operatorname{tr}(R)`);

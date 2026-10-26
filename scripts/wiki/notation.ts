@@ -98,25 +98,50 @@ function applies(rule: NotationRule, tex: string, pageId: string): boolean {
   return !rule.onlyIn || rule.onlyIn.test(tex);
 }
 
+/**
+ * Replace the arguments of \ce{…} with placeholders: chemical formulas follow mhchem, not ISO 80000-2
+ * (the "e" of $\ce{Fe^2+}$ is not Euler's number). Returns the masked formula and a function to restore it.
+ */
+function maskChemistry(tex: string): { masked: string; restore: (s: string) => string } {
+  const saved: string[] = [];
+  let masked = '';
+  let i = 0;
+  for (let at = tex.indexOf('\\ce{'); at !== -1; at = tex.indexOf('\\ce{', i)) {
+    let depth = 0;
+    let end = at + 3;
+    for (; end < tex.length; end++) {
+      if (tex[end] === '{') depth++;
+      else if (tex[end] === '}' && --depth === 0) break;
+    }
+    masked += `${tex.slice(i, at)}\\ce{\uE000${saved.length}\uE000}`;
+    saved.push(tex.slice(at + 4, end));
+    i = end + 1;
+  }
+  masked += tex.slice(i);
+  return { masked, restore: (s) => s.replace(/\uE000(\d+)\uE000/g, (_, k: string) => saved[Number(k)]) };
+}
+
 /** Rules violated by one formula (one entry per rule id). */
 export function checkNotation(tex: string, pageId: string): NotationRule[] {
+  const { masked } = maskChemistry(tex);
   const seen = new Map<string, NotationRule>();
   for (const rule of NOTATION_RULES) {
-    if (seen.has(rule.id) || !applies(rule, tex, pageId)) continue;
-    if (new RegExp(rule.pattern.source, rule.pattern.flags).test(tex)) seen.set(rule.id, rule);
+    if (seen.has(rule.id) || !applies(rule, masked, pageId)) continue;
+    if (new RegExp(rule.pattern.source, rule.pattern.flags).test(masked)) seen.set(rule.id, rule);
   }
   return [...seen.values()];
 }
 
 /** Apply every rule with a fix to one formula. */
 export function fixNotation(tex: string, pageId: string): string {
-  let out = tex;
+  const { masked, restore } = maskChemistry(tex);
+  let out = masked;
   for (const rule of NOTATION_RULES) {
     if (!rule.fix || !applies(rule, out, pageId)) continue;
     const re = new RegExp(rule.pattern.source, rule.pattern.flags);
     out = typeof rule.fix === 'string' ? out.replace(re, rule.fix) : out.replace(re, rule.fix as (m: string, ...g: string[]) => string);
   }
-  return out;
+  return restore(out);
 }
 
 /** Rewrite the formulas of a Markdown body. Formulas are located by the same parser the build uses. */
