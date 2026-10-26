@@ -6310,7 +6310,7 @@ terms:
   - { zh: 闭合复合物, en: closed complex, scope: ["7"] }
   - { zh: 开放复合物, en: open complex, scope: ["7"] }
   - { zh: 流产起始, en: abortive initiation, aliases: [流产转录, abortive transcription] }
-  - { zh: scrunching, en: scrunching, aliases: [DNA 挤压] }
+  - { zh: DNA 挤压, en: scrunching, aliases: [scrunching] }
   - { zh: 转录泡, en: transcription bubble }
   - { zh: 内在终止子, en: intrinsic terminator, aliases: [不依赖 ρ 的终止子, ρ-independent terminator] }
   - { zh: ρ 因子, en: ρ factor, aliases: [rho factor, Rho] }
