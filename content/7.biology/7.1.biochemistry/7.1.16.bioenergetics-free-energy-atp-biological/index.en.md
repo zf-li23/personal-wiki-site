@@ -3,7 +3,7 @@ title: "Bioenergetics: Free Energy, ATP, and Biological Redox Reactions"
 description: Opening of Part II. Catabolism and anabolism and the pathway card; the biochemical standard state, ΔrG′° versus the actual ΔrG in cells, additivity and coupling; phosphoryl group transfer, why ATP hydrolysis is exergonic, the phosphorylation potential in cells, high-energy compounds, ATP as a group donor, transphosphorylations and phosphocreatine; oxidation states of carbon, standard reduction potentials and ΔrG′° = −zFΔE′°; NAD, NADP and the flavoproteins.
 ---
 
-Part I of this course explained how the structure of biomolecules follows from their chemistry ([7.1.1](/7.1.1)). Part II (7.1.16–7.1.29) asks what cells do with these molecules: how they extract free energy from fuels or light, how they convert nutrients into their own components, and how thousands of reactions are kept in step with each other. The thread announced in [7.1.1](/7.1.1) organizes all of it: energy balance plus feedback control. Every pathway has an energy account (what it consumes and produces in ATP and reducing power), and every pathway has a few steps, far from equilibrium, where its rate is set by activators, inhibitors, covalent modification and hormones. This chapter supplies the energy side of the thread: the biochemical conventions of thermodynamics, the energy currency ATP and the electron carriers NAD, NADP and the flavins. The next chapter ([7.1.17](/7.1.17)) supplies the chemical and regulatory side. The physical chemistry behind both (**Gibbs free energy**, the **equilibrium constant**, **coupled reactions**, the **Nernst equation**) was developed in [6.3.3](/6.3.3)–[6.3.7](/6.3.7) and [6.1.11](/6.1.11); we use it without repeating the derivations and concentrate on the biochemical conventions and the numbers that matter in cells.
+Part I of this course explained how the structure of biomolecules follows from their chemistry ([7.1.1](/7.1.1)). Part II (7.1.16–7.1.29) asks what cells do with these molecules: how they extract free energy from fuels or light, how they convert nutrients into their own components, and how thousands of reactions are kept in step with each other. The thread announced in [7.1.1](/7.1.1) organizes all of it: energy balance plus feedback control. Every pathway has an energy account (what it consumes and produces in ATP and reducing power), and every pathway has a few steps, far from equilibrium, where its rate is set by **activators**, inhibitors, covalent modification and **hormones**. This chapter supplies the energy side of the thread: the biochemical conventions of thermodynamics, the energy currency ATP and the electron carriers NAD, NADP and the flavins. The next chapter ([7.1.17](/7.1.17)) supplies the chemical and regulatory side. The physical chemistry behind both (**Gibbs free energy**, the **equilibrium constant**, **coupled reactions**, the **Nernst equation**) was developed in [6.3.3](/6.3.3)–[6.3.7](/6.3.7) and [6.1.11](/6.1.11); we use it without repeating the derivations and concentrate on the biochemical conventions and the numbers that matter in cells.
 
 ## 16.1. Metabolism and Its Two Currencies
 
@@ -15,19 +15,19 @@ Part I of this course explained how the structure of biomolecules follows from t
 
 Catabolism proceeds in three stages, which converge:
 
-1. Stage I: the macromolecules of food or of the cell's own stores are hydrolyzed (or phosphorolyzed) to their building blocks: polysaccharides to hexoses, triacylglycerols to fatty acids and glycerol, proteins to amino acids. Almost no free energy is conserved.
-2. Stage II: the building blocks are degraded to a few common intermediates, above all acetyl-CoA; some ATP and NADH are formed (glycolysis, 7.1.18; β oxidation, 7.1.21; amino acid oxidation, 7.1.22).
-3. Stage III: the acetyl group is oxidized to $\ce{CO2}$ in the citric acid cycle (7.1.20), and the electrons collected as NADH and $\ce{FADH2}$ flow to $\ce{O2}$ in the respiratory chain, which drives most ATP synthesis (oxidative phosphorylation, 7.1.23).
+1. Stage I: the **macromolecules** of food or of the cell's own stores are hydrolyzed (or phosphorolyzed) to their building blocks: polysaccharides to hexoses, triacylglycerols to **fatty acids** and glycerol, **proteins** to amino acids. Almost no free energy is conserved.
+2. Stage II: the building blocks are degraded to a few common intermediates, above all acetyl-CoA; some ATP and NADH are formed (**glycolysis**, 7.1.18; **β oxidation**, 7.1.21; amino acid oxidation, 7.1.22).
+3. Stage III: the acetyl group is oxidized to $\ce{CO2}$ in the **citric acid cycle** (7.1.20), and the electrons collected as NADH and $\ce{FADH2}$ flow to $\ce{O2}$ in the **respiratory chain**, which drives most ATP synthesis (**oxidative phosphorylation**, 7.1.23).
 
-Anabolism diverges from a small number of precursors (pyruvate, acetyl-CoA, citric acid cycle intermediates, ribose 5-phosphate) to thousands of products. Catabolic and anabolic routes between the same two compounds are never the simple reverse of each other: at least one step differs, so that each direction can be regulated separately and each is thermodynamically favorable in its own direction (7.1.17, 7.1.19). The two directions are often in different compartments (fatty acid oxidation in the mitochondrial matrix, fatty acid synthesis in the cytosol). Besides linear pathways there are converging (catabolic), diverging (anabolic) and cyclic ones (the citric acid cycle, the urea cycle), in which one starting component is regenerated in every turn.
+Anabolism diverges from a small number of precursors (pyruvate, acetyl-CoA, citric acid cycle intermediates, ribose 5-phosphate) to thousands of products. Catabolic and anabolic routes between the same two compounds are never the simple reverse of each other: at least one step differs, so that each direction can be regulated separately and each is thermodynamically favorable in its own direction (7.1.17, 7.1.19). The two directions are often in different compartments (fatty acid oxidation in the mitochondrial matrix, fatty acid synthesis in the cytosol). Besides linear pathways there are converging (catabolic), diverging (anabolic) and cyclic ones (the citric acid cycle, the **urea cycle**), in which one starting component is regenerated in every turn.
 
 ![Catabolism and anabolism are coupled through two currencies. Left: the three stages of catabolism converge from proteins, polysaccharides and lipids (stage I, hydrolysis to amino acids, hexoses, fatty acids and glycerol) through a few intermediates, above all acetyl-CoA (stage II), to the citric acid cycle and oxidative phosphorylation (stage III), which end in CO₂, H₂O and NH₃. Right: anabolism diverges from a few precursors to the macromolecules of the cell. Centre: the free energy released by catabolism is passed on as ATP (from ADP + Pᵢ) and as reducing power, NADH (mainly used for ATP synthesis) and NADPH (used for reductive biosynthesis); their consumption drives biosynthesis, transport across membranes, movement and other work, and regenerates ADP and NADP⁺](./plots/energy-coupling.py)
 
 ### 16.1.2. ATP and NAD(P)H
 
-The coupling between the two directions runs through a few carrier molecules. ATP carries free energy as a high phosphoryl group transfer potential (16.3); NADH and NADPH carry reducing power, electrons at a low reduction potential (16.4–16.5); acetyl-CoA carries activated acyl groups. Catabolism regenerates them, anabolism and work consume them, and their concentrations are held far from equilibrium, so that consuming them is always strongly exergonic. Most of Part II can be read as the bookkeeping of these carriers: for each pathway, how many ATP and how many NAD(P)H it consumes or produces per molecule of substrate.
+The coupling between the two directions runs through a few carrier molecules. ATP carries free energy as a high phosphoryl group transfer potential (16.3); NADH and NADPH carry reducing power, electrons at a low reduction potential (16.4–16.5); acetyl-CoA carries activated acyl groups. Catabolism regenerates them, anabolism and work consume them, and their concentrations are held far from equilibrium, so that consuming them is always strongly exergonic. Most of Part II can be read as the bookkeeping of these carriers: for each pathway, how many ATP and how many NAD(P)H it consumes or produces per molecule of **substrate**.
 
-The golden age of the subject, from the 1920s to the 1960s, worked out glycolysis, the citric acid cycle, oxidative phosphorylation and glycogen metabolism and the role of ATP, and earned some fifteen Nobel Prizes. Metabolism has had a revival since about 2010: mass spectrometry measures hundreds of metabolites at once (metabolomics), isotope tracers measure fluxes in living tissues, and altered metabolism turned out to be central to cancer, diabetes and immunity.
+The golden age of the subject, from the 1920s to the 1960s, worked out glycolysis, the citric acid cycle, oxidative phosphorylation and **glycogen** **metabolism** and the role of ATP, and earned some fifteen Nobel Prizes. Metabolism has had a revival since about 2010: mass spectrometry measures hundreds of metabolites at once (metabolomics), isotope tracers measure fluxes in living tissues, and altered metabolism turned out to be central to cancer, **diabetes** and immunity.
 
 ### 16.1.3. The Pathway Card
 
@@ -36,13 +36,13 @@ To keep the detail of Part II in order, each chapter summarizes each pathway on 
 | Field | What it records |
 |---|---|
 | Location | organisms, tissues and compartment (cytosol, matrix, ER, chloroplast) |
-| Net reaction | input → output, balanced for the carriers (ATP, NAD(P)H, CoA) |
+| Net reaction | input → output, balanced for the carriers (ATP, NAD(P)H, **CoA**) |
 | Energy account | ATP and NAD(P)H per substrate; $\Delta_{\mathrm{r}}G'^{\circ}$ and the actual $\Delta_{\mathrm{r}}G$ in the cell |
-| Committed and regulated steps | the steps far from equilibrium (7.1.17), first the committed step |
-| Activators / inhibitors | allosteric effectors of the regulated enzymes; feedback and feedforward |
-| Covalent, hormonal and transcriptional control | phosphorylation and its hormones (insulin, glucagon, epinephrine), induction of enzymes |
+| Committed and regulated steps | the steps far from equilibrium (7.1.17), first the **committed step** |
+| Activators / inhibitors | **allosteric effectors** of the regulated **enzymes**; feedback and feedforward |
+| Covalent, hormonal and transcriptional control | phosphorylation and its hormones (**insulin**, **glucagon**, **epinephrine**), induction of enzymes |
 | Opposing pathway | the reverse route, the enzymes unique to it, and how the two are regulated reciprocally |
-| Coenzymes (vitamins) | the coenzymes required and their vitamin precursors (table in [7.1.17](/7.1.17#sec-17.2)) |
+| **Coenzymes** (**vitamins**) | the coenzymes required and their vitamin precursors (table in [7.1.17](/7.1.17#sec-17.2)) |
 | Diseases and drugs | inherited defects, deficiency diseases, inhibitors used as drugs or poisons |
 
 The first card, for glycolysis, is in [7.1.18](/7.1.18); the card of every pathway is collected again in the course summary (7.1.30).
@@ -80,7 +80,7 @@ A table of $\Delta_{\mathrm{r}}G'^{\circ}$ values shows a pattern that recurs th
 |---|---|---|
 | Hydrolysis of acid anhydrides | ATP + $\ce{H2O}$ → ADP + $\mathrm{P_i}$; ATP + $\ce{H2O}$ → AMP + $\mathrm{PP_i}$; $\mathrm{PP_i}$ + $\ce{H2O}$ → 2 $\mathrm{P_i}$ | $-30.5$; $-45.6$; $-19.2$ |
 | Hydrolysis of esters | glucose 6-phosphate + $\ce{H2O}$ → glucose + $\mathrm{P_i}$ | $-13.8$ |
-| Hydrolysis of amides and peptides | glutamine + $\ce{H2O}$ → glutamate + $\ce{NH4+}$; glycylglycine + $\ce{H2O}$ → 2 glycine | $-14.2$; $-9.2$ |
+| Hydrolysis of amides and **peptides** | glutamine + $\ce{H2O}$ → glutamate + $\ce{NH4+}$; glycylglycine + $\ce{H2O}$ → 2 glycine | $-14.2$; $-9.2$ |
 | Hydrolysis of glycosides | maltose + $\ce{H2O}$ → 2 glucose | $-15.5$ |
 | Rearrangements | fructose 6-phosphate → glucose 6-phosphate | $-1.7$ |
 | Elimination of water | malate → fumarate + $\ce{H2O}$ | $+3.1$ |
@@ -156,7 +156,7 @@ The equilibrium of ATP hydrolysis lies very far to the side of ADP: with $K' \ap
 
 ![The phosphorylation potential. A: actual Gibbs energy of ATP hydrolysis at 37 °C against the mass-action ratio Q = [ADP][Pᵢ]/[ATP] (logarithmic scale); the line meets zero at equilibrium (Q = K′ ≈ 1.4 × 10⁵ M), and the points mark the ratios computed from the total nucleotide concentrations of four cell types, all between −46 and −53 kJ mol⁻¹, far from equilibrium. The standard value, −30.5 kJ mol⁻¹, corresponds to Q = 1 M. B: phosphorylation potential of the same cells and of resting muscle with the estimated free ADP concentration (25 µM), compared with the standard value](./plots/atp-hydrolysis-dg.py)
 
-ATP is not a storage form of energy. A resting adult turns over roughly his or her body mass of ATP (about 40 kg) per day, and during strenuous exercise several times more, while the amount of ATP present in the body at any moment is only of the order of 100 g; a given ATP molecule is consumed within about a minute of its formation. The concentration of ATP stays constant because its synthesis matches its consumption, a dynamic steady state. Longer-term stores are glycogen and fat, and in muscle the short-term buffer phosphocreatine (16.3.5).
+ATP is not a storage form of energy. A resting adult turns over roughly his or her body mass of ATP (about 40 kg) per day, and during strenuous exercise several times more, while the amount of ATP present in the body at any moment is only of the order of 100 g; a given ATP molecule is consumed within about a minute of its formation. The concentration of ATP stays constant because its synthesis matches its consumption, a **dynamic steady state**. Longer-term stores are glycogen and fat, and in muscle the short-term buffer phosphocreatine (16.3.5).
 
 ### 16.3.3. Other Compounds with High Phosphoryl Group Transfer Potential
 
@@ -203,7 +203,7 @@ ATP is in the middle of the scale. It can accept phosphoryl groups from the high
 
 ### 16.3.4. ATP Provides Energy by Group Transfer
 
-Reactions are often written as if ATP were simply hydrolyzed alongside them ("driven by ATP hydrolysis"). Hydrolysis by itself only liberates heat, which cannot drive a chemical reaction in an isothermal system. In almost every ATP-dependent reaction ATP takes part covalently: a part of it is first transferred to the substrate or to an enzyme residue, raising its free energy (activating it), and in a second step this part is displaced. In glutamine synthetase, for example, the phosphoryl group goes first to glutamate, giving γ-glutamyl phosphate, which ammonia then attacks, releasing $\mathrm{P_i}$:
+Reactions are often written as if ATP were simply hydrolyzed alongside them ("driven by ATP hydrolysis"). Hydrolysis by itself only liberates heat, which cannot drive a chemical reaction in an isothermal system. In almost every ATP-dependent reaction ATP takes part covalently: a part of it is first transferred to the substrate or to an enzyme **residue**, raising its free energy (activating it), and in a second step this part is displaced. In **glutamine synthetase**, for example, the phosphoryl group goes first to glutamate, giving γ-glutamyl phosphate, which ammonia then attacks, releasing $\mathrm{P_i}$:
 
 $$
 \begin{aligned}
@@ -215,15 +215,15 @@ The reactions of ATP are nucleophilic displacements (**SN2 reactions**) at one o
 
 | Position attacked | Group transferred | Leaving group | Example |
 |---|---|---|---|
-| γ-P | phosphoryl, $\ce{-PO3^2-}$ | ADP | kinases (hexokinase, glutamine synthetase, protein kinases) |
-| β-P | pyrophosphoryl | AMP | synthesis of 5-phosphoribosyl 1-pyrophosphate (PRPP, 7.1.28) |
-| α-P | adenylyl (AMP) | $\mathrm{PP_i}$ | activation of fatty acids (7.1.21) and amino acids (aminoacyl-tRNA synthetases, [7.2](/7.2)) |
+| γ-P | phosphoryl, $\ce{-PO3^2-}$ | ADP | kinases (hexokinase, glutamine synthetase, **protein kinases**) |
+| β-P | pyrophosphoryl | AMP | synthesis of **5-phosphoribosyl 1-pyrophosphate** (PRPP, 7.1.28) |
+| α-P | adenylyl (AMP) | $\mathrm{PP_i}$ | activation of fatty acids (7.1.21) and amino acids (**aminoacyl-tRNA synthetases**, [7.2](/7.2)) |
 
 $^{18}\mathrm{O}$-labeling shows that the bridging oxygen in the product comes from the attacking nucleophile, so what is transferred is a phosphoryl group, not a phosphate. Adenylylation is the most powerful way of using ATP: hydrolysis of the α–β bond releases more free energy ($-45.6\,\mathrm{kJ\,mol^{-1}}$) than that of the β–γ bond, and the $\mathrm{PP_i}$ formed is hydrolyzed by the ubiquitous inorganic pyrophosphatase ($-19.2\,\mathrm{kJ\,mol^{-1}}$), so that both phosphoanhydride bonds are spent, ATP + 2 $\ce{H2O}$ → AMP + 2 $\mathrm{P_i}$ ($-64.8\,\mathrm{kJ\,mol^{-1}}$). The activation of a fatty acid, whose direct condensation with CoA is endergonic, proceeds through a fatty acyl adenylate and is made effectively irreversible in this way. The polymerization of nucleic acids, in which nucleoside triphosphates add nucleotidyl units and release $\mathrm{PP_i}$, follows the same principle ([7.2.7](/7.2.7)).
 
-The firefly uses an adenylylation to make light (**bioluminescence**): luciferase converts its substrate luciferin and ATP to luciferyl adenylate and $\mathrm{PP_i}$; the adenylate reacts with $\ce{O2}$ to an excited oxyluciferin that emits a photon as it returns to the ground state. Because the light intensity is proportional to the amount of ATP, purified luciferin and luciferase measure ATP down to a few picomoles, the basis of cell-viability and hygiene assays and of luciferase reporter genes.
+The firefly uses an adenylylation to make light (**bioluminescence**): luciferase converts its substrate luciferin and ATP to luciferyl adenylate and $\mathrm{PP_i}$; the adenylate reacts with $\ce{O2}$ to an excited oxyluciferin that emits a photon as it returns to the ground state. Because the light intensity is proportional to the amount of ATP, purified luciferin and luciferase measure ATP down to a few picomoles, the basis of cell-viability and hygiene assays and of luciferase reporter **genes**.
 
-Only a few processes use the energy of ATP hydrolysis without covalent transfer to the substrate. Motor proteins (myosin, kinesin, dynein), the chaperonins, helicases and many AAA+ ATPases bind ATP noncovalently and use its hydrolysis and the release of ADP and $\mathrm{P_i}$ to cycle between conformations, as G proteins do with GTP (7.1.14). Ion pumps such as the $\ce{Na+}/\ce{K+}$-ATPase are phosphorylated themselves (on an Asp residue) and use the cycle of phosphorylation and dephosphorylation of the enzyme to pump ions (7.1.13). In the human kidney and brain as much as two-thirds of the energy consumed at rest is used to pump $\ce{Na+}$ and $\ce{K+}$.
+Only a few processes use the energy of ATP hydrolysis without covalent transfer to the substrate. Motor proteins (myosin, kinesin, dynein), the **chaperonins**, **helicases** and many AAA+ ATPases bind ATP noncovalently and use its hydrolysis and the release of ADP and $\mathrm{P_i}$ to cycle between conformations, as **G proteins** do with GTP (7.1.14). Ion pumps such as the $\ce{Na+}/\ce{K+}$-ATPase are phosphorylated themselves (on an Asp residue) and use the cycle of phosphorylation and dephosphorylation of the enzyme to pump ions (7.1.13). In the human kidney and brain as much as two-thirds of the energy consumed at rest is used to pump $\ce{Na+}$ and $\ce{K+}$.
 
 ### 16.3.5. Transphosphorylations between Nucleotides
 
@@ -235,15 +235,15 @@ Because [ATP]/[ADP] is high in cells, nucleoside diphosphate kinase runs in the 
 
 **Definition 16.3.4 (Phosphocreatine)** **Phosphocreatine** (creatine phosphate, PCr) is the phosphorylated guanidino compound that serves in vertebrate muscle and brain as a reservoir of phosphoryl groups for rapid regeneration of ATP; creatine kinase catalyzes ADP + PCr ⇌ ATP + creatine, $\Delta_{\mathrm{r}}G'^{\circ} = -12.5\,\mathrm{kJ\,mol^{-1}}$. Compounds with this function are called phosphagens (arginine phosphate in many invertebrates).
 
-Skeletal muscle contains about 30 mM PCr, roughly four times its ATP, and other tissues 5–10 mM. When contraction begins, the ATP present supports a sprint for only a couple of seconds; PCr, kept near equilibrium with ATP by the fast creatine kinase reaction, holds [ATP] nearly constant for several seconds more, while glycolysis (seconds to minutes) and oxidative phosphorylation (minutes and longer) accelerate. When demand falls, ATP from catabolism refills the PCr store by the reverse reaction. Creatine kinase isozymes in mitochondria and in the myofibrils also carry phosphoryl groups from the sites of ATP synthesis to the sites of use (the phosphocreatine shuttle; 7.1.29).
+Skeletal muscle contains about 30 mM PCr, roughly four times its ATP, and other tissues 5–10 mM. When contraction begins, the ATP present supports a sprint for only a couple of seconds; PCr, kept near equilibrium with ATP by the fast creatine kinase reaction, holds [ATP] nearly constant for several seconds more, while glycolysis (seconds to minutes) and oxidative phosphorylation (minutes and longer) accelerate. When demand falls, ATP from catabolism refills the PCr store by the reverse reaction. Creatine kinase **isozymes** in mitochondria and in the myofibrils also carry phosphoryl groups from the sites of ATP synthesis to the sites of use (the phosphocreatine shuttle; 7.1.29).
 
 ## 16.4. Biological Oxidation–Reduction Reactions
 
 ### 16.4.1. Electron Flow and Half-Reactions
 
-The flow of electrons in **redox reactions** is responsible, directly or indirectly, for all the work done by living organisms. In a battery, electrons flow spontaneously through a wire from the chemical species of low electron affinity to the one of high affinity, driven by the **electromotive force**, and a motor in the circuit converts part of the energy into work. In a cell the source of electrons is a reduced fuel such as glucose; as it is oxidized, the electrons flow through a series of carriers to an acceptor of high affinity, usually $\ce{O2}$, and membrane-bound proteins convert the energy of this flow into a proton gradient that drives ATP synthesis (7.1.23) or flagellar rotation. Each redox reaction can be written as two half-reactions, each a conjugate **redox pair** (electron donor ⇌ $n\,\ce{e-}$ + electron acceptor; [6.1.11](/6.1.11#sec-11.1.4)), just as an acid–base reaction combines two conjugate acid–base pairs.
+The flow of electrons in **redox reactions** is responsible, directly or indirectly, for all the work done by living organisms. In a battery, electrons flow spontaneously through a wire from the chemical species of low electron affinity to the one of high affinity, driven by the **electromotive force**, and a motor in the circuit converts part of the energy into work. In a cell the source of electrons is a reduced fuel such as glucose; as it is oxidized, the electrons flow through a series of carriers to an acceptor of high affinity, usually $\ce{O2}$, and membrane-bound proteins convert the energy of this flow into a proton gradient that drives ATP synthesis (7.1.23) or flagellar rotation. Each redox reaction can be written as two half-reactions, each a conjugate **redox pair** (electron donor ⇌ $n\,\ce{e-}$ + electron acceptor; [6.1.11](/6.1.11#sec-11.1.4)), just as an acid–base reaction combines two conjugate acid–**base pairs**.
 
-Electrons are transferred in four ways in cells: directly as electrons (between metal ions, as from $\ce{F\mathrm{e}^2+}$ to $\ce{Cu^2+}$ in cytochrome oxidase); as hydrogen atoms (a proton and an electron: $\ce{AH2 + B -> A + BH2}$); as a hydride ion ($\ce{:H-}$, two electrons and a proton), in the NAD-linked dehydrogenases; and by direct combination with oxygen, in which an oxygen atom is incorporated into the product (oxygenases). The neutral term reducing equivalent designates one electron equivalent in any of these forms.
+Electrons are transferred in four ways in cells: directly as electrons (between metal ions, as from $\ce{F\mathrm{e}^2+}$ to $\ce{Cu^2+}$ in **cytochrome oxidase**); as hydrogen atoms (a proton and an electron: $\ce{AH2 + B -> A + BH2}$); as a hydride ion ($\ce{:H-}$, two electrons and a proton), in the NAD-linked dehydrogenases; and by direct combination with oxygen, in which an oxygen atom is incorporated into the product (oxygenases). The neutral term reducing equivalent designates one electron equivalent in any of these forms.
 
 ### 16.4.2. Oxidation States of Carbon
 
@@ -265,17 +265,17 @@ The tendency of the oxidized member of a redox pair to accept electrons is measu
 | $\tfrac12\ce{O2} + 2\ce{H+} + 2\ce{e-} \to \ce{H2O}$ | $+0.816$ |
 | $\ce{F\mathrm{e}^3+ + e- -> F\mathrm{e}^2+}$ | $+0.771$ |
 | $\ce{NO3- + 2H+ + 2e- -> NO2- + H2O}$ | $+0.421$ |
-| cytochrome $a_3$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $a_3$ ($\ce{F\mathrm{e}^2+}$) | $+0.35$ |
+| **cytochrome** $a_3$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $a_3$ ($\ce{F\mathrm{e}^2+}$) | $+0.35$ |
 | $\ce{O2 + 2H+ + 2e- -> H2O2}$ | $+0.295$ |
 | cytochrome $c$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $c$ ($\ce{F\mathrm{e}^2+}$) | $+0.254$ |
 | cytochrome $b$ ($\ce{F\mathrm{e}^3+}$) + $\ce{e-}$ → cytochrome $b$ ($\ce{F\mathrm{e}^2+}$) | $+0.077$ |
-| ubiquinone + $2\ce{H+} + 2\ce{e-}$ → ubiquinol | $+0.045$ |
+| **ubiquinone** + $2\ce{H+} + 2\ce{e-}$ → ubiquinol | $+0.045$ |
 | fumarate + $2\ce{H+} + 2\ce{e-}$ → succinate | $+0.031$ |
 | oxaloacetate + $2\ce{H+} + 2\ce{e-}$ → malate | $-0.166$ |
 | pyruvate + $2\ce{H+} + 2\ce{e-}$ → lactate | $-0.185$ |
 | acetaldehyde + $2\ce{H+} + 2\ce{e-}$ → ethanol | $-0.197$ |
 | $\ce{FAD} + 2\ce{H+} + 2\ce{e-} \to \ce{FADH2}$ (free FAD) | $-0.219$ |
-| lipoic acid + $2\ce{H+} + 2\ce{e-}$ → dihydrolipoic acid | $-0.29$ |
+| **lipoic acid** + $2\ce{H+} + 2\ce{e-}$ → dihydrolipoic acid | $-0.29$ |
 | $\ce{NAD+} + \ce{H+} + 2\ce{e-} \to \ce{NADH}$ | $-0.320$ |
 | $\ce{NADP+} + \ce{H+} + 2\ce{e-} \to \ce{NADPH}$ | $-0.324$ |
 | acetoacetate + $2\ce{H+} + 2\ce{e-}$ → β-hydroxybutyrate | $-0.346$ |
@@ -301,7 +301,7 @@ $$
 $$
 with the **Faraday constant** $F = 96.485\,\mathrm{kJ\,V^{-1}\,mol^{-1}}$ (the relation between electromotive force and Gibbs energy of [6.1.11](/6.1.11#sec-11.4.5)).
 
-**Example 16.4.1** In alcoholic fermentation, NADH reduces acetaldehyde: acetaldehyde + NADH + $\ce{H+}$ → ethanol + $\ce{NAD+}$. Acetaldehyde is the acceptor, so $\Delta E'^{\circ} = -0.197 - (-0.320) = 0.123\,\mathrm{V}$ and $\Delta_{\mathrm{r}}G'^{\circ} = -2 \times 96.5 \times 0.123 = -23.7\,\mathrm{kJ\,mol^{-1}}$. With [acetaldehyde] = [NADH] = 1.00 M and [ethanol] = [$\ce{NAD+}$] = 0.100 M at $25\,^\circ\mathrm{C}$, $\Delta_{\mathrm{r}}G = -23.7 + 2.48\ln 0.01 = -35.1\,\mathrm{kJ\,mol^{-1}}$.
+**Example 16.4.1** In **alcoholic fermentation**, NADH reduces acetaldehyde: acetaldehyde + NADH + $\ce{H+}$ → ethanol + $\ce{NAD+}$. Acetaldehyde is the acceptor, so $\Delta E'^{\circ} = -0.197 - (-0.320) = 0.123\,\mathrm{V}$ and $\Delta_{\mathrm{r}}G'^{\circ} = -2 \times 96.5 \times 0.123 = -23.7\,\mathrm{kJ\,mol^{-1}}$. With [acetaldehyde] = [NADH] = 1.00 M and [ethanol] = [$\ce{NAD+}$] = 0.100 M at $25\,^\circ\mathrm{C}$, $\Delta_{\mathrm{r}}G = -23.7 + 2.48\ln 0.01 = -35.1\,\mathrm{kJ\,mol^{-1}}$.
 
 **Example 16.4.2** The span from NADH to $\ce{O2}$ is the largest in aerobic metabolism: $\Delta E'^{\circ} = 0.816 - (-0.320) = 1.136\,\mathrm{V}$, so NADH + $\ce{H+}$ + $\tfrac12\ce{O2}$ → $\ce{NAD+}$ + $\ce{H2O}$ has $\Delta_{\mathrm{r}}G'^{\circ} = -2 \times 96.5 \times 1.136 = -219\,\mathrm{kJ\,mol^{-1}}$, enough in principle for several ATP. The respiratory chain releases this free energy in steps between carriers of increasing potential (NADH → flavin → ubiquinone → cytochromes → $\ce{O2}$), each step large enough to pump protons (7.1.23).
 
@@ -311,7 +311,7 @@ Complete oxidation of glucose, glucose + 6 $\ce{O2}$ → 6 $\ce{CO2}$ + 6 $\ce{H
 
 ## 16.5. Universal Electron Carriers
 
-The hundreds of enzymes that catalyze cellular oxidations transfer the electrons of their substrates to a few kinds of carriers: the soluble nicotinamide nucleotides NAD and NADP, the flavin nucleotides FMN and FAD bound to flavoproteins, the lipid-soluble quinones (ubiquinone and plastoquinone) in membranes, and the iron–sulfur proteins and cytochromes. Quinones, iron–sulfur clusters and cytochromes are treated with the respiratory chain and photosynthesis (7.1.23–7.1.24).
+The hundreds of enzymes that catalyze cellular oxidations transfer the electrons of their substrates to a few kinds of carriers: the soluble nicotinamide nucleotides NAD and NADP, the flavin nucleotides FMN and FAD bound to flavoproteins, the lipid-soluble quinones (ubiquinone and **plastoquinone**) in membranes, and the **iron–sulfur proteins** and cytochromes. Quinones, iron–sulfur clusters and cytochromes are treated with the respiratory chain and **photosynthesis** (7.1.23–7.1.24).
 
 ### 16.5.1. NAD and NADP
 
@@ -343,7 +343,7 @@ The two coenzymes have different jobs, and the cell keeps them in two pools with
 
 With the Nernst equation these ratios translate into potentials. At $37\,^\circ\mathrm{C}$ ($RT/2F = 13.4\,\mathrm{mV}$), the cytosolic NAD pool sits at $E \approx -0.320 + 0.0134\ln 700 = -0.23\,\mathrm{V}$ and the NADP pool at $E \approx -0.324 + 0.0134\ln 0.01 = -0.39\,\mathrm{V}$. Although the two coenzymes have the same $E'^{\circ}$, the electrons in NADPH are about 0.15 V more reducing, worth about $30\,\mathrm{kJ}$ per mole of hydride: a cell can oxidize fuels with $\ce{NAD+}$ and reduce precursors with NADPH in the same compartment because the enzymes discriminate between the two coenzymes by the extra 2′-phosphate. Fuel oxidations (of pyruvate, fatty acids, α-keto acids) also take place mainly in the mitochondrial matrix and reductive syntheses (of fatty acids) in the cytosol. The total concentration of NAD (both forms) is of the order of 0.1–1 mM in mammalian cells, and that of NADP somewhat lower; much of it is bound to enzymes.
 
-NAD and NADP are bound loosely and diffuse from one dehydrogenase to another; most of these enzymes bind the coenzyme with a conserved Rossmann fold (two βαβαβ units). In yeast fermentation, glyceraldehyde 3-phosphate dehydrogenase reduces $\ce{NAD+}$ and alcohol dehydrogenase reoxidizes the NADH; the sum, glyceraldehyde 3-phosphate + acetaldehyde → 3-phosphoglycerate + ethanol, involves no net change in NAD, which acts catalytically and is recycled many times. The ratios $[\ce{NAD+}]/[\mathrm{NADH}]$ and $[\ce{NADP+}]/[\mathrm{NADPH}]$ are themselves signals: both forms act as allosteric effectors of enzymes of catabolism (7.1.17). Some important NAD(P)-linked dehydrogenases (Lehninger 8e, Table 19-1), each treated in its chapter:
+NAD and NADP are bound loosely and diffuse from one dehydrogenase to another; most of these enzymes bind the coenzyme with a conserved Rossmann **fold** (two βαβαβ units). In yeast **fermentation**, glyceraldehyde 3-phosphate dehydrogenase reduces $\ce{NAD+}$ and alcohol dehydrogenase reoxidizes the NADH; the sum, glyceraldehyde 3-phosphate + acetaldehyde → 3-phosphoglycerate + ethanol, involves no net change in NAD, which acts catalytically and is recycled many times. The ratios $[\ce{NAD+}]/[\mathrm{NADH}]$ and $[\ce{NADP+}]/[\mathrm{NADPH}]$ are themselves signals: both forms act as allosteric effectors of enzymes of catabolism (7.1.17). Some important NAD(P)-linked dehydrogenases (Lehninger 8e, Table 19-1), each treated in its chapter:
 
 | Reaction | Coenzyme | Location | Chapter |
 |---|---|---|---|
@@ -357,7 +357,7 @@ NAD and NADP are bound loosely and diffuse from one dehydrogenase to another; mo
 | glutamate + $\ce{H2O}$ ⇌ α-ketoglutarate + $\ce{NH4+}$ | NAD or NADP | matrix | 7.1.22 |
 | glucose 6-phosphate → 6-phosphoglucono-δ-lactone | NADP | cytosol | 7.1.18 |
 
-NAD also has functions outside redox chemistry, in which it is consumed as a substrate. Bacterial DNA ligases take the AMP that activates a nick from NAD ([7.2.7](/7.2.7)). ADP-ribosyltransferases transfer its ADP-ribose to proteins: poly(ADP-ribose) polymerases mark DNA damage, and cholera toxin ADP-ribosylates the G protein $\mathrm{G_s}$ of intestinal cells, locking it in the active state and causing massive loss of water (7.1.14). The sirtuins deacetylate Lys residues of histones and metabolic enzymes in a reaction that consumes NAD, so that their activity follows the NAD level of the cell, a link between energy state and gene expression.
+NAD also has functions outside redox chemistry, in which it is consumed as a substrate. Bacterial **DNA ligases** take the AMP that activates a nick from NAD ([7.2.7](/7.2.7)). ADP-ribosyltransferases transfer its ADP-ribose to proteins: poly(ADP-ribose) polymerases mark **DNA** damage, and cholera toxin ADP-ribosylates the G protein $\mathrm{G_s}$ of intestinal cells, locking it in the active state and causing massive loss of water (7.1.14). The sirtuins deacetylate Lys residues of **histones** and metabolic enzymes in a reaction that consumes NAD, so that their activity follows the NAD level of the cell, a link between energy state and gene expression.
 
 The nicotinamide ring comes from the vitamin niacin (nicotinic acid, vitamin $\mathrm{B_3}$), which humans also make in small amounts from tryptophan. Niacin deficiency impairs all NAD(P)-dependent dehydrogenases and causes pellagra ("rough skin"), with the "three Ds": dermatitis, diarrhea and dementia, and finally death. Pellagra was common where maize, poor in tryptophan and in available niacin, was the staple (about 100 000 cases and 10 000 deaths in the southern United States in 1912–1916); Goldberger showed around 1920 that it is a dietary disease, and Elvehjem identified nicotinic acid as the cure in 1937. Today it is seen mainly in chronic alcoholics, whose absorption of niacin is impaired.
 
@@ -372,7 +372,7 @@ Cc1cc2Nc3c(=O)[nH]c(=O)[nH]c3N(C[C@H](O)[C@H](O)[C@H](O)COP(=O)([O-])[O-])c2cc1C
 
 The flavin differs from the nicotinamide coenzymes in three ways that determine where flavoproteins are used.
 
-- One or two electrons: the isoalloxazine ring accepts two hydrogen atoms (two electrons and two protons) at N-1 and N-5 to give $\ce{FADH2}$ (or $\ce{FMNH2}$), or one hydrogen atom to give the stable radical, the **semiquinone** (FADH•). A flavin can therefore take two electrons from NADH or from a C–C bond and pass them one at a time to an iron–sulfur cluster or a heme, which accept only one electron each; flavoproteins are the junction between two-electron and one-electron chemistry (Complex I and Complex II of the respiratory chain, 7.1.23).
+- One or two electrons: the isoalloxazine ring accepts two hydrogen atoms (two electrons and two protons) at N-1 and N-5 to give $\ce{FADH2}$ (or $\ce{FMNH2}$), or one hydrogen atom to give the stable radical, the **semiquinone** (FADH•). A flavin can therefore take two electrons from NADH or from a C–C bond and pass them one at a time to an iron–sulfur cluster or a **heme**, which accept only one electron each; flavoproteins are the junction between two-electron and one-electron chemistry (**Complex I** and **Complex II** of the respiratory chain, 7.1.23).
 - Tight binding: most flavins are bound so tightly that they never leave the enzyme, and in some enzymes (succinate dehydrogenase) FAD is attached covalently to a His residue. The flavoprotein holds the electrons temporarily while it passes them from the substrate to an acceptor.
 - A tunable potential: protein binding shifts the reduction potential of the flavin, from $-0.219\,\mathrm{V}$ for free FAD to values between about $-0.40$ and $+0.06\,\mathrm{V}$ in different flavoproteins. Succinate dehydrogenase, whose FAD is near $0\,\mathrm{V}$, can therefore accept electrons from succinate ($E'^{\circ} = +0.031\,\mathrm{V}$), whereas the transfer to free FAD would have $\Delta_{\mathrm{r}}G'^{\circ} = -2F(-0.219 - 0.031) = +48\,\mathrm{kJ\,mol^{-1}}$ and the transfer to $\ce{NAD+}$ $+68\,\mathrm{kJ\,mol^{-1}}$.
 

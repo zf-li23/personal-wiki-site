@@ -123,9 +123,13 @@ function singulars(w: string): string[] {
   return out;
 }
 
-/** An abbreviation in capitals (letters, digits, hyphens; no lower case): "CI", "GAG", "V(D)J" is not one. */
+/**
+ * A name matched only as written: an abbreviation in capitals ("CI", "GAG"; "V(D)J" is not one) or a
+ * single word with a capital after its first letter ("CaM", "LINEs", "mRNA"), which would otherwise
+ * also match ordinary words ("cam", "lines").
+ */
 function isAbbreviation(name: string): boolean {
-  return /^[A-Z0-9-]*[A-Z][A-Z0-9-]*$/.test(name);
+  return /^[A-Z0-9-]*[A-Z][A-Z0-9-]*$/.test(name) || /^\S+$/u.test(name) && /^.\S*\p{Lu}/u.test(name);
 }
 
 /** Concepts by name in one language (only those in scope for the page, when given). */

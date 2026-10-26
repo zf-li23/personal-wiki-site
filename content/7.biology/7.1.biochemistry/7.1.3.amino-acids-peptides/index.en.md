@@ -3,7 +3,7 @@ title: Amino Acids and Peptides
 description: The common structure and L configuration of amino acids; the 20 standard amino acids classified by their R groups, with a complete property table, structures, side-chain functions and memory aids; UV absorption; uncommon amino acids and post-translational modifications; acid–base behaviour, pKa shifts, isoelectric points and net charge; peptides, biologically active peptides, protein sizes, conjugated proteins and cofactors.
 ---
 
-Proteins are the most abundant macromolecules of all cells and the main agents of biological function: they catalyse reactions (hexokinase, DNA polymerase), transport molecules (hemoglobin, lactose permease), form structures (collagen, keratin), generate movement (myosin, actin), and they receive, transmit and decode signals. All of this diversity is built from one simple set of 20 amino acids. Each has the same backbone and a different side chain, and the side chains differ in size, shape, charge, hydrogen-bonding capacity, hydrophobic character and chemical reactivity. This chapter is the heart of the thread "chemical properties → structure → function" (7.1.1): what each side chain can do chemically determines how proteins fold (7.1.5–7.1.6), bind ligands (7.1.7) and catalyse reactions (7.1.8–7.1.9).
+Proteins are the most abundant **macromolecules** of all cells and the main agents of biological function: they catalyse reactions (hexokinase, **DNA polymerase**), transport molecules (hemoglobin, lactose permease), form structures (**collagen**, keratin), generate movement (myosin, actin), and they receive, transmit and decode signals. All of this diversity is built from one simple set of 20 amino acids. Each has the same backbone and a different side chain, and the side chains differ in size, shape, charge, hydrogen-bonding capacity, hydrophobic character and chemical reactivity. This chapter is the heart of the thread "chemical properties → structure → function" (7.1.1): what each side chain can do chemically determines how proteins fold (7.1.5–7.1.6), bind **ligands** (7.1.7) and catalyse reactions (7.1.8–7.1.9).
 
 The organic chemistry of amino acids, their configurations, acid–base equilibria, reactions and chemical synthesis, and the chemistry of the **peptide bond** have been treated in [6.5.33](/6.5.33) (where **amino acid**, **zwitterion**, **isoelectric point** and **peptide bond** are defined), and the titration of amino acids in [6.4.2](/6.4.2#sec-2.8.3); here we use those results. Methods for purifying proteins and determining their sequences follow in 7.1.4.
 
@@ -15,7 +15,7 @@ The amino acids of proteins are α-amino acids: a carboxyl group and an amino gr
 
 **Definition 3.1.1** The variable group attached to the α carbon of an α-amino acid is called its **side chain**, or R group. The 20 α-amino acids specified by the standard genetic code and incorporated into proteins by ribosomes are called the **standard amino acids** (or common amino acids).
 
-Proline is the one exception to the general structure: its side chain is bonded to the α-amino nitrogen as well as to the α carbon, forming a five-membered ring with a secondary amino (imino) group. Two further amino acids, selenocysteine and pyrrolysine, are also inserted by ribosomes, but only in a few proteins and by special recoding of stop codons (3.3.1); they are not counted among the standard amino acids.
+Proline is the one exception to the general structure: its side chain is bonded to the α-amino nitrogen as well as to the α carbon, forming a five-membered ring with a secondary amino (imino) group. Two further amino acids, selenocysteine and pyrrolysine, are also inserted by **ribosomes**, but only in a few proteins and by special recoding of **stop codons** (3.3.1); they are not counted among the standard amino acids.
 
 Two numbering conventions are in use. Biochemists label the carbons of the side chain with Greek letters, counting outward from the α carbon: β, γ, δ, ε (so the amino group at the end of the lysine side chain is the ε-amino group). Systematic nomenclature numbers the chain from the carboxyl carbon, C-1, so the α carbon is C-2. For heterocyclic side chains such as that of histidine, numbers are used, and branched side chains carry numbered Greek letters (the two terminal carbons of leucine are δ1 and δ2).
 
@@ -25,7 +25,7 @@ In all standard amino acids except glycine, whose R group is a second hydrogen a
 
 In the Cahn–Ingold–Prelog system the L-amino acids are (*S*), with one exception: L-cysteine is (*R*), because the sulfur of its $\ce{CH2SH}$ group gives the side chain a higher priority than the carboxyl group. Threonine and isoleucine have a second chiral centre in the side chain: the natural forms are (2*S*,3*R*)-threonine and (2*S*,3*S*)-isoleucine.
 
-The exclusive use of one enantiomer is not accidental. Regular, repeating structures such as the α helix (7.1.5) can form only from residues of one stereochemical series, and the active sites of the enzymes that synthesize amino acids are themselves chiral and make only one isomer. D-Amino acids do occur in biology, but outside ribosomal proteins or as later modifications: D-alanine and D-glutamate in the peptidoglycan of bacterial cell walls (7.1.10), D-amino acids in peptide antibiotics made by nonribosomal peptide synthetases (gramicidin S, bacitracin), D-serine as a co-agonist of NMDA receptors in the brain, and D-aspartate formed by slow racemization in long-lived proteins such as those of the eye lens and tooth dentine.
+The exclusive use of one enantiomer is not accidental. Regular, repeating structures such as the **α helix** (7.1.5) can form only from residues of one stereochemical series, and the **active sites** of the **enzymes** that synthesize amino acids are themselves chiral and make only one isomer. D-Amino acids do occur in biology, but outside ribosomal proteins or as later modifications: D-alanine and D-glutamate in the **peptidoglycan** of bacterial cell walls (7.1.10), D-amino acids in **peptide** antibiotics made by nonribosomal peptide synthetases (gramicidin S, bacitracin), D-serine as a co-agonist of NMDA **receptors** in the brain, and D-aspartate formed by slow racemization in long-lived proteins such as those of the eye lens and tooth dentine.
 
 ## 3.2. The 20 Standard Amino Acids
 
@@ -41,7 +41,7 @@ The standard amino acids are grouped into five classes according to the polarity
 | positively charged, basic (3) | Lys, Arg, His | protonated amino, guanidinium or imidazolium groups |
 | negatively charged, acidic (2) | Asp, Glu | carboxylate groups |
 
-Asparagine and glutamine are the amides of aspartate and glutamate, into which they are hydrolysed by acid or base. Glycine's side chain is too small to contribute to hydrophobic interactions, so it is the least hydrophobic member of its class; cysteine is grouped with the polar residues although its hydropathy index is positive, because its thiol is a weak acid that forms weak hydrogen bonds.
+Asparagine and glutamine are the amides of aspartate and glutamate, into which they are hydrolysed by acid or base. Glycine's side chain is too small to contribute to **hydrophobic interactions**, so it is the least hydrophobic member of its class; cysteine is grouped with the polar residues although its hydropathy index is positive, because its thiol is a weak acid that forms weak hydrogen bonds.
 
 ### 3.2.2. The Properties Table
 
@@ -134,20 +134,20 @@ Each side chain brings a particular chemistry into proteins. The table is the re
 |---|---|---|
 | Gly | smallest, achiral, most flexible backbone | tight turns and loops; every third residue of collagen (7.1.5); destabilizes α helices |
 | Ala | small methyl group | strong helix former; packing in protein cores |
-| Val, Leu, Ile | branched hydrocarbon, strongly hydrophobic | protein cores, transmembrane helices (7.1.13); β-branched Val and Ile favour β sheets |
-| Met | flexible thioether, oxidizable to sulfoxide | initiator residue (AUG); precursor of the methyl donor S-adenosylmethionine (7.1.17, 7.1.27) |
+| Val, Leu, Ile | branched hydrocarbon, strongly hydrophobic | protein cores, transmembrane helices (7.1.13); β-branched Val and Ile favour **β sheets** |
+| Met | flexible thioether, oxidizable to sulfoxide | initiator residue (AUG); precursor of the methyl donor **S-adenosylmethionine** (7.1.17, 7.1.27) |
 | Pro | rigid ring, secondary amine without N–H | breaks α helices; common in turns and in collagen; X–Pro bonds can be cis, and their isomerization limits folding (7.1.6) |
 | Phe, Trp | large aromatic rings | hydrophobic cores, stacking, cation–π interactions; Trp absorbs at 280 nm and fluoresces near 350 nm (3.2.6) |
-| Tyr | aromatic ring with weakly acidic OH ($\mathrm{p}K_{\mathrm{R}} \approx 10$) | hydrogen bonding; phosphorylation by tyrosine kinases (7.1.15); tyrosyl radicals in ribonucleotide reductase (7.1.28) and photosystem II (7.1.24) |
-| Ser, Thr | hydroxyl group | hydrogen bonds; phosphorylation (7.1.9); O-glycosylation (7.1.10); Ser is the nucleophile of serine proteases (7.1.8) |
-| Cys | thiol, $\mathrm{p}K_{\mathrm{R}} \approx 8.2$; good nucleophile; soft metal ligand | covalent catalysis; Zn²⁺ and Fe–S cluster ligand; **disulfide bonds** in extracellular proteins; redox switches |
-| Asn, Gln | amide, donor and acceptor of H bonds | hydrogen-bond networks; N-glycosylation at Asn–X–Ser/Thr (7.1.10); slow deamidation in ageing proteins; Gln is the amide-nitrogen donor of biosynthesis (7.1.27) |
-| Lys | ε-amino group, $\mathrm{p}K_{\mathrm{R}} \approx 10.5$, positive | salt bridges, DNA and phosphate binding; Schiff bases with pyridoxal phosphate and in aldolase (7.1.17–7.1.18); acetylation, methylation, ubiquitination (3.3.2) |
-| Arg | guanidinium, $\mathrm{p}K_{\mathrm{R}} \approx 12.5$, always positive | bidentate hydrogen bonds to phosphates and carboxylates; DNA binding; substrate binding |
-| His | imidazole, $\mathrm{p}K_{\mathrm{R}} \approx 6$ | the only side chain that both accepts and donates a proton near pH 7: general acid–base catalysis (7.1.8), buffering (7.1.2), metal ligand (the proximal His of heme, 7.1.7) |
+| Tyr | aromatic ring with weakly acidic OH ($\mathrm{p}K_{\mathrm{R}} \approx 10$) | hydrogen bonding; phosphorylation by tyrosine kinases (7.1.15); tyrosyl radicals in **ribonucleotide reductase** (7.1.28) and **photosystem II** (7.1.24) |
+| Ser, Thr | hydroxyl group | hydrogen bonds; phosphorylation (7.1.9); O-glycosylation (7.1.10); Ser is the nucleophile of **serine proteases** (7.1.8) |
+| Cys | thiol, $\mathrm{p}K_{\mathrm{R}} \approx 8.2$; good nucleophile; soft metal ligand | **covalent catalysis**; Zn²⁺ and Fe–S cluster ligand; **disulfide bonds** in extracellular proteins; redox switches |
+| Asn, Gln | amide, donor and acceptor of H bonds | hydrogen-bond networks; N-glycosylation at Asn–X–Ser/Thr (7.1.10); slow deamidation in ageing proteins; Gln is the amide-nitrogen donor of **biosynthesis** (7.1.27) |
+| Lys | ε-amino group, $\mathrm{p}K_{\mathrm{R}} \approx 10.5$, positive | salt bridges, **DNA** and phosphate binding; Schiff bases with **pyridoxal phosphate** and in aldolase (7.1.17–7.1.18); acetylation, methylation, **ubiquitination** (3.3.2) |
+| Arg | guanidinium, $\mathrm{p}K_{\mathrm{R}} \approx 12.5$, always positive | bidentate hydrogen bonds to phosphates and carboxylates; DNA binding; **substrate** binding |
+| His | imidazole, $\mathrm{p}K_{\mathrm{R}} \approx 6$ | the only side chain that both accepts and donates a proton near pH 7: **general acid–base catalysis** (7.1.8), buffering (7.1.2), metal ligand (the proximal His of **heme**, 7.1.7) |
 | Asp, Glu | carboxylate, $\mathrm{p}K_{\mathrm{R}} \approx 4$, negative | salt bridges; Ca²⁺ and Mg²⁺ binding; general acid–base catalysis and catalytic nucleophiles (lysozyme, 7.1.8) |
 
-Cysteine deserves a further word. Two cysteine thiols are oxidized to a disulfide-linked dimer, cystine; in proteins such **disulfide bonds** ([6.5.26](/6.5.26#sec-26.8.4)) form between residues of the same chain or of different chains, and they are reduced back to thiols by reagents such as 2-mercaptoethanol or dithiothreitol. Disulfides stabilize proteins secreted into the oxidizing extracellular environment; inside cells, where glutathione keeps the cytosol reducing, they are rare. Insulin is the classic example: its A chain (21 residues) and B chain (30 residues) are linked by two interchain disulfides (A7–B7, A20–B19), and the A chain has one intrachain disulfide (A6–A11).
+Cysteine deserves a further word. Two cysteine thiols are oxidized to a disulfide-linked dimer, cystine; in proteins such **disulfide bonds** ([6.5.26](/6.5.26#sec-26.8.4)) form between residues of the same chain or of different chains, and they are reduced back to thiols by reagents such as 2-mercaptoethanol or dithiothreitol. Disulfides stabilize proteins secreted into the oxidizing extracellular environment; inside cells, where glutathione keeps the cytosol reducing, they are rare. **Insulin** is the classic example: its A chain (21 residues) and B chain (30 residues) are linked by two interchain disulfides (A7–B7, A20–B19), and the A chain has one intrachain disulfide (A6–A11).
 
 ### 3.2.5. Learning the Amino Acids
 
@@ -184,35 +184,35 @@ Proteins contain more than 20 kinds of residues. Most of the others are made by 
 
 | Residue | Formed from | Where it occurs and why |
 |---|---|---|
-| 4-hydroxyproline, 5-hydroxylysine | Pro, Lys (hydroxylases requiring ascorbate) | collagen; hydroxyproline stabilizes the triple helix, hydroxylysine is a site of cross-links and glycosylation (7.1.5; scurvy) |
-| 6-*N*-methyllysine | Lys | myosin, histones |
-| γ-carboxyglutamate | Glu (vitamin K-dependent carboxylase) | prothrombin and other blood-clotting proteins; binds Ca²⁺ |
+| 4-hydroxyproline, 5-hydroxylysine | Pro, Lys (hydroxylases requiring ascorbate) | collagen; hydroxyproline stabilizes the triple helix, hydroxylysine is a site of cross-links and **glycosylation** (7.1.5; scurvy) |
+| 6-*N*-methyllysine | Lys | myosin, **histones** |
+| γ-carboxyglutamate | Glu (**vitamin** K-dependent carboxylase) | prothrombin and other blood-clotting proteins; binds Ca²⁺ |
 | desmosine | four Lys residues | cross-links of elastin |
-| selenocysteine | Ser on a special tRNA (Sec) | inserted at UGA codons followed by a SECIS element in the mRNA; about 25 human selenoproteins, such as glutathione peroxidase |
+| selenocysteine | Ser on a special **tRNA** (Sec) | inserted at UGA **codons** followed by a SECIS element in the **mRNA**; about 25 human selenoproteins, such as glutathione peroxidase |
 | pyrrolysine | Lys | inserted at UAG codons in some methanogenic archaea and bacteria (methylamine methyltransferases) |
 
-Selenocysteine and pyrrolysine are exceptions in two respects: they are made from other amino acids (selenocysteine on its tRNA) but they are inserted during translation, by reinterpretation of a stop codon. They are sometimes called the 21st and 22nd genetically encoded amino acids.
+Selenocysteine and pyrrolysine are exceptions in two respects: they are made from other amino acids (selenocysteine on its tRNA) but they are inserted during **translation**, by reinterpretation of a stop codon. They are sometimes called the 21st and 22nd genetically encoded amino acids.
 
 ### 3.3.2. Post-Translational Modifications
 
 **Definition 3.3.1** A covalent change to a protein made after (or during) its synthesis on the ribosome, such as cleavage of the chain or the addition of a chemical group to a side chain or terminus, is called a **post-translational modification**.
 
-Some modifications are permanent (the hydroxylations above, the removal of the initiator Met, the cleavage of zymogens, 7.1.9); others are reversible and serve to switch protein activity on and off. The reversible ones are the basis of most regulation and signaling:
+Some modifications are permanent (the hydroxylations above, the removal of the initiator Met, the cleavage of **zymogens**, 7.1.9); others are reversible and serve to switch protein activity on and off. The reversible ones are the basis of most regulation and signaling:
 
 | Modification | Residues | Enzymes (add / remove) | Main roles |
 |---|---|---|---|
-| phosphorylation | Ser, Thr, Tyr (His, Asp in bacteria) | protein kinases / phosphatases | enzyme regulation (7.1.9), signal transduction (7.1.14–7.1.15) |
-| acetylation | Lys ε-amino group, N-terminus | acetyltransferases / deacetylases | chromatin and gene regulation ([7.2](/7.2)), metabolic enzymes |
-| methylation | Lys, Arg | methyltransferases / demethylases | histone code, RNA-binding proteins |
-| ubiquitination | Lys | ubiquitin ligases / deubiquitinases | targeting to the proteasome, signaling (7.1.15, [7.2](/7.2)) |
+| phosphorylation | Ser, Thr, Tyr (His, Asp in bacteria) | **protein kinases** / phosphatases | enzyme regulation (7.1.9), **signal transduction** (7.1.14–7.1.15) |
+| acetylation | Lys ε-amino group, N-terminus | acetyltransferases / deacetylases | **chromatin** and **gene** regulation ([7.2](/7.2)), metabolic enzymes |
+| methylation | Lys, Arg | methyltransferases / demethylases | **histone code**, RNA-binding proteins |
+| ubiquitination | Lys | ubiquitin ligases / deubiquitinases | targeting to the **proteasome**, signaling (7.1.15, [7.2](/7.2)) |
 | ADP-ribosylation | Arg, Ser, Glu, Cys | ADP-ribosyltransferases (also bacterial toxins: cholera, diphtheria) | DNA repair, toxin action (7.1.14) |
-| adenylylation (AMPylation) | Tyr | adenylyltransferase | glutamine synthetase regulation (7.1.27) |
+| adenylylation (AMPylation) | Tyr | adenylyltransferase | **glutamine synthetase** regulation (7.1.27) |
 | lipidation (myristoylation, palmitoylation, prenylation) | N-terminal Gly, Cys | acyl- and prenyltransferases | membrane anchoring (7.1.13) |
 | glycosylation | Asn, Ser, Thr | glycosyltransferases (in the ER and Golgi) | folding, sorting, recognition (7.1.10) |
 
 ### 3.3.3. Amino Acids That Are Not in Proteins
 
-About 300 further amino acids occur in cells, free or combined, but never in proteins. Several are central metabolites: ornithine and citrulline are intermediates of the urea cycle and of arginine biosynthesis (7.1.22); homocysteine and homoserine are intermediates of methionine and threonine metabolism (7.1.27); β-alanine is part of coenzyme A (7.1.17); γ-aminobutyrate (GABA) and other amino acid derivatives (dopamine, serotonin, histamine) are neurotransmitters and hormones (7.1.27).
+About 300 further amino acids occur in cells, free or combined, but never in proteins. Several are central metabolites: ornithine and citrulline are intermediates of the **urea cycle** and of arginine biosynthesis (7.1.22); homocysteine and homoserine are intermediates of methionine and threonine **metabolism** (7.1.27); β-alanine is part of **coenzyme A** (7.1.17); γ-aminobutyrate (GABA) and other amino acid derivatives (dopamine, serotonin, histamine) are neurotransmitters and **hormones** (7.1.27).
 
 ## 3.4. Amino Acids Can Act as Acids and Bases
 
@@ -263,13 +263,13 @@ Small peptides can be highly active: some are hormones, neurotransmitters, toxin
 | glutathione | 3 (γ-Glu-Cys-Gly) | major intracellular thiol; redox buffer, detoxification |
 | Met-enkephalin | 5 (YGGFM) | endogenous opioid; binds the same receptors as morphine |
 | oxytocin, vasopressin | 9 each (cyclic, one disulfide, C-terminal amide) | posterior pituitary hormones: uterine contraction and milk ejection; water retention by the kidney |
-| bradykinin | 9 | vasodilator, mediator of inflammation |
+| bradykinin | 9 | vasodilator, **mediator** of inflammation |
 | substance P | 11 | neuropeptide that transmits pain signals |
-| glucagon | 29 | pancreatic hormone that raises blood glucose (7.1.29) |
+| **glucagon** | 29 | pancreatic hormone that raises blood glucose (7.1.29) |
 | insulin | 51 (A 21 + B 30, three disulfides) | pancreatic hormone that lowers blood glucose (7.1.29) |
 | sex peptide | 36 | *Drosophila* seminal-fluid peptide that changes female behaviour |
-| α-amanitin | 8 (bicyclic) | death-cap mushroom toxin; inhibits RNA polymerase II |
-| conotoxins | 10–40 | cone-snail venoms; block ion channels |
+| **α-amanitin** | 8 (bicyclic) | death-cap mushroom toxin; inhibits **RNA polymerase** II |
+| conotoxins | 10–40 | cone-snail venoms; block **ion channels** |
 | chlorotoxin | 36 | scorpion venom; blocks chloride channels, binds glioma cells |
 | bacitracin, polymyxin B, gramicidin S | 10–12 (cyclic, with D-amino acids) | antibiotics made by nonribosomal peptide synthetases: bacitracin against Gram-positive, polymyxin against Gram-negative bacteria |
 
@@ -277,11 +277,11 @@ Many peptide hormones are cut out of larger precursors by proteases and amidated
 
 ### 3.5.3. Proteins: Size and Composition
 
-Polypeptides in cells range from a few residues to tens of thousands. The mass of a protein can be estimated from its number of residues: the average residue in proteins has $M_{\mathrm{r}} \approx 110$ (the frequency-weighted average of the free amino acids, about 128, minus 18 for water). Proteins with several chains are *multisubunit* proteins; if at least two chains are identical the protein is *oligomeric* and its identical units are protomers (7.1.5).
+Polypeptides in cells range from a few residues to tens of thousands. The mass of a protein can be estimated from its number of residues: the average residue in proteins has $M_{\mathrm{r}} \approx 110$ (the frequency-weighted average of the free amino acids, about 128, minus 18 for water). Proteins with several chains are *multisubunit* proteins; if at least two chains are identical the protein is *oligomeric* and its identical units are **protomers** (7.1.5).
 
 | Protein | $M_{\mathrm{r}}$ | Residues | Chains |
 |---|---|---|---|
-| cytochrome *c* (human, with heme) | 12 200 | 104 | 1 |
+| **cytochrome** *c* (human, with heme) | 12 200 | 104 | 1 |
 | ribonuclease A (bovine pancreas) | 13 700 | 124 | 1 |
 | lysozyme (hen egg white) | 14 300 | 129 | 1 |
 | myoglobin (horse heart, with heme) | 17 600 | 153 | 1 |
@@ -289,7 +289,7 @@ Polypeptides in cells range from a few residues to tens of thousands. The mass o
 | hemoglobin (human) | 64 500 | 574 | 4 |
 | serum albumin (human) | 66 500 | 585 | 1 |
 | hexokinase (yeast) | 107 900 | 972 | 2 |
-| RNA polymerase (*E. coli* core enzyme) | 390 000 | about 3 500 | 5 |
+| RNA polymerase (*E. coli* **core enzyme**) | 390 000 | about 3 500 | 5 |
 | glutamine synthetase (*E. coli*) | 619 000 | 5 628 | 12 |
 | titin (human, longest isoform) | 3 800 000 | 34 350 | 1 |
 
@@ -303,14 +303,14 @@ Many proteins contain only amino acids. Others contain additional chemical compo
 
 | Class | Prosthetic group | Example |
 |---|---|---|
-| lipoproteins | lipids | LDL, whose apolipoprotein B carries cholesterol (7.1.26) |
-| glycoproteins | carbohydrates | immunoglobulin G (7.1.7, 7.1.10) |
+| **lipoproteins** | **lipids** | **LDL**, whose **apolipoprotein** B carries **cholesterol** (7.1.26) |
+| **glycoproteins** | carbohydrates | **immunoglobulin** G (7.1.7, 7.1.10) |
 | phosphoproteins | phosphate groups | casein of milk |
-| hemoproteins | heme (iron porphyrin) | hemoglobin, cytochromes |
-| flavoproteins | flavin nucleotides (FAD, FMN) | succinate dehydrogenase |
-| metalloproteins | Fe, Zn, Ca, Mo, Cu | ferritin, alcohol dehydrogenase, calmodulin, nitrogenase, plastocyanin |
+| hemoproteins | heme (iron **porphyrin**) | hemoglobin, cytochromes |
+| **flavoproteins** | flavin nucleotides (**FAD**, **FMN**) | succinate dehydrogenase |
+| metalloproteins | Fe, Zn, Ca, Mo, Cu | ferritin, alcohol dehydrogenase, **calmodulin**, **nitrogenase**, **plastocyanin** |
 
-Whether a cofactor counts as a prosthetic group depends on how tightly it is bound, not on whether the bond is covalent. The heme of cytochrome *c* is attached by two thioether bonds to Cys residues; the heme of myoglobin and hemoglobin is not covalently bound at all but held by coordination of its iron to a histidine and by many hydrophobic contacts, yet it is so tightly bound that it, too, is a prosthetic group. By contrast $\ce{NAD+}$ binds lactate dehydrogenase only transiently, leaving with each turnover as NADH; it is a coenzyme acting as a co-substrate. Most coenzymes are derived from vitamins, which is why vitamins are needed in the diet (7.1.17). The protein part of a conjugated protein without its prosthetic group is the apoprotein.
+Whether a cofactor counts as a prosthetic group depends on how tightly it is bound, not on whether the bond is covalent. The heme of cytochrome *c* is attached by two thioether bonds to Cys residues; the heme of myoglobin and hemoglobin is not covalently bound at all but held by coordination of its iron to a histidine and by many hydrophobic contacts, yet it is so tightly bound that it, too, is a prosthetic group. By contrast $\ce{NAD+}$ binds lactate dehydrogenase only transiently, leaving with each turnover as **NADH**; it is a coenzyme acting as a co-substrate. Most coenzymes are derived from vitamins, which is why vitamins are needed in the diet (7.1.17). The protein part of a conjugated protein without its prosthetic group is the apoprotein.
 
 ## Summary
 

@@ -3,17 +3,17 @@ title: The Three-Dimensional Structure of Proteins
 description: Weak interactions and the planar peptide group; dihedral angles and a hard-sphere Ramachandran map computed from scratch; the α helix, β sheets and β turns; helical wheels and hydrophobic moments; α-keratin, collagen and silk; tertiary structure, motifs, domains and intrinsically disordered proteins; structural classification; quaternary structure and symmetry.
 ---
 
-A protein chain of a few hundred residues could in principle adopt an astronomical number of shapes, yet under physiological conditions most proteins spend nearly all their time in one compact, specific structure, and that structure determines what they do. This chapter follows the main line of Part I of the course, *chemical properties → structure → function*: the partial double-bond character of the **peptide bond** and the steric bulk of the backbone restrict each residue to a few combinations of two **torsion angles**; within these limits, hydrogen bonds between backbone groups generate the regular secondary structures (the α helix and the β sheet); and the burial of nonpolar side chains, together with many weak interactions, packs these elements into the tertiary and quaternary structures of fibrous and globular proteins. The amino acids themselves and the chemistry of the peptide bond were treated in [7.1.3](/7.1.3) and in [6.5.33](/6.5.33#sec-33.5); the next chapter asks how a chain reaches its native structure and how that structure is determined experimentally, and [7.1.7](/7.1.7) shows how structure becomes function in myoglobin, hemoglobin and antibodies.
+A **protein** chain of a few hundred **residues** could in principle adopt an astronomical number of shapes, yet under physiological conditions most proteins spend nearly all their time in one compact, specific structure, and that structure determines what they do. This chapter follows the main line of Part I of the course, *chemical properties → structure → function*: the partial double-bond character of the **peptide bond** and the steric bulk of the backbone restrict each residue to a few combinations of two **torsion angles**; within these limits, hydrogen bonds between backbone groups generate the regular secondary structures (the α helix and the β sheet); and the burial of nonpolar **side chains**, together with many **weak interactions**, packs these elements into the tertiary and quaternary structures of fibrous and globular proteins. The amino acids themselves and the chemistry of the **peptide** bond were treated in [7.1.3](/7.1.3) and in [6.5.33](/6.5.33#sec-33.5); the next chapter asks how a chain reaches its native structure and how that structure is determined experimentally, and [7.1.7](/7.1.7) shows how structure becomes function in myoglobin, hemoglobin and antibodies.
 
 ## 5.1. Overview of Protein Structure
 
 ### 5.1.1. Conformation and the Native State
 
-The **conformation** of a protein is the spatial arrangement of its atoms; different conformations interconvert without breaking covalent bonds, mainly by rotation about single bonds. Of the enormous number of conformations available to a polypeptide, one or a small set is thermodynamically most stable (lowest Gibbs energy) under a given set of conditions.
+The **conformation** of a protein is the spatial arrangement of its atoms; different conformations interconvert without breaking covalent bonds, mainly by rotation about single bonds. Of the enormous number of conformations available to a **polypeptide**, one or a small set is thermodynamically most stable (lowest Gibbs energy) under a given set of conditions.
 
 **Definition 5.1.1 (Native Conformation)** A protein in any of its functional, folded conformations is called a **native protein**, and those conformations are its **native conformation**.
 
-Native proteins are only marginally stable: the Gibbs energy difference between the folded and unfolded states of a typical protein under physiological conditions is only about $5$–$65\ \mathrm{kJ\,mol^{-1}}$ (the thermodynamics of this balance is the subject of [7.1.6](/7.1.6)). Marginal stability is not a defect. Most proteins must change conformation as they bind ligands or catalyze reactions, and a structure that could not flex would not work. Some proteins, or segments of them, have no stable structure at all (§5.4.3).
+Native proteins are only marginally stable: the Gibbs energy difference between the folded and unfolded states of a typical protein under physiological conditions is only about $5$–$65\ \mathrm{kJ\,mol^{-1}}$ (the thermodynamics of this balance is the subject of [7.1.6](/7.1.6)). Marginal stability is not a defect. Most proteins must change conformation as they bind **ligands** or catalyze reactions, and a structure that could not flex would not work. Some proteins, or segments of them, have no stable structure at all (§5.4.3).
 
 ### 5.1.2. Weak Interactions Stabilize the Native Conformation
 
@@ -22,8 +22,8 @@ The unfolded chain has a large conformational entropy, and its polar groups are 
 | Interaction | Typical strength | Role in folded proteins |
 |---|---|---|
 | Covalent bond (for comparison) | $200$–$460\ \mathrm{kJ\,mol^{-1}}$ | sets the chain; not broken by folding |
-| **Disulfide bond** | covalent, but rare inside cells | cross-links mainly secreted and extracellular proteins (insulin); common in thermophiles |
-| Hydrophobic effect | entropic; dominant | clusters Leu, Ile, Val, Phe, Trp into a core away from water |
+| **Disulfide bond** | covalent, but rare inside cells | cross-links mainly secreted and extracellular proteins (**insulin**); common in thermophiles |
+| **Hydrophobic effect** | entropic; dominant | clusters Leu, Ile, Val, Phe, Trp into a core away from water |
 | **Hydrogen bond** | $\sim 4$–$20\ \mathrm{kJ\,mol^{-1}}$ each, but net $\approx 0$ | each one formed replaces one with water; cooperative networks in helices and sheets guide folding |
 | Ion pair (salt bridge) | stronger in low-$\varepsilon$ interior | can stabilize or destabilize; buried ion pairs are enriched in thermophilic proteins |
 | **van der Waals force** | $\sim 0.4$–$4\ \mathrm{kJ\,mol^{-1}}$ per contact, range $0.3$–$0.6\ \mathrm{nm}$ | individually weak, numerous in the densely packed core |
@@ -72,7 +72,7 @@ Related helices differ in the spacing of the hydrogen bonds. The $3_{10}$ helix 
 4. Pro and Gly: in Pro the nitrogen is part of a rigid ring, so rotation about N–$\mathrm{C}_\alpha$ is impossible, and it has no amide hydrogen to donate, so Pro introduces a kink and is rare except in the first turn; Gly is so flexible that it favors other conformations;
 5. interactions with the helix dipole (below).
 
-*The helix dipole.* All peptide dipoles in an α helix point in the same direction along the axis, so they add up to a macroscopic dipole that grows with helix length: a partial positive charge near the N-terminus (from the uncapped N–H groups) and a partial negative charge near the C-terminus. Negatively charged residues are therefore often found in the first turn of a helix and positively charged residues near its C-terminus; the reverse placements destabilize it. Helix dipoles also help bind anions (for example phosphate) at the N-termini of helices in many enzymes.
+*The helix dipole.* All peptide dipoles in an α helix point in the same direction along the axis, so they add up to a macroscopic dipole that grows with helix length: a partial positive charge near the N-terminus (from the uncapped N–H groups) and a partial negative charge near the C-terminus. Negatively charged residues are therefore often found in the first turn of a helix and positively charged residues near its C-terminus; the reverse placements destabilize it. Helix dipoles also help bind anions (for example phosphate) at the N-termini of helices in many **enzymes**.
 
 *Amphipathic helices and the hydrophobic moment.* Projecting the residues of a helix onto a plane perpendicular to its axis, $100^\circ$ apart, gives a *helical wheel*. Many helices that lie on a protein surface or a membrane are amphipathic: hydrophobic residues on one face, polar and charged residues on the other. A quantitative measure is the *hydrophobic moment* (Eisenberg, 1982): if $H_k$ is the hydrophobicity of residue $k$ on some scale and $\delta$ the angle between successive residues,
 
@@ -94,7 +94,7 @@ The planarity of the peptide groups and the tetrahedral $\mathrm{C}_\alpha$ give
 | Ideal $(\varphi, \psi)$ | $(-139^\circ, +135^\circ)$ | $(-119^\circ, +113^\circ)$ |
 | Repeat (two residues) | $0.70\ \mathrm{nm}$ | $0.65\ \mathrm{nm}$ |
 | Interstrand hydrogen bonds | nearly linear, alternately narrow and wide pairs | inclined, evenly spaced |
-| Typical connection | short hairpin (β turn) | long crossover, usually through an α helix |
+| Typical connection | short **hairpin** (β turn) | long crossover, usually through an α helix |
 | Occurrence | about twice as common | mostly buried, in α/β proteins |
 
 Antiparallel sheets are somewhat more stable, because their hydrogen bonds are nearly in line, and they are easier to form, because neighboring strands can be joined by a two-residue turn; parallel strands must be connected by a crossover of at least $10$–$15$ residues. Real sheets are not flat: viewed along the strands, each strand has a right-handed twist, and the sheet as a whole is twisted.
@@ -140,7 +140,7 @@ An ordered, chiral structure absorbs left- and right-circularly polarized light 
 
 **Definition 5.3.1 (Tertiary Structure)** The **tertiary structure** of a polypeptide is the overall three-dimensional arrangement of all its atoms, including long-range interactions between residues that are far apart in the sequence and lie in different secondary structures.
 
-Proteins fall into four broad structural groups: fibrous proteins, with chains arranged in long strands or sheets and usually a single type of secondary structure; globular proteins, folded into compact shapes with several types of secondary structure; membrane proteins embedded in lipid bilayers ([7.1.13](/7.1.13)); and intrinsically disordered proteins (§5.4.3). Fibrous proteins provide support, shape and protection; they are insoluble because hydrophobic residues on their surfaces are buried by packing many chains into supramolecular assemblies. Their simplicity makes the relation between structure and mechanical function especially clear.
+Proteins fall into four broad structural groups: fibrous proteins, with chains arranged in long strands or sheets and usually a single type of secondary structure; globular proteins, folded into compact shapes with several types of secondary structure; membrane proteins embedded in **lipid bilayers** ([7.1.13](/7.1.13)); and intrinsically disordered proteins (§5.4.3). Fibrous proteins provide support, shape and protection; they are insoluble because hydrophobic residues on their surfaces are buried by packing many chains into supramolecular assemblies. Their simplicity makes the relation between structure and mechanical function especially clear.
 
 **Definition 5.3.2 (Fibrous and Globular Proteins)** A **fibrous protein** has polypeptide chains arranged in long strands or sheets, built from one repeating secondary structure; a **globular protein** has its chain folded back on itself into a compact, roughly spherical shape that contains several types of secondary structure.
 
@@ -150,7 +150,7 @@ The α-keratins of hair, wool, nails, claws, horns and the outer layer of skin b
 
 **Definition 5.3.3 (Coiled Coil)** A **coiled coil** is a bundle of two or more α helices wound around each other into a supercoil; in the common left-handed coiled coil the sequence has a *heptad repeat* $(abcdefg)_n$ in which positions $a$ and $d$ are hydrophobic and form the interface between the helices.
 
-Because a heptad corresponds to two turns of $3.5$ residues instead of $3.6$, the hydrophobic stripe of $a$ and $d$ residues winds slowly around each helix in a left-handed sense, and two helices pack along these stripes by winding around each other ("knobs into holes", Crick 1953). Positions $e$ and $g$ flank the interface and often carry opposite charges that form interhelical ion pairs (panel C of the helical-wheel figure). The same motif dimerizes the bZIP transcription factors ([7.2.14](/7.2.14)) and forms the tails of myosin (§7.5 of [7.1.7](/7.1.7)). The tilt of the helices in the supercoil also explains a puzzle of early fiber diffraction: hair shows a repeat of $0.515$–$0.52\ \mathrm{nm}$ instead of the $0.54\ \mathrm{nm}$ pitch of a straight α helix, because the pitch is projected onto the fiber axis (Question 3).
+Because a heptad corresponds to two turns of $3.5$ residues instead of $3.6$, the hydrophobic stripe of $a$ and $d$ residues winds slowly around each helix in a left-handed sense, and two helices pack along these stripes by winding around each other ("knobs into holes", Crick 1953). Positions $e$ and $g$ flank the interface and often carry opposite charges that form interhelical ion pairs (panel C of the helical-wheel figure). The same motif dimerizes the **bZIP** **transcription** factors ([7.2.14](/7.2.14)) and forms the tails of myosin (§7.5 of [7.1.7](/7.1.7)). The tilt of the helices in the supercoil also explains a puzzle of early fiber diffraction: hair shows a repeat of $0.515$–$0.52\ \mathrm{nm}$ instead of the $0.54\ \mathrm{nm}$ pitch of a straight α helix, because the pitch is projected onto the fiber axis (Question 3).
 
 In hair, two-chain coiled coils (parallel, N-termini together) assemble into protofilaments, protofibrils and finally intermediate filaments of about $32$ chains. The strength of the assembly is increased by **disulfide bonds** between neighboring chains: up to $18\%$ of the residues of very hard keratins (rhinoceros horn) are cysteines in disulfides. A permanent wave exploits this chemistry: the hair is wrapped around a form, the disulfides are reduced by a thiol reagent, the helices are stretched by moist heat, and the hair is then reoxidized so that new disulfides lock in the new shape.
 
@@ -165,11 +165,11 @@ OC(=O)[C@@H]1CCCN1 Pro
 OC(=O)[C@@H]1C[C@@H](O)CN1 4-Hyp
 ```
 
-The hydroxyl group of (2*S*,4*R*)-4-hydroxyproline holds the pyrrolidine ring in the $\mathrm{C}_\gamma$-exo pucker required in the Y position, and this stereoelectronic effect, rather than extra hydrogen bonds, is the main reason that hydroxylation stabilizes the triple helix. 4-Hyp is not incorporated during translation: specific Pro residues of procollagen are hydroxylated afterwards by prolyl 4-hydroxylase, an $\mathrm{F\mathrm{e}^{2+}}$ enzyme that uses $\ce{O2}$ and α-ketoglutarate (which is decarboxylated to succinate and $\ce{CO2}$). Ascorbate (vitamin C) is not consumed in the normal reaction; it is needed to reduce the iron back to $\mathrm{F\mathrm{e}^{2+}}$ after occasional uncoupled cycles that oxidize it. Without vitamin C, hydroxylation fails and the resulting collagen is unstable: this is scurvy, with fragile blood vessels, bleeding gums, poor wound healing and the reopening of old wounds. Humans, other primates, guinea pigs and fruit bats lack the last enzyme of ascorbate synthesis and must obtain it in the diet.
+The hydroxyl group of (2*S*,4*R*)-4-hydroxyproline holds the pyrrolidine ring in the $\mathrm{C}_\gamma$-exo pucker required in the Y position, and this stereoelectronic effect, rather than extra hydrogen bonds, is the main reason that hydroxylation stabilizes the triple helix. 4-Hyp is not incorporated during **translation**: specific Pro residues of procollagen are hydroxylated afterwards by prolyl 4-hydroxylase, an $\mathrm{F\mathrm{e}^{2+}}$ enzyme that uses $\ce{O2}$ and α-ketoglutarate (which is decarboxylated to succinate and $\ce{CO2}$). Ascorbate (**vitamin** C) is not consumed in the normal reaction; it is needed to reduce the iron back to $\mathrm{F\mathrm{e}^{2+}}$ after occasional uncoupled cycles that oxidize it. Without vitamin C, hydroxylation fails and the resulting collagen is unstable: this is scurvy, with fragile blood vessels, bleeding gums, poor wound healing and the reopening of old wounds. Humans, other primates, guinea pigs and fruit bats lack the last enzyme of ascorbate synthesis and must obtain it in the diet.
 
 The triple helix (molecule about $300\ \mathrm{nm}$ long and $1.5\ \mathrm{nm}$ thick, $M_\mathrm{r} \approx 300\,000$) has greater tensile strength than a steel wire of the same cross-section. Molecules assemble side by side, staggered by about a quarter of their length, into fibrils with the characteristic $64$–$67\ \mathrm{nm}$ banding seen in the electron microscope, and are covalently cross-linked through modified Lys and hydroxylysine side chains (after oxidation by lysyl oxidase). Cross-links accumulate with age, which makes connective tissue stiffer and more brittle.
 
-Because Gly is required at every third position, replacing a single Gly by a bulkier residue (Cys, Ser, Arg and others) disrupts the triple helix around it; since each molecule contains three chains, one mutant allele poisons most of the molecules (a dominant-negative effect). Such substitutions in type I collagen cause the severe forms of *osteogenesis imperfecta* (brittle bones), and related mutations in other collagens cause some forms of *Ehlers–Danlos syndrome* (hypermobile joints, fragile skin). Other forms of both disorders arise from null alleles, from mutations in collagen-processing enzymes (lysyl hydroxylase, procollagen N-proteinase) or from other proteins.
+Because Gly is required at every third position, replacing a single Gly by a bulkier residue (Cys, Ser, Arg and others) disrupts the triple helix around it; since each molecule contains three chains, one mutant allele poisons most of the molecules (a dominant-negative effect). Such substitutions in type I collagen cause the severe forms of *osteogenesis imperfecta* (brittle bones), and related **mutations** in other collagens cause some forms of *Ehlers–Danlos syndrome* (hypermobile joints, fragile skin). Other forms of both disorders arise from null alleles, from mutations in collagen-processing enzymes (lysyl hydroxylase, procollagen N-proteinase) or from other proteins.
 
 ### 5.3.4. Silk Fibroin
 
@@ -185,14 +185,14 @@ Silk fibroin, produced by insects and spiders, consists mainly of antiparallel �
 
 ### 5.4.1. Myoglobin, the First Protein Structure
 
-The first breakthrough in understanding globular proteins came from the X-ray structure of sperm-whale myoglobin by John Kendrew and colleagues (low resolution 1958, atomic detail 1959–1960; the method is described in [7.1.6](/7.1.6#sec-6.6)). Myoglobin ($M_\mathrm{r}$ $16\,700$, $153$ residues) is a single chain carrying one heme; it stores $\ce{O2}$ and facilitates its diffusion in muscle (its function is the subject of [7.1.7](/7.1.7)). The structure revealed what is now known to be typical of globular proteins:
+The first breakthrough in understanding globular proteins came from the X-ray structure of sperm-whale myoglobin by John Kendrew and colleagues (low resolution 1958, atomic detail 1959–1960; the method is described in [7.1.6](/7.1.6#sec-6.6)). Myoglobin ($M_\mathrm{r}$ $16\,700$, $153$ residues) is a single chain carrying one **heme**; it stores $\ce{O2}$ and facilitates its diffusion in muscle (its function is the subject of [7.1.7](/7.1.7)). The structure revealed what is now known to be typical of globular proteins:
 
 - *Compactness.* About $78\%$ of the residues are in eight right-handed α helices (A to H), the longest with $23$ residues and the shortest with $7$, joined by bends, some of which are β turns. The interior is so tightly packed that it has room for only about four water molecules; the packing density (fraction of space occupied by atoms) is about $0.75$, comparable to that of an organic crystal ($0.70$–$0.78$) and much higher than that of an organic liquid ($0.4$–$0.6$).
 - *A nonpolar core and a polar surface.* Almost all hydrophobic side chains are inside; all but two polar side chains are on the surface and hydrated. The two exceptions are His residues that interact with the heme and its bound $\ce{O2}$.
 - *Planar trans peptide groups and helices as predicted.* All peptide bonds are trans; three of the four Pro residues are at bends, and the fourth kinks a helix.
 - *A pocket for the prosthetic group.* The flat heme sits in a crevice, shielded from the solvent, which prevents oxidation of its $\mathrm{F\mathrm{e}^{2+}}$.
 
-Other small globular proteins have very different proportions of secondary structure (cytochrome c: $39\%$ α, $0\%$ β; lysozyme: $40\%$ α, $12\%$ β; ribonuclease: $26\%$ α, $35\%$ β; chymotrypsin: $14\%$ α, $45\%$ β), but all share these principles. Today the *Protein Data Bank* (PDB, www.rcsb.org), the archive of experimentally determined macromolecular structures, holds more than $200\,000$ entries, each with an identifier (for example 1MBO for oxymyoglobin) and the coordinates of its atoms.
+Other small globular proteins have very different proportions of secondary structure (**cytochrome** c: $39\%$ α, $0\%$ β; lysozyme: $40\%$ α, $12\%$ β; ribonuclease: $26\%$ α, $35\%$ β; chymotrypsin: $14\%$ α, $45\%$ β), but all share these principles. Today the *Protein Data Bank* (PDB, www.rcsb.org), the archive of experimentally determined macromolecular structures, holds more than $200\,000$ entries, each with an identifier (for example 1MBO for oxymyoglobin) and the coordinates of its atoms.
 
 ### 5.4.2. Motifs and Domains
 
@@ -215,7 +215,7 @@ The common folds obey a few rules that follow from the chemistry of §5.1:
 
 ![Topology diagrams of common motifs, with the sheet seen face-on (strands as arrows from N to C, helices as cylinders). A: β-α-β unit: two parallel strands joined by a crossover helix that packs against one face of the sheet. B: β hairpin: two antiparallel strands joined by a β turn; dotted lines indicate the interstrand hydrogen bonds. C: Greek key: four antiparallel strands in the sheet order 4–1–2–3; strands 1, 2 and 3 are joined by hairpins, and a long connection brings strand 4 back beside strand 1. D: up-and-down four-helix bundle, an all-α motif (ferritin is a bundle of this kind)](./plots/protein-folds.py)
 
-Larger motifs are built from smaller ones. Eight β-α-β units whose parallel strands close into a barrel, each strand followed by a helix on the outside, form the α/β (TIM) barrel, the most common enzyme fold, with the active site at the C-terminal ends of the strands; a domain of pyruvate kinase is an example. The Rossmann fold that binds NAD is built from two β-α-β-α-β units.
+Larger motifs are built from smaller ones. Eight β-α-β units whose parallel strands close into a barrel, each strand followed by a helix on the outside, form the α/β (TIM) barrel, the most common enzyme fold, with the **active site** at the C-terminal ends of the strands; a domain of pyruvate kinase is an example. The Rossmann fold that binds **NAD** is built from two β-α-β-α-β units.
 
 ### 5.4.3. Intrinsically Disordered Proteins
 
@@ -224,15 +224,15 @@ Larger motifs are built from smaller ones. Eight β-α-β units whose parallel s
 As many as a third of human proteins may be largely disordered or have long disordered segments. Their sequences are distinctive: they lack a hydrophobic core and are rich in charged residues (Lys, Arg, Glu), in small residues (Gly, Ala, Ser) and in Pro, which disrupts ordered structure. Predictors such as PONDR use these compositional signals to estimate, residue by residue, the probability of disorder. Disorder serves several functions:
 
 - linkers and spacers between domains, and entropic "bristles";
-- promiscuous binding: the cell-cycle inhibitor p27 is unstructured in solution but wraps around several different cyclin–kinase complexes and inhibits them; the C-terminal segment of p53 binds at least four partners and adopts a different structure in each complex (coupled folding and binding);
+- promiscuous binding: the cell-cycle inhibitor p27 is unstructured in solution but wraps around several different **cyclin**–kinase complexes and inhibits them; the C-terminal segment of p53 binds at least four partners and adopts a different structure in each complex (coupled folding and binding);
 - hubs and scaffolds of signaling networks ([7.1.15](/7.1.15)), where a disordered region can carry many short binding motifs and phosphorylation sites;
-- biomolecular condensates, in which multivalent disordered regions drive liquid–liquid phase separation ([7.2.21](/7.2.21)).
+- **biomolecular condensates**, in which multivalent disordered regions drive **liquid–liquid phase separation** ([7.2.21](/7.2.21)).
 
 ### 5.4.4. Structural Classification and Protein Families
 
 The number of distinct folds is limited: the SCOP2 database (Structural Classification of Proteins) classifies the structures of the PDB into only about $1\,400$ folds, and new folds are now found only rarely. SCOP groups domains into four main classes: all α, all β, α/β (helices and strands interspersed or alternating, typically parallel β-α-β units) and α + β (helices and strands in separate parts of the chain, typically antiparallel sheets). CATH uses a parallel hierarchy of Class, Architecture, Topology (fold) and Homologous superfamily.
 
-Tertiary structure is conserved much longer in evolution than amino acid sequence. Proteins with significant sequence similarity and/or similar structure and function form a *protein family* (the PDB contains roughly $4\,000$ families), and families with little sequence similarity but the same fold and related functions form a *superfamily*, whose members are probably related by descent. Families present in Bacteria, Archaea and Eukarya, such as many enzymes of intermediary metabolism, are ancient; others occur only in a narrow group of organisms and arose more recently. Structural comparison thus complements sequence comparison in tracing evolution ([7.1.4](/7.1.4), [7.8](/7.8)).
+Tertiary structure is conserved much longer in evolution than amino acid sequence. Proteins with significant sequence similarity and/or similar structure and function form a *protein family* (the PDB contains roughly $4\,000$ families), and families with little sequence similarity but the same fold and related functions form a *superfamily*, whose members are probably related by descent. Families present in Bacteria, Archaea and Eukarya, such as many enzymes of intermediary **metabolism**, are ancient; others occur only in a narrow group of organisms and arose more recently. Structural comparison thus complements sequence comparison in tracing evolution ([7.1.4](/7.1.4), [7.8](/7.8)).
 
 ## 5.5. Quaternary Structure
 
@@ -240,12 +240,12 @@ Tertiary structure is conserved much longer in evolution than amino acid sequenc
 
 **Definition 5.5.1 (Quaternary Structure)** In a protein made of two or more polypeptide chains, each chain is a **subunit**, and the spatial arrangement of the subunits and the nature of their interactions constitute the **quaternary structure**. A protein with several subunits is an **oligomer** (multimer); the repeating structural unit of an oligomer, whether one subunit or a group of different subunits, is its **protomer**.
 
-Subunits assemble spontaneously through the same weak interactions that stabilize tertiary structure, with large buried interfaces. Oligomerization serves several purposes:
+**Subunits** assemble spontaneously through the same weak interactions that stabilize tertiary structure, with large buried interfaces. Oligomerization serves several purposes:
 
-- regulation: the binding of a small molecule to one subunit changes the interactions between subunits and thereby the activity of the others, as in cooperative $\ce{O2}$ binding by hemoglobin ([7.1.7](/7.1.7)) and in allosteric enzymes ([7.1.9](/7.1.9));
-- division of labor: separate catalytic and regulatory subunits (aspartate transcarbamoylase, protein kinase A);
+- regulation: the binding of a small molecule to one subunit changes the interactions between subunits and thereby the activity of the others, as in cooperative $\ce{O2}$ binding by hemoglobin ([7.1.7](/7.1.7)) and in **allosteric enzymes** ([7.1.9](/7.1.9));
+- division of labor: separate catalytic and regulatory subunits (aspartate transcarbamoylase, **protein kinase A**);
 - structure: fibers ([§5.3](#sec-5.3)) and virus coats;
-- multistep machines: the ribosome contains dozens of proteins and several RNAs.
+- multistep machines: the **ribosome** contains dozens of proteins and several **RNAs**.
 
 Hemoglobin was the first oligomeric protein whose structure was solved (Max Perutz and colleagues, 1959–1968). It has two α chains ($141$ residues) and two β chains ($146$ residues), each with a heme; the Greek letters name the types of subunit, not their secondary structure (both are all-α globin folds). Because the subunits are arranged as two symmetric αβ pairs, hemoglobin can be described as a tetramer or as a dimer of αβ protomers.
 
@@ -255,7 +255,7 @@ Oligomers of identical subunits are almost always symmetric, because a symmetric
 
 | Symmetry | Arrangement | Examples |
 |---|---|---|
-| Cyclic $C_n$ | $n$ subunits around one $n$-fold axis | Cro repressor dimer ($C_2$), GroES ring ($C_7$) |
+| Cyclic $C_n$ | $n$ subunits around one $n$-fold axis | Cro **repressor** dimer ($C_2$), GroES ring ($C_7$) |
 | Dihedral $D_n$ | two $C_n$ rings face to face, with twofold axes perpendicular to the main axis | tetramers with three perpendicular twofold axes ($D_2$), GroEL ($D_7$) |
 | Helical | subunits along a helical path; open-ended | actin filaments, microtubules, tobacco mosaic virus |
 | Icosahedral | $60$ equivalent positions (or a multiple) on a closed shell | many spherical virus capsids |
@@ -279,13 +279,13 @@ Structure, chemical basis and function:
 |---|---|---|
 | Rigid planar peptide group (§5.1.3) | amide resonance; trans geometry | only $\varphi$, $\psi$ free per residue; Ramachandran map (Definition 5.2.5) |
 | α helix (Definition 5.2.2) | $i \to i+4$ backbone hydrogen bonds; helix dipole | compact, stiff rods; amphipathic helices bind membranes or partners |
-| β sheet (Definition 5.2.3) | interstrand hydrogen bonds; alternating side chains | flat or twisted sheets, barrels; amyloid when misassembled ([7.1.6](/7.1.6)) |
+| β sheet (Definition 5.2.3) | interstrand hydrogen bonds; alternating side chains | flat or twisted sheets, barrels; **amyloid** when misassembled ([7.1.6](/7.1.6)) |
 | Coiled coil (Definition 5.3.3) | heptad repeat, hydrophobic $a$ and $d$ | keratin, myosin tails, leucine-zipper dimers |
 | Collagen triple helix (Definition 5.3.4) | Gly at every third residue, Pro and 4-Hyp | tensile strength; scurvy and osteogenesis imperfecta when chemistry fails |
 | Hydrophobic core | hydrophobic effect | marginal stability of the native state (Definition 5.1.1) |
 | Motifs and domains (Definitions 5.4.1, 5.4.2) | layering of helices and sheets, right-handed crossovers | modular evolution; about $1\,400$ folds |
 | Intrinsic disorder (Definition 5.4.3) | charged, Pro-rich, no hydrophobic core | promiscuous binding, signaling hubs, condensates |
-| Quaternary structure (Definition 5.5.1) | weak interactions at symmetric interfaces | allostery and cooperativity |
+| Quaternary structure (Definition 5.5.1) | weak interactions at symmetric interfaces | allostery and **cooperativity** |
 
 Key numbers: peptide C–N $0.132\ \mathrm{nm}$; α helix $3.6$ residues per turn, pitch $0.54\ \mathrm{nm}$, rise $0.15\ \mathrm{nm}$, $(\varphi, \psi) \approx (-57^\circ, -47^\circ)$; β strand $0.33$–$0.35\ \mathrm{nm}$ per residue; trans peptide bonds $>99.95\%$ (X–Pro: about $6\%$ cis); native stability $5$–$65\ \mathrm{kJ\,mol^{-1}}$; protein packing density $0.75$.
 
@@ -297,7 +297,7 @@ Key numbers: peptide C–N $0.132\ \mathrm{nm}$; α helix $3.6$ residues per tur
 2. An X-ray fiber pattern of hair shows a strong repeat of $0.515\ \mathrm{nm}$ along the fiber axis, whereas the pitch of an α helix is $0.54\ \mathrm{nm}$. Estimate the angle between the helix axes and the axis of the coiled coil.
 
    **Answer** In a coiled coil each helix is tilted by an angle $\alpha$ relative to the supercoil axis, so the helical repeat projected onto the fiber axis is $0.54\ \mathrm{nm} \times \cos\alpha$. From $\cos\alpha = 0.515/0.54 = 0.954$ we get $\alpha \approx 17^\circ$, close to the tilt found in crystal structures of two-stranded coiled coils.
-3. What would the Ramachandran plot of a protein made entirely of D-amino acids look like, and what handedness would its α helices have? Would such a mirror-image enzyme act on the natural substrate?
+3. What would the Ramachandran plot of a protein made entirely of D-amino acids look like, and what handedness would its α helices have? Would such a mirror-image enzyme act on the natural **substrate**?
 
    **Answer** Mirror reflection changes the sign of every dihedral angle, so the allowed regions are inverted through the origin, $(\varphi, \psi) \to (-\varphi, -\psi)$: the β region moves to the lower right and the favored helix becomes the left-handed one at about $(+57^\circ, +47^\circ)$. The whole protein is the mirror image of the natural one (this was demonstrated with chemically synthesized D-HIV protease, 1992). It is fully active, but only toward the mirror image of the natural substrate when the substrate is chiral, and it is resistant to natural proteases, which is why mirror-image peptides are studied as drugs.
 4. Glycine and proline are both "helix breakers". Explain why they act for different reasons, and why both are common in β turns.

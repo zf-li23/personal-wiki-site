@@ -3,13 +3,13 @@ title: "Enzymes I: How Enzymes Work"
 description: What enzymes are and how they are named; cofactors and holoenzymes; rates versus equilibria and the size of enzymatic rate enhancements; binding energy and complementarity to the transition state; entropy reduction, desolvation and induced fit; general acid–base, covalent and metal ion catalysis; chymotrypsin, HIV protease, hexokinase, enolase and penicillin as case studies; pre-steady-state bursts and the pH dependence of activity.
 ---
 
-Almost every reaction in a cell is catalyzed by an enzyme, and almost every enzyme is a protein. This chapter asks how a protein can accelerate a reaction by factors of $10^5$ to $10^{17}$ while choosing one substrate among many similar molecules. The answer continues the main line of Part I, from chemical properties to structure to function. The same weak interactions that fold a protein ([7.1.2](/7.1.2), [7.1.5](/7.1.5)) and let it bind a ligand ([7.1.7](/7.1.7)) are used by an enzyme to bind its substrate, and above all its transition state. The acidic, basic and nucleophilic side chains catalogued in [7.1.3](/7.1.3#sec-3.2.2) then carry out the chemistry, which is ordinary organic chemistry ([6.5.33](/6.5.33#sec-33.8.3)) done by precisely positioned groups. The physical chemistry of rates and catalysis is taken from [6.3.16](/6.3.16) and [6.3.17](/6.3.17) and not derived again. The quantitative description of enzyme activity (kinetics, inhibition) and its regulation follow in [7.1.9](/7.1.9); every metabolic pathway of Part II ([7.1.16](/7.1.16) onward) is a sequence of the enzymes described here.
+Almost every reaction in a cell is catalyzed by an enzyme, and almost every enzyme is a **protein**. This chapter asks how a protein can accelerate a reaction by factors of $10^5$ to $10^{17}$ while choosing one substrate among many similar molecules. The answer continues the main line of Part I, from chemical properties to structure to function. The same **weak interactions** that fold a protein ([7.1.2](/7.1.2), [7.1.5](/7.1.5)) and let it bind a **ligand** ([7.1.7](/7.1.7)) are used by an enzyme to bind its substrate, and above all its transition state. The acidic, basic and nucleophilic **side chains** catalogued in [7.1.3](/7.1.3#sec-3.2.2) then carry out the chemistry, which is ordinary organic chemistry ([6.5.33](/6.5.33#sec-33.8.3)) done by precisely positioned groups. The physical chemistry of rates and catalysis is taken from [6.3.16](/6.3.16) and [6.3.17](/6.3.17) and not derived again. The quantitative description of enzyme activity (kinetics, inhibition) and its regulation follow in [7.1.9](/7.1.9); every **metabolic pathway** of Part II ([7.1.16](/7.1.16) onward) is a sequence of the enzymes described here.
 
 ## 8.1. An Introduction to Enzymes
 
 ### 8.1.1. Enzymes Are Biological Catalysts
 
-Biological catalysis was first recognized in the late eighteenth century in the digestion of meat by stomach secretions. Biochemistry as a science can be dated to 1897, when Eduard Buchner showed that a cell-free yeast extract ferments sugar to alcohol: fermentation needs molecules, not living cells, which ended the vitalism of Pasteur. Frederick Kühne had already named such molecules enzymes (Greek *enzymos*, "leavened"). In 1926 James Sumner crystallized urease and showed that the crystals were protein; work by John Northrop and Moses Kunitz on pepsin and trypsin made the protein nature of enzymes generally accepted by the early 1930s. In the early 1980s Thomas Cech and Sidney Altman found RNA molecules that catalyze reactions, and the peptidyl transferase center of the ribosome turned out to be RNA ([7.2](/7.2)).
+Biological catalysis was first recognized in the late eighteenth century in the digestion of meat by stomach secretions. Biochemistry as a science can be dated to 1897, when Eduard Buchner showed that a cell-free yeast extract ferments sugar to alcohol: **fermentation** needs molecules, not living cells, which ended the vitalism of Pasteur. Frederick Kühne had already named such molecules enzymes (Greek *enzymos*, "leavened"). In 1926 James Sumner crystallized urease and showed that the crystals were protein; work by John Northrop and Moses Kunitz on pepsin and trypsin made the protein nature of enzymes generally accepted by the early 1930s. In the early 1980s Thomas Cech and Sidney Altman found **RNA** molecules that catalyze reactions, and the **peptidyl transferase center** of the **ribosome** turned out to be RNA ([7.2](/7.2)).
 
 **Definition 8.1.1 (Enzyme)** An **enzyme** is a biological macromolecule that catalyzes a chemical reaction. Almost all enzymes are globular proteins; a catalytic RNA is called a **ribozyme**.
 
@@ -20,32 +20,32 @@ An enzyme is a **catalyst** in the sense of [6.1.7](/6.1.7#sec-7.3.4): it is not
 - mild conditions: neutral pH, about $37\,^\circ\mathrm{C}$, aqueous solution;
 - capacity for regulation by the concentrations of other molecules, covalent modification and the amount of enzyme ([7.1.9](/7.1.9)).
 
-Catalytic activity depends on the native conformation: denaturation or dissociation into subunits usually abolishes it. Enzymes range in relative molecular mass from about 12 000 to more than $10^6$.
+Catalytic activity depends on the **native conformation**: **denaturation** or dissociation into **subunits** usually abolishes it. Enzymes range in relative molecular mass from about 12 000 to more than $10^6$.
 
 ### 8.1.2. Cofactors, Coenzymes and Holoenzymes
 
-Some enzymes need nothing but their amino acid residues. Others require a **cofactor**: one or more inorganic ions, or a **coenzyme**, an organic or metallo-organic molecule; a cofactor bound very tightly or covalently is a **prosthetic group**. These terms were defined for proteins in general in [7.1.3](/7.1.3#sec-3.5.4).
+Some enzymes need nothing but their amino acid **residues**. Others require a **cofactor**: one or more inorganic ions, or a **coenzyme**, an organic or metallo-organic molecule; a **cofactor** bound very tightly or covalently is a **prosthetic group**. These terms were defined for proteins in general in [7.1.3](/7.1.3#sec-3.5.4).
 
 **Definition 8.1.2 (Holoenzyme and Apoenzyme)** The complete, catalytically active enzyme together with its bound coenzyme and metal ions is the **holoenzyme**; its protein part alone is the **apoenzyme** (apoprotein).
 
-Coenzymes act as transient carriers of specific atoms or functional groups, and most are derived from vitamins. The table lists the examples of this chapter; the complete coenzyme–vitamin table, with mechanisms, is in [7.1.17](/7.1.17).
+**Coenzymes** act as transient carriers of specific atoms or functional groups, and most are derived from **vitamins**. The table lists the examples of this chapter; the complete coenzyme–vitamin table, with mechanisms, is in [7.1.17](/7.1.17).
 
 | Metal ion | Enzymes | Coenzyme | Group carried | Vitamin precursor |
 |---|---|---|---|---|
-| $\ce{Mg^2+}$ | hexokinase, enolase, pyruvate kinase | NAD, NADP | hydride ion ($\ce{H-}$) | niacin ($\mathrm{B_3}$) |
-| $\ce{Zn^2+}$ | carbonic anhydrase, alcohol dehydrogenase, carboxypeptidases A and B | FAD | electrons | riboflavin ($\mathrm{B_2}$) |
-| $\ce{F\mathrm{e}^2+}$ / $\ce{F\mathrm{e}^3+}$ | cytochrome oxidase, catalase, peroxidase | coenzyme A | acyl groups | pantothenate ($\mathrm{B_5}$) |
-| $\ce{Cu^2+}$ | cytochrome oxidase | pyridoxal phosphate | amino groups | pyridoxine ($\mathrm{B_6}$) |
-| $\ce{Mn^2+}$ | arginase, ribonucleotide reductase | thiamine pyrophosphate | aldehydes | thiamine ($\mathrm{B_1}$) |
-| $\ce{K+}$ | pyruvate kinase | biocytin | $\ce{CO2}$ | biotin ($\mathrm{B_7}$) |
-| $\ce{Ni^2+}$ | urease | tetrahydrofolate | one-carbon groups | folate ($\mathrm{B_9}$) |
-| Mo | dinitrogenase | coenzyme $\mathrm{B_{12}}$ | H atoms, alkyl groups | cobalamin ($\mathrm{B_{12}}$) |
+| $\ce{Mg^2+}$ | hexokinase, enolase, pyruvate kinase | **NAD**, **NADP** | hydride ion ($\ce{H-}$) | niacin ($\mathrm{B_3}$) |
+| $\ce{Zn^2+}$ | carbonic anhydrase, alcohol dehydrogenase, carboxypeptidases A and B | **FAD** | electrons | riboflavin ($\mathrm{B_2}$) |
+| $\ce{F\mathrm{e}^2+}$ / $\ce{F\mathrm{e}^3+}$ | **cytochrome oxidase**, catalase, peroxidase | **coenzyme A** | acyl groups | pantothenate ($\mathrm{B_5}$) |
+| $\ce{Cu^2+}$ | cytochrome oxidase | **pyridoxal phosphate** | amino groups | pyridoxine ($\mathrm{B_6}$) |
+| $\ce{Mn^2+}$ | arginase, **ribonucleotide reductase** | **thiamine pyrophosphate** | aldehydes | thiamine ($\mathrm{B_1}$) |
+| $\ce{K+}$ | pyruvate kinase | biocytin | $\ce{CO2}$ | **biotin** ($\mathrm{B_7}$) |
+| $\ce{Ni^2+}$ | urease | **tetrahydrofolate** | one-carbon groups | folate ($\mathrm{B_9}$) |
+| Mo | dinitrogenase | coenzyme $\mathrm{B_{12}}$ | H atoms, alkyl groups | **cobalamin** ($\mathrm{B_{12}}$) |
 
-Lipoate (electrons and acyl groups) is a coenzyme that animals make themselves. Some enzymes are further modified covalently (phosphorylation, glycosylation and others), mostly for regulation ([7.1.9](/7.1.9)).
+**Lipoate** (electrons and acyl groups) is a coenzyme that animals make themselves. Some enzymes are further modified covalently (phosphorylation, **glycosylation** and others), mostly for regulation ([7.1.9](/7.1.9)).
 
 ### 8.1.3. Classification and Nomenclature
 
-Many enzymes are named by adding "-ase" to the substrate or the activity (urease, DNA polymerase); others have historical names (pepsin, lysozyme, trypsin). To remove ambiguity the Nomenclature Committee of the International Union of Biochemistry and Molecular Biology (IUBMB) classifies enzymes by the reaction catalyzed.
+Many enzymes are named by adding "-ase" to the substrate or the activity (urease, **DNA polymerase**); others have historical names (pepsin, lysozyme, trypsin). To remove ambiguity the Nomenclature Committee of the International Union of Biochemistry and Molecular Biology (IUBMB) classifies enzymes by the reaction catalyzed.
 
 **Definition 8.1.3 (EC Number)** Each enzyme is assigned a four-part **EC number** (Enzyme Commission number) and a systematic name that identifies the reaction it catalyzes: class, subclass, sub-subclass and serial number.
 
@@ -67,7 +67,7 @@ Many enzymes are named by adding "-ase" to the substrate or the activity (urease
 
 **Definition 8.2.1 (Active Site and Substrate)** The pocket of an enzyme in which the catalyzed reaction takes place is the **active site**; the molecule bound there and acted upon is the **substrate**. The residues of the active site that take part directly in the chemical transformation are the catalytic groups.
 
-The enzyme–substrate complex ES is the starting point of both the kinetics and the mechanism of an enzyme. Its existence is shown by saturation (at high substrate concentration the rate reaches a maximum because all active sites are filled; [7.1.9](/7.1.9)), by crystal structures of enzyme–substrate complexes (for example cytochrome P-450 with camphor), and by spectroscopic changes on binding (the fluorescence of the pyridoxal phosphate of tryptophan synthase changes when serine and indole bind).
+The enzyme–substrate complex ES is the starting point of both the kinetics and the mechanism of an enzyme. Its existence is shown by saturation (at high substrate concentration the rate reaches a maximum because all active sites are filled; [7.1.9](/7.1.9)), by crystal structures of enzyme–substrate complexes (for example **cytochrome P-450** with camphor), and by spectroscopic changes on binding (the fluorescence of the pyridoxal phosphate of tryptophan synthase changes when serine and indole bind).
 
 Active sites share a few structural features:
 
@@ -77,7 +77,7 @@ Active sites share a few structural features:
 4. substrates are bound by multiple weak interactions (**hydrogen bonds**, ionic interactions, the **hydrophobic effect**);
 5. specificity results from the precise arrangement of atoms: the short-range forces require close contact, so a substrate must have a matching shape.
 
-Emil Fischer's lock-and-key model (1894) pictured an active site complementary to its substrate. Daniel Koshland's induced fit (1958, see [7.1.7](/7.1.7#sec-7.1.1)) added that the site often becomes complementary only after the substrate has bound. As 8.3.2 shows, the essential complementarity is to the transition state, not to the substrate.
+Emil Fischer's lock-and-key model (1894) pictured an active site complementary to its substrate. Daniel Koshland's **induced fit** (1958, see [7.1.7](/7.1.7#sec-7.1.1)) added that the site often becomes complementary only after the substrate has bound. As 8.3.2 shows, the essential complementarity is to the transition state, not to the substrate.
 
 ### 8.2.2. Enzymes Change Rates, Not Equilibria
 
@@ -88,14 +88,14 @@ $$
 $$
 Its energetics are summarized in a reaction coordinate diagram: Gibbs energy against the progress of the reaction. The starting points (S or P under given conditions) are ground states; the top of the barrier, from which decay to S or P is equally likely, is the **transition state** S‡. It is not a chemical species with any lifetime and should not be confused with a **reaction intermediate** such as ES or EP, which occupies a valley of the diagram and lives longer than a molecular vibration (about $10^{-13}\,\mathrm{s}$). When a reaction has several steps, the step with the highest barrier is the **rate-limiting step**; for many enzymes several steps are partially rate-limiting, and which one dominates can change with conditions.
 
-The position of equilibrium depends only on the Gibbs energies of the ground states. With the biochemical standard state (pH 7; [6.3.7](/6.3.7)),
+The position of equilibrium depends only on the Gibbs energies of the ground states. With the **biochemical standard state** (pH 7; [6.3.7](/6.3.7)),
 
 $$
 \Delta_{\mathrm{r}}G'^{\circ} = -RT\ln K', \qquad K' = \frac{[\ce{P}]}{[\ce{S}]}\ \text{at equilibrium},
 $$
 where $K'$ is the **equilibrium constant**. At $25\,^\circ\mathrm{C}$ a factor of ten in $K'$ corresponds to $5.7\,\mathrm{kJ\,mol^{-1}}$: $K' = 10^{-3}, 1, 10^{3}$ give $\Delta_{\mathrm{r}}G'^{\circ} = +17.1, 0, -17.1\,\mathrm{kJ\,mol^{-1}}$. A large negative $\Delta_{\mathrm{r}}G'^{\circ}$ means a favorable equilibrium, not a fast reaction: sucrose and oxygen ($\Delta_{\mathrm{r}}G'^{\circ}$ very negative) can be stored together indefinitely, yet in cells sucrose is oxidized within seconds by a series of enzymes that also capture much of the released energy.
 
-An enzyme lowers the barrier by providing an alternative path through ES and EP; because the ground states of S and P are unchanged, it accelerates the forward and reverse reactions by exactly the same factor and leaves $K'$ unchanged. The energy barriers themselves are essential to life: without them, macromolecules and metabolites would decay spontaneously to simpler forms, and enzymes select which reactions happen.
+An enzyme lowers the barrier by providing an alternative path through ES and EP; because the ground states of S and P are unchanged, it accelerates the forward and reverse reactions by exactly the same factor and leaves $K'$ unchanged. The energy barriers themselves are essential to life: without them, **macromolecules** and metabolites would decay spontaneously to simpler forms, and enzymes select which reactions happen.
 
 ![Reaction coordinate diagrams with schematic Gibbs energies. A: the uncatalyzed reaction S → P (dashed) passes over a high barrier Δ‡G_uncat; the enzyme-catalyzed reaction passes through the intermediates ES and EP, and its highest barrier, ES‡ relative to ES, is much lower (Δ‡G_cat); the overall Δ_rG'° between S and P is the same for both paths. B: the "stickase" thought experiment. An enzyme complementary to the substrate (red) binds it so tightly that the barrier measured from the deep ES trough is higher than without enzyme; an enzyme complementary to the transition state (green) binds the substrate only moderately and realizes most of the binding energy ΔG_B in the transition state, which lowers the barrier](./plots/reaction-coordinate.py)
 
@@ -114,7 +114,7 @@ $$
 \frac{k_{\mathrm{cat}}}{k_{\mathrm{uncat}}} = \mathrm{e}^{\Delta\Delta^{\ddagger}G/RT}, \qquad \Delta\Delta^{\ddagger}G = RT\ln 10 \cdot \lg\frac{k_{\mathrm{cat}}}{k_{\mathrm{uncat}}} \approx 5.71\,\mathrm{kJ\,mol^{-1}} \times \lg\frac{k_{\mathrm{cat}}}{k_{\mathrm{uncat}}}\quad (25\,^\circ\mathrm{C}).
 $$
 
-**Example 8.2.1** Carboxypeptidase A hydrolyzes the C-terminal peptide bond of proteins. Without enzyme the half-life is about 7.3 years ($2.3\times10^{8}\,\mathrm{s}$, so $k_{\mathrm{uncat}} = \ln 2/t_{1/2} = 3.0\times10^{-9}\,\mathrm{s^{-1}}$); on the enzyme it is about $1.2\,\mathrm{ms}$ ($k = 5.8\times10^{2}\,\mathrm{s^{-1}}$). The enhancement is $1.9\times10^{11}$, a barrier lowering of $11.3 \times 5.71 \approx 64\,\mathrm{kJ\,mol^{-1}}$. Orotidine 5′-monophosphate decarboxylase, an enzyme of pyrimidine synthesis ([7.1.28](/7.1.28)), holds the record: the uncatalyzed decarboxylation has a half-life of 78 million years, the enzymatic one of milliseconds, an enhancement of about $10^{17}$ and $\Delta\Delta^{\ddagger}G \approx 97\,\mathrm{kJ\,mol^{-1}}$.
+**Example 8.2.1** Carboxypeptidase A hydrolyzes the C-terminal **peptide** bond of proteins. Without enzyme the half-life is about 7.3 years ($2.3\times10^{8}\,\mathrm{s}$, so $k_{\mathrm{uncat}} = \ln 2/t_{1/2} = 3.0\times10^{-9}\,\mathrm{s^{-1}}$); on the enzyme it is about $1.2\,\mathrm{ms}$ ($k = 5.8\times10^{2}\,\mathrm{s^{-1}}$). The enhancement is $1.9\times10^{11}$, a barrier lowering of $11.3 \times 5.71 \approx 64\,\mathrm{kJ\,mol^{-1}}$. Orotidine 5′-monophosphate decarboxylase, an enzyme of pyrimidine synthesis ([7.1.28](/7.1.28)), holds the record: the uncatalyzed decarboxylation has a half-life of 78 million years, the enzymatic one of milliseconds, an enhancement of about $10^{17}$ and $\Delta\Delta^{\ddagger}G \approx 97\,\mathrm{kJ\,mol^{-1}}$.
 
 ![Rate enhancements produced by enzymes (k_cat/k_uncat, logarithmic scale, values compiled by Lehninger) and the equivalent lowering of the activation Gibbs energy at 25 °C (top axis, 5.71 kJ/mol per factor of ten). Enhancements range from 10⁵ (cyclophilin, a peptidyl-prolyl isomerase) to 10¹⁷ (OMP decarboxylase), that is, barrier lowerings of about 30 to 100 kJ/mol](./plots/rate-enhancement.py)
 
@@ -160,7 +160,7 @@ The barrier $\Delta^{\ddagger}G$ includes several physical contributions, and bi
 | Distortion (mostly electron redistribution) the substrate must undergo | interactions formed only in the transition state compensate for the unfavorable Gibbs energy of distortion |
 | Need for precise alignment of the catalytic groups | induced fit: binding changes the conformation of the enzyme, bringing catalytic groups into position and allowing further interactions in the transition state |
 
-Entropy reduction alone can be large. The reaction of an ester with a carboxylate to form an anhydride is $10^5\,\mathrm{M}$ faster when both groups are in the same molecule (a unimolecular rate constant compared with a bimolecular one, hence the unit: the groups behave as if each were present at $10^5\,\mathrm{M}$, an effective molarity), and $10^8\,\mathrm{M}$ faster when the rotations about the connecting bonds are also frozen. Induced fit can involve a few residues near the active site or the movement of whole domains (hexokinase, 8.4.3), and usually a network of coupled motions throughout the enzyme.
+Entropy reduction alone can be large. The reaction of an ester with a carboxylate to form an anhydride is $10^5\,\mathrm{M}$ faster when both groups are in the same molecule (a unimolecular rate constant compared with a bimolecular one, hence the unit: the groups behave as if each were present at $10^5\,\mathrm{M}$, an effective molarity), and $10^8\,\mathrm{M}$ faster when the rotations about the connecting bonds are also frozen. Induced fit can involve a few residues near the active site or the movement of whole **domains** (hexokinase, 8.4.3), and usually a network of coupled motions throughout the enzyme.
 
 ### 8.3.4. Catalytic Groups: Acid–Base, Covalent and Metal Ion Catalysis
 
@@ -201,7 +201,7 @@ To understand an enzyme's mechanism completely we would need the sequence of enz
 
 ### 8.4.1. Chymotrypsin: Acylation and Deacylation of a Ser Residue
 
-Bovine pancreatic chymotrypsin ($M_{\mathrm{r}}$ 25 191) is a protease that cleaves peptide bonds on the carboxyl side of aromatic residues (Phe, Trp, Tyr), whose side chains fit a hydrophobic specificity pocket. It consists of three chains linked by disulfide bonds, produced from a single-chain zymogen ([7.1.9](/7.1.9)).
+Bovine pancreatic chymotrypsin ($M_{\mathrm{r}}$ 25 191) is a protease that cleaves peptide bonds on the carboxyl side of aromatic residues (Phe, Trp, Tyr), whose side chains fit a hydrophobic specificity pocket. It consists of three chains linked by disulfide bonds, produced from a single-chain **zymogen** ([7.1.9](/7.1.9)).
 
 **Definition 8.4.1 (Serine Protease, Catalytic Triad, Oxyanion Hole)** A protease is an enzyme that catalyzes the hydrolytic cleavage of peptide bonds. In a **serine protease** (chymotrypsin, trypsin, elastase, thrombin, subtilisin) the nucleophile is the hydroxyl of an active-site Ser. In chymotrypsin, Ser195, His57 and Asp102 form a hydrogen-bonded network, the **catalytic triad**; the pocket in which the negative charge of the tetrahedral intermediates develops, lined by the backbone amide N–H groups of Gly193 and Ser195, is the **oxyanion hole**.
 
@@ -214,7 +214,7 @@ Chymotrypsin accelerates peptide hydrolysis by at least $10^9$, not by direct at
 
 Why is the Ser195 hydroxyl ($\mathrm{p}K_{\mathrm{a}}$ normally above 13) so reactive? Deprotonation by His57 avoids an unstable positive charge on the attacking oxygen. It has been proposed that, on substrate binding, the His57–Asp102 hydrogen bond becomes a short, strong (low-barrier) hydrogen bond that raises the $\mathrm{p}K_{\mathrm{a}}$ of His57 from about 7 to above 12; the size of this effect is still debated, but the importance of the triad is clear from mutants of the bacterial serine protease subtilisin: replacing its catalytic Ser or His by Ala lowers $k_{\mathrm{cat}}$ by a factor of about $10^6$, yet even the enzyme lacking all three triad residues remains some $10^3$ times faster than the uncatalyzed reaction, a measure of what binding and the oxyanion hole contribute on their own.
 
-The first evidence for the acyl-enzyme came from pre-steady-state kinetics. In 1954 B. S. Hartley and B. A. Kilby followed the hydrolysis of the ester *p*-nitrophenyl acetate, a poor substrate (less binding energy, so the reaction is slow enough to follow), by the release of colored *p*-nitrophenol. They observed a rapid burst of just under one *p*-nitrophenol per enzyme molecule, followed by a slower steady rate. The burst is the fast acylation of all enzyme molecules; the steady rate is limited by the slower deacylation.
+The first evidence for the acyl-enzyme came from **pre-steady-state kinetics**. In 1954 B. S. Hartley and B. A. Kilby followed the hydrolysis of the ester *p*-nitrophenyl acetate, a poor substrate (less binding energy, so the reaction is slow enough to follow), by the release of colored *p*-nitrophenol. They observed a rapid burst of just under one *p*-nitrophenol per enzyme molecule, followed by a slower steady rate. The burst is the fast acylation of all enzyme molecules; the steady rate is limited by the slower deacylation.
 
 **Formula 8.4.1 (Burst Kinetics)** For the mechanism $\mathrm{E + S} \rightleftharpoons \mathrm{ES} \xrightarrow{k_2} \text{E-acyl} + \mathrm{P_1}$, $\text{E-acyl} \xrightarrow{k_3} \mathrm{E + P_2}$ at saturating substrate, the first product appears as
 
@@ -231,11 +231,11 @@ A burst of about one product per active site means that a step after the release
 
 ### 8.4.2. HIV Protease: Transition-State Analogs as Drugs
 
-New drugs are almost always designed to inhibit an enzyme. The human immunodeficiency virus (HIV), the cause of AIDS, is a retrovirus: its RNA genome is copied into DNA by reverse transcriptase, integrated into a host chromosome by integrase, and its proteins are made as large polyproteins that the viral protease cuts into functional pieces ([7.2](/7.2)). These three enzymes are the main drug targets.
+New drugs are almost always designed to inhibit an enzyme. The human immunodeficiency virus (HIV), the cause of AIDS, is a retrovirus: its RNA **genome** is copied into **DNA** by **reverse transcriptase**, integrated into a host chromosome by integrase, and its proteins are made as large polyproteins that the viral protease cuts into functional pieces ([7.2](/7.2)). These three enzymes are the main drug targets.
 
 There are four major classes of proteases. Serine proteases and cysteine proteases form covalent acyl-enzyme intermediates; aspartyl proteases and metalloproteases do not, and activate a water molecule to attack the peptide bond directly. HIV protease is an aspartyl protease, a homodimer of two 99-residue subunits whose two active-site Asp25 residues (one from each subunit) act as general acid and general base, facilitating the attack of water on the carbonyl group. The resulting tetrahedral intermediate is close in structure and energy to the transition state. The enzyme cleaves most efficiently between Phe and Pro, with a pocket for the aromatic side chain next to the scissile bond.
 
-The HIV protease inhibitors (saquinavir, the first, approved in 1995, ritonavir, indinavir, darunavir and others) share a core: a hydroxyl group that mimics the tetrahedral oxygen of the intermediate, next to a benzyl group that fills the aromatic pocket. They are transition-state analogs (Definition 8.3.2) and bind noncovalently but so tightly that they behave almost as irreversible inhibitors. Combined with inhibitors of reverse transcriptase and integrase, they have turned HIV infection from a fatal disease into a chronic one.
+The HIV protease inhibitors (saquinavir, the first, approved in 1995, ritonavir, indinavir, darunavir and others) share a core: a hydroxyl group that mimics the tetrahedral oxygen of the intermediate, next to a benzyl group that fills the aromatic pocket. They are transition-state analogs (Definition 8.3.2) and bind noncovalently but so tightly that they behave almost as **irreversible inhibitors**. Combined with inhibitors of reverse transcriptase and integrase, they have turned HIV infection from a fatal disease into a chronic one.
 
 ### 8.4.3. Hexokinase: Induced Fit
 
@@ -255,7 +255,7 @@ Yeast enolase ($M_{\mathrm{r}}$ 93 316) is a dimer of 436-residue subunits. The 
 
 ### 8.4.5. Penicillin: An Irreversible Inhibitor of Transpeptidase
 
-Penicillin, discovered by Alexander Fleming in 1928 and developed as a drug by Howard Florey and Ernst Chain in the early 1940s, blocks the synthesis of peptidoglycan, the cross-linked polymer of the bacterial cell wall ([7.1.10](/7.1.10)). The last cross-linking step is a transpeptidase reaction that uses covalent catalysis like chymotrypsin: an active-site Ser attacks the peptide bond between the two terminal D-Ala residues of a precursor, releasing one D-Ala and forming an acyl-enzyme, which is then attacked by an amino group of a second precursor, cross-linking the two.
+Penicillin, discovered by Alexander Fleming in 1928 and developed as a drug by Howard Florey and Ernst Chain in the early 1940s, blocks the synthesis of **peptidoglycan**, the cross-linked polymer of the bacterial cell wall ([7.1.10](/7.1.10)). The last cross-linking step is a transpeptidase reaction that uses covalent catalysis like chymotrypsin: an active-site Ser attacks the peptide bond between the two terminal D-Ala residues of a precursor, releasing one D-Ala and forming an acyl-enzyme, which is then attacked by an amino group of a second precursor, cross-linking the two.
 
 Penicillins mimic one conformation of the D-Ala–D-Ala terminus, but the peptide bond is replaced by the strained four-membered **β-lactam** ring (benzylpenicillin, penicillin G, left; D-Ala–D-Ala, right):
 
@@ -264,7 +264,7 @@ CC1(C)S[C@@H]2[C@H](NC(=O)Cc3ccccc3)C(=O)N2[C@H]1C(=O)O
 C[C@H](C(=O)N[C@H](C)C(=O)[O-])[NH3+]
 ```
 
-The active-site Ser attacks the β-lactam carbonyl and forms a covalent acyl-enzyme, but the leaving group remains attached through the rest of the bicyclic ring, and the adduct is hydrolyzed so slowly that the enzyme is irreversibly inactivated. Without cross-links the wall cannot resist the osmotic pressure ([7.1.2](/7.1.2)) and most bacteria burst. Resistant bacteria express β-lactamases, serine hydrolases that cleave the β-lactam ring before it reaches the transpeptidase. Clavulanic acid, a suicide inactivator of β-lactamases ([7.1.9](/7.1.9)), forms a covalent adduct with the active-site Ser that rearranges into a more reactive species, which acylates a second nucleophile of the site irreversibly; it is combined with amoxicillin in co-amoxiclav. Bacteria with β-lactamases insensitive to clavulanate have already appeared.
+The active-site Ser attacks the β-lactam carbonyl and forms a covalent acyl-enzyme, but the leaving group remains attached through the rest of the bicyclic ring, and the adduct is hydrolyzed so slowly that the enzyme is irreversibly inactivated. Without cross-links the wall cannot resist the osmotic pressure ([7.1.2](/7.1.2)) and most bacteria burst. Resistant bacteria express β-lactamases, serine hydrolases that cleave the β-lactam ring before it reaches the transpeptidase. Clavulanic acid, a **suicide inactivator** of β-lactamases ([7.1.9](/7.1.9)), forms a covalent adduct with the active-site Ser that rearranges into a more reactive species, which acylates a second nucleophile of the site irreversibly; it is combined with amoxicillin in co-amoxiclav. Bacteria with β-lactamases insensitive to clavulanate have already appeared.
 
 ## 8.5. pH Dependence of Enzyme Activity
 
