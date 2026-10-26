@@ -6568,7 +6568,7 @@ terms:
   - { zh: 柠檬酸循环, en: citric acid cycle, aliases: [三羧酸循环, tricarboxylic acid cycle, TCA cycle, Krebs cycle, Krebs 循环] }
   - { zh: 两用代谢途径, en: amphibolic pathway, aliases: [两用途径] }
   - { zh: 回补反应, en: anaplerotic reaction, aliases: [anaplerotic reactions, anaplerosis] }
-  - { zh: 代谢区室, en: metabolon, aliases: [代谢子] }
+  - { zh: 代谢复合体, en: metabolon, aliases: [代谢区室, 代谢子] }
   - { zh: 兼职蛋白, en: moonlighting protein, aliases: [moonlighting proteins, moonlighting enzyme] }
   - { zh: 致癌代谢物, en: oncometabolite, aliases: [oncometabolites, 肿瘤代谢物] }
   - { zh: 乙醛酸循环, en: glyoxylate cycle }

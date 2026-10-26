@@ -28,7 +28,7 @@ Glycolysis has a preparatory phase, in which two ATP are invested to phosphoryla
 | 3 | phosphofructokinase-1 | fructose 6-phosphate + ATP → fructose 1,6-bisphosphate + ADP | phosphoryl transfer | $-14.2$ | $-22.2$ |
 | 4 | aldolase | fructose 1,6-bisphosphate ⇌ DHAP + glyceraldehyde 3-phosphate | C–C cleavage (retro-aldol) | $+23.8$ | $-1.3$ |
 | 5 | triose phosphate isomerase | DHAP ⇌ glyceraldehyde 3-phosphate | isomerization | $+7.5$ | $+2.5$ |
-| 6 | glyceraldehyde 3-phosphate dehydrogenase | **GAP** + $\mathrm{P_i}$ + $\ce{NAD+}$ ⇌ 1,3-bisphosphoglycerate + NADH + $\ce{H+}$ | oxidation, phosphorylation | $+6.3$ | $-1.7$ (6 + 7) |
+| 6 | glyceraldehyde 3-phosphate dehydrogenase | GAP + $\mathrm{P_i}$ + $\ce{NAD+}$ ⇌ 1,3-bisphosphoglycerate + NADH + $\ce{H+}$ | oxidation, phosphorylation | $+6.3$ | $-1.7$ (6 + 7) |
 | 7 | phosphoglycerate kinase | 1,3-bisphosphoglycerate + ADP ⇌ 3-phosphoglycerate + ATP | phosphoryl transfer | $-18.5$ | (with 6) |
 | 8 | phosphoglycerate mutase | 3-phosphoglycerate ⇌ 2-phosphoglycerate | group shift | $+4.4$ | $+0.8$ |
 | 9 | enolase | 2-phosphoglycerate ⇌ phosphoenolpyruvate + $\ce{H2O}$ | dehydration (elimination) | $+7.5$ | $-3.3$ |
