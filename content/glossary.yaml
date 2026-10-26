@@ -6512,3 +6512,37 @@ terms:
   - { zh: 胱天蛋白酶, en: caspase, aliases: [caspases] }
   - { zh: 双分子荧光互补, en: bimolecular fluorescence complementation, aliases: [BiFC] }
   - { zh: 酵母双杂交, en: yeast two-hybrid system, aliases: [yeast two-hybrid, Y2H] }
+  - { zh: α-鹅膏蕈碱, en: α-amanitin, aliases: [alpha-amanitin, α-鹅膏覃碱] }
+  - { zh: 羧基末端结构域, en: carboxyl-terminal domain, aliases: [CTD, C-terminal domain, RNA 聚合酶 II 的 CTD], scope: ["7"] }
+  - { zh: 核心启动子, en: core promoter }
+  - { zh: TATA 框, en: TATA box, aliases: [TATA 盒] }
+  - { zh: 起始子, en: initiator, aliases: [Inr, 起始元件], scope: ["7"] }
+  - { zh: 下游启动子元件, en: downstream promoter element, aliases: [DPE] }
+  - { zh: 增强子, en: enhancer, aliases: [enhancers] }
+  - { zh: 沉默子, en: silencer, aliases: [silencers] }
+  - { zh: 通用转录因子, en: general transcription factor, aliases: [general transcription factors, GTF] }
+  - { zh: 前起始复合物, en: preinitiation complex, aliases: [转录前起始复合物] }
+  - { zh: TATA 结合蛋白, en: TATA-binding protein, aliases: [TBP, TATA 框结合蛋白] }
+  - { zh: TBP 相关因子, en: TBP-associated factor, aliases: [TAF, TAFs, TBP-associated factors] }
+  - { zh: 启动子清除, en: promoter clearance, aliases: [promoter escape, 启动子逃逸] }
+  - { zh: 转录回溯, en: transcriptional backtracking, aliases: [RNA 聚合酶回溯] }
+  - { zh: 激活结构域, en: activation domain, aliases: [transactivation domain, 转录激活结构域] }
+  - { zh: 锌指, en: zinc finger, aliases: [zinc fingers, 锌指结构, Cys2His2 zinc finger] }
+  - { zh: 同源域, en: homeodomain, aliases: [同源异形域, homeodomains] }
+  - { zh: 亮氨酸拉链, en: leucine zipper, aliases: [bZIP] }
+  - { zh: 碱性螺旋–环–螺旋, en: basic helix–loop–helix, aliases: [bHLH, 螺旋–环–螺旋, helix–loop–helix, basic helix-loop-helix] }
+  - { zh: 染色体构象捕获, en: chromosome conformation capture, aliases: [3C] }
+  - { zh: 结构性转录因子, en: architectural transcription factor, aliases: [architectural transcription factors] }
+  - { zh: 增强体, en: enhanceosome }
+  - { zh: 共激活因子, en: coactivator, aliases: [coactivators, 辅激活因子] }
+  - { zh: 中介体, en: Mediator, aliases: [Mediator complex, 中介复合物] }
+  - { zh: 组蛋白乙酰转移酶, en: histone acetyltransferase }
+  - { zh: 组蛋白去乙酰化酶, en: histone deacetylase, aliases: [HDAC, HDACs] }
+  - { zh: 溴域, en: bromodomain, aliases: [溴结构域, bromodomains] }
+  - { zh: 染色域, en: chromodomain, aliases: [染色质结构域, chromodomains] }
+  - { zh: 染色质重塑复合物, en: chromatin remodeling complex, aliases: [chromatin remodeler, remodeler, 染色质重塑因子] }
+  - { zh: 位置效应, en: position effect, aliases: [位置效应花斑, position-effect variegation] }
+  - { zh: CpG 岛, en: CpG island, aliases: [CpG islands] }
+  - { zh: 表观遗传学, en: epigenetics, aliases: [表观遗传] }
+  - { zh: 组蛋白密码, en: histone code, aliases: [组蛋白密码假说, histone code hypothesis] }
+  - { zh: 绝缘子, en: insulator, aliases: [insulators, 隔离子], scope: ["7"] }
