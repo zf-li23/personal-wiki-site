@@ -15,7 +15,7 @@ In the 1950s Luria, Bertani and Weigle noticed that a phage grown on one strain 
 
 The system is a primitive immune system: the host's sites are methylated and protected, while an infecting genome is cut before it can replicate. Four types are distinguished.
 
-| Type | Subunits and cofactors | Cleavage position | Example | Laboratory use |
+| Type | **Subunits** and **cofactors** | Cleavage position | Example | Laboratory use |
 |---|---|---|---|---|
 | I | one multisubunit enzyme (restriction, modification, specificity), ATP | random, up to kilobases away, after translocation | EcoKI | none |
 | II | separate endonuclease (usually a homodimer) and methylase, $\mathrm{Mg^{2+}}$ | in or next to the site, at a fixed position | EcoRI, HindIII, BamHI | the workhorses of cloning |
@@ -26,14 +26,14 @@ More than 300 type II specificities are known. Names take the first letter of th
 
 ### 5.1.2. Site Frequency
 
-Most type II enzymes recognize palindromes of 4 to 8 bp, sequences reading the same 5′→3′ on both strands (GAATTC for EcoRI). The palindrome matches the two-fold symmetry of the homodimer, each subunit reading one half-site and cleaving one strand. Hydrolysis leaves a 5′-phosphate and a 3′-OH at every new end, the pair of groups that DNA ligase joins (Section 5.3).
+Most type II enzymes recognize **palindromes** of 4 to 8 bp, sequences reading the same 5′→3′ on both strands (GAATTC for EcoRI). The palindrome matches the two-fold symmetry of the homodimer, each subunit reading one half-site and cleaving one strand. Hydrolysis leaves a 5′-phosphate and a 3′-OH at every new end, the pair of groups that DNA ligase joins (Section 5.3).
 
-**Formula 5.1.1 (Site frequency)** In a random sequence with equal base frequencies, a site of $n$ specified base pairs occurs on average once in
+**Formula 5.1.1 (Site frequency)** In a random sequence with equal base frequencies, a site of $n$ specified **base pairs** occurs on average once in
 $$
 4^n\ \mathrm{bp}: \qquad 256\ (n = 4), \quad 4096\ (n = 6), \quad 65\,536\ (n = 8). \tag{5.1}
 $$
 
-Four-cutters therefore give fragments of a few hundred base pairs, six-cutters a few kilobases, eight-cutters tens of kilobases. NotI ($\mathrm{GCGGCCGC}$) cuts mammalian DNA still more rarely than Eq. (5.1) predicts, about once per megabase, because its site contains two CpG dinucleotides, which are depleted several-fold in mammalian genomes by deamination of methylated cytosine ([7.2.15](/7.2.15)): real frequencies are set by dinucleotide statistics, not by base composition.
+Four-cutters therefore give fragments of a few hundred base pairs, six-cutters a few kilobases, eight-cutters tens of kilobases. NotI ($\mathrm{GCGGCCGC}$) cuts mammalian DNA still more rarely than Eq. (5.1) predicts, about once per megabase, because its site contains two CpG dinucleotides, which are depleted several-fold in mammalian genomes by **deamination** of methylated cytosine ([7.2.15](/7.2.15)): real frequencies are set by dinucleotide statistics, not by base composition.
 
 ### 5.1.3. Sticky and Blunt Ends
 
@@ -65,7 +65,7 @@ A palindromic site fixes the overhang: every EcoRI end carries AATT. A second cl
 
 **Definition 5.2.1** Type II enzymes that recognize an asymmetric sequence and cleave at a fixed distance outside it are called **type IIS restriction enzymes**; the distances on the two strands are written after the site, as in BsaI $\mathrm{GGTCTC}(1/5)$ or FokI $\mathrm{GGATG}(9/13)$.
 
-Because the overhang lies outside the recognition sequence, it may be any of $4^4 = 256$ four-base sequences, and a single enzyme can be made to produce ends compatible with EcoRI, BamHI or HindIII. Two consequences follow. The recognition site is not part of the product, so a joined product cannot be cut again; and a set of distinct, mutually incompatible overhangs fixes the order in which many fragments are joined. Assembly methods built on this idea join tens of fragments in a defined order in one reaction, because incorrectly rejoined starting molecules are cut again while the correct product, having lost its sites, accumulates. The same enzyme class contributed to genome editing: the cleavage domain of FokI, which is separate from its DNA-recognition domain, became the nuclease of zinc-finger nucleases and TALENs ([7.2.24](/7.2.24)).
+Because the overhang lies outside the recognition sequence, it may be any of $4^4 = 256$ four-base sequences, and a single enzyme can be made to produce ends compatible with EcoRI, BamHI or HindIII. Two consequences follow. The recognition site is not part of the product, so a joined product cannot be cut again; and a set of distinct, mutually incompatible overhangs fixes the order in which many fragments are joined. Assembly methods built on this idea join tens of fragments in a defined order in one reaction, because incorrectly rejoined starting molecules are cut again while the correct product, having lost its sites, accumulates. The same enzyme class contributed to genome editing: the cleavage **domain** of FokI, which is separate from its DNA-recognition domain, became the nuclease of zinc-finger nucleases and TALENs ([7.2.24](/7.2.24)).
 
 ## 5.3. DNA Ligase
 
@@ -105,7 +105,7 @@ A ligation yields both vector that has closed without an insert and recombinant 
 
 **Definition 5.4.5** The restoration of β-galactosidase activity by two separately inactive fragments of the enzyme, the α peptide encoded by the vector and the remaining fragment encoded by a deletion allele in the host, is called **α-complementation**. The screen in which recombinant colonies are recognized by loss of this activity on plates with a chromogenic substrate is called **blue–white screening**.
 
-The MCS lies in frame inside the α-peptide coding sequence, so an insert interrupts it. On plates containing the antibiotic, an inducer and the chromogenic substrate, cells without plasmid do not grow, cells with empty vector form blue colonies, and cells with an insert form white ones. The screen has known failure modes, a short in-frame insert that leaves the peptide partly active, or a rearranged vector that is white without an insert, so white colonies are confirmed by amplification or digestion.
+The MCS lies in frame inside the α-peptide coding sequence, so an insert interrupts it. On plates containing the antibiotic, an inducer and the chromogenic **substrate**, cells without plasmid do not grow, cells with empty vector form blue colonies, and cells with an insert form white ones. The screen has known failure modes, a short in-frame insert that leaves the **peptide** partly active, or a rearranged vector that is white without an insert, so white colonies are confirmed by amplification or digestion.
 
 ![The pUC19 vector and blue–white screening. A: map of pUC19 (2686 bp) with its high-copy origin, the ampicillin-resistance gene bla and the multiple cloning site inside lacZα under the lac promoter. B: on plates with ampicillin, X-gal and IPTG in a lacZΔM15 host, cells without plasmid die, cells with religated vector give blue colonies, and cells whose insert interrupts lacZα give white colonies](./plots/puc-cloning.py)
 
@@ -117,7 +117,7 @@ Its two advantages are that the orientation of the insert relative to vector ele
 
 **Definition 5.4.7** A vector that supplies, next to the cloning site, a promoter, a ribosome-binding site and the other signals needed to transcribe and translate the insert in the host is called an **expression vector**.
 
-The common bacterial design places the gene behind a promoter recognized only by the RNA polymerase of phage T7, whose gene sits in the host under an inducible promoter; the gene is therefore silent until induction and then transcribed very strongly. Short affinity tags fused to either end, a run of histidines or a small soluble protein, allow purification in one step by **affinity chromatography** ([6.4.14](/6.4.14)), with a protease site between tag and protein so that the tag can be removed. Proteins that require eukaryotic folding, disulfide bonds or glycosylation are made in yeast, insect or mammalian cells from vectors with the appropriate promoters and polyadenylation signals; *shuttle vectors* carry origins and markers for two hosts at once.
+The common bacterial design places the gene behind a promoter recognized only by the RNA polymerase of phage T7, whose gene sits in the host under an inducible promoter; the gene is therefore silent until induction and then transcribed very strongly. Short affinity tags fused to either end, a run of histidines or a small soluble protein, allow purification in one step by **affinity chromatography** ([6.4.14](/6.4.14)), with a protease site between tag and protein so that the tag can be removed. Proteins that require eukaryotic folding, disulfide bonds or **glycosylation** are made in yeast, insect or mammalian cells from vectors with the appropriate promoters and polyadenylation signals; *shuttle vectors* carry origins and markers for two hosts at once.
 
 ### 5.4.4. Phage and Artificial-Chromosome Vectors
 
@@ -166,11 +166,11 @@ The approximate form shows the structure of the answer: the library needs $G/I$ 
 
 **Definition 5.5.2** DNA synthesized from an RNA template by reverse transcription is called **complementary DNA** (cDNA); a collection of clones of cDNAs from the mRNA of a cell or tissue is called a **cDNA library**.
 
-A cDNA library differs from a genomic library in three useful ways: it contains only the genes expressed in the source tissue; it represents them in proportion to the abundance of their mRNAs, so that a few hundred abundant species dominate while some ten thousand rare ones are present at a few copies each; and its clones have no introns, so the coding sequence can be read directly and expressed in bacteria. Rare messages can be enriched by normalization, that is, by reannealing and removing the abundant species. The enzymology is treated in Section 5.7.1.
+A cDNA library differs from a genomic library in three useful ways: it contains only the genes expressed in the source tissue; it represents them in proportion to the abundance of their mRNAs, so that a few hundred abundant species dominate while some ten thousand rare ones are present at a few copies each; and its clones have no **introns**, so the coding sequence can be read directly and expressed in bacteria. Rare messages can be enriched by normalization, that is, by reannealing and removing the abundant species. The enzymology is treated in Section 5.7.1.
 
 ### 5.5.3. Finding a Clone: Hybridization and Stringency
 
-A library helps only if one clone can be found among $10^5$–$10^6$. Classically this is done by hybridization: colonies or plaques are transferred to a membrane, their DNA is denatured and fixed, and a labeled single-stranded probe complementary to part of the wanted sequence is allowed to pair with it, so that positive clones appear as spots. The probe may be a related gene from another species, or a mixture of oligonucleotides deduced from a protein sequence, degenerate wherever the genetic code is ([7.2.19](/7.2.19)). Base pairing, melting and renaturation are treated in [7.1.11](/7.1.11); for screening, the variable that matters is how many mismatches a hybrid may contain and survive.
+A library helps only if one clone can be found among $10^5$–$10^6$. Classically this is done by **hybridization**: colonies or plaques are transferred to a membrane, their DNA is denatured and fixed, and a labeled single-stranded probe complementary to part of the wanted sequence is allowed to pair with it, so that positive clones appear as spots. The probe may be a related gene from another species, or a mixture of oligonucleotides deduced from a protein sequence, degenerate wherever the genetic code is ([7.2.19](/7.2.19)). Base pairing, melting and **renaturation** are treated in [7.1.11](/7.1.11); for screening, the variable that matters is how many mismatches a hybrid may contain and survive.
 
 **Definition 5.5.3** The degree to which the conditions of hybridization and washing (temperature, salt concentration, denaturant) allow only perfectly matched duplexes to persist is called **stringency**.
 
@@ -192,7 +192,7 @@ The alternative to hybridization is amplification. By the late 1980s a short uni
 
 **Definition 5.6.1** The amplification of a DNA segment defined by two oligonucleotide **primers**, which pair with opposite strands at its two ends with their 3′ ends facing each other, through repeated cycles of denaturation, primer annealing and extension by a thermostable DNA polymerase, is called the **polymerase chain reaction** (PCR).
 
-Kary Mullis conceived PCR in 1983 (Nobel Prize in Chemistry 1993); it became practical with the DNA polymerase of *Thermus aquaticus*, which survives the denaturation step so that enzyme need not be replenished. A cycle separates the strands at about $95\,^\circ\mathrm{C}$, lets the primers (present in large excess, so that they find their sites before the long template strands can find each other) pair a few degrees below their melting temperature, and extends them at about $72\,^\circ\mathrm{C}$. Primers of some twenty nucleotides are chosen so that their melting temperatures match and their 3′ ends pair neither with each other nor within themselves, since only a 3′ end is extended. The 5′ end, by contrast, need not match at all: a 5′ tail carrying a restriction site, a promoter or a mutation is copied into the product, which is the basis of most uses of PCR in construction (Section 5.6.4).
+Kary Mullis conceived PCR in 1983 (Nobel Prize in Chemistry 1993); it became practical with the DNA polymerase of *Thermus aquaticus*, which survives the **denaturation** step so that enzyme need not be replenished. A cycle separates the strands at about $95\,^\circ\mathrm{C}$, lets the primers (present in large excess, so that they find their sites before the long template strands can find each other) pair a few degrees below their melting temperature, and extends them at about $72\,^\circ\mathrm{C}$. Primers of some twenty nucleotides are chosen so that their **melting temperatures** match and their 3′ ends pair neither with each other nor within themselves, since only a 3′ end is extended. The 5′ end, by contrast, need not match at all: a 5′ tail carrying a restriction site, a promoter or a mutation is copied into the product, which is the basis of most uses of PCR in construction (Section 5.6.4).
 
 ### 5.6.2. The Bookkeeping of the First Cycles
 
@@ -241,15 +241,15 @@ The table answers the questions a cloner asks. Can reverse transcriptase use DNA
 
 ### 5.7.1. Making cDNA
 
-Reverse transcriptase needs a primer, and most eukaryotic mRNAs provide a binding site in their poly(A) tail ([7.2.17](/7.2.17)), so an oligo(dT) primer starts the first strand at the 3′ end of the message. The classical second-strand method combines three activities: RNase H, which cleaves RNA only within an RNA–DNA hybrid, nicks the template; the remaining RNA pieces prime DNA polymerase I, which extends them while removing the RNA ahead of it; and ligase seals the nicks. The product is given ends for cloning either with adapters or with complementary homopolymer tails added by terminal transferase, the remaining nicks being repaired in the host. Current methods instead add defined adapters to both ends during reverse transcription by template switching ([7.2.6](/7.2.6)).
+Reverse transcriptase needs a primer, and most eukaryotic mRNAs provide a **binding site** in their poly(A) tail ([7.2.17](/7.2.17)), so an oligo(dT) primer starts the first strand at the 3′ end of the message. The classical second-strand method combines three activities: RNase H, which cleaves RNA only within an RNA–DNA hybrid, nicks the template; the remaining RNA pieces prime DNA polymerase I, which extends them while removing the RNA ahead of it; and ligase seals the nicks. The product is given ends for cloning either with adapters or with complementary homopolymer tails added by terminal transferase, the remaining nicks being repaired in the host. Current methods instead add defined adapters to both ends during **reverse transcription** by template switching ([7.2.6](/7.2.6)).
 
 **Definition 5.7.1** The movement of a nick along a duplex in the $5' \to 3'$ direction by a polymerase that removes nucleotides ahead of the nick with its $5' \to 3'$ exonuclease while adding nucleotides behind it is called **nick translation**.
 
-Nick translation was the standard way to make labeled hybridization probes: random nicks are introduced and the polymerase replaces the DNA downstream of each with nucleotides among which one is labeled. Priming denatured DNA with random hexamers and the Klenow fragment gives higher specific activity. Two further labeling tools follow from the same logic: polynucleotide kinase transfers the terminal phosphate of ATP to a 5′-OH, labeling 5′ ends, and the Klenow fragment labels 3′ ends by filling in 5′ overhangs. Molecules labeled at one end are the basis of footprinting and nuclease mapping ([7.2.6](/7.2.6)).
+Nick translation was the standard way to make labeled hybridization probes: random nicks are introduced and the polymerase replaces the DNA downstream of each with nucleotides among which one is labeled. Priming denatured DNA with random hexamers and the Klenow fragment gives higher **specific activity**. Two further labeling tools follow from the same logic: polynucleotide kinase transfers the terminal phosphate of ATP to a 5′-OH, labeling 5′ ends, and the Klenow fragment labels 3′ ends by filling in 5′ overhangs. Molecules labeled at one end are the basis of footprinting and nuclease mapping ([7.2.6](/7.2.6)).
 
 **Definition 5.7.2** The template-independent DNA polymerase that adds deoxynucleotides to the 3′-OH of DNA is called **terminal deoxynucleotidyl transferase** (TdT).
 
-TdT is the only DNA polymerase that needs no template. Its natural role is in developing lymphocytes, where it inserts random nucleotides at the junctions made by V(D)J recombination and so enlarges the repertoire of antigen receptors ([7.2.9](/7.2.9)); as a tool it adds homopolymer tails, labels 3′ ends, and attaches adapters to single-stranded molecules.
+TdT is the only DNA polymerase that needs no template. Its natural role is in developing lymphocytes, where it inserts random nucleotides at the junctions made by V(D)J recombination and so enlarges the repertoire of **antigen** **receptors** ([7.2.9](/7.2.9)); as a tool it adds homopolymer tails, labels 3′ ends, and attaches adapters to single-stranded molecules.
 
 ### 5.7.2. Assembly by Overlap
 

@@ -3,7 +3,7 @@ title: Chromatin and the Nucleosome
 description: Histones and the nucleosome core particle (147 bp, 1.65 left-handed turns, the histone fold, linker histone H1); the evidence for the nucleosome (nuclease ladders, beads on a string, cross-linking, crystal structure); higher-order structure (the 30 nm fiber in vitro and its absence in vivo, Hi-C, loop extrusion and topologically associating domains, euchromatin and heterochromatin, the mitotic chromosome); nucleosome positioning and accessibility (nucleosome-free regions, DNase I hypersensitive sites, MNase-seq and ATAC-seq); histone variants and remodelers; quantitative models of compaction, unwrapping under force, site exposure and statistical positioning.
 ---
 
-A human diploid nucleus holds about $2\,\mathrm{m}$ of DNA in a sphere $6\,\mu\mathrm{m}$ across, and every base pair of it must remain available for **replication**, repair and **transcription**. Eukaryotes solve this with a protein spool, the nucleosome, on which about $147$ bp of DNA is wrapped; strings of nucleosomes are folded further into loops, domains and, at mitosis, compact chromosomes. This chapter describes that hierarchy from the bottom up and the experiments that revealed each level, and it ends with the quantitative facts that make chromatin a regulatory system rather than mere packaging: how much the DNA is compacted, how much free energy holds it on the octamer, how a transcription factor can reach a wrapped site, and how nucleosomes become positioned without being placed one by one. The topology of the wrapped DNA (each nucleosome takes up about one negative supercoil) was treated in [7.2.3](/7.2.3); the covalent modifications of histones, the remodeling machines and epigenetic silencing, which act on the structures described here, are the subject of [7.2.15](/7.2.15). The methods used throughout (nuclease digestion, Southern blotting, chromatin immunoprecipitation, sequencing) are explained in [7.2.6](/7.2.6).
+A human diploid nucleus holds about $2\,\mathrm{m}$ of DNA in a sphere $6\,\mu\mathrm{m}$ across, and every **base pair** of it must remain available for **replication**, repair and **transcription**. **Eukaryotes** solve this with a protein spool, the nucleosome, on which about $147$ bp of DNA is wrapped; strings of nucleosomes are folded further into loops, domains and, at mitosis, compact chromosomes. This chapter describes that hierarchy from the bottom up and the experiments that revealed each level, and it ends with the quantitative facts that make chromatin a regulatory system rather than mere packaging: how much the DNA is compacted, how much free energy holds it on the octamer, how a transcription factor can reach a wrapped site, and how nucleosomes become positioned without being placed one by one. The topology of the wrapped DNA (each nucleosome takes up about one negative supercoil) was treated in [7.2.3](/7.2.3); the covalent modifications of histones, the remodeling machines and epigenetic silencing, which act on the structures described here, are the subject of [7.2.15](/7.2.15). The methods used throughout (nuclease digestion, Southern blotting, chromatin immunoprecipitation, sequencing) are explained in [7.2.6](/7.2.6).
 
 ## 4.1. Histones and the Nucleosome Core Particle
 
@@ -13,7 +13,7 @@ A human diploid nucleus holds about $2\,\mathrm{m}$ of DNA in a sphere $6\,\mu\m
 
 **Definition 4.1.2** The small, strongly basic proteins that make up the protein spool of chromatin are called **histones**. All eukaryotes have five major classes: the four *core histones* H2A, H2B, H3, H4 and the linker histone H1.
 
-| Histone | Residues (bovine) | $M_{\mathrm{r}}$ | Lys / % | Arg / % | Conservation |
+| Histone | **Residues** (bovine) | $M_{\mathrm{r}}$ | Lys / % | Arg / % | Conservation |
 |---|---|---|---|---|---|
 | H1 | 223 | 21 130 | 29.5 | 11.3 | low; many tissue-specific subtypes |
 | H2A | 129 | 13 960 | 10.9 | 19.3 | moderate; several variants |
@@ -25,10 +25,10 @@ The properties of histones follow from their job:
 
 - They are basic: lysine plus arginine make up about a quarter of the residues, so the proteins carry a large positive charge at neutral pH that neutralizes about half of the phosphate charges of the DNA they bind. This is why histones are extracted from chromatin by acid and dissociate at high salt.
 - H3 and H4 are among the most conserved proteins known: almost every residue contacts DNA or another histone, so almost every substitution is deleterious.
-- The genes are multicopy. The replication-dependent histone genes are clustered and repeated (about 70 genes in humans), have no introns, and their mRNAs end in a stem–loop instead of a poly(A) tail; they are expressed in S phase, when the amount of chromatin must double (Example 4.6.2).
-- Histones are heterogeneous for two reasons: different gene copies encode slightly different proteins (the variants of Section 4.5), and the proteins are covalently modified after translation (acetylation, methylation, phosphorylation, ubiquitination, [7.2.15](/7.2.15)).
+- The genes are multicopy. The replication-dependent histone genes are clustered and repeated (about 70 genes in humans), have no **introns**, and their mRNAs end in a stem–loop instead of a poly(A) tail; they are expressed in S phase, when the amount of chromatin must double (Example 4.6.2).
+- Histones are heterogeneous for two reasons: different gene copies encode slightly different proteins (the variants of Section 4.5), and the proteins are covalently modified after translation (acetylation, methylation, phosphorylation, **ubiquitination**, [7.2.15](/7.2.15)).
 
-Bacteria have no histones. Their chromosome forms a *nucleoid* compacted by supercoiling and by abundant nucleoid-associated proteins (HU, IHF, H-NS, Fis) that bend or bridge DNA but bind and dissociate within minutes and form no regular repeating particle. Many archaea, by contrast, have histones homologous to the eukaryotic histone fold; they assemble into continuous "hypernucleosome" superhelices, which suggests that the eukaryotic octamer evolved from such an ancestor.
+Bacteria have no histones. Their chromosome forms a *nucleoid* compacted by **supercoiling** and by abundant nucleoid-associated proteins (HU, IHF, H-NS, Fis) that bend or bridge DNA but bind and dissociate within minutes and form no regular repeating particle. Many archaea, by contrast, have histones homologous to the eukaryotic histone fold; they assemble into continuous "hypernucleosome" superhelices, which suggests that the eukaryotic octamer evolved from such an ancestor.
 
 ### 4.1.2. The Core Particle
 
@@ -40,12 +40,12 @@ The word "nucleosome" is often used loosely for the core particle alone; when th
 
 **Definition 4.1.4** The common structural domain of the four core histones, three α-helices (a short $\alpha 1$, a long $\alpha 2$ of about 28 residues and a short $\alpha 3$) connected by two loops $\mathrm{L1}$ and $\mathrm{L2}$, is called the **histone fold**.
 
-Two histone folds pair head to tail in a "handshake", with the long $\alpha 2$ helices crossing, to form the H3–H4 and H2A–H2B heterodimers. Two H3–H4 dimers join through a four-helix bundle between the two H3 molecules to form the $(\mathrm{H3{-}H4})_2$ tetramer, and an H2A–H2B dimer docks on each side through a similar H2B–H4 bundle. The order of assembly is also the order of deposition in vivo: histone chaperones load an $(\mathrm{H3{-}H4})_2$ tetramer onto DNA first and then add the two H2A–H2B dimers; disassembly runs in reverse, H2A–H2B leaving first (at about $0.8$–$1\,\mathrm{M}$ NaCl in vitro, the tetramer only above about $1.2\,\mathrm{M}$).
+Two histone folds pair head to tail in a "handshake", with the long $\alpha 2$ helices crossing, to form the H3–H4 and H2A–H2B heterodimers. Two H3–H4 dimers join through a four-helix bundle between the two H3 molecules to form the $(\mathrm{H3{-}H4})_2$ tetramer, and an H2A–H2B dimer docks on each side through a similar H2B–H4 bundle. The order of assembly is also the order of deposition in vivo: histone **chaperones** load an $(\mathrm{H3{-}H4})_2$ tetramer onto DNA first and then add the two H2A–H2B dimers; disassembly runs in reverse, H2A–H2B leaving first (at about $0.8$–$1\,\mathrm{M}$ NaCl in vitro, the tetramer only above about $1.2\,\mathrm{M}$).
 
 The crystal structure of the core particle (Luger and Richmond, 1997, at $2.8$ Å; later to $1.9$ Å) shows the details of the spool:
 
 - The octamer is a wedge-shaped disc about $11\,\mathrm{nm}$ across and $5.7\,\mathrm{nm}$ thick, with the DNA on the outside. The particle has a two-fold (dyad) axis through the central base pair.
-- The DNA contacts the octamer at 14 sites, one per helical turn, wherever its minor groove faces the protein; at each site an arginine side chain inserts into the minor groove and the backbone phosphates are bound by helix dipoles and main-chain amides. The contacts are with the backbone, not the bases, so the octamer binds any sequence, although some sequences bend more easily than others (Section 4.4).
+- The DNA contacts the octamer at 14 sites, one per helical turn, wherever its **minor groove** faces the protein; at each site an arginine **side chain** inserts into the minor groove and the backbone phosphates are bound by helix dipoles and main-chain amides. The contacts are with the backbone, not the bases, so the octamer binds any sequence, although some sequences bend more easily than others (Section 4.4).
 - The DNA is bent with a radius of about $4.2\,\mathrm{nm}$, much tighter than its persistence length of about $50\,\mathrm{nm}$; the bending energy is paid by the many electrostatic and hydrogen-bond contacts (Section 4.6).
 - The eight N-terminal tails (and the C-terminal tail of H2A) are intrinsically disordered and make up about $28\%$ of the mass of the core histones. They leave the particle between the two gyres of DNA and through the minor-groove channels, so they are exposed to modifying enzymes. The H4 tail contacts an acidic patch on the H2A–H2B surface of the neighbouring nucleosome, an interaction that drives the folding of nucleosome arrays; acetylation of H4 K16 abolishes it.
 
@@ -55,7 +55,7 @@ The crystal structure of the core particle (Luger and Richmond, 1997, at $2.8$ �
 
 H1 has a central globular "winged-helix" domain flanked by long basic tails. It is not part of the octamer (one H1 per repeat, against eight core histones): it is removed by $0.5\,\mathrm{M}$ salt or brief trypsin treatment, which leaves the core particles intact and turns condensed chromatin into the "beads on a string" of Example 4.2.2. H1 brings the entering and exiting DNA together into a stem, promotes the folding of nucleosome arrays, and exchanges rapidly in living nuclei (residence times of minutes). It represses transcription in vitro beyond the repression by core histones, and activators can counteract it ([7.2.15](/7.2.15)).
 
-Wrapping has a topological consequence ([7.2.3](/7.2.3)). If a core is assembled on a relaxed closed-circular DNA, the left-handed wrap introduces negative writhe; since $\mathrm{Lk}$ cannot change without a strand break, an equal positive supercoil appears in the free DNA. A topoisomerase relaxes this compensating supercoil, and when the histones are later removed, the DNA is negatively supercoiled. Counting topoisomers after deproteinization of minichromosomes gives $\Delta\mathrm{Lk} \approx -1$ per nucleosome, although the DNA makes $1.65$ left-handed turns (the "linking number paradox"): the wrapped DNA is also slightly overtwisted (about $10.2$ bp per turn instead of $10.5$), which partly cancels the writhe. This is why eukaryotic DNA is negatively supercoiled although eukaryotes have no DNA gyrase.
+Wrapping has a topological consequence ([7.2.3](/7.2.3)). If a core is assembled on a relaxed closed-circular DNA, the left-handed wrap introduces negative **writhe**; since $\mathrm{Lk}$ cannot change without a strand break, an equal positive supercoil appears in the free DNA. A **topoisomerase** relaxes this compensating supercoil, and when the histones are later removed, the DNA is negatively supercoiled. Counting **topoisomers** after deproteinization of minichromosomes gives $\Delta\mathrm{Lk} \approx -1$ per nucleosome, although the DNA makes $1.65$ left-handed turns (the "**linking number** paradox"): the wrapped DNA is also slightly overtwisted (about $10.2$ bp per turn instead of $10.5$), which partly cancels the writhe. This is why eukaryotic DNA is negatively supercoiled although eukaryotes have no **DNA gyrase**.
 
 ## 4.2. The Discovery of the Nucleosome
 
@@ -75,7 +75,7 @@ Kornberg's 1974 proposal described the whole repeat: about 200 bp of DNA, an oct
 
 ### 4.3.1. The 10 nm Fiber and the 30 nm Fiber
 
-A string of nucleosomes with the linkers drawn out is the *10 nm fiber*. Wrapping alone shortens the DNA about six- to sevenfold: one repeat of $200$ bp ($68\,\mathrm{nm}$ of B-DNA) occupies about $11\,\mathrm{nm}$ of a compact array. The overall compaction of a mitotic chromosome is about $10^4$-fold (Example 4.6.1), so further folding is needed.
+A string of nucleosomes with the linkers drawn out is the *10 nm fiber*. Wrapping alone shortens the DNA about six- to sevenfold: one repeat of $200$ bp ($68\,\mathrm{nm}$ of **B-DNA**) occupies about $11\,\mathrm{nm}$ of a compact array. The overall compaction of a mitotic chromosome is about $10^4$-fold (Example 4.6.1), so further folding is needed.
 
 When the salt concentration is raised to physiological values or $\mathrm{Mg^{2+}}$ is added, nucleosome arrays in vitro condense into fibers about $30\,\mathrm{nm}$ in diameter, a further five- to sixfold compaction. Two models were long debated:
 
@@ -83,7 +83,7 @@ When the salt concentration is raised to physiological values or $\mathrm{Mg^{2+
 |---|---|---|
 | Arrangement | consecutive nucleosomes are neighbours along one helical path, about six per turn; linkers bent | nucleosomes alternate between two stacks; linkers straight and crossing the fiber axis |
 | Proposed by | Finch and Klug (1976) | Woodcock; Williams |
-| Support | EM of long-repeat arrays with H1, interdigitated solenoid (Robinson et al. 2006) | crystal structure of a tetranucleosome (Schalch et al. 2005), cryo-EM of 12-nucleosome arrays (Song et al. 2014) |
+| Support | EM of long-repeat arrays with H1, interdigitated solenoid (Robinson et al. 2006) | crystal structure of a tetranucleosome (Schalch et al. 2005), **cryo-EM** of 12-nucleosome arrays (Song et al. 2014) |
 
 The geometry depends on the repeat length and on H1: short repeats (about $167$ bp) favour the two-start zigzag, long repeats with H1 (about $197$ bp) a more compact interdigitated solenoid, and single-molecule force spectroscopy of reconstituted fibers detected both behaviours. It was therefore proposed that inactive chromatin, with long repeats, forms solenoids and active chromatin zigzags.
 
@@ -99,11 +99,11 @@ Above the level of the nucleosome chain, interphase chromatin is organized by lo
 
 **Definition 4.3.1** A genomic region, typically $0.1$–$1$ Mb long, whose loci contact one another more often than they contact loci outside it, with sharp boundaries in Hi-C maps, is called a **topologically associating domain** (TAD).
 
-Most loop anchors and many TAD boundaries are binding sites of the zinc-finger protein CTCF, and the two CTCF motifs at the anchors of a loop point toward each other (a "convergent" orientation) in more than $90\%$ of loops (Rao et al., 2014). The orientation rule cannot be explained by diffusion and random collision, which do not distinguish the two directions along the fiber. It is explained by an active process:
+Most loop anchors and many TAD boundaries are **binding sites** of the zinc-finger protein CTCF, and the two CTCF motifs at the anchors of a loop point toward each other (a "convergent" orientation) in more than $90\%$ of loops (Rao et al., 2014). The orientation rule cannot be explained by diffusion and random collision, which do not distinguish the two directions along the fiber. It is explained by an active process:
 
 **Definition 4.3.2** The process in which a ring-shaped SMC complex (cohesin in interphase, condensin in mitosis) binds chromatin and, using ATP, reels DNA into a progressively growing loop until it is stopped, for cohesin typically by CTCF bound in the orientation that faces the loop, is called **loop extrusion**.
 
-The SMC (structural maintenance of chromosomes) proteins are long antiparallel coiled coils with an ATPase head at one end and a hinge at the other; cohesin (SMC1–SMC3 with a kleisin) also holds sister chromatids together after **replication**, and condensin (SMC2–SMC4) compacts mitotic chromosomes. Evidence for loop extrusion:
+The SMC (structural maintenance of chromosomes) proteins are long antiparallel **coiled coils** with an ATPase head at one end and a hinge at the other; cohesin (SMC1–SMC3 with a kleisin) also holds sister chromatids together after **replication**, and condensin (SMC2–SMC4) compacts mitotic chromosomes. Evidence for loop extrusion:
 
 - Purified yeast condensin and human cohesin extrude DNA loops in single-molecule experiments, at about $0.5$–$2$ kb per second (Ganji et al., 2018; Davidson et al., 2019; Kim et al., 2019). At $1\,\mathrm{kb\,s^{-1}}$ a $200$ kb loop forms in a few minutes, well within the residence time of cohesin on chromatin (about 20 minutes).
 - Acute degradation of cohesin erases loops and TADs within hours, while compartments persist or even sharpen (Rao et al., 2017): domains and compartments are made by different mechanisms.
@@ -113,7 +113,7 @@ TADs matter because enhancers act mostly within them ([7.2.14](/7.2.14)). Deleti
 
 **Definition 4.3.3** Chromatin that is relatively decondensed during interphase, stains lightly and contains most of the transcribed genes is called **euchromatin**; chromatin that remains condensed throughout interphase, stains darkly and is largely transcriptionally silent is called **heterochromatin**.
 
-The distinction goes back to cytology (Heitz, 1928). *Constitutive heterochromatin* (pericentromeric satellite repeats, telomeres) is heterochromatic in all cells and is marked by H3 K9 trimethylation bound by HP1; *facultative heterochromatin* is condensed only in some cells or at some times, the inactive X chromosome of female mammals being the classic case (H3 K27 trimethylation, the long noncoding RNA Xist). Heterochromatin corresponds broadly to the B compartment. How the marks are written, read and spread is the subject of [7.2.15](/7.2.15).
+The distinction goes back to cytology (Heitz, 1928). *Constitutive heterochromatin* (pericentromeric satellite repeats, **telomeres**) is heterochromatic in all cells and is marked by H3 K9 trimethylation bound by HP1; *facultative heterochromatin* is condensed only in some cells or at some times, the inactive X chromosome of female mammals being the classic case (H3 K27 trimethylation, the long **noncoding RNA** Xist). Heterochromatin corresponds broadly to the B compartment. How the marks are written, read and spread is the subject of [7.2.15](/7.2.15).
 
 ### 4.3.3. The Mitotic Chromosome
 
@@ -154,7 +154,7 @@ The canonical histones are made in S phase and deposited behind the replication 
 | Variant | Replaces | Location and role | Deposited by |
 |---|---|---|---|
 | H3.3 | H3.1/H3.2 (differs at 4–5 residues) | transcribed genes, enhancers; replication-independent replacement; telomeres and pericentromeres | HIRA (genes); DAXX–ATRX (repeats) |
-| CENP-A | H3 | centromeres; marks the site of kinetochore assembly epigenetically, independent of sequence | HJURP |
+| CENP-A | H3 | **centromeres**; marks the site of kinetochore assembly epigenetically, independent of sequence | HJURP |
 | H2A.Z | H2A | the $-1$ and $+1$ nucleosomes flanking promoters; poises genes for activation | SWR1 (yeast), SRCAP, p400 |
 | H2A.X | H2A | throughout; phosphorylated at Ser139 ($\gamma$H2A.X) over megabases around a double-strand break, recruiting repair factors ([7.2.8](/7.2.8)) | general |
 | macroH2A | H2A | inactive X chromosome; repression | — |
@@ -202,12 +202,12 @@ using $k_{\mathrm{B}}T \approx 4.1\,\mathrm{pN\,nm}$ at room temperature. The tr
 
 **Remark 4.6.1** Thirty $k_{\mathrm{B}}T$ for unwrapping most of the DNA corresponds to roughly $2$–$3\,k_{\mathrm{B}}T$ per $10$ bp contact. It is the *net* free energy: the adsorption energy of the contacts is much larger, but most of it is spent on bending the DNA to a $4\,\mathrm{nm}$ radius. Finer experiments show that unwrapping proceeds in stages: the outer turn comes off reversibly at a few piconewtons, the inner turn abruptly at higher forces, and the detailed values depend on the sequence and the salt concentration. A force of a few piconewtons is within the range generated by RNA polymerase and remodelers, which is why these motors can displace nucleosomes.
 
-Because the net binding per contact is only a few $k_{\mathrm{B}}T$, wrapped DNA is not permanently hidden: it unwraps transiently from the ends. Polach and Widom (1995) measured the equilibrium constant $K_{\mathrm{conf}}$ for spontaneous exposure of a restriction site inside a nucleosome: about $10^{-2}$ to $10^{-3}$ for sites near the entry, falling to $10^{-4}$–$10^{-5}$ near the dyad. Fluorescence measurements show that the ends of the DNA stay wrapped for about $250\,\mathrm{ms}$ and unwrap for $10$–$50\,\mathrm{ms}$ (Li et al., 2005). If a factor can bind its site only in the exposed state, with dissociation constant $K_D$ for naked DNA, the fraction of sites bound at factor concentration $[\mathrm{TF}]$ is
+Because the net binding per contact is only a few $k_{\mathrm{B}}T$, wrapped DNA is not permanently hidden: it unwraps transiently from the ends. Polach and Widom (1995) measured the equilibrium constant $K_{\mathrm{conf}}$ for spontaneous exposure of a restriction site inside a nucleosome: about $10^{-2}$ to $10^{-3}$ for sites near the entry, falling to $10^{-4}$–$10^{-5}$ near the dyad. Fluorescence measurements show that the ends of the DNA stay wrapped for about $250\,\mathrm{ms}$ and unwrap for $10$–$50\,\mathrm{ms}$ (Li et al., 2005). If a factor can bind its site only in the exposed state, with **dissociation constant** $K_D$ for naked DNA, the fraction of sites bound at factor concentration $[\mathrm{TF}]$ is
 $$
 \theta = \frac{K_{\mathrm{conf}}[\mathrm{TF}]/K_D}{1 + K_{\mathrm{conf}} + K_{\mathrm{conf}}[\mathrm{TF}]/K_D}
 = \frac{[\mathrm{TF}]}{[\mathrm{TF}] + K_D^{\mathrm{app}}}, \qquad K_D^{\mathrm{app}} = K_D\,\frac{1 + K_{\mathrm{conf}}}{K_{\mathrm{conf}}} \approx \frac{K_D}{K_{\mathrm{conf}}}.
 $$
-A nucleosome thus raises the apparent dissociation constant by $1/K_{\mathrm{conf}}$, $10^2$- to $10^5$-fold depending on the position of the site, without making it unreachable. It also couples factors: once one factor holds the DNA unwrapped, a second factor binding further in pays a smaller unwrapping cost, so two factors whose sites lie in the same nucleosome bind cooperatively without touching each other (nucleosome-mediated cooperativity). This is one physical basis of the combinatorial control of enhancers ([7.2.14](/7.2.14), [7.2.22](/7.2.22)).
+A nucleosome thus raises the apparent dissociation constant by $1/K_{\mathrm{conf}}$, $10^2$- to $10^5$-fold depending on the position of the site, without making it unreachable. It also couples factors: once one factor holds the DNA unwrapped, a second factor binding further in pays a smaller unwrapping cost, so two factors whose sites lie in the same nucleosome bind cooperatively without touching each other (nucleosome-mediated **cooperativity**). This is one physical basis of the combinatorial control of enhancers ([7.2.14](/7.2.14), [7.2.22](/7.2.22)).
 
 Finally, positioning does not require every nucleosome to be placed by sequence or by a remodeler. Kornberg and Stryer (1988) pointed out that a barrier is enough.
 
