@@ -6583,3 +6583,38 @@ terms:
   - { zh: ω 氧化, en: ω oxidation, aliases: [omega oxidation] }
   - { zh: 酮体, en: ketone bodies, aliases: [ketone body] }
   - { zh: 酮症, en: ketosis }
+  - { zh: 信使 RNA, en: messenger RNA, aliases: [mRNA] }
+  - { zh: 遗传密码, en: genetic code }
+  - { zh: 密码子, en: codon, aliases: [codons] }
+  - { zh: 阅读框, en: reading frame, aliases: [读码框] }
+  - { zh: 终止密码子, en: stop codon, aliases: [nonsense codon, termination codon, 无义密码子] }
+  - { zh: 起始密码子, en: start codon, aliases: [initiation codon] }
+  - { zh: 同义密码子, en: synonymous codon }
+  - { zh: 转运 RNA, en: transfer RNA, aliases: [tRNA] }
+  - { zh: 反密码子, en: anticodon }
+  - { zh: 摆动假说, en: wobble hypothesis, aliases: [wobble] }
+  - { zh: 氨酰-tRNA 合成酶, en: aminoacyl-tRNA synthetase, aliases: [aaRS] }
+  - { zh: 双筛机制, en: double-sieve mechanism, aliases: [双筛校对, double sieve] }
+  - { zh: 核糖体, en: ribosome }
+  - { zh: 肽基转移酶中心, en: peptidyl transferase center, aliases: [PTC, 肽酰转移酶中心] }
+  - { zh: 多聚核糖体, en: polysome, aliases: [polyribosome, 多核糖体] }
+  - { zh: 起始因子, en: initiation factor, aliases: [翻译起始因子] }
+  - { zh: 延伸因子, en: elongation factor }
+  - { zh: 释放因子, en: release factor, aliases: [终止因子] }
+  - { zh: Shine–Dalgarno 序列, en: Shine–Dalgarno sequence, aliases: [SD 序列, SD sequence] }
+  - { zh: 扫描模型, en: scanning model }
+  - { zh: Kozak 序列, en: Kozak sequence }
+  - { zh: 核糖体易位, en: ribosomal translocation, aliases: [易位] }
+  - { zh: 信号序列, en: signal sequence, aliases: [信号肽, signal peptide] }
+  - { zh: 信号识别颗粒, en: signal recognition particle, aliases: [SRP] }
+  - { zh: RNA 温度计, en: RNA thermometer }
+  - { zh: 反式翻译, en: trans-translation }
+  - { zh: 整合应激反应, en: integrated stress response, aliases: [ISR] }
+  - { zh: eIF4E 结合蛋白, en: eIF4E-binding protein, aliases: [4E-BP, 4E-BPs] }
+  - { zh: 上游开放阅读框, en: upstream open reading frame, aliases: [uORF] }
+  - { zh: 再起始, en: reinitiation }
+  - { zh: 内部核糖体进入位点, en: internal ribosome entry site, aliases: [IRES] }
+  - { zh: 泛素–蛋白酶体系统, en: ubiquitin–proteasome system, aliases: [UPS] }
+  - { zh: 降解决定子, en: degron, aliases: [degrons] }
+  - { zh: N 端降解决定子, en: N-degron, aliases: [N-end rule, N 端规则] }
+  - { zh: 简并性, en: degeneracy, aliases: [密码子简并性], scope: ["7"] }
