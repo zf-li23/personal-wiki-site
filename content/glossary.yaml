@@ -6546,3 +6546,40 @@ terms:
   - { zh: 表观遗传学, en: epigenetics, aliases: [表观遗传] }
   - { zh: 组蛋白密码, en: histone code, aliases: [组蛋白密码假说, histone code hypothesis] }
   - { zh: 绝缘子, en: insulator, aliases: [insulators, 隔离子], scope: ["7"] }
+  - { zh: 糖异生, en: gluconeogenesis, aliases: [糖异生作用] }
+  - { zh: 甘油异生, en: glyceroneogenesis }
+  - { zh: Cori 循环, en: Cori cycle, aliases: [乳酸循环, 科里循环] }
+  - { zh: 交互调节, en: reciprocal regulation, aliases: [相互调节] }
+  - { zh: 葡萄糖激酶, en: glucokinase, aliases: [hexokinase IV, 己糖激酶 IV] }
+  - { zh: "果糖-2,6-二磷酸", en: "fructose 2,6-bisphosphate", aliases: ["F2,6BP", F26BP, "2,6-二磷酸果糖"] }
+  - { zh: 磷酸解, en: phosphorolysis }
+  - { zh: 糖原磷酸化酶, en: glycogen phosphorylase }
+  - { zh: 脱支酶, en: debranching enzyme }
+  - { zh: 糖原贮积病, en: glycogen storage disease, aliases: [glycogen storage diseases, 糖原累积病] }
+  - { zh: 糖核苷酸, en: sugar nucleotide, aliases: [sugar nucleotides, 核苷二磷酸糖] }
+  - { zh: 糖原合酶, en: glycogen synthase }
+  - { zh: 分支酶, en: branching enzyme, aliases: [glycogen-branching enzyme] }
+  - { zh: 糖原蛋白, en: glycogenin, aliases: [生糖原蛋白] }
+  - { zh: 磷酸化酶激酶, en: phosphorylase kinase, aliases: [phosphorylase b kinase] }
+  - { zh: 糖原合酶激酶 3, en: glycogen synthase kinase 3, aliases: [GSK3] }
+  - { zh: 细胞呼吸, en: cellular respiration }
+  - { zh: 丙酮酸脱氢酶复合体, en: pyruvate dehydrogenase complex, aliases: [PDH complex, 丙酮酸脱氢酶复合物] }
+  - { zh: 底物通道, en: substrate channeling, aliases: [底物通道作用] }
+  - { zh: 柠檬酸循环, en: citric acid cycle, aliases: [三羧酸循环, tricarboxylic acid cycle, TCA cycle, Krebs cycle, Krebs 循环] }
+  - { zh: 两用代谢途径, en: amphibolic pathway, aliases: [两用途径] }
+  - { zh: 回补反应, en: anaplerotic reaction, aliases: [anaplerotic reactions, anaplerosis] }
+  - { zh: 代谢区室, en: metabolon, aliases: [代谢子] }
+  - { zh: 兼职蛋白, en: moonlighting protein, aliases: [moonlighting proteins, moonlighting enzyme] }
+  - { zh: 致癌代谢物, en: oncometabolite, aliases: [oncometabolites, 肿瘤代谢物] }
+  - { zh: 乙醛酸循环, en: glyoxylate cycle }
+  - { zh: 乳糜微粒, en: chylomicron, aliases: [chylomicrons] }
+  - { zh: 脂蛋白脂肪酶, en: lipoprotein lipase }
+  - { zh: 激素敏感脂肪酶, en: hormone-sensitive lipase, aliases: [HSL] }
+  - { zh: 肉碱穿梭, en: carnitine shuttle }
+  - { zh: β 氧化, en: β oxidation, aliases: [beta oxidation, β-氧化] }
+  - { zh: 三功能蛋白, en: trifunctional protein }
+  - { zh: 甲基丙二酰 CoA 变位酶, en: methylmalonyl-CoA mutase }
+  - { zh: α 氧化, en: α oxidation, aliases: [alpha oxidation] }
+  - { zh: ω 氧化, en: ω oxidation, aliases: [omega oxidation] }
+  - { zh: 酮体, en: ketone bodies, aliases: [ketone body] }
+  - { zh: 酮症, en: ketosis }
