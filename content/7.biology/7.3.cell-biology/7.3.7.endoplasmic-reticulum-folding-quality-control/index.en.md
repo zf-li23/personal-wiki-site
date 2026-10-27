@@ -11,11 +11,13 @@ The endoplasmic reticulum is the entry point of the secretory pathway and the la
 
 **Definition 7.1.1 (Endoplasmic Reticulum)** The **endoplasmic reticulum** (ER) is a continuous network of membrane tubules and flattened sacs (cisternae) that extends from the nuclear envelope through the cytoplasm. It encloses a single internal space, the ER lumen, which is continuous with the perinuclear space between the two nuclear membranes.
 
-The ER membrane is typically more than half of all membrane of an animal cell, and the lumen can take more than 10 % of the cell volume. Because the network reaches every region of the cytoplasm, almost no point of the cytosol is more than a micrometer away from ER membrane, and the ER is the natural hub for contacts with other organelles (7.6.2).
+The ER was among the first structures revealed by electron microscopy of whole cells: Keith Porter, Albert Claude and Ernest Fullam (1945) saw a lacelike network in thin, spread cultured chick-embryo fibroblasts, and Porter named it the endoplasmic reticulum in the early 1950s because it was concentrated in the inner ("endoplasmic") region of the cytoplasm. The ER membrane is typically more than half of all membrane of an animal cell, and the lumen can take more than 10 % of the cell volume. Because the network reaches every region of the cytoplasm, almost no point of the cytosol is more than a micrometer away from ER membrane, and the ER is the natural hub for contacts with other organelles (7.6.2).
 
 **Definition 7.1.2** The **rough endoplasmic reticulum** (rough ER) is the region of the ER whose cytosolic surface is studded with ribosomes synthesizing proteins that are translocated into or across its membrane; it is mostly organized as stacked sheets. The **smooth endoplasmic reticulum** (smooth ER) lacks bound ribosomes, is mostly tubular, and carries out lipid synthesis and metabolism, detoxification and $\ce{Ca^2+}$ storage. Small ribosome-free patches of the rough ER from which transport vesicles bud are called ER exit sites (transitional ER).
 
 Ribosomes are not permanent parts of the rough ER. A ribosome is attached only while it translates an mRNA whose product has been targeted to the Sec61 translocon; after termination the subunits are released, and the same ribosome may next translate a cytosolic protein. A **polysome** on the rough ER is therefore a single mRNA held to the membrane by several nascent chains, each passing through its own translocon.
+
+Which proteins are made on the rough ER follows from the sorting rules of [7.3.6](/7.3.6): secreted proteins (antibodies, hormones, digestive enzymes, matrix proteins); integral membrane proteins of the plasma membrane and of the ER, Golgi apparatus, endosomes and lysosomes; and soluble resident proteins of these compartments, including the lysosomal hydrolases, which must be kept apart from the cytosol. Proteins of the cytosol, nucleus, mitochondria, plastids and peroxisomes are completed on free ribosomes and, where they leave the cytosol, are imported posttranslationally. Many ER-made proteins are also glycosylated (7.2.1), but glycosylation is a consequence of entering the ER, not a reason for it.
 
 The proportions of the two kinds of ER follow the specialization of the cell (MBoC 7e, Table 12–2):
 
@@ -34,6 +36,8 @@ Such numbers are a first example of how a cell sizes its organelles to the flux 
 **Definition 7.1.3 (Microsome)** A **microsome** is a small closed vesicle, roughly 100–200 nm across, formed when cells are homogenized and pieces of ER (and of other membranes, mainly Golgi) break up and reseal. Rough microsomes carry ribosomes on their outer surface, which corresponds to the cytosolic face of the ER; smooth microsomes carry none.
 
 Microsomes do not exist in living cells, but they keep the topology and much of the activity of the ER: their lumen corresponds to the ER lumen, and they continue to translocate, glycosylate and fold proteins. Because ribosomes contain much RNA and are dense, rough microsomes are denser than smooth ones and the two are separated by equilibrium centrifugation in a sucrose gradient (cell fractionation, [7.3.3](/7.3.3)). Rough microsomes were the key reagent of the signal hypothesis. Milstein and colleagues (1972) found that immunoglobulin light chains translated in a cell-free system without microsomes were longer than the secreted chains; Blobel and Dobberstein (1975) showed that adding rough microsomes during translation, but not after it, removed the extra N-terminal segment and made the chain resistant to added protease, that is, sequestered inside the microsomal lumen. The protease-protection assay is still the standard test of whether a protein has crossed a membrane ([7.3.6](/7.3.6)).
+
+In fractionation the microsomal fraction is followed by marker enzymes: glucose 6-phosphatase (7.5.2), the classical marker of the ER since de Duve's work on liver, and NADPH–cytochrome P-450 reductase; the ribophorins, subunits of oligosaccharyltransferase (Definition 7.2.2), are found only in rough microsomes. The ER membrane is relatively rich in protein (roughly 60–70 % of its mass) and its lipids are mostly phosphatidylcholine and phosphatidylethanolamine, with little sphingomyelin and cholesterol (7.5.1); it is thinner and more loosely packed than the plasma membrane, a difference that the Golgi apparatus bridges step by step ([7.3.9](/7.3.9)).
 
 ## 7.2. Modification of New Proteins in the Lumen
 
@@ -69,9 +73,23 @@ The lumen also contains peptidyl-prolyl *cis–trans* isomerases and the chapero
 
 Some proteins are cleaved, immediately after translocation, from a C-terminal hydrophobic segment that held them in the membrane, and are attached instead to a preassembled glycosylphosphatidylinositol (GPI) lipid by a transamidase in the ER. The protein then hangs from the lumenal leaflet by two fatty acid chains, which end up in the outer leaflet of the plasma membrane. GPI-anchored proteins are concentrated in **lipid rafts**, are sorted to the apical surface of many epithelia ([7.3.9](/7.3.9)) and can be released from the cell surface by a phospholipase. The signal for GPI addition and its topology are described with the other membrane-protein topologies in [7.3.6](/7.3.6).
 
+### 7.2.4. Other Modifications
+
+Several further modifications are made during or soon after translocation:
+
+| Modification | Enzyme and site | Example |
+|---|---|---|
+| Removal of the signal peptide | signal peptidase complex, lumenal active site, cotranslational | almost all secretory proteins; preproinsulin → proinsulin ([7.3.9](/7.3.9)) |
+| Hydroxylation of Pro and Lys | prolyl 4-hydroxylase (whose β subunit is PDI) and lysyl hydroxylase, in the lumen; need $\ce{Fe^2+}$, $\ce{O2}$, α-ketoglutarate and ascorbate | collagen: hydroxyproline stabilizes the triple helix, hydroxylysine carries O-linked Gal–Glc; scurvy from vitamin C deficiency ([7.3.23](/7.3.23)) |
+| γ-Carboxylation of Glu | vitamin K-dependent carboxylase of the ER membrane | clotting factors II, VII, IX and X; inhibited indirectly by warfarin |
+| Fatty acylation | palmitoyl transferases (DHHC family) on the cytosolic face of the ER and Golgi | palmitoylated cysteines of membrane proteins such as SNAP-25 ([7.3.8](/7.3.8)) |
+| Assembly of oligomers | chaperones and folding enzymes of 7.3.1 | antibodies, collagen trimers, MHC class I |
+
+None of these needs a template, and like N-glycosylation they mark proteins as having passed through the lumen; several (hydroxylation of collagen, disulfide formation) are also conditions for the protein to fold and leave.
+
 ## 7.3. Quality Control
 
-Many newly made proteins fail to fold: estimates range from a few percent to more than half for large multidomain or multisubunit proteins. The ER keeps such proteins from leaving, gives them repeated chances to fold, and eventually destroys those that do not. This system must solve a problem of measurement: a folding intermediate and a terminally misfolded protein look alike at any instant, and only the time spent in the ER distinguishes them.
+Many newly made proteins fail to fold: estimates range from a few percent to more than half for large multidomain or multisubunit proteins. In classical pulse–chase experiments, most newly made subunits of the T-cell receptor and of the muscle acetylcholine receptor never assembled and were degraded within the ER system without reaching the cell surface; the degradation is by ERAD and the proteasome (7.3.2), not by lysosomes, as was once assumed. The ER keeps such proteins from leaving, gives them repeated chances to fold, and eventually destroys those that do not. This system must solve a problem of measurement: a folding intermediate and a terminally misfolded protein look alike at any instant, and only the time spent in the ER distinguishes them.
 
 ### 7.3.1. BiP and the Lectin Chaperones
 
@@ -233,7 +251,7 @@ Bridge-like proteins of the VPS13 and ATG2 family form long hydrophobic grooves 
 ## Summary
 
 - The ER (Definition 7.1.1) is a single continuous membrane with one lumen. Rough ER (Definition 7.1.2) with bound ribosomes makes secretory and membrane proteins; smooth ER makes lipids, detoxifies, releases glucose and stores $\ce{Ca^2+}$; their proportions match the specialization of the cell. Microsomes (Definition 7.1.3) keep its topology and activities and made the signal hypothesis testable.
-- Lumenal modifications: the N-glycan precursor $\mathrm{Glc_3Man_9GlcNAc_2}$ is built on dolichol (Definition 7.2.1) on both faces of the membrane and transferred en bloc by oligosaccharyltransferase (Definition 7.2.2) to Asn–X–Ser/Thr; PDI and Ero1 form and shuffle disulfides in the oxidizing lumen; GPI anchors replace C-terminal membrane anchors.
+- Lumenal modifications: the N-glycan precursor $\mathrm{Glc_3Man_9GlcNAc_2}$ is built on dolichol (Definition 7.2.1) on both faces of the membrane and transferred en bloc by oligosaccharyltransferase (Definition 7.2.2) to Asn–X–Ser/Thr; PDI and Ero1 form and shuffle disulfides in the oxidizing lumen; GPI anchors replace C-terminal membrane anchors; signal peptide removal, prolyl and lysyl hydroxylation, γ-carboxylation and palmitoylation complete the set. Glucose 6-phosphatase marks the ER in fractionation, ribophorins the rough ER.
 - Quality control: BiP binds hydrophobic segments; in the calnexin cycle (Definition 7.3.1) glucose trimming and UGGT reglucosylation translate folding state into a glycan mark; mannose trimming is the timer that sends terminally misfolded proteins to ERAD (Definition 7.3.2): recognition, retrotranslocation through Hrd1, ubiquitination, extraction by p97, proteasomal degradation. Folding success is a race, $k_{\mathrm{f}}/(k_{\mathrm{f}} + k_{\mathrm{m}})$; ΔF508-CFTR and α1-antitrypsin Z show the two failure modes.
 - The UPR (Definition 7.4.1) senses the ratio of unfolded clients to free BiP:
 

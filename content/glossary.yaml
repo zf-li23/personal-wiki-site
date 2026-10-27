@@ -7378,3 +7378,4 @@ terms:
   - { zh: 合成致死, en: synthetic lethality, aliases: [synthetically lethal] }
   - { zh: 免疫检查点阻断, en: immune checkpoint blockade, aliases: [checkpoint blockade, 免疫检查点抑制] }
   - { zh: 耐药性, en: drug resistance, aliases: [抗药性], scope: ["7"] }
+  - { zh: 分泌颗粒自噬, en: crinophagy }
