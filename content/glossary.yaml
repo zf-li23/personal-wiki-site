@@ -6852,3 +6852,70 @@ terms:
   - { zh: 噬菌体展示, en: phage display }
   - { zh: 基因敲除小鼠, en: knockout mouse, aliases: [knockout mice] }
   - { zh: 条件性敲除, en: conditional knockout, aliases: [Cre–loxP system, Cre-loxP] }
+  - { zh: 内吞作用, en: endocytosis, aliases: [胞吞作用] }
+  - { zh: 胞饮作用, en: pinocytosis }
+  - { zh: 吞噬作用, en: phagocytosis }
+  - { zh: 吞噬体, en: phagosome }
+  - { zh: 巨胞饮作用, en: macropinocytosis, aliases: [巨胞饮] }
+  - { zh: 网格蛋白有被小窝, en: clathrin-coated pit, aliases: [clathrin-coated pits, 有被小窝] }
+  - { zh: 小窝, en: caveola, aliases: [caveolae, 质膜微囊] }
+  - { zh: 受体介导的内吞作用, en: receptor-mediated endocytosis }
+  - { zh: 家族性高胆固醇血症, en: familial hypercholesterolemia, aliases: [FH] }
+  - { zh: 内体, en: endosome, aliases: [endosomes, 内吞体] }
+  - { zh: 早期内体, en: early endosome, aliases: [early endosomes] }
+  - { zh: 晚期内体, en: late endosome, aliases: [late endosomes] }
+  - { zh: 循环内体, en: recycling endosome, aliases: [recycling endosomes, 再循环内体] }
+  - { zh: 内体成熟, en: endosome maturation }
+  - { zh: 多泡体, en: multivesicular body, aliases: [multivesicular bodies, MVB] }
+  - { zh: ESCRT 复合体, en: ESCRT, aliases: [endosomal sorting complexes required for transport] }
+  - { zh: 胞外囊泡, en: extracellular vesicle, aliases: [extracellular vesicles, 细胞外囊泡] }
+  - { zh: 外泌体, en: exosome, aliases: [exosomes] }
+  - { zh: 跨细胞转运, en: transcytosis, aliases: [转胞吞作用] }
+  - { zh: 受体下调, en: receptor down-regulation }
+  - { zh: 溶酶体, en: lysosome, aliases: [lysosomes] }
+  - { zh: 酸性水解酶, en: acid hydrolase, aliases: [acid hydrolases] }
+  - { zh: 甘露糖-6-磷酸, en: mannose 6-phosphate, aliases: [M6P] }
+  - { zh: 甘露糖-6-磷酸受体, en: mannose 6-phosphate receptor, aliases: [mannose 6-phosphate receptors, M6P receptor, MPR] }
+  - { zh: I 细胞病, en: I-cell disease, aliases: [inclusion-cell disease, mucolipidosis II, 黏脂贮积症 II 型] }
+  - { zh: TFEB, en: TFEB, aliases: [transcription factor EB] }
+  - { zh: 溶酶体贮积症, en: lysosomal storage disease, aliases: [lysosomal storage diseases, 溶酶体贮积病] }
+  - { zh: 液泡, en: vacuole, aliases: [vacuoles], scope: ["7"] }
+  - { zh: 自噬, en: autophagy, aliases: [细胞自噬] }
+  - { zh: 巨自噬, en: macroautophagy, aliases: [宏自噬] }
+  - { zh: 微自噬, en: microautophagy }
+  - { zh: 分子伴侣介导的自噬, en: chaperone-mediated autophagy, aliases: [CMA] }
+  - { zh: 吞噬泡, en: phagophore, aliases: [isolation membrane, 隔离膜] }
+  - { zh: 自噬体, en: autophagosome, aliases: [autophagosomes] }
+  - { zh: 自噬溶酶体, en: autolysosome, aliases: [autolysosomes] }
+  - { zh: ATG 蛋白, en: ATG protein, aliases: [ATG proteins, 自噬相关蛋白] }
+  - { zh: LC3, en: LC3, aliases: [LC3-II, ATG8] }
+  - { zh: 自噬流, en: autophagic flux }
+  - { zh: 选择性自噬, en: selective autophagy }
+  - { zh: 自噬受体, en: autophagy receptor, aliases: [autophagy receptors] }
+  - { zh: 线粒体自噬, en: mitophagy }
+  - { zh: PINK1, en: PINK1, aliases: [PTEN-induced kinase 1] }
+  - { zh: Parkin, en: Parkin }
+  - { zh: 聚集体自噬, en: aggrephagy }
+  - { zh: 线粒体, en: mitochondrion, aliases: [mitochondria] }
+  - { zh: 膜间隙, en: intermembrane space, aliases: [膜间腔] }
+  - { zh: 线粒体基质, en: mitochondrial matrix }
+  - { zh: 嵴, en: crista, aliases: [cristae, 线粒体嵴] }
+  - { zh: 嵴连接, en: crista junction, aliases: [cristae junction, crista junctions] }
+  - { zh: MICOS, en: MICOS, aliases: [mitochondrial contact site and cristae organizing system] }
+  - { zh: 线粒体融合, en: mitochondrial fusion }
+  - { zh: 线粒体融合蛋白, en: mitofusin, aliases: [mitofusins, Mfn] }
+  - { zh: OPA1, en: OPA1 }
+  - { zh: 线粒体分裂, en: mitochondrial fission }
+  - { zh: Drp1, en: Drp1, aliases: [dynamin-related protein 1] }
+  - { zh: ERMES, en: ERMES, aliases: [ER–mitochondria encounter structure] }
+  - { zh: 半自主性细胞器, en: semiautonomous organelle, aliases: [semiautonomous organelles] }
+  - { zh: 线粒体 DNA, en: mitochondrial DNA, aliases: [mtDNA] }
+  - { zh: 母系遗传, en: maternal inheritance, aliases: [母性遗传] }
+  - { zh: 线粒体瓶颈, en: mitochondrial bottleneck, aliases: [mtDNA bottleneck] }
+  - { zh: 质体, en: plastid, aliases: [plastids] }
+  - { zh: 前质体, en: proplastid, aliases: [proplastids, 原质体] }
+  - { zh: 叶绿体, en: chloroplast, aliases: [chloroplasts] }
+  - { zh: 黄化质体, en: etioplast, aliases: [etioplasts] }
+  - { zh: 淀粉体, en: amyloplast, aliases: [amyloplasts] }
+  - { zh: 有色体, en: chromoplast, aliases: [chromoplasts] }
+  - { zh: 逆向信号, en: retrograde signaling, aliases: [逆行信号], scope: ["7"] }

@@ -1,3 +1,275 @@
 ---
 title: Endocytosis and the Endosomal System
+description: Routes of entry into the cell (phagocytosis, macropinocytosis, clathrin-mediated endocytosis, caveolae and clathrin-independent carriers); receptor-mediated endocytosis, LDL and familial hypercholesterolemia, the transferrin cycle; early, late and recycling endosomes, maturation and pH-dependent sorting; multivesicular bodies, ESCRT and exosomes; the fates of internalized receptors, a kinetic model of receptor traffic, down-regulation and signaling; endocytosis in polarized cells.
 ---
+
+The secretory pathway of the two preceding chapters carries membrane and proteins outward; endocytosis carries them inward. A cultured fibroblast internalizes the equivalent of its whole plasma membrane in about two hours and returns almost all of it, so the surface is not a fixed boundary but the steady state of two opposed fluxes. By adjusting these fluxes the cell decides which nutrients it takes up, how many receptors it displays and for how long a signal lasts. This chapter follows material from the plasma membrane into the endosomal system, the set of sorting compartments where internalized molecules are either recycled or committed to degradation. The coats, Rab GTPases and SNAREs that build and target the carriers were introduced in [7.3.8](/7.3.8); the lysosomes in which the degradative branch ends are the subject of [7.3.11](/7.3.11); the molecular biology of cholesterol uptake was treated in [7.1.26](/7.1.26#sec-26.5.5), and here we look at the cell biology behind it. Throughout, sorting turns out to depend on a few physical variables, mainly pH, membrane geometry and residence time, and several steps can be written as simple kinetic models.
+
+## 10.1. Routes into the Cell
+
+### 10.1.1. Eating and Drinking
+
+**Definition 10.1.1 (Endocytosis)** **Endocytosis** is the uptake of extracellular material, membrane proteins and lipids into the cell by invagination of a region of the plasma membrane and its scission into an intracellular membrane-enclosed carrier. Uptake of fluid and solutes in small vesicles, which nearly all eukaryotic cells perform continuously, is **pinocytosis** ("cell drinking"); uptake of large particles in large vesicles, which specialized cells perform when triggered, is phagocytosis ("cell eating", Definition 10.1.2).
+
+The scale is large. A macrophage takes up a quarter of its own volume of fluid per hour, which means internalizing about 3% of its plasma membrane per minute; a fibroblast internalizes about 1% per minute. Because surface area and cell volume stay constant, the same amount of membrane is returned by exocytosis: endocytosis and exocytosis form an endocytic–exocytic cycle. The cycle is tightest at nerve terminals, where every fused synaptic vesicle must be retrieved within seconds (10.1.5).
+
+**Example 10.1.1 (Membrane budget of clathrin-coated vesicles)** About 2500 clathrin-coated vesicles leave the plasma membrane of a cultured fibroblast per minute. A vesicle of outer diameter about 100 nm has a membrane area of $\pi d^2 \approx 0.03\,\mu\mathrm{m^2}$, so these vesicles remove about $2500 \times 0.03 \approx 80\,\mu\mathrm{m^2}$ per minute. A spread fibroblast has a surface of a few thousand $\mu\mathrm{m^2}$; the clathrin pathway alone therefore accounts for roughly 2–3% of the surface per minute, the same order as the measured total. The internal volume of each vesicle is small, $\frac{\pi}{6}(0.07\,\mu\mathrm{m})^3 \approx 1.8 \times 10^{-4}\,\mu\mathrm{m^3}$ for a lumen of 70 nm, so 2500 vesicles take up less than $0.5\,\mu\mathrm{m^3}$ (half a femtoliter) of fluid per minute. Clathrin-coated vesicles move a great deal of membrane and very little volume: they are designed to capture membrane receptors, not fluid.
+
+![Routes into an animal cell and the endosomal system (schematic, not to scale; cytosol below, extracellular space above). Five routes of internalization: phagocytosis of a bacterium by a cup of pseudopods, which closes into a phagosome; macropinocytosis, in which a membrane ruffle folds back and traps extracellular fluid in a macropinosome; clathrin-mediated endocytosis from a coated pit (green coat), with dynamin cutting the neck; caveolae (yellow coat of caveolin and cavin), flask-shaped invaginations that occasionally pinch off; and clathrin-independent tubular carriers (CLIC), which feed the GPI-anchored-protein-enriched early endosomal compartment (GEEC). The early endosome, a vacuolar body with tubular extensions, returns membrane to the surface directly (fast recycling) or through the recycling endosome (slow recycling, transcytosis), and matures while moving along microtubules into a late endosome or multivesicular body, which fuses with lysosomes; phagosomes and macropinosomes also end in lysosomes. The trans-Golgi network delivers acid hydrolases and V-type ATPases to early and late endosomes and receives the mannose 6-phosphate receptors back. The Rab proteins and phosphoinositides that mark each compartment and its typical lumenal pH are given](./plots/endocytic-routes.py)
+
+The routes differ in size, machinery and purpose:
+
+| Route | Carrier size | Coat or driving machinery | Trigger | Main cargo |
+|---|---|---|---|---|
+| Phagocytosis | > 0.5 µm, up to the size of the cell | actin, Rho GTPases, phosphoinositides | particle binding to receptors | microbes, dead cells, debris |
+| Macropinocytosis | 0.2–5 µm | actin ruffles, Ras, PI3K | growth factors, Ras activation | bulk fluid, nutrients |
+| Clathrin-mediated | 60–120 nm | clathrin, AP2, dynamin | constitutive; ligand-induced for some receptors | receptors and ligands, nutrients |
+| Caveolae | 50–80 nm | caveolin, cavin, EHD2 | mostly static; mechanical stress flattens them | GPI-anchored proteins, some toxins and viruses (SV40), albumin across endothelium |
+| CLIC/GEEC | tubules, 40 nm wide | Cdc42, Arf1, GRAF1 | constitutive, high capacity in fibroblasts | fluid, GPI-anchored proteins, CD44 |
+| Fast endophilin-mediated (FEME) | tubulovesicles | endophilin, dynamin | ligand-activated receptors (β₁-adrenergic receptor) | activated GPCRs |
+
+### 10.1.2. Phagocytosis
+
+**Definition 10.1.2 (Phagocytosis)** **Phagocytosis** is the receptor-triggered, actin-driven engulfment of a particle larger than about 0.5 µm, in which pseudopods extend around the particle and fuse at their tips to enclose it in a **phagosome**; the phagosome matures and fuses with lysosomes to form a phagolysosome in which the particle is digested.
+
+In protozoa phagocytosis is feeding. In animals it is mainly defense and clearance, carried out by professional phagocytes, macrophages and neutrophils (and dendritic cells), which derive from hematopoietic stem cells. In quantitative terms clearance dominates: our macrophages ingest more than $10^{11}$ senescent red blood cells every day. Phagocytosis is triggered by binding: the particle must be recognized by receptors that signal to the actin cytoskeleton.
+
+- Fc receptors bind the constant region of **antibodies** that coat a microbe (opsonization); complement receptors bind complement fragments deposited on it; other receptors (mannose receptor, Dectin-1) bind microbial glycans directly.
+- Apoptotic cells expose phosphatidylserine on their outer leaflet ("eat me"), which receptors such as TIM4 and MerTK recognize, directly or through bridging proteins ([7.3.25](/7.3.25)).
+- Living cells display "don't eat me" signals, above all CD47, which binds the inhibitory receptor SIRPα on macrophages; SIRPα recruits tyrosine phosphatases that oppose the activating signals. Tumor cells that overexpress CD47 escape phagocytosis, and antibodies that block CD47 are being tested in cancer therapy.
+
+Locally activated Rho family GTPases (Rac, Cdc42) and their **guanine nucleotide-exchange factors** start actin polymerization under the bound particle; PI(4,5)P₂ produced in the cup promotes polymerization, and its conversion to PI(3,4,5)P₃ by **phosphoinositide 3-kinase** at the base of the cup removes actin and allows closure. The ordered production and consumption of phosphoinositides thus sequences the steps of engulfment. Some pathogens subvert the later steps: *Legionella pneumophila* injects an enzyme that modifies Rab proteins and keeps its phagosome from fusing with lysosomes, and *Mycobacterium tuberculosis* blocks phagosome acidification; both then grow inside macrophages.
+
+### 10.1.3. Macropinocytosis
+
+**Definition 10.1.3 (Macropinocytosis)** **Macropinocytosis** is the nonselective uptake of extracellular fluid in large vesicles (macropinosomes, 0.2–5 µm) that form when actin-driven ruffles of the plasma membrane fold back and fuse with the membrane, trapping the fluid between them.
+
+In most cells macropinocytosis is induced, for minutes, by growth factors, and it can raise bulk fluid uptake tenfold. Macropinosomes acidify and fuse with late endosomes and lysosomes without recycling their content: the pathway is degradative. Cancer cells with oncogenic Ras macropinocytose constitutively and digest the extracellular protein they take up (mainly albumin) in lysosomes, which supplies amino acids when glutamine is scarce in the poorly vascularized tumor; this nutrient scavenging is inhibited by blockers of $\ce{Na+}/\ce{H+}$ exchange such as EIPA, which acidify the submembrane cytosol and stop ruffling. Dendritic cells macropinocytose continuously to sample the extracellular fluid for antigens (7.15).
+
+### 10.1.4. Clathrin-Mediated Endocytosis
+
+**Definition 10.1.4 (Clathrin-Coated Pit)** A **clathrin-coated pit** is an invagination of the plasma membrane, typically 100–200 nm across, covered on its cytosolic face by a lattice of clathrin triskelions bound to the membrane through the adaptor protein complex AP2 (and other adaptors) that concentrates selected membrane proteins; within about a minute it deepens into a vesicle whose neck is cut by dynamin, and the clathrin-coated vesicle loses its coat within seconds and fuses with early endosomes.
+
+Coated pits occupy about 2% of the plasma membrane. Each passes through a reproducible sequence: nucleation by AP2 and the curvature-sensing proteins FCHo1/2 on PI(4,5)P₂, growth of the clathrin lattice and capture of cargo, deepening, recruitment of dynamin and BAR-domain proteins to the neck, scission, and uncoating by the ATPase Hsc70 with its cofactor auxilin, after the PI(4,5)P₂ phosphatase synaptojanin removes the lipid that holds AP2. About half of the pits that start are aborted, most often when they fail to capture cargo, so cargo loading acts as a checkpoint. The structure of the coat, the assembly of triskelions into cages and the mechanism of dynamin are treated with the other coats in [7.3.8](/7.3.8).
+
+### 10.1.5. Caveolae and Clathrin-Independent Endocytosis
+
+**Definition 10.1.5 (Caveola)** A **caveola** is a flask-shaped invagination of the plasma membrane, 50–80 nm in diameter, enriched in **cholesterol**, sphingolipids and GPI-anchored proteins, whose shape is maintained by oligomers of caveolin, an integral membrane protein inserted as a hairpin into the cytosolic leaflet, and by a cytosolic coat of cavin proteins.
+
+Caveolae are abundant in adipocytes (up to half of their surface), endothelial cells and muscle (where caveolin-3 replaces caveolin-1), and absent from most neurons and lymphocytes. Their membrane composition resembles that of a **lipid raft** ([7.1.13](/7.1.13#sec-13.2.4)). Unlike clathrin-coated pits, most caveolae are long-lived and do not bud. Their main established function is mechanical: under stretch or hypo-osmotic swelling the cavin coat dissociates and the caveolae flatten, adding membrane area and buffering tension; patients and mice lacking cavin-1 or caveolin-3 have muscular dystrophy and lipodystrophy. Some caveolae do pinch off, and endothelial caveolae carry albumin across the endothelium by transcytosis; the simian virus SV40 and cholera toxin (bound to the **ganglioside** GM1) enter partly by this route.
+
+Several other routes do not use clathrin. The CLIC/GEEC pathway forms tubular carriers that take up GPI-anchored proteins and much of the fluid internalized by fibroblasts; fast endophilin-mediated endocytosis internalizes ligand-activated receptors within seconds; and at synapses ultrafast endocytosis retrieves membrane 50–100 ms after vesicle fusion, at the edge of the active zone, followed by slower clathrin-dependent budding from the resulting endosome-like structures. Interference with dynamin blocks most of these routes, which is why the requirement for dynamin is not by itself a diagnostic of the clathrin pathway.
+
+## 10.2. Receptor-Mediated Endocytosis
+
+### 10.2.1. Selective Concentration
+
+**Definition 10.2.1 (Receptor-Mediated Endocytosis)** **Receptor-mediated endocytosis** is the uptake of specific extracellular macromolecules (ligands) after their binding to cell-surface **receptors** that are concentrated in clathrin-coated pits by endocytic signals in their cytosolic tails and internalized together with the bound ligand.
+
+The endocytic signals are short sequences recognized by AP2 or by other clathrin adaptors: tyrosine motifs YXXΦ (Φ a bulky hydrophobic residue; the transferrin receptor) and NPXY (the LDL receptor, read by the adaptors ARH and Dab2), dileucine motifs [DE]XXXL[LI], and mono- or multiubiquitylation, which marks activated signaling receptors (10.5.4). Some receptors enter coated pits whether or not they carry ligand (the LDL and transferrin receptors); others enter only after ligand binding, which changes their conformation or modification (the EGF receptor). More than a hundred receptors of various kinds can share one coated pit, which acts as a molecular filter that collects receptors and excludes most other membrane proteins.
+
+**Example 10.2.1 (How much does a receptor concentrate its ligand?)** Compare uptake of a ligand at a low concentration $c$ by fluid-phase pinocytosis and by receptors. Fluid-phase uptake is $\dot V c$, where $\dot V$ is the volume internalized per unit time. If $R$ unoccupied receptors are on the surface, binding is at equilibrium with dissociation constant $K_{\mathrm{D}}$, and occupied receptors are internalized with rate constant $k_{\mathrm{e}}$, receptor-mediated uptake is $k_{\mathrm{e}} R\, c/(c + K_{\mathrm{D}}) \approx k_{\mathrm{e}} R c / K_{\mathrm{D}}$ for $c \ll K_{\mathrm{D}}$. The ratio is
+$$
+\frac{\text{receptor-mediated uptake}}{\text{fluid-phase uptake}} = \frac{k_{\mathrm{e}} R}{N_{\mathrm{A}} K_{\mathrm{D}} \dot V}.
+$$
+For the LDL receptor of a fibroblast, take $R = 3 \times 10^4$, $K_{\mathrm{D}} = 5\,\mathrm{nM}$ and $k_{\mathrm{e}} = 0.1\,\mathrm{min^{-1}}$: the receptors clear $k_{\mathrm{e}} R/(N_{\mathrm{A}} K_{\mathrm{D}}) = 0.1 \times 3 \times 10^4 / (6.0 \times 10^{23} \times 5 \times 10^{-9})\,\mathrm{L\,min^{-1}} = 1.0 \times 10^{-12}\,\mathrm{L\,min^{-1}}$, the LDL contained in one picoliter per minute. The clathrin vesicles of Example 10.1.1 take up about $5 \times 10^{-16}\,\mathrm{L\,min^{-1}}$ of fluid, so the receptors are about 2000 times more efficient. This is how a cell acquires most of its cholesterol from LDL at nanomolar concentrations.
+
+### 10.2.2. LDL and Familial Hypercholesterolemia
+
+**Low-density lipoprotein** particles, about 22 nm in diameter, carry about 1500 molecules of cholesteryl ester in a core surrounded by a phospholipid monolayer and a single molecule of apolipoprotein B-100, which the **LDL receptor** recognizes ([7.1.26](/7.1.26#sec-26.5.4)). Michael Brown and Joseph Goldstein worked out receptor-mediated endocytosis with cultured skin fibroblasts in the 1970s (Nobel Prize 1985). Their experiments separated the steps by temperature: $^{125}\mathrm{I}$-labeled LDL bound to the surface at $4\,^\circ\mathrm{C}$ without entering; on warming to $37\,^\circ\mathrm{C}$ the bound LDL was internalized within minutes, its protein degraded to $^{125}\mathrm{I}$-tyrosine in lysosomes within an hour, and the released cholesterol suppressed HMG-CoA reductase and the synthesis of new receptors. Electron microscopy with LDL coupled to ferritin showed the receptors clustered in coated pits. An LDL receptor makes a round trip into the cell and back about every 10 minutes, several hundred trips in its life of about 20 hours.
+
+**Definition 10.2.2 (Familial Hypercholesterolemia)** **Familial hypercholesterolemia** (FH) is an inherited, mostly autosomal dominant elevation of plasma LDL cholesterol caused by loss-of-function mutations in the LDL receptor gene (about 90% of cases) or in the genes for apolipoprotein B or the receptor's escort ARH, or by gain-of-function mutations in PCSK9; impaired receptor-mediated uptake of LDL by the liver raises plasma LDL about twofold in heterozygotes and four- to sixfold in homozygotes.
+
+The value of FH for cell biology is that its mutations dissect the life cycle of one receptor. More than 2000 LDL receptor mutations are known; they fall into five classes, each blocking a different step:
+
+| Class | Defect | Cell phenotype |
+|---|---|---|
+| 1 | null: no protein made | no binding of LDL |
+| 2 | transport-defective: receptor misfolded and retained in the ER (complete or partial) | little receptor at the surface; ER-associated degradation |
+| 3 | binding-defective: ligand-binding repeats altered | receptor at the surface, LDL binds poorly |
+| 4 | internalization-defective: NPXY signal in the cytosolic tail mutated | LDL binds but stays at the surface; receptors spread over the membrane, outside coated pits |
+| 5 | recycling-defective: β-propeller of the EGF-precursor domain altered | receptor cannot release LDL in the endosome and is degraded with it |
+
+Class 4 was decisive. The fibroblasts of the patient J.D. bound normal amounts of LDL but did not internalize it, and his receptors were scattered over the surface instead of being concentrated in coated pits; the mutation, a Tyr to Cys substitution in the cytosolic tail, identified the NPXY motif as an endocytic signal and proved that coated pits are the route of entry. Heterozygous FH affects about 1 in 250 to 1 in 300 people; it is treated by drugs that raise the number of hepatic LDL receptors (statins, PCSK9 inhibitors; [7.1.26](/7.1.26#sec-26.5.7)). PCSK9 is itself a sorting factor: it binds the receptor at the surface, stays bound at endosomal pH and diverts the receptor to lysosomes instead of recycling.
+
+### 10.2.3. Transferrin and Iron
+
+Iron circulates bound to transferrin (Tf), a plasma glycoprotein with two $\ce{Fe^3+}$-binding sites. Diferric transferrin binds the transferrin receptor TfR1, a disulfide-linked homodimer, with a dissociation constant of a few nanomolar at pH 7.4; iron-free apotransferrin hardly binds at neutral pH. The receptor enters coated pits constitutively through a YXXΦ-type signal. In the early endosome, at pH near 6, the receptor-bound transferrin releases its iron; the $\ce{Fe^3+}$ is reduced by the ferrireductase STEAP3 and carried into the cytosol by the proton-coupled transporter DMT1. Apotransferrin, unlike most ligands, binds the receptor more tightly at acidic pH and stays on it; the complex returns to the surface, where at pH 7.4 apotransferrin falls off and can load iron again. The ligand is recycled together with its receptor, and the whole cycle takes about 10–15 minutes; fluorescent transferrin is therefore the standard marker of the recycling pathway.
+
+The supply of receptors is matched to need by post-transcriptional control. When cytosolic iron is low, iron regulatory proteins bind the **iron-responsive elements** in the 3′ untranslated region of the TfR1 mRNA and protect it from degradation, so more receptors are made, while binding to the 5′ element of ferritin mRNA blocks the synthesis of the iron-storage protein ([7.2.18](/7.2.18), [7.2.20](/7.2.20)). Rapidly dividing cells, which need iron for ribonucleotide reductase and heme, express many receptors; anti-TfR antibodies are used to deliver drugs across the blood–brain barrier by transcytosis through endothelial cells.
+
+![The transferrin cycle and pH-dependent sorting. A: diferric transferrin (two Fe³⁺, red dots) binds the transferrin receptor dimer at pH 7.4 (1) and enters in a clathrin-coated vesicle (2); in the early endosome, at pH about 6, iron is released and, after reduction to Fe²⁺ by STEAP3, crosses into the cytosol through DMT1, while apotransferrin stays bound to the receptor (3); the complex returns through the recycling endosome (4), and at the neutral pH of the extracellular fluid apotransferrin dissociates (5). B: fraction of ligand bound as a function of pH (illustrative Hill-type curves with midpoints in the published ranges) for iron on receptor-bound and on free transferrin (the receptor promotes release at a higher pH), apotransferrin on the receptor (bound at acidic pH, released at neutral pH), LDL on the LDL receptor, mannose 6-phosphate-bearing hydrolases on their receptor, and EGF on its receptor (released only at late-endosomal pH); shaded bands are the typical pH ranges of the plasma, early and late endosomes and lysosomes. The order of the midpoints is the order in which ligands leave their receptors along the pathway](./plots/transferrin-ph.py)
+
+## 10.3. The Endosomal System
+
+### 10.3.1. Early, Late and Recycling Endosomes
+
+**Definition 10.3.1 (Endosomes)** **Endosomes** are the membrane-enclosed compartments that receive material internalized by endocytosis and sort it. The **early endosome**, near the cell periphery, is the first compartment reached by endocytic vesicles, a vacuolar body of about 0.3–1 µm with tubular extensions, marked by the GTPase Rab5, its effector EEA1 and the lipid PI(3)P, with a lumenal pH of 6.0–6.5. The **recycling endosome** is a perinuclear collection of tubules, marked by Rab11, through which receptors return slowly to the plasma membrane or are stored. The **late endosome** is a larger, multivesicular, perinuclear compartment marked by Rab7 and PI(3,5)P₂, with a lumenal pH of 5.0–6.0, that receives lysosomal hydrolases from the trans-Golgi network and fuses with lysosomes.
+
+| Property | Early endosome | Recycling endosome | Late endosome (MVB) | Lysosome ([7.3.11](/7.3.11)) |
+|---|---|---|---|---|
+| Location | periphery | perinuclear, near the centrosome | perinuclear | perinuclear and peripheral |
+| Reached after uptake | 1–5 min | 5–15 min | 10–30 min | > 30 min |
+| Rab, lipid | Rab5, Rab4; PI(3)P | Rab11, Rab4 | Rab7, Rab9; PI(3,5)P₂ | Rab7, Arl8 |
+| Tethering complex | CORVET, EEA1 | exocyst (at the surface) | HOPS | HOPS |
+| pH | 6.0–6.5 | about 6.5 | 5.0–6.0 | 4.5–5.0 |
+| Content | receptors and ligands, few hydrolases | recycling receptors | intralumenal vesicles, M6P receptors, hydrolases | active hydrolases, LAMPs, little M6P receptor |
+
+### 10.3.2. Endosome Maturation
+
+Two views of the endocytic pathway were long debated: stable compartments connected by transport vesicles, or compartments that transform. Live imaging favors maturation for the step from early to late endosome.
+
+**Definition 10.3.2 (Endosome Maturation)** **Endosome maturation** is the conversion of an early endosome into a late endosome by a gradual change of its membrane identity and lumen: the exchange of Rab5 for Rab7 on its surface (Rab conversion), the conversion of PI(3)P to PI(3,5)P₂, the loss of recycling tubules, the formation of intralumenal vesicles, acidification by V-type ATPases, the arrival of hydrolases from the trans-Golgi network, and movement on microtubules toward the cell center.
+
+An early endosome receives incoming vesicles for about 10 minutes; then, within a few minutes, Rab5 is replaced by Rab7 on the same organelle (Rink and colleagues, 2005). The switch is built from the Rab machinery of [7.3.8](/7.3.8): Rab5-GTP recruits the Rab7 exchange factor Mon1–Ccz1, which also displaces the Rab5 exchange factor Rabex-5, so that the rise of Rab7 and the fall of Rab5 reinforce each other and the conversion is abrupt (a Rab cascade with mutual inhibition, analyzed as a model in 7.3.8). The kinase PIKfyve converts PI(3)P into PI(3,5)P₂, the HOPS tethering complex replaces CORVET, and the Rab7 effector RILP links the organelle to dynein, which carries it inward. Acidification proceeds in parallel: the endosome accumulates V-type ATPases delivered from the Golgi, and its pH falls from about 6.5 to 5.5. The result is a compartment that no longer recycles to the surface and fuses with lysosomes into endolysosomes, where digestion is completed ([7.3.11](/7.3.11)).
+
+### 10.3.3. Sorting by Geometry and pH
+
+The early endosome sorts with two physical tools. The first is pH. A receptor that releases its ligand at pH 6 (the LDL receptor; the mannose 6-phosphate receptor at somewhat lower pH) leaves the ligand in the lumen, which is carried on to lysosomes, while the empty receptor is free to be recycled; a ligand that stays bound (apotransferrin, EGF) shares the fate of its receptor. Because the pH falls along the pathway, the midpoints of the binding curves set the order in which ligands are released (figure in 10.2.3). Weak bases that raise endosomal pH, such as chloroquine and $\ce{NH4Cl}$, block release and trap receptors with their ligands; this is how the role of acidification was first shown.
+
+The second tool is geometry. Most of the membrane of an early endosome is in its narrow tubules (about 60 nm in diameter), most of its volume in the vacuolar body. A tubule of radius $r$ has a surface-to-volume ratio of $2/r$, a sphere of radius $R$ one of $3/R$; for $r = 30\,\mathrm{nm}$ and $R = 250\,\mathrm{nm}$ the tubule has 5.6 times more membrane per unit volume.
+
+**Formula 10.3.1 (Iterative Geometric Sorting)** Suppose that at each budding event a tubule removes a fraction $\phi$ of the membrane of the endosome but only a fraction $\psi \ll \phi$ of its lumenal volume, and that membrane proteins free to diffuse enter the tubule in proportion to membrane area. After $n$ budding events the fractions remaining in the endosome are
+$$
+m_n = (1 - \phi)^n \quad \text{(freely diffusing membrane proteins)}, \qquad v_n = (1 - \psi)^n \quad \text{(soluble content)}. \tag{10.1}
+$$
+
+With $\phi = 0.1$ and $\psi = 0.01$, ten budding events remove 65% of the membrane proteins but only 10% of the soluble ligands; this "iterative fractionation" (Maxfield and colleagues) explains why recycling is the default fate of membrane proteins without signals and why soluble cargo is retained for degradation. It also explains why a receptor that is to be degraded must be actively held back: by ubiquitin and ESCRT (10.4), or by clustering, which slows its entry into tubules. Specific coat complexes also select cargo into the tubules: retromer with sorting nexins of the SNX-BAR family returns the mannose 6-phosphate receptor to the trans-Golgi network, SNX27–retromer and the retriever complex return many receptors to the surface, and the WASH complex makes branched actin patches that define the exit sites.
+
+## 10.4. Multivesicular Bodies, ESCRT and Exosomes
+
+### 10.4.1. Sorting into Intralumenal Vesicles
+
+**Definition 10.4.1 (Multivesicular Body)** A **multivesicular body** (MVB) is a late endosome whose lumen contains many intralumenal vesicles, 40–100 nm in diameter, formed by inward budding of its limiting membrane; membrane proteins sorted into these vesicles are removed from contact with the cytosol and are later degraded entirely when the MVB fuses with a lysosome.
+
+Intralumenal vesicles solve a topological problem. A transmembrane receptor in the limiting membrane of an endolysosome would have its lumenal domain digested, but its cytosolic domain and transmembrane segment would be protected; once the receptor is inside an intralumenal vesicle, all of it is exposed to the hydrolases. Sequestration also stops signaling at once, because the kinase domain of an activated receptor no longer has access to cytosolic substrates.
+
+**Definition 10.4.2 (ESCRT)** The **ESCRT** machinery (endosomal sorting complexes required for transport) consists of the cytosolic complexes ESCRT-0, -I, -II and -III and the AAA ATPase Vps4, which act in sequence on the endosome membrane: ESCRT-0 (Hrs and STAM) binds ubiquitylated cargo and PI(3)P and clusters the cargo; ESCRT-I and ESCRT-II bind the cargo in turn and initiate an inward bud; ESCRT-III subunits polymerize into spiral filaments at the neck of the bud and cut it from inside the neck; and Vps4 uses ATP to disassemble ESCRT-III for reuse.
+
+The genes were found by Scott Emr and colleagues in yeast mutants (class E *vps* mutants) that missort vacuolar proteins and accumulate an aberrant prevacuolar compartment. Deubiquitylating enzymes associated with ESCRT-0 and ESCRT-III remove ubiquitin from the cargo before the vesicle closes, so that ubiquitin is recycled. When ESCRT function is lost, activated receptors remain in the limiting membrane and go on signaling; in *Drosophila*, loss of ESCRT genes such as *TSG101* turns epithelial cells into overgrowing tumors.
+
+![ESCRT machinery and membrane topology. A: on the limiting membrane of a maturing endosome (cytosol above, lumen below), receptors whose ligand (red) faces the lumen and whose cytosolic tails carry ubiquitin (yellow) are bound and clustered by ESCRT-0, which recognizes ubiquitin and PI(3)P and recruits a flat clathrin lattice (1); ESCRT-I and ESCRT-II bind in turn and the membrane begins to bend away from the cytosol (2); ESCRT-III filaments (green) polymerize as a spiral at the neck of the bud, and deubiquitylating enzymes (DUB) remove ubiquitin from the cargo (3); the ATPase Vps4 disassembles ESCRT-III, the neck is cut, and the intralumenal vesicle, with the receptor's cytosolic domain inside and the ligand outside, is free in the lumen (4). B: three topologically equivalent membrane scissions carried out by ESCRT-III from the cytosolic side of a membrane neck: formation of intralumenal vesicles in a multivesicular body, budding of HIV from the plasma membrane (Gag protein, dots), and abscission of the bridge between two daughter cells at the end of cytokinesis](./plots/escrt.py)
+
+### 10.4.2. One Machine for Many Membranes
+
+ESCRT-III is the cell's general tool for cutting a membrane neck from its inside, that is, from the side of the cytosol. Coats such as clathrin and COPII act on the outside of a bud, on the cytosolic face of a vesicle that buds into the cytosol; ESCRT-III acts on buds that grow away from the cytosol, a topology shared by several unrelated processes:
+
+- Enveloped viruses: the Gag protein of HIV-1 carries late-domain motifs (PTAP, which binds the ESCRT-I subunit Tsg101, and YPXL, which binds the ESCRT-associated protein ALIX) that recruit ESCRT-III to the neck of the budding virion; mutation of these motifs leaves virions tethered to the cell surface.
+- Cytokinesis: CEP55 at the midbody recruits ESCRT-I and ALIX, and ESCRT-III spirals constrict the intercellular bridge for abscission ([7.3.21](/7.3.21)).
+- Sealing of the nuclear envelope after mitosis (ESCRT-III with CHMP7 and the inner nuclear membrane protein LEM2), repair of small wounds in the plasma membrane and in lysosomes, and microautophagy at the lysosome and vacuole ([7.3.11](/7.3.11)).
+
+The archaeon *Sulfolobus* divides with ESCRT-III homologs (the Cdv system), and the Asgard archaea, the closest prokaryotic relatives of the eukaryotic host cell, encode ESCRT components: the machine is older than the endomembrane system itself.
+
+### 10.4.3. Exosomes and Extracellular Vesicles
+
+**Definition 10.4.3 (Extracellular Vesicle and Exosome)** An **extracellular vesicle** is any lipid-bilayer-enclosed particle released from cells that cannot replicate. An **exosome** is an extracellular vesicle of 30–150 nm that originates as an intralumenal vesicle of a multivesicular body and is released when the MVB fuses with the plasma membrane; exosomes are enriched in the tetraspanins CD63, CD81 and CD9 and in the ESCRT-associated proteins ALIX and Tsg101.
+
+Other extracellular vesicles bud directly from the plasma membrane (microvesicles or ectosomes, 100 nm to 1 µm), are shed by dying cells (apoptotic bodies), or are left behind by migrating cells (migrasomes, discovered by Li Yu's group, [7.3.8](/7.3.8)). Some intralumenal vesicles form without ESCRT, by ceramide generated by neutral sphingomyelinase 2. Reticulocytes remove their transferrin receptors by releasing them in exosomes during maturation into erythrocytes, the observation (by Johnstone and Stahl in 1983) that led to the discovery of exosomes. Extracellular vesicles carry proteins, lipids and RNA between cells and are studied as biomarkers in blood and urine. Their physiological roles in communication are less certain than often claimed: preparations are heterogeneous, exosomes and microvesicles of the same size cannot be separated by centrifugation, and the international guidelines (MISEV) recommend the operational term "extracellular vesicle" unless the origin is demonstrated.
+
+## 10.5. Fates of Internalized Receptors
+
+### 10.5.1. Recycling, Degradation and Transcytosis
+
+An internalized receptor has three possible fates. It can return to the same domain of the plasma membrane (recycling, the default for the LDL and transferrin receptors), it can be retained in the maturing endosome and degraded in lysosomes (degradation, the fate of activated signaling receptors), or it can be delivered to a different domain of the plasma membrane of a polarized cell.
+
+**Definition 10.5.1 (Transcytosis)** **Transcytosis** is the transport of macromolecules across a polarized cell by endocytosis at one plasma membrane domain, passage through endosomes (usually including the recycling endosome) and exocytosis at the opposite domain, so that the cargo is released into a different extracellular space.
+
+Two receptors show the principle:
+
+- The neonatal Fc receptor FcRn binds IgG at acidic pH (6.0–6.5) and releases it at neutral pH. In the gut of newborn rodents, IgG of the acidic milk binds FcRn on the apical surface of enterocytes and is released into the blood at the basolateral surface; in humans, FcRn of the placenta transfers maternal IgG to the fetus. In adults FcRn in endothelial cells rescues IgG taken up by pinocytosis from lysosomal degradation and returns it to the blood, which is why IgG has a half-life of about three weeks, against a few days for other immunoglobulins; therapeutic **monoclonal antibodies** are engineered with Fc mutations that strengthen binding at pH 6 to prolong their half-life.
+- The polymeric immunoglobulin receptor (pIgR) works in the opposite direction: it binds dimeric IgA at the basolateral surface of epithelial cells, carries it to the apical surface and is cleaved there, so that IgA is secreted into the gut, airways and milk still bound to a fragment of the receptor (the secretory component), which protects it from proteases.
+
+### 10.5.2. Storage in Recycling Endosomes
+
+Recycling endosomes can hold membrane proteins in reserve and release them on demand, which changes the composition of the plasma membrane within minutes without new protein synthesis. In muscle and fat cells the glucose transporter GLUT4 is stored in specialized GLUT4 storage vesicles derived from the recycling system; **insulin**, through **protein kinase B**, phosphorylates and inactivates the Rab-GAP TBC1D4 (AS160), so that its target Rab (Rab10 in adipocytes) becomes GTP-bound and drives the fusion of the vesicles with the plasma membrane ([7.1.29](/7.1.29#sec-29.3.1)). The rate of exocytosis rises about tenfold while endocytosis changes little, and the fraction of GLUT4 at the surface rises from a few percent to about half (Formula 10.5.1 explains why). The same logic serves other cells: vasopressin acting through **protein kinase A** inserts aquaporin-2 into the apical membrane of kidney collecting duct cells to concentrate urine, kidney intercalated cells insert V-type ATPases to excrete acid, and stimulated gastric parietal cells fuse tubulovesicles carrying the $\ce{H+}/\ce{K+}$-ATPase with the canalicular membrane ([7.3.5](/7.3.5)).
+
+### 10.5.3. A Kinetic Model of Receptor Traffic
+
+The number of receptors on the surface is set by four rates. H. Steven Wiley and Dennis Cunningham (1981) wrote the balance for surface and internal receptors that is now the standard model.
+
+**Formula 10.5.1 (Receptor Traffic)** Let $R_{\mathrm{s}}$ and $R_{\mathrm{i}}$ be the numbers of surface and internal receptors, $V_{\mathrm{s}}$ the rate of delivery of new receptors to the surface, $k_{\mathrm{e}}$ the rate constant of internalization, $k_{\mathrm{r}}$ that of recycling and $k_{\mathrm{h}}$ that of degradation of internal receptors. Then
+$$
+\frac{\mathrm{d}R_{\mathrm{s}}}{\mathrm{d}t} = V_{\mathrm{s}} - k_{\mathrm{e}} R_{\mathrm{s}} + k_{\mathrm{r}} R_{\mathrm{i}}, \qquad \frac{\mathrm{d}R_{\mathrm{i}}}{\mathrm{d}t} = k_{\mathrm{e}} R_{\mathrm{s}} - (k_{\mathrm{r}} + k_{\mathrm{h}}) R_{\mathrm{i}}, \tag{10.2}
+$$
+with steady state
+$$
+R_{\mathrm{i}}^* = \frac{V_{\mathrm{s}}}{k_{\mathrm{h}}}, \qquad R_{\mathrm{s}}^* = \frac{V_{\mathrm{s}}(k_{\mathrm{r}} + k_{\mathrm{h}})}{k_{\mathrm{e}} k_{\mathrm{h}}}, \qquad f_{\mathrm{s}} = \frac{R_{\mathrm{s}}^*}{R_{\mathrm{s}}^* + R_{\mathrm{i}}^*} = \frac{1}{1 + k_{\mathrm{e}}/(k_{\mathrm{r}} + k_{\mathrm{h}})}. \tag{10.3}
+$$
+
+The parameters have direct meanings: $1/k_{\mathrm{e}}$ is the mean time a receptor spends on the surface before it enters a coated pit, $1/k_{\mathrm{r}}$ the mean time it spends inside before returning, and $k_{\mathrm{h}}/(k_{\mathrm{r}} + k_{\mathrm{h}})$ the probability that an internalized receptor is degraded rather than recycled, so that the number of round trips before degradation is $k_{\mathrm{r}}/k_{\mathrm{h}}$. Three consequences follow from Eq. (10.3).
+
+1. The surface fraction depends only on the ratio of internalization to return. The transferrin receptor ($k_{\mathrm{e}} \approx 0.2$, $k_{\mathrm{r}} \approx 0.1\,\mathrm{min^{-1}}$) has about a third of its receptors on the surface; GLUT4 in a resting adipocyte ($k_{\mathrm{e}} \approx 0.1$, exocytosis $0.01\,\mathrm{min^{-1}}$) about 9%, and insulin, by raising the exocytic rate constant tenfold, brings it to half.
+2. The total number of receptors, $R_{\mathrm{s}}^* + R_{\mathrm{i}}^*$, is set by synthesis and degradation, but the surface number can be changed without changing synthesis, by changing $k_{\mathrm{e}}$ or $k_{\mathrm{r}}$.
+3. For the LDL receptor, a round trip every 10 minutes over a life of 20 hours gives $k_{\mathrm{r}}/k_{\mathrm{h}} \approx 100$ or more round trips: recycling multiplies the use of each receptor a hundredfold.
+
+**Example 10.5.1 (Ligand-induced down-regulation of the EGF receptor)** An unoccupied EGF receptor is internalized slowly ($k_{\mathrm{e}} \approx 0.03\,\mathrm{min^{-1}}$), recycles efficiently and is degraded with a half-life of many hours, so about three quarters of the receptors are on the surface. Bound EGF switches the receptor to fast internalization ($k_{\mathrm{e}}^* \approx 0.15\,\mathrm{min^{-1}}$), reduces recycling and increases degradation, because the ubiquitylated receptor is retained by ESCRT (10.4). Applying Eq. (10.2) with the occupied rate constants weighted by the fraction of occupied receptors gives the curves in the figure below: within 15–20 minutes of adding a saturating dose of EGF the surface receptors fall to a third, and the total number then declines with a half-life of about an hour, as measured in fibroblasts and epithelial cells. The cell becomes less sensitive to EGF for hours, until new receptors are made.
+
+![Kinetic model of receptor traffic (Formula 10.5.1, rate constants per minute). Unoccupied EGF-receptor-like receptors are internalized with k_e = 0.03, recycle with k_r = 0.10 and are degraded with k_h = 0.004; occupied receptors with k_e* = 0.15, k_r* = 0.05 and k_h* = 0.02; ligand binding is assumed fast, with occupied fraction θ. A: surface receptors after addition of ligand at t = 0, for a saturating (θ = 1, solid) and a half-saturating (θ = 0.5, dashed) concentration of EGF, and for the transferrin receptor, which cycles constitutively whether or not transferrin is bound and is not down-regulated. B: total receptors for the same cases: degradation follows the fast internalization with a delay, with a half-life of about an hour at saturating EGF. C: steady-state surface fraction f_s = 1/(1 + k_e/(k_r + k_h)) and the positions of the receptors discussed in the text (GLUT4 with k_e = 0.1 and exocytic rate constants of 0.01 without and 0.1 with insulin)](./plots/receptor-traffic.py)
+
+### 10.5.4. Endocytosis Shapes Signaling
+
+**Definition 10.5.2 (Receptor Down-Regulation)** **Receptor down-regulation** is the ligand-induced decrease in the number of receptors on the cell surface, through accelerated internalization and degradation of occupied receptors in lysosomes, which reduces the cell's sensitivity to the ligand for hours.
+
+For the EGF receptor, the decision to degrade is made by ubiquitylation. The activated **receptor tyrosine kinase** recruits the ubiquitin ligase Cbl, directly and through the adaptor Grb2, which attaches single **ubiquitins** and short chains to the kinase domain; the ubiquitin promotes entry into coated pits and, in the early endosome, binding by ESCRT-0 and sorting into intralumenal vesicles. Mutations that prevent Cbl binding, found in some cancers, keep the receptor recycling and signaling, and the oncogenic viral form v-Cbl blocks down-regulation.
+
+Endocytosis is not only an off switch. Many receptors continue to signal from endosomes, and the endosome can provide a distinct signaling platform:
+
+- Activated EGF receptors on early endosomes still recruit Grb2 and Sos and activate the **MAP kinase cascade** until they are sequestered into intralumenal vesicles; blocking internalization changes the balance of downstream pathways rather than simply increasing signaling.
+- G protein–coupled receptors are phosphorylated by **G protein–coupled receptor kinases** and bound by **arrestins**, which uncouple them from G proteins (**desensitization**, [7.1.14](/7.1.14)) and act as clathrin adaptors; some GPCRs (the β₂-adrenergic receptor, receptors for parathyroid hormone) then produce cAMP from endosomes.
+- Nerve growth factor bound to its receptor TrkA at axon terminals is carried in signaling endosomes by dynein over centimeters to the cell body, where it maintains neuronal survival.
+
+The spatial and temporal organization of signals is taken up again in [7.3.18](/7.3.18).
+
+## 10.6. Endocytosis in Polarized Cells
+
+Epithelial cells have an apical and a basolateral plasma membrane, separated by tight junctions that prevent lipids of the outer leaflet and membrane proteins from mixing ([7.3.23](/7.3.23)). Their composition differs, and endocytosis threatens to mix them, because endocytic vesicles from both surfaces deliver membrane to endosomes that are connected with each other. Polarity is maintained by sorting at every pass through the endosomes, with the same signals that sort newly synthesized proteins in the trans-Golgi network ([7.3.9](/7.3.9)):
+
+- Basolateral sorting signals are tyrosine or dileucine motifs in the cytosolic tail, read in the recycling endosome by the epithelium-specific clathrin adaptor AP-1B; in its absence (in some kidney cell lines) basolateral proteins such as the LDL receptor are delivered apically.
+- Apical sorting relies on GPI anchors, N- and O-linked glycans and association with raft-like domains, and on Rab11 and the motor myosin Vb, which carry apical recycling endosomes to the apical surface; mutations in myosin Vb cause microvillus inclusion disease, in which enterocytes internalize their apical brush border into intracellular vacuoles and infants suffer severe diarrhea.
+- Each surface has its own early endosomes, which feed into a common recycling endosome where the two streams are separated, and from which transcytotic cargo (pIgR, FcRn) departs.
+
+Hepatocytes use a variant: most apical (canalicular) proteins are first delivered to the basolateral (sinusoidal) membrane and reach the apical surface by transcytosis. Neurons, with their axonal and somatodendritic domains, use transcytosis in the same way. In all these cases the polarized distribution of membrane proteins is a dynamic steady state of the kind described by Formula 10.5.1, maintained by continuous retrieval and resorting rather than by immobility.
+
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Endocytosis (Definition 10.1.1) | inward counterpart of exocytosis; fibroblast 1%, macrophage 3% of the surface per minute; endocytic–exocytic cycle; clathrin vesicles move much membrane, little volume (Example 10.1.1) |
+| Routes (Definitions 10.1.2–10.1.5) | phagocytosis (receptor-triggered, actin; Fc and complement receptors, phosphatidylserine "eat me", CD47 "don't eat me"); macropinocytosis (ruffles, Ras, nutrient scavenging); clathrin-coated pits (AP2, PI(4,5)P₂, dynamin, ~1 min); caveolae (caveolin, cavin; membrane reservoir under tension); CLIC/GEEC, FEME, ultrafast endocytosis |
+| Receptor-mediated endocytosis (Definition 10.2.1) | YXXΦ, NPXY, dileucine and ubiquitin signals; coated pits as filters; concentration about 2000-fold over fluid-phase uptake (Example 10.2.1) |
+| LDL and FH (Definition 10.2.2) | Brown and Goldstein; five classes of LDL receptor mutations: null, ER-retained, binding, internalization (NPXY, J.D.), recycling; PCSK9 diverts receptors to lysosomes |
+| Transferrin cycle | iron released at pH 6, apotransferrin stays bound and recycles, released at pH 7.4; STEAP3, DMT1; IRP–IRE control of receptor number |
+| Endosomes (Definitions 10.3.1, 10.3.2) | early (Rab5, PI(3)P, pH 6.0–6.5), recycling (Rab11), late/MVB (Rab7, PI(3,5)P₂, pH 5.0–6.0); maturation by Rab conversion, acidification, inward movement |
+| Sorting tools | pH-dependent ligand release (order of the binding midpoints); tubule geometry (Formula 10.3.1, iterative fractionation); retromer, SNX27, retriever, WASH |
+| MVB and ESCRT (Definitions 10.4.1, 10.4.2) | ubiquitylated cargo → ESCRT-0 → I → II → ESCRT-III spiral at the neck, Vps4; complete digestion and end of signaling; same machinery for virus budding, abscission, nuclear envelope sealing, membrane repair |
+| Exosomes (Definition 10.4.3) | intralumenal vesicles released by MVB–plasma membrane fusion; CD63, CD81, CD9; heterogeneity of extracellular vesicles |
+| Receptor fates (Definition 10.5.1) | recycling, degradation, transcytosis (FcRn, pIgR); storage and regulated release from recycling endosomes (GLUT4, aquaporin-2) |
+| Kinetics (Formula 10.5.1, Example 10.5.1) | $f_{\mathrm{s}} = 1/(1 + k_{\mathrm{e}}/(k_{\mathrm{r}} + k_{\mathrm{h}}))$; surface number regulated by traffic rates, total number by synthesis and degradation; EGF receptor down-regulation within 20 minutes, degradation over an hour |
+| Signaling (Definition 10.5.2) | Cbl ubiquitylation → ESCRT → down-regulation; signaling from endosomes (EGFR, GPCRs with arrestin, NGF–TrkA signaling endosomes) |
+| Polarized cells (10.6) | tight junction fence; AP-1B and basolateral signals; GPI, glycans, Rab11 and myosin Vb for apical delivery; common recycling endosome; transcytotic routes in hepatocytes |
+
+## Questions
+
+1. Cells are incubated at $4\,^\circ\mathrm{C}$ with fluorescent transferrin and fluorescent dextran (a fluid-phase marker), washed and warmed to $37\,^\circ\mathrm{C}$. Predict where each marker is found after 2, 10 and 40 minutes. How would the result change in the presence of chloroquine?
+
+   **Answer** At $4\,^\circ\mathrm{C}$ transferrin binds its receptors on the surface and endocytosis stops; dextran is mostly washed away, so add it during warming instead. After 2 minutes both are in peripheral early endosomes (transferrin also in coated vesicles). After 10 minutes transferrin is in the perinuclear recycling endosome and part has already returned to the surface and been released into the medium; dextran remains in early endosomes that are maturing. After 40 minutes most transferrin has left the cell (the cycle takes 10–15 minutes), while dextran has reached late endosomes and lysosomes, where it accumulates because it is not degraded. Chloroquine, a weak base, raises endosomal pH: transferrin keeps its iron (iron uptake falls) but still recycles, because apotransferrin release depends on neutral pH outside; ligands that must dissociate in the endosome, such as LDL, stay bound and their receptors fail to recycle and are partly degraded.
+
+2. Using Formula 10.5.1, show that a drug that halves $k_{\mathrm{e}}$ for the LDL receptor without changing its synthesis or degradation increases the number of surface receptors but decreases the rate of LDL uptake only if a quantity you should identify is limiting. Take $k_{\mathrm{e}} = 0.1$, $k_{\mathrm{r}} = 0.2$ and $k_{\mathrm{h}} = 0.001\,\mathrm{min^{-1}}$.
+
+   **Answer** At steady state $R_{\mathrm{s}}^* = V_{\mathrm{s}}(k_{\mathrm{r}} + k_{\mathrm{h}})/(k_{\mathrm{e}} k_{\mathrm{h}})$, so halving $k_{\mathrm{e}}$ doubles $R_{\mathrm{s}}^*$, while $R_{\mathrm{i}}^* = V_{\mathrm{s}}/k_{\mathrm{h}}$ is unchanged; the surface fraction rises from $1/(1 + 0.1/0.201) = 0.67$ to $1/(1 + 0.05/0.201) = 0.80$. The uptake rate of LDL at low concentration is proportional to $k_{\mathrm{e}} R_{\mathrm{s}}^* = V_{\mathrm{s}}(k_{\mathrm{r}} + k_{\mathrm{h}})/k_{\mathrm{h}}$, which does not depend on $k_{\mathrm{e}}$ at all: the receptors that internalize more slowly are more numerous at the surface, and the flux through the cycle is the same. Uptake falls only if internalization is so slow that binding saturates or the number of surface binding sites becomes limiting (high LDL, $c \gtrsim K_{\mathrm{D}}$), or if the change of $k_{\mathrm{e}}$ alters recycling or degradation; in the steady state the flux equals the rate of synthesis times the number of round trips, $V_{\mathrm{s}}(1 + k_{\mathrm{r}}/k_{\mathrm{h}})$.
+
+3. Explain how the following mutations cause familial hypercholesterolemia and what you would see in patient fibroblasts incubated with ¹²⁵I-LDL at $4\,^\circ\mathrm{C}$ and then at $37\,^\circ\mathrm{C}$: (a) a mutation that prevents folding of the receptor's ligand-binding repeats in the ER; (b) a Tyr to Cys mutation in the NPXY motif; (c) a deletion of the β-propeller domain.
+
+   **Answer** (a) Class 2: the receptor is retained in the ER and degraded by ER-associated degradation; little reaches the surface, so binding at $4\,^\circ\mathrm{C}$ is low, and internalization and degradation are correspondingly low. (b) Class 4: the receptor reaches the surface and binds LDL normally at $4\,^\circ\mathrm{C}$, but it is not concentrated in coated pits, so at $37\,^\circ\mathrm{C}$ LDL is internalized only slowly (by bulk membrane uptake) and little is degraded; cholesterol synthesis is not suppressed. (c) Class 5: the receptor binds and internalizes LDL, but the β-propeller is needed to release LDL at endosomal pH, so receptor and LDL go to lysosomes together; uptake and degradation occur at first, then decline as the receptors are destroyed and binding at the surface falls.
+
+4. Why must a receptor that is to be degraded in lysosomes be sorted into intralumenal vesicles rather than simply delivered to the lysosomal membrane? What would happen to signaling and to the receptor if the cell lacked Hrs (ESCRT-0)?
+
+   **Answer** In the limiting membrane of a lysosome only the lumenal domain of a transmembrane protein is exposed to the hydrolases; the transmembrane segment and the cytosolic domain are protected by the bilayer and by the cytosol, and the lysosomal membrane itself is designed to resist digestion (Definition 10.4.1). Inside an intralumenal vesicle the whole protein, and the vesicle membrane, are exposed to the hydrolases and lipases. Sequestration also separates the cytosolic kinase domain from its substrates and stops signaling before degradation. Without Hrs, ubiquitylated receptors are not clustered and remain in the limiting membrane of early and late endosomes; they recycle in part, are degraded slowly, and continue to signal from endosomes, so EGF responses (MAP kinase activity, proliferation) are prolonged; in flies, loss of ESCRT-0 to ESCRT-II produces epithelial overgrowth.
+
+5. An antibody against a tumor antigen has a half-life of 6 days in patients. A variant with an Fc mutation that increases its affinity for FcRn tenfold at pH 6.0 but not at pH 7.4 has a half-life of 18 days. Explain the mechanism, and why a mutation that also increased binding at pH 7.4 would not help.
+
+   **Answer** IgG in plasma is taken up continuously by fluid-phase pinocytosis into endothelial and blood cells. In acidic early endosomes FcRn binds IgG; bound IgG is recycled to the surface and released at the neutral pH of the blood, while unbound IgG goes on to lysosomes and is degraded. The half-life therefore depends on the fraction rescued in each pass; tighter binding at pH 6.0 raises that fraction and the half-life. Release at the surface requires weak binding at pH 7.4; a variant that binds tightly at neutral pH stays on FcRn at the surface, is internalized again with it and is eventually degraded, and it occupies receptors needed for endogenous IgG, so such variants are cleared faster, not more slowly.
+
+6. (Open question) Design an experiment to decide whether a newly identified receptor is internalized by clathrin-mediated endocytosis or by a clathrin-independent route.
+
+   **Answer** Outline: label the receptor at the surface (with an antibody or a fluorescent ligand at $4\,^\circ\mathrm{C}$), warm and measure internalization by an acid-wash or protease-protection assay. Compare cells depleted of the clathrin heavy chain or of AP2 (siRNA or CRISPR knockout, or acute depletion with a degron to avoid adaptation) with controls, using transferrin as a positive control for the clathrin route and a GPI-anchored protein or fluid-phase dextran for the CLIC/GEEC route. Dynamin inhibitors (or a dominant-negative dynamin) are not diagnostic, because several clathrin-independent routes also need dynamin. Image cells expressing fluorescent clathrin light chain or caveolin with total internal reflection microscopy to see whether the receptor enters clathrin spots before internalization; electron microscopy with gold-labeled antibodies can localize it in coated pits, caveolae or tubular carriers. Mutate candidate endocytic motifs (YXXΦ, dileucine, NPXY) or ubiquitylation sites in the cytosolic tail: if internalization requires them and AP2, the route is clathrin-dependent.
