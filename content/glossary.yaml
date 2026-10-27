@@ -6971,3 +6971,47 @@ terms:
   - { zh: Zellweger 综合征, en: Zellweger syndrome, aliases: [脑肝肾综合征] }
   - { zh: 非经典蛋白分泌, en: unconventional protein secretion, aliases: [非经典分泌, unconventional secretion] }
   - { zh: 膜接触位点, en: membrane contact site, aliases: [membrane contact sites, 膜接触点] }
+  - { zh: 内质网, en: endoplasmic reticulum, aliases: [ER], scope: ["7"] }
+  - { zh: 粗面内质网, en: rough endoplasmic reticulum, aliases: [rough ER, 糙面内质网] }
+  - { zh: 光面内质网, en: smooth endoplasmic reticulum, aliases: [smooth ER, 滑面内质网] }
+  - { zh: 微粒体, en: microsome, aliases: [microsomes] }
+  - { zh: 多萜醇, en: dolichol }
+  - { zh: 寡糖基转移酶, en: oligosaccharyltransferase, aliases: [OST] }
+  - { zh: 钙联蛋白循环, en: calnexin cycle, aliases: [calnexin/calreticulin cycle] }
+  - { zh: 内质网相关降解, en: ER-associated degradation, aliases: [ERAD] }
+  - { zh: 逆向转运, en: retrotranslocation, aliases: [逆转位] }
+  - { zh: 未折叠蛋白反应, en: unfolded protein response, aliases: [UPR] }
+  - { zh: IRE1, en: IRE1, aliases: [inositol-requiring enzyme 1] }
+  - { zh: PERK, en: PERK }
+  - { zh: ATF6, en: ATF6 }
+  - { zh: 肌质网, en: sarcoplasmic reticulum }
+  - { zh: 网状蛋白, en: reticulon, aliases: [reticulons] }
+  - { zh: 运输小泡, en: transport vesicle, aliases: [transport vesicles, 转运囊泡] }
+  - { zh: 衣被蛋白, en: coat protein, aliases: [coat proteins] }
+  - { zh: COPII, en: COPII }
+  - { zh: COPI, en: COPI }
+  - { zh: 网格蛋白, en: clathrin }
+  - { zh: 接头蛋白复合体, en: adaptor protein complex, aliases: [AP complex, AP complexes] }
+  - { zh: 发动蛋白, en: dynamin }
+  - { zh: 磷酸肌醇编码, en: phosphoinositide code }
+  - { zh: Rab 蛋白, en: Rab protein, aliases: [Rab proteins, Rab, Rabs] }
+  - { zh: Rab 级联, en: Rab cascade }
+  - { zh: Rab 转换, en: Rab conversion }
+  - { zh: 拴系因子, en: tethering factor, aliases: [tethering factors] }
+  - { zh: v-SNARE, en: v-SNARE, aliases: [v-SNAREs, R-SNARE] }
+  - { zh: t-SNARE, en: t-SNARE, aliases: [t-SNAREs, Q-SNARE] }
+  - { zh: NSF, en: NSF, aliases: [N-ethylmaleimide-sensitive factor] }
+  - { zh: SM 蛋白, en: Sec1/Munc18 protein, aliases: [Sec1/Munc18 proteins, SM protein] }
+  - { zh: KDEL 受体, en: KDEL receptor }
+  - { zh: 高尔基体, en: Golgi apparatus, aliases: [Golgi complex, Golgi] }
+  - { zh: 顺面高尔基网, en: cis Golgi network, aliases: [CGN] }
+  - { zh: 反面高尔基网, en: trans Golgi network, aliases: [TGN, trans-Golgi network] }
+  - { zh: 囊泡运输模型, en: vesicular transport model }
+  - { zh: 扁囊成熟模型, en: cisternal maturation model }
+  - { zh: 组成型分泌, en: constitutive secretion }
+  - { zh: 调节型分泌, en: regulated secretion }
+  - { zh: 分泌颗粒, en: secretory granule, aliases: [secretory granules, dense-core vesicle] }
+  - { zh: 胞吐作用, en: exocytosis, aliases: [胞吐] }
+  - { zh: 前蛋白转化酶, en: proprotein convertase, aliases: [proprotein convertases, PC1/3, PC2, furin] }
+  - { zh: sec 突变体, en: sec mutant, aliases: [sec mutants] }
+  - { zh: 蛋白质二硫键异构酶, en: protein disulfide isomerase, aliases: [PDI] }
