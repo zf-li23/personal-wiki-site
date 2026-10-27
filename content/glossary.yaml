@@ -7248,3 +7248,68 @@ terms:
   - { zh: 定增量模型, en: adder, scope: ["7"] }
   - { zh: 接触抑制, en: contact inhibition }
   - { zh: 癌基因诱导的衰老, en: oncogene-induced senescence }
+  - { zh: 细胞外基质, en: extracellular matrix, aliases: [胞外基质, extracellular matrices] }
+  - { zh: 细胞连接, en: cell junction, aliases: [cell junctions] }
+  - { zh: 锚定连接, en: anchoring junction, aliases: [anchoring junctions] }
+  - { zh: 封闭连接, en: occluding junction, aliases: [occluding junctions, 闭锁连接] }
+  - { zh: 通讯连接, en: channel-forming junction, aliases: [channel-forming junctions] }
+  - { zh: 信号传递连接, en: signal-relaying junction, aliases: [signal-relaying junctions] }
+  - { zh: 透明质酸, en: hyaluronan, aliases: [hyaluronic acid] }
+  - { zh: 前胶原, en: procollagen }
+  - { zh: 弹性蛋白, en: elastin }
+  - { zh: 弹性纤维, en: elastic fiber, aliases: [elastic fibers] }
+  - { zh: 纤连蛋白, en: fibronectin, aliases: [纤粘连蛋白] }
+  - { zh: 基膜, en: basal lamina, aliases: [basement membrane, 基底膜] }
+  - { zh: 层粘连蛋白, en: laminin, aliases: [laminins, 层连蛋白] }
+  - { zh: 基质金属蛋白酶, en: matrix metalloproteinase, aliases: [MMP, MMPs, matrix metalloproteinases] }
+  - { zh: 钙黏蛋白, en: cadherin, aliases: [cadherins, 钙粘蛋白] }
+  - { zh: 经典钙黏蛋白, en: classical cadherin, aliases: [classical cadherins] }
+  - { zh: 连环蛋白, en: catenin, aliases: [catenins] }
+  - { zh: 黏着连接, en: adherens junction, aliases: [adherens junctions, 黏合带, adhesion belt, zonula adherens] }
+  - { zh: 差异黏附假说, en: differential adhesion hypothesis }
+  - { zh: 细胞 Potts 模型, en: cellular Potts model, aliases: [Graner–Glazier model] }
+  - { zh: 桥粒, en: desmosome, aliases: [desmosomes] }
+  - { zh: 紧密连接, en: tight junction, aliases: [tight junctions] }
+  - { zh: 紧密连接蛋白, en: claudin, aliases: [claudins] }
+  - { zh: 间壁连接, en: septate junction, aliases: [septate junctions, 隔状连接] }
+  - { zh: 选择素, en: selectin, aliases: [selectins] }
+  - { zh: 细胞黏附分子, en: cell adhesion molecule, aliases: [cell adhesion molecules] }
+  - { zh: 黏着斑, en: focal adhesion, aliases: [focal adhesions, focal contact, 黏着点] }
+  - { zh: 半桥粒, en: hemidesmosome, aliases: [hemidesmosomes] }
+  - { zh: 力学转导, en: mechanotransduction, aliases: [力学信号转导] }
+  - { zh: 滑移键, en: slip bond, aliases: [slip bonds] }
+  - { zh: 捕获键, en: catch bond, aliases: [catch bonds, 逆锁键] }
+  - { zh: 缝隙连接, en: gap junction, aliases: [gap junctions, 间隙连接] }
+  - { zh: 连接子, en: connexon, aliases: [connexons, hemichannel] }
+  - { zh: 连接蛋白, en: connexin, aliases: [connexins] }
+  - { zh: 胞间连丝, en: plasmodesma, aliases: [plasmodesmata] }
+  - { zh: 细胞壁, en: cell wall, aliases: [cell walls] }
+  - { zh: 初生壁, en: primary cell wall, aliases: [primary wall, 初生细胞壁] }
+  - { zh: 次生壁, en: secondary cell wall, aliases: [secondary wall, 次生细胞壁] }
+  - { zh: 纤维素微纤丝, en: cellulose microfibril, aliases: [cellulose microfibrils, 微纤丝] }
+  - { zh: 细胞分化, en: cell differentiation }
+  - { zh: 体细胞核移植, en: somatic cell nuclear transfer, aliases: [SCNT, nuclear transfer, 核移植] }
+  - { zh: 细胞质决定子, en: cytoplasmic determinant, aliases: [cytoplasmic determinants, 胞质决定子] }
+  - { zh: 不对称分离, en: asymmetric segregation }
+  - { zh: 诱导, en: induction, aliases: [embryonic induction, 胚胎诱导], scope: ["7.3", "7.5"] }
+  - { zh: 侧向抑制, en: lateral inhibition }
+  - { zh: 主调控因子, en: master regulator, aliases: [master regulators, 主控基因] }
+  - { zh: 细胞记忆, en: cell memory }
+  - { zh: 组合控制, en: combinatorial control, aliases: [组合调控] }
+  - { zh: 分节时钟, en: segmentation clock, aliases: [体节时钟] }
+  - { zh: 干细胞, en: stem cell, aliases: [stem cells] }
+  - { zh: 自我更新, en: self-renewal }
+  - { zh: 全能性, en: totipotency, aliases: [totipotent] }
+  - { zh: 多能性, en: pluripotency, aliases: [pluripotent] }
+  - { zh: 专能性, en: multipotency, aliases: [multipotent, 多潜能性] }
+  - { zh: 干细胞微环境, en: stem-cell niche, aliases: [stem cell niche, 干细胞龛], scope: ["7.3", "7.5"] }
+  - { zh: 祖细胞, en: progenitor cell, aliases: [progenitor cells, progenitor] }
+  - { zh: 过渡扩增细胞, en: transit-amplifying cell, aliases: [transit-amplifying cells, TA cells] }
+  - { zh: 造血干细胞, en: hematopoietic stem cell, aliases: [HSC, hematopoietic stem cells] }
+  - { zh: 中性漂变, en: neutral drift }
+  - { zh: 类器官, en: organoid, aliases: [organoids] }
+  - { zh: 胚胎干细胞, en: embryonic stem cell, aliases: [ES cell, ES cells, embryonic stem cells] }
+  - { zh: 重编程, en: reprogramming, aliases: [细胞重编程] }
+  - { zh: 诱导多能干细胞, en: induced pluripotent stem cell, aliases: [iPS cell, iPS cells, iPSC] }
+  - { zh: 转分化, en: transdifferentiation, aliases: [direct reprogramming, 直接重编程] }
+  - { zh: Waddington 景观, en: Waddington landscape, aliases: [epigenetic landscape, 表观遗传景观] }
