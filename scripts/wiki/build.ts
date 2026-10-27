@@ -199,13 +199,10 @@ async function buildContentLocked(opts: BuildOptions): Promise<BuildResult> {
     buildId: '',
     nav: (opts.only ? [] : tree.rootIds).map((id) => navNode(tree, id)),
   };
-  site.buildId = crypto
-    .createHash('sha256')
-    .update(JSON.stringify(site.nav))
-    .update(JSON.stringify([...payloads.values()].map((p) => p.html)))
-    .update(JSON.stringify(conceptEntries))
-    .digest('hex')
-    .slice(0, 12);
+  // Hash page by page: the HTML of all pages joined into one string exceeds V8's string limit.
+  const buildHash = crypto.createHash('sha256').update(JSON.stringify(site.nav));
+  for (const p of payloads.values()) buildHash.update(JSON.stringify(p.html));
+  site.buildId = buildHash.update(JSON.stringify(conceptEntries)).digest('hex').slice(0, 12);
 
   if (opts.dev) {
     for (const payload of payloads.values()) {

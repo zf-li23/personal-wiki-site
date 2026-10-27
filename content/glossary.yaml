@@ -6313,7 +6313,7 @@ terms:
   - { zh: DNA 挤压, en: scrunching, aliases: [scrunching] }
   - { zh: 转录泡, en: transcription bubble }
   - { zh: 内在终止子, en: intrinsic terminator, aliases: [不依赖 ρ 的终止子, ρ-independent terminator] }
-  - { zh: ρ 因子, en: ρ factor, aliases: [rho factor, Rho] }
+  - { zh: ρ 因子, en: ρ factor, aliases: [rho factor] }
   - { zh: 抗终止, en: antitermination }
   - { zh: 螺旋–转角–螺旋, en: helix–turn–helix, aliases: [HTH, helix-turn-helix] }
   - { zh: 调节子, en: regulon }
@@ -7015,3 +7015,134 @@ terms:
   - { zh: 前蛋白转化酶, en: proprotein convertase, aliases: [proprotein convertases, PC1/3, PC2, furin] }
   - { zh: sec 突变体, en: sec mutant, aliases: [sec mutants] }
   - { zh: 蛋白质二硫键异构酶, en: protein disulfide isomerase, aliases: [PDI] }
+  - { zh: 细胞骨架, en: cytoskeleton }
+  - { zh: 马达蛋白, en: motor protein, aliases: [motor proteins, 分子马达] }
+  - { zh: 肌动蛋白, en: actin }
+  - { zh: 肌动蛋白丝, en: actin filament, aliases: [actin filaments, 微丝, microfilament, microfilaments] }
+  - { zh: 球状肌动蛋白, en: G-actin }
+  - { zh: 纤维状肌动蛋白, en: F-actin }
+  - { zh: 正端, en: plus end, aliases: [plus ends, barbed end, 倒刺端], scope: ["7"] }
+  - { zh: 负端, en: minus end, aliases: [minus ends, pointed end, 尖端], scope: ["7"] }
+  - { zh: 成核, en: nucleation, aliases: [成核作用], scope: ["7"] }
+  - { zh: 临界浓度, en: critical concentration, scope: ["7"] }
+  - { zh: 踏车行为, en: treadmilling, aliases: [踏车] }
+  - { zh: 胸腺素 β4, en: thymosin β4 }
+  - { zh: 前纤维蛋白, en: profilin, aliases: [profilins] }
+  - { zh: 形成素, en: formin, aliases: [formins] }
+  - { zh: Arp2/3 复合体, en: Arp2/3 complex }
+  - { zh: 成核促进因子, en: nucleation-promoting factor, aliases: [nucleation-promoting factors, NPF] }
+  - { zh: WASP 蛋白, en: WASP, aliases: [Wiskott–Aldrich syndrome protein] }
+  - { zh: 加帽蛋白, en: capping protein, aliases: [CapZ] }
+  - { zh: 丝切蛋白, en: cofilin, aliases: [ADF, actin-depolymerizing factor] }
+  - { zh: 凝溶胶蛋白, en: gelsolin }
+  - { zh: 细胞皮层, en: cell cortex, aliases: [皮层] }
+  - { zh: 片状伪足, en: lamellipodium, aliases: [lamellipodia] }
+  - { zh: 丝状伪足, en: filopodium, aliases: [filopodia] }
+  - { zh: 应力纤维, en: stress fiber, aliases: [stress fibers, stress fibre] }
+  - { zh: 布朗棘轮, en: Brownian ratchet, aliases: [Brown 棘轮] }
+  - { zh: 失速力, en: stall force }
+  - { zh: 肌球蛋白, en: myosin, aliases: [myosins] }
+  - { zh: 肌球蛋白 II, en: myosin II }
+  - { zh: 横桥循环, en: cross-bridge cycle }
+  - { zh: 动力冲程, en: power stroke }
+  - { zh: 体外运动分析, en: in vitro motility assay }
+  - { zh: 占空比, en: duty ratio, scope: ["7"] }
+  - { zh: 微管蛋白, en: tubulin }
+  - { zh: 微管, en: microtubule, aliases: [microtubules] }
+  - { zh: 原纤维, en: protofilament, aliases: [protofilaments] }
+  - { zh: 动态不稳定性, en: dynamic instability }
+  - { zh: 灾变, en: catastrophe, aliases: [microtubule catastrophe], scope: ["7"] }
+  - { zh: 挽救, en: rescue, aliases: [microtubule rescue], scope: ["7.3"] }
+  - { zh: GTP 帽, en: GTP cap }
+  - { zh: γ-微管蛋白环复合体, en: γ-tubulin ring complex, aliases: [γ-TuRC] }
+  - { zh: 微管组织中心, en: microtubule-organizing center, aliases: [MTOC] }
+  - { zh: 中心体, en: centrosome }
+  - { zh: 中心粒, en: centriole, aliases: [centrioles] }
+  - { zh: 中心粒周物质, en: pericentriolar material, aliases: [PCM] }
+  - { zh: 微管结合蛋白, en: microtubule-associated protein, aliases: [MAPs, microtubule-associated proteins] }
+  - { zh: 正端追踪蛋白, en: plus-end tracking protein, aliases: [+TIP, +TIPs] }
+  - { zh: 微管切割, en: microtubule severing }
+  - { zh: 驱动蛋白, en: kinesin, aliases: [kinesins] }
+  - { zh: 动力蛋白, en: dynein, aliases: [dyneins] }
+  - { zh: 动力蛋白激活蛋白, en: dynactin }
+  - { zh: 光镊, en: optical tweezers, aliases: [optical trap] }
+  - { zh: 手递手机制, en: hand-over-hand mechanism, aliases: [hand-over-hand], scope: ["7"] }
+  - { zh: 轴突运输, en: axonal transport, aliases: [轴浆运输] }
+  - { zh: 纤毛, en: cilium, aliases: [cilia] }
+  - { zh: 轴丝, en: axoneme }
+  - { zh: 基体, en: basal body, scope: ["7"] }
+  - { zh: 鞭毛内运输, en: intraflagellar transport, aliases: [IFT] }
+  - { zh: 初级纤毛, en: primary cilium, aliases: [primary cilia] }
+  - { zh: 纤毛病, en: ciliopathy, aliases: [ciliopathies] }
+  - { zh: 中间丝, en: intermediate filament, aliases: [intermediate filaments, 中间纤维] }
+  - { zh: 角蛋白, en: keratin, aliases: [keratins] }
+  - { zh: 波形蛋白, en: vimentin }
+  - { zh: 神经丝, en: neurofilament, aliases: [neurofilaments] }
+  - { zh: 单纯型大疱性表皮松解症, en: epidermolysis bullosa simplex }
+  - { zh: 网蛋白, en: plectin }
+  - { zh: 隔膜蛋白, en: septin, aliases: [septins] }
+  - { zh: FtsZ, en: FtsZ }
+  - { zh: MreB, en: MreB }
+  - { zh: 持久长度, en: persistence length }
+  - { zh: 蠕虫链模型, en: worm-like chain, aliases: [worm-like chain model, WLC] }
+  - { zh: 细胞极性, en: cell polarity }
+  - { zh: Cdc42, en: Cdc42 }
+  - { zh: Rac, en: Rac }
+  - { zh: 波钉扎模型, en: wave-pinning model, aliases: [wave pinning] }
+  - { zh: PAR 蛋白, en: PAR proteins, aliases: [PAR protein] }
+  - { zh: Par 复合体, en: Par complex }
+  - { zh: 细胞迁移, en: cell migration }
+  - { zh: 趋化性, en: chemotaxis, aliases: [趋化作用] }
+  - { zh: 局部兴奋–全局抑制, en: "local excitation, global inhibition", aliases: [LEGI, LEGI model] }
+  - { zh: 核被膜, en: nuclear envelope }
+  - { zh: 内核膜, en: inner nuclear membrane, aliases: [INM] }
+  - { zh: 外核膜, en: outer nuclear membrane, aliases: [ONM] }
+  - { zh: 核周隙, en: perinuclear space, aliases: [核周间隙] }
+  - { zh: 孔膜, en: pore membrane }
+  - { zh: LINC 复合体, en: LINC complex, aliases: [LINC complexes] }
+  - { zh: 核纤层, en: nuclear lamina }
+  - { zh: 核纤层蛋白, en: lamin, aliases: [lamins, 核纤肽], scope: ["7"] }
+  - { zh: 核纤层病, en: laminopathy, aliases: [laminopathies, 核膜病, nuclear envelopathy] }
+  - { zh: Hutchinson–Gilford 早衰综合征, en: Hutchinson–Gilford progeria syndrome, aliases: [HGPS, 早衰症] }
+  - { zh: 早老素, en: progerin }
+  - { zh: 核基质, en: nuclear matrix, aliases: [核骨架, nucleoskeleton] }
+  - { zh: 核孔复合体, en: nuclear pore complex, aliases: [nuclear pore complexes, NPC, NPCs] }
+  - { zh: 核孔蛋白, en: nucleoporin, aliases: [nucleoporins, Nup, Nups] }
+  - { zh: FG 重复, en: FG repeat, aliases: [FG repeats] }
+  - { zh: 核定位信号, en: nuclear localization signal, aliases: [NLS] }
+  - { zh: 核输出信号, en: nuclear export signal, aliases: [NES] }
+  - { zh: 核转运受体, en: karyopherin, aliases: [karyopherins, 核质转运蛋白] }
+  - { zh: 输入蛋白, en: importin, aliases: [importins, 核输入受体] }
+  - { zh: 输出蛋白, en: exportin, aliases: [exportins, 核输出受体] }
+  - { zh: Ran, en: Ran, aliases: [Ran GTPase] }
+  - { zh: 开放式有丝分裂, en: open mitosis }
+  - { zh: 封闭式有丝分裂, en: closed mitosis }
+  - { zh: 核质比, en: nuclear-to-cytoplasmic ratio, aliases: [N/C ratio, karyoplasmic ratio] }
+  - { zh: 核大小标度, en: nuclear size scaling }
+  - { zh: 染色体, en: chromosome, aliases: [chromosomes], scope: ["7"] }
+  - { zh: 组成型异染色质, en: constitutive heterochromatin }
+  - { zh: 兼性异染色质, en: facultative heterochromatin }
+  - { zh: 染色中心, en: chromocenter, aliases: [chromocenters] }
+  - { zh: X 染色体失活, en: X-chromosome inactivation, aliases: [XCI, X 失活] }
+  - { zh: 巴氏小体, en: Barr body, aliases: [Barr bodies, Barr 小体] }
+  - { zh: 组蛋白变体, en: histone variant, aliases: [histone variants] }
+  - { zh: 核型, en: karyotype, aliases: [karyotypes] }
+  - { zh: 染色体显带, en: chromosome banding, aliases: [显带, G banding, G 显带] }
+  - { zh: 多线染色体, en: polytene chromosome, aliases: [polytene chromosomes] }
+  - { zh: 核内复制, en: endoreplication, aliases: [endocycle] }
+  - { zh: 染色体疏松区, en: chromosome puff, aliases: [chromosome puffs, 膨突], scope: ["7"] }
+  - { zh: 灯刷染色体, en: lampbrush chromosome, aliases: [lampbrush chromosomes] }
+  - { zh: 染色体疆域, en: chromosome territory, aliases: [chromosome territories, 染色体领地] }
+  - { zh: 核纤层相关结构域, en: lamina-associated domain, aliases: [lamina-associated domains] }
+  - { zh: 核体, en: nuclear body, aliases: [nuclear bodies] }
+  - { zh: Cajal 体, en: Cajal body, aliases: [Cajal bodies, 卷曲体, coiled body] }
+  - { zh: 核斑点, en: nuclear speckle, aliases: [nuclear speckles, 核小斑] }
+  - { zh: PML 小体, en: PML body, aliases: [PML bodies, PML nuclear body] }
+  - { zh: 核仁, en: nucleolus, aliases: [nucleoli] }
+  - { zh: 核仁组织区, en: nucleolar organizer region, aliases: [nucleolar organizer regions] }
+  - { zh: 纤维中心, en: fibrillar center, aliases: [fibrillar centers], scope: ["7"] }
+  - { zh: 致密纤维组分, en: dense fibrillar component, aliases: [DFC] }
+  - { zh: 颗粒组分, en: granular component, aliases: [granular components], scope: ["7"] }
+  - { zh: 核糖体生物发生, en: ribosome biogenesis, aliases: [核糖体形成] }
+  - { zh: 核仁应激, en: nucleolar stress, aliases: [ribosomal stress, 核糖体应激] }
+  - { zh: 染色体外 DNA, en: extrachromosomal DNA, aliases: [ecDNA, 双微体, double minute, double minutes] }
