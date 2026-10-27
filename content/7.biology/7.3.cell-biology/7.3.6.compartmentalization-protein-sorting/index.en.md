@@ -27,9 +27,26 @@ Compartmentalization does three things that a single compartment cannot. It keep
 
 (MBoC 7e, Table 12–1.) Membranes enclose nearly half the volume of a hepatocyte, and the plasma membrane is a minor part of the cell's membrane: in a hepatocyte of about $5000\,\mu\mathrm{m^3}$, with some $110\,000\,\mu\mathrm{m^2}$ of membrane, the plasma membrane accounts for $2\,\%$, the rough and smooth ER for about half and the mitochondrial inner membrane for a third; in a pancreatic acinar cell, specialized for secretion, the rough ER alone makes up $60\,\%$ of the membrane. The relative sizes of the compartments thus reflect what a cell does.
 
+Organelles can also be grouped by their boundaries, which reflects their origins:
+
+| Boundary | Organelles | Note |
+|---|---|---|
+| Two membranes | Nucleus (the nuclear envelope), mitochondria, plastids | The nuclear envelope is a flattened sac of ER, so its two membranes enclose one lumen; the two membranes of mitochondria and plastids enclose two separate spaces and descend from the envelope of a bacterium (6.1.3) |
+| One membrane | ER, Golgi apparatus, endosomes, lysosomes, plant and fungal vacuoles, secretory vesicles, peroxisomes (and glyoxysomes) | All but peroxisomes belong to the endomembrane system |
+| No membrane | Ribosomes, centrosomes and centrioles, the cytoskeleton, the nucleolus and other condensates (6.1.4), proteasomes | Macromolecular assemblies or condensates in the cytosol or nucleoplasm |
+
 ### 6.1.2. The Cytosol
 
-The cytoplasm is everything inside the plasma membrane except the nucleus; the cytosol is its fluid part, outside the membrane-enclosed organelles (both terms are defined in [7.1.1](/7.1.1)). The cytosol is not a dilute solution: it contains about $200$–$300\,\mathrm{g\,L^{-1}}$ of protein, so that **macromolecular crowding** raises the effective concentrations and association constants of macromolecules, slows their diffusion (GFP diffuses about four times more slowly in the cytoplasm than in water), and favors compact states. It is crossed by the filaments of the cytoskeleton ([7.3.13](/7.3.13)–[7.3.15](/7.3.15)), which organize it, and is the site of protein synthesis, of most folding by cytosolic chaperones, and of degradation by the **ubiquitin–proteasome system** ([7.2.20](/7.2.20)).
+The cytoplasm is everything inside the plasma membrane except the nucleus; the cytosol is its fluid part, outside the membrane-enclosed organelles (both terms are defined in [7.1.1](/7.1.1)). The cytosol is not a dilute solution: it contains about $200$–$300\,\mathrm{g\,L^{-1}}$ of protein, so that **macromolecular crowding** raises the effective concentrations and association constants of macromolecules, slows their diffusion (GFP diffuses about four times more slowly in the cytoplasm than in water), and favors compact states. It is crossed by the filaments of the cytoskeleton ([7.3.13](/7.3.13)–[7.3.15](/7.3.15)), which organize it, and is the site of protein synthesis, of most folding by cytosolic chaperones, and of degradation by the **ubiquitin–proteasome system** ([7.2.20](/7.2.20)). Some textbooks call the cytosol together with the cytoskeleton that pervades it the cytoplasmic matrix (cytomatrix), stressing that it is a structured gel rather than a solution. Its functions are many.
+
+| Function | Examples |
+|---|---|
+| Metabolism | Glycolysis, the pentose phosphate pathway, gluconeogenesis (most steps), glycogen synthesis and breakdown, fatty acid synthesis, synthesis of nucleotides and many amino acids ([7.1.18](/7.1.18)–[7.1.28](/7.1.28)) |
+| Protein synthesis and quality control | Translation on free ribosomes; folding by chaperones; modification (phosphorylation, acetylation, ubiquitination); selective degradation by the proteasome; the N-end rule ([7.2.20](/7.2.20)) |
+| Ionic and chemical environment | Kept at pH about 7.2, low $\ce{Na+}$ and $\ce{Ca^2+}$, high $\ce{K+}$ ([7.3.5](/7.3.5)), and reducing (high glutathione) |
+| Supply of the organelles | Substrates, ATP and cofactors for organelle metabolism; all nuclear-encoded organelle proteins (6.3) |
+| Signaling and control of gene expression | Second messengers, kinase cascades, the cytoplasmic retention and release of transcription factors ([7.3.18](/7.3.18)); cytoplasmic determinants of cell fate ([7.3.24](/7.3.24)) |
+| Organization and transport | Anchoring of organelles and mRNAs on the cytoskeleton; motor-driven transport ([7.3.13](/7.3.13)–[7.3.15](/7.3.15)) |
 
 ### 6.1.3. The Endomembrane System and Its Topology
 
@@ -103,7 +120,7 @@ In 1972 César Milstein and colleagues found that the light chain of immunoglobu
 
 **Definition 6.4.1 (Signal Hypothesis)** The **signal hypothesis** states that a protein destined for secretion carries at its N-terminus a signal sequence that, as it emerges from the ribosome, directs the ribosome to the ER membrane and the growing chain into the ER lumen, where the signal is removed; in its generalized form (Blobel, 1980), every protein contains in its sequence the information that specifies its location in the cell.
 
-The machinery is described in [7.2.19](/7.2.19#sec-19.9.2): the signal recognition particle binds the signal sequence as it emerges from the ribosome and slows elongation, docks on the SRP receptor in the ER membrane, and hands the ribosome to the translocator; GTP hydrolysis by both GTPases releases SRP for another round. Ribosomes making proteins for the ER are thus attached to the ER membrane only while they make such a protein; the "membrane-bound" and "free" ribosomes are the same population, and a single mRNA is translated by a **polysome** of ER-bound ribosomes. Blobel received the 1999 Nobel Prize in Physiology or Medicine.
+The machinery is described in [7.2.19](/7.2.19#sec-19.9.2): the signal recognition particle, a ribonucleoprotein of the $300$-nucleotide 7SL RNA and six polypeptides (SRP54 binds the signal sequence and is a GTPase; SRP9 and SRP14 cause the pause in elongation), binds the signal sequence as it emerges from the ribosome and slows elongation, docks on the SRP receptor in the ER membrane, and hands the ribosome to the translocator; GTP hydrolysis by both GTPases releases SRP for another round. Ribosomes making proteins for the ER are thus attached to the ER membrane only while they make such a protein; the "membrane-bound" and "free" ribosomes are the same population, and a single mRNA is translated by a **polysome** of ER-bound ribosomes. Blobel received the 1999 Nobel Prize in Physiology or Medicine.
 
 ### 6.4.2. The Sec61 Translocon
 
@@ -184,7 +201,7 @@ Recent cryo-EM structures of the TIM23 complex (2023, including work from Long L
 
 ### 6.5.2. What Drives Import
 
-Import across the two membranes needs three inputs of energy. ATP in the cytosol is used by cytosolic Hsp70 chaperones to keep precursors unfolded and import-competent. The membrane potential across the inner membrane, $150$–$180\,\mathrm{mV}$ negative inside, one component of the **proton-motive force** ([7.1.23](/7.1.23)), pulls the positively charged presequence through TIM23 electrophoretically; uncouplers, which collapse it, block import, and this requirement is the reason mitochondria need a working **respiratory chain** or a reversed **ATP synthase** to grow. ATP in the matrix is used by mtHsp70, which binds the chain as it emerges and drives it in.
+Import across the two membranes needs three inputs of energy. ATP in the cytosol is used by cytosolic Hsp70 chaperones to keep precursors unfolded and import-competent. The membrane potential across the inner membrane, $150$–$180\,\mathrm{mV}$ negative inside, one component of the **proton-motive force** ([7.1.23](/7.1.23)), pulls the positively charged presequence through TIM23 electrophoretically; uncouplers, which collapse it, block import, and this requirement is the reason mitochondria need a working **respiratory chain** or a reversed **ATP synthase** to grow. ATP in the matrix is used by mtHsp70, which binds the chain as it emerges and drives it in; many imported proteins are then folded in the matrix by the chaperonin Hsp60–Hsp10, the mitochondrial counterpart of bacterial GroEL–GroES ([7.1.6](/7.1.6)), whereas some first exposed on the matrix side are sorted back into the inner membrane by Oxa1.
 
 **Example 6.5.1** How strong is the electrophoretic pull? A presequence with $z = 4$ net positive charges in an inner membrane of thickness $d \approx 4\,\mathrm{nm}$ with $\Delta\psi = 160\,\mathrm{mV}$ feels a force $F = ze\Delta\psi/d = 4 \times 1.6\times10^{-19}\,\mathrm{C} \times 0.16\,\mathrm{V}/(4\times10^{-9}\,\mathrm{m}) \approx 26\,\mathrm{pN}$, and gains an energy $ze\Delta\psi = 0.64\,\mathrm{eV} \approx 24\,k_{\mathrm{B}}T$. That is enough to pull the presequence across the membrane and partly unfold a weakly folded domain that follows, but not a stable one; and the force acts only on the charges in the membrane, so it cannot import the rest of the chain. The motor does that.
 
@@ -211,7 +228,7 @@ Chloroplasts contain about 3000 proteins, of which fewer than 100 are encoded by
 
 **Definition 6.6.1 (TOC and TIC Complexes)** The **TOC complex** (translocon at the outer envelope membrane of chloroplasts) contains the β-barrel channel Toc75 (an Omp85 family member, like Sam50) and the GTPase receptors Toc159 and Toc34, which recognize transit peptides. The **TIC complex** (translocon at the inner envelope membrane) is a large complex of about 1 MDa whose channel is formed by Tic20, Tic214 (encoded in the chloroplast genome) and other subunits; an ATP-driven motor in the stroma, including the AAA protein complex Ycf2–FtsHi and the chaperones Hsp93 and Hsp70, pulls the chain into the stroma.
 
-Import into chloroplasts differs from mitochondrial import in its energy source: there is no membrane potential across the envelope, and import is driven by GTP at the TOC receptors and ATP in the stroma. Proteins of the thylakoid membrane and lumen carry, behind the transit peptide, a second signal that becomes exposed after cleavage in the stroma (a bipartite signal) and directs them across or into the thylakoid membrane by one of four routes, three of them inherited from the cyanobacterial ancestor.
+Import into chloroplasts differs from mitochondrial import in its energy source: there is no membrane potential across the envelope, and import is driven by GTP at the TOC receptors and ATP in the stroma. Proteins of the thylakoid membrane and lumen carry, behind the transit peptide, a second signal that becomes exposed after cleavage in the stroma (a bipartite signal) and directs them across or into the thylakoid membrane by one of four routes, three of them inherited from the cyanobacterial ancestor. Plastocyanin, a copper protein of the thylakoid lumen, is the classic example: its precursor carries an N-terminal transit peptide, removed in the stroma after import through TOC and TIC, followed by a thylakoid signal resembling a bacterial signal sequence, which directs it through the cpSec translocon into the lumen, where it is cleaved by the thylakoid processing peptidase. Each signal is read by the machinery of one membrane, and the order of the signals in the sequence reproduces the order of the membranes the protein must cross.
 
 | Pathway | Cargo | Machinery | Energy | Bacterial counterpart |
 |---|---|---|---|---|
@@ -225,6 +242,8 @@ The thylakoid lumen is a fourth space within a single organelle, and the Tat pat
 ## 6.7. Peroxisomes
 
 ### 6.7.1. What Peroxisomes Do
+
+Peroxisomes and the related glyoxysomes of plant seeds were first described in electron micrographs of liver and kidney (Johannes Rhodin, 1954) as microbodies, small vesicles with a granular matrix, often containing a crystalline core of urate oxidase; de Duve's fractionation then defined them by their enzymes ([7.3.3](/7.3.3)).
 
 **Definition 6.7.1 (Peroxisome)** A **peroxisome** is a small organelle (usually $0.1$–$1\,\mu\mathrm{m}$), bounded by a single membrane and lacking a genome, that contains oxidases which use $\ce{O2}$ to oxidize organic substrates and produce hydrogen peroxide, and catalase, which decomposes or uses the $\ce{H2O2}$; it imports its matrix proteins from the cytosol in a folded state.
 
@@ -299,13 +318,13 @@ How can transfer proteins, which only catalyze exchange, create a gradient? OSBP
 
 | Topic | Key points |
 |---|---|
-| Compartments (6.1, Definitions 6.1.1–6.1.2) | Hepatocyte volumes: cytosol $54\,\%$, mitochondria $22\,\%$, ER $14\,\%$; plasma membrane only $2\,\%$ of membrane area; crowded cytosol; endomembrane system with lumens topologically equivalent to the exterior; mitochondria and plastids separate; condensates as membraneless compartments (synaptic vesicle clusters, carboxysomes), cleared by autophagy when solid (SEPA-1/EPG-2, CCT2) |
+| Compartments (6.1, Definitions 6.1.1–6.1.2) | Hepatocyte volumes: cytosol $54\,\%$, mitochondria $22\,\%$, ER $14\,\%$; plasma membrane only $2\,\%$ of membrane area; organelles with two, one or no membranes; crowded cytosol (cytoplasmic matrix) with its metabolic, synthetic, ionic, supply, signaling and organizing functions; endomembrane system with lumens topologically equivalent to the exterior; mitochondria and plastids separate; condensates as membraneless compartments (synaptic vesicle clusters, carboxysomes), cleared by autophagy when solid (SEPA-1/EPG-2, CCT2) |
 | Size (6.2, Definition 6.2.1, Proposition 6.2.1) | Organelle size scales with cell volume; limiting pool: $S^* = (\rho - c^*)V$, $c^* = k_{\mathrm{off}}/k_{\mathrm{on}}$; centrosomes and spindles in embryos; other mechanisms: balance-point length control, import-limited growth |
 | Sorting (6.3, Definitions 6.3.1–6.3.2) | Gated, transmembrane and vesicular transport; the ER decision is made first; signal sequences and patches read by physical character; table of signals; transferable signals |
 | ER (6.4, Definitions 6.4.1–6.4.6, Example 6.4.1) | Signal hypothesis (Milstein 1972, Blobel); Sec61αβγ with plug, pore ring and lateral gate; co- vs posttranslational (Sec62/63, BiP ratchet; SecA in bacteria); start- and stop-transfer sequences; type I, II, III, tail-anchored, multipass, GPI-anchored; positive-inside rule; GET (Get3/TRC40, Get1/2) and EMC; GPI transamidase; PNH |
 | Mitochondria (6.5, Definitions 6.5.1–6.5.2, Example 6.5.1, Formula 6.5.1) | Presequence: amphipathic, positive, cleaved by MPP; TOM → TIM23 (Tim17 channel) + PAM; TIM22 carriers; SAM β barrels; MIA disulfide relay; Oxa1; energy: cytosolic ATP, $\Delta\psi$ (about $26\,\mathrm{pN}$ on four charges), matrix ATP; DHFR–methotrexate intermediates; ratchet $v = 2D/\delta$ at zero load |
 | Chloroplasts (6.6, Definition 6.6.1) | Transit peptide; TOC (Toc75, Toc159, Toc34) and TIC (Tic20, Tic214; Ycf2–FtsHi motor); GTP and ATP, no $\Delta\psi$; bipartite signals; thylakoid cpSec, cpTat (folded, $\Delta\mathrm{pH}$), cpSRP, spontaneous |
-| Peroxisomes (6.7, Definitions 6.7.1–6.7.2) | Oxidases and catalase; VLCFA β oxidation, plasmalogens, bile acids, glyoxysomes, photorespiration; PTS1 (SKL, Pex5) and PTS2 (Pex7); folded cargo, export-driven import (ubiquitination, Pex1/Pex6); growth and division or de novo from the ER (Pex3, Pex19); Zellweger syndrome, X-ALD |
+| Peroxisomes (6.7, Definitions 6.7.1–6.7.2) | Microbodies of early EM; oxidases and catalase; VLCFA β oxidation, plasmalogens, bile acids, glyoxysomes, photorespiration; PTS1 (SKL, Pex5) and PTS2 (Pex7); folded cargo, export-driven import (ubiquitination, Pex1/Pex6); growth and division or de novo from the ER (Pex3, Pex19); Zellweger syndrome, X-ALD |
 | Exceptions (6.8, Definitions 6.8.1–6.8.2) | Unconventional secretion types I–IV (FGF2, IL-1β via gasdermin D or the TMED10 THU pathway, Ste6, CFTR bypass); contact sites at $10$–$30\,\mathrm{nm}$; shuttle and bridge transfer proteins; OSBP countertransport of cholesterol and PI(4)P driven by PI4K and Sac1 |
 
 ## Questions

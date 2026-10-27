@@ -7390,3 +7390,13 @@ terms:
   - { zh: 自溶, en: autolysis, scope: ["7"] }
   - { zh: 完全致癌物, en: complete carcinogen, aliases: [complete carcinogens] }
   - { zh: 间变, en: anaplasia }
+  - { zh: 标志酶, en: marker enzyme, aliases: [marker enzymes] }
+  - { zh: 细胞化学, en: cytochemistry }
+  - { zh: 倒置显微镜, en: inverted microscope }
+  - { zh: 显微操作, en: micromanipulation, aliases: [显微操作技术] }
+  - { zh: 异核体, en: heterokaryon, aliases: [heterokaryons] }
+  - { zh: 愈伤组织, en: callus, scope: ["7"] }
+  - { zh: 原生质体, en: protoplast, aliases: [protoplasts], scope: ["7"] }
+  - { zh: 壳粒, en: capsomere, aliases: [壳微粒, capsomeres] }
+  - { zh: 核衣壳, en: nucleocapsid }
+  - { zh: 病毒粒子, en: virion, aliases: [病毒体, virions] }
