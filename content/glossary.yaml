@@ -7400,3 +7400,8 @@ terms:
   - { zh: 壳粒, en: capsomere, aliases: [壳微粒, capsomeres] }
   - { zh: 核衣壳, en: nucleocapsid }
   - { zh: 病毒粒子, en: virion, aliases: [病毒体, virions] }
+  - { zh: 肌节, en: sarcomere, aliases: [肌小节, sarcomeres], scope: ["7"] }
+  - { zh: 中间丝结合蛋白, en: intermediate filament–associated protein, aliases: [IFAP, IFAPs, 中间纤维结合蛋白] }
+  - { zh: 亲核蛋白, en: karyophilic protein, aliases: [karyophilic proteins] }
+  - { zh: B 染色体, en: B chromosome, aliases: [B chromosomes, 超数染色体, supernumerary chromosome] }
+  - { zh: 细胞识别, en: cell recognition }
