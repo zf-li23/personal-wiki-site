@@ -7172,3 +7172,79 @@ terms:
   - { zh: Smad 蛋白, en: Smad, aliases: [Smads, Smad proteins, R-Smad, Co-Smad] }
   - { zh: Hippo 通路, en: Hippo pathway, aliases: [Hippo signaling pathway, Hippo–YAP pathway] }
   - { zh: YAP, en: YAP, aliases: [YAP/TAZ, Yes-associated protein] }
+  - { zh: 细胞周期, en: cell cycle }
+  - { zh: G1 期, en: G1 phase }
+  - { zh: S 期, en: S phase }
+  - { zh: G2 期, en: G2 phase }
+  - { zh: M 期, en: M phase }
+  - { zh: 间期, en: interphase }
+  - { zh: G0 期, en: G0 phase, aliases: [静止期, quiescence] }
+  - { zh: 标记有丝分裂百分率法, en: labeled mitoses method, aliases: [percent labeled mitoses, PLM] }
+  - { zh: 细胞同步化, en: cell synchronization }
+  - { zh: 成熟促进因子, en: maturation-promoting factor, aliases: [MPF, M-phase-promoting factor, 促成熟因子] }
+  - { zh: 早熟染色体凝集, en: premature chromosome condensation, aliases: [PCC] }
+  - { zh: 细胞分裂周期基因, en: cell-division-cycle gene, aliases: [cdc gene, CDC 基因] }
+  - { zh: 细胞周期控制系统, en: cell-cycle control system }
+  - { zh: CDK 激活激酶, en: Cdk-activating kinase, aliases: [CAK] }
+  - { zh: Wee1, en: Wee1, aliases: [Wee1 kinase] }
+  - { zh: Cdc25, en: Cdc25, aliases: [Cdc25 phosphatase] }
+  - { zh: CDK 抑制蛋白, en: Cdk inhibitor protein, aliases: [CKI, CDK inhibitor] }
+  - { zh: SCF 复合体, en: SCF complex, aliases: [SCF complexes] }
+  - { zh: 后期促进复合物, en: anaphase-promoting complex, aliases: [APC/C, cyclosome, 后期促进复合体] }
+  - { zh: 分离酶抑制蛋白, en: securin }
+  - { zh: 分离酶, en: separase }
+  - { zh: 细胞周期振荡器, en: cell-cycle oscillator }
+  - { zh: 有丝分裂, en: mitosis }
+  - { zh: 前期, en: prophase, scope: ["7"] }
+  - { zh: 前中期, en: prometaphase }
+  - { zh: 中期, en: metaphase }
+  - { zh: 后期, en: anaphase, scope: ["7"] }
+  - { zh: 末期, en: telophase }
+  - { zh: 黏连蛋白, en: cohesin, aliases: [黏着蛋白] }
+  - { zh: 凝缩蛋白, en: condensin }
+  - { zh: 有丝分裂纺锤体, en: mitotic spindle, aliases: [纺锤体, spindle] }
+  - { zh: 动粒微管, en: kinetochore microtubule, aliases: [kinetochore microtubules, K-fiber] }
+  - { zh: 极间微管, en: interpolar microtubule, aliases: [interpolar microtubules, 极微管, polar microtubule] }
+  - { zh: 星体微管, en: astral microtubule, aliases: [astral microtubules] }
+  - { zh: 搜索–捕获模型, en: search-and-capture model }
+  - { zh: 动粒, en: kinetochore }
+  - { zh: Aurora B, en: Aurora B }
+  - { zh: 纺锤体组装检验点, en: spindle assembly checkpoint, aliases: [SAC, mitotic checkpoint, 纺锤体检验点] }
+  - { zh: 有丝分裂检验点复合物, en: mitotic checkpoint complex, aliases: [MCC] }
+  - { zh: Mad2, en: Mad2 }
+  - { zh: 后期 A, en: anaphase A }
+  - { zh: 后期 B, en: anaphase B }
+  - { zh: 胞质分裂, en: cytokinesis }
+  - { zh: 收缩环, en: contractile ring }
+  - { zh: 中体, en: midbody }
+  - { zh: 胞质分裂断开, en: abscission, scope: ["7.3"] }
+  - { zh: 早前期带, en: preprophase band }
+  - { zh: 成膜体, en: phragmoplast }
+  - { zh: 细胞板, en: cell plate }
+  - { zh: 不对称分裂, en: asymmetric cell division, aliases: [asymmetric division] }
+  - { zh: 减数分裂, en: meiosis }
+  - { zh: 联会复合体, en: synaptonemal complex }
+  - { zh: 二价体, en: bivalent, aliases: [四分体, tetrad] }
+  - { zh: 交叉, en: chiasma, aliases: [chiasmata] }
+  - { zh: 单极蛋白, en: monopolin }
+  - { zh: 守护蛋白, en: shugoshin }
+  - { zh: 极体, en: polar body }
+  - { zh: 非整倍性, en: aneuploidy, aliases: [非整倍体] }
+  - { zh: 促分裂原, en: mitogen, aliases: [有丝分裂原, 促细胞分裂剂] }
+  - { zh: 生长因子, en: growth factor }
+  - { zh: 存活因子, en: survival factor }
+  - { zh: 限制点, en: restriction point, aliases: [R 点] }
+  - { zh: 起始点, en: Start, scope: ["7"] }
+  - { zh: 视网膜母细胞瘤蛋白, en: retinoblastoma protein, aliases: [pRb, Rb protein] }
+  - { zh: E2F, en: E2F }
+  - { zh: 细胞周期检验点, en: cell-cycle checkpoint, aliases: [cell-cycle checkpoints], scope: ["7"] }
+  - { zh: p53, en: p53 }
+  - { zh: Mdm2, en: Mdm2, aliases: [HDM2, MDM2] }
+  - { zh: p21, en: p21, aliases: [p21Cip1] }
+  - { zh: 细胞生长, en: cell growth }
+  - { zh: 细胞大小稳态, en: cell size homeostasis }
+  - { zh: 定大小模型, en: sizer, scope: ["7"] }
+  - { zh: 定时模型, en: timer, scope: ["7"] }
+  - { zh: 定增量模型, en: adder, scope: ["7"] }
+  - { zh: 接触抑制, en: contact inhibition }
+  - { zh: 癌基因诱导的衰老, en: oncogene-induced senescence }
