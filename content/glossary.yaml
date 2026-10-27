@@ -6508,7 +6508,7 @@ terms:
   - { zh: 原癌基因, en: proto-oncogene }
   - { zh: 癌基因, en: oncogene, aliases: [oncogenes] }
   - { zh: 抑癌基因, en: tumor suppressor gene, aliases: [tumor suppressor genes, 肿瘤抑制基因] }
-  - { zh: 细胞凋亡, en: apoptosis, aliases: [programmed cell death, 程序性细胞死亡] }
+  - { zh: 细胞凋亡, en: apoptosis }
   - { zh: 胱天蛋白酶, en: caspase, aliases: [caspases] }
   - { zh: 双分子荧光互补, en: bimolecular fluorescence complementation, aliases: [BiFC] }
   - { zh: 酵母双杂交, en: yeast two-hybrid system, aliases: [yeast two-hybrid, Y2H] }
@@ -6604,7 +6604,7 @@ terms:
   - { zh: Shine–Dalgarno 序列, en: Shine–Dalgarno sequence, aliases: [SD 序列, SD sequence] }
   - { zh: 扫描模型, en: scanning model }
   - { zh: Kozak 序列, en: Kozak sequence }
-  - { zh: 核糖体易位, en: ribosomal translocation, aliases: [易位] }
+  - { zh: 核糖体易位, en: ribosomal translocation }
   - { zh: 信号序列, en: signal sequence, aliases: [信号肽, signal peptide] }
   - { zh: 信号识别颗粒, en: signal recognition particle, aliases: [SRP] }
   - { zh: RNA 温度计, en: RNA thermometer }
