@@ -6803,3 +6803,52 @@ terms:
   - { zh: I 型拓扑异构酶, en: type I topoisomerase, aliases: [type I topoisomerases] }
   - { zh: II 型拓扑异构酶, en: type II topoisomerase, aliases: [type II topoisomerases] }
   - { zh: 双链断裂修复, en: double-strand-break repair, aliases: [DSBR], scope: ["7"] }
+
+  # biology: cell biology (7.3); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 细胞学说, en: cell theory }
+  - { zh: 细胞生物学, en: cell biology }
+  - { zh: 细胞器, en: organelle, aliases: [organelles], scope: ["7"] }
+  - { zh: 病毒, en: virus, aliases: [viruses], scope: ["7"] }
+  - { zh: 类病毒, en: viroid, aliases: [viroids] }
+  - { zh: 真核生物最近共同祖先, en: last eukaryotic common ancestor, aliases: [LECA] }
+  - { zh: 模式生物, en: model organism, aliases: [model organisms] }
+  - { zh: 基因组等价性, en: genomic equivalence }
+  - { zh: 分辨极限, en: limit of resolution, aliases: [分辨率], scope: ["7"] }
+  - { zh: 数值孔径, en: numerical aperture, aliases: [NA] }
+  - { zh: 明场显微术, en: bright-field microscopy }
+  - { zh: 相差显微术, en: phase-contrast microscopy, aliases: [相差显微镜] }
+  - { zh: 微分干涉差显微术, en: differential interference contrast microscopy, aliases: [DIC, Nomarski optics] }
+  - { zh: 暗视野显微术, en: dark-field microscopy }
+  - { zh: 偏光显微术, en: polarized-light microscopy }
+  - { zh: 荧光显微术, en: fluorescence microscopy, aliases: [荧光显微镜] }
+  - { zh: 免疫荧光, en: immunofluorescence, aliases: [免疫荧光技术] }
+  - { zh: 双光子显微术, en: two-photon microscopy }
+  - { zh: 光片显微术, en: light-sheet microscopy }
+  - { zh: 全内反射荧光显微术, en: total internal reflection fluorescence microscopy, aliases: [TIRF microscopy, TIRF] }
+  - { zh: 单分子定位显微术, en: single-molecule localization microscopy, aliases: [SMLM] }
+  - { zh: 遗传编码钙指示剂, en: genetically encoded calcium indicator, aliases: [GECI] }
+  - { zh: 光遗传学, en: optogenetics }
+  - { zh: 光漂白荧光损失, en: fluorescence loss in photobleaching, aliases: [FLIP] }
+  - { zh: 均方位移, en: mean squared displacement, aliases: [MSD] }
+  - { zh: 透射电子显微镜, en: transmission electron microscope, aliases: [TEM, transmission electron microscopy] }
+  - { zh: 扫描电子显微镜, en: scanning electron microscope, aliases: [SEM, scanning electron microscopy] }
+  - { zh: 负染色, en: negative staining }
+  - { zh: 冷冻断裂电镜, en: freeze-fracture electron microscopy, aliases: [冷冻断裂, freeze fracture, freeze-etching, 冷冻蚀刻] }
+  - { zh: 免疫金标记, en: immunogold labeling, aliases: [免疫胶体金] }
+  - { zh: 冷冻电子断层成像, en: cryo-electron tomography, aliases: [cryo-ET] }
+  - { zh: 原代培养, en: primary culture }
+  - { zh: 细胞系, en: cell line, aliases: [cell lines] }
+  - { zh: 杂交瘤, en: hybridoma, aliases: [hybridomas] }
+  - { zh: 细胞分级分离, en: cell fractionation }
+  - { zh: 速度沉降, en: velocity sedimentation, aliases: [速率区带离心] }
+  - { zh: 等密度离心, en: equilibrium density-gradient centrifugation, aliases: [isopycnic centrifugation, 密度梯度离心] }
+  - { zh: 无细胞体系, en: cell-free system, aliases: [cell-free systems] }
+  - { zh: 放射自显影, en: autoradiography }
+  - { zh: 脉冲追踪实验, en: pulse–chase experiment, aliases: [pulse-chase, 脉冲–追踪] }
+  - { zh: 流式细胞术, en: flow cytometry }
+  - { zh: 荧光激活细胞分选仪, en: fluorescence-activated cell sorter, aliases: [FACS, fluorescence-activated cell sorting, 荧光激活细胞分选] }
+  - { zh: GST 下拉, en: GST pulldown, aliases: [GST pull-down] }
+  - { zh: 免疫共沉淀, en: co-immunoprecipitation, aliases: [Co-IP] }
+  - { zh: 噬菌体展示, en: phage display }
+  - { zh: 基因敲除小鼠, en: knockout mouse, aliases: [knockout mice] }
+  - { zh: 条件性敲除, en: conditional knockout, aliases: [Cre–loxP system, Cre-loxP] }
