@@ -159,7 +159,7 @@ The **green fluorescent protein** of the jellyfish *Aequorea victoria* forms its
 
 | Use | Construct | Shows |
 |---|---|---|
-| Fusion tag | Fluorescent protein fused in frame to the protein of interest | Location and movement of that protein (in the slides of the course: spliceosomal components moving in the nucleus, receptors at the cell surface) |
+| Fusion tag | Fluorescent protein fused in frame to the protein of interest | Location and movement of that protein (e.g. spliceosomal components moving in the nucleus, receptors at the cell surface) |
 | Reporter gene | Fluorescent protein coding sequence under a **promoter** of interest | When and in which cells the promoter is active |
 | Photoactivatable or photoconvertible protein | PA-GFP (dark to green), Dendra2 or mEos (green to red) | Fate of a pulse-labeled population: optical pulse–chase |
 | Sensor | Fluorescent protein whose emission depends on a **ligand** or on FRET | Concentrations and enzyme activities (2.5.2, 2.5.3) |

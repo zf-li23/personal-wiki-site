@@ -7313,7 +7313,7 @@ terms:
   - { zh: 诱导多能干细胞, en: induced pluripotent stem cell, aliases: [iPS cell, iPS cells, iPSC] }
   - { zh: 转分化, en: transdifferentiation, aliases: [direct reprogramming, 直接重编程] }
   - { zh: Waddington 景观, en: Waddington landscape, aliases: [epigenetic landscape, 表观遗传景观] }
-  - { zh: 意外细胞死亡, en: accidental cell death }
+  - { zh: 意外细胞死亡, en: accidental cell death, aliases: [意外性细胞死亡] }
   - { zh: 调节性细胞死亡, en: regulated cell death, aliases: [RCD, 受调控的细胞死亡] }
   - { zh: 程序性细胞死亡, en: programmed cell death, aliases: [PCD] }
   - { zh: 坏死, en: necrosis, aliases: [细胞坏死], scope: ["7"] }
