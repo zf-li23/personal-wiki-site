@@ -1,3 +1,313 @@
 ---
 title: "Cell Signaling I: Modes of Communication and Network Logic"
+description: How cells decide by combining signals; contact-dependent, paracrine, autocrine, synaptic and endocrine signaling and gap junctions; the range of a local mediator; fast and slow responses; switches, amplification and ultrasensitivity; positive feedback, bistability and hysteresis; adaptation and perfect adaptation; oscillations, Ca²⁺ spikes and frequency decoding; decoding signal duration; scaffolds, interaction domains, membrane domains and endocytosis; integration, crosstalk and mTORC1 as a coincidence detector.
 ---
+
+The cells of an animal live in a society. Whether a cell survives, divides, moves, differentiates or dies is decided not by the cell alone but by the signals it receives from its neighbors and from the body as a whole. The molecular parts that carry these signals, **receptors**, **heterotrimeric G proteins**, **second messengers**, **protein kinases** and **protein phosphatases**, **small G proteins**, **receptor tyrosine kinases** and **nuclear receptors**, were described in biochemistry ([7.1.14](/7.1.14) and [7.1.15](/7.1.15)) and are only recalled here. This chapter takes the view of the cell. It asks how signals travel between cells, how far and how fast; how a network of a few dozen proteins turns a graded input into a switch, a pulse, a rhythm or a lasting memory; how the cell confines signals to the right place by scaffolds, membrane domains and endocytosis ([7.3.4](/7.3.4), [7.3.10](/7.3.10)); and how it combines many inputs into one decision, with the lysosomal kinase **mTORC1** as an example ([7.3.11](/7.3.11)). The next chapter applies these principles to the cytoskeleton, the cell cycle and cell fate ([7.3.19](/7.3.19)). The models used here are small ordinary differential equations of the kind solved in [2.4](/2.4); the general theory of biological networks is the subject of systems biology ([7.9](/7.9)).
+
+## 18.1. Cell Fate Depends on Combinations of Signals
+
+A typical cell of a multicellular animal is exposed to hundreds of signal molecules, soluble, bound to the extracellular matrix or displayed on the surfaces of neighboring cells, and the human genome encodes more than 1500 receptor proteins. A cell responds selectively, because it expresses only some receptors and only some of the intracellular machinery that reads them. The decisions are combinatorial. Most cells need a set of survival signals merely to stay alive; deprived of them, they activate a suicide program and die by **apoptosis** ([7.3.25](/7.3.25)). Proliferation usually requires, in addition, signals that stimulate growth and division; differentiation into a nondividing state requires yet another combination, which must override signals to divide. Martin Raff's experiments on oligodendrocytes of the rat optic nerve (1992) showed that cells cultured singly die unless survival factors are added, and that roughly half of the oligodendrocytes made during development die because they fail to obtain enough of them: competition for limiting survival signals matches the number of cells to the size of the tissue.
+
+The outcomes of signaling can be summarized as a small set of cell fates: quiescence (G0), proliferation, differentiation, senescence and death, with cancer as the failure of the controls ([7.3.26](/7.3.26)). Two facts make the logic of signaling interesting. First, a signal has little information content of its own: the same molecule tells different cells to do different things, depending on the receptors and effectors they have inherited from their developmental history (18.3.3). Second, the cell does not simply relay a signal but processes it, setting thresholds, amplifying, adapting, remembering and integrating. These operations are performed by networks of the molecular switches of 7.1, and they are the main subject of this chapter.
+
+## 18.2. Modes of Intercellular Communication
+
+### 18.2.1. Contact, Local, Synaptic and Endocrine Signaling
+
+Signals are classified by the distance they travel and by how they get there. **Hormones** acting through the blood (**endocrine** signaling), local mediators acting on neighboring cells (**paracrine** signaling) and signals acting on the cell that released them (**autocrine** signaling) were introduced with the hormones of metabolism ([7.1.29](/7.1.29)). Two more modes complete the picture.
+
+**Definition 18.2.1 (Contact-Dependent Signaling)** In **contact-dependent signaling** (juxtacrine signaling) a signal molecule that remains bound to the plasma membrane of the signaling cell binds a receptor on an adjacent cell, so that only cells in direct membrane contact communicate.
+
+**Definition 18.2.2 (Synaptic Signaling)** In **synaptic signaling** a neuron transmits an electrical signal along its axon and, at a chemical synapse, releases a neurotransmitter that diffuses across a narrow cleft to receptors on a single postsynaptic target cell.
+
+Contact-dependent signaling is especially important in development and in the immune system: the transmembrane ligand Delta on one cell activates the receptor Notch on its neighbor ([7.3.19](/7.3.19)), ephrins and their Eph receptor tyrosine kinases sort cells and guide axons, and a T cell recognizes antigen on the surface of another cell. Cells can extend this mode over tens of micrometers by long, thin processes (the cytonemes of *Drosophila* imaginal discs). Some transmembrane signals are cleaved from the cell surface by proteases and then act at a distance, so that one molecule can serve both as a contact-dependent and as a paracrine signal (TGF-α, the ligand of the EGF receptor, is an example).
+
+A fifth route bypasses the extracellular space altogether. Gap junctions, channels of connexin proteins that join the cytoplasms of adjacent animal cells ([7.3.23](/7.3.23)), let ions and small molecules of less than about 1 kDa (cAMP, **inositol 1,4,5-trisphosphate**, ATP, glucose) pass directly, so that coupled cells share their second messengers; plant cells are coupled in a similar way by plasmodesmata. Gap junctions synchronize the contraction of heart muscle cells and spread $\ce{Ca^2+}$ waves through epithelia and glia.
+
+![Five modes of cell–cell communication. A contact-dependent (juxtacrine) signaling: a membrane-bound ligand on one cell binds receptors on an adjacent cell (examples Delta–Notch and ephrin–Eph). B paracrine signaling: a local mediator diffuses from the secreting cell (left) to neighboring cells and is removed as it spreads, so its concentration falls with distance; in autocrine signaling the secreting cell responds to its own signal (curved arrow). C synaptic signaling: a neuron delivers a neurotransmitter at a synapse onto one target cell, acting over micrometers within milliseconds. D endocrine signaling: an endocrine cell secretes a hormone into the blood, which carries it to target cells throughout the body on a time scale of minutes to hours. E gap junctions: connexons join the cytoplasms of two cells and let ions and small messengers pass directly](./plots/communication-modes.py)
+
+| Mode | Signal | Distance | Specificity comes from | Speed | Examples |
+|---|---|---|---|---|---|
+| Contact-dependent | membrane-bound ligand | one cell diameter | contact | minutes–hours | Delta–Notch, ephrins, antigen presentation |
+| Paracrine, autocrine | local mediator | µm to mm | short range (removal) | seconds–hours | growth factors, morphogens, NO, histamine, prostaglandins |
+| Synaptic | neurotransmitter | 20–50 nm across the cleft (axons up to 1 m) | anatomy of the synapse | milliseconds | acetylcholine, glutamate, GABA |
+| Endocrine | hormone | whole body | receptors on target cells | minutes–hours | insulin, cortisol, epinephrine, thyroid hormone |
+| Gap junction | ions, second messengers | adjacent cells | coupling | milliseconds–seconds | heart muscle, hepatocytes, glia |
+
+Synaptic and endocrine signaling show the two strategies for reaching a target. A neuron achieves specificity by anatomy: it delivers a high concentration (around $1\,\mathrm{mM}$ of acetylcholine at the neuromuscular junction) to receptors a few tens of nanometers away, and its receptors can have low affinity. An endocrine cell broadcasts its hormone to every cell of the body, at concentrations of $10^{-11}$ to $10^{-8}\,\mathrm{M}$ after dilution in the blood, and only cells with receptors of high affinity respond. The same molecule can be used in both ways: **epinephrine** is a hormone of the adrenal medulla and a neurotransmitter of the sympathetic nervous system.
+
+### 18.2.2. The Range of a Local Signal
+
+What limits a paracrine signal to its neighborhood? A secreted molecule spreads by diffusion and is removed by degradation, by uptake into cells or by binding to the matrix and to receptors. The balance of the two sets its range.
+
+**Formula 18.2.1 (Decay Length of a Local Signal)** A signal released at a constant rate from a planar source at $x = 0$, diffusing with coefficient $D$ (**Fick's law**) and removed with first-order rate constant $k$, obeys $\partial c/\partial t = D\,\partial^2 c/\partial x^2 - kc$; at steady state
+$$
+c(x) = c_0\,\mathrm{e}^{-x/\lambda}, \qquad \lambda = \sqrt{D/k}. \tag{18.1}
+$$
+
+The decay length $\lambda$ is the distance over which the concentration falls by a factor $\mathrm{e}$, and the time to reach the steady profile is of order $1/k$. A signal that must act only on its neighbors must therefore be removed quickly, and one that must act over a field of cells must be stable. Three examples span the range (figure below). Acetylcholine in the neuromuscular cleft ($D \approx 400\,\mu\mathrm{m^2\,s^{-1}}$) is hydrolyzed by acetylcholinesterase with an effective rate constant of order $10^4\,\mathrm{s^{-1}}$, so $\lambda \approx 0.2\,\mu\mathrm{m}$: the transmitter cannot escape the synapse. Nitric oxide, a small gas that crosses membranes freely ($D \approx 3300\,\mu\mathrm{m^2\,s^{-1}}$), is oxidized within about a second, so $\lambda$ is several tens of micrometers: NO made by an endothelial cell relaxes the smooth muscle cells around one blood vessel, through soluble guanylyl cyclase and **protein kinase G** ([7.1.14](/7.1.14#sec-14.3.3)), but not distant ones. The morphogen Dpp of the *Drosophila* wing disc diffuses slowly through the tissue ($D \approx 0.1\,\mu\mathrm{m^2\,s^{-1}}$) and is degraded with a half-life of about 45 min, which gives $\lambda \approx 20\,\mu\mathrm{m}$, a gradient over many cells that patterns the wing (Kicheva and colleagues, 2007; [7.5](/7.5)). Many growth factors bind the extracellular matrix through heparan sulfate **proteoglycans**, which slows their diffusion and protects them from degradation; the matrix is a reservoir as well as a barrier.
+
+![The range of a secreted signal. A: steady profiles c/c₀ = exp(−x/λ) of Eq. (18.1) for acetylcholine in a synaptic cleft (λ ≈ 0.2 µm), the morphogen Dpp in the Drosophila wing disc (λ ≈ 20 µm) and nitric oxide in tissue (λ ≈ 60 µm); the band marks the size of one cell (10–20 µm). B: the decay length λ = √(D/k) as a function of the diffusion coefficient D and the removal rate constant k (contours from 0.1 µm to 1 mm), with the three signals and a typical matrix-bound growth factor (D ≈ 1 µm² s⁻¹, k ≈ 10⁻³ s⁻¹, λ ≈ 30 µm)](./plots/signal-range.py)
+
+## 18.3. Receptors and the Speed of Responses
+
+### 18.3.1. Receptor Classes Revisited
+
+Most signal molecules are hydrophilic and bind receptors at the cell surface; small hydrophobic ones (steroid and thyroid hormones, retinoids, NO) cross the membrane and bind receptors inside the cell. The classes of receptors and their mechanisms are those of [7.1.14](/7.1.14#sec-14.1.3); the table lists them with the cell-level properties that matter here.
+
+| Receptor class | Transduction | Typical response | Time to response | Chapter |
+|---|---|---|---|---|
+| Ion-channel-coupled (**ionotropic receptors**) | ligand opens a channel; membrane potential changes | excitation, contraction, secretion | milliseconds | [7.1.14](/7.1.14#sec-14.5), [7.16](/7.16) |
+| **G protein–coupled receptors** | GEF for a heterotrimeric G protein; second messengers | metabolism, secretion, contraction, motility | seconds–minutes | [7.1.14](/7.1.14#sec-14.2) |
+| Enzyme-coupled: **receptor tyrosine kinases**, cytokine receptors (**JAK–STAT pathway**), receptor Ser/Thr kinases, receptor guanylyl cyclases, receptor tyrosine phosphatases | intrinsic or associated kinase (or cyclase, phosphatase); docking sites for **SH2 domain** proteins | growth, division, survival, differentiation | minutes–hours | [7.1.15](/7.1.15#sec-15.1), 7.3.19 |
+| Proteolysis-dependent receptors (Notch, Wnt, Hedgehog, NF-κB pathways) | regulated proteolysis or degradation of an inhibitor | cell fate | hours | [7.3.19](/7.3.19) |
+| Adhesion receptors (**integrins**, cadherins) | link to the cytoskeleton, recruit kinases | shape, migration, survival | minutes–hours | [7.1.15](/7.1.15#sec-15.3.4), [7.3.23](/7.3.23) |
+| **Nuclear receptors** | ligand-regulated transcription factors | gene expression | hours–days | [7.1.15](/7.1.15#sec-15.4) |
+
+The course slides list among the enzyme-coupled receptors the tyrosine phosphatase CD45 of leukocytes (a receptor-like protein tyrosine phosphatase that activates the Src-family kinase Lck by removing its inhibitory phosphate), the Ser/Thr kinase receptors of TGF-β and BMP (7.3.19) and the receptor guanylyl cyclase of atrial natriuretic factor ([7.1.14](/7.1.14#sec-14.3.3)).
+
+### 18.3.2. Fast and Slow Responses
+
+The speed of a response depends on what it changes. An allosteric change in a transmitter-gated channel alters the membrane potential within milliseconds; responses that need only phosphorylation of proteins already present (glycogen breakdown, secretion, cell movement) start within seconds to minutes; responses that need new transcription and translation (growth, division, differentiation) take an hour or more. Many signals start both kinds at once: cAMP activates **protein kinase A**, which phosphorylates metabolic enzymes within seconds and the transcription factor CREB, whose target genes change the cell for hours.
+
+The speed of switching off is just as important and is set by turnover. If a signal raises the rate of synthesis of an intracellular molecule $X$ that is removed with rate constant $k$, $X$ approaches its new level with the time constant $1/k$ and covers half the distance in its half-life $\ln 2/k$, whatever the size of the change: the **response time** of [7.2.22](/7.2.22#sec-22.3.1). The same holds for a modification: a phosphorylation that is removed by phosphatases with a half-time of seconds follows its kinase within seconds. Second messengers are therefore made and destroyed fast (cAMP has a lifetime of seconds, $\ce{Ca^2+}$ is pumped out of the cytosol within seconds), and many signaling proteins, such as β-catenin, IκB and the cyclins, are kept short-lived by the **ubiquitin**–**proteasome** system so that their levels can change within the hour. Stable proteins, by contrast, carry memories (18.4.3).
+
+### 18.3.3. One Signal, Many Responses
+
+Acetylcholine illustrates how the meaning of a signal is set by the receiver. In heart pacemaker cells it binds the muscarinic M₂ receptor, a GPCR coupled to $\mathrm{G_i}$, whose βγ subunits open $\ce{K+}$ channels and slow the heart; in salivary gland cells it binds the M₃ receptor, coupled to $\mathrm{G_q}$, and the rise of $\ce{Ca^2+}$ triggers secretion; in skeletal muscle it binds the **nicotinic acetylcholine receptor**, an ion channel, and the muscle contracts. Even cells with the same receptor respond differently, because the effectors downstream differ: epinephrine mobilizes glycogen in hepatocytes and fat in adipocytes through the same cAMP and PKA ([7.1.14](/7.1.14#sec-14.2.6)). Responsiveness is a property of the differentiated state, which is why one hormone can coordinate many tissues and why the same pathways recur in organs with different functions.
+
+## 18.4. Network Logic
+
+### 18.4.1. Switches, Inhibitors and Amplification
+
+Almost every intracellular signaling protein is a molecular switch of one of two kinds: switched by phosphorylation (a kinase turns it on or off, a phosphatase reverses this) or by GTP binding (a **guanine nucleotide-exchange factor** turns it on, a **GTPase-activating protein** accelerates the hydrolysis that turns it off). Other switches are thrown by binding of a second messenger or another protein, or by ubiquitylation and proteolysis. In each case the activity of the switch is not a property of the protein but of the balance of the opposing reactions: the fraction of a protein that is phosphorylated is set by the ratio of kinase to phosphatase activity, and the fraction of a G protein bound to GTP by the ratio of exchange to hydrolysis. This makes every switch a point at which other signals can act.
+
+Many pathways contain inhibitory steps, and two inhibitions in series are equivalent to an activation: a kinase that phosphorylates an inhibitor and releases a transcription factor from it activates that factor. Such double-negative steps are the rule in the developmental pathways of 7.3.19 and in plant hormone signaling ([7.1.15](/7.1.15#sec-15.5.2)).
+
+Signals are amplified when one active molecule activates many others. In a chain of catalytic steps the gains multiply (the **regulatory cascade** of [7.1.9](/7.1.9#sec-9.6.2); about $10^8$ molecules of glucose 1-phosphate per molecule of epinephrine, [7.1.14](/7.1.14#sec-14.2.3)). Amplification makes cells sensitive to low concentrations, but it also amplifies noise and errors, and every amplifying step needs a fast way to stop; the inactivating reactions (GTP hydrolysis, phosphodiesterases, phosphatases, ubiquitylation) are as essential to a cascade as the activating ones.
+
+### 18.4.2. Graded and Ultrasensitive Responses
+
+Some signaling systems respond in proportion to the stimulus over a wide range; such graded responses suit the fine control of metabolism. Others respond little at low stimulus and then sharply over a narrow range, which filters out background noise and turns a gradual change of the input into a decision.
+
+**Definition 18.4.1 (Ultrasensitivity)** A response is **ultrasensitive** when it changes more steeply with the stimulus than the hyperbolic (Michaelian) response $R = S/(K + S)$. The steepness is measured by the ratio of the stimuli that give 90 % and 10 % of the maximal response, which is 81 for a hyperbola, or by the apparent **Hill coefficient** $n_{\mathrm{H}} = \ln 81/\ln(S_{90}/S_{10})$.
+
+Several mechanisms produce ultrasensitivity, and real pathways combine them:
+
+- **cooperativity**: binding of several ligands to an allosteric target (four cAMP to the R₂ dimer of PKA, four $\ce{Ca^2+}$ to **calmodulin**);
+- multisite modification: a target must be phosphorylated on several sites, which, if the modifications are distributive, gives a sigmoid response even without cooperativity (the double phosphorylation of MAP kinase);
+- **zero-order ultrasensitivity**: kinase and phosphatase working near saturation on their common substrate ([7.1.9](/7.1.9#sec-9.6.1)), the Goldbeter–Koshland switch;
+- cascades: each tier of a cascade sees an input that is already a steep function of the stimulus, so steepness accumulates (the apparent Hill coefficient of about 5 for the **MAP kinase cascade**, [7.1.15](/7.1.15#sec-15.1.4));
+- stoichiometric inhibitors: if an inhibitor binds the active protein tightly, nothing happens until the protein exceeds the inhibitor, and then the free protein rises sharply (molecular titration, as with the Cdk inhibitors of the cell cycle);
+- one signal acting on opposing enzymes: cAMP both activates glycogen breakdown and inhibits glycogen synthesis ([7.1.19](/7.1.19)).
+
+Ultrasensitivity alone gives a steep but reversible response: lower the stimulus and the output falls along the same curve. To make a decision that persists, the cell needs feedback.
+
+### 18.4.3. Positive Feedback, Bistability and Memory
+
+In positive feedback the output of a process promotes its own production. Weak positive feedback steepens a response; strong positive feedback creates two stable states.
+
+**Definition 18.4.2 (Bistability)** A system is **bistable** when, for the same constant input, it has two stable steady states, typically "off" and "on", separated by an unstable threshold state; which state it occupies depends on its history.
+
+**Definition 18.4.3 (Hysteresis)** **Hysteresis** is the dependence of the state of a system on the history of its input: in a bistable system the stimulus needed to switch it on is higher than the stimulus at which it switches off, so that over the range between the two thresholds the response depends on where the system came from.
+
+**Formula 18.4.1 (A Positive Feedback Module)** Let $x$ be the activity of a kinase (in units of its removal rate), activated by a stimulus $s$ and by itself through a cooperative feedback of strength $f$:
+$$
+\frac{\mathrm{d}x}{\mathrm{d}t} = s + f\,\frac{x^n}{K^n + x^n} - x. \tag{18.2}
+$$
+The **steady states** are the solutions of $s = x - f x^n/(K^n + x^n)$. Stability of each is read off from the slope of this curve, as for the autoregulated gene of [7.2.22](/7.2.22#sec-22.6): where $s(x)$ increases the state is stable, where it decreases it is unstable. If $n > 1$ and $f$ exceeds a critical value, the curve $s(x)$ has a maximum and a minimum, the fold points (saddle-node **bifurcations**) at which the stable states appear and disappear.
+
+The figure shows the four possibilities for $n = 4$, $K = 0.5$. Without feedback the response is linear; with weak feedback ($f = 0.4$) it is steep but single valued; with $f = 0.8$ there is a range of $s$ between the folds ($0.057 < s < 0.209$) in which both states are stable, and the system shows hysteresis; with $f = 1.2$ the lower fold lies at negative $s$, so that once switched on the system stays on even when the stimulus is removed completely: the switch is irreversible. A transient stimulus thus leaves a lasting change, a form of cell memory that needs no change in DNA. In development such memories are made by transcription factors that activate their own genes, like the muscle regulators MyoD and myogenin, and inherited by daughter cells ([7.3.24](/7.3.24)).
+
+![Graded, ultrasensitive and bistable responses. A: steady-state responses of a hyperbolic module, a Hill function with n = 4, and a zero-order ultrasensitive modification cycle (Goldbeter–Koshland function with saturation constants 0.01); stimulus relative to the half-maximal value. B: steady states of the positive feedback module, Eq. (18.2) with K = 0.5 and n = 4, against the stimulus s (solid: stable, dashed: unstable). f = 0: no feedback; f = 0.4: steep but monostable; f = 0.8: bistable between the fold points, with a switch-on threshold above the switch-off threshold (arrows): hysteresis; f = 1.2: the lower fold lies at s < 0 and the switch is irreversible. C: responses to a pulse of stimulus (s = 0.3 from t = 10 to 20), followed by s = 0.1 and, from t = 60, s = 0 (time in units of the inverse removal rate): the monostable module (f = 0.4) forgets the pulse, the bistable one (f = 0.8) remembers it until the stimulus falls below the lower threshold, the irreversible one (f = 1.2) remembers it permanently. D: cells whose thresholds vary (log-normally) each switch all-or-none, but the fraction of activated cells in the population rises gradually](./plots/switches-bistability.py)
+
+**Example 18.4.1 (Maturation of Xenopus Oocytes)** Fully grown frog oocytes are arrested in prophase of meiosis I; progesterone induces them to mature (resume meiosis), a process driven by the MAP kinase cascade Mos → MEK → p42 MAPK and by the mitotic kinase Cdk1 ([7.3.20](/7.3.20)). Ferrell and Machleder (1998) measured MAPK activation in individual oocytes at different progesterone concentrations. The average over a population rose gradually, but each oocyte had either fully active or inactive MAPK, with very few intermediates: the response of single cells is all-or-none, and the graded average reflects different thresholds in different oocytes (panel D above). The switch is built from the ultrasensitive cascade (15.1.4 of [7.1.15](/7.1.15#sec-15.1.4)) and a positive feedback: active MAPK promotes the synthesis and stabilization of Mos, the top kinase. Once matured, oocytes remain mature after progesterone is washed out; when the feedback is blocked by an inhibitor of protein synthesis applied after the switch, MAPK activity becomes graded and falls back when progesterone is removed (Xiong and Ferrell, 2003). The lesson is general: measurements on populations can hide switch-like behavior, which only single-cell methods (imaging, **flow cytometry**) reveal.
+
+### 18.4.4. Negative Feedback and Adaptation
+
+In negative feedback the output inhibits its own production. With little delay, negative feedback speeds up responses and stabilizes them against fluctuations (as for negative autoregulation in [7.2.22](/7.2.22#sec-22.6)); it also limits the response to a sustained stimulus. Cells use it to keep their sensitivity matched to the prevailing level of a signal.
+
+**Definition 18.4.4 (Adaptation)** **Adaptation** is the decline of a response to a sustained stimulus towards its prestimulus level, while the system remains able to respond to a further increase of the stimulus. Adaptation is **perfect adaptation** when the response returns exactly to its prestimulus level, whatever the magnitude of the sustained stimulus.
+
+Receptor **desensitization** by GRKs and **arrestins** ([7.1.14](/7.1.14#sec-14.2.4)) is the best-known mechanism, but cells adapt at every level:
+
+| Level | Mechanism | Example |
+|---|---|---|
+| Receptor | sequestration by endocytosis; **receptor down-regulation** by degradation in lysosomes | β-adrenergic receptor; EGF receptor ([7.3.10](/7.3.10#sec-10.5.4)) |
+| Receptor | inactivation by phosphorylation and arrestin binding; methylation | GPCRs; bacterial chemoreceptors |
+| Transducer | inactivation of an intracellular signaling protein | ERK phosphorylates Sos and Raf |
+| Feedback inhibitor | induction of an inhibitory protein | SOCS (cytokines), dual-specificity phosphatases (ERK), IκBα (NF-κB), Smad7 (TGF-β) |
+| Second messenger | feedback on synthesis or degradation | $\ce{Ca^2+}$ lowers cGMP synthesis in rods; PKA activates PDE4 |
+
+Adaptation extends the dynamic range of a sensor. A bacterium swimming up a gradient of aspartate detects changes in concentration over five orders of magnitude, and our eyes see in starlight and in sunlight, because the sensitivity is continually reset to the background. Two circuit designs give adaptation that is perfect by construction, not by fine-tuning of parameters (Ma and colleagues, 2009, found that among all three-node networks almost every robust adapter is built on one of the two).
+
+**Formula 18.4.2 (Two Adaptive Circuits)** In an *incoherent feed-forward loop* the stimulus $S$ activates the output $R$ and, more slowly, an inhibitor $Y$ of $R$:
+$$
+\tau_Y\frac{\mathrm{d}Y}{\mathrm{d}t} = S - Y, \qquad \tau_R\frac{\mathrm{d}R}{\mathrm{d}t} = \frac{S}{Y} - R, \tag{18.3}
+$$
+so that at steady state $Y = S$ and $R = 1$ for every $S$. In integral feedback, $R$ is made in proportion to $S$ and removed by $Z$, which integrates the deviation of $R$ from a set point $R_0$:
+$$
+\frac{\mathrm{d}R}{\mathrm{d}t} = S - ZR, \qquad \frac{\mathrm{d}Z}{\mathrm{d}t} = k(R - R_0), \tag{18.4}
+$$
+so that at steady state $R = R_0$ for every $S$.
+
+In the feed-forward circuit the transient after a step depends only on the ratio of the new to the old stimulus: the cell responds to fold changes, not to absolute levels, the cellular form of Weber's law of perception (Goentoro and colleagues, 2009, found this property in the Wnt pathway). Integral feedback is the principle of thermostats and of the chemotaxis system of *E. coli*, in which the slow methylation of the receptors by CheR and their demethylation by CheB, itself activated by the receptor kinase, integrate the error; Barkai and Leibler (1997) predicted, and Alon and colleagues (1999) showed, that adaptation in chemotaxis is exact even when the concentrations of the proteins are changed severalfold. Biochemically, perfect adaptation is the exception; most adaptation in animal cells, such as desensitization of the β-adrenergic receptor, is partial.
+
+![Two circuits that adapt perfectly. A: an incoherent feed-forward loop, Eq. (18.3) with τ_Y = 10 and τ_R = 1 (arbitrary time units): after each twofold step of the stimulus S (dashed, divided by 4) the output R (solid) rises transiently and returns to 1 as the slow inhibitor Y catches up (thin line, divided by 4); equal fold changes give equal transients, whatever the absolute level. B: integral feedback, Eq. (18.4) with k = 0.2 and R₀ = 1: after steps of S from 1 to 2 and 4 the output overshoots and returns exactly to the set point while the integrator Z settles at S; a non-adapting response (R = S) is shown for comparison](./plots/adaptation-motifs.py)
+
+### 18.4.5. Delayed Negative Feedback and Oscillations
+
+If negative feedback acts with a delay, the output can overshoot before the feedback catches up, then fall too far before the feedback relaxes, and the system oscillates. Three conditions make sustained oscillations likely (Novák and Tyson, 2008): a delay in the loop (a chain of intermediate steps, transcription and translation, or transport between compartments); enough nonlinearity, so that the feedback acts like a switch; and comparable time scales of production and removal. Mathematically the steady state loses stability in a **Hopf bifurcation** and the system settles on a **limit cycle** ([2.4](/2.4)). Pulsing signals are common: nuclear NF-κB oscillates with a period of one to two hours because it induces its own inhibitor IκBα ([7.3.19](/7.3.19)); the tumor suppressor p53 and its ubiquitin ligase Mdm2 produce pulses of p53 after DNA damage (Lahav and colleagues, 2004; [7.3.22](/7.3.22)); the transcriptional repressor Hes1 represses its own gene and oscillates with a period of about two hours, the basis of the segmentation clock ([7.3.24](/7.3.24)); and the cell-cycle oscillator combines negative feedback with positive feedback loops ([7.3.20](/7.3.20)). Information can then be carried by the frequency, duration or number of pulses rather than by the mean level, as the next two sections show.
+
+### 18.4.6. Ca²⁺ Oscillations and Frequency Coding
+
+Hormones acting through $\mathrm{G_q}$ and **phospholipase C** raise cytosolic $\ce{Ca^2+}$ ([7.1.14](/7.1.14#sec-14.3)), but in single cells the rise is rarely smooth. Woods, Cuthbertson and Cobbold (1986), injecting the photoprotein aequorin into single rat hepatocytes, found that vasopressin and α-adrenergic agonists produce repetitive spikes of $\ce{Ca^2+}$, each lasting several seconds, and that a higher hormone concentration raises the frequency of the spikes (periods from about 20 s to several minutes) rather than their amplitude.
+
+**Definition 18.4.5 (Calcium Oscillation)** A **calcium oscillation** is a repetitive rise and fall of the cytosolic concentration of free $\ce{Ca^2+}$ at a constant level of stimulation, produced by the regulated release of $\ce{Ca^2+}$ from intracellular stores and its reuptake; the frequency of the oscillation usually increases with the strength of the stimulus.
+
+The oscillations come from $\ce{Ca^2+}$-induced $\ce{Ca^2+}$ release (CICR). The **inositol 1,4,5-trisphosphate** receptor of the **endoplasmic reticulum**, and the ryanodine receptor of muscle and neurons, open when cytosolic $\ce{Ca^2+}$ rises modestly (positive feedback) and close when it rises further (slower negative feedback): the open probability of the IP₃ receptor is a bell-shaped function of $[\ce{Ca^2+}]$ with a maximum near $0.2$–$0.3\,\mu\mathrm{M}$ (Bezprozvanny, Watras and Ehrlich, 1991). The SERCA pump refills the ER, and depletion of the stores opens store-operated $\ce{Ca^2+}$ channels in the plasma membrane (STIM proteins in the ER membrane sense the depletion and open Orai channels), which supplies the $\ce{Ca^2+}$ needed to sustain repeated spikes.
+
+**Formula 18.4.3 (Two-Pool Model of Ca²⁺ Oscillations)** Goldbeter, Dupont and Berridge (1990) wrote the balances of cytosolic $\ce{Ca^2+}$ $Z$ and stored $\ce{Ca^2+}$ $Y$:
+$$
+\begin{aligned}
+\frac{\mathrm{d}Z}{\mathrm{d}t} &= v_0 + v_1\beta - v_2 + v_3 + k_{\mathrm{f}}Y - kZ, \qquad \frac{\mathrm{d}Y}{\mathrm{d}t} = v_2 - v_3 - k_{\mathrm{f}}Y,\\
+v_2 &= V_{\mathrm{M2}}\frac{Z^2}{K_2^2 + Z^2}, \qquad v_3 = V_{\mathrm{M3}}\frac{Y^2}{K_{\mathrm{R}}^2 + Y^2}\cdot\frac{Z^4}{K_{\mathrm{A}}^4 + Z^4},
+\end{aligned} \tag{18.5}
+$$
+where $v_0$ is the influx from outside, $v_1\beta$ the IP₃-dependent release (the stimulus $\beta$ is the fraction of the maximal rate), $v_2$ pumping into the store, $v_3$ release activated by cytosolic $\ce{Ca^2+}$ (the CICR term), $k_{\mathrm{f}}Y$ a leak from the store and $kZ$ extrusion from the cell.
+
+In the model, oscillations appear above a threshold stimulus and disappear again at high stimulus; in between, their frequency rises with $\beta$ while the amplitude stays nearly constant over most of the range, just as in hepatocytes. Spikes in one part of a cell trigger release in the next, so that $\ce{Ca^2+}$ travels across the cell as a wave at about $10$–$30\,\mu\mathrm{m\,s^{-1}}$; at fertilization a single $\ce{Ca^2+}$ wave crosses the egg from the point of sperm entry, triggered by the sperm's phospholipase Cζ, and in mammals it is followed by hours of oscillations that activate development.
+
+How is the frequency read? A decoder must integrate the spikes: it must be activated during each spike and inactivated slowly between them. **Calmodulin**-dependent protein kinase II (CaMKII), a dodecamer whose subunits phosphorylate their neighbors once two adjacent subunits have bound $\ce{Ca^2+}$–calmodulin, behaves in this way: when De Koninck and Schulman (1998) exposed immobilized CaMKII to pulses of $\ce{Ca^2+}$–calmodulin, its autonomous (calmodulin-independent) activity increased steeply with the pulse frequency. Transcription factors decode frequency too: in T cells, the transcription factor NFAT, dephosphorylated by the $\ce{Ca^2+}$-dependent phosphatase calcineurin and imported into the nucleus, responds to low-frequency oscillations, while NF-κB needs higher frequencies; oscillations activate gene expression more efficiently than a steady rise of the same mean level (Dolmetsch and colleagues, 1998). Frequency coding is robust: a frequency is hard to corrupt by variations in the amount of a protein, whereas an amplitude is not.
+
+![Ca²⁺ oscillations in the two-pool model, Eq. (18.5) with the parameters of Goldbeter, Dupont and Berridge (1990): v₀ = 1 and v₁ = 7.3 µM s⁻¹, k = 10 s⁻¹, k_f = 1 s⁻¹, V_M2 = 65 and V_M3 = 500 µM s⁻¹, K₂ = 1, K_R = 2 and K_A = 0.9 µM. A: cytosolic Ca²⁺ at β = 0.3 and 0.6 and stored Ca²⁺ at β = 0.3 (dashed): each spike empties part of the store, which refills slowly. B: frequency (solid) and amplitude (dashed) of the oscillations against β; oscillations exist between about β = 0.29 and 0.77, and the frequency rises steadily with the stimulus. C: mean activity of a decoder activated cooperatively by Ca²⁺ and inactivated slowly (dD/dt = 2h(Z)(1 − D) − 0.5 D, h = Z⁴/(1 + Z⁴)), which converts spike frequency into a graded mean activity. The parameters of the original model give periods of seconds; in hepatocytes slower pumps give periods of tens of seconds to minutes, with the same logic](./plots/calcium-oscillations.py)
+
+### 18.4.7. Decoding the Duration of a Signal
+
+The same pathway can produce different decisions according to how long it is active. In rat PC12 cells (from a tumor of the adrenal medulla), epidermal growth factor activates ERK for a few minutes and the cells proliferate, while nerve growth factor activates ERK for hours and the cells stop dividing and extend neurites like sympathetic neurons. Overexpressing the EGF receptor makes EGF signaling sustained and EGF then induces differentiation too (Traverse and colleagues, 1994): the duration of ERK activity, not the identity of the receptor, carries the decision (Marshall, 1995). The difference in duration comes from the network around the cascade: EGF engages a negative feedback from ERK to Sos, NGF a positive feedback through PKC to Raf (Santos, Verveer and Bastiaens, 2007).
+
+How does the nucleus measure duration? The immediate early gene *FOS* is transcribed within minutes of ERK activation, but its protein appears only after about half an hour and is unstable. If ERK is still active when c-Fos is made, ERK and its substrate kinase RSK phosphorylate the C-terminus of c-Fos, which stabilizes it and exposes a docking site for further phosphorylation; c-Fos then accumulates and drives later genes. If ERK activity has already decayed, the newly made c-Fos is degraded (Murphy and colleagues, 2002). The circuit is a persistence detector: a feed-forward loop in which ERK must act at two times separated by the delay of gene expression.
+
+![Decoding the duration of ERK activity, a model of the c-Fos persistence detector. A: transient (EGF-like) and sustained (NGF-like) ERK activity. B: ERK induces c-fos transcription, which shuts itself off as ERK exposure accumulates, so the mRNA (half-life about 10 min) is a pulse of similar size in both cases. C: c-Fos protein is made from this mRNA in an unstable form (dashed; half-life 30 min) that ERK converts into a stable phosphorylated form (solid; half-life 3 h); stable c-Fos accumulates only when ERK is still active about an hour after the stimulus. All curves are scaled to the maximum of the sustained case](./plots/duration-decoding.py)
+
+## 18.5. Spatial Organization of Signaling
+
+### 18.5.1. Scaffolds and Interaction Domains
+
+A cell contains many related kinases, GTPases and adaptors at the same time, and they would cross-react if they met freely. Specificity comes partly from the shape of active sites and docking motifs, and partly from location. **Scaffold proteins** ([7.1.15](/7.1.15#sec-15.3.3)) hold successive components of a pathway together, before or after the signal arrives; the **A kinase anchoring proteins** place PKA next to its substrates and its terminators ([7.1.14](/7.1.14#sec-14.2.6)); and many signaling complexes assemble only after the signal, when the activated receptor or a modified lipid provides docking sites.
+
+**Definition 18.5.1 (Interaction Domain)** An **interaction domain** is a compact, independently folding module of about 35–150 residues, found in many signaling proteins, that binds a specific motif in another protein or lipid: a short peptide sequence, a modified residue or a phosphoinositide head group.
+
+The course slides list the main ones; they are the readers of the code written by kinases and lipid kinases:
+
+| Domain | Size (residues) | Binds | Examples |
+|---|---|---|---|
+| SH2 | ~100 | phosphotyrosine plus about three C-terminal residues | Src, Grb2, Shc, PLCγ, p85 of PI3K, STATs |
+| PTB | ~100–150 | phosphotyrosine in Asn–Pro–X–pTyr (NPXY) | Shc, IRS1 |
+| SH3 | ~60 | Pro-rich motifs (PXXP) | Src, Grb2, Nck, PLCγ |
+| WW | ~35 | Pro-rich motifs (PPXY), some pSer/pThr–Pro | Nedd4 and Smurf ubiquitin ligases, YAP, dystrophin |
+| PDZ | ~80–90 | C-terminal peptides of membrane proteins | Dishevelled, PSD-95 at synapses |
+| 14-3-3 proteins, FHA, BRCT, polo box | ~100–250 | phosphoserine and phosphothreonine in specific motifs | Raf, Bad, Cdc25, YAP |
+| Death domain (and DED, CARD) | ~80–90 | homotypic binding to other death domains | Fas, FADD, TRADD |
+| PH | ~100–120 | phosphoinositides of the plasma membrane (PIP₃, PIP₂) | PKB, PDK1, Sos, Btk |
+| FYVE | ~70 | PI(3)P of endosomes | EEA1, SARA |
+
+The human genome encodes about 115 SH2 and 250 SH3 domains (Pawson and Nash, 2003). Because a new domain can be added to a protein without disturbing its other parts, modular domains have made it easy for evolution to wire new connections, and for engineers too: Bashor and colleagues (2008) recruited positive or negative regulators to the yeast mating scaffold Ste5 through added interaction motifs and so turned its response into an accelerated, delayed, pulsed or ultrasensitive one. Simply bringing two proteins together is often enough to activate them (induced proximity): recruitment of Sos to the membrane by Grb2 places it next to Ras, and dimerization of a receptor kinase lets each subunit phosphorylate the other.
+
+Multivalent interaction domains also drive the condensation of signaling complexes. In T cells the phosphorylated transmembrane adaptor LAT, Grb2 and Sos form two-dimensional **biomolecular condensates** at the plasma membrane by **multivalency** (several pTyr sites, two SH3 domains and several Pro-rich motifs), which concentrate the kinases and exclude the phosphatase CD45 and so increase the time Sos spends at the membrane and its activation of Ras (Su and colleagues, 2016; Huang and colleagues, 2019; [7.2.21](/7.2.21)).
+
+![Interaction domains. A: domain architectures of human signaling proteins drawn to scale (approximate boundaries; lines are linkers and disordered regions; P marks regulatory or docking phosphotyrosines: the inhibitory C-terminal Tyr527 of Src in chicken numbering, Tyr317 of Shc, the Tyr sites of IRS1, Tyr783 of PLCγ1, the Tyr705 that dimerizes STAT3). Readers: SH2 (pink) and PTB (green) bind phosphotyrosine, SH3 (blue) Pro-rich motifs, PH (pale yellow) phosphoinositides, PDZ C-terminal peptides; catalytic modules are the kinase, the X and Y boxes of phospholipase C, and the DH and Cdc25 domains of the GEF Sos, whose Pro-rich region (PRR) binds the SH3 domains of Grb2. B: assembly at an activated receptor tyrosine kinase: phosphotyrosines in the receptor tails are read by the SH2 domains of Grb2 (which holds Sos through its SH3 domains), of the p85 subunit of PI3K and of PLCγ; PIP₃ made by the p110 catalytic subunit recruits the PH domain of PKB to the membrane](./plots/interaction-domains.py)
+
+### 18.5.2. Membrane Domains and Local Second Messengers
+
+Much of signaling happens on membranes, and confinement to two dimensions raises the rate of encounter between proteins; lipid anchors and lipid-binding domains put proteins there ([7.1.13](/7.1.13#sec-13.1.6)). The membrane is not uniform. **Lipid rafts** and **caveolae** concentrate some receptors and their effectors, the cortex and its pickets restrict their diffusion, and polarized cells maintain apical and basolateral **membrane domains** with different receptors ([7.3.4](/7.3.4#sec-4.6.3)); the primary cilium is a separate membrane compartment that concentrates the components of Hedgehog signaling ([7.3.14](/7.3.14#sec-14.6.4), [7.3.19](/7.3.19)).
+
+Second messengers spread from their source, but how far depends on Eq. (18.1). Allbritton, Meyer and Stryer (1992) measured diffusion in cytoplasmic extracts: free $\ce{Ca^2+}$ is captured by buffers within about $50\,\mu\mathrm{s}$ and travels only about $0.1\,\mu\mathrm{m}$, whereas IP₃ ($D \approx 280\,\mu\mathrm{m^2\,s^{-1}}$, lifetime about a second) reaches some $20\,\mu\mathrm{m}$, the size of a cell. $\ce{Ca^2+}$ entering through a single channel thus forms a nanodomain of high concentration in which only nearby sensors respond (the $\ce{Ca^2+}$ sensor synaptotagmin of a docked synaptic vesicle, a few tens of nanometers from a $\ce{Ca^2+}$ channel), and global signals need regenerative release (18.4.6). cAMP diffuses fast, but phosphodiesterases bound to AKAPs create local sinks, so that cAMP rises in nanometer-to-micrometer domains around particular cyclases. Lipid messengers are confined to the membrane in which they are made: PIP₃, made by **phosphoinositide 3-kinase** and removed by the phosphatase PTEN, marks the front of a cell in **cell migration** or the cup of a phagocytosing macrophage ([7.3.15](/7.3.15)). FRET biosensors ([7.1.15](/7.1.15#sec-15.7.2)) and **genetically encoded calcium indicators** ([7.3.2](/7.3.2)) make these domains visible, and **optogenetics** lets experimenters create them with light at a chosen place and time.
+
+### 18.5.3. Endocytosis Regulates Signaling
+
+**Receptor-mediated endocytosis** is not only the way cells take up nutrients but also a regulator of signaling ([7.3.10](/7.3.10#sec-10.5.4)). Internalization removes receptors from the surface (desensitization), and ubiquitylation of activated receptor tyrosine kinases by Cbl sends them through the **ESCRT** machinery and **multivesicular bodies** to the **lysosome** (receptor down-regulation), which lowers the cell's sensitivity for hours. Receptors also continue to signal from **early endosomes**, which provide a platform with different partners: EGF receptors activate ERK from endosomes, some GPCRs make cAMP there, and NGF–TrkA complexes travel in signaling endosomes from axon terminals to the cell body. Mutations that prevent down-regulation (loss of Cbl binding, the oncogenic v-Cbl) keep receptors signaling and are found in cancers. The kinetic model of receptor traffic (Formula 10.5.1 of [7.3.10](/7.3.10#sec-10.5.3)) shows how a cell changes its surface receptor number, and so its sensitivity, without changing synthesis.
+
+### 18.5.4. Signals to the Nucleus
+
+Signals that change gene expression must cross the nuclear envelope ([7.3.16](/7.3.16)), and the regulated movement of a transcription factor or a kinase between cytoplasm and nucleus is itself a switch. Several strategies recur: phosphorylation that unmasks or masks a **nuclear localization signal** (STATs; NFAT, whose dephosphorylation by calcineurin exposes it); release from a cytoplasmic anchor (NF-κB from IκB, glucocorticoid receptors from Hsp90); stabilization of a protein that otherwise is degraded (β-catenin); entry of a kinase (ERK, PKA catalytic subunit); and proteolytic release of a fragment from the membrane (Notch). Because most of these factors shuttle continuously, their nuclear level reflects the current balance of import and export, and it falls quickly when the signal stops ([7.3.19](/7.3.19)).
+
+## 18.6. Signal Integration
+
+### 18.6.1. Convergence, Crosstalk and Coincidence
+
+Cells respond to combinations of signals because the pathways meet.
+
+**Definition 18.6.1 (Signal Integration)** **Signal integration** is the combination of two or more signals by the cell into a single response, at proteins on which different pathways converge, so that the response depends on the combination of inputs rather than on each separately.
+
+**Definition 18.6.2 (Crosstalk)** **Crosstalk** is the influence of one signaling pathway on the components or outputs of another, through shared components or through enzymes of one pathway that modify components of the other.
+
+Integration takes several forms. A protein can require two signals to become active, a coincidence detector equivalent to a logical AND: **protein kinase C** needs both **diacylglycerol** and $\ce{Ca^2+}$, the type 1 adenylyl cyclase of neurons needs both $\mathrm{G_s}$ and $\ce{Ca^2+}$–calmodulin (a basis of associative learning in *Aplysia* and *Drosophila*), and a target phosphorylated on two sites by two kinases may be active only when both are present. A protein can respond to either of two inputs (OR): glycogen phosphorylase kinase is activated both by PKA and by $\ce{Ca^2+}$. And signals can oppose each other: insulin and epinephrine act on the same enzymes of glycogen metabolism in opposite directions. The receptor classes, apparently separate, activate overlapping sets of intracellular pathways (course slides): RTKs and GPCRs both activate phospholipase C (PLCγ and PLCβ), PI 3-kinase (class IA through pTyr, PI3Kγ through Gβγ), Ras and the MAP kinase cascade (directly, by transactivation of RTKs, or through arrestin), and both raise $\ce{Ca^2+}$. Crosstalk is not noise in the system: it is how hormones such as insulin desensitize the β-adrenergic receptor ([7.1.15](/7.1.15#sec-15.1.6)) and how a cell weighs survival against growth.
+
+### 18.6.2. mTORC1: A Coincidence Detector on the Lysosome
+
+**mTORC1** ([7.1.29](/7.1.29#sec-29.4.5)) illustrates integration with a spatial logic ([7.3.11](/7.3.11#sec-11.3.3)). Growth factors and **insulin**, through PI3K and **protein kinase B**, inhibit the TSC complex, the GTPase-activating protein of the small GTPase Rheb, so that Rheb·GTP accumulates on the lysosomal membrane. Amino acids act through a separate set of sensors on GATOR1, the GTPase-activating protein of the Rag GTPases, and the active Rags recruit mTORC1 to the lysosomal surface. Only there can Rheb activate the kinase: neither input alone suffices, because one provides the location and the other the activation. Energy stress, through **AMP-activated protein kinase**, and hypoxia, through REDD1, activate TSC, and AMPK phosphorylates the mTORC1 subunit raptor. The output promotes protein, lipid and nucleotide synthesis and represses autophagy and the lysosome-biogenesis factor **TFEB**. Growth thus requires that the cell be told to grow (growth factors) and that it have the materials and energy to do so, and a negative feedback from S6 kinase to IRS1 limits insulin signaling when mTORC1 is chronically active (part of **insulin resistance**, [7.1.29](/7.1.29)).
+
+![mTORC1 as a coincidence detector (SBGN activity flow; open arrows activate, bars inhibit). Growth factors and insulin act through PI3K and PKB to inhibit the TSC complex, the GAP of Rheb; energy stress (AMPK) and hypoxia (REDD1) activate TSC. Amino acids inhibit GATOR1, the GAP of the Rag GTPases. On the lysosome surface the Rags recruit mTORC1 and Rheb·GTP activates it: both inputs are needed (AND). mTORC1 promotes protein synthesis (through S6K and 4E-BP) and lipid and nucleotide synthesis, and inhibits autophagy (ULK1) and lysosome biogenesis (TFEB); AMPK also inhibits mTORC1 directly (raptor phosphorylation), and S6K inhibits IRS1 (dashed negative feedback)](./plots/mtorc1-integration.py)
+
+### 18.6.3. Survival Signals Through PI3K and PKB
+
+The survival signals of 18.1 act largely through the same branch. PIP₃ made by PI 3-kinase recruits PKB and its activating kinase PDK1 to the membrane ([7.1.15](/7.1.15#sec-15.1.5)); PKB then phosphorylates several proteins that would otherwise kill the cell or stop its growth. Phosphorylated Bad, a proapoptotic member of the Bcl-2 family, is held by 14-3-3 proteins and can no longer neutralize the antiapoptotic proteins Bcl-2 and Bcl-xL ([7.3.25](/7.3.25)); phosphorylated FOXO transcription factors are exported from the nucleus, so that their target genes for the death ligand FasL, the BH3-only protein Bim and the Cdk inhibitor p27 are not transcribed; and phosphorylation of Mdm2 promotes the degradation of p53. Loss of the lipid phosphatase PTEN leaves this branch permanently on, one reason why *PTEN* is among the most frequently lost **tumor suppressor genes** (course slides; [7.3.26](/7.3.26)).
+
+### 18.6.4. Modularity and the Evolution of Signaling
+
+Signaling networks are built from a limited kit, about 520 protein kinases, 150 phosphatases, 150 small GTPases with their GEFs and GAPs, and a few hundred interaction domains, combined in different ways in different cells. The course slides end with three keywords that summarize the chapter: modification (phosphorylation, GTP binding, ubiquitylation, proteolysis), localization (to membranes, scaffolds, organelles and the nucleus) and complex formation (by interaction domains). From these the cell builds switches, amplifiers, filters, adapters, oscillators and memories. Because the same motifs recur across pathways and organisms, from the two-component systems of bacteria ([7.1.15](/7.1.15#sec-15.5.1)) to the mTORC1 network, the logic learned from one system transfers to others; the next chapter uses it to read the pathways that shape the cytoskeleton, the cell cycle and cell fate.
+
+## Summary
+
+| Topic | Key points |
+|---|---|
+| Combinations of signals (18.1) | survival, growth, division and differentiation each need specific signal combinations; without survival signals cells undergo apoptosis |
+| Modes (18.2.1) | contact-dependent (Definition 18.2.1), paracrine, autocrine, synaptic (Definition 18.2.2), endocrine; gap junctions couple cytoplasms (< 1 kDa) |
+| Range (Formula 18.2.1) | $\lambda = \sqrt{D/k}$: ACh at a synapse ≈ 0.2 µm, Dpp ≈ 20 µm, NO ≈ 60 µm |
+| Speed (18.3.2) | ms (channels), s–min (modification), h (transcription); the response time is set by removal, $\ln 2/k$ |
+| Context (18.3.3) | the receiving cell's receptors and effectors give a signal its meaning (acetylcholine in heart, gland, muscle) |
+| Switches and amplification (18.4.1) | kinase/phosphatase and GEF/GAP balances; two inhibitions = activation; gains multiply |
+| Ultrasensitivity (Definition 18.4.1) | $S_{90}/S_{10} < 81$; cooperativity, multisite modification, zero-order, cascades, titration |
+| Positive feedback (Definitions 18.4.2–18.4.3, Formula 18.4.1, Example 18.4.1) | bistability, hysteresis, irreversible switches and cell memory; single cells all-or-none, populations graded (Xenopus oocytes) |
+| Adaptation (Definition 18.4.4, Formula 18.4.2) | desensitization, down-regulation, feedback inhibitors; perfect adaptation by incoherent feed-forward loops (fold-change detection) or integral feedback (bacterial chemotaxis) |
+| Oscillations (18.4.5) | delayed negative feedback + nonlinearity: NF-κB, p53, Hes1, cell cycle |
+| Ca²⁺ oscillations (Definition 18.4.5, Formula 18.4.3) | CICR through IP₃ and ryanodine receptors; frequency encodes stimulus; decoding by CaMKII, NFAT |
+| Duration (18.4.7) | transient vs sustained ERK (EGF vs NGF in PC12); c-Fos stabilization as a persistence detector |
+| Space (18.5) | scaffolds, interaction domains (Definition 18.5.1), condensates; membrane domains; Ca²⁺ nanodomains (≈ 0.1 µm) vs IP₃ (≈ 20 µm); endocytosis desensitizes and relocates signaling; regulated nuclear entry |
+| Integration (Definitions 18.6.1–18.6.2) | AND, OR and opposition at shared proteins; mTORC1 needs Rag (amino acids) AND Rheb (growth factors) on the lysosome; PKB phosphorylates Bad, FOXO, GSK3 |
+
+## Questions
+
+1. A growth factor is secreted by a cell and degraded in the extracellular space with a half-life of 20 min; its effective diffusion coefficient in the tissue is $5\,\mu\mathrm{m^2\,s^{-1}}$. Estimate how far it acts. How would binding to heparan sulfate proteoglycans of the matrix change the range?
+
+   **Answer** $k = \ln 2/1200\,\mathrm{s} = 5.8\times10^{-4}\,\mathrm{s^{-1}}$, so by Eq. (18.1) $\lambda = \sqrt{5/5.8\times10^{-4}}\,\mu\mathrm{m} \approx 93\,\mu\mathrm{m}$, a few cell diameters to about ten. Reversible binding to the matrix lowers the effective diffusion coefficient (the molecule spends most of its time bound) and, if bound molecules are protected, also the effective degradation rate; the range changes as the square root of their ratio. Strong binding with little protection shortens the range and makes the signal more local; binding that protects from degradation can extend it and creates a store that is released by proteases.
+
+2. Explain why a population of cells can show a graded dose–response curve although each cell responds all-or-none. How would you test which is the case?
+
+   **Answer** If each cell switches at its own threshold and thresholds vary from cell to cell (different receptor numbers, protein levels or states), the fraction of switched cells, and hence the population average, rises gradually with dose, following the distribution of thresholds (Example 18.4.1 and panel D of the figure in 18.4.3). Measurements on single cells decide: imaging of a fluorescent reporter, flow cytometry, or, as Ferrell and Machleder did, analysis of single oocytes by Western blot. A switch gives a bimodal distribution at intermediate doses (two populations, on and off); a graded response gives a single population whose mean shifts.
+
+3. In the positive feedback module of Formula 18.4.1 with $n = 4$, $K = 0.5$ and $f = 0.8$, the fold points lie at $s = 0.057$ and $0.209$. Describe what happens to a cell that starts with $x = 0$ when $s$ is raised slowly from 0 to 0.3 and then lowered slowly to 0.1 and to 0.
+
+   **Answer** On the way up, $x$ follows the lower stable branch until $s$ reaches $0.209$, where this branch ends; $x$ jumps to the upper branch (about 1.0) and follows it as $s$ rises to 0.3. On the way down, $x$ stays on the upper branch at $s = 0.1$ (the system is bistable there and remembers having been switched on) and drops to the lower branch only when $s$ falls below $0.057$; at $s = 0$ the cell is off. The difference between the two thresholds is the hysteresis; with $f = 1.2$ the cell would remain on even at $s = 0$.
+
+4. Many signaling pathways induce their own inhibitors (SOCS, DUSPs, IκBα, Smad7). Give two different consequences of such negative feedback, and explain under what conditions it produces oscillations.
+
+   **Answer** Fast negative feedback makes a response transient (adaptation), limits its amplitude, speeds up the approach to a new steady state and makes the steady state less sensitive to variations in the amounts of the components. If the feedback works through transcription and translation it is delayed; when the delay is comparable to or longer than the lifetimes of the components and the feedback is steep (nonlinear), the output overshoots, is then overcorrected, and sustained oscillations can arise (a Hopf bifurcation of the steady state). NF-κB–IκBα and p53–Mdm2 are examples (18.4.5).
+
+5. Compare the two adaptive circuits of Formula 18.4.2. Which one responds equally to a change from 1 to 2 nM and from 10 to 20 nM of a stimulus, and why is this useful for a cell measuring a gradient?
+
+   **Answer** In the incoherent feed-forward loop the output depends on $S/Y$, and $Y$ tracks $S$; a step from $S_1$ to $S_2$ produces a transient that depends only on $S_2/S_1$, so a doubling gives the same response at any absolute level (fold-change detection). The integral feedback circuit also adapts perfectly, but the size of its transient depends on the absolute step $S_2 - S_1$. A cell moving in an exponential gradient experiences a constant fold change per unit distance; fold-change detection lets it respond in the same way at the dilute and the concentrated end, over a large dynamic range, and makes the response insensitive to cell-to-cell variation in the amplitude of the upstream signal, as in Wnt signaling.
+
+6. Hepatocytes stimulated with vasopressin show Ca²⁺ spikes of constant amplitude whose frequency rises with hormone concentration. Which properties of the IP₃ receptor produce this behavior? Why might a cell encode a signal in frequency rather than amplitude, and how is the frequency decoded?
+
+   **Answer** The IP₃ receptor is activated by IP₃ and by moderate cytosolic $\ce{Ca^2+}$ (fast positive feedback: $\ce{Ca^2+}$-induced $\ce{Ca^2+}$ release) and inhibited by higher $\ce{Ca^2+}$ (slower negative feedback); with reuptake by SERCA and refilling of the store this gives a relaxation oscillator in which each spike empties a fixed part of the store (constant amplitude) and the time to the next spike shortens with more IP₃ (higher frequency). Frequency coding is robust against variations in protein levels and avoids prolonged high $\ce{Ca^2+}$, which is toxic and activates proteases; it also lets different decoders respond to different frequencies. Decoders integrate spikes: they are activated quickly during each spike and inactivated slowly between them, such as CaMKII, whose autophosphorylated activity rises with spike frequency, or NFAT, which is dephosphorylated by calcineurin during spikes and exported slowly from the nucleus.
+
+7. In PC12 cells EGF gives transient and NGF sustained ERK activation. Predict the fate of cells treated with (a) NGF plus a MEK inhibitor added 15 min later, (b) EGF in cells overexpressing the EGF receptor, (c) EGF in cells expressing a c-Fos mutant whose ERK and RSK sites are replaced by phosphomimetic residues.
+
+   **Answer** (a) ERK activity is cut short, as with EGF; c-Fos made after 30–60 min is not stabilized; the cells do not differentiate (they may proliferate or simply survive). (b) More receptors outlast down-regulation and negative feedback, ERK activity is sustained, and EGF induces neurite outgrowth (as observed by Traverse and colleagues). (c) c-Fos is stable without sustained ERK, so the persistence detector is bypassed and transient ERK signals can drive the late genes that c-Fos controls; this would be expected to push EGF-treated cells towards the responses normally reserved for sustained signals (in reality other duration sensors also contribute).
+
+8. (Open question) mTORC1 is activated only when it is recruited to the lysosome by the Rag GTPases and activated there by Rheb. Explain why this spatial arrangement acts as an AND gate, and predict the effect on mTORC1 of (a) a constitutively active Rag mutant in amino acid–starved cells, (b) loss of TSC2 in cells without growth factors, (c) both together.
+
+   **Answer** Rheb·GTP is anchored to the lysosomal membrane, and mTORC1 can bind it only when the Rags have brought the complex to the same membrane; amino acids control the location, growth factors the activator, so either alone gives little activity. (a) Active Rags recruit mTORC1 even without amino acids, but activation then depends on Rheb·GTP: with growth factors present mTORC1 is active despite starvation (indeed such mutants are insensitive to amino acid withdrawal); without growth factors activity stays low. (b) Without TSC2, Rheb stays GTP-bound without growth factors, but mTORC1 is still active only when amino acids recruit it; in amino acid–starved cells activity is low. (c) Both inputs are forced on, and mTORC1 is constitutively active regardless of nutrients and growth factors.

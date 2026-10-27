@@ -7146,3 +7146,29 @@ terms:
   - { zh: 核糖体生物发生, en: ribosome biogenesis, aliases: [核糖体形成] }
   - { zh: 核仁应激, en: nucleolar stress, aliases: [ribosomal stress, 核糖体应激] }
   - { zh: 染色体外 DNA, en: extrachromosomal DNA, aliases: [ecDNA, 双微体, double minute, double minutes] }
+  - { zh: 接触依赖性信号, en: contact-dependent signaling, aliases: [juxtacrine signaling, 近分泌, 接触依赖的信号传递] }
+  - { zh: 突触信号, en: synaptic signaling, aliases: [突触信号传递] }
+  - { zh: 超敏性, en: ultrasensitivity, aliases: [ultrasensitive, 超敏] }
+  - { zh: 双稳态, en: bistability, aliases: [bistable, 双稳], scope: ["7"] }
+  - { zh: 滞后, en: hysteresis, aliases: [滞后效应, 迟滞], scope: ["7"] }
+  - { zh: 适应, en: adaptation, aliases: [信号适应], scope: ["7.1", "7.3", "7.9"] }
+  - { zh: 完全适应, en: perfect adaptation, aliases: [精确适应, exact adaptation] }
+  - { zh: 钙振荡, en: calcium oscillation, aliases: [calcium oscillations, Ca2+ oscillation, Ca²⁺ 振荡] }
+  - { zh: 相互作用结构域, en: interaction domain, aliases: [interaction domains, modular interaction domain] }
+  - { zh: 信号整合, en: signal integration }
+  - { zh: 信号串扰, en: crosstalk, aliases: [cross talk, cross-talk, 串扰, 交叉对话] }
+  - { zh: Rho 家族 GTP 酶, en: Rho GTPase, aliases: [Rho GTPases, Rho, Rho family GTPase, Rho family GTPases], scope: ["7"] }
+  - { zh: Wnt 信号通路, en: Wnt signaling pathway, aliases: [Wnt pathway, Wnt/β-catenin pathway, canonical Wnt pathway] }
+  - { zh: β-连环蛋白, en: β-catenin, aliases: [beta-catenin] }
+  - { zh: 破坏复合体, en: destruction complex, aliases: [β-catenin destruction complex, 降解复合体] }
+  - { zh: Hedgehog 信号通路, en: Hedgehog signaling pathway, aliases: [Hedgehog pathway, Hh pathway] }
+  - { zh: Smoothened, en: Smoothened, aliases: [Smo] }
+  - { zh: NF-κB, en: NF-κB, aliases: [NF-kappaB, nuclear factor κB] }
+  - { zh: IκB, en: IκB, aliases: [IκBα, IkappaB, IκB proteins] }
+  - { zh: Notch 信号通路, en: Notch signaling pathway, aliases: [Notch pathway] }
+  - { zh: 受调控的膜内蛋白水解, en: regulated intramembrane proteolysis, scope: ["7"] }
+  - { zh: γ-分泌酶, en: γ-secretase, aliases: [gamma-secretase] }
+  - { zh: TGF-β 信号通路, en: TGF-β signaling pathway, aliases: [TGF-β pathway, TGF-β/Smad pathway] }
+  - { zh: Smad 蛋白, en: Smad, aliases: [Smads, Smad proteins, R-Smad, Co-Smad] }
+  - { zh: Hippo 通路, en: Hippo pathway, aliases: [Hippo signaling pathway, Hippo–YAP pathway] }
+  - { zh: YAP, en: YAP, aliases: [YAP/TAZ, Yes-associated protein] }
