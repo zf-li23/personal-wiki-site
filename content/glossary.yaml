@@ -6919,3 +6919,55 @@ terms:
   - { zh: 淀粉体, en: amyloplast, aliases: [amyloplasts] }
   - { zh: 有色体, en: chromoplast, aliases: [chromoplasts] }
   - { zh: 逆向信号, en: retrograde signaling, aliases: [逆行信号], scope: ["7"] }
+  - { zh: 单位膜, en: unit membrane, aliases: [单位膜模型, unit membrane model] }
+  - { zh: 流动镶嵌模型, en: fluid mosaic model }
+  - { zh: 去垢剂, en: detergent, aliases: [detergents, 去污剂] }
+  - { zh: 纳米盘, en: nanodisc, aliases: [nanodiscs] }
+  - { zh: 糖萼, en: glycocalyx, aliases: [细胞外被, cell coat] }
+  - { zh: 围栏模型, en: picket-fence model, aliases: [栅栏模型] }
+  - { zh: 跳跃扩散, en: hop diffusion }
+  - { zh: 膜的不对称性, en: membrane asymmetry, aliases: [膜不对称性] }
+  - { zh: 膜结构域, en: membrane domain, aliases: [膜域, membrane domains], scope: ["7"] }
+  - { zh: 血影蛋白, en: spectrin }
+  - { zh: 膜骨架, en: membrane skeleton }
+  - { zh: 弯曲刚度, en: bending rigidity, aliases: [弯曲模量, bending modulus] }
+  - { zh: 自发曲率, en: spontaneous curvature }
+  - { zh: 泵–漏模型, en: pump–leak model, aliases: [泵漏模型, pump-leak model] }
+  - { zh: 膨压, en: turgor pressure, aliases: [turgor] }
+  - { zh: 调节性体积减小, en: regulatory volume decrease, aliases: [RVD] }
+  - { zh: 调节性体积增大, en: regulatory volume increase, aliases: [RVI] }
+  - { zh: "Boyle–van 't Hoff 关系", en: "Boyle–van 't Hoff relation" }
+  - { zh: 跨上皮运输, en: transepithelial transport }
+  - { zh: 静息电位, en: resting membrane potential, aliases: [静息膜电位, resting potential] }
+  - { zh: Goldman–Hodgkin–Katz 方程, en: Goldman–Hodgkin–Katz equation, aliases: [GHK 方程, GHK equation, Goldman equation] }
+  - { zh: 机械门控通道, en: mechanosensitive channel, aliases: [机械敏感通道, mechanosensitive channels] }
+  - { zh: 膜包被细胞器, en: membrane-enclosed organelle, aliases: [膜细胞器, membrane-bounded organelle] }
+  - { zh: 区室化, en: compartmentalization }
+  - { zh: 内膜系统, en: endomembrane system }
+  - { zh: 有限池模型, en: limiting-pool model }
+  - { zh: 蛋白质分选, en: protein sorting, aliases: [蛋白质靶向, protein targeting] }
+  - { zh: 门控运输, en: gated transport }
+  - { zh: 蛋白质跨膜运输, en: transmembrane transport, scope: ["7.3.6"] }
+  - { zh: 膜泡运输, en: vesicular transport, aliases: [囊泡运输] }
+  - { zh: 分选信号, en: sorting signal, aliases: [sorting signals] }
+  - { zh: 信号假说, en: signal hypothesis }
+  - { zh: Sec61 转位子, en: Sec61 translocon, aliases: [Sec61 translocator, Sec61 complex, Sec61 复合体] }
+  - { zh: 共翻译转运, en: cotranslational translocation }
+  - { zh: 翻译后转运, en: posttranslational translocation }
+  - { zh: 起始转移序列, en: start-transfer sequence }
+  - { zh: 停止转移序列, en: stop-transfer sequence }
+  - { zh: 尾锚定蛋白, en: tail-anchored protein, aliases: [tail-anchored proteins] }
+  - { zh: GPI 锚, en: GPI anchor, aliases: [糖基磷脂酰肌醇锚, glycosylphosphatidylinositol anchor] }
+  - { zh: 前导序列, en: presequence, aliases: [导肽, mitochondrial targeting sequence], scope: ["7"] }
+  - { zh: TOM 复合体, en: TOM complex }
+  - { zh: TIM23 复合体, en: TIM23 complex }
+  - { zh: SAM 复合体, en: SAM complex }
+  - { zh: TOC 复合体, en: TOC complex }
+  - { zh: TIC 复合体, en: TIC complex }
+  - { zh: 过氧化物酶体, en: peroxisome, aliases: [peroxisomes, 微体] }
+  - { zh: 过氧化物酶体生物发生因子, en: peroxin, aliases: [peroxins, Pex 蛋白, Pex protein] }
+  - { zh: 过氧化物酶体靶向信号 1, en: PTS1, aliases: [peroxisomal targeting signal 1] }
+  - { zh: 过氧化物酶体靶向信号 2, en: PTS2, aliases: [peroxisomal targeting signal 2] }
+  - { zh: Zellweger 综合征, en: Zellweger syndrome, aliases: [脑肝肾综合征] }
+  - { zh: 非经典蛋白分泌, en: unconventional protein secretion, aliases: [非经典分泌, unconventional secretion] }
+  - { zh: 膜接触位点, en: membrane contact site, aliases: [membrane contact sites, 膜接触点] }
