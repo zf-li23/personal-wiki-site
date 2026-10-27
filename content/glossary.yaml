@@ -6702,7 +6702,7 @@ terms:
   - { zh: 纤维素合酶, en: cellulose synthase, aliases: [CesA] }
   - { zh: 乙酰 CoA 羧化酶, en: acetyl-CoA carboxylase, aliases: [ACC] }
   - { zh: 丙二酸单酰 CoA, en: malonyl-CoA, aliases: [丙二酰 CoA] }
-  - { zh: 脂肪酸合酶, en: fatty acid synthase, aliases: [FAS] }
+  - { zh: 脂肪酸合酶, en: fatty acid synthase }
   - { zh: 酰基载体蛋白, en: acyl carrier protein, aliases: [ACP] }
   - { zh: 柠檬酸穿梭, en: citrate shuttle }
   - { zh: 脂酰 CoA 去饱和酶, en: fatty acyl-CoA desaturase, aliases: [desaturase, 去饱和酶] }
@@ -7313,3 +7313,68 @@ terms:
   - { zh: 诱导多能干细胞, en: induced pluripotent stem cell, aliases: [iPS cell, iPS cells, iPSC] }
   - { zh: 转分化, en: transdifferentiation, aliases: [direct reprogramming, 直接重编程] }
   - { zh: Waddington 景观, en: Waddington landscape, aliases: [epigenetic landscape, 表观遗传景观] }
+  - { zh: 意外细胞死亡, en: accidental cell death }
+  - { zh: 调节性细胞死亡, en: regulated cell death, aliases: [RCD, 受调控的细胞死亡] }
+  - { zh: 程序性细胞死亡, en: programmed cell death, aliases: [PCD] }
+  - { zh: 坏死, en: necrosis, aliases: [细胞坏死], scope: ["7"] }
+  - { zh: 损伤相关分子模式, en: damage-associated molecular pattern, aliases: [damage-associated molecular patterns, DAMP, DAMPs] }
+  - { zh: 凋亡小体, en: apoptotic body, aliases: [apoptotic bodies] }
+  - { zh: DNA 梯状条带, en: DNA ladder, aliases: [DNA 梯带] }
+  - { zh: 膜联蛋白 V, en: annexin V, aliases: [Annexin V 染色] }
+  - { zh: TUNEL 法, en: TUNEL assay, aliases: [TUNEL] }
+  - { zh: 起始胱天蛋白酶, en: initiator caspase, aliases: [initiator caspases, 起始 caspase] }
+  - { zh: 执行胱天蛋白酶, en: executioner caspase, aliases: [executioner caspases, 执行 caspase, effector caspase] }
+  - { zh: 死亡受体, en: death receptor, aliases: [death receptors] }
+  - { zh: 死亡诱导信号复合物, en: death-inducing signaling complex, aliases: [DISC] }
+  - { zh: 外源性凋亡途径, en: extrinsic pathway, aliases: [extrinsic pathway of apoptosis, extrinsic apoptotic pathway, 外源途径], scope: ["7.3", "7.15"] }
+  - { zh: 内源性凋亡途径, en: intrinsic pathway, aliases: [intrinsic pathway of apoptosis, mitochondrial pathway, 线粒体途径, 内源途径], scope: ["7.3", "7.15"] }
+  - { zh: 线粒体外膜通透化, en: mitochondrial outer membrane permeabilization, aliases: [MOMP] }
+  - { zh: Apaf1, en: Apaf1, aliases: [Apaf-1, apoptotic protease-activating factor 1, 凋亡蛋白酶激活因子 1] }
+  - { zh: 凋亡体, en: apoptosome }
+  - { zh: Bcl-2 家族, en: Bcl-2 family, aliases: [Bcl2 family, Bcl-2 蛋白家族] }
+  - { zh: Bax, en: Bax }
+  - { zh: Bak, en: Bak }
+  - { zh: 仅含 BH3 结构域的蛋白, en: BH3-only protein, aliases: [BH3-only proteins] }
+  - { zh: BH3 模拟物, en: BH3 mimetic, aliases: [BH3 mimetics] }
+  - { zh: 凋亡抑制蛋白, en: inhibitor of apoptosis protein, aliases: [IAP, IAPs, XIAP] }
+  - { zh: Smac, en: Smac, aliases: [DIABLO, Smac/DIABLO] }
+  - { zh: 胞葬作用, en: efferocytosis, aliases: [凋亡细胞清除] }
+  - { zh: 坏死性凋亡, en: necroptosis, aliases: [程序性坏死] }
+  - { zh: 炎症小体, en: inflammasome, aliases: [inflammasomes, 炎性小体] }
+  - { zh: 消皮素, en: gasdermin, aliases: [gasdermins, gasdermin D, GSDMD, 焦孔素] }
+  - { zh: 细胞焦亡, en: pyroptosis, aliases: [焦亡] }
+  - { zh: 铁死亡, en: ferroptosis }
+  - { zh: 细胞衰老, en: cellular senescence, aliases: [cell senescence] }
+  - { zh: Hayflick 极限, en: Hayflick limit, aliases: [海弗利克极限] }
+  - { zh: 复制性衰老, en: replicative senescence }
+  - { zh: 衰老相关 β-半乳糖苷酶, en: senescence-associated β-galactosidase, aliases: [SA-β-gal] }
+  - { zh: 衰老相关分泌表型, en: senescence-associated secretory phenotype, aliases: [SASP] }
+  - { zh: 衰老细胞清除剂, en: senolytic, aliases: [senolytics, senolytic drug] }
+  - { zh: 肿瘤, en: tumor, aliases: [neoplasm, tumors, 新生物] }
+  - { zh: 良性肿瘤, en: benign tumor }
+  - { zh: 恶性肿瘤, en: malignant tumor }
+  - { zh: 癌症, en: cancer, aliases: [cancers] }
+  - { zh: 转移, en: metastasis, aliases: [metastases, 肿瘤转移], scope: ["7"] }
+  - { zh: 癌, en: carcinoma, aliases: [carcinomas] }
+  - { zh: 肉瘤, en: sarcoma, aliases: [sarcomas] }
+  - { zh: 白血病, en: leukemia, aliases: [leukemias] }
+  - { zh: 淋巴瘤, en: lymphoma, aliases: [lymphomas] }
+  - { zh: 二次打击假说, en: two-hit hypothesis, aliases: [Knudson two-hit hypothesis, 二次突变假说] }
+  - { zh: 肿瘤演进, en: tumor progression }
+  - { zh: 克隆演化, en: clonal evolution }
+  - { zh: 驱动突变, en: driver mutation, aliases: [driver mutations] }
+  - { zh: 遗传不稳定性, en: genetic instability, aliases: [genomic instability, genome instability, 基因组不稳定性] }
+  - { zh: 杂合性丢失, en: loss of heterozygosity, aliases: [LOH] }
+  - { zh: 致癌物, en: carcinogen, aliases: [carcinogens, 致癌剂] }
+  - { zh: 肿瘤起始剂, en: tumor initiator, aliases: [启动剂, 引发剂] }
+  - { zh: 肿瘤促进剂, en: tumor promoter, aliases: [促癌剂] }
+  - { zh: 肿瘤病毒, en: tumor virus, aliases: [tumor viruses, 致瘤病毒] }
+  - { zh: 恶性转化, en: malignant transformation }
+  - { zh: 锚定非依赖性, en: anchorage independence, aliases: [anchorage-independent growth, 贴壁非依赖性生长] }
+  - { zh: 癌症标志, en: hallmarks of cancer, aliases: [cancer hallmarks, 癌症特征] }
+  - { zh: 上皮–间质转化, en: epithelial–mesenchymal transition, aliases: [EMT, epithelial-mesenchymal transition, 上皮间质转化] }
+  - { zh: 靶向治疗, en: targeted therapy }
+  - { zh: 癌基因成瘾, en: oncogene addiction }
+  - { zh: 合成致死, en: synthetic lethality, aliases: [synthetically lethal] }
+  - { zh: 免疫检查点阻断, en: immune checkpoint blockade, aliases: [checkpoint blockade, 免疫检查点抑制] }
+  - { zh: 耐药性, en: drug resistance, aliases: [抗药性], scope: ["7"] }

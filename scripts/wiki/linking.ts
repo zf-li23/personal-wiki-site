@@ -458,7 +458,10 @@ function markEmphasis(root: Root, concept: Concept, anchor: string, tags: string
     for (let i = 0; i < children.length && !done; i++) {
       const child = children[i];
       if (child.type !== 'element' || skippable(child)) continue;
-      if (tags.includes(child.tagName) && lookup(hastToString(child))) {
+      // An italic abbreviation is a gene symbol (*FAS*, *MDM2*), not the defining mention, unless it
+      // spells the concept's own name (*NoSQL*).
+      const text = hastToString(child).trim();
+      if (tags.includes(child.tagName) && (text === concept.en || !isAbbreviation(text)) && lookup(text)) {
         children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: concept.id }, [child]);
         done = true;
       } else walk(child);

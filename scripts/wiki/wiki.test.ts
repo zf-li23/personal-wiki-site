@@ -554,6 +554,12 @@ describe('cross-page linking', () => {
     assert.ok(!s.html('1.3.2').includes('wiki-dfn'));
     assert.match(s.html('1.3.2'), /data-concept="continuous-integration"/);
   });
+  it('does not take an italic gene symbol for the definition of an abbreviated concept', async () => {
+    concepts.push({ id: 'fatty-acid-synthase', zh: '脂肪酸合酶', en: 'fatty acid synthase', aliases: ['FAS'] });
+    const s = await site({ '1.3.2': 'en:## 2.1. A\n\nMutations in *FAS* cause ALPS.' });
+    concepts.pop();
+    assert.ok(!s.html('1.3.2').includes('wiki-dfn'));
+  });
   it('matches a mixed-case single word (CaM, LINEs) only as written', async () => {
     concepts.push({ id: 'calmodulin', zh: '钙调蛋白', en: 'calmodulin', aliases: ['CaM'] });
     concepts.push({ id: 'line', zh: '长散在核元件', en: 'LINE', aliases: ['LINEs'] });
