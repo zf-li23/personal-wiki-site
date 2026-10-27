@@ -2,6 +2,7 @@
 title: Molecular Biology
 courses:
   - { code: "30450533", name: 分子生物学(英)(H), name_en: Molecular Biology (H) }
+  - { code: "30450453", name: 分子生物学(英), name_en: Molecular Biology }
   - { code: "04630894", name: 定量分子生物学, name_en: Quantitative Molecular Biology, note: 北京大学, note_en: Peking University }
 textbooks:
   - { title: Molecular Biology, author: Robert F. Weaver, edition: 5, title_zh: 分子生物学 }
