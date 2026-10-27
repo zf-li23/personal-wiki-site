@@ -7379,3 +7379,14 @@ terms:
   - { zh: 免疫检查点阻断, en: immune checkpoint blockade, aliases: [checkpoint blockade, 免疫检查点抑制] }
   - { zh: 耐药性, en: drug resistance, aliases: [抗药性], scope: ["7"] }
   - { zh: 分泌颗粒自噬, en: crinophagy }
+  - { zh: 无丝分裂, en: amitosis, aliases: [直接分裂, direct division] }
+  - { zh: 管家基因, en: housekeeping gene, aliases: [housekeeping genes, 持家基因] }
+  - { zh: 组织特异性基因, en: tissue-specific gene, aliases: [tissue-specific genes, 奢侈基因, luxury gene, luxury genes] }
+  - { zh: 决定, en: determination, aliases: [细胞决定, cell determination], scope: ["7.3", "7.5"] }
+  - { zh: 去分化, en: dedifferentiation }
+  - { zh: 转决定, en: transdetermination }
+  - { zh: 群体效应, en: community effect, aliases: [细胞数量效应] }
+  - { zh: 透明质酸黏素, en: hyaladherin, aliases: [hyaladherins, 透明质酸粘素] }
+  - { zh: 自溶, en: autolysis, scope: ["7"] }
+  - { zh: 完全致癌物, en: complete carcinogen, aliases: [complete carcinogens] }
+  - { zh: 间变, en: anaplasia }

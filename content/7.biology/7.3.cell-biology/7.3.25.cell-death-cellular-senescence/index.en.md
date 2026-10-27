@@ -25,6 +25,8 @@ The other instances of regulated death are responses to stresses (DNA damage, ER
 
 The contents released from necrotic cells, such as HMGB1, ATP, uric acid, DNA and heat shock proteins, act as *damage-associated molecular patterns* (DAMPs) on receptors of the innate immune system ([7.15](/7.15)). This, more than the manner of dying itself, is the physiological difference between apoptosis and necrosis: apoptosis removes cells silently, necrosis raises an alarm.
 
+The classical pathology of necrosis describes what happens to a cell after it has died in a tissue. A fall in ATP and a rise in cytosolic $\ce{Ca^2+}$ stop the ion pumps, so water enters and the ER and mitochondria swell (the mitochondria often acquire dense deposits), ribosomes detach, and lysosomal enzymes are released. The dead cell is then digested, by its own lysosomal enzymes (*autolysis*) or by the lysosomal enzymes of the neutrophils and macrophages that infiltrate the tissue (in pathology, heterolysis), while its proteins denature. In sections stained with hematoxylin and eosin the cytoplasm becomes uniformly eosinophilic (pink), and the nucleus shrinks and darkens (pyknosis), breaks up (karyorrhexis) or fades away (karyolysis) as its DNA is degraded at random. Because the plasma membrane is no longer intact, necrotic cells take up dyes that living cells exclude, such as trypan blue and propidium iodide, which is the basis of the simplest viability counts.
+
 | NCCD mode of regulated death (2018) | Defining molecular event | Key mediators | Section |
 |---|---|---|---|
 | intrinsic apoptosis | MOMP, then caspases | Bax, Bak, cytochrome c, caspase-9, caspase-3 | 25.4.2 |
@@ -44,7 +46,7 @@ The contents released from necrotic cells, such as HMGB1, ATP, uric acid, DNA an
 
 ### 25.2.1. Morphology
 
-Kerr, Wyllie and Currie (1972) named **apoptosis**, from the Greek for the falling of leaves, after recognizing a common sequence of changes in dying cells of many tissues. The cell detaches from its neighbors and shrinks; its chromatin condenses into dense masses against the nuclear envelope (pyknosis) and the nucleus breaks into fragments (karyorrhexis); the cytoskeleton collapses and the cell surface forms blebs; finally a large cell breaks into membrane-enclosed fragments. Throughout, the plasma membrane remains intact and the organelles are largely preserved, so that nothing leaks.
+Kerr, Wyllie and Currie (1972) named **apoptosis**, from the Greek for the falling of leaves, after recognizing a common sequence of changes in dying cells of many tissues. The cell detaches from its neighbors and shrinks; its chromatin condenses into dense masses against the nuclear envelope (pyknosis) and the nucleus breaks into fragments (karyorrhexis); the cytoskeleton collapses and the cell surface forms blebs; finally a large cell breaks into membrane-enclosed fragments. Early in the process, specialized surface structures such as microvilli disappear and contacts with neighbors are lost, and the condensed chromatin often forms crescent-shaped caps along the nuclear envelope. Throughout, the plasma membrane remains intact and the organelles, including the mitochondria, are largely preserved inside the apoptotic bodies, so that nothing leaks.
 
 **Definition 25.2.1 (Apoptotic Body)** An **apoptotic body** is a membrane-enclosed fragment of an apoptotic cell, 1–5 µm across, containing condensed cytoplasm, organelles and often nuclear fragments, which exposes phosphatidylserine and is engulfed by a phagocyte.
 
@@ -71,7 +73,8 @@ Annexin V is usually combined with a membrane-impermeant DNA dye such as propidi
 - Sculpting. The digits of the mouse and human hand form as the cells between them die; in ducks, whose interdigital webs persist, less death occurs there. The tadpole tail is removed at metamorphosis in response to thyroid hormone, and in mammalian embryos the Müllerian ducts regress in males under the influence of anti-Müllerian hormone.
 - Matching numbers. About half of the motor neurons and many other neurons made in the vertebrate embryo die soon after they reach their targets: they compete for limited amounts of neurotrophic factors made by the target, and those that obtain too little die (the neurotrophic hypothesis of Levi-Montalcini and Hamburger, who discovered NGF). The same competition for survival signals adjusts cell numbers in other tissues ([7.3.22](/7.3.22#sec-22.1.1)).
 - Quality control. Developing T and B lymphocytes that fail to make a useful antigen receptor, or make a self-reactive one, die by apoptosis, as do most lymphocytes expanded in an immune response once the infection is cleared; cells with irreparable DNA damage, cells infected by viruses (killed by cytotoxic lymphocytes) and cells that lose contact with the extracellular matrix (anoikis) are also removed.
-- Disease. Too much apoptosis contributes to the tissue loss after heart attack and stroke (in the penumbra around the necrotic core) and to neurodegeneration; too little contributes to autoimmunity and cancer (25.4.3; [7.3.26](/7.3.26)).
+- Barriers by dying cells. The keratinocytes of the epidermis end their differentiation by a specialized death, cornification: they cross-link their keratins and a cornified envelope of proteins by transglutaminases, and destroy their nucleus and organelles, leaving the dead, flattened corneocytes of the outer layer; lens fiber cells similarly remove their organelles. These programs use some of the machinery of apoptosis but are usually classified as terminal differentiation.
+- Disease. Too much apoptosis contributes to the tissue loss after heart attack and stroke (in the penumbra around the necrotic core), to neurodegenerative diseases (Alzheimer's and Parkinson's diseases), to aplastic anemia and to the depletion of CD4 T cells in HIV infection; too little contributes to autoimmunity and cancer (25.4.3; [7.3.26](/7.3.26)). Viruses manipulate the decision in both directions: many prolong the life of the cells they infect by encoding caspase inhibitors (the serpin CrmA of cowpox virus, which inhibits caspase-1 and -8; the p35 protein and IAPs of baculoviruses), Bcl-2 homologs (BHRF1 of Epstein–Barr virus) or FLIP-like proteins, whereas others kill cells at the end of their replication cycle to spread.
 
 ## 25.3. The Core Machinery
 
@@ -110,6 +113,8 @@ Among the substrates whose cleavage explains the features of 25.2:
 | Golgi and ER proteins, kinases (PKCδ, Raf1) | dismantling of organelles and survival signaling |
 
 No single cleavage is necessary for death: blocking any one changes a feature of apoptosis but not the death of the cell.
+
+Apoptosis is triggered by many agents: physical ones (ultraviolet light and ionizing radiation, moderate heat or cold shock), chemical ones (reactive oxygen species, $\ce{Ca^2+}$ ionophores, inhibitors of DNA or protein synthesis, most anticancer drugs) and physiological signals (glucocorticoids, which kill immature thymocytes; TNF-α and other death ligands; withdrawal of growth factors). The process can be divided into four stages: reception of the signal, activation of the regulatory machinery, execution by caspases, and clearance of the corpse (25.5). Caspases are the usual executioners, but when they are inhibited, mitochondria can still kill cells more slowly by releasing apoptosis-inducing factor (AIF) and endonuclease G, which move to the nucleus and cut DNA into large fragments (caspase-independent cell death).
 
 ## 25.4. Two Pathways to Caspase Activation
 
@@ -298,7 +303,7 @@ No single marker is specific; senescence is recognized by a combination.
 | Feature | Description |
 |---|---|
 | arrest | no DNA synthesis (no EdU or BrdU incorporation, no Ki-67), not reversed by mitogens; high p21 and p16INK4a, hypophosphorylated Rb |
-| morphology | large, flat cells (in culture often several times the normal area), often multinucleate; nuclear invaginations |
+| morphology | large, flat cells (in culture often several times the normal area), often multinucleate; nuclear invaginations, condensed chromatin and irregular nucleoli; vacuoles and swollen organelles in the cytoplasm |
 | lysosomes | enlarged lysosomal compartment with lipofuscin and dense bodies; senescence-associated β-galactosidase |
 | chromatin | senescence-associated heterochromatin foci (SAHF): condensed, DAPI-dense foci with H3K9me3, HP1 and macroH2A that silence E2F target genes, assembled with HIRA, ASF1 and **PML bodies**; loss of lamin B1 |
 | DNA damage | persistent damage foci (γH2AX, 53BP1), many at telomeres |
@@ -350,6 +355,20 @@ $$
 $$
 
 When production approaches the maximal removal rate $\beta$, $X$ rises steeply and turns over more slowly, from days in young mice to weeks in old ones, as they observed; with a death threshold for $X$, the model gives a mortality that rises roughly exponentially with age, as in the Gompertz law of human mortality, with the large variation in lifespan between individuals coming from the noise.
+
+The cells of old organisms, whether or not they are senescent in the strict sense of Definition 25.7.1, accumulate damage of several kinds:
+
+| Molecule | Changes with age |
+|---|---|
+| DNA | somatic point mutations and deletions; oxidized bases such as 8-oxo-2′-deoxyguanosine; deletions of mitochondrial DNA (especially in muscle and neurons); shortened telomeres; global loss of DNA methylation with gain at some CpG islands |
+| RNA | lower rates of transcription and translation in many tissues; reduced levels of some mRNAs and tRNAs |
+| Proteins | oxidation (carbonylation), nonenzymatic glycation and advanced glycation end products, carbamylation, deamidation and racemization of long-lived proteins (lens crystallins, collagen, elastin), cross-linking and aggregation |
+| Lipids | peroxidation of polyunsaturated fatty acids in membranes |
+| Waste | lipofuscin (age pigment), an undegradable autofluorescent mixture of oxidized lipid and protein in the lysosomes of neurons and muscle; protein aggregates such as β-amyloid in Alzheimer's disease |
+
+Postmitotic cells with a high oxidative load (neurons, cardiac and skeletal muscle) accumulate this damage most. The free radical theory explains it by reactive oxygen species: superoxide is produced mainly by electron leakage from complexes I and III of the respiratory chain ([7.1.23](/7.1.23)) and by oxidases (NADPH oxidases, cytochrome P-450 enzymes), and is removed by enzymes (superoxide dismutases, catalase, glutathione peroxidases, peroxiredoxins) and small antioxidants (glutathione, vitamin E in membranes, vitamin C, ubiquinol). Overexpressing Cu/Zn superoxide dismutase and catalase extended the lifespan of *Drosophila* by about a third (Orr and Sohal 1994), but the effect disappeared in long-lived genetic backgrounds (Orr et al. 2003), and mice overexpressing or lacking most single antioxidant enzymes do not live longer or shorter accordingly. Mice with a proofreading-deficient mitochondrial DNA polymerase γ (mtDNA mutator mice) accumulate mitochondrial mutations and age prematurely without a large increase in oxidative damage (Trifunovic et al. 2004), which separates mitochondrial dysfunction from ROS. Age is also written into chromatin: the methylation levels of a few hundred CpG sites predict chronological age to within a few years in most human tissues (epigenetic clocks, Horvath 2013), and a faster-running clock predicts mortality.
+
+Genes set the scale of the process. Each species has a characteristic maximum lifespan, from weeks in *C. elegans* to more than two centuries in the bowhead whale, and in humans the lifespan of children correlates with that of their parents, although twin and pedigree studies attribute only about 10–25% of its variation to genes, and recent estimates are lower. Rare mutations cause segmental progeroid syndromes, which accelerate some features of aging: in Werner syndrome (loss of the RecQ helicase WRN), growth stops in adolescence and patients develop graying, cataracts, diabetes, atherosclerosis and cancers from their twenties and die at a median age of about 54; in Hutchinson–Gilford progeria (a dominant *LMNA* mutation producing progerin, not a helicase defect), growth failure starts in the first two years and children die at an average of about 14 years, mostly of cardiovascular disease.
 
 Senescence is one of the twelve hallmarks of aging in the scheme of López-Otín and colleagues (2023), with genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, disabled macroautophagy, deregulated nutrient sensing (insulin/IGF-1, **mTORC1**, **AMP-activated protein kinase**, sirtuins), mitochondrial dysfunction, stem cell exhaustion, altered intercellular communication, chronic inflammation and dysbiosis. The older theories of aging answer two different questions:
 
