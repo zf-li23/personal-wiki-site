@@ -3,13 +3,13 @@ title: "Population Genetics I: Hardy–Weinberg Equilibrium and Mating Systems"
 description: "Genetics of populations rather than of crosses. Gene pools, allele and genotype frequencies and their estimation; the Hardy–Weinberg law, its proof and its tests; rare recessive alleles and carriers, multiple alleles (ABO by gene counting and the EM algorithm) and X-linked loci; haplotypes, linkage disequilibrium (D, D′, r²) and its decay; assortative mating, inbreeding and regular inbreeding systems; population subdivision, the Wahlund effect and F_ST; random match probabilities and paternity indices in forensic genetics."
 ---
 
-Mendel's laws describe what happens in a controlled cross between parents of known genotype ([7.4.2](/7.4.2)); human pedigrees apply them to one family at a time ([7.4.7](/7.4.7)). Most questions about heredity, however, concern whole populations, in which matings are not arranged, parents' genotypes are unknown, and not every individual leaves offspring: How common is a disease allele, and how many people carry it unawares? Why does a dominant phenotype not spread to fixation? How much does marriage between relatives raise the risk of recessive disease in a population? How unlikely is it that two people share a DNA profile by chance? Population genetics answers these by treating the population as a pool of genes, Mendelian transmission as random sampling from that pool, and inheritance as a dynamical system on allele and genotype frequencies.
+Mendel's laws describe what happens in a controlled cross between parents of known **genotype** ([7.4.2](/7.4.2)); human **pedigrees** apply them to one family at a time ([7.4.7](/7.4.7)). Most questions about heredity, however, concern whole populations, in which matings are not arranged, parents' genotypes are unknown, and not every individual leaves offspring: How common is a disease **allele**, and how many people carry it unawares? Why does a dominant **phenotype** not spread to fixation? How much does marriage between relatives raise the risk of recessive disease in a population? How unlikely is it that two people share a DNA profile by chance? Population genetics answers these by treating the population as a pool of **genes**, Mendelian transmission as random sampling from that pool, and inheritance as a dynamical system on allele and genotype frequencies.
 
-This chapter treats the population in which nothing changes the allele frequencies: large, randomly mating, free of mutation, migration and selection. Its central result, the Hardy–Weinberg law, is the null model of the subject, in the same way that a constant velocity is the null model of mechanics: once we know what an "ideal" population does, every departure from it measures a force. We then extend the law to several alleles, to the X chromosome and to two linked loci (linkage disequilibrium, the basis of association mapping in [7.4.25](/7.4.25)), and relax random mating (assortative mating, inbreeding, subdivision). The forces that do change allele frequencies (mutation, migration, selection and drift) follow in [7.4.23](/7.4.23); the inheritance of continuous traits in populations in [7.4.24](/7.4.24). The probability tools are those of the **binomial distribution** and the **multinomial distribution** ([3.1.4](/3.1.4), [3.1.6](/3.1.6)), the χ² test ([3.2.6](/3.2.6#sec-6.3)) and the inbreeding coefficient of [7.4.7](/7.4.7).
+This chapter treats the population in which nothing changes the allele frequencies: large, randomly mating, free of **mutation**, migration and selection. Its central result, the Hardy–Weinberg law, is the null model of the subject, in the same way that a constant velocity is the null model of mechanics: once we know what an "ideal" population does, every departure from it measures a force. We then extend the law to several alleles, to the X **chromosome** and to two linked loci (**linkage** disequilibrium, the basis of **association mapping** in [7.4.25](/7.4.25)), and relax random mating (assortative mating, inbreeding, subdivision). The forces that do change allele frequencies (mutation, migration, selection and drift) follow in [7.4.23](/7.4.23); the inheritance of continuous traits in populations in [7.4.24](/7.4.24). The probability tools are those of the **binomial distribution** and the **multinomial distribution** ([3.1.4](/3.1.4), [3.1.6](/3.1.6)), the χ² test ([3.2.6](/3.2.6#sec-6.3)) and the **inbreeding coefficient** of [7.4.7](/7.4.7).
 
 ## 22.1. Populations, Gene Pools and Frequencies
 
-**Definition 22.1.1 (Population Genetics and Gene Pool)** **Population genetics** is the study of the genetic composition of populations: the distribution of alleles and genotypes, and of the phenotypes they produce, and the processes that change them in space and time. A population (in the genetic sense) is a group of individuals of one species that live in the same place at the same time and, if the species reproduces sexually, can mate with one another. Its **gene pool** is the set of all gene copies at a locus (or in the genome) carried by its breeding members; for an autosomal locus in $N$ diploid individuals it has $2N$ copies.
+**Definition 22.1.1 (Population Genetics and Gene Pool)** **Population genetics** is the study of the genetic composition of populations: the distribution of alleles and genotypes, and of the phenotypes they produce, and the processes that change them in space and time. A population (in the genetic sense) is a group of individuals of one species that live in the same place at the same time and, if the species reproduces sexually, can mate with one another. Its **gene pool** is the set of all gene copies at a **locus** (or in the **genome**) carried by its breeding members; for an autosomal locus in $N$ **diploid** individuals it has $2N$ copies.
 
 Populations are rarely counted completely; we observe a sample of $n$ individuals and infer the frequencies of the population from it.
 
@@ -21,7 +21,7 @@ $$
 
 Genotype frequencies determine allele frequencies, but not conversely: the populations $(P, H, Q) = (0.5, 0, 0.5)$ and $(0.25, 0.5, 0.25)$ both have $p = 1/2$. With **codominance** (MN blood groups, DNA markers) genotypes are counted directly; with dominance the classes $AA$ and $Aa$ look alike, and allele frequencies can be estimated only with a model of how genotypes arise, which is the Hardy–Weinberg law of the next section.
 
-**Formula 22.1.1 (Sampling Error of an Allele Frequency)** If the $2n$ gene copies of the sample are drawn independently from a pool with frequency $p$ (which holds under Hardy–Weinberg proportions), the number of $A$ copies is binomial, $2n\hat p \sim \mathrm{Bin}(2n, p)$, so $\hat p$ is unbiased with standard error
+**Formula 22.1.1 (Sampling Error of an Allele Frequency)** If the $2n$ gene copies of the sample are drawn independently from a pool with frequency $p$ (which holds under Hardy–Weinberg proportions), the number of $A$ copies is binomial, $2n\hat p \sim \mathrm{Bin}(2n, p)$, so $\hat p$ is unbiased with **standard error**
 
 $$
 \operatorname{SE}(\hat p) = \sqrt{\frac{p(1-p)}{2n}}. \tag{22.1}
@@ -48,7 +48,7 @@ The law holds under the following idealized assumptions about the population and
 3. mating is random with respect to the genotype at the locus;
 4. there is no mutation;
 5. there is no migration into or out of the population;
-6. genotypes do not differ in viability or fertility (no selection), and segregation is Mendelian (no meiotic drive);
+6. genotypes do not differ in viability or fertility (no selection), and segregation is Mendelian (no **meiotic drive**);
 7. allele frequencies are the same in males and females (for an autosomal locus).
 
 **Theorem 22.2.1 (Hardy–Weinberg Law)** Under assumptions 1–7, whatever the genotype frequencies $(P, H, Q)$ of the parents, (a) the allele frequency $p = P + H/2$ is the same in the offspring generation, and (b) the offspring genotype frequencies are $p^2$, $2pq$, $q^2$. Hence a population reaches Hardy–Weinberg proportions after a single generation of random mating and stays there.
@@ -57,13 +57,13 @@ The law holds under the following idealized assumptions about the population and
 
 The same result follows from the table of the nine mating types: for example $AA \times AA$ matings occur with frequency $P^2$ and give only $AA$; $AA \times Aa$ with frequency $2PH$ give $AA$ and $Aa$ in equal numbers; summing the contributions gives offspring frequency $P^2 + PH + H^2/4 = (P + H/2)^2 = p^2$ for $AA$. The gamete argument is shorter and generalizes immediately.
 
-**Example 22.2.1** A population founded by 1000 $AA$ and 1000 $aa$ individuals, equally divided between the sexes, has $p = q = 0.5$ and no heterozygotes. After one generation of random mating, $25\,\%$ of the offspring are $AA$, $50\,\%$ $Aa$ and $25\,\%$ $aa$, and these proportions persist.
+**Example 22.2.1** A population founded by 1000 $AA$ and 1000 $aa$ individuals, equally divided between the sexes, has $p = q = 0.5$ and no **heterozygotes**. After one generation of random mating, $25\,\%$ of the offspring are $AA$, $50\,\%$ $Aa$ and $25\,\%$ $aa$, and these proportions persist.
 
 Three consequences deserve emphasis.
 
 - Variation is conserved. Mendelian inheritance does not blend away variation; in an ideal population allele frequencies are constant, so variation is lost or changed only by the evolutionary forces of [7.4.23](/7.4.23).
 - Dominance does not change allele frequencies. Whether an allele is **dominant** or **recessive** affects phenotype frequencies but not its own frequency. The famous 3:1 ratio holds in an F₂, where $p = 1/2$, not in a population.
-- Hardy–Weinberg proportions are a neutral reference. Departures from Hardy–Weinberg proportions in a sample (an excess of homozygotes, for example) indicate inbreeding, subdivision, selection between zygote and adult, or, most often in practice, genotyping errors.
+- Hardy–Weinberg proportions are a neutral reference. Departures from Hardy–Weinberg proportions in a sample (an excess of **homozygotes**, for example) indicate inbreeding, subdivision, selection between zygote and adult, or, most often in practice, **genotyping** errors.
 
 The geometry of the law is shown in the figure: the genotype frequencies of a population are a point in a triangle, and the Hardy–Weinberg populations form a parabola in it.
 
@@ -86,7 +86,7 @@ $$
 
 with $p = 0.64$: the sample is consistent with Hardy–Weinberg proportions.
 
-**Remark 22.2.1** The χ² approximation is poor when an expected count is small, which is the rule for rare alleles; genotyping centers then use the exact test, which computes the probability of the observed number of heterozygotes conditional on the allele counts (Levene 1949; Wigginton and colleagues 2005). The test has little power: to detect an inbreeding coefficient of $F = 0.05$ at $p = 0.5$, several thousand individuals are needed, because the statistic is approximately $nF^2$. A population can therefore be in Hardy–Weinberg proportions at a locus under strong selection, provided selection acts after the genotypes are counted or acts weakly; agreement with HWE never proves the absence of evolutionary forces. In genome-wide studies a strong departure from HWE in controls is used mainly as a quality filter for genotyping errors ([7.4.25](/7.4.25)).
+**Remark 22.2.1** The χ² approximation is poor when an expected count is small, which is the rule for rare alleles; genotyping centers then use the exact test, which computes the probability of the observed number of heterozygotes conditional on the allele counts (Levene 1949; Wigginton and colleagues 2005). The test has little power: to detect an inbreeding coefficient of $F = 0.05$ at $p = 0.5$, several thousand individuals are needed, because the **statistic** is approximately $nF^2$. A population can therefore be in Hardy–Weinberg proportions at a locus under strong selection, provided selection acts after the genotypes are counted or acts weakly; agreement with HWE never proves the absence of evolutionary forces. In genome-wide studies a strong departure from HWE in controls is used mainly as a quality filter for genotyping errors ([7.4.25](/7.4.25)).
 
 ### 22.2.3. Rare Recessive Alleles and Carriers
 
@@ -98,9 +98,9 @@ $$
 \hat q = \sqrt{Q}, \qquad \text{carrier frequency } 2\hat p\hat q \approx 2\sqrt{Q}, \qquad \frac{\text{carriers}}{\text{affected}} = \frac{2pq}{q^2} = \frac{2p}{q} \approx \frac{2}{q}. \tag{22.2}
 $$
 
-**Example 22.2.3** Cystic fibrosis affects about 1 in 2500 newborns of European ancestry. Then $q = \sqrt{1/2500} = 0.02$ and the carrier frequency is $2 \cdot 0.98 \cdot 0.02 = 0.039$, about 1 in 25: for every affected child there are about $2/q = 98$ carriers. The probability that two unrelated people are both carriers is $0.039^2 \approx 1/650$, and their child is affected with probability $1/4$ of that, $1/2600$, close to the incidence, as it must be.
+**Example 22.2.3** Cystic fibrosis affects about 1 in 2500 newborns of European ancestry. Then $q = \sqrt{1/2500} = 0.02$ and the **carrier** frequency is $2 \cdot 0.98 \cdot 0.02 = 0.039$, about 1 in 25: for every affected child there are about $2/q = 98$ carriers. The probability that two unrelated people are both carriers is $0.039^2 \approx 1/650$, and their child is affected with probability $1/4$ of that, $1/2600$, close to the incidence, as it must be.
 
-Equation (22.2) explains a basic fact of human genetics: nearly all copies of a rare recessive allele are hidden in healthy **carriers**. It also shows why selection against affected homozygotes is slow (Formula 23.3.3) and why consanguinity concentrates rare recessive disease (§22.4.2). The estimate is only as good as the assumptions: inbreeding or population subdivision inflates the frequency of homozygotes, so that $\sqrt{Q}$ overestimates $q$.
+Equation (22.2) explains a basic fact of human genetics: nearly all copies of a rare recessive allele are hidden in healthy **carriers**. It also shows why selection against affected homozygotes is slow (Formula 23.3.3) and why **consanguinity** concentrates rare recessive disease (§22.4.2). The estimate is only as good as the assumptions: inbreeding or population subdivision inflates the frequency of homozygotes, so that $\sqrt{Q}$ overestimates $q$.
 
 ### 22.2.4. Multiple Alleles and the ABO Blood Groups
 
@@ -135,7 +135,7 @@ These estimates do not sum exactly to 1; the discrepancy is a check on the assum
 
 The efficient solution is maximum likelihood: the four phenotype counts are multinomial with the probabilities in the table. The likelihood has no closed-form maximum, but it becomes trivial if the hidden genotypes were known, which is exactly the situation of the **EM algorithm** ([3.5.6](/3.5.6)). In genetics this particular EM was invented long before the general method, as "gene counting" (Ceppellini, Siniscalco and Smith 1955).
 
-**Algorithm 22.2.2 (Gene Counting: EM for ABO)** Let the counts be $n_A, n_B, n_{AB}, n_O$ in a sample of $n$. Start from any $(p, q, r)$ with positive entries, and repeat until the estimates stop changing:
+**Algorithm 22.2.2 (Gene Counting: EM for ABO)** Let the counts be $n_A, n_B, n_{AB}, n_O$ in a sample of $n$. **Start** from any $(p, q, r)$ with positive entries, and repeat until the estimates stop changing:
 
 1. *E-step.* Split each ambiguous phenotype in proportion to the current genotype probabilities:
    $$
@@ -152,7 +152,7 @@ Each iteration increases the likelihood; convergence to the maximum likelihood e
 
 ### 22.2.5. X-Linked Loci
 
-**Formula 22.2.3 (X-Linked Frequencies at Equilibrium)** If an X-linked allele has frequency $q$ in both sexes, then hemizygous males have the allele with frequency $q$ and females are homozygous with frequency $q^2$ and heterozygous with frequency $2pq$. For a recessive trait, the ratio of affected females to affected males is $q$.
+**Formula 22.2.3 (X-Linked Frequencies at Equilibrium)** If an **X-linked** allele has frequency $q$ in both sexes, then **hemizygous** males have the allele with frequency $q$ and females are homozygous with frequency $q^2$ and heterozygous with frequency $2pq$. For a recessive trait, the ratio of affected females to affected males is $q$.
 
 **Example 22.2.5** Red–green color vision defects affect about $8\,\%$ of men of European ancestry, so $q \approx 0.08$; the predicted frequency in women is $q^2 = 0.0064$, close to the observed $0.4$–$0.5\,\%$, and $2pq = 0.147$ of women are carriers. (The calculation treats the several alleles at the *OPN1LW*/*OPN1MW* gene cluster as one.) This is why rare X-linked recessive diseases such as hemophilia A, with $q \approx 10^{-4}$ in males, are almost never seen in women. For an X-linked dominant trait the relation is reversed: males are affected with frequency $q$, females with frequency $q^2 + 2pq = q(2 - q)$, so a rare X-linked dominant condition affects nearly twice as many women as men.
 
@@ -207,7 +207,7 @@ The two identities in Eq. (22.6) are equivalent: substituting $p_{Ab} = p_A - p_
 
 **Example 22.3.1** Suppose two SNPs, $A/a$ and $B/b$, each have allele frequencies $1/2$ and the haplotype frequencies are $p_{AB} = p_{ab} = 0.4$, $p_{Ab} = p_{aB} = 0.1$. Then $D = 0.4 - 0.25 = 0.15$; $D_{\max} = \min(0.25, 0.25) = 0.25$, so $D' = 0.6$; and $r^2 = 0.15^2/0.5^4 = 0.36$. In linkage equilibrium all four haplotypes would have frequency $0.25$.
 
-The two measures answer different questions. $D'$ reflects the recombination history of a pair of sites and tends to be near 1 within blocks of the genome that have rarely recombined; $r^2$ measures how well one site predicts the other, which is what matters for mapping: a test at a marker in LD $r^2$ with a causal variant has the power of a test at the causal variant with $r^2$ times the sample size ([7.4.25](/7.4.25)).
+The two measures answer different questions. $D'$ reflects the recombination history of a pair of sites and tends to be near 1 within blocks of the genome that have rarely recombined; $r^2$ measures how well one site predicts the other, which is what matters for mapping: a test at a marker in LD $r^2$ with a causal variant has the power of a test at the causal variant with $r^2$ times the **sample size** ([7.4.25](/7.4.25)).
 
 ### 22.3.2. Decay of Disequilibrium
 
@@ -219,7 +219,7 @@ $$
 
 Allele frequencies stay constant; for unlinked loci ($r = 1/2$) disequilibrium halves every generation.
 
-**Proof** A gamete produced by an individual is non-recombinant with probability $1 - r$, in which case it is a copy of one of the parent's two haplotypes, chosen with probability $1/2$ each; since parental haplotypes are drawn from the pool, such a gamete is $AB$ with probability $p_{AB}$. With probability $r$ it is recombinant, carrying the allele at $A$ from one parental chromosome and the allele at $B$ from the other; under random mating the two chromosomes of an individual are independent draws from the pool, so a recombinant gamete is $AB$ with probability $p_Ap_B$. Hence $p_{AB}' = (1 - r)p_{AB} + rp_Ap_B$, and subtracting $p_Ap_B$ (unchanged) gives $D' = (1 - r)D$. $\square$
+**Proof** A gamete produced by an individual is non-recombinant with probability $1 - r$, in which case it is a copy of one of the parent's two haplotypes, chosen with probability $1/2$ each; since parental haplotypes are drawn from the pool, such a gamete is $AB$ with probability $p_{AB}$. With probability $r$ it is recombinant, carrying the allele at $A$ from one parental chromosome and the allele at $B$ from the other; under random mating the two chromosomes of an individual are independent draws from the pool, so a **recombinant gamete** is $AB$ with probability $p_Ap_B$. Hence $p_{AB}' = (1 - r)p_{AB} + rp_Ap_B$, and subtracting $p_Ap_B$ (unchanged) gives $D' = (1 - r)D$. $\square$
 
 The approach to linkage equilibrium is gradual, in contrast with the single generation needed for Hardy–Weinberg proportions at one locus. For loci $1\,\mathrm{cM}$ apart ($r = 0.01$) the half-life of $D$ is $\ln 0.5/\ln 0.99 = 69$ generations, about 1700 years in humans; for $0.1\,\mathrm{cM}$ (about $100\,\mathrm{kb}$) it is about 700 generations.
 
@@ -240,9 +240,9 @@ Because LD decays at rate $r$, the length of the haplotype that a mutation still
 
 **Definition 22.4.1 (Assortative Mating)** **Assortative mating** is mating in which the choice of partner depends on phenotype. It is positive when similar phenotypes mate more often than at random, and negative (disassortative) when dissimilar phenotypes mate more often. Mating that depends on ancestry rather than phenotype is inbreeding (§22.4.2); mating with neighbors in a spatially extended population (isolation by distance) has effects similar to subdivision (§22.4.4).
 
-Positive assortative mating affects only the loci that influence the trait on which partners are chosen, and those loci that are in LD with them; it increases the homozygosity at these loci and creates positive LD (correlations) among the alleles that increase the trait, which in turn raises the genetic variance of the trait. In humans assortative mating is almost universally positive: the correlation between partners is about $0.2$–$0.25$ for height, about $0.4$–$0.5$ for educational attainment, and substantial for several common diseases and psychiatric conditions. This matters for the estimation of heritability and of the effects of genetic variants on such traits ([7.4.24](/7.4.24), [7.4.25](/7.4.25)).
+Positive assortative mating affects only the loci that influence the trait on which partners are chosen, and those loci that are in LD with them; it increases the homozygosity at these loci and creates positive LD (correlations) among the alleles that increase the trait, which in turn raises the genetic **variance** of the trait. In humans assortative mating is almost universally positive: the correlation between partners is about $0.2$–$0.25$ for height, about $0.4$–$0.5$ for educational attainment, and substantial for several common diseases and psychiatric conditions. This matters for the estimation of heritability and of the effects of genetic variants on such traits ([7.4.24](/7.4.24), [7.4.25](/7.4.25)).
 
-Negative assortative mating maintains variation: a rare type finds partners more easily than a common one. The self-incompatibility systems of flowering plants are extreme cases: pollen carrying an S allele cannot fertilize a plant with the same allele, so a rare S allele always has an advantage, and populations maintain dozens of S alleles at nearly equal frequencies (frequency-dependent selection, [7.4.23](/7.4.23)).
+Negative assortative mating maintains variation: a rare type finds partners more easily than a common one. The self-incompatibility systems of flowering plants are extreme cases: pollen carrying an S allele cannot fertilize a plant with the same allele, so a rare S allele always has an advantage, and populations maintain dozens of S alleles at nearly equal frequencies (**frequency-dependent selection**, [7.4.23](/7.4.23)).
 
 ### 22.4.2. Inbreeding in a Population
 
@@ -258,11 +258,11 @@ Conversely, $F = 1 - H_{\mathrm{obs}}/2pq$ is the proportional deficit of hetero
 
 **Proof** With probability $F$ the two alleles of an individual are IBD, hence copies of one ancestral allele: the individual is $AA$ with probability $p$ and $aa$ with probability $q$. With probability $1 - F$ they are two independent draws from the pool, giving Hardy–Weinberg proportions. Therefore $P = Fp + (1 - F)p^2 = p^2 + Fp(1 - p) = p^2 + Fpq$, and similarly for $Q$; $H = (1 - F)2pq$. The allele frequency is $P + H/2 = p^2 + Fpq + pq(1 - F) = p$, unchanged. $\square$
 
-Inbreeding thus redistributes genotypes without changing allele frequencies: it converts heterozygotes into homozygotes in equal numbers on both sides. Its main effect on rare recessive alleles follows from Eq. (22.9): affected homozygotes have frequency $q^2 + Fpq \approx q(q + F)$, a ratio $(q + F)/q$ to the random-mating value. For $q = 0.01$ and $F = 0.1$ the frequency is $0.00109$, $10.9$ times $q^2$; for the children of first cousins ($F = 1/16$) and $q = 0.005$ it is $13.4$ times. The rarer the allele, the larger the relative effect, which is why parental consanguinity is a hallmark of the rarest recessive diseases ([7.4.7](/7.4.7)). Since inbreeding exposes all deleterious recessive alleles at once, it reduces the mean of fitness-related traits, the inbreeding depression analyzed in [7.4.24](/7.4.24).
+Inbreeding thus redistributes genotypes without changing allele frequencies: it converts heterozygotes into homozygotes in equal numbers on both sides. Its main effect on rare recessive alleles follows from Eq. (22.9): affected homozygotes have frequency $q^2 + Fpq \approx q(q + F)$, a ratio $(q + F)/q$ to the random-mating value. For $q = 0.01$ and $F = 0.1$ the frequency is $0.00109$, $10.9$ times $q^2$; for the children of first cousins ($F = 1/16$) and $q = 0.005$ it is $13.4$ times. The rarer the allele, the larger the relative effect, which is why parental consanguinity is a hallmark of the rarest recessive diseases ([7.4.7](/7.4.7)). Since inbreeding exposes all deleterious recessive alleles at once, it reduces the mean of fitness-related traits, the **inbreeding depression** analyzed in [7.4.24](/7.4.24).
 
 ### 22.4.3. Regular Systems of Inbreeding
 
-Plant and animal breeders inbreed systematically to produce homozygous lines. Each system gives a recursion for $F_t$ in generation $t$, derived by the path method or by following identity by descent one generation back.
+Plant and animal breeders inbreed systematically to produce homozygous lines. Each system gives a recursion for $F_t$ in generation $t$, derived by the path method or by following **identity by descent** one generation back.
 
 **Formula 22.4.2 (Inbreeding Coefficient Under Regular Systems)** Starting from a non-inbred population ($F_0 = 0$):
 
@@ -339,7 +339,7 @@ The random match probability is not the probability that the suspect is innocent
 
 ### 22.5.2. Paternity Testing
 
-**Formula 22.5.2 (Paternity Index)** At a locus where the child's paternal (obligate) allele $A_i$ has frequency $p_i$, the paternity index is the likelihood ratio
+**Formula 22.5.2 (Paternity Index)** At a locus where the child's paternal (obligate) allele $A_i$ has frequency $p_i$, the paternity index is the **likelihood ratio**
 
 $$
 \text{PI} = \frac{\mathbb{P}(\text{child's genotype} \mid \text{alleged father is the father})}{\mathbb{P}(\text{child's genotype} \mid \text{a random man is the father})} = \frac{t}{p_i}, \tag{22.15}
@@ -347,11 +347,11 @@ $$
 
 where $t$ is the probability that the alleged father transmits $A_i$ ($1/2$ if he is heterozygous, $1$ if homozygous). Indices of independent loci multiply into the combined paternity index CPI; with prior probability $\pi$ of paternity, the posterior probability is $\pi\,\text{CPI}/[\pi\,\text{CPI} + (1 - \pi)]$, which equals $\text{CPI}/(\text{CPI} + 1)$ for the conventional prior $\pi = 1/2$.
 
-**Example 22.5.2** A child has the paternal allele $A_7$ (frequency $0.05$) and the alleged father is heterozygous for it: PI $= 0.5/0.05 = 10$, and with prior $1/2$ this locus alone gives a probability of paternity of $10/11 = 0.909$. Fifteen loci with indices of about 10 each give CPI $\approx 10^{15}$ and a probability of paternity indistinguishable from 1. An exclusion (the man lacks the obligate allele) at two or more loci excludes paternity; a single exclusion may be a **mutation**, since microsatellites mutate at about $10^{-3}$ per locus per generation.
+**Example 22.5.2** A child has the paternal allele $A_7$ (frequency $0.05$) and the alleged father is heterozygous for it: PI $= 0.5/0.05 = 10$, and with prior $1/2$ this locus alone gives a probability of paternity of $10/11 = 0.909$. Fifteen loci with indices of about 10 each give CPI $\approx 10^{15}$ and a probability of paternity indistinguishable from 1. An exclusion (the man lacks the obligate allele) at two or more loci excludes paternity; a single exclusion may be a **mutation**, since **microsatellites** mutate at about $10^{-3}$ per locus per generation.
 
 ### 22.5.3. Carrier Screening
 
-Expanded carrier screening tests prospective parents for hundreds of recessive conditions. For one condition with carrier frequency $c = 2pq$, the probability that a random couple are both carriers is $c^2$ and the risk to each child $c^2/4$; summed over many conditions, about $1$–$2\,\%$ of couples are at risk for at least one. Targeted programs exploit population differences in allele frequency, the result of founder effects and drift ([7.4.23](/7.4.23)): Tay–Sachs screening among Ashkenazi Jews (carrier frequency about 1 in 30) reduced the incidence of the disease in that population by more than $90\,\%$ since the 1970s, and β-thalassemia screening in Cyprus and Sardinia had similar effects.
+Expanded carrier screening tests prospective parents for hundreds of recessive conditions. For one condition with carrier frequency $c = 2pq$, the probability that a random couple are both carriers is $c^2$ and the risk to each child $c^2/4$; summed over many conditions, about $1$–$2\,\%$ of couples are at risk for at least one. Targeted programs exploit population differences in allele frequency, the result of **founder effects** and drift ([7.4.23](/7.4.23)): Tay–Sachs screening among Ashkenazi Jews (carrier frequency about 1 in 30) reduced the incidence of the disease in that population by more than $90\,\%$ since the 1970s, and β-thalassemia screening in Cyprus and Sardinia had similar effects.
 
 ## Summary
 
@@ -435,7 +435,7 @@ Applications: random match probability by the product rule with the θ correctio
 
 14. (Open question.) A study finds a large excess of homozygotes at one SNP in a sample of cases and controls, but not at neighboring SNPs. List possible explanations and how you would distinguish them.
 
-    **Answer** Possibilities: (i) genotyping error, for example a null allele (a polymorphism in a probe or primer site prevents detection of one allele, so heterozygotes are called homozygotes) or poor cluster separation, which affects one assay and not its neighbors; (ii) a deletion polymorphism, in which hemizygous individuals appear homozygous; (iii) selection or association with the disease, if the excess is confined to cases; (iv) inbreeding or population structure, which would affect all loci similarly and is therefore unlikely to explain a single SNP. Checks: compare cases and controls separately; examine the raw intensity data and call rates; genotype with an independent method; look for a copy-number change and for Mendelian inconsistencies in families; compute $F$ genome-wide.
+    **Answer** Possibilities: (i) genotyping error, for example a **null allele** (a polymorphism in a probe or **primer** site prevents detection of one allele, so heterozygotes are called homozygotes) or poor cluster separation, which affects one assay and not its neighbors; (ii) a deletion polymorphism, in which hemizygous individuals appear homozygous; (iii) selection or association with the disease, if the excess is confined to cases; (iv) inbreeding or population structure, which would affect all loci similarly and is therefore unlikely to explain a single SNP. Checks: compare cases and controls separately; examine the raw intensity data and call rates; genotype with an independent method; look for a copy-number change and for Mendelian inconsistencies in families; compute $F$ genome-wide.
 
 15. In a moth population in Hardy–Weinberg equilibrium, the light color is recessive to dark. Among 10 000 moths, 1600 are light. (a) What are the allele frequencies? (b) How many moths are heterozygous? (c) What fraction of the dark moths are heterozygous?
 

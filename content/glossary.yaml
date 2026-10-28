@@ -7224,7 +7224,7 @@ terms:
   - { zh: 不对称分裂, en: asymmetric cell division, aliases: [asymmetric division] }
   - { zh: 减数分裂, en: meiosis }
   - { zh: 联会复合体, en: synaptonemal complex }
-  - { zh: 二价体, en: bivalent, aliases: [四分体, tetrad] }
+  - { zh: 二价体, en: bivalent, aliases: [四分体] }
   - { zh: 交叉, en: chiasma, aliases: [chiasmata] }
   - { zh: 单极蛋白, en: monopolin }
   - { zh: 守护蛋白, en: shugoshin }
@@ -7505,6 +7505,7 @@ terms:
   - { zh: Haldane 作图函数, en: Haldane mapping function }
   - { zh: Kosambi 作图函数, en: Kosambi mapping function }
   - { zh: 重组热点, en: recombination hotspot, aliases: [recombination hotspots, hotspot], scope: ["7"] }
+  - { zh: 四分子, en: tetrad, aliases: [tetrads], scope: ["7.4"] }
   - { zh: 四分子分析, en: tetrad analysis }
   - { zh: 子囊, en: ascus, aliases: [asci] }
   - { zh: 子囊孢子, en: ascospore, aliases: [ascospores] }
@@ -7782,3 +7783,9 @@ terms:
   - { zh: 程序性 DNA 消除, en: programmed DNA elimination }
   - { zh: 染色质消减, en: chromatin diminution }
   - { zh: 基因扩增, en: gene amplification }
+  - { zh: 异配性别, en: heterogametic sex, aliases: [异配性], scope: ["7"] }
+  - { zh: 同配性别, en: homogametic sex, aliases: [同配性], scope: ["7"] }
+  - { zh: 单倍二倍性, en: haplodiploidy, aliases: [单倍二倍性别决定, haplodiploid] }
+  - { zh: 温度依赖型性别决定, en: temperature-dependent sex determination, aliases: [温度依赖性别决定, TSD], scope: ["7"] }
+  - { zh: 共祖系数, en: kinship coefficient, aliases: [coefficient of kinship, coancestry coefficient] }
+  - { zh: 咨询者, en: consultand, aliases: [求询者] }
