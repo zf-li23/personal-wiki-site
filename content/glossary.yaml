@@ -5147,7 +5147,7 @@ terms:
   - { zh: 有效数字, en: significant figures, aliases: [significant digits] }
   - { zh: 数字修约, en: rounding of numbers, aliases: [修约, 四舍六入五成双, round half to even] }
   - { zh: 校准曲线, en: calibration curve, aliases: [工作曲线, 标准曲线, working curve] }
-  - { zh: 检出限, en: limit of detection, aliases: [检测限, LOD, detection limit] }
+  - { zh: 检出限, en: limit of detection, aliases: [检测限, detection limit] }
   - { zh: 定量限, en: limit of quantification, aliases: [LOQ, 测定下限] }
   - { zh: 线性范围, en: linear range, aliases: [线性动态范围, linear dynamic range] }
   - { zh: 基体效应, en: matrix effect, aliases: [基体干扰, matrix interference] }
@@ -7499,3 +7499,39 @@ terms:
   - { zh: 卵子发生, en: oogenesis }
   - { zh: 显示杂合子, en: manifesting heterozygote, aliases: [manifesting carrier, manifesting heterozygotes] }
   - { zh: 雄激素不敏感综合征, en: androgen insensitivity syndrome, aliases: [AIS] }
+  - { zh: 亲本型, en: parental type, aliases: [parental types, 亲组合] }
+  - { zh: 重组型, en: recombinant type, aliases: [recombinant types, 重组合] }
+  - { zh: 两点测交, en: two-point cross, aliases: [two-point testcross, 两点测验] }
+  - { zh: Haldane 作图函数, en: Haldane mapping function }
+  - { zh: Kosambi 作图函数, en: Kosambi mapping function }
+  - { zh: 重组热点, en: recombination hotspot, aliases: [recombination hotspots, hotspot], scope: ["7"] }
+  - { zh: 四分子分析, en: tetrad analysis }
+  - { zh: 子囊, en: ascus, aliases: [asci] }
+  - { zh: 子囊孢子, en: ascospore, aliases: [ascospores] }
+  - { zh: 顺序四分子, en: ordered tetrad, aliases: [ordered tetrads] }
+  - { zh: 非顺序四分子, en: unordered tetrad, aliases: [unordered tetrads] }
+  - { zh: 亲二型, en: parental ditype, aliases: [PD], scope: ["7.4"] }
+  - { zh: 非亲二型, en: nonparental ditype, aliases: [NPD], scope: ["7.4"] }
+  - { zh: 四型, en: tetratype, aliases: [T tetrad] }
+  - { zh: 第一次分裂分离, en: first-division segregation, aliases: [MI segregation, 第一次分裂分离型] }
+  - { zh: 第二次分裂分离, en: second-division segregation, aliases: [MII segregation, 第二次分裂分离型] }
+  - { zh: 基因转换, en: gene conversion }
+  - { zh: 有丝分裂重组, en: mitotic recombination, aliases: [mitotic crossing over, 体细胞交换] }
+  - { zh: 孪生斑, en: twin spot, aliases: [twin spots] }
+  - { zh: 遗传嵌合体, en: genetic mosaic, aliases: [mosaic, mosaics, 嵌合体], scope: ["7"] }
+  - { zh: 原养型, en: prototroph, aliases: [prototrophic, prototrophs] }
+  - { zh: 营养缺陷型, en: auxotroph, aliases: [auxotrophic, auxotrophs] }
+  - { zh: 遗传选择, en: genetic selection }
+  - { zh: 水平基因转移, en: horizontal gene transfer, aliases: [lateral gene transfer, 基因水平转移] }
+  - { zh: 共转化, en: cotransformation }
+  - { zh: 接合, en: conjugation, aliases: [bacterial conjugation], scope: ["7"] }
+  - { zh: F 质粒, en: F plasmid, aliases: [F factor, fertility factor, F 因子, 致育因子] }
+  - { zh: Hfr 菌株, en: Hfr strain, aliases: [Hfr, 高频重组菌株] }
+  - { zh: 附加体, en: episome, aliases: [episomes] }
+  - { zh: 中断杂交, en: interrupted mating, aliases: [中断杂交实验] }
+  - { zh: F′ 质粒, en: F′ plasmid, aliases: [F-prime, F′ factor] }
+  - { zh: 部分二倍体, en: merodiploid, aliases: [partial diploid, merozygote] }
+  - { zh: 转导, en: transduction, scope: ["7.4", "7.11"] }
+  - { zh: 普遍性转导, en: generalized transduction }
+  - { zh: 特异性转导, en: specialized transduction, aliases: [限制性转导] }
+  - { zh: 共转导, en: cotransduction }
