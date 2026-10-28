@@ -2679,7 +2679,7 @@ terms:
   - { zh: 交叉注意力, en: cross-attention, aliases: [编码器–解码器注意力, encoder–decoder attention] }
   - { zh: 多头注意力, en: multi-head attention, aliases: [MHA] }
   - { zh: 归纳头, en: induction head }
-  - { zh: Transformer, en: Transformer, aliases: [Transformer 模型] }
+  - { zh: Transformer, en: Transformer, aliases: [Transformer 模型], scope: ["4"] }
   - { zh: 残差流, en: residual stream }
   - { zh: 后归一化, en: post-norm, aliases: [Post-LN] }
   - { zh: 前归一化, en: pre-norm, aliases: [Pre-LN] }
@@ -7494,3 +7494,8 @@ terms:
   - { zh: 遗传多态性, en: genetic polymorphism, aliases: [polymorphism, polymorphic, 多态性], scope: ["7"] }
   - { zh: 相引相, en: coupling, aliases: [cis configuration], scope: ["7.4"] }
   - { zh: 干涉, en: interference, aliases: [crossover interference, 交换干涉], scope: ["7"] }
+  - { zh: 配子发生, en: gametogenesis }
+  - { zh: 精子发生, en: spermatogenesis }
+  - { zh: 卵子发生, en: oogenesis }
+  - { zh: 显示杂合子, en: manifesting heterozygote, aliases: [manifesting carrier, manifesting heterozygotes] }
+  - { zh: 雄激素不敏感综合征, en: androgen insensitivity syndrome, aliases: [AIS] }
