@@ -81,7 +81,7 @@ Modifier genes (**modifier gene**, 7.4.3) change the degree of a phenotype witho
 
 **Definition 4.3.2 (Genetic Redundancy)** Two genes are **genetically redundant** for a phenotype when the loss of either alone has little or no effect and the loss of both gives a strong phenotype.
 
-Redundancy is common because genomes contain duplicated genes (**paralogs**, [7.1.4](/7.1.4)) and alternative pathways. It is one reason why many single knockouts show no visible phenotype (7.4.1). In yeast, about 80 % of the roughly 6 000 genes can be deleted individually without killing the cell, but hundreds of thousands of pairs of non-essential genes have been tested, and some thousands of them are lethal together. Such a pair shows **synthetic lethality**, a relation now used in cancer therapy ([7.3.26](/7.3.26)).
+Redundancy is common because genomes contain duplicated genes (**paralogs**, [7.1.4](/7.1.4)) and alternative pathways. It is one reason why many single knockouts show no visible phenotype (7.4.1). In yeast, about 80 % of the roughly 6 000 genes can be deleted individually without killing the cell, but when nearly all pairs were tested (about 23 million double mutants; Costanzo et al. 2016), about 550 000 showed negative and 350 000 positive interactions, and some thousands of pairs are lethal together. Such a pair shows **synthetic lethality**, a relation now used in cancer therapy ([7.3.26](/7.3.26)).
 
 For a measurable phenotype such as growth rate, epistasis can be quantified.
 
