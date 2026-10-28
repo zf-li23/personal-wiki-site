@@ -2063,6 +2063,17 @@
    "angiosperm"
   ]
  },
+ "phylopic/maize": {
+  "source": "phylopic",
+  "name": "Zea mays",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8df339f6-90b3-4f17-b4eb-8ba9443a17f4",
+  "tags": [
+   "plant",
+   "model-organism"
+  ]
+ },
  "phylopic/medaka": {
   "source": "phylopic",
   "name": "Oryzias latipes",
@@ -2204,6 +2215,17 @@
   "url": "https://www.phylopic.org/images/595359bd-6638-4900-8536-82b2ed511a25",
   "tags": [
    "protist"
+  ]
+ },
+ "phylopic/pea": {
+  "source": "phylopic",
+  "name": "Pisum sativum",
+  "author": "Warren Siegrist",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/e9f1ec77-7dea-45a8-9bdb-87f9c9444287",
+  "tags": [
+   "plant",
+   "model-organism"
   ]
  },
  "phylopic/penguin": {

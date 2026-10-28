@@ -7580,3 +7580,12 @@ terms:
   - { zh: 突变热点, en: mutational hotspot, aliases: [mutation hotspot, mutational hotspots, hotspot of mutation] }
   - { zh: 一基因一酶假说, en: "one gene, one enzyme hypothesis", aliases: [one gene–one enzyme hypothesis, "one gene, one enzyme", 一个基因一个酶] }
   - { zh: Kimura 分布, en: Kimura distribution }
+  - { zh: 合子减数分裂, en: zygotic meiosis }
+  - { zh: 配子减数分裂, en: gametic meiosis }
+  - { zh: 孢子减数分裂, en: sporic meiosis }
+  - { zh: 单态, en: monomorphic, aliases: [单态基因], scope: ["7"] }
+  - { zh: 条件等位基因, en: conditional allele, aliases: [conditional alleles, 条件突变] }
+  - { zh: 温度敏感等位基因, en: temperature-sensitive allele, aliases: [temperature-sensitive alleles, ts allele, 温度敏感突变] }
+  - { zh: 基因型与环境互作, en: genotype–environment interaction, aliases: [G×E, 基因型–环境互作] }
+  - { zh: 遗传冗余, en: genetic redundancy, aliases: [genetically redundant] }
+  - { zh: 多基因遗传, en: polygenic inheritance, aliases: [多基因] }
