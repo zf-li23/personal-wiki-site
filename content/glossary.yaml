@@ -7535,3 +7535,48 @@ terms:
   - { zh: 普遍性转导, en: generalized transduction }
   - { zh: 特异性转导, en: specialized transduction, aliases: [限制性转导] }
   - { zh: 共转导, en: cotransduction }
+  - { zh: 非孟德尔遗传, en: non-Mendelian inheritance, aliases: [细胞质遗传, cytoplasmic inheritance, extranuclear inheritance] }
+  - { zh: 同质性, en: homoplasmy, aliases: [homoplasmic, 线粒体同质性] }
+  - { zh: 营养分离, en: vegetative segregation, aliases: [cytoplasmic segregation, sorting-out, 细胞质分离] }
+  - { zh: 小菌落突变体, en: petite mutant, aliases: [petite mutants, petite, 小菌落] }
+  - { zh: 阈值效应, en: threshold effect, scope: ["7"] }
+  - { zh: 线粒体置换疗法, en: mitochondrial replacement therapy, aliases: [mitochondrial replacement, 线粒体置换] }
+  - { zh: 母体效应, en: maternal effect, aliases: [母性影响, maternal effects] }
+  - { zh: 细胞质雄性不育, en: cytoplasmic male sterility, aliases: [CMS, 胞质雄性不育], scope: ["7"] }
+  - { zh: 育性恢复基因, en: restorer gene, aliases: [restorer of fertility, Rf gene, 恢复基因] }
+  - { zh: 胞质不亲和, en: cytoplasmic incompatibility, aliases: [细胞质不亲和], scope: ["7"] }
+  - { zh: 正向突变, en: forward mutation, aliases: [forward mutations] }
+  - { zh: 回复突变, en: reverse mutation, aliases: [reversion, reversions, back mutation, 回复], scope: ["7"] }
+  - { zh: 点突变, en: point mutation, aliases: [point mutations] }
+  - { zh: 沉默突变, en: silent mutation, aliases: [synonymous mutation, 同义突变, silent mutations] }
+  - { zh: 错义突变, en: missense mutation, aliases: [missense mutations] }
+  - { zh: 无义突变, en: nonsense mutation, aliases: [nonsense mutations] }
+  - { zh: 移码突变, en: frameshift mutation, aliases: [frameshift, frameshift mutations] }
+  - { zh: 功能丧失突变, en: loss-of-function mutation, aliases: [loss of function, loss-of-function, LOF] }
+  - { zh: 功能获得突变, en: gain-of-function mutation, aliases: [gain of function, gain-of-function, GOF] }
+  - { zh: 无效等位基因, en: null allele, aliases: [amorph, amorphic allele, null alleles, 无效突变] }
+  - { zh: 亚效等位基因, en: hypomorph, aliases: [hypomorphic allele, hypomorphs, 亚效突变] }
+  - { zh: 超效等位基因, en: hypermorph, aliases: [hypermorphic allele, hypermorphs, 超效突变] }
+  - { zh: 反效等位基因, en: antimorph, aliases: [antimorphic allele, antimorphs] }
+  - { zh: 显性负效突变, en: dominant negative mutation, aliases: [dominant negative, dominant-negative mutation, dominant negative allele, 显性负效] }
+  - { zh: 新效等位基因, en: neomorph, aliases: [neomorphic allele, neomorphs, 新效突变] }
+  - { zh: 波动试验, en: fluctuation test, aliases: [Luria–Delbrück fluctuation test, 彷徨试验, 波动测验] }
+  - { zh: Luria–Delbrück 分布, en: Luria–Delbrück distribution }
+  - { zh: 影印培养, en: replica plating, aliases: [影印平板法] }
+  - { zh: 突变率, en: mutation rate, aliases: [mutation rates] }
+  - { zh: 生殖系突变, en: germline mutation, aliases: [germline mutations, germ-line mutation, 种系突变] }
+  - { zh: 体细胞突变, en: somatic mutation, aliases: [somatic mutations] }
+  - { zh: 父龄效应, en: paternal age effect }
+  - { zh: 三核苷酸重复扩增, en: trinucleotide repeat expansion, aliases: [repeat expansion, 动态突变, dynamic mutation] }
+  - { zh: 前突变, en: premutation, aliases: [premutations] }
+  - { zh: 遗传早现, en: anticipation, aliases: [genetic anticipation, 早现], scope: ["7"] }
+  - { zh: 诱变剂, en: mutagen, aliases: [mutagens] }
+  - { zh: 碱基类似物, en: base analog, aliases: [base analogs, base analogue] }
+  - { zh: 嵌入剂, en: intercalating agent, aliases: [intercalating agents, intercalator] }
+  - { zh: 基因内互补, en: intragenic complementation }
+  - { zh: 顺反测验, en: cis–trans test, aliases: [cis-trans test, 顺反检验] }
+  - { zh: 顺反子, en: cistron, aliases: [cistrons] }
+  - { zh: 缺失作图, en: deletion mapping }
+  - { zh: 突变热点, en: mutational hotspot, aliases: [mutation hotspot, mutational hotspots, hotspot of mutation] }
+  - { zh: 一基因一酶假说, en: "one gene, one enzyme hypothesis", aliases: [one gene–one enzyme hypothesis, "one gene, one enzyme", 一个基因一个酶] }
+  - { zh: Kimura 分布, en: Kimura distribution }
