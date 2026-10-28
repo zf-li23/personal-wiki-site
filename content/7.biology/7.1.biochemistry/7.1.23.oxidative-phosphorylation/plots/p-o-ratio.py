@@ -41,8 +41,8 @@ c = np.linspace(7.5, 17.5, 50)
 b.plot(c, c / 3, color=charts.line("atp_synthase"), lw=1.8, label="H⁺ through F$_\\mathrm{o}$ per ATP (c/3)")
 b.plot(c, be.p_o(c, 10), color=charts.line(be.COLOR["complex_i"]), lw=1.6, ls="--", label="P/O, NADH (mitochondria)")
 b.plot(c, be.p_o(c, 6), color=charts.line(be.COLOR["complex_ii"]), lw=1.6, ls="--", label="P/O, succinate")
-species = [(8, "bovine mito."), (10, "yeast mito., E. coli"), (11, "Ilyobacter (Na⁺)"), (13, "Bacillus TA2.A1"),
-           (14, "spinach chloroplast"), (15, "Spirulina"), (17, "Burkholderia")]
+species = [(8, "bovine mito."), (10, r"yeast mito., $\it{E.\ coli}$"), (11, r"$\it{Ilyobacter}$ (Na⁺)"), (13, r"$\it{Bacillus}$ TA2.A1"),
+           (14, "spinach chloroplast"), (15, r"$\it{Spirulina}$"), (17, r"$\it{Burkholderia}$")]
 for k, (n, name) in enumerate(species):
     b.plot([n], [n / 3], "o", color=charts.line("atp_synthase"), ms=5)
     b.text(n + 0.15, n / 3 - 0.32 + 0.0 * k, name, fontsize=bio.core.FONT["tiny"], color=P.ink(), rotation=0,

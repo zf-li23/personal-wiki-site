@@ -49,7 +49,7 @@ lanes = [  # (name, token, events: (year, label, level, nobel))
         (1961, "Hayflick limit (25)", 0, False), (1962, "Gurdon: nuclear transfer (24)", 1, True),
         (1963, "differential adhesion (23)", 0, False), (1971, "two hits (26)", 1, False),
         (1976, "v-src from c-src (26)", 0, True), (1996, "Dolly; cytochrome c (24, 25)", 1, False),
-        (2000, "hallmarks of cancer (26)", 0, False), (2002, "death genes of C. elegans (25)", 1, True),
+        (2000, "hallmarks of cancer (26)", 0, False), (2002, r"death genes of $\it{C.\ elegans}$ (25)", 1, True),
         (2006, "iPS cells (24)", 0, True), (2018, "checkpoint blockade (26)", 1, True),
     ]),
 ]

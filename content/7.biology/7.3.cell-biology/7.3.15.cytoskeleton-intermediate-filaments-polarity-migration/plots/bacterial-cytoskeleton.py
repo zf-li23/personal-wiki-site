@@ -53,4 +53,4 @@ xx = np.linspace(19.3, 23.3, 60)
 inner = np.c_[xx, 3.82 + 0.42 * ((xx - 21.3) / 2.2) ** 2]
 ax.plot(inner[:, 0], inner[:, 1], color=P.edge(C.tok("if")), lw=2.6, solid_capstyle="round", zorder=20)
 bio.callout(ax, tuple(inner[30]), (21.3, 6.6), "crescentin (IF-like)", size="tiny")
-bio.label(ax, (21.3, 0.9), "Caulobacter: curvature", size="small")
+bio.label(ax, (21.3, 0.9), r"$\it{Caulobacter}$: curvature", size="small")

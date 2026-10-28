@@ -62,7 +62,7 @@ bio.label(ax, (14.6, 11.55), "lesion reversed in place, no excision", size="tiny
 row(8.0, "Base excision", "glycosylase, APE1, Pol β, ligase III", new=(12.5, 12.75), lesion_x=12.62,
     cuts=(12.5,), patch_text="1 nt (long patch 2–10 nt)")
 row(5.4, "Nucleotide excision", "UvrABC; XPC, TFIIH, XPG, XPF–ERCC1", new=(10.6, 15.2), lesion_x=13.6,
-    cuts=(10.6, 15.2), patch_text="12–13 nt (E. coli), 24–32 nt (human)")
+    cuts=(10.6, 15.2), patch_text=r"12–13 nt ($\it{E.\ coli}$), 24–32 nt (human)")
 row(2.8, "Mismatch repair", "MutS, MutL, MutH; MutSα, MutLα, EXO1", new=(7.4, 17.6), lesion_x=16.8,
     cuts=(7.4,), signal=(7.0, "GATC (CH₃ on template) or nick"), patch_text="up to ~1 kb, from the strand signal through the mismatch")
 bio.label(ax, (16.8, 2.8 - half - 0.42), "mismatch", size="tiny", color=P.edge("highlight"))

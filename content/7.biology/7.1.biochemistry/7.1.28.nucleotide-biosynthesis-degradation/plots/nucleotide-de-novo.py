@@ -84,6 +84,6 @@ for (y0, y1, text) in [(11.4, 16.6, "CAD\n(animals)"), (6.6, 10.2, "UMP\nsynthas
     ax.plot([x, x + 0.25, x + 0.25, x], [y1, y1, y0, y0], color=P.muted(), lw=1.2)
     bio.label(ax, (x + 0.45, (y0 + y1) / 2), text, size="tiny", color=P.muted(), ha="left")
 note((18.6, 16.0), "animals:\n⊣ UTP; ↑ PRPP, ATP", neg, ha="center")
-note((18.6, 14.0), "E. coli:\n⊣ CTP; ↑ ATP", neg, ha="center")
+note((18.6, 14.0), r"$\it{E.\ coli}$:" "\n⊣ CTP; ↑ ATP", neg, ha="center")
 bio.label(ax, (18.6, 10.8), "inner mitochondrial\nmembrane (→ Q)", size="tiny", color=P.edge("mitochondrion"))
 bio.label(ax, (18.0, 6.0), "Pyrimidines: ring closed first,\nribose 5-P added as PRPP", size="tiny", color=P.muted())

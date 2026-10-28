@@ -95,7 +95,7 @@ for k, t in ((1, "III"), (2, "III"), (5, "III"), (6, "III")):
 cut(xb[3], y, "P")
 ax.plot([xb[7] - 0.06] * 2, [y - 0.45, y + 0.45], color=P.edge("negative"), lw=1.1, ls=(0, (2, 1.4)), zorder=8)
 bio.label(ax, (xb[7] + 0.1, y + 0.95), "E", size="tiny", color=P.edge("negative"))
-bio.label(ax, (xb[-1] + 0.25, y), "E. coli rrn transcript (≈ 5.5 kb)", size="small", bold=True, ha="left")
+bio.label(ax, (xb[-1] + 0.25, y), r"$\it{E.\ coli\ rrn}$ transcript (≈ 5.5 kb)", size="small", bold=True, ha="left")
 bio.label(ax, (1.0, y - 1.3), "III = RNase III, P = RNase P, E = RNase E; one RNA polymerase makes all bacterial RNAs",
           size="tiny", color=P.muted(), ha="left")
 

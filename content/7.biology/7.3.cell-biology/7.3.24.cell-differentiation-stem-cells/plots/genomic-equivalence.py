@@ -40,7 +40,7 @@ def tadpole(xy, size=1.0, token="animal"):
 
 # A: Xenopus
 bio.panel(ax, "A", (0.1, 10.5))
-bio.label(ax, (5.0, 10.2), "Nuclear transfer in Xenopus", size="small", bold=True)
+bio.label(ax, (5.0, 10.2), r"Nuclear transfer in $\it{Xenopus}$", size="small", bold=True)
 tadpole((1.0, 8.0), 1.1)
 bio.label(ax, (1.4, 7.0), "donor tadpole", size="tiny")
 for k in range(3):
