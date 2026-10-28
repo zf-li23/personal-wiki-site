@@ -58,6 +58,15 @@ $$
 $$
 At $25\ ^\circ\mathrm{C}$ ($RT = 2.48\ \mathrm{kJ\,mol^{-1}}$), each factor of $10$ in $K_\mathrm{d}$ is worth $5.7\ \mathrm{kJ\,mol^{-1}}$, and $K_\mathrm{d} = 10^{-10}\ \mathrm{M}$ corresponds to $-57\ \mathrm{kJ\,mol^{-1}}$. On the kinetic side, $k_\mathrm{on}$ cannot exceed the limit set by diffusion, about $10^8$–$10^9\ \mathrm{M^{-1}\,s^{-1}}$ for a protein and a small ligand (a **diffusion-controlled reaction**, [6.3.17](/6.3.17)); most protein–protein associations are slower, $10^5$–$10^7\ \mathrm{M^{-1}\,s^{-1}}$. Tight binding therefore mainly means slow dissociation: the mean lifetime of the complex (residence time) is $\tau = 1/k_\mathrm{off} = 1/(k_\mathrm{on}K_\mathrm{d})$; for $K_\mathrm{d} = 1\ \mathrm{nM}$ and $k_\mathrm{on} = 10^7\ \mathrm{M^{-1}\,s^{-1}}$, $k_\mathrm{off} = 0.01\ \mathrm{s^{-1}}$ and $\tau = 100\ \mathrm{s}$.
 
+The same two constants set how fast binding reaches equilibrium. With the ligand in excess, $[\mathrm{L}]$ stays constant, and $\mathrm{d}[\mathrm{PL}]/\mathrm{d}t = k_\mathrm{on}[\mathrm{P}][\mathrm{L}] - k_\mathrm{off}[\mathrm{PL}]$ is linear in $[\mathrm{PL}]$ (pseudo-first order). Starting from free protein,
+
+$$
+\theta(t) = \theta_\mathrm{eq}\left(1 - \mathrm{e}^{-k_\mathrm{obs}t}\right), \qquad k_\mathrm{obs} = k_\mathrm{on}[\mathrm{L}] + k_\mathrm{off} ,
+$$
+so the approach to equilibrium is always faster than dissociation alone, and the measured $k_\mathrm{obs}$ plotted against $[\mathrm{L}]$ is a straight line with slope $k_\mathrm{on}$ and intercept $k_\mathrm{off}$: this is how stopped-flow and surface plasmon resonance experiments obtain both rate constants.
+
+![Binding kinetics and equilibrium for P + L ⇌ PL with the ligand in excess (illustrative k_on = 10⁷ M⁻¹ s⁻¹, k_off = 0.1 s⁻¹, so K_d = 10 nM). A: fraction of sites occupied after mixing at [L] = 0.3, 1, 3 and 10 K_d; each curve rises exponentially to its equilibrium value (dotted), faster at higher [L]. B: the observed rate constant k_obs = k_on[L] + k_off is linear in [L], with slope k_on and intercept k_off. C: the equilibrium binding curve (Formula 7.1.1) on a logarithmic axis: occupancy rises from 10 % to 90 % over an 81-fold range of [L] (shaded)](./plots/binding-kinetics.py)
+
 | Protein | Ligand | $K_\mathrm{d}$ / M |
 |---|---|---|
 | Avidin (egg white) | **biotin** | $1 \times 10^{-15}$ |
