@@ -5220,7 +5220,7 @@ terms:
   - { zh: 碱差, en: alkaline error, aliases: [钠差, sodium error] }
   - { zh: 酸差, en: acid error }
   - { zh: Nikolsky–Eisenman 方程, en: Nikolsky–Eisenman equation, aliases: [Nikolsky 方程, Nikolsky equation] }
-  - { zh: 电位选择性系数, en: potentiometric selectivity coefficient, aliases: [选择性系数, 选择系数, selectivity coefficient] }
+  - { zh: 电位选择性系数, en: potentiometric selectivity coefficient, aliases: [选择性系数, selectivity coefficient] }
   - { zh: 气敏电极, en: gas-sensing electrode, aliases: [gas-sensing probe] }
   - { zh: 酶电极, en: enzyme electrode }
   - { zh: 生物传感器, en: biosensor }
@@ -7518,7 +7518,7 @@ terms:
   - { zh: 基因转换, en: gene conversion }
   - { zh: 有丝分裂重组, en: mitotic recombination, aliases: [mitotic crossing over, 体细胞交换] }
   - { zh: 孪生斑, en: twin spot, aliases: [twin spots] }
-  - { zh: 遗传嵌合体, en: genetic mosaic, aliases: [mosaic, mosaics, 嵌合体], scope: ["7"] }
+  - { zh: 遗传嵌合体, en: genetic mosaic, aliases: [mosaic, mosaics], scope: ["7"] }
   - { zh: 原养型, en: prototroph, aliases: [prototrophic, prototrophs] }
   - { zh: 营养缺陷型, en: auxotroph, aliases: [auxotrophic, auxotrophs] }
   - { zh: 遗传选择, en: genetic selection }
@@ -7589,3 +7589,105 @@ terms:
   - { zh: 基因型与环境互作, en: genotype–environment interaction, aliases: [G×E, 基因型–环境互作] }
   - { zh: 遗传冗余, en: genetic redundancy, aliases: [genetically redundant] }
   - { zh: 多基因遗传, en: polygenic inheritance, aliases: [多基因] }
+  - { zh: 基因组印记, en: genomic imprinting, aliases: [imprinting, 遗传印记, 印记] }
+  - { zh: 印记控制区, en: imprinting control region, aliases: [ICR, imprinting control regions, 印记中心] }
+  - { zh: 亲本来源效应, en: parent-of-origin effect, aliases: [parent-of-origin effects, 亲源效应] }
+  - { zh: Prader–Willi 综合征, en: Prader–Willi syndrome, aliases: [PWS, 普拉德–威利综合征] }
+  - { zh: Angelman 综合征, en: Angelman syndrome, aliases: [AS, 天使综合征], scope: ["7"] }
+  - { zh: 斑驳抑制因子, en: suppressor of variegation, aliases: [Su(var), 花斑抑制因子] }
+  - { zh: 斑驳增强因子, en: enhancer of variegation, aliases: [E(var), 花斑增强因子] }
+  - { zh: 代际遗传, en: intergenerational inheritance, aliases: [intergenerational effect] }
+  - { zh: 跨代表观遗传, en: transgenerational epigenetic inheritance, aliases: [transgenerational inheritance, 跨代遗传] }
+  - { zh: 表观等位基因, en: epiallele, aliases: [epialleles] }
+  - { zh: 副突变, en: paramutation }
+  - { zh: 转基因, en: transgene, aliases: [transgenes] }
+  - { zh: 转基因生物, en: transgenic organism, aliases: [transgenic organisms, transgenic, 转基因动物] }
+  - { zh: GAL4/UAS 系统, en: GAL4/UAS system, aliases: [GAL4–UAS system, UAS/GAL4 system] }
+  - { zh: 基因打靶, en: gene targeting }
+  - { zh: 正负筛选, en: positive–negative selection, aliases: [positive-negative selection, 正负选择] }
+  - { zh: 嵌合体, en: chimera, aliases: [chimeras, chimaera], scope: ["7"] }
+  - { zh: 敲入, en: knock-in, aliases: [knock-ins, knockin] }
+  - { zh: 遗传筛选, en: genetic screen, aliases: [genetic screens, 遗传筛查] }
+  - { zh: 正向遗传筛选, en: forward genetic screen, aliases: [forward genetic screens, forward screen] }
+  - { zh: 母体效应基因, en: maternal-effect gene, aliases: [maternal-effect genes, maternal effect gene] }
+  - { zh: 合子基因, en: zygotic gene, aliases: [zygotic genes] }
+  - { zh: 缺口基因, en: gap gene, aliases: [gap genes, 裂隙基因], scope: ["7"] }
+  - { zh: 成对规则基因, en: pair-rule gene, aliases: [pair-rule genes, 成对控制基因] }
+  - { zh: 体节极性基因, en: segment-polarity gene, aliases: [segment-polarity genes, segment polarity gene] }
+  - { zh: 同源异型基因, en: homeotic gene, aliases: [homeotic genes, 同源异形基因] }
+  - { zh: 同源异型转化, en: homeotic transformation, aliases: [homeotic transformations, 同源异形转化] }
+  - { zh: 同源框, en: homeobox, aliases: [homeoboxes, 同源异型框] }
+  - { zh: 细胞自主性, en: cell autonomy, aliases: [cell-autonomously, cell-autonomous, 细胞自主] }
+  - { zh: 修饰因子筛选, en: modifier screen, aliases: [modifier screens, 修饰筛选] }
+  - { zh: 敏化背景, en: sensitized background }
+  - { zh: 温度敏感期, en: temperature-sensitive period }
+  - { zh: 上位性分析, en: epistasis analysis }
+  - { zh: 突变印记, en: mutational signature, aliases: [mutational signatures, 突变特征] }
+  - { zh: 乘客突变, en: passenger mutation, aliases: [passenger mutations] }
+  - { zh: 群体遗传学, en: population genetics }
+  - { zh: 基因库, en: gene pool }
+  - { zh: 等位基因频率, en: allele frequency, aliases: [allele frequencies, 基因频率] }
+  - { zh: 基因型频率, en: genotype frequency, aliases: [genotype frequencies] }
+  - { zh: Hardy–Weinberg 平衡, en: Hardy–Weinberg equilibrium, aliases: [HWE, Hardy–Weinberg law, Hardy–Weinberg principle, 遗传平衡定律, 哈迪–温伯格平衡] }
+  - { zh: 杂合度, en: heterozygosity, aliases: [gene diversity, 基因多样度] }
+  - { zh: 单倍型, en: haplotype, aliases: [haplotypes] }
+  - { zh: 连锁不平衡, en: linkage disequilibrium, aliases: [LD, gametic phase disequilibrium] }
+  - { zh: 连锁平衡, en: linkage equilibrium }
+  - { zh: 选型交配, en: assortative mating, aliases: [选择性婚配] }
+  - { zh: Wahlund 效应, en: Wahlund effect }
+  - { zh: 固定指数, en: fixation index, aliases: [F_ST, FST] }
+  - { zh: 随机匹配概率, en: random match probability }
+  - { zh: 基因流, en: gene flow, aliases: [gene migration] }
+  - { zh: 适合度, en: fitness, aliases: [Darwinian fitness, 达尔文适合度, 适应度], scope: ["7"] }
+  - { zh: 相对适合度, en: relative fitness }
+  - { zh: 选择系数, en: selection coefficient }
+  - { zh: 自然选择, en: natural selection }
+  - { zh: 定向选择, en: directional selection }
+  - { zh: 平衡选择, en: balancing selection }
+  - { zh: 杂合子优势, en: heterozygote advantage, aliases: [overdominance, 超显性] }
+  - { zh: 杂合子劣势, en: underdominance, aliases: [heterozygote disadvantage] }
+  - { zh: 频率依赖选择, en: frequency-dependent selection }
+  - { zh: 突变–选择平衡, en: mutation–selection balance }
+  - { zh: 遗传负荷, en: genetic load }
+  - { zh: 遗传漂变, en: genetic drift, aliases: [random genetic drift, 随机遗传漂变] }
+  - { zh: Wright–Fisher 模型, en: Wright–Fisher model }
+  - { zh: 有效群体大小, en: effective population size, aliases: [N_e, 有效群体含量] }
+  - { zh: 奠基者效应, en: founder effect, aliases: [建立者效应, founder effects] }
+  - { zh: 瓶颈效应, en: population bottleneck, aliases: [bottleneck effect, 群体瓶颈] }
+  - { zh: 分子进化中性理论, en: neutral theory of molecular evolution, aliases: [neutral theory, 中性学说] }
+  - { zh: 分子钟, en: molecular clock }
+  - { zh: 最近共同祖先, en: most recent common ancestor, aliases: [MRCA] }
+  - { zh: 数量性状, en: quantitative trait, aliases: [quantitative traits, complex trait, 复杂性状] }
+  - { zh: 广义遗传力, en: broad-sense heritability, aliases: [广义遗传率] }
+  - { zh: 狭义遗传力, en: narrow-sense heritability, aliases: [狭义遗传率, heritability, 遗传力] }
+  - { zh: 加性效应, en: additive effect }
+  - { zh: 显性效应, en: dominance effect }
+  - { zh: 平均效应, en: average effect, aliases: [average effect of allele substitution] }
+  - { zh: 育种值, en: breeding value, aliases: [breeding values] }
+  - { zh: 双生子研究, en: twin study, aliases: [twin studies, 双生子法] }
+  - { zh: 选择差, en: selection differential }
+  - { zh: 选择响应, en: response to selection, aliases: [selection response, 选择反应] }
+  - { zh: 育种者方程, en: "breeder's equation" }
+  - { zh: 现实遗传力, en: realized heritability }
+  - { zh: 截断选择, en: truncation selection }
+  - { zh: 选择强度, en: selection intensity }
+  - { zh: 阈值性状, en: threshold trait, aliases: [threshold traits] }
+  - { zh: 易患性, en: liability, scope: ["7"] }
+  - { zh: 杂种优势, en: heterosis, aliases: [hybrid vigor] }
+  - { zh: 近交衰退, en: inbreeding depression }
+  - { zh: 数量性状基因座, en: quantitative trait locus, aliases: [QTL, QTLs, quantitative trait loci] }
+  - { zh: 近等基因系, en: near-isogenic line, aliases: [NIL, congenic line, 同类系] }
+  - { zh: 关联作图, en: association mapping, aliases: [linkage disequilibrium mapping, 关联分析] }
+  - { zh: 标签 SNP, en: tag SNP, aliases: [tag SNPs] }
+  - { zh: 全基因组关联分析, en: genome-wide association study, aliases: [GWAS, 全基因组关联研究] }
+  - { zh: 优势比, en: odds ratio, aliases: [OR, 比值比], scope: ["7"] }
+  - { zh: 群体分层, en: population stratification }
+  - { zh: 基因组膨胀系数, en: genomic inflation factor, aliases: [λ_GC, lambda GC] }
+  - { zh: 精细定位, en: fine-mapping, aliases: [fine mapping] }
+  - { zh: 可信集, en: credible set }
+  - { zh: 表达数量性状基因座, en: expression quantitative trait locus, aliases: [eQTL, eQTLs] }
+  - { zh: 孟德尔随机化, en: Mendelian randomization, aliases: [MR] }
+  - { zh: SNP 遗传力, en: SNP heritability }
+  - { zh: 缺失的遗传力, en: missing heritability }
+  - { zh: 负荷检验, en: burden test, aliases: [burden tests] }
+  - { zh: 多基因评分, en: polygenic score, aliases: [PGS, polygenic risk score, PRS, 多基因风险评分] }
