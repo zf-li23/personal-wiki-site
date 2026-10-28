@@ -87,6 +87,14 @@ When two traits are determined by unlinked autosomal loci, their transmission is
 
 The rule fails when the loci are linked (the probabilities depend on the phase and the **recombination frequency**, [7.4.8](/7.4.8)) and, in particular, when both are X-linked: a woman heterozygous at two X-linked loci transmits her two X chromosomes as wholes, apart from crossing over. If her alleles $a$ and $b$ are on the same X (coupling) and the loci are closely linked, her sons are mostly either doubly affected or unaffected; if they are on different X chromosomes (repulsion), her sons are mostly affected by one condition or the other.
 
+**Remark 7.3.1 (Whose Sex Is Given?)** Problems distinguish "the probability that a son is affected" from "the probability that a child is an affected son". The first is conditional on the child being male; the second includes the probability $1/2$ that the child is male:
+
+$$
+\mathbb{P}(\text{affected son}) = \mathbb{P}(\text{son})\,\mathbb{P}(\text{affected} \mid \text{son}) = \tfrac12\,\mathbb{P}(\text{affected} \mid \text{son}).
+$$
+
+For a carrier mother of an X-linked recessive disease, $\mathbb{P}(\text{affected} \mid \text{son}) = 1/2$ and $\mathbb{P}(\text{affected son}) = 1/4$. For an autosomal disease the sex of the child is independent of the genotype, so $\mathbb{P}(\text{affected} \mid \text{son}) = \mathbb{P}(\text{affected})$; in Example 7.3.2 a son has both conditions with probability $1/8$, and the probability that the next child is a son with both conditions is $1/16$.
+
 ## 7.4. Conditional Probability and Bayes' Theorem
 
 ### 7.4.1. The Bayesian Table
@@ -147,6 +155,31 @@ and the prior risk for his or her child is half of this.
 Carrier tests for recessive diseases with many alleles detect only a fraction $d$ (the detection rate, or sensitivity) of the mutant alleles; for cystic fibrosis panels of common variants $d$ ranges from about 0.9 in populations of northern European ancestry to much less in others, although full sequencing of *CFTR* raises it.
 
 **Example 7.4.3** The unaffected brother of a patient with cystic fibrosis tests negative on a panel with $d = 0.9$. His prior is $2/3$ (Proposition 7.3.1). If he is a carrier, the test misses his mutant allele with probability $1 - d = 0.1$ (assuming his family's allele is a random one; if the family's mutation is known and tested, $d = 1$ for him). Posterior: $\frac{(2/3)(0.1)}{(2/3)(0.1) + (1/3)(1)} = \frac{1}{6} \approx 0.17$. If his partner, from a population with carrier frequency $1/25$, also tests negative, her posterior is $\frac{0.04 \times 0.1}{0.04 \times 0.1 + 0.96} \approx 0.0041$, and the risk for their child is $\frac16 \times 0.0041 \times \frac14 \approx 1.7\times10^{-4}$, about 1 in 5 800, instead of $\frac23 \times \frac1{25} \times \frac14 = 1/150$ before testing.
+
+### 7.4.5. Incomplete Penetrance in Several Genotypes, and Natural Frequencies
+
+When a phenotype occurs, with different probabilities, in more than one genotype (incomplete penetrance in carriers and phenocopies in non-carriers), the observation "affected" is evidence about the genotype rather than proof of it.
+
+**Formula 7.4.3 (Genotype Given the Phenotype)** If genotypes $G_1, \dots, G_m$ have prior probabilities $\mathbb{P}(G_i)$ and the phenotype occurs in $G_i$ with probability (penetrance) $\pi_i$, then
+
+$$
+\mathbb{P}(G_i \mid \text{affected}) = \frac{\mathbb{P}(G_i)\,\pi_i}{\sum_j \mathbb{P}(G_j)\,\pi_j}, \qquad
+\mathbb{P}(G_i \mid \text{unaffected}) = \frac{\mathbb{P}(G_i)(1 - \pi_i)}{\sum_j \mathbb{P}(G_j)(1 - \pi_j)} .
+$$
+
+Formula 3.5.1 of [7.4.3](/7.4.3#sec-3.5.1) is the special case with the phenotype in one genotype only.
+
+**Example 7.4.4** A disease occurs in 50 % of people of genotype $Mm$ and in 5 % of people of genotype $mm$ (from other causes). A woman $Mm$ and a man $mm$ have an affected daughter. Before her phenotype is known she is $Mm$ or $mm$ with probability $1/2$ each; Formula 7.4.3 gives
+
+$$
+\mathbb{P}(Mm \mid \text{affected}) = \frac{\frac12 \cdot 0.5}{\frac12 \cdot 0.5 + \frac12 \cdot 0.05} = \frac{10}{11} \approx 0.91 .
+$$
+
+The same result by natural frequencies: of 200 such daughters, 100 are $Mm$, of whom 50 are affected, and 100 are $mm$, of whom 5 are affected; of the 55 affected daughters, 50 are $Mm$. The prior $1/2$ from Mendel's law becomes $10/11$ once the phenotype is known; it would be $1$ only if the disease never occurred in $mm$.
+
+Posterior probabilities are passed down a pedigree like priors: once updated, a person's genotype probabilities are used for his or her descendants.
+
+**Example 7.4.5** A woman (II-6) is the daughter of a carrier of hemophilia A and an unaffected father, so her prior carrier probability is $1/2$. She has six unaffected children, three sons and three daughters. Only the sons carry information about her: $\mathbb{P}(\text{3 unaffected sons} \mid \text{carrier}) = (1/2)^3$, and by Formula 7.4.1 her posterior is $\frac{1/16}{1/16 + 1/2} = 1/9$. One of her daughters (III-2, whose father is unaffected) is a carrier with probability $\frac19 \cdot \frac12 = \frac1{18}$, and her first son is affected with probability $\frac1{18} \cdot \frac12 = \frac1{36}$. If III-2 marries a man with hemophilia, the answer for her sons does not change (a son receives his X from the mother), but her daughters are then affected with probability $\frac1{18} \cdot \frac12 = \frac1{36}$ and are all at least carriers.
 
 ## 7.5. Consanguinity and Inbreeding
 
@@ -229,7 +262,7 @@ The value of a test depends on the prior probability: a screening test with high
 
 - Pedigrees (Definition 7.1.1) use NSGC symbols; the proband brings the family to attention.
 - Modes of inheritance are recognized by Algorithm 7.2.1 and the table of Section 7.2: male-to-male transmission excludes X-linkage; affected children of unaffected parents mean recessive inheritance; all daughters and no sons of an affected man mean X-linked dominance. Incomplete penetrance, late onset, new mutation, heterogeneity and phenocopies blur the patterns.
-- Risks by chains of transmission (Algorithm 7.3.1): obligate genotypes first, then multiply transmission probabilities. Carriers (Definition 7.3.1); an unaffected sibling of a recessive patient is a carrier with probability $2/3$ (Proposition 7.3.1). Independent conditions combine by Formula 7.3.1; linked or X-linked loci do not.
+- Risks by chains of transmission (Algorithm 7.3.1): obligate genotypes first, then multiply transmission probabilities. Carriers (Definition 7.3.1); an unaffected sibling of a recessive patient is a carrier with probability $2/3$ (Proposition 7.3.1). Independent conditions combine by Formula 7.3.1; linked or X-linked loci do not. $\mathbb{P}(\text{affected son}) = \tfrac12\,\mathbb{P}(\text{affected} \mid \text{son})$ (Remark 7.3.1).
 - Bayesian revision (Algorithm 7.4.1): prior × conditional = joint, normalized to the posterior; risks come from the posterior.
 
   | Situation | Posterior carrier probability |
@@ -237,6 +270,9 @@ The value of a test depends on the prior probability: a screening test with high
   | X-linked, prior $1/2$, $k$ unaffected sons | $1/(1 + 2^k)$ (Formula 7.4.1) |
   | dominant late onset, prior $1/2$, unaffected at age $t$ | $(1 - F(t))/(2 - F(t))$ (Formula 7.4.2) |
   | recessive, prior $\pi$, negative test with detection rate $d$ | $\pi(1 - d)/[\pi(1 - d) + 1 - \pi]$ (Example 7.4.3) |
+  | phenotype in several genotypes with penetrances $\pi_i$, affected | $\mathbb{P}(G_i)\pi_i/\sum_j \mathbb{P}(G_j)\pi_j$ (Formula 7.4.3; natural frequencies, Example 7.4.4) |
+
+  Posteriors are passed down the pedigree as priors for descendants (Example 7.4.5).
 
 - Consanguinity (Definition 7.5.1) and identity by descent (Definition 7.5.2); inbreeding coefficient, kinship and the coefficient of relationship $r = 2\theta$ (Definition 7.5.3); path method $F = \sum (1/2)^n (1 + F_A)$ (Formula 7.5.1, Eq. (7.1)): first cousins $1/16$, half siblings and uncle–niece $1/8$, full siblings $1/4$, second cousins $1/64$.
 - Recessive risk in the child of relatives $q^2 + Fq(1 - q)$, relative risk $\approx 1 + F/q$ (Formula 7.5.2); rare recessive diseases concentrate in consanguineous families.
@@ -283,3 +319,15 @@ The value of a test depends on the prior probability: a screening test with high
 13. (Comprehensive) A woman whose brother has Duchenne muscular dystrophy (her mother is an obligate carrier) has two unaffected sons and a serum creatine kinase test that is raised in 70 % of carriers and 5 % of non-carriers; her result is normal. Compute her posterior carrier probability.
 
     **Answer** Prior $1/2$. Conditional for a carrier: two unaffected sons $\frac14$ times a normal test $0.3$, giving $0.075$; for a non-carrier: $1 \times 0.95 = 0.95$. Joint: $0.0375$ and $0.475$. Posterior $= 0.0375/0.5125 \approx 0.073$; the risk for her next son is about $0.037$.
+14. A dominant disease has penetrance $0.8$ in $Aa$ and occurs in $2\,\%$ of $aa$ people from other causes. A child of an $Aa \times aa$ couple is (a) affected, (b) unaffected. Compute the probability that the child is $Aa$ in each case, and in case (b) the risk that the child's own first child (with an $aa$ partner) is affected.
+
+    **Answer** Prior $\tfrac12$ each. (a) $\dfrac{0.5 \times 0.8}{0.5 \times 0.8 + 0.5 \times 0.02} = \dfrac{0.40}{0.41} = 0.976$. (b) $\dfrac{0.5 \times 0.2}{0.5 \times 0.2 + 0.5 \times 0.98} = \dfrac{0.10}{0.59} = 0.169$. Natural frequencies: of 1 000 children, 500 are $Aa$ (100 unaffected) and 500 $aa$ (490 unaffected); 100 of the 590 unaffected are $Aa$. Grandchild: $Aa$ with probability $0.169/2 = 0.085$, affected with probability $0.085 \times 0.8 + (1 - 0.085) \times 0.02 = 0.068 + 0.018 = 0.086$.
+15. A woman is a carrier of red-green color blindness (X-linked recessive) and of albinism (autosomal recessive); her husband has normal vision and is also a carrier of albinism. Find (a) the probability that their next child is a color-blind son, (b) the probability that a son is color-blind, (c) the probability that a daughter is color-blind, (d) the probability that the next child is a son with both conditions, and (e) the probability that a son has both.
+
+    **Answer** (a) $\tfrac12 \times \tfrac12 = \tfrac14$. (b) $\tfrac12$. (c) $0$ (every daughter receives the father's normal X). (d) $\tfrac14 \times \tfrac14 = \tfrac1{16}$ (an affected son, times albinism $\tfrac14$). (e) $\tfrac12 \times \tfrac14 = \tfrac18$ (Remark 7.3.1).
+16. A couple has a child with cystic fibrosis. The wife's sister has phenylketonuria; the husband has no family history of phenylketonuria, and the carrier frequency in his population is $1/50$. For their next child, find the probability of (a) both diseases, (b) cystic fibrosis only, (c) phenylketonuria only, (d) at least one disease.
+
+    **Answer** Both parents are obligate carriers for cystic fibrosis: $p_1 = \tfrac14$. Phenylketonuria: the wife is a carrier with probability $\tfrac23$, the husband $\tfrac1{50}$: $p_2 = \tfrac23 \cdot \tfrac1{50} \cdot \tfrac14 = \tfrac1{300}$. The loci are unlinked, and the uncertainty about the parents' genotypes concerns only the second locus, so Formula 7.3.1 applies. (a) $\tfrac1{1200}$. (b) $\tfrac14 \cdot \tfrac{299}{300} = \tfrac{299}{1200} \approx 0.249$. (c) $\tfrac34 \cdot \tfrac1{300} = \tfrac1{400}$. (d) $1 - \tfrac34 \cdot \tfrac{299}{300} = \tfrac{101}{400} \approx 0.253$.
+17. In Example 7.4.5, the daughter III-2 has two unaffected sons. What are now the probabilities that III-2 and that her mother II-6 are carriers?
+
+    **Answer** Three hypotheses, with priors from II-6's posterior $\tfrac19$: II-6 not a carrier (then III-2 is not), $\tfrac89$; II-6 a carrier and III-2 a carrier, $\tfrac1{18}$; II-6 a carrier and III-2 not, $\tfrac1{18}$. Conditional probabilities of two unaffected sons of III-2: $1$, $\tfrac14$, $1$. Joints: $\tfrac{64}{72}$, $\tfrac1{72}$, $\tfrac4{72}$; sum $\tfrac{69}{72}$. III-2 is a carrier with probability $\tfrac1{69} \approx 0.014$, and II-6 with probability $\tfrac{1 + 4}{69} = \tfrac5{69} \approx 0.072$, less than $\tfrac19$: the grandsons carry information about their grandmother too. (Starting from II-6's prior $\tfrac12$ and using all five sons in one table gives the same result.)

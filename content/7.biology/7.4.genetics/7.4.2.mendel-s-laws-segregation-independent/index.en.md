@@ -99,6 +99,16 @@ A more direct test of an individual's genotype is to cross it with the recessive
 
 **Example 2.2.2** A purple-flowered plant of unknown genotype is testcrossed with a white-flowered plant. (a) All of 20 progeny are purple. If the plant were heterozygous, the probability of this would be $(1/2)^{20} \approx 9.5 \times 10^{-7}$, so it is homozygous $PP$ beyond reasonable doubt. (b) With only 3 progeny, all purple, the probability under heterozygosity is $(1/2)^3 = 1/8$, and the result is inconclusive. The testcross makes each gamete of the tested parent visible, which is why it is also the basic tool of linkage analysis (7.4.8).
 
+A testcross answers three questions at once: the genotype of the tested individual, the kinds of gametes it makes, and their proportions, because each class of testcross progeny corresponds to one class of gametes. It is a special case of a more general cross.
+
+**Definition 2.2.8 (Backcross)** A **backcross** is a cross of a hybrid (usually the $\mathrm{F}_1$) with one of its parents or with an individual of the same genotype as a parent. The backcross to the recessive parent is a testcross; the backcross to the dominant parent ($Yy \times YY$) gives only dominant progeny, half $YY$ and half $Yy$. Repeated backcrossing to one parent (the recurrent parent) is the breeder's method of transferring a single allele into an established variety: each generation halves the proportion of the other parent's genome, which after $t$ backcrosses is $(1/2)^{t+1}$ on average.
+
+There are, then, three ways to verify segregation: self-fertilization of the $\mathrm{F}_2$ (the $\mathrm{F}_3$ test), the testcross, and, where the gene is expressed in the haploid gametophyte, direct inspection of the gametes.
+
+**Example 2.2.3 (Segregation in pollen)** The *Waxy* (*Wx*) gene of maize and rice encodes granule-bound starch synthase, which makes amylose. Starch of $wx$ pollen grains and endosperm contains only amylopectin and stains red-brown with iodine, whereas $Wx$ starch stains blue-black. The gene acts in the pollen grain itself, so a $Wx/wx$ plant sheds blue-black and red-brown pollen in a 1:1 ratio, visible under the microscope (Brink and MacGillivray, Demerec, 1924). For 210 blue-black and 190 red-brown grains, $\chi^2 = (10^2 + 10^2)/200 = 1.0$ with one degree of freedom ($p = 0.32$, Algorithm 2.5.1). Segregation is seen here in the gametes themselves, before any fertilization or development.
+
+**Remark 2.2.1 (Conditions for Mendelian Ratios)** The 3:1 $\mathrm{F}_2$ ratio (and 1:2:1, 1:1) is expected only if (1) the parents are true-breeding and diploid; (2) the $\mathrm{F}_1$ forms the two kinds of gametes in equal numbers and with equal viability and fertilizing ability; (3) gametes unite at random; (4) all zygote genotypes survive equally to the time of scoring; (5) dominance is complete and the phenotypes are scored without error, in a uniform environment; and (6) the sample is large. Each condition, when it fails, produces a characteristic departure: lethal genotypes (7.4.3), gametic selection and incomplete dominance ([7.4.4](/7.4.4#sec-4.8), 7.4.3), incomplete penetrance (7.4.3), and sampling deviations, which are judged by the χ² test (2.5).
+
 ## 2.3. Dihybrid Crosses and the Law of Independent Assortment
 
 ### 2.3.1. Two Traits at Once
@@ -118,6 +128,20 @@ $$
 ![The dihybrid cross RrYy × RrYy. Each parent makes four kinds of gametes in equal proportions (circles); the 16 equally likely combinations give nine genotypes and four phenotypes in the ratio 9:3:3:1. Cells are colored by phenotype; the round green and wrinkled yellow classes are the new combinations](./plots/dihybrid-punnett.py)
 
 Mendel tested the law with a dihybrid testcross. $RrYy \times rryy$ should give the four gametic types of the dihybrid directly, in a 1:1:1:1 ratio; with the dihybrid as the seed parent he obtained 31 round yellow, 26 round green, 27 wrinkled yellow and 26 wrinkled green ($\chi^2 = 0.62$, three degrees of freedom, $p = 0.89$). He also carried out a trihybrid cross ($RrYyAa$ selfed) and found the classes expected from $(3:1)^3 = 27:9:9:9:3:3:3:1$.
+
+Many questions about a dihybrid $\mathrm{F}_2$ concern the composition of its classes rather than the four phenotypes, and the answers are worth having at hand.
+
+**Formula 2.3.1 (Composition of the Dihybrid F2)** In the $\mathrm{F}_2$ of $AaBb \times AaBb$ (unlinked loci, complete dominance), the nine genotypes occur in the proportions $(1:2:1)^2$, and:
+
+| Group | Proportion |
+|---|---|
+| homozygous at both loci ($AABB$, $AAbb$, $aaBB$, $aabb$) | $4 \times \tfrac1{16} = \tfrac14$ |
+| heterozygous at exactly one locus ($AABb$, $AaBB$, $Aabb$, $aaBb$) | $4 \times \tfrac2{16} = \tfrac12$ |
+| heterozygous at both loci ($AaBb$) | $\tfrac4{16} = \tfrac14$ |
+| within $A\_B\_$ (9/16): $AABB$ : one locus heterozygous : $AaBb$ | $\tfrac19 : \tfrac49 : \tfrac49$ |
+| within $A\_bb$ or $aaB\_$ (3/16 each): homozygous : heterozygous | $\tfrac13 : \tfrac23$ |
+
+The phenotypes that resemble the two grandparents depend on how the alleles entered the cross. From $AABB \times aabb$ the parental phenotypes $A\_B\_$ and $aabb$ make up $\tfrac{10}{16} = \tfrac58$ of the $\mathrm{F}_2$ and the new combinations $A\_bb$ and $aaB\_$ make up $\tfrac38$; from $AAbb \times aaBB$ the proportions are reversed. Within the class of new combinations the true-breeding individuals are $\tfrac13$ in the first case ($AAbb$, $aaBB$: $\tfrac2{16}$ of $\tfrac6{16}$) and $\tfrac15$ in the second ($AABB$, $aabb$: $\tfrac2{16}$ of $\tfrac{10}{16}$); each true-breeding new combination is $\tfrac1{16}$ of the $\mathrm{F}_2$, which is the yield a breeder can expect when combining two traits from different varieties.
 
 Independent assortment holds for genes on different chromosomes and for genes far apart on the same chromosome; genes close together on one chromosome are linked and violate it (7.4.8). Several of Mendel's seven genes lie on the same pea chromosome, but the pairs he combined in the dihybrid crosses he reported lie on different chromosomes or far enough apart to assort almost independently.
 
@@ -206,6 +230,31 @@ The probability that the plant is $RrYy$ is $(2/3)^2 = 4/9$, and if it is, $1/16
 
 **Example 2.4.6** Two seeds from the same plant of Example 2.4.5 are both wrinkled. What is now the probability that a third seed is wrinkled? The first seed already shows that the parent is $Rr$, so the answer is $1/4$, not $1/6$. Progeny of the same parent are independent only given the parent's genotype; observing them updates the probabilities of that genotype (Bayes' theorem, 7.4.7).
 
+### 2.4.5. Working Backward: From Progeny to Parents
+
+The rules can also be inverted: from the progeny ratio, infer the genotypes of the parents. Because unlinked loci are independent, the ratio factors into one ratio per locus, and each single-locus ratio identifies its cross.
+
+**Algorithm 2.4.2 (Parental Genotypes from a Progeny Ratio)**
+
+1. For each trait separately, add the progeny counts over the classes of the other traits and reduce them to a single-locus ratio.
+2. Identify each single-locus cross: 3:1 means $Aa \times Aa$; 1:1 means $Aa \times aa$; all dominant means that at least one parent is $AA$ (or both parents are $Aa$ with too few progeny to show recessives); all recessive means $aa \times aa$.
+3. Combine the loci, and check that the product of the single-locus ratios reproduces the observed joint ratio (if it does not, the loci are linked, 7.4.8, or interact, 7.4.4).
+4. Where several parental combinations are possible, list them all; the parents' phenotypes, if given, usually decide.
+
+| Progeny phenotypic ratio | Single-locus factors | Parents |
+|---|---|---|
+| 9:3:3:1 | $(3:1)(3:1)$ | $AaBb \times AaBb$ |
+| 3:3:1:1 | $(3:1)(1:1)$ | $AaBb \times Aabb$ or $AaBb \times aaBb$ |
+| 1:1:1:1 | $(1:1)(1:1)$ | $AaBb \times aabb$ or $Aabb \times aaBb$ |
+| 3:1 | $(3:1)(1)$ | $Aa\,BB \times Aa\,\_\_$, $Aa\,bb \times Aa\,bb$, and so on: one locus segregating 3:1, the other uniform |
+| 1:1 | $(1:1)(1)$ | one locus $Aa \times aa$, the other uniform |
+
+**Example 2.4.7** Two pea plants are crossed and give 152 tall purple, 148 tall white, 51 dwarf purple and 49 dwarf white progeny. Height: $300$ tall : $100$ dwarf $= 3:1$, so $Dd \times Dd$. Flower color: $203$ purple : $197$ white $\approx 1:1$, so $Pp \times pp$. The parents are $DdPp$ (tall purple) and $Ddpp$ (tall white), and the joint ratio should be $(3:1)(1:1) = 3:3:1:1$: expected $150 : 150 : 50 : 50$, $\chi^2 = 0.093$ with three degrees of freedom ($p = 0.99$).
+
+Questions about gametes are inverted in the same way. An individual heterozygous at $m$ of its loci and homozygous at the rest makes $2^m$ kinds of gametes, each with probability $(1/2)^m$, and the number of different combinations of gametes in a cross is the product of the numbers of gamete kinds of the two parents.
+
+**Example 2.4.8** (a) $AaBbCc \times AaBBCc$: the parents make $8$ and $4$ kinds of gametes, so there are $8 \times 4 = 32$ gamete combinations, which give $3 \times 2 \times 3 = 18$ genotypes and $2 \times 1 \times 2 = 4$ phenotypes. (b) A plant heterozygous or homozygous recessive at four unlinked loci produces $abcd$ gametes with frequency $1/8$. Since $(1/2)^m = 1/8$, it is heterozygous at $m = 3$ loci and homozygous recessive at the fourth: $aaBbCcDd$, $AabbCcDd$, $AaBbccDd$ or $AaBbCcdd$.
+
 ## 2.5. Testing Hypotheses: the χ² Test
 
 ### 2.5.1. Goodness of Fit
@@ -227,6 +276,8 @@ which, when the hypothesis is true and all $E_i$ are large (a usual rule is $E_i
 3. Compute $\chi^2$ and the degrees of freedom $k - 1$.
 4. Find the **p-value**, the probability of a $\chi^2$ at least as large under the hypothesis. If $p < 0.05$ (or another chosen level), reject the hypothesis; otherwise the data are consistent with it. The 5 % critical values are $3.84$, $5.99$, $7.81$, $9.49$ for 1, 2, 3, 4 degrees of freedom.
 5. A non-rejection does not prove the hypothesis; other hypotheses may fit as well ([7.4.4](/7.4.4#sec-4.5) compares two of them).
+
+By a common convention a deviation with $0.01 < p \le 0.05$ is called significant and one with $p \le 0.01$ highly significant; the 1 % critical values are $6.63$, $9.21$, $11.34$, $13.28$ for 1–4 degrees of freedom. The p-value is not the probability that the hypothesis is true: it is the probability of so large a deviation if it is.
 
 **Example 2.5.1** Mendel's dihybrid counts 315, 108, 101, 32 ($n = 556$) under 9:3:3:1 have expected counts $312.75$, $104.25$, $104.25$, $34.75$, and
 
@@ -297,8 +348,10 @@ His work was ignored for 34 years. He was not seen as a professional biologist; 
 | **Law of segregation** (Definition 2.2.5) | $Yy$ gives $\tfrac12 Y$, $\tfrac12 y$ gametes; $Yy \times Yy$ gives 1:2:1 genotypes, 3:1 phenotypes; **Punnett square** (Definition 2.2.6) |
 | Genotype of a dominant $\mathrm{F}_2$ | $\mathbb{P}(Yy \mid \text{dominant}) = 2/3$ (Formula 2.2.1); Mendel's $\mathrm{F}_3$ test (Example 2.2.1) |
 | **Testcross** (Definition 2.2.7) | $\times$ recessive homozygote: all dominant (homozygote) or 1:1 (heterozygote) |
+| Backcross (Definition 2.2.8), pollen test (Example 2.2.3) | $\mathrm{F}_1$ × a parent; $Wx/wx$ pollen 1:1; conditions for Mendelian ratios (Remark 2.2.1) |
 | **Law of independent assortment** (Definition 2.3.2) | $RrYy$ gives four gametes 1:1:1:1; **dihybrid cross** gives 9:3:3:1; testcross 1:1:1:1 |
-| Toolkit | product and sum rules (Formula 2.4.1); locus by locus (Algorithm 2.4.1); $2^n$ gametes, $3^n$ genotypes, $2^n$ phenotypes, $(3+1)^n$ (Formula 2.4.2); binomial and multinomial (Formula 2.4.3); conditional probabilities (Examples 2.4.5, 2.4.6) |
+| Dihybrid $\mathrm{F}_2$ composition (Formula 2.3.1) | homozygous $\tfrac14$, one locus heterozygous $\tfrac12$, $AaBb$ $\tfrac14$; within $A\_B\_$: $\tfrac19 : \tfrac49 : \tfrac49$; parental phenotypes $\tfrac58$ or $\tfrac38$ |
+| Toolkit | product and sum rules (Formula 2.4.1); locus by locus (Algorithm 2.4.1); $2^n$ gametes, $3^n$ genotypes, $2^n$ phenotypes, $(3+1)^n$ (Formula 2.4.2); binomial and multinomial (Formula 2.4.3); conditional probabilities (Examples 2.4.5, 2.4.6); parents from progeny ratios (Algorithm 2.4.2) |
 | χ² test | $\chi^2 = \sum (O-E)^2/E$, $k-1$ degrees of freedom (Formula 2.5.1, Algorithm 2.5.1); Mendel's dihybrid: $\chi^2 = 0.47$, $p = 0.93$ |
 | Fisher's critique | total $\chi^2 \approx 42$ on 84 df; progeny-test misclassification $(3/4)^{10}$ (Formula 2.5.2); probably bias in stopping and reporting, not fraud |
 | Molecular basis | dominant alleles encode functional SBEI, SGR, a bHLH factor, GA 3-oxidase; recessive alleles lack function |
@@ -341,3 +394,21 @@ His work was ignored for 34 years. He was not seen as a professional biologist; 
 12. (Competition style.) A plant of genotype $AaBbCc$ is self-fertilized. (a) Among the progeny with the phenotype $A\_B\_C\_$, what fraction is true-breeding (homozygous at all three loci)? (b) If a progeny with phenotype $A\_B\_cc$ is chosen at random and crossed with an $aabbcc$ plant, what is the probability that its first progeny shows only the recessive phenotypes?
 
     **Answer** (a) $\mathbb{P}(AABBCC) = (1/4)^3 = 1/64$ and $\mathbb{P}(A\_B\_C\_) = 27/64$, so the fraction is $1/27$. (b) Given $A\_$, the plant is $Aa$ with probability $2/3$, and similarly for $B$; it is $cc$. The testcross progeny is $aabbcc$ if the plant contributes $abc$: $\tfrac23\cdot\tfrac12\cdot\tfrac23\cdot\tfrac12\cdot 1 = \tfrac19$.
+13. Two pea plants are crossed and give 89 round yellow, 31 round green, 92 wrinkled yellow and 28 wrinkled green seeds. Find the genotypes and phenotypes of the parents and test your answer with χ².
+
+    **Answer** Seed shape: $120$ round : $120$ wrinkled $= 1:1$, so $Rr \times rr$. Seed color: $181$ yellow : $59$ green $\approx 3:1$, so $Yy \times Yy$. The parents are $RrYy$ (round yellow) and $rrYy$ (wrinkled yellow). Expected ratio $(1:1)(3:1) = 3:1:3:1$: $90 : 30 : 90 : 30$; $\chi^2 = 1/90 + 1/30 + 4/90 + 4/30 = 0.22$ with three degrees of freedom ($p = 0.97$).
+14. For the cross $AaBbCcDd \times AabbCcDD$ (unlinked loci, complete dominance), find (a) the number of gamete kinds of each parent and of gamete combinations, (b) the numbers of genotypes and phenotypes among the progeny, (c) the probability of the genotype $aabbccDd$, (d) the probability that a progeny is heterozygous at all four loci.
+
+    **Answer** (a) $2^4 = 16$ and $2^2 = 4$ kinds of gametes; $16 \times 4 = 64$ combinations. (b) Genotypes $3 \times 2 \times 3 \times 2 = 36$; phenotypes $2 \times 2 \times 2 \times 1 = 8$ (every progeny is $D\_$). (c) $\tfrac14 \cdot \tfrac12 \cdot \tfrac14 \cdot \tfrac12 = \tfrac1{64}$. (d) $\tfrac12 \cdot \tfrac12 \cdot \tfrac12 \cdot \tfrac12 = \tfrac1{16}$.
+15. A breeder crosses a true-breeding round green ($RRyy$) and a true-breeding wrinkled yellow ($rrYY$) pea and self-fertilizes the $\mathrm{F}_1$. (a) What fraction of the $\mathrm{F}_2$ shows a combination of traits found in neither parent? (b) Among the round yellow $\mathrm{F}_2$, what fraction breeds true, and what fraction gives a 9:3:3:1 ratio on self-fertilization? (c) What fraction of the $\mathrm{F}_2$ consists of true-breeding round yellow plants, and of true-breeding plants of any new combination?
+
+    **Answer** (a) The new combinations are round yellow ($R\_Y\_$) and wrinkled green ($rryy$): $\tfrac9{16} + \tfrac1{16} = \tfrac58$. (b) $RRYY$: $\tfrac19$; $RrYy$: $\tfrac49$ (Formula 2.3.1). (c) $RRYY$ is $\tfrac1{16}$; with $rryy$, the true-breeding new combinations are $\tfrac2{16} = \tfrac18$ of the $\mathrm{F}_2$, and $\tfrac15$ of the new-combination class.
+16. Which of the following data sets are consistent with independent assortment of two genes? (a) Testcross of a dihybrid: 42 : 8 : 8 : 42. (b) Testcross of a dihybrid: 26 : 24 : 25 : 25. (c) $\mathrm{F}_2$ of a dihybrid: 69 : 6 : 6 : 19 ($A\_B\_ : A\_bb : aaB\_ : aabb$). (d) $AaBb \times aaBb$: 37.5 % : 37.5 % : 12.5 % : 12.5 %. (e) Testcross of a dihybrid with only the two parental classes, 50 : 50.
+
+    **Answer** (b) and (d). (b) Under 1:1:1:1, expected 25 each, $\chi^2 = 0.08$ (3 df, $p = 0.99$). (d) $(1:1)(3:1) = 3:3:1:1$ exactly. In (a) $\chi^2 = 46.2$ ($p \approx 5 \times 10^{-10}$): the parental classes are in excess, the signature of linkage with 16 % recombinant progeny (7.4.8). In (c) the expected counts are $56.25 : 18.75 : 18.75 : 6.25$ and $\chi^2 = 46.2$ again; each locus still segregates 3:1 ($75 : 25$), but the double-dominant and double-recessive classes are in excess, again linkage in coupling. (e) is complete linkage: no recombinant gametes at all, as in male *Drosophila* (7.4.8).
+17. In rice, $Wx$ (blue-black iodine staining of pollen and endosperm starch) is dominant over $wx$ (red-brown). (a) What pollen phenotypes do the plants of an $\mathrm{F}_2$ from $Wx/Wx \times wx/wx$ show, and in what proportions of plants? (b) Why can this test classify an $\mathrm{F}_2$ plant without the misclassification problem of Formula 2.5.2?
+
+    **Answer** (a) $\tfrac14$ of the plants ($Wx/Wx$) have only blue-black pollen, $\tfrac12$ ($Wx/wx$) blue-black and red-brown pollen in 1:1, and $\tfrac14$ ($wx/wx$) only red-brown pollen. (b) A plant sheds thousands of pollen grains, and a heterozygote shows its recessive gametes directly; the probability that a heterozygote shows no red-brown grain among $m$ grains examined is $(1/2)^m$, negligible already for $m = 20$, whereas a progeny test fails with probability $(3/4)^m$ and needs a generation of growth.
+18. A breeder transfers a disease-resistance allele from a wild relative into a cultivar by repeated backcrossing to the cultivar, selecting the resistant plants in each generation. (a) What average fraction of the genome comes from the wild parent after three backcrosses? (b) The wild parent differs from the cultivar at 20 unlinked loci besides the resistance gene. What is the probability that a given one of them is still heterozygous after three backcrosses, and that none of the 20 is?
+
+    **Answer** (a) The $\mathrm{F}_1$ has $\tfrac12$ of its genome from the wild parent, and each backcross halves it: $(1/2)^4 = \tfrac1{16}$ after three backcrosses. (b) An unlinked locus heterozygous in the $\mathrm{F}_1$ stays heterozygous in each backcross with probability $\tfrac12$, so $(1/2)^3 = \tfrac18$ after three. None of 20: $(7/8)^{20} = 0.069$. Loci linked to the selected resistance allele are lost more slowly (linkage drag, 7.4.8).

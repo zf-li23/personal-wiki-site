@@ -33,10 +33,20 @@ Codominance does not fit on this scale: it is a statement that both allelic prod
 
 **Example 3.1.2 (Codominance)** The human MN blood group is determined by two alleles, $L^M$ and $L^N$, of the gene for glycophorin A, a red-cell surface glycoprotein; the two allelic proteins differ at two amino acids near their N terminus. Antibodies distinguish them: $L^ML^M$ people are type M, $L^NL^N$ type N, and heterozygotes have both proteins on their cells and are type MN. Molecular markers are almost always codominant: in a gel, the two alleles of an enzyme (allozymes, which differ in charge and therefore in electrophoretic mobility), of a microsatellite or of a single-nucleotide polymorphism appear as separate bands or signals, and the heterozygote shows both. This is why they are so useful for mapping (7.4.14).
 
+**Example 3.1.3 (Mosaic dominance)** The Asian lady beetle *Harmonia axyridis* has many elytral color forms, from black with two or four red spots to red with up to nineteen black spots, determined by a series of alleles at one locus. C. C. Tan (Tan Jiazhen) showed in 1946 that in heterozygotes each region of the elytron is black if it is black in either homozygote: the heterozygote's pattern is the superposition of the two parental patterns, each allele being dominant in the areas where it produces melanin. He called this *mosaic dominance*; the $\mathrm{F}_2$ of two forms is $1 : 2 : 1$, the heterozygote being a third, recognizable pattern. The locus is the transcription-factor gene *pannier*, and the alleles differ in its regulatory region, which determines where on the elytron it is expressed and melanin is made (Ando and colleagues, 2018). Mosaic dominance is codominance in space: both alleles act, each in its own part of the body.
+
+| Relation | $\mathrm{F}_1$ phenotype | $\mathrm{F}_2$ phenotypic ratio | Example |
+|---|---|---|---|
+| complete dominance | that of one parent | 3:1 | Mendel's pea traits |
+| incomplete dominance | intermediate | 1:2:1 | snapdragon flower color |
+| codominance | both parental products detectable | 1:2:1 | MN blood group, $I^AI^B$ |
+| mosaic dominance | each parental pattern in different parts | 1:2:1 | elytral patterns of *Harmonia axyridis* |
+
 ### 3.1.2. Dominance Depends on the Level of Observation
 
 Dominance is a relation between two alleles with respect to a particular phenotype, and one pair of alleles can be dominant, recessive, incompletely dominant and codominant at once, depending on which phenotype is observed. The classic example is **sickle cell anemia** ([7.1.7](/7.1.7)). The allele $Hb\beta^{S}$ of the β-globin gene *HBB* has one base change that replaces glutamate 6 by valine; deoxygenated hemoglobin S polymerizes into fibers that distort red cells into sickle shapes.
 
+| Mosaic dominance (Example 3.1.3) | heterozygote shows each parental pattern in different body regions (*Harmonia axyridis*, *pannier*); $\mathrm{F}_2$ 1:2:1 | |
 | Level of observation | $Hb\beta^{A}/Hb\beta^{A}$ | $Hb\beta^{A}/Hb\beta^{S}$ | $Hb\beta^{S}/Hb\beta^{S}$ | Relation of $Hb\beta^{S}$ to $Hb\beta^{A}$ |
 |---|---|---|---|---|
 | β-globin polypeptides (electrophoresis) | A only | A and S | S only | codominant |
@@ -48,6 +58,8 @@ Dominance is a relation between two alleles with respect to a particular phenoty
 ![Dominance of the sickle-cell allele at different levels of observation. Columns: the three genotypes of the β-globin gene. Rows, from the molecule to the organism: hemoglobin polypeptides (both A and S are present in heterozygotes, codominance); red cells under normal and low oxygen (sickling in the homozygote only, or partly in the heterozygote at low oxygen); anemia (recessive); and resistance to *P. falciparum* malaria, which heterozygotes share with homozygotes (dominant). The same pair of alleles is codominant, recessive, incompletely dominant or dominant depending on the phenotype considered](./plots/sickle-cell-levels.py)
 
 The malaria row explains why a lethal recessive allele is common in parts of Africa, the Mediterranean and South Asia: heterozygotes are protected (parasites grow poorly in their red cells, and infected cells sickle and are removed), so the heterozygote has the highest fitness, and the allele is maintained by balancing selection (7.4.23).
+
+Dominance can also depend on the internal environment of the organism. In a **sex-influenced trait** the same heterozygote has different phenotypes in the two sexes: the allele for horns in some sheep breeds is dominant in rams and recessive in ewes, because the hormonal environment changes its expression ([7.4.6](/7.4.6#sec-6.4.5)). Dominance that changes with sex, age or external conditions is sometimes called conditional dominance.
 
 ## 3.2. Why Most Loss-of-Function Alleles Are Recessive
 
@@ -127,6 +139,21 @@ $I^A$ and $I^B$ are codominant with each other and both are completely dominant 
 
 **Example 3.3.2** (a) Parents of types A and B, both heterozygous ($I^Ai \times I^Bi$), have children of types AB, A, B and O with probability $1/4$ each. (b) A type O mother has a type AB child. The child received $i$ from the mother, so it cannot be AB: either the mother is not $ii$ (a Bombay phenotype that only looks like O, 7.4.4), or the child has been switched, or a rare cis-AB allele is present. (c) A type A mother ($I^A\_$) and a type B child: the father must carry $I^B$, so a type A or O man is excluded as the father, while any B or AB man is not excluded. Blood groups can exclude paternity but cannot prove it; DNA markers with many alleles are used today (7.4.14, 7.4.22).
 
+The *ABO* gene lies on the long arm of chromosome 9 (9q34). The possible blood types of children for every combination of parental types follow from the genotypes each parental type can have:
+
+| Parents | Possible children | Impossible children |
+|---|---|---|
+| A × A, A × O | A, O | B, AB |
+| B × B, B × O | B, O | A, AB |
+| A × B | A, B, AB, O | — |
+| A × AB, B × AB, AB × AB | A, B, AB | O |
+| AB × O | A, B | AB, O |
+| O × O | O | A, B, AB |
+
+Two rules summarize the table: a type AB parent never has a type O child, and a type O parent never has a type AB child (apart from the Bombay phenotype and the rare cis-AB allele).
+
+**Example 3.3.3 (Rh incompatibility)** The Rh blood group is controlled by two closely linked genes on chromosome 1, *RHD* and *RHCE*; their tight linkage is why the system was once described as a series of many alleles. The clinically important antigen is RhD: people with at least one functional *RHD* gene are RhD positive, and most RhD-negative people ($dd$; about 15 % of Europeans, fewer than 1 % of East Asians) are homozygous for a deletion of the whole *RHD* gene. Unlike anti-A and anti-B, anti-D antibodies are not present naturally; they are formed only after exposure to RhD-positive red cells. An RhD-negative mother carrying an RhD-positive fetus is usually immunized at delivery, when fetal cells enter her circulation; in a later RhD-positive pregnancy her IgG anti-D crosses the placenta and destroys fetal red cells, causing hemolytic disease of the fetus and newborn (anemia, jaundice, in severe cases fetal death). Since 1968 the disease has been largely prevented by giving the mother anti-D immunoglobulin after delivery, which removes the fetal cells before she can respond. If the $d$ allele has frequency $q = 0.4$ and couples form at random, $q^2 = 16\,\%$ of mothers are $dd$, and the fetus of such a mother is RhD positive if the father transmits $D$, with probability $p = 0.6$ (Hardy–Weinberg proportions, [7.4.22](/7.4.22)): about $0.16 \times 0.6 \approx 10\,\%$ of pregnancies are RhD incompatible. Maternal anti-A or anti-B antibodies against an ABO-incompatible fetus destroy fetal cells that enter the mother and partly protect her from sensitization. Because the heterozygous fetuses of $dd$ mothers are the ones at risk, the incompatibility is a form of selection against heterozygotes (7.4.23).
+
 ### 3.3.3. Wild-Type, Mutant and Polymorphic Alleles
 
 How common an allele is in a population is measured by its frequency.
@@ -141,6 +168,12 @@ $$
 
 In wild mice the agouti allele $A$ of the *agouti* gene has a frequency above 99 %: black mutants ($a$) are rare, in part because they are seen more easily by predators, and *agouti* is monomorphic. The ABO gene is polymorphic in every human population (the $i$ allele has a frequency of about 0.6–0.7 in most). The distinction is relative to a population and can change: a mutant allele that is favored by selection increases in frequency and may become the new common allele (7.4.23). More than 400 mutant alleles of *HBB* are known, most of them rare; the human leukocyte antigen (HLA) genes have thousands of alleles each and are the most polymorphic genes of the human genome, which is the reason organ donors and recipients must be matched carefully ([7.15](/7.15)).
 
+### 3.3.4. Self-Incompatibility Alleles
+
+Many flowering plants cannot fertilize themselves although their pollen and ovules are functional. In *self-incompatibility*, the pistil recognizes and rejects pollen that carries the same allele as itself at the S locus, which has dozens of alleles in natural populations. In the gametophytic system of tobacco (*Nicotiana*), petunia and other Solanaceae, studied genetically by East and Mangelsdorf (1925), the style makes an S-RNase and the pollen a set of F-box proteins (SLFs), all encoded at the S locus; a pollen tube whose own (haploid) S allele matches either allele of the style is arrested in the style, and its RNA is degraded. The alleles show no dominance with respect to each other, because the pollen phenotype is that of its own haploid genotype.
+
+**Example 3.3.4 (Crosses under gametophytic self-incompatibility)** (a) $S_1S_2$ selfed, or crossed with any $S_1S_2$ plant: all pollen is rejected, no seed. (b) $S_1S_2$ (seed parent) × $S_2S_3$ (pollen parent): $S_2$ pollen is rejected, only $S_3$ pollen grows, and the progeny are $S_1S_3 : S_2S_3 = 1 : 1$. The reciprocal cross $S_2S_3 \times S_1S_2$ uses only $S_1$ pollen and gives $S_1S_2 : S_1S_3$: reciprocal crosses differ, although no sex chromosome or cytoplasm is involved. (c) $S_1S_2 \times S_3S_4$: fully compatible, $S_1S_3 : S_1S_4 : S_2S_3 : S_2S_4 = 1:1:1:1$. Homozygotes $S_iS_i$ never arise, every plant is heterozygous, and a population with $k$ alleles has $\binom{k}{2}$ genotypes. A rare allele is compatible with nearly every plant, which is why selection keeps many alleles at similar frequencies ([7.4.22](/7.4.22)). In the sporophytic system of the cabbage family (*Brassica*), by contrast, the pollen's behavior is determined by the diploid genotype of the plant that produced it, and dominance between S alleles occurs.
+
 ## 3.4. Lethal Alleles and Pleiotropy
 
 ### 3.4.1. The 2:1 Ratio
@@ -148,6 +181,8 @@ In wild mice the agouti allele $A$ of the *agouti* gene has a frequency above 99
 In 1905 Lucien Cuénot found that yellow mice never bred true. Yellow × yellow crosses gave about 2 yellow : 1 non-yellow (agouti) instead of 3:1, and every yellow mouse, crossed with a non-yellow one, gave 1:1: all yellow mice were heterozygous. W. E. Castle and C. C. Little (1910) found that about a quarter of the embryos of yellow × yellow crosses died in the uterus. The yellow allele $A^{y}$ of the *agouti* gene is dominant over $A$ for coat color but recessive for lethality: $A^{y}A^{y}$ embryos die soon after implantation.
 
 **Definition 3.4.1 (Lethal Allele)** A **lethal allele** is an allele that causes the death of the organism (before reproductive age, usually before birth) in some genotype. It is a recessive lethal if only homozygotes (or hemizygotes) die, and a dominant lethal if one copy kills. A conditional lethal kills only under certain conditions, the restrictive conditions, and is viable under permissive conditions (3.5.3).
+
+**Remark 3.4.1 (Degrees of Lethality)** Mutations differ continuously in how much they reduce viability, and in the classification used for *Drosophila* chromosomes extracted from natural populations (Dobzhansky and colleagues), the viability of a homozygote relative to the wild type, $v$ in Formula 3.4.1 below, defines the classes: lethal ($v$ near 0, conventionally below 10 %), semilethal ($v$ between about 10 % and 50 %; that is, 50–90 % of the carriers die), subvital ($v$ reduced but above 50 %), and quasinormal. The thresholds are conventions, and other textbooks draw them differently. A dominant lethal that acts before reproduction disappears in the generation in which it arises; one that acts late, after reproduction has begun, is transmitted (see the examples below).
 
 Lethality changes ratios because the dead progeny are not counted. The observed ratio is a conditional distribution given survival.
 
@@ -179,13 +214,15 @@ Other examples: Manx cats are heterozygous for a dominant allele that shortens o
 
 Pleiotropy usually reflects one gene product that acts in several tissues or at several times, or one primary defect with many downstream consequences. $A^{y}$ affects coat color, body weight and viability. The sickle-cell allele causes anemia, pain crises from blocked capillaries, damage to spleen, kidneys and brain, and resistance to malaria, all from the polymerization of one protein. Phenylketonuria (loss of phenylalanine hydroxylase) causes intellectual disability, seizures and light pigmentation (phenylalanine inhibits melanin synthesis). Cystic fibrosis (CFTR, a chloride channel in epithelia) affects lungs, pancreas, sweat glands and male fertility. Because a new allele usually affects several traits at once, pleiotropy constrains evolution: a mutation that improves one trait may harm another.
 
+Mendel himself noticed pleiotropy: purple flowers, gray-brown seed coats and a purple spot in the leaf axils always went together in his crosses, as if they were one unit. All three are anthocyanin pigmentations controlled by the bHLH factor encoded by his gene $A$ ([7.4.2](/7.4.2#sec-2.6)). The frizzle allele $F$ of chickens (a mutation in a feather keratin gene, *KRT75*) is incompletely dominant: $FF$ birds have brittle, strongly curled feathers that break off, $Ff$ birds mildly curled ones. Through the loss of insulation it raises heat loss and metabolic rate, enlarges the heart and other organs, and lowers fertility, a cascade of secondary effects from one primary defect (Landauer and Dunn, 1930). The converse relation, many genes affecting one trait, is the rule rather than the exception: dozens of maize genes are each required for normal chlorophyll, and the purple color of the maize aleurone needs dominant alleles at more than half a dozen loci, a property analyzed in the next chapter (genetic heterogeneity and complementation, [7.4.4](/7.4.4#sec-4.4)).
+
 ## 3.5. One Genotype, Several Phenotypes
 
 ### 3.5.1. Penetrance and Expressivity
 
 **Definition 3.5.1 (Penetrance and Expressivity)** The **penetrance** of a genotype for a phenotype is the proportion of individuals with that genotype who show the phenotype; it is complete if it is 100 % and incomplete otherwise. The **expressivity** is the degree or intensity with which the phenotype is expressed among those who show it; it is variable if it differs between individuals and unvarying otherwise.
 
-Polydactyly in humans (extra fingers or toes, often dominant) shows both: some carriers have normal hands (incomplete penetrance), and among affected carriers the extra digits may be on one hand, both hands or hands and feet, fully formed or rudimentary (variable expressivity). Waardenburg syndrome (dominant, mostly mutations in *PAX3* or *MITF*) is similar: carriers can have any combination of a white forelock, irises of different colors, widely spaced eyes and deafness.
+Polydactyly in humans (extra fingers or toes, often dominant) shows both: some carriers have normal hands (incomplete penetrance), and among affected carriers the extra digits may be on one hand, both hands or hands and feet, fully formed or rudimentary (variable expressivity). Waardenburg syndrome (dominant, mostly mutations in *PAX3* or *MITF*) is similar: carriers can have any combination of a white forelock, irises of different colors, widely spaced eyes and deafness. The protruding lower jaw of the Habsburg dynasty, recorded in portraits over two centuries, is a historical example of variable expressivity; it was long cited as a dominant trait with incomplete penetrance, but its degree correlates with the high inbreeding coefficients of the later Habsburgs (Vilas and colleagues, 2019), which suggests a contribution of recessive alleles (7.4.7).
 
 Penetrance enters risk calculations as a factor.
 
@@ -238,7 +275,7 @@ The drug thalidomide, taken in early pregnancy, caused limb reductions (phocomel
 
 ![Norms of reaction (schematic, not data). The phenotype of three genotypes plotted against an environmental variable such as rearing temperature. Left: no genotype–environment interaction; the curves are parallel, and the difference between genotypes is the same in every environment. Right: genotype–environment interaction; the curves cross, so that which genotype has the larger phenotype depends on the environment, and the effect of the genotype cannot be stated without specifying the environment](./plots/reaction-norms.py)
 
-Norms of reaction show why "genetic" and "environmental" are not alternatives. Every phenotype is produced by a genotype in an environment; when the norms are parallel, the effects can be separated additively, and when they cross, a statement such as "genotype 1 is larger" is true only in some environments. In *Drosophila*, the number of facets in the eyes of *Bar* mutants decreases with rearing temperature, and the slope differs between *Bar* alleles. In molecular terms, G×E arises when the environment changes gene regulation: DNA methylation, chromatin accessibility, transcription-factor binding and splicing all respond to the environment, and genetic variants that alter these steps can make the response genotype dependent. The quantitative treatment, with variance components for genotype, environment and their interaction, is in 7.4.24.
+Norms of reaction show why "genetic" and "environmental" are not alternatives. Every phenotype is produced by a genotype in an environment; when the norms are parallel, the effects can be separated additively, and when they cross, a statement such as "genotype 1 is larger" is true only in some environments. A single plant can display two points of its norm of reaction at once: in the water crowfoot *Ranunculus aquatilis*, leaves that develop under water are divided into fine threadlike segments, and leaves that develop in air on the same shoot are broad and lobed, although every cell has the same genotype. In *Drosophila*, the number of facets in the eyes of *Bar* mutants decreases with rearing temperature, and the slope differs between *Bar* alleles. In molecular terms, G×E arises when the environment changes gene regulation: DNA methylation, chromatin accessibility, transcription-factor binding and splicing all respond to the environment, and genetic variants that alter these steps can make the response genotype dependent. The quantitative treatment, with variance components for genotype, environment and their interaction, is in 7.4.24.
 
 ## Summary
 
@@ -249,9 +286,11 @@ Norms of reaction show why "genetic" and "environmental" are not alternatives. E
 | Recessiveness of null alleles | flux $J(E) = J_{\max}E/(E + K_E)$ saturates; control coefficients sum to one (Formula 3.2.1) | $K_E = 0.05$: heterozygote has 95.5 % flux (Example 3.2.1) |
 | **Haploinsufficiency** (Definition 3.2.1) | dosage-sensitive genes: transcription factors, structural proteins, complexes | |
 | **Multiple alleles** (Definition 3.3.1) | allelic series $c^+ > c^{ch} > c^h > c$; ABO: $I^A = I^B > i$ | $k(k+1)/2$ genotypes (Formula 3.3.1) |
+| ABO crosses, Rh (Example 3.3.3) | AB parent: no O child; O parent: no AB child; RhD-negative mother × RhD-positive fetus: hemolytic disease, prevented by anti-D | $q^2p$ of pregnancies incompatible |
+| Self-incompatibility (Example 3.3.4) | gametophytic: pollen with an S allele of the style is rejected; reciprocal crosses differ; no $S_iS_i$ | $S_1S_2 \times S_2S_3 \to S_1S_3 : S_2S_3$ |
 | Polymorphism (Definition 3.3.2) | **genetic polymorphism**: ≥ 2 alleles above 1 %; monomorphic otherwise | $p_i = n_i/2N$ (Formula 3.3.2) |
 | **Lethal allele** (Definition 3.4.1) | $A^y$: dominant for color, recessive lethal; 2:1 | $\mathbb{P}(j \mid \text{scored}) = q_jv_j/\sum q_iv_i$; $v = (3f-2)/(1-f)$ (Formula 3.4.1); $6:3:2:1$ |
-| **Pleiotropy** (Definition 3.4.2) | one gene, several traits ($A^y$, sickle cell, PKU, CF) | |
+| **Pleiotropy** (Definition 3.4.2) | one gene, several traits ($A^y$, sickle cell, PKU, CF, frizzle, Mendel's $A$) | viability classes: lethal, semilethal, subvital (Remark 3.4.1) |
 | **Penetrance**, **expressivity** (Definition 3.5.1) | incomplete penetrance, variable expressivity | $\mathbb{P}(\text{affected}) = \mathbb{P}(G)\pi$; $\mathbb{P}(G \mid \text{unaffected})$ by Bayes (Formula 3.5.1); $\pi = 1 - \mathrm{e}^{-m}$ (Formula 3.5.2) |
 | **Modifier gene** (Definition 3.5.2), conditional alleles (Definition 3.5.3), **phenocopy** (Definition 3.5.4), **norm of reaction** (Definition 3.5.5) | genetic background; permissive and restrictive conditions; G×E | |
 
@@ -296,3 +335,18 @@ Norms of reaction show why "genetic" and "environmental" are not alternatives. E
 13. Distinguish a phenocopy from incomplete penetrance, and explain why both can mislead the analysis of a pedigree.
 
     **Answer** Incomplete penetrance: an individual carries the disease genotype but does not show the phenotype; a phenocopy: an individual shows the phenotype without carrying the genotype, because of an environmental cause. In a pedigree, incomplete penetrance makes a dominant disease skip generations, so it can be misread as recessive, or makes a carrier be classified as a non-carrier; a phenocopy adds an affected person who does not transmit the allele, which can suggest a new mutation, a wrong mode of inheritance or a false linkage in mapping studies.
+14. In *Harmonia axyridis*, a true-breeding form with black elytral margins is crossed with a true-breeding form with black central spots. (a) Describe the $\mathrm{F}_1$. (b) Among 80 $\mathrm{F}_2$ beetles there are 18 with margins only, 44 with margins and spots and 18 with spots only. Test the single-locus hypothesis. (c) What is expected from the backcross of the $\mathrm{F}_1$ to the margin form?
+
+    **Answer** (a) Under mosaic dominance the $\mathrm{F}_1$ has both the black margins and the black spots. (b) Expected $1:2:1 = 20 : 40 : 20$; $\chi^2 = 4/20 + 16/40 + 4/20 = 0.8$ with two degrees of freedom ($p = 0.67$): consistent. (c) $1$ margins and spots : $1$ margins only.
+15. (a) A type A man whose mother is type O and a type AB woman have children. Give the probabilities of each blood type. (b) A type B man and a type A woman have a type O child. What is the probability that their next child is type AB, and that their next two children are both type O?
+
+    **Answer** (a) The man is $I^Ai$. $I^Ai \times I^AI^B$: $I^AI^A$, $I^AI^B$, $I^Ai$, $I^Bi$ with $\tfrac14$ each, so A $\tfrac12$, AB $\tfrac14$, B $\tfrac14$, O $0$. (b) The O child shows that both parents are heterozygous, $I^Bi \times I^Ai$. Next child AB: $\tfrac14$. Two O children: $(1/4)^2 = \tfrac1{16}$.
+16. In a population, the frequency of the RhD-negative allele $d$ is $0.4$ and genotypes are in Hardy–Weinberg proportions. An RhD-negative woman has an RhD-positive partner of unknown genotype. (a) What is the probability that the partner is $DD$? (b) What is the probability that their first child is RhD positive? (c) The first child is RhD negative. What is the probability that the second child is RhD positive?
+
+    **Answer** (a) $\mathbb{P}(DD \mid D\_) = p^2/(p^2 + 2pq) = 0.36/0.84 = 0.429$; $\mathbb{P}(Dd \mid D\_) = 0.571$. (b) $0.429 \times 1 + 0.571 \times \tfrac12 = 0.714$. (c) An RhD-negative child shows that the partner is $Dd$, so the probability is $\tfrac12$ (a conditional probability, as in [7.4.2](/7.4.2#sec-2.4.4)).
+17. In a gametophytically self-incompatible plant, give the progeny genotypes and proportions of (a) $S_1S_2$ (seed parent) × $S_1S_3$ (pollen parent) and of the reciprocal cross; (b) an $S_1S_2$ plant pollinated with an equal mixture of pollen from $S_1S_3$ and $S_3S_4$ plants. In (b), what fraction of the seeds is sired by the $S_3S_4$ plant?
+
+    **Answer** (a) Only $S_3$ pollen grows on the $S_1S_2$ style: $S_1S_3 : S_2S_3 = 1:1$. Reciprocal ($S_1S_3$ style, $S_1S_2$ pollen): only $S_2$ pollen grows: $S_1S_2 : S_2S_3 = 1:1$. (b) Functional pollen: from $S_1S_3$ only the $S_3$ half ($\tfrac14$ of all pollen); from $S_3S_4$ all of it ($\tfrac14$ $S_3$, $\tfrac14$ $S_4$). Among functional pollen $S_3 : S_4 = 2 : 1$, so the seeds are $S_1S_3$ $\tfrac13$, $S_2S_3$ $\tfrac13$, $S_1S_4$ $\tfrac16$, $S_2S_4$ $\tfrac16$; the $S_3S_4$ plant sires $\tfrac{1/2}{3/4} = \tfrac23$ of them (assuming equal competitive ability of compatible pollen).
+18. Two *Drosophila* heterozygous for a recessive visible mutation are crossed, and 300 wild-type and 40 mutant flies emerge. (a) Estimate the relative viability $v$ of the mutant homozygote. (b) Classify the mutation by Remark 3.4.1.
+
+    **Answer** (a) The expected survivors are $\tfrac34 : \tfrac14 v$, so $v = 3 \times 40/300 = 0.40$ (Formula 3.4.1 with the viability on the recessive class). (b) $v$ is between 10 % and 50 %: semilethal.

@@ -40,6 +40,35 @@ $$
 
 The estimate is a lower bound: unequal effects, linkage in coupling, increasing alleles dispersed between the parents (so that the parental difference understates the genetic differences), dominance and epistasis all make it smaller than the true number of segregating loci. Genome-wide mapping ([7.4.25](/7.4.25)) shows that for most traits the true number is very large, with a few loci of moderate effect and many of tiny effect.
 
+### 24.1.3. Describing a Quantitative Trait
+
+Qualitative and quantitative traits differ in the questions that can be asked about them, not in the kind of genes involved.
+
+| Feature | Qualitative (Mendelian) trait | Quantitative trait |
+|---|---|---|
+| variation | discontinuous, a few distinct classes | continuous (or many classes) |
+| genes | one or a few genes of large effect | many genes, mostly of small effect |
+| environment | small influence on the class | substantial influence on the value |
+| description | words (purple, white); ratios of counts | measurements; mean, variance, covariance |
+| unit of analysis | individual crosses and pedigrees | populations and families, by statistics |
+| examples | Mendel's pea traits, ABO blood groups, white eyes in *Drosophila* | height, yield, milk production, blood pressure |
+
+The boundary is not absolute. Wheat kernel color behaves as a qualitative trait in a cross between lines that differ at one locus (3 red : 1 white) and as a quantitative trait in a cross between lines that differ at three (§24.1.1); a trait can be measured on a continuous scale (serum cholesterol) and classified clinically into two classes (hypercholesterolemia or not), which is the logic of threshold traits (§24.6); and one gene can contribute both to a discrete trait and, through its dosage, to a continuous one.
+
+The classical multiple-factor hypothesis of Nilsson-Ehle and East, in the form in which it is often taught, stated that a quantitative trait is controlled by many genes (polygenes, or minor genes) whose effects are small, equal and additive, without dominance, sensitive to the environment, and often pleiotropic. The first two claims stand; the others were simplifications that made the model tractable. Mapping has shown that effects are unequal (an approximately exponential distribution, with a few loci of moderate effect and very many tiny ones, [7.4.25](/7.4.25)), that dominance and epistasis are common (§24.3, §24.7), and that the same genes can be major genes for rare alleles and minor genes for common ones (*LDLR* in familial hypercholesterolemia and in normal variation of cholesterol).
+
+Quantitative traits are described by the statistics of a sample ([3.2](/3.2)).
+
+**Formula 24.1.2 (Sample Statistics of a Trait)** For measurements $x_1, \dots, x_n$,
+
+$$
+\bar x = \frac1n\sum_{i=1}^n x_i, \qquad s^2 = \frac{1}{n - 1}\sum_{i=1}^n (x_i - \bar x)^2, \qquad s = \sqrt{s^2}, \qquad \mathrm{SE}(\bar x) = \frac{s}{\sqrt n}, \qquad \mathrm{CV} = \frac{s}{\bar x}.
+$$
+
+The sample variance $s^2$ (divisor $n - 1$, which makes it unbiased for the population variance) estimates $V_P$; the standard deviation $s$ measures the spread of individuals; the standard error measures the uncertainty of the mean, and shrinks as $1/\sqrt n$; the coefficient of variation compares variability between traits measured on different scales.
+
+**Example 24.1.2** Ten ears from an inbred maize line measure $12, 14, 15, 15, 16, 16, 17, 18, 18, 19\,\mathrm{cm}$. Then $\bar x = 16.0\,\mathrm{cm}$, $s^2 = 40/9 = 4.44\,\mathrm{cm^2}$, $s = 2.11\,\mathrm{cm}$, $\mathrm{SE} = 0.67\,\mathrm{cm}$ and $\mathrm{CV} = 13\,\%$. Because the line is inbred, $s^2$ estimates the environmental variance $V_E$ (§24.2.2).
+
 ## 24.2. Partitioning Phenotypic Variance
 
 ### 24.2.1. Genetic and Environmental Variance
@@ -137,6 +166,24 @@ It determines the resemblance between parents and offspring and the response to 
 
 - *Additive gene action.* $B_1B_1$, $B_1B_2$, $B_2B_2$ have 1, 2, 3 flowers; $M = 2$; $a = 1$, $d = 0$, $\alpha = 1$; $V_A = 2 \cdot 0.25 \cdot 1 = 0.5 = V_G$, so $h^2 = H^2 = 1$. Selecting plants with 3 flowers selects $B_2B_2$, whose offspring all have 3 flowers: the parental superiority is fully transmitted.
 - *$B_2$ dominant.* The values are 1, 3, 3; $M = 2.5$; $a = 1$, $d = 1$, $\alpha = a + d(q - p) = 1$; $V_A = 0.5$, $V_D = (2 \cdot 0.25 \cdot 1)^2 = 0.25$, $V_G = 0.75$ (check: $0.25 \cdot 1.5^2 + 0.75 \cdot 0.5^2 = 0.75$). So $H^2 = 1$ but $h^2 = 0.5/0.75 = 0.67$. The 3-flowered plants are $B_2B_2$ and $B_1B_2$ in the ratio $1 : 2$; among them $B_2$ has frequency $2/3$, and their randomly mated offspring are $4/9$ $B_2B_2$, $4/9$ $B_1B_2$, $1/9$ $B_1B_1$, with mean $25/9 = 2.78$ flowers, less than the parents' 3. When there is dominance, the phenotype is not fully heritable in the narrow sense.
+
+In plant breeding, $V_A$ is often estimated from the generations of a single cross: the two parental lines, the $\mathrm{F}_1$, the $\mathrm{F}_2$ and the two backcrosses $\mathrm{B}_1 = \mathrm{F}_1 \times \mathrm{P}_1$ and $\mathrm{B}_2 = \mathrm{F}_1 \times \mathrm{P}_2$, all grown together.
+
+**Formula 24.3.1 (Narrow-Sense Heritability from Backcrosses)** If the loci in which the parents differ are unlinked and there is no epistasis or genotype–environment interaction,
+
+$$
+V_{F_2} = V_A + V_D + V_E, \qquad V_{B_1} + V_{B_2} = V_A + 2V_D + 2V_E,
+$$
+
+where $V_A$ and $V_D$ are the additive and dominance variances of the $\mathrm{F}_2$. Hence
+
+$$
+\hat V_A = 2V_{F_2} - (V_{B_1} + V_{B_2}), \qquad \hat h^2 = \frac{2V_{F_2} - V_{B_1} - V_{B_2}}{V_{F_2}} . \tag{24.17}
+$$
+
+**Proof** At one locus with values $-a$, $d$, $+a$ (Definition 24.3.1), the $\mathrm{F}_2$ has $p = q = \tfrac12$, so by Theorem 24.3.1 $V_A = 2 \cdot \tfrac14 a^2 = \tfrac12a^2$ and $V_D = (2 \cdot \tfrac14 d)^2 = \tfrac14d^2$. The backcross $\mathrm{B}_1$ consists of $\tfrac12\,A_1A_1$ ($-a$) and $\tfrac12\,A_1A_2$ ($d$), with genetic variance $\tfrac14(a + d)^2$; $\mathrm{B}_2$ has $\tfrac14(a - d)^2$. Their sum is $\tfrac12a^2 + \tfrac12d^2 = V_A + 2V_D$ per locus. Summing over independent loci and adding $V_E$ to each generation gives the two equations, and $2V_{F_2} - (V_{B_1} + V_{B_2}) = V_A$. $\square$
+
+**Example 24.3.2** In a wheat cross the variances of plant height ($\mathrm{cm}^2$) are $V_{P_1} = 9$, $V_{P_2} = 11$, $V_{F_1} = 10$, $V_{F_2} = 40$, $V_{B_1} = 32$ and $V_{B_2} = 30$. Then $\hat V_E = 10$ (Formula 24.2.1), $\hat V_G = 30$, $\hat H^2 = 0.75$; $\hat V_A = 80 - 62 = 18$, $\hat h^2 = 18/40 = 0.45$, and $\hat V_D = 30 - 18 = 12$. Three quarters of the $\mathrm{F}_2$ variance is genetic, but less than half is additive: selection in the early generations of this cross will be less effective than $H^2$ suggests.
 
 ## 24.4. Resemblance Between Relatives
 
@@ -263,9 +310,11 @@ The model makes characteristic predictions: the recurrence risk is higher when t
 
 **Proof** (1) By Formula 22.4.1 ([7.4.22](/7.4.22)), inbreeding moves a fraction $F$ of heterozygotes, $2pqF$, into the two homozygous classes in equal numbers; each moved individual changes from $d$ to $\pm a$, an average change of $-d$; hence $\Delta M = -2pqdF$ per locus. (2) For populations with frequencies $p$ and $p - y$, compute the F₁ mean $a(p_1 + p_2 - 1) + d[p_1q_2 + p_2q_1]$ and subtract the mean of the parental means from Eq. (24.6); the additive terms cancel and the dominance terms leave $dy^2$. $\square$
 
-Both phenomena therefore require directional dominance, $d > 0$ on average for the trait: alleles that increase fitness tend to be dominant, which is what the mutation–selection theory of [7.4.23](/7.4.23) predicts, because deleterious mutations are kept rare and partially recessive. The dominance hypothesis (Davenport, Bruce, Jones) explains heterosis by the masking in hybrids of different deleterious recessive alleles carried by each inbred line; the overdominance hypothesis (East, Shull) by heterozygote superiority at individual loci. The data favor mostly dominance, with apparent overdominance often caused by linked dominant alleles in repulsion (pseudo-overdominance). Hybrid maize, developed from Shull's experiments (1908), roughly doubled yields in the twentieth century with improved management; hybrid rice exploits cytoplasmic male sterility ([7.4.11](/7.4.11)) to produce F₁ seed. Inbreeding depression is the reason why consanguinity raises disease risk ([7.4.7](/7.4.7)) and why small conservation populations decline ([7.4.23](/7.4.23)).
+Both phenomena therefore require directional dominance, $d > 0$ on average for the trait: alleles that increase fitness tend to be dominant, which is what the mutation–selection theory of [7.4.23](/7.4.23) predicts, because deleterious mutations are kept rare and partially recessive. The dominance hypothesis (Davenport, Bruce, Jones) explains heterosis by the masking in hybrids of different deleterious recessive alleles carried by each inbred line; the overdominance hypothesis (East, Shull) by heterozygote superiority at individual loci. A third view, the epistasis hypothesis, attributes part of heterosis to favorable interactions between alleles at different loci brought together in the hybrid; the three are not exclusive, and heterosis for a complex trait such as yield combines all of them. The data favor mostly dominance, with apparent overdominance often caused by linked dominant alleles in repulsion (pseudo-overdominance). Hybrid maize, developed from Shull's experiments (1908), roughly doubled yields in the twentieth century with improved management; hybrid rice exploits cytoplasmic male sterility ([7.4.11](/7.4.11)) to produce F₁ seed. Inbreeding depression is the reason why consanguinity raises disease risk ([7.4.7](/7.4.7)) and why small conservation populations decline ([7.4.23](/7.4.23)).
 
 **Example 24.7.1** Suppose yield is influenced by 100 loci, each with $d = 0.5\,\mathrm{g}$ and $pq = 0.16$. Full-sib mating ($F = 0.25$) reduces the mean by $2 \cdot 0.25 \cdot 100 \cdot 0.16 \cdot 0.5 = 4\,\mathrm{g}$. Two inbred lines fixed for different alleles at 40 of these loci produce an F₁ exceeding their mid-parent value by $40 \cdot 0.5 = 20\,\mathrm{g}$.
+
+**Remark 24.7.1 (Heterosis Declines in the F₂)** For two inbred lines fixed for different alleles, the $\mathrm{F}_1$ is heterozygous at every such locus and the $\mathrm{F}_2$ only at half of them, so the $\mathrm{F}_2$ mean is $\bar P + \tfrac12\sum d_j$: half of the heterosis is lost in one generation of self-fertilization or intercrossing of the $\mathrm{F}_1$. Further self-fertilization halves it again in each generation, whereas random mating within the $\mathrm{F}_2$ population keeps it at one half, because the heterozygote frequency stays at the Hardy–Weinberg value $2pq = \tfrac12$ ([7.4.22](/7.4.22)). This is why hybrid seed must be produced anew for every crop, and why the systems that make large-scale crossing possible (cytoplasmic male sterility with restorer lines, and environment-sensitive genic male sterility, [7.4.11](/7.4.11)) are central to hybrid breeding.
 
 ## 24.8. What Heritability Means
 
@@ -277,6 +326,24 @@ Heritability is among the most misunderstood quantities in biology. Its definiti
 - High heritability does not mean that a trait cannot be changed. Phenylketonuria is a single-gene disease, yet a low-phenylalanine diet prevents its effects; mean human height has risen by about $10\,\mathrm{cm}$ in many countries over a century of improving nutrition, while its heritability remained high. Heritability measures the sources of variation in present conditions, not the effects of new interventions.
 - Fitness traits have low heritabilities (often $0.1$ or less for fertility and viability), not because they are unaffected by genes, but because selection uses up their additive variance while their environmental and dominance variances remain.
 
+Breeders call heritabilities above about $0.5$ high, $0.2$–$0.5$ medium and below $0.2$ low. Approximate narrow-sense estimates illustrate the pattern (values vary between populations and studies):
+
+| Organism | Trait | $h^2$ |
+|---|---|---|
+| human | adult height | $0.7$–$0.8$ |
+| human | total fingerprint ridge count | $0.9$ |
+| human | body mass index | $0.4$–$0.7$ |
+| cattle | milk yield | $0.3$ |
+| cattle | conception rate | $< 0.05$ |
+| pig | back-fat thickness | $0.5$–$0.7$ |
+| pig | litter size | $0.1$ |
+| chicken | egg weight | $0.5$ |
+| chicken | egg production | $0.1$–$0.3$ |
+| *Drosophila melanogaster* | abdominal bristle number | $0.5$ |
+| *Drosophila melanogaster* | egg production | $0.2$ |
+
+Morphological traits tend to have high heritabilities and traits closely tied to fitness low ones, for the reason just given. Selection is most effective for the former; for the latter, breeders rely on crossing (heterosis), on reducing environmental variance by uniform management, and on selection of relatives (family and genomic selection).
+
 Human height is the reference case: $h^2 \approx 0.8$ from twin and family studies in well-fed populations, a phenotype affected by thousands of loci, whose molecular dissection by association studies is the subject of [7.4.25](/7.4.25).
 
 ## Summary
@@ -284,13 +351,14 @@ Human height is the reference case: $h^2 \approx 0.8$ from twin and family studi
 | Topic | Key relations |
 |---|---|
 | polygenic model | $G = \sum g_j$, normal limit (Theorem 24.1.1); extreme F₂ classes $(1/4)^n$; Castle–Wright $n = (\bar P_1 - \bar P_2)^2/8(V_{F_2} - V_{F_1})$ (Formula 24.1.1), a lower bound |
+| description (§24.1.3) | qualitative versus quantitative traits; $\bar x$, $s^2$ (divisor $n - 1$), $\mathrm{SE} = s/\sqrt n$, CV (Formula 24.1.2) |
 | variance partition | $V_P = V_G + V_E\,(+2\operatorname{Cov} + V_{G\times E})$, $V_G = V_A + V_D + V_I$ (Definition 24.2.1); $H^2 = V_G/V_P$; $V_E$ from inbred lines and F₁ (Formula 24.2.1) |
-| one locus | values $-a, d, +a$; $M = a(p - q) + 2dpq$; $\alpha = a + d(q - p)$; $V_A = 2pq\alpha^2$, $V_D = (2pqd)^2$ (Theorem 24.3.1); $h^2 = V_A/V_P$ |
+| one locus | values $-a, d, +a$; $M = a(p - q) + 2dpq$; $\alpha = a + d(q - p)$; $V_A = 2pq\alpha^2$, $V_D = (2pqd)^2$ (Theorem 24.3.1); $h^2 = V_A/V_P$; from backcrosses $\hat h^2 = (2V_{F_2} - V_{B_1} - V_{B_2})/V_{F_2}$ (Formula 24.3.1) |
 | relatives | $\operatorname{Cov} = 2\theta V_A + \Delta V_D$: PO $\tfrac12V_A$, FS $\tfrac12V_A + \tfrac14V_D$, HS $\tfrac14V_A$, MZ $V_A + V_D$ (Formula 24.4.1) |
 | estimation | $b_{O\cdot P} = h^2/2$, $b_{O\cdot\bar P} = h^2$ (Formula 24.4.2); twins $h^2 = 2(r_{\mathrm{MZ}} - r_{\mathrm{DZ}})$, $c^2 = 2r_{\mathrm{DZ}} - r_{\mathrm{MZ}}$ (Formula 24.4.3) |
 | selection | $R = h^2S$ (Theorem 24.5.1); $i = \varphi(z)/p$, $R = ih^2\sigma_P$ (Formula 24.5.1); realized $h^2 = R/S$ |
 | threshold traits | $t = \Phi^{-1}(1 - K)$, $\mu_{\mathrm{aff}} = \varphi(t)/K$, $h^2 \approx (t - t_R)/(r\mu_{\mathrm{aff}})$ (Formula 24.6.1); risk falls steeply with relatedness |
-| inbreeding / crossing | $M_F = M_0 - 2F\sum pqd$; $H_{F_1} = \sum dy^2$ (Theorem 24.7.1); requires directional dominance |
+| inbreeding / crossing | $M_F = M_0 - 2F\sum pqd$; $H_{F_1} = \sum dy^2$ (Theorem 24.7.1); requires directional dominance; $\mathrm{F}_2$ keeps half the heterosis (Remark 24.7.1) |
 
 Heritability is population- and environment-specific, describes variation and not individuals, does not explain group differences, and does not imply immutability (§24.8).
 
@@ -351,3 +419,16 @@ Heritability is population- and environment-specific, describes variation and no
 14. (Open question.) The heritability of a test score is $0.6$ within each of two groups, and their means differ by one standard deviation. Explain why it does not follow that the difference between the groups is genetic, and what kind of evidence could address the question.
 
     **Answer** Heritability describes the sources of variation within each group under its conditions; it is silent about the causes of the difference between groups, which may be entirely environmental (Lewontin's two fields, §24.8). Evidence about group differences must come from designs that vary the cause directly: changes in group differences over time or across environments (for test scores, large secular gains in a few decades), adoption across groups, comparison of environmental exposures, and genetic methods that test whether allele frequencies at associated loci differ in the predicted direction, which are themselves confounded by environment and by the poor portability of polygenic scores between populations ([7.4.25](/7.4.25)).
+
+15. The heights (cm) of ten plants of an $\mathrm{F}_1$ are $20, 22, 23, 25, 25, 26, 27, 28, 30, 34$. Compute the mean, the sample variance, the standard deviation, the standard error of the mean and the coefficient of variation. Which of these estimates $V_E$?
+
+    **Answer** $\bar x = 260/10 = 26.0$; $\sum(x_i - \bar x)^2 = 36 + 16 + 9 + 1 + 1 + 0 + 1 + 4 + 16 + 64 = 148$, so $s^2 = 148/9 = 16.4\,\mathrm{cm^2}$, $s = 4.06\,\mathrm{cm}$, $\mathrm{SE} = 4.06/\sqrt{10} = 1.28\,\mathrm{cm}$, $\mathrm{CV} = 15.6\,\%$. The $\mathrm{F}_1$ of two inbred lines is genetically uniform, so $s^2$ estimates $V_E$.
+16. For a cross of two inbred lines, the variances of grain weight are $V_{P_1} = 3.2$, $V_{P_2} = 2.8$, $V_{F_1} = 3.0$, $V_{F_2} = 12.0$, $V_{B_1} = 9.0$ and $V_{B_2} = 8.4$. Estimate $H^2$ and $h^2$ in the $\mathrm{F}_2$, and $V_D$. Classify the heritability.
+
+    **Answer** $\hat V_E = (3.2 + 2.8 + 3.0)/3 = 3.0$, $\hat V_G = 9.0$, $\hat H^2 = 0.75$. $\hat V_A = 2 \times 12.0 - 17.4 = 6.6$ (Formula 24.3.1), $\hat h^2 = 6.6/12 = 0.55$, high by the breeders' convention. $\hat V_D = 9.0 - 6.6 = 2.4$. Check: $V_{B_1} + V_{B_2}$ should be $V_A + 2V_D + 2V_E = 6.6 + 4.8 + 6.0 = 17.4$, as observed (the check is not independent: three equations, three unknowns).
+17. Two inbred maize lines yield $6.0$ and $5.0\,\mathrm{t\,ha^{-1}}$ and their $\mathrm{F}_1$ $9.0\,\mathrm{t\,ha^{-1}}$. Assuming that heterosis is due to dominance at loci where the lines are fixed for different alleles, predict the mean yield of the $\mathrm{F}_2$ and of the $\mathrm{F}_3$ obtained by self-fertilization. Why do farmers buy new hybrid seed every year?
+
+    **Answer** Mid-parent $5.5$; $\mathrm{F}_1$ heterosis $3.5$. The $\mathrm{F}_2$ keeps half of it: $5.5 + 1.75 = 7.25$; the selfed $\mathrm{F}_3$ a quarter: $5.5 + 0.875 = 6.375\,\mathrm{t\,ha^{-1}}$ (Remark 24.7.1). Seed saved from a hybrid crop is an $\mathrm{F}_2$, which yields less and is variable, because the heterozygosity of the $\mathrm{F}_1$ is lost by segregation.
+18. In the wheat cross of Example 24.3.2, the breeder selects the tallest 20 % of the $\mathrm{F}_2$ plants and intercrosses them at random. Predict the response, and explain why the prediction based on $H^2$ would be too optimistic.
+
+    **Answer** $\sigma_P = \sqrt{40} = 6.32\,\mathrm{cm}$, $i = 1.40$ for $p = 0.2$ (Example 24.5.1), $S = 8.85\,\mathrm{cm}$. $R = h^2 S = 0.45 \times 8.85 = 4.0\,\mathrm{cm}$. Using $H^2 = 0.75$ would predict $6.6\,\mathrm{cm}$, but the dominance part of the genetic superiority of the selected plants is not transmitted by their gametes (Example 24.3.1).

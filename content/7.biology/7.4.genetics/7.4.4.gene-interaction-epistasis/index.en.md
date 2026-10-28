@@ -37,9 +37,9 @@ Epistasis is the inter-locus counterpart of dominance, which is an interaction b
 |---|---|---|---|---|---|
 | none (new phenotypes) | 1, 2, 3, 4 | 9:3:3:1 | 1:1:1:1 | two independent pathways | lentil seed coat, chicken comb |
 | recessive epistasis ($aa$ epistatic to $B$, $b$) | 1, 2, 3, 3 | 9:3:4 | 1:1:2 | $A$ acts before $B$ in one pathway: $aa$ blocks the first step, and $B$ versus $b$ only matters after it | Labrador coat color, Bombay phenotype |
-| complementary genes | 1, 2, 2, 2 | 9:7 | 1:3 | two steps in series, each needing a functional enzyme | sweet pea flower color |
+| complementary genes | 1, 2, 2, 2 | 9:7 | 1:3 | two steps in series, each needing a functional enzyme | sweet pea flower color, white clover cyanogenesis |
 | dominant epistasis ($A$ epistatic to $B$, $b$) | 1, 1, 2, 3 | 12:3:1 | 2:1:1 | $A$ blocks or masks the pathway in which $B$ and $b$ act | summer squash fruit color |
-| dominant suppression (dominant epistasis II) | 1, 1, 2, 1 | 13:3 | 3:1 | $A$ suppresses the phenotype that $B$ produces; color needs $aaB\_$ | white leghorn × white wyandotte chickens |
+| dominant suppression (dominant epistasis II) | 1, 1, 2, 1 | 13:3 | 3:1 | $A$ suppresses the phenotype that $B$ produces; color needs $aaB\_$ | white leghorn × white wyandotte chickens, silkworm cocoon color |
 | duplicate genes (redundancy) | 1, 1, 1, 2 | 15:1 | 3:1 | either gene suffices: two parallel pathways or two copies of one function | shepherd's purse seed capsule, maize leaf development |
 | duplicate genes with cumulative effect | 1, 2, 2, 3 | 9:6:1 | 1:2:1 | the products of the two genes add up | squash fruit shape |
 
@@ -53,11 +53,13 @@ Epistasis is the inter-locus counterpart of dominance, which is an interaction b
 
 **Example 4.2.4 (Dominant epistasis: squash color)** In summer squash, the dominant allele $W$ of one gene prevents pigment deposition and gives white fruit; in $ww$ plants, a second gene gives yellow ($Y\_$) or green ($yy$) fruit. The $\mathrm{F}_2$ of $WwYy$ has 12 white ($W\_\,\_\_$) : 3 yellow ($wwY\_$) : 1 green ($wwyy$).
 
-**Example 4.2.5 (Dominant suppression: chickens)** White leghorn chickens ($IICC$) carry a dominant inhibitor $I$ that prevents pigmentation; white wyandottes ($iicc$) lack the ability to make pigment ($cc$). Their $\mathrm{F}_1$ ($IiCc$) is white, and the $\mathrm{F}_2$ has 13 white : 3 colored, since only $iiC\_$ birds (3/16) are colored.
+**Example 4.2.5 (Dominant suppression: chickens)** White leghorn chickens ($IICC$) carry a dominant inhibitor $I$ that prevents pigmentation; white wyandottes ($iicc$) lack the ability to make pigment ($cc$). Their $\mathrm{F}_1$ ($IiCc$) is white, and the $\mathrm{F}_2$ has 13 white : 3 colored, since only $iiC\_$ birds (3/16) are colored. The same 13:3 ratio appears for cocoon color in the silkworm *Bombyx mori*, where a dominant inhibitor $I$ prevents the yellow color produced by $Y$: the $\mathrm{F}_2$ of white $IIyy$ × yellow $iiYY$ has 13 white ($I\_\,\_\_$ and $iiyy$) : 3 yellow ($iiY\_$).
 
 **Example 4.2.6 (Duplicate genes)** In shepherd's purse (*Capsella bursa-pastoris*), seed capsules are triangular if a plant carries a dominant allele of either of two genes and ovoid only in $aabb$: the $\mathrm{F}_2$ ratio is 15:1. The two genes arose by a duplication of the genome (the species is tetraploid), and each copy can do the job. In maize, plants that are $aabb$ for two genes that act in parallel to recruit cells into the leaf have thin, abnormal leaves, while one functional copy of either gene suffices.
 
 **Example 4.2.7 (Cumulative duplicate genes)** Summer squash fruit can be disc-shaped, spherical or long. A cross of two true-breeding spherical lines ($AAbb \times aaBB$) gives disc-shaped $\mathrm{F}_1$ and an $\mathrm{F}_2$ of 9 disc ($A\_B\_$) : 6 spherical ($A\_bb$ and $aaB\_$) : 1 long ($aabb$): one active gene gives an intermediate shape and two give the full effect.
+
+**Example 4.2.8 (Complementary genes resolved biochemically: cyanogenesis in white clover)** Many plants of white clover (*Trifolium repens*) release hydrogen cyanide when their leaves are crushed, a defense against herbivores. Two components are needed: cyanogenic glucosides (linamarin and lotaustralin), whose synthesis requires the dominant allele of *Ac*, and the hydrolyzing enzyme linamarase, encoded by the dominant allele of *Li*; the two are kept in different compartments of the cell and meet only when the tissue is damaged. The recessive alleles are deletions of the genes (*ac* lacks the cytochrome P450 gene *CYP79D15*). Two acyanogenic plants, $Ac/Ac\,li/li$ and $ac/ac\,Li/Li$, give a cyanogenic $\mathrm{F}_1$ and an $\mathrm{F}_2$ of 9 cyanogenic : 7 acyanogenic. Corkill (1942) split the 7 by testing leaf extracts: adding linamarase releases cyanide from $Ac\_\,li/li$ extracts (3/16), adding glucoside releases it from $ac/ac\,Li\_$ extracts (3/16), and neither helps $ac/ac\,li/li$ (1/16). The biochemical tests restore the 9:3:3:1 hidden in 9:7, a direct demonstration that the merged classes of Formula 4.2.1 are distinct genotypes. Frequencies of the two alleles form latitudinal clines in Europe and North America, cyanogenic plants being commoner in warm climates, where herbivores are abundant, and rarer where frost damages leaves and releases cyanide in the plant's own tissue.
 
 ### 4.2.3. Why Ratios Reveal Pathways
 
@@ -241,6 +243,16 @@ Problems in genetics often give a set of progeny counts and ask for the genetic 
 
 Each row follows from the per-locus survivors: for $AA$ lethal, the $A$ locus gives $\tfrac23\,Aa : \tfrac13\,aa$ instead of $\tfrac34 : \tfrac14$, and $(2:1)(3:1) = 6:3:2:1$; for both, $(2:1)(2:1) = 4:2:2:1$. Lethality that removes a combination of genotypes at two loci (as $aabb$) cannot be factored and is computed from the 16 cells.
 
+Lethality can also act on gametes rather than zygotes. A pollen-lethal or partly pollen-lethal allele changes the gametic proportions of one sex, and the zygotes are then formed from unequal gametes.
+
+**Formula 4.8.2 (Gametic Selection)** Let a fraction $s$ of the $a$-bearing gametes of one sex (say the pollen) be nonfunctional, the other sex producing $A$ and $a$ in equal numbers. In $Aa \times Aa$ the functional pollen is $A : a = 1 : (1 - s)$, and the progeny are
+
+$$
+\mathbb{P}(AA) = \frac{1}{2(2 - s)}, \qquad \mathbb{P}(Aa) = \frac12, \qquad \mathbb{P}(aa) = \frac{1 - s}{2(2 - s)} .
+$$
+
+For $s = 1/2$ the genotypes are $2 : 3 : 1$ and the phenotypes $5 : 1$; for $s = 1$ (no $a$ pollen functions) they are $1 : 1 : 0$, and no recessive appears, although $a$ is still transmitted through the eggs. The reciprocal testcrosses distinguish gametic selection from zygotic lethality: with the $Aa$ plant as the seed parent the testcross gives 1:1; with it as the pollen parent, $1 : (1 - s)$. Combined with a second, normally segregating locus, the ratios multiply as before: $(5:1)(3:1) = 15 : 5 : 3 : 1$.
+
 ### 4.8.3. Testcross Ratios and Three Genes
 
 The testcross of a dihybrid, $AaBb \times aabb$, gives the four classes in equal numbers, and the same merging rules apply: 9:3:4 → 1:1:2, 9:7 → 1:3, 12:3:1 → 2:1:1, 13:3 → 3:1, 15:1 → 3:1, 9:6:1 → 1:2:1. Two interactions with the same testcross ratio (13:3 and 15:1) are separated by the $\mathrm{F}_2$.
@@ -260,6 +272,7 @@ With three genes the $\mathrm{F}_2$ has $27\,A\_B\_C\_$ and the other classes of
 | New phenotypes (4.1) | two genes in independent pathways: 9:3:3:1 with new classes (lentils, combs) |
 | **Epistasis** (Definition 4.2.1) | one locus masks another; Mendelian vs statistical sense |
 | Ratios (Formula 4.2.1, table in 4.2.2) | merged $9:3:3:1$ classes: **recessive epistasis** 9:3:4 (1:1:2), **complementary gene action** 9:7 (1:3), **dominant epistasis** 12:3:1 (2:1:1), dominant suppression 13:3 (3:1), **duplicate genes** 15:1 (3:1), cumulative 9:6:1 (1:2:1) |
+| Biochemical resolution (Example 4.2.8) | clover extracts plus enzyme or substrate split 9:7 into 9:3:3:1 |
 | Pathways (4.2.3) | genes in series: the earlier step is epistatic (biosynthesis); parallel genes: 15:1 |
 | **Suppressor mutation** (Definition 4.3.1) | restores wild type; allele-specific suppression reveals contacts |
 | Redundancy (Definition 4.3.2) | synthetic lethality; $\varepsilon_{ab} = W_{ab} - W_aW_b$ (Formula 4.3.1) |
@@ -268,7 +281,7 @@ With three genes the $\mathrm{F}_2$ has $27\,A\_B\_C\_$ and the other classes of
 | One or two genes (4.5) | χ² comparison and a discriminating breeding test (Example 4.5.1, Algorithm 4.5.1) |
 | Polygenes (Definition 4.6.1, Formula 4.6.1) | $\mathrm{Bin}(2n, 1/2)$: $1:4:6:4:1$; extreme class $4^{-n}$, $n \approx \ln(1/f)/\ln 4$; normal limit |
 | Dog coat (4.7) | MC1R switch: $ee$ epistatic to *K*, *A*, *B*; $K^B$ epistatic to *A*; *M* pleiotropic |
-| Ratio puzzles (Algorithm 4.8.1) | $T = 4^n$; merge classes; lethality: $6:3:2:1$, $4:2:2:1$, $9:3:3$ (Formula 4.8.1); three genes: $27:37$, $27:9:28$, $63:1$ |
+| Ratio puzzles (Algorithm 4.8.1) | $T = 4^n$; merge classes; lethality: $6:3:2:1$, $4:2:2:1$, $9:3:3$ (Formula 4.8.1); gametic selection $5:1$ for half the $a$ pollen nonfunctional (Formula 4.8.2); three genes: $27:37$, $27:9:28$, $63:1$ |
 
 ## Questions
 
@@ -314,3 +327,21 @@ With three genes the $\mathrm{F}_2$ has $27\,A\_B\_C\_$ and the other classes of
 14. (Competition style.) In chickens, $I$ (dominant inhibitor) suppresses color and $cc$ is white. $IiCc \times iiCc$ is made. (a) Give the ratio of white to colored. (b) Among colored progeny, what fraction is $CC$?
 
     **Answer** (a) Colored requires $ii$ and $C\_$: $\tfrac12 \cdot \tfrac34 = \tfrac38$. White : colored = 5 : 3. (b) Among colored ($iiC\_$), $\mathbb{P}(CC \mid C\_) = 1/3$.
+15. In shepherd's purse the $\mathrm{F}_2$ of a triangular × ovoid cross is 15 triangular : 1 ovoid (duplicate genes). If each triangular $\mathrm{F}_2$ plant is self-fertilized, what fractions of them give (a) only triangular progeny, (b) 3 triangular : 1 ovoid, (c) 15 : 1?
+
+    **Answer** Triangular plants are the 15 of 16 classes other than $aabb$. (a) True-breeding requires $AA$ or $BB$: $AABB$, $AABb$, $AAbb$, $AaBB$, $aaBB$, which are $1 + 2 + 1 + 2 + 1 = 7$ sixteenths: $\tfrac7{15}$. (b) Heterozygous at one locus and recessive at the other ($Aabb$, $aaBb$): $\tfrac4{15}$. (c) $AaBb$: $\tfrac4{15}$. Check: $7 + 4 + 4 = 15$.
+16. A plant heterozygous $Aa$ is self-fertilized and gives 410 dominant and 90 recessive progeny. (a) Test 3:1. (b) Test the hypothesis that half of the $a$ pollen is nonfunctional. (c) What reciprocal testcrosses would confirm it?
+
+    **Answer** (a) Expected $375 : 125$; $\chi^2 = 3.27 + 9.80 = 13.1$ (1 df, $p = 3 \times 10^{-4}$): rejected. (b) Formula 4.8.2 with $s = 1/2$ predicts $5:1$, expected $416.7 : 83.3$; $\chi^2 = 0.11 + 0.53 = 0.64$ ($p = 0.42$): consistent. (c) $Aa$ (seed parent) × $aa$ should give 1:1; $aa$ (seed parent) × $Aa$ (pollen) should give $A : a = 1 : \tfrac12 = 2 : 1$.
+17. Two yellow short-tailed mice are crossed repeatedly, and the progeny are yellow short : yellow long : gray short : gray long $= 6 : 3 : 2 : 1$. (a) Which genotype is lethal? (b) Give the genotypes of the yellow long-tailed and of the gray short-tailed progeny. (c) What fraction of the surviving progeny is homozygous at both loci? (d) What would a ratio of $4:2:2:1$ mean?
+
+    **Answer** (a) Yellow : gray $= 9 : 3 = 3 : 1$, short : long $= 8 : 4 = 2 : 1$: the tail locus is the one with a lethal homozygote, $DD$ (short $D$ dominant for tail length, recessive lethal). (b) Yellow long: $YYdd$ or $Yydd$ ($1 : 2$); gray short: $yyDd$. (c) Of 12 surviving parts, $YYdd$ and $yydd$ are 1 each: $\tfrac2{12} = \tfrac16$. (d) $(2:1)(2:1)$: both $YY$ and $DD$ are lethal, and every yellow short survivor is $YyDd$.
+18. A black dog crossed with a white dog gives all black puppies; intercrossing the $\mathrm{F}_1$ gives 25 black, 10 brown and 13 white puppies. Propose a model and test it.
+
+    **Answer** Three classes with the white class about a quarter suggest recessive epistasis, 9 black ($A\_B\_$) : 3 brown ($aaB\_$) : 4 white ($\_\_bb$), with $bb$ epistatic. Expected for $n = 48$: $27 : 9 : 12$, all at least 5; $\chi^2 = 4/27 + 1/9 + 1/12 = 0.34$ with two degrees of freedom ($p = 0.84$). The parents were $AABB$ (black) and $\_\_bb$ white; since the $\mathrm{F}_1$ must be $AaBb$, the white parent was $aabb$. A testcross of the $\mathrm{F}_1$ to $aabb$ should give $1 : 1 : 2$.
+19. An $\mathrm{F}_2$ of 160 plants from the cross $Ac/Ac\,li/li \times ac/ac\,Li/Li$ in white clover is tested by Corkill's method. How many plants are expected (a) to release cyanide on crushing, (b) to release it only when linamarase is added, (c) only when glucoside is added, (d) in neither case?
+
+    **Answer** (a) $\tfrac9{16} \times 160 = 90$. (b) $Ac\_\,li/li$: $\tfrac3{16} \times 160 = 30$. (c) $ac/ac\,Li\_$: $30$. (d) $ac/ac\,li/li$: $10$.
+20. (Competition style.) In a mammal, $bb$ is epistatic to black and brown ($A\_$ black, $aa$ brown in $B\_$ animals; $bb$ white, recessive epistasis), and a dominant allele $C$ at a third, unlinked locus prevents all pigmentation. The trihybrid $AaBbCc$ is intercrossed. Give the phenotypic ratio. What fraction of the white progeny is $CC$, and so certain to give only white offspring whatever its partner?
+
+    **Answer** Pigment requires $cc$ ($\tfrac14$), within which the ratio is $9 : 3 : 4$. Out of 64: black $9$, brown $3$, white $4 + 48 = 52$: ratio $9 : 3 : 52$. All $CC$ animals ($\tfrac{16}{64}$) are white and transmit $C$ to every offspring: $\tfrac{16}{52} = \tfrac4{13}$ of the white progeny. The other white animals ($Cc$, or $cc$ with $bb$) can have colored offspring with a suitable partner (for example $Cc\,BB \times cc\,bb$).
