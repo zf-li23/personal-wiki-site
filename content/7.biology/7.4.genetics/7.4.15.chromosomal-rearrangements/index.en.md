@@ -1,3 +1,270 @@
 ---
 title: Chromosomal Rearrangements
+description: Deletions, duplications, inversions and translocations; how they arise (double-strand breaks and end joining, non-allelic homologous recombination between repeats) and how they are detected; pseudodominance and deletion mapping, unequal crossing over and the Bar position effect, inversion loops and crossover suppression with a quantitative model of unbalanced gametes, balancer chromosomes and supergenes, translocation quadrivalents, semisterility and pseudolinkage, Robertsonian translocations and translocation Down syndrome, and the role of rearrangements in disease and genome evolution.
 ---
+
+Mutations within genes ([7.4.12](/7.4.12)) change a few base pairs. Chromosomal rearrangements change the arrangement of whole blocks of genes: a segment is lost, gained, turned around or moved to another chromosome. Many rearrangements change no gene at all, yet they have strong and characteristic genetic effects, because what they alter is the pairing and segregation of chromosomes in meiosis. A deletion uncovers recessive alleles on the homologue, an inversion makes recombinant chromatids lethal and so seems to suppress crossing over, a translocation makes half of the gametes unbalanced and links genes on different chromosomes. Each of these signatures can be read from crosses, and before DNA sequencing they were the main way of detecting rearrangements and of using them as tools. The cytological basis, the **karyotype** and **chromosome banding**, is in [7.3.17](/7.3.17#sec-17.4); the repair pathways that join broken DNA ends are in [7.2.8](/7.2.8) and [7.2.9](/7.2.9). This chapter uses the vocabulary of meiosis and **crossing over** from [7.4.5](/7.4.5) and the **mapping functions** of [7.4.8](/7.4.8). Changes in the number of chromosomes follow in [7.4.16](/7.4.16), transposable elements, which cause many rearrangements, in [7.4.17](/7.4.17), and the rearrangements of cancer genomes in [7.4.21](/7.4.21).
+
+## 15.1. Types, Origins and Detection
+
+### 15.1.1. Four Classes
+
+**Definition 15.1.1 (Chromosomal Rearrangement)** A **chromosomal rearrangement** (structural chromosome aberration) is a mutation that changes the structure of one or more chromosomes: a **deletion** (deficiency, Df) removes a segment; a **duplication** (Dp) adds an extra copy of a segment, in tandem, elsewhere on the same chromosome or on another; an **inversion** (In) reverses the orientation of a segment within a chromosome; a **translocation** (T) moves a segment to a nonhomologous chromosome, most often as a reciprocal exchange of segments between two nonhomologous chromosomes. Deletions and duplications change the dose of the genes in the segment (unbalanced rearrangements); inversions and reciprocal translocations change only their order (balanced rearrangements).
+
+The distinction between balanced and unbalanced rearrangements organizes the whole chapter. Unbalanced rearrangements have phenotypes because of gene dose, in the heterozygote and even more in the homozygote. Balanced rearrangements usually have no phenotype in the carrier unless a breakpoint lies in a gene or moves a gene next to a different regulatory environment; their consequences appear in the next generation, because meiosis in a heterozygote produces unbalanced gametes.
+
+![The four classes of chromosomal rearrangement (A) shown on lettered chromosomes (segments A–H; the waist with a dot is the centromere), with the two kinds of translocation: a reciprocal exchange between nonhomologous chromosomes (blue and green), and a Robertsonian translocation, the fusion of the long arms of two acrocentric chromosomes (here 14 and 21) at or near their centromeres with loss of the small chromosome formed by the two short arms. B: non-allelic homologous recombination. Two copies of a repeat (R, yellow) on homologues that pair out of register; a crossover between them gives one chromosome with a deletion of the segment between the repeats and one with the reciprocal duplication. Crossovers between inverted repeats invert the segment between them, and between repeats on different chromosomes they give translocations](./plots/rearrangement-types.py)
+
+### 15.1.2. How Rearrangements Arise
+
+All rearrangements require that the continuity of the double helix is broken and restored in a new way. Two mechanisms account for most of them.
+
+1. Breakage and rejoining. Ionizing radiation, some chemicals, collapsed replication forks and the enzymes of transposons produce double-strand breaks. If two breaks are present at once, **nonhomologous end joining** ([7.2.8](/7.2.8)) can join the wrong ends. Two breaks in one chromosome arm give a deletion (the segment between them is lost) or an inversion (it is rejoined in reverse); two breaks in nonhomologous chromosomes give a reciprocal translocation. Only products with one centromere and two telomeres are transmitted stably through cell division: an acentric fragment is lost and a dicentric chromosome is torn at anaphase, which starts new cycles of breakage.
+2. Recombination between repeated sequences. **Homologous recombination** ([7.2.9](/7.2.9)) normally uses the allelic sequence on the sister chromatid or homologue. When the genome contains two copies of a sequence, it can recombine between non-allelic copies.
+
+**Definition 15.1.2 (Non-Allelic Homologous Recombination)** **Non-allelic homologous recombination** (NAHR) is crossing over or other homologous recombination between two copies of a repeated sequence that are not at the same position (not allelic), such as two low-copy repeats on one chromosome, two copies of a transposable element, or repeats on different chromosomes. Between direct repeats on misaligned homologues or sister chromatids it produces a deletion and the reciprocal duplication; within one chromatid between inverted repeats it produces an inversion; between repeats on nonhomologous chromosomes, a translocation.
+
+NAHR explains why many human genomic disorders recur in unrelated families with the same breakpoints: segmental duplications (blocks over $1\,\mathrm{kb}$ with more than $90\,\%$ identity, about $7\,\%$ of the genome, [7.2.2](/7.2.2#sec-2.2.3)) flank the same segments in everyone, so the same deletion arises again and again. The best-studied pair is on 17p12: a $1.4\,\mathrm{Mb}$ duplication containing *PMP22* causes Charcot–Marie–Tooth disease type 1A, and the reciprocal deletion causes hereditary neuropathy with liability to pressure palsies, a milder disease. The same mechanism underlies the 22q11.2 deletion syndrome (about $3\,\mathrm{Mb}$, about 1 in 4 000 births), Williams syndrome (7q11.23, about $1.5$–$1.8\,\mathrm{Mb}$) and Smith–Magenis syndrome (17p11.2). A third mechanism, replication errors in which a stalled fork switches templates (fork stalling and template switching, microhomology-mediated break-induced replication), produces complex rearrangements with small duplications and triplications. In cancer cells and occasionally in the germline a single catastrophic event, chromothripsis, shatters one chromosome or arm into tens to hundreds of fragments that are rejoined in random order and orientation ([7.3.26](/7.3.26)).
+
+### 15.1.3. Detection
+
+| Method | What it detects | Resolution |
+|---|---|---|
+| G-banded karyotype ([7.3.17](/7.3.17#sec-17.4)) | all classes, if large; balanced and unbalanced | about $5$–$10\,\mathrm{Mb}$ |
+| Polytene chromosomes of *Drosophila* | loops and unpaired segments in heterozygotes | single bands, about $20\,\mathrm{kb}$ |
+| **Fluorescence in situ hybridization** with locus probes | presence, number and position of a probe sequence | about $50$–$100\,\mathrm{kb}$ (probe size) |
+| Chromosome painting, spectral karyotyping (24 colors) | translocations as two-colored chromosomes | a few Mb |
+| Microarray comparative genomic hybridization, SNP arrays | gains and losses (copy number) only | tens of kb |
+| Short-read genome sequencing | copy number from read depth; breakpoints from split reads and discordant pairs | single base at breakpoints, poor in repeats |
+| Long-read sequencing, optical mapping | all classes, including inversions between repeats | best for repeat-mediated events |
+
+Copy-number methods cannot see balanced rearrangements, which change no dose; sequencing sees them only if reads span the breakpoints. In clinical practice chromosomal microarrays replaced the karyotype as the first test for children with developmental delay, because most pathogenic rearrangements in this group are small deletions and duplications; the karyotype remains the test for balanced translocations in couples with recurrent miscarriage.
+
+Each class of rearrangement also has a genetic signature, observable in crosses without any cytology. These signatures are summarized here and explained in the sections that follow.
+
+**Algorithm 15.1.1 (Recognizing a Rearrangement from Genetic Data)**
+1. A heterozygote shows the phenotype of recessive alleles carried on the homologue (pseudodominance), for a set of adjacent loci only, and the homozygote is lethal: a deletion of those loci (15.2).
+2. A phenotype depends on the number of copies of a region, and new alleles with more or fewer copies arise together with recombination of flanking markers: a tandem duplication undergoing unequal crossing over (15.3).
+3. Recombination between markers within one region of one chromosome nearly disappears in heterozygotes but is normal in homozygotes, and (for pericentric cases, or in organisms whose male meiosis includes crossing over) fertility is reduced: an inversion (15.4).
+4. Heterozygotes are about half sterile (semisterility), and markers on two different chromosomes segregate as if linked (pseudolinkage): a reciprocal translocation (15.5).
+5. A phenotype appears without a change in the gene, depends on where the gene now lies, and reverts when the original arrangement is restored: a position effect (15.6).
+
+## 15.2. Deletions
+
+### 15.2.1. Phenotypes of Deletions
+
+A deletion removes every gene in the segment. Homozygotes for all but very small deletions die, because some of the deleted genes are essential; the smaller the deletion, the more likely it is to be homozygous viable. Heterozygotes have one copy of each deleted gene, and suffer when one of them is haploinsufficient (**haploinsufficiency**, [7.4.3](/7.4.3)); the effects of many genes at half dose add up, so large deletions are lethal even when heterozygous. In *Drosophila* about $1$–$2\,\%$ of the genome can be deleted in heterozygotes before viability falls sharply, and in humans heterozygous deletions of more than a few megabases of gene-rich DNA are rarely seen in live births. A heterozygote is also vulnerable: a new loss-of-function mutation in the remaining copy has the full effect, which is the logic of tumor suppressor genes ([7.4.21](/7.4.21)).
+
+| Human deletion | Region | Size | Frequency | Main features |
+|---|---|---|---|---|
+| Cri-du-chat (5p−) | 5p15 | variable, often terminal | about 1 in 20 000–50 000 | high-pitched cry, microcephaly, intellectual disability |
+| Wolf–Hirschhorn (4p−) | 4p16.3 | variable | about 1 in 50 000 | facial features, seizures, growth delay |
+| Williams | 7q11.23 | $1.5$–$1.8\,\mathrm{Mb}$, NAHR | about 1 in 7 500–10 000 | supravalvular aortic stenosis (*ELN*), sociable personality |
+| 22q11.2 deletion (DiGeorge) | 22q11.21 | $1.5$–$3\,\mathrm{Mb}$, NAHR | about 1 in 4 000 | heart defects, thymic and parathyroid hypoplasia (*TBX1*), palate |
+| Prader–Willi / Angelman | 15q11–q13 | about $5\,\mathrm{Mb}$, NAHR | about 1 in 15 000–20 000 each | depend on the parental origin of the deletion ([7.4.18](/7.4.18)) |
+
+### 15.2.2. Pseudodominance and Deletion Mapping
+
+**Definition 15.2.1 (Pseudodominance)** **Pseudodominance** is the expression of a recessive allele in a heterozygote whose homologous chromosome carries a deletion of the corresponding locus: the recessive allele appears dominant because it is the only copy present.
+
+Pseudodominance turns deletions into a mapping tool that works like a **complementation test** ([7.4.4](/7.4.4)) with a missing segment in place of a mutant allele. A recessive mutation $m$ is crossed with a set of deletions with known end points. If the mutant phenotype appears in the $m/\mathrm{Df}$ progeny, the deletion uncovers $m$, so $m$ lies within it; if not, $m$ lies outside. With a set of overlapping deletions, the mutation is placed in the interval that is covered by exactly the deletions that uncover it. This is the same logic as the recombination-based deletion mapping of the phage rII genes (Definition 13.2.1); in diploids it needs no recombinants at all, only one generation of crosses, and the *Drosophila* deficiency kits, sets of a few hundred deletions that together cover almost the whole genome, map a new recessive mutation in two rounds of crosses. In polytene chromosomes the deleted bands are visible directly as an unpaired loop in the heterozygote, so a gene could be assigned to a few bands before it was cloned.
+
+**Example 15.2.1** A recessive eye mutation $m$ of *Drosophila* is crossed with five deletions of a region whose bands are numbered 1–10. Df1 removes bands 1–4, Df2 removes 3–6, Df3 removes 5–8, Df4 removes 6–9, Df5 removes 8–10. The $m/\mathrm{Df}$ flies show the mutant eye with Df2 and Df3 only. The mutation lies in the bands covered by both Df2 and Df3 (5–6) and by none of Df1, Df4 and Df5; Df4 covers band 6, so $m$ is in band 5.
+
+Deletion heterozygosity also changes map distances. Crossing over requires a homologous partner, so no crossovers occur within the deleted segment, and the genetic distance between markers on either side of a deletion is shorter in a deletion heterozygote than in a normal homozygote by about the genetic length of the deleted segment.
+
+## 15.3. Duplications
+
+### 15.3.1. Dose and Unequal Crossing Over
+
+Duplications are better tolerated than deletions of the same size: three copies of a gene are less often harmful than one. A duplication heterozygote has three copies of the genes in the segment; dosage-sensitive genes give phenotypes (the *PMP22* duplication of 15.1.2, duplications of *MECP2* in males, triplications of *SNCA* in familial Parkinson disease). Tandem duplications are also unstable, because the repeated copies can pair out of register.
+
+**Definition 15.3.1 (Unequal Crossing Over)** **Unequal crossing over** is crossing over between misaligned copies of a tandemly repeated sequence on homologous chromosomes or sister chromatids. It produces two recombinant chromatids, one with more and one with fewer copies of the repeat than either parental chromatid, and the markers flanking the repeat are recombinant.
+
+If an array has $n$ copies of a repeat unit on each homologue, an unequal crossover shifted by $k$ units gives arrays of $n + k$ and $n - k$ copies. Repeated rounds produce a population of alleles with different copy numbers, the copy-number variants of [7.4.14](/7.4.14) (the opsin gene array of [7.4.13](/7.4.13#sec-13.5), the α-globin genes whose deletion causes α-thalassemia, the amylase gene *AMY1*, with 2–15 copies per haploid genome in different people, and the olfactory receptor genes). Unequal crossing over also explains how gene families grow and shrink over evolutionary time ([7.4.14](/7.4.14)).
+
+### 15.3.2. *Bar* and the Discovery of Position Effects
+
+The dominant X-linked mutation *Bar* ($B$) of *Drosophila melanogaster* reduces the compound eye to a narrow vertical bar. Bridges and Muller (1936) showed in polytene chromosomes that *Bar* is a tandem duplication of the region 16A of the X chromosome; double-*Bar* ($BB$) carries three copies in tandem. Earlier, Sturtevant (1925) had found that $B/B$ females occasionally (in roughly one of every 1 600 progeny) give a wild-type son or a double-*Bar* son, and that in nearly every case the markers on either side of *Bar* (*forked* and *fused*) were recombinant: the new alleles arose by unequal crossing over, which was the first evidence that a gene could be duplicated.
+
+Sturtevant also counted the facets of the eyes. Two genotypes carry the same number of 16A copies, four, but differ in their arrangement: $B/B$ (two plus two) has about 68 facets, $BB/+$ (three plus one) about 45. The phenotype depends on the arrangement, not only on the dose.
+
+![Facets per eye in *Drosophila* females with 2 to 6 copies of the 16A region (approximate values from Sturtevant's counts of 1925). Facet number falls steeply with copy number, and the two genotypes with four copies differ: three copies in tandem on one X (BB/+) reduce the eye more than two copies on each X (B/B). This difference, which depends on the arrangement and not on the dose, was the first position effect](./plots/bar-facets.py)
+
+A change of phenotype caused by a change in the chromosomal position of a gene, without a change in its sequence, is a **position effect** ([7.2.15](/7.2.15#def-15.6.1)); *Bar* was the first example.
+
+For *Bar*, the explanation is now known: the duplication places the eye-repressing homeobox genes *BarH1* and *BarH2* under the control of duplicated regulatory sequences, so the effect of each copy depends on its neighbors. The variegating position effects caused by translocations and inversions that move a gene next to heterochromatin are treated as epigenetic phenomena in [7.4.18](/7.4.18).
+
+## 15.4. Inversions
+
+### 15.4.1. Paracentric and Pericentric Inversions
+
+**Definition 15.4.1 (Paracentric and Pericentric Inversions)** A **paracentric inversion** is an inversion whose inverted segment lies within one chromosome arm and does not include the centromere; a **pericentric inversion** includes the centromere, so that its breakpoints lie in different arms. A pericentric inversion can change the position of the centromere, and hence the ratio of the arm lengths; a paracentric one cannot.
+
+An inversion carrier has all its genes in normal dose, and most inversion homozygotes and heterozygotes are phenotypically normal. Exceptions arise when a breakpoint disrupts a gene: about $40\,\%$ of severe hemophilia A is caused by an inversion of the tip of Xq that breaks the *F8* gene, by recombination between a repeat in intron 22 of *F8* and an inverted copy $0.5\,\mathrm{Mb}$ away. The genetic consequences of inversions are in the heterozygotes' meiosis.
+
+### 15.4.2. The Inversion Loop and Its Products
+
+In an inversion heterozygote, homologous segments pair along their whole length only if one homologue forms a loop: the inverted segment of one homologue lines up with the normal segment of the other, gene by gene, in the opposite direction. Crossing over outside the loop is normal. A crossover inside the loop has different consequences in the two kinds of inversion.
+
+![A single crossover (X) in the inversion loop of a heterozygote; one chromatid of each homologue is drawn in the loop (blue: normal order A B o C D E F G; pink: inverted), and the four products are listed below. The two chromatids not involved in the crossover keep the parental orders. A: paracentric inversion of D–E–F. The two recombinant chromatids are a dicentric chromatid, which forms a bridge at anaphase I and breaks, and an acentric fragment, which is lost; both carry duplications and deficiencies. B: pericentric inversion of B to E, which includes the centromere. Both recombinant chromatids have one centromere, but each carries a duplication of one end of the chromosome and a deficiency of the other end](./plots/inversion-loops.py)
+
+**Proposition 15.4.1 (Products of a Crossover in an Inversion Loop)** Let a crossover occur between two chromatids of an inversion heterozygote inside the inverted segment. (a) In a paracentric inversion one recombinant chromatid is dicentric and the other acentric; both lack some genes and duplicate others. (b) In a pericentric inversion both recombinant chromatids are monocentric; one duplicates the segment distal to the inversion on one arm and lacks the distal segment of the other arm, and the other carries the reciprocal duplication and deficiency. In both cases the two chromatids not involved in the crossover are balanced, one with the normal and one with the inverted order.
+
+**Proof** Write the normal order as $L\,S\,R$, where $S$ is the inverted segment and $L$, $R$ the parts to its left and right, so the inverted homologue is $L\,S^{-1}\,R$. Split $S = S_1 S_2$ at the crossover; in the inverted homologue the order is $L\,S_2^{-1}S_1^{-1}\,R$. The crossover joins the part of one chromatid on one side of the point to the part of the other chromatid on the other side, with homologous sites matched. The normal chromatid's piece $L\,S_1$ is joined to the piece of the inverted chromatid that holds $S_2$, namely $L\,S_2^{-1}$, read from the crossover point outwards as $S_2\,L^{-1}$; the product is $L\,S_1S_2\,L^{-1}$. The other product joins the inverted chromatid's piece $S_1^{-1}R$, read towards the point as $R^{-1}S_1$, to the normal piece $S_2\,R$: it is $R^{-1}S_1S_2\,R$. If the centromere lies in $L$ (paracentric), the first product has two centromeres and the second none. If the centromere lies in $S$ (pericentric), each product has exactly one centromere; the first has two copies of $L$ and no $R$, the second two copies of $R$ and no $L$. $\square$
+
+### 15.4.3. Inversions as Crossover Suppressors
+
+Recombinant chromatids from crossovers in the loop are unbalanced, and gametes carrying them either fail or give inviable zygotes. Recombinants for genes inside the inversion, and for genes nearby, are therefore almost absent among the offspring of inversion heterozygotes, as though crossing over were suppressed. Crossing over itself is not suppressed (in small inversions the loop may fail to form, which does reduce exchange); what is lost is the recombinant products.
+
+The cost depends on the sex and on the type of inversion. In *Drosophila* females and in the megaspores of plants, the dicentric bridge of a paracentric inversion holds the two recombinant chromatids in the middle of the meiotic products, and the egg or the functional megaspore, which forms from an end product, receives a non-recombinant chromatid; female fertility is then hardly reduced. *Drosophila* males have no meiotic crossing over at all. In pollen, sperm of other species and for pericentric inversions in both sexes, unbalanced products reduce fertility.
+
+**Formula 15.4.1 (Unbalanced Products of an Inversion Heterozygote)** Let the inverted segment have genetic length $d$ (in morgans), crossovers form as a Poisson process with no interference, and the two chromatids of each crossover be chosen at random (no chromatid interference). A chromatid that took part in an odd number of crossovers inside the loop is unbalanced, so the fraction of unbalanced meiotic products is
+
+$$
+u = \tfrac12\bigl(1 - \mathrm{e}^{-2d}\bigr),
+$$
+the Haldane function of Formula 8.5.1. With complete interference (at most one crossover per bivalent in the segment) $u = d$ for $d \le \frac12$.
+
+**Proof** A chromatid takes part in each crossover with probability $1/2$, so the number of exchanges it undergoes is a thinned Poisson variable with mean $2d \cdot \frac12 = d$; the probability that a $\mathrm{Poi}(d)$ variable is odd is $\mathrm{e}^{-d}\sinh d = \frac12(1 - \mathrm{e}^{-2d})$. An even number of exchanges (including two-strand double crossovers) restores both ends of the chromatid from the same homologue and leaves it balanced. With at most one crossover, the probability of a crossover in the segment is $2d$ and half of the products of that meiosis are unbalanced. $\square$
+
+![Fraction of unbalanced meiotic products of an inversion heterozygote as a function of the genetic length of the inverted segment (Formula 15.4.1), without interference (solid line; circles: simulation of 20 000 meioses with random chromatid choice) and with complete interference (dashed). Even for long inversions the fraction stays below one half, so an inversion heterozygote is at most semisterile](./plots/inversion-fertility.py)
+
+**Example 15.4.1** A pericentric inversion spans $20\,\mathrm{cM}$. Without interference, $u = \frac12(1 - \mathrm{e}^{-0.4}) = 0.165$; with complete interference $u = 0.20$. About one sixth to one fifth of the gametes of each heterozygous parent are unbalanced; in humans, where most such zygotes are lost early, this appears as an increased miscarriage rate. Since the duplicated and deleted segments are the distal ones, a small inversion near the telomeres gives small imbalances that can survive to birth (recombinant chromosome 8 syndrome from the inv(8)(p23q22) of some families), whereas the common pericentric inversion of chromosome 9, inv(9)(p12q13), found in about $1$–$3\,\%$ of people, involves heterochromatin and has no known effect on fertility.
+
+### 15.4.4. Balancer Chromosomes
+
+**Definition 15.4.2 (Balancer Chromosome)** A **balancer chromosome** is a chromosome carrying multiple overlapping inversions that suppress the recovery of recombinants with its homologue along its whole length, a recessive lethal (or sterile) mutation that prevents it from becoming homozygous, and a dominant visible marker that identifies flies that carry it.
+
+A recessive lethal mutation $l$ cannot be kept as a homozygous stock. Kept over a balancer, it is maintained without selection: in $l/\mathrm{Bal} \times l/\mathrm{Bal}$, the $l/l$ and $\mathrm{Bal}/\mathrm{Bal}$ zygotes die, and all survivors are $l/\mathrm{Bal}$, identified by the dominant marker. The stock breeds true, and the absence of recombinants keeps $l$ on its original chromosome with its flanking markers. The standard *Drosophila* balancers are *FM7* (X chromosome), *CyO* (chromosome 2, marked with *Curly* wings) and *TM3* and *TM6B* (chromosome 3). Balancers are indispensable in genetic screens ([7.4.19](/7.4.19)): they let a single mutagenized chromosome be followed through several generations and made homozygous in a known fraction of the progeny.
+
+**Example 15.4.2** In a cross of $l/\mathit{CyO}$ females with $l/\mathit{CyO}$ males, a quarter of the zygotes are $l/l$, a quarter $\mathit{CyO}/\mathit{CyO}$ and half $l/\mathit{CyO}$; all survivors have curly wings. If straight-winged flies appear in the next generation, they must be $l/l$ (the putative lethal is in fact viable, or a revertant or a crossover onto the balancer has occurred), which is the criterion used to score lethality in screens: the absence of the non-balancer class.
+
+### 15.4.5. Inversions in Populations
+
+Because they suppress recombination, inversions keep combinations of alleles together. Dobzhansky's studies of *Drosophila pseudoobscura* (from 1936) found that wild populations are polymorphic for many inversions of the third chromosome (named Standard, Arrowhead, Chiricahua and others), whose frequencies vary along altitudinal gradients and over the seasons, and which rise and fall predictably in population cages: they are coadapted gene complexes maintained by selection.
+
+**Definition 15.4.3 (Supergene)** A **supergene** is a group of tightly linked loci, often held together by one or more inversions, that controls a complex polymorphic phenotype and is inherited as a single Mendelian unit with a few alternative alleles (haplotypes).
+
+The mimicry morphs of the butterfly *Heliconius numata* are controlled by a supergene, *P*, whose alternative haplotypes differ by up to three nested inversions. The social form of the fire ant *Solenopsis invicta* (colonies with one queen or many) is determined by a "social chromosome" in which a region of about $13\,\mathrm{Mb}$ carrying inversions does not recombine, and the three male morphs of the ruff (*Calidris pugnax*) by a $4.5\,\mathrm{Mb}$ inversion. In humans, the H2 haplotype of an inversion at 17q21.31 has a frequency of about $20\,\%$ in Europeans. Suppressed recombination around a sex-determining gene is also the first step in the evolution of sex chromosomes ([7.4.6](/7.4.6)). The population genetics of such balanced polymorphisms is in [7.4.23](/7.4.23).
+
+## 15.5. Translocations
+
+### 15.5.1. Reciprocal Translocations
+
+**Definition 15.5.1 (Reciprocal Translocation)** A **reciprocal translocation** is an exchange of segments between two nonhomologous chromosomes, so that each carries part of the other. A carrier heterozygous for it has four relevant chromosomes: the two normal chromosomes N1 and N2 and the two translocated chromosomes T1 (centromere and proximal part of chromosome 1, distal part of chromosome 2) and T2 (the reverse).
+
+Balanced reciprocal translocations are found in about 1 in 500 people. Most carriers are healthy; some are infertile or have recurrent miscarriages, and a few have a disease because a breakpoint disrupts a gene or creates a fusion gene. The most famous fusion is the Philadelphia chromosome, the small derivative chromosome 22 of the translocation t(9;22)(q34;q11) present in the leukemic cells of about $95\,\%$ of patients with chronic myeloid leukemia. It joins the 5′ part of *BCR* on chromosome 22 to the 3′ part of *ABL1* on chromosome 9, and the fusion protein BCR–ABL1 is a constitutively active tyrosine kinase that drives proliferation; its inhibitor imatinib was the first drug designed against the product of a cancer-specific rearrangement ([7.4.21](/7.4.21)). In Burkitt lymphoma the translocation t(8;14) places *MYC* next to the immunoglobulin heavy-chain enhancer: a position effect that activates an oncogene.
+
+### 15.5.2. The Quadrivalent and Its Segregation
+
+In a translocation heterozygote, homologous segments pair in a cross-shaped quadrivalent at pachytene: each of the four chromosomes pairs with one partner over one of its parts and with another partner over the other. At anaphase I the four centromeres go two to each pole in one of three main patterns.
+
+**Definition 15.5.2 (Alternate and Adjacent Segregation)** In a reciprocal-translocation heterozygote, **alternate segregation** sends the two normal chromosomes to one pole and the two translocated chromosomes to the other (N1 + N2 and T1 + T2); **adjacent-1 segregation** sends each normal chromosome with the translocated chromosome that does not share its centromere (N1 + T2 and N2 + T1), so that homologous centromeres go to opposite poles; **adjacent-2 segregation** sends homologous centromeres to the same pole (N1 + T1 and N2 + T2).
+
+![A reciprocal translocation heterozygote. A: cross-shaped pairing of the four chromosomes at pachytene (one chromatid of each shown): normal chromosome 1 (N1, blue, A o B C D) pairs with T1 over its centromeric part and with T2 over its distal part, and likewise for chromosome 2 (green, W o X Y Z). B: the gametes produced by the three segregation patterns. Alternate segregation gives balanced gametes, one with both normal chromosomes and one with both translocated chromosomes; adjacent-1 and adjacent-2 segregation give gametes that duplicate one distal segment and lack another. Adjacent-2 is rare, because homologous centromeres normally go to opposite poles](./plots/translocation-segregation.py)
+
+Alternate segregation yields two kinds of balanced gametes, one normal and one carrying the balanced translocation. Both adjacent patterns yield gametes that duplicate one translocated segment and lack the other. Alternate and adjacent-1 segregation are about equally frequent in many species, because they differ only in how the cross opens up into a ring or chain at metaphase I; adjacent-2 is rare.
+
+**Definition 15.5.3 (Semisterility)** **Semisterility** is the reduction, to about one half, of the fertility of translocation heterozygotes (and to a lesser degree of inversion heterozygotes), caused by the unbalanced gametes or zygotes produced by adjacent segregation.
+
+**Formula 15.5.1 (Fertility of a Translocation Heterozygote)** If the quadrivalent segregates alternately with probability $a$, by adjacent-1 with probability $b$ and by adjacent-2 with probability $c = 1 - a - b$, and there is no crossing over between the centromeres and the breakpoints, the fraction of balanced gametes is $a$; if unbalanced gametes are not viable, the fertility relative to a normal homozygote is $a$, and half of the offspring of the heterozygote are themselves heterozygous carriers.
+
+In maize and many other plants pollen from translocation heterozygotes is about $50\,\%$ aborted, and in the ear about half of the ovules fail; the semisterility was how the first translocations were recognized (Belling, 1920s, in *Datura* and *Oenothera*). In humans many unbalanced zygotes die in early pregnancy, which is why carriers have recurrent miscarriages; small imbalances survive and cause congenital malformations, and the empirical risk of an unbalanced liveborn child for a carrier parent ranges from below $1\,\%$ to about $20\,\%$ depending on the chromosomes and breakpoints.
+
+The evening primrose *Oenothera lamarckiana* carries reciprocal translocations of all its seven chromosome pairs, which pair in a ring of 12 chromosomes and one bivalent; regular alternate segregation of the ring, together with balanced lethals that kill the homozygotes, makes the whole genome behave as two linkage groups that never recombine. De Vries (1901) took the rare exceptions in these plants for new species, the "mutations" of his mutation theory.
+
+### 15.5.3. Pseudolinkage
+
+**Definition 15.5.4 (Pseudolinkage)** **Pseudolinkage** is the apparent linkage, in the offspring of a translocation heterozygote, of genes on two different (nonhomologous) chromosomes that are involved in the translocation: only gametes from alternate segregation give viable offspring, and these carry either both normal or both translocated chromosomes, so the alleles on N1 and N2 are transmitted together, as are those on T1 and T2.
+
+If the alleles $a$ and $p$ lie on N1 and N2, and $A$ and $P$ on T1 and T2, the viable gametes are mostly $ap$ and $AP$, as if $a$ and $p$ were linked in coupling. Recombinant-looking gametes ($Ap$, $aP$) arise only if a crossover occurs between a marker and the breakpoint in a viable product.
+
+**Formula 15.5.2 (Apparent Recombination Under Pseudolinkage)** If a marker on chromosome 1 recombines with the breakpoint at frequency $r_1$ and a marker on chromosome 2 with the breakpoint at frequency $r_2$, independently, then among the balanced gametes the two markers show the recombination frequency
+
+$$
+r \approx r_1(1 - r_2) + r_2(1 - r_1) = r_1 + r_2 - 2r_1r_2 .
+$$
+
+A gamete is recombinant for the two markers if exactly one of the two marker–breakpoint intervals had a crossover in its chromatid. Pseudolinkage is a way of mapping a translocation breakpoint relative to genes on both chromosomes, and in plant breeding it was used to tie a selectable marker to a gene on another chromosome.
+
+### 15.5.4. Robertsonian Translocations and Down Syndrome
+
+**Definition 15.5.5 (Robertsonian Translocation)** A **Robertsonian translocation** (centric fusion) is the joining of the long arms of two acrocentric chromosomes at or near their centromeres, forming one metacentric or submetacentric chromosome; the small chromosome formed by the two short arms is usually lost. The carrier has one chromosome less ($2n - 1$) but no loss of essential genes.
+
+In humans the five acrocentric chromosomes (13, 14, 15, 21 and 22) carry the rRNA gene arrays on their short arms (the loss of one set does not matter, since the others suffice). About 1 in 1 000 people carry a Robertsonian translocation, most often der(13;14) and, second, der(14;21). Chromosome number changes by Robertsonian fusions and fissions in evolution as well: the karyotypes of the house mouse range from $2n = 40$ in standard mice to $2n = 22$ in some Alpine populations, by fusions of acrocentrics, without loss of genes.
+
+A carrier of der(14;21) has the three chromosomes 14, 21 and der(14;21), which form a trivalent in meiosis. If each gamete receives one or two of the three and every combination is possible, there are six kinds of gametes.
+
+![Translocation Down syndrome. A: the gametes of a balanced carrier of a Robertsonian translocation der(14;21) (45 chromosomes), from alternate and adjacent segregation of the trivalent formed by chromosomes 14 (blue), 21 (green) and der(14;21), and the karyotype each gives with a normal gamete. Only three zygotes are viable: normal, balanced carrier, and a zygote with 46 chromosomes but three copies of 21q (translocation Down syndrome). B: if the six gametes were equally frequent and all viable zygotes survived, a third of liveborn children would have Down syndrome (bars); the observed risks are much lower, about 10–15 % for carrier mothers and about 1 % for carrier fathers (lines), because of unequal segregation and of selection against unbalanced gametes and embryos](./plots/robertsonian-gametes.py)
+
+**Formula 15.5.3 (Theoretical Offspring of a der(14;21) Carrier)** Of the six gametes, three give zygotes that die (monosomy 14, trisomy 14, monosomy 21; trisomy 14 survives only as rare mosaics), and three give viable zygotes in equal proportions under the simplest model: $46$,normal, $45$,balanced carrier, and $46$,der(14;21),+21, with three copies of 21q (translocation Down syndrome). The naive risk of Down syndrome among liveborn children is therefore $1/3$.
+
+The observed risk is about $10$–$15\,\%$ at birth when the mother is the carrier and about $1\,\%$ or less when the father is: unbalanced sperm are probably selected against, and the trisomic embryos are partly lost. Translocation Down syndrome accounts for about $4\,\%$ of cases of Down syndrome; in about a quarter of these a parent is a carrier. The clinical consequence is that, unlike free trisomy 21 ([7.4.16](/7.4.16)), translocation Down syndrome has a high recurrence risk and does not depend on maternal age, so the parents of a child with translocation Down syndrome are karyotyped.
+
+**Example 15.5.1** (a) A woman carries der(14;21). Using the empirical risk, the probability that her first liveborn child has Down syndrome is about $0.10$–$0.15$. Among her phenotypically normal children, the naive model predicts carriers and noncarriers in the ratio $1{:}1$, so a normal daughter is a carrier with probability about $1/2$ and should be offered testing before she has children. (b) A carrier of der(21;21), a fusion of two chromosomes 21 (often in fact an isochromosome 21q), produces only gametes with two copies of 21q or with none: every viable conception has Down syndrome, and the others are lost as monosomy 21. The recurrence risk is $100\,\%$.
+
+## 15.6. Rearrangements in Genome Evolution
+
+Rearrangements that are fixed in a lineage remain in the genomes of its descendants. Comparing the gene orders of related species reveals blocks of conserved order (conserved synteny, [7.4.14](/7.4.14)) separated by the breakpoints of past rearrangements.
+
+- Fusion. Human chromosome 2 corresponds to two chromosomes of the great apes (2A and 2B of the chimpanzee); at the fusion point in 2q13, inverted arrays of telomeric repeats TTAGGG/CCCTAA mark the head-to-head joining of two ancestral telomeres, and a vestigial second centromere lies in 2q21. This fusion reduced the human chromosome number from 48 to 46.
+- Inversions. Humans and chimpanzees differ by nine pericentric inversions, and paracentric inversions are the main rearrangements fixed in *Drosophila* (comparisons of the chromosome arms of different species show conserved gene content with scrambled order).
+- Reproductive isolation. Because heterozygotes for several rearrangements are partially sterile, rearrangements fixed in different populations reduce the fertility of hybrids and may contribute to speciation; the evidence is strongest for chromosomal races of mammals and for plants, and the subject is treated in [7.10](/7.10).
+- Duplications are the raw material of new genes (gene families, [7.4.14](/7.4.14)), and transposable elements provide both the repeats for NAHR and the breaks that start rearrangements ([7.4.17](/7.4.17)).
+
+## Summary
+
+| Rearrangement | Dose change | Heterozygote | Meiosis in the heterozygote | Genetic signature |
+|---|---|---|---|---|
+| Deletion | loss | haploinsufficiency; vulnerability | deletion loop; no crossing over in the segment | pseudodominance (Definition 15.2.1); homozygous lethality; map shortening |
+| Duplication | gain | dose effects | unequal crossing over (Definition 15.3.1) | copy-number alleles; *Bar* position effect (15.3.2) |
+| Paracentric inversion | none | usually normal | loop; crossover → dicentric + acentric | crossover suppression; female fertility kept, male/pollen reduced |
+| Pericentric inversion | none | usually normal | loop; crossover → duplication–deficiency | crossover suppression; semisterility $u$ (Formula 15.4.1) |
+| Reciprocal translocation | none | usually normal | cross-shaped quadrivalent; alternate vs adjacent (Definition 15.5.2) | semisterility (Formula 15.5.1); pseudolinkage (Formula 15.5.2) |
+| Robertsonian translocation | none ($2n - 1$) | normal | trivalent | translocation Down syndrome, risk $1/3$ naive, about $10$–$15\,\%$ (mother) or $1\,\%$ (father) observed (Formula 15.5.3) |
+
+- Origins: wrong joining of two double-strand breaks by end joining; non-allelic homologous recombination between repeats (Definition 15.1.2), which makes genomic disorders recurrent; replication-based template switching; chromothripsis.
+- Detection: karyotype ($5$–$10\,\mathrm{Mb}$), FISH, arrays (gains and losses only), sequencing (breakpoints); the genetic signatures of Algorithm 15.1.1.
+- Crossover in an inversion loop: products computed by the rule of Proposition 15.4.1; fraction of unbalanced products $u = \frac12(1 - \mathrm{e}^{-2d})$ without interference, $u = d$ with complete interference (Formula 15.4.1).
+- Tools: deficiency mapping (Example 15.2.1); balancer chromosomes keep lethal mutations in true-breeding heterozygous stocks (Definition 15.4.2, Example 15.4.2).
+- Evolution: inversions keep coadapted alleles together (supergenes, Definition 15.4.3); fusions, fissions, inversions and duplications reshape genomes over time.
+
+## Questions
+
+1. An inversion heterozygote has an inverted segment of genetic length $20\,\mathrm{cM}$. What fraction of its meiotic products are unbalanced (a) without interference, (b) with complete interference? (c) Why can the fraction never exceed one half?
+
+   **Answer** (a) $u = \frac12(1 - \mathrm{e}^{-0.4}) = 0.165$. (b) $u = d = 0.20$. (c) A chromatid is unbalanced if it underwent an odd number of exchanges inside the loop; under the Poisson model the probability is $\frac12(1 - \mathrm{e}^{-2d}) < \frac12$, and with at most one crossover, half of the four products of a meiosis with a crossover remain balanced (the two chromatids not involved). Two products are always parental, so at most half are unbalanced.
+2. The normal order of a chromosome is A B o C D E F G H (o is the centromere). An inversion heterozygote carries the order A B o C G F E D H. Give the four products of a single crossover between E and F inside the loop, and say which are viable.
+
+   **Answer** The inversion (D to G) is paracentric. The parental chromatids are A B o C D E F G H and A B o C G F E D H. By the rule of Proposition 15.4.1, the normal piece A B o C D E joins the piece of the inverted chromatid that holds F, read away from the crossover point (F G C o B A), giving the dicentric A B o C D E F G C o B A; the reciprocal product is the acentric fragment H D E F G H. Only the two parental chromatids give viable gametes.
+3. In a pericentric inversion heterozygote with the normal order A B C o D E F G and inverted segment C to E, a crossover occurs between o and D. Write the recombinant chromatids and their duplications and deficiencies.
+
+   **Answer** Inverted homologue: A B E D o C F G. With $L$ = A B, $S$ = C o D E and $R$ = F G, the recombinants are $L\,S\,L^{-1}$ = A B C o D E B A (duplication of A–B, deficiency of F–G) and $R^{-1}\,S\,R$ = G F C o D E F G (duplication of F–G, deficiency of A–B). Both have one centromere; gametes carrying them give zygotes trisomic for one end of the chromosome and monosomic for the other.
+4. A recessive mutation $m$ is crossed with six deletions of a region whose bands are numbered 1–12: Df1 (1–3), Df2 (2–5), Df3 (4–7), Df4 (6–9), Df5 (8–11), Df6 (10–12). Only $m/\mathrm{Df3}$ and $m/\mathrm{Df4}$ show the mutant phenotype. Where is $m$?
+
+   **Answer** $m$ lies in a band covered by Df3 and Df4 (6–7) but by none of the others; Df2 covers up to 5 and Df5 starts at 8, so both 6 and 7 qualify. The mutation is in bands 6–7; a deletion ending between 6 and 7 would resolve it.
+5. In a translocation heterozygote of maize, $52\,\%$ of the quadrivalents segregate alternately, $45\,\%$ by adjacent-1 and $3\,\%$ by adjacent-2. What fraction of the pollen is expected to abort? What fraction of the viable pollen carries the translocation?
+
+   **Answer** Only alternate segregation gives balanced gametes, so $48\,\%$ of the pollen aborts (Formula 15.5.1). Alternate segregation gives N1 + N2 and T1 + T2 gametes in equal numbers, so half of the viable pollen carries the translocation.
+6. In a translocation heterozygote, marker $a$ on chromosome 1 recombines with the breakpoint at frequency $0.05$ and marker $p$ on chromosome 2 at $0.08$. The heterozygote $AP/ap$ (with $A$ and $P$ on the translocated chromosomes) is testcrossed. What fraction of the viable offspring will be recombinant for the two markers?
+
+   **Answer** $r = r_1 + r_2 - 2r_1r_2 = 0.05 + 0.08 - 2(0.004) = 0.122$ (Formula 15.5.2). Without the translocation the markers, on different chromosomes, would assort independently with $r = 0.5$.
+7. A couple has a child with Down syndrome whose karyotype is 46,XY,der(14;21)(q10;q10),+21. The mother's karyotype is 45,XX,der(14;21)(q10;q10). (a) What is the empirical risk of Down syndrome in their next pregnancy carried to term? (b) What is the risk if instead the father were the carrier? (c) What if the parents had normal karyotypes and the child had free trisomy 21, with a maternal age of 30?
+
+   **Answer** (a) About $10$–$15\,\%$. (b) About $1\,\%$ or less. (c) The translocation arose de novo, and the recurrence risk after free trisomy 21 is about $1\,\%$ (the age-specific risk, about 1 in 900 at 30, plus a small extra risk from gonadal mosaicism, [7.4.16](/7.4.16)).
+8. Why does a carrier of der(21;21) have only children with Down syndrome, if any? What would you expect of the pregnancies of such a woman?
+
+   **Answer** All her gametes carry either the fused chromosome (two copies of 21q) or no chromosome 21 at all. With a normal sperm the first gives a zygote with three copies of 21q (Down syndrome), the second monosomy 21, which is lost early. So every liveborn child has Down syndrome, and about half of the conceptions miscarry.
+9. $B/B$ females of *Drosophila* heterozygous for the flanking markers *forked* and *fused*, $f\,B\,fu^{+} / f^{+}\,B\,fu$, produce rare wild-type-eyed and double-*Bar* sons. Which flanking marker combinations do you expect on these exceptional X chromosomes, and why does this show that they arise by unequal crossing over rather than by mutation?
+
+   **Answer** Both exceptional classes should be recombinant for the flanking markers, $f\,BB\,fu$ and $f^{+}\,+\,fu^{+}$ (or the reverse, depending on which copies paired), whereas the regular sons are $f\,B\,fu^{+}$ and $f^{+}\,B\,fu$. A mutation within one X would not change the flanking markers; an unequal crossover between misaligned 16A copies exchanges the flanks and creates one chromosome with three copies and one with one, in equal numbers.
+10. A recessive lethal $l$ on chromosome 2 is kept over *CyO*. (a) What fraction of the zygotes of an $l/\mathit{CyO}$ stock die? (b) A new mutation is suspected to be allelic to $l$. Design a one-generation test using the stock.
+
+    **Answer** (a) Half: the $l/l$ and $\mathit{CyO}/\mathit{CyO}$ quarters. (b) Cross $l/\mathit{CyO}$ with $m/\mathit{CyO}$ (the new mutation, also balanced). If $m$ is an allele of $l$ (fails to complement), there are no straight-winged ($l/m$) progeny; if it complements, about a third of the surviving progeny ($l/m$ among $l/m$, $l/\mathit{CyO}$, $m/\mathit{CyO}$) have straight wings.
+11. A pericentric inversion heterozygote has an inverted segment of $30\,\mathrm{cM}$. Assuming no interference, what fraction of its gametes are unbalanced, and what fraction of the balanced gametes carry a chromatid that underwent two or more exchanges inside the inversion (and may thus carry recombinant interior markers)?
+
+    **Answer** $u = \frac12(1 - \mathrm{e}^{-0.6}) = 0.226$. A chromatid's number of exchanges is $\mathrm{Poi}(0.3)$; balanced means even, probability $\frac12(1 + \mathrm{e}^{-0.6}) = 0.774$; even and at least two, $0.774 - \mathrm{e}^{-0.3} = 0.774 - 0.741 = 0.034$. So about $0.034/0.774 = 4.3\,\%$ of the balanced gametes carry double-exchange chromatids: recombinants for genes inside an inversion are recovered at a low but nonzero rate, which is how inversions exchange alleles in populations (gene flux).
+12. CMT1A (duplication of $1.4\,\mathrm{Mb}$ at 17p12) is diagnosed about twice as often as HNPP (the reciprocal deletion). If NAHR between the flanking repeats produces the two products in equal numbers, give two reasons why the observed frequencies could differ.
+
+    **Answer** The reciprocal products of an interchromosomal NAHR event are equal in number, but (1) intrachromosomal events (between the two repeats on one chromatid, by looping out) produce deletions without the reciprocal duplication, and sister-chromatid events produce both, so the rates of the two can differ; (2) ascertainment differs: HNPP is milder and often undiagnosed, so it is under-counted. Selection against carrier gametes or embryos is unlikely to differ for such a small change. (Measured de novo rates in sperm are similar for the two products, which points to ascertainment as the main reason.)

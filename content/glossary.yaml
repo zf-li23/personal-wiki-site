@@ -7691,3 +7691,72 @@ terms:
   - { zh: 缺失的遗传力, en: missing heritability }
   - { zh: 负荷检验, en: burden test, aliases: [burden tests] }
   - { zh: 多基因评分, en: polygenic score, aliases: [PGS, polygenic risk score, PRS, 多基因风险评分] }
+  - { zh: 鸟枪法测序, en: shotgun sequencing, aliases: [whole-genome shotgun sequencing, 全基因组鸟枪法] }
+  - { zh: 重叠群, en: contig, aliases: [contigs] }
+  - { zh: 支架, en: scaffold, aliases: [scaffolds], scope: ["7.4"] }
+  - { zh: Lander–Waterman 模型, en: Lander–Waterman model, aliases: [Lander-Waterman model] }
+  - { zh: 泛基因组, en: pangenome, aliases: [pan-genome, pangenomes] }
+  - { zh: 基因组注释, en: genome annotation, aliases: [annotation of genomes] }
+  - { zh: 基因家族, en: gene family, aliases: [gene families] }
+  - { zh: 新功能化, en: neofunctionalization }
+  - { zh: 亚功能化, en: subfunctionalization }
+  - { zh: 从头起源基因, en: de novo gene, aliases: [de novo genes, 从头基因] }
+  - { zh: 同线性, en: synteny, aliases: [syntenic, conserved synteny] }
+  - { zh: 单核苷酸多态性, en: single nucleotide polymorphism, aliases: [SNP, SNPs, single nucleotide polymorphisms] }
+  - { zh: 插入缺失, en: indel, aliases: [indels, InDel, deletion–insertion polymorphism, DIP] }
+  - { zh: 拷贝数变异, en: copy-number variant, aliases: [copy number variant, copy-number variants, CNV, CNVs, copy number variation] }
+  - { zh: 结构变异, en: structural variant, aliases: [structural variants, SV] }
+  - { zh: 基因分型, en: genotyping }
+  - { zh: DNA 指纹, en: DNA fingerprinting, aliases: [DNA profiling, DNA 指纹分析] }
+  - { zh: 植入前遗传学诊断, en: preimplantation genetic diagnosis, aliases: [PGD, preimplantation genetic testing, PGT, 胚胎植入前遗传学检测] }
+  - { zh: 信息性减数分裂, en: informative meiosis, aliases: [informative meioses] }
+  - { zh: 连锁相, en: linkage phase, aliases: [linkage phases], scope: ["7.4"] }
+  - { zh: LOD 值, en: LOD score, aliases: [LOD scores, lod score] }
+  - { zh: 定位克隆, en: positional cloning }
+  - { zh: 候选基因, en: candidate gene, aliases: [candidate genes] }
+  - { zh: 外显子组测序, en: exome sequencing, aliases: [whole-exome sequencing, WES] }
+  - { zh: 染色体结构重排, en: chromosomal rearrangement, aliases: [chromosomal rearrangements, chromosome rearrangement, 染色体重排, 染色体结构变异] }
+  - { zh: 缺失, en: deletion, aliases: [deletions, deficiency, 缺失（染色体）], scope: ["7"] }
+  - { zh: 重复, en: duplication, aliases: [duplications, 重复（染色体）], scope: ["7"] }
+  - { zh: 易位, en: translocation, aliases: [translocations, chromosomal translocation], scope: ["7.4"] }
+  - { zh: 非等位同源重组, en: non-allelic homologous recombination, aliases: [NAHR, nonallelic homologous recombination] }
+  - { zh: 假显性, en: pseudodominance }
+  - { zh: 不等交换, en: unequal crossing over, aliases: [unequal crossover, 不对等交换] }
+  - { zh: 倒位, en: inversion, aliases: [inversions], scope: ["7"] }
+  - { zh: 臂内倒位, en: paracentric inversion, aliases: [paracentric inversions] }
+  - { zh: 臂间倒位, en: pericentric inversion, aliases: [pericentric inversions] }
+  - { zh: 平衡染色体, en: balancer chromosome, aliases: [balancer, balancers, balancer chromosomes] }
+  - { zh: 超基因, en: supergene, aliases: [supergenes] }
+  - { zh: 相互易位, en: reciprocal translocation, aliases: [reciprocal translocations] }
+  - { zh: 相间分离, en: alternate segregation }
+  - { zh: 相邻分离, en: adjacent segregation, aliases: [adjacent-1 segregation, adjacent-2 segregation, 相邻-1 分离, 相邻-2 分离] }
+  - { zh: 半不育, en: semisterility, aliases: [semisterile, 半不育性] }
+  - { zh: 假连锁, en: pseudolinkage }
+  - { zh: 罗伯逊易位, en: Robertsonian translocation, aliases: [Robertsonian translocations, centric fusion, 着丝粒融合] }
+  - { zh: 整倍性, en: euploidy, aliases: [euploid, 整倍体] }
+  - { zh: 多倍性, en: polyploidy, aliases: [polyploid, polyploids, 多倍体] }
+  - { zh: 三体, en: trisomy, aliases: [trisomic, trisomics, 三体性] }
+  - { zh: 单体, en: monosomy, aliases: [monosomic, 单体性], scope: ["7"] }
+  - { zh: 缺体, en: nullisomy, aliases: [nullisomic] }
+  - { zh: 一倍体, en: monoploid, aliases: [monoploids] }
+  - { zh: 同源多倍体, en: autopolyploid, aliases: [autopolyploidy, autotetraploid, 同源四倍体] }
+  - { zh: 异源多倍体, en: allopolyploid, aliases: [allopolyploidy, allotetraploid, amphidiploid, 异源四倍体, 双二倍体] }
+  - { zh: 雌雄嵌合体, en: gynandromorph, aliases: [gynandromorphs, 两性嵌合体] }
+  - { zh: 单亲二体, en: uniparental disomy, aliases: [UPD, 单亲二倍体] }
+  - { zh: 同二体, en: isodisomy, aliases: [uniparental isodisomy] }
+  - { zh: 异二体, en: heterodisomy, aliases: [uniparental heterodisomy] }
+  - { zh: 三体拯救, en: trisomy rescue }
+  - { zh: 剂量平衡, en: dosage balance, aliases: [dosage balance hypothesis, 剂量平衡假说] }
+  - { zh: 双减数, en: double reduction }
+  - { zh: 全基因组复制, en: whole-genome duplication, aliases: [WGD, whole genome duplication, 全基因组加倍] }
+  - { zh: 自主元件, en: autonomous element, aliases: [autonomous elements, 自主性转座元件] }
+  - { zh: 非自主元件, en: nonautonomous element, aliases: [nonautonomous elements, non-autonomous element, 非自主性转座元件] }
+  - { zh: 插入序列, en: insertion sequence, aliases: [IS element, IS elements, insertion sequences] }
+  - { zh: 复合转座子, en: composite transposon, aliases: [composite transposons] }
+  - { zh: 杂种不育, en: hybrid dysgenesis, aliases: [杂种劣育] }
+  - { zh: 细胞型, en: cytotype, aliases: [P cytotype, M cytotype] }
+  - { zh: 自私遗传元件, en: selfish genetic element, aliases: [selfish genetic elements, selfish DNA, 自私 DNA] }
+  - { zh: 减数分裂驱动, en: meiotic drive, aliases: [segregation distortion, 分离偏移, 分离畸变] }
+  - { zh: 归巢内切酶基因, en: homing endonuclease gene, aliases: [homing endonuclease genes, homing endonuclease, HEG, 归巢核酸内切酶基因] }
+  - { zh: 转座子标签法, en: transposon tagging, aliases: [转座子标签] }
+  - { zh: 增强子陷阱, en: enhancer trap, aliases: [enhancer traps, enhancer trapping] }
