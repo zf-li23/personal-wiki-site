@@ -6159,7 +6159,7 @@ terms:
   - { zh: 校对, en: proofreading, scope: ["7"] }
   - { zh: 外切核酸酶, en: exonuclease }
   - { zh: 内切核酸酶, en: endonuclease }
-  - { zh: 持续合成能力, en: processivity }
+  - { zh: 持续合成能力, en: processivity, aliases: [持续运动性, 持续性] }
   - { zh: 滑动夹, en: sliding clamp }
   - { zh: 夹子装载复合物, en: clamp loader }
   - { zh: 解旋酶, en: helicase }
