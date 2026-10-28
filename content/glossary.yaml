@@ -7594,8 +7594,8 @@ terms:
   - { zh: 亲本来源效应, en: parent-of-origin effect, aliases: [parent-of-origin effects, 亲源效应] }
   - { zh: Prader–Willi 综合征, en: Prader–Willi syndrome, aliases: [PWS, 普拉德–威利综合征] }
   - { zh: Angelman 综合征, en: Angelman syndrome, aliases: [AS, 天使综合征], scope: ["7"] }
-  - { zh: 斑驳抑制因子, en: suppressor of variegation, aliases: [Su(var), 花斑抑制因子] }
-  - { zh: 斑驳增强因子, en: enhancer of variegation, aliases: [E(var), 花斑增强因子] }
+  - { zh: 斑驳抑制因子, en: suppressor of variegation, aliases: [花斑抑制因子, suppressors of variegation] }
+  - { zh: 斑驳增强因子, en: enhancer of variegation, aliases: [花斑增强因子, enhancers of variegation] }
   - { zh: 代际遗传, en: intergenerational inheritance, aliases: [intergenerational effect] }
   - { zh: 跨代表观遗传, en: transgenerational epigenetic inheritance, aliases: [transgenerational inheritance, 跨代遗传] }
   - { zh: 表观等位基因, en: epiallele, aliases: [epialleles] }
