@@ -319,7 +319,7 @@ terms:
   - 结构：电偶极矩按站内写 $\boldsymbol{p}$（化学文献常写 $\mu$，第一次出现时说明），有效核电荷 $Z_{\mathrm{eff}}$，电负性 $\chi$，分裂能 $\Delta_{\mathrm{o}}$、$\Delta_{\mathrm{t}}$，有效磁矩 $\mu_{\mathrm{eff}}$（单位 $\mu_{\mathrm{B}}$）；族号用 IUPAC 1–18 族，括注中国教材的 A/B 族。
   - 数据：热力学数据与平衡常数统一取 CRC Handbook of Chemistry and Physics 现行版（物理常量取 CODATA 2022），同一常数全课程只用一个值。
   - 结构式与 Lewis 结构：键线式用 ```` ```smiles ````（§3），需要画出孤对电子的 Lewis 结构与反应机理用绘图辅助 `wikichem`（§4，`lone_pairs=True`）；VSEPR 构型、配合物立体异构与晶胞用 matplotlib 三维图。
-- **生物**（正文，不是公式）：基因名斜体（*lacZ*），蛋白质名正体（LacZ）；物种学名斜体（*Escherichia coli*）。
+- **生物**（正文，不是公式）：基因名斜体（*lacZ*），蛋白质名正体（LacZ）；物种学名斜体（*Escherichia coli*、*E. coli*、属名 *Drosophila*），图注里同样写 `*E. coli*`（构建保留图注中的斜体）；绘图中的物种名与基因名也用斜体（matplotlib 的 `fontstyle="italic"`，或 mathtext `$\it{E.\ coli}$`）。构建会对正文与图注中常见的正体物种名给出警告。
 
 ### 7.5 已知的重名
 

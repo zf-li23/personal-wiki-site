@@ -121,6 +121,8 @@ export interface RenderOutput {
 interface State {
   ctx: RenderContext;
   out: RenderOutput;
+  /** The Markdown body, to recover the raw caption of an image (its alt text loses emphasis). */
+  source?: string;
 }
 
 const MEDIA_ROOT = `${BASE_PATH}${PUBLIC_PATHS.media}`;
@@ -187,7 +189,7 @@ function remarkWikiChecks(state: State) {
   return (tree: MdastRoot, file: VFile) => {
     const source = String(file.value);
     const headings: HeadingInput[] = [];
-    visit(tree, (node) => {
+    visit(tree, (node, _index, parent) => {
       if (node.type === 'heading' && node.depth >= 2 && node.position) {
         headings.push({ depth: node.depth, text: mdastToString(node).replace(CUSTOM_ID_RE, ''), line: node.position.start.line + state.ctx.lineOffset });
       }
@@ -210,6 +212,9 @@ function remarkWikiChecks(state: State) {
       if (state.ctx.contentLang === 'en' && hanText(node)) {
         state.ctx.diag.warn(state.ctx.file, `Chinese text on an English page: "${truncateText(hanText(node)!, 40)}" (translate it; sources belong in the front matter)`, line);
       }
+      // Species names are italic (CONTENT_GUIDE §7.4): *E. coli*, *Drosophila*.
+      const roman = node.type === 'text' && parent?.type !== 'emphasis' ? romanSpecies(node.value) : node.type === 'image' ? romanSpecies(rawCaption(source, node) ?? '') : null;
+      if (roman) state.ctx.diag.warn(state.ctx.file, `species name not in italics: "${roman}" (write *${roman}*; CONTENT_GUIDE §7.4)`, line);
       // The reader does not know which slides; sources belong in the front matter (AUTHORING §6).
       if (node.type === 'text' && typeof node.value === 'string' && SLIDE_MENTION.test(node.value)) {
         state.ctx.diag.warn(state.ctx.file, `the text mentions the course slides ("${SLIDE_MENTION.exec(node.value)![0]}"): state the fact or the convention itself; sources belong in the front matter`, line);
@@ -225,6 +230,25 @@ function remarkWikiChecks(state: State) {
     });
     checkPageHeadings(state, headings);
   };
+}
+
+
+// Model organisms and common genera; an abbreviated binomial is a capital, a dot and one of the epithets.
+const GENERA = 'Escherichia|Saccharomyces|Schizosaccharomyces|Drosophila|Caenorhabditis|Arabidopsis|Xenopus|Danio|Neurospora|Chlamydomonas|Dictyostelium|Tetrahymena|Paramecium|Physarum|Plasmodium|Salmonella|Staphylococcus|Streptococcus|Mycobacterium|Pseudomonas|Bacillus subtilis|Homo sapiens|Mus musculus|Zea mays|Pisum sativum';
+const EPITHETS = 'coli|cerevisiae|pombe|melanogaster|elegans|thaliana|laevis|tropicalis|rerio|crassa|reinhardtii|discoideum|thermophila|falciparum|typhimurium|aureus|pneumoniae|tuberculosis|aeruginosa|subtilis|sapiens|musculus|mays|sativum';
+const SPECIES_RE = new RegExp(`(?<![\\p{L}*_])(?:(?:${GENERA})|[A-Z]\\.\\s?(?:${EPITHETS}))(?![\\p{L}*_])`, 'u');
+
+/** The first species name written in roman type in a run of text, or null. */
+export function romanSpecies(textValue: string): string | null {
+  const plain = textValue.replace(/(?<![*\\])\*(?!\*)[^*\n]+?\*(?!\*)/g, '').replace(/\$[^$]*\$/g, '').replace(/`[^`]*`/g, '');
+  return SPECIES_RE.exec(plain)?.[0] ?? null;
+}
+
+/** The raw caption of an image node (its alt text without the Markdown). */
+function rawCaption(source: string, node: { position?: { start: { offset?: number }; end: { offset?: number } } }): string | undefined {
+  const pos = node.position;
+  if (pos?.start.offset === undefined || pos.end.offset === undefined) return undefined;
+  return /^!\[([\s\S]*)\]\(/.exec(source.slice(pos.start.offset, pos.end.offset))?.[1];
 }
 
 const SLIDE_MENTION = /\b(?:course|lecture) slides?\b|\bthe slides\b|\bslides of the course\b|课件/i;
@@ -632,7 +656,7 @@ function transformImage(state: State, node: Element, parent: HastRoot | Element 
       ctx.diag.error(ctx.file, `plot script not found: ${src} (expected ${path.join(path.basename(ctx.page.dir), local)})`, line);
       return undefined;
     }
-    return replaceParagraph(plotFigure(path.basename(script), alt, result, state.ctx.contentLang));
+    return replaceParagraph(plotFigure(path.basename(script), alt, result, state.ctx.contentLang, captionNodes(state, node, alt)));
   }
 
   if (local.startsWith('assets/')) {
@@ -645,7 +669,7 @@ function transformImage(state: State, node: Element, parent: HastRoot | Element 
     node.properties = { ...node.properties, src: `${MEDIA_ROOT}/${ctx.page.id}/${encodeURIComponent(name)}`, loading: 'lazy', decoding: 'async' };
     if (!alt.trim()) ctx.diag.warn(ctx.file, `image ${src} has no alt text (write a caption: ![caption](${src}))`, line);
     if (standalone && alt.trim()) {
-      return replaceParagraph(el('figure', { className: ['wiki-figure'] }, [{ ...node }, el('figcaption', {}, [text(alt)])]));
+      return replaceParagraph(el('figure', { className: ['wiki-figure'] }, [{ ...node }, el('figcaption', {}, captionNodes(state, node, alt))]));
     }
     return undefined;
   }
@@ -666,7 +690,27 @@ function transformImage(state: State, node: Element, parent: HastRoot | Element 
   }
 }
 
-function plotFigure(scriptName: string, alt: string, result: PlotResult, lang: Lang): Element {
+
+/**
+ * Caption of a figure from the raw Markdown of the image, so that *italics* (species and gene
+ * names) survive; the alt attribute keeps the plain text.
+ */
+function captionNodes(state: State, node: Element, alt: string): ElementContent[] {
+  const pos = node.position;
+  const raw = state.source && pos?.start.offset !== undefined && pos.end.offset !== undefined ? /^!\[([\s\S]*)\]\(/.exec(state.source.slice(pos.start.offset, pos.end.offset))?.[1] : undefined;
+  if (!raw || !/(?<![*\\])\*(?!\*)/.test(raw)) return [text(alt)];
+  const out: ElementContent[] = [];
+  let last = 0;
+  for (const m of raw.matchAll(/(?<![*\\])\*(?!\*)([^*\n]+?)(?<!\\)\*(?!\*)/g)) {
+    if (m.index > last) out.push(text(raw.slice(last, m.index)));
+    out.push(el('em', {}, [text(m[1])]));
+    last = m.index + m[0].length;
+  }
+  if (last < raw.length) out.push(text(raw.slice(last)));
+  return out;
+}
+
+function plotFigure(scriptName: string, alt: string, result: PlotResult, lang: Lang, caption: ElementContent[]): Element {
   const images: ElementContent[] = [];
   if (result.error || !result.figures.length) {
     images.push(el('div', { className: ['wiki-plot-error'] }, [text(`Plot ${scriptName} could not be rendered. Run "pnpm wiki build" for details.`)]));
@@ -687,7 +731,7 @@ function plotFigure(scriptName: string, alt: string, result: PlotResult, lang: L
     }
   });
   const children: ElementContent[] = [el('div', { className: ['wiki-plot-images'] }, images)];
-  if (alt.trim()) children.push(el('figcaption', {}, [text(alt)]));
+  if (alt.trim()) children.push(el('figcaption', {}, caption));
   // Icons from open libraries (BIO_FIGURES.md §5): CC BY requires naming the author and the licence.
   const credits = iconCredits(result.source);
   if (credits.length) {
@@ -828,7 +872,7 @@ export async function renderMarkdown(body: string, ctx: RenderContext): Promise<
     text: '',
     excerpt: '',
   };
-  const state: State = { ctx, out };
+  const state: State = { ctx, out, source: body };
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)

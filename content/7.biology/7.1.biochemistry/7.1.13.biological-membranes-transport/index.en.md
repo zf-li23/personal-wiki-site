@@ -25,7 +25,7 @@ The proportions of protein and lipid reflect what a membrane does. The myelin sh
 | Mouse liver | 45 | 27 | 25 | cholesterol | — |
 | Maize leaf | 47 | 26 | 7 | sitosterol | galactolipids |
 | Yeast | 52 | 7 | 4 | ergosterol | triacylglycerols, steryl esters |
-| Paramecium (ciliated protist) | 56 | 40 | 4 | stigmasterol | — |
+| *Paramecium* (ciliated protist) | 56 | 40 | 4 | stigmasterol | — |
 | *E. coli* | 75 | 25 | 0 | — | — |
 
 (Mass percent; Lehninger, earlier editions, Table 11-1.)
@@ -335,7 +335,7 @@ Valinomycin, a cyclic depsipeptide from *Streptomyces*, wraps a $\ce{K+}$ ion in
 
 Water crosses a lipid bilayer slowly, but cells that must swell or shrink quickly, or move large volumes of water, have many aquaporins: an erythrocyte has about $2\times10^5$ copies of AQP1, which lets it adjust within milliseconds to the changing **osmolarity** of the renal medulla (**osmosis**, [7.1.2](/7.1.2#sec-2.1.6)). AQP1 conducts about $10^9$ water molecules per second per channel, compared with $4\times10^7\,\mathrm{s^{-1}}$ for catalase, among the fastest enzymes, and the activation energy of passage is below $15\,\mathrm{kJ\,mol^{-1}}$, so water moves in a continuous single file in the direction of the osmotic gradient. Each monomer of the tetramer forms its own pore from six transmembrane helices and two half-helices that dip into the membrane from opposite sides and meet in the middle at their conserved Asn–Pro–Ala (NPA) motifs. Two features exclude ions and protons: a narrow aromatic/arginine constriction near the outer end, about 0.28 nm wide, which admits a water molecule but not a hydrated ion; and the positive ends of the half-helix dipoles at the NPA motifs, which orient the central water molecule so that it cannot pass a proton along the hydrogen-bonded chain of waters (the Grotthuss mechanism would otherwise conduct protons as fast as water). Peter Agre, who discovered AQP1, shared the 2003 Nobel Prize in Chemistry with Roderick MacKinnon.
 
-Mammals have 13 aquaporins (AQP0–AQP12), each with a characteristic location; AQP3, 7, 9 and 10, the aquaglyceroporins, also conduct glycerol. Arabidopsis has about 35 aquaporin genes. In the collecting duct of the kidney, the **hormone** vasopressin (antidiuretic hormone) acts through **cAMP** to insert AQP2 into the apical membrane, increasing water reabsorption ([7.14](/7.14)); mutations in AQP2 or in the vasopressin receptor cause nephrogenic **diabetes** insipidus, the excretion of large volumes of dilute urine.
+Mammals have 13 aquaporins (AQP0–AQP12), each with a characteristic location; AQP3, 7, 9 and 10, the aquaglyceroporins, also conduct glycerol. *Arabidopsis* has about 35 aquaporin genes. In the collecting duct of the kidney, the **hormone** vasopressin (antidiuretic hormone) acts through **cAMP** to insert AQP2 into the apical membrane, increasing water reabsorption ([7.14](/7.14)); mutations in AQP2 or in the vasopressin receptor cause nephrogenic **diabetes** insipidus, the excretion of large volumes of dilute urine.
 
 ### 13.6.2. The K⁺ Channel: Selectivity at the Speed of Diffusion
 

@@ -261,6 +261,24 @@ describe('markdown rendering', () => {
     assert.ok(!html.includes('<p><figure'), 'figure must replace the paragraph');
   });
 
+  it('warns about species names in roman type, in text and captions', async () => {
+    const pg = fakePage('7.3.1', { assets: ['a.png'] });
+    const { messages } = await render('## 1.1. A\n\nGrowth of E. coli and *E. coli*, and Drosophila.\n\n![Wings of Drosophila](./assets/a.png)\n\nIn *S. cerevisiae* and $E. coli$ is math.', { page: pg, lang: 'en' });
+    const found = messages.filter((m) => m.includes('species name not in italics'));
+    // one per text run: "E. coli" and "Drosophila" in the paragraph, "Drosophila" in the caption; not *S. cerevisiae* or math
+    assert.equal(found.length, 3);
+    assert.ok(found.some((m) => m.includes('"E. coli"')) && found.some((m) => m.includes('"Drosophila"')));
+  });
+  it('keeps italics (species and gene names) in figure captions', async () => {
+    const pg = fakePage('7.3.1', { assets: ['a.png'], plotFiles: ['g.py'] });
+    const plots: PlotResults = new Map([
+      [path.join(pg.dir, 'plots/g.py'), { key: 'k', imageDir: '/tmp/k', imagePrefix: '', frozen: false, figures: [{ width: 800, height: 600 }], source: 'import numpy' }],
+    ]);
+    const { html } = await render('![Growth of *E. coli* on lactose](./plots/g.py)\n\n![The *lacZ* gene](./assets/a.png)', { page: pg, plots, lang: 'en' });
+    assert.match(html, /<figcaption>Growth of <em>E. coli<\/em> on lactose<\/figcaption>/);
+    assert.match(html, /<figcaption>The <em>lacZ<\/em> gene<\/figcaption>/);
+    assert.match(html, /alt="Growth of E. coli on lactose"/);
+  });
   it('resolves assets, wraps tables, reports bad images and KaTeX errors', async () => {
     const pg = fakePage('3.1.13', { assets: ['a.png'] });
     const { html, messages } = await render('![图](./assets/a.png)\n\n![](missing.png)\n\n| a |\n|---|\n| 1 |\n\n$\\frac{1}$', { page: pg });
