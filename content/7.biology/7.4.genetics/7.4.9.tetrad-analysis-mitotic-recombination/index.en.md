@@ -12,7 +12,7 @@ In a fly or a person the four products of one meiosis go their separate ways, an
 The two classical organisms of tetrad analysis are ascomycete fungi, haploid for most of their life cycle (zygotic meiosis, [7.4.1](/7.4.1)).
 
 - The budding yeast *Saccharomyces cerevisiae* has two mating types, $\mathit{MATa}$ and $\mathit{MAT\alpha}$. Haploid cells of opposite mating type fuse to form diploids, which grow by mitosis and, when starved of nitrogen and given a nonfermentable carbon source, undergo meiosis. The four haploid spores are enclosed in an ascus without any fixed arrangement. After digesting the ascus wall, the spores are separated with a micromanipulator and grown into colonies, whose genotypes are determined by replica plating or by sequencing.
-- The bread mould *Neurospora crassa* has mating types $A$ and $a$. Fusion of nuclei of opposite mating type produces a transient diploid nucleus that immediately undergoes meiosis inside a narrow ascus. The spindles of the two meiotic divisions are aligned with the long axis of the ascus and do not overlap, so the four meiotic products lie in a row in the order in which they were produced; a mitosis follows, giving eight ascospores in four identical pairs. Spore-colour mutants allow patterns to be read under the microscope without germinating the spores.
+- The bread mould *Neurospora crassa* has mating types $A$ and $a$. Fusion of nuclei of opposite mating type produces a transient diploid nucleus that immediately undergoes meiosis inside a narrow ascus. The spindles of the two meiotic divisions are aligned with the long axis of the ascus and do not overlap, so the four meiotic products lie in a row in the order in which they were produced; a mitosis follows, giving eight ascospores in four identical pairs. Spore-colour mutants allow patterns to be read under the microscope without germinating the spores. *Neurospora* has $n = 7$ chromosomes, completes a sexual cycle in about ten days and grows on a simple minimal medium, so that **auxotrophs** ([7.4.10](/7.4.10)) such as *lys*, *nic* or *ade* mutants, which need lysine, nicotinic acid or adenine, are scored by growth on supplemented versus minimal medium; some, such as *lys*, also ripen slowly and give pale ascospores that can be seen in the intact ascus.
 
 **Definition 9.1.1 (Tetrad Analysis, Ascus and Ascospore)** An **ascus** is the sac in which an ascomycete fungus holds the products of one meiosis; the haploid spores in it are **ascospores**. The four products of one meiosis, considered together, form a tetrad, and **tetrad analysis** is the genetic analysis of the genotypes of all members of individual tetrads.
 
@@ -153,11 +153,47 @@ $$
 
 This is how yeast geneticists mapped centromeres with unordered tetrads: a locus tightly linked to its centromere (such as *TRP1* on chromosome IV) gives few tetratypes with any unlinked locus, $\mathbb{P}(\mathrm{T}) \approx y$, so it serves as a centromere marker. For two loci far from their centromeres, $x = y = 2/3$ and $\mathbb{P}(\mathrm{T}) = 2/3$.
 
+### 9.3.6. The Seven Classes of Ordered Asci
+
+For two linked loci in ordered asci each ascus can be classified three ways at once: MI or MII for the first locus, MI or MII for the second, and PD, NPD or T for the pair. Of the 36 possible spore arrangements of a cross $a\,b^{+} \times a^{+}\,b$, those that differ only by turning the ascus round or by the two equivalent arrangements of an MII pattern collapse into seven classes. With the gene order centromere–$a$–$b$, interval I between the centromere and $a$ and interval II between $a$ and $b$, the smallest number of crossovers that produces each class (found by enumerating crossovers between random non-sister chromatids) is:
+
+| Class | $a$ | $b$ | Tetrad | Fewest crossovers |
+|---|---|---|---|---|
+| 1 | MI | MI | PD | none |
+| 2 | MI | MI | NPD | two in II (four-strand) |
+| 3 | MI | MII | T | one in II |
+| 4 | MII | MI | T | one in I and one in II |
+| 5 | MII | MII | PD | one in I |
+| 6 | MII | MII | NPD | one in I and two in II |
+| 7 | MII | MII | T | one in I and two in II |
+
+Class 7 is sometimes described as a double crossover, but one crossover in each interval cannot produce it: after a crossover in I, each chromatid carries the alleles of $a$ and $b$ from the same parent, so a crossover in II between two non-sister chromatids carrying different alleles of $b$ returns $b$ to an MI pattern (class 4), and one between chromatids carrying the same allele of $b$ changes nothing. Only for loci on opposite arms is "MII, MII, T" the product of one crossover on each side of the centromere. The asymmetry between classes 3 and 4 is a test of gene order: if $a$ is proximal, MII at $a$ with MI at $b$ needs two crossovers and is rare, whereas MI at $a$ with MII at $b$ needs one.
+
+**Example 9.3.3** A cross $a\,b^{+} \times a^{+}\,b$ in *Neurospora* gives 1000 asci: class 1, 712; class 2, 2; class 3, 144; class 4, 8; class 5, 130; class 6, 1; class 7, 3.
+
+1. Linkage: $\mathrm{PD} = 712 + 130 = 842$, $\mathrm{NPD} = 2 + 1 = 3$: $\mathrm{PD} \gg \mathrm{NPD}$, linked.
+2. Gene–centromere distances (Formula 9.3.1): MII for $a$ in classes 4–7, $142$ asci, $d_a = 7.1\,\mathrm{cM}$; MII for $b$ in classes 3 and 5–7, $278$ asci, $d_b = 13.9\,\mathrm{cM}$.
+3. Distance between the genes (Formula 9.2.1): $\mathrm{T} = 144 + 8 + 3 = 155$, $r_{ab} = (3 + 77.5)/1000 = 8.05\,\%$.
+4. Order: $d_a + r_{ab} = 15.15 \approx d_b$ (opposite arms would give $d_a + d_b = 21\,\mathrm{cM}$ between the genes). Of the 142 asci with MII at $a$, 134 ($94\,\%$) also show MII at $b$, against $27.8\,\%$ expected if the two loci were on different arms or chromosomes, and class 3 is eighteen times as frequent as class 4. The map is centromere —$7.1$— $a$ —$8.05$— $b$.
+
+The direct centromere–$b$ distance, $13.9\,\mathrm{cM}$, is $1.25\,\mathrm{cM}$ shorter than the sum of the two intervals: the same underestimate as the outer-gene distance of a three-point cross ([7.4.8](/7.4.8#sec-8.4.2)), with the centromere as the third marker. Counting recombinant chromatids (two per MII ascus, two per T, four per NPD, and none for an MI pattern even when all four chromatids have exchanged the segment) makes the deficit explicit:
+
+| Class | Asci | Centromere–$a$ | $a$–$b$ | Centromere–$b$ | Chromatids missing from centromere–$b$ |
+|---|---|---|---|---|---|
+| 2 | 2 | 0 | 4 | 0 | $2 \times 4 = 8$ |
+| 3 | 144 | 0 | 2 | 2 | 0 |
+| 4 | 8 | 2 | 2 | 0 | $8 \times 4 = 32$ |
+| 5 | 130 | 2 | 0 | 2 | 0 |
+| 6 | 1 | 2 | 4 | 2 | $1 \times 4 = 4$ |
+| 7 | 3 | 2 | 2 | 2 | $3 \times 2 = 6$ |
+
+The columns give recombinant chromatids per ascus. The missing chromatids total $50$ of $4000$, $1.25\,\%$, and come only from the asci with two or more crossovers between the centromere and $b$ (classes 2, 4, 6 and 7). Adding them gives $13.9 + 1.25 = 15.15\,\mathrm{cM}$. Long gene–centromere distances should therefore be obtained by adding short intervals, or corrected with Formula 9.3.2 when there is no interference.
+
 ## 9.4. What Tetrads Prove
 
 ### 9.4.1. Crossing Over at the Four-Strand Stage
 
-If crossing over occurred before chromosome replication, between two chromosomes rather than two of four chromatids, each meiosis would produce either two parental or two recombinant genotypes, each in two copies: only PD and NPD tetrads, never a tetratype. The abundance of tetratypes for linked genes (40 % of tetrads in Example 9.2.1) shows that a crossover involves only two of the four chromatids, after replication. The MII patterns of ordered asci show the same thing for a gene and its centromere.
+If crossing over occurred before chromosome replication, between two chromosomes rather than two of four chromatids, each meiosis would produce either two parental or two recombinant genotypes, each in two copies: only PD and NPD tetrads, never a tetratype. The abundance of tetratypes for linked genes (40 % of tetrads in Example 9.2.1) shows that a crossover involves only two of the four chromatids, after replication. The MII patterns of ordered asci show the same thing for a gene and its centromere. Tetrads also show that crossing over is reciprocal: a tetratype contains both recombinant products, $Ab$ and $aB$, in one ascus, and in an MII ascus the two alleles of the exchanged segment are still present in a $2:2$ ratio; nothing is lost or gained, except in the rare asci with gene conversion (9.4.3).
 
 ### 9.4.2. Chromatid Interference
 
@@ -225,7 +261,7 @@ In humans mitotic recombination is one way that a cell heterozygous for a mutati
 
 - Linkage test: $\mathrm{PD} = \mathrm{NPD}$ if unlinked; $\chi^2 = (\mathrm{PD} - \mathrm{NPD})^2/(\mathrm{PD} + \mathrm{NPD})$ (9.2.2).
 - $r = (\mathrm{NPD} + \frac12\mathrm{T})/n$ (Formula 9.2.1); Perkins $d = 50(\mathrm{T} + 6\,\mathrm{NPD})/n$ (Formula 9.2.2); exact frequencies without interference $\mathrm{T} = \frac23(1 - \mathrm{e}^{-3d})$, $\mathrm{NPD} = \frac16(1 - 3\mathrm{e}^{-2d} + 2\mathrm{e}^{-3d})$ (Formula 9.2.3; Example 9.2.1).
-- Ordered tetrads: MI and MII patterns (Definition 9.3.1); gene–centromere distance $\frac12\,\%\mathrm{MII}$ (Formula 9.3.1), MII frequency $\frac23(1 - \mathrm{e}^{-3d})$ with limit $2/3$ (Formula 9.3.2); ordering two genes and a centromere (Algorithm 9.3.1); for unlinked loci $\mathrm{T} = x + y - \frac32 xy$ (Formula 9.3.3).
+- Ordered tetrads: MI and MII patterns (Definition 9.3.1); gene–centromere distance $\frac12\,\%\mathrm{MII}$ (Formula 9.3.1), MII frequency $\frac23(1 - \mathrm{e}^{-3d})$ with limit $2/3$ (Formula 9.3.2); ordering two genes and a centromere (Algorithm 9.3.1); for unlinked loci $\mathrm{T} = x + y - \frac32 xy$ (Formula 9.3.3). Two linked loci give seven classes of ordered asci (9.3.6); the direct gene–centromere distance of a distal gene underestimates the sum of the intervals, as in a three-point cross (Example 9.3.3).
 - Tetrads prove crossing over between two of four chromatids (9.4.1), show little chromatid interference (9.4.2) and reveal gene conversion (Definition 9.4.1): 3:1, 6:2, 5:3 and aberrant 4:4 asci, the trace of heteroduplex DNA and mismatch repair.
 - Mitotic recombination (Definition 9.5.1) followed by x segregation makes distal markers homozygous: twin spots for exchanges proximal to both markers, single spots for exchanges between them (9.5.2); genetic mosaics (Definition 9.5.2), FLP/FRT and MARCM clones; LOH in cancer (9.5.4).
 
@@ -286,3 +322,20 @@ In humans mitotic recombination is one way that a cell heterozygous for a mutati
 14. (Design) You want to see the phenotype of cells homozygous for a recessive lethal mutation $l$ on chromosome arm 2R of *Drosophila*. Describe a FLP/FRT experiment and what you would see.
 
     **Answer** Make flies $\mathit{FRT42D}\ l/\mathit{FRT42D}\ \mathit{ubi\text{-}GFP}$ carrying *hs-FLP* (or a tissue-specific FLP). Heat shock in larvae induces FLP-mediated exchange at the FRT sites in G2; x segregation gives twin clones: $l/l$ cells lacking GFP next to a twin with two GFP copies (brighter), in a background with one copy. The phenotype of the GFP-negative clone shows what the gene does in those cells, and comparing with the twin controls for the timing and size of the clone.
+
+15. A pink strain of *Neurospora* is crossed with a white mutant strain. What fraction of the ascospore colonies is pink? A zygote of genotype $Rr\,Tt$ (two unlinked genes) undergoes meiosis and the post-meiotic mitosis: which of $Rr\,Tt$, $RR\,TT$, $Rr$ and $rt$ can be the genotype of an ascospore?
+
+    **Answer** One half, whatever the dominance relation between the alleles: ascospores are haploid, each receives one allele, and segregation gives $4 : 4$ in every ascus. For the same reason an ascospore carries one allele of each gene: only $rt$ is possible ($Rr\,Tt$ and $RR\,TT$ are diploid genotypes, $Rr$ has two alleles of one gene and none of the other).
+
+16. A cross of a spore-colour mutant $w$ with wild type gives 300 ordered asci: 128 $w\,w\,w\,w\,+\,+\,+\,+$ and 136 $+\,+\,+\,+\,w\,w\,w\,w$ (spores listed from the tip), and 9, 10, 8 and 9 asci of the four MII arrangements. Compute the gene–centromere distance with Formulas 9.3.1 and 9.3.2.
+
+    **Answer** MII asci $9 + 10 + 8 + 9 = 36$, $12\,\%$; Formula 9.3.1 gives $6.0\,\mathrm{cM}$. Formula 9.3.2: $-\frac13\ln(1 - 0.18) = 0.066\,\mathrm{M} = 6.6\,\mathrm{cM}$.
+
+17. A cross $a\,b^{+} \times a^{+}\,b$ gives 500 ordered asci in the seven classes of 9.3.6: class 1, 374; class 2, 2; class 3, 78; class 4, 38; class 5, 2; class 6, 2; class 7, 4. Are the loci linked? Draw the map with the centromere.
+
+    **Answer** $\mathrm{PD} = 374 + 2 = 376$, $\mathrm{NPD} = 2 + 2 = 4$: $\chi^2 = 372^2/380 = 364$, linked. MII at $a$: classes 4–7, 46 asci, $d_a = 4.6\,\mathrm{cM}$; MII at $b$: classes 3 and 5–7, 86 asci, $d_b = 8.6\,\mathrm{cM}$. $\mathrm{T} = 78 + 38 + 4 = 120$, $r_{ab} = (4 + 60)/500 = 12.8\,\%$ (Perkins $14.4\,\mathrm{cM}$). Since $r_{ab} \approx d_a + d_b = 13.2$ and not $\lvert d_a - d_b\rvert = 4.0$, the genes are on opposite arms: $a$ —$4.6$— centromere —$8.6$— $b$. The other signatures agree: classes 3 and 4 are both common (each is a single crossover in one arm), and of the 46 asci with MII at $a$ only 8 ($17\,\%$) also show MII at $b$, as expected if crossovers in the two arms are independent ($2 \times 0.086 = 17\,\%$).
+
+18. In Example 9.3.3, explain why class 4 asci contribute to the $a$–$b$ recombination and to the centromere–$a$ distance but not to the centromere–$b$ distance, and why this makes the direct estimate of $d_b$ too small.
+
+    **Answer** A class 4 ascus has one crossover between the centromere and $a$ and one between $a$ and $b$. The chromatids involved are recombinant for each short interval, so they are counted for centromere–$a$ (MII at $a$) and for $a$–$b$ (tetratype). Between the centromere and $b$ the two exchanges cancel and $b$ segregates at the first division, so the ascus is counted as nonrecombinant for centromere–$b$. Two crossovers occurred in the centromere–$b$ interval but none is seen there, exactly as double crossovers are invisible to the outer genes of a three-point cross; adding the short intervals recovers them.
+

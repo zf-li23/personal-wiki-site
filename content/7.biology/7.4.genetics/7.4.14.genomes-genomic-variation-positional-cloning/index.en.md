@@ -9,6 +9,23 @@ Classical genetics located genes by the phenotypes of their mutant alleles and b
 
 A **genetic map** orders loci by recombination frequency; a **physical map** ([7.4.8](/7.4.8)) places landmarks at known distances in base pairs. Before whole-genome sequencing, physical maps were built from overlapping clones. A genome was cut into fragments of $100$–$200\,\mathrm{kb}$, cloned in **bacterial artificial chromosomes** (BACs), and the clones were ordered by shared landmarks (restriction fragments, sequence-tagged sites detected by PCR). From the overlapping clones, a minimal tiling path, the smallest set of clones that covers a chromosome, was chosen and each clone was sequenced separately. This clone-by-clone strategy of the public Human Genome Project (draft 2001, "finished" 2004) was slow but anchored every piece of sequence on the map; the competing whole-genome shotgun strategy of Celera (2001) sequenced random fragments of the whole genome at once and relied on computation to put them together.
 
+Human genes were assigned to chromosomes long before such maps existed, and mostly without crosses. X-linked genes were recognized from their criss-cross transmission in pedigrees ([7.4.6](/7.4.6)), and the first human recombination fraction was estimated between two of them, colour blindness and haemophilia (Bell and Haldane 1937; the method in 14.9.1). For autosomes the main tool from the late 1960s was somatic cell hybridization. Human and rodent cells fused with Sendai virus or polyethylene glycol (Harris and Watkins 1965 made the first human–mouse hybrids) give *somatic cell hybrids*, hybrid cell lines that lose human chromosomes at random during the following divisions until each stable line retains a few. A panel of lines is karyotyped, each line is tested for the human form of a gene product (human and rodent isozymes separate by electrophoresis) or, later, for a human DNA sequence, and the gene is assigned to the chromosome whose presence across the panel is concordant with that of the product (Example 14.1.1). Selection can force retention: mouse cells lacking thymidine kinase grow in HAT medium only if a human chromosome supplies the enzyme, and the surviving hybrids all kept human chromosome 17, which assigned *TK1* to it (Weiss and Green 1967). Hybrids carrying only part of a chromosome, from translocations, deletions or irradiation of the donor cells (radiation hybrids), placed genes in regions of a chromosome. Cloned genes could be located more directly by hybridizing labelled probes to the DNA of hybrid panels (the α- and β-globin genes were assigned in this way to chromosomes 16 and 11, Example 14.4.1) or to metaphase chromosomes (in situ hybridization, later FISH, [7.2.6](/7.2.6)). Gene dosage gave supporting evidence: the activity of superoxide dismutase SOD1 is about 1.5 times normal in people with trisomy 21, as expected from its gene on chromosome 21, although many genes show no such proportional effect.
+
+**Example 14.1.1 (A Hybrid Panel)** Six human–mouse hybrid lines A–F retain the human chromosomes and express the human forms of three enzymes as follows ($+$ present, $-$ absent):
+
+| | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|
+| chromosome 1 | $+$ | $-$ | $+$ | $-$ | $-$ | $+$ |
+| chromosome 4 | $-$ | $+$ | $+$ | $-$ | $+$ | $-$ |
+| chromosome 7 | $+$ | $+$ | $-$ | $-$ | $+$ | $+$ |
+| chromosome 11 | $-$ | $-$ | $+$ | $+$ | $+$ | $-$ |
+| chromosome 17 | $+$ | $-$ | $-$ | $+$ | $-$ | $+$ |
+| PGM1 (phosphoglucomutase) | $+$ | $-$ | $+$ | $-$ | $-$ | $+$ |
+| LDHA (lactate dehydrogenase A) | $-$ | $-$ | $+$ | $+$ | $+$ | $-$ |
+| TK1 (thymidine kinase) | $+$ | $-$ | $-$ | $+$ | $-$ | $+$ |
+
+PGM1 is concordant with chromosome 1 in all six lines and discordant with every other chromosome in at least two (with chromosome 17 in lines C and D), so its gene is on chromosome 1; likewise *LDHA* is on chromosome 11 and *TK1* on chromosome 17, as they are. With $k$ lines, two chromosomes retained independently with probability $1/2$ each share a pattern with probability $2^{-k}$; a panel must have enough lines that no two chromosomes share a pattern (Question 14).
+
 Genetic map, physical map and sequence are now one coordinate system: each genetic marker has a sequence and hence a position in base pairs, and plotting genetic against physical position (a Marey map, [7.4.8](/7.4.8#sec-8.8)) shows how the rate of crossing over varies along each chromosome.
 
 ## 14.2. Assembling a Genome
@@ -79,7 +96,7 @@ The most direct evidence of a gene is its RNA. A **cDNA library** ([7.2.5](/7.2.
 
 ### 14.4.1. The Human Genome in Numbers
 
-The haploid human genome has about $3.1 \times 10^9$ base pairs ($3.06\,\mathrm{Gb}$ in the complete assembly) and about $20\,000$ protein-coding genes. The often quoted larger numbers, 27 000 or more, are older estimates that counted gene predictions without evidence; the number has fallen as annotation improved. Genes are not evenly spread: gene-rich regions such as 17q, 19 and the light G bands contrast with gene deserts of several megabases ([7.3.17](/7.3.17#sec-17.4.2)).
+The haploid human genome has about $3.1 \times 10^9$ base pairs ($3.06\,\mathrm{Gb}$ in the complete assembly) and about $20\,000$ protein-coding genes. Its **C value** is unremarkable: haploid DNA contents of eukaryotes range over more than four orders of magnitude without relation to complexity (the **C-value paradox**, [7.2.2](/7.2.2#sec-2.1.2)), from $12\,\mathrm{Mb}$ in budding yeast to about $16\,\mathrm{Gb}$ in bread wheat, about $43\,\mathrm{Gb}$ in the Australian lungfish and about $150\,\mathrm{Gb}$ in the plant *Paris japonica*, and the differences lie in repeats and transposable elements ([7.4.17](/7.4.17)) rather than in the number of genes. The often quoted larger numbers, 27 000 or more, are older estimates that counted gene predictions without evidence; the number has fallen as annotation improved. Genes are not evenly spread: gene-rich regions such as 17q, 19 and the light G bands contrast with gene deserts of several megabases ([7.3.17](/7.3.17#sec-17.4.2)).
 
 ### 14.4.2. Gene Families and the Fates of Duplicates
 
@@ -153,6 +170,20 @@ Copy-number variation affects whole genes. The olfactory receptor genes, the lar
 
 Most variants are anonymous: they have no effect, but they are inherited in Mendelian fashion and their positions are known. They are ideal genetic markers. SNPs are the most numerous and easiest to type in large numbers, but have only two alleles; STRs have many alleles and high heterozygosity, so that almost every meiosis is informative for them (14.9), at the cost of a high mutation rate. The large majority of variants of all classes are anonymous signposts, and the challenge of human genetics is to find, among millions of them, the few that matter for a disease or trait; the opportunity is that the anonymous ones mark where to look.
 
+Markers have changed with technology, and each generation of maps used the best available. The first DNA markers were *restriction fragment length polymorphisms* (RFLPs): variants that create or destroy a restriction site, or indels between two sites, so that a probe detects fragments of different lengths on a Southern blot (Botstein, White, Skolnick and Davis 1980 proposed a human linkage map built from them). Markers differ in the number of alleles and in whether heterozygotes can be recognized:
+
+| Marker | Detected by | Alleles | Heterozygote recognized? | Main use |
+|---|---|---|---|---|
+| Morphological and biochemical (visible mutants, blood groups, isozymes) | phenotype; protein electrophoresis | few | depends on dominance | classical maps; first human linkages |
+| RFLP | restriction digestion, Southern blot | usually 2 | yes (codominant) | first DNA-marker maps; HD (1983) |
+| **minisatellite** (VNTR) | Southern blot | many | yes | early DNA fingerprinting (Jeffreys 1985) and linkage |
+| RAPD (random amplified polymorphic DNA) | PCR with one short arbitrary primer | band present or absent | no (dominant) | quick maps of nonmodel organisms |
+| AFLP (amplified fragment length polymorphism) | restriction digestion, adaptor ligation, selective PCR | band present or absent | mostly no | plant and animal maps |
+| STR (microsatellite) | PCR, capillary electrophoresis | many | yes | human linkage maps of the 1990s, forensics |
+| SNP | arrays, sequencing | 2 | yes | modern maps, association studies ([7.4.25](/7.4.25)) |
+
+Sequence-tagged sites (STSs), short unique sequences detected by PCR, need not be polymorphic: they are physical landmarks for ordering clones (14.1), and a polymorphic STS (an STR, for example) ties the genetic map to the physical one. Dominant markers carry less information than codominant ones, because a band does not distinguish the homozygote from the heterozygote: in an F2 only the band-less class has a known genotype, which is the information loss of a dominant F2 in [7.4.8](/7.4.8#sec-8.6.3).
+
 ## 14.8. Detecting Variants
 
 ### 14.8.1. Genotyping
@@ -195,6 +226,8 @@ In experimental organisms, the recombination frequency between two loci is measu
 A meiosis of a parent homozygous at the marker is uninformative, because every child receives the same marker allele; a child of two parents with the same heterozygous genotype ($1/2 \times 1/2$) is uninformative if it is also $1/2$, because either parent could have given either allele. Markers with many alleles (STRs) are therefore more useful in small families than SNPs. In the pedigree below, the phase of the affected father is known from his own father, and his wife is homozygous at the marker, so every meiosis in the father is informative.
 
 ![A dominant disease (fully penetrant) segregating with a two-allele SNP. The affected father (II-1) received the disease allele together with marker allele G from his affected father, so his phase is known: disease with G, normal with T. His wife is T/T, so the allele each child received from him is known. Seven children are parental (affected with G, or unaffected with T) and one (III-8, unaffected with G) is recombinant, which gives a LOD score of 1.10 at θ = 1/8](./plots/marker-pedigree.py)
+
+For X-linked loci the phase of a woman can often be read from her father, whose single X she received intact. If her father had both X-linked traits (or carried known marker alleles), these are in coupling on her paternal X; her sons receive her X and no paternal one, so each son reveals one of her meioses directly, as the offspring of a testcross do ([7.4.8](/7.4.8#sec-8.1.3)). This grandfather method is the oldest form of human linkage analysis (Bell and Haldane 1937) and gives phase-known data for Formula 14.9.1 (Question 15).
 
 ### 14.9.2. The LOD Score
 
@@ -282,13 +315,14 @@ The interpretation of variants is the hard part. A variant is classified by the 
 
 | Topic | Tool | Key formula or number |
 |---|---|---|
+| Assigning genes (14.1) | somatic cell hybrids, probe hybridization, gene dosage, X-linked pedigrees | concordance across a hybrid panel (Example 14.1.1); $2^{-k}$ chance that two chromosomes share a pattern in $k$ lines |
 | Assembly (14.2) | shotgun reads, contigs, scaffolds (Definition 14.2.1) | uncovered $\mathrm{e}^{-c}$; contigs $N\mathrm{e}^{-c\sigma}$ (Formula 14.2.1); repeats limit assembly; T2T 2022; pangenome (Definition 14.2.2) |
 | Annotation (14.3) | ORFs, codon bias, conservation, cDNA/RNA-seq | random ORF length geometric, $\mathbb{P}(K \ge k) = (61/64)^k$ (Formula 14.3.1); about $20\,000$ protein-coding genes |
 | Gene families (14.4) | duplication and divergence (Definition 14.4.1) | fates: loss, neofunctionalization, subfunctionalization (Definition 14.4.2); globins (Example 14.4.1); de novo genes (Definition 14.4.3); synteny (Definition 14.4.4) |
 | Similarity (14.5) | BLAST | $E = Kmn\,\mathrm{e}^{-\lambda S}$ (Formula 14.5.1) |
-| Variation (14.7) | SNP, indel, STR, CNV, SV (Definition 14.7.1) | 4–5 million SNPs per genome; smaller classes more numerous |
+| Variation (14.7) | SNP, indel, STR, CNV, SV (Definition 14.7.1); marker generations RFLP → minisatellite → RAPD/AFLP → STR → SNP | 4–5 million SNPs per genome; smaller classes more numerous; dominant markers (RAPD, AFLP) hide heterozygotes |
 | Detection (14.8) | genotyping, fingerprinting, PGT (Definitions 14.8.1–14.8.3) | match probability $\prod_i p_i$; dropout and Bayes (Example 14.8.1) |
-| Linkage (14.9) | LOD score (Definition 14.9.2) | phase known $\log_{10}[\theta^R(1-\theta)^{n-R}2^n]$ (Formula 14.9.1); phase unknown (Formula 14.9.2); add across families; $Z \ge 3$ ≈ posterior $0.95$ (Proposition 14.9.1); $Z \le -2$ excludes |
+| Linkage (14.9) | LOD score (Definition 14.9.2); phase from the maternal grandfather for X-linked loci | phase known $\log_{10}[\theta^R(1-\theta)^{n-R}2^n]$ (Formula 14.9.1); phase unknown (Formula 14.9.2); add across families; $Z \ge 3$ ≈ posterior $0.95$ (Proposition 14.9.1); $Z \le -2$ excludes |
 | Positional cloning (14.10) | linkage → interval → candidates → mutations (Algorithm 14.10.1) | HD (1983/1993), CF (1989), NF1 (1990) |
 | Sequencing era (14.11) | exome/genome (Definition 14.11.1), trios, filtering | about one coding de novo mutation per person; ACMG five classes |
 
@@ -333,3 +367,16 @@ The interpretation of variants is the hard part. A variant is classified by the 
 13. Why does a duplicate gene whose ancestral version had two independent tissue-specific enhancers often end up with both copies retained, even though neither copy gains a new function?
 
     **Answer** After duplication the copies are redundant. A mutation destroying enhancer 1 in copy A and one destroying enhancer 2 in copy B are both neutral when they occur, but once both have happened, each copy is required in one tissue, so both are preserved by selection: subfunctionalization (Definition 14.4.2). The probability of this outcome is substantial when loss-of-function mutations in the regulatory modules are much more frequent than mutations that inactivate the coding sequence, because then the first copy to be fixed for a regulatory loss commits the other copy to keeping that module.
+14. (Hybrid panels) (a) In Example 14.1.1, a fourth human enzyme is present in lines B, C and E only. To which of the chromosomes tested can it be assigned? (b) A panel is to distinguish all 23 human chromosome types (22 autosomes and the X) by their retention patterns. If each chromosome is retained independently with probability $1/2$ in each line, what is the probability, with 8 lines, that the chromosome carrying a given gene shares its pattern with at least one other chromosome? What is the smallest number of lines with which a perfectly designed panel could distinguish all 23?
+
+    **Answer** (a) The pattern $-\,+\,+\,-\,+\,-$ is that of chromosome 4. (b) Each of the other 22 chromosomes matches with probability $2^{-8}$, so the probability of at least one match is $1 - (1 - 2^{-8})^{22} = 0.083$; the expected number of matching chromosomes is $22/256 = 0.086$. A designed panel needs $k$ lines with $2^k \ge 23$ distinct patterns, so $k = 5$; in practice more lines are used, because random retention does not give a perfect design and some lines carry rearranged chromosomes.
+15. (Grandfather method) A woman's father had both red–green colour blindness and G6PD deficiency (both X-linked recessive); she has normal vision and enzyme activity. Of her 20 sons, 9 have both traits, 9 neither, 1 only colour blindness and 1 only G6PD deficiency. Estimate the recombination fraction and compute the LOD score at $\hat\theta$. What would the LOD be if her father's phenotype were unknown?
+
+    **Answer** She received both mutant alleles on her father's X, so she is in coupling; her sons with one trait only are recombinant: $\hat\theta = 2/20 = 0.10$. Phase known (Formula 14.9.1): $Z = \log_{10}\bigl[0.1^2 \times 0.9^{18} \times 2^{20}\bigr] = 3.20$, which passes the threshold of 3. With unknown phase (Formula 14.9.2) the second term ($\theta^{18}(1 - \theta)^2$) is negligible at $\theta = 0.1$, and the factor $\frac12$ subtracts $\log_{10}2$: $Z = 2.90$.
+16. A dominant RAPD band and a codominant SNP are both used to genotype an F2 from two inbred lines that differ at the marker. What fraction of the F2 has a fully known marker genotype in each case? Why is the RAPD marker nevertheless useful in a backcross to the parent that lacks the band?
+
+    **Answer** SNP: all F2 individuals ($AA$, $Aa$ and $aa$ are distinguishable). RAPD: only the band-less class ($aa$, $1/4$) is known; the $3/4$ with the band are $AA$ or $Aa$. In a backcross to the band-less parent, offspring are $Aa$ (band) or $aa$ (no band), so the band reveals the gamete of the F1 just as a codominant marker would.
+17. A recessive disease gene in humans maps by linkage to an interval of $2\,\mathrm{cM}$ between two markers. Assuming the average human rate of about $1.2\,\mathrm{cM/Mb}$ and about $20\,000$ protein-coding genes in $3.1\,\mathrm{Gb}$, about how many base pairs and genes does the interval contain? Why might the real interval be much larger or smaller?
+
+    **Answer** $2/1.2 \approx 1.7\,\mathrm{Mb}$; at about $6.5$ genes per megabase, about 11 genes. Recombination rates vary along chromosomes (hotspots, suppression near centromeres, [7.4.8](/7.4.8#sec-8.8)), so a $2\,\mathrm{cM}$ interval can be a few hundred kilobases in a hotspot-rich region or several megabases near a centromere, and gene density varies from gene deserts to gene-rich regions such as chromosome 19.
+

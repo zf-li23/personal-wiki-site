@@ -7765,3 +7765,6 @@ terms:
   - { zh: 雌雄异株, en: dioecious, aliases: [dioecy] }
   - { zh: 自由马丁, en: freemartin, aliases: [freemartins] }
   - { zh: 核雄性不育, en: genic male sterility, aliases: [GMS, 细胞核雄性不育], scope: ["7"] }
+  - { zh: Haldane–Huxley 法则, en: Haldane–Huxley rule, aliases: [霍尔丹定律] }
+  - { zh: 体细胞杂种, en: somatic cell hybrid, aliases: [somatic cell hybrids, 体细胞杂种细胞] }
+  - { zh: 限制性片段长度多态性, en: restriction fragment length polymorphism, aliases: [RFLP, RFLPs, restriction fragment length polymorphisms] }

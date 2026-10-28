@@ -47,7 +47,19 @@ Boveri added that a sea urchin embryo develops normally only if every cell recei
 
 **Definition 5.1.3 (Chromosome Theory of Inheritance)** The **chromosome theory of inheritance** is the theory that genes are located on chromosomes, at fixed positions (loci) in a fixed linear order, and that the transmission of genes from parents to offspring follows from the behavior of chromosomes in meiosis and fertilization.
 
-The parallels were circumstantial. The theory became a demonstrated fact when particular genes were shown to travel with particular, cytologically recognizable chromosomes: Morgan's X-linked *white* gene (1910) and, decisively, Bridges' demonstration (1916) that exceptional progeny arising from **nondisjunction** of the X chromosomes have exactly the abnormal chromosome sets that their phenotypes predict ([7.4.6](/7.4.6)). The theory also predicted that genes on the same chromosome should not assort independently, which Morgan's group confirmed and turned into the genetic map ([7.4.8](/7.4.8)).
+The parallels were circumstantial. The theory became a demonstrated fact when particular genes were shown to travel with particular, cytologically recognizable chromosomes: Morgan's X-linked *white* gene (1910) and, decisively, Bridges' demonstration (1916) that exceptional progeny arising from **nondisjunction** of the X chromosomes have exactly the abnormal chromosome sets that their phenotypes predict ([7.4.6](/7.4.6)). The theory also predicted that genes on the same chromosome should not assort independently, which Morgan's group confirmed and turned into the genetic map ([7.4.8](/7.4.8)). The main steps:
+
+| Year | Step | Chapter |
+|---|---|---|
+| 1902–1903 | Sutton and Boveri: chromosomes behave as Mendel's factors | 5.1.2 |
+| 1905 | Bateson, Saunders and Punnett: sweet-pea factors that do not assort independently ("coupling") | [7.4.8](/7.4.8) |
+| 1909 | Johannsen introduces the words gene, genotype and phenotype | [7.4.1](/7.4.1) |
+| 1910 | Morgan: *white* follows the X chromosome in *Drosophila* | [7.4.6](/7.4.6) |
+| 1911 | Morgan: linkage and crossing over explain the excess of parental types | [7.4.8](/7.4.8) |
+| 1913 | Sturtevant: the first genetic map, five genes on the X | [7.4.8](/7.4.8) |
+| 1916 | Bridges: nondisjunction of the X proves the theory | [7.4.6](/7.4.6) |
+| 1931 | Creighton and McClintock (maize), Stern (*Drosophila*): recombination is accompanied by physical exchange | [7.4.8](/7.4.8) |
+| 1933 | Nobel Prize to Morgan for the role of chromosomes in heredity | |
 
 ## 5.2. Mitosis Preserves the Genotype
 
@@ -88,6 +100,8 @@ This is the **law of independent assortment** derived from the cell. It also say
 **Definition 5.3.2 (Crossing Over)** **Crossing over** is the reciprocal exchange of corresponding segments between two non-sister chromatids of a pair of homologous chromosomes, occurring in prophase I of meiosis (and rarely in mitotic cells). Each crossover involves two of the four chromatids of a bivalent and produces two recombinant chromatids, each made of a segment of one homologue joined to the adjacent segment of the other.
 
 Cytologically a crossover is seen as a chiasma ([7.3.21](/7.3.21#sec-21.7.2)); molecularly it is the crossover resolution of a double Holliday junction in **homologous recombination** ([7.2.9](/7.2.9#sec-9.5.2)). Genetically it is defined by its products.
+
+Prophase I is divided by the appearance of the chromosomes into leptotene, zygotene, pachytene, diplotene and diakinesis (table in [7.3.21](/7.3.21#sec-21.7.2)), and the genetic events can be placed on this timeline. Recombination begins in leptotene with programmed double-strand breaks; homologues synapse in zygotene, forming bivalents; crossovers are completed in pachytene; when the synaptonemal complex disassembles in diplotene, the homologues remain joined only at the chiasmata, which are the first cytological sign of the crossovers; and in diakinesis the bivalents reach maximal condensation. Older accounts describe chiasmata as sliding toward the chromosome ends during diakinesis (terminalization). In the organisms examined with modern markers, chiasmata mostly stay at the sites of the crossovers, and apparent terminalization reflects condensation and the progressive release of arm cohesion; chiasma positions can therefore be used as crossover positions, which is the basis of cytological crossover counts ([7.4.8](/7.4.8#sec-8.8.1)). Before prophase, premeiotic S phase is typically longer than a mitotic S phase, and it is then that the meiotic cohesin that will later hold chiasmata and sister centromeres together is loaded ([7.3.21](/7.3.21#sec-21.7)).
 
 **Definition 5.3.3 (Recombinant Gamete)** For an individual that inherited the alleles of two or more loci in particular combinations from its two parents (the parental combinations, for example $AB$ from the father and $ab$ from the mother), a **recombinant gamete** is a gamete that carries a combination of alleles not present in either parental chromosome set ($Ab$ or $aB$); gametes carrying a parental combination are parental gametes.
 
@@ -175,6 +189,7 @@ The difference between the sexes extends to recombination: human oocytes have ab
 - First or second division: Alleles separate at meiosis I if there is no crossover between locus and centromere, at meiosis II if there is one (figure in Section 5.3.1; tetrads in [7.4.9](/7.4.9)).
 - Counting (Formula 5.4.1): $2^n$ chromosome combinations per gamete, $4^n$ per zygote, paternal chromosomes in a gamete $\sim\mathrm{Bin}(n, 1/2)$; for humans $2^{23} \approx 8.4\times10^6$. The grandparental share of a gamete has mean $1/2$ and variance $\frac14\sum L_i^2/(\sum L_i)^2$ without crossovers (Eq. (5.1)), smaller with them (Example 5.4.2).
 - DNA content and chromosome number (Formula 5.5.1): G2 and meiosis I $2n$, $4C$; after meiosis I $n$, $2C$; gametes $n$, $1C$.
+- Prophase I: breaks in leptotene, synapsis in zygotene, crossovers in pachytene, chiasmata visible from diplotene (Section 5.3.3).
 - Gametogenesis (Definition 5.6.1): four sperm per spermatocyte, one egg plus polar bodies per oocyte; decades-long arrest of oocytes (maternal age effect on nondisjunction) versus hundreds of spermatogonial divisions (paternal age effect on point mutations); polar bodies reveal the egg's genotype (Example 5.6.1).
 
 ## Questions
@@ -215,3 +230,13 @@ The difference between the sexes extends to recombination: human oocytes have ab
 12. Explain, using Formula 5.5.1, why a cell with the DNA content $2C$ can be either diploid or haploid, and how one could tell them apart in a flow-cytometry experiment that measures only DNA content.
 
     **Answer** A diploid G1 cell ($2n$, one chromatid each) and a haploid cell at metaphase II or a secondary spermatocyte ($n$, two chromatids each) both contain $2C$. DNA content alone cannot distinguish them. One must add another measurement: chromosome counting, centromere or kinetochore staining (number of centromeres $2n$ versus $n$), or a marker of the cell type or cell cycle stage; in testis samples the $1C$ peak of spermatids is unambiguous, while the $2C$ peak mixes spermatogonia in G1 and secondary spermatocytes.
+13. How many primary spermatocytes and primary oocytes are needed, at least, to produce 400 offspring in a mammal? How many microsporocytes (pollen mother cells) and megasporocytes are needed for 400 seeds in a flowering plant?
+
+    **Answer** Each primary spermatocyte gives four sperm and each primary oocyte one egg, and each offspring needs one of each: 100 spermatocytes and 400 oocytes. In a flowering plant each microsporocyte gives four pollen grains, and one pollen grain delivers the two sperm of a double fertilization, while each megasporocyte gives one functional megaspore and thus one embryo sac: 100 microsporocytes and 400 megasporocytes.
+14. Rice has $2n = 24$. At pachytene, how many bivalents, chromosomes (centromeres) and chromatids are there? How many chromosome combinations can a gamete have (ignoring crossing over), and what is the probability that a gamete carries only maternal centromeres?
+
+    **Answer** 12 bivalents, 24 chromosomes (24 centromeres) and 48 chromatids. $2^{12} = 4096$ combinations; all maternal centromeres with probability $2^{-12} = 1/4096 \approx 2.4 \times 10^{-4}$.
+15. In a plant $AB/ab$, a chiasma is seen between the two loci in $30\,\%$ of pollen mother cells and never more than one. What are the gamete frequencies? What would they be if the loci were on different chromosomes?
+
+    **Answer** A meiocyte with one crossover in the interval gives two recombinant and two parental products, so $r = 0.30/2 = 0.15$: $AB$ and $ab$ $0.425$ each, $Ab$ and $aB$ $0.075$ each. On different chromosomes all four gametes would be $0.25$ (Proposition 5.3.1), whatever the frequency of chiasmata.
+
