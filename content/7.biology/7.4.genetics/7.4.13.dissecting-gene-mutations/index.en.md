@@ -38,6 +38,33 @@ Intragenic complementation is typically partial and occurs only between some pai
 
 The cis configuration is the control that makes the trans result interpretable: it shows that the mutations are recessive when a wild-type copy of the whole unit is present. Benzer (1957) introduced the term cistron for the unit so defined; in practice it is a synonym of gene in the functional sense, a stretch of DNA encoding one polypeptide or functional RNA. In bacteria the test is done in merodiploids made with F′ plasmids ([7.4.10](/7.4.10)); cis–trans tests of regulatory mutations of the *lac* operon distinguished cis-acting sites from trans-acting proteins ([7.2.11](/7.2.11)), a distinction that the complementation test of coding mutations alone cannot make.
 
+The logic of the regulatory tests can be written as two questions about each mutation $x$ in a merodiploid. Is $x$ dominant or recessive to the wild type? And does it act only on the genes of its own DNA molecule (cis) or on both molecules (trans)? The second question is answered by placing a recessive structural mutation, $Z^{-}$, either on the same molecule as $x$ or on the other one, so that the enzyme reports which copy is expressed.
+
+**Example 13.1.2 (Classifying Constitutive Mutations of the *lac* Operon)** Three independent mutants $c_1$, $c_2$, $c_3$ make β-galactosidase without inducer. Each is tested in two merodiploids (chromosome / F′), and the β-galactosidase is measured without and with the inducer IPTG:
+
+| Merodiploid | $c_1$ | $c_2$ | $c_3$ |
+|---|---|---|---|
+| (i) $x\,Z^{+}$ / F′ $I^{+}O^{+}Z^{-}$ | inducible | constitutive | constitutive |
+| (ii) $x\,Z^{-}$ / F′ $I^{+}O^{+}Z^{+}$ | inducible | inducible | constitutive |
+
+Test (i) shows that $c_1$ is recessive: a wild-type copy restores regulation of the enzyme made from the chromosome, so the wild-type product acts in trans, and $c_1$ is an $I^{-}$ allele of the repressor gene. $c_2$ is dominant in (i) but has no effect on the $Z^{+}$ copy of the other molecule in (ii): it acts only in cis and is an operator-constitutive mutation $O^{c}$. $c_3$ is dominant and acts in trans on the other molecule's genes: a dominant negative repressor allele $I^{-\mathrm{d}}$, which poisons the tetramers that contain wild-type subunits (Formula 12.3.1). Noninducible mutants are classified in the same way: a super-repressor $I^{\mathrm{s}}$ is dominant and acts in trans, and a promoter mutation $P^{-}$ prevents expression only of the genes in cis. The full set of genotypes, with the molecular interpretation, is in [7.2.11](/7.2.11#sec-11.2.1).
+
+### 13.1.4. The Gene in Molecular Terms
+
+The functional definition of the gene by the cis–trans test, the unit that makes one product, survived the molecular analysis of genes, but several refinements were needed. Jacob and Monod distinguished *structural genes*, which encode the enzymes and other proteins or RNAs whose function is measured, from *regulatory genes*, such as *lacI*, whose products control the expression of other genes; the distinction is one of role, since a regulatory gene is itself a transcribed, complementable unit, unlike a cis-acting site such as an operator.
+
+| Finding | Consequence for the gene concept | Details |
+|---|---|---|
+| Operons transcribed as polycistronic mRNA in bacteria | one transcription unit can contain several cistrons; eukaryotic mRNAs are mostly monocistronic | [7.2.11](/7.2.11) |
+| Split genes: exons and introns | a gene is not a continuous stretch of coding DNA; alternative splicing makes several products from one gene | [7.2.2](/7.2.2#sec-2.4), [7.2.16](/7.2.16) |
+| Overlapping and nested genes | one DNA sequence can belong to two genes, read in different frames or on opposite strands | [7.2.2](/7.2.2#sec-2.5) |
+| Genes for RNAs | the product can be an rRNA, tRNA or regulatory RNA, not a polypeptide | [7.2.2](/7.2.2#sec-2.6) |
+| **Pseudogenes** | gene-like sequences without function | [7.2.2](/7.2.2#sec-2.2.5) |
+| Transposable elements ("jumping genes") | the position of a sequence in the genome can change | [7.4.17](/7.4.17) |
+| Cis-regulatory elements, often far from the coding sequence | mutations that affect a gene can lie outside its transcribed region | [7.2.14](/7.2.14) |
+
+A current working definition is that a gene is a region of DNA that is transcribed into a functional product, together with the sequences that regulate its expression; mutations within it that destroy the product fall into one complementation group.
+
 ## 13.2. Benzer's Fine Structure of the rII Region
 
 ### 13.2.1. A System of Extreme Resolution
@@ -158,6 +185,8 @@ Jeremy Nathans and colleagues (1986) found that most red–green color vision de
 | Complementation groups (Algorithm 13.1.1, Example 13.1.1) | noncomplementation graph → connected components = genes; check cliques; *white* example: 9 mutations, 5 genes |
 | Exceptions (Definition 13.1.1) | intragenic complementation (multimers, partial, nontransitive); dominant negatives; nonallelic noncomplementation (interacting products) |
 | Cistron (Definition 13.1.2) | cis heterozygote is the control; trans mutant → same cistron; F′ merodiploids; cis-acting sites vs trans-acting products |
+| Regulatory mutations (Example 13.1.2) | dominance test plus a $Z^{-}$ reporter in cis or trans: $I^{-}$ recessive, trans; $O^{c}$ dominant, cis only; $I^{-\mathrm{d}}$ and $I^{\mathrm{s}}$ dominant, trans; $P^{-}$ cis |
+| The gene in molecular terms (13.1.4) | structural vs regulatory genes; polycistronic units, split, overlapping and nested genes, RNA genes, pseudogenes, transposons, distant cis-regulatory elements |
 | rII system (13.2.1, Formula 13.2.1) | screen (large plaques on B) and selection (growth on K(λ)); $\mathrm{RF} = 2K/B$; detection to about $10^{-6}$; smallest RF 0.02 map units ≈ 2 bp; a gene is a linear array of mutable sites |
 | Deletion mapping (Definition 13.2.1, Algorithm 13.2.1) | no wild-type recombinants if the deletion covers the mutation; $k$ deletions → up to $2^k$ intervals |
 | Hotspots (Definition 13.2.2, Formula 13.2.2) | non-Poisson counts per site; unseen sites $\ge n_1^2/(2n_2)$; 5-methylcytosine and mutagen-specific hotspots |
@@ -215,3 +244,11 @@ Jeremy Nathans and colleagues (1986) found that most red–green color vision de
 12. (Open question) Benzer's experiments are often summarized as showing that "the gene" is divisible into three different units: the unit of function (cistron), of recombination (recon) and of mutation (muton). How do these map onto the molecular gene, and which parts of the classical definition break down for eukaryotic genes?
 
     **Answer** Outline: the muton and the recon are a single base pair (mutations can change one pair; recombination can separate adjacent pairs, except where gene conversion and mismatch repair blur close sites). The cistron is the stretch of DNA encoding one polypeptide, defined by complementation. In eukaryotes the coding sequence is interrupted by introns, so the cistron is not a continuous DNA segment of the protein's length; alternative splicing and alternative promoters make one locus encode several polypeptides, and mutations in different exons may complement if they affect different isoforms; regulatory elements can lie far away and be shared by several genes; and overlapping and antisense transcription units exist. The functional (product-based) definition of the gene in [7.2.1](/7.2.1) replaces the classical one, but complementation remains the operational test of whether two mutations affect the same function.
+
+13. Four mutants of the *lac* operon of *E. coli* are tested in merodiploids, and β-galactosidase and permease are measured without and with inducer. (a) $m_1$ makes no enzyme under any condition, and neither do $m_1/$F′ $I^{+}O^{+}Z^{+}Y^{+}$ cells. (b) $m_2$ makes inducible permease but no β-galactosidase; $m_2/$F′ $I^{+}O^{+}Z^{+}Y^{-}$ makes both, inducibly. (c) $m_3$ makes neither product; $m_3/$F′ $I^{+}O^{+}Z^{-}Y^{+}$ makes inducible permease but no β-galactosidase, and $m_3/$F′ $I^{+}O^{+}Z^{+}Y^{-}$ makes inducible β-galactosidase but no permease; $m_3$ maps between *lacI* and the operator. (d) $m_4$ makes both products without inducer, and $m_4/$F′ $I^{+}O^{+}Z^{+}Y^{+}$ is inducible. Classify each mutation.
+
+    **Answer** (a) Noninducible and dominant in trans, silencing the F′ copy too: a super-repressor $I^{\mathrm{s}}$, whose repressor cannot bind inducer but binds both operators. (b) Only β-galactosidase is missing, regulation is normal, and the F′ $Z^{+}$ complements it: a recessive *lacZ* structural mutation. (c) Whatever the F′ carries, the genes on the chromosome are never expressed, while the F′ genes are expressed normally: $m_3$ acts only in cis and blocks expression of both genes linked to it, and its position outside *lacZ* excludes a polar mutation in *lacZ*: a promoter mutation $P^{-}$. (d) Constitutive and recessive: an $I^{-}$ allele of the repressor gene (Example 13.1.2).
+
+14. Classify each of the following as a structural gene, a regulatory gene or a cis-acting site, and say whether a recessive loss-of-function mutation in it can be complemented in trans in a merodiploid: (a) *lacY*; (b) *lacI*; (c) the *lac* operator; (d) the gene for CAP (*crp*).
+
+    **Answer** (a) Structural gene (permease); complemented in trans. (b) Regulatory gene (repressor); its $I^{-}$ alleles are complemented in trans by $I^{+}$. (c) Cis-acting site: it is not transcribed into a product, so $O^{c}$ is not complemented; it affects only the genes on its own molecule. (d) Regulatory gene (the activator CAP, encoded elsewhere in the genome); a *crp* null mutation, which lowers expression of all catabolite-sensitive operons, is complemented in trans by a wild-type *crp* copy (Section 13.1.4).

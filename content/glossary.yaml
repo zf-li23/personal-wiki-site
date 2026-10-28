@@ -7771,3 +7771,14 @@ terms:
   - { zh: 回交, en: backcross, aliases: [backcrosses, backcrossing] }
   - { zh: 镶嵌显性, en: mosaic dominance }
   - { zh: 自交不亲和, en: self-incompatibility, aliases: [self-incompatible, 自交不亲和性] }
+  - { zh: 延长突变, en: nonstop mutation, aliases: [stop-loss mutation, 无终止突变, nonstop mutations] }
+  - { zh: 中性突变, en: neutral mutation, aliases: [neutral mutations] }
+  - { zh: 芽变, en: bud sport, aliases: [bud sports] }
+  - { zh: 诱变育种, en: mutation breeding }
+  - { zh: 结构基因, en: structural gene, aliases: [structural genes] }
+  - { zh: 调节基因, en: regulatory gene, aliases: [regulatory genes, 调控基因, regulator gene] }
+  - { zh: 断裂-融合-桥循环, en: breakage–fusion–bridge cycle, aliases: [breakage-fusion-bridge cycle, BFB cycle, 断裂–融合–桥循环] }
+  - { zh: 环状染色体, en: ring chromosome, aliases: [ring chromosomes] }
+  - { zh: 程序性 DNA 消除, en: programmed DNA elimination }
+  - { zh: 染色质消减, en: chromatin diminution }
+  - { zh: 基因扩增, en: gene amplification }

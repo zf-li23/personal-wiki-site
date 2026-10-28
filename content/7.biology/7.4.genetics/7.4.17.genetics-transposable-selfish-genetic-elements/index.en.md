@@ -147,6 +147,29 @@ Homing endonuclease genes are found in self-splicing introns and inteins of fung
 - Enhancer traps and GAL4 lines. Enhancer-trap insertions carrying the yeast transcription factor gene *GAL4* create thousands of lines that express GAL4 in particular tissues, which can drive any gene placed under a UAS promoter (the GAL4/UAS system, [7.4.19](/7.4.19)).
 - Saturating insertion screens. In bacteria, random transposon insertions in a pool of millions of mutants, followed by sequencing of the insertion sites before and after growth under a condition (Tn-seq), measure the fitness contribution of every gene at once: genes with no insertions in the surviving pool are essential under that condition.
 
+## 17.8. Programmed Changes of the Genome
+
+The principle that all cells of an organism carry the same genome (genomic equivalence, [7.3.24](/7.3.24)) has regulated exceptions, in which particular cells cut, discard or copy parts of their DNA as a normal step of development. Several of them use enzymes or sequences that descend from transposable elements, and some may have begun as host defenses against them.
+
+**Definition 17.8.1 (Programmed DNA Elimination and Gene Amplification)** *Programmed DNA elimination* is the developmentally regulated removal of specific DNA sequences, whole chromosomes or chromosome segments from somatic cells, while the germline keeps the complete genome; in nematodes it is called *chromatin diminution*. *Gene amplification* is an increase in the copy number of a restricted region of the genome in particular cells, either as a programmed developmental event or, in tumor and drug-resistant cells, as a selected mutation.
+
+| Change | Organism and cells | What happens | Origin of the machinery |
+|---|---|---|---|
+| V(D)J recombination | lymphocytes of jawed vertebrates | gene segments of antibody and T-cell-receptor genes joined, intervening DNA deleted ([7.2.9](/7.2.9#sec-9.7)) | RAG1–RAG2, a domesticated transposase |
+| Chromatin diminution | somatic cells of *Parascaris* and *Ascaris* (Boveri 1887) | chromosomes fragmented, new telomeres added, parts discarded: in *Ascaris suum* about $13\,\%$ of the germline DNA, including several hundred germline genes | unknown nuclease; repeats and germline genes removed |
+| Chromosome elimination | sea lamprey; zebra finch and other songbirds; *Sciara* flies | about a fifth of the lamprey germline genome lost from somatic cells; a germline-restricted chromosome absent from all somatic cells of songbirds | — |
+| Excision of internal eliminated sequences | macronucleus of ciliates (*Paramecium*, *Tetrahymena*, *Oxytricha*) | tens of thousands of short sequences, many of them transposon remnants, cut out and the flanks rejoined; in *Oxytricha* more than $90\,\%$ of the germline DNA eliminated and gene pieces reordered | domesticated *piggyBac* transposase (PiggyMac) in *Paramecium*; small RNAs that compare the old and new genome |
+| rDNA amplification | oocytes of amphibians and many insects | ribosomal RNA genes copied from several hundred to about $10^{6}$ copies in extrachromosomal nucleoli, by rolling-circle replication | — |
+| Chorion gene amplification | follicle cells of *Drosophila* | eggshell gene clusters amplified about 15- to 80-fold by repeated firing of replication origins | replication licensing |
+| Mating-type switching | budding yeast | silent cassette copied into the *MAT* locus by gene conversion after an HO endonuclease cut | homing-like endonuclease |
+| Antigenic variation | trypanosomes | variant surface glycoprotein genes copied into the expression site by gene conversion | — |
+
+In *Parascaris univalens*, which has a single pair of large germline chromosomes ($2n = 2$), Boveri saw that in the early cleavage divisions the cells destined to form the soma break their chromosomes into many small ones and discard the heterochromatic ends, while one cell in each division keeps the intact chromosomes and gives rise to the germline. Centrifuging eggs so that both daughters of the first divisions received the germ-plasm-rich vegetal cytoplasm prevented diminution in both, an early proof that a cytoplasmic determinant protects the germline genome ([7.5](/7.5)).
+
+Gene amplification gives a cell the large amount of a gene product that a short, intense phase of development needs: a *Xenopus* oocyte must make about $10^{12}$ ribosomes, which the few hundred chromosomal rDNA copies could not supply in the months of oogenesis. As a selected mutation, amplification of oncogenes (*MYCN*, *ERBB2*) drives tumor growth and amplification of drug-target genes causes resistance: cells grown in increasing concentrations of methotrexate carry tens to hundreds of copies of the dihydrofolate reductase gene *DHFR* (Schimke and colleagues 1978), on acentric double minute chromosomes, which are lost at random in divisions without the drug, or in homogeneously staining regions within a chromosome, which are stable ([7.4.21](/7.4.21)).
+
+**Example 17.8.1** If the rDNA of a *Xenopus* oocyte is amplified from about $500$ copies to $2 \times 10^{6}$, the increase is $4000$-fold, equivalent to $\log_2 4000 \approx 12$ rounds of doubling; rolling-circle replication of extrachromosomal circles, in which each circle produces many copies, achieves it in a few weeks of early oogenesis. The amplified rDNA contains more DNA than all the chromosomes of the oocyte nucleus put together.
+
 ## Summary
 
 | Element or system | Kind | Genetic signature | Key quantity |
@@ -162,6 +185,7 @@ Homing endonuclease genes are found in self-splicing introns and inteins of fung
 
 - Consequences of transposition (17.5): insertional mutations (*white-apricot*, Mendel's wrinkled peas, *carbonaria*), unstable alleles, new regulatory elements, gene relocation, rearrangements, domesticated transposases.
 - Tools (Definition 17.7.1): transposon tagging, germline transformation, enhancer traps and GAL4 lines, Tn-seq.
+- Programmed changes (Definition 17.8.1): V(D)J recombination, chromatin diminution (*Parascaris*, *Ascaris*: germline intact, soma loses DNA), chromosome elimination, ciliate IES excision by a domesticated transposase, rDNA and chorion amplification (Example 17.8.1: about 12 doublings), mating-type switching; selected amplification of oncogenes and *DHFR* on double minutes or HSRs.
 
 ## Questions
 
@@ -201,3 +225,15 @@ Homing endonuclease genes are found in self-splicing introns and inteins of fung
 12. Design a transposon-tagging experiment to clone a maize gene defined by a recessive mutation $m$ for which no molecular information exists, using an active *Ac* line.
 
     **Answer** Cross plants carrying active *Ac* (in a wild-type $M/M$ background) as pollen parents to $m/m$ females, and screen the progeny for mutant individuals ($m/m^{*}$), where $m^{*}$ is a new mutant allele induced by an *Ac* insertion into $M$ in the germline of the *Ac* parent. Confirm that the new allele is unstable (somatic reversion gives wild-type sectors or revertant progeny in the presence of *Ac*). Then find an *Ac*-hybridizing restriction fragment, or an insertion site identified by sequencing, that cosegregates with $m^{*}$ in the progeny of the mutant, clone the DNA flanking the element, and confirm the gene by showing that independent alleles carry insertions in the same gene or that revertants have lost the element.
+
+13. (a) Why can chromatin diminution not be detected by comparing the DNA content of somatic cells of different individuals, and how was it detected? (b) In *Ascaris suum* about $13\,\%$ of the germline genome is eliminated. If the germline genome is $335\,\mathrm{Mb}$, how large is the somatic genome? (c) Why does diminution not violate the chromosome theory of inheritance?
+
+    **Answer** (a) All somatic cells of all individuals have lost the same sequences; the difference is between germline and soma of one individual. It was seen cytologically by Boveri (fragmentation and loss of chromatin in the somatic blastomeres) and is measured today by sequencing germline (early embryo or testis) and somatic DNA. (b) $335 \times 0.87 \approx 291\,\mathrm{Mb}$. (c) Inheritance passes only through the germline, which keeps the whole genome; what the soma loses is never transmitted.
+
+14. A cell line becomes resistant to methotrexate in steps, each of which doubles the *DHFR* copy number. (a) How many doublings take it from 2 copies to about 200? (b) In the absence of the drug, resistance falls in some resistant lines over 50 generations but not in others. Explain. (c) Why is the falling resistance of the first kind of line not a reversion in the sense of 7.4.12?
+
+    **Answer** (a) $\log_2 100 \approx 6.6$, so about 7 doublings. (b) In unstable lines the amplified copies are on acentric double minutes, which are distributed at random to the daughters; cells with fewer copies, which bear less of a burden, outgrow the others without selection. In stable lines the copies are in a homogeneously staining region of a chromosome, segregated regularly with its centromere. (c) No new mutation restores the original sequence: the population changes by unequal distribution of extrachromosomal elements and selection among cells, and the copy number of any one cell can change by large steps.
+
+15. (Open question) Programmed DNA elimination removes repeats and transposon-derived sequences in ciliates, lampreys and nematodes. Discuss whether it is better seen as a defense of the soma against transposable elements, as a way of silencing germline genes in somatic cells, or as both.
+
+    **Answer** Outline: in ciliates, the eliminated sequences are largely transposon remnants that interrupt genes, and their removal by a domesticated transposase guided by small RNAs resembles a genome-wide defense that has become obligatory, since the genes cannot work unless the remnants are removed. In lampreys and *Ascaris* many eliminated sequences are genes expressed in the germline (and in *Ascaris* also satellite repeats), so elimination permanently silences germline programs in somatic cells, a function that elsewhere is performed by chromatin silencing ([7.4.18](/7.4.18)). The two explanations are compatible: a mechanism that first evolved to remove selfish DNA could be recruited to remove host genes whose somatic expression is harmful; comparing the content of eliminated DNA across lineages and testing the effect of blocking elimination are the ways to decide.

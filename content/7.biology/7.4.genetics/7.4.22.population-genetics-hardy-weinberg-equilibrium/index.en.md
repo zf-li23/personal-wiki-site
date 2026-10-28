@@ -154,7 +154,17 @@ Each iteration increases the likelihood; convergence to the maximum likelihood e
 
 **Formula 22.2.3 (X-Linked Frequencies at Equilibrium)** If an X-linked allele has frequency $q$ in both sexes, then hemizygous males have the allele with frequency $q$ and females are homozygous with frequency $q^2$ and heterozygous with frequency $2pq$. For a recessive trait, the ratio of affected females to affected males is $q$.
 
-**Example 22.2.5** Red–green color vision defects affect about $8\,\%$ of men of European ancestry, so $q \approx 0.08$; the predicted frequency in women is $q^2 = 0.0064$, close to the observed $0.4$–$0.5\,\%$, and $2pq = 0.147$ of women are carriers. (The calculation treats the several alleles at the *OPN1LW*/*OPN1MW* gene cluster as one.) This is why rare X-linked recessive diseases such as hemophilia A, with $q \approx 10^{-4}$ in males, are almost never seen in women.
+**Example 22.2.5** Red–green color vision defects affect about $8\,\%$ of men of European ancestry, so $q \approx 0.08$; the predicted frequency in women is $q^2 = 0.0064$, close to the observed $0.4$–$0.5\,\%$, and $2pq = 0.147$ of women are carriers. (The calculation treats the several alleles at the *OPN1LW*/*OPN1MW* gene cluster as one.) This is why rare X-linked recessive diseases such as hemophilia A, with $q \approx 10^{-4}$ in males, are almost never seen in women. For an X-linked dominant trait the relation is reversed: males are affected with frequency $q$, females with frequency $q^2 + 2pq = q(2 - q)$, so a rare X-linked dominant condition affects nearly twice as many women as men.
+
+When allele frequencies are estimated from a sample that contains both sexes, the gene copies must be counted, not the individuals: each woman carries two X chromosomes, each man one.
+
+**Formula 22.2.4 (X-Linked Allele Frequency by Gene Counting)** In a sample of $N_f$ women, of whom $n_{aa}$ are homozygous and $n_{Aa}$ heterozygous for allele $a$, and $N_m$ men, of whom $n_a$ carry $a$,
+
+$$
+\hat q = \frac{2n_{aa} + n_{Aa} + n_a}{2N_f + N_m}.
+$$
+
+**Example 22.2.6** A school survey of 300 girls and 300 boys for red–green color vision finds 3 affected girls, 42 carrier girls (identified from their families or by genotyping) and 21 affected boys. Then $\hat q = (2 \cdot 3 + 42 + 21)/(2 \cdot 300 + 300) = 69/900 = 0.077$, and $\hat p = 0.923$. Averaging the proportions of affected boys ($0.070$) and of $a$ alleles in girls ($48/600 = 0.080$) with equal weights would give $0.075$, a different answer, because the girls contribute two thirds of the X chromosomes.
 
 The approach to equilibrium differs from the autosomal case. A son receives his X from his mother; a daughter one X from each parent. If $q_m$ and $q_f$ are the frequencies in males and females of one generation, then in the next
 
@@ -354,7 +364,7 @@ The ideal population (Theorem 22.2.1): infinite size, random mating, no mutation
 | test | χ² with 1 df (Algorithm 22.2.1); exact test for rare alleles; low power (Remark 22.2.1) |
 | rare recessive | $q = \sqrt{Q}$, carriers $\approx 2q$, carriers/affected $\approx 2/q$, Eq. (22.2) |
 | $k$ alleles | $p_i^2$, $2p_ip_j$; heterozygosity $H = 1 - \sum p_i^2$, Eq. (22.3); ABO by Bernstein, Eq. (22.4), or gene counting (EM, Algorithm 22.2.2) |
-| X-linked | males $q$, females $q^2$; difference between sexes $\times(-1/2)$ per generation, mean $(q_m + 2q_f)/3$ conserved (Theorem 22.2.2) |
+| X-linked | males $q$, females $q^2$ (recessive) or $q(2-q)$ (dominant); gene counting $\hat q = (2n_{aa} + n_{Aa} + n_a)/(2N_f + N_m)$ (Formula 22.2.4, Example 22.2.6); difference between sexes $\times(-1/2)$ per generation, mean $(q_m + 2q_f)/3$ conserved (Theorem 22.2.2) |
 
 Two loci: haplotype frequencies $p_{AB} = p_Ap_B + D$; $D'$ and $r^2$ (Eq. (22.7)); $D_t = (1 - r)^tD_0$ (Theorem 22.3.1), so linkage equilibrium is approached slowly for linked loci; LD is created by mutation, drift, selection and admixture, and the length of the ancestral haplotype ($2/g$ morgans) dates a mutation.
 
@@ -426,3 +436,19 @@ Applications: random match probability by the product rule with the θ correctio
 14. (Open question.) A study finds a large excess of homozygotes at one SNP in a sample of cases and controls, but not at neighboring SNPs. List possible explanations and how you would distinguish them.
 
     **Answer** Possibilities: (i) genotyping error, for example a null allele (a polymorphism in a probe or primer site prevents detection of one allele, so heterozygotes are called homozygotes) or poor cluster separation, which affects one assay and not its neighbors; (ii) a deletion polymorphism, in which hemizygous individuals appear homozygous; (iii) selection or association with the disease, if the excess is confined to cases; (iv) inbreeding or population structure, which would affect all loci similarly and is therefore unlikely to explain a single SNP. Checks: compare cases and controls separately; examine the raw intensity data and call rates; genotype with an independent method; look for a copy-number change and for Mendelian inconsistencies in families; compute $F$ genome-wide.
+
+15. In a moth population in Hardy–Weinberg equilibrium, the light color is recessive to dark. Among 10 000 moths, 1600 are light. (a) What are the allele frequencies? (b) How many moths are heterozygous? (c) What fraction of the dark moths are heterozygous?
+
+    **Answer** (a) $q = \sqrt{0.16} = 0.4$, $p = 0.6$ (Formula 22.2.1). (b) $2pq \cdot 10\,000 = 0.48 \cdot 10\,000 = 4800$. (c) Dark moths: $p^2 + 2pq = 0.84$; heterozygous fraction $0.48/0.84 = 4/7 \approx 0.57$.
+
+16. A sample of 400 women and 400 men is typed for an X-linked marker with alleles $A$ and $a$: women $AA$ 260, $Aa$ 120, $aa$ 20; men $A$ 290, $a$ 110. (a) Estimate the frequency of $a$ by gene counting. (b) Estimate it separately in each sex. (c) Are the women's genotype frequencies consistent with Hardy–Weinberg proportions at their own allele frequency?
+
+    **Answer** (a) $\hat q = (2 \cdot 20 + 120 + 110)/(2 \cdot 400 + 400) = 270/1200 = 0.225$ (Formula 22.2.4). (b) Women $(40 + 120)/800 = 0.200$; men $110/400 = 0.275$. (c) With $q_f = 0.2$, expected $256 : 128 : 16$; $X^2 = 16/256 + 64/128 + 16/16 = 0.06 + 0.50 + 1.00 = 1.56$ with 1 df, $p = 0.21$: consistent. The difference between the sexes ($0.20$ vs $0.275$) is larger than the sampling error would usually give (a two-sample test gives $z \approx 2.9$) and could reflect recent immigration; Theorem 22.2.2 predicts that it halves in each generation.
+
+17. In a population in Hardy–Weinberg equilibrium for the ABO blood groups, $9\,\%$ of people have group O and the frequency of $I^{A}$ is $0.2$. What are the frequencies of groups A, B and AB?
+
+    **Answer** $r = \sqrt{0.09} = 0.3$, so $q = 1 - 0.2 - 0.3 = 0.5$. Group A: $p^2 + 2pr = 0.04 + 0.12 = 0.16$; B: $q^2 + 2qr = 0.25 + 0.30 = 0.55$; AB: $2pq = 0.20$; O: $0.09$; total $1.00$.
+
+18. An X-linked dominant disorder affects 2 in 10 000 men. (a) Assuming equilibrium, what fraction of women are affected? (b) What is the ratio of affected women to affected men? (c) Among the children of an affected man and an unaffected woman, which are affected?
+
+    **Answer** (a) $q = 2 \times 10^{-4}$; affected women $q(2 - q) = 4.0 \times 10^{-4}$. (b) $2 - q \approx 2$: almost twice as many women as men. (c) All his daughters (they receive his X) and none of his sons (they receive his Y).

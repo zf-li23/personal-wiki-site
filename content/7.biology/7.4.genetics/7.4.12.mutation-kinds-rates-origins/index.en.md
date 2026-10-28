@@ -25,7 +25,9 @@ Mutations are classified first by the change in the sequence: substitutions of o
 
 **Example 12.2.1 (Expected Classes of Random Substitutions)** Each of the 61 sense codons can change into 9 others by a single substitution, $61 \times 9 = 549$ possibilities. Enumerating them with the standard **genetic code** ([7.2.19](/7.2.19)) gives 134 synonymous ($24.4\,\%$), 392 missense ($71.4\,\%$) and 23 nonsense ($4.2\,\%$) changes. At third codon positions $126/183 = 69\,\%$ of substitutions are synonymous, which is why the third position evolves fastest. These are expectations for uniform mutation; real spectra are biased toward transitions and CpG sites. Similarly, if indel lengths were uniform, $2/3$ of them would cause frameshifts; in coding regions indels of multiples of three are overrepresented because frameshifts are removed by selection.
 
-Synonymous does not always mean neutral: a silent change can create or destroy a splice signal or alter translation speed. Missense mutations range from no effect to complete loss, depending on the residue; nonsense and frameshift mutations usually abolish function, partly because transcripts with premature stop codons are degraded by **nonsense-mediated decay**, though a stop codon near the end of a gene can leave a partially functional truncated protein.
+The converse of a nonsense mutation is a *nonstop mutation* (stop-loss), a substitution that changes the stop codon into a sense codon: translation continues into the 3′ untranslated region until the next in-frame stop codon, giving a longer protein, or, if there is none, the mRNA is degraded by nonstop decay. Hemoglobin Constant Spring, a common cause of α-thalassemia in Southeast Asia, carries the change UAA → CAA (Gln) in the stop codon of *HBA2*; its α-globin has 31 extra amino acids and is made in very small amounts because the mRNA is unstable. Of the 9 single-base changes of each of the three stop codons, 23 of the 27 give sense codons, and 4 give another stop codon.
+
+Synonymous does not always mean neutral: a silent change can create or destroy a splice signal or alter translation speed. A mutation that has no effect on fitness is a *neutral mutation*; whether a mutation is neutral is a statement about selection, not about the protein, and most synonymous and many noncoding mutations are nearly neutral. Neutral mutations are the subject of the **neutral theory of molecular evolution** ([7.4.23](/7.4.23)). Missense mutations range from no effect to complete loss, depending on the residue; nonsense and frameshift mutations usually abolish function, partly because transcripts with premature stop codons are degraded by **nonsense-mediated decay**, though a stop codon near the end of a gene can leave a partially functional truncated protein.
 
 ### 12.2.3. Consequences outside Coding Sequences
 
@@ -69,6 +71,22 @@ In a heterozygote with equal expression of both alleles ($f = 1/2$), $A = (1/2)^
 ![Dominant negative (poison-subunit) alleles in homo-oligomeric proteins (Formula 12.3.1). A: in a heterozygote with equal expression, the fraction of fully active complexes falls as (1/2)ⁿ with the number of subunits n (1/4 for dimers, 1/16 for tetramers), far below the 1/2 of a heterozygote for a null allele. B: fraction of active complexes against the fraction of mutant subunits for monomers, dimers, tetramers and hexamers; the dotted line marks equal expression.](./plots/dominant-negative.py)
 
 Analysis of structures of thousands of human pathogenic missense variants supports the model: dominant negative mutations are strongly enriched at protein–protein interfaces of complexes (about $45\,\%$ of them lie at interfaces), whereas gain-of-function and recessive loss-of-function missense mutations show little interface enrichment (Gerasimavicius, Livesey and Marsh 2022). Because current pathogenicity predictors are trained largely on loss-of-function variants, many dominant negative and gain-of-function mutations are probably misclassified.
+
+### 12.3.4. Classification by Phenotype
+
+Muller's classes describe what a mutation does to gene activity. In practice mutants are first classified by the phenotype through which they are found, and the same mutation can belong to several classes.
+
+| Class | Phenotype | Examples and remarks |
+|---|---|---|
+| Visible (morphological) | change in shape, size or color | *white* eyes and *vestigial* wings of *Drosophila*, dwarf peas |
+| Lethal | death before reproductive age; dominant or recessive; acting in the gamete, zygote, embryo or later | yellow coat $A^{Y}$ of mice, lethal when homozygous (**lethal allele**, [7.4.3](/7.4.3)); X-linked lethals (Algorithm 12.7.1) |
+| Reduced viability | graded by mortality: lethal (more than $90\,\%$ of carriers die), semilethal ($50$–$90\,\%$), subvital ($10$–$50\,\%$) | measured as the ratio of observed to expected mutant progeny (Question 16) |
+| Conditional | mutant phenotype only under restrictive conditions | **temperature-sensitive alleles** (**conditional allele**, [7.4.3](/7.4.3)); the only way to study essential genes in haploids |
+| Biochemical (nutritional) | loss of a metabolic function without visible change | **auxotrophs** such as $his^{-}$ ([7.4.10](/7.4.10)); phenylketonuria in humans |
+| Resistance | growth in the presence of a drug, phage or toxin | streptomycin-resistant $str^{r}$ bacteria, phage-resistant $ton^{r}$ (Section 12.4) |
+| Behavioral | change in a behavior | the *period* mutants of circadian rhythm ([7.4.13](/7.4.13#sec-13.4.2)) |
+
+A loss-of-function allele that abolishes activity is a null allele (Definition 12.3.2); one that retains some activity is called *leaky* and is usually a hypomorph. Leaky and conditional alleles of essential genes are viable and therefore especially useful for analysis.
 
 ## 12.4. Mutations Arise at Random: The Fluctuation Test
 
@@ -117,6 +135,20 @@ Joshua and Esther Lederberg (1952) used it to show the random origin of resistan
 
 The fluctuation test and replica plating established that mutation is random with respect to the selective environment: it is not directed toward adaptive outcomes. This does not mean that mutation is uniform. Rates vary along the genome (hotspots, [7.4.13](/7.4.13)), with transcription, replication timing and chromatin, and with stress: in starving bacteria the SOS response and error-prone polymerases raise mutation rates genome-wide ([7.2.8](/7.2.8#sec-8.6)), so that more mutants appear under selection ("stress-induced mutagenesis"), but these mutations still occur without regard to which of them will be useful.
 
+### 12.4.4. General Properties of Mutations
+
+The results of this chapter can be collected into a short list of properties, each with its qualification.
+
+| Property | Content | Qualification |
+|---|---|---|
+| Universality | mutations occur in all organisms and viruses, at every locus | rates differ by orders of magnitude (Section 12.5) |
+| Randomness | which cell, gene and site mutates, and when, is not determined by the usefulness of the change (Section 12.4) | not uniform: hotspots, CpG sites, transcribed and late-replicating regions mutate faster |
+| Lack of direction | a gene can mutate to many different alleles, the source of **multiple alleles** ([7.4.3](/7.4.3)) | the spectrum is biased toward transitions and loss of function |
+| Reversibility | mutant alleles can revert (Definition 12.1.1) | forward rates exceed reverse rates; deletions do not revert |
+| Recurrence | the same mutation arises independently again and again | new *white* alleles in fly stocks; nearly every case of achondroplasia is a new G380R change in *FGFR3* (Example 12.5.1) |
+| Rarity | about $10^{-6}$–$10^{-5}$ per gene per gamete | high per genome: every human child carries about 70 new mutations |
+| Mostly harmful, sometimes useful | most mutations with an effect lower fitness | the effect depends on the environment: semi-dwarf alleles that make stems short and stiff lower fitness in the wild but raise grain yield in fertilized fields (the *sd1* allele of rice and the *Rht* alleles of wheat of the Green Revolution) |
+
 ## 12.5. Mutation Rates and Their Measurement
 
 **Definition 12.5.1 (Mutation Rate)** The **mutation rate** is the probability of a mutation per unit of DNA per unit of time: per gene (or per base pair, or per genome) per cell division in microorganisms and cell lines, or per gamete (per generation) in multicellular organisms. It is distinguished from the *mutant frequency*, the proportion of mutant cells in a population, which also depends on the history of growth and selection.
@@ -138,6 +170,8 @@ Rates are measured in four ways. (1) *Fluctuation tests* in microorganisms and c
 **Example 12.5.1 (Direct Estimate)** Suppose that among $242\,257$ births in a population, 7 children with achondroplasia had two unaffected parents. Then $\hat\mu = 7/(2 \times 242\,257) = 1.4 \times 10^{-5}$ per gene per gamete. This is an unusually high rate for a mutation at a single base pair (almost all cases are the same G380R change in *FGFR3*); it arises because spermatogonial stem cells carrying the mutation proliferate faster than others ("selfish selection" in the testis), so the mutation is enriched in sperm, strongly with paternal age.
 
 **Definition 12.5.2 (Germline and Somatic Mutations)** A **germline mutation** arises in a cell of the germline (from the primordial germ cells to the gametes) and can be transmitted to offspring, in whom it is present in every cell. A **somatic mutation** arises in any other cell; it is passed to the descendants of that cell, forming a mutant clone (a mosaic), but not to offspring.
+
+The distinction is sharp in animals, whose germline is set aside early in development, and blurred in plants, where flowers form late from the same shoot meristems as the rest of the plant. A somatic mutation in a shoot meristem can produce a *bud sport*, a branch with a new phenotype, which horticulturists propagate by grafting or cuttings; the navel orange and many red-skinned or early-ripening sports of apple, citrus and grape cultivars arose in this way. The shoot meristem of flowering plants has three cell layers (L1, L2, L3), each maintained by its own divisions, so a mutation in one layer gives a periclinal **chimera**; since the gametes descend from L2, only a mutation in L2 is transmitted through seed.
 
 **Definition 12.5.3 (Paternal Age Effect)** The **paternal age effect** is the increase with the father's age at conception in the number of de novo mutations transmitted to a child, and in the incidence of disorders caused by them.
 
@@ -221,6 +255,12 @@ The test is a screen with a digital readout over about 1000 genes at once. Spont
 
 Most **carcinogens** are mutagens, often after metabolic activation by liver enzymes; the Ames test, which detects reversion of histidine auxotrophs of *Salmonella* in the presence of a liver extract, uses this correlation to screen chemicals ([7.2.8](/7.2.8#sec-8.7.1)). It is a reversion assay: tester strains carry a missense or a frameshift allele of a *his* gene, so that base-substitution mutagens and frameshift mutagens are detected by different strains, a direct application of the classes in Section 12.2.
 
+### 12.7.4. Induced Mutations in Breeding
+
+*Mutation breeding* is the use of induced mutations to create new variants of crops, ornamentals and industrial microorganisms. Seeds, pollen, buds or cultures are treated with γ-rays, X-rays, fast neutrons, ion beams or chemical mutagens (EMS, sodium azide), and the progeny are screened for improved traits; more than 3000 mutant cultivars of over 200 species have been officially released, among them semi-dwarf rice and barley and the deep-red 'Rio Red' grapefruit. In industrial microbiology, repeated rounds of X-ray, ultraviolet and chemical mutagenesis followed by selection raised the penicillin yield of *Penicillium chrysogenum* more than a thousand-fold from the strains of the 1940s. Induced mutations broaden the range of variants, including alleles that are absent from the cultivated gene pool, and can change one trait of an established variety while leaving the rest of its genotype intact.
+
+Two features of the method follow from earlier sections. The dose is a compromise between mutation frequency and survival: the number of mutations rises in proportion to the dose (Section 12.7.2), but so do chromosome breaks and sterility, so plants are usually treated at the dose that reduces growth or survival by about half. And most induced mutations are recessive, while a treated seed or bud is a chimera of mutated and unmutated cells. The treated generation (M1) therefore shows almost no mutant phenotypes; they are found in the next generation (M2), after selfing has made a quarter of the progeny of a heterozygous sector homozygous. Today the induced mutations of a population of M2 plants can also be found directly by sequencing (TILLING), and targeted mutations are made by genome editing ([7.4.19](/7.4.19)).
+
 ## 12.8. Repair, Mutation and Disease: an Overview
 
 Mutation rates are set by the balance between damage and replication errors on one side and repair on the other ([7.2.8](/7.2.8#sec-8.8.1)). Inherited defects of repair raise the mutation rate in somatic cells and cause cancer predisposition, usually through a germline loss-of-function allele and a second, somatic hit in the tumor (7.4.21).
@@ -240,13 +280,15 @@ The full table, with the mechanisms, is in [7.2.8](/7.2.8#sec-8.7.2). Repair can
 | Topic | Key results |
 |---|---|
 | Direction (Definition 12.1.1) | forward rates exceed reversion rates (many ways to inactivate, few to restore); deletions do not revert; suppressors restore function at a second site |
-| Kinds (Definitions 12.2.1, 12.2.2) | transitions about twice as common as transversions; random substitutions in codons: 24% synonymous, 71% missense, 4% nonsense (Example 12.2.1); frameshifts if indel length not divisible by 3; noncoding mutations change expression or splicing |
+| Kinds (Definitions 12.2.1, 12.2.2) | transitions about twice as common as transversions; random substitutions in codons: 24% synonymous, 71% missense, 4% nonsense (Example 12.2.1); frameshifts if indel length not divisible by 3; nonstop (stop-loss) mutations extend the protein (Hb Constant Spring); neutral mutations have no effect on fitness; noncoding mutations change expression or splicing |
 | Function (Definitions 12.3.1, 12.3.2) | Muller's amorph, hypomorph, hypermorph, antimorph, neomorph, defined by dosage tests; loss of function usually recessive (excess capacity), except haploinsufficiency; gain of function and neomorphs dominant (*FGFR3* G380R, *HTT*, $Antp^{Ns}$) |
 | Dominant negative (Formula 12.3.1) | active fraction $(1-f)^n$; heterozygote $(1/2)^n$, 1/16 for tetramers vs 1/2 for null; p53, collagen; enriched at interfaces |
+| Phenotypic classes (12.3.4) | visible, lethal (lethal > 90 %, semilethal 50–90 %, subvital 10–50 % mortality), conditional, biochemical, resistance, behavioral; null vs leaky |
 | Randomness (Definitions 12.4.1, 12.4.2; Formula 12.4.1; Algorithm 12.4.1) | Luria–Delbrück: $\mathbb{P}(r=0)=\mathrm{e}^{-m}$, heavy tail, variance ≫ mean; p0, median and ML estimators; $\hat\mu = \hat m/N_t$; replica plating and Newcombe's spreading |
-| Rates (Definitions 12.5.1–12.5.3) | $10^{-6}$–$10^{-5}$ per gene per gamete; human $1.2\times10^{-8}$ per bp per generation, about 70 de novo mutations per child, 80% paternal, +1.5 per paternal year; direct estimate $n/(2B)$ (Example 12.5.1) |
+| General properties (12.4.4) | universal, random (with hotspots), undirected (multiple alleles), reversible, recurrent, rare, mostly harmful but environment dependent (semi-dwarf cereals) |
+| Rates (Definitions 12.5.1–12.5.3) | $10^{-6}$–$10^{-5}$ per gene per gamete; human $1.2\times10^{-8}$ per bp per generation, about 70 de novo mutations per child, 80% paternal, +1.5 per paternal year; direct estimate $n/(2B)$ (Example 12.5.1); bud sports and periclinal chimeras: only L2 mutations pass through seed |
 | Spontaneous mutation and repeats (Definitions 12.6.1, 12.6.2; Formula 12.6.1) | deamination, depurination, oxidation, tautomers, slippage; fragile X (CGG > 200, expands through mothers), HD (CAG ≥ 40, onset falls with length), DM1; anticipation |
-| Induced mutation (Definition 12.7.1, Algorithm 12.7.1) | base analogs, deaminating and alkylating agents, intercalators, UV, ionizing radiation, each with its spectrum; Muller's X-linked lethal test; linear dose response; mutagens as carcinogens (Ames test) |
+| Induced mutation (Definition 12.7.1, Algorithm 12.7.1) | base analogs, deaminating and alkylating agents, intercalators, UV, ionizing radiation, each with its spectrum; Muller's X-linked lethal test; linear dose response; mutagens as carcinogens (Ames test); mutation breeding: dose for about half survival, chimeric M1, recessive mutants found in M2 (12.7.4) |
 | Repair and disease (12.8) | repair defects raise somatic mutation rates and cause cancer syndromes; mutation as the source of variation |
 
 ## Questions
@@ -302,3 +344,23 @@ The full table, with the mechanisms, is in [7.2.8](/7.2.8#sec-8.7.2). Repair can
 13. (Open question) The fluctuation test shows that resistance mutations precede selection. Does this exclude any influence of the environment on mutation? Discuss stress-induced mutagenesis, transcription-associated mutation and CRISPR-based adaptive immunity in bacteria.
 
     **Answer** Outline: the test excludes *directed* mutation (an environment specifically inducing the useful mutation), not effects of the environment on the *rate*. Stress induces error-prone polymerases and the SOS response, raising mutation rates broadly, including in genes irrelevant to the stress; transcription increases mutation rates in transcribed genes (more single-stranded DNA, collisions), so induction of a gene can raise its own mutation rate somewhat, which looks partly "directed" but is not specific to useful changes. CRISPR–Cas immunity is a genuinely Lamarckian-looking process: bacteria acquire spacers from infecting phage DNA and transmit them to descendants; it is an acquired, heritable, specific adaptation, but it is a dedicated molecular system for recording foreign sequences, not mutation in the usual sense. The principle that mutation is random with respect to its fitness effects remains well supported.
+
+14. A culture of *E. coli* is grown with a mutagen, and many independent mutants are sequenced in a $1000\,\mathrm{bp}$ region that originally contains $520$ G·C pairs. In total 10 mutations are found, all transitions, and the $(A+T)/(G+C)$ ratio of the region in the mutants is lower than in the wild type. (a) In which direction did the transitions go? (b) Which mutagens of the table in Section 12.7.1 fit, and which are excluded? (c) Compute the ratio before and after if all 10 had instead been G·C → A·T changes.
+
+    **Answer** (a) A lower $(A+T)/(G+C)$ means G·C pairs were gained: A·T → G·C. (b) Base analogs (5-bromouracil, 2-aminopurine) and nitrous acid, which cause transitions in both directions, fit; hydroxylamine and EMS, which cause only G·C → A·T, and intercalating agents, which cause frameshifts, are excluded. (c) Before: $480/520 = 0.923$; after ten G·C → A·T changes: $490/510 = 0.961$.
+
+15. (a) List the single-base substitutions of the stop codon UAA and classify them. (b) How many of the 27 single-base substitutions of the three stop codons are nonstop mutations? (c) Why is the α-globin of Hb Constant Spring 31 amino acids longer, rather than extending to the end of the mRNA?
+
+    **Answer** (a) CAA (Gln), AAA (Lys), GAA (Glu), UUA (Leu), UCA (Ser), UAU and UAC (Tyr) are nonstop mutations; UGA and UAG keep a stop codon (they are "synonymous" for termination). (b) UAA gives 7 nonstop changes, UAG 8 and UGA 8: 23 of 27. (c) Translation continues in the same frame into the 3′ untranslated region and stops at the first in-frame stop codon there, 31 codons downstream of the mutated one.
+
+16. A recessive mutation $m$ of *Drosophila* is suspected of lowering viability. Among 800 adult progeny of $m/+ \times m/+$ there are 90 $m/m$ flies. Estimate the relative viability of $m/m$ and classify the allele.
+
+    **Answer** Without loss, $m/m : (\text{others}) = 1 : 3$. Observed $90 : 710$. Relative viability $= (90/710)/(1/3) = 0.38$, so about $62\,\%$ of $m/m$ zygotes die: a semilethal allele (mortality between $50$ and $90\,\%$; Section 12.3.4). Comparing with the other genotypes of the same cross, rather than with the total, corrects for any general loss of progeny.
+
+17. In an EMS mutation-breeding program, each M1 plant carries a new recessive loss-of-function allele of a target gene in its germline with probability $10^{-3}$. (a) How many M1 plants are needed to have a $95\,\%$ chance that at least one carries such an allele? (b) An M1 plant carrying the allele is selfed. How many M2 plants of its family must be grown to see at least one homozygous mutant with probability $0.9$? (c) How does the answer to (b) change if the M1 plant is a chimera in which the mutant sector produced only half of the seeds?
+
+    **Answer** (a) $1 - (1 - 10^{-3})^N \geq 0.95$ gives $N \geq \ln 0.05/\ln 0.999 = 2995$ plants. (b) Each M2 plant is homozygous with probability $1/4$: $1 - (3/4)^k \geq 0.9$ requires $k = 9$ ($1 - 0.75^8 = 0.89998$ falls just short; $1 - 0.75^9 = 0.925$). (c) The homozygote probability is $1/8$, and $1 - (7/8)^k \geq 0.9$ requires $k = 18$. Screening about $3000 \times 9 = 27\,000$ M2 plants is the scale of real forward screens; it is why mutant collections are pooled and why sequencing-based TILLING is used.
+
+18. An apple tree produces a branch with red-skinned fruit on an otherwise green-fruited cultivar. (a) How can the new phenotype be propagated? (b) The red color proved to come from a dominant mutation present only in the L1 layer of the branch's meristem. Will seedlings from its fruit be red? (c) What if the mutation had been in L2?
+
+    **Answer** (a) By grafting budwood of the branch onto rootstocks: vegetative propagation copies the meristem, layers and all. (b) No: the gametes descend from L2, which is not mutant, so the mutation is not transmitted through seed (the epidermis-derived skin color is a property of the chimera, not of its gametes). (c) The pollen and eggs of flowers on the branch would carry the dominant allele. Apples are self-incompatible, so the branch would be crossed with another cultivar, and half of the seedlings would inherit the allele and have red fruit.

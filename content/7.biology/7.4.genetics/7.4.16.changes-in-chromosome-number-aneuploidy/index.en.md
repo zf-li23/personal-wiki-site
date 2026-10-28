@@ -7,17 +7,17 @@ The previous chapter changed the structure of chromosomes; this one changes thei
 
 ## 16.1. Terms
 
-The chromosome complement of a species is described by two numbers. The basic number $x$ is the number of different chromosomes in one complete set (a monoploid set). The gametic number $n$ is the number of chromosomes in a gamete, so that a normal sporophyte or somatic cell has $2n$. In diploids $n = x$; in polyploids they differ. Bread wheat has $x = 7$ and six sets: $2n = 6x = 42$, $n = 21$.
+The chromosome complement of a species is described by two numbers. The basic number $x$ is the number of different chromosomes in one complete set (a monoploid set). The gametic number $n$ is the number of chromosomes in a gamete, so that a normal sporophyte or somatic cell has $2n$. In diploids $n = x$; in polyploids they differ. Bread wheat has $x = 7$ and six sets: $2n = 6x = 42$, $n = 21$. A chromosome set (a genome, in the sense of classical cytogenetics) contains one member of each of the $x$ different chromosomes, which differ in size, centromere position and gene content and together form a complete, coordinated whole: a gamete or cell that lacks any one of them is usually inviable or sterile. In the genus *Triticum*, einkorn ($2n = 2x = 14$), emmer ($2n = 4x = 28$) and bread wheat ($2n = 6x = 42$) form a polyploid series on the same basic number.
 
 **Definition 16.1.1 (Euploidy and Aneuploidy)** A cell or organism is **euploid** if its chromosome number is an exact multiple of the basic number $x$ (monoploid $x$, diploid $2x$, triploid $3x$, tetraploid $4x$, ...), and **aneuploid** if it has gained or lost one or more individual chromosomes, so that its number is not a multiple of $x$ (aneuploidy, [7.3.21](/7.3.21#def-21.7.5)). Euploids with more than two sets are **polyploid**.
 
-**Definition 16.1.2 (Nullisomy, Monosomy, Trisomy, Tetrasomy)** Relative to a diploid $2n$: a **nullisomic** ($2n - 2$) lacks both homologues of one chromosome, a **monosomic** ($2n - 1$) lacks one, a **trisomic** ($2n + 1$) has one extra, and a **tetrasomic** ($2n + 2$) has two extra copies of the same chromosome. A double trisomic ($2n + 1 + 1$) has one extra copy of each of two different chromosomes.
+**Definition 16.1.2 (Nullisomy, Monosomy, Trisomy, Tetrasomy)** Relative to a diploid $2n$: a **nullisomic** ($2n - 2$) lacks both homologues of one chromosome, a **monosomic** ($2n - 1$) lacks one, a **trisomic** ($2n + 1$) has one extra, and a **tetrasomic** ($2n + 2$) has two extra copies of the same chromosome. A double monosomic ($2n - 1 - 1$) lacks one copy of each of two different chromosomes, and a double trisomic ($2n + 1 + 1$) has one extra copy of each of two different chromosomes. Aneuploids with fewer chromosomes than $2n$ are hypoploid, those with more hyperploid.
 
 **Definition 16.1.3 (Monoploid, Autopolyploid, Allopolyploid)** A **monoploid** has a single chromosome set ($x$). (A haploid has the gametic number $n$ of its species; for a diploid species the two coincide, but a haploid of hexaploid wheat has $3x$.) An **autopolyploid** has more than two sets from the same species; an **allopolyploid** has sets from two or more different species, usually two complete diploid genomes in an allotetraploid (an amphidiploid).
 
 | Condition | Chromosome complement | Example |
 |---|---|---|
-| monoploid | $x$ | male bees, ants and wasps; anther-culture plants of diploids |
+| monoploid | $x$ | male bees, ants and wasps; anther-culture plants of diploids; the gametophytes of plants |
 | diploid | $2x$ | most animals and plants |
 | triploid | $3x$ | cultivated banana (AAA, $3x = 33$), seedless watermelon |
 | autotetraploid | $4x$ | potato ($4x = 48$), alfalfa, tetraploid ryegrass |
@@ -148,11 +148,13 @@ $$
 
 With $x = 11$, as in banana and watermelon, only about 1 in 1 000 gametes is euploid; most of the aneuploid gametes and zygotes of plants with so many imbalances die. Triploids are therefore sterile, which is an advantage for fruit without seeds. Seedless watermelons are triploid seeds produced by crossing a tetraploid (made with colchicine, 16.7) as female with a diploid as male; the triploid plants are pollinated by diploid plants grown alongside, which stimulates fruit development without fertile seeds. Cultivated bananas are triploid clones propagated vegetatively. Triploidy in humans (69 chromosomes, from dispermy or a diploid gamete) occurs in about $1\,\%$ of conceptions and is almost always lost.
 
+The same reasoning explains the sterility of monoploids and of haploid plants of diploid species. Their $x$ chromosomes have no partners and form univalents; if each univalent goes to either pole with probability $1/2$, a given meiotic product receives the complete set with probability $(1/2)^{x}$, about 1 in 1000 for maize ($x = 10$). The monoploid males of bees, ants and wasps are fertile because they avoid reduction: the first meiotic division of their spermatocytes is abortive, and all chromosomes pass together into the sperm. (The females that aphids produce by parthenogenesis in summer, by contrast, are diploid: their eggs form without meiotic reduction.)
+
 ## 16.5. Autotetraploids
 
 ### 16.5.1. Chromosome Segregation
 
-A tetraploid has four homologues of each chromosome. They may pair as two bivalents or as a quadrivalent, in which partners exchange along the chromosome. If the four homologues go two to each pole at random, and no crossing over separates the locus from the centromere, a gamete receives a random pair of the four homologues: there are $\binom{4}{2} = 6$ equally likely pairs.
+A tetraploid has four homologues of each chromosome. They may pair as two bivalents or as a quadrivalent, in which partners exchange along the chromosome. In autotetraploids the main configurations at metaphase I are one quadrivalent (IV) or two bivalents (II + II), with a trivalent and a univalent (III + I) or a bivalent and two univalents (II + I + I) in a minority of cells; most segregate 2 : 2, but III + I and unpaired univalents can give 3 : 1 segregation and aneuploid gametes. If the four homologues go two to each pole at random, and no crossing over separates the locus from the centromere, a gamete receives a random pair of the four homologues: there are $\binom{4}{2} = 6$ equally likely pairs.
 
 **Formula 16.5.1 (Gametes of an Autotetraploid under Chromosome Segregation)** For a locus close to the centromere, with random segregation of the four homologues two to each pole, the gametes ($2x$) of the five genotypes are:
 
@@ -197,6 +199,8 @@ A hybrid of two diploid species with sets $A$ and $B$ has one set of each. If th
 
 **Example 16.6.1 (*Raphanobrassica*)** Georgi Karpechenko (1928) crossed radish (*Raphanus sativus*, $2n = 18$) with cabbage (*Brassica oleracea*, $2n = 18$). The hybrids had $9 + 9$ unpaired chromosomes and were almost sterile, but a few produced unreduced gametes, and these gave fertile allotetraploids with $2n = 36$ (18 from each parent), which formed 18 bivalents and bred true. Unfortunately the plants had the root of a cabbage and the leaves of a radish. *Raphanobrassica* was the first new species made in the laboratory: it was reproductively isolated from both parents, because its backcrosses were triploid.
 
+**Example 16.6.2 (Genome Analysis by Chromosome Pairing)** Chromosome pairing in hybrids shows which chromosome sets two species share, a method developed by Hitoshi Kihara for wheat (1920s–1930s). Bread wheat (AABBDD, $2n = 42$) crossed with durum wheat (AABB, $2n = 28$) gives a pentaploid hybrid AABBD with $21 + 14 = 35$ chromosomes, which forms $14$ bivalents (the A and B chromosomes of both parents pair) and $7$ univalents (the D chromosomes). Bread wheat crossed with *Triticum timopheevii* (AAGG) gives AABDG, also with 35 chromosomes, but only the A chromosomes pair: $7\,\mathrm{II} + 21\,\mathrm{I}$, which shows that *T. timopheevii* shares only the A genome with bread wheat and that its second genome G differs from B. The univalents of both hybrids segregate at random, so their gametes are unbalanced and the hybrids are largely sterile (Formula 16.4.1 with the 7 or 21 univalents).
+
 An allotetraploid has disomic inheritance: each chromosome pairs only with its homologue from the same parental species, so its genes segregate in $3 : 1$ ratios like those of a diploid, while the two homoeologous copies (one from each subgenome) can diverge in function.
 
 ### 16.6.2. Wheat, *Brassica* and Cotton
@@ -213,9 +217,9 @@ Polyploidy has been frequent in plants: about $15\,\%$ of speciation events in f
 
 ## 16.7. Uses in Breeding
 
-- Chromosome doubling. Colchicine, an alkaloid of the autumn crocus that blocks microtubule assembly ([7.3.21](/7.3.21)), prevents spindle formation; the chromosomes replicate and separate but stay in one nucleus, which doubles its chromosome number. Applied to seedlings or buds, colchicine (or oryzalin) produces autotetraploids and fertile allopolyploids. Triticale, an allopolyploid of wheat and rye ($6x$ or $8x$), was made in this way and is grown as a fodder crop.
+- Chromosome doubling. Colchicine, an alkaloid of the autumn crocus that blocks microtubule assembly ([7.3.21](/7.3.21)), prevents spindle formation; the chromosomes replicate and separate but stay in one nucleus, which doubles its chromosome number. Applied to seedlings or buds, colchicine (or oryzalin) produces autotetraploids and fertile allopolyploids. Triticale, an allopolyploid of wheat and rye ($6x$ or $8x$), was made in this way and is grown as a fodder crop; hexaploid triticale (AABBRR) combines durum wheat with rye, octoploid triticale (AABBDDRR) bread wheat with rye.
 - Haploids and doubled haploids. Culture of anthers or isolated microspores, crosses with haploid-inducer lines (in maize; in *Arabidopsis*, crosses with lines carrying a modified centromeric histone CENH3, whose chromosomes are eliminated from the zygote), or wide crosses (wheat × maize, where the maize chromosomes are lost) produce plants with one chromosome set. Doubling their chromosomes gives completely homozygous diploids in one generation, instead of the six or more generations of selfing otherwise needed, and recessive alleles are exposed immediately in the haploids.
-- Polyploids are often larger in cells, flowers and fruits (the gigas effect), and triploids give seedless fruit (16.4).
+- Polyploids are often larger in cells, flowers and fruits (the gigas effect): newly made autopolyploids have larger stomata and guard cells, fewer stomata per unit leaf area, thicker leaves and larger flowers, but they often grow and flower more slowly and are less fertile; guard-cell length and the number of chloroplasts per guard cell are used to screen seedlings for doubled chromosome number. Triploids give seedless fruit (16.4), and tetraploid forms of ryegrass, red clover and many ornamentals are grown for their size.
 - Monosomic and nullisomic series and alien addition and substitution lines (with one chromosome pair from a related species) transfer resistance genes from wild relatives into crops.
 
 ## Summary
@@ -229,7 +233,9 @@ Polyploidy has been frequent in plants: about $15\,\%$ of speciation events in f
 | Autotetraploid ($4x$) | doubling (colchicine, unreduced gametes) | bivalents or quadrivalents | duplex $1 : 4 : 1$, selfed $35 : 1$; with double reduction $\alpha \le 1/7$: up to $3 : 8 : 3$, $20.8 : 1$ (Formulas 16.5.1, 16.5.2) |
 | Allopolyploid | hybridization + doubling | bivalents (disomic inheritance) | ratios of diploids; *Raphanobrassica*, wheat, *Brassica*, cotton |
 
-- Notation: $x$ basic number, $n$ gametic number; euploidy, aneuploidy, polyploidy (Definitions 16.1.1–16.1.3).
+- Notation: $x$ basic number, $n$ gametic number; a chromosome set contains each of the $x$ chromosomes once; euploidy, aneuploidy (hypo- and hyperploidy, double monosomics and trisomics), polyploidy (Definitions 16.1.1–16.1.3).
+- Monoploids: univalents, complete gametes $(1/2)^x$; male Hymenoptera fertile through an abortive meiosis I.
+- Genome analysis (Example 16.6.2): AABBD $14\,\mathrm{II} + 7\,\mathrm{I}$; AABDG $7\,\mathrm{II} + 21\,\mathrm{I}$.
 - Human aneuploidy: about $5\,\%$ of pregnancies, mostly maternal MI errors; Down syndrome risk rises from about 1 in 1 500 at 20 to 1 in 35 at 45 (Formula 16.2.1); sex-chromosome aneuploidies are tolerated because of X inactivation, with phenotypes from escape and PAR genes.
 - Mitotic errors: mosaics, gynandromorphs (Definition 16.2.1), confined placental mosaicism; trisomy rescue and UPD (Definition 16.2.2).
 - Dosage balance (Definition 16.2.3): ratios matter more than absolute dose; explains the harm of aneuploidy, the tolerance of polyploidy, and which duplicates are retained after WGD (Definition 16.6.1).
@@ -273,3 +279,19 @@ Polyploidy has been frequent in plants: about $15\,\%$ of speciation events in f
 12. A breeder wants a seedless triploid watermelon. Describe the crosses, give the chromosome numbers ($x = 11$), and explain why the triploid plants must be grown with diploid plants.
 
     **Answer** Double the chromosomes of a diploid ($2n = 22$) with colchicine to make a tetraploid ($4x = 44$); cross the tetraploid as female with a diploid as male, giving triploid seeds ($3x = 33$; the reverse cross gives poor seed). The triploid plants produce almost no euploid gametes ($2^{-10}$, Formula 16.4.1), so their own pollen is nearly sterile; fruit set requires pollination, which stimulates fruit development, so diploid pollinizer plants are grown alongside. The fruits contain only small, empty seed coats.
+
+13. Tomato has $2n = 24$. Give the chromosome numbers of a double monosomic, a tetrasomic, a double trisomic, a triploid and a monoploid. Which of them are euploid?
+
+    **Answer** Double monosomic $2n - 1 - 1 = 22$; tetrasomic $2n + 2 = 26$; double trisomic $2n + 1 + 1 = 26$; triploid $3x = 36$; monoploid $x = 12$. The triploid and the monoploid are euploid; the other three are aneuploid (hypoploid and hyperploid). The tetrasomic and the double trisomic have the same number but different constitutions: two extra copies of one chromosome versus one extra copy of each of two.
+
+14. Predict the chromosome pairing at metaphase I and the somatic chromosome numbers of the following hybrids, assuming that only chromosomes of the same genome pair: (a) bread wheat (AABBDD) × *Aegilops tauschii* (DD, $2n = 14$); (b) durum wheat (AABB) × rye (RR, $2n = 14$); (c) the plant obtained by doubling (b); (d) radish × cabbage ($2n = 18$ each).
+
+    **Answer** (a) ABDD: $7 + 7 + 14 = 28$ chromosomes, $7\,\mathrm{II}$ (D with D) $+ 14\,\mathrm{I}$. (b) ABR: $21$ chromosomes, $21\,\mathrm{I}$, sterile. (c) AABBRR, hexaploid triticale: $42$ chromosomes, $21\,\mathrm{II}$, fertile. (d) $9 + 9 = 18$ univalents (Example 16.6.1); doubling gives *Raphanobrassica* with $18\,\mathrm{II}$.
+
+15. A haploid plant of a diploid species with $x = 7$ is obtained by anther culture. (a) What fraction of its meiotic products receive a complete set of 7 chromosomes, if each univalent goes to either pole at random? (b) If eggs and pollen are formed independently in this way and fuse at random, what fraction of zygotes from selfing would be euploid diploids? (c) Why are doubled haploids, not haploids, used in breeding?
+
+    **Answer** (a) $(1/2)^7 = 1/128 \approx 0.78\,\%$. (b) Both gametes must be complete: $(1/128)^2 = 6.1 \times 10^{-5}$, about 1 in 16 000 (in practice, since incomplete pollen mostly aborts, seed set is somewhat higher than this but still close to zero). (c) Doubling with colchicine gives a fertile, completely homozygous diploid in one step (Section 16.7); the haploid itself is nearly sterile.
+
+16. In an autotetraploid, $70\,\%$ of cells form a quadrivalent and $30\,\%$ two bivalents for a given chromosome. Quadrivalents segregate 2 : 2 in $90\,\%$ of cases and 3 : 1 in $10\,\%$; bivalents always 2 : 2. What fraction of the gametes are aneuploid for this chromosome? If the species has $x = 12$ chromosomes behaving independently in this way, what fraction of gametes are euploid?
+
+    **Answer** Only 3 : 1 segregations give aneuploid gametes, and both products of such a meiosis are aneuploid (3 copies or 1): $0.7 \times 0.1 = 0.07$. Euploid for all 12: $0.93^{12} = 0.42$. Multivalent pairing is the main reason for the reduced fertility of newly made autotetraploids (Section 16.5.3).
