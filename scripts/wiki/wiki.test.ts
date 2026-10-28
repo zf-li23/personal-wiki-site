@@ -647,6 +647,7 @@ describe('cross-page linking', () => {
     assert.equal(conceptId('σ factor'), 'sigma-factor');
     assert.notEqual(conceptId('ρ factor'), conceptId('σ factor'));
     assert.equal(conceptId('α-complementation'), 'alpha-complementation');
+    assert.equal(conceptId('F′ plasmid'), 'f-prime-plasmid');
   });
   it('lets only the scoped homonym take an annotated definition inside its scope', async () => {
     concepts.push({ id: 'rank', zh: '秩', en: 'rank', aliases: [] });

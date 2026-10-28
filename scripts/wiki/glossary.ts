@@ -43,6 +43,7 @@ export function conceptId(en: string): string {
     .toLowerCase()
     .replace(/[α-ω]/g, (g) => ` ${GREEK[g] ?? ''} `)
     .replace(/\+/g, ' plus ') // "B+ tree" must not collide with "B-tree"
+    .replace(/′/g, ' prime ') // "F′ plasmid" must not collide with "F plasmid"
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/'s\b/g, 's')
