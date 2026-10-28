@@ -7760,3 +7760,8 @@ terms:
   - { zh: 归巢内切酶基因, en: homing endonuclease gene, aliases: [homing endonuclease genes, homing endonuclease, HEG, 归巢核酸内切酶基因] }
   - { zh: 转座子标签法, en: transposon tagging, aliases: [转座子标签] }
   - { zh: 增强子陷阱, en: enhancer trap, aliases: [enhancer traps, enhancer trapping] }
+  - { zh: 性反转, en: sex reversal, aliases: [sex-reversed], scope: ["7"] }
+  - { zh: 雌雄同株, en: monoecious, aliases: [monoecy] }
+  - { zh: 雌雄异株, en: dioecious, aliases: [dioecy] }
+  - { zh: 自由马丁, en: freemartin, aliases: [freemartins] }
+  - { zh: 核雄性不育, en: genic male sterility, aliases: [GMS, 细胞核雄性不育], scope: ["7"] }
