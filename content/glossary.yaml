@@ -6440,7 +6440,7 @@ terms:
   - { zh: 脂筏, en: lipid raft, aliases: [membrane raft, 膜筏] }
   - { zh: SNARE 蛋白, en: SNARE, aliases: [SNAREs] }
   - { zh: 整联蛋白, en: integrin, aliases: [integrins, 整合素] }
-  - { zh: 转运蛋白, en: transporter, aliases: [carrier, 载体蛋白], scope: ["7"] }
+  - { zh: 转运蛋白, en: transporter, aliases: [载体蛋白], scope: ["7"] }
   - { zh: 离子通道, en: ion channel, aliases: [ion channels] }
   - { zh: 被动运输, en: passive transport, aliases: [易化扩散, facilitated diffusion, 被动转运] }
   - { zh: 单向转运体, en: uniporter, aliases: [uniport] }
@@ -7405,3 +7405,92 @@ terms:
   - { zh: 亲核蛋白, en: karyophilic protein, aliases: [karyophilic proteins] }
   - { zh: B 染色体, en: B chromosome, aliases: [B chromosomes, 超数染色体, supernumerary chromosome] }
   - { zh: 细胞识别, en: cell recognition }
+
+  # biology: genetics (7.4); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 单倍体, en: haploid, aliases: [haploids], scope: ["7"] }
+  - { zh: 二倍体, en: diploid, aliases: [diploids], scope: ["7"] }
+  - { zh: 倍性, en: ploidy }
+  - { zh: 正向遗传学, en: forward genetics }
+  - { zh: 反向遗传学, en: reverse genetics }
+  - { zh: 野生型, en: wild type, aliases: [wild-type] }
+  - { zh: 突变体, en: mutant, aliases: [mutants], scope: ["7"] }
+  - { zh: 世代交替, en: alternation of generations }
+  - { zh: 等位基因, en: allele, aliases: [alleles] }
+  - { zh: 基因座, en: locus, aliases: [loci, 座位], scope: ["7"] }
+  - { zh: 基因型, en: genotype, aliases: [genotypes] }
+  - { zh: 表型, en: phenotype, aliases: [phenotypes, 表现型] }
+  - { zh: 纯合子, en: homozygote, aliases: [homozygous, homozygotes, 纯合] }
+  - { zh: 杂合子, en: heterozygote, aliases: [heterozygous, heterozygotes, 杂合] }
+  - { zh: 显性, en: dominant, aliases: [dominance, 显性性状], scope: ["7"] }
+  - { zh: 隐性, en: recessive, aliases: [recessiveness, 隐性性状], scope: ["7"] }
+  - { zh: 纯育, en: true-breeding, aliases: [pure-breeding, 纯种] }
+  - { zh: 单因子杂交, en: monohybrid cross, aliases: [一对相对性状杂交] }
+  - { zh: 双因子杂交, en: dihybrid cross, aliases: [两对相对性状杂交] }
+  - { zh: 正反交, en: reciprocal cross, aliases: [reciprocal crosses] }
+  - { zh: 测交, en: testcross, aliases: [test cross, testcrosses] }
+  - { zh: 分离定律, en: law of segregation, aliases: ["Mendel's first law", 孟德尔第一定律] }
+  - { zh: 自由组合定律, en: law of independent assortment, aliases: [independent assortment, "Mendel's second law", 孟德尔第二定律, 独立分配定律] }
+  - { zh: Punnett 方格, en: Punnett square, aliases: [棋盘法] }
+  - { zh: 完全显性, en: complete dominance }
+  - { zh: 不完全显性, en: incomplete dominance, aliases: [semidominance, 半显性] }
+  - { zh: 共显性, en: codominance, aliases: [codominant, 并显性] }
+  - { zh: 复等位基因, en: multiple alleles, aliases: [allelic series] }
+  - { zh: 致死等位基因, en: lethal allele, aliases: [lethal alleles, 致死基因] }
+  - { zh: 基因多效性, en: pleiotropy, aliases: [pleiotropic, 多效性] }
+  - { zh: 外显率, en: penetrance }
+  - { zh: 表现度, en: expressivity }
+  - { zh: 修饰基因, en: modifier gene, aliases: [modifier genes, modifier] }
+  - { zh: 拟表型, en: phenocopy, aliases: [phenocopies, 表型模拟] }
+  - { zh: 反应规范, en: norm of reaction, aliases: [reaction norm] }
+  - { zh: 单倍剂量不足, en: haploinsufficiency, aliases: [haploinsufficient, 单倍不足] }
+  - { zh: 上位效应, en: epistasis, aliases: [epistatic, 上位] }
+  - { zh: 隐性上位, en: recessive epistasis }
+  - { zh: 显性上位, en: dominant epistasis }
+  - { zh: 互补基因, en: complementary gene action, aliases: [complementary genes] }
+  - { zh: 重叠基因作用, en: duplicate genes, aliases: [duplicate gene action, 重叠作用] }
+  - { zh: 抑制突变, en: suppressor mutation, aliases: [suppressor mutations, 抑制基因] }
+  - { zh: 遗传异质性, en: genetic heterogeneity }
+  - { zh: 互补测验, en: complementation test, aliases: [complementation, 互补检验] }
+  - { zh: 互补群, en: complementation group, aliases: [complementation groups] }
+  - { zh: 同源染色体, en: homologous chromosomes, aliases: [homologs, homologues, homologous chromosome] }
+  - { zh: 姐妹染色单体, en: sister chromatids, aliases: [sister chromatid] }
+  - { zh: 常染色体, en: autosome, aliases: [autosomes, autosomal] }
+  - { zh: 遗传的染色体学说, en: chromosome theory of inheritance, aliases: [染色体学说] }
+  - { zh: 减数分裂（减数分裂型分裂）, en: reductional division, aliases: [减数分裂分离] }
+  - { zh: 均等分裂, en: equational division }
+  - { zh: 交换, en: crossing over, aliases: [crossover, crossovers, 互换, 染色体交换], scope: ["7"] }
+  - { zh: 重组配子, en: recombinant gamete, aliases: [recombinant gametes] }
+  - { zh: 性染色体, en: sex chromosome, aliases: [sex chromosomes] }
+  - { zh: 性别决定, en: sex determination }
+  - { zh: 半合子, en: hemizygous, aliases: [hemizygote] }
+  - { zh: X 连锁, en: X-linked, aliases: [X-linked inheritance, X 连锁遗传, 伴 X 遗传] }
+  - { zh: Y 连锁, en: Y-linked, aliases: [Y-linked inheritance, 伴 Y 遗传] }
+  - { zh: 伴性遗传, en: sex linkage, aliases: [sex-linked inheritance, sex-linked] }
+  - { zh: 拟常染色体区, en: pseudoautosomal region, aliases: [PAR, pseudoautosomal regions], scope: ["7"] }
+  - { zh: 剂量补偿, en: dosage compensation }
+  - { zh: 交叉遗传, en: criss-cross inheritance }
+  - { zh: 不分离, en: nondisjunction, aliases: [不分开, 染色体不分离] }
+  - { zh: 从性遗传, en: sex-influenced trait, aliases: [sex-influenced traits] }
+  - { zh: 限性遗传, en: sex-limited trait, aliases: [sex-limited traits] }
+  - { zh: 系谱, en: pedigree, aliases: [pedigrees, 家系图, 家系] }
+  - { zh: 先证者, en: proband, aliases: [propositus] }
+  - { zh: 携带者, en: carrier, aliases: [carriers], scope: ["7.4"] }
+  - { zh: 近亲婚配, en: consanguinity, aliases: [consanguineous mating, 近亲结婚] }
+  - { zh: 同源相同, en: identity by descent, aliases: [IBD, identical by descent, 血缘同一], scope: ["7"] }
+  - { zh: 近交系数, en: inbreeding coefficient }
+  - { zh: 亲缘系数, en: coefficient of relationship }
+  - { zh: 遗传咨询, en: genetic counseling }
+  - { zh: 连锁, en: linkage, aliases: [genetic linkage, linked], scope: ["7"] }
+  - { zh: 连锁群, en: linkage group, aliases: [linkage groups] }
+  - { zh: 相斥相, en: repulsion, aliases: [trans configuration], scope: ["7.4"] }
+  - { zh: 重组率, en: recombination frequency, aliases: [交换值, 重组值, recombination fraction, 交换率] }
+  - { zh: 遗传图, en: genetic map, aliases: [linkage map, 连锁图, 遗传图谱] }
+  - { zh: 厘摩, en: centimorgan, aliases: [cM, map unit, 图距单位, 图距] }
+  - { zh: 三点测交, en: three-point cross, aliases: [three-point testcross] }
+  - { zh: 双交换, en: double crossover, aliases: [double crossovers] }
+  - { zh: 并发系数, en: coefficient of coincidence, aliases: [符合系数] }
+  - { zh: 作图函数, en: mapping function, aliases: [mapping functions] }
+  - { zh: 物理图, en: physical map, aliases: [physical maps, 物理图谱] }
+  - { zh: 遗传多态性, en: genetic polymorphism, aliases: [polymorphism, polymorphic, 多态性], scope: ["7"] }
+  - { zh: 相引相, en: coupling, aliases: [cis configuration], scope: ["7.4"] }
+  - { zh: 干涉, en: interference, aliases: [crossover interference, 交换干涉], scope: ["7"] }
