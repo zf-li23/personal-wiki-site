@@ -1,6 +1,6 @@
 ---
 title: Real Symmetric Matrices
-source_hash: 03077e8f2f05
+source_hash: 3e28167632ce
 ---
 
 A general square matrix need not be diagonalizable, and even when it is, the eigenvectors used need not be orthogonal. Real symmetric matrices have both properties at once: they can always be diagonalized by an **orthogonal matrix**. Starting from this fact, the chapter treats in turn the spectral decomposition of real symmetric matrices, quadratic forms and the Rayleigh quotient, positive definite matrices and congruence; finally it extends "orthogonal diagonalization of symmetric matrices" to arbitrary $m\times n$ matrices, obtaining the singular value decomposition, and uses it to define the pseudoinverse and the spectral norm.
@@ -41,7 +41,7 @@ $$
 
 Then $Q$ is orthogonal (a product of orthogonal matrices), $\Lambda$ is real diagonal, and $A=Q\Lambda Q^{\mathsf T}$. $\square$
 
-The factorization $A=Q\Lambda Q^{\mathsf T}$ is called the *spectral decomposition* of the real symmetric matrix $A$. It is a special case of the **eigendecomposition** $A=X\Lambda X^{-1}$ of [Chapter 6](/2.1.6), with $X$ chosen orthogonal so that $X^{-1}=X^{\mathsf T}$. The lecture notes also call $X\Lambda X^{-1}$ a "spectral decomposition" for any diagonalizable matrix; this text reserves the name for orthogonal (or unitary) diagonalization. Some remarks:
+The factorization $A=Q\Lambda Q^{\mathsf T}$ is called the *spectral decomposition* of the real symmetric matrix $A$. It is a special case of the **eigendecomposition** $A=X\Lambda X^{-1}$ of [Chapter 6](/2.1.6), with $X$ chosen orthogonal so that $X^{-1}=X^{\mathsf T}$. Some textbooks also call $X\Lambda X^{-1}$ a "spectral decomposition" for any diagonalizable matrix; this text reserves the name for orthogonal (or unitary) diagonalization. Some remarks:
 
 - Writing $Q=[\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$ and $\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_n)$, we have
   $$
@@ -411,7 +411,7 @@ $$
 
 **Theorem 7.5.1** For the linear system $A\boldsymbol{x}=\boldsymbol{b}$, $\boldsymbol{x}^+=A^+\boldsymbol{b}$ is the **least squares** solution of minimum length: the set of all least squares solutions is $\{A^+\boldsymbol{b}+\boldsymbol{x}_0\mid\boldsymbol{x}_0\in\mathcal{N}(A)\}$, and $\|A^+\boldsymbol{b}+\boldsymbol{x}_0\|^2=\|A^+\boldsymbol{b}\|^2+\|\boldsymbol{x}_0\|^2$. In particular, if the system is consistent, $A^+\boldsymbol{b}$ is its solution of minimum length; if $A$ is invertible, it is the unique solution.
 
-**Proof** $AA^+\boldsymbol{b}$ is the orthogonal projection of $\boldsymbol{b}$ onto $\mathcal{R}(A)$, so $A^+\boldsymbol{b}$ is a least squares solution. Equivalently, $(I-AA^+)\boldsymbol{b}\in\mathcal{N}(A^{\mathsf T})$ gives $A^{\mathsf T}A(A^+\boldsymbol{b})=A^{\mathsf T}\boldsymbol{b}$, that is, $A^+\boldsymbol{b}$ satisfies the **normal equations** (the lecture notes call solving the normal equations the "regularization method"; this has nothing to do with regularization in statistics). The solution set of the normal equations is a particular solution plus $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$. Finally $A^+\boldsymbol{b}=V_r(\cdots)\in\mathcal{R}(A^{\mathsf T})\perp\mathcal{N}(A)$, and the Pythagorean theorem gives the length formula. If the system is consistent, its least squares solutions are exactly its solutions. $\square$
+**Proof** $AA^+\boldsymbol{b}$ is the orthogonal projection of $\boldsymbol{b}$ onto $\mathcal{R}(A)$, so $A^+\boldsymbol{b}$ is a least squares solution. Equivalently, $(I-AA^+)\boldsymbol{b}\in\mathcal{N}(A^{\mathsf T})$ gives $A^{\mathsf T}A(A^+\boldsymbol{b})=A^{\mathsf T}\boldsymbol{b}$, that is, $A^+\boldsymbol{b}$ satisfies the **normal equations** (some textbooks call solving the normal equations the "regularization method"; this has nothing to do with regularization in statistics). The solution set of the normal equations is a particular solution plus $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$. Finally $A^+\boldsymbol{b}=V_r(\cdots)\in\mathcal{R}(A^{\mathsf T})\perp\mathcal{N}(A)$, and the Pythagorean theorem gives the length formula. If the system is consistent, its least squares solutions are exactly its solutions. $\square$
 
 ## 7.6. The Spectral Norm and Stability of Singular Values
 

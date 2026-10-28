@@ -252,7 +252,7 @@ $$
 
 **定义 6.5.1（可对角化）** 对 $n$ 阶方阵 $A$，若存在可逆矩阵 $X$ 使 $X^{-1}AX = \Lambda$ 是对角矩阵，则称 $A$（在 $\mathbb{C}$ 上）**可对角化**，称 $X$ 把 $A$ 对角化。若 $A, X, \Lambda$ 都是实矩阵，则称 $A$ 在 $\mathbb{R}$ 上可对角化。$A$ 可对角化时，分解 $A = X\Lambda X^{-1}$ 称为 $A$ 的**特征值分解**。
 
-课件把一般可对角化矩阵的 $A = X\Lambda X^{-1}$ 也称为谱分解（特征值的全体也称为谱）。本站的**谱分解**专指实对称矩阵（或正规矩阵）的正交（酉）对角化 $A = Q\Lambda Q^{\mathsf T}$，见[第 7 章](/2.1.7)；一般情形称特征值分解，以示区别。
+有的教材把一般可对角化矩阵的 $A = X\Lambda X^{-1}$ 也称为谱分解（特征值的全体也称为谱）。本站的**谱分解**专指实对称矩阵（或正规矩阵）的正交（酉）对角化 $A = Q\Lambda Q^{\mathsf T}$，见[第 7 章](/2.1.7)；一般情形称特征值分解，以示区别。
 
 特征值分解把矩阵的幂化为对角矩阵的幂：若 $A = X\Lambda X^{-1}$，则 $A^t = X\Lambda^tX^{-1}$；$A$ 可逆时 $A^{-1} = X\Lambda^{-1}X^{-1}$。对任意 $\boldsymbol{x} \in \mathbb{C}^n$，写 $\boldsymbol{x} = X\boldsymbol{k}$（即 $\boldsymbol{x}$ 在 $X$ 的列向量这组基下的坐标为 $\boldsymbol{k}$），则 $A^t\boldsymbol{x} = X\Lambda^t\boldsymbol{k}$：在特征向量组成的基下，$A$ 的作用就是各坐标分别乘以对应的特征值。
 
@@ -462,7 +462,7 @@ $$
 
 **定理 6.9.2（Cayley–Hamilton 定理）** 设方阵 $A$ 的特征多项式为 $p_A(\lambda)$，则 $p_A(A) = O$。
 
-课件按另一种习惯称之为 Hamilton–Cayley 定理。
+按另一种习惯也称之为 Hamilton–Cayley 定理。
 
 **证明** 由定理 6.9.1，$A = XTX^{-1}$，$T$ 是上三角矩阵，于是 $p_A(A) = Xp_A(T)X^{-1}$，只需证 $p_A(T) = O$。设 $T$ 的对角元依次为 $\lambda_1, \dots, \lambda_n$，则 $p_A(\lambda) = (\lambda - \lambda_1)\cdots(\lambda - \lambda_n)$，
 

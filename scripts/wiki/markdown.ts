@@ -210,6 +210,10 @@ function remarkWikiChecks(state: State) {
       if (state.ctx.contentLang === 'en' && hanText(node)) {
         state.ctx.diag.warn(state.ctx.file, `Chinese text on an English page: "${truncateText(hanText(node)!, 40)}" (translate it; sources belong in the front matter)`, line);
       }
+      // The reader does not know which slides; sources belong in the front matter (AUTHORING §6).
+      if (node.type === 'text' && typeof node.value === 'string' && SLIDE_MENTION.test(node.value)) {
+        state.ctx.diag.warn(state.ctx.file, `the text mentions the course slides ("${SLIDE_MENTION.exec(node.value)![0]}"): state the fact or the convention itself; sources belong in the front matter`, line);
+      }
       if (node.type === 'text' && node.position) {
         const raw = source.slice(node.position.start.offset, node.position.end.offset);
         if (/(?<!\\)\\\(/.test(raw)) {
@@ -222,6 +226,8 @@ function remarkWikiChecks(state: State) {
     checkPageHeadings(state, headings);
   };
 }
+
+const SLIDE_MENTION = /\b(?:course|lecture) slides?\b|\bthe slides\b|\bslides of the course\b|课件/i;
 
 /** The text of a node that contains Han characters (prose, math, code, image alt), or null. */
 function hanText(node: { type: string; value?: unknown; alt?: unknown }): string | null {

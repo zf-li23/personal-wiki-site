@@ -1,6 +1,6 @@
 ---
 title: Limits, Continuity and Differentiation in Several Variables
-source_hash: 62fc2ed2a789
+source_hash: f5c9673faebd
 ---
 
 With this chapter we enter multivariable calculus. It is a direct generalization of single-variable calculus: limits, continuity, derivatives and differentials all have multivariable versions, and most of the rules of computation keep their form. Once the independent variable ranges over the plane or space instead of a line, however, there are infinitely many ways to "approach a point", and phenomena appear that have no counterpart in one variable: a function may have the same limit along every line through a point and still have no limit there, and a function may have all its partial derivatives and still be discontinuous. The guiding thread of the chapter is to compare, at every step, what changes and what stays the same relative to the one-variable case.
@@ -65,7 +65,7 @@ For example, the open disk $D=\{x^2+y^2<1\}$ is open: for $A(x_0,y_0)\in D$, put
 - a connected open set is called a **region** (or open region), and the union of a region with its boundary is called a **closed region**;
 - if there is $M>0$ with $D\subset N(0,M)$, then $D$ is called a **bounded set**.
 
-Following the lecture notes, "connected" here means path-connected. Connectedness in topology (the set cannot be split into two disjoint nonempty relatively open subsets) is in general weaker, but the two notions coincide for open sets, so the definition of a region is unaffected. The union of two disjoint disks at positive distance is open but not connected, hence not a region.
+Here "connected" means path-connected. Connectedness in topology (the set cannot be split into two disjoint nonempty relatively open subsets) is in general weaker, but the two notions coincide for open sets, so the definition of a region is unaffected. The union of two disjoint disks at positive distance is open but not connected, hence not a region.
 
 A closed region is always a closed set, but a closed set need not be a closed region (for example, the union of two disjoint closed disks). By the Bolzano–Weierstrass theorem, every sequence of points in a bounded closed set has a convergent subsequence whose limit again lies in the set. This underlies the properties of continuous functions on bounded closed regions proved below.
 

@@ -67,7 +67,7 @@ TBP binds the nearly symmetric TATA box in either orientation. Direction of tran
 
 **Definition 13.3.1** The proteins that associate tightly with TBP to form TFIID (and, with other sets, SL1 and TFIIIB) are called **TBP-associated factors** (TAFs).
 
-TFIID contains $13$–$14$ TAFs, most of them conserved from yeast to humans. They were first named after their apparent molecular masses in kilodaltons, with a subscript for the polymerase (TAF$_{\mathrm{II}}$250, TAF$_{\mathrm{II}}$150), so that homologous proteins had different names in each species. A unified nomenclature (Tora, 2002) numbers them from TAF1 to TAF15 in order of decreasing size of the human protein; the older names, used in much of the classic literature and in the course slides, translate as follows.
+TFIID contains $13$–$14$ TAFs, most of them conserved from yeast to humans. They were first named after their apparent molecular masses in kilodaltons, with a subscript for the polymerase (TAF$_{\mathrm{II}}$250, TAF$_{\mathrm{II}}$150), so that homologous proteins had different names in each species. A unified nomenclature (Tora, 2002) numbers them from TAF1 to TAF15 in order of decreasing size of the human protein; the older names, used in much of the classic literature, translate as follows.
 
 | Unified name | Human | *Drosophila* | Yeast | Notes |
 |---|---|---|---|---|
@@ -190,7 +190,7 @@ The order of assembly is the reverse of the logic for Pol II: TFIIIC (with TFIII
 
 ## 13.8. Three Unifying Principles
 
-The three systems look different, but they share an organization (course slides after Weaver):
+The three systems look different, but they share an organization (after Weaver):
 
 1. *Assembly begins with an assembly factor* that recognizes a specific sequence in the promoter and recruits the rest: TBP (in TFIID) at TATA-containing class II promoters, TAFs at TATA-less class II promoters, UBF and SL1 at class I promoters, TFIIIC (and TFIIIA) at internal class III promoters, SNAPc at type 3 class III promoters.
 2. *TBP plays an organizing role at nearly all promoters*, even where it does not bind first and does not contact a TATA box, by being part of the complex that contacts the polymerase: TFIID–TFIIB for Pol II, SL1 for Pol I, TFIIIB for Pol III.

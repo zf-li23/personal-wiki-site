@@ -1,7 +1,7 @@
 ---
 title: Search
 description: Formulation of search problems and the general graph-search framework; uninformed search (depth-first, breadth-first, iterative deepening) and uniform-cost search; heuristic functions, algorithm A and the A* algorithm, the admissibility theorem, comparing heuristics, and consistency; designing heuristics (relaxed problems, effective branching factor) with an eight-puzzle experiment; local search, dynamic programming, and Viterbi decoding.
-source_hash: 234b5905fddc
+source_hash: 7bb352c931ad
 ---
 
 Many intelligent tasks can be reduced to "finding a path to a goal in a huge space of possibilities": a navigation system looks for the shortest route in a road network, a sliding puzzle needs a sequence of moves that turns a scrambled arrangement into an ordered one, and an input method must find the most fluent sentence among the combinations of thousands of homophones. [4.1.14](/4.1.14) has already shown how to model such problems as a **state space** and solve them with **depth-first search** and **breadth-first search**; [4.3.10](/4.3.10) and [4.3.11](/4.3.11) covered graph traversal and the implementation and correctness of **Dijkstra's algorithm**. The question of this chapter is: when the state space is too large to check state by state, how can we use knowledge about the problem to search as little as possible and still guarantee an optimal solution? The core is the A* algorithm and its two properties: if the heuristic function never overestimates, an optimal solution is always found (admissibility); if the heuristic function satisfies the triangle inequality, each node needs to be expanded only once (consistency). The chapter ends with local search and dynamic programming; the latter, in sequence-decoding problems such as pinyin input, takes the form of the Viterbi algorithm, which reappears in the hidden Markov models of [4.6.8](/4.6.8). The next chapter, [4.5.3](/4.5.3), discusses search with an adversary.
@@ -133,7 +133,7 @@ as its evaluation function and each time removes from OPEN the node with the sma
 
 $f(n)$ estimates "the cost of an optimal solution through $n$." When $h \equiv 0$, algorithm A is uniform-cost search; using only $h$ ($f = h$) gives greedy best-first search, which is often fast but not guaranteed to be optimal.
 
-In step 5 of Algorithm 2.1.1, a successor $m$ falls into one of three cases, often denoted $m_j$, $m_k$, $m_l$ in lecture slides:
+In step 5 of Algorithm 2.1.1, a successor $m$ falls into one of three cases, often denoted $m_j$, $m_k$, $m_l$:
 
 - $m_j$: a new node; compute $f$ and put it into OPEN;
 - $m_k$: already in OPEN; if the path through $n$ is shorter, update its $g$, $f$, and parent pointer;

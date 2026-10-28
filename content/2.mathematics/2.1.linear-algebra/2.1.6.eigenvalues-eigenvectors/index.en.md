@@ -1,6 +1,6 @@
 ---
 title: Eigenvalues and Eigenvectors
-source_hash: 3619608d5a53
+source_hash: 2cb9bf76e49b
 ---
 
 The previous chapters studied a single linear map $\boldsymbol{x} \mapsto A\boldsymbol{x}$: its range, its zeros (solution sets) and best approximation. This chapter studies the iteration of a linear transformation: how does $A^t\boldsymbol{x}$ behave for large $t$, and are there directions that stay fixed? The key is the equation $A\boldsymbol{x} = \lambda\boldsymbol{x}$: if we can find $n$ linearly independent vectors along each of which $A$ acts merely as a stretch, then in this basis $A$ is a diagonal matrix, and $A^t$ becomes transparent.
@@ -253,7 +253,7 @@ By the Abel–Ruffini theorem, there is no general formula for the roots of poly
 
 **Definition 6.5.1 (Diagonalizable Matrix)** If for a square matrix $A$ of order $n$ there is an invertible matrix $X$ such that $X^{-1}AX = \Lambda$ is diagonal, then $A$ is called a **diagonalizable matrix** (over $\mathbb{C}$), and $X$ is said to diagonalize $A$. If $A, X, \Lambda$ are all real, $A$ is said to be diagonalizable over $\mathbb{R}$. When $A$ is diagonalizable, the factorization $A = X\Lambda X^{-1}$ is called the **eigendecomposition** of $A$.
 
-The lecture slides also call the factorization $A = X\Lambda X^{-1}$ of a general diagonalizable matrix a spectral decomposition (the set of all eigenvalues is also called the spectrum). On this site, **spectral decomposition** refers exclusively to the orthogonal (unitary) diagonalization $A = Q\Lambda Q^{\mathsf T}$ of a real symmetric (or normal) matrix, see [Chapter 7](/2.1.7); the general case is called the eigendecomposition, to keep the two apart.
+Some texts also call the factorization $A = X\Lambda X^{-1}$ of a general diagonalizable matrix a spectral decomposition (the set of all eigenvalues is also called the spectrum). On this site, **spectral decomposition** refers exclusively to the orthogonal (unitary) diagonalization $A = Q\Lambda Q^{\mathsf T}$ of a real symmetric (or normal) matrix, see [Chapter 7](/2.1.7); the general case is called the eigendecomposition, to keep the two apart.
 
 The eigendecomposition reduces powers of a matrix to powers of a diagonal matrix: if $A = X\Lambda X^{-1}$, then $A^t = X\Lambda^tX^{-1}$, and if $A$ is invertible, $A^{-1} = X\Lambda^{-1}X^{-1}$. For every $\boldsymbol{x} \in \mathbb{C}^n$, write $\boldsymbol{x} = X\boldsymbol{k}$ (so that $\boldsymbol{k}$ is the coordinate vector of $\boldsymbol{x}$ with respect to the basis formed by the columns of $X$); then $A^t\boldsymbol{x} = X\Lambda^t\boldsymbol{k}$: in a basis of eigenvectors, $A$ acts by multiplying each coordinate by the corresponding eigenvalue.
 
@@ -463,7 +463,7 @@ The proof is itself a dimension-reducing algorithm: take an eigenvector, extend 
 
 **Theorem 6.9.2 (Cayley–Hamilton Theorem)** Let $p_A(\lambda)$ be the characteristic polynomial of a square matrix $A$. Then $p_A(A) = O$.
 
-Following a different convention, the lecture slides call it the Hamilton–Cayley theorem.
+Following a different convention, it is also called the Hamilton–Cayley theorem.
 
 **Proof** By Theorem 6.9.1, $A = XTX^{-1}$ with $T$ upper triangular, so $p_A(A) = Xp_A(T)X^{-1}$ and it suffices to prove $p_A(T) = O$. Let the diagonal entries of $T$ be $\lambda_1, \dots, \lambda_n$ in order; then $p_A(\lambda) = (\lambda - \lambda_1)\cdots(\lambda - \lambda_n)$ and
 

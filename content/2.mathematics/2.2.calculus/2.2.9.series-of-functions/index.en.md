@@ -1,6 +1,6 @@
 ---
 title: Series of Functions, Power Series and Fourier Series
-source_hash: 834ad15937d7
+source_hash: 75c41227fd82
 ---
 
 Every term of the series in [Chapter 8](/2.2.8) is a number; in this chapter every term is a function, as in $\sum x^n$ or $\sum\frac{\sin nx}{n}$. For each fixed $x$ such a series is a numerical series, and the tests of Chapter 8 still apply. The new questions concern the properties of the sum: is an infinite sum of continuous functions continuous? May we integrate or differentiate term by term? The answer is in general no, and the crucial additional hypothesis is uniform convergence (9.1).

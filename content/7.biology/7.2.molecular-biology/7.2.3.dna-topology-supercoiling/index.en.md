@@ -171,7 +171,7 @@ $$
 
 **Algorithm 3.4.1 (Base-Pair Opening Probabilities)** Given the sequence, compute $s_n$ from Eq. (3.5) for every pair. Run the forward recursion (3.6) from $n = 1$ to $N$ and the backward recursion from $n = N$ to $1$, normalizing each vector to unit sum after every step to avoid overflow (the normalization constants cancel in Eq. (3.7)). Then evaluate Eq. (3.7) for every $n$.
 
-The configurations of the chain form a **Markov chain** along the sequence, and the algorithm is the forward–backward algorithm of hidden Markov models ([4.6.8](/4.6.8#sec-8.3)) applied to a two-state chain; the course slides formulate the same computation as a backward pass of conditional probabilities $\mathbb{P}(x_n \mid x_{n-1})$ followed by a forward pass of marginal probabilities (Poland, 1978). In physics the model is the one-dimensional Ising model in a site-dependent field.
+The configurations of the chain form a **Markov chain** along the sequence, and the algorithm is the forward–backward algorithm of hidden Markov models ([4.6.8](/4.6.8#sec-8.3)) applied to a two-state chain; the same computation is also formulated as a backward pass of conditional probabilities $\mathbb{P}(x_n \mid x_{n-1})$ followed by a forward pass of marginal probabilities (Poland, 1978). In physics the model is the one-dimensional Ising model in a site-dependent field.
 
 ### 3.4.3. Where Supercoiled DNA Opens
 

@@ -432,7 +432,7 @@ The history of the repository shows guardrails growing out of review findings (�
 
 Writing a course is parallelized by the orchestrator–worker pattern of §14.5.2, with the remedies of its table:
 
-- Ownership. Each writer receives a contiguous range of chapters, about one lecture of material (around 150 slides), and edits only those pages. At most four writers run at once.
+- Ownership. Each writer receives a contiguous range of chapters, about one lecture of material (around 150 pages), and edits only those pages. At most four writers run at once.
 - A shared file with one owner. The glossary of concepts is shared by all pages, so writers never edit it; they propose entries in their reports, and the orchestrator merges them with a script that appends new entries, never changes an existing one, and reports every clash of names as a conflict to be decided by hand (the same concept under another name, or a homonym that needs a scope).
 - A shared resource behind a lock. Builds share the plot cache and the output directory, so a cross-process lock makes concurrent builds take turns. Full builds are queued and run once at the end of a task; the fast `lint` renders only one course and does not take the lock.
 - No shared history. Writers use only read-only Git commands; the orchestrator alone commits.

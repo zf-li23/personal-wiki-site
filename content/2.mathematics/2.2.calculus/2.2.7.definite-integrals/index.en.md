@@ -1,6 +1,6 @@
 ---
 title: The Definite Integral
-source_hash: 104919a26330
+source_hash: 5a746fe03570
 ---
 
 The indefinite integral of [Chapter 6](/2.2.6) is the inverse of differentiation; the definite integral of this chapter comes from entirely different problems: the area under a curve, the mass of a rod of variable density, the work done by a variable force. All of them can be computed in four steps (partition, approximate, sum, take the limit), and abstracting this procedure gives the Riemann integral. We first give the definition and conditions for integrability (7.1) and list the properties of the integral (7.2). We then prove the fundamental theorem of calculus (7.3): the integral of a continuous function with variable upper limit is an antiderivative of it, so definite integrals can be computed with **antiderivatives**, and differential and integral calculus become linked. Section 7.4 carries substitution and integration by parts over to definite integrals, and Sections 7.5 and 7.6 present geometric and physical applications (area, arc length, curvature, solids of revolution, and the method of differential elements common in physics). Section 7.7 extends the integral to unbounded intervals and unbounded functions; the comparison tests and the notion of absolute convergence established there reappear almost verbatim for series in [Chapter 8](/2.2.8). The gamma and beta functions are also defined there, and the gamma and beta distributions of [probability theory](/3.1) are built on them.

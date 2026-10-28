@@ -1,9 +1,9 @@
 ---
 title: Determinants
-source_hash: b9ccbee9caee
+source_hash: 72b943932395
 ---
 
-The determinant assigns a number to a square matrix. It has two equally important interpretations: the signed volume of the parallelepiped whose edges are the columns of the matrix, and the factor by which the corresponding linear transformation scales volumes. Rather than starting from an expansion formula, this chapter follows the lecture slides: it abstracts three axioms from signed area (multilinearity in the columns, antisymmetry in the columns, normalization), derives all properties of the determinant and its uniqueness from the axioms, and then uses an expansion formula to prove that a function satisfying the axioms actually exists.
+The determinant assigns a number to a square matrix. It has two equally important interpretations: the signed volume of the parallelepiped whose edges are the columns of the matrix, and the factor by which the corresponding linear transformation scales volumes. Rather than starting from an expansion formula, this chapter abstracts three axioms from signed area (multilinearity in the columns, antisymmetry in the columns, normalization), derives all properties of the determinant and its uniqueness from the axioms, and then uses an expansion formula to prove that a function satisfying the axioms actually exists.
 
 The main results are: $\det A \ne 0$ if and only if $A$ is invertible; $\det(AB) = \det A\det B$; and the determinant can be computed by Gaussian elimination in $O(n^3)$ operations. Cofactors give a formula for the inverse matrix and Cramer's rule, which are useful in theory but unsuitable for numerical computation. This chapter relies on the **elementary matrix**, the **invertible matrix** and elimination from Chapter 2, and on the orthogonal matrices and QR decomposition of Chapter 4; Chapter 6 uses the determinant to define the characteristic polynomial. The permutations in the complete expansion are exactly the **permutations** of 1.3.2.
 
@@ -357,7 +357,7 @@ that is, "volume = height × base area", so $\|\boldsymbol{c}_j\|$ is the area o
 
 **Definition 5.6.1 (Adjugate Matrix)** For a square matrix $A = [a_{ij}]$ of order $n$, the matrix $C = [C_{ij}]$ whose $(i, j)$ entry is the cofactor $C_{ij}$ of $a_{ij}$ is called the cofactor matrix of $A$, and its transpose $C^{\mathsf T}$ is called the **adjugate matrix** of $A$, written $\operatorname{adj}A$.
 
-The lecture slides call $C^{\mathsf T}$ the complementary matrix. Note that it is a different concept from the adjoint (conjugate transpose) of a linear transformation in [Chapter 12](/2.1.12).
+$C^{\mathsf T}$ is also called the complementary matrix. Note that it is a different concept from the adjoint (conjugate transpose) of a linear transformation in [Chapter 12](/2.1.12).
 
 **Theorem 5.6.1 (Inverse Formula)** For every square matrix $A$ of order $n$, $C^{\mathsf T}A = AC^{\mathsf T} = \det(A)I_n$. In particular, if $A$ is invertible, then
 

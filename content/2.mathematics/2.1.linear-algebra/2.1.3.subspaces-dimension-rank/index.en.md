@@ -1,6 +1,6 @@
 ---
 title: Subspaces, Dimension and Rank
-source_hash: bebaf87a8777
+source_hash: fd82a18a9890
 ---
 
 The solvability criterion of [Chapter 1](/2.1.1) tells us whether a linear system has a solution and whether the solution is unique, but not what the solution set looks like when the solution is not unique. This chapter looks at $A\boldsymbol{x} = \boldsymbol{b}$ from the column point of view: the system is solvable exactly when $\boldsymbol{b}$ is a linear combination of the columns of $A$. Around the notion of linear combination we raise four questions in turn. Which vectors can a given set of vectors produce (subspaces and spans)? Is the representation unique (linear independence)? Which vectors are essential (maximal linearly independent subsets and bases)? Which quantity stays unchanged under transformations (rank and dimension)? Once these are answered, the rank of a matrix unifies the results of the previous two chapters: the solution set is a particular solution plus the null space, the null space has dimension $n - \operatorname{rank}(A)$, and the dimensions of the four fundamental subspaces are completely determined by the rank.
@@ -445,7 +445,7 @@ $$
 
 **Proof** The first formula is Theorem 3.10.1. Applying it to $A^{\mathsf T}$ and using $\operatorname{rank}(A^{\mathsf T}) = \operatorname{rank}(A)$ (Theorem 3.8.1) gives the second. $\square$
 
-The course slides call these two formulas the dimension formulas for the four subspaces. In terms of linear systems: $\dim\mathcal{R}(A)$ is the number of pivot variables and $\dim\mathcal{N}(A)$ the number of free variables, which add up to the total number $n$ of unknowns; $\dim\mathcal{R}(A^{\mathsf T})$ is the number of effective equations and $\dim\mathcal{N}(A^{\mathsf T})$ the number of redundant equations (the nonzero vectors of the left null space are exactly linear relations among the rows, as in Example 3.8.1), which add up to the total number $m$ of equations.
+These two formulas are the dimension formulas for the four subspaces. In terms of linear systems: $\dim\mathcal{R}(A)$ is the number of pivot variables and $\dim\mathcal{N}(A)$ the number of free variables, which add up to the total number $n$ of unknowns; $\dim\mathcal{R}(A^{\mathsf T})$ is the number of effective equations and $\dim\mathcal{N}(A^{\mathsf T})$ the number of redundant equations (the nonzero vectors of the left null space are exactly linear relations among the rows, as in Example 3.8.1), which add up to the total number $m$ of equations.
 
 | Subspace | Ambient space | Dimension | A basis (obtained by elimination) |
 |---|---|---|---|

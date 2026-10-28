@@ -1,6 +1,6 @@
 ---
 title: Inner Products and Orthogonality
-source_hash: e29728dd50e4
+source_hash: da411057596d
 ---
 
 The first three chapters used only the linear operations on vectors: whether the system $A\boldsymbol{x} = \boldsymbol{b}$ is solvable and how large its solution set is are both answered by the **rank** and the four fundamental subspaces. When $\boldsymbol{b} \notin \mathcal{R}(A)$ and the system has no solution, however, we still want the $\boldsymbol{x}$ that comes "closest", and for that we need to measure lengths and angles. This chapter introduces the inner product on $\mathbb{R}^n$, uses it to define length, angle and orthogonality, and then follows a single theme, "reduce the problem to the orthogonal case": orthonormal bases make coordinates a matter of inner products; Gram–Schmidt orthogonalization turns any basis into an orthonormal one, and in matrix form it is the QR decomposition; orthogonal complements and orthogonal projections give a geometric description of "best approximation"; finally, we solve least squares problems by the normal equations or by the QR decomposition and apply them to data fitting.
@@ -447,7 +447,7 @@ $$
 
 **Definition 4.5.2 (Normal Equations)** The system (4.1) is called the **normal equations** of $A\boldsymbol{x} = \boldsymbol{b}$.
 
-The lecture slides call the approach of "finding least squares solutions by solving the normal equations" the "regularization method"; to avoid confusion with regularization in statistics and machine learning (such as ridge regression), this site calls it the normal equations method. The normal equations have a clear geometric meaning: the residual $\boldsymbol{b} - A\boldsymbol{x}$ is orthogonal to every column of $A$.
+The approach of "finding least squares solutions by solving the normal equations" is sometimes called the "regularization method"; to avoid confusion with regularization in statistics and machine learning (such as ridge regression), this site calls it the normal equations method. The normal equations have a clear geometric meaning: the residual $\boldsymbol{b} - A\boldsymbol{x}$ is orthogonal to every column of $A$.
 
 **Property 4.5.1** Structure of the least squares solutions:
 

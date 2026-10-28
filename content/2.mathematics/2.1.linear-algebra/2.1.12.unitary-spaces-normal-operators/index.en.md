@@ -1,6 +1,6 @@
 ---
 title: Unitary Spaces and Normal Operators
-source_hash: 4e73ddb19930
+source_hash: 717ee5d4a2c6
 ---
 
 [Chapter 4](/2.1.4) used the **inner product** on $\mathbb{R}^n$ to define length, angle and orthogonality, and from them obtained Gram–Schmidt orthogonalization, the **QR decomposition**, **orthogonal projection** and least squares. Those results use only three properties of the inner product: symmetry, bilinearity and positive definiteness. This chapter takes these three properties as axioms and generalizes in two directions: first, inner products are placed on arbitrary vector spaces, so that function spaces and matrix spaces also acquire lengths and angles; second, the real numbers are replaced by the complex numbers, and symmetry is replaced accordingly by conjugate symmetry. Wherever a proof is the same as in the case of $\mathbb{R}^n$, we only sketch it.
@@ -23,7 +23,7 @@ and $G$ is called the **Gram matrix** (or metric matrix) of the dot product with
 2. linearity in the first argument: $\langle c_1\alpha + c_2\beta, \gamma \rangle = c_1\langle \alpha, \gamma \rangle + c_2\langle \beta, \gamma \rangle$;
 3. positive definiteness: $\langle \alpha, \alpha \rangle \ge 0$, and $\langle \alpha, \alpha \rangle = 0 \Leftrightarrow \alpha = 0$.
 
-For $\mathbb{F} = \mathbb{R}$ conjugate symmetry is just symmetry, and the inner product is bilinear. For $\mathbb{F} = \mathbb{C}$, conditions 1 and 2 imply that the inner product is conjugate linear in the second argument: $\langle \alpha, c\beta \rangle = \bar c\langle \alpha, \beta \rangle$. This course (like the lecture slides and the textbook) takes inner products to be linear in the first argument; the physics literature (for example Dirac notation in quantum mechanics) usually takes them to be linear in the second argument, and the conjugates in formulas move accordingly.
+For $\mathbb{F} = \mathbb{R}$ conjugate symmetry is just symmetry, and the inner product is bilinear. For $\mathbb{F} = \mathbb{C}$, conditions 1 and 2 imply that the inner product is conjugate linear in the second argument: $\langle \alpha, c\beta \rangle = \bar c\langle \alpha, \beta \rangle$. This course (like most textbooks) takes inner products to be linear in the first argument; the physics literature (for example Dirac notation in quantum mechanics) usually takes them to be linear in the second argument, and the conjugates in formulas move accordingly.
 
 **Example 12.1.1** The inner products $\langle \boldsymbol{\alpha}, \boldsymbol{\beta} \rangle = \boldsymbol{\alpha}^{\mathsf T}\boldsymbol{\beta}$ on $\mathbb{R}^n$ and
 
@@ -58,7 +58,7 @@ Conjugate symmetry gives $G^{\mathsf H} = G$, and positive definiteness makes $G
 - in a real inner product space: $\cos\theta = \dfrac{\langle \alpha, \beta \rangle}{\|\alpha\|\,\|\beta\|}$, $0 \le \theta \le \pi$;
 - in a complex inner product space: $\cos\theta = \dfrac{|\langle \alpha, \beta \rangle|}{\|\alpha\|\,\|\beta\|}$, $0 \le \theta \le \dfrac{\pi}{2}$.
 
-In the complex case $\langle \alpha, \beta \rangle$ is a complex number, so only its modulus can be used, and the angle therefore lies in $[0, \pi/2]$, with $\theta = \pi/2$ exactly when $\alpha \perp \beta$ (the lecture slides write $0 \le \theta < \pi/2$, which leaves out the orthogonal case). The definition of the angle requires $|\cos\theta| \le 1$, which is precisely the Cauchy–Schwarz inequality.
+In the complex case $\langle \alpha, \beta \rangle$ is a complex number, so only its modulus can be used, and the angle therefore lies in $[0, \pi/2]$, with $\theta = \pi/2$ exactly when $\alpha \perp \beta$. The definition of the angle requires $|\cos\theta| \le 1$, which is precisely the Cauchy–Schwarz inequality.
 
 **Property 12.2.1** Let $V$ be an inner product space, $\alpha, \beta \in V$ and $c \in \mathbb{F}$.
 
@@ -143,7 +143,7 @@ The proof of correctness is the same as in [Chapter 4](/2.1.4): $\langle w_j, q_
 2. $\langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}(-1 \cdot 1 + 1 \cdot \bar{\mathrm{i}}) = \frac{-1 - \mathrm{i}}{\sqrt2}$, $\boldsymbol{w}_2 = \boldsymbol{v}_2 - \langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 = \left(\frac{-1 + \mathrm{i}}{2}, \mathrm{i}, \frac{1 + \mathrm{i}}{2}\right)^{\mathsf T}$, $\|\boldsymbol{w}_2\|^2 = 2$, $\boldsymbol{q}_2 = \boldsymbol{w}_2 / \sqrt2$.
 3. $\boldsymbol{w}_3 = \boldsymbol{v}_3 - \langle \boldsymbol{v}_3, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 - \langle \boldsymbol{v}_3, \boldsymbol{q}_2 \rangle \boldsymbol{q}_2 = \left(\frac{1 + \mathrm{i}}{2}, -1, \frac{1 - \mathrm{i}}{2}\right)^{\mathsf T}$, $\|\boldsymbol{w}_3\|^2 = 2$, $\boldsymbol{q}_3 = \boldsymbol{w}_3 / \sqrt2$.
 
-One can check that $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$. The lecture slides give the third component of $\boldsymbol{w}_3$ as $\frac{-1 - \mathrm{i}}{2}$; then $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$, so the correct value is $\frac{1 - \mathrm{i}}{2}$.
+One can check that $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$. The third component of $\boldsymbol{w}_3$ must be $\frac{1 - \mathrm{i}}{2}$: the value $\frac{-1 - \mathrm{i}}{2}$ would give $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$.
 
 **Example 12.4.2** On $\mathcal{P}_2(\mathbb{R}) = \{a_0 + a_1x + a_2x^2\}$ with $\langle f, g \rangle = \int_{-1}^1 f(x)g(x)\,\mathrm{d}x$, orthogonalize $1, x, x^2$:
 
@@ -175,7 +175,7 @@ so $\mathcal{R}(A)^\perp = \mathcal{N}(A^{\mathsf H})$ and $\mathcal{R}(A^{\math
 2. (best approximation) $\|v - w\| \ge \|v - v_p\|$ for all $w \in W$, with equality only for $w = v_p$;
 3. $W \cap W^\perp = \{0\}$ and $V = W \oplus W^\perp$; if $V$ is finite-dimensional, then $(W^\perp)^\perp = W$.
 
-**Proof** 1: $\langle v - v_p, e_i \rangle = \langle v, e_i \rangle - \langle v, e_i \rangle = 0$, so $v - v_p \in W^\perp$. Uniqueness: the difference of two projections lies in both $W$ and $W^\perp$, hence is orthogonal to itself and therefore zero. 2: $v - w = (v - v_p) + (v_p - w)$ with the two terms in $W^\perp$ and $W$ respectively, so by the Pythagorean theorem $\|v - w\|^2 = \|v - v_p\|^2 + \|v_p - w\|^2$. 3: If $w \in W \cap W^\perp$, then $\langle w, w \rangle = 0$; by 1, $v = v_p + (v - v_p) \in W + W^\perp$. In finite dimensions $\dim W^\perp = \dim V - \dim W$, hence $\dim(W^\perp)^\perp = \dim W$; since clearly $W \subseteq (W^\perp)^\perp$, the two are equal (the lecture slides leave this as an exercise). $\square$
+**Proof** 1: $\langle v - v_p, e_i \rangle = \langle v, e_i \rangle - \langle v, e_i \rangle = 0$, so $v - v_p \in W^\perp$. Uniqueness: the difference of two projections lies in both $W$ and $W^\perp$, hence is orthogonal to itself and therefore zero. 2: $v - w = (v - v_p) + (v_p - w)$ with the two terms in $W^\perp$ and $W$ respectively, so by the Pythagorean theorem $\|v - w\|^2 = \|v - v_p\|^2 + \|v_p - w\|^2$. 3: If $w \in W \cap W^\perp$, then $\langle w, w \rangle = 0$; by 1, $v = v_p + (v - v_p) \in W + W^\perp$. In finite dimensions $\dim W^\perp = \dim V - \dim W$, hence $\dim(W^\perp)^\perp = \dim W$; since clearly $W \subseteq (W^\perp)^\perp$, the two are equal (left as an exercise). $\square$
 
 The method of **least squares** is a special case of orthogonal projection: $\min_x\|\boldsymbol{b} - A\boldsymbol{x}\|$ is attained when $A\boldsymbol{x}$ is the projection of $\boldsymbol{b}$ onto $\mathcal{R}(A)$, and the condition $\boldsymbol{b} - A\boldsymbol{x} \in \mathcal{R}(A)^\perp = \mathcal{N}(A^{\mathsf H})$ is the complex form of the **normal equations** $A^{\mathsf H}A\boldsymbol{x} = A^{\mathsf H}\boldsymbol{b}$. If an orthonormal basis of $\mathcal{R}(A)$ is available (for example the columns of $Q$ in $A = QR$), the projection requires only inner products, $\boldsymbol{b}_p = QQ^{\mathsf H}\boldsymbol{b}$, and no system needs to be solved.
 
@@ -187,7 +187,7 @@ The method of **least squares** is a special case of orthogonal projection: $\mi
 
 **Proof** For $v = \sum_i\langle v, e_i \rangle e_i$ we have $f(v) = \sum_i\langle v, e_i \rangle f(e_i) = \left\langle v, \sum_i\overline{f(e_i)}e_i \right\rangle$ (the inner product is conjugate linear in the second argument). Uniqueness: if $\langle v, u_1 - u_2 \rangle = 0$ for all $v$, take $v = u_1 - u_2$. $\square$
 
-The lecture slides write $u$ as $\sum f(e_i)e_i$, which is correct only in the real case; in the complex case the coefficients must be conjugated. For the same reason, the map $u \mapsto \langle \cdot, u \rangle$ from $V$ to the **dual space** $V^*$ is a bijection that is a linear isomorphism in the real case but conjugate linear in the complex case ($cu \mapsto \bar c\langle \cdot, u \rangle$).
+Writing $u$ as $\sum f(e_i)e_i$ is correct only in the real case; in the complex case the coefficients must be conjugated. For the same reason, the map $u \mapsto \langle \cdot, u \rangle$ from $V$ to the **dual space** $V^*$ is a bijection that is a linear isomorphism in the real case but conjugate linear in the complex case ($cu \mapsto \bar c\langle \cdot, u \rangle$).
 
 **Example 12.6.1** In the space $\mathcal{P}_2(\mathbb{R})$ of Example 12.4.2, find $u(x)$ such that $\langle p, u \rangle = \int_{-1}^1 p(t)\cos(\pi t)\,\mathrm{d}t$ for all $p \in \mathcal{P}_2(\mathbb{R})$. The right-hand side is a linear functional $f$. Using the orthonormal basis $q_1, q_2, q_3$ of Example 12.4.2: $f(q_1) = \frac{1}{\sqrt2}\int_{-1}^1\cos\pi t\,\mathrm{d}t = 0$, $f(q_2) = 0$ (an odd function), and since $\int_{-1}^1 t^2\cos\pi t\,\mathrm{d}t = -\frac{4}{\pi^2}$, $f(q_3) = -\sqrt{\frac{45}{8}}\cdot\frac{4}{\pi^2}$. Therefore
 

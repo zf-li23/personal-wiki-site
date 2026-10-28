@@ -1,6 +1,6 @@
 ---
 title: Studying Functions with Derivatives
-source_hash: 5e2595c28ed8
+source_hash: 05bc2f04ea7f
 ---
 
 The previous chapter ([2.2.4](/2.2.4)) defined the **derivative** and established the rules of differentiation; this chapter uses derivatives to study functions themselves: monotonicity, local and global extrema, convexity and inflection points, asymptotes and curve sketching, as well as computing limits with derivatives (L'Hôpital's rule), proving inequalities, and approximating functions by polynomials (Taylor's formula). The bridge between derivatives (local information) and function values (global information) is the mean value theorem, which relies on the **extreme value theorem** for **continuous functions** on closed intervals ([2.2.3](/2.2.3)); almost everything else in the chapter follows from it. Taylor's formula is the other core topic of the chapter: it pushes the idea of **equivalent infinitesimals** to arbitrary order, is a powerful tool for computing limits and estimating errors, and underlies the Taylor series of [2.2.9](/2.2.9) as well as the multivariable Taylor formula and the tests for extrema in [2.2.11](/2.2.11). Convex functions and Jensen's inequality are also used frequently in probability theory.
@@ -408,7 +408,7 @@ f(\lambda_1x_1+\lambda_2x_2)\le\lambda_1f(x_1)+\lambda_2f(x_2),
 $$
 then $f$ is called a **convex function** on $[a,b]$; if the inequality is reversed ($\ge$), then $f$ is called a **concave function** on $[a,b]$. If the inequality is strict whenever $x_1\ne x_2$ and $\lambda_1\lambda_2\ne0$, then $f$ is said to be strictly convex (concave).
 
-We follow the internationally standard terminology: a convex function has "the arc below the chord," like $x^2$ and $\mathrm{e}^x$; a concave function has "the arc above the chord," like $\ln x$ and $\sqrt x$. (The course slides, following many Chinese textbooks, call these "convex downward" and "convex upward," respectively.) A function $f$ is concave if and only if $-f$ is convex, so below we state results only for convex functions.
+We follow the internationally standard terminology: a convex function has "the arc below the chord," like $x^2$ and $\mathrm{e}^x$; a concave function has "the arc above the chord," like $\ln x$ and $\sqrt x$. (Many Chinese textbooks call these "convex downward" and "convex upward," respectively.) A function $f$ is concave if and only if $-f$ is convex, so below we state results only for convex functions.
 
 **Theorem 5.4.1 (Jensen's Inequality)** $f$ is convex on $[a,b]$ if and only if for all $x_1,\dots,x_n\in[a,b]$ and all nonnegative real numbers $\lambda_i$ with $\lambda_1+\cdots+\lambda_n = 1$,
 

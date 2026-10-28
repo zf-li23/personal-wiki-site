@@ -1,7 +1,7 @@
 ---
 title: Unsupervised Learning and Clustering
 description: The task of unsupervised learning; the goal of clustering and similarity measures for various data types; k-means initialization (k-means++) and large-scale variants (mini-batch); k-medoids clustering (PAM, CLARA, CLARANS); divisive hierarchical clustering; choosing the number of clusters and evaluating clusterings; DBSCAN.
-source_hash: 03cad032d9df
+source_hash: 1ba8a47b362e
 ---
 
 The learning in the preceding chapters had a "teacher" in the sense that every training example came with a class or a target value. This chapter turns to unlabeled data and its most basic task, clustering, which groups similar objects together. The statistical theory of clustering was covered in [3.4.11](/3.4.11), which presents **hierarchical clustering**, **k-means clustering** with its objective function and convergence, the **silhouette coefficient**, and the **Gaussian mixture model** fitted by the **EM algorithm**. Here we only summarize these topics and concentrate on what machine learning uses frequently but the statistics course does not develop: similarity measures for various data types, the initialization of k-means and its variants for large data, k-medoids clustering (PAM, CLARA, CLARANS) in which a cluster is represented by an actual object, divisive hierarchical clustering, the evaluation of clusterings, and the density-based method DBSCAN, which finds clusters of arbitrary shape. The distance measures are those of instance-based learning in [4.6.4](/4.6.4).
@@ -123,7 +123,7 @@ Compared with k-means, k-medoids clustering has three advantages: the centers ar
 1. BUILD: first choose the object with the smallest total cost, and then greedily add, one at a time, the object that lowers the total cost most, until there are $k$ medoids.
 2. SWAP: for every pair (medoid $m$, nonmedoid $h$), compute the total cost after replacing $m$ by $h$; if the best replacement lowers the cost, perform it, and repeat until no replacement lowers the cost.
 
-The version in the lecture slides is a randomized SWAP: at each step a nonmedoid $O_{\mathrm{random}}$ is chosen at random and exchanged with a medoid, and the exchange is kept if the cost decreases and otherwise not. For example, in an instance with $k = 2$, the current total cost under the Manhattan distance is 20 and the total cost after a random exchange is 26, so the exchange is not made.
+A randomized version of SWAP is also used: at each step a nonmedoid $O_{\mathrm{random}}$ is chosen at random and exchanged with a medoid, and the exchange is kept if the cost decreases and otherwise not. For example, in an instance with $k = 2$, the current total cost under the Manhattan distance is 20 and the total cost after a random exchange is 26, so the exchange is not made.
 
 The partition at which the SWAP phase stops is a local optimum in the sense that no exchange of a single medoid improves it; only by enumerating all $\binom{n}{k}$ combinations of medoids can we guarantee the global optimum. In a naive implementation each round evaluates $k(n-k)$ exchanges, and each exchange needs $O(n-k)$ time to recompute the cost, for a total of $O(k(n-k)^2)$, much slower than k-means, so the original PAM is suitable only for small data sets. FastPAM of Schubert and Rousseeuw (2021) reduces the cost per round by about a factor of $k$ by sharing computation, with the same result.
 

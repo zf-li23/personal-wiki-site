@@ -330,7 +330,7 @@ Phosphorylation is not the only covalent modification that coordinates metabolis
 - its donor is acetyl-CoA, a central intermediate produced and consumed by many pathways, whose concentration reflects the nutrient state; in the mitochondrial matrix, where acetyl-CoA is abundant and the pH is high, much acetylation is nonenzymatic;
 - its removal by the sirtuins, deacetylases that use $\ce{NAD+}$ as cosubstrate, couples it to the redox state: in fasting the mitochondrial sirtuin SIRT3 deacetylates and activates enzymes of fat oxidation and ketogenesis (long-chain acyl-CoA dehydrogenase, HMG-CoA synthase 2).
 
-Because **metabolic pathways** form a network with shared intermediates, a single modification that tracks acetyl-CoA and $\ce{NAD+}$ and acts on many enzymes at once can coordinate several pathways, as the slides of the course emphasize.
+Because **metabolic pathways** form a network with shared intermediates, a single modification that tracks acetyl-CoA and $\ce{NAD+}$ and acts on many enzymes at once can coordinate several pathways.
 
 ## 29.5. Diabetes Mellitus
 

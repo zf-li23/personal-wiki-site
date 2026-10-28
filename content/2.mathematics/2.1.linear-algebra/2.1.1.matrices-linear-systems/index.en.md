@@ -1,6 +1,6 @@
 ---
 title: Matrices and Systems of Linear Equations
-source_hash: 0c4cfac9b207
+source_hash: ab1287ad5f9a
 ---
 
 Linear algebra studies linear relations among variables in many dimensions. Single-variable calculus deals with nonlinear functions of one variable; linear algebra deals with functions $\boldsymbol{y} = A\boldsymbol{x}$ whose inputs and outputs are vectors but whose rule is linear. Multivariable calculus ([2.2](/2.2)) combines the two, and its central technique is precisely local linearization. This chapter starts from vectors and linear operations in $\mathbb{R}^m$ and introduces linear maps and the matrices that represent them. The most basic problem of linear algebra, solving a system of linear equations, asks for the preimage of a given image. We reduce a system to echelon form by elementary operations, which yields a standard procedure for solving it (Gaussian elimination and Gauss–Jordan elimination) together with a criterion for solvability. Finally, the sum, scalar multiple and composition of maps lead to the linear operations on matrices, the transpose and matrix multiplication.

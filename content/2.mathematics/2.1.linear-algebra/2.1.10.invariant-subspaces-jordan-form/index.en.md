@@ -1,6 +1,6 @@
 ---
 title: Invariant Subspaces and the Jordan Canonical Form
-source_hash: 8a88e0afdcd3
+source_hash: 40a43d25f041
 ---
 
 [Chapter 6](/2.1.6) posed the classification problem for **matrix similarity**: find the simplest representative of $\{P^{-1}AP \mid P \text{ invertible}\}$. A **diagonalizable matrix** can be brought to diagonal form, but a defective one cannot, and Chapter 6 only stated the answer (Theorem 6.10.1): every complex square matrix is similar to a **Jordan canonical form**, which is unique up to the order of the blocks. This chapter gives a complete proof of that theorem and organizes the computation of the Jordan form and of a Jordan basis into a standard procedure.
@@ -287,7 +287,7 @@ $$
 
 **Proof** 1: Suppose $c_1T^{k-1}v + \cdots + c_{k-1}Tv + c_kv = 0$. Applying $T^{k-1}$ gives $c_kT^{k-1}v = 0$, so $c_k = 0$; applying $T^{k-2}$ then gives $c_{k-1} = 0$, and so on. 2: $T(T^{k-1}v) = 0$ and $T(T^jv) = T^{j+1}v$; the $(j+1)$-th column of the matrix is the coordinate vector of the $j$-th basis vector. 3: If $v = Tw$, then $C_v \subsetneq C_w$. Conversely, let $v \notin \mathcal{R}(T)$ and $C_v \subseteq C_w$ with $\dim C_w = l$. Write $v = a_0w + a_1Tw + \cdots + a_{l-1}T^{l-1}w$; since $v \notin \mathcal{R}(T)$, $a_0 \ne 0$, so $T^{l-1}v = a_0T^{l-1}w \ne 0$ and $\dim C_v \ge l$. Hence $C_v = C_w$. $\square$
 
-$J_{0,k}$ is the **Jordan block** with eigenvalue $0$. The textbook and the lecture slides call it a "cyclic matrix", but in standard usage that name (circulant matrix) refers to a different class of matrices, in which each row is a cyclic shift of the previous one; on this site $J_{0,k}$ is called a nilpotent Jordan block or a shift matrix.
+$J_{0,k}$ is the **Jordan block** with eigenvalue $0$. Some textbooks call it a "cyclic matrix", but in standard usage that name (circulant matrix) refers to a different class of matrices, in which each row is a cyclic shift of the previous one; on this site $J_{0,k}$ is called a nilpotent Jordan block or a shift matrix.
 
 **Example 10.7.2** For $A = J_{0,4}$, the vector $\boldsymbol{v} = \boldsymbol{e}_4 \notin \mathcal{R}(A)$ generates the maximal subspace $C_{\boldsymbol{e}_4} = \mathbb{C}^4$, whereas $\boldsymbol{w} = \boldsymbol{e}_3 = A\boldsymbol{e}_4 \in \mathcal{R}(A)$ generates $C_{\boldsymbol{e}_3} = \operatorname{span}\{\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\} \subsetneq C_{\boldsymbol{e}_4}$.
 

@@ -286,7 +286,7 @@ $$
 
 **证明** 1：设 $c_1T^{k-1}v + \cdots + c_{k-1}Tv + c_kv = 0$，用 $T^{k-1}$ 作用得 $c_kT^{k-1}v = 0$，$c_k = 0$；再用 $T^{k-2}$ 作用得 $c_{k-1} = 0$，依此类推。2：$T(T^{k-1}v) = 0$，$T(T^jv) = T^{j+1}v$，矩阵的第 $j+1$ 列是第 $j$ 个基向量的坐标。3：若 $v = Tw$，则 $C_v \subsetneq C_w$。反之设 $v \notin \mathcal{R}(T)$ 且 $C_v \subseteq C_w$，$\dim C_w = l$。写 $v = a_0w + a_1Tw + \cdots + a_{l-1}T^{l-1}w$，因 $v \notin \mathcal{R}(T)$ 有 $a_0 \ne 0$，于是 $T^{l-1}v = a_0T^{l-1}w \ne 0$，$\dim C_v \ge l$，故 $C_v = C_w$。 $\square$
 
-$J_{0,k}$ 就是特征值为 $0$ 的 **Jordan 块**。教材与课件称它为"循环矩阵"，但通行用法中"循环矩阵"指另一类矩阵（circulant matrix，每一行是上一行的循环移位），本站称 $J_{0,k}$ 为幂零 Jordan 块或移位矩阵。
+$J_{0,k}$ 就是特征值为 $0$ 的 **Jordan 块**。有的教材称它为"循环矩阵"，但通行用法中"循环矩阵"指另一类矩阵（circulant matrix，每一行是上一行的循环移位），本站称 $J_{0,k}$ 为幂零 Jordan 块或移位矩阵。
 
 **例 10.7.2** $A = J_{0,4}$ 时，$\boldsymbol{v} = \boldsymbol{e}_4 \notin \mathcal{R}(A)$，$C_{\boldsymbol{e}_4} = \mathbb{C}^4$ 极大；$\boldsymbol{w} = \boldsymbol{e}_3 = A\boldsymbol{e}_4 \in \mathcal{R}(A)$ 生成的 $C_{\boldsymbol{e}_3} = \operatorname{span}\{\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\} \subsetneq C_{\boldsymbol{e}_4}$。
 

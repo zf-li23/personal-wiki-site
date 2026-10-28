@@ -149,7 +149,7 @@ Inherited defects of each of the five enzymes and of N-acetylglutamate synthase 
 
 ### 22.3.1. Six Entry Points; Glucogenic and Ketogenic Amino Acids
 
-The twenty degradative pathways converge on six products, all of which enter the citric acid cycle: pyruvate, acetyl-CoA (directly or through acetoacetyl-CoA, which the course slides count as a seventh), α-ketoglutarate, succinyl-CoA, fumarate and oxaloacetate. Some amino acids appear in two groups, because different parts of their skeletons reach different entry points.
+The twenty degradative pathways converge on six products, all of which enter the citric acid cycle: pyruvate, acetyl-CoA (directly or through acetoacetyl-CoA, which is sometimes counted as a seventh), α-ketoglutarate, succinyl-CoA, fumarate and oxaloacetate. Some amino acids appear in two groups, because different parts of their skeletons reach different entry points.
 
 **Definition 22.3.1 (Glucogenic and Ketogenic Amino Acids)** An amino acid whose carbon skeleton is degraded, wholly or in part, to pyruvate or to an intermediate of the citric acid cycle (α-ketoglutarate, succinyl-CoA, fumarate, oxaloacetate) is **glucogenic**: these carbons can be converted to glucose through oxaloacetate and phosphoenolpyruvate. An amino acid degraded, wholly or in part, to acetyl-CoA or acetoacetyl-CoA is **ketogenic**: in the liver these carbons can form ketone bodies, but because the pyruvate dehydrogenase reaction is irreversible, animals cannot convert them into glucose.
 

@@ -22,7 +22,7 @@ $G$ 称为点积在这组基下的**度量矩阵**，它是实对称正定矩阵
 2. 对第一个变量线性：$\langle c_1\alpha + c_2\beta, \gamma \rangle = c_1\langle \alpha, \gamma \rangle + c_2\langle \beta, \gamma \rangle$；
 3. 正定性：$\langle \alpha, \alpha \rangle \ge 0$，且 $\langle \alpha, \alpha \rangle = 0 \Leftrightarrow \alpha = 0$。
 
-$\mathbb{F} = \mathbb{R}$ 时共轭对称就是对称，内积是双线性的。$\mathbb{F} = \mathbb{C}$ 时由 1、2 推出内积对第二个变量共轭线性：$\langle \alpha, c\beta \rangle = \bar c\langle \alpha, \beta \rangle$。本课程（与课件、教材一致）约定对第一个变量线性；物理文献（如量子力学的 Dirac 记号）通常约定对第二个变量线性，公式中的共轭位置相应改变。
+$\mathbb{F} = \mathbb{R}$ 时共轭对称就是对称，内积是双线性的。$\mathbb{F} = \mathbb{C}$ 时由 1、2 推出内积对第二个变量共轭线性：$\langle \alpha, c\beta \rangle = \bar c\langle \alpha, \beta \rangle$。本课程（与多数教材一致）约定对第一个变量线性；物理文献（如量子力学的 Dirac 记号）通常约定对第二个变量线性，公式中的共轭位置相应改变。
 
 **例 12.1.1** $\mathbb{R}^n$ 上 $\langle \boldsymbol{\alpha}, \boldsymbol{\beta} \rangle = \boldsymbol{\alpha}^{\mathsf T}\boldsymbol{\beta}$ 与 $\mathbb{C}^n$ 上
 
@@ -57,7 +57,7 @@ $$
 - 实内积空间：$\cos\theta = \dfrac{\langle \alpha, \beta \rangle}{\|\alpha\|\,\|\beta\|}$，$0 \le \theta \le \pi$；
 - 复内积空间：$\cos\theta = \dfrac{|\langle \alpha, \beta \rangle|}{\|\alpha\|\,\|\beta\|}$，$0 \le \theta \le \dfrac{\pi}{2}$。
 
-复情形的 $\langle \alpha, \beta \rangle$ 是复数，只能取模，夹角因此落在 $[0, \pi/2]$，$\alpha \perp \beta$ 时恰为 $\pi/2$（课件写成 $0 \le \theta < \pi/2$，漏掉了正交的情形）。夹角的定义要求 $|\cos\theta| \le 1$，这正是 Cauchy–Schwarz 不等式。
+复情形的 $\langle \alpha, \beta \rangle$ 是复数，只能取模，夹角因此落在 $[0, \pi/2]$，$\alpha \perp \beta$ 时恰为 $\pi/2$。夹角的定义要求 $|\cos\theta| \le 1$，这正是 Cauchy–Schwarz 不等式。
 
 **性质 12.2.1** 设 $V$ 是内积空间，$\alpha, \beta \in V$，$c \in \mathbb{F}$。
 
@@ -142,7 +142,7 @@ $$
 2. $\langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}(-1 \cdot 1 + 1 \cdot \bar{\mathrm{i}}) = \frac{-1 - \mathrm{i}}{\sqrt2}$，$\boldsymbol{w}_2 = \boldsymbol{v}_2 - \langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 = \left(\frac{-1 + \mathrm{i}}{2}, \mathrm{i}, \frac{1 + \mathrm{i}}{2}\right)^{\mathsf T}$，$\|\boldsymbol{w}_2\|^2 = 2$，$\boldsymbol{q}_2 = \boldsymbol{w}_2 / \sqrt2$。
 3. $\boldsymbol{w}_3 = \boldsymbol{v}_3 - \langle \boldsymbol{v}_3, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 - \langle \boldsymbol{v}_3, \boldsymbol{q}_2 \rangle \boldsymbol{q}_2 = \left(\frac{1 + \mathrm{i}}{2}, -1, \frac{1 - \mathrm{i}}{2}\right)^{\mathsf T}$，$\|\boldsymbol{w}_3\|^2 = 2$，$\boldsymbol{q}_3 = \boldsymbol{w}_3 / \sqrt2$。
 
-可以验证 $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$。课件此处把 $\boldsymbol{w}_3$ 的第三个分量写成 $\frac{-1 - \mathrm{i}}{2}$，那样 $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$，应为 $\frac{1 - \mathrm{i}}{2}$。
+可以验证 $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$。$\boldsymbol{w}_3$ 的第三个分量应为 $\frac{1 - \mathrm{i}}{2}$：若取 $\frac{-1 - \mathrm{i}}{2}$，则 $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$。
 
 **例 12.4.2** 在 $\mathcal{P}_2(\mathbb{R}) = \{a_0 + a_1x + a_2x^2\}$ 上取 $\langle f, g \rangle = \int_{-1}^1 f(x)g(x)\,\mathrm{d}x$，对 $1, x, x^2$ 正交化：
 
@@ -174,7 +174,7 @@ $$
 2. （最佳逼近）$\|v - w\| \ge \|v - v_p\|$ 对一切 $w \in W$ 成立，等号仅在 $w = v_p$ 时成立；
 3. $W \cap W^\perp = \{0\}$，$V = W \oplus W^\perp$；若 $V$ 有限维，则 $(W^\perp)^\perp = W$。
 
-**证明** 1：$\langle v - v_p, e_i \rangle = \langle v, e_i \rangle - \langle v, e_i \rangle = 0$，所以 $v - v_p \in W^\perp$。唯一性：两个投影之差同时属于 $W$ 与 $W^\perp$，与自身正交，为零。2：$v - w = (v - v_p) + (v_p - w)$，两项分别属于 $W^\perp$ 与 $W$，由勾股定理 $\|v - w\|^2 = \|v - v_p\|^2 + \|v_p - w\|^2$。3：$w \in W \cap W^\perp$ 则 $\langle w, w \rangle = 0$；由 1，$v = v_p + (v - v_p) \in W + W^\perp$。有限维时 $\dim W^\perp = \dim V - \dim W$，于是 $\dim(W^\perp)^\perp = \dim W$，又显然 $W \subseteq (W^\perp)^\perp$，故相等（课件将此留作作业）。 $\square$
+**证明** 1：$\langle v - v_p, e_i \rangle = \langle v, e_i \rangle - \langle v, e_i \rangle = 0$，所以 $v - v_p \in W^\perp$。唯一性：两个投影之差同时属于 $W$ 与 $W^\perp$，与自身正交，为零。2：$v - w = (v - v_p) + (v_p - w)$，两项分别属于 $W^\perp$ 与 $W$，由勾股定理 $\|v - w\|^2 = \|v - v_p\|^2 + \|v_p - w\|^2$。3：$w \in W \cap W^\perp$ 则 $\langle w, w \rangle = 0$；由 1，$v = v_p + (v - v_p) \in W + W^\perp$。有限维时 $\dim W^\perp = \dim V - \dim W$，于是 $\dim(W^\perp)^\perp = \dim W$，又显然 $W \subseteq (W^\perp)^\perp$，故相等（留作练习）。 $\square$
 
 **最小二乘法**是正交投影的特例：$\min_x\|\boldsymbol{b} - A\boldsymbol{x}\|$ 在 $A\boldsymbol{x}$ 等于 $\boldsymbol{b}$ 在 $\mathcal{R}(A)$ 上的投影时取到，条件 $\boldsymbol{b} - A\boldsymbol{x} \in \mathcal{R}(A)^\perp = \mathcal{N}(A^{\mathsf H})$ 就是复情形的**正规方程** $A^{\mathsf H}A\boldsymbol{x} = A^{\mathsf H}\boldsymbol{b}$。若已有 $\mathcal{R}(A)$ 的标准正交基（例如 $A = QR$ 中 $Q$ 的列），投影只需作内积：$\boldsymbol{b}_p = QQ^{\mathsf H}\boldsymbol{b}$，不必解方程组。
 
@@ -186,7 +186,7 @@ $$
 
 **证明** 对 $v = \sum_i\langle v, e_i \rangle e_i$，$f(v) = \sum_i\langle v, e_i \rangle f(e_i) = \left\langle v, \sum_i\overline{f(e_i)}e_i \right\rangle$（内积对第二个变量共轭线性）。唯一性：若 $\langle v, u_1 - u_2 \rangle = 0$ 对一切 $v$ 成立，取 $v = u_1 - u_2$。 $\square$
 
-课件把 $u$ 写成 $\sum f(e_i)e_i$，这只在实情形正确；复情形系数要取共轭。也因此，映射 $u \mapsto \langle \cdot, u \rangle$ 从 $V$ 到**对偶空间** $V^*$ 是双射，实情形是线性同构，复情形是共轭线性的（$cu \mapsto \bar c\langle \cdot, u \rangle$）。
+把 $u$ 写成 $\sum f(e_i)e_i$ 只在实情形正确；复情形系数要取共轭。也因此，映射 $u \mapsto \langle \cdot, u \rangle$ 从 $V$ 到**对偶空间** $V^*$ 是双射，实情形是线性同构，复情形是共轭线性的（$cu \mapsto \bar c\langle \cdot, u \rangle$）。
 
 **例 12.6.1** 在例 12.4.2 的 $\mathcal{P}_2(\mathbb{R})$ 中，求 $u(x)$ 使 $\langle p, u \rangle = \int_{-1}^1 p(t)\cos(\pi t)\,\mathrm{d}t$ 对一切 $p \in \mathcal{P}_2(\mathbb{R})$ 成立。右边是线性函数 $f$，用例 12.4.2 的标准正交基 $q_1, q_2, q_3$：$f(q_1) = \frac{1}{\sqrt2}\int_{-1}^1\cos\pi t\,\mathrm{d}t = 0$，$f(q_2) = 0$（奇函数），$\int_{-1}^1 t^2\cos\pi t\,\mathrm{d}t = -\frac{4}{\pi^2}$，$f(q_3) = -\sqrt{\frac{45}{8}}\cdot\frac{4}{\pi^2}$。所以
 

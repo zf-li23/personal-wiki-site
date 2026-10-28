@@ -207,6 +207,11 @@ describe('markdown rendering', () => {
     assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);
     assert.equal((await render('## 13.1. 基本\n\n集合\n\n## 小结\n\n要点')).messages.length, 0);
   });
+  it('warns when the text mentions the course slides', async () => {
+    const { messages } = await render('## 13.1. Basics\n\nThe course slides write it as $x$.', { lang: 'en' });
+    assert.equal(messages.filter((m) => m.includes('mentions the course slides')).length, 1);
+    assert.equal((await render('## 13.1. 基本\n\n课件记作 $x$。')).messages.filter((m) => m.includes('mentions the course slides')).length, 1);
+  });
   it('groups adjacent ```<lang> tab blocks into one tabbed block', async () => {
     const { html, messages } = await render('```cpp tab\nint x = 1;\n```\n\n```python tab\nx = 1\n```\n\n```r\nx <- 1\n```\n\n```text\n1\n```\n\n```cpp tab\nalone\n```');
     assert.equal((html.match(/class="wiki-code-tabs"/g) ?? []).length, 1);

@@ -146,7 +146,7 @@ $$
 
 **例 7.2.3** 设 $f$ 在 $[a,b]$ 上二阶可导且 $f'' \le 0$，则 $\int_a^b f(x)\,\mathrm{d}x \le (b-a)f\left(\frac{a+b}{2}\right)$。
 
-**证明** $f'' \le 0$ 说明 $f$ 是**凹函数**（课件称"上凸"），曲线位于它在 $c = \frac{a+b}{2}$ 处的**切线**下方：$f(x) \le f(c) + f'(c)(x - c)$。两边积分，$\int_a^b (x - c)\,\mathrm{d}x = 0$，得 $\int_a^b f \le (b-a)f(c)$。$\square$
+**证明** $f'' \le 0$ 说明 $f$ 是**凹函数**（中文教材称"上凸"），曲线位于它在 $c = \frac{a+b}{2}$ 处的**切线**下方：$f(x) \le f(c) + f'(c)(x - c)$。两边积分，$\int_a^b (x - c)\,\mathrm{d}x = 0$，得 $\int_a^b f \le (b-a)f(c)$。$\square$
 
 几何上，切线、$x = a$、$x = b$ 与 $x$ 轴围成的梯形面积恰为 $(b-a)f(c)$，而曲边梯形在它里面。
 

@@ -1,6 +1,6 @@
 ---
 title: Matrix Functions
-source_hash: 09b3a0c7ca5b
+source_hash: 0ab5431b4579
 ---
 
 This chapter answers two questions. First, a complex number has the polar form $z = r\mathrm{e}^{\mathrm{i}\theta}$; can a matrix likewise be written as "a stretch times a rotation", $A = R\mathrm{e}^{\mathrm{i}M}$? This requires a definition of $\mathrm{e}^{\mathrm{i}M}$, and the answer is the polar decomposition of [Chapter 13](/2.1.13). Second, the solution of the scalar equation $x'(t) = kx(t)$ is $x(t) = x(0)\mathrm{e}^{kt}$; can the solution of the system $\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$ be written as $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{X}(0)$? Both questions require extending a complex function $f\colon \mathbb{C} \to \mathbb{C}$ to a map $f\colon \mathbb{C}^{n\times n} \to \mathbb{C}^{n\times n}$ on matrices.
@@ -173,7 +173,7 @@ $$
 r^{(j)}(\mu_i) = f^{(j)}(\mu_i), \qquad i = 1, \dots, s, \quad j = 0, 1, \dots, m_i - 1,
 $$
 
-and $f(A) = r(A)$. The polynomial $r(z)$ is called the *Hermite interpolation polynomial* of $f$ on the spectrum of $A$; the lecture slides call it the Hermite–Lagrange interpolation polynomial.
+and $f(A) = r(A)$. The polynomial $r(z)$ is called the *Hermite interpolation polynomial* of $f$ on the spectrum of $A$; it is also called the Hermite–Lagrange interpolation polynomial.
 
 **Proof** The polynomials of degree less than $m$ form an $m$-dimensional space, and the map $r \mapsto \left(r^{(j)}(\mu_i)\right)_{i,j} \in \mathbb{C}^m$ is linear. It is injective: if all these values vanish, then $(z - \mu_i)^{m_i} \mid r$ for every $i$, hence $m_A \mid r$, and since $\deg r < m$, $r = 0$. As the dimensions agree, the map is also surjective, so $r$ exists and is unique. For each Jordan block $J_{\mu_i, k}$ of $A$ ($k \le m_i$), Eq. (11.1) uses only $f^{(j)}(\mu_i)$ with $j < k$, so $f(J_{\mu_i,k}) = r(J_{\mu_i,k})$ and $f(A) = Pr(J)P^{-1} = r(A)$. The right-hand side does not involve $P$, so Definition 11.5.2 does not depend on the choice of the Jordan basis. $\square$
 
@@ -264,7 +264,7 @@ $$
 
 **Proof** $S_p(A) = PS_p(J)P^{-1}$. By Eq. (11.1), the entries of $S_p(J_{\lambda,k})$ are $\frac{1}{j!}S_p^{(j)}(\lambda)$, the partial sums of the $j$-th derived series of $S$. For $|\lambda| < R$ these converge absolutely to $\frac{1}{j!}f^{(j)}(\lambda)$, so $S_p(J) \to f(J)$; for $|\lambda| > R$ the diagonal entries $S_p(\lambda)$ diverge. $\square$
 
-The lecture slides state the corollary here as "if $S(z)$ has radius of convergence $R$, then $|\mu_i| < R$", which reverses the direction; the correct statement is the theorem above: the series converges when all eigenvalues lie inside the disk of convergence.
+Note the direction of the statement: it is not that "if $S(z)$ has radius of convergence $R$, then $|\mu_i| < R$"; rather, as in the theorem above, the series converges when all eigenvalues lie inside the disk of convergence.
 
 By Theorem 11.7.1, $\mathrm{e}^A$, $\sin A$ and $\cos A$ converge for every $A$; for $\rho(A) < 1$, $\ln(I + A) = A - \frac12A^2 + \frac13A^3 - \cdots$, and $\sum_k A^k = (I - A)^{-1}$ (Theorem 11.3.2) is exactly the case $f(z) = \frac{1}{1 - z}$. For matrices satisfying special relations, power series can be summed directly:
 

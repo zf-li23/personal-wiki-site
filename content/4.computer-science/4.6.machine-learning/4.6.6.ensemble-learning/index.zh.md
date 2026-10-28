@@ -157,7 +157,7 @@ $$
 1. 对 $t = 1, \dots, T$：从训练集中自助采样 $n$ 个样本；在其上生长一棵决策树，树的每个结点都先从 $p$ 个特征中随机选出 $k$ 个，只在这 $k$ 个特征中寻找最优的分裂；树充分生长，不剪枝。
 2. 分类时对 $T$ 棵树多数投票（回归时取平均）。
 
-课件中的表述是"对每棵树随机选取 $p$ 个特征中的 $k$ 个来建树"，那是随机子空间方法（Ho，1998）；Breiman 的随机森林在每个结点重新选择特征，树之间的差异更大。常用的默认值是分类时 $k = \lfloor\sqrt p\rfloor$，回归时 $k = \lfloor p/3\rfloor$；$k = p$ 时退化为普通的 Bagging。$k$ 越小，单棵树越弱，但树之间越不相关。
+"对每棵树随机选取 $p$ 个特征中的 $k$ 个来建树"是随机子空间方法（Ho，1998）；Breiman 的随机森林在每个结点重新选择特征，树之间的差异更大。常用的默认值是分类时 $k = \lfloor\sqrt p\rfloor$，回归时 $k = \lfloor p/3\rfloor$；$k = p$ 时退化为普通的 Bagging。$k$ 越小，单棵树越弱，但树之间越不相关。
 
 随机森林的优点：
 
@@ -193,7 +193,7 @@ AdaBoost（Adaptive Boosting，Freund 与 Schapire，1995）是最著名的 Boos
 
 $\varepsilon_t < 1/2$ 时 $\alpha_t > 0$，错误率越小，$h_t$ 的投票权重越大。权重更新后，$h_t$ 在新权重下的加权错误率恰好是 $1/2$（分错的样本的权重之和从 $\varepsilon_t$ 变成 $\varepsilon_t \mathrm{e}^{\alpha_t}/Z_t = 1/2$），下一轮的弱学习器因此必须学到 $h_t$ 没有学到的东西。
 
-课件中还有 AdaBoost.M1 的写法：若 $\varepsilon_t > 0.5$ 则停止；令 $\beta_t = \varepsilon_t/(1 - \varepsilon_t)$，分对的样本权重乘以 $\beta_t$，分错的不变，再归一化；最终投票权重为 $\log(1/\beta_t)$。由于 $\beta_t = \mathrm{e}^{-2\alpha_t}$，归一化后的权重与算法 6.5.1 完全相同，投票权重 $\log(1/\beta_t) = 2\alpha_t$ 也只差一个常数倍，所以两者是同一个算法。AdaBoost.M1 直接用于多类问题，但要求每个弱学习器的错误率低于 $1/2$，这对多类问题是很强的要求；SAMME（Zhu 等，2009）把权重改为 $\alpha_t = \ln\frac{1 - \varepsilon_t}{\varepsilon_t} + \ln(K - 1)$，只要求弱学习器好于 $K$ 类的随机猜测 $1 - 1/K$，是 scikit-learn 中 `AdaBoostClassifier` 的算法。
+AdaBoost.M1 常写成：若 $\varepsilon_t > 0.5$ 则停止；令 $\beta_t = \varepsilon_t/(1 - \varepsilon_t)$，分对的样本权重乘以 $\beta_t$，分错的不变，再归一化；最终投票权重为 $\log(1/\beta_t)$。由于 $\beta_t = \mathrm{e}^{-2\alpha_t}$，归一化后的权重与算法 6.5.1 完全相同，投票权重 $\log(1/\beta_t) = 2\alpha_t$ 也只差一个常数倍，所以两者是同一个算法。AdaBoost.M1 直接用于多类问题，但要求每个弱学习器的错误率低于 $1/2$，这对多类问题是很强的要求；SAMME（Zhu 等，2009）把权重改为 $\alpha_t = \ln\frac{1 - \varepsilon_t}{\varepsilon_t} + \ln(K - 1)$，只要求弱学习器好于 $K$ 类的随机猜测 $1 - 1/K$，是 scikit-learn 中 `AdaBoostClassifier` 的算法。
 
 **例 6.5.1** Freund 与 Schapire 的教程中有一个平面上 10 个点的例子，弱学习器是水平或竖直的直线（决策树桩）。三轮的加权错误率和投票权重约为 $\varepsilon_1 = 0.30$，$\alpha_1 = 0.42$；$\varepsilon_2 = 0.21$，$\alpha_2 = 0.65$；$\varepsilon_3 = 0.14$，$\alpha_3 = 0.92$。最终分类器 $H = \operatorname{sgn}(0.42h_1 + 0.65h_2 + 0.92h_3)$ 把 10 个点全部分对，而任何一条直线都做不到。
 

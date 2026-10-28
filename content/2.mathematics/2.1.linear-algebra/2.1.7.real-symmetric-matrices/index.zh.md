@@ -40,7 +40,7 @@ $$
 
 则 $Q$ 是正交矩阵（正交矩阵之积），$\Lambda$ 是实对角矩阵，且 $A=Q\Lambda Q^{\mathsf T}$。$\square$
 
-分解 $A=Q\Lambda Q^{\mathsf T}$ 称为实对称矩阵 $A$ 的谱分解（Spectral Decomposition）。它是 [第 6 章](/2.1.6) **特征值分解** $A=X\Lambda X^{-1}$ 的特殊情形：$X$ 取成正交矩阵，$X^{-1}=X^{\mathsf T}$。课件对一般可对角化矩阵的 $X\Lambda X^{-1}$ 也称"谱分解"，本书只把这个名称用于正交（或酉）对角化。几点说明：
+分解 $A=Q\Lambda Q^{\mathsf T}$ 称为实对称矩阵 $A$ 的谱分解（Spectral Decomposition）。它是 [第 6 章](/2.1.6) **特征值分解** $A=X\Lambda X^{-1}$ 的特殊情形：$X$ 取成正交矩阵，$X^{-1}=X^{\mathsf T}$。有的教材对一般可对角化矩阵的 $X\Lambda X^{-1}$ 也称"谱分解"，本书只把这个名称用于正交（或酉）对角化。几点说明：
 
 - 记 $Q=[\boldsymbol{q}_1\ \cdots\ \boldsymbol{q}_n]$，$\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_n)$，则
   $$
@@ -410,7 +410,7 @@ $$
 
 **定理 7.5.1** 对线性方程组 $A\boldsymbol{x}=\boldsymbol{b}$，$\boldsymbol{x}^+=A^+\boldsymbol{b}$ 是长度最小的**最小二乘法**解：最小二乘解的全体为 $\{A^+\boldsymbol{b}+\boldsymbol{x}_0\mid\boldsymbol{x}_0\in\mathcal{N}(A)\}$，且 $\|A^+\boldsymbol{b}+\boldsymbol{x}_0\|^2=\|A^+\boldsymbol{b}\|^2+\|\boldsymbol{x}_0\|^2$。特别地，方程组有解时，$A^+\boldsymbol{b}$ 是长度最小的解；$A$ 可逆时它是唯一解。
 
-**证明** $AA^+\boldsymbol{b}$ 是 $\boldsymbol{b}$ 在 $\mathcal{R}(A)$ 上的正交投影，所以 $A^+\boldsymbol{b}$ 是最小二乘解；等价地，$(I-AA^+)\boldsymbol{b}\in\mathcal{N}(A^{\mathsf T})$ 给出 $A^{\mathsf T}A(A^+\boldsymbol{b})=A^{\mathsf T}\boldsymbol{b}$，即 $A^+\boldsymbol{b}$ 满足**正规方程**（课件称解正规方程的方法为"正则化方法"，与统计中的正则化 regularization 不是一回事）。正规方程的解集是一个特解加 $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$。最后 $A^+\boldsymbol{b}=V_r(\cdots)\in\mathcal{R}(A^{\mathsf T})\perp\mathcal{N}(A)$，由勾股定理得长度公式。方程组有解时最小二乘解就是解。$\square$
+**证明** $AA^+\boldsymbol{b}$ 是 $\boldsymbol{b}$ 在 $\mathcal{R}(A)$ 上的正交投影，所以 $A^+\boldsymbol{b}$ 是最小二乘解；等价地，$(I-AA^+)\boldsymbol{b}\in\mathcal{N}(A^{\mathsf T})$ 给出 $A^{\mathsf T}A(A^+\boldsymbol{b})=A^{\mathsf T}\boldsymbol{b}$，即 $A^+\boldsymbol{b}$ 满足**正规方程**（有的教材称解正规方程的方法为"正则化方法"，与统计中的正则化 regularization 不是一回事）。正规方程的解集是一个特解加 $\mathcal{N}(A^{\mathsf T}A)=\mathcal{N}(A)$。最后 $A^+\boldsymbol{b}=V_r(\cdots)\in\mathcal{R}(A^{\mathsf T})\perp\mathcal{N}(A)$，由勾股定理得长度公式。方程组有解时最小二乘解就是解。$\square$
 
 ## 7.6. 谱范数与奇异值的稳定性
 

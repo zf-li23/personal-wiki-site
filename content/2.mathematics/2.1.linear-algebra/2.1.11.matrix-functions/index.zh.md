@@ -172,7 +172,7 @@ $$
 r^{(j)}(\mu_i) = f^{(j)}(\mu_i), \qquad i = 1, \dots, s, \quad j = 0, 1, \dots, m_i - 1,
 $$
 
-并且 $f(A) = r(A)$。$r(z)$ 称为 $f$ 关于 $A$ 的谱的 Hermite 插值多项式（Hermite interpolation polynomial），课件称为 Hermite–Lagrange 插值多项式。
+并且 $f(A) = r(A)$。$r(z)$ 称为 $f$ 关于 $A$ 的谱的 Hermite 插值多项式（Hermite interpolation polynomial），也称为 Hermite–Lagrange 插值多项式。
 
 **证明** 次数小于 $m$ 的多项式构成 $m$ 维空间，映射 $r \mapsto \left(r^{(j)}(\mu_i)\right)_{i,j} \in \mathbb{C}^m$ 是线性的。它是单射：若所有这些值为零，则 $(z - \mu_i)^{m_i} \mid r$ 对每个 $i$ 成立，从而 $m_A \mid r$，而 $\deg r < m$，故 $r = 0$。维数相同，所以它也是满射，$r$ 存在且唯一。对 $A$ 的每个 Jordan 块 $J_{\mu_i, k}$（$k \le m_i$），式 (11.1) 只用到 $f^{(j)}(\mu_i)$，$j < k$，因此 $f(J_{\mu_i,k}) = r(J_{\mu_i,k})$，$f(A) = Pr(J)P^{-1} = r(A)$。右边与 $P$ 无关，所以定义 11.5.2 不依赖于 Jordan 基的选取。 $\square$
 
@@ -263,7 +263,7 @@ $$
 
 **证明** $S_p(A) = PS_p(J)P^{-1}$。由式 (11.1)，$S_p(J_{\lambda,k})$ 的元素是 $\frac{1}{j!}S_p^{(j)}(\lambda)$，即 $S$ 的 $j$ 阶导级数的部分和。$|\lambda| < R$ 时它们绝对收敛到 $\frac{1}{j!}f^{(j)}(\lambda)$，所以 $S_p(J) \to f(J)$；$|\lambda| > R$ 时对角元 $S_p(\lambda)$ 发散。 $\square$
 
-课件此处的推论写成"若 $S(z)$ 的收敛半径为 $R$，则 $|\mu_i| < R$"，方向颠倒了；正确的是上面的定理：特征值都在收敛圆内时级数收敛。
+注意方向：不是"若 $S(z)$ 的收敛半径为 $R$，则 $|\mu_i| < R$"，而是如上面的定理所述，特征值都在收敛圆内时级数收敛。
 
 由定理 11.7.1，$\mathrm{e}^A$、$\sin A$、$\cos A$ 对一切 $A$ 收敛；$\rho(A) < 1$ 时 $\ln(I + A) = A - \frac12A^2 + \frac13A^3 - \cdots$，并且 $\sum_k A^k = (I - A)^{-1}$（定理 11.3.2）正是 $f(z) = \frac{1}{1 - z}$ 的情形。对满足特殊关系的矩阵，幂级数可以直接求和：
 
