@@ -99,7 +99,7 @@ Once several genes are known to affect one process, the next question is their o
 
 Expression gives the first kind of evidence. If loss or overactivity of gene $a$ changes the expression of gene $b$, and not the converse, $a$ acts upstream of $b$ in the regulation of $b$. In the R7 system, mutations in *prospero*, which encodes a **transcription** factor, do not change the expression of *sevenless* or of Ras, while activation of the Sevenless pathway changes the expression of *prospero*: the pathway acts upstream of *prospero*.
 
-Double mutants give the general method is epistasis analysis, which applies the concept of [7.4.4](/7.4.4#sec-4.2.1) to ordering rather than to ratios.
+The general method uses double mutants: **epistasis analysis**, which applies the concept of [7.4.4](/7.4.4#sec-4.2.1) to ordering rather than to ratios.
 
 **Definition 20.5.1 (Epistasis Analysis)** **Epistasis analysis** is the ordering of genes in a pathway by the phenotype of the double mutant: if two mutations in genes of the same pathway give different phenotypes, and the double mutant resembles one of them, that mutation is epistatic, and its gene is assigned a position in the pathway according to the rules below.
 

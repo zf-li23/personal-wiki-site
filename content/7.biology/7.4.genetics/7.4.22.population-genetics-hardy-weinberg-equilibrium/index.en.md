@@ -135,7 +135,7 @@ These estimates do not sum exactly to 1; the discrepancy is a check on the assum
 
 The efficient solution is maximum likelihood: the four phenotype counts are multinomial with the probabilities in the table. The likelihood has no closed-form maximum, but it becomes trivial if the hidden genotypes were known, which is exactly the situation of the **EM algorithm** ([3.5.6](/3.5.6)). In genetics this particular EM was invented long before the general method, as "gene counting" (Ceppellini, Siniscalco and Smith 1955).
 
-**Algorithm 22.2.2 (Gene Counting: EM for ABO)** Let the counts be $n_A, n_B, n_{AB}, n_O$ in a sample of $n$. **Start** from any $(p, q, r)$ with positive entries, and repeat until the estimates stop changing:
+**Algorithm 22.2.2 (Gene Counting: EM for ABO)** Let the counts be $n_A, n_B, n_{AB}, n_O$ in a sample of $n$. Start from any $(p, q, r)$ with positive entries, and repeat until the estimates stop changing:
 
 1. *E-step.* Split each ambiguous phenotype in proportion to the current genotype probabilities:
    $$

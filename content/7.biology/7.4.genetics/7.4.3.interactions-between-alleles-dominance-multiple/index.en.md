@@ -46,7 +46,6 @@ Codominance does not fit on this scale: it is a statement that both allelic prod
 
 Dominance is a relation between two alleles with respect to a particular phenotype, and one pair of alleles can be dominant, recessive, incompletely dominant and codominant at once, depending on which phenotype is observed. The classic example is **sickle cell anemia** ([7.1.7](/7.1.7)). The allele $Hb\beta^{S}$ of the β-globin gene *HBB* has one base change that replaces glutamate 6 by valine; deoxygenated hemoglobin S polymerizes into fibers that distort red cells into sickle shapes.
 
-| Mosaic dominance (Example 3.1.3) | heterozygote shows each parental pattern in different body regions (*Harmonia axyridis*, *pannier*); $\mathrm{F}_2$ 1:2:1 | |
 | Level of observation | $Hb\beta^{A}/Hb\beta^{A}$ | $Hb\beta^{A}/Hb\beta^{S}$ | $Hb\beta^{S}/Hb\beta^{S}$ | Relation of $Hb\beta^{S}$ to $Hb\beta^{A}$ |
 |---|---|---|---|---|
 | β-globin polypeptides (electrophoresis) | A only | A and S | S only | codominant |
@@ -282,6 +281,7 @@ Norms of reaction show why "genetic" and "environmental" are not alternatives. E
 | Concept | Key statement | Calculation |
 |---|---|---|
 | Dominance relations (Definition 3.1.1) | **complete dominance**, **incomplete dominance** (heterozygote intermediate, $\mathrm{F}_2$ 1:2:1), **codominance** (both products seen; MN, molecular markers) | dominance index $h = (z_{12} - z_{22})/(z_{11} - z_{22})$ (Formula 3.1.1) |
+| Mosaic dominance (Example 3.1.3) | heterozygote shows each parental pattern in different body regions (*Harmonia axyridis*, *pannier*); $\mathrm{F}_2$ 1:2:1 | |
 | Level of observation | $Hb\beta^S$ is codominant (proteins), recessive (anemia), incompletely dominant (sickling at low $\mathrm{O_2}$), dominant (malaria resistance) | |
 | Recessiveness of null alleles | flux $J(E) = J_{\max}E/(E + K_E)$ saturates; control coefficients sum to one (Formula 3.2.1) | $K_E = 0.05$: heterozygote has 95.5 % flux (Example 3.2.1) |
 | **Haploinsufficiency** (Definition 3.2.1) | dosage-sensitive genes: transcription factors, structural proteins, complexes | |

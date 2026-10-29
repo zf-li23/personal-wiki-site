@@ -1010,7 +1010,7 @@ terms:
   - { zh: 条件概率, en: conditional probability }
   - { zh: 乘法公式, en: multiplication rule, aliases: [乘法法则], scope: ["3"] }
   - { zh: 全概率公式, en: law of total probability }
-  - { zh: Bayes 公式, en: "Bayes' theorem", aliases: [贝叶斯公式, 贝叶斯法则, "Bayes' rule"] }
+  - { zh: Bayes 公式, en: "Bayes' theorem", aliases: [贝叶斯公式, 贝叶斯法则, Bayes 定理, 贝叶斯定理, "Bayes' rule"] }
   - { zh: 独立性, en: independence, aliases: [相互独立], scope: ["3"] }
   - { zh: 条件独立, en: conditional independence }
   - { zh: 两两独立, en: pairwise independence }
@@ -7456,7 +7456,7 @@ terms:
   - { zh: 姐妹染色单体, en: sister chromatids, aliases: [sister chromatid] }
   - { zh: 常染色体, en: autosome, aliases: [autosomes, autosomal] }
   - { zh: 遗传的染色体学说, en: chromosome theory of inheritance, aliases: [染色体学说] }
-  - { zh: 减数分裂（减数分裂型分裂）, en: reductional division, aliases: [减数分裂分离] }
+  - { zh: 减数式分裂, en: reductional division, aliases: [减数分裂分离, 减数分裂型分裂, 还原分裂] }
   - { zh: 均等分裂, en: equational division }
   - { zh: 交换, en: crossing over, aliases: [crossover, crossovers, 互换, 染色体交换], scope: ["7"] }
   - { zh: 重组配子, en: recombinant gamete, aliases: [recombinant gametes] }
@@ -7470,8 +7470,8 @@ terms:
   - { zh: 剂量补偿, en: dosage compensation }
   - { zh: 交叉遗传, en: criss-cross inheritance }
   - { zh: 不分离, en: nondisjunction, aliases: [不分开, 染色体不分离] }
-  - { zh: 从性遗传, en: sex-influenced trait, aliases: [sex-influenced traits] }
-  - { zh: 限性遗传, en: sex-limited trait, aliases: [sex-limited traits] }
+  - { zh: 从性遗传, en: sex-influenced trait, aliases: [sex-influenced traits, 从性性状] }
+  - { zh: 限性遗传, en: sex-limited trait, aliases: [sex-limited traits, 限性性状] }
   - { zh: 系谱, en: pedigree, aliases: [pedigrees, 家系图, 家系] }
   - { zh: 先证者, en: proband, aliases: [propositus] }
   - { zh: 携带者, en: carrier, aliases: [carriers], scope: ["7.4"] }
@@ -7482,7 +7482,7 @@ terms:
   - { zh: 遗传咨询, en: genetic counseling }
   - { zh: 连锁, en: linkage, aliases: [genetic linkage, linked], scope: ["7"] }
   - { zh: 连锁群, en: linkage group, aliases: [linkage groups] }
-  - { zh: 相斥相, en: repulsion, aliases: [trans configuration], scope: ["7.4"] }
+  - { zh: 相斥相, en: repulsion, aliases: [trans configuration, 相斥], scope: ["7.4"] }
   - { zh: 重组率, en: recombination frequency, aliases: [交换值, 重组值, recombination fraction, 交换率] }
   - { zh: 遗传图, en: genetic map, aliases: [linkage map, 连锁图, 遗传图谱] }
   - { zh: 厘摩, en: centimorgan, aliases: [cM, map unit, 图距单位, 图距] }
@@ -7492,7 +7492,7 @@ terms:
   - { zh: 作图函数, en: mapping function, aliases: [mapping functions] }
   - { zh: 物理图, en: physical map, aliases: [physical maps, 物理图谱] }
   - { zh: 遗传多态性, en: genetic polymorphism, aliases: [polymorphism, polymorphic, 多态性], scope: ["7"] }
-  - { zh: 相引相, en: coupling, aliases: [cis configuration], scope: ["7.4"] }
+  - { zh: 相引相, en: coupling, aliases: [cis configuration, 相引], scope: ["7.4"] }
   - { zh: 干涉, en: interference, aliases: [crossover interference, 交换干涉], scope: ["7"] }
   - { zh: 配子发生, en: gametogenesis }
   - { zh: 精子发生, en: spermatogenesis }
@@ -7754,7 +7754,7 @@ terms:
   - { zh: 非自主元件, en: nonautonomous element, aliases: [nonautonomous elements, non-autonomous element, 非自主性转座元件] }
   - { zh: 插入序列, en: insertion sequence, aliases: [IS element, IS elements, insertion sequences] }
   - { zh: 复合转座子, en: composite transposon, aliases: [composite transposons] }
-  - { zh: 杂种不育, en: hybrid dysgenesis, aliases: [杂种劣育] }
+  - { zh: 杂种劣育, en: hybrid dysgenesis, aliases: [杂种不育] }
   - { zh: 细胞型, en: cytotype, aliases: [P cytotype, M cytotype] }
   - { zh: 自私遗传元件, en: selfish genetic element, aliases: [selfish genetic elements, selfish DNA, 自私 DNA] }
   - { zh: 减数分裂驱动, en: meiotic drive, aliases: [segregation distortion, 分离偏移, 分离畸变] }
