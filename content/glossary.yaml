@@ -4773,7 +4773,7 @@ terms:
   - { zh: 反应截面, en: reaction cross section }
   - { zh: 阈能, en: threshold energy, aliases: [临界能, critical energy] }
   - { zh: 势能面, en: potential energy surface, aliases: [PES] }
-  - { zh: Morse 势, en: Morse potential, aliases: [Morse 函数] }
+  - { zh: Morse 势, en: Morse potential }
   - { zh: 最小能量路径, en: minimum energy path }
   - { zh: Eyring 方程, en: Eyring equation, aliases: [Eyring–Polanyi equation] }
   - { zh: 活化 Gibbs 自由能, en: Gibbs energy of activation, aliases: [活化自由能, 标准摩尔活化 Gibbs 自由能, free energy of activation] }
@@ -5964,7 +5964,7 @@ terms:
   - { zh: 开放阅读框, en: open reading frame, aliases: [ORF] }
   - { zh: 非编码 RNA, en: noncoding RNA, aliases: [ncRNA, non-coding RNA] }
   - { zh: 连环数, en: linking number, aliases: [连接数] }
-  - { zh: 扭转数, en: twist, scope: ["7"] }
+  - { zh: 扭转数, en: twist, scope: ["7.2", "7.6"] }
   - { zh: 超螺旋数, en: writhe, aliases: [缠绕数, writhing number] }
   - { zh: 超螺旋密度, en: superhelical density, aliases: [比连环差, specific linking difference] }
   - { zh: 连环差, en: linking difference }
@@ -7881,3 +7881,118 @@ terms:
   - { zh: 预图式, en: prepattern, aliases: [prepatterns] }
   - { zh: cAMP 中继, en: cAMP relay }
   - { zh: 趋化塌缩, en: chemotactic collapse }
+  - { zh: 遗传补偿, en: genetic compensation, aliases: [genetic compensation response] }
+  - { zh: 吗啉代寡核苷酸, en: morpholino, aliases: [morpholino oligonucleotide, morpholinos] }
+  - { zh: 相互诱导, en: reciprocal induction }
+  - { zh: 指令性相互作用, en: instructive interaction }
+  - { zh: 允许性相互作用, en: permissive interaction }
+  - { zh: 信号丝足, en: cytoneme, aliases: [cytonemes] }
+  - { zh: 受精, en: fertilization, scope: ["7"] }
+  - { zh: 顶体反应, en: acrosome reaction }
+  - { zh: 卵黄膜, en: vitelline envelope, aliases: [vitelline membrane] }
+  - { zh: 透明带, en: zona pellucida }
+  - { zh: 多精受精, en: polyspermy, aliases: [多精入卵] }
+  - { zh: 快速阻断, en: fast block to polyspermy }
+  - { zh: 皮质颗粒反应, en: cortical granule reaction, aliases: [slow block to polyspermy, 慢速阻断] }
+  - { zh: 受精膜, en: fertilization envelope, aliases: [fertilization membrane] }
+  - { zh: 卵子激活, en: egg activation }
+  - { zh: 原核, en: pronucleus, aliases: [pronuclei] }
+  - { zh: 获能, en: capacitation }
+  - { zh: 超激活, en: hyperactivation, scope: ["7"] }
+  - { zh: 生理性多精受精, en: physiological polyspermy }
+  - { zh: Polycomb 族蛋白, en: Polycomb group, aliases: [PcG, Polycomb group proteins] }
+  - { zh: Trithorax 族蛋白, en: Trithorax group, aliases: [TrxG, Trithorax group proteins] }
+  - { zh: 中胚层诱导, en: mesoderm induction }
+  - { zh: 默认模型, en: default model, scope: ["7.5"] }
+  - { zh: 激活–转化模型, en: activation–transformation model, aliases: [activation-transformation model] }
+  - { zh: 内脏位置, en: situs, scope: ["7"] }
+  - { zh: 内脏反位, en: situs inversus, aliases: [situs inversus totalis, 全内脏反位] }
+  - { zh: 内脏异位, en: heterotaxy, aliases: [内脏异位症], scope: ["7"] }
+  - { zh: 细胞分选, en: cell sorting, aliases: [sorting out], scope: ["7"] }
+  - { zh: 包围, en: engulfment, scope: ["7.5"] }
+  - { zh: 浮动位点模型, en: floating-site model }
+  - { zh: Smoluchowski 凝聚方程, en: Smoluchowski coagulation equation }
+  - { zh: Cahn–Hilliard 方程, en: Cahn–Hilliard equation }
+  - { zh: Allen–Cahn 方程, en: Allen–Cahn equation }
+  - { zh: 溶胶–凝胶转变, en: sol–gel transition, aliases: [凝胶化, gelation] }
+  - { zh: 间质–上皮转化, en: mesenchymal–epithelial transition }
+  - { zh: Maxwell 黏弹性液体, en: Maxwell viscoelastic liquid, aliases: [Maxwell fluid, Maxwell 液体] }
+  - { zh: 形态动力学, en: morphodynamics }
+  - { zh: Stokes 流, en: Stokes flow, aliases: [creeping flow, 蠕动流] }
+  - { zh: Rayleigh 耗散函数, en: Rayleigh dissipation function }
+  - { zh: 皮层张力, en: cortical tension }
+  - { zh: 顶点模型, en: vertex model }
+  - { zh: Morse 函数, en: Morse function, scope: ["2", "7"] }
+  - { zh: 展开, en: unfolding, scope: ["7.5"] }
+  - { zh: 余维数, en: codimension, scope: ["7.5"] }
+  - { zh: 普适展开, en: universal unfolding }
+  - { zh: 折叠突变, en: fold catastrophe }
+  - { zh: 燕尾突变, en: swallowtail catastrophe }
+  - { zh: 蝴蝶突变, en: butterfly catastrophe }
+  - { zh: 双曲脐点突变, en: hyperbolic umbilic, aliases: [hyperbolic umbilic catastrophe] }
+  - { zh: 椭圆脐点突变, en: elliptic umbilic, aliases: [elliptic umbilic catastrophe] }
+  - { zh: 抛物脐点突变, en: parabolic umbilic, aliases: [parabolic umbilic catastrophe] }
+  - { zh: Maxwell 约定, en: Maxwell convention }
+  - { zh: 完全延迟约定, en: perfect-delay convention, aliases: [perfect delay] }
+  - { zh: 致密化, en: compaction, scope: ["7"] }
+  - { zh: 神经元, en: neuron, aliases: [neurons], scope: ["7"] }
+  - { zh: 卵裂球, en: blastomere, aliases: [blastomeres] }
+  - { zh: 母源因子, en: maternal factor, aliases: [maternal factors] }
+  - { zh: 动物极, en: animal pole }
+  - { zh: 植物极, en: vegetal pole, aliases: [营养极] }
+  - { zh: 等黄卵, en: isolecithal egg, aliases: [isolecithal] }
+  - { zh: 中黄卵, en: mesolecithal egg, aliases: [mesolecithal] }
+  - { zh: 端黄卵, en: telolecithal egg, aliases: [telolecithal] }
+  - { zh: 中央黄卵, en: centrolecithal egg, aliases: [centrolecithal] }
+  - { zh: 全裂, en: holoblastic cleavage, aliases: [holoblastic] }
+  - { zh: 偏裂, en: meroblastic cleavage, aliases: [meroblastic] }
+  - { zh: 盘状卵裂, en: discoidal cleavage, aliases: [discoidal] }
+  - { zh: 表面卵裂, en: superficial cleavage, aliases: [superficial], scope: ["7.5"] }
+  - { zh: 桑葚胚, en: morula }
+  - { zh: 着床, en: implantation, scope: ["7"] }
+  - { zh: 延迟着床, en: delayed implantation, aliases: [embryonic diapause] }
+  - { zh: 单卵双胎, en: monozygotic twins, aliases: [identical twins, 同卵双生] }
+  - { zh: 体外受精, en: in vitro fertilization, aliases: [IVF] }
+  - { zh: 螺旋卵裂, en: spiral cleavage }
+  - { zh: 极叶, en: polar lobe }
+  - { zh: 异时性基因, en: heterochronic gene, aliases: [heterochronic genes] }
+  - { zh: 骨针间质, en: skeletogenic mesenchyme, aliases: [primary mesenchyme, 初级间质] }
+  - { zh: 双负门控, en: double-negative gate }
+  - { zh: 内陷, en: invagination, scope: ["7"] }
+  - { zh: 内卷, en: involution, scope: ["7"] }
+  - { zh: 内移, en: ingression }
+  - { zh: 分层, en: delamination, scope: ["7"] }
+  - { zh: 瓶状细胞, en: bottle cell, aliases: [bottle cells] }
+  - { zh: 原肠, en: archenteron }
+  - { zh: Hensen 结, en: "Hensen's node" }
+  - { zh: 胚外膜, en: extraembryonic membranes, aliases: [extraembryonic membrane] }
+  - { zh: 羊膜, en: amnion }
+  - { zh: 绒毛膜, en: chorion }
+  - { zh: 尿囊, en: allantois }
+  - { zh: 卵黄囊, en: yolk sac }
+  - { zh: 胎盘, en: placenta }
+  - { zh: 铰点, en: hinge point, aliases: [hinge points, median hinge point, dorsolateral hinge point, dorsolateral hinge points] }
+  - { zh: 次级神经胚形成, en: secondary neurulation }
+  - { zh: 神经中胚层祖细胞, en: neuromesodermal progenitor, aliases: [neuromesodermal progenitors, NMP, NMPs] }
+  - { zh: 峡部组织者, en: isthmic organizer, aliases: [isthmic organiser] }
+  - { zh: 菱脑原节, en: rhombomere, aliases: [rhombomeres] }
+  - { zh: 底板, en: floor plate }
+  - { zh: 顶板, en: roof plate }
+  - { zh: 神经上皮细胞, en: neuroepithelial cell, aliases: [neuroepithelial cells] }
+  - { zh: 核的间期迁移, en: interkinetic nuclear migration, aliases: [IKNM] }
+  - { zh: 放射状胶质细胞, en: radial glial cell, aliases: [radial glia, radial glial cells] }
+  - { zh: 外放射状胶质细胞, en: outer radial glia, aliases: [oRG, basal radial glia] }
+  - { zh: 中间前体细胞, en: intermediate progenitor, aliases: [intermediate progenitors, basal progenitor] }
+  - { zh: 由内向外分层, en: inside-out lamination }
+  - { zh: 前神经簇, en: proneural cluster, aliases: [proneural clusters] }
+  - { zh: 成神经细胞, en: neuroblast, aliases: [neuroblasts], scope: ["7"] }
+  - { zh: 成体神经发生, en: adult neurogenesis }
+  - { zh: 运动接触抑制, en: contact inhibition of locomotion, aliases: [CIL] }
+  - { zh: 神经嵴病, en: neurocristopathy, aliases: [neurocristopathies] }
+  - { zh: 轴突导向, en: axon guidance }
+  - { zh: 化学亲和假说, en: chemoaffinity hypothesis }
+  - { zh: 神经肌肉接头, en: neuromuscular junction, aliases: [NMJ, 神经肌突触] }
+  - { zh: 神经营养因子假说, en: neurotrophic factor hypothesis }
+  - { zh: 晶状体诱导, en: lens induction }
+  - { zh: 外胚层附属器, en: ectodermal appendage, aliases: [ectodermal appendages] }
+  - { zh: 力学–化学模型, en: mechanochemical model, aliases: [mechanochemical models] }
