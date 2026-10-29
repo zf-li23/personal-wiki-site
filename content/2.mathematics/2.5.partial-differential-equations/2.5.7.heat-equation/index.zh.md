@@ -1,6 +1,6 @@
 ---
 title: 热方程
-source_hash: 2810555dc1e6
+source_hash: 09f7acd73bfa
 ---
 
 **热方程** $u_t=k\Delta u$（扩散系数 $k>0$，[2.5.1](/2.5.1)）支配着一切由随机的局部运动引起扩散的过程：固体中的热量、溶剂中的溶质、移动的生物种群、Brown 粒子的概率密度。它的解与**波动方程**（[2.5.3](/2.5.3)）的解表现迥异：热量瞬间传遍整个空间，但到达远处的量极小；粗糙的初始数据立即变得光滑；时间有方向，因为方程一般不能逆向求解；解通过极值原理由它在"抛物边界"上的值所控制。
@@ -277,7 +277,7 @@ u_t=D\Delta u+f(u),\tag{7.6}
 $$
 的方程，或由扩散系数构成对角矩阵 $D$ 的方程组 $\boldsymbol{u}_t=D\Delta\boldsymbol{u}+\boldsymbol{f}(\boldsymbol{u})$，称为反应扩散方程（reaction-diffusion equation）。扩散项使 $u$ 散开，反应项 $f$（出生与死亡、化学反应）则在每一点像相应的常微分方程那样起作用。有两种现象是任何一部分单独都没有的；二者分别见[生态学](/7.19)与[发育生物学](/7.5)。
 
-1. 入侵前沿：对 Fisher–KPP 方程 $u_t=Du_{xx}+ru(1-u)$，向空旷领地扩展的种群形成一个**行波解** $u=U(x-ct)$，连接前沿后方的 $u=1$ 与前方的 $u=0$。在前沿的最前端 $u$ 很小，方程近似为 $u_t=Du_{xx}+ru$；代入 $u=\mathrm{e}^{-\lambda(x-ct)}$ 得 $c=D\lambda+\frac r\lambda\ge2\sqrt{rD}$（由均值不等式）。由局部初始数据产生的前沿以最小速度 $c^*=2\sqrt{rD}$ 传播（不加证明）：入侵速度由增长率与扩散系数共同决定。
+1. 入侵前沿：对 Fisher–KPP 方程 $u_t=Du_{xx}+ru(1-u)$，向空旷领地扩展的种群形成一个行波解（traveling wave solution）$u=U(x-ct)$，连接前沿后方的 $u=1$ 与前方的 $u=0$。在前沿的最前端 $u$ 很小，方程近似为 $u_t=Du_{xx}+ru$；代入 $u=\mathrm{e}^{-\lambda(x-ct)}$ 得 $c=D\lambda+\frac r\lambda\ge2\sqrt{rD}$（由均值不等式）。由局部初始数据产生的前沿以最小速度 $c^*=2\sqrt{rD}$ 传播（不加证明）：入侵速度由增长率与扩散系数共同决定。
 2. 扩散驱动的不稳定性：对两个物种 $u,v$，$u_t=D_u\Delta u+f(u,v)$，$v_t=D_v\Delta v+g(u,v)$，设 $(u^*,v^*)$ 是对常微分方程稳定的均匀稳态，即 Jacobi 矩阵 $J$ 满足 $\operatorname{tr}J<0$，$\det J>0$。正比于 $\mathrm{e}^{\mathrm{i}qx+\sigma t}$ 的扰动按 $J-q^2\operatorname{diag}(D_u,D_v)$ 的特征值 $\sigma$ 增长或衰减。迹仍为负，所以不稳定性恰好在行列式
 $$
 h(q^2)=D_uD_vq^4-\big(D_vf_u+D_ug_v\big)q^2+\det J
