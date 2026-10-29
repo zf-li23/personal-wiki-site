@@ -1800,7 +1800,7 @@ terms:
   - { zh: Frobenius 定理, en: Frobenius theorem, scope: ["2.4", "2.5"] }
   - { zh: 完全积分, en: complete integral }
   - { zh: 奇积分, en: singular integral, scope: ["2.4", "2.5"] }
-  - { zh: 特征函数, en: eigenfunction, aliases: [本征函数], scope: ["2.4", "2.5", "5", "6"] }
+  - { zh: 特征函数, en: eigenfunction, aliases: [本征函数], scope: ["2.4", "2.5", "5", "6", "7.5"] }
   - { zh: 鞍点, en: saddle, scope: ["2.4", "7.4"] }
   - { zh: 结点, en: node, scope: ["2.4", "7.4"] }
   - { zh: 焦点, en: focus, aliases: [spiral point], scope: ["2.4", "7.4"] }
@@ -7051,7 +7051,7 @@ terms:
   - { zh: 微管, en: microtubule, aliases: [microtubules] }
   - { zh: 原纤维, en: protofilament, aliases: [protofilaments] }
   - { zh: 动态不稳定性, en: dynamic instability }
-  - { zh: 灾变, en: catastrophe, aliases: [microtubule catastrophe], scope: ["7"] }
+  - { zh: 灾变, en: catastrophe, aliases: [microtubule catastrophe], scope: ["7.3"] }
   - { zh: 挽救, en: rescue, aliases: [microtubule rescue], scope: ["7.3"] }
   - { zh: GTP 帽, en: GTP cap }
   - { zh: γ-微管蛋白环复合体, en: γ-tubulin ring complex, aliases: [γ-TuRC] }
@@ -7789,3 +7789,86 @@ terms:
   - { zh: 温度依赖型性别决定, en: temperature-dependent sex determination, aliases: [温度依赖性别决定, TSD], scope: ["7"] }
   - { zh: 共祖系数, en: kinship coefficient, aliases: [coefficient of kinship, coancestry coefficient] }
   - { zh: 咨询者, en: consultand, aliases: [求询者] }
+
+  # biology: developmental biology (7.5); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 发育生物学, en: developmental biology }
+  - { zh: 后成论, en: epigenesis }
+  - { zh: 特化, en: specification, aliases: [cell specification], scope: ["7"] }
+  - { zh: 先成论, en: preformationism, aliases: [preformation] }
+  - { zh: 镶嵌发育, en: mosaic development }
+  - { zh: 调整发育, en: regulative development }
+  - { zh: 自主特化, en: autonomous specification }
+  - { zh: 条件特化, en: conditional specification }
+  - { zh: 合胞体特化, en: syncytial specification }
+  - { zh: 渠限化, en: canalization }
+  - { zh: 命运图, en: fate map, aliases: [fate maps] }
+  - { zh: 细胞谱系, en: cell lineage }
+  - { zh: 谱系示踪, en: lineage tracing }
+  - { zh: 感受态, en: competence, scope: ["7.5"] }
+  - { zh: 旁分泌因子, en: paracrine factor, aliases: [paracrine factors] }
+  - { zh: 卵裂, en: cleavage, scope: ["7"] }
+  - { zh: 囊胚, en: blastula }
+  - { zh: 囊胚腔, en: blastocoel }
+  - { zh: 母源–合子转换, en: maternal-to-zygotic transition, aliases: [MZT, 母源-合子转换] }
+  - { zh: 合子基因组激活, en: zygotic genome activation, aliases: [ZGA] }
+  - { zh: 中囊胚转换, en: mid-blastula transition, aliases: [midblastula transition, MBT] }
+  - { zh: 胚泡, en: blastocyst }
+  - { zh: 内细胞团, en: inner cell mass }
+  - { zh: 滋养外胚层, en: trophectoderm }
+  - { zh: 组织表面张力, en: tissue surface tension }
+  - { zh: 原肠作用, en: gastrulation }
+  - { zh: 原肠胚, en: gastrula }
+  - { zh: 胚层, en: germ layer, aliases: [germ layers] }
+  - { zh: 外胚层, en: ectoderm }
+  - { zh: 中胚层, en: mesoderm }
+  - { zh: 内胚层, en: endoderm }
+  - { zh: 汇聚伸展, en: convergent extension }
+  - { zh: 下包, en: epiboly }
+  - { zh: 胚孔, en: blastopore }
+  - { zh: 原条, en: primitive streak }
+  - { zh: 突变论, en: catastrophe theory }
+  - { zh: 尖点突变, en: cusp catastrophe }
+  - { zh: 形态发生素, en: morphogen, aliases: [morphogens] }
+  - { zh: 位置信息, en: positional information }
+  - { zh: 法国国旗模型, en: French flag model }
+  - { zh: 衰减长度, en: decay length, scope: ["7.5"] }
+  - { zh: Gierer–Meinhardt 模型, en: Gierer–Meinhardt model }
+  - { zh: Keller–Segel 模型, en: Keller–Segel model }
+  - { zh: 极质, en: pole plasm }
+  - { zh: 类体节, en: parasegment, aliases: [parasegments] }
+  - { zh: Hox 基因, en: Hox gene, aliases: [Hox genes] }
+  - { zh: Hox 共线性, en: Hox colinearity, aliases: [colinearity], scope: ["7"] }
+  - { zh: Spemann 组织者, en: Spemann organizer, aliases: [organizer, 组织者], scope: ["7"] }
+  - { zh: Nieuwkoop 中心, en: Nieuwkoop center }
+  - { zh: 神经诱导, en: neural induction }
+  - { zh: 神经胚形成, en: neurulation }
+  - { zh: 神经板, en: neural plate }
+  - { zh: 神经管, en: neural tube }
+  - { zh: 神经管缺陷, en: neural tube defect, aliases: [neural tube defects] }
+  - { zh: 神经嵴, en: neural crest }
+  - { zh: 生长锥, en: growth cone, aliases: [growth cones] }
+  - { zh: 基板, en: placode, aliases: [placodes, 外胚层基板] }
+  - { zh: 体节, en: somite, aliases: [somites], scope: ["7"] }
+  - { zh: 前体节中胚层, en: presomitic mesoderm, aliases: [PSM] }
+  - { zh: 时钟–波前模型, en: clock-and-wavefront model, aliases: [clock and wavefront model] }
+  - { zh: 软骨内成骨, en: endochondral ossification }
+  - { zh: 中间中胚层, en: intermediate mesoderm }
+  - { zh: 分支形态发生, en: branching morphogenesis }
+  - { zh: 原始生殖细胞, en: primordial germ cell, aliases: [primordial germ cells, PGC, PGCs] }
+  - { zh: 种质, en: germ plasm, scope: ["7"] }
+  - { zh: 血管发生, en: vasculogenesis }
+  - { zh: 血管新生, en: angiogenesis }
+  - { zh: 顶端外胚层嵴, en: apical ectodermal ridge }
+  - { zh: 极化活性区, en: zone of polarizing activity, aliases: [ZPA] }
+  - { zh: 变态, en: metamorphosis }
+  - { zh: 成虫盘, en: imaginal disc, aliases: [imaginal discs] }
+  - { zh: 区室, en: compartment, scope: ["7.5"] }
+  - { zh: 异速生长, en: allometry, aliases: [allometric growth], scope: ["7"] }
+  - { zh: 再生, en: regeneration, scope: ["7"] }
+  - { zh: 芽基, en: blastema }
+  - { zh: 变形再生, en: morphallaxis }
+  - { zh: 新建再生, en: epimorphosis }
+  - { zh: 致畸剂, en: teratogen, aliases: [teratogens] }
+  - { zh: 异时性, en: heterochrony }
+  - { zh: 深度同源, en: deep homology }
+  - { zh: 遗传同化, en: genetic assimilation }
