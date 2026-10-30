@@ -8109,3 +8109,30 @@ terms:
   - { zh: 一次性体细胞理论, en: disposable soma theory }
   - { zh: 表观遗传时钟, en: epigenetic clock, aliases: [epigenetic clocks] }
   - { zh: 早衰综合征, en: progeroid syndrome, aliases: [progeroid syndromes] }
+  - { zh: 镶嵌多效性, en: mosaic pleiotropy }
+  - { zh: 关联多效性, en: relational pleiotropy }
+  - { zh: 表型异质性, en: phenotypic heterogeneity }
+  - { zh: 关键期, en: critical period, scope: ["7"] }
+  - { zh: 胎儿酒精谱系障碍, en: fetal alcohol spectrum disorder, aliases: [FASD] }
+  - { zh: 胎儿酒精综合征, en: fetal alcohol syndrome, aliases: [FAS] }
+  - { zh: 内分泌干扰物, en: endocrine disruptor, aliases: [endocrine disruptors, 环境内分泌干扰物] }
+  - { zh: 健康与疾病的发育起源, en: developmental origins of health and disease, aliases: [DOHaD] }
+  - { zh: 分化疗法, en: differentiation therapy }
+  - { zh: 发育可塑性, en: developmental plasticity, aliases: [phenotypic plasticity, 表型可塑性] }
+  - { zh: 多型现象, en: polyphenism, aliases: [polyphenisms] }
+  - { zh: 利他素, en: kairomone, aliases: [kairomones, 利它素] }
+  - { zh: 发育共生, en: developmental symbiosis }
+  - { zh: 共生功能体, en: holobiont }
+  - { zh: von Baer 定律, en: "von Baer's laws" }
+  - { zh: 系统发育型阶段, en: phylotypic stage }
+  - { zh: 模块性, en: modularity, scope: ["7"] }
+  - { zh: 共选择, en: co-option, aliases: [recruitment], scope: ["7"] }
+  - { zh: 异位性, en: heterotopy }
+  - { zh: 异量性, en: heterometry }
+  - { zh: 异型性, en: heterotypy }
+  - { zh: 幼态延续, en: paedomorphosis }
+  - { zh: 过型形成, en: peramorphosis }
+  - { zh: 幼态持续, en: neoteny }
+  - { zh: 幼体性成熟, en: progenesis }
+  - { zh: 超形态发生, en: hypermorphosis }
+  - { zh: 发育约束, en: developmental constraint, aliases: [developmental constraints] }
