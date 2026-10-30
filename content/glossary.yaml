@@ -7996,3 +7996,25 @@ terms:
   - { zh: 晶状体诱导, en: lens induction }
   - { zh: 外胚层附属器, en: ectodermal appendage, aliases: [ectodermal appendages] }
   - { zh: 力学–化学模型, en: mechanochemical model, aliases: [mechanochemical models] }
+  - { zh: 柱骨, en: stylopod }
+  - { zh: 接合骨, en: zeugopod }
+  - { zh: 端骨, en: autopod }
+  - { zh: 肢体区, en: limb field }
+  - { zh: 进展区, en: progress zone, aliases: [PZ, progress zone model] }
+  - { zh: 双信号模型, en: two-signal model }
+  - { zh: 有丝分裂指数, en: mitotic index }
+  - { zh: ZRS, en: ZRS, aliases: [ZPA regulatory sequence, MFCS1] }
+  - { zh: 指身份, en: digit identity }
+  - { zh: Shh–Gremlin1–FGF 反馈环, en: Shh–Gremlin1–FGF loop }
+  - { zh: 趾间细胞死亡, en: interdigital cell death, aliases: [趾间凋亡, interdigital apoptosis] }
+  - { zh: 蜕皮, en: molting, aliases: [moulting, ecdysis, molt], scope: ["7"] }
+  - { zh: 蜕皮素, en: ecdysone, aliases: [20-hydroxyecdysone, 20E] }
+  - { zh: 保幼激素, en: juvenile hormone, aliases: [JH] }
+  - { zh: Minute 技术, en: Minute technique }
+  - { zh: 多克隆, en: polyclone, aliases: [polyclones], scope: ["7.5"] }
+  - { zh: 选择者基因, en: selector gene, aliases: [selector genes] }
+  - { zh: KST 模型, en: KST model, aliases: [Kauffman–Shymko–Trabert model] }
+  - { zh: 有丝分裂振荡器, en: mitotic oscillator }
+  - { zh: 更新方程, en: renewal equation }
+  - { zh: Euler–Lotka 方程, en: Euler–Lotka equation }
+  - { zh: 器官大小控制, en: organ size control }
