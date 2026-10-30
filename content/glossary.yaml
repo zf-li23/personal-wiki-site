@@ -8126,7 +8126,7 @@ terms:
   - { zh: von Baer 定律, en: "von Baer's laws" }
   - { zh: 系统发育型阶段, en: phylotypic stage }
   - { zh: 模块性, en: modularity, scope: ["7"] }
-  - { zh: 共选择, en: co-option, aliases: [recruitment], scope: ["7"] }
+  - { zh: 共选择, en: co-option, scope: ["7"] }
   - { zh: 异位性, en: heterotopy }
   - { zh: 异量性, en: heterometry }
   - { zh: 异型性, en: heterotypy }
