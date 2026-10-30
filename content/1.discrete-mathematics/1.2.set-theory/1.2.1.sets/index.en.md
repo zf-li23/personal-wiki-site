@@ -1,6 +1,6 @@
 ---
 title: Sets
-source_hash: 3720c3a32814
+source_hash: 5b8bdf4789f8
 ---
 
 This chapter introduces the basic language of set theory: how sets are described, the relations between sets, the operations on sets and the laws they obey, and the cardinality of finite sets; it closes with a brief introduction to the ZF axioms of set theory. The relations, functions and cardinal numbers of the later chapters are all built on these notions: ordered pairs and Cartesian products give the definition of a relation, and the cardinality of finite sets is extended to arbitrary sets in Chapter 4.
@@ -439,6 +439,8 @@ m < n &\Leftrightarrow m \in n \Leftrightarrow n > m, \\
 m \leq n &\Leftrightarrow m \subseteq n \Leftrightarrow n \geq m.
 \end{aligned}
 $$
+
+![The natural numbers built from successors: each natural number is the set of all smaller ones, $n + 1 = n \cup \{n\}$, so the box for $n$ contains exactly one box for each of $0, \dots, n - 1$](./plots/von-neumann.py)
 
 Since $n = \{0, 1, \cdots, n - 1\}$, for natural numbers we have $m \subseteq n \Leftrightarrow (m \in n \lor m = n)$, so the two definitions are consistent.
 

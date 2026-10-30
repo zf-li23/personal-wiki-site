@@ -1,6 +1,6 @@
 ---
 title: Group Theory
-source_hash: c6f2c0b49191
+source_hash: 288666e3817d
 ---
 
 A group is an algebraic system with a single binary operation that can be "undone". It is the basic language of symmetry: the symmetries of an object (the transformations preserving its structure) always form a group under composition. The previous chapter gave the general definitions of **algebraic systems**, **identity elements**, **inverse elements** and **homomorphisms**; this chapter develops these notions concretely for the most important class of systems.
@@ -206,6 +206,8 @@ When $A$ is a finite set with $|A| = n$, a bijective transformation of $A$ is ca
 
 **Example 2.4.1** Label the vertices of an equilateral triangle $1, 2, 3$. There are $6$ rigid motions of the plane that map the triangle to itself: the three rotations through $0^\circ$, $120^\circ$ and $240^\circ$, and the three reflections in the axes of symmetry. Each motion permutes the three vertices, and every permutation in $S_3$ is realized by exactly one motion, so the symmetry group of the equilateral triangle is isomorphic to $S_3$: the rotation through $120^\circ$ corresponds to the cycle $(1\ 2\ 3)$, and the reflection in the axis through vertex $1$ corresponds to $(2\ 3)$. This group is not commutative: performing $(2\ 3)$ first and then $(1\ 2\ 3)$ gives $(1\ 2\ 3)(2\ 3) = (1\ 2)$, whereas $(2\ 3)(1\ 2\ 3) = (1\ 3)$.
 
+![The six symmetries of an equilateral triangle and the Cayley table of $S_3$. Top: where the numbered vertices go under each symmetry; $r$ is the rotation by $120^\circ$ (the cycle $(1\ 2\ 3)$) and $s_i$ the reflection in the axis through vertex $i$ (dashed). Bottom: row $x$, column $y$ holds $xy$ (first $y$, then $x$); every element occurs once in each row and column, and the table is not symmetric about its diagonal because the group is not commutative](./plots/triangle-s3.py)
+
 This is exactly how chemistry describes the symmetry of molecules: the ammonia molecule $\ce{NH3}$ is a trigonal pyramid, and its symmetry operations (rotations about the central axis and reflections in three mirror planes) form the point group $C_{3\mathrm{v}}$, which is isomorphic to the $S_3$ above.
 
 ### 2.4.4. Cycles and Transpositions
@@ -272,6 +274,8 @@ $$
 where the cosets are pairwise disjoint.
 
 **Definition 2.5.2** The number of left cosets of a subgroup $H$ in a group $G$ is called the **index** of $H$ in $G$, written $[G:H]$. (The map $aH \mapsto Ha^{-1}$ is a bijection between left and right cosets, so counting right cosets gives the same number.)
+
+![Cosets and the quotient group. A: the subgroup $H = \{0, 3\}$ splits $\mathbb{Z}_6$ into three cosets of equal size, $H$, $1 + H$ and $2 + H$ (one colour each), and $6 = 3 \times 2$ as Lagrange's theorem requires. B: the cosets, added as sets, form the quotient group $\mathbb{Z}_6/H$, whose table is that of $\mathbb{Z}_3$](./plots/z6-cosets.py)
 
 ### 2.5.4. Lagrange's Theorem
 
@@ -438,6 +442,10 @@ For instance, in the examples above, $\ker \operatorname{sgn} = A_n$, so $S_n / 
 **Definition 2.8.1 (Direct Product)** Let $G_1, G_2$ be groups. On the **Cartesian product** $G_1 \times G_2 = \{(g_1, g_2) \mid g_1 \in G_1, g_2 \in G_2\}$ define the operation $(g_1, g_2)(h_1, h_2) = (g_1 h_1, g_2 h_2)$. Then $G_1 \times G_2$ is a group under this operation, called the **direct product** of $G_1$ and $G_2$. Its identity is $(e_1, e_2)$, and the inverse of $(g_1, g_2)$ is $(g_1^{-1}, g_2^{-1})$.
 
 For example, $\mathbb{Z}_2 \times \mathbb{Z}_3 \cong \mathbb{Z}_6$ (the element $(\bar{1}, \bar{1})$ has order $6$ and is a generator), whereas $\mathbb{Z}_2 \times \mathbb{Z}_2$ is not cyclic (every non-identity element has order $2$).
+
+![The two groups of order 4. Left: the cyclic group $\mathbb{Z}_4$, whose elements have orders $1, 4, 2, 4$. Right: the Klein four-group $V = \mathbb{Z}_2 \times \mathbb{Z}_2$, in which every element is its own inverse (the diagonal is all $e$) and the product of any two non-identity elements is the third. $\mathbb{Z}_4$ has an element of order 4 and $V$ does not, so they are not isomorphic](./plots/z4-klein.py)
+
+![The groups of order at most 8 up to isomorphism, 14 in all: a prime order admits only the cyclic group (Lagrange's theorem); order 4 gives $\mathbb{Z}_4$ or the Klein four-group according to whether an element of order 4 exists; order 6 gives $\mathbb{Z}_6$ and the non-abelian $S_3$; order 8 gives three abelian groups (by the structure theorem for finite abelian groups) and two non-abelian ones, the dihedral group $D_4$ and the quaternion group $Q_8$](./plots/groups-up-to-8.py)
 
 ## Summary
 

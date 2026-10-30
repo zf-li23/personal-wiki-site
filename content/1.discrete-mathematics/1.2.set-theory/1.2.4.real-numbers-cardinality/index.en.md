@@ -1,6 +1,6 @@
 ---
 title: The Real Numbers and Cardinality
-source_hash: 7b4f50d471f2
+source_hash: 77ebdf4b54ac
 ---
 
 This chapter first constructs the integers, the rational numbers and the real numbers in turn within set theory, and then uses **bijections** to compare the sizes of arbitrary sets: it introduces equinumerosity, finite and infinite sets, cardinal numbers with their arithmetic and comparison, and finally discusses countable sets and the continuum hypothesis. The cardinality of finite sets from Chapter 1 (Definition 1.6.1) is extended here to arbitrary sets.
@@ -154,6 +154,8 @@ If there were an $a \in A$ with $f(a) = D$, then $a \in D \Leftrightarrow a \not
 
 (1) We use the diagonal argument. Let $f\colon \mathbb{N} \to \mathbb{R}$ be any function. For each $n$, if $f(n) \in [0, 1)$, write it as a decimal $0.a_{n0}a_{n1}a_{n2}\cdots$ (not ending in an infinite string of $9$s, so that this expansion is unique); otherwise set $a_{nn} = 0$. Let $b_n = 5$ if $a_{nn} \neq 5$ and $b_n = 4$ if $a_{nn} = 5$, and put $b = 0.b_0b_1b_2\cdots \in [0, 1)$. For each $n$, if $f(n) \in [0, 1)$, then $b$ and $f(n)$ differ in the $n$th decimal digit (no digit of $b$ is $0$ or $9$, so its decimal expansion is also unique), hence $b \neq f(n)$; if $f(n) \notin [0, 1)$, then clearly $b \neq f(n)$. Therefore $b \notin \operatorname{ran}(f)$, so $f$ is not surjective, and $\mathbb{N} \not\approx \mathbb{R}$. $\square$
 
+![The diagonal argument: for any list $f(0), f(1), \dots$, change the $n$-th digit of $f(n)$ (to 4 if it is 5, otherwise to 5); the resulting $b$ differs from every $f(n)$ in its $n$-th digit and is therefore not in the list](./plots/diagonal.py)
+
 ## 4.3. Finite and Infinite Sets
 
 **Definition 4.3.1 (Finite and Infinite Sets)** A set $A$ is finite if and only if there is an $n \in \mathbb{N}$ with $n \approx A$. A set $A$ is infinite if and only if it is not finite, that is, there is no $n \in \mathbb{N}$ with $n \approx A$.
@@ -167,6 +169,8 @@ Here the **natural number** $n$ is, by Definition 1.7.4, the set $\{0, 1, \cdots
 **Corollary 4.3.2** Every set that is equinumerous to a proper subset of itself is infinite. Both $\mathbb{N}$ and $\mathbb{R}$ are infinite sets.
 
 For example, $f(n) = n + 1$ is a bijection from $\mathbb{N}$ to its **proper subset** $\mathbb{N} - \{0\}$.
+
+![An infinite set is equinumerous with a proper subset. A: $n \mapsto n + 1$ is a bijection from $\mathbb{N}$ onto $\mathbb{N} \setminus \{0\}$; B: $n \mapsto 2n$ is a bijection from $\mathbb{N}$ onto the even numbers. Each element of the lower row is hit exactly once and neither row runs out](./plots/shift-bijection.py)
 
 **Corollary 4.3.3** Every finite set is equinumerous to exactly one natural number.
 
@@ -271,11 +275,15 @@ The countable sets comprise the finite sets and the sets of cardinality $\aleph_
 
 The proof of item 4 requires fixing an enumeration of each member set, which uses the **axiom of choice**.
 
+![$\mathbb{N} \times \mathbb{N}$ is countable: number the pairs along the diagonals $m + n = d$; the $d$-th diagonal is preceded by $d(d+1)/2$ points, so $\langle m, n\rangle$ receives $\pi(m, n) = (m+n)(m+n+1)/2 + n$; dashed arrows jump to the next diagonal](./plots/cantor-pairing.py)
+
 The familiar cardinals, in increasing order, are
 
 $$
 0 < 1 < \cdots < n < \cdots < \aleph_0 < \aleph < 2^{\aleph} < \cdots.
 $$
+
+![The ladder of cardinals: after the finite cardinals come $\aleph_0$, $2^{\aleph_0}$, $2^{2^{\aleph_0}}$, …, each step up guaranteed by Cantor's theorem $k < 2^k$; the continuum hypothesis asserts that no cardinal lies strictly between $\aleph_0$ and $2^{\aleph_0}$, and it can be neither proved nor refuted in ZFC](./plots/cardinal-ladder.py)
 
 The *continuum hypothesis*: there is no cardinal $k$ such that
 

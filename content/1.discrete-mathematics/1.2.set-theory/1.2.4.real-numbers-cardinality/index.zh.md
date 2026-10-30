@@ -153,6 +153,8 @@ $$
 
 (1) 用对角线法：设 $f\colon \mathbb{N} \to \mathbb{R}$ 是任一函数。对每个 $n$，若 $f(n) \in [0, 1)$，把它写成十进制小数 $0.a_{n0}a_{n1}a_{n2}\cdots$（不以 $9$ 无限循环结尾，这样的写法唯一），否则令 $a_{nn} = 0$。令 $b_n = 5$（若 $a_{nn} \neq 5$），$b_n = 4$（若 $a_{nn} = 5$），则 $b = 0.b_0b_1b_2\cdots \in [0, 1)$。对每个 $n$，若 $f(n) \in [0, 1)$，则 $b$ 与 $f(n)$ 的第 $n$ 位小数不同（$b$ 的各位都不是 $0$ 或 $9$，其十进制写法也唯一），故 $b \neq f(n)$；若 $f(n) \notin [0, 1)$，显然 $b \neq f(n)$。所以 $b \notin \operatorname{ran}(f)$，$f$ 不是满射，从而 $\mathbb{N} \not\approx \mathbb{R}$。$\square$
 
+![对角线论证：对任意一列 $f(0), f(1), \dots$，把 $f(n)$ 的第 $n$ 位改掉（是 5 改成 4，否则改成 5），得到的 $b$ 与每个 $f(n)$ 都在第 $n$ 位不同，所以不在这一列中](./plots/diagonal.py)
+
 ## 4.3. 有限集合与无限集合
 
 **定义 4.3.1（有限集合与无限集合）** 集合 $A$ 是有限集合，当且仅当存在 $n \in \mathbb{N}$，使 $n \approx A$。集合 $A$ 是无限集合，当且仅当 $A$ 不是有限集合，即不存在 $n \in \mathbb{N}$ 使 $n \approx A$。
@@ -166,6 +168,8 @@ $$
 **推论 4.3.2** 任何与自己的真子集等势的集合是无限集合。$\mathbb{N}$ 和 $\mathbb{R}$ 都是无限集合。
 
 例如 $f(n) = n + 1$ 是 $\mathbb{N}$ 到其**真子集** $\mathbb{N} - \{0\}$ 的双射。
+
+![无限集合与它的真子集等势。A：$n \mapsto n + 1$ 是 $\mathbb{N}$ 到 $\mathbb{N} \setminus \{0\}$ 的双射；B：$n \mapsto 2n$ 是 $\mathbb{N}$ 到偶数集的双射。下一行的每个元素恰好被对应一次，两行都不会先用完](./plots/shift-bijection.py)
 
 **推论 4.3.3** 任何有限集合只与唯一的自然数等势。
 
@@ -270,11 +274,15 @@ $$
 
 第 4 条的证明需要为每个元素集合选定一个枚举，要用到**选择公理**。
 
+![$\mathbb{N} \times \mathbb{N}$ 是可数的：沿对角线 $m + n = d$ 依次编号，第 $d$ 条对角线前面共有 $d(d+1)/2$ 个点，于是 $\langle m, n\rangle$ 的编号为 $\pi(m, n) = (m+n)(m+n+1)/2 + n$；虚线表示跳到下一条对角线](./plots/cantor-pairing.py)
+
 常见的几个基数按从小到大的次序排列为
 
 $$
 0 < 1 < \cdots < n < \cdots < \aleph_0 < \aleph < 2^{\aleph} < \cdots.
 $$
+
+![基数的阶梯：有限基数之后是 $\aleph_0$、$2^{\aleph_0}$、$2^{2^{\aleph_0}}$……，每上一级都由 Cantor 定理 $k < 2^k$ 保证；连续统假设断言 $\aleph_0$ 与 $2^{\aleph_0}$ 之间没有别的基数，它在 ZFC 中既不能证明也不能否定](./plots/cardinal-ladder.py)
 
 **连续统假设**（continuum hypothesis）：不存在基数 $k$，使
 

@@ -1,6 +1,6 @@
 ---
 title: Relations
-source_hash: dac319737807
+source_hash: 6dbc81f381c8
 ---
 
 Relations describe connections between the elements of sets. This chapter defines a relation as a set of ordered pairs (see Definition 1.3.4), introduces the representations of relations (matrices and graphs), their operations (inverse, composition, restriction and image), their basic properties (reflexivity, symmetry, antisymmetry and transitivity) and their closures, and then discusses three important kinds of relations: equivalence relations and their correspondence with partitions, compatibility relations and covers, and partial orders and partially ordered sets. The functions of the next chapter are a special kind of relation.
@@ -409,6 +409,8 @@ $$
 $$
 
 A finite poset can be represented by a *Hasse diagram* drawn from its covering relation: each element is drawn as a point, and whenever $y$ covers $x$, the point $y$ is placed above $x$ and the two are joined by a line segment.
+
+![Hasse diagram of $\mathcal{P}(\{a, b, c\})$ ordered by inclusion: $y$ is drawn above $x$ and joined to it when $y$ covers $x$ (has one more element); subsets on the same level have the same size and are pairwise incomparable](./plots/hasse-powerset.py)
 
 **Definition 2.8.5 (Least, Greatest, Minimal and Maximal Elements)** Let $(A, \leq)$ be a poset and $B \subseteq A$.
 

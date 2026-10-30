@@ -439,6 +439,8 @@ m \leq n &\Leftrightarrow m \subseteq n \Leftrightarrow n \geq m.
 \end{aligned}
 $$
 
+![用后继构造的自然数：每个自然数是所有比它小的自然数组成的集合，$n + 1 = n \cup \{n\}$，所以 $n$ 的方框里恰好有 $0, \dots, n - 1$ 各一个方框](./plots/von-neumann.py)
+
 由于 $n = \{0, 1, \cdots, n - 1\}$，对自然数有 $m \subseteq n \Leftrightarrow (m \in n \lor m = n)$，两式相容。
 
 **定义 1.7.6（集合的三歧性）** 如果对任意的 $A_1 \in A$ 和 $A_2 \in A$，下面三式中恰好有一个成立，就称集合 $A$ 有**三歧性**：
