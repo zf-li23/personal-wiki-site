@@ -8085,3 +8085,27 @@ terms:
   - { zh: 咽囊, en: pharyngeal pouch, aliases: [pharyngeal pouches] }
   - { zh: 肺芽, en: lung bud, aliases: [respiratory diverticulum] }
   - { zh: 肺表面活性物质, en: pulmonary surfactant }
+  - { zh: 代偿性再生, en: compensatory regeneration }
+  - { zh: 新生细胞, en: neoblast, aliases: [neoblasts] }
+  - { zh: 位置记忆, en: positional memory }
+  - { zh: 插入再生, en: intercalary regeneration }
+  - { zh: 极坐标模型, en: polar coordinate model }
+  - { zh: 完整圆规则, en: complete circle rule, aliases: [远端转化规则, distal transformation rule] }
+  - { zh: 原始态多能性, en: naive pluripotency }
+  - { zh: 始发态多能性, en: primed pluripotency }
+  - { zh: 生灭过程, en: birth–death process, aliases: [birth-death process] }
+  - { zh: 灭绝概率, en: extinction probability }
+  - { zh: Galton–Watson 过程, en: Galton–Watson process, aliases: [Galton-Watson process] }
+  - { zh: 分支过程, en: branching process, aliases: [branching processes] }
+  - { zh: 肿瘤干细胞, en: cancer stem cell, aliases: [cancer stem cells] }
+  - { zh: 胚胎模型, en: stem-cell-based embryo model, aliases: [类胚体, embryo model, embryo models, embryoid] }
+  - { zh: 类囊胚, en: blastoid, aliases: [blastoids] }
+  - { zh: 类原肠胚, en: gastruloid, aliases: [gastruloids] }
+  - { zh: 衰老, en: aging, aliases: [ageing], scope: ["7"] }
+  - { zh: Gompertz–Makeham 律, en: Gompertz–Makeham law, aliases: [Gompertz law, Gompertz 死亡率] }
+  - { zh: 死亡率倍增时间, en: mortality-rate doubling time }
+  - { zh: 突变积累, en: mutation accumulation }
+  - { zh: 拮抗多效, en: antagonistic pleiotropy }
+  - { zh: 一次性体细胞理论, en: disposable soma theory }
+  - { zh: 表观遗传时钟, en: epigenetic clock, aliases: [epigenetic clocks] }
+  - { zh: 早衰综合征, en: progeroid syndrome, aliases: [progeroid syndromes] }
