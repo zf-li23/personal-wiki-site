@@ -139,7 +139,7 @@ C_\infty(x)=\frac{j\lambda}{D}\,\frac{\cosh\big((L-x)/\lambda\big)}{\sinh(L/\lam
 \tag{11.4}
 $$
 
-The decay length is the geometric mean of the diffusion distance in one lifetime: a molecule lives for $1/k$ and travels $\sqrt{2D/k}$ in that time. In a syncytium the "degradation" may be binding: Bicoid entering nuclei, whose density $B$ grows at each division, is removed from the cytoplasm at rate $\gamma B$, so that $\lambda=\sqrt{D/\gamma B}$ shrinks as nuclei multiply unless the bound protein is released again. Boundaries then lie at
+The decay length is set by how far a molecule diffuses in one lifetime: it lives on average for $1/k$ and in that time spreads a root-mean-square distance $\sqrt{2D/k}$ along the axis, so $\lambda = \sqrt{D/k}$ is this distance divided by $\sqrt 2$. In a syncytium the "degradation" may be binding: Bicoid entering nuclei, whose density $B$ grows at each division, is removed from the cytoplasm at rate $\gamma B$, so that $\lambda=\sqrt{D/\gamma B}$ shrinks as nuclei multiply unless the bound protein is released again. Boundaries then lie at
 
 $$
 x_i=\lambda\ln\frac{C_\infty(0)}{T_i},
