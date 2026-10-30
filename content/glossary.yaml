@@ -25,7 +25,7 @@ terms:
   - { zh: 李代数, en: Lie algebra }
   - { zh: 表示论, en: representation theory }
   - { zh: 欧拉回路, en: Eulerian circuit }
-  - { zh: 哈密顿回路, en: Hamiltonian cycle }
+  - { zh: 哈密顿圈, en: Hamiltonian cycle, aliases: [哈密顿回路] }
   - { zh: 生成树, en: spanning tree, aliases: [支撑树] }
   - { zh: 网络流, en: network flow }
   # discrete mathematics: mathematical logic (1.1)
@@ -364,11 +364,12 @@ terms:
   # discrete mathematics: graph theory (1.4)
   - { zh: 握手定理, en: handshaking lemma }
   - { zh: 简单图, en: simple graph }
+  - { zh: 顶点, en: vertex, aliases: [结点, vertices], scope: ["1.4"] }
   - { zh: 邻接矩阵, en: adjacency matrix }
   - { zh: 关联矩阵, en: incidence matrix }
   - { zh: 连通图, en: connected graph }
-  - { zh: 欧拉道路, en: Eulerian trail }
-  - { zh: 哈密顿道路, en: Hamiltonian path }
+  - { zh: 欧拉迹, en: Eulerian trail, aliases: [欧拉道路] }
+  - { zh: 哈密顿路, en: Hamiltonian path, aliases: [哈密顿道路] }
   - { zh: 闭合图, en: Hamiltonian closure }
   - { zh: 旅行商问题, en: traveling salesman problem }
   - { zh: Dijkstra 算法, en: Dijkstra's algorithm }
@@ -393,7 +394,7 @@ terms:
   - { zh: 匹配, en: matching, scope: ["1.4"] }
   - { zh: 最大匹配, en: maximum matching }
   - { zh: 完美匹配, en: perfect matching }
-  - { zh: 可增广道路, en: augmenting path }
+  - { zh: 增广路, en: augmenting path, aliases: [可增广道路] }
   - { zh: Hall 定理, en: "Hall's theorem", aliases: ["Hall's marriage theorem"] }
   - { zh: König 定理, en: König's theorem }
   - { zh: 匈牙利算法, en: Hungarian algorithm }
@@ -422,20 +423,20 @@ terms:
   - { zh: 支撑子图, en: spanning subgraph, aliases: [生成子图] }
   - { zh: 导出子图, en: induced subgraph, aliases: [导出的子图] }
   - { zh: 补图, en: complement graph }
-  - { zh: 邻点集, en: neighborhood, scope: ["1.4"] }
+  - { zh: 邻域, en: neighborhood, aliases: [邻点集], scope: ["1.4"] }
   - { zh: 图的同构, en: graph isomorphism }
   - { zh: 哥尼斯堡七桥问题, en: Seven Bridges of Königsberg, aliases: [七桥问题] }
-  - { zh: 道路, en: walk, aliases: [链], scope: ["1.4"] }
-  - { zh: 回路, en: closed walk, scope: ["1.4"] }
-  - { zh: 简单道路, en: trail }
-  - { zh: 简单回路, en: circuit, scope: ["1.4"] }
-  - { zh: 初级道路, en: path, scope: ["1.4"] }
-  - { zh: 初级回路, en: cycle, scope: ["1.4"] }
-  - { zh: 有向道路, en: directed walk }
-  - { zh: 有向回路, en: closed directed walk }
+  - { zh: 途径, en: walk, aliases: [道路, 链, walks], scope: ["1.4"] }
+  - { zh: 闭途径, en: closed walk, scope: ["1.4"] }
+  - { zh: 迹, en: trail, aliases: [简单道路, trails], scope: ["1.4"] }
+  - { zh: 回路, en: circuit, aliases: [简单回路, 闭迹], scope: ["1.4"] }
+  - { zh: 路, en: path, aliases: [初级道路, 路径], scope: ["1.4"] }
+  - { zh: 圈, en: cycle, aliases: [初级回路], scope: ["1.4"] }
+  - { zh: 有向途径, en: directed walk, aliases: [有向道路] }
+  - { zh: 有向闭途径, en: closed directed walk, aliases: [有向回路] }
   - { zh: 非连通图, en: disconnected graph }
   - { zh: 连通支, en: connected component, aliases: [连通分支, 极大连通子图] }
-  - { zh: 道路矩阵, en: reachability matrix }
+  - { zh: 可达矩阵, en: reachability matrix, aliases: [道路矩阵] }
   - { zh: 广度优先搜索, en: breadth-first search, aliases: [广探法] }
   - { zh: 深度优先搜索, en: depth-first search, aliases: [深探法] }
   - { zh: 分支与界法, en: branch and bound, aliases: [分支定界法] }
@@ -447,9 +448,9 @@ terms:
   - { zh: 树叶, en: leaf, scope: ["1.4", "4"] }
   - { zh: 余树, en: cotree }
   - { zh: 余树枝, en: chord, scope: ["1.4"] }
-  - { zh: 完全回路矩阵, en: cycle matrix, aliases: [回路矩阵] }
-  - { zh: 基本回路, en: fundamental cycle }
-  - { zh: 基本回路矩阵, en: fundamental cycle matrix }
+  - { zh: 圈矩阵, en: cycle matrix, aliases: [完全回路矩阵, 回路矩阵] }
+  - { zh: 基本圈, en: fundamental cycle, aliases: [基本回路] }
+  - { zh: 基本圈矩阵, en: fundamental cycle matrix, aliases: [基本回路矩阵] }
   - { zh: 完全割集矩阵, en: cut-set matrix, aliases: [割集矩阵] }
   - { zh: 基本割集, en: fundamental cut set }
   - { zh: 基本割集矩阵, en: fundamental cut-set matrix }
@@ -463,7 +464,7 @@ terms:
   - { zh: 非平面图, en: nonplanar graph }
   - { zh: 完全二分图, en: complete bipartite graph }
   - { zh: 边色数, en: chromatic index }
-  - { zh: 交互道路, en: alternating path }
+  - { zh: 交错路, en: alternating path, aliases: [交互道路] }
   - { zh: 完全匹配, en: complete matching }
   - { zh: Berge 定理, en: "Berge's theorem" }
   - { zh: 运输网络, en: flow network, aliases: [网络流图] }
@@ -472,7 +473,7 @@ terms:
   - { zh: 容量, en: capacity, scope: ["1.4"] }
   - { zh: 允许流, en: feasible flow }
   - { zh: 割切, en: s–t cut, scope: ["1.4"] }
-  - { zh: 增流路径, en: flow augmenting path }
+  - { zh: 增流路, en: flow augmenting path, aliases: [增流路径] }
   - { zh: 最小费用流, en: minimum-cost flow }
   - { zh: 最小费用最大流, en: minimum-cost maximum flow }
   - { zh: 不可分图, en: nonseparable graph, aliases: [双连通图, biconnected graph] }

@@ -21,6 +21,7 @@ export const PLOT_REQUIREMENTS = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot',
 /** Helper modules plot scripts may import (on the renderer's path); part of the cache key of scripts that use them. */
 export const PLOT_HELPERS = [
   path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikichem.py'),
+  path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikigraph.py'),
   path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikibio'), // a package: every .py file inside counts
 ];
 /** Vector icons for biology figures (`wikibio.icon("<id>")`), converted from open SVG libraries; see BIO_FIGURES.md. */
