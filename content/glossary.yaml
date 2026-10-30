@@ -378,7 +378,7 @@ terms:
   - { zh: 基本关联矩阵, en: reduced incidence matrix }
   - { zh: 割集, en: cut set, aliases: [边割集], scope: ["1.4"] }
   - { zh: 外向树, en: arborescence, aliases: [根树, 有根树, rooted tree] }
-  - { zh: 最优二叉树, en: Huffman tree, aliases: [Huffman 树] }
+  - { zh: 最优二叉树, en: Huffman tree, aliases: [Huffman 树, optimal binary tree] }
   - { zh: 最小生成树, en: minimum spanning tree, aliases: [最短树] }
   - { zh: Kruskal 算法, en: Kruskal's algorithm }
   - { zh: Prim 算法, en: Prim's algorithm }
@@ -433,7 +433,7 @@ terms:
   - { zh: 路, en: path, aliases: [初级道路, 路径], scope: ["1.4"] }
   - { zh: 圈, en: cycle, aliases: [初级回路], scope: ["1.4"] }
   - { zh: 有向途径, en: directed walk, aliases: [有向道路] }
-  - { zh: 有向闭途径, en: closed directed walk, aliases: [有向回路] }
+  - { zh: 有向闭途径, en: closed directed walk }
   - { zh: 非连通图, en: disconnected graph }
   - { zh: 连通支, en: connected component, aliases: [连通分支, 极大连通子图] }
   - { zh: 可达矩阵, en: reachability matrix, aliases: [道路矩阵] }
@@ -488,6 +488,19 @@ terms:
   - { zh: 最佳匹配, en: optimal matching, scope: ["1.4"] }
   - { zh: 饱和点, en: saturated vertex, scope: ["1.4"] }
   - { zh: 树枝, en: branch, scope: ["1.4.3"] }
+  - { zh: Prüfer 序列, en: Prüfer sequence, aliases: [Prüfer 编码, Prüfer code], scope: ["1.4"] }
+  - { zh: Cayley 公式, en: "Cayley's formula" }
+  - { zh: 标号树, en: labeled tree }
+  - { zh: 全单模矩阵, en: totally unimodular matrix }
+  - { zh: Fiedler 向量, en: Fiedler vector }
+  - { zh: 图的二分, en: graph bisection, aliases: [图二分] }
+  - { zh: 谱二分, en: spectral bisection }
+  - { zh: 度矩阵, en: degree matrix, scope: ["1.4"] }
+  - { zh: 贪心着色, en: greedy coloring }
+  - { zh: 强连通图, en: strongly connected graph }
+  - { zh: 凝聚图, en: condensation, aliases: [condensation graph, 缩点图], scope: ["1.4", "4"] }
+  - { zh: Kahn 算法, en: "Kahn's algorithm" }
+  - { zh: Kosaraju 算法, en: "Kosaraju's algorithm" }
   # linear algebra and calculus
   - { zh: 特征值, en: eigenvalue, aliases: [本征值] }
   - { zh: 特征向量, en: eigenvector }
