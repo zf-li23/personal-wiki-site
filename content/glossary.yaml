@@ -8018,3 +8018,70 @@ terms:
   - { zh: 更新方程, en: renewal equation }
   - { zh: Euler–Lotka 方程, en: Euler–Lotka equation }
   - { zh: 器官大小控制, en: organ size control }
+  - { zh: 轴旁中胚层, en: paraxial mesoderm, aliases: [somitic mesoderm] }
+  - { zh: 生骨节, en: sclerotome, aliases: [生骨区] }
+  - { zh: 生皮肌节, en: dermomyotome, aliases: [生肌生皮区] }
+  - { zh: 生肌节, en: myotome, aliases: [生肌区] }
+  - { zh: 生腱节, en: syndetome, aliases: [生腱区] }
+  - { zh: Lotka–Volterra 模型, en: Lotka–Volterra model, aliases: [捕食者–猎物模型, predator–prey model] }
+  - { zh: van der Pol 振子, en: van der Pol oscillator, aliases: [van der Pol equation, van der Pol 方程] }
+  - { zh: 平均法, en: method of averaging, aliases: [Krylov–Bogoliubov 平均法, Krylov–Bogoliubov averaging] }
+  - { zh: 延迟负反馈振子, en: delayed negative feedback oscillator }
+  - { zh: 牵引, en: entrainment, aliases: [entrained], scope: ["7"] }
+  - { zh: Kuramoto 模型, en: Kuramoto model }
+  - { zh: Fisher–KPP 方程, en: Fisher–KPP equation, aliases: [Fisher 方程, "Fisher's equation", Fisher equation] }
+  - { zh: 决定前沿, en: determination front, scope: ["7.5"] }
+  - { zh: 脊椎肋骨发育不全, en: spondylocostal dysostosis, aliases: [SCD] }
+  - { zh: 生肌调节因子, en: myogenic regulatory factor, aliases: [myogenic regulatory factors, MRF, MRFs] }
+  - { zh: 成肌细胞, en: myoblast, aliases: [myoblasts] }
+  - { zh: 卫星细胞, en: satellite cell, aliases: [satellite cells, 肌卫星细胞], scope: ["7"] }
+  - { zh: 先天性肌营养不良, en: congenital muscular dystrophy, aliases: [CMD] }
+  - { zh: 膜内成骨, en: intramembranous ossification }
+  - { zh: 成骨细胞, en: osteoblast, aliases: [osteoblasts] }
+  - { zh: 软骨细胞, en: chondrocyte, aliases: [chondrocytes] }
+  - { zh: 再分节, en: resegmentation }
+  - { zh: 生长板, en: growth plate, aliases: [骺板, epiphyseal plate] }
+  - { zh: 破骨细胞, en: osteoclast, aliases: [osteoclasts] }
+  - { zh: 锁骨颅骨发育不全, en: cleidocranial dysplasia }
+  - { zh: 软骨发育不全, en: achondroplasia }
+  - { zh: 肾管, en: nephric duct, aliases: [原肾管, pronephric duct] }
+  - { zh: Wolff 管, en: Wolffian duct, aliases: [中肾管, mesonephric duct] }
+  - { zh: 前肾, en: pronephros }
+  - { zh: 中肾, en: mesonephros }
+  - { zh: 后肾, en: metanephros }
+  - { zh: 输尿管芽, en: ureteric bud }
+  - { zh: 后肾间充质, en: metanephric mesenchyme, aliases: [后肾间质] }
+  - { zh: 帽状间充质, en: cap mesenchyme, aliases: [nephron progenitor, 肾单位祖细胞] }
+  - { zh: 先天性肾脏和尿路畸形, en: congenital anomalies of the kidney and urinary tract, aliases: [CAKUT] }
+  - { zh: 生殖嵴, en: genital ridge }
+  - { zh: 双潜能性腺, en: bipotential gonad, aliases: [未分化性腺, indifferent gonad] }
+  - { zh: 主要性别决定, en: primary sex determination, aliases: [初级性别决定] }
+  - { zh: 次级性别决定, en: secondary sex determination }
+  - { zh: Müller 管, en: Müllerian duct, aliases: [中肾旁管, paramesonephric duct, Mullerian duct] }
+  - { zh: 抗 Müller 管激素, en: anti-Müllerian hormone, aliases: [AMH, Müllerian-inhibiting substance, 抗中肾旁管激素] }
+  - { zh: 性发育异常, en: differences of sex development, aliases: [disorders of sex development, DSD] }
+  - { zh: 环境性别决定, en: environmental sex determination }
+  - { zh: 生殖细胞, en: germ cell, aliases: [germ cells], scope: ["7"] }
+  - { zh: 卵泡, en: ovarian follicle, aliases: [ovarian follicles] }
+  - { zh: 卵巢储备, en: ovarian reserve }
+  - { zh: 生心中胚层, en: cardiogenic mesoderm, aliases: [heart field] }
+  - { zh: 第一心区, en: first heart field }
+  - { zh: 第二心区, en: second heart field }
+  - { zh: 心管弯旋, en: cardiac looping, aliases: [heart looping] }
+  - { zh: 胎儿循环, en: fetal circulation }
+  - { zh: 血岛, en: blood island, aliases: [blood islands] }
+  - { zh: 成血血管细胞, en: hemangioblast, aliases: [hemangioblasts, 血祖细胞] }
+  - { zh: 尖端细胞, en: tip cell, aliases: [tip cells], scope: ["7"] }
+  - { zh: 柄细胞, en: stalk cell, aliases: [stalk cells], scope: ["7"] }
+  - { zh: 原始造血, en: primitive hematopoiesis }
+  - { zh: 永久造血, en: definitive hematopoiesis }
+  - { zh: AGM 区, en: AGM region, aliases: [aorta–gonad–mesonephros region] }
+  - { zh: 生血内皮, en: hemogenic endothelium }
+  - { zh: 内皮–造血转化, en: endothelial-to-hematopoietic transition, aliases: [EHT] }
+  - { zh: Murray 定律, en: "Murray's law" }
+  - { zh: 珠蛋白转换, en: globin switching, aliases: [hemoglobin switching] }
+  - { zh: 原肠管, en: primitive gut tube, aliases: [gut tube] }
+  - { zh: 咽弓, en: pharyngeal arch, aliases: [pharyngeal arches, branchial arch] }
+  - { zh: 咽囊, en: pharyngeal pouch, aliases: [pharyngeal pouches] }
+  - { zh: 肺芽, en: lung bud, aliases: [respiratory diverticulum] }
+  - { zh: 肺表面活性物质, en: pulmonary surfactant }
