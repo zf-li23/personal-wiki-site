@@ -6120,7 +6120,7 @@ terms:
   - { zh: 变性, en: denaturation, scope: ["7"] }
   - { zh: 复性, en: renaturation, scope: ["7"] }
   - { zh: 热力学假说, en: thermodynamic hypothesis, aliases: [Anfinsen 法则, "Anfinsen's dogma"] }
-  - { zh: 两态模型, en: two-state model, scope: ["7.1"] }
+  - { zh: 两态模型, en: two-state model, scope: ["7.1", "7.6"] }
   - { zh: 蛋白质稳定性曲线, en: protein stability curve, aliases: [stability curve] }
   - { zh: Levinthal 悖论, en: "Levinthal's paradox", aliases: [莱文索尔悖论] }
   - { zh: 折叠漏斗, en: folding funnel, aliases: [energy landscape, 能量地形] }
@@ -7165,7 +7165,7 @@ terms:
   - { zh: 超敏性, en: ultrasensitivity, aliases: [ultrasensitive, 超敏] }
   - { zh: 双稳态, en: bistability, aliases: [bistable, 双稳], scope: ["7"] }
   - { zh: 滞后, en: hysteresis, aliases: [滞后效应, 迟滞], scope: ["7"] }
-  - { zh: 适应, en: adaptation, aliases: [信号适应], scope: ["7.1", "7.3", "7.9"] }
+  - { zh: 适应, en: adaptation, aliases: [信号适应], scope: ["7.1", "7.3", "7.9", "7.6"] }
   - { zh: 完全适应, en: perfect adaptation, aliases: [精确适应, exact adaptation] }
   - { zh: 钙振荡, en: calcium oscillation, aliases: [calcium oscillations, Ca2+ oscillation, Ca²⁺ 振荡] }
   - { zh: 相互作用结构域, en: interaction domain, aliases: [interaction domains, modular interaction domain] }
@@ -8150,3 +8150,5 @@ terms:
   - { zh: 幼体性成熟, en: progenesis }
   - { zh: 超形态发生, en: hypermorphosis }
   - { zh: 发育约束, en: developmental constraint, aliases: [developmental constraints] }
+
+  # biology: biophysics (7.6); homonyms of terms in other disciplines are scoped to 7
