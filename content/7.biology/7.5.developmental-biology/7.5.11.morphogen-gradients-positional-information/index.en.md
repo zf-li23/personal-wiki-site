@@ -1,6 +1,6 @@
 ---
 title: Morphogen Gradients and Positional Information
-description: How cells learn where they are. Wolpert's positional information and the French flag problem; the definition and tests of a morphogen; one-component reaction-diffusion (Fick's law, boundary conditions, a Lyapunov functional, why an isolated tissue cannot hold a pattern with one substance, the energy integral and absolute versus relative regulation, the Fick-Jacobs equation); the synthesis-diffusion-degradation model, decay length and accumulation time; the Bicoid gradient and the precision of its readout; robustness and scaling (self-enhanced degradation, expansion-repression, opposing gradients); reading a gradient (cooperativity, bistable and sequential switches, contour control); and the limits of the simple threshold picture.
+description: How cells learn where they are. Wolpert's positional information and the French flag problem; the definition and tests of a morphogen; one-component reaction-diffusion (Fick's law, boundary conditions, a Lyapunov functional, why an isolated tissue cannot hold a pattern with one substance, the energy integral and absolute versus relative regulation, the Fick-Jacobs equation); the synthesis-diffusion-degradation model, decay length and accumulation time; the Bicoid gradient and the precision of its readout; robustness and scaling (self-enhanced degradation, expansion-repression, opposing gradients); reading a gradient (**cooperativity**, bistable and sequential switches, contour control); and the limits of the simple threshold picture.
 ---
 
 The previous chapters described how cells become different by inheriting different cytoplasm and by signaling to their neighbours. This chapter asks a sharper question: how does a field of initially equivalent cells produce a pattern whose parts lie in the right places and in the right proportions? The classical answer, formulated by Lewis Wolpert in 1969, is that cells first acquire a value that records their position and then interpret it, and that the value is often provided by the local concentration of a diffusing substance, a morphogen. We develop this idea quantitatively. A single diffusing substance, made at a source and removed in the tissue, gives an exponential gradient whose length is set by diffusion and degradation; we compute how fast it forms, how much information it can carry and how its readout can be made sharp, irreversible and robust. The *Drosophila* Bicoid gradient, the first morphogen to be visualized, serves as the running example; its biology is described in [7.5.14](/7.5.14), and the genetics of the segmentation genes it controls in [7.4.20](/7.4.20). The mathematics of diffusion is that of the **heat equation** ([2.5.7](/2.5.7)); the next chapter ([7.5.12](/7.5.12)) shows how two interacting substances can create a pattern without any source at all.
@@ -23,7 +23,7 @@ Positional information is one of several ways to make a pattern, and it is worth
 
 | Mechanism | How a stripe of red cells arises | Typical example |
 |---|---|---|
-| Cytoplasmic determinants | localized in the egg and inherited by particular cells | germ plasm, *C. elegans* P granules ([7.5.6](/7.5.6)) |
+| **Cytoplasmic determinants** | localized in the egg and inherited by particular cells | germ plasm, *C. elegans* P granules ([7.5.6](/7.5.6)) |
 | Positional information | cells read the level of a graded signal | Bicoid, Dpp, Shh in the neural tube and limb |
 | Self-organization | interactions among equivalent cells create a periodic pattern | Turing patterns, **lateral inhibition** ([7.5.12](/7.5.12)) |
 | Sorting out | cells differentiate at random and then segregate by adhesion | **differential adhesion hypothesis** ([7.5.7](/7.5.7)) |
@@ -36,13 +36,13 @@ Real tissues combine them. In the fly embryo a maternal determinant (*bicoid* mR
 
 **Definition 11.2.1 (Morphogen)** A **morphogen** is a substance whose concentration specifies cell fate in a dose-dependent manner: it is produced by a localized source, forms a graded distribution in the tissue, acts directly on the cells at a distance from the source, and elicits at least two different responses at different concentrations.
 
-A morphogen is analog ("more or less"), a cytoplasmic determinant digital ("present or absent"). Each part of the definition corresponds to an experiment.
+A morphogen is analog ("more or less"), a **cytoplasmic determinant** digital ("present or absent"). Each part of the definition corresponds to an experiment.
 
 1. Graded distribution: The protein is visualized (antibody staining, GFP fusions) and its profile measured.
 2. Dose dependence: Changing the amount of morphogen shifts the boundaries in the predicted direction: doubling the *bicoid* gene dose moves the anterior boundary of *hunchback* expression posteriorly; activin released from beads in *Xenopus* animal cap cells induces *goosecoid* at about 300 molecules per cell and *Xbra* at about 100.
 3. Direct action at a distance: Clones of cells unable to receive the signal (lacking a receptor or an intracellular component) are made in the responding field. If the morphogen acts directly, only the mutant cells lose their response, wherever they are; if it acts through a relay, cells farther from the source, beyond a mutant clone, also lose it. Clones lacking the Dpp receptor Thickveins in the wing disc behave in the first way, which showed that Dpp acts directly over many cell diameters.
 
-Morphogens now identified include transcription factors that diffuse in a syncytium (Bicoid, the nuclear gradient of Dorsal in the fly embryo), secreted proteins of the TGF-β family (Dpp and the BMPs, Nodal, activin), Wnt and Wingless, Hedgehog and Sonic hedgehog, FGFs, and small molecules such as retinoic acid. Secreted morphogens rarely diffuse freely: they bind heparan sulfate proteoglycans, receptors and extracellular partners, and may be carried by cytonemes ([7.5.3](/7.5.3)). The simplest description, which nevertheless explains most measured gradients, treats all of this as diffusion with an effective coefficient and an effective rate of removal.
+Morphogens now identified include transcription factors that diffuse in a syncytium (Bicoid, the nuclear gradient of Dorsal in the fly embryo), secreted proteins of the TGF-β family (Dpp and the BMPs, Nodal, activin), Wnt and Wingless, Hedgehog and Sonic hedgehog, FGFs, and small molecules such as retinoic acid. Secreted morphogens rarely diffuse freely: they bind heparan sulfate **proteoglycans**, receptors and extracellular partners, and may be carried by **cytonemes** ([7.5.3](/7.5.3)). The simplest description, which nevertheless explains most measured gradients, treats all of this as diffusion with an effective coefficient and an effective rate of removal.
 
 ## 11.3. One-Component Reaction–Diffusion
 
@@ -159,13 +159,13 @@ The gradient forms from the source outward, and cells far away must wait several
 
 ![Formation of a synthesis-diffusion-degradation gradient (units: decay length 1, lifetime 1). A: profiles after the source is switched on approach the exponential steady state, near the source first. B: the local accumulation time computed from the simulation agrees with Theorem 11.4.1](./plots/sdd-buildup.py)
 
-**Example 11.4.1** The Bicoid gradient has $\lambda\approx100\,\mathrm{\mu m}$, about 20 % of the $500\,\mathrm{\mu m}$ egg, and is read within about 2 h of fertilization. If $D$ were $0.3\,\mathrm{\mu m^2\,s^{-1}}$, the value first obtained by photobleaching, then $k=D/\lambda^2=3\times10^{-5}\,\mathrm{s^{-1}}$, a lifetime of 9 h, and by Theorem 11.4.1 the middle of the egg ($x=2.5\lambda$) would need $\tau=1.75/k\approx16\,\mathrm{h}$: the gradient could not form in time. Fluorescence correlation measurements later gave $D\approx7\,\mathrm{\mu m^2\,s^{-1}}$ for the mobile fraction, and photoconvertible tags a lifetime of the order of 30–60 min. With $D=4\,\mathrm{\mu m^2\,s^{-1}}$ and $1/k=40\,\mathrm{min}$, $\lambda=\sqrt{4\times2400}\,\mathrm{\mu m}\approx98\,\mathrm{\mu m}$ and $\tau(2.5\lambda)\approx70\,\mathrm{min}$: consistent. Simple order-of-magnitude checks of this kind resolved a long-standing paradox.
+**Example 11.4.1** The Bicoid gradient has $\lambda\approx100\,\mathrm{\mu m}$, about 20 % of the $500\,\mathrm{\mu m}$ egg, and is read within about 2 h of **fertilization**. If $D$ were $0.3\,\mathrm{\mu m^2\,s^{-1}}$, the value first obtained by photobleaching, then $k=D/\lambda^2=3\times10^{-5}\,\mathrm{s^{-1}}$, a lifetime of 9 h, and by Theorem 11.4.1 the middle of the egg ($x=2.5\lambda$) would need $\tau=1.75/k\approx16\,\mathrm{h}$: the gradient could not form in time. Fluorescence correlation measurements later gave $D\approx7\,\mathrm{\mu m^2\,s^{-1}}$ for the mobile fraction, and photoconvertible tags a lifetime of the order of 30–60 min. With $D=4\,\mathrm{\mu m^2\,s^{-1}}$ and $1/k=40\,\mathrm{min}$, $\lambda=\sqrt{4\times2400}\,\mathrm{\mu m}\approx98\,\mathrm{\mu m}$ and $\tau(2.5\lambda)\approx70\,\mathrm{min}$: consistent. Simple order-of-magnitude checks of this kind resolved a long-standing paradox.
 
 ## 11.5. The Bicoid Gradient
 
-*bicoid* mRNA is localized at the anterior pole during oogenesis and translated after egg activation; the protein moves through the syncytial embryo and enters the nuclei, where it acts as a transcription factor ([7.5.14](/7.5.14)). Three quantitative facts make it the reference morphogen.
+*bicoid* mRNA is localized at the anterior pole during **oogenesis** and translated after **egg activation**; the protein moves through the syncytial embryo and enters the nuclei, where it acts as a transcription factor ([7.5.14](/7.5.14)). Three quantitative facts make it the reference morphogen.
 
-1. The profile is exponential and the readout is threshold-like. Driever and Nüsslein-Volhard (1988) showed that the protein forms an exponential gradient and that increasing the maternal dose shifts the *hunchback* boundary and the cephalic furrow posteriorly. By (11.5) a doubling should move a threshold by $\lambda\ln2\approx0.14$ egg lengths; the *hunchback* boundary moves roughly this way, but later landmarks such as the cephalic furrow move less, because gap gene cross-regulation buffers the pattern ([7.5.15](/7.5.15)).
+1. The profile is exponential and the readout is threshold-like. Driever and Nüsslein-Volhard (1988) showed that the protein forms an exponential gradient and that increasing the maternal dose shifts the *hunchback* boundary and the cephalic furrow posteriorly. By (11.5) a doubling should move a threshold by $\lambda\ln2\approx0.14$ egg lengths; the *hunchback* boundary moves roughly this way, but later landmarks such as the cephalic furrow move less, because **gap gene** cross-regulation buffers the pattern ([7.5.15](/7.5.15)).
 2. The readout is precise. Gregor, Tank, Wieschaus and Bialek (2007) measured Bicoid–GFP in living embryos: neighbouring nuclei at the *hunchback* boundary differ in Bicoid by only about 10 %, yet the boundary is placed with an error of about 1 % of egg length, one nuclear spacing.
 3. The gradient scales between species. In flies with eggs of different length (*Lucilia*, *Calliphora*), $\lambda$ is roughly proportional to egg length, while Bicoid proteins from these species expressed in *D. melanogaster* form a *D. melanogaster*-sized gradient: scaling is a property of the egg, not of the protein.
 
@@ -175,7 +175,7 @@ $$
 \sigma_x=\frac{\sigma_C}{\lvert C'(x)\rvert}=\lambda\,\frac{\sigma_C}{C}\quad\text{(exponential gradient)} .
 $$
 
-A relative error of 10 % thus corresponds to $0.1\lambda\approx10\,\mathrm{\mu m}$, about one nucleus; a steeper gradient (smaller $\lambda$) or a less noisy readout is more precise. How small can $\sigma_C/C$ be? A receptor (here a binding site of size $a$) that counts molecules diffusing with coefficient $D$ at concentration $c$ for a time $\tau$ cannot do better than the Berg–Purcell limit $\sigma_C/C\gtrsim(Dac\tau)^{-1/2}$. With $D=1\,\mathrm{\mu m^2\,s^{-1}}$, $a=3\,\mathrm{nm}$ and $c\approx3\,\mathrm{molecules\,\mu m^{-3}}$ (about 5 nM, the Bicoid level at the boundary), reaching 10 % takes $\tau\approx100/(1\times0.003\times3)\,\mathrm{s}\approx3\,\mathrm{h}$, longer than the interphases of the syncytium. Nuclei must therefore average over many binding sites, over time across divisions, or over their neighbours (through the diffusion of Hunchback mRNA and protein), and the measured precision is close to what the physics allows.
+A relative error of 10 % thus corresponds to $0.1\lambda\approx10\,\mathrm{\mu m}$, about one nucleus; a steeper gradient (smaller $\lambda$) or a less noisy readout is more precise. How small can $\sigma_C/C$ be? A receptor (here a binding site of size $a$) that counts molecules diffusing with coefficient $D$ at concentration $c$ for a time $\tau$ cannot do better than the Berg–Purcell limit $\sigma_C/C\gtrsim(Dac\tau)^{-1/2}$. With $D=1\,\mathrm{\mu m^2\,s^{-1}}$, $a=3\,\mathrm{nm}$ and $c\approx3\,\mathrm{molecules\,\mu m^{-3}}$ (about 5 nM, the Bicoid level at the boundary), reaching 10 % takes $\tau\approx100/(1\times0.003\times3)\,\mathrm{s}\approx3\,\mathrm{h}$, longer than the **interphases** of the syncytium. Nuclei must therefore average over many binding sites, over time across divisions, or over their neighbours (through the diffusion of Hunchback mRNA and protein), and the measured precision is close to what the physics allows.
 
 ## 11.6. Robustness and Scaling
 
@@ -213,12 +213,12 @@ A third design uses two gradients from opposite ends, $C_1=\mathrm{e}^{-x/\lambd
 
 ### 11.7.1. Cooperativity and Sharp Boundaries
 
-A target gene whose enhancer binds $n$ morphogen molecules cooperatively responds as a **Hill equation** $C^n/(C^n+K^n)$ ([7.1.7](/7.1.7)). Along an exponential gradient, with $x_T=\lambda\ln(C_0/K)$, this becomes
+A target gene whose **enhancer** binds $n$ morphogen molecules cooperatively responds as a **Hill equation** $C^n/(C^n+K^n)$ ([7.1.7](/7.1.7)). Along an exponential gradient, with $x_T=\lambda\ln(C_0/K)$, this becomes
 
 $$
 \frac{C^n}{C^n+K^n}=\frac1{1+\mathrm{e}^{n(x-x_T)/\lambda}},
 $$
-a logistic function of position whose width (from 90 % to 10 %) is $4.4\,\lambda/n$: **cooperativity** compresses the boundary by the factor $n$. The proximal *hunchback* enhancer has six or seven Bicoid binding sites, and the measured input–output relation corresponds to $n\approx5$, so a boundary of a few nuclei arises from a gradient that decays over a fifth of the egg. Such **ultrasensitivity** ([7.3.18](/7.3.18)) sharpens a boundary but does not make it irreversible: when the morphogen falls, the target turns off.
+a logistic function of position whose width (from 90 % to 10 %) is $4.4\,\lambda/n$: **cooperativity** compresses the boundary by the factor $n$. The proximal *hunchback* enhancer has six or seven Bicoid **binding sites**, and the measured input–output relation corresponds to $n\approx5$, so a boundary of a few nuclei arises from a gradient that decays over a fifth of the egg. Such **ultrasensitivity** ([7.3.18](/7.3.18)) sharpens a boundary but does not make it irreversible: when the morphogen falls, the target turns off.
 
 ![Reading a gradient. A: target activity along an exponential gradient for Hill coefficients 1, 2 and 5. B: stepwise binding P + S to PS and PS + S to PSS with K1 = 10 and K2 = 0.1; the singly bound state peaks at S* = 1, marking an internal contour. C: boundary position as a fraction of tissue length for a single gradient and for the ratio of two opposing gradients](./plots/readout.py)
 
@@ -239,7 +239,7 @@ The switch converts a graded, transient input into an all-or-none, permanent out
 
 ### 11.7.3. Multilevel Switches
 
-How can one gradient specify several states, each with a single gene on? Suppose genes $g_i$ are autocatalytic and share a common repressor $r$ that all of them produce:
+How can one gradient specify several states, each with a single gene on? Suppose genes $g_i$ are autocatalytic and share a common **repressor** $r$ that all of them produce:
 
 $$
 \dot g_i=\frac{c_ig_i^2}{r}-\gamma g_i,\qquad \dot r=\sum_ic_ig_i^2-\beta r,\qquad \beta>\gamma .
@@ -264,7 +264,7 @@ which is maximal at $S^*=(K_1K_2)^{-1/2}$ with peak value $\sqrt{K_1/K_2}/(1+2\s
 
 ### 11.7.5. Time as Well as Concentration
 
-Cells integrate a signal over time as well as read its level. In the vertebrate neural tube, progenitors exposed to Sonic hedgehog adopt progressively more ventral identities the higher the concentration and the longer the exposure, and they adapt by upregulating Patched, so that the duration of signaling, not only its peak, encodes position ([7.5.18](/7.5.18)). Since a gradient forms from the source outward (Theorem 11.4.1), concentration and duration are correlated, and a time-integrating readout makes distant cells less sensitive to the transient.
+Cells integrate a signal over time as well as read its level. In the vertebrate **neural tube**, **progenitors** exposed to Sonic hedgehog adopt progressively more ventral identities the higher the concentration and the longer the exposure, and they adapt by upregulating Patched, so that the duration of signaling, not only its peak, encodes position ([7.5.18](/7.5.18)). Since a gradient forms from the source outward (Theorem 11.4.1), concentration and duration are correlated, and a time-integrating readout makes distant cells less sensitive to the transient.
 
 ## 11.8. Beyond the Simple Readout
 
