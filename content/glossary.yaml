@@ -8182,3 +8182,56 @@ terms:
   - { zh: 间接 Fourier 变换, en: indirect Fourier transform }
   - { zh: 从头形状重建, en: ab initio shape reconstruction, aliases: [从头建模, ab initio modeling] }
   - { zh: 模拟退火, en: simulated annealing }
+  - { zh: 靶理论, en: target theory, aliases: [打靶理论, hit theory] }
+  - { zh: 非周期晶体, en: aperiodic crystal }
+  - { zh: Fermi 估算, en: Fermi estimate, aliases: [费米估算, 量级估算, order-of-magnitude estimate, Fermi problem] }
+  - { zh: 粗粒化, en: coarse-graining, aliases: [coarse graining] }
+  - { zh: 涌现, en: emergence, aliases: [emergent behavior], scope: ["7"] }
+  - { zh: 最大熵原理, en: maximum entropy principle, aliases: [principle of maximum entropy] }
+  - { zh: 熵力, en: entropic force, aliases: [entropic forces] }
+  - { zh: Maxwell 妖, en: "Maxwell's demon", aliases: [麦克斯韦妖] }
+  - { zh: Szilard 引擎, en: Szilard engine, aliases: [西拉德引擎, Szilard 热机] }
+  - { zh: 水势, en: water potential }
+  - { zh: 两态系统, en: two-state system }
+  - { zh: 门控电荷, en: gating charge }
+  - { zh: 巨正则分布, en: grand canonical distribution, aliases: [Gibbs distribution, 吉布斯分布] }
+  - { zh: Ising 模型, en: Ising model }
+  - { zh: Adair 方程, en: Adair equation }
+  - { zh: 别构, en: allostery, aliases: [别构效应, allosteric regulation] }
+  - { zh: 随机行走, en: random walk, aliases: [随机游走] }
+  - { zh: 扩散系数, en: diffusion coefficient, aliases: [diffusion constant] }
+  - { zh: Péclet 数, en: Péclet number, aliases: [Peclet number] }
+  - { zh: 转动扩散, en: rotational diffusion }
+  - { zh: Langevin 方程, en: Langevin equation }
+  - { zh: 白噪声, en: white noise }
+  - { zh: 涨落–耗散定理, en: fluctuation–dissipation theorem, aliases: [涨落耗散定理, fluctuation-dissipation theorem] }
+  - { zh: Ornstein–Uhlenbeck 过程, en: Ornstein–Uhlenbeck process, aliases: [OU 过程] }
+  - { zh: 主方程, en: master equation }
+  - { zh: Fokker–Planck 方程, en: Fokker–Planck equation }
+  - { zh: 首达时间, en: first-passage time, aliases: [首通时间, first passage time] }
+  - { zh: Kramers 速率, en: Kramers rate, aliases: [Kramers escape rate, Kramers theory, Kramers 理论] }
+  - { zh: Bjerrum 长度, en: Bjerrum length }
+  - { zh: Lennard-Jones 势, en: Lennard-Jones potential, aliases: [LJ 势] }
+  - { zh: 反离子凝聚, en: counterion condensation, aliases: [Manning condensation] }
+  - { zh: Born 溶剂化能, en: Born solvation energy, aliases: [Born energy, Born equation] }
+  - { zh: 构象熵, en: conformational entropy }
+  - { zh: 点群, en: point group }
+  - { zh: 螺旋对称, en: helical symmetry }
+  - { zh: 准等价, en: quasi-equivalence }
+  - { zh: 三角剖分数, en: triangulation number, aliases: [T 数, T number] }
+  - { zh: 过剩热容, en: excess heat capacity }
+  - { zh: "van 't Hoff 焓", en: "van 't Hoff enthalpy" }
+  - { zh: 冷变性, en: cold denaturation }
+  - { zh: 差示扫描荧光法, en: differential scanning fluorimetry, aliases: [热漂移检测, thermal shift assay, DSF] }
+  - { zh: 等温滴定量热法, en: isothermal titration calorimetry, aliases: [ITC] }
+  - { zh: Wiseman 参数, en: Wiseman c value, scope: ["7.6"] }
+  - { zh: 焓–熵补偿, en: enthalpy–entropy compensation }
+  - { zh: 协同单元, en: cooperative unit, scope: ["7"] }
+  - { zh: 偏比容, en: partial specific volume }
+  - { zh: 摩擦系数, en: frictional coefficient, aliases: [friction coefficient], scope: ["7"] }
+  - { zh: 摩擦比, en: frictional ratio }
+  - { zh: 流体力学半径, en: hydrodynamic radius, aliases: [Stokes 半径, Stokes radius] }
+  - { zh: Perrin 因子, en: Perrin factor }
+  - { zh: Svedberg 方程, en: Svedberg equation }
+  - { zh: Lamm 方程, en: Lamm equation }
+  - { zh: 流动双折射, en: flow birefringence }

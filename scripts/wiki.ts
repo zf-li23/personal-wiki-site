@@ -30,9 +30,10 @@ import { buildContent, sourceHash, translationStatus } from './wiki/build.ts';
 import { Diagnostics } from './wiki/diagnostics.ts';
 import { fixMarkdown } from './wiki/fix.ts';
 import { serializePageFile } from './wiki/frontmatter.ts';
-import { CONTENT_DIR, REPO_ROOT, rel } from './wiki/paths.ts';
+import { CONTENT_DIR, GENERATED_PUBLIC_DIR, PUBLIC_PATHS, REPO_ROOT, rel } from './wiki/paths.ts';
 import { removeFrozen, renderPlots, writeFrozen } from './wiki/plots.ts';
 import { type PageSource, pageFileName, scanContent } from './wiki/scan.ts';
+import type { ConceptEntry } from '../src/shared/types.ts';
 
 const [command, ...args] = process.argv.slice(2);
 const flags = new Set(args.filter((a) => a.startsWith('--')));
@@ -65,7 +66,9 @@ async function build() {
 /**
  * Fast check of some pages for writers: renders and links only their courses (both languages),
  * reports the problems in the given pages, and the bold runs outside definitions that do not link.
- * Definition sites in other courses and site-wide concept checks need a full `build`.
+ * Definition sites in other courses are compared with the concept registry of the last full build
+ * (`.generated/`), so a second definition of a concept defined in another course is reported here;
+ * the authoritative site-wide checks still come from a full `build`.
  */
 async function lint() {
   if (!positional.length) fail('usage: pnpm wiki lint <id>...  (a chapter, a course, or a discipline)');
@@ -75,7 +78,7 @@ async function lint() {
   for (const p of positional) if (!tree.pages.has(p)) fail(`unknown page id "${p}"`);
   const courses = positional.map((p) => courseOf(p));
   const only = new Set([...tree.pages.keys()].filter((id) => courses.some((c) => under(id, c))));
-  const { diag, plainBold } = await buildContent({ only });
+  const { diag, plainBold, concepts } = await buildContent({ only });
   const dirs = positional.map((p) => `${rel(tree.pages.get(p)!.dir)}/`);
   const report = new Diagnostics();
   report.items.push(...diag.items.filter((d) => dirs.some((dir) => d.file.startsWith(dir))));
@@ -86,10 +89,45 @@ async function lint() {
     const outside = list.filter((b) => !b.inDefinition).map((b) => `**${b.text}**`);
     if (outside.length) report.warn(page.files[key.split('/')[0] as Lang]!.path, `bold outside definitions that is not a concept name (make it a concept, rephrase, or drop the bold): ${outside.join('  ')}`);
   }
+  for (const w of crossCourseDefinitions(tree, concepts, only, positional, under)) report.warn(w.file, w.message);
   if (report.items.length) console.log(report.format());
   const summary = `${only.size} pages rendered, ${report.errorCount} error(s), ${report.warningCount} warning(s) in ${positional.join(', ')} (${((Date.now() - started) / 1000).toFixed(1)}s)`;
   if (report.items.length) fail(`lint: ${summary}`);
   console.log(`\x1b[32mlint ok:\x1b[0m ${summary}`);
+}
+
+/**
+ * Definition marks in the linted pages for concepts that the last full build places in another
+ * course: in a full build one of the two marks is an error (an annotation or italics marks *the*
+ * definition; restating a 定义 label is allowed, so two statement sites are not reported).
+ */
+function crossCourseDefinitions(
+  tree: ReturnType<typeof scanOrFail>,
+  concepts: ConceptEntry[],
+  only: Set<string>,
+  targets: string[],
+  under: (id: string, p: string) => boolean,
+): { file: string; message: string }[] {
+  const registry = path.join(GENERATED_PUBLIC_DIR, PUBLIC_PATHS.concepts);
+  if (!fs.existsSync(registry)) return [];
+  let previous: ConceptEntry[];
+  try {
+    previous = JSON.parse(fs.readFileSync(registry, 'utf8')) as ConceptEntry[];
+  } catch {
+    return [];
+  }
+  const before = new Map(previous.map((c) => [c.id, c.site]));
+  const out: { file: string; message: string }[] = [];
+  for (const c of concepts) {
+    const here = c.site;
+    const there = before.get(c.id);
+    if (!here || !there || only.has(there.pageId) || !targets.some((t) => under(here.pageId, t))) continue;
+    if (!here.anchor.startsWith('concept-') && !there.anchor.startsWith('concept-')) continue;
+    const page = tree.pages.get(here.pageId);
+    const file = page?.files[page.sourceLang]?.path ?? here.pageId;
+    out.push({ file, message: `concept "${c.zh}（${c.en}）" is already defined on page ${there.pageId} (last full build): drop the defining mark here and bold the name to link there, or move the definition deliberately` });
+  }
+  return out;
 }
 
 function status() {
