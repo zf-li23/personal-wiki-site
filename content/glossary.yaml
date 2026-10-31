@@ -8399,3 +8399,28 @@ terms:
   - { zh: 位置权重矩阵, en: position weight matrix, aliases: [energy matrix, PWM] }
   - { zh: 静电导向, en: electrostatic steering }
   - { zh: 滑动长度, en: sliding length }
+  - { zh: Newton 流体, en: Newtonian fluid }
+  - { zh: Navier–Stokes 方程, en: Navier–Stokes equations, aliases: [Navier–Stokes equation, 纳维–斯托克斯方程] }
+  - { zh: 无滑移条件, en: no-slip condition }
+  - { zh: Hagen–Poiseuille 定律, en: Hagen–Poiseuille law, aliases: [Poiseuille 定律, "Poiseuille's law"] }
+  - { zh: Reynolds 数, en: Reynolds number, aliases: [雷诺数] }
+  - { zh: Stokes 定律, en: "Stokes' law", aliases: [Stokes 阻力, Stokes drag] }
+  - { zh: 扇贝定理, en: scallop theorem }
+  - { zh: 阻力理论, en: resistive-force theory, aliases: [resistive force theory, 阻力系数理论] }
+  - { zh: 黏弹性, en: viscoelasticity, aliases: [viscoelastic] }
+  - { zh: 排除体积, en: excluded volume }
+  - { zh: 标度粒子理论, en: scaled-particle theory }
+  - { zh: 排空力, en: depletion force, aliases: [depletion interaction, 排空相互作用, 耗竭力] }
+  - { zh: 反常扩散, en: anomalous diffusion, aliases: [subdiffusion, 亚扩散] }
+  - { zh: 主动扩散, en: active diffusion }
+  - { zh: 填充参数, en: packing parameter, aliases: [临界堆积参数, critical packing parameter] }
+  - { zh: 液态有序相, en: liquid-ordered phase, aliases: [Lo 相] }
+  - { zh: 平均曲率, en: mean curvature }
+  - { zh: Gauss 曲率, en: Gaussian curvature, aliases: [高斯曲率] }
+  - { zh: 面积伸缩模量, en: area expansion modulus, aliases: [area stretch modulus, 面积压缩模量] }
+  - { zh: Helfrich 弯曲能, en: Helfrich bending energy, aliases: [Helfrich energy, Helfrich 能] }
+  - { zh: Gauss 曲率模量, en: Gaussian curvature modulus, aliases: [saddle-splay modulus, 高斯曲率弯曲模量] }
+  - { zh: 膜张力, en: membrane tension }
+  - { zh: 膜管, en: membrane tether, aliases: [membrane tethers, 膜管拉伸] }
+  - { zh: 半融合, en: hemifusion }
+  - { zh: 面积差弹性, en: area-difference elasticity, aliases: [ADE model, 面积差弹性模型] }
