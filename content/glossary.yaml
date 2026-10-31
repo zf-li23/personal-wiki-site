@@ -8506,3 +8506,26 @@ terms:
   - { zh: Toner–Tu 理论, en: Toner–Tu theory, aliases: [Toner–Tu 方程, Toner–Tu equations] }
   - { zh: 运动诱导相分离, en: motility-induced phase separation }
   - { zh: 活性向列相, en: active nematic }
+  - { zh: 非平衡稳态, en: nonequilibrium steady state, aliases: [NESS, 非平衡定态] }
+  - { zh: Kolmogorov 判据, en: Kolmogorov criterion }
+  - { zh: 循环亲和势, en: cycle affinity }
+  - { zh: Markov 链树定理, en: Markov chain tree theorem, aliases: [King–Altman 方法, King–Altman method] }
+  - { zh: 随机热力学, en: stochastic thermodynamics }
+  - { zh: 涨落定理, en: fluctuation theorem, aliases: [detailed fluctuation theorem, 细致涨落定理] }
+  - { zh: 热力学不确定关系, en: thermodynamic uncertainty relation, aliases: [TUR] }
+  - { zh: Brown 时钟, en: Brownian clock }
+  - { zh: 磷酸化能量假说, en: phosphorylation energy hypothesis }
+  - { zh: 平衡生长, en: balanced growth }
+  - { zh: Monod 方程, en: "Monod's law", aliases: [Monod equation] }
+  - { zh: 恒化器, en: chemostat }
+  - { zh: 细菌生长定律, en: bacterial growth laws, aliases: [growth laws, 生长定律] }
+  - { zh: 蛋白质组分配, en: proteome allocation }
+  - { zh: Cooper–Helmstetter 模型, en: Cooper–Helmstetter model }
+  - { zh: 溢流代谢, en: overflow metabolism }
+  - { zh: 稳健性, en: robustness, aliases: [鲁棒性], scope: ["7"] }
+  - { zh: 对数灵敏度, en: logarithmic sensitivity }
+  - { zh: Pareto 最优, en: Pareto optimality, aliases: [Pareto 前沿, Pareto front] }
+  - { zh: 对数优势比得分, en: log-odds score }
+  - { zh: Karlin–Altschul 统计, en: Karlin–Altschul statistics }
+  - { zh: Jukes–Cantor 距离, en: Jukes–Cantor distance, aliases: [Jukes–Cantor model] }
+  - { zh: 适合度景观, en: fitness landscape, aliases: [适应度景观] }
