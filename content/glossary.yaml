@@ -8235,3 +8235,32 @@ terms:
   - { zh: Svedberg 方程, en: Svedberg equation }
   - { zh: Lamm 方程, en: Lamm equation }
   - { zh: 流动双折射, en: flow birefringence }
+  - { zh: 倒易点阵, en: reciprocal lattice, aliases: [倒易晶格] }
+  - { zh: Laue 方程, en: Laue equations, aliases: [劳厄方程, Laue condition] }
+  - { zh: Bragg 方程, en: Bragg equation, aliases: [Bragg 定律, 布拉格方程, "Bragg's law"] }
+  - { zh: Ewald 球, en: Ewald sphere, aliases: [厄瓦耳球, 反射球, Ewald construction] }
+  - { zh: 晶体学限制定理, en: crystallographic restriction theorem, aliases: [crystallographic restriction] }
+  - { zh: 空间群, en: space group, aliases: [space groups] }
+  - { zh: 不对称单位, en: asymmetric unit }
+  - { zh: Matthews 系数, en: Matthews coefficient }
+  - { zh: 原子散射因子, en: atomic scattering factor, aliases: [atomic form factor] }
+  - { zh: 结构因子, en: structure factor, aliases: [structure factors], scope: ["7"] }
+  - { zh: 温度因子, en: temperature factor, aliases: [B 因子, B-factor, B-factors, Debye–Waller 因子, Debye–Waller factor] }
+  - { zh: Friedel 定律, en: "Friedel's law", aliases: [弗里德尔定律] }
+  - { zh: Patterson 函数, en: Patterson function, aliases: [帕特森函数, Patterson map] }
+  - { zh: Sayre 方程, en: Sayre equation }
+  - { zh: 直接法, en: direct methods, scope: ["7.6"] }
+  - { zh: 纤维衍射, en: fiber diffraction, aliases: [fibre diffraction] }
+  - { zh: Cochran–Crick–Vand 理论, en: Cochran–Crick–Vand theory, aliases: [helical diffraction theory] }
+  - { zh: 经典成核理论, en: classical nucleation theory }
+  - { zh: Wilson 统计, en: Wilson statistics }
+  - { zh: Wilson 图, en: Wilson plot }
+  - { zh: 同晶置换, en: isomorphous replacement, aliases: [同晶置换法, multiple isomorphous replacement, MIR, SIR] }
+  - { zh: 反常散射, en: anomalous scattering, aliases: [反常色散, anomalous dispersion, resonant scattering] }
+  - { zh: 单波长反常衍射, en: single-wavelength anomalous diffraction, aliases: [SAD, 单波长反常散射] }
+  - { zh: 多波长反常衍射, en: multiwavelength anomalous diffraction, aliases: [MAD, 多波长反常散射] }
+  - { zh: 分子置换, en: molecular replacement, aliases: [分子置换法] }
+  - { zh: 密度修正, en: density modification }
+  - { zh: 自由 R 因子, en: free R value, aliases: [R_free, Rfree, 自由 R 值] }
+  - { zh: X 射线自由电子激光, en: X-ray free-electron laser, aliases: [XFEL] }
+  - { zh: 串行飞秒晶体学, en: serial femtosecond crystallography, aliases: [SFX, 串行晶体学, serial crystallography] }

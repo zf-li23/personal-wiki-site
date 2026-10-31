@@ -172,7 +172,7 @@ In practice the light scattering detector is placed after a **size-exclusion chr
 X-rays are scattered by electrons. A free electron in the field of an unpolarized beam scatters, per unit solid angle, the intensity given by the Thomson formula,
 
 $$
-\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega} = r_{\mathrm{e}}^2\,\frac{1 + \cos^2\theta}{2}, \qquad r_{\mathrm{e}} = \frac{\mathrm{e}^2}{4\pi\varepsilon_0 m_{\mathrm{e}}c^2} = 2.818\times10^{-15}\,\mathrm{m}.
+\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega} = r_{\mathrm{e}}^2\,\frac{1 + \cos^2\theta}{2}, \qquad r_{\mathrm{e}} = \frac{{e}^2}{4\pi\varepsilon_0 m_{\mathrm{e}}c^2} = 2.818\times10^{-15}\,\mathrm{m}.
 $$
 The classical electron radius $r_{\mathrm{e}}$ is the scattering length of one electron, the amplitude of its scattered wave at unit distance. At small angles the polarization factor is $1$, and every electron, wherever it is, scatters with the same amplitude; the only difference between the waves from different electrons is their phase $\boldsymbol{q}\cdot\boldsymbol{r}_j$ (9.1.3).
 
