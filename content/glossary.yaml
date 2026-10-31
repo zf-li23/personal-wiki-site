@@ -8303,3 +8303,50 @@ terms:
   - { zh: 单分子 FRET, en: single-molecule FRET, aliases: [smFRET] }
   - { zh: 荧光相关光谱, en: fluorescence correlation spectroscopy, aliases: [FCS] }
   - { zh: 纳米孔, en: nanopore }
+  - { zh: 衬度传递函数, en: contrast transfer function, aliases: [CTF] }
+  - { zh: 弱相位体近似, en: weak-phase-object approximation, aliases: [weak phase object approximation] }
+  - { zh: Thon 环, en: Thon rings, aliases: [Thon ring] }
+  - { zh: 离焦, en: defocus, scope: ["7"] }
+  - { zh: 球差, en: spherical aberration }
+  - { zh: 直接电子探测器, en: direct electron detector }
+  - { zh: 探测量子效率, en: detective quantum efficiency, aliases: [DQE] }
+  - { zh: 临界曝光量, en: critical exposure }
+  - { zh: Wiener 滤波, en: Wiener filter, aliases: [维纳滤波, Wiener filtering] }
+  - { zh: Radon 变换, en: Radon transform, aliases: [拉东变换] }
+  - { zh: 中心截面定理, en: projection–slice theorem, aliases: [central section theorem, Fourier slice theorem, projection-slice theorem] }
+  - { zh: Crowther 判据, en: Crowther criterion }
+  - { zh: 单颗粒分析, en: single-particle analysis, aliases: [单颗粒冷冻电镜] }
+  - { zh: Fourier 壳层相关, en: Fourier shell correlation, aliases: [FSC, 傅里叶壳层相关] }
+  - { zh: 螺旋重构, en: helical reconstruction }
+  - { zh: 缺失楔, en: missing wedge, aliases: [缺失锥, missing cone] }
+  - { zh: 子断层平均, en: subtomogram averaging, aliases: [子断层重构平均] }
+  - { zh: 微晶电子衍射, en: microcrystal electron diffraction, aliases: [MicroED] }
+  - { zh: Abbe 成像原理, en: "Abbe's theory of image formation", aliases: [阿贝成像原理] }
+  - { zh: 力场, en: force field, scope: ["6", "7"] }
+  - { zh: 分子力学, en: molecular mechanics }
+  - { zh: 周期性边界条件, en: periodic boundary conditions }
+  - { zh: 分子动力学, en: molecular dynamics, aliases: [分子动力学模拟, molecular dynamics simulation] }
+  - { zh: 速度 Verlet 算法, en: velocity Verlet algorithm, aliases: [Verlet 算法, Verlet integration] }
+  - { zh: 恒温器, en: thermostat, scope: ["7"] }
+  - { zh: 复制交换, en: replica exchange, aliases: [parallel tempering, 并行回火] }
+  - { zh: 伞形采样, en: umbrella sampling }
+  - { zh: 元动力学, en: metadynamics }
+  - { zh: 自由能微扰, en: free-energy perturbation, aliases: [FEP] }
+  - { zh: 平均力势, en: potential of mean force }
+  - { zh: Markov 态模型, en: Markov state model, aliases: [马尔可夫态模型] }
+  - { zh: 隐含时间尺度, en: implied time scale, aliases: [implied timescale] }
+  - { zh: 统计势, en: statistical potential, aliases: [knowledge-based potential, 统计力场] }
+  - { zh: 同源建模, en: homology modeling, aliases: [comparative modeling, 比较建模] }
+  - { zh: 穿线法, en: threading, aliases: [fold recognition], scope: ["7"] }
+  - { zh: 片段组装, en: fragment assembly }
+  - { zh: 共进化, en: coevolution, aliases: [共进化信息], scope: ["7"] }
+  - { zh: Potts 模型, en: Potts model }
+  - { zh: 直接耦合分析, en: direct coupling analysis, aliases: [直接关联分析] }
+  - { zh: AlphaFold, en: AlphaFold, aliases: [AlphaFold2, AlphaFold 3] }
+  - { zh: Nussinov 算法, en: Nussinov algorithm }
+  - { zh: 分子对接, en: molecular docking }
+  - { zh: 蛋白质设计, en: protein design, aliases: [de novo protein design] }
+  - { zh: 定向进化, en: directed evolution }
+  - { zh: 整合结构生物学, en: integrative structural biology, aliases: [integrative modeling, hybrid modeling, 整合建模] }
+  - { zh: 化学交联质谱, en: crosslinking mass spectrometry, aliases: [XL-MS, CXMS, cross-linking mass spectrometry] }
+  - { zh: 氢氘交换质谱, en: hydrogen–deuterium exchange mass spectrometry, aliases: [HDX-MS] }
