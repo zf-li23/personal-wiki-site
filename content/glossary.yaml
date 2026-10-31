@@ -5084,7 +5084,7 @@ terms:
   - { zh: Sackur–Tetrode 方程, en: Sackur–Tetrode equation }
   - { zh: 统计熵, en: statistical entropy, aliases: [光谱熵, spectroscopic entropy] }
   - { zh: 残余熵, en: residual entropy }
-  - { zh: 细致平衡原理, en: principle of detailed balance, scope: ["6", "7.5"] }   # 细致平衡条件 (MCMC) keeps the bare aliases
+  - { zh: 细致平衡原理, en: principle of detailed balance, scope: ["6", "7.5", "7.6"] }   # 细致平衡条件 (MCMC) keeps the bare aliases
   - { zh: 选择性, en: selectivity, aliases: [催化选择性], scope: ["6.3"] }
   - { zh: 覆盖度, en: fractional coverage, aliases: [表面覆盖度, surface coverage], scope: ["6"] }
   - { zh: 吸附滞后, en: adsorption hysteresis, aliases: [吸脱附滞后, 滞后回线] }
@@ -8289,3 +8289,17 @@ terms:
   - { zh: 定点自旋标记, en: site-directed spin labeling, aliases: [SDSL] }
   - { zh: 双电子–电子共振, en: double electron–electron resonance, aliases: [DEER, PELDOR, 脉冲电子–电子双共振] }
   - { zh: 动态核极化, en: dynamic nuclear polarization, aliases: [DNP] }
+  - { zh: 跃迁偶极矩, en: transition dipole moment, aliases: [transition dipole] }
+  - { zh: Franck–Condon 因子, en: Franck–Condon factor }
+  - { zh: 激子耦合, en: exciton coupling }
+  - { zh: 旋光色散, en: optical rotatory dispersion, aliases: [ORD] }
+  - { zh: Cotton 效应, en: Cotton effect }
+  - { zh: 酰胺 I 带, en: amide I band }
+  - { zh: 荧光各向异性, en: fluorescence anisotropy, aliases: [荧光偏振, fluorescence polarization] }
+  - { zh: Perrin 方程, en: Perrin equation }
+  - { zh: Förster 半径, en: Förster radius, aliases: [Förster distance] }
+  - { zh: 点扩散函数, en: point spread function, aliases: [PSF] }
+  - { zh: 定位精度, en: localization precision }
+  - { zh: 单分子 FRET, en: single-molecule FRET, aliases: [smFRET] }
+  - { zh: 荧光相关光谱, en: fluorescence correlation spectroscopy, aliases: [FCS] }
+  - { zh: 纳米孔, en: nanopore }

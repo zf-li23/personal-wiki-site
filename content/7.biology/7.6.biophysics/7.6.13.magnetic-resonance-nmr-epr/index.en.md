@@ -195,7 +195,7 @@ J(\omega) = \frac25\int_0^\infty C(t)\cos(\omega t)\,\mathrm{d}t , \tag{13.12}
 $$
 is the *spectral density function*: the power of the orientational fluctuations at angular frequency $\omega$ (the factor $2/5$ is a normalization of the spherical harmonics).
 
-For a rigid molecule undergoing isotropic **rotational diffusion** with coefficient $D_{\mathrm{r}}$, the $P_2$ correlation function decays as $\mathrm{e}^{-6D_{\mathrm{r}}t}$ ([7.6.5](/7.6.5#def-5.3.1)), so with the *rotational correlation time* $\tau_{\mathrm{c}} = 1/(6D_{\mathrm{r}})$,
+For a rigid molecule undergoing isotropic **rotational diffusion** with coefficient $D_{\mathrm{r}}$, the $P_2$ correlation function decays as $\mathrm{e}^{-6D_{\mathrm{r}}t}$ ([7.6.5](/7.6.5#def-5.3.1)), so with the **rotational correlation time** $\tau_{\mathrm{c}} = 1/(6D_{\mathrm{r}})$,
 
 $$
 C(t) = \mathrm{e}^{-t/\tau_{\mathrm{c}}}, \qquad J(\omega) = \frac25\,\frac{\tau_{\mathrm{c}}}{1 + \omega^2\tau_{\mathrm{c}}^2}, \qquad \tau_{\mathrm{c}} = \frac{4\pi\eta r_{\mathrm{h}}^3}{3k_{\mathrm{B}}T}, \tag{13.13}
