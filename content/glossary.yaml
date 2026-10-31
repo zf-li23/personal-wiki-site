@@ -8350,3 +8350,11 @@ terms:
   - { zh: 整合结构生物学, en: integrative structural biology, aliases: [integrative modeling, hybrid modeling, 整合建模] }
   - { zh: 化学交联质谱, en: crosslinking mass spectrometry, aliases: [XL-MS, CXMS, cross-linking mass spectrometry] }
   - { zh: 氢氘交换质谱, en: hydrogen–deuterium exchange mass spectrometry, aliases: [HDX-MS] }
+  - { zh: 自由连接链, en: freely jointed chain, aliases: [自由连接链模型, freely jointed chain model, FJC] }
+  - { zh: Kuhn 长度, en: Kuhn length, aliases: [库恩长度, Kuhn segment] }
+  - { zh: Flory 指数, en: Flory exponent, aliases: [弗洛里指数] }
+  - { zh: J 因子, en: J factor, aliases: [J-factor, 成环因子] }
+  - { zh: 接触概率, en: contact probability }
+  - { zh: 分形球, en: fractal globule, aliases: [褶皱球, crumpled globule] }
+  - { zh: 拷贝数, en: copy number, scope: ["7"] }
+  - { zh: 倍增时间, en: doubling time, aliases: [世代时间, generation time] }
