@@ -249,11 +249,29 @@ function checkCrossPageAnchors(tree: ContentTree, rendered: Map<string, RenderOu
       for (const link of out.links) {
         if (!link.anchor || !tree.pages.has(link.targetId)) continue;
         const target = rendered.get(`${lang}/${link.targetId}`);
-        if (target && !target.anchors.has(decodeURIComponent(link.anchor))) {
-          diag.error(file, `link to missing anchor "/${link.targetId}#${link.anchor}" (in the ${lang} version of ${link.targetId})`, link.line);
+        const anchor = decodeURIComponent(link.anchor);
+        const outside = !rendered.has(`${LANGUAGES[0]}/${link.targetId}`); // not rendered in this (lint) run
+        const missing = target ? !target.anchors.has(anchor) : outside && previousAnchorMissing(lang, link.targetId, anchor);
+        if (missing) {
+          diag.error(file, `link to missing anchor "/${link.targetId}#${link.anchor}" (in the ${lang} version of ${link.targetId}${target ? '' : ', as of the last full build'})`, link.line);
         }
       }
     }
+  }
+}
+
+/**
+ * For pages not rendered in this run (`pnpm wiki lint` renders one course): whether the anchor is
+ * missing from the page as written by the last full build. Unknown (no previous output) counts as present.
+ */
+function previousAnchorMissing(lang: Lang, id: string, anchor: string): boolean {
+  const file = path.join(GENERATED_PUBLIC_DIR, PUBLIC_PATHS.pages, lang, `${id}.json`);
+  if (!fs.existsSync(file)) return false;
+  try {
+    const html = (JSON.parse(fs.readFileSync(file, 'utf8')) as { html?: string }).html ?? '';
+    return !html.includes(`id="${anchor}"`);
+  } catch {
+    return false;
   }
 }
 
