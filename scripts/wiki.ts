@@ -122,10 +122,19 @@ function crossCourseDefinitions(
     const here = c.site;
     const there = before.get(c.id);
     if (!here || !there || only.has(there.pageId) || !targets.some((t) => under(here.pageId, t))) continue;
-    if (!here.anchor.startsWith('concept-') && !there.anchor.startsWith('concept-')) continue;
+    // The earlier page (reading order) keeps the site; only an annotation (or italics) on the later
+    // page is an error, since restating a definition label later is allowed.
+    const hereFirst = compareIds(here.pageId, there.pageId) < 0;
+    const later = hereFirst ? there : here;
+    if (!later.anchor.startsWith('concept-')) continue;
     const page = tree.pages.get(here.pageId);
     const file = page?.files[page.sourceLang]?.path ?? here.pageId;
-    out.push({ file, message: `concept "${c.zh}（${c.en}）" is already defined on page ${there.pageId} (last full build): drop the defining mark here and bold the name to link there, or move the definition deliberately` });
+    out.push({
+      file,
+      message: hereFirst
+        ? `concept "${c.zh}（${c.en}）" is also marked as defined on the later page ${there.pageId} (last full build): that page's annotation must then become a bold link (report it to the orchestrator)`
+        : `concept "${c.zh}（${c.en}）" is already defined on page ${there.pageId} (last full build): drop the defining mark here and bold the name to link there, or move the definition deliberately`,
+    });
   }
   return out;
 }

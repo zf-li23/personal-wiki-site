@@ -8358,3 +8358,26 @@ terms:
   - { zh: 分形球, en: fractal globule, aliases: [褶皱球, crumpled globule] }
   - { zh: 拷贝数, en: copy number, scope: ["7"] }
   - { zh: 倍增时间, en: doubling time, aliases: [世代时间, generation time] }
+  - { zh: Marcus 理论, en: Marcus theory }
+  - { zh: 重组能, en: reorganization energy }
+  - { zh: Marcus 反转区, en: Marcus inverted region, aliases: [inverted region, 反转区] }
+  - { zh: Moser–Dutton 标尺, en: Moser–Dutton ruler }
+  - { zh: 细菌视紫红质, en: bacteriorhodopsin }
+  - { zh: 盐视紫红质, en: halorhodopsin }
+  - { zh: 通道视紫红质, en: channelrhodopsin, aliases: [channelrhodopsins, 光敏感通道蛋白] }
+  - { zh: 光敏色素, en: phytochrome, aliases: [phytochromes] }
+  - { zh: 向光素, en: phototropin, aliases: [phototropins] }
+  - { zh: 看见频率曲线, en: frequency-of-seeing curve }
+  - { zh: 单变量原理, en: principle of univariance, aliases: [univariance] }
+  - { zh: 磁感受, en: magnetoreception }
+  - { zh: 磁小体, en: magnetosome, aliases: [magnetosomes] }
+  - { zh: 趋磁性, en: magnetotaxis }
+  - { zh: 超顺磁性, en: superparamagnetism }
+  - { zh: Langevin 函数, en: Langevin function }
+  - { zh: 倾角罗盘, en: inclination compass }
+  - { zh: 自由基对机制, en: radical pair mechanism }
+  - { zh: 隐花色素, en: cryptochrome, aliases: [cryptochromes] }
+  - { zh: 环境辅助量子输运, en: environment-assisted quantum transport, aliases: [ENAQT, noise-assisted transport] }
+  - { zh: 量子生物学, en: quantum biology }
+  - { zh: 退相干, en: decoherence }
+  - { zh: 脑磁图, en: magnetoencephalography, aliases: [MEG] }
