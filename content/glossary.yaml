@@ -8430,3 +8430,11 @@ terms:
   - { zh: Euler 屈曲, en: Euler buckling, aliases: [欧拉屈曲] }
   - { zh: 弹性 Brown 棘轮, en: elastic Brownian ratchet, aliases: [弹性布朗棘轮] }
   - { zh: Dogterom–Leibler 模型, en: Dogterom–Leibler model }
+  - { zh: Feynman 棘轮, en: Feynman ratchet, aliases: [费曼棘轮, Feynman–Smoluchowski ratchet] }
+  - { zh: 闪烁棘轮, en: flashing ratchet }
+  - { zh: 随机性参数, en: randomness parameter }
+  - { zh: 紧耦合, en: tight coupling, aliases: [tightly coupled], scope: ["7"] }
+  - { zh: 拔河模型, en: tug-of-war model }
+  - { zh: 横桥模型, en: cross-bridge model, aliases: [Huxley 横桥模型, Huxley cross-bridge model] }
+  - { zh: Hill 力–速度方程, en: "Hill's force–velocity relation", aliases: [Hill force-velocity relation] }
+  - { zh: 转位棘轮, en: translocation ratchet }
