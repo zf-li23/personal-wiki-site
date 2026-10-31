@@ -22,7 +22,7 @@ The second concerns order and size. The secondary waves from different scatterer
 | Sample | $\lambda \gg d$ | $\lambda \lesssim d$ |
 |---|---|---|
 | Perfect crystal (rigid, periodic) | waves cancel in all directions except forward (a perfect crystal is transparent) | sharp diffraction maxima in discrete directions: crystallography |
-| Gas, liquid, solution (random, moving) | scattering in all directions, intensity set by the number and polarizability of the particles: static light scattering | intensity concentrated in a cone of small angles, its angular profile set by size and shape: small-angle scattering |
+| Gas, liquid, solution (random, moving) | scattering in all directions, intensity set by the number and **polarizability** of the particles: static light scattering | intensity concentrated in a cone of small angles, its angular profile set by size and shape: small-angle scattering |
 
 In a dilute solution the particles are randomly placed and move, so the waves scattered by different particles have random phases and their intensities add; only the waves scattered by different parts of the same particle interfere. That is the regime of this chapter.
 
@@ -51,7 +51,7 @@ The factor $\lambda^{-4}$ is the **Rayleigh scattering law**. The angular factor
 
 ### 9.1.3. The Scattering Vector
 
-Let the incident wave have wave vector $\boldsymbol{k}_{\mathrm{i}}$ and the scattered wave reaching the detector $\boldsymbol{k}_{\mathrm{s}}$. In elastic scattering both have length $k = 2\pi/\lambda$, where $\lambda$ is the wavelength in the medium ($\lambda = \lambda_0/n$ for light in a solvent of refractive index $n$; $n = 1$ for X-rays and neutrons to an accuracy of $10^{-6}$).
+Let the incident wave have **wave vector** $\boldsymbol{k}_{\mathrm{i}}$ and the scattered wave reaching the detector $\boldsymbol{k}_{\mathrm{s}}$. In elastic scattering both have length $k = 2\pi/\lambda$, where $\lambda$ is the wavelength in the medium ($\lambda = \lambda_0/n$ for light in a solvent of refractive index $n$; $n = 1$ for X-rays and neutrons to an accuracy of $10^{-6}$).
 
 **Definition 9.1.2 (Scattering Vector)** The *scattering vector* (momentum transfer) is $\boldsymbol{q} = \boldsymbol{k}_{\mathrm{s}} - \boldsymbol{k}_{\mathrm{i}}$. For elastic scattering through the angle $\theta$ its length is
 
@@ -82,7 +82,7 @@ R_\theta = \frac{I_{\mathrm{s}}(\theta)\, r^2}{I_0 V},
 $$
 the scattered intensity per unit solid angle, per unit incident intensity and per unit scattering volume (unit $\mathrm{cm^{-1}}$). For solutions, $R_\theta$ denotes the excess over the pure solvent.
 
-The polarizability of a dissolved macromolecule is obtained from the refractive index. For a dilute suspension of $N$ particles per unit volume, $n^2 - n_0^2 = N\alpha/\varepsilon_0$, where $n_0$ is the refractive index of the solvent and $\alpha$ the excess polarizability of a particle over the solvent it displaces. Writing $n^2 - n_0^2 \approx 2n_0(\mathrm{d}n/\mathrm{d}c)c$ with the mass concentration $c$ and the *refractive-index increment* $\mathrm{d}n/\mathrm{d}c$, and $N = cN_{\mathrm{A}}/M$,
+The polarizability of a dissolved macromolecule is obtained from the **refractive index**. For a dilute suspension of $N$ particles per unit volume, $n^2 - n_0^2 = N\alpha/\varepsilon_0$, where $n_0$ is the refractive index of the solvent and $\alpha$ the excess polarizability of a particle over the solvent it displaces. Writing $n^2 - n_0^2 \approx 2n_0(\mathrm{d}n/\mathrm{d}c)c$ with the mass concentration $c$ and the *refractive-index increment* $\mathrm{d}n/\mathrm{d}c$, and $N = cN_{\mathrm{A}}/M$,
 
 $$
 \alpha = \frac{2\varepsilon_0 n_0 M}{N_{\mathrm{A}}}\,\frac{\mathrm{d}n}{\mathrm{d}c}. \tag{9.3}
@@ -472,7 +472,7 @@ For water at $20\,^\circ\mathrm{C}$, $\rho_{\mathrm{X}} = r_{\mathrm{e}} \times 
 The analysis of 9.10 assumes a monodisperse solution of identical, non-interacting particles. The sample must approach this ideal:
 
 - Purity and monodispersity: above $95\,\%$ pure, with no aggregates. A $1\,\%$ (by mass) admixture of a 50-mer contributes as much forward scattering as half of the monomers (Formula 9.2.2). Dynamic light scattering ([7.6.8](/7.6.8)) and SEC–MALS (9.2.5) are used beforehand; today most data are collected by SEC–SAXS, with the capillary fed directly from a size-exclusion column so that each frame contains only the species of one elution slice.
-- A matched buffer: the solvent must be identical to that of the sample (from dialysis or from the column flow-through), because the protein signal at high $q$ is a fraction of a percent of the solvent scattering (9.9.4).
+- A matched buffer: the solvent must be identical to that of the sample (from **dialysis** or from the column flow-through), because the protein signal at high $q$ is a fraction of a percent of the solvent scattering (9.9.4).
 - A concentration series ($0.5$–$10\,\mathrm{mg\,mL^{-1}}$) to detect concentration-dependent association or interparticle interference (the interparticle structure factor, Definition 9.3.2) and to extrapolate to $c = 0$; salt (about $150\,\mathrm{mM}$) screens electrostatic repulsion.
 - An accurate concentration, for the molar mass from $I(0)$ (9.10.2).
 - Protection against radiation damage: X-rays ionize water, and the radicals cause aggregation or fragmentation of the sample within seconds of exposure at a synchrotron. The beam is spread over a flowing sample, the exposure is divided into many short frames that are compared before averaging (frames that differ are discarded), and radical scavengers (glycerol at $2$–$5\,\%$, ascorbate, dithiothreitol) are added. The tolerable dose is of the order of kilograys, depending strongly on the sample and buffer.

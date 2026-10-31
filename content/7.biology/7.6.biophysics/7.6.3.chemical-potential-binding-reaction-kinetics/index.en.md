@@ -3,7 +3,7 @@ title: Chemical Potential, Binding and Reaction Kinetics
 description: The chemical potential from a lattice model of a dilute solution; gases, Henry's law and the oxygen cascade; water potential in plants; electrochemical potential; the equilibrium condition and the law of mass action, equilibrium constants from partition functions, and the free energy of ATP hydrolysis in cells; ligand–receptor binding as statistical mechanics and Hill functions; the proton-motive force and the H⁺/ATP ratio set by the c ring; two-state relaxation, detailed balance, Arrhenius and Eyring rates, and the dissipation of reactions out of equilibrium.
 ---
 
-Cells are chemical systems: their molecules are made and consumed, bind and unbind, cross membranes and react, and their numbers are not fixed. The previous chapter dealt with systems whose particles are conserved; this one adds the variable that governs exchange of particles, the chemical potential, and applies it to the three operations that underlie almost every later model in the course: equilibrium between species (reactions and binding), transport down gradients of chemical and electrochemical potential, and the rates at which equilibrium is approached. It introduces the chemical potential through a lattice model and applies it to gases, water in plants and ions (3.1), derives the law of mass action and the free energy of ATP hydrolysis in a cell (3.2), treats ligand binding as statistical mechanics (3.3), puts numbers on the proton-motive force (3.4), and turns to kinetics, detailed balance and barriers (3.5). The thermodynamics of [6.3.4](/6.3.4), [6.3.5](/6.3.5) and [6.3.7](/6.3.7) and the rate theories of [6.3.16](/6.3.16) are used and not rederived; the biochemistry of binding is in [7.1.7](/7.1.7), of bioenergetics in [7.1.16](/7.1.16) and of chemiosmotic coupling in [7.1.23](/7.1.23). The models of this chapter are the building blocks of the two-state systems of [7.6.4](/7.6.4) and of the gene-regulation models of [7.2.22](/7.2.22).
+Cells are chemical systems: their molecules are made and consumed, bind and unbind, cross membranes and react, and their numbers are not fixed. The previous chapter dealt with systems whose particles are conserved; this one adds the variable that governs exchange of particles, the chemical potential, and applies it to the three operations that underlie almost every later model in the course: equilibrium between species (reactions and binding), transport down gradients of chemical and **electrochemical potential**, and the rates at which equilibrium is approached. It introduces the chemical potential through a lattice model and applies it to gases, water in plants and ions (3.1), derives the **law of mass action** and the free energy of ATP hydrolysis in a cell (3.2), treats ligand binding as statistical mechanics (3.3), puts numbers on the proton-motive force (3.4), and turns to kinetics, detailed balance and barriers (3.5). The thermodynamics of [6.3.4](/6.3.4), [6.3.5](/6.3.5) and [6.3.7](/6.3.7) and the rate theories of [6.3.16](/6.3.16) are used and not rederived; the biochemistry of binding is in [7.1.7](/7.1.7), of bioenergetics in [7.1.16](/7.1.16) and of chemiosmotic coupling in [7.1.23](/7.1.23). The models of this chapter are the building blocks of the two-state systems of [7.6.4](/7.6.4) and of the gene-regulation models of [7.2.22](/7.2.22).
 
 ## 3.1. The Chemical Potential
 
@@ -14,14 +14,14 @@ When the number of molecules of a species can change, the free energy depends on
 $$
 \mu_i = \left(\frac{\partial G}{\partial N_i}\right)_{T,p,N_{j\ne i}}, \qquad \mathrm{d}G = -S\,\mathrm{d}T + V\,\mathrm{d}p + \sum_i\mu_i\,\mathrm{d}N_i. \tag{3.1}
 $$
-It is the free-energy cost of adding one molecule (in biophysics usually per molecule, in units of $k_{\mathrm{B}}T$; in chemistry per mole, in units of $RT$; the two differ by $N_{\mathrm{A}}$). Like temperature and pressure it is an intensive quantity, and like them it equalizes at equilibrium: molecules move from regions, phases or compounds of high chemical potential to those of low chemical potential until the values are equal. Diffusion down a concentration gradient, osmosis, the uptake of oxygen into blood, the binding of a ligand and the progress of a reaction are all instances of this one rule.
+It is the free-energy cost of adding one molecule (in biophysics usually per molecule, in units of $k_{\mathrm{B}}T$; in chemistry per mole, in units of $RT$; the two differ by $N_{\mathrm{A}}$). Like temperature and pressure it is an **intensive quantity**, and like them it equalizes at equilibrium: molecules move from regions, phases or compounds of high chemical potential to those of low chemical potential until the values are equal. Diffusion down a concentration gradient, **osmosis**, the uptake of oxygen into blood, the binding of a ligand and the progress of a reaction are all instances of this one rule.
 
 In statistical mechanics the chemical potential enters as the Lagrange multiplier of a constraint on the number of particles, just as $\beta$ was that of the energy in [7.6.2](/7.6.2#sec-2.2.2). For a system that can exchange both energy and molecules with a reservoir at temperature $T$ and chemical potential $\mu$, the probability of a microstate with energy $E_i$ and $N_i$ molecules is
 
 $$
 p_i = \frac{\mathrm{e}^{-\beta(E_i - \mu N_i)}}{\mathcal{Z}}, \qquad \mathcal{Z} = \sum_i\mathrm{e}^{-\beta(E_i - \mu N_i)}, \qquad \langle N\rangle = k_{\mathrm{B}}T\,\frac{\partial\ln\mathcal{Z}}{\partial\mu}, \tag{3.2}
 $$
-the Gibbs (grand canonical) distribution: a reservoir of high chemical potential pushes molecules into the system. Equation (3.2) is the form used for binding in 3.3: a binding site is a small system that exchanges ligands with the solution.
+the Gibbs (grand canonical) distribution: a reservoir of high chemical potential pushes molecules into the system. Equation (3.2) is the form used for binding in 3.3: a **binding site** is a small system that exchanges ligands with the solution.
 
 ### 3.1.2. A Lattice Derivation for Dilute Solutions
 
@@ -86,7 +86,7 @@ $$
 \Psi_{\mathrm{s}} = -cRT, \qquad \Psi_{\mathrm{g}} = \rho_{\mathrm{w}}gh. \tag{3.6}
 $$
 
-- The solute (osmotic) potential $\Psi_{\mathrm{s}} = -\Pi$ is the negative of the osmotic pressure of Eq. (2.10) ([7.6.2](/7.6.2#sec-2.3.3)), with $c$ the total concentration of solute particles: $-2.44\,\mathrm{MPa}$ for an ideal $1\,\mathrm{M}$ solution at $20\,^\circ\mathrm{C}$. Real solutions deviate: $1\,\mathrm{M}$ sucrose has about $-2.7\,\mathrm{MPa}$, $1\,\mathrm{M}$ $\ce{KCl}$, which dissociates into about 1.8 osmotically effective particles, about $-4.5\,\mathrm{MPa}$, and seawater about $-2.5\,\mathrm{MPa}$.
+- The solute (osmotic) potential $\Psi_{\mathrm{s}} = -\Pi$ is the negative of the **osmotic pressure** of Eq. (2.10) ([7.6.2](/7.6.2#sec-2.3.3)), with $c$ the total concentration of solute particles: $-2.44\,\mathrm{MPa}$ for an ideal $1\,\mathrm{M}$ solution at $20\,^\circ\mathrm{C}$. Real solutions deviate: $1\,\mathrm{M}$ sucrose has about $-2.7\,\mathrm{MPa}$, $1\,\mathrm{M}$ $\ce{KCl}$, which dissociates into about 1.8 osmotically effective particles, about $-4.5\,\mathrm{MPa}$, and seawater about $-2.5\,\mathrm{MPa}$.
 - The pressure potential $\Psi_{\mathrm{p}}$ is the hydrostatic pressure above atmospheric: positive in a turgid cell pressing on its wall (turgor, typically $0.3$–$1\,\mathrm{MPa}$), zero at incipient plasmolysis, negative (tension) in the xylem of a transpiring plant.
 - The gravitational potential $\Psi_{\mathrm{g}}$ adds $0.0098\,\mathrm{MPa}$ per metre of height: negligible in herbs, about $1\,\mathrm{MPa}$ at the top of a $100\,\mathrm{m}$ tree.
 - The matric potential $\Psi_{\mathrm{m}}$ describes water bound to surfaces and held in narrow pores (soil particles, cell walls); it dominates in dry soils and seeds and is usually neglected in hydrated cells.
@@ -154,7 +154,7 @@ the **reaction isotherm** ([6.3.7](/6.3.7)) with the **reaction quotient** $Q$; 
 
 ### 3.2.3. Equilibrium Constants from Partition Functions
 
-The standard chemical potentials, and hence $K$, can be computed from molecular partition functions ([6.3.11](/6.3.11)). For an ideal gas or dilute solution of $N_i$ molecules of species $i$ with molecular partition function $q_i$, the free energy is $-k_{\mathrm{B}}T\ln\prod_i(q_i^{N_i}/N_i!)$, so $\mu_i = -k_{\mathrm{B}}T\ln(q_i/N_i)$, and Eq. (3.10) becomes
+The standard chemical potentials, and hence $K$, can be computed from molecular partition functions ([6.3.11](/6.3.11)). For an ideal gas or dilute solution of $N_i$ molecules of species $i$ with molecular **partition function** $q_i$, the free energy is $-k_{\mathrm{B}}T\ln\prod_i(q_i^{N_i}/N_i!)$, so $\mu_i = -k_{\mathrm{B}}T\ln(q_i/N_i)$, and Eq. (3.10) becomes
 
 $$
 \prod_i\left(\frac{N_i}{V}\right)^{\nu_i} = \prod_i\left(\frac{q_i}{V}\right)^{\nu_i}. \tag{3.14}
@@ -163,7 +163,7 @@ The equilibrium constant is a ratio of the numbers of states available per volum
 
 ### 3.2.4. ATP Hydrolysis in the Cell
 
-**Example 3.2.1 (How much free energy does one ATP deliver?)** For $\ce{ATP + H2O -> ADP + P_i}$ at pH 7, with the biochemical standard state ($1\,\mathrm{M}$ of each species except water and protons), $\Delta G^{\circ\prime} \approx -30.5\,\mathrm{kJ\,mol^{-1}}$, about $-12\,k_{\mathrm{B}}T$ per molecule at $310\,\mathrm{K}$ (the exact value depends on $\ce{Mg^2+}$, pH and ionic strength; values near $-13\,k_{\mathrm{B}}T$ are also quoted). In *E. coli*, with $[\mathrm{ATP}] \approx 5\,\mathrm{mM}$, $[\mathrm{ADP}] \approx 0.5\,\mathrm{mM}$ and $[\mathrm{P_i}] \approx 10\,\mathrm{mM}$,
+**Example 3.2.1 (How much free energy does one ATP deliver?)** For $\ce{ATP + H2O -> ADP + P_i}$ at pH 7, with the biochemical **standard state** ($1\,\mathrm{M}$ of each species except water and protons), $\Delta G^{\circ\prime} \approx -30.5\,\mathrm{kJ\,mol^{-1}}$, about $-12\,k_{\mathrm{B}}T$ per molecule at $310\,\mathrm{K}$ (the exact value depends on $\ce{Mg^2+}$, pH and ionic strength; values near $-13\,k_{\mathrm{B}}T$ are also quoted). In *E. coli*, with $[\mathrm{ATP}] \approx 5\,\mathrm{mM}$, $[\mathrm{ADP}] \approx 0.5\,\mathrm{mM}$ and $[\mathrm{P_i}] \approx 10\,\mathrm{mM}$,
 
 $$
 Q = \frac{[\mathrm{ADP}][\mathrm{P_i}]}{[\mathrm{ATP}]} = \frac{(0.5\times10^{-3})(10^{-2})}{5\times10^{-3}} = 10^{-3}, \qquad
@@ -190,7 +190,7 @@ where $c = L/V$ is the ligand concentration and $c_0 = \Omega/V$ the concentrati
 
 The result is the hyperbolic binding curve of biochemistry, and the model says what $K_{\mathrm{d}}$ is: a concentration scale set by the binding energy (through the Boltzmann factor) and by the entropy of the free ligand (through $c_0$, the concentration at which a ligand has as little positional entropy in solution as on the receptor). The approximation $\binom{\Omega}{L} \approx \Omega^L/L!$ is the dilute limit; the exact lattice result, $c/K_{\mathrm{d}}$ replaced by $(L/(\Omega - L + 1))\mathrm{e}^{-\beta\Delta\varepsilon}$, departs from Eq. (3.15) only when the ligand fills a sizable fraction of the lattice.
 
-**Example 3.3.1 (RNA polymerase at a promoter)** In *E. coli* nearly all of the roughly $10^3$ RNA polymerase molecules are bound to DNA, most of them nonspecifically. Model the genome as $N_{\mathrm{NS}} \approx 5\times10^6$ nonspecific sites with binding energy $\varepsilon_{\mathrm{NS}}$ and one promoter with energy $\varepsilon_{\mathrm{S}}$, shared by $P$ polymerases. Counting the arrangements as in Theorem 3.3.1, with the nonspecific sites playing the role of the lattice and $P \ll N_{\mathrm{NS}}$, the promoter is occupied with probability
+**Example 3.3.1 (RNA polymerase at a promoter)** In *E. coli* nearly all of the roughly $10^3$ **RNA polymerase** molecules are bound to DNA, most of them nonspecifically. Model the genome as $N_{\mathrm{NS}} \approx 5\times10^6$ nonspecific sites with binding energy $\varepsilon_{\mathrm{NS}}$ and one **promoter** with energy $\varepsilon_{\mathrm{S}}$, shared by $P$ polymerases. Counting the arrangements as in Theorem 3.3.1, with the nonspecific sites playing the role of the lattice and $P \ll N_{\mathrm{NS}}$, the promoter is occupied with probability
 
 $$
 p_{\mathrm{bound}} = \frac{1}{1 + \dfrac{N_{\mathrm{NS}}}{P}\,\mathrm{e}^{\Delta\varepsilon/k_{\mathrm{B}}T}}, \qquad \Delta\varepsilon = \varepsilon_{\mathrm{S}} - \varepsilon_{\mathrm{NS}}.
@@ -219,7 +219,7 @@ the **Hill equation** ([7.1.7](/7.1.7#sec-7.3.4)), sigmoidal for $n > 1$. Its st
 
 ### 3.3.4. Measuring Binding
 
-A binding curve is measured by varying the ligand concentration and recording a signal proportional to the fraction bound: a change of fluorescence or of fluorescence anisotropy when a labeled ligand binds a larger partner (7.6.11), the heat released in each step of a titration (isothermal titration calorimetry, 7.6.8), the mass accumulating on a surface carrying the receptor (surface plasmon resonance, 7.6.17), or the radioactivity retained on a filter with the complex. Fitting Eq. (3.15) gives $K_{\mathrm{d}}$, provided that $c$ is the free ligand concentration: if the receptor concentration is comparable to $K_{\mathrm{d}}$, binding depletes the ligand and the total concentration must be corrected by the quadratic solution of the mass-action equations. The temperature dependence of $K_{\mathrm{d}}$ gives the binding enthalpy by the van 't Hoff relation, and a direct calorimetric measurement gives it independently; comparing the two tests whether binding is a simple two-state process (7.6.8).
+A binding curve is measured by varying the ligand concentration and recording a signal proportional to the fraction bound: a change of fluorescence or of **fluorescence anisotropy** when a labeled ligand binds a larger partner (7.6.11), the heat released in each step of a titration (**isothermal titration calorimetry**, 7.6.8), the mass accumulating on a surface carrying the receptor (**surface plasmon resonance**, 7.6.17), or the radioactivity retained on a filter with the complex. Fitting Eq. (3.15) gives $K_{\mathrm{d}}$, provided that $c$ is the free ligand concentration: if the receptor concentration is comparable to $K_{\mathrm{d}}$, binding depletes the ligand and the total concentration must be corrected by the quadratic solution of the mass-action equations. The temperature dependence of $K_{\mathrm{d}}$ gives the binding enthalpy by the van 't Hoff relation, and a direct calorimetric measurement gives it independently; comparing the two tests whether binding is a simple two-state process (7.6.8).
 
 ## 3.4. The Proton-Motive Force, Quantitatively
 
@@ -277,14 +277,14 @@ Two features are general. The **relaxation time** $\tau$ is set by the sum of th
 
 The equilibrium fraction can be computed in three ways: from the kinetics, $x_{\mathrm{eq}} = k_+/(k_+ + k_-)$; from mass action, $[\mathrm{P}]/[\mathrm{S}] = K$; and from the Boltzmann distribution of macrostates (Eq. (2.6)), $[\mathrm{P}]/[\mathrm{S}] = \mathrm{e}^{-\Delta G/k_{\mathrm{B}}T}$ with $\Delta G = G_{\mathrm{P}} - G_{\mathrm{S}}$. They must agree.
 
-**Theorem 3.5.1 (Detailed Balance for a Reaction)** At equilibrium the forward and backward fluxes of every elementary reaction are equal, and the ratio of the rate constants is fixed by thermodynamics:
+**Theorem 3.5.1 (Detailed Balance for a Reaction)** At equilibrium the forward and backward fluxes of every **elementary reaction** are equal, and the ratio of the rate constants is fixed by thermodynamics:
 
 $$
 k_+[\mathrm{S}]_{\mathrm{eq}} = k_-[\mathrm{P}]_{\mathrm{eq}}, \qquad \frac{k_+}{k_-} = K = \mathrm{e}^{-\Delta G^\circ/k_{\mathrm{B}}T}. \tag{3.19}
 $$
 For an elementary reaction $\sum_s\nu_s\mathrm{S}_s \rightleftharpoons \sum_p\nu_p\mathrm{P}_p$ with mass-action fluxes $J_+ = k_+\prod_sc_s^{\nu_s}$ and $J_- = k_-\prod_pc_p^{\nu_p}$, equilibrium ($J_+ = J_-$) combined with Eq. (3.11) gives $k_+/k_- = K$ in the units of $c^\circ$.
 
-This is the principle of **detailed balance** ([3.5.9](/3.5.9)): at equilibrium each process is balanced by its reverse, not merely the total production and consumption of each species. It constrains models: in a network of reactions with a closed loop, the product of the forward rate constants around the loop divided by the product of the backward ones must equal 1 at equilibrium (the free energy is a state function), so the rate constants of a cycle are not independent. Detailed balance is a property of equilibrium. It must be distinguished from a **steady state**, in which concentrations are constant but net fluxes may run around cycles; the steady states of living cells, maintained by ATP, are exactly the states in which detailed balance is broken (3.5.4).
+This is the principle of **detailed balance** ([3.5.9](/3.5.9)): at equilibrium each process is balanced by its reverse, not merely the total production and consumption of each species. It constrains models: in a network of reactions with a closed loop, the product of the forward rate constants around the loop divided by the product of the backward ones must equal 1 at equilibrium (the free energy is a **state function**), so the rate constants of a cycle are not independent. Detailed balance is a property of equilibrium. It must be distinguished from a **steady state**, in which concentrations are constant but net fluxes may run around cycles; the steady states of living cells, maintained by ATP, are exactly the states in which detailed balance is broken (3.5.4).
 
 ### 3.5.3. Barriers: Arrhenius and Eyring
 
@@ -319,7 +319,7 @@ A cell whose composition is constant is not static: its molecules are continuous
 $$
 \frac{\mathrm{d}L}{\mathrm{d}t} = \delta\,(k_{\mathrm{on}}c - k_{\mathrm{off}}), \qquad c_{\mathrm{c}} = \frac{k_{\mathrm{off}}}{k_{\mathrm{on}}}, \tag{3.22}
 $$
-with $\delta = 2.7\,\mathrm{nm}$ per subunit: it grows above the critical concentration $c_{\mathrm{c}}$ and shrinks below it, and by detailed balance $c_{\mathrm{c}}$ is the dissociation constant of a subunit from the filament end. With $k_{\mathrm{on}} \approx 11\,\mu\mathrm{M^{-1}\,s^{-1}}$ and $k_{\mathrm{off}} \approx 1.4\,\mathrm{s^{-1}}$, $c_{\mathrm{c}} \approx 0.13\,\mu\mathrm{M}$, and at $10\,\mu\mathrm{M}$ actin a filament grows by about $110$ subunits, $0.3\,\mu\mathrm{m}$, per second, the speed at which the leading edge of a crawling cell advances. Because ATP hydrolysis in the filament makes the two ends differ, the steady state of a filament in a cell is not an equilibrium, and filaments treadmill (7.6.26).
+with $\delta = 2.7\,\mathrm{nm}$ per subunit: it grows above the **critical concentration** $c_{\mathrm{c}}$ and shrinks below it, and by detailed balance $c_{\mathrm{c}}$ is the **dissociation constant** of a subunit from the filament end. With $k_{\mathrm{on}} \approx 11\,\mu\mathrm{M^{-1}\,s^{-1}}$ and $k_{\mathrm{off}} \approx 1.4\,\mathrm{s^{-1}}$, $c_{\mathrm{c}} \approx 0.13\,\mu\mathrm{M}$, and at $10\,\mu\mathrm{M}$ actin a filament grows by about $110$ subunits, $0.3\,\mu\mathrm{m}$, per second, the speed at which the leading edge of a crawling cell advances. Because ATP hydrolysis in the filament makes the two ends differ, the steady state of a filament in a cell is not an equilibrium, and filaments treadmill (7.6.26).
 
 ## Summary
 

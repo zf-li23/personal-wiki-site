@@ -3,13 +3,13 @@ title: "The Physical Architecture of Macromolecules: Conformation, Symmetry and 
 description: The physics and geometry behind macromolecular structure. A hierarchy of stiff and soft degrees of freedom; the peptide group and prolyl isomerization; a soft-potential Ramachandran map and conformational entropy; sugar pucker; every repeat is a screw (Chasles) and the helix parameters computed from (φ, ψ); the α helix macrodipole and the coiled-coil supercoil; base-pair step parameters and the A, B and Z duplexes; counterions and RNA architecture; the finite rotation groups C_n, D_n, T, O, I and helical symmetry; icosahedral capsids, quasi-equivalence and the Caspar–Klug triangulation number T = h² + hk + k²; size–mass scaling of assemblies.
 ---
 
-The structures of proteins and nucleic acids have already been described in biochemical terms: amino acids, the planar peptide group, the α helix and β sheet, the double helix and the nucleosome ([7.1.5](/7.1.5), [7.1.11](/7.1.11), [7.2.4](/7.2.4)). This chapter asks the physicist's questions about the same objects. Which degrees of freedom of a chain are actually free at $k_{\mathrm{B}}T$, and how much entropy do they carry? Why does the repetition of one local conformation always produce a helix, and how are its parameters computed? Why are the double helices of DNA and RNA wider or narrower, right- or left-handed? And why do assemblies of identical subunits have only a few kinds of symmetry, among which icosahedral shells obey a simple counting law? The answers are geometry (rigid motions, rotation groups, Euler's formula) and statistical mechanics (Boltzmann weights over conformations), and they are the vocabulary of the structural methods that follow: crystallography uses point groups and helical symmetry ([7.6.10](/7.6.10)), cryo-electron microscopy reconstructs icosahedral and helical assemblies ([7.6.14](/7.6.14)), and the conformational entropy introduced here is the main opponent of folding ([7.6.16](/7.6.16)). The energies of the noncovalent interactions themselves are the subject of [7.6.6](/7.6.6).
+The structures of proteins and nucleic acids have already been described in biochemical terms: amino acids, the planar peptide group, the **α helix** and **β sheet**, the double helix and the **nucleosome** ([7.1.5](/7.1.5), [7.1.11](/7.1.11), [7.2.4](/7.2.4)). This chapter asks the physicist's questions about the same objects. Which degrees of freedom of a chain are actually free at $k_{\mathrm{B}}T$, and how much entropy do they carry? Why does the repetition of one local conformation always produce a helix, and how are its parameters computed? Why are the double helices of DNA and RNA wider or narrower, right- or left-handed? And why do assemblies of identical subunits have only a few kinds of symmetry, among which icosahedral shells obey a simple counting law? The answers are geometry (rigid motions, rotation groups, Euler's formula) and statistical mechanics (Boltzmann weights over conformations), and they are the vocabulary of the structural methods that follow: crystallography uses point groups and helical symmetry ([7.6.10](/7.6.10)), **cryo-electron microscopy** reconstructs icosahedral and helical assemblies ([7.6.14](/7.6.14)), and the conformational entropy introduced here is the main opponent of folding ([7.6.16](/7.6.16)). The energies of the noncovalent interactions themselves are the subject of [7.6.6](/7.6.6).
 
 ## 7.1. Conformational Degrees of Freedom
 
 ### 7.1.1. A Hierarchy of Stiffness
 
-A macromolecule of $N$ atoms has $3N - 6$ internal coordinates, but they are far from equally soft. In a molecular-mechanics description ([7.6.15](/7.6.15)) bond lengths $b$, bond angles $\theta$ and torsions $\tau$ have energies
+A macromolecule of $N$ atoms has $3N - 6$ internal coordinates, but they are far from equally soft. In a molecular-mechanics description ([7.6.15](/7.6.15)) **bond lengths** $b$, **bond angles** $\theta$ and torsions $\tau$ have energies
 
 $$
 E = \sum_{\text{bonds}} k_b (b - b_0)^2 + \sum_{\text{angles}} k_\theta (\theta - \theta_0)^2 + \sum_{\text{torsions}} \frac{V_n}{2}\bigl[1 + \cos(n\tau - \delta)\bigr] + E_{\text{nonbonded}},
@@ -18,7 +18,7 @@ with typical force constants $k_b \approx 300\,\mathrm{kcal\,mol^{-1}\,\text{Å}
 
 **Example 7.1.1** For a C–C bond $\kappa = 620\,\mathrm{kcal\,mol^{-1}\,\text{Å}^{-2}} = 431\,\mathrm{N\,m^{-1}}$, so at $298\,\mathrm{K}$ the root-mean-square fluctuation is $\sqrt{k_{\mathrm{B}}T/\kappa} = \sqrt{4.11\times10^{-21}/431}\,\mathrm{m} = 0.031\,\text{Å}$, two percent of the bond length. A bond angle with $\kappa = 126\,\mathrm{kcal\,mol^{-1}\,rad^{-2}}$ fluctuates by $0.069\,\mathrm{rad} = 3.9^\circ$. A torsion with a barrier of $3\,\mathrm{kcal\,mol^{-1}} \approx 5k_{\mathrm{B}}T$, by contrast, explores a whole well $\pm 30^\circ$ wide and hops between wells on a nanosecond time scale.
 
-The conformations of a macromolecule are therefore, to a good approximation, the values of its torsion angles at fixed bond lengths and angles. This separation of stiff and soft coordinates is what makes the Ramachandran description of proteins and the six-torsion description of nucleic acids possible, and it is also the reason why molecular dynamics needs femtosecond time steps (to follow bond vibrations) while the interesting motions are millions of times slower.
+The conformations of a macromolecule are therefore, to a good approximation, the values of its **torsion angles** at fixed bond lengths and angles. This separation of stiff and soft coordinates is what makes the Ramachandran description of proteins and the six-torsion description of nucleic acids possible, and it is also the reason why **molecular dynamics** needs femtosecond time steps (to follow bond vibrations) while the interesting motions are millions of times slower.
 
 ### 7.1.2. The Peptide Group and Its Two Torsions
 
@@ -36,7 +36,7 @@ $$
 E(\varphi,\psi) = \sum_{i<j} \left\{ \varepsilon_{ij}\left[\left(\frac{r^{\min}_{ij}}{r_{ij}}\right)^{12} - 2\left(\frac{r^{\min}_{ij}}{r_{ij}}\right)^{6}\right] + \frac{q_i q_j}{4\pi\varepsilon_0\varepsilon_{\mathrm{r}} r_{ij}} \right\} + E_{\mathrm{tors}}(\varphi,\psi), \qquad
 p(\varphi,\psi) = \frac{\mathrm{e}^{-E(\varphi,\psi)/k_{\mathrm{B}}T}}{\displaystyle\iint \mathrm{e}^{-E/k_{\mathrm{B}}T}\,\mathrm{d}\varphi\,\mathrm{d}\psi},
 $$
-where the sum runs over pairs separated by at least three bonds, $r_{ij}(\varphi,\psi)$ is their distance, $r^{\min}_{ij}$ and $\varepsilon_{ij}$ are the position and depth of the Lennard-Jones minimum, and $q_i$ are partial charges screened by a dielectric constant $\varepsilon_{\mathrm{r}}$.
+where the sum runs over pairs separated by at least three bonds, $r_{ij}(\varphi,\psi)$ is their distance, $r^{\min}_{ij}$ and $\varepsilon_{ij}$ are the position and depth of the Lennard-Jones minimum, and $q_i$ are partial charges screened by a **dielectric** constant $\varepsilon_{\mathrm{r}}$.
 
 The steep $r^{-12}$ wall reproduces the hard-sphere boundary; the shallow $r^{-6}$ well and the electrostatic term add the shape of the energy inside the allowed regions.
 
@@ -59,7 +59,7 @@ The model is deliberately crude: without water it overweights conformations with
 
 ### 7.1.4. The Nucleic Acid Backbone
 
-A nucleotide has six backbone torsions ($\alpha$ to $\zeta$, along P–O5′–C5′–C4′–C3′–O3′–P), the glycosidic torsion $\chi$ (anti or syn) and the five endocyclic torsions $\nu_0$–$\nu_4$ of the furanose ring. The ring cannot be flat, and its five torsions are not independent: they are well described by two numbers.
+A nucleotide has six backbone torsions ($\alpha$ to $\zeta$, along P–O5′–C5′–C4′–C3′–O3′–P), the glycosidic torsion $\chi$ (anti or syn) and the five endocyclic torsions $\nu_0$–$\nu_4$ of the **furanose** ring. The ring cannot be flat, and its five torsions are not independent: they are well described by two numbers.
 
 **Formula 7.1.2 (Furanose Pucker)** The endocyclic torsions of a furanose ring are
 
@@ -74,7 +74,7 @@ Moving through $P$ (**pseudorotation**) costs only a few kJ/mol, so sugars inter
 
 ### 7.2.1. Every Repeat Is a Screw
 
-A regular secondary structure is a chain in which every residue has the same $(\varphi, \psi)$. The geometric consequence is general: the rigid motion that carries residue $i$ onto residue $i+1$ is the same for every $i$, and every rigid motion of space is a screw.
+A regular **secondary structure** is a chain in which every residue has the same $(\varphi, \psi)$. The geometric consequence is general: the rigid motion that carries residue $i$ onto residue $i+1$ is the same for every $i$, and every rigid motion of space is a screw.
 
 **Theorem 7.2.1 (Chasles)** Every proper rigid motion $\boldsymbol{x} \mapsto R\boldsymbol{x} + \boldsymbol{t}$ of three-dimensional space ($R \in \operatorname{SO}(3)$) is a screw motion: a rotation by some angle $\theta$ about some line combined with a translation $d$ along the same line. If $R \ne I$, then $\cos\theta = (\operatorname{tr} R - 1)/2$, the line is parallel to the rotation axis $\boldsymbol{u}$ of $R$, and $d = \boldsymbol{t}\cdot\boldsymbol{u}$.
 
@@ -109,7 +109,7 @@ A β strand is a twofold screw, so a perfectly flat sheet is possible in princip
 
 ### 7.3.1. Base-Pair Step Parameters
 
-In nucleic acids the natural rigid units are base pairs, not nucleotides. The relative position of two successive base pairs is a rigid motion with six parameters: three translations (shift, slide, rise) and three rotations (tilt, roll, twist), defined in a standard reference frame attached to each base pair (the Cambridge convention of 1989). Six further parameters describe the two bases within a pair (shear, stretch, stagger, buckle, propeller, opening). A regular duplex is again a screw (Theorem 7.2.1): its helical twist and helical rise are the rotation and translation of the screw that carries one base pair to the next, and two further parameters, the x-displacement and the inclination, locate each base pair relative to the helix axis.
+In nucleic acids the natural rigid units are **base pairs**, not nucleotides. The relative position of two successive base pairs is a rigid motion with six parameters: three translations (shift, slide, rise) and three rotations (tilt, roll, twist), defined in a standard reference frame attached to each base pair (the Cambridge convention of 1989). Six further parameters describe the two bases within a pair (shear, stretch, stagger, buckle, propeller, opening). A regular duplex is again a screw (Theorem 7.2.1): its helical twist and helical rise are the rotation and translation of the screw that carries one base pair to the next, and two further parameters, the x-displacement and the inclination, locate each base pair relative to the helix axis.
 
 **Formula 7.3.1 (Helical Repeat)** A duplex with helical twist $\Omega$ per base-pair step and helical rise $h$ has
 
@@ -118,13 +118,13 @@ n = \frac{360^\circ}{\Omega} \ \text{bp per turn}, \qquad p = n h, \qquad L = N 
 $$
 for B-DNA in solution $\Omega \approx 34.3^\circ$, $n \approx 10.5$, $h = 0.338\,\mathrm{nm}$, $p \approx 3.5\,\mathrm{nm}$.
 
-The fiber diffraction patterns from which the double helix was deduced gave $10$ bp per turn, the value of the 1953 model. Two solution measurements in 1979–1980 gave $10.4$–$10.6$: Daniela Rhodes and Aaron Klug cut DNA adsorbed on a surface with DNase I, which can reach only the exposed side and therefore cleaves with the helical period, and James Wang measured the shift of topoisomer bands on gels when short segments were inserted into a circular DNA. The difference matters: over the $147\,\mathrm{bp}$ of a nucleosome, $10.0$ and $10.5$ bp per turn differ by $0.7$ turns, which is the order of the twist changes behind the **linking number** paradox of chromatin ([7.2.3](/7.2.3), [7.2.4](/7.2.4)).
+The **fiber diffraction** patterns from which the double helix was deduced gave $10$ bp per turn, the value of the 1953 model. Two solution measurements in 1979–1980 gave $10.4$–$10.6$: Daniela Rhodes and Aaron Klug cut DNA adsorbed on a surface with DNase I, which can reach only the exposed side and therefore cleaves with the helical period, and James Wang measured the shift of topoisomer bands on gels when short segments were inserted into a circular DNA. The difference matters: over the $147\,\mathrm{bp}$ of a nucleosome, $10.0$ and $10.5$ bp per turn differ by $0.7$ turns, which is the order of the twist changes behind the **linking number** paradox of chromatin ([7.2.3](/7.2.3), [7.2.4](/7.2.4)).
 
 ### 7.3.2. The A, B and Z Families
 
 Real sequences deviate from these averages by several degrees per step (sequence-dependent twist, roll and propeller, the basis of the indirect readout of DNA by proteins, [7.6.17](/7.6.17)), but they fall into three families with different sugar puckers and very different shapes ([7.1.11](/7.1.11#sec-11.3.2)).
 
-| Parameter | A-DNA (and A-RNA) | B-DNA | Z-DNA |
+| Parameter | A-DNA (and A-RNA) | B-DNA | **Z-DNA** |
 |---|---|---|---|
 | Handedness | right | right | left |
 | Repeating unit | 1 bp | 1 bp | 2 bp (CpG / GpC) |
@@ -132,7 +132,7 @@ Real sequences deviate from these averages by several degrees per step (sequence
 | bp per turn | $11$ | $10.5$ | $12$ |
 | Rise per bp | $0.26$–$0.29\,\mathrm{nm}$ | $0.338\,\mathrm{nm}$ | $0.37\,\mathrm{nm}$ |
 | Pitch | $2.8$–$3.2\,\mathrm{nm}$ | $3.5\,\mathrm{nm}$ | $4.5\,\mathrm{nm}$ |
-| x-displacement | $-4.5\,\text{Å}$ (toward the minor groove) | $\approx 0$ | $+3\,\text{Å}$ |
+| x-displacement | $-4.5\,\text{Å}$ (toward the **minor groove**) | $\approx 0$ | $+3\,\text{Å}$ |
 | Inclination of base pairs | $+20^\circ$ | $-6^\circ$ | $-6^\circ$ |
 | Sugar pucker | C3′-endo | C2′-endo | alternating C2′-endo (C) / C3′-endo (G, syn) |
 | **Major groove** / **minor groove** | narrow and deep / wide and shallow | wide / narrow, both of similar depth | flat / narrow and deep |
@@ -145,7 +145,7 @@ Which family a duplex adopts depends on the free energy of its hydration and of 
 - *B to A.* Lowering the water activity (relative humidity below about $75\,\%$, or $\gtrsim 70\,\%$ ethanol) converts B-DNA to A-DNA: the A form needs fewer ordered water molecules in its grooves and brings the phosphates closer together, which is favorable when water is scarce. Double-stranded RNA and RNA–DNA hybrids are A-form under all conditions because of the 2′-OH. In nature A-like DNA occurs in bacterial spores, where small acid-soluble proteins coat the DNA and protect it from UV damage, and in some viruses of hyperthermophiles that survive desiccation and heat.
 - *B to Z.* Alternating purine–pyrimidine sequences, especially $(\mathrm{CG})_n$, switch to the left-handed Z form at high salt ($\approx 2.5\,\mathrm{M}$ NaCl or $0.7\,\mathrm{M}$ $\ce{MgCl2}$), when C5 is methylated, or under negative superhelical stress. Converting $12$ bp from B ($+1.14$ turns) to Z ($-1$ turn) changes the twist by about $-2.1$ turns, so Z segments absorb negative supercoiling (**supercoiling**, [7.2.3](/7.2.3)). Proteins with Zα domains (the RNA-editing enzyme ADAR1, the necroptosis sensor ZBP1) recognize Z-DNA and Z-RNA specifically.
 
-**Example 7.3.1** The $48\,502\,\mathrm{bp}$ genome of phage λ is $48\,502 \times 0.338\,\mathrm{nm} = 16.4\,\mu\mathrm{m}$ long as B-DNA, with $4\,619$ helical turns; as A-DNA it would be $12.4\,\mu\mathrm{m}$ long with about $4\,409$ turns. A B to A transition of a closed circular DNA would therefore reduce the twist by $210$ turns; since the linking number of a closed circle cannot change, the molecule would have to compensate with $+210$ turns of writhe.
+**Example 7.3.1** The $48\,502\,\mathrm{bp}$ genome of phage λ is $48\,502 \times 0.338\,\mathrm{nm} = 16.4\,\mu\mathrm{m}$ long as B-DNA, with $4\,619$ helical turns; as A-DNA it would be $12.4\,\mu\mathrm{m}$ long with about $4\,409$ turns. A B to A transition of a closed circular DNA would therefore reduce the twist by $210$ turns; since the **linking number** of a closed circle cannot change, the molecule would have to compensate with $+210$ turns of **writhe**.
 
 ### 7.3.3. Stacking, Charge and Counterions
 
@@ -184,7 +184,7 @@ $$
 $$
 The left side lies in $[1, 2)$ and each term on the right in $[\tfrac12, 1)$, so $k = 2$ or $k = 3$. If $k = 2$, then $1/n_1 + 1/n_2 = 2/N$ with $n_i \le N$, which forces $n_1 = n_2 = N$: all elements share one axis, and $G = C_N$. If $k = 3$, then $1/n_1 + 1/n_2 + 1/n_3 = 1 + 2/N > 1$; with $n_1 \le n_2 \le n_3$ this requires $n_1 = 2$, and then $(n_2, n_3) = (2, n)$ with $N = 2n$, or $(3, 3)$ with $N = 12$, $(3, 4)$ with $N = 24$, $(3, 5)$ with $N = 60$. These are the stabilizer data of $D_n$, $T$, $O$ and $I$; that each set of data determines the group up to conjugacy follows by reconstructing the polyhedron from the orbits of poles. $\square$
 
-In crystallography, where mirror and inversion operations are allowed for achiral molecules, there are infinitely many point groups (and $32$ crystallographic ones), but for proteins and nucleic acids the list of Theorem 7.4.1 is complete. Crystals of biological macromolecules accordingly belong to the $65$ space groups without improper operations ([7.6.10](/7.6.10)). The exception proves the rule: racemic mixtures of a chemically synthesized L-protein and its D-enantiomer crystallize readily in centrosymmetric space groups, which natural proteins can never use.
+In crystallography, where mirror and inversion operations are allowed for achiral molecules, there are infinitely many **point groups** (and $32$ crystallographic ones), but for proteins and nucleic acids the list of Theorem 7.4.1 is complete. Crystals of biological macromolecules accordingly belong to the $65$ space groups without improper operations ([7.6.10](/7.6.10)). The exception proves the rule: racemic mixtures of a chemically synthesized L-protein and its D-enantiomer crystallize readily in centrosymmetric space groups, which natural proteins can never use.
 
 ### 7.4.2. Why Identical Subunits Assemble Symmetrically
 
@@ -334,7 +334,7 @@ Above the scale of single complexes, machines are organized into what has been c
 
    **Answer** $Tw = 5\,000/10.5 = 476.2$ turns in solution and $500$ in the fiber form. With $Lk = 476$, $Wr = Lk - Tw = 476 - 476.2 = -0.2$: essentially relaxed, very slightly negatively supercoiled. If the same molecule were forced into $10.0$ bp per turn (for example by a twisting ligand), $Wr = 476 - 500 = -24$: strong negative writhe. The correct solution value of the helical repeat is thus essential to interpret supercoiling (**supercoiling**, [7.2.3](/7.2.3)).
 
-6. Natural proteins never crystallize in centrosymmetric space groups, but a 1:1 mixture of a chemically synthesized protein and its mirror image does, and often more easily than either enantiomer alone. Explain both facts with §7.4.1, and suggest why racemic crystallization is useful for structure determination.
+6. Natural proteins never crystallize in centrosymmetric space groups, but a 1:1 mixture of a chemically synthesized protein and its mirror image does, and often more easily than either **enantiomer** alone. Explain both facts with §7.4.1, and suggest why racemic crystallization is useful for structure determination.
 
    **Answer** Inversion and mirror operations map an L-protein onto a D-protein, so in a crystal of one enantiomer they can never be symmetry operations; only the $65$ space groups of proper operations are available. In a racemic mixture an inversion can relate an L molecule to a D molecule, so all $230$ space groups are available, including the centrosymmetric ones such as $P\bar{1}$ and $P2_1/c$ that are the most common for small achiral molecules (they allow the densest packings). Racemic crystals therefore form more readily, and centrosymmetric structures have phases restricted to $0$ or $\pi$, which simplifies phasing ([7.6.10](/7.6.10)).
 

@@ -3,9 +3,9 @@ title: "Solution Methods: Calorimetry and Hydrodynamics"
 description: "Solution methods of molecular biophysics. Calorimetry: signals and sensitivity; differential scanning calorimetry, excess heat capacity and the fluctuation formula; two-state thermograms and the van 't Hoff to calorimetric enthalpy ratio; multistate deconvolution; stability decomposition, cold denaturation, heat capacity and buried surface; T_m shifts and thermal shift assays; isothermal titration calorimetry, the Wiseman c value, linked protonation and enthalpy–entropy compensation; lipid phase transitions. Hydrodynamics: partial specific volume and hydration; friction, hydrodynamic radius and Perrin factors; rotational diffusion and birefringence; sedimentation velocity, the Svedberg and Lamm equations; sedimentation equilibrium, self-association and density gradients; intrinsic viscosity and Simha factors; dynamic light scattering, the Siegert relation and cumulant analysis."
 ---
 
-Every measurement of the stability of a protein or of the strength of a binding interaction is in the end a measurement of a free energy, and free energies are what thermodynamics relates to heat. Most methods infer $\Delta G$ indirectly, from a spectroscopic signal that reports the populations of two states, and then obtain the enthalpy from the temperature dependence of $\Delta G$ through the **van 't Hoff equation**. Calorimetry measures the heat itself. A differential scanning calorimeter records the **heat capacity** of a dilute protein solution as it is heated through unfolding, and its integral is the enthalpy of unfolding with no model assumed; an isothermal titration calorimeter measures the heat released by each small addition of a ligand, and a single experiment gives the stoichiometry, the binding constant and the binding enthalpy. Comparing the calorimetric enthalpy with the one implied by the shape of a transition tests whether the transition is two-state, which no spectroscopic method can do alone. The second half of the chapter measures motion instead of heat. How fast a macromolecule sediments in a centrifugal field, diffuses, tumbles or thickens a solution depends on its mass, size and shape, and the analytical ultracentrifuge, viscometry and dynamic light scattering turn these dependences into the molar mass, oligomeric state, hydrodynamic radius and degree of elongation of molecules in their working solvent.
+Every measurement of the stability of a protein or of the strength of a binding interaction is in the end a measurement of a free energy, and free energies are what thermodynamics relates to heat. Most methods infer $\Delta G$ indirectly, from a spectroscopic signal that reports the populations of two states, and then obtain the enthalpy from the temperature dependence of $\Delta G$ through the **van 't Hoff equation**. Calorimetry measures the heat itself. A differential scanning calorimeter records the **heat capacity** of a dilute protein solution as it is heated through unfolding, and its integral is the enthalpy of unfolding with no model assumed; an isothermal **titration** calorimeter measures the heat released by each small addition of a ligand, and a single experiment gives the stoichiometry, the binding constant and the binding enthalpy. Comparing the calorimetric enthalpy with the one implied by the shape of a transition tests whether the transition is two-state, which no spectroscopic method can do alone. The second half of the chapter measures motion instead of heat. How fast a macromolecule sediments in a centrifugal field, diffuses, tumbles or thickens a solution depends on its mass, size and shape, and the analytical ultracentrifuge, viscometry and dynamic light scattering turn these dependences into the molar mass, oligomeric state, hydrodynamic radius and degree of elongation of molecules in their working solvent.
 
-The thermodynamics used here (the **Gibbs–Helmholtz equation**, **enthalpy**, **entropy** and heat capacity) is that of [6.3](/6.3), and calorimeters were introduced in [6.3.1](/6.3.1#sec-1.7); the **two-state model** of unfolding, the **protein stability curve** and chemical denaturation were derived in [7.1.6](/7.1.6#sec-6.2). The hydrodynamics rests on Brownian motion and the Stokes–Einstein equation ([6.3.21](/6.3.21), [7.6.5](/7.6.5)). This chapter is about measurement: what a calorimeter or a centrifuge records, how the records are analyzed, what the numbers mean physically, and how experiments are designed. The same quantities return in the folding chapter ([7.6.16](/7.6.16)), in molecular recognition ([7.6.17](/7.6.17)) and, for the lipid phase transition, in the physics of membranes ([7.6.24](/7.6.24)); static light scattering and small-angle scattering, which measure the average rather than the fluctuations of scattered light, follow in [7.6.9](/7.6.9), and low-Reynolds-number hydrodynamics in [7.6.22](/7.6.22).
+The thermodynamics used here (the **Gibbs–Helmholtz equation**, **enthalpy**, **entropy** and **heat capacity**) is that of [6.3](/6.3), and calorimeters were introduced in [6.3.1](/6.3.1#sec-1.7); the **two-state model** of unfolding, the **protein stability curve** and chemical denaturation were derived in [7.1.6](/7.1.6#sec-6.2). The hydrodynamics rests on **Brownian motion** and the **Stokes–Einstein equation** ([6.3.21](/6.3.21), [7.6.5](/7.6.5)). This chapter is about measurement: what a calorimeter or a centrifuge records, how the records are analyzed, what the numbers mean physically, and how experiments are designed. The same quantities return in the folding chapter ([7.6.16](/7.6.16)), in molecular recognition ([7.6.17](/7.6.17)) and, for the lipid phase transition, in the physics of membranes ([7.6.24](/7.6.24)); **static light scattering** and **small-angle scattering**, which measure the average rather than the fluctuations of scattered light, follow in [7.6.9](/7.6.9), and low-Reynolds-number hydrodynamics in [7.6.22](/7.6.22).
 
 ## 8.1. Measuring Heat in Solution
 
@@ -21,7 +21,7 @@ Instruments that resolve fractions of a microwatt therefore never measure the ab
 
 In a differential scanning calorimeter (**differential scanning calorimetry**, DSC) two identical cells of $0.1$–$0.5\,\mathrm{mL}$ are heated at a constant rate $\beta = \mathrm{d}T/\mathrm{d}t$, typically $0.5$–$2\,\mathrm{K\,min^{-1}}$, and slightly pressurized (to about $0.3\,\mathrm{MPa}$) so that dissolved gas does not form bubbles. A thermopile measures the temperature difference between the cells, and a feedback heater supplies the extra power $\Delta P$ that keeps it at zero.
 
-**Definition 8.1.1 (Excess Heat Capacity)** The difference between the heat capacity of the solution and that of the same volume of buffer, divided by the amount of solute, is the apparent molar heat capacity of the solute; its part that exceeds the heat capacity of the native state (the native baseline) is the **excess heat capacity**,
+**Definition 8.1.1 (Excess Heat Capacity)** The difference between the heat capacity of the solution and that of the same volume of buffer, divided by the amount of solute, is the apparent **molar heat capacity** of the solute; its part that exceeds the heat capacity of the native state (the native baseline) is the **excess heat capacity**,
 
 $$
 C_{p,\mathrm{ex}}(T) = \frac{\Delta P(T)}{\beta\, n} - C_{p,\mathrm{N}}(T),
@@ -58,7 +58,7 @@ C_{p,\mathrm{ex}}(T) = f\,\Delta C_p + f(1 - f)\,\frac{\Delta_{\mathrm{U}}H(T)^2
 $$
 The first term is the progress baseline, which moves from the native to the unfolded baseline in proportion to the extent of unfolding; the second is the transition peak, the variance $f(1-f)\Delta H^2$ of Theorem 8.2.1 divided by $RT^2$.
 
-The derivative $\mathrm{d}f/\mathrm{d}T = f(1-f)\,\Delta_{\mathrm{U}}H/(RT^2)$ that produces the peak is the van 't Hoff equation for $K$. The peak is highest close to $T_{\mathrm{m}}$, where $f = 1/2$, with height $\Delta H_{\mathrm{m}}^2/(4RT_{\mathrm{m}}^2)$, and its area is $\Delta H$: a protein with a larger unfolding enthalpy gives a peak that is both larger and narrower.
+The derivative $\mathrm{d}f/\mathrm{d}T = f(1-f)\,\Delta_{\mathrm{U}}H/(RT^2)$ that produces the peak is the **van 't Hoff equation** for $K$. The peak is highest close to $T_{\mathrm{m}}$, where $f = 1/2$, with height $\Delta H_{\mathrm{m}}^2/(4RT_{\mathrm{m}}^2)$, and its area is $\Delta H$: a protein with a larger unfolding enthalpy gives a peak that is both larger and narrower.
 
 ![Excess heat capacity of protein unfolding. A: a two-state protein (Tm = 60 °C, ΔHm = 350 kJ/mol, ΔCp = 6 kJ mol⁻¹ K⁻¹) from Formula 8.2.1; the shaded area above the progress baseline f ΔCp (dashed) is the calorimetric enthalpy, and the baseline steps by ΔCp between the native and unfolded states (dotted). B: three proteins with the same calorimetric enthalpy, 400 kJ per mole of polypeptide chains, analyzed in the same way: a single two-state domain; two independent two-state domains melting at 55 and 65 °C; a dimer that dissociates as it unfolds (N₂ ⇌ 2U, 50 µM chains). The van 't Hoff enthalpy from the peak height (Formula 8.2.2) divided by the calorimetric enthalpy is 1, 0.38 and 1.37. C: a simulated scan with sloping native baseline and Gaussian noise, fitted by nonlinear least squares with Formula 8.2.1 plus a linear baseline: the fit recovers Tm, ΔHm and ΔCp](./plots/dsc-thermograms.py)
 
@@ -81,7 +81,7 @@ For two-state behavior the peak height is $\Delta H^2/(4RT_{\mathrm{m}}^2)$ and 
 
 ### 8.2.3. Multistate Transitions and Deconvolution
 
-When a transition is not two-state, the thermogram still contains the complete thermodynamics of the system, because it measures $\mathrm{d}\langle H\rangle/\mathrm{d}T$ and $\langle H\rangle$ determines the partition function.
+When a transition is not two-state, the thermogram still contains the complete thermodynamics of the system, because it measures $\mathrm{d}\langle H\rangle/\mathrm{d}T$ and $\langle H\rangle$ determines the **partition function**.
 
 **Formula 8.2.3 (Deconvolution of a Thermogram)** For states $i = 0, 1, \dots$ with equilibrium constants $K_i = \mathrm{e}^{-\Delta G_i/RT}$ relative to the native state ($K_0 = 1$), the partition function is $Q(T) = \sum_i K_i(T)$, the populations are $p_i = K_i/Q$, and
 
@@ -125,7 +125,7 @@ The curvature of the stability curve forces a second crossing of zero below $T_S
 
 **Definition 8.3.1 (Cold Denaturation)** **Cold denaturation** is the unfolding of a protein on cooling, at the lower temperature $T_c$ where its stability curve crosses zero again; it occurs because $\Delta_{\mathrm{U}}C_p > 0$ makes $\Delta_{\mathrm{U}}H$ negative below $T_H$, so that unfolding becomes enthalpically favorable at low temperature.
 
-For most proteins $T_c$ lies below the freezing point of water, and cold denaturation was first observed calorimetrically by Privalov and colleagues in 1986 for myoglobin in the presence of moderate concentrations of denaturant, which raise $T_c$ and lower $T_{\mathrm{m}}$ until both transitions fall in the accessible range. Some proteins cold-denature without additives: the yeast frataxin homolog Yfh1 unfolds below about $5\,^\circ\mathrm{C}$ in low-salt buffer. Physically, cold denaturation is the hydrophobic effect run backwards: the ordering of water around exposed nonpolar groups, which makes their exposure entropically costly at room temperature, becomes enthalpically favorable at low temperature (**hydrophobic effect**, [7.1.2](/7.1.2)).
+For most proteins $T_c$ lies below the freezing point of water, and **cold denaturation** was first observed calorimetrically by Privalov and colleagues in 1986 for myoglobin in the presence of moderate concentrations of denaturant, which raise $T_c$ and lower $T_{\mathrm{m}}$ until both transitions fall in the accessible range. Some proteins cold-denature without additives: the yeast frataxin homolog Yfh1 unfolds below about $5\,^\circ\mathrm{C}$ in low-salt buffer. Physically, cold denaturation is the **hydrophobic effect** run backwards: the ordering of water around exposed nonpolar groups, which makes their exposure entropically costly at room temperature, becomes enthalpically favorable at low temperature (**hydrophobic effect**, [7.1.2](/7.1.2)).
 
 ### 8.3.2. Heat Capacity and Accessible Surface
 
@@ -149,7 +149,7 @@ The same relations apply to binding. When two proteins associate, both lose acce
 
 Because $\Delta_{\mathrm{U}}G$ crosses zero at $T_{\mathrm{m}}$ with slope $-\Delta S_{\mathrm{m}} = -\Delta H_{\mathrm{m}}/T_{\mathrm{m}}$, a small change in stability shifts $T_{\mathrm{m}}$ in proportion.
 
-**Formula 8.3.3 (Stability Change from a Shift in T_m)** If a mutation or a solution condition changes the unfolding Gibbs energy by $\Delta\Delta G$ near $T_{\mathrm{m}}$ and leaves the enthalpy and heat capacity nearly unchanged,
+**Formula 8.3.3 (Stability Change from a Shift in T_m)** If a mutation or a solution condition changes the unfolding **Gibbs energy** by $\Delta\Delta G$ near $T_{\mathrm{m}}$ and leaves the enthalpy and heat capacity nearly unchanged,
 
 $$
 \Delta T_{\mathrm{m}} \approx \frac{T_{\mathrm{m}}\,\Delta\Delta G}{\Delta H_{\mathrm{m}}}, \qquad\text{equivalently}\qquad \Delta\Delta G(T_{\mathrm{m}}) \approx \Delta S_{\mathrm{m}}\,\Delta T_{\mathrm{m}}
@@ -217,7 +217,7 @@ The heat per mole of injectant starts near $\Delta H_{\mathrm{b}}$, when almost 
 The c value decides what an experiment can measure (panel B of the figure).
 
 - $1 < c < 1\,000$ (best $10$–$100$): the isotherm is sigmoidal, and $n$, $K_{\mathrm{a}}$ and $\Delta H_{\mathrm{b}}$ are all determined.
-- $c \gg 1\,000$: the curve is a step; $n$ and $\Delta H_{\mathrm{b}}$ are accurate, but $K_{\mathrm{a}}$ only has a lower bound. Tight binders are measured by displacement titration: the macromolecule is preloaded with a weaker competitor B, and the apparent constant $K_{\mathrm{a,app}} = K_{\mathrm{a}}/(1 + K_{\mathrm{a,B}}[\mathrm{B}])$ is brought into the window.
+- $c \gg 1\,000$: the curve is a step; $n$ and $\Delta H_{\mathrm{b}}$ are accurate, but $K_{\mathrm{a}}$ only has a lower bound. Tight binders are measured by **displacement titration**: the macromolecule is preloaded with a weaker competitor B, and the apparent constant $K_{\mathrm{a,app}} = K_{\mathrm{a}}/(1 + K_{\mathrm{a,B}}[\mathrm{B}])$ is brought into the window.
 - $c < 1$: the curve is shallow and $n$, $K_{\mathrm{a}}$ and $\Delta H_{\mathrm{b}}$ are correlated. Weak binding can still be measured if $n$ is known and fixed, and if the titration goes to a large excess of ligand (molar ratios of $10$ or more), so that much of the binding curve is covered (Turnbull and Daranas, 2003).
 
 The heat must also be measurable: each injection should release at least ten times the noise, typically $\gtrsim 1\,\mu\mathrm{J}$ on modern instruments. Ligand and macromolecule must be in identical buffer (usually by dialysis of the protein and dissolution of the ligand in the dialysate), because the heat of mixing slightly different buffers can exceed the heat of binding.
@@ -228,7 +228,7 @@ The heat must also be measurable: each injection should release at least ten tim
 
 From one titration, $\Delta G_{\mathrm{b}} = -RT\ln(K_{\mathrm{a}}c^\circ)$ and $\Delta S_{\mathrm{b}} = (\Delta H_{\mathrm{b}} - \Delta G_{\mathrm{b}})/T$; titrations at several temperatures give $\Delta C_{p,\mathrm{b}} = \mathrm{d}\Delta H_{\mathrm{b}}/\mathrm{d}T$. The calorimetric $\Delta H_{\mathrm{b}}$ is usually far more precise than the van 't Hoff enthalpy obtained from the temperature dependence of $K_{\mathrm{a}}$, and disagreement between the two (beyond their errors) signals coupled processes, most often protonation or conformational change.
 
-Pierce, Raman and Nall (1999) used ITC to compare two monoclonal antibodies that bind different epitopes of cytochrome c (antibody 2B5 near Pro44, 5F8 near Lys60). Both bind with a free energy that hardly changes with temperature, but for different reasons: for 2B5 the binding enthalpy and entropy change strongly with temperature and compensate (a large negative $\Delta C_p$, as expected for a binding surface that buries much nonpolar area), whereas for 5F8 both are nearly temperature-independent. Two interfaces with similar affinity can thus have entirely different thermodynamic signatures, which only calorimetry reveals.
+Pierce, Raman and Nall (1999) used ITC to compare two monoclonal antibodies that bind different epitopes of **cytochrome** c (antibody 2B5 near Pro44, 5F8 near Lys60). Both bind with a free energy that hardly changes with temperature, but for different reasons: for 2B5 the binding enthalpy and entropy change strongly with temperature and compensate (a large negative $\Delta C_p$, as expected for a binding surface that buries much nonpolar area), whereas for 5F8 both are nearly temperature-independent. Two interfaces with similar affinity can thus have entirely different thermodynamic signatures, which only calorimetry reveals.
 
 ### 8.4.5. Linked Protonation
 
@@ -267,9 +267,9 @@ $$
 
 ![The main transition of a phospholipid bilayer and the size of the cooperative unit. A: excess heat capacity per mole of lipid for cooperative units of n = 20, 100 and 500 lipids that melt as one (two-state model with ΔH_vH = n ΔH_cal; Tm = 41.4 °C and ΔH_cal = 36 kJ/mol, the values of DPPC): the area is the same for all three, while the height grows and the width falls in proportion to n. B: full width at half height against n (Formula 8.5.1); the main transition of multilamellar DPPC vesicles, about 0.1 K wide, corresponds to a cooperative unit of about 800 lipids, while transitions broadened to 1 or 3 K correspond to units of tens of lipids](./plots/lipid-dsc.py)
 
-**Example 8.5.1** The main transition of multilamellar DPPC vesicles has $\Delta T_{1/2} \approx 0.1\,\mathrm{K}$. Formula 8.5.1 gives $\Delta H_{\mathrm{vH}} = 3.525 \times 8.314 \times 314.55^2/0.1\,\mathrm{J\,mol^{-1}} = 2.9\times10^4\,\mathrm{kJ\,mol^{-1}}$, and with $\Delta H_{\mathrm{cal}} = 36\,\mathrm{kJ\,mol^{-1}}$ the cooperative unit is $n \approx 800$ lipids: patches of a few hundred square nanometers of bilayer melt as a whole. Anything that disturbs the packing (small vesicles with strongly curved bilayers, impurities, cholesterol, membrane proteins) broadens the peak and reduces $n$; above about $30$ mol % cholesterol the transition is no longer detectable, because cholesterol creates the liquid-ordered phase in which chains are ordered but mobile ([7.6.24](/7.6.24)).
+**Example 8.5.1** The main transition of multilamellar DPPC vesicles has $\Delta T_{1/2} \approx 0.1\,\mathrm{K}$. Formula 8.5.1 gives $\Delta H_{\mathrm{vH}} = 3.525 \times 8.314 \times 314.55^2/0.1\,\mathrm{J\,mol^{-1}} = 2.9\times10^4\,\mathrm{kJ\,mol^{-1}}$, and with $\Delta H_{\mathrm{cal}} = 36\,\mathrm{kJ\,mol^{-1}}$ the cooperative unit is $n \approx 800$ lipids: patches of a few hundred square nanometers of bilayer melt as a whole. Anything that disturbs the packing (small vesicles with strongly curved bilayers, impurities, **cholesterol**, membrane proteins) broadens the peak and reduces $n$; above about $30$ mol % cholesterol the transition is no longer detectable, because cholesterol creates the **liquid-ordered phase** in which chains are ordered but mobile ([7.6.24](/7.6.24)).
 
-Cells keep their membranes near or above this transition by adjusting the length and saturation of their fatty acids, a response called homeoviscous adaptation: bacteria grown at lower temperature incorporate more unsaturated or branched chains, so that the transition of their membrane lipids stays below the growth temperature.
+Cells keep their membranes near or above this transition by adjusting the length and saturation of their **fatty acids**, a response called homeoviscous adaptation: bacteria grown at lower temperature incorporate more unsaturated or branched chains, so that the transition of their membrane lipids stays below the growth temperature.
 
 ## 8.6. Macromolecules in Water: Volume and Hydration
 
@@ -294,9 +294,9 @@ With $\delta = 0.35$ the hydrated volume of a protein is about $1.5$ times the a
 
 ### 8.7.1. Friction at Low Reynolds Number
 
-A protein that moves at velocity $v$ through water experiences a drag force proportional to $v$ and to the **viscosity** of the water. Its inertia is irrelevant: the Reynolds number is of order $10^{-10}$, and after a force is removed the protein stops within picoseconds ([7.6.22](/7.6.22)). The motion is governed by the balance of the applied force and the friction.
+A protein that moves at velocity $v$ through water experiences a drag force proportional to $v$ and to the **viscosity** of the water. Its inertia is irrelevant: the **Reynolds number** is of order $10^{-10}$, and after a force is removed the protein stops within picoseconds ([7.6.22](/7.6.22)). The motion is governed by the balance of the applied force and the friction.
 
-**Definition 8.7.1 (Frictional Coefficient)** The **frictional coefficient** $f$ of a particle is the ratio of the drag force to the velocity of steady translation through a solvent, $F_{\mathrm{drag}} = -fv$. For a sphere of radius $R$ with no slip at its surface, $f_0 = 6\pi\eta R$ (Stokes' law), where $\eta$ is the viscosity of the solvent.
+**Definition 8.7.1 (Frictional Coefficient)** The **frictional coefficient** $f$ of a particle is the ratio of the drag force to the velocity of steady translation through a solvent, $F_{\mathrm{drag}} = -fv$. For a sphere of radius $R$ with no slip at its surface, $f_0 = 6\pi\eta R$ (**Stokes' law**), where $\eta$ is the viscosity of the solvent.
 
 The same friction governs Brownian motion, through the Einstein relation $D = k_{\mathrm{B}}T/f$; for a sphere this is the **Stokes–Einstein equation** $D = k_{\mathrm{B}}T/(6\pi\eta R)$ ([6.3.21](/6.3.21#sec-21.3.1), [7.6.5](/7.6.5)). Any measured $f$ or $D$ can therefore be expressed as the radius of an equivalent sphere.
 
@@ -323,14 +323,14 @@ Both tend to $1$ as $p \to 1$. The friction grows only slowly with elongation: a
 
 ### 8.7.3. Rotational Friction and Diffusion
 
-A particle also tumbles. Rotation at angular velocity $\Omega$ is opposed by a torque $-f_{\mathrm{r}}\Omega$, and the rotational diffusion coefficient is $D_{\mathrm{r}} = k_{\mathrm{B}}T/f_{\mathrm{r}}$, the angular counterpart of the Einstein relation.
+A particle also tumbles. Rotation at angular velocity $\Omega$ is opposed by a **torque** $-f_{\mathrm{r}}\Omega$, and the **rotational diffusion** coefficient is $D_{\mathrm{r}} = k_{\mathrm{B}}T/f_{\mathrm{r}}$, the angular counterpart of the Einstein relation.
 
 **Formula 8.7.2 (Rotational Friction of a Sphere and a Rod)** For a sphere of radius $R$,
 
 $$
 f_{\mathrm{r}} = 8\pi\eta R^3 = 6\eta V, \qquad \tau_{\mathrm{c}} = \frac{1}{6D_{\mathrm{r}}} = \frac{4\pi\eta R^3}{3k_{\mathrm{B}}T} = \frac{\eta V}{k_{\mathrm{B}}T},
 $$
-where $\tau_{\mathrm{c}}$ is the rotational correlation time of a vector fixed in the particle (the decay time of the second Legendre polynomial of its orientation, measured by fluorescence anisotropy and NMR relaxation). For a rigid rod of length $L$ and diameter $d$ rotating about a short axis (Tirado and García de la Torre, 1980),
+where $\tau_{\mathrm{c}}$ is the **rotational correlation time** of a vector fixed in the particle (the decay time of the second Legendre polynomial of its orientation, measured by fluorescence anisotropy and NMR relaxation). For a rigid rod of length $L$ and diameter $d$ rotating about a short axis (Tirado and García de la Torre, 1980),
 
 $$
 D_{\mathrm{r}} = \frac{3k_{\mathrm{B}}T\left(\ln p + \delta_\perp\right)}{\pi\eta L^3}, \qquad p = L/d, \quad \delta_\perp \approx -0.662 + \frac{0.917}{p} - \frac{0.050}{p^2}.
@@ -342,11 +342,11 @@ Rotational friction scales with the cube of the size, translational friction onl
 
 ### 8.7.4. Birefringence
 
-Elongated particles are optically anisotropic: their polarizability is larger along the long axis. In a solution of randomly oriented particles this averages out, but if the particles are partly aligned the solution becomes birefringent (**birefringence**, [5.4](/5.4)). The degree of alignment that a field or a flow can maintain against rotational diffusion measures $D_{\mathrm{r}}$.
+Elongated particles are optically anisotropic: their **polarizability** is larger along the long axis. In a solution of randomly oriented particles this averages out, but if the particles are partly aligned the solution becomes birefringent (**birefringence**, [5.4](/5.4)). The degree of alignment that a field or a flow can maintain against rotational diffusion measures $D_{\mathrm{r}}$.
 
 **Definition 8.7.4 (Flow Birefringence)** **Flow birefringence** is the birefringence of a solution of anisotropic particles sheared between two concentric cylinders rotating at different speeds: the velocity gradient $G$ tends to align the particles, rotational diffusion to randomize them. As the dimensionless shear rate $\alpha = G/D_{\mathrm{r}}$ increases from zero, the extinction angle between the optic axis of the solution and the flow lines falls from $45^\circ$ (for rigid rods, to first order, $\chi \approx \pi/4 - \alpha/12$ in radians) and the birefringence grows.
 
-In electric birefringence a short pulse of a strong electric field aligns particles that carry a permanent or induced dipole, and after the pulse the birefringence decays as $\exp(-6D_{\mathrm{r}}t)$, giving $D_{\mathrm{r}}$ directly (for TMV, a decay time of $0.5\,\mathrm{ms}$). Such measurements gave the first lengths of DNA fragments, viruses and muscle proteins in solution; today the same rotational dynamics are measured more often by time-resolved fluorescence anisotropy ([7.6.11](/7.6.11)) and NMR relaxation ([7.6.13](/7.6.13)).
+In electric birefringence a short pulse of a strong electric field aligns particles that carry a permanent or **induced dipole**, and after the pulse the birefringence decays as $\exp(-6D_{\mathrm{r}}t)$, giving $D_{\mathrm{r}}$ directly (for TMV, a decay time of $0.5\,\mathrm{ms}$). Such measurements gave the first lengths of DNA fragments, viruses and muscle proteins in solution; today the same rotational dynamics are measured more often by time-resolved fluorescence anisotropy ([7.6.11](/7.6.11)) and NMR relaxation ([7.6.13](/7.6.13)).
 
 ## 8.8. Sedimentation Velocity
 
@@ -369,7 +369,7 @@ $$
 M = \frac{sRT}{D(1 - \bar v\rho)} .
 $$
 
-For compact particles of constant density $f \propto M^{1/3}$, so $s \propto M^{2/3}$ (panel C of the previous figure); the familiar ribosomal "S values" are therefore not additive. The $30\mathrm{S}$ ($0.85\,\mathrm{MDa}$) and $50\mathrm{S}$ ($1.45\,\mathrm{MDa}$) subunits of the bacterial ribosome form a $2.3\,\mathrm{MDa}$ particle whose sedimentation coefficient, if it were as compact as the large subunit, would be $50 \times (2.3/1.45)^{2/3} = 68\,\mathrm{S}$: close to the measured $70\mathrm{S}$, not $80\mathrm{S}$.
+For compact particles of constant density $f \propto M^{1/3}$, so $s \propto M^{2/3}$ (panel C of the previous figure); the familiar ribosomal "S values" are therefore not additive. The $30\mathrm{S}$ ($0.85\,\mathrm{MDa}$) and $50\mathrm{S}$ ($1.45\,\mathrm{MDa}$) subunits of the bacterial ribosome form a $2.3\,\mathrm{MDa}$ particle whose **sedimentation coefficient**, if it were as compact as the large subunit, would be $50 \times (2.3/1.45)^{2/3} = 68\,\mathrm{S}$: close to the measured $70\mathrm{S}$, not $80\mathrm{S}$.
 
 Measured values depend on temperature and solvent through $\eta$ and $\rho$, and are converted to standard conditions (water at $20\,^\circ\mathrm{C}$):
 
@@ -381,7 +381,7 @@ Both also depend on concentration, through hydrodynamic interactions (the backfl
 
 ### 8.8.2. The Analytical Ultracentrifuge and the Lamm Equation
 
-The analytical ultracentrifuge (**ultracentrifugation**) spins a sector-shaped cell at up to $60\,000\,\mathrm{rpm}$ ($\omega^2 r \approx 2.6\times10^5\,g$) and records the radial concentration profile every few minutes by absorbance at a chosen wavelength (selective for proteins at $280\,\mathrm{nm}$, nucleic acids at $260\,\mathrm{nm}$ or labeled molecules) or by Rayleigh interference, which measures the refractive-index increment of all solutes with high precision. The sector shape keeps the radial walls along the field, so that molecules do not collide with them. In a sedimentation-velocity run the solution is initially uniform; the macromolecules move out from the meniscus, leaving pure solvent behind, and a boundary forms that moves at the rate set by $s$ and spreads by diffusion.
+The analytical ultracentrifuge (**ultracentrifugation**) spins a sector-shaped cell at up to $60\,000\,\mathrm{rpm}$ ($\omega^2 r \approx 2.6\times10^5\,g$) and records the radial concentration profile every few minutes by **absorbance** at a chosen wavelength (selective for proteins at $280\,\mathrm{nm}$, nucleic acids at $260\,\mathrm{nm}$ or labeled molecules) or by Rayleigh interference, which measures the refractive-index increment of all solutes with high precision. The sector shape keeps the radial walls along the field, so that molecules do not collide with them. In a sedimentation-velocity run the solution is initially uniform; the macromolecules move out from the meniscus, leaving pure solvent behind, and a boundary forms that moves at the rate set by $s$ and spreads by diffusion.
 
 **Definition 8.8.2 (Lamm Equation)** The **Lamm equation** describes the evolution of the concentration $c(r, t)$ of a sedimenting species in a sector-shaped cell under a centrifugal field:
 
@@ -390,7 +390,7 @@ $$
 $$
 with no flux through the meniscus $r_m$ and the bottom $r_b$ (Ole Lamm, 1929).
 
-The equation is the continuity equation for the radial flux $J = s\omega^2 r c - D\,\partial c/\partial r$ (sedimentation outward, diffusion down the gradient) in cylindrical geometry. It has no closed solution for finite cells and is solved numerically; two exact consequences are useful in practice.
+The equation is the **continuity equation** for the radial flux $J = s\omega^2 r c - D\,\partial c/\partial r$ (sedimentation outward, diffusion down the gradient) in cylindrical geometry. It has no closed solution for finite cells and is solved numerically; two exact consequences are useful in practice.
 
 **Formula 8.8.2 (Boundary Motion and Radial Dilution)** In the plateau region beyond the boundary, where $\partial c/\partial r = 0$, the concentration decreases with time as
 
@@ -468,7 +468,7 @@ $$
 $$
 where the Simha factor $\nu$ depends only on shape: $\nu = 2.5$ for spheres (Einstein), and for elongated ellipsoids it grows roughly as $p^2/\ln p$ (Simha, 1940; panel B of the shape figure).
 
-For a compact protein $[\eta] \approx 2.5 \times (0.73 + 0.35) \approx 2.7\,\mathrm{mL\,g^{-1}}$, independent of $M$; measured values for globular proteins are $3$–$4\,\mathrm{mL\,g^{-1}}$, whereas fibrinogen has $[\eta] \approx 27$ and myosin about $220\,\mathrm{mL\,g^{-1}}$. Because $\nu$ is so sensitive to elongation, viscosity was historically the strongest evidence that molecules such as myosin, collagen and DNA are long rods. It is measured simply with a capillary viscometer, from the ratio of flow times of solution and solvent at several concentrations.
+For a compact protein $[\eta] \approx 2.5 \times (0.73 + 0.35) \approx 2.7\,\mathrm{mL\,g^{-1}}$, independent of $M$; measured values for globular proteins are $3$–$4\,\mathrm{mL\,g^{-1}}$, whereas fibrinogen has $[\eta] \approx 27$ and myosin about $220\,\mathrm{mL\,g^{-1}}$. Because $\nu$ is so sensitive to elongation, viscosity was historically the strongest evidence that molecules such as myosin, **collagen** and DNA are long rods. It is measured simply with a capillary viscometer, from the ratio of flow times of solution and solvent at several concentrations.
 
 ### 8.10.2. Combining Measurements: The Scheraga–Mandelkern Parameter
 
@@ -481,7 +481,7 @@ which depends on shape only. Unfortunately $\beta$ varies only from $2.12\times1
 
 ### 8.10.3. Flexible Chains
 
-For flexible polymers the intrinsic viscosity grows with molar mass, because a coil is mostly solvent and its hydrodynamic volume grows faster than its mass. The Mark–Houwink exponent $a$ in $[\eta] = KM^a$ (**Mark–Houwink equation**) is $0$ for compact spheres, $0.5$ for random coils in a theta solvent, about $0.8$ in a good solvent and up to $1.8$ for rigid rods. Unfolded proteins in $6\,\mathrm{M}$ guanidinium chloride follow $[\eta] \approx 0.72\,N^{0.66}\,\mathrm{mL\,g^{-1}}$ for $N$ residues (Tanford, 1967), the behavior of random coils with excluded volume, and their hydrodynamic radii scale as $R_{\mathrm{h}} \propto N^{0.57}$, in contrast to $N^{1/3}$ for folded proteins. These scaling laws, and their meaning in terms of polymer physics, are developed in [7.6.21](/7.6.21) and applied to intrinsically disordered proteins in [7.6.16](/7.6.16).
+For flexible polymers the **intrinsic viscosity** grows with molar mass, because a coil is mostly solvent and its hydrodynamic volume grows faster than its mass. The Mark–Houwink exponent $a$ in $[\eta] = KM^a$ (**Mark–Houwink equation**) is $0$ for compact spheres, $0.5$ for random coils in a theta solvent, about $0.8$ in a good solvent and up to $1.8$ for rigid rods. Unfolded proteins in $6\,\mathrm{M}$ guanidinium chloride follow $[\eta] \approx 0.72\,N^{0.66}\,\mathrm{mL\,g^{-1}}$ for $N$ residues (Tanford, 1967), the behavior of random coils with **excluded volume**, and their hydrodynamic radii scale as $R_{\mathrm{h}} \propto N^{0.57}$, in contrast to $N^{1/3}$ for folded proteins. These scaling laws, and their meaning in terms of polymer physics, are developed in [7.6.21](/7.6.21) and applied to intrinsically disordered proteins in [7.6.16](/7.6.16).
 
 ## 8.11. Dynamic Light Scattering
 
@@ -489,7 +489,7 @@ For flexible polymers the intrinsic viscosity grows with molar mass, because a c
 
 Light scattered by a dilute solution is the sum of waves from all illuminated particles. Its intensity at a detector depends on their relative phases, which change as the particles diffuse; the intensity therefore fluctuates on the time scale on which particles move by about one wavelength, from microseconds to milliseconds (**dynamic light scattering**, DLS, [6.3.21](/6.3.21#sec-21.4.3)). The average intensity is the subject of static light scattering ([7.6.9](/7.6.9)); DLS analyzes its fluctuations.
 
-The scattered field from $N$ particles at positions $\boldsymbol{r}_j(t)$ is $E(t) \propto \sum_j \mathrm{e}^{\mathrm{i}\boldsymbol{q}\cdot\boldsymbol{r}_j(t)}$, where the scattering vector $\boldsymbol{q}$ is the difference between the scattered and incident wave vectors, of magnitude
+The scattered field from $N$ particles at positions $\boldsymbol{r}_j(t)$ is $E(t) \propto \sum_j \mathrm{e}^{\mathrm{i}\boldsymbol{q}\cdot\boldsymbol{r}_j(t)}$, where the **scattering vector** $\boldsymbol{q}$ is the difference between the scattered and incident wave vectors, of magnitude
 
 $$
 q = \frac{4\pi n}{\lambda_0}\sin\frac{\theta}{2},
@@ -538,7 +538,7 @@ The weighting is the main pitfall of DLS. In the Rayleigh regime the intensity s
 
 ### 8.11.3. Hydrodynamic Radius and Radius of Gyration
 
-DLS gives $R_{\mathrm{h}}$, a measure of friction; static scattering and small-angle X-ray scattering give the radius of gyration $R_{\mathrm{g}}$, the root-mean-square distance of the mass from its center ([7.6.9](/7.6.9)). Their ratio is a shape indicator independent of the absolute size: $R_{\mathrm{g}}/R_{\mathrm{h}} = \sqrt{3/5} = 0.775$ for a homogeneous sphere, about $1$ for a hollow sphere, about $1.5$ for a random coil, and more than $2$ for long rods. Compact proteins have $R_{\mathrm{g}}/R_{\mathrm{h}}$ around $0.75$–$0.8$, because the hydration layer enlarges $R_{\mathrm{h}}$ slightly more than $R_{\mathrm{g}}$.
+DLS gives $R_{\mathrm{h}}$, a measure of friction; static scattering and **small-angle X-ray scattering** give the **radius of gyration** $R_{\mathrm{g}}$, the root-mean-square distance of the mass from its center ([7.6.9](/7.6.9)). Their ratio is a shape indicator independent of the absolute size: $R_{\mathrm{g}}/R_{\mathrm{h}} = \sqrt{3/5} = 0.775$ for a homogeneous sphere, about $1$ for a hollow sphere, about $1.5$ for a random coil, and more than $2$ for long rods. Compact proteins have $R_{\mathrm{g}}/R_{\mathrm{h}}$ around $0.75$–$0.8$, because the hydration layer enlarges $R_{\mathrm{h}}$ slightly more than $R_{\mathrm{g}}$.
 
 ## 8.12. Choosing a Solution Method
 
