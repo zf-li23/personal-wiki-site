@@ -8381,3 +8381,21 @@ terms:
   - { zh: 量子生物学, en: quantum biology }
   - { zh: 退相干, en: decoherence }
   - { zh: 脑磁图, en: magnetoencephalography, aliases: [MEG] }
+  - { zh: Zwanzig 模型, en: Zwanzig model }
+  - { zh: 最小阻挫原理, en: principle of minimal frustration, aliases: [minimal frustration] }
+  - { zh: φ 值, en: phi value, aliases: [phi-value analysis, φ 值分析, φ value] }
+  - { zh: 接触序, en: contact order, aliases: [relative contact order] }
+  - { zh: HP 模型, en: HP model }
+  - { zh: 可设计性, en: designability }
+  - { zh: 最近邻模型, en: nearest-neighbor model, aliases: [nearest-neighbour model], scope: ["7"] }
+  - { zh: 动力学分配, en: kinetic partitioning }
+  - { zh: 磁镊, en: magnetic tweezers }
+  - { zh: 原子力显微镜, en: atomic force microscope, aliases: [AFM, atomic force microscopy] }
+  - { zh: 力–伸长曲线, en: force–extension curve, aliases: [force-extension curve] }
+  - { zh: Bell 模型, en: Bell model }
+  - { zh: 动态力谱, en: dynamic force spectroscopy }
+  - { zh: Jarzynski 等式, en: Jarzynski equality }
+  - { zh: Crooks 涨落定理, en: Crooks fluctuation theorem }
+  - { zh: 位置权重矩阵, en: position weight matrix, aliases: [energy matrix, PWM] }
+  - { zh: 静电导向, en: electrostatic steering }
+  - { zh: 滑动长度, en: sliding length }
