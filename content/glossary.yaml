@@ -8460,3 +8460,24 @@ terms:
   - { zh: 趋硬性, en: durotaxis }
   - { zh: 门控弹簧, en: gating spring }
   - { zh: 堵塞转变, en: jamming transition, aliases: [拥堵转变] }
+  - { zh: Poisson 过程, en: Poisson process, aliases: [泊松过程] }
+  - { zh: 倾向函数, en: propensity function }
+  - { zh: 化学主方程, en: chemical master equation, aliases: [CME] }
+  - { zh: 化学 Langevin 方程, en: chemical Langevin equation }
+  - { zh: 线性噪声近似, en: linear noise approximation, aliases: [LNA, 系统尺度展开, system-size expansion] }
+  - { zh: 吸引子, en: attractor }
+  - { zh: 吸引域, en: basin of attraction, aliases: [吸引盆] }
+  - { zh: 鞍结分岔, en: saddle-node bifurcation, aliases: [fold bifurcation, 折叠分岔] }
+  - { zh: 遗传拨动开关, en: genetic toggle switch, aliases: [toggle switch, 拨动开关] }
+  - { zh: 零倾线, en: nullcline, aliases: [零斜线] }
+  - { zh: 叉形分岔, en: pitchfork bifurcation }
+  - { zh: Goodwin 振子, en: Goodwin oscillator }
+  - { zh: 抑制振荡子, en: repressilator }
+  - { zh: 弛豫振子, en: relaxation oscillator, aliases: [弛豫振荡器] }
+  - { zh: Hopfield 网络, en: Hopfield network }
+  - { zh: 度分布, en: degree distribution }
+  - { zh: 无标度网络, en: scale-free network }
+  - { zh: 聚类系数, en: clustering coefficient }
+  - { zh: 小世界网络, en: small-world network }
+  - { zh: 化学计量矩阵, en: stoichiometric matrix }
+  - { zh: 通量平衡分析, en: flux balance analysis, aliases: [流平衡分析, FBA] }
