@@ -8264,3 +8264,28 @@ terms:
   - { zh: 自由 R 因子, en: free R value, aliases: [R_free, Rfree, 自由 R 值] }
   - { zh: X 射线自由电子激光, en: X-ray free-electron laser, aliases: [XFEL] }
   - { zh: 串行飞秒晶体学, en: serial femtosecond crystallography, aliases: [SFX, 串行晶体学, serial crystallography] }
+  - { zh: Larmor 频率, en: Larmor frequency, aliases: [拉莫尔频率] }
+  - { zh: 旋转坐标系, en: rotating frame, scope: ["7.6"] }
+  - { zh: Bloch 方程, en: Bloch equations, aliases: [布洛赫方程] }
+  - { zh: 自旋回波, en: spin echo, aliases: [Hahn 回波, Hahn echo] }
+  - { zh: 谱密度函数, en: spectral density function, aliases: [谱密度, spectral density], scope: ["7.6"] }
+  - { zh: 转动相关时间, en: rotational correlation time }
+  - { zh: TROSY, en: TROSY, aliases: [transverse relaxation-optimized spectroscopy, 横向弛豫优化谱] }
+  - { zh: 密度算符, en: density operator, aliases: [密度矩阵, density matrix] }
+  - { zh: 乘积算符, en: product-operator formalism, aliases: [乘积算符方法, product operators] }
+  - { zh: 二级化学位移, en: secondary chemical shift }
+  - { zh: 化学位移扰动, en: chemical shift perturbation, aliases: [CSP, 化学位移映射, chemical shift mapping] }
+  - { zh: 自旋扩散, en: spin diffusion }
+  - { zh: 残余偶极耦合, en: residual dipolar coupling, aliases: [RDC] }
+  - { zh: 顺磁弛豫增强, en: paramagnetic relaxation enhancement, aliases: [PRE] }
+  - { zh: 赝接触位移, en: pseudocontact shift, aliases: [PCS] }
+  - { zh: 化学交换, en: chemical exchange, scope: ["7"] }
+  - { zh: 广义序参量, en: generalized order parameter, aliases: [序参数 S², order parameter S²] }
+  - { zh: 无模型分析, en: model-free analysis, aliases: [Lipari–Szabo 分析, Lipari–Szabo analysis] }
+  - { zh: 弛豫色散, en: relaxation dispersion, aliases: [弛豫弥散, CPMG 弛豫色散] }
+  - { zh: 化学交换饱和转移, en: chemical exchange saturation transfer, aliases: [CEST] }
+  - { zh: 氢–氘交换, en: hydrogen–deuterium exchange, aliases: [氢氘交换, HDX, H/D exchange, hydrogen exchange] }
+  - { zh: 保护因子, en: protection factor }
+  - { zh: 定点自旋标记, en: site-directed spin labeling, aliases: [SDSL] }
+  - { zh: 双电子–电子共振, en: double electron–electron resonance, aliases: [DEER, PELDOR, 脉冲电子–电子双共振] }
+  - { zh: 动态核极化, en: dynamic nuclear polarization, aliases: [DNP] }
