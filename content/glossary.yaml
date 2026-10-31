@@ -8152,3 +8152,33 @@ terms:
   - { zh: 发育约束, en: developmental constraint, aliases: [developmental constraints] }
 
   # biology: biophysics (7.6); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 小角散射, en: small-angle scattering, aliases: [SAS] }
+  - { zh: 小角 X 射线散射, en: small-angle X-ray scattering, aliases: [SAXS, BioSAXS] }
+  - { zh: 小角中子散射, en: small-angle neutron scattering, aliases: [SANS] }
+  - { zh: 弹性散射, en: elastic scattering }
+  - { zh: 非弹性散射, en: inelastic scattering }
+  - { zh: 散射矢量, en: scattering vector, aliases: [momentum transfer] }
+  - { zh: 静态光散射, en: static light scattering, aliases: [SLS, 多角度激光光散射, multi-angle light scattering, MALS] }
+  - { zh: Rayleigh 比, en: Rayleigh ratio, aliases: [瑞利比] }
+  - { zh: 折射率增量, en: refractive-index increment, aliases: [dn/dc] }
+  - { zh: Zimm 图, en: Zimm plot, aliases: [齐姆图] }
+  - { zh: Debye 散射公式, en: Debye scattering equation, aliases: [Debye 公式, Debye formula] }
+  - { zh: 形状因子, en: form factor, aliases: [粒子散射因子, particle scattering factor], scope: ["7"] }
+  - { zh: 粒子间结构因子, en: interparticle structure factor }
+  - { zh: 回转半径, en: radius of gyration }
+  - { zh: Guinier 近似, en: Guinier approximation, aliases: [吉尼尔近似] }
+  - { zh: Guinier 图, en: Guinier plot }
+  - { zh: 对距离分布函数, en: pair-distance distribution function, aliases: [PDDF] }
+  - { zh: Porod 定律, en: "Porod's law" }
+  - { zh: Porod 不变量, en: Porod invariant }
+  - { zh: Porod 体积, en: Porod volume }
+  - { zh: 散射长度密度, en: scattering length density, aliases: [SLD] }
+  - { zh: 衬度变换, en: contrast variation, aliases: [衬度匹配, contrast matching] }
+  - { zh: 匹配点, en: match point, scope: ["7.6"] }
+  - { zh: Shannon 通道, en: Shannon channel }
+  - { zh: 相关体积, en: volume of correlation }
+  - { zh: Kratky 图, en: Kratky plot }
+  - { zh: 无量纲 Kratky 图, en: dimensionless Kratky plot }
+  - { zh: 间接 Fourier 变换, en: indirect Fourier transform }
+  - { zh: 从头形状重建, en: ab initio shape reconstruction, aliases: [从头建模, ab initio modeling] }
+  - { zh: 模拟退火, en: simulated annealing }
