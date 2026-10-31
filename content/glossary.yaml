@@ -8438,3 +8438,25 @@ terms:
   - { zh: 横桥模型, en: cross-bridge model, aliases: [Huxley 横桥模型, Huxley cross-bridge model] }
   - { zh: Hill 力–速度方程, en: "Hill's force–velocity relation", aliases: [Hill force-velocity relation] }
   - { zh: 转位棘轮, en: translocation ratchet }
+  - { zh: 自组装, en: self-assembly }
+  - { zh: 粘结位点–间隔区模型, en: stickers-and-spacers model, aliases: [stickers–spacers model] }
+  - { zh: LSW 理论, en: Lifshitz–Slyozov–Wagner theory, aliases: [LSW theory, Lifshitz–Slyozov–Wagner 理论] }
+  - { zh: 逆毛细速度, en: inverse capillary velocity }
+  - { zh: 主动乳液, en: active emulsion }
+  - { zh: 平衡点模型, en: balance-point model }
+  - { zh: Nernst–Planck 方程, en: Nernst–Planck equation, aliases: [能斯特–普朗克方程] }
+  - { zh: 电压感受器, en: voltage sensor, aliases: [voltage-sensing domain, 电压感受结构域] }
+  - { zh: 门控电流, en: gating current }
+  - { zh: 电缆方程, en: cable equation }
+  - { zh: 长度常数, en: length constant, aliases: [space constant, 空间常数], scope: ["7"] }
+  - { zh: 电压钳, en: voltage clamp }
+  - { zh: Hodgkin–Huxley 模型, en: Hodgkin–Huxley model, aliases: [HH 模型, Hodgkin–Huxley equations] }
+  - { zh: 动作电位, en: action potential }
+  - { zh: 跳跃传导, en: saltatory conduction }
+  - { zh: 电器官, en: electric organ, aliases: [发电器官] }
+  - { zh: Hertz 接触模型, en: Hertz contact model, aliases: [Hertz model, 赫兹模型] }
+  - { zh: 牵引力显微术, en: traction force microscopy, aliases: [TFM] }
+  - { zh: 分子离合器模型, en: molecular clutch model, aliases: [molecular clutch, motor–clutch model] }
+  - { zh: 趋硬性, en: durotaxis }
+  - { zh: 门控弹簧, en: gating spring }
+  - { zh: 堵塞转变, en: jamming transition, aliases: [拥堵转变] }
