@@ -8481,3 +8481,28 @@ terms:
   - { zh: 小世界网络, en: small-world network }
   - { zh: 化学计量矩阵, en: stoichiometric matrix }
   - { zh: 通量平衡分析, en: flux balance analysis, aliases: [流平衡分析, FBA] }
+  - { zh: Berg–Purcell 极限, en: Berg–Purcell limit }
+  - { zh: 互信息, en: mutual information }
+  - { zh: 信道容量, en: channel capacity }
+  - { zh: Blahut–Arimoto 算法, en: Blahut–Arimoto algorithm }
+  - { zh: 奔跑–翻滚运动, en: run-and-tumble, aliases: [run-and-tumble motility, 奔跑与翻滚] }
+  - { zh: 受体簇, en: receptor cluster, aliases: [chemoreceptor array, 化学受体阵列], scope: ["7"] }
+  - { zh: Barkai–Leibler 模型, en: Barkai–Leibler model }
+  - { zh: 积分反馈, en: integral feedback, aliases: [积分反馈控制, integral feedback control] }
+  - { zh: Weber–Fechner 定律, en: Weber–Fechner law, aliases: [Weber 定律, "Weber's law"] }
+  - { zh: 倍数变化检测, en: fold-change detection }
+  - { zh: Swift–Hohenberg 方程, en: Swift–Hohenberg equation }
+  - { zh: Min 振荡, en: Min oscillation, aliases: [Min system, Min 系统] }
+  - { zh: 质量守恒反应扩散系统, en: mass-conserved reaction–diffusion system, aliases: [mass-conserving reaction–diffusion] }
+  - { zh: 触发波, en: trigger wave }
+  - { zh: 异形胞, en: heterocyst }
+  - { zh: 活性物质, en: active matter }
+  - { zh: 主动 Brown 粒子, en: active Brownian particle, aliases: [活性布朗粒子] }
+  - { zh: Vicsek 模型, en: Vicsek model }
+  - { zh: 极性序参量, en: polar order parameter }
+  - { zh: 向列序参量, en: nematic order parameter, aliases: [Q 张量, Q tensor] }
+  - { zh: 拓扑缺陷, en: topological defect }
+  - { zh: Mermin–Wagner 定理, en: Mermin–Wagner theorem }
+  - { zh: Toner–Tu 理论, en: Toner–Tu theory, aliases: [Toner–Tu 方程, Toner–Tu equations] }
+  - { zh: 运动诱导相分离, en: motility-induced phase separation }
+  - { zh: 活性向列相, en: active nematic }
