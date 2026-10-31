@@ -8424,3 +8424,9 @@ terms:
   - { zh: 膜管, en: membrane tether, aliases: [membrane tethers, 膜管拉伸] }
   - { zh: 半融合, en: hemifusion }
   - { zh: 面积差弹性, en: area-difference elasticity, aliases: [ADE model, 面积差弹性模型] }
+  - { zh: 疏水失配, en: hydrophobic mismatch }
+  - { zh: 疏水厚度, en: hydrophobic thickness }
+  - { zh: 抗弯刚度, en: flexural rigidity, aliases: [bending stiffness] }
+  - { zh: Euler 屈曲, en: Euler buckling, aliases: [欧拉屈曲] }
+  - { zh: 弹性 Brown 棘轮, en: elastic Brownian ratchet, aliases: [弹性布朗棘轮] }
+  - { zh: Dogterom–Leibler 模型, en: Dogterom–Leibler model }
