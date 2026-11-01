@@ -8630,3 +8630,24 @@ terms:
   - { zh: k-mer, en: k-mer, aliases: [k-mers, k 聚体] }
   - { zh: k-mer 谱, en: k-mer spectrum, aliases: [k-mer spectra] }
   - { zh: 接头, en: adapter, aliases: [adapters, 测序接头], scope: ["7"] }   # sequencing adapter; 4.7 has the design-pattern adapter
+
+  # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 系统生物学, en: systems biology }
+  - { zh: 组学, en: omics }
+  - { zh: 表型组, en: phenome }
+  - { zh: 正向模型, en: forward model, scope: ["7"] }
+  - { zh: 逆向模型, en: inverse model, aliases: [反向工程], scope: ["7"] }
+  - { zh: 生物学重复, en: biological replicate, aliases: [biological replicates] }
+  - { zh: 技术重复, en: technical replicate, aliases: [technical replicates] }
+  - { zh: 批次效应, en: batch effect, aliases: [batch effects] }
+  - { zh: 伪比对, en: pseudoalignment }
+  - { zh: 每千碱基每百万片段, en: fragments per kilobase per million, aliases: [FPKM, RPKM] }
+  - { zh: 分位数标准化, en: quantile normalization }
+  - { zh: 差异表达, en: differential expression, aliases: [差异表达基因, differentially expressed] }
+  - { zh: MA 图, en: MA plot, aliases: [M–A 图, M-A plot] }
+  - { zh: 过度代表分析, en: over-representation analysis, aliases: [ORA, 富集分析, enrichment analysis] }
+  - { zh: 基因集富集分析, en: gene set enrichment analysis, aliases: [GSEA] }
+  - { zh: 富集分数, en: enrichment score }
+  - { zh: 领先边缘, en: leading edge, aliases: [leading-edge subset], scope: ["7"] }
+  - { zh: 火山图, en: volcano plot, scope: ["3", "7"] }   # statistics plot; beats the unscoped Sabatier alias inside 3 and 7
+  - { zh: 每百万转录本, en: transcripts per million, aliases: [TPM] }   # 3.x has TPM = total probability of misclassification (scoped, wins inside 3)
