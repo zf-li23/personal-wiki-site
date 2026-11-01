@@ -8795,6 +8795,36 @@ terms:
   - { zh: VCF 格式, en: Variant Call Format, aliases: [VCF] }
   - { zh: 转换/颠换比, en: transition/transversion ratio, aliases: [Ti/Tv] }
   - { zh: HGVS 命名, en: HGVS nomenclature }
+  - { zh: 基因型矩阵, en: genotype matrix }
+  - { zh: 遗传关系矩阵, en: genetic relationship matrix, aliases: [GRM, genomic relationship matrix, 基因组关系矩阵] }
+  - { zh: 祖先成分分析, en: admixture analysis, aliases: [ADMIXTURE 模型, admixture model] }
+  - { zh: 单倍型定相, en: haplotype phasing, aliases: [定相], scope: ["7"] }
+  - { zh: 基因型填补, en: genotype imputation, aliases: [基因型插补] }
+  - { zh: 汇总统计, en: summary statistics, aliases: [GWAS 汇总统计, GWAS summary statistics], scope: ["7.4", "7.8", "7.9"] }
+  - { zh: LD 聚团, en: LD clumping, aliases: [clumping, 聚团] }
+  - { zh: 扩展单倍型纯合度, en: extended haplotype homozygosity, aliases: [EHH] }
+  - { zh: 整合单倍型评分, en: integrated haplotype score, aliases: [iHS] }
+  - { zh: 宏基因组学, en: metagenomics, aliases: [元基因组学] }
+  - { zh: 微生物组, en: microbiome, aliases: [microbiomes] }
+  - { zh: 扩增子测序, en: amplicon sequencing }
+  - { zh: 操作分类单元, en: operational taxonomic unit, aliases: [OTU, OTUs] }
+  - { zh: 扩增子序列变体, en: amplicon sequence variant, aliases: [ASV, ASVs] }
+  - { zh: 最近公共祖先, en: lowest common ancestor, aliases: [LCA, 最低共同祖先] }
+  - { zh: 分箱, en: binning, scope: ["7"] }
+  - { zh: 宏基因组组装基因组, en: metagenome-assembled genome, aliases: [MAG, MAGs] }
+  - { zh: α 多样性, en: alpha diversity, scope: ["7"] }
+  - { zh: 丰富度, en: richness, aliases: [物种丰富度, species richness], scope: ["7"] }
+  - { zh: Shannon 指数, en: Shannon index, aliases: [Shannon 多样性指数, Shannon diversity index] }
+  - { zh: Simpson 指数, en: Simpson index, aliases: [Simpson 多样性指数] }
+  - { zh: Hill 数, en: Hill number, aliases: [Hill numbers, 有效物种数] }
+  - { zh: 稀释曲线, en: rarefaction curve, aliases: [rarefaction curves] }
+  - { zh: β 多样性, en: beta diversity, scope: ["7"] }
+  - { zh: Bray–Curtis 相异度, en: Bray–Curtis dissimilarity, aliases: [Bray–Curtis distance, Bray–Curtis 距离] }
+  - { zh: Jaccard 距离, en: Jaccard distance }
+  - { zh: UniFrac, en: UniFrac, aliases: [UniFrac 距离, UniFrac distance] }
+  - { zh: PERMANOVA, en: PERMANOVA, aliases: [置换多元方差分析, permutational multivariate analysis of variance] }
+  - { zh: 组成数据, en: compositional data, aliases: [成分数据] }
+  - { zh: Aitchison 距离, en: Aitchison distance }
 
   # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
   - { zh: 系统生物学, en: systems biology }
