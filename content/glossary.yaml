@@ -8822,3 +8822,18 @@ terms:
   - { zh: 系统发生谱, en: phylogenetic profile, aliases: [phylogenetic profiles, 系统发育谱] }
   - { zh: 遗传相互作用谱, en: genetic-interaction profile, aliases: [genetic-interaction profiles, genetic interaction profile] }
   - { zh: CRISPR 筛选, en: CRISPR screen, aliases: [CRISPR screens, CRISPR screening] }
+  - { zh: 基因调控网络, en: gene regulatory network, aliases: [GRN, 转录调控网络, transcriptional regulatory network, gene regulatory networks] }
+  - { zh: 共表达网络, en: co-expression network, aliases: [基因共表达网络, gene co-expression network] }
+  - { zh: 拓扑重叠, en: topological overlap, aliases: [TOM, 拓扑重叠矩阵, topological overlap matrix] }
+  - { zh: 图 lasso, en: graphical lasso, aliases: [glasso] }
+  - { zh: 条件互信息, en: conditional mutual information }
+  - { zh: 数据处理不等式, en: data processing inequality, aliases: [DPI] }
+  - { zh: ARACNe, en: ARACNe }
+  - { zh: 贝叶斯网络, en: Bayesian network, aliases: [Bayes 网络, Bayesian networks] }
+  - { zh: Markov 等价, en: Markov equivalence, aliases: [Markov equivalent, 马尔可夫等价] }
+  - { zh: 调节子活性, en: regulon activity, aliases: [调控子活性] }
+  - { zh: 中心性–致死性规则, en: centrality–lethality rule, aliases: [centrality-lethality rule] }
+  - { zh: 活性子网络, en: active subnetwork, aliases: [active subnetworks, active module] }
+  - { zh: 网络传播, en: network propagation }
+  - { zh: 疾病模块, en: disease module, aliases: [disease modules] }
+  - { zh: 网络联配, en: network alignment, aliases: [网络比对] }
