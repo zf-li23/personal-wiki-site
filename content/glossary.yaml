@@ -8618,6 +8618,23 @@ terms:
   - { zh: 统计功效, en: statistical power, aliases: [功效, 检验功效, power of a test] }
   - { zh: 标准化死亡比, en: standardized mortality ratio, aliases: [SMR, 标准化发病比, standardized morbidity ratio] }
   - { zh: 效应量, en: effect size }
+  - { zh: 配对设计, en: paired design, aliases: [配对样本, paired samples, matched pairs] }
+  - { zh: 两样本 t 检验, en: two-sample t-test, aliases: [独立样本 t 检验, independent-samples t-test, 合并方差 t 检验, pooled t-test] }
+  - { zh: 合并方差, en: pooled variance }
+  - { zh: 渐近相对效率, en: asymptotic relative efficiency, aliases: [Pitman 效率, Pitman efficiency] }   # ARE alias dropped: AU-rich element
+  - { zh: 置换检验, en: permutation test, aliases: [randomization test] }
+  - { zh: Spearman 秩相关系数, en: "Spearman's rank correlation coefficient", aliases: [Spearman 相关系数, "Spearman's rho"] }
+  - { zh: Kendall 秩相关系数, en: "Kendall's tau", aliases: [Kendall τ, Kendall rank correlation coefficient] }
+  - { zh: Hodges–Lehmann 估计, en: Hodges–Lehmann estimator }
+  - { zh: Dunn 检验, en: "Dunn's test" }
+  - { zh: Yates 校正, en: "Yates's correction for continuity", aliases: [Yates 连续性校正, Yates correction] }
+  - { zh: Fisher 精确检验, en: "Fisher's exact test", aliases: [Fisher 确切概率法] }
+  - { zh: Cochran–Armitage 趋势检验, en: Cochran–Armitage trend test, aliases: [趋势卡方检验, chi-square test for trend] }
+  - { zh: φ 系数, en: phi coefficient }
+  - { zh: Cramér V, en: "Cramér's V" }
+  - { zh: Cohen κ, en: "Cohen's kappa", aliases: [κ 系数, kappa statistic] }
+  - { zh: 期望频数, en: expected frequency }
+  - { zh: 过度离散, en: overdispersion }
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }
