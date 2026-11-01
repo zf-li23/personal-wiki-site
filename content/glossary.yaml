@@ -8745,3 +8745,37 @@ terms:
   - { zh: 细胞类型去卷积, en: cell-type deconvolution, aliases: [去卷积, deconvolution], scope: ["7"] }
   - { zh: 最优传输, en: optimal transport, aliases: [熵正则最优传输, entropic optimal transport] }
   - { zh: 图像配准, en: image registration, aliases: [配准, registration], scope: ["7"] }
+  - { zh: 伪时间, en: pseudotime }
+  - { zh: RNA 速度, en: RNA velocity }
+  - { zh: 准势, en: quasi-potential }
+  - { zh: 原型, en: archetype, aliases: [archetypes, archetype analysis, 原型分析], scope: ["7"] }
+  - { zh: 谱系条形码, en: lineage barcode, aliases: [lineage barcodes] }
+  - { zh: 细胞–细胞通讯, en: cell–cell communication, aliases: [cell-cell communication, 细胞通讯] }
+  - { zh: 先锋因子, en: pioneer factor, aliases: [pioneer factors, pioneer transcription factor, 先驱因子] }
+  - { zh: 连接性图谱, en: connectivity map, aliases: [CMap] }
+  - { zh: 链互相关, en: strand cross-correlation }
+  - { zh: 峰识别, en: peak calling }
+  - { zh: 不可重复发现率, en: irreproducible discovery rate }
+  - { zh: ATAC-seq, en: ATAC-seq }
+  - { zh: 足迹占据分数, en: footprint occupancy score }
+  - { zh: 染色质状态, en: chromatin state, aliases: [chromatin states] }
+  - { zh: 差异甲基化区域, en: differentially methylated region, aliases: [DMR, DMRs] }
+  - { zh: Hi-C, en: Hi-C }
+  - { zh: A/B 区室, en: A/B compartments, aliases: [染色质区室, chromatin compartment] }
+  - { zh: 绝缘分数, en: insulation score }
+  - { zh: 活性–接触模型, en: activity-by-contact model, aliases: [ABC model], scope: ["7"] }
+  - { zh: 蛋白质形式, en: proteoform, aliases: [proteoforms] }
+  - { zh: 肽谱匹配, en: peptide-spectrum match, aliases: [PSMs, peptide-spectrum matches] }
+  - { zh: 目标–诱饵法, en: target–decoy approach, aliases: [target-decoy approach, target–decoy strategy] }
+  - { zh: SILAC, en: SILAC, aliases: [stable isotope labeling by amino acids in cell culture] }
+  - { zh: 等重标记, en: isobaric labeling, aliases: [同位素标签定量, isobaric tags, TMT, iTRAQ, tandem mass tags] }
+  - { zh: 数据非依赖采集, en: data-independent acquisition, aliases: [DIA, SWATH] }
+  - { zh: 磷酸化蛋白质组, en: phosphoproteome, aliases: [磷酸化蛋白质组学, phosphoproteomics] }
+  - { zh: 代谢组学, en: metabolomics, aliases: [代谢组, metabolome] }
+  - { zh: 质量同位素异构体分布, en: mass isotopomer distribution, aliases: [MID, isotopologue distribution] }
+  - { zh: 相互作用组, en: interactome }
+  - { zh: 亲和纯化–质谱, en: affinity purification–mass spectrometry, aliases: [AP-MS, affinity purification-mass spectrometry] }
+  - { zh: 邻近标记, en: proximity labeling, aliases: [BioID, TurboID, APEX] }
+  - { zh: 系统发生谱, en: phylogenetic profile, aliases: [phylogenetic profiles, 系统发育谱] }
+  - { zh: 遗传相互作用谱, en: genetic-interaction profile, aliases: [genetic-interaction profiles, genetic interaction profile] }
+  - { zh: CRISPR 筛选, en: CRISPR screen, aliases: [CRISPR screens, CRISPR screening] }
