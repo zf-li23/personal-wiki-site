@@ -8530,3 +8530,42 @@ terms:
   - { zh: Karlin–Altschul 统计, en: Karlin–Altschul statistics }
   - { zh: Jukes–Cantor 距离, en: Jukes–Cantor distance, aliases: [Jukes–Cantor model] }
   - { zh: 适合度景观, en: fitness landscape, aliases: [适应度景观] }
+
+  # biology: biostatistics (7.7); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 生物统计学, en: biostatistics, aliases: [医学统计学, medical statistics] }
+  - { zh: 测量尺度, en: level of measurement, aliases: [measurement scale, 测量水平] }
+  - { zh: 名义尺度, en: nominal scale, aliases: [名义变量, nominal variable] }
+  - { zh: 有序尺度, en: ordinal scale, aliases: [有序变量, ordinal variable, 等级变量] }
+  - { zh: 区间尺度, en: interval scale }
+  - { zh: 比例尺度, en: ratio scale }
+  - { zh: 离散变量, en: discrete variable, scope: ["7.7"] }
+  - { zh: 连续变量, en: continuous variable, scope: ["7.7"] }
+  - { zh: 横断面数据, en: cross-sectional data }
+  - { zh: 纵向数据, en: longitudinal data, aliases: [重复测量数据] }
+  - { zh: 生存数据, en: time-to-event data, aliases: [事件时间数据, survival data] }
+  - { zh: 删失, en: censoring, aliases: [右删失, right censoring, 截尾] }
+  - { zh: 实验性研究, en: experimental study }
+  - { zh: 观察性研究, en: observational study }
+  - { zh: 众数, en: mode, scope: ["3", "7.7"] }
+  - { zh: 几何均数, en: geometric mean, aliases: [几何平均数] }
+  - { zh: 调和均数, en: harmonic mean, aliases: [调和平均数] }
+  - { zh: 四分位距, en: interquartile range, aliases: [IQR, 四分位数间距] }
+  - { zh: 平均绝对偏差, en: mean absolute deviation, aliases: [平均差] }
+  - { zh: 中位数绝对偏差, en: median absolute deviation }
+  - { zh: 样本百分位数, en: sample percentile, aliases: [百分位数, percentile] }
+  - { zh: 参考值范围, en: reference interval, aliases: [参考区间, 正常值范围, reference range] }
+  - { zh: z 分数, en: z-score, aliases: [标准分数, standard score] }
+  - { zh: 频数表, en: frequency table, aliases: [频数分布表] }
+  - { zh: 直方图, en: histogram }
+  - { zh: 茎叶图, en: stem-and-leaf plot, aliases: [stem-and-leaf display] }
+  - { zh: 患病率, en: prevalence, aliases: [现患率] }
+  - { zh: 累积发病率, en: cumulative incidence }
+  - { zh: 人时, en: person-time, aliases: [人年, person-years] }
+  - { zh: 发病密度, en: incidence rate, aliases: [发病率, incidence density] }
+  - { zh: 阳性预测值, en: positive predictive value, aliases: [PPV, 阳性预测率] }
+  - { zh: 阴性预测值, en: negative predictive value, aliases: [NPV] }
+  - { zh: 诊断似然比, en: diagnostic likelihood ratio, aliases: [阳性似然比, 阴性似然比, positive likelihood ratio, negative likelihood ratio] }
+  - { zh: Youden 指数, en: Youden index, aliases: ["Youden's index", "Youden's J", 约登指数] }
+  - { zh: 离群值, en: outlier, aliases: [离群点, 异常值, outliers], scope: ["7"] }   # biostatistics sense in 7; the 3.x entry keeps scope 3
+  - { zh: 灵敏度, en: sensitivity, scope: ["7"] }   # diagnostic tests; distinct from analytical sensitivity (6) and recall (3.4)
+  - { zh: 特异度, en: specificity, scope: ["7"] }   # diagnostic tests; 3.4 has its own

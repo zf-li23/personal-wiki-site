@@ -1,0 +1,17 @@
+id,trt,celltype,time,status,karno,diagtime,age,prior
+1,1,squamous,72,1,60,7,69,0
+10,1,squamous,100,0,70,6,70,0
+14,1,squamous,25,0,80,9,52,10
+21,1,smallcell,123,0,40,3,55,0
+22,1,smallcell,97,0,60,5,67,0
+24,1,smallcell,59,1,30,2,65,0
+43,1,smallcell,63,1,50,11,48,0
+62,1,large,200,1,80,12,41,10
+64,1,large,182,0,90,2,62,0
+72,2,squamous,87,0,80,3,48,0
+73,2,squamous,231,0,50,8,52,10
+84,2,squamous,201,1,80,28,52,10
+91,2,smallcell,103,0,70,22,36,10
+104,2,smallcell,95,1,70,1,61,0
+110,2,adeno,83,0,99,3,57,0
+124,2,adeno,45,1,40,3,69,0
