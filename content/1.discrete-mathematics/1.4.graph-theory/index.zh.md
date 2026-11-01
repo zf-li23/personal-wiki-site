@@ -4,6 +4,11 @@ courses:
   - code: "20240023"
     name: 离散数学(2)
     name_en: Discrete Mathematics (2)
+  - code: "PK01132683"
+    name: 网络科学与系统生物学基础
+    name_en: Foundations of Network Science and Systems Biology
+    note: 网络科学部分
+    note_en: network science part
 textbooks:
   - title: 图论与代数结构
     author: 崔勇、张小平

@@ -501,6 +501,40 @@ terms:
   - { zh: 凝聚图, en: condensation, aliases: [condensation graph, 缩点图], scope: ["1.4", "4"] }
   - { zh: Kahn 算法, en: "Kahn's algorithm" }
   - { zh: Kosaraju 算法, en: "Kosaraju's algorithm" }
+  - { zh: 网络科学, en: network science }
+  - { zh: 复杂网络, en: complex network, aliases: [complex networks] }
+  - { zh: 平均路径长度, en: average path length, aliases: [平均距离, average distance] }
+  - { zh: 同配性, en: assortativity, aliases: [同配系数, assortativity coefficient] }
+  - { zh: 随机图, en: random graph, aliases: [Erdős–Rényi 模型, Erdős–Rényi model, ER 随机图, 随机网络, random network] }
+  - { zh: 巨分支, en: giant component, aliases: [巨连通分支, giant connected component] }
+  - { zh: Watts–Strogatz 模型, en: Watts–Strogatz model }
+  - { zh: 幂律分布, en: power-law distribution, aliases: [幂律, power law] }
+  - { zh: 度指数, en: degree exponent }
+  - { zh: 枢纽节点, en: hub, aliases: [hubs, 枢纽], scope: ["1", "7"] }
+  - { zh: 超小世界, en: ultra-small world }
+  - { zh: 友谊悖论, en: friendship paradox }
+  - { zh: 配置模型, en: configuration model }
+  - { zh: 保度随机化, en: degree-preserving randomization, aliases: [degree-preserving rewiring, 度保持随机化] }
+  - { zh: 偏好连接, en: preferential attachment, aliases: [优先连接] }
+  - { zh: Barabási–Albert 模型, en: Barabási–Albert model, aliases: [BA 模型, BA model] }
+  - { zh: 适应度模型, en: Bianconi–Barabási model, aliases: [Bianconi–Barabási 模型, fitness model], scope: ["1.4"] }
+  - { zh: 中心性, en: centrality }
+  - { zh: 接近中心性, en: closeness centrality, aliases: [紧密度, closeness] }
+  - { zh: 介数中心性, en: betweenness centrality, aliases: [介数, betweenness] }
+  - { zh: 特征向量中心性, en: eigenvector centrality }
+  - { zh: PageRank, en: PageRank }
+  - { zh: 社团结构, en: community structure, aliases: [社团, community], scope: ["1.4", "7"] }
+  - { zh: 团, en: clique, aliases: [cliques], scope: ["1.4"] }
+  - { zh: Girvan–Newman 算法, en: Girvan–Newman algorithm }
+  - { zh: Louvain 算法, en: Louvain algorithm, aliases: [Louvain method] }
+  - { zh: Leiden 算法, en: Leiden algorithm }
+  - { zh: 渗流, en: percolation, scope: ["1.4", "7"] }
+  - { zh: Molloy–Reed 判据, en: Molloy–Reed criterion }
+  - { zh: SIR 模型, en: SIR model }
+  - { zh: 基本再生数, en: basic reproduction number, aliases: [基本传染数] }
+  - { zh: 流行阈值, en: epidemic threshold, aliases: [传播阈值] }
+  - { zh: 网络模体, en: network motif, aliases: [network motifs] }
+  - { zh: 模块度, en: modularity, scope: ["1.4"] }   # network modularity Q; 模块化 (software) unscoped, 模块性 (biology) scope 7
   # linear algebra and calculus
   - { zh: 特征值, en: eigenvalue, aliases: [本征值] }
   - { zh: 特征向量, en: eigenvector }
@@ -7799,7 +7833,7 @@ terms:
   - { zh: 染色质消减, en: chromatin diminution }
   - { zh: 基因扩增, en: gene amplification }
   - { zh: 异配性别, en: heterogametic sex, aliases: [异配性], scope: ["7"] }
-  - { zh: 同配性别, en: homogametic sex, aliases: [同配性], scope: ["7"] }
+  - { zh: 同配性别, en: homogametic sex, scope: ["7"] }
   - { zh: 单倍二倍性, en: haplodiploidy, aliases: [单倍二倍性别决定, haplodiploid] }
   - { zh: 温度依赖型性别决定, en: temperature-dependent sex determination, aliases: [温度依赖性别决定, TSD], scope: ["7"] }
   - { zh: 共祖系数, en: kinship coefficient, aliases: [coefficient of kinship, coancestry coefficient] }
@@ -8569,3 +8603,30 @@ terms:
   - { zh: 离群值, en: outlier, aliases: [离群点, 异常值, outliers], scope: ["7"] }   # biostatistics sense in 7; the 3.x entry keeps scope 3
   - { zh: 灵敏度, en: sensitivity, scope: ["7"] }   # diagnostic tests; distinct from analytical sensitivity (6) and recall (3.4)
   - { zh: 特异度, en: specificity, scope: ["7"] }   # diagnostic tests; 3.4 has its own
+
+  # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 生物信息学, en: bioinformatics }
+  - { zh: FASTA 格式, en: FASTA format, aliases: [FASTA] }
+  - { zh: BED 格式, en: BED format }
+  - { zh: GFF 格式, en: GFF format, aliases: [GFF3, GFF3 format] }
+  - { zh: 反向互补序列, en: reverse complement, aliases: [反向互补] }
+  - { zh: 零起始半开区间坐标, en: zero-based half-open coordinates }
+  - { zh: FAIR 原则, en: FAIR principles }
+  - { zh: 一级数据库, en: primary database, aliases: [原始数据库, primary databases], scope: ["7"] }
+  - { zh: 二级数据库, en: secondary database, aliases: [secondary databases], scope: ["7"] }
+  - { zh: 国际核苷酸序列数据库合作组织, en: International Nucleotide Sequence Database Collaboration, aliases: [INSDC] }
+  - { zh: RefSeq, en: RefSeq, aliases: [参考序列数据库, NCBI Reference Sequence database] }
+  - { zh: UniProt, en: UniProt, aliases: [UniProtKB] }
+  - { zh: 参考基因组, en: reference genome, aliases: [reference genomes] }
+  - { zh: 坐标转换, en: liftover, aliases: [基因组坐标转换] }
+  - { zh: 本体, en: ontology, aliases: [ontologies], scope: ["7"] }
+  - { zh: 基因本体, en: Gene Ontology, aliases: [GO] }
+  - { zh: 读段, en: read, aliases: [reads, 测序读段], scope: ["7"] }
+  - { zh: FASTQ 格式, en: FASTQ format, aliases: [FASTQ] }
+  - { zh: 双端测序, en: paired-end sequencing, aliases: [paired-end reads] }
+  - { zh: 样本拆分, en: demultiplexing }
+  - { zh: 唯一分子标识符, en: unique molecular identifier, aliases: [UMI, UMIs, unique molecular identifiers] }
+  - { zh: PCR 重复, en: PCR duplicate, aliases: [PCR duplicates, 重复读段] }
+  - { zh: k-mer, en: k-mer, aliases: [k-mers, k 聚体] }
+  - { zh: k-mer 谱, en: k-mer spectrum, aliases: [k-mer spectra] }
+  - { zh: 接头, en: adapter, aliases: [adapters, 测序接头], scope: ["7"] }   # sequencing adapter; 4.7 has the design-pattern adapter
