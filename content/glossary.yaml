@@ -8651,6 +8651,50 @@ terms:
   - { zh: 析因设计, en: factorial design, aliases: [factorial experiment] }
   - { zh: 实验单位, en: experimental unit }
   - { zh: 伪重复, en: pseudoreplication }
+  - { zh: 队列研究, en: cohort study, aliases: [前瞻性队列, prospective cohort] }
+  - { zh: 病例对照研究, en: case-control study }
+  - { zh: 横断面研究, en: cross-sectional study }
+  - { zh: 生态学研究, en: ecological study }
+  - { zh: 危险度差, en: risk difference, aliases: [RD] }
+  - { zh: 相对危险度, en: relative risk, aliases: [危险比, risk ratio, RR] }
+  - { zh: 率比, en: rate ratio, aliases: [incidence rate ratio] }
+  - { zh: 暴露者归因分数, en: attributable fraction among the exposed }
+  - { zh: 人群归因分数, en: population attributable fraction, aliases: [人群归因危险度, PAF, population attributable risk] }
+  - { zh: 需治疗人数, en: number needed to treat, aliases: [NNT] }
+  - { zh: 选择偏倚, en: selection bias }
+  - { zh: 信息偏倚, en: information bias }
+  - { zh: 回忆偏倚, en: recall bias }
+  - { zh: 混杂, en: confounding, aliases: [混杂因素, confounder] }
+  - { zh: 直接标准化, en: direct standardization }
+  - { zh: 间接标准化, en: indirect standardization }
+  - { zh: Mantel–Haenszel 检验, en: Mantel–Haenszel test, aliases: [Cochran–Mantel–Haenszel 检验, Cochran–Mantel–Haenszel test] }
+  - { zh: 效应修饰, en: effect modification, aliases: [效应修饰因子, effect modifier] }
+  - { zh: Bradford Hill 准则, en: Bradford Hill criteria, aliases: [Hill criteria] }
+  - { zh: 匹配病例对照研究, en: matched case-control study }
+  - { zh: logit, en: logit, scope: ["3", "7"] }   # statistics sense; 4.7 uses logits for network outputs
+  - { zh: Wald 检验, en: Wald test }
+  - { zh: 偏差统计量, en: deviance, scope: ["7.7"] }
+  - { zh: Hosmer–Lemeshow 检验, en: Hosmer–Lemeshow test }
+  - { zh: probit 模型, en: probit model, aliases: [probit 分析, probit analysis] }
+  - { zh: 半数致死量, en: median lethal dose, aliases: [LD50] }
+  - { zh: 条件 logistic 回归, en: conditional logistic regression }
+  - { zh: Poisson 回归, en: Poisson regression, aliases: [泊松回归] }
+  - { zh: 偏移项, en: offset, scope: ["7.7"] }
+  - { zh: 生态学谬误, en: ecological fallacy }
+  - { zh: 潜在结果, en: potential outcome, aliases: [反事实结局, counterfactual outcome, potential outcomes] }
+  - { zh: 平均处理效应, en: average treatment effect, aliases: [ATE] }
+  - { zh: 可交换性, en: exchangeability }
+  - { zh: 正值性, en: positivity }
+  - { zh: 因果图, en: causal diagram, aliases: [因果 DAG, causal DAG] }
+  - { zh: 后门准则, en: backdoor criterion, aliases: [back-door criterion] }
+  - { zh: 对撞因子, en: collider }
+  - { zh: 对撞偏倚, en: collider bias, aliases: [Berkson 偏倚, "Berkson's bias"] }
+  - { zh: 倾向评分, en: propensity score, aliases: [倾向得分] }
+  - { zh: 逆概率加权, en: inverse probability weighting, aliases: [IPW] }
+  - { zh: 标准化均差, en: standardized mean difference, aliases: [SMD] }
+  - { zh: 工具变量, en: instrumental variable }
+  - { zh: 中介变量, en: mediator, scope: ["7.7"] }   # causal mediator; the unscoped Mediator complex keeps other pages
+  - { zh: E 值, en: E-value, scope: ["7.7"] }   # VanderWeele–Ding sensitivity analysis; BLAST E-value is scoped 7.8
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }
