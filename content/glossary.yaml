@@ -1361,7 +1361,7 @@ terms:
   - { zh: 联系函数, en: link function }
   - { zh: 方差稳定化变换, en: variance-stabilizing transformation }
   - { zh: 过原点的回归, en: regression through the origin }
-  - { zh: 反向预测, en: inverse prediction, aliases: [校准, calibration] }
+  - { zh: 反向预测, en: inverse prediction, aliases: [逆预测, 校准, calibration] }
   - { zh: 多元线性回归模型, en: multiple linear regression model, aliases: [多重线性回归模型] }
   - { zh: 偏回归系数, en: partial regression coefficient }
   - { zh: 虚拟变量, en: dummy variable, aliases: [哑变量, 指示变量, indicator variable] }
@@ -1381,7 +1381,7 @@ terms:
   - { zh: 遗漏变量偏差, en: omitted variable bias }
   - { zh: Simpson 悖论, en: "Simpson's paradox", aliases: [辛普森悖论] }
   - { zh: 多项式回归, en: polynomial regression, aliases: [多项式回归模型, polynomial regression model] }
-  - { zh: 交互效应, en: interaction effect, aliases: [交互作用], scope: ["3"] }
+  - { zh: 交互效应, en: interaction effect, aliases: [交互作用], scope: ["3", "7.7"] }
   - { zh: 欠拟合, en: underfitting }
   - { zh: 最优子集回归, en: best subsets regression, aliases: [best subset selection] }
   - { zh: 逐步回归, en: stepwise regression }
@@ -1419,9 +1419,9 @@ terms:
   - { zh: 学生化极差分布, en: studentized range distribution }
   - { zh: Tukey 方法, en: "Tukey's method", aliases: ["Tukey's HSD", Tukey HSD] }
   - { zh: Scheffé 方法, en: "Scheffé's method" }
-  - { zh: 对照, en: contrast, scope: ["3.3", "3.8"] }
+  - { zh: 对照, en: contrast, aliases: [对比], scope: ["3.3", "3.8", "7.7"] }
   - { zh: 对照平方和, en: contrast sum of squares, aliases: [SSC] }
-  - { zh: 主效应, en: main effect, scope: ["3.3", "3.8"] }
+  - { zh: 主效应, en: main effect, scope: ["3.3", "3.8", "7.7"] }
   - { zh: 交互作用图, en: interaction plot }
   - { zh: 边际均值, en: marginal mean, scope: ["3.3", "3.8"] }
   - { zh: 最小二乘均值, en: least squares mean, aliases: [LS 均值, LS-mean, 估计边际均值, estimated marginal mean] }
@@ -8635,6 +8635,22 @@ terms:
   - { zh: Cohen κ, en: "Cohen's kappa", aliases: [κ 系数, kappa statistic] }
   - { zh: 期望频数, en: expected frequency }
   - { zh: 过度离散, en: overdispersion }
+  - { zh: Fisher z 变换, en: Fisher z-transformation, aliases: [Fisher 变换, Fisher transformation] }
+  - { zh: 四参数 logistic 模型, en: four-parameter logistic model, aliases: [4PL, four-parameter logistic] }
+  - { zh: Deming 回归, en: Deming regression, aliases: [正交回归, orthogonal regression] }
+  - { zh: Bland–Altman 图, en: Bland–Altman plot, aliases: [Bland–Altman 分析, Bland–Altman analysis, mean-difference plot] }
+  - { zh: 一致性界限, en: limits of agreement }
+  - { zh: 精密度曲线, en: precision profile }
+  - { zh: 定量下限, en: lower limit of quantification, aliases: [LLOQ] }
+  - { zh: 半数效应浓度, en: half-maximal effective concentration, aliases: [EC50, 半数有效浓度] }
+  - { zh: 相对效价, en: relative potency }
+  - { zh: Holm 方法, en: "Holm's method", aliases: [Holm–Bonferroni method, Holm 校正] }
+  - { zh: Dunnett 检验, en: "Dunnett's test" }
+  - { zh: 协方差分析, en: analysis of covariance, aliases: [ANCOVA] }
+  - { zh: 随机区组设计, en: randomized complete block design, aliases: [randomized block design, 随机化区组设计] }
+  - { zh: 析因设计, en: factorial design, aliases: [factorial experiment] }
+  - { zh: 实验单位, en: experimental unit }
+  - { zh: 伪重复, en: pseudoreplication }
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }
@@ -8798,7 +8814,7 @@ terms:
   - { zh: 等重标记, en: isobaric labeling, aliases: [同位素标签定量, isobaric tags, TMT, iTRAQ, tandem mass tags] }
   - { zh: 数据非依赖采集, en: data-independent acquisition, aliases: [DIA, SWATH] }
   - { zh: 磷酸化蛋白质组, en: phosphoproteome, aliases: [磷酸化蛋白质组学, phosphoproteomics] }
-  - { zh: 代谢组学, en: metabolomics, aliases: [代谢组, metabolome] }
+  - { zh: 代谢组学, en: metabolomics }
   - { zh: 质量同位素异构体分布, en: mass isotopomer distribution, aliases: [MID, isotopologue distribution] }
   - { zh: 相互作用组, en: interactome }
   - { zh: 亲和纯化–质谱, en: affinity purification–mass spectrometry, aliases: [AP-MS, affinity purification-mass spectrometry] }
