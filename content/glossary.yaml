@@ -8645,6 +8645,39 @@ terms:
   - { zh: k-mer, en: k-mer, aliases: [k-mers, k 聚体] }
   - { zh: k-mer 谱, en: k-mer spectrum, aliases: [k-mer spectra] }
   - { zh: 接头, en: adapter, aliases: [adapters, 测序接头], scope: ["7"] }   # sequencing adapter; 4.7 has the design-pattern adapter
+  - { zh: 序列比对, en: sequence alignment, aliases: [比对, pairwise alignment, 双序列比对], scope: ["7"] }
+  - { zh: 全局比对, en: global alignment }
+  - { zh: 局部比对, en: local alignment }
+  - { zh: 半全局比对, en: semi-global alignment, aliases: [glocal alignment, overlap alignment] }
+  - { zh: 序列一致性, en: sequence identity, aliases: [percent identity, 一致度] }
+  - { zh: 暮光区, en: twilight zone, scope: ["7"] }
+  - { zh: 点阵图, en: dot plot, aliases: [dot matrix] }
+  - { zh: 替换矩阵, en: substitution matrix, aliases: [打分矩阵, scoring matrix, substitution matrices] }
+  - { zh: PAM 矩阵, en: PAM matrix, aliases: [PAM matrices, point accepted mutation] }
+  - { zh: BLOSUM 矩阵, en: BLOSUM matrix, aliases: [BLOSUM, BLOSUM62] }
+  - { zh: 空位罚分, en: gap penalty, aliases: [gap penalties, 缺口罚分] }
+  - { zh: 仿射空位罚分, en: affine gap penalty, aliases: [affine gap penalties] }
+  - { zh: 编辑距离, en: edit distance, aliases: [Levenshtein distance, Levenshtein 距离] }
+  - { zh: Needleman–Wunsch 算法, en: Needleman–Wunsch algorithm }
+  - { zh: Smith–Waterman 算法, en: Smith–Waterman algorithm }
+  - { zh: Gotoh 算法, en: "Gotoh's algorithm", aliases: [Gotoh algorithm] }
+  - { zh: Hirschberg 算法, en: "Hirschberg's algorithm", aliases: [Hirschberg algorithm] }
+  - { zh: BLAST, en: BLAST, aliases: [Basic Local Alignment Search Tool] }
+  - { zh: 种子匹配, en: seed match, aliases: [word hit, seed matches] }
+  - { zh: E 值, en: E-value, aliases: [E value, expect value], scope: ["7.8"] }
+  - { zh: 比特分, en: bit score, aliases: [bit scores] }
+  - { zh: Gumbel 分布, en: Gumbel distribution, aliases: [extreme-value distribution, 极值分布] }
+  - { zh: 低复杂度区域, en: low-complexity region, aliases: [low-complexity regions] }
+  - { zh: 间隔种子, en: spaced seed, aliases: [spaced seeds] }
+  - { zh: 序列聚类, en: sequence clustering }
+  - { zh: 多序列比对, en: multiple sequence alignment, aliases: [MSA] }
+  - { zh: SP 分, en: sum-of-pairs score, aliases: [SP score] }
+  - { zh: 轮廓, en: profile, aliases: [profiles, sequence profile], scope: ["7.8", "7.9"] }
+  - { zh: 引导树, en: guide tree }
+  - { zh: 位置特异打分矩阵, en: position-specific scoring matrix, aliases: [PSSM] }
+  - { zh: PSI-BLAST, en: PSI-BLAST }
+  - { zh: 远同源, en: remote homology, aliases: [remote homologs] }
+  - { zh: 轮廓隐 Markov 模型, en: profile hidden Markov model, aliases: [profile HMM, profile HMMs] }
 
   # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
   - { zh: 系统生物学, en: systems biology }
