@@ -1145,7 +1145,7 @@ terms:
   - { zh: Lyapunov 中心极限定理, en: Lyapunov central limit theorem }
   - { zh: Lyapunov 条件, en: Lyapunov condition }
   - { zh: de Moivre–Laplace 中心极限定理, en: de Moivre–Laplace theorem, aliases: [棣莫弗–拉普拉斯定理] }
-  - { zh: 连续性修正, en: continuity correction }
+  - { zh: 连续性修正, en: continuity correction, aliases: [连续性校正] }
   - { zh: Berry–Esseen 定理, en: Berry–Esseen theorem }
   - { zh: r 阶矩收敛, en: convergence in r-th mean, aliases: [均方收敛, convergence in L^r] }
   - { zh: 连续映射定理, en: continuous mapping theorem }
@@ -8603,6 +8603,21 @@ terms:
   - { zh: 离群值, en: outlier, aliases: [离群点, 异常值, outliers], scope: ["7"] }   # biostatistics sense in 7; the 3.x entry keeps scope 3
   - { zh: 灵敏度, en: sensitivity, scope: ["7"] }   # diagnostic tests; distinct from analytical sensitivity (6) and recall (3.4)
   - { zh: 特异度, en: specificity, scope: ["7"] }   # diagnostic tests; 3.4 has its own
+  - { zh: 对数正态分布, en: log-normal distribution, aliases: [lognormal distribution] }
+  - { zh: 概率抽样, en: probability sampling }
+  - { zh: 系统抽样, en: systematic sampling }
+  - { zh: 分层抽样, en: stratified sampling }
+  - { zh: 整群抽样, en: cluster sampling }
+  - { zh: 随机化, en: randomization }
+  - { zh: 区组随机化, en: block randomization, aliases: [permuted block randomization] }
+  - { zh: 分层随机化, en: stratified randomization }
+  - { zh: 分配隐藏, en: allocation concealment }
+  - { zh: 盲法, en: blinding, aliases: [单盲, 双盲, double blinding] }
+  - { zh: Wilson 区间, en: Wilson score interval, aliases: [Wilson interval, Wilson 得分区间] }
+  - { zh: Clopper–Pearson 区间, en: Clopper–Pearson interval, aliases: [exact binomial interval] }
+  - { zh: 统计功效, en: statistical power, aliases: [功效, 检验功效, power of a test] }
+  - { zh: 标准化死亡比, en: standardized mortality ratio, aliases: [SMR, 标准化发病比, standardized morbidity ratio] }
+  - { zh: 效应量, en: effect size }
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }
