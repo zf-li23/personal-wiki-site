@@ -168,7 +168,7 @@ Large text files are compressed with BGZF (blocked gzip), a variant of gzip that
 
 **Algorithm 1.4.1 (Hierarchical Binning)** The genome is divided into bins at six levels, of sizes $2^{29}, 2^{26}, 2^{23}, 2^{20}, 2^{17}$ and $2^{14}$ bases ($512\,\mathrm{Mb}$ down to $16\,\mathrm{kb}$); level $\ell$ has $8^\ell$ bins, numbered consecutively from $(8^\ell - 1)/7$, so there are $37\,449$ bins in all.
 
-1. To index a record covering the zero-based half-open interval $[s, e)$: assign it to the smallest bin that contains it entirely. With $\mathrm{e}^- = e - 1$, for the levels $\ell = 5, 4, \dots, 1$ (shifts $k = 14, 17, 20, 23, 26$): if $\lfloor s/2^k\rfloor = \lfloor \mathrm{e}^-/2^k\rfloor$, the bin is $(8^\ell - 1)/7 + \lfloor s/2^k\rfloor$; otherwise go up a level. A record that fits no smaller bin goes into bin $0$.
+1. To index a record covering the zero-based half-open interval $[s, e)$: assign it to the smallest bin that contains it entirely. With $e' = e - 1$ (the last base of the record), for the levels $\ell = 5, 4, \dots, 1$ (shifts $k = 14, 17, 20, 23, 26$): if $\lfloor s/2^k\rfloor = \lfloor e'/2^k\rfloor$, the bin is $(8^\ell - 1)/7 + \lfloor s/2^k\rfloor$; otherwise go up a level. A record that fits no smaller bin goes into bin $0$.
 2. To query a region $[a, b)$: at each level, list the bins whose span intersects $[a, b)$ (at most one or a few per level for a short region), read the records stored in them, and keep those that overlap $[a, b)$.
 
 A separate *linear index* stores, for each $16$-kb window, the smallest file offset of any record overlapping it, which lets the reader skip records that end before the region.
