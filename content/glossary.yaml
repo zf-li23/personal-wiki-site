@@ -8710,3 +8710,21 @@ terms:
   - { zh: 高变基因, en: highly variable gene, aliases: [highly variable genes, HVG] }
   - { zh: 伪 bulk, en: pseudobulk, aliases: [假 bulk, pseudobulk analysis] }
   - { zh: 测序饱和度, en: sequencing saturation }
+  - { zh: 空间组学, en: spatial omics }
+  - { zh: 空间转录组学, en: spatial transcriptomics }
+  - { zh: 空间蛋白质组学, en: spatial proteomics }
+  - { zh: 多重免疫荧光, en: multiplexed immunofluorescence, aliases: [mIF] }
+  - { zh: MERFISH 码本, en: MERFISH codebook }
+  - { zh: 细胞分割, en: cell segmentation }
+  - { zh: 分水岭算法, en: watershed algorithm, aliases: [watershed, 分水岭] }
+  - { zh: 交并比, en: intersection over union, aliases: [IoU, Jaccard 指数, Jaccard index] }
+  - { zh: Moran 指数, en: "Moran's I", aliases: ["Moran's I statistic", 莫兰指数] }
+  - { zh: Geary 系数, en: "Geary's C" }
+  - { zh: 空间可变基因, en: spatially variable gene, aliases: [spatially variable genes, SVG] }
+  - { zh: Ripley K 函数, en: "Ripley's K function", aliases: ["Ripley's K", "Ripley's L function"] }
+  - { zh: 细胞邻域, en: cellular neighborhood, aliases: [cellular neighborhoods], scope: ["7"] }
+  - { zh: 空间域, en: spatial domain, aliases: [spatial domains], scope: ["7"] }
+  - { zh: 细胞生态位, en: cellular niche, aliases: [cellular niches] }
+  - { zh: 细胞类型去卷积, en: cell-type deconvolution, aliases: [去卷积, deconvolution], scope: ["7"] }
+  - { zh: 最优传输, en: optimal transport, aliases: [熵正则最优传输, entropic optimal transport] }
+  - { zh: 图像配准, en: image registration, aliases: [配准, registration], scope: ["7"] }
