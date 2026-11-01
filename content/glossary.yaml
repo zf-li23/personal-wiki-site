@@ -8666,3 +8666,14 @@ terms:
   - { zh: 领先边缘, en: leading edge, aliases: [leading-edge subset], scope: ["7"] }
   - { zh: 火山图, en: volcano plot, scope: ["3", "7"] }   # statistics plot; beats the unscoped Sabatier alias inside 3 and 7
   - { zh: 每百万转录本, en: transcripts per million, aliases: [TPM] }   # 3.x has TPM = total probability of misclassification (scoped, wins inside 3)
+  - { zh: 剪接百分比, en: percent spliced in }
+  - { zh: 翻译组, en: translatome }
+  - { zh: 翻译效率, en: translation efficiency }
+  - { zh: 表观转录组, en: epitranscriptome }
+  - { zh: 交联免疫沉淀, en: crosslinking and immunoprecipitation, aliases: [CLIP] }
+  - { zh: 单细胞 RNA 测序, en: single-cell RNA sequencing, aliases: [scRNA-seq] }
+  - { zh: 细胞条形码, en: cell barcode, aliases: [cell barcodes] }
+  - { zh: 双细胞, en: doublet, aliases: [doublets, 多细胞, multiplet], scope: ["7"] }
+  - { zh: 高变基因, en: highly variable gene, aliases: [highly variable genes, HVG] }
+  - { zh: 伪 bulk, en: pseudobulk, aliases: [假 bulk, pseudobulk analysis] }
+  - { zh: 测序饱和度, en: sequencing saturation }
