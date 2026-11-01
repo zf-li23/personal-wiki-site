@@ -8695,6 +8695,33 @@ terms:
   - { zh: PSI-BLAST, en: PSI-BLAST }
   - { zh: 远同源, en: remote homology, aliases: [remote homologs] }
   - { zh: 轮廓隐 Markov 模型, en: profile hidden Markov model, aliases: [profile HMM, profile HMMs] }
+  - { zh: 系统发生树, en: phylogenetic tree, aliases: [系统发育树, 进化树, phylogeny, phylogenetic trees] }
+  - { zh: 外类群, en: outgroup }
+  - { zh: 单系群, en: clade, aliases: [进化支, monophyletic group, clades] }
+  - { zh: Newick 格式, en: Newick format, aliases: [Newick] }
+  - { zh: 基因树, en: gene tree, aliases: [gene trees] }
+  - { zh: 物种树, en: species tree, aliases: [species trees] }
+  - { zh: 替代模型, en: substitution model, aliases: [核苷酸替代模型, substitution models], scope: ["7"] }
+  - { zh: GTR 模型, en: GTR model, aliases: [general time-reversible model, 一般时间可逆模型] }
+  - { zh: 超度量树, en: ultrametric tree, aliases: [等时树] }
+  - { zh: UPGMA, en: UPGMA, aliases: [非加权组平均法] }
+  - { zh: 邻接法, en: neighbor joining, aliases: [NJ, neighbor-joining] }
+  - { zh: 最大简约法, en: maximum parsimony, aliases: [简约法, parsimony] }
+  - { zh: Fitch 算法, en: Fitch algorithm }
+  - { zh: Felsenstein 剪枝算法, en: "Felsenstein's pruning algorithm", aliases: [pruning algorithm] }
+  - { zh: 长枝吸引, en: long-branch attraction, aliases: [LBA] }
+  - { zh: 自展支持度, en: bootstrap support, aliases: [bootstrap 支持度, bootstrap value] }
+  - { zh: 多数规则一致树, en: majority-rule consensus tree, aliases: [一致树, consensus tree] }
+  - { zh: 密码子偏好, en: codon usage bias, aliases: [密码子使用偏好, codon bias] }
+  - { zh: 基因预测, en: gene prediction, aliases: [gene finding] }
+  - { zh: 广义隐 Markov 模型, en: generalized hidden Markov model, aliases: [GHMM, 隐半 Markov 模型, hidden semi-Markov model] }
+  - { zh: 基序, en: sequence motif, aliases: [序列模体, DNA 基序, sequence motifs], scope: ["7"] }
+  - { zh: 位置频率矩阵, en: position frequency matrix, aliases: [PFM] }
+  - { zh: 序列标识图, en: sequence logo, aliases: [序列标志图, 序列 logo, sequence logos] }
+  - { zh: 信息量, en: information content, scope: ["7"] }
+  - { zh: 基序发现, en: motif discovery, aliases: [模体发现, de novo motif discovery] }
+  - { zh: 系统发育足迹, en: phylogenetic footprinting }
+  - { zh: 保守性分数, en: conservation score, aliases: [conservation scores, 保守性得分] }
 
   # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
   - { zh: 系统生物学, en: systems biology }
