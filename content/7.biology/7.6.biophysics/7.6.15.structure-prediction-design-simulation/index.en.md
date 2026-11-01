@@ -160,7 +160,7 @@ The first equation is the maximum-likelihood combination of all histograms; the 
 
 *Metadynamics* (Laio and Parrinello, 2002) builds the bias during a single simulation: small Gaussian hills are added at the current value of $\xi$ at regular intervals, filling the free-energy minima like sand until the system can move freely; the accumulated bias then approximates $-G(\xi)$ (in the well-tempered variant, a known fraction of it). Both methods need a good reaction coordinate; if a slow motion is not captured by $\xi$, the profile is wrong however long one samples.
 
-Free-energy differences between chemically different states, such as the binding of two related drugs, are computed by *alchemical* methods. **Free-energy perturbation** (Zwanzig, 1954) is based on the exact identity
+Free-energy differences between chemically different states, such as the binding of two related drugs, are computed by *alchemical* methods. *Free-energy perturbation* (Zwanzig, 1954) is based on the exact identity
 
 $$
 \Delta G_{A\to B} = -k_{\mathrm{B}}T\ln\left\langle\exp\left[-\frac{U_B - U_A}{k_{\mathrm{B}}T}\right]\right\rangle_A, \tag{15.6}

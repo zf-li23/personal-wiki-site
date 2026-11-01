@@ -6134,7 +6134,7 @@ terms:
   - { zh: 朊病毒, en: prion, aliases: [朊粒] }
   - { zh: 冷冻电镜, en: cryo-electron microscopy, aliases: [cryo-EM, 冷冻电子显微术] }
   - { zh: 相位问题, en: phase problem }
-  - { zh: 结合部位, en: binding site }
+  - { zh: 结合部位, en: binding site, aliases: [结合位点, binding sites] }
   - { zh: 饱和分数, en: fractional saturation }
   - { zh: 诱导契合, en: induced fit }
   - { zh: 构象选择, en: conformational selection }
@@ -6146,7 +6146,7 @@ terms:
   - { zh: Hill 方程, en: Hill equation, aliases: [希尔方程] }
   - { zh: Hill 系数, en: Hill coefficient }
   - { zh: Hill 图, en: Hill plot }
-  - { zh: 协同模型, en: MWC model, aliases: [concerted model, 齐变模型] }
+  - { zh: 协同模型, en: MWC model, aliases: [concerted model, 齐变模型, MWC 模型] }
   - { zh: 序变模型, en: sequential model, aliases: [KNF model] }
   - { zh: Bohr 效应, en: Bohr effect, aliases: [波尔效应] }
   - { zh: "2,3-二磷酸甘油酸", en: "2,3-bisphosphoglycerate", aliases: [BPG, "2,3-BPG"] }
@@ -6457,6 +6457,7 @@ terms:
   - { zh: 转运蛋白, en: transporter, aliases: [载体蛋白], scope: ["7"] }
   - { zh: 离子通道, en: ion channel, aliases: [ion channels] }
   - { zh: 被动运输, en: passive transport, aliases: [易化扩散, facilitated diffusion, 被动转运] }
+  - { zh: 易化扩散, en: facilitated diffusion, scope: ["7.2.22", "7.2.25", "7.6"] }   # target search by sliding along DNA (Berg–Winter–von Hippel); the membrane sense is passive transport
   - { zh: 单向转运体, en: uniporter, aliases: [uniport] }
   - { zh: 同向转运体, en: symporter, aliases: [symport] }
   - { zh: 反向转运体, en: antiporter, aliases: [antiport] }
@@ -6517,7 +6518,7 @@ terms:
   - { zh: 双组分系统, en: two-component system, aliases: [two-component systems] }
   - { zh: 泛素, en: ubiquitin, aliases: [ubiquitination, 泛素化] }
   - { zh: 蛋白酶体, en: proteasome, aliases: [26S proteasome] }
-  - { zh: 周期蛋白, en: cyclin, aliases: [cyclins] }
+  - { zh: 周期蛋白, en: cyclin, aliases: [cyclins, 细胞周期蛋白] }
   - { zh: 周期蛋白依赖性激酶, en: cyclin-dependent kinase, aliases: [CDK, CDKs] }
   - { zh: 原癌基因, en: proto-oncogene }
   - { zh: 癌基因, en: oncogene, aliases: [oncogenes] }

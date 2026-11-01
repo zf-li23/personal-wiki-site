@@ -5,7 +5,7 @@ description: "Quantitative laws of bacterial growth and the economics behind the
 
 A bacterium in a rich medium does little besides grow: *Escherichia coli* in a good broth at $37\,^\circ\mathrm{C}$ doubles every $20$ minutes, and in that time it must duplicate every one of its three million proteins, its chromosome and its envelope. Because growth is the dominant activity, the composition of a growing bacterium is not arbitrary. Measurements over six decades have revealed simple, nearly linear relations between the growth rate and the amounts of **ribosomes**, of metabolic enzymes, of DNA and of mass per cell. These are the **bacterial growth laws**, and they are among the few quantitative laws in biology that hold across conditions and can be derived from a model with a handful of parameters, in the way that the gas laws follow from a simple picture of molecules. This chapter derives them from the economics of the **proteome**: a cell has a fixed amount of protein to spend, ribosomes make all of it (including more ribosomes), and the allocation between the machinery that makes protein and the machinery that feeds it determines how fast the cell can grow.
 
-The chapter belongs to the "search for principles" of quantitative biology (SH 21.3), and its central question is an optimality question: do cells allocate their resources as well as possible, and if so, how do they know where the optimum is? The molecular biology of translation and the first growth law in its simplest form are in [7.2.19](/7.2.19#sec-19.8.5), the stringent response by which ppGpp controls ribosome synthesis in [7.2.20](/7.2.20), the coordination of growth and division in eukaryotic and bacterial cells in [7.3.22](/7.3.22#sec-22.4), and the metabolic pathways and their regulation in [7.1](/7.1). **Flux balance analysis**, which predicts optimal metabolic fluxes from the stoichiometry of the metabolic network, is developed in [7.6.34](/7.6.34) and used here. The physiology and ecology of microbial growth are the subject of microbiology ([7.11](/7.11)), and the general theory of design principles in networks belongs to systems biology ([7.9](/7.9)).
+The chapter belongs to the "search for principles" of quantitative biology, and its central question is an optimality question: do cells allocate their resources as well as possible, and if so, how do they know where the optimum is? The molecular biology of translation and the first growth law in its simplest form are in [7.2.19](/7.2.19#sec-19.8.5), the stringent response by which ppGpp controls ribosome synthesis in [7.2.20](/7.2.20), the coordination of growth and division in eukaryotic and bacterial cells in [7.3.22](/7.3.22#sec-22.4), and the metabolic pathways and their regulation in [7.1](/7.1). **Flux balance analysis**, which predicts optimal metabolic fluxes from the stoichiometry of the metabolic network, is developed in [7.6.34](/7.6.34) and used here. The physiology and ecology of microbial growth are the subject of microbiology ([7.11](/7.11)), and the general theory of design principles in networks belongs to systems biology ([7.9](/7.9)).
 
 ## 39.1. Exponential Growth and Its Limits
 
@@ -32,7 +32,7 @@ The functional form is that of the **Michaelis–Menten equation**, and the anal
 
 ### 39.1.3. The Chemostat
 
-In a batch culture the substrate changes continuously and balanced growth holds only transiently. The **chemostat** (Monod 1950; Novick and Szilard 1950) fixes the growth rate instead: fresh medium with substrate concentration $s_0$ flows into a well-mixed vessel at rate $F$, and culture flows out at the same rate, so that the dilution rate $D = F/V$ removes cells and substrate at the rate $D$ per unit volume.
+In a batch culture the substrate changes continuously and balanced growth holds only transiently. The *chemostat* (Monod 1950; Novick and Szilard 1950) fixes the growth rate instead: fresh medium with substrate concentration $s_0$ flows into a well-mixed vessel at rate $F$, and culture flows out at the same rate, so that the dilution rate $D = F/V$ removes cells and substrate at the rate $D$ per unit volume.
 
 **Formula 39.1.2 (Chemostat Steady State)** With Monod kinetics, the biomass $x$ and the substrate $s$ in the vessel obey
 
@@ -89,7 +89,7 @@ In balanced growth the flux of precursors supplied by the P sector equals the fl
 
 Eliminating $\phi_P$ with Eq. (39.5) and absorbing $\phi_P^0$ into $\phi_{\max}$, the nutrient side reads $\lambda = \kappa_n(\phi_R^{\max} - \phi_R)$, with $\phi_R^{\max} = \phi_{\max} - \phi_P^0$ the largest ribosomal fraction the cell could have.
 
-**Formula 39.2.2 (The Growth Laws)** In the proteome allocation model,
+**Formula 39.2.2 (Bacterial Growth Laws)** In the proteome allocation model,
 
 $$
 \phi_R = \phi_R^0 + \frac{\lambda}{\kappa_t} \quad \text{(nutrient quality varied)}, \qquad \phi_R = \phi_R^{\max} - \frac{\lambda}{\kappa_n} \quad \text{(translation inhibited)}, \tag{39.6}
@@ -134,7 +134,7 @@ and it is maximal at the allocation where the two capacities are equal, $\phi_R^
 
 **Proof** If the cell makes more ribosomes than the nutrient sector can feed, the ribosomes are starved and growth is limited by the supply, $\lambda = \kappa_n(\phi_R^{\max} - \phi_R)$, which decreases with $\phi_R$; if it makes fewer, precursors accumulate and growth is limited by translation, $\lambda = \kappa_t(\phi_R - \phi_R^0)$, which increases with $\phi_R$. The minimum of an increasing and a decreasing linear function is maximal where they cross. $\square$
 
-The measured first-law line is the locus of these optima as the medium changes: the cells allocate their proteome as the model says they should to grow as fast as possible (SH 21.3.3). The prediction is not trivial: a cell that kept a fixed allocation, set for one medium, would grow more slowly than possible in all others, as panel B of the next figure shows.
+The measured first-law line is the locus of these optima as the medium changes: the cells allocate their proteome as the model says they should to grow as fast as possible. The prediction is not trivial: a cell that kept a fixed allocation, set for one medium, would grow more slowly than possible in all others, as panel B of the next figure shows.
 
 ### 39.3.2. Regulation by Flux Sensing
 

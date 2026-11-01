@@ -100,13 +100,13 @@ $$
 $$
 The variance equation has a simple reading: every reaction event, synthesis or degradation, adds one unit of variance (the source $k + \gamma\langle m\rangle$), and degradation relaxes deviations at rate $\gamma$, which reduces the variance at rate $2\gamma$. In the steady state $\operatorname{Var}(m) = \langle m\rangle = k/\gamma$ and the **Fano factor** $F = \operatorname{Var}/\langle m\rangle$ ([7.2.22](/7.2.22#sec-22.5.2)) equals one. Measured **Fano factors** of mRNA counts differ from one in characteristic ways, and the rest of the chapter is largely about what the deviations mean.
 
-**Example 32.2.1** A typical *E. coli* gene makes about $10$ mRNAs per minute and its mRNA lives a little more than a minute (PBoC 19.3.1). Equation (32.5) gives a steady state of about $10$ mRNAs per cell with a standard deviation of $\sqrt{10} \approx 3$, and relaxation to it with time constant $1/\gamma$, about $1\,\mathrm{min}$. Since elongation at about $50\,\mathrm{nt\,s^{-1}}$ takes $20\,\mathrm{s}$ for a $1\,\mathrm{kb}$ gene, about three polymerases are transcribing the gene at any time.
+**Example 32.2.1** A typical *E. coli* gene makes about $10$ mRNAs per minute and its mRNA lives a little more than a minute. Equation (32.5) gives a steady state of about $10$ mRNAs per cell with a standard deviation of $\sqrt{10} \approx 3$, and relaxation to it with time constant $1/\gamma$, about $1\,\mathrm{min}$. Since elongation at about $50\,\mathrm{nt\,s^{-1}}$ takes $20\,\mathrm{s}$ for a $1\,\mathrm{kb}$ gene, about three polymerases are transcribing the gene at any time.
 
 ## 32.3. Promoter States and the Fano Fingerprint
 
 ### 32.3.1. The Two-State Promoter
 
-A promoter that switches between an active state A, in which it makes mRNA at rate $r$, and an inactive state I, in which it is silent, is the telegraph model of [7.2.22](/7.2.22#sec-22.5.2). Let $k_+$ be the rate of activation (I $\to$ A) and $k_-$ of inactivation (A $\to$ I). The state is now the pair (promoter state, $m$), and it is convenient to collect the two probabilities into a vector $\boldsymbol{p}(m) = (p_{\mathrm{A}}(m), p_{\mathrm{I}}(m))^{\mathsf T}$ (Sanchez and colleagues, 2011; PBoC 19.3.3). With
+A promoter that switches between an active state A, in which it makes mRNA at rate $r$, and an inactive state I, in which it is silent, is the telegraph model of [7.2.22](/7.2.22#sec-22.5.2). Let $k_+$ be the rate of activation (I $\to$ A) and $k_-$ of inactivation (A $\to$ I). The state is now the pair (promoter state, $m$), and it is convenient to collect the two probabilities into a vector $\boldsymbol{p}(m) = (p_{\mathrm{A}}(m), p_{\mathrm{I}}(m))^{\mathsf T}$ (Sanchez and colleagues, 2011). With
 $$
 K = \begin{bmatrix} -k_- & k_+ \\ k_- & -k_+ \end{bmatrix}, \qquad R = \begin{bmatrix} r & 0 \\ 0 & 0 \end{bmatrix}, \qquad \Gamma = \gamma I_2,
 $$
