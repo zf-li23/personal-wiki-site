@@ -106,7 +106,7 @@ For the amplicon panel of [7.8.10](/7.8.10), where the targets are few and known
 ##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
 ##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Read depth per allele">
 ##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Phred-scaled genotype likelihoods">
-#CHROM POS       ID        REF ALT QUAL FILTER INFO          FORMAT       HG002
+#CHROM POS       ID        REF ALT QUAL FILTER INFO          FORMAT       sample1
 chr2   135851076 rs4988235 G   A   790  PASS   DP=32;AF=0.5  GT:AD:DP:GQ:PL 0/1:16,16:32:99:790,0,780
 ```
 
