@@ -189,7 +189,7 @@ Eukaryotes arose about 2 billion years ago. According to the *endosymbiotic theo
 
 ### 1.4.5. Genomics
 
-Since 1995 the complete genome sequences of tens of thousands of organisms have been determined, among them *E. coli* (4.6 Mbp, about 4300 protein-coding genes), budding yeast (12 Mbp, about 6000 genes) and humans (3.1 Gbp, about 20 000 protein-coding genes, less than 2 % of the DNA). Comparison of genomes reveals the universal core of biochemistry, the genes shared by all cells for replication, transcription, translation and central metabolism, and the lineage-specific innovations of each group. Genomics, together with the large-scale study of the proteins (proteomics, 7.1.4) and metabolites of a cell, is the starting point of [Bioinformatics](/7.8) and [Systems Biology](/7.9).
+Since 1995 the complete genome sequences of tens of thousands of organisms have been determined, among them *E. coli* (4.6 Mbp, about 4300 protein-coding genes), budding yeast (12 Mbp, about 6000 genes) and humans (3.1 Gbp, about 20 000 protein-coding genes, less than 2 % of the DNA). Comparison of genomes reveals the universal core of biochemistry, the genes shared by all cells for replication, transcription, translation and central metabolism, and the lineage-specific innovations of each group. Genomics, together with the large-scale study of the proteins (proteomics, 7.1.4) and metabolites of a cell, is the starting point of [Bioinformatics](/7.8.1) and [Systems Biology](/7.9.1).
 
 ## Summary
 

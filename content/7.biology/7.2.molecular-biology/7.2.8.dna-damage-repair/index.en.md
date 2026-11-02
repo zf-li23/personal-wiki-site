@@ -121,7 +121,7 @@ The model in the figure has two equations. With $L$ the LexA concentration (in u
 $$
 \frac{\mathrm{d}L}{\mathrm{d}t} = \frac{\beta}{1 + L/K_L} - \bigl(\gamma + k_{\mathrm{c}}R(t)\bigr)L, \qquad a_i(t) = \frac{1}{1 + L(t)/K_i}, \tag{8.1}
 $$
-where $a_i$ is the fraction of time the operator of gene $i$ is free. Before damage $L = 1$, so a gene with $K_i = 0.5$ is already active a third of the time and can be induced at most threefold, whereas a gene with $K_i = 0.02$ is active $2\,\%$ of the time and is induced about $1/L$-fold, fivefold when $L$ falls to $0.2$ and up to fiftyfold if LexA is cleared completely, but only during the trough. Graded affinities thus convert a single input, the LexA level, into graded amplitudes and durations; the same design of a regulator with targets of graded affinity, called a single-input module, is a recurring motif of gene networks ([7.9](/7.9)).
+where $a_i$ is the fraction of time the operator of gene $i$ is free. Before damage $L = 1$, so a gene with $K_i = 0.5$ is already active a third of the time and can be induced at most threefold, whereas a gene with $K_i = 0.02$ is active $2\,\%$ of the time and is induced about $1/L$-fold, fivefold when $L$ falls to $0.2$ and up to fiftyfold if LexA is cleared completely, but only during the trough. Graded affinities thus convert a single input, the LexA level, into graded amplitudes and durations; the same design of a regulator with targets of graded affinity, called a single-input module, is a recurring motif of gene networks ([7.9.15](/7.9.15#sec-15.2)).
 
 ## 8.7. Mutagens, Repair and Cancer
 

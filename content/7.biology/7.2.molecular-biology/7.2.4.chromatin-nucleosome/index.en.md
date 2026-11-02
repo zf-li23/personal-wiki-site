@@ -145,7 +145,7 @@ Three sequencing assays now map nucleosomes and accessibility genome-wide; their
 | DNase-seq | ends of DNase I cuts in lightly digested nuclei are sequenced | hypersensitive sites; footprints of bound factors within them |
 | ATAC-seq | Tn5 transposase loaded with sequencing adapters inserts into accessible DNA ("tagmentation") | accessible regions; fragment lengths reveal nucleosome-free (below 100 bp), mono- (about 200 bp) and dinucleosomal (about 400 bp) fragments |
 
-ATAC-seq (Assay for Transposase-Accessible Chromatin with sequencing, Buenrostro et al., 2013) has become the standard because the transposase cuts and adds adapters in one step, so a library can be made from a few thousand cells, or a single cell. It turns a property of chromatin structure, accessibility, into a quantity that can be compared between cell types; the analysis of such data belongs to [7.8](/7.8).
+ATAC-seq (Assay for Transposase-Accessible Chromatin with sequencing, Buenrostro et al., 2013) has become the standard because the transposase cuts and adds adapters in one step, so a library can be made from a few thousand cells, or a single cell. It turns a property of chromatin structure, accessibility, into a quantity that can be compared between cell types; the analysis of such data belongs to [7.9.8](/7.9.8#sec-8.3).
 
 ## 4.5. Histone Variants and Chromatin Remodeling: An Overview
 

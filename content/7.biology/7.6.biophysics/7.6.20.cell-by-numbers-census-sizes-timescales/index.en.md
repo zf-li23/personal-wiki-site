@@ -240,7 +240,7 @@ so that genes are activated in the order of their thresholds, and the delays bet
 
 **Proof** Solve $X(t_i) = K_i$ for $t_i$; $t_i$ increases with $K_i$. $\square$
 
-Thresholds spread evenly between $0.1X_\infty$ and $0.9X_\infty$ give delays that increase from about $0.1T$ to $0.5T$ per step; a time constant of tens of minutes, set by dilution of the stable activator (Proposition 20.5.1), yields the observed spacing. A single rising signal, read by promoters of different affinity, thus encodes a sequence, a principle also used in sporulation and in the temporal ordering of metabolic enzymes ([7.9](/7.9)).
+Thresholds spread evenly between $0.1X_\infty$ and $0.9X_\infty$ give delays that increase from about $0.1T$ to $0.5T$ per step; a time constant of tens of minutes, set by dilution of the stable activator (Proposition 20.5.1), yields the observed spacing. A single rising signal, read by promoters of different affinity, thus encodes a sequence, a principle also used in sporulation and in the temporal ordering of metabolic enzymes ([7.9.15](/7.9.15#sec-15.5)).
 
 ### 20.6.3. Viral Life Cycles
 

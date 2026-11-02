@@ -94,7 +94,7 @@ $$
 y(x)=y_{\min}+\frac{y_{\max}-y_{\min}}{1+(\mathrm{EC}_{50}/x)^{n}},
 \tag{38.3}
 $$
-with $\mathrm{EC}_{50}$ the dose of half-maximal effect and $n$ the Hill slope ([7.7](/7.7) for the statistics of such fits). Fitting malformation gives the $\mathrm{EC}_{50}$, fitting death the $\mathrm{LC}_{50}$; the teratogenic index is
+with $\mathrm{EC}_{50}$ the dose of half-maximal effect and $n$ the Hill slope ([7.7.11](/7.7.11#sec-11.6) for the statistics of such fits). Fitting malformation gives the $\mathrm{EC}_{50}$, fitting death the $\mathrm{LC}_{50}$; the teratogenic index is
 
 $$
 \mathrm{TI}=\frac{\mathrm{LC}_{50}}{\mathrm{EC}_{50}}.

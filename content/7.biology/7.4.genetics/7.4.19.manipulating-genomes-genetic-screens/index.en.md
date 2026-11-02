@@ -190,7 +190,7 @@ $$
 \tag{19.3}
 $$
 
-At $m = 0.3$, about 26 % of the cells are infected and 14 % of those carry more than one vector, so that each phenotype can be attributed to one perturbation. To keep every member of the library represented, the number of infected cells is several hundred times the library size: a library of $8 \times 10^4$ guides at 500-fold coverage needs $4 \times 10^7$ infected cells, about $1.5 \times 10^8$ cells at infection. Abundances are counted by sequencing before and after selection, compared against the overdispersed variation of read counts (a negative binomial model) and combined across the guides for each gene, methods treated with genomics in [7.8](/7.8).
+At $m = 0.3$, about 26 % of the cells are infected and 14 % of those carry more than one vector, so that each phenotype can be attributed to one perturbation. To keep every member of the library represented, the number of infected cells is several hundred times the library size: a library of $8 \times 10^4$ guides at 500-fold coverage needs $4 \times 10^7$ infected cells, about $1.5 \times 10^8$ cells at infection. Abundances are counted by sequencing before and after selection, compared against the overdispersed variation of read counts (a negative binomial model) and combined across the guides for each gene, methods treated with genomics in [7.9.10](/7.9.10#sec-10.7).
 
 **Example 19.5.2** A screen uses a library of 20 000 guides at $m = 0.25$ and requires 300 cells per guide. (a) Infected cells needed: $6 \times 10^6$. (b) Cells to infect: $6 \times 10^6/(1 - \mathrm{e}^{-0.25}) = 2.7 \times 10^7$. (c) Among infected cells, the fraction with two or more guides is $1 - 0.25\mathrm{e}^{-0.25}/(1 - \mathrm{e}^{-0.25}) = 0.12$.
 

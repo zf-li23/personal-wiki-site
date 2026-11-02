@@ -103,7 +103,7 @@ Single-cell RNA sequencing measures the transcriptomes of thousands to millions 
 - each cell is measured once, so trajectories are inferred, not observed; similar transcriptomes do not prove descent, which only lineage tracing (Section 2.5) shows;
 - spatial position is lost unless measured separately.
 
-The analysis of such data is treated in [7.8](/7.8).
+The analysis of such data is treated in [7.9.6](/7.9.6).
 
 ## 2.7. Detecting Gene Expression
 
