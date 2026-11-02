@@ -9016,7 +9016,7 @@ terms:
   - { zh: 数学控制比较, en: mathematically controlled comparison }
   - { zh: 前馈环, en: feed-forward loop, aliases: [feedforward loop, FFL, feed-forward loops] }
   - { zh: 一致前馈环, en: coherent feed-forward loop, aliases: [coherent FFL, C1-FFL] }
-  - { zh: 不一致前馈环, en: incoherent feed-forward loop, aliases: [incoherent FFL, I1-FFL] }
+  - { zh: 不一致前馈环, en: incoherent feed-forward loop, aliases: [非相干前馈环路, incoherent FFL, I1-FFL] }
   - { zh: 符号敏感延迟, en: sign-sensitive delay }
   - { zh: 单输入模块, en: single-input module }
   - { zh: 多输出前馈环, en: multi-output feed-forward loop, aliases: [multi-output FFL] }
