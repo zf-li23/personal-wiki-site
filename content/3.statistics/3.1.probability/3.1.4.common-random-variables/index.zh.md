@@ -295,7 +295,7 @@ f(x)=\begin{cases}\lambda\mathrm{e}^{-\lambda x}, & x\ge0,\\ 0, & x<0,\end{cases
 $$
 称 $X$ 服从参数为 $\lambda$ 的**指数分布**（exponential distribution），记作 $X\sim\mathrm{Exp}(\lambda)$。
 
-指数分布描述到发生某个事件为止所用的时间、一台仪器的使用寿命等。$X$ 超过某个值的概率随着这个值的增加按指数递减：对 $a\ge0$，$\mathbb{P}(X>a)=\int_a^\infty\lambda\mathrm{e}^{-\lambda y}\,\mathrm{d}y=\mathrm{e}^{-\lambda a}$。$\lambda$ 称为速率参数（rate parameter），$1/\lambda$ 是平均寿命；另一种常见的参数化是 $f(x)=\frac1\theta\mathrm{e}^{-x/\theta}\boldsymbol{1}_{(0,\infty)}(x)$，$\theta=1/\lambda$ 是尺度参数（scale parameter）。若 $X\sim\mathrm{Exp}(\lambda)$，则 $\lambda X\sim\mathrm{Exp}(1)$（见 [3.1.5](/3.1.5) 的线性变换）。当 $\mathbb{P}(X<0)=0$ 时，称 $X$ 是非负随机变量。
+指数分布描述到发生某个事件为止所用的时间、一台仪器的使用寿命等。$X$ 超过某个值的概率随着这个值的增加按指数递减：对 $a\ge0$，$\mathbb{P}(X>a)=\int_a^\infty\lambda\mathrm{e}^{-\lambda y}\,\mathrm{d}y=\mathrm{e}^{-\lambda a}$。$\lambda$ 称为速率参数（rate parameter），$1/\lambda$ 是平均寿命；另一种常见的参数化是 $f(x)=\frac1\theta\mathrm{e}^{-x/\theta}\boldsymbol{1}_{(0,\infty)}(x)$，$\theta=1/\lambda$ 是尺度参数。若 $X\sim\mathrm{Exp}(\lambda)$，则 $\lambda X\sim\mathrm{Exp}(1)$（见 [3.1.5](/3.1.5) 的线性变换）。当 $\mathbb{P}(X<0)=0$ 时，称 $X$ 是非负随机变量。
 
 **定理 4.2.1（指数分布的无记忆性）** 设 $X$ 是连续型非负随机变量，则 $X$ 服从指数分布的充要条件是 $X$ 有无记忆性，即对任意 $s,t\ge0$，
 
