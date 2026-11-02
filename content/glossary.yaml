@@ -8924,3 +8924,21 @@ terms:
   - { zh: 网络传播, en: network propagation }
   - { zh: 疾病模块, en: disease module, aliases: [disease modules] }
   - { zh: 网络联配, en: network alignment, aliases: [网络比对] }
+  - { zh: 守恒基团, en: conserved moiety, aliases: [conserved moieties] }
+  - { zh: Euler 方法, en: Euler method, aliases: [explicit Euler method, "Euler's method"] }
+  - { zh: Runge–Kutta 方法, en: Runge–Kutta method, aliases: [RK4, classical Runge–Kutta method] }
+  - { zh: 灵敏度系数, en: sensitivity coefficient, aliases: [sensitivity coefficients], scope: ["7"] }
+  - { zh: 浓度控制系数, en: concentration control coefficient }
+  - { zh: 响应系数, en: response coefficient, scope: ["7"] }
+  - { zh: 组合响应定理, en: combined response theorem }
+  - { zh: Bier 模型, en: Bier model }
+  - { zh: 可辨识性, en: identifiability, aliases: [structural identifiability, practical identifiability, identifiable] }
+  - { zh: 进程曲线, en: progress curve, aliases: [progress curves], scope: ["7"] }
+  - { zh: 肿瘤纯度, en: tumor purity, aliases: [purity], scope: ["7.9"] }
+  - { zh: 等位基因特异拷贝数, en: allele-specific copy number }
+  - { zh: 癌细胞分数, en: cancer cell fraction, aliases: [CCF] }
+  - { zh: 突变目录, en: mutational catalog, aliases: [mutational catalogue] }
+  - { zh: 非负矩阵分解, en: non-negative matrix factorization, aliases: [NMF, nonnegative matrix factorization] }
+  - { zh: 背景突变率, en: background mutation rate }
+  - { zh: 基于网络的分层, en: network-based stratification, aliases: [NBS] }
+  - { zh: 肿瘤突变负荷, en: tumor mutational burden, aliases: [TMB] }
