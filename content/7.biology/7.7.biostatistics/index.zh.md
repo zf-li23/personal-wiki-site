@@ -6,9 +6,9 @@ courses:
   - { code: "40450703", name: 生物统计学, name_en: Biostatistics }
   - { code: "40880033", name: 生物统计和生物信息引论, name_en: Introduction to Biostatistics and Bioinformatics, note: 第一讲, note_en: Lecture 1 }
 textbooks:
-  - { title: Fundamentals of Biostatistics, author: Bernard Rosner, edition: 8, title_zh: 生物统计学基础 }
+  - { title: Fundamentals of Biostatistics, author: Bernard Rosner, edition: 8 }
   - { title: "Health and Numbers: A Problems-Based Introduction to Biostatistics", author: Chap T. Le, edition: 3 }
-  - { title: "Numerical Recipes: The Art of Scientific Computing", author: "William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery", edition: 3, title_zh: 数值秘诀：科学计算的艺术 }
+  - { title: "Numerical Recipes: The Art of Scientific Computing", author: "William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery", edition: 3 }
 ---
 
 生物统计学回答生物医学中的这样一类问题：一种药物是否有效，一种暴露是否致病，一次检测阳性的人有多大可能真的患病，一位患者还能活多久。答案都不能从单个个体上读出，因为个体之间差异很大，同一个人两次测量的结果也不相同；生物统计学就是在这种变异之中做出可靠结论的方法学。它的问题按目的可以分为描述、估计、比较、关联与调整、因果和预测几类，而选用什么方法取决于两件事：一是数据的结构，即结果变量的类型，以及"个体 × 变量 × 时间"中有哪几个维度；二是数据是怎样得到的，来自概率抽样、**随机化**的试验还是单纯的观察。本课程是[统计学](/3)的一个紧凑而自成体系的版本：每种方法给出直觉、适用条件、公式、代码和一个生物医学的例子，不读统计学的各门课程也能读懂，较重的推导则链接到那里的定理。它也比统计学课程更接近医学：流行病学研究、诊断与筛查、临床试验与 **Meta 分析**都是这里的核心内容。
