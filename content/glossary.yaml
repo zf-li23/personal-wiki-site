@@ -8844,7 +8844,7 @@ terms:
   - { zh: Fitch 算法, en: Fitch algorithm }
   - { zh: Felsenstein 剪枝算法, en: "Felsenstein's pruning algorithm", aliases: [pruning algorithm] }
   - { zh: 长枝吸引, en: long-branch attraction, aliases: [LBA] }
-  - { zh: 自展支持度, en: bootstrap support, aliases: [bootstrap 支持度, bootstrap value] }
+  - { zh: 自展支持度, en: bootstrap support, aliases: [自助支持度, bootstrap 支持度, bootstrap value] }
   - { zh: 多数规则一致树, en: majority-rule consensus tree, aliases: [一致树, consensus tree] }
   - { zh: 密码子偏好, en: codon usage bias, aliases: [密码子使用偏好, codon bias] }
   - { zh: 基因预测, en: gene prediction, aliases: [gene finding] }
