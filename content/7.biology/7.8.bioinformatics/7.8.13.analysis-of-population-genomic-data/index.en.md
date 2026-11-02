@@ -283,7 +283,7 @@ plink2 --pfile cohort_qc --pheno pheno.tsv --pheno-name LDL --covar covar.tsv \
 
 ### 13.5.2. Linear Mixed Models
 
-Principal components remove broad ancestry but not fine structure or relatedness. *Linear mixed models* add a random genetic background shared according to the GRM ([7.7.17](/7.7.17) for mixed models in general):
+Principal components remove broad ancestry but not fine structure or relatedness. **Linear mixed models** add a random genetic background shared according to the GRM ([7.7.17](/7.7.17) for mixed models in general):
 
 $$
 \boldsymbol{y} = X\boldsymbol{\beta} + \gamma_j\boldsymbol{g}_j + \boldsymbol{u} + \boldsymbol{\varepsilon}, \qquad \boldsymbol{u} \sim \mathcal{N}(\boldsymbol{0}, \sigma_g^2 K), \quad \boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, \sigma_\mathrm{e}^2 I),

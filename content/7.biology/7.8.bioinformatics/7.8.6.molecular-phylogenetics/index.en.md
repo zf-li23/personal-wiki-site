@@ -214,7 +214,7 @@ Under a substitution model, a tree with branch lengths assigns a probability to 
 
 For one site, the probability of the observed leaf states is a sum over the unobserved states of all $n - 1$ internal vertices of a rooted version of the tree, $s^{n-1}$ terms. Dynamic programming reduces this to a pass over the tree.
 
-**Algorithm 6.5.1 (Felsenstein's Pruning Algorithm)** For a site with observed leaf states, root the tree at any vertex and define the *partial likelihood* $L_v(a)$ of vertex $v$ as the probability of the leaf states below $v$ given state $a$ at $v$:
+**Algorithm 6.5.1 (Felsenstein's Pruning Algorithm)** For a site with observed leaf states, root the tree at any vertex and define the partial likelihood $L_v(a)$ of vertex $v$ as the probability of the leaf states below $v$ given state $a$ at $v$:
 
 1. At a leaf with state $x$, $L_v(a) = 1$ if $a = x$ and $0$ otherwise (for a gap or ambiguous base, $1$ for every compatible state).
 2. At an internal vertex $v$ with children $w$ on branches of length $t_w$, visiting vertices from the leaves upward,

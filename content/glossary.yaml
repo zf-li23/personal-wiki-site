@@ -8695,6 +8695,56 @@ terms:
   - { zh: 工具变量, en: instrumental variable }
   - { zh: 中介变量, en: mediator, scope: ["7.7"] }   # causal mediator; the unscoped Mediator complex keeps other pages
   - { zh: E 值, en: E-value, scope: ["7.7"] }   # VanderWeele–Ding sensitivity analysis; BLAST E-value is scoped 7.8
+  - { zh: 非信息删失, en: noninformative censoring, aliases: [independent censoring] }
+  - { zh: 累积风险函数, en: cumulative hazard function, aliases: [累积风险, cumulative hazard] }
+  - { zh: 寿命表, en: life table, aliases: [生命表, 精算法, actuarial method] }
+  - { zh: Kaplan–Meier 估计, en: Kaplan–Meier estimator, aliases: [乘积极限估计, product-limit estimator, Kaplan–Meier 曲线, Kaplan–Meier curve] }
+  - { zh: Greenwood 公式, en: "Greenwood's formula" }
+  - { zh: 中位生存时间, en: median survival time }
+  - { zh: log-rank 检验, en: log-rank test, aliases: [Mantel–Cox 检验, Mantel–Cox test, 对数秩检验] }
+  - { zh: 风险比, en: hazard ratio, aliases: [HR] }
+  - { zh: 偏似然, en: partial likelihood }
+  - { zh: Schoenfeld 残差, en: Schoenfeld residual, aliases: [Schoenfeld residuals] }
+  - { zh: 加速失效时间模型, en: accelerated failure time model, aliases: [AFT 模型, AFT model] }
+  - { zh: 竞争风险, en: competing risks, aliases: [competing risk] }
+  - { zh: 累积发生函数, en: cumulative incidence function, aliases: [CIF] }
+  - { zh: 重复测量, en: repeated measures, aliases: [repeated measurements] }
+  - { zh: 随机效应模型, en: random-effects model, aliases: [随机效应方差分析, random-effects ANOVA], scope: ["3", "7"] }
+  - { zh: 方差分量, en: variance component, aliases: [variance components] }
+  - { zh: 组内相关系数, en: intraclass correlation coefficient, aliases: [ICC, 组内相关, intraclass correlation] }
+  - { zh: 线性混合模型, en: linear mixed model, aliases: [混合模型, 线性混合效应模型, linear mixed-effects model, LMM, mixed model, linear mixed models] }
+  - { zh: 随机截距, en: random intercept, aliases: [随机截距模型, random-intercept model] }
+  - { zh: 随机斜率, en: random slope, aliases: [随机斜率模型, random-slope model] }
+  - { zh: 最佳线性无偏预测, en: best linear unbiased prediction, aliases: [BLUP] }
+  - { zh: 广义估计方程, en: generalized estimating equations, aliases: [GEE] }
+  - { zh: 交叉设计, en: crossover design, aliases: [交叉试验, cross-over design, crossover trial] }
+  - { zh: 遗留效应, en: carryover effect, aliases: [延滞效应, carry-over effect] }
+  - { zh: 设计效应, en: design effect, aliases: [Deff] }
+  - { zh: 完全随机缺失, en: missing completely at random, aliases: [MCAR] }
+  - { zh: 随机缺失, en: missing at random, aliases: [MAR] }
+  - { zh: 非随机缺失, en: missing not at random, aliases: [MNAR] }
+  - { zh: 多重插补, en: multiple imputation }
+  - { zh: 回归稀释, en: regression dilution, aliases: [回归稀释偏倚, regression dilution bias, attenuation bias] }
+  - { zh: 随机对照试验, en: randomized controlled trial, aliases: [RCT, 随机临床试验, randomized clinical trial] }
+  - { zh: 替代终点, en: surrogate endpoint, aliases: [surrogate end point] }
+  - { zh: 意向性治疗分析, en: intention-to-treat analysis, aliases: [ITT, 意向性分析, intention to treat] }
+  - { zh: 符合方案分析, en: per-protocol analysis }
+  - { zh: 非劣效试验, en: non-inferiority trial, aliases: [非劣效性试验, noninferiority trial] }
+  - { zh: 等效性试验, en: equivalence trial }
+  - { zh: 两个单侧检验, en: two one-sided tests, aliases: [TOST] }
+  - { zh: 期中分析, en: interim analysis }
+  - { zh: α 消耗函数, en: alpha spending function, aliases: [alpha-spending function, Lan–DeMets 消耗函数] }
+  - { zh: Meta 分析, en: meta-analysis, aliases: [荟萃分析, 元分析] }
+  - { zh: 固定效应 Meta 分析, en: fixed-effect meta-analysis }
+  - { zh: 随机效应 Meta 分析, en: random-effects meta-analysis }
+  - { zh: I² 统计量, en: I-squared statistic, aliases: [I², I-squared] }
+  - { zh: 森林图, en: forest plot }
+  - { zh: 漏斗图, en: funnel plot }
+  - { zh: 发表偏倚, en: publication bias }
+  - { zh: 领先时间偏倚, en: lead-time bias }
+  - { zh: 病程长短偏倚, en: length bias, aliases: [length-time bias] }
+  - { zh: 过度诊断, en: overdiagnosis }
+  - { zh: 异质性, en: heterogeneity, scope: ["7.7"] }   # meta-analysis; beats the unscoped heteroplasmy alias inside 7.7
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }
