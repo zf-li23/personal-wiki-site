@@ -2877,7 +2877,7 @@ terms:
   - { zh: 单位偶对, en: unit pair }
   - { zh: Chomsky 范式, en: Chomsky normal form, scope: ["4.8"] }
   - { zh: Greibach 范式, en: Greibach normal form }
-  - { zh: CKY 算法, en: CYK algorithm, aliases: [CKY algorithm, Cocke–Younger–Kasami algorithm] }
+  - { zh: CKY 算法, en: CYK algorithm, aliases: [CYK 算法, CKY algorithm, Cocke–Younger–Kasami algorithm] }
   - { zh: Earley 算法, en: Earley parser, aliases: [Earley algorithm] }
   - { zh: Earley 项, en: Earley item }
   - { zh: 上下文无关语言的泵引理, en: pumping lemma for context-free languages }
@@ -8745,6 +8745,30 @@ terms:
   - { zh: 病程长短偏倚, en: length bias, aliases: [length-time bias] }
   - { zh: 过度诊断, en: overdiagnosis }
   - { zh: 异质性, en: heterogeneity, scope: ["7.7"] }   # meta-analysis; beats the unscoped heteroplasmy alias inside 7.7
+  - { zh: 距离矩阵, en: distance matrix }
+  - { zh: 相关距离, en: correlation distance }
+  - { zh: 共表型相关系数, en: cophenetic correlation coefficient, aliases: [cophenetic correlation] }
+  - { zh: 热图, en: heatmap, aliases: [heat map] }
+  - { zh: 双标图, en: biplot }
+  - { zh: BH 校正 p 值, en: BH-adjusted p-value, aliases: [adjusted p-value] }
+  - { zh: q 值, en: q-value, aliases: [q-values], scope: ["3", "7"] }   # Storey q-value; physics Q 值 (quality factor) is unscoped
+  - { zh: 两组模型, en: two-groups model }
+  - { zh: 局部错误发现率, en: local false discovery rate, aliases: [局部 fdr, local fdr] }
+  - { zh: 经验 Bayes, en: empirical Bayes, aliases: [经验贝叶斯] }
+  - { zh: 调节 t 统计量, en: moderated t statistic, aliases: [moderated t, 调和 t 统计量] }
+  - { zh: 离散参数, en: dispersion parameter, aliases: [离散度], scope: ["7"] }
+  - { zh: 负二项广义线性模型, en: negative binomial generalized linear model, aliases: [负二项 GLM, NB GLM] }
+  - { zh: 大小因子, en: size factor, aliases: [size factors, 中位数比法, median-of-ratios method] }
+  - { zh: TMM 归一化, en: trimmed mean of M-values, aliases: [TMM, TMM normalization] }
+  - { zh: 独立过滤, en: independent filtering }
+  - { zh: 零膨胀, en: zero inflation, aliases: [zero-inflated, 零膨胀模型] }
+  - { zh: 乐观度, en: optimism, aliases: [乐观度校正, optimism correction], scope: ["7.7"] }
+  - { zh: 区分度, en: discrimination, scope: ["7"] }
+  - { zh: 校准斜率, en: calibration slope }
+  - { zh: 校准截距, en: calibration intercept, aliases: [calibration-in-the-large] }
+  - { zh: Brier 分数, en: Brier score }
+  - { zh: 净获益, en: net benefit }
+  - { zh: 决策曲线分析, en: decision curve analysis, aliases: [决策曲线, decision curve] }
 
   # biology: bioinformatics (7.8); homonyms of terms in other disciplines are scoped to 7
   - { zh: 生物信息学, en: bioinformatics }

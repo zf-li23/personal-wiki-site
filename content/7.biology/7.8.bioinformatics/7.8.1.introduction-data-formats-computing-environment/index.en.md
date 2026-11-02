@@ -328,7 +328,7 @@ Public archives implement these principles: a sequencing study deposited in the 
 
 6. Using Algorithm 1.4.1, in which bin is a record covering the zero-based half-open interval $[16\,380, 16\,390)$ stored? Why is it not in bin $4681$?
 
-   **Answer** $\mathrm{e}^- = 16\,389$. At the $16$-kb level, $\lfloor 16\,380/16\,384\rfloor = 0$ but $\lfloor 16\,389/16\,384\rfloor = 1$: the record crosses the boundary at $16\,384$, so it does not fit in bin $4681$ (the first $16$-kb bin) or $4682$. At the $128$-kb level both ends give $0$, so the record is stored in bin $585 + 0 = 585$. A query for any position in $[0, 131\,072)$ examines bin $585$, so it is still found.
+   **Answer** $e' = 16\,389$. At the $16$-kb level, $\lfloor 16\,380/16\,384\rfloor = 0$ but $\lfloor 16\,389/16\,384\rfloor = 1$: the record crosses the boundary at $16\,384$, so it does not fit in bin $4681$ (the first $16$-kb bin) or $4682$. At the $128$-kb level both ends give $0$, so the record is stored in bin $585 + 0 = 585$. A query for any position in $[0, 131\,072)$ examines bin $585$, so it is still found.
 
 7. (Design) A collaborator sends a table of variants with columns "chromosome, position, gene" but no information on the genome version or coordinate system. What would you check before using it?
 
