@@ -1381,7 +1381,7 @@ terms:
   - { zh: 遗漏变量偏差, en: omitted variable bias }
   - { zh: Simpson 悖论, en: "Simpson's paradox", aliases: [辛普森悖论] }
   - { zh: 多项式回归, en: polynomial regression, aliases: [多项式回归模型, polynomial regression model] }
-  - { zh: 交互效应, en: interaction effect, aliases: [交互作用], scope: ["3", "7.7"] }
+  - { zh: 交互效应, en: interaction effect, aliases: [交互作用, interaction, interactions], scope: ["3", "7.7"] }
   - { zh: 欠拟合, en: underfitting }
   - { zh: 最优子集回归, en: best subsets regression, aliases: [best subset selection] }
   - { zh: 逐步回归, en: stepwise regression }
@@ -5194,7 +5194,7 @@ terms:
   - { zh: 测量不确定度, en: measurement uncertainty, aliases: [不确定度] }
   - { zh: 有效数字, en: significant figures, aliases: [significant digits] }
   - { zh: 数字修约, en: rounding of numbers, aliases: [修约, 四舍六入五成双, round half to even] }
-  - { zh: 校准曲线, en: calibration curve, aliases: [工作曲线, 标准曲线, working curve] }
+  - { zh: 校准曲线, en: calibration curve, aliases: [工作曲线, 标准曲线, working curve, standard curve, standard curves] }
   - { zh: 检出限, en: limit of detection, aliases: [检测限, detection limit] }
   - { zh: 定量限, en: limit of quantification, aliases: [LOQ, 测定下限] }
   - { zh: 线性范围, en: linear range, aliases: [线性动态范围, linear dynamic range] }
