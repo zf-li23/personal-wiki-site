@@ -1409,8 +1409,8 @@ terms:
   - { zh: 自助法, en: bootstrap }
   - { zh: 因子, en: factor, scope: ["3.3", "3.8"] }
   - { zh: 因子水平, en: factor level, scope: ["3.3", "3.8"] }
-  - { zh: 单元格均值模型, en: cell means model }
-  - { zh: 因子效应模型, en: factor effects model }
+  - { zh: 单元格均值模型, en: cell means model, aliases: [均值模型, means model] }
+  - { zh: 因子效应模型, en: factor effects model, aliases: [效应模型, effects model] }
   - { zh: 处理效应, en: treatment effect, aliases: [因子水平效应, factor level effect], scope: ["3.3", "3.8"] }
   - { zh: 处理平方和, en: treatment sum of squares, aliases: [SSTR] }
   - { zh: 可估函数, en: estimable function }
@@ -1748,6 +1748,111 @@ terms:
   - { zh: 预烧期, en: burn-in, aliases: [烧入期] }
   - { zh: 准确性, en: accuracy, aliases: [准确, accurate], scope: ["3.5"] }
   - { zh: 因子, en: factor, scope: ["3.5"] }
+
+  # Bayesian statistics (3.7)
+  - { zh: 先验优势比, en: prior odds }
+  - { zh: 先验预测分布, en: prior predictive distribution }
+  - { zh: 中心后验区间, en: central posterior interval, aliases: [等尾可信区间, equal-tailed credible interval, central interval] }
+  - { zh: 信息先验, en: informative prior, aliases: [informative prior distribution] }
+  - { zh: 弱信息先验, en: weakly informative prior }
+  - { zh: 正常先验, en: proper prior, aliases: [proper prior distribution] }
+  - { zh: Jeffreys 不变性原理, en: "Jeffreys' invariance principle" }
+  - { zh: 位置参数, en: location parameter }
+  - { zh: 尺度参数, en: scale parameter }
+  - { zh: 参考先验, en: reference prior }
+  - { zh: 逆 Gamma 分布, en: inverse-gamma distribution, aliases: [逆伽马分布, inverse gamma distribution] }
+  - { zh: 逆卡方分布, en: inverse-chi-square distribution, aliases: [inverse chi-squared distribution, inverse-χ² distribution] }
+  - { zh: 尺度逆卡方分布, en: scaled inverse-chi-square distribution, aliases: [scaled inverse chi-squared distribution, scaled inverse-χ² distribution] }
+  - { zh: 讨厌参数, en: nuisance parameter, aliases: [多余参数, 冗余参数, nuisance parameters] }
+  - { zh: 正态–逆卡方分布, en: normal-inverse-chi-square distribution, aliases: [normal-inverse-χ² distribution] }
+  - { zh: 逆 Wishart 分布, en: inverse-Wishart distribution, aliases: [inverse Wishart distribution] }
+  - { zh: 正态–逆 Wishart 分布, en: normal-inverse-Wishart distribution }
+  - { zh: 多元 t 分布, en: multivariate t-distribution, aliases: [multivariate t distribution, multivariate Student t-distribution] }
+  - { zh: Laplace 分布, en: Laplace distribution, aliases: [双指数分布, double exponential distribution] }
+  - { zh: logistic 分布, en: logistic distribution }
+  - { zh: 对数 logistic 分布, en: log-logistic distribution }
+  - { zh: LKJ 分布, en: LKJ distribution, aliases: [LKJ correlation distribution] }
+  - { zh: 格点抽样, en: grid sampling, aliases: [离散格点抽样, 格点近似, discrete-grid sampling, grid approximation] }
+  - { zh: 正态近似, en: normal approximation, aliases: [后验的正态近似, normal approximation to the posterior], scope: ["3.7"] }
+  - { zh: 后验相合性, en: posterior consistency }
+  - { zh: Bernstein–von Mises 定理, en: Bernstein–von Mises theorem, aliases: [后验渐近正态性, asymptotic normality of the posterior] }
+  - { zh: 标签交换, en: label switching, scope: ["3"] }
+  - { zh: James–Stein 估计, en: James–Stein estimator, aliases: [James–Stein 估计量] }
+  - { zh: 收缩估计, en: shrinkage estimator, aliases: [shrinkage] }
+  - { zh: de Finetti 定理, en: "de Finetti's theorem", aliases: [de Finetti 表示定理, de Finetti representation theorem] }
+  - { zh: 超先验, en: hyperprior, aliases: [超先验分布, hyperprior distribution] }
+  - { zh: 完全合并, en: complete pooling }
+  - { zh: 无合并, en: no pooling }
+  - { zh: 部分合并, en: partial pooling }
+  - { zh: 敏感性分析, en: sensitivity analysis, scope: ["3"] }
+  - { zh: 外部验证, en: external validation }
+  - { zh: 后验预测检验, en: posterior predictive check, aliases: [后验预测检查, posterior predictive checking, PPC] }
+  - { zh: 复制数据, en: replicated data }
+  - { zh: 检验量, en: test quantity, aliases: [差异量, discrepancy measure] }
+  - { zh: 后验预测 p 值, en: posterior predictive p-value, aliases: [贝叶斯 p 值, Bayesian p-value] }
+  - { zh: 对数预测密度, en: log predictive density, aliases: [lpd] }
+  - { zh: 期望对数逐点预测密度, en: expected log pointwise predictive density, aliases: [elppd, elpd, 期望对数预测密度, expected log predictive density] }
+  - { zh: 对数逐点预测密度, en: log pointwise predictive density, aliases: [lppd] }
+  - { zh: 有效参数个数, en: effective number of parameters }
+  - { zh: WAIC, en: Watanabe–Akaike information criterion, aliases: [广泛适用信息准则, widely applicable information criterion] }
+  - { zh: Jeffreys 证据尺度, en: "Jeffreys' scale of evidence", aliases: [Jeffreys scale] }
+  - { zh: Lindley 悖论, en: "Lindley's paradox", aliases: [Jeffreys–Lindley 悖论, Jeffreys–Lindley paradox] }
+  - { zh: Laplace 近似, en: Laplace approximation, aliases: [Laplace 方法, "Laplace's method"] }
+  - { zh: 超参数, en: hyperparameter, aliases: [hyperparameters], scope: ["3"] }
+  - { zh: 风险函数, en: risk function, scope: ["3.7"] }
+  - { zh: 可容许估计, en: admissible estimator, aliases: [可容许性, admissibility], scope: ["3"] }
+  - { zh: 可交换性, en: exchangeability, aliases: [exchangeable], scope: ["3.7"] }
+  - { zh: 偏差信息准则, en: deviance information criterion, aliases: [DIC], scope: ["3"] }
+
+  # design and analysis of experiments (3.8)
+  - { zh: 设计实验, en: designed experiment, aliases: [实验设计, 试验设计, design of experiments, DOE, experimental design] }
+  - { zh: 回顾性研究, en: retrospective study }
+  - { zh: 处理, en: treatment, scope: ["3"] }
+  - { zh: 处理因子, en: treatment factor }
+  - { zh: 水平组合, en: treatment combination, aliases: [level combination, 处理组合] }
+  - { zh: 设计点, en: design point, aliases: [实验点] }
+  - { zh: 完全析因设计, en: full factorial design, aliases: [全面析因试验, 全面析因设计, 完全析因实验, full factorial experiment, FFD] }
+  - { zh: 部分析因设计, en: fractional factorial design, aliases: [部分析因试验, fractional factorial experiment] }
+  - { zh: 试验, en: run, aliases: [trial, experimental run], scope: ["3.8"] }
+  - { zh: 交叉因子, en: crossed factors, aliases: [crossed factor] }
+  - { zh: 嵌套因子, en: nested factor, aliases: [nested factors] }
+  - { zh: 实验误差, en: experimental error }
+  - { zh: 失拟误差, en: lack-of-fit error }
+  - { zh: 响应曲面法, en: response surface methodology, aliases: [响应曲面方法, RSM] }
+  - { zh: 稳健参数设计, en: robust parameter design, aliases: [田口方法, Taguchi method] }
+  - { zh: 鱼骨图, en: cause-and-effect diagram, aliases: [石川图, Ishikawa diagram, fishbone diagram] }
+  - { zh: 重复测定, en: repetition, aliases: [repeated measurement of one unit], scope: ["3.8"] }
+  - { zh: 分区组, en: blocking, aliases: [区组化, 局部控制, local control, error control], scope: ["3", "7.7"] }
+  - { zh: 干扰因子, en: nuisance factor, aliases: [讨厌因子, nuisance factors] }
+  - { zh: 潜伏变量, en: lurking variable, aliases: [潜藏变量, lurking variables] }
+  - { zh: 对比实验, en: comparative experiment, aliases: [比较实验, comparative experiments] }
+  - { zh: 简单对比实验, en: simple comparative experiment, aliases: [simple comparative experiments] }
+  - { zh: 平衡设计, en: balanced design, aliases: [平衡实验, balanced experiment] }
+  - { zh: Satterthwaite 近似, en: Satterthwaite approximation, aliases: [Welch–Satterthwaite 公式, Welch–Satterthwaite equation, Satterthwaite 方法] }
+  - { zh: 功效曲线, en: power curve }
+  - { zh: OC 曲线, en: operating characteristic curve, aliases: [OC curve, 抽检特性曲线] }
+  - { zh: 完全随机化设计, en: completely randomized design, aliases: [完全随机设计, CRD] }
+  - { zh: Cochran 定理, en: "Cochran's theorem" }
+  - { zh: 一般线性模型, en: general linear model }
+  - { zh: 多重比较, en: multiple comparisons, aliases: [多重比较方法, multiple comparison procedure, multiple comparison] }
+  - { zh: 数据窥探, en: data dredging, aliases: [data snooping, data fishing] }
+  - { zh: 学生化极差, en: studentized range }
+  - { zh: Tukey–Kramer 方法, en: Tukey–Kramer method, aliases: [Tukey–Kramer 检验, Tukey–Kramer test] }
+  - { zh: 正态概率图, en: normal probability plot, aliases: [正态 Q-Q 图, normal Q-Q plot] }
+  - { zh: Welch 方差分析, en: "Welch's ANOVA", aliases: [Welch 方差分析检验, "Welch's F-test"] }
+  - { zh: 非中心卡方分布, en: noncentral chi-square distribution, aliases: [non-central chi-square distribution] }
+  - { zh: 非中心 F 分布, en: noncentral F-distribution, aliases: [non-central F-distribution] }
+  - { zh: 固定效应模型, en: fixed-effects model, aliases: [固定效应方差分析, fixed-effects ANOVA], scope: ["3", "7"] }
+  - { zh: 随机因子, en: random factor }
+  - { zh: 固定因子, en: fixed factor }
+  - { zh: 限制极大似然估计, en: restricted maximum likelihood, aliases: [REML, 限制性极大似然, 残差极大似然, residual maximum likelihood] }
+  - { zh: 定量因子, en: quantitative factor }
+  - { zh: 定性因子, en: qualitative factor, aliases: [分类因子, categorical factor] }
+  - { zh: 一次一因子法, en: one-factor-at-a-time, aliases: [OFAT, 一次一因子实验, one-factor-at-a-time experiment, 单因子轮换法] }
+  - { zh: 可加模型, en: additive model, scope: ["3.3", "3.8", "7.7"] }
+  - { zh: Tukey 可加性检验, en: "Tukey's test for nonadditivity", aliases: [Tukey 单自由度检验, "Tukey's one-degree-of-freedom test", "Tukey's test for additivity"] }
+  - { zh: 重复, en: replication, aliases: [replicate, replicates], scope: ["3"] }
+  - { zh: 区组, en: block, aliases: [blocks], scope: ["3", "7.7"] }
 
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
@@ -8615,7 +8720,7 @@ terms:
   - { zh: 盲法, en: blinding, aliases: [单盲, 双盲, double blinding] }
   - { zh: Wilson 区间, en: Wilson score interval, aliases: [Wilson interval, Wilson 得分区间] }
   - { zh: Clopper–Pearson 区间, en: Clopper–Pearson interval, aliases: [exact binomial interval] }
-  - { zh: 统计功效, en: statistical power, aliases: [功效, 检验功效, power of a test] }
+  - { zh: 统计功效, en: statistical power, aliases: [功效, 检验功效, power of a test, power] }
   - { zh: 标准化死亡比, en: standardized mortality ratio, aliases: [SMR, 标准化发病比, standardized morbidity ratio] }
   - { zh: 效应量, en: effect size }
   - { zh: 配对设计, en: paired design, aliases: [配对样本, paired samples, matched pairs] }
@@ -8649,7 +8754,7 @@ terms:
   - { zh: 协方差分析, en: analysis of covariance, aliases: [ANCOVA] }
   - { zh: 随机区组设计, en: randomized complete block design, aliases: [randomized block design, 随机化区组设计] }
   - { zh: 析因设计, en: factorial design, aliases: [factorial experiment] }
-  - { zh: 实验单位, en: experimental unit }
+  - { zh: 实验单位, en: experimental unit, aliases: [实验单元] }
   - { zh: 伪重复, en: pseudoreplication }
   - { zh: 队列研究, en: cohort study, aliases: [前瞻性队列, prospective cohort] }
   - { zh: 病例对照研究, en: case-control study }
@@ -8673,7 +8778,7 @@ terms:
   - { zh: 匹配病例对照研究, en: matched case-control study }
   - { zh: logit, en: logit, scope: ["3", "7"] }   # statistics sense; 4.7 uses logits for network outputs
   - { zh: Wald 检验, en: Wald test }
-  - { zh: 偏差统计量, en: deviance, scope: ["7.7"] }
+  - { zh: 偏差统计量, en: deviance, scope: ["3", "7.7"] }
   - { zh: Hosmer–Lemeshow 检验, en: Hosmer–Lemeshow test }
   - { zh: probit 模型, en: probit model, aliases: [probit 分析, probit analysis] }
   - { zh: 半数致死量, en: median lethal dose, aliases: [LD50] }

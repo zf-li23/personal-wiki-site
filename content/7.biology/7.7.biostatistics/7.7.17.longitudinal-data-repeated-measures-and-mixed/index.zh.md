@@ -67,7 +67,7 @@ $$
 $$
 y_{ij} = \mu + a_i + \varepsilon_{ij}, \qquad a_i \sim \mathcal{N}(0, \sigma_A^2), \quad \varepsilon_{ij} \sim \mathcal{N}(0, \sigma^2),
 $$
-$a_i$ 与 $\varepsilon_{ij}$ 相互独立。这样的模型称为单因素**随机效应模型**（random-effects model），$\sigma_A^2$ 与 $\sigma^2$ 称为组间与组内的**方差分量**。
+$a_i$ 与 $\varepsilon_{ij}$ 相互独立。这样的模型称为单因素**随机效应模型**，$\sigma_A^2$ 与 $\sigma^2$ 称为组间与组内的**方差分量**。
 
 **公式 17.3.1（方差分量的估计）** 平衡设计中，方差分析表的组间均方 $\mathrm{MS}_B$ 与组内均方 $\mathrm{MS}_W$ 的期望为
 
