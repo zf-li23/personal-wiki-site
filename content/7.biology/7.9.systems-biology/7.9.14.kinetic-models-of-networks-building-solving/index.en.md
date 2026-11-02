@@ -251,7 +251,7 @@ For a linear pathway these reduce to Theorems [17.4.1](/7.1.17#thm-17.4.1) and [
 
 They agree with finite-difference derivatives to four decimals. Increasing enzyme 4 lowers $s_1$ and therefore the flux to $P$; halving it raises $J_P$ by $15\,\%$ and lowers $J_Q$ by $40\,\%$. Enzyme 3 has no control over any flux, because its substrate $S_2$ affects no other rate; it controls only $s_2$ ($C^{S_2}_3 = -1.22$). In metabolic engineering the negative entries are the opportunity: to increase the flux to a product, one can slow a competing branch, as well as speed up the producing one.
 
-**Theorem 14.5.2 (Combined Response Theorem)** Let an external effector $X$ (an inhibitor, an activator, a hormone) act directly only on the rate $v_i$, with elasticity $\varepsilon^{v_i}_X = \partial\ln v_i/\partial\ln X$. Then the response coefficient of any flux or concentration $Y$ to $X$, $R^Y_X = \mathrm{d}\ln Y/\mathrm{d}\ln X$, is
+**Theorem 14.5.2 (Combined Response Theorem)** Let an external effector $X$ (an inhibitor, an activator, a hormone) act directly only on the rate $v_i$, with elasticity $\varepsilon^{v_i}_X = \partial\ln v_i/\partial\ln X$. Then the *response coefficient* of any flux or concentration $Y$ to $X$, $R^Y_X = \mathrm{d}\ln Y/\mathrm{d}\ln X$, is
 $$
 R^Y_X = C^Y_i\,\varepsilon^{v_i}_X .
 $$
