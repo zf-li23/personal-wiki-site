@@ -8919,6 +8919,23 @@ terms:
   - { zh: 预测比对误差, en: predicted aligned error, aliases: [PAE] }
   - { zh: 功能注释, en: functional annotation, aliases: [功能预测], scope: ["7"] }
   - { zh: 虚拟筛选, en: virtual screening }
+  - { zh: 基因组组装, en: genome assembly, aliases: [de novo assembly, 从头组装] }
+  - { zh: 重叠–布局–一致, en: overlap–layout–consensus, aliases: [OLC, overlap-layout-consensus] }
+  - { zh: 重叠图, en: overlap graph }
+  - { zh: 字符串图, en: string graph, aliases: [string graphs] }
+  - { zh: 传递归约, en: transitive reduction }
+  - { zh: unitig, en: unitig, aliases: [unitigs] }
+  - { zh: de Bruijn 图, en: de Bruijn graph, aliases: [de Bruijn graphs, 德布鲁因图] }
+  - { zh: 末梢分支, en: tip, aliases: [tips], scope: ["7.8"] }
+  - { zh: 气泡, en: bubble, aliases: [bubbles], scope: ["7.8"] }
+  - { zh: 单倍型分辨组装, en: haplotype-resolved assembly, aliases: [phased assembly] }
+  - { zh: 端粒到端粒组装, en: telomere-to-telomere assembly, aliases: [T2T, T2T assembly] }
+  - { zh: 泛基因组图, en: pangenome graph, aliases: [pangenome graphs] }
+  - { zh: 支架构建, en: scaffolding, aliases: [挂载组装], scope: ["7"] }
+  - { zh: N50, en: N50, aliases: [NG50, L50, contig N50] }
+  - { zh: BUSCO, en: BUSCO, aliases: [benchmarking universal single-copy orthologs] }
+  - { zh: 一致性质量值, en: consensus quality value, aliases: [QV], scope: ["7.8"] }
+  - { zh: 重复序列屏蔽, en: repeat masking, aliases: [屏蔽重复序列] }
 
   # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
   - { zh: 系统生物学, en: systems biology }
