@@ -1803,6 +1803,7 @@ terms:
   - { zh: 可容许估计, en: admissible estimator, aliases: [可容许性, admissibility], scope: ["3"] }
   - { zh: 可交换性, en: exchangeability, aliases: [exchangeable], scope: ["3.7"] }
   - { zh: 偏差信息准则, en: deviance information criterion, aliases: [DIC], scope: ["3"] }
+  - { zh: Dirichlet-多项分布, en: Dirichlet-multinomial distribution, aliases: [Dirichlet–multinomial distribution, 多元 Beta-二项分布] }
 
   # design and analysis of experiments (3.8)
   - { zh: 设计实验, en: designed experiment, aliases: [实验设计, 试验设计, design of experiments, DOE, experimental design] }
