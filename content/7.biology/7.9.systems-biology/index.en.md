@@ -8,6 +8,7 @@ courses:
 textbooks:
   - { title: "An Introduction to Systems Biology: Design Principles of Biological Circuits", author: Uri Alon, edition: 2 }
   - { title: Bioinformatics and Functional Genomics, author: Jonathan Pevsner, edition: 3 }
+  - { title: 生物信息学, author: 陈铭, edition: 1, title_en: Bioinformatics, author_en: Ming Chen }
 ---
 
 Molecular biology took living systems apart: it identified genes one at a time, purified their products and traced pathways step by step. **Systems biology** asks the complementary question, how the parts, measured all at once and in their natural context, produce the behavior of a cell, a tissue or a patient. The question became practical only when technologies appeared that measure every transcript, protein, chromatin state or metabolite of a sample in one experiment, and it is these **omics** data, not the classification of organisms, that the field is about. Its central objects are networks and models. The work falls into three tasks: measuring the states of many components, connecting them into networks of interactions, regulation and dependence, and explaining what such networks do in time. Most of it is an **inverse model** problem: from counts, spectra and images we infer abundances, then edges, then rate constants, and each step needs a statistical model of the measurement and a null model against which a pattern counts as real. The **forward model** of a small circuit, which computes behavior from wiring and parameters, closes the loop by telling us what an inferred network could do.
