@@ -61,7 +61,7 @@ The degree distribution determines how a network falls apart when vertices are r
 
 ### 34.2.1. The Embryonic Oscillator in Two Variables
 
-The early cell cycles of the frog embryo run autonomously, every $25$–$30\,\mathrm{min}$, without checkpoints ([7.3.20](/7.3.20#sec-20.6.1)). The core is cyclin B–Cdk1, which is activated by the continuous synthesis of cyclin and by its own positive feedback through **Cdc25** and **Wee1**, and APC/C–Cdc20, which is activated by Cdk1 with a delay and destroys cyclin B. Ferrell, Tsai and Yang (2011) reduced this to two equations for the active fractions $C$ of Cdk1 and $A$ of APC/C (SH Eq. 20-1):
+The early cell cycles of the frog embryo run autonomously, every $25$–$30\,\mathrm{min}$, without checkpoints ([7.3.20](/7.3.20#sec-20.6.1)). The core is cyclin B–Cdk1, which is activated by the continuous synthesis of cyclin and by its own positive feedback through **Cdc25** and **Wee1**, and APC/C–Cdc20, which is activated by Cdk1 with a delay and destroys cyclin B. Ferrell, Tsai and Yang (2011) reduced this to two equations for the active fractions $C$ of Cdk1 and $A$ of APC/C:
 $$
 \begin{aligned}
 \frac{\mathrm{d}C}{\mathrm{d}t} &= \alpha_1 - \beta_1C\,\frac{A^n}{K^n + A^n} + \alpha_3(1 - C)\frac{C^n}{K^n + C^n}, \\

@@ -8875,6 +8875,26 @@ terms:
   - { zh: PERMANOVA, en: PERMANOVA, aliases: [置换多元方差分析, permutational multivariate analysis of variance] }
   - { zh: 组成数据, en: compositional data, aliases: [成分数据] }
   - { zh: Aitchison 距离, en: Aitchison distance }
+  - { zh: 序列到功能模型, en: sequence-to-function model, aliases: [sequence-to-function models], scope: ["7"] }
+  - { zh: in silico 饱和突变, en: in silico saturation mutagenesis, aliases: [ISM, 计算饱和突变] }
+  - { zh: 蛋白质语言模型, en: protein language model, aliases: [protein language models] }
+  - { zh: 基因组语言模型, en: genomic language model, aliases: [genomic language models, DNA language model] }
+  - { zh: 变异效应预测, en: variant effect prediction, aliases: [变异效应预测器, variant effect predictor] }
+  - { zh: 深度突变扫描, en: deep mutational scanning, aliases: [DMS] }
+  - { zh: 点括号表示, en: dot-bracket notation, aliases: [括号表示, 点–括号记法] }
+  - { zh: 假结, en: pseudoknot, aliases: [pseudoknots] }
+  - { zh: Zuker 算法, en: Zuker algorithm, aliases: ["Zuker's algorithm"] }
+  - { zh: 随机上下文无关文法, en: stochastic context-free grammar, aliases: [SCFG, probabilistic context-free grammar, PCFG] }
+  - { zh: 协方差模型, en: covariance model, aliases: [covariance models] }
+  - { zh: 补偿突变, en: compensatory mutation, aliases: [compensatory mutations, 补偿性突变] }
+  - { zh: 种子位点类型, en: seed site type, aliases: [seed site types], scope: ["7"] }
+  - { zh: 均方根偏差, en: root-mean-square deviation, aliases: [RMSD, 均方根距离] }
+  - { zh: Kabsch 算法, en: Kabsch algorithm, aliases: [最优叠合, optimal superposition] }
+  - { zh: TM-score, en: TM-score, aliases: [TM 分数, template modeling score] }
+  - { zh: pLDDT, en: pLDDT, aliases: [predicted local distance difference test] }
+  - { zh: 预测比对误差, en: predicted aligned error, aliases: [PAE] }
+  - { zh: 功能注释, en: functional annotation, aliases: [功能预测], scope: ["7"] }
+  - { zh: 虚拟筛选, en: virtual screening }
 
   # biology: systems biology (7.9); homonyms of terms in other disciplines are scoped to 7
   - { zh: 系统生物学, en: systems biology }
@@ -8992,3 +9012,26 @@ terms:
   - { zh: 背景突变率, en: background mutation rate }
   - { zh: 基于网络的分层, en: network-based stratification, aliases: [NBS] }
   - { zh: 肿瘤突变负荷, en: tumor mutational burden, aliases: [TMB] }
+  - { zh: 转录网络, en: transcription network, aliases: [transcription networks] }
+  - { zh: 数学控制比较, en: mathematically controlled comparison }
+  - { zh: 前馈环, en: feed-forward loop, aliases: [feedforward loop, FFL, feed-forward loops] }
+  - { zh: 一致前馈环, en: coherent feed-forward loop, aliases: [coherent FFL, C1-FFL] }
+  - { zh: 不一致前馈环, en: incoherent feed-forward loop, aliases: [incoherent FFL, I1-FFL] }
+  - { zh: 符号敏感延迟, en: sign-sensitive delay }
+  - { zh: 单输入模块, en: single-input module }
+  - { zh: 多输出前馈环, en: multi-output feed-forward loop, aliases: [multi-output FFL] }
+  - { zh: 双扇, en: bi-fan, aliases: [bi-fans] }
+  - { zh: 致密重叠调节子, en: dense overlapping regulons, aliases: [DOR] }
+  - { zh: 调节型反馈, en: regulated feedback }
+  - { zh: 混合模体, en: hybrid motif, aliases: [mixed motif, hybrid motifs], scope: ["7"] }
+  - { zh: 多输入前馈环, en: multi-input feed-forward loop, aliases: [multi-input FFL] }
+  - { zh: 正负反馈耦合振荡器, en: coupled positive–negative feedback oscillator, aliases: [oscillator motif] }
+  - { zh: 频率编码, en: frequency encoding, scope: ["7"] }
+  - { zh: 传递噪声, en: propagated noise, aliases: [noise propagation, 噪声传递] }
+  - { zh: 赌注分散, en: bet hedging, aliases: [两头下注, bet-hedging] }
+  - { zh: 动态补偿, en: dynamical compensation }
+  - { zh: 突变体抗性, en: mutant resistance }
+  - { zh: 模块化变化的目标, en: modularly varying goals, aliases: [MVG] }
+  - { zh: 复制–分化模型, en: duplication–divergence model, aliases: [duplication-divergence model, 复制–歧化模型] }
+  - { zh: 合成生物学, en: synthetic biology }
+  - { zh: 逆作用, en: retroactivity }
