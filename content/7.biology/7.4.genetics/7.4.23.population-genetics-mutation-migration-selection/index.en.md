@@ -258,7 +258,7 @@ The product $Nm$ is the number of migrants per generation, and Eq. (23.12) shows
 
 Selection is deterministic in an infinite population, but every new mutation starts as a single copy, and at low copy number drift dominates even for favorable alleles.
 
-**Theorem 23.6.1 (Kimura's Fixation Probability)** In a diploid population of size $N$ and effective size $N_e$, an allele with additive selection coefficient $s$ (fitnesses $1 + s$, $1 + s/2$, $1$ in Kimura's form; equivalently genic selection) and initial frequency $p$ is fixed with probability
+**Theorem 23.6.1 (Kimura's Fixation Probability)** In a diploid population of size $N$ and effective size $N_e$, an allele with selection coefficient $s$ per copy (genic selection: fitnesses $1 + 2s$, $1 + s$, $1$) and initial frequency $p$ is fixed with probability
 
 $$
 u(p) = \frac{1 - \mathrm{e}^{-4N_esp}}{1 - \mathrm{e}^{-4N_es}}. \tag{23.13}

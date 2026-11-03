@@ -7646,7 +7646,7 @@ terms:
   - { zh: 近亲婚配, en: consanguinity, aliases: [consanguineous mating, 近亲结婚] }
   - { zh: 同源相同, en: identity by descent, aliases: [IBD, identical by descent, 血缘同一], scope: ["7"] }
   - { zh: 近交系数, en: inbreeding coefficient }
-  - { zh: 亲缘系数, en: coefficient of relationship }
+  - { zh: 亲缘系数, en: coefficient of relationship, aliases: [relatedness, coefficient of relatedness] }
   - { zh: 遗传咨询, en: genetic counseling }
   - { zh: 连锁, en: linkage, aliases: [genetic linkage, linked], scope: ["7"] }
   - { zh: 连锁群, en: linkage group, aliases: [linkage groups] }
@@ -7700,7 +7700,7 @@ terms:
   - { zh: 中断杂交, en: interrupted mating, aliases: [中断杂交实验] }
   - { zh: F′ 质粒, en: F′ plasmid, aliases: [F-prime, F′ factor] }
   - { zh: 部分二倍体, en: merodiploid, aliases: [partial diploid, merozygote] }
-  - { zh: 转导, en: transduction, scope: ["7.4", "7.11"] }
+  - { zh: 转导, en: transduction, scope: ["7.4", "7.10", "7.11"] }
   - { zh: 普遍性转导, en: generalized transduction }
   - { zh: 特异性转导, en: specialized transduction, aliases: [限制性转导] }
   - { zh: 共转导, en: cotransduction }
@@ -9516,3 +9516,71 @@ terms:
   - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10"] }
   - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
   - { zh: 保留指数, en: retention index, scope: ["7"] }
+  - { zh: 分离位点, en: segregating site, aliases: [segregating sites] }
+  - { zh: 自然主义谬误, en: naturalistic fallacy }
+  - { zh: 智能设计论, en: intelligent design }
+  - { zh: 共有祖征, en: symplesiomorphy }
+  - { zh: 独有衍征, en: autapomorphy }
+  - { zh: Dollo 定律, en: "Dollo's law" }
+  - { zh: Moran 模型, en: Moran model }
+  - { zh: 遗传拯救, en: genetic rescue }
+  - { zh: 无穷小模型, en: infinitesimal model }
+  - { zh: 突变方差, en: mutational variance, aliases: [V_M] }
+  - { zh: Bulmer 效应, en: Bulmer effect }
+  - { zh: 多基因适应, en: polygenic adaptation }
+  - { zh: 邻域大小, en: neighbourhood size, aliases: [neighborhood size, "Wright's neighborhood"] }
+  - { zh: 空间分选, en: spatial sorting }
+  - { zh: 同胞种, en: sibling species }
+  - { zh: 一般谱系物种概念, en: general lineage concept, aliases: [general lineage species concept] }
+  - { zh: 生态学物种概念, en: ecological species concept }
+  - { zh: 物种形成基因, en: speciation gene, aliases: [speciation genes] }
+  - { zh: 雪球效应, en: snowball effect, scope: ["7.10"] }
+  - { zh: 大 X 效应, en: large-X effect }
+  - { zh: 突变次序物种形成, en: mutation-order speciation }
+  - { zh: 魔法性状, en: magic trait, aliases: [speciation trait, magic traits] }
+  - { zh: 寄主宗, en: host race, aliases: [host races] }
+  - { zh: 分化岛, en: genomic island of divergence, aliases: [genomic islands, island of speciation, genomic island of speciation] }
+  - { zh: 同倍体杂交物种形成, en: homoploid hybrid speciation }
+  - { zh: 囚徒困境, en: "prisoner's dilemma" }
+  - { zh: 以牙还牙, en: tit for tat }
+  - { zh: 绿胡子效应, en: green-beard effect, aliases: [green beard] }
+  - { zh: 工蜂监察, en: worker policing }
+  - { zh: 隐蔽雌性选择, en: cryptic female choice }
+  - { zh: 性角色逆转, en: sex-role reversal, aliases: [sex role reversal] }
+  - { zh: 替代交配策略, en: alternative mating strategy, aliases: [alternative mating strategies] }
+  - { zh: Trivers–Willard 假说, en: Trivers–Willard hypothesis }
+  - { zh: 突变崩溃, en: mutational meltdown }
+  - { zh: 协同上位, en: synergistic epistasis }
+  - { zh: 清除, en: purging, scope: ["7"] }
+  - { zh: 异长花柱, en: heterostyly }
+  - { zh: Leslie 矩阵, en: Leslie matrix }
+  - { zh: 体型优势模型, en: size-advantage model }
+  - { zh: 适合度集合, en: fitness set }
+  - { zh: 协同演化地理镶嵌理论, en: geographic mosaic theory of coevolution }
+  - { zh: 竞争排斥原理, en: competitive exclusion principle, aliases: ["Gause's principle"] }
+  - { zh: 生态释放, en: ecological release }
+  - { zh: 基因共享, en: gene sharing }
+  - { zh: 非同源基因替代, en: nonhomologous gene displacement }
+  - { zh: 超保守元件, en: ultraconserved element, aliases: [ultraconserved elements] }
+  - { zh: 核形体, en: nucleomorph, aliases: [nucleomorphs] }
+  - { zh: 真核生物发生, en: eukaryogenesis }
+  - { zh: 氢假说, en: hydrogen hypothesis }
+  - { zh: 化石记录, en: fossil record }
+  - { zh: 标准化石, en: index fossil, aliases: [index fossils] }
+  - { zh: 埋藏学, en: taphonomy }
+  - { zh: 雪球地球, en: Snowball Earth }
+  - { zh: 平均核苷酸一致性, en: average nucleotide identity, aliases: [ANI] }
+  - { zh: 新元古代氧化事件, en: Neoproterozoic oxygenation event }
+  - { zh: LogDet 距离, en: LogDet distance, aliases: [paralinear distance, 拟线性距离] }
+  - { zh: 异速演化, en: heterotachy }
+  - { zh: 标号历史, en: labeled history, aliases: [labeled histories, ranked tree, ranked gene tree] }
+  - { zh: Gamma–Dirichlet 先验, en: gamma-Dirichlet prior, aliases: [compound Dirichlet prior] }
+  - { zh: 贝叶斯经验贝叶斯, en: Bayes empirical Bayes, aliases: [BEB] }
+  - { zh: 惩罚似然, en: penalized likelihood }
+  - { zh: 有效先验, en: effective prior }
+  - { zh: 系统发生协方差矩阵, en: phylogenetic covariance matrix }
+  - { zh: Pagel λ, en: "Pagel's lambda" }
+  - { zh: Blomberg K, en: "Blomberg's K" }
+  - { zh: 随机性状映射, en: stochastic character mapping }
+  - { zh: 达尔文（速率单位）, en: darwin, scope: ["7.10"] }
+  - { zh: 霍尔丹（速率单位）, en: haldane, scope: ["7.10"] }

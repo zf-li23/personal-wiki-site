@@ -1,3 +1,264 @@
 ---
 title: "Evolutionary Biology: History, Concepts and Evidence"
+description: "What evolution is (descent with modification; fact and theory; micro- and macroevolution); ideas before Darwin (essentialism, the scala naturae, Lamarck, Cuvier's catastrophism, Lyell's uniformitarianism); Darwin and Wallace and the five components of Darwin's theory; blending versus particulate inheritance; the eclipse of natural selection, the modern synthesis and what came after; the reception of evolution in China and the Lysenko affair; proximate and ultimate causes and how evolution is studied; philosophical issues; the evidence for evolution."
 ---
+
+In 2014 an epidemic of Ebola virus disease began in West Africa. Within months, comparisons of viral genomes from patients showed that the outbreak had started with a single transmission from an animal host, probably a bat, and had then spread from person to person; similar analyses had shown earlier that HIV-1 descends from a virus of chimpanzees and HIV-2 from a virus of sooty mangabeys, and that HIV-1 entered the human population early in the twentieth century. Questions like these, where a pathogen came from and how fast it adapts to a drug, are questions about evolution, and they are answered with the same methods that reconstruct the history of birds or flowering plants. Evolutionary biology asks two things about the living world: what its history has been, and what has caused that history. As Theodosius Dobzhansky put it, "nothing in biology makes sense except in the light of evolution."
+
+This first chapter sets out the concepts on which the course builds. It defines evolution and distinguishes the fact of evolution from the theory that explains it (Section 1.1), follows the history of the idea from the fixed species of natural theology through Darwin and Wallace to the modern synthesis and the molecular era (Sections 1.2–1.4), explains how evolution is studied and what it does and does not imply philosophically (Sections 1.5–1.6), and reviews the evidence that all organisms descend from common ancestors (Section 1.7). The processes behind evolution were treated quantitatively for a single locus in genetics ([7.4.22](/7.4.22), [7.4.23](/7.4.23)); the following chapters extend them: the tree of life and how to read it ([7.10.2](/7.10.2)), natural selection and adaptation ([7.10.3](/7.10.3)), and the origin of the variation on which all evolution depends ([7.10.4](/7.10.4)).
+
+## 1.1. What Evolution Is
+
+### 1.1.1. Definition
+
+The word comes from the Latin *evolvere*, "to unroll", and in everyday language means any gradual change. Changes within one organism, such as its development, are not evolution in the biological sense.
+
+**Definition 1.1.1 (Evolution)** Biological (organic) **evolution** is inherited change in the properties of groups of organisms over the course of generations. In Darwin's phrase, evolution is **descent with modification**: populations change over time, and populations that descend from a common ancestral population become different from one another (they *diverge*).
+
+Three points are contained in the definition. Evolution is a property of populations, not of individuals: an individual does not evolve, but the frequencies of the variant types in a population change. Only inherited change counts: a population that is larger because food is abundant has not evolved unless the difference is transmitted. And evolution is defined over generations, the time scale of reproduction. In population-genetic terms the elementary evolutionary change is a change in **allele frequency** or **genotype frequency** across generations ([7.4.23](/7.4.23)).
+
+### 1.1.2. Fact and Theory
+
+In everyday use a "theory" is a speculation. In science a hypothesis is an informed conjecture that may be true; a *fact* is a hypothesis so strongly supported that we act as if it were true, although, like every scientific statement, it could in principle be revised; and a *scientific theory* is a coherent body of interconnected statements, supported by evidence, that explains a large class of phenomena (atomic theory, the theory of plate tectonics). A theory is the highest achievement of a science, not a stage before certainty.
+
+In *On the Origin of Species* (1859) Charles Darwin advanced two hypotheses: that organisms have descended, with modification, from common ancestors, and that the chief cause of the modification is natural selection acting on hereditary variation. The first is today a fact in the sense above: evidence from paleontology, biogeography, comparative anatomy, embryology, genetics and molecular biology (Section 1.7) shows that all known organisms are related through common ancestry. The second grew into *evolutionary theory*, the body of statements about the causes of evolution: **mutation**, recombination, **gene flow**, **genetic drift**, the several forms of **natural selection**, and others. Like any theory it has a well-tested core and an active frontier; uncertainty at the frontier, for example about the relative importance of different modes of speciation, does not touch the core.
+
+### 1.1.3. Microevolution and Macroevolution
+
+**Definition 1.1.2 (Microevolution and Macroevolution)** **Microevolution** is evolution within species: changes in allele and genotype frequencies and in the phenotypes they affect, over relatively short times. **Macroevolution** is evolution above the species level: the origin of new species and higher taxa, the origin of major new features, and long-term patterns of diversification and extinction.
+
+The terms describe scales, not different processes. A central claim of the modern synthesis (Section 1.4) is that the processes observed within species, continued over long times, account for macroevolution; how far macroevolution also has its own regularities, such as differences among clades in rates of speciation and extinction, is a topic of later chapters.
+
+## 1.2. Before Darwin
+
+### 1.2.1. Fixed Kinds and the Scala Naturae
+
+Western thought inherited from Plato the idea that the things we perceive are imperfect copies of fixed, ideal forms, and from Aristotle an ordering of nature from the least to the most perfect. Medieval Christian thought combined these with a literal reading of Genesis: each species had been created separately in its present form (*special creation*), and all creatures formed a single, permanent ranking, the Great Chain of Being or *scala naturae*, from minerals through plants and animals to humans and the angels (panel A of the figure below). Change was excluded, because it would imply imperfection in the original creation. This *essentialist* (typological) view treats variation among individuals as accidental deviation from the type of the species; Darwin would reverse this, treating the variation as the reality and the type as an abstraction.
+
+Natural theology made the study of nature a way of revealing the Creator's plan. John Ray's *The Wisdom of God Manifested in the Works of the Creation* (1691) and William Paley's *Natural Theology* (1802) presented the fit of organisms to their ways of life as proof of design: as a watch implies a watchmaker, the eye implies a designer. Carolus Linnaeus (1707–1778) created the framework of modern classification in *Systema Naturae* (1735), grouping species into genera, genera into orders and so on; for him the nested groups expressed the order of creation, whereas we now read them as genealogy ([7.10.2](/7.10.2)).
+
+![Three pictures of the history of life. A: the scala naturae, a fixed linear ranking of beings from minerals to God. B: Lamarck's hypothesis: life arises repeatedly by spontaneous generation (red dots) and every lineage climbs in complexity, so living species differ because they originated at different times. C: Darwin's descent with modification: a single origin (red dot), lineages that split and diverge in form, many of which become extinct (crosses); complexity need not increase](./plots/ladder-vs-tree.py)
+
+### 1.2.2. An Old and Changing Earth
+
+The foundations of evolutionary thought were laid by geologists. In 1650 Archbishop James Ussher dated the Creation to 4004 BC by adding up the biblical genealogies. By the eighteenth century it was clear that most sedimentary rocks had been deposited in ancient seas and that fossils were the remains of former organisms, so that the thickness of the strata demanded either a few drastic events or far more time than the biblical chronology allowed.
+
+**Definition 1.2.1 (Catastrophism and Uniformitarianism)** **Catastrophism** is the view that the geological record was shaped mainly by sudden, violent events unlike those observable today, each of which could exterminate the living forms of a region. **Uniformitarianism** is the principle that the processes that operated in the past are the same as those operating now, at comparable rates, so that the geological record should be explained by causes that can be observed.
+
+Georges Cuvier, the founder of comparative anatomy, showed from fossils such as the mammoth and the mastodon that species become extinct, and used fossils to order strata in time. He interpreted the abrupt changes of fauna between strata as the results of catastrophes (mostly local, with repopulation from elsewhere), and his conviction that the parts of an organism are so tightly integrated that none can change alone made him an opponent of evolution. James Hutton (1788) had argued for a steady cycle of erosion and uplift, "no vestige of a beginning, no prospect of an end", and Charles Lyell's *Principles of Geology* (1830–1833) made uniformitarianism the dominant view. Darwin read Lyell on the *Beagle* and applied the same reasoning to life: small, observable causes acting over immense times produce large effects. (Modern geology combines both views: the ordinary processes dominate, but rare catastrophes such as asteroid impacts and mass extinctions also shaped the history of life, [7.10.29](/7.10.29).)
+
+### 1.2.3. Early Evolutionary Ideas
+
+In the eighteenth century several naturalists questioned the fixity of species. Pierre de Maupertuis speculated about hereditary particles and their changes; Buffon suggested that related species might share an ancestry; Darwin's grandfather Erasmus Darwin wrote evolutionary speculations in verse and prose. The first coherent evolutionary theory was that of Jean-Baptiste de Lamarck, set out in *Philosophie zoologique* (1809).
+
+**Definition 1.2.2 (Lamarckism)** The **inheritance of acquired characteristics** is the hypothesis that changes an organism undergoes during its life, through the use or disuse of organs or the direct action of the environment, are transmitted to its offspring. **Lamarckism** is the theory of evolution based on this principle.
+
+Lamarck held that simple organisms arise continually by spontaneous generation and that each lineage progresses up the scale of complexity, driven by an internal tendency and by organs that are strengthened by use (the giraffe stretching its neck). Living species differ in complexity because they began their ascent at different times (panel B of the figure in Section 1.2.1); common ancestry plays almost no role in this scheme. Lamarck's mechanism was wrong, and inheritance of acquired characteristics was in any case a common belief of the time, not his invention, but he deserves credit for the first testable theory of evolution. In 1844 the anonymous *Vestiges of the Natural History of Creation* (by Robert Chambers) popularized a progressive, Lamarck-like evolution, including that of humans; the hostile reception it met showed Darwin how controversial the subject was.
+
+## 1.3. Darwin and Wallace
+
+### 1.3.1. The Origin of the Theory
+
+Charles Darwin (1809–1882) sailed as naturalist on HMS *Beagle* from December 1831 to October 1836, mostly along the coasts of South America. He found fossil mammals resembling the armadillos and sloths still living there, and on the Galápagos Islands mockingbirds and giant tortoises that differed from island to island while resembling forms on the mainland. Back in England, the ornithologist John Gould identified the island mockingbirds as distinct species, and by 1837 Darwin was convinced that species had descended from common ancestors; in that year he sketched a branching diagram of descent in a notebook ([7.10.2](/7.10.2)). In 1838 he read Thomas Malthus's *Essay on the Principle of Population*: populations can grow geometrically while resources cannot, so that a struggle for existence is inevitable. If individuals differ in ways that affect survival and reproduction, and the differences are inherited, the favorable variants will be preserved and the character of the species altered. This was the idea of natural selection.
+
+Darwin wrote a sketch of the theory in 1842 and a longer essay in 1844, and spent the next twenty years gathering evidence, from domesticated animals and plants, barnacle taxonomy and experiments on dispersal. In 1858 he received a manuscript from Alfred Russel Wallace (1823–1913), then collecting in the Malay Archipelago, which set out the same theory, also inspired by Malthus. Extracts from Darwin's writings and Wallace's paper were read together at the Linnean Society of London in 1858, and *On the Origin of Species by Means of Natural Selection* was published on 24 November 1859. Wallace went on to found the study of the geographic distribution of animals and always called natural selection "Mr. Darwin's theory".
+
+### 1.3.2. Darwin's Theory
+
+The *Origin* contains two major theories: descent with modification, in which all species, living and extinct, descend from one or a few original forms (panel C of the figure in Section 1.2.1), and natural selection as the chief cause of modification. Ernst Mayr distinguished five components that were accepted at different times:
+
+| Component | Claim | Fate |
+|---|---|---|
+| Evolution as such | the characteristics of organisms change over time | accepted by most naturalists within about 15 years |
+| Common descent | species diverge from common ancestors; all species form one great family tree | accepted with evolution; now confirmed for all known life |
+| Gradualism | large differences evolve through many small steps, not leaps (saltations) | largely supported; the size of steps is still studied ([7.10.19](/7.10.19), [7.10.32](/7.10.32)) |
+| Populational change | evolution is a change in the proportions of variant individuals in a population | original to Darwin; the basis of population genetics |
+| Natural selection | consistent differences in survival and reproduction among heritable variants explain adaptation | rejected by most biologists until the 1930s |
+
+The fourth component is the most original. Lamarck's theory is *transformational*: every individual changes, and the species changes because all its members do. Darwin's is *variational*: individuals differ from the start, the variants differ in their success, and the frequency of a variant changes from generation to generation. The average of a species is a statistical abstraction; only varied individuals exist. Natural selection gave a purely mechanical explanation of adaptation, the apparent design of organisms that natural theology had attributed to a creator, and this is why it changed not only biology but Western thought.
+
+### 1.3.3. The Problem of Inheritance
+
+The great gap in Darwin's theory was heredity. The prevailing belief was blending inheritance, and Darwin never found an answer to the objection it raised.
+
+**Definition 1.3.1 (Blending and Particulate Inheritance)** Under **blending inheritance** the hereditary material of the two parents mixes like fluids, and the offspring inherit an intermediate, homogeneous mixture. Under **particulate inheritance** heredity is carried by discrete particles (genes) that pass unchanged from generation to generation, so that parental types can reappear in later generations.
+
+**Formula 1.3.1 (Variance under Blending)** If each offspring has the mean $z' = (z_1 + z_2)/2$ of the trait values of two parents drawn independently from a population with variance $V$, then
+$$
+\operatorname{Var}(z') = \tfrac{1}{4}\bigl(\operatorname{Var}(z_1) + \operatorname{Var}(z_2)\bigr) = \tfrac{1}{2}V,
+\qquad V_t = 2^{-t}V_0 .
+$$
+
+Blending halves the heritable variance every generation (figure below), so natural selection would soon have nothing to act on, and a single favorable variant would be diluted by half in each generation of crossing with the rest of the population (the objection of the engineer Fleeming Jenkin, 1867). Particulate inheritance removes the difficulty: segregating genes do not dissipate variation, and with random mating the genotype frequencies stay at **Hardy–Weinberg equilibrium** with unchanged allele frequencies ([7.4.22](/7.4.22#thm-22.2.1)). Gregor Mendel had shown this with peas in a paper read in 1865 and published in 1866, but it was not appreciated until 1900, when it was rediscovered by Hugo de Vries, Carl Correns and Erich von Tschermak.
+
+![Why blending inheritance was a problem for natural selection (Formula 1.3.1). A population of 2000 individuals mates at random for 10 generations, without selection or mutation. Under blending each offspring has the mean of its parents' trait values; under particulate (Mendelian) inheritance the trait is the sum of 20 additive loci, each parent transmitting one allele per locus. A: the variance of the trait (dots: simulation; red line: the prediction 2^−t of Formula 1.3.1; green line: the initial variance). B: trait distributions in generation 0 and generation 5. Blending destroys the variation in a few generations; Mendelian inheritance preserves it](./plots/blending.py)
+
+## 1.4. From the Eclipse of Darwinism to the Modern Synthesis
+
+### 1.4.1. The Eclipse of Natural Selection
+
+By the 1870s most scientists accepted descent with modification, and the late nineteenth century was a golden age of comparative anatomy, embryology and paleontology devoted to tracing genealogies, promoted especially by Ernst Haeckel. Natural selection, however, was rejected by all but a few for about sixty years. Darwin's supporters played it down; Thomas Henry Huxley, who defended Darwin in public, thought that evolution proceeded by large jumps. The physicist William Thomson (Lord Kelvin) calculated from the cooling of the Earth that it was only some tens of millions of years old, too young for gradual selection; the error was found only after the discovery of radioactive heating, and radiometric dating now gives an age of about 4.5 billion years. Three alternatives competed with selection:
+
+- *Neo-Lamarckism*: evolution through the inheritance of acquired characteristics, which Darwin himself had admitted as a secondary cause. August Weismann argued that in animals the germ line is set apart from the body early in development, so that changes in the body cannot reach the gametes; his experiment of cutting off the tails of mice for many generations, without effect on their descendants, is famous if not decisive. No later research has found mutations induced specifically where they are advantageous ([7.10.4](/7.10.4)).
+- **Orthogenesis**: variation is directed toward predetermined goals by an internal drive, without the need for selection, and trends may continue even when maladaptive (the huge antlers of the extinct Irish elk were cited). No mechanism was ever proposed.
+- *Mutationism*: new species arise by discrete mutations of large effect, so that selection is unnecessary. De Vries's *Mutation Theory* (1901–1903) was based on variants of the evening primrose *Oenothera* that later proved to be chromosomal rearrangements. The last influential mutationist, Richard Goldschmidt (1940), proposed that higher taxa arise by "systemic mutations" producing "hopeful monsters", an idea that has been completely rejected.
+
+**Definition 1.4.1 (Orthogenesis)** **Orthogenesis** ("straight-line evolution") is the hypothesis that lineages evolve in predetermined directions because variation itself is directed by an internal tendency, independently of natural selection.
+
+The rediscovery of Mendel at first deepened the divide. Mendelians such as William Bateson studied discrete variants and saw evolution as discontinuous; the biometricians Karl Pearson and W. F. R. Weldon measured continuous variation and doubted that Mendel's laws applied to it. Wilhelm Johannsen's selection in "pure lines" of beans, which had no effect within a line, was widely taken to show that selection can only sort existing genotypes and cannot create anything new.
+
+### 1.4.2. The Evolutionary Synthesis
+
+The conflict was resolved between about 1918 and 1950. Experiments showed that continuous variation has a Mendelian basis: Herman Nilsson-Ehle (1908) found segregation ratios such as 15:1 in the grain color of wheat, explained by several genes with additive effects ([7.4.4](/7.4.4)), and long-continued selection (on oil content in maize, on the hooded pattern of rats by William Castle) moved populations far beyond their original range, because recombination of many genes produces combinations that never occurred before. The theory came from three founders of population genetics: Ronald A. Fisher showed in 1918 that the correlations between relatives follow from many Mendelian factors and partitioned the variance into components, and in *The Genetical Theory of Natural Selection* (1930) analyzed selection on many genes of small effect; J. B. S. Haldane computed the rates of change under selection (from 1924; *The Causes of Evolution*, 1932); Sewall Wright analyzed inbreeding, genetic drift and their interaction with selection in subdivided populations (1921, 1931). Mutation, they showed, is not an alternative to selection but its raw material.
+
+The theory was then joined to the study of natural populations. Sergei Chetverikov found in Russia that wild *Drosophila* carry abundant hidden recessive variation; Theodosius Dobzhansky brought this program to the United States and wrote *Genetics and the Origin of Species* (1937), which carried population genetics to naturalists. Ernst Mayr (*Systematics and the Origin of Species*, 1942) treated species and speciation, George Gaylord Simpson (*Tempo and Mode in Evolution*, 1944) the fossil record, G. Ledyard Stebbins (*Variation and Evolution in Plants*, 1950) plants, and Bernhard Rensch evolution above the species level; the journal *Evolution* was founded in 1946.
+
+**Definition 1.4.2 (Modern Synthesis)** The **modern synthesis** (evolutionary synthesis) is the consensus reached in the 1930s and 1940s that reconciled Darwin's theory with Mendelian genetics: mutation, recombination, gene flow, genetic drift and natural selection acting on particulate genetic variation are the causes of evolution within species, and the same causes, acting over long times, account for the origin of species and of higher taxa. Its central principle, that adaptive evolution is caused by natural selection acting on Mendelian variation, is often called **neo-Darwinism** (a term first used for Weismann's version of Darwinism without inheritance of acquired characteristics).
+
+The main tenets of the synthesis are summarized in the following table; those marked with an asterisk have been qualified by later research, as indicated.
+
+| Principle | Later qualification |
+|---|---|
+| Phenotype differs from genotype; phenotypic differences have genetic and environmental causes | |
+| Acquired characteristics are not inherited\* | some epigenetic states are transmitted for a few generations ([7.10.4](/7.10.4)) |
+| Hereditary variation is particulate, for continuous and discrete traits alike\* | nongenetic inheritance exists but is minor for most organisms |
+| Variation arises by random mutation and is amplified by recombination | mutation is random with respect to fitness, not uniform ([7.10.4](/7.10.4)) |
+| Evolution is change in populations, in allele and genotype frequencies | |
+| Changes are random (drift) or nonrandom (selection); only selection produces adaptation | the neutral theory: much molecular change is by drift ([7.10.6](/7.10.6)) |
+| Populations usually contain much genetic variation and can respond rapidly to selection | |
+| Differences between species evolve by small steps, often at many genes\* | some adaptations involve genes of large effect ([7.10.9](/7.10.9)) |
+| Species are groups of interbreeding populations, reproductively isolated from others\* | other species concepts; gene flow between species is common ([7.10.11](/7.10.11)) |
+| Speciation usually occurs in geographically isolated populations\* | other modes are possible ([7.10.12](/7.10.12)) |
+| Higher taxa arise by accumulation of small differences, not by sudden new types | |
+| All organisms form one tree of life, descended from one common ancestor | branches also join, by hybridization and gene transfer ([7.10.2](/7.10.2)) |
+
+### 1.4.3. Evolutionary Biology after the Synthesis
+
+The determination of the structure of DNA in 1953 began the molecular era. Protein sequences, then DNA sequences, made it possible to compare any organisms, and protein electrophoresis (1966) revealed far more genetic variation within populations than either the classical or the balance school had expected ([7.10.4](/7.10.4)). Motoo Kimura's **neutral theory of molecular evolution** (1968; developed in his book of 1983) challenged the synthesis's assumption that almost all evolutionary change is adaptive: most substitutions in DNA and proteins, it holds, are of selectively neutral mutations fixed by drift ([7.4.23](/7.4.23#sec-23.7), [7.10.6](/7.10.6)). Since the 1960s William D. Hamilton, John Maynard Smith and George C. Williams extended evolutionary theory to social behavior, life histories and the levels at which selection acts ([7.10.3](/7.10.3), [7.10.16](/7.10.16)). Evolutionary developmental biology, built on comparative embryology and molecular genetics, studies how changes in development produce changes in form ([7.5.39](/7.5.39), [7.10.19](/7.10.19)). Whole-genome sequencing turned molecular evolution into evolutionary genomics, which reconstructs phylogenies, detects selection in genomes and traces the history of populations ([7.10.8](/7.10.8), [7.10.33](/7.10.33)). Modern evolutionary biology is therefore much more than Darwin's theory: criticisms of evolution that address only Darwin's writings are beside the point.
+
+![A timeline of evolutionary thought from 1650 to the present (the time axis is compressed before 1850). Above the axis: the main works and discoveries in four eras, before Darwin, Darwin and the eclipse of natural selection, the evolutionary synthesis, and the molecular and genomic era. Below the axis: the reception of evolution in China and the suppression of genetics in the Soviet Union (Section 1.4.4)](./plots/timeline.py)
+
+### 1.4.4. Evolution in China, and the Lysenko Affair
+
+Evolutionary ideas reached China through translation. Yan Fu's *Tianyan lun* (1898) was a free rendering of T. H. Huxley's *Evolution and Ethics* (1893), with Yan Fu's own commentary drawing on Herbert Spencer; it presented the struggle for existence and natural selection as laws that applied to nations, and its call for national self-strengthening made it one of the most influential books of the late Qing reform movement. The social reading of evolution, rather than its biology, dominated this first reception. A complete Chinese translation of the *Origin of Species*, by Ma Junwu, appeared in 1920.
+
+The history of genetics in the Soviet Union shows what happens when a scientific question is decided by political authority. From the 1930s the agronomist Trofim Lysenko promoted a doctrine, presented as the "Michurinist biology" named after the plant breeder I. V. Michurin, that rejected the gene and Mendelian genetics and held that heredity could be reshaped directly by the environment, an inheritance of acquired characteristics. With the support of the state he attacked the geneticists: Nikolai Vavilov, the leading Soviet geneticist and plant geographer, was arrested in 1940 and died in prison in 1943, and at the session of the Lenin All-Union Academy of Agricultural Sciences in August 1948 Lysenko's doctrine was declared the only correct biology. Genetics was banned from teaching and research, geneticists lost their positions, and agricultural practice based on Lysenko's claims failed; Soviet genetics recovered only after Lysenko lost his influence in the mid-1960s. In the early 1950s China, following the Soviet model, taught Michurinist biology in place of genetics, until a symposium on genetics held at Qingdao in 1956 restored the teaching of Mendelian and Morgan's genetics. The lesson is not about one doctrine: scientific claims are settled by evidence, and enforcing an answer by authority damages both science and the people who depend on it.
+
+## 1.5. How Evolution Is Studied
+
+### 1.5.1. Proximate and Ultimate Causes
+
+**Definition 1.5.1 (Proximate and Ultimate Causes)** The **proximate cause** of a biological phenomenon is its immediate, mechanistic cause: the physiological, developmental, genetic or molecular processes that produce it in an individual. The **ultimate cause** is its evolutionary cause: the history, especially the history of natural selection, that led to the existence of the feature.
+
+A male marsh warbler sings a much more complex song than a grasshopper warbler. The proximate causes include the action of testosterone, the structure of the syrinx and a larger song nucleus in the brain; the ultimate causes include selection by females, which prefer males with more complex songs. The two explanations do not compete: they answer different questions, and both are needed. Niko Tinbergen (1963) refined the distinction into four questions about any trait:
+
+| | Static (the trait as it is) | Dynamic (how it came to be) |
+|---|---|---|
+| Proximate | mechanism (causation) | ontogeny (development in the individual) |
+| Ultimate | survival value (function) | evolution (phylogenetic history) |
+
+Cell biology, physiology and neurobiology study mostly proximate causes; evolutionary biology adds the ultimate ones.
+
+### 1.5.2. Methods
+
+Evolutionary biology is more historical than most of biology, and most of its conclusions are inferences rather than direct observations. Historical events are inferred from fossils ([7.10.29](/7.10.29)) and from comparisons of living organisms on a phylogeny ([7.10.2](/7.10.2), [7.10.21](/7.10.21)). The causes of evolution are studied by comparing patterns of variation with mathematical models ([7.10.5](/7.10.5)–[7.10.8](/7.10.8)), by experimental evolution in laboratory populations of fast-reproducing organisms, by functional and experimental studies of particular traits, and by the comparative method, which correlates a trait with an environmental factor across many species ([7.10.3](/7.10.3), [7.10.26](/7.10.26)).
+
+That the causes are not seen directly is not a weakness peculiar to evolution: no one has seen an atomic orbital or watched DNA replicate semiconservatively, yet both are established because hypotheses about them made predictions that experiments confirmed. The same hypothetico-deductive method is used in evolutionary biology. For example, mitochondria are inherited only through the mother, so a mitochondrial mutation that harms males but not females is invisible to selection; evolutionary theory therefore predicts that mitochondrial genomes accumulate male-harming variants. There is no biochemical reason to expect this, but the prediction has been confirmed: mitochondrial variants affect male fertility in humans and other animals and alter the expression of reproductive genes in male *Drosophila*.
+
+## 1.6. Philosophical Issues
+
+Darwin's theory changed three ideas at once. It replaced the fixed types of Plato and Aristotle with variation and the static world of creation with continual change; it placed humans within nature, as one species subject to the same processes as the others; and it replaced explanation by purpose with explanation by mechanism. Before Darwin, the question "why do plants have flowers?" was answered by the purpose the Creator could have had. Natural selection, the differential reproduction of variants that arise without regard to need, made such answers unnecessary. Biological features have functions (the colored petals of a magnolia attract pollinators) but not purposes: they exist because ancestors with them reproduced more than those without. The apparent goal-directedness of development and behavior is the execution of a program, encoded in DNA, that was itself shaped by selection. All of modern science explains this way: geologists do not ask for the purpose of earthquakes.
+
+**Definition 1.6.1 (Creationism)** **Creationism** is the belief that species, or at least humans, were created by a supernatural being essentially in their present form (*special creation*), rather than having evolved from common ancestors. Its forms range from "young-Earth" creationism, which holds that the Earth is less than 10,000 years old, to positions that accept change within species but deny the common ancestry of higher taxa; *intelligent design* argues that some biological structures are too complex to have arisen by natural processes.
+
+Science is silent on hypotheses that cannot be tested, such as the existence of a deity, and many religious people and many evolutionary biologists see no conflict between evolution and their faith. But to explain natural phenomena science must assume natural causes, and specific supernatural claims that do make predictions, a worldwide flood or a young Earth, have been tested and refuted; evolution is incompatible with a literal reading of the creation stories, as it is with every other creation myth. The arguments against creationism and intelligent design are treated in [7.10.34](/7.10.34).
+
+Nor does evolution provide a basis for ethics. Evolutionary biology describes how the world is, not how it ought to be; to conclude that what is natural is good is the *naturalistic fallacy*. Natural selection is a name for differences in reproductive success and is no more moral or immoral than erosion. That lions practice infanticide does not justify infanticide, and that some penguins are monogamous does not prescribe monogamy. "Social Darwinism", which in the late nineteenth and early twentieth centuries invoked natural selection to justify unrestrained economic competition, imperialism and racism, and the use of evolution by others to justify class struggle or humanitarianism, are all instances of this fallacy.
+
+## 1.7. The Evidence for Evolution
+
+The evidence that all organisms descend with modification from common ancestors comes from many independent sources, each of which would be hard to explain otherwise. Even without a fossil record, the comparative evidence from living organisms would be sufficient.
+
+### 1.7.1. The Hierarchical Pattern and Universal Features
+
+Linnaeus discovered that organisms fall naturally into groups within groups. A process of branching and divergence produces exactly such a nested hierarchy, and few other processes do: languages, which also descend with modification, can be classified hierarchically; chemical elements and minerals cannot. The hierarchy is consistent across independent characters: classifications based on anatomy and phylogenies from DNA sequences agree on most relationships ([7.10.2](/7.10.2)).
+
+Some features are shared by all known life: DNA as genetic material, essentially one **genetic code**, the same machinery of transcription and translation, proteins made only of L-amino acids. Many of these features are arbitrary: D-amino acids would serve as well, and the code could be different (suppressor mutations that read stop codons as amino acids show that it is not fixed by chemistry). Once the common ancestor of all life had adopted them, changing them would have been as disruptive as switching the side of the road on which a country drives. Universal arbitrary features are evidence of a single origin.
+
+### 1.7.2. Homology
+
+**Homology**, similarity of structure despite differences of function, follows from descent but is hard to reconcile with design. The forelimbs of birds, humans, bats, cats, horses and whales serve flight, manipulation, running and swimming, yet are built from the same bones in the same arrangement (figure below). An engineer designing a wing, a flipper and a hoof would not use the same set of parts for all three; an ancestor's limb modified in different directions does. The sting of a bee is a modified ovipositor, which is why only females sting. The same holds at the molecular level: almost half of 414 essential genes of yeast can be replaced by their human counterparts with the yeast surviving, and the mouse gene *Pax6* induces fly eyes when expressed in *Drosophila* ([7.10.2](/7.10.2)).
+
+![Homology of the tetrapod forelimb: the same bones in the same order (humerus; radius and ulna; carpals; metacarpals; phalanges), each colored identically, adapted to different functions (shoulder at the top, radius and digit I on the left; not to scale). Human: five digits, the generalized pattern. Cat: digitigrade, digit I (dewclaw) short, claws. Toothed whale: short, flattened bones in a flipper, with extra phalanges in digits II and III (hyperphalangy). Horse: the ulna reduced and fused to the radius, a single functional digit III on the cannon bone, the metacarpals of II and IV reduced to splints, the distal phalanx in the hoof. Bat: radius and the metacarpals and phalanges of II–V elongated to support the wing membrane (patagium); the clawed thumb free; the ulna reduced. Bird: stout ulna, thin radius, two free carpals, a carpometacarpus of fused carpals and metacarpals bearing the alular, major and minor digits. Below: the relationships of the six (branching within Fereuungulata unresolved). The wings of bats and birds are convergent flight surfaces built on a homologous limb](./plots/forelimb.py)
+
+### 1.7.3. Embryology and Vestigial Features
+
+Development often passes through stages that would be unnecessary if it were not a modification of an ancestral development. Fetal anteaters form tooth primordia that are later resorbed; human embryos have pharyngeal pouches like those that form gill slits in fish embryos, and a tail that is mostly lost by cell death ([7.5.39](/7.5.39)).
+
+**Definition 1.7.1 (Vestigial Organ)** A **vestigial organ** (vestigial structure) is a reduced or rudimentary feature that is homologous to a fully developed, functional feature in related species or ancestors, and that has lost its ancestral function or most of it.
+
+Cave fishes have eyes in every stage of degeneration; some flightless beetles have reduced wings beneath fused wing covers that could not open; plants with separate-sexed flowers that evolved from hermaphroditic ancestors carry nonfunctional stamens or pistils; humans have a coccyx of fused tail vertebrae, a reduced appendix and wisdom teeth that often fail to erupt. A vestigial organ may acquire a minor new role (the human appendix contains lymphoid tissue), but its form makes sense only as a remnant. At the molecular level every eukaryotic genome contains **pseudogenes**, sequences similar to functional genes that have lost their function ([7.2.2](/7.2.2)), such as the many human olfactory receptor genes inactivated as our ancestors came to rely on vision.
+
+### 1.7.4. Convergence and Imperfection
+
+Functionally similar features of distantly related organisms often differ profoundly in structure: the camera eyes of vertebrates and of octopuses both have a lens and a retina, but the vertebrate photoreceptors face away from the light, and the nerve fibers run over the retina and leave it through a blind spot, whereas the cephalopod retina has neither ([7.10.2](/7.10.2)). Such differences are expected if the structures were modified from different ancestral features; an omnipotent designer could have used the better arrangement in both. History also explains features no engineer would choose: the crossing of the airway and the food passage in the human pharynx, the blind spot, lower back pain in an upright descendant of quadrupeds. Tetrapods have not evolved more than five true digits since the pentadactyl limb was established: the extra "thumb" of the giant panda is an enlarged wrist bone, not a digit.
+
+### 1.7.5. Biogeography
+
+Darwin's most compelling evidence came from **biogeography**. Wherever he traveled, related but distinct species replaced one another geographically, and the species of oceanic islands resembled those of the nearest mainland: the Galápagos mockingbirds are related to South American mockingbirds, not to those of other volcanic islands with similar climates. Islands lack many groups that thrive there when introduced by humans, so their absence reflects failure to arrive, not unsuitable conditions. Distributions also match geological history: Wallace's line separates the faunas of Asia and Australia along an ancient deep-water channel that remained open even when Pleistocene sea levels were about 100 m lower, and marsupials, lungfishes and southern beeches (*Nothofagus*) are distributed across the fragments of the former southern supercontinent Gondwana ([7.10.30](/7.10.30)).
+
+### 1.7.6. The Fossil Record
+
+The fossil record is very incomplete, because preservation and discovery are both rare, and a fossil is unlikely to be a direct ancestor of any living species. Its evidence is nevertheless strong in three ways. First, the order of appearance matches the order predicted from phylogenies of living organisms: prokaryotes precede eukaryotes, fishes precede tetrapods, wingless insects precede winged ones, ferns and gymnosperms precede flowering plants. Asked what observation could refute evolution, Haldane is said to have answered "fossil rabbits in the Precambrian". Second, fossils in a region resemble the living species of the same region, Darwin's "law of succession": the giant armored glyptodonts of South America are related to the armadillos that live there. Third, transitional forms with intermediate combinations of characters, predicted by phylogenies, have been found for many major transitions: from lobe-finned fishes to tetrapods (figure below), from dinosaurs to birds (feathered dinosaurs, first described from China in 1996), from terrestrial artiodactyls to whales (*Pakicetus*, *Ambulocetus*, *Rodhocetus*, *Dorudon*), and among the hominins ([7.10.32](/7.10.32), [7.10.33](/7.10.33)). The fossils also show **mosaic evolution**, different characters changing at different times ([7.10.2](/7.10.2)).
+
+![Transitional fossils between lobe-finned fishes and tetrapods, placed on their phylogeny and on a time axis (ages approximate). The fossil taxa (dots) are side branches of the lineage leading to living tetrapods (the stem lineage): none need be a direct ancestor, but each shows an intermediate combination of characters. Living coelacanths, lungfishes and the crown tetrapods continue to the present (arrows). Numbered bars mark where the listed characters evolved: 1, lobed paired fins with limb-like bones; 2, a flat skull with a long snout; 3, loss of the gill-cover bones, a mobile neck and a flexible elbow and wrist (*Tiktaalik* could raise its body on its fins); 4, limbs with digits, more than five in *Acanthostega* and *Ichthyostega*, which kept a fish-like tail fin; 5, five or fewer digits. Relationships after Futuyma and Kirkpatrick (2017), Fig. 17.16](./plots/tetrapod-transition.py)
+
+### 1.7.7. Evolution Observed
+
+The processes of evolution can be watched. Artificial selection has produced from single wild species domesticated forms more different than many natural genera: dog breeds; cabbage, broccoli, cauliflower, Brussels sprouts and kale, all varieties of *Brassica oleracea*. In nature, soapberry bugs in Florida evolved shorter beaks within decades after switching to the thinner fruits of an introduced tree ([7.10.3](/7.10.3)); HIV evolves resistance to antiviral drugs within each treated patient, often through the same amino acid substitutions; bacteria have evolved resistance to every widely used antibiotic and insects to every insecticide. New species arise in a single step when a hybrid doubles its chromosomes: the primrose *Primula kewensis*, created by crossing *P. verticillata* and *P. floribunda*, has twice the chromosome number of its parents and cannot interbreed with either (**polyploidy**, [7.4.16](/7.4.16), [7.10.12](/7.10.12)). Experimental populations of microorganisms adapt to new temperatures and toxins by new mutations within months.
+
+### 1.7.8. Genes and Genomes
+
+Molecular biology adds evidence of a kind Darwin could not imagine. Phylogenies of DNA sequences, inferred independently of anatomy, recover the same groups. Genomes are full of features that are explicable by history and not by design: pseudogenes, satellite DNA, and transposable elements that multiply without benefit to the organism ([7.4.17](/7.4.17)). Some polymorphisms are older than species: at the MHC loci, some human alleles are more closely related to chimpanzee alleles than to other human alleles, because the polymorphism existed in the common ancestor and was passed on to both descendant species (**incomplete lineage sorting**, [7.10.25](/7.10.25)). Common ancestry is, finally, the scientific reason why studies of yeast, nematodes, flies, mice and monkeys tell us about human biology.
+
+## Summary
+
+- **Evolution** (Definition 1.1.1) is inherited change in the properties of populations over generations, descent with modification. Common descent is an established fact; evolutionary theory explains it by mutation, recombination, gene flow, drift and selection. Microevolution and macroevolution (Definition 1.1.2) are scales, not different processes.
+- Before Darwin, species were seen as fixed types in a scala naturae. Geology established an old Earth: Cuvier's catastrophism and Lyell's uniformitarianism (Definition 1.2.1). Lamarck's theory (Definition 1.2.2) was the first evolutionary theory, transformational and without common descent.
+- Darwin's theory has five components: evolution, common descent, gradualism, populational (variational) change and natural selection. Its weakness was heredity: blending halves the variance every generation (Formula 1.3.1); particulate inheritance (Definition 1.3.1) preserves it.
+- Natural selection was eclipsed until about 1930 by neo-Lamarckism, orthogenesis (Definition 1.4.1) and mutationism. The modern synthesis (Definition 1.4.2) united Mendelian genetics, population genetics, systematics and paleontology; the neutral theory, social evolution, evo-devo and genomics extended it.
+- In China evolution was first received through Yan Fu's *Tianyan lun* (1898) as a social doctrine; the Lysenko affair in the Soviet Union, and its echo in China until 1956, shows the cost of deciding science by authority.
+- Biology explains by proximate and ultimate causes (Definition 1.5.1); evolutionary hypotheses are tested by their predictions. Features have functions, not purposes; evolution does not imply an ethics (naturalistic fallacy) and science cannot test supernatural hypotheses; creationism (Definition 1.6.1) contradicts the evidence.
+
+| Line of evidence | Examples |
+|---|---|
+| Nested hierarchy, universal arbitrary features | groups within groups; one genetic code; L-amino acids |
+| Homology | tetrapod forelimbs; human genes rescuing yeast |
+| Embryology, vestigial organs (Definition 1.7.1) | tooth buds of anteaters; cave-fish eyes; pseudogenes |
+| Convergence, imperfect design | vertebrate and octopus eyes; the blind spot |
+| Biogeography | island faunas; Wallace's line; Gondwanan distributions |
+| Fossils | order of appearance; law of succession; tetrapods, birds, whales |
+| Evolution observed | artificial selection; drug and pesticide resistance; polyploid species |
+| Genomes | concordant molecular phylogenies; transposons; trans-species polymorphism |
+
+## Questions
+
+1. What is wrong, in Darwinian terms, with the statement "giraffes evolved long necks because each generation stretched to reach higher leaves"? Restate the evolution of a long neck as a variational process.
+
+   **Answer** The statement is Lamarckian: it assumes that a change acquired by an individual during its life is inherited (Definition 1.2.2) and that every member of the population changes. In Darwin's variational theory the population contains heritable variation in neck length at each generation; if individuals with longer necks survive and reproduce more (for example, during droughts when only high foliage remains), and the variation is heritable, the frequency of long-neck genotypes rises from one generation to the next. No individual's neck lengthens because of its efforts; the population's distribution shifts.
+
+2. Under blending inheritance, how much new heritable variance would mutation have to supply in each generation to keep the variance of a trait constant at $V$? Why does particulate inheritance make this unnecessary?
+
+   **Answer** By Formula 1.3.1 random mating reduces the variance from $V$ to $V/2$ in one generation, so mutation would have to restore $V/2$, half of all the heritable variance, every generation; observed mutation rates are far too low. Under particulate inheritance the genes themselves pass unchanged, allele frequencies are not altered by mating, and with random mating the genotype frequencies stay at Hardy–Weinberg proportions ([7.4.22](/7.4.22)); the additive genetic variance is therefore maintained without new mutation (it declines only slowly by drift, in proportion to $1/2N_{\mathrm{e}}$ per generation).
+
+3. Give the proximate and ultimate causes of the following: (a) a deciduous tree drops its leaves in autumn; (b) a human infant can digest lactose but many adults cannot.
+
+   **Answer** (a) Proximate: shortening day length and falling temperature trigger hormonal changes (ethylene, abscisic acid) and the formation of an abscission layer at the base of the petiole. Ultimate: in climates with freezing winters, trees that shed leaves before frost avoided water loss and damage and reallocated nutrients, and left more descendants than trees that kept their leaves. (b) Proximate: expression of the lactase gene *LCT* declines after weaning, in persistent adults a regulatory variant keeps it on. Ultimate: in most mammals milk is consumed only in infancy, so continued expression gave no advantage; in human populations with dairying, lactase persistence alleles rose in frequency under strong selection in the last several thousand years ([Example 23.8.1 in 7.4.23](/7.4.23#ex-23.8.1)).
+
+4. Explain why the agreement between the order of appearance of groups in the fossil record and phylogenies inferred from living species is a test of evolution, not a circular argument.
+
+   **Answer** The phylogeny is inferred from data on living organisms (anatomy, DNA) without reference to fossils, and it predicts an order of origin: a group cannot appear before the groups from which it branched (tetrapods after lobe-finned fishes, mammals after the first amniotes). The fossil record, dated independently by stratigraphy and radiometric methods, could contradict the prediction, as a Precambrian rabbit would. That the independent sources agree, with exceptions explicable by gaps in preservation, is a confirmed prediction.
+
+5. (Open question) Choose one vestigial feature and explain how you would distinguish the hypothesis that it is a remnant without function from the hypothesis that it has a current function.
+
+   **Answer** Outline, for the human appendix: (i) comparative: map the presence and size of the cecal appendix on a mammal phylogeny and test whether it evolved repeatedly in lineages with particular diets or immune features, which would suggest a function, or is merely retained in reduced form; (ii) functional: compare the health of people with and without the appendix (after appendectomy) for outcomes such as recovery of the gut flora after infection; (iii) developmental and histological: its lymphoid tissue indicates an immune role. A feature can be both vestigial in origin (reduced from a larger ancestral cecum) and of minor current use; the two hypotheses concern different questions, history and present function (Definition 1.5.1).
