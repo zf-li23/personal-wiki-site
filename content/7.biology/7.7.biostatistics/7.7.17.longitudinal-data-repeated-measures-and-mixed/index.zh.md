@@ -154,7 +154,7 @@ $$
 
 ### 17.4.2. 估计：REML
 
-$\boldsymbol{\beta}$ 已知协方差时的最优估计是广义最小二乘 $\hat{\boldsymbol{\beta}} = \bigl(\sum_i X_i^{\mathsf T}V_i^{-1}X_i\bigr)^{-1}\sum_i X_i^{\mathsf T}V_i^{-1}\boldsymbol{y}_i$。方差分量由似然估计。普通的**极大似然估计**会低估方差分量，原因与样本方差除以 $n$ 时偏小相同：它没有扣除估计 $\boldsymbol{\beta}$ 所用掉的自由度。限制性极大似然（restricted maximum likelihood，REML）基于与 $\boldsymbol{\beta}$ 无关的残差对比的似然，平衡的单因素设计中恰好给出公式 17.3.1 的估计（取正时），是混合模型的默认方法。比较固定效应不同的模型要用 ML 的似然比检验，比较随机效应结构用 REML 的似然比；检验某个方差分量为 0 时，原假设位于参数空间的边界上，$\chi^2$ 近似偏保守（真实的零分布是 $\chi^2_0$ 与 $\chi^2_1$ 等的混合）。
+$\boldsymbol{\beta}$ 已知协方差时的最优估计是广义最小二乘 $\hat{\boldsymbol{\beta}} = \bigl(\sum_i X_i^{\mathsf T}V_i^{-1}X_i\bigr)^{-1}\sum_i X_i^{\mathsf T}V_i^{-1}\boldsymbol{y}_i$。方差分量由似然估计。普通的**极大似然估计**会低估方差分量，原因与样本方差除以 $n$ 时偏小相同：它没有扣除估计 $\boldsymbol{\beta}$ 所用掉的自由度。限制性极大似然（REML）基于与 $\boldsymbol{\beta}$ 无关的残差对比的似然，平衡的单因素设计中恰好给出公式 17.3.1 的估计（取正时），是混合模型的默认方法。比较固定效应不同的模型要用 ML 的似然比检验，比较随机效应结构用 REML 的似然比；检验某个方差分量为 0 时，原假设位于参数空间的边界上，$\chi^2$ 近似偏保守（真实的零分布是 $\chi^2_0$ 与 $\chi^2_1$ 等的混合）。
 
 **例 17.4.1（sleepstudy 的混合模型）** 用 REML 拟合两个模型：
 

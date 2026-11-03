@@ -45,7 +45,7 @@ ALLD can also never be invaded by rare TFT (TFT loses $c$ against ALLD), so the 
 
 ![Reciprocity in the iterated donation game (Theorem 16.2.1) with benefit b = 3 and cost c = 1. A: the expected payoffs per game to TFT and ALLD when TFT has frequency x in the population and the probability of another round is w = 0.8: TFT does better only above the unstable threshold x* (dashed). B: the threshold frequency of TFT needed for it to spread, as a function of w: it falls from 1 at w = c/b = 1/3 toward 0 as interactions become long-lasting](./plots/iterated-pd.py)
 
-Cooperation can also be enforced. Partners may punish or impose *sanctions* on defectors, terminating the relationship or withholding benefits; policing by workers in social insects (Section 16.4.4) and the immune system's destruction of cancer cells, which are selfish members of the cooperative society of cells, are examples.
+Cooperation can also be enforced. Partners may punish or impose *sanctions* on defectors, terminating the relationship or withholding benefits; policing by workers in social insects (Section 16.3.3) and the immune system's destruction of cancer cells, which are selfish members of the cooperative society of cells, are examples.
 
 ### 16.2.3. Evolutionarily Stable Strategies
 

@@ -8973,7 +8973,7 @@ terms:
   - { zh: 序列标识图, en: sequence logo, aliases: [序列标志图, 序列 logo, sequence logos] }
   - { zh: 信息量, en: information content, scope: ["7"] }
   - { zh: 基序发现, en: motif discovery, aliases: [模体发现, de novo motif discovery] }
-  - { zh: 系统发育足迹, en: phylogenetic footprinting }
+  - { zh: 系统发生足迹, en: phylogenetic footprinting, aliases: [系统发育足迹] }
   - { zh: 保守性分数, en: conservation score, aliases: [conservation scores, 保守性得分] }
   - { zh: 读段比对, en: read mapping }
   - { zh: Burrows–Wheeler 变换, en: Burrows–Wheeler transform, aliases: [BWT] }
@@ -9456,7 +9456,7 @@ terms:
   - { zh: 网状演化, en: reticulate evolution }
   - { zh: 隔离–迁移模型, en: isolation-with-migration model, aliases: [IM model] }
   - { zh: Brown 运动模型, en: Brownian motion model, aliases: [BM model], scope: ["7"] }
-  - { zh: 系统发生独立比较, en: phylogenetically independent contrasts, aliases: [independent contrasts] }
+  - { zh: 系统发生独立比较, en: phylogenetically independent contrasts, aliases: [independent contrasts, 独立对比, 系统发生独立对比] }
   - { zh: 系统发生广义最小二乘, en: phylogenetic generalized least squares, aliases: [PGLS] }
   - { zh: Ornstein–Uhlenbeck 模型, en: Ornstein–Uhlenbeck model, aliases: [OU model], scope: ["7"] }
   - { zh: 系统发生信号, en: phylogenetic signal }
@@ -9582,8 +9582,8 @@ terms:
   - { zh: Pagel λ, en: "Pagel's lambda" }
   - { zh: Blomberg K, en: "Blomberg's K" }
   - { zh: 随机性状映射, en: stochastic character mapping }
-  - { zh: 达尔文（速率单位）, en: darwin, scope: ["7.10"] }
-  - { zh: 霍尔丹（速率单位）, en: haldane, scope: ["7.10"] }
+  - { zh: 达尔文（速率单位）, en: darwin, aliases: [达尔文], scope: ["7.10"] }
+  - { zh: 霍尔丹（速率单位）, en: haldane, aliases: [霍尔丹], scope: ["7.10"] }
   - { zh: 表征种概念, en: phenetic species concept, aliases: [表征种, 形态学物种概念, 形态种, morphological species concept] }
   - { zh: 生态型, en: ecotype, aliases: [ecotypes] }
   - { zh: 性印记, en: sexual imprinting, aliases: [求偶印记] }
