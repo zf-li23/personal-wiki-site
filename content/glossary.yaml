@@ -5549,7 +5549,7 @@ terms:
   - { zh: 氢火焰离子化检测器, en: flame ionization detector, aliases: [火焰离子化检测器] }
   - { zh: 电子捕获检测器, en: electron capture detector, aliases: [电子俘获检测器, ECD] }
   - { zh: 火焰光度检测器, en: flame photometric detector, aliases: [FPD] }
-  - { zh: 保留指数, en: retention index, aliases: [Kováts 指数, Kováts retention index] }
+  - { zh: 保留指数, en: retention index, aliases: [Kováts 指数, Kováts retention index], scope: ["6"] }
   - { zh: 定量校正因子, en: response factor, aliases: [校正因子, 相对校正因子, relative response factor] }
   - { zh: 归一化法, en: normalization method, aliases: [面积归一化法, area normalization] }
   - { zh: 高效液相色谱, en: high-performance liquid chromatography, aliases: [HPLC, 高效液相色谱法] }
@@ -7823,7 +7823,7 @@ terms:
   - { zh: 有效群体大小, en: effective population size, aliases: [N_e, 有效群体含量] }
   - { zh: 奠基者效应, en: founder effect, aliases: [建立者效应, founder effects] }
   - { zh: 瓶颈效应, en: population bottleneck, aliases: [bottleneck effect, 群体瓶颈] }
-  - { zh: 分子进化中性理论, en: neutral theory of molecular evolution, aliases: [neutral theory, 中性学说] }
+  - { zh: 分子演化中性理论, en: neutral theory of molecular evolution, aliases: [分子进化中性理论, neutral theory, 中性学说] }
   - { zh: 分子钟, en: molecular clock }
   - { zh: 最近共同祖先, en: most recent common ancestor, aliases: [MRCA] }
   - { zh: 数量性状, en: quantitative trait, aliases: [quantitative traits, complex trait, 复杂性状] }
@@ -8493,7 +8493,7 @@ terms:
   - { zh: 同源建模, en: homology modeling, aliases: [comparative modeling, 比较建模] }
   - { zh: 穿线法, en: threading, aliases: [fold recognition], scope: ["7"] }
   - { zh: 片段组装, en: fragment assembly }
-  - { zh: 共进化, en: coevolution, aliases: [共进化信息], scope: ["7"] }
+  - { zh: 共进化, en: coevolution, aliases: [共进化信息], scope: ["7.2", "7.6", "7.8", "7.9"] }
   - { zh: Potts 模型, en: Potts model }
   - { zh: 直接耦合分析, en: direct coupling analysis, aliases: [直接关联分析] }
   - { zh: AlphaFold, en: AlphaFold, aliases: [AlphaFold2, AlphaFold 3] }
@@ -8948,9 +8948,9 @@ terms:
   - { zh: PSI-BLAST, en: PSI-BLAST }
   - { zh: 远同源, en: remote homology, aliases: [remote homologs] }
   - { zh: 轮廓隐 Markov 模型, en: profile hidden Markov model, aliases: [profile HMM, profile HMMs] }
-  - { zh: 系统发生树, en: phylogenetic tree, aliases: [系统发育树, 进化树, phylogeny, phylogenetic trees] }
+  - { zh: 系统发生树, en: phylogenetic tree, aliases: [系统发育树, 演化树, 进化树, phylogenetic trees] }
   - { zh: 外类群, en: outgroup }
-  - { zh: 单系群, en: clade, aliases: [进化支, monophyletic group, clades] }
+  - { zh: 单系群, en: clade, aliases: [演化支, 进化支, monophyletic group, clades] }
   - { zh: Newick 格式, en: Newick format, aliases: [Newick] }
   - { zh: 基因树, en: gene tree, aliases: [gene trees] }
   - { zh: 物种树, en: species tree, aliases: [species trees] }
@@ -9195,3 +9195,324 @@ terms:
   - { zh: 复制–分化模型, en: duplication–divergence model, aliases: [duplication-divergence model, 复制–歧化模型] }
   - { zh: 合成生物学, en: synthetic biology }
   - { zh: 逆作用, en: retroactivity }
+
+  # biology: evolutionary biology (7.10); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 演化, en: evolution, aliases: [生物演化, biological evolution, organic evolution, 进化], scope: ["7"] }
+  - { zh: 伴随变异的传衍, en: descent with modification, aliases: [后代渐变] }
+  - { zh: 微演化, en: microevolution, aliases: [微观演化, 小进化, 微观进化] }
+  - { zh: 宏演化, en: macroevolution, aliases: [宏观演化, 大进化, 宏观进化] }
+  - { zh: 拉马克学说, en: Lamarckism, aliases: [Lamarck 学说] }
+  - { zh: 获得性状遗传, en: inheritance of acquired characteristics, aliases: [获得性遗传] }
+  - { zh: 融合遗传, en: blending inheritance }
+  - { zh: 颗粒遗传, en: particulate inheritance }
+  - { zh: 均变论, en: uniformitarianism }
+  - { zh: 灾变论, en: catastrophism }
+  - { zh: 直生论, en: orthogenesis }
+  - { zh: 现代综合, en: modern synthesis, aliases: [evolutionary synthesis, 现代综合论, 综合进化论] }
+  - { zh: 新达尔文主义, en: neo-Darwinism }
+  - { zh: 近因, en: proximate cause, scope: ["7"] }
+  - { zh: 终极因, en: ultimate cause, aliases: [远因], scope: ["7"] }
+  - { zh: 痕迹器官, en: vestigial organ, aliases: [vestigial structure, 退化器官] }
+  - { zh: 神创论, en: creationism, aliases: [特创论, special creation] }
+  - { zh: 系统发生, en: phylogeny, scope: ["7"] }
+  - { zh: 分类单元, en: taxon, aliases: [taxa, 分类群] }
+  - { zh: 姐妹群, en: sister group, aliases: [姊妹群, sister groups, sister taxa] }
+  - { zh: 内类群, en: ingroup }
+  - { zh: 并系群, en: paraphyletic group, aliases: [paraphyly, paraphyletic, 并系] }
+  - { zh: 复系群, en: polyphyletic group, aliases: [polyphyly, polyphyletic, 多系群, 多系] }
+  - { zh: 冠群, en: crown group }
+  - { zh: 干群, en: stem group, aliases: [茎群] }
+  - { zh: 性状状态, en: character state, aliases: [character states] }
+  - { zh: 同源性, en: homology, aliases: [homologous, 同源], scope: ["7"] }
+  - { zh: 同塑性, en: homoplasy, aliases: [homoplasious, 非同源相似] }
+  - { zh: 趋同演化, en: convergent evolution, aliases: [convergence, 趋同进化, 趋同] }
+  - { zh: 平行演化, en: parallel evolution, aliases: [parallelism, 平行进化] }
+  - { zh: 演化逆转, en: evolutionary reversal }
+  - { zh: 祖征, en: plesiomorphy, aliases: [ancestral character, 原始性状] }
+  - { zh: 衍征, en: apomorphy, aliases: [derived character, 衍生性状] }
+  - { zh: 共有衍征, en: synapomorphy, aliases: [synapomorphies, 共同衍征] }
+  - { zh: 分支演化, en: cladogenesis, aliases: [分支进化] }
+  - { zh: 前进演化, en: anagenesis, aliases: [线系演化, 前进进化] }
+  - { zh: 适应辐射, en: adaptive radiation }
+  - { zh: 镶嵌演化, en: mosaic evolution, aliases: [镶嵌进化] }
+  - { zh: 扩展适应, en: exaptation }
+  - { zh: 预适应, en: preadaptation }
+  - { zh: 选择层次, en: levels of selection, aliases: [level of selection, units of selection] }
+  - { zh: 基因选择, en: genic selection, aliases: [gene selection] }
+  - { zh: 个体选择, en: individual selection }
+  - { zh: 群体选择, en: group selection, aliases: [interdemic selection, 群选择] }
+  - { zh: 物种选择, en: species selection }
+  - { zh: 权衡, en: trade-off, aliases: [trade-offs, evolutionary trade-off], scope: ["7"] }
+  - { zh: 比较方法, en: comparative method }
+  - { zh: 适合度效应分布, en: distribution of fitness effects, aliases: [DFE] }
+  - { zh: 有利突变, en: beneficial mutation, aliases: [beneficial mutations, advantageous mutation] }
+  - { zh: 有害突变, en: deleterious mutation, aliases: [deleterious mutations] }
+  - { zh: 核苷酸多样性, en: nucleotide diversity }
+  - { zh: 突变偏向, en: mutation bias, aliases: [mutational bias] }
+  - { zh: 文化遗传, en: cultural inheritance, aliases: [cultural transmission] }
+  - { zh: 非遗传性遗传, en: nongenetic inheritance }
+  - { zh: 绝对适合度, en: absolute fitness }
+  - { zh: 适合度组分, en: fitness component, aliases: [fitness components] }
+  - { zh: 平均适合度, en: mean fitness, aliases: [population mean fitness] }
+  - { zh: 正选择, en: positive selection }
+  - { zh: 纯化选择, en: purifying selection, aliases: [negative selection, 负选择] }
+  - { zh: 固定, en: fixation, aliases: [fixed], scope: ["7"] }
+  - { zh: 固定概率, en: fixation probability, aliases: [probability of fixation] }
+  - { zh: Haldane 筛, en: "Haldane's sieve" }
+  - { zh: 遗传搭车, en: genetic hitchhiking, aliases: [hitchhiking, 搭车效应] }
+  - { zh: 选择清除, en: selective sweep, aliases: [selective sweeps, 选择性清除] }
+  - { zh: 现存遗传变异, en: standing genetic variation, aliases: [standing variation] }
+  - { zh: 多生态位多态性, en: multiple-niche polymorphism, aliases: [Levene model, Levene 模型] }
+  - { zh: 正频率依赖选择, en: positive frequency-dependent selection }
+  - { zh: 负频率依赖选择, en: negative frequency-dependent selection }
+  - { zh: 自然选择基本定理, en: fundamental theorem of natural selection, aliases: ["Fisher's fundamental theorem", Fisher 基本定理] }
+  - { zh: 适应景观, en: adaptive landscape, aliases: [adaptive landscapes] }
+  - { zh: 转移平衡理论, en: shifting balance theory, aliases: [shifting balance] }
+  - { zh: 突变负荷, en: mutation load, aliases: [mutational load] }
+  - { zh: 扩散近似, en: diffusion approximation, scope: ["7"] }
+  - { zh: 近中性理论, en: nearly neutral theory, aliases: [nearly neutral theory of molecular evolution, 近中性学说] }
+  - { zh: 近中性突变, en: nearly neutral mutation, aliases: [nearly neutral mutations] }
+  - { zh: 漂变屏障假说, en: drift-barrier hypothesis }
+  - { zh: Lewontin 悖论, en: "Lewontin's paradox", aliases: [paradox of variation] }
+  - { zh: 近交负荷, en: inbreeding load }
+  - { zh: 溯祖, en: coalescent, aliases: [coalescent theory, 溯祖理论, Kingman coalescent, Kingman 溯祖, 合并理论] }
+  - { zh: 基因谱系, en: gene genealogy, aliases: [genealogy, gene genealogies] }
+  - { zh: 最近共同祖先时间, en: time to the most recent common ancestor, aliases: [TMRCA] }
+  - { zh: 无限位点模型, en: infinite-sites model }
+  - { zh: 无限等位基因模型, en: infinite-alleles model }
+  - { zh: 群体突变率, en: population mutation rate, aliases: [population-scaled mutation rate, θ] }
+  - { zh: Watterson 估计量, en: Watterson estimator, aliases: ["Watterson's estimator", "Watterson's theta"] }
+  - { zh: 位点频率谱, en: site frequency spectrum, aliases: [SFS, allele frequency spectrum] }
+  - { zh: 结构溯祖, en: structured coalescent }
+  - { zh: 祖先重组图, en: ancestral recombination graph, aliases: [ARG] }
+  - { zh: 同义替换, en: synonymous substitution, aliases: [synonymous substitutions] }
+  - { zh: 非同义替换, en: nonsynonymous substitution, aliases: [nonsynonymous substitutions, replacement substitution] }
+  - { zh: dN/dS 比值, en: dN/dS ratio, aliases: [ω, Ka/Ks, 非同义与同义替换速率比] }
+  - { zh: 选择约束, en: selective constraint, aliases: [functional constraint] }
+  - { zh: 中性检验, en: neutrality test, aliases: [tests of neutrality] }
+  - { zh: "Tajima's D", en: "Tajima's D", aliases: [Tajima D 统计量] }
+  - { zh: McDonald–Kreitman 检验, en: McDonald–Kreitman test, aliases: [MK test, MK 检验] }
+  - { zh: HKA 检验, en: Hudson–Kreitman–Aguadé test, aliases: [HKA test] }
+  - { zh: 背景选择, en: background selection }
+  - { zh: 连锁选择, en: linked selection }
+  - { zh: 软清除, en: soft sweep, aliases: [soft sweeps] }
+  - { zh: 硬清除, en: hard sweep, aliases: [hard sweeps] }
+  - { zh: 基因组扫描, en: genome scan, aliases: [genome scans, selection scan] }
+  - { zh: 局部适应, en: local adaptation }
+  - { zh: 适合度函数, en: fitness function, aliases: [fitness functions] }
+  - { zh: 稳定选择, en: stabilizing selection, aliases: [正态化选择] }
+  - { zh: 歧化选择, en: disruptive selection, aliases: [分裂选择, 分歧选择] }
+  - { zh: 相关选择, en: correlational selection }
+  - { zh: 选择梯度, en: selection gradient, aliases: [selection gradients] }
+  - { zh: 遗传相关, en: genetic correlation }
+  - { zh: G 矩阵, en: G matrix, aliases: [additive genetic covariance matrix, 加性遗传协方差矩阵] }
+  - { zh: 相关响应, en: correlated response, aliases: [indirect response to selection, 间接选择响应] }
+  - { zh: 最小阻力遗传路径, en: genetic line of least resistance, aliases: [g_max] }
+  - { zh: 演化拯救, en: evolutionary rescue }
+  - { zh: 演化约束, en: evolutionary constraint, aliases: [genetic constraint] }
+  - { zh: 遗传结构, en: genetic architecture, scope: ["7"] }
+  - { zh: 人工选择, en: artificial selection }
+  - { zh: 渐变群, en: cline, aliases: [clines] }
+  - { zh: 距离隔离, en: isolation by distance }
+  - { zh: 踏脚石模型, en: stepping-stone model }
+  - { zh: 张力带, en: tension zone }
+  - { zh: 基因淹没, en: gene swamping }
+  - { zh: 扩散, en: dispersal, scope: ["7"] }
+  - { zh: 迁移–选择平衡, en: migration–selection balance }
+  - { zh: 物种, en: species, scope: ["7"] }
+  - { zh: 生物学物种概念, en: biological species concept, aliases: [BSC] }
+  - { zh: 系统发生物种概念, en: phylogenetic species concept, aliases: [PSC] }
+  - { zh: 生殖隔离, en: reproductive isolation }
+  - { zh: 合子前隔离, en: prezygotic barrier, aliases: [prezygotic isolation, prezygotic barriers] }
+  - { zh: 合子后隔离, en: postzygotic barrier, aliases: [postzygotic isolation, postzygotic barriers] }
+  - { zh: Dobzhansky–Muller 不相容, en: Dobzhansky–Muller incompatibility, aliases: [DMI, Bateson–Dobzhansky–Muller incompatibility] }
+  - { zh: Haldane 法则, en: "Haldane's rule" }
+  - { zh: 隐存种, en: cryptic species }
+  - { zh: 环物种, en: ring species }
+  - { zh: 物种形成, en: speciation }
+  - { zh: 异域物种形成, en: allopatric speciation, aliases: [allopatry, 异地物种形成] }
+  - { zh: 边域物种形成, en: peripatric speciation }
+  - { zh: 邻域物种形成, en: parapatric speciation, aliases: [邻地物种形成] }
+  - { zh: 同域物种形成, en: sympatric speciation, aliases: [同地物种形成] }
+  - { zh: 生态物种形成, en: ecological speciation }
+  - { zh: 强化, en: reinforcement, scope: ["7"] }
+  - { zh: 杂交带, en: hybrid zone, aliases: [hybrid zones] }
+  - { zh: 基因渗入, en: introgression, aliases: [introgressive hybridization, 渗入杂交] }
+  - { zh: 杂交物种形成, en: hybrid speciation }
+  - { zh: 二次接触, en: secondary contact }
+  - { zh: 异配生殖, en: anisogamy }
+  - { zh: 性选择, en: sexual selection }
+  - { zh: 实际性比, en: operational sex ratio, aliases: [操作性比] }
+  - { zh: Bateman 原理, en: "Bateman's principle", aliases: [Bateman gradient, Bateman 梯度] }
+  - { zh: 求偶场, en: lek, aliases: [leks] }
+  - { zh: Fisher 失控选择, en: Fisherian runaway, aliases: ["Fisher's runaway", runaway sexual selection] }
+  - { zh: 优良基因假说, en: good genes hypothesis, aliases: [good genes] }
+  - { zh: 累赘原理, en: handicap principle, aliases: [障碍原理] }
+  - { zh: 感觉偏好, en: sensory bias, aliases: [perceptual bias] }
+  - { zh: 精子竞争, en: sperm competition }
+  - { zh: 性冲突, en: sexual conflict }
+  - { zh: 性比, en: sex ratio }
+  - { zh: Fisher 性比原理, en: "Fisher's principle", aliases: [Fisher 原理] }
+  - { zh: 局部配偶竞争, en: local mate competition }
+  - { zh: 有性生殖的两倍代价, en: twofold cost of sex, aliases: [cost of males, two-fold cost of males, 雄性的代价] }
+  - { zh: Muller 棘轮, en: "Muller's ratchet" }
+  - { zh: 红皇后假说, en: Red Queen hypothesis }
+  - { zh: Hill–Robertson 效应, en: Hill–Robertson effect, aliases: [selective interference, 选择干扰] }
+  - { zh: 克隆干涉, en: clonal interference }
+  - { zh: 自交, en: self-fertilization, aliases: [selfing] }
+  - { zh: 异交, en: outcrossing }
+  - { zh: 繁殖保障, en: reproductive assurance }
+  - { zh: 孤雌生殖, en: parthenogenesis }
+  - { zh: 可演化性, en: evolvability, aliases: [可进化性] }
+  - { zh: 生活史, en: life history, aliases: [life histories, life-history traits] }
+  - { zh: 繁殖代价, en: cost of reproduction }
+  - { zh: 繁殖价值, en: reproductive value }
+  - { zh: 一次繁殖, en: semelparity, aliases: [semelparous] }
+  - { zh: 多次繁殖, en: iteroparity, aliases: [iteroparous] }
+  - { zh: r 选择, en: r-selection, scope: ["7"] }
+  - { zh: 繁殖投入, en: reproductive effort }
+  - { zh: 内禀增长率, en: intrinsic rate of increase, aliases: [intrinsic rate of natural increase] }
+  - { zh: 生态位, en: ecological niche, aliases: [niche] }
+  - { zh: Hamilton 法则, en: "Hamilton's rule" }
+  - { zh: 广义适合度, en: inclusive fitness, aliases: [内含适合度] }
+  - { zh: 亲缘选择, en: kin selection }
+  - { zh: 直接适合度, en: direct fitness }
+  - { zh: 间接适合度, en: indirect fitness }
+  - { zh: 利他行为, en: altruism, aliases: [altruistic behavior, 利他] }
+  - { zh: 恶意行为, en: spite }
+  - { zh: 互惠利他, en: reciprocal altruism, aliases: [reciprocity, 互惠] }
+  - { zh: 演化稳定策略, en: evolutionarily stable strategy, aliases: [进化稳定策略] }
+  - { zh: 鹰鸽博弈, en: hawk–dove game, aliases: [hawk-dove game] }
+  - { zh: 亲子冲突, en: parent–offspring conflict }
+  - { zh: 真社会性, en: eusociality, aliases: [eusocial] }
+  - { zh: 多层次选择, en: multilevel selection }
+  - { zh: Price 方程, en: Price equation }
+  - { zh: 演化中的重大转变, en: major evolutionary transitions, aliases: [major transitions] }
+  - { zh: 性拮抗选择, en: sexually antagonistic selection }
+  - { zh: 演化军备竞赛, en: evolutionary arms race, aliases: [arms race, 军备竞赛] }
+  - { zh: 警戒色, en: aposematism, aliases: [aposematic coloration, 警戒性] }
+  - { zh: 拟态, en: mimicry }
+  - { zh: Bates 拟态, en: Batesian mimicry, aliases: [贝氏拟态] }
+  - { zh: Müller 拟态, en: Müllerian mimicry, aliases: [缪氏拟态] }
+  - { zh: 基因对基因模型, en: gene-for-gene model, aliases: [gene-for-gene] }
+  - { zh: 匹配等位基因模型, en: matching-alleles model }
+  - { zh: 毒力, en: virulence, scope: ["7"] }
+  - { zh: 互利共生, en: mutualism }
+  - { zh: 性状替换, en: character displacement, aliases: [ecological character displacement, 生态性状替换] }
+  - { zh: 共系统发生, en: cophylogeny, aliases: [cospeciation, 协同物种形成] }
+  - { zh: 基因重复, en: gene duplication }
+  - { zh: DDC 模型, en: duplication–degeneration–complementation model, aliases: [DDC model] }
+  - { zh: 外显子改组, en: exon shuffling, aliases: [外显子混编] }
+  - { zh: 协调演化, en: concerted evolution, aliases: [致同演化] }
+  - { zh: 基因组大小, en: genome size }
+  - { zh: 内含子早现说, en: introns-early hypothesis, aliases: [introns early] }
+  - { zh: Fisher 几何模型, en: "Fisher's geometric model" }
+  - { zh: 顺式调控演化, en: cis-regulatory evolution }
+  - { zh: 隐蔽遗传变异, en: cryptic genetic variation, aliases: [cryptic variation] }
+  - { zh: 连续时间 Markov 链, en: continuous-time Markov chain, aliases: [CTMC] }
+  - { zh: 时间可逆性, en: time reversibility, aliases: [time-reversible, reversibility], scope: ["7"] }
+  - { zh: 转换颠换比, en: transition/transversion rate ratio, aliases: [κ, ts/tv ratio] }
+  - { zh: 离散 Gamma 模型, en: discrete gamma model, aliases: [discrete gamma, +Γ] }
+  - { zh: 不变位点, en: invariable sites, aliases: [+I, proportion of invariable sites] }
+  - { zh: 共变子模型, en: covarion model }
+  - { zh: 分区模型, en: partition model, aliases: [partitioned model] }
+  - { zh: 序列饱和, en: substitution saturation }
+  - { zh: Felsenstein 区, en: Felsenstein zone }
+  - { zh: 最小演化法, en: minimum evolution }
+  - { zh: 祖先状态重建, en: ancestral state reconstruction, aliases: [ancestral reconstruction, 祖先序列重建, ancestral sequence reconstruction] }
+  - { zh: KH 检验, en: Kishino–Hasegawa test, aliases: [KH test] }
+  - { zh: SH 检验, en: Shimodaira–Hasegawa test, aliases: [SH test] }
+  - { zh: AU 检验, en: approximately unbiased test, aliases: [AU test] }
+  - { zh: 一致性指数, en: consistency index, scope: ["7"] }
+  - { zh: 后验分支概率, en: posterior clade probability, aliases: [posterior split probability, 后验支持率] }
+  - { zh: 星状树悖论, en: star tree paradox }
+  - { zh: Yule 过程, en: Yule process, aliases: [pure-birth process, Yule model] }
+  - { zh: 树先验, en: tree prior }
+  - { zh: 步进石抽样, en: stepping-stone sampling }
+  - { zh: 热力学积分, en: thermodynamic integration, aliases: [path sampling] }
+  - { zh: 密码子模型, en: codon model, aliases: [codon substitution model, codon models] }
+  - { zh: 同义替换率, en: synonymous substitution rate, aliases: [dS] }
+  - { zh: 非同义替换率, en: nonsynonymous substitution rate, aliases: [dN] }
+  - { zh: 分支模型, en: branch model, aliases: [branch models] }
+  - { zh: 位点模型, en: site model, aliases: [site models, random-site model] }
+  - { zh: 分支–位点检验, en: branch-site test, aliases: [branch-site model] }
+  - { zh: Nei–Gojobori 方法, en: Nei–Gojobori method, aliases: [NG86] }
+  - { zh: 相对速率检验, en: relative rate test }
+  - { zh: 严格分子钟, en: strict molecular clock, aliases: [global clock, strict clock] }
+  - { zh: 局部分子钟, en: local clock, aliases: [local molecular clock] }
+  - { zh: 宽松分子钟, en: relaxed molecular clock, aliases: [relaxed clock] }
+  - { zh: 化石校准, en: fossil calibration }
+  - { zh: 分歧时间, en: divergence time, aliases: [divergence times] }
+  - { zh: 根–尖回归, en: root-to-tip regression }
+  - { zh: 化石化生灭过程, en: fossilized birth–death process, aliases: [FBD] }
+  - { zh: 无穷位点图, en: infinite-sites plot }
+  - { zh: 多物种溯祖, en: multispecies coalescent, aliases: [MSC] }
+  - { zh: 不完全谱系分选, en: incomplete lineage sorting, aliases: [ILS, deep coalescence] }
+  - { zh: 溯祖单位, en: coalescent unit, aliases: [coalescent units] }
+  - { zh: 异常区, en: anomaly zone }
+  - { zh: 物种界定, en: species delimitation }
+  - { zh: D 统计量, en: D statistic, aliases: [ABBA–BABA test, ABBA-BABA, "Patterson's D"] }
+  - { zh: 系统发生网络, en: phylogenetic network, aliases: [phylogenetic networks] }
+  - { zh: 网状演化, en: reticulate evolution }
+  - { zh: 隔离–迁移模型, en: isolation-with-migration model, aliases: [IM model] }
+  - { zh: Brown 运动模型, en: Brownian motion model, aliases: [BM model], scope: ["7"] }
+  - { zh: 系统发生独立比较, en: phylogenetically independent contrasts, aliases: [independent contrasts] }
+  - { zh: 系统发生广义最小二乘, en: phylogenetic generalized least squares, aliases: [PGLS] }
+  - { zh: Ornstein–Uhlenbeck 模型, en: Ornstein–Uhlenbeck model, aliases: [OU model], scope: ["7"] }
+  - { zh: 系统发生信号, en: phylogenetic signal }
+  - { zh: Mk 模型, en: Mk model }
+  - { zh: 相关演化, en: correlated evolution }
+  - { zh: 系统发生生态位保守性, en: phylogenetic niche conservatism }
+  - { zh: 化学演化, en: chemical evolution, aliases: [prebiotic chemistry, 前生命化学, 化学进化] }
+  - { zh: Miller–Urey 实验, en: Miller–Urey experiment }
+  - { zh: 超循环, en: hypercycle }
+  - { zh: 最后普遍共同祖先, en: last universal common ancestor, aliases: [LUCA, 最后共同祖先] }
+  - { zh: 生命之树, en: tree of life }
+  - { zh: 三域系统, en: three-domain system, aliases: [three domains, 三域学说] }
+  - { zh: 大氧化事件, en: Great Oxidation Event, aliases: [GOE] }
+  - { zh: 叠层石, en: stromatolite, aliases: [stromatolites] }
+  - { zh: 初级内共生, en: primary endosymbiosis }
+  - { zh: 次级内共生, en: secondary endosymbiosis }
+  - { zh: 内共生基因转移, en: endosymbiotic gene transfer, aliases: [EGT] }
+  - { zh: 多细胞性, en: multicellularity }
+  - { zh: 化石, en: fossil, aliases: [fossils] }
+  - { zh: 地质年代表, en: geologic time scale, aliases: [geological time scale] }
+  - { zh: 埃迪卡拉生物群, en: Ediacaran biota }
+  - { zh: 寒武纪大爆发, en: Cambrian explosion, aliases: [寒武纪生命大爆发] }
+  - { zh: 泛大陆, en: Pangaea, aliases: [盘古大陆] }
+  - { zh: 冈瓦纳古陆, en: Gondwana }
+  - { zh: 劳亚古陆, en: Laurasia }
+  - { zh: 生物地理学, en: biogeography }
+  - { zh: 隔离分化, en: vicariance, aliases: [替代分布] }
+  - { zh: 间断分布, en: disjunct distribution }
+  - { zh: 特有种, en: endemic species, aliases: [endemic, endemism, 特有性] }
+  - { zh: Wallace 线, en: "Wallace's line", aliases: [华莱士线] }
+  - { zh: 谱系地理学, en: phylogeography }
+  - { zh: 纬度多样性梯度, en: latitudinal diversity gradient }
+  - { zh: 岛屿生物地理学理论, en: theory of island biogeography, aliases: [island biogeography, MacArthur–Wilson model] }
+  - { zh: 集群灭绝, en: mass extinction, aliases: [mass extinctions, 大灭绝] }
+  - { zh: 背景灭绝, en: background extinction, aliases: [常规灭绝] }
+  - { zh: 谱系–时间图, en: lineage-through-time plot, aliases: [LTT plot] }
+  - { zh: 现代拉力, en: pull of the Recent }
+  - { zh: 关键创新, en: key innovation, aliases: [key adaptation] }
+  - { zh: 多样化速率, en: diversification rate }
+  - { zh: 间断平衡, en: punctuated equilibrium, aliases: [punctuated equilibria, 间断平衡论] }
+  - { zh: 种系渐变论, en: phyletic gradualism, aliases: [渐变论] }
+  - { zh: 停滞, en: stasis, scope: ["7"] }
+  - { zh: 跃变, en: saltation }
+  - { zh: 演化新性状, en: evolutionary novelty, aliases: [novelty] }
+  - { zh: 驱动趋势, en: driven trend, aliases: [active trend] }
+  - { zh: 被动趋势, en: passive trend }
+  - { zh: Cope 法则, en: "Cope's rule" }
+  - { zh: 人族, en: hominin, aliases: [hominins] }
+  - { zh: 尼安德特人, en: Neanderthal, aliases: [Neanderthals, Homo neanderthalensis] }
+  - { zh: 丹尼索瓦人, en: Denisovan, aliases: [Denisovans] }
+  - { zh: 文化演化, en: cultural evolution }
+  - { zh: 演化失配, en: evolutionary mismatch }
+  - { zh: 演化医学, en: evolutionary medicine, aliases: [Darwinian medicine] }
+  - { zh: 性状, en: character, aliases: [characters], scope: ["7"] }
+  - { zh: 适应, en: adaptation, aliases: [adaptations, 适应性状] }
+  - { zh: K 选择, en: K-selection, scope: ["7"] }
+  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10"] }
+  - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
+  - { zh: 保留指数, en: retention index, scope: ["7"] }
