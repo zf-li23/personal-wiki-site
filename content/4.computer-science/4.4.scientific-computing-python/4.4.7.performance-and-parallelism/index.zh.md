@@ -1,10 +1,10 @@
 ---
 title: 性能与并行
-description: 让科学计算的 Python 代码变快：计时与性能分析（cProfile、line_profiler、采样分析器），再谈向量化，用 Numba 做即时编译，全局解释器锁，进程池与 joblib，multiprocessing 的启动方式，自由线程 Python，Amdahl 定律，以及实测比较。
-source_hash: 737f58329692
+description: 让科学计算的 Python 代码变快：计时与性能分析（cProfile、line_profiler、采样分析器），再谈向量化，用 Numba 做即时编译，全局解释器锁，进程池与 joblib，multiprocessing 的启动方式，自由线程 Python，Amdahl 定律，实测比较，以及用 CuPy 与 Numba CUDA 核函数做 GPU 计算。
+source_hash: 55888387bcd8
 ---
 
-Python 在单个运算的层面上很慢，而当繁重的工作在编译库中运行时，在整个程序的层面上却很快。前面几章通过**向量化**利用了这一点：NumPy、SciPy 和 pandas 在编译的循环中做算术，解释器只负责调度。本章讨论这还不够的情形：无法向量化的代码（每一步依赖前一步的随机模拟），本身很快但必须运行成千上万次的代码（参数扫描、**自助法**重复、大量样本），以及瓶颈并不在作者所以为之处的代码。所用的工具是测量（计时与性能分析）、编译（Numba）和并行执行（进程、线程以及 CPython 新的自由线程构建）。某些计算为何昂贵或不稳定的数值原因是 [3.5](/3.5) 的主题；作为操作系统对象的进程与线程在 [4.11](/4.11) 中讨论。
+Python 在单个运算的层面上很慢，而当繁重的工作在编译库中运行时，在整个程序的层面上却很快。前面几章通过**向量化**利用了这一点：NumPy、SciPy 和 pandas 在编译的循环中做算术，解释器只负责调度。本章讨论这还不够的情形：无法向量化的代码（每一步依赖前一步的随机模拟），本身很快但必须运行成千上万次的代码（参数扫描、**自助法**重复、大量样本），以及瓶颈并不在作者所以为之处的代码。所用的工具是测量（计时与性能分析）、编译（Numba）和并行执行（进程、线程、CPython 新的自由线程构建，以及 GPU）。某些计算为何昂贵或不稳定的数值原因是 [3.5](/3.5) 的主题；作为操作系统对象的进程与线程在 [4.11](/4.11) 中讨论。
 
 本章的所有测量都在同一台笔记本电脑上进行（Intel Core Ultra 7 258V，8 核，WSL 2 下的 Linux），使用 CPython 3.14.5、NumPy 2.5.4、Numba 0.68.0 和 joblib 1.6.0。绝对时间取决于机器、版本和负载，重复运行之间相差可达 20 %；重要的是比值，而且即使是比值，也应在代码将要运行的机器上重新测量。
 
@@ -200,7 +200,7 @@ def many_runs(n_rep):
 - `parallel=True` 配合 `prange` 把相互独立的循环迭代放在多个线程上运行；`@vectorize` 把标量函数变成 NumPy 的**通用函数**；`fastmath=True` 允许对**浮点运算**重新排序（更快，但结果在最后几位数字上会改变）。
 - 编译代码内部的随机数来自 Numba 自己的生成器，每个线程一个状态，要在编译代码内部设置**种子**（如上），而不是由 NumPy 的全局种子设置。
 
-获得编译速度的其他途径服务于不同的需要：Cython（带 C 类型声明的 Python，提前编译；适合包装 C 库）、用 pybind11 或 nanobind 写的 C++ 扩展（核心用 C++ 写成时，[4.2](/4.2)）、JAX（用 XLA 为 CPU 和 GPU 编译数组程序，带自动微分）、CuPy（NVIDIA GPU 上与 NumPy 兼容的数组库）以及 PyPy（采用跟踪式 JIT 的另一种 Python 实现，对纯 Python 代码很快，但与 C 扩展的兼容性较差）。CPython 本身自 3.13 版起包含一个实验性的 JIT 编译器；它默认关闭，目前只带来有限的加速，对数值循环而言远不能与 Numba 相比。
+获得编译速度的其他途径服务于不同的需要：Cython（带 C 类型声明的 Python，提前编译；适合包装 C 库）、用 pybind11 或 nanobind 写的 C++ 扩展（核心用 C++ 写成时，[4.2](/4.2)）、JAX（用 XLA 为 CPU 和 GPU 编译数组程序，带自动微分）、CuPy（NVIDIA GPU 上与 NumPy 兼容的数组库，§7.4.5）以及 PyPy（采用跟踪式 JIT 的另一种 Python 实现，对纯 Python 代码很快，但与 C 扩展的兼容性较差）。CPython 本身自 3.13 版起包含一个实验性的 JIT 编译器；它默认关闭，目前只带来有限的加速，对数值循环而言远不能与 Numba 相比。
 
 ## 7.4. 并行
 
@@ -285,13 +285,122 @@ $$
 
 这个界就是 Amdahl 定律（Amdahl's law）：当 $f = 0.9$ 时，无论多少工作单元都无法获得超过十倍的加速，8 个工作单元至多给出 $4.7$ 倍。因此，串行部分（读取输入、合并结果、启动工作单元）与并行部分同样值得关注。
 
+### 7.4.5. GPU 计算
+
+图形处理器（graphics processing unit），简称 GPU，是为吞吐量而不是单线程速度设计的处理器。它最初用来独立地计算数百万个像素，现代 GPU 有成千上万个简单的算术单元，分成上百个多处理器，并配有带宽为每秒数 TB 的内存。它对成组的线程同时执行同一条指令（NVIDIA GPU 上每组 32 个线程，称为线程束（warp）），并且靠在数万个驻留线程之间切换来隐藏访存延迟，而不是依赖大容量缓存。下面是厂商规格中的大致数字：
+
+| | 8 核笔记本 CPU | 消费级 GPU（RTX 4090） | 数据中心 GPU（H100 SXM） |
+|---|---|---|---|
+| 并行单元 | 8 个带 SIMD 的核 | 16 384 个 CUDA 核 | 16 896 个 CUDA 核 |
+| 内存 | 32 GB | 24 GB | 80 GB |
+| 内存带宽 | 约 0.1 TB/s | 1.0 TB/s | 3.4 TB/s |
+| FP32 峰值 | 约 1 TFLOP/s | 83 TFLOP/s | 67 TFLOP/s |
+| FP64 峰值 | 约 0.5 TFLOP/s | 1.3 TFLOP/s | 34 TFLOP/s |
+
+GPU 作为独立的设备连接在计算机上。按 CUDA 的术语，主机（host）是带主存的 CPU，设备（device）是带自己内存的 GPU；数据通过 PCIe 总线在二者之间移动，速度为 25–60 GB/s，远慢于任何一种内存。在 GPU 上运行的程序由主机作为 GPU 核函数（GPU kernel）启动：它是一个由线程块组成的网格执行的函数，每个线程处理自己的那部分数据。启动是异步的：GPU 工作时主机继续运行，只有在需要结果时才等待。GPU 不运行 Python，也没有 GIL，所以 §7.4.1 的限制对它不适用；真正要紧的是下面几点。
+
+- 大规模的数据并行问题：对许多相互独立的元素做同一种运算（逐元素算术、归约、模板运算、矩阵乘积、FFT、相互独立的 Monte Carlo 路径、许多独立的模拟）可以映射到 GPU 线程上。每次核函数启动要花几微秒，GPU 需要 $10^5$ 到 $10^6$ 量级的独立元素才能被充分占用；小数组在 CPU 上更快。
+- 数据留在设备上：把两个含 $10^8$ 个双精度数的数组相加，要让 2.4 GB 数据通过 GPU 内存，在 H100 上约 0.7 ms，而经 PCIe 复制两个输入要 30–60 ms。只有数据复制一次、被许多运算使用时 GPU 才划算，最好是整条流水线都在设备上运行。
+- 高**算术强度**：逐元素运算在 GPU 上和在 CPU 上一样受内存带宽限制（用 **Roofline 模型**（[4.7.8](/4.7.8#sec-8.7)）的话说，它们的强度很低），所以加速比大约就是带宽之比，10–30 倍。矩阵乘积等受计算限制的运算收益更大，而在张量核为深度学习采用的低精度下收益更大得多（[4.7.8](/4.7.8)）。
+- 合适的精度：消费级 GPU 执行双精度的速率是其单精度速率的 1/64。全程需要 FP64 的科学计算程序（刚性常微分方程、病态的线性代数）需要数据中心 GPU，或者让大部分工作在单精度下完成、再用双精度细化的算法。
+- 足够的设备内存：消费级显卡为 8–32 GB，数据中心显卡为 80 GB 以上（最高 288 GB）；更大的问题必须分块，或分布到多个 GPU 上。
+- 规则的控制流与访存：同一线程束中走不同分支的线程是一个分支接一个分支地执行的；当相邻线程读取相邻地址时访存很快，这叫合并访存（memory coalescing）。顺序的算法（§7.2 的一条 Gillespie 轨道）、分支很多的代码和基于指针的数据结构都不合适。
+
+从 Python 使用 GPU 最简单的办法是 CuPy。它在 NVIDIA GPU 上重新实现了 NumPy 的接口（以及 `cupyx.scipy` 中 SciPy 的大部分：`fft`、`ndimage`、`signal`、`sparse`、`sparse.linalg`、`special`），并对 AMD GPU 有实验性的支持。它以与 CUDA 版本匹配的 wheel 安装（`pip install cupy-cuda12x` 或 `cupy-cuda13x`）。数组在设备上创建，或显式地复制到设备上，NumPy 代码几乎不用改就能运行：
+
+```python
+import numpy as np
+import cupy as cp
+
+x_host = np.random.default_rng(0).standard_normal((4096, 4096), dtype=np.float32)
+x = cp.asarray(x_host)                # host -> device copy
+power = cp.abs(cp.fft.fft2(x)) ** 2   # computed on the GPU; the result stays there
+total = float(power.sum())            # a scalar copied back to the host
+corner = cp.asnumpy(power[:8, :8])    # explicit device -> host copy
+```
+
+若代码要同时接受两种库的数组，则按数组 API 标准（[4.4.2](/4.4.2#sec-2.8)）从参数得到命名空间：
+
+```python
+from array_api_compat import array_namespace
+
+
+def standardize(x):
+    xp = array_namespace(x)           # numpy for NumPy arrays, cupy for CuPy arrays
+    return (x - xp.mean(x, axis=0)) / xp.std(x, axis=0)
+```
+
+由于核函数的启动是异步的，包在 CuPy 调用外面的计时器只测量了启动；计时必须等待设备（`cp.cuda.Device().synchronize()`），或者使用 `cupyx.profiler.benchmark(func, (x,), n_repeat=20)`，它会这样做，并分别报告 CPU 与 GPU 的时间。函数的第一次调用还包含核函数的初始化与编译，应当排除，与 §7.3 中的 Numba 一样。
+
+当没有库函数能完成所需的工作时，可以用 Numba 以 Python 写核函数。它的 CUDA 后端与 `@njit` 一样，把 Python 的一个受限子集编译成 GPU 机器码。它现在由 NVIDIA 作为独立的软件包 `numba-cuda` 开发，仍保持熟悉的 `from numba import cuda`；Numba 内置的那一份已被弃用。核函数没有返回值：它把结果写进作为参数传入的数组，每个线程根据自己在网格中的位置算出全局下标：
+
+```python
+import math
+from numba import cuda
+
+
+@cuda.jit
+def axpy(a, x, y, out):
+    i = cuda.grid(1)                  # threadIdx.x + blockIdx.x * blockDim.x
+    if i < x.size:                    # the last block may extend past the end
+        out[i] = a * x[i] + y[i]
+
+
+n = 10_000_000
+x = np.random.default_rng(0).standard_normal(n)
+y = np.ones(n)
+d_x, d_y = cuda.to_device(x), cuda.to_device(y)   # explicit host -> device copies
+d_out = cuda.device_array_like(d_x)               # allocated on the device only
+threads = 256                                     # threads per block, a multiple of 32
+blocks = math.ceil(n / threads)
+axpy[blocks, threads](2.0, d_x, d_y, d_out)       # launch configuration [grid, block]
+out = d_out.copy_to_host()                        # waits for the kernel to finish
+```
+
+线程块的大小通常取 128–512 个线程（至多 1024），块的个数按覆盖数据来选取，所以核函数中的边界检查是必要的。把 NumPy 数组直接传给核函数也可以，但此时 Numba 在每次启动时都要把它们复制到设备上再复制回来，这正是应当避免的数据传输。二维网格适合模板运算。下面是 [4.4.4](/4.4.4#sec-4.6.3) 的 Poisson 问题的一次 Jacobi 迭代扫描，这里整个边界上取 $T = 0$，每个线程负责一个网格点：
+
+```python
+@cuda.jit
+def jacobi_sweep(T, T_new, f_h2):
+    col, row = cuda.grid(2)           # x varies fastest: consecutive threads, consecutive columns
+    n_rows, n_cols = T.shape
+    if 0 < row < n_rows - 1 and 0 < col < n_cols - 1:
+        T_new[row, col] = 0.25 * (T[row - 1, col] + T[row + 1, col]
+                                  + T[row, col - 1] + T[row, col + 1] + f_h2)
+
+
+m = 1026                              # 1024 x 1024 interior points
+h = 1.0 / (m - 1)
+d_T = cuda.to_device(np.zeros((m, m)))
+d_new = cuda.to_device(np.zeros((m, m)))
+blocks2 = (math.ceil(m / 16), math.ceil(m / 16))
+for _ in range(1000):
+    jacobi_sweep[blocks2, (16, 16)](d_T, d_new, h * h)
+    d_T, d_new = d_new, d_T           # swap the references; nothing is copied
+```
+
+让变化最快的线程下标沿数组的最后一个轴走，一个线程束的读取就是合并的。每次扫描都很快，但 Jacobi 迭代要收敛，所需的扫描次数正比于沿一个轴的网格点数的平方（这里约为 $10^6$），而 [4.4.4](/4.4.4#sec-4.6.3) 的共轭梯度法只需几百次迭代：硬件无法弥补糟糕的算法，在 GPU 上这样的核函数用作多重网格法中的光滑子，或者被 `cupyx.scipy.sparse.linalg.cg` 取代。Numba 还提供设备函数（`@cuda.jit(device=True)`，可从核函数中调用）、每个块的共享内存、原子操作，以及用于逐元素函数的 `@vectorize(target="cuda")`。没有 GPU 时可以用 CUDA 模拟器（`NUMBA_ENABLE_CUDASIM=1`）调试核函数，它在 CPU 上缓慢地运行核函数；上面的代码就是这样检查的，因为本章测量所用的笔记本电脑没有 NVIDIA GPU。设备数组可以通过 CUDA 数组接口和 DLPack（[4.4.2](/4.4.2#sec-2.8)）在 Numba、CuPy、PyTorch 与 JAX 之间不经复制地共享。
+
+其他工具采用不同的办法：
+
+| 工具 | 办法 | 适用于 |
+|---|---|---|
+| CuPy | GPU 上的 NumPy 与 SciPy 接口；用 `ElementwiseKernel`、`RawKernel` 写自定义核函数 | 移植已有的数组代码 |
+| Numba CUDA | 用 Python 写的核函数 | 无法用数组运算表达的自定义算法 |
+| JAX | 由 XLA 编译的类 NumPy 数组（`jax.jit`），自动向量化（`jax.vmap`），**自动微分**；数组不可变，默认单精度 | 同时做许多独立模拟，带梯度的优化 |
+| PyTorch | `"cuda"`（NVIDIA、AMD ROCm）或 `"mps"`（Apple）设备上的张量；自动微分 | 机器学习（[4.7](/4.7)），以及一般的数组计算 |
+| Taichi、NVIDIA Warp | 嵌入 Python 的核函数语言，为 CPU 与 GPU 编译 | 粒子与网格模拟、图形学、可微物理 |
+
+对大多数科学工作，尝试的顺序与 §7.5 相同：先用现成的 GPU 库（CuPy，或领域库的 GPU 支持，如用于数据框与机器学习的 RAPIDS、用于单细胞分析的 rapids-singlecell），需要梯度或许多并行模拟时再用 JAX 或 PyTorch，只有剩下的部分才手写核函数。
+
 ## 7.5. 选择策略
 
 1. 测量：给整个程序计时，对它做性能分析，找出占主导的部分。
 2. 采用更好的算法或库：更低的复杂度、向量化的 NumPy 或 pandas 运算、SciPy 的例程、**稀疏矩阵**。这通常是最大的收益。
 3. 编译无法向量化的部分：数组上的数值循环用 Numba；较大的组件用 Cython 或 C++。
 4. 并行化相互独立的任务：受 CPU 限制的 Python 代码用进程池或 joblib；I/O 以及会释放 GIL 的代码用线程；依赖项支持的地方用自由线程 Python；任务是许多样本上的整个程序时，用集群调度器或工作流管理器（Snakemake、Nextflow）。
-5. 每一步之后都检查结果是否不变，以及收益在代码运行的机器上是否真实。
+5. 当大规模的数据并行数组计算占主导、且数据可以留在设备上时，把它们移到 GPU 上：NumPy 风格的代码用 CuPy，需要梯度或成批模拟时用 JAX 或 PyTorch，其余的用 Numba CUDA 核函数；先检查双精度与问题规模是否适合手头的 GPU。
+6. 每一步之后都检查结果是否不变，以及收益在代码运行的机器上是否真实。
 
 ## 小结
 
@@ -303,3 +412,4 @@ $$
 - 易并行问题需要相互独立的随机数流（`SeedSequence.spawn`）才能得到可复现的结果。
 - 自由线程的 CPython（自 3.14 起正式支持，仍是可选的）使线程并行运行，付出少量单线程代价，并在线程安全上带来新的责任。
 - Amdahl 定律用工作中串行部分的比例给出加速比的上界。
+- GPU 为大规模的数据并行计算提供数千个线程和每秒数 TB 的内存带宽；代价是主机与设备之间的传输、启动开销、有限的内存，以及消费级显卡上缓慢的双精度。CuPy 在 GPU 上替代 NumPy，Numba CUDA 编译自定义的核函数；GPU 代码要先同步再计时。

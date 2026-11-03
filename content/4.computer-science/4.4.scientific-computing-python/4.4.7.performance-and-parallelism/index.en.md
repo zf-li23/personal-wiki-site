@@ -1,9 +1,9 @@
 ---
 title: Performance and Parallelism
-description: "Making scientific Python code fast: timing and profiling (cProfile, line_profiler, sampling profilers), vectorization revisited, just-in-time compilation with Numba, the global interpreter lock, process pools and joblib, multiprocessing start methods, free-threaded Python, Amdahl's law, and measured comparisons."
+description: "Making scientific Python code fast: timing and profiling (cProfile, line_profiler, sampling profilers), vectorization revisited, just-in-time compilation with Numba, the global interpreter lock, process pools and joblib, multiprocessing start methods, free-threaded Python, Amdahl's law, measured comparisons, and GPU computing with CuPy and Numba CUDA kernels."
 ---
 
-Python is slow at the level of individual operations and fast at the level of whole programs when the heavy work runs in compiled libraries. The previous chapters exploited this through **vectorization**: NumPy, SciPy and pandas do the arithmetic in compiled loops, and the interpreter only orchestrates. This chapter is about the cases where that is not enough: code that cannot be vectorized (a stochastic simulation in which each step depends on the previous one), code that is fast but must run thousands of times (parameter scans, **bootstrap** replicates, many samples), and code whose bottleneck is not where its author believes. The tools are measurement (timing and profiling), compilation (Numba) and parallel execution (processes, threads and the new free-threaded build of CPython). The numerical reasons why some computations are expensive or unstable are the subject of [3.5](/3.5); processes and threads as objects of the operating system are treated in [4.11](/4.11).
+Python is slow at the level of individual operations and fast at the level of whole programs when the heavy work runs in compiled libraries. The previous chapters exploited this through **vectorization**: NumPy, SciPy and pandas do the arithmetic in compiled loops, and the interpreter only orchestrates. This chapter is about the cases where that is not enough: code that cannot be vectorized (a stochastic simulation in which each step depends on the previous one), code that is fast but must run thousands of times (parameter scans, **bootstrap** replicates, many samples), and code whose bottleneck is not where its author believes. The tools are measurement (timing and profiling), compilation (Numba) and parallel execution (processes, threads, the new free-threaded build of CPython, and GPUs). The numerical reasons why some computations are expensive or unstable are the subject of [3.5](/3.5); processes and threads as objects of the operating system are treated in [4.11](/4.11).
 
 All measurements in this chapter were taken on one laptop (Intel Core Ultra 7 258V, 8 cores, Linux under WSL 2) with CPython 3.14.5, NumPy 2.5.4, Numba 0.68.0 and joblib 1.6.0. Absolute times depend on the machine, the versions and the load, and repeated runs differed by up to 20 %; the ratios are what matter, and even they should be measured again on the machine where the code will run.
 
@@ -199,7 +199,7 @@ The first call of `log_sum` took 0.80 s, almost all of it compilation; `@njit(ca
 - `parallel=True` with `prange` runs independent loop iterations on several threads; `@vectorize` turns a scalar function into a NumPy **ufunc**; `fastmath=True` permits reordering of **floating-point operations** (faster, but results change in the last digits).
 - Random numbers inside compiled code come from Numba's own generator, with one state per thread, **seed**ed inside compiled code (as above), not by NumPy's global seed.
 
-Other routes to compiled speed serve different needs: Cython (Python with C type declarations, compiled ahead of time; good for wrapping C libraries), C++ extensions with pybind11 or nanobind (when the core is written in C++, [4.2](/4.2)), JAX (array programs compiled with XLA for CPU and GPU, with automatic differentiation), CuPy (a NumPy-compatible array library on NVIDIA GPUs), and PyPy (an alternative Python implementation with a tracing JIT, fast on pure-Python code but less compatible with C extensions). CPython itself contains an experimental JIT compiler since version 3.13; it is disabled by default and so far gives modest speed-ups, nothing comparable to Numba for numerical loops.
+Other routes to compiled speed serve different needs: Cython (Python with C type declarations, compiled ahead of time; good for wrapping C libraries), C++ extensions with pybind11 or nanobind (when the core is written in C++, [4.2](/4.2)), JAX (array programs compiled with XLA for CPU and GPU, with automatic differentiation), CuPy (a NumPy-compatible array library on NVIDIA GPUs, §7.4.5), and PyPy (an alternative Python implementation with a tracing JIT, fast on pure-Python code but less compatible with C extensions). CPython itself contains an experimental JIT compiler since version 3.13; it is disabled by default and so far gives modest speed-ups, nothing comparable to Numba for numerical loops.
 
 ## 7.4. Parallelism
 
@@ -284,13 +284,122 @@ $$
 
 This bound is *Amdahl's law*: with $f = 0.9$, no number of workers achieves more than a tenfold speed-up, and 8 workers give at most $4.7$. The serial part (reading input, combining results, starting workers) therefore deserves as much attention as the parallel one.
 
+### 7.4.5. GPU Computing
+
+A *graphics processing unit* (GPU) is a processor built for throughput rather than for the speed of a single thread. Designed originally to compute millions of pixels independently, a modern GPU has thousands of simple arithmetic units grouped into a hundred or so multiprocessors, and memory with a bandwidth of terabytes per second. It executes the same instruction on groups of threads at once (32 threads, a *warp*, on NVIDIA GPUs), and it hides the latency of memory accesses by switching between tens of thousands of resident threads instead of relying on large caches. Approximate figures from the manufacturers' specifications:
+
+| | 8-core laptop CPU | consumer GPU (RTX 4090) | data-center GPU (H100 SXM) |
+|---|---|---|---|
+| parallel units | 8 cores with SIMD | 16 384 CUDA cores | 16 896 CUDA cores |
+| memory | 32 GB | 24 GB | 80 GB |
+| memory bandwidth | about 0.1 TB/s | 1.0 TB/s | 3.4 TB/s |
+| peak FP32 | about 1 TFLOP/s | 83 TFLOP/s | 67 TFLOP/s |
+| peak FP64 | about 0.5 TFLOP/s | 1.3 TFLOP/s | 34 TFLOP/s |
+
+The GPU is attached to the computer as a separate device. In CUDA terminology the *host* is the CPU with its main memory and the *device* is the GPU with its own memory; data move between them over the PCIe bus, at 25–60 GB/s, far slower than either memory. A program running on the GPU is launched by the host as a *GPU kernel*: a function executed by a grid of thread blocks, each thread working on its own part of the data. Launches are asynchronous: the host continues while the GPU works, and waits only when it needs a result. The GPU does not run Python and has no GIL, so the restrictions of §7.4.1 do not apply to it; what matters instead is the following.
+
+- Large, data-parallel problems: the same operation on many independent elements (elementwise arithmetic, reductions, stencils, matrix products, FFTs, independent Monte Carlo paths, many independent simulations) maps onto GPU threads. Each kernel launch costs several microseconds, and the GPU needs on the order of $10^5$ to $10^6$ independent elements to be fully occupied; small arrays are faster on the CPU.
+- Data that stay on the device: adding two arrays of $10^8$ doubles moves 2.4 GB through GPU memory, about 0.7 ms on an H100, but copying the two inputs over PCIe takes 30–60 ms. A GPU pays off when the data are copied once and used by many operations, ideally when whole pipelines run on the device.
+- High **arithmetic intensity**: elementwise operations are limited by memory bandwidth on the GPU as on the CPU (in the terms of the **roofline model** of [4.7.8](/4.7.8#sec-8.7), their intensity is low), so their speed-up is about the ratio of the bandwidths, 10–30 times. Matrix products and other compute-bound operations gain more, and much more again in the reduced precisions used by the tensor cores for deep learning ([4.7.8](/4.7.8)).
+- Suitable precision: consumer GPUs execute double precision at 1/64 of their single-precision rate. Scientific codes that need FP64 throughout (stiff ODEs, ill-conditioned linear algebra) need data-center GPUs, or algorithms that do most of the work in single precision and refine in double.
+- Enough device memory: 8–32 GB on consumer cards, 80 GB and more (up to 288 GB) on data-center cards; larger problems must be split into chunks or spread over several GPUs.
+- Regular control flow and memory access: threads of a warp that take different branches are executed one branch after the other, and accesses are fast when consecutive threads read consecutive addresses (*memory coalescing*). Sequential algorithms (one Gillespie trajectory of §7.2), heavily branching code and pointer-based data structures are poor fits.
+
+The easiest way to use a GPU from Python is CuPy, a reimplementation of the NumPy interface (and of a large part of SciPy in `cupyx.scipy`: `fft`, `ndimage`, `signal`, `sparse`, `sparse.linalg`, `special`) on NVIDIA GPUs, with experimental support for AMD GPUs. It is installed as a wheel matching the CUDA version (`pip install cupy-cuda12x` or `cupy-cuda13x`). Arrays are created on the device or copied there explicitly, and NumPy code runs almost unchanged:
+
+```python
+import numpy as np
+import cupy as cp
+
+x_host = np.random.default_rng(0).standard_normal((4096, 4096), dtype=np.float32)
+x = cp.asarray(x_host)                # host -> device copy
+power = cp.abs(cp.fft.fft2(x)) ** 2   # computed on the GPU; the result stays there
+total = float(power.sum())            # a scalar copied back to the host
+corner = cp.asnumpy(power[:8, :8])    # explicit device -> host copy
+```
+
+Code that should accept arrays of either library obtains the namespace from its argument, following the array API standard ([4.4.2](/4.4.2#sec-2.8)):
+
+```python
+from array_api_compat import array_namespace
+
+
+def standardize(x):
+    xp = array_namespace(x)           # numpy for NumPy arrays, cupy for CuPy arrays
+    return (x - xp.mean(x, axis=0)) / xp.std(x, axis=0)
+```
+
+Because kernel launches are asynchronous, a timer around a CuPy call measures only the launch; timings must wait for the device (`cp.cuda.Device().synchronize()`), or use `cupyx.profiler.benchmark(func, (x,), n_repeat=20)`, which does this and reports CPU and GPU times separately. The first call of a function also includes initialization and compilation of the kernels and should be excluded, as for Numba in §7.3.
+
+When no library function does what is needed, a kernel can be written in Python with Numba. Its CUDA target compiles a restricted subset of Python, like `@njit`, to GPU machine code. It is now developed by NVIDIA as the separate package `numba-cuda`, which keeps the familiar `from numba import cuda`; the copy built into Numba is deprecated. A kernel has no return value: it writes its results into arrays passed as arguments, and each thread computes its global index from its position in the grid:
+
+```python
+import math
+from numba import cuda
+
+
+@cuda.jit
+def axpy(a, x, y, out):
+    i = cuda.grid(1)                  # threadIdx.x + blockIdx.x * blockDim.x
+    if i < x.size:                    # the last block may extend past the end
+        out[i] = a * x[i] + y[i]
+
+
+n = 10_000_000
+x = np.random.default_rng(0).standard_normal(n)
+y = np.ones(n)
+d_x, d_y = cuda.to_device(x), cuda.to_device(y)   # explicit host -> device copies
+d_out = cuda.device_array_like(d_x)               # allocated on the device only
+threads = 256                                     # threads per block, a multiple of 32
+blocks = math.ceil(n / threads)
+axpy[blocks, threads](2.0, d_x, d_y, d_out)       # launch configuration [grid, block]
+out = d_out.copy_to_host()                        # waits for the kernel to finish
+```
+
+The block size is usually 128–512 threads (at most 1024), and the number of blocks is chosen to cover the data, so the bounds check in the kernel is necessary. Passing NumPy arrays directly to a kernel also works, but then Numba copies them to the device and back at every launch, which is exactly the traffic to avoid. A two-dimensional grid suits stencils. One sweep of the Jacobi iteration for the Poisson problem of [4.4.4](/4.4.4#sec-4.6.3), here with $T = 0$ on the whole boundary, assigns one thread to each grid point:
+
+```python
+@cuda.jit
+def jacobi_sweep(T, T_new, f_h2):
+    col, row = cuda.grid(2)           # x varies fastest: consecutive threads, consecutive columns
+    n_rows, n_cols = T.shape
+    if 0 < row < n_rows - 1 and 0 < col < n_cols - 1:
+        T_new[row, col] = 0.25 * (T[row - 1, col] + T[row + 1, col]
+                                  + T[row, col - 1] + T[row, col + 1] + f_h2)
+
+
+m = 1026                              # 1024 x 1024 interior points
+h = 1.0 / (m - 1)
+d_T = cuda.to_device(np.zeros((m, m)))
+d_new = cuda.to_device(np.zeros((m, m)))
+blocks2 = (math.ceil(m / 16), math.ceil(m / 16))
+for _ in range(1000):
+    jacobi_sweep[blocks2, (16, 16)](d_T, d_new, h * h)
+    d_T, d_new = d_new, d_T           # swap the references; nothing is copied
+```
+
+Letting the fastest-varying thread index run along the last array axis makes the reads of a warp coalesced. Each sweep is fast, but the Jacobi iteration needs a number of sweeps proportional to the number of grid points along an axis squared (here about $10^6$) to converge, whereas the conjugate gradient method of [4.4.4](/4.4.4#sec-4.6.3) needs a few hundred iterations: hardware does not compensate for a poor algorithm, and on a GPU such kernels serve as smoothers inside multigrid methods or are replaced by `cupyx.scipy.sparse.linalg.cg`. Numba also offers device functions (`@cuda.jit(device=True)`, callable from kernels), shared memory per block, atomic operations, and `@vectorize(target="cuda")` for elementwise functions. Kernels can be debugged without a GPU with the CUDA simulator (`NUMBA_ENABLE_CUDASIM=1`), which runs them slowly on the CPU; the code above was checked that way, since the laptop used for the measurements of this chapter has no NVIDIA GPU. Device arrays can be shared without copying between Numba, CuPy, PyTorch and JAX through the CUDA array interface and DLPack ([4.4.2](/4.4.2#sec-2.8)).
+
+Other tools take different approaches:
+
+| Tool | Approach | Suited to |
+|---|---|---|
+| CuPy | NumPy and SciPy interfaces on the GPU; custom kernels with `ElementwiseKernel`, `RawKernel` | porting existing array code |
+| Numba CUDA | kernels written in Python | custom algorithms not expressible with array operations |
+| JAX | NumPy-like arrays compiled by XLA (`jax.jit`), automatic vectorization (`jax.vmap`), **automatic differentiation**; immutable arrays, single precision by default | many independent simulations at once, optimization with gradients |
+| PyTorch | tensors on `"cuda"` (NVIDIA, AMD ROCm) or `"mps"` (Apple) devices; automatic differentiation | machine learning ([4.7](/4.7)), and general array computing |
+| Taichi, NVIDIA Warp | kernel languages embedded in Python, compiled for CPUs and GPUs | particle and grid simulations, graphics, differentiable physics |
+
+For most scientific work the order of attempts is the same as in §7.5: first an existing GPU library (CuPy, or the GPU support of the domain library, such as RAPIDS for data frames and machine learning or rapids-singlecell for single-cell analysis), then JAX or PyTorch when gradients or many parallel simulations are needed, and handwritten kernels only for what remains.
+
 ## 7.5. Choosing a Strategy
 
 1. Measure: time the whole program, profile it, and find the part that dominates.
 2. Use a better algorithm or library: a lower complexity, a vectorized NumPy or pandas operation, a SciPy routine, a **sparse matrix**. This is usually the largest gain.
 3. Compile what cannot be vectorized: Numba for numerical loops over arrays; Cython or C++ for larger components.
 4. Parallelize independent tasks: a process pool or joblib for CPU-bound Python code; threads for I/O and for code that releases the GIL; free-threaded Python where the dependencies support it; a cluster scheduler or a workflow manager (Snakemake, Nextflow) when the tasks are whole programs on many samples.
-5. Check after every step that the results are unchanged and that the gain is real on the machine where the code runs.
+5. Move large data-parallel array computations to a GPU when they dominate the running time and their data can stay on the device: CuPy for NumPy-style code, JAX or PyTorch when gradients or batches of simulations are needed, Numba CUDA kernels for the rest; check first whether double precision and the problem size suit the available GPU.
+6. Check after every step that the results are unchanged and that the gain is real on the machine where the code runs.
 
 ## Summary
 
@@ -302,3 +411,4 @@ This bound is *Amdahl's law*: with $f = 0.9$, no number of workers achieves more
 - Embarrassingly parallel problems need independent random streams (`SeedSequence.spawn`) for reproducible results.
 - Free-threaded CPython (officially supported since 3.14, still optional) runs threads in parallel, at a small single-thread cost and with new responsibilities for thread safety.
 - Amdahl's law bounds the speed-up by the serial fraction of the work.
+- GPUs offer thousands of threads and terabytes per second of memory bandwidth for large data-parallel computations; the costs are host–device transfers, launch overhead, limited memory and, on consumer cards, slow double precision. CuPy replaces NumPy on the GPU, Numba CUDA compiles custom kernels; time GPU code only after synchronizing.

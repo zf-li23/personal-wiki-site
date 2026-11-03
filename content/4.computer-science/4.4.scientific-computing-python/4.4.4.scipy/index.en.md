@@ -1,6 +1,6 @@
 ---
 title: SciPy
-description: The structure of SciPy and its relation to NumPy; scipy.linalg and reusable factorizations; minimization, root finding and curve fitting with scipy.optimize; quadrature and initial value problems with solve_ivp, stiffness and the choice of method; interpolation and splines; distribution objects and tests in scipy.stats; sparse arrays, storage formats and sparse solvers; the fast Fourier transform.
+description: The structure of SciPy and its relation to NumPy; scipy.linalg and reusable factorizations; minimization, root finding and curve fitting with scipy.optimize; Gaussian quadrature and initial value problems with solve_ivp, Euler and Runge–Kutta steps, stiffness and the choice of method; interpolation and splines; distribution objects and tests in scipy.stats; sparse arrays, storage formats and sparse solvers; finite differences for the heat equation, sparse assembly, and the stability of explicit time stepping; the fast Fourier transform.
 ---
 
 NumPy provides arrays and the elementary operations on them; SciPy provides the numerical algorithms built on top: optimization, integration of functions and differential equations, interpolation, statistics, sparse matrices, signal processing and Fourier transforms. Most of these algorithms are decades old and implemented in well-tested Fortran, C and C++ libraries (QUADPACK, ODEPACK, FITPACK, ARPACK, SuperLU, among others) or in carefully written Python, so the task of the user is again to formulate the problem in the form the library expects, to choose the method, and to check the result. This chapter is a guided tour of the most used subpackages. As in [4.4.3](/4.4.3), the theory of the methods is treated elsewhere and linked: optimization and root finding in [3.5.4](/3.5.4) and [3.5.5](/3.5.5), differential equations in 2.4 ([2.4.4](/2.4.4)), interpolation and conditioning in [3.5.1](/3.5.1). The examples use SciPy 1.18 (October 2026) with NumPy 2.5; tables of data are the subject of the next chapter, [4.4.5](/4.4.5).
@@ -152,7 +152,7 @@ val, err = integrate.quad(lambda x, a: x ** a, 0, 1, args=(2,))
 print(val)                                 # 0.33333333333333337
 ```
 
-The error estimate is reliable for smooth integrands; for integrands with singularities, discontinuities or sharp peaks, the location should be given with `points=[...]`, or the interval split. **Multiple integrals** are computed by `dblquad`, `tplquad` and `nquad`, and `quad_vec` integrates vector-valued functions.
+The error estimate is reliable for smooth integrands; for integrands with singularities, discontinuities or sharp peaks, the location should be given with `points=[...]`, or the interval split. **Multiple integrals** are computed by `dblquad`, `tplquad` and `nquad`, and `quad_vec` integrates vector-valued functions. Gauss–Kronrod quadrature builds on *Gaussian quadrature*: an $n$-point Gauss–Legendre rule places its nodes at the roots of the Legendre polynomial of degree $n$ and chooses the weights so that it integrates polynomials of degree up to $2n - 1$ exactly, the highest possible degree for $n$ nodes. Its weights are positive, which makes it numerically stable, unlike Newton–Cotes rules of high order on equispaced nodes. `integrate.fixed_quad(f, a, b, n=5)` applies such a rule without an error estimate ($\int_0^\pi \sin x\,\mathrm{d}x$ with five nodes gives $2.0000001$); the Kronrod extension adds nodes to a Gauss rule so that the difference of the two results estimates the error. The older functions `quadrature` and `romberg` were removed in SciPy 1.15.
 
 When the integrand is known only at sample points, for example a measured time series, we use the composite rules: `integrate.trapezoid(y, x=x)` and `integrate.simpson(y, x=x)` give the integral, and `integrate.cumulative_trapezoid(y, x=x, initial=0)` the running integral. For $\int_0^\pi \sin x\,\mathrm{d}x = 2$ with 11 points, the trapezoidal rule gives $1.9835$ and Simpson's rule $2.0001$, reflecting their errors of order $h^2$ and $h^4$.
 
@@ -227,9 +227,68 @@ This difficulty is called *stiffness*: a problem is stiff when it contains proce
 
 All four succeed, but the explicit method needs 3000 times more steps. Implicit methods solve a nonlinear system with the **Jacobian matrix** $\partial\boldsymbol{f}/\partial\boldsymbol{y}$ at each step; supplying it through `jac=` saves the finite-difference approximation, and `jac_sparsity=` helps for large sparse systems such as discretized **partial differential equations**. The practical rule: start with `RK45`; if it is unexpectedly slow or takes very many steps, try `BDF`, `Radau` or `LSODA`.
 
+### 4.3.4. What the Solvers Do: Euler and Runge–Kutta Steps
+
+The methods in the table are refinements of a few simple ideas, which are worth seeing in their simplest form. For $\boldsymbol{y}' = \boldsymbol{f}(t, \boldsymbol{y})$ and a step $h$, the explicit **Euler method**
+
+$$
+\boldsymbol{y}_{k+1} = \boldsymbol{y}_k + h\,\boldsymbol{f}(t_k, \boldsymbol{y}_k)
+$$
+follows the tangent for one step, which produces the Euler polygon; its global error is of order $h$. The implicit (backward) Euler method $\boldsymbol{y}_{k+1} = \boldsymbol{y}_k + h\,\boldsymbol{f}(t_{k+1}, \boldsymbol{y}_{k+1})$ evaluates $\boldsymbol{f}$ at the unknown new point, so each step requires solving an equation, but it remains stable for large steps on stiff problems; it is the simplest member of the BDF family. The classical fourth-order **Runge–Kutta method** (RK4) combines four evaluations of $\boldsymbol{f}$ per step,
+
+$$
+\begin{aligned}
+\boldsymbol{k}_1 &= \boldsymbol{f}(t_k, \boldsymbol{y}_k), &
+\boldsymbol{k}_2 &= \boldsymbol{f}\bigl(t_k + \tfrac h2, \boldsymbol{y}_k + \tfrac h2 \boldsymbol{k}_1\bigr),\\
+\boldsymbol{k}_3 &= \boldsymbol{f}\bigl(t_k + \tfrac h2, \boldsymbol{y}_k + \tfrac h2 \boldsymbol{k}_2\bigr), &
+\boldsymbol{k}_4 &= \boldsymbol{f}(t_k + h, \boldsymbol{y}_k + h\boldsymbol{k}_3),
+\end{aligned}
+\qquad
+\boldsymbol{y}_{k+1} = \boldsymbol{y}_k + \frac h6(\boldsymbol{k}_1 + 2\boldsymbol{k}_2 + 2\boldsymbol{k}_3 + \boldsymbol{k}_4),
+$$
+and has global error of order $h^4$. Multistep methods such as the Adams methods (used by `LSODA`) reuse values from several previous steps instead. Both one-step methods fit in a few lines:
+
+```python
+def euler(f, t_span, y0, h):
+    t, y = t_span[0], np.asarray(y0, dtype=float)
+    for _ in range(round((t_span[1] - t_span[0]) / h)):
+        y = y + h * f(t, y)
+        t += h
+    return y
+
+
+def rk4(f, t_span, y0, h):
+    t, y = t_span[0], np.asarray(y0, dtype=float)
+    for _ in range(round((t_span[1] - t_span[0]) / h)):
+        k1 = f(t, y)
+        k2 = f(t + h / 2, y + h / 2 * k1)
+        k3 = f(t + h / 2, y + h / 2 * k2)
+        k4 = f(t + h, y + h * k3)
+        y = y + h / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+        t += h
+    return y
+
+
+oscillator = lambda t, y: np.array([y[1], -y[0]])     # x'' = -x, exact x = cos t
+exact = np.array([np.cos(10.0), -np.sin(10.0)])
+for h in [0.1, 0.05, 0.025]:
+    print(h, np.abs(euler(oscillator, (0, 10), [1, 0], h) - exact).max(),
+          np.abs(rk4(oscillator, (0, 10), [1, 0], h) - exact).max())
+```
+
+| Step $h$ | Euler: error at $t = 10$ | RK4: error at $t = 10$ | evaluations of $\boldsymbol{f}$ (Euler / RK4) |
+|---|---|---|---|
+| 0.1 | $5.7 \times 10^{-1}$ | $7.3 \times 10^{-6}$ | 100 / 400 |
+| 0.05 | $2.4 \times 10^{-1}$ | $4.5 \times 10^{-7}$ | 200 / 800 |
+| 0.025 | $1.1 \times 10^{-1}$ | $2.8 \times 10^{-8}$ | 400 / 1600 |
+
+Halving the step roughly halves the Euler error and divides the RK4 error by 16, as the orders predict; for the same number of evaluations, RK4 is better by many orders of magnitude. The two Euler methods also err qualitatively. For the harmonic oscillator each explicit step multiplies the amplitude by $\sqrt{1 + h^2}$, so with $h = 0.1$ the amplitude has grown from 1 to $1.645$ at $t = 10$, an orbit spiraling outward; each implicit step divides it by the same factor, giving $0.608$, a spurious damping. `solve_ivp` adds what a fixed-step loop lacks: an error estimate in every step (RK45 compares embedded solutions of orders 4 and 5) and an adaptive step size. With the default tolerances it reaches an error of $2 \times 10^{-3}$ here with 86 evaluations, and with `rtol=1e-8, atol=1e-10` an error of $1.1 \times 10^{-8}$ with 812 evaluations, without the user choosing a step.
+
+Older code uses `integrate.odeint`, a wrapper of LSODA whose right-hand side takes the arguments in the order `f(y, t)`, and the object-oriented class `integrate.ode`; both still work, but `solve_ivp` is the interface for new code.
+
 ## 4.4. Interpolation
 
-Interpolation constructs a function that passes through given points $(x_i, y_i)$. One global polynomial through many equispaced points oscillates near the ends, the **Runge phenomenon** of **polynomial interpolation**, so practical interpolation uses piecewise polynomials. `scipy.interpolate` offers several, which differ in smoothness and shape preservation:
+Interpolation constructs a function that passes through given points $(x_i, y_i)$; unlike fitting (§4.2.3), which determines a few parameters from many noisy points, it reproduces the data exactly. One global polynomial through many equispaced points oscillates near the ends, the **Runge phenomenon** of **polynomial interpolation**, so practical interpolation uses piecewise polynomials. `scipy.interpolate` offers several, which differ in smoothness and shape preservation:
 
 | Class or function | Method | Properties |
 |---|---|---|
@@ -256,7 +315,7 @@ print(cs.derivative()(2.5), cs.integrate(0, 5))   # 1.1666666666666665 2.5
 
 ![Left: step-like data interpolated by np.interp, CubicSpline, PchipInterpolator and modified Akima; the cubic spline overshoots. Right: Runge's function with 11 equispaced nodes; the degree-10 interpolating polynomial oscillates near the ends, the cubic spline does not](./plots/interpolation.py)
 
-The interpolant objects are callable and have methods for derivatives, antiderivatives, integrals and roots. The older class `interp1d` is now marked as legacy; the classes above replace it.
+The interpolant objects are callable and have methods for derivatives, antiderivatives, integrals and roots. The older class `interp1d` is now marked as legacy; the classes above replace it. `interp2d` was removed in SciPy 1.14: gridded data in two or more dimensions are interpolated with `RegularGridInterpolator` (or `RectBivariateSpline` for smooth splines), scattered data with `griddata` or `RBFInterpolator`.
 
 ## 4.5. Statistics
 
@@ -365,6 +424,85 @@ The sparse matrix with $n = 10^5$ occupies 4 MB and is solved in 0.1 s; the same
 
 Iterative methods converge at a rate determined by the **condition number**. For $n = 1000$, $\kappa(A) \approx 4 \times 10^5$, and conjugate gradients needs 500 iterations to reach a relative residual of $10^{-10}$, while the direct solver takes 2 ms; for this one-dimensional problem the direct method is clearly better. For large two- and three-dimensional problems, direct solvers suffer from fill-in, and iterative methods with a preconditioner become the method of choice. The smallest eigenvalues of $A$ for $n = 1000$, computed by `spla.eigsh(A, k=3, sigma=0)` with the shift-invert mode, agree with the exact values $\frac{4}{h^2}\sin^2\frac{k\pi h}{2} \approx (k\pi)^2$, $k = 1, 2, 3$, to all printed digits. Graph algorithms on sparse adjacency matrices (shortest paths, **connected components**, **minimum spanning trees**, as in [4.3.11](/4.3.11)) are in `scipy.sparse.csgraph`.
 
+### 4.6.3. Example: Finite Differences for the Heat Equation
+
+Sparse matrices arise above all from the discretization of **partial differential equations**, and a complete example shows how the pieces of this section fit together. Consider a square plate $[0, 1]^2$ with thermal conductivity $\alpha$ and a uniformly distributed heat source of density $q$, insulated on its edges except for a cold segment $0.3 < x < 0.7$ of the top edge held at temperature $0$. The stationary temperature satisfies $\alpha\,\Delta T + q = 0$, a **Poisson equation** ([2.5.1](/2.5.1#sec-1.2.3)), with a **Dirichlet boundary condition** $T = 0$ on the cold segment and a **Neumann boundary condition** $\partial T/\partial\boldsymbol{n} = 0$ (no heat flux) on the rest of the boundary ([2.5.1](/2.5.1#sec-1.3.2)). The time-dependent problem is the **heat equation** $T_t = \alpha\,\Delta T + q$.
+
+The *finite difference method* replaces derivatives by difference quotients on a grid. The **central difference** for the second derivative,
+
+$$
+u''(x) = \frac{u(x + h) - 2u(x) + u(x - h)}{h^2} + O(h^2),
+$$
+follows from **Taylor's formula** ([3.5.1](/3.5.1#sec-1.5.2) discusses the competing rounding error). We divide the plate into $n \times n$ square cells of side $h = 1/n$ and take as unknowns the temperatures $T_{i,j}$ at the cell centers $\bigl((i + \frac12)h, (j + \frac12)h\bigr)$, $0 \le i, j < n$. Applying the central difference in both directions gives, for an interior cell, the *five-point stencil*
+
+$$
+4T_{i,j} - T_{i+1,j} - T_{i-1,j} - T_{i,j+1} - T_{i,j-1} = \frac{q h^2}{\alpha}.
+$$
+At the boundary, the missing neighbor is replaced by a *ghost value* outside the plate, chosen so that the boundary condition holds on the cell face between the two:
+
+- insulated face: ghost value $= T_{i,j}$, so that the difference across the face, and with it the heat flux, is zero. The neighbor term disappears and the diagonal coefficient drops by one (to 3 on an edge, 2 in a corner);
+- face held at $T_{\mathrm{w}}$, half a cell from the center: ghost value $= 2T_{\mathrm{w}} - T_{i,j}$, so that the linear interpolation between the two equals $T_{\mathrm{w}}$ on the face. Compared with the insulated face, the diagonal coefficient grows by two and the right-hand side by $2T_{\mathrm{w}}$; for a top-edge cell below the cold segment the equation reads $5T_{i,n-1} - T_{i+1,n-1} - T_{i-1,n-1} - T_{i,n-2} = qh^2/\alpha$.
+
+Numbering the unknowns row by row, $k = jn + i$, turns the $n^2$ equations into a linear system $A\boldsymbol{T} = \boldsymbol{b}$ whose matrix has at most five nonzeros per row. The numbering matches NumPy's row-major `reshape(n, n)`, with $j$ (the $y$ direction) as the row index. The matrix need not be assembled entry by entry: with $D$ the $n \times n$ second-difference matrix of one dimension (with insulated ends) and $I$ the identity, the two-dimensional operator is $I \otimes D + D \otimes I$, where $\otimes$ is the Kronecker product, `sparse.kron`. The Dirichlet segment then only adds a diagonal correction:
+
+```python
+def second_difference(n):
+    """1D matrix of -u'' times h^2 on n cells with insulated (zero-flux) ends."""
+    main = 2.0 * np.ones(n)
+    main[[0, -1]] = 1.0                      # ghost value equals the boundary cell
+    off = -np.ones(n - 1)
+    return sparse.diags_array([off, main, off], offsets=[-1, 0, 1])
+
+
+n = 100                                      # n x n cells on the unit square
+h = 1.0 / n
+alpha, q = 1.0, 1.0                          # conductivity and heat source density
+I = sparse.eye_array(n)
+D = second_difference(n)
+A = sparse.kron(I, D) + sparse.kron(D, I)    # unknown T[j, i] has index k = j * n + i
+
+xc = (np.arange(n) + 0.5) * h                # cell centers
+cold = np.flatnonzero(np.abs(xc - 0.5) < 0.2)    # T = 0 on the middle of the top edge
+d = np.zeros(n * n)
+d[(n - 1) * n + cold] = 2.0                  # ghost value -T: two more on the diagonal
+A = (A + sparse.diags_array(d)).tocsc()
+b = np.full(n * n, q * h ** 2 / alpha)
+
+T = spla.spsolve(A, b).reshape(n, n)
+print(A.shape, A.nnz, T.max())               # (10000, 10000) 49600 0.6748...
+print(2 * alpha * T[-1, cold].sum())         # 0.9999999999998: heat out = q * area
+```
+
+The system with $10^4$ unknowns is solved in 0.03 s. The last line checks a conservation law: the heat flux density through a cold face is $\alpha \cdot T_{i,n-1}/(h/2)$ and the face has length $h$, so the total outflow is $2\alpha\sum_i T_{i,n-1}$, and it equals the heat $q \cdot 1$ produced in the plate to rounding error. This holds exactly because the scheme is also a balance of fluxes between neighboring cells, a simple *finite volume* discretization; such checks catch most errors in the treatment of boundaries.
+
+![Steady temperature in a square plate with a uniform heat source, insulated edges and a cold segment on the top edge, computed on 100 x 100 cells: temperature field with isotherms (left) and temperature along the vertical center line and along a horizontal line just below the cold segment (right)](./plots/heat-conduction.py)
+
+The matrix is symmetric and, thanks to the Dirichlet segment, positive definite (with insulated edges only, it would be singular, since adding a constant to $T$ changes nothing). Conjugate gradients therefore also applies: `spla.cg(A, b, rtol=1e-10)` needs 458 iterations and 0.06 s here. The classical iterations that update one cell at a time from its neighbors, the **Jacobi method** $T_{i,j} \leftarrow \frac14\bigl(\sum \text{neighbors} + qh^2/\alpha\bigr)$ and the **Gauss–Seidel method** ([3.5.4](/3.5.4#sec-4.3.4)), need no matrix at all but converge much more slowly, with a number of iterations proportional to $n^2$; multigrid methods (the package PyAMG), which correct the error on a hierarchy of coarser grids, solve such problems in a time proportional to the number of unknowns. For problems in three dimensions, preconditioned iterative methods are usually the only option.
+
+For the time-dependent equation, discretizing only in space (the *method of lines*) gives the linear ODE system $\boldsymbol{T}' = -\frac{\alpha}{h^2}A\boldsymbol{T} + q\boldsymbol{1}$. Its stepping with the explicit Euler method of §4.3.4 is
+
+$$
+\boldsymbol{T}^{m+1} = \boldsymbol{T}^m - r A\boldsymbol{T}^m + \Delta t\,q\boldsymbol{1}, \qquad r = \frac{\alpha\,\Delta t}{h^2}.
+$$
+A grid oscillation $\mathrm{e}^{\mathrm{i}(\theta_1 i + \theta_2 j)}$ is multiplied in each step of the interior scheme by $g = 1 - 4r\bigl(\sin^2\frac{\theta_1}{2} + \sin^2\frac{\theta_2}{2}\bigr)$, which ranges down to $1 - 8r$. The scheme is stable, $\lvert g\rvert \le 1$ for all modes, if and only if $r \le 1/4$ in two dimensions (and $r \le 1/2$ in one, where $g = 1 - 4r\sin^2\frac\theta2$); this is von Neumann stability analysis. Under this condition the new value of each cell is a weighted average, with nonnegative weights, of the old values of its neighbors and itself, so the scheme also inherits the **maximum principle** of the heat equation ([2.5.7](/2.5.7#sec-7.2)). Beyond it, the highest-frequency mode grows by the factor $\lvert 1 - 8r\rvert$ (or $\lvert 1 - 4r\rvert$ in one dimension) in every step and destroys the solution within a few dozen steps:
+
+![Explicit time stepping of the one-dimensional heat equation from a step-shaped initial profile: with r = 0.48 the profile smooths out as expected (left); with r = 0.52 a sawtooth oscillation on the grid grows in every step (right)](./plots/diffusion-stability.py)
+
+The condition $\Delta t \le h^2/(4\alpha)$ is severe: halving the grid spacing quarters the time step. The semi-discrete system is a stiff problem in the sense of §4.3.3: the eigenvalues of $A$ range from $1.8 \times 10^{-4}$ to almost 8, a ratio of $4.5 \times 10^4$ for $n = 100$, growing like $n^2$. Implicit time stepping avoids the restriction. The implicit Euler step $(I + rA)\boldsymbol{T}^{m+1} = \boldsymbol{T}^m + \Delta t\,q\boldsymbol{1}$ is stable for every $\Delta t$, and since the matrix does not change, it is factorized once:
+
+```python
+dt = 0.01                                    # r = 100, far beyond the explicit limit
+step = spla.factorized((sparse.eye_array(n * n) + alpha * dt / h ** 2 * A).tocsc())
+Tt = np.zeros(n * n)                         # start from a cold plate
+for m in range(300):                         # up to t = 3
+    Tt = step(Tt + dt * q)
+print(np.abs(Tt.reshape(n, n) - T).max())    # 0.0034: close to the steady state
+```
+
+Alternatively, `solve_ivp(..., method="BDF", jac=-alpha / h**2 * A)` integrates the semi-discrete system with adaptive steps, using the sparse Jacobian directly. The Crank–Nicolson method, the average of the explicit and implicit steps, is also unconditionally stable and second-order accurate in time.
+
+Finite differences on rectangular grids are the simplest discretization. Complex geometries are handled by the finite element method (structural mechanics, electromagnetics; in Python FEniCSx, Firedrake, scikit-fem), and conservation laws, as in fluid dynamics, by finite volume methods (FiPy); problems with periodic or very smooth solutions by spectral methods built on the FFT (§4.7); physics-informed neural networks, which fit a network to the equation and the data, are a newer and still less reliable alternative.
+
 ## 4.7. The Fast Fourier Transform
 
 The *discrete Fourier transform* (DFT) of a sequence $x_0, \dots, x_{N-1}$ is
@@ -411,8 +549,9 @@ The two components, invisible by eye in the noisy signal, stand out as peaks of 
 - SciPy is a collection of subpackages built on NumPy and on established compiled libraries; import subpackages (`from scipy import optimize`) and prefer `scipy.linalg` over `numpy.linalg`.
 - `optimize.minimize` finds local minima; choose the method by what is available (values, gradients, Hessians) and by the constraints, and supply gradients when possible. Use `root_scalar` with a bracket (`brentq`) for scalar equations, `curve_fit` or `least_squares` for **nonlinear regression**.
 - `quad` integrates functions adaptively with an error estimate; `trapezoid` and `simpson` integrate samples.
-- `solve_ivp(fun(t, y), t_span, y0)` solves initial value problems with adaptive steps; set tolerances explicitly, use `dense_output` or `t_eval` for output, `events` to locate crossings, and an implicit method (`BDF`, `Radau`, `LSODA`) for stiff problems.
+- `solve_ivp(fun(t, y), t_span, y0)` solves initial value problems with adaptive steps; set tolerances explicitly, use `dense_output` or `t_eval` for output, `events` to locate crossings, and an implicit method (`BDF`, `Radau`, `LSODA`) for stiff problems. Behind it are one-step formulas such as the Euler method (order 1) and RK4 (order 4), with error estimates and adaptive steps added.
 - Cubic splines are smooth but may overshoot; PCHIP and modified Akima preserve monotonicity. `interp1d` is legacy.
 - `scipy.stats` distributions use `loc` and `scale`; tests return result objects with statistics, **p-values** and often **confidence intervals**.
 - Use sparse arrays (`csr_array`) rather than sparse matrices; assemble in COO, compute in CSR or CSC; `spsolve` for direct and `cg` or `gmres` for iterative solution.
+- Finite differences turn a PDE such as $\alpha\,\Delta T + q = 0$ into a sparse system: five-point stencil, ghost values for Dirichlet and Neumann boundaries, assembly with `sparse.kron`; explicit time stepping of the heat equation is stable only for $\alpha\,\Delta t/h^2 \le 1/4$ (two dimensions), implicit stepping for every step size.
 - The FFT computes the discrete Fourier transform in $O(N \log N)$; use `rfft` and `rfftfreq` for real signals and check normalization conventions.

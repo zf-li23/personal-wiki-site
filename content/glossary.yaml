@@ -2597,6 +2597,19 @@ terms:
   - { zh: Amdahl 定律, en: "Amdahl's law", aliases: [阿姆达尔定律] }
   - { zh: Gillespie 算法, en: Gillespie algorithm, aliases: [随机模拟算法, stochastic simulation algorithm, SSA] }
   - { zh: 连接, en: join, scope: ["4"] }
+  - { zh: 计算机代数系统, en: computer algebra system, aliases: [符号计算系统] }
+  - { zh: 表达式膨胀, en: expression swell }
+  - { zh: Risch 算法, en: Risch algorithm }
+  - { zh: 有限差分法, en: finite difference method, aliases: [有限差分, finite differences] }
+  - { zh: 五点差分格式, en: five-point stencil, aliases: [五点格式] }
+  - { zh: 虚拟点, en: ghost value, aliases: [ghost cell, ghost point, 虚拟单元] }
+  - { zh: 有限体积法, en: finite volume, aliases: [finite volume method] }
+  - { zh: 线方法, en: method of lines }
+  - { zh: Gauss 求积, en: Gaussian quadrature, aliases: [高斯求积, Gauss–Legendre quadrature] }
+  - { zh: 图形处理器, en: graphics processing unit, aliases: [GPU] }
+  - { zh: GPU 核函数, en: GPU kernel, aliases: [CUDA kernel] }
+  - { zh: 线程束, en: warp, scope: ["4"] }
+  - { zh: 合并访存, en: memory coalescing, aliases: [访存合并] }
 
   # artificial intelligence (4.5–4.7)
   - { zh: 人工智能, en: artificial intelligence, aliases: [AI] }
