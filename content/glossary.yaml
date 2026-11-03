@@ -1294,7 +1294,7 @@ terms:
   - { zh: 无信息先验, en: non-informative prior }
   - { zh: Jeffreys 先验, en: "Jeffreys' prior", aliases: [Jeffreys prior] }
   - { zh: 最大熵先验, en: maximum entropy prior }
-  - { zh: 分层模型, en: hierarchical model }
+  - { zh: 分层模型, en: hierarchical model, aliases: [层次模型] }
   - { zh: 最大后验估计, en: maximum a posteriori estimate, aliases: [后验众数估计, MAP 估计, MAP estimate] }
   - { zh: 后验均值, en: posterior mean }
   - { zh: 后验中位数, en: posterior median }
