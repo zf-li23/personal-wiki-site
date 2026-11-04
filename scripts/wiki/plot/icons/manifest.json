@@ -314,6 +314,32 @@
    "development"
   ]
  },
+ "bioicons/plasmodium-ring": {
+  "source": "bioicons",
+  "name": "plasmodium-ring",
+  "category": "Parasites",
+  "author": "Abhinay Ramaprasad",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Parasites/Abhinay-Ramaprasad/plasmodium-ring.svg",
+  "tags": [
+   "protist",
+   "parasite",
+   "blood"
+  ]
+ },
+ "bioicons/plasmodium-schizont": {
+  "source": "bioicons",
+  "name": "plasmodium-segmented-schizont",
+  "category": "Parasites",
+  "author": "Abhinay Ramaprasad",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Parasites/Abhinay-Ramaprasad/plasmodium-segmented-schizont.svg",
+  "tags": [
+   "protist",
+   "parasite",
+   "blood"
+  ]
+ },
  "bioicons/polysome": {
   "source": "bioicons",
   "name": "Bacterial_Ribosomes_with_mRNA",
@@ -1336,6 +1362,26 @@
    "mammal"
   ]
  },
+ "phylopic/agaricus": {
+  "source": "phylopic",
+  "name": "Agaricus",
+  "author": "Faith Jones",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/831e01d4-4ecb-453a-ba4b-a84407c8e28e",
+  "tags": [
+   "phylo"
+  ]
+ },
+ "phylopic/allomyces": {
+  "source": "phylopic",
+  "name": "Allomyces",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f72ec90f-d008-4908-a7e6-582e04814f95",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/amborella": {
   "source": "phylopic",
   "name": "Amborella trichopoda",
@@ -1619,6 +1665,16 @@
    "plant"
   ]
  },
+ "phylopic/coccolithophore": {
+  "source": "phylopic",
+  "name": "Emiliania",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/174c0ef7-60ab-44e5-96b5-1dbe58a347b1",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/cod": {
   "source": "phylopic",
   "name": "Gadus morhua",
@@ -1682,6 +1738,16 @@
   "url": "https://www.phylopic.org/images/a796420f-5158-4e96-acbe-e30ef36b26d6",
   "tags": [
    "reptile"
+  ]
+ },
+ "phylopic/cryptophyte": {
+  "source": "phylopic",
+  "name": "Cryptophyceae",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6847e846-5e87-4d3b-8476-75b99eb835ef",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/cyanobacterium": {
@@ -1750,6 +1816,16 @@
    "model-organism"
   ]
  },
+ "phylopic/dinoflagellate": {
+  "source": "phylopic",
+  "name": "Dinophyceae",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6f3b3c58-0049-4fd4-b4d5-74b6d455a5ac",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/dragonfly": {
   "source": "phylopic",
   "name": "Odonata",
@@ -1813,6 +1889,16 @@
    "fern"
   ]
  },
+ "phylopic/foraminiferan": {
+  "source": "phylopic",
+  "name": "Globigerina",
+  "author": "Sara Kahanamoku",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9d50d090-995b-4313-abbb-6374f425ae16",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/frog": {
   "source": "phylopic",
   "name": "Rana",
@@ -1821,6 +1907,16 @@
   "url": "https://www.phylopic.org/images/e63285f9-4a46-4e5c-8394-a65815b3ab0d",
   "tags": [
    "amphibian"
+  ]
+ },
+ "phylopic/giardia": {
+  "source": "phylopic",
+  "name": "Giardia",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/697d4532-b551-4169-95de-bcc74bb35b9f",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/ginkgo": {
@@ -1963,6 +2059,16 @@
    "marsupial"
   ]
  },
+ "phylopic/kelp": {
+  "source": "phylopic",
+  "name": "Macrocystis",
+  "author": "Harold N Eyster",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/9acf11fa-89dd-4a56-b3da-8665c406c6f5",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/krill": {
   "source": "phylopic",
   "name": "Euphausiacea",
@@ -2085,6 +2191,16 @@
    "model-organism"
   ]
  },
+ "phylopic/microsporidian": {
+  "source": "phylopic",
+  "name": "Microsporidia",
+  "author": "Livio Ruzzante",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/077c76df-f224-4eb1-9c92-6049fc8f8b3e",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/mosquito": {
   "source": "phylopic",
   "name": "Anopheles",
@@ -2128,6 +2244,16 @@
    "model-organism"
   ]
  },
+ "phylopic/naegleria": {
+  "source": "phylopic",
+  "name": "Naegleria",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9d4d8fa0-4021-4025-a963-503aae6f91eb",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/naked-mole-rat": {
   "source": "phylopic",
   "name": "Heterocephalus glaber",
@@ -2148,6 +2274,16 @@
   "tags": [
    "cnidarian",
    "model-organism"
+  ]
+ },
+ "phylopic/neurospora": {
+  "source": "phylopic",
+  "name": "Neurospora",
+  "author": "Arcadia Science",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/71ef94c1-6c44-4991-b50c-b7da9d8ff76b",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/nile-crocodile": {
@@ -2248,6 +2384,26 @@
    "fungus"
   ]
  },
+ "phylopic/physarum": {
+  "source": "phylopic",
+  "name": "Physarum",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/703b83c3-665c-4c9d-aa2c-cc7e62675cdc",
+  "tags": [
+   "phylo"
+  ]
+ },
+ "phylopic/phytophthora": {
+  "source": "phylopic",
+  "name": "Phytophthora",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f2e0f985-daba-4eb1-8727-eb667d2c3f96",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/pigeon": {
   "source": "phylopic",
   "name": "Columba livia",
@@ -2280,6 +2436,16 @@
    "model-organism"
   ]
  },
+ "phylopic/plasmodium": {
+  "source": "phylopic",
+  "name": "Plasmodium",
+  "author": "Jonathan Wells",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/e6014244-4dd5-4785-bf2e-c67dc4d05ca8",
+  "tags": [
+   "phylo"
+  ]
+ },
  "phylopic/platypus": {
   "source": "phylopic",
   "name": "Ornithorhynchus anatinus",
@@ -2289,6 +2455,26 @@
   "tags": [
    "mammal",
    "monotreme"
+  ]
+ },
+ "phylopic/porphyra": {
+  "source": "phylopic",
+  "name": "Porphyra",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/bdb624c7-049d-45b6-ae41-b1b74186dc69",
+  "tags": [
+   "phylo"
+  ]
+ },
+ "phylopic/radiolarian": {
+  "source": "phylopic",
+  "name": "Radiolaria",
+  "author": "Wolfgang Kiessling",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8b8d9ef8-d39f-4877-aa3e-619abdf614cd",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/rat": {
@@ -2311,6 +2497,36 @@
   "tags": [
    "bacterium",
    "symbiosis"
+  ]
+ },
+ "phylopic/rhizophagus": {
+  "source": "phylopic",
+  "name": "Rhizophagus",
+  "author": "Yan Wong",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/31aa0781-ca28-4362-8955-520f1c45f232",
+  "tags": [
+   "phylo"
+  ]
+ },
+ "phylopic/rhizopus": {
+  "source": "phylopic",
+  "name": "Rhizopus",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8cff2d66-6549-44d2-8304-d2dfecf53d78",
+  "tags": [
+   "phylo"
+  ]
+ },
+ "phylopic/rust": {
+  "source": "phylopic",
+  "name": "Pucciniomycotina",
+  "author": "Levi Simons",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/77363a23-67da-4139-b689-205a9e924f64",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/salmon": {
@@ -2496,6 +2712,16 @@
    "arthropod",
    "evolution",
    "fossil"
+  ]
+ },
+ "phylopic/trypanosoma": {
+  "source": "phylopic",
+  "name": "Trypanosoma",
+  "author": "Emily Jane McTavish",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/e612d719-ee02-4844-a1b7-a5a7c3314a1e",
+  "tags": [
+   "phylo"
   ]
  },
  "phylopic/turtle": {
@@ -2733,6 +2959,18 @@
   "tags": [
    "circulation",
    "oncology"
+  ]
+ },
+ "servier/anopheles": {
+  "source": "bioicons",
+  "name": "anopheles",
+  "category": "Animals",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Animals/Servier/anopheles.svg",
+  "tags": [
+   "insect",
+   "parasite-vector"
   ]
  },
  "servier/antibody-2": {
@@ -3540,6 +3778,18 @@
    "disease"
   ]
  },
+ "servier/gametocyte-female": {
+  "source": "bioicons",
+  "name": "gametocyte-female",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/gametocyte-female.svg",
+  "tags": [
+   "protist",
+   "parasite"
+  ]
+ },
  "servier/gap-junction": {
   "source": "bioicons",
   "name": "gap-junction",
@@ -4046,6 +4296,18 @@
    "membrane"
   ]
  },
+ "servier/merozoites": {
+  "source": "bioicons",
+  "name": "merozoites",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/merozoites.svg",
+  "tags": [
+   "protist",
+   "parasite"
+  ]
+ },
  "servier/micropipette": {
   "source": "bioicons",
   "name": "micropipette",
@@ -4311,6 +4573,18 @@
    "organ",
    "neuro",
    "sense"
+  ]
+ },
+ "servier/oocyst": {
+  "source": "bioicons",
+  "name": "oocyst",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/oocyst.svg",
+  "tags": [
+   "protist",
+   "parasite"
   ]
  },
  "servier/organ-of-corti": {
@@ -4724,6 +4998,18 @@
   "tags": [
    "organ",
    "immune"
+  ]
+ },
+ "servier/sporozoites": {
+  "source": "bioicons",
+  "name": "sporozoites",
+  "category": "Parasites",
+  "author": "Servier Medical Art",
+  "license": "CC BY 3.0",
+  "url": "https://bioicons.com/icons/cc-by-3.0/Parasites/Servier/sporozoites.svg",
+  "tags": [
+   "protist",
+   "parasite"
   ]
  },
  "servier/squamous-cell": {
