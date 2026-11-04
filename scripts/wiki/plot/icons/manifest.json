@@ -400,6 +400,32 @@
    "translation"
   ]
  },
+ "bioicons/root-cross-section": {
+  "source": "bioicons",
+  "name": "Arabidopsis_root_cross_section.svg",
+  "author": "Frédéric Bouché",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Frédéric_Bouché/Arabidopsis_root_cross_section.svg",
+  "tags": [
+   "plant",
+   "root",
+   "anatomy",
+   "template"
+  ]
+ },
+ "bioicons/root-longitudinal": {
+  "source": "bioicons",
+  "name": "Arabidopsis_root_longitudinal_section.svg",
+  "author": "Frédéric Bouché",
+  "license": "CC BY 4.0",
+  "url": "https://bioicons.com/icons/cc-by-4.0/Plants_Algae/Frédéric_Bouché/Arabidopsis_root_longitudinal_section.svg",
+  "tags": [
+   "plant",
+   "root",
+   "anatomy",
+   "template"
+  ]
+ },
  "bioicons/shark": {
   "source": "bioicons",
   "name": "shark",
@@ -1352,6 +1378,201 @@
    "fish"
   ]
  },
+ "ian/cattail": {
+  "source": "ian",
+  "name": "typha-spp-cattail.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/typha-spp-cattail/",
+  "tags": [
+   "plant",
+   "wetland",
+   "monocot"
+  ]
+ },
+ "ian/eelgrass": {
+  "source": "ian",
+  "name": "zostera-marina-common-eelgrass.svg",
+  "author": "Annie Carew, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/zostera-marina-common-eelgrass/",
+  "tags": [
+   "plant",
+   "aquatic",
+   "monocot",
+   "seagrass"
+  ]
+ },
+ "ian/elodea": {
+  "source": "ian",
+  "name": "elodea-canadensis-canadian-waterweed.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/elodea-canadensis-canadian-waterweed/",
+  "tags": [
+   "plant",
+   "aquatic",
+   "monocot"
+  ]
+ },
+ "ian/grass": {
+  "source": "ian",
+  "name": "poaceae-grass.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/poaceae-grass/",
+  "tags": [
+   "plant",
+   "herb",
+   "monocot",
+   "grassland"
+  ]
+ },
+ "ian/oak": {
+  "source": "ian",
+  "name": "quercus-rubra-northern-red-oak.svg",
+  "author": "Joe Edgerton, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/quercus-rubra-northern-red-oak/",
+  "tags": [
+   "plant",
+   "tree",
+   "eudicot"
+  ]
+ },
+ "ian/pine": {
+  "source": "ian",
+  "name": "pinus-echinata-shortleaf-pine.svg",
+  "author": "Dylan Taillie, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/pinus-echinata-shortleaf-pine/",
+  "tags": [
+   "plant",
+   "tree",
+   "gymnosperm",
+   "conifer"
+  ]
+ },
+ "ian/reed": {
+  "source": "ian",
+  "name": "phragmites-australis-common-reed-singular.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/phragmites-australis-common-reed-singular/",
+  "tags": [
+   "plant",
+   "wetland",
+   "monocot"
+  ]
+ },
+ "ian/seedling": {
+  "source": "ian",
+  "name": "seedling.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/seedling/",
+  "tags": [
+   "plant",
+   "seedling",
+   "lab"
+  ]
+ },
+ "ian/shrub-temperate": {
+  "source": "ian",
+  "name": "generic-shrub-temperate.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/generic-shrub-temperate/",
+  "tags": [
+   "plant",
+   "shrub",
+   "habitat"
+  ]
+ },
+ "ian/shrub-tropical": {
+  "source": "ian",
+  "name": "generic-shrub-tropical.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/generic-shrub-tropical/",
+  "tags": [
+   "plant",
+   "shrub",
+   "habitat"
+  ]
+ },
+ "ian/tree-bare": {
+  "source": "ian",
+  "name": "generic-tree-winter.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/generic-tree-winter/",
+  "tags": [
+   "plant",
+   "tree",
+   "habitat"
+  ]
+ },
+ "ian/tree-deciduous": {
+  "source": "ian",
+  "name": "generic-tree-summer.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/generic-tree-summer/",
+  "tags": [
+   "plant",
+   "tree",
+   "habitat"
+  ]
+ },
+ "ian/tree-rainforest": {
+  "source": "ian",
+  "name": "generic-tree-rainforest-1.svg",
+  "author": "Dieter Tracey, Terrestrial Ecosystem Research Network (via IAN, UMCES)",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/generic-tree-rainforest-1/",
+  "tags": [
+   "plant",
+   "tree",
+   "habitat"
+  ]
+ },
+ "ian/vallisneria": {
+  "source": "ian",
+  "name": "vallisneria-americana-wild-celery.svg",
+  "author": "Tracey Saxby, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/vallisneria-americana-wild-celery/",
+  "tags": [
+   "plant",
+   "aquatic",
+   "monocot"
+  ]
+ },
+ "ian/water-lily": {
+  "source": "ian",
+  "name": "nymphaea-odorata-white-water-lily-flower.svg",
+  "author": "Alexandra Fries, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/nymphaea-odorata-white-water-lily-flower/",
+  "tags": [
+   "plant",
+   "aquatic",
+   "angiosperm"
+  ]
+ },
+ "ian/water-lily-pad": {
+  "source": "ian",
+  "name": "nymphaea-odorata-white-water-lily-pad.svg",
+  "author": "Alexandra Fries, Integration and Application Network, UMCES",
+  "license": "CC BY-SA 4.0",
+  "url": "https://ian.umces.edu/media-library/nymphaea-odorata-white-water-lily-pad/",
+  "tags": [
+   "plant",
+   "aquatic",
+   "leaf"
+  ]
+ },
  "phylopic/african-elephant": {
   "source": "phylopic",
   "name": "Loxodonta africana",
@@ -1481,6 +1702,18 @@
    "fungus"
   ]
  },
+ "phylopic/asteraceae": {
+  "source": "phylopic",
+  "name": "Asteraceae",
+  "author": "Seraina Lisa Cappelli",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7459a511-4d01-4159-8038-98503cd9ef19",
+  "tags": [
+   "plant",
+   "eudicot",
+   "asterid"
+  ]
+ },
  "phylopic/axolotl": {
   "source": "phylopic",
   "name": "Ambystoma mexicanum",
@@ -1555,6 +1788,19 @@
   "tags": [
    "fish",
    "marine"
+  ]
+ },
+ "phylopic/brassica": {
+  "source": "phylopic",
+  "name": "Brassica",
+  "author": "Michelle Stitzer",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/1fcae6d4-4874-4fa2-9966-f9c6040bd6aa",
+  "tags": [
+   "plant",
+   "eudicot",
+   "rosid",
+   "crop"
   ]
  },
  "phylopic/c-elegans": {
@@ -1697,6 +1943,18 @@
    "evolution"
   ]
  },
+ "phylopic/coleochaete": {
+  "source": "phylopic",
+  "name": "Coleochaete",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2a848d05-39b9-444d-95ce-4dbb137e7165",
+  "tags": [
+   "alga",
+   "green-alga",
+   "streptophyte"
+  ]
+ },
  "phylopic/comb-jelly": {
   "source": "phylopic",
   "name": "Ctenophora",
@@ -1705,6 +1963,19 @@
   "url": "https://www.phylopic.org/images/dc13a5ca-32ba-4a02-9624-9221df170dac",
   "tags": [
    "ctenophore"
+  ]
+ },
+ "phylopic/conifer": {
+  "source": "phylopic",
+  "name": "Cupressaceae",
+  "author": "Yan Wong (vectorization) from 1873 illustration",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f86235e3-f437-4630-9e77-73732b9bcf41",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer",
+   "tree"
   ]
  },
  "phylopic/copepod": {
@@ -1868,6 +2139,18 @@
    "annelid"
   ]
  },
+ "phylopic/ephedra": {
+  "source": "phylopic",
+  "name": "Ephedra",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ad564fc7-fe5d-423d-8a96-1f74c1a66ac9",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "gnetophyte"
+  ]
+ },
  "phylopic/euglena": {
   "source": "phylopic",
   "name": "Euglena",
@@ -1927,6 +2210,18 @@
   "url": "https://www.phylopic.org/images/098b93a4-b9aa-4a80-9698-4528466fdb61",
   "tags": [
    "plant"
+  ]
+ },
+ "phylopic/gnetum": {
+  "source": "phylopic",
+  "name": "Gnetum",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f76433e8-d6ad-461d-b143-3daada01f719",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "gnetophyte"
   ]
  },
  "phylopic/great-white-shark": {
@@ -2343,6 +2638,18 @@
    "monocot"
   ]
  },
+ "phylopic/palm": {
+  "source": "phylopic",
+  "name": "Arecaceae",
+  "author": "Caleb M. Gordon",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ec3604c4-768d-4db3-b228-726db07ed1a2",
+  "tags": [
+   "plant",
+   "monocot",
+   "tree"
+  ]
+ },
  "phylopic/paramecium": {
   "source": "phylopic",
   "name": "Paramecium",
@@ -2414,6 +2721,18 @@
    "bird"
   ]
  },
+ "phylopic/pine": {
+  "source": "phylopic",
+  "name": "Pinus",
+  "author": "Juri Felix",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/354889ab-a702-4bd0-b881-8e6faa5925d9",
+  "tags": [
+   "plant",
+   "gymnosperm",
+   "conifer"
+  ]
+ },
  "phylopic/placozoan": {
   "source": "phylopic",
   "name": "Trichoplax adhaerens",
@@ -2467,6 +2786,17 @@
    "phylo"
   ]
  },
+ "phylopic/psilotum": {
+  "source": "phylopic",
+  "name": "Psilotum",
+  "author": "Mason McNair",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/af375ca4-f68c-4234-9bc2-ae7b968d07bf",
+  "tags": [
+   "plant",
+   "fern"
+  ]
+ },
  "phylopic/radiolarian": {
   "source": "phylopic",
   "name": "Radiolaria",
@@ -2517,6 +2847,19 @@
   "url": "https://www.phylopic.org/images/8cff2d66-6549-44d2-8304-d2dfecf53d78",
   "tags": [
    "phylo"
+  ]
+ },
+ "phylopic/rosaceae": {
+  "source": "phylopic",
+  "name": "Rosaceae",
+  "author": "Pablo Castro Sánchez-Bermejo",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/7086d4fe-c37c-4901-b426-752851f4685c",
+  "tags": [
+   "plant",
+   "eudicot",
+   "rosid",
+   "leaf"
   ]
  },
  "phylopic/rust": {
@@ -2602,6 +2945,18 @@
    "plant",
    "eudicot",
    "legume"
+  ]
+ },
+ "phylopic/sphagnum": {
+  "source": "phylopic",
+  "name": "Sphagnum",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/c9433947-a86d-453e-817a-7aba27fb453f",
+  "tags": [
+   "plant",
+   "bryophyte",
+   "moss"
   ]
  },
  "phylopic/spider": {
@@ -2746,6 +3101,17 @@
    "evolution"
   ]
  },
+ "phylopic/ulva": {
+  "source": "phylopic",
+  "name": "Ulva",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/efa5ccbb-23ba-46fd-a653-b35bb8fb6e0d",
+  "tags": [
+   "alga",
+   "green-alga"
+  ]
+ },
  "phylopic/velvet-worm": {
   "source": "phylopic",
   "name": "Onychophora",
@@ -2852,6 +3218,18 @@
   "tags": [
    "fish",
    "model-organism"
+  ]
+ },
+ "phylopic/zygnema": {
+  "source": "phylopic",
+  "name": "Zygnema",
+  "author": "Matt Crook",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/8e6272d7-f5c3-4a98-915a-8d1efd9425db",
+  "tags": [
+   "alga",
+   "green-alga",
+   "streptophyte"
   ]
  },
  "servier/6-well-plate": {
@@ -5279,6 +5657,19 @@
    "template"
   ]
  },
+ "wikimedia/apoplast-symplast": {
+  "source": "wikimedia",
+  "name": "Apoplast_and_symplast_pathways.svg",
+  "author": "Jackacon, vectorised by Smartse",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Apoplast_and_symplast_pathways.svg",
+  "tags": [
+   "plant",
+   "transport",
+   "cell-wall",
+   "template"
+  ]
+ },
  "wikimedia/bird-topography": {
   "source": "wikimedia",
   "name": "Bird parts - en.svg",
@@ -5445,6 +5836,31 @@
    "fish",
    "teleost",
    "internal-anatomy",
+   "template"
+  ]
+ },
+ "wikimedia/flower-abc": {
+  "source": "wikimedia",
+  "name": "ABC_flower_developement.svg",
+  "author": "Pixelsquid",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:ABC_flower_developement.svg",
+  "tags": [
+   "plant",
+   "flower",
+   "development",
+   "template"
+  ]
+ },
+ "wikimedia/flower-parts": {
+  "source": "wikimedia",
+  "name": "Diagram_of_a_Flower.svg",
+  "author": "Audreyyhuang",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Diagram_of_a_Flower.svg",
+  "tags": [
+   "plant",
+   "flower",
    "template"
   ]
  },
@@ -5788,6 +6204,19 @@
    "cephalochordata",
    "lancelet",
    "amphioxus",
+   "template"
+  ]
+ },
+ "wikimedia/leaf-cross-section": {
+  "source": "wikimedia",
+  "name": "Leaf_anatomy_universal.svg",
+  "author": "Agnieszka Kwiecień (Nova)",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leaf_anatomy_universal.svg",
+  "tags": [
+   "plant",
+   "leaf",
+   "anatomy",
    "template"
   ]
  },
@@ -6191,6 +6620,45 @@
    "template"
   ]
  },
+ "wikimedia/seed-dicot-bean": {
+  "source": "wikimedia",
+  "name": "Monocot_dicot_seed-dicot.svg",
+  "author": "Cbenson1919",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Monocot_dicot_seed.svg",
+  "tags": [
+   "plant",
+   "seed",
+   "eudicot",
+   "template"
+  ]
+ },
+ "wikimedia/seed-dicot-section": {
+  "source": "wikimedia",
+  "name": "Dycotyledon_seed_diagram-en.svg",
+  "author": "LadyofHats",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Dycotyledon_seed_diagram-en.svg",
+  "tags": [
+   "plant",
+   "seed",
+   "eudicot",
+   "template"
+  ]
+ },
+ "wikimedia/seed-monocot": {
+  "source": "wikimedia",
+  "name": "Monocot_dicot_seed-monocot.svg",
+  "author": "Cbenson1919",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Monocot_dicot_seed.svg",
+  "tags": [
+   "plant",
+   "seed",
+   "monocot",
+   "template"
+  ]
+ },
  "wikimedia/seed-section": {
   "source": "wikimedia",
   "name": "Angiosperm life cycle diagram-en.svg",
@@ -6331,6 +6799,110 @@
    "mammal",
    "teeth",
    "dentition",
+   "template"
+  ]
+ },
+ "wikimedia/trunk-section-conifer": {
+  "source": "wikimedia",
+  "name": "Conifer_trunk_crossection_vascular_tissues.svg",
+  "author": "Dpaczesniak",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Conifer_trunk_crossection_vascular_tissues.svg",
+  "tags": [
+   "plant",
+   "stem",
+   "wood",
+   "secondary-growth",
+   "gymnosperm",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-amphicribral": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-amphicribral.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-amphivasal": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-amphivasal.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-bicollateral": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-bicollateral.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-collateral-closed": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-collateral-closed.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "monocot",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-collateral-open": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-collateral-open.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "eudicot",
+   "template"
+  ]
+ },
+ "wikimedia/vascular-bundle-radial": {
+  "source": "wikimedia",
+  "name": "Leitbuendel-radial.svg",
+  "author": "RobKohl",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Leitbündel.svg",
+  "tags": [
+   "plant",
+   "vascular-bundle",
+   "root",
+   "template"
+  ]
+ },
+ "wikimedia/wood-wedge": {
+  "source": "wikimedia",
+  "name": "Wood_structure_multilingual.svg",
+  "author": "Thomas Steiner Pastorius; translator Manlleus",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Wood_structure_multilingual.svg",
+  "tags": [
+   "plant",
+   "stem",
+   "wood",
+   "secondary-growth",
    "template"
   ]
  }

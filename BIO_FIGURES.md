@@ -137,7 +137,7 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 | NIH BioArt（NIAID） | 多为公有领域，少数 CC BY（逐条核实） | 病原体、免疫细胞、实验器材 |
 | SciDraw 等 | CC BY、公有领域 | 实验动物、行为装置（`svg:` 来源，许可由添加者从原页面核实） |
 
-以上四个图库（ViralZone、IAN、Reactome、NIH BioArt）经作者同意（2026-11-04）作为补充动植物、微生物与病毒的首选来源，均以 `svg:` 来源加入（`icons.py add svg:<url> --license … --author … --page …`）；加入前确认 SVG 能干净转换（无渐变、嵌入位图或文字）。各类群的查找顺序：动物 PhyloPic → IAN → Wikimedia 模板；植物 IAN → PhyloPic → Wikimedia；真菌、原生生物与藻类 IAN → PhyloPic；细菌与古菌 Bioicons → IAN → NIH BioArt；病毒 ViralZone → NIH BioArt；细胞与分子 Reactome → Servier → NIH BioArt。不用：AI 生成、许可非 CC 的图库（如 huashu-bird-sticker，PolyForm Shield 许可，位图）；照片、历史图版与显微照片等位图来源（BHL、CDC PHIL、iNaturalist 等）目前管线不支持，需要时另行决定。
+以上四个图库（ViralZone、IAN、Reactome、NIH BioArt）经作者同意（2026-11-04）作为补充动植物、微生物与病毒的首选来源，均以 `svg:` 来源加入（`icons.py add svg:<url> --license … --author … --page …`）；加入前确认 SVG 能干净转换（无渐变、嵌入位图或文字）。IAN 符号的 SVG 地址形如 `ian.umces.edu/site/assets/files/<n>/<slug>.svg`；媒体库的站内搜索不可用，用 `ian.umces.edu/media-library/sitemap.xml` 查找。各类群的查找顺序：动物 PhyloPic → IAN → Wikimedia 模板；植物 IAN → PhyloPic → Wikimedia；真菌、原生生物与藻类 IAN → PhyloPic；细菌与古菌 Bioicons → IAN → NIH BioArt；病毒 ViralZone → NIH BioArt；细胞与分子 Reactome → Servier → NIH BioArt。不用：AI 生成、许可非 CC 的图库（如 huashu-bird-sticker，PolyForm Shield 许可，位图）；照片、历史图版与显微照片等位图来源（BHL、CDC PHIL、iNaturalist 等）目前管线不支持，需要时另行决定。
 
 许可：
 - **可以用**：公有领域、CC0、CC BY、CC BY-SA（2.0 及以上）、MIT、BSD。
@@ -171,7 +171,7 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 
 ### 5.2 图库的空缺（用原生元素画）
 
-现有图库中没有合格图标、应在 wikibio 中原生绘制的对象（扩展时优先补这些）：溶酶体、过氧化物酶体与叶绿体以外的细胞器整体图（中心体、全细胞骨架）、星形胶质细胞、浆细胞、精子与卵细胞、卵裂各期胚胎；胎盘、肾上腺、甲状腺、生殖器官、全身骨骼与骨组织；花、种子、花粉与果实的写实图（模板，§5.1）；球菌、螺菌、弧菌与古菌细胞、冠状病毒；行为学装置（迷宫、笼）。Western blot、GWAS、测序读段等用真实的数据图画，不用图标。
+现有图库中没有合格图标、应在 wikibio 中原生绘制的对象（扩展时优先补这些）：溶酶体、过氧化物酶体与叶绿体以外的细胞器整体图（中心体、全细胞骨架）、星形胶质细胞、浆细胞、精子与卵细胞、卵裂各期胚胎；胎盘、肾上腺、甲状腺、生殖器官、全身骨骼与骨组织；双子叶与单子叶茎横切（用 `wikibio.botany` 逐细胞绘制）、气孔表面观（开与闭）、C4 叶片的花环结构；球菌、螺菌、弧菌与古菌细胞、冠状病毒；行为学装置（迷宫、笼）。Western blot、GWAS、测序读段等用真实的数据图画，不用图标。
 
 ## 6. 写作流程
 
