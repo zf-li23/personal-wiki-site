@@ -28,7 +28,7 @@ The properties of histones follow from their job:
 - The genes are multicopy. The replication-dependent histone genes are clustered and repeated (about 70 genes in humans), have no **introns**, and their mRNAs end in a stem–loop instead of a poly(A) tail; they are expressed in S phase, when the amount of chromatin must double (Example 4.6.2).
 - Histones are heterogeneous for two reasons: different gene copies encode slightly different proteins (the variants of Section 4.5), and the proteins are covalently modified after translation (acetylation, methylation, phosphorylation, **ubiquitination**, [7.2.15](/7.2.15)).
 
-Bacteria have no histones. Their chromosome forms a *nucleoid* compacted by **supercoiling** and by abundant nucleoid-associated proteins (HU, IHF, H-NS, Fis) that bend or bridge DNA but bind and dissociate within minutes and form no regular repeating particle. Many archaea, by contrast, have histones homologous to the eukaryotic histone fold; they assemble into continuous "hypernucleosome" superhelices, which suggests that the eukaryotic octamer evolved from such an ancestor.
+Bacteria have no histones. Their chromosome forms a **nucleoid** compacted by **supercoiling** and by abundant nucleoid-associated proteins (HU, IHF, H-NS, Fis) that bend or bridge DNA but bind and dissociate within minutes and form no regular repeating particle. Many archaea, by contrast, have histones homologous to the eukaryotic histone fold; they assemble into continuous "hypernucleosome" superhelices, which suggests that the eukaryotic octamer evolved from such an ancestor.
 
 ### 4.1.2. The Core Particle
 

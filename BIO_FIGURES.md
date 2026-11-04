@@ -131,7 +131,13 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 | bioicons.com 其他作者 | CC0、CC BY、CC BY-SA、MIT、BSD | |
 | PhyloPic | CC0、公有领域、CC BY、CC BY-SA | 各类群的生物剪影（系统发育树、动植物、微生物） |
 | Wikimedia Commons | 公有领域、CC0、CC BY、CC BY-SA | 动植物形态与解剖图解（如 LadyofHats 的公有领域图解），用作带部件的模板（§5.1） |
-| SciDraw、NIH BioArt、Reactome 等 | CC BY、公有领域 | 实验动物、行为装置、生物医学插图（`svg:` 来源，许可由添加者从原页面核实） |
+| ViralZone（SIB） | CC BY 4.0 | 各病毒科的病毒体与复制周期示意（含冠状病毒）；署名 "ViralZone, SIB Swiss Institute of Bioinformatics" |
+| IAN 符号库（UMCES，ian.umces.edu/media-library） | CC BY-SA 4.0 | 生态与多样性的扁平符号：植物、藻类、真菌与地衣、原生生物、细菌与古菌、病毒、生境（用到即整图按 CC BY-SA） |
+| Reactome 图标库 | CC BY 4.0 | 蛋白、受体、通道、细胞器、细胞类型 |
+| NIH BioArt（NIAID） | 多为公有领域，少数 CC BY（逐条核实） | 病原体、免疫细胞、实验器材 |
+| SciDraw 等 | CC BY、公有领域 | 实验动物、行为装置（`svg:` 来源，许可由添加者从原页面核实） |
+
+以上四个图库（ViralZone、IAN、Reactome、NIH BioArt）经作者同意（2026-11-04）作为补充动植物、微生物与病毒的首选来源，均以 `svg:` 来源加入（`icons.py add svg:<url> --license … --author … --page …`）；加入前确认 SVG 能干净转换（无渐变、嵌入位图或文字）。各类群的查找顺序：动物 PhyloPic → IAN → Wikimedia 模板；植物 IAN → PhyloPic → Wikimedia；真菌、原生生物与藻类 IAN → PhyloPic；细菌与古菌 Bioicons → IAN → NIH BioArt；病毒 ViralZone → NIH BioArt；细胞与分子 Reactome → Servier → NIH BioArt。不用：AI 生成、许可非 CC 的图库（如 huashu-bird-sticker，PolyForm Shield 许可，位图）；照片、历史图版与显微照片等位图来源（BHL、CDC PHIL、iNaturalist 等）目前管线不支持，需要时另行决定。
 
 许可：
 - **可以用**：公有领域、CC0、CC BY、CC BY-SA（2.0 及以上）、MIT、BSD。

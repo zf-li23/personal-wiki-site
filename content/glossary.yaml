@@ -7972,7 +7972,7 @@ terms:
   - { zh: 命运图, en: fate map, aliases: [fate maps] }
   - { zh: 细胞谱系, en: cell lineage }
   - { zh: 谱系示踪, en: lineage tracing }
-  - { zh: 感受态, en: competence, scope: ["7.5"] }
+  - { zh: 感受态, en: competence, scope: ["7.5", "7.11"] }
   - { zh: 旁分泌因子, en: paracrine factor, aliases: [paracrine factors] }
   - { zh: 卵裂, en: cleavage, scope: ["7"] }
   - { zh: 囊胚, en: blastula }
@@ -9607,3 +9607,342 @@ terms:
   - { zh: 等位酶, en: allozyme, aliases: [allozymes] }
   - { zh: 泊松校正距离, en: Poisson correction distance }
   - { zh: 趋异演化, en: divergent evolution, aliases: [趋异进化] }
+
+  # biology: microbiology (7.11); homonyms of terms in other disciplines are scoped to 7
+  - { zh: 微生物, en: microorganism, aliases: [microbe, microorganisms, 微生物体] }
+  - { zh: 微生物学, en: microbiology }
+  - { zh: 科赫法则, en: "Koch's postulates", aliases: [科赫原则] }
+  - { zh: 纯培养, en: pure culture }
+  - { zh: 富集培养, en: enrichment culture }
+  - { zh: 无菌技术, en: aseptic technique }
+  - { zh: 菌落, en: colony, scope: ["7"] }
+  - { zh: 革兰氏染色, en: Gram stain, aliases: [革兰染色, Gram staining] }
+  - { zh: 革兰氏阳性菌, en: gram-positive bacteria, aliases: [gram-positive, 革兰氏阳性细菌] }
+  - { zh: 革兰氏阴性菌, en: gram-negative bacteria, aliases: [gram-negative, 革兰氏阴性细菌] }
+  - { zh: 抗酸染色, en: acid-fast stain, aliases: [抗酸性染色] }
+  - { zh: 外膜, en: outer membrane, scope: ["7.11"] }
+  - { zh: 磷壁酸, en: teichoic acid, aliases: [teichoic acids] }
+  - { zh: 周质, en: periplasm, aliases: [周质空间, periplasmic space] }
+  - { zh: 假肽聚糖, en: pseudomurein, aliases: [pseudopeptidoglycan, 假胞壁质] }
+  - { zh: S 层, en: S-layer, aliases: [表层, surface layer] }
+  - { zh: 菌毛, en: fimbria, aliases: [fimbriae, 伞毛] }
+  - { zh: 性菌毛, en: sex pilus, aliases: [conjugative pilus, 接合菌毛] }
+  - { zh: IV 型菌毛, en: type IV pilus, aliases: [type IV pili, T4P] }
+  - { zh: 细菌鞭毛, en: bacterial flagellum, aliases: [flagellum, flagella] }
+  - { zh: 古菌鞭毛, en: archaellum, aliases: [archaella] }
+  - { zh: 滑行运动, en: gliding motility }
+  - { zh: 抽动运动, en: twitching motility }
+  - { zh: 气囊泡, en: gas vesicle, aliases: [gas vesicles, 气泡囊] }
+  - { zh: 聚羟基脂肪酸酯, en: polyhydroxyalkanoate, aliases: [PHA, 聚羟基烷酸酯] }
+  - { zh: 聚羟基丁酸酯, en: polyhydroxybutyrate, aliases: [PHB, 聚-β-羟基丁酸] }
+  - { zh: 异染粒, en: metachromatic granule, aliases: [volutin granule, 聚磷酸盐颗粒, polyphosphate granule] }
+  - { zh: 羧酶体, en: carboxysome, aliases: [carboxysomes] }
+  - { zh: 芽孢, en: endospore, aliases: [endospores, 内生孢子] }
+  - { zh: 吡啶二羧酸, en: dipicolinic acid, aliases: [DPA] }
+  - { zh: 拟核, en: nucleoid }
+  - { zh: 氢化酶体, en: hydrogenosome, aliases: [hydrogenosomes] }
+  - { zh: 纺锤剩体, en: mitosome, aliases: [mitosomes] }
+  - { zh: 化能有机营养生物, en: chemoorganotroph, aliases: [化能异养生物, chemoheterotroph] }
+  - { zh: 化能无机营养生物, en: chemolithotroph, aliases: [化能自养生物, chemolithoautotroph, 化能无机自养生物] }
+  - { zh: 光能异养生物, en: photoheterotroph }
+  - { zh: 混合营养, en: mixotrophy, aliases: [mixotroph, 兼性营养] }
+  - { zh: 基团转位, en: group translocation }
+  - { zh: 磷酸转移酶系统, en: phosphotransferase system, aliases: [PTS] }
+  - { zh: 选择培养基, en: selective medium }
+  - { zh: 鉴别培养基, en: differential medium }
+  - { zh: Entner–Doudoroff 途径, en: Entner–Doudoroff pathway, aliases: [ED 途径, KDPG 途径] }
+  - { zh: 磷酸解酮酶途径, en: phosphoketolase pathway, aliases: [异型乳酸发酵途径] }
+  - { zh: 混合酸发酵, en: mixed-acid fermentation }
+  - { zh: 丁二醇发酵, en: butanediol fermentation, aliases: [2, 3-丁二醇发酵] }
+  - { zh: 无氧呼吸, en: anaerobic respiration, aliases: [厌氧呼吸] }
+  - { zh: 互营, en: syntrophy, aliases: [syntrophic, 种间互营, 共养] }
+  - { zh: 种间氢转移, en: interspecies hydrogen transfer }
+  - { zh: 产甲烷作用, en: methanogenesis }
+  - { zh: 产甲烷古菌, en: methanogen, aliases: [methanogens, 产甲烷菌, 甲烷菌] }
+  - { zh: 甲烷氧化菌, en: methanotroph, aliases: [methanotrophs, 甲烷营养菌] }
+  - { zh: 甲基营养菌, en: methylotroph, aliases: [methylotrophs] }
+  - { zh: 产乙酸菌, en: acetogen, aliases: [acetogens, 产乙酸细菌] }
+  - { zh: 硝化作用, en: nitrification }
+  - { zh: 反硝化作用, en: denitrification, aliases: [脱氮作用] }
+  - { zh: 厌氧氨氧化, en: anammox, aliases: [anaerobic ammonium oxidation] }
+  - { zh: 全程氨氧化, en: comammox, aliases: [complete ammonia oxidation] }
+  - { zh: 异化硫酸盐还原, en: dissimilatory sulfate reduction, aliases: [硫酸盐还原] }
+  - { zh: 硫酸盐还原菌, en: sulfate-reducing bacteria, aliases: [SRB] }
+  - { zh: 异化金属还原, en: dissimilatory metal reduction, aliases: [异化铁还原, dissimilatory iron reduction] }
+  - { zh: 胞外电子传递, en: extracellular electron transfer, aliases: [EET] }
+  - { zh: 不产氧光合作用, en: anoxygenic photosynthesis, aliases: [不放氧光合作用] }
+  - { zh: 产氧光合作用, en: oxygenic photosynthesis, aliases: [放氧光合作用] }
+  - { zh: 细菌叶绿素, en: bacteriochlorophyll, aliases: [bacteriochlorophylls] }
+  - { zh: 绿小体, en: chlorosome, aliases: [chlorosomes, 绿色体] }
+  - { zh: 藻胆体, en: phycobilisome, aliases: [phycobilisomes] }
+  - { zh: 藻胆蛋白, en: phycobiliprotein, aliases: [phycobiliproteins] }
+  - { zh: 变形菌视紫红质, en: proteorhodopsin }
+  - { zh: 还原性三羧酸循环, en: reverse citric acid cycle, aliases: [reductive TCA cycle, rTCA, 逆向三羧酸循环] }
+  - { zh: Wood–Ljungdahl 途径, en: Wood–Ljungdahl pathway, aliases: [还原性乙酰辅酶 A 途径, reductive acetyl-CoA pathway] }
+  - { zh: 3-羟基丙酸循环, en: 3-hydroxypropionate bicycle, aliases: [3-羟基丙酸双循环] }
+  - { zh: 二分裂, en: binary fission }
+  - { zh: 分裂体, en: divisome }
+  - { zh: 生长曲线, en: growth curve, scope: ["7"] }
+  - { zh: 延滞期, en: lag phase, aliases: [迟缓期, 调整期] }
+  - { zh: 指数期, en: exponential phase, aliases: [对数期, log phase] }
+  - { zh: 衰亡期, en: death phase, aliases: [死亡期] }
+  - { zh: 分批培养, en: batch culture }
+  - { zh: 连续培养, en: continuous culture }
+  - { zh: 恒浊器, en: turbidostat }
+  - { zh: 活菌计数, en: viable count, aliases: [plate count, 平板计数] }
+  - { zh: 菌落形成单位, en: colony-forming unit, aliases: [CFU] }
+  - { zh: 最大可能数, en: most probable number, aliases: [MPN, 最可能数] }
+  - { zh: 平板计数异常, en: great plate count anomaly }
+  - { zh: 嗜冷菌, en: psychrophile, aliases: [psychrophiles, 嗜冷微生物] }
+  - { zh: 嗜热菌, en: thermophile, aliases: [thermophiles] }
+  - { zh: 超嗜热菌, en: hyperthermophile, aliases: [hyperthermophiles] }
+  - { zh: 嗜酸菌, en: acidophile, aliases: [acidophiles] }
+  - { zh: 嗜碱菌, en: alkaliphile, aliases: [alkaliphiles] }
+  - { zh: 嗜盐菌, en: halophile, aliases: [halophiles, 嗜盐微生物] }
+  - { zh: 极端微生物, en: extremophile, aliases: [extremophiles, 嗜极微生物] }
+  - { zh: 水活度, en: water activity }
+  - { zh: 相容溶质, en: compatible solute, aliases: [compatible solutes, 相容性溶质] }
+  - { zh: 兼性厌氧菌, en: facultative anaerobe, aliases: [facultative anaerobes, 兼性厌氧生物] }
+  - { zh: 专性厌氧菌, en: obligate anaerobe, aliases: [严格厌氧菌] }
+  - { zh: 微需氧菌, en: microaerophile, aliases: [microaerophiles, 微好氧菌] }
+  - { zh: 耐氧厌氧菌, en: aerotolerant anaerobe }
+  - { zh: 超氧化物歧化酶, en: superoxide dismutase, aliases: [SOD] }
+  - { zh: 过氧化氢酶, en: catalase, aliases: [触酶] }
+  - { zh: 灭菌, en: sterilization }
+  - { zh: 消毒, en: disinfection }
+  - { zh: 防腐, en: antisepsis }
+  - { zh: 巴氏消毒, en: pasteurization, aliases: [巴氏杀菌] }
+  - { zh: 十倍减少时间, en: decimal reduction time, aliases: [D 值, D value] }
+  - { zh: 消毒剂, en: disinfectant, aliases: [disinfectants] }
+  - { zh: 防腐剂, en: antiseptic, aliases: [antiseptics] }
+  - { zh: 群体感应, en: quorum sensing, aliases: [密度感应] }
+  - { zh: 自诱导物, en: autoinducer, aliases: [autoinducers, 自身诱导物] }
+  - { zh: 严紧反应, en: stringent response, aliases: [严谨反应] }
+  - { zh: 四磷酸鸟苷, en: guanosine tetraphosphate, aliases: [ppGpp, (p)ppGpp, 鸟苷四磷酸] }
+  - { zh: 抗 σ 因子, en: anti-sigma factor, aliases: [anti-sigma factors] }
+  - { zh: 刺激子, en: stimulon }
+  - { zh: 二次生长, en: diauxic growth, aliases: [diauxie, 二阶段生长] }
+  - { zh: 环二鸟苷酸, en: cyclic di-GMP, aliases: [c-di-GMP] }
+  - { zh: 生物被膜, en: biofilm, aliases: [biofilms, 生物膜, 生物膜被] }
+  - { zh: 芽孢形成, en: sporulation, aliases: [产孢, 产芽孢] }
+  - { zh: 子实体, en: fruiting body, aliases: [fruiting bodies], scope: ["7.11"] }
+  - { zh: 厚壁孢子, en: akinete, aliases: [akinetes] }
+  - { zh: 整合子, en: integron, aliases: [integrons] }
+  - { zh: 基因盒, en: gene cassette, aliases: [gene cassettes] }
+  - { zh: 致病岛, en: pathogenicity island, aliases: [pathogenicity islands, 毒力岛] }
+  - { zh: 整合性接合元件, en: integrative and conjugative element, aliases: [ICE] }
+  - { zh: 核心基因组, en: core genome }
+  - { zh: 附属基因组, en: accessory genome }
+  - { zh: R 质粒, en: R plasmid, aliases: [resistance plasmid, 抗性质粒] }
+  - { zh: 毒素–抗毒素系统, en: toxin–antitoxin system, aliases: [toxin-antitoxin system, TA 系统] }
+  - { zh: 基因转移因子, en: gene transfer agent, aliases: [GTA] }
+  - { zh: 转座子诱变, en: transposon mutagenesis }
+  - { zh: Ames 试验, en: Ames test, aliases: [艾姆斯试验] }
+  - { zh: 自然转化, en: natural transformation }
+  - { zh: 抗生素, en: antibiotic, aliases: [antibiotics, 抗菌素] }
+  - { zh: 抗菌药物, en: antimicrobial drug, aliases: [antimicrobial, antimicrobials] }
+  - { zh: 选择毒性, en: selective toxicity }
+  - { zh: 抗菌谱, en: spectrum of activity, aliases: [spectrum of antimicrobial activity] }
+  - { zh: 最低抑菌浓度, en: minimum inhibitory concentration, aliases: [MIC, 最小抑菌浓度] }
+  - { zh: 最低杀菌浓度, en: minimum bactericidal concentration, aliases: [MBC, 最小杀菌浓度] }
+  - { zh: 抑菌的, en: bacteriostatic, aliases: [抑菌] }
+  - { zh: 杀菌的, en: bactericidal, aliases: [杀菌] }
+  - { zh: 纸片扩散法, en: disk diffusion test, aliases: [Kirby–Bauer test, K-B 法] }
+  - { zh: β-内酰胺类抗生素, en: β-lactam antibiotic, aliases: [beta-lactam antibiotic, β-内酰胺类] }
+  - { zh: 青霉素结合蛋白, en: penicillin-binding protein, aliases: [PBP, PBPs] }
+  - { zh: β-内酰胺酶, en: β-lactamase, aliases: [beta-lactamase, β-内酰胺酶类] }
+  - { zh: 超广谱 β-内酰胺酶, en: extended-spectrum β-lactamase, aliases: [ESBL] }
+  - { zh: 糖肽类抗生素, en: glycopeptide antibiotic, aliases: [糖肽类] }
+  - { zh: 氨基糖苷类抗生素, en: aminoglycoside, aliases: [aminoglycosides, 氨基糖苷类] }
+  - { zh: 大环内酯类抗生素, en: macrolide, aliases: [macrolides, 大环内酯类] }
+  - { zh: 四环素类抗生素, en: tetracycline, aliases: [tetracyclines, 四环素类] }
+  - { zh: 喹诺酮类抗生素, en: quinolone, aliases: [quinolones, 喹诺酮类, 氟喹诺酮] }
+  - { zh: 磺胺类药物, en: sulfonamide, aliases: [sulfonamides, 磺胺药, sulfa drug] }
+  - { zh: 多重耐药, en: multidrug resistance, aliases: [MDR, 多重耐药性], scope: ["7.11"] }
+  - { zh: 固有耐药, en: intrinsic resistance }
+  - { zh: 外排泵, en: efflux pump, aliases: [efflux pumps] }
+  - { zh: 持留菌, en: persister, aliases: [persisters, persister cell, 持留细胞] }
+  - { zh: 抗生素耐受, en: antibiotic tolerance }
+  - { zh: 耐甲氧西林金黄色葡萄球菌, en: methicillin-resistant Staphylococcus aureus, aliases: [MRSA] }
+  - { zh: 系统分类学, en: systematics, scope: ["7"] }
+  - { zh: 微生物分类学, en: microbial taxonomy, aliases: [taxonomy], scope: ["7.11"] }
+  - { zh: 双名法, en: binomial nomenclature, aliases: [二名法] }
+  - { zh: 菌株, en: strain, scope: ["7.11"] }
+  - { zh: 模式菌株, en: type strain }
+  - { zh: 多相分类学, en: polyphasic taxonomy }
+  - { zh: 多位点序列分型, en: multilocus sequence typing, aliases: [MLST] }
+  - { zh: DNA–DNA 杂交, en: DNA–DNA hybridization, aliases: [DDH, DNA-DNA hybridization] }
+  - { zh: 16S rRNA 基因, en: 16S rRNA gene, aliases: [16S rRNA, 16S] }
+  - { zh: 伯杰氏手册, en: "Bergey's Manual" }
+  - { zh: 候选门辐射, en: candidate phyla radiation, aliases: [CPR] }
+  - { zh: 变形菌门, en: Pseudomonadota, aliases: [Proteobacteria, 假单胞菌门] }
+  - { zh: 厚壁菌门, en: Bacillota, aliases: [Firmicutes] }
+  - { zh: 放线菌门, en: Actinomycetota, aliases: [Actinobacteria, 放线菌门] }
+  - { zh: 拟杆菌门, en: Bacteroidota, aliases: [Bacteroidetes] }
+  - { zh: 蓝细菌, en: cyanobacteria, aliases: [Cyanobacteria, 蓝藻, 蓝绿藻] }
+  - { zh: 螺旋体, en: spirochete, aliases: [spirochetes, Spirochaetota, 螺旋体门] }
+  - { zh: 支原体, en: mycoplasma, aliases: [mycoplasmas, Mollicutes, 柔膜菌] }
+  - { zh: 立克次氏体, en: rickettsia, aliases: [rickettsiae, 立克次体] }
+  - { zh: 衣原体, en: chlamydia, aliases: [chlamydiae, 衣原体门] }
+  - { zh: 黏细菌, en: myxobacteria, aliases: [myxobacterium, 黏液细菌] }
+  - { zh: 放线菌, en: actinomycete, aliases: [actinomycetes] }
+  - { zh: 根瘤菌, en: rhizobia, aliases: [rhizobium, 根瘤细菌] }
+  - { zh: 分枝菌酸, en: mycolic acid, aliases: [mycolic acids] }
+  - { zh: 阿斯加德古菌, en: Asgard archaea, aliases: [Asgardarchaeota, 阿斯加德超门] }
+  - { zh: DPANN 超门, en: DPANN, aliases: [DPANN superphylum] }
+  - { zh: 奇古菌门, en: Nitrososphaerota, aliases: [Thaumarchaeota, 奇古菌] }
+  - { zh: 极端嗜盐古菌, en: extreme halophile, aliases: [haloarchaea, 嗜盐古菌] }
+  - { zh: 原生生物, en: protist, aliases: [protists, 原生生物界] }
+  - { zh: 纤毛虫, en: ciliate, aliases: [ciliates, 纤毛虫类] }
+  - { zh: 甲藻, en: dinoflagellate, aliases: [dinoflagellates, 腰鞭毛虫] }
+  - { zh: 硅藻, en: diatom, aliases: [diatoms] }
+  - { zh: 顶复门, en: Apicomplexa, aliases: [apicomplexan, apicomplexans, 顶复器门] }
+  - { zh: 有孔虫, en: foraminifera, aliases: [foraminiferan, 有孔虫类] }
+  - { zh: 卵菌, en: oomycete, aliases: [oomycetes, 卵菌纲] }
+  - { zh: 黏菌, en: slime mold, aliases: [slime molds, 黏菌类] }
+  - { zh: 真菌, en: fungus, aliases: [fungi, 真菌界] }
+  - { zh: 菌丝, en: hypha, aliases: [hyphae] }
+  - { zh: 菌丝体, en: mycelium, aliases: [mycelia] }
+  - { zh: 酵母菌, en: yeast, aliases: [yeasts] }
+  - { zh: 霉菌, en: mold, aliases: [molds, 丝状真菌] }
+  - { zh: 分生孢子, en: conidium, aliases: [conidia, 分生孢子梗] }
+  - { zh: 孢囊孢子, en: sporangiospore, aliases: [sporangiospores] }
+  - { zh: 接合孢子, en: zygospore, aliases: [zygospores] }
+  - { zh: 担孢子, en: basidiospore, aliases: [basidiospores] }
+  - { zh: 子囊菌门, en: Ascomycota, aliases: [ascomycete, ascomycetes, 子囊菌] }
+  - { zh: 担子菌门, en: Basidiomycota, aliases: [basidiomycete, basidiomycetes, 担子菌] }
+  - { zh: 壶菌, en: chytrid, aliases: [chytrids, Chytridiomycota, 壶菌门] }
+  - { zh: 微孢子虫, en: microsporidia, aliases: [microsporidian, 微孢子门] }
+  - { zh: 准性生殖, en: parasexual cycle, aliases: [准性循环, parasexuality] }
+  - { zh: 真菌二型性, en: dimorphism, aliases: [fungal dimorphism, 二相性] }
+  - { zh: 菌根, en: mycorrhiza, aliases: [mycorrhizae, mycorrhizal] }
+  - { zh: 丛枝菌根, en: arbuscular mycorrhiza, aliases: [AM fungi, 丛枝菌根真菌] }
+  - { zh: 地衣, en: lichen, aliases: [lichens] }
+  - { zh: 衣壳, en: capsid, aliases: [capsids] }
+  - { zh: 二十面体对称, en: icosahedral symmetry }
+  - { zh: Baltimore 分类, en: Baltimore classification, aliases: [巴尔的摩分类] }
+  - { zh: 正链 RNA 病毒, en: positive-strand RNA virus, aliases: [正义 RNA 病毒, plus-strand RNA virus] }
+  - { zh: 负链 RNA 病毒, en: negative-strand RNA virus, aliases: [负义 RNA 病毒, minus-strand RNA virus] }
+  - { zh: RNA 依赖的 RNA 聚合酶, en: RNA-dependent RNA polymerase, aliases: [RdRp, RNA 复制酶] }
+  - { zh: 逆转录病毒, en: retrovirus, aliases: [retroviruses, 反转录病毒] }
+  - { zh: 前病毒, en: provirus, aliases: [proviruses, 原病毒] }
+  - { zh: 整合酶, en: integrase }
+  - { zh: 长末端重复, en: long terminal repeat, aliases: [LTR] }
+  - { zh: 亚基因组 mRNA, en: subgenomic mRNA, aliases: [亚基因组信使 RNA] }
+  - { zh: 多聚蛋白, en: polyprotein, aliases: [polyproteins, 多聚蛋白前体] }
+  - { zh: 准种, en: quasispecies, aliases: [病毒准种] }
+  - { zh: 缺陷干扰颗粒, en: defective interfering particle, aliases: [DI particle, 缺损干扰颗粒] }
+  - { zh: 噬菌斑, en: plaque, aliases: [plaques], scope: ["7.11"] }
+  - { zh: 空斑形成单位, en: plaque-forming unit, aliases: [PFU, 噬菌斑形成单位] }
+  - { zh: 半数组织培养感染剂量, en: TCID50, aliases: [median tissue culture infectious dose, TCID₅₀] }
+  - { zh: 感染复数, en: multiplicity of infection, aliases: [MOI] }
+  - { zh: 一步生长曲线, en: one-step growth curve, aliases: [一步生长实验, one-step growth experiment] }
+  - { zh: 裂解量, en: burst size, aliases: [爆发量] }
+  - { zh: 隐蔽期, en: eclipse period }
+  - { zh: 潜伏期, en: latent period, scope: ["7.11"] }
+  - { zh: 细胞病变效应, en: cytopathic effect, aliases: [CPE, 致细胞病变效应] }
+  - { zh: 烈性噬菌体, en: virulent phage, aliases: [lytic phage, 毒性噬菌体] }
+  - { zh: 溶原转换, en: lysogenic conversion, aliases: [溶源转变, phage conversion] }
+  - { zh: 噬菌体疗法, en: phage therapy, aliases: [噬菌体治疗] }
+  - { zh: 穿孔素, en: holin, aliases: [holins] }
+  - { zh: 内溶素, en: endolysin, aliases: [endolysins, 裂解酶] }
+  - { zh: 抗 CRISPR 蛋白, en: anti-CRISPR protein, aliases: [anti-CRISPR, Acr] }
+  - { zh: 巨病毒, en: giant virus, aliases: [giant viruses, 拟菌病毒, mimivirus] }
+  - { zh: 噬病毒体, en: virophage, aliases: [virophages] }
+  - { zh: 卫星病毒, en: satellite virus, aliases: [satellite viruses, 卫星 RNA] }
+  - { zh: 病毒组, en: virome, aliases: [viromes] }
+  - { zh: 病毒分流, en: viral shunt }
+  - { zh: 宿主范围, en: host range, scope: ["7"] }
+  - { zh: 组织嗜性, en: tissue tropism, aliases: [tropism, 嗜性] }
+  - { zh: 限制因子, en: restriction factor, aliases: [restriction factors, 宿主限制因子] }
+  - { zh: 干扰素, en: interferon, aliases: [interferons, IFN] }
+  - { zh: 干扰素刺激基因, en: interferon-stimulated gene, aliases: [ISG, ISGs] }
+  - { zh: 模式识别受体, en: pattern recognition receptor, aliases: [PRR, PRRs] }
+  - { zh: 病原体相关分子模式, en: pathogen-associated molecular pattern, aliases: [PAMP, PAMPs] }
+  - { zh: 抗体依赖性增强, en: antibody-dependent enhancement, aliases: [ADE] }
+  - { zh: 抗原漂变, en: antigenic drift }
+  - { zh: 抗原转变, en: antigenic shift, aliases: [抗原转换] }
+  - { zh: 疫苗, en: vaccine, aliases: [vaccines] }
+  - { zh: 减毒活疫苗, en: live attenuated vaccine, aliases: [减毒疫苗] }
+  - { zh: 灭活疫苗, en: inactivated vaccine }
+  - { zh: mRNA 疫苗, en: mRNA vaccine, aliases: [mRNA vaccines, 信使 RNA 疫苗] }
+  - { zh: 病毒样颗粒, en: virus-like particle, aliases: [VLP, VLPs] }
+  - { zh: 群体免疫, en: herd immunity, aliases: [群体免疫力] }
+  - { zh: 抗病毒药物, en: antiviral drug, aliases: [antivirals, 抗病毒药] }
+  - { zh: 核苷类似物, en: nucleoside analog, aliases: [nucleoside analogue, 核苷类似物药物] }
+  - { zh: 微生物生态学, en: microbial ecology }
+  - { zh: 微生物席, en: microbial mat, aliases: [microbial mats] }
+  - { zh: 根际, en: rhizosphere }
+  - { zh: 微食物环, en: microbial loop, aliases: [微型食物环] }
+  - { zh: 稳定同位素探针技术, en: stable isotope probing, aliases: [SIP, 稳定同位素探针] }
+  - { zh: 深部生物圈, en: deep biosphere, aliases: [深层生物圈] }
+  - { zh: 生物地球化学循环, en: biogeochemical cycle, aliases: [biogeochemical cycles] }
+  - { zh: 硫循环, en: sulfur cycle }
+  - { zh: 碳循环, en: carbon cycle }
+  - { zh: 生物修复, en: bioremediation, aliases: [生物治理] }
+  - { zh: 生物浸矿, en: bioleaching, aliases: [细菌沥滤, 微生物浸出] }
+  - { zh: 酸性矿山排水, en: acid mine drainage, aliases: [AMD, 酸性矿井水] }
+  - { zh: 活性污泥, en: activated sludge }
+  - { zh: 生化需氧量, en: biochemical oxygen demand, aliases: [BOD, 生化耗氧量] }
+  - { zh: 厌氧消化, en: anaerobic digestion, aliases: [沼气发酵] }
+  - { zh: 富营养化, en: eutrophication }
+  - { zh: 根瘤, en: root nodule, aliases: [root nodules] }
+  - { zh: 结瘤因子, en: Nod factor, aliases: [Nod factors, 结瘤信号因子] }
+  - { zh: 类菌体, en: bacteroid, aliases: [bacteroids] }
+  - { zh: 豆血红蛋白, en: leghemoglobin, aliases: [豆科血红蛋白] }
+  - { zh: Ti 质粒, en: Ti plasmid, aliases: [肿瘤诱导质粒, tumor-inducing plasmid] }
+  - { zh: 冠瘿病, en: crown gall, aliases: [冠瘿瘤] }
+  - { zh: 冠瘿碱, en: opine, aliases: [opines] }
+  - { zh: 虫黄藻, en: zooxanthellae, aliases: [zooxanthella, 共生藻] }
+  - { zh: 珊瑚白化, en: coral bleaching }
+  - { zh: 瘤胃, en: rumen }
+  - { zh: 微生物群, en: microbiota, aliases: [正常菌群, normal microbiota] }
+  - { zh: 菌群失调, en: dysbiosis, aliases: [生态失调] }
+  - { zh: 定植抗力, en: colonization resistance, aliases: [定殖抗力] }
+  - { zh: 无菌动物, en: germ-free animal, aliases: [germ-free, 悉生动物, gnotobiotic animal] }
+  - { zh: 粪菌移植, en: fecal microbiota transplantation, aliases: [FMT, 粪便微生物移植] }
+  - { zh: 益生菌, en: probiotic, aliases: [probiotics] }
+  - { zh: 益生元, en: prebiotic, aliases: [prebiotics] }
+  - { zh: 短链脂肪酸, en: short-chain fatty acid, aliases: [SCFA, SCFAs] }
+  - { zh: 肠–脑轴, en: gut–brain axis, aliases: [gut-brain axis, 肠脑轴] }
+  - { zh: 病原体, en: pathogen, aliases: [pathogens, 病原菌] }
+  - { zh: 致病性, en: pathogenicity }
+  - { zh: 机会致病菌, en: opportunistic pathogen, aliases: [条件致病菌, opportunistic pathogens] }
+  - { zh: 毒力因子, en: virulence factor, aliases: [virulence factors] }
+  - { zh: 半数感染量, en: infectious dose 50, aliases: [ID50, ID₅₀, 半数感染剂量] }
+  - { zh: 黏附素, en: adhesin, aliases: [adhesins, 黏附因子] }
+  - { zh: 外毒素, en: exotoxin, aliases: [exotoxins] }
+  - { zh: 内毒素, en: endotoxin, aliases: [endotoxins] }
+  - { zh: AB 毒素, en: AB toxin, aliases: [AB toxins, A-B 毒素] }
+  - { zh: 成孔毒素, en: pore-forming toxin, aliases: [pore-forming toxins, 穿孔毒素] }
+  - { zh: 超抗原, en: superantigen, aliases: [superantigens] }
+  - { zh: 溶血素, en: hemolysin, aliases: [hemolysins] }
+  - { zh: 抗原变异, en: antigenic variation }
+  - { zh: 相变异, en: phase variation }
+  - { zh: 胞内病原体, en: intracellular pathogen, aliases: [intracellular pathogens, 细胞内病原体] }
+  - { zh: 分泌系统, en: secretion system, aliases: [secretion systems] }
+  - { zh: III 型分泌系统, en: type III secretion system, aliases: [T3SS, 三型分泌系统] }
+  - { zh: IV 型分泌系统, en: type IV secretion system, aliases: [T4SS] }
+  - { zh: VI 型分泌系统, en: type VI secretion system, aliases: [T6SS] }
+  - { zh: Sec 途径, en: Sec pathway, aliases: [Sec system, Sec 系统] }
+  - { zh: Tat 途径, en: twin-arginine translocation pathway, aliases: [Tat pathway, 双精氨酸转运途径] }
+  - { zh: 分选酶, en: sortase, aliases: [sortases] }
+  - { zh: 效应蛋白, en: effector protein, aliases: [effector, effectors], scope: ["7.11"] }
+  - { zh: 人兽共患病, en: zoonosis, aliases: [zoonoses, 动物源性疾病, 人畜共患病] }
+  - { zh: 新发传染病, en: emerging infectious disease, aliases: [emerging infectious diseases, 新发感染病] }
+  - { zh: 医院获得性感染, en: healthcare-associated infection, aliases: [nosocomial infection, 院内感染] }
+  - { zh: 生物安全等级, en: biosafety level, aliases: [BSL, 生物安全水平] }
+  - { zh: 指示菌, en: indicator organism, aliases: [indicator organisms, 指示微生物] }
+  - { zh: 补料分批培养, en: fed-batch culture, aliases: [流加培养] }
+  - { zh: 得率系数, en: yield coefficient, aliases: [产率系数] }
+  - { zh: 氧传递系数, en: volumetric oxygen transfer coefficient, aliases: [kLa, k_La] }
+  - { zh: 次级代谢物, en: secondary metabolite, aliases: [secondary metabolites, 次生代谢物] }
+  - { zh: 代谢工程, en: metabolic engineering }
+  - { zh: 原生质体融合, en: protoplast fusion }
+  - { zh: 生物农药, en: biopesticide, aliases: [biopesticides, 微生物农药] }
+  - { zh: 荚膜, en: capsule, scope: ["7"] }
+  - { zh: 稳定期, en: stationary phase, scope: ["7.11"] }
+  - { zh: 基因组岛, en: genomic island }
+  - { zh: 抗菌药物耐药性, en: antimicrobial resistance, aliases: [AMR, 抗生素耐药性, antibiotic resistance] }
+  - { zh: 病毒包膜, en: viral envelope, aliases: [envelope], scope: ["7.11"] }
+  - { zh: 流产感染, en: abortive infection }

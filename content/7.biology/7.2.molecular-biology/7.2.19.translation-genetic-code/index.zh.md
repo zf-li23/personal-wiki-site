@@ -85,7 +85,7 @@ mRNA 在其基因的每条链上有三种可能的阅读框；**开放阅读框*
 |---|---|
 | 脊椎动物线粒体 | UGA = Trp；AUA = Met；AGA 和 AGG 不被读作 Arg（它们终止两个**开放阅读框**，可能通过 −1 移码到 UAG） |
 | 酵母线粒体 | UGA = Trp；AUA = Met；CUN = Thr |
-| *支原体*（*Mycoplasma*）、*螺原体*（*Spiroplasma*） | UGA = Trp |
+| 支原体（mycoplasma）、*螺原体*（*Spiroplasma*） | UGA = Trp |
 | 纤毛虫（*Tetrahymena*、*Paramecium*） | UAA 和 UAG = Gln（只有 UGA 是终止） |
 | 许多*念珠菌*（*Candida*）种 | CUG = Ser 而不是 Leu |
 
