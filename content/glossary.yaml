@@ -10135,7 +10135,7 @@ terms:
   - { zh: 优先律, en: principle of priority, aliases: [priority] }
   - { zh: 保留名, en: conserved name, aliases: [nomen conservandum] }
   - { zh: 异名, en: synonym, aliases: [synonyms], scope: ["7.10", "7.11", "7.12"] }
-  - { zh: 国际藻类、菌物和植物命名法规, en: International Code of Nomenclature for algae, aliases: [ICN, 国际植物命名法规] }
+  - { zh: 国际藻类、菌物和植物命名法规, en: "International Code of Nomenclature for algae, fungi, and plants", aliases: [ICN, 国际植物命名法规] }
   - { zh: 标本馆, en: herbarium, aliases: [herbaria, 植物标本馆] }
   - { zh: 胞间层, en: middle lamella, aliases: [中层] }
   - { zh: 纹孔, en: pit, aliases: [pits], scope: ["7.12", "7.13"] }
@@ -10646,3 +10646,7 @@ terms:
   - { zh: 寄生植物, en: parasitic plant, aliases: [parasitic plants] }
   - { zh: 菌类异养植物, en: mycoheterotroph, aliases: [mycoheterotrophs, mycoheterotrophic plant, 菌异养植物] }
   - { zh: 附生植物, en: epiphyte, aliases: [epiphytes] }
+  - { zh: 有花植物类假说, en: anthophyte hypothesis, aliases: [anthophytes, 生花植物假说] }
+  - { zh: 中被子植物, en: Mesangiospermae, aliases: [mesangiosperms], scope: ["7.12"] }
+  - { zh: 筛分子质体, en: sieve-element plastid, aliases: [sieve-element plastids, P 型筛分子质体, S 型筛分子质体, P-type plastid, S-type plastid] }
+  - { zh: 马兜铃酸, en: aristolochic acid, aliases: [马兜铃酸肾病, aristolochic acid nephropathy] }
