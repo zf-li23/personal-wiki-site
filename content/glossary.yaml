@@ -10620,3 +10620,29 @@ terms:
   - { zh: 晚材, en: latewood, aliases: [夏材, 秋材, summer wood] }
   - { zh: 树木年代学, en: dendrochronology }
   - { zh: 落皮层, en: rhytidome, aliases: [外树皮, outer bark] }
+  - { zh: 胚柄, en: suspensor, aliases: [suspensors], scope: ["7.12", "7.13"] }
+  - { zh: 原胚, en: proembryo, scope: ["7.12", "7.13"] }
+  - { zh: 核型胚乳, en: nuclear endosperm }
+  - { zh: 细胞型胚乳, en: cellular endosperm }
+  - { zh: 沼生目型胚乳, en: helobial endosperm }
+  - { zh: 果皮, en: pericarp }
+  - { zh: 真果, en: true fruit }
+  - { zh: 单果, en: simple fruit }
+  - { zh: 浆果, en: berry, aliases: [berries], scope: ["7.12", "7.13"] }
+  - { zh: 柑果, en: hesperidium, aliases: [橙果] }
+  - { zh: 瓠果, en: pepo }
+  - { zh: 核果, en: drupe, aliases: [drupes] }
+  - { zh: 梨果, en: pome, aliases: [pomes] }
+  - { zh: 蓇葖果, en: follicle, aliases: [follicles], scope: ["7.12", "7.13"] }
+  - { zh: 角果, en: silique, aliases: [siliques, silicle, 长角果, 短角果] }
+  - { zh: 瘦果, en: achene, aliases: [achenes, cypsela, 连萼瘦果] }
+  - { zh: 翅果, en: samara, aliases: [samaras] }
+  - { zh: 坚果, en: nut, aliases: [nuts], scope: ["7.12", "7.13"] }
+  - { zh: 双悬果, en: cremocarp }
+  - { zh: 胞果, en: utricle, scope: ["7.12"] }
+  - { zh: 盐生植物, en: halophyte, aliases: [halophytes] }
+  - { zh: 阳地植物, en: sun plant, aliases: [heliophyte, 阳生植物] }
+  - { zh: 阴地植物, en: shade plant, aliases: [sciophyte, 阴生植物] }
+  - { zh: 寄生植物, en: parasitic plant, aliases: [parasitic plants] }
+  - { zh: 菌类异养植物, en: mycoheterotroph, aliases: [mycoheterotrophs, mycoheterotrophic plant, 菌异养植物] }
+  - { zh: 附生植物, en: epiphyte, aliases: [epiphytes] }
