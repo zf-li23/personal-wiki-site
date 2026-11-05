@@ -6906,7 +6906,7 @@ terms:
   - { zh: 体外选择, en: in vitro selection, aliases: [SELEX, 指数富集的配体系统进化] }
   - { zh: 适配体, en: aptamer, aliases: [核酸适配体, aptamers] }
   - { zh: 逆转录酶, en: reverse transcriptase, aliases: [反转录酶, reverse transcriptases] }
-  - { zh: 原细胞, en: protocell, aliases: [protocells, 原始细胞] }
+  - { zh: 原细胞, en: protocell, aliases: [protocells] }
   - { zh: 误差阈值, en: error threshold, aliases: ["Eigen's error threshold", Eigen 误差阈值], scope: ["7"] }
   - { zh: 基因组编辑, en: genome editing, aliases: [基因编辑, gene editing] }
   - { zh: 锌指核酸酶, en: zinc finger nuclease, aliases: [ZFN, zinc finger nucleases] }
@@ -9936,7 +9936,7 @@ terms:
   - { zh: 补料分批培养, en: fed-batch culture, aliases: [流加培养] }
   - { zh: 得率系数, en: yield coefficient, aliases: [产率系数] }
   - { zh: 氧传递系数, en: volumetric oxygen transfer coefficient, aliases: [kLa, k_La] }
-  - { zh: 次级代谢物, en: secondary metabolite, aliases: [secondary metabolites, 次生代谢物] }
+  - { zh: 次级代谢物, en: secondary metabolite, aliases: [secondary metabolites, 次生代谢物, 次生代谢产物] }
   - { zh: 代谢工程, en: metabolic engineering }
   - { zh: 原生质体融合, en: protoplast fusion }
   - { zh: 生物农药, en: biopesticide, aliases: [biopesticides, 微生物农药] }
@@ -10106,6 +10106,8 @@ terms:
 
   # biology: botany (7.12); homonyms of terms in other disciplines are scoped to 7
   - { zh: 植物学, en: botany }
+  - { zh: 乔木, en: tree, scope: ["7.12", "7.13", "7.19"] }
+  - { zh: 接合生殖, en: conjugation, scope: ["7.12"] }
   - { zh: 有胚植物, en: embryophyte, aliases: [陆生植物, land plant, land plants, embryophytes, Embryophyta] }
   - { zh: 维管植物, en: vascular plant, aliases: [tracheophyte, tracheophytes, vascular plants] }
   - { zh: 种子植物, en: seed plant, aliases: [spermatophyte, seed plants, 显花植物] }
@@ -10344,3 +10346,130 @@ terms:
   - { zh: 种子, en: seed, aliases: [seeds], scope: ["7.10", "7.12", "7.13", "7.19"] }
   - { zh: 果实, en: fruit, aliases: [fruits], scope: ["7", "6"] }
   - { zh: 蒴果, en: capsule, scope: ["7.12", "7.13"] }
+  - { zh: 灌木, en: shrub, aliases: [shrubs] }
+  - { zh: 半灌木, en: subshrub, aliases: [亚灌木, subshrubs] }
+  - { zh: 木本植物, en: woody plant, aliases: [woody plants] }
+  - { zh: 草本植物, en: herb, aliases: [herbaceous plant, herbs], scope: ["7.12", "7.13", "7.19"] }
+  - { zh: 藤本植物, en: vine, aliases: [climber, liana, vines] }
+  - { zh: 一年生植物, en: annual plant, aliases: [annuals] }
+  - { zh: 二年生植物, en: biennial plant, aliases: [biennials] }
+  - { zh: 多年生植物, en: perennial plant, aliases: [perennials] }
+  - { zh: 低等植物, en: lower plants }
+  - { zh: 高等植物, en: higher plants }
+  - { zh: 颈卵器植物, en: archegoniates, aliases: [Archegoniatae] }
+  - { zh: 有效发表, en: effective publication }
+  - { zh: 合格发表, en: valid publication, aliases: [validly published] }
+  - { zh: 副模式标本, en: paratype }
+  - { zh: 附加模式标本, en: epitype }
+  - { zh: 正确名称, en: correct name }
+  - { zh: 合法名称, en: legitimate name }
+  - { zh: 晚出同名, en: later homonym }
+  - { zh: 多余名, en: superfluous name }
+  - { zh: 新组合, en: new combination, aliases: [comb. nov.] }
+  - { zh: 基原异名, en: basionym, aliases: [基源异名] }
+  - { zh: 命名人, en: author citation, scope: ["7.12"] }
+  - { zh: 定距检索表, en: indented key, aliases: [等距检索表, yoked key] }
+  - { zh: 平行检索表, en: bracketed key }
+  - { zh: 组织, en: tissue, aliases: [tissues], scope: ["7"] }
+  - { zh: 简单组织, en: simple tissue }
+  - { zh: 复合组织, en: complex tissue, aliases: [compound tissue] }
+  - { zh: 原始细胞, en: initial, aliases: [initials, 原始细胞（分生组织）], scope: ["7.12", "7.13"] }
+  - { zh: 原分生组织, en: promeristem }
+  - { zh: 初生分生组织, en: primary meristem }
+  - { zh: 次生分生组织, en: secondary meristem }
+  - { zh: 组织中心, en: organizing center, aliases: [organizing centre], scope: ["7.12", "7.13"] }
+  - { zh: 木栓层, en: phellem, aliases: [cork, 木栓], scope: ["7.12", "7.13"] }
+  - { zh: 栓内层, en: phelloderm }
+  - { zh: 补充组织, en: complementary tissue, aliases: [filling tissue] }
+  - { zh: 腺毛, en: glandular trichome, aliases: [glandular hair, glandular hairs] }
+  - { zh: 原生木质部, en: protoxylem }
+  - { zh: 后生木质部, en: metaxylem }
+  - { zh: 侵填体, en: tylosis, aliases: [tyloses] }
+  - { zh: 筛域, en: sieve area, aliases: [sieve areas] }
+  - { zh: 筛板, en: sieve plate, aliases: [sieve plates] }
+  - { zh: 穿孔板, en: perforation plate, aliases: [perforation plates] }
+  - { zh: 蛋白细胞, en: albuminous cell, aliases: [Strasburger cell, Strasburger cells] }
+  - { zh: 维管组织, en: vascular tissue }
+  - { zh: 分泌结构, en: secretory structure, aliases: [secretory structures] }
+  - { zh: 异细胞, en: idioblast, aliases: [idioblasts] }
+  - { zh: 吐水, en: guttation }
+  - { zh: 糊粉层, en: aleurone layer }
+  - { zh: 细胞液, en: cell sap }
+  - { zh: 胞质环流, en: cytoplasmic streaming, aliases: [cyclosis] }
+  - { zh: 油体, en: oil body, aliases: [oil bodies, 圆球体, spherosome, oleosome] }
+  - { zh: 油质蛋白, en: oleosin, aliases: [oleosins] }
+  - { zh: 平周分裂, en: periclinal division, aliases: [切向分裂] }
+  - { zh: 垂周分裂, en: anticlinal division }
+  - { zh: 初生纹孔场, en: primary pit field }
+  - { zh: 原植体, en: thallus, aliases: [thalli] }
+  - { zh: 茸鞭型鞭毛, en: tinsel flagellum, aliases: [茸鞭型, 茸鞭] }
+  - { zh: 尾鞭型鞭毛, en: whiplash flagellum, aliases: [尾鞭型, 尾鞭] }
+  - { zh: 中核, en: mesokaryon, aliases: [间核, dinokaryon, 甲藻核] }
+  - { zh: 载色体, en: chromatophore, scope: ["7.12"] }
+  - { zh: 灰色藻, en: glaucophytes, aliases: [Glaucophyta, 灰色藻门, glaucophyte] }
+  - { zh: 纹孔连接, en: pit connection, aliases: [pit connections, 纹孔联结, pit plug] }
+  - { zh: 囊果, en: cystocarp, aliases: [cystocarps] }
+  - { zh: 四分孢子体, en: tetrasporophyte, aliases: [tetrasporophytes] }
+  - { zh: 三相生活史, en: triphasic life cycle }
+  - { zh: 固着器, en: holdfast, aliases: [holdfasts] }
+  - { zh: 单室孢子囊, en: unilocular sporangium, aliases: [unilocular sporangia] }
+  - { zh: 多室孢子囊, en: plurilocular sporangium, aliases: [plurilocular sporangia] }
+  - { zh: 隐藻, en: cryptophytes, aliases: [Cryptophyta, 隐藻门, cryptomonads, cryptophyte] }
+  - { zh: 定鞭藻, en: haptophytes, aliases: [Haptophyta, 定鞭藻门, haptophyte] }
+  - { zh: 裸藻, en: euglenids, aliases: [Euglenophyta, 裸藻门, euglenid, euglenoids, 眼虫] }
+  - { zh: 表膜, en: pellicle, scope: ["7.11", "7.12"] }
+  - { zh: 菌物, en: fungi sensu lato, aliases: [fungal organisms], scope: ["7.11", "7.12"] }
+  - { zh: 原质团, en: plasmodium, aliases: [plasmodia, 变形体], scope: ["7.11", "7.12"] }
+  - { zh: 双游现象, en: diplanetism }
+  - { zh: 根状菌索, en: rhizomorph, aliases: [rhizomorphs, 菌索] }
+  - { zh: 吸器, en: haustorium, aliases: [haustoria], scope: ["7.11", "7.12", "7.13"] }
+  - { zh: 附着胞, en: appressorium, aliases: [appressoria] }
+  - { zh: 子实层, en: hymenium, aliases: [hymenial layer] }
+  - { zh: 闭囊壳, en: cleistothecium, aliases: [cleistothecia] }
+  - { zh: 子囊壳, en: perithecium, aliases: [perithecia] }
+  - { zh: 子囊盘, en: apothecium, aliases: [apothecia, 裸子器] }
+  - { zh: 性孢子, en: spermatium, aliases: [spermatia, pycniospore], scope: ["7.12"] }
+  - { zh: 锈孢子, en: aeciospore, aliases: [aeciospores, 春孢子] }
+  - { zh: 夏孢子, en: urediniospore, aliases: [urediniospores, urediospore] }
+  - { zh: 有性型, en: teleomorph }
+  - { zh: 无性型, en: anamorph }
+  - { zh: 共生菌, en: mycobiont, aliases: [mycobionts] }
+  - { zh: 壳状地衣, en: crustose lichen }
+  - { zh: 叶状地衣, en: foliose lichen }
+  - { zh: 枝状地衣, en: fruticose lichen }
+  - { zh: 异层地衣, en: heteromerous lichen }
+  - { zh: 同层地衣, en: homoiomerous lichen }
+  - { zh: 内生菌, en: endophyte, aliases: [endophytes] }
+  - { zh: 后鞭毛生物, en: opisthokont, aliases: [opisthokonts, Opisthokonta] }
+  - { zh: 藻膜体, en: phycoplast, aliases: [藻质体] }
+  - { zh: 定形群体, en: coenobium, aliases: [coenobia] }
+  - { zh: 链形藻类, en: streptophyte algae, aliases: [charophytes, 轮藻类] }
+  - { zh: 藏卵器, en: oogonium, aliases: [卵囊球, nucule], scope: ["7.12"] }
+  - { zh: 藏精器, en: globule, aliases: [精囊球], scope: ["7.12"] }
+  - { zh: 插入说, en: antithetic theory, aliases: [interpolation theory, 对偶说] }
+  - { zh: 同源说, en: homologous theory, aliases: [转化说] }
+  - { zh: 叶状体, en: thalloid gametophyte, scope: ["7.12"] }
+  - { zh: 茎叶体, en: leafy gametophyte }
+  - { zh: 蒴柄, en: seta }
+  - { zh: 基足, en: foot, scope: ["7.12"] }
+  - { zh: 蒴盖, en: operculum, scope: ["7.12"] }
+  - { zh: 蒴轴, en: columella, scope: ["7.12"] }
+  - { zh: 外始式, en: exarch }
+  - { zh: 内始式, en: endarch }
+  - { zh: 中始式, en: mesarch }
+  - { zh: 网状中柱, en: dictyostele }
+  - { zh: 散生中柱, en: atactostele }
+  - { zh: 叶隙, en: leaf gap, aliases: [leaf gaps] }
+  - { zh: 突出学说, en: enation theory }
+  - { zh: 叶舌, en: ligule, aliases: [ligules] }
+  - { zh: 根托, en: rhizophore, aliases: [rhizophores] }
+  - { zh: 同型孢子, en: homospory, aliases: [homosporous, 孢子同型] }
+  - { zh: 真叶植物, en: euphyllophyte, aliases: [euphyllophytes, Euphyllophyta] }
+  - { zh: 厚囊蕨类, en: eusporangiate fern, aliases: [eusporangiate ferns] }
+  - { zh: 环带, en: annulus, scope: ["7.12"] }
+  - { zh: 孢子果, en: sporocarp, aliases: [sporocarps, 孢子荚] }
+  - { zh: 拳卷幼叶, en: fiddlehead, aliases: [fiddleheads, circinate vernation] }
+  - { zh: 无配子生殖, en: apogamy }
+  - { zh: 无孢子生殖, en: apospory }
+  - { zh: 个体发育, en: ontogeny }
+  - { zh: 重演, en: recapitulation }

@@ -166,7 +166,7 @@ $$
 
 **定义 21.5.3（子囊菌门）** **子囊菌门**是在子囊内形成减数分裂孢子即子囊孢子的真菌门。它是最大的真菌门，包含酵母和丝状种类，其菌丝有简单的隔膜孔和 Woronin 体，多数成员还通过分生孢子进行无性繁殖。
 
-子囊菌门有三个亚门。盘菌亚门 Taphrinomycotina 包括裂殖酵母 *Schizosaccharomyces*、植物病原体 *Taphrina*（桃缩叶病）和 *Pneumocystis*（哺乳动物肺的寄生物，膜中没有麦角固醇）。酵母亚门 Saccharomycotina 是出芽酵母，即 *Saccharomyces*、*Candida*、*Komagataella*。盘菌亚门 Pezizomycotina 是丝状子囊菌，几乎都在子实体（子囊果）中形成子囊，子囊果有三种主要类型：封闭的球形闭囊壳，壁破裂时孢子逸出（*Aspergillus*、*Penicillium*、白粉菌）；有开口的烧瓶形子囊壳（*Neurospora*、*Magnaporthe*、*Claviceps*）；以及在表面排列子囊的开放杯状子囊盘（杯菌、多数地衣）。羊肚菌（*Morchella*）和松露（*Tuber*）是最大的子囊果，是变态的子囊盘；松露在地下结实，以气味吸引动物把它们挖出并散播孢子。Pezizomycotina 包括子囊菌中的主要植物病原体、食物霉菌、大多数真菌抗生素和真菌毒素的产生者（第 21.7 节），以及大多数地衣的真菌。
+子囊菌门有三个亚门。外囊菌亚门 Taphrinomycotina 包括裂殖酵母 *Schizosaccharomyces*、植物病原体 *Taphrina*（桃缩叶病）和 *Pneumocystis*（哺乳动物肺的寄生物，膜中没有麦角固醇）。酵母亚门 Saccharomycotina 是出芽酵母，即 *Saccharomyces*、*Candida*、*Komagataella*。盘菌亚门 Pezizomycotina 是丝状子囊菌，几乎都在子实体（子囊果）中形成子囊，子囊果有三种主要类型：封闭的球形闭囊壳，壁破裂时孢子逸出（*Aspergillus*、*Penicillium*、白粉菌）；有开口的烧瓶形子囊壳（*Neurospora*、*Magnaporthe*、*Claviceps*）；以及在表面排列子囊的开放杯状子囊盘（杯菌、多数地衣）。羊肚菌（*Morchella*）和松露（*Tuber*）是最大的子囊果，是变态的子囊盘；松露在地下结实，以气味吸引动物把它们挖出并散播孢子。Pezizomycotina 包括子囊菌中的主要植物病原体、食物霉菌、大多数真菌抗生素和真菌毒素的产生者（第 21.7 节），以及大多数地衣的真菌。
 
 ### 21.5.3. 担子菌门
 
