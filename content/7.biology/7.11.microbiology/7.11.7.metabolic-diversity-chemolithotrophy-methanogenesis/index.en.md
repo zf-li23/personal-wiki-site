@@ -210,7 +210,7 @@ Metal reducers are used to remove soluble uranium(VI) from groundwater by reduci
 
 - Organic acceptors: fumarate (reduced to succinate by fumarate reductase), trimethylamine $N$-oxide (TMAO, from marine fish; its reduction to trimethylamine gives spoiled fish its smell) and dimethyl sulfoxide (DMSO). *E. coli* uses all three when $\ce{O2}$ and nitrate are absent.
 - Halogenated organic compounds: see Definition 7.3.8 below.
-- Metalloids and oxyanions: arsenate is reduced to arsenite (which mobilizes arsenic in groundwater; *Desulfotomaculum auripigmentum* precipitates it as the yellow mineral orpiment, $\ce{As2S3}$), selenate to selenite and elemental selenium, and chlorate and perchlorate to chloride. Perchlorate reducers produce chlorite, which chlorite dismutase splits into chloride and $\ce{O2}$; the $\ce{O2}$ is then respired, a rare biological route to oxygen without light.
+- Metalloids and oxyanions: arsenate is reduced to arsenite (which mobilizes arsenic in groundwater; *Desulfosporosinus auripigmenti* (formerly *Desulfotomaculum auripigmentum*) precipitates it as the yellow mineral orpiment, $\ce{As2S3}$), selenate to selenite and elemental selenium, and chlorate and perchlorate to chloride. Perchlorate reducers produce chlorite, which chlorite dismutase splits into chloride and $\ce{O2}$; the $\ce{O2}$ is then respired, a rare biological route to oxygen without light.
 - Protons: the hyperthermophilic archaeon *Pyrococcus furiosus* oxidizes sugars via a modified glycolysis that reduces ferredoxin instead of NAD and transfers the electrons to protons with a membrane-bound, proton-pumping hydrogenase, a respiration with $\ce{H+}$ as the acceptor.
 
 **Definition 7.3.8 (Organohalide Respiration)** **Organohalide respiration** (dehalorespiration) is the anaerobic respiration with halogenated organic compounds as electron acceptors, which are reductively dehalogenated by cobalamin-containing reductive dehalogenases.
@@ -244,7 +244,7 @@ Methanogens use three kinds of substrate (standard values per reaction):
 | Type | Reaction | $\Delta_{\mathrm{r}}G'^{\circ}$ | Examples |
 |---|---|---|---|
 | Hydrogenotrophic | $\ce{4 H2 + CO2 -> CH4 + 2 H2O}$ (also formate) | −131 kJ | *Methanobacterium*, *Methanococcus*, *Methanobrevibacter* |
-| Methylotrophic | $\ce{4 CH3OH -> 3 CH4 + CO2 + 2 H2O}$ (also methylamines, methanethiol) | −321 kJ | *Methanosarcina*, *Methanosphaera* (with $\ce{H2}$) |
+| Methylotrophic | $\ce{4 CH3OH -> 3 CH4 + CO2 + 2 H2O}$ (also methylamines, methanethiol) | −319 kJ | *Methanosarcina*, *Methanosphaera* (with $\ce{H2}$) |
 | Acetoclastic | $\ce{CH3COO- + H+ -> CH4 + CO2}$ | about −36 kJ | *Methanosarcina*, *Methanothrix* (formerly *Methanosaeta*) |
 
 The chemistry uses coenzymes found nowhere else: methanofuran and tetrahydromethanopterin carry the C1 unit as it is reduced; the deazaflavin coenzyme $\mathrm{F_{420}}$, which fluoresces blue-green under ultraviolet light and is used to recognize methanogens under the microscope, is the hydride donor; coenzyme M (2-mercaptoethanesulfonate) carries the methyl group in the last step; and coenzyme B donates the final electrons. Methyl-coenzyme M reductase, containing the nickel tetrapyrrole $\mathrm{F_{430}}$, forms methane and the heterodisulfide CoM-S-S-CoB.
@@ -259,7 +259,7 @@ Methanogenesis is the terminal step of anaerobic decomposition wherever sulfate 
 
 **Definition 7.4.4 (Methylotroph and Methanotroph)** A **methylotroph** is an organism that uses reduced one-carbon compounds (methanol, methylamines, formaldehyde, methane) or other compounds without carbon–carbon bonds as its sole source of carbon and energy. A **methanotroph** is a methylotroph that can use methane.
 
-Aerobic methanotrophs oxidize methane through methanol, formaldehyde and formate to $\ce{CO2}$. The first step is catalyzed by methane monooxygenase (MMO), in two unrelated forms: the copper particulate MMO (pMMO) in the membrane, present in nearly all methanotrophs, and the soluble di-iron MMO (sMMO), made by some species when copper is scarce, which has a very broad substrate range and co-oxidizes trichloroethylene and other pollutants. Methanol dehydrogenase uses calcium in the classical MxaF enzyme, but many methylotrophs have a lanthanide-dependent enzyme (XoxF); the volcanic-mud methanotroph *Methylacidiphilum fumariolicum* cannot grow without rare-earth elements, the first known biological use of lanthanides.
+Aerobic methanotrophs oxidize methane through methanol, formaldehyde and formate to $\ce{CO2}$. The first step is catalyzed by methane monooxygenase (MMO), in two unrelated forms: the copper particulate MMO (pMMO) in the membrane, present in nearly all methanotrophs, and the soluble di-iron MMO (sMMO), made by some species when copper is scarce, which has a very broad substrate range and co-oxidizes trichloroethylene and other pollutants. Methanol dehydrogenase uses calcium in the classical MxaF enzyme, but many methylotrophs have a lanthanide-dependent enzyme (XoxF); the volcanic-mud methanotroph *Methylacidiphilum fumariolicum* cannot grow without rare-earth elements, the first organism found to depend strictly on lanthanides.
 
 Formaldehyde, at the oxidation level of cell material, is the branch point between energy and biosynthesis, and the assimilation pathway divides the methanotrophs:
 

@@ -104,8 +104,8 @@ shell(11.3, 7.0, 1, label="φX174\n(ssDNA phage)")
 shell(15.1, 7.0, 3, label="poliovirus\n(pseudo-$T$ = 3)")
 shell(18.9, 7.0, 4, label="hepatitis B\ncapsid")
 bio.label(ax, (11.3, 2.0), "pentamers at the twelve\nfivefold vertices (blue)", size="tiny", color=MUT)
-bio.label(ax, (17.0, 2.0), "hexamers between them; larger shells (herpesvirus $T$ = 7, adenovirus $T$ = 25,\n"
-                           "$Mimivirus$ $T$ = 1141) need a scaffold, a portal vertex and a maturation step",
+bio.label(ax, (17.0, 2.0), "hexamers between them; larger shells (herpesvirus $T$ = 16, adenovirus $T$ = 25,\n"
+                           "$Mimivirus$ $T$ near 1000) need a scaffold, a portal vertex and a maturation step",
           size="tiny", color=MUT)
 
 # ---------------------------------------------------------------- C: complex, phage T4

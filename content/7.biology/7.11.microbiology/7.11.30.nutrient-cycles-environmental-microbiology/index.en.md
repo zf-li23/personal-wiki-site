@@ -130,7 +130,7 @@ Many bacteria resist mercury with the genes of the *mer* operon, usually located
 
 ## 30.8. Microorganisms and Global Change
 
-Human activity has changed the major cycles faster than at any time in recorded history: the $\ce{CO2}$ concentration of the atmosphere has risen from about $280\,\mathrm{ppm}$ before industrialization to over $420\,\mathrm{ppm}$, methane has more than doubled and $\ce{N2O}$ has risen by about a quarter; together they have warmed the Earth's surface by about $1.2\,^\circ\mathrm{C}$. Microorganisms are both sources and sinks of the three gases, and their activity responds to temperature, moisture and nutrients:
+Human activity has changed the major cycles faster than at any time in recorded history: the $\ce{CO2}$ concentration of the atmosphere has risen from about $280\,\mathrm{ppm}$ before industrialization to over $420\,\mathrm{ppm}$, methane has more than doubled and $\ce{N2O}$ has risen by about a quarter; together they have warmed the Earth's surface by about $1.3\,^\circ\mathrm{C}$. Microorganisms are both sources and sinks of the three gases, and their activity responds to temperature, moisture and nutrients:
 
 - Warming accelerates the decomposition of soil organic matter and of thawing permafrost, releasing $\ce{CO2}$ and methane (30.2.1); in wetlands, methanogenesis is more sensitive to temperature than methane oxidation, so warmer wetlands are expected to emit more methane.
 - Fertilization and the intensification of agriculture increase emissions of $\ce{N2O}$ from soils (30.3.2) and of methane from rice and livestock.

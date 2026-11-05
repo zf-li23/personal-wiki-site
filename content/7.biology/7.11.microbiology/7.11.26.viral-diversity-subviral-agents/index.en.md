@@ -53,7 +53,7 @@ These discoveries revived two old ideas. The first, that giant viruses are reduc
 
 **Definition 26.3.2 (Virophage)** A **virophage** is a small double-stranded DNA virus that reproduces only in a cell coinfected by a giant virus, using the giant virus's transcription machinery and its cytoplasmic viral factory, and reduces the yield of that helper. Sputnik, the first example, has an 18 kb genome encoding 21 proteins in a 75 nm icosahedral capsid and replicates only in mimivirus-infected *Acanthamoeba*.
 
-Whether these are satellites (§26.9) or a distinct category is partly a question of definition: like a satellite virus, a virophage depends on a helper, is not derived from it and depresses its replication; unlike one, it has a substantial genome of its own and encodes its own DNA polymerase. The ecologically interesting consequence is that a virophage behaves as a defence of the cellular host. A population of amoebae in which the virophage mavirus is present survives a giant-virus epidemic that would otherwise destroy it, because the virophage lowers the burst size of the helper — one of the few known cases of a virus acting as an inducible immune system for a eukaryote.
+Whether these are satellites (§26.9) or a distinct category is partly a question of definition: like a satellite virus, a virophage depends on a helper, is not derived from it and depresses its replication; unlike one, it has a substantial genome of its own and encodes its own capsid and replication proteins (a primase-helicase in Sputnik, a protein-primed DNA polymerase in mavirus). The ecologically interesting consequence is that a virophage behaves as a defence of the cellular host. A population of the marine flagellate *Cafeteria roenbergensis* carrying the integrated virophage mavirus survives a giant-virus epidemic that would otherwise destroy it, because the virophage lowers the burst size of the helper — one of the few known cases of a virus acting as an inducible immune system for a eukaryote.
 
 ## 26.4. Classification and Nomenclature
 
@@ -96,7 +96,7 @@ Numbers first. Seawater contains about $10^6$ prokaryotic cells and $10^7$ virus
 
 ![The viral shunt in the marine microbial loop. Primary production by phytoplankton and cyanobacteria is grazed by protists and passed up the food web (grey arrows), or lysed by viruses (red). Lysis returns the cell contents to the dissolved organic matter pool, from which heterotrophic bacteria take them up and respire them, short-circuiting the transfer to higher trophic levels and retaining nutrients in the surface layer. Typical standing stocks are given per millilitre of surface seawater; 5–50 % of the bacterial standing stock is lysed each day. The export of particulate carbon to depth is reduced correspondingly](./plots/viral-shunt.py)
 
-The global flux is large: lysis is estimated to release of the order of $10^9$ tonnes of carbon per day from marine microorganisms, and the biogeochemical consequences are taken up with the element cycles in [7.11.29](/7.11.29) and [7.11.30](/7.11.30).
+The global flux is large: lysis is estimated to release $10^8$ to $10^9$ tonnes of carbon per day from marine microorganisms, and the biogeochemical consequences are taken up with the element cycles in [7.11.29](/7.11.29) and [7.11.30](/7.11.30).
 
 Viral predation also structures communities, and two complementary models describe how.
 
@@ -167,7 +167,7 @@ A **prion** ([7.1.6](/7.1.6#def-6.5.2)) is the opposite extreme: an infectious a
 | Bovine spongiform encephalopathy (BSE) | cattle | meat-and-bone meal in feed |
 | Chronic wasting disease | deer, elk, moose | the only TSE in free-ranging animals; saliva and faeces |
 | Kuru | humans | ritual consumption of brain tissue |
-| Creutzfeldt–Jakob disease (CJD) | humans | sporadic (1–5 per million per year), familial, or iatrogenic |
+| Creutzfeldt–Jakob disease (CJD) | humans | sporadic (1–2 per million per year), familial, or iatrogenic |
 | Variant CJD | humans | consumption of BSE-infected beef |
 | Fatal familial insomnia, Gerstmann–Sträussler–Scheinker | humans | inherited, dominant mutations of *PRNP* |
 

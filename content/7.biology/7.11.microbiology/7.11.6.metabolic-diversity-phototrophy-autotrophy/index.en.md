@@ -24,7 +24,7 @@ $$
 $$
 with $\ce{H2A} = \ce{H2O}$ (so that $2\,\ce{A} = \ce{O2}$) in oxygenic and, for example, $\ce{H2A} = \ce{H2S}$ ($\ce{A} = \ce{S}$) in anoxygenic photosynthesis.
 
-Chlorophyll-based phototrophy is known from seven bacterial phyla and from no archaea. Throughout this course phyla are named with the current names ending in *-ota*; the older names are given at first mention.
+Chlorophyll-based phototrophy is known from seven bacterial phyla with cultured representatives (and from an eighth, Eremiobacterota, known so far only from metagenomes) and from no archaea. Throughout this course phyla are named with the current names ending in *-ota*; the older names are given at first mention.
 
 | Group | Phylum | Reaction center | Main pigments | Typical electron donors | CO₂ fixation |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ The two types differ in what they can do. A type II center yields a quinol, whos
 
 ### 6.2.2. Purple Bacteria: Cyclic Electron Flow
 
-The reaction center of the purple bacteria *Rhodobacter sphaeroides* and *Blastochloris viridis* (formerly *Rhodopseudomonas viridis*) was the first membrane protein whose structure was determined at atomic resolution (Deisenhofer, Huber and Michel, Nobel Prize 1988). It consists of the L and M subunits, which bind the cofactors, the H subunit on the cytoplasmic side and, in some species, a bound tetraheme cytochrome on the periplasmic side. The cofactors are a special pair of bacteriochlorophyll *a* (P870, named after its absorption maximum), two accessory bacteriochlorophylls, two bacteriopheophytins (bacteriochlorophyll without $\ce{Mg^2+}$), the quinones $\mathrm{Q_A}$ and $\mathrm{Q_B}$, a non-heme iron and a carotenoid; only one of the two branches carries electrons.
+The reaction center of the purple bacterium *Blastochloris viridis* (formerly *Rhodopseudomonas viridis*) was the first membrane protein whose structure was determined at atomic resolution (Deisenhofer, Huber and Michel, 1985; Nobel Prize 1988); that of *Rhodobacter sphaeroides* followed soon after. It consists of the L and M subunits, which bind the cofactors, the H subunit on the cytoplasmic side and, in some species, a bound tetraheme cytochrome on the periplasmic side. The cofactors are a special pair of bacteriochlorophyll *a* (P870, named after its absorption maximum), two accessory bacteriochlorophylls, two bacteriopheophytins (bacteriochlorophyll without $\ce{Mg^2+}$), the quinones $\mathrm{Q_A}$ and $\mathrm{Q_B}$, a non-heme iron and a carotenoid; only one of the two branches carries electrons.
 
 The sequence of events, with the time scales that make it efficient, is analysed in [7.6.18](/7.6.18#sec-18.4.1): excited P870 ($E'^{\circ}$ about $-1.0\,\mathrm{V}$ against about $+0.45\,\mathrm{V}$ in the ground state) reduces bacteriopheophytin within about 3 ps, which reduces $\mathrm{Q_A}$ within about 200 ps; $\mathrm{Q_A}$ reduces $\mathrm{Q_B}$ in microseconds. After two photons, $\mathrm{Q_BH_2}$ leaves the reaction center and joins the quinone pool. The quinol is oxidized by the cytochrome $bc_1$ complex, the same complex as in respiration, which by the **Q cycle** releases protons into the periplasm; cytochrome $c_2$, a small periplasmic carrier, returns the electron to $\ce{P870+}$.
 

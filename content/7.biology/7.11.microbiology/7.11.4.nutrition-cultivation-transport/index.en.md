@@ -113,7 +113,7 @@ The classic example is lactose permease (LacY) of *E. coli*, encoded in the *lac
 $$
 \ln\frac{[\mathrm{S}]_{\mathrm{in}}}{[\mathrm{S}]_{\mathrm{out}}} = -\frac{F\,\Delta p}{RT},
 $$
-where $\Delta p = \Delta\varphi - (2.303\,RT/F)\,\Delta\mathrm{pH}$ is the proton-motive force expressed as a potential (inside minus outside; negative in respiring cells). For *E. coli* with $\Delta p \approx -0.18\,\mathrm{V}$ at $25\,^\circ\mathrm{C}$ ($RT/F = 0.0257\,\mathrm{V}$), the ratio is $\mathrm{e}^{0.18/0.0257} \approx 1.1 \times 10^{3}$. A cation symported with two protons would reach the square of this. Real accumulation is lower because the solute leaks back and is consumed, but the calculation shows why the proton-motive force is enough to concentrate most nutrients a thousandfold.
+where $\Delta p = \Delta\varphi - (2.303\,RT/F)\,\Delta\mathrm{pH}$ is the proton-motive force expressed as a potential (inside minus outside; negative in respiring cells). For *E. coli* with $\Delta p \approx -0.18\,\mathrm{V}$ at $25\,^\circ\mathrm{C}$ ($RT/F = 0.0257\,\mathrm{V}$), the ratio is $\mathrm{e}^{0.18/0.0257} \approx 1.1 \times 10^{3}$. An uncharged solute symported with two protons would reach the square of this. Real accumulation is lower because the solute leaks back and is consumed, but the calculation shows why the proton-motive force is enough to concentrate most nutrients a thousandfold.
 
 ### 4.3.3. ABC Transporters and Binding Proteins
 

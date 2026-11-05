@@ -14,7 +14,7 @@ P = bio.P
 
 # name, genome size (bp), ORFs, lifestyle (E endosymbiont, P parasite, F free-living), domain
 DATA = [
-    ("Nasuia deltocephalicola", 112091, 137, "E", "B"),
+    ("Nasuia deltocephalinicola", 112091, 137, "E", "B"),
     ("Tremblaya princeps", 138931, 121, "E", "B"),
     ("Hodgkinia cicadicola", 143795, 169, "E", "B"),
     ("Buchnera aphidicola", 422434, 362, "E", "B"),
@@ -41,7 +41,7 @@ DATA = [
     ("Haloarcula marismortui", 4274642, 4242, "F", "A"),
     ("Methanosarcina acetivorans", 5751000, 4252, "F", "A"),
 ]
-LABEL = {"Nasuia deltocephalicola": (0.22, 100), "Buchnera aphidicola": (0.75, 250), "Mycoplasma genitalium": (0.2, 560),
+LABEL = {"Nasuia deltocephalinicola": (0.22, 100), "Buchnera aphidicola": (0.75, 250), "Mycoplasma genitalium": (0.2, 560),
          "Rickettsia prowazekii": (2.2, 560), "Escherichia coli K-12": (1.5, 7600), "Sorangium cellulosum": (6.0, 20000),
          "Nanoarchaeum equitans": (0.2, 1000), "Streptomyces coelicolor": (2.6, 13500)}
 STYLE = {"E": ("highlight", "endosymbiont of insects"), "P": ("negative", "parasite or pathogen"), "F": ("dna", "free-living")}
