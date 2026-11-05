@@ -9513,7 +9513,7 @@ terms:
   - { zh: 性状, en: character, aliases: [characters], scope: ["7"] }
   - { zh: 适应, en: adaptation, aliases: [adaptations, 适应性状] }
   - { zh: K 选择, en: K-selection, scope: ["7"] }
-  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10"] }
+  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12"] }
   - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
   - { zh: 保留指数, en: retention index, scope: ["7"] }
   - { zh: 分离位点, en: segregating site, aliases: [segregating sites] }
@@ -10106,6 +10106,8 @@ terms:
 
   # biology: botany (7.12); homonyms of terms in other disciplines are scoped to 7
   - { zh: 植物学, en: botany }
+  - { zh: 叶, en: leaf, aliases: [leaves], scope: ["7"] }
+  - { zh: 变态, en: metamorphosis, scope: ["7.12", "7.13"] }
   - { zh: 乔木, en: tree, scope: ["7.12", "7.13", "7.19"] }
   - { zh: 接合生殖, en: conjugation, scope: ["7.12"] }
   - { zh: 有胚植物, en: embryophyte, aliases: [陆生植物, land plant, land plants, embryophytes, Embryophyta] }
@@ -10278,7 +10280,8 @@ terms:
   - { zh: 栅栏组织, en: palisade mesophyll, aliases: [palisade parenchyma] }
   - { zh: 海绵组织, en: spongy mesophyll, aliases: [spongy parenchyma] }
   - { zh: 花环结构, en: Kranz anatomy }
-  - { zh: 离层, en: abscission zone, aliases: [离区, abscission layer] }
+  - { zh: 离区, en: abscission zone }
+  - { zh: 离层, en: abscission layer, aliases: [separation layer] }
   - { zh: 根状茎, en: rhizome, aliases: [rhizomes] }
   - { zh: 块茎, en: tuber, aliases: [tubers], scope: ["7.12", "7.13"] }
   - { zh: 鳞茎, en: bulb, aliases: [bulbs] }
@@ -10473,3 +10476,95 @@ terms:
   - { zh: 无孢子生殖, en: apospory }
   - { zh: 个体发育, en: ontogeny }
   - { zh: 重演, en: recapitulation }
+  - { zh: 叶片, en: leaf blade, aliases: [lamina, blade], scope: ["7.12", "7.13"] }
+  - { zh: 叶柄, en: petiole, aliases: [petioles] }
+  - { zh: 叶鞘, en: leaf sheath, aliases: [leaf sheaths] }
+  - { zh: 叶耳, en: auricle, aliases: [auricles], scope: ["7.12"] }
+  - { zh: 叶脉, en: vein, aliases: [veins, leaf vein], scope: ["7.12", "7.13"] }
+  - { zh: 脉序, en: venation }
+  - { zh: 单叶, en: simple leaf, aliases: [simple leaves] }
+  - { zh: 叶镶嵌, en: leaf mosaic }
+  - { zh: 异形叶性, en: heterophylly }
+  - { zh: 背腹叶, en: dorsiventral leaf, aliases: [异面叶, bifacial leaf] }
+  - { zh: 等面叶, en: isobilateral leaf }
+  - { zh: 维管束鞘, en: bundle sheath, aliases: [bundle sheaths] }
+  - { zh: 泡状细胞, en: bulliform cell, aliases: [bulliform cells, 运动细胞, motor cell] }
+  - { zh: 同功器官, en: analogous organ, aliases: [analogous organs] }
+  - { zh: 块根, en: root tuber, aliases: [root tubers, tuberous root] }
+  - { zh: 叶状柄, en: phyllode, aliases: [phyllodes] }
+  - { zh: 叶卷须, en: leaf tendril, aliases: [leaf tendrils] }
+  - { zh: 叶刺, en: leaf spine, aliases: [leaf spines] }
+  - { zh: 过渡区, en: transition region, aliases: [根茎过渡区, transition zone], scope: ["7.12", "7.13"] }
+  - { zh: 顶端优势, en: apical dominance }
+  - { zh: 营养繁殖, en: vegetative propagation, aliases: [vegetative reproduction] }
+  - { zh: 扦插, en: cutting, aliases: [cuttings], scope: ["7.12", "7.13"] }
+  - { zh: 嫁接, en: grafting }
+  - { zh: 植物组织培养, en: plant tissue culture, aliases: [组织培养, 微繁殖, micropropagation] }
+  - { zh: 雄配子体, en: male gametophyte, aliases: [microgametophyte, male gametophytes, microgametophytes], scope: ["7"] }
+  - { zh: 雌配子体, en: female gametophyte, aliases: [megagametophyte, female gametophytes, megagametophytes], scope: ["7"] }
+  - { zh: 多胚现象, en: polyembryony }
+  - { zh: 简单多胚现象, en: simple polyembryony }
+  - { zh: 裂生多胚现象, en: cleavage polyembryony }
+  - { zh: 苞鳞, en: bract scale, aliases: [bract scales] }
+  - { zh: 珠鳞, en: ovuliferous scale, aliases: [ovuliferous scales] }
+  - { zh: 种鳞, en: seed scale, aliases: [果鳞, seed scales] }
+  - { zh: 珠孔管, en: micropylar tube }
+  - { zh: 孑遗植物, en: relict plant, aliases: [relict plants, 孑遗种] }
+  - { zh: 套被, en: epimatium }
+  - { zh: 珊瑚状根, en: coralloid root, aliases: [coralloid roots] }
+  - { zh: 花柄, en: pedicel, aliases: [花梗, pedicels], scope: ["7.12", "7.13"] }
+  - { zh: 花托, en: receptacle, scope: ["7.12", "7.13"] }
+  - { zh: 完全花, en: complete flower }
+  - { zh: 不完全花, en: incomplete flower }
+  - { zh: 萼片, en: sepal, aliases: [sepals] }
+  - { zh: 花瓣, en: petal, aliases: [petals] }
+  - { zh: 被片, en: tepal, aliases: [tepals, 花被片] }
+  - { zh: 花丝, en: filament, scope: ["7.12", "7.13"] }
+  - { zh: 花药, en: anther, aliases: [anthers] }
+  - { zh: 药隔, en: connective, scope: ["7.12", "7.13"] }
+  - { zh: 雄蕊群, en: androecium }
+  - { zh: 柱头, en: stigma, aliases: [stigmas], scope: ["7.12", "7.13"] }
+  - { zh: 花柱, en: style, aliases: [styles], scope: ["7.12", "7.13"] }
+  - { zh: 雌蕊群, en: gynoecium }
+  - { zh: 下位花, en: hypogynous flower }
+  - { zh: 周位花, en: perigynous flower }
+  - { zh: 上位花, en: epigynous flower }
+  - { zh: 两性花, en: bisexual flower, aliases: [perfect flower] }
+  - { zh: 单性花, en: unisexual flower, aliases: [imperfect flower] }
+  - { zh: 中性花, en: neutral flower, aliases: [无性花] }
+  - { zh: 辐射对称花, en: actinomorphic flower, aliases: [整齐花, actinomorphy] }
+  - { zh: 两侧对称花, en: zygomorphic flower, aliases: [不整齐花, zygomorphy] }
+  - { zh: 小穗, en: spikelet, aliases: [spikelets] }
+  - { zh: 颖片, en: glume, aliases: [glumes] }
+  - { zh: 小花, en: floret, aliases: [florets], scope: ["7.12", "7.13"] }
+  - { zh: 外稃, en: lemma, scope: ["7.12", "7.13"] }
+  - { zh: 内稃, en: palea }
+  - { zh: 浆片, en: lodicule, aliases: [lodicules] }
+  - { zh: 无限花序, en: indeterminate inflorescence, aliases: [racemose inflorescence, 总状类花序] }
+  - { zh: 有限花序, en: determinate inflorescence, aliases: [cymose inflorescence, 聚伞类花序] }
+  - { zh: 聚伞花序, en: cyme, aliases: [cymes] }
+  - { zh: 药室内壁, en: endothecium }
+  - { zh: 纤维层, en: fibrous layer, scope: ["7.12", "7.13"] }
+  - { zh: 花粉母细胞, en: pollen mother cell, aliases: [小孢子母细胞, microsporocyte, pollen mother cells] }
+  - { zh: 精细胞, en: sperm cell, aliases: [sperm cells], scope: ["7.12", "7.13"] }
+  - { zh: 外壁, en: exine, aliases: [花粉外壁], scope: ["7.12", "7.13"] }
+  - { zh: 孢粉素, en: sporopollenin }
+  - { zh: 萌发孔, en: aperture, aliases: [apertures], scope: ["7.12", "7.13"] }
+  - { zh: 厚珠心胚珠, en: crassinucellate ovule }
+  - { zh: 薄珠心胚珠, en: tenuinucellate ovule }
+  - { zh: 直生胚珠, en: orthotropous ovule }
+  - { zh: 倒生胚珠, en: anatropous ovule }
+  - { zh: 横生胚珠, en: hemitropous ovule }
+  - { zh: 弯生胚珠, en: campylotropous ovule }
+  - { zh: 拳卷胚珠, en: circinotropous ovule }
+  - { zh: 卵细胞, en: egg cell, scope: ["7.12", "7.13"] }
+  - { zh: 卵器, en: egg apparatus }
+  - { zh: 反足细胞, en: antipodal cell, aliases: [antipodal cells, antipodals] }
+  - { zh: 极核, en: polar nuclei, aliases: [polar nucleus] }
+  - { zh: 中央细胞, en: central cell, scope: ["7.12", "7.13"] }
+  - { zh: 自花传粉, en: self-pollination }
+  - { zh: 异花传粉, en: cross-pollination }
+  - { zh: 闭花受精, en: cleistogamy, aliases: [闭花传粉, cleistogamous] }
+  - { zh: 风媒花, en: anemophilous flower, aliases: [风媒, anemophily] }
+  - { zh: 虫媒花, en: entomophilous flower, aliases: [虫媒, entomophily] }
+  - { zh: 不定胚, en: adventitious embryo, aliases: [adventitious embryony, 珠心胚, nucellar embryo] }
