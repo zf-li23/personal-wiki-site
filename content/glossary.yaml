@@ -10106,6 +10106,9 @@ terms:
 
   # biology: botany (7.12); homonyms of terms in other disciplines are scoped to 7
   - { zh: 植物学, en: botany }
+  - { zh: 初生结构, en: primary structure, scope: ["7.12", "7.13"]}
+  - { zh: 次生结构, en: secondary structure, scope: ["7.12", "7.13"]}
+  - { zh: 节, en: node, scope: ["7.12", "7.13"]}
   - { zh: 叶, en: leaf, aliases: [leaves], scope: ["7"] }
   - { zh: 变态, en: metamorphosis, scope: ["7.12", "7.13"] }
   - { zh: 乔木, en: tree, scope: ["7.12", "7.13", "7.19"] }
@@ -10568,3 +10571,52 @@ terms:
   - { zh: 风媒花, en: anemophilous flower, aliases: [风媒, anemophily] }
   - { zh: 虫媒花, en: entomophilous flower, aliases: [虫媒, entomophily] }
   - { zh: 不定胚, en: adventitious embryo, aliases: [adventitious embryony, 珠心胚, nucellar embryo] }
+  - { zh: 器官, en: organ, aliases: [organs], scope: ["7.12", "7.13"] }
+  - { zh: 营养器官, en: vegetative organ, aliases: [vegetative organs] }
+  - { zh: 繁殖器官, en: reproductive organ, aliases: [reproductive organs], scope: ["7.12", "7.13"] }
+  - { zh: 胚轴, en: embryonic axis }
+  - { zh: 上胚轴, en: epicotyl }
+  - { zh: 种脐, en: hilum, scope: ["7.12", "7.13"] }
+  - { zh: 种脊, en: raphe, scope: ["7.12"] }
+  - { zh: 种阜, en: caruncle }
+  - { zh: 盾片, en: scutellum, scope: ["7.12", "7.13"] }
+  - { zh: 胚芽鞘, en: coleoptile }
+  - { zh: 胚根鞘, en: coleorhiza }
+  - { zh: 有胚乳种子, en: albuminous seed, aliases: [endospermic seed] }
+  - { zh: 无胚乳种子, en: exalbuminous seed, aliases: [non-endospermic seed] }
+  - { zh: 种子休眠, en: seed dormancy }
+  - { zh: 后熟作用, en: after-ripening }
+  - { zh: 种子寿命, en: seed longevity }
+  - { zh: 种子萌发, en: seed germination }
+  - { zh: 子叶出土幼苗, en: epigeal seedling, aliases: [epigeal germination, 出土萌发] }
+  - { zh: 子叶留土幼苗, en: hypogeal seedling, aliases: [hypogeal germination, 留土萌发] }
+  - { zh: 主根, en: primary root, aliases: [taproot, 直根], scope: ["7.12", "7.13"] }
+  - { zh: 侧根, en: lateral root, aliases: [lateral roots] }
+  - { zh: 直根系, en: taproot system }
+  - { zh: 须根系, en: fibrous root system }
+  - { zh: 根尖, en: root tip }
+  - { zh: 静止中心, en: quiescent centre, aliases: [quiescent center, 不活动中心] }
+  - { zh: 质外体, en: apoplast }
+  - { zh: 共质体, en: symplast }
+  - { zh: 通道细胞, en: passage cell, aliases: [passage cells] }
+  - { zh: 外皮层, en: exodermis }
+  - { zh: 内起源, en: endogenous origin }
+  - { zh: 节间, en: internode, aliases: [internodes] }
+  - { zh: 枝条, en: shoot, scope: ["7.12", "7.13"] }
+  - { zh: 腋芽, en: axillary bud, aliases: [axillary buds, 侧芽] }
+  - { zh: 混合芽, en: mixed bud }
+  - { zh: 单轴分枝, en: monopodial branching }
+  - { zh: 合轴分枝, en: sympodial branching }
+  - { zh: 假二叉分枝, en: false dichotomous branching, aliases: [false dichotomy] }
+  - { zh: 分蘖, en: tillering, aliases: [tiller, tillers] }
+  - { zh: 束中形成层, en: fascicular cambium }
+  - { zh: 髓射线, en: pith ray, aliases: [pith rays, 初生射线, primary ray] }
+  - { zh: 枝迹, en: branch trace, aliases: [branch traces] }
+  - { zh: 束间形成层, en: interfascicular cambium }
+  - { zh: 纺锤状原始细胞, en: fusiform initial, aliases: [fusiform initials] }
+  - { zh: 射线原始细胞, en: ray initial, aliases: [ray initials] }
+  - { zh: 维管射线, en: vascular ray, aliases: [vascular rays, 次生射线, secondary ray] }
+  - { zh: 早材, en: earlywood, aliases: [春材, spring wood] }
+  - { zh: 晚材, en: latewood, aliases: [夏材, 秋材, summer wood] }
+  - { zh: 树木年代学, en: dendrochronology }
+  - { zh: 落皮层, en: rhytidome, aliases: [外树皮, outer bark] }
