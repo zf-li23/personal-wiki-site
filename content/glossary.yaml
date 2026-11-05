@@ -10419,7 +10419,7 @@ terms:
   - { zh: 裸藻, en: euglenids, aliases: [Euglenophyta, 裸藻门, euglenid, euglenoids, 眼虫] }
   - { zh: 表膜, en: pellicle, scope: ["7.11", "7.12"] }
   - { zh: 菌物, en: fungi sensu lato, aliases: [fungal organisms], scope: ["7.11", "7.12"] }
-  - { zh: 原质团, en: plasmodium, aliases: [plasmodia, 变形体], scope: ["7.11", "7.12"] }
+  - { zh: 原质团, en: plasmodium, aliases: [plasmodia, 变形体], scope: ["7.12"] }
   - { zh: 双游现象, en: diplanetism }
   - { zh: 根状菌索, en: rhizomorph, aliases: [rhizomorphs, 菌索] }
   - { zh: 吸器, en: haustorium, aliases: [haustoria], scope: ["7.11", "7.12", "7.13"] }
