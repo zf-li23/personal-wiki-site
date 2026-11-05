@@ -108,7 +108,7 @@ A **fermentation** ([7.1.18](/7.1.18#sec-18.4.1)) is an anaerobic catabolism in 
 2. *ATP yield.* ATP comes only from energy-rich intermediates; making an acid (acetate, butyrate) from its CoA thioester gives an extra ATP, making the corresponding alcohol gives none.
 3. *Carbon and electron bookkeeping.* Each fermentation is a compromise between these two: more acid means more ATP, but the electrons must still go somewhere, so the product ratio shifts with conditions such as pH and hydrogen partial pressure.
 
-Fermentations are named after their main products or, for unusual substrates, after the substrate. Most of their products, the acids and alcohols of food and industry, are waste for the organism but valuable to people (7.11.36).
+Fermentations are named after their main products or, for unusual substrates, after the substrate. Most of their products, the acids and alcohols of food and industry, are waste for the organism but valuable to people.
 
 ![Fermentation products formed from pyruvate (and from phosphoenolpyruvate for succinate), colored by the group of organisms that makes them: lactic acid bacteria (lactate), yeasts and *Zymomonas* (ethanol and CO₂ by pyruvate decarboxylase), enteric bacteria (formate, H₂ and CO₂ by pyruvate formate-lyase and formate hydrogenlyase; acetate, ethanol, succinate; acetoin and 2,3-butanediol in *Klebsiella* and *Enterobacter*), clostridia (acetyl-CoA, CO₂ and H₂ by pyruvate:ferredoxin oxidoreductase; butyrate, butanol, acetone) and propionibacteria (propionate). Arrows marked ATP are steps of substrate-level phosphorylation; NADH marks steps that reoxidize NADH.](./plots/fermentation-products.py)
 
@@ -147,7 +147,7 @@ $$
 \text{glucose} \to \text{butyrate}^- + 2\ \ce{CO2} + 2\ \ce{H2} + \ce{H+}, \qquad \Delta_{\mathrm{r}}G^\circ{}' = -264\,\mathrm{kJ},\ 3\ \text{ATP}.
 $$
 
-*Clostridium acetobutylicum* shows that the products are a regulated choice. In an early acidogenic phase it makes butyrate and acetate, gaining ATP; when the pH falls to about 5, it switches to a solventogenic phase, reabsorbs part of the acids and makes acetone, butanol and some ethanol. Neutral products protect the cell from acid but cost ATP, because butyryl-CoA reduced to butanol does not pass through butyryl phosphate. This acetone–butanol–ethanol fermentation supplied acetone for explosives in the First World War, when Chaim Weizmann developed it on an industrial scale (7.11.36).
+*Clostridium acetobutylicum* shows that the products are a regulated choice. In an early acidogenic phase it makes butyrate and acetate, gaining ATP; when the pH falls to about 5, it switches to a solventogenic phase, reabsorbs part of the acids and makes acetone, butanol and some ethanol. Neutral products protect the cell from acid but cost ATP, because butyryl-CoA reduced to butanol does not pass through butyryl phosphate. This acetone–butanol–ethanol fermentation supplied acetone for explosives in the First World War, when Chaim Weizmann developed it on an industrial scale.
 
 The proteolytic clostridia, which decompose proteins in anoxic environments, ferment amino acids. Some ferment single amino acids; others couple the oxidation of one amino acid to the reduction of another in the *Stickland reaction*. In *Clostridium sporogenes*, alanine is the electron donor and glycine the acceptor:
 

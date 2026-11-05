@@ -204,7 +204,7 @@ Electron transfer between cells extends these principles:
 
 Discovered in 2012, they explain why sulfide in some sediments disappears centimetres below the reach of oxygen; the conductive fibres run in the shared periplasm along the filament.
 
-Metal reducers are used to remove soluble uranium(VI) from groundwater by reducing it to insoluble uranium(IV), and *Geobacter* biofilms power microbial fuel cells, in which an anode replaces the iron oxide ([7.11.36](/7.11.36)).
+Metal reducers are used to remove soluble uranium(VI) from groundwater by reducing it to insoluble uranium(IV), and *Geobacter* biofilms power microbial fuel cells, in which an anode replaces the iron oxide.
 
 ### 7.3.5. Other Electron Acceptors
 
@@ -233,7 +233,7 @@ The energetics of acetogenesis is a lesson in how little energy is needed for li
 
 **Definition 7.4.2 (Electron Bifurcation)** Flavin-based **electron bifurcation** is a mechanism by which an enzyme-bound flavin accepts two electrons from a donor and passes one to a high-potential acceptor (exergonic) and the other to a low-potential acceptor (endergonic), so that the first reaction drives the second; for example, two $\ce{H2}$ reduce one $\ce{NAD+}$ and one ferredoxin together.
 
-Electron bifurcation, discovered in 2008, explains how many anaerobes make reduced ferredoxin and is central to the energy metabolism of methanogens (7.4.2) and fermenting clostridia. Acetogens are also used industrially to convert carbon monoxide-rich waste gases into ethanol and acetate ([7.11.36](/7.11.36)).
+Electron bifurcation, discovered in 2008, explains how many anaerobes make reduced ferredoxin and is central to the energy metabolism of methanogens (7.4.2) and fermenting clostridia. Acetogens are also used industrially to convert carbon monoxide-rich waste gases into ethanol and acetate.
 
 ### 7.4.2. Methanogenesis
 

@@ -80,10 +80,9 @@ Infectious diseases were the leading causes of death in the industrialized count
 
 | Area | Role of microorganisms | Chapters |
 |---|---|---|
-| Agriculture | Root-nodule bacteria (rhizobia) fix $\ce{N2}$ for legumes; rumen microbes digest cellulose for cattle and sheep; microbial insecticides; plant pathogens | [7.11.31](/7.11.31), [7.11.36](/7.11.36) |
-| Food | Fermentation of bread, yoghurt, cheese, sauerkraut, soy sauce, vinegar, wine and beer (in China with *qu*, a mold-grown grain starter, for millennia); spoilage and food-borne disease | [7.11.36](/7.11.36), [7.11.10](/7.11.10) |
-| Energy | Methane from anaerobic digestion, ethanol and other fuels from fermentation | [7.11.5](/7.11.5), [7.11.36](/7.11.36) |
-| Biotechnology | Production of enzymes, amino acids, antibiotics and recombinant proteins (human insulin from *E. coli*), biodegradable plastics; synthetic biology | [7.11.36](/7.11.36) |
+| Agriculture | Root-nodule bacteria (rhizobia) fix $\ce{N2}$ for legumes; rumen microbes digest cellulose for cattle and sheep; microbial insecticides; plant pathogens | [7.11.31](/7.11.31) |
+| Food | Fermentation of bread, yoghurt, cheese, sauerkraut, soy sauce, vinegar, wine and beer (in China with *qu*, a mold-grown grain starter, for millennia); spoilage and food-borne disease | [7.11.10](/7.11.10) |
+| Energy | Methane from anaerobic digestion, ethanol and other fuels from fermentation | [7.11.5](/7.11.5) |
 | Environment | Wastewater treatment, bioremediation of oil spills and pollutants, the global cycles of carbon, nitrogen and sulfur | [7.11.30](/7.11.30) |
 
 ## 1.3. Seeing Microbes and the End of Spontaneous Generation
@@ -162,11 +161,11 @@ Microbiology is divided both by the organisms studied (bacteriology, virology, m
 |---|---|
 | Microbial systematics: classification and identification ([7.11.16](/7.11.16)) | Medical microbiology and epidemiology ([7.11.33](/7.11.33)–[7.11.35](/7.11.35)); immunology ([7.15](/7.15)) |
 | Microbial cytology and physiology: structure, nutrition, growth ([7.11.2](/7.11.2)–[7.11.10](/7.11.10)) | Agricultural and soil microbiology ([7.11.31](/7.11.31)) |
-| Microbial biochemistry and metabolism ([7.11.5](/7.11.5)–[7.11.7](/7.11.7)) | Food and industrial microbiology, biotechnology ([7.11.36](/7.11.36)) |
+| Microbial biochemistry and metabolism ([7.11.5](/7.11.5)–[7.11.7](/7.11.7)) | Food and industrial microbiology, biotechnology |
 | Bacterial genetics and molecular biology ([7.11.11](/7.11.11)–[7.11.13](/7.11.13)) | Environmental microbiology: water, wastewater, bioremediation ([7.11.30](/7.11.30)) |
 | Microbial ecology and evolution ([7.11.29](/7.11.29)) | Antimicrobial drugs and resistance ([7.11.14](/7.11.14), [7.11.15](/7.11.15)) |
 
-The course follows roughly this order: the cell and its parts (7.11.2–7.11.3), nutrition and metabolism (7.11.4–7.11.7), growth and its control (7.11.8–7.11.10), regulation, development and genetics (7.11.11–7.11.13), antimicrobial drugs (7.11.14–7.11.15), diversity (7.11.16–7.11.21), viruses (7.11.22–7.11.28), ecology and the microbiome (7.11.29–7.11.32) and pathogens, epidemiology and applications (7.11.33–7.11.36).
+The course follows roughly this order: the cell and its parts (7.11.2–7.11.3), nutrition and metabolism (7.11.4–7.11.7), growth and its control (7.11.8–7.11.10), regulation, development and genetics (7.11.11–7.11.13), antimicrobial drugs (7.11.14–7.11.15), diversity (7.11.16–7.11.21), viruses (7.11.22–7.11.28), ecology and the microbiome (7.11.29–7.11.32) and pathogens and epidemiology (7.11.33–7.11.35).
 
 ## 1.9. The Scale of the Microbial World
 

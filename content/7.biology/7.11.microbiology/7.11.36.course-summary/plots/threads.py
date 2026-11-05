@@ -1,4 +1,4 @@
-"""The threads of the course: which chapters (columns, 7.11.1-7.11.36) carry each of the eight
+"""The threads of the course: which chapters (columns, 7.11.1-7.11.35) carry each of the eight
 threads (rows). Large dots: the thread is a main subject of the chapter; small dots: the chapter
 uses or extends it. Bands at the top mark the blocks of the course."""
 import matplotlib.pyplot as plt
@@ -10,19 +10,19 @@ FT = bio.core.FONT
 
 THREADS = [  # (label, token, main chapters, secondary chapters)
     ("Cell structure", "cell_wall", [1, 2, 3, 8], [12, 18, 19, 20, 21, 34]),
-    ("Metabolism and energy", "enzyme", [4, 5, 6, 7], [9, 17, 18, 19, 29, 30, 31, 36]),
-    ("Growth and its control", "positive", [8, 9, 10, 14, 15], [4, 12, 23, 28, 36]),
+    ("Metabolism and energy", "enzyme", [4, 5, 6, 7], [9, 17, 18, 19, 29, 30, 31]),
+    ("Growth and its control", "positive", [8, 9, 10, 14, 15], [4, 12, 23, 28]),
     ("Regulation and genetics", "dna", [11, 12, 13], [15, 16, 23, 24, 25, 33, 34]),
     ("Diversity and systematics", "protein", [16, 17, 18, 19, 20, 21], [1, 26, 29]),
     ("Viruses", "virus", [22, 23, 24, 25, 26, 27, 28], [13, 29, 35]),
     ("Ecology and cycles", "channel", [29, 30, 31], [6, 7, 12, 17, 26, 32]),
-    ("Microbes and humans", "blood", [14, 15, 28, 32, 33, 34, 35, 36], [1, 10, 20, 21, 27]),
+    ("Microbes and humans", "blood", [14, 15, 28, 32, 33, 34, 35], [1, 10, 20, 21, 27]),
 ]
 BLOCKS = [(1, 1, "intro"), (2, 3, "cell"), (4, 7, "metabolism"), (8, 10, "growth"),
           (11, 13, "regulation,\ngenetics"), (14, 15, "drugs"), (16, 21, "diversity"),
-          (22, 28, "viruses"), (29, 31, "ecology"), (32, 36, "microbes and humans")]
+          (22, 28, "viruses"), (29, 31, "ecology"), (32, 35, "microbes and humans")]
 
-n = 36
+n = 35
 x0, dx = 8.2, 0.52
 nrow = len(THREADS)
 fig, ax = bio.canvas(x0 + n * dx + 0.6, nrow * 0.9 + 2.9)
