@@ -14,6 +14,9 @@ floral formulae, ferns and life cycles; templates of real plants come from the i
     B.root_section(ax, (4, 4), 3.0, kind="monocot")
     B.leaf_anatomy(ax, (0, 0, 10, 3), kind="C4")
     B.woody_stem(ax, (5, 5), 4.0, years=5);  B.wood_strip(ax, (0, 0, 12, 3), years=3, kind="ring-porous")
+    B.stoma(ax, (2, 2), 1.6, subsidiary="paracytic", state="open");  B.stoma(ax, (5, 2), 2, kind="dumbbell")
+    B.epidermis(ax, (0, 0, 8, 5), kind="eudicot", stomata=6)      surface view: "eudicot", "monocot", "grass"
+    B.lichen_section(ax, (0, 0, 12, 7), kind="heteromerous")      or "homoiomerous"
     B.branching(ax, (2, 0), 4, kind="sympodial")
     B.lsystem_tree(ax, (3, 0), 6, habit="excurrent");  B.crown_tree(ax, (9, 0), 6)
     s = B.lsystem("A", {"A": "F[+A][-A]"}, 5);  t = B.turtle(s, angle=25)     the L-system engine itself
@@ -21,7 +24,7 @@ floral formulae, ferns and life cycles; templates of real plants come from the i
     sec = B.Section(); sec.ring(...); sec.fill(...); sec.draw(ax)              cells for any new section
 
 Catalogues: ``SHAPES``, ``APICES``, ``BASES``, ``MARGINS``, ``VENATION``, ``ARRANGEMENT``, ``INFLORESCENCES``,
-``HABITS``; ``STYLE`` (cell drawing per tissue), ``TISSUE`` (tissue -> token), ``GOLDEN_ANGLE``.
+``HABITS``, ``STOMATAL_TYPES``; ``STYLE`` (cell drawing per tissue), ``TISSUE`` (tissue -> token), ``GOLDEN_ANGLE``.
 
 Terminology follows the standard glossaries (Harris & Harris, Plant Identification Terminology, 2nd ed.;
 Simpson, Plant Systematics, 3rd ed.; Beentje, The Kew Plant Glossary; Evert, Esau's Plant Anatomy;
@@ -62,6 +65,9 @@ TISSUE = {
     "guard": "chloroplast", "bulliform": "bulliform", "chloroplast": "chloroplast", "root_hair": "cell_wall",
     "earlywood": "earlywood", "latewood": "latewood", "ray": "lipid", "heartwood": "heartwood", "sapwood": "sapwood",
     "cork": "cork", "phellogen": "atp", "bark": "animal", "secondary_phloem": "lipid_head",
+    "subsidiary": "dna2", "pavement": "parenchyma", "pore": "extracellular",
+    "hypha": "lipid_tail", "lichen_cortex": "animal", "photobiont": "chloroplast", "cyanobiont": "enzyme",
+    "rhizine": "animal", "lichen_matrix": "bone",
 }
 
 GOLDEN_ANGLE = 180.0 * (3.0 - math.sqrt(5.0))  # 137.507...°
@@ -981,7 +987,8 @@ def _bract(ax, at, angle, size, zorder=6):
 
 
 INFLORESCENCES = ("raceme", "spike", "catkin", "corymb", "umbel", "compound umbel", "panicle", "spadix", "capitulum",
-                  "scorpioid cyme", "helicoid cyme", "dichasium")
+                  "scorpioid cyme", "helicoid cyme", "dichasium", "compound spike", "pleiochasium", "verticillaster",
+                  "hypanthodium")
 
 
 def inflorescence(ax, base, height, kind="raceme", flowers=None, bracts=True, zorder=6):
@@ -997,6 +1004,12 @@ def inflorescence(ax, base, height, kind="raceme", flowers=None, bracts=True, zo
     Returns anchors: peduncle, rachis (main axis), pedicel, flower, bud, bract, terminal, and per type
     ray / umbellet / involucre / involucel / spathe / spadix / phyllary / ray_floret / disc_floret /
     receptacle / branch; ``flowers``: list of flower centres.
+
+    Further kinds: "compound spike" (spikelets sessile on alternate sides of a zigzag rachis, as in
+    wheat; anchors spikelet, glume, floret), "pleiochasium" (more than two branches below each terminal
+    flower), "verticillaster" (Lamiaceae: dense cymes in the axils of opposite leaves, looking like
+    whorls; anchors node, leaf, cluster) and "hypanthodium" (syconium of *Ficus* in section: an urn-shaped
+    receptacle lined with flowers, opening by the ostiole; anchors receptacle, ostiole, flower).
     """
     b = np.asarray(base, float)
     H = height
@@ -1285,6 +1298,118 @@ def inflorescence(ax, base, height, kind="raceme", flowers=None, bracts=True, zo
                     out["bract"] = fork + [0.03 * H, 0]
         branch(b, 90.0, 0.55 * H, 0)
         out["peduncle"] = b + [0, 0.15 * H]
+        return out
+    if kind == "compound spike":
+        n = flowers or 9
+        pts = [b, b + [0, 0.12 * H]]
+        for k in range(n):
+            pts.append(b + [(-1) ** k * 0.012 * H, H * (0.14 + 0.8 * (k + 0.5) / n)])
+        curve(pts, 1.4)
+        out["peduncle"] = b + [0, 0.06 * H]
+        out["rachis"] = pts[4]
+        for k in range(n):
+            side = 1 if k % 2 == 0 else -1
+            p = pts[k + 2]
+            f = k / max(1, n - 1)
+            sz = 0.11 * H * (1 - 0.35 * abs(f - 0.4))
+            ang = 90 - side * 32
+            u = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
+            nn = np.array([-u[1], u[0]])
+            for g in (-1, 1):  # two glumes at the base of the spikelet
+                gl = p + u * sz * 0.35 + nn * g * sz * 0.16
+                ax.add_patch(Ellipse(gl, sz * 0.75, sz * 0.24, angle=ang + g * 8, facecolor=_fill("bract"),
+                                     edgecolor=_edge("bract"), lw=0.55, zorder=zorder + 1 + k * 0.01))
+            for j in range(4):  # florets, distichous on the rachilla
+                q = p + u * sz * (0.45 + 0.22 * j) + nn * (0.13 if j % 2 else -0.13) * sz
+                ax.add_patch(Ellipse(q, sz * 0.5, sz * 0.26, angle=ang + (12 if j % 2 else -12), facecolor=_fill("bud"),
+                                     edgecolor=_edge("bud"), lw=0.55, zorder=zorder + 1.1 + k * 0.01 + j * 0.001))
+                out["flowers"].append(q)
+            if k == 2:
+                out["spikelet"] = p + u * sz * 0.8
+                out["glume"] = p + u * sz * 0.3 + nn * sz * 0.2
+                out["floret"] = p + u * sz * 1.05
+        out["flower"] = out["floret"]
+        return out
+    if kind == "pleiochasium":
+        def pbranch(p, ang, ln, d):
+            u = np.array([math.cos(math.radians(ang)), math.sin(math.radians(ang))])
+            q = p + u * ln
+            seg(p, q, 1.6 - 0.35 * d)
+            fl(q, [0.0, 0.45, 0.9][d], ang=ang)
+            if d == 0:
+                out["terminal"] = q
+            if d < 2:
+                fork = p + u * ln * 0.65
+                m = 4 if d == 0 else 3
+                for j in range(m):
+                    da = (j - (m - 1) / 2) / ((m - 1) / 2) * (62 if d == 0 else 45)
+                    if abs(da) < 1:
+                        da = 0.0
+                    if da == 0.0 and m % 2 == 1:
+                        continue
+                    if bracts:
+                        _bract(ax, fork, ang + da * 1.3, 0.045 * H * (1 - 0.3 * d), zorder=zorder - 0.5)
+                    pbranch(fork, ang + da, ln * 0.55, d + 1)
+                if d == 0:
+                    out["bract"] = fork + [0.03 * H, 0]
+                    out["branch"] = fork + u * 0.0 + [0.08 * H, 0.06 * H]
+        pbranch(b, 90.0, 0.6 * H, 0)
+        out["peduncle"] = b + [0, 0.15 * H]
+        return out
+    if kind == "verticillaster":
+        top = b + [0, H * 0.97]
+        seg(b, top, 1.8)
+        out["rachis"] = b + [0, 0.5 * H]
+        n = flowers or 4
+        for k in range(n):
+            f = k / max(1, n - 1)
+            y = H * (0.18 + 0.7 * f)
+            p = b + [0, y]
+            sz = 0.2 * H * (1 - 0.45 * f)
+            for side in (-1, 1):
+                lf = leaf(ax, p, sz, 90 - side * 80, shape="ovate", width=sz * 0.5, petiole=0, token="leaf", zorder=zorder - 0.5)
+                if k == 0 and side == 1:
+                    out["leaf"] = lf["outline"][len(lf["outline"]) // 4]
+                for j in range(5):  # a cymose cluster in the axil
+                    a = math.radians(90 - side * (25 + 22 * j))
+                    q = p + 0.11 * H * (1 - 0.3 * f) * np.array([math.cos(a), math.sin(a)]) + [0, 0.02 * H]
+                    fl(q, min(0.95, 0.2 + 0.18 * abs(j - 2) + 0.3 * f), ang=math.degrees(a))
+            if k == 1:
+                out["node"] = p
+                out["cluster"] = p + [0.1 * H, 0.04 * H]
+        fl(top, 1.0)
+        out["terminal"] = top
+        out["peduncle"] = b + [0, 0.08 * H]
+        return out
+    if kind == "hypanthodium":
+        seg(b, b + [0, 0.15 * H], 2.0)
+        out["peduncle"] = b + [0, 0.08 * H]
+        c = b + [0, 0.52 * H]
+        R = 0.36 * H
+        th = np.linspace(math.radians(100), math.radians(440), 90)
+        rr = R * (1 + 0.12 * np.sin(th - math.pi / 2))
+        wall = np.c_[c[0] + rr * np.cos(th) * 0.9, c[1] + rr * np.sin(th)]
+        inner_r = rr - 0.07 * H
+        inner = np.c_[c[0] + inner_r * np.cos(th) * 0.88, c[1] + inner_r * np.sin(th)]
+        body = np.vstack([wall, inner[::-1]])
+        ax.add_patch(PathPatch(Path(np.vstack([body, body[:1]]), closed=True), facecolor=_fill("receptacle"),
+                               edgecolor=_edge("receptacle"), lw=0.9 * s, zorder=zorder))
+        ax.add_patch(PathPatch(Path(np.vstack([inner, inner[:1]]), closed=True), facecolor=P.mix(P.surface(), _fill("receptacle"), 0.2 if P.is_dark() else 0.3),
+                               edgecolor="none", zorder=zorder - 0.1))
+        for k, t in enumerate(th[6:-6:4]):  # flowers lining the cavity, pointing inwards
+            p = np.array([c[0] + (R - 0.07 * H) * 0.88 * (1 + 0.12 * math.sin(t - math.pi / 2)) * math.cos(t),
+                          c[1] + (R - 0.07 * H) * (1 + 0.12 * math.sin(t - math.pi / 2)) * math.sin(t)])
+            d = c - p
+            d /= np.hypot(*d)
+            q = p + d * 0.06 * H
+            seg(p, q, 0.6, z=zorder + 1)
+            ax.add_patch(Circle(q, 0.02 * H, facecolor=_fill("floret"), edgecolor=_edge("floret"), lw=0.4, zorder=zorder + 1.1))
+            out["flowers"].append(q)
+        out["receptacle"] = c + [R * 0.9, -0.1 * R]
+        out["ostiole"] = c + [0, R * 1.1]
+        out["flower"] = out["flowers"][len(out["flowers"]) // 3]
+        for sg in (-1, 1):  # ostiolar scales
+            _bract(ax, c + [sg * 0.05 * H, R * 1.08], 90 - sg * 70, 0.06 * H, zorder=zorder + 1)
         return out
     raise ValueError(f"unknown inflorescence {kind!r}")
 
@@ -2625,3 +2750,411 @@ def bud(ax, xy, size, angle=90.0, zorder=7):
     u = np.array([math.cos(math.radians(angle)), math.sin(math.radians(angle))])
     ax.plot(*np.array([xy - u * size * 0.1, xy + u * size * 0.42]).T, color=_edge("bud"), lw=0.6, zorder=zorder + 0.1)
     return xy
+
+
+# ============================================================================ epidermis in surface view: stomata
+
+STOMATAL_TYPES = (None, "anomocytic", "anisocytic", "paracytic", "diacytic", "tetracytic", "actinocytic", "gramineous")
+
+# subsidiary-cell layouts: (outer extent along the long axis, across, as multiples of the guard-pair semi-axes;
+# partition angles in degrees (parametric, 0 = along the long axis); sectors drawn (indices into partitions))
+_SUBSIDIARY = {
+    "paracytic": (1.04, 1.75, (20, 160, 200, 340), (0, 2)),
+    "diacytic": (1.6, 1.55, (90, 270), (0, 1)),
+    "anisocytic": (1.55, 1.7, (75, 150, 300), (0, 1, 2)),
+    "tetracytic": (1.5, 1.65, (40, 140, 220, 320), (0, 1, 2, 3)),
+    "actinocytic": (1.75, 1.9, (0, 60, 120, 180, 240, 300), (0, 1, 2, 3, 4, 5)),
+}
+
+
+def _ellipse_arc(a, b, t0, t1, n=30):
+    t = np.radians(np.linspace(t0, t1, n))
+    return np.c_[a * np.cos(t), b * np.sin(t)]
+
+
+def stoma(ax, center, length, angle=0.0, kind="kidney", state="open", subsidiary=None, chloroplasts=True, nucleus=True,
+          zorder=8):
+    """A stoma in surface (paradermal) view: two guard cells around the pore, with optional subsidiary cells.
+
+    length      length of the guard-cell pair (canvas units); ``angle`` the direction of its long axis (deg)
+    kind        "kidney" (reniform guard cells of most eudicots and many monocots) or "dumbbell" (grasses and
+                sedges: narrow middles and bulbous ends; always with two flanking subsidiary cells)
+    state       "open" (turgid guard cells bow apart) or "closed" (the pore is a slit)
+    subsidiary  None / "anomocytic" (no subsidiary cells: the neighbours are ordinary epidermal cells),
+                "anisocytic" (three, one distinctly smaller; Brassicaceae), "paracytic" (two, parallel to the
+                long axis; Rubiaceae, Magnoliaceae), "diacytic" (two, their common wall at right angles to the
+                guard cells; Caryophyllaceae, Acanthaceae), "tetracytic" (four; many monocots), "actinocytic"
+                (a ring of radiating cells)
+    Returns {"pore", "guard": [xy, xy], "subsidiary": [xy, ...], "outline": polygon of the whole stomatal
+    complex (canvas coordinates), "radius": its half-length, "chloroplast", "nucleus", "wall" (thickened
+    ventral wall)}.
+    """
+    c = np.asarray(center, float)
+    a = length / 2
+    op = state == "open"
+    rot = _rot(angle)
+
+    def W(pts):
+        return np.atleast_2d(np.asarray(pts, float)) @ rot.T + c
+    out = dict(guard=[], subsidiary=[], radius=a)
+    pore_fill = P.mix(P.surface(), P.muted(), 0.45)
+    if kind == "dumbbell":
+        tm, te = 0.065 * a, (0.2 if op else 0.17) * a
+        gap = 0.1 * a if op else 0.0
+        xs = np.linspace(-a, a, 121)
+        bump = _smoothstep((np.abs(xs) - 0.42 * a) / (0.3 * a))
+        cells = []
+        for sg in (1, -1):
+            yc = sg * (tm + gap + (te - tm - gap) * bump)
+            th = tm + (te - tm) * bump
+            capf = np.sqrt(np.clip(1 - ((np.abs(xs) - (a - te)) / te).clip(0) ** 2, 0, 1))
+            th = th * capf
+            up, lo = yc + th, yc - th
+            poly = np.vstack([np.c_[xs, up], np.c_[xs[::-1], lo[::-1]]])
+            cells.append(poly)
+        # subsidiary cells flank the guard cells (drawn first)
+        sub_out = []
+        for sg in (1, -1):
+            arc = _ellipse_arc(0.92 * a, 0.5 * a, 0, 180, 40) * [1, sg]
+            arc[:, 1] += sg * (te * 0.95)
+            poly = np.vstack([arc, [[-0.92 * a, sg * te * 0.95], [0.92 * a, sg * te * 0.95]]])
+            sub_out.append(poly)
+            ax.add_patch(Polygon(W(_chaikin(poly, 2)), closed=True, facecolor=_fill("subsidiary"), edgecolor=_edge("subsidiary"),
+                                 lw=0.8, zorder=zorder))
+            out["subsidiary"].append(W([0, sg * (te + 0.25 * a)])[0])
+        if op:
+            mid = np.abs(xs) < 0.5 * a
+            pore = np.vstack([np.c_[xs[mid], gap * (1 - (xs[mid] / (0.5 * a)) ** 2)],
+                              np.c_[xs[mid][::-1], -(gap) * (1 - (xs[mid][::-1] / (0.5 * a)) ** 2)]])
+            ax.add_patch(Polygon(W(pore), closed=True, facecolor=pore_fill, edgecolor="none", zorder=zorder + 0.05))
+        for k, poly in enumerate(cells):
+            ax.add_patch(Polygon(W(poly), closed=True, facecolor=_fill("guard"), edgecolor=_edge("guard"), lw=0.85,
+                                 zorder=zorder + 0.1))
+            sg = 1 if k == 0 else -1
+            out["guard"].append(W([0.8 * a, sg * te])[0])
+            if nucleus:  # an elongated nucleus in the narrow middle
+                ax.add_patch(Ellipse(W([0, sg * (tm + gap)])[0], 0.7 * a, tm * 1.1, angle=angle, facecolor=P.fill("chromatin"),
+                                     edgecolor=P.edge("chromatin"), lw=0.4, zorder=zorder + 0.2))
+            if chloroplasts:
+                for ex in (-1, 1):
+                    for j in range(2):
+                        q = W([ex * (a - te * (1.0 + 0.5 * j)), sg * te * (0.95 + 0.3 * (j - 0.5))])[0]
+                        ax.add_patch(Ellipse(q, te * 0.5, te * 0.32, angle=angle + 60 * j, facecolor=P.fill("thylakoid"),
+                                             edgecolor=P.edge("thylakoid"), lw=0.3, zorder=zorder + 0.2))
+        out["pore"] = c
+        out["wall"] = W([0.2 * a, tm + gap])[0]
+        out["nucleus"] = W([0.25 * a, tm + gap])[0]
+        out["chloroplast"] = W([a - te, te])[0]
+        out["outline"] = W(_ellipse_arc(0.98 * a, te + 0.5 * a, 0, 360, 80))
+        return out
+    # kidney-shaped guard cells
+    b = (0.8 if op else 0.68) * a
+    ap, hp = (0.52 if op else 0.48) * a, (0.2 if op else 0.025) * a
+    if subsidiary in _SUBSIDIARY:
+        fa, fb, parts, draw = _SUBSIDIARY[subsidiary]
+        A, Bo = a * fa, b * fb
+        parts = list(parts)
+        for i in draw:
+            t0, t1 = parts[i], parts[(i + 1) % len(parts)]
+            if t1 <= t0:
+                t1 += 360
+            scale = 0.78 if (subsidiary == "anisocytic" and i == 0) else 1.0
+            outer = _ellipse_arc(a + (A - a) * scale, b + (Bo - b) * scale, t0, t1)
+            inner = _ellipse_arc(a, b, t1, t0)
+            poly = np.vstack([outer, inner])
+            ax.add_patch(Polygon(W(poly), closed=True, facecolor=_fill("subsidiary"), edgecolor=_edge("subsidiary"), lw=0.8,
+                                 zorder=zorder, joinstyle="round"))
+            tm_ = math.radians((t0 + t1) / 2)
+            out["subsidiary"].append(W([(a + A) / 2 * math.cos(tm_) * (0.98 if scale == 1 else 0.9),
+                                        (b + Bo) / 2 * math.sin(tm_) * (0.98 if scale == 1 else 0.9)])[0])
+        out["outline"] = W(_ellipse_arc(A, Bo, 0, 360, 90))
+        out["radius"] = A
+    else:
+        out["outline"] = W(_ellipse_arc(a, b, 0, 360, 90))
+    xs = np.linspace(-ap, ap, 41)
+    py = hp * np.clip(1 - (xs / ap) ** 2, 0, 1) ** 0.75
+    for sg in (1, -1):
+        outer = _ellipse_arc(a, b, 0, 180, 60) * [1, sg]
+        poly = np.vstack([outer, [[-ap, 0]], np.c_[xs, sg * py], [[a, 0]]])
+        ax.add_patch(Polygon(W(poly), closed=True, facecolor=_fill("guard"), edgecolor=_edge("guard"), lw=0.85, zorder=zorder + 0.1,
+                             joinstyle="round"))
+        ax.plot(*W(np.c_[xs, sg * py]).T, color=_edge("guard"), lw=1.9, zorder=zorder + 0.15, solid_capstyle="round")
+        out["guard"].append(W([0, sg * (hp + b) / 2])[0])
+        ym = lambda x: sg * (b * math.sqrt(max(0.0, 1 - (x / a) ** 2)) + hp * max(0.0, 1 - (x / ap) ** 2) ** 0.75) / 2  # noqa: E731
+        if chloroplasts:
+            for x in np.linspace(-0.62 * a, 0.62 * a, 5):
+                if abs(x) < 0.2 * a and nucleus:
+                    continue
+                ax.add_patch(Ellipse(W([x, ym(x)])[0], 0.16 * a, 0.1 * a, angle=angle + math.degrees(math.atan2(-x * sg, a)) * 0.6,
+                                     facecolor=P.fill("thylakoid"), edgecolor=P.edge("thylakoid"), lw=0.3, zorder=zorder + 0.2))
+        if nucleus:
+            ax.add_patch(Ellipse(W([0, ym(0)])[0], 0.24 * a, 0.15 * a, angle=angle, facecolor=P.fill("chromatin"),
+                                 edgecolor=P.edge("chromatin"), lw=0.4, zorder=zorder + 0.2))
+    if op:
+        ax.add_patch(Polygon(W(np.vstack([np.c_[xs, py], np.c_[xs[::-1], -py[::-1]]])), closed=True, facecolor=pore_fill,
+                             edgecolor="none", zorder=zorder + 0.12))
+    out["pore"] = c
+    out["wall"] = W([0.15 * ap, hp])[0]
+    out["chloroplast"] = W([-0.62 * a, b * 0.45])[0]
+    out["nucleus"] = W([0, (b + hp) / 2])[0]
+    return out
+
+
+def _wavy(p, q, amp, waves, phase=0.0, n=24):
+    t = np.linspace(0, 1, n)[:, None]
+    d = q - p
+    L = np.hypot(*d)
+    nn = np.array([-d[1], d[0]]) / (L or 1)
+    return p + d * t + nn * amp * np.sin(math.pi * waves * t + phase) * np.sin(math.pi * t) ** 0.5
+
+
+def epidermis(ax, box, kind="eudicot", stomata=6, state="open", subsidiary="anomocytic", cell=None, wavy=0.5,
+              stoma_length=None, seed=0, zorder=5):
+    """A leaf epidermis in surface view (an epidermal peel) with stomata, in ``box`` = (x0, y0, x1, y1).
+
+    kind        "eudicot" (irregular jigsaw-shaped pavement cells with sinuous anticlinal walls; stomata
+                scattered in all directions), "monocot" (cells in longitudinal files along x, straight walls,
+                kidney stomata in rows, parallel to the leaf axis) or "grass" (long cells with wavy walls and
+                short cells in files; dumbbell stomata in rows with their subsidiary cells)
+    stomata     number of stomata (eudicot) or number of stomatal rows (monocot, grass)
+    subsidiary  stomatal type (see ``stoma``) for eudicot and monocot peels; ``wavy`` 0..1 sets how sinuous
+                the walls are; ``cell`` the pavement cell size (default from the box)
+    Returns {"stomata": [stoma anchors], "pavement": xy, "box"}.
+    """
+    from scipy.spatial import Voronoi
+
+    x0, y0, x1, y1 = box
+    Wd, Hd = x1 - x0, y1 - y0
+    rng = np.random.default_rng(seed)
+    cs = cell or min(Wd, Hd) / 5.5
+    sl = stoma_length or cs * 0.75
+    clip = Polygon([[x0, y0], [x1, y0], [x1, y1], [x0, y1]], closed=True, facecolor=_fill("pavement"), edgecolor=_edge("epidermis"),
+                   lw=1.0, zorder=zorder)
+    ax.add_patch(clip)
+    ec = _edge("epidermis")
+    out = dict(stomata=[], box=box)
+    segs = []
+    if kind == "eudicot":
+        centres = []
+        tries = 0
+        while len(centres) < stomata and tries < 2000:
+            tries += 1
+            p = np.array([rng.uniform(x0 + sl, x1 - sl), rng.uniform(y0 + sl, y1 - sl)])
+            if all(np.hypot(*(p - q)) > 2.6 * sl for q in centres):
+                centres.append(p)
+        angles = rng.uniform(0, 180, len(centres))
+        seeds = []
+        for p in centres:  # a ring of neighbours around each stoma
+            k = 5 if subsidiary in (None, "anomocytic") else 6
+            ph = rng.uniform(0, 2 * math.pi)
+            for j in range(k):
+                t = ph + 2 * math.pi * j / k
+                seeds.append(p + (sl * 0.95 + cs * 0.45) * np.array([math.cos(t), math.sin(t)]))
+        n = int(Wd * Hd / cs ** 2 * 3) + 20
+        cand = np.c_[rng.uniform(x0 - cs, x1 + cs, n), rng.uniform(y0 - cs, y1 + cs, n)]
+        for p in cand:
+            if any(np.hypot(*(p - q)) < sl * 1.25 + cs * 0.35 for q in centres):
+                continue
+            if all(np.hypot(*(p - q)) > cs * 0.8 for q in seeds):
+                seeds.append(p)
+        seeds = np.array(seeds)
+        vor = Voronoi(seeds)
+        for (i, j), rv in zip(vor.ridge_points, vor.ridge_vertices):
+            if -1 in rv:
+                continue
+            p, q = vor.vertices[rv[0]], vor.vertices[rv[1]]
+            L = np.hypot(*(q - p))
+            if L < 1e-6:
+                continue
+            waves = max(1, int(round(L / (cs * 0.32))))
+            segs.append(_wavy(p, q, wavy * cs * 0.07, waves, phase=0.0))
+        ax.add_collection(LineCollection(segs, colors=ec, linewidths=0.8, zorder=zorder + 0.2, clip_path=clip))
+        out["pavement"] = seeds[len(seeds) // 2] if len(seeds) else np.array([x0 + Wd / 2, y0 + Hd / 2])
+        for p, a in zip(centres, angles):
+            s_ = stoma(ax, p, sl, angle=a, state=state, subsidiary=subsidiary, zorder=zorder + 1)
+            cover = Polygon(s_["outline"], closed=True, facecolor=_fill("pavement"), edgecolor=ec, lw=0.8, zorder=zorder + 0.5)
+            ax.add_patch(cover)
+            out["stomata"].append(s_)
+        return out
+    # files of cells along x
+    grass = kind == "grass"
+    rows = max(3, int(round(Hd / (cs * 0.55))))
+    rh = Hd / rows
+    st_rows = set(int(round((k + 0.5) * rows / max(1, stomata))) for k in range(stomata)) if stomata else set()
+    st_rows = {min(rows - 1, max(0, r)) for r in st_rows}
+    for r in range(rows + 1):  # longitudinal walls
+        y = y0 + r * rh
+        if grass:
+            L = Wd
+            segs.append(_wavy(np.array([x0, y]), np.array([x1, y]), wavy * rh * 0.12, int(L / (rh * 0.35)), phase=r * 1.3, n=400))
+        else:
+            segs.append(np.array([[x0, y], [x1, y]]))
+    stom = []
+    for r in range(rows):
+        yb, yt = y0 + r * rh, y0 + (r + 1) * rh
+        x = x0 - rng.uniform(0, cs)
+        stomatal = r in st_rows
+        k = 0
+        while x < x1:
+            if stomatal and k % 2 == 1:
+                w = sl * (1.45 if grass else 1.15)
+                stom.append(np.array([x + w / 2, (yb + yt) / 2]))
+                x += w
+                segs.append(np.array([[x, yb], [x, yt]]))
+                if grass:  # a short cell (silica / cork cell) after each stoma
+                    x += rh * 0.6
+                    segs.append(np.array([[x, yb], [x, yt]]))
+            else:
+                ln = cs * (rng.uniform(1.6, 2.6) if grass else rng.uniform(0.9, 1.5))
+                if grass and not stomatal and rng.uniform() < 0.3:  # paired short cells
+                    ln = rh * 0.55
+                x += ln
+                segs.append(np.array([[x, yb], [x, yt]]))
+            k += 1
+    ax.add_collection(LineCollection(segs, colors=ec, linewidths=0.8, zorder=zorder + 0.2, clip_path=clip))
+    out["pavement"] = np.array([x0 + 0.37 * Wd, y0 + (min(set(range(rows)) - st_rows) + 0.5) * rh])
+    for p in stom:
+        if p[0] - sl / 2 < x0 or p[0] + sl / 2 > x1:
+            continue
+        if grass:
+            s_ = stoma(ax, p, sl * 1.35, angle=0, kind="dumbbell", state=state, zorder=zorder + 1)
+        else:
+            s_ = stoma(ax, p, sl * 0.78, angle=0, state=state, subsidiary=subsidiary if subsidiary != "anomocytic" else None,
+                       zorder=zorder + 1)
+        out["stomata"].append(s_)
+    return out
+
+
+# ============================================================================ lichen thallus in section
+
+
+def _hyphae_tangle(ax, rng, bbox, n, width, token="hypha", horizontal=0.5, zorder=6, clip=None, length=None):
+    """Loosely interwoven hyphae in bbox: smooth random curves drawn as thin tubes (outline + fill)."""
+    x0, y0, x1, y1 = bbox
+    W_, H_ = x1 - x0, y1 - y0
+    L = length or max(W_, H_) * 0.45
+    lw_o = width * 72 / 0.45 * 0.28  # outline width in points (relative to the canvas scale)
+    lines = []
+    for k in range(n):
+        p = np.array([rng.uniform(x0, x1), rng.uniform(y0, y1)])
+        a = rng.uniform(0, 2 * math.pi) if rng.uniform() > horizontal else rng.choice([0.0, math.pi]) + rng.normal(0, 0.4)
+        pts = [p]
+        for _ in range(14):
+            a += rng.normal(0, 0.35)
+            p = p + L / 14 * np.array([math.cos(a), math.sin(a)])
+            if not (y0 <= p[1] <= y1):
+                a = -a
+                p = np.array([p[0], min(y1, max(y0, p[1]))])
+            pts.append(p)
+        lines.append(_spline(np.array(pts), 50))
+    c1 = LineCollection(lines, colors=_edge(token), linewidths=lw_o + 1.0, zorder=zorder, capstyle="round")
+    c2 = LineCollection(lines, colors=_fill(token), linewidths=lw_o, zorder=zorder + 0.01, capstyle="round")
+    for c_ in (c1, c2):
+        if clip is not None:
+            c_.set_clip_path(clip)
+        ax.add_collection(c_)
+    return lines
+
+
+def lichen_section(ax, box, kind="heteromerous", rhizines=True, photobiont=None, seed=0, zorder=5):
+    """A transverse section of a foliose lichen thallus in ``box`` = (x0, y0, x1, y1).
+
+    kind        "heteromerous" (stratified: upper cortex of tightly packed hyphae (pseudoparenchyma), algal
+                layer of photobiont cells among hyphae, loose medulla, lower cortex with rhizines; most lichens)
+                or "homoiomerous" (unstratified: photobiont scattered through the thallus, often in a
+                gelatinous matrix with chains of cyanobacteria such as *Nostoc*; *Collema*)
+    rhizines    bundles of hyphae attaching the thallus to the substrate (heteromerous)
+    photobiont  "green" (a green alga such as *Trebouxia*: round cells) or "cyanobacterium" (bead chains);
+                default green for heteromerous, cyanobacterium for homoiomerous
+    Returns anchors: upper_cortex, algal_layer (heteromerous), medulla, lower_cortex, rhizine, photobiont,
+    hypha, matrix (homoiomerous).
+    """
+    x0, y0, x1, y1 = box
+    W_, H_ = x1 - x0, y1 - y0
+    rng = np.random.default_rng(seed)
+    out = {}
+    pb = photobiont or ("green" if kind == "heteromerous" else "cyanobacterium")
+    hy_w = H_ * 0.012
+    if kind == "heteromerous":
+        tb = y1  # thallus top
+        bt = y0 + (0.28 if rhizines else 0.05) * H_  # thallus bottom
+        T = tb - bt
+        uc0, al0, md0, lc1 = tb - 0.16 * T, tb - 0.34 * T, bt + 0.12 * T, bt
+        body = Polygon([[x0, bt], [x1, bt], [x1, tb], [x0, tb]], closed=True, facecolor=P.mix(P.surface(), _fill("hypha"), 0.2 if P.is_dark() else 0.35),
+                       edgecolor="none", zorder=zorder)
+        ax.add_patch(body)
+        # medulla and algal-layer hyphae (loose)
+        _hyphae_tangle(ax, rng, (x0, md0, x1, al0 + 0.12 * T), int(W_ * T / (hy_w * 18) * 0.9), hy_w, zorder=zorder + 0.1,
+                       clip=body, length=T * 0.6)
+        # cortices: tightly packed cells (pseudoparenchyma)
+        cs = 0.07 * T
+        for (ya, yb, name, sz) in ((uc0, tb, "upper", cs), (lc1, md0, "lower", cs * 0.85)):
+            sec = Section(seed=seed + (1 if name == "upper" else 2))
+            sec.fill((x0 - cs, ya, x1 + cs, yb), lambda pts, s_=sz: (["lichen_cortex"] * len(pts), np.full(len(pts), s_)), sz * 0.9)
+            sec.mirror_line(yb, above=True)
+            sec.mirror_line(ya, above=False)
+            sec.box_ghosts((x0 - 2 * cs, ya - cs, x1 + 2 * cs, yb + cs), sz)
+            clip = Polygon([[x0, ya], [x1, ya], [x1, yb], [x0, yb]], closed=True, facecolor="none", edgecolor="none")
+            ax.add_patch(clip)
+            sec.draw(ax, clip=clip, zorder=zorder + 0.3, style={"lichen_cortex": ("lichen_cortex", 0.6, 0.08, 0.0, 0)})
+        # photobiont cells in the algal layer
+        n = int(W_ / (0.05 * T) * 2.2)
+        cells = []
+        for _ in range(n * 3):
+            p = np.array([rng.uniform(x0, x1), rng.uniform(al0, uc0 + 0.02 * T)])
+            r = rng.uniform(0.032, 0.045) * T
+            if all(np.hypot(*(p - q)) > r + rq for q, rq in cells):
+                cells.append((p, r))
+            if len(cells) >= n:
+                break
+        for p, r in cells:
+            ax.add_patch(Circle(p, r, facecolor=_fill("photobiont"), edgecolor=_edge("photobiont"), lw=0.55, zorder=zorder + 0.2,
+                                clip_path=body))
+            ax.add_patch(Circle(p + [r * 0.2, r * 0.15], r * 0.38, facecolor=P.fill("thylakoid"), edgecolor="none",
+                                zorder=zorder + 0.21, clip_path=body))
+        out.update(upper_cortex=np.array([x0 + 0.62 * W_, (uc0 + tb) / 2]), algal_layer=np.array([x0 + 0.66 * W_, (al0 + uc0) / 2]),
+                   medulla=np.array([x0 + 0.6 * W_, (md0 + al0) / 2]), lower_cortex=np.array([x0 + 0.58 * W_, (lc1 + md0) / 2]),
+                   photobiont=cells[len(cells) // 2][0], hypha=np.array([x0 + 0.4 * W_, (md0 + al0) / 2]))
+        ax.plot([x0, x1, x1, x0, x0], [bt, bt, tb, tb, bt], color=_edge("lichen_cortex"), lw=0.9, zorder=zorder + 0.4)
+        if rhizines:
+            m = max(2, int(W_ / (0.6 * T)))
+            for k in range(m):
+                xr = x0 + W_ * (k + 0.5) / m + rng.uniform(-0.1, 0.1) * W_ / m
+                strands = []
+                for j in range(5):
+                    xs = xr + (j - 2) * hy_w * 1.3
+                    yy = np.linspace(bt, y0 + 0.03 * H_, 20)
+                    strands.append(np.c_[xs + np.sin(np.linspace(0, 3, 20) + j) * hy_w * 1.5 + (yy - bt) * 0.05 * (j - 2), yy])
+                ax.add_collection(LineCollection(strands, colors=_edge("rhizine"), linewidths=1.6, zorder=zorder + 0.35))
+                ax.add_collection(LineCollection(strands, colors=_fill("rhizine"), linewidths=0.8, zorder=zorder + 0.36))
+                if k == m // 2:
+                    out["rhizine"] = np.array([xr, (bt + y0) / 2])
+        return out
+    # homoiomerous: a gelatinous thallus with the photobiont scattered throughout
+    tb, bt = y1, y0 + 0.05 * H_
+    T = tb - bt
+    body = Polygon([[x0, bt], [x1, bt], [x1, tb], [x0, tb]], closed=True, facecolor=_fill("lichen_matrix"), edgecolor=_edge("lichen_matrix"),
+                   lw=0.9, zorder=zorder)
+    ax.add_patch(body)
+    _hyphae_tangle(ax, rng, (x0, bt, x1, tb), int(W_ * T / (hy_w * 18) * 0.6), hy_w, zorder=zorder + 0.1, clip=body,
+                   horizontal=0.2, length=T * 0.7)
+    first = None
+    for k in range(int(W_ * T / (0.25 * T) ** 2 * 1.0)):
+        p = np.array([rng.uniform(x0, x1), rng.uniform(bt + 0.05 * T, tb - 0.05 * T)])
+        if pb == "cyanobacterium":
+            a = rng.uniform(0, 2 * math.pi)
+            r = 0.028 * T
+            for j in range(rng.integers(4, 9)):
+                a += rng.normal(0, 0.45)
+                p = p + 2 * r * 0.95 * np.array([math.cos(a), math.sin(a)])
+                big = j == 3
+                ax.add_patch(Circle(p, r * (1.3 if big else 1.0), facecolor=_fill("cyanobiont") if not big else P.light(tok("cyanobiont")),
+                                    edgecolor=_edge("cyanobiont"), lw=0.5, zorder=zorder + 0.2, clip_path=body))
+        else:
+            r = 0.04 * T
+            ax.add_patch(Circle(p, r, facecolor=_fill("photobiont"), edgecolor=_edge("photobiont"), lw=0.55, zorder=zorder + 0.2,
+                                clip_path=body))
+        first = first if first is not None else p
+    out.update(photobiont=first, matrix=np.array([x0 + 0.5 * W_, bt + 0.5 * T]), hypha=np.array([x0 + 0.3 * W_, bt + 0.4 * T]),
+               upper_cortex=np.array([x0 + 0.5 * W_, tb]), lower_cortex=np.array([x0 + 0.5 * W_, bt]))
+    return out
