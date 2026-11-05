@@ -25,6 +25,8 @@ Morphology, however, says little about phylogeny. Rods and cocci occur in many u
 
 The sizes of prokaryotes, from about $0.2\,\mu\mathrm{m}$ to the centimeter-long cells of *Thiomargarita magnifica*, and the importance of the surface-to-volume ratio were discussed in [7.11.1](/7.11.1#sec-1.9). Cells near the lower limit, with volumes of about $0.01\,\mu\mathrm{m}^3$, are common among uncultured lineages, notably the **candidate phyla radiation**, whose small genomes lack many biosynthetic pathways and whose members probably live attached to other cells ([7.11.18](/7.11.18)). They pass through the $0.2\,\mu\mathrm{m}$ filters that are routinely used to sterilize solutions, so filtration through such filters does not remove every cell.
 
+Structures far below this limit, "nanobacteria" of $50$–$200\,\mathrm{nm}$ reported in the 1990s from blood, kidney stones and geological samples, are not cells: a bacterium needs room for at least a ribosome set and a genome, and the particles turned out to be aggregates of calcium phosphate or carbonate with adsorbed proteins that grow and "multiply" in culture medium by crystal chemistry (shown in 2008). Reports of cells smaller than the candidate-phyla-radiation bacteria should be read with this precedent in mind.
+
 ## 2.2. The Cytoplasmic Membrane
 
 ### 2.2.1. The Bacterial Membrane

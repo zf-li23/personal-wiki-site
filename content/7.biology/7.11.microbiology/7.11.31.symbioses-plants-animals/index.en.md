@@ -20,6 +20,8 @@ The word was introduced by de Bary (1879) for "the living together of unlike org
 | + / − | parasitism, pathogenesis | *Agrobacterium* (crown gall); *Wolbachia* in many insects |
 | − / 0 or 0 / − | amensalism | antibiotic production, acidification by lactic acid bacteria |
 
+Chinese textbooks traditionally list five relationships among microorganisms and between microorganisms and other organisms. Protocooperation, a term for mutual benefit without obligate dependence, is the + / + case in which each partner can live alone, as when cellulose-degrading bacteria release sugars that a nitrogen-fixing bacterium uses while it supplies fixed nitrogen in return; obligate mutualism corresponds to the narrow sense of "symbiosis"; parasitism is the + / − case; antagonism is amensalism in the table above, including the action of antibiotics and organic acids; and predation (*Bdellovibrio* on gram-negative bacteria, protozoa grazing on bacteria) is the + / − case in which the prey is killed and consumed.
+
 Symbioses also differ in intimacy and dependence. *Ectosymbionts* live on the surface of the host or in its gut lumen; endosymbionts live inside its tissues or cells. An *obligate* symbiont cannot live without its host; a *facultative* one can. A host can be obligately dependent on its symbiont too: aphids freed of *Buchnera* by antibiotics grow poorly and do not reproduce. The host together with its persistent symbionts forms a **holobiont** ([Definition 38.9.1](/7.5.38#def-38.9.1)).
 
 ### 31.1.2. How Symbionts Are Passed On

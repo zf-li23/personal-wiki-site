@@ -183,7 +183,7 @@ Media are used as liquids (broths), as solids and as semisolids. Liquid media se
 
 A medium must supply every nutrient in usable form and in balanced amounts, and provide physicochemical conditions within the range the organism tolerates:
 
-- *Nutrients.* The carbon and energy source in the largest amount (grams per liter), nitrogen next, then phosphorus, sulfur, $\ce{Mg^2+}$ and $\ce{K+}$, and growth factors in milligrams or less; the ratio of carbon to nitrogen decides whether the cells grow or store carbon as reserve polymers.
+- *Nutrients.* The carbon and energy source in the largest amount (grams per liter), nitrogen next, then phosphorus, sulfur, $\ce{Mg^2+}$ and $\ce{K+}$, and growth factors in milligrams or less; the ratio of carbon to nitrogen decides whether the cells grow or store carbon as reserve polymers. The form of nitrogen also shifts the pH: taking up ammonium leaves protons behind, so a medium with an ammonium salt as the main nitrogen source acidifies as cells grow, whereas a medium whose nitrogen comes from amino acids or peptone, with little sugar, turns alkaline as the amino groups are released as ammonia.
 - *pH.* Most bacteria grow best near neutrality, fungi in slightly acidic media. Fermenters acidify their medium as they grow, so media are buffered with phosphate or contain solid $\ce{CaCO3}$ as a reserve base.
 - *Osmotic strength and water activity.* Marine organisms need about 3% NaCl, halophiles much more; the general principles of **water activity** are in 7.11.9.
 - *Redox potential.* Strict anaerobes need a low redox potential, provided by reducing agents (Section 4.5.5).
