@@ -33,7 +33,7 @@ The binding is a matter of degree, not of switching. Affinities and concentratio
 
 ### 11.2.2. Negative Control: Repression and Induction
 
-In negative control a **repressor** bound near the promoter prevents transcription, and a small molecule (an **effector**) decides whether it binds.
+In negative control a **repressor** bound near the promoter prevents transcription, and a small molecule (an effector) decides whether it binds.
 
 - *Repression.* The enzymes of a biosynthetic pathway are made unless the product is already available. Adding arginine to a culture of *E. coli* stops the synthesis of the arginine biosynthetic enzymes within minutes while total protein synthesis continues unchanged. Arginine is a **corepressor**: bound to the inactive repressor ArgR it converts it into a form that binds the operators of the *arg* operons.
 - *Induction.* The enzymes of a catabolic pathway are made only when the substrate is there. Lactose induces β-galactosidase because its isomer allolactose, the **inducer**, binds LacI and lowers its affinity for the operator.

@@ -9539,7 +9539,7 @@ terms:
   - { zh: 突变次序物种形成, en: mutation-order speciation }
   - { zh: 魔法性状, en: magic trait, aliases: [speciation trait, magic traits] }
   - { zh: 寄主宗, en: host race, aliases: [host races] }
-  - { zh: 分化岛, en: genomic island of divergence, aliases: [genomic islands, island of speciation, genomic island of speciation] }
+  - { zh: 分化岛, en: genomic island of divergence, aliases: [island of speciation, genomic island of speciation, islands of divergence] }
   - { zh: 同倍体杂交物种形成, en: homoploid hybrid speciation }
   - { zh: 囚徒困境, en: "prisoner's dilemma" }
   - { zh: 以牙还牙, en: tit for tat }
@@ -9611,7 +9611,7 @@ terms:
   # biology: microbiology (7.11); homonyms of terms in other disciplines are scoped to 7
   - { zh: 微生物, en: microorganism, aliases: [microbe, microorganisms, 微生物体] }
   - { zh: 微生物学, en: microbiology }
-  - { zh: 科赫法则, en: "Koch's postulates", aliases: [科赫原则] }
+  - { zh: 科赫法则, en: "Koch's postulates", aliases: [科赫原则, Koch 法则] }
   - { zh: 纯培养, en: pure culture }
   - { zh: 富集培养, en: enrichment culture }
   - { zh: 无菌技术, en: aseptic technique }
@@ -9775,9 +9775,9 @@ terms:
   - { zh: 16S rRNA 基因, en: 16S rRNA gene, aliases: [16S rRNA, 16S] }
   - { zh: 伯杰氏手册, en: "Bergey's Manual" }
   - { zh: 候选门辐射, en: candidate phyla radiation, aliases: [CPR] }
-  - { zh: 变形菌门, en: Pseudomonadota, aliases: [Proteobacteria, 假单胞菌门] }
-  - { zh: 厚壁菌门, en: Bacillota, aliases: [Firmicutes] }
-  - { zh: 放线菌门, en: Actinomycetota, aliases: [Actinobacteria, 放线菌门] }
+  - { zh: 假单胞菌门, en: Pseudomonadota, aliases: [Proteobacteria, 变形菌门] }
+  - { zh: 芽孢杆菌门, en: Bacillota, aliases: [Firmicutes, 厚壁菌门] }
+  - { zh: 放线菌门, en: Actinomycetota, aliases: [Actinobacteria] }
   - { zh: 拟杆菌门, en: Bacteroidota, aliases: [Bacteroidetes] }
   - { zh: 蓝细菌, en: cyanobacteria, aliases: [Cyanobacteria, 蓝藻, 蓝绿藻] }
   - { zh: 螺旋体, en: spirochete, aliases: [spirochetes, Spirochaetota, 螺旋体门] }
@@ -9791,7 +9791,7 @@ terms:
   - { zh: 阿斯加德古菌, en: Asgard archaea, aliases: [Asgardarchaeota, 阿斯加德超门] }
   - { zh: DPANN 超门, en: DPANN, aliases: [DPANN superphylum] }
   - { zh: 奇古菌门, en: Nitrososphaerota, aliases: [Thaumarchaeota, 奇古菌] }
-  - { zh: 极端嗜盐古菌, en: extreme halophile, aliases: [haloarchaea, 嗜盐古菌] }
+  - { zh: 极端嗜盐古菌, en: extreme halophile, aliases: [haloarchaea, 嗜盐古菌, 极端嗜盐菌] }
   - { zh: 原生生物, en: protist, aliases: [protists, 原生生物界] }
   - { zh: 纤毛虫, en: ciliate, aliases: [ciliates, 纤毛虫类] }
   - { zh: 甲藻, en: dinoflagellate, aliases: [dinoflagellates, 腰鞭毛虫] }
@@ -9942,7 +9942,7 @@ terms:
   - { zh: 生物农药, en: biopesticide, aliases: [biopesticides, 微生物农药] }
   - { zh: 荚膜, en: capsule, scope: ["7"] }
   - { zh: 稳定期, en: stationary phase, scope: ["7.11"] }
-  - { zh: 基因组岛, en: genomic island }
+  - { zh: 基因组岛, en: genomic island, aliases: [genomic islands] }
   - { zh: 抗菌药物耐药性, en: antimicrobial resistance, aliases: [AMR, 抗生素耐药性, antibiotic resistance] }
   - { zh: 病毒包膜, en: viral envelope, aliases: [envelope], scope: ["7.11"] }
   - { zh: 流产感染, en: abortive infection }

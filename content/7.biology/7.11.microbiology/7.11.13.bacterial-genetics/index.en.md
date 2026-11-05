@@ -159,7 +159,7 @@ A **mutant** differs from the **wild type** in genotype; it need not differ in p
 | Carbon-source | loss of a catabolic enzyme or transporter | colour on an indicator medium (MacConkey, EMB) |
 | Morphological and colonial | capsule, pigment, flagella, LPS O-antigen | colony appearance: rough instead of smooth, unpigmented, compact instead of spreading |
 
-Alongside these, phase variation — the reversible, programmed switching of surface structures by inversion of a promoter, slipped-strand mispairing of repeats or epigenetic methylation — generates heritable variation without mutation, and is treated with immune evasion in [7.11.34](/7.11.34).
+Alongside these, *phase variation* — the reversible, programmed switching of surface structures by inversion of a promoter, slipped-strand mispairing of repeats or epigenetic methylation — generates heritable variation without mutation, and is treated with immune evasion in [7.11.34](/7.11.34).
 
 ### 13.4.2. Rates, Reversion and Suppression
 

@@ -156,7 +156,7 @@ In every case the virus is necessary but not sufficient: the cancers appear in a
 
 ## 27.9. Emergence
 
-A **zoonosis** is an infection transmissible from animals to humans, and most new human viruses are zoonotic. Emergence is not a single event but a sequence of barriers, each of which must be crossed.
+A *zoonosis* is an infection transmissible from animals to humans, and most new human viruses are zoonotic. Emergence is not a single event but a sequence of barriers, each of which must be crossed.
 
 1. *Contact.* The reservoir host and people must meet, often through agriculture, bushmeat hunting, live-animal markets, deforestation or the trade in exotic animals, and sometimes through an intermediate amplifying host.
 2. *Infection of a human cell.* The virus must use a receptor present in humans, or acquire the ability to; the receptor is usually the first barrier and often the main one. Beyond entry there are the restriction factors of §27.3, which are frequently species-specific — a major part of what makes a virus "adapted" to one host.

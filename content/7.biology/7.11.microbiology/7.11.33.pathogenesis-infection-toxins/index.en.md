@@ -11,7 +11,7 @@ The structures used here were introduced earlier: the cell envelope and lipopoly
 
 **Definition 33.1.1 (Pathogen)** A **pathogen** is an organism capable of causing disease in a host. **Pathogenicity** is the ability to cause disease — a qualitative, species- or strain-level property — while **virulence** is the degree of damage inflicted, a quantitative property of a particular strain measured in a particular host.
 
-The distinction matters because virulence is not an intrinsic constant. It depends on the strain (*Escherichia coli* ranges from a harmless gut commensal to the cause of haemolytic uraemic syndrome), on the route of delivery, and on the host's age, nutrition, genetics and existing microbiota ([7.11.32](/7.11.32)). An **opportunistic pathogen** causes disease only when these conditions favour it: *Pseudomonas aeruginosa* is harmless on intact skin and lethal in a burn patient.
+The distinction matters because virulence is not an intrinsic constant. It depends on the strain (*Escherichia coli* ranges from a harmless gut commensal to the cause of haemolytic uraemic syndrome), on the route of delivery, and on the host's age, nutrition, genetics and existing microbiota ([7.11.32](/7.11.32)). An *opportunistic pathogen* causes disease only when these conditions favour it: *Pseudomonas aeruginosa* is harmless on intact skin and lethal in a burn patient.
 
 Several further terms are used throughout.
 
