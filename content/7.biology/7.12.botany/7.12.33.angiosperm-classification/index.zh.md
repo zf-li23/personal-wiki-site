@@ -371,10 +371,10 @@ APG IV 的骨架如下（图 33.5.1）。被子植物先依次分出无油樟目
 | | 金粟兰科（Chloranthaceae） | 金粟兰目 | [35](/7.12.35) |
 | 马兜铃目 | 马兜铃科（Aristolochiaceae） | 胡椒目（扩大，含囊粉花科、菌花科） | [35](/7.12.35) |
 | 八角目 | 八角科（Illiciaceae）、五味子科（Schisandraceae） | 木兰藤目，合并为广义的五味子科 | [34](/7.12.34) |
-| 睡莲目 | 睡莲科（Nymphaeaceae，含合瓣莲科）、莼菜科（Cabombaceae） | 睡莲目（ANA 演化阶） | [34](/7.12.34) |
+| 睡莲目 | 睡莲科（Nymphaeaceae，含合瓣莲属）、莼菜科（Cabombaceae） | 睡莲目（ANA 演化阶） | [34](/7.12.34) |
 | | 莲科（Nelumbonaceae） | 山龙眼目（基部真双子叶） | [40](/7.12.40) |
 | | 金鱼藻科（Ceratophyllaceae） | 金鱼藻目 | [34](/7.12.34) |
-| 毛茛目 | 毛茛科（Ranunculaceae）、小檗科（Berberidaceae）、木通科（Lardizabalaceae，并入大血藤科）、防己科（Menispermaceae）、星叶草科（Circaeasteraceae） | 毛茛目（基部真双子叶） | [40](/7.12.40) |
+| 毛茛目 | 毛茛科（Ranunculaceae）、小檗科（Berberidaceae）、木通科（Lardizabalaceae，含大血藤科）、防己科（Menispermaceae）、星叶草科（Circaeasteraceae） | 毛茛目（基部真双子叶） | [40](/7.12.40) |
 | | 清风藤科（Sabiaceae） | 山龙眼目 | [40](/7.12.40) |
 | | 马桑科（Coriariaceae） | 葫芦目（豆类） | [43](/7.12.43) |
 | 罂粟目 | 罂粟科（Papaveraceae）、紫堇科（Fumariaceae） | 毛茛目，合并为广义的罂粟科（紫堇亚科） | [40](/7.12.40) |
