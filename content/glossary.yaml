@@ -10733,7 +10733,7 @@ terms:
   - { zh: 双相吸收, en: biphasic uptake, aliases: [dual-isotherm uptake] }
   - { zh: 生理酸性盐, en: physiologically acid salt }
   - { zh: 生理碱性盐, en: physiologically alkaline salt }
-  - { zh: 单盐毒害, en: toxicity of single salt }
+  - { zh: 单盐毒害, en: single-salt toxicity, aliases: [toxicity of single salt] }
   - { zh: 离子拮抗, en: ion antagonism }
   - { zh: 质膜 H⁺-ATP 酶, en: plasma membrane H⁺-ATPase, aliases: [PM H⁺-ATPase, 质子泵], scope: ["7.13"] }
   - { zh: H⁺-焦磷酸酶, en: H⁺-pyrophosphatase, aliases: [H⁺-PPase, V-PPase] }
