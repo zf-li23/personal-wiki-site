@@ -1,7 +1,7 @@
 ---
 title: The Origin of Vascular Plants and the Lycophytes
-description: "Characteristics of vascular plants; the stele concept, modes of xylem development, and stele types (protostele, siphonostele, dictyostele, polycyclic stele, eustele, atactostele, cladosiphonic stele), leaf and branch gaps, and stelar theory with its limits; early vascular plants (Rhynia and Aglaophyton from the Rhynie chert, Cooksonia, zosterophylls, Asteroxylon, Baragwanathia, trimerophytes, the Early Devonian floras of Yunnan); the five basic processes of the telome theory and the origin of megaphylls, microphylls, sporophylls, and roots; the lycophytes (Lycopodiales, Selaginellales, and Isoetales in PPG I): morphology, life cycles, and representative plants; fossil lycophytes and coal formation."
-source_hash: 8a37c9609b28
+description: "Characteristics of vascular plants; the stele concept, modes of xylem development, and stele types (protostele, siphonostele, dictyostele, polycyclic stele, eustele, atactostele, arthrostele), leaf and branch gaps, and stelar theory with its limits; early vascular plants (Rhynia and Aglaophyton from the Rhynie chert, Cooksonia, zosterophylls, Asteroxylon, Baragwanathia, trimerophytes, the Early Devonian floras of Yunnan); the five basic processes of the telome theory and the origin of megaphylls, microphylls, sporophylls, and roots; the lycophytes (Lycopodiales, Selaginellales, and Isoetales in PPG I): morphology, life cycles, and representative plants; fossil lycophytes and coal formation."
+source_hash: 40768ee26651
 ---
 
 In bryophytes the gametophyte is the main plant body and the sporophyte remains attached to it for life, so plant height is limited by the gametophyte's dependence on water ([7.12.15](/7.12.15)). Vascular plants took a different path: the sporophyte became an independent, repeatedly branching plant with lignified conducting tissue that can lift water from the soil to a height of tens of meters, while the gametophyte shrank until it was fed entirely by the sporophyte. This chapter describes how that path began. We first treat the general features of vascular plants (§16.1) and the stele, which describes how vascular tissue is arranged in the stem and is the anatomical character most often used to compare groups of vascular plants (§16.2). We then turn to the early vascular plants of the Silurian and Devonian (§16.3) and the theories of the origin of root, stem, and leaf based on them (§16.4). Finally we treat the earliest-diverging lineage of living vascular plants, the lycophytes (§16.5), and the arborescent lycophytes whose remains formed Carboniferous coal (§16.6). Ferns (including horsetails and whisk ferns) are treated in [7.12.17](/7.12.17) and the origin of the seed in [7.12.25](/7.12.25); the life cycles of all spore-bearing plants and their adaptation to land are summarized in [7.12.18](/7.12.18). The cells of vascular tissue (tracheids, vessel elements, sieve cells, and so on) are described in [7.12.5](/7.12.5), and the geological time scale and the colonization of land in general in [7.10.29](/7.10.29#sec-29.5.2).
@@ -52,7 +52,7 @@ The first xylem to mature is the protoxylem and the later xylem is the metaxylem
 
 **Definition 16.2.2 (Exarch, Mesarch, and Endarch)** Primary xylem that matures from the outside inward, with the protoxylem on the outside, is **exarch**; primary xylem that matures from the inside outward, with the protoxylem on the inside (toward the center of the stem), is **endarch**; and primary xylem with the protoxylem in the middle of the metaxylem, maturing from the middle toward both the inside and the outside, is mesarch.
 
-Exarch xylem occurs in the stems of lycophytes and in the roots of all vascular plants; mesarch xylem occurs in many ferns (whisk ferns, *Osmunda*, bracken) and in early euphyllophytes; endarch xylem occurs in horsetails, adder's-tongue ferns, and the stems of seed plants. The exarch condition is generally considered the most primitive and the endarch the most advanced; but roots are always exarch, which is related to the need for the protoxylem of the root to connect first with the root-hair zone, and so cannot simply be explained as "primitive".
+Exarch xylem occurs in the stems of lycophytes and in the roots of all vascular plants; mesarch xylem occurs in many ferns (*Osmunda*, bracken) and in early euphyllophytes; endarch xylem occurs in horsetails, adder's-tongue ferns, and the stems of seed plants. The exarch condition is generally considered the most primitive and the endarch the most advanced; but roots are always exarch, which is related to the need for the protoxylem of the root to connect first with the root-hair zone, and so cannot simply be explained as "primitive".
 
 ### 16.2.2. The Protostele
 
@@ -78,11 +78,11 @@ When the internodes of the stem are very short and the leaves very densely arran
 
 The dictyostele is the most common stele of leptosporangiate ferns (Polypodiales and others); polycyclic steles occur in the thick rhizomes or stems of *Pteridium*, tree ferns, and others. The stem of *Selaginella* often contains two to many protosteles, which is another kind of dissection (polystely).
 
-### 16.2.5. The Eustele, Atactostele, and Cladosiphonic Stele
+### 16.2.5. The Eustele, Atactostele, and Arthrostele
 
 **Definition 16.2.7 (Eustele and Atactostele)** A stele in which discrete vascular bundles are arranged in a ring around a pith, with parenchyma (pith rays) between the bundles, and in which each bundle has phloem outside and xylem inside, is a **eustele**; it occurs in the stems of progymnosperms, gymnosperms, and most eudicots. A stele in which the vascular bundles are scattered in the ground tissue, with no clear boundary between pith and cortex, is an **atactostele**; it occurs in the stems of most monocots.
 
-The stem of *Equisetum* has a ring of vascular bundles facing the longitudinal ridges of the stem surface; in each bundle the protoxylem breaks down into a carinal canal, and the center of the stem is a hollow pith cavity. Chinese textbooks call this a cladosiphonic stele: the stele is a continuous tube at the node and a ring of discrete bundles in the internode. Its xylem is endarch, and many English textbooks regard it as a kind of eustele ([7.12.17](/7.12.17)).
+The stem of *Equisetum* has a ring of vascular bundles facing the longitudinal ridges of the stem surface; in each bundle the protoxylem breaks down into a carinal canal, and the center of the stem is a hollow pith cavity. This is called an arthrostele (jointed stele): the stele is a continuous tube at the node and a ring of discrete bundles in the internode. Its xylem is endarch, and many English textbooks regard it as a kind of eustele ([7.12.17](/7.12.17)).
 
 ### 16.2.6. Evolution of the Stele and Stelar Theory
 
@@ -93,7 +93,7 @@ Stelar theory was proposed by Van Tieghem and Douliot (1886): stem and root both
 - As leaf gaps in the siphonostele increase and overlap, they give rise to the dictyostele and the polycyclic stele;
 - With still more leaf gaps and shorter internodes, the eustele of seed plants arises, and from the eustele the atactostele of monocots.
 
-![The main types of stele (schematic cross sections of stems; xylem blue, phloem orange, parenchyma and pith light, endodermis a thin dark line). Top row: three kinds of protostele (haplostele, actinostele, plectostele), the ectophloic siphonostele and the amphiphloic siphonostele (solenostele). Bottom row: dictyostele (each meristele surrounded by an endodermis), a two-ringed polycyclic stele, the cladosiphonic stele of *Equisetum* (bundles facing the ridges, carinal canals on the inner side, central pith cavity), eustele, and atactostele. The arrows show the evolutionary sequence of stelar theory; the dashed arrow shows the conclusion of modern comparative anatomy: the eustele evolved from the protostele directly, through the progymnosperms, without passing through the siphonostele of ferns.](./plots/steles.py)
+![The main types of stele (schematic cross sections of stems; xylem blue, phloem orange, parenchyma and pith light, endodermis a thin dark line). Top row: three kinds of protostele (haplostele, actinostele, plectostele), the ectophloic siphonostele and the amphiphloic siphonostele (solenostele). Bottom row: dictyostele (each meristele surrounded by an endodermis), a two-ringed polycyclic stele, the arthrostele of *Equisetum* (bundles facing the ridges, carinal canals on the inner side, central pith cavity), eustele, and atactostele. The arrows show the evolutionary sequence of stelar theory; the dashed arrow shows the conclusion of modern comparative anatomy: the eustele evolved from the protostele directly, through the progymnosperms, without passing through the siphonostele of ferns.](./plots/steles.py)
 
 Ontogeny often "recapitulates" this sequence: in many ferns the lower part of a young stem is a protostele, which changes upward into a siphonostele and a dictyostele (recapitulation is discussed in [7.12.18](/7.12.18)). Stelar theory provided a common language for comparing vascular plants, but it has three limitations:
 
@@ -340,7 +340,7 @@ Stele types (Definitions 16.2.1–16.2.7):
 | Amphiphloic siphonostele (solenostele) | Pith present, phloem on both sides of the xylem | Present, not overlapping | Mesarch | *Dennstaedtia*, *Marsilea* |
 | Dictyostele | Overlapping leaf gaps, a ring of meristeles | Present, overlapping | Mesarch | Most Polypodiales |
 | Polycyclic stele | Vascular bundles in two or more rings | Present | Mesarch | *Pteridium*, tree ferns |
-| Cladosiphonic stele | Tubular at the node, a ring of bundles facing the ridges in the internode, with carinal canals and a pith cavity | — | Endarch | *Equisetum* |
+| Arthrostele | Tubular at the node, a ring of bundles facing the ridges in the internode, with carinal canals and a pith cavity | — | Endarch | *Equisetum* |
 | Eustele | A ring of discrete collateral bundles around a pith | Leaf trace gaps (not homologous) | Endarch | Progymnosperms, gymnosperms, eudicots |
 | Atactostele | Bundles scattered in the ground tissue | — | Endarch | Monocots |
 

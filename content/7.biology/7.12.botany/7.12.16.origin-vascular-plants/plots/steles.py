@@ -97,7 +97,7 @@ for k in range(12):
     ax.add_patch(Circle((x - 0.08 * np.cos(a), y - 0.08 * np.sin(a)), 0.06, facecolor=P.surface(), edgecolor=XE, lw=0.4, zorder=6))
     a2 = a + np.pi / 12
     ax.add_patch(Circle((c[0] + 1.58 * np.cos(a2), c[1] + 1.58 * np.sin(a2)), 0.17, facecolor=P.surface(), edgecolor=GE, lw=0.5, zorder=4))
-title(c, "Cladosiphonic stele", "Equisetum")
+title(c, "Arthrostele", "Equisetum")
 c = (xs[3], y2); stem(c)
 for k in range(10):
     a = 2 * np.pi * k / 10

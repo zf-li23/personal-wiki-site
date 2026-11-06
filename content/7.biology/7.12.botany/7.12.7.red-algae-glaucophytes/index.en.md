@@ -1,7 +1,7 @@
 ---
 title: Red Algae and Glaucophytes
 description: Archaeplastida and primary endosymbiosis; glaucophytes and the cyanelle; red algal construction (uniaxial and multiaxial thalli, pit connections), cell walls and plastids, nonflagellate reproduction (monospores, tetraspores, spermatangia and carpogonia, the carposporophyte), the triphasic life cycle; current classification and representative genera (Porphyridium, Pyropia, Gelidium, Gracilaria, Polysiphonia, Batrachospermum, coralline algae); fossils and economic importance.
-source_hash: f66263bedae5
+source_hash: dbee59410839
 ---
 
 The red algae are an ancient and highly specialized group. They share an origin with the green algae and land plants, since all three acquired their plastids by a single primary endosymbiosis, yet they took a completely different path. No cell in the entire life cycle has a flagellum; the nonmotile sperm reach the female organ on water currents, and the zygote remains on the parent and develops into a parasitic diploid generation, which gives rise to the triphasic life cycle found nowhere else among plants. The cell walls contain agar and carrageenan, important industrial raw materials, and nori (*Pyropia* and relatives) is among the most valuable cultivated seaweeds in the world.
@@ -91,7 +91,7 @@ Older textbooks divided red algal life cycles into "with sporophyte" and "withou
 
 ### 7.4.1. Classification
 
-Traditional classification divided the red algae (a phylum with a single class) into two subclasses: the Bangioideae, with simple thalli, diffuse growth, usually no pit connections between cells, and stellate plastids; and the Florideae, with complex thalli, apical growth, pit connections and a carposporophyte. In some textbooks the two are raised to the classes Bangiophyceae and Florideophyceae. Molecular phylogeny shows that the Florideophyceae form a monophyletic group, whereas the "Bangiophyceae" are a paraphyletic grade: the unicellular and simple groups included in it belong to several independent lineages. The current classification (Yoon et al. 2006, 2016) divides the red algae into three subphyla and seven classes:
+Traditional classification divided the red algae (a phylum with a single class) into two subclasses: the Bangioideae, with simple thalli, diffuse growth, usually no pit connections between cells, and stellate plastids; and the Florideae, with complex thalli, apical growth, pit connections and a carposporophyte. In some textbooks the two are raised to the classes Bangiophyceae and Florideophyceae. Molecular phylogeny shows that the Florideophyceae form a monophyletic group, whereas the "Bangiophyceae" are a paraphyletic grade: the unicellular and simple groups included in it belong to several independent lineages. The current classification (Yoon et al. 2006; Muñoz-Gómez et al. 2017) divides the red algae into three subphyla and seven classes:
 
 | Subphylum | Class | Characteristics | Representative genera |
 |---|---|---|---|
@@ -99,7 +99,7 @@ Traditional classification divided the red algae (a phylum with a single class) 
 | Proteorhodophytina | Porphyridiophyceae | Unicellular, with a mucilaginous sheath and a stellate plastid | *Porphyridium* |
 | | Rhodellophyceae | Unicellular | *Rhodella* |
 | | Stylonematophyceae | Unicellular or simple filaments | *Stylonema* |
-| | Compsopogonophyceae | Filamentous or membranous, mostly freshwater | *Compsopogon*, *Erythrotrichia* |
+| | Compsopogonophyceae | Filamentous or membranous, mostly marine, a few freshwater | *Compsopogon*, *Erythrotrichia* |
 | Eurhodophytina | Bangiophyceae | Blades or filaments, with a conchocelis stage | Nori (*Porphyra*, *Pyropia* and others), *Bangia* |
 | | Florideophyceae | Apical growth, pit connections, triphasic life cycle | *Gelidium*, *Gracilaria*, *Polysiphonia*, coralline algae, *Batrachospermum* |
 
@@ -120,7 +120,7 @@ The life cycle of nori (taking *N. yezoensis* and *P. tenera* as examples) has t
 
 The conchocelis was first thought to be an independent genus (*Conchocelis rosea*). In 1949 the British phycologist Kathleen Drew-Baker discovered that the carpospores of nori grow into this filament in shells; Chinese phycologists such as Chengkui Zeng then worked out the complete life cycle of nori and in the 1950s developed methods of raising the filaments on shells and artificially collecting conchospores to produce seedlings. This discovery is the basis of modern nori cultivation.
 
-*Gelidium* (Gelidiales, Florideophyceae): the thallus is differentiated into an erect part and creeping, colorless rhizoids; the erect part branches pinnately on both sides, often two to three times. It is uniaxial, with a distinct apical cell at the tip and an interior differentiated into epidermis, cortex and medulla, with thick-walled rhizoidal filaments between medulla and cortex. The life cycle is triphasic with isomorphic gametophyte and tetrasporophyte: spermatangia are produced by epidermal cells at the tips of the male gametophyte, and carpogonia in the cortex of the female gametophyte, with long trichogynes; after fertilization a carposporophyte develops and forms a cystocarp bulging on both sides of a branchlet; on the tetrasporophyte, cruciately divided tetrasporangia form in the surface layer of the branchlets. The genus has about 40 species worldwide and about 6 in China, living on rocks below the low-tide line in clean, fast-flowing water. It is perennial, with new branches growing from the base each year; the erect part is 10–30 cm tall and purple-red, and may be pale yellow in strong light. *Gelidium amansii* is the main raw material for high-quality agar and is common on the coasts of the Yellow Sea and Bohai Sea in China.
+*Gelidium* (Gelidiales, Florideophyceae): the thallus is differentiated into an erect part and creeping, colorless rhizoids; the erect part branches pinnately on both sides, often two to three times. It is uniaxial, with a distinct apical cell at the tip and an interior differentiated into epidermis, cortex and medulla, with thick-walled rhizoidal filaments between medulla and cortex. The life cycle is triphasic with isomorphic gametophyte and tetrasporophyte: spermatangia are produced by epidermal cells at the tips of the male gametophyte, and carpogonia in the cortex of the female gametophyte, with long trichogynes; after fertilization a carposporophyte develops and forms a cystocarp bulging on both sides of a branchlet; on the tetrasporophyte, cruciately divided tetrasporangia form in the surface layer of the branchlets. The genus has more than a hundred species worldwide, several of them on the coasts of China, living on rocks below the low-tide line in clean, fast-flowing water. It is perennial, with new branches growing from the base each year; the erect part is 10–30 cm tall and purple-red, and may be pale yellow in strong light. *Gelidium amansii* is the main raw material for high-quality agar and is common on the coasts of the Yellow Sea and Bohai Sea in China.
 
 *Gracilaria* (Gracilariales): the thallus is cylindrical or flattened with linear branching and a small discoid holdfast at the base; the life cycle is triphasic with isomorphic gametophyte and tetrasporophyte, and the cystocarp is hemispherical and protrudes from the thallus surface. *Gracilaria* is the main raw material for agar production (in quantity exceeding *Gelidium*). The species cultivated on a large scale in China under the name longxucai was originally *Gracilaria lemaneiformis* and is now placed in *Gracilariopsis* (*Gracilariopsis lemaneiformis*); it is used both to extract agar and as feed for cultured abalone.
 
@@ -184,7 +184,7 @@ Three older speculations about the phylogenetic position of red algae have all b
 | *Gloiopeltis* | Florideophyceae (Gigartinales) | Cylindrical, hollow, multinucleate cells | Apical | Triphasic, isomorphic | Food, gloiopeltis gum |
 | *Batrachospermum* | Florideophyceae (Batrachospermales) | Uniaxial, whorled short branches, mucilaginous | Apical | Gametophyte, carposporophyte and chantransia stage | Indicator of clean fresh water |
 | *Corallina*, *Lithothamnion* | Florideophyceae (Corallinales) | Calcified, articulated or crustose | Apical, marginal | Triphasic | Reef building and cementing |
-| *Chondrus*, *Eucheuma*, *Kappaphycus* | Florideophyceae (Gigartinales) | Multiaxial, flattened or cylindrical branches | Apical | Triphasic, isomorphic | Carrageenan |
+| *Chondrus*, *Eucheuma*, *Kappaphycus* | Florideophyceae (Gigartinales) | Flattened or cylindrical branches | Apical | Triphasic, isomorphic | Carrageenan |
 
 ## Questions
 

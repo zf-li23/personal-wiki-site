@@ -1,7 +1,7 @@
 ---
 title: The Plant Cell
 description: "The cell from the botanist's viewpoint: discovery, shape and size; the nucleus and multinucleate cells; the three types of plastids and their interconversion; the vacuole and cell sap; oil bodies, microbodies and plant-specific features of the endomembrane system and cytoskeleton; the layers, chemistry, microfibril orientation and four modifications of the cell wall, intercellular spaces and pits; ergastic substances (starch grains, aleurone grains, lipids, tannins, crystals) and secondary metabolites; special features of plant mitosis, amitosis, the modes of cytokinesis in meiosis, division planes, unequal division, and cell growth and differentiation."
-source_hash: 4e94f41a179d
+source_hash: d505d6c12eab
 ---
 
 Plant anatomists identify cells, tissues and organs almost entirely by features visible under the light microscope: the thickness and layering of the cell wall, the shape of pits, the color of plastids, the size of vacuoles, and the form of starch grains and crystals. This chapter describes the plant cell from that point of view. The molecular mechanisms of the plasma membrane, endomembrane system, cytoskeleton and division machinery have been covered in cell biology and are only linked here (plant and animal cells are compared in [7.3.1](/7.3.1#sec-1.4.3)); we concentrate on their morphology in the plant body and their anatomical significance. The cell wall, pits and division planes underlie the next two chapters (meristems, dermal tissue, ground tissue and vascular tissue); plastids and ergastic substances recur in the chapters on seeds, roots, stems, leaves and fruits; and the mode of cytokinesis in meiosis is used again in the development of the anther.
@@ -18,7 +18,7 @@ In 1665 Robert Hooke described in his *Micrographia* thin slices of cork (the ph
 
 The shape of a plant cell reflects its function and the mutual pressure of its neighbors. Free cells or loosely arranged ones (storage cells of fruit flesh, cells in suspension culture) are nearly spherical; tightly packed parenchyma cells press against one another into polyhedra; water-conducting cells are elongated into tubes; supporting fibers are long and slender with pointed ends; epidermal cells are flat plates, often with wavy margins that interlock; and spongy mesophyll cells may be star-shaped.
 
-For equal cells under uniform pressure that fill space, the most economical polyhedron is the orthic tetrakaidecahedron (truncated octahedron), with 8 hexagonal and 6 quadrilateral faces. This is Kelvin's (1887) partition of space with minimal surface area, the same as in soap foam. The measured mean number of faces of cells in apical meristems and in the pith parenchyma of some stems is indeed close to 14; differentiated cells deviate from this shape because of uneven growth.
+For equal cells under uniform pressure that fill space, the most economical polyhedron is the orthic tetrakaidecahedron (truncated octahedron), with 8 hexagonal and 6 quadrilateral faces. This is the partition of space that Kelvin (1887) conjectured to have minimal surface area, close to the situation in soap foam (the Weaire–Phelan structure, found in 1993, has a slightly smaller area). The measured mean number of faces of cells in apical meristems and in the pith parenchyma of some stems is indeed close to 14; differentiated cells deviate from this shape because of uneven growth.
 
 ### 3.1.3. The Size of Cells
 
@@ -43,7 +43,7 @@ A few cells have two or more nuclei:
 
 | Situation | Examples |
 |---|---|
-| Normal coenocytes (nuclear division without cytokinesis) | Non-articulated laticifers; the free-nuclear phase of nuclear endosperm; the early female gametophyte of most gymnosperms and many ferns, and the free-nuclear stage of the gymnosperm proembryo; multinucleate algae such as *Vaucheria* and *Cladophora*, and the hyphae of many fungi |
+| Normal coenocytes (nuclear division without cytokinesis) | Non-articulated laticifers; the free-nuclear phase of nuclear endosperm; the early female gametophyte of most gymnosperms and of *Selaginella* and *Isoetes*, and the free-nuclear stage of the gymnosperm proembryo; multinucleate algae such as *Vaucheria* and *Cladophora*, and the hyphae of many fungi |
 | Binucleate or multinucleate cells | Tapetal cells of the anther are often binucleate or multinucleate |
 | Nucleus degenerates at maturity | Sieve-tube elements ([7.12.5](/7.12.5)); dead cells such as vessel elements, tracheids and fibers |
 

@@ -1,7 +1,7 @@
 ---
 title: Streptophyte Algae and the Origin of Land Plants
 description: The six classes of streptophyte algae and the characters they share with land plants; the Zygnematophyceae (the scalariform and lateral conjugation of Spirogyra, Zygnema and Mougeotia; Closterium and desmids) and the evidence that they are the sister group of land plants; the Charophyceae (nodes and internodes, oogonia and globules, bulbils of Chara and Nitella); zygote retention and placental-type transfer cells in Coleochaete; the problems of life on land and the synapomorphies of embryophytes; the interpolation and homologous theories of the origin of alternation of generations; fossils and molecular clocks; phylogeny of land plants and the monophyly of bryophytes.
-source_hash: 46e427f8f6b8
+source_hash: 35a151cccc08
 ---
 
 Land plants did not step onto land in a single move from some "advanced green alga." They form the **Streptophyta** together with a group of freshwater algae, the streptophyte algae treated in this chapter (traditionally the "charophytes"). The streptophyte algae differ enormously in form: there are single swimming flagellate cells, short filaments on the soil surface, stoneworts up to half a meter tall on the bottom with differentiated nodes and internodes, and desmids that consist of a single cell yet are famous for their elaborate conjugation. It is within this group that many characters of land plants (the phragmoplast and cell plate, plasmodesmata, apical growth, oogamy, a zygote retained on the parent) appear one after another; and the most surprising conclusion of phylogenomics is that the living algae most closely related to land plants are the structurally simple, aflagellate Zygnematophyceae.
@@ -45,7 +45,7 @@ These features show that many of the "adaptations to land" of embryophytes alrea
 
 ### 14.2.1. General Features
 
-The Zygnematophyceae (formerly the Conjugatophyceae) comprise about 55 genera and are the largest class of green algae in species number; the desmids alone number thousands of species (Hu Hongjun and Wei Yinxin record more than 6000 worldwide). All are freshwater or terrestrial, living in lakes, ponds, marshes and paddy fields; a few live on damp soil, rock surfaces and the surfaces of glaciers and snow (the glacier alga *Ancylonema* darkens the surface of the Greenland ice sheet and accelerates melting).
+The Zygnematophyceae (formerly the Conjugatophyceae) comprise about 55 genera and are the largest class of streptophyte algae in species number; the desmids alone number thousands of species (Hu Hongjun and Wei Yinxin record more than 6000 worldwide). All are freshwater or terrestrial, living in lakes, ponds, marshes and paddy fields; a few live on damp soil, rock surfaces and the surfaces of glaciers and snow (the glacier alga *Ancylonema* darkens the surface of the Greenland ice sheet and accelerates melting).
 
 - Body: single cells, unbranched uniseriate filaments or simple colonies; cells uninucleate.
 - Chloroplast: varied in form and often beautiful, and the main basis for distinguishing genera: parietal spiral ribbons (*Spirogyra*), axial stellate (*Zygnema*), axial flat plates (*Mougeotia*), axial chloroplasts with longitudinal ridges (*Closterium*, *Cosmarium*); chloroplasts contain one to several pyrenoids and store starch.

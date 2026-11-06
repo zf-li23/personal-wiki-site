@@ -1,7 +1,7 @@
 ---
 title: "Foundations of Plant Taxonomy: Ranks, Nomenclature, Identification and Phylogeny"
 description: The tasks of taxonomy; taxonomic ranks and their endings, the species problem in plants, subspecies, variety and forma; scientific names, binomial nomenclature and author citations; the principles of the International Code of Nomenclature for algae, fungi, and plants (Madrid Code, 2025), effective and valid publication, types, priority, synonyms and conserved names; identification keys, reference works, online resources and herbaria; phylogenetic classification, character polarity, molecular markers, the PhyloCode and the principles of the APG system.
-source_hash: 4544a93cc4f5
+source_hash: b048b57f11ba
 ---
 
 Taxonomy is the oldest branch of botany and the foundation of the others: to study a plant we must first know what it is, what it is called, and which plants are its closest relatives. This chapter presents the basic tools of plant taxonomy: taxonomic ranks and species, the structure of scientific names, the international code that governs the names of algae, fungi and plants, the methods of recognizing and identifying plants (observation, keys, reference works and herbaria), and the principles and methods of basing classification on phylogeny. How to read phylogenetic trees and how to infer them were treated in evolutionary biology and bioinformatics ([7.10.2](/7.10.2), [7.10.20](/7.10.20)–[7.10.22](/7.10.22), [7.8.6](/7.8.6)), so we only recall the concepts needed and concentrate on what is specific to botany. These tools run through the whole course from the next chapter on: the classification of algae and fungi and the floral formulas and keys of seed plants all rest on this chapter. The history of angiosperm classification systems and the taxonomic evidence are treated systematically in [7.12.33](/7.12.33), and floral formulas and floral diagrams in [7.12.27](/7.12.27).
@@ -264,7 +264,7 @@ A validly published name must also be legitimate to become the correct name.
 
 **Definition 2.4.6 (Legitimate and Illegitimate Names)** A name that was validly published and complies with the rules of the Code is a **legitimate name**. A validly published name that violates certain rules is illegitimate, of two main kinds: a **later homonym**, a name spelled exactly like a name of another taxon at the same rank that was validly published earlier but based on a different type; and a **superfluous name**, a new name that was published when the author had already included in it the legitimate name that ought to have been adopted (or its type).
 
-A later homonym cannot be used even if its earlier homonym has been rejected or has become a synonym. Within one genus, two subdivisions (such as two sections), or within one species, two infraspecific taxa (even of different rank), that use the same epithet but are based on different types are also treated as homonyms. A name without a description or diagnosis is a nomen nudum (nom. nud.); it has not been validly published and does not exist nomenclaturally; for example *Corydalis turczaninovii* Besser, for a toothed-petal corydalis, is only a nomen nudum, and the correct name is *Corydalis remota* Fisch. ex Maxim.
+A later homonym cannot be used even if its earlier homonym has been rejected or has become a synonym. Within one genus, two subdivisions (such as two sections), or within one species, two infraspecific taxa (even of different rank), that use the same epithet but are based on different types are also treated as homonyms. A name without a description or diagnosis is a nomen nudum (nom. nud.); it has not been validly published and does not exist nomenclaturally.
 
 Strict application of priority sometimes discards long-used names and causes confusion. For this reason the Code allows conserved names.
 
@@ -465,7 +465,7 @@ Basic terms of naming:
 | Synonym (Definition 2.4.5) | Another name of the same taxon | *C. mandshuricus* Rupr. |
 | New combination / basionym | Epithet moved into a new genus / the original name | *Cunninghamia lanceolata* (Lamb.) Hook. / *Pinus lanceolata* Lamb. |
 | Later homonym / superfluous name (Definition 2.4.6) | Same form as an existing name / an unnecessary new name | Illegitimate |
-| Nomen nudum | No description, not valid | *Corydalis turczaninovii* Besser, nom. nud. |
+| Nomen nudum | No description, not valid | Cited with nom. nud. after the name |
 | Conserved name (Definition 2.4.7) | Name approved by the Congress and used against priority | *Malus domestica*; 8 traditional family names used in parallel |
 | Misidentification | Misapplied name of another species | *Spiraea hypericifolia* auct. non L. |
 
@@ -513,7 +513,7 @@ flowchart TD
 
 2. An author in 1950 described a new species in Chinese in a botanical journal, without a Latin description and without designating a type. Was the name validly published? What difference would it make if in 2015 he described it in English and designated a holotype kept in PE?
 
-   **Answer** The 1950 name is not valid: new names published from 1935 to 2011 must be accompanied by a Latin description or diagnosis, so it is a nomen nudum and does not exist nomenclaturally (though names published before 1958 are not required to indicate a type). The 2015 name, described in English in an effective publication and stating the herbarium holding the holotype, satisfies the requirements that English is allowed after 2012, that a type must be indicated after 1958, and that the place of deposit must be stated after 1990; the name is validly published, and priority counts from 2015.
+   **Answer** The 1950 name is not valid: new names published from 1935 to 2011 must be accompanied by a Latin description or diagnosis, so it is not validly published and does not exist nomenclaturally (having a Chinese description, it is strictly not a nomen nudum but an invalid name) (though names published before 1958 are not required to indicate a type). The 2015 name, described in English in an effective publication and stating the herbarium holding the holotype, satisfies the requirements that English is allowed after 2012, that a type must be indicated after 1958, and that the place of deposit must be stated after 1990; the name is validly published, and priority counts from 2015.
 
 3. The holotype of a species was destroyed in a war; the original publication also cited two duplicates with the same number and three specimens of other collection numbers, all of which survive. How should this be handled? What if these specimens had also all been lost?
 
