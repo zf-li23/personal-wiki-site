@@ -10746,7 +10746,7 @@ terms:
   - { zh: 量子需要量, en: quantum requirement }
   - { zh: 非光化学猝灭, en: nonphotochemical quenching, aliases: [NPQ] }
   - { zh: 光抑制, en: photoinhibition }
-  - { zh: 叶黄素循环, en: xanthophyll cycle, aliases: [lutein cycle] }
+  - { zh: 叶黄素循环, en: xanthophyll cycle }
   - { zh: 状态转换, en: state transition, aliases: [state transitions], scope: ["7"] }
   - { zh: C3 植物, en: C3 plant, aliases: [C3 plants] }
   - { zh: C4 植物, en: C4 plant, aliases: [C4 plants] }
@@ -10847,3 +10847,12 @@ terms:
   - { zh: 无氧呼吸消失点, en: extinction point of anaerobic respiration, aliases: [extinction point] }
   - { zh: 温度系数, en: temperature coefficient, aliases: [Q₁₀, Q10], scope: ["7"] }
   - { zh: 同化物分配, en: partitioning, aliases: [assimilate partitioning], scope: ["7.13"] }
+  - { zh: 光合色素, en: photosynthetic pigment, aliases: [photosynthetic pigments] }
+  - { zh: 光合有效辐射, en: photosynthetically active radiation }
+  - { zh: 光合光子通量密度, en: photosynthetic photon flux density, aliases: [PPFD] }
+  - { zh: NADP-苹果酸酶型, en: NADP-malic enzyme type, aliases: [NADP-ME 型, NADP-ME type] }
+  - { zh: NAD-苹果酸酶型, en: NAD-malic enzyme type, aliases: [NAD-ME 型, NAD-ME type] }
+  - { zh: PEP 羧激酶型, en: PEP carboxykinase type, aliases: [PCK 型, PEPCK type, PCK type] }
+  - { zh: 叶肉导度, en: mesophyll conductance }
+  - { zh: 光合午休, en: midday depression of photosynthesis, aliases: [午休现象] }
+  - { zh: 收获指数, en: harvest index, aliases: [经济系数] }
