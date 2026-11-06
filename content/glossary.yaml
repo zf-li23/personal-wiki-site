@@ -10704,3 +10704,134 @@ terms:
   - { zh: 胎生, en: vivipary, aliases: [viviparous], scope: ["7.12", "7.13"] }
   - { zh: 放线菌根瘤, en: actinorhizal nodule, aliases: [actinorhizal nodules, actinorhiza] }
   - { zh: 托杯, en: hypanthium, aliases: [花托杯, 花托筒, floral cup], scope: ["7.12", "7.13"] }
+
+  # biology: plant physiology (7.13); homonyms of terms in other disciplines are scoped to 7.13
+  - { zh: 源, en: source, scope: ["7.13"] }
+  - { zh: 库, en: sink, scope: ["7.13"] }
+  - { zh: 向性运动, en: tropism, aliases: [tropisms, 向性], scope: ["7.12", "7.13"] }
+  - { zh: 植物生理学, en: plant physiology }
+  - { zh: 溶质势, en: solute potential, aliases: [渗透势, osmotic potential] }
+  - { zh: 压力势, en: pressure potential }
+  - { zh: 衬质势, en: matric potential, aliases: [基质势] }
+  - { zh: 质壁分离, en: plasmolysis }
+  - { zh: 体积弹性模量, en: volumetric elastic modulus }
+  - { zh: 田间持水量, en: field capacity }
+  - { zh: 永久萎蔫系数, en: permanent wilting percentage, aliases: [永久萎蔫点, permanent wilting point] }
+  - { zh: 蒸腾作用, en: transpiration }
+  - { zh: 根压, en: root pressure }
+  - { zh: 伤流, en: bleeding, aliases: [exudation], scope: ["7.13"] }
+  - { zh: 内聚力–张力学说, en: cohesion–tension theory, aliases: [内聚力-张力学说, cohesion-tension theory] }
+  - { zh: 空穴化, en: cavitation, aliases: [气穴现象], scope: ["7"] }
+  - { zh: 栓塞, en: embolism, scope: ["7.12", "7.13"] }
+  - { zh: 蒸腾比率, en: transpiration ratio, aliases: [蒸腾系数] }
+  - { zh: 水分利用效率, en: water-use efficiency, aliases: [WUE, 蒸腾效率] }
+  - { zh: 土壤–植物–大气连续体, en: soil–plant–atmosphere continuum, aliases: [SPAC] }
+  - { zh: 必需元素, en: essential element, aliases: [essential elements, 必需矿质元素] }
+  - { zh: 缺素症, en: nutrient deficiency symptom, aliases: [deficiency symptoms] }
+  - { zh: 阳离子交换量, en: cation exchange capacity }
+  - { zh: 表观自由空间, en: apparent free space, aliases: [自由空间, free space] }
+  - { zh: 双相吸收, en: biphasic uptake, aliases: [dual-isotherm uptake] }
+  - { zh: 生理酸性盐, en: physiologically acid salt }
+  - { zh: 生理碱性盐, en: physiologically alkaline salt }
+  - { zh: 单盐毒害, en: toxicity of single salt }
+  - { zh: 离子拮抗, en: ion antagonism }
+  - { zh: 质膜 H⁺-ATP 酶, en: plasma membrane H⁺-ATPase, aliases: [PM H⁺-ATPase, 质子泵], scope: ["7.13"] }
+  - { zh: H⁺-焦磷酸酶, en: H⁺-pyrophosphatase, aliases: [H⁺-PPase, V-PPase] }
+  - { zh: 硝酸还原酶, en: nitrate reductase }
+  - { zh: 亚硝酸还原酶, en: nitrite reductase }
+  - { zh: 作用光谱, en: action spectrum }
+  - { zh: 红降, en: red drop }
+  - { zh: 双光增益效应, en: Emerson enhancement effect, aliases: [Emerson 效应, enhancement effect] }
+  - { zh: 光合单位, en: photosynthetic unit }
+  - { zh: 量子需要量, en: quantum requirement }
+  - { zh: 非光化学猝灭, en: nonphotochemical quenching, aliases: [NPQ] }
+  - { zh: 光抑制, en: photoinhibition }
+  - { zh: 叶黄素循环, en: xanthophyll cycle, aliases: [lutein cycle] }
+  - { zh: 状态转换, en: state transition, aliases: [state transitions], scope: ["7"] }
+  - { zh: C3 植物, en: C3 plant, aliases: [C3 plants] }
+  - { zh: C4 植物, en: C4 plant, aliases: [C4 plants] }
+  - { zh: CAM 植物, en: CAM plant, aliases: [CAM plants] }
+  - { zh: 碳同位素分辨, en: carbon isotope discrimination }
+  - { zh: 光补偿点, en: light compensation point }
+  - { zh: 光饱和点, en: light saturation point }
+  - { zh: Farquhar 模型, en: Farquhar model, aliases: [Farquhar–von Caemmerer–Berry model, FvCB model] }
+  - { zh: 叶面积指数, en: leaf area index, aliases: [LAI] }
+  - { zh: 光能利用率, en: light-use efficiency, aliases: [radiation-use efficiency, 辐射利用效率] }
+  - { zh: 气孔导度, en: stomatal conductance }
+  - { zh: 气孔运动, en: stomatal movement }
+  - { zh: 小孔扩散律, en: small-pore diffusion law, aliases: [边缘效应, edge effect], scope: ["7.13"] }
+  - { zh: 压力流学说, en: pressure-flow hypothesis, aliases: [Münch 假说, pressure-flow model, 压力流动学说] }
+  - { zh: 比集运量, en: specific mass transfer rate }
+  - { zh: 韧皮部装载, en: phloem loading }
+  - { zh: 韧皮部卸出, en: phloem unloading }
+  - { zh: 聚合物陷阱, en: polymer trapping, aliases: [多聚体陷阱] }
+  - { zh: 库强度, en: sink strength }
+  - { zh: 呼吸商, en: respiratory quotient, aliases: [RQ] }
+  - { zh: 抗氰呼吸, en: cyanide-resistant respiration }
+  - { zh: 交替氧化酶, en: alternative oxidase, aliases: [AOX] }
+  - { zh: 维持呼吸, en: maintenance respiration }
+  - { zh: 生长呼吸, en: growth respiration }
+  - { zh: 植物激素, en: plant hormone, aliases: [phytohormone, plant hormones] }
+  - { zh: 植物生长调节剂, en: plant growth regulator, aliases: [PGR, 生长调节剂] }
+  - { zh: 生长素, en: auxin, aliases: [auxins, IAA, 吲哚-3-乙酸] }
+  - { zh: 生长素极性运输, en: polar auxin transport, aliases: [极性运输] }
+  - { zh: 赤霉素, en: gibberellin, aliases: [gibberellins, GA] }
+  - { zh: 细胞分裂素, en: cytokinin, aliases: [cytokinins, CTK] }
+  - { zh: 脱落酸, en: abscisic acid, aliases: [ABA] }
+  - { zh: 乙烯, en: ethylene, scope: ["7"] }
+  - { zh: 三重反应, en: triple response }
+  - { zh: 油菜素甾醇, en: brassinosteroid, aliases: [brassinosteroids, BR, 油菜素内酯] }
+  - { zh: 茉莉酸, en: jasmonic acid, aliases: [JA, jasmonates] }
+  - { zh: 水杨酸, en: salicylic acid, aliases: [SA], scope: ["7"] }
+  - { zh: 独脚金内酯, en: strigolactone, aliases: [strigolactones, SL] }
+  - { zh: 光形态建成, en: photomorphogenesis }
+  - { zh: 暗形态建成, en: skotomorphogenesis, aliases: [黄化, etiolation] }
+  - { zh: 避荫反应, en: shade avoidance, aliases: [shade-avoidance response, 遮阴反应] }
+  - { zh: 酸生长学说, en: acid growth hypothesis }
+  - { zh: 扩张蛋白, en: expansin, aliases: [expansins] }
+  - { zh: Lockhart 方程, en: Lockhart equation }
+  - { zh: 生长大周期, en: grand period of growth }
+  - { zh: 相对生长速率, en: relative growth rate, aliases: [RGR] }
+  - { zh: 积温, en: thermal time, aliases: [growing degree days, GDD] }
+  - { zh: 根冠比, en: root–shoot ratio, aliases: [root-shoot ratio] }
+  - { zh: 向光性, en: phototropism }
+  - { zh: 向重力性, en: gravitropism, aliases: [向地性] }
+  - { zh: 感性运动, en: nastic movement, aliases: [nastic movements, nasty] }
+  - { zh: 种子生活力, en: seed viability }
+  - { zh: 种子活力, en: seed vigor }
+  - { zh: 层积处理, en: stratification, scope: ["7.13"] }
+  - { zh: 光周期现象, en: photoperiodism, aliases: [光周期] }
+  - { zh: 长日植物, en: long-day plant, aliases: [LDP] }
+  - { zh: 短日植物, en: short-day plant, aliases: [SDP] }
+  - { zh: 日中性植物, en: day-neutral plant }
+  - { zh: 临界日长, en: critical day length }
+  - { zh: 临界暗期, en: critical night length, aliases: [临界夜长] }
+  - { zh: 成花素, en: florigen }
+  - { zh: 外部重合模型, en: external coincidence model }
+  - { zh: 春化作用, en: vernalization, aliases: [春化] }
+  - { zh: 幼年期, en: juvenile phase, aliases: [juvenility] }
+  - { zh: 呼吸跃变, en: climacteric, aliases: [respiratory climacteric] }
+  - { zh: 跃变型果实, en: climacteric fruit, aliases: [climacteric fruits] }
+  - { zh: 植物衰老, en: plant senescence, aliases: [senescence, 叶片衰老, leaf senescence], scope: ["7.12", "7.13"] }
+  - { zh: 病害三角, en: disease triangle }
+  - { zh: 模式触发免疫, en: pattern-triggered immunity, aliases: [PTI] }
+  - { zh: 效应触发免疫, en: effector-triggered immunity, aliases: [ETI] }
+  - { zh: NLR, en: NLR, aliases: [nucleotide-binding leucine-rich repeat receptor, NB-LRR, 抗病蛋白] }
+  - { zh: 抗病小体, en: resistosome }
+  - { zh: 过敏反应, en: hypersensitive response, aliases: [超敏反应], scope: ["7.13"] }
+  - { zh: 系统获得抗性, en: systemic acquired resistance, aliases: [SAR, 系统获得性抗性] }
+  - { zh: 化感作用, en: allelopathy }
+  - { zh: 渗透调节, en: osmotic adjustment }
+  - { zh: 交叉适应, en: cross-tolerance, aliases: [cross adaptation] }
+  - { zh: 冷害, en: chilling injury }
+  - { zh: 冻害, en: freezing injury }
+  - { zh: 低温锻炼, en: cold acclimation }
+  - { zh: 抗冻蛋白, en: antifreeze protein, aliases: [antifreeze proteins] }
+  - { zh: 植物螯合肽, en: phytochelatin, aliases: [phytochelatins] }
+  - { zh: 绿色革命, en: Green Revolution }
+  - { zh: 三系杂交稻, en: three-line hybrid rice, aliases: [three-line system] }
+  - { zh: 遗传转化, en: genetic transformation, scope: ["7.13"] }
+  - { zh: T-DNA, en: T-DNA, aliases: [transferred DNA] }
+  - { zh: 双元载体, en: binary vector, aliases: [binary vectors] }
+  - { zh: 庇护所策略, en: refuge strategy, aliases: [high-dose/refuge strategy] }
+  - { zh: 穗发芽, en: preharvest sprouting, aliases: [胎萌] }
