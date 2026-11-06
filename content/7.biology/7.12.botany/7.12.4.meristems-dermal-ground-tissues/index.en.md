@@ -1,7 +1,7 @@
 ---
 title: Meristems, Dermal Tissue and Ground Tissue
 description: The concept and classification of plant tissues; meristems by position (apical, lateral, intercalary) and by origin (promeristem, primary, secondary) and the problem of classifying them; the four theories of apical organization and the WUS–CLV3 feedback; the structure, types and development of the epidermis, cuticle, stomatal complex and trichomes; the periderm, cork cambium and lenticels; types of parenchyma and transfer cells, the four types of collenchyma, and sclereids and fibers in sclerenchyma.
-source_hash: 4f85200ce7c5
+source_hash: 1c40df7e0763
 ---
 
 The previous chapter dealt with the individual cell; this chapter and the next describe how cells are organized into tissues. The body of a seed plant is built from only a few kinds of tissue: meristems, which retain the capacity to divide and continually produce new cells, and mature tissues, which differentiate from the derivative cells of meristems. This chapter treats the meristems and three of the simpler mature tissues: the dermal tissue that covers the surface (epidermis and periderm), and the parenchyma and mechanical tissues (collenchyma, sclerenchyma) that make up the "matrix" of the plant body. Conducting tissues, secretory structures and tissue systems follow in the next chapter. Almost all of the criteria for identifying these tissues are features of the cell wall: its thickness and the pattern of thickening, whether it is lignified or suberized, the type of pits, and whether the protoplast dies at maturity ([7.12.3](/7.12.3)). The chapters on root, stem and leaf ([7.12.20](/7.12.20)–[7.12.23](/7.12.23)) combine these tissues into organs; the molecular regulation of meristems and the mechanism of stomatal movement belong to plant physiology, and the general principles of stem cells and cell differentiation are in [7.3.24](/7.3.24).
@@ -201,9 +201,9 @@ By main physiological function, parenchyma is divided into the following kinds:
 | Assimilatory tissue (chlorenchyma) | Cells with many chloroplasts that photosynthesize | All green parts: mesophyll, cortex of young stems, developing fruits and seeds |
 | Storage tissue | Stores starch, protein, lipids, sugars and so on | Tuberous roots, tubers, corms, bulbs, fruits, endosperm and cotyledons of seeds, cortex and pith of roots and stems; large starch grains and a few protein bodies in the cells of potato tuber, oil droplets, starch grains and protein bodies in peanut cotyledon, oil droplets in coconut endosperm |
 | Water-storage tissue | Large cells whose vacuoles contain much viscous sap and can store water | Photosynthetic organs of xerophytic succulents, such as the stems of cacti, the leaves of *Aloe* and *Agave*, the leaves of *Salsola*, the hypodermis of begonia leaves |
-| Aerating tissue (aerenchyma) | Many intercellular spaces forming air cavities or air channels | Roots, stems and leaves of aquatic and wetland plants (see below) |
+| Aerating tissue (*aerenchyma*) | Many intercellular spaces forming air cavities or air channels | Roots, stems and leaves of aquatic and wetland plants (see below) |
 | Absorbing tissue | Thin walls, large surface area | Epidermis and root hairs of the maturation zone of the root tip |
-| Transfer cells | Wall ingrowths enlarging the plasma membrane area (see below) | Sites of intensive short-distance transport of solutes |
+| *Transfer cells* | Wall ingrowths enlarging the plasma membrane area (see below) | Sites of intensive short-distance transport of solutes |
 
 The **aerenchyma** of aquatic and wetland plants runs through root, stem and leaf, so that oxygen produced by photosynthesis in the leaves or obtained from the air can diffuse to roots immersed in oxygen-poor mud and water; it also increases buoyancy and provides support with little material. Its air cavities can form schizogenously (cells separate from each other) or lysigenously (some cells undergo programmed death, as in the roots of rice and flooded maize), see [7.12.3](/7.12.3); the large channels in the rhizome (lotus root) and petiole of the lotus are the most familiar examples.
 
