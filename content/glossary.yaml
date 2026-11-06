@@ -10679,7 +10679,7 @@ terms:
   - { zh: 全着丝粒染色体, en: holocentric chromosome, aliases: [全着丝粒, holocentric chromosomes, 弥散着丝粒] }
   - { zh: 驯化综合征, en: domestication syndrome }
   - { zh: 唇瓣, en: labellum }
-  - { zh: 合蕊柱, en: gynostemium, aliases: [column, 蕊柱] }
+  - { zh: 合蕊柱, en: gynostemium, aliases: [蕊柱], scope: ["7.12", "7.13"] }
   - { zh: 花粉块, en: pollinium, aliases: [pollinia] }
   - { zh: 蕊喙, en: rostellum }
   - { zh: 粘盘, en: viscidium, aliases: [黏盘] }
