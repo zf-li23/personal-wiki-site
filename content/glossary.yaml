@@ -9797,7 +9797,7 @@ terms:
   - { zh: 甲藻, en: dinoflagellate, aliases: [dinoflagellates, 腰鞭毛虫] }
   - { zh: 硅藻, en: diatom, aliases: [diatoms] }
   - { zh: 顶复门, en: Apicomplexa, aliases: [apicomplexan, apicomplexans, 顶复器门] }
-  - { zh: 有孔虫, en: foraminifera, aliases: [foraminiferan, 有孔虫类] }
+  - { zh: 有孔虫, en: foraminifera, aliases: [foraminiferan] }
   - { zh: 卵菌, en: oomycete, aliases: [oomycetes, 卵菌纲] }
   - { zh: 黏菌, en: slime mold, aliases: [slime molds, 黏菌类] }
   - { zh: 真菌, en: fungus, aliases: [fungi, 真菌界] }
