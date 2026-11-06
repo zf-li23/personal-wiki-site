@@ -10739,7 +10739,7 @@ terms:
   - { zh: H⁺-焦磷酸酶, en: H⁺-pyrophosphatase, aliases: [H⁺-PPase, V-PPase] }
   - { zh: 硝酸还原酶, en: nitrate reductase }
   - { zh: 亚硝酸还原酶, en: nitrite reductase }
-  - { zh: 作用光谱, en: action spectrum }
+  - { zh: 作用光谱, en: action spectrum, aliases: [action spectra] }
   - { zh: 红降, en: red drop }
   - { zh: 双光增益效应, en: Emerson enhancement effect, aliases: [Emerson 效应, enhancement effect] }
   - { zh: 光合单位, en: photosynthetic unit }
