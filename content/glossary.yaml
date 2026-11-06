@@ -10856,3 +10856,17 @@ terms:
   - { zh: 叶肉导度, en: mesophyll conductance }
   - { zh: 光合午休, en: midday depression of photosynthesis, aliases: [午休现象] }
   - { zh: 收获指数, en: harvest index, aliases: [经济系数] }
+  - { zh: 溶液培养, en: solution culture, aliases: [水培法, 溶液培养法, hydroponics] }
+  - { zh: 临界组织浓度, en: critical tissue concentration }
+  - { zh: 最小因子定律, en: law of the minimum, aliases: [Liebig 最小因子定律, "Liebig's law of the minimum"] }
+  - { zh: Mitscherlich 方程, en: Mitscherlich equation }
+  - { zh: 有益元素, en: beneficial element, aliases: [beneficial elements], scope: ["7.13"] }
+  - { zh: 养分耗竭区, en: nutrient depletion zone, aliases: [耗竭区, depletion zone] }
+  - { zh: 选择吸收, en: selective absorption }
+  - { zh: 木质部装载, en: xylem loading }
+  - { zh: 生理中性盐, en: physiologically neutral salt }
+  - { zh: 平衡溶液, en: balanced solution }
+  - { zh: 硝酸盐同化, en: nitrate assimilation, aliases: [硝酸同化] }
+  - { zh: 植物铁载体, en: phytosiderophore, aliases: [phytosiderophores, 麦根酸类植物铁载体] }
+  - { zh: 光同化, en: photoassimilation }
+  - { zh: 氮利用效率, en: nitrogen use efficiency, aliases: [NUE] }
