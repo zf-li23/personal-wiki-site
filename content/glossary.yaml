@@ -10835,3 +10835,15 @@ terms:
   - { zh: 双元载体, en: binary vector, aliases: [binary vectors] }
   - { zh: 庇护所策略, en: refuge strategy, aliases: [high-dose/refuge strategy] }
   - { zh: 穗发芽, en: preharvest sprouting, aliases: [胎萌] }
+  - { zh: 气孔密度, en: stomatal density }
+  - { zh: 气孔指数, en: stomatal index }
+  - { zh: 蓝光反应, en: blue-light response, aliases: [气孔的蓝光反应, stomatal blue-light response], scope: ["7.13"] }
+  - { zh: 淀粉–糖转化学说, en: starch–sugar hypothesis, aliases: [淀粉-糖转化学说, starch-sugar hypothesis] }
+  - { zh: K⁺ 学说, en: potassium hypothesis, aliases: [无机离子吸收学说, K⁺ 泵学说] }
+  - { zh: 苹果酸代谢学说, en: malate hypothesis }
+  - { zh: 源库单位, en: source–sink unit, aliases: [source-sink unit] }
+  - { zh: 同化物配置, en: allocation, aliases: [assimilate allocation], scope: ["7.13"] }
+  - { zh: 呼吸速率, en: respiration rate, aliases: [呼吸强度, respiratory rate] }
+  - { zh: 无氧呼吸消失点, en: extinction point of anaerobic respiration, aliases: [extinction point] }
+  - { zh: 温度系数, en: temperature coefficient, aliases: [Q₁₀, Q10], scope: ["7"] }
+  - { zh: 同化物分配, en: partitioning, aliases: [assimilate partitioning], scope: ["7.13"] }
