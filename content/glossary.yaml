@@ -10670,3 +10670,37 @@ terms:
   - { zh: 环烯醚萜, en: iridoid, aliases: [iridoids] }
   - { zh: 杜鹃花类菌根, en: ericoid mycorrhiza, aliases: [ericoid mycorrhizae] }
   - { zh: 振动传粉, en: buzz pollination, aliases: [sonication] }
+  - { zh: 鸭跖草类, en: commelinids, aliases: [commelinid clade, 鸭跖草类植物], scope: ["7.12"] }
+  - { zh: 海草, en: seagrass, aliases: [seagrasses] }
+  - { zh: 分隔蜜腺, en: septal nectary, aliases: [septal nectaries] }
+  - { zh: 植物黑素, en: phytomelan, aliases: [植物黑素层] }
+  - { zh: 原球茎, en: protocorm, aliases: [protocorms], scope: ["7.12", "7.13"] }
+  - { zh: 扭转, en: resupination, scope: ["7.12"] }
+  - { zh: 全着丝粒染色体, en: holocentric chromosome, aliases: [全着丝粒, holocentric chromosomes, 弥散着丝粒] }
+  - { zh: 驯化综合征, en: domestication syndrome }
+  - { zh: 唇瓣, en: labellum }
+  - { zh: 合蕊柱, en: gynostemium, aliases: [column, 蕊柱] }
+  - { zh: 花粉块, en: pollinium, aliases: [pollinia] }
+  - { zh: 蕊喙, en: rostellum }
+  - { zh: 粘盘, en: viscidium, aliases: [黏盘] }
+  - { zh: 佛焰苞, en: spathe }
+  - { zh: 肉穗花序, en: spadix }
+  - { zh: 退化雄蕊, en: staminode, aliases: [staminodes] }
+  - { zh: 核心真双子叶植物, en: core eudicots, aliases: [Gunneridae, core eudicot] }
+  - { zh: 五瓣花类, en: Pentapetalae, aliases: [pentapetalous clade] }
+  - { zh: 蜜叶, en: honey leaf, aliases: [nectar leaf, honey leaves, nectar leaves], scope: ["7.12"] }
+  - { zh: 超蔷薇类, en: superrosids, aliases: [Superrosidae] }
+  - { zh: 豆类, en: fabids, aliases: [Fabidae, eurosids I, 豆类植物], scope: ["7.12"] }
+  - { zh: COM 支, en: COM clade }
+  - { zh: 蝶形花冠, en: papilionaceous corolla }
+  - { zh: 旗瓣, en: standard, aliases: [vexillum, banner], scope: ["7.12"] }
+  - { zh: 翼瓣, en: wing, aliases: [wings], scope: ["7.12"] }
+  - { zh: 龙骨瓣, en: keel, aliases: [keel petals], scope: ["7.12"] }
+  - { zh: 固氮支, en: nitrogen-fixing clade, aliases: [nitrogen-fixing clade of rosids] }
+  - { zh: 壳斗, en: cupule, aliases: [cupules], scope: ["7.12"] }
+  - { zh: 杯状聚伞花序, en: cyathium, aliases: [cyathia] }
+  - { zh: 隐头花序, en: hypanthodium, aliases: [syconium, 隐花果] }
+  - { zh: 柔荑花序, en: catkin, aliases: [catkins, ament, 葇荑花序] }
+  - { zh: 胎生, en: vivipary, aliases: [viviparous], scope: ["7.12", "7.13"] }
+  - { zh: 放线菌根瘤, en: actinorhizal nodule, aliases: [actinorhizal nodules, actinorhiza] }
+  - { zh: 托杯, en: hypanthium, aliases: [花托杯, 花托筒, floral cup], scope: ["7.12", "7.13"] }
