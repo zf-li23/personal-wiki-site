@@ -212,7 +212,7 @@ The type of placentation is determined by the number of carpels, the way they ar
 | Marginal | one carpel | 1 | in a row along the ventral suture of the carpel | pea, broad bean (Fabaceae) |
 | Parietal | fused carpels | 1 | in several longitudinal rows on the ovary wall along the ventral sutures of adjacent carpels | opium poppy, sweet violet, cucumber, passionflower |
 | Axile | fused carpels | several | carpel margins fused in the center of the ovary into a central axis, the ovules borne on the axis (at the inner angle of each locule) | narcissus (*Narcissus*), lily, iris (*Iris*), cotton, citrus, tomato |
-| Free central | fused carpels | 1 (septa lost) | around a central axis (or short column formed from the receptacle) that is not joined to the ovary wall | pink, purslane (*Portulaca*), primrose |
+| *Free central* | fused carpels | 1 (septa lost) | around a central axis (or short column formed from the receptacle) that is not joined to the ovary wall | pink, purslane (*Portulaca*), primrose |
 | Basal | one carpel or fused carpels | 1 | at the base of the ovary | sunflower (Asteraceae), buckwheat |
 | Apical (pendulous) | one carpel or fused carpels | 1 | at the top of the ovary, hanging in the locule | mulberry, elm (*Ulmus*), daphne (*Daphne*) |
 | Laminar (superficial) | free or fused carpels | 1 or several | over the inner surface of the carpels or over all faces of the septa | Gorgon plant (*Euryale ferox*), water lily (*Nymphaea*), water plantain relatives (*Butomus*) |

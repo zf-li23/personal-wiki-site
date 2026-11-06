@@ -301,7 +301,7 @@ Arbuscular mycorrhizas: the fungal hyphae pass through the epidermis into the co
 
 Other types:
 
-- Ericoid mycorrhizas: in many species of Ericaceae (rhododendron, blueberry, heather) on acid, organic-rich soils, the hyphae of ascomycetes coil into masses within the epidermal cells of the fine hair-like roots and help the plant to obtain nitrogen from organic matter.
+- *Ericoid mycorrhizas*: in many species of Ericaceae (rhododendron, blueberry, heather) on acid, organic-rich soils, the hyphae of ascomycetes coil into masses within the epidermal cells of the fine hair-like roots and help the plant to obtain nitrogen from organic matter.
 - Orchid mycorrhizas: hyphae of basidiomycetes coil into hyphal coils (pelotons) in cortical cells, which are later digested by the plant; orchid seeds have no endosperm, and germination and seedling growth depend on the fungus for carbon ([7.12.19](/7.12.19#sec-19.5.2)), and chlorophyll-free orchids such as *Gastrodia elata* depend on fungi for life.
 - Arbutoid and monotropoid mycorrhizas: a mantle on the root surface, a Hartig net between cells and hyphae penetrating into cells, that is, the traditional "ectendomycorrhizas", found in *Arctostaphylos*, *Arbutus* and the Monotropoideae of the Ericaceae; similar ectendomycorrhizas also occur on seedlings of *Pinus* and *Larix*. Older textbooks gave strawberry as an example of ectendomycorrhiza, but strawberry in fact forms arbuscular mycorrhizas.
 
