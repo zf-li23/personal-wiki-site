@@ -10829,7 +10829,7 @@ terms:
   - { zh: 抗冻蛋白, en: antifreeze protein, aliases: [antifreeze proteins] }
   - { zh: 植物螯合肽, en: phytochelatin, aliases: [phytochelatins] }
   - { zh: 绿色革命, en: Green Revolution }
-  - { zh: 三系杂交稻, en: three-line hybrid rice, aliases: [three-line system] }
+  - { zh: 三系杂交稻, en: three-line hybrid rice, aliases: [three-line system], scope: ["7.13"] }
   - { zh: 遗传转化, en: genetic transformation, scope: ["7.13"] }
   - { zh: T-DNA, en: T-DNA, aliases: [transferred DNA] }
   - { zh: 双元载体, en: binary vector, aliases: [binary vectors] }
