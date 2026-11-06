@@ -10890,3 +10890,12 @@ terms:
   - { zh: 部分根区干燥, en: partial root-zone drying, aliases: [PRD] }
   - { zh: 总初级生产力, en: gross primary production, aliases: [GPP, 总初级生产量] }
   - { zh: 净初级生产力, en: net primary production, aliases: [NPP, 净初级生产量] }
+  - { zh: 去黄化, en: de-etiolation }
+  - { zh: 互易律, en: reciprocity law, aliases: [law of reciprocity, Bunsen–Roscoe law, 反比定律] }
+  - { zh: 极低辐照度反应, en: very low fluence response, aliases: [VLFR, very low fluence responses] }
+  - { zh: 低辐照度反应, en: low-fluence response, aliases: [LFR, low-fluence responses] }
+  - { zh: 高辐照度反应, en: high-irradiance response, aliases: [HIR, high-irradiance responses] }
+  - { zh: 光敏色素相互作用因子, en: phytochrome-interacting factor, aliases: [PIF, PIFs, phytochrome interacting factor] }
+  - { zh: 昼夜节律, en: circadian rhythm, aliases: [近似昼夜节律, circadian rhythms] }
+  - { zh: 热形态建成, en: thermomorphogenesis }
+  - { zh: UVR8, en: UVR8, aliases: [UV RESISTANCE LOCUS 8] }
