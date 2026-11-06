@@ -10650,3 +10650,10 @@ terms:
   - { zh: 中被子植物, en: Mesangiospermae, aliases: [mesangiosperms], scope: ["7.12"] }
   - { zh: 筛分子质体, en: sieve-element plastid, aliases: [sieve-element plastids, P 型筛分子质体, S 型筛分子质体, P-type plastid, S-type plastid] }
   - { zh: 马兜铃酸, en: aristolochic acid, aliases: [马兜铃酸肾病, aristolochic acid nephropathy] }
+  - { zh: 唇形类, en: lamiids, aliases: [lamiid clade, 真菊类 I, euasterids I] }
+  - { zh: 叶柄间托叶, en: interpetiolar stipule, aliases: [interpetiolar stipules] }
+  - { zh: 副花冠, en: corona, aliases: [coronas], scope: ["7.12", "7.13"] }
+  - { zh: 花粉器, en: pollinarium, aliases: [pollinaria] }
+  - { zh: 杠杆雄蕊, en: staminal lever, aliases: [staminal levers, lever mechanism] }
+  - { zh: 桔梗类, en: campanulids, aliases: [campanulid clade, 真菊类 II, euasterids II] }
+  - { zh: 次级花粉呈递, en: secondary pollen presentation, aliases: [次生花粉呈递] }
