@@ -1,7 +1,7 @@
 ---
 title: Development of the Anther, Ovule and Gametophytes
 description: Development of the anther wall (endothecium, middle layers, tapetum; four types of wall development; secretory and amoeboid tapetum) and dehiscence; meiosis of the pollen mother cell and successive and simultaneous cytokinesis; development of the pollen grain (vegetative and generative cells, two- and three-celled pollen), layers of the pollen wall and apertures; pollen abortion and male sterility (genic, cytoplasmic and the three-line system); structure of the ovule, types of integument and nucellus and the five ovule types; megasporogenesis and development of the Polygonum-type embryo sac, monosporic, bisporic and tetrasporic embryo sacs.
-source_hash: 42eefe3ed968
+source_hash: 66bd88a9944f
 ---
 
 The previous chapter treated the stamen as a microsporophyll and the carpel as a megasporophyll ([7.12.27](/7.12.27)). This chapter looks inside them and explains how the two gametophytes of angiosperms arise. In the anther, pollen mother cells undergo meiosis to form microspores, and each microspore develops into a pollen grain, the male gametophyte; in the nucellus of the ovule, a megasporocyte undergoes meiosis to form megaspores, and a megaspore develops into the embryo sac, the female gametophyte. The **alternation of generations** reaches an extreme here: both gametophytes are reduced to a few cells and depend entirely on the sporophyte. Compared with gymnosperms ([7.12.25](/7.12.25)), the male gametophyte is reduced from the 4 cells of pine (plus the early-degenerating prothallial cells) to 2–3 cells, and the female gametophyte from a tissue of several thousand cells with archegonia to 7 cells without archegonia. The structures and embryological terms of this chapter are the basis for double fertilization in [7.12.29](/7.12.29) and for the development of embryo and endosperm in [7.12.30](/7.12.30); the morphology of pollen and embryo sacs is also important taxonomic evidence ([7.12.33](/7.12.33)). The cytology of meiosis is treated in [7.4.1](/7.4.1).
@@ -119,7 +119,7 @@ At an aperture the exine is absent or very thin, and the intine is often thicken
 | Monoporate | one pore | Poaceae, Cyperaceae |
 | Tricolpate | three furrows evenly spaced along the equator | basal eudicots such as buttercup and plane tree (*Platanus*) |
 | Tricolporate | three furrows, each with a pore | most core eudicots: camellia, Rosaceae, Fabaceae, Asteraceae |
-| Triporate | three pores | Betulaceae, elm, nettle (*Urtica*) |
+| Triporate | three pores | Betulaceae, nettle (*Urtica*) |
 | Pantoporate | many pores scattered over the whole surface | Caryophyllaceae, Amaranthaceae (*Chenopodium*), Malvaceae (cotton has 8–16 apertures) |
 | Inaperturate | no distinct aperture in the exine | Lauraceae, some Araceae |
 
@@ -198,7 +198,7 @@ As the ovule grows, the funiculus and the other parts grow at unequal rates, so 
 - the **anatropous ovule**: the funiculus is long and slender, the body of the ovule is inverted through 180°, the nucellus is not curved, the micropyle is turned to the side of the base of the funiculus, and a raphe is present; this is the commonest type in angiosperms;
 - the **hemitropous ovule**: one side of the ovule grows faster, so that the body of the ovule lies at a right angle to the funiculus and the micropyle faces to one side; Chinese textbooks often gloss it as amphitropous;
 - the **campylotropous ovule**: the lower half of the ovule remains upright and the upper half curves so that the micropyle faces the base, close to the funiculus, and nucellus and embryo sac are also slightly curved, as in rapeseed, amaranth (*Amaranthus*), pea, broad bean and grasses;
-- the **circinotropous ovule**: the funiculus is particularly long and curves around and encloses the ovule, as in *Opuntia* of the Cactaceae and sumac (*Toxicodendron vernicifluum*).
+- the **circinotropous ovule**: the funiculus is particularly long and curves around and encloses the ovule, as in *Opuntia* of the Cactaceae.
 
 The anatropous ovule is considered the ancestral state in angiosperms: anatropy brings the micropyle close to the placenta, so that the pollen tube can grow directly from the surface of the placenta to the micropyle, which may be why it is so overwhelmingly dominant in angiosperms. The orthotropous ovule has arisen secondarily in several groups (Polygonaceae, Piperaceae, Urticaceae, Juglandaceae). In English-language literature the term amphitropous is also applied specially to ovules in which the body of the ovule is curved and the nucellus and embryo sac are bent into a horseshoe shape; this differs from the meaning of the term amphitropous given as the gloss for the "hemitropous ovule" in Chinese textbooks, which readers should keep in mind.
 
@@ -308,7 +308,7 @@ The types of embryo sac (table in Section 28.6.3) can be summarized as follows: 
 
 4. Why is "tricolpate pollen" important in angiosperm systematics? If the pollen of a plant is monosulcate, can one conclude that it is a monocot?
 
-   **Answer** Tricolpate pollen and the types derived from it occur only in eudicots and are a synapomorphy of this monophyletic group, so they distinguish eudicots from other angiosperms and, in fossils, give a date for the appearance of eudicots (about 125 million years ago). Monosulcate pollen is a plesiomorphy of seed plants and occurs not only in monocots but also in the ANA grade and the magnoliids (such as *Magnolia* and part of the Lauraceae) and in cycads and ginkgo, so a monocot cannot be concluded from it. A plesiomorphy cannot be used to define a group.
+   **Answer** Tricolpate pollen and the types derived from it occur only in eudicots and are a synapomorphy of this monophyletic group, so they distinguish eudicots from other angiosperms and, in fossils, give a date for the appearance of eudicots (about 125 million years ago). Monosulcate pollen is a plesiomorphy of seed plants and occurs not only in monocots but also in the ANA grade and the magnoliids (such as *Magnolia* and nutmeg, *Myristica*) and in cycads and ginkgo, so a monocot cannot be concluded from it. A plesiomorphy cannot be used to define a group.
 
 5. What simplifications do the female and male gametophytes of angiosperms show compared with those of pine? What adaptive significance might these simplifications have?
 
