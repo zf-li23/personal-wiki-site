@@ -1,7 +1,7 @@
 ---
 title: The Leaf
 description: Leaf functions; blade, petiole, stipules, and the sheath, ligule and auricle of grasses; terminology of leaf shape, apex, base, margin, lobing, venation, simple and compound leaves, phyllotaxis, leaf mosaics, heterophylly and indumentum; leaf primordia, apical, marginal and intercalary growth, dorsiventrality and the molecular framework of compound-leaf development; anatomy of eudicot, grass, C3 and C4 (Kranz) leaves and pine needles; ecological leaf types; leaf fall, abscission zone and abscission layer.
-source_hash: e72cb9468d48
+source_hash: 321b99e13948
 ---
 
 The leaf is the main organ of photosynthesis and transpiration in seed plants, and also the most variable organ in their morphology. Leaf form is fairly constant within a species but differs enormously between species, so the terminology of leaf morphology is the basic language for describing and identifying plants and will be used repeatedly in the chapters on angiosperm classification ([7.12.33](/7.12.33)–[7.12.49](/7.12.49)). This chapter first treats the functions and parts of the leaf, then gives the morphological terminology systematically, then describes how leaves arise at the shoot apex and differentiate, and the anatomy of three kinds of leaf (eudicot, grass and pine). It ends with the ecological types of leaves and leaf fall. The leaves of seed plants are **megaphylls**; their origin is discussed in [7.12.16](/7.12.16), the arrangement of leaves on the stem and its mathematics in the chapter on the stem ([7.12.21](/7.12.21)), and the modifications of leaves in the next chapter ([7.12.24](/7.12.24)). The tissues on which the leaf depends (epidermis, stomata, vascular bundles and so on) were covered in [7.12.4](/7.12.4) and [7.12.5](/7.12.5). The physiological mechanisms of photosynthesis, transpiration, stomatal movement and leaf abscission belong to plant physiology, so only morphology and anatomy are treated here.
@@ -55,7 +55,7 @@ The presence, shape and size of ligule and auricles are important for identifyin
 
 ## 23.3. Terminology of Leaf Morphology
 
-Leaf blades differ greatly in size and shape among plants. The scale leaves of cypress are only a few millimeters long; the blade of Japanese banana (*Musa basjoo*) reaches 1–2 m; the floating leaf of the Amazon water lily (*Victoria amazonica*) can exceed 2 m in diameter and bear a load of several tens of kilograms; the pinnate compound leaves of the palm genus *Raphia* can exceed 20 m, the longest leaves in the plant kingdom. Within a single species, however, leaf form is fairly stable, which is why it serves in identification and classification. A leaf is generally described in the order: phyllotaxis, blade shape, apex, base, margin, lobing, venation, size, texture, surface indumentum, petiole and stipules. The terms in the following sections follow the usage of the *Flora of China*, with the corresponding English terms given in parentheses where the Chinese name differs; representative plants for each term are collected in the quick-reference table in the Summary.
+Leaf blades differ greatly in size and shape among plants. The scale leaves of cypress are only a few millimeters long; the blade of Japanese banana (*Musa basjoo*) reaches 2–3 m; the floating leaf of the Amazon water lily (*Victoria amazonica*) can exceed 2 m in diameter and bear a load of several tens of kilograms; the pinnate compound leaves of the palm genus *Raphia* can exceed 20 m, the longest leaves in the plant kingdom. Within a single species, however, leaf form is fairly stable, which is why it serves in identification and classification. A leaf is generally described in the order: phyllotaxis, blade shape, apex, base, margin, lobing, venation, size, texture, surface indumentum, petiole and stipules. The terms in the following sections follow the usage of the *Flora Reipublicae Popularis Sinicae* and the *Flora of China*, with the corresponding English terms given in parentheses where the Chinese name differs; representative plants for each term are collected in the quick-reference table in the Summary.
 
 ### 23.3.1. Leaf Shape
 
@@ -317,7 +317,7 @@ Kranz leaves have several mutually coordinated features: the veins are dense, ge
 
 The bundle sheath of grasses has two basic compositions, which can be used as a guide to subfamilies:
 
-| | C3 grasses (Pooideae: wheat, barley, oat; Oryzoideae: rice) | C4 grasses (NADP-malic enzyme type of Panicoideae: maize, sorghum, sugarcane, etc.) | C4 grasses (NAD-malic enzyme and PEP carboxykinase types of Chloridoideae and Panicoideae, e.g., foxtail millet, Bermuda grass) |
+| | C3 grasses (Pooideae: wheat, barley, oat; Oryzoideae: rice) | C4 grasses (NADP-malic enzyme type of Panicoideae: maize, sorghum, sugarcane, etc.) | C4 grasses (NAD-malic enzyme and PEP carboxykinase types of Chloridoideae and Panicoideae, e.g., proso millet, Bermuda grass) |
 |---|---|---|---|
 | Number of sheath layers | two | one | two |
 | Outer layer | larger parenchyma cells with few chloroplasts | — | large parenchyma cells rich in chloroplasts (the inner ring of the Kranz) |

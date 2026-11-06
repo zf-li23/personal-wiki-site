@@ -1,7 +1,7 @@
 ---
 title: Seeds and Seedlings
 description: Organs of seed plants; seed structure (plumule, hypocotyl and epicotyl, cotyledons, radicle, endosperm and perisperm, hilum, micropyle, raphe and caruncle on the seed coat) in dicot and monocot seeds, including the grass scutellum, coleoptile, coleorhiza, epiblast and aleurone layer; albuminous and exalbuminous seeds; seed dormancy (seed coat, embryo and inhibitors, and the current dormancy classification), longevity (orthodox and recalcitrant seeds, the Ellis-Roberts viability equation, the sacred lotus seed), and the conditions and stages of germination; epigeal and hypogeal seedlings.
-source_hash: 17ad6c7ffebe
+source_hash: 2b7d9324c6b1
 ---
 
 From this chapter on, the course turns from spore-bearing plants to the vegetative organs of seed plants. The seed is the reproductive structure unique to **seed plants**. After fertilization the **ovule** develops into a seed that already contains a small, morphologically differentiated plant, the embryo, together with stored food and a protective seed coat. The seed matures on the parent plant, is shed, remains dormant, and germinates under suitable conditions into a seedling, which grows into a plant with roots, stems and leaves. The seed is itself a reproductive organ, but its structure already prefigures the positions and relations of the three vegetative organs, and its germination is the starting point of individual development. We therefore treat seeds and seedlings first, and then the root ([7.12.20](/7.12.20)), the stem ([7.12.21](/7.12.21), [7.12.22](/7.12.22)) and the leaf ([7.12.23](/7.12.23)). How the seed forms in the ovule, that is, the development of the embryo and endosperm and the differentiation of the seed coat, belongs to the reproductive part ([7.12.30](/7.12.30)); the origin of the seed and the seeds of gymnosperms are covered in [7.12.25](/7.12.25). The physiology of dormancy and germination (the roles of hormones and photoreceptors, the mobilization of reserves) belongs to plant physiology; this chapter deals with morphology and structure, and with the external conditions directly related to form.
@@ -56,7 +56,7 @@ The physiological role of the cotyledons differs among species:
 
 The angiosperm endosperm originates from **double fertilization** ([7.12.29](/7.12.29)): one sperm fuses with the egg cell to form the zygote, and the other sperm fuses with the two polar nuclei of the central cell of the embryo sac to form the primary endosperm nucleus. Thus the endosperm and the embryo arise from the same fertilization event but follow different developmental courses: the former is a nutritive tissue that serves only the embryo and is eventually consumed. Gymnosperms have no double fertilization; their "endosperm" is female gametophyte tissue that develops within the megaspore wall and is filled with nutrients before fertilization ([7.12.25](/7.12.25)). The two kinds of "endosperm" bear the same name but differ in origin and in ploidy (see the table at the end of Section 19.2.5).
 
-The endosperm is generally fleshy and occupies a certain volume of the seed. The amount present in the mature seed varies widely. In castor bean and rice the endosperm is thick and makes up most of the seed; in legumes such as *Sesbania* and honey locust (*Gleditsia*) it is only a thin layer around the embryo; in soybean, broad bean and peanut the endosperm is absorbed by the embryo during seed development, the nutrients are stored in the cotyledons, and the mature seed has no endosperm or only a dry thin remnant. The seeds of Orchidaceae, Podostemaceae and Trapaceae form no endosperm at all: in orchids the primary endosperm nucleus does not divide or degenerates very early, and the seed contains only a small undifferentiated embryo.
+The endosperm is generally fleshy and occupies a certain volume of the seed. The amount present in the mature seed varies widely. In castor bean and rice the endosperm is thick and makes up most of the seed; in legumes such as *Sesbania* and honey locust (*Gleditsia*) it is only a thin layer around the embryo; in soybean, broad bean and peanut the endosperm is absorbed by the embryo during seed development, the nutrients are stored in the cotyledons, and the mature seed has no endosperm or only a dry thin remnant. The seeds of Orchidaceae, Podostemaceae and *Trapa* (placed in Lythraceae in APG IV) form no endosperm at all: in orchids the primary endosperm nucleus does not divide or degenerates very early, and the seed contains only a small undifferentiated embryo.
 
 The nutrients stored in the endosperm and cotyledons are mainly carbohydrates, lipids and proteins, with small amounts of minerals and vitamins:
 
@@ -66,7 +66,7 @@ The nutrients stored in the endosperm and cotyledons are mainly carbohydrates, l
 
 The main nutrient contents of several common crop seeds (percentage of dry weight, order of magnitude only):
 
-| Plant | Starch | Protein | Lipid |
+| Plant | Carbohydrate | Protein | Lipid |
 |---|---|---|---|
 | Maize *Zea mays* | 75 | 12 | 9 |
 | Wheat *Triticum aestivum* | 75 | 12 | 2 |
@@ -76,7 +76,7 @@ The main nutrient contents of several common crop seeds (percentage of dry weigh
 | Peanut *Arachis hypogaea* | 12 | 31 | 48 |
 | Rape *Brassica napus* | 19 | 21 | 48 |
 
-Cereal seeds are mainly starch, legume seeds mainly protein, and oilseed crops mainly lipid; this difference also determines the amount of water taken up in germination (Section 19.5.1).
+In cereals and pea the carbohydrate column is mainly starch; in soybean, rapeseed and other oilseeds it consists mostly of soluble sugars and cell-wall polysaccharides, with little starch. Cereal seeds are mainly starch, legume seeds mainly protein, and oilseed crops mainly lipid; this difference also determines the amount of water taken up in germination (Section 19.5.1).
 
 **Definition 19.2.5 (Perisperm)** The part of the nucellus that is not completely absorbed by the embryo sac as the ovule develops into a seed, and that remains as a storage tissue, is called the **perisperm**. The perisperm arises from the maternal nucellus and is diploid.
 
@@ -277,7 +277,7 @@ Contents:
 
 - Organs (Definition 19.1.1): vegetative organs (root, stem, leaf) and reproductive organs (flower, fruit, seed); postembryonic development in plants is open, with organs produced continuously by apical meristems; development begins with the seed.
 - Seed (Definition 19.2.1) = seed coat + embryo + endosperm (+ perisperm); embryo (Definition 19.2.2) = plumule + embryonic axis (epicotyl, hypocotyl) + radicle + cotyledons (Definition 19.2.3). Three roles of cotyledons: storage (soybean), brief photosynthesis (cotton), digestion and absorption of the endosperm (wheat, castor bean).
-- Endosperm (Definition 19.2.4): in angiosperms it comes from double fertilization and is usually $3n$; the gymnosperm endosperm is the female gametophyte, $n$. The perisperm (Definition 19.2.5) comes from the nucellus, $2n$. Orchidaceae, Podostemaceae and Trapaceae form no endosperm.
+- Endosperm (Definition 19.2.4): in angiosperms it comes from double fertilization and is usually $3n$; the gymnosperm endosperm is the female gametophyte, $n$. The perisperm (Definition 19.2.5) comes from the nucellus, $2n$. Orchidaceae, Podostemaceae and *Trapa* form no endosperm.
 - Seed coat (Definition 19.2.6) comes from the integuments; seeds protected by the pericarp have a thin coat (peach, peanut), seeds of dehiscent fruits a thick coat (legumes, tea), and in grasses the coat is fused with the pericarp (caryopsis); the palisade layer and osteosclereids of the legume seed coat; cotton fibers are epidermal hairs of the seed coat.
 - Marks on the seed coat (Definition 19.2.7): hilum (scar of the funiculus), micropyle (from the ovule micropyle), raphe (funiculus fused with the outer integument in anatropous ovules, with a vascular bundle), caruncle (extension of the outer seed coat, castor bean), chalaza.
 - The grass embryo (Definition 19.2.8): scutellum (cotyledon) and its epithelial cells, coleoptile, coleorhiza, epiblast (absent in Panicoideae), mesocotyl; the grain is a caryopsis, with an aleurone layer outside the endosperm.
