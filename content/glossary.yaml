@@ -10870,3 +10870,23 @@ terms:
   - { zh: 植物铁载体, en: phytosiderophore, aliases: [phytosiderophores, 麦根酸类植物铁载体] }
   - { zh: 光同化, en: photoassimilation }
   - { zh: 氮利用效率, en: nitrogen use efficiency, aliases: [NUE] }
+  - { zh: 水导, en: hydraulic conductivity, aliases: [水力导度, 导水率], scope: ["7"] }
+  - { zh: 集流, en: bulk flow, aliases: [mass flow, 质流, 整体流] }
+  - { zh: 吸胀作用, en: imbibition, aliases: [吸胀吸水] }
+  - { zh: 渗透系数, en: osmotic coefficient }
+  - { zh: 束缚水, en: bound water, scope: ["7"] }
+  - { zh: 自由水, en: free water, scope: ["7"] }
+  - { zh: 压力–体积曲线, en: pressure–volume curve, aliases: [压力-体积曲线, pressure-volume curve, PV 曲线] }
+  - { zh: 膨压丧失点, en: turgor loss point, aliases: [TLP] }
+  - { zh: 萎蔫, en: wilting }
+  - { zh: 界面层, en: boundary layer, aliases: [叶片界面层, 边界层], scope: ["7"] }
+  - { zh: 蒸腾速率, en: transpiration rate }
+  - { zh: 蒸腾拉力, en: transpiration pull }
+  - { zh: 脆弱性曲线, en: vulnerability curve, aliases: [栓塞脆弱性曲线] }
+  - { zh: 水力安全边际, en: hydraulic safety margin }
+  - { zh: 空气播种, en: air seeding }
+  - { zh: 水分再分配, en: hydraulic redistribution, aliases: [水力提升, hydraulic lift, 升水作用] }
+  - { zh: 亏缺灌溉, en: deficit irrigation, aliases: [调亏灌溉, regulated deficit irrigation] }
+  - { zh: 部分根区干燥, en: partial root-zone drying, aliases: [PRD] }
+  - { zh: 总初级生产力, en: gross primary production, aliases: [GPP, 总初级生产量] }
+  - { zh: 净初级生产力, en: net primary production, aliases: [NPP, 净初级生产量] }
