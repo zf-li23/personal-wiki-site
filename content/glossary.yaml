@@ -10907,3 +10907,27 @@ terms:
   - { zh: 玉米素, en: zeatin }
   - { zh: 多肽激素, en: peptide hormone, aliases: [peptide hormones, 植物多肽激素], scope: ["7.13"] }
   - { zh: 系统素, en: systemin }
+  - { zh: 屈服阈值, en: yield threshold }
+  - { zh: 壁延展性, en: wall extensibility }
+  - { zh: 净同化率, en: net assimilation rate, aliases: [NAR, 单位叶率] }
+  - { zh: 叶面积比, en: leaf area ratio, aliases: [LAR] }
+  - { zh: 温周期现象, en: thermoperiodism }
+  - { zh: 极性, en: polarity, scope: ["7.12", "7.13"] }
+  - { zh: 生长素渠化, en: auxin canalization, aliases: [渠化学说, canalization hypothesis] }
+  - { zh: 根系构型, en: root system architecture }
+  - { zh: 生长的相关性, en: growth correlation }
+  - { zh: 营养生长, en: vegetative growth }
+  - { zh: 生殖生长, en: reproductive growth }
+  - { zh: 向触性, en: thigmotropism }
+  - { zh: 向水性, en: hydrotropism }
+  - { zh: 向化性, en: chemotropism }
+  - { zh: 感震性, en: seismonasty }
+  - { zh: 感夜性, en: nyctinasty }
+  - { zh: 感热性, en: thermonasty }
+  - { zh: 偏上性, en: epinasty }
+  - { zh: 平衡石, en: statolith, aliases: [statoliths] }
+  - { zh: 平衡细胞, en: statocyte, aliases: [statocytes] }
+  - { zh: 叶枕, en: pulvinus, aliases: [pulvini], scope: ["7"] }
+  - { zh: 需光种子, en: light-requiring seed, aliases: [喜光种子, 光敏感种子] }
+  - { zh: 卡里金, en: karrikin, aliases: [karrikins] }
+  - { zh: 水时间模型, en: hydrotime model, aliases: [水热时间模型, hydrothermal time model] }
