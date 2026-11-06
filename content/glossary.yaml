@@ -10899,3 +10899,11 @@ terms:
   - { zh: 昼夜节律, en: circadian rhythm, aliases: [近似昼夜节律, circadian rhythms] }
   - { zh: 热形态建成, en: thermomorphogenesis }
   - { zh: UVR8, en: UVR8, aliases: [UV RESISTANCE LOCUS 8] }
+  - { zh: 植物生长物质, en: plant growth substance, aliases: [plant growth substances] }
+  - { zh: 燕麦试法, en: Avena curvature test, aliases: [燕麦弯曲试验, oat coleoptile curvature test] }
+  - { zh: 生长素运输的化学渗透模型, en: chemiosmotic model of polar auxin transport, aliases: [chemiosmotic model of auxin transport] }
+  - { zh: DELLA 蛋白, en: DELLA protein, aliases: [DELLA proteins, DELLA] }
+  - { zh: 激动素, en: kinetin }
+  - { zh: 玉米素, en: zeatin }
+  - { zh: 多肽激素, en: peptide hormone, aliases: [peptide hormones, 植物多肽激素], scope: ["7.13"] }
+  - { zh: 系统素, en: systemin }
