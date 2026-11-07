@@ -11424,3 +11424,47 @@ terms:
   - { zh: 胎儿–胎盘单位, en: fetoplacental unit, aliases: [胎儿-胎盘单位, feto-placental unit] }
   - { zh: Ferguson 反射, en: Ferguson reflex }
   - { zh: 射乳反射, en: milk ejection reflex, aliases: [排乳反射, let-down reflex] }
+  - { zh: 屈光度, en: diopter, aliases: [dioptre, 屈光力] }
+  - { zh: 视调节, en: accommodation, aliases: [调节, 眼的调节], scope: ["7.14"] }
+  - { zh: 近点, en: near point, scope: ["7.14"] }
+  - { zh: 老视, en: presbyopia, aliases: [老花眼] }
+  - { zh: 简化眼, en: reduced eye }
+  - { zh: 瞳孔对光反射, en: pupillary light reflex }
+  - { zh: 眼内压, en: intraocular pressure, aliases: [眼压] }
+  - { zh: 中央凹, en: fovea }
+  - { zh: 光转导, en: phototransduction }
+  - { zh: 暗适应, en: dark adaptation }
+  - { zh: 明适应, en: light adaptation }
+  - { zh: 三色视觉, en: trichromacy, aliases: [trichromatic vision] }
+  - { zh: ON 型双极细胞, en: ON bipolar cell, aliases: [ON bipolar cells] }
+  - { zh: OFF 型双极细胞, en: OFF bipolar cell, aliases: [OFF bipolar cells] }
+  - { zh: 中心–周边感受野, en: center–surround receptive field, aliases: [center-surround receptive field] }
+  - { zh: 无长突细胞, en: amacrine cell, aliases: [amacrine cells] }
+  - { zh: 内在光敏神经节细胞, en: intrinsically photosensitive retinal ganglion cell, aliases: [ipRGC, ipRGCs] }
+  - { zh: 背侧通路, en: dorsal stream, scope: ["7.14"] }
+  - { zh: 腹侧通路, en: ventral stream, scope: ["7.14"] }
+  - { zh: 扫视, en: saccade, aliases: [saccades] }
+  - { zh: 平稳追踪, en: smooth pursuit }
+  - { zh: 阻抗匹配, en: impedance matching, scope: ["7.14"] }
+  - { zh: 声反射, en: acoustic reflex, aliases: [中耳肌反射] }
+  - { zh: 蜗内电位, en: endocochlear potential }
+  - { zh: 毛细胞, en: hair cell, aliases: [hair cells] }
+  - { zh: 部位原理, en: place principle, aliases: [place theory, 部位学说] }
+  - { zh: Greenwood 函数, en: Greenwood function, scope: ["7.14"] }
+  - { zh: 耳蜗放大器, en: cochlear amplifier }
+  - { zh: 耳声发射, en: otoacoustic emission, aliases: [otoacoustic emissions] }
+  - { zh: 双耳时间差, en: interaural time difference, aliases: [ITD] }
+  - { zh: 双耳强度差, en: interaural level difference, aliases: [ILD, interaural intensity difference] }
+  - { zh: 半规管, en: semicircular canal, aliases: [semicircular canals] }
+  - { zh: 前庭眼反射, en: vestibulo-ocular reflex, aliases: [VOR] }
+  - { zh: 眼震颤, en: nystagmus, aliases: [眼震] }
+  - { zh: 侧线, en: lateral line }
+  - { zh: 回声定位, en: echolocation }
+  - { zh: 嗅上皮, en: olfactory epithelium }
+  - { zh: 嗅小球, en: olfactory glomerulus, aliases: [olfactory glomeruli] }
+  - { zh: 组合编码, en: combinatorial coding, aliases: [combinatorial code] }
+  - { zh: 信息素, en: pheromone, aliases: [pheromones, 外激素] }
+  - { zh: 犁鼻器, en: vomeronasal organ, aliases: [Jacobson 器, "Jacobson's organ"] }
+  - { zh: 味蕾, en: taste bud, aliases: [taste buds] }
+  - { zh: 电感受, en: electroreception }
+  - { zh: 电定位, en: electrolocation }
