@@ -58,7 +58,7 @@ Plectin belongs to the *intermediate filament–associated proteins* (IFAPs), th
 
 ### 15.1.5. Septins
 
-**Definition 15.1.5 (Septin)** A **septin** is a member of a family of GTP-binding proteins that form nonpolar hetero-oligomeric rods (hexamers and octamers in a fixed subunit order, for example Cdc11–Cdc12–Cdc3–Cdc10–Cdc10–Cdc3–Cdc12–Cdc11 in budding yeast), which polymerize end to end into filaments and rings on membranes, preferably on curved membranes.
+**Definition 15.1.5 (Septin)** A **septin** is a member of a family of GTP-binding proteins that form nonpolar hetero-oligomeric rods (hexamers and octamers in a fixed subunit order, for example Cdc11–Cdc12–Cdc3–Cdc10–Cdc10–Cdc3–Cdc12–Cdc11 in budding yeast), which polymerize end to end into filaments and rings on membranes, preferentially on curved membranes.
 
 Septins were found in yeast mutants that fail to complete **cytokinesis** (Hartwell, 1971), named for their role in septum formation. In budding yeast they form an hourglass and then a double ring at the bud neck that serves as a scaffold for the proteins of cytokinesis and as a diffusion barrier separating the membranes of mother and bud. In animal cells septins associate with actin bundles, the cleavage furrow, the base of **cilia** and the annulus of the sperm flagellum; they can sense micrometer-scale membrane curvature, which is larger than any single protein, by the **cooperative binding** of filaments. Their GTP is not used to drive dynamics as in **tubulin**; it seems to help assembly of the rods.
 
