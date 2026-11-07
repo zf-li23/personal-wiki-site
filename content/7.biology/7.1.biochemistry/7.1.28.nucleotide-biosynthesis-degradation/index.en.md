@@ -44,7 +44,7 @@ John Buchanan located the origin of each atom of the purine ring in the late 194
 
 **Definition 28.2.1 (IMP)** **IMP** (inosinate, inosine 5′-monophosphate) is the ribonucleotide of the purine base hypoxanthine (6-oxopurine); it is the first intermediate of de novo purine synthesis with a complete purine ring and the common precursor of AMP and GMP.
 
-The purine ring is assembled one or a few atoms at a time on the ribose phosphate (figure below; the steps in Lehninger 8e, Fig. 22-35):
+The purine ring is assembled one or a few atoms at a time on the ribose phosphate (figure below):
 
 | Step | Enzyme | Atoms added | Cosubstrates |
 |---|---|---|---|
@@ -78,7 +78,7 @@ The crossed requirement, GTP to make AMP and ATP to make GMP, is itself a regula
 
 ### 28.2.4. Feedback Regulation
 
-Four mechanisms set the total rate of purine synthesis and the ratio of the two products (Lehninger 8e, Fig. 22-37, for *E. coli*; the scheme in animals is similar):
+Four mechanisms set the total rate of purine synthesis and the ratio of the two products (for *E. coli*; the scheme in animals is similar):
 
 1. Glutamine–PRPP amidotransferase, the committed step, is an **allosteric enzyme** inhibited by IMP, AMP and GMP and activated by its **substrate** PRPP. AMP and GMP inhibit synergistically (at different sites): excess of either partly closes the entrance, excess of both closes it fully.
 2. At the branch, AMP inhibits adenylosuccinate synthetase and GMP inhibits IMP dehydrogenase, each without affecting the other branch; if both accumulate, IMP accumulates and inhibits the first step, an example of sequential **feedback inhibition** ([7.1.27](/7.1.27)).
@@ -136,7 +136,7 @@ $$
 \text{NDP} + \text{thioredoxin}(\ce{SH})_2 \to \text{dNDP} + \text{thioredoxin}(\ce{S-S}) + \ce{H2O}. \tag{28.3}
 $$
 
-The class I enzyme of *E. coli* and of mammals is an $\alpha_2\beta_2$ complex (figure below). The α subunits (R1; RRM1 in humans) contain the **active sites**, with three essential cysteines, and two kinds of allosteric site; the β subunits (R2; RRM2) contain a diferric centre ($\ce{Fe^3+}$–O–$\ce{Fe^3+}$) that reacts with $\ce{O2}$ to generate a stable tyrosyl radical on Tyr122 and keeps it stable for days. Tyr122 lies about 3.5 nm from the active site; each time a substrate binds, the radical travels to Cys439 of α along a chain of aromatic **residues** by proton-coupled electron transfer, and returns after the reaction. The proposed mechanism (Stubbe):
+The class I enzyme of *E. coli* and of mammals is an $\alpha_2\beta_2$ complex (figure below). The α subunits (R1; RRM1 in humans) contain the **active sites**, with three essential cysteines, and two kinds of allosteric site; the β subunits (R2; RRM2) contain a diferric center ($\ce{Fe^3+}$–O–$\ce{Fe^3+}$) that reacts with $\ce{O2}$ to generate a stable tyrosyl radical on Tyr122 and keeps it stable for days. Tyr122 lies about 3.5 nm from the active site; each time a substrate binds, the radical travels to Cys439 of α along a chain of aromatic **residues** by proton-coupled electron transfer, and returns after the reaction. The proposed mechanism (Stubbe):
 
 1. the thiyl radical of Cys439 abstracts the 3′-hydrogen of the ribose;
 2. the 3′-radical promotes the loss of the 2′-hydroxyl as water, protonated by Cys225 (the 3′ radical stabilizes the developing cation at C-2′, which becomes a 3′-keto radical);
@@ -147,13 +147,13 @@ Three classes of RNR differ in how they generate the radical, and are distribute
 
 | Class | Radical generator | Oxygen | Substrates | Found in |
 |---|---|---|---|---|
-| I | diferric (or dimanganese, Mn–Fe) centre and a tyrosyl radical in β | requires $\ce{O2}$ | NDP | **eukaryotes**, many aerobic bacteria |
+| I | diferric (or dimanganese, Mn–Fe) center and a tyrosyl radical in β | requires $\ce{O2}$ | NDP | **eukaryotes**, many aerobic bacteria |
 | II | 5′-deoxyadenosylcobalamin (coenzyme $\mathrm{B_{12}}$) | independent | NDP or NTP | many bacteria and archaea |
 | III | glycyl radical installed by an S-adenosylmethionine-dependent radical activase, with an Fe–S cluster | killed by $\ce{O2}$ | NTP; formate or thioredoxin as reductant | strict and facultative anaerobes (*E. coli* when anaerobic) |
 
 The common mechanism (a cysteine thiyl radical abstracting the 3′-hydrogen) and the different, environment-specific ways of making the radical suggest that all three descend from one ancestor that arose before the atmosphere became oxic.
 
-![Class I ribonucleotide reductase and its regulatory logic. Left: the α₂β₂ enzyme (*E. coli* numbering). Each α subunit carries the active site, where Cys439 becomes a thiyl radical, the specificity site (S) at the α–α interface, and the activity site (A) in the N-terminal ATP cone; each β subunit contains a diferric centre that generates the Tyr122 radical, which is transferred about 3.5 nm to Cys439 at each turnover; electrons come from NADPH through thioredoxin or glutaredoxin. Right: at the activity site ATP activates and dATP inactivates all four reductions (in *E. coli* dATP induces inactive α₄β₄ rings); at the specificity site ATP or dATP favours reduction of CDP and UDP, dTTP favours GDP and dGTP favours ADP, so that each product calls for the next](./plots/rnr-regulation.py)
+![Class I ribonucleotide reductase and its regulatory logic. Left: the α₂β₂ enzyme (*E. coli* numbering). Each α subunit carries the active site, where Cys439 becomes a thiyl radical, the specificity site (S) at the α–α interface, and the activity site (A) in the N-terminal ATP cone; each β subunit contains a diferric center that generates the Tyr122 radical, which is transferred about 3.5 nm to Cys439 at each turnover; electrons come from NADPH through thioredoxin or glutaredoxin. Right: at the activity site ATP activates and dATP inactivates all four reductions (in *E. coli* dATP induces inactive α₄β₄ rings); at the specificity site ATP or dATP favors reduction of CDP and UDP, dTTP favors GDP and dGTP favors ADP, so that each product calls for the next](./plots/rnr-regulation.py)
 
 ### 28.4.3. Allosteric Regulation of Ribonucleotide Reductase
 
@@ -163,9 +163,9 @@ One active site makes four products in proportions that must match the compositi
 |---|---|---|
 | activity site (ATP cone) | ATP | activates all reductions |
 | | dATP | inactivates the enzyme (*E. coli*: α₄β₄ rings in which the radical pathway is broken; human: α₆ rings) |
-| specificity site | ATP or dATP | favours reduction of CDP and UDP |
-| | dTTP | favours GDP (and suppresses CDP and UDP) |
-| | dGTP | favours ADP |
+| specificity site | ATP or dATP | favors reduction of CDP and UDP |
+| | dTTP | favors GDP (and suppresses CDP and UDP) |
+| | dGTP | favors ADP |
 
 The scheme is a sequence: with ATP bound, the enzyme makes the pyrimidine dNTPs; dTTP accumulating at the specificity site switches it to GDP; dGTP switches it to ADP; and dATP, finally, binds the activity site and turns the enzyme off. Every pool thus turns the enzyme toward a pool that is still low, and the final product of the sequence shuts everything down.
 
@@ -208,7 +208,7 @@ Folate deficiency, probably the most common **vitamin** deficiency worldwide, sl
 
 Nucleic acids of the diet are hydrolyzed in the intestine by nucleases and **phosphodiesterases** to nucleotides, and these to nucleosides and bases; those of the cells are recycled as they turn over. Purine nucleotides lose their phosphate by 5′-nucleotidases (figure below). Adenosine is deaminated to inosine by adenosine deaminase (ADA), so that the amino group of adenine is removed before the ribose; in muscle, AMP deaminase removes it at the nucleotide level (IMP). Purine nucleoside phosphorylase (PNP) cleaves inosine and guanosine by **phosphorolysis**, giving hypoxanthine and guanine and ribose 1-phosphate (which is recycled through the **pentose phosphate pathway**). Guanine is deaminated to xanthine, so that the guanine amino group is removed after the ribose.
 
-**Definition 28.5.1 (Xanthine Oxidase and Uric Acid)** **Xanthine oxidase** (xanthine oxidoreductase) is the enzyme of liver and intestine that hydroxylates hypoxanthine to xanthine and xanthine to **uric acid** (2,6,8-trioxopurine), the end product of purine catabolism in humans; it is a homodimer each of whose subunits contains a molybdenum (molybdopterin) cofactor, at which the substrate is hydroxylated with oxygen from water, two [2Fe–2S] centres and FAD, which pass the electrons to $\ce{O2}$ (giving $\ce{H2O2}$ and superoxide) or, in its dehydrogenase form, to $\ce{NAD+}$.
+**Definition 28.5.1 (Xanthine Oxidase and Uric Acid)** **Xanthine oxidase** (xanthine oxidoreductase) is the enzyme of liver and intestine that hydroxylates hypoxanthine to xanthine and xanthine to **uric acid** (2,6,8-trioxopurine), the end product of purine catabolism in humans; it is a homodimer each of whose subunits contains a molybdenum (molybdopterin) cofactor, at which the substrate is hydroxylated with oxygen from water, two [2Fe–2S] centers and FAD, which pass the electrons to $\ce{O2}$ (giving $\ce{H2O2}$ and superoxide) or, in its dehydrogenase form, to $\ce{NAD+}$.
 
 Uric acid ($\mathrm{p}K_{\mathrm{a}} \approx 5.4$) is present at pH 7.4 almost entirely as the urate ion. A healthy adult excretes about 0.6 g per day, partly from dietary purines and partly from turnover. Most mammals degrade urate further, and the extent of degradation follows the availability of water, as for the excretion of amino nitrogen ([7.1.22](/7.1.22#sec-22.1.1)):
 
@@ -258,7 +258,7 @@ Two inherited defects of purine degradation selectively kill lymphocytes, which 
 
 **Definition 28.5.3 (Gout)** **Gout** is the disease caused by persistently elevated urate in the blood (hyperuricemia, above about 0.4 mM), in which crystals of monosodium urate deposit in joints, where they trigger acute, very painful inflammation (by activating the NLRP3 inflammasome of macrophages), in tissues (tophi) and in the kidney tubules (stones and nephropathy).
 
-Gout occurs predominantly in men; its old association with "high living" is only partly right. In about 90% of patients the cause is underexcretion of urate by the kidney, in which urate **transporters** (URAT1, GLUT9 and ABCG2) are major genetic determinants, and overproduction (PRPP synthetase superactivity, partial HGPRT deficiency, high cell turnover in leukemias and after chemotherapy, a diet rich in purines, fructose and alcohol) accounts for the rest. The drug allopurinol, developed by Gertrude Elion and George Hitchings, is an isomer of hypoxanthine (structure 2 below, beside hypoxanthine 1) and a substrate of xanthine oxidase, which converts it to oxypurinol (alloxanthine); oxypurinol binds very tightly to the reduced molybdenum centre and inactivates the enzyme, a mechanism-based inhibition. The excreted purines are then hypoxanthine and xanthine, the first of which is much more soluble than uric acid; xanthine is less soluble, which explains the occasional xanthine stones of treated patients (Question 4). Febuxostat, a non-purine inhibitor of xanthine oxidase, uricosuric drugs that block URAT1 (probenecid), and recombinant urate oxidases (rasburicase, pegloticase, used against the tumor lysis syndrome and refractory gout) are the alternatives; colchicine and anti-inflammatory drugs treat the acute attack.
+Gout occurs predominantly in men; its old association with "high living" is only partly right. In about 90% of patients the cause is underexcretion of urate by the kidney, in which urate **transporters** (URAT1, GLUT9 and ABCG2) are major genetic determinants, and overproduction (PRPP synthetase superactivity, partial HGPRT deficiency, high cell turnover in leukemias and after chemotherapy, a diet rich in purines, fructose and alcohol) accounts for the rest. The drug allopurinol, developed by Gertrude Elion and George Hitchings, is an isomer of hypoxanthine (structure 2 below, beside hypoxanthine 1) and a substrate of xanthine oxidase, which converts it to oxypurinol (alloxanthine); oxypurinol binds very tightly to the reduced molybdenum center and inactivates the enzyme, a mechanism-based inhibition. The excreted purines are then hypoxanthine and xanthine, the first of which is much more soluble than uric acid; xanthine is less soluble, which explains the occasional xanthine stones of treated patients (Question 4). Febuxostat, a non-purine inhibitor of xanthine oxidase, uricosuric drugs that block URAT1 (probenecid), and recombinant urate oxidases (rasburicase, pegloticase, used against the tumor lysis syndrome and refractory gout) are the alternatives; colchicine and anti-inflammatory drugs treat the acute attack.
 
 ```smiles
 O=c1[nH]cnc2[nH]cnc12 1

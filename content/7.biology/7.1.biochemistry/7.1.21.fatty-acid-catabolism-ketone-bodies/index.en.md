@@ -121,7 +121,7 @@ For palmitate, 28 ATP come from β oxidation and 80 from the citric acid cycle, 
 $$
 \text{palmitoyl-CoA} + 23\,\ce{O2} + 108\,\mathrm{P_i} + 108\,\ce{ADP} \to \ce{CoA} + 108\,\ce{ATP} + 16\,\ce{CO2} + 23\,\ce{H2O}.
 $$
-The standard Gibbs energy of oxidation of palmitate is about $-9800\,\mathrm{kJ\,mol^{-1}}$, of which $106 \times 30.5 = 3230\,\mathrm{kJ\,mol^{-1}}$ (33%) is conserved in standard terms and more than 60% with the cellular **phosphorylation potential**, about the same as for glucose. Per carbon, a fatty acid gives more ATP than glucose (106/16 = 6.6 against 32/6 = 5.3), because its carbons are more reduced ([7.1.16](/7.1.16#sec-16.4.2)); per gram, more than twice as much (0.41 against 0.18 mol ATP per mol per g), and about seven times as much as hydrated glycogen.
+The standard Gibbs energy of oxidation of palmitate is about $-9800\,\mathrm{kJ\,mol^{-1}}$, of which $106 \times 30.5 = 3230\,\mathrm{kJ\,mol^{-1}}$ (33%) is conserved in standard terms and more than 60% with the cellular **phosphorylation potential**, about the same as for glucose. Per carbon, a fatty acid gives more ATP than glucose (106/16 = 6.6 against 32/6 = 5.3), because its carbons are more reduced ([7.1.16](/7.1.16#sec-16.4.2)); per gram, more than twice as much (0.41 against 0.18 mol ATP per g), and about seven times as much as hydrated glycogen.
 
 ![ATP from the complete oxidation of saturated even-chain fatty acids (Formula 21.3.1, ATP = 7n − 6), compared with glucose (32 ATP). A: ATP per molecule (palmitate, n = 16: 106). B: ATP per carbon atom, rising toward 7 as the cost of activation is spread over more carbons. C: ATP per gram of fuel; the dotted line is glycogen stored with about 2 g of water per g](./plots/fatty-acid-yield.py)
 

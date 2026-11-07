@@ -48,7 +48,7 @@ The table contains the whole energetic logic of the pathway. Three steps (1, 3, 
 4. Aldolase (fructose 1,6-bisphosphate aldolase) cleaves the C-3–C-4 bond in a reverse aldol reaction, giving the ketose dihydroxyacetone phosphate (DHAP, carbons 1–3) and the aldose glyceraldehyde 3-phosphate (GAP, carbons 4–6). The class I **aldolase** of animals and plants binds the C-2 carbonyl as a protonated Schiff base with an active-site Lys, the electron sink that stabilizes the carbanion formed on C-3; class II aldolases of fungi and bacteria use $\ce{Zn^2+}$ instead. The mechanism is drawn in [6.5.22](/6.5.22#sec-22.10.1).
 5. Triose phosphate isomerase interconverts DHAP and GAP through an enediol(ate) intermediate. Only GAP continues; DHAP is converted to it, so that both halves of glucose pass through the payoff phase. Triose phosphate isomerase is the classic "perfect" enzyme: $k_{\mathrm{cat}}/K_{\mathrm{M}}$ is about $10^{8}$–$10^{9}\,\mathrm{M^{-1}\,s^{-1}}$, near the diffusion limit ([6.3.17](/6.3.17)), and a flexible loop closes over the substrate to prevent the elimination of phosphate from the enediol intermediate to the toxic methylglyoxal.
 
-The two isomerizations follow from chemical logic. A retro-aldol cleavage needs a carbonyl at C-2 and a hydroxyl at C-4 of the substrate; glucose (an aldose) cleaved directly would give a C₂ and a C₄ fragment, but fructose cleaves symmetrically into two C₃ units. Phosphorylating C-1 of fructose before cleavage puts a phosphate on each triose. After step 5, carbons 1, 2 and 3 of GAP derive from carbons 6, 5 and 4 or 1, 2 and 3 of glucose, respectively, a fact used in isotope tracing:
+The two isomerizations follow from chemical logic. A retro-aldol cleavage needs a carbonyl at C-2 and a hydroxyl at C-4 of the substrate; glucose (an aldose) cleaved directly would give a C₂ and a C₄ fragment, but fructose cleaves symmetrically into two C₃ units. Phosphorylating C-1 of fructose before cleavage puts a phosphate on each triose. After step 5, carbons 1, 2 and 3 of GAP derive from carbons 4, 5 and 6 or 3, 2 and 1 of glucose, respectively, a fact used in isotope tracing:
 
 | Carbon of glyceraldehyde 3-phosphate | C-1 (aldehyde) | C-2 | C-3 (phosphate ester) |
 |---|---|---|---|
@@ -118,7 +118,7 @@ Pyruvate stands at a branch point. Under aerobic conditions in most cells it ent
 Lactate dehydrogenase reduces pyruvate with NADH: pyruvate + NADH + $\ce{H+}$ ⇌ L-lactate + $\ce{NAD+}$, $\Delta_{\mathrm{r}}G'^{\circ} = -25.1\,\mathrm{kJ\,mol^{-1}}$. The two NADH formed per glucose by GAPDH are reoxidized by the two pyruvates, and the overall reaction,
 
 $$
-\text{glucose} + 2\,\ce{ADP} + 2\,\mathrm{P_i} \to 2\,\text{lactate} + 2\,\ce{ATP} + 2\,\ce{H2O}, \qquad \Delta_{\mathrm{r}}G'^{\circ} = -196\,\mathrm{kJ\,mol^{-1}},
+\text{glucose} + 2\,\ce{ADP} + 2\,\mathrm{P_i} \to 2\,\text{lactate} + 2\,\ce{ATP} + 2\,\ce{H2O}, \qquad \Delta_{\mathrm{r}}G'^{\circ} = -135\,\mathrm{kJ\,mol^{-1}},
 $$
 involves no net oxidation: the carbon of lactate is at the same average oxidation state as that of glucose. Lactate is formed by vigorously contracting skeletal muscle whose glycolysis outpaces the delivery of $\ce{O2}$, by erythrocytes (which have no mitochondria), by the retina, and by many microorganisms (lactic acid bacteria of yogurt, cheese, sauerkraut and silage). Mammalian LDH is a tetramer of two kinds of **subunits**, H (heart) and M (muscle), which combine into five **isozymes** ([7.1.9](/7.1.9#sec-9.1.3)); the H₄ form of heart is inhibited by high pyruvate and favors oxidation of lactate to pyruvate, the M₄ form of skeletal muscle and liver favors reduction of pyruvate.
 
@@ -129,7 +129,7 @@ Lactate is not a waste product. It diffuses out of muscle into the blood and is 
 Yeast and some other microorganisms ferment glucose to ethanol and $\ce{CO2}$ in two steps after glycolysis. Pyruvate decarboxylase, which requires $\ce{Mg^2+}$ and **thiamine pyrophosphate**, removes the carboxyl group irreversibly (the mechanism is drawn in [7.1.17](/7.1.17#sec-17.2.2)); alcohol dehydrogenase, a $\ce{Zn^2+}$ enzyme, then reduces acetaldehyde with NADH (Example 16.4.1):
 
 $$
-\text{glucose} + 2\,\ce{ADP} + 2\,\mathrm{P_i} \to 2\,\text{ethanol} + 2\,\ce{CO2} + 2\,\ce{ATP} + 2\,\ce{H2O}, \qquad \Delta_{\mathrm{r}}G'^{\circ} = -235\,\mathrm{kJ\,mol^{-1}}.
+\text{glucose} + 2\,\ce{ADP} + 2\,\mathrm{P_i} \to 2\,\text{ethanol} + 2\,\ce{CO2} + 2\,\ce{ATP} + 2\,\ce{H2O}, \qquad \Delta_{\mathrm{r}}G'^{\circ} = -174\,\mathrm{kJ\,mol^{-1}}.
 $$
 The $\ce{CO2}$ raises bread and carbonates champagne and beer. Humans have alcohol dehydrogenase, which oxidizes ingested ethanol to acetaldehyde in the liver (7.1.9, alcohol flushing), but no pyruvate decarboxylase; pyruvate decarboxylase is present in brewer's and baker's yeast and in a few other organisms (and in plants under anoxia), and the reaction is the classic example of TPP catalysis.
 
@@ -242,7 +242,7 @@ The pathway card of glycolysis ([7.1.16](/7.1.16#sec-16.1.3)):
 |---|---|
 | Ten steps (18.2) | phosphorylate, isomerize, phosphorylate, cleave (C₆ → 2 C₃), isomerize; oxidize with phosphorylation (thioester, GAPDH), transfer to ADP, shift, dehydrate, transfer to ADP |
 | Feeder pathways (18.3) | glycogen/starch by phosphorolysis (Glc 1-P); fructose via F6P (muscle) or F1P and aldolase B (liver, bypasses PFK-1); galactose by the Leloir pathway; mannose; glycerol |
-| Fates of pyruvate (18.4) | acetyl-CoA (aerobic); lactate (LDH, −196 kJ mol⁻¹ overall); ethanol + CO₂ (pyruvate decarboxylase, TPP; −235 kJ mol⁻¹); fermentation regenerates NAD⁺ (Definition 18.4.1) |
+| Fates of pyruvate (18.4) | acetyl-CoA (aerobic); lactate (LDH, −135 kJ mol⁻¹ overall, including 2 ATP); ethanol + CO₂ (pyruvate decarboxylase, TPP; −174 kJ mol⁻¹); fermentation regenerates NAD⁺ (Definition 18.4.1) |
 | Pasteur and Warburg effects (Definition 18.4.2) | 2 vs ~30 ATP per glucose; aerobic glycolysis of proliferating cells: biosynthesis, HIF-1, PKM2; FDG-PET |
 | Pentose phosphate pathway (Definitions 18.6.1, 18.6.2) | oxidative phase: G6PD (regulated by $\ce{NADP+}$), 6PGD → 2 NADPH + Ru5P + CO₂ (Eq. (18.2)); nonoxidative: transketolase (TPP, C₂), transaldolase (Schiff base, C₃); 6 C₅ ⇌ 5 C₆; four modes; G6PD deficiency and malaria |
 
@@ -258,7 +258,7 @@ The pathway card of glycolysis ([7.1.16](/7.1.16#sec-16.1.3)):
 
 3. Using the erythrocyte values of the table in 18.2.1, explain why phosphoglycerate kinase can serve in gluconeogenesis while pyruvate kinase cannot, although both transfer a phosphoryl group to ADP.
 
-   **Answer** In the cell, the GAPDH–phosphoglycerate kinase pair has $\Delta_{\mathrm{r}}G \approx -1.7\,\mathrm{kJ\,mol^{-1}}$: it is near equilibrium, and a modest change in the concentrations (more 3-phosphoglycerate, more ATP and NADH) reverses it. Pyruvate kinase operates at $\Delta_{\mathrm{r}}G \approx -17\,\mathrm{kJ\,mol^{-1}}$; by the flux–force relation ([7.1.17](/7.1.17#sec-17.3.3)) its reverse flux is less than 0.2% of the forward flux, and reversing it would require changing the mass-action ratio by more than three orders of magnitude. Gluconeogenesis therefore bypasses it with pyruvate carboxylase and PEP carboxykinase, at the cost of two extra high-energy phosphates (7.1.19).
+   **Answer** In the cell, the GAPDH–phosphoglycerate kinase pair has $\Delta_{\mathrm{r}}G \approx -1.7\,\mathrm{kJ\,mol^{-1}}$: it is near equilibrium, and a modest change in the concentrations (more 3-phosphoglycerate, more ATP and NADH) reverses it. Pyruvate kinase operates at $\Delta_{\mathrm{r}}G \approx -17\,\mathrm{kJ\,mol^{-1}}$; by the flux–force relation ([7.1.17](/7.1.17#sec-17.3.3)) its reverse flux is less than 0.2% of the forward flux, and reversing it would require changing the mass-action ratio by almost three orders of magnitude. Gluconeogenesis therefore bypasses it with pyruvate carboxylase and PEP carboxykinase, at the cost of two extra high-energy phosphates (7.1.19).
 
 4. A muscle works anaerobically on glycogen. How many ATP are gained per glucosyl unit converted to lactate, and per glucose taken up from the blood? Why is the difference not "free"?
 

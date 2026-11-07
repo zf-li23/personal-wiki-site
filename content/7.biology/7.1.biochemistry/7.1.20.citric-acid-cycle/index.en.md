@@ -150,7 +150,7 @@ But in animals there is no net synthesis of oxaloacetate from acetyl-CoA: for ev
 |---|---|---|
 | pyruvate + $\ce{HCO3-}$ + ATP → oxaloacetate + ADP + $\mathrm{P_i}$ | pyruvate carboxylase (biotin) | liver, kidney (the main anaplerotic reaction of mammals), brain, adipose tissue |
 | PEP + $\ce{CO2}$ + GDP ⇌ oxaloacetate + GTP | PEP carboxykinase | heart, skeletal muscle |
-| PEP + $\ce{HCO3-}$ → oxaloacetate + $\mathrm{P_i}$ | PEP carboxylase | plants (C4 and CAM **photosynthesis**, [7.1.25](/7.1.25)), yeast, bacteria |
+| PEP + $\ce{HCO3-}$ → oxaloacetate + $\mathrm{P_i}$ | PEP carboxylase | plants (C4 and CAM **photosynthesis**, [7.1.25](/7.1.25)), bacteria |
 | pyruvate + $\ce{HCO3-}$ + NAD(P)H ⇌ malate + NAD(P)⁺ | malic enzyme | widely distributed in eukaryotes and bacteria |
 
 Pyruvate carboxylase is almost inactive without acetyl-CoA: when acetyl-CoA, the fuel of the cycle, accumulates, it stimulates the formation of oxaloacetate to burn it. Glutamine (via glutamate and α-ketoglutarate, glutaminolysis) is the main anaplerotic substrate of many proliferating cells and tumors.

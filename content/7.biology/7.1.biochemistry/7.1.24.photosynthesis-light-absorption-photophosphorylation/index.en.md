@@ -245,7 +245,7 @@ The pathway card of the light reactions ([7.1.16](/7.1.16#sec-16.1.3)):
 
 3. In Jagendorf's experiment, thylakoids equilibrated at pH 4 were transferred to pH 8. Estimate the maximal free energy per mole of protons available from this gradient at $25\,^\circ\mathrm{C}$ and the minimal number of protons needed per ATP if the **phosphorylation potential** in the medium is $+45\,\mathrm{kJ\,mol^{-1}}$. Why is the ATP yield limited?
 
-   **Answer** $\Delta\tilde\mu_{\mathrm{H^+}} = 2.303RT\,\Delta\mathrm{pH} = 5.71 \times 4 = 22.8\,\mathrm{kJ\,mol^{-1}}$ (no membrane potential), so at least $45/22.8 = 2$ protons per ATP; the c₁₄ synthase uses 4.7, comfortably below the available free energy. The yield is limited by the number of protons stored in the lumen (and bound to buffering groups): the gradient decays as protons flow out, and no electron flow regenerates it in the dark.
+   **Answer** $\Delta\tilde\mu_{\mathrm{H^+}} = 2.303RT\,\Delta\mathrm{pH} = 5.71 \times 4 = 22.8\,\mathrm{kJ\,mol^{-1}}$ (no membrane potential), so at least $45/22.8 = 2$ protons per ATP; the c₁₄ synthase uses 4.7, so the available free energy comfortably exceeds what is needed. The yield is limited by the number of protons stored in the lumen (and bound to buffering groups): the gradient decays as protons flow out, and no electron flow regenerates it in the dark.
 
 4. Using the Z scheme, explain why two photosystems are needed in oxygenic photosynthesis, whereas purple bacteria manage with one.
 

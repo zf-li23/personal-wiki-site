@@ -156,7 +156,7 @@ The equilibrium of ATP hydrolysis lies very far to the side of ADP: with $K' \ap
 
 ![The phosphorylation potential. A: actual Gibbs energy of ATP hydrolysis at 37 °C against the mass-action ratio Q = [ADP][Pᵢ]/[ATP] (logarithmic scale); the line meets zero at equilibrium (Q = K′ ≈ 1.4 × 10⁵ M), and the points mark the ratios computed from the total nucleotide concentrations of four cell types, all between −46 and −53 kJ mol⁻¹, far from equilibrium. The standard value, −30.5 kJ mol⁻¹, corresponds to Q = 1 M. B: phosphorylation potential of the same cells and of resting muscle with the estimated free ADP concentration (25 µM), compared with the standard value](./plots/atp-hydrolysis-dg.py)
 
-ATP is not a storage form of energy. A resting adult turns over roughly his or her body mass of ATP (about 40 kg) per day, and during strenuous exercise several times more, while the amount of ATP present in the body at any moment is only of the order of 100 g; a given ATP molecule is consumed within about a minute of its formation. The concentration of ATP stays constant because its synthesis matches its consumption, a **dynamic steady state**. Longer-term stores are glycogen and fat, and in muscle the short-term buffer phosphocreatine (16.3.5).
+ATP is not a storage form of energy. A resting adult turns over roughly 40 kg of ATP per day (of the order of the body mass), and during strenuous exercise several times more, while the amount of ATP present in the body at any moment is only of the order of 100 g; a given ATP molecule is consumed within about a minute of its formation. The concentration of ATP stays constant because its synthesis matches its consumption, a **dynamic steady state**. Longer-term stores are glycogen and fat, and in muscle the short-term buffer phosphocreatine (16.3.5).
 
 ### 16.3.3. Other Compounds with High Phosphoryl Group Transfer Potential
 
@@ -408,7 +408,7 @@ The energy side of Part II rests on a few relations and numbers.
 
    **Answer** $\Delta G_{\mathrm{p}} = -30.5 + 2.58\ln(0.5 \times 10^{-3} \times 5 \times 10^{-3}/5 \times 10^{-3}) = -30.5 + 2.58 \times (-7.60) = -50.1\,\mathrm{kJ\,mol^{-1}}$. With [ATP] = 2 mM and [ADP] = 3.5 mM: $-30.5 + 2.58\ln(3.5 \times 10^{-3} \times 5 \times 10^{-3}/2 \times 10^{-3}) = -30.5 + 2.58 \times (-4.74) = -42.7\,\mathrm{kJ\,mol^{-1}}$. Every ATP-dependent reaction would lose about 7 kJ mol⁻¹ of driving force, a factor of about 20 in the attainable product ratio, besides the kinetic effect of less saturated enzymes; this is why cells defend [ATP]/[ADP] so strongly.
 
-3. Explain why the hydrolysis of phosphoenolpyruvate releases twice as much free energy as that of glucose 6-phosphate, although both are phosphate esters.
+3. Explain why the hydrolysis of phosphoenolpyruvate releases more than four times as much free energy as that of glucose 6-phosphate, although both are phosphate esters.
 
    **Answer** Hydrolysis of glucose 6-phosphate gives glucose, a stable alcohol, and $\mathrm{P_i}$; the gain comes mainly from the resonance and solvation of $\mathrm{P_i}$. Hydrolysis of PEP gives $\mathrm{P_i}$ and the enol of pyruvate, which immediately tautomerizes to the keto form, a far more stable species (the keto–enol equilibrium of pyruvate lies strongly on the keto side); the reactant has only the enol form available. The tautomerization contributes most of the difference, $-61.9$ against $-13.8\,\mathrm{kJ\,mol^{-1}}$.
 
