@@ -178,7 +178,7 @@ Tumor suppressor genes are inactivated by point mutations (often nonsense or fra
 
 Different methods were needed for the two classes. Oncogenes act dominantly and can be found by gain-of-function assays: Weinberg's and Wigler's groups (1981–1982) transfected DNA from human bladder carcinoma cells into mouse NIH 3T3 fibroblasts, isolated the transformed foci and cloned the transforming gene, *HRAS*, which differed from its normal counterpart by a single substitution, Gly12→Val. It was the human version of the oncogene of the Harvey sarcoma virus: the viral and the human routes had converged on the same genes. Tumor suppressor genes act recessively and had to be found by loss: by mapping the regions deleted or lost (loss of heterozygosity) in tumors and in families with hereditary cancer, as for *RB1*, *APC* and *BRCA1*.
 
-Since the 2000s, systematic sequencing of tumor genomes (The Cancer Genome Atlas, the International Cancer Genome Consortium, and the Pan-Cancer Analysis of Whole Genomes of 2020) has catalogued the somatic changes of tens of thousands of tumors. Key findings:
+Since the 2000s, systematic sequencing of tumor genomes (The Cancer Genome Atlas, the International Cancer Genome Consortium, and the Pan-Cancer Analysis of Whole Genomes of 2020) has cataloged the somatic changes of tens of thousands of tumors. Key findings:
 
 - About 300–700 genes are recurrently mutated drivers across cancers, in about a dozen pathways (26.4.3); a typical tumor has a few drivers.
 - The number of mutations varies a thousandfold, from about 0.1 per megabase in pediatric cancers and leukemias to more than 10 per megabase in melanomas and lung cancers of smokers, reflecting exposure (ultraviolet light, tobacco) and repair defects.
