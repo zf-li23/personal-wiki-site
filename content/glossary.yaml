@@ -11367,3 +11367,36 @@ terms:
   - { zh: 甲状腺功能减退, en: hypothyroidism, aliases: [甲减] }
   - { zh: 甲状腺肿, en: goiter, aliases: [goitre] }
   - { zh: 下丘脑–垂体–甲状腺轴, en: hypothalamic–pituitary–thyroid axis, aliases: [HPT 轴, HPT axis, 下丘脑-垂体-甲状腺轴] }
+  - { zh: 适宜刺激, en: adequate stimulus, scope: ["7.14"] }
+  - { zh: 专线原则, en: labeled line principle, aliases: [特殊神经能量学说, law of specific nerve energies, labelled line principle] }
+  - { zh: 受体电位, en: receptor potential, aliases: [感受器电位, 发生器电位, generator potential] }
+  - { zh: Stevens 幂律, en: "Stevens' power law", aliases: [Stevens power law] }
+  - { zh: 快适应感受器, en: rapidly adapting receptor, aliases: [时相型感受器, phasic receptor, rapidly adapting receptors] }
+  - { zh: 慢适应感受器, en: slowly adapting receptor, aliases: [紧张型感受器, tonic receptor, slowly adapting receptors] }
+  - { zh: 背柱–内侧丘系, en: dorsal column–medial lemniscal system, aliases: [背柱-内侧丘系, dorsal column-medial lemniscal system, DCML] }
+  - { zh: 感受野, en: receptive field, scope: ["7.14"] }
+  - { zh: 侧向抑制, en: lateral inhibition, scope: ["7.14"] }
+  - { zh: 前外侧系统, en: anterolateral system }
+  - { zh: 两点辨别阈, en: two-point discrimination threshold, aliases: [两点阈, two-point threshold] }
+  - { zh: 本体感觉, en: proprioception }
+  - { zh: 伤害感受, en: nociception }
+  - { zh: 伤害感受器, en: nociceptor, aliases: [痛觉感受器, nociceptors] }
+  - { zh: 快痛, en: fast pain, aliases: [第一痛, first pain] }
+  - { zh: 慢痛, en: slow pain, aliases: [第二痛, second pain] }
+  - { zh: 痛觉过敏, en: hyperalgesia }
+  - { zh: 痛觉超敏, en: allodynia, aliases: [触诱发痛] }
+  - { zh: 镇痛系统, en: analgesia system, aliases: [内源性镇痛系统, descending pain modulatory system] }
+  - { zh: 闸门控制学说, en: gate control theory, aliases: [闸门控制, gate control theory of pain] }
+  - { zh: 牵涉痛, en: referred pain }
+  - { zh: 温度感受器, en: thermoreceptor, aliases: [thermoreceptors] }
+  - { zh: 瘙痒, en: itch, aliases: [pruritus] }
+  - { zh: 最后公路, en: final common path, aliases: [final common pathway] }
+  - { zh: 肌梭, en: muscle spindle, aliases: [muscle spindles] }
+  - { zh: γ 环路, en: gamma loop, aliases: [γ-环路] }
+  - { zh: 腱器官, en: Golgi tendon organ, aliases: [高尔基腱器官, tendon organ] }
+  - { zh: 牵张反射, en: stretch reflex, aliases: [肌牵张反射, myotatic reflex] }
+  - { zh: 肌紧张, en: muscle tone }
+  - { zh: 屈肌反射, en: flexor reflex, aliases: [撤回反射, withdrawal reflex] }
+  - { zh: 对侧伸肌反射, en: crossed extensor reflex, aliases: [交叉伸肌反射] }
+  - { zh: 去大脑僵直, en: decerebrate rigidity }
+  - { zh: 姿势反射, en: postural reflex, aliases: [postural reflexes] }
