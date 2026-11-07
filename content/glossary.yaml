@@ -4030,7 +4030,7 @@ terms:
   - { zh: 开放系统, en: open system, aliases: [敞开体系, 敞开系统] }
   - { zh: 绝热系统, en: adiabatic system }
   - { zh: 平衡态, en: equilibrium state, aliases: [热力学平衡态, thermodynamic equilibrium] }
-  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7"] }
+  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.15", "7.16", "7.17", "7.18", "7.19"] }
   - { zh: 宏观量, en: macroscopic quantity }
   - { zh: 微观量, en: microscopic quantity }
   - { zh: 广延量, en: extensive quantity, aliases: [extensive property, 广度性质, 广度量, 容量性质] }
@@ -7319,7 +7319,7 @@ terms:
   - { zh: 超敏性, en: ultrasensitivity, aliases: [ultrasensitive, 超敏] }
   - { zh: 双稳态, en: bistability, aliases: [bistable, 双稳], scope: ["7"] }
   - { zh: 滞后, en: hysteresis, aliases: [滞后效应, 迟滞], scope: ["7"] }
-  - { zh: 适应, en: adaptation, aliases: [信号适应], scope: ["7.1", "7.3", "7.9", "7.6"] }
+  - { zh: 适应, en: adaptation, aliases: [信号适应, 感觉适应, sensory adaptation], scope: ["7.1", "7.3", "7.9", "7.6", "7.14"] }
   - { zh: 完全适应, en: perfect adaptation, aliases: [精确适应, exact adaptation] }
   - { zh: 钙振荡, en: calcium oscillation, aliases: [calcium oscillations, Ca2+ oscillation, Ca²⁺ 振荡] }
   - { zh: 相互作用结构域, en: interaction domain, aliases: [interaction domains, modular interaction domain] }
@@ -10996,3 +10996,6 @@ terms:
   - { zh: 热害, en: heat injury, aliases: [heat stress injury] }
   - { zh: 超积累植物, en: hyperaccumulator, aliases: [hyperaccumulators, 超富集植物] }
   - { zh: 实质等同, en: substantial equivalence }
+
+  # biology: animal physiology (7.14); homonyms of terms in other disciplines are scoped to 7.14
+  - { zh: 稳态, en: homeostasis, aliases: [内稳态, 自稳态], scope: ["7.14"] }
