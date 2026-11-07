@@ -8,7 +8,7 @@ import wikibio as bio
 
 P = bio.P
 fig, ax = bio.canvas(22.0, 12.0)
-bio.box(ax, (11.0, 10.2), 7.4, 1.6, "neutral", text="Atmosphere ≈ 880 Pg C (≈ 419 ppm CO₂)", size="small")
+bio.box(ax, (11.0, 10.2), 7.4, 1.6, "neutral", text="Atmosphere ≈ 880 Pg C (≈ 417 ppm CO₂)", size="small")
 bio.box(ax, (4.2, 3.2), 6.6, 2.0, "plant", text="Land: vegetation and soils", size="small")
 bio.box(ax, (17.8, 3.2), 6.6, 2.0, "channel", text="Ocean", size="small")
 bio.box(ax, (11.0, 1.0), 4.6, 1.2, "animal", text="Fossil carbon", size="small")

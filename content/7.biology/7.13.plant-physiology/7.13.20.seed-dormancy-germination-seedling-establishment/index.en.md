@@ -1,7 +1,7 @@
 ---
 title: Seed Dormancy, Germination and Seedling Establishment
 description: "Seed viability and vigor and their assay, application of the longevity equation; primary and secondary dormancy, coat-imposed dormancy and embryo dormancy, the ABA/GA balance, DOG1, after-ripening and stratification; signals that break dormancy: light and phytochrome (red/far-red reversal, threshold model), low temperature, nitrate, karrikins in smoke; conditions for germination and the three phases of water uptake, respiration and enzyme activation; hydrotime and hydrothermal time models; mobilization of reserves: gibberellin-induced α-amylase in the aleurone layer, fats, proteins and phytate; vivipary and preharvest sprouting; seedling establishment: etiolation, the apical hook and ethylene; dormancy of buds and perennating organs."
-source_hash: fc622b69700b
+source_hash: 1fe65fb5945f
 ---
 
 The seed is the most durable stage in the life cycle of angiosperms: a dry seed has almost no measurable metabolism and can survive in the soil for years or even decades, and much longer in a seed bank. Germination, in contrast, is the riskiest and irreversible decision in the life cycle: once the radicle breaks through the seed coat, the seedling must establish the capacity for autotrophy before its reserves are exhausted. Seeds have therefore evolved elaborate mechanisms to "decide" when to germinate: dormancy postpones germination to a suitable season, while signals such as light, temperature, water, nitrate and smoke tell the seed where it is in the soil and what surrounds it. This chapter discusses these mechanisms from the physiological point of view: seed viability and longevity, the hormonal basis of dormancy, the signals that break dormancy, water uptake, metabolic resumption and mobilization of reserves during germination, and the regulation of growth as the seedling emerges.
@@ -111,7 +111,7 @@ Among the chemical signals present in the natural environment, nitrate (often ac
 
 ### 20.3.4. Smoke and Karrikins
 
-In fire-prone ecosystems in Australia, South Africa, California and elsewhere, the seeds of many plants germinate in large numbers after fire. The heat of the fire cracks hard seed coats; the more general signal is smoke. Flematti et al. (2004) isolated the main active compound from the smoke of burning cellulose and named it karrikinolide; it belongs to a class of butenolide lactones called karrikins.
+In fire-prone ecosystems in Australia, South Africa, California and elsewhere, the seeds of many plants germinate in large numbers after fire. The heat of the fire cracks hard seed coats; the more general signal is smoke. Flematti et al. (2004) isolated the main active compound from the smoke of burning cellulose; it was later named karrikinolide (KAR1) and belongs to a class of butenolide lactones called karrikins (a name proposed in 2009).
 
 **Definition 20.3.2 (Karrikin)** A class of butenolide compounds that are produced from carbohydrates such as cellulose when plant material burns, are present in smoke and ash, and promote germination of the seeds of many plants at extremely low concentrations is called **karrikins**.
 
@@ -150,7 +150,7 @@ Chinese textbooks often write the water potential of the three phases as $\Psi_{
 
 ### 20.4.3. Respiration and Enzyme Activation
 
-The change in respiration rate resembles that of water uptake (Figure 1B). In phase I the hydrated mitochondria resume activity and respiration rises sharply; in phase II respiration stalls, the seed coat restricts the entry of $\ce{O2}$, some anaerobic respiration occurs and the respiratory quotient is often greater than 1; in phase III the radicle penetrates the coat, the $\ce{O2}$ supply increases, new mitochondria and respiratory enzyme systems form in the embryo, and respiration again rises sharply; afterward, if the seedling stays in darkness, reserves are exhausted and respiration declines. Statements in some summary materials that the respiratory quotient is greater than 1 in phase I and less than 1 in phase II have the two phases reversed: fermentation ($\mathrm{RQ} > 1$) occurs in phase II, when oxygen supply is limited.
+The change in respiration rate resembles that of water uptake (Figure 1B). In phase I the hydrated mitochondria resume activity and respiration rises sharply; in phase II respiration stalls, the seed coat restricts the entry of $\ce{O2}$, some anaerobic respiration occurs and the respiratory quotient is often greater than 1; in phase III the radicle penetrates the coat, the $\ce{O2}$ supply increases, new mitochondria and respiratory enzyme systems form in the embryo, and respiration again rises sharply; afterward, if the seedling stays in darkness, reserves are exhausted and respiration declines. The statement that the respiratory quotient is greater than 1 in phase I and less than 1 in phase II has the two phases reversed: fermentation ($\mathrm{RQ} > 1$) occurs in phase II, when oxygen supply is limited.
 
 Enzymes in germination have two sources.
 

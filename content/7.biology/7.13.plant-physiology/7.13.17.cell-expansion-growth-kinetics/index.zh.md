@@ -228,7 +228,7 @@ $$
 
 **例 17.5.1（生长分析）** 一批大豆幼苗第 14 天平均干重 $0.80\,\mathrm{g}$、叶面积 $160\,\mathrm{cm^2}$，第 21 天干重 $2.10\,\mathrm{g}$、叶面积 $370\,\mathrm{cm^2}$。
 
-$\overline{\mathrm{RGR}} = \ln(2.10/0.80)/7 = 0.965/7 = 0.138\,\mathrm{d^{-1}}$。设叶面积与干重之间近似为幂函数关系，平均 NAR 可用 $\overline{\mathrm{NAR}} = \frac{W_2 - W_1}{t_2 - t_1}\cdot\frac{\ln A_2 - \ln A_1}{A_2 - A_1}$ 计算：$= (1.30/7) \times (\ln 2.3125)/(0.0210\,\mathrm{m^2}) = 0.1857 \times 0.8383/0.0210 = 7.4\,\mathrm{g\,m^{-2}\,d^{-1}}$。平均 LAR $\approx \overline{\mathrm{RGR}}/\overline{\mathrm{NAR}} = 0.138/7.4 = 0.0186\,\mathrm{m^2\,g^{-1}} = 18.6\,\mathrm{m^2\,kg^{-1}}$，与两次收获的 LAR（$0.0200$ 与 $0.0176\,\mathrm{m^2\,g^{-1}}$）一致。
+$\overline{\mathrm{RGR}} = \ln(2.10/0.80)/7 = 0.965/7 = 0.138\,\mathrm{d^{-1}}$。设两次收获之间叶面积与干重近似成线性关系，平均 NAR 可用 $\overline{\mathrm{NAR}} = \frac{W_2 - W_1}{t_2 - t_1}\cdot\frac{\ln A_2 - \ln A_1}{A_2 - A_1}$ 计算：$= (1.30/7) \times (\ln 2.3125)/(0.0210\,\mathrm{m^2}) = 0.1857 \times 0.8383/0.0210 = 7.4\,\mathrm{g\,m^{-2}\,d^{-1}}$。平均 LAR $\approx \overline{\mathrm{RGR}}/\overline{\mathrm{NAR}} = 0.138/7.4 = 0.0186\,\mathrm{m^2\,g^{-1}} = 18.6\,\mathrm{m^2\,kg^{-1}}$，与两次收获的 LAR（$0.0200$ 与 $0.0176\,\mathrm{m^2\,g^{-1}}$）一致。
 
 ![生长分析（模拟植株，示意性参数）。A：干重 W 的对数随时间的变化：曲线的斜率就是相对生长速率，红点标出两段时间的平均 RGR（式 (17.7)）：植株增大后 RGR 下降。B：RGR（黑）分解为净同化率 NAR 与叶面积比 LAR（式 (17.8)；二者按所注的数值归一化后画在右轴上）：本例中 RGR 的下降主要来自 LAR 的下降（植株把更多干物质投入茎和根），NAR 因叶片互相遮阴而缓慢下降](./plots/growth-analysis.py)
 

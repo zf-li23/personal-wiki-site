@@ -2,7 +2,7 @@
 # 2010). (A) Vertical root: amyloplasts (statoliths) rest on the ER at the bottom of the cell; PIN3 is
 # distributed around the plasma membrane and auxin leaves the columella symmetrically. (B) About 10 min
 # after the root is turned 90 degrees: the amyloplasts have sedimented onto the new lower side; within
-# minutes the cytosol alkalinizes (pH 7.2 -> 7.5) and the apoplast acidifies, Ca2+ signals arise, and PIN3
+# minutes the cytosol alkalinizes (pH 7.2 -> 7.6) and the apoplast acidifies, Ca2+ signals arise, and PIN3
 # is relocated to the new lower membrane, so that more auxin flows to the lower flank of the root, where
 # it inhibits elongation and the root bends down.
 import numpy as np
@@ -65,4 +65,4 @@ for gx in (6.6, 15.6):
 bio.callout(ax, (3.6 - 0.4, 2.95), (0.3, 1.0), "Amyloplasts (statoliths) on the ER", size="tiny")
 bio.callout(ax, (3.6 + 1.64, 5.4), (6.0, 7.4), "PIN3 (uniform)", size="tiny")
 bio.callout(ax, (13.0, 2.76), (14.6, 1.6), "PIN3 relocated\nto the lower side", size="tiny")
-bio.label(ax, (11.9, 6.7), "cytosol pH 7.2 → 7.5, wall acidifies, Ca²⁺", size="tiny", color=P.muted())
+bio.label(ax, (11.9, 6.7), "cytosol pH 7.2 → 7.6, wall acidifies, Ca²⁺", size="tiny", color=P.muted())
