@@ -3129,7 +3129,7 @@ terms:
   - { zh: 一致性定理, en: consensus theorem, aliases: [包含律, 一致项, consensus] }
   - { zh: 反演定理, en: complementation theorem, aliases: [反演规则] }
   - { zh: 对偶定理, en: duality principle, aliases: [对偶规则], scope: ["4.9", "4.10"] }
-  - { zh: Shannon 展开定理, en: Shannon expansion, aliases: [展开定理, "Boole's expansion theorem"] }
+  - { zh: Shannon 展开定理, en: Shannon expansion, aliases: [展开定理, "Boole's expansion theorem"], scope: ["4"] }
   - { zh: 标准与或式, en: canonical sum of products, aliases: [sum of minterms] }
   - { zh: 标准或与式, en: canonical product of sums, aliases: [product of maxterms] }
   - { zh: 最简与或式, en: minimal sum of products }

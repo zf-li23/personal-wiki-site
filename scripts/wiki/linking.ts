@@ -475,10 +475,34 @@ function glossDefinitions(root: Root, pageId: string, index: LinkIndex): void {
       findElement(root, (n) => n.tagName === 'dfn' && n.properties?.id === site.anchor) ??
       (() => {
         const stmt = findElement(root, (n) => n.properties?.id === site.anchor);
-        return stmt ? findElement(stmt.node, (n) => (n.tagName === 'strong' || n.tagName === 'b') && !hasClass(n, 'wiki-stmt-label') && names.includes(hastToString(n).trim())) : null;
+        // Only the main name: an alias ("可导" for 导数) has no English of its own.
+        return stmt ? findElement(stmt.node, (n) => (n.tagName === 'strong' || n.tagName === 'b') && !hasClass(n, 'wiki-stmt-label') && hastToString(n).trim() === concept.zh) : null;
       })();
+    // The English name is already written in the statement (label "（根瘤，Root Nodule）") or close by.
+    const stmtNode = findElement(root, (n) => n.properties?.id === site.anchor)?.node;
+    const en = concept.en.toLowerCase();
+    if (stmtNode && hastToString(stmtNode).toLowerCase().includes(en)) continue;
+    if (holder && holder.parent.type === 'element' && holder.parent.tagName === 'dfn' && holder.index === holder.parent.children.length - 1) {
+      // A bold term that ends its <dfn>: the gloss goes after the whole <dfn>.
+      const dfn = holder.parent;
+      const outer = findElement(root, (n) => n === dfn);
+      if (outer) Object.assign(holder, outer);
+    }
     if (holder) {
       if (hastToString(holder.node).includes('（') || hasGloss(holder.parent, holder.index)) continue;
+      const near = followingText(holder.parent, holder.index);
+      if (near && near.value.slice(0, 80).toLowerCase().includes(en)) continue;
+      // The bold run is only part of a longer word ("维生素 C", "P-450 酶", "强凸函数"): no gloss mid-word.
+      if (near && /^\s?[A-Za-z0-9]|^(函数|分析|酶|作用|方程|分子|反应|蛋白)/.test(near.value)) continue;
+      // The term is followed by its own parenthesis (an alias, "（命题常元）"): put the English
+      // name inside it, "（propositional constant，命题常元）", instead of a second pair.
+      const after = followingText(holder.parent, holder.index);
+      if (after && /^\s?（(?!）)/.test(after.value)) {
+        const at = (after.parent.children as ElementContent[]).indexOf(after);
+        after.value = after.value.replace(/^\s?（/, "");
+        after.parent.children.splice(at, 0, { type: 'text', value: '（' }, gloss(concept.en, false), { type: 'text', value: '，' });
+        continue;
+      }
       holder.parent.children.splice(holder.index + 1, 0, gloss(concept.en, true));
       continue;
     }
@@ -490,12 +514,21 @@ function glossDefinitions(root: Root, pageId: string, index: LinkIndex): void {
     const collect = (n: Element) => n.children.forEach((c) => (c.type === 'text' ? texts.push(c) : c.type === 'element' && collect(c)));
     collect(label.node);
     const last = texts.at(-1);
-    if (!last || !last.value.endsWith('）') || /[A-Za-z]{3,}/.test(hastToString(label.node))) continue;
+    const labelText = hastToString(label.node);
+    // The label must name this concept by its main name ("定理 12.5.3（展开定理）" is not Shannon expansion).
+    if (!last || !last.value.endsWith('）') || !labelText.includes(`（${concept.zh}`) || /[A-Za-z]{3,}/.test(labelText)) continue;
     const parentOf = findElement(label.node, (n) => n.children.includes(last)) ?? { node: label.node };
     const at = parentOf.node.children.indexOf(last);
     last.value = last.value.slice(0, -1) + '，';
     parentOf.node.children.splice(at + 1, 0, gloss(concept.en, false), { type: 'text', value: '）' });
   }
+}
+
+/** The text node right after children[i], looking past the end of an enclosing <dfn>. */
+function followingText(parent: Root | Element, i: number): (Text & { parent: Root | Element }) | null {
+  const next = parent.children[i + 1];
+  if (next?.type === 'text') return Object.assign(next, { parent });
+  return null;
 }
 
 function hasClass(node: Element, cls: string): boolean {
