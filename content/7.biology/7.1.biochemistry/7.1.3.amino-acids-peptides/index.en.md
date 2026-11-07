@@ -1,9 +1,9 @@
 ---
 title: Amino Acids and Peptides
-description: The common structure and L configuration of amino acids; the 20 standard amino acids classified by their R groups, with a complete property table, structures, side-chain functions and memory aids; UV absorption; uncommon amino acids and post-translational modifications; acid–base behaviour, pKa shifts, isoelectric points and net charge; peptides, biologically active peptides, protein sizes, conjugated proteins and cofactors.
+description: The common structure and L configuration of amino acids; the 20 standard amino acids classified by their R groups, with a complete property table, structures, side-chain functions and memory aids; UV absorption; uncommon amino acids and post-translational modifications; acid–base behavior, pKa shifts, isoelectric points and net charge; peptides, biologically active peptides, protein sizes, conjugated proteins and cofactors.
 ---
 
-Proteins are the most abundant **macromolecules** of all cells and the main agents of biological function: they catalyse reactions (hexokinase, **DNA polymerase**), transport molecules (hemoglobin, lactose permease), form structures (**collagen**, keratin), generate movement (myosin, actin), and they receive, transmit and decode signals. All of this diversity is built from one simple set of 20 amino acids. Each has the same backbone and a different side chain, and the side chains differ in size, shape, charge, hydrogen-bonding capacity, hydrophobic character and chemical reactivity. This chapter is the heart of the thread "chemical properties → structure → function" (7.1.1): what each side chain can do chemically determines how proteins fold (7.1.5–7.1.6), bind **ligands** (7.1.7) and catalyse reactions (7.1.8–7.1.9).
+Proteins are the most abundant **macromolecules** of all cells and the main agents of biological function: they catalyze reactions (hexokinase, **DNA polymerase**), transport molecules (hemoglobin, lactose permease), form structures (**collagen**, keratin), generate movement (myosin, actin), and they receive, transmit and decode signals. All of this diversity is built from one simple set of 20 amino acids. Each has the same backbone and a different side chain, and the side chains differ in size, shape, charge, hydrogen-bonding capacity, hydrophobic character and chemical reactivity. This chapter is the heart of the thread "chemical properties → structure → function" (7.1.1): what each side chain can do chemically determines how proteins fold (7.1.5–7.1.6), bind **ligands** (7.1.7) and catalyze reactions (7.1.8–7.1.9).
 
 The organic chemistry of amino acids, their configurations, acid–base equilibria, reactions and chemical synthesis, and the chemistry of the **peptide bond** have been treated in [6.5.33](/6.5.33) (where **amino acid**, **zwitterion**, **isoelectric point** and **peptide bond** are defined), and the titration of amino acids in [6.4.2](/6.4.2#sec-2.8.3); here we use those results. Methods for purifying proteins and determining their sequences follow in 7.1.4.
 
@@ -21,9 +21,9 @@ Two numbering conventions are in use. Biochemists label the carbons of the side 
 
 ### 3.1.2. Stereochemistry: Amino Acid Residues in Proteins Are L
 
-In all standard amino acids except glycine, whose R group is a second hydrogen atom, the α carbon carries four different groups and is a chiral centre (**chirality**, [6.5.5](/6.5.5#sec-5.2)). Each amino acid therefore exists as two **enantiomers**, designated D and L by Fischer's convention, which relates the configuration to that of D- and L-glyceraldehyde rather than to the direction of optical rotation ([6.5.5](/6.5.5#sec-5.3.3)). The amino acid residues of proteins are, with very rare exceptions, L stereoisomers.
+In all standard amino acids except glycine, whose R group is a second hydrogen atom, the α carbon carries four different groups and is a chiral center (**chirality**, [6.5.5](/6.5.5#sec-5.2)). Each amino acid therefore exists as two **enantiomers**, designated D and L by Fischer's convention, which relates the configuration to that of D- and L-glyceraldehyde rather than to the direction of optical rotation ([6.5.5](/6.5.5#sec-5.3.3)). The amino acid residues of proteins are, with very rare exceptions, L stereoisomers.
 
-In the Cahn–Ingold–Prelog system the L-amino acids are (*S*), with one exception: L-cysteine is (*R*), because the sulfur of its $\ce{CH2SH}$ group gives the side chain a higher priority than the carboxyl group. Threonine and isoleucine have a second chiral centre in the side chain: the natural forms are (2*S*,3*R*)-threonine and (2*S*,3*S*)-isoleucine.
+In the Cahn–Ingold–Prelog system the L-amino acids are (*S*), with one exception: L-cysteine is (*R*), because the sulfur of its $\ce{CH2SH}$ group gives the side chain a higher priority than the carboxyl group. Threonine and isoleucine have a second chiral center in the side chain: the natural forms are (2*S*,3*R*)-threonine and (2*S*,3*S*)-isoleucine.
 
 The exclusive use of one enantiomer is not accidental. Regular, repeating structures such as the **α helix** (7.1.5) can form only from residues of one stereochemical series, and the **active sites** of the **enzymes** that synthesize amino acids are themselves chiral and make only one isomer. D-Amino acids do occur in biology, but outside ribosomal proteins or as later modifications: D-alanine and D-glutamate in the **peptidoglycan** of bacterial cell walls (7.1.10), D-amino acids in **peptide** antibiotics made by nonribosomal peptide synthetases (gramicidin S, bacitracin), D-serine as a co-agonist of NMDA **receptors** in the brain, and D-aspartate formed by slow racemization in long-lived proteins such as those of the eye lens and tooth dentine.
 
@@ -31,7 +31,7 @@ The exclusive use of one enantiomer is not accidental. Regular, repeating struct
 
 ### 3.2.1. Five Classes by R Group
 
-The standard amino acids are grouped into five classes according to the polarity of their R groups at pH near 7, that is, their tendency to interact with water. The classification is a matter of judgement for a few residues (glycine, histidine, cysteine and tyrosine fit imperfectly), but it captures what matters for structure.
+The standard amino acids are grouped into five classes according to the polarity of their R groups at pH near 7, that is, their tendency to interact with water. The classification is a matter of judgment for a few residues (glycine, histidine, cysteine and tyrosine fit imperfectly), but it captures what matters for structure.
 
 | Class | Amino acids | What the side chains have in common |
 |---|---|---|
@@ -41,7 +41,7 @@ The standard amino acids are grouped into five classes according to the polarity
 | positively charged, basic (3) | Lys, Arg, His | protonated amino, guanidinium or imidazolium groups |
 | negatively charged, acidic (2) | Asp, Glu | carboxylate groups |
 
-Asparagine and glutamine are the amides of aspartate and glutamate, into which they are hydrolysed by acid or base. Glycine's side chain is too small to contribute to **hydrophobic interactions**, so it is the least hydrophobic member of its class; cysteine is grouped with the polar residues although its hydropathy index is positive, because its thiol is a weak acid that forms weak hydrogen bonds.
+Asparagine and glutamine are the amides of aspartate and glutamate, into which they are hydrolyzed by acid or base. Glycine's side chain is too small to contribute to **hydrophobic interactions**, so it is among the least hydrophobic members of its class; cysteine is grouped with the polar residues although its hydropathy index is positive, because its thiol is a weak acid that forms weak hydrogen bonds.
 
 ### 3.2.2. The Properties Table
 
@@ -134,14 +134,14 @@ Each side chain brings a particular chemistry into proteins. The table is the re
 |---|---|---|
 | Gly | smallest, achiral, most flexible backbone | tight turns and loops; every third residue of collagen (7.1.5); destabilizes α helices |
 | Ala | small methyl group | strong helix former; packing in protein cores |
-| Val, Leu, Ile | branched hydrocarbon, strongly hydrophobic | protein cores, transmembrane helices (7.1.13); β-branched Val and Ile favour **β sheets** |
+| Val, Leu, Ile | branched hydrocarbon, strongly hydrophobic | protein cores, transmembrane helices (7.1.13); β-branched Val and Ile favor **β sheets** |
 | Met | flexible thioether, oxidizable to sulfoxide | initiator residue (AUG); precursor of the methyl donor **S-adenosylmethionine** (7.1.17, 7.1.27) |
 | Pro | rigid ring, secondary amine without N–H | breaks α helices; common in turns and in collagen; X–Pro bonds can be cis, and their isomerization limits folding (7.1.6) |
 | Phe, Trp | large aromatic rings | hydrophobic cores, stacking, cation–π interactions; Trp absorbs at 280 nm and fluoresces near 350 nm (3.2.6) |
 | Tyr | aromatic ring with weakly acidic OH ($\mathrm{p}K_{\mathrm{R}} \approx 10$) | hydrogen bonding; phosphorylation by tyrosine kinases (7.1.15); tyrosyl radicals in **ribonucleotide reductase** (7.1.28) and **photosystem II** (7.1.24) |
 | Ser, Thr | hydroxyl group | hydrogen bonds; phosphorylation (7.1.9); O-glycosylation (7.1.10); Ser is the nucleophile of **serine proteases** (7.1.8) |
 | Cys | thiol, $\mathrm{p}K_{\mathrm{R}} \approx 8.2$; good nucleophile; soft metal ligand | **covalent catalysis**; Zn²⁺ and Fe–S cluster ligand; **disulfide bonds** in extracellular proteins; redox switches |
-| Asn, Gln | amide, donor and acceptor of H bonds | hydrogen-bond networks; N-glycosylation at Asn–X–Ser/Thr (7.1.10); slow deamidation in ageing proteins; Gln is the amide-nitrogen donor of **biosynthesis** (7.1.27) |
+| Asn, Gln | amide, donor and acceptor of H bonds | hydrogen-bond networks; N-glycosylation at Asn–X–Ser/Thr (7.1.10); slow deamidation in aging proteins; Gln is the amide-nitrogen donor of **biosynthesis** (7.1.27) |
 | Lys | ε-amino group, $\mathrm{p}K_{\mathrm{R}} \approx 10.5$, positive | salt bridges, **DNA** and phosphate binding; Schiff bases with **pyridoxal phosphate** and in aldolase (7.1.17–7.1.18); acetylation, methylation, **ubiquitination** (3.3.2) |
 | Arg | guanidinium, $\mathrm{p}K_{\mathrm{R}} \approx 12.5$, always positive | bidentate hydrogen bonds to phosphates and carboxylates; DNA binding; **substrate** binding |
 | His | imidazole, $\mathrm{p}K_{\mathrm{R}} \approx 6$ | the only side chain that both accepts and donates a proton near pH 7: **general acid–base catalysis** (7.1.8), buffering (7.1.2), metal ligand (the proximal His of **heme**, 7.1.7) |
@@ -157,7 +157,7 @@ The 20 structures, abbreviations and properties must be known by heart; three ai
 
 *Overlapping properties.* The five-class scheme forces each residue into one box, but several properties overlap: tyrosine is both aromatic and polar, cysteine both small and hydrophobic, histidine aromatic, polar and charged. A Venn diagram shows these overlaps at a glance, and a map of volume against hydropathy shows which residues are similar enough to replace each other in evolution (7.1.4).
 
-![Venn diagram of amino acid properties (after Taylor, 1986): every standard amino acid, in one-letter code, placed in the overlapping sets hydrophobic, polar and small. Cys and Thr belong to all three; His, Lys, Trp and Tyr are both hydrophobic and polar; Pro is only small. Colours: the classes used in sequence alignments (hydrophobic, polar, positive, negative). Subsets: aliphatic I, L, V; aromatic F, W, Y, H; tiny A, G, S, C; charged D, E, H, K, R](./plots/amino-acid-venn.py)
+![Venn diagram of amino acid properties (after Taylor, 1986): every standard amino acid, in one-letter code, placed in the overlapping sets hydrophobic, polar and small. Cys and Thr belong to all three; His, Lys, Trp and Tyr are both hydrophobic and polar; Pro is only small. Colors: the classes used in sequence alignments (hydrophobic, polar, positive, negative). Subsets: aliphatic I, L, V; aromatic F, W, Y, H; tiny A, G, S, C; charged D, E, H, K, R](./plots/amino-acid-venn.py)
 
 ![Property map of the 20 amino acids: residue volume in proteins against the Kyte–Doolittle hydropathy index; squares mark aromatic residues. The hydrophobic aliphatic residues (I, L, V, M) and Phe form one cluster on the right, the charged and amide residues another on the left; Gly, Ser, Thr, Pro and Cys lie near the middle. Residues close together on the map (I/L/V, D/E, K/R, F/Y) are those most often exchanged by conservative substitutions. D, N, E, Q and H are displaced slightly so that their symbols do not overlap](./plots/amino-acid-property-map.py)
 
@@ -222,7 +222,7 @@ The amino and carboxyl groups, together with the ionizable R groups, are weak ac
 
 The titration curve of glycine has two stages, with midpoints at $\mathrm{p}K_1 = 2.34$ (α-COOH) and $\mathrm{p}K_2 = 9.60$ (α-$\ce{NH3+}$); in each stage glycine buffers effectively, although neither lies near physiological pH. Between them, at pH 5.97, the dominant species is the zwitterion with zero net charge. Amino acids with an ionizable side chain have three stages; their $\mathrm{p}K_{\mathrm{a}}$ values can be read separately from the curve when they lie more than about two pH units apart.
 
-![Acid–base behaviour of amino acids and peptides, computed from pKa values. (A) Titration curves of glycine (two stages), glutamate and histidine (three stages): pH against equivalents of OH⁻ added to the fully protonated forms. Dots mark the pKa values, at the midpoint of each stage, and diamonds the isoelectric points (Gly 5.97, Glu 3.22, His 7.59). (B) Net charge as a function of pH of the tetrapeptide Ala-Glu-Gly-Lys (pI 6.1) and of glucagon (29 residues, pI 7.0), using typical pKa values of groups in peptides; the dashed line marks pH 7.4](./plots/amino-acid-titration.py)
+![Acid–base behavior of amino acids and peptides, computed from pKa values. (A) Titration curves of glycine (two stages), glutamate and histidine (three stages): pH against equivalents of OH⁻ added to the fully protonated forms. Dots mark the pKa values, at the midpoint of each stage, and diamonds the isoelectric points (Gly 5.97, Glu 3.22, His 7.59). (B) Net charge as a function of pH of the tetrapeptide Ala-Glu-Gly-Lys (pI 6.1) and of glucagon (29 residues, pI 7.0), using typical pKa values of groups in peptides; the dashed line marks pH 7.4](./plots/amino-acid-titration.py)
 
 ### 3.4.2. The Chemical Environment Shifts pKa
 
@@ -239,7 +239,7 @@ For a peptide or protein with many ionizable groups the shortcut fails, but the 
 $$
 Z(\mathrm{pH}) = \sum_{i\,\in\,\text{basic}} \frac{n_i}{1 + 10^{\,\mathrm{pH} - \mathrm{p}K_i}} - \sum_{j\,\in\,\text{acidic}} \frac{n_j}{1 + 10^{\,\mathrm{p}K_j - \mathrm{pH}}},
 $$
-where $n_i$ is the number of groups of each type. $Z$ decreases monotonically with pH, and the pI is its single root, found numerically, for instance with `scipy.optimize.brentq` ([4.4.4](/4.4.4#sec-4.2.2)). The calculation, with typical $\mathrm{p}K_{\mathrm{a}}$ values of groups in peptides, gives a useful estimate of the charge of a protein at the pH of an experiment, which decides its behaviour in ion-exchange chromatography and electrophoresis (7.1.4).
+where $n_i$ is the number of groups of each type. $Z$ decreases monotonically with pH, and the pI is its single root, found numerically, for instance with `scipy.optimize.brentq` ([4.4.4](/4.4.4#sec-4.2.2)). The calculation, with typical $\mathrm{p}K_{\mathrm{a}}$ values of groups in peptides, gives a useful estimate of the charge of a protein at the pH of an experiment, which decides its behavior in ion-exchange chromatography and electrophoresis (7.1.4).
 
 **Example 3.4.1** The tetrapeptide Ala-Glu-Gly-Lys has four ionizable groups: the N-terminal amino group ($\mathrm{p}K_{\mathrm{a}} \approx 8.0$), the Glu side chain (4.1), the Lys side chain (10.5) and the C-terminal carboxyl (3.1). At pH 7 the termini and both side chains are ionized: $+1 - 1 + 1 - 1 = 0$. The species with zero charge exists between the dissociation of the Glu side chain and that of the N-terminus, so $\mathrm{pI} \approx (4.1 + 8.0)/2 = 6.05$, in agreement with the root of $Z(\mathrm{pH})$ in the figure above.
 
@@ -247,7 +247,7 @@ where $n_i$ is the number of groups of each type. $Z$ decreases monotonically wi
 
 ### 3.5.1. Peptide Bonds Link Amino Acids
 
-Two amino acids are joined by a **peptide bond**, a substituted amide linkage formed by condensation between the α-carboxyl group of one and the α-amino group of the other, with loss of water. In water the equilibrium lies on the side of hydrolysis, so the synthesis of peptide bonds requires energy (supplied by aminoacyl-tRNA formation on the ribosome); but the bond is kinetically very stable, with an uncatalysed half-life of hundreds of years at neutral pH and $25\,^\circ\mathrm{C}$, and proteins are hydrolysed in cells only by proteases.
+Two amino acids are joined by a **peptide bond**, a substituted amide linkage formed by condensation between the α-carboxyl group of one and the α-amino group of the other, with loss of water. In water the equilibrium lies on the side of hydrolysis, so the synthesis of peptide bonds requires energy (supplied by aminoacyl-tRNA formation on the ribosome); but the bond is kinetically very stable, with an uncatalyzed half-life of hundreds of years at neutral pH and $25\,^\circ\mathrm{C}$, and proteins are hydrolyzed in cells only by proteases.
 
 **Definition 3.5.1** A chain of amino acids joined by peptide bonds is a **peptide**; each amino acid unit in it is a **residue**. A peptide of a few residues (up to about 20) is an **oligopeptide**, a longer one a **polypeptide**. A **protein** is a biological macromolecule consisting of one or more polypeptide chains, usually with more than about 50 residues each.
 
@@ -267,7 +267,7 @@ Small peptides can be highly active: some are hormones, neurotransmitters, toxin
 | substance P | 11 | neuropeptide that transmits pain signals |
 | **glucagon** | 29 | pancreatic hormone that raises blood glucose (7.1.29) |
 | insulin | 51 (A 21 + B 30, three disulfides) | pancreatic hormone that lowers blood glucose (7.1.29) |
-| sex peptide | 36 | *Drosophila* seminal-fluid peptide that changes female behaviour |
+| sex peptide | 36 | *Drosophila* seminal-fluid peptide that changes female behavior |
 | **α-amanitin** | 8 (bicyclic) | death-cap mushroom toxin; inhibits **RNA polymerase** II |
 | conotoxins | 10–40 | cone-snail venoms; block **ion channels** |
 | chlorotoxin | 36 | scorpion venom; blocks chloride channels, binds glioma cells |

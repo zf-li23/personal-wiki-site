@@ -1,7 +1,7 @@
 ---
 title: 蛋白质的研究方法：纯化、分析与测序
 description: 如何利用溶解度、大小、电荷和结合亲和力的差异纯化蛋白质；活性测定、比活力与纯化表；SDS-PAGE、等电聚焦与二维电泳；用 Edman 降解、特异性切割和质谱测定一级结构；共有序列、同源蛋白、直系同源物与旁系同源物，以及作为进化记录的蛋白质序列。
-source_hash: 6d020b9a074f
+source_hash: d4daa3c1676c
 ---
 
 要认识一种**蛋白质**，首先必须把它从细胞中成千上万种其他蛋白质中分离出来，然后确定它由什么组成、按什么顺序排列。每一种技术都利用某一个把蛋白质彼此区别开来的化学或物理性质：溶解度、大小、在给定 pH 下的净电荷（7.1.3）、对特定**配体**的亲和力、质量。因此本章是上一章的应用：氨基酸**侧链**的性质成为分离和分析的抓手。本章依次讲分离与纯化（4.1）、电泳（4.2）、一级结构的测定（4.3），以及氨基酸序列对结构、功能和进化的揭示（4.4）。
@@ -143,7 +143,7 @@ $$
 
 ![用重叠确定片段顺序，以一个假想的 24 个残基的多肽为例。胰蛋白酶在 Lys 和 Arg 之后切割（虚线），得到片段 T1–T5；溴化氰在 Met 之后切割（点线），得到 C1–C3。每个 CNBr 片段跨越一个或多个胰蛋白酶切割位点：C1（GAVLKM）把 T1 与开始 T2 的 Met 连起来，C2 连接 T2、T3 和 T4 的起始部分，C3 连接 T4 的末端与 T5。结合 N 端（Gly）和 C 端（Cys）残基，这些重叠确定了顺序 T1–T2–T3–T4–T5](./plots/sequencing-overlap.py)
 
-**例 4.3.1** 图中多肽的胰蛋白酶片段（顺序未知）为 GC、GAVLK、MSDYR、TMEHLR 和 WFNPQK；CNBr 片段为 EHLRGC、GAVLKM 和 SDYRWFNPQKTM。N 端残基是 Gly，C 端残基是 Cys。GAVLKM 表明 GAVLK 后面是以 M 开头的片段，即 MSDYR；SDYRWFNPQKTM 表明 MSDYR 后面是 WFNPQK，再后面是以 TM 开头的片段，即 TMEHLR；EHLRGC 把 GC 置于最后。序列为 GAVLKMSDYRWFNPQKTMEHLRGC。注意胰蛋白酶片段 WFNPQK 并非在 Pro 之前被切断，而且两个以 Gly 开头的片段只能靠 CNBr 的重叠来区分。
+**例 4.3.1** 图中多肽的胰蛋白酶片段（顺序未知）为 GC、GAVLK、MSDYR、TMEHLR 和 WFNPQK；CNBr 片段为 EHLRGC、GAVLKM 和 SDYRWFNPQKTM。N 端残基是 Gly，C 端残基是 Cys。GAVLKM 表明 GAVLK 后面是以 M 开头的片段，即 MSDYR；SDYRWFNPQKTM 表明 MSDYR 后面是 WFNPQK，再后面是以 TM 开头的片段，即 TMEHLR；EHLRGC 把 GC 置于最后。序列为 GAVLKMSDYRWFNPQKTMEHLRGC。注意两个以 Gly 开头的片段（GC 与 GAVLK）只能靠 CNBr 的重叠来区分。
 
 ### 4.3.4. 质谱
 
