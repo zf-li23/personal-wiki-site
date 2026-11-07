@@ -11157,7 +11157,7 @@ terms:
   - { zh: Fick 原理, en: Fick principle }
   - { zh: 氧摄取率, en: oxygen extraction ratio, aliases: [氧提取率, oxygen extraction fraction] }
   - { zh: Starling 力, en: Starling forces }
-  - { zh: 净滤过压, en: net filtration pressure }
+  - { zh: 净滤过压, en: net filtration pressure, aliases: [有效滤过压] }
   - { zh: 毛细血管滤过系数, en: capillary filtration coefficient, aliases: [K_f] }
   - { zh: 淋巴, en: lymph }
   - { zh: 淋巴系统, en: lymphatic system }
@@ -11172,3 +11172,54 @@ terms:
   - { zh: 静脉回流曲线, en: venous return curve }
   - { zh: 心功能曲线, en: cardiac function curve }
   - { zh: 潜水反射, en: diving reflex, aliases: [潜水反应, diving response] }
+  - { zh: 渗透调节, en: osmoregulation, scope: ["7.14"] }
+  - { zh: 离子调节, en: ionic regulation }
+  - { zh: 指示剂稀释法, en: indicator-dilution method }
+  - { zh: 代谢水, en: metabolic water }
+  - { zh: 不感蒸发, en: insensible water loss, aliases: [不感失水, insensible perspiration] }
+  - { zh: 排氨型动物, en: ammonotelic, aliases: [排氨型] }
+  - { zh: 排尿素型动物, en: ureotelic, aliases: [排尿素型] }
+  - { zh: 排尿酸型动物, en: uricotelic, aliases: [排尿酸型] }
+  - { zh: 渗透顺应者, en: osmoconformer, aliases: [osmoconformers] }
+  - { zh: 渗透调节者, en: osmoregulator, aliases: [osmoregulators] }
+  - { zh: 广盐性, en: euryhaline }
+  - { zh: 狭盐性, en: stenohaline }
+  - { zh: 排尿反射, en: micturition reflex }
+  - { zh: 肾单位, en: nephron, aliases: [nephrons] }
+  - { zh: 近球小体, en: juxtaglomerular apparatus, aliases: [球旁器, 肾小球旁器] }
+  - { zh: 致密斑, en: macula densa }
+  - { zh: 清除率, en: renal clearance, aliases: [clearance, 肾清除率], scope: ["7.14"] }
+  - { zh: 肾小球滤过率, en: glomerular filtration rate, aliases: [GFR] }
+  - { zh: 肾血浆流量, en: renal plasma flow, aliases: [RPF] }
+  - { zh: 滤过分数, en: filtration fraction }
+  - { zh: 滤过平衡, en: filtration equilibrium }
+  - { zh: 球管反馈, en: tubuloglomerular feedback, aliases: [管球反馈, TGF] }
+  - { zh: 跨细胞途径, en: transcellular pathway }
+  - { zh: 旁细胞途径, en: paracellular pathway, aliases: [细胞旁途径] }
+  - { zh: 肾小管最大转运量, en: tubular transport maximum, aliases: [最大转运量, 转运最大值, Tm] }
+  - { zh: 肾糖阈, en: renal threshold for glucose }
+  - { zh: 渗透性利尿, en: osmotic diuresis }
+  - { zh: 溶剂拖曳, en: solvent drag }
+  - { zh: 主细胞, en: principal cell, aliases: [principal cells], scope: ["7.14"] }
+  - { zh: 闰细胞, en: intercalated cell, aliases: [intercalated cells] }
+  - { zh: 球管平衡, en: glomerulotubular balance, aliases: [球-管平衡] }
+  - { zh: 利尿剂, en: diuretic, aliases: [diuretics, 利尿药] }
+  - { zh: 水利尿, en: water diuresis }
+  - { zh: 自由水清除率, en: free-water clearance }
+  - { zh: 逆流倍增, en: countercurrent multiplication, aliases: [countercurrent multiplier, 逆流倍增机制] }
+  - { zh: 抗利尿激素, en: antidiuretic hormone, aliases: [ADH, 血管升压素, 精氨酸加压素, vasopressin, arginine vasopressin, AVP] }
+  - { zh: 渗透压感受器, en: osmoreceptor, aliases: [osmoreceptors] }
+  - { zh: 肾素–血管紧张素–醛固酮系统, en: renin–angiotensin–aldosterone system, aliases: [RAAS, 肾素-血管紧张素-醛固酮系统] }
+  - { zh: 醛固酮, en: aldosterone }
+  - { zh: 心房钠尿肽, en: atrial natriuretic peptide, aliases: [ANP, 心钠素, 心房利尿钠肽] }
+  - { zh: 压力利尿, en: pressure natriuresis, aliases: [压力性利钠, pressure diuresis] }
+  - { zh: 相对髓质厚度, en: relative medullary thickness, aliases: [RMT] }
+  - { zh: 可滴定酸, en: titratable acid }
+  - { zh: 净排酸, en: net acid excretion, aliases: [NAE] }
+  - { zh: 代谢性酸中毒, en: metabolic acidosis }
+  - { zh: 代谢性碱中毒, en: metabolic alkalosis }
+  - { zh: 呼吸性酸中毒, en: respiratory acidosis }
+  - { zh: 呼吸性碱中毒, en: respiratory alkalosis }
+  - { zh: Davenport 图, en: Davenport diagram }
+  - { zh: 阴离子间隙, en: anion gap }
+  - { zh: α-稳态, en: alpha-stat, aliases: [α-stat, alpha-stat regulation] }
