@@ -10950,3 +10950,24 @@ terms:
   - { zh: 一次结实植物, en: monocarpic plant, aliases: [monocarpic, 单次结实植物] }
   - { zh: 多次结实植物, en: polycarpic plant, aliases: [polycarpic, 多稔植物] }
   - { zh: 脱落, en: abscission, scope: ["7.12", "7.13"] }
+  - { zh: 栽培植物, en: cultivated plant, aliases: [cultivated plants, crop plant, crop plants] }
+  - { zh: 野生祖先, en: wild progenitor, aliases: [wild progenitors, wild ancestor, 祖先种] }
+  - { zh: 无意识选择, en: unconscious selection }
+  - { zh: 起源中心, en: center of origin, aliases: [centers of origin, centre of origin, Vavilov centers] }
+  - { zh: 中亲优势, en: mid-parent heterosis }
+  - { zh: 超亲优势, en: better-parent heterosis, aliases: [heterobeltiosis, high-parent heterosis] }
+  - { zh: 不育系, en: male-sterile line, aliases: [CMS line, male-sterile lines] }
+  - { zh: 保持系, en: maintainer line, aliases: [maintainer lines] }
+  - { zh: 恢复系, en: restorer line, aliases: [restorer lines] }
+  - { zh: 两系杂交稻, en: two-line hybrid rice, aliases: [two-line system], scope: ["7.13"] }
+  - { zh: 光温敏核不育, en: photoperiod- and thermo-sensitive genic male sterility, aliases: [PTGMS, 光温敏核雄性不育, 光温敏核不育系] }
+  - { zh: 远缘杂交, en: wide hybridization, aliases: [distant hybridization, wide cross, wide crosses] }
+  - { zh: 染色体工程, en: chromosome engineering }
+  - { zh: 异附加系, en: alien addition line, aliases: [addition line, alien addition lines] }
+  - { zh: 异代换系, en: alien substitution line, aliases: [substitution line, alien substitution lines] }
+  - { zh: 易位系, en: translocation line, aliases: [translocation lines] }
+  - { zh: 种质资源, en: plant genetic resources, aliases: [germplasm resources, 遗传资源, genetic resources] }
+  - { zh: 渗入系, en: introgression line, aliases: [introgression lines] }
+  - { zh: 分子标记辅助选择, en: marker-assisted selection }
+  - { zh: 快速育种, en: speed breeding }
+  - { zh: 从头驯化, en: de novo domestication }
