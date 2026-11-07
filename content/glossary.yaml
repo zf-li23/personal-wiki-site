@@ -6549,7 +6549,7 @@ terms:
   - { zh: 5′ 剪接位点, en: 5′ splice site, aliases: [供体位点, donor site] }
   - { zh: 3′ 剪接位点, en: 3′ splice site, aliases: [受体位点, acceptor site] }
   - { zh: 套索, en: lariat, aliases: [套索结构] }
-  - { zh: 核小核糖核蛋白, en: small nuclear ribonucleoprotein, aliases: [snRNP, 小核核糖核蛋白] }
+  - { zh: 小核核糖核蛋白, en: small nuclear ribonucleoprotein, aliases: [snRNP, 核小核糖核蛋白] }
   - { zh: 剪接体, en: spliceosome }
   - { zh: 外显子定义, en: exon definition }
   - { zh: 内含子定义, en: intron definition }

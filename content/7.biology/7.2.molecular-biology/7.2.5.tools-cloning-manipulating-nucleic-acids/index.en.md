@@ -37,11 +37,11 @@ Four-cutters therefore give fragments of a few hundred base pairs, six-cutters a
 
 ### 5.1.3. Sticky and Blunt Ends
 
-**Definition 5.1.2** Ends with a short single-stranded extension, produced by cuts staggered about the centre of the site, are called **sticky ends**; the extension is a 5′ overhang (EcoRI) or a 3′ overhang (PstI). Ends produced by cuts directly opposite each other are called **blunt ends** (SmaI, EcoRV).
+**Definition 5.1.2** Ends with a short single-stranded extension, produced by cuts staggered about the center of the site, are called **sticky ends**; the extension is a 5′ overhang (EcoRI) or a 3′ overhang (PstI). Ends produced by cuts directly opposite each other are called **blunt ends** (SmaI, EcoRV).
 
 Two sticky ends with complementary overhangs can pair whatever enzyme made them. BamHI, BglII and Sau3AI all leave the overhang GATC, so their fragments can be joined; the hybrid junction is cut by neither BamHI nor BglII, which is a way of destroying a site deliberately. Blunt ends pair with any other blunt end, which is general but inefficient (Section 5.3).
 
-![Cleavage geometry of type II restriction enzymes. Each row shows the recognition site (boxed) in its duplex, the cut through both strands (red) and the two products, with overhang bases coloured. EcoRI leaves 5′ overhangs, PstI 3′ overhangs and SmaI blunt ends; the type IIS enzyme BsaI cuts outside its asymmetric site, so its four-nucleotide overhang can have any sequence and the recognition site stays on the discarded fragment](./plots/restriction-ends.py)
+![Cleavage geometry of type II restriction enzymes. Each row shows the recognition site (boxed) in its duplex, the cut through both strands (red) and the two products, with overhang bases colored. EcoRI leaves 5′ overhangs, PstI 3′ overhangs and SmaI blunt ends; the type IIS enzyme BsaI cuts outside its asymmetric site, so its four-nucleotide overhang can have any sequence and the recognition site stays on the discarded fragment](./plots/restriction-ends.py)
 
 **Definition 5.1.3** Enzymes from different sources that recognize the same sequence are called **isoschizomers**; isoschizomers that cleave that sequence at different positions are called **neoschizomers**.
 
@@ -79,7 +79,7 @@ Forming the bond costs energy, taken from ATP (phage T4 and eukaryotic ligases) 
 
 Ligation is thus not the chemical reverse of cleavage: hydrolysis of a phosphodiester is downhill, and its synthesis must be coupled to the cleavage of phosphoanhydride bonds. T4 DNA ligase seals nicks, joins annealed cohesive ends (two nicks sealed while the short overhangs are transiently paired, which is why such reactions are run cold), and joins blunt ends, which must collide end to end and react one to two orders of magnitude less efficiently. It requires a 5′-phosphate and cannot fill a gap. Both limitations are useful: removing the phosphates of a cut vector with a phosphatase prevents it from closing on itself, while the insert, which keeps its phosphates, is still joined on one strand at each end and the remaining nicks are repaired in the host.
 
-Whether the two ends of one molecule join (circularization) or ends of different molecules join is a question of concentration. The effective concentration of one end of a molecule in the neighbourhood of its other end is fixed by the length and stiffness of the DNA and does not depend on how much DNA is present, whereas intermolecular joining is proportional to the concentration of partner ends. Dilute reactions therefore favour circles, concentrated ones long concatemers.
+Whether the two ends of one molecule join (circularization) or ends of different molecules join is a question of concentration. The effective concentration of one end of a molecule in the neighborhood of its other end is fixed by the length and stiffness of the DNA and does not depend on how much DNA is present, whereas intermolecular joining is proportional to the concentration of partner ends. Dilute reactions therefore favor circles, concentrated ones long concatemers.
 
 ## 5.4. Vectors
 
@@ -101,7 +101,7 @@ Cloning plasmids are reduced to three elements, each for a reason. The *origin* 
 
 ### 5.4.2. Recognizing Recombinants
 
-A ligation yields both vector that has closed without an insert and recombinant vector, and both confer resistance. Colour distinguishes them.
+A ligation yields both vector that has closed without an insert and recombinant vector, and both confer resistance. Color distinguishes them.
 
 **Definition 5.4.5** The restoration of β-galactosidase activity by two separately inactive fragments of the enzyme, the α peptide encoded by the vector and the remaining fragment encoded by a deletion allele in the host, is called **α-complementation**. The screen in which recombinant colonies are recognized by loss of this activity on plates with a chromogenic substrate is called **blue–white screening**.
 
@@ -182,7 +182,7 @@ T_{\mathrm{m}}/{}^\circ\mathrm{C} = 81.5 + 16.6\lg\!\left([\ce{Na+}]/\mathrm{M}\
 $$
 and every $1\%$ of mismatched pairs lowers $T_{\mathrm{m}}$ by about $1$–$1.5\,^\circ\mathrm{C}$.
 
-**Example 5.5.2** A homologue with $80\%$ identity to the probe forms hybrids melting some $20$–$30\,^\circ\mathrm{C}$ below the perfect hybrid. Finding it therefore requires washing at lower temperature or higher salt than for the perfect match: lowering stringency tolerates mismatches at the price of more false positives, and this trade-off, not the labeling chemistry, is what determines whether a cross-species screen succeeds.
+**Example 5.5.2** A homolog with $80\%$ identity to the probe forms hybrids melting some $20$–$30\,^\circ\mathrm{C}$ below the perfect hybrid. Finding it therefore requires washing at lower temperature or higher salt than for the perfect match: lowering stringency tolerates mismatches at the price of more false positives, and this trade-off, not the labeling chemistry, is what determines whether a cross-species screen succeeds.
 
 The alternative to hybridization is amplification. By the late 1980s a short unique sequence (a *sequence-tagged site*) could be detected by PCR in pools of clones, and Olson, Hood, Cantor and Botstein (1989) proposed building physical maps of the human genome from such sites; screening pooled clones needs about $\log_2 N$ rounds of pooling instead of $N$ separate tests.
 
@@ -210,7 +210,7 @@ The sequence $2^n - 2n$ is $0, 0, 2, 8, 22, 52, \dots$: nothing of target length
 
 With efficiency $E$ (the fraction of templates copied per cycle, ideally $1$) the number of molecules is $N_n = N_0(1 + E)^n$. Exponential growth does not continue: every reaction levels off at roughly the same number of molecules, whatever the input, and the budget of primers explains the order of magnitude.
 
-**Example 5.6.1 (Why amplification saturates near $10^{12}$ molecules)** A reaction starting from $2^{20} \approx 10^6$ templates saturates after about $21$ cycles; assuming perfect doubling and a sudden stop, it has made $2^{20} \times 2^{21} = 2^{41} \approx 2 \times 10^{12}$ molecules. A reaction contains of the order of $10^{-11}\,\mathrm{mol}$ of each primer, that is some $6 \times 10^{12}$ molecules, and each product duplex consumes one molecule of each. The plateau therefore reflects the primer supply, not the nucleotides, of which there are a thousandfold more than needed.
+**Example 5.6.1 (Why amplification saturates near $10^{12}$ molecules)** A reaction starting from $2^{20} \approx 10^6$ templates saturates after about $21$ cycles; assuming perfect doubling and a sudden stop, it has made $2^{20} \times 2^{21} = 2^{41} \approx 2 \times 10^{12}$ molecules. A reaction contains of the order of $10^{-11}\,\mathrm{mol}$ of each primer, that is some $6 \times 10^{12}$ molecules, and each product duplex consumes one molecule of each. The plateau therefore reflects the primer supply, not the nucleotides, which are in much larger excess.
 
 Saturation in fact begins earlier, because the product competes with the primers: as the product strands approach the primer concentration they increasingly pair with each other during cooling instead of with a primer, and the polymerase becomes limiting relative to the number of templates. A model in which the fraction of duplexes copied per cycle is $E_0 p/(p + N)$, with $p$ the remaining primer, already reproduces the common plateau (figure). The practical consequence is developed in [7.2.6](/7.2.6): the final amount of product says almost nothing about the starting amount, so quantification must use the cycle at which product first becomes detectable.
 
@@ -257,7 +257,7 @@ Restriction cloning is limited by the sites that happen to be available. A third
 
 **Definition 5.7.3** The isothermal, single-reaction joining of DNA fragments that share terminal overlaps of $20$–$40$ bp by the combined action of a $5' \to 3'$ exonuclease, a DNA polymerase and a DNA ligase is called **Gibson assembly** (Gibson et al., 2009).
 
-The exonuclease recesses the 5′ ends, exposing 3′ single-stranded ends; the complementary overlaps of neighbouring fragments pair; the polymerase fills the remaining gaps; and the ligase seals the nicks.
+The exonuclease recesses the 5′ ends, exposing 3′ single-stranded ends; the complementary overlaps of neighboring fragments pair; the polymerase fills the remaining gaps; and the ligase seals the nicks.
 
 ![Joining two fragments that share a terminal overlap (yellow). 1: the two duplexes, each strand drawn with its 3′ end as an arrowhead. 2: the exonuclease recesses the 5′ ends, exposing complementary 3′ single-stranded ends. 3: the overlaps pair, leaving a gap on each strand. 4: the polymerase fills the gaps (teal) and the ligase seals the nicks, giving a junction without a scar](./plots/gibson-assembly.py)
 
@@ -271,7 +271,7 @@ Because the overlaps are designed, the junction has no scar and need contain no 
 | Sticky and blunt ends (Definition 5.1.2) | staggered or opposed cuts | compatibility between enzymes with the same overhang; blunt joining is general but inefficient |
 | Methylation (Dam, Dcm; [5.1.4](/7.2.5#sec-5.1.4)) | $N^6$-methyladenine, 5-methylcytosine | blocks or permits specific enzymes; DpnI removes a methylated template; isoschizomer pairs probe methylation |
 | Type IIS enzymes (Definition 5.2.1) | cut outside an asymmetric site | overhangs of any sequence; scarless, ordered multi-fragment assembly; FokI nuclease domain → editing ([7.2.24](/7.2.24)) |
-| DNA ligase (Definition 5.3.1) | AMP transferred to lysine, then to 5′-P, then attacked by 3′-OH | joining nicks; needs 5′-P; dilution favours circles |
+| DNA ligase (Definition 5.3.1) | AMP transferred to lysine, then to 5′-P, then attacked by 3′-OH | joining nicks; needs 5′-P; dilution favors circles |
 | Vectors (Definitions 5.4.1–5.4.9) | origin + marker + cloning site | plasmid ≤10 kb, λ 9–23 kb, cosmid 35–45 kb, BAC 100–300 kb, YAC up to 2 Mb; λ packaging length window selects inserts |
 | Screening (Definitions 5.4.5, 5.4.6) | α-complementation; incompatible ends | blue–white screen for inserts; directional cloning fixes orientation and suppresses empty vector |
 | Libraries (Definitions 5.5.1, 5.5.2) | partial digestion or shearing; reverse transcription | Clarke–Carbon $N = \ln(1-P)/\ln(1-f)$ (Eq. 5.2): about five genome equivalents for $P = 0.99$ (Example 5.5.1); cDNA has no introns and reflects abundance |

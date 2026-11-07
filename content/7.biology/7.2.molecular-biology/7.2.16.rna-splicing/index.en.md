@@ -171,7 +171,7 @@ The first case was the mouse **immunoglobulin** μ heavy chain (Early, Hood and 
 
 Alternative splicing is the rule, not the exception. Deep sequencing of human **transcriptomes** (Pan, Blencowe and colleagues; Wang, Burge and colleagues, 2008) found that about $95\,\%$ of multi-exon genes produce more than one isoform, most of them differing between tissues. The extreme is the *Drosophila* gene *Dscam*, a cell-surface **receptor** of neurons: its exons 4, 6, 9 and 17 are chosen from mutually exclusive clusters of 12, 48, 33 and 2 alternatives, so that the gene can produce $12 \times 48 \times 33 \times 2 = 38\,016$ isoforms, used to give each neuron a distinct surface identity. Not every alternative mRNA makes a protein: many alternative exons introduce premature stop codons and target the mRNA for decay ([7.2.18](/7.2.18)), so that splicing can also switch a gene off.
 
-**Remark 16.7.1** The statement in some lecture notes that about $5\,\%$ of eukaryotic pre-mRNAs are alternatively spliced reflects estimates from the 1990s, based on a few cDNA comparisons; the current value for human multi-exon genes is about $95\,\%$, although for many genes one isoform dominates.
+**Remark 16.7.1** Estimates from the 1990s, based on a few cDNA comparisons, put the fraction of alternatively spliced eukaryotic pre-mRNAs at about $5\,\%$; the current value for human multi-exon genes is about $95\,\%$, although for many genes one isoform dominates.
 
 ### 16.7.2. Regulators: SR Proteins and hnRNPs
 
@@ -195,7 +195,7 @@ The same principle has become a therapy. In spinal muscular atrophy, the *SMN1* 
 2. Sxl binds the polypyrimidine tract of the default $3'$ splice site in the first intron of *tra* pre-mRNA, blocks U2AF there, and forces the use of a downstream, female-specific $3'$ site; only this mRNA encodes functional Tra. In males, without Sxl, the default site is used and the mRNA contains a stop codon.
 3. Tra, with the constitutive SR protein Tra-2, binds six copies of a 13-nt repeat in exon 4 of *dsx* pre-mRNA, about $300\,\mathrm{nt}$ downstream of a weak female-specific $3'$ splice site, and activates that site, so the female mRNA includes exon 4 and is polyadenylated after it (Dsx-F). In males exon 4 is skipped, and the mRNA ends with exons 5 and 6 (Dsx-M). The two Dsx proteins are transcription factors with the same DNA-binding domain and different C-termini, which activate female or male differentiation genes.
 
-The cascade combines a **repressor** of a $3'$ splice site (Sxl, an RRM protein of the hnRNP type, not an SR protein), an **activator** through an **enhancer** (Tra and Tra-2, SR-type proteins) and a default pathway. The statement that both Sxl and Tra are SR proteins is incorrect; only Tra and Tra-2 have RS domains.
+The cascade combines a **repressor** of a $3'$ splice site (Sxl, an RRM protein of the hnRNP type, not an SR protein), an **activator** through an **enhancer** (Tra and Tra-2, SR-type proteins) and a default pathway. Only Tra and Tra-2 have RS domains.
 
 ### 16.7.4. Kinetic Coupling to Elongation
 

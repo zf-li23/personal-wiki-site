@@ -15,10 +15,10 @@ A human diploid nucleus holds about $2\,\mathrm{m}$ of DNA in a sphere $6\,\mu\m
 
 | Histone | **Residues** (bovine) | $M_{\mathrm{r}}$ | Lys / % | Arg / % | Conservation |
 |---|---|---|---|---|---|
-| H1 | 223 | 21 130 | 29.5 | 11.3 | low; many tissue-specific subtypes |
-| H2A | 129 | 13 960 | 10.9 | 19.3 | moderate; several variants |
-| H2B | 125 | 13 774 | 16.0 | 16.4 | moderate |
-| H3 | 135 | 15 273 | 19.6 | 13.3 | extreme |
+| H1 | 223 | 21 130 | 29.5 | 1.3 | low; many tissue-specific subtypes |
+| H2A | 129 | 13 960 | 10.9 | 9.3 | moderate; several variants |
+| H2B | 125 | 13 774 | 16.0 | 6.4 | moderate |
+| H3 | 135 | 15 273 | 9.6 | 13.3 | extreme |
 | H4 | 102 | 11 236 | 10.8 | 13.7 | extreme: pea and cow differ at 2 of 102 residues |
 
 The properties of histones follow from their job:
@@ -47,7 +47,7 @@ The crystal structure of the core particle (Luger and Richmond, 1997, at $2.8$ �
 - The octamer is a wedge-shaped disc about $11\,\mathrm{nm}$ across and $5.7\,\mathrm{nm}$ thick, with the DNA on the outside. The particle has a two-fold (dyad) axis through the central base pair.
 - The DNA contacts the octamer at 14 sites, one per helical turn, wherever its **minor groove** faces the protein; at each site an arginine **side chain** inserts into the minor groove and the backbone phosphates are bound by helix dipoles and main-chain amides. The contacts are with the backbone, not the bases, so the octamer binds any sequence, although some sequences bend more easily than others (Section 4.4).
 - The DNA is bent with a radius of about $4.2\,\mathrm{nm}$, much tighter than its persistence length of about $50\,\mathrm{nm}$; the bending energy is paid by the many electrostatic and hydrogen-bond contacts (Section 4.6).
-- The eight N-terminal tails (and the C-terminal tail of H2A) are intrinsically disordered and make up about $28\%$ of the mass of the core histones. They leave the particle between the two gyres of DNA and through the minor-groove channels, so they are exposed to modifying enzymes. The H4 tail contacts an acidic patch on the H2A–H2B surface of the neighbouring nucleosome, an interaction that drives the folding of nucleosome arrays; acetylation of H4 K16 abolishes it.
+- The eight N-terminal tails (and the C-terminal tail of H2A) are intrinsically disordered and make up about $28\%$ of the mass of the core histones. They leave the particle between the two gyres of DNA and through the minor-groove channels, so they are exposed to modifying enzymes. The H4 tail contacts an acidic patch on the H2A–H2B surface of the neighboring nucleosome, an interaction that drives the folding of nucleosome arrays; acetylation of H4 K16 abolishes it.
 
 ### 4.1.3. The Linker Histone and the Topology of Wrapping
 
@@ -81,11 +81,11 @@ When the salt concentration is raised to physiological values or $\mathrm{Mg^{2+
 
 | | One-start solenoid | Two-start zigzag |
 |---|---|---|
-| Arrangement | consecutive nucleosomes are neighbours along one helical path, about six per turn; linkers bent | nucleosomes alternate between two stacks; linkers straight and crossing the fiber axis |
+| Arrangement | consecutive nucleosomes are neighbors along one helical path, about six per turn; linkers bent | nucleosomes alternate between two stacks; linkers straight and crossing the fiber axis |
 | Proposed by | Finch and Klug (1976) | Woodcock; Williams |
 | Support | EM of long-repeat arrays with H1, interdigitated solenoid (Robinson et al. 2006) | crystal structure of a tetranucleosome (Schalch et al. 2005), **cryo-EM** of 12-nucleosome arrays (Song et al. 2014) |
 
-The geometry depends on the repeat length and on H1: short repeats (about $167$ bp) favour the two-start zigzag, long repeats with H1 (about $197$ bp) a more compact interdigitated solenoid, and single-molecule force spectroscopy of reconstituted fibers detected both behaviours. It was therefore proposed that inactive chromatin, with long repeats, forms solenoids and active chromatin zigzags.
+The geometry depends on the repeat length and on H1: short repeats (about $167$ bp) favor the two-start zigzag, long repeats with H1 (about $197$ bp) a more compact interdigitated solenoid, and single-molecule force spectroscopy of reconstituted fibers detected both behaviours. It was therefore proposed that inactive chromatin, with long repeats, forms solenoids and active chromatin zigzags.
 
 In living cells, however, a regular 30 nm fiber is generally not found. Cryo-electron microscopy of vitrified sections of mitotic chromosomes (Eltsov et al., 2008), small-angle X-ray scattering of nuclei, and electron tomography of chromatin stained in situ (ChromEMT, Ou et al., 2017) show instead a disordered chain of nucleosomes, with local diameters from about $5$ to $24\,\mathrm{nm}$, packed at different densities in different regions. Regular 30 nm fibers are seen only in a few specialized nuclei with long repeats and little transcription (chicken erythrocytes, some sperm). The older textbook statement that "30 nm fibers account for most of the chromatin of an interphase nucleus" is therefore no longer accepted; the in vitro fiber remains useful as a demonstration of which nucleosome–nucleosome contacts are possible (the H4 tail–acidic patch contact of Section 4.1.2).
 
@@ -109,7 +109,7 @@ The SMC (structural maintenance of chromosomes) proteins are long antiparallel *
 - Acute degradation of cohesin erases loops and TADs within hours, while compartments persist or even sharpen (Rao et al., 2017): domains and compartments are made by different mechanisms.
 - Inverting a CTCF motif by genome editing abolishes the loop it anchored or creates a new one in the predicted direction (de Wit et al., 2015; Guo et al., 2015).
 
-TADs matter because enhancers act mostly within them ([7.2.14](/7.2.14)). Deletions or inversions that remove a TAD boundary let an enhancer reach a gene in the neighbouring domain; in human families such rearrangements at the *EPHA4* locus misexpress neighbouring genes in the developing limb and cause malformations (Lupiáñez et al., 2015).
+TADs matter because enhancers act mostly within them ([7.2.14](/7.2.14)). Deletions or inversions that remove a TAD boundary let an enhancer reach a gene in the neighboring domain; in human families such rearrangements at the *EPHA4* locus misexpress neighboring genes in the developing limb and cause malformations (Lupiáñez et al., 2015).
 
 **Definition 4.3.3** Chromatin that is relatively decondensed during interphase, stains lightly and contains most of the transcribed genes is called **euchromatin**; chromatin that remains condensed throughout interphase, stains darkly and is largely transcriptionally silent is called **heterochromatin**.
 
@@ -125,7 +125,7 @@ At mitosis, chromatin is compacted a further tenfold into the familiar rod-shape
 
 Positioning matters because a factor whose site lies inside a core particle binds poorly (Section 4.6), while a site in a linker or in a nucleosome-free region is freely accessible. Its main determinants are:
 
-1. *DNA sequence.* Wrapping compresses the minor groove where it faces the octamer and widens it where it faces outward. AA, TT and TA dinucleotides favour a narrow minor groove, GC dinucleotides a wide one; sequences in which these dinucleotides alternate with a period of about $10$ bp, offset by half a turn, bend easily and are preferred (the basis of the "Widom 601" sequence used in reconstitutions). Long poly(dA:dT) tracts are stiff and disfavour nucleosomes; they are enriched in yeast promoters.
+1. *DNA sequence.* Wrapping compresses the minor groove where it faces the octamer and widens it where it faces outward. AA, TT and TA dinucleotides favor a narrow minor groove, GC dinucleotides a wide one; sequences in which these dinucleotides alternate with a period of about $10$ bp, offset by half a turn, bend easily and are preferred (the basis of the "Widom 601" sequence used in reconstitutions). Long poly(dA:dT) tracts are stiff and disfavor nucleosomes; they are enriched in yeast promoters.
 2. *Barriers.* DNA-binding proteins and other bound complexes exclude nucleosomes from their sites and, by excluded volume, order the nucleosomes next to them (statistical positioning, Example 4.6.4).
 3. *ATP-dependent remodelers* slide, space and evict nucleosomes (Section 4.5, [7.2.15](/7.2.15)).
 
@@ -165,7 +165,7 @@ Nucleosomes are not static. ATP-dependent chromatin remodelers, all with an ATPa
 
 ## 4.6. A Quantitative View of Chromatin
 
-**Example 4.6.1 (The compaction cascade)** Human chromosome 22 contains about $48 \times 10^6$ bp (the round number used in the course; the current assembly gives about $51$ Mbp). As B-DNA ($0.34\,\mathrm{nm}$ per bp) its contour length is
+**Example 4.6.1 (The compaction cascade)** Human chromosome 22 contains about $48 \times 10^6$ bp (a round number; the current assembly gives about $51$ Mbp). As B-DNA ($0.34\,\mathrm{nm}$ per bp) its contour length is
 $$
 48 \times 10^6 \times 0.34\,\mathrm{nm} \approx 1.63\,\mathrm{cm},
 $$
@@ -192,7 +192,7 @@ $$
 
 The midpoint $F_{1/2}$ gives the ratio of $\Delta G$ to $\Delta z$, and the steepness of the transition gives $\Delta z$ itself: the slope at the midpoint is $\Delta z/(4k_{\mathrm{B}}T)$, so the transition is $4k_{\mathrm{B}}T/\Delta z$ wide in force. Fitting Eq. (4.1) to $P_{\mathrm{open}}(F)$ therefore yields both parameters and hence $\Delta G = F_{1/2}\Delta z$.
 
-**Example 4.6.3 (Unwrapping energy)** In the experiment analysed in the course (after Mihardja et al., 2006), the transition is centred at $F_{1/2} \approx 3\,\mathrm{pN}$ with $\Delta z \approx 40\,\mathrm{nm}$. Then
+**Example 4.6.3 (Unwrapping energy)** In a representative optical-trap experiment (after Mihardja et al., 2006), the transition is centered at $F_{1/2} \approx 3\,\mathrm{pN}$ with $\Delta z \approx 40\,\mathrm{nm}$. Then
 $$
 \Delta G \approx 3\,\mathrm{pN} \times 40\,\mathrm{nm} = 120\,\mathrm{pN\,nm} \approx 30\,k_{\mathrm{B}}T,
 $$
@@ -238,7 +238,7 @@ since the last base pair is either free or the end of a nucleosome. The probabil
 
 1. Histone H4 of peas and cows differs at only 2 of 102 positions, whereas H1 varies considerably between species. Explain this difference in terms of structure.
 
-   **Answer** Almost every residue of H4 lies in the histone fold or in the tail and contacts DNA, H3 (in the four-helix bundle and the handshake), H2B or the neighbouring nucleosome; a substitution almost anywhere disturbs one of these interactions in every nucleosome of the genome, and is selected against. H1 binds the outside of the nucleosome at the dyad through a single globular domain; its long basic tails act mainly through their overall positive charge, which tolerates substitutions, and the protein is in any case less essential (several H1 subtypes are partly redundant).
+   **Answer** Almost every residue of H4 lies in the histone fold or in the tail and contacts DNA, H3 (in the four-helix bundle and the handshake), H2B or the neighboring nucleosome; a substitution almost anywhere disturbs one of these interactions in every nucleosome of the genome, and is selected against. H1 binds the outside of the nucleosome at the dyad through a single globular domain; its long basic tails act mainly through their overall positive charge, which tolerates substitutions, and the protein is in any case less essential (several H1 subtypes are partly redundant).
 2. Chromatin is digested briefly with micrococcal nuclease, deproteinized and run on an agarose gel. Describe the result, and the result of digestion to completion. What does each tell you?
 
    **Answer** Brief digestion gives a ladder of DNA bands at multiples of the repeat length (about 200, 400, 600 bp …): cuts are confined to the linkers, so the DNA between them is protected by a regularly repeating particle, and the spacing gives the repeat length. Extensive digestion trims the linkers away and leaves a single band of about 147 bp (with a transient 167 bp intermediate while H1 is bound): this is the DNA protected by the octamer, the core particle.
@@ -251,7 +251,7 @@ since the last base pair is either free or the end of a nucleosome. The probabil
 5. A transcription factor binds its site on naked DNA with $K_D = 1\,\mathrm{nM}$ and is present at $10\,\mathrm{nM}$. What fraction of its sites is bound on naked DNA, at a site near the nucleosome entry ($K_{\mathrm{conf}} = 10^{-2}$) and at a site near the dyad ($K_{\mathrm{conf}} = 10^{-4}$)? What does the factor need in order to bind the dyad site?
 
    **Answer** Naked DNA: $\theta = 10/(10 + 1) \approx 0.91$. Entry site: $K_D^{\mathrm{app}} \approx 1\,\mathrm{nM}/10^{-2} = 100\,\mathrm{nM}$, $\theta = 10/110 \approx 0.09$. Dyad site: $K_D^{\mathrm{app}} \approx 10\,\mu\mathrm{M}$, $\theta \approx 10^{-3}$. To bind near the dyad the factor needs either a much higher concentration, help from another factor that keeps the DNA unwrapped (cooperativity through the nucleosome), or a remodeler that slides or evicts the nucleosome; "pioneer" factors that bind nucleosomal DNA directly are an exception.
-6. In a nucleosome-pulling experiment the transition is centred at $3\,\mathrm{pN}$ and its 10%–90% width is $0.9\,\mathrm{pN}$. Estimate $\Delta z$ and $\Delta G$ from Eq. (4.1).
+6. In a nucleosome-pulling experiment the transition is centered at $3\,\mathrm{pN}$ and its 10%–90% width is $0.9\,\mathrm{pN}$. Estimate $\Delta z$ and $\Delta G$ from Eq. (4.1).
 
    **Answer** From Eq. (4.1), $P = 0.1$ and $P = 0.9$ occur at $(F - F_{1/2})\Delta z/k_{\mathrm{B}}T = \mp\ln 9$, so the width is $2\ln 9\,k_{\mathrm{B}}T/\Delta z = 4.39\,k_{\mathrm{B}}T/\Delta z$. With a width of $0.9\,\mathrm{pN}$ and $k_{\mathrm{B}}T = 4.1\,\mathrm{pN\,nm}$, $\Delta z \approx 4.39 \times 4.1/0.9 \approx 20\,\mathrm{nm}$, and $\Delta G = F_{1/2}\Delta z \approx 60\,\mathrm{pN\,nm} \approx 15\,k_{\mathrm{B}}T$.
 7. Explain why the hard-rod model of Example 4.6.4 produces a regular array next to a barrier but a uniform average density far from it, and why the phasing persists further at higher nucleosome density.

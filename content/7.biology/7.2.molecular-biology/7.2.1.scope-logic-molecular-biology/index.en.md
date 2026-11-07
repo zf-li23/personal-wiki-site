@@ -40,7 +40,7 @@ The three carriers divide the labor of information handling in a way that resemb
 | Chemistry | Deoxyribose, T; double-stranded | Ribose (2′-OH), U; mostly single-stranded, folds | 20 amino acids; folds into specific structures |
 | Stability | Very stable (no 2′-OH to attack the backbone); damage is repaired | Labile; bacterial **mRNA half-life** minutes, mammalian hours | Mammalian proteins about two days on average; bacterial proteins mostly diluted by growth |
 | Copies | One or two per gene per cell (plus organelle genomes) | 0.1–1000 per gene | 10–10⁷ per gene |
-| Main role | Archive: inheritance, template | Working copy (**mRNA**), adaptor (**tRNA**), catalyst (rRNA, **ribozymes**), regulator | Catalysis, structure, transport, signalling, regulation |
+| Main role | Archive: inheritance, template | Working copy (**mRNA**), adaptor (**tRNA**), catalyst (rRNA, **ribozymes**), regulator | Catalysis, structure, transport, signaling, regulation |
 | Chapters | 7.2.2–7.2.9 | 7.2.10–7.2.18, 7.2.23 | 7.2.19–7.2.20 |
 
 The chemical differences are not accidents. The 2′-hydroxyl that makes RNA a better catalyst also makes its backbone susceptible to cleavage, and replacing uracil by thymine lets the cell recognize uracil arising from cytosine **deamination** as damage ([7.2.8](/7.2.8)). Because RNA can both carry a sequence and catalyze reactions, it is the leading candidate for the first genetic molecule ([7.2.23](/7.2.23)).
@@ -83,7 +83,7 @@ A mechanism is established when these lines converge: the mutant lacks an activi
 
 ### 1.3.2. Discoveries Become Tools
 
-The enzymes that cells use to handle nucleic acids became the instruments of the field. **Restriction enzymes**, found as a bacterial defence against phages, cut DNA at defined sequences; DNA ligase joins fragments; DNA polymerases copy them and, as thermostable enzymes, power PCR; reverse transcriptase converts RNA into DNA; and the CRISPR–Cas systems of bacterial immunity have become programmable genome editors. The course therefore introduces the tools early ([7.2.5](/7.2.5), [7.2.6](/7.2.6)): every later chapter uses them to read the molecular state of a cell, and the last chapters use them to rewrite it ([7.2.24](/7.2.24)). Reading (sequencing), writing (synthesis and cloning) and editing are three uses of the same enzymology.
+The enzymes that cells use to handle nucleic acids became the instruments of the field. **Restriction enzymes**, found as a bacterial defense against phages, cut DNA at defined sequences; DNA ligase joins fragments; DNA polymerases copy them and, as thermostable enzymes, power PCR; reverse transcriptase converts RNA into DNA; and the CRISPR–Cas systems of bacterial immunity have become programmable genome editors. The course therefore introduces the tools early ([7.2.5](/7.2.5), [7.2.6](/7.2.6)): every later chapter uses them to read the molecular state of a cell, and the last chapters use them to rewrite it ([7.2.24](/7.2.24)). Reading (sequencing), writing (synthesis and cloning) and editing are three uses of the same enzymology.
 
 A second principle of method is the use of model systems. The remark attributed to Jacques Monod that what is true of *E. coli* is true of the elephant expresses the bet that the core mechanisms are shared, and the bet has largely paid off: polymerases, ribosomes and the genetic code are conserved across all life. Where bacteria and eukaryotes differ (chromatin, splicing, the organization of promoters), the differences are themselves informative, and the course treats the two in parallel.
 

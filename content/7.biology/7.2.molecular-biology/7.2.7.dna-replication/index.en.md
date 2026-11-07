@@ -217,7 +217,7 @@ $$
 
 At $\tau = 20\,\mathrm{min}$ the origin is present in four times as many copies as the terminus, so genes near the origin have a higher dosage in fast growth; *E. coli* places its ribosomal RNA operons near *oriC*, and their transcription benefits from this dosage. Sequencing the DNA of a growing culture and plotting read coverage along the chromosome (marker frequency analysis) gives the profile of Proposition 7.7.1 directly, and its slope measures $C/\tau$ (panel A of the next figure).
 
-For a human chromosome of $150\,\mathrm{Mb}$ replicated by a single fork at $50\,\mathrm{nt\,s^{-1}}$, the time would be $3\times10^6\,\mathrm{s}$, about 35 days; with two forks from a central origin, 17 days. An S phase of about $8\,\mathrm{h}$ requires origins every $100\,\mathrm{kb}$ or so if all fired at once. In fact origins fire throughout S phase, in a reproducible but probabilistic temporal program (early-replicating, gene-rich euchromatin and late-replicating **heterochromatin**), and the time to complete replication is a property of the stochastic firing process.
+For a human chromosome of $150\,\mathrm{Mb}$ replicated by a single fork at $50\,\mathrm{nt\,s^{-1}}$, the time would be $3\times10^6\,\mathrm{s}$, about 35 days; with two forks from a central origin, 17 days. An S phase of about $8\,\mathrm{h}$ would need origins only every $3\,\mathrm{Mb}$ or so if all fired at once. In fact origins lie about $100\,\mathrm{kb}$ apart and fire throughout S phase, in a reproducible but probabilistic temporal program (early-replicating, gene-rich euchromatin and late-replicating **heterochromatin**), and the time to complete replication is a property of the stochastic firing process.
 
 ### 7.7.2. Stochastic Origin Firing
 
@@ -273,7 +273,7 @@ For *E. coli* this gives $4.6\times10^6\times10^{-10} \approx 5\times10^{-4}$ er
 
 2. Why can't a polymerase synthesize DNA $3' \to 5'$ by using nucleoside $5'$-monophosphates and a triphosphate on the $3'$ end of the growing chain? What would happen to proofreading?
 
-   **Answer** Such an enzyme is chemically conceivable: the $5'$-OH or $5'$-phosphate of an incoming nucleotide could attack a $3'$-triphosphate at the chain end, releasing pyrophosphate. But the activating group would then sit on the chain. When a wrong nucleotide had to be removed by an exonuclease, its removal would leave an end without a triphosphate, and synthesis could not continue without a separate enzyme to reactivate the end. In $5' \to 3'$ synthesis each incoming dNTP brings its own activation, so the chain end is always an unactivated $3'$-OH that can be trimmed and extended indefinitely. The fact that all polymerases work $5' \to 3'$ is thus a consequence of the need for proofreading.
+   **Answer** Such an enzyme is chemically conceivable: the $5'$-OH or $5'$-phosphate of an incoming nucleotide could attack a $3'$-triphosphate at the chain end, releasing pyrophosphate. But the activating group would then sit on the chain. When a wrong nucleotide had to be removed by an exonuclease, its removal would leave an end without a triphosphate, and synthesis could not continue without a separate enzyme to reactivate the end. In $5' \to 3'$ synthesis each incoming dNTP brings its own activation, so the chain end is always an unactivated $3'$-OH that can be trimmed and extended indefinitely. The fact that all polymerases work $5' \to 3'$ is thus plausibly a consequence of the need for proofreading.
 
 3. In a strain with a temperature-sensitive DNA ligase, cells are pulse-labeled with $[^3\mathrm{H}]$thymidine at the restrictive temperature and the DNA is analyzed on alkaline sucrose gradients. What is observed, and what does it show?
 
@@ -281,7 +281,7 @@ For *E. coli* this gives $4.6\times10^6\times10^{-10} \approx 5\times10^{-4}$ er
 
 4. Using the data for the *E. coli* replisome, estimate (a) the number of Okazaki fragments made per chromosome, (b) the number of primers per second at one fork, and (c) the number of helical turns that must be removed per chromosome.
 
-   **Answer** (a) Each fork's lagging strand covers half of one strand of the chromosome on each replichore; together the two lagging strands cover $4.64\times10^6\,\mathrm{nt}$. With fragments of $1$–$2\,\mathrm{kb}$ this is $2300$–$4600$ fragments. (b) At $1000\,\mathrm{nt\,s^{-1}}$ a new primer is needed every $1$–$2\,\mathrm{s}$ at each fork. (c) $4.64\times10^6/10.5 \approx 4.4\times10^5$ turns, removed by gyrase and topoisomerase IV ([7.2.3](/7.2.3)).
+   **Answer** (a) Each fork's lagging strand covers one strand of its replichore ($2.32\times10^6\,\mathrm{nt}$); together the two lagging strands cover $4.64\times10^6\,\mathrm{nt}$. With fragments of $1$–$2\,\mathrm{kb}$ this is $2300$–$4600$ fragments. (b) At $1000\,\mathrm{nt\,s^{-1}}$ a new primer is needed every $1$–$2\,\mathrm{s}$ at each fork. (c) $4.64\times10^6/10.5 \approx 4.4\times10^5$ turns, removed by gyrase and topoisomerase IV ([7.2.3](/7.2.3)).
 
 5. Explain why hemimethylated *oriC* cannot initiate replication, and predict the phenotype of a *dam* mutant and of a *seqA* mutant.
 
