@@ -11292,3 +11292,48 @@ terms:
   - { zh: 中枢化学感受器, en: central chemoreceptor, aliases: [central chemoreceptors] }
   - { zh: Hering–Breuer 反射, en: Hering–Breuer reflex, aliases: [肺牵张反射, 黑-伯反射, Hering-Breuer reflex] }
   - { zh: 睡眠呼吸暂停, en: sleep apnea, aliases: [sleep apnoea] }
+  - { zh: 能量代谢, en: energy metabolism, scope: ["7.14"] }
+  - { zh: 能量平衡, en: energy balance }
+  - { zh: 热价, en: caloric value, aliases: [食物的热价, energy value of food] }
+  - { zh: 氧热价, en: energy equivalent of oxygen, aliases: [oxycaloric equivalent] }
+  - { zh: 氮平衡, en: nitrogen balance }
+  - { zh: 直接测热法, en: direct calorimetry }
+  - { zh: 间接测热法, en: indirect calorimetry }
+  - { zh: 非蛋白呼吸商, en: non-protein respiratory quotient, aliases: [NPRQ] }
+  - { zh: 双标记水法, en: doubly labelled water method, aliases: [doubly labeled water, DLW] }
+  - { zh: 野外代谢率, en: field metabolic rate, aliases: [FMR] }
+  - { zh: 基础代谢率, en: basal metabolic rate, aliases: [BMR, 基础代谢] }
+  - { zh: 标准代谢率, en: standard metabolic rate }
+  - { zh: 食物的特殊动力作用, en: specific dynamic action, aliases: [食物热效应, thermic effect of food, 特殊动力效应] }
+  - { zh: 表面积律, en: surface law }
+  - { zh: Kleiber 律, en: "Kleiber's law", aliases: [Kleiber law, 克莱伯定律] }
+  - { zh: 摄食中枢, en: feeding center }
+  - { zh: 饱中枢, en: satiety center }
+  - { zh: 弓状核, en: arcuate nucleus }
+  - { zh: 胃饥饿素, en: ghrelin, aliases: [饥饿素] }
+  - { zh: 体质指数, en: body mass index, aliases: [BMI, 体重指数] }
+  - { zh: 核心温度, en: core temperature, aliases: [体核温度] }
+  - { zh: 同黏适应, en: homeoviscous adaptation }
+  - { zh: 调定点, en: set point, aliases: [体温调定点], scope: ["7.14"] }
+  - { zh: 寒战产热, en: shivering thermogenesis }
+  - { zh: 非寒战产热, en: nonshivering thermogenesis, aliases: [化学产热, non-shivering thermogenesis] }
+  - { zh: 行为性体温调节, en: behavioral thermoregulation }
+  - { zh: 发热, en: fever, scope: ["7.14"] }
+  - { zh: 致热原, en: pyrogen, aliases: [pyrogens] }
+  - { zh: 中暑, en: heatstroke, aliases: [heat stroke] }
+  - { zh: 低体温, en: hypothermia }
+  - { zh: 内温动物, en: endotherm, aliases: [endotherms, 内温性, endothermy] }
+  - { zh: 外温动物, en: ectotherm, aliases: [ectotherms, 外温性, ectothermy] }
+  - { zh: 恒温动物, en: homeotherm, aliases: [homeotherms, 恒温性, homeothermy] }
+  - { zh: 变温动物, en: poikilotherm, aliases: [poikilotherms, 变温性, poikilothermy] }
+  - { zh: 异温性, en: heterothermy, aliases: [异温动物, heterotherm] }
+  - { zh: 巨温性, en: gigantothermy }
+  - { zh: 热中性区, en: thermoneutral zone, aliases: [TNZ] }
+  - { zh: 下临界温度, en: lower critical temperature, aliases: [LCT] }
+  - { zh: 上临界温度, en: upper critical temperature }
+  - { zh: 逆流热交换, en: countercurrent heat exchange, aliases: [counter-current heat exchange] }
+  - { zh: 奇异网, en: rete mirabile, aliases: [retia mirabilia] }
+  - { zh: 蛰伏, en: torpor, aliases: [日蛰伏, daily torpor] }
+  - { zh: 冬眠, en: hibernation }
+  - { zh: Bergmann 规则, en: "Bergmann's rule" }
+  - { zh: Allen 规则, en: "Allen's rule" }
