@@ -11132,3 +11132,43 @@ terms:
   - { zh: 相对不应期, en: relative refractory period }
   - { zh: 复合动作电位, en: compound action potential }
   - { zh: 传导速度, en: conduction velocity, scope: ["7"] }
+  - { zh: 血流量, en: blood flow, scope: ["7.14"] }
+  - { zh: 层流, en: laminar flow }
+  - { zh: 湍流, en: turbulent flow, aliases: [turbulence, 紊流] }
+  - { zh: 跨壁压, en: transmural pressure, aliases: [透壁压] }
+  - { zh: 血流阻力, en: vascular resistance, aliases: [血管阻力] }
+  - { zh: 总外周阻力, en: total peripheral resistance, aliases: [外周阻力, TPR] }
+  - { zh: Fåhræus–Lindqvist 效应, en: Fåhræus–Lindqvist effect, aliases: [Fahraeus–Lindqvist effect] }
+  - { zh: Laplace 定律, en: "Laplace's law", aliases: [Laplace law] }
+  - { zh: 顺应性, en: compliance, aliases: [血管顺应性, vascular compliance], scope: ["7.14"] }
+  - { zh: 可扩张性, en: distensibility, scope: ["7.14"] }
+  - { zh: 延迟顺应性, en: delayed compliance, scope: ["7.14"] }
+  - { zh: 收缩压, en: systolic pressure, aliases: [systolic blood pressure] }
+  - { zh: 舒张压, en: diastolic pressure, aliases: [diastolic blood pressure] }
+  - { zh: 脉压, en: pulse pressure }
+  - { zh: 平均动脉压, en: mean arterial pressure }
+  - { zh: Windkessel 模型, en: Windkessel model, aliases: [弹性贮器模型] }
+  - { zh: Moens–Korteweg 方程, en: Moens–Korteweg equation }
+  - { zh: 中心静脉压, en: central venous pressure, aliases: [CVP] }
+  - { zh: 肌肉泵, en: muscle pump, aliases: [骨骼肌泵, 静脉泵, skeletal muscle pump] }
+  - { zh: 微循环, en: microcirculation }
+  - { zh: 组织间隙, en: interstitium }
+  - { zh: Krogh 圆柱模型, en: Krogh cylinder model, aliases: [Krogh 模型, Krogh model] }
+  - { zh: Fick 原理, en: Fick principle }
+  - { zh: 氧摄取率, en: oxygen extraction ratio, aliases: [氧提取率, oxygen extraction fraction] }
+  - { zh: Starling 力, en: Starling forces }
+  - { zh: 净滤过压, en: net filtration pressure }
+  - { zh: 毛细血管滤过系数, en: capillary filtration coefficient, aliases: [K_f] }
+  - { zh: 淋巴, en: lymph }
+  - { zh: 淋巴系统, en: lymphatic system }
+  - { zh: 水肿, en: edema, aliases: [oedema] }
+  - { zh: 延髓心血管中枢, en: medullary cardiovascular center, aliases: [心血管中枢] }
+  - { zh: 压力感受器反射, en: baroreceptor reflex, aliases: [减压反射, 压力感受性反射, baroreflex] }
+  - { zh: 化学感受器反射, en: chemoreceptor reflex, aliases: [化学感受性反射] }
+  - { zh: Bainbridge 反射, en: Bainbridge reflex }
+  - { zh: 中枢缺血反应, en: CNS ischemic response, aliases: [脑缺血反应] }
+  - { zh: 平均循环充盈压, en: mean circulatory filling pressure, aliases: [平均充盈压, 平均体循环充盈压, mean systemic filling pressure] }
+  - { zh: 静脉回流, en: venous return, aliases: [静脉回心血量] }
+  - { zh: 静脉回流曲线, en: venous return curve }
+  - { zh: 心功能曲线, en: cardiac function curve }
+  - { zh: 潜水反射, en: diving reflex, aliases: [潜水反应, diving response] }
