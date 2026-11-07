@@ -11267,7 +11267,7 @@ terms:
   - { zh: 口咽泵, en: buccal pump, aliases: [buccal pumping, 口腔泵] }
   - { zh: 副支气管, en: parabronchus, aliases: [parabronchi] }
   - { zh: 气管系统, en: tracheal system }
-  - { zh: 肺泡, en: alveolus, aliases: [alveoli, pulmonary alveolus], scope: ["7"] }
+  - { zh: 肺泡, en: alveolus, aliases: [alveoli, pulmonary alveolus], scope: ["7.14", "7.5"] }
   - { zh: 肺泡液清除, en: alveolar fluid clearance }
   - { zh: 肺泡相互依存, en: alveolar interdependence }
   - { zh: 肺水肿, en: pulmonary edema, aliases: [pulmonary oedema] }
