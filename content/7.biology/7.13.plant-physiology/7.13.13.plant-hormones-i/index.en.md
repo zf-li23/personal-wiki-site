@@ -1,7 +1,7 @@
 ---
 title: "Plant Hormones I: Overview and Auxin"
 description: Plant growth substances, plant hormones and plant growth regulators; the nine hormone classes and their shared logic (homeostasis, derepression, dose-response); the discovery of auxin (Darwin, Boysen-Jensen, Paál, Went and the Avena curvature test), its types and antagonists; the TAA-YUC pathway, conjugation and degradation; the chemiosmotic model of polar transport (AUX1/LAX, PIN, ABCB) and its quantitative advection-diffusion description; physiological effects on cell elongation, vascular differentiation, lateral and adventitious roots, flowers and fruit, and parthenocarpy; dose-response and organ sensitivity; synthetic auxins and herbicides.
-source_hash: 95799dcdbf96
+source_hash: 179c42d8cfee
 ---
 
 Plants have no nervous system and no glands dedicated to secreting hormones, yet a leaf far from the root tip "knows" that the soil is drying, a shoot apex decides when the axillary buds below it may grow, and a coleoptile illuminated from one side bends toward the light within tens of minutes. This coordination is carried mainly by a group of small molecules present at very low concentrations: the plant hormones. This chapter first presents the general concept of a plant hormone and the logic shared by all of them: how the concentration is set jointly by synthesis, transport, conjugation and degradation, how cells turn concentration into a response through receptors, and why the same hormone can have opposite effects at different concentrations or in different organs (Section 13.1). It then turns to auxin, the first hormone to be discovered and the one studied most deeply: the classic experiments of its discovery (Section 13.2), its biosynthesis and metabolism (Section 13.3), its polar transport, the only directional cell-to-cell transport known for a plant hormone (Section 13.4), its physiological effects and dose-response relations (Section 13.5), and the agricultural use of synthetic auxins and their action as herbicides (Section 13.6).
@@ -116,7 +116,7 @@ The structure of IAA is simple, and many compounds with auxin activity were synt
 | Benzoic acids | Dicamba | Herbicide |
 | Pyridinecarboxylic acids | Picloram | Herbicide, tissue culture |
 
-Compounds that compete with auxin for the receptor and have little or no activity themselves are called antiauxins, for example $\alpha$-(p-chlorophenoxy)isobutyric acid (PCIB). Another group of compounds does not act on the receptor but inhibits polar transport (Section 13.4): 2,3,5-triiodobenzoic acid (TIBA), N-1-naphthylphthalamic acid (NPA, which acts on ABCB transporters and their regulators), and 1-naphthoxyacetic acid (1-NOA, which inhibits uptake by AUX1/LAX). Natural flavonoids can also inhibit auxin efflux.
+Compounds that compete with auxin for the receptor and have little or no activity themselves are called antiauxins, for example $\alpha$-(p-chlorophenoxy)isobutyric acid (PCIB). Another group of compounds does not act on the receptor but inhibits polar transport (Section 13.4): 2,3,5-triiodobenzoic acid (TIBA), N-1-naphthylphthalamic acid (NPA, which binds and inhibits PINs directly and also acts on ABCB transporters and their regulators), and 1-naphthoxyacetic acid (1-NOA, which inhibits uptake by AUX1/LAX). Natural flavonoids can also inhibit auxin efflux.
 
 ## 13.3. Auxin Biosynthesis, Conjugation and Degradation
 
@@ -171,7 +171,7 @@ Characteristics of polar transport:
 
 - The direction is determined by the morphological polarity of the tissue and is independent of gravity: if a stem segment is inverted, auxin is still transported from the morphological apex to the base; if willow or bamboo cuttings are planted upside down, adventitious roots still form at the morphological base.
 - It depends on energy: anoxia, lack of sucrose or respiratory inhibitors stop transport.
-- The speed is about $5$–$20\ \mathrm{mm\,h^{-1}}$ (above $10\ \mathrm{mm\,h^{-1}}$ in some tissues), much faster than diffusion but far slower than phloem transport (about $0.5$–$1\ \mathrm{m\,h^{-1}}$, [7.13.11](/7.13.11)). The "5–20 cm/h" often seen in Chinese sources is a unit error.
+- The speed is about $5$–$20\ \mathrm{mm\,h^{-1}}$ (about $10\ \mathrm{mm\,h^{-1}}$ in most tissues), much faster than diffusion but far slower than phloem transport (about $0.5$–$1\ \mathrm{m\,h^{-1}}$, [7.13.11](/7.13.11)). The "5–20 cm/h" often seen in Chinese sources is a unit error.
 - It is specific: natural and some synthetic auxins are transported, whereas other weak organic acids, inactive analogs and conjugates of IAA are hardly transported.
 - It can be blocked by transport inhibitors such as TIBA and NPA.
 
@@ -354,7 +354,7 @@ Main equations:
 
 4. Explain why $10^{-6}\ \mathrm{mol\,L^{-1}}$ auxin can accelerate stem elongation and inhibit root elongation on the same plant. If the root experiment is repeated in the presence of the ethylene synthesis inhibitor AVG, do you expect the inhibition to disappear completely?
 
-   **Answer** The dose-response curves of different organs differ by several orders of magnitude along the concentration axis: $10^{-6}\ \mathrm{mol\,L^{-1}}$ is below the optimum of the stem (about $10^{-5}$) and lies in the promoting range, but is far above the optimum of the root (about $10^{-10}$) and lies in the inhibiting range. Part of the inhibition comes from auxin-induced ethylene, and AVG, by inhibiting ACC synthase, reduces the inhibition but does not eliminate it completely: even when ethylene synthesis is blocked, auxin above $10^{-6}\ \mathrm{mol\,L^{-1}}$ still inhibits root growth (experiments cited by Taiz), which shows that the root's own auxin response (signaling components, the response of cell elongation to auxin) also declines at supraoptimal concentrations.
+   **Answer** The dose-response curves of different organs differ by several orders of magnitude along the concentration axis: $10^{-6}\ \mathrm{mol\,L^{-1}}$ is below the optimum of the stem (about $10^{-5}$) and lies in the promoting range, but is far above the optimum of the root (about $10^{-10}$) and lies in the inhibiting range. Part of the inhibition comes from auxin-induced ethylene, and AVG, by inhibiting ACC synthase, reduces the inhibition but does not eliminate it completely: even when ethylene synthesis is blocked, auxin above $10^{-6}\ \mathrm{mol\,L^{-1}}$ still inhibits root growth, which shows that the root's own auxin response (signaling components, the response of cell elongation to auxin) also declines at supraoptimal concentrations.
 
 5. (Open question) Using Eq. (13.6), explain why the elongation of the lower part of an oat coleoptile slows markedly within about 1 h after the tip is cut off, and why placing an agar block containing IAA on the cut surface after decapitation restores growth. If the elongation zone of the coleoptile lies 2–10 mm from the cut surface, estimate the time needed to restore growth.
 
