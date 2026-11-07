@@ -232,7 +232,7 @@ Problems in genetics often give a set of progeny counts and ask for the genetic 
 
 ### 4.8.2. Ratios with Lethality
 
-**Formula 4.8.1 (Lethality in Dihybrid Crosses)** For $AaBb \times AaBb$ with **complete dominance** at both **loci** and the stated **genotypes** lethal, the surviving phenotypic classes ($A\_B\_ : A\_bb : aaB\_ : aabb$, with the dominant classes reduced to their surviving genotypes) are:
+**Formula 4.8.1 (Lethality in Dihybrid Crosses)** For $AaBb \times AaBb$ with **complete dominance** at both **loci** and the stated **genotypes** lethal, the surviving phenotypic classes (the four phenotypes $A\_B\_$, $A\_bb$, $aaB\_$, $aabb$, with the dominant classes reduced to their surviving genotypes), listed in decreasing order of size, are:
 
 | Lethal genotypes | Surviving ratio | Total |
 |---|---|---|
@@ -263,7 +263,7 @@ With three genes the $\mathrm{F}_2$ has $27\,A\_B\_C\_$ and the other classes of
 
 **Example 4.8.2** Two **true-breeding** white-flowered lines are crossed; the $\mathrm{F}_1$ is purple and the $\mathrm{F}_2$ has 245 purple and 155 white. (1) $245 : 155 \approx 1.58 : 1$; in sixteenths, $9.8 : 6.2$, close to 9:7, $T = 16$: two genes. (2) 9:7 means purple requires $A\_B\_$: complementary genes. (3) The white parents were $AAbb$ and $aaBB$. (4) Prediction: the testcross of the $\mathrm{F}_1$ to a double recessive gives 1 purple : 3 white. (5) Test: expected $225 : 175$; $\chi^2 = 400/225 + 400/175 = 1.78 + 2.29 = 4.06$ with one degree of freedom, $p = 0.044$, a marginal rejection at the 5 % level. Before abandoning the model, one checks alternatives (3:1 is far worse: $\chi^2 = 40.3$) and classification errors; a testcross would settle it.
 
-**Example 4.8.3** In mice, a cross of two yellow, black-eyed mice gives yellow black-eyed, yellow pink-eyed, agouti black-eyed and agouti pink-eyed progeny in the ratio $6:3:2:1$ (Example 3.4.1 of [7.4.3](/7.4.3#sec-3.4)). $T = 12$: two genes, with a lethal class removing 4 of 16. The ratio factors as $(2:1)(3:1)$: one locus segregates 2 yellow : 1 agouti (yellow lethal when **homozygous**), the other 3 black-eyed : 1 pink-eyed.
+**Example 4.8.3** In mice, a cross of two yellow, black-eyed mice gives yellow black-eyed, agouti black-eyed, yellow pink-eyed and agouti pink-eyed progeny in the ratio $6:3:2:1$ (Example 3.4.1 of [7.4.3](/7.4.3#sec-3.4)). $T = 12$: two genes, with a lethal class removing 4 of 16. The ratio factors as $(2:1)(3:1)$: one locus segregates 2 yellow : 1 agouti (yellow lethal when **homozygous**), the other 3 black-eyed : 1 pink-eyed.
 
 ## Summary
 
@@ -314,7 +314,7 @@ With three genes the $\mathrm{F}_2$ has $27\,A\_B\_C\_$ and the other classes of
    **Answer** (a) $f = 20/1280 = 1/64$, $n = \ln 64/\ln 4 = 3$. (b) $\binom63/64 = 20/64 = 0.3125$. (c) $K \sim \mathrm{Bin}(6, 1/2)$: mean 3, variance $6 \times \tfrac14 = 1.5$.
 10. In a **dihybrid cross** $AaBb \times AaBb$, $A$ (dominant, curly wings) is lethal when homozygous, and $B\_$ (red eyes) is completely dominant over $bb$ (brown eyes). What phenotypic ratio is expected among survivors? What fraction of the survivors are true-breeding for both traits?
 
-    **Answer** $(2:1)(3:1) = 6$ curly red : 3 curly brown : 2 straight red : 1 straight brown. True-breeding individuals must be homozygous at both loci; $AA$ is dead and $Aa$ is not true-breeding, so only $aaBB$ and $aabb$: $\tfrac13 \cdot \tfrac14 + \tfrac13 \cdot \tfrac14 = \tfrac16$ of survivors.
+    **Answer** $(2:1)(3:1) = 6$ curly red : 3 straight red : 2 curly brown : 1 straight brown. True-breeding individuals must be homozygous at both loci; $AA$ is dead and $Aa$ is not true-breeding, so only $aaBB$ and $aabb$: $\tfrac13 \cdot \tfrac14 + \tfrac13 \cdot \tfrac14 = \tfrac16$ of survivors.
 11. Two yeast mutants grow at 70 % and 60 % of the **wild-type** rate, and the double mutant at 20 %. (a) Compute the multiplicative epistasis score. (b) If the double mutant grew at 60 %, what would that suggest?
 
     **Answer** (a) Expected $0.7 \times 0.6 = 0.42$; $\varepsilon = 0.20 - 0.42 = -0.22$, negative (aggravating) epistasis: the genes probably act in parallel, compensating pathways. (b) $\varepsilon = 0.60 - 0.42 = +0.18$, positive (alleviating), with the double mutant equal to the more severe single mutant: the genes probably act in the same pathway or complex, so that losing one inactivates the function and losing the other adds nothing.
