@@ -41,7 +41,7 @@ The restriction point is the behavior expected of a **bistable** switch with **h
 
 $$
 \begin{aligned}
-\frac{\mathrm{d}E}{\mathrm{d}t} &= k_{\mathrm{E}}\,f_{\mathrm{M}}f_{\mathrm{E}} + k_{\mathrm{b}}f_{\mathrm{M}} + \text{(release of E2F by phosphorylation of RE)} - d_{\mathrm{E}}E - k_{\mathrm{RE}}RE, \\
+\frac{\mathrm{d}E}{\mathrm{d}t} &= k_{\mathrm{E}}\,f_{\mathrm{M}}f_{\mathrm{E}} + k_{\mathrm{b}}f_{\mathrm{M}} + \frac{k_{\mathrm{P1}}C_{\mathrm{D}}\,RE}{K_{\mathrm{CD}} + RE} + \frac{k_{\mathrm{P2}}C_{\mathrm{E}}\,RE}{K_{\mathrm{CE}} + RE} - d_{\mathrm{E}}E - k_{\mathrm{RE}}R\,E, \\
 \frac{\mathrm{d}C_{\mathrm{E}}}{\mathrm{d}t} &= k_{\mathrm{CE}}\,f_{\mathrm{M}}f_{\mathrm{E}} - d_{\mathrm{CE}}C_{\mathrm{E}}, \qquad f_{\mathrm{M}} = \frac{M}{K_{\mathrm{M}} + M}, \quad f_{\mathrm{E}} = \frac{E}{K_{\mathrm{E}} + E},
 \end{aligned}
 \tag{22.1}
