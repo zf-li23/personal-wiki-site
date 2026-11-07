@@ -8159,7 +8159,7 @@ terms:
   - { zh: 神经嵴病, en: neurocristopathy, aliases: [neurocristopathies] }
   - { zh: 轴突导向, en: axon guidance }
   - { zh: 化学亲和假说, en: chemoaffinity hypothesis }
-  - { zh: 神经肌肉接头, en: neuromuscular junction, aliases: [NMJ, 神经肌突触] }
+  - { zh: 神经肌肉接头, en: neuromuscular junction, aliases: [NMJ, 神经肌突触, 神经–肌肉接头] }
   - { zh: 神经营养因子假说, en: neurotrophic factor hypothesis }
   - { zh: 晶状体诱导, en: lens induction }
   - { zh: 外胚层附属器, en: ectodermal appendage, aliases: [ectodermal appendages] }
@@ -11076,3 +11076,26 @@ terms:
   - { zh: 折返, en: reentry, aliases: [re-entry], scope: ["7.14"] }
   - { zh: 肌源性心脏, en: myogenic heart }
   - { zh: 神经源性心脏, en: neurogenic heart }
+  - { zh: 运动单位, en: motor unit }
+  - { zh: 量子释放, en: quantal release }
+  - { zh: 终板电位, en: end-plate potential, aliases: [EPP] }
+  - { zh: 安全系数, en: safety factor, scope: ["7.14"] }
+  - { zh: 三联管, en: triad, scope: ["7.14"] }
+  - { zh: 兴奋–收缩偶联, en: excitation–contraction coupling, aliases: [兴奋-收缩偶联, 兴奋收缩偶联, E-C coupling] }
+  - { zh: 滑行学说, en: sliding filament theory, aliases: [肌丝滑行学说, 肌丝滑行理论, 滑动丝模型, sliding filament model] }
+  - { zh: 长度–张力关系, en: length–tension relationship, aliases: [长度-张力关系, length-tension relationship] }
+  - { zh: 等长收缩, en: isometric contraction }
+  - { zh: 等张收缩, en: isotonic contraction }
+  - { zh: 单收缩, en: twitch, scope: ["7.14"] }
+  - { zh: 强直收缩, en: tetanus, aliases: [tetanic contraction, 强直], scope: ["7.14"] }
+  - { zh: 尺寸法则, en: size principle, aliases: [大小原则, Henneman 原则, "Henneman's size principle"] }
+  - { zh: 肌核域, en: myonuclear domain }
+  - { zh: 生理横截面积, en: physiological cross-sectional area, aliases: [PCSA] }
+  - { zh: 闰盘, en: intercalated disc, aliases: [intercalated disk] }
+  - { zh: 钙诱导的钙释放, en: calcium-induced calcium release, aliases: [CICR, 钙触发钙释放, 钙致钙释放] }
+  - { zh: 单单位平滑肌, en: single-unit smooth muscle, aliases: [单一单位平滑肌, 内脏平滑肌, unitary smooth muscle] }
+  - { zh: 多单位平滑肌, en: multi-unit smooth muscle, aliases: [多单元平滑肌] }
+  - { zh: 闩锁状态, en: latch state }
+  - { zh: 静水骨骼, en: hydrostatic skeleton, aliases: [流体静力骨骼, 水骨骼] }
+  - { zh: 捕捉肌, en: catch muscle }
+  - { zh: 异步飞行肌, en: asynchronous flight muscle, aliases: [纤维状飞行肌, fibrillar flight muscle] }
