@@ -11032,3 +11032,47 @@ terms:
   - { zh: 交感–肾上腺系统, en: sympathoadrenal system }
   - { zh: 紧张性, en: tone, aliases: [紧张性作用, tonic activity], scope: ["7.14"] }
   - { zh: 肠神经系统, en: enteric nervous system, aliases: [ENS] }
+  - { zh: 血浆, en: blood plasma }
+  - { zh: 血清, en: serum, scope: ["7"] }
+  - { zh: 血细胞比容, en: hematocrit, aliases: [红细胞比容, packed cell volume] }
+  - { zh: 胶体渗透压, en: colloid osmotic pressure, aliases: [oncotic pressure, 血浆胶体渗透压] }
+  - { zh: 晶体渗透压, en: crystalloid osmotic pressure }
+  - { zh: 渗透脆性, en: osmotic fragility }
+  - { zh: 红细胞生成素, en: erythropoietin, aliases: [促红细胞生成素, EPO] }
+  - { zh: 生理性止血, en: hemostasis, aliases: [止血] }
+  - { zh: 红细胞沉降率, en: erythrocyte sedimentation rate, aliases: [血沉, ESR], scope: ["7"] }
+  - { zh: 血液凝固, en: blood coagulation, aliases: [凝血, coagulation], scope: ["7"] }
+  - { zh: 纤溶, en: fibrinolysis, aliases: [纤维蛋白溶解] }
+  - { zh: 血型, en: blood group, aliases: [blood type] }
+  - { zh: 渗出, en: diapedesis, aliases: [血细胞渗出, 白细胞渗出], scope: ["7"] }
+  - { zh: 炎症, en: inflammation }
+  - { zh: 开放式循环系统, en: open circulatory system }
+  - { zh: 封闭式循环系统, en: closed circulatory system }
+  - { zh: 体循环, en: systemic circulation, aliases: [大循环] }
+  - { zh: 肺循环, en: pulmonary circulation, aliases: [小循环] }
+  - { zh: 心动周期, en: cardiac cycle }
+  - { zh: 压力–容积环, en: pressure–volume loop, aliases: [P–V 环, PV loop] }
+  - { zh: 每搏输出量, en: stroke volume, aliases: [搏出量] }
+  - { zh: 射血分数, en: ejection fraction }
+  - { zh: 心输出量, en: cardiac output, aliases: [每分输出量] }
+  - { zh: 心指数, en: cardiac index }
+  - { zh: 前负荷, en: preload }
+  - { zh: 后负荷, en: afterload }
+  - { zh: Frank–Starling 机制, en: Frank–Starling mechanism, aliases: [Starling 定律, 异长自身调节, Frank–Starling law, "Starling's law of the heart"] }
+  - { zh: 长度依赖性激活, en: length-dependent activation }
+  - { zh: 自律性, en: automaticity, aliases: [autorhythmicity], scope: ["7.14"] }
+  - { zh: 窦房结, en: sinoatrial node, aliases: [SA node] }
+  - { zh: 起搏电流, en: funny current, aliases: [I_f, pacemaker current] }
+  - { zh: 膜钟, en: membrane clock, aliases: [voltage clock] }
+  - { zh: 钙钟, en: calcium clock, aliases: [Ca²⁺ clock] }
+  - { zh: 超速驱动压抑, en: overdrive suppression }
+  - { zh: 有效不应期, en: effective refractory period, aliases: [ERP] }
+  - { zh: 期前收缩, en: premature contraction, aliases: [早搏, premature beat, extrasystole] }
+  - { zh: 代偿间歇, en: compensatory pause }
+  - { zh: 房室延搁, en: atrioventricular delay, aliases: [AV delay, 房室延迟] }
+  - { zh: ephaptic 偶联, en: ephaptic coupling, aliases: [电场偶联] }
+  - { zh: 心电图, en: electrocardiogram, aliases: [ECG, EKG] }
+  - { zh: 触发活动, en: triggered activity }
+  - { zh: 折返, en: reentry, aliases: [re-entry], scope: ["7.14"] }
+  - { zh: 肌源性心脏, en: myogenic heart }
+  - { zh: 神经源性心脏, en: neurogenic heart }
