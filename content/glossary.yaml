@@ -11406,7 +11406,7 @@ terms:
   - { zh: 应急反应, en: emergency reaction, aliases: [战斗或逃跑反应, fight-or-flight response] }
   - { zh: 肠促胰岛素效应, en: incretin effect }
   - { zh: 处置指数, en: disposition index }
-  - { zh: 1, en: 1, aliases: [骨化三醇, calcitriol] }
+  - { zh: "1,25-二羟维生素 D", en: "1,25-dihydroxyvitamin D", aliases: [骨化三醇, calcitriol] }
   - { zh: 骨重建, en: bone remodeling, aliases: [bone remodelling] }
   - { zh: 甲状旁腺激素, en: parathyroid hormone, aliases: [PTH] }
   - { zh: 钙敏感受体, en: calcium-sensing receptor, aliases: [CaSR] }
