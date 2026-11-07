@@ -11329,7 +11329,7 @@ terms:
   - { zh: 异温性, en: heterothermy, aliases: [异温动物, heterotherm] }
   - { zh: 巨温性, en: gigantothermy }
   - { zh: 热中性区, en: thermoneutral zone, aliases: [TNZ] }
-  - { zh: 下临界温度, en: lower critical temperature, aliases: [LCT] }
+  - { zh: 下临界温度, en: lower critical temperature }
   - { zh: 上临界温度, en: upper critical temperature }
   - { zh: 逆流热交换, en: countercurrent heat exchange, aliases: [counter-current heat exchange] }
   - { zh: 奇异网, en: rete mirabile, aliases: [retia mirabilia] }
@@ -11337,3 +11337,33 @@ terms:
   - { zh: 冬眠, en: hibernation }
   - { zh: Bergmann 规则, en: "Bergmann's rule" }
   - { zh: Allen 规则, en: "Allen's rule" }
+  - { zh: 神经分泌, en: neurosecretion }
+  - { zh: 内分泌系统, en: endocrine system }
+  - { zh: 内分泌腺, en: endocrine gland, aliases: [endocrine glands] }
+  - { zh: 外分泌腺, en: exocrine gland, aliases: [exocrine glands] }
+  - { zh: 激素原, en: prohormone, aliases: [prohormones] }
+  - { zh: 允许作用, en: permissive action, aliases: [permissive effect] }
+  - { zh: 代谢清除率, en: metabolic clearance rate, aliases: [MCR] }
+  - { zh: 长反馈, en: long-loop feedback }
+  - { zh: 短反馈, en: short-loop feedback }
+  - { zh: 超短反馈, en: ultrashort-loop feedback }
+  - { zh: 脉冲式分泌, en: pulsatile secretion }
+  - { zh: 游离激素假说, en: free hormone hypothesis }
+  - { zh: 门脉系统, en: portal system }
+  - { zh: 下丘脑–垂体门脉系统, en: hypothalamo-hypophyseal portal system, aliases: [下丘脑-垂体门脉系统, 垂体门脉系统, hypophyseal portal system] }
+  - { zh: 首过效应, en: first-pass effect, aliases: [首过消除, first-pass metabolism] }
+  - { zh: 腺垂体, en: adenohypophysis, aliases: [垂体前叶, anterior pituitary] }
+  - { zh: 神经垂体, en: neurohypophysis, aliases: [垂体后叶, posterior pituitary] }
+  - { zh: 生长激素, en: growth hormone, aliases: [促生长素, somatotropin] }
+  - { zh: 胰岛素样生长因子 1, en: insulin-like growth factor 1, aliases: [IGF-1, 胰岛素样生长因子-1, somatomedin C] }
+  - { zh: 巨人症, en: gigantism }
+  - { zh: 肢端肥大症, en: acromegaly }
+  - { zh: 催乳素, en: prolactin, aliases: [PRL] }
+  - { zh: 催产素, en: oxytocin, aliases: [缩宫素] }
+  - { zh: 甲状腺激素, en: thyroid hormone, aliases: [thyroid hormones] }
+  - { zh: 钠碘同向转运体, en: sodium–iodide symporter, aliases: [NIS, sodium-iodide symporter] }
+  - { zh: 甲状腺球蛋白, en: thyroglobulin }
+  - { zh: 甲状腺功能亢进, en: hyperthyroidism, aliases: [甲亢] }
+  - { zh: 甲状腺功能减退, en: hypothyroidism, aliases: [甲减] }
+  - { zh: 甲状腺肿, en: goiter, aliases: [goitre] }
+  - { zh: 下丘脑–垂体–甲状腺轴, en: hypothalamic–pituitary–thyroid axis, aliases: [HPT 轴, HPT axis, 下丘脑-垂体-甲状腺轴] }
