@@ -11099,3 +11099,36 @@ terms:
   - { zh: 静水骨骼, en: hydrostatic skeleton, aliases: [流体静力骨骼, 水骨骼] }
   - { zh: 捕捉肌, en: catch muscle }
   - { zh: 异步飞行肌, en: asynchronous flight muscle, aliases: [纤维状飞行肌, fibrillar flight muscle] }
+  - { zh: 生理学, en: physiology }
+  - { zh: 细胞内液, en: intracellular fluid }
+  - { zh: 细胞外液, en: extracellular fluid }
+  - { zh: 组织液, en: interstitial fluid, aliases: [间质液] }
+  - { zh: 内环境, en: internal environment, aliases: [milieu intérieur] }
+  - { zh: 神经调节, en: neural regulation, scope: ["7.14"] }
+  - { zh: 体液调节, en: humoral regulation, scope: ["7.14"] }
+  - { zh: 自身调节, en: autoregulation }
+  - { zh: 负反馈, en: negative feedback }
+  - { zh: 正反馈, en: positive feedback }
+  - { zh: 反馈增益, en: feedback gain }
+  - { zh: 前馈控制, en: feedforward control }
+  - { zh: 细胞运动, en: cell motility }
+  - { zh: 纤毛运动, en: ciliary motility }
+  - { zh: 黏液纤毛清除, en: mucociliary clearance }
+  - { zh: 阿米巴式运动, en: amoeboid migration, aliases: [amoeboid movement, 阿米巴样迁移] }
+  - { zh: 简单扩散, en: simple diffusion }
+  - { zh: 通透系数, en: permeability coefficient }
+  - { zh: 原发性主动转运, en: primary active transport, aliases: [原发性主动运输] }
+  - { zh: 等渗溶液, en: isosmotic solution }
+  - { zh: 等张溶液, en: isotonic solution }
+  - { zh: 去极化, en: depolarization, scope: ["7"] }
+  - { zh: 超极化, en: hyperpolarization, scope: ["7"] }
+  - { zh: 复极化, en: repolarization, scope: ["7"] }
+  - { zh: 超射, en: overshoot, scope: ["7"] }
+  - { zh: 平衡电位, en: equilibrium potential, aliases: [Nernst potential], scope: ["7"] }
+  - { zh: 局部电位, en: local potential, aliases: [分级电位, 电紧张电位, graded potential, electrotonic potential] }
+  - { zh: 兴奋性, en: excitability, scope: ["7"] }
+  - { zh: 阈电位, en: threshold potential }
+  - { zh: 绝对不应期, en: absolute refractory period }
+  - { zh: 相对不应期, en: relative refractory period }
+  - { zh: 复合动作电位, en: compound action potential }
+  - { zh: 传导速度, en: conduction velocity, scope: ["7"] }
