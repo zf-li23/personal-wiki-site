@@ -10931,3 +10931,22 @@ terms:
   - { zh: 需光种子, en: light-requiring seed, aliases: [喜光种子, 光敏感种子] }
   - { zh: 卡里金, en: karrikin, aliases: [karrikins] }
   - { zh: 水时间模型, en: hydrotime model, aliases: [水热时间模型, hydrothermal time model] }
+  - { zh: 光周期诱导, en: photoperiodic induction }
+  - { zh: 暗期间断, en: night break, aliases: [night interruption, 夜间断] }
+  - { zh: 相变, en: phase change, aliases: [vegetative phase change], scope: ["7.12", "7.13"] }
+  - { zh: 去春化作用, en: devernalization, aliases: [去春化, 脱春化] }
+  - { zh: 自主途径, en: autonomous pathway }
+  - { zh: 花芽分化, en: flower bud differentiation }
+  - { zh: 花粉生活力, en: pollen viability }
+  - { zh: 柱头可授性, en: stigma receptivity }
+  - { zh: 配子体型自交不亲和, en: gametophytic self-incompatibility }
+  - { zh: 孢子体型自交不亲和, en: sporophytic self-incompatibility }
+  - { zh: 花粉管导向, en: pollen tube guidance }
+  - { zh: 坐果, en: fruit set }
+  - { zh: 非跃变型果实, en: non-climacteric fruit, aliases: [non-climacteric fruits] }
+  - { zh: 衰老相关基因, en: senescence-associated gene, aliases: [senescence-associated genes, SAG, SAGs] }
+  - { zh: 再转移效率, en: resorption efficiency, aliases: [nutrient resorption efficiency] }
+  - { zh: 老质体, en: gerontoplast, aliases: [gerontoplasts] }
+  - { zh: 一次结实植物, en: monocarpic plant, aliases: [monocarpic, 单次结实植物] }
+  - { zh: 多次结实植物, en: polycarpic plant, aliases: [polycarpic, 多稔植物] }
+  - { zh: 脱落, en: abscission, scope: ["7.12", "7.13"] }
