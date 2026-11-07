@@ -91,7 +91,7 @@ $$
 
 **推论 36.4.1（灭绝与极限律）** 当 $p > q$ 时：
 
-1. 灭绝概率（extinction probability）（extinction probability）为 $P_0(\infty) = q/p$：尽管克隆的均值指数增长，它仍以概率 $q/p$ 消亡。每个有限大小 $N \ge 1$ 的概率 $P_N(\infty)$ 都趋于 0，而 $\sum_{N\ge1}P_N(\infty) = 1 - q/p$：存活的克隆无限增长。
+1. 灭绝概率（extinction probability）为 $P_0(\infty) = q/p$：尽管克隆的均值指数增长，它仍以概率 $q/p$ 消亡。每个有限大小 $N \ge 1$ 的概率 $P_N(\infty)$ 都趋于 0，而 $\sum_{N\ge1}P_N(\infty) = 1 - q/p$：存活的克隆无限增长。
 2. 在标度变量 $w = N/\mathbb{E}[N(t)]$ 下，分布趋于
 
 $$

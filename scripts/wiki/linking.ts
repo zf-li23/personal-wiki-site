@@ -423,8 +423,84 @@ export function linkPage({ pageId, out, linkLang, tree, index, readingOrder, dia
       if (pageRole(pageId) === 'chapter' && (readingOrder.get(pageId) ?? 0) < (readingOrder.get(site.pageId) ?? 0)) result.forwardUses.push(id);
     }
   });
+  if (lang === 'zh') glossDefinitions(out.hast, pageId, index);
   result.targets.delete(pageId);
   return result;
+}
+
+/* ------------------------------------------------------------------ glosses */
+
+const HAN = /\p{Script=Han}/u;
+/** Text that already opens an English annotation: "（group）", " (group)". */
+const OPENS_GLOSS = /^\s*[（(]\s*[A-Za-z]/;
+
+function gloss(en: string, wrap: boolean): Element {
+  return el('span', { className: ['wiki-gloss'], lang: 'en' }, [{ type: 'text', value: wrap ? `（${en}）` : en }]);
+}
+
+function findElement(root: Root | Element, test: (node: Element) => boolean): { node: Element; parent: Root | Element; index: number } | null {
+  const children = root.children as (RootContent | ElementContent)[];
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    if (child.type !== 'element') continue;
+    if (test(child)) return { node: child, parent: root, index: i };
+    const found = findElement(child, test);
+    if (found) return found;
+  }
+  return null;
+}
+
+/**
+ * Chinese pages show the English name at each definition site, as textbooks do ("群（group）"),
+ * unless the author already wrote that annotation. Definitions through a bold term get the gloss
+ * after the term; a definition only through its statement name gets it inside the label
+ * ("定义 1.2.3（群，group）"). Names without Chinese characters (NoSQL) need no gloss.
+ */
+function glossDefinitions(root: Root, pageId: string, index: LinkIndex): void {
+  const byId = new Map(index.concepts.map((c) => [c.id, c]));
+  const pageText = hastToString(root);
+  for (const [id, site] of index.conceptSites) {
+    if (site.pageId !== pageId) continue;
+    const concept = byId.get(id);
+    if (!concept || !HAN.test(concept.zh) || HAN.test(concept.en)) continue;
+    const names = conceptNames(concept, 'zh');
+    // The author already wrote "名称（English）" somewhere on the page.
+    if (names.some((n) => new RegExp(`${escapeRe(n)}\\s*[（(]\\s*[A-Za-z]`).test(pageText))) continue;
+    const hasGloss = (parent: Root | Element, i: number) => {
+      const next = parent.children[i + 1];
+      return next?.type === 'text' ? OPENS_GLOSS.test(next.value) : next?.type === 'element' && hasClass(next, 'wiki-gloss');
+    };
+    // 1. The marked term itself: <dfn> (annotation or translated first bold) or a bold run inside the statement.
+    const holder =
+      findElement(root, (n) => n.tagName === 'dfn' && n.properties?.id === site.anchor) ??
+      (() => {
+        const stmt = findElement(root, (n) => n.properties?.id === site.anchor);
+        return stmt ? findElement(stmt.node, (n) => (n.tagName === 'strong' || n.tagName === 'b') && !hasClass(n, 'wiki-stmt-label') && names.includes(hastToString(n).trim())) : null;
+      })();
+    if (holder) {
+      if (hastToString(holder.node).includes('（') || hasGloss(holder.parent, holder.index)) continue;
+      holder.parent.children.splice(holder.index + 1, 0, gloss(concept.en, true));
+      continue;
+    }
+    // 2. Only the statement name names the concept: "**定义 1.2.3（群）**" → "（群，group）".
+    const stmt = findElement(root, (n) => n.properties?.id === site.anchor);
+    const label = stmt ? findElement(stmt.node, (n) => hasClass(n, 'wiki-stmt-label')) : null;
+    if (!label) continue;
+    const texts: Text[] = [];
+    const collect = (n: Element) => n.children.forEach((c) => (c.type === 'text' ? texts.push(c) : c.type === 'element' && collect(c)));
+    collect(label.node);
+    const last = texts.at(-1);
+    if (!last || !last.value.endsWith('）') || /[A-Za-z]{3,}/.test(hastToString(label.node))) continue;
+    const parentOf = findElement(label.node, (n) => n.children.includes(last)) ?? { node: label.node };
+    const at = parentOf.node.children.indexOf(last);
+    last.value = last.value.slice(0, -1) + '，';
+    parentOf.node.children.splice(at + 1, 0, gloss(concept.en, false), { type: 'text', value: '）' });
+  }
+}
+
+function hasClass(node: Element, cls: string): boolean {
+  const c = node.properties?.className;
+  return Array.isArray(c) && c.map(String).includes(cls);
 }
 
 /** Unnumbered proof / solution openers are labels, not emphasis. */

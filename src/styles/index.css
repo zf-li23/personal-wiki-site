@@ -363,6 +363,10 @@
   font-weight: 600;
   scroll-margin-top: 5rem;
 }
+/* English name added by the build at a Chinese definition site. */
+.wiki-gloss {
+  font-weight: 400;
+}
 .wiki-preview {
   font-size: 0.875rem;
   line-height: 1.6;
