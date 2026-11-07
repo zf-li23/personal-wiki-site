@@ -56,7 +56,7 @@ The parallels were circumstantial. The theory became a demonstrated fact when pa
 | 1909 | Johannsen introduces the words gene, genotype and phenotype | [7.4.1](/7.4.1) |
 | 1910 | Morgan: *white* follows the X chromosome in *Drosophila* | [7.4.6](/7.4.6) |
 | 1911 | Morgan: linkage and crossing over explain the excess of parental types | [7.4.8](/7.4.8) |
-| 1913 | Sturtevant: the first genetic map, five genes on the X | [7.4.8](/7.4.8) |
+| 1913 | Sturtevant: the first genetic map, six sex-linked factors (five genes) on the X | [7.4.8](/7.4.8) |
 | 1916 | Bridges: nondisjunction of the X proves the theory | [7.4.6](/7.4.6) |
 | 1931 | Creighton and McClintock (maize), Stern (*Drosophila*): recombination is accompanied by physical exchange | [7.4.8](/7.4.8) |
 | 1933 | Nobel Prize to Morgan for the role of chromosomes in heredity | |
