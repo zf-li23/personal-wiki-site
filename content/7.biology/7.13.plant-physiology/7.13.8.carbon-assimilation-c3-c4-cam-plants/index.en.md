@@ -1,7 +1,7 @@
 ---
 title: Carbon Assimilation in C3, C4 and CAM Plants
 description: C3, C4 and CAM plants; competition between carboxylation and oxygenation by Rubisco, the temperature dependence of Γ* and the CO2 compensation point; the physiological significance of photorespiration; the three decarboxylation subtypes of C4 plants, CO2 concentration and leakage in the bundle sheath, the energy budget, light regulation and cold sensitivity of key enzymes, single-cell C4; the four phases of CAM, energy and water, facultative CAM; a full comparison of the three plant types; carbon isotope discrimination Δ and δ13C, Δ and water-use efficiency; the evolution of C4 photosynthesis and C4 rice.
-source_hash: 06ff5adeaebe
+source_hash: c0335a35480b
 ---
 
 The ATP and NADPH produced by the light reactions are used to reduce $\ce{CO2}$ to sugar. All oxygenic photosynthetic organisms fix carbon with the same enzyme, **Rubisco**, and the same **Calvin cycle**; their biochemical steps, stoichiometry and light regulation were written up in [7.1.25](/7.1.25), where the reaction sequences of the **C4 pathway** and **crassulacean acid metabolism** are also given. This chapter answers three questions from the viewpoint of plant physiology: Rubisco catalyzes both carboxylation and oxygenation, so what are the consequences of this competition at the leaf level (photorespiration, the **CO₂ compensation point**); how C4 and CAM plants avoid this problem through anatomy, biochemistry and regulation, and what each pays and gains; and how the photosynthetic type of a plant and its stomatal behavior during growth can be inferred from its carbon isotope composition. The structure of the leaf (**Kranz anatomy**) is in [7.12.23](/7.12.23#sec-23.5.6), the quantitative responses of photosynthetic rate to light, $\ce{CO2}$ and temperature are in the next chapter ([7.13.9](/7.13.9)), and the transport and partitioning of photosynthate are in [7.13.11](/7.13.11).
@@ -207,7 +207,7 @@ Because of the high water-use efficiency of CAM plants, introducing certain CAM 
 | Quantum yield (30 °C) / $\mathrm{mol\,CO_2\,mol^{-1}}$ photons | about 0.05, falling with rising temperature | about 0.05, independent of temperature | lower |
 | Energy per $\ce{CO2}$ (without photorespiration) | 3 ATP + 2 NADPH | 5–5.5 ATP + 2 NADPH | about 6.5 ATP + 2 NADPH |
 | Intercellular $\ce{CO2}$, $c_{\mathrm{i}}/c_{\mathrm{a}}$ | about 0.7 | about 0.3–0.4 | low at night, very high by day |
-| Transpiration ratio / $\mathrm{g\,H_2O\,g^{-1}}$ dry matter | about 500 | about 150–250 | about 50 |
+| Transpiration ratio / $\mathrm{mol\,H_2O\,mol^{-1}\,CO_2}$ | about 400 | about 150 | about 50 |
 | Photosynthetic nitrogen-use efficiency | low (Rubisco is a large fraction of leaf nitrogen) | high | — |
 | Leaf $\delta^{13}\mathrm{C}$ | about −28‰ (−20 to −35‰) | about −14‰ (−10 to −17‰) | −10 to −22‰, between the two |
 | Typical habitat and examples | mild and moist; wheat, rice, soybean, trees | hot, high light, seasonal drought; maize, sugarcane, sorghum, foxtail millet | arid, epiphytic; cacti, pineapple, agave, orchids |
@@ -302,7 +302,7 @@ In parallel with C4 rice there are other routes to raising carbon assimilation: 
 | $\ce{CO2}$ compensation point | 40–100 µmol mol⁻¹, Eq. (8.2) | 0–10 | 0–5 in the dark |
 | Energy (per $\ce{CO2}$) | 3 ATP + 2 NADPH, increased by photorespiration according to Eq. (8.4) | $3 + 2/(1 - \varphi)$ ATP, Eq. (8.5) | about 6.5 ATP |
 | Photorespiration | 15%–30% of carbon, increasing with rising temperature and falling $\ce{CO2}$ | 2%–3% | low |
-| Water | transpiration ratio about 500 | about 150–250 | about 50 |
+| Water | transpiration ratio about 400 | about 150 | about 50 |
 | $\delta^{13}\mathrm{C}$ / $\Delta$ | −28‰ / about 20‰, varying with $c_{\mathrm{i}}/c_{\mathrm{a}}$ | −14‰ / 3–5‰ | between the two |
 
 | Topic | Key points |
