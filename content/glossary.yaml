@@ -9927,7 +9927,7 @@ terms:
   - { zh: Sec 途径, en: Sec pathway, aliases: [Sec system, Sec 系统] }
   - { zh: Tat 途径, en: twin-arginine translocation pathway, aliases: [Tat pathway, 双精氨酸转运途径] }
   - { zh: 分选酶, en: sortase, aliases: [sortases] }
-  - { zh: 效应蛋白, en: effector protein, aliases: [effector, effectors], scope: ["7.11"] }
+  - { zh: 效应蛋白, en: effector protein, aliases: [effector, effectors], scope: ["7.11", "7.13"] }
   - { zh: 人兽共患病, en: zoonosis, aliases: [zoonoses, 动物源性疾病, 人畜共患病] }
   - { zh: 新发传染病, en: emerging infectious disease, aliases: [emerging infectious diseases, 新发感染病] }
   - { zh: 医院获得性感染, en: healthcare-associated infection, aliases: [nosocomial infection, 院内感染] }
@@ -10971,3 +10971,27 @@ terms:
   - { zh: 分子标记辅助选择, en: marker-assisted selection }
   - { zh: 快速育种, en: speed breeding }
   - { zh: 从头驯化, en: de novo domestication }
+  - { zh: 活体营养型病原, en: biotroph, aliases: [biotrophs, 活体营养型, biotrophic pathogen] }
+  - { zh: 死体营养型病原, en: necrotroph, aliases: [necrotrophs, 死体营养型, necrotrophic pathogen] }
+  - { zh: 半活体营养型病原, en: hemibiotroph, aliases: [hemibiotrophs, 半活体营养型] }
+  - { zh: 保卫假说, en: guard hypothesis, aliases: [guard model, 警戒假说] }
+  - { zh: zigzag 模型, en: zigzag model, aliases: [Z 字形模型] }
+  - { zh: 诱导系统抗性, en: induced systemic resistance }
+  - { zh: 垂直抗性, en: vertical resistance, aliases: [小种专化抗性, race-specific resistance] }
+  - { zh: 水平抗性, en: horizontal resistance, aliases: [非小种专化抗性, race-nonspecific resistance] }
+  - { zh: 持久抗性, en: durable resistance }
+  - { zh: 酚类, en: phenolics, aliases: [phenolic compounds, 酚类化合物], scope: ["7"] }
+  - { zh: 组成型防御, en: constitutive defense, aliases: [constitutive defence] }
+  - { zh: 诱导型防御, en: induced defense, aliases: [induced defence, inducible defense] }
+  - { zh: 间接防御, en: indirect defense, aliases: [indirect defence] }
+  - { zh: 逆境, en: stress, aliases: [胁迫, plant stress], scope: ["7.13"] }
+  - { zh: 抗逆性, en: stress resistance }
+  - { zh: 避逆性, en: stress escape }
+  - { zh: 耐逆性, en: stress tolerance }
+  - { zh: 旱害, en: drought injury }
+  - { zh: 等水调节, en: isohydric, aliases: [isohydric behaviour, isohydry] }
+  - { zh: 非等水调节, en: anisohydric, aliases: [anisohydric behaviour, anisohydry] }
+  - { zh: 涝害, en: flooding injury, aliases: [waterlogging injury, 淹水胁迫] }
+  - { zh: 盐害, en: salt injury, aliases: [salt stress, 盐胁迫] }
+  - { zh: 热害, en: heat injury, aliases: [heat stress injury] }
+  - { zh: 超积累植物, en: hyperaccumulator, aliases: [hyperaccumulators, 超富集植物] }
