@@ -11223,3 +11223,72 @@ terms:
   - { zh: Davenport 图, en: Davenport diagram }
   - { zh: 阴离子间隙, en: anion gap }
   - { zh: α-稳态, en: alpha-stat, aliases: [α-stat, alpha-stat regulation] }
+  - { zh: 慢波, en: slow wave, aliases: [基本电节律, basic electrical rhythm, slow waves], scope: ["7.14"] }
+  - { zh: 胃肠激素, en: gastrointestinal hormone, aliases: [gastrointestinal hormones, 胃肠道激素] }
+  - { zh: 消化, en: digestion, scope: ["7.14"] }
+  - { zh: 吸收, en: absorption, scope: ["7.14"] }
+  - { zh: Cajal 间质细胞, en: interstitial cell of Cajal, aliases: [ICC, interstitial cells of Cajal], scope: ["7.14"] }
+  - { zh: 分节运动, en: segmentation, scope: ["7.14"] }
+  - { zh: 蠕动, en: peristalsis }
+  - { zh: 容受性舒张, en: receptive relaxation }
+  - { zh: 胃排空, en: gastric emptying }
+  - { zh: 移行性运动复合波, en: migrating motor complex, aliases: [MMC, 消化间期移行性复合运动] }
+  - { zh: 碱潮, en: alkaline tide }
+  - { zh: 黏液–碳酸氢盐屏障, en: mucus–bicarbonate barrier, aliases: [黏液-碳酸氢盐屏障, mucus-bicarbonate barrier] }
+  - { zh: 肠激酶, en: enteropeptidase, aliases: [enterokinase, 肠致活酶] }
+  - { zh: 囊性纤维化, en: cystic fibrosis }
+  - { zh: 肠肝循环, en: enterohepatic circulation }
+  - { zh: 前肠发酵, en: foregut fermentation }
+  - { zh: 后肠发酵, en: hindgut fermentation }
+  - { zh: 食粪, en: coprophagy, aliases: [食粪行为, 食盲肠粪, cecotrophy] }
+  - { zh: 吸收期, en: absorptive state, aliases: [fed state] }
+  - { zh: 吸收后期, en: postabsorptive state }
+  - { zh: Disse 间隙, en: space of Disse, aliases: [窦周隙, perisinusoidal space] }
+  - { zh: 呼吸, en: respiration, scope: ["7.14"] }
+  - { zh: 并流交换, en: concurrent exchange, aliases: [cocurrent exchange] }
+  - { zh: 逆流交换, en: countercurrent exchange, aliases: [counter-current exchange, 逆流交换器] }
+  - { zh: 交叉流交换, en: crosscurrent exchange, aliases: [cross-current exchange] }
+  - { zh: 肺内压, en: alveolar pressure, aliases: [肺泡压, intrapulmonary pressure] }
+  - { zh: 胸膜腔内压, en: intrapleural pressure, aliases: [胸内压, pleural pressure] }
+  - { zh: 跨肺压, en: transpulmonary pressure }
+  - { zh: 肺顺应性, en: lung compliance, aliases: [pulmonary compliance] }
+  - { zh: 潮气量, en: tidal volume }
+  - { zh: 残气量, en: residual volume, aliases: [余气量] }
+  - { zh: 肺总量, en: total lung capacity }
+  - { zh: 功能残气量, en: functional residual capacity, aliases: [功能余气量, FRC] }
+  - { zh: 肺活量, en: vital capacity }
+  - { zh: 用力呼气量, en: forced expiratory volume, aliases: [FEV1, 时间肺活量] }
+  - { zh: 解剖死腔, en: anatomical dead space, aliases: [解剖无效腔] }
+  - { zh: 生理死腔, en: physiological dead space, aliases: [生理无效腔] }
+  - { zh: 肺泡通气量, en: alveolar ventilation }
+  - { zh: 呼吸交换率, en: respiratory exchange ratio }
+  - { zh: 肺泡气方程, en: alveolar gas equation }
+  - { zh: 冲压通气, en: ram ventilation }
+  - { zh: 口咽泵, en: buccal pump, aliases: [buccal pumping, 口腔泵] }
+  - { zh: 副支气管, en: parabronchus, aliases: [parabronchi] }
+  - { zh: 气管系统, en: tracheal system }
+  - { zh: 肺泡, en: alveolus, aliases: [alveoli, pulmonary alveolus], scope: ["7"] }
+  - { zh: 肺泡液清除, en: alveolar fluid clearance }
+  - { zh: 肺泡相互依存, en: alveolar interdependence }
+  - { zh: 肺水肿, en: pulmonary edema, aliases: [pulmonary oedema] }
+  - { zh: 低氧性肺血管收缩, en: hypoxic pulmonary vasoconstriction, aliases: [HPV] }
+  - { zh: West 分区, en: West zones }
+  - { zh: 通气/血流比, en: ventilation–perfusion ratio, aliases: [通气血流比, V/Q ratio, ventilation-perfusion ratio] }
+  - { zh: 呼吸膜, en: respiratory membrane, aliases: [血–气屏障, blood–gas barrier] }
+  - { zh: 肺扩散容量, en: pulmonary diffusing capacity, aliases: [扩散容量, diffusing capacity, 弥散量] }
+  - { zh: 扩散限制, en: diffusion limitation }
+  - { zh: 灌注限制, en: perfusion limitation }
+  - { zh: 氧容量, en: oxygen capacity }
+  - { zh: 氧含量, en: oxygen content }
+  - { zh: 血氧饱和度, en: oxygen saturation }
+  - { zh: 氧解离曲线, en: oxygen dissociation curve, aliases: [氧离曲线, oxygen–hemoglobin dissociation curve] }
+  - { zh: P₅₀, en: P50 }
+  - { zh: 碳酸酐酶, en: carbonic anhydrase }
+  - { zh: 氯转移, en: chloride shift, aliases: [Hamburger 转移, Hamburger shift] }
+  - { zh: Haldane 效应, en: Haldane effect, aliases: [何尔登效应, 霍尔登效应] }
+  - { zh: Root 效应, en: Root effect }
+  - { zh: 前包钦格复合体, en: pre-Bötzinger complex, aliases: [preBötC, pre-Botzinger complex] }
+  - { zh: 外周化学感受器, en: peripheral chemoreceptor, aliases: [peripheral chemoreceptors] }
+  - { zh: 中枢化学感受器, en: central chemoreceptor, aliases: [central chemoreceptors] }
+  - { zh: Hering–Breuer 反射, en: Hering–Breuer reflex, aliases: [肺牵张反射, 黑-伯反射, Hering-Breuer reflex] }
+  - { zh: 睡眠呼吸暂停, en: sleep apnea, aliases: [sleep apnoea] }
