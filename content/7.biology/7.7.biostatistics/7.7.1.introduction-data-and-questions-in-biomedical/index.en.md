@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Data and Questions in Biomedical Research"
 description: What biostatistics studies; populations and samples, parameters and statistics; levels of measurement; the unit × variable × time structure of data and cross-sectional, longitudinal and time-to-event data; study design and the hierarchy of evidence; the datasets and Python environment used throughout the course.
-source_hash: 84d31e215abf
+source_hash: 30f386cf8a15
 ---
 
 Does a new drug work? What causes cancer? How long will a patient live? Does smoking in childhood impair lung development? None of these questions can be answered by looking at a single patient: individuals differ greatly, and even repeated measurements on the same person do not agree. *Biostatistics* is the methodology for drawing reliable conclusions in the presence of such variation. This chapter first describes the role of statistics in biomedical research and its history, and then builds the basic vocabulary of the course: populations and samples, parameters and statistics, types of variables and levels of measurement. We then distinguish cross-sectional, longitudinal and time-to-event data along the three dimensions "unit × variable × time" and survey study design and the hierarchy of evidence; these two threads, the structure of the data and the design of the study, determine which methods the later chapters use. The chapter closes with the real datasets and analysis tools used throughout the course. Rigorous mathematical statements belong to the statistics courses ([3.1](/3.1) Probability Theory, [3.2](/3.2) Statistical Inference); here we concentrate on how methods are used, on their conditions and on the interpretation of results, and link back when a derivation is needed.

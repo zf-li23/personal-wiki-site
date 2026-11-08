@@ -182,7 +182,7 @@ Two tests can be combined in two ways. Suppose the two tests are independent giv
 - In series (positive only if both are positive): $\mathrm{Se} = \mathrm{Se}_1\,\mathrm{Se}_2$, $\mathrm{Sp} = 1 - (1 - \mathrm{Sp}_1)(1 - \mathrm{Sp}_2)$. Specificity rises and sensitivity falls; used for confirmation.
 - In parallel (positive if either is positive): $\mathrm{Se} = 1 - (1 - \mathrm{Se}_1)(1 - \mathrm{Se}_2)$, $\mathrm{Sp} = \mathrm{Sp}_1\,\mathrm{Sp}_2$. Sensitivity rises and specificity falls; used for screening and ruling out.
 
-Example: reading two antigen tests, done at an interval, in parallel, if they are conditionally independent the sensitivity rises from 73% to $1 - 0.27^2 = 92.7\%$ and the specificity falls from 99.1% to $0.991^2 = 98.2\%$. But conditional independence often fails: infected people with a low viral load are easily missed on both occasions, and the actual improvement is smaller than the formula estimates; only when the repeat test is a few days later, giving the viral load a chance to rise, does the effect approach independence.
+Example: if two antigen tests taken at an interval are combined in parallel and are conditionally independent, the sensitivity rises from 73% to $1 - 0.27^2 = 92.7\%$ and the specificity falls from 99.1% to $0.991^2 = 98.2\%$. But conditional independence often fails: infected people with a low viral load are easily missed on both occasions, and the actual improvement is smaller than the formula estimates; only when the repeat test is a few days later, giving the viral load a chance to rise, does the effect approach independence.
 
 ### 3.3.6. Sensitivity and Specificity Are Not Constants
 

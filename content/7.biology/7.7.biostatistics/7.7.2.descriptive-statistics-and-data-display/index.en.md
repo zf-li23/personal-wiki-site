@@ -1,7 +1,7 @@
 ---
 title: Descriptive Statistics and Data Display
 description: Measures of location (mean, median, mode, geometric mean), measures of spread (range, interquartile range, standard deviation, coefficient of variation, MAD), quantiles and medical reference intervals, skewness and kurtosis, z-scores, frequency tables and statistical graphics (histograms, stem-and-leaf plots, box plots, QQ plots), and the identification and handling of outliers, illustrated with the FEV and birthwt data.
-source_hash: 2f6b5d6c0edb
+source_hash: 3806e971e417
 ---
 
 When we receive a dataset, the first step is not to run a test but to look at it: where the data are concentrated, how widely they are spread, what shape the distribution has, and whether any values are implausible. Descriptive statistics answers these questions with a few numbers and a few graphs. It determines all later choices: whether skewed data are summarized by the median or the mean, whether to take logarithms, whether methods based on the normal distribution can be used; it is also the best opportunity to discover data entry errors and unexpected patterns. This chapter follows the two datasets introduced in [7.7.1](/7.7.1): the lung function (FEV) of 654 children and the birth weight (birthwt) of 189 newborns, with antibody titers and ELISA replicate wells as laboratory examples. In the FEV plots we see for the first time the source of the paradox "smoking children have better lung function". The mathematical properties of sample moments, order statistics and the empirical distribution function are in [3.2.1](/3.2.1); this chapter treats their use, and their pitfalls, with biomedical data.
@@ -321,7 +321,7 @@ print(stats.iqr(x), stats.median_abs_deviation(x, scale="normal"))
 print(stats.skew(x), stats.kurtosis(x))              # kurtosis is excess kurtosis by default
 print(stats.skew(np.log(x)))                         # the log transform removes most skewness
 
-# geometric mean of antibody titres
+# geometric mean of antibody titers
 titre = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
 print(stats.gmean(titre))                            # 47.6
 

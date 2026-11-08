@@ -320,7 +320,7 @@ print(stats.iqr(x), stats.median_abs_deviation(x, scale="normal"))
 print(stats.skew(x), stats.kurtosis(x))              # kurtosis is excess kurtosis by default
 print(stats.skew(np.log(x)))                         # the log transform removes most skewness
 
-# geometric mean of antibody titres
+# geometric mean of antibody titers
 titre = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
 print(stats.gmean(titre))                            # 47.6
 
