@@ -163,7 +163,7 @@ If $\varphi$ is known, so is its inverse, and $f = \varphi \circ m \circ \varphi
 $$
 f_n(x) = 1 + \frac{m^n(x - 1)}{1 - \frac Q{2m}\frac{m^n - 1}{m - 1}(x - 1)} .
 $$
-In continuous time the birth–death process has exactly such a generating function (Theorem 36.4.1); its scaled limit is the Poisson-like law of Corollary 36.4.1, $\varphi(s) = (p - q + qs)/(p - q + ps)$.
+In continuous time the birth–death process has exactly such a generating function (Theorem 36.4.1); its scaled limit is the law of Corollary 36.4.1, an atom at zero plus an exponential, $\varphi(s) = (p - q + qs)/(p - q + ps)$.
 
 **Example 36.4.1 (A Linear Fractional Approximation)** For $f = q + px^2$, write $f(x) - 1 = m(x - 1) + p(x - 1)^2 = m(x - 1)\bigl(1 + \frac12(x - 1)\bigr) \approx \dfrac{m(x - 1)}{1 - \frac12(x - 1)}$, which is the linear fractional law with $Q = m$. Iterating it gives $f_n(x) \approx 1 + m^n(x - 1)\big/\bigl(1 - \frac12\frac{m^n - 1}{m - 1}(x - 1)\bigr)$. This approximation reproduces $f_n(1)$, $f_n'(1)$ and $f_n''(1)$ exactly; it gives $P_0(\infty) \approx 3 - 2m = 1 - 4\varepsilon$ for $p = \frac12 + \varepsilon$, against the exact $q/p = (1 - 2\varepsilon)/(1 + 2\varepsilon) = 1 - 4\varepsilon + O(\varepsilon^2)$; and for large $n$, $P_N \approx \frac{4(m-1)^2}{m^n}\mathrm{e}^{-2(m-1)N/m^n}$. In terms of $r^2 = (2 - m)/(m - 1)$ and $w = N/m^n$, this is
 
@@ -255,7 +255,7 @@ Stem-cell therapy is thus a field where the claims run ahead of the evidence; ev
 | Niches | *Drosophila* GSC niche (BMP represses *bam*, oriented division), V-SVZ B1 cells set aside from embryonic radial glia, perivascular HSC niche; MSC criteria and their limits |
 | Birth–death process | master equation (36.1); generating function, extinction $q/p$, mean $\mathrm{e}^{(p-q)t}$, variance $\frac{p+q}{p-q}E(E-1)$ (Theorem 36.4.1); exponential scaled law with atom at zero (Corollary 36.4.1) |
 | Galton–Watson | iterated $f$, moments (Theorem 36.4.2); extinction = smallest fixed point, stability via $f'$ (Theorem 36.4.3); subcritical, critical ($2/\sigma^2n$, exponential) and supercritical limits, $\varphi(ms) = f(\varphi(s))$ (Theorem 36.4.4) |
-| Approximations | linear fractional law reproduces the Poisson-case shape (Example 36.4.1); near-critical expansion (Proposition 36.4.1, Remark 36.4.1) |
+| Approximations | linear fractional law reproduces the shape of the birth–death limit law (Example 36.4.1); near-critical expansion (Proposition 36.4.1, Remark 36.4.1) |
 | Homeostasis | critical branching: clone loss $\propto 1/t$, linear growth of survivors, exponential scaled sizes; neutral drift; stochastic fate with local regulation (Example 36.4.2) |
 | Cancer stem cells | Definition 36.5.1; therapy as extinction; assay dependence and plasticity |
 | Embryo models | Definition 36.6.1: gastruloids, micropatterns, blastoids, ETX/SEM; not embryos; 14-day rule (Remark 36.6.1) |
@@ -285,7 +285,7 @@ Stem-cell therapy is thus a field where the claims run ahead of the evidence; ev
 
 6. In a critical stem-cell population ($m = 1$, $\sigma^2 = 1$), 1000 stem cells are labeled individually at time 0. Estimate how many labeled clones remain after 100 generations, their mean size, and the total number of labeled stem cells. How do these change if $m = 1.01$?
 
-   **Answer** Critical: survivors $\approx 1000 \times 2/(\sigma^2 n) = 1000 \times 2/100 = 20$; mean size $\approx \sigma^2n/2 = 50$ (more precisely about 51); total $\approx 20 \times 50 = 1000$, unchanged on average. With $m = 1.01$ the population grows as $1.01^{100} = 2.7$ on average; the surviving fraction tends to $1 - x^*$, where for $f = q + px^2$ with $p = 0.505$, $x^* = q/p = 0.495/0.505 = 0.980$, so at least about $2\%$ survive permanently (about 20 clones, a little more at $n = 100$), each about $2.7 \times 1000/20 \approx 135$ cells: a 1% bias doubles to triples the total in 100 generations, which is why homeostasis requires regulation.
+   **Answer** Critical: survivors $\approx 1000 \times 2/(\sigma^2 n) = 1000 \times 2/100 = 20$; mean size $\approx \sigma^2n/2 = 50$ (more precisely about 51); total $\approx 20 \times 50 = 1000$, unchanged on average. With $m = 1.01$ the population grows as $1.01^{100} = 2.7$ on average; the surviving fraction tends to $1 - x^*$, where for $f = q + px^2$ with $p = 0.505$, $x^* = q/p = 0.495/0.505 = 0.980$, so at least about $2\%$ survive permanently (about 20 clones, a little more at $n = 100$), each about $2.7 \times 1000/20 \approx 135$ cells: a 1% bias multiplies the total by about 2.7 in 100 generations, which is why homeostasis requires regulation.
 
 7. Gastruloids form an anteroposterior axis with colinear Hox expression and somites, but no brain and no extraembryonic tissues. What does this tell us about the requirements for axis formation in the mouse embryo?
 
