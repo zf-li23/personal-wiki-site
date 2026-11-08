@@ -1,7 +1,7 @@
 ---
 title: Juvenility, Vernalization and the Integration of Flowering
 description: "The three phases of flowering and ripeness to flower; the juvenile phase, phase change and ivy, the miR156–SPL age timer; vernalization: conditions (temperature, duration, oxygen, water, sugar, light), site and Melchers' grafting, winter and spring habit, devernalization and stabilization, a dose–response model; FRI–FLC, COOLAIR, VIN3 and PRC2 epigenetic memory and the digital switch at the single-cell level, the VRN genes of cereals; the autonomous, gibberellin, age and ambient-temperature pathways and nutrition, the historical place of the C/N ratio theory, hormones and flowering; integration of flowering signals at FT, SOC1, LFY and AP1, and a light–temperature model; morphological and physiological changes in flower bud differentiation and their conditions, determination of floral organ identity; types of sex differentiation, genetic and environmental control, hormonal regulation (cucumber, melon, maize)"
-source_hash: 7a64890d78b4
+source_hash: 786c1200b8d5
 ---
 
 The previous chapter discussed how a single environmental signal, photoperiod, is measured by the leaf and carried to the shoot apex in the form of florigen ([7.13.21](/7.13.21)). Whether a plant flowers, however, depends on more factors: whether it has "grown up" to an age at which it can flower, whether it has experienced winter cold, the state of its endogenous hormones and carbohydrates, and whether the ambient temperature is suitable. The genetics of *Arabidopsis* groups these factors into several flowering pathways, which converge on a few "integrator" genes; the integrators decide when the shoot apical meristem changes into an inflorescence and flowers.
@@ -360,7 +360,7 @@ In production, ethephon (usually sprayed at the 1–3 true-leaf stage) increases
 | Integration | *FT*, *SOC1* → *LFY*, *AP1*; LFY–AP1 positive feedback makes the decision irreversible; TFL1 antagonizes FT |
 | Flower bud differentiation | Definition 22.6.1; growth cone swells and forms floral primordia; soluble sugars, proteins and nucleic acids increase; effects of nutrition, hormones, light, temperature and water |
 | Floral organs | ABCDE and tetramers (7.12.27); LFY + UFO → *AP3*, LFY + WUS → *AG*, AG ⊣ *WUS* terminates the floral meristem |
-| Sex differentiation | Nine types of sex expression; dioecy mostly XY (*OGI*–*MeGI* in persimmon); low night temperature, short days, ample water and nitrogen and ethylene promote femaleness; cucumber *F* = *CsACS1G*, *M* = *CsACS2*; gibberellin promotes maleness in cucumber and femaleness in maize |
+| Sex differentiation | Eight types of sex expression; dioecy mostly XY (*OGI*–*MeGI* in persimmon); low night temperature, short days, ample water and nitrogen and ethylene promote femaleness; cucumber *F* = *CsACS1G*, *M* = *CsACS2*; gibberellin promotes maleness in cucumber and femaleness in maize |
 
 Main equations:
 
@@ -375,7 +375,7 @@ Main equations:
 
 1. With the model and parameters of Example 22.3.1, if a warm winter gives winter wheat only 15 d at 2 °C and 30 d at 10 °C, how many days to flowering are needed? What is the minimum number of effective vernalization days needed for the number of days to flowering not to exceed 65 d?
 
-   **Answer** $r(10) = (12 - 10)/5 = 0.4$, $V = 15 + 30 \times 0.4 = 27\ \mathrm{d}$, $D = 55 + 105\,\mathrm{e}^{-27/15} = 55 + 105 \times 0.165 = 72\ \mathrm{d}$, about 11 d later than in a normal year (61 d). For $D \le 65\ \mathrm{d}$ we need $105\,\mathrm{e}^{-V/15} \le 10$, $V \ge 15\ln 10.5 = 35\ \mathrm{d}$, that is, at least 35 effective vernalization days.
+   **Answer** $r(10) = (12 - 10)/5 = 0.4$, $V = 15 + 30 \times 0.4 = 27\ \mathrm{d}$, $D = 55 + 105\,\mathrm{e}^{-27/15} = 55 + 105 \times 0.165 = 72\ \mathrm{d}$, about 11 d later than in a normal year (61 d). For $D \le 65\ \mathrm{d}$ we need $105\,\mathrm{e}^{-V/15} \le 10$, $V \ge 15\ln 10.5 = 35.3\ \mathrm{d}$, that is, at least 36 effective vernalization days (in whole days).
 
 2. Winter *Arabidopsis* is treated at 4 °C for 2 weeks or 6 weeks and then moved to long days; the former flowers late and the latter flowers normally. Explain this result with the digital switch model of epigenetic silencing of FLC, and explain why a brief cold snap in autumn does not make the plant flower in autumn.
 
