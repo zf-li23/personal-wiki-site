@@ -8174,7 +8174,7 @@ terms:
   - { zh: ZRS, en: ZRS, aliases: [ZPA regulatory sequence, MFCS1] }
   - { zh: 指身份, en: digit identity }
   - { zh: Shh–Gremlin1–FGF 反馈环, en: Shh–Gremlin1–FGF loop }
-  - { zh: 趾间细胞死亡, en: interdigital cell death, aliases: [趾间凋亡, interdigital apoptosis] }
+  - { zh: 指间细胞死亡, en: interdigital cell death, aliases: [趾间细胞死亡, 指间凋亡, 趾间凋亡, interdigital apoptosis] }
   - { zh: 蜕皮, en: molting, aliases: [moulting, ecdysis, molt], scope: ["7"] }
   - { zh: 蜕皮素, en: ecdysone, aliases: [20-hydroxyecdysone, 20E] }
   - { zh: 保幼激素, en: juvenile hormone, aliases: [JH] }
