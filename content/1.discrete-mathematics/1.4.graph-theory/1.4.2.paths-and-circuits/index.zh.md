@@ -584,7 +584,7 @@ v6: length 11, path v1-v3-v6
 
 ### 2.7.4. 任意实权图的 Ford 算法
 
-当边权可以为负（但图中没有负长圈）时，Dijkstra 算法可能失效：负权边可能使已获得永久标号的顶点还有更短的途径。此时可用 Ford 算法（Bellman–Ford algorithm），也称 Bellman–Ford 算法。
+当边权可以为负（但图中没有负长圈）时，Dijkstra 算法可能失效：负权边可能使已获得永久标号的顶点还有更短的途径。此时可用 Ford 算法，也称 Bellman–Ford 算法（Bellman–Ford algorithm）。
 
 **算法 2.7.2（Ford 算法）** 设源顶点为 $v_1$。
 

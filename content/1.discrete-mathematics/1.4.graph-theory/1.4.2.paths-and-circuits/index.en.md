@@ -1,6 +1,6 @@
 ---
 title: Walks, Paths and Circuits
-source_hash: 11a808ba7be7
+source_hash: 146434d46b0a
 ---
 
 Walks, paths and circuits are the most basic structures in graph theory. In this chapter we first define walks, trails and paths, and their closed versions, in directed and undirected graphs, and discuss connectivity; we then use the adjacency matrix of [Chapter 1](/1.4.1) to count walks and decide reachability, and present two search methods. Next we study the strongly connected components of a digraph, directed acyclic graphs and topological sorting. We then discuss two classical traversal problems and the conditions under which they can be solved: Eulerian circuits, which traverse every edge, and Hamiltonian cycles, which visit every vertex. Finally we turn to optimization problems involving paths: the traveling salesman problem, shortest paths, critical paths and the Chinese postman problem.
