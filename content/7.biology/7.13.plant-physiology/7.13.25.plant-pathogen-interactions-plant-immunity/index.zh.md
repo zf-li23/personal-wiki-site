@@ -170,7 +170,7 @@ NLR 识别效应蛋白有两种方式。
 
 - ZAR1（2019 年，Science）：被尿苷酰化的 PBL2 结合 RKS1 后，ZAR1 释放 ADP、结合 dATP，五个 ZAR1–RKS1–PBL2<sup>UMP</sup> 单元组装成车轮状的五聚体，五个 CC 结构域 N 端的 α1 螺旋伸出，形成一个漏斗，插入质膜。2021 年的研究（Cell）表明 ZAR1 抗病小体是一个钙离子通道：它在质膜上介导 $\ce{Ca^2+}$ 内流，引起活性氧积累和细胞死亡。2024 年解析的茄科辅助者 NRC4 的抗病小体也是一个形成孔道的寡聚体。
 - RNL：NRG1 与 ADR1 被激活后同样寡聚化，在质膜上形成透过 $\ce{Ca^2+}$ 的通道（2021 年，Science），它们是 TNL 信号的执行者。
-- TNL：Roq1 与 XopQ、RPP1 与 ATR1 的复合体（2020 年，Science）都是四聚体，四个 TIR 结构域两两相对，形成一个酶活性中心。TIR 结构域是一种 $\ce{NAD+}$ 水解酶（2019 年），被激活的 TIR 把 $\ce{NAD+}$ 与 ATP 等转化为几种核苷酸类小分子：2-磷酸核糖-AMP（pRib-AMP）与 pRib-ADP 结合脂酶样蛋白 EDS1 与 PAD4 的异二聚体，激活 ADR1；ADP-核糖化的 ATP（ADPr-ATP）与二聚 ADP-核糖结合 EDS1–SAG101，激活 NRG1（2022 年，Science）。
+- TNL：Roq1 与 XopQ、RPP1 与 ATR1 的复合体（2020 年，Science）都是四聚体，四个 TIR 结构域两两相对，形成一个酶活性中心。TIR 结构域是一种 $\ce{NAD+}$ 水解酶（2019 年），被激活的 TIR 把 $\ce{NAD+}$ 与 ATP 等转化为几种核苷酸类小分子：2′-(5″-磷酸核糖基)-5′-AMP（pRib-AMP）与 pRib-ADP 结合脂酶样蛋白 EDS1 与 PAD4 的异二聚体，激活 ADR1；ADP-核糖化的 ATP（ADPr-ATP）与二聚 ADP-核糖结合 EDS1–SAG101，激活 NRG1（2022 年，Science）。
 
 这样，植物的胞内免疫受体最后汇聚到同一个出口：在质膜上打开钙通道。
 
