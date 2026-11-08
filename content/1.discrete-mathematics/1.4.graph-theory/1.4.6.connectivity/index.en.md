@@ -99,7 +99,7 @@ A family of paths is called internally disjoint (edge-disjoint) if its members a
 
 One half of each theorem, "$\le$", is obvious: every path must lose at least one inner vertex (one edge), so separating $x$ from $y$ requires deleting at least as many vertices (edges) as there are disjoint paths. The substance of the theorem is that equality is always attained.
 
-**Example 6.3.1** In the figure below, $x$ and $y$ are joined by the three internally disjoint paths $xady$, $xbey$ and $xcfy$; on the other hand, deleting $\{a, b, c\}$ isolates $x$ from $y$. Both numbers equal $3$, in accordance with Theorem 6.3.1: there is no fourth internally disjoint path, and no two vertices whose deletion separates $x$ from $y$.
+**Example 6.3.1** In the figure below, $x$ and $y$ are joined by the three internally disjoint paths $xady$, $xbey$ and $xcfy$; on the other hand, deleting $\{a, b, c\}$ isolates $x$ from $y$. Both numbers equal $3$, in accordance with Theorem 6.3.1: there is no fourth internally disjoint path, and deleting only two vertices cannot separate $x$ from $y$.
 
 ![An example of Menger's theorem. Left: three internally disjoint x–y paths (three colors); right: the set {a, b, c} of size 3 (red) separates x from y; the dashed edges are deleted together with these vertices](./plots/menger.py)
 
