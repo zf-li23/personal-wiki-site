@@ -88,7 +88,7 @@ $$
 
 - The solute (osmotic) potential $\Psi_{\mathrm{s}} = -\Pi$ is the negative of the **osmotic pressure** of Eq. (2.10) ([7.6.2](/7.6.2#sec-2.3.3)), with $c$ the total concentration of solute particles: $-2.44\,\mathrm{MPa}$ for an ideal $1\,\mathrm{M}$ solution at $20\,^\circ\mathrm{C}$. Real solutions deviate: $1\,\mathrm{M}$ sucrose has about $-2.7\,\mathrm{MPa}$, $1\,\mathrm{M}$ $\ce{KCl}$, which dissociates into about 1.8 osmotically effective particles, about $-4.5\,\mathrm{MPa}$, and seawater about $-2.5\,\mathrm{MPa}$.
 - The pressure potential $\Psi_{\mathrm{p}}$ is the hydrostatic pressure above atmospheric: positive in a turgid cell pressing on its wall (turgor, typically $0.3$–$1\,\mathrm{MPa}$), zero at incipient plasmolysis, negative (tension) in the xylem of a transpiring plant.
-- The gravitational potential $\Psi_{\mathrm{g}}$ adds $0.0098\,\mathrm{MPa}$ per metre of height: negligible in herbs, about $1\,\mathrm{MPa}$ at the top of a $100\,\mathrm{m}$ tree.
+- The gravitational potential $\Psi_{\mathrm{g}}$ adds $0.0098\,\mathrm{MPa}$ per meter of height: negligible in herbs, about $1\,\mathrm{MPa}$ at the top of a $100\,\mathrm{m}$ tree.
 - The matric potential $\Psi_{\mathrm{m}}$ describes water bound to surfaces and held in narrow pores (soil particles, cell walls); it dominates in dry soils and seeds and is usually neglected in hydrated cells.
 
 The air is the strongest sink. Water vapor at relative humidity $\mathrm{RH}$ has $\mu_{\mathrm{w}} - \mu_{\mathrm{w}}^\circ = RT\ln(\mathrm{RH})$ by Eq. (3.4), so
