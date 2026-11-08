@@ -33,7 +33,7 @@ The general features of meristematic cells are: small, isodiametric cells with t
 
 ### 4.2.2. Classification by Position
 
-**Definition 4.2.2 (Apical, Lateral and Intercalary Meristems)** By position in the plant body, meristems fall into three classes (Figure 1): **apical meristems**, located at the tips of the main axes and lateral branches of shoot and root; **lateral meristems**, located around the sides of roots and stems and arranged parallel to the surface of the organ, namely the vascular cambium and the cork cambium; and **intercalary meristems**, sandwiched between tissues that have more or less differentiated.
+**Definition 4.2.2 (Apical, Lateral and Intercalary Meristems)** By position in the plant body, meristems fall into three classes (Figure 1): **apical meristems**, located at the tips of the main axes and lateral branches of shoot and root; **lateral meristems**, located around the sides of roots and stems and arranged parallel to the surface of the organ, namely the vascular cambium and the cork cambium; and **intercalary meristems**, sandwiched between tissues that are already more or less differentiated.
 
 The division of the apical meristems lengthens roots and stems, forms leaves and lateral branches on the stem and increases the vegetative surface; the shoot apical meristem finally also changes into a flower or inflorescence and produces the reproductive organs.
 
