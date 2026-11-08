@@ -59,7 +59,7 @@ Eucommiaceae comprise only *Eucommia ulmoides* (hardy rubber tree), a single gen
 
 Floral formula: ♂ $P_0 A_{4\text{–}10}$; ♀ $P_0 \underline{G}_{(2:1:2)}$.
 
-The rubber threads of *Eucommia* are trans-1,4-polyisoprene (eucommia gum, identical to gutta-percha), an isomer of the cis-1,4-polyisoprene of the rubber tree (*Hevea*, Euphorbiaceae): eucommia gum is hard and inelastic at room temperature, insulating and resistant to acids and bases, (gutta-percha, with the same properties, was once the insulation of submarine cables). The bark is used in medicine ("duzhong"), and the leaves also contain eucommia gum and iridoids (aucubin, geniposidic acid). Fossil fruits and leaves of *Eucommia* were widespread in North America, Europe and East Asia in the Paleogene, and the single living species survives only in China.
+The rubber threads of *Eucommia* are trans-1,4-polyisoprene (eucommia gum, identical to gutta-percha), an isomer of the cis-1,4-polyisoprene of the rubber tree (*Hevea*, Euphorbiaceae): eucommia gum is hard and inelastic at room temperature, insulating and resistant to acids and bases (gutta-percha, with the same properties, was once the insulation of submarine cables). The bark is used in medicine ("duzhong"), and the leaves also contain eucommia gum and iridoids (aucubin, geniposidic acid). Fossil fruits and leaves of *Eucommia* were widespread in North America, Europe and East Asia in the Paleogene, and the single living species survives only in China.
 
 Changes in circumscription: Cronquist placed Eucommiaceae in Eucommiales of the Hamamelidae, thinking it close to Hamamelidales and, because of its samara resembling that of elms, linking it with Ulmaceae of Urticales; these similarities are superficial, and molecular evidence places it in Garryales among the lamiids.
 
@@ -353,7 +353,7 @@ The fate of the relevant orders of Cronquist's system in APG IV:
 
 ## Questions
 
-1. How can a plant of Rubiaceae be recognized when it is not flowering? What is the "whorled leaves" of madder?
+1. How can a plant of Rubiaceae be recognized when it is not flowering? How should the "whorled leaves" of madder be understood?
 
    **Answer** The leaves of Rubiaceae are opposite (or whorled) and entire, with interpetiolar stipules between the two petioles and colleters on the inner face of the stipules; "opposite entire leaves plus interpetiolar stipules" is an almost unique combination of Rubiaceae (Loganiaceae have only a stipular line, and Gentianaceae have no stipules). Of the 4–8 "leaves" in a whorl of madder or cleavers, only 2 have axillary buds, which shows that only these are true leaves and the others are leaf-like interpetiolar stipules.
 
