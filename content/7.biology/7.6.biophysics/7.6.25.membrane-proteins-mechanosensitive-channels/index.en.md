@@ -66,7 +66,7 @@ Since $\mathrm{d}x = \sqrt2\,\mathrm{d}y/\lambda$ and $u'' = (\lambda^2/2)Ug''$,
 
 The deformation decays over $\lambda^{-1}$ with a slight overshoot: the bilayer that has been thickened next to a thick protein becomes slightly thinner than normal about $3\lambda^{-1}$ away, because a fourth-order equation cannot relax monotonically under the condition $u'(R) = 0$. The energy is proportional to the length of the protein's boundary, so a mismatched protein behaves like a two-dimensional droplet with a line tension $f$, and it is quadratic in the mismatch, so it does not matter for the energy whether the protein is too thick or too thin.
 
-**Example 25.2.1 (Numbers for a PC bilayer)** With $\kappa = 20\,k_{\mathrm{B}}T$, $K_t = 60\,k_{\mathrm{B}}T\,\mathrm{nm^{-2}}$ and $w_0 = 1.75\,\mathrm{nm}$, $\lambda^{-1} = (\kappa w_0^2/K_t)^{1/4} = (1.02\,\mathrm{nm^4})^{1/4} = 1.0\,\mathrm{nm}$ and $\mathcal{K} = \sqrt2\,(60^3 \times 20/1.75^6)^{1/4}\,k_{\mathrm{B}}T\,\mathrm{nm^{-3}} = 28\,k_{\mathrm{B}}T\,\mathrm{nm^{-3}}$. A mismatch of $U = 0.3\,\mathrm{nm}$ (two carbons per lipid chain, at about $0.13\,\mathrm{nm}$ per carbon, each side) gives $f = \frac12 \times 28 \times 0.09 = 1.3\,k_{\mathrm{B}}T\,\mathrm{nm^{-1}}$, about $5\,\mathrm{pN}$. Around a protein of radius $2.5\,\mathrm{nm}$ the deformed annulus, a single layer of lipids or two wide, costs $2\pi R f \approx 20\,k_{\mathrm{B}}T$. This is large compared with the thermal energy and comparable to the free-energy differences between conformations of membrane proteins, which is why lipid composition can switch them.
+**Example 25.2.1 (Numbers for a PC bilayer)** With $\kappa = 20\,k_{\mathrm{B}}T$, $K_t = 60\,k_{\mathrm{B}}T\,\mathrm{nm^{-2}}$ and $w_0 = 1.75\,\mathrm{nm}$, $\lambda^{-1} = (\kappa w_0^2/K_t)^{1/4} = (1.02\,\mathrm{nm^4})^{1/4} = 1.0\,\mathrm{nm}$ and $\mathcal{K} = \sqrt2\,(60^3 \times 20/1.75^6)^{1/4}\,k_{\mathrm{B}}T\,\mathrm{nm^{-3}} = 28\,k_{\mathrm{B}}T\,\mathrm{nm^{-3}}$. A mismatch of $U = 0.3\,\mathrm{nm}$ (a difference of about four carbons per lipid chain, at about $0.065\,\mathrm{nm}$ of half-thickness per carbon) gives $f = \frac12 \times 28 \times 0.09 = 1.3\,k_{\mathrm{B}}T\,\mathrm{nm^{-1}}$, about $5\,\mathrm{pN}$. Around a protein of radius $2.5\,\mathrm{nm}$ the deformed annulus, a single layer of lipids or two wide, costs $2\pi R f \approx 20\,k_{\mathrm{B}}T$. This is large compared with the thermal energy and comparable to the free-energy differences between conformations of membrane proteins, which is why lipid composition can switch them.
 
 ### 25.2.3. Two Dimensions
 
@@ -91,7 +91,7 @@ Two mismatched proteins close to each other interact because the bilayer between
 **Formula 25.3.1 (Mismatch-Mediated Interaction)** For two parallel inclusions at distance $d$, the interaction energy per unit length is
 
 $$
-\Delta G(d) = \min_u\int_0^d\left[\frac{\kappa}{2}(u'')^2 + \frac{K_t}{2w_0^2}u^2\right]\mathrm{d}x - \frac{\mathcal{K}}{4}\left(U_1^2 + U_2^2\right), \tag{25.6}
+\Delta G(d) = \min_u\int_0^d\left[\frac{\kappa}{2}(u'')^2 + \frac{K_t}{2w_0^2}u^2\right]\mathrm{d}x - \frac{\mathcal{K}}{2}\left(U_1^2 + U_2^2\right), \tag{25.6}
 $$
 with $u(0) = U_1$, $u(d) = U_2$ and $u'(0) = u'(d) = 0$. For like inclusions ($U_1 = U_2$) it tends to $-2f$ at contact and oscillates with period $2\sqrt2\pi/\lambda$ as it decays; for opposite mismatches it is repulsive at short range.
 
@@ -246,7 +246,7 @@ NOMPC, a TRP channel required for gentle touch in *Drosophila*, makes the tether
 
 2. Show from the proof of Theorem 25.2.1 that the bending energy is one quarter of the total. Why is the deformation not simply exponential?
 
-   **Answer** With $g = \mathrm{e}^{-y}(\cos y + \sin y)$, the bending term is $\frac{\sqrt2}{8}K_tU^2/\lambda w_0^2$ and the compression term $\frac{3\sqrt2}{8}K_tU^2/\lambda w_0^2$, a ratio $1:3$, so bending is one quarter. A pure exponential $U\mathrm{e}^{-x/x_0}$ would violate the condition $u'(R) = 0$; the fourth-order equation admits two decaying solutions, and satisfying both gluing conditions requires a combination that oscillates. A trial exponential (with $u'(R) \ne 0$) gives a higher energy, as a variational calculation confirms.
+   **Answer** With $g = \mathrm{e}^{-y}(\cos y + \sin y)$, the bending term is $\frac{\sqrt2}{8}K_tU^2/\lambda w_0^2$ and the compression term $\frac{3\sqrt2}{8}K_tU^2/\lambda w_0^2$, a ratio $1:3$, so bending is one quarter. A pure exponential $U\mathrm{e}^{-x/x_0}$ would violate the condition $u'(R) = 0$; the fourth-order equation admits two decaying solutions, and satisfying both gluing conditions requires a combination that oscillates.
 
 3. By what factor should the critical tension of MscL change between PC16 and PC20 according to Theorem 25.4.1, and how does this compare with the measured half-activation pressures?
 
