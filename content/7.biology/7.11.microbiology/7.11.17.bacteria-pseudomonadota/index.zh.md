@@ -42,7 +42,7 @@ source_hash: 41d7740198c8
 
 ![现行分类中的原变形菌（分支图；分支长度没有意义）。假单胞菌门（绿色）包含 α-变形菌纲和 γ-变形菌纲，在基因组分类数据库中原 β-变形菌纲是 γ-变形菌纲之内的伯克霍尔德氏菌目。原 δ-变形菌纲（橙色）被划分到几个门，最大的是热脱硫杆菌门（GTDB 名称为 Desulfobacterota）、黏球菌门和蛭弧菌门，原 ε-变形菌纲（蓝色）成为弯曲杆菌门。它们彼此之间以及与其他门的关系尚未很好地解析，画成多分支。右侧的方框给出每个类群在重新分类之前所归的纲。](./plots/reclassification.py)
 
-![原变形菌中的一些细胞形态（示意图，未按统一比例；名称下为大致尺寸）。上排：具周生鞭毛（*Escherichia*）或单极生鞭毛（*Pseudomonas*）的杆菌、弯曲杆菌（*Vibrio*）、双球菌（*Neisseria*）和带有黏附性固着器的有柄细胞（*Caulobacter*）。下排：从菌丝顶端出芽的细胞（*Hyphomicrobium*），带有一串磁小体的螺旋形细胞（*Magnetospirillum*），带有极生鞭毛丛的螺旋形细胞（*Helicobacter*），带有胞内硫球的滑行丝状体（*Beggiatoa*），以及猎物细胞旁的小型捕食者 *Bdellovibrio*。](./plots/morphotypes.py)
+![原变形菌中的一些细胞形态（示意图，未按统一比例；名称下为大致尺寸）。上排：具周生鞭毛（*Escherichia*）或单极生鞭毛（*Pseudomonas*）的杆菌、弯曲的杆菌（*Vibrio*）、双球菌（*Neisseria*）和带有黏附性固着器的有柄细胞（*Caulobacter*）。下排：从菌丝顶端出芽的细胞（*Hyphomicrobium*），带有一串磁小体的螺旋形细胞（*Magnetospirillum*），带有极生鞭毛丛的螺旋形细胞（*Helicobacter*），带有胞内硫球的滑行丝状体（*Beggiatoa*），以及猎物细胞旁的小型捕食者 *Bdellovibrio*。](./plots/morphotypes.py)
 
 ## 17.3. α-变形菌纲
 
@@ -154,7 +154,7 @@ I 型**甲烷氧化菌**（*Methylococcus*、*Methylomonas*）通过核酮糖单
 
 ### 17.6.1. 热脱硫杆菌门：硫酸盐与金属还原菌
 
-热脱硫杆菌门（GTDB：Desulfobacterota）包含大多数革兰氏阴性**硫酸盐还原菌**（[7.11.7](/7.11.7#sec-7.3.3)），它们是海洋沉积物（那里硫酸盐丰富）以及缺氧淡水、肠道和油田生境的严格厌氧菌。它们分为两个生理类群：不完全氧化菌如脱硫弧菌（*Desulfovibrio*），氧化乳酸或 $\ce{H2}$ 并排出乙酸；以及完全氧化菌如脱硫杆菌（*Desulfobacter*）和脱硫球菌（*Desulfococcus*），把乙酸氧化为 $\ce{CO2}$。*Desulfovibrio* 促成缺氧土壤中铁管的腐蚀和油井被硫化物弄酸。硫酸盐还原并不限于这个门：形成芽孢的脱硫肠状菌（*Desulfotomaculum*）属于芽孢杆菌门，*Archaeoglobus* 是古菌（[7.11.19](/7.11.19#sec-19.5.3)）。热脱硫杆菌纲（Thermodesulfobacteria）是温泉中嗜热的硫酸盐还原菌，具有醚键（但不是类异戊二烯）的膜脂，门的有效名称即由它而来。
+热脱硫杆菌门（GTDB：Desulfobacterota）包含大多数革兰氏阴性**硫酸盐还原菌**（[7.11.7](/7.11.7#sec-7.3.3)），它们是海洋沉积物（那里硫酸盐丰富）以及缺氧淡水、肠道和油田生境的严格厌氧菌。它们分为两个生理类群：不完全氧化菌如脱硫弧菌（*Desulfovibrio*），氧化乳酸或 $\ce{H2}$ 并排出乙酸；以及完全氧化菌如脱硫杆菌（*Desulfobacter*）和脱硫球菌（*Desulfococcus*），把乙酸氧化为 $\ce{CO2}$。*Desulfovibrio* 促成缺氧土壤中铁管的腐蚀和油井被硫化物酸化。硫酸盐还原并不限于这个门：形成芽孢的脱硫肠状菌（*Desulfotomaculum*）属于芽孢杆菌门，*Archaeoglobus* 是古菌（[7.11.19](/7.11.19#sec-19.5.3)）。热脱硫杆菌纲（Thermodesulfobacteria）是温泉中嗜热的硫酸盐还原菌，具有醚键（但不是类异戊二烯）的膜脂，门的有效名称即由它而来。
 
 地杆菌（*Geobacter*，*G. metallireducens*、*G. sulfurreducens*）和脱硫单胞菌（*Desulfuromonas*）以三价铁或元素硫为受体氧化乙酸。*Geobacter* 通过外膜细胞色素和导电丝（"纳米线"）把电子传递给细胞外的不溶性氧化铁，这是一种**胞外电子传递**，也使它能在微生物燃料电池中产生电流，并把电子直接传给产甲烷菌（[7.11.7](/7.11.7#sec-7.3.4)）。2012 年描述的电缆细菌（*Electrothrix*、*Electronema*，Desulfobulbaceae 科）则走得更远：由数千个细胞构成、长达数厘米的丝状体，从含硫化物的层跨越沉积物直到有氧的表面，沿周质纤维传导电子，从一端的硫化物氧化到另一端的氧还原，于是单个多细胞生物在一厘米的距离上完成氧化还原反应。
 

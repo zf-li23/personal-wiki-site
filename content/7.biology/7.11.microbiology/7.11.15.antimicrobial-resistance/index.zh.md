@@ -167,7 +167,7 @@ Balaban、Merrin、Chait、Kowalik 和 Leibler（2004）在微流控通道中追
 
 对耐药性的选择并不需要抑制野生型的浓度。以 $\psi(c)$ 表示净生长速率随浓度的函数（[7.11.14](/7.11.14#sec-14.3.4)），只要 $\psi_{\mathrm{mut}}(c) > \psi_{\mathrm{wt}}(c)$，耐药突变体就受到青睐。没有药物时，突变体因其适合度代价而生长较慢；随着浓度升高，野生型被拖慢得更多，两条曲线相交。
 
-**定义 15.6.1（最低选择浓度与突变选择窗）** 最低选择浓度（minimal selective concentration），简称 MSC是耐药突变体的净生长速率高于敏感野生型的最低浓度；它低于野生型的 MIC。防突变浓度（mutant prevention concentration），简称 MPC是阻止大群体中最不敏感的单步突变体生长的最低浓度。野生型 MIC 与 MPC 之间的范围是突变选择窗（mutant selection window），其中野生型被抑制而耐药突变体不被抑制（Drlica 和 Zhao，2007）。
+**定义 15.6.1（最低选择浓度与突变选择窗）** 最低选择浓度（minimal selective concentration），简称 MSC，是耐药突变体的净生长速率高于敏感野生型的最低浓度；它低于野生型的 MIC。防突变浓度（mutant prevention concentration），简称 MPC，是阻止大群体中最不敏感的单步突变体生长的最低浓度。野生型 MIC 与 MPC 之间的范围是突变选择窗（mutant selection window），其中野生型被抑制而耐药突变体不被抑制（Drlica 和 Zhao，2007）。
 
 ![浓度对耐药性的选择（[7.11.14](/7.11.14#sec-14.3.4) 的药效学模型；野生型：MIC 1，生长速率每小时 1.0；突变体：MIC 8，10 % 适合度代价；最大杀菌速率每小时 3，Hill 系数 2）。A：净生长速率与选择系数。高于最低选择浓度（MSC，这里为 0.28 × MIC）时突变体受青睐，该浓度远低于野生型 MIC；在 MIC 与防突变浓度（MPC）之间是突变选择窗（红色），只有突变体生长。B 和 C：一室药代动力学（半衰期 2 h，每 8 h 一剂），含 10⁹ 个野生型细胞和 10 个突变体。峰值为 3 × MIC 时，浓度在每个间隔的大部分时间处于窗内，突变体取而代之；峰值为 40 × MIC 时两个群体都被清除](./plots/selection-window.py)
 
