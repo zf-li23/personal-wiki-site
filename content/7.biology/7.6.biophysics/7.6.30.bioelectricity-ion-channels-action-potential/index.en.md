@@ -38,7 +38,7 @@ If all permeant ions were in equilibrium with the same membrane potential while 
 
 ### 30.1.3. The Energetics of the Na⁺/K⁺ Pump
 
-The **Na⁺/K⁺-ATPase** moves three $\ce{Na+}$ out and two $\ce{K+}$ in per ATP hydrolyzed. Because it moves one net positive charge outward per cycle it is **electrogenic**, adding a few millivolts to the resting potential directly; its main contribution is indirect, by maintaining the gradients through which the channels set the potential. Gradients of other ions are maintained by **cotransporters** that use the $\ce{Na+}$ gradient: the $\ce{Na+}/\ce{Ca^2+}$ exchanger (three $\ce{Na+}$ in per $\ce{Ca^2+}$ out) keeps cytoplasmic $\ce{Ca^2+}$ near $100\,\mathrm{nM}$, and the $\ce{K+}/\ce{Cl-}$ **cotransporter** KCC2 lowers intracellular $\ce{Cl-}$ in mature neurons, which makes $\mathrm{GABA_A}$ receptors inhibitory.
+The **Na⁺/K⁺-ATPase** moves three $\ce{Na+}$ out and two $\ce{K+}$ in per ATP hydrolyzed. Because it moves one net positive charge outward per cycle it is **electrogenic**, adding a few millivolts to the resting potential directly; its main contribution is indirect, by maintaining the gradients through which the channels set the potential. Gradients of other ions are maintained by secondary transporters that use the gradients the pump creates: the $\ce{Na+}/\ce{Ca^2+}$ exchanger (three $\ce{Na+}$ in per $\ce{Ca^2+}$ out, driven by the $\ce{Na+}$ gradient) keeps cytoplasmic $\ce{Ca^2+}$ near $100\,\mathrm{nM}$, and the $\ce{K+}/\ce{Cl-}$ **cotransporter** KCC2 (driven by the $\ce{K+}$ gradient) lowers intracellular $\ce{Cl-}$ in mature neurons, which makes $\mathrm{GABA_A}$ receptors inhibitory.
 
 **Example 30.1.2 (Is the pump efficient?)** In the muscle fiber of the table ($V = -90\,\mathrm{mV}$, $37\,{}^\circ\mathrm{C}$), moving three $\ce{Na+}$ out costs $3k_{\mathrm{B}}T\ln(145/12) = 7.5\,k_{\mathrm{B}}T$ against the concentration gradient and $3e\times90\,\mathrm{mV} = 3 \times 90/26.7\,k_{\mathrm{B}}T = 10.1\,k_{\mathrm{B}}T$ against the field. Moving two $\ce{K+}$ in costs $2\ln(155/4) = 7.3\,k_{\mathrm{B}}T$ against the gradient but gains $6.7\,k_{\mathrm{B}}T$ from the field. The total, $18.2\,k_{\mathrm{B}}T$, is to be compared with the free energy of ATP hydrolysis in the cytoplasm, $-\Delta G \approx 50$–$60\,\mathrm{kJ\,mol^{-1}} = 19$–$23\,k_{\mathrm{B}}T$ at $37\,{}^\circ\mathrm{C}$ ([7.6.3](/7.6.3)). The pump works at 80–95 % of its thermodynamic limit, and almost all of its work is spent on sodium, which is far from equilibrium; potassium is nearly at its Nernst potential.
 
@@ -62,7 +62,7 @@ To compute the current through a membrane carrying a potential $V = \varphi_{\ma
 
 **Theorem 30.2.1 (Goldman–Hodgkin–Katz Current Equation)** Under these assumptions the outward **current density** carried by an ion of valence $z$ is
 $$
-I = P\,\frac{z^2\mathrm{e}^2V}{k_{\mathrm{B}}T}\,\frac{c_{\mathrm{in}} - c_{\mathrm{out}}\,\mathrm{e}^{-u}}{1 - \mathrm{e}^{-u}}, \qquad u = \frac{zeV}{k_{\mathrm{B}}T}, \tag{30.3}
+I = P\,\frac{z^2{e}^2V}{k_{\mathrm{B}}T}\,\frac{c_{\mathrm{in}} - c_{\mathrm{out}}\,\mathrm{e}^{-u}}{1 - \mathrm{e}^{-u}}, \qquad u = \frac{zeV}{k_{\mathrm{B}}T}, \tag{30.3}
 $$
 with concentrations in particles per volume and permeability $P = \beta D/d$ for a membrane of thickness $d$. The current vanishes at the Nernst potential, and for several monovalent ions the zero-current potential is
 $$

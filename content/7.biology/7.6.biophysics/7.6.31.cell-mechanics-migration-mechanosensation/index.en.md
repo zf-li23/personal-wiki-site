@@ -11,7 +11,7 @@ The cell biology is in place and is not repeated: the migration cycle, **Rho GTP
 
 ### 31.1.1. Forces and Stiffness in Numbers
 
-The forces of cell mechanics span many decades. A single motor or bond develops a few piconewtons, an adhesion of a fibroblast a few nanonewtons, and the whole cell tens to hundreds of nanonewtons. At the other end, a skeletal muscle develops about $0.3\,\mathrm{MPa}$ of cross-sectional area; since fibers act in parallel, a fiber of $50\,\mu\mathrm{m}$ diameter ($2\times10^{-9}\,\mathrm{m^2}$) produces about $0.6\,\mathrm{mN}$, which is the force of some $10^8$ myosin heads in parallel. Dividing the force of a whole muscle by the number of cells it contains, as if every cell bore an equal share of the load in series, underestimates the force per fiber by orders of magnitude: forces add only over the cross-section.
+The forces of cell mechanics span many decades. A single motor or bond develops a few piconewtons, an adhesion of a fibroblast a few nanonewtons, and the whole cell tens to hundreds of nanonewtons. At the other end, a skeletal muscle develops a stress of about $0.3\,\mathrm{MPa}$ over its cross-section; since fibers act in parallel, a fiber of $50\,\mu\mathrm{m}$ diameter ($2\times10^{-9}\,\mathrm{m^2}$) produces about $0.6\,\mathrm{mN}$, which is the force of some $10^8$ myosin heads in parallel. Dividing the force of a whole muscle by the number of cells it contains, as if every cell bore an equal share of the load in series, underestimates the force per fiber by orders of magnitude: forces add only over the cross-section.
 
 The stiffness of tissues spans eight decades:
 
@@ -206,7 +206,7 @@ For frictionless soft disks at zero temperature the transition occurs at the ran
 | Model | Variables | Strengths | Typical use |
 |---|---|---|---|
 | Particle models (active Brownian disks, Vicsek-type) | position and polarity of each cell | simple, many cells; density effects | jamming, flocking, contact inhibition |
-| **Cellular Potts model** ([7.3.23](/7.3.23)) | lattice sites labelled by cell identity; energy of adhesion and area, Metropolis updates | arbitrary cell shapes, sorting | cell sorting, fingering at invasion fronts, glassy dynamics |
+| **Cellular Potts model** ([7.3.23](/7.3.23)) | lattice sites labeled by cell identity; energy of adhesion and area, Metropolis updates | arbitrary cell shapes, sorting | cell sorting, fingering at invasion fronts, glassy dynamics |
 | Vertex and Voronoi models ([7.5.8](/7.5.8)) | positions of cell vertices or centers; area and perimeter energies | confluent epithelia, shape index, T1 transitions | rigidity transition, tissue folding |
 | Phase-field models | a field $\phi_i(\boldsymbol{r}, t)$ per cell, 1 inside, 0 outside | deformable cells off-lattice, subcellular resolution | collisions, alignment, collective oscillations |
 | Continuum (active-gel, active-nematic) models | density, velocity, polarity or nematic order, stress | large scales, symmetry-based | flows, defects, wound closure, interface instabilities |
