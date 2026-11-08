@@ -18,7 +18,7 @@ Four difficulties follow from the biology.
 - *The spectrum is narrow.* An antibacterial drug may cover dozens of genera; an antiviral drug usually works on one family, because the target enzymes differ. There is no antiviral equivalent of a broad-spectrum antibiotic.
 - *Resistance is certain.* The populations are enormous and the polymerases are error-prone ([7.11.25](/7.11.25#sec-25.2)), so every single-nucleotide change pre-exists somewhere in the population before treatment begins (§28.4).
 
-**Remark 28.1.1** Potency therefore matters more than for antibacterial agents. If an inhibitor leaves even a few per cent of replication intact, that replication is the source of the resistant mutants that will end the treatment; a drug that suppresses replication completely creates no mutants at all, because mutations arise only when a genome is copied.
+**Remark 28.1.1** Potency therefore matters more than for antibacterial agents. If an inhibitor leaves even a few percent of replication intact, that replication is the source of the resistant mutants that will end the treatment; a drug that suppresses replication completely creates no mutants at all, because mutations arise only when a genome is copied.
 
 ## 28.2. Finding an Antiviral Compound
 
@@ -82,7 +82,7 @@ Hence the rules of practice: combine drugs with different targets; prefer drugs 
 
 ## 28.5. Two Success Stories
 
-*HIV-1.* Combination antiretroviral therapy, from 1996, typically two nucleos(t)ide analogues with an integrase inhibitor or a non-nucleoside inhibitor, suppresses plasma virus below the limit of detection indefinitely and restores near-normal life expectancy. It does not cure: the provirus persists in long-lived resting memory CD4⁺ T cells, and virus rebounds within weeks if treatment stops. Suppression also prevents transmission, so treatment is prevention, and the same drugs taken before exposure (pre-exposure prophylaxis) prevent infection in people at risk. Strategies aimed at cure — reactivating latent proviruses so that the cells can be cleared, or excising the provirus — remain experimental; the handful of reported cures followed bone-marrow transplantation for a haematological malignancy, in most cases from a *CCR5*-Δ32 donor, which is not a generalizable procedure.
+*HIV-1.* Combination antiretroviral therapy, from 1996, typically two nucleos(t)ide analogues with an integrase inhibitor or a non-nucleoside inhibitor, suppresses plasma virus below the limit of detection indefinitely and restores near-normal life expectancy. It does not cure: the provirus persists in long-lived resting memory CD4⁺ T cells, and virus rebounds within weeks if treatment stops. Suppression also prevents transmission, so treatment is prevention, and the same drugs taken before exposure (pre-exposure prophylaxis) prevent infection in people at risk. Strategies aimed at cure — reactivating latent proviruses so that the cells can be cleared, or excising the provirus — remain experimental; the handful of reported cures followed bone-marrow transplantation for a hematological malignancy, in most cases from a *CCR5*-Δ32 donor, which is not a generalizable procedure.
 
 *Hepatitis C virus.* HCV is curable, and the sequence of steps from 1989 to that cure is a compact illustration of the whole chapter: identification of the agent by molecular cloning, development of the replicon system to make the replication machinery assayable (Example 28.2.1), structure-based design of inhibitors of the NS3/4A protease, the NS5B polymerase and the NS5A protein, and combination of two or three direct-acting antivirals to raise the barrier to resistance. Sofosbuvir, a nucleotide prodrug targeting NS5B, was the key component. Modern regimens are taken for 8–12 weeks and cure — sustained virological response, meaning no detectable RNA months after the end of treatment — more than 95 % of patients, across genotypes. Cure is possible for HCV and not for HIV-1 or hepatitis B because HCV leaves no archived genome in the cell: there is no provirus and no covalently closed circular DNA ([7.11.25](/7.11.25#sec-25.7)), so when replication is stopped for long enough the infection is gone.
 
@@ -117,7 +117,7 @@ Vaccination exploits the fact that a second encounter with a pathogen is handled
 
 ## 28.7. Adjuvants, Schedules and Evaluation
 
-*Adjuvants* are substances that increase the response to a co-administered antigen. The classical aluminium salts adsorb the antigen and provide a local inflammatory signal; newer adjuvants are deliberate agonists of the pattern recognition receptors of [7.11.27](/7.11.27#sec-27.4) — the TLR4 agonist monophosphoryl lipid A, the TLR9 agonist CpG 1018, and oil-in-water emulsions such as MF59 and AS01. Their function is to supply the second signal that a purified antigen does not carry, which is why inactivated and subunit vaccines need them and live vaccines do not: a replicating virus provides its own.
+*Adjuvants* are substances that increase the response to a co-administered antigen. The classical aluminum salts adsorb the antigen and provide a local inflammatory signal; newer adjuvants are deliberate agonists of the pattern recognition receptors of [7.11.27](/7.11.27#sec-27.4) — the TLR4 agonist monophosphoryl lipid A, the TLR9 agonist CpG 1018, and oil-in-water emulsions such as MF59 and AS01. Their function is to supply the second signal that a purified antigen does not carry, which is why inactivated and subunit vaccines need them and live vaccines do not: a replicating virus provides its own.
 
 Evaluation follows the clinical trial sequence of [7.7.18](/7.7.18), with one definition particular to vaccines. *Vaccine efficacy* is the relative reduction in the incidence of disease in the vaccinated arm,
 
@@ -127,7 +127,7 @@ $$
 
 estimated in a randomized trial; *vaccine effectiveness* is the same quantity measured observationally after licensing, where confounding has to be handled ([7.7.15](/7.7.15)). Efficacy depends on the endpoint — against infection, against symptomatic disease, against severe disease — and these can differ by a great deal for the same vaccine, so the endpoint must always be stated.
 
-A *correlate of protection* is a measurable immune response, usually a neutralizing antibody titre, that predicts protection well enough to license a vaccine without a new efficacy trial. Where one is established — as for hepatitis B, where an anti-HBs concentration above $10\,\mathrm{mIU\,ml^{-1}}$ suffices — it shortens development enormously; where protection depends on T cells or on mucosal immunity, no simple correlate exists and clinical endpoints are unavoidable.
+A *correlate of protection* is a measurable immune response, usually a neutralizing antibody titer, that predicts protection well enough to license a vaccine without a new efficacy trial. Where one is established — as for hepatitis B, where an anti-HBs concentration above $10\,\mathrm{mIU\,ml^{-1}}$ suffices — it shortens development enormously; where protection depends on T cells or on mucosal immunity, no simple correlate exists and clinical endpoints are unavoidable.
 
 ## 28.8. Herd Immunity and Eradication
 
@@ -145,7 +145,7 @@ Three conditions make a virus a candidate for *eradication*: humans must be the 
 
 ## 28.9. What Vaccines Have Achieved, and Where They Fail
 
-Vaccination has removed several of the commonest causes of childhood death. Measles deaths worldwide fell by close to 90 % between 2000 and 2024, from some 800 000 a year to under 100 000; hepatitis B vaccination, given at birth, has reduced chronic infection in vaccinated cohorts to below 1 % in countries where carriage was formerly 8–10 %, and with it the incidence of hepatocellular carcinoma — the first vaccine shown to prevent a human cancer. HPV vaccination has reduced infection with the targeted types by about 90 % in vaccinated cohorts and is already reducing the incidence of cervical precancer, with national programmes aiming at elimination of cervical cancer as a public-health problem.
+Vaccination has removed several of the commonest causes of childhood death. Measles deaths worldwide fell by close to 90 % between 2000 and 2024, from some 800 000 a year to under 100 000; hepatitis B vaccination, given at birth, has reduced chronic infection in vaccinated cohorts to below 1 % in countries where carriage was formerly 8–10 %, and with it the incidence of hepatocellular carcinoma — the first vaccine shown to prevent a human cancer. HPV vaccination has reduced infection with the targeted types by about 90 % in vaccinated cohorts and is already reducing the incidence of cervical precancer, with national programs aiming at elimination of cervical cancer as a public-health problem.
 
 Two viruses have resisted vaccination for decades, and the reasons are instructive.
 
