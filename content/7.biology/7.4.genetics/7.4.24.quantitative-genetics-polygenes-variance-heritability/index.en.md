@@ -423,12 +423,15 @@ Heritability is population- and environment-specific, describes variation and no
 15. The heights (cm) of ten plants of an $\mathrm{F}_1$ are $20, 22, 23, 25, 25, 26, 27, 28, 30, 34$. Compute the mean, the sample variance, the standard deviation, the standard error of the mean and the coefficient of variation. Which of these estimates $V_E$?
 
     **Answer** $\bar x = 260/10 = 26.0$; $\sum(x_i - \bar x)^2 = 36 + 16 + 9 + 1 + 1 + 0 + 1 + 4 + 16 + 64 = 148$, so $s^2 = 148/9 = 16.4\,\mathrm{cm^2}$, $s = 4.06\,\mathrm{cm}$, $\mathrm{SE} = 4.06/\sqrt{10} = 1.28\,\mathrm{cm}$, $\mathrm{CV} = 15.6\,\%$. The $\mathrm{F}_1$ of two inbred lines is genetically uniform, so $s^2$ estimates $V_E$.
+
 16. For a cross of two inbred lines, the variances of grain weight are $V_{P_1} = 3.2$, $V_{P_2} = 2.8$, $V_{F_1} = 3.0$, $V_{F_2} = 12.0$, $V_{B_1} = 9.0$ and $V_{B_2} = 8.4$. Estimate $H^2$ and $h^2$ in the $\mathrm{F}_2$, and $V_D$. Classify the heritability.
 
     **Answer** $\hat V_E = (3.2 + 2.8 + 3.0)/3 = 3.0$, $\hat V_G = 9.0$, $\hat H^2 = 0.75$. $\hat V_A = 2 \times 12.0 - 17.4 = 6.6$ (Formula 24.3.1), $\hat h^2 = 6.6/12 = 0.55$, high by the breeders' convention. $\hat V_D = 9.0 - 6.6 = 2.4$. Check: $V_{B_1} + V_{B_2}$ should be $V_A + 2V_D + 2V_E = 6.6 + 4.8 + 6.0 = 17.4$, as observed (the check is not independent: three equations, three unknowns).
+
 17. Two inbred maize lines yield $6.0$ and $5.0\,\mathrm{t\,ha^{-1}}$ and their $\mathrm{F}_1$ $9.0\,\mathrm{t\,ha^{-1}}$. Assuming that heterosis is due to dominance at loci where the lines are fixed for different alleles, predict the mean yield of the $\mathrm{F}_2$ and of the $\mathrm{F}_3$ obtained by self-fertilization. Why do farmers buy new hybrid seed every year?
 
     **Answer** Mid-parent $5.5$; $\mathrm{F}_1$ heterosis $3.5$. The $\mathrm{F}_2$ keeps half of it: $5.5 + 1.75 = 7.25$; the selfed $\mathrm{F}_3$ a quarter: $5.5 + 0.875 = 6.375\,\mathrm{t\,ha^{-1}}$ (Remark 24.7.1). Seed saved from a hybrid crop is an $\mathrm{F}_2$, which yields less and is variable, because the **heterozygosity** of the $\mathrm{F}_1$ is lost by segregation.
+
 18. In the wheat cross of Example 24.3.2, the breeder selects the tallest 20 % of the $\mathrm{F}_2$ plants and intercrosses them at random. Predict the response, and explain why the prediction based on $H^2$ would be too optimistic.
 
     **Answer** $\sigma_P = \sqrt{40} = 6.32\,\mathrm{cm}$, $i = 1.40$ for $p = 0.2$ (Example 24.5.1), $S = 8.85\,\mathrm{cm}$. $R = h^2 S = 0.45 \times 8.85 = 4.0\,\mathrm{cm}$. Using $H^2 = 0.75$ would predict $6.6\,\mathrm{cm}$, but the dominance part of the genetic superiority of the selected plants is not transmitted by their gametes (Example 24.3.1).

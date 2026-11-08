@@ -89,7 +89,7 @@ $$
 t = \frac{1}{\ln(1 + s)}\,\ln\frac{p_tq_0}{p_0q_t} \approx \frac1s\ln\frac{p_tq_0}{p_0q_t}. \tag{23.6}
 $$
 
-**Example 23.3.1** An allele with $s = 0.01$ goes from $p = 0.01$ to $0.99$ in $\ln(0.99^2/0.01^2)/\ln 1.01 = 9.19/0.00995 = 924$ generations: selection of $1\,\%$, invisible in any field study, changes a population completely in about 25 000 years of human generations. The trajectory is the logistic curve $p_t = 1/(1 + \mathrm{e}^{-s(t - t_{1/2})})$, the solution of the continuous approximation $\mathrm{d}p/\mathrm{d}t = spq$ ([2.4](/2.4)).
+**Example 23.3.1** An allele with $s = 0.01$ goes from $p = 0.01$ to $0.99$ in $\ln(0.99^2/0.01^2)/\ln 1.01 = 9.19/0.00995 = 924$ generations: selection of $1\,\%$, invisible in any field study, changes a population completely in about 23 000 years of human generations. The trajectory is the logistic curve $p_t = 1/(1 + \mathrm{e}^{-s(t - t_{1/2})})$, the solution of the continuous approximation $\mathrm{d}p/\mathrm{d}t = spq$ ([2.4](/2.4)).
 
 **Formula 23.3.3 (Selection Against a Recessive Lethal)** If $aa$ has fitness $0$ and $AA$ and $Aa$ fitness $1$, then
 
@@ -226,7 +226,7 @@ Real populations differ from the Wright–Fisher ideal: the sexes are unequal in
 | sizes $N_1, \dots, N_t$ over $t$ generations | harmonic mean $\left(\dfrac1t\sum_i \dfrac{1}{N_i}\right)^{-1}$ |
 | variance $V_k$ of the number of gametes contributed per individual (mean 2), constant $N$ | $\dfrac{4N - 2}{V_k + 2}$ |
 
-The first follows because each gene copy comes with probability $1/2$ from a father and $1/2$ from a mother, so two copies share a parental copy with probability $\tfrac14\cdot\tfrac{1}{2N_m} + \tfrac14\cdot\tfrac{1}{2N_f}$ times 2 (same sex) $= \tfrac18(1/N_m + 1/N_f) = 1/(2N_e)$; the second because the heterozygosity retained is $\prod(1 - 1/2N_i) \approx \exp(-\sum 1/2N_i)$; the third is Wright's, and gives $N_e = N$ for Poisson offspring numbers ($V_k = 2$) and up to $2N$ when every individual contributes exactly two gametes.
+The first follows because each gene copy comes with probability $1/2$ from a father and $1/2$ from a mother, so two copies share a parental copy with probability $\tfrac14\cdot\tfrac{1}{2N_m} + \tfrac14\cdot\tfrac{1}{2N_f} = \tfrac18(1/N_m + 1/N_f) = 1/(2N_e)$; the second because the heterozygosity retained is $\prod(1 - 1/2N_i) \approx \exp(-\sum 1/2N_i)$; the third is Wright's, and gives $N_e = N$ for Poisson offspring numbers ($V_k = 2$) and up to $2N$ when every individual contributes exactly two gametes.
 
 **Example 23.5.1** A herd of 10 breeding males and 100 females has $N_e = 4 \cdot 10 \cdot 100/110 = 36$, not 110; with 10 males and 40 females, $N_e = 32$. A population of 1000 that passes through a bottleneck of 10 individuals for one generation and recovers has, over four generations of sizes 1000, 10, 1000, 1000, $N_e = 4/(3/1000 + 1/10) = 39$: the harmonic mean is dominated by the smallest size.
 
@@ -264,7 +264,7 @@ $$
 u(p) = \frac{1 - \mathrm{e}^{-4N_esp}}{1 - \mathrm{e}^{-4N_es}}. \tag{23.13}
 $$
 
-For a new mutation ($p = 1/2N$) with $N_e = N$: $u \approx 1/2N$ when $|4Ns| \ll 1$; $u \approx 2s$ when $4Ns \gg 1$ (Haldane 1927); and $u \approx 4|s|\mathrm{e}^{-4N|s|}$ for a deleterious allele with $4N|s| \gg 1$.
+For a new mutation ($p = 1/2N$) with $N_e = N$: $u \approx 1/2N$ when $|4Ns| \ll 1$; $u \approx 2s$ when $4Ns \gg 1$ (Haldane 1927); and $u \approx 2|s|\mathrm{e}^{-4N|s|}$ for a deleterious allele with $4N|s| \gg 1$.
 
 The formula is derived from the diffusion approximation of the Wright–Fisher model (Kimura 1962); we use it without proof. The limits follow by expansion: for small $4N_es$ both numerator and denominator are linear and $u \to p$; for a new mutation with $4Ns \gg 1$ the denominator is about 1 and the numerator $1 - \mathrm{e}^{-2s} \approx 2s$.
 
@@ -400,7 +400,7 @@ Darwin's theory rests on three principles that **population genetics** makes qua
 
 15. (Open question.) A population of 5000 has a deleterious recessive allele at frequency $0.01$. It is split into 50 isolated populations of 100. Describe what happens to (a) the frequency of affected individuals in the short term, (b) the allele frequency in each subpopulation in the long term, (c) the mean fitness of the subpopulations.
 
-    **Answer** (a) Initially, nothing changes; then drift raises homozygosity within subpopulations at rate $1/2N = 0.005$ per generation ($F_t \approx t/200$ at first), so affected individuals increase from $q^2 = 10^{-4}$ toward $q^2 + Fpq$, an increase of about $0.0005$ per $10\,\%$ of $F$ (inbreeding within small populations). (b) In each subpopulation $q$ drifts: by Theorem 23.5.1 the allele is eventually lost in most subpopulations and fixed in about $1\,\%$ of them if neutral; selection against homozygotes ($s$ relative to $1/2N$) makes loss more likely and purges the allele when it becomes common (purging). (c) Mean fitness falls at first (**inbreeding depression**), then may partly recover by purging; subpopulations in which the allele drifts to fixation suffer a permanent load, the main reason why conservation genetics tries to keep $N_e$ above a few hundred and to maintain some gene flow ($Nm \geq 1$).
+    **Answer** (a) Initially, nothing changes; then drift raises homozygosity within subpopulations at rate $1/2N = 0.005$ per generation ($F_t \approx t/200$ at first), so affected individuals increase from $q^2 = 10^{-4}$ toward $q^2 + Fpq$, an increase of about $0.001$ per $0.1$ of $F$ (inbreeding within small populations). (b) In each subpopulation $q$ drifts: by Theorem 23.5.1 the allele is eventually lost in most subpopulations and fixed in about $1\,\%$ of them if neutral; selection against homozygotes ($s$ relative to $1/2N$) makes loss more likely and purges the allele when it becomes common (purging). (c) Mean fitness falls at first (**inbreeding depression**), then may partly recover by purging; subpopulations in which the allele drifts to fixation suffer a permanent load, the main reason why conservation genetics tries to keep $N_e$ above a few hundred and to maintain some gene flow ($Nm \geq 1$).
 
 16. In an industrial area, the frequency of melanic peppered moths (dominant) rose from $36\,\%$ to $51\,\%$ in one generation. Assuming Hardy–Weinberg proportions among zygotes and selection only against the light recessive phenotype, estimate the selection coefficient against *typica*.
 
