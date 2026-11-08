@@ -1,7 +1,7 @@
 ---
 title: 数值线性代数
 description: 线性方程组、最小二乘问题和特征值问题在计算机上的解法：带选主元的 LU 分解与 Cholesky 分解，投影算子，Gram–Schmidt、Householder 与 Givens 三种 QR 分解，奇异值分解及其应用，幂迭代法与 Schur 形，以及它们的运算量与稳定性。
-source_hash: 018008fead6d
+source_hash: 7ad17d3ef16a
 ---
 
 几乎所有统计计算最终都落到线性代数上：回归拟合要解一个**最小二乘**问题，Gauss 似然需要协方差矩阵的行列式和逆矩阵的二次型，主成分是特征向量，[3.5.5](/3.5.5) 的每一步牛顿迭代都要解一个线性方程组。这些问题的理论已在线性代数（[2.1](/2.1)）中建立：**LU 分解**见 [2.1.2](/2.1.2)，正交性与 **QR 分解**见 [2.1.4](/2.1.4)，特征值见 [2.1.6](/2.1.6)，**Cholesky 分解**与**奇异值分解**见 [2.1.7](/2.1.7)，Jordan 形与 Schur 形见 [2.1.10](/2.1.10) 和 [2.1.12](/2.1.12)。本章把同样的分解当作算法来看：怎样计算，要多少次浮点运算，舍入误差（[3.5.1](/3.5.1)）如何在其中传播。全章按三个基本问题分为三部分：线性方程组 $A\boldsymbol{x}=\boldsymbol{b}$（Gauss 消元、选主元、Cholesky 分解），最小二乘问题 $A\boldsymbol{x}\approx\boldsymbol{b}$（投影算子、计算 QR 分解的三种方法、奇异值分解），特征值问题 $A\boldsymbol{x}=\lambda\boldsymbol{x}$（幂迭代法与揭示特征值的分解）。贯穿始终的原则是：没有最好的算法，只有最适合手头问题的算法——速度、稳定性和适用范围往往相互牵制。文中反复使用的 R 函数 `solve`、`chol`、`qr`、`svd`、`eigen` 调用的是 LINPACK 和 LAPACK 中实现下述算法的子程序。
@@ -38,7 +38,7 @@ $$
 
 ### 3.1.2. 三角方程组
 
-设 $A\in\mathbb{C}^{m\times m}$ 可逆，于是 $A\boldsymbol{x}=\boldsymbol{b}$ 有唯一解 $\boldsymbol{x}=A^{-1}\boldsymbol{b}$。显式求出 $A^{-1}$ 再相乘既浪费（工作量约为下述方法的三倍）又不够精确；Cramer 法则 $x_j=\det A_j/\det A$ 代价更高。关键的观察是：三角方程组很容易解。若 $L$ 是下三角矩阵，$L\boldsymbol{x}=\boldsymbol{b}$ 可用前代法（forward substitution）依次求出 $x_1,x_2,\dots$；若 $U$ 是上三角矩阵，$U\boldsymbol{x}=\boldsymbol{b}$ 可用回代法（back substitution）从 $x_m$ 向上求解：
+设 $A\in\mathbb{C}^{m\times m}$ 可逆，于是 $A\boldsymbol{x}=\boldsymbol{b}$ 有唯一解 $\boldsymbol{x}=A^{-1}\boldsymbol{b}$。显式求出 $A^{-1}$ 再相乘既浪费（工作量约为下述方法的三倍）又不够精确；Cramer 法则 $x_j=\det A_j/\det A$ 代价更高。关键的观察是：三角方程组很容易解。若 $L$ 是下三角矩阵，$L\boldsymbol{x}=\boldsymbol{b}$ 可用**前代法**依次求出 $x_1,x_2,\dots$；若 $U$ 是上三角矩阵，$U\boldsymbol{x}=\boldsymbol{b}$ 可用**回代法**从 $x_m$ 向上求解：
 
 $$
 x_i=\frac1{l_{ii}}\Bigl(b_i-\sum_{j<i}l_{ij}x_j\Bigr),\qquad x_i=\frac1{u_{ii}}\Bigl(b_i-\sum_{j>i}u_{ij}x_j\Bigr).

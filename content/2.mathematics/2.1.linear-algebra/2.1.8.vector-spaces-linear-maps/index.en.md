@@ -33,7 +33,7 @@ In the language of algebraic systems, the first four axioms say that $(V,+)$ is 
 1. the zero vector is unique;
 2. the negative of each vector is unique;
 3. cancellation: $a+b=a+c$ implies $b=c$;
-4. transposition: $a+b=c$ implies $a=c-b$;
+4. moving a term: $a+b=c$ implies $a=c-b$;
 5. $0a=0$, $(-1)a=-a$, $k0=0$;
 6. cancelling a scalar: $ka=b$ with $k\neq0$ implies $a=\frac1kb$.
 

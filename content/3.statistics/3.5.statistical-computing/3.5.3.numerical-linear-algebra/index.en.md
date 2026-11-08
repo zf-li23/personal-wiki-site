@@ -37,7 +37,7 @@ This invariance is why algorithms built from orthogonal transformations (QR, SVD
 
 ### 3.1.2. Triangular Systems
 
-Assume $A\in\mathbb{C}^{m\times m}$ is nonsingular, so that $A\boldsymbol{x}=\boldsymbol{b}$ has the unique solution $\boldsymbol{x}=A^{-1}\boldsymbol{b}$. Computing $A^{-1}$ explicitly and multiplying is wasteful (about three times the work of the method below) and less accurate; Cramer's rule $x_j=\det A_j/\det A$ is even more expensive. The key observation is that triangular systems are trivial. If $L$ is lower triangular, $L\boldsymbol{x}=\boldsymbol{b}$ is solved by *forward substitution*, computing $x_1,x_2,\dots$ in turn; if $U$ is upper triangular, $U\boldsymbol{x}=\boldsymbol{b}$ is solved by *back substitution*, from $x_m$ upwards:
+Assume $A\in\mathbb{C}^{m\times m}$ is nonsingular, so that $A\boldsymbol{x}=\boldsymbol{b}$ has the unique solution $\boldsymbol{x}=A^{-1}\boldsymbol{b}$. Computing $A^{-1}$ explicitly and multiplying is wasteful (about three times the work of the method below) and less accurate; Cramer's rule $x_j=\det A_j/\det A$ is even more expensive. The key observation is that triangular systems are trivial. If $L$ is lower triangular, $L\boldsymbol{x}=\boldsymbol{b}$ is solved by **forward substitution**, computing $x_1,x_2,\dots$ in turn; if $U$ is upper triangular, $U\boldsymbol{x}=\boldsymbol{b}$ is solved by **back substitution**, from $x_m$ upwards:
 
 $$
 x_i=\frac1{l_{ii}}\Bigl(b_i-\sum_{j<i}l_{ij}x_j\Bigr),\qquad x_i=\frac1{u_{ii}}\Bigl(b_i-\sum_{j>i}u_{ij}x_j\Bigr).
