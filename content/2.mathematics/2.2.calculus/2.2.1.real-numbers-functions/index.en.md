@@ -1,6 +1,6 @@
 ---
 title: Real Numbers and Functions
-source_hash: c4dc08ba9383
+source_hash: e86b20907530
 ---
 
 Calculus studies functions defined on the set of real numbers, and its tool is the limit. This chapter lays two foundations. The first is the structure of the real line, in particular intervals, neighborhoods and suprema: the least-upper-bound property expresses that the real numbers have "no gaps," and it is the source of every existence theorem for limits in the next chapter. The second is a review of the basic notions of functions, their common properties and the elementary functions used throughout the course. Much of this material is treated more generally in discrete mathematics: the construction of the **real numbers** is in [1.2.4](/1.2.4#sec-4.1); functions as relations, injections and surjections, and inverse functions are in [1.2.3](/1.2.3); the **supremum** in a poset is in [1.2.2](/1.2.2#def-2.8.6). Here we restate these ideas on $\mathbb{R}$ in the language of calculus and add the facts that analysis needs.

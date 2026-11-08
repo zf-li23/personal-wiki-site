@@ -675,7 +675,7 @@ $$
 
 **例 2.4.7** 设 $x \in \mathbb{R}$，求 $\lim\limits_{n \to \infty} \underbrace{\sin\sin\cdots\sin}_{n \text{ 重}} x$。
 
-**解** 记 $a_n$ 为 $n$ 重复合，$a_n = \sin a_{n-1}$。若 $0 < x \leq \pi$，则 $a_1 = \sin x \in (0, 1]$，由 $0 < \sin t < t$（$t > 0$）归纳得 $0 < a_n < a_{n-1}$，$\{a_n\}$ 单调减少且有下界 $0$，收敛于某个 $\alpha \geq 0$。由 Heine 定理与 $\lim\limits_{t \to \alpha} \sin t = \sin\alpha$，在 $a_n = \sin a_{n-1}$ 两边取极限得 $\alpha = \sin\alpha$，只能 $\alpha = 0$。$\pi < x < 2\pi$ 时 $a_1 \in [-1, 0)$，由奇函数性同理 $a_n \to 0$；$x = k\pi$ 时 $a_n \equiv 0$。再由周期性，对一切 $x$ 极限都是 $0$。
+**解** 记 $a_n$ 为 $n$ 重复合，$a_n = \sin a_{n-1}$。若 $0 < x < \pi$，则 $a_1 = \sin x \in (0, 1]$，由 $0 < \sin t < t$（$t > 0$）归纳得 $0 < a_n < a_{n-1}$，$\{a_n\}$ 单调减少且有下界 $0$，收敛于某个 $\alpha \geq 0$。由 Heine 定理与 $\lim\limits_{t \to \alpha} \sin t = \sin\alpha$，在 $a_n = \sin a_{n-1}$ 两边取极限得 $\alpha = \sin\alpha$，只能 $\alpha = 0$。$\pi < x < 2\pi$ 时 $a_1 \in [-1, 0)$，由奇函数性同理 $a_n \to 0$；$x = k\pi$ 时 $a_n \equiv 0$。再由周期性，对一切 $x$ 极限都是 $0$。
 
 ## 2.5. 无穷小量与阶的比较
 

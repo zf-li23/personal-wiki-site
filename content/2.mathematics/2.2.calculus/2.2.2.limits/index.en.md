@@ -1,6 +1,6 @@
 ---
 title: Limits
-source_hash: "90887e125933"
+source_hash: 8e778177ec7b
 ---
 
 The limit is the basic language of calculus: a derivative is the limit of difference quotients, a definite integral is the limit of sums, and the sum of a series is the limit of its partial sums. This chapter begins with the simplest case, the limit of a sequence, and uses the $\varepsilon$-$N$ language to make "arbitrarily close" precise; it establishes the properties of limits, the arithmetic rules and several existence theorems (the squeeze theorem, the monotone convergence theorem and the Cauchy criterion). It then extends these results to the six kinds of limit processes for functions and proves the two fundamental limits. Finally, it compares how fast limit processes proceed by means of orders of infinitesimals, which leads to the most commonly used technique for computing limits, the substitution of equivalent infinitesimals.
@@ -676,7 +676,7 @@ $$
 
 **Example 2.4.7** For $x \in \mathbb{R}$, find $\lim\limits_{n \to \infty} \underbrace{\sin\sin\cdots\sin}_{n \text{ times}} x$.
 
-**Solution** Let $a_n$ denote the $n$-fold composite, so that $a_n = \sin a_{n-1}$. If $0 < x \leq \pi$, then $a_1 = \sin x \in (0, 1]$, and from $0 < \sin t < t$ ($t > 0$) induction gives $0 < a_n < a_{n-1}$; thus $\{a_n\}$ is strictly decreasing and bounded below by $0$, and it converges to some $\alpha \geq 0$. By Heine's theorem and $\lim\limits_{t \to \alpha} \sin t = \sin\alpha$, taking limits on both sides of $a_n = \sin a_{n-1}$ gives $\alpha = \sin\alpha$, which forces $\alpha = 0$. If $\pi < x < 2\pi$, then $a_1 \in [-1, 0)$, and since $\sin$ is odd, again $a_n \to 0$; if $x = k\pi$, then $a_n \equiv 0$. By periodicity, the limit is $0$ for every $x$.
+**Solution** Let $a_n$ denote the $n$-fold composite, so that $a_n = \sin a_{n-1}$. If $0 < x < \pi$, then $a_1 = \sin x \in (0, 1]$, and from $0 < \sin t < t$ ($t > 0$) induction gives $0 < a_n < a_{n-1}$; thus $\{a_n\}$ is strictly decreasing and bounded below by $0$, and it converges to some $\alpha \geq 0$. By Heine's theorem and $\lim\limits_{t \to \alpha} \sin t = \sin\alpha$, taking limits on both sides of $a_n = \sin a_{n-1}$ gives $\alpha = \sin\alpha$, which forces $\alpha = 0$. If $\pi < x < 2\pi$, then $a_1 \in [-1, 0)$, and since $\sin$ is odd, again $a_n \to 0$; if $x = k\pi$, then $a_n \equiv 0$. By periodicity, the limit is $0$ for every $x$.
 
 ## 2.5. Infinitesimals and Comparison of Orders
 
