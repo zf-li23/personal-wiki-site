@@ -4,8 +4,8 @@
 #    with no threshold. A target that needs two hits gives 1 - exp(-x)(1 + x), quadratic at low dose.
 #    Dose in units of 1/sigma.
 # B: thermal stability (Schroedinger's table): a configuration separated from its neighbours by a barrier W
-#    survives on average tau = tau0 exp(W / kBT), tau0 = 1e-14 s; W/kBT = 30, 50, 60 give 0.1 s, 16 months and
-#    about 30 000 years.
+#    survives on average tau = tau0 exp(W / kBT), tau0 = 1e-14 s; W/kBT = 30, 50, 60 give 0.1 s, about 20 months and
+#    about 36 000 years (Schroedinger quoted 16 months and 30 000 years).
 # C: the sqrt(N) rule: a system of N independent particles fluctuates by about 1/sqrt(N); for a gene of about
 #    1000 atoms treated as a little gas this is 3 %, far larger than observed mutation rates (about 1e-5 to 1e-8
 #    per gene per generation), so the order of the gene cannot be statistical.
@@ -35,7 +35,7 @@ ax = axs[1]
 w = np.linspace(20, 70, 300)
 tau = 1e-14 * np.exp(w)
 ax.semilogy(w, tau, color=charts.line("protein"), lw=1.9)
-marks = [(30, "0.1 s"), (50, "16 months"), (60, "30 000 yr")]
+marks = [(30, "0.1 s"), (50, "20 months"), (60, "36 000 yr")]
 for ww, txt in marks:
     tt = 1e-14 * np.exp(ww)
     ax.plot([ww], [tt], "o", color=charts.line("protein"), ms=5)
