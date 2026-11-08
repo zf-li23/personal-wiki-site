@@ -1,16 +1,16 @@
 ---
 title: Principles of Respiration and Pulmonary Ventilation
 description: Why aerobic respiration is needed; the relay of bulk flow and diffusion; partial pressure, Henry's law and Fick's law; water and air as respiratory media (human versus tuna); the maximum radius of a diffusion-limited organism; tidal and unidirectional ventilation, and the efficiency of concurrent, countercurrent, crosscurrent and pool exchangers (analytical solutions); respiratory muscles, alveolar pressure, intrapleural pressure and transpulmonary pressure; lung compliance, airway resistance and the work of breathing; lung volumes and capacities, forced expiration; anatomical and physiological dead space, alveolar ventilation; renewal of alveolar gas and the alveolar gas equation; evolution and comparison of skin, gills, lungs and tracheae, ram ventilation, the buccal pump, avian air sacs and parabronchi, the insect tracheal system and Paleozoic giant insects.
-source_hash: 7905de961f15
+source_hash: 329d9d0cf53a
 ---
 
-Every cell of an animal must continuously receive $\ce{O2}$ and discharge $\ce{CO2}$. At the micrometer scale diffusion is sufficient for this; at the centimeter scale it falls far short: a large animal must use a respiratory organ to bring the external medium (water or air) to a thin, extensive exchange membrane, and a circulatory system to bring blood to the other side of the membrane. This chapter is the general introduction to the respiratory system. We first explain why respiration is needed, what physical laws govern gas exchange (Sections 17.1 and 17.2), how the two media, water and air, impose different constraints on the design of an exchanger, and how the efficiencies of countercurrent, crosscurrent and other modes of exchange compare (Section 17.3); then we describe how the human lung draws air in and out: the respiratory muscles and the pleural cavity, the elasticity of the lung and airway resistance (Section 17.4), how ventilation is measured by lung volumes and ventilatory flows (Section 17.5), and how ventilation determines the composition of alveolar gas (Section 17.6). Finally we compare the respiratory organs and modes of ventilation of fishes, amphibians, birds and insects (Section 17.7). The structure of the alveolus, surface tension and the pulmonary circulation are the subject of Chapter 18, gas exchange in lung and tissue and gas transport in blood are Chapter 19, and neural control of breathing is Chapter 20. Lung development is in [7.5.30](/7.5.30), and the general account of the circulatory system is in Chapter 12.
+Every cell of an animal must continuously receive $\ce{O2}$ and discharge $\ce{CO2}$. At the micrometer scale diffusion is sufficient for this; at the centimeter scale it falls far short: a large animal must use a respiratory organ to bring the external medium (water or air) to a thin, extensive exchange membrane, and a circulatory system to bring blood to the other side of the membrane. This chapter is the general introduction to the respiratory system. We first explain why respiration is needed, what physical laws govern gas exchange (Sections 17.1 and 17.2), how the two media, water and air, impose different constraints on the design of an exchanger, and how the efficiencies of countercurrent, crosscurrent and other modes of exchange compare (Section 17.3); then we describe how the human lung draws air in and out: the respiratory muscles and the pleural cavity, the elasticity of the lung and airway resistance (Section 17.4), how ventilation is measured by lung volumes and ventilatory flows (Section 17.5), and how ventilation determines the composition of alveolar gas (Section 17.6). Finally we compare the respiratory organs and modes of ventilation of fishes, amphibians, birds and insects (Section 17.7). The structure of the **alveolus**, surface tension and the **pulmonary circulation** are the subject of Chapter 18, gas exchange in lung and tissue and gas transport in blood are Chapter 19, and neural control of breathing is Chapter 20. Lung development is in [7.5.30](/7.5.30), and the general account of the circulatory system is in Chapter 12.
 
 ## 17.1. Why a Respiratory System Is Needed
 
 ### 17.1.1. The Demand of Aerobic Metabolism
 
-The basic way animals obtain energy is to oxidize organic compounds and store the released free energy in ATP ([7.1.16](/7.1.16)). Aerobic oxidation with $\ce{O2}$ as the final electron acceptor (**oxidative phosphorylation**, [7.1.23](/7.1.23)) yields about 30 ATP per glucose molecule, whereas anaerobic glycolysis yields only 2 ([7.1.18](/7.1.18)). A high metabolic rate, many systems working at once, continuous growth and repair, and sophisticated neural activity all rest on the high yield of aerobic metabolism; in hypoxia cells can only fall back on inefficient anaerobic metabolism, barely enough to sustain basic survival. The human brain makes up 2% of body weight and consumes about 20% of resting oxygen uptake; consciousness is lost within seconds of interruption of cerebral blood flow, and irreversible damage begins within minutes.
+The basic way animals obtain energy is to oxidize organic compounds and store the released free energy in ATP ([7.1.16](/7.1.16)). Aerobic oxidation with $\ce{O2}$ as the final electron acceptor (**oxidative phosphorylation**, [7.1.23](/7.1.23)) yields about 30 ATP per glucose molecule, whereas anaerobic **glycolysis** yields only 2 ([7.1.18](/7.1.18)). A high metabolic rate, many systems working at once, continuous growth and repair, and sophisticated neural activity all rest on the high yield of aerobic metabolism; in hypoxia cells can only fall back on inefficient anaerobic metabolism, barely enough to sustain basic survival. The human brain makes up 2% of body weight and consumes about 20% of resting oxygen uptake; consciousness is lost within seconds of interruption of cerebral blood flow, and irreversible damage begins within minutes.
 
 Neither $\ce{O2}$ nor $\ce{CO2}$ can be stored in large amounts in the body: the human $\ce{O2}$ reserve (gas in the lungs, oxygen bound to hemoglobin and myoglobin, dissolved oxygen) totals about $1.5\,\mathrm{L}$, enough for only about 6 minutes at a resting oxygen uptake of $250\,\mathrm{mL\,min^{-1}}$. Gas exchange must therefore proceed without interruption throughout life.
 
@@ -20,16 +20,16 @@ The consumption of $\ce{O2}$ by mitochondria within cells is called **cellular r
 
 ### 17.1.2. The Relay of Bulk Flow and Diffusion
 
-$\ce{O2}$ travels from the air to the mitochondria in four steps, alternating two modes of transport:
+$\ce{O2}$ travels from the air to the **mitochondria** in four steps, alternating two modes of transport:
 
 | Step | Mode of transport | Driving force | Structure in the human body |
 |---|---|---|---|
 | 1. Ventilation | Bulk flow (convection) | Pressure difference produced by respiratory muscles | Airways, alveoli |
-| 2. Pulmonary gas exchange | Diffusion | Partial pressure difference of $\ce{O2}$ | Respiratory membrane (about $0.6\,\mathrm{\mu m}$ thick) |
+| 2. Pulmonary gas exchange | Diffusion | Partial pressure difference of $\ce{O2}$ | **Respiratory membrane** (about $0.6\,\mathrm{\mu m}$ thick) |
 | 3. Transport in blood | Bulk flow | Pressure difference produced by the heart | Circulatory system, hemoglobin |
 | 4. Tissue gas exchange | Diffusion | Partial pressure difference | Capillary wall, interstitium (a few to tens of micrometers) |
 
-Bulk flow covers long distances quickly, and diffusion is responsible only for the last short distance (Chapter 12, Section 12.1.1: diffusion time $\propto$ distance squared). $\ce{CO2}$ travels the same path in the opposite direction. The transport capacity of every link in the chain must match the metabolic rate: in exercise oxygen consumption can increase more than tenfold, and ventilation, cardiac output and tissue $\ce{O2}$ extraction must all increase accordingly.
+Bulk flow covers long distances quickly, and diffusion is responsible only for the last short distance (Chapter 12, Section 12.1.1: diffusion time $\propto$ distance squared). $\ce{CO2}$ travels the same path in the opposite direction. The transport capacity of every link in the chain must match the metabolic rate: in exercise oxygen consumption can increase more than tenfold, and ventilation, **cardiac output** and tissue $\ce{O2}$ extraction must all increase accordingly.
 
 ## 17.2. The Physics of Gas Exchange
 
@@ -104,7 +104,7 @@ There are three consequences for animals. First, obtaining the same amount of $\
 | Medium processed at rest | $6$–$7.5\,\mathrm{L\,min^{-1}}$ | of the order of $10^2\,\mathrm{L\,min^{-1}}$ | Water breathing requires processing tens of times the volume |
 | Medium processed during activity | $20$–$200\,\mathrm{L\,min^{-1}}$ | Several hundred $\mathrm{L\,min^{-1}}$ | |
 | $\ce{O2}$ in medium | $\approx 280\,\mathrm{mg\,L^{-1}}$ | $5$–$7\,\mathrm{mg\,L^{-1}}$ | 40–56-fold difference |
-| Fraction extracted from medium | about 25% | 30%–50% (countercurrent exchange, Section 17.3.3) | Efficient exchanger, but it cannot make up the difference in the medium |
+| Fraction extracted from medium | about 20% | 30%–50% (countercurrent exchange, Section 17.3.3) | Efficient exchanger, but it cannot make up the difference in the medium |
 | Respiratory cost as fraction of total metabolism | 1%–2% | about 10% | Density and viscosity of water |
 | Exchange area | Alveoli $70$–$100\,\mathrm{m^2}$ | Gill area the largest among fishes, per body weight several times that of typical fishes | |
 
@@ -153,7 +153,7 @@ Fish gills and bird lungs have unidirectional (flow-through) ventilation: the me
 
 **Definition 17.3.1 (Concurrent, Countercurrent and Crosscurrent Exchange)** When two fluids flow on either side of a membrane across which material (or heat) can be exchanged, the arrangement in which they flow in the same direction is called **concurrent exchange**; the arrangement in which they flow in opposite directions is called **countercurrent exchange**; and the arrangement in which one fluid flows in one direction while the other is divided into many parallel streams that flow across it perpendicularly and join downstream is called **crosscurrent exchange**.
 
-Countercurrent exchange recurs again and again in physiology: fish gills, the rete mirabile of the swim bladder (Chapter 19), the vasa recta of the renal medulla (Chapter 24), heat exchange in the limbs (Chapter 31). Its efficiency can be compared with a linear model.
+Countercurrent exchange recurs again and again in physiology: fish gills, the **rete mirabile** of the swim bladder (Chapter 19), the vasa recta of the renal medulla (Chapter 24), **countercurrent heat exchange** in the limbs (Chapter 31). Its efficiency can be compared with a linear model.
 
 **Formula 17.3.1 (Efficiency of Exchangers)** Let the medium enter at partial pressure $P_I$ and the blood at venous partial pressure $P_v$; the capacity of each fluid for the gas (the amount of gas per unit change of partial pressure) is constant, and flow times capacity is written as the "capacity rates" $C_{\mathrm{blood}}$ and $C_{\mathrm{medium}}$; the total diffusive conductance of the exchanger is $G$. Write
 
@@ -190,7 +190,7 @@ The conclusions of the model agree with measurements:
 
 Air enters the trachea through the nose (or mouth), pharynx and larynx. The trachea bifurcates repeatedly within the thorax: the trachea is generation 0 and the main bronchi are generation 1, followed successively by lobar bronchi, segmental bronchi, bronchioles and terminal bronchioles (about generation 16), then respiratory bronchioles and alveolar ducts, ending in the alveolar sacs of generation 23. The first 16 generations only conduct gas and are called the conducting zone, whose volume is the anatomical dead space; from generation 17 on, the walls bear alveoli, and this is called the respiratory zone. With each bifurcation the diameter of a single tube becomes smaller but the number of tubes doubles, and the total cross-sectional area increases rapidly: in the respiratory zone the total cross-sectional area reaches hundreds of square centimeters, the forward velocity of the airflow falls to a very low value, and in the last stretch gas mixes mainly by diffusion.
 
-The conducting zone is more than a set of pipes. The nasal cavity and airways warm the inspired air to body temperature and saturate it with water vapor; the coordinated beating of mucus and cilia moves trapped particles toward the pharynx, to be cleared by coughing or swallowing (Chapter 2); particles larger than about $10\,\mathrm{\mu m}$ are mostly filtered out in the nasal cavity, smaller particles enter the lower airways, and those reaching the alveoli are phagocytosed by alveolar macrophages. The walls from the trachea to the terminal bronchioles contain smooth muscle under dual autonomic innervation: the parasympathetic (vagus nerve, ACh acting on $\mathrm{M_3}$ receptors) constricts it, and circulating epinephrine relaxes it through $\beta_2$ receptors (Chapter 7); inflammatory mediators such as histamine and leukotrienes constrict it (asthma).
+The conducting zone is more than a set of pipes. The nasal cavity and airways warm the inspired air to body temperature and saturate it with water vapor; mucus and cilia work together to move trapped particles toward the pharynx, to be cleared by coughing or swallowing (**mucociliary clearance**, Chapter 2); particles larger than about $10\,\mathrm{\mu m}$ are mostly filtered out in the nasal cavity, smaller particles enter the lower airways, and those reaching the alveoli are phagocytosed by alveolar macrophages. The walls from the trachea to the terminal bronchioles contain smooth muscle under dual autonomic innervation: the parasympathetic (vagus nerve, ACh acting on $\mathrm{M_3}$ receptors) constricts it, and circulating **epinephrine** relaxes it through $\beta_2$ receptors (Chapter 7); inflammatory mediators such as histamine and leukotrienes constrict it (asthma).
 
 ### 17.4.2. Respiratory Muscles and Respiratory Movement
 
@@ -223,7 +223,7 @@ $$
 P_{\mathrm{pl}} = -(\text{elastic recoil pressure of the lung}).
 $$
 
-At the end of quiet expiration $P_{\mathrm{pl}}$ is about $-5\,\mathrm{cmH_2O}$ (about $-0.5\,\mathrm{kPa}$, $-4\,\mathrm{mmHg}$), and at the end of quiet inspiration about $-7.5\,\mathrm{cmH_2O}$. Intrapleural pressure becomes positive only in forced expiration against a closed glottis (as in coughing or defecation).
+At the end of quiet expiration $P_{\mathrm{pl}}$ is about $-5\,\mathrm{cmH_2O}$ (about $-0.5\,\mathrm{kPa}$, $-4\,\mathrm{mmHg}$), and at the end of quiet inspiration about $-7.5\,\mathrm{cmH_2O}$. In quiet breathing intrapleural pressure is always negative; it becomes positive only in forced expiration (Section 17.4.5), and straining against a closed glottis (as in coughing or defecation) can raise it greatly.
 
 The pressure changes during one quiet breath:
 
@@ -231,7 +231,7 @@ The pressure changes during one quiet breath:
 2. The inspiratory muscles contract and the thorax enlarges; $P_{\mathrm{pl}}$ becomes more negative, the transpulmonary pressure increases and the lung is pulled open; the increase in lung volume makes $P_{\mathrm{alv}}$ negative (about $-1\,\mathrm{cmH_2O}$) and air flows in. At the end of inspiration flow stops and $P_{\mathrm{alv}}$ returns to 0.
 3. The inspiratory muscles relax, the lung and thorax recoil, $P_{\mathrm{alv}}$ becomes positive (about $+1\,\mathrm{cmH_2O}$) and air flows out.
 
-The significance of the negative intrapleural pressure is to keep the lung expanded and to lower the pressure in the large intrathoracic veins and the right atrium, which favors venous return (Chapter 14). When the chest wall or the lung surface is ruptured and air enters the pleural cavity (pneumothorax), the negative pressure vanishes and the lung collapses by its own elastic recoil.
+The significance of the negative intrapleural pressure is to keep the lung expanded and to lower the pressure in the large intrathoracic veins and the right atrium, which favors **venous return** (Chapter 14). When the chest wall or the lung surface is ruptured and air enters the pleural cavity (pneumothorax), the negative pressure vanishes and the lung collapses by its own elastic recoil.
 
 ### 17.4.4. Lung Compliance and Elastic Resistance
 
@@ -249,7 +249,7 @@ The pressure–volume curve of the lung (Chapter 18) is S-shaped: it is steepest
 
 The elastic recoil of the lung has two sources: about 1/3 comes from the elastic and collagen fibers in the lung tissue, and about 2/3 from the **surface tension** of the liquid film lining the alveoli. The evidence is the comparison of inflation with air and with saline: saline eliminates the air–liquid interface, and the pressure needed to reach the same volume is only about 1/3 of that for air inflation. The **pulmonary surfactant** in the alveolar liquid film greatly lowers this surface tension; surface tension, the stability of alveoli and the hysteresis of the pressure–volume curve are the subject of Chapter 18.
 
-Compliance changes in disease: pulmonary fibrosis, pulmonary edema and surfactant deficiency (neonatal respiratory distress syndrome) lower compliance and make breathing laborious; in emphysema the elastic fibers are destroyed and compliance rises, but the recoil of the lung is insufficient and expiration is difficult.
+Compliance changes in disease: pulmonary fibrosis, **pulmonary edema** and surfactant deficiency (neonatal respiratory distress syndrome) lower compliance and make breathing laborious; in emphysema the elastic fibers are destroyed and compliance rises, but the recoil of the lung is insufficient and expiration is difficult.
 
 ### 17.4.5. Airway Resistance
 
@@ -259,7 +259,7 @@ $$
 R_{\mathrm{aw}} = \frac{P_{\mathrm{mouth}} - P_{\mathrm{alv}}}{\dot V}.
 $$
 
-The airway resistance of a normal adult is about $1.5$–$2\,\mathrm{cmH_2O\,s\,L^{-1}}$, so in quiet breathing a flow of $0.5\,\mathrm{L\,s^{-1}}$ needs a pressure difference of only about $1\,\mathrm{cmH_2O}$. In laminar flow the resistance of a single tube follows the **Hagen–Poiseuille law** ([7.6.22](/7.6.22)), inversely proportional to the fourth power of the radius; in the trachea and large bronchi the flow is fast and the **Reynolds number** is high, the flow is turbulent or transitional, and the resistance also increases with flow.
+The airway resistance of a normal adult is about $1.5$–$2\,\mathrm{cmH_2O\,s\,L^{-1}}$, so in quiet breathing a flow of $0.5\,\mathrm{L\,s^{-1}}$ needs a pressure difference of only about $1\,\mathrm{cmH_2O}$. In **laminar flow** the resistance of a single tube follows the **Hagen–Poiseuille law** ([7.6.22](/7.6.22)), inversely proportional to the fourth power of the radius; in the trachea and large bronchi the flow is fast and the **Reynolds number** is high, so the flow shows **turbulence** or is transitional, and the resistance also increases with flow.
 
 A counterintuitive fact is that the main part of the resistance is not in the finest airways but in the medium-sized bronchi (about generations 4–8). Each bronchiole is narrow, but they are so numerous and in parallel that their total resistance is small, less than 20% of the total. This makes early lesions of the small airways hard to detect in routine measurements.
 
@@ -347,7 +347,7 @@ $$
 
 with arterial $P_{\ce{CO2}}$ substituted for alveolar $P_{\ce{CO2}}$ (Enghoff's modification). Normally $V_{\mathrm{D}}/V_{\mathrm{T}} \approx 0.3$; pulmonary embolism deprives some alveoli of blood flow, alveolar dead space increases, and $V_{\mathrm{D}}/V_{\mathrm{T}}$ rises.
 
-The trachea of the giraffe is long and narrow, and its dead space is about 5 times that of humans, but its tidal volume also increases in proportion and its respiratory frequency is lower, so $V_{\mathrm{D}}/V_{\mathrm{T}}$ is similar to that of other mammals. In mammals both tidal volume and dead space are about fixed proportions of body weight (about $6$–$7$ and $2\,\mathrm{mL\,kg^{-1}}$ respectively).
+The trachea of the giraffe is long and narrow, and its dead space is far larger in absolute terms than that of humans, but its tidal volume also increases in proportion and its respiratory frequency is lower, so $V_{\mathrm{D}}/V_{\mathrm{T}}$ is similar to that of other mammals. In mammals both tidal volume and dead space are about fixed proportions of body weight (about $6$–$7$ and $2\,\mathrm{mL\,kg^{-1}}$ respectively).
 
 ## 17.6. Alveolar Gas
 
@@ -386,7 +386,7 @@ where $F_{\mathrm{IO_2}}$ is the fraction of $\ce{O2}$ in inspired gas (0.21 for
 
 Substituting $P_{\mathrm{IO_2}} = 149\,\mathrm{mmHg}$, $P_{\mathrm{ACO_2}} = 40\,\mathrm{mmHg}$ and $R = 0.8$ gives $P_{\mathrm{AO_2}} \approx 149 - 40 \times 1.2 \approx 100\,\mathrm{mmHg}$ ($13.3\,\mathrm{kPa}$); the $104\,\mathrm{mmHg}$ often used in textbooks comes from slightly different values. Uses of the alveolar gas equation:
 
-- Identifying the cause of hypoxemia: in hypoventilation $P_{\mathrm{ACO_2}}$ rises and $P_{\mathrm{AO_2}}$ falls correspondingly according to Eq. (17.8), and the alveolar–arterial $P_{\ce{O2}}$ difference ($A$–$a$ difference, normally 5–15 mmHg) is unchanged; whereas diffusion impairment, ventilation–perfusion mismatch or shunt increase the $A$–$a$ difference (Chapters 18 and 19).
+- Identifying the cause of hypoxemia: in hypoventilation $P_{\mathrm{ACO_2}}$ rises and $P_{\mathrm{AO_2}}$ falls correspondingly according to Eq. (17.8), and the alveolar–arterial $P_{\ce{O2}}$ difference ($A$–$a$ difference, normally 5–15 mmHg) is unchanged; whereas diffusion impairment, mismatch of the **ventilation–perfusion ratio** or shunt increase the $A$–$a$ difference (Chapters 18 and 19).
 - Calculating the effect of oxygen administration and of altitude: breathing 30% $\ce{O2}$ raises $P_{\mathrm{IO_2}}$ to $214\,\mathrm{mmHg}$ and $P_{\mathrm{AO_2}}$ by about $65\,\mathrm{mmHg}$.
 - Showing that hyperventilation has a limited effect: as ventilation increases to infinity, $P_{\mathrm{ACO_2}} \to 0$, and $P_{\mathrm{AO_2}}$ can rise at most to $P_{\mathrm{IO_2}}$.
 
@@ -396,7 +396,7 @@ In exercise, as long as ventilation increases in proportion to metabolic rate, t
 
 Composition of gas at the various stages (sea level, in mmHg):
 
-| Gas | Atmosphere (dry) | Humidified inspired gas | Alveolar gas | Mixed expired gas |
+| Gas | Atmosphere | Humidified inspired gas | Alveolar gas | Mixed expired gas |
 |---|---|---|---|---|
 | $\ce{N2}$ | 597 | 563 | 569 | 566 |
 | $\ce{O2}$ | 159 | 149 | 100–104 | 120 |
@@ -428,7 +428,7 @@ Fast-swimming fishes (tunas, mackerels, many sharks) stop pumping water actively
 
 ### 17.7.3. Amphibians and Reptiles: From Buccal Pump to Aspiration Pump
 
-Amphibians have no intercostal muscles or diaphragm and "force" air into the lungs with a *buccal pump*: the floor of the mouth is lowered and air enters the buccopharyngeal cavity through the nostrils; the nostrils close and the floor of the mouth rises, pushing the air into the lungs under positive pressure; the elastic recoil of the lungs and the body-wall muscles expel the gas. This is a positive-pressure mode of ventilation, the opposite of the negative-pressure aspiration of mammals. The skin of the frog is the main route of $\ce{CO2}$ elimination (about 3/4), and the lungs are mainly responsible for $\ce{O2}$ uptake; tadpoles first breathe with gills and skin and switch to lungs and skin at metamorphosis ([7.5.33](/7.5.33)).
+Amphibians have no intercostal muscles or diaphragm and "force" air into the lungs with a *buccal pump*: the floor of the mouth is lowered and air enters the buccopharyngeal cavity through the nostrils; the nostrils close and the floor of the mouth rises, pushing the air into the lungs under positive pressure; the elastic recoil of the lungs and the body-wall muscles expel the gas. This is a positive-pressure mode of ventilation, the opposite of the negative-pressure aspiration of mammals. The skin of the frog is the main route of $\ce{CO2}$ elimination (about 3/4), and the lungs are mainly responsible for $\ce{O2}$ uptake; tadpoles first breathe with gills and skin and switch to lungs and skin at **metamorphosis** ([7.5.33](/7.5.33)).
 
 In amniotes the skin is keratinized and can no longer exchange gases, and they have changed to an aspiration pump in which trunk muscles create negative pressure in the thoracic cavity: lizards and snakes enlarge the thorax with the intercostal muscles (costal aspiration); in turtles the ribs are fused with the carapace, and muscles around the limbs and the shoulder and pelvic girdles change the volume of the body cavity; crocodilians have a "hepatic piston" made of the liver and diaphragm-like muscle, which pulls the liver backward to enlarge the thorax; mammals developed a muscular diaphragm. The intercostal muscles of lizards serve both breathing and locomotion; in fast running the trunk bends from side to side and the two lungs are compressed alternately, so that they cannot breathe at the same time (Carrier's "axial constraint"), which is thought to limit their sustained locomotor capacity; monitor lizards use a buccal pump to assist inspiration and partly overcome this constraint.
 
@@ -440,7 +440,7 @@ The avian lung is a rigid structure of almost constant volume, and ventilation i
 
 During one inspiration and one expiration, gas flows through the lung in a fixed direction: in inspiration, most of the fresh air passes through the main bronchus into the posterior air sacs, while the gas left in the lung by the previous breath enters the anterior air sacs; in expiration, fresh air in the posterior air sacs is driven into the parabronchi and the gas in the anterior air sacs is expelled through the trachea. Fresh air therefore flows unidirectionally (from posterior to anterior) through the parabronchi in both inspiration and expiration. This unidirectional flow does not depend on valves but on aerodynamic "valves" at the branch points of the bronchi, and has been observed in the lungs of birds, crocodilians and monitor lizards (Farmer, 2010s), suggesting that unidirectional flow may have originated in the common ancestor of archosaurs or even earlier.
 
-Gas exchange in the avian lung is crosscurrent (Section 17.3.3), with an efficiency higher than that of the mammalian alveolus; the blood–gas barrier of birds is also thinner (Chapter 18, Section 18.7). These features allow birds to fly at high altitude: the bar-headed goose crosses the Himalayas every year, sustaining flapping flight at altitudes of $5000$–$9000\,\mathrm{m}$, whereas a human at the same altitude can barely function.
+Gas exchange in the avian lung is crosscurrent (Section 17.3.3), with an efficiency higher than that of the mammalian alveolus; the **blood–gas barrier** of birds is also thinner (Chapter 18, Section 18.7). These features allow birds to fly at high altitude: the bar-headed goose crosses the Himalayas every year, and satellite tracking has recorded sustained flapping flight at altitudes of $5000$–$6000\,\mathrm{m}$ (up to about $7300\,\mathrm{m}$), whereas a human at the same altitude can barely function.
 
 ### 17.7.5. Insects: The Tracheal System
 
@@ -486,7 +486,7 @@ Diffusion limits the body size of insects: the longer the trachea, the greater t
 
 4. The atmospheric pressure at the summit of Mount Everest is about 253 mmHg. If a climber lowers $P_{\mathrm{ACO_2}}$ by hyperventilation to 7.5 mmHg (the measured value) and $R = 0.85$, estimate his $P_{\mathrm{AO_2}}$; what is the result if he does not hyperventilate and $P_{\mathrm{ACO_2}}$ stays at 40 mmHg?
 
-   **Answer** $P_{\mathrm{IO_2}} = 0.2093 \times (253 - 47) \approx 43\,\mathrm{mmHg}$. From the simplified form of Formula 17.6.1, $P_{\mathrm{AO_2}} \approx 43 - 7.5/0.85 \approx 34\,\mathrm{mmHg}$ (about 33 mmHg from the exact form, in agreement with the measured value of about 35 mmHg of the 1981 American Medical Research Expedition to Everest). If $P_{\mathrm{ACO_2}} = 40\,\mathrm{mmHg}$, $P_{\mathrm{AO_2}} \approx 43 - 47 < 0$, and life cannot be sustained. Extreme hyperventilation is a necessary condition for survival at the summit, at the price of severe respiratory alkalosis (Chapter 20, Section 20.6.3, and Chapter 25).
+   **Answer** $P_{\mathrm{IO_2}} = 0.2093 \times (253 - 47) \approx 43\,\mathrm{mmHg}$. From the simplified form of Formula 17.6.1, $P_{\mathrm{AO_2}} \approx 43 - 7.5/0.85 \approx 34\,\mathrm{mmHg}$ (about 35 mmHg from the exact form, in agreement with the measured value of about 35 mmHg of the 1981 American Medical Research Expedition to Everest). If $P_{\mathrm{ACO_2}} = 40\,\mathrm{mmHg}$, $P_{\mathrm{AO_2}} \approx 43 - 47 < 0$, and life cannot be sustained. Extreme hyperventilation is a necessary condition for survival at the summit, at the price of severe **respiratory alkalosis** (Chapter 20, Section 20.6.3, and Chapter 25).
 
 5. Use Formula 17.2.2 to explain why most multicellular animals without a circulatory system that rely on diffusion for oxygen are flat or slender, or have internal channels flushed by water.
 
@@ -494,4 +494,4 @@ Diffusion limits the body size of insects: the longer the trachea, the greater t
 
 6. Why does the lung collapse when the pleural cavity is punctured while the thorax expands outward? Why might the function of the other lung also be affected in a patient with pneumothorax on one side?
 
-   **Answer** Normally the recoil of the lung and the outward spring of the thorax balance each other through the liquid film of the pleural cavity, and intrapleural pressure is negative. After air enters, the two are no longer linked and each returns to its natural volume: the lung recoils to a very small size, and the thorax expands to a volume greater than at the functional residual capacity. In open pneumothorax on one side, negative intrathoracic pressure draws air in through the wound during inspiration, and the mediastinum is pushed toward the healthy side; in tension pneumothorax (the wound forms a one-way valve) the pressure in the affected hemithorax keeps rising, and the shifted mediastinum compresses the healthy lung and kinks the great veins, reducing venous return, which is life-threatening and requires emergency decompression.
+   **Answer** Normally the recoil of the lung and the outward spring of the thorax balance each other through the liquid film of the pleural cavity, and intrapleural pressure is negative. After air enters, the two are no longer linked and each returns to its natural volume: the lung recoils to a very small size, and the thorax expands to a volume greater than at the functional residual capacity. In open pneumothorax on one side, negative intrathoracic pressure draws air in through the wound during inspiration, and the mediastinum is pushed toward the healthy side; in tension pneumothorax (the wound forms a one-way valve) the pressure in the affected hemithorax keeps rising, and the shifted mediastinum compresses the healthy lung and kinks the great veins, reducing **venous return**, which is life-threatening and requires emergency decompression.
