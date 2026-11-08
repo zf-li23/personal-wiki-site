@@ -181,7 +181,7 @@ $\theta = \log_{10}\mathrm{LD}_{50} = -\beta_0/\beta_1$ 是参数的比值，有
 
 **公式 14.6.1（LD50 的置信区间）** Delta 方法：$\operatorname{Var}(\hat\theta) \approx \boldsymbol{g}^{\mathsf T}\hat V\boldsymbol{g}$，$\boldsymbol{g} = (-1/\hat\beta_1, \hat\beta_0/\hat\beta_1^2)^{\mathsf T}$，$\hat V$ 为 $(\hat\beta_0, \hat\beta_1)$ 的协方差阵，区间为 $\hat\theta \pm 1.96\sqrt{\operatorname{Var}(\hat\theta)}$。Fieller 法：$\theta$ 的区间是使 $(\hat\beta_0 + \theta\hat\beta_1)^2 \le 1.96^2 \operatorname{Var}(\hat\beta_0 + \theta\hat\beta_1)$ 的 $\theta$ 的集合，即一个关于 $\theta$ 的二次不等式的解。
 
-Fieller 区间不依赖比值的线性近似，可以不对称；当斜率不显著不为 0 时它甚至是无界的，正确地反映出此时 $\mathrm{LD}_{50}$ 无法估计。Bliss 数据的斜率极显著（$z = 11.8$），两种区间几乎相同：logit 模型的 Delta 区间与 Fieller 区间都是 58.1–60.2 mg/L（取反对数前分别为 1.7642–1.7793 与 1.7639–1.7792）。比较两种药物的效价时，平行的剂量反应线之间的水平距离就是相对效价的对数（[7.7.11](/7.7.11) 11.6.2 节），在 probit 或 logit 模型中加入药物的虚拟变量即可估计。
+Fieller 区间不依赖比值的线性近似，可以不对称；斜率与 0 无显著差别时它甚至是无界的，正确地反映出此时 $\mathrm{LD}_{50}$ 无法估计。Bliss 数据的斜率极显著（$z = 11.8$），两种区间几乎相同：logit 模型的 Delta 区间与 Fieller 区间都是 58.1–60.2 mg/L（取反对数前分别为 1.7642–1.7793 与 1.7639–1.7792）。比较两种药物的效价时，平行的剂量反应线之间的水平距离就是相对效价的对数（[7.7.11](/7.7.11) 11.6.2 节），在 probit 或 logit 模型中加入药物的虚拟变量即可估计。
 
 ## 14.7. 条件 logistic 回归
 

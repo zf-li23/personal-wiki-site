@@ -1,7 +1,7 @@
 ---
 title: Analysis of Variance and Experimental Design
 description: Why multiple t tests should not be used to compare several groups; the model, sum-of-squares decomposition, F test and assumptions of one-way analysis of variance; multiple comparisons (family-wise error rate, LSD, Bonferroni, Holm, Tukey, Dunnett) and how to choose among them; contrasts and linear and quadratic trends in dose; two-way analysis of variance, main effects, interaction and simple effects; analysis of covariance and adjusted means; the basic principles of experimental design (replication, randomization and blocking), completely randomized, randomized block and factorial designs, experimental units, biological and technical replicates, pseudoreplication, sample size; nonparametric alternatives. The examples are the guinea-pig vitamin C experiment (ToothGrowth) and birth weight.
-source_hash: 11bd1e99447e
+source_hash: a0d55dcb87a6
 ---
 
 [7.7.7](/7.7.7) compared two groups; with three or more groups two new problems arise: what is the test that compares all the groups at once, and, once a difference among the groups has been found, how do we learn which groups differ without being misled by the many tests involved. Analysis of variance (ANOVA) answers the first question and multiple comparisons answer the second. This chapter begins with one-way analysis of variance and multiple comparisons, and then treats contrasts (prespecified, biologically meaningful comparisons among groups, such as the trend of a dose response), two-way analysis of variance and interaction when two factors vary together, and analysis of covariance with a continuous covariate. Analysis of variance was invented by R. A. Fisher at the Rothamsted agricultural station to analyze field trials, and it is one with experimental design: the second half of the chapter covers the basic principles of design, namely replication, randomization and blocking, factorial designs, and one of the commonest and most serious errors in laboratory research, pseudoreplication. The main example is Crampton's (1947) guinea-pig experiment ToothGrowth: [7.7.7](/7.7.7) compared the two delivery methods at each dose, and [7.7.8](/7.7.8) compared the three doses by the Kruskal–Wallis test; here dose and delivery method are put into one model. The mathematics of one-way and two-way analysis of variance (the cell-means model, the factor-effects model, the derivation of multiple comparisons) is in [3.3.12](/3.3.12)–[3.3.14](/3.3.14); the relationship of analysis of variance to regression is in [7.7.10](/7.7.10), Section 10.7.3; models with blocks or individuals as random effects (repeated measures, between-batch variation) are in [7.7.17](/7.7.17).
@@ -307,7 +307,7 @@ tg["fdose"] = tg["dose"].astype(str)                       # dose as a factor
 m1 = smf.ols("len ~ C(fdose)", data=tg).fit()
 print(sm.stats.anova_lm(m1))                               # F = 67.4, p = 9.5e-16
 groups = [g["len"] for _, g in tg.groupby("fdose")]
-print(stats.levene(*groups).pvalue)                        # median-centred, 0.53
+print(stats.levene(*groups).pvalue)                        # median-centered, 0.53
 print(stats.f_oneway(*groups))                             # same F from scipy
 
 # multiple comparisons (Examples 12.3.1, 12.3.2)

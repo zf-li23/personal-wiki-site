@@ -306,7 +306,7 @@ tg["fdose"] = tg["dose"].astype(str)                       # dose as a factor
 m1 = smf.ols("len ~ C(fdose)", data=tg).fit()
 print(sm.stats.anova_lm(m1))                               # F = 67.4, p = 9.5e-16
 groups = [g["len"] for _, g in tg.groupby("fdose")]
-print(stats.levene(*groups).pvalue)                        # median-centred, 0.53
+print(stats.levene(*groups).pvalue)                        # median-centered, 0.53
 print(stats.f_oneway(*groups))                             # same F from scipy
 
 # multiple comparisons (Examples 12.3.1, 12.3.2)
