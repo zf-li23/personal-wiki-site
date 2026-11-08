@@ -230,7 +230,7 @@ Sexual reproduction makes haploid ($n$) and diploid ($2n$) nuclear phases altern
 | Life-cycle type | Meiosis | Plant bodies | Examples among algae |
 |---|---|---|---|
 | Haplontic (monogenetic, haploid) | At germination of the zygote | Only haploid plant bodies; the zygote is the only diploid cell | *Chlamydomonas*, *Volvox*, *Ulothrix*, *Spirogyra*, *Chara*, *Vaucheria*, most dinoflagellates |
-| Diplontic (monogenetic, diploid) | In forming gametes | Only diploid plant bodies; the gametes are the only haploid cells | Diatoms, *Fucus*, *Pelvetia*, *Sargassum*, *Codium* |
+| Diplontic (monogenetic, diploid) | In forming gametes | Only diploid plant bodies; the gametes are the only haploid cells | Diatoms, *Fucus*, *Silvetia*, *Sargassum*, *Codium* |
 | Diplohaplontic (digenetic) | In forming spores | Alternation of a haploid gametophyte and a diploid sporophyte (**alternation of generations**) | *Ulva*, *Ectocarpus*, *Dictyota* (isomorphic); kelp, *Scytosiphon*, *Monostroma* (heteromorphic) |
 | Trigenetic | In forming tetraspores | Three generations: gametophyte, carposporophyte and tetrasporophyte | *Polysiphonia*, *Gelidium* and most florideophyte red algae ([7.12.7](/7.12.7)) |
 

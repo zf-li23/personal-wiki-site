@@ -76,7 +76,7 @@ In plants with sexual reproduction the life cycle always has fusion of gametes (
 | Type | Stage of meiosis | Multicellular generation | Alternation of generations | Representatives |
 |---|---|---|---|---|
 | **Zygotic meiosis** (haplontic) | At germination of the zygote | Haploid only | None; the zygote is the only diploid cell | *Chlamydomonas*, *Volvox*, *Ulothrix*, *Spirogyra*, stoneworts; many fungi |
-| **Gametic meiosis** (diplontic) | When gametes are produced | Diploid only | None; the gametes are the only haploid cells | The brown algae *Pelvetia*, *Fucus*, *Sargassum*; diatoms; the green alga *Codium* of the Bryopsidales; animals |
+| **Gametic meiosis** (diplontic) | When gametes are produced | Diploid only | None; the gametes are the only haploid cells | The brown algae *Silvetia*, *Fucus*, *Sargassum*; diatoms; the green alga *Codium* of the Bryopsidales; animals |
 | **Sporic meiosis** (haplodiplontic, intermediary meiosis) | When the diploid plant produces spores | Haploid gametophyte and diploid sporophyte | Present | *Ulva*, *Enteromorpha*, *Cladophora*; brown algae other than the fucoids; most red algae (three phases); all embryophytes |
 
 The life cycle with sporic meiosis is the **alternation of generations**: the diploid **sporophyte** produces spores by meiosis, the spores germinate into haploid **gametophytes**, the gametophytes produce gametes, the gametes fuse into zygotes, and the zygotes develop into sporophytes. By the form of the two generations it is further divided into:
