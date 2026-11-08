@@ -2,7 +2,7 @@
 
 Stores are drawn in a fixed order: glycogen first, then fat with a small protein share, protein last.
 Energy density: glycogen and protein 17 kJ/g, fat 39 kJ/g. Lean tissue is ~4 g wet mass per g protein.
-A, lean 70 kg man: 0.23 kg glycogen, 15 kg fat, 6 kg protein; expenditure 7.5 MJ/d falling by 20 % with a
+A, lean 70 kg man: 0.23 kg mobilizable glycogen (liver ~0.1 kg plus part of the ~0.4 kg muscle glycogen), 15 kg fat, 6 kg protein; expenditure 7.5 MJ/d falling by 20 % with a
 14-day time constant (adaptive reduction of metabolic rate). Protein oxidation starts at ~75 g/d and falls towards
 20 g/d (time constant 10 d) as ketone bodies replace glucose for the brain; when fat is nearly exhausted (< 3 %)
 protein must cover the whole expenditure. Death is placed where half of body protein is lost.

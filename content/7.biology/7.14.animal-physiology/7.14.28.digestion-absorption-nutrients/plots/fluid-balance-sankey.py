@@ -1,13 +1,13 @@
 # Daily fluid balance of the human gastrointestinal tract (typical adult values, L/day), drawn as an
 # alluvial (Sankey) diagram. Inputs to the small intestine: diet 2.0, saliva 1.0, gastric juice 1.5,
-# bile 0.7, pancreatic juice 1.5, intestinal secretions 1.8 (total 8.5). The jejunum absorbs about 5.5
+# pancreatic juice 1.0, bile 1.0, intestinal secretions incl. Brunner's glands 2.0 (total 8.5). The jejunum absorbs about 5.5
 # and the ileum 1.5, so about 1.5 L/day passes the ileocecal valve; the colon absorbs 1.4 and about
 # 0.1 L/day leaves in the feces. Only about 1 % of the fluid that enters the gut is lost.
 import matplotlib.pyplot as plt
 import numpy as np
 
-inputs = [("diet", 2.0), ("saliva", 1.0), ("gastric juice", 1.5), ("bile", 0.7),
-          ("pancreatic juice", 1.5), ("intestinal secretion", 1.8)]
+inputs = [("diet", 2.0), ("saliva", 1.0), ("gastric juice", 1.5), ("pancreatic juice", 1.0),
+          ("bile", 1.0), ("intestinal secretion", 2.0)]
 mid = [("absorbed in jejunum", 5.5, "#2a9d8f"), ("absorbed in ileum", 1.5, "#2a9d8f"),
        ("to colon", 1.5, "#d9822b")]
 right = [("absorbed in colon", 1.4, "#2a9d8f"), ("feces", 0.1, "#c0392b")]
