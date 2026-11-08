@@ -98,7 +98,7 @@ The threshold $L$ sets the distance: a high $L$ removes only near-identical redu
 |---|---|---|---|---|---|
 | PAM30 | $0.340$ | $-4.96$ | $2.53$ | $74\,\%$ | short queries (< $35$ residues), near-identical |
 | PAM70 | $0.335$ | $-2.70$ | $1.49$ | $51\,\%$ | queries of $35$–$50$ residues |
-| BLOSUM80 | $0.226$ | $-2.09$ | $0.91$ | $39\,\%$ | queries of $50$–$85$ residues, close homologs |
+| BLOSUM80 | $0.343$ | $-2.09$ | $0.91$ | $39\,\%$ | queries of $50$–$85$ residues, close homologs |
 | BLOSUM62 | $0.318$ | $-0.95$ | $0.58$ | $30\,\%$ | default for proteins |
 | BLOSUM45 | $0.229$ | $-0.81$ | $0.36$ | $24\,\%$ | long queries, distant homologs |
 | PAM250 | $0.225$ | $-0.80$ | $0.32$ | $19\,\%$ | historical; very distant homologs |
@@ -397,7 +397,7 @@ The z-score assumes a normal null distribution, but the scores of optimal local 
 
 2. With the nucleotide matrix (match $2$, transition $-5$, transversion $-7$) and a linear gap penalty of $5$, score the three alignments `GAATC`/`CATAC`, `GAAT-C`/`C-ATAC` and `GAATC-`/`CA-TAC`. Which is best?
 
-   **Answer** `GAATC`/`CATAC`: G–C transversion $-7$, A–A $2$, A–T $-7$, T–A $-7$, C–C $2$, total $-17$. `GAAT-C`/`C-ATAC`: G–C $-7$, A–gap $-5$, A–A $2$, T–T $2$, gap–A $-5$, C–C $2$, total $-11$. `GAATC-`/`CA-TAC`: G–C $-7$, A–A $2$, A–gap $-5$, T–T $2$, C–A $-7$, gap–C $-5$, total $-20$. The second is the best of the three; the gaps buy two extra matches, which pays because a gap ($-5$) costs less than a transversion ($-7$).
+   **Answer** `GAATC`/`CATAC`: G–C transversion $-7$, A–A $2$, A–T $-7$, T–A $-7$, C–C $2$, total $-17$. `GAAT-C`/`C-ATAC`: G–C $-7$, A–gap $-5$, A–A $2$, T–T $2$, gap–A $-5$, C–C $2$, total $-11$. `GAATC-`/`CA-TAC`: G–C $-7$, A–A $2$, A–gap $-5$, T–T $2$, C–A $-7$, gap–C $-5$, total $-20$. The second is the best of the three: its two gaps ($-10$) replace two transversions ($-14$) and allow one more match ($+2$), a net gain of $6$ over the first, because a gap ($-5$) costs less than a transversion ($-7$).
 
 3. Fill the Needleman–Wunsch matrix for $x = $ `ACG` and $y = $ `AG` with match $+1$, mismatch $-1$ and $d = 2$, and give the optimal alignment.
 

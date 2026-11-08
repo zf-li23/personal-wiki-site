@@ -19,7 +19,7 @@ The first widely used heuristic, FASTA (Lipman and Pearson 1985; Pearson and Lip
 
 1. Find all exact matches of words of length $k$ (*ktup*, $2$ for proteins, $6$ for DNA) between $x$ and $y$ with a lookup table of the query words.
 2. For each diagonal $i - j$, combine the word matches into the ten best ungapped regions and rescore them with a substitution matrix.
-3. Join compatible regions on neighbouring diagonals, allowing gaps, into an approximate alignment.
+3. Join compatible regions on neighboring diagonals, allowing gaps, into an approximate alignment.
 4. For the best-scoring database sequences, compute an optimal alignment by dynamic programming in a band around the best diagonals.
 
 FASTA established the pattern of *filter, then align*. Its statistics were empirical: the scores of all database sequences form a distribution dominated by unrelated sequences, against which a high score is judged. The FASTA program (now FASTA36) is still maintained and remains one of the most sensitive heuristic tools; the FASTA file format ([7.8.1](/7.8.1#sec-1.4.1)) was introduced with it.
@@ -84,7 +84,7 @@ $$
 $$
 with density $\lambda\,\mathrm{e}^{-\lambda(x-u)}\exp(-\mathrm{e}^{-\lambda(x-u)})$, mode $u$, mean $u + \gamma/\lambda$ and variance $\pi^2/(6\lambda^2)$. Its right tail is exponential: $\mathbb{P}(S > x) \approx \mathrm{e}^{-\lambda(x - u)}$ for large $x$.
 
-The maximum of many independent variables with exponential-type tails has, after centring, a Gumbel distribution; the best local alignment score is such a maximum, over the many possible starting points of alignments. **Karlin–Altschul statistics** ([7.6.41](/7.6.41#thm-41.2.1)) make this exact for ungapped alignments: for random sequences of lengths $m$ and $n$, the number of distinct local alignments with score at least $x$ is approximately Poisson with mean $Kmn\,\mathrm{e}^{-\lambda x}$, so the best score $S$ has
+The maximum of many independent variables with exponential-type tails has, after centering, a Gumbel distribution; the best local alignment score is such a maximum, over the many possible starting points of alignments. **Karlin–Altschul statistics** ([7.6.41](/7.6.41#thm-41.2.1)) make this exact for ungapped alignments: for random sequences of lengths $m$ and $n$, the number of distinct local alignments with score at least $x$ is approximately Poisson with mean $Kmn\,\mathrm{e}^{-\lambda x}$, so the best score $S$ has
 
 $$
 \mathbb{P}(S \ge x) \approx 1 - \exp\left(-Kmn\,\mathrm{e}^{-\lambda x}\right), \tag{4.1}
@@ -145,7 +145,7 @@ The theory assumes that both sequences have the background composition. Proteins
 
 Many proteins contain segments of very biased composition: runs of glutamine (polyglutamine tracts, expanded in Huntington's disease), proline-rich linkers, serine–arginine repeats, coiled coils. Such segments align with each other in thousands of unrelated proteins with scores far above what the statistics expect, because the statistics assume that letters are independent.
 
-**Definition 4.5.1 (Low-Complexity Region)** A **low-complexity region** of a sequence is a segment whose composition is strongly biased towards a few letters, quantified by the Shannon entropy $-\sum_a f_a\log_2f_a$ of its letter frequencies $f_a$ in windows of fixed length, or by the compositional complexity $\frac{1}{L}\log_N[L!/\prod_an_a!]$ of a window of length $L$ with letter counts $n_a$ over an alphabet of $N$ letters (Wootton and Federhen 1993).
+**Definition 4.5.1 (Low-Complexity Region)** A **low-complexity region** of a sequence is a segment whose composition is strongly biased toward a few letters, quantified by the Shannon entropy $-\sum_a f_a\log_2f_a$ of its letter frequencies $f_a$ in windows of fixed length, or by the compositional complexity $\frac{1}{L}\log_N[L!/\prod_an_a!]$ of a window of length $L$ with letter counts $n_a$ over an alphabet of $N$ letters (Wootton and Federhen 1993).
 
 **Example 4.5.1** In windows of $12$ residues the entropy is $0$ bits for QQQQQQQQQQQQ, $0.65$ bits for QQQQPQQQQPQQ, $2.69$ bits for the signal-peptide-like MKVLAAGIVGLL and $\log_212 = 3.58$ bits, the maximum, for twelve different residues. The program SEG flags windows of $12$ residues whose entropy is below $2.2$ bits, extends them while it stays below $2.5$ bits, and masks the result, by default for BLASTP query sequences in the seeding step only.
 
@@ -195,7 +195,7 @@ Both report BLAST-like E-values and the same tabular output, so they can replace
 
 ### 4.7.2. Sequence Clustering
 
-Databases are highly redundant: thousands of near-identical sequences of the same protein from different strains. Clustering them reduces the search space and the bias of statistics towards over-represented families.
+Databases are highly redundant: thousands of near-identical sequences of the same protein from different strains. Clustering them reduces the search space and the bias of statistics toward over-represented families.
 
 **Definition 4.7.1 (Sequence Clustering)** **Sequence clustering** partitions a set of sequences into groups (clusters) such that every member of a cluster is similar to its representative sequence above a threshold, typically of identity and alignment coverage.
 

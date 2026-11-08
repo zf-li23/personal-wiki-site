@@ -13,7 +13,7 @@ The course follows a small number of examples from chapter to chapter. The lacta
 
 **Definition 1.1.1 (Bioinformatics)** **Bioinformatics** is the science of acquiring, storing, retrieving, analyzing and interpreting biological data, chiefly the sequences, structures and measured activities of nucleic acids and proteins, by computational and statistical methods, with the aim of answering biological questions.
 
-The neighbouring term *computational biology* is often used for the same field, with an emphasis on models and theory rather than data and tools; the distinction is not sharp. The questions take a few recurring forms:
+The neighboring term *computational biology* is often used for the same field, with an emphasis on models and theory rather than data and tools; the distinction is not sharp. The questions take a few recurring forms:
 
 | Form | Example | Typical method | Chapter |
 |---|---|---|---|
@@ -146,7 +146,7 @@ Two conventions for numbering positions are in use, and confusing them is the mo
 
 **Formula 1.4.2 (Conversion)** The same set of bases is written $[s, e)$ in zero-based half-open and $[s + 1, e]$ in one-based closed coordinates: the start increases by one and the end is unchanged. The length is $e - s$ in the first system and $e' - s' + 1$ in the second.
 
-BED, BAM (internally), the UCSC databases and most programming libraries (Python slices `seq[s:e]`) use zero-based half-open coordinates; GFF, SAM text, VCF, HGVS names, the UCSC and Ensembl browser displays and most biologists use one-based closed coordinates. The half-open system has arithmetic advantages: the length is $e - s$, adjacent intervals $[s, m)$ and $[m, e)$ share an endpoint without overlapping, and an empty interval, the position *between* two bases where an insertion occurs, is $[s, s)$. In the closed system an insertion has no interval of its own, which is why VCF and HGVS represent it relative to a neighbouring base.
+BED, BAM (internally), the UCSC databases and most programming libraries (Python slices `seq[s:e]`) use zero-based half-open coordinates; GFF, SAM text, VCF, HGVS names, the UCSC and Ensembl browser displays and most biologists use one-based closed coordinates. The half-open system has arithmetic advantages: the length is $e - s$, adjacent intervals $[s, m)$ and $[m, e)$ share an endpoint without overlapping, and an empty interval, the position *between* two bases where an insertion occurs, is $[s, s)$. In the closed system an insertion has no interval of its own, which is why VCF and HGVS represent it relative to a neighboring base.
 
 **Example 1.4.2 (One Site in Five Notations)** rs4988235 lies at one-based position $135\,851\,076$ of chromosome 2 in GRCh38. It is written
 
@@ -164,7 +164,7 @@ In VCF, a deletion of the bases $\mathrm{CT}$ after a $\mathrm{G}$ at position $
 
 ### 1.4.5. Compression and Indexing
 
-Large text files are compressed with BGZF (blocked gzip), a variant of gzip that compresses the file in independent blocks of at most $64\,\mathrm{KiB}$ of input; each block is a valid gzip member, so the file can be decompressed by `gzip`, but a reader can also start at the beginning of any block. A position in the file is a *virtual offset*: the byte offset of the compressed block times $2^{16}$ plus the offset within the uncompressed block. `bgzip` writes such files; `tabix` and the BAM, CRAM and BCF indexes record, for each region, the virtual offsets where its records begin. The indexes use a hierarchy of bins.
+Large text files are compressed with BGZF (blocked gzip), a variant of gzip that compresses the file in independent blocks of at most $64\,\mathrm{KiB}$ of input; each block is a valid gzip member, so the file can be decompressed by `gzip`, but a reader can also start at the beginning of any block. A position in the file is a *virtual offset*: the byte offset of the compressed block times $2^{16}$ plus the offset within the uncompressed block. `bgzip` writes such files; `tabix` and the BAM and BCF indexes record, for each region, the virtual offsets where its records begin. The indexes use a hierarchy of bins.
 
 **Algorithm 1.4.1 (Hierarchical Binning)** The genome is divided into bins at six levels, of sizes $2^{29}, 2^{26}, 2^{23}, 2^{20}, 2^{17}$ and $2^{14}$ bases ($512\,\mathrm{Mb}$ down to $16\,\mathrm{kb}$); level $\ell$ has $8^\ell$ bins, numbered consecutively from $(8^\ell - 1)/7$, so there are $37\,449$ bins in all.
 
@@ -286,7 +286,7 @@ md5sum HG002_R1.fq.gz HG002_R2.fq.gz > checksums.md5    # at the source
 md5sum -c checksums.md5                                  # after copying: "HG002_R1.fq.gz: OK"
 ```
 
-**Definition 1.6.1 (FAIR Principles)** The **FAIR principles** (Wilkinson et al., 2016) state that scientific data should be *findable* (with persistent identifiers and rich metadata in a searchable resource), *accessible* (retrievable by their identifiers through a standard protocol, with the metadata available even if the data are not), *interoperable* (in formal, shared formats and vocabularies) and *reusable* (with clear licences, provenance and community standards).
+**Definition 1.6.1 (FAIR Principles)** The **FAIR principles** (Wilkinson et al., 2016) state that scientific data should be *findable* (with persistent identifiers and rich metadata in a searchable resource), *accessible* (retrievable by their identifiers through a standard protocol, with the metadata available even if the data are not), *interoperable* (in formal, shared formats and vocabularies) and *reusable* (with clear licenses, provenance and community standards).
 
 Public archives implement these principles: a sequencing study deposited in the Sequence Read Archive receives accession numbers for the project, the samples, the experiments and the runs, with metadata in controlled vocabularies ([7.8.2](/7.8.2)). Human data add a constraint: genotypes identify a person and their relatives, so individual-level human sequence data are held in controlled-access archives (dbGaP, EGA, the human section of GSA) and released only to approved researchers, while summary statistics are usually public.
 
