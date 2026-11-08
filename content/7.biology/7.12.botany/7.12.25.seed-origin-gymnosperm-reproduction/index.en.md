@@ -1,7 +1,7 @@
 ---
 title: The Origin of the Seed and Reproduction in Gymnosperms
 description: The main features of gymnosperms and the two sets of terms for reproductive organs; the steps in the origin of the seed (heterospory, a single functional megaspore, an endosporic female gametophyte, integument, pollination drop and pollen chamber) and the earliest ovules (Runcaria, Elkinsia); progymnosperms, seed ferns, cordaites, bennettitaleans and Caytonia; the life cycle of pine; motile sperm and haustorial pollen tubes in cycads and ginkgo; the micropylar tube, absent archegonia and "double fertilization" in gnetophytes; gymnosperm and angiosperm reproduction compared.
-source_hash: 029671e980dc
+source_hash: 6994ff40c91d
 ---
 
 In ferns and lycophytes the gametophyte lives independently and fertilization requires water ([7.12.16](/7.12.16), [7.12.17](/7.12.17)). Seed plants hand both problems over to the sporophyte. The megaspore stays inside its sporangium on the parent plant, where the female gametophyte develops under protection and supply from the parent. The microspore develops into the male gametophyte, the *pollen grain*, which wind or animals carry to the ovule, and a pollen tube then delivers the sperm to the egg. After fertilization the whole ovule becomes a seed, which replaces the spore as the unit of dispersal. This chapter treats the origin of this mode of reproduction and its expression in gymnosperms. We first describe the main features of gymnosperms (§25.1) and the origin of the seed (§25.2), then the early fossil groups of seed plants (§25.3). We then use pine as the model for a detailed account of the gymnosperm life cycle (§25.4), treat the special features of reproduction in cycads and ginkgo (§25.5) and in gnetophytes (§25.6), and finally compare gymnosperms with angiosperms (§25.7) as preparation for the chapters on the flower, the ovule and double fertilization ([7.12.27](/7.12.27)–[7.12.30](/7.12.30)). The classification of living gymnosperms and their families is the subject of [7.12.26](/7.12.26). The structure of gymnosperm stems, wood and needles was treated as a contrast in [7.12.21](/7.12.21)–[7.12.23](/7.12.23), and the general structure of the seed in [7.12.19](/7.12.19).
@@ -260,7 +260,7 @@ The pollen tubes of cycads and ginkgo do not enter the archegonium but absorb nu
 
 ## 25.6. Reproductive Features of Gnetophytes
 
-The gnetophytes comprise only three genera, *Ephedra*, *Gnetum* and *Welwitschia*, which differ greatly in form but share several characters: vessels in the secondary xylem; an envelope (pseudoperianth) around the pollen and seed cones that resembles a perianth; an integument (the inner integument in *Gnetum* and *Welwitschia*) extended at the tip into a long, narrow *micropylar tube* from whose mouth the pollination drop is secreted; nonflagellate sperm; and archegonia that are extremely reduced (*Ephedra*) or absent (*Gnetum*, *Welwitschia*).
+The gnetophytes comprise only three genera, *Ephedra*, *Gnetum* and *Welwitschia*, which differ greatly in form but share several characters: vessels in the secondary xylem; an envelope (pseudoperianth) around the pollen and seed cones that resembles a perianth; an integument (the inner integument in *Gnetum* and *Welwitschia*) extended at the tip into a long, narrow *micropylar tube* from whose mouth the pollination drop is secreted; nonflagellate sperm; and archegonia present only in *Ephedra* (with a long neck) and absent in *Gnetum* and *Welwitschia*.
 
 ### 25.6.1. *Ephedra*
 
