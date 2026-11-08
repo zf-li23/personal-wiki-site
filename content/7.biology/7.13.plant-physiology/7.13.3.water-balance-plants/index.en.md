@@ -1,7 +1,7 @@
 ---
 title: Water Balance of Plants
 description: Soil water types and soil water potential, field capacity and the permanent wilting percentage; sites, pathways and driving forces of water uptake by roots, root pressure, bleeding and guttation; Hagen–Poiseuille flow in the xylem, the pressure needed to lift water to the top of a 100-m tree, and the cohesion–tension theory; cavitation, embolism and vulnerability curves; modes, indices and driving forces of transpiration, and stomatal and boundary-layer conductance; transpiration ratio and water-use efficiency; the series-resistance model of the soil–plant–atmosphere continuum; rational irrigation.
-source_hash: 702f0ca79348
+source_hash: f8988b68d0b4
 ---
 
 Terrestrial plants face an unavoidable dilemma: photosynthesis requires taking up $\ce{CO2}$ from the atmosphere, but the passages through which $\ce{CO2}$ enters the leaf also let water vapor escape, and the water vapor concentration difference that drives water loss is much larger than the concentration difference that drives $\ce{CO2}$ uptake. The plant's solution is a physical system that consumes almost no metabolic energy and continually replenishes from the soil the water lost in transpiration: water in the soil is absorbed by roots, rises through the xylem by bulk flow for several meters to over a hundred meters, evaporates from the surfaces of mesophyll cell walls, and diffuses out through the stomata as vapor. The energy that drives all of this ultimately comes from the sun.
@@ -108,7 +108,7 @@ The driving force of passive absorption is the *transpiration pull*: water loss 
 |---|---|---|
 | Available soil water | Only capillary and gravitational water can be used | No uptake below the permanent wilting percentage; hydraulic conductivity falls sharply as the soil dries |
 | Soil aeration | Hypoxia and high $\ce{CO2}$ reduce uptake | Root respiration is impaired and aquaporins close; with long-term flooding, ethanol accumulating from **alcoholic fermentation** injures root cells |
-| Soil temperature | Both low and excessively high temperatures reduce uptake | At low temperature the viscosity of water rises (about 50% higher at 5 °C than at 20 °C), cytoplasmic viscosity increases and respiration weakens; thermophilic plants (such as cucumber) wilt easily in cold soil. High temperature increases respiratory oxygen consumption while the solubility of oxygen falls, accelerates root aging and inactivates enzymes |
+| Soil temperature | Both low and excessively high temperatures reduce uptake | At low temperature the viscosity of water rises (about 50% higher at 5 °C than at 20 °C), cytoplasmic viscosity increases and respiration weakens; warm-season plants (such as cucumber) wilt easily in cold soil. High temperature increases respiratory oxygen consumption while the solubility of oxygen falls, accelerates root aging and inactivates enzymes |
 | Soil solution concentration | High concentration lowers the soil water potential | Plants have difficulty taking up water on saline-alkali soils, a condition called physiological drought; excessive fertilization causes "burning" of seedlings |
 | The root system itself | Root density, total surface area, root permeability | Permeability changes with root age and developmental stage and is affected by suberization of the endodermis |
 

@@ -328,9 +328,9 @@ $\Psi_{\mathrm{w,A}} = -1.5 + 0.7 = -0.8\,\mathrm{MPa}$，$\Psi_{\mathrm{w,B}} =
 
    **答** 先求初始质壁分离时的参照：此时的相对体积 $v_0$ 满足 $\varepsilon(v_0 - 1) = 0.4$，$v_0 = 1.05$，于是 $\Psi_{\mathrm{s,ip}} = -1.0 \times 1.05 = -1.05\,\mathrm{MPa}$。在纯水中平衡时 $\Psi_{\mathrm{w}} = 0$：$8(v - 1) = 1.05/v$，即 $8v^2 - 8v - 1.05 = 0$，$v = [8 + \sqrt{64 + 33.6}]/16 = 1.117$。体积相对于原来增大 $1.117/1.05 - 1 \approx 6.4\%$，平衡时膨压 $\Psi_{\mathrm{p}} = 8 \times 0.117 = 0.94\,\mathrm{MPa}$，恰等于此时的 $-\Psi_{\mathrm{s}} = 1.05/1.117 = 0.94\,\mathrm{MPa}$。
 
-3. 用式 (2.8) 比较两个细胞与环境达到水势平衡的半时间：(a) 根皮层细胞，近似为半径 $25\,\mu\mathrm{m}$ 的球，$L_p = 5\times10^{-7}\,\mathrm{m\,s^{-1}\,MPa^{-1}}$，$\varepsilon = 15\,\mathrm{MPa}$，$\Psi_{\mathrm{s}} = -0.7\,\mathrm{MPa}$；(b) 巨藻（如轮藻）的节间细胞，近似为半径 $0.4\,\mathrm{mm}$ 的长圆柱，$L_p = 1\times10^{-6}\,\mathrm{m\,s^{-1}\,MPa^{-1}}$，$\varepsilon = 40\,\mathrm{MPa}$，$\Psi_{\mathrm{s}} = -0.6\,\mathrm{MPa}$。
+3. 用式 (2.8) 比较两个细胞与环境达到水势平衡的半时间：(a) 根皮层细胞，近似为半径 $25\,\mu\mathrm{m}$ 的球，$L_p = 5\times10^{-7}\,\mathrm{m\,s^{-1}\,MPa^{-1}}$，$\varepsilon = 15\,\mathrm{MPa}$，$\Psi_{\mathrm{s}} = -0.7\,\mathrm{MPa}$；(b) 大型藻类（如轮藻）的节间细胞，近似为半径 $0.4\,\mathrm{mm}$ 的长圆柱，$L_p = 1\times10^{-6}\,\mathrm{m\,s^{-1}\,MPa^{-1}}$，$\varepsilon = 40\,\mathrm{MPa}$，$\Psi_{\mathrm{s}} = -0.6\,\mathrm{MPa}$。
 
-   **答** (a) 球的 $V/A = r/3 = 8.3\,\mu\mathrm{m}$，$t_{1/2} = 0.693 \times 8.3\times10^{-6}/(5\times10^{-7} \times 15.7) = 0.73\,\mathrm{s}$。(b) 长圆柱的 $V/A \approx r/2 = 200\,\mu\mathrm{m}$，$t_{1/2} = 0.693 \times 2\times10^{-4}/(10^{-6} \times 40.6) = 3.4\,\mathrm{s}$。尽管巨藻细胞的膜水导和细胞壁硬度都更高，它的体积与表面积之比大了约 24 倍，平衡仍然较慢；这说明细胞大小（$V/A$）与膜和壁的性质同样重要。
+   **答** (a) 球的 $V/A = r/3 = 8.3\,\mu\mathrm{m}$，$t_{1/2} = 0.693 \times 8.3\times10^{-6}/(5\times10^{-7} \times 15.7) = 0.73\,\mathrm{s}$。(b) 长圆柱的 $V/A \approx r/2 = 200\,\mu\mathrm{m}$，$t_{1/2} = 0.693 \times 2\times10^{-4}/(10^{-6} \times 40.6) = 3.4\,\mathrm{s}$。尽管大型藻类细胞的膜水导和细胞壁硬度都更高，它的体积与表面积之比大了约 24 倍，平衡仍然较慢；这说明细胞大小（$V/A$）与膜和壁的性质同样重要。
 
 4. 为什么说"膨压高的细胞不一定能从膨压低的细胞中吸水"？用 Höfler 图说明，在一个完全膨胀的细胞中，溶质势与压力势是什么关系。
 
