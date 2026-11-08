@@ -77,7 +77,7 @@ $$
 f \subseteq R \quad \text{且} \quad \operatorname{dom}(f) = \operatorname{dom}(R).
 $$
 
-这就是 **ZF 公理系统**中的第 10 条公理（见 [1.7 节](/1.2.1#sec-1.7)）。直观地说：对 $\operatorname{dom}(R)$ 中的每个 $x$，可以从 $\{y \mid xRy\}$ 中同时"选出"一个 $f(x)$。
+这就是在 **ZF 公理系统**之外增加的第 10 条公理（见 [1.7 节](/1.2.1#sec-1.7)）。直观地说：对 $\operatorname{dom}(R)$ 中的每个 $x$，可以从 $\{y \mid xRy\}$ 中同时"选出"一个 $f(x)$。
 
 ## 3.2. 函数的合成与函数的逆
 

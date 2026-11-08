@@ -1,6 +1,6 @@
 ---
 title: Functions
-source_hash: d252c9e9800a
+source_hash: 18d1771d39f9
 ---
 
 A function is a special kind of **binary relation**: each element of the domain corresponds to exactly one element of the range. Building on the theory of relations from the previous chapter, this chapter defines functions together with injections, surjections and bijections, discusses composition and inverses of functions and the compatibility of functions, then uses the language of functions to introduce open and closed sets of real numbers, and finally passes from characteristic functions to fuzzy subsets. Bijections are the basic tool of the next chapter for comparing the sizes of sets (equinumerosity and cardinal numbers).
@@ -78,7 +78,7 @@ $$
 f \subseteq R \quad \text{and} \quad \operatorname{dom}(f) = \operatorname{dom}(R).
 $$
 
-This is the tenth axiom of **Zermelo–Fraenkel set theory** listed in [Section 1.7](/1.2.1#sec-1.7). Intuitively, for each $x$ in $\operatorname{dom}(R)$ we can simultaneously "choose" an element $f(x)$ of $\{y \mid xRy\}$.
+This is the tenth axiom listed in [Section 1.7](/1.2.1#sec-1.7), the one added to **Zermelo–Fraenkel set theory** to obtain ZFC. Intuitively, for each $x$ in $\operatorname{dom}(R)$ we can simultaneously "choose" an element $f(x)$ of $\{y \mid xRy\}$.
 
 ## 3.2. Composition and Inverses of Functions
 
