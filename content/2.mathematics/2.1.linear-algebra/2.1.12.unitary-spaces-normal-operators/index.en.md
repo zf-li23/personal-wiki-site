@@ -1,6 +1,6 @@
 ---
 title: Unitary Spaces and Normal Operators
-source_hash: 7d19594f1f95
+source_hash: 478b2aa9dec9
 ---
 
 [Chapter 4](/2.1.4) used the **inner product** on $\mathbb{R}^n$ to define length, angle and orthogonality, and from them obtained Gram–Schmidt orthogonalization, the **QR decomposition**, **orthogonal projection** and least squares. Those results use only three properties of the inner product: symmetry, bilinearity and positive definiteness. This chapter takes these three properties as axioms and generalizes in two directions: first, inner products are placed on arbitrary vector spaces, so that function spaces and matrix spaces also acquire lengths and angles; second, the real numbers are replaced by the complex numbers, and symmetry is replaced accordingly by conjugate symmetry. Wherever a proof is the same as in the case of $\mathbb{R}^n$, we only sketch it.
@@ -147,7 +147,7 @@ The proof of correctness is the same as in [Chapter 4](/2.1.4): $\langle w_j, q_
 2. $\langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}(-1 \cdot 1 + 1 \cdot \bar{\mathrm{i}}) = \frac{-1 - \mathrm{i}}{\sqrt2}$, $\boldsymbol{w}_2 = \boldsymbol{v}_2 - \langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 = \left(\frac{-1 + \mathrm{i}}{2}, \mathrm{i}, \frac{1 + \mathrm{i}}{2}\right)^{\mathsf T}$, $\|\boldsymbol{w}_2\|^2 = 2$, $\boldsymbol{q}_2 = \boldsymbol{w}_2 / \sqrt2$.
 3. $\boldsymbol{w}_3 = \boldsymbol{v}_3 - \langle \boldsymbol{v}_3, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 - \langle \boldsymbol{v}_3, \boldsymbol{q}_2 \rangle \boldsymbol{q}_2 = \left(\frac{1 + \mathrm{i}}{2}, -1, \frac{1 - \mathrm{i}}{2}\right)^{\mathsf T}$, $\|\boldsymbol{w}_3\|^2 = 2$, $\boldsymbol{q}_3 = \boldsymbol{w}_3 / \sqrt2$.
 
-One can check that $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$. The third component of $\boldsymbol{w}_3$ must be $\frac{1 - \mathrm{i}}{2}$: the value $\frac{-1 - \mathrm{i}}{2}$ would give $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$.
+One can check that $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$.
 
 **Example 12.4.2** On $\mathcal{P}_2(\mathbb{R}) = \{a_0 + a_1x + a_2x^2\}$ with $\langle f, g \rangle = \int_{-1}^1 f(x)g(x)\,\mathrm{d}x$, orthogonalize $1, x, x^2$:
 

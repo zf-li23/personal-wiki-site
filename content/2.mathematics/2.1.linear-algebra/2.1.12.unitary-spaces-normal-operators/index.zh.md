@@ -146,7 +146,7 @@ $$
 2. $\langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}(-1 \cdot 1 + 1 \cdot \bar{\mathrm{i}}) = \frac{-1 - \mathrm{i}}{\sqrt2}$，$\boldsymbol{w}_2 = \boldsymbol{v}_2 - \langle \boldsymbol{v}_2, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 = \left(\frac{-1 + \mathrm{i}}{2}, \mathrm{i}, \frac{1 + \mathrm{i}}{2}\right)^{\mathsf T}$，$\|\boldsymbol{w}_2\|^2 = 2$，$\boldsymbol{q}_2 = \boldsymbol{w}_2 / \sqrt2$。
 3. $\boldsymbol{w}_3 = \boldsymbol{v}_3 - \langle \boldsymbol{v}_3, \boldsymbol{q}_1 \rangle \boldsymbol{q}_1 - \langle \boldsymbol{v}_3, \boldsymbol{q}_2 \rangle \boldsymbol{q}_2 = \left(\frac{1 + \mathrm{i}}{2}, -1, \frac{1 - \mathrm{i}}{2}\right)^{\mathsf T}$，$\|\boldsymbol{w}_3\|^2 = 2$，$\boldsymbol{q}_3 = \boldsymbol{w}_3 / \sqrt2$。
 
-可以验证 $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$。$\boldsymbol{w}_3$ 的第三个分量应为 $\frac{1 - \mathrm{i}}{2}$：若取 $\frac{-1 - \mathrm{i}}{2}$，则 $\langle \boldsymbol{w}_3, \boldsymbol{v}_1 \rangle = \mathrm{i} \ne 0$。
+可以验证 $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1}{\sqrt2}\left(\frac{1 + \mathrm{i}}{2} + \frac{1 - \mathrm{i}}{2}\cdot(-\mathrm{i})\right) = 0$。
 
 **例 12.4.2** 在 $\mathcal{P}_2(\mathbb{R}) = \{a_0 + a_1x + a_2x^2\}$ 上取 $\langle f, g \rangle = \int_{-1}^1 f(x)g(x)\,\mathrm{d}x$，对 $1, x, x^2$ 正交化：
 
