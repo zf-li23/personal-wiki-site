@@ -1,7 +1,7 @@
 ---
 title: Vision
 description: Optics of the eye, accommodation and refractive errors, pupil and intraocular pressure; retina, rods and cones, rhodopsin and the visual cycle, phototransduction and adaptation, color vision; retinal circuits; central visual pathways and cortex; eye movements; evolution and comparison of eyes.
-source_hash: 9d863fbaf42a
+source_hash: ddc5663eed85
 ---
 
 Of all human senses, vision provides the most information: about a third of the cerebral cortex takes part in visual processing. The eye must do three things: form a sharp image on the retina (optics), convert photons into neural signals (phototransduction), and perform a first round of processing of the image before sending it to the brain (retinal circuits). This chapter treats these three layers in turn, then the central visual pathways and eye movements, and finally compares the diversity of eyes in the animal kingdom. The general principles of sensation (the **labeled line principle**, **receptor potentials**, **adaptation**, **receptive fields**, and **lateral inhibition**) are in Chapter 39 ([7.14.39](/7.14.39)); the physics of photons, pigments, and single-photon detection was discussed in biophysics ([7.6.18](/7.6.18#sec-18.6)), and diffraction and resolving power in optics ([5.4.2](/5.4.2#sec-2.4)); only their conclusions are used here, and the emphasis is on the physiology of organs and circuits.
@@ -64,7 +64,7 @@ The ciliary muscle is innervated mainly by parasympathetic fibers in the oculomo
 
 **Definition 41.1.3 (Presbyopia)** With increasing age, the lens continues to grow and thicken and loses elasticity and can no longer become more convex when the zonules slacken; the amplitude of accommodation gradually decreases, the near point recedes, and near vision becomes difficult. This is called **presbyopia**.
 
-The amplitude of accommodation falls from about $14\,\mathrm{D}$ in a child to about $2\,\mathrm{D}$ at 45–50 years and approaches zero at 70. Hofstetter's empirical formula gives the average $A \approx 18.5 - 0.3\times\text{age}$ (D). A reading distance of about $40\,\mathrm{cm}$ requires $2.5\,\mathrm{D}$ of accommodation; when the amplitude of accommodation drops below this (usually in the forties), reading glasses with convex lenses are needed. Because reading glasses focus for only one fixed distance, people who need to see both far and near use bifocal or progressive lenses: the upper part for distance and the lower part for near.
+The amplitude of accommodation falls steadily from about $14\,\mathrm{D}$ in a child to an average of about $3.5\,\mathrm{D}$ at 50 years (about $2.5$–$5\,\mathrm{D}$ between individuals) and approaches zero in the sixties. Hofstetter's empirical formula gives the average $A \approx 18.5 - 0.3\times\text{age}$ (D) and the minimum about $15 - 0.25\times\text{age}$ (D). A reading distance of about $40\,\mathrm{cm}$ requires $2.5\,\mathrm{D}$ of accommodation; since only about half of the amplitude can be used comfortably for sustained reading, reading glasses with convex lenses are needed once the amplitude drops below about $5\,\mathrm{D}$ (usually in the forties). Because reading glasses focus for only one fixed distance, people who need to see both far and near use bifocal or progressive lenses: the upper part for distance and the lower part for near.
 
 **Remark 41.1.1** Presbyopia and hyperopia are two different things and should not be confused. Hyperopia is insufficient refractive power of the eye relative to axial length (Section 41.1.4), can occur at any age, and requires accommodation even for distant viewing; presbyopia is the loss of accommodative ability with age and occurs in emmetropic, myopic, and hyperopic eyes alike. Both are corrected for near vision with convex lenses, which is why they are often confused; but a presbyopic person can see far without glasses (if originally emmetropic), whereas a hyperopic person also needs correction for distance.
 
@@ -142,7 +142,7 @@ The vertebrate retina is "inverted": light must first pass through several hundr
 
 Scattering by the neural layers is compensated in two ways: the inner layers of the retina are transparent, and Müller glial cells guide light to the photoreceptors like optical fibers; in the most demanding central region, the inner layers are pushed aside.
 
-**Definition 41.2.1 (Fovea)** A small pit at the center of the macula at the posterior pole of the retina, about $0.3\,\mathrm{mm}$ in diameter (about $1^\circ$ of visual angle), containing only slender, densely packed cones, with inner-layer cells and blood vessels displaced to the periphery to leave a direct light path, is called the **fovea**. It is the site of highest visual acuity.
+**Definition 41.2.1 (Fovea)** A small pit at the center of the macula at the posterior pole of the retina, about $1.5\,\mathrm{mm}$ in diameter (about $5^\circ$ of visual angle), with inner-layer cells and blood vessels displaced to the periphery to leave a direct light path, is called the **fovea**. The central floor of the pit, about $0.3\,\mathrm{mm}$ in diameter (about $1^\circ$), is called the foveola; it contains only slender, densely packed cones and is the site of highest visual acuity.
 
 ### 41.2.2. Rods and Cones
 
@@ -158,7 +158,7 @@ The human retina has about $9\times10^7$ rods and $4$–$5\times10^6$ cones (Cur
 | Response speed | Slow, long temporal integration (about $0.1\,\mathrm{s}$) | Fast, can resolve higher flicker frequencies |
 | Convergence | High, many rods converge onto one ganglion cell | Low, one to one in the fovea |
 | Acuity and color vision | Low, no color vision | High, with color vision |
-| Distribution | Absent from the fovea; densest about $20^\circ$ from the center | Densest in the fovea, decreasing toward the periphery |
+| Distribution | Absent from the foveola; densest about $20^\circ$ from the center | Densest in the fovea, decreasing toward the periphery |
 
 At intermediate luminance between the two (twilight), called mesopic vision, both systems work simultaneously. Looking slightly away from a dim star at night, so that the image falls on the parafoveal region densely packed with rods, makes use of this distribution.
 
@@ -449,7 +449,7 @@ The microvilli of rhabdomeric photoreceptors are neatly arranged, and the visual
 | Refractive errors | Myopia (long axis, concave lens), hyperopia (short axis, convex lens), astigmatism (cylindrical lens); $1\,\mathrm{mm}$ of axial length about $3\,\mathrm{D}$ |
 | Pupil and intraocular pressure | $1.5$–$8\,\mathrm{mm}$, light about 30-fold; blur angle $\approx D\,\Delta P$; four levels of neurons in the light reflex; intraocular pressure about $15\,\mathrm{mmHg}$ ($2\,\mathrm{kPa}$), glaucoma |
 | Visual acuity and stereopsis | About $1'$, limited jointly by diffraction and cone sampling; disparity $\delta \approx I\,\Delta d/d^2$, depth resolution worsens with $d^2$ |
-| Retina (Definition 41.2.1) | Inverted structure, pigment epithelium; fovea $0.3\,\mathrm{mm}$, cones only |
+| Retina (Definition 41.2.1) | Inverted structure, pigment epithelium; fovea about $1.5\,\mathrm{mm}$, its central foveola of about $0.3\,\mathrm{mm}$ cones only |
 | Rods and cones | About $9\times10^7$ and $4.5\times10^6$; division of labor between scotopic and photopic vision |
 | Phototransduction (Definition 41.2.2) | Dark current; $\mathrm{R}^*$ → transducin → PDE6 → cGMP falls → CNG closes → hyperpolarization → less glutamate; single photon about $1\,\mathrm{mV}$ |
 | Dynamic range | Eq. (41.6); $\ce{Ca^2+}$ negative feedback (GCAP, recoverin, CNG) extends the range and produces Weber's law (Eq. (41.7)) |

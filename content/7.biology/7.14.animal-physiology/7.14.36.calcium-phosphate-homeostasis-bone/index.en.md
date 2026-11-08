@@ -1,7 +1,7 @@
 ---
 title: Calcium and Phosphate Homeostasis and Bone
 description: "Distribution of calcium and phosphate in the body (free, bound and complexed forms of plasma Ca at 2.4 mmol/L, 99% of calcium in bone); effects of hypocalcemia and hypercalcemia; coupling of calcium and phosphate; calcium and phosphate balance across gut, kidney and bone; synthesis, two hydroxylations and regulation of vitamin D; composition of bone, osteons, cortical and trabecular bone; mineralization and pyrophosphate–TNAP; the rapidly exchangeable bone calcium pool; osteoblasts, osteoclasts and osteocytes, bone remodeling and RANKL/OPG; parathyroid hormone and the calcium-sensing receptor; calcitonin; FGF23 and phosphate regulation; a two-time-scale feedback model of calcium; osteoporosis, rickets and osteomalacia, parathyroid disease; evolution and comparison: corpuscles of Stannius and calcitonin in fishes, branchial origin of the parathyroid, avian medullary bone, crustacean gastroliths."
-source_hash: bc27b6838a54
+source_hash: 9e29e5675205
 ---
 
 The calcium ion is one of the most important intracellular signals (muscle contraction, **neurotransmitter** release, hormone secretion, **blood coagulation**), and the $[\ce{Ca^2+}]$ of the **extracellular fluid** directly determines the **excitability** of nerve and muscle, so it is controlled more precisely than almost any other ion: the daily fluctuation of plasma free $[\ce{Ca^2+}]$ is only a few percent. Phosphate is a component of ATP, nucleic acids, phospholipids and countless phosphorylated intermediates, and is also a buffer. The great majority of both is stored in bone, which is thus both the structure that supports the body and a huge ion reservoir. This chapter first treats the distribution and effects of calcium and phosphate in the body (Section 36.1), their flows among gut, kidney and bone (Section 36.2) and vitamin D (Section 36.3), then bone itself (Section 36.4), then the three regulatory hormones, parathyroid hormone (Section 36.5), calcitonin (Section 36.6) and FGF23 (Section 36.7), combines them into a feedback system with two time scales (Section 36.8), and finally covers disease (Section 36.9) and other animals (Section 36.10).
@@ -12,7 +12,7 @@ Intestinal calcium absorption is in [7.14.28](/7.14.28#sec-28.6.3), and the rena
 
 ### 36.1.1. Calcium
 
-An adult body contains about $1$–$1.2\,\mathrm{kg}$ of calcium (about $25$–$30\,\mathrm{mol}$), of which about $99\%$ is in bone and teeth, about $1\%$ is in cells (mostly stored in the endoplasmic reticulum and mitochondria or bound to proteins), and only about $0.1\%$ (about $1\,\mathrm{g}$) is in the extracellular fluid. Total plasma calcium is about $2.4\,\mathrm{mmol\,L^{-1}}$ ($2.2$–$2.6$, that is about $9.5\,\mathrm{mg\,dL^{-1}}$) and exists in three forms:
+An adult body contains about $1$–$1.2\,\mathrm{kg}$ of calcium (about $25$–$30\,\mathrm{mol}$), of which about $99\%$ is in bone and teeth, about $1\%$ is in cells (mostly stored in the endoplasmic reticulum and mitochondria or bound to proteins), and only about $0.1\%$ (about $35\,\mathrm{mmol}$, that is about $1.4\,\mathrm{g}$) is in the extracellular fluid. Total plasma calcium is about $2.4\,\mathrm{mmol\,L^{-1}}$ ($2.2$–$2.6$, that is about $9.5\,\mathrm{mg\,dL^{-1}}$) and exists in three forms:
 
 | Form | Fraction | Filterable | Remarks |
 |---|---|---|---|
