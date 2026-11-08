@@ -116,7 +116,7 @@ $$
 
 **Example 35.2.1** For *E. coli* ($a = 1\,\mu\mathrm{m}$, $v = 20\,\mu\mathrm{m\,s^{-1}}$) in a gradient of an amino acid ($D = 10^3\,\mu\mathrm{m^2\,s^{-1}}$) at $c = 1\,\mu\mathrm{M}$ that changes e-fold over $L = c/g = 1\,\mathrm{mm}$, $g = 0.6\,\mu\mathrm{m^{-4}}$ and $T_{\min} = (4 \times 600/(\pi \times 10^3 \times 400 \times 0.36))^{1/3} = 0.17\,\mathrm{s}$; for $L = 10\,\mathrm{mm}$, $T_{\min} = 0.8\,\mathrm{s}$. A run cannot be much longer than a few seconds either: **rotational diffusion** ([7.6.5](/7.6.5#sec-5.3.2)) with $D_{\mathrm{r}} \approx 0.06\,\mathrm{rad^2\,s^{-1}}$ randomizes the direction of a bacterium in about $1/(2D_{\mathrm{r}}) \approx 8\,\mathrm{s}$, after which the comparison no longer refers to a direction. Runs of about $1\,\mathrm{s}$ lie between these limits; Berg and Purcell concluded that the bacterium works near what physics allows.
 
-A spatial comparison across the body is far worse. The concentration difference between the poles of a $2\,\mu\mathrm{m}$ cell is ten times smaller than over a $20\,\mu\mathrm{m}$ run, and because $T_{\min}$ in Eq. (35.5) scales as $(\Delta c)^{-2/3}$, the cell would have to average roughly $10^{2}$ times longer than with a temporal comparison, long beyond the time in which **rotational diffusion** turns it. This is why bacteria sense in time.
+A spatial comparison across the body is far worse. The concentration difference between the poles of a $2\,\mu\mathrm{m}$ cell is ten times smaller than over a $20\,\mu\mathrm{m}$ run, and because for a fixed concentration difference the averaging time needed scales as $(\Delta c)^{-2}$, the cell would have to average roughly $10^{2}$ times longer than with a temporal comparison, long beyond the time in which **rotational diffusion** turns it. This is why bacteria sense in time.
 
 ### 35.2.2. Measuring in Space
 
@@ -125,10 +125,10 @@ Eukaryotic cells are larger ($10$–$20\,\mu\mathrm{m}$) and move slowly ($1$–
 **Formula 35.2.2 (Snapshot Gradient Sensing)** A cell of length $L$ with $M$ receptors of **dissociation constant** $K_{\mathrm{D}}$, which compares the occupancies of its front and back halves at one instant, detects a gradient $g$ with signal-to-noise ratio
 
 $$
-\mathrm{SNR} = \frac{gL}{c}\sqrt{Mp(1 - p)} = gL\,\frac{\sqrt{McK_{\mathrm{D}}}}{c + K_{\mathrm{D}}} ,
+\mathrm{SNR} = \frac{gL}{c}\sqrt{Mp(1 - p)} = \frac{gL}{c}\,\frac{\sqrt{McK_{\mathrm{D}}}}{c + K_{\mathrm{D}}} ,
 \tag{35.6}
 $$
-which is maximal at $c = K_{\mathrm{D}}$, where $\mathrm{SNR} = (gL/c)\sqrt{M}/2$.
+which, for a given relative gradient $gL/c$, is maximal at $c = K_{\mathrm{D}}$, where $\mathrm{SNR} = (gL/c)\sqrt{M}/2$.
 
 **Proof** In a snapshot the number of bound receptors among $M$ is binomial with variance $Mp(1 - p)$, so the occupancy fraction has variance $p(1 - p)/M$; propagating through $c = K_{\mathrm{D}}p/(1 - p)$ gives $(\delta c/c)^2 = 1/[Mp(1 - p)] = (c + K_{\mathrm{D}})^2/(McK_{\mathrm{D}})$. The front–back difference is $gL$ for the two halves, each with $M/2$ receptors, which changes only the numerical prefactor (by a factor of two in the variance); we keep the simpler form. With $p = 1/2$, $\sqrt{p(1 - p)} = 1/2$. $\square$
 
@@ -408,7 +408,7 @@ where $K_1$ is the dissociation constant of the external ligand at concentration
 | Receptor patches | $J = 4\pi Dac\,Ns/(Ns + \pi a)$; half at $N = \pi a/s$, $0.08\,\%$ coverage | Formula 35.1.1 |
 | Binding kinetics | time averaging $(\delta c/c)^2 = 2/(k_+c(1 - p)T)$; maximum likelihood $1/\bar n$, twice better | Theorems 35.1.2–35.1.3 |
 | Temporal gradient sensing | $T_{\min} = (4c/(\pi Dav^2g^2))^{1/3}$, below the **rotational diffusion** time: bacteria sense in time | Formula 35.2.1 |
-| Spatial gradient sensing | $\mathrm{SNR} = gL\sqrt{McK_{\mathrm{D}}}/(c + K_{\mathrm{D}})$; $1\,\%$ needs $M \approx 4\times10^4$ | Formula 35.2.2 |
+| Spatial gradient sensing | $\mathrm{SNR} = (gL/c)\sqrt{McK_{\mathrm{D}}}/(c + K_{\mathrm{D}})$; $1\,\%$ needs $M \approx 4\times10^4$ | Formula 35.2.2 |
 | Information | **mutual information**, capacity; small noise $C \approx \log_2[(2\pi\mathrm{e})^{-1/2}\int\mathrm{d}\bar g/\sigma]$ | Definitions 35.3.1–35.3.2, Algorithm 35.3.1, Theorem 35.3.1 |
 | Chemotactic drift | $v_{\mathrm{d}} = v(\lambda_- - \lambda_+)/(\lambda_- + \lambda_+) = \kappa v^2\partial_x\ln c$ | Formula 35.4.1 |
 | Receptor cluster | $a = [1 + \mathrm{e}^{N\Delta F}]^{-1}$; log sensing, gain $\le N/4$ | Formula 35.5.1, Theorem 35.5.1 |
