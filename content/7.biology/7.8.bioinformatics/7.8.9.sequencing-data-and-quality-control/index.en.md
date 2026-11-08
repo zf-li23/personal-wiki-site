@@ -154,7 +154,7 @@ Reads are trimmed (adapter sequence, low-quality $3'$ ends, poly-G tails of two-
 
 The algorithm finds the suffix with the largest total deficit $\sum_{i \ge k}(T - q_i)$ before a stretch of good bases makes the running sum negative; the cut falls where the tail is poor *on balance*, so an isolated good base inside a bad tail, or an isolated bad base among good ones, does not decide it. It runs in $O(L)$ time and is the method of BWA (option `-q`) and cutadapt; sliding-window trimming (cut where the mean quality of a window of $4$ bases first falls below $T$, as in Trimmomatic and fastp) is an alternative.
 
-**Example 9.4.1** For the $15$ qualities $38, 38, 37, 36, 35, 34, 30, 22, 18, 25, 12, 8, 15, 5, 2$ and $T = 20$, the running sum from the end is $18, 36, 41, 53, 61$ (after the bases with $2, 5, 15, 8, 12$), then $56$, $58$, $56$, $46$, $32$, $17$, $1$ and $-16$. Its maximum, $61$, is reached after base $11$ (Q$12$), so bases $11$–$15$ are removed and the first $10$ kept, including Q$18$ at position $9$, which is followed by the better Q$25$.
+**Example 9.4.1** For the $15$ qualities $38, 38, 37, 36, 35, 34, 30, 22, 18, 25, 12, 8, 15, 5, 2$ and $T = 20$, the running sum from the end is $18, 33, 38, 50, 58$ (after the bases with $2, 5, 15, 8, 12$), then $53$, $55$, $53$, $43$, $29$, $14$ and $-2$. Its maximum, $58$, is reached after base $11$ (Q$12$), so bases $11$–$15$ are removed and the first $10$ kept, including Q$18$ at position $9$, which is followed by the better Q$25$.
 
 ```bash
 # Paired-end trimming and filtering with fastp: adapters detected by overlap, poly-G tails removed,
