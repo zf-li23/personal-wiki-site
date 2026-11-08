@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Predicate Logic
-source_hash: 54551ec5e748
+source_hash: 8457b3dffd11
 ---
 
 Propositional logic treats simple propositions as indivisible wholes, so it cannot analyze their internal logical structure (such as the relation between subject and predicate) or quantitative relations (such as "all" and "some"). To overcome these limitations we introduce *predicate logic*. Predicate logic can be viewed as an extension of propositional logic: it introduces **individual terms**, **predicates**, and **quantifiers**, which allow a finer description of the structure of sentences and of reasoning. This chapter deals only with first-order predicate logic, historically also called the restricted predicate calculus; the next chapter treats equivalence and inference in it.
@@ -257,7 +257,7 @@ The validity and satisfiability of a formula may depend on the number of individ
 
 ### 4.6.5. The Decision Problem for Predicate Logic
 
-The *decision problem* for predicate logic asks, for an arbitrary given predicate formula, whether it is valid. Predicate logic would have the property of **decidability** if there were an *effective method*, that is, a mechanical procedure that terminates in finitely many steps, for deciding of every formula whether it is valid.
+The *decision problem* for predicate logic asks, for an arbitrary given predicate formula, whether it is valid. Predicate logic is said to have the property of **decidability** if there is an *effective method*, that is, a mechanical procedure that terminates in finitely many steps, for deciding of every formula whether it is valid.
 
 ### 4.6.6. Results on the Decision Problem
 
