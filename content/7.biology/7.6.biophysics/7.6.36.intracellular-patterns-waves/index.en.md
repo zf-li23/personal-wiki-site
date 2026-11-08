@@ -176,7 +176,7 @@ Budding yeast appears to use both mechanisms, with additional positive feedback 
 
 ### 36.5.1. Fronts in Bistable and Excitable Media
 
-Diffusion is too slow to carry signals across large cells: a molecule with $D = 10\,\mu\mathrm{m^2\,s^{-1}}$ needs $L^2/2D \approx 5\,\mathrm{h}$ to diffuse across a $1.2\,\mathrm{mm}$ frog egg. Yet the egg enters mitosis everywhere within minutes, and its fertilization is signaled across it by a calcium wave in a few minutes. The solution is a wave that regenerates itself.
+Diffusion is too slow to carry signals across large cells: a molecule with $D = 10\,\mu\mathrm{m^2\,s^{-1}}$ needs $L^2/2D \approx 5\,\mathrm{h}$ to diffuse from the surface to the center of a $1.2\,\mathrm{mm}$ frog egg ($L = 0.6\,\mathrm{mm}$). Yet the egg enters mitosis everywhere within minutes, and its fertilization is signaled across it by a calcium wave in a few minutes. The solution is a wave that regenerates itself.
 
 **Definition 36.5.1 (Trigger Wave)** A **trigger wave** is a self-regenerating front or pulse that propagates at constant speed and constant shape through a bistable or excitable medium: each region, switched to the excited state, raises its neighbors above their threshold by diffusion (or another coupling), so that the signal is renewed at every point rather than diluted.
 
@@ -187,7 +187,7 @@ The distance covered grows linearly with time instead of as $\sqrt t$, and the a
 | Calcium wave at fertilization ([7.5.4](/7.5.4)) | calcium-induced calcium release through IP₃ receptors | $5$–$30\,\mu\mathrm{m\,s^{-1}}$ |
 | Mitotic wave in *Xenopus* egg extracts | Cdk1 activation by positive feedback through Cdc25 and Wee1 ([7.3.20](/7.3.20)) | about $60\,\mu\mathrm{m\,min^{-1}}$ (Chang and Ferrell, 2013) |
 | Apoptotic wave in *Xenopus* extracts | caspase activation with positive feedback | about $30\,\mu\mathrm{m\,min^{-1}}$ (Cheng and Ferrell, 2018) |
-| cAMP waves in *Dictyostelium* ([7.5.13](/7.5.13)) | excitable cAMP relay | $\sim 0.3\,\mu\mathrm{m\,s^{-1}}$ |
+| cAMP waves in *Dictyostelium* ([7.5.13](/7.5.13)) | excitable cAMP relay | $2$–$5\,\mu\mathrm{m\,s^{-1}}$ (a few hundred $\mu\mathrm{m\,min^{-1}}$) |
 | Action potential ([7.6.30](/7.6.30)) | voltage-gated Na⁺ channels | $1$–$100\,\mathrm{m\,s^{-1}}$ |
 
 ### 36.5.2. Front Speed
