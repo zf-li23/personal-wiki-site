@@ -1,7 +1,7 @@
 ---
 title: The Leaf
 description: Leaf functions; blade, petiole, stipules, and the sheath, ligule and auricle of grasses; terminology of leaf shape, apex, base, margin, lobing, venation, simple and compound leaves, phyllotaxis, leaf mosaics, heterophylly and indumentum; leaf primordia, apical, marginal and intercalary growth, dorsiventrality and the molecular framework of compound-leaf development; anatomy of eudicot, grass, C3 and C4 (Kranz) leaves and pine needles; ecological leaf types; leaf fall, abscission zone and abscission layer.
-source_hash: 9426abd58985
+source_hash: 36aa4c529f37
 ---
 
 The leaf is the main organ of photosynthesis and transpiration in seed plants, and also the most variable organ in their morphology. Leaf form is fairly constant within a species but differs enormously between species, so the terminology of leaf morphology is the basic language for describing and identifying plants and will be used repeatedly in the chapters on angiosperm classification ([7.12.33](/7.12.33)–[7.12.49](/7.12.49)). This chapter first treats the functions and parts of the leaf, then gives the morphological terminology systematically, then describes how leaves arise at the shoot apex and differentiate, and the anatomy of three kinds of leaf (eudicot, grass and pine). It ends with the ecological types of leaves and leaf fall. The leaves of seed plants are **megaphylls**; their origin is discussed in [7.12.16](/7.12.16), the arrangement of leaves on the stem and its mathematics in the chapter on the stem ([7.12.21](/7.12.21)), and the modifications of leaves in the next chapter ([7.12.24](/7.12.24)). The tissues on which the leaf depends (epidermis, stomata, vascular bundles and so on) were covered in [7.12.4](/7.12.4) and [7.12.5](/7.12.5). The physiological mechanisms of photosynthesis, transpiration, stomatal movement and leaf abscission belong to plant physiology, so only morphology and anatomy are treated here.
@@ -146,7 +146,7 @@ The edge of the blade is the margin. By the degree of indentation, the types of 
 | crenate | teeth rounded, not sharp | gotu kola, Japanese spindle (*Euonymus japonicus*) |
 | spinose | teeth ending in stiff spines | Chinese holly, sow thistle |
 
-Deeper indentations of the margin are lobes (the notches are sinuses), and the parts between the sinuses are lobes. By the arrangement of the lobes, lobing is pinnate or palmate: lobes arranged on either side of the midrib make a pinnately lobed leaf, as in dandelion, shepherd's purse and cypress vine (*Ipomoea quamoclit*); lobes radiating from the base make a palmately lobed leaf, as in sweetgum, Chinese parasol tree, plane tree, castor bean and cotton; a leaf with only three lobes is trilobed (trident maple, morning glory). By depth of incision there are three grades:
+Deeper indentations of the margin are sinuses (notches), and the parts between the sinuses are lobes. By the arrangement of the lobes, lobing is pinnate or palmate: lobes arranged on either side of the midrib make a pinnately lobed leaf, as in dandelion, shepherd's purse and cypress vine (*Ipomoea quamoclit*); lobes radiating from the base make a palmately lobed leaf, as in sweetgum, Chinese parasol tree, plane tree, castor bean and cotton; a leaf with only three lobes is trilobed (trident maple, morning glory). By depth of incision there are three grades:
 
 | Degree | Depth of incision (measured from margin to midrib or base) | Pinnate example | Palmate example |
 |---|---|---|---|
@@ -189,7 +189,7 @@ A compound leaf is sometimes confused with a twig bearing many simple leaves. Th
 
 The way leaves are arranged on the stem is **phyllotaxis** ([7.12.21](/7.12.21)). The basic types are as follows.
 
-- Alternate: one leaf per node, the leaves arranged in a spiral on the stem, as in camphor tree, poplar and plane tree. If successive leaves are 180° apart and form two ranks, the arrangement is distichous (rice, wheat, elm; iris and fan-shaped grass seedlings are also two-ranked).
+- Alternate: one leaf per node, the leaves arranged in a spiral on the stem, as in camphor tree, poplar and plane tree. If successive leaves are 180° apart and form two ranks, the arrangement is distichous (rice, wheat, elm; iris, whose leaves form a fan, and grass seedlings are also two-ranked).
 - Opposite: two leaves per node, facing each other, as in lilac, mint, privet and pinks. If the leaves of successive nodes cross at right angles, the arrangement is decussate, the commonest form of opposite phyllotaxis.
 - Whorled (verticillate): three or more leaves per node, arranged radially, as in oleander, lily, catalpa and whorled hydrilla.
 - Fascicled: the internodes of a branch are extremely shortened and several leaves are clustered on a short shoot, as in ginkgo, goji (*Lycium*), larch and golden larch. The needles of *Pinus* are also clustered at the tip of a short shoot, with a sheath at the base and a fixed number, forming a needle fascicle (§23.5.7).
