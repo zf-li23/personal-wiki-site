@@ -101,7 +101,7 @@ Lateral roots are regularly arranged along the parent root. In the "oscillation 
 
 - Mechanical bending: when roots bend in gravitropism or are bent artificially, lateral roots always form on the outer side of the bend, and the $\ce{Ca^2+}$ spike and local auxin accumulation caused by bending start initiation.
 - Hormones: ethylene and cytokinin inhibit initiation of lateral roots, and abscisic acid inhibits emergence of primordia that have already been initiated (lateral root development pauses in drought).
-- Inhibition by the primary root: lateral roots always form beyond a certain distance from the root tip, and cutting the primary root promotes the formation and growth of lateral roots; "pot moving" in vegetable seedling production and cutting the taproot at transplanting both make use of this.
+- Inhibition by the primary root: lateral roots always form beyond a certain distance from the root tip, and cutting the primary root promotes the formation and growth of lateral roots; "pot shifting" in vegetable seedling production and cutting the taproot at transplanting both make use of this.
 - Nutrients: local nitrate and phosphate (Section 18.7).
 
 ## 18.4. The Shoot Apical Meristem
