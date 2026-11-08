@@ -11485,7 +11485,7 @@ terms:
   - { zh: 裂脑, en: split brain }
   - { zh: 脑电图, en: electroencephalogram, aliases: [EEG, 脑电] }
   - { zh: 皮层诱发电位, en: evoked potential, aliases: [诱发电位, evoked potentials] }
-  - { zh: 非快速眼动睡眠, en: non-rapid eye movement sleep, aliases: [NREM 睡眠, NREM sleep, 慢波睡眠] }
+  - { zh: 非快速眼动睡眠, en: non-rapid eye movement sleep, aliases: [NREM 睡眠, NREM sleep, 慢波睡眠, slow-wave sleep] }
   - { zh: 快速眼动睡眠, en: rapid eye movement sleep, aliases: [REM 睡眠, REM sleep, 异相睡眠] }
   - { zh: 视交叉上核, en: suprachiasmatic nucleus, aliases: [SCN] }
   - { zh: 双过程模型, en: two-process model }
