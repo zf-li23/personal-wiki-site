@@ -86,7 +86,7 @@ The weighting costs $O(\lvert V\rvert\bar d^{\,3})$ for mean degree $\bar d$; th
 
 ### 12.3.2. Functional Enrichment of Modules
 
-A module is interpreted by the functions of its members. The standard test is **over-representation analysis** ([7.9.3](/7.9.3)): for a module of $n$ proteins in a network of $N$, of which $K$ carry a **Gene Ontology** annotation and $x$ of them are in the module, the p-value is the upper tail of the **hypergeometric distribution**. In Cytoscape the BiNGO app (Maere, Heymans and Kuiper, 2005) computes it for all GO terms and displays the enriched terms as a subgraph of the ontology.
+A module is interpreted by the functions of its members. The standard test is **over-representation analysis** ([7.9.3](/7.9.3)): in a network of $N$ proteins, of which $K$ carry a **Gene Ontology** annotation, a module of $n$ proteins contains $x$ annotated ones, and the p-value is the upper tail of the **hypergeometric distribution**. In Cytoscape the BiNGO app (Maere, Heymans and Kuiper, 2005) computes it for all GO terms and displays the enriched terms as a subgraph of the ontology.
 
 **Example 12.3.2** In the network of the figure ($N = 30$), suppose $9$ proteins carry an annotation: the $7$ members of one complex and $2$ others. The community containing that complex has $8$ members, $7$ of them annotated. The probability of $7$ or more annotated proteins in a random set of $8$ is $1.3 \times 10^{-4}$.
 
