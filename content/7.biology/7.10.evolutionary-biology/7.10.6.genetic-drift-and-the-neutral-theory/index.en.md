@@ -12,7 +12,7 @@ The basic facts are in [7.4.23](/7.4.23#sec-23.5): the **Wright–Fisher model**
 In a pasture shared with cows, snails of the grove snail *Cepaea nemoralis* are crushed by hooves regardless of their shell color; on a given day in a given field some colors happen to be crushed more often. Mendelian segregation is a lottery even when everybody survives: a heterozygous parent of two children passes the same allele to both with probability $1/2$. Simulations of an idealized population, in which every individual has exactly the same chance of surviving and reproducing, show five features of drift ([7.4.23](/7.4.23#sec-23.5.1), figure):
 
 1. it is unbiased: a frequency is as likely to go up as down, $\mathbb{E}[p_{t+1} \mid p_t] = p_t$;
-2. it is stronger in smaller populations, with $\operatorname{Var}(p_{t+1} \mid p_t) = p_tq_t/2N$, by the law of large numbers for the binomial sampling of gametes;
+2. it is stronger in smaller populations, with $\operatorname{Var}(p_{t+1} \mid p_t) = p_tq_t/2N$, from the variance of the binomial sampling of gametes;
 3. it destroys variation within populations: every allele frequency eventually reaches 0 or 1;
 4. it makes initially identical populations different, and the variance of frequencies among replicate populations grows;
 5. it can fix an allele without any help from selection, with probability equal to its initial frequency.
