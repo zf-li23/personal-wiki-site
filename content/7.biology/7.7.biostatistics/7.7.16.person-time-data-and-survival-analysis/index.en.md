@@ -1,7 +1,7 @@
 ---
 title: Person-Time Data and Survival Analysis
 description: Inference for person-time data and incidence rates (one and two samples, rate ratios and their intervals, number of events); censoring in time-to-event data and the noninformative censoring assumption; survival, hazard and cumulative hazard functions, and the exponential, Weibull and Gompertz models; the life-table method, the Kaplan–Meier estimator, Greenwood's formula and median survival time; the log-rank test and the stratified log-rank test; the Cox proportional hazards model, partial likelihood, interpretation of hazard ratios and checking proportional hazards (log-log plots, Schoenfeld residuals, time-varying effects); Weibull regression and accelerated failure time models; competing risks and the cumulative incidence function; sample size based on the number of events. Illustrated by the Veterans Administration lung cancer chemotherapy trial (veteran) and the NLST screening trial.
-source_hash: 587aec9f853e
+source_hash: 22419db3695f
 ---
 
 In the earlier chapters the outcome was measured at a single moment: birth weight, FEV, whether the birth weight was low. Many biomedical questions, however, ask "how long": how long a patient survives after chemotherapy, whether screening postpones death from lung cancer, when the risk of myocardial infarction in former smokers falls to that of nonsmokers. The outcome of **time-to-event data** ([7.7.1](/7.7.1) Section 1.4) is the time until an event occurs. It has two features: times are positive and right-skewed, and they are often subject to **censoring**: a patient still alive when the study ends tells us only that the survival time exceeds some value. This chapter first returns to the **person-time** and **incidence rate** defined in [7.7.3](/7.7.3) and turns them into inference tools for comparing two groups, the coarsest summary of event data. It then takes time itself as the outcome: describing it by the survival function and the hazard function, estimating it from censored data by the life table and the Kaplan–Meier estimator, comparing two survival curves by the log-rank test, and adjusting for several prognostic factors at once by the Cox proportional hazards model. The running example is the last data set of the first thread: the veteran trial, in which 137 patients with advanced lung cancer were randomized to standard or test chemotherapy (its structure was introduced in [7.7.1](/7.7.1) Section 1.4). Exponential and Weibull distributions were fitted to it in [7.7.4](/7.7.4) Section 4.6; here we give an analysis that does not depend on a distributional assumption and answer the question of the trial: does the test chemotherapy prolong survival? The mathematical definitions of survival time, the **survival function**, the **hazard function** and the **proportional hazards model**, together with numerical optimization of the likelihood, are in [3.5.4 Example 4.3.4](/3.5.4#ex-4.3.4); the Gompertz–Makeham law of mortality and the biology of aging are in [7.5.37](/7.5.37); as a randomized trial, veteran reappears in [7.7.18](/7.7.18) for the intention-to-treat analysis and the sample size based on the number of events.
@@ -42,7 +42,7 @@ Comparisons of rates are also subject to confounding: when the age compositions 
 | Dose response | **Cochran–Armitage trend test** ([7.7.9](/7.7.9) Definition 9.6.1) | **Poisson regression** with dose as a continuous variable ([7.7.14](/7.7.14) Example 14.8.1) |
 | Several covariates | Logistic regression ([7.7.14](/7.7.14)) | Poisson regression with an offset ([7.7.14](/7.7.14) Definition 14.8.1) |
 
-Person-time methods compress each person's follow-up into two numbers: whether the event occurred and how long the person was followed. They implicitly assume that the rate is constant during follow-up (or constant within each stratum of time). When the question is precisely "how does the risk change over time" or "what is the probability of still being alive at a given time", time itself must be taken as the outcome, and this is survival analysis. The two are exactly connected: a Poisson regression that divides the time axis into segments and assumes a constant hazard within each segment gives the same estimates as the piecewise exponential survival model of Section 16.8.
+Person-time methods compress each person's follow-up into two numbers: whether the event occurred and how long the person was followed. They implicitly assume that the rate is constant during follow-up (or constant within each stratum of time). When the question is precisely "how does the risk change over time" or "what is the probability of still being alive at a given time", time itself must be taken as the outcome, and this is survival analysis. The two are exactly connected: a Poisson regression that divides the time axis into segments and assumes a constant hazard within each segment gives the same estimates as the piecewise exponential survival model.
 
 ## 16.2. Features of Survival Data
 
@@ -60,7 +60,7 @@ All the methods in this chapter rely on this assumption. Administrative censorin
 
 In the veteran trial, 9 of the 137 patients are censored. Consider three wrong approaches:
 
-- Analyze only the 128 patients who died: the censored are those who lived long (the median censoring time of the 9 is 100 days, whereas the median survival time of all deaths is 80 days), so dropping them makes survival times too short; the higher the proportion censored, the larger the bias.
+- Analyze only the 128 patients who died: the censored are those who lived long (the median censoring time of the 9 is 100 days, whereas the median of the 128 death times is 62 days), so dropping them makes survival times too short; the higher the proportion censored, the larger the bias.
 - Treat censoring times as death times: again too short, since the true survival times of the censored are all longer.
 - Compare only "the proportion dead at 1 year": those censored before 1 year can be counted neither as dead nor as alive.
 
@@ -122,7 +122,7 @@ The life table originated with Graunt's London bills of mortality and Halley's B
 | 400–600 | 6 | 4 | 0 | 6.0 | 0.667 | 0.018 |
 | 600–1000 | 2 | 2 | 0 | 2.0 | 1.000 | 0 |
 
-The life-table estimate of 0.413 at 100 days is close to the Kaplan–Meier estimate of 0.418 in the next section. The conditional probability of death in each interval is between 0.4 and 0.6 without an evident trend: roughly, about half of the patients with advanced lung cancer die in every 100 days, close to a constant hazard.
+The life-table estimate of 0.413 at 100 days is close to the Kaplan–Meier estimate of 0.418 in the next section. The conditional probability of death in each interval is between 0.4 and 0.7 without an evident trend: roughly, about half of the patients with advanced lung cancer die in every 100 days, close to a constant hazard.
 
 ## 16.5. The Kaplan–Meier Estimator
 
