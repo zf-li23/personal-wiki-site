@@ -149,7 +149,7 @@ Cellulose is synthesized by **cellulose synthase** complexes in the plasma membr
 The orientation of microfibrils determines the direction of cell growth and the mechanical properties of the wall:
 
 - In the primary wall the microfibrils are interwoven into a network; in elongating cells most are oriented transversely and, like barrel hoops, restrict lateral expansion, so the cell elongates along its long axis.
-- In the secondary wall, the microfibrils within each layer are roughly parallel but differ in direction between layers: in S1 and S3 they make a large angle with the long axis of the cell (nearly transverse), in S2 a small angle (generally $5^\circ$–$30^\circ$ in wood fibers, the microfibril angle). This alternating arrangement strengthens the wall like plywood; the smaller the microfibril angle in S2, the greater the bending stiffness of fiber and wood (reaction wood in the compression zone has a large microfibril angle, and the wood is soft and brittle).
+- In the secondary wall, the microfibrils within each layer are roughly parallel but differ in direction between layers: in S1 and S3 they make a large angle with the long axis of the cell (nearly transverse), in S2 a small angle (generally $5^\circ$–$30^\circ$ in wood fibers, the microfibril angle). This alternating arrangement strengthens the wall like plywood; the smaller the microfibril angle in S2, the greater the bending stiffness of fiber and wood (compression wood has a large microfibril angle, and the wood is soft and brittle).
 
 ### 3.3.4. Modifications of the Cell Wall
 
