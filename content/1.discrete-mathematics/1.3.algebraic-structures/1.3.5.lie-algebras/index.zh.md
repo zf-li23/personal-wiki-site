@@ -192,7 +192,7 @@ $$
 3. $\det(\mathrm{e}^X) = \mathrm{e}^{\operatorname{tr} X}$；
 4. $t \mapsto \mathrm{e}^{tX}$ 是 $(\mathbb{R}, +)$ 到 $\operatorname{GL}(n, \mathbb{C})$ 的群同态，并且 $\dfrac{\mathrm{d}}{\mathrm{d}t} \mathrm{e}^{tX} = X \mathrm{e}^{tX}$。
 
-性质 4 说明 $\{e^{tX} \mid t \in \mathbb{R}\}$ 是一个子群，称为由 $X$ 生成的**单参数子群**（one-parameter subgroup），$X$ 是它在 $t = 0$ 处的"速度"。性质 3 可以借助 Jordan 标准形（[线性代数](/2.1.10#thm-10.9.2)）和性质 2 证明：上三角矩阵的指数仍是上三角的，对角元为 $\mathrm{e}^{\lambda_i}$。
+性质 4 说明 $\{\mathrm{e}^{tX} \mid t \in \mathbb{R}\}$ 是一个子群，称为由 $X$ 生成的**单参数子群**（one-parameter subgroup），$X$ 是它在 $t = 0$ 处的"速度"。性质 3 可以借助 Jordan 标准形（[线性代数](/2.1.10#thm-10.9.2)）和性质 2 证明：上三角矩阵的指数仍是上三角的，对角元为 $\mathrm{e}^{\lambda_i}$。
 
 ### 5.5.2. 矩阵李群
 

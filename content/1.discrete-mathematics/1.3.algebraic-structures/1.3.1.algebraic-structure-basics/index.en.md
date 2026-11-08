@@ -295,7 +295,7 @@ Ring homomorphisms (Definition 3.3.1), which preserve both addition and multipli
 2. if $(X, \cdot)$ has an identity element $e$, then $f(e)$ is the identity element of $(Y, *)$;
 3. if $(X, \cdot)$ has an identity element and every $x \in X$ has an inverse $x^{-1}$, then every element $f(x) \in Y$ has the inverse $f(x^{-1})$.
 
-Surjectivity cannot be dropped: in general, for instance, the image $f(e)$ of the identity is only guaranteed to be the identity element of $f(X)$.
+Surjectivity cannot be dropped: for instance, the image $f(e)$ of the identity is in general only guaranteed to be the identity element of $f(X)$.
 
 ### 1.4.7. Endomorphisms and Automorphisms
 

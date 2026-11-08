@@ -257,7 +257,7 @@ The parity of a permutation is therefore well defined: a permutation that is a p
 **Theorem 2.5.1** Let $H \le G$. Left cosets have the following properties:
 
 1. $H = eH$ and $a \in aH$;
-2. $|aH| = |H|$; that is, each left coset is related to $H$ by **equinumerosity**, via the bijection $h \mapsto ah$;
+2. $|aH| = |H|$; that is, each left coset is **equinumerous** with $H$, via the bijection $h \mapsto ah$;
 3. $a \in H \iff aH = H$;
 4. $xH = aH$ for every $x \in aH$; that is, any element of a coset can serve as its representative;
 5. $aH = bH \iff a \in bH \iff b^{-1}a \in H$;
