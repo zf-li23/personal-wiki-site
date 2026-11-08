@@ -30,11 +30,11 @@ When infectiousness begins *before* symptoms — as in measles, influenza and SA
 
 ### 35.1.1. Reservoirs, Sources and Carriers
 
-The *reservoir* is where the pathogen is maintained in nature: humans alone (measles, poliovirus, *Treponema pallidum*), other animals, or the environment (*Clostridium tetani* and *Legionella* in soil and water). The *source* is the immediate origin of a particular infection, which may differ from the reservoir — the reservoir of *Legionella* is biofilm in warm water systems, the source of an outbreak a particular cooling tower. A *carrier* harbours and sheds the organism without symptoms, and may be incubating the disease, convalescing from it, or chronically colonized. Chronic carriage of *Salmonella* Typhi in the gallbladder, which can last decades, is the classical instance.
+The *reservoir* is where the pathogen is maintained in nature: humans alone (measles, poliovirus, *Treponema pallidum*), other animals, or the environment (*Clostridium tetani* and *Legionella* in soil and water). The *source* is the immediate origin of a particular infection, which may differ from the reservoir — the reservoir of *Legionella* is biofilm in warm water systems, the source of an outbreak a particular cooling tower. A *carrier* harbors and sheds the organism without symptoms, and may be incubating the disease, convalescing from it, or chronically colonized. Chronic carriage of *Salmonella* Typhi in the gallbladder, which can last decades, is the classical instance.
 
 An infection whose reservoir is non-human is a **zoonosis** ([7.11.27](/7.11.27#sec-27.9)), and that one fact has large consequences: a zoonosis cannot be eradicated by vaccinating people, and most new human pathogens are zoonotic in origin.
 
-**Definition 35.1.1 (Emerging Infectious Disease)** An **emerging infectious disease** is one newly recognized in a population, or one whose incidence or geographical range is rising. The drivers are ecological and social rather than microbiological: changing land use that brings people into contact with new reservoirs, intensive animal production, travel and trade, urbanization, climate change, breakdown of public health infrastructure, and the loss of treatment options to antimicrobial resistance ([7.11.15](/7.11.15)). A *re-emerging* disease is an old one returning — diphtheria where vaccination coverage collapses, measles in the same circumstances, tuberculosis where treatment programmes fail.
+**Definition 35.1.1 (Emerging Infectious Disease)** An **emerging infectious disease** is one newly recognized in a population, or one whose incidence or geographical range is rising. The drivers are ecological and social rather than microbiological: changing land use that brings people into contact with new reservoirs, intensive animal production, travel and trade, urbanization, climate change, breakdown of public health infrastructure, and the loss of treatment options to antimicrobial resistance ([7.11.15](/7.11.15)). A *re-emerging* disease is an old one returning — diphtheria where vaccination coverage collapses, measles in the same circumstances, tuberculosis where treatment programs fail.
 
 ## 35.2. How Infections Are Transmitted
 
@@ -45,14 +45,14 @@ An infection whose reservoir is non-human is a **zoonosis** ([7.11.27](/7.11.27#
 | Direct contact, including sexual | *Staphylococcus aureus*, *Neisseria gonorrhoeae*, *Treponema pallidum*, HIV | hygiene, barrier methods, treatment of partners |
 | Vertical (placenta, birth, milk) | *T. pallidum*, *Streptococcus agalactiae*, HIV, cytomegalovirus | screening in pregnancy, antiretroviral therapy, prophylaxis |
 | Droplet and aerosol | *Mycobacterium tuberculosis*, *Bordetella pertussis*, *Neisseria meningitidis*, influenza and SARS-CoV-2 | ventilation, masks, isolation, vaccination |
-| Faecal–oral, water and food | *Vibrio cholerae*, *Salmonella*, *Campylobacter*, *Shigella*, hepatitis A, norovirus | sanitation, water treatment, food hygiene, handwashing |
+| Fecal–oral, water and food | *Vibrio cholerae*, *Salmonella*, *Campylobacter*, *Shigella*, hepatitis A, norovirus | sanitation, water treatment, food hygiene, handwashing |
 | Vehicle: blood, products, fomites | hepatitis B and C, HIV; *Clostridioides difficile* spores on surfaces | screening of donations, single-use devices, sporicidal cleaning |
 | Vector-borne | *Yersinia pestis* (fleas), *Borrelia burgdorferi* (ticks), the **rickettsias** (lice, ticks, mites), dengue and Zika viruses (mosquitoes) | vector control, repellents, bed nets, habitat management |
 | Environmental, no host-to-host spread | *Clostridium tetani*, *Legionella pneumophila*, *Coccidioides* | wound care, vaccination, water system management |
 
-Two points deserve emphasis. First, a pathogen's transmission route is a strong constraint on its biology: organisms transmitted by the faecal–oral route must survive stomach acid and desiccation, and those transmitted by vectors must survive in an invertebrate at ambient temperature and in a vertebrate at 37 °C, which is why they so often have temperature-regulated gene expression — *Y. pestis* makes its antiphagocytic F1 capsule at 37 °C and not in the flea.
+Two points deserve emphasis. First, a pathogen's transmission route is a strong constraint on its biology: organisms transmitted by the fecal–oral route must survive stomach acid and desiccation, and those transmitted by vectors must survive in an invertebrate at ambient temperature and in a vertebrate at 37 °C, which is why they so often have temperature-regulated gene expression — *Y. pestis* makes its antiphagocytic F1 capsule at 37 °C and not in the flea.
 
-Second, the quality of water is monitored not by looking for pathogens, which are sparse and varied, but by counting **indicator organisms** ([7.11.30](/7.11.30)) — *Escherichia coli* and the coliforms, whose presence shows that faecal contamination has occurred and therefore that enteric pathogens may be present. Food microbiology works on the same logic, with total counts and indicator species as indices of handling and storage rather than as a search for each possible agent.
+Second, the quality of water is monitored not by looking for pathogens, which are sparse and varied, but by counting **indicator organisms** ([7.11.30](/7.11.30)) — *Escherichia coli* and the coliforms, whose presence shows that fecal contamination has occurred and therefore that enteric pathogens may be present. Food microbiology works on the same logic, with total counts and indicator species as indices of handling and storage rather than as a search for each possible agent.
 
 ## 35.3. Epidemics in Populations
 
@@ -62,7 +62,7 @@ The **basic reproduction number** $R_0$ ([1.4.7](/1.4.7)) is the average number 
 
 ### 35.3.2. Why Epidemics End
 
-The decline of an epidemic needs no change in the pathogen or in behaviour: as susceptibles are consumed, $s_t$ falls, and when it reaches $1/R_0$ the incidence peaks. The standard SIR model ([1.4.7](/1.4.7)) makes this quantitative, and gives the *final size* equation
+The decline of an epidemic needs no change in the pathogen or in behavior: as susceptibles are consumed, $s_t$ falls, and when it reaches $1/R_0$ the incidence peaks. The standard SIR model ([1.4.7](/1.4.7)) makes this quantitative, and gives the *final size* equation
 
 $$
 1 - r_\infty = \mathrm{e}^{-R_0 r_\infty}, \tag{35.1}
@@ -130,7 +130,7 @@ flowchart TD
 
 ### 35.6.1. Specimen Quality
 
-A blood culture taken after antibiotics, a sputum sample that is mostly saliva, or a swab transported for two days at room temperature cannot be rescued by any downstream technique. Specimens from normally sterile sites (blood, cerebrospinal fluid, joint fluid) are interpreted directly; specimens from colonized sites (sputum, wounds, stool, urine) require distinguishing the pathogen from the resident microbiota, which is why quantitative thresholds exist — significant bacteriuria is conventionally $\ge 10^5$ colony-forming units per millilitre of a single organism.
+A blood culture taken after antibiotics, a sputum sample that is mostly saliva, or a swab transported for two days at room temperature cannot be rescued by any downstream technique. Specimens from normally sterile sites (blood, cerebrospinal fluid, joint fluid) are interpreted directly; specimens from colonized sites (sputum, wounds, stool, urine) require distinguishing the pathogen from the resident microbiota, which is why quantitative thresholds exist — significant bacteriuria is conventionally $\ge 10^5$ colony-forming units per milliliter of a single organism.
 
 ### 35.6.2. Methods
 
@@ -146,7 +146,7 @@ $$
 \mathrm{PPV} = \frac{\mathrm{Se}\,\pi}{\mathrm{Se}\,\pi + (1 - \mathrm{Sp})(1 - \pi)}. \tag{35.2}
 $$
 
-Eq. (35.2) is why a highly specific test can still produce mostly false positives in a screening programme, and why the result of a test performed without an indication is hard to act on.
+Eq. (35.2) is why a highly specific test can still produce mostly false positives in a screening program, and why the result of a test performed without an indication is hard to act on.
 
 ## 35.7. Biosafety
 
@@ -165,7 +165,7 @@ Risk assessment, not the organism's name alone, sets the level: the volume, the 
 
 **Definition 35.8.1 (Healthcare-Associated Infection)** A **healthcare-associated infection** is an infection acquired in the course of medical care and not present or incubating on admission.
 
-Hospitals concentrate the three factors that infection needs. The patients are unusually susceptible — extremes of age, underlying disease, immunosuppression, surgery. The procedures breach the natural barriers: intravascular catheters, urinary catheters, ventilation, implanted devices, each of which gives organisms a surface to form a **biofilm** on ([7.11.12](/7.11.12)) and a direct route past the skin or mucosa. And the organisms present have been selected by heavy antimicrobial use, so they are disproportionately resistant ([7.11.15](/7.11.15)): meticillin-resistant *S. aureus*, vancomycin-resistant enterococci, extended-spectrum β-lactamase and carbapenemase producers among the Enterobacterales, *Acinetobacter baumannii*, *Pseudomonas aeruginosa*, and *Clostridioides difficile*, whose spores survive on surfaces and whose expansion follows the disruption of the gut microbiota by antibiotics ([7.11.32](/7.11.32)).
+Hospitals concentrate the three factors that infection needs. The patients are unusually susceptible — extremes of age, underlying disease, immunosuppression, surgery. The procedures breach the natural barriers: intravascular catheters, urinary catheters, ventilation, implanted devices, each of which gives organisms a surface to form a **biofilm** on ([7.11.12](/7.11.12)) and a direct route past the skin or mucosa. And the organisms present have been selected by heavy antimicrobial use, so they are disproportionately resistant ([7.11.15](/7.11.15)): methicillin-resistant *S. aureus*, vancomycin-resistant enterococci, extended-spectrum β-lactamase and carbapenemase producers among the Enterobacterales, *Acinetobacter baumannii*, *Pseudomonas aeruginosa*, and *Clostridioides difficile*, whose spores survive on surfaces and whose expansion follows the disruption of the gut microbiota by antibiotics ([7.11.32](/7.11.32)).
 
 The main syndromes are catheter-associated urinary tract infection, central-line-associated bloodstream infection, ventilator-associated pneumonia, surgical site infection and *C. difficile* colitis. Control is unglamorous and effective: hand hygiene (the lesson of Semmelweis in 1847, resisted for a generation), aseptic insertion and prompt removal of devices, care bundles for each procedure, environmental cleaning with sporicidal agents where *C. difficile* circulates, isolation and cohorting, surveillance with feedback of infection rates to the units concerned, and antimicrobial stewardship to reduce the selective pressure that produced the resistant flora in the first place.
 
@@ -176,8 +176,8 @@ The table collects the agents discussed in this course, as a map rather than a c
 | Route | Bacterial | Viral | Eukaryotic |
 |---|---|---|---|
 | Respiratory | streptococcal pharyngitis, diphtheria, pertussis, tuberculosis, meningococcal disease, pneumococcal pneumonia, legionellosis | influenza, common colds, measles, COVID-19 | *Pneumocystis*, *Histoplasma*, *Coccidioides* ([7.11.21](/7.11.21)) |
-| Direct and sexual contact | staphylococcal skin infection, gonorrhoea, syphilis, chlamydial infection, *Helicobacter pylori* gastritis | HIV, hepatitis B, herpes simplex, human papillomavirus | *Trichomonas* ([7.11.20](/7.11.20)) |
-| Faecal–oral, water and food | cholera, typhoid, salmonellosis, shigellosis, campylobacteriosis, listeriosis, enterohaemorrhagic *E. coli*, staphylococcal and clostridial food poisoning | hepatitis A, poliovirus, norovirus, rotavirus | *Giardia*, *Entamoeba*, *Cryptosporidium* ([7.11.20](/7.11.20)) |
+| Direct and sexual contact | staphylococcal skin infection, gonorrhea, syphilis, chlamydial infection, *Helicobacter pylori* gastritis | HIV, hepatitis B, herpes simplex, human papillomavirus | *Trichomonas* ([7.11.20](/7.11.20)) |
+| Fecal–oral, water and food | cholera, typhoid, salmonellosis, shigellosis, campylobacteriosis, listeriosis, enterohemorrhagic *E. coli*, staphylococcal and clostridial food poisoning | hepatitis A, poliovirus, norovirus, rotavirus | *Giardia*, *Entamoeba*, *Cryptosporidium* ([7.11.20](/7.11.20)) |
 | Vector-borne | plague, Lyme disease, rickettsioses | dengue, yellow fever, Zika, West Nile | malaria, leishmaniasis, trypanosomiasis ([7.11.20](/7.11.20)) |
 | Soil, water and wounds | tetanus, gas gangrene, anthrax, melioidosis | — | *Aspergillus*, mycetoma ([7.11.21](/7.11.21)) |
 | Zoonotic, animal contact | brucellosis, Q fever, leptospirosis, cat-scratch disease | rabies, hantavirus, avian influenza | toxoplasmosis |
