@@ -1,7 +1,7 @@
 ---
 title: Green Algae (Chlorophyta)
 description: "The two lineages of green plants and the circumscription of the Chlorophyta; green algal cell structure (chlorophylls a and b, plastid starch and pyrenoids, the eyespot, cruciate flagellar roots) and phycoplast cell division; vegetative reproduction, zoospores and autospores, isogamy to oogamy; representative genera under the traditional orders and the current classes: Chlamydomonas and the volvocine series, chlorococcalean algae, Oedogonium and chaetophoralean algae, Ulothrix, Ulva and Enteromorpha, Cladophora, Codium, Caulerpa and Acetabularia, Trebouxia and Chlorella, prasinophytes; evolutionary trends in the Chlorophyta and their role as model organisms."
-source_hash: 81513d3e696c
+source_hash: 2c51f14a7897
 ---
 
 The green algae are the largest and morphologically most diverse group of algae. They range from marine picoplankton less than 1 µm across to seaweeds tens of centimeters long that consist of a single giant multinucleate cell, and almost every type of algal body plan has arisen among them. They share with land plants the same photosynthetic pigments (chlorophylls *a* and *b*), the same storage product (starch inside the plastid) and similar flagella, and for a long time they were regarded as the "ancestors of the higher plants." Molecular phylogenetics has made this picture precise: the traditional "green algae" belong to two lineages of the **Viridiplantae**. The Chlorophyta, one of these lineages, diversified in the sea and in fresh water and never moved onto land as embryophytes; land plants arose in the other lineage, the **Streptophyta**, from among the streptophyte algae.
