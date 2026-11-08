@@ -248,7 +248,7 @@ A cell state can be described by a signature, the genes going up and down compar
 
 **Definition 7.7.1 (Connectivity Map)** A **connectivity map** is a reference database of transcriptional profiles of cells treated with many perturbations (small molecules, gene knockdowns or overexpression), together with a method that scores the similarity of a query signature to each reference profile, positive for profiles that mimic the query and negative for profiles that reverse it.
 
-The first Connectivity Map (Lamb and colleagues, 2006) profiled cell lines treated with a few hundred compounds on microarrays. Its successor, the L1000 platform (Subramanian and colleagues, 2017), measures $978$ landmark transcripts by a cheap bead-based assay and infers most of the rest from them, which made more than a million profiles affordable, across many cell lines, doses and times, with compounds, short hairpin RNAs and overexpression constructs.
+The first Connectivity Map (Lamb and colleagues, 2006) profiled cell lines treated with more than a hundred compounds on microarrays. Its successor, the L1000 platform (Subramanian and colleagues, 2017), measures $978$ landmark transcripts by a cheap bead-based assay and infers most of the rest from them, which made more than a million profiles affordable, across many cell lines, doses and times, with compounds, short hairpin RNAs and overexpression constructs.
 
 **Algorithm 7.7.1 (Connectivity Score)** (Lamb and colleagues, 2006) A reference profile ranks all $n$ genes from most induced to most repressed by its perturbation. For a query with up genes $S_{\mathrm{up}}$ and down genes $S_{\mathrm{down}}$:
 

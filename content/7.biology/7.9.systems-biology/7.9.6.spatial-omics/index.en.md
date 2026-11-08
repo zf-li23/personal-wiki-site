@@ -172,11 +172,11 @@ An image too large for memory is processed in tiles. Tiling is simple for pixel-
 4. Map the remaining objects to global coordinates. For every pair of objects from overlapping windows, compute their intersection over union (6.7.6); if it is at least $0.5$, unite them in a **union–find** structure.
 5. Output one object per set of the union–find structure (for example, the version from the window in whose core its centroid lies).
 
-**Proposition 6.6.1** If every object has diameter at most $h$, each object lies entirely inside the window of the tile that contains any one of its points, so it survives step 3 in at least one window.
+**Proposition 6.6.1** If every object has diameter less than $h$, each object lies entirely inside the window of the tile that contains any one of its points, so it survives step 3 in at least one window.
 
 **Proof** Let $p$ be a point of the object in tile $Q$. Every point of the object is within distance $h$ of $p$, hence within the square of $Q$ enlarged by $h$, which is the window of $Q$ (or its clipping at the image border, where the object ends anyway). An object entirely inside a window does not touch its inner edges, unless it touches them exactly at distance $h$, which a strict inequality excludes. $\square$
 
-The cost of the halo is the extra area processed, $(1 + 2h/L)^k - 1$ in $k$ dimensions: for tiles of $2048$ pixels and a halo of $64$ it is $12.9\%$ in two dimensions and $19.9\%$ in three; for small tiles of $512$ with the same halo it is $26.6\%$ and $42.4\%$. Large tiles are cheaper but need more memory per worker, a choice that depends on whether the work runs on CPUs or on graphics processors, whose memory is smaller and faster.
+The cost of the halo is the extra area processed, $(1 + 2h/L)^k - 1$ in $k$ dimensions: for tiles of $2048$ pixels and a halo of $64$ it is $12.9\%$ in two dimensions and $19.9\%$ in three; for smaller tiles of $1024$ with the same halo it is $26.6\%$ and $42.4\%$. Large tiles are cheaper but need more memory per worker, a choice that depends on whether the work runs on CPUs or on graphics processors, whose memory is smaller and faster.
 
 ![Segmenting a large image in tiles (synthetic image of 90 cells). A: 3 × 3 tiles of 120 px (solid lines); each is processed with a halo of 24 px (dashed: the window of the centre tile). B: without a halo, the 16 cells crossing tile boundaries are cut into fragments (red) and counted twice, giving 106 objects. C: with the halo, objects touching inner window edges are discarded and duplicates from overlapping windows are merged at IoU ≥ 0.5 with a union-find structure (Algorithm 6.6.1): exactly 90 objects. D: the extra pixels processed, (1 + 2h/L)^k − 1, in two and three dimensions; the dot marks the small tiles of this illustration](./plots/halo_stitch.py)
 
@@ -323,7 +323,7 @@ The null distribution can be approximated by a normal distribution with a varian
 
 ![Spatial autocorrelation and clustering on synthetic data. A: a smooth field on a 30 × 30 grid (Gaussian-filtered noise), Moran's I = 0.85 with rook weights. B: the same values shuffled, I = −0.034. C: the permutation null of 999 random relabelings (identical for A and B, which have the same values), centred at −1/(n − 1) = −0.0011 with standard deviation 0.023: A lies far outside it (p = 0.001, the smallest attainable), B inside (p = 0.93). D: Ripley's L(r) − r for 300 points: complete spatial randomness stays within the range of 99 simulations (shaded), the clustered Thomas process lies far above it at short distances](./plots/morans_i.py)
 
-In the figure, the smooth field has $I = 0.847$. The permutation null has standard deviation $0.0228$, close to the normal-theory value $0.0239$ for this grid, so $I$ lies $35$ standard deviations above its expectation. With thousands of cells, almost every gene with any spatial structure is significant, and the value of $I$, not the p-value, ranks genes by the strength of their pattern.
+In the figure, the smooth field has $I = 0.847$. The permutation null has standard deviation $0.0228$, close to the normal-theory value $0.0239$ for this grid, so $I$ lies about $37$ standard deviations above its expectation. With thousands of cells, almost every gene with any spatial structure is significant, and the value of $I$, not the p-value, ranks genes by the strength of their pattern.
 
 ### 6.10.3. Spatially Variable Genes
 
@@ -519,7 +519,7 @@ The software that supports analysis is changing along three lines. The first is 
 
 5. Prove that with a halo $h$ smaller than the largest object diameter, Algorithm 6.6.1 can lose an object, and give the smallest halo that is safe for cells of diameter $25\,\mu\mathrm{m}$ imaged at $0.5\,\mu\mathrm{m}$ per pixel. What is the extra cost in two and three dimensions with tiles of $2048$ pixels?
 
-   **Answer** Take an object of diameter $d > h$ that crosses a tile corner so that it extends more than $h$ beyond the boundary of each of the four tiles it touches; then every window cuts it, it touches an inner edge in every window, and step 3 discards all its versions. A safe halo is $h \ge d = 25\,\mu\mathrm{m} = 50$ pixels (Proposition 6.6.1). With $L = 2048$, $h = 50$: $(1 + 100/2048)^2 - 1 = 10.0\%$ in two dimensions and $(1.0488)^3 - 1 = 15.4\%$ in three.
+   **Answer** Take an object of diameter $d > h$ that crosses a tile corner so that it extends more than $h$ beyond the boundary of each of the four tiles it touches; then every window cuts it, it touches an inner edge in every window, and step 3 discards all its versions. A safe halo is $h > d$, that is more than $25\,\mu\mathrm{m} = 50$ pixels (Proposition 6.6.1). Taking the limit $h = 50$ with $L = 2048$: $(1 + 100/2048)^2 - 1 = 10.0\%$ in two dimensions and $(1.0488)^3 - 1 = 15.4\%$ in three.
 
 6. In Example 6.10.1, list the arrangements of $1, \dots, 5$ in a row with $I \ge 0.5$ and verify that there are $8$.
 
