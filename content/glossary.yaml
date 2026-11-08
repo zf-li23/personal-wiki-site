@@ -11468,3 +11468,29 @@ terms:
   - { zh: 味蕾, en: taste bud, aliases: [taste buds] }
   - { zh: 电感受, en: electroreception }
   - { zh: 电定位, en: electrolocation }
+  - { zh: 皮质脊髓束, en: corticospinal tract, aliases: [锥体束, pyramidal tract] }
+  - { zh: 外侧运动系统, en: lateral motor system }
+  - { zh: 内侧运动系统, en: medial motor system }
+  - { zh: 苔藓纤维, en: mossy fiber, aliases: [mossy fibers, mossy fibre] }
+  - { zh: 攀缘纤维, en: climbing fiber, aliases: [climbing fibers, climbing fibre] }
+  - { zh: 基底神经节, en: basal ganglia, aliases: [基底核] }
+  - { zh: 直接通路, en: direct pathway, scope: ["7.14"] }
+  - { zh: 间接通路, en: indirect pathway, scope: ["7.14"] }
+  - { zh: 群体向量, en: population vector }
+  - { zh: Parkinson 病, en: "Parkinson's disease", aliases: [帕金森病] }
+  - { zh: Huntington 病, en: "Huntington's disease", aliases: [亨廷顿病] }
+  - { zh: 新皮层, en: neocortex }
+  - { zh: 联合皮层, en: association cortex }
+  - { zh: 失语症, en: aphasia }
+  - { zh: 裂脑, en: split brain }
+  - { zh: 脑电图, en: electroencephalogram, aliases: [EEG, 脑电] }
+  - { zh: 皮层诱发电位, en: evoked potential, aliases: [诱发电位, evoked potentials] }
+  - { zh: 非快速眼动睡眠, en: non-rapid eye movement sleep, aliases: [NREM 睡眠, NREM sleep, 慢波睡眠] }
+  - { zh: 快速眼动睡眠, en: rapid eye movement sleep, aliases: [REM 睡眠, REM sleep, 异相睡眠] }
+  - { zh: 视交叉上核, en: suprachiasmatic nucleus, aliases: [SCN] }
+  - { zh: 双过程模型, en: two-process model }
+  - { zh: 习惯化, en: habituation }
+  - { zh: 敏感化, en: sensitization, scope: ["7.14"] }
+  - { zh: 边缘系统, en: limbic system }
+  - { zh: 半脑睡眠, en: unihemispheric sleep, aliases: [unihemispheric slow-wave sleep] }
+  - { zh: 脑化指数, en: encephalization quotient }
