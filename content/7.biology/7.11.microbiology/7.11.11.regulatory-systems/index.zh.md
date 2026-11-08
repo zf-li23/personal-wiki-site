@@ -1,7 +1,7 @@
 ---
 title: 微生物的调控系统
 description: 原核生物如何决定制造什么：调控的层次与代价；DNA 结合蛋白与负调控和正调控（精氨酸、乳糖和麦芽糖操纵子）；调节子、刺激子、分解代谢物阻遏与二次生长；替代 σ 因子、抗 σ 因子与伙伴切换；古菌的转录调控（NrpR、TrmBL1）；双组分系统与磷酸传递系统（EnvZ-OmpR、Che 途径）；革兰氏阴性菌和阳性菌的群体感应及其抑制；严紧反应与 (p)ppGpp；Pho 调节子与热激反应；小 RNA、Hfq、核糖开关与衰减；以及通过反馈抑制和共价修饰调节酶活性。
-source_hash: "831166139897"
+source_hash: bf3a7ee691f7
 ---
 
 细菌携带的基因所编码的蛋白质，远多于它任一时刻所需要的。*Escherichia coli* 能转运并分解几十种糖、合成全部二十种氨基酸、用半打电子受体进行呼吸并构建鞭毛，但在葡萄糖–盐培养基中生长的细胞几乎不制造这些系统中的任何一个。制造一个用不上的蛋白质要消耗氨基酸、ATP 和核糖体的工作时间，而核糖体时间是快速生长细胞最稀缺的资源（[7.6.39](/7.6.39)）：一个白白占据蛋白质组百分之一的蛋白质，会使生长减慢大约百分之一。因此调控不是锦上添花，而是微生物生理学的核心部分，其运作的速度，即数分钟内作出反应、一小时内完全改变程序，使代时只有半小时的群体能够跟踪变化的环境。
@@ -143,7 +143,7 @@ EnvZ 和 OmpR 根据培养基的渗透浓度调节 *E. coli* 的孔蛋白。在�
 
 | 类群 | 信号 | 受体 | 例子 |
 |---|---|---|---|
-| 革兰氏阴性菌，种特异 | 酰基高丝氨酸内酯（AHL）：内酯环加 4–18 个碳的酰基链，常带 3-氧代取代 | 细胞质的 LuxR 型激活因子（可透膜的信号）或膜激酶 | *Vibrio fischeri*（3-oxo-C6-HSL），*Pseudomonas aeruginosa*（3-oxo-C12-HSL、C4-HSL） |
+| 革兰氏阴性菌，种特异 | 酰基高丝氨酸内酯（acyl homoserine lactone），简称 AHL：内酯环加 4–18 个碳的酰基链，常带 3-氧代取代 | 细胞质的 LuxR 型激活因子（可透膜的信号）或膜激酶 | *Vibrio fischeri*（3-oxo-C6-HSL），*Pseudomonas aeruginosa*（3-oxo-C12-HSL、C4-HSL） |
 | 革兰氏阴性菌，种间 | AI-2，由 LuxS 产生的、衍生自 4,5-二羟基-2,3-戊二酮的一类呋喃酮 | 周质结合蛋白 LuxP 与激酶 LuxQ | *Vibrio harveyi*，以及许多携带 *luxS* 的细菌 |
 | 革兰氏阴性菌，其他 | CAI-1（一种 α-羟基酮）、PQS（一种喹诺酮）、DSF（一种脂肪酸）、3-OH PAME | 膜激酶或细胞质调节蛋白 | *Vibrio cholerae*，*P. aeruginosa*，*Xanthomonas*，*Ralstonia* |
 | 革兰氏阳性菌 | 自诱导肽（AIP），经加工并输出，常为环状 | 双组分系统的膜组氨酸激酶 | *Staphylococcus aureus*（agr），*Streptococcus pneumoniae*（感受态），*Bacillus subtilis*（ComX、PhrA） |

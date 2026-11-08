@@ -142,7 +142,7 @@ Three properties follow from the definition. The signal reports density only whe
 
 | Group | Signal | Receptor | Example |
 |---|---|---|---|
-| Gram-negative, species-specific | Acyl homoserine lactones (AHLs): a lactone ring with an acyl chain of 4–18 carbons, often 3-oxo-substituted | Cytoplasmic LuxR-type activators (membrane-permeant signals) or membrane kinases | *Vibrio fischeri* (3-oxo-C6-HSL), *Pseudomonas aeruginosa* (3-oxo-C12-HSL, C4-HSL) |
+| Gram-negative, species-specific | *Acyl homoserine lactones* (AHLs): a lactone ring with an acyl chain of 4–18 carbons, often 3-oxo-substituted | Cytoplasmic LuxR-type activators (membrane-permeant signals) or membrane kinases | *Vibrio fischeri* (3-oxo-C6-HSL), *Pseudomonas aeruginosa* (3-oxo-C12-HSL, C4-HSL) |
 | Gram-negative, interspecies | AI-2, a family of furanones derived from 4,5-dihydroxy-2,3-pentanedione, made by LuxS | Periplasmic binding protein LuxP with the kinase LuxQ | *Vibrio harveyi*, and the many bacteria that carry *luxS* |
 | Gram-negative, other | CAI-1 (an α-hydroxyketone), PQS (a quinolone), DSF (a fatty acid), 3-OH PAME | Membrane kinases or cytoplasmic regulators | *Vibrio cholerae*, *P. aeruginosa*, *Xanthomonas*, *Ralstonia* |
 | Gram-positive | Autoinducing peptides (AIPs), processed and exported, often cyclic | Membrane histidine kinases of two-component systems | *Staphylococcus aureus* (agr), *Streptococcus pneumoniae* (competence), *Bacillus subtilis* (ComX, PhrA) |
