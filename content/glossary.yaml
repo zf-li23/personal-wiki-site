@@ -9844,7 +9844,7 @@ terms:
   - { zh: 烈性噬菌体, en: virulent phage, aliases: [lytic phage, 毒性噬菌体] }
   - { zh: 溶原转换, en: lysogenic conversion, aliases: [溶源转变, phage conversion] }
   - { zh: 噬菌体疗法, en: phage therapy, aliases: [噬菌体治疗] }
-  - { zh: 穿孔素, en: holin, aliases: [holins] }
+  - { zh: 穿孔素, en: holin, aliases: [holins], scope: ["7.11"] }   # perforin (immunology) is a different 穿孔素
   - { zh: 内溶素, en: endolysin, aliases: [endolysins, 裂解酶] }
   - { zh: 抗 CRISPR 蛋白, en: anti-CRISPR protein, aliases: [anti-CRISPR, Acr] }
   - { zh: 巨病毒, en: giant virus, aliases: [giant viruses, 拟菌病毒, mimivirus] }
