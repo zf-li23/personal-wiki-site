@@ -61,7 +61,7 @@ a sum of position scores, positive in favor of the class model; divided by the l
 | G | $0.155$ | $0.347$ | $0.360$ | $0.138$ | | G | $0.296$ | $0.205$ | $0.249$ | $0.249$ |
 | T | $0.075$ | $0.364$ | $0.363$ | $0.198$ | | T | $0.217$ | $0.201$ | $0.246$ | $0.335$ |
 
-Rows are the preceding base. The decisive entry is C → G: $0.294$ in islands, $0.053$ outside, a log ratio of $\log_2(0.294/0.053) = 2.48$ bits, the largest of the sixteen; all transitions to C and G score positively, those to A and T negatively. The tables are close to the ones that Durbin and colleagues (1998) estimated from a much smaller set of human sequences. With Eq. (7.1) per base, $99.8\,\%$ of the islands score above $0$ and $94.8\,\%$ of random non-island segments of the same lengths score below $0$, with medians of $+0.31$ and $-0.31$ bits per base.
+Rows are the preceding base. The decisive entry is C → G: $0.294$ in islands, $0.053$ outside, a log ratio of $\log_2(0.294/0.053) = 2.47$ bits, the largest of the sixteen; all transitions to C and G score positively, those to A and T negatively. The tables are close to the ones that Durbin and colleagues (1998) estimated from a much smaller set of human sequences. With Eq. (7.1) per base, $99.8\,\%$ of the islands score above $0$ and $94.8\,\%$ of random non-island segments of the same lengths score below $0$, with medians of $+0.31$ and $-0.31$ bits per base.
 
 ### 7.2.2. Segmentation with a Hidden Markov Model
 
