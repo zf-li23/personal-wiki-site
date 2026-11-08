@@ -209,7 +209,7 @@ The P type is further divided by the form of the protein inclusions into subtype
 | S type | Starch grains | Most eudicots; Polygonaceae and Plumbaginaceae (unlike the other families of Caryophyllales) |
 | PI type | One or more polygonal protein crystals, sometimes with filaments | Many families of the magnoliids (Aristolochiaceae and others) and some early-diverging eudicots |
 | PII type | Several wedge-shaped protein crystals arranged in a ring | Monocots (almost all): one of the synapomorphies of the monocots |
-| PIII type | Protein filaments arranged in a ring (often with a central crystal) | Most families of Caryophyllales (Amaranthaceae, Caryophyllaceae and others), on which basis Sarcobataceae, Gyrostemonaceae and others were excluded from Caryophyllales |
+| PIII type | Protein filaments arranged in a ring (often with a central crystal) | Most families of Caryophyllales (Amaranthaceae, Caryophyllaceae and others), on which basis Bataceae, Gyrostemonaceae and others were excluded from Caryophyllales |
 | PV, PVI and others | Various combinations of crystals and filaments | A few families (for example Erythroxylaceae, and some genera of Rhizophoraceae with PV) |
 
 ![Main types of sieve-element plastids. The S type contains only starch grains; the PI type contains a single polygonal protein crystal; the PII type contains several wedge-shaped crystals (monocots); the PIII type contains protein filaments arranged in a ring (Caryophyllales). Below is a longitudinal section of a sieve element, with the plastids lying along the periphery of the sieve element and the P-protein and callose on either side of the sieve plate also drawn](./plots/sieve-plastids.py)
