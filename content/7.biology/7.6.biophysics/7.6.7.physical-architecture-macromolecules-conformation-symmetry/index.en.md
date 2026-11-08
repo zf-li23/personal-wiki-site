@@ -227,7 +227,7 @@ The two notations for actin illustrate the convention of the previous paragraph:
 
 In 1956 Francis Crick and James Watson pointed out that small viruses cannot code for a protein shell made of one large protein: a genome of a few thousand nucleotides codes for at most a few thousand amino acids, too few to enclose itself. The shell must be built from many copies of one or a few small proteins, and by §7.4.2 identical copies bound by identical contacts form either a helix (as in TMV) or a closed shell with cubic symmetry. Of the cubic groups the icosahedral one has the largest order, $60$, so it encloses the largest volume with subunits of a given size, and most "spherical" viruses are icosahedral.
 
-**Example 7.5.1** Satellite tobacco necrosis virus has a $1\,239$-nucleotide RNA and a capsid of $60$ copies of a $195$-residue coat protein: the coat gene uses $3 \times 195 = 585$ nucleotides, about half of the genome, yet the shell of $60 \times 21\,\mathrm{kDa} = 1.3\,\mathrm{MDa}$ is twice the mass of the RNA it encloses. A single protein large enough to make the same shell would need a gene of $35\,000$ nucleotides.
+**Example 7.5.1** Satellite tobacco necrosis virus has a $1\,239$-nucleotide RNA and a capsid of $60$ copies of a $195$-residue coat protein: the coat gene uses $3 \times 195 = 585$ nucleotides, about half of the genome, yet the shell of $60 \times 21\,\mathrm{kDa} = 1.3\,\mathrm{MDa}$ is three times the mass of the RNA it encloses. A single protein large enough to make the same shell would need a gene of $35\,000$ nucleotides.
 
 ### 7.5.2. Quasi-Equivalence and the Triangulation Number
 

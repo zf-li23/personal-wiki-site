@@ -113,7 +113,7 @@ T_H = T_{\mathrm{m}} - \frac{\Delta H_{\mathrm{m}}}{\Delta C_p} \quad (\Delta_{\
 T_S = T_{\mathrm{m}}\,\exp\!\left(-\frac{\Delta H_{\mathrm{m}}}{T_{\mathrm{m}}\Delta C_p}\right) \quad (\Delta_{\mathrm{U}}S = 0), \qquad
 \Delta_{\mathrm{U}}G(T_S) = \Delta C_p\,(T_S - T_H),
 $$
-and $T_S$ is the temperature of maximal stability. Below $T_S$ the unfolded state is favored by enthalpy and disfavored by entropy, above it the reverse.
+and $T_S$ is the temperature of maximal stability. Below $T_S$ the entropy of unfolding is negative and opposes unfolding, above it positive and favorable; the enthalpy of unfolding is negative below $T_H$ and positive above.
 
 The last relation follows from $\Delta G = \Delta H - T\Delta S$ at $T_S$, where $\Delta S = 0$ and $\Delta H = \Delta C_p(T_S - T_H)$. It shows that the maximal stability is set by the heat capacity and by how far apart $T_S$ and $T_H$ are, which is a few kelvin: $\Delta G_{\max}$ is a small residue of the large enthalpy and entropy.
 
@@ -308,7 +308,7 @@ The *frictional ratio* $f/f_0$ compares the measured frictional coefficient with
 
 **Definition 8.7.3 (Perrin Factor)** The **Perrin factor** $F = f_{\mathrm{e}}/f_{\mathrm{s}}$ is the ratio of the translational frictional coefficient of an ellipsoid of revolution to that of a sphere of the same volume, averaged over orientations; it depends only on the axial ratio.
 
-**Formula 8.7.1 (Perrin's Equations)** For a prolate ellipsoid (semi-axes $a > b = b$, axial ratio $p = a/b > 1$) and an oblate ellipsoid ($a < b$, $p = a/b < 1$),
+**Formula 8.7.1 (Perrin's Equations)** For a prolate ellipsoid (semi-axes $a$, $b$, $b$ with $a > b$, axial ratio $p = a/b > 1$) and an oblate ellipsoid ($a < b$, $p = a/b < 1$),
 
 $$
 F_{\text{prolate}} = \frac{\sqrt{p^2 - 1}}{p^{1/3}\ln\!\left(p + \sqrt{p^2 - 1}\right)}, \qquad
@@ -424,7 +424,7 @@ c(r) = c(r_0)\,\exp\!\left[\sigma\,\frac{r^2 - r_0^2}{2}\right], \qquad \sigma =
 $$
 so that $\ln c$ is linear in $\xi = (r^2 - r_0^2)/2$ with slope $\sigma$, the reduced molar mass.
 
-This is the **Boltzmann distribution** in the centrifugal potential $-\tfrac12 m(1 - \bar v\rho)\omega^2 r^2$, and it contains neither $f$ nor $D$: equilibrium gives the molar mass independently of shape, with an accuracy of a few percent, at the cost of time. The approach to equilibrium is governed by diffusion across the column of height $L = r_b - r_m$, with a characteristic time of order $L^2/D$: for a $3\,\mathrm{mm}$ column and $D = 6\times10^{-7}\,\mathrm{cm^2\,s^{-1}}$, $L^2/D = 1.5\times10^5\,\mathrm{s}$, so equilibrium takes about a day. The speed is chosen so that $\sigma L r$ is about $1$–$3$, which gives a concentration ratio between bottom and top of $3$–$20$ (for $50\,\mathrm{kDa}$ at $12\,000\,\mathrm{rpm}$, $\sigma = 0.87\,\mathrm{cm^{-2}}$).
+This is the **Boltzmann distribution** in the centrifugal potential $-\tfrac12 m(1 - \bar v\rho)\omega^2 r^2$, and it contains neither $f$ nor $D$: equilibrium gives the molar mass independently of shape, with an accuracy of a few percent, at the cost of time. The approach to equilibrium is governed by diffusion across the column of height $L = r_b - r_m$, with a characteristic time of order $L^2/D$: for a $3\,\mathrm{mm}$ column and $D = 6\times10^{-7}\,\mathrm{cm^2\,s^{-1}}$, $L^2/D = 1.5\times10^5\,\mathrm{s}$, so equilibrium takes a day or two. The speed is chosen so that $\sigma L r$ is about $1$–$3$, which gives a concentration ratio between bottom and top of $3$–$20$ (for $50\,\mathrm{kDa}$ at $12\,000\,\mathrm{rpm}$, $\sigma = 0.87\,\mathrm{cm^{-2}}$).
 
 ### 8.9.2. Self-Association and Nonideality
 
