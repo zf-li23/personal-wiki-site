@@ -224,7 +224,7 @@ The resolution of a light microscope is limited by diffraction to about $0.2\,\m
 
 1. Why is "microorganism" not a taxonomic group? Give one microorganism from each domain and one acellular agent.
 
-   **Answer** A taxon is a group defined by common descent, whereas microorganisms are defined by size and organization. Microbes occur in all three domains and include viruses, which have no place on the tree of cellular life, and the microbial members of each domain are more closely related to macroscopic organisms of the same domain (yeasts to animals) than to microbes of other domains. Examples: *Escherichia coli* (Bacteria), *Halobacterium salinarum* (Archaea), *Saccharomyces cerevisiae* (Eukarya), bacteriophage T4.
+   **Answer** A taxon is a group defined by common descent, whereas microorganisms are defined by size and organization. Microbes occur in all three domains and include viruses, which have no place on the tree of cellular life, and microbial eukaryotes (yeasts, for example) are more closely related to macroscopic eukaryotes (animals) than to bacteria or archaea. Examples: *Escherichia coli* (Bacteria), *Halobacterium salinarum* (Archaea), *Saccharomyces cerevisiae* (Eukarya), bacteriophage T4.
 
 2. What objection did the swan-necked flask answer that a sealed flask could not, and why did Cohn's discovery of endospores matter to the debate?
 

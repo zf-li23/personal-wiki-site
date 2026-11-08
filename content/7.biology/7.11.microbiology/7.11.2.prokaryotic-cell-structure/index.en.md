@@ -198,7 +198,7 @@ The resistance entries are tendencies, not rules: ampicillin, for example, cross
 
 3. A student Gram-stains a 72-hour culture of *Bacillus subtilis* and reports pink rods. Give two possible explanations and how to check them.
 
-   **Answer** Old cultures of Gram-positive bacteria have autolysed or damaged walls that no longer retain the crystal violet–iodine complex; repeat with an exponentially growing culture of 12–18 hours. Overdecolorization (too long in ethanol) also removes the complex from Gram-positive cells; repeat with a control slide carrying a known Gram-positive (*Staphylococcus aureus*) and a known Gram-negative (*Escherichia coli*) organism and timed decolorization.
+   **Answer** Old cultures of Gram-positive bacteria have autolyzed or damaged walls that no longer retain the crystal violet–iodine complex; repeat with an exponentially growing culture of 12–18 hours. Overdecolorization (too long in ethanol) also removes the complex from Gram-positive cells; repeat with a control slide carrying a known Gram-positive (*Staphylococcus aureus*) and a known Gram-negative (*Escherichia coli*) organism and timed decolorization.
 
 4. Penicillin inhibits peptidoglycan cross-linking, yet *Mycoplasma pneumoniae* and the archaeon *Methanobacterium* are both insensitive to it. Explain each case.
 
