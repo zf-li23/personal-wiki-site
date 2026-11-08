@@ -5,13 +5,13 @@ description: "The physics of motors that walk along filaments. Beating diffusion
 
 Diffusion is fast over a micrometer and hopeless over a millimeter. To move cargo along an axon, to separate chromosomes, to contract a muscle or to beat a **cilium**, cells use **motor proteins**: enzymes that convert the free energy of a chemical reaction, usually ATP hydrolysis, into directed mechanical work. A motor is a machine of a few nanometers that works in a bath where thermal energy is comparable to the energy it spends per step, so its motion is stochastic: it pauses, occasionally steps backward, and moves forward only on average. This chapter develops the physics of the translational motors, those that walk along linear tracks: what limits the force they can exert, why thermal noise cannot be rectified at equilibrium, how kinetic models built from **master equations** predict force–velocity curves and their dependence on ATP, what the fluctuations of a single motor reveal about its hidden internal steps, how efficient motors are, how teams of motors share loads or fight a tug of war, and how the cross-bridge model of muscle turns molecular kinetics into the force–velocity relation of a whole muscle.
 
-The cell biology of the cytoskeletal motors is in [7.3.13](/7.3.13) (myosin, the **cross-bridge cycle**, **duty ratio**) and [7.3.14](/7.3.14) (kinesin, **dynein**, **axonal transport**, cilia); their **mechanochemistry** is analysed physically here. The mathematical tools are the **master equation**, the **Fokker–Planck equation** and the **first-passage time** of [7.6.5](/7.6.5), detailed balance and the free energy of ATP hydrolysis from [7.6.3](/7.6.3), and the overdamped mechanics of [7.6.22](/7.6.22). The instruments, optical and **magnetic tweezers**, are treated in [7.6.17](/7.6.17). Rotary motors, translocation and polymerization motors use the same theory and are the subject of [7.6.28](/7.6.28); the forces of polymerizing filaments are derived in [7.6.26](/7.6.26). The general theory of fluctuations and dissipation in **nonequilibrium steady states**, of which motors are the prime example, is in [7.6.38](/7.6.38), and the physiology of muscle in [7.14](/7.14).
+The cell biology of the cytoskeletal motors is in [7.3.13](/7.3.13) (myosin, the **cross-bridge cycle**, **duty ratio**) and [7.3.14](/7.3.14) (kinesin, **dynein**, **axonal transport**, cilia); their **mechanochemistry** is analyzed physically here. The mathematical tools are the **master equation**, the **Fokker–Planck equation** and the **first-passage time** of [7.6.5](/7.6.5), detailed balance and the free energy of ATP hydrolysis from [7.6.3](/7.6.3), and the overdamped mechanics of [7.6.22](/7.6.22). The instruments, optical and **magnetic tweezers**, are treated in [7.6.17](/7.6.17). Rotary motors, translocation and polymerization motors use the same theory and are the subject of [7.6.28](/7.6.28); the forces of polymerizing filaments are derived in [7.6.26](/7.6.26). The general theory of fluctuations and dissipation in **nonequilibrium steady states**, of which motors are the prime example, is in [7.6.38](/7.6.38), and the physiology of muscle in [7.14](/7.14).
 
 ## 27.1. The Problem of Motors
 
 ### 27.1.1. Beating Diffusion
 
-Transport by diffusion over a distance $L$ takes $t \sim L^2/2D$, transport at constant speed $t = L/v$. The two are equal at $L^* = 2D/v$, where the **Péclet number** $vL/D$ is about one. For a vesicle in cytoplasm, with $D \approx 0.01\,\mu\mathrm{m^2\,s^{-1}}$, and a motor speed of $1\,\mu\mathrm{m\,s^{-1}}$, $L^* \approx 20\,\mathrm{nm}$: for any organelle-sized cargo over any cellular distance, a motor wins. A small protein with $D = 10\,\mu\mathrm{m^2\,s^{-1}}$ diffuses across a $10\,\mu\mathrm{m}$ cell in a few seconds, but needs years to diffuse along a meter-long axon, which a motor covers in about ten days ([7.3.14](/7.3.14#sec-14.5.3)). Cells have four ways of beating diffusion: directed transport by motors ($t \propto L$), traveling chemical waves ($t \propto L/\sqrt{kD}$, [7.6.36](/7.6.36)), bulk flow (cytoplasmic streaming, blood), and active positioning by pushing or pulling filaments ([7.6.28](/7.6.28)). Motors are the molecular basis of the first and the engines behind the last two.
+Transport by diffusion over a distance $L$ takes $t \sim L^2/2D$, transport at constant speed $t = L/v$. The two are equal at $L^* = 2D/v$, where the **Péclet number** $vL/D$ is about one. For a vesicle in cytoplasm, with $D \approx 0.01\,\mu\mathrm{m^2\,s^{-1}}$, and a motor speed of $1\,\mu\mathrm{m\,s^{-1}}$, $L^* \approx 20\,\mathrm{nm}$: for any organelle-sized cargo over any cellular distance, a motor wins. A small protein with $D = 10\,\mu\mathrm{m^2\,s^{-1}}$ diffuses across a $10\,\mu\mathrm{m}$ cell in a few seconds, but needs more than a thousand years to diffuse along a meter-long axon, which a motor covers in about ten days ([7.3.14](/7.3.14#sec-14.5.3)). Cells have four ways of beating diffusion: directed transport by motors ($t \propto L$), traveling chemical waves ($t \propto L/\sqrt{kD}$, [7.6.36](/7.6.36)), bulk flow (cytoplasmic streaming, blood), and active positioning by pushing or pulling filaments ([7.6.28](/7.6.28)). Motors are the molecular basis of the first and the engines behind the last two.
 
 ### 27.1.2. Four Classes of Motors
 
@@ -28,7 +28,7 @@ The classes overlap: RNA polymerase walks along DNA but draws its energy from po
 
 ### 27.1.3. The Energy Scale
 
-The unit of molecular work is $k_{\mathrm{B}}T = 4.1\,\mathrm{pN\,nm}$, and the free energy released by hydrolysing one ATP in the cell is about $20$–$25\,k_{\mathrm{B}}T$, $80$–$100\,\mathrm{pN\,nm}$ ([7.6.3](/7.6.3#sec-3.2.4)). This single number bounds every ATP-driven motor.
+The unit of molecular work is $k_{\mathrm{B}}T = 4.1\,\mathrm{pN\,nm}$, and the free energy released by hydrolyzing one ATP in the cell is about $20$–$25\,k_{\mathrm{B}}T$, $80$–$100\,\mathrm{pN\,nm}$ ([7.6.3](/7.6.3#sec-3.2.4)). This single number bounds every ATP-driven motor.
 
 **Formula 27.1.1 (Thermodynamic Bound on the Force)** A motor that advances a distance $d$ per molecule of fuel, with free energy $\Delta\mu$ released per molecule, cannot move forward against a load larger than
 
@@ -62,7 +62,7 @@ Engineering adds a fifth: the step of myosin V grows linearly with the number of
 
 ### 27.2.1. Feynman's Ratchet
 
-Can thermal motion alone be rectified into directed motion by an asymmetric structure? Smoluchowski (1912) and Feynman (1962) analysed a device that seems to do so.
+Can thermal motion alone be rectified into directed motion by an asymmetric structure? Smoluchowski (1912) and Feynman (1962) analyzed a device that seems to do so.
 
 **Definition 27.2.1 (Feynman Ratchet)** A *Feynman ratchet* is a thought experiment of a paddle wheel in a gas at temperature $T_1$, connected by an axle to a ratchet wheel with asymmetric teeth and a spring-loaded pawl at temperature $T_2$; molecular impacts on the paddles turn the axle, and the pawl seems to allow rotation in only one direction, so that the device would lift a weight using thermal fluctuations alone.
 
@@ -78,7 +78,7 @@ The theorem is the mechanical form of the second law and of detailed balance ([7
 
 **Definition 27.2.2 (Flashing Ratchet)** A *flashing ratchet* is a Brownian particle in an asymmetric periodic potential that is switched on and off, by an external clock or by chemical reactions; diffusion while the potential is off, followed by capture in the nearest well when it is on, produces a net drift toward the steep side of the wells even though the potential has no average slope.
 
-Consider a sawtooth of period $L$ and barrier height $U_0 \gg k_{\mathrm{B}}T$ that rises from each minimum over a short distance $\alpha L$ and falls over $(1-\alpha)L$. While the potential is on, particles collect at the minima. When it is switched off for a time $t_{\mathrm{off}}$, each spreads as a Gaussian of variance $2Dt_{\mathrm{off}}$; when it is switched on again, a particle that has moved more than $\alpha L$ forward falls into the next well, while one has to move $(1-\alpha)L$ backward to fall into the previous one.
+Consider a sawtooth of period $L$ and barrier height $U_0 \gg k_{\mathrm{B}}T$ that rises from each minimum over a short distance $\alpha L$ and falls over $(1-\alpha)L$. While the potential is on, particles collect at the minima. When it is switched off for a time $t_{\mathrm{off}}$, each spreads as a Gaussian of variance $2Dt_{\mathrm{off}}$; when it is switched on again, a particle that has moved more than $\alpha L$ forward falls into the next well, while it has to move $(1-\alpha)L$ backward to fall into the previous one.
 
 **Formula 27.2.1 (Drift of a Flashing Ratchet)** For $U_0 \gg k_{\mathrm{B}}T$ and an on time long enough for relaxation into the wells, the mean velocity is
 
@@ -119,9 +119,9 @@ The derivation, a second-order Taylor expansion of the master equation, is in [7
 
 ### 27.3.3. Generalized Detailed Balance and the Stall Force
 
-The ratio $k_+/k_-$ is not free. A forward step that hydrolyses one ATP moves the system from one state to another of lower free energy by $\Delta\mu - Fa$: the motor releases $\Delta\mu$ of chemical free energy and does work $Fa$ against the load.
+The ratio $k_+/k_-$ is not free. A forward step that hydrolyzes one ATP moves the system from one state to another of lower free energy by $\Delta\mu - Fa$: the motor releases $\Delta\mu$ of chemical free energy and does work $Fa$ against the load.
 
-**Theorem 27.3.1 (Generalized Detailed Balance)** For a tightly coupled motor that hydrolyses one fuel molecule per forward step of length $a$ against a load $F$, and synthesizes one per backward step, the forward and backward rates satisfy
+**Theorem 27.3.1 (Generalized Detailed Balance)** For a tightly coupled motor that hydrolyzes one fuel molecule per forward step of length $a$ against a load $F$, and synthesizes one per backward step, the forward and backward rates satisfy
 
 $$
 \frac{k_+(F)}{k_-(F)} = \exp\left[\frac{\Delta\mu - Fa}{k_{\mathrm{B}}T}\right], \qquad \Delta\mu = \Delta\mu^\circ + k_{\mathrm{B}}T\ln\frac{[\mathrm{ATP}]}{[\mathrm{ADP}][\mathrm{P_i}]}, \tag{27.4}
@@ -268,7 +268,7 @@ Most cargoes are carried by several motors, and many motors work only in teams. 
 
 **Formula 27.6.1 (Load Sharing)** The team moves at $v(F) = v_0\left(1 - \dfrac{F}{NF_{\mathrm{s}}}\right)$: the stall force adds, the unloaded velocity does not.
 
-This idealization fails in two ways. Load is rarely shared equally: the leading motor of a team bound to a stiff cargo carries most of the load until it detaches, and kinesins rarely cooperate well (Jamison and colleagues, 2010). And the number of bound motors fluctuates, because each motor binds and unbinds stochastically, and unbinding accelerates under load as for a **slip bond** (**slip bond**, [7.3.23](/7.3.23)). The mean run length of a cargo with up to $N$ motors grows almost geometrically with $N$ ([Formula 14.5.2](/7.3.14#fml-14.5.2) of 7.3.14). For teams of low-duty-ratio motors such as myosin II, continuous motion needs at least about $1/r_{\mathrm{duty}}$ heads ([7.3.13](/7.3.13#sec-13.5.5)): with a duty ratio of $0.04$, some $25$ heads, and $50$–$100$ for smooth sliding; a two-headed processive motor needs a duty ratio above $1/2$ per head.
+This idealization fails in two ways. Load is rarely shared equally: the leading motor of a team bound to a stiff cargo carries most of the load until it detaches, and kinesins rarely cooperate well (Jamison and colleagues, 2010). And the number of bound motors fluctuates, because each motor binds and unbinds stochastically, and unbinding accelerates under load as for a **slip bond** ([7.3.23](/7.3.23)). The mean run length of a cargo with up to $N$ motors grows almost geometrically with $N$ ([Formula 14.5.2](/7.3.14#fml-14.5.2) of 7.3.14). For teams of low-duty-ratio motors such as myosin II, continuous motion needs at least about $1/r_{\mathrm{duty}}$ heads ([7.3.13](/7.3.13#sec-13.5.5)): with a duty ratio of $0.04$, some $25$ heads, and $50$–$100$ for smooth sliding; a two-headed processive motor needs a duty ratio above $1/2$ per head.
 
 ### 27.6.2. The Tug of War
 
@@ -358,7 +358,7 @@ Scaling from one head to a muscle requires only geometry. A sarcomere of length 
 
 2. The φ29 packaging motor translocates $2.5\,\mathrm{bp}$ of DNA per ATP and stalls at $57\,\mathrm{pN}$. What fraction of the free energy of ATP ($\Delta\mu \approx 20\,k_{\mathrm{B}}T$) does it convert into work at stall? Could a motor with the same step stall at $150\,\mathrm{pN}$?
 
-   **Answer** $d = 2.5 \times 0.34\,\mathrm{nm} = 0.85\,\mathrm{nm}$; $F_{\mathrm{s}}d = 48\,\mathrm{pN\,nm}$, about $59\,\%$ of $82\,\mathrm{pN\,nm}$. A stall at $150\,\mathrm{pN}$ would require $128\,\mathrm{pN\,nm} \approx 31\,k_{\mathrm{B}}T$ per ATP, more than one ATP supplies under any physiological conditions: impossible with one step per ATP (Formula 27.1.1), unless the motor hydrolysed more than one ATP per $2.5\,\mathrm{bp}$.
+   **Answer** $d = 2.5 \times 0.34\,\mathrm{nm} = 0.85\,\mathrm{nm}$; $F_{\mathrm{s}}d = 48\,\mathrm{pN\,nm}$, about $59\,\%$ of $82\,\mathrm{pN\,nm}$. A stall at $150\,\mathrm{pN}$ would require $128\,\mathrm{pN\,nm} \approx 31\,k_{\mathrm{B}}T$ per ATP, more than one ATP supplies under any physiological conditions: impossible with one step per ATP (Formula 27.1.1), unless the motor hydrolyzed more than one ATP per $2.5\,\mathrm{bp}$.
 
 3. Show from Theorem 27.2.1 that a particle in a periodic potential tilted by a constant force $F$ does drift, and find its velocity when $U$ is constant. Why is the tilted ratchet not a perpetuum mobile?
 
@@ -386,7 +386,7 @@ Scaling from one head to a muscle requires only geometry. A sarcomere of length 
 
 9. Derive the isometric tension of Huxley's model (Formula 27.7.1 at $v = 0$) and explain why, in the model, the unloaded shortening velocity $v_{\max}$ is set mainly by $g_2$.
 
-   **Answer** At $v = 0$, Eq. (27.15) gives $n = f/(f + g) = f_1/(f_1 + g_1)$ for $0 < x < h$ and zero elsewhere, so $F_0 = \rho k\int_0^hx\,\mathrm{d}x\,f_1/(f_1 + g_1) = \rho kh^2f_1/[2(f_1 + g_1)]$. At $v_{\max}$ the positive force of heads in $0 < x < h$ is cancelled by heads dragged to $x < 0$, which survive over a distance about $v/g_2$ and pull with force $\propto -x$; a larger $g_2$ removes them sooner, so the cancellation requires a higher velocity. Physiologically $g_2$ corresponds to the rate of ADP release and ATP-induced detachment, which is the step that differs between fast and slow myosin isoforms.
+   **Answer** At $v = 0$, Eq. (27.15) gives $n = f/(f + g) = f_1/(f_1 + g_1)$ for $0 < x < h$ and zero elsewhere, so $F_0 = \rho k\int_0^hx\,\mathrm{d}x\,f_1/(f_1 + g_1) = \rho kh^2f_1/[2(f_1 + g_1)]$. At $v_{\max}$ the positive force of heads in $0 < x < h$ is canceled by heads dragged to $x < 0$, which survive over a distance about $v/g_2$ and pull with force $\propto -x$; a larger $g_2$ removes them sooner, so the cancellation requires a higher velocity. Physiologically $g_2$ corresponds to the rate of ADP release and ATP-induced detachment, which is the step that differs between fast and slow myosin isoforms.
 
 10. Using Hill's equation with $a/F_0 = 0.25$, find the load at which the power is maximal and the maximal power in units of $F_0v_{\max}$. A muscle of $100\,\mathrm{g}$ with $F_0$ per cross-section $3\times10^5\,\mathrm{N\,m^{-2}}$, fiber length $10\,\mathrm{cm}$ and $v_{\max} = 5$ lengths per second: estimate its peak power.
 
