@@ -1,7 +1,7 @@
 ---
 title: "Superasterids: Santalales and Caryophyllales"
 description: "Circumscription of the superasterids (Berberidopsidales, Santalales, Caryophyllales and the asterids); Santalales (Santalaceae s.l. including Viscaceae, Loranthaceae, Olacaceae, Balanophoraceae; hemiparasitism and holoparasitism, sticky bird-dispersed seeds, the evolution of the parasitic habit); the two clades of Caryophyllales (carnivorous clade and core Caryophyllales); Caryophyllaceae (swollen nodes, opposite leaves, dichasia, free-central placentation, toothed capsule), Amaranthaceae s.l. (merging Chenopodiaceae: bladder hairs, utricle, halophytes and C4), Polygonaceae (ocrea, trigonous achene), Cactaceae (areole, succulent stem, CAM), Aizoaceae, Phytolaccaceae, Nyctaginaceae, Portulacaceae, Basellaceae, Plumbaginaceae, Tamaricaceae, Droseraceae and Nepenthaceae; the mutual exclusion of betalains and anthocyanins and the evolution of C4, CAM and carnivory in Caryophyllales; the fate of Cronquist's Caryophyllidae and Santalales in APG IV."
-source_hash: 9a690dbd07b7
+source_hash: 297144667c30
 ---
 
 After Gunnerales and Dilleniales diverge, the core eudicots split into two large branches: the superrosids ([7.12.41](/7.12.41)–[7.12.44](/7.12.44)) and the superasterids. The superasterids include three smaller orders, Berberidopsidales, Santalales and Caryophyllales, and the species-rich **asterids** ([7.12.46](/7.12.46)–[7.12.49](/7.12.49)). This chapter treats the first two of these distinctive orders. Santalales are almost entirely parasites, and include the mistletoes and the famous sandalwood. Caryophyllales concentrate the angiosperm lineages adapted to extreme environments: goosefoot, saxaul, seablite and the cacti of deserts and saline soils, the ice plants of the seashore, the sundews and pitcher plants of nutrient-poor bogs, and familiar plants such as pinks, chickweed, amaranth, spinach, beet, buckwheat and rhubarb. In Cronquist's system Caryophyllales, Polygonales and Plumbaginales formed the subclass Caryophyllidae, one of the few subclasses largely retained in the molecular system ([7.12.33](/7.12.33#sec-33.5.2)); Santalales lay in the Rosidae, near Celastrales and Rhamnales. This chapter first treats the circumscription of the superasterids (§45.1), then Santalales (§45.2) and Caryophyllales (§45.3), and finally several problems in the evolution of characters in Caryophyllales (§45.4).
@@ -82,7 +82,7 @@ Diagnostic characters of Caryophyllaceae:
 - Stamens usually 10 in two whorls (or 5 in one whorl), the outer whorl opposite the petals.
 - Ovary superior, 2–5 carpels fused, 1-locular with free-central placentation (occasionally with an incomplete septum below, giving axile placentation), ovules many to 1; styles 2–5, free.
 - Fruit usually a capsule, dehiscing by teeth or valves at the apex, the number of teeth or valves once or twice the number of styles; rarely a berry.
-- Seed with a curved embryo enclosing the perisperm; contain anthocyanins and no betalains.
+- Seed with a curved embryo enclosing the perisperm; anthocyanins are present and betalains are absent.
 
 Floral formula: $\ast K_{(5)} C_5 A_{5+5} \underline{G}_{(2\text{–}5:1:\infty)}$; *Dianthus* $\ast K_{(5)} C_5 A_{5+5} \underline{G}_{(2:1:\infty)}$, *Stellaria* $\ast K_5 C_5 A_{5+5} \underline{G}_{(3:1:\infty)}$.
 
