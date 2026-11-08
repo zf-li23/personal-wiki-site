@@ -274,7 +274,7 @@ from scipy import stats
 bw = pd.read_csv("birthwt.csv")
 tab = pd.crosstab(bw.smoke, bw.low).loc[[1, 0], [1, 0]].to_numpy()   # [[30, 44], [29, 86]]
 
-# two proportions, chi-square with and without Yates (Examples 9.1.1 and 9.1.2)
+# two proportions, chi-square with and without Yates (Example 9.1.1)
 print(stats.chi2_contingency(tab, correction=False)[:2])   # X2 = 4.92, p = 0.026
 print(stats.chi2_contingency(tab)[:2])                     # Yates: 4.24, p = 0.040 (scipy's default)
 from statsmodels.stats.proportion import proportions_ztest, confint_proportions_2indep

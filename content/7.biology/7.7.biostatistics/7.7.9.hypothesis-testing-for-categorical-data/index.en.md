@@ -1,7 +1,7 @@
 ---
 title: Hypothesis Testing for Categorical Data
 description: Comparing two proportions (normal approximation, the chi-square test for 2×2 tables, Yates's correction and the condition on expected frequencies); Fisher's exact test; McNemar's test for paired proportions; sample size for comparing two proportions; tests of independence and homogeneity for R×C tables and the likelihood-ratio chi-square; the Cochran–Armitage trend test for ordered categories; goodness-of-fit tests; measures of association and agreement (phi, Cramér's V, Cohen's kappa). Examples are maternal smoking, hypertension and low birth weight, the Physicians' Health Study, breast cancer and age at first birth, and reaction times under sleep deprivation.
-source_hash: 9a2ad70919df
+source_hash: 9ea08f572699
 ---
 
 In the previous chapters the outcome variables were continuous: blood pressure, birth weight, FEV. In medical research the commoner outcomes are categorical: whether a person is ill, whether they die, whether the birth weight is low, whether a test is positive or negative, which blood group they have. Such data are summarized as counts in the categories, and what is compared is proportions. In [7.7.6](/7.7.6) the one-sample binomial test compared the proportion of low-birth-weight infants among smoking mothers with a "known" reference value of 0.252; it was pointed out there that 0.252 was itself estimated from 115 nonsmoking mothers and that the correct approach is to treat the two groups alike. This chapter starts from that two-proportion comparison: the normal approximation and the chi-square test for a 2×2 **contingency table** are the same test, and when the expected frequencies are too small we turn to Fisher's exact test; two dichotomous measurements on the same individuals require McNemar's test. We then extend to tables with several rows and columns, trend tests for ordered categories and goodness-of-fit tests, and finally discuss measures of the strength of association and of the agreement between raters. The limiting distribution of the chi-square statistic and the derivation of the test of independence are in [3.2.6](/3.2.6#sec-6.3); here we treat use and conditions. Measures of effect (the risk difference, the relative risk and the **odds ratio**) appear here only as companions of the test; their meaning in study design is the subject of [7.7.13](/7.7.13), and methods that adjust for several variables at once are the logistic regression of [7.7.14](/7.7.14).
@@ -275,7 +275,7 @@ from scipy import stats
 bw = pd.read_csv("birthwt.csv")
 tab = pd.crosstab(bw.smoke, bw.low).loc[[1, 0], [1, 0]].to_numpy()   # [[30, 44], [29, 86]]
 
-# two proportions, chi-square with and without Yates (Examples 9.1.1 and 9.1.2)
+# two proportions, chi-square with and without Yates (Example 9.1.1)
 print(stats.chi2_contingency(tab, correction=False)[:2])   # X2 = 4.92, p = 0.026
 print(stats.chi2_contingency(tab)[:2])                     # Yates: 4.24, p = 0.040 (scipy's default)
 from statsmodels.stats.proportion import proportions_ztest, confint_proportions_2indep
