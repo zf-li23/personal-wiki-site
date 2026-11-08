@@ -8,7 +8,7 @@ The spore-bearing plants comprise the algae, fungi, lichens, bryophytes, lycophy
 
 ## 18.1. A Timeline of Plant Evolution
 
-The dates in the table of "geological ages and the dominant plants of each period" common in Chinese textbooks mostly come from sources before the 1970s, and several of them differ greatly from current understanding: for example "bacteria and cyanobacteria appeared 4.0–3.5 billion years ago", "eukaryotic algae appeared 1.5–1.4 billion years ago", "multicellular algae appeared 0.9–0.7 billion years ago" and "rhyniophytes colonized land in the Late Silurian". The table below is rewritten according to the current chronostratigraphic chart of the International Commission on Stratigraphy (ICS) and recent fossil evidence.
+The dates in the table of "geological ages and the dominant plants of each period" common in Chinese textbooks mostly come from sources before the 1970s, and several of them differ greatly from current understanding: for example "bacteria and cyanobacteria appeared 4.0–3.5 billion years ago", "eukaryotic algae appeared 1.5–1.4 billion years ago", "multicellular algae appeared 0.9–0.7 billion years ago" and "psilophytes colonized land in the Late Silurian". The table below is rewritten according to the current chronostratigraphic chart of the International Commission on Stratigraphy (ICS) and recent fossil evidence.
 
 | Age (before present) | Geological period | Event | Evidence and notes |
 |---|---|---|---|
@@ -31,7 +31,7 @@ The dates in the table of "geological ages and the dominant plants of each perio
 | Cretaceous–Cenozoic | | The Polypodiales radiate "in the shadow of the angiosperms" | [7.12.17](/7.12.17#sec-17.8.2) |
 | about 8–6 million years | Late Miocene | Expansion of $\mathrm{C}_4$ grasslands | Mechanism: see plant physiology |
 
-Two further statements in the Chinese textbooks need updating. First, the first plants to reach land were not "algae living in the littoral or shallow-sea tidal zone": the sister group of land plants is the freshwater Zygnematophyceae, and the ancestors of land plants probably lived in fresh water or on moist land surfaces ([7.12.14](/7.12.14)). Second, the earliest land plants were not "rhyniophytes": bryophyte-grade plants (cryptospores) preceded the earliest vascular plants by about 40 million years, and the rhyniophytes were early members of a relatively late branch of land plants, the vascular plants.
+Two further statements in the Chinese textbooks need updating. First, the first plants to reach land were not "algae living in the littoral or shallow-sea tidal zone": the sister group of land plants is the freshwater Zygnematophyceae, and the ancestors of land plants probably lived in fresh water or on moist land surfaces ([7.12.14](/7.12.14)). Second, the earliest land plants were not "psilophytes": bryophyte-grade plants (cryptospores) preceded the earliest vascular plants by about 40 million years, and the psilophytes were early members of a relatively late branch of land plants, the vascular plants.
 
 ![Time scale of land plants. Top: the ICS chart of the Precambrian (eons and eras); middle: the Phanerozoic (eras and periods); the marks show the approximate dates of first appearance of each group in the fossil record: cyanobacterial microfossils and the Great Oxidation Event, eukaryotes, multicellular red and green algae, cryptospores (land plants), *Cooksonia* (vascular plants), lycophytes, the earliest ferns and forests, seeds, the coal swamps of arborescent lycophytes, conifers, angiosperm pollen, and the radiation of the Polypodiales and the C4 grasslands. Bands show the periods of dominance of each group.](./plots/timeline.py)
 
@@ -127,7 +127,7 @@ In moving from water to land, plants faced the main problems of desiccation, sup
 | Fertilization | Sperm swim in water to the archegonium | Same; fertilization still needs water | Pollen and pollen tube; fertilization does not need external water |
 | Dispersal | Spores dispersed by air, the seta lifts the capsule | Spores; a tall sporophyte with sporangia in high positions; ejection by the annulus | Pollen, seeds and fruits, dispersed by wind and animals |
 
-Chinese textbooks describe the disappearance of the rhyniophytes as "caused by further uplift of the land at the end of the Devonian and a drier climate", which is too simple: the decline of the early vascular plants was mainly due to their replacement by better-differentiated descendants (lycophytes, ferns, progymnosperms). On the other hand, the colonization of land by plants in turn changed the Earth profoundly: roots and mycorrhiza accelerated rock weathering and soil formation, and the spread of Devonian forests increased the burial of organic carbon, reducing atmospheric $\ce{CO2}$ and raising oxygen, which may have contributed to the Late Devonian glaciation and ocean anoxic events ([7.10.29](/7.10.29#sec-29.3.1)).
+Chinese textbooks describe the disappearance of the psilophytes as "caused by further uplift of the land at the end of the Devonian and a drier climate", which is too simple: the decline of the early vascular plants was mainly due to their replacement by better-differentiated descendants (lycophytes, ferns, progymnosperms). On the other hand, the colonization of land by plants in turn changed the Earth profoundly: roots and mycorrhiza accelerated rock weathering and soil formation, and the spread of Devonian forests increased the burial of organic carbon, reducing atmospheric $\ce{CO2}$ and raising oxygen, which may have contributed to the Late Devonian glaciation and ocean anoxic events ([7.10.29](/7.10.29#sec-29.3.1)).
 
 ## 18.5. Ontogeny and Phylogeny
 
@@ -160,7 +160,7 @@ Recapitulation can therefore serve as a clue for proposing phylogenetic hypothes
 
 ## Summary
 
-General table of the spore-bearing plants (revised from the comparison tables of Zhefu Li's *Comparison of Flowerless Plants* and Chinese textbooks; the comparisons of the algal and fungal divisions are in the summaries of the individual chapters):
+General table of the spore-bearing plants (the comparisons of the algal and fungal divisions are in the summaries of the individual chapters):
 
 | | Algae | Fungi | Lichens | Bryophytes | Lycophytes | Ferns |
 |---|---|---|---|---|---|---|
@@ -185,9 +185,9 @@ Main conclusions:
 
 ## Questions
 
-1. Chinese textbooks say "bacteria and cyanobacteria appeared 4.0–3.5 billion years ago" and "rhyniophytes were the first to colonize land in the Late Silurian". What is wrong with each of these statements?
+1. Chinese textbooks say "bacteria and cyanobacteria appeared 4.0–3.5 billion years ago" and "psilophytes were the first to colonize land in the Late Silurian". What is wrong with each of these statements?
 
-   **Answer** Stromatolites and carbon isotopes 3.5 billion years old show only that microbes existed, and whether they were oxygenic cyanobacteria is disputed; reliable cyanobacterial microfossils are about 1.9 billion years old, and free oxygen appeared in the atmosphere (the Great Oxidation Event) about 2.4–2.1 billion years ago. The earliest land-plant fossils are the cryptospores of the Middle Ordovician (about 470 million years ago), from bryophyte-grade plants, about 40 million years older than the Silurian *Cooksonia*; the rhyniophytes (early vascular plants) came later, and the ancestors of land plants were freshwater streptophyte algae, not littoral algae.
+   **Answer** Stromatolites and carbon isotopes 3.5 billion years old show only that microbes existed, and whether they were oxygenic cyanobacteria is disputed; reliable cyanobacterial microfossils are about 1.9 billion years old, and free oxygen appeared in the atmosphere (the Great Oxidation Event) about 2.4–2.1 billion years ago. The earliest land-plant fossils are the cryptospores of the Middle Ordovician (about 470 million years ago), from bryophyte-grade plants, about 40 million years older than the Silurian *Cooksonia*; the psilophytes (early vascular plants) came later, and the ancestors of land plants were freshwater streptophyte algae, not littoral algae.
 
 2. Use the Volvocales to illustrate the evolution of sexual reproduction, and explain why this evolution is said to have occurred many times independently in plants.
 
