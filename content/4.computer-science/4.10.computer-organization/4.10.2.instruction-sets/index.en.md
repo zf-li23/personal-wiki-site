@@ -1,7 +1,7 @@
 ---
 title: Instruction Sets
 description: "The role of instructions and the instruction set, and its design requirements; functional classes of instructions; number of operands and the classification of ISAs (stack, accumulator, register-memory, load-store); instruction length, fixed- and variable-length instructions; opcodes and opcode expansion (the prefix-code condition); the x86 instruction format; addressing modes: immediate, register, direct, indirect, register indirect, indexed, base, PC-relative and stack addressing; the history, characteristics and performance comparison of CISC and RISC."
-source_hash: f710248e6a97
+source_hash: a0e1571bd73f
 ---
 
 The previous chapter made the **instruction set architecture** the interface between software and hardware. This chapter discusses the general questions that arise in designing this interface, not tied to any one processor: which instructions a computer needs; how an instruction is represented as a string of bits, that is, the instruction format and the encoding of opcodes; how an instruction indicates where its data are, that is, the addressing modes; and the two opposing design philosophies in history, complex **instruction sets** (CISC) and reduced instruction sets (RISC). The examples in this chapter come mainly from x86 and RISC-V, two very different **instruction sets**. The next chapter, [4.10.3](/4.10.3), teaches RISC-V in full, and [4.10.6](/4.10.6) then shows from the hardware side how a regular instruction format simplifies processor design.
@@ -90,6 +90,8 @@ Opcodes can be organized in several ways:
 | Zero-address | 16 | `1111 1111 1111 0000`–`1111 1111 1111 1111` | None |
 
 At each level one code (`1111`) is reserved as the flag of expansion. More than one code may also be reserved: for example, if the three-address instructions use only the 14 codes `0000`–`1101`, leaving `1110` and `1111`, the two-address instructions have $2 \times 16 = 32$ opcodes available, of which 30 are taken (`1110 0000`–`1111 1101`), leaving `1111 1110` and `1111 1111`; the one-address instructions then have 32 available, of which 31 are taken (`1111 1110 0000`–`1111 1111 1110`); finally `1111 1111 1111` followed by 4 bits gives 16 zero-address instructions.
+
+:::
 
 The rule of expansion is that no short opcode may be a prefix of a long one; otherwise the **decoder** cannot tell which bits to treat as the opcode. In other words, the set of all opcodes forms a **prefix code** ([4.3.5](/4.3.5)). This gives a criterion for whether an expansion is possible.
 

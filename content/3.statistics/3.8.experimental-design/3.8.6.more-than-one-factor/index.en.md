@@ -517,6 +517,8 @@ The plots show that the fill height deviation increases with carbonation, with p
 
 The results lead to operating recommendations. A high line speed is preferred because it maximizes the production rate, and the carbonation is difficult to control. The low operating pressure ($25$ psi) is then recommended: it gives deviations closer to the target, and it reduces the sensitivity of the fill height to carbonation. At high speed and low pressure, the average fill height deviations for $10$, $12$ and $14\%$ carbonation are $-0.5$, $1.5$ and $6.5$, so the process should run at a low percent carbonation, around $10$–$12\%$, and the variability of the carbonation levels should be controlled; this can ultimately be achieved by improving temperature control during manufacturing. As always, the analysis is not complete without examining the residuals ([3.8.5](/3.8.5)).
 
+:::
+
 When an experiment has one treatment factor but two nuisance factors to control, a full factorial in all three is wasteful. For example, in testing the abrasion resistance of rubber-covered fabric, four materials are compared by the loss in weight over a period of time, but the tester has four positions and must be set up four times (four applications), and both may affect the result. A Latin square design arranges the four materials in a $4\times4$ array of positions and applications so that each material appears once in each row and each column, controlling both sources of nuisance variation with only $16$ runs. Such designs, and their extensions to more nuisance factors, are treated in later chapters.
 
 ## Summary {#summary}

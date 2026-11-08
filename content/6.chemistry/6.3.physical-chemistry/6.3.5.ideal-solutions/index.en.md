@@ -1,6 +1,6 @@
 ---
 title: Ideal Liquid Mixtures and Ideal Dilute Solutions
-source_hash: d9af9c340230
+source_hash: e1d27b0d8a3b
 ---
 
 [6.3.4](/6.3.4) established the language of multicomponent systems, namely **partial molar quantities**, the **chemical potential** and the **fugacity**, and gave expressions for the chemical potentials of gases (ideal and real). This chapter applies that language to the liquid phase. The chemical potential of a liquid cannot be measured directly, but when a liquid is in equilibrium with its vapor the chemical potential of each substance is the same in the two phases, so the chemical potential in the liquid can be expressed through the gas phase, and the problem reduces to how the partial pressure of the vapor above a solution varies with composition. Two empirical laws hold in dilute solutions: the solvent obeys Raoult's law, and a volatile solute obeys Henry's law. On this basis we define two idealized kinds of solution, the ideal liquid mixture (5.1) and the ideal dilute solution (5.2), write down the chemical potentials of the components, and from them derive rigorously the colligative properties of dilute solutions (5.3): vapor-pressure lowering, freezing-point depression, boiling-point elevation and osmotic pressure. These results are the starting point for real solutions: [6.3.6](/6.3.6) uses activities to correct for deviations from ideal behavior, [6.3.7](/6.3.7) derives equilibrium constants in solution from chemical potentials, and [6.3.9](/6.3.9) draws binary phase diagrams from Raoult's law; osmotic pressure is also the physical basis of the regulation of water in cells and body fluids.
@@ -149,6 +149,8 @@ The three constants differ in value, though all have the unit Pa, and the conver
 **Example 5.2.1** At $25\,^\circ\mathrm{C}$ the equilibrium mole fraction of $\ce{O2}$ in water at an $\ce{O2}$ partial pressure of $101.325\,\mathrm{kPa}$ is $2.29 \times 10^{-5}$ (CRC Handbook). Find $k_{x}(\ce{O2})$ and the dissolved oxygen in air-saturated water at $101.325\,\mathrm{kPa}$.
 
 **Solution** $k_x = 101.325\,\mathrm{kPa}/(2.29 \times 10^{-5}) = 4.42 \times 10^9\,\mathrm{Pa}$. Air in contact with water is saturated with water vapor, so the partial pressure of dry air is $(101.325 - 3.17)\,\mathrm{kPa}$, of which $p(\ce{O2}) = 0.2095 \times 98.16\,\mathrm{kPa} = 20.6\,\mathrm{kPa}$; then $x(\ce{O2}) = 20.6 \times 10^3/(4.42 \times 10^9) = 4.65 \times 10^{-6}$ and $b = x/M_{\mathrm{A}} = 2.58 \times 10^{-4}\,\mathrm{mol\,kg^{-1}}$, about $8.2\,\mathrm{mg\,L^{-1}}$ (measured $8.3\,\mathrm{mg\,L^{-1}}$). A Henry's law constant of the order of GPa shows that $\ce{O2}$ is very sparingly soluble in water: $k_x \gg p^*$ expresses the weak interaction between solvent and solute. The $\ce{O2}$ dissolved directly in blood plasma also obeys Henry's law and is present in small amounts; the great majority of the oxygen carried by blood is bound to hemoglobin, which is a chemical equilibrium and does not obey Henry's law.
+
+:::
 
 The solubility of a gas varies with pressure and temperature. By Henry's law, at constant temperature the solubility of a gas is proportional to its partial pressure. At a depth of $30\,\mathrm{m}$ a diver breathes air at about $0.4\,\mathrm{MPa}$, and the $\ce{N2}$ dissolved in blood and tissue is about four times that at the sea surface; if the ascent is too fast the external pressure drops abruptly, the dissolved $\ce{N2}$ cannot be exhaled through the lungs in time, and bubbles form in blood vessels and tissues. This is decompression sickness, which is why the ascent must be slow (or made with stops).
 
@@ -334,6 +336,8 @@ Eq. (5.13) was proposed by van 't Hoff in 1886 and has the same form as the equa
 **Example 5.3.2** The osmotic pressure of human blood at $37\,^\circ\mathrm{C}$ is $776\,\mathrm{kPa}$. Treating an aqueous NaCl solution as an ideal dilute solution with NaCl completely dissociated, find the molality of the NaCl solution isotonic with blood.
 
 **Solution** The total concentration of solute particles is $c = \varPi/RT = 776 \times 10^3/(8.314 \times 310.15) = 301\,\mathrm{mol\,m^{-3}}$; each NaCl gives two ions, so $c(\ce{NaCl}) = 150\,\mathrm{mol\,m^{-3}}$ and $b(\ce{NaCl}) \approx c/\rho^*_{\mathrm{A}} = 0.150\,\mathrm{mol\,kg^{-1}}$, that is, $8.8\,\mathrm{g}$ of NaCl per kilogram of water. Medical physiological saline is $0.9\%$ (mass fraction, about $9\,\mathrm{g}$ of NaCl per liter of solution): real NaCl solutions are not ideal, and interactions between ions reduce the effective number of particles to about 0.93 of the ideal value (the osmotic coefficient, [6.3.12](/6.3.12)), so the concentration must be slightly higher than the ideal estimate. Compare with the freezing point of serum in Section 5.3.2: particles at $0.30\,\mathrm{mol\,kg^{-1}}$ give an osmotic pressure of about $770\,\mathrm{kPa}$ at $37\,^\circ\mathrm{C}$, and the two determinations agree.
+
+:::
 
 The role of osmotic pressure in biology:
 

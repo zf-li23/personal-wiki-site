@@ -25,6 +25,8 @@ $$
 
 **Example 23.1.1** With $\mu = 10^{-5}$ and $\nu = 10^{-6}$ (reverse mutations, which must restore a specific function, are usually rarer), $\hat q = 10^{-5}/(1.1 \times 10^{-5}) = 0.91$, and the half-life of a departure from equilibrium is $\ln 2/(\mu + \nu) = 63\,000$ generations, more than a million years in humans.
 
+:::
+
 Mutation is thus a weak force for changing frequencies; its importance is that it is the only source of new alleles, the raw material on which the other forces act. Mutation rates and their measurement are treated in [7.4.12](/7.4.12); here a rate of $10^{-5}$–$10^{-6}$ per gene and $10^{-8}$ per nucleotide per generation (humans) is enough.
 
 ## 23.2. Migration
@@ -38,6 +40,8 @@ p' = (1 - m)p + mP, \qquad p_t - P = (1 - m)^t(p_0 - P). \tag{23.3}
 $$
 
 **Example 23.2.1** An island population with $p_0 = 0.1$ receives $m = 0.01$ migrants per generation from a continent with $P = 0.5$. After 50 generations $p_{50} = 0.5 - 0.4 \cdot 0.99^{50} = 0.258$; half the initial difference is eliminated in $\ln 2/m \approx 69$ generations.
+
+:::
 
 The same equation read once describes admixture: if a hybrid population derives a fraction $m$ of its genes from population 1 (frequency $p_1$) and $1 - m$ from population 2 ($p_2$), then $p_{\mathrm{h}} = mp_1 + (1 - m)p_2$, and $m = (p_{\mathrm{h}} - p_2)/(p_1 - p_2)$. Estimates from many loci (or, today, from the local ancestry of **chromosome** segments) give admixture proportions of human populations, such as the European, African and Native American fractions of the **genomes** of people in the Americas. Migration homogenizes: without other forces every population converges to the source frequency. It is opposed by local selection (a cline results) and by drift, which differentiates small populations; the balance between drift and migration is in §23.5.4.
 
@@ -101,6 +105,8 @@ $$
 
 **Example 23.3.2** Halving the frequency of a recessive **lethal allele** from $0.01$ to $0.005$ takes $200 - 100 = 100$ generations, about 2500 years; from $0.001$ to $0.0005$ it takes 1000 generations. This is why the program of the early twentieth-century eugenics movement, to rid a population of recessive conditions by preventing affected people from reproducing, could never have worked even on its own terms (apart from its ethical indefensibility): almost all copies of a rare recessive allele are in heterozygous **carriers** ([7.4.22](/7.4.22), Eq. (22.2)), which selection on affected homozygotes does not touch.
 
+:::
+
 The three cases of dominance are compared in the figure. A favored dominant allele rises quickly while rare but stalls near fixation, because the last copies of the recessive allele hide in heterozygotes; a favored recessive allele takes a long time to start. In finite populations a new recessive beneficial mutation is therefore usually lost by drift before selection can see it, so adaptive substitutions are biased toward dominant mutations (Haldane's sieve).
 
 ![Deterministic selection at one locus. A: a favored allele with fitnesses 1 + s (AA), 1 + hs (Aa), 1 (aa), s = 0.05, from p = 0.01. A dominant favored allele (h = 1) spreads fast while rare and slowly near fixation; a recessive one (h = 0) is nearly invisible to selection while rare; the additive case (h = 1/2) is the symmetric logistic curve. B: decline of a deleterious recessive allele from q = 0.1 under complete selection (s = 1), which follows q_t = q_0/(1 + t q_0) exactly (Formula 23.3.3, dashed), and under s = 0.2; at low frequency, halving q takes about 1/(sq) generations](./plots/selection-trajectories.py)
@@ -126,6 +132,8 @@ which is globally stable for $0 < p < 1$. The mean fitness at equilibrium is $\b
 **Proof** By Eq. (23.5), $\Delta p = pq[p(-s_1) + q s_2]/\bar w$, which vanishes for $0 < p < 1$ only when $s_1p = s_2q$, that is $p = s_2/(s_1 + s_2)$. For $p < \hat p$ the bracket $s_2q - s_1p$ is positive, so $p$ increases; for $p > \hat p$ it decreases: the equilibrium attracts. With negative $s_i$ the signs reverse. The mean fitness is $1 - s_1\hat p^2 - s_2\hat q^2 = 1 - s_1s_2/(s_1 + s_2)$. $\square$
 
 **Example 23.3.3 (Sickle-Cell Hemoglobin and Malaria)** In regions of Africa with intense transmission of *Plasmodium falciparum*, heterozygotes $AS$ for the hemoglobin allele $\mathrm{Hb}^S$ ([7.4.3](/7.4.3)) are partly protected against severe malaria, while $SS$ homozygotes have sickle cell disease. A survey of 12 387 adults in West Africa found 9365 $AA$, 2993 $AS$ and 29 $SS$, so $q_S = (2 \cdot 29 + 2993)/(2 \cdot 12\,387) = 0.123$. If the zygotes were in Hardy–Weinberg proportions at this frequency, the expected adult counts without selection would be $9524$, $2675$ and $188$. The ratios observed/expected, $0.983$, $1.119$ and $0.154$, divided by that of $AS$, estimate the relative viabilities $w_{AA} = 0.88$, $w_{AS} = 1$, $w_{SS} = 0.14$; so $s_1 = 0.12$ and $s_2 = 0.86$. Theorem 23.3.2 then predicts $\hat q = 0.12/(0.12 + 0.86) = 0.122$, in agreement with the observed frequency, as it must be if the population is at equilibrium. The selective advantage of $AS$ over $AA$ is $1/0.88 = 1.14$. (The estimate assumes that adults were sampled after all selection and that the frequency is at equilibrium; it is a classic calculation, not a precise measurement.) The geography confirms the explanation: $\mathrm{Hb}^S$ is frequent in humid lowlands with high malaria transmission and nearly absent at altitude, as around Nairobi, and other malaria-protective alleles (HbC, HbE, thalassemias, G6PD deficiency, the Duffy-null allele) show similar distributions. In malaria-free environments, such as among African Americans, the advantage disappears and the allele slowly declines.
+
+:::
 
 The price of a balanced polymorphism is a segregational load: even at equilibrium a fraction $s_1s_2/(s_1 + s_2)$ of fitness is lost, because Mendelian segregation keeps producing the less fit homozygotes. For HbS this is $0.12 \cdot 0.86/0.98 = 0.105$, mostly malaria deaths of $AA$ children and sickle-cell disease of $SS$ children.
 
@@ -230,6 +238,8 @@ The first follows because each gene copy comes with probability $1/2$ from a fat
 
 **Example 23.5.1** A herd of 10 breeding males and 100 females has $N_e = 4 \cdot 10 \cdot 100/110 = 36$, not 110; with 10 males and 40 females, $N_e = 32$. A population of 1000 that passes through a bottleneck of 10 individuals for one generation and recovers has, over four generations of sizes 1000, 10, 1000, 1000, $N_e = 4/(3/1000 + 1/10) = 39$: the harmonic mean is dominated by the smallest size.
 
+:::
+
 Effective sizes are usually much smaller than census sizes. The human $N_e$ estimated from genetic diversity is about $10^4$ (§23.7), reflecting the small ancestral populations of the last several hundred thousand years rather than the present 8 billion; for domestic cattle breeds, where a few bulls sire most offspring by artificial insemination, $N_e$ is often below 100.
 
 ### 23.5.3. Founder Effects and Bottlenecks
@@ -270,6 +280,8 @@ The formula is derived from the diffusion approximation of the Wright–Fisher m
 
 **Example 23.6.1** A new mutation with $s = 0.01$ in a population of $N = N_e = 1000$ ($4Ns = 40$) is fixed with probability $u = 0.0198 \approx 2s$: about 98 of every 100 such favorable mutations are lost by chance in the first few generations, while they are present in a handful of copies. Once an allele has reached a few times $1/(Ns)$ copies, its fate is effectively decided and it increases deterministically. A neutral mutation is fixed with probability $1/2000 = 0.0005$, so the favorable one is 40 times more likely to be fixed. A slightly deleterious mutation with $s = -0.001$ ($4Ns = -4$) is fixed with probability $3.7 \times 10^{-5}$, still 7.5 % of the neutral value.
 
+:::
+
 The scaled selection coefficient $N_es$ is the measure that matters: selection is effective when $|N_es| \gg 1$ and the allele behaves as effectively neutral when $|4N_es| \lesssim 1$. The same mutation can thus be selected in a large population and drift freely in a small one, which is the basis of the nearly neutral theory (§23.7) and of the accumulation of mildly deleterious mutations in small populations.
 
 ![Fixation probability of a new mutation (p = 1/2N) relative to the neutral value, 2N u, against the scaled selection coefficient Ns. Lines: Kimura's formula, Eq. (23.13), for N = 100 and 1000, which nearly coincide in these scaled units; dots: 20 000 simulated Wright–Fisher populations of N = 100 for each s, with 95 % intervals; dashed: Haldane's approximation u = 2s. In the nearly neutral zone |4Ns| < 1 (shaded) drift dominates; favorable mutations with 4Ns ≫ 1 are fixed with probability only about 2s, and deleterious ones almost never](./plots/fixation.py)
@@ -301,6 +313,8 @@ $$
 where $H$ is the expected heterozygosity of a locus at which every mutation creates a new allele and $\pi$ the expected number of differences per site between two sequences (for $\theta \ll 1$). The derivation, which follows the genealogy of two gene copies back to their common ancestor, belongs to coalescent theory (7.10).
 
 **Example 23.7.1** Two human genomes differ at about 1 site in 1000 ($\pi \approx 0.001$), and the mutation rate is about $1.2 \times 10^{-8}$ per site per generation. Then $N_e \approx \pi/(4\mu) = 0.001/(4.8 \times 10^{-8}) \approx 21\,000$: humans are genetically a small species, less diverse than chimpanzees, whose populations were larger, and this "long-term" $N_e$ is the harmonic mean over the ancestral history of the species (§23.5.2).
+
+:::
 
 Not all molecular evolution is neutral: adaptive substitutions are detected by an excess of amino acid–changing over silent changes, and selective sweeps by reduced diversity and long haplotypes. Ohta's nearly neutral theory (1973) refines the neutral theory: many mutations are slightly deleterious, with $|N_es|$ near 1, so whether they behave as neutral depends on $N_e$. The neutral theory remains the **null hypothesis** against which selection is tested (7.10).
 

@@ -1,7 +1,7 @@
 ---
 title: Experimental Methods and Evaluation
 description: Training, validation and test sets; holdout, temporal and grouped splits; repeated random experiments and the standard error of the mean; k-fold and nested cross-validation; evaluation metrics for classification (confusion matrix, accuracy, precision, recall, F1 score, ROC curve and AUC, PR curve and average precision), regression and ranking; data leakage and how to prevent it.
-source_hash: 32a600e4b8b8
+source_hash: a391d18789e9
 ---
 
 The design in the [previous chapter](/4.6.1) ended with the question "how well did it learn?". This chapter answers it: how to arrange experiments so that the performance of a model on unseen data can be estimated reliably, and which metrics to use to measure that performance. The first half is about experimental methods: how to split the data into training, validation and test parts, and how to reduce the variability of the estimate with repeated experiments and cross-validation. The second half is about evaluation metrics: classification, regression and ranking each have their own, and the confusion matrix, ROC curve and PR curve of binary classification are the focus. Finally we discuss the most common and most insidious mistake in practice, data leakage. Cross-validation and the confusion matrix already appeared in discriminant analysis in the statistics courses ([3.4.10](/3.4.10)), and overfitting is treated in [3.3.11](/3.3.11); this chapter organizes them from the viewpoint of machine learning experiments. Confidence intervals for error estimates and statistical comparison between learning algorithms are discussed in [4.6.7](/4.6.7).
@@ -194,6 +194,8 @@ precision=0.750 recall=0.600 F1=0.667
 AUC by pairs=0.600  sklearn=0.600
 average precision=0.808
 ```
+
+:::
 
 (Python 3.12, scikit-learn 1.9.) The AUC depends only on the ranking of the scores, not on their actual values: any strictly monotone transformation of the scores leaves the AUC unchanged. This is both an advantage (no threshold has to be chosen, and classifiers with different output scales can be compared) and a drawback (it does not check whether the scores are accurate as probabilities, and it does not tell us which threshold to use).
 

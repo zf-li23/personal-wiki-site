@@ -221,6 +221,8 @@ blocks, that is $48\,\mathrm{KiB} + 4\,\mathrm{MiB} + 4\,\mathrm{GiB} + 4\,\math
 
 **Example 7.2.2 (Locating a Byte)** Which blocks must be read to fetch the byte at offset 5 000 000 of a file? The logical block index is $\lfloor 5\,000\,000 / 4096 \rfloor = 1220$, at offset $5\,000\,000 - 1220 \cdot 4096 = 2880$ within the block. Indices 0–11 are direct and 12–1035 go through the single indirect block, so index 1220 is the $1220 - 1036 = 184$-th block reached through the double indirect block: entry $\lfloor 184/1024 \rfloor = 0$ of the double indirect block, then entry $184 \bmod 1024 = 184$ of that single indirect block. If nothing is cached, the read costs four block reads: the inode, the double indirect block, one single indirect block and the data block.
 
+:::
+
 A multi-level index is an unbalanced tree tuned to the observation that most files are small but most bytes belong to large files. Its weakness is that a large file needs one pointer per block, even when the blocks are contiguous. Modern file systems use extents instead.
 
 **Definition 7.2.4 (Extent)** An **extent** is a run of contiguous blocks described by a starting block and a length. An extent-based file system records a file as a list of extents (organized as a tree when the list is long) instead of one pointer per block.

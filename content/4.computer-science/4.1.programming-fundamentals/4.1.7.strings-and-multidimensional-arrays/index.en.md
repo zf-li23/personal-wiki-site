@@ -1,7 +1,7 @@
 ---
 title: Strings and Multidimensional Arrays
 description: C-style strings and the terminator, functions of <cstring> and buffer overflow; std::string and Python's str; character encodings and UTF-8; row-major storage of two-dimensional arrays and matrix multiplication; bubble sort; sorting strings, std::sort and comparison functions, strict weak ordering; Python's sorted and key functions.
-source_hash: b34c856555c0
+source_hash: b837d80a5ed9
 ---
 
 The **arrays** of the previous chapter held numbers. This chapter discusses two important generalizations of arrays: the array whose elements are characters, the string, which is the basis of text processing in programs; and the array whose elements are themselves arrays, the multidimensional array, which represents matrices and tables. Finally we discuss another basic operation inseparable from arrays: sorting. Only sorted data can be searched with **binary search** ([4.1.6](/4.1.6)), and sorting is also the first step of many algorithms. The bubble sort of this chapter is the simplest sorting algorithm; the faster merge sort and quicksort are in [4.1.11](/4.1.11), and the systematic analysis of sorting algorithms is in [4.3.2](/4.3.2) and [4.3.14](/4.3.14); string streams, formatting and regular expressions are in [4.2.11](/4.2.11), and string-matching algorithms are in [4.3.13](/4.3.13).
@@ -355,6 +355,8 @@ for name, score in s:
 ```
 
 Here `std::pair` puts the name and the score together; representing a record by a structure is the more general approach ([4.1.9](/4.1.9)). Comparison functions are also often written as lambda expressions, directly at the call site ([4.2.12](/4.2.12)).
+
+:::
 
 A comparison function must define a *strict weak ordering*: for every $x$, `comp(x, x)` is false (irreflexive); `comp(x, y)` and `comp(y, x)` cannot both be true; it is transitive, and "incomparability" (both false) is also transitive. Intuitively, it must behave like `<` and not like `<=`: when two elements are "equal" it must return `false`. If a comparison function returns `true` on equal elements, the behavior of `std::sort` is undefined, and in practice it may access out of bounds and crash. When comparing several keys, compare key by key, comparing the next key only if the previous one is equal, and return `false` when all are equal, as in `comes_before` above.
 

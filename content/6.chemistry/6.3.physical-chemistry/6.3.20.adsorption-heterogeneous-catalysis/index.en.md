@@ -1,6 +1,6 @@
 ---
 title: Adsorption on Solid Surfaces and Heterogeneous Catalysis
-source_hash: 50226ebb3873
+source_hash: 39f4bf1d222b
 ---
 
 A liquid can lower its surface Gibbs free energy by contracting its surface and changing its surface composition ([6.3.19](/6.3.19)), but the atoms at a solid surface can hardly move, and the surface energy can be lowered only by capturing molecules from a gas or a solution. This adsorption is the common basis of heterogeneous catalysis, gas separation and purification, drying and decolorization, chromatography and sensing, and is also the method of determining the specific surface area and pore structure of solids. This chapter first introduces the amount adsorbed and adsorption curves (20.1), compares physical adsorption with chemical adsorption and discusses heats of adsorption (20.2); then establishes the Langmuir theory of monolayer adsorption (20.3), extends it to nonuniform surfaces in 20.4 (the Freundlich and Temkin isotherms), and establishes the BET theory of multilayer adsorption (20.5), the standard method for determining specific surface area; next it discusses capillary condensation and pore size distributions in porous solids (20.6, using the **Kelvin equation** of [6.3.19](/6.3.19)) and the kinetics of chemisorption (20.7, using the **effusion** flux of [5.2.1](/5.2.1)); finally it applies these results to the kinetics of gas–solid catalytic reactions (20.8), making the qualitative introduction to **heterogeneous catalysis** in [6.1.7](/6.1.7#sec-7.3.4) quantitative.
@@ -295,6 +295,8 @@ V_mono = 24.85 cm3/g, c = 104, a_s = 108 m2/g
 
 The specific surface area is about $108\,\mathrm{m^2\,g^{-1}}$. A positive $c = 104$ indicates that the chosen pressure range is reasonable (a negative $c$ indicates that the data points lie outside the range of validity of BET, which is common for microporous materials).
 
+:::
+
 When the number of adsorbed layers is limited (for example in a narrow pore at most $n$ layers can be adsorbed), truncating the above sum to $n$ terms gives the three-constant BET equation:
 
 $$
@@ -363,6 +365,8 @@ $$
 The variation of $t$ with relative pressure (the $t$-curve) is obtained from the isotherm of a nonporous reference material or from an empirical formula (such as the Harkins–Jura formula $t/\mathrm{nm} = 0.1\,[13.99/(0.034 - \lg x)]^{1/2}$). Barrett, Joyner and Halenda (1951) used this to compute the pore size distribution step by step, which is called the BJH method.
 
 **Example 20.6.1** For liquid nitrogen at 77 K, $\gamma = 8.85\,\mathrm{mN\,m^{-1}}$, $V_{\mathrm{m}} = 34.7\,\mathrm{cm^3\,mol^{-1}}$ and $\theta_{\mathrm{c}} = 0$. At $x = 0.70$ on the desorption branch, $r_{\mathrm{K}} = 2\gamma V_{\mathrm{m}}/(RT\ln(1/x)) = 0.959\,\mathrm{nm}/0.357 = 2.7\,\mathrm{nm}$; the Harkins–Jura formula gives $t = 0.86\,\mathrm{nm}$, so $r_{\mathrm{p}} = 3.5\,\mathrm{nm}$, that is, at this pressure mesopores of diameter about $7\,\mathrm{nm}$ are emptied.
+
+:::
 
 The Kelvin equation treats the liquid as a continuum, and for pore sizes below about $4\,\mathrm{nm}$ the BJH method underestimates the pore size (by as much as 20%–30%); capillary condensation does not occur in micropores, and these cases are now handled by fitting isotherms obtained from molecular simulation with density functional theory (DFT).
 

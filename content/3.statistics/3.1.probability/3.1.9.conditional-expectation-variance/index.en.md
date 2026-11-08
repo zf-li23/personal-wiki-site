@@ -1,6 +1,6 @@
 ---
 title: Conditional Expectation and Conditional Variance
-source_hash: d1e39675aaca
+source_hash: a4b6dc5444fd
 ---
 
 The previous chapter summarized a random variable by its expectation. When partial information is available, for instance that an event $A$ has occurred or that another random variable $Y$ has been observed, the average should be computed from the conditional distribution instead of the unconditional one; this is the conditional expectation. Knowing a person's foot length, we may ask for their average height; knowing that someone can climb over a wall, we may ask the same question. This chapter first reviews the forms that conditional probability takes for events and for random variables (the multiplication rule, the law of total probability and Bayes' theorem), and then defines the conditional expectation $\mathbb{E}(X \mid A)$ given an event and the conditional expectation $\mathbb{E}(X \mid Y)$ given a random variable. The latter is itself a random variable; it satisfies the law of iterated expectations $\mathbb{E}[\mathbb{E}(X \mid Y)] = \mathbb{E}X$, which greatly simplifies computations in hierarchical models, and it is the best predictor of $X$ from $Y$ in the mean-square sense. Finally we define the conditional variance and prove the law of total variance. The chapter uses the conditional distributions of [3.1.6](/3.1.6) and the expectation of [3.1.8](/3.1.8); the idea of conditional expectation runs through statistics, for example in linear regression ([3.3](/3.3)), the Rao–Blackwell theorem ([3.2.3](/3.2.3)) and the EM algorithm.
@@ -237,6 +237,8 @@ $$
 \mathbb{E}[\mathbb{E}(X \mid Y)h(Y)] = \mathbb{E}[\mathbb{E}(Xh(Y) \mid Y)] = \mathbb{E}[Xh(Y)],
 $$
 and subtracting gives the claim. $\square$
+
+:::
 
 Geometrically, regard random variables with finite variance as vectors with inner product $\mathbb{E}(UV)$. The random variables of the form $h(Y)$ form a subspace, and Example 9.3.6 says that $X - \mathbb{E}(X \mid Y)$ is orthogonal to this subspace: $\mathbb{E}(X \mid Y)$ is the **orthogonal projection** of $X$ onto the space of functions of $Y$. This yields the most important interpretation of conditional expectation.
 

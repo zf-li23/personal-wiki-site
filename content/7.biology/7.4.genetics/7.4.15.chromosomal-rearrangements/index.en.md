@@ -71,9 +71,13 @@ Pseudodominance turns deletions into a mapping tool that works like a **compleme
 
 **Example 15.2.1** A recessive eye mutation $m$ of *Drosophila* is crossed with five deletions of a region whose bands are numbered 1–10. Df1 removes bands 1–4, Df2 removes 3–6, Df3 removes 5–8, Df4 removes 6–9, Df5 removes 8–10. The $m/\mathrm{Df}$ flies show the mutant eye with Df2 and Df3 only. The mutation lies in the bands covered by both Df2 and Df3 (5–6) and by none of Df1, Df4 and Df5; Df4 covers band 6, so $m$ is in band 5.
 
+:::
+
 Pseudodominance was first used in this way by Barbara McClintock (1931): among maize plants from crosses of $pl/pl$ (green) females with X-irradiated $Pl/Pl$ (purple) pollen, the rare green $\mathrm{F}_1$ plants carried a deletion of the end of the long arm of chromosome 6 on the paternal homologue, which uncovered $pl$ and located the gene there.
 
 **Example 15.2.2 (Pseudodominance and a Distorted Sex Ratio)** Some deletions that cause the dominant *Notch* wing phenotype of *Drosophila* also remove the nearby *white* gene; they are homozygous and **hemizygous** lethal. Cross red-eyed, notched-winged females $X^{+}\,X^{N}$ ($X^{N}$ the deletion chromosome) with white-eyed males $X^{w}\,Y$. Daughters are $X^{+}X^{w}$ (red eyes, normal wings) and $X^{w}X^{N}$ (white eyes, notched wings) in equal numbers: in the second class the recessive $w$ is expressed because the deletion uncovers it. Sons are $X^{+}Y$ (red, normal) or $X^{N}Y$, which die. The progeny are therefore $1$ red normal female $: 1$ white notched female $: 1$ red normal male, a $2 : 1$ ratio of females to males, and white eyes appear only together with notched wings. The cross recognizes the rearrangement from three signatures at once: pseudodominance, **coupling** of two phenotypes, and lethality of the hemizygote.
+
+:::
 
 Deletion heterozygosity also changes map distances. Crossing over requires a homologous partner, so no crossovers occur within the deleted segment, and the genetic distance between markers on either side of a deletion is shorter in a deletion heterozygote than in a normal homozygote by about the genetic length of the deleted segment.
 

@@ -1,6 +1,6 @@
 ---
 title: Redox Titrations
-source_hash: 2001119504d6
+source_hash: 6744aa7522a3
 ---
 
 Redox titrations are based on electron-transfer reactions. They can be used to determine oxidizing or reducing substances directly (iron, copper, hydrogen peroxide, vitamin C, glucose, organic pollutants in water), and also, through a quantitative chemical conversion, substances that are not themselves redox active (calcium via calcium oxalate, magnesium via 8-hydroxyquinoline). [6.1.11](/6.1.11) introduced the **electrode potential** and the **Nernst equation**, and [6.1.12](/6.1.12#sec-12.1) used standard electrode potentials to decide the direction and extent of reactions. In real titration solutions, however, the ionic strength is high and side reactions (precipitation, complex formation, protonation) are present, so standard potentials often lead to wrong conclusions: on the basis of standard potentials $\ce{Cu^2+}$ cannot oxidize $\ce{I-}$, yet the reaction proceeds quantitatively. This chapter applies the method of side-reaction coefficients and conditional constants of [6.4.3](/6.4.3) to electron-transfer reactions. We first introduce the formal potential (Section 5.1) and the conditional equilibrium constant, and discuss the completeness and rate of the reaction (5.2); we then calculate titration curves and choose indicators (5.3); and finally we describe the pretreatment before titration (5.4) and the permanganate, dichromate, and iodine methods (5.5). The chapter is also a direct prerequisite of the potentiometric methods of [6.4.6](/6.4.6): potentiometric titration ([6.4.6](/6.4.6#sec-6.4.5)) measures the titration curves of this chapter with an indicator electrode.
@@ -70,6 +70,8 @@ E = 0.153 + 0.0592\lg\frac{[\ce{Cu^2+}][\ce{I-}]}{K_{\mathrm{sp}}(\ce{CuI})}.
 $$
 For $[\ce{Cu^2+}] = [\ce{I-}] = 1\,\mathrm{mol\,L^{-1}}$, $E^{\circ\prime}(\ce{Cu^2+}/\ce{CuI}) = 0.153 + 0.0592\lg(1/1.27\times10^{-12}) = 0.857\,\mathrm{V}$, much higher than 0.536 V. The reaction $\ce{2Cu^2+ + 4I- -> 2CuI v + I2}$ therefore proceeds quantitatively, which is the basis of the iodometric determination of copper (Section 5.5.3). This is also a quantitative example of the statement in [6.1.11](/6.1.11#sec-11.5.4) that precipitation changes the electrode potential.
 
+:::
+
 3. Complex formation. If the complex of the oxidized form is more stable than that of the reduced form, the potential falls; otherwise it rises.
 
 **Example 5.1.2** In the iodometric determination of $\ce{Cu^2+}$, $\ce{Fe^3+}$ in the sample can also oxidize $\ce{I-}$ ($E^\circ = 0.771\,\mathrm{V} > 0.536\,\mathrm{V}$) and make the result too high. $\ce{F-}$ is added to give $[\ce{F-}] = 0.10\,\mathrm{mol\,L^{-1}}$. Find $E^{\circ\prime}(\ce{Fe^3+}/\ce{Fe^2+})$. For $\ce{Fe^3+}$–$\ce{F-}$, $\lg\beta_1, \lg\beta_2, \lg\beta_3 = 5.28, 9.30, 12.06$, and $\ce{Fe^2+}$ hardly coordinates $\ce{F-}$.
@@ -80,6 +82,8 @@ $$
 E^{\circ\prime} = 0.771 + 0.0592\lg\frac{1}{10^{9.07}} = 0.771 - 0.537 = 0.23\,\mathrm{V} < 0.536\,\mathrm{V},
 $$
 so $\ce{Fe^3+}$ can no longer oxidize $\ce{I-}$ and the interference is eliminated. $\ce{Fe^3+}$ forms a colorless complex with $\ce{PO4^3-}$ that acts in the same way; in $\ce{H3PO4}$ medium $E^{\circ\prime}(\ce{Fe^3+}/\ce{Fe^2+})$ falls to about 0.46 V, which is important in the dichromate titration of iron (Section 5.3.4).
+
+:::
 
 4. Acidity. When $\ce{H+}$ or $\ce{OH-}$ takes part in the half-reaction, the acidity enters the Nernst equation directly; when the oxidized or reduced form is a weak acid (base), the acidity also changes $\alpha$ through the acid effect.
 
@@ -402,6 +406,8 @@ and 1 mol of $\ce{K2Cr2O7}$ or of $\ce{KIO3}$ corresponds to 6 mol of $\ce{Na2S2
 **Example 5.5.1** A $0.1226\,\mathrm{g}$ sample of primary-standard $\ce{K2Cr2O7}$ is used to standardize a $\ce{Na2S2O3}$ solution by the procedure above and consumes $25.00\,\mathrm{mL}$. Find $c(\ce{Na2S2O3})$. $M(\ce{K2Cr2O7}) = 294.18\,\mathrm{g\,mol^{-1}}$.
 
 **Solution** $n(\ce{Na2S2O3}) = 6n(\ce{K2Cr2O7}) = 6\times0.1226/294.18 = 2.501\times10^{-3}\,\mathrm{mol}$, and $c = 2.501\times10^{-3}/0.02500 = 0.1000\,\mathrm{mol\,L^{-1}}$.
+
+:::
 
 Applications of the iodine methods:
 

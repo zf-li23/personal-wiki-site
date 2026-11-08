@@ -1,7 +1,7 @@
 ---
 title: Electrolysis and Polarization
 description: Decomposition voltage and the electrochemical window; electrode polarization and the signed overpotential, exchange current density, concentration, activation and ohmic polarization, and the three-electrode cell; the Butler–Volmer equation from the transition-state picture, the Tafel equation and charge-transfer resistance, and the hydrogen evolution reaction; the diffusion layer and the limiting current, the Cottrell equation from the diffusion equation, polarography and the Ilkovič equation; deposition and separation of metals, and electrosynthesis; electrochemical corrosion, the corrosion potential and protection; performance parameters of electrochemical power sources, intercalation reactions, lithium-ion batteries and fuel cells.
-source_hash: d864c8ede0a0
+source_hash: c74189a15e54
 ---
 
 [6.3.13](/6.3.13) studied the equilibrium of electrodes when the current tends to zero: the potential of each electrode is determined by the Nernst equation, and the cell potential by $\Delta_{\mathrm{r}}G_{\mathrm{m}}$. Real electrolysis and battery discharge involve a finite current, so electrode reactions must proceed at a finite rate and the electrode potentials depart from their equilibrium values; this phenomenon is called polarization. Electrolysis requires a higher voltage than the thermodynamic value, and a discharging battery delivers a lower voltage than its electromotive force; in both cases the difference is caused by polarization. This chapter is about electrochemical kinetics. We first discuss the minimum voltage required for electrolysis (14.1) and the kinds of polarization (14.2); we then derive the relation between current and overpotential from the transition-state picture, namely the Butler–Volmer and Tafel equations (14.3), and the limiting current set by mass transport together with the Cottrell equation (14.4); finally we discuss applications to electrolysis (14.5), corrosion (14.6) and electrochemical power sources (14.7).
@@ -304,6 +304,8 @@ Cu has the highest deposition potential, so it deposits first and soon covers th
 (3) During the deposition of Zn, $[\ce{H+}]$ continues to rise and is $0.60\,\mathrm{mol\,L^{-1}}$ when Zn is essentially all deposited; the deposition potential of $\ce{H2}$ on Zn is $0.05916\lg0.60 - 1.3 = -1.313\,\mathrm{V}$; when the cathode potential falls to this value, hydrogen evolution begins, and the residual $\ce{Zn^2+}$ satisfies $-0.762 + 0.02958\lg[\ce{Zn^2+}] = -1.313$, giving $[\ce{Zn^2+}] = 2.3\times10^{-19}\,\mathrm{mol\,L^{-1}}$. At the anode $E = 1.229 + 0.05916\lg0.60 = 1.216\,\mathrm{V}$, and $U = 1.216 + 1.313 = 2.53\,\mathrm{V}$.
 
 (Calculations with the older data $E^\circ(\ce{Cu^2+}/\ce{Cu}) = 0.337\,\mathrm{V}$ and $E^\circ(\ce{Zn^2+}/\ce{Zn}) = -0.763\,\mathrm{V}$ give slightly different numbers, with the same conclusions.) $\square$
+
+:::
 
 In practical electrolysis, separation is generally considered complete when the ion concentration has fallen below $10^{-6}\,\mathrm{mol\,L^{-1}}$; for $z = 2$ this requires the deposition potentials of the two metals to differ by about $0.15\,\mathrm{V}$ or more. Electrolysis with control of the cathode potential (rather than the cell voltage) is the basis of controlled-potential coulometry and electrogravimetric analysis in analytical chemistry.
 

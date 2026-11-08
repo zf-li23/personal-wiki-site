@@ -1,6 +1,6 @@
 ---
 title: The Definite Integral
-source_hash: 5a746fe03570
+source_hash: 425d5eefcd6c
 ---
 
 The indefinite integral of [Chapter 6](/2.2.6) is the inverse of differentiation; the definite integral of this chapter comes from entirely different problems: the area under a curve, the mass of a rod of variable density, the work done by a variable force. All of them can be computed in four steps (partition, approximate, sum, take the limit), and abstracting this procedure gives the Riemann integral. We first give the definition and conditions for integrability (7.1) and list the properties of the integral (7.2). We then prove the fundamental theorem of calculus (7.3): the integral of a continuous function with variable upper limit is an antiderivative of it, so definite integrals can be computed with **antiderivatives**, and differential and integral calculus become linked. Section 7.4 carries substitution and integration by parts over to definite integrals, and Sections 7.5 and 7.6 present geometric and physical applications (area, arc length, curvature, solids of revolution, and the method of differential elements common in physics). Section 7.7 extends the integral to unbounded intervals and unbounded functions; the comparison tests and the notion of absolute convergence established there reappear almost verbatim for series in [Chapter 8](/2.2.8). The gamma and beta functions are also defined there, and the gamma and beta distributions of [probability theory](/3.1) are built on them.
@@ -223,6 +223,8 @@ This formula is also called the Newton–Leibniz formula. It reduces the computa
 1. $\int_0^1\frac{x}{\sqrt{1+x^2}}\,\mathrm{d}x = \sqrt{1+x^2}\Big|_0^1 = \sqrt2 - 1$; $\int_1^{\mathrm{e}}\frac{\ln^2 x}{x}\,\mathrm{d}x = \frac13\ln^3x\Big|_1^{\mathrm{e}} = \frac13$.
 2. $\int_{-\pi/2}^{\pi/2}\sqrt{1 - \cos x}\,\mathrm{d}x$: since $1 - \cos x = 2\sin^2\frac{x}{2}$, the integrand is $\sqrt2\,\bigl|\sin\frac{x}{2}\bigr|$; the absolute value produced by the square root must not be dropped. It is an **even function**, so the integral equals $2\sqrt2\int_0^{\pi/2}\sin\frac{x}{2}\,\mathrm{d}x = 2\sqrt2\left(-2\cos\frac x2\right)\Big|_0^{\pi/2} = 4(\sqrt2 - 1)$.
 
+:::
+
 The limit of Riemann sums does not depend on the partition or on the choice of points. Conversely, if $f \in C[0,1]$ is known, we may take equally spaced points and right endpoints and thereby convert certain limits of sums into integrals.
 
 **Algorithm 7.3.1 (Limits of Sums via Definite Integrals)** Let $f \in C[0,1]$. Then
@@ -363,6 +365,8 @@ $$
 S = \int_0^{2\pi a}y\,\mathrm{d}x = \int_0^{2\pi}a^2(1 - \cos t)^2\,\mathrm{d}t = a^2(2\pi + \pi) = 3\pi a^2.
 $$
 
+:::
+
 Finally, polar coordinates. Choose a pole $O$ in the plane and a polar axis $Ox$ issuing from $O$. A point $P$ is determined by its distance $r$ to $O$ (the radial coordinate) and the angle $\theta$ between $OP$ and the polar axis (the polar angle); $(r,\theta)$ are called the *polar coordinates* of $P$. If the pole is the origin of a Cartesian system and the polar axis is the positive $x$-axis, then $x = r\cos\theta$ and $y = r\sin\theta$. A curve is written $r = r(\theta)$; for example, $r = a$ is the circle centered at the pole, and $\theta = \theta_0$ is a ray from the pole.
 
 Let $r = r(\theta)$ be continuous and nonnegative on $[\alpha,\beta]$; we want the area of the sector-like region $D$ bounded by this curve and the rays $\theta = \alpha$, $\theta = \beta$. Partition $[\alpha,\beta]$; the rays $\theta = \theta_i$ cut $D$ into small pieces, the $i$-th of which is approximately a circular sector of radius $r(\xi_i)$ and central angle $\Delta\theta_i$, with area $\frac12r(\xi_i)^2\Delta\theta_i$. Summing and taking the limit,
@@ -443,6 +447,8 @@ $$
 
 **Example 7.5.6** Rotating the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ about the $x$-axis gives $V = \pi\int_{-a}^a\frac{b^2}{a^2}(a^2 - x^2)\,\mathrm{d}x = \frac43\pi ab^2$; with $a = b = R$ this is the volume $\frac43\pi R^3$ of a ball.
 
+:::
+
 Parametric and polar forms:
 
 - A curve $x = x(t)$, $y = y(t)$ rotated about the $x$-axis: $V = \pi\int_\alpha^\beta y(t)^2x'(t)\,\mathrm{d}t$. For example, one arch of the cycloid rotated about the $x$-axis gives $V = \pi a^3\int_0^{2\pi}(1 - \cos t)^3\,\mathrm{d}t = 5\pi^2a^3$.
@@ -502,6 +508,8 @@ $$
 \int_1^{+\infty}\frac{\mathrm{d}x}{x^p}\;\begin{cases}= \dfrac{1}{p-1}, & p > 1,\\[1ex] \text{diverges}, & 0 < p \le 1.\end{cases}
 $$
 
+:::
+
 Convergent improper integrals over unbounded intervals can be handled with substitution, integration by parts and the Newton–Leibniz formula as usual, provided $G(+\infty)$ is understood as $\lim_{x\to+\infty}G(x)$.
 
 **Example 7.7.2**
@@ -537,6 +545,8 @@ This is the opposite of Example 7.7.1: at infinity, $x^{-p}$ must decay fast eno
 **Example 7.7.5** Find $\lim_{n\to\infty}\dfrac{\sqrt[n]{n!}}{n}$.
 
 **Solution** Taking logarithms, $\ln\frac{\sqrt[n]{n!}}{n} = \frac1n\sum_{i=1}^n\ln\frac in$, which is a Riemann sum of $\ln x$ on $(0,1]$. Since $\ln x$ is unbounded near $0$, strictly speaking the improper integral requires a separate argument ($\ln x$ is monotone, so the sum can be squeezed between upper and lower sums of a monotone function); the result is $\frac1n\sum\ln\frac in \to \int_0^1\ln x\,\mathrm{d}x = -1$, so the limit is $\mathrm{e}^{-1}$.
+
+:::
 
 An improper integral of an unbounded function can be converted into one over an unbounded interval: if $a$ is the singular point, put $x = a + \frac1u$; then
 
@@ -592,6 +602,8 @@ Intuitively: the integral converges when $f$ is an **infinitesimal** of higher o
 2. $\int_1^{+\infty}\frac{\ln(x+2) - \ln x}{\sqrt x}\,\mathrm{d}x$ converges: $x^{3/2}\cdot\frac{\ln(1 + 2/x)}{\sqrt x} = x\ln\left(1 + \frac2x\right) \to 2$; take $p = \frac32$.
 3. $\int_1^{+\infty}x^2\mathrm{e}^{-x}\sin x\,\mathrm{d}x$ converges absolutely: $x^2\cdot x^2\mathrm{e}^{-x}|\sin x| \to 0$. When the integrand changes sign, first check whether the integral of $|f|$ converges.
 
+:::
+
 The corresponding results for unbounded functions: let $a$ be the singular point of $\int_a^b f$.
 
 **Theorem 7.7.6 (Cauchy Criterion for Integrals of Unbounded Functions)** $\int_a^b f$ converges $\iff$ for every $\varepsilon > 0$ there exists $\delta \in (0, b-a)$ such that $\left|\int_{a+\eta_1}^{a+\eta_2}f(x)\,\mathrm{d}x\right| < \varepsilon$ whenever $0 < \eta_1 < \eta_2 < \delta$.
@@ -608,6 +620,8 @@ The comparison test and its limit form remain valid for integrals of unbounded f
 - For $\alpha < 1$, take $p = \frac{1+\alpha}{2} \in (\alpha, 1)$; then $x^p\cdot\frac{|\ln x|}{x^\alpha} = x^{p-\alpha}|\ln x| \to 0$, so the integral converges;
 - For $\alpha \ge 1$, take $p = \alpha$; then $x^\alpha\cdot\frac{|\ln x|}{x^\alpha} = |\ln x| \to +\infty$, so the integral diverges. (For $\alpha \le 0$, $0$ is not a singular point and the integral is a proper one; the conclusion "converges" still holds.)
 
+:::
+
 An integral may be improper both because of an unbounded interval and because of an unbounded integrand. In that case we split it into pieces, each improper in only one way, and require every piece to converge. The two most important improper integrals with a parameter in probability theory are treated in this way.
 
 **Definition 7.7.4 (Gamma Function)** For $s > 0$, let
@@ -617,6 +631,8 @@ $$
 $$
 
 **Example 7.7.8** This integral converges if and only if $s > 0$. Split it into $I_1 = \int_0^1x^{s-1}\mathrm{e}^{-x}\,\mathrm{d}x$ and $I_2 = \int_1^{+\infty}x^{s-1}\mathrm{e}^{-x}\,\mathrm{d}x$. $I_2$ converges for every $s$ (Example 7.7.6). For $s < 1$, $0$ is a singular point of $I_1$; take $p = 1 - s$, so that $x^p\cdot x^{s-1}\mathrm{e}^{-x} \to 1$: the integral converges when $s > 0$, i.e. $p < 1$, and diverges when $s \le 0$, i.e. $p \ge 1$.
+
+:::
 
 Basic properties of the gamma function:
 
@@ -631,6 +647,8 @@ $$
 $$
 
 **Example 7.7.9** This integral converges if and only if $\alpha > 0$ and $\beta > 0$. The possible singular points are $0$ and $1$; split the integral at $\frac12$. Near $0$, take $p = 1 - \alpha$; then $x^p\cdot x^{\alpha-1}(1-x)^{\beta-1} \to 1$, so the integral converges $\iff p < 1 \iff \alpha > 0$. Near $1$, similarly with $p = 1 - \beta$, it converges $\iff \beta > 0$.
+
+:::
 
 The substitution $x = 1 - t$ gives $\mathrm{B}(\alpha,\beta) = \mathrm{B}(\beta,\alpha)$, and $x = \sin^2\theta$ gives $\mathrm{B}(\alpha,\beta) = 2\int_0^{\pi/2}\sin^{2\alpha-1}\theta\cos^{2\beta-1}\theta\,\mathrm{d}\theta$; for example, $\mathrm{B}\left(\frac12,\frac12\right) = \pi$. These are integrals of the same type as the Wallis integrals. The two functions are related by $\mathrm{B}(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$, whose proof also requires double integrals ([Chapter 12](/2.2.12)).
 

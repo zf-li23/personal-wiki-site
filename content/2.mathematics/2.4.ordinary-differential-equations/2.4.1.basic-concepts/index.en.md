@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts
-source_hash: 7dbbe2c22f1b
+source_hash: 2781115a0f4f
 ---
 
 This chapter fixes the basic language of ordinary differential equations: the order and classification of equations, solutions and implicit solutions, general solutions and the independence of the arbitrary constants they contain, initial value problems, and the geometric interpretation of first-order equations through direction fields and integral curves. These notions already appeared in calculus ([2.2.15](/2.2.15)); here we restate them rigorously as definitions and add two points not discussed there: the precise meaning of "mutually independent arbitrary constants" in a general solution (the Jacobian criterion), and how direction fields and isoclines reveal the shape of solutions without solving the equation. The last section describes the three kinds of questions this course sets out to answer; they determine the arrangement of the chapters that follow.
@@ -96,6 +96,8 @@ $$
 $$
 so it is not a general solution (every solution in this family satisfies $y'(x_0)=y(x_0)$ and cannot meet general initial conditions); the general solution of $y''=y$ is $C_1\mathrm{e}^x+C_2\mathrm{e}^{-x}$.
 
+:::
+
 A general solution need not contain all solutions of the equation. The general solution $y=\dfrac{1}{C-x}$ of $y'=y^2$ does not contain the solution $y\equiv0$ ([2.2.15 Example 15.2.1](/2.2.15#ex-15.2.1)); more drastically, the singular solutions of [2.4.6](/2.4.6) are tangent at every point to some solution in the general solution, yet do not belong to it. For linear equations the general solution contains all solutions ([2.4.3](/2.4.3), [2.4.8](/2.4.8)).
 
 ### 1.1.4. Initial Value Problems
@@ -161,6 +163,8 @@ Neither direction field is defined at the origin: all the rays converge to the o
 - since $y''=2x+2yy'=2x+2y(x^2+y^2)$, the convexity of the integral curves is separated by the curve $x+y(x^2+y^2)=0$: integral curves are convex ($y''>0$) on the side where $x+y(x^2+y^2)>0$ and concave on the other side.
 
 ![The direction field of y' = x^2 + y^2 with isoclines (dashed circles x^2 + y^2 = k, k = 1, 4) and several numerically computed integral curves; each integral curve is increasing and tends to infinity at both ends of a bounded interval](./plots/riccati-isoclines.py)
+
+:::
 
 The direction field point of view is equally fundamental in numerical computation: Euler's method starts from the initial point, takes a small step along the line element, then takes the next step along the line element at the new point, and so on. In [2.4.4](/2.4.4) we use Euler polygons to prove the Peano existence theorem.
 

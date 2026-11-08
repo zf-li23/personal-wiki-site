@@ -1,7 +1,7 @@
 ---
 title: Search
 description: Formulation of search problems and the general graph-search framework; uninformed search (depth-first, breadth-first, iterative deepening) and uniform-cost search; heuristic functions, algorithm A and the A* algorithm, the admissibility theorem, comparing heuristics, and consistency; designing heuristics (relaxed problems, effective branching factor) with an eight-puzzle experiment; local search, dynamic programming, and Viterbi decoding.
-source_hash: 7bb352c931ad
+source_hash: c169ec2554a4
 ---
 
 Many intelligent tasks can be reduced to "finding a path to a goal in a huge space of possibilities": a navigation system looks for the shortest route in a road network, a sliding puzzle needs a sequence of moves that turns a scrambled arrangement into an ordered one, and an input method must find the most fluent sentence among the combinations of thousands of homophones. [4.1.14](/4.1.14) has already shown how to model such problems as a **state space** and solve them with **depth-first search** and **breadth-first search**; [4.3.10](/4.3.10) and [4.3.11](/4.3.11) covered graph traversal and the implementation and correctness of **Dijkstra's algorithm**. The question of this chapter is: when the state space is too large to check state by state, how can we use knowledge about the problem to search as little as possible and still guarantee an optimal solution? The core is the A* algorithm and its two properties: if the heuristic function never overestimates, an optimal solution is always found (admissibility); if the heuristic function satisfies the triangle inequality, each node needs to be expanded only once (consistency). The chapter ends with local search and dynamic programming; the latter, in sequence-decoding problems such as pinyin input, takes the form of the Viterbi algorithm, which reappears in the hidden Markov models of [4.6.8](/4.6.8). The next chapter, [4.5.3](/4.5.3), discusses search with an adversary.
@@ -225,6 +225,8 @@ Finally, optimality. Suppose A\* terminates upon removing the goal $t$ and $g(t)
 
 **Example 2.3.1** If $h$ is not admissible, algorithm A may lose optimality. In the road network of §2.2.2, change $h(B)$ to $9$ ($h^*(B) = 6$) and keep everything else. After expanding $S$ we have $f(A) = 9$, $f(B) = 12$, $f(C) = 10$. Algorithm A first expands $A$ to get $D$ ($g = 6$, $f = 9$), then expands $D$ to get $G$ ($g = 10$, $f = 10$); among $C$ and $G$, both with $f = 10$, it removes $G$, which has the larger $g$, and terminates, returning the path $S \to A \to D \to G$ of length 10, whereas the optimal solution has length 9.
 
+:::
+
 There are many admissible heuristic functions; the larger the estimate (the closer to $h^*$), the more focused the search.
 
 **Theorem 2.3.2** Let $A_1$ and $A_2$ be two A\* algorithms for the same problem with heuristic functions $h_1$ and $h_2$. If $h_2(n) > h_1(n)$ for all non-goal nodes, then whenever the problem has a solution, every node expanded by $A_2$ is also expanded by $A_1$, so $A_1$ expands at least as many nodes as $A_2$.
@@ -319,6 +321,8 @@ A good heuristic function should be admissible (preferably consistent), as large
 Each move changes the position of just one tile, so $h_1$ and $h_2$ change by at most 1, and both are consistent. For every state, $h_1(n) \le h_2(n)$ (a misplaced tile needs at least 1 move), so by Corollary 2.3.2, $h_2$ is better.
 
 **Example 2.3.3 (Missionaries and Cannibals)** In the notation of [4.1.14](/4.1.14), let $n$ be the total number of people on the east bank (missionaries plus cannibals), with $b = 0$ when the boat is on the east bank. Keep only the constraint that the boat carries at most 2 and needs at least 1 rower: a trip from east to west takes away at most 2, and a trip back brings at least 1, so each round trip reduces the east bank by at most 1 net, and only the last trip reduces it by 2. Hence with the boat on the east bank and $n \ge 2$, at least $2n - 3$ more crossings are needed; with the boat on the west bank and $n \ge 1$, the boat must first come back, so at least $2n$ more crossings are needed. The initial state has $h = 9$, while the true minimum is 11. Checking all 16 reachable states by program shows that this $h$ is admissible and consistent. The cruder $h(n) = n - 2(1 - b)$ is also admissible but far less informative.
+
+:::
 
 The effect of a heuristic function can be measured by the effective branching factor.
 
@@ -570,6 +574,8 @@ print("paths in the lattice:", math.prod(len(col) for col in lattice))
 I write to you (cost 5.774)
 paths in the lattice: 36
 ```
+
+:::
 
 The same framework is used for post-processing in character recognition: the recognizer gives each character position several candidate characters together with recognition confidences $\operatorname{CF}(w_i)$, which replace $\mathbb{P}(O \mid S)$, and we look for the sentence that maximizes $\prod_i \mathbb{P}(w_i \mid w_{i-1})\operatorname{CF}(w_i)$. Modeling "pinyin is generated from characters" as a probability distribution leads to the hidden Markov model, discussed in [4.6.8](/4.6.8); today's input methods and recognition systems use neural language models ([4.7](/4.7)) in place of bigrams, but decoding is still a search over the candidate lattice.
 

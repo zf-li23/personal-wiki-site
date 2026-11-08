@@ -78,6 +78,8 @@ Two features matter. The expected counts depend on the network only through the 
 
 **Example 15.2.1** The *E. coli* transcription network compiled by Shen-Orr, Milo, Mangan and Alon (2002) has $N = 424$ operons and $A = 519$ arcs, so $\lambda = 1.22$. It contains $40$ self-arcs ($34$ of them negative autoregulation), against $\lambda = 1.2 \pm 1.1$ in the random digraph: $z = (40 - 1.22)/1.11 = 35$. It contains $42$ feed-forward loops, against $\lambda^3 = 1.8$, and no three-node feedback cycle at all, against $0.6$. Autoregulation and the feed-forward loop are motifs; the feedback cycle is not. Of the $13$ connected three-vertex digraphs, only the feed-forward loop is a motif of this network and of the transcription network of yeast (Milo and colleagues, 2002; Lee and colleagues, 2002).
 
+:::
+
 The Erdős–Rényi ensemble ignores the very unequal degrees of real networks. Transcription networks have a few global regulators with hundreds of targets and many factors with one or two, and hubs alone create many triangles. The stricter null model keeps every vertex's in- and out-degree, using **degree-preserving randomization** ([Algorithm 7.4.2 of 1.4.7](/1.4.7#alg-7.4.2)). Against it, the feed-forward loop of *E. coli* remains a strong motif ($40$ observed, $7 \pm 3$ in randomized networks, $z \approx 10$; Milo and colleagues, 2002), with a much smaller z-score than against the Erdős–Rényi model.
 
 **Algorithm 15.2.1 (Motif Detection)** Input: a directed network $G$ and a subgraph size $k$ (usually $3$ or $4$).
@@ -185,6 +187,8 @@ The delay is tuned by two quantities, the lifetime of $Y$ and the ratio of its t
 Why would a cell want this? Engineers use sign-sensitive delays when the costs of the two errors are asymmetric. In the arabinose system of *E. coli*, the genes for arabinose uptake and breakdown are activated by CRP–cAMP (which signals the absence of glucose; **catabolite activator protein**, [7.2.11](/7.2.11)) and by AraC (which senses arabinose); CRP also activates *araC*, and the *araBAD* promoter needs both, a C1-FFL with an AND-like gate (Example 15.4.1). Making the arabinose enzymes in response to a brief glucose dip would waste resources, whereas stopping too early costs little, because the enzymes already made persist for a generation.
 
 **Example 15.4.1 (The Arabinose System)** Mangan, Zaslaver and Alon (2003) followed the activity of the *araBAD* promoter with a GFP reporter after steps of cAMP in the presence of arabinose. After ON steps the promoter switched on with a delay of about $20\,\mathrm{min}$ relative to the *lac* promoter, which responds to the same signal without an FFL; after OFF steps neither showed a delay. The delay is of the order of the duration of the spurious drops in glucose that *E. coli* experiences when growth conditions change, so the FFL appears tuned to filter them. The circuit behaves as predicted even though it is embedded in other interactions, such as the feedback through the transport of arabinose.
+
+:::
 
 With an OR gate the signs of the delay are reversed.
 

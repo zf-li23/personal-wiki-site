@@ -252,6 +252,8 @@ $$
 $$
 for large $n$, where $\Phi$ is the standard normal distribution function. A small-sample property: $\mathbb{E}[\bar X_n]=a_F$ for every $n$.
 
+:::
+
 The main tool for limiting distributions is Slutsky's theorem, proved in [3.1.14](/3.1.14).
 
 **Theorem 2.1.4 (Slutsky's Theorem)** Let $X_n$ and $Y_n$ be sequences of random variables with $X_n\xrightarrow{d}X$ and $Y_n\xrightarrow{p}c$, where $c$ is a constant. Then
@@ -281,6 +283,8 @@ $$
 $$
 
 The statistic is undefined when $\hat p\in\{0,1\}$, but this event has probability $p^n+(1-p)^n\to0$ and does not affect the limit. $\square$
+
+:::
 
 This example is the basis of the large-sample confidence interval for a proportion in [3.2.4](/3.2.4).
 
@@ -343,6 +347,8 @@ $$
 f(x;\theta)=\frac{\mathrm{e}^{-\theta}\theta^x}{x!}=\mathrm{e}^{-\theta}\exp\{x\log\theta\}\frac1{x!},
 $$
 with $\Theta=(0,\infty)$, $C(\theta)=\mathrm{e}^{-\theta}$, $Q_1(\theta)=\log\theta$, $T_1(x)=x$ and $h(x)=1/x!$.
+
+:::
 
 The support $\{x\colon f(x;\theta)>0\}=\{x\colon h(x)>0\}$ of an exponential family does not depend on $\theta$: all distributions in the family have the same support. This gives a quick way to recognize families that are not exponential.
 
@@ -624,6 +630,8 @@ $$
 
 Differentiating with respect to $\theta$ gives $\theta^{n-1}\varphi(\theta)=0$, so $\varphi(\theta)=0$ for almost every $\theta>0$ (every point of continuity), and $\mathbb{P}_\theta(\varphi(T)=0)=1$.
 
+:::
+
 These examples are instances of a general theorem.
 
 **Theorem 2.3.2 (Completeness in Exponential Families)** Let $\boldsymbol{X}$ be a sample from an exponential family in natural form, with joint density
@@ -665,6 +673,8 @@ An ancillary statistic alone tells us nothing about $\theta$. The range in Examp
 The theorem is due to D. Basu (1955). It is a convenient way to prove independence without computing joint distributions.
 
 **Example 2.3.12** Let $X_1,\dots,X_n$ be a sample from $\mathcal{N}(\theta,1)$, $R(\boldsymbol{X})=X_{(n)}-X_{(1)}$ the sample range and $T(\boldsymbol{X})=\bar X$. Then $R$ and $T$ are independent. By Examples 2.3.2 and 2.3.8, $T$ is sufficient and complete. Let $Y_i=X_i-\theta$; then $Y_1,\dots,Y_n\overset{\text{iid}}{\sim}\mathcal{N}(0,1)$, whose distribution does not depend on $\theta$, so the distribution of $R(\boldsymbol{X})=Y_{(n)}-Y_{(1)}$ does not depend on $\theta$. By Basu's theorem $T$ and $R$ are independent.
+
+:::
 
 The same argument gives a second proof of Theorem 2.1.3(3). Fix $\sigma^2$ and regard $\{\mathcal{N}(\mu,\sigma^2)\colon\mu\in\mathbb{R}\}$ as the model; $\bar X$ is complete and sufficient for $\mu$ (Example 2.3.10), and $S^2$ is a function of the deviations $X_i-\mu$, whose distribution is free of $\mu$, so $S^2$ is ancillary. Hence $\bar X$ and $S^2$ are independent for every $\mu$, and $\sigma^2$ was arbitrary. Without normality the conclusion fails, as the following simulation of the sample mean and range shows.
 

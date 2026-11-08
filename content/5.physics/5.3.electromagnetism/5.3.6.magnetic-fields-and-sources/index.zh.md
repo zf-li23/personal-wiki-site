@@ -155,6 +155,8 @@ B = \oint\frac{\mu_0I}{4\pi r^2}\frac Rr\,\mathrm{d}l = \frac{\mu_0IR}{4\pi r^3}
 $$
 方向沿轴线，与电流成右手螺旋关系。圆心处 $B = \dfrac{\mu_0I}{2R}$。
 
+:::
+
 远处（$x \gg R$）$B \approx \dfrac{\mu_0IR^2}{2x^3}$，与**电偶极子**轴线上的**场强** $E = \dfrac{p}{2\pi\varepsilon_0x^3}$ 形式相同。引入矢量 $\boldsymbol{m} = IS\boldsymbol{e}_{\mathrm{n}}$（$S = \pi R^2$ 是圆电流所围的面积，$\boldsymbol{e}_{\mathrm{n}}$ 是与电流成右手螺旋的单位法向矢量），它称为线圈的磁矩，可写成 $\boldsymbol{B} = \dfrac{\mu_0\boldsymbol{m}}{2\pi x^3}$。
 
 **定义 6.3.1（磁偶极子）** 线度远小于场点到它的距离的载流线圈称为**磁偶极子**，它的磁性由磁矩 $\boldsymbol{m} = IS\boldsymbol{e}_{\mathrm{n}}$ 完全描述（[5.3.7](/5.3.7)）。在远处，它的磁场与电偶极子的电场形式相同：

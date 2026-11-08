@@ -112,6 +112,8 @@ Protein-coding sequence differs from noncoding sequence in ways that a Markov mo
 
 ![The three-base periodicity of protein-coding DNA in *E. coli* K-12. A: base frequencies at the three codon positions of the 4297 annotated genes. B: power spectrum of the four base indicator sequences, averaged over 360-bp windows from every fourth gene (2252 windows) and from intergenic regions longer than 360 bp (746 windows), normalized by its median; coding windows have a sharp peak at frequency 1/3 (period 3 bp), 4.7 times the background level, intergenic windows a weaker one (2.3), contributed by unannotated or overlapping coding fragments](./plots/codon-periodicity.py)
 
+:::
+
 The periodicity is the basis of a class of gene-detection methods that use the **discrete Fourier transform** of sequences; the Markov models below capture it directly, by using a different transition matrix at each codon position.
 
 **Definition 7.3.2 (Periodic Markov Model)** A *three-periodic* (inhomogeneous) Markov model of order $k$ for coding sequence has three transition matrices $a^{(1)}, a^{(2)}, a^{(3)}$, one for each codon position; base $x_i$ at codon position $c(i)$ is drawn from $a^{(c(i))}_{x_{i-k}\cdots x_{i-1},\,x_i}$.

@@ -41,6 +41,8 @@ $$
 
 故 $D^* = -D$，$D$ 不是自伴随的，而是反自伴随的，特征值为 $0, \pm \mathrm{i}$（对应复函数 $1, \mathrm{e}^{\pm \mathrm{i}x}$）。背后的原因是分部积分：对周期函数，$\langle f', g \rangle = -\langle f, g' \rangle$。相应地 $-D^2 = -\frac{\mathrm{d}^2}{\mathrm{d}x^2}$ 是自伴随的，这是偏微分方程中 Fourier 级数方法的出发点。
 
+:::
+
 任一复方阵都可以唯一地写成 $A = H + K$，$H = \frac12(A + A^{\mathsf H})$ 是 Hermite 矩阵，$K = \frac12(A - A^{\mathsf H})$ 是反 Hermite 矩阵，这是 $z = a + b\mathrm{i}$ 分成实部与虚部的类比。展开 $AA^{\mathsf H}$ 与 $A^{\mathsf H}A$ 可知，$A$ 正规 $\Leftrightarrow$ $HK = KH$。
 
 ## 13.2. 极分解
@@ -71,6 +73,8 @@ $R$ 是特征值非负的 Hermite 矩阵，$M$ 是 Hermite 矩阵，二者被同
 称 $A = R\mathrm{e}^{\mathrm{i}M}$ 为正规矩阵 $A$ 的极分解（polar decomposition）。由 $A^{\mathsf H}A = \mathrm{e}^{-\mathrm{i}M}R^2\mathrm{e}^{\mathrm{i}M} = R^2$，$R = (A^{\mathsf H}A)^{1/2}$ 由 $A$ 唯一确定（取半正定的平方根）；$M$ 不唯一，各 $\theta_j$ 可以相差 $2\pi$ 的整数倍，$A$ 不可逆时零特征值的辐角也可任取。这兑现了[第 11 章](/2.1.11)开头提出的问题。
 
 **例 13.2.1** 复数 $z = r\mathrm{e}^{\mathrm{i}\theta}$ 对应的矩阵 $A = \begin{bmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{bmatrix}$ 的极分解为 $R = rI$，$M = \begin{bmatrix} 0 & \mathrm{i}\theta \\ -\mathrm{i}\theta & 0 \end{bmatrix}$：$M$ 是 Hermite 矩阵，$\mathrm{i}M = \theta\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$，$\mathrm{e}^{\mathrm{i}M}$ 就是转角为 $\theta$ 的旋转矩阵（例 11.8.1）。矩阵的极分解与复数的极形式在这里完全重合。
+
+:::
 
 一般方阵（不必正规）也有极分解 $A = UP$（$U$ 为酉矩阵，$P$ 为半正定 Hermite 矩阵），但 $U$ 与 $P$ 不一定可交换，见 13.5 节。
 
@@ -158,6 +162,8 @@ $\sigma_i$ 是 $A^{\mathsf H}A$ 的正特征值的算术平方根，称为 $A$ �
 **证明** $A^{\mathsf H}A$ 是半正定 Hermite 矩阵（性质 13.4.1），由定理 13.1.1 有酉矩阵 $V = (\boldsymbol{v}_1, \dots, \boldsymbol{v}_n)$ 使 $V^{\mathsf H}A^{\mathsf H}AV = \operatorname{diag}(\sigma_1^2, \dots, \sigma_r^2, 0, \dots, 0)$。$i > r$ 时 $\|A\boldsymbol{v}_i\|^2 = 0$。令 $\boldsymbol{u}_i = \frac{1}{\sigma_i}A\boldsymbol{v}_i$（$i \le r$），则 $\langle \boldsymbol{u}_j, \boldsymbol{u}_i \rangle = \frac{1}{\sigma_i\sigma_j}\boldsymbol{v}_i^{\mathsf H}A^{\mathsf H}A\boldsymbol{v}_j = \frac{\sigma_j^2}{\sigma_i\sigma_j}\delta_{ij} = \delta_{ij}$。把 $\boldsymbol{u}_1, \dots, \boldsymbol{u}_r$ 扩充为 $\mathbb{C}^m$ 的标准正交基，得酉矩阵 $U$，且 $AV = U\Sigma$。 $\square$
 
 **例 13.5.1** 秩为 $1$ 的矩阵 $A = u\boldsymbol{v}^{\mathsf H}$（$\boldsymbol{u} \in \mathbb{C}^m$，$\boldsymbol{v} \in \mathbb{C}^n$ 非零）只有一个奇异值 $\sigma_1 = \|\boldsymbol{u}\|\,\|\boldsymbol{v}\|$，$\boldsymbol{u}_1 = \boldsymbol{u} / \|\boldsymbol{u}\|$，$\boldsymbol{v}_1 = \boldsymbol{v} / \|\boldsymbol{v}\|$，$A = \sigma_1\boldsymbol{u}_1\boldsymbol{v}_1^{\mathsf H}$，其余列任意扩充。例如 $3 \times 2$ 的全 $1$ 矩阵 $A = (1, 1, 1)^{\mathsf T}(1, 1)$，$\sigma_1 = \sqrt3 \cdot \sqrt2 = \sqrt6$，$\boldsymbol{u}_1 = \frac{1}{\sqrt3}(1, 1, 1)^{\mathsf T}$，$\boldsymbol{v}_1 = \frac{1}{\sqrt2}(1, 1)^{\mathsf T}$。
+
+:::
 
 奇异值分解把正规矩阵的谱分解推广到任意矩阵：代价是左右用两个不同的酉矩阵。由它立即得到一般方阵的极分解。
 
@@ -261,6 +267,8 @@ $$
 直接计算 $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$，除以 $E_0^2$ 得 $x'^2 - c^2t'^2 = x^2 - c^2t^2$，所以 $g(T\alpha, T\alpha) = g(\alpha, \alpha)$；由对称双线性型的极化，$g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$。$T$ 是 Lorentz 变换，Lorentz 型的等距群 $O(3, 1)$ 称为 Lorentz 群（Lorentz group）。
 
 **例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
+
+:::
 
 ![平面上三种双线性型的等距变换：左，旋转保持 x^2 + y^2，点沿圆周移动；中，Lorentz 变换（取 c = 1）保持 x^2 - t^2，点沿双曲线移动，光锥 x = ±t 不变；右，行列式为 1 的矩阵保持有向面积，单位圆盘经剪切与压缩后面积仍为 π](./plots/isometry-groups.py)
 

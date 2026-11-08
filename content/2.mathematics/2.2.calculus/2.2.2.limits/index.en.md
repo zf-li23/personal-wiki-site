@@ -1,6 +1,6 @@
 ---
 title: Limits
-source_hash: 12c6ed7419ee
+source_hash: "90887e125933"
 ---
 
 The limit is the basic language of calculus: a derivative is the limit of difference quotients, a definite integral is the limit of sums, and the sum of a series is the limit of its partial sums. This chapter begins with the simplest case, the limit of a sequence, and uses the $\varepsilon$-$N$ language to make "arbitrarily close" precise; it establishes the properties of limits, the arithmetic rules and several existence theorems (the squeeze theorem, the monotone convergence theorem and the Cauchy criterion). It then extends these results to the six kinds of limit processes for functions and proves the two fundamental limits. Finally, it compares how fast limit processes proceed by means of orders of infinitesimals, which leads to the most commonly used technique for computing limits, the substitution of equivalent infinitesimals.
@@ -77,6 +77,8 @@ Given $\varepsilon > 0$, the inequality $\sqrt{\frac2{n-1}} < \varepsilon$ holds
 
 **Proof** Write $a = 1 + b$ with $b > 0$. For $n \geq 2$, $a^n \geq \binom n2 b^2$, so $0 < \frac{n}{a^n} \leq \frac{2}{(n - 1)b^2}$; take $N = \left\lfloor \frac{2}{\varepsilon b^2} \right\rfloor + 1$. $\square$
 
+:::
+
 The same method (expanding up to the $b^{k+1}$ term) proves $\lim\limits_{n \to \infty} \frac{n^k}{a^n} = 0$ ($a > 1$, $k \in \mathbb{N}_+$): exponential growth beats any polynomial growth. Examples 2.1.2–2.1.5 give the four most frequently used basic limits:
 
 $$
@@ -88,6 +90,8 @@ $$
 **Proof** Let $\varepsilon \in (0, 1)$. The inequality $\left|\arctan n - \frac\pi2\right| = \frac\pi2 - \arctan n < \varepsilon$ is equivalent to $\tan\left(\frac\pi2 - \arctan n\right) < \tan\varepsilon$, that is, $\cot(\arctan n) = \frac1n < \tan\varepsilon$. Take $N = \left\lfloor \frac1{\tan\varepsilon} \right\rfloor$. $\square$
 
 Similarly, $\lim\limits_{n \to \infty} \arctan(-n) = -\frac\pi2$, $\lim\limits_{n \to \infty} \operatorname{arccot} n = 0$ and $\lim\limits_{n \to \infty} \operatorname{arccot}(-n) = \pi$.
+
+:::
 
 The definition immediately yields the following equivalences, which reduce a general limit problem to a problem of "tending to $0$":
 
@@ -104,6 +108,8 @@ $$
 \left|\frac{b_1 + \cdots + b_n}{n}\right| \leq \frac{|b_1 + \cdots + b_{N_1}|}{n} + \frac{n - N_1}{n}\varepsilon < \frac{|b_1 + \cdots + b_{N_1}|}{n} + \varepsilon.
 $$
 Once $N_1$ is fixed, the numerator of the first term is a constant, so there exists $N_2$ such that the first term is less than $\varepsilon$ for $n > N_2$. With $N = \max\{N_1, N_2\}$, the expression is less than $2\varepsilon$ for $n > N$. $\square$
+
+:::
 
 The "split estimate" in this proof is a common technique: the first finitely many terms are controlled because their numerator is fixed while the denominator tends to infinity, and the remaining terms are controlled by the definition of the limit. The converse fails: $a_n = (-1)^n$ diverges, yet its arithmetic means tend to $0$.
 
@@ -268,6 +274,8 @@ $$
 
 **Proof** Choose $\varepsilon_0 > 0$ such that $r = q + \varepsilon_0 < 1$. There exists $N$ such that $\frac{a_{n+1}}{a_n} < r$ for $n \geq N$, so for $n > N$ we have $0 < a_n < r a_{n-1} < \cdots < r^{n-N}a_N$. The right-hand side equals $\frac{a_N}{r^N} r^n \to 0$, and by the squeeze theorem $a_n \to 0$. $\square$
 
+:::
+
 This immediately gives $\frac{n^k}{a^n} \to 0$ ($a > 1$), $\frac{a^n}{n!} \to 0$ and similar results, since the ratios tend to $\frac1a$ and $0$, respectively. This is the germ of the ratio test in [Chapter 8](/2.2.8).
 
 **Example 2.2.5** Find the area $S$ of the region $D$ bounded by the curve $y = x^2$, the line $x = 1$ and the $x$-axis.
@@ -383,6 +391,8 @@ $$
 |a_{2j} - a_j| = \sum_{k=j+1}^{2j} \frac1k \geq j \cdot \frac1{2j} = \frac12 = \varepsilon_0.
 $$
 Thus $\{a_n\}$ is not a Cauchy sequence and therefore diverges. Since $\{a_n\}$ is strictly increasing, the monotone convergence theorem shows that it is unbounded above, that is, $a_n \to +\infty$. $\square$
+
+:::
 
 Examples 2.2.10 and 2.2.11 are the prototypes of the alternating series and the harmonic series of [Chapter 8](/2.2.8).
 

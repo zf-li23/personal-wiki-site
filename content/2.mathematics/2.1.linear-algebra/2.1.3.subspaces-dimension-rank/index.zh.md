@@ -131,6 +131,8 @@ $\mathbb{R}^m$ 的子空间是否一定有基？如何求一组基？先考虑 $
 
 **例 3.5.1** 对 $\boldsymbol{a}_1 = [1\ {-1}\ 0]^{\mathsf T}$，$\boldsymbol{a}_2 = [1\ 0\ {-1}]^{\mathsf T}$，$\boldsymbol{a}_3 = [0\ 1\ {-1}]^{\mathsf T}$：$\boldsymbol{a}_1 \ne \boldsymbol{0}$，选入；$\boldsymbol{a}_2$ 不是 $\boldsymbol{a}_1$ 的倍数，选入；$\boldsymbol{a}_3 = -\boldsymbol{a}_1 + \boldsymbol{a}_2$，舍去。$\boldsymbol{a}_1, \boldsymbol{a}_2$ 是一个极大线性无关部分组。事实上这里任意两个向量都构成极大线性无关部分组，所以极大线性无关部分组一般不唯一。
 
+:::
+
 筛选法每一步都要判断一次线性表示，即解一个方程组；3.7 节给出只需一次消元的方法。为比较不同的极大线性无关部分组，先讨论向量组之间的线性表示。
 
 **命题 3.5.2** 设 $S: \boldsymbol{a}_1, \dots, \boldsymbol{a}_n$ 与 $T: \boldsymbol{b}_1, \dots, \boldsymbol{b}_p$ 是 $\mathbb{R}^m$ 中的向量组，以下叙述等价：
@@ -265,6 +267,8 @@ $$
 \boldsymbol{a}_3 = \boldsymbol{a}_1 - \boldsymbol{a}_2, \qquad \boldsymbol{a}_5 = -\tfrac76\boldsymbol{a}_1 - \tfrac56\boldsymbol{a}_2 - \tfrac13\boldsymbol{a}_4.
 $$
 
+:::
+
 计算机代数系统按同样的方法做精确计算。数值计算中则要小心：浮点数的舍入会把"恰好为零"的主元变成很小的非零数，用消元判断秩是不可靠的，数值软件改用奇异值（[第 7 章](/2.1.7)）并设定容差：
 
 ```python
@@ -381,6 +385,8 @@ $$
 $$
 
 $\mathcal{N}(A) = \{x_3\boldsymbol{k}_1 + x_5\boldsymbol{k}_2 \mid x_3, x_5 \in \mathbb{R}\}$，$\dim\mathcal{N}(A) = 2 = 5 - 3$。
+
+:::
 
 反过来，由零空间的一组基也能写出行简化阶梯形的非零行。例如已知 $4 \times 5$ 矩阵 $A$ 的零空间以上面的 $\boldsymbol{k}_1, \boldsymbol{k}_2$ 为基，则 $\mathcal{N}(A)$ 中的向量形如 $[-c_1 + \frac76c_2\ \ c_1 + \frac56c_2\ \ c_1\ \ \frac13c_2\ \ c_2]^{\mathsf T}$，即 $x_3 = c_1$，$x_5 = c_2$ 是自由变量，且 $x_1 + x_3 - \frac76x_5 = 0$，$x_2 - x_3 - \frac56x_5 = 0$，$x_4 - \frac13x_5 = 0$。这三个方程的系数就是 $\operatorname{rref}(A)$ 的三个非零行（由推论 3.7.1，行简化阶梯形由零空间唯一确定）。
 

@@ -41,6 +41,8 @@ What is unusual is the morphology. Viruses of halophilic and methanogenic *Eurya
 
 **Example 26.2.1** ATV is the only known case of virion development in the complete absence of a host cell. Virions released by lysis are lemon-shaped; over the next hours, at $85\,^\circ\mathrm{C}$ and $\mathrm{pH}\ 1.5$, each extends a hollow tube from both ends while the body becomes thinner, with no input of energy or material from outside. The tails are thought to help the particle find or attach to a cell in an environment where diffusion is the only transport. ATV is also lysogenic, which is rare among archaeal viruses.
 
+:::
+
 PAV1 and SSV1 look alike but share almost no sequence, so similar morphology here does not imply common ancestry — one reason morphology was abandoned as a basis for classification (§26.4). Many archaeal viruses leave the cell without lysing it, by budding or through a dedicated pyramidal structure that pushes through the S-layer, and lysogeny and chronic release are more common than the lytic cycle. The hosts are the organisms of [7.11.19](/7.11.19).
 
 ## 26.3. Giant Viruses and Virophages
@@ -186,6 +188,8 @@ Several features of the diseases follow from this mechanism.
 - *No treatment* is available. Quinacrine blocked prion accumulation in culture but failed in trials; antibodies and small molecules that bind PrP are in development. Diagnosis, by contrast, has improved greatly: RT-QuIC and protein misfolding cyclic amplification use the templating reaction itself, with cycles of shaking or sonication to fragment fibrils and multiply the number of seeds, and detect femtogram amounts of $\mathrm{PrP^{Sc}}$ in cerebrospinal fluid or nasal brushings.
 
 **Example 26.10.1 (BSE and variant CJD)** The British BSE epidemic was created by recycling: ruminant carcasses were processed into meat-and-bone meal and fed back to cattle, so that a single infected animal could infect many. Cases peaked in 1992 at about 37 000 a year and collapsed after the 1988 ban on ruminant feed and the 1989 ban on specified bovine offal in human food. Variant CJD in humans followed with a lag of about seven years, peaked in 1999 and has remained rare: 229 cases worldwide as of 2011, against the hundreds of thousands of infected cattle that entered the food chain. The episode is the standard example of a feeding practice converting a sporadic animal disease into an epidemic, and of how long the latency of such an epidemic can be.
+
+:::
 
 Not all prions are pathogenic. Several fungal proteins propagate as self-templating conformers without causing disease: in *Saccharomyces cerevisiae*, the nitrogen catabolite repressor Ure2p in its aggregated state [URE3] releases the genes it normally represses, so that the cell can use poor nitrogen sources, and the prion state is inherited cytoplasmically. Such prions behave as epigenetic switches that let a clone explore an alternative phenotype ([7.11.12](/7.11.12)). In mammals, the innate immune adaptor MAVS polymerizes into a prion-like filament when a cell detects viral RNA, and the polymer is the signalling-competent form — the subject of the next chapter. The conformational self-templating that makes prions infectious is, in other words, an ordinary property of some proteins ([7.1.6](/7.1.6), [7.6.16](/7.6.16)); what is unusual about $\mathrm{PrP^{Sc}}$ is that it is transmissible between organisms.
 

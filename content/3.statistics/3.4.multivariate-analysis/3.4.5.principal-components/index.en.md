@@ -135,6 +135,8 @@ $$
 
 the eigenvalues are $100.16$ and $0.84$, with $\boldsymbol{e}_1 = (0.040, 0.999)^{\mathsf T}$: the first component, which explains $99.2\%$ of the total variance, is essentially the second variable alone, simply because its variance is so much larger.
 
+:::
+
 The remedy is to standardize: let $Z_k = (X_k - \mu_k)/\sqrt{\sigma_{kk}}$, $k = 1, \dots, p$, or in matrix form
 
 $$

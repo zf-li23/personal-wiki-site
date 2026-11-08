@@ -172,6 +172,8 @@ The bithorax complex spans about 300 kb but encodes only three proteins; most of
 
 **Example 15.5.1 (Deletion and rescue in the bithorax complex)** Embryos lacking the entire bithorax complex have parasegments 5–13 transformed into copies of parasegment 4. Adding back a **transgene** containing *Ubx* and its regulatory regions restores parasegments 5 and 6 but leaves 7–13 like 6; adding *Ubx* and *abd-A* restores 5–9; and the full complex restores 5–13 (after Lewis and subsequent molecular dissection). The experiment shows two things. Each gene is responsible for a block of parasegments: *Ubx* for 5–6, *abd-A* for 7–9, *Abd-B* for 10–13. And within each block the regulatory regions add successive levels: a parasegment lacking the more posterior gene takes the identity of the most posterior parasegment the remaining genes can specify, which is posterior prevalence read from a deletion series.
 
+:::
+
 The regulatory regions are domains of chromatin, each with an initiator element that reads the gap and pair-rule proteins in one parasegment and a maintenance element that keeps the state of the domain afterwards, separated from neighboring domains by boundary (**insulator**) elements such as *Fab-7*. In each parasegment, the regions up to the corresponding one are open and the more posterior ones closed, so that the number of open domains increases from anterior to posterior: a chromatin version of colinearity.
 
 ## 15.6. Maintenance: Polycomb and Trithorax

@@ -174,6 +174,8 @@ where $n$ counts the Trp and Tyr residues and the disulfide bonds.
 
 **Example 3.2.1** Hen egg-white lysozyme (129 residues, $M_{\mathrm{r}} = 14\,300$) contains 6 Trp, 3 Tyr and 4 disulfide bonds, so $\varepsilon_{280} \approx 6(5500) + 3(1490) + 4(125) = 37\,970\,\mathrm{L\,mol^{-1}\,cm^{-1}}$. A solution of $1\,\mathrm{mg\,mL^{-1}}$ ($7.0 \times 10^{-5}\,\mathrm{M}$) in a 1 cm cuvette should therefore have $A_{280} \approx 2.65$; the measured value is 2.64. A protein without Trp and Tyr, by contrast, is nearly invisible at 280 nm and must be measured at 205 nm (peptide bonds) or with a dye-binding assay.
 
+:::
+
 Tryptophan is also fluorescent (excitation at 280–295 nm, emission at 330–350 nm), and its emission shifts and changes intensity when the residue moves between the protein interior and water: the most widely used reporter of protein folding (7.1.6) and ligand binding.
 
 ## 3.3. Uncommon Amino Acids and Modifications

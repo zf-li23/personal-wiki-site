@@ -228,6 +228,8 @@ $$
 y' = \frac{1}{\sqrt{1-\arctan^2x}}\cdot\frac1{1+x^2}+\frac{1}{\arccos x\,\ln a}\cdot\Bigl(-\frac{1}{\sqrt{1-x^2}}\Bigr).
 $$
 
+:::
+
 至此，六类基本初等函数的导数都已求出。由四则运算法则与链式法则，任何初等函数在其定义区间内（除个别点外）都可以按公式求导，其导数仍是初等函数。
 
 | 函数 | 导数 | 函数 | 导数 |
@@ -267,6 +269,8 @@ $$
 $$
 y' = (\arccos x)^{\arctan x}\Bigl[\frac{\ln\arccos x}{1+x^2}-\frac{\arctan x}{\arccos x\,\sqrt{1-x^2}}\Bigr].
 $$
+
+:::
 
 对多个因子的乘积 $y = f_1f_2\cdots f_n$，$\frac{y'}{y} = (\ln|y|)' = \frac{f_1'}{f_1}+\cdots+\frac{f_n'}{f_n}$（在各因子不为零处），这正是乘积法则的另一种写法。
 
@@ -321,6 +325,8 @@ $$
 $$
 f''(0) = \lim_{x\to0}\frac{f'(x)-f'(0)}{x} = \lim_{x\to0}\Bigl(4x^2\cos\frac1x+x\sin\frac1x\Bigr) = 0.
 $$
+
+:::
 
 在分段点处的高阶导数必须按定义逐阶计算，不能对分段表达式求导后取极限。
 
@@ -392,6 +398,8 @@ $$
 \Bigl(\frac{\ln x}{x}\Bigr)^{(n)} = \frac{(-1)^nn!}{x^{n+1}}\Bigl(\ln x-\sum_{k=1}^n\frac1k\Bigr).
 $$
 
+:::
+
 参数方程的二阶导数。设 $x = \varphi(t)$，$y = \psi(t)$ 二阶可导，$\varphi'\ne0$。$\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\psi'(t)}{\varphi'(t)}$ 仍是 $t$ 的函数，再对 $x$ 求导时要乘以 $\frac{\mathrm{d}t}{\mathrm{d}x} = \frac1{\varphi'(t)}$：
 
 $$
@@ -415,6 +423,8 @@ y'' = \frac{y'(\mathrm{e}^y-x)-y(\mathrm{e}^yy'-1)}{(\mathrm{e}^y-x)^2} = \frac{
 $$
 
 最后一步代入了 $y' = \frac{y}{\mathrm{e}^y-x}$。
+
+:::
 
 反函数的二阶导数。设 $y = f(x)$ 二阶可导，$f'\ne0$，$x = g(y)$ 为其反函数。对恒等式 $f(g(y)) = y$ 求导两次：$f'(g(y))g'(y) = 1$，$f''(g(y))g'(y)^2+f'(g(y))g''(y) = 0$，所以
 
@@ -449,6 +459,8 @@ $$
 
 **例 4.5.1** $\mathrm{d}\cos x = -\sin x\,\mathrm{d}x$，$\mathrm{d}\ln x = \frac{\mathrm{d}x}{x}$，$\mathrm{d}a^x = a^x\ln a\,\mathrm{d}x$。
 
+:::
+
 微分的几何解释。设曲线 $y = f(x)$ 在 $x_0$ 可微。自变量有增量 $\Delta x$ 时，$\Delta y$ 是曲线上纵坐标的增量，而 $\mathrm{d}y = f'(x_0)\Delta x$ 恰好是切线 $y = y_0+f'(x_0)(x-x_0)$ 上纵坐标的增量，两者之差是 $\Delta x$ 的高阶无穷小。用微分代替增量，就是在 $x_0$ 的局部用切线代替曲线（局部线性化）。
 
 ![Δy 是曲线上纵坐标的增量，dy = f'(x₀)Δx 是切线上纵坐标的增量，两者相差 o(Δx)](./plots/differential-vs-increment.py)
@@ -464,6 +476,8 @@ $$
 **例 4.5.2** 用微分求 $\sqrt{1.02}$ 的近似值。
 
 解：取 $f(x) = \sqrt x$，$x_0 = 1$，$f'(x) = \frac{1}{2\sqrt x}$，$\sqrt{1.02}\approx1+\frac12\times0.02 = 1.01$（准确值 $1.00995\cdots$）。
+
+:::
 
 选取 $x_0$ 时要兼顾两点：$x_0$ 离 $x$ 足够近，且 $f(x_0)$、$f'(x_0)$ 容易计算。这种近似有两个不足：(1) 合适的 $x_0$ 不一定好找；(2) 精度不高，而且没有给出误差估计。用高阶导数改进它，就得到下一章的 Taylor 公式（[2.2.5](/2.2.5)）。
 

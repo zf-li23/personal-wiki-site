@@ -600,6 +600,8 @@ Error in UseMethod("determinant") :
 
 For `i = 1`, `M[1:1, 1:1]` is not a $1\times1$ matrix but the number `2`: subsetting drops every dimension of length $1$, and `det()` accepts only matrices (`det(M[1, 1])` gives the same error). Vectors, matrices with a single row or column, data frames with a single column and arrays with a single dimension all look similar, and R converts between them silently. The fix is `det(M[1:i, 1:i, drop = FALSE])`; `class(M[1, 1, drop = FALSE])` is `"matrix" "array"`, and `det(as.matrix(M[1, 1]))` also works. The function then returns `2 3 4`.
 
+:::
+
 Subsetting either *simplifies* the result to the simplest possible structure or *preserves* the structure of the input. Preserving is the same for all data types; simplifying behaves slightly differently:
 
 | | Simplifying | Preserving |
@@ -954,6 +956,8 @@ diag(G3) <- diag(G3) + colSums(X.hat * XZ)    # t = j = k was subtracted twice
 G3 <- (1 - rho1) / n * G3
 all.equal(G2, G3)
 ```
+
+:::
 
 *Recursion* means that a function calls itself inside its own body. It can be seen as mathematical induction in the opposite direction, gradually breaking a big problem down into small problems:
 

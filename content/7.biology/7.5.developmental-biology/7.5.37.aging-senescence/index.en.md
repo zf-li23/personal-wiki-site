@@ -40,6 +40,8 @@ and for $A = 0$ the median lifespan is $x_{1/2} = \frac1\gamma\ln\bigl(1 + \frac
 
 ![The Gompertz-Makeham law. A: hazard on a logarithmic scale. Points: a life table estimated from a simulated cohort of 100 000 people (A = 3e-4, B = 1.7e-5, gamma = 0.10 per year); the least-squares fit of log hazard at ages 30-95 recovers gamma and a mortality doubling time of 6.9 years. A 1900-like population has much higher background mortality A. Flat dotted lines: the age-independent hazards measured in laboratory Hydra (about 0.6 % per year) and naked mole-rats (about 1/10 000 per day). B: survival curves: lowering A makes the curve more rectangular; lowering gamma moves its fall to later ages (dots: median lifespan)](./plots/gompertz.py)
 
+:::
+
 The law fits human adult mortality between about 30 and 90 years remarkably well; at very old ages the rise appears to slow, and whether mortality reaches a plateau above about 105 years is debated, because the data are few and age records often wrong. Across countries and centuries, the falls in mortality have come mostly through $A$ (infections, accidents, childbirth) and through the level $B$ at given ages, with $\gamma$ changing much less; the survival curve has become more rectangular, and the age of greatest mortality has moved later. Survival curves of laboratory *Drosophila* have the same shape on a time scale of weeks. Estimating hazards and survival from censored data is the subject of [7.7.16](/7.7.16#sec-16.5).
 
 ## 37.2. Why Do We Age? Evolutionary Theories
@@ -69,6 +71,8 @@ and the optimal investment $u^*$ satisfies $\frac{\mathrm{d}}{\mathrm{d}u}\ln R_
 **Example 37.2.1** With $B = 0.01$, $\gamma_0 = 1.5$ and $k = 3$ (time in units of the age at maturity), the optimal investment is $u^* \approx 0.52$ for extrinsic mortality $A = 0.02$, $0.41$ for $A = 0.1$ and $0.15$ for $A = 0.5$; the median lifespan falls from about 10 to about 1 time unit. When the world is dangerous, extra years of maintenance are rarely used, and selection favors spending on reproduction now. Two qualifications apply: if extrinsic mortality falls equally at all ages, it does not change the optimum in all models (it does when it affects some ages more, or when maintenance also protects against extrinsic deaths), and the model has no explicit mechanism for "damage", only a parameterized rate of aging.
 
 ![A disposable-soma model (Formula 37.2.2). A: lifetime reproduction as a function of the fraction u of resources spent on maintenance, for three levels of extrinsic mortality A; dots mark the optimum, which shifts towards less maintenance as A increases. B: the optimal investment and the resulting median lifespan fall as extrinsic mortality rises: high-risk environments select for fast aging](./plots/disposable-soma.py)
+
+:::
 
 Among mammals, lifespan increases with the age at first reproduction (the mouse breeds at about six weeks and lives at most four years; the elephant breeds at about 12 years and lives about 65) and with body mass, as an **allometry** ([7.5.34](/7.5.34)).
 

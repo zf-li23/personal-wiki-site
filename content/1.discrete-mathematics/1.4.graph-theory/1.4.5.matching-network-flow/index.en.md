@@ -1,6 +1,6 @@
 ---
 title: Matching and Network Flow
-source_hash: 43e171afa191
+source_hash: b1842925ec6c
 ---
 
 Matching problems and network flow problems are two classes of graph-theoretic problems with rich practical backgrounds: the former include job assignment and marriage problems, the latter the transportation of goods and the routing of communication traffic. In this chapter we first discuss maximum matchings in bipartite graphs, complete matchings (Hall's theorem) and optimal matchings; we then treat maximum flows in networks, the max-flow min-cut theorem and the algorithms based on it; and finally we explain the connection between the two classes of problems. Both rest on the same idea: improve the current solution along an "augmenting" path until no such path exists; when none exists, one can exhibit a dual quantity of the same value (a minimum cover of a bipartite graph, a minimum cut of a network), which proves optimality. Matchings in bipartite graphs can be phrased in terms of the **adjacency matrix** of [Chapter 1](/1.4.1), and flow conservation is a linear equation in the **incidence matrix**; Menger's theorem in [Chapter 6](/1.4.6) can also be derived from the max-flow min-cut theorem.
@@ -101,6 +101,8 @@ x4 -> augmented
 x5 -> no augmenting path; Y0 = ['y1']
 maximum matching: [('x1', 'y2'), ('x2', 'y1'), ('x3', 'y4'), ('x4', 'y3')] size 4
 ```
+
+:::
 
 Each search from a vertex $x$ examines every edge at most once, so the algorithm runs in $O(nm)$ time; the Hopcroft–Karp algorithm augments along many shortest augmenting paths at once in each phase and reduces this to $O(m\sqrt{n})$.
 

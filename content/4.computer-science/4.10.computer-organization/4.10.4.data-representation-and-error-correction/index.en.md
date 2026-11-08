@@ -1,7 +1,7 @@
 ---
 title: Data Representation and Error Detection and Correction
 description: "How data is encoded in machine words: characters (ASCII, Unicode, UTF-8), unsigned and signed integers (sign-magnitude, ones' complement, two's complement, biased representation), sign extension and endianness, IEEE 754 floating point and rounding modes, low-precision formats for AI (BF16, FP8, MXFP4); error-detecting and error-correcting codes: code distance, parity, Hamming codes and SECDED, cyclic redundancy checks (CRC), erasure codes."
-source_hash: 43da00858d89
+source_hash: 0bc1116d1a52
 ---
 
 A processor understands only bits. Programs, integers, real numbers, characters, and logical values are all, in the end, strings of $0$s and $1$s in machine words; how a given string is interpreted is decided by the instruction that uses it: `add` treats two words as **two's complement** integers, `fadd.s` treats them as single-precision **floating-point numbers**, and a byte fetched by `lbu` may be an ASCII character. This chapter collects the encodings of the data types found in a computer and the hardware-related properties of each. The first half covers how data is represented (the general representation of numbers in a computer was treated in [Computer Representation of Numbers](/3.5.1) and [Data, Variables and Expressions](/4.1.2); here we concentrate on machine-level details and the new low-precision formats), and the second half covers how errors in stored or transmitted data are detected and corrected. The arithmetic unit of the next chapter implements arithmetic on these encodings.
@@ -36,6 +36,8 @@ Characters are the basis of the human–machine interface: keyboard input, scree
 UTF-8 has several advantages: it is fully compatible with ASCII; the length of a character is determined by the prefix of its first byte; every byte other than the first begins with `10`, so reading can start from any position and still find the beginning of the next character (self-synchronization); and byte-wise comparison gives the same order as comparison by code point. It is by far the dominant encoding on the Internet today.
 
 **Example 4.1.1** The Chinese character meaning "clear" has code point U+6E05 $= 0110\,1110\,0000\,0101_2$, which falls in the three-byte range. Filling the $16$ payload bits into the template in groups of $4 + 6 + 6$ gives $1110\,0110$, $10\,111000$, $10\,000101$, that is, the byte sequence `E6 B8 85`.
+
+:::
 
 Displaying a character requires a glyph. Early bitmap fonts stored each character as a monochrome bitmap (for example a $16\times16$ grid in which $1$ means a dot), looked up in a font table by character code; enlarged, they show jagged edges. Today's standard is the vector font (TrueType, OpenType): a glyph is described by the control points of several curves, which are scaled proportionally, joined by smooth curves, and filled when displayed, so the glyph can be scaled arbitrarily.
 
@@ -263,6 +265,8 @@ that is, the bitwise XOR in binary of the position numbers of all bits whose val
 The error-correcting hardware is therefore: recompute $S$ with an XOR tree, use a **decoder** to turn $S$ into $n$ select lines, and complement the selected bit; when $S = 0$, nothing is changed.
 
 **Example 4.4.1** Let the data be $D_1D_2D_3D_4 = 1011$. Then $P_1 = 1 \oplus 0 \oplus 1 = 0$, $P_2 = 1 \oplus 1 \oplus 1 = 1$, and $P_4 = 0 \oplus 1 \oplus 1 = 0$, so the transmitted code (positions 1 to 7) is `0110011`. If bit 5 is in error, the received code is `0110111`; the positions with value $1$ are $2, 3, 5, 6, 7$, and $S = 010 \oplus 011 \oplus 101 \oplus 110 \oplus 111 = 101_2 = 5$; complementing bit 5 restores the original code.
+
+:::
 
 A Hamming code has code distance $3$: if two bits are in error simultaneously, $S$ equals the XOR of the two position numbers, which is nonzero but points to a position that is not in error, and "correcting" it would introduce a further error. In practice one more overall check bit is added to distinguish one-bit from two-bit errors.
 

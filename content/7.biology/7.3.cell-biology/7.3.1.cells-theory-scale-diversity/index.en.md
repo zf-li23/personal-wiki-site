@@ -127,6 +127,8 @@ $$
 
 ![Diffusion and cell size. A: steady-state O₂ profiles c(r)/c₀ = 1 − (R/R_max)²(1 − r²/R²) inside respiring spheres of radius 0.5, 0.8 and 1.0 R_max; at R = R_max the center just reaches zero. B: the maximal radius R_max = (6Dc₀/q)^½ against the rate of O₂ consumption, with the values for *E. coli* (about 40 µm) and a cultured mammalian cell (about 300 µm); the squares show their actual radii, well below the limit. C: the surface-to-volume ratio 3/R falls a thousandfold from Mycoplasma to the giant bacterium Thiomargarita](./plots/diffusion-limited-size.py)
 
+:::
+
 The model explains several facts at once. Most cells are well below $R_{\max}$ because they also need rapid exchange of nutrients and signals, which diffuse more slowly than $\ce{O2}$, and because the cytoplasm is crowded (**macromolecular crowding** lowers $D$ for proteins five- to tenfold). The same equation, applied to a tissue rather than a cell, gives the depth to which $\ce{O2}$ penetrates from a capillary, about $100$–$200\,\mu\mathrm{m}$; this is why capillaries are seldom farther apart and why tumors larger than a millimetre or two must induce new blood vessels ([7.3.26](/7.3.26)). Cells that are very large escape the limit by changing their geometry rather than violating it: *Thiomargarita* is filled with a central vacuole and keeps its cytoplasm in a layer a few micrometres thick; neurons and muscle fibers are long and thin and move material actively along the cytoskeleton ([7.3.14](/7.3.14)); eukaryotic cells as a whole replace diffusion over long distances with vesicle traffic and motor-driven transport.
 
 ### 1.3.3. Copy Numbers

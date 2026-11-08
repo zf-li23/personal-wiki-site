@@ -376,6 +376,25 @@ function isDisplayMath(n: RootContent | ElementContent): boolean {
   return n.type === 'element' && n.tagName === 'pre' && n.children.some((c) => c.type === 'element' && hasClass(c, 'math-display'));
 }
 
+/** Words that continue a sentence begun inside a statement (after its math, list or table). */
+const CONTINUATION_RE = /^\s*(则|那么|其中|此时|这时|即(?!使|便)|称|记作|并称|就称|满足|使得|where\b|then\b|that is\b|we call\b|is called\b|are called\b|such that\b)/i;
+
+/** Blocks that belong to a statement when they follow its label paragraph. */
+function isStatementBody(n: RootContent | ElementContent | undefined): boolean {
+  return !!n && n.type === 'element' && (isDisplayMath(n) || /^(ul|ol)$/.test(n.tagName) || hasClass(n, 'table-wrap'));
+}
+
+/** The explicit end of a statement block: a paragraph consisting of ":::" alone. */
+function isEndMarker(n: Element): boolean {
+  return n.tagName === 'p' && hastToString(n).trim() === ':::';
+}
+
+/** A paragraph that opens with a statement label (numbered or not), i.e. starts a new block. */
+function startsStatement(p: Element): boolean {
+  const strong = leadingStrong(p);
+  return !!strong && !!parseStatementLabel(hastToString(strong));
+}
+
 /** Leading bold run of a paragraph, if the paragraph starts with one. */
 function leadingStrong(p: Element): Element | undefined {
   const first = p.children.find((c) => !isWhitespace(c));
@@ -548,6 +567,24 @@ function rehypeStatements(state: State) {
       if (node.type !== 'element' || node.tagName !== 'p') continue;
       const wrapper = register(node);
       if (!wrapper) continue;
+      const isExample = wrapper.properties.dataKind === 'ex';
+      // Explicit end: a line ":::" closes the statement, whatever lies between (it overrides the
+      // automatic rules below, in both directions).
+      let marker = -1;
+      for (let j = i + 1; j < children.length; j++) {
+        const c = children[j];
+        if (c.type !== 'element') continue;
+        if (/^h[1-6]$/.test(c.tagName) || (c.tagName === 'p' && startsStatement(c))) break;
+        if (isEndMarker(c)) {
+          marker = j;
+          break;
+        }
+      }
+      if (marker >= 0) {
+        wrapper.children = children.slice(i, marker) as ElementContent[];
+        children.splice(i, marker - i + 1, wrapper);
+        continue;
+      }
       let end = i + 1;
       let last = i;
       while (end < children.length) {
@@ -560,6 +597,12 @@ function rehypeStatements(state: State) {
           last = end++;
           continue;
         }
+        // An example runs on through its solution, figures and code until the next heading,
+        // rule or statement label.
+        if (isExample && c.type === 'element' && !/^h[1-6]$/.test(c.tagName) && c.tagName !== 'hr' && !(c.tagName === 'p' && startsStatement(c))) {
+          last = end++;
+          continue;
+        }
         // A paragraph written directly under display math (no blank line) continues the statement:
         //   $$ … $$
         //   则称 λ 为 A 的特征值。
@@ -568,10 +611,25 @@ function rehypeStatements(state: State) {
           last = end++;
           continue;
         }
+        // So does a paragraph after math, a list or a table that opens with a continuation word
+        // ("则称……", "其中……", "where …"): the sentence began inside the statement.
+        if (c.type === 'element' && c.tagName === 'p' && last > i && isStatementBody(prev) && !leadingStrong(c) && CONTINUATION_RE.test(hastToString(c))) {
+          last = end++;
+          continue;
+        }
         break;
       }
       wrapper.children = children.slice(i, last + 1) as ElementContent[];
       children.splice(i, last - i + 1, wrapper);
+    }
+
+    // A ":::" that closes no statement is a mistake; drop it so it does not show.
+    for (let i = children.length - 1; i >= 0; i--) {
+      const c = children[i];
+      if (c.type === 'element' && isEndMarker(c)) {
+        ctx.diag.warn(ctx.file, '":::" closes a numbered statement; this one follows no open statement (a heading or another statement label intervenes)', lineOf(state, c));
+        children.splice(i, 1);
+      }
     }
 
     // Statements inside lists/quotes: anchor the paragraph itself. Equations: anchor by \tag.

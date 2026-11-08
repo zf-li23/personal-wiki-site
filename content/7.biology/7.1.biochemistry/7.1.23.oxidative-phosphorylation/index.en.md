@@ -242,6 +242,8 @@ $$
 
 **Example 23.3.1** Bovine mitochondria have $n = 8$: $8/3 + 1 = 3.7$ protons per ATP, so the P/O ratio is $10/3.7 = 2.7$ for NADH and $6/3.7 = 1.6$ for succinate. Yeast mitochondria, with $n = 10$, need $4.3$ protons per ATP and have P/O ratios of $2.3$ and $1.4$. The values 2.5 and 1.5 used in most textbooks, and in this course, correspond to 4 protons per ATP; they lie within the range of these estimates and of the measured ratios. In chloroplasts, with $n = 14$, $14/3 = 4.7$ protons pass through $\mathrm{F_o}$ for each ATP ([7.1.24](/7.1.24)).
 
+:::
+
 The earlier integral values of 3 and 2 were based on the assumption of a chemical intermediate and on measurements that did not correct for proton leaks. The c-ring sizes found so far range from 8 (all animal mitochondria examined) to 17 (*Burkholderia pseudomallei*); a larger ring gives a lower ATP yield per proton but can make ATP against a smaller proton-motive force, a trade-off between yield and thermodynamic driving force.
 
 ### 23.3.6. Transport of ADP, ATP and Phosphate

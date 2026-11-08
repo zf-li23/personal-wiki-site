@@ -1,6 +1,6 @@
 ---
 title: Exact Equations and Integrating Factors
-source_hash: 071ead96cd40
+source_hash: 0dd9af0f84d8
 ---
 
 The starting point of elementary integration is this: if the left-hand side of a first-order equation in symmetric form $P\,\mathrm{d}x+Q\,\mathrm{d}y=0$ happens to be the total differential of some function, the equation is "integrated" at once. In this chapter we first give a rigorous proof of the necessary and sufficient condition $\partial P/\partial y=\partial Q/\partial x$ for this to happen, together with two integration paths for constructing the potential and the common formulas for recognizing total differentials. We then study integrating factors, which turn a general equation into an exact one: the partial differential equation they satisfy, the necessary and sufficient condition for an integrating factor depending on one variable only, the set of all integrating factors, and the method of finding integrating factors by grouping terms. The separable and first-order linear equations of the next chapter, [2.4.3](/2.4.3), can be viewed as special cases of what is done here. The routine solution steps and more examples are in calculus, [2.2.15](/2.2.15#sec-15.4); here the emphasis is on the theory.
@@ -198,6 +198,8 @@ depends only on $y$, in which case $\mu(y)=\mathrm{e}^{\int H(y)\,\mathrm{d}y}$ 
 **Example 2.3.1** Write the first-order linear equation $y'+p(x)y=q(x)$ as $\big(p(x)y-q(x)\big)\,\mathrm{d}x+\mathrm{d}y=0$. Then $P_y-Q_x=p(x)$ and $G=p(x)$ depends only on $x$, so $\mu=\mathrm{e}^{\int p(x)\,\mathrm{d}x}$ is an integrating factor. After multiplication by $\mu$ the equation becomes $\mathrm{d}\Big(y\mathrm{e}^{\int p\,\mathrm{d}x}\Big)=q\mathrm{e}^{\int p\,\mathrm{d}x}\,\mathrm{d}x$, and integrating gives the solution formula of [2.4.3](/2.4.3). Note that $1/\mu=\mathrm{e}^{-\int p\,\mathrm{d}x}$ is precisely a nonzero solution of the corresponding homogeneous equation.
 
 **Example 2.3.2** The separable equation $X(x)Y_1(y)\,\mathrm{d}x+X_1(x)Y(y)\,\mathrm{d}y=0$ has the integrating factor $\dfrac{1}{X_1(x)Y_1(y)}$ (where $X_1Y_1\ne0$); after multiplication it becomes $\dfrac{X}{X_1}\,\mathrm{d}x+\dfrac{Y}{Y_1}\,\mathrm{d}y=0$, and each of the two terms is a total differential.
+
+:::
 
 The same derivation applies to integrating factors of the form $\mu=\mu\big(\omega(x,y)\big)$, where $\omega$ is a given function such as $x+y$, $xy$ or $x^2+y^2$. Substituting into (2.6) gives
 

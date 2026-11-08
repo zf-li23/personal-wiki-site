@@ -1,7 +1,7 @@
 ---
 title: Arithmetic Circuits
 description: Half adders and full adders; the ripple-carry adder and its delay; carry generate and propagate functions, the carry-lookahead adder, grouped and multilevel lookahead, and parallel-prefix adders; two's complement addition and subtraction, overflow and comparison; the structure of the arithmetic logic unit and the 74181 as a historical comparison; an introduction to multipliers.
-source_hash: 53842239d988
+source_hash: ae03ef69526b
 ---
 
 Addition is the most basic operation in a computer: subtraction, comparison, address computation, multiplication and division are all built on adders. This chapter designs adders with the methods of [Combinational Logic Circuits](/4.9.4), starting from the one-bit half adder and full adder and proceeding to the multi-bit ripple-carry adder. The delay of ripple carry grows linearly with the number of bits, which leads to the central idea of the chapter: view the computation of the carries itself as a logic function that can be parallelized (carry lookahead and parallel prefix). We then use the adder to perform subtraction in **two's complement**, discuss the detection of **overflow** and comparison, and finally combine the various operations into the arithmetic logic unit (ALU). The representation of numbers in computers is in [Number Representation in Computers](/3.5.1); how the arithmetic unit of a processor uses the ALU described here is in the chapter on the arithmetic unit of [Computer Organization](/4.10).
@@ -210,6 +210,8 @@ $$
 where the expression in parentheses is exactly the two's complement value of $S$. The exact sum can be represented in $n$ bits if and only if it equals $S$, that is, $C_{n-1} = C_n$. If the two addends have different signs, the exact sum is necessarily in range and there is no overflow; if the signs are the same and the sign of the result differs, the result is clearly wrong. Checking the eight input combinations of the most significant bit one by one shows that the two criteria are equivalent. $\square$
 
 **Example 5.3.1** In $4$-bit two's complement, $0111 + 0001 = 1000$, that is, $7 + 1$ gives $-8$. The carry into the most significant bit is $C_3 = 1$ and the carry out is $C_4 = 0$, so $V = 1$ and the sum overflows. For $1111 + 1111 = 1\,1110$, that is, $(-1) + (-1) = -2$, we have $C_3 = C_4 = 1$ and $V = 0$, and the result is correct after discarding $C_4$.
+
+:::
 
 For unsigned numbers, overflow is determined by the carry output: in addition, $C_n = 1$ means that the result exceeds $2^n - 1$; in subtraction, $A - B = A + (2^n - 1 - B) + 1 = (A - B) + 2^n$, so $C_n = 1$ if and only if $A \ge B$, and $C_n = 0$ means that there is not enough to subtract (a borrow).
 

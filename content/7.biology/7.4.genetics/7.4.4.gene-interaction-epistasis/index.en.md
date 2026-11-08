@@ -140,6 +140,8 @@ The test works because the progeny are trans-heterozygotes. If $m_1$ and $m_2$ a
 
 Mutations 1, 3 and 6 fail to complement each other, as do 2 and 4; 5 complements all others. There are three complementation groups, $\{1, 3, 6\}$, $\{2, 4\}$ and $\{5\}$, and so at least three genes.
 
+:::
+
 The test has limits. It requires recessive mutations: a **dominant** mutation gives a mutant phenotype in the progeny whatever the other mutation is. Rarely, two mutations in the same gene complement (intragenic complementation, when the **protein** is a **multimer** and the two mutant **subunits** compensate for each other; 7.4.13), and two mutations in different genes can fail to complement when their products form a dosage-sensitive complex (non-allelic non-complementation). The cis–trans form of the test and its use to define the cistron are the subject of 7.4.13.
 
 ## 4.5. One Gene or Two?
@@ -190,6 +192,8 @@ $$
 where $f$ is the fraction of $\mathrm{F}_2$ progeny as extreme as one parent.
 
 **Example 4.6.1** Nilsson-Ehle's crosses that gave $1/64$ white kernels involved $n = \ln 64/\ln 4 = 3$ segregating genes; the $\mathrm{F}_2$ had seven intensity classes, 1:6:15:20:15:6:1, and 63 colored : 1 white. If one of 1 000 $\mathrm{F}_2$ plants is as extreme as a parent, $n \approx \ln 1000/\ln 4 = 5.0$.
+
+:::
 
 As $n$ increases, the binomial distribution approaches a **normal distribution** (the **central limit theorem**, [3.1.13](/3.1.13)), the classes become too many and too close to distinguish, and small environmental effects blur the steps into a continuous curve. A handful of Mendelian genes is therefore enough to produce continuous variation; the full quantitative theory, with unequal effects, **dominance** and environmental variance, is the subject of 7.4.24.
 

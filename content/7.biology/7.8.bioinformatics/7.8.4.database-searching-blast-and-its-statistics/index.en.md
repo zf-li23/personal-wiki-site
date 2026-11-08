@@ -36,6 +36,8 @@ BLAST differs from FASTA in what counts as a seed. Instead of exact word matches
 
 **Example 4.3.1** With BLOSUM62 and $W = 3$, the query word PQG scores $7 + 5 + 6 = 18$ with itself. Its neighborhood for $T = 13$ consists of $9$ words: PQG ($18$), PEG ($15$), PRG and PKG ($14$), and PNG, PDG, PHG, PMG and PSG ($13$). For $T = 11$ it contains $21$ words, adding for example PAG, PQA, PQN and PQS ($12$) and PGG, PLG and PVG ($11$). Averaged over query words drawn from the background frequencies, the neighborhood for $W = 3$, $T = 11$ (the default of BLASTP) contains $19$ words, and that for $T = 13$ contains $6.6$.
 
+:::
+
 BLAST builds a lookup table, or a deterministic finite automaton, from the neighborhood words of every position of the query, and scans each database sequence once, reporting all seed matches in time proportional to the database length plus the number of hits. The neighborhood is computed for the query only, which is why the method is efficient when one query is compared with a large database.
 
 The threshold $T$ sets the trade-off. For two unrelated sequences a given pair of word positions is a hit with probability $2.1\times10^{-3}$ at $T = 11$; for a pair of related sequences with the target frequencies of BLOSUM62 (about $30\,\%$ identity) the probability is $0.119$. A true alignment of $100$ residues thus contains about $98 \times 0.119 \approx 12$ hits on average, but a search of $m = 300$ query positions against $n = 10^{11}$ database positions produces about $mn \times 2.1\times10^{-3} \approx 6\times10^{10}$ chance hits. Raising $T$ to $13$ reduces both rates by about the same factor ($6.3\times10^{-4}$ and $0.064$). Exact word matches are no better: their chance rate ($2.0\times10^{-4}$) is that of $T = 15$, and their sensitivity per word ($0.028$) is lower.
@@ -149,6 +151,8 @@ Many proteins contain segments of very biased composition: runs of glutamine (po
 
 **Example 4.5.1** In windows of $12$ residues the entropy is $0$ bits for QQQQQQQQQQQQ, $0.65$ bits for QQQQPQQQQPQQ, $2.69$ bits for the signal-peptide-like MKVLAAGIVGLL and $\log_212 = 3.58$ bits, the maximum, for twelve different residues. The program SEG flags windows of $12$ residues whose entropy is below $2.2$ bits, extends them while it stays below $2.5$ bits, and masks the result, by default for BLASTP query sequences in the seeding step only.
 
+:::
+
 Masking replaces the residues by X (or N for DNA) in *hard masking*, or marks them as lowercase letters that are not used to start seeds but are used in extensions (*soft masking*). For DNA, the program DUST masks low-complexity sequence by the over-representation of triplets, and genomes are masked for interspersed repeats (Alu, L1 and other transposable elements, which make up nearly half of the human genome) with RepeatMasker before they are used as search targets, since an *Alu* element in a query would otherwise hit about a million places. Low-complexity hits are the most common source of false positives with small E-values; an alignment dominated by one or two residue types should be examined before it is believed.
 
 ## 4.6. The BLAST Family and DNA Seeds
@@ -179,6 +183,8 @@ A seed of weight $W$ has the same chance-hit probability, $4^{-W}$ per pair of p
 **Example 4.6.1** In a homologous region of $64$ bases whose positions are identical independently with probability $0.7$, the contiguous seed of weight $11$ hits with probability $0.30$, the spaced seed $111010010100110111$ of PatternHunter with probability $0.47$ (simulation of $4\times10^4$ regions); at $0.8$ identity the probabilities are $0.71$ and $0.88$. The expected number of chance hits for a $1$-kb query against both strands of a $3.1$-Gb genome is $mn4^{-W} = 6.2\times10^{12} \times 4^{-11} = 1.5\times10^6$ for either seed of weight $11$, and $8.6\times10^{-5}$ for the contiguous seed of weight $28$.
 
 ![Seeds for DNA search. A: probability that a seed hits a homologous region of 64 bases whose positions are identical independently with probability p (Monte Carlo, 40 000 regions per point), for contiguous seeds of weight 8, 11 and 28 and the spaced seed 111010010100110111 of PatternHunter (weight 11, length 18); at p = 0.7 (dashed) the spaced seed hits with probability 0.47 and the contiguous seed of the same weight with 0.30. B: expected number of chance hits of a seed of weight W for a 1-kb query against both strands of a 3.1-Gb genome, mn·4^−W](./plots/spaced-seeds.py)
+
+:::
 
 Spaced seeds are used in discontiguous megablast, in PatternHunter, in DIAMOND, and, generalized to sets of several seeds and to minimizers, in the read aligners of [7.8.10](/7.8.10).
 

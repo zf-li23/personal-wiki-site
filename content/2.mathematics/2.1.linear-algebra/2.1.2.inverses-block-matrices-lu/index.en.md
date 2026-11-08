@@ -1,6 +1,6 @@
 ---
 title: Inverse Matrices, Block Matrices and the LU Decomposition
-source_hash: 9d404f8f7431
+source_hash: e0e5a2ebcbab
 ---
 
 The previous chapter reduced the solution of linear systems to elimination. This chapter restates elimination in terms of matrix multiplication: every elementary row operation is multiplication on the left by an elementary matrix, so the question "can the matrix be eliminated to the identity?" becomes the question "is the matrix invertible?", and computing an inverse and solving a system are essentially the same problem. We then view matrices as made of blocks, which obey the same rules of computation as entries; block elimination yields the Schur complement and the Sherman–Morrison–Woodbury formula, which show that the inverse of a matrix after a low-rank modification can be updated cheaply. Finally, we record the whole process of Gaussian elimination as a matrix factorization $A = LU$, together with its variants, the $LDU$ and $PLU$ decompositions. Factoring once and reusing the factors many times is a typical instance of the "standardized solution" approach of numerical linear algebra.
@@ -125,6 +125,8 @@ $$
 \qquad A^{-1} = \begin{bmatrix} 2 & -\frac12 \\ -1 & \frac12 \end{bmatrix}.
 $$
 
+:::
+
 Inversion costs about $2n^3$ floating-point operations, three times as much as Gaussian elimination (see the figure in Section 2.10). Therefore, to solve $A\boldsymbol{x} = \boldsymbol{b}$ one should not first compute $A^{-1}$ and then $A^{-1}\boldsymbol{b}$; one should eliminate directly or use the LU decomposition.
 
 The structure of triangular matrices is preserved under multiplication and inversion, which is the basis of the LU decomposition.
@@ -239,6 +241,8 @@ $$
 $$
 
 If $A_{11}$ is not invertible, take a nonzero solution of $A_{11}\boldsymbol{x}_1 = \boldsymbol{0}$; then $A\begin{bmatrix} \boldsymbol{x}_1 \\ \boldsymbol{0} \end{bmatrix} = \boldsymbol{0}$. If $A_{11}$ is invertible but $A_{22}$ is not, take a nonzero solution of $A_{22}\boldsymbol{y} = \boldsymbol{0}$; then $A\begin{bmatrix} -A_{11}^{-1}A_{12}\boldsymbol{y} \\ \boldsymbol{y} \end{bmatrix} = \boldsymbol{0}$. In both cases $A$ is not invertible. If both are invertible, perform block Gauss–Jordan elimination on $[A\ I]$: first multiply on the left by $\operatorname{diag}(A_{11}^{-1}, A_{22}^{-1})$ to turn the diagonal blocks into identity matrices, then multiply on the left by $\begin{bmatrix} I & -A_{11}^{-1}A_{12} \\ O & I \end{bmatrix}$ to clear the upper right block; this gives the formula above. Note that the order of block multiplication cannot be changed. Block lower triangular matrices are handled in the same way.
+
+:::
 
 A general $2 \times 2$ block matrix can first be eliminated to block triangular form.
 
@@ -401,6 +405,8 @@ $$
 
 and the second step gives $L = \begin{bmatrix} 1 & & & \\ 1 & 1 & & \\ 1 & 2 & 1 & \\ 1 & 3 & 3 & 1 \end{bmatrix}$. Here $U = L^{\mathsf T}$, because $A$ is symmetric and the diagonal entries of $U$ are all $1$ (see Corollary 2.11.1); for a general symmetric matrix we only have $U = DL^{\mathsf T}$, where $D$ is the diagonal part of $U$.
 
+:::
+
 The two-step method performs elimination twice. Exploiting the structure of $L^{-1}$, we can do it in one pass. Without row interchanges, let $L_j^{-1} = E_{nj}\cdots E_{j+1,j}$ ($j = 1, \dots, n-1$) be the product of the replacement matrices used in the $j$-th step of elimination:
 
 $$
@@ -437,6 +443,8 @@ A^{(4)} = U\ (\ell_{43} = 3),
 $$
 
 and reading off the lower triangular part of $L$ column by column as $(1, 1, 1)$, $(2, 3)$, $(3)$ reproduces Example 2.10.1.
+
+:::
 
 Step $j$ of Algorithm 2.10.2 updates $(n-j)^2$ entries, each with one multiplication and one subtraction, for a total of about $\frac23n^3$ floating-point operations; afterwards each system costs only two triangular solves, about $2n^2$. The left panel of the figure below compares the costs of several computations; the right panel shows that when many right-hand sides $\boldsymbol{b}$ must be solved with the same coefficient matrix, "factor once, substitute many times" is far cheaper than eliminating anew each time.
 

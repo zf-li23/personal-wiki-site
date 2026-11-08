@@ -1,7 +1,7 @@
 ---
 title: Electrostatic Fields
 description: Basic properties of electric charge, Coulomb's law, electric field strength and the superposition principle, fields of dipoles and continuous charge distributions, field lines and flux, solid angle and the proof of Gauss's law, and applications of Gauss's law to symmetric charge distributions.
-source_hash: 6804abeb9b2e
+source_hash: 329c80da4e0a
 ---
 
 Electromagnetism studies how charges and currents produce electric and magnetic fields, how these fields act on charges and currents, how electric and magnetic fields convert into each other, and how electromagnetic fields interact with matter. Its viewpoint differs from that of mechanics and thermodynamics. Mechanics follows the motion of individual particles, and thermodynamics treats the random motion of huge numbers of particles statistically. The main actors of electromagnetism are fields: vectors $\boldsymbol{E}(\boldsymbol{r},t)$ and $\boldsymbol{B}(\boldsymbol{r},t)$ defined at every point of space and varying in time, with charged particles serving only as sources of the fields. A **vector field** has two basic global quantities, the **flux** through a surface and the **circulation** along a closed path, together with their local counterparts, the **divergence** and the **curl**; all of these were treated in [2.2.13](/2.2.13) and [2.2.14](/2.2.14). The fundamental laws of electromagnetism are written in terms of exactly these quantities. In this chapter Gauss's law gives the flux of the electrostatic field; the circulation theorem of the next chapter, [5.3.2](/5.3.2), gives its circulation. Together they determine the electrostatic field completely, and in [5.3.10](/5.3.10) they are generalized to Maxwell's equations.
@@ -151,6 +151,8 @@ $$
 $$
 \boldsymbol{E}=-\frac{\boldsymbol{p}}{4\pi\varepsilon_0(r^2+l^2/4)^{3/2}}\approx-\frac{\boldsymbol{p}}{4\pi\varepsilon_0r^3}\quad(r\gg l).
 $$
+
+:::
 
 For a field point in a general position, we resolve $\boldsymbol{p}$ into a component $p\cos\theta$ along $\boldsymbol{e}_r$ and a component $p\sin\theta$ perpendicular to $\boldsymbol{e}_r$ ($\theta$ is the angle between $\boldsymbol{r}$ and $\boldsymbol{p}$). The field point then lies on the axis of one of these "partial dipoles" and on the perpendicular bisector of the other, and superposing Examples 1.4.1 and 1.4.2 gives the following formula.
 
@@ -315,6 +317,8 @@ $$
 The field strength is inversely proportional to $r$. As $r\to0$, $E\to\infty$, which shows that very close to the wire the geometric model of a charged line fails and the thickness of the wire must be taken into account.
 
 **Example 1.7.3 (Infinite Uniformly Charged Plane)** The surface charge density is $\sigma$. By planar symmetry the field is perpendicular to the plane, with equal magnitude and opposite direction at symmetric points on the two sides. Take as the Gaussian surface a cylinder whose axis is perpendicular to the plane and whose two end faces (area $\Delta S$) lie symmetrically on both sides of the plane. The lateral flux vanishes, so $2E\Delta S=\sigma\Delta S/\varepsilon_0$ and $E=\frac{\sigma}{2\varepsilon_0}$, in agreement with Example 1.4.4. For two parallel infinite planes carrying $+\sigma$ and $-\sigma$, the superposition principle gives $E=\frac{\sigma}{2\varepsilon_0}+\frac{\sigma}{2\varepsilon_0}=\frac{\sigma}{\varepsilon_0}$ between the planes, directed from the positive to the negative plane, and zero outside. This is exactly the field of a parallel-plate capacitor ([5.3.4](/5.3.4)).
+
+:::
 
 Procedure for finding a field with Gauss's law:
 

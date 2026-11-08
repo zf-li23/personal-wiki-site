@@ -101,6 +101,8 @@ Ogston's rule fixes the fate of every carbon, which can be followed by bookkeepi
 
 ![Fate of a ¹⁴C label from acetyl-CoA in the citric acid cycle, computed by mapping each carbon atom through the eight steps (a single pulse of labeled acetyl-CoA enters turn 1; succinate and fumarate are treated as symmetric, so each new oxaloacetate carries the former acetyl carbons in either orientation with probability ½). A: fraction of the label released as CO₂ in each turn. A carboxyl label is released entirely in turn 2; a methyl label is not released in turns 1–2, then half of what remains leaves in each turn. B: cumulative fraction released](./plots/tca-isotope-tracing.py)
 
+:::
+
 Today ¹³C-labeled glucose, glutamine or acetate and NMR or mass spectrometry are used to measure the fluxes through the cycle and its exchanges in living tissues and tumors: the labeling patterns of glutamate (which equilibrates with α-ketoglutarate) report the relative rates of the cycle, of anaplerosis and of pyruvate carboxylation, the basis of ¹³C **metabolic flux** analysis.
 
 ### 20.2.5. Energy

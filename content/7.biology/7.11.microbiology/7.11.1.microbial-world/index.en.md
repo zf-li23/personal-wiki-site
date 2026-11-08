@@ -125,6 +125,8 @@ With pure cultures, staining and animal experiments, Koch identified *Mycobacter
 
 **Example 1.4.1** Peptic ulcers were long attributed to stress and acid. Robin Warren and Barry Marshall cultured a curved bacterium, now *Helicobacter pylori*, from the stomachs of patients with gastritis and ulcers (1982–1983). Since no animal model was available, Marshall drank a culture in 1984 and developed gastritis, from which the organism was reisolated; ulcers were later cured with antibiotics. The work fulfilled the postulates in a human volunteer and was recognized by the Nobel Prize in 2005.
 
+:::
+
 Koch's students and those who followed them identified the agents of most major bacterial diseases within two decades (cholera, diphtheria, typhoid fever, plague, tetanus and others). The same period produced the Gram stain (1884, [7.11.2](/7.11.2)) and the acid-fast stain for mycobacteria.
 
 ## 1.5. The Discovery of Microbial Diversity
@@ -189,6 +191,8 @@ $$
 which lies between $3/r$ (a sphere, $L = 0$) and $2/r$ (a long rod).
 
 **Example 1.9.1** For *E. coli* ($r = 0.5\,\mu\mathrm{m}$, total length $2\,\mu\mathrm{m}$, so $L = 1\,\mu\mathrm{m}$), Eq. (1.1) gives $S/V = 4\cdot 2/1.67 \approx 4.8\,\mu\mathrm{m}^{-1}$; for a sphere of *Thiomargarita namibiensis* ($r = 375\,\mu\mathrm{m}$), $S/V = 0.008\,\mu\mathrm{m}^{-1}$, six hundred times less. A rod of a given volume has more surface than a sphere of the same volume, which is one advantage of the elongated shape.
+
+:::
 
 Large surface per volume, together with short diffusion distances, explains why small cells can grow quickly and why smaller cells tend to dominate where nutrients are scarce, as in the open ocean. Very large prokaryotes escape the limit by not filling their volume with cytoplasm. *Thiomargarita* and *Beggiatoa* cells are mostly a central vacuole that stores nitrate, with the cytoplasm a thin layer under the membrane, and *Thiomargarita magnifica* keeps its DNA in many membrane-bound compartments distributed along the cell; *Epulopiscium* contains tens of thousands of copies of its genome, so that every part of the cytoplasm has a genome nearby. The diffusion-limited radius of a respiring cell ([7.3.1](/7.3.1#sec-1.3.2)) and the numbers of molecules in a bacterium ([7.6.20](/7.6.20)) make the argument quantitative.
 

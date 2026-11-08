@@ -151,6 +151,8 @@ $$
 \boldsymbol{E}=-\frac{\boldsymbol{p}}{4\pi\varepsilon_0(r^2+l^2/4)^{3/2}}\approx-\frac{\boldsymbol{p}}{4\pi\varepsilon_0r^3}\quad(r\gg l).
 $$
 
+:::
+
 一般位置的场强可以把 $\boldsymbol{p}$ 分解为沿 $\boldsymbol{e}_r$ 的分量 $p\cos\theta$ 与垂直于 $\boldsymbol{e}_r$ 的分量 $p\sin\theta$（$\theta$ 是 $\boldsymbol{r}$ 与 $\boldsymbol{p}$ 的夹角），场点分别位于这两个"分偶极子"的轴线和中垂面上，由例 1.4.1 与例 1.4.2 叠加，得到下面的公式。
 
 **公式 1.4.1（电偶极子的场强）**
@@ -314,6 +316,8 @@ $$
 场强与 $r$ 成反比。$r\to0$ 时 $E\to\infty$，这表明在离导线很近处，带电直线的几何模型失效，必须考虑导线的粗细。
 
 **例 1.7.3（无限大均匀带电平面）** 面电荷密度为 $\sigma$。由面对称性，场强垂直于平面，两侧对称处大小相等、方向相反。取轴线垂直于平面、两底面（面积 $\Delta S$）对称地位于平面两侧的柱面为高斯面，侧面通量为零，$2E\Delta S=\sigma\Delta S/\varepsilon_0$，所以 $E=\frac{\sigma}{2\varepsilon_0}$，与例 1.4.4 的结果一致。两个平行的无限大平面分别带 $+\sigma$、$-\sigma$ 时，由场强叠加原理，两平面之间 $E=\frac{\sigma}{2\varepsilon_0}+\frac{\sigma}{2\varepsilon_0}=\frac{\sigma}{\varepsilon_0}$，方向由正指向负；两平面外侧场强为零。这正是平行板电容器的场（[5.3.4](/5.3.4)）。
+
+:::
 
 用高斯定理求场强的步骤：
 

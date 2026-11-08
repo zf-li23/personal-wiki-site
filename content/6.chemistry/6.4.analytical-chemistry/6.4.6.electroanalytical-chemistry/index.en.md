@@ -1,7 +1,7 @@
 ---
 title: Electroanalytical Chemistry
 description: Conductometry; potentiometry, ion-selective electrodes and the Nikolsky–Eisenman equation; direct potentiometry, standard addition, Gran plots, and potentiometric titration; electrogravimetry, coulometry, and coulometric titration; polarography, cyclic, pulse, and stripping voltammetry; glucose sensors, biosensors, scanning electrochemical microscopy, patch clamp, and nanopore sequencing.
-source_hash: e1533c732856
+source_hash: a2a7aaaf438e
 ---
 
 Electroanalytical chemistry relates electrical quantities of a solution (conductance, potential, current, and charge, and the curves of current against potential) to the concentration of the substance to be determined. Its theoretical foundations were laid in physical chemistry: conduction in electrolyte solutions and ionic strength ([6.3.12](/6.3.12)), cell thermodynamics, electrode potentials, and membrane potentials ([6.3.13](/6.3.13)), and electrode kinetics and diffusion-controlled currents ([6.3.14](/6.3.14)). This chapter does not rederive these theories but treats methods, electrodes, instruments, and applications. It follows directly on the chemical analysis of the preceding chapters: the formal potentials and titration curves of redox titration ([6.4.5](/6.4.5)) are the direct prerequisite of potentiometric titration, and potentiometric titration, biamperometric end-point detection, and coulometric titration are instrumental versions of the four classes of titration ([6.4.2](/6.4.2)–[6.4.5](/6.4.5)); calibration curves, standard addition, and the limit of detection follow the definitions of [6.4.1](/6.4.1). Electrochemical methods use simple instruments, are sensitive, can be miniaturized, and can be used directly in living organisms. Blood glucose meters, pH meters, clinical electrolyte analyzers, patch clamp, and nanopore sequencing all belong to this chapter, which is why the later section on biosensing is treated in some detail.
@@ -233,6 +233,8 @@ The approximate form holds when $V_{\mathrm{s}} \ll V_x$ (so that $\Delta c \app
 
 **Solution** $\Delta c = 1.00\times10^{-2}\times0.50/50.5 = 9.90\times10^{-5}\,\mathrm{mol\,L^{-1}}$ and $10^{\Delta E/S} = 10^{17.8/58.5} = 2.015$. From the exact form of Eq. (6.4), $c_x = 9.90\times10^{-5}/(2.015 - 0.990) = 9.66\times10^{-5}\,\mathrm{mol\,L^{-1}}$; the approximate form gives $9.85\times10^{-5}\,\mathrm{mol\,L^{-1}}$, 2% too high. The added standard roughly doubles the concentration, so that $\Delta E$ is more than ten millivolts and the reading error has little effect; this is the rule of thumb for choosing the amount added.
 
+:::
+
 A single standard addition is simple and suited to small samples, but it uses only two points and its accuracy is limited. Multiple additions with linearization of the exponential relation give the Gran plot.
 
 **Definition 6.4.3 (Gran Plot)** The Nernst relation is rewritten as $(V_x + V_{\mathrm{s}})\,10^{E/S} = 10^{K/S}\gamma\,(c_xV_x + c_{\mathrm{s}}V_{\mathrm{s}})$. The left-hand side (the Gran function) is plotted against the added volume $V_{\mathrm{s}}$ to give a straight line, which is extrapolated to zero Gran function, and $c_x$ is obtained from the intercept $V_{\mathrm{s}}^0 = -c_xV_x/c_{\mathrm{s}}$ on the horizontal axis. This method is called the **Gran plot** (Gran method).
@@ -304,6 +306,8 @@ Constant-current electrolysis: the current (usually 0.5–2 A) is held constant 
 Controlled-potential electrolysis: a three-electrode system (working, counter, and reference electrodes) and a potentiostat hold the cathode potential at a constant value, so that the metal to be determined is deposited completely while coexisting metals are not (for the order of deposition of metals see [6.3.14](/6.3.14#sec-14.5.2)). The selectivity is good, but the current decreases as the concentration falls and the electrolysis takes a long time.
 
 **Example 6.5.2** A solution contains about $0.1\,\mathrm{mol\,L^{-1}}$ each of $\ce{Cd^2+}$ and $\ce{Zn^2+}$ and is to be separated by controlled-cathode-potential electrolysis. $E^\circ(\ce{Cd^2+}/\ce{Cd}) = -0.403\,\mathrm{V}$ and $E^\circ(\ce{Zn^2+}/\ce{Zn}) = -0.762\,\mathrm{V}$. We regard $\ce{Cd^2+}$ as completely deposited when it has fallen to $10^{-6}\,\mathrm{mol\,L^{-1}}$, at which point the cathode potential is $-0.403 + 0.0296\lg10^{-6} = -0.580\,\mathrm{V}$; the potential at which $\ce{Zn}$ begins to deposit is $-0.762 + 0.0296\lg0.1 = -0.791\,\mathrm{V}$. Therefore, if the cathode potential is controlled between $-0.58$ and $-0.79\,\mathrm{V}$ (vs SHE), for example at $-0.70\,\mathrm{V}$, that is, $-0.70 - 0.24 = -0.94\,\mathrm{V}$ (vs SCE), $\ce{Cd}$ is completely deposited and $\ce{Zn}$ is not. The overpotential for hydrogen on Cd is large, so hydrogen evolution does not interfere.
+
+:::
 
 In controlled-potential electrolysis the current decays exponentially. Let the electrode area be $A$, the solution volume $V$, and the diffusion layer thickness under stirring $\delta$; from the **limiting diffusion current** $I = zFADc/\delta$ ([6.3.14](/6.3.14#sec-14.4.1)) and $-V\,\mathrm{d}c/\mathrm{d}t = I/(zF)$,
 

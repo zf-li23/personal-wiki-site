@@ -30,6 +30,8 @@ Abbe's criterion, derived for periodic objects, gives $\lambda/(2\,\mathrm{NA})$
 
 ![Diffraction and resolution. A: the image profile of two point sources (solid) as the sum of two Airy patterns (dotted), for separations of 1.0, 0.75 and 0.5 times the Rayleigh distance d = 0.61λ/NA (about 230 nm for λ = 520 nm, NA = 1.4); at d the summed profile still shows a dip of about a quarter, at half of d it shows a single peak. B: lateral and axial resolution against numerical aperture for green light, with the apertures of typical dry, water-immersion and oil-immersion objectives](./plots/resolution.py)
 
+:::
+
 Resolution must not be confused with detection. An isolated object much smaller than $d_{xy}$ that emits light, such as a single microtubule labeled with a fluorescent dye or a single fluorescent molecule, is readily seen, but it appears as a blur at least $200\,\mathrm{nm}$ wide; what cannot be done is to separate two such objects close together. Super-resolution methods (2.4) exploit exactly this difference.
 
 ### 2.1.2. Magnification, Sampling and the Photon Budget
@@ -205,6 +207,8 @@ $$
 and a least-squares fit returns $D$ and the mobile fraction $M = (F_\infty - F_0)/(1 - F_0)$.
 
 **Example 2.6.1** In a FRAP experiment on a membrane protein with a bleach spot of radius $1\,\mu\mathrm{m}$, half recovery is reached at $2.5\,\mathrm{s}$ and the fluorescence recovers to $60\%$ of its prebleach value from $15\%$ just after bleaching. Then $D \approx w^2/(4t_{1/2}) = 1/(4\times2.5) = 0.1\,\mu\mathrm{m^2\,s^{-1}}$ and $M = (0.60 - 0.15)/(1 - 0.15) \approx 0.53$: about half of the molecules are immobile on the time scale of the experiment, bound to the cytoskeleton or to large complexes.
+
+:::
 
 Equation (2.5) assumes free diffusion of a single species, a bleach that is instantaneous compared with recovery, and a reservoir that is large compared with the spot. When recovery is limited by binding rather than diffusion, its rate reflects the dissociation rate constant of the bound molecules, not $D$ (for example for transcription factors exchanging on chromatin); the two regimes are distinguished by varying the spot size, since only diffusion-limited recovery depends on $w$.
 

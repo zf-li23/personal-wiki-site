@@ -32,6 +32,8 @@ $$
 \hat\theta_A = \frac{\#\text{heads using }A}{\#\text{flips using }A} = \frac{24}{24 + 6} = 0.8, \qquad \hat\theta_B = \frac{\#\text{heads using }B}{\#\text{flips using }B} = \frac{9}{9 + 11} = 0.45.
 $$
 
+:::
+
 What if we do not know the identities of the coins used in each round? The likelihood becomes $\theta_{Z_1}^5(1 - \theta_{Z_1})^5\,\theta_{Z_2}^9(1 - \theta_{Z_2})\cdots$ with unknown $Z_i$, and $\arg\max_{\boldsymbol{\theta}}L(\boldsymbol{\theta})$ cannot be computed in one step: this is a missing data problem. With complete data the MLE is a frequency; with the coin labels missing, the observed-data likelihood contains the unknown $Z$ and is hard to maximize directly. The way out is to treat the unknown $Z$ as a random variable and to complete the data by weighting with its posterior probabilities.
 
 **Definition 6.1.1 (Latent Variables and Complete Data)** In the EM framework, $X$ is the observed variable (the observed values of the sample) and $Z$ is a **latent variable** (hidden variable), such as the class label of an observation, which influences the data but is not observed. The observed data $X$ are the **incomplete data**, and $Y = (X, Z)$ are the **complete data**. With $\theta$ the parameter to be estimated, the observed-data log-likelihood is $\ell(\theta; x) = \log p(x \mid \theta)$ and the complete-data log-likelihood is $\ell_c(\theta; x, Z) = \log p(x, Z \mid \theta)$.
@@ -229,6 +231,8 @@ $theta_hat
 [1] 0.6268215
 ```
 
+:::
+
 (The trace printed at each iteration is omitted.) In all three examples the pattern is the same: the E-step fills in the missing data by posterior weights or conditional expectations, and the M-step computes the complete-data MLE.
 
 ![The genetic linkage multinomial. Left: the observed log-likelihood with the EM iterates from theta_0 = 0.05, which climb monotonically to the MLE 0.6268215. Right: the errors on a log scale decrease geometrically, with ratio 0.1328, the fraction of missing information at the MLE (Section 6.2.3).](./plots/multinomial-em-convergence.py)
@@ -320,6 +324,8 @@ $$
 H(q_1) = -\bigl(0.4875\log0.4875 + 0.5125\log0.5125\bigr) \approx 0.6929, \qquad H(q_2) \approx 0.6931,
 $$
 so $F^{(1)} = 1.0756 + 1.3860 = 2.4616$ (up to the constant). The algorithm then returns to the head of the while loop with the updated $q_1, q_2$, computes $F^{(2)}$, and continues while $F^{(k+1)} - F^{(k)} \ge \varepsilon$. Continuing the sweeps, the factors move away from the symmetric start and converge to $q_1(1) \approx 0.220$, $q_2(1) \approx 0.770$, with $F \approx 2.482$. The probability of the impossible state falls to $q(1, 1) \approx 0.169$, but stays far above its exact posterior value $0.045$ (computed from the four unnormalized weights $\mathrm{e}^0, \mathrm{e}^{2.2}, \mathrm{e}^{2.2}, \mathrm{e}^{-0.1}$), and $F$ stays below $\log p(x) = \log(1 + 2\mathrm{e}^{2.2} + \mathrm{e}^{-0.1}) \approx 2.993$: a factorized $q$ cannot express "exactly one of $z_1, z_2$", and the KL gap measures the loss.
+
+:::
 
 In summary: when the posterior $p$ cannot be computed exactly, we look for the closest approximating distribution $q$ (generalized EM); the optimization is over functions $q$, too large a space, so we introduce the mean-field assumption of independent factors (VBEM); and coordinate ascent updates the factors in turn until convergence.
 

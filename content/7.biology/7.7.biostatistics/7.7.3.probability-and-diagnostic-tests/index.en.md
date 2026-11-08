@@ -1,7 +1,7 @@
 ---
 title: Probability and Diagnostic Tests
 description: The basic rules of probability and Bayes' formula; measures of disease frequency (prevalence, cumulative incidence, person-time and incidence rate); sensitivity, specificity, predictive values and diagnostic likelihood ratios of screening and diagnostic tests and their dependence on prevalence; ROC curves, AUC and the Youden index; Bayesian inference with several diagnoses. Illustrated with low-dose CT lung cancer screening and COVID-19 antigen tests.
-source_hash: b049381df0a2
+source_hash: cdf836cd765b
 ---
 
 Probability is the language of uncertainty. In medicine its most direct use is diagnosis: for a person with a positive test result, how likely is it that the disease is really present? The answer is often surprisingly low, and it depends on how common the disease is in the population tested. This chapter first reviews the rules of probability briefly (addition, multiplication, conditional probability, total probability and Bayes' formula; the mathematical development is in [3.1.2](/3.1.2)), then defines the quantities that describe how much disease there is in a population (prevalence, cumulative incidence and incidence rate), and then uses conditional probability to characterize screening and diagnostic tests: sensitivity, specificity, predictive values, diagnostic likelihood ratios and, for continuous markers, the ROC curve. The main example of the chapter is low-dose CT (LDCT) lung cancer screening, which continues the smoking and lung cancer thread of [7.7.1](/7.7.1); COVID-19 rapid antigen testing serves as a contrast, showing how the same formulas behave for a highly specific test and at different levels of prevalence. The sensitivity and specificity obtained here are proportions estimated from samples; their confidence intervals are in [7.7.5](/7.7.5), the comparison of two tests in [7.7.9](/7.7.9), and prediction models based on logistic regression in [7.7.14](/7.7.14) and [7.7.21](/7.7.21).
@@ -156,6 +156,8 @@ The predictive values of the same test can differ enormously in different popula
 
 (The sensitivity is lower in asymptomatic people, about 55%; here the same pair of values is kept in order to isolate the effect of prevalence.) When prevalence is low, more than half of the positives are false positives, and positive results should be confirmed by a nucleic acid test; when prevalence is high, a positive result is almost conclusive, while the reliability of a negative result declines: at a prevalence of 20%, 6 of every 100 people with a negative result are in fact infected. Compared with LDCT, the antigen test has a much higher specificity, so its PPV rises much faster with prevalence (figure above).
 
+:::
+
 The general rule: when prevalence is low, the PPV is determined mainly by specificity; when prevalence is high, the NPV is determined mainly by sensitivity. Population screening for a rare disease therefore requires an extremely high specificity, and a test used to "rule out" a diagnosis requires an extremely high sensitivity. Two mnemonics used in clinical practice express the same idea: a negative result of a highly sensitive test rules out the disease (SnNout), and a positive result of a highly specific test rules in the disease (SpPin).
 
 ### 3.3.4. Diagnostic Likelihood Ratios
@@ -172,6 +174,8 @@ $$
 A result with $\mathrm{LR} > 1$ raises the probability of disease and one with $\mathrm{LR} < 1$ lowers it; it is generally held that a result with $\mathrm{LR}^+ > 10$ or $\mathrm{LR}^- < 0.1$ can change the diagnostic judgment substantially.
 
 **Example 3.3.3** For LDCT, $\mathrm{LR}^+ = 0.938/0.266 = 3.5$ and $\mathrm{LR}^- = 0.062/0.734 = 0.084$; for the antigen test, $\mathrm{LR}^+ = 0.730/0.009 = 81$ and $\mathrm{LR}^- = 0.270/0.991 = 0.27$. For LDCT, the pretest probability of 1.1% corresponds to odds of $0.011/0.989 = 0.0111$, the odds after a positive result are $0.0111 \times 3.53 = 0.039$, and the probability is $0.039/1.039 = 3.8\%$, in agreement with Example 3.3.1. Thus a negative LDCT result is strong ($\mathrm{LR}^- < 0.1$) and a positive result serves only to "suggest further examination"; the antigen test is the opposite: a positive result is strong and a negative one is not very reliable.
+
+:::
 
 The advantage of likelihood ratios is that they can be chained: if several tests are independent given the disease status, one simply multiplies by their likelihood ratios in turn. For a test with several grades or continuous values, each result interval has its own likelihood ratio (each grade of the CT score in the next section), which retains more information than the sensitivity and specificity at a single cutoff.
 
@@ -236,6 +240,8 @@ $$
 \end{aligned}
 $$
 Counting directly by Theorem 3.4.1 the number of the $58 \times 51 = 2958$ "normal–abnormal" pairs in which the abnormal image has the higher score (ties count one half) gives the same 0.893. The standard error given by Hanley and McNeil is about 0.032, and the 95% confidence interval of the AUC is about 0.83–0.96. The diagnostic likelihood ratios of the score grades are $\frac{3/51}{33/58} = 0.10$, $0.38$, $0.38$, $1.14$ and $18.8$: a score of 5 is almost diagnostic, a score of 1 strongly suggests normal, and grades 2–4 carry limited information.
+
+:::
 
 The AUC is suited to comparing two tests for the same disease, but it treats all cutoffs alike, including regions that would never be used clinically (such as the part with a false positive rate of 80%); when two ROC curves cross, the one with the larger AUC is not necessarily better in the region that is needed. The AUC also says nothing about calibration: it looks only at ranking, not at whether the predicted probabilities are accurate ([7.7.21](/7.7.21)).
 

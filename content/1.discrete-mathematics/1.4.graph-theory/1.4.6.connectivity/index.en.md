@@ -1,6 +1,6 @@
 ---
 title: Graph Connectivity
-source_hash: 97137064a7ff
+source_hash: c6737b630451
 ---
 
 [Chapter 2](/1.4.2) defined **connected graphs** and **connected components**, distinguishing only between "connected" and "disconnected". Applications such as communication networks, transportation planning and circuit design call for a finer measure of how well a graph is connected: if some nodes or links fail, does the network remain connected? In this chapter we introduce vertex connectivity and edge connectivity, establish Whitney's inequality relating them to the minimum degree, present Menger's theorem, which characterizes connectivity, together with its connection to the network flows of [Chapter 5](/1.4.5), and discuss $k$-connected graphs. We then return to the matrices that run through this course — the adjacency matrix $A$, incidence matrix $B$ and degree matrix $D$ of [Chapter 1](/1.4.1), and the Laplacian matrix $L = D - A = BB^{\mathsf T}$ of [Chapter 3](/1.4.3) — and use the second smallest eigenvalue of $L$ (the algebraic connectivity) as an algebraic measure of connectedness, with its eigenvector splitting the graph in two. Finally we discuss applications of connectivity to network design and the wide diameter.
@@ -75,6 +75,8 @@ Next we show $\kappa(G) \le \lambda(G)$. Let $S$ be a minimum edge cut of $G$, $
 **Example 6.2.2** Both inequalities in Whitney's inequality can be strict. Join two copies of $K_4$ (on the vertices $a, b, c, d$ and $e, f, g, h$) by the two edges $de$ and $df$, giving a graph $G$ on $8$ vertices. Deleting $d$ separates $\{a, b, c\}$ from $\{e, f, g, h\}$, so $\kappa(G) = 1$; deleting any single edge leaves the graph connected, while deleting $de$ and $df$ disconnects it, so $\lambda(G) = 2$; every vertex has degree at least $3$, so $\delta(G) = 3$. Hence $\kappa(G) < \lambda(G) < \delta(G)$. We shall use this graph again in Section 6.5.
 
 ![The graph of Example 6.2.2: two copies of K4 joined by the edges de and df. Left: deleting the cut vertex d (dashed: its incident edges); middle: the minimum edge cut {de, df}; right: the vertex a of minimum degree with its three edges](./plots/kappa-lambda-delta.py)
+
+:::
 
 The engineering meaning of Whitney's inequality is that a network's ability to withstand node failures ($\kappa$) is no greater than its ability to withstand link failures ($\lambda$), which in turn is no greater than the number of connections of its weakest node ($\delta$). When $\kappa < \lambda$, deleting a few nodes disconnects the network more easily than deleting the same number of links; when $\lambda < \delta$, the network contains a "bottleneck" set of edges that is weaker than the connections of any single node.
 
@@ -390,6 +392,8 @@ The $w$-wide distance reflects the best communication delay achievable when tran
 **Example 6.7.1** The vertices of the $3$-dimensional cube graph $Q_3$ are the $0$-$1$ strings of length $3$, two strings being adjacent when they differ in exactly one position; it is $3$-regular, $\kappa(Q_3) = 3$, and its diameter is $3$. Take $x = 000$ and $y = 011$ (at distance $2$). The two paths through $001$ and $010$ both have length $2$, but the third neighbor $100$ of $x$ is at distance $3$ from $y$, so a third path has length at least $4$, for example $000 \to 100 \to 101 \to 111 \to 011$. Hence the $3$-wide distance between $x$ and $y$ is $4$, larger than their distance $2$. Checking all pairs shows that the $3$-wide diameter of $Q_3$ is $4$; in general, the $n$-wide diameter of the $n$-dimensional cube $Q_n$ is $n+1$.
 
 ![A 3-container in the cube Q3 between 000 and 011 (violet): two paths of length 2 (blue, green) and one of length 4 (orange); the container has length 4](./plots/container.py)
+
+:::
 
 In the evaluation of interconnection networks, the $w$-wide diameter is an important measure, capturing both the fault tolerance of the network (through $w$) and its transmission efficiency (through the diameter): when some nodes or links fail, the remaining disjoint paths can still be used for transmission. The wide diameters of common network topologies such as generalized Petersen graphs and Harary graphs have been studied in depth, providing a theoretical basis for the design of practical interconnection networks.
 

@@ -15,6 +15,8 @@ Biological calorimetry is difficult because the heats are tiny compared with the
 
 **Example 8.1.1** A $1\,\mathrm{mL}$ cell contains a $1\,\mathrm{mg\,mL^{-1}}$ solution of a $20\,\mathrm{kDa}$ protein, $5\times10^{-8}\,\mathrm{mol}$. Unfolding with $\Delta_{\mathrm{U}}H = 300\,\mathrm{kJ\,mol^{-1}}$ absorbs $15\,\mathrm{mJ}$, spread over about $10\,\mathrm{K}$. At the peak, the excess heat capacity of a two-state protein is $\Delta H^2/(4RT_{\mathrm{m}}^2) = 24\,\mathrm{kJ\,mol^{-1}\,K^{-1}}$ (Formula 8.2.2), so the protein adds $1.2\,\mathrm{mJ\,K^{-1}}$ to the $4.2\,\mathrm{J\,K^{-1}}$ of the water in the cell: three parts in ten thousand. Scanning at $1\,\mathrm{K\,min^{-1}}$ the extra heating power is $1.2\,\mathrm{mJ\,K^{-1}} \times \tfrac{1}{60}\,\mathrm{K\,s^{-1}} = 20\,\mu\mathrm{W}$.
 
+:::
+
 Instruments that resolve fractions of a microwatt therefore never measure the absolute heat capacity of a sample. They measure the difference between a sample cell and a reference cell filled with the same buffer, held at the same temperature by feedback heaters inside an adiabatic shield, so that everything except the solute cancels.
 
 ### 8.1.2. The Differential Scanning Calorimeter
@@ -143,6 +145,8 @@ where np and pol denote nonpolar (carbon) and polar (nitrogen and oxygen) surfac
 
 **Example 8.3.2** For $N = 100$ residues, $\Delta\mathrm{ASA} = -907 + 9\,300 = 8\,393\,\text{Å}^2$ and $\Delta_{\mathrm{U}}C_p = -1\,050 + 0.79 \times 8\,393 = 5.6\,\mathrm{kJ\,mol^{-1}\,K^{-1}}$, or $56\,\mathrm{J\,mol^{-1}\,K^{-1}}$ per residue, the average quoted in [7.1.6](/7.1.6#sec-6.2.2) ($10$–$18\,\mathrm{cal}$, that is $42$–$75\,\mathrm{J\,mol^{-1}\,K^{-1}}$ per residue). Proteins with disulfide bonds fall below the line, because cross-links keep the unfolded state more compact and reduce the surface that it exposes.
 
+:::
+
 The same relations apply to binding. When two proteins associate, both lose accessible surface, so binding has $\Delta C_p < 0$; a measured $\Delta C_p$ of binding can therefore be compared with the surface buried in a crystal structure of the complex. A $\Delta C_p$ much more negative than the buried surface predicts suggests that binding is coupled to folding of part of the chain (Spolar and Record, 1994), as happens for many DNA-binding proteins.
 
 ### 8.3.3. Mutations and Ligands Shift the Melting Temperature
@@ -161,6 +165,8 @@ $$
 $$
 
 **Example 8.3.3** For the protein of the figures ($T_{\mathrm{m}} = 333.15\,\mathrm{K}$, $\Delta H_{\mathrm{m}} = 350\,\mathrm{kJ\,mol^{-1}}$), $RT_{\mathrm{m}}^2/\Delta H_{\mathrm{m}} = 2.6\,\mathrm{K}$. A ligand at $100$ times its $K_{\mathrm{d}}$ raises $T_{\mathrm{m}}$ by $2.6 \times \ln 101 = 12.2\,\mathrm{K}$ by the approximation and $11.5\,\mathrm{K}$ by the exact equation (the stability curve bends). Each factor of ten in $[\mathrm{L}]/K_{\mathrm{d}}$ adds only about $5$–$6\,\mathrm{K}$, so a shift in $T_{\mathrm{m}}$ is a logarithmic and rather insensitive measure of affinity.
+
+:::
 
 This is the basis of the thermal shift assay, used to screen thousands of ligands or buffer conditions with microliters of protein.
 
@@ -268,6 +274,8 @@ $$
 ![The main transition of a phospholipid bilayer and the size of the cooperative unit. A: excess heat capacity per mole of lipid for cooperative units of n = 20, 100 and 500 lipids that melt as one (two-state model with ΔH_vH = n ΔH_cal; Tm = 41.4 °C and ΔH_cal = 36 kJ/mol, the values of DPPC): the area is the same for all three, while the height grows and the width falls in proportion to n. B: full width at half height against n (Formula 8.5.1); the main transition of multilamellar DPPC vesicles, about 0.1 K wide, corresponds to a cooperative unit of about 800 lipids, while transitions broadened to 1 or 3 K correspond to units of tens of lipids](./plots/lipid-dsc.py)
 
 **Example 8.5.1** The main transition of multilamellar DPPC vesicles has $\Delta T_{1/2} \approx 0.1\,\mathrm{K}$. Formula 8.5.1 gives $\Delta H_{\mathrm{vH}} = 3.525 \times 8.314 \times 314.55^2/0.1\,\mathrm{J\,mol^{-1}} = 2.9\times10^4\,\mathrm{kJ\,mol^{-1}}$, and with $\Delta H_{\mathrm{cal}} = 36\,\mathrm{kJ\,mol^{-1}}$ the cooperative unit is $n \approx 800$ lipids: patches of a few hundred square nanometers of bilayer melt as a whole. Anything that disturbs the packing (small vesicles with strongly curved bilayers, impurities, **cholesterol**, membrane proteins) broadens the peak and reduces $n$; above about $30$ mol % cholesterol the transition is no longer detectable, because cholesterol creates the **liquid-ordered phase** in which chains are ordered but mobile ([7.6.24](/7.6.24)).
+
+:::
 
 Cells keep their membranes near or above this transition by adjusting the length and saturation of their **fatty acids**, a response called homeoviscous adaptation: bacteria grown at lower temperature incorporate more unsaturated or branched chains, so that the transition of their membrane lipids stays below the growth temperature.
 
@@ -518,6 +526,8 @@ where the coherence factor $\beta \le 1$ is set by the number of speckles seen b
 The intensity correlation therefore decays at $2\Gamma$, twice the rate of the field correlation. The often-quoted expression $A(\tau) = A_0\exp[-(8\pi^2n^2/\lambda^2)\sin^2(\theta/2)\,D\tau]$ for the autocorrelation of intensity fluctuations decays at $q^2D/2$ and is too slow by a factor of four.
 
 **Example 8.11.1** A He–Ne laser ($633\,\mathrm{nm}$) at $90^\circ$ in water ($n = 1.332$) gives $q = 4\pi \times 1.332 \times 0.707/633\,\mathrm{nm} = 1.87\times10^7\,\mathrm{m^{-1}}$. For a protein with $R_{\mathrm{h}} = 7\,\mathrm{nm}$ at $25\,^\circ\mathrm{C}$, $D = k_{\mathrm{B}}T/(6\pi\eta R_{\mathrm{h}}) = 3.5\times10^{-11}\,\mathrm{m^2\,s^{-1}}$ and $1/\Gamma = 1/(q^2D) = 82\,\mu\mathrm{s}$; the intensity correlation decays with a time constant of $41\,\mu\mathrm{s}$. A $100\,\mathrm{nm}$ particle decays in $1.2\,\mathrm{ms}$, a $2\,\mathrm{nm}$ peptide in $23\,\mu\mathrm{s}$.
+
+:::
 
 ![Dynamic light scattering. A, B: a direct simulation in which 400 independent particles diffuse along the scattering vector and the scattered field is the sum of their phase factors (time in units of 1/Γ). A: the intensity fluctuates as an exponentially distributed speckle. B: the computed intensity autocorrelation g₂ − 1 and field autocorrelation |g₁| follow e^(−2Γτ) and e^(−Γτ), confirming Theorem 8.11.1 and the Siegert relation (Theorem 8.11.2). C: g₂ − 1 for spheres of hydrodynamic radius 2, 7 and 100 nm in water at 25 °C (633 nm, 90°, coherence factor 0.9). D: a sample containing 99.9 % by mass of 5 nm particles and 0.1 % of 100 nm aggregates: because scattering per unit mass grows with molar mass, the aggregates contribute about 80 % of the intensity, and the first two cumulants of the decay-rate distribution give an intensity-weighted radius of 20 nm and a polydispersity index of 2.4](./plots/dls-correlation.py)
 

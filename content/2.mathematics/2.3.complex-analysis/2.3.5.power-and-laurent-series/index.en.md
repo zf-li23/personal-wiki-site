@@ -94,6 +94,8 @@ On the circle of convergence the radius gives no information: the series may con
 2. $\sum \frac{z^n}{n}$ diverges at $z = 1$ (the harmonic series) and converges conditionally at every other point $z = \mathrm{e}^{\mathrm{i}\theta}$ of the circle, by Dirichlet's test and Example 5.1.1.
 3. $\sum \frac{z^n}{n^2}$ converges absolutely on the whole circle, since $\sum\frac1{n^2} < \infty$.
 
+:::
+
 To classify the convergence at a point $z^*$ of the circle (absolute convergence, conditional convergence or divergence) we first look at $\sum\lvert c_n\rvert R^n$; if it diverges, we write $c_n(z^* - z_0)^n = a_n\mathrm{e}^{\mathrm{i}n\theta}$ and try Dirichlet's test, or check whether the terms tend to $0$.
 
 **Example 5.2.3** Consider $\sum_{n\ge1}\frac{z^{2n}}{\sqrt n\,4^n}$. In the variable $w = z^2/4$ it is $\sum w^n/\sqrt n$, which converges for $\lvert w\rvert < 1$, so $R = 2$. On $\lvert z\rvert = 2$ we have $w = \mathrm{e}^{\mathrm{i}\theta}$ and $\sum\lvert w^n\rvert/\sqrt n = \sum 1/\sqrt n$ diverges, so there is no absolute convergence anywhere on the circle.

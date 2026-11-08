@@ -97,6 +97,8 @@ E_{\mathrm{p}}(x)\approx\frac12E_{\mathrm{p}}''(0)\,x^2=\frac12kx^2,\qquad k=E_{
 $$
 于是 $f=-\dfrac{\mathrm{d}E_{\mathrm{p}}}{\mathrm{d}x}=-kx$，是线性回复力。$\square$
 
+:::
+
 这就是在**平衡点**处把方程线性化（[2.4.11](/2.4.11)）。原子与分子的振动（[例 4.6.2](/5.1.4#ex-4.6.2) 的势能曲线在极小点附近近似为抛物线）、固体中的晶格振动都是这样的微振动。
 
 **注 6.1.1（单摆的大角度振动）** 单摆的方程 $\ddot\theta+\frac gl\sin\theta=0$ 是非线性的，只有在 $\sin\theta\approx\theta$ 时才是简谐振动，周期 $T_0=2\pi\sqrt{l/g}$。以振幅 $\theta_0$ 摆动时，由能量守恒可以求出精确的周期

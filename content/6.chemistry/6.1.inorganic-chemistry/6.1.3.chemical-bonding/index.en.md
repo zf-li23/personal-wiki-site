@@ -1,6 +1,6 @@
 ---
 title: Chemical Bonding and Molecular Structure
-source_hash: 744ee70cb10e
+source_hash: 1ae69d6a47c3
 ---
 
 What holds atoms together in molecules and crystals, and what shape the resulting molecules have, are among the central questions of chemistry. The strong interactions between adjacent atoms (or ions) in a molecule or crystal are called *chemical bonds*, with bond energies generally in the range $100$–$800\,\mathrm{kJ\,mol^{-1}}$; the van der Waals forces and hydrogen bonds between molecules are weaker by one to two orders of magnitude and are left to the next chapter. This chapter presents several theories of chemical bonding in historical and logical order: the ionic bond theory (Kossel); the classical valence bond theory centered on the shared electron pair (Lewis); the modern valence bond theory that explains the shared pair by quantum mechanics (Heitler–London, Pauling) and its extension, hybrid orbital theory; valence shell electron pair repulsion theory, which predicts molecular geometry from electron-pair repulsion alone; and molecular orbital theory, which regards electrons as belonging to the whole molecule. Finally we discuss bond polarity and molecular polarity.
@@ -336,6 +336,8 @@ The number of valence-shell electron pairs corresponds one to one with the hybri
 
 In $\ce{NO2}$ the single electron repels less than a lone pair, and the bond angle is $134^\circ$, larger than $120^\circ$; $\ce{NO2+}$, which has lost this electron, is linear, and $\ce{NO2-}$, which has gained one, has a bond angle of $115^\circ$. The bond angle of $\ce{O3}$ is $116.8^\circ$.
 
+:::
+
 Limitations of VSEPR theory: it is basically inapplicable to transition-metal compounds (because of the influence of d electrons), and fails for a few compounds of heavy elements (for example $\ce{[SeCl6]^2-}$ and $\ce{[TeBr6]^2-}$ have a lone pair yet are regular octahedra; the lone pair has no directional character in space and is called a stereochemically inert lone pair).
 
 ## 3.6. Molecular Orbital Theory
@@ -484,6 +486,8 @@ The dipole moment of a molecule is the vector sum of the dipole moments of the i
 Conversely, the dipole moment can be used to infer the geometry of a molecule: $p = 1.47\,\mathrm{D}$ ($4.90\times 10^{-30}\,\mathrm{C\,m}$) for $\ce{NH3}$ shows that it is not planar but trigonal pyramidal; $p = 0$ for $\ce{BCl3}$ shows that it is trigonal planar. The dipole moment of $\ce{NF3}$ is much smaller than that of $\ce{NH3}$: the dipole of the N–F bond (pointing toward F) is opposite in direction to the contribution of the lone pair and they partly cancel, whereas the dipole of the N–H bond (pointing toward N) is in the same direction as the lone pair and they add.
 
 **Example 3.7.1** The bond length of $\ce{HCl}$ is $127.5\,\mathrm{pm}$ and its dipole moment is $1.11\,\mathrm{D}$. If $\ce{HCl}$ were completely ionic, $\ce{H+Cl-}$, the dipole moment would be $p_{\mathrm{ion}} = ed = 1.602\times10^{-19}\,\mathrm{C} \times 1.275\times10^{-10}\,\mathrm{m} = 2.04\times10^{-29}\,\mathrm{C\,m} = 6.12\,\mathrm{D}$. The ratio of the measured value to this is $1.11/6.12 \approx 0.18$, so the partial charges on H and Cl are about $\pm 0.18e$, and one commonly says roughly that the H–Cl bond is about 18% ionic. Similarly one obtains about 41% for $\ce{HF}$ and about 6% for $\ce{HI}$ (bond lengths $91.7$ and $160.9\,\mathrm{pm}$ respectively).
+
+:::
 
 The dipole moment is the source of the orientation (Keesom) and induction (Debye) forces between molecules and determines many properties of molecular crystals, as discussed in the next chapter, [6.1.4](/6.1.4).
 

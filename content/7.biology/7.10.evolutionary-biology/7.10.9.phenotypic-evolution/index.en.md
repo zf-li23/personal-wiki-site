@@ -69,6 +69,8 @@ This regression approach was introduced by Lande and Arnold (1983). The partial 
 
 **Example 9.3.1** Female guppies (*Poecilia reticulata*) prefer males with more orange on the body. Regressing the relative mating success of males on the proportion of their body surface that is orange gives $\beta = 3.8$ (unitless, because the trait is a proportion): if they existed, completely orange males would have on average $3.8$ times more matings than males with no orange.
 
+:::
+
 In practice the fitness measured is usually a component (survival over a season, mating success) rather than lifetime fitness, survival is often binary, and the regression is then fitted to $0/1$ data; the gradients are still estimated by ordinary least squares on relative fitness, while their significance is tested with a model appropriate for the data, such as logistic regression. Two cautions apply. An unmeasured trait correlated with the measured ones, or an environmental factor that affects both the trait and fitness (well-fed individuals are both larger and more fecund), biases $\boldsymbol{\beta}$; and the gradients describe selection on phenotypes, whether or not the traits are heritable.
 
 ![Estimating selection gradients by regression on simulated data (500 individuals, survival probability increasing with the standardized trait but falling off at high values). A: relative fitness (jittered dots; circles: means in bins of 0.5 SD) against the trait. The slope of the linear regression is the directional gradient, β = 0.31 ± 0.04; the quadratic regression on z and z²/2 gives γ = −0.19 ± 0.05, detecting stabilizing selection on top of directional selection. B: a fitness surface with stabilizing and correlational selection (γ₁₁ = γ₂₂ = −0.4, γ₁₂ = 0.3); contours of relative fitness form a ridge along which high values of both traits, or low values of both, are favoured. Dotted circle: 95 % of the phenotype distribution](./plots/lande-arnold.py)
@@ -179,6 +181,8 @@ $$
 \end{aligned}
 $$
 Selection favours shorter legs, yet legs are predicted to become slightly longer, because the correlated response to selection for longer wings ($r_A = 0.6/\sqrt{0.518 \cdot 0.972} = 0.85$) outweighs the direct response.
+
+:::
 
 The same thing happened to Galápagos finches during the 1977 drought: selection directly favoured narrower bills, yet the survivors had wider bills on average, because bill width is strongly correlated with body size and bill depth, which were favoured. Correlated responses may also explain puzzling losses of structures. Cave populations of the Mexican tetra (*Astyanax mexicanus*) have lost their eyes; mutations that increase the sensitivity of the vibration-detecting sensory cells on the head, which the fish use to find prey in the dark, also reduce the eyes as a correlated effect.
 

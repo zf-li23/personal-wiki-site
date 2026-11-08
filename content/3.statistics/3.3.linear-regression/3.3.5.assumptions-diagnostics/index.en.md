@@ -239,6 +239,8 @@ The trend appears linear and the slope estimate is close to the truth, but the r
 
 The intercept estimate $71.3$ looks far from $\beta_0 = 30$ even though $b_0$ is unbiased. It is not surprising: the intercept is an extrapolation to $X = 0$, $b_0 = \bar Y - b_1 \bar X$ with $\bar X = 50.5$, so the large errors of the observations with large $X$ enter it through $b_1$, and its standard deviation is large (about $75$ in a simulation of this design; the reported $118.9$ is itself distorted by the heteroscedasticity). The deviation $41.3$ is well within one standard deviation. Weighted least squares ([3.3.6](/3.3.6)) gives far more precise estimates here.
 
+:::
+
 Several formal tests of equal variances exist. The first three test whether $k$ samples come from populations with equal variances; in regression they are applied to groups of observations formed by the values of $X$ (for example, the cases with small and with large $X$).
 
 - *Bartlett's test* is the **likelihood ratio test** for equal variances of normal populations, with an approximate $\chi^2$ distribution; it is sensitive to departures from normality.
@@ -268,6 +270,8 @@ shapiro.test(resid)
 ```
 
 The histogram is roughly bell-shaped and symmetric, and a normal curve with mean $0$ and variance $\mathrm{MSE}$ fitted on top of it agrees reasonably with a smooth density estimate; the normal Q–Q plot is close to a straight line. The Shapiro–Wilk test gives $W = 0.9789$, $p = 0.8626$: no obvious deviation from normality, since the $p$-value is greater than $0.05$.
+
+:::
 
 Formal tests of normality test
 

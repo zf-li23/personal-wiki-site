@@ -308,6 +308,8 @@ c=3,\qquad r=\frac{0.05-0.01837}{0.06100}=0.518.
 $$
 The observed value $T=3$ falls exactly on the boundary: the test rejects $H_0$ (refuses the purchase) with probability $0.518$.
 
+:::
+
 For $H_0\colon\theta\ge\theta_0$ vs. $H_1\colon\theta<\theta_0$ the test rejects for small $T$: $\varphi=1$ if $T<c$, $r$ if $T=c$, $0$ if $T>c$, with $\mathbb{P}_{\theta_0}(T<c)+r\,\mathbb{P}_{\theta_0}(T=c)=\alpha$. For the two-sided problem,
 
 $$
@@ -355,6 +357,8 @@ $$
 \lvert t\rvert=\frac{\lvert\bar x-\bar y\rvert}{s_p\sqrt{1/156+1/74}}=5.74>2.598,
 $$
 so $H_0$ is rejected; the $p$-value is $\mathbb{P}(\lvert t_{228}\rvert\ge5.74)=3\times10^{-8}$.
+
+:::
 
 Case (c) is the Behrens–Fisher problem, which has no exact solution of the above kind. When $m,n$ are not large, B. L. Welch (1938) proposed the statistic
 
@@ -440,6 +444,8 @@ $$
 \lvert u^*\rvert=\frac{\lvert422.16-465.13\rvert}{\sqrt{54.80^2/156+49.20^2/74}}=5.96>2.576,
 $$
 so $H_0$ is rejected again; the $p$-value is $\mathbb{P}(\lvert\mathcal{N}(0,1)\rvert\ge5.96)=2.5\times10^{-9}$.
+
+:::
 
 The same idea applies to Bernoulli and Poisson means. For a sample from $\mathrm{Ber}(\theta)$, $\sqrt{n}(\bar X-\theta)/\sqrt{\theta(1-\theta)}\xrightarrow{d}\mathcal{N}(0,1)$, so under $H_0\colon\theta=\theta_0$
 
@@ -751,6 +757,8 @@ f(x;\theta)=\frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\theta^2/(2\sigma^2)}\,\math
 $$
 so $T(x)=x$ and $Q(\theta)=\theta/\sigma^2$ is strictly increasing. The UMP test of $\theta\le\theta_0$ vs. $\theta>\theta_0$ rejects when $\sum x_i>C$ ($\gamma=0$), and $\alpha=\mathbb{P}_{\theta_0}\big(\sqrt{n}(\bar X-\theta_0)/\sigma>(C-n\theta_0)/(\sigma\sqrt{n})\big)$ gives $C=n\theta_0+z_\alpha\sigma\sqrt{n}$, i.e. the one-sided Z-test $\sqrt{n}(\bar x-\theta_0)/\sigma>z_\alpha$, with power $\pi(\theta)=1-\Phi\big(z_\alpha+\sqrt{n}(\theta_0-\theta)/\sigma\big)$. The one-sided Z-test of Section 5.2.1 is therefore optimal.
 
+:::
+
 For the interval problem of Example 5.1.4 a UMP test also exists.
 
 **Theorem 5.4.3** In the setting of Theorem 5.4.2, for $H_0\colon\theta\le\theta_1$ or $\theta\ge\theta_2$ vs. $H_1\colon\theta_1<\theta<\theta_2$, the test
@@ -773,6 +781,8 @@ $$
 \Phi\Big(\frac{C_2-25}{5}\Big)-\Phi\Big(\frac{C_1-25}{5}\Big)=\Phi\Big(\frac{C_2-75}{5}\Big)-\Phi\Big(\frac{C_1-75}{5}\Big)=0.01,
 $$
 and by symmetry they hold when $C_1+C_2=100$. With $C_1=C$, $\Phi\big((75-C)/5\big)-\Phi\big((C-25)/5\big)=0.01$ gives $C=36.6$. So $H_0$ is rejected when $36.6\le\sum x_i\le63.4$; the power is $\pi(1.5)=\pi(2.5)=0.569$ and $\pi(2)=0.992$.
+
+:::
 
 For two-sided problems such as $\theta=\theta_0$ vs. $\theta\ne\theta_0$ there is in general no UMP test (Example 5.4.2), and the class of competitors has to be restricted. Corollary 5.4.1 suggests a natural restriction: a sensible test should reject with probability at least $\alpha$ whenever $H_1$ is true.
 

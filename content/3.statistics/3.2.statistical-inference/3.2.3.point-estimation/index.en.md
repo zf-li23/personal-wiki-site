@@ -340,6 +340,8 @@ where $x_{(1)}=\min_ix_i$ and $x_{(n)}=\max_ix_i$ are the extreme **order statis
 
 **Example 3.3.10** If both $\alpha$ and $\beta$ are unknown, $L(\alpha,\beta;\boldsymbol{x})$ is maximized when $\alpha\le x_{(1)}$, $x_{(n)}\le\beta$ and $\beta-\alpha$ is as small as possible, that is, $\hat\alpha=x_{(1)}$ and $\hat\beta=x_{(n)}$.
 
+:::
+
 The MLE need not be unique, and it need not have a closed form; in the latter case $L(\theta;\boldsymbol{x})$ is maximized numerically, with care to find the global rather than a local maximum.
 
 **Example 3.3.11 (Non-Uniqueness)** Let $X_1,\dots,X_n$ be a random sample from $\mathrm{U}(\theta,\theta+1)$, $\theta\in\mathbb{R}$. The likelihood equals $1$ if $\theta\le x_{(1)}$ and $x_{(n)}\le\theta+1$, and $0$ otherwise, that is, $L(\theta;\boldsymbol{x})=\boldsymbol{1}\{x_{(n)}-1\le\theta\le x_{(1)}\}$. Every point of the interval $[x_{(n)}-1,x_{(1)}]$ maximizes it, so for every $0\le\lambda\le1$,
@@ -414,6 +416,8 @@ $$
 
 ![Bias, variance and mean squared error of the moment estimator 2 times the sample mean, the MLE X_(n) and the bias-corrected MLE (n+1)/n X_(n) for U(0, 2), estimated from 5000 simulated samples for each sample size. The MLE is biased downward, but its MSE is far below that of the unbiased moment estimator.](./plots/uniform-estimators.py)
 
+:::
+
 The second property concerns reparametrization. In Example 3.3.3 we may want the probability $\mathbb{P}_\theta(X=0)=\mathrm{e}^{-\theta}$ rather than $\theta$; in Example 3.3.4, where $\mathbb{E}_\theta X=1/\theta$, it may be more natural to estimate the mean $1/\theta$. How is the MLE of $g(\theta)$ determined? If $g$ is not one-to-one, several $\theta$ give the same value $\theta^*=g(\theta)$, and we define the induced likelihood
 
 $$
@@ -468,6 +472,8 @@ By the Cramér–Rao inequality of §3.4.5, $[g'(\theta)]^2/(nI(\theta))$ is the
 
 **Example 3.3.14** For the heights of a sample of $n=500$ Hong Kong children, the moment estimate of the mean height is $\bar x=67.9$ in ($172.5$ cm); assuming $\mathcal{N}(\mu,\sigma^2)$, the MLE is the same. In a test of $5$ light bulbs of one brand, the lifetimes are $2,3,1,3$ and $4$ years. The moment estimate of the mean lifetime is $\bar x=2.6$ years; assuming $\mathrm{Exp}(\theta)$ with $\mathbb{E}X=\theta^{-1}=g(\theta)$, the MLE of $g(\theta)$ is also $\bar x=2.6$ by invariance. Simulating samples from $\mathrm{Exp}(2.6)$, whose mean is $1/2.6\approx0.385$, the empirical variances of the MLE $\bar X$ of the mean for $n=5,50,100,500$ are $0.0307$, $0.00293$, $0.00149$, $0.000301$, close to the exact values $\frac{1}{2.6^2n}=0.0296$, $0.00296$, $0.00148$, $0.000296$.
 
+:::
+
 | | Method of moments | Maximum likelihood |
 |---|---|---|
 | Model | only moments needed; no distributional form | the form of the density must be known |
@@ -500,6 +506,8 @@ $$
 $$
 
 The left side is a polynomial in $p$ of degree at most $n+1$ which is not identically zero (its value at $p=0$ is $-1$), so it has at most $n+1$ roots, a contradiction.
+
+:::
 
 There are three methods for finding a UMVUE: the zero-unbiased-estimator criterion, the sufficient and complete statistic method (Lehmann–Scheffé), and the Cramér–Rao inequality. All rest on the Rao–Blackwell theorem.
 
@@ -556,6 +564,8 @@ The condition is also necessary: if $\operatorname{Cov}_{\theta_0}(\hat g,l)\ne0
 **Example 3.4.3** In Example 3.4.2, let $\delta(T)$ satisfy $\mathbb{E}_p\delta(T)=0$ for all $p$, and write $a_i=\delta(i)$. Then $\sum_{i=0}^na_i\binom nip^i(1-p)^{n-i}=0$; dividing by $(1-p)^n$ and setting $\varphi=p/(1-p)\in(0,\infty)$ gives $\sum_{i=0}^na_i\binom ni\varphi^i=0$ for all $\varphi>0$, so all $a_i=0$ and $\delta\equiv0$. Hence $\operatorname{Cov}_p(\bar X,\delta(T))=0$ and $\bar X$ is the UMVUE of $p$.
 
 **Example 3.4.4** Let $X_1,\dots,X_n$ be a random sample from $\mathrm{U}(0,\theta)$. The MLE $T=X_{(n)}$ is sufficient and biased, while $h(T)=\frac{n+1}nT$ is unbiased with variance $\frac{\theta^2}{n(n+2)}$ (Example 3.3.13). If $\mathbb{E}_\theta\delta(T)=\int_0^\theta\delta(t)\frac{nt^{n-1}}{\theta^n}\,\mathrm{d}t=0$ for all $\theta>0$, then $\int_0^\theta\delta(t)t^{n-1}\,\mathrm{d}t=0$ for all $\theta$, and differentiating gives $\delta(\theta)\theta^{n-1}=0$, so $\delta=0$ (almost everywhere). Hence $\frac{n+1}nX_{(n)}$ is the UMVUE of $\theta$, and $\frac{n+1}{2n}X_{(n)}$ is the UMVUE of the mean $\theta/2$, better than the unbiased $\bar X$. Which estimator is optimal thus depends on the model: for a normal population, $\bar X$ is the UMVUE of the mean (Example 3.4.7).
+
+:::
 
 In both examples the zero-unbiased estimators of $T$ were forced to vanish, which is precisely the completeness of $T$ (Definition 2.3.3). This leads to the general method.
 
@@ -657,6 +667,8 @@ By the Cauchy–Schwarz inequality ([3.1.8](/3.1.8)), $[g'(\theta)]^2\le\operato
 **Example 3.4.8** For $\mathrm{Ber}(\theta)$, $\log f=x\log\theta+(1-x)\log(1-\theta)$, and $\frac{\partial\log f}{\partial\theta}=\frac x\theta-\frac{1-x}{1-\theta}=\frac{x-\theta}{\theta(1-\theta)}$, so $I(\theta)=\frac{\operatorname{Var}(X)}{\theta^2(1-\theta)^2}=\frac1{\theta(1-\theta)}$. The bound for unbiased estimators of $\theta$ is $\frac{\theta(1-\theta)}n=\operatorname{Var}(\bar X)$.
 
 **Example 3.4.9** For $\mathrm{Poi}(\theta)$, $\frac{\partial\log f}{\partial\theta}=\frac x\theta-1$ and $I(\theta)=\frac1\theta$; the bound $\frac\theta n$ equals $\operatorname{Var}(\bar X)$. For $\mathrm{Exp}(\theta)$ with density $\theta\mathrm{e}^{-\theta x}$, $\frac{\partial\log f}{\partial\theta}=\frac1\theta-x$ and $I(\theta)=\operatorname{Var}(X)=\frac1{\theta^2}$; for $g(\theta)=1/\theta$, the bound is $\frac{(1/\theta^2)^2}{n/\theta^2}=\frac1{n\theta^2}=\operatorname{Var}(\bar X)$, so $\bar X$ is the UMVUE of the mean $1/\theta$. For $\mathcal{N}(\mu,\sigma^2)$ with $\sigma^2$ known, $I(\mu)=1/\sigma^2$ and the bound $\sigma^2/n$ is attained by $\bar X$. With $\mu$ known, $I(\sigma^2)=\frac1{2\sigma^4}$ and the bound $\frac{2\sigma^4}n$ is attained by $S_\mu^2=\frac1n\sum_{i=1}^n(X_i-\mu)^2$, which is therefore the UMVUE of $\sigma^2$.
+
+:::
 
 For a $k$-dimensional parameter $\boldsymbol{\theta}=(\theta_1,\dots,\theta_k)^{\mathsf T}$, write $A\succeq B$ if $A-B$ is a **positive semidefinite matrix**. Under the analogous regularity conditions, every unbiased estimator $\hat{\boldsymbol{\theta}}$ of $\boldsymbol{\theta}$ satisfies
 

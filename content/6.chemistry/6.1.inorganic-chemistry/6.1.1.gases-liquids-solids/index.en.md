@@ -1,7 +1,7 @@
 ---
 title: Gases, Liquids and Solids
 description: Using the ideal gas equation in chemical calculations; partial pressure, Dalton's law and mole fraction; energy distribution and the Boltzmann factor; effusion and Graham's law; real gases, critical parameters, phase diagrams and supercritical fluids; saturated vapor pressure and the Clausius–Clapeyron equation; boiling, supercooling and liquid crystals; crystals, lattices and unit cells, the seven crystal systems and 14 Bravais lattices; amorphous solids.
-source_hash: 2fcd3a91db0b
+source_hash: df7aecea118c
 ---
 
 The macroscopic properties of matter are determined by the particles that compose it and the interactions between them, so inorganic chemistry begins with the three states of aggregation. In a gas the molecules are far apart and move almost freely; in a liquid they are in contact but can flow past one another; in a crystal the particles are arranged periodically and regularly. The kinetic theory of gases and real gases have already been treated systematically in the thermal physics part of physics ([5.2.1](/5.2.1), [5.2.2](/5.2.2)), so this chapter only reviews them and concentrates on their uses in chemistry: finding amounts of substance and molar masses from the equation of state, partial pressures in gas mixtures, the connection between energy distributions and reaction rates, and isotope separation. For liquids we discuss how the saturated vapor pressure varies with temperature (the Clausius–Clapeyron equation) and phase diagrams, which are an introduction to the phase-equilibrium theory of physical chemistry ([6.3](/6.3)). For solids we introduce the language of lattices and unit cells, which [6.1.4](/6.1.4) then uses to describe metallic, ionic and molecular crystals; the systematic theory of crystal symmetry and diffraction belongs to structural chemistry ([6.2](/6.2)). The Boltzmann factor of this chapter will be used in [6.1.7](/6.1.7) to explain the activation energy, and the condition for phase equilibrium will be fully understood only after Gibbs energy is introduced in [6.1.6](/6.1.6).
@@ -33,6 +33,8 @@ Solution: (1) $n_1 = \dfrac{p_1V}{RT} = \dfrac{15.2 \times 10^6\,\mathrm{Pa} \ti
 **Example 1.1.2** Argon obtained by fractional distillation of liquid air has a mass of $0.7990\,\mathrm{g}$ and occupies $0.4448\,\mathrm{L}$ at $298.15\,\mathrm{K}$ and $111.46\,\mathrm{kPa}$. Find the molar mass of argon and its density at $0\,{}^\circ\mathrm{C}$ and $101.325\,\mathrm{kPa}$.
 
 Solution: $M = \dfrac{mRT}{pV} = \dfrac{0.7990\,\mathrm{g} \times 8.314\,\mathrm{kPa\,L\,mol^{-1}\,K^{-1}} \times 298.15\,\mathrm{K}}{111.46\,\mathrm{kPa} \times 0.4448\,\mathrm{L}} = 39.95\,\mathrm{g\,mol^{-1}}$, so the relative atomic mass is $A_{\mathrm{r}}(\ce{Ar}) = 39.95$. $\rho = \dfrac{pM}{RT} = \dfrac{101.325 \times 39.95}{8.314 \times 273.15}\,\mathrm{g\,L^{-1}} = 1.782\,\mathrm{g\,L^{-1}}$.
+
+:::
 
 $0\,{}^\circ\mathrm{C}$ and $101.325\,\mathrm{kPa}$ was the old "standard temperature and pressure"; the molar volume of an ideal gas there is $22.414\,\mathrm{L\,mol^{-1}}$. The current IUPAC standard pressure is $p^\circ = 100\,\mathrm{kPa}$ (the standard state of [6.1.6](/6.1.6)), at which the molar volume at $0\,{}^\circ\mathrm{C}$ is $22.711\,\mathrm{L\,mol^{-1}}$. When quoting data, check which pressure was used.
 
@@ -78,6 +80,8 @@ the **most probable speed**, the mean speed and the **root-mean-square speed**, 
 **Example 1.1.4** Find the root-mean-square speeds of He and $\ce{N2}$ at $298\,\mathrm{K}$.
 
 Solution: $v_{\mathrm{rms}}(\ce{He}) = \sqrt{\dfrac{3 \times 8.314 \times 298}{4.003 \times 10^{-3}}}\,\mathrm{m\,s^{-1}} = 1.36 \times 10^3\,\mathrm{m\,s^{-1}}$, $v_{\mathrm{rms}}(\ce{N2}) = \sqrt{\dfrac{3 \times 8.314 \times 298}{28.01 \times 10^{-3}}}\,\mathrm{m\,s^{-1}} = 515\,\mathrm{m\,s^{-1}}$. At the same temperature, molecules of larger molar mass move more slowly, $v_{\mathrm{rms}} \propto M^{-1/2}$.
+
+:::
 
 More important in chemistry is the distribution of molecular energies. Chemical reactions and the evaporation of liquids require molecules with sufficiently high energy, so what matters is the fraction of molecules with energy not lower than a threshold $E_0$. According to the **Boltzmann distribution** ([5.2.1](/5.2.1#sec-1.7.2)), the relative probability of a state of energy $E$ is proportional to the **Boltzmann factor** $\mathrm{e}^{-E/(k_{\mathrm{B}}T)}$; in chemistry energies are often given per mole, $E/(k_{\mathrm{B}}T) = E_{\mathrm{m}}/(RT)$, and below $E$ is understood as a molar energy and the exponent is written $\mathrm{e}^{-E/(RT)}$.
 
@@ -142,6 +146,8 @@ $$
 p_2 = \frac{nRT}{V - nb} - \frac{an^2}{V^2} = \frac{3781}{20.0 - 0.0852} - \frac{686.5 \times 1.50^2}{20.0^2} = 189.8 - 3.9 = 186\,\mathrm{kPa},
 $$
 and the relative deviation is $(p_1 - p_2)/p_2 = 1.6\%$. At $V = 2.00\,\mathrm{L}$, $p_1 = 1.89 \times 10^3\,\mathrm{kPa}$ and $p_2 = 1974 - 386 = 1.59 \times 10^3\,\mathrm{kPa}$, so the relative deviation grows to $19\%$: the denser the gas, the more important the attraction correction.
+
+:::
 
 Lowering the temperature weakens thermal motion and raising the pressure brings the molecules closer together, and both favor condensation of the gas to a liquid by intermolecular attraction. Above a certain temperature, however, no pressure, however large, can liquefy the gas; this temperature is the **critical temperature** $T_{\mathrm{c}}$ (the temperature of the **critical point**, [5.2.2](/5.2.2#sec-2.1)).
 
@@ -232,6 +238,8 @@ so $T_2 = 392\,\mathrm{K}$. Vacuum distillation makes use of exactly this, disti
 **Example 1.2.2** The vapor pressures of water at $25\,{}^\circ\mathrm{C}$ and $100\,{}^\circ\mathrm{C}$ are $3.17\,\mathrm{kPa}$ and $101.325\,\mathrm{kPa}$ respectively; estimate the molar enthalpy of vaporization of water from them.
 
 Solution: $\Delta_{\mathrm{vap}}H_{\mathrm{m}} = \dfrac{R\ln(p_2/p_1)}{1/T_1 - 1/T_2} = \dfrac{8.314 \times \ln 31.96}{1/298.15 - 1/373.15}\,\mathrm{J\,mol^{-1}} = 42.7\,\mathrm{kJ\,mol^{-1}}$, which lies between the actual values $44.0$ and $40.7\,\mathrm{kJ\,mol^{-1}}$ at the two end temperatures and is the average over this temperature interval.
+
+:::
 
 For many nonpolar liquids the molar entropy of vaporization at the normal boiling point, $\Delta_{\mathrm{vap}}H_{\mathrm{m}}/T_{\mathrm{b}}$, is close to $85$–$88\,\mathrm{J\,mol^{-1}\,K^{-1}}$; this empirical rule is called *Trouton's rule*, for example benzene $30.7\,\mathrm{kJ\,mol^{-1}}/353.2\,\mathrm{K} = 87\,\mathrm{J\,mol^{-1}\,K^{-1}}$; water ($109$) and ethanol ($110$) are clearly larger because hydrogen bonds in the liquid ([6.1.4](/6.1.4)) make the liquid state more ordered.
 

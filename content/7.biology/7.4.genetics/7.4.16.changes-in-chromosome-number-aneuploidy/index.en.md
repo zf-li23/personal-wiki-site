@@ -46,6 +46,8 @@ For loci far from the centromere, **crossing over** in meiosis I mixes the two p
 
 **Example 16.2.1** A child with Down syndrome has **genotypes** at a marker near the centromere of chromosome 21: mother $13/18$, father $15/16$, child $13/18/16$. The child carries both maternal alleles near the centromere, so the extra chromosome came from the mother by an error in meiosis I. If the child had been $13/13/16$, the error would have been in maternal meiosis II (or, less likely, in meiosis I followed by a crossover between the marker and the centromere; markers nearer the centromere decide). If the child had been $13/15/16$, the extra chromosome would have been paternal.
 
+:::
+
 Such studies show that about $90\,\%$ of trisomy 21 is maternal, about three quarters of the maternal errors in meiosis I, and that the chromosomes 21 that missegregate often had no crossover or a crossover very close to the **telomere** or the centromere: crossover position is a risk factor, as [7.3.21](/7.3.21#sec-21.7.5) explains through the cohesion that holds **bivalents** together. Trisomy 18 is also mostly maternal, but with more MII errors; most 45,X results from loss of the paternal **sex chromosome**; and about half of 47,XXY is paternal, from failure of the X–Y crossover in **pseudoautosomal region** 1 ([7.4.6](/7.4.6)).
 
 ### 16.2.2. The Maternal Age Effect
@@ -125,6 +127,8 @@ In practice $n + 1$ gametes are transmitted less often than $n$ gametes, especia
 
 **Example 16.3.1** A trisomic $AAa$ plant is selfed. (a) If all gametes function equally, the recessive $aa$ offspring arise only from $a \times a$ (an $Aaa$ or $AAa$ zygote has the **dominant** phenotype), with probability $(1/6)^2 = 1/36$: dominant : recessive $= 35 : 1$. (b) If only monosomic ($n$) pollen functions, the pollen is $\frac23\,A : \frac13\,a$ and the eggs as above; $\mathbb{P}(aa) = \frac16 \cdot \frac13 = \frac1{18}$, a ratio of $17 : 1$.
 
+:::
+
 Trisomics were the first method of assigning genes to chromosomes in plants with many chromosomes, before molecular markers.
 
 **Algorithm 16.3.1 (Assigning a Gene to a Chromosome with Trisomics)**
@@ -200,6 +204,8 @@ A hybrid of two diploid species with sets $A$ and $B$ has one set of each. If th
 **Example 16.6.1 (*Raphanobrassica*)** Georgi Karpechenko (1928) crossed radish (*Raphanus sativus*, $2n = 18$) with cabbage (*Brassica oleracea*, $2n = 18$). The hybrids had $9 + 9$ unpaired chromosomes and were almost sterile, but a few produced unreduced gametes, and these gave fertile allotetraploids with $2n = 36$ (18 from each parent), which formed 18 bivalents and bred true. Unfortunately the plants had the root of a cabbage and the leaves of a radish. *Raphanobrassica* was the first new species made in the laboratory: it was reproductively isolated from both parents, because its **backcrosses** were triploid.
 
 **Example 16.6.2 (Genome Analysis by Chromosome Pairing)** Chromosome pairing in hybrids shows which chromosome sets two species share, a method developed by Hitoshi Kihara for wheat (1920s–1930s). Bread wheat (AABBDD, $2n = 42$) crossed with durum wheat (AABB, $2n = 28$) gives a pentaploid hybrid AABBD with $21 + 14 = 35$ chromosomes, which forms $14$ bivalents (the A and B chromosomes of both parents pair) and $7$ univalents (the D chromosomes). Bread wheat crossed with *Triticum timopheevii* (AAGG) gives AABDG, also with 35 chromosomes, but only the A chromosomes pair: $7\,\mathrm{II} + 21\,\mathrm{I}$, which shows that *T. timopheevii* shares only the A genome with bread wheat and that its second genome G differs from B. The univalents of both hybrids segregate at random, so their gametes are unbalanced and the hybrids are largely sterile (Formula 16.4.1 with the 7 or 21 univalents).
+
+:::
 
 An allotetraploid has disomic inheritance: each chromosome pairs only with its homologue from the same parental species, so its genes segregate in $3 : 1$ ratios like those of a diploid, while the two homoeologous copies (one from each subgenome) can diverge in function.
 

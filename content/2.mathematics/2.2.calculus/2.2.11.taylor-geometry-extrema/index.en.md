@@ -1,6 +1,6 @@
 ---
 title: Taylor's Formula, Geometric Applications and Extrema
-source_hash: d78e7356dda0
+source_hash: 97529322cab1
 ---
 
 The total differential of the previous chapter is the first-order approximation of a function of several variables. This chapter puts it to work in two directions. Geometrically, the first-order approximation gives tangent lines to space curves and tangent planes to surfaces. Analytically, the second-order approximation (Taylor's formula) gives tests for extrema: the second-order term is a quadratic form, and the type of an extremum is decided by the definiteness of the Hessian matrix. Finally we treat extremum problems with constraints; the method of Lagrange multipliers rests on the implicit function theorem of [2.2.10](/2.2.10), and its geometric meaning is that the level curve of the objective function is tangent to the constraint curve.
@@ -225,6 +225,8 @@ $$
 $$
 
 and the tangent plane is $(x-x_0)\sin v_0-(y-y_0)\cos v_0+u_0(z-z_0)=0$, where $(x_0,y_0,z_0)=(u_0\cos v_0,u_0\sin v_0,v_0)$.
+
+:::
 
 The cases are summarized below:
 
@@ -453,6 +455,8 @@ By the extreme value theorem, a continuous function on a bounded closed region $
 | $z$ | $2$ | $3$ | $\frac43$ | $\frac53$ | $\frac32$ |
 
 The maximum $3$ is attained at $P_2$ and $P_3$, and the minimum $\frac43$ at the centroid.
+
+:::
 
 For a function of one variable on an interval, a unique extreme point must be a point of global extremum (otherwise the function would be smaller somewhere else, and there would have to be another extreme point in between). Functions of several variables have no such property:
 

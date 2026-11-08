@@ -1,7 +1,7 @@
 ---
 title: The Second Law and Entropy
 description: Common features of spontaneous processes and statements of the second law; Carnot's theorem and the Brayton cycle; entropy, the integrating factor and the Clausius inequality; the principle of entropy increase and the entropy change of the surroundings; entropy changes of ideal-gas pVT changes, heat transfer, mixing and phase transitions; the Nernst heat theorem, perfect crystals and the third law, calorimetric entropy and the Debye T³ extrapolation; entropy changes of chemical reactions; entropy and the degradation of energy.
-source_hash: ab8184378e35
+source_hash: f2c053701392
 ---
 
 The first law of thermodynamics states that energy is conserved, but it cannot tell the direction of a process. A gas does not flow spontaneously from low pressure to high pressure, heat does not pass spontaneously from a cold body to a hot one, and the reaction $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$ releases $286\,\mathrm{kJ\,mol^{-1}}$ of heat, yet returning that heat to the water does not decompose it. If energy is conserved, why is there an "energy crisis" at all? The second law of thermodynamics answers these questions. In physics it was built up from the efficiency of heat engines ([5.2.4](/5.2.4)): two statements, Carnot's theorem, Clausius entropy and Boltzmann entropy. This chapter reorganizes the material from the needs of chemistry, with emphasis on calculations that can be carried out: which criterion to use under which conditions, how to design a reversible path for an irreversible process in order to compute its entropy change, and how to obtain the conventional entropies of substances from calorimetric data and the third law, and with them the entropy changes of chemical reactions. The entropy criterion requires that system and surroundings be considered together, which is inconvenient; the next chapter ([6.3.3](/6.3.3)) derives from it the Helmholtz and Gibbs energy criteria, which involve the system alone. The statistical meaning of entropy ($S = k_{\mathrm{B}}\ln\Omega$) is developed quantitatively in [6.3.10](/6.3.10), and entropy production and entropy flux in open systems are treated in [6.3.18](/6.3.18).
@@ -200,6 +200,8 @@ $$
 
 The system is isolated and its entropy increases: heat conduction is a spontaneous irreversible process. Note that for the isolated system $\Delta U = 0$ but $\Delta H \ne 0$: $\Delta H = \Delta U + V\Delta p$, and the pressure has changed on both sides.
 
+:::
+
 In general, for two identical bodies of isobaric heat capacity $C_p$ at temperatures $T_{\mathrm{h}}$ and $T_{\mathrm{c}}$, which reach $T_2 = (T_{\mathrm{h}} + T_{\mathrm{c}})/2$ after contact,
 
 $$
@@ -293,6 +295,8 @@ $$
 
 so freezing of supercooled water is a spontaneous irreversible process. The entropy of the system decreases, but the heat released on freezing increases the entropy of the surroundings by more. One can also use the Clausius inequality directly: $\Delta S = -20.6\,\mathrm{J\,K^{-1}} > Q/T_{\mathrm{sur}} = -21.41\,\mathrm{J\,K^{-1}}$, so the process is irreversible.
 
+:::
+
 ![Freezing of 1 mol of water at 100 kPa as a function of temperature: the entropy decrease of the water and the entropy increase of the surroundings nearly cancel; their sum is positive below 273.15 K (freezing is spontaneous) and negative above it (melting is spontaneous)](./plots/supercooled-freezing.py)
 
 The figure above extends Example 2.3.6 to other temperatures: $\Delta S_{\text{isolated}}$ vanishes only at $273.15\,\mathrm{K}$, the temperature of two-phase equilibrium, and the farther from the equilibrium temperature, the greater the driving force for freezing (or melting). Multiplying $\Delta S_{\text{isolated}}$ by $-T$ gives the $\Delta G$ of the next chapter ([6.3.3](/6.3.3)).
@@ -366,6 +370,8 @@ so only the heat capacity at $T^*$ need be measured, without knowing $\Theta_{\m
 Solution: Integration of the low-temperature heat capacity of ice (numerical, with $T^3$ extrapolation below $10\,\mathrm{K}$) gives $S_{\mathrm{m}}(\text{ice}, 273.15\,\mathrm{K}) = 38.1\,\mathrm{J\,mol^{-1}\,K^{-1}}$; melting adds $6010/273.15 = 22.0$; liquid water from $273.15$ to $373.12\,\mathrm{K}$ ($C_{p,\mathrm{m}} = 75.3$) adds $23.5$; vaporization adds $40650/373.12 = 108.9$; water vapor from $373.12$ to $423.15\,\mathrm{K}$ ($C_{p,\mathrm{m}} \approx 33.8$) adds $4.3$. The total is $S_{\mathrm{m}} \approx 196.8\,\mathrm{J\,mol^{-1}\,K^{-1}}$; converting to the standard pressure adds $R\ln(101.325/100) = 0.11$. Vaporization accounts for more than half of the total entropy: the entropy of a gas is far greater than that of a condensed phase.
 
 ![Calorimetric entropy of water from 0 K to 423 K (approximate heat capacities). Upper panel: Cp,m/T, whose area gives the heating contributions; lower panel: Sm(T), with jumps of ΔfusH/Tfus at the melting point and ΔvapH/Tb at the boiling point](./plots/water-entropy.py)
+
+:::
 
 The entropy of $\ce{H2O(g)}$ calculated from spectroscopic data and statistical thermodynamics (about $200.7\,\mathrm{J\,mol^{-1}\,K^{-1}}$ at $423\,\mathrm{K}$) is $3$–$4\,\mathrm{J\,mol^{-1}\,K^{-1}}$ larger than the calorimetric entropy above. The difference comes mainly from the disorder in the positions of the hydrogen atoms in ice: ice is not a perfect crystal and has at $0\,\mathrm{K}$ a residual entropy of about $R\ln\frac{3}{2} = 3.4\,\mathrm{J\,mol^{-1}\,K^{-1}}$ (Pauling, 1935), which calorimetry cannot detect. The $S^\circ_{\mathrm{m}}$ in thermodynamic data tables already includes it ([6.3.11](/6.3.11)).
 

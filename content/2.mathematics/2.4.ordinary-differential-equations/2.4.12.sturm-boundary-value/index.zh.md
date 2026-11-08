@@ -231,6 +231,8 @@ $$
 
 **解** 若 $\lambda=-k^2<0$，通解 $y=c_1\mathrm{e}^{kx}+c_2\mathrm{e}^{-kx}$，代入边界条件得 $c_1=c_2=0$。若 $\lambda=0$，$y=c_1x+c_2$，同样只有零解。若 $\lambda=k^2>0$（$k>0$），$y=c_1\cos kx+c_2\sin kx$，由 $y(0)=0$ 得 $c_1=0$，由 $y(\pi)=c_2\sin k\pi=0$ 且 $c_2\ne0$ 得 $k\in\mathbb{N}_+$。所以特征值为 $\lambda_n=n^2$，特征函数为 $\sin nx$，$n=1,2,\dots$（$k$ 取负整数给出同一特征函数的负倍数，不是新的特征值）。
 
+:::
+
 用同样的方法可以得到下表（区间 $[0,l]$；一般区间 $[a,b]$ 把 $x$ 换成 $x-a$、$l$ 换成 $b-a$）。
 
 | 边界条件 | 特征值 $\lambda_n$ | 特征函数 | $n$ 的范围 |
@@ -330,6 +332,8 @@ $$
 例如 $f\equiv1$ 时 $y=\int_0^xt(1-x)\,\mathrm{d}t+\int_x^1x(1-t)\,\mathrm{d}t=\frac{x(1-x)}{2}$，直接验证 $-y''=1$。这里 $G\ge0$：向上的力处处使弦向上弯曲。
 
 ![-y'' = f, y(0) = y(1) = 0 的 Green 函数 G(x, t)：几个固定 t 处的折线](./plots/green-function.py)
+
+:::
 
 若齐次问题有非零解 $\varphi$（即 $0$ 是特征值），Green 函数不存在。此时对自伴算子有 Fredholm 二择一（Fredholm alternative）：$Ly=f$ 在边界条件下可解当且仅当 $\int_a^bf\varphi\,\mathrm{d}x=0$，且有解时解相差 $\varphi$ 的任意倍数。例如 $-y''=f$，$y'(0)=y'(1)=0$（$\varphi=1$）可解当且仅当 $\int_0^1f\,\mathrm{d}x=0$：两端绝热的杆，热源的总和必须为零才可能有稳态温度。
 

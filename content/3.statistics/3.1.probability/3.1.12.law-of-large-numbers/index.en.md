@@ -1,6 +1,6 @@
 ---
 title: The Law of Large Numbers
-source_hash: ab060845b5b6
+source_hash: 517aa216288f
 ---
 
 Developing a vaccine requires a clinical trial: $n$ subjects are recruited at random, and we set $X_i = 1$ if the vaccine is effective for the $i$-th subject and $X_i = 0$ otherwise, where $X_1, X_2, \dots$ are i.i.d. with $\mathbb{P}(X_i = 1) = p$. We can only observe the proportion of effective cases in the trial, $\frac{1}{n}\sum_{i=1}^{n} X_i$ (the **sample mean**), whereas what we want to know is the proportion $p = \mathbb{E}X_1$ in the whole population (the population mean). Can the sample mean reliably estimate the population mean? The *law of large numbers* answers this question: under quite general conditions, the arithmetic mean of i.i.d. random variables converges to their expectation as $n \to \infty$. It is the mathematical form of "relative frequencies stabilize at probabilities", it links the randomness of a single trial with the regularity of many repetitions, and it is the theoretical basis of statistical inference ([3.2](/3.2)) and of stochastic simulation.
@@ -94,6 +94,8 @@ $$
 \frac{1}{n}\sum_{k=1}^{n} X_k \xrightarrow{p} \mathbb{E}X_1.
 $$
 
+:::
+
 Chebyshev's inequality is no longer applicable here, but the theorem can be proved with characteristic functions ([3.1.14](/3.1.14)). For i.i.d. sequences the most general form of the weak law is as follows (the proof is beyond the scope of this course).
 
 **Theorem 12.3.3** Let $\{X_n\}$ be a sequence of i.i.d. random variables. There exists a sequence of real numbers $\{a_n\}$ such that
@@ -115,6 +117,8 @@ The conditions are related by $\operatorname{Var}(X_1) < \infty \Rightarrow \mat
 That is, $\mathbb{P}\left(\lim_{n \to \infty} \frac{1}{n}\sum_{k=1}^{n} X_k = \mathbb{E}X_1\right) = 1$, and $\mathbb{E}\lvert X_1 \rvert < \infty$ is necessary and sufficient. (This is Kolmogorov's strong law of large numbers; its proof is beyond the scope of this course.)
 
 **Example 12.3.1** In Example 12.2.1, the strong law tells us that as $n$ increases, the sample mean $M_n$ almost surely approaches the population mean $p$: for almost every sequence of trials, the proportion of effective cases eventually settles near $p$.
+
+:::
 
 For i.i.d. sequences the weak and strong laws compare as follows:
 
@@ -148,6 +152,8 @@ $$
 $$
 so $\mathbb{E}\lvert X \rvert = \infty$, and by item 2 of Theorem 12.3.4, $\bar X_n$ does not converge almost surely to any finite constant.
 
+:::
+
 At the other extreme is the Cauchy distribution: $n\mathbb{P}(\lvert X_1 \rvert \ge n) \to \frac{2}{\pi} \ne 0$, so even the weak law fails. In fact, by characteristic functions (Example 11.3.7), $\bar X_n$ has characteristic function $[\mathrm{e}^{-\lvert t \rvert/n}]^n = \mathrm{e}^{-\lvert t \rvert}$, so $\bar X_n$ has the same distribution as $X_1$ and does not concentrate no matter how large $n$ is.
 
 ![Running means of standard normal and standard Cauchy samples: the former settles at 0, the latter keeps making large jumps and never converges](./plots/cauchy-vs-normal-means.py)
@@ -174,6 +180,8 @@ F_n(x) := \frac{1}{n}\sum_{j=1}^{n} \boldsymbol{1}_{\{X_j \le x\}} \xrightarrow{
 $$
 that is, with probability $1$, $\lim_n \frac{1}{n}\sum_{j=1}^{n} \boldsymbol{1}_{\{x_j \le x\}} = F(x)$. $\square$
 
+:::
+
 $F_n(x)$ is the **empirical distribution function** of [3.2](/3.2). We have only proved almost sure convergence for each fixed $x$; the stronger **Glivenko–Cantelli theorem** asserts that $\sup_x \lvert F_n(x) - F(x) \rvert \xrightarrow{\text{a.s.}} 0$.
 
 ### 12.4.3. The Monte Carlo Method
@@ -189,6 +197,8 @@ $$
 $$
 
 ![Monte Carlo estimation of pi: on the left, 2000 random points; on the right, the estimate 4 * (fraction inside the circle) as a function of the number of points n](./plots/monte-carlo-pi.py)
+
+:::
 
 The idea of the law of large numbers appears in many other places. In random forests in machine learning, the law of large numbers guarantees that as the number of trees grows, the generalization error converges to a constant rather than growing without bound, so adding trees does not cause overfitting. In stochastic processes, the ergodic theorem states that under suitable conditions the time average along a single trajectory converges to the space average over the state space; it extends the law of large numbers to dependent sequences.
 

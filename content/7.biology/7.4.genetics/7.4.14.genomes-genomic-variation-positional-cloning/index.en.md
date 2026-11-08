@@ -26,6 +26,8 @@ Human genes were assigned to chromosomes long before such maps existed, and most
 
 PGM1 is concordant with chromosome 1 in all six lines and discordant with every other chromosome in at least two (with chromosome 17 in lines C and D), so its gene is on chromosome 1; likewise *LDHA* is on chromosome 11 and *TK1* on chromosome 17, as they are. With $k$ lines, two chromosomes retained independently with probability $1/2$ each share a pattern with probability $2^{-k}$; a panel must have enough lines that no two chromosomes share a pattern (Question 14).
 
+:::
+
 **Genetic map**, physical map and sequence are now one coordinate system: each genetic marker has a sequence and hence a position in base pairs, and plotting genetic against physical position (a Marey map, [7.4.8](/7.4.8#sec-8.8)) shows how the rate of **crossing over** varies along each chromosome.
 
 ## 14.2. Assembling a Genome

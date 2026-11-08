@@ -34,6 +34,8 @@ General transcription factors are distinguished from gene-specific factors (acti
 
 ![Architecture of the class II preinitiation complex (schematic, not to scale). TBP binds the minor groove of the TATA box and bends the DNA by about 80°; TFIIA and TFIIB clamp TBP from either side, TFIIB contacting the BREs and reaching with its N-terminal domains into Pol II; TFIIF binds the polymerase; TFIIE and TFIIH bind downstream, where the XPB translocase of TFIIH grips the DNA about 20–30 bp downstream of the start site. The DNA is melted from about −9 to +2 in the open complex; the bars below give the footprints of Example 13.1.2](./plots/pic-architecture.py)
 
+:::
+
 The stepwise order is a property of the reaction in vitro. In cells, Pol II is also found in a large complex, often called the Pol II **holoenzyme**, containing the polymerase, TFIIB, TFIIF, TFIIH and the Mediator coactivator complex (Koleske and Young, 1994), which suggested an alternative pathway in which TFIID (or TBP) binds the promoter and the rest arrives in one step. The two pathways differ in the number of steps that must be completed before initiation, and this has a measurable consequence.
 
 **Formula 13.1.1 (Waiting time for multistep assembly)** If a complex forms through $m$ consecutive irreversible steps, each occurring at rate $k$ (in $\mathrm{s^{-1}}$, a pseudo-first-order rate constant at fixed factor concentrations), the time $T$ to completion is the sum of $m$ independent exponential waiting times; it follows the **Erlang distribution**
@@ -185,6 +187,8 @@ A third factor, TIF-IA (RRN3), binds Pol I and connects it to SL1; its activity 
 | TFIIIC | six subunits, about $600\,\mathrm{kDa}$ in yeast | binds box A (τA lobe) and box B (τB lobe), joined by a flexible linker so that it can span boxes $30$–$90$ bp apart; assembly factor that positions TFIIIB |
 | TFIIIB | TBP, Brf1 (TFIIB-related) and Bdp1 | binds about $40$ bp upstream of the start site without sequence specificity; recruits Pol III; remains bound for repeated rounds |
 | SNAPc | five subunits | binds the PSE of type 3 promoters; with TFIIIB containing Brf2 instead of Brf1 |
+
+:::
 
 The order of assembly is the reverse of the logic for Pol II: TFIIIC (with TFIIIA at 5S rRNA genes) binds the internal promoter first and serves as the center around which the complex organizes; TFIIIB is then placed upstream, and only TFIIIB contacts the polymerase. Pol III then transcribes, terminates at a run of T residues and is recaptured efficiently by the same gene ("facilitated recycling"). TFIIIA also binds 5S rRNA; in *Xenopus* oocytes most TFIIIA is stored in a particle with 5S rRNA, so that accumulation of the product limits the factor needed for its own synthesis.
 

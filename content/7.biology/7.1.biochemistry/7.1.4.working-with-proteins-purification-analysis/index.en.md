@@ -155,6 +155,8 @@ Two neighboring peaks of the series, $m_1$ (charge $z$) and $m_2 < m_1$ (charge 
 
 **Example 4.3.2** The ESI spectrum of apomyoglobin contains neighboring peaks at $m/z = 1131.11$ and $1060.48$. Then $z = (1060.48 - 1.007)/(1131.11 - 1060.48) = 15.0$ for the first peak, and $M = 15 \times (1131.11 - 1.007) = 16\,951.5\,\mathrm{Da}$, the mass of horse-heart apomyoglobin. With a mass accuracy of 1–2 Da, a modification such as a single phosphorylation (+80 Da) or a missing residue is immediately detected.
 
+:::
+
 Mass spectrometry also sequences peptides. In **tandem mass spectrometry** (MS/MS) one peptide ion is selected, fragmented by collisions with an inert gas, mainly at its peptide bonds, and the masses of the fragments are measured. Fragments containing the N-terminus (b ions) and the C-terminus (y ions) form two ladders whose successive differences are the masses of the residues, so the sequence can be read directly; only Leu and Ile (identical mass) and, at low resolution, Gln and Lys (128.059 and 128.095 Da) are hard to distinguish. In practice the protein mixture is digested with trypsin, the peptides are separated by HPLC and passed directly into the mass spectrometer, and the measured spectra are matched against the spectra predicted for all tryptic peptides of the organism's genome-encoded proteins. This "bottom-up" or "shotgun" approach, together with **peptide mass fingerprinting**, identifies thousands of proteins and their modifications in one experiment and is the workhorse of proteomics.
 
 ### 4.3.5. Sequences from Genes, and Peptides by Synthesis

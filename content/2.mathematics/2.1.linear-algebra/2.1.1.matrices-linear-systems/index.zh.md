@@ -85,6 +85,8 @@ $$
   所以只要知道标准坐标向量的像，旋转就完全确定。
 - 关于过原点的直线 $\ell_\theta: x_2\cos\theta - x_1\sin\theta = 0$（与 $x_1$ 轴夹角为 $\theta$）的反射 $H_\theta$ 是线性变换；直线不过原点时，反射不是线性映射。
 
+:::
+
 旋转的例子说明了一般规律。设 $f\colon \mathbb{R}^n \to \mathbb{R}^m$ 是线性映射，记 $\boldsymbol{a}_i = f(\boldsymbol{e}_i) \in \mathbb{R}^m$。对 $\boldsymbol{x} = x_1\boldsymbol{e}_1 + \cdots + x_n\boldsymbol{e}_n$，
 
 $$
@@ -521,6 +523,8 @@ $$
 A^k = \boldsymbol{u}(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})\cdots(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})\boldsymbol{v}^{\mathsf T} = (\boldsymbol{v}^{\mathsf T}\boldsymbol{u})^{k-1}\boldsymbol{u}\boldsymbol{v}^{\mathsf T}.
 $$
 
+:::
+
 矩阵乘法与数的乘法有三点主要区别：
 
 - 一般不满足交换律。$AB$ 与 $BA$ 不一定同时有意义；都有意义时，只有 $A, B$ 是同阶方阵才同阶；即使同阶也可能不相等：
@@ -534,6 +538,8 @@ $$
 - 有零因子：两个非零矩阵的乘积可以是零矩阵，所以 $AB = O$ 推不出 $A = O$ 或 $B = O$。
 
 **例 1.10.3** $I_mA = A = AI_n$；$kI_n$ 称为数量矩阵，$(kI_n)A = kA$。平面上两个旋转的复合仍是旋转，$R_{\theta_1}R_{\theta_2} = R_{\theta_1 + \theta_2} = R_{\theta_2}R_{\theta_1}$，比较两边的元素就得到三角函数的和角公式。反射与自身的复合是恒等变换：$H_\theta^2 = I_2$，可以直接用 $\cos^2 2\theta + \sin^2 2\theta = 1$ 验证。
+
+:::
 
 最后定义一个常用的数值特征。
 

@@ -124,6 +124,8 @@ Kraken 2 (Wood and colleagues 2019) uses $k = 35$ with minimizers of length $31$
 
 ![Kraken-style classification of one read. A: its 30 minimizers colored by the taxon stored for each in the database (white: not in the database). B: the hits on the taxonomy; the root-to-leaf path scores are 19 for *Escherichia coli*, 15 for *Salmonella enterica* and 3 for the Bacillales species, so the read is assigned to *E. coli*; with a confidence threshold of 0.7 it is assigned to Bacteria, the first node whose clade holds 70 % of the minimizers](./plots/kraken-lca.py)
 
+:::
+
 Many reads are assigned above species level, because closely related species share most of their $k$-mers. Abundance estimates at species level must redistribute them.
 
 **Formula 14.3.1 (Bayesian Redistribution of Reads)** Let $\theta_{st}$ be the probability that a read from species $s$ is classified at taxon $t$ (estimated by classifying simulated reads from the reference genomes of $s$). If $R_s$ reads are classified at the species $s$ itself, the number of reads from $s$ is estimated by $\hat N_s = R_s/\theta_{ss}$, and the $R_t$ reads at a higher taxon $t$ are divided among the species below it in proportion to the expected contributions:
@@ -173,6 +175,8 @@ $$
 CheckM (Parks and colleagues 2015) uses lineage-specific sets of such genes, grouped into sets that occur together on chromosomes so that neighboring genes are not counted twice; CheckM2 predicts both quantities with a machine-learning model trained on genomes with simulated gaps and contamination, which also works for lineages with few reference genomes.
 
 **Example 14.3.4** A bin contains $112$ of $120$ single-copy markers once, $4$ twice and lacks $4$. Its completeness is $116/120 = 96.7\,\%$ and its contamination $4/120 = 3.3\,\%$. By the minimum information standards for MAGs (MIMAG; Bowers and colleagues 2017) it is a medium-quality draft unless its rRNA genes are present: high quality requires more than $90\,\%$ completeness, less than $5\,\%$ contamination, the 23S, 16S and 5S rRNA genes and at least $18$ tRNAs; medium quality at least $50\,\%$ completeness and less than $10\,\%$ contamination. rRNA operons are often missing from short-read MAGs because they are repeated in the genome and collapse in assembly.
+
+:::
 
 MAGs have changed microbiology: hundreds of thousands of them from human guts, oceans and soils have added whole phyla of uncultured organisms to the tree of life, and the Genome Taxonomy Database classifies them by their position in a genome phylogeny (GTDB-Tk). A MAG is a consensus of a population, not one cell: strain variation is averaged, and mobile elements and plasmids, with coverage and composition different from the chromosome, are often missing.
 
@@ -230,6 +234,8 @@ A curve that flattens indicates that further sequencing would find few new taxa.
 ![Rarefaction of two simulated communities (log-normal abundances, 20 000 reads each). A: expected taxa observed in subsamples of n reads (Definition 14.4.2); dashed lines are the true richness, 150 and 1500. Community 1 is nearly saturated (149 taxa observed, Chao1 149), community 2 is not (1401 observed, Chao1 1453). At 100 reads the samples show 52 and 91 taxa, at 1000 reads 120 and 536: comparisons at equal depth preserve the ordering, raw comparisons at unequal depth do not. B: Hill numbers against order q; the effective number of taxa falls from 149 to 75 and 51 (q = 0, 1, 2) in community 1 and from 1401 to 745 and 441 in community 2](./plots/rarefaction.py)
 
 **Example 14.4.2** For the five-taxon sample of Example 14.4.1 ($N = 100$), the expected richness in subsamples of $5$, $10$, $20$ and $50$ reads is $2.76$, $3.58$, $4.27$ and $4.87$: the rarest taxon, with $3$ reads, is found in a subsample of $10$ with probability $1 - \binom{97}{10}/\binom{100}{10} = 0.27$.
+
+:::
 
 *Rarefying*, randomly subsampling every sample to the same depth before analysis, makes richness comparable but discards data and adds random noise; for differential abundance it loses power and is not recommended (McMurdie and Holmes 2014), while for diversity comparisons it remains common, with repeated subsampling or coverage-based standardization (comparing samples at equal estimated completeness, Chao and Jost 2012) as better alternatives.
 

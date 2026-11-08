@@ -117,6 +117,8 @@ Hence the largest normalized single-precision number is $(2-2^{-23})\times2^{127
 - `0 00000111 11000000000000000000000`: $E=2^0+2^1+2^2=7$ and $M=2^{-1}+2^{-2}=0.75$, so the value is $+1.75\times2^{7-127}\approx1.316554\times10^{-36}$;
 - `1 10000001 01100000000000000000000`: $E=2^0+2^7=129$ and $M=2^{-2}+2^{-3}=0.375$, so the value is $-1.375\times2^{129-127}=-5.5$.
 
+:::
+
 Normalized numbers leave a gap between $0$ and $2^{e_{\min}}$, while just above $2^{e_{\min}}$ they are spaced $2^{e_{\min}-23}$ apart. IEEE 754 fills this gap by allowing a significand without the hidden bit when the exponent field is $E=0$: the leading $1$ becomes $0$, $1.M\times2^{e_{\min}}\Rightarrow0.M\times2^{e_{\min}}$.
 
 **Definition 1.2.3 (Subnormal Number)** A floating-point number with exponent field $E=0$ and fraction $M\ne0$ is called a **subnormal number** (or denormalized number); its value is $\pm0.M\times2^{e_{\min}}$, with $e_{\min}=-126$ in single precision. When a subnormal number is the result of an arithmetic operation, one speaks of *gradual underflow* (graceful underflow); an **underflow** in general is a nonzero result smaller in magnitude than the smallest normalized number.
@@ -145,6 +147,8 @@ $$
 and the smallest positive subnormal number is $2^{-n}\times2^{2-2^{k-1}}$. For single precision ($k=8$, $n=23$) these are $(1-2^{-23})\times2^{-126}\approx1.18\times10^{-38}$, just below the smallest normalized number $2^{-126}$, and $2^{-149}$.
 
 ![Top: all nonnegative numbers of a toy binary system with precision p = 3 and exponents -1 to 2; the normalized numbers are equally spaced between consecutive powers of 2 and the gap doubles at each power, while the subnormal numbers fill the interval between 0 and 2^-1 with the smallest gap. Bottom: in IEEE double precision the gap to the next number, divided by x, oscillates between 2^-53 and 2^-52](./plots/float-number-line.py)
+
+:::
 
 The figure shows the key feature of floating-point numbers: the absolute gaps scale with the size of the numbers, while the relative gaps stay within a factor of $2$. If $x=1.M\times2^{e}$ is a normalized single-precision number, the next number is $x+2^{e-23}$, and the ratio of the gap to $x$ is $2^{-23}/1.M\in(2^{-24},2^{-23}]$. In particular, every integer $n$ with $|n|\le2^{24}=16\,777\,216$ is exactly representable in single precision, so such integers are added, subtracted and multiplied without rounding error as long as the results stay in this range; above about $\pm16.8$ million the gaps exceed $1$ and some integers are missed.
 
@@ -266,6 +270,8 @@ sprintf("%.20f", 0.08)
 [1] "0.08000000000000000167"
 ```
 
+:::
+
 The lesson is never to test floating-point numbers for exact equality with `==`. Compare them with a tolerance instead, either explicitly, as `abs(x - y) < tol`, or with `all.equal`, which tests "near equality" with a default relative tolerance of $1.5\times10^{-8}$ and returns `TRUE` or a description of the difference (wrap it in `isTRUE()` inside `if` conditions):
 
 ```r
@@ -319,6 +325,8 @@ The forward error asks "how far is the answer from the truth?"; the backward err
 
 **Example 1.3.1 (Computing $\sqrt2$)** Let $f(x)=\sqrt x$, and suppose some algorithm gives $\tilde f(2)=1.41$. The forward error is $\Delta y=1.41-\sqrt2\approx-0.004213562$. Since $1.41=\sqrt{1.9881}$, the computed value is the exact square root of $\tilde x=1.41^2$, and the backward error is $\min\{|\tilde x-x|:f(\tilde x)=\tilde f(x)\}=2-1.41^2=0.0119$.
 
+:::
+
 We would be happy if $\Delta y$ were always tiny, but this cannot always be achieved; small backward errors are often the best one can hope for. The following definitions measure errors relative to the size of the data and solutions and compare them with the unit roundoff; $h(t)=O(g(t))$ means that there is a constant $C>0$ with $\|h(t)\|\le Cg(t)$ for all $t$ sufficiently close to the limit under consideration (here $u\to0$, thinking of a sequence of ever more precise machines).
 
 **Definition 1.3.3 (Accuracy, Stability, Backward Stability)** An algorithm $\tilde f$ for a problem $f$ is
@@ -368,6 +376,8 @@ multiplication is accurate. It is also backward stable: write $1+\mu=(1+\mu_1)(1
 
 **Example 1.3.3 (Addition)** $\operatorname{fl}(x)\oplus\operatorname{fl}(y)=\bigl(x(1+s)+y(1+t)\bigr)(1+\mu)=x(1+s)(1+\mu)+y(1+t)(1+\mu)$ is the exact sum of $\tilde x=x(1+s)(1+\mu)$ and $\tilde y=y(1+t)(1+\mu)$, both relative perturbations of size $O(u)$: computing $f(x,y)=x+y$ this way is backward stable. Now consider $f(x)=x+1$ computed as $\operatorname{fl}(x)\oplus1=\bigl(x(1+s)+1\bigr)(1+\mu)$. The only $\tilde x$ with $\tilde x+1$ equal to the result is $\tilde x=x(1+s)(1+\mu)+\mu$, and for $x\approx0$ the relative perturbation $|\tilde x-x|/|x|\approx|\mu|/|x|$ is not $O(u)$. The algorithm is not backward stable (it is still stable, since the result is accurate): the constant $1$ is treated as exact data, so the error cannot be thrown back onto it.
 
+:::
+
 Subtraction can lose all accuracy. Let the significand have $m+1$ bits, and take
 
 $$
@@ -387,6 +397,8 @@ The absolute error is as large as the target quantity: no digit of the output is
 IEEE 754 arithmetic, being correctly rounded, behaves even better (relative error at most $u$), so the subtraction of two stored numbers is always accurate. Catastrophic cancellation does not introduce a new error; it exposes the errors already present in the operands.
 
 **Example 1.3.4** Let $b=3.34$, $a=1.22$, $c=2.28$, so that $b^2-4ac=11.1556-11.1264=0.0292$. In decimal arithmetic with three significant digits, $b^2=11.1556\approx11.2$ and $4ac=11.1264\approx11.1$, so the computed discriminant is $0.1$, more than three times too large. The subtraction itself was exact; it only revealed the errors made in the two multiplications. Rounding the products to four digits instead, $11.16-11.13=0.03$, is already close.
+
+:::
 
 To avoid catastrophic cancellation, rewrite formulas so that nearly equal *computed* quantities are not subtracted:
 
@@ -436,6 +448,8 @@ $$
 r(c)=\frac{-b\pm\sqrt{b^2-4ac}}{2a}=1\pm\sqrt{1-c},
 $$
 and suppose that the algorithm $\tilde r(c)=r\bigl(c(1-\varepsilon)\bigr)$ makes a relative error $\varepsilon=0.0001$ in the coefficient. For $c=1$, $r(1)=1$ (a double root), but $\tilde r(1)=r(0.9999)=1\pm\sqrt{0.0001}=1\pm0.01$. The forward error $0.01$ is a hundred times the relative perturbation $\varepsilon$, so the algorithm is not accurate. Yet for every $c$, $\tilde r=1\pm\sqrt{1-c(1-\varepsilon)}$ is the exact root for the coefficient $\tilde c=-(\tilde r^2-2\tilde r)=c(1-\varepsilon)$, a backward error of $|c-\tilde c|=c\varepsilon$: the algorithm is backward stable. A small perturbation of the coefficients causes a large change of the roots, and this is a property of the problem, not of the algorithm.
+
+:::
 
 Consider a problem as a function $f\colon X\to Y$ from a normed vector space $X$ of data to a normed vector space $Y$ of solutions.
 

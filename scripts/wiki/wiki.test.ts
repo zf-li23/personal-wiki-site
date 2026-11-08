@@ -202,6 +202,30 @@ describe('markdown rendering', () => {
     assert.match(block, /则称/);
     assert.match(html, /<\/div>\s*<p>另一段/);
   });
+  it('keeps a continuation paragraph after a list inside a definition, but not ordinary text', async () => {
+    const { html } = await render('## 13.1. A\n\n**定义 13.1.1** 设 $f$ 满足：\n\n1. 甲；\n2. 乙。\n\n则称 $f$ 为好的。\n\n另一段。');
+    const block = html.slice(html.indexOf('id="def-13.1.1"'), html.indexOf('另一段'));
+    assert.match(block, /则称/);
+    assert.match(html, /<\/div>\s*<p>另一段/);
+  });
+  it('does not take 即使 or 即便 as the continuation word 即', async () => {
+    const { html } = await render('## 13.1. A\n\n**定义 13.1.1** 设\n\n$$\nx = 1\n$$\n\n即使如此，另一段。');
+    assert.match(html, /<\/div>\s*<p>即使如此/);
+  });
+  it('runs an example on through tables and text until the next heading or statement', async () => {
+    const { html } = await render('## 13.1. A\n\n**例 13.1.1** 求解。\n\n| a | b |\n|---|---|\n| 1 | 2 |\n\n所以答案是 3。\n\n**定义 13.1.1** 设\n\n## 13.2. B\n\n**例 13.2.1** 再求。\n\n第二段解答。\n\n## 小结\n\n要点');
+    const ex1 = html.slice(html.indexOf('id="ex-13.1.1"'), html.indexOf('id="def-13.1.1"'));
+    assert.match(ex1, /所以答案是 3/);
+    const ex2 = html.slice(html.indexOf('id="ex-13.2.1"'), html.indexOf('小结'));
+    assert.match(ex2, /第二段解答/);
+    assert.match(html, /<\/div>\s*<h2[^>]*>[^]*小结/);
+  });
+  it('lets ":::" end a statement explicitly, longer or shorter than the automatic rule', async () => {
+    const { html } = await render('## 13.1. A\n\n**定义 13.1.1** 设\n\n补充一段。\n\n:::\n\n**例 13.1.1** 求。\n\n解答。\n\n:::\n\n一般讨论。\n\n## 小结\n\n要点');
+    assert.match(html.slice(html.indexOf('id="def-13.1.1"'), html.indexOf('id="ex-13.1.1"')), /补充一段/);
+    assert.match(html, /<\/div>\s*<p>一般讨论/);
+    assert.doesNotMatch(html, /<p>:::<\/p>/);
+  });
   it('warns about Chinese text left on an English page', async () => {
     const { messages } = await render('## 13.1. Basics\n\nA set 集合 and $\\text{若}$.', { lang: 'en' });
     assert.equal(messages.filter((m) => m.includes('Chinese text on an English page')).length, 2);

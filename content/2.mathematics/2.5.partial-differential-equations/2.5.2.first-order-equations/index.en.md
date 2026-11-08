@@ -179,6 +179,8 @@ u(x,y)=x-y+\frac2y,\qquad y>0.
 $$
 Check: $u_x=1$, $u_y=-1-\frac2{y^2}$, and $(y+u)-y-\frac2y=x-y$. Here the data determined $G$ in Eq. (2.8) to be $G(\Psi_1,\Psi_2)=\Psi_2+2$.
 
+:::
+
 For $n$ independent variables everything carries over: the equation $\sum_{i=1}^nP_i(x,u)u_{x_i}=R(x,u)$ has the characteristic system $\frac{\mathrm{d}x_i}{\mathrm{d}s}=P_i$, $\frac{\mathrm{d}z}{\mathrm{d}s}=R$, the data are given on a hypersurface of dimension $n-1$, and the noncharacteristic condition says that the projected characteristic direction $(P_1,\dots,P_n)$ is not tangent to it.
 
 ## 2.3. The Inviscid Burgers Equation and Shock Waves
@@ -276,6 +278,8 @@ in which a fan of characteristics through the origin fills the gap (check: $u=x/
 
 ![Riemann problems for Burgers' equation in the (x, t)-plane. Left: u_l = 1 > u_r = 0, the characteristics run into a shock x = t/2. Right: u_l = 0 < u_r = 1, a rarefaction fan u = x/t](./plots/riemann-problems.py)
 
+:::
+
 Weak solutions are therefore not unique, and an additional selection principle is needed. For the Burgers equation it is the *entropy condition* $u_l>\xi'>u_r$: characteristics must run into a shock from both sides, never out of it. With this condition the initial value problem for Eq. (2.14) with convex flux $F$ has exactly one weak solution (Oleinik, Kruzhkov), and its theory is a large part of modern gas dynamics.
 
 The same mathematics describes traffic. If $\rho(x,t)$ is the density of cars on a road and the speed of the cars is $v(\rho)=v_{\max}(1-\rho/\rho_{\max})$, conservation of cars gives $\rho_t+F(\rho)_x=0$ with $F(\rho)=\rho\,v(\rho)$. A shock is the sudden braking at the back of a traffic jam; a rarefaction wave is the gradual dissolution of a queue at a traffic light that turns green.
@@ -324,6 +328,8 @@ $$
 u=\frac{(ax+y+c)^2}{4a},\qquad c=b\sqrt a.
 $$
 Check: $u_x=\frac{ax+y+c}{2}$ and $u_y=\frac{ax+y+c}{2a}$, whose product is $u$.
+
+:::
 
 For the **Clairaut equation** $u=xp+yq+f(p,q)$ ([2.4.14](/2.4.14#sec-14.5)), Eq. (2.18) gives $\mathrm{d}p=\mathrm{d}q=0$ directly, which explains why its complete integral is the family of planes $u=ax+by+f(a,b)$. The Hamilton–Jacobi equation of classical mechanics, $S_t+H(x,\nabla S)=0$, is a fully nonlinear first-order equation of the same kind; for it the characteristic system (2.18) is exactly Hamilton's equations of motion.
 

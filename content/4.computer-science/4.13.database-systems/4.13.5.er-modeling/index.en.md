@@ -32,6 +32,8 @@ The **E-R model** distinguishes several kinds of **attributes**:
 
 **Example 5.2.1** The genomic location of a gene is a **composite attribute** with the components chromosome, start, end and strand; the length of a gene is derived ($\mathit{end} - \mathit{start} + 1$); the alternative symbols of a gene (TP53 is also known as p53 and LFS1) form a **multivalued attribute**. A donor's age at collection is derived from the date of birth and the collection date. An attribute takes the **null value** when the entity has no value for it or the value is unknown ([4.13.2](/4.13.2#sec-2.6)).
 
+:::
+
 Composite attributes let the design be read at different levels of detail; multivalued attributes cannot be stored in a single column of a **relation** in first normal form and become separate relations (§5.8.2). **Derived attributes** are usually not stored, so that they cannot become inconsistent with their sources; when a derived value is expensive to compute or legally required in its recorded form (such as the age recorded at collection), storing it is a deliberate decision.
 
 ## 5.3. Relationship Sets

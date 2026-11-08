@@ -1,7 +1,7 @@
 ---
 title: Binary Trees
 description: Terminology and representations of rooted and ordered trees; properties of binary trees, perfect, proper and complete binary trees; recursive and iterative algorithms for preorder, inorder, postorder and level-order traversal and their analysis; reconstructing a binary tree from traversal sequences; prefix codes and Huffman coding; lower bounds and reductions for comparison-based algorithms.
-source_hash: 03b86dee8212
+source_hash: d2758a3aec7d
 ---
 
 A **vector** ([4.3.2](/4.3.2)) lets us access an element by **rank** in constant time, but insertion and deletion must move many elements; a **list** ([4.3.3](/4.3.3)) supports insertion and deletion in constant time, but access by rank must count from the head. Trees combine the strengths of both: as long as a tree is "short" enough, search, insertion and deletion all take only logarithmic time. Trees are also the natural tool for representing hierarchical relations: expressions, file systems, URLs and the syntactic structure of programs are all trees. A tree is not a linear structure, but once an access order (a traversal) is fixed it acquires linear features, which is why it is called a semilinear structure.
@@ -221,6 +221,8 @@ flowchart TB
 
 The preorder sequence is $a\,b\,d\,c\,e$, the inorder sequence is $b\,d\,a\,e\,c$, the postorder sequence is $d\,b\,e\,c\,a$, and the level-order sequence ([5.3.6](#sec-5.3.6)) is $a\,b\,c\,d\,e$.
 
+:::
+
 Each of the three traversals has typical applications. Preorder traversal outputs a file tree in the order "directory first, then contents"; inorder traversal is the soul of binary search trees ([4.3.6](/4.3.6)): the inorder sequence of a binary search tree is the sorted arrangement of all its keys; postorder traversal handles the subtrees before the root and suits computing the result for a whole tree from the results of its subtrees, for example computing height and size, or freeing a whole subtree.
 
 **Example 5.3.2** An arithmetic expression can be represented as a binary tree: the leaf nodes are operands, the internal nodes are operators, and their left and right subtrees are the two operands. The expression tree of $(a + b) \times (c - d / e)$ is
@@ -238,6 +240,8 @@ flowchart TB
 ```
 
 Its inorder sequence (with the necessary parentheses added) is the usual infix expression, its preorder sequence `× + a b − c / d e` is the prefix expression (Polish notation), and its postorder sequence `a b + c d e / − ×` is the postfix expression (reverse Polish notation). A postfix expression needs no parentheses and can be evaluated with a single stack ([4.3.4](/4.3.4)): a postorder traversal of the expression tree is exactly the process of evaluation.
+
+:::
 
 The recursive implementations of the three traversals take only a few lines each (see `pre_rec`, `in_rec` and `post_rec` in [5.3.7](#sec-5.3.7)), with running time $T(n) = T(\lvert L\rvert) + T(\lvert R\rvert) + O(1) = O(n)$. But **recursion** relies on the system's **call stack**, with recursion depth equal to the height of the tree, and a degenerate tree (such as a long chain) causes **stack overflow**: the default stack on Linux is usually only 8 MB, and Python's default recursion depth limit is only 1000. More importantly, the iterative versions let us see the structure of the traversal process. Below, with the help of an explicit **stack**, we give iterative algorithms for the three traversals.
 

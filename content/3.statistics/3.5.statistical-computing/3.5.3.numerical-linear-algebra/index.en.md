@@ -90,6 +90,8 @@ $$
 A=\begin{bmatrix}1&&&\\2&1&&\\4&3&1&\\3&4&1&1\end{bmatrix}\begin{bmatrix}2&1&1&0\\&1&1&1\\&&2&2\\&&&2\end{bmatrix}=LU .
 $$
 
+:::
+
 The factor $L$ is obtained without any computation, thanks to two "strokes of luck".
 
 **Proposition 3.1.1 (Two Strokes of Luck)** (a) $L_k^{-1}=I+\boldsymbol{\ell}_k\boldsymbol{e}_k^{\mathsf T}$ is obtained from $L_k$ by negating its subdiagonal entries. (b) $L=L_1^{-1}\cdots L_{m-1}^{-1}$ is the unit lower triangular matrix with the multipliers $l_{jk}$ inserted in the appropriate places.
@@ -388,6 +390,8 @@ kappa(A)                             # 141422.4 (an estimate)
 kappa(t(A) %*% A)                    # 19999989553
 ```
 
+:::
+
 There are three main ways to compute a QR decomposition: Gram–Schmidt orthogonalization, Householder triangularization and Givens rotations.
 
 ### 3.2.4. Gram–Schmidt Orthogonalization
@@ -407,6 +411,8 @@ $$
 \boldsymbol{q}_3=(0,-1,0,1)^{\mathsf T}/\sqrt2 .
 $$
 Here $\boldsymbol{q}_1^{\mathsf T}\boldsymbol{q}_2=-\varepsilon/\sqrt2\approx0$, but $\boldsymbol{q}_2^{\mathsf T}\boldsymbol{q}_3=1/2$: orthogonality is completely lost.
+
+:::
 
 The cure comes from the view of orthogonal projectors. Gram–Schmidt computes $\boldsymbol{q}_j=P_j\boldsymbol{a}_j/\|P_j\boldsymbol{a}_j\|$, where $P_1=I$ and, for $j\ge2$,
 
@@ -457,6 +463,8 @@ MGS <- function(A) {
 ```
 
 **Example 3.2.3** The singular matrix with columns $(1,2,3)^{\mathsf T},(4,5,6)^{\mathsf T},(7,8,9)^{\mathsf T}$ has rank $2$. Run through `MGS`, the third column $\boldsymbol{v}_3$ becomes exactly $\boldsymbol{0}$, so $r_{33}=0$ and $\boldsymbol{q}_3$ is `NaN`: the method exposes the rank deficiency. `CGS` instead returns $r_{33}=5.6\times10^{-15}$ and a third column that agrees with $\boldsymbol{q}_2$ to about $15$ digits, so that $\tilde Q^{\mathsf T}\tilde Q$ has entries $1$ off the diagonal, and the problem goes unnoticed.
+
+:::
 
 *Operation count.* In Algorithm 3.2.2 most of the work is the inner loop, $r_{ij}=\boldsymbol{q}_i^{\mathsf T}\boldsymbol{v}_j$ ($m$ multiplications and $m-1$ additions) and $\boldsymbol{v}_j=\boldsymbol{v}_j-r_{ij}\boldsymbol{q}_i$ ($m$ multiplications and $m$ subtractions), about $4m$ flops per iteration:
 
@@ -528,6 +536,8 @@ $$
 Then $A\boldsymbol{x}-\boldsymbol{b}=\begin{bmatrix}A&\boldsymbol{b}\end{bmatrix}\begin{bmatrix}\boldsymbol{x}\\-1\end{bmatrix}=Q(R\boldsymbol{x}-\boldsymbol{z})-\rho\boldsymbol{q}_{n+1}$, and since $\boldsymbol{q}_{n+1}$ is orthogonal to the columns of $Q$, $\|A\boldsymbol{x}-\boldsymbol{b}\|_2^2=\|R\boldsymbol{x}-\boldsymbol{z}\|_2^2+\rho^2$. The solution is $\boldsymbol{x}=R^{-1}\boldsymbol{z}$, where $\boldsymbol{z}$ is computed as part of the MGS procedure instead of as the product $Q^{\mathsf T}\boldsymbol{b}$. Used this way MGS is stable for least squares, although it can give poor results when used to compute an orthonormal basis: the stability of an algorithm depends on the problem.
 
 **Example 3.2.4** For the singular matrix of Example 3.2.3, a Householder implementation returns a $\tilde Q$ with $\|\tilde Q^{\mathsf T}\tilde Q-I\|$ of order $10^{-16}$ and an $\tilde R$ whose last diagonal entry is $-4.4\times10^{-16}$, a clear signal of rank deficiency; the CGS factor has $\tilde Q^{\mathsf T}\tilde Q$ with off-diagonal entries equal to $1$.
+
+:::
 
 *QR in R.* The function `qr` computes a Householder QR decomposition (by the LINPACK routine `dqrdc2`, or by LAPACK with `LAPACK = TRUE`) and returns it in compact form:
 
@@ -669,6 +679,8 @@ for (j in c(3, 5, 10, 20, 30)) {
 }
 ```
 
+:::
+
 *Principal component analysis.* High-dimensional data matrices are hard to use. As the number $p$ of variables grows with the sample size $n$ fixed, the number of samples needed for good prediction grows exponentially, and algorithms tend to overfit, so that their performance first increases and then decreases with $p$ (the Hughes phenomenon). This is part of the curse of dimensionality: the volume of the space increases so fast that the data become sparse, most of the data lie in a thin "shell", all points become nearly equidistant so that distance-based methods perform poorly, and the data can no longer be visualized. Reducing the dimension of a data matrix $X_{n\times p}$ means reducing $p$, the number of variables, while retaining as much of the variance as possible. **Principal component analysis** ([3.4.5](/3.4.5)) does this with the SVD.
 
 Let the rows $\boldsymbol{X}_{(i)}^{\mathsf T}$ of $X$ be the data points, and assume that the columns of $X$ are centered (and, if desired, scaled). The projection of a data point onto a unit vector $\boldsymbol{v}_1$ is $\boldsymbol{v}_1\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}$, with coefficient $\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}=\boldsymbol{X}_{(i)}^{\mathsf T}\boldsymbol{v}_1$; for all points at once, $\boldsymbol{Y}_1=X\boldsymbol{v}_1\in\mathbb{R}^n$. With the sample covariance matrix $\frac1{n-1}X^{\mathsf T}X$,
@@ -746,6 +758,8 @@ $$
 for which $A^3=I$, hence $A^7=A=A^4$, while $A^2\ne A$.
 
 **Example 3.3.2** Show that $A^4=5A+6I$ for $A=\begin{bmatrix}4&-2\\5&-3\end{bmatrix}$. The characteristic polynomial is $p_A(\lambda)=(4-\lambda)(-3-\lambda)+10=\lambda^2-\lambda-2$, with roots $\lambda_1=-1$, $\lambda_2=2$. By the Cayley–Hamilton theorem $A^2-A-2I=O$, so $A^2=A+2I$, $A^3=A^2+2A=3A+2I$ and $A^4=3A^2+2A=3(A+2I)+2A=5A+6I$. Alternatively, $f(x)=x^4-5x-6$ satisfies $f(\lambda_1)=f(\lambda_2)=0$, so $p_A\mid f$, and $p_A(A)=O$ implies $f(A)=O$.
+
+:::
 
 The eigenvalues of a real matrix are real or occur in complex conjugate pairs; a real symmetric matrix has real eigenvalues and orthogonal eigenvectors. A quick way to check that a matrix is positive definite uses diagonal dominance.
 

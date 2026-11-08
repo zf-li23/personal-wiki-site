@@ -32,6 +32,8 @@ $$
 
 **例 2.1.1** (1) $\mathcal{F}=\{\Omega,\varnothing\}$ 是平凡的 σ-代数，也是最小的 σ-代数。(2) $\Omega$ 的全体子集构成的**幂集** $\mathcal{P}(\Omega)$（也记作 $2^\Omega$）是最大的 σ-代数。(3) 对 $A\subset\Omega$，$\{\Omega,\varnothing,A,A^{\mathsf c}\}$ 是包含 $A$ 的最小 σ-代数。
 
+:::
+
 一般地，任意多个 σ-代数的交仍是 σ-代数（逐条验证定义即可）。因此对 $\Omega$ 的任一子集族 $\mathcal{A}$，所有包含 $\mathcal{A}$ 的 σ-代数之交是包含 $\mathcal{A}$ 的最小 σ-代数，称为由 $\mathcal{A}$ 生成的 σ-代数（generated σ-algebra），记作 $\sigma(\mathcal{A})$。例 2.1.1 (3) 即 $\sigma(\{A\})$。
 
 **例 2.1.2** 设 $A,B\subset\Omega$。四个集合 $AB$、$AB^{\mathsf c}$、$A^{\mathsf c}B$、$A^{\mathsf c}B^{\mathsf c}$ 两两不交，并为 $\Omega$；$\sigma(\{A,B\})$ 恰由它们中若干个（含零个）的并组成。当这四个集合都非空时，$\sigma(\{A,B\})$ 有 $2^4=16$ 个元素：
@@ -64,6 +66,8 @@ $$
 (2) 掷一枚骰子：$\Omega=\{1,\dots,6\}$，$\mathcal{F}=\mathcal{P}(\Omega)$，$\mathbb{P}(\{i\})=1/6$；对任意 $A\in\mathcal{F}$，$\mathbb{P}(A)=\#A/6$。
 
 (3) 反复掷一枚硬币（每次正面朝上的概率为 $p\in(0,1)$），直到出现正面：$\Omega=\{T^nH\colon n\ge0\}\cup\{T^\infty\}$，其中 $T^nH$ 表示先出现 $n$ 次反面再出现正面，$T^\infty$ 表示永远不出现正面。$\mathbb{P}(\{T^nH\})=(1-p)^np$，由可列可加性 $\sum_{n\ge0}(1-p)^np=1$，所以 $\mathbb{P}(\{T^\infty\})=0$；也可以由下一节的连续性得到 $\mathbb{P}(\{T^\infty\})=\lim_{n\to\infty}(1-p)^n=0$。
+
+:::
 
 若 $\Omega$ 是可列集，给每个样本点分配概率 $p_\omega\ge0$、$\sum_\omega p_\omega=1$，令 $\mathbb{P}(A)=\sum_{\omega\in A}p_\omega$，则 $\Omega$ 的任一子集都可以分配概率，$\mathcal{F}$ 可以取 $\mathcal{P}(\Omega)$。若 $\Omega$ 不可列，则可能存在无法合理分配概率的子集，这些子集就不能当作事件。
 
@@ -159,6 +163,8 @@ $$
 $$
 \mathbb{P}(B\mid A)=\frac1{13}=\frac{1/52}{13/52}=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(A)}.
 $$
+
+:::
 
 一般地，给定试验、样本空间和概率，若已知事件 $A$ 发生，希望知道事件 $B$ 发生的可能性，就构造一个新的概率，它顾及了 $A$ 发生的信息。
 
@@ -343,6 +349,8 @@ $$
 即使检验为阳性，患病的概率也不到 2%。原因是患病率很低而检验的准确性不够高：一千个人中约有 1 个患者，却有约 50 个非患者被误判为阳性。图中的曲线表明，后验概率主要由患病率和检验的特异性决定。
 
 ![检验为阳性时确实患病的概率随患病率（对数坐标）的变化，三条曲线对应不同的检验准确率；红点是例 2.6.1 的情形](./plots/false-positive.py)
+
+:::
 
 Bayes 公式是贝叶斯统计（见 [3.2.7](/3.2.7)）的出发点：把未知参数看作随机的，由先验分布和数据得到后验分布。它也是贝叶斯网络（用有向图表示变量间的条件依赖关系）和传染病传播预测等许多模型的基础。
 

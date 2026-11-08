@@ -1,7 +1,7 @@
 ---
 title: Principles of Chromatography and Gas Chromatography
 description: Classification of chromatography, chromatograms and retention parameters, retention factor, separation factor and resolution; the Craig model and plate theory; the van Deemter equation, optimum flow rate and the resolution equation; the gas chromatograph, stationary liquids and temperature programming; thermal conductivity, flame ionization, electron capture and flame photometric detectors; retention indices, response factors, the normalization and internal standard methods, and organic elemental analysis.
-source_hash: 3e711565a26d
+source_hash: dbff1069ce73
 ---
 
 Real samples are almost always mixtures: blood contains thousands of metabolites, gasoline hundreds of hydrocarbons, and a drop of essential oil dozens of terpenes and esters. For such samples the signals of spectroscopy and mass spectrometry overlap, so the components must be separated before they are measured. **Chromatography** exploits the differences in how the components distribute between two phases: as the sample moves along, the components gradually drift apart and reach the detector one after another, so that separation and measurement are carried out continuously in a single instrument. It is the most widely used method of modern analytical chemistry and also the basic tool for purifying products in organic synthesis ([6.5](/6.5)). This chapter first defines the parameters that describe a chromatogram (Section 13.1), and then uses two theories to explain why components separate and why chromatographic peaks broaden: plate theory treats the column as a series of partition equilibria (Section 13.2), and rate theory starts from diffusion and mass transfer to relate plate height to flow rate and, from this, to derive the resolution equation (Section 13.3). Gas chromatography then serves as the example for instrumentation (Section 13.4), detectors (Section 13.5), and qualitative and quantitative methods (Section 13.6). The thermodynamics of distribution between two phases is that of the **partition coefficient** ([6.3.6](/6.3.6#sec-6.5)), and the statistical basis of peak broadening is the **central limit theorem** and the random walk ([6.3.21](/6.3.21#sec-21.3.1)). Liquid chromatography and electrophoresis follow in the next chapter ([6.4.14](/6.4.14)), and the coupling of chromatography with mass spectrometry is in [6.4.15](/6.4.15).
@@ -220,6 +220,8 @@ There is no eddy diffusion, and the column can be made very long (tens of meters
 ![Left: van Deemter curve of a packed column and its decomposition into the three terms (illustrative values A = 0.30 mm, B = 6.0 mm·cm/s, C = 0.030 mm·s/cm), with the minimum at u_opt = 14.1 cm/s, H_min = 1.15 mm. Right: Golay curves of a 0.25 mm inner diameter open tubular column with N₂, He and H₂ carrier gases (k = 5); the larger the diffusion coefficient, the higher the optimum flow rate and the flatter the curve](./plots/van-deemter.py)
 
 **Example 13.3.1** Using the values of the left panel: $u_{\mathrm{opt}} = \sqrt{6.0/0.030}\,\mathrm{cm\,s^{-1}} = 14.1\,\mathrm{cm\,s^{-1}}$ and $H_{\min} = 0.30 + 2\sqrt{6.0 \times 0.030} = 1.15\,\mathrm{mm}$. A 2 m column at the optimum flow rate has $N = 2000/1.15 \approx 1700$. If the flow rate is raised to $28\,\mathrm{cm\,s^{-1}}$, then $H = 0.30 + 0.21 + 0.84 = 1.35\,\mathrm{mm}$, the column efficiency drops by about 15%, and the analysis time is halved. $\square$
+
+:::
 
 In liquid chromatography $D_{\mathrm{m}}$ is about $10^{-4}$–$10^{-5}$ times that in the gas phase, so the longitudinal diffusion term can be neglected and the mass-transfer term dominates; the key to higher column efficiency is a smaller particle size ([6.4.14](/6.4.14#sec-14.1.3)).
 
@@ -486,6 +488,8 @@ The basis of logarithmic interpolation is that, at constant temperature, $\lg t'
 
 **Solution** $I = 100\left[7 + \frac{\lg 230.0 - \lg 174.0}{\lg 373.4 - \lg 174.0}\right] = 100\left[7 + \frac{0.1212}{0.3316}\right] = 737$. The retention of benzene on this column corresponds to that of an "n-alkane" with 7.37 carbon atoms. The retention index of benzene on nonpolar squalane is about 650 (lower than the carbon number corresponding to its boiling point), and the difference $\Delta I \approx 87$ is the McReynolds constant of this stationary liquid for benzene, reflecting its interaction with the π-electron system. $\square$
 
+:::
+
 The most reliable methods of identification couple chromatography with instruments capable of structure determination: mass spectrometry ([6.4.15](/6.4.15)), infrared spectroscopy ([6.4.11](/6.4.11)), nuclear magnetic resonance ([6.4.12](/6.4.12)), or atomic spectrometry as an element-selective detector.
 
 ### 13.6.2. Response Factors
@@ -515,6 +519,8 @@ The advantage of the normalization method is that an accurate injection volume i
 **Example 13.6.2** A mixture of $\mathrm{C}_8$ aromatic hydrocarbons is analyzed with an FID. The peak areas of ethylbenzene, p-xylene, m-xylene and o-xylene are 120, 75, 140 and 105 (arbitrary units), and their relative mass response factors with p-xylene as the standard are 0.97, 1.00, 0.96 and 0.98. Find the mass fraction of each component.
 
 **Solution** $\sum f'_jA_j = 116.4 + 75.0 + 134.4 + 102.9 = 428.7$. Ethylbenzene has $w = 116.4/428.7 = 27.2\%$, p-xylene $17.5\%$, m-xylene $31.4\%$ and o-xylene $24.0\%$. The boiling points of p-xylene and m-xylene differ by less than $1\,{}^\circ\mathrm{C}$ and they are hard to separate on a nonpolar column; a strongly polar or liquid-crystal stationary liquid is needed. $\square$
+
+:::
 
 The **external standard method** ([6.4.1](/6.4.1#sec-1.8.4)) in chromatography means using standard solutions to construct a **calibration curve**, or comparing peak areas with a single standard of known concentration under the same conditions. It is simple and suited to large batches of routine analyses, but requires an accurate injection volume and stable chromatographic conditions every time, which an autosampler makes easy to achieve.
 

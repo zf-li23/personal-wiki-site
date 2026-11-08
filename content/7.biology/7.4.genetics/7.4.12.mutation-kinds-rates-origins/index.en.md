@@ -25,6 +25,8 @@ Mutations are classified first by the change in the sequence: substitutions of o
 
 **Example 12.2.1 (Expected Classes of Random Substitutions)** Each of the 61 sense codons can change into 9 others by a single substitution, $61 \times 9 = 549$ possibilities. Enumerating them with the standard **genetic code** ([7.2.19](/7.2.19)) gives 134 synonymous ($24.4\,\%$), 392 missense ($71.4\,\%$) and 23 nonsense ($4.2\,\%$) changes. At third codon positions $126/183 = 69\,\%$ of substitutions are synonymous, which is why the third position evolves fastest. These are **expectations** for uniform mutation; real spectra are biased toward transitions and CpG sites. Similarly, if indel lengths were uniform, $2/3$ of them would cause frameshifts; in coding regions indels of multiples of three are overrepresented because frameshifts are removed by selection.
 
+:::
+
 The converse of a nonsense mutation is a *nonstop mutation* (stop-loss), a substitution that changes the stop codon into a sense codon: **translation** continues into the 3′ untranslated region until the next in-frame stop codon, giving a longer protein, or, if there is none, the **mRNA** is degraded by nonstop decay. Hemoglobin Constant Spring, a common cause of α-thalassemia in Southeast Asia, carries the change UAA → CAA (Gln) in the stop codon of *HBA2*; its α-globin has 31 extra amino acids and is made in very small amounts because the mRNA is unstable. Of the 9 single-base changes of each of the three stop codons, 23 of the 27 give sense codons, and 4 give another stop codon.
 
 Synonymous does not always mean neutral: a silent change can create or destroy a splice signal or alter translation speed. A mutation that has no effect on fitness is a *neutral mutation*; whether a mutation is neutral is a statement about selection, not about the protein, and most synonymous and many noncoding mutations are nearly neutral. Neutral mutations are the subject of the **neutral theory of molecular evolution** ([7.4.23](/7.4.23)). Missense mutations range from no effect to complete loss, depending on the residue; nonsense and frameshift mutations usually abolish function, partly because transcripts with premature stop codons are degraded by **nonsense-mediated decay**, though a stop codon near the end of a gene can leave a partially functional truncated protein.
@@ -69,6 +71,8 @@ In a heterozygote with equal expression of both alleles ($f = 1/2$), $A = (1/2)^
 **Example 12.3.1** For a tetramer, a heterozygote for a poison-subunit allele has $1/16 = 6.25\,\%$ active complexes, eight times fewer than a null heterozygote ($50\,\%$). The prediction explains why some missense alleles of the **tumor** suppressor p53, a tetrameric transcription factor, are dominant in cells, whereas truncating alleles act recessively (7.4.21), and why missense mutations in **collagen** I, a triple helix of two α1 and one α2 chains, cause more severe osteogenesis imperfecta than null alleles: a glycine substitution in α1 spoils $1 - (1/2)^2 = 3/4$ of the triple helices. Proteins that act as monomers ($n = 1$) cannot give dominant negative alleles by this mechanism.
 
 ![Dominant negative (poison-subunit) alleles in homo-oligomeric proteins (Formula 12.3.1). A: in a heterozygote with equal expression, the fraction of fully active complexes falls as (1/2)ⁿ with the number of subunits n (1/4 for dimers, 1/16 for tetramers), far below the 1/2 of a heterozygote for a null allele. B: fraction of active complexes against the fraction of mutant subunits for monomers, dimers, tetramers and hexamers; the dotted line marks equal expression.](./plots/dominant-negative.py)
+
+:::
 
 Analysis of structures of thousands of human pathogenic missense variants supports the model: dominant negative mutations are strongly enriched at protein–protein interfaces of complexes (about $45\,\%$ of them lie at interfaces), whereas gain-of-function and **recessive** loss-of-function missense mutations show little interface enrichment (Gerasimavicius, Livesey and Marsh 2022). Because current pathogenicity predictors are trained largely on loss-of-function variants, many dominant negative and gain-of-function mutations are probably misclassified.
 
@@ -120,6 +124,8 @@ The mean is therefore a poor **estimator** of $m$: it is dominated by rare jackp
 Then $\hat\mu = \hat m/N_t$ mutations per cell division.
 
 **Example 12.4.1** Twenty cultures of $2 \times 10^{8}$ cells; seven have no resistant mutants. Then $\hat m = -\ln(7/20) = 1.05$ and $\hat\mu = 1.05/(2 \times 10^{8}) = 5.2 \times 10^{-9}$ per cell division. If instead the median count were $10$, the median method gives $\hat m = 3.9$ (solving $10/m - \ln m = 1.24$) and $\hat\mu = 1.9 \times 10^{-8}$.
+
+:::
 
 Luria and Delbrück observed exactly what the random-mutation model predicts: counts of T1-resistant bacteria in parallel cultures ranged from 0 to several hundred, with variances tens to hundreds of times the means, while samples from one culture had variances close to their means. Mutation to resistance had happened before selection. The same reasoning applies to **drug resistance** in tumors, where resistant cells are expected to be present before treatment whenever $\mu N \gtrsim 1$ ([7.3.26](/7.3.26)).
 

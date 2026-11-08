@@ -1,6 +1,6 @@
 ---
 title: Free Energies and Fundamental Relations
-source_hash: 3e71aee0f9cf
+source_hash: 99b3744ded05
 ---
 
 The **principle of entropy increase** gives the ultimate criterion for the direction and limit of every macroscopic process, but to apply it to a chemical process one must compute the entropy changes of both system and surroundings and regard the two together as an isolated system. The conditions most common in chemistry are constant temperature and volume, or constant temperature and pressure. Starting from the **Clausius inequality**, this chapter constructs two state functions that serve as criteria using only properties of the system itself: the Helmholtz energy $A$ and the **Gibbs energy** $G$ (Section 3.1), and relates them to maximum work and maximum non-expansion work. The second part builds the mathematical structure of thermodynamics: the four fundamental equations and characteristic functions (3.2), the coefficient relations and Maxwell relations (3.3), and from them general relations independent of the particular substance, such as the thermodynamic equation of state and the general formula for $C_p - C_V$ (3.4). Finally we discuss systematically the calculation of $\Delta G$ and $\Delta A$ for various processes (3.5) and the Gibbs–Helmholtz equation for the temperature dependence of $G$ (3.6). The Gibbs energy and the Gibbs criterion were introduced in [6.1.6](/6.1.6#sec-6.4.7); here the derivation and the conditions of validity are completed. The first and second laws and entropy are in [5.2.3](/5.2.3), [5.2.4](/5.2.4) and [6.3.2](/6.3.2); the manipulation of partial derivatives, total differentials and implicit functions is in [2.2.10](/2.2.10). The relations of this chapter are the tools of the chapters that follow: when composition can vary, a chemical-potential term is added ([6.3.4](/6.3.4)); the Gibbs–Helmholtz equation is used for the temperature dependence of equilibrium constants ([6.3.7](/6.3.7)) and the temperature coefficient of cell voltage ([6.3.13](/6.3.13)); and the Clapeyron equation ([6.3.8](/6.3.8)) is the form taken by a Maxwell relation when two phases coexist.
@@ -445,6 +445,8 @@ $$
 $$
 That is, at room temperature diamond is more stable than graphite only above about $1.5\,\mathrm{GPa}$. $\square$
 
+:::
+
 From $(\partial\Delta G/\partial T)_p = -\Delta S$ ($\Delta_{\mathrm{trs}}S^\circ_{\mathrm{m}} = 2.38 - 5.74 = -3.36\,\mathrm{J\,mol^{-1}\,K^{-1}}$), raising the temperature raises the equilibrium pressure, and the slope of the phase boundary is $\mathrm{d}p/\mathrm{d}T = \Delta S/\Delta V \approx 1.8\,\mathrm{MPa\,K^{-1}}$ (this is the Clapeyron equation of [6.3.8](/6.3.8)). At high temperature $\Delta S$ and $\Delta V$ themselves vary with temperature, and the experimentally measured phase boundary (the Berman–Simon line) is steeper. Thermodynamics shows only that high pressure favors diamond; the activation energy for graphite to transform at ordinary temperature is extremely high, and practical synthesis takes place at $5$–$6\,\mathrm{GPa}$ and $1600$–$2100\,\mathrm{K}$, with molten metals (Fe, Ni, Co) as solvent and catalyst. Diamond grown by low-pressure chemical vapor deposition (CVD) is in a metastable state, which depends on kinetic selectivity of surface reactions and not on a change of the thermodynamic equilibrium.
 
 ![Graphite–diamond transition: variation of Δ_trs G_m with pressure at 298.15 K (left, ΔV taken as constant); the two-phase equilibrium line (right): the constant-ΔS, ΔV approximation of this section and the experimental Berman–Simon line, together with the approximate range of industrial high-temperature, high-pressure synthesis.](./plots/graphite-diamond.py)
@@ -495,6 +497,8 @@ $$
 \frac{\Delta G(T_2)}{T_2} = 40650 \times \left(\frac{1}{298.15} - \frac{1}{373.15}\right) + 42 \times \left(\ln\frac{298.15}{373.15} + \frac{373.15}{298.15} - 1\right) = (27.40 + 1.14)\,\mathrm{J\,K^{-1}},
 $$
 $\Delta G(T_2) = 298.15 \times 28.54\,\mathrm{J} = 8.51\,\mathrm{kJ}$, the same as in Solution 1 (the two use the same data and approximations). $\square$
+
+:::
 
 Applied to $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$, the Gibbs–Helmholtz equation becomes the van 't Hoff equation for the temperature dependence of the equilibrium constant ([6.3.7](/6.3.7)); applied to $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, it gives the reaction enthalpy from the cell voltage and its temperature coefficient ([6.3.13](/6.3.13)).
 

@@ -1,7 +1,7 @@
 ---
 title: Vision
 description: Optics of the eye, accommodation and refractive errors, pupil and intraocular pressure; retina, rods and cones, rhodopsin and the visual cycle, phototransduction and adaptation, color vision; retinal circuits; central visual pathways and cortex; eye movements; evolution and comparison of eyes.
-source_hash: ddc5663eed85
+source_hash: f51f75687415
 ---
 
 Of all human senses, vision provides the most information: about a third of the cerebral cortex takes part in visual processing. The eye must do three things: form a sharp image on the retina (optics), convert photons into neural signals (phototransduction), and perform a first round of processing of the image before sending it to the brain (retinal circuits). This chapter treats these three layers in turn, then the central visual pathways and eye movements, and finally compares the diversity of eyes in the animal kingdom. The general principles of sensation (the **labeled line principle**, **receptor potentials**, **adaptation**, **receptive fields**, and **lateral inhibition**) are in Chapter 39 ([7.14.39](/7.14.39)); the physics of photons, pigments, and single-photon detection was discussed in biophysics ([7.6.18](/7.6.18#sec-18.6)), and diffraction and resolving power in optics ([5.4.2](/5.4.2#sec-2.4)); only their conclusions are used here, and the emphasis is on the physiology of organs and circuits.
@@ -43,6 +43,8 @@ $$
 
 **Example 41.1.1** A person 1.8 m tall at 10 m has a retinal image height of $1.8\,\mathrm{m}\times 17\,\mathrm{mm}/10\,\mathrm{m} \approx 3.1\,\mathrm{mm}$, inverted. Conversely, a visual angle of $1'$ ($2.9\times10^{-4}\,\mathrm{rad}$) corresponds on the retina to $17\,\mathrm{mm}\times2.9\times10^{-4} \approx 5\,\mu\mathrm{m}$, about the spacing of two foveal cones.
 
+:::
+
 The image on the retina is inverted, and the brain does not need to "flip" it: the perception of space is established by the correspondence between retinal position and body movement, and the orientation of the image itself has no meaning.
 
 ### 41.1.3. Accommodation and the Near Point
@@ -81,6 +83,8 @@ When the eye is not accommodating and distant objects are imaged exactly on the 
 | Astigmatism | Different curvature in different meridians of the cornea (or lens) | A point is imaged as two mutually perpendicular focal lines | Cylindrical lens or rigid corneal contact lens |
 
 **Example 41.1.2** A myope whose far point is at $0.5\,\mathrm{m}$ has an excess of $1/0.5 = 2\,\mathrm{D}$ of refractive power for distant objects; the spectacles should turn parallel light from afar into diverging light that appears to come from $0.5\,\mathrm{m}$, that is, $-2\,\mathrm{D}$ (neglecting the distance from lens to cornea). If his amplitude of accommodation is $10\,\mathrm{D}$, by Eq. (41.3) the near point is $1/(10 + 2) \approx 8\,\mathrm{cm}$.
+
+:::
 
 Each $1\,\mathrm{mm}$ of axial lengthening is equivalent to about $3\,\mathrm{D}$ of myopia (for a $60\,\mathrm{D}$ eye with image distance $22\,\mathrm{mm}$). The growth of the axial length in development is regulated by visual experience: defocus signals on the retina influence the growth of the sclera, as confirmed in experiments on chicks, tree shrews, and monkeys. The prevalence of myopia among urban adolescents in East Asia has risen sharply in recent decades, and little time spent outdoors is the risk factor with the most consistent evidence.
 

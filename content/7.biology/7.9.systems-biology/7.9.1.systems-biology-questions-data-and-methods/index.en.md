@@ -47,6 +47,8 @@ Measuring many variables on few samples makes chance patterns abundant. Omics da
 
 ![Chance correlations in wide data. A: correlations between a random phenotype and 20000 random genes, each measured in 8 samples (histogram), with the exact null density (line); the shaded tails, beyond |r| = 0.8, hold 1.6% of the genes. B: the largest |r| expected by chance among p independent null genes, for 8, 20 and 100 samples (lines: exact expectation; points: simulation)](./plots/spurious_correlation.py)
 
+:::
+
 The lesson recurs throughout the course. A data-driven result is meaningful only against a null model that describes what the same analysis gives without the effect: a null distribution of a test statistic and a correction for the number of tests (**false discovery rate**, [7.7.20](/7.7.20)), a randomized network with the same degrees ([1.4.7](/1.4.7)), permuted sample labels or gene sets ([7.9.3](/7.9.3)). The second requirement is independent confirmation, by a new data set or a targeted experiment. Most omics results are associations: a gene whose expression correlates with survival is not thereby shown to cause it.
 
 ## 1.3. A Short History

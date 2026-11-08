@@ -45,6 +45,8 @@ Bohr 理论成功地解释了氢与类氢离子的光谱，算出了 Rydberg 常
 
 解：电子 $\lambda = \dfrac{6.626 \times 10^{-34}}{9.109 \times 10^{-31} \times 5.9 \times 10^5}\,\mathrm{m} = 1.23 \times 10^{-9}\,\mathrm{m} = 1.23\,\mathrm{nm}$，与原子、晶体中的原子间距同数量级，因此电子能在晶体上衍射；子弹 $\lambda = 6.6 \times 10^{-35}\,\mathrm{m}$，小到无法观测，宏观物体的波动性可以忽略。
 
+:::
+
 Heisenberg（1927）的**不确定关系** $\Delta x\,\Delta p_x \ge \hbar/2$（$= h/(4\pi)$）说明，粒子的位置与动量不能同时有确定值（[5.5.2](/5.5.2#sec-2.3)）。原子中的电子被限制在 $\Delta x \approx 0.1\,\mathrm{nm}$ 的范围内，速度的不确定量至少为 $\Delta v \ge \frac{h}{4\pi m_{\mathrm{e}}\Delta x} \approx 6 \times 10^5\,\mathrm{m\,s^{-1}}$，与氢原子中电子的速率（约 $2.2 \times 10^6\,\mathrm{m\,s^{-1}}$）同数量级。因此原子中的电子不可能有 Bohr 模型那样确定的轨道，只能用描述概率分布的波函数刻画它的运动状态。
 
 ### 2.2.3. 波函数与原子轨道
@@ -176,6 +178,8 @@ Slater 规则还规定 $n \ge 4$ 时轨道能量公式中的 $n$ 换成有效主
 - 4s：$\sigma = 1 \times 0.35 + 9 \times 0.85 + 10 \times 1.00 = 18.00$，$Z_{\mathrm{eff}} = 3.00$，$E_{4\mathrm{s}} \approx -13.6 \times 3.00^2/3.7^2\,\mathrm{eV} = -8.9\,\mathrm{eV}$。
 
 内层 3s 电子受到的屏蔽小、能量低得多；Sc 中 3d 的能量已低于 4s。
+
+:::
 
 同一电子层中，s 电子的钻穿能力强，比 p 电子受到的屏蔽稍小。Slater 规则不区分同组的 s 与 p，由 Hartree–Fock 波函数算出的有效核电荷（Clementi 与 Raimondi，1963）则显示了这一差别：
 
@@ -359,6 +363,8 @@ $$
 **例 2.4.1** 已知键能 $D(\ce{H-H}) = 436$、$D(\ce{Cl-Cl}) = 242$、$D(\ce{H-Cl}) = 432\,\mathrm{kJ\,mol^{-1}}$，求 H 与 Cl 的电负性之差。
 
 解：$\Delta = 432 - \frac{1}{2}(436 + 242) = 93\,\mathrm{kJ\,mol^{-1}}$，$\lvert\chi_{\mathrm{Cl}} - \chi_{\mathrm{H}}\rvert = 0.102\sqrt{93} = 0.98$，与表中的 $3.16 - 2.20 = 0.96$ 相符。
+
+:::
 
 Mulliken（1934）给出了另一种更直接的定义：原子吸引电子的能力既与它失去电子的难易（电离能）有关，也与它得到电子的难易（电子亲和能）有关，取二者的平均值作为 Mulliken 电负性（Mulliken electronegativity）：$\chi_{\mathrm{M}} = \frac{1}{2}(I_1 + E_{\mathrm{ea}})$（以 eV 计）。例如 F 为 $\frac{1}{2}(17.42 + 3.40) = 10.41\,\mathrm{eV}$，Cl 为 $8.29\,\mathrm{eV}$。Mulliken 电负性与 Pauling 电负性大致成线性关系；此外还有基于有效核电荷与共价半径的 Allred–Rochow 标度等。不同标度的数值不同，使用时不能混用。下表是主族元素的 Pauling 电负性（CRC Handbook）：
 

@@ -61,6 +61,8 @@ The constant weight keeps the number of "on" rounds, and so the brightness and t
 
 **Example 6.3.2** Suppose a $1$ is misread as $0$ with probability $p_{10} = 0.10$ and a $0$ as $1$ with probability $p_{01} = 0.04$, independently in each round ("on" bits are typically lost more often than "off" bits are gained). A molecule is read exactly with probability $0.9^4 \cdot 0.96^{12} = 0.402$. With the $140$-word code of distance $4$, exact enumeration of all $2^{16}$ received words gives: exact reads $40.2\%$, single errors corrected $38.0\%$ (total correct $78.2\%$), discarded $19.7\%$, misidentified as another gene $2.1\%$. Using all $1820$ weight-$4$ words without error correction, only the $40.2\%$ exact reads are correct and $9.3\%$ of the molecules are assigned to a wrong gene. Error correction doubles the yield and cuts misidentification by a factor of four, at the price of encoding only $140$ instead of $1820$ genes. Blank codewords (valid words assigned to no gene) estimate the misidentification rate in each experiment.
 
+:::
+
 Later versions use longer codes for larger panels and combine MERFISH with expansion and tissue clearing (Moffitt and colleagues, 2016). seqFISH+ (Eng and colleagues, 2019) measured $10\,000$ genes by spreading the molecules over $60$ "pseudocolours" imaged in sequence, so that only a sixtieth of the molecules is visible in each image.
 
 ### 6.3.3. In Situ Sequencing and Xenium
@@ -110,6 +112,8 @@ The non-negativity constraint (non-negative least squares) avoids negative inten
 
 **Example 6.4.2** Three channels with spillover $s_{12} = 0.08$, $s_{21} = 0.15$, $s_{23} = 0.05$, $s_{31} = 0.02$, $s_{32} = 0.10$, and a cell that expresses only labels $2$ and $3$ ($\boldsymbol{x} = (0, 50, 200)$), give $\boldsymbol{y} = (4, 60, 205)$: the cell appears positive for marker $1$ at $4$ units and overestimates marker $2$ by $20\%$. With measurement noise $(+3, -2, +4)$, compensation by Eq. (6.1) returns $(3.2, 47.3, 204.2)$.
 
+:::
+
 A second kind of spillover is spatial. In a tissue, cells touch, and the membrane signal of one cell overlaps the segmented outline of its neighbor, so a tumor cell next to a T cell appears weakly CD3-positive. Corrections such as REDSEA (Bai and colleagues, 2021) estimate, from the signal along shared boundaries, how much of each neighbor's intensity leaks into a cell and subtract it; better segmentation of membranes (6.7) reduces the problem at its source.
 
 ## 6.5. Capture-Based and Mass Spectrometry Methods
@@ -123,6 +127,8 @@ Higher resolution requires smaller features. Slide-seq (Rodriques and colleagues
 The resolution of capture methods is not just the feature size. Molecules travel laterally between their release and their capture.
 
 **Example 6.5.1** A molecule diffusing in two dimensions with **diffusion coefficient** $D$ for a time $t$ is displaced by $\sqrt{2Dt}$ in each direction ([7.6.5](/7.6.5)). For an effective $D = 0.1\,\mu\mathrm{m}^2\,\mathrm{s}^{-1}$ in permeabilized tissue and $t = 10\,\mathrm{min}$, the root-mean-square displacement along one axis is $\sqrt{2 \cdot 0.1 \cdot 600} = 11\,\mu\mathrm{m}$. With features of $2\,\mu\mathrm{m}$, the blur from diffusion, not the feature size, limits resolution: shorter permeabilization reduces the blur and the number of captured molecules together. Probe-based capture, in which short probes are transferred by a controlled device, and directional transfer reduce the spread.
+
+:::
 
 Sensitivity is lower than that of imaging, since only a fraction of the molecules reaches the surface and is reverse-transcribed, and the counts are sparse at high resolution. In exchange, capture methods are untargeted, so they discover genes not chosen in advance and measure isoforms and non-polyadenylated or non-coding RNA with suitable chemistry.
 
@@ -158,6 +164,8 @@ Most spatial data are from sections of $4$–$10\,\mu\mathrm{m}$, thinner than t
 | $6$ (nucleus) | $30$ | $0.83$ | $0.67$ |
 
 In a $5\,\mu\mathrm{m}$ section no cell and no nucleus is complete, and an average cell is represented by a third of its volume; whether a cut cell is counted as positive for a marker located in one part of it depends on where it was cut.
+
+:::
 
 Three-dimensional measurements avoid this. Serial sections can be imaged and registered into a volume (6.13), with losses between sections and distortions from cutting. Thick sections imaged optically avoid both: three-dimensional CyCIF (Yapp and colleagues, 2025) imaged sections of $30$–$50\,\mu\mathrm{m}$ with a **confocal microscope** over $8$–$18$ cycles ($20$–$54$ markers) and showed, in line with the example, that nearly all cells in standard $5\,\mu\mathrm{m}$ sections are incomplete, which makes their phenotypes inaccurate; in thick sections intact cells, the contacts between them and their organelles can be resolved, revealing juxtacrine interactions between tumor and immune cells. Scale also grows sideways: placing sections of several organs or patients on one slide puts them into the same staining and imaging batch and makes them directly comparable.
 
@@ -355,6 +363,8 @@ For annotated cells, a simpler question is whether types $a$ and $b$ are neighbo
 
 **Example 6.10.2** Four hundred cells placed at random in a square are labeled $A$ on the left and $B$ on the right, with a blurred boundary (the label depends on the horizontal coordinate plus noise of standard deviation $0.1$). In the graph of $6$ nearest neighbors, $271$ of the $2400$ directed edges join different types; under $1000$ label permutations the mean is $1193$ with standard deviation $33$, a z-score of $-27.9$: strong segregation.
 
+:::
+
 The permutation of labels preserves the abundance of each type but not their spatial heterogeneity, so the z-scores grow with the number of cells and reflect any large-scale structure; they rank pairs within one sample better than they compare samples. Co-occurrence scores as a function of distance, and comparisons of the neighbor compositions of individual cells (6.11), give a more detailed picture.
 
 ## 6.11. Spatial Domains, Neighborhoods and Niches
@@ -384,6 +394,8 @@ $$
 where $m_{ik}$ is the number of neighbors of $i$ in domain $k$.
 
 **Example 6.11.1** A spot on the hexagonal grid has $4$ neighbors in domain $A$ and $2$ in domain $B$, and its expression favors $B$: the likelihood ratio is $p(\boldsymbol{y}_i \mid B)/p(\boldsymbol{y}_i \mid A) = \mathrm{e}^4 = 55$. Without smoothing ($\gamma = 0$), $\mathbb{P}(z_i = A) = 1/(1 + \mathrm{e}^4) = 0.018$. With $\gamma = 1$ the prior ratio is $\mathrm{e}^{1 \cdot (4 - 2)}$ and $\mathbb{P}(z_i = A) = 0.12$; with $\gamma = 3$ it is $\mathrm{e}^6 = 403$ and $\mathbb{P}(z_i = A) = 0.88$. The smoothing parameter decides whether an expression outlier inside a domain is kept or absorbed; too large a $\gamma$ erases thin structures such as a narrow layer.
+
+:::
 
 BayesSpace also refines resolution by dividing each spot into subspots that share the spot's data but have their own labels. Graph neural network methods learn embeddings of each location from its expression and that of its neighbors on the spatial graph (SpaGCN, STAGATE, GraphST) and cluster the embeddings; simpler methods augment each cell's expression with the mean expression of its neighbors before clustering (Banksy, CellCharter) and are competitive in benchmarks. Since the number of domains and the degree of smoothing are choices, domain maps should be shown at several settings and checked against anatomy.
 
@@ -432,6 +444,8 @@ Problem (6.8) is a linear program; its constraints say that every source sends o
 
 **Example 6.12.1** Three sources with masses $\boldsymbol{a} = (0.5, 0.3, 0.2)$ and three targets with $\boldsymbol{b} = (0.2, 0.3, 0.5)$ lie on a line at positions $1, 2, 3$, with squared distances as costs. The optimal plan sends $0.2$ from source $1$ to target $1$ and $0.3$ to target $2$, all of source $2$ to target $3$ and all of source $3$ to target $3$, at cost $0.3 \cdot 1 + 0.3 \cdot 1 = 0.6$. Entropic transport with $\varepsilon = 1$ spreads the mass (for example $0.09$ from source $1$ to the distant target $3$) at cost $0.81$; with $\varepsilon = 0.1$ it returns the exact plan. The entropic term trades exactness for smoothness and for an algorithm of simple matrix operations that runs on graphics processors.
 
+:::
+
 Tangram (Biancalani and colleagues, 2021) learns a mapping matrix $M$ (cells × spots, each row a probability distribution over spots) that maximizes the cosine similarity between the predicted spatial expression $M^{\mathsf T}X$ and the measured one, gene by gene and spot by spot, with optional constraints on cell densities, so it is an optimal-transport-like assignment with a learned cost. novoSpaRc (Nitzan and colleagues, 2019) reconstructs positions even without spatial expression data, from the assumption that cells close in space have similar expression: it finds a transport plan between cells and locations that makes the expression distances between cells agree with the physical distances between their assigned locations, a Gromov–Wasserstein problem (6.13.2). Mapping a whole-transcriptome reference onto a targeted spatial panel predicts the expression of unmeasured genes in space; such predictions inherit every error of the mapping and should be validated on held-out measured genes.
 
 ## 6.13. Registration and Multimodal Integration
@@ -454,6 +468,8 @@ The same algorithm superimposes protein structures ([7.8.17](/7.8.17)). The affi
 ![Landmark registration using matched nucleus centroids. The moving image (orange) is the fixed one (blue) rotated by 8°, scaled by 1.03 and 0.98 along its axes, sheared and translated, with centroid noise of 0.8 µm. A: before registration. B: best rigid fit by the Kabsch algorithm; residuals magnified 10×: systematic, because a rotation cannot absorb anisotropic shrinkage (RMS 3.6 µm). C: least-squares affine fit; residuals are noise (RMS 1.13 µm). D: error at 200 held-out nuclei against the number of landmarks used: the rigid error stays near 3.4 µm, the affine error falls towards that of the true transform (dashed) as landmarks are added](./plots/registration.py)
 
 **Example 6.13.1** In the figure, $60$ matched nuclei give a rigid fit with root-mean-square residual $3.6\,\mu\mathrm{m}$ and a recovered rotation of $-7.4^\circ$ (the inverse of the applied $8^\circ$, biased by the shear), and an affine fit with residual $1.13\,\mu\mathrm{m}$, whose matrix agrees with the inverse of the applied map to within $0.002$ in every entry. On $200$ held-out nuclei the affine error is $2.3\,\mu\mathrm{m}$ with $3$ landmarks, $1.4\,\mu\mathrm{m}$ with $6$ and $1.07\,\mu\mathrm{m}$ with $60$, against $1.05\,\mu\mathrm{m}$ for the true transform. For transcripts that are localized to within a micrometre, the choice between rigid and affine matters: a $3.6\,\mu\mathrm{m}$ error moves molecules between neighboring cells.
+
+:::
 
 In practice correspondences are not known. They are found by matching features (nucleus positions and shapes, or image descriptors) with robust estimation that tolerates wrong matches (RANSAC: fit to random minimal subsets, keep the fit with most inliers), by iterating between nearest-neighbor matching and refitting (the iterative closest point algorithm), or by maximizing an intensity similarity such as mutual information over the transformation parameters. A coarse affine registration is then refined by a non-rigid deformation where the tissue requires it, with smoothness penalties that prevent the deformation from inventing structure; for whole-slide images, tools such as VALIS chain these steps. The quality of a registration is reported as the residual distance between held-out landmarks.
 

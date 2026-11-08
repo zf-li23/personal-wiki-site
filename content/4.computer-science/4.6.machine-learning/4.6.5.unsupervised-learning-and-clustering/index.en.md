@@ -1,7 +1,7 @@
 ---
 title: Unsupervised Learning and Clustering
 description: The task of unsupervised learning; the goal of clustering and similarity measures for various data types; k-means initialization (k-means++) and large-scale variants (mini-batch); k-medoids clustering (PAM, CLARA, CLARANS); divisive hierarchical clustering; choosing the number of clusters and evaluating clusterings; DBSCAN.
-source_hash: 1ba8a47b362e
+source_hash: 63e857b72edd
 ---
 
 The learning in the preceding chapters had a "teacher" in the sense that every training example came with a class or a target value. This chapter turns to unlabeled data and its most basic task, clustering, which groups similar objects together. The statistical theory of clustering was covered in [3.4.11](/3.4.11), which presents **hierarchical clustering**, **k-means clustering** with its objective function and convergence, the **silhouette coefficient**, and the **Gaussian mixture model** fitted by the **EM algorithm**. Here we only summarize these topics and concentrate on what machine learning uses frequently but the statistics course does not develop: similarity measures for various data types, the initialization of k-means and its variants for large data, k-medoids clustering (PAM, CLARA, CLARANS) in which a cluster is represented by an actual object, divisive hierarchical clustering, the evaluation of clusterings, and the density-based method DBSCAN, which finds clusters of arbitrary shape. The distance measures are those of instance-based learning in [4.6.4](/4.6.4).
@@ -62,6 +62,8 @@ Similarity and distance vary in opposite directions, and are often converted int
 | Huge | | | | | | 1.0 |
 
 A similarity matrix should be symmetric with ones on the diagonal, but it does not require the assumption of linear interpolation: the similarity of Little and Small (0.9) can be far higher than that of Medium and Large (0.5), which equally spaced normalization cannot express.
+
+:::
 
 When components of different types are mixed, we can compute a similarity in $[0,1]$ for each component by the methods above and then take a weighted average (Gower's coefficient).
 

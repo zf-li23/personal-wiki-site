@@ -1,7 +1,7 @@
 ---
 title: Equivalence of Regular Expressions and Finite Automata
 description: Kleene's theorem, that regular expressions and finite automata describe the same family of languages. Thompson's construction from regular expressions to ε-NFAs; Kleene's algorithm, state elimination, and the system-of-equations method (Arden's lemma) from DFAs to regular expressions; equivalence of regular grammars and finite automata; the cost of the conversions, and three implementations of regex engines (NFA simulation, DFA, backtracking).
-source_hash: 856357f575d9
+source_hash: 47397448420e
 ---
 
 Chapter 3 defined the **regular languages** algebraically: the languages denoted by **regular expressions**. Chapter 4 defined another family of languages by machines: the languages accepted by finite automata (DFAs, NFAs, or ε-NFAs, which are equivalent). This chapter proves that the two families coincide, a result called Kleene's theorem; together with the type-3 grammars of Chapter 2, the regular languages thus have three equivalent descriptions: algebraic, machine, and grammatical. Both directions of the proof are constructive: starting from a regular expression, we can assemble an ε-NFA according to the structure of the expression (Thompson's construction), which is the starting point of practical regex engines; starting from a DFA, we can write down a regular expression by path iteration, state elimination, or solving equations. Finally we discuss the cost of these conversions and how they determine the matching algorithms of practical regular expressions ([4.2.11](/4.2.11)).
@@ -138,6 +138,8 @@ For $k = n$ there is no restriction on intermediate states, and $R_{1j}^{(n)}$ i
 
 For instance, $R_{12}^{(1)} = R_{12}^{(0)} + R_{11}^{(0)}(R_{11}^{(0)})^*R_{12}^{(0)} = 0 + (\varepsilon + 1)(\varepsilon + 1)^*0$, which simplifies to $1^*0$ using $(\varepsilon + 1)^* = 1^*$ and $(\varepsilon + 1)1^* = 1^*$; and $R_{12}^{(2)} = R_{12}^{(1)} + R_{12}^{(1)}(R_{22}^{(1)})^*R_{22}^{(1)} = 1^*0 + 1^*0(0+1)^*$, which simplifies to $1^*0(0 + 1)^*$. The only accepting state is 2, so the result is $R_{12}^{(2)} = 1^*0(0 + 1)^*$. The simplifications here use the algebraic laws of [§3.4](/4.8.3#sec-3.4).
 
+:::
+
 **Kleene's algorithm** applies mechanically to any DFA, and follows the same pattern of "recursion on the numbering of intermediate nodes" as the Floyd–Warshall algorithm (replacing union by minimum and concatenation by addition gives shortest paths). Its drawback is the blow-up of expressions: each round multiplies the length of the expressions by at most 4, so with $n$ states the result may be of length on the order of $4^n$.
 
 ### 5.2.2. State Elimination
@@ -194,6 +196,8 @@ First merge the several symbols on an arc into the expression $0 + 1$. For the a
 $$
 (0 + 1)^*1(0 + 1) + (0 + 1)^*1(0 + 1)(0 + 1).
 $$
+
+:::
 
 The order of elimination does not affect the language but affects the length of the expression: in general, eliminate first the states with fewer concatenations.
 

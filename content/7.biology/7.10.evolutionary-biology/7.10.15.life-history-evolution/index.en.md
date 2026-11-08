@@ -44,6 +44,8 @@ the expected number of offspring produced by a newborn over its lifetime. A popu
 
 Then $R_0 = 1$: each female exactly replaces herself. A mutation that raises fecundity at age 2 from 1 to 1.2 raises $l_2m_2$ to 0.6 and $R_0$ to 1.1; the same increase at age 3 raises $l_3m_3$ to 0.55 and $R_0$ only to 1.05, because fewer individuals survive to age 3. A mutation that raises survival from age 3 to age 4 has no effect on fitness at all, because there is no reproduction after age 3.
 
+:::
+
 $R_0$ is a good measure of fitness only when the population is roughly stationary. In a growing population the timing of reproduction matters: offspring produced early start reproducing earlier themselves. Two lizards both have $R_0 = 2$; one produces two offspring at age 1 and dies, the other produces two at age 2. After two years the first has four descendants and the second two. The right measure is the growth rate of a genotype's descendants.
 
 **Definition 15.1.4 (Intrinsic Rate of Increase)** The **intrinsic rate of increase** $r$ of a population (or genotype) with stable age structure is the per capita rate of increase per unit time, $r = \ln\lambda$, where the finite rate of increase $\lambda$ is the unique positive root of the discrete Euler–Lotka equation

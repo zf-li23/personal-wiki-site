@@ -1,7 +1,7 @@
 ---
 title: Atomic Structure and Periodicity
 description: The nuclear atom; the hydrogen spectrum, Bohr theory and a review of wave–particle duality; chemical representations of atomic orbitals (real orbitals, radial nodes and nodal planes, electron clouds, angular distribution plots); the four quantum numbers; shielding, effective nuclear charge and Slater's rules, penetration and energy level crossing; electron configurations, periods and groups, blocks; periodic trends of atomic radius, lanthanide contraction, ionization energy, electron affinity and electronegativity.
-source_hash: 635df197b49e
+source_hash: 40d558bba001
 ---
 
 In a chemical reaction the nucleus is unchanged and only the state of the extranuclear electrons changes, so atomic structure is the starting point for understanding chemical bonds, molecular structure and the properties of the elements. The quantum-mechanical treatment of the hydrogen atom (the solution of the Schrödinger equation, quantum numbers, electron clouds and radial probability distributions, electron spin, the Pauli principle and the basic rules for electron configurations) has already been given systematically in the quantum part of physics ([5.5.3](/5.5.3), [5.5.4](/5.5.4)). Sections 2.1–2.2 of this chapter only review it and concentrate on how atomic orbitals are used in chemistry: real atomic orbitals, angular distribution plots with their signs, nodes and nodal planes, which are the language of valence bond theory and molecular orbital theory in the next chapter ([6.1.3](/6.1.3)). Section 2.3 treats many-electron atoms: how shielding and penetration determine the order of energy levels, and from this the electron configurations and the structure of the periodic table. Section 2.4 uses the effective nuclear charge to explain the periodic variation of atomic radius, ionization energy, electron affinity and electronegativity, regularities that run through all later chapters on the properties of the elements ([6.1.13](/6.1.13)–[6.1.15](/6.1.15)). The self-consistent field method for many-electron atoms, atomic term symbols and relativistic effects belong to structural chemistry ([6.2](/6.2)).
@@ -45,6 +45,8 @@ Light is both a wave and made of **photons** ($E = h\nu$, $p = h/\lambda$); de B
 **Example 2.2.2** What are the **de Broglie wavelengths** of an electron with speed $5.9 \times 10^5\,\mathrm{m\,s^{-1}}$ and a bullet of mass $10\,\mathrm{g}$ with speed $1000\,\mathrm{m\,s^{-1}}$?
 
 Solution: For the electron $\lambda = \dfrac{6.626 \times 10^{-34}}{9.109 \times 10^{-31} \times 5.9 \times 10^5}\,\mathrm{m} = 1.23 \times 10^{-9}\,\mathrm{m} = 1.23\,\mathrm{nm}$, of the same order as the distances between atoms in crystals, so electrons can be diffracted by crystals; for the bullet $\lambda = 6.6 \times 10^{-35}\,\mathrm{m}$, too small to observe, and the wave nature of macroscopic objects can be neglected.
+
+:::
 
 The **Heisenberg uncertainty relation** (1927) $\Delta x\,\Delta p_x \ge \hbar/2$ ($= h/(4\pi)$) states that the position and momentum of a particle cannot both have definite values at the same time ([5.5.2](/5.5.2#sec-2.3)). An electron in an atom is confined to a region of $\Delta x \approx 0.1\,\mathrm{nm}$, so the uncertainty in its velocity is at least $\Delta v \ge \frac{h}{4\pi m_{\mathrm{e}}\Delta x} \approx 6 \times 10^5\,\mathrm{m\,s^{-1}}$, of the same order as the speed of the electron in the hydrogen atom (about $2.2 \times 10^6\,\mathrm{m\,s^{-1}}$). The electrons in atoms therefore cannot have definite orbits as in the Bohr model, and their motion can only be characterized by wave functions that describe probability distributions.
 
@@ -177,6 +179,8 @@ Solution: The grouping is $(1\mathrm{s})^2\,(2\mathrm{s}, 2\mathrm{p})^8\,(3\mat
 - 4s: $\sigma = 1 \times 0.35 + 9 \times 0.85 + 10 \times 1.00 = 18.00$, $Z_{\mathrm{eff}} = 3.00$, $E_{4\mathrm{s}} \approx -13.6 \times 3.00^2/3.7^2\,\mathrm{eV} = -8.9\,\mathrm{eV}$.
 
 The inner 3s electron is shielded little and has a much lower energy; in Sc the energy of 3d is already lower than that of 4s.
+
+:::
 
 Within the same shell, s electrons penetrate strongly and are shielded somewhat less than p electrons. Slater's rules do not distinguish s from p in the same group, but effective nuclear charges calculated from Hartree–Fock wave functions (Clementi and Raimondi, 1963) show this difference:
 
@@ -360,6 +364,8 @@ This fixes only differences of electronegativity, and a reference point must als
 **Example 2.4.1** Given the bond energies $D(\ce{H-H}) = 436$, $D(\ce{Cl-Cl}) = 242$ and $D(\ce{H-Cl}) = 432\,\mathrm{kJ\,mol^{-1}}$, find the electronegativity difference between H and Cl.
 
 Solution: $\Delta = 432 - \frac{1}{2}(436 + 242) = 93\,\mathrm{kJ\,mol^{-1}}$, $\lvert\chi_{\mathrm{Cl}} - \chi_{\mathrm{H}}\rvert = 0.102\sqrt{93} = 0.98$, in agreement with $3.16 - 2.20 = 0.96$ from the table.
+
+:::
 
 Mulliken (1934) gave another, more direct definition: the ability of an atom to attract electrons is related both to how easily it loses electrons (ionization energy) and to how easily it gains them (electron affinity), and the average of the two is taken as the *Mulliken electronegativity*: $\chi_{\mathrm{M}} = \frac{1}{2}(I_1 + E_{\mathrm{ea}})$ (in eV). For example F gives $\frac{1}{2}(17.42 + 3.40) = 10.41\,\mathrm{eV}$ and Cl gives $8.29\,\mathrm{eV}$. The Mulliken and Pauling electronegativities are roughly linearly related; there are also other scales, such as the Allred–Rochow scale based on effective nuclear charge and covalent radius. Different scales give different values and must not be mixed. The following table gives the Pauling electronegativities of the main-group elements (CRC Handbook):
 

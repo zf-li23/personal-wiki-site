@@ -1,7 +1,7 @@
 ---
 title: Membrane Potential, Action Potential and Conduction
 description: "The Galvani–Volta dispute over animal electricity; the ionic basis of the membrane potential: equilibrium potentials and the Nernst equation (Na⁺, K⁺, Ca²⁺, Cl⁻), the GHK equation and the effect of P_Na/P_K on the resting potential–[K⁺]ₒ curve, the electrogenic contribution of the Na⁺/K⁺-ATPase; the equivalent circuit of the membrane, conductance weighting and driving force, membrane capacitance and how many ions it takes to set up a membrane potential; local potentials and receptor potentials; excitability, threshold potential and the strength–duration relation; phases and ionic mechanism of the action potential, refractory periods, supernormal and subnormal periods, Ca²⁺ action potentials; the compound action potential of Erlanger and Gasser and fiber classification, the squid giant axon, the voltage clamp and the conclusions of Hodgkin and Huxley; the energy cost of restoring Na⁺ and K⁺ gradients; passive cable properties, the two strategies of giant axons and myelin, saltatory conduction and the scaling of conduction velocity; comparisons including giant axons, multiple origins of myelin, and Ca²⁺ action potentials in nematodes and Paramecium."
-source_hash: b84762d70586
+source_hash: 040f74b4b077
 ---
 
 Across the membrane of every living cell there is a potential difference of about $-10$ to $-100\,\mathrm{mV}$; nerve and muscle cells can also reverse this potential within a millisecond and propagate it along the cell membrane at speeds from a few meters per second to more than a hundred. The membrane potential and the action potential are the common basis of information transfer in the nervous system, muscle contraction, glandular secretion and cardiac rhythm, and the precondition for understanding almost every later chapter. This chapter first explains how the membrane potential arises from ion gradients and selective permeability (Sections 4.1–4.3), then treats two kinds of electrical signal: local potentials that decay with distance and all-or-none action potentials (Sections 4.4–4.6), then the history of research on the action potential and the conclusions of Hodgkin and Huxley (Section 4.7), its energy cost (Section 4.8) and conduction (Section 4.9), and finally compares the solutions of other animals (Section 4.10).
@@ -47,6 +47,8 @@ $$
 | $\ce{HCO3-}$ | $24$ | $12$ | $2$ | $-19$ |
 
 For example $E_{\mathrm{Ca}} = (61.5/2)\log_{10}10^4 = +123\,\mathrm{mV}$; for $\ce{Cl-}$, $z = -1$ and $E_{\mathrm{Cl}} = -61.5\log_{10}27.6 = -89\,\mathrm{mV}$. The resting potential of skeletal muscle is about $-85\,\mathrm{mV}$, close to $E_{\mathrm{K}}$ and $E_{\mathrm{Cl}}$ and far from $E_{\mathrm{Na}}$ and $E_{\mathrm{Ca}}$. In skeletal muscle $\ce{Cl-}$ is almost passively distributed ($E_{\mathrm{Cl}} \approx V_{\mathrm{m}}$); in most neurons KCC2 extrudes $\ce{Cl-}$ and $E_{\mathrm{Cl}}$ is about $-70\,\mathrm{mV}$ or even more negative, which is the basis of inhibitory synapses (Chapter 5).
+
+:::
 
 Changing the extracellular $[\ce{K+}]$ tests this theory. When the resting potential of frog skeletal muscle is plotted against $\log[\ce{K+}]_{\mathrm{o}}$, it is a straight line of slope about $58\,\mathrm{mV}$ per tenfold (frogs have a lower body temperature) over the higher range of $[\ce{K+}]_{\mathrm{o}}$, as the Nernst equation predicts; but at low $[\ce{K+}]_{\mathrm{o}}$ the curve departs from the line and is more positive than $E_{\mathrm{K}}$. This shows that the resting membrane has a small permeability to ions other than $\ce{K+}$.
 
@@ -113,6 +115,8 @@ To then depolarize the membrane potential from $-61.5\,\mathrm{mV}$ to $+35\,\ma
 This calculation shows that rapid changes of membrane potential require only very few ions to move across the membrane and hardly change ion concentrations inside and outside the cell; the membrane is the important interface for electrical signals, and the ion concentration gradient is a "battery" that can support thousands upon thousands of action potentials. Only in very thin processes (axons and dendritic spines a few tenths of a micrometer in diameter) do the ions moved by each action potential reach more than one percent of the intracellular content, and high-frequency firing then changes local ion concentrations significantly.
 
 ![Fraction of the cell's ions moved by electrical signals. Purple line: the fraction of intracellular K⁺ (140 mM) moved when a spherical cell sets up a −70 mV resting potential by K⁺ efflux, 3C_mV/(eN_A[K⁺]ᵢr); blue line: the fraction of axonal Na⁺ (12 mM) that must at least enter during one action potential (100 mV depolarization), 2C_mΔV/(eN_A[Na⁺]ᵢa). Both are inversely proportional to diameter: negligible in a 10 µm cell, whereas in a thin axon of diameter 0.2 µm each action potential increases Na⁺ by about 2%](./plots/ions-vs-size.py)
+
+:::
 
 The properties of a change of membrane potential (threshold, peak, time course) are determined by four things: the properties of the ion channels in the membrane, the concentrations of charged ions on the two sides of the membrane, the electrical properties of the membrane (resistance and capacitance), and the shape and size of the cell.
 

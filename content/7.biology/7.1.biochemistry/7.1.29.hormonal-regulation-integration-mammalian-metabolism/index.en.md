@@ -244,6 +244,8 @@ in which $S_{\mathrm{G}}$ (glucose effectiveness, about $0.025\,\mathrm{min^{-1}
 
 ![Simulation of Bergman's minimal model (Example 29.3.1) for an intravenous glucose tolerance test with illustrative parameters. A: plasma glucose after a bolus raising it to 16 mM, for a normal subject (insulin sensitivity S_I = 1.0 × 10⁻⁴ min⁻¹ per pmol L⁻¹), an insulin-resistant subject compensated by fourfold higher secretion (the two curves coincide) and an insulin-resistant subject with failing β cells; K_G is the fractional rate of glucose disappearance between 10 and 40 min, used clinically as an index of glucose tolerance. B: plasma insulin (logarithmic scale), the compensated subject with hyperinsulinemia. C: first-phase insulin against insulin sensitivity; subjects on the hyperbola of constant disposition index tolerate glucose equally well, the subject below it has diabetes](./plots/minimal-model.py)
 
+:::
+
 The model is minimal in the sense of having the fewest parameters that still fit an IVGTT; larger models of glucose homeostasis are used to test insulin pumps and closed-loop controllers ("artificial pancreas") in silico. Tools: the solution of nonlinear ordinary differential equations and their stability ([2.4](/2.4)), and parameter estimation by nonlinear least squares ([3.3](/3.3)).
 
 ## 29.4. Obesity and the Regulation of Body Mass

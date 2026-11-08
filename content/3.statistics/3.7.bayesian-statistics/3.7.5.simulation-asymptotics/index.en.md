@@ -104,6 +104,8 @@ Steps 4 and 5 are Proposition 5.1.2 applied to the discrete approximation. In pr
 
 ![Grid sampling for the normal model with independent priors μ ~ N(5, 2²) and σ² ~ Inv-χ²(3, 4), and 12 observations simulated from N(10, 2²). Left: contours of the posterior density of (μ, σ) computed on a 201 × 217 grid. Right: 1000 draws obtained by Algorithm 5.2.1.](./plots/grid_sampling.py)
 
+:::
+
 The cost of a grid grows exponentially with the dimension: $K$ points per parameter means $K^d$ evaluations. Grid sampling is therefore useful only after the problem has been reduced to one or two dimensions, which is often possible. If the conditional posterior $p(\theta_1\mid\theta_2,y)$ is a standard distribution, then for any value of $\theta_1$
 
 $$
@@ -170,6 +172,8 @@ Consider $n=41$ trials with $y=37$ successes.
 - *The same mixture prior with ambiguous data*, $y=5$ in $n=10$. Now both components keep weight $\frac12$ by symmetry, the posterior is bimodal with modes near $0.34$ and $0.66$, and a normal approximation centered at either mode misses half of the posterior mass.
 
 ![Exact posteriors (solid) and normal approximations at the mode (dashed) for binomial data. Left: Beta(3, 3) prior, y = 37, n = 41. Middle: the mixture prior ½Beta(8, 2) + ½Beta(2, 8) with the same data; the posterior is essentially Beta(45, 6). Right: the mixture prior with y = 5, n = 10; the posterior is bimodal and the approximation fails.](./plots/normal_approximation.py)
+
+:::
 
 The requirement "unimodal and roughly symmetric" is therefore essential. It is usually met when the number of observations is large, as the next example shows: with the prior $\mathrm{Beta}(10,10)$ and a fixed observed proportion $y/n=0.1$, the exact and approximate posteriors are visibly different at $n=50$ (posterior standard deviation $0.0487$ exact against $0.0490$ approximate, but with a skewed shape) and practically indistinguishable at $n=400$, where the posterior is $\mathrm{Beta}(50,370)$ with standard deviation $0.0158$.
 

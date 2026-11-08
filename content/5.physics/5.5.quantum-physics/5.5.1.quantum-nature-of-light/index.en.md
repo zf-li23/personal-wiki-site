@@ -1,7 +1,7 @@
 ---
 title: The Quantum Nature of Light
 description: Thermal radiation and black bodies, Kirchhoff's law, the Stefan–Boltzmann law and Wien's displacement law, the ultraviolet catastrophe, Planck's law and the energy quantum; the photoelectric effect, Einstein's photon theory and the photoelectric equation; photon energy and momentum, wave–particle duality of light; Compton scattering and the Compton wavelength.
-source_hash: 630f55ebd1cd
+source_hash: 170728eaafea
 ---
 
 By the end of the nineteenth century classical physics seemed nearly complete: Newtonian and analytical mechanics handled mechanical problems, Maxwell's theory unified electricity, magnetism and light, and thermodynamics and statistical mechanics explained thermal phenomena. Yet one of the "two clouds" that Kelvin saw on the horizon, the distribution of thermal radiation over frequency, could not be explained correctly by classical theory (the other led to special relativity, see [5.1.8](/5.1.8)). In 1900 Planck proposed the energy quantum hypothesis to solve this problem, and quantum theory was born. In 1905 Einstein introduced the light quantum; in 1913 Bohr applied quantization to the atom; in 1923 Compton scattering confirmed the momentum of the photon. In 1924 de Broglie proposed matter waves; in 1925–1926 Heisenberg's matrix mechanics and Schrödinger's wave mechanics were established one after the other, and Born gave the statistical interpretation of the wave function. In 1927 electron **diffraction** confirmed matter waves and Heisenberg stated the uncertainty relation, and in 1928 Dirac wrote down the relativistic **wave equation** of the electron. Together with relativity, quantum mechanics forms one of the two pillars of modern physics; it underlies atomic, molecular, solid-state and nuclear physics, as well as the theory of the chemical bond and physical chemistry.
@@ -248,6 +248,8 @@ $$
 \nu_0=\frac{W_0}{h}=\frac{4.2\times1.602\times10^{-19}}{6.626\times10^{-34}}\,\mathrm{Hz}=1.0\times10^{15}\,\mathrm{Hz},
 $$
 and the threshold wavelength is $\lambda_0=c/\nu_0\approx295\,\mathrm{nm}$, so visible light cannot produce the photoelectric effect in aluminum.
+
+:::
 
 The photoelectric effect has many applications: phototubes and photomultiplier tubes convert weak light signals into electrical signals and can detect single photons; photoelectron spectroscopy (including angle-resolved photoemission spectroscopy, [5.5.6](/5.5.6)) measures the energy and momentum of electrons in solids from the energy and direction of the photoelectrons. Photoconductivity (a change in the electrical **conductance**) in semiconductors and the photovoltaic effect (solar cells) are internal photoelectric effects, in which electrons absorb photons and make transitions inside the solid.
 

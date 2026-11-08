@@ -44,6 +44,8 @@ C/C=C/C trans
 
 **解** 乙烯基的第一个碳连 $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$，异丙基连 $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\}$，相同。向外一层：乙烯基较优的分支是 $\ce{=CH2}$ 的碳，它连 $\{\mathrm{C}_{\text{dup}}, \mathrm{H}, \mathrm{H}\}$；异丙基的分支是甲基，连 $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$。C > H，所以 $\ce{-CH=CH2}$ > $\ce{-CH(CH3)2}$。同理，乙炔基的第一个碳连 $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{C}_{\text{dup}}\}$，与叔丁基的 $\{\mathrm{C}, \mathrm{C}, \mathrm{C}\}$ 相同；向外一层，乙炔基末端碳连 $\{\mathrm{C}_{\text{dup}}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$，叔丁基的甲基连 $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$，乙炔基优先。苯基的 ipso 碳连 $\{\mathrm{C}, \mathrm{C}, \mathrm{C}_{\text{dup}}\}$；向外一层，苯基有两个邻位碳各连 $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$ 和一个只连虚原子的复制碳，乙炔基只有一个分支连 $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\}$、两个复制碳；第二个分支 $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\} > \{0, 0, 0\}$，苯基优先。
 
+:::
+
 常见基团的优先次序（从高到低）：
 
 $$
@@ -131,6 +133,8 @@ C[C@H](O)C(=O)O (S)
 用楔形式判断时，最低优先的基团若在虚楔形键上（指向纸面内），直接读 $1\to 2\to 3$ 的方向；若在实楔形键上（指向观察者），读出的方向取反；若在纸面内，可以交换任意两个基团使 4 处于虚楔形键上，读出方向后再取反（交换一次就得到对映体）。
 
 **例 5.3.1** 确定 2-溴丁烷对映体的构型：$\ce{CH3CH2}$ 与 $\ce{CH3}$ 中，乙基的第一个碳连 $\{\mathrm{C}, \mathrm{H}, \mathrm{H}\}$，甲基连 $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$，所以次序为 $\ce{Br} > \ce{CH2CH3} > \ce{CH3} > \ce{H}$。H 指向后方时 Br → Et → Me 为逆时针的是 (S)-2-溴丁烷，它是右旋的，记作 (S)-(+)-2-溴丁烷。
+
+:::
 
 R/S 是按规则定义的符号，与旋光方向 (+)/(−) 没有必然联系；同一个手性中心的 R/S 甚至可能因为远处基团的变化而改变，尽管空间排列没变。例如 L-丙氨酸是 (S)，而 L-半胱氨酸是 (R)：只因为 $\ce{-CH2SH}$ 中的 S 使它的优先次序超过了 $\ce{-COOH}$。
 

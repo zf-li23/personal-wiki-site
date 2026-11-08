@@ -125,6 +125,8 @@ A_{\text{parallel}} = 1 - \prod_{i=1}^{n} (1 - A_i).
 $$
 Two replicas with $A = 99\%$ each give $1 - 0.01^2 = 99.99\%$. Redundancy turns two cheap, unreliable components into one reliable one, provided that their failures really are independent, the assumption that 5.3 examines.
 
+:::
+
 The goal of all availability tactics is to ensure that faults do not result in failures. The dependability literature groups them into four means:
 
 | Means | Question | Examples |

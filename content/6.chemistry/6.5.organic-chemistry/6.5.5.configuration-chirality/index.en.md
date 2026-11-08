@@ -1,6 +1,6 @@
 ---
 title: Configuration and Chirality
-source_hash: d619696307d6
+source_hash: e29635d866c1
 ---
 
 [6.5.4](/6.5.4) discussed the conformations that interconvert without breaking bonds; this chapter discusses the **configuration**, which can be changed only by breaking bonds. Configurational isomerism includes cis–trans isomerism of double bonds and rings, and the enantiomeric and diastereomeric isomerism that arises from chirality. [6.1.5](/6.1.5) already introduced **chirality**, **enantiomers**, **diastereomers** and **racemates** with coordination compounds, and here we put them on a systematic basis: first the language for describing configuration (the Cahn–Ingold–Prelog rules, E/Z, R/S, the Fischer projection and D/L), then molecules with several stereocenters, chiral molecules without stereocenters, optical activity, and the ways of obtaining a single enantiomer. The last section, on homotopic, enantiotopic and diastereotopic relationships and the Re/Si faces, is the basis for deciding NMR equivalence in [6.5.6](/6.5.6#sec-6.5.1) and for the stereochemistry of carbonyl addition discussed in [6.5.16](/6.5.16#sec-16.4).
@@ -44,6 +44,8 @@ Rule 1 is applied by comparing "layer by layer outward":
 **Example 5.1.1** Compare the priorities of $\ce{-CH=CH2}$ and $\ce{-CH(CH3)2}$, of $\ce{-C#CH}$ and $\ce{-C(CH3)3}$, and of $\ce{-C6H5}$ and $\ce{-C#CH}$.
 
 **Solution** The first carbon of vinyl carries $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$ and that of isopropyl carries $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\}$, which are the same. One layer outward: the higher-ranking branch of vinyl is the carbon of $\ce{=CH2}$, which carries $\{\mathrm{C}_{\text{dup}}, \mathrm{H}, \mathrm{H}\}$; the branch of isopropyl is a methyl group, which carries $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$. Since C > H, $\ce{-CH=CH2}$ > $\ce{-CH(CH3)2}$. Similarly, the first carbon of ethynyl carries $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{C}_{\text{dup}}\}$, the same as the $\{\mathrm{C}, \mathrm{C}, \mathrm{C}\}$ of *tert*-butyl; one layer outward, the terminal carbon of ethynyl carries $\{\mathrm{C}_{\text{dup}}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$ and the methyl groups of *tert*-butyl carry $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$, so ethynyl has priority. The *ipso* carbon of phenyl carries $\{\mathrm{C}, \mathrm{C}, \mathrm{C}_{\text{dup}}\}$; one layer outward, phenyl has two *ortho* carbons each carrying $\{\mathrm{C}, \mathrm{C}_{\text{dup}}, \mathrm{H}\}$ and a duplicated carbon carrying only phantom atoms, whereas ethynyl has only one branch carrying $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\}$ and two duplicated carbons; for the second branch $\{\mathrm{C}, \mathrm{C}, \mathrm{H}\} > \{0, 0, 0\}$, so phenyl has priority.
+
+:::
 
 The priority order of common groups (from highest to lowest):
 
@@ -132,6 +134,8 @@ Even an isotopic difference is enough to produce chirality: $\ce{CH3CHDOH}$ (1-d
 When judging from a wedge formula: if the group of lowest priority is on a hashed wedge bond (pointing into the paper), read the direction of $1\to 2\to 3$ directly; if it is on a solid wedge bond (pointing toward the viewer), reverse the direction read; if it is in the plane of the paper, interchange any two groups so that 4 is on a hashed wedge bond, read the direction, and then reverse it (one interchange gives the enantiomer).
 
 **Example 5.3.1** Determine the configuration of the enantiomers of 2-bromobutane: of $\ce{CH3CH2}$ and $\ce{CH3}$, the first carbon of ethyl carries $\{\mathrm{C}, \mathrm{H}, \mathrm{H}\}$ and methyl carries $\{\mathrm{H}, \mathrm{H}, \mathrm{H}\}$, so the order is $\ce{Br} > \ce{CH2CH3} > \ce{CH3} > \ce{H}$. The enantiomer in which Br → Et → Me is counterclockwise with H pointing to the rear is (S)-2-bromobutane, which is dextrorotatory and is written (S)-(+)-2-bromobutane.
+
+:::
 
 R/S is a symbol defined by rules and has no necessary connection with the direction of optical rotation, (+)/(−); the R/S label of a given stereocenter can even change when a distant group changes, although the spatial arrangement has not changed. For example L-alanine is (S) while L-cysteine is (R), only because the S in $\ce{-CH2SH}$ gives it higher priority than $\ce{-COOH}$.
 

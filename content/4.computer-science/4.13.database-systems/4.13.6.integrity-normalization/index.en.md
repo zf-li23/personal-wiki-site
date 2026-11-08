@@ -529,6 +529,8 @@ $$
 
 The **candidate keys** are $\{\mathit{sample\_id}, \mathit{assay}\}$ and $\{\mathit{sample\_id}, \mathit{operator}\}$. $R$ is not in BCNF, since $\mathit{operator}$ is not a superkey. The BCNF decomposition $\{(\mathit{operator}, \mathit{assay}), (\mathit{sample\_id}, \mathit{operator})\}$ is lossless, but no schema contains all of $\mathit{sample\_id}, \mathit{assay}, \mathit{operator}$, so $\mathit{sample\_id}\ \mathit{assay} \to \mathit{operator}$ is not preserved: two operators trained for the same assay could both be recorded for one sample without any single relation noticing. Every BCNF decomposition of $R$ has this defect, because the only schema containing the three attributes is $R$ itself.
 
+:::
+
 Third normal form relaxes BCNF just enough to allow such schemas.
 
 **Definition 6.7.3 (Third Normal Form)** A relation schema $R$ is in **third normal form** (3NF) with respect to $F$ if for every $\alpha \to \beta$ in $F^+$ with $\alpha, \beta \subseteq R$, at least one of the following holds:

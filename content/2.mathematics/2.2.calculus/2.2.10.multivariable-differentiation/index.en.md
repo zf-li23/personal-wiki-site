@@ -1,6 +1,6 @@
 ---
 title: Limits, Continuity and Differentiation in Several Variables
-source_hash: f5c9673faebd
+source_hash: 0b7881a7fdf0
 ---
 
 With this chapter we enter multivariable calculus. It is a direct generalization of single-variable calculus: limits, continuity, derivatives and differentials all have multivariable versions, and most of the rules of computation keep their form. Once the independent variable ranges over the plane or space instead of a line, however, there are infinitely many ways to "approach a point", and phenomena appear that have no counterpart in one variable: a function may have the same limit along every line through a point and still have no limit there, and a function may have all its partial derivatives and still be discontinuous. The guiding thread of the chapter is to compare, at every step, what changes and what stays the same relative to the one-variable case.
@@ -93,6 +93,8 @@ As in one variable, $x_0$ must be a limit point of the domain, and $f(x_0)$ need
 
 **Proof** From $(|x|+|y|)^2\ge x^2+y^2$ we get $0\le\dfrac{x^2+y^2}{|x|+|y|}\le\sqrt{x^2+y^2}$; from $|xy|\le\frac12(x^2+y^2)$ we get $\left|\dfrac{xy}{\sqrt{x^2+y^2}}\right|\le\frac12\sqrt{x^2+y^2}$. Both are bounded by a constant multiple of $\rho$, so for every $\varepsilon>0$ we may take $\delta=\varepsilon$. $\square$
 
+:::
+
 A limit in several variables requires the same limit no matter from which direction the point approaches. Hence:
 
 **Proposition 10.2.1** If $f(x)$ has different limits as $x$ tends to $x_0$ along two paths in $D$ having $x_0$ as a limit point, or has no limit along some such path, then $\lim\limits_{x\to x_0}f(x)$ does not exist.
@@ -138,6 +140,8 @@ The third row also shows that the order of two limit operations cannot in genera
 For a closed region $D$, continuity on $D$ requires at a boundary point only that the limit as $x$ approaches through points of $D$ equal the function value, just as for one-sided continuity of a function of one variable at the endpoints of a closed interval. Sums, differences, products, quotients (with nonzero denominator) and compositions of continuous functions are continuous, so every **elementary function** of several variables is continuous on any region contained in its domain.
 
 **Example 10.3.1** Let $f(x,y)=x\sin\dfrac1y$ for $y\ne0$ and $f(x,0)=0$. Since $|f(x,y)|\le|x|$, $f$ is continuous at $(0,0)$; but for $x_0\ne0$, approaching $(x_0,0)$ along $x=x_0$, the expression $x_0\sin\frac1y$ has no limit, so $f$ is discontinuous at $(x_0,0)$. Points of discontinuity may thus fill a whole curve.
+
+:::
 
 Continuity of a function of two variables in each variable separately does not imply continuity: let $f(x,y)=1$ for $xy\ne0$ and $f(x,y)=0$ for $xy=0$. At the origin $f$ is continuous in $x$ and in $y$ ($f(x,0)\equiv f(0,y)\equiv0$), but $f\equiv1$ along $y=x$, so $f$ is not continuous at the origin.
 
@@ -195,6 +199,8 @@ $$
 \frac{\partial u}{\partial x}=yx^{y-1}\sin(x+y)+x^y\cos(x+y),\qquad
 \frac{\partial u}{\partial y}=x^y\ln x\,\sin(x+y)+x^y\cos(x+y).
 $$
+
+:::
 
 Unlike $\dfrac{\mathrm{d}y}{\mathrm{d}x}$ in one variable, $\dfrac{\partial z}{\partial x}$ is a single symbol and cannot be read as a quotient of two "partial differentials". For example, in the ideal gas law $pV=RT$ we have $\dfrac{\partial p}{\partial V}=-\dfrac{RT}{V^2}$, $\dfrac{\partial V}{\partial T}=\dfrac{R}{p}$ and $\dfrac{\partial T}{\partial p}=\dfrac{V}{R}$, and the product of the three is $-\dfrac{RT}{pV}=-1$, not $1$.
 
@@ -308,6 +314,8 @@ $$
 
 and as the origin is approached along the $x$-axis, the second term $-\frac2x\cos\frac1{x^2}$ oscillates unboundedly, so $f_x$ is not continuous at the origin; the same holds for $f_y$.
 
+:::
+
 The relations among these notions are as follows (arrows denote implication; none of the converses holds, with counterexamples in Examples 10.4.2, 10.5.1 and 10.5.2 and in [10.6](#sec-10.6)):
 
 ```mermaid
@@ -386,6 +394,8 @@ $$
 
 **Example 10.6.1** Find the directional derivative of $f(x,y)=x^2+4y^2$ at $(1,2)$ in the direction of the tangent to the curve $y=2x^2$. At $(1,2)$ the curve has $y'=4x=4$, tangent vector $(1,4)$, normalized to $\boldsymbol{v}=\frac{1}{\sqrt{17}}(1,4)$. With $f_x=2x=2$ and $f_y=8y=16$, we get $\dfrac{\partial f}{\partial\boldsymbol{v}}=\dfrac{2+64}{\sqrt{17}}=\dfrac{66}{\sqrt{17}}$.
 
+:::
+
 Without differentiability, the directional derivatives may all exist and yet violate the formula above, and the function may even be discontinuous:
 
 **Example 10.6.2**
@@ -421,6 +431,8 @@ Thus the gradient points in the direction of fastest increase of the function, a
 
 **Example 10.6.4** Let $f$ be differentiable at the origin with directional derivatives $1$ and $-1$ in the directions of $\boldsymbol{l}=(3,4)$ and $\boldsymbol{n}=(5,-12)$ respectively. Find $f_x(0,0)$ and $f_y(0,0)$. By Theorem 10.6.1, $\frac35f_x+\frac45f_y=1$ and $\frac5{13}f_x-\frac{12}{13}f_y=-1$, that is, $3f_x+4f_y=5$ and $5f_x-12f_y=-13$, so $f_x(0,0)=\frac17$ and $f_y(0,0)=\frac87$.
 
+:::
+
 The figure below shows the level curves and gradient field of $f(x,y)=x\,\mathrm{e}^{-x^2-y^2}$: the arrows are everywhere perpendicular to the level curves and point toward increasing values, and the gradient vanishes at the maximum point $\big(\frac1{\sqrt2},0\big)$ and the minimum point $\big(-\frac1{\sqrt2},0\big)$.
 
 ![Level curves and gradient vectors of f(x, y) = x·exp(−x² − y²): the gradient is perpendicular to the level curves and points in the direction of increase](./plots/gradient-contours.py)
@@ -455,6 +467,8 @@ $$
 
 This agrees with the result of logarithmic differentiation in one variable, but the reasoning is more mechanical.
 
+:::
+
 When differentiating abstract functions, we write $f_1'$ and $f_2'$ for the partial derivatives of $f$ with respect to its first and second intermediate variables, $f_{12}''$ and so on similarly; these are again composite functions with the same intermediate variables as $f$, so differentiating them again requires the chain rule once more.
 
 **Example 10.7.3** Let $f$ have continuous second-order partial derivatives and $z=f\Big(xy,\dfrac xy\Big)$. Find $z_{xx}$ and $z_{xy}$.
@@ -470,6 +484,8 @@ z_{xy}=f_1'+y\Big(xf_{11}''-\frac{x}{y^2}f_{12}''\Big)-\frac1{y^2}f_2'+\frac1y\B
 $$
 
 where the last step uses $f_{12}''=f_{21}''$.
+
+:::
 
 The chain rule shows that, whether $u,v$ are independent or intermediate variables, the total differential of $z=f(u,v)$ can always be written $\mathrm{d}z=f_u\,\mathrm{d}u+f_v\,\mathrm{d}v$; this is the **invariance of the first differential** for functions of several variables. Using it to compute partial derivatives of composite functions is often more convenient than applying the chain rule term by term.
 

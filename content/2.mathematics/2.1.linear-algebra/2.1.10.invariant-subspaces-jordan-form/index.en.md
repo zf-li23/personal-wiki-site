@@ -1,6 +1,6 @@
 ---
 title: Invariant Subspaces and the Jordan Canonical Form
-source_hash: 40a43d25f041
+source_hash: 929baa9e62e1
 ---
 
 [Chapter 6](/2.1.6) posed the classification problem for **matrix similarity**: find the simplest representative of $\{P^{-1}AP \mid P \text{ invertible}\}$. A **diagonalizable matrix** can be brought to diagonal form, but a defective one cannot, and Chapter 6 only stated the answer (Theorem 6.10.1): every complex square matrix is similar to a **Jordan canonical form**, which is unique up to the order of the blocks. This chapter gives a complete proof of that theorem and organizes the computation of the Jordan form and of a Jordan basis into a standard procedure.
@@ -116,6 +116,8 @@ is upper triangular. At each step we may choose which eigenvalue to take first, 
 1. Take the eigenvector $\boldsymbol{p}_1 = (1, 1, 1)^{\mathsf T}$ for $\mu = 1$ and extend it to the basis $\boldsymbol{p}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$. From $A\boldsymbol{e}_2 = (-5, -7, -9)^{\mathsf T} = -5\boldsymbol{p}_1 - 2\boldsymbol{e}_2 - 4\boldsymbol{e}_3$ and $A\boldsymbol{e}_3 = (2, 3, 4)^{\mathsf T} = 2\boldsymbol{p}_1 + \boldsymbol{e}_2 + 2\boldsymbol{e}_3$ we get $P_1 = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 0 & 1 \end{bmatrix}$ and $P_1^{-1}AP_1 = \begin{bmatrix} 1 & -5 & 2 \\ 0 & -2 & 1 \\ 0 & -4 & 2 \end{bmatrix}$.
 2. $A_1 = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix}$ has the eigenvector $\boldsymbol{q}_1 = (1, 2)^{\mathsf T}$ ($A_1\boldsymbol{q}_1 = \boldsymbol{0}$); extending to $\boldsymbol{q}_1, \boldsymbol{e}_2$ gives $Q = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$ and $Q^{-1}A_1Q = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$.
 3. $P = P_1\operatorname{diag}(1, Q) = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 2 & 1 \end{bmatrix}$ and $P^{-1}AP = \begin{bmatrix} 1 & -1 & 2 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix}$.
+
+:::
 
 [Chapter 12](/2.1.12) strengthens Schur's theorem: $P$ can be chosen to be unitary.
 
@@ -251,6 +253,8 @@ and the index at which the rank sequence stops decreasing is the index at which 
 **Example 10.6.1** The characteristic polynomial of $A = \operatorname{diag}(1, 1, 2)$ is $(x - 1)^2(x - 2)$ and its minimal polynomial is $(x - 1)(x - 2)$; the minimal polynomial of $\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ is $(x - 1)^2$, which has a multiple root, so this matrix is not diagonalizable.
 
 **Example 10.6.2** If $A^2 = I_n$, then $x^2 - 1 = (x - 1)(x + 1)$ is an annihilating polynomial; $m_A$ divides it and therefore has no multiple roots, so $A$ is diagonalizable. Similarly, every complex matrix satisfying $A^2 = A$ (a projection) or $A^k = I$ is diagonalizable.
+
+:::
 
 To decide diagonalizability we only have to check whether one polynomial has multiple roots, and this in turn can be decided via $\gcd(m_A, m_A')$ (the **greatest common divisor** of [Chapter 9](/2.1.9)), without computing a single eigenvector.
 
@@ -422,6 +426,8 @@ Step 1 is root finding, step 2 is a sequence of eliminations, and step 3 consist
 2. Let $N = A - 2I$. Then $\operatorname{rank}(N) = 4$, $\operatorname{rank}(N^2) = 2$ and $\operatorname{rank}(N^3) = 1 = 6 - 5$, where we stop. The numbers of blocks for $2$ of order $\ge 1, \ge 2, \ge 3$ are $6 - 4 = 2$, $4 - 2 = 2$ and $2 - 1 = 1$: one block of order $3$ and one of order $2$, so $J = \operatorname{diag}(1, J_{2,3}, J_{2,2})$.
 3. For $\mu = 1$: $\boldsymbol{p}_1 = \boldsymbol{e}_1$. For $\mu = 2$, level $3$: take $\boldsymbol{y} = (-2, 0, 0, 0, 1, 0)^{\mathsf T} \in N_3 \setminus N_2$, with chain $N^2\boldsymbol{y} = (1, 1, 0, 0, 0, 0)^{\mathsf T}$, $N\boldsymbol{y} = (3, 2, 1, 1, 0, 0)^{\mathsf T}$, $\boldsymbol{y}$. Level $2$: $N_2$ is spanned by $N_1 = \operatorname{span}\{(1,1,0,0,0,0)^{\mathsf T}, (1,0,1,0,0,0)^{\mathsf T}\}$ together with $\boldsymbol{e}_4$ and $(3, 0, 0, 0, -2, 1)^{\mathsf T}$. The vector $\boldsymbol{e}_4$ must not be chosen: $\boldsymbol{e}_4 = N\boldsymbol{y} - 2(1,1,0,0,0,0)^{\mathsf T} - (1,0,1,0,0,0)^{\mathsf T}$ lies in $N_1 + \operatorname{span}\{N\boldsymbol{y}\}$, and the bottom of its chain, $N\boldsymbol{e}_4 = N^2\boldsymbol{y}$, coincides with that of the first chain. Take $\boldsymbol{z} = (3, 0, 0, 0, -2, 1)^{\mathsf T}$ instead, with chain $N\boldsymbol{z} = (-4, -1, -3, 0, 0, 0)^{\mathsf T}$, $\boldsymbol{z}$.
 4. $P = (\boldsymbol{e}_1, N^2\boldsymbol{y}, N\boldsymbol{y}, \boldsymbol{y}, N\boldsymbol{z}, \boldsymbol{z}) = \begin{bmatrix} 1 & 1 & 3 & -2 & -4 & 3 \\ 0 & 1 & 2 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & -3 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$, $\det P = -3 \ne 0$, and $P^{-1}AP = J$.
+
+:::
 
 The Jordan form is the simplest form in theory, but it is unsuitable for floating-point computation: it is not a continuous function of the matrix entries. The code below changes one entry of $J_{0,10}$ by $10^{-10}$; the eigenvalues then jump from all being $0$ to ten distinct numbers of modulus $(10^{-10})^{1/10} = 0.1$, and the Jordan form changes from a single block of order $10$ to a diagonal matrix.
 

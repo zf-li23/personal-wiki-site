@@ -1,7 +1,7 @@
 ---
 title: 补救措施与若干专题
 description: 更多的残差诊断（R 的四幅诊断图，杠杆值、离群值与强影响点，标准化残差与学生化删除残差，Cook 距离，失拟 F 检验），针对非线性、异方差与非正态误差的补救措施（非线性回归与加权回归、广义线性模型、方差稳定化变换与 Box–Cox 变换），过原点的回归、反向预测、两条回归直线以及 R² 的局限。
-source_hash: 24de832cbae1
+source_hash: 2328b5cf10c1
 ---
 
 [3.3.5](/3.3.5) 列出了简单线性回归可能出现的问题以及如何发现它们。本章完成诊断并转向补救。第一部分细化残差分析：从 R 自带的诊断图出发，区分离群值、高杠杆点和强影响点，引入按各自标准差缩放的残差和 Cook 距离；在相同的 $X$ 值处有重复观测时，[3.3.4](/3.3.4) 的**一般线性检验**成为失拟的正式检验。第二部分讨论补救措施：非线性回归、加权、广义线性模型，以及最重要的变换，并用 Box–Cox 方法选择变换。最后一部分汇集简单回归的几个专题：过原点的回归、反向预测、两条回归直线与相关系数的关系，以及 $R^2$ 的局限。[3.3.7](/3.3.7) 的矩阵方法将把这些推广到多个预测变量。
@@ -87,6 +87,8 @@ $$
 **例 6.1.1** 下图每个面板中，九个点沿一条直线分布，再加入第十个点（三角形）。面板 A 中三角形的 $X = 20$，远离其他点，但位于趋势线上：杠杆值高，不是离群值，影响很小。面板 B 中它的 $X$ 普通，但响应远在直线下方：是杠杆值低的离群值，只使直线略有移动。面板 C 中它在 $X$ 方向上远离其他点，又远离趋势：它把直线拉向自己，是强影响点。
 
 ![Three regressions with one added observation (triangle), fitted with all data (solid) and without the triangle (dashed): A, a high-leverage point on the trend; B, an outlier with low leverage; C, a high-leverage outlier that changes the slope; the titles give its leverage h, studentized deleted residual t and Cook's distance D](./plots/leverage-influence.py)
+
+:::
 
 面板 C 也说明了为什么原始残差不是识别离群值的好依据：强影响点把直线拉向自己，它自身的残差小于它的偏离。在一个著名的小数据集中（八个城市的酒馆数量与死亡人数）也是如此：有一个城市的酒馆数是其他城市的五倍，它远离通过其余七个点的直线，原始残差却不大，而它的学生化残差极大。办法是用每个残差自己的标准差来缩放它，并把 $Y_i$ 与一个不使用 $Y_i$ 的拟合作比较。
 
@@ -234,6 +236,8 @@ $$
 $$
 这个变换能否给出好的拟合，要像检查其他任何模型一样检查：倒数也变换了误差，低浓度处的小速度变成变异很大的大 $1/V$ 值，而 $C$ 最小（$1/C$ 最大）的观测杠杆值很高。
 
+:::
+
 很多时候这样的变换并不存在。如果不想改变对误差的假设，可以改做非线性回归（nonlinear regression）分析：平均响应以非线性方式随 $X$ 变化，观测围绕这些均值的偏离与线性回归中相同，即 $Y_i = f(X_i; \boldsymbol{\theta}) + \varepsilon_i$，$f$ 关于参数 $\boldsymbol{\theta}$ 非线性。这时最小二乘估计没有闭式解，需要迭代计算（R 的 `nls`，即非线性最小二乘）。
 
 ### 6.2.2. 方差不恒定
@@ -353,6 +357,8 @@ a1$tplasma <- a1$plasma^(-0.5)            # apply the chosen transformation
 ```
 
 ![Box-Cox procedure on simulated data with five observations at each of five predictor values: the spread of Y shrinks as X grows, Y^(-1/2) has nearly constant spread, and the profile log-likelihood of lambda is maximized near -0.5 with a 95% confidence interval that excludes both 1 and 0](./plots/box-cox-profile.py)
+
+:::
 
 误差方差恒定而关系弯曲时，改为变换 $X$，这不改变误差分布；误差方差也随 $X$ 变化时，变换 $Y$，必要时再结合对 $X$ 的变换。典型模式如下：
 

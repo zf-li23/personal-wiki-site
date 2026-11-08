@@ -95,6 +95,8 @@ If the trait is a shape that changes with size by **allometry**, $y=ax^b$ ([7.5.
 
 **Example 39.4.1** The adult value in Formula 39.4.1 is the same for $(k,\alpha,\beta)=(0.7,2,10)$, $(1,2,7.6)$ and $(1,4.4,10)$: $z^*=5.6$ in each case. The adult alone cannot tell which process occurred; the trajectories, measured on growth series of the ancestor and descendant, can. Tropical salamanders of the genus *Bolitoglossa* that climb trees have smaller, more webbed feet with shorter digits than terrestrial species; the feet of the arboreal species resemble the juvenile feet of terrestrial ones, because foot growth stops at an earlier stage (Alberch and Alberch 1981): progenesis of a module.
 
+:::
+
 Examples of heterochrony are found throughout the course:
 
 | Example | Change | Process |
@@ -199,6 +201,8 @@ Selecting, among exposed individuals, those that show the phenotype is **truncat
 **Example 39.7.1** In the simulation of the figure (100 loci of effect $0.1$, starting **allele frequency** $0.2$, so $\mu_G=4.0$ and $\sigma_G\approx0.57$; $\sigma_E=0.5$, $S=1.5$, $T=7$), about 2 % of exposed flies show the phenotype in generation 0 and none of the unexposed. Selection of the responders raises the response to 54 % in generation 2 and to 85 % in generation 5; unexposed siblings show the phenotype at 4 % in generation 2, 17 % in generation 5, 36 % in generation 10 and 60 % in generation 20, as $\mu_G$ rises from 4.0 to about 6.9. In a line selected against the trait, neither response appears. The first step can be checked with Formula 39.7.1: with $\sigma_P\approx0.76$ and $q_S\approx0.024$, $z\approx1.98$, $i\approx2.36$ and $h^2\approx0.57$, so $\Delta\mu_G\approx0.57\times2.36\times0.76\approx1.0$, which brings the exposed population close to its threshold and raises $q_S$ to about 30 %, as in the simulation (34 %).
 
 ![Genetic assimilation in a threshold model (Formula 39.7.1; 100 additive loci, 1000 flies per generation, seed 0). A: in a line in which exposed flies showing the phenotype are bred (orange), the frequency of the phenotype among exposed flies (solid) rises within a few generations and, later, among unexposed siblings (dashed); in a line selected against the trait (blue), it stays near zero. B: distributions of the genotypic value in the line selected for the trait at generations 0, 8 and 16: selection moves the genotypes past the threshold for exposed flies and toward the threshold for unexposed ones](./plots/genetic-assimilation.py)
+
+:::
 
 The model makes three points. First, assimilation needs genetic variation in liability, which **canalization** had hidden; molecular capacitors such as the chaperone Hsp90 can release such variation, in *Drosophila*, *Arabidopsis* and cavefish ([7.5.1](/7.5.1#sec-1.8.3), 39.4.3). Second, the rate of assimilation depends on the heritability of liability and on how close the population is to the threshold. Third, the stimulus does not cause the genetic change; it makes the variation visible to selection.
 

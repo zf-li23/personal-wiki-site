@@ -70,6 +70,8 @@ $$
 P=Q\begin{bmatrix}I_r&\\&O\end{bmatrix}Q^{\mathsf T}=\boldsymbol{q}_1\boldsymbol{q}_1^{\mathsf T}+\cdots+\boldsymbol{q}_r\boldsymbol{q}_r^{\mathsf T}.
 $$
 
+:::
+
 谱分解 $A=Q\Lambda Q^{\mathsf T}$ 也可以写成 $Q^{\mathsf T}AQ=\Lambda$，这引出下面的等价关系。
 
 **定义 7.1.1（正交相似）** 对实方阵 $A,B$，如果存在正交矩阵 $Q$ 使得 $Q^{\mathsf T}AQ=B$，则称 $A$ 与 $B$ **正交相似**。
@@ -111,6 +113,8 @@ f(\boldsymbol{x})=f(\boldsymbol{x}_0)+\nabla f(\boldsymbol{x}_0)^{\mathsf T}(\bo
 $$
 
 其中 $\nabla f(\boldsymbol{x}_0)=\Big[\frac{\partial f}{\partial x_i}(\boldsymbol{x}_0)\Big]_{n\times1}$ 称为梯度，$H(\boldsymbol{x}_0)=\Big[\frac{\partial^2 f}{\partial x_i\partial x_j}(\boldsymbol{x}_0)\Big]_{n\times n}$ 称为 $f$ 在 $\boldsymbol{x}_0$ 的 Hesse 矩阵（Hessian Matrix）。二阶偏导连续时混合偏导与次序无关，所以 Hesse 矩阵是实对称矩阵，Taylor 展开的二阶项是一个二次型。
+
+:::
 
 用谱分解可以把二次型化成没有交叉项的形式。设 $A=Q\Lambda Q^{\mathsf T}$，作正交变量替换 $\boldsymbol{y}=Q^{\mathsf T}\boldsymbol{x}$，则
 
@@ -240,6 +244,8 @@ $6\Rightarrow1$：$A=A_n$ 本身是顺序主子阵。$\square$
 $$
 A=\begin{bmatrix}2&&\\1&2&\\1&1&2\end{bmatrix}\begin{bmatrix}2&1&1\\&2&1\\&&2\end{bmatrix}.
 $$
+
+:::
 
 在复数域上，正定 Hermite 矩阵同样有唯一的分解 $A=R^{\mathsf H}R$，$R$ 为对角元是正实数的上三角矩阵，见 [第 13 章](/2.1.13)。
 
@@ -382,6 +388,8 @@ $$
 
 ![左：A 把单位圆映成以 σ_i u_i 为半轴的椭圆；右：一个 80×60 矩阵的截断 SVD 的相对误差随秩 k 的变化](./plots/svd-geometry-low-rank.py)
 
+:::
+
 SVD 是数据分析中最常用的矩阵分解。秩一展开中各项按 $\sigma_i$ 由大到小排列，截取前 $k$ 项就得到 $A$ 的最佳秩 $k$ 近似（定理 7.6.2），这是图像压缩、去噪和推荐系统中"低秩模型"的基础；对中心化的数据矩阵做 SVD，右奇异向量就是主成分方向；奇异值中远小于其余者的个数刻画了数值意义下的秩；下一节的广义逆则统一处理了各种线性方程组与最小二乘问题。
 
 ## 7.5. Moore–Penrose 广义逆
@@ -463,6 +471,8 @@ $$
 这个不等式（Weyl 不等式）的证明需要 Courant–Fischer 极小极大原理，这里从略。它说明奇异值是良态的：矩阵改变多少，奇异值至多改变多少。特征值则不然。
 
 **例 7.6.1（奇异值与特征值的对比）** 设 $J_n(0)$ 是 $n$ 阶 Jordan 块（对角元为 $0$，上次对角线为 $1$），$J_n(0)^{\mathsf T}J_n(0)=\operatorname{diag}(0,1,\dots,1)$，所以 $J_n(0)$ 有 $n$ 重特征值 $0$，奇异值为 $n-1$ 重的 $1$ 和 $1$ 重的 $0$。把 $J_n(0)$ 的 $(n,1)$ 元改为 $10^{-n}$ 得 $\tilde J$，$\|\tilde J-J_n(0)\|=10^{-n}$。这时 $\tilde J^{\mathsf T}\tilde J=\operatorname{diag}(10^{-2n},1,\dots,1)$，奇异值为 $n-1$ 重的 $1$ 和 $10^{-n}$，变化恰为 $10^{-n}$；而特征多项式为 $\lambda^n-10^{-n}$，特征值为 $10^{-1}\mathrm{e}^{2\pi\mathrm{i}j/n}$（$j=1,\dots,n$），变化是 $10^{-1}$，比扰动大 $10^{n-1}$ 倍。一般地，特征值的变化只能估计为 $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$，其中 $C_A$ 是与 $A,\tilde A$ 有关的常数；所以称特征值不是良态的（病态的）。对称矩阵是例外：若 $A,\tilde A$ 都是实对称矩阵，特征值按大小排列，则同样有 $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$（也由极小极大原理得到），所以实对称矩阵的特征值问题是良态的。
+
+:::
 
 奇异值的极值刻画还回答了"用低秩矩阵逼近 $A$ 最好能做到多好"。
 

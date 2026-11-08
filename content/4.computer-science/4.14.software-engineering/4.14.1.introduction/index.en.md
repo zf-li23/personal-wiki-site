@@ -34,6 +34,8 @@ Two remarks capture what distinguishes software engineering from programming. Da
 
 **Example 1.1.1 (Ariane 5 Flight 501)** On 4 June 1996, the first Ariane 5 rocket veered off course about 37 seconds after lift-off, broke up under aerodynamic loads and was destroyed by its self-destruct system. The inquiry board found that both inertial reference systems had failed with the same software exception: a 64-bit floating-point value related to the horizontal velocity was converted to a 16-bit signed integer, and the value was too large. The conversion was not protected because the code had been reused from Ariane 4, whose trajectory could not produce such values; the function concerned served no purpose after lift-off at all. The on-board computer then interpreted the diagnostic bit pattern of the failed unit as flight data and commanded full deflection of the nozzles. No line of the code was "wrong" in Ariane 4; the failure lay in reusing it without re-examining its assumptions against the new requirements, and in a design that treated any exception as a hardware fault and shut the unit down.
 
+:::
+
 Much more common than such design errors are failures caused by changes to software that is already running. Large Internet companies change their production systems constantly: software upgrades that introduce features, improve performance or fix bugs, and configuration changes, such as shifting traffic between data centers for load balancing. At Baidu, for example, they numbered more than 10,000 per day, and every one of them can break a service.
 
 | Date | System | Change | Effect |

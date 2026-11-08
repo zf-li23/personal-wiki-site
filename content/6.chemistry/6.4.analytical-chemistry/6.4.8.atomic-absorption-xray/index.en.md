@@ -1,7 +1,7 @@
 ---
 title: Atomic Absorption, Atomic Fluorescence and X-Ray Spectrometry
 description: Principles of atomic absorption (ground-state populations, line profile and broadening, integrated and peak absorption, line sources); hollow cathode lamps, flame and graphite furnace atomization, hydride generation; physical, chemical, ionization and spectral interferences, deuterium and Zeeman background correction, characteristic concentration; atomic fluorescence and hydride generation atomic fluorescence, speciation analysis; an introduction to X-ray fluorescence spectrometry and X-ray diffraction.
-source_hash: 78d863c4903f
+source_hash: dbf4e8436407
 ---
 
 Atomic emission spectrometry ([6.4.7](/6.4.7)) measures the light emitted by the small fraction of atoms that have been excited; at the temperature of a flame or graphite furnace, however, the vast majority of atoms remain in the ground state. In atomic absorption spectrometry a beam of light at the wavelength of a **resonance line** of the analyte element is passed through an atomic vapor, and the amount absorbed by the ground-state atoms is measured. The signal is therefore insensitive to temperature and suffers little spectral interference, and the method remains one of the most reliable routine methods for trace metals. This chapter first treats the key theory of atomic absorption, namely how wide the lines are and why the peak absorption must be measured with a line source; then the instrumentation (sources and atomizers), the interferences and their removal; then atomic fluorescence, which complements absorption; and finally, turning to inner-shell electrons, X-ray fluorescence spectrometry and X-ray diffraction by crystals. The components common to spectrometers (monochromator, grating, **photomultiplier tube** and so on) were treated in [6.4.7](/6.4.7); the definitions of the **calibration curve**, the **standard addition method**, the **internal standard method** and the **limit of detection** are in [6.4.1](/6.4.1#sec-1.8); the **Boltzmann distribution**, the **spectral linewidth**, the **Zeeman effect**, **characteristic X-rays** and the Bragg equation come from physics (5.2, 5.4, 5.5) and are only cited here.
@@ -335,6 +335,8 @@ The smaller the characteristic concentration, the more sensitive the method. It 
 
 **Example 8.3.1** In the determination of Cu by flame atomic absorption, a standard solution of $0.50\,\mu\mathrm{g\,mL^{-1}}$ has an absorbance of 0.110, so the characteristic concentration is $c_0 = 0.0044\times0.50/0.110\,\mu\mathrm{g\,mL^{-1}} = 0.020\,\mu\mathrm{g\,mL^{-1}}$. If the blank solution is measured 11 times with a standard deviation of absorbance of 0.0008, the limit of detection is $c_{\mathrm{L}} = 3s_{\mathrm{b}}/S = 3\times0.0008/(0.110/0.50\,\mathrm{mL\,\mu g^{-1}}) = 0.011\,\mu\mathrm{g\,mL^{-1}}$.
 
+:::
+
 It also follows from the derivation of Eq. (8.4) that atomic absorption measures the difference between two large signals: 1% absorption corresponds only to $A = 0.0044$, so its sensitivity is limited by source noise and in principle cannot match that of atomic fluorescence (Section 8.4), which measures a signal on a zero background.
 
 The choice of measurement conditions can be summarized as follows: the analytical line (generally the most sensitive resonance line; at high concentration a less sensitive line can be chosen to extend the linear range), lamp current and spectral bandpass; for flame AAS, the flame type, fuel-to-oxidant ratio and observation height; for the graphite furnace, the ashing and atomization temperatures (from an ashing curve and an atomization curve, taking the highest ashing temperature at which the analyte is not lost and the lowest atomization temperature at which the signal reaches a plateau) and the matrix modifier; and the elimination of interferences and the mode of background correction. Quantification uses the **calibration curve** or standard addition, the latter especially often for complex matrices (blood, seawater, soil digests).
@@ -435,6 +437,8 @@ $$
 $$
 
 and $\nu = c/\lambda = 1.549\times10^{18}\,\mathrm{Hz}$. If it is a $\mathrm{K}_\alpha$ line, Moseley's law $\sqrt{\nu} = 0.496\times10^{8}\,\mathrm{Hz}^{1/2}\times(Z-1)$ gives $Z - 1 = 25.1$ and $Z = 26$, so it is the Fe $\mathrm{K}_{\alpha1}$ line. Finding the weaker Fe $\mathrm{K}_\beta$ line (0.1757 nm) near $2\theta = 51.7^\circ$ then confirms it.
+
+:::
 
 Quantitative analysis: the line intensity is related to the content of the element, but not by simple proportionality, because there are significant matrix effects: other elements in the sample absorb the primary and fluorescent X-rays (absorption effect) or their fluorescence reexcites the analyte (enhancement effect, secondary fluorescence); particle size, surface flatness and chemical composition also have an influence. The usual methods are as follows.
 

@@ -1,7 +1,7 @@
 ---
 title: 数值线性代数
 description: 线性方程组、最小二乘问题和特征值问题在计算机上的解法：带选主元的 LU 分解与 Cholesky 分解，投影算子，Gram–Schmidt、Householder 与 Givens 三种 QR 分解，奇异值分解及其应用，幂迭代法与 Schur 形，以及它们的运算量与稳定性。
-source_hash: 259ebd0e2170
+source_hash: 018008fead6d
 ---
 
 几乎所有统计计算最终都落到线性代数上：回归拟合要解一个**最小二乘**问题，Gauss 似然需要协方差矩阵的行列式和逆矩阵的二次型，主成分是特征向量，[3.5.5](/3.5.5) 的每一步牛顿迭代都要解一个线性方程组。这些问题的理论已在线性代数（[2.1](/2.1)）中建立：**LU 分解**见 [2.1.2](/2.1.2)，正交性与 **QR 分解**见 [2.1.4](/2.1.4)，特征值见 [2.1.6](/2.1.6)，**Cholesky 分解**与**奇异值分解**见 [2.1.7](/2.1.7)，Jordan 形与 Schur 形见 [2.1.10](/2.1.10) 和 [2.1.12](/2.1.12)。本章把同样的分解当作算法来看：怎样计算，要多少次浮点运算，舍入误差（[3.5.1](/3.5.1)）如何在其中传播。全章按三个基本问题分为三部分：线性方程组 $A\boldsymbol{x}=\boldsymbol{b}$（Gauss 消元、选主元、Cholesky 分解），最小二乘问题 $A\boldsymbol{x}\approx\boldsymbol{b}$（投影算子、计算 QR 分解的三种方法、奇异值分解），特征值问题 $A\boldsymbol{x}=\lambda\boldsymbol{x}$（幂迭代法与揭示特征值的分解）。贯穿始终的原则是：没有最好的算法，只有最适合手头问题的算法——速度、稳定性和适用范围往往相互牵制。文中反复使用的 R 函数 `solve`、`chol`、`qr`、`svd`、`eigen` 调用的是 LINPACK 和 LAPACK 中实现下述算法的子程序。
@@ -90,6 +90,8 @@ $$
 $$
 A=\begin{bmatrix}1&&&\\2&1&&\\4&3&1&\\3&4&1&1\end{bmatrix}\begin{bmatrix}2&1&1&0\\&1&1&1\\&&2&2\\&&&2\end{bmatrix}=LU .
 $$
+
+:::
 
 因子 $L$ 不需任何计算就能得到，这要归功于两个"好运气"。
 
@@ -390,6 +392,8 @@ kappa(A)                             # 141422.4 (an estimate)
 kappa(t(A) %*% A)                    # 19999989553
 ```
 
+:::
+
 计算 QR 分解主要有三种方法：Gram–Schmidt 正交化、Householder 三角化和 Givens 旋转。
 
 ### 3.2.4. Gram–Schmidt 正交化
@@ -409,6 +413,8 @@ $$
 \boldsymbol{q}_3=(0,-1,0,1)^{\mathsf T}/\sqrt2 .
 $$
 这里 $\boldsymbol{q}_1^{\mathsf T}\boldsymbol{q}_2=-\varepsilon/\sqrt2\approx0$，但 $\boldsymbol{q}_2^{\mathsf T}\boldsymbol{q}_3=1/2$：正交性完全丧失。
+
+:::
 
 补救办法来自正交投影算子的观点。Gram–Schmidt 计算 $\boldsymbol{q}_j=P_j\boldsymbol{a}_j/\|P_j\boldsymbol{a}_j\|$，其中 $P_1=I$，$j\ge2$ 时
 
@@ -459,6 +465,8 @@ MGS <- function(A) {
 ```
 
 **例 3.2.3** 以 $(1,2,3)^{\mathsf T},(4,5,6)^{\mathsf T},(7,8,9)^{\mathsf T}$ 为列的奇异矩阵秩为 $2$。用 `MGS` 计算时，第三列 $\boldsymbol{v}_3$ 恰好变为 $\boldsymbol{0}$，于是 $r_{33}=0$，$\boldsymbol{q}_3$ 为 `NaN`：方法暴露出了秩亏损。`CGS` 则返回 $r_{33}=5.6\times10^{-15}$，第三列与 $\boldsymbol{q}_2$ 约有 $15$ 位相同，$\tilde Q^{\mathsf T}\tilde Q$ 的非对角元为 $1$，问题未被察觉。
+
+:::
 
 运算量。 算法 3.2.2 的主要工作在内层循环：$r_{ij}=\boldsymbol{q}_i^{\mathsf T}\boldsymbol{v}_j$（$m$ 次乘法、$m-1$ 次加法）和 $\boldsymbol{v}_j=\boldsymbol{v}_j-r_{ij}\boldsymbol{q}_i$（$m$ 次乘法、$m$ 次减法），每次迭代约 $4m$ flops：
 
@@ -530,6 +538,8 @@ $$
 于是 $A\boldsymbol{x}-\boldsymbol{b}=\begin{bmatrix}A&\boldsymbol{b}\end{bmatrix}\begin{bmatrix}\boldsymbol{x}\\-1\end{bmatrix}=Q(R\boldsymbol{x}-\boldsymbol{z})-\rho\boldsymbol{q}_{n+1}$，又因 $\boldsymbol{q}_{n+1}$ 与 $Q$ 的各列正交，$\|A\boldsymbol{x}-\boldsymbol{b}\|_2^2=\|R\boldsymbol{x}-\boldsymbol{z}\|_2^2+\rho^2$。解为 $\boldsymbol{x}=R^{-1}\boldsymbol{z}$，其中 $\boldsymbol{z}$ 作为 MGS 过程的一部分算出，而不是作为乘积 $Q^{\mathsf T}\boldsymbol{b}$ 算出。这样使用时 MGS 解最小二乘问题是稳定的，尽管用它计算标准正交基可能结果很差：算法的稳定性取决于所解的问题。
 
 **例 3.2.4** 对例 3.2.3 的奇异矩阵，Householder 实现给出的 $\tilde Q$ 满足 $\|\tilde Q^{\mathsf T}\tilde Q-I\|$ 为 $10^{-16}$ 量级，$\tilde R$ 最后一个对角元为 $-4.4\times10^{-16}$，清楚地显示出秩亏损；CGS 因子的 $\tilde Q^{\mathsf T}\tilde Q$ 则有等于 $1$ 的非对角元。
+
+:::
 
 R 中的 QR。 函数 `qr` 计算 Householder QR 分解（由 LINPACK 子程序 `dqrdc2` 完成，`LAPACK = TRUE` 时改用 LAPACK），并以紧凑形式返回：
 
@@ -671,6 +681,8 @@ for (j in c(3, 5, 10, 20, 30)) {
 }
 ```
 
+:::
+
 主成分分析。 高维数据矩阵难以使用。样本量 $n$ 固定而变量数 $p$ 增大时，良好预测所需的样本数呈指数增长，算法容易过拟合，其表现随 $p$ 先升后降（Hughes 现象）。这是维数灾难的一部分：空间的体积增长得如此之快，以致现有数据变得稀疏，大部分数据集中在一层薄"壳"中，所有点彼此几乎等距，基于距离的方法表现很差，数据也无法再可视化。降低数据矩阵 $X_{n\times p}$ 的维数，是指在尽可能保留方差的前提下减少变量数 $p$。**主成分分析**（[3.4.5](/3.4.5)）借助 SVD 做到这一点。
 
 把 $X$ 的行 $\boldsymbol{X}_{(i)}^{\mathsf T}$ 看作数据点，并设 $X$ 的各列已中心化（如有需要也已标准化）。数据点在单位向量 $\boldsymbol{v}_1$ 上的投影为 $\boldsymbol{v}_1\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}$，系数为 $\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}=\boldsymbol{X}_{(i)}^{\mathsf T}\boldsymbol{v}_1$；对所有点合写为 $\boldsymbol{Y}_1=X\boldsymbol{v}_1\in\mathbb{R}^n$。利用样本协方差矩阵 $\frac1{n-1}X^{\mathsf T}X$，
@@ -748,6 +760,8 @@ $$
 它满足 $A^3=I$，从而 $A^7=A=A^4$，而 $A^2\ne A$。
 
 **例 3.3.2** 证明对 $A=\begin{bmatrix}4&-2\\5&-3\end{bmatrix}$ 有 $A^4=5A+6I$。特征多项式为 $p_A(\lambda)=(4-\lambda)(-3-\lambda)+10=\lambda^2-\lambda-2$，根为 $\lambda_1=-1$，$\lambda_2=2$。由 Cayley–Hamilton 定理 $A^2-A-2I=O$，故 $A^2=A+2I$，$A^3=A^2+2A=3A+2I$，$A^4=3A^2+2A=3(A+2I)+2A=5A+6I$。另一种做法：$f(x)=x^4-5x-6$ 满足 $f(\lambda_1)=f(\lambda_2)=0$，所以 $p_A\mid f$，由 $p_A(A)=O$ 得 $f(A)=O$。
+
+:::
 
 实矩阵的特征值或为实数，或成共轭复数对出现；实对称矩阵的特征值为实数，特征向量相互正交。判断矩阵是否正定有一个借助对角占优的快捷方法。
 

@@ -56,6 +56,8 @@ $$
 
 **Example 12.2.1** With illustrative values $\alpha = 0.03$ and $\beta = 0.05$, a protein with $1$ interaction is essential with probability $0.079$, with $5$ interactions $0.18$, with $15$ interactions $0.40$ and with $30$ interactions $0.62$. The probability rises with degree although no topological role of the hubs is assumed: hubs are more often essential simply because they have more interactions that could be essential.
 
+:::
+
 Fitted to yeast data, this model explained the correlation without a role for connectivity as such (He and Zhang, 2006). A related analysis found that essentiality is concentrated in densely connected modules, essential complexes, and that hubs are essential largely because they belong to them (Zotenko, Mestre, O'Leary and Przytycka, 2008). The rule thus describes a real correlation, useful for prioritizing genes, but its cause is the organization of essential functions in complexes rather than the global connectivity of the network.
 
 ### 12.2.2. Date Hubs, Party Hubs and Bottlenecks
@@ -74,6 +76,8 @@ Cells are organized in modules: groups of molecules that act together in one fun
 
 **Example 12.3.1** In the network of the figure, the leading-eigenvector method finds four communities with $Q = 0.62$. The partition into the four planted complexes has $Q = 0.60$: the algorithm prefers a partition that moves one protein, with a link to another complex, into it. Maximizing $Q$ recovers the planted structure almost but not exactly, and a protein assigned to a community is a hypothesis about its membership, not a fact.
 
+:::
+
 Communities found by modularity maximization have known limits: a resolution limit (small modules in a large network are merged), many near-optimal partitions, and no allowance for proteins in several complexes. Methods designed for protein complexes therefore look for dense regions directly.
 
 **Algorithm 12.3.1 (MCODE)** (Bader and Hogue, 2003) Molecular complex detection in a protein interaction network:
@@ -89,6 +93,8 @@ The weighting costs $O(\lvert V\rvert\bar d^{\,3})$ for mean degree $\bar d$; th
 A module is interpreted by the functions of its members. The standard test is **over-representation analysis** ([7.9.3](/7.9.3)): in a network of $N$ proteins, of which $K$ carry a **Gene Ontology** annotation, a module of $n$ proteins contains $x$ annotated ones, and the p-value is the upper tail of the **hypergeometric distribution**. In Cytoscape the BiNGO app (Maere, Heymans and Kuiper, 2005) computes it for all GO terms and displays the enriched terms as a subgraph of the ontology.
 
 **Example 12.3.2** In the network of the figure ($N = 30$), suppose $9$ proteins carry an annotation: the $7$ members of one complex and $2$ others. The community containing that complex has $8$ members, $7$ of them annotated. The probability of $7$ or more annotated proteins in a random set of $8$ is $1.3 \times 10^{-4}$.
+
+:::
 
 Enrichment must be computed against the right background, the proteins present in the network rather than the genome: well-studied proteins are both more often in interaction maps and more often annotated, so the genome as background inflates every enrichment. And a module found because its members share interactions in curated databases is partly enriched by construction, since curators often record interactions within known pathways.
 
@@ -107,6 +113,8 @@ A list of differentially expressed or mutated genes is easier to interpret when 
 **Algorithm 12.4.1 (jActiveModules)** (Ideker, Ozier, Schwikowski and Siegel, 2002) Convert each gene's p-value to $z_v = \Phi^{-1}(1 - p_v)$. For a connected subgraph $A$ of $k$ vertices, let $z_A = \sum_{v \in A}z_v/\sqrt{k}$, and standardize it by the mean $\mu_k$ and standard deviation $\sigma_k$ of $z_A$ over random sets of $k$ vertices: $s_A = (z_A - \mu_k)/\sigma_k$. Search for subgraphs of high $s_A$ by **simulated annealing**, toggling vertices in and out of a candidate set and accepting changes by the Metropolis rule, or by greedy growth from each vertex; report the subgraphs with the highest scores, and repeat with several conditions to find subgraphs active in each.
 
 **Example 12.4.1** A connected set of four genes with $z = 2.1$, $1.5$, $2.8$ and $0.9$ has $z_A = 7.3/2 = 3.65$; none of the four alone would pass a genome-wide threshold, but together they form a candidate module, to be compared with the distribution of $z_A$ in random connected sets of four.
+
+:::
 
 The subgraph search is NP-hard, which is why heuristics are used, and its result depends on the network: a dense network allows connected high-scoring sets to be assembled from unrelated genes, so the null distribution must be estimated in the same network. Later methods solve the problem exactly or near-exactly as a prize-collecting Steiner tree or maximum-weight connected subgraph. A metabolic version scores each metabolite by the expression changes of the enzymes that use it, identifying reporter metabolites around which regulation is concentrated (Patil and Nielsen, 2005), a bridge from expression and proteomics to metabolic networks ([7.9.9](/7.9.9)).
 
@@ -135,6 +143,8 @@ This is personalized **PageRank** ([1.4.7](/1.4.7#sec-7.6.3)), with teleportatio
 
 The figure shows the main pitfall. Without restart, the stationary distribution of a random walk is proportional to degree ([1.4.7](/1.4.7#sec-7.8.3)), and with restart the scores of vertices far from the seeds still follow it. Hubs therefore score highly for any seed set, and a ranking by raw propagation scores rediscovers the hubs. Scores are made specific by comparing them with those obtained from random seed sets of the same degrees (as in panel B), by **degree-preserving randomization** of the network ([1.4.7](/1.4.7#sec-7.4.6)), or by dividing by the stationary distribution. Validation must also avoid circularity: if a disease gene was added to an interaction database because it was studied together with other disease genes, propagation will rediscover it for that reason alone; cross-validation by leaving out known genes, and networks from systematic screens rather than literature, address this.
 
+:::
+
 Propagation is used to predict gene function from annotated neighbors, to prioritize candidate disease genes in a linkage or association region by their proximity to known disease genes (Köhler, Bauer, Horn and Robinson, 2008; Vanunu, Magger, Ruppin, Shlomi and Sharan, 2010), to amplify weak signals from **genome-wide association studies** by smoothing gene scores over the network, and to find modules significantly hit by somatic mutations in cancer ([7.9.13](/7.9.13)); a review called it a universal amplifier of genetic associations (Cowen, Ideker, Raphael and Sharan, 2017).
 
 ## 12.5. Differential Networks
@@ -148,6 +158,8 @@ $$
 is approximately standard normal under $H_0\colon \rho_A = \rho_B$ for bivariate normal data.
 
 **Example 12.5.1** With $r_A = 0.8$, $r_B = 0.2$ and $n_A = n_B = 50$: $\operatorname{artanh} 0.8 = 1.099$, $\operatorname{artanh} 0.2 = 0.203$, the standard error is $\sqrt{2/47} = 0.206$, so $Z = 4.34$ and $p = 1.4 \times 10^{-5}$. Among the $2 \times 10^8$ pairs of $20\,000$ genes this would not survive a Bonferroni correction ($0.05/2 \times 10^8 = 2.5 \times 10^{-10}$); differential co-expression needs many samples, a restriction to candidate pairs or modules, or a test at the level of modules (for example comparing the mean correlation within a module).
+
+:::
 
 Correlations also differ between groups for reasons other than rewiring: a smaller range of expression in one group, from lower variance or fewer cell types, attenuates its correlations, and differences in cell-type composition create and destroy correlations in bulk data. Conditional networks computed within cell types from single-cell data, and the comparison of regulon activities ([7.9.11](/7.9.11#sec-11.7)) rather than of individual correlations, reduce these problems. Changing edges detected this way are hypotheses about altered regulation, to be tested by perturbing the presumed regulator in each condition.
 

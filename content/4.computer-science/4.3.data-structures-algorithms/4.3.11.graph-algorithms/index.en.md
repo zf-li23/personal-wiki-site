@@ -1,7 +1,7 @@
 ---
 title: Graph Applications
 description: Topological sorting by the zero in-degree algorithm and by DFS; cut vertices, cut edges and biconnected components with the highest connected ancestor and the Hopcroft–Tarjan algorithm; the unified framework of priority-first search and its complexity; Dijkstra's algorithm and shortest-path trees, Prim's algorithm and the cut property, with correctness proofs; Kruskal's algorithm and union by rank with path compression; the dynamic programming of the Floyd–Warshall algorithm.
-source_hash: 814b9f70551c
+source_hash: bb66a6dcb44e
 ---
 
 [4.3.10](/4.3.10) presented the representations of graphs and the two basic traversals. This chapter solves several classical problems on top of these traversals. The first two sections use information that DFS leaves behind: listing vertices in reverse order of finishing time gives a topological order of a directed acyclic graph, and the highest ancestor reachable through back edges lets a single DFS find all cut vertices and biconnected components of an undirected graph. The third section unifies BFS and DFS as priority-first search: the traversals differ only in which vertex is visited next, and this is determined by the priority of each vertex. With different priority-update rules, the same framework yields Dijkstra's algorithm for single-source shortest paths and Prim's algorithm for minimum spanning trees. The last two sections present two other approaches: Kruskal's algorithm greedily selects edges in increasing order of weight, and its efficiency rests on the disjoint-set data structure; the Floyd–Warshall algorithm uses **dynamic programming** to compute the shortest paths between all pairs of vertices at once. The mathematical background of these problems (the existence of shortest paths and minimum spanning trees, and the steps of the classical algorithms) was covered in [1.4.2](/1.4.2) and [1.4.3](/1.4.3); here we concentrate on implementation, complexity and correctness proofs.
@@ -614,6 +614,8 @@ $$
 where the second inequality uses the nonnegativity of the weights ($y$ lies on a shortest path from $s$ to $v$). But the algorithm has chosen $v$ rather than $y$ at this moment, so $\operatorname{priority}(v) \le \operatorname{priority}(y)$, a contradiction. $\square$
 
 **Example 11.4.1** A negative edge breaks the second inequality in the proof above. Let the directed edge $A \to B$ have weight $2$, $A \to C$ weight $3$, and $C \to B$ weight $-2$. Starting from $A$, Dijkstra's algorithm first adds $B$ to the tree with distance $2$ and never modifies it afterwards, whereas in fact $\operatorname{dist}(A, B) = 3 - 2 = 1$.
+
+:::
 
 The output of §11.3.3 gives the distances from $A$ to all vertices of the example graph and the shortest-path tree: for example $\operatorname{dist}(A, F) = 12$, with shortest path $A \to E \to F$ (through the edge $A$–$E$ of weight 9, rather than $A \to C \to B \to D \to E \to F$ of length 13).
 

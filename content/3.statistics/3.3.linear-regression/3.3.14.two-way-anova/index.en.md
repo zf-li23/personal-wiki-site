@@ -235,6 +235,8 @@ summary(fit1)
 par(mfrow = c(2, 2)); plot(fit1); par(mfrow = c(1, 1))   # residual plots
 ```
 
+:::
+
 The departures from the assumptions are judged as in regression:
 
 - Non-normality: use a normal probability plot. If the variances are unequal, the plot of the ordinary residuals often indicates non-normality falsely, so one should first transform (Section 14.5) and then recheck. Normality is the least important assumption: almost all ANOVA procedures are robust to minor departures from it.
@@ -267,6 +269,8 @@ leveneTest(a1$strength, a1$type)            # modified Levene (center = median)
 ```
 
 The modified Levene test gives $F=2.936$ on $4$ and $35$ degrees of freedom, $p=0.034$, so we reject the hypothesis of equal variances. The sample variances by type are $1.531$, $1.570$, $6.183$, $0.667$, $0.592$, so $H^*=6.183/0.592=10.44$, well above $4$ and above the $5\%$ critical value $H_{0.95}(5,7)\approx9.7$.
+
+:::
 
 Experience from experimental design qualifies these findings. The ANOVA $F$-test is only slightly affected by non-constant variance as long as the sample sizes are equal, and Scheffé's multiple comparison procedure is also fairly robust to unequal variances when the cell sizes are equal; other pairwise comparisons can be greatly affected by unequal variances. Using equal sample sizes minimizes these effects, which is one reason for the importance of balanced designs.
 

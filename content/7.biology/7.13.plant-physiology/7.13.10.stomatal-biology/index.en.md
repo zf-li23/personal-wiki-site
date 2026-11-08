@@ -1,7 +1,7 @@
 ---
 title: Stomatal Biology
 description: Stomatal number, distribution and opening mechanics; osmotic regulation in guard cells (K⁺ with Cl⁻, malate, sucrose) and a modern assessment of the classical hypotheses; the dual-beam experiment with red and blue light and the phototropin–H⁺-ATPase–14-3-3 signaling chain; CO₂, humidity and temperature; ABA closure of stomata through PYR/PYL–PP2C–SnRK2–SLAC1; the Brown–Escombe small-pore diffusion law and stomatal conductance; the Ball–Berry and Medlyn models and Cowan–Farquhar optimal stomatal behavior; stomatal development and density control.
-source_hash: d60fce31632b
+source_hash: 579cbdc18488
 ---
 
 Land plants face an unavoidable trade. A leaf must take up $\ce{CO2}$ for **photosynthesis**, which requires connecting the moist surfaces of its internal cells to the atmosphere, and any pathway that lets $\ce{CO2}$ in also lets water vapor out. The cuticle is almost impermeable to both water and $\ce{CO2}$; the **stomata** are adjustable gates through it. A pair of **guard cells** senses light, $\ce{CO2}$, humidity and hormonal signals and, by changing its own turgor, widens or narrows the pore within minutes, so that the leaf can continually renegotiate between "gaining carbon" and "losing less water." This chapter explains how the gate works: the mechanics of opening and closing (Section 10.2), the osmotic regulation that drives it (Section 10.3), control by light and other environmental factors (Sections 10.4–10.5), and the abscisic acid signal that closes the stomata (Section 10.6). It then describes the stoma quantitatively as a diffusion pathway (Section 10.7), introduces models of stomatal conductance and the theory of optimal stomatal behavior (Section 10.8), and ends with how stomata develop and how their density adjusts to the environment (Section 10.9). The morphology and types of stomatal complexes are described in [7.12.4](/7.12.4#sec-4.3.2); water potential and the general principles of **transpiration** are in [7.13.2](/7.13.2) and [7.13.3](/7.13.3); the limitation that stomata impose on leaf photosynthesis is discussed in [7.13.9](/7.13.9) together with mesophyll conductance and the Farquhar model.
@@ -250,6 +250,8 @@ $$
 g_{\max} = \frac{2.49\times10^{-5}}{0.0245}\times\frac{2.0\times10^{8}\times 7.85\times10^{-11}}{1.59\times10^{-5}} \approx 1.0\ \mathrm{mol\,m^{-2}\,s^{-1}}.
 $$
 The actual working conductance is usually only 20%–50% of $g_{\max}$, since stomata are rarely fully open; $g_{\max}$ is used mainly to compare the gas-exchange potential of leaves of different species and different geological periods (fossils).
+
+:::
 
 ![Diffusion through small pores. A: diffusive flux through a single circular pore (8 µm deep) as a function of pore diameter (Eq. (10.1), driven by a 1 kPa water vapor pressure difference at 25 °C), compared with the flux extrapolated in proportion to area (tube diffusion with l ≫ r); flux through a small pore is proportional to diameter, and flux per unit area increases as the pore becomes smaller (right axis). B: anatomical maximum stomatal conductance (Eq. (10.2)) as a function of stomatal density and pore size; the dashed lines mark the leaf of Example 10.7.1](./plots/pore-diffusion.py)
 

@@ -1,7 +1,7 @@
 ---
 title: Acid–Base Balance
 description: H⁺ homeostasis (40 nmol/L and pH 7.40, the survivable range, pH of body fluids); acids and bases, volatile and fixed acids; time scales of the three lines of defense; chemical buffering, the bicarbonate system and the Henderson–Hasselbalch equation, phosphate and proteins, a worked example of buffering an 80 mmol/d acid load; respiratory regulation; renal regulation, HCO₃⁻ reabsorption, H⁺ secretion and intercalated cells, titratable acid, NH₄⁺ and new HCO₃⁻, net acid excretion; the four primary acid–base disturbances and their compensation, the Davenport diagram, the anion gap; evolution and comparison, alpha-stat, acid–base regulation in water breathers and air breathers, and a systematic comparison of excretion and osmoregulation.
-source_hash: 152b69829d10
+source_hash: 9c240166969c
 ---
 
 The $[\ce{H+}]$ of arterial blood is about $40\,\mathrm{nmol\,L^{-1}}$, only about one three-millionth of $[\ce{Na+}]$, and yet it is held within $\pm 5\,\mathrm{nmol\,L^{-1}}$. This is because almost all proteins carry ionizable groups, so changes in $[\ce{H+}]$ alter the charge, conformation and function of proteins: the activity of enzymes, the gating of ion channels and the binding of oxygen to hemoglobin all depend on pH. Yet the body produces acid at every moment: metabolism generates about $15\,000$–$20\,000\,\mathrm{mmol}$ of $\ce{CO2}$ and about $50$–$100\,\mathrm{mmol}$ of nonvolatile acid per day. This chapter, the last on the urinary system, explains how the body deals with these acids: the basic concepts of $\ce{H+}$ **homeostasis** (Section 25.1), the sources of acid and the three lines of defense (Section 25.2), chemical buffering (Section 25.3), respiratory regulation (Section 25.4) and renal regulation (Section 25.5), followed by the analysis of acid–base disturbances (Section 25.6). Finally, after comparing acid–base regulation in different animals, we give a systematic summary of excretion and osmoregulation in Chapters 21–25 (Section 25.7). For the quantitative basis of weak acids, $\mathrm{p}K_{\mathrm{a}}$ and buffers, see [7.1.2](/7.1.2); for the transport of $\ce{CO2}$ in blood, see [Chapter 19](/7.14.19); and for the chemosensory regulation of breathing, see [Chapter 20](/7.14.20).
@@ -57,6 +57,8 @@ The three act in series: buffers first take up a sudden increase of $\ce{H+}$, r
 ### 25.3.1. How Large Is the Effect of Buffering?
 
 **Example 25.3.1** A fixed acid load of $80\,\mathrm{mmol}$ is produced each day. Distributed unbuffered in about $42\,\mathrm{L}$ of body fluid, it would raise $[\ce{H+}]$ by $80/42 \approx 1.9\,\mathrm{mmol\,L^{-1}}$ and lower pH to about $2.7$, 50 000 times the normal $40\,\mathrm{nmol\,L^{-1}}$. In reality almost all of this $\ce{H+}$ is bound by buffers, and free $[\ce{H+}]$ stays near $40\,\mathrm{nmol\,L^{-1}}$. But buffers are finite: the $\ce{HCO3-}$ in the **extracellular fluid** amounts to only about $14\,\mathrm{L} \times 24\,\mathrm{mmol\,L^{-1}} \approx 340\,\mathrm{mmol}$ in all, and if the kidney did not excrete acid and replenish $\ce{HCO3-}$ it would be exhausted in a little over four days.
+
+:::
 
 There are three main classes of buffer systems in body fluids: bicarbonate, phosphate and proteins. All buffer pairs in the same solution are in equilibrium with the same $[\ce{H+}]$ (the isohydric principle), so knowing the ratio for one pair gives the pH and therefore the state of every buffer pair. Clinically it is the bicarbonate pair that is measured.
 

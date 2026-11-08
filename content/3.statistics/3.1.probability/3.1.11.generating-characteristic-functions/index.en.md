@@ -1,6 +1,6 @@
 ---
 title: Probability Generating, Moment Generating and Characteristic Functions
-source_hash: 06870578d35e
+source_hash: 915ffb1a8e97
 ---
 
 Mass functions, densities and distribution functions describe a random variable through "the probability of each point or each interval". This chapter introduces another complete description of a distribution: transform the distribution into a function and work with that function instead. All three transforms are expectations of a function $h(X)$: the probability generating function takes $h(X) = s^X$, the moment generating function $\mathrm{e}^{sX}$, and the characteristic function $\mathrm{e}^{\mathrm{i}tX}$. Their common advantages come from the properties of the exponential: the distribution of a sum of independent random variables (a convolution, [3.1.7](/3.1.7)) becomes a product of transforms, and a sum of a random number of random variables becomes a composition; moreover, moments can be read off from derivatives, and the transform determines the distribution uniquely. The three tools apply in increasing generality: the probability generating function only to random variables with nonnegative integer values, the moment generating function when $\mathrm{e}^{sX}$ is integrable near $0$, and the characteristic function to every random variable. At the end of the chapter we introduce convergence in distribution and the continuity theorem, the main tools for the law of large numbers ([3.1.12](/3.1.12)) and the central limit theorem ([3.1.13](/3.1.13)) that follow. The characteristic function is essentially the Fourier transform of the distribution, which connects it with the Fourier analysis of [2.5](/2.5).
@@ -194,6 +194,9 @@ while for $s \ge \lambda$ the integral is $+\infty$. Hence $\mathbb{E}X = M^{(1)
 $$
 M_X(s) = \int_0^{\infty} \mathrm{e}^{sx} \left[\frac{2}{3} \cdot 6\mathrm{e}^{-6x} + \frac{1}{3} \cdot 4\mathrm{e}^{-4x}\right] \mathrm{d}x = \frac{2}{3} \cdot \frac{6}{6 - s} + \frac{1}{3} \cdot \frac{4}{4 - s}.
 $$
+
+:::
+
 Conversely, by uniqueness, if the moment generating function of $X$ has the form $p_1 \frac{\lambda_1}{\lambda_1 - s} + p_2 \frac{\lambda_2}{\lambda_2 - s}$ with $p_1 + p_2 = 1$, then $X$ is the mixture of $\mathrm{Exp}(\lambda_1)$ and $\mathrm{Exp}(\lambda_2)$ with weights $p_1, p_2$, and its density is $p_1 f_{X_1}(x) + p_2 f_{X_2}(x)$.
 
 **Example 11.2.4 (Normal Distribution)** Let $X \sim \mathcal{N}(\mu_1, \sigma_1^2)$ and $Y \sim \mathcal{N}(\mu_2, \sigma_2^2)$ be independent. Find the distribution of $Z = X + Y$.
@@ -209,6 +212,8 @@ $$
 M_Z(s) = M_X(s) M_Y(s) = \exp\left\{(\mu_1 + \mu_2)s + \frac{(\sigma_1^2 + \sigma_2^2)s^2}{2}\right\},
 $$
 which is finite for all $s$ and is the moment generating function of $\mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$. By item 4, $Z \sim \mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$: a sum of independent normal random variables is again normal.
+
+:::
 
 As a by-product we obtain all moments of the standard normal distribution: $M_V(s) = \mathrm{e}^{s^2/2} = \sum_{k=0}^{\infty} \frac{s^{2k}}{2^k k!}$, and comparing coefficients with $\sum_n \frac{\mathbb{E}V^n}{n!} s^n$ gives $\mathbb{E}V^{2k-1} = 0$ and $\mathbb{E}V^{2k} = \frac{(2k)!}{2^k k!} = (2k-1)!!$. For example, $\mathbb{E}V^4 = 3$.
 
@@ -309,6 +314,8 @@ Hence $\frac{\mathrm{d}}{\mathrm{d}t}\left[\varphi(t)\mathrm{e}^{t^2/2}\right] =
 
 (ii) Let $Y \sim \mathcal{N}(\mu, \sigma^2)$. Then $Y = \mu + \sigma X$ with $X \sim \mathcal{N}(0, 1)$, and item 4 of Property 11.3.1 gives $\mathbb{E}\mathrm{e}^{\mathrm{i}tY} = \mathrm{e}^{\mathrm{i}t\mu} \mathbb{E}\mathrm{e}^{\mathrm{i}t\sigma X} = \exp\left(\mathrm{i}\mu t - \frac{1}{2}\sigma^2 t^2\right)$. $\square$
 
+:::
+
 By item 5, if $X_1, \dots, X_m$ are independent with $X_j \sim \mathcal{N}(\mu_j, \sigma_j^2)$, then $X_1 + \cdots + X_m \sim \mathcal{N}\left(\sum_j \mu_j, \sum_j \sigma_j^2\right)$.
 
 The next two computations require complex analysis or rather involved integration techniques; the results may be used without proof.
@@ -318,6 +325,8 @@ The next two computations require complex analysis or rather involved integratio
 **Example 11.3.8 (Laplace Distribution)** The characteristic function of the Laplace distribution with density $f(x) = \frac{1}{2}\mathrm{e}^{-\lvert x \rvert}$ is $\varphi(t) = \dfrac{1}{1 + t^2}$.
 
 Examples 11.3.7 and 11.3.8 are dual to each other: the Fourier transform of the Laplace density is a Cauchy-type function, and vice versa.
+
+:::
 
 ![Characteristic functions of several symmetric distributions: N(0,1), U(-1,1), Laplace and standard Cauchy; the characteristic function of a symmetric distribution is real and even](./plots/characteristic-functions.py)
 
@@ -398,6 +407,8 @@ $$
 **Solution** $\varphi_X(t) = \mathrm{e}^{-\lvert t \rvert}$, $\varphi_Y(t) = \mathbb{E}\mathrm{e}^{\mathrm{i}(at)X} = \mathrm{e}^{-a\lvert t \rvert}$, and $\varphi_{X+Y}(t) = \mathbb{E}\mathrm{e}^{\mathrm{i}t(1 + a)X} = \mathrm{e}^{-(1 + a)\lvert t \rvert} = \varphi_X(t)\varphi_Y(t)$.
 
 The example shows that the characteristic function of a sum being the product of the characteristic functions does not imply independence; to decide independence one must use the joint characteristic function $\varphi(t_1, t_2)$ of Theorem 11.3.5.
+
+:::
 
 We now have three sets of tools, each of which captures all the information about a random variable: for discrete random variables, the mass function, the distribution function and the characteristic function; for continuous random variables, the density, the distribution function and the characteristic function; for general random variables, the distribution function and the characteristic function. Correspondingly, independence has three equivalent criteria.
 

@@ -1,7 +1,7 @@
 ---
 title: Dictionaries
 description: The dictionary ADT and hashing, design principles of hash functions, the division method and universal hashing, hash codes of strings, separate chaining and open addressing (linear probing, lazy deletion, rehashing, quadratic probing and bidirectional quadratic probing, double hashing) with their expected performance, the implementations behind Python dict/set and C++ unordered_map, bucket sort, maximum gap, counting sort and radix sort, and skip lists.
-source_hash: d844c2ae40d9
+source_hash: 9c33f47d7b68
 ---
 
 The data structures of the preceding chapters access elements by position (**rank**) or by order of size: a **vector** gives random access by rank, and a search tree compares keys level by level according to their size. This chapter discusses another way of access: finding the corresponding data item directly from the key itself, which is "call-by-key". The core technique that realizes this kind of access is hashing: a function maps a key to an array index, so that search, insertion and deletion take only constant time in the expected sense, and keys need not even be comparable. Hash tables are among the most used data structures in real programs, and Python's `dict` and `set` and C++'s `unordered_map` are all built on them (for their usage see [4.2.10](/4.2.10)). This chapter first covers the design of hash functions and the two main families of methods for resolving collisions, and analyzes their expected performance. We then apply the idea of "distributing by value into buckets" to sorting, which yields bucket sort, counting sort and radix sort, which break the lower bound for comparison sorting. Finally we introduce skip lists, which implement an ordered dictionary with randomized multilevel **linked lists** and are a simple alternative to **balanced binary search trees** ([4.3.6](/4.3.6), [4.3.8](/4.3.8)).
@@ -51,6 +51,8 @@ $$
 For $n = 23$ the probability that at least two people share a birthday already reaches $50.7\%$, although the load factor is only $\lambda = 23/365 \approx 6\%$; for $n = 100$ the probability that all birthdays are distinct is only about $3 \times 10^{-7}$. In general, when about $\sqrt{\pi M / 2}$ keys are thrown at random into $M$ buckets, we can expect the first collision to occur.
 
 Collisions thus appear already at a very low load factor, and the design of a hash table cannot count on "no collisions" but must keep the cost of collisions under control.
+
+:::
 
 Collisions can be avoided completely in only one situation: when the data set is known in advance and fixed (for example, the keyword table of a compiler). In this case we can construct *perfect hashing*, that is, a hash function that is injective on this data set. Fredman, Komlós and Szemerédi (1984) gave the classical two-level scheme:
 
@@ -796,6 +798,8 @@ for _ in range(500):
     assert max_gap(d) == max(y - x for x, y in zip(e, e[1:]))
 print("ok")
 ```
+
+:::
 
 The symmetric minimum-gap problem (MinGap) cannot be solved this way: the minimum gap may lie inside a bucket. In fact, in the algebraic decision tree model, deciding whether $n$ numbers are pairwise distinct (whether MinGap is 0) already requires $\Omega(n \log n)$ time.
 

@@ -45,6 +45,8 @@ The logo makes a quantitative point. The information content of the three signal
 
 **Example 16.2.1 (The branch-site sequence designates the 3′ splice site)** Langford and Gallwitz (1983) studied the yeast actin gene, whose intron contains the conserved $\mathrm{UACUAAC}$ about $40\,\mathrm{nt}$ upstream of the $3'$ splice site. Deleting this sequence, or changing it at single positions, abolished splicing; when a copy was moved, splicing used the first AG located an appropriate distance downstream of the new position. The branch-site sequence therefore does two things: it carries the branch nucleotide, and it marks the AG that will serve as the $3'$ splice site. The usual choice is the first AG downstream of the branch point within about $40\,\mathrm{nt}$; the protein Slu7 is required for selecting the correct AG, and without it aberrant AGs within $30\,\mathrm{nt}$ of the branch point are used.
 
+:::
+
 Mutations at splice sites are a frequent cause of inherited disease, which shows that the consensus is functional. In β-thalassemia, a G→A change at the first position of intron 1 of the β-globin gene (IVS1-1) abolishes the $5'$ splice site, and a G→A change at position 110 of the same intron creates a new AG that competes with the normal $3'$ site; in both, the mRNA is misspliced and little β-globin is made. Estimates from exome and clinical sequencing suggest that at least a tenth of pathogenic point mutations act by changing splicing, many of them far from the GU and AG.
 
 ### 16.2.3. Minor Introns
@@ -76,6 +78,8 @@ Each step breaks one phosphodiester bond and makes one, so the number of bonds i
 | The phosphate between the joined exons comes from the $3'$ splice site | A **substrate** labeled with $\alpha$-${}^{32}\mathrm{P}$ in the first nucleotide of exon 2 gave spliced RNA in which the label was on the nucleotide joined to exon 1 |
 | The intron and the intermediate contain a branched nucleotide with $2'$, $3'$ and $5'$ bonds | Complete digestion with RNase T2 or P1, which cut only $3'$–$5'$ bonds, released a nuclease-resistant core: an A carrying phosphates on its $2'$, $3'$ and $5'$ positions |
 | The branch joins the $5'$ end of the intron to a site within the intron | A debranching activity converted the lariat to a linear molecule; **primer extension** on the intermediate stopped at the branch point, about $30\,\mathrm{nt}$ upstream of the $3'$ splice site |
+
+:::
 
 The kinetics of such a time course is that of two consecutive first-order steps.
 
@@ -129,6 +133,8 @@ The snRNAs recognize the splicing signals and each other by base pairing, and th
 
 **Example 16.5.2 (U2 snRNA pairs with the branch site)** Parker, Siliciano and Guthrie (1987) used a yeast intron fused to *HIS4*, so that splicing allowed growth without histidine. Mutations in the branch-site sequence $\mathrm{UACUAAC}$ reduced splicing and growth; compensatory mutations in the complementary region of U2 snRNA ($\mathrm{GUAGUA}$, which pairs with $\mathrm{UACUAC}$ and leaves the branch A unpaired) restored splicing of the mutant intron. The bulged A, pushed out of the U2–branch-site helix, is exactly the nucleotide whose $2'$-OH attacks in step 1.
 
+:::
+
 The other interactions were found in the same way and by cross-linking with photoreactive nucleotides (4-thiouridine) placed in the pre-mRNA:
 
 | snRNA | Pairs with | Role |
@@ -157,6 +163,8 @@ Vertebrate exons are short (about $140\,\mathrm{nt}$) and introns long, so the s
 
 **Example 16.6.2 (The CTD stimulates exon definition)** Zeng and Berget (2000) added the **carboxyl-terminal domain** (CTD) of Pol II ([7.2.12](/7.2.12)), as a fusion with glutathione-*S*-transferase (CTD–GST), to in vitro splicing reactions. The phosphorylated CTD stimulated splicing of substrates that require exon definition (a substrate with a complete second exon ending in a $5'$ splice site) by about 3- to 5-fold, but did not stimulate substrates that can be spliced by intron definition, nor substrates whose downstream exon was incomplete. The CTD therefore helps to assemble factors across exons; in vivo it binds splicing factors through its Ser2-phosphorylated repeats ([7.2.13](/7.2.13)), so that the factors are delivered to each exon as it emerges from the polymerase.
 
+:::
+
 Because splicing is mostly cotranscriptional, the position of an intron in the gene matters. The first intron is removed efficiently only when the pre-mRNA has a cap, which is bound by the cap-binding complex (CBC) that helps U1 bind the first $5'$ site; the last intron is removed efficiently only when a functional polyadenylation signal is present, which defines the terminal exon ([7.2.17](/7.2.17)). After splicing, the spliceosome deposits an exon junction complex (EJC, Definition 16.6.2) about $20$–$24\,\mathrm{nt}$ upstream of each exon–exon junction; the EJC marks the mRNA as spliced, stimulates its export and translation, and is the signal by which premature stop codons are detected ([7.2.18](/7.2.18)).
 
 **Definition 16.6.2 (Exon Junction Complex)** The **exon junction complex** is a protein complex (core eIF4AIII, MAGOH, Y14 and CASC3) deposited by the spliceosome about $20$–$24$ nucleotides upstream of exon–exon junctions of a spliced mRNA, independently of sequence, and removed by the first translating ribosome.
@@ -182,6 +190,8 @@ Whether an exon is included depends on how well its splice sites are recognized,
 **Definition 16.7.3 (SR Protein)** An **SR protein** is a member of a family of RNA-binding proteins with one or two RNA-recognition motifs (RRMs) and a C-terminal domain rich in alternating serine and arginine (the RS domain), which binds exonic enhancers and recruits U1 snRNP and U2AF to the adjacent splice sites; SR proteins are now named SRSF1–SRSF12.
 
 **Example 16.7.1 (One SR protein suffices for commitment)** Fu (1993) preincubated human β-globin pre-mRNA with the SR protein SC35 (SRSF2) and then challenged it with a large excess of competitor RNA before adding nuclear extract. Without preincubation the competitor sequestered the splicing factors and splicing failed; after preincubation with SC35 alone, splicing proceeded, about 40-fold better than without SC35: SC35 had committed the pre-mRNA to splicing. Commitment was fast (within a minute), occurred even on ice and without ATP or $\ce{Mg^2+}$, and was specific: of several SR proteins, SC35 worked best on β-globin, while on HIV *tat* pre-mRNA only SF2/ASF (SRSF1) caused commitment. Different pre-mRNAs thus depend on different SR proteins, which is a basis for tissue-specific splicing, since SR protein levels differ between tissues.
+
+:::
 
 Heterogeneous nuclear ribonucleoproteins (hnRNPs), the abundant proteins that coat nascent pre-mRNA, often act oppositely. hnRNP A1, bound to an ESS in the third exon of HIV *tat*, represses the use of the exon by at least three mechanisms, each supported at different exons: cooperative spreading of A1 molecules from the **silencer** along the exon, which blocks the binding of SR proteins and U2AF; binding to sites on both sides of an exon, which loops the exon out; and direct competition with U2AF or SR proteins for the splice sites. The final choice is a balance of positive and negative factors, and the "splicing code" that predicts it from sequence is now learned by neural-network models trained on transcriptome data.
 

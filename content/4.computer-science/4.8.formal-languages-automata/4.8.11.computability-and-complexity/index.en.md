@@ -1,7 +1,7 @@
 ---
 title: Introduction to Computability and Computational Complexity
 description: Problems and languages; encoding Turing machines and the diagonalization language; universal Turing machines and the universal language; reductions, the halting problem, and Rice's theorem; Post's correspondence problem and undecidable problems about context-free grammars; P and NP, polynomial-time reductions, NP-completeness and the Cook–Levin theorem; typical NP-complete problems.
-source_hash: 68f931f68f89
+source_hash: 9540e441a375
 ---
 
 The previous chapter ([4.8.10](/4.8.10)) showed that **Turing machines** can simulate any reasonable model of computation; by the **Church–Turing thesis** they capture the full power of "algorithms". This chapter answers two questions. The first is computability: are there problems for which no algorithm exists at all? The answer is yes, and such problems are not rare: deciding whether a program halts, or whether two context-free grammars are equivalent, are examples. The core of the proof is Cantor's diagonal method together with reductions, which transform one problem into another. The second question is complexity: among the problems that do have algorithms, which can be solved efficiently (in polynomial time)? This leads to the classes $\mathrm{P}$ and $\mathrm{NP}$, and to a large family of mutually equivalent NP-complete problems for which it is still unknown whether polynomial-time algorithms exist. Section [4.3.1](/4.3.1) already mentioned $\mathrm{P}$, $\mathrm{NP}$, and the subset sum problem; here we give their precise definitions on Turing machines.
@@ -35,6 +35,8 @@ A transition $\delta(q_i, X_j) = (q_k, X_l, D_m)$ is encoded as $0^i10^j10^k10^l
 | $\delta(q_3, B) = (q_3, 1, \mathrm{L})$ | $0001000100010010$ |
 
 The encoding of $M$ is the string formed by joining these four segments with $11$.
+
+:::
 
 Next we number the strings in $\{0, 1\}^*$: the string $w$ is the $i$-th string if and only if $1w$ is the binary representation of $i$. Thus $w_1 = \varepsilon$, $w_2 = 0$, $w_3 = 1$, $w_4 = 00$, and so on; every string has exactly one number, and this is the ordering by length and then by **lexicographic order**. If $w_i$ is the encoding of a Turing machine, call this machine $M_i$; if $w_i$ is not a valid encoding, let $M_i$ be the Turing machine without any transitions, so that $L(M_i) = \varnothing$. This gives a sequence $M_1, M_2, M_3, \dots$ containing all Turing machines, and both "the $i$-th Turing machine" and "the $i$-th string" are meaningful.
 
@@ -294,6 +296,8 @@ print("no solution up to length 12:", pcp(["10", "011", "101"], ["101", "11", "0
 solution: (2, 1, 1, 3) 101111110 101111110
 no solution up to length 12: None
 ```
+
+:::
 
 The search can give an affirmative answer only when it finds a solution, so PCP is semidecidable. The "overhang" may grow without bound, and in general the search does not stop when there is no solution.
 

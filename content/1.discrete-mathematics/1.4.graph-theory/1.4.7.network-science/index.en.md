@@ -295,6 +295,8 @@ In a network with a power-law degree distribution, a few vertices have degrees f
 
 **Example 7.4.1** Take a network with $N = 10^{12}$ vertices (the order of the number of Web documents) and compare a Poisson degree distribution with mean $4.6$ with a power law with $\gamma = 2.1$ and $k_{\min} = 1$. The expected number of vertices of degree at least $100$ is $10^{12}\,\mathbb{P}(K \geq 100) \approx 10^{-82}$ under the Poisson distribution, that is, none, and $10^{12}\,\zeta(2.1, 100)/\zeta(2.1) \approx 3.7 \times 10^9$ under the power law.
 
+:::
+
 How large is the largest hub of a finite network? The largest of $N$ independent degrees is, in order of magnitude, the value $k_{\max}$ above which one expects a single vertex.
 
 **Proposition 7.4.2 (Natural Cutoff)** For $N$ vertices with the continuous power-law density of Definition 7.4.1, the solution of $N\,\mathbb{P}(K \geq k_{\max}) = 1$ is
@@ -375,6 +377,8 @@ The **Kolmogorov–Smirnov test** cannot be used with its standard tables in ste
 ![Degree distributions of an Erdős–Rényi graph (N = 50,000, mean degree 6, blue) and a Barabási–Albert graph (N = 50,000, m = 3, red), plotted three ways. A: linear bins on log–log axes; the tail of the power law dissolves into a plateau of single vertices. B: logarithmic bins, with the Poisson distribution (blue line) and the exact Barabási–Albert distribution of Theorem 7.5.1 (dashed). C: the complementary cumulative distribution P(K ≥ k), with the maximum-likelihood power law fitted above the k_min chosen by the Kolmogorov–Smirnov criterion (Algorithm 7.4.1): γ̂ = 2.96, k_min = 51](./plots/degree_distributions.py)
 
 **Example 7.4.2** For the Barabási–Albert graph of the figure, whose exact degree distribution has $\gamma = 3$ asymptotically (Theorem 7.5.1), Algorithm 7.4.1 selects $k_{\min} = 51$, leaving $233$ of the $50{,}000$ vertices in the tail, and gives $\hat\gamma = 2.96 \pm 0.13$. The selected $k_{\min}$ is large because $2m(m+1)/[k(k+1)(k+2)]$ approaches $k^{-3}$ only slowly; the price is a small tail sample and a wide confidence interval. The largest degree is $715$, close to $mN^{1/2} \approx 671$ (Section 7.5.2), while the largest degree of the random graph with the same number of vertices is $18$.
+
+:::
 
 How common are scale-free networks? In the years after 1999 power laws were reported for the Web, the Internet, citations, collaborations, protein interactions and metabolism, usually from straight lines on log–log plots. Broido and Clauset (2019) applied Algorithm 7.4.1 to nearly a thousand networks from many domains and found the strongest evidence for a power-law tail in only about 4% of them, while about half showed only the weakest evidence; social networks were at best weakly scale free, a few technological and biological networks strongly so, and log-normal distributions often fitted as well or better. The response was that the conclusion depends on the definition: Voitalov and colleagues (2019) argued that a scale-free network should be defined by a regularly varying tail $p_k = \ell(k)k^{-\gamma}$ with a slowly varying factor $\ell$ rather than by a pure power law above $k_{\min}$, and with consistent estimators for that definition found heavy tails with $2 < \gamma < 3$ to be common. The current consensus (Holme, 2019) is that degree distributions of real networks are almost always heavy-tailed, far broader than Poisson, but that "scale free" is a hypothesis to be tested on each network with explicit statistics, not a universal law; the consequences in Section 7.8 depend mainly on the size of $\langle k^2\rangle$, not on the exact form of the tail.
 
@@ -735,6 +739,8 @@ and $-\frac12 \leq Q < 1$. The partition into a single community has $Q = 0$.
 The first term is the fraction of edges inside communities, the second its expected value when the edges are rewired at random with the same degrees. A positive $Q$ means more internal edges than chance; values above about $0.3$ are usually taken as evidence of community structure, although random graphs can have partitions with surprisingly high $Q$ (Guimerà, Sales-Pardo and Amaral, 2004).
 
 **Example 7.7.1** In the graph $G_0$ (Example 7.1.1) the partition $\{1, 2, 3, 4\}$, $\{5, 6, 7, 8\}$ has $M_c = 5$ and $D_c = 11$ for both communities and $M = 11$, so $Q = 2\left[\frac{5}{11} - \left(\frac{11}{22}\right)^2\right] = \frac{9}{22} \approx 0.409$.
+
+:::
 
 Modularity has a *resolution limit* (Fortunato and Barthélemy, 2007): its null model compares each community with the whole network, so in a large network it prefers to merge small communities even when they are obviously separate.
 

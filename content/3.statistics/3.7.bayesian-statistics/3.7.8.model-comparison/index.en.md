@@ -139,6 +139,8 @@ be the fraction of the variance of $\bar y_{\cdot i}$ due to the variation of th
 
 The two limits are instructive. As $\tau\to\infty$ ($\rho\to1$, no pooling) $p_{\mathrm{DIC}}\to J$, one parameter per group; as $\tau\to0$ ($\rho\to0$, complete pooling) $p_{\mathrm{DIC}}\to1$, the common mean. A hierarchical model lies in between, and its effective number of parameters is determined by the data through $\tau$.
 
+:::
+
 DIC still uses a point estimate, so it depends on the parametrization ($\hat\theta_{\mathrm{Bayes}}$ is not invariant) and can behave badly when the posterior mean is a poor summary, for instance for a bimodal posterior.
 
 ## 8.4. Watanabe–Akaike Information Criterion
@@ -324,6 +326,8 @@ For comparison, the classical two-sided test rejects $H_0$ at level $0.05$ when 
 ![Lindley's paradox for y_i ~ N(μ, 1), H0: μ = 0 against H1: μ ~ N(0, 1). Left: Bayes factor in favor of H0 for data held at fixed z = 1.96, 2.58 and 3.29 (two-sided p = 0.05, 0.01, 0.001) as the sample size grows. Right: the posterior probability of H0 with prior probability 1/2.](./plots/lindley_paradox.py)
 
 Both answers are correct for their questions. The p-value fixes the evidence threshold while the precision of $\bar y$ increases, so ever smaller departures from $0$ become significant. The Bayes factor compares $\mu=0$ with a specific alternative that spreads its prior over values of order $1$: for large $n$ a $z$ of $1.96$ means $\bar y\approx1.96/\sqrt n$, a value much closer to $0$ than most values the alternative considers plausible, so the data favor the point null. The answer depends on the prior variance under $H_1$, which in a continuous problem is hard to justify; this is the sense in which Bayes factors do not work so well for inherently continuous models.
+
+:::
 
 *History.* The Bayes factor was introduced by Harold Jeffreys (1935) and developed in his *Theory of Probability* (1939). Jeffreys was convinced that induction is an extended form of logic; that this "logic of partial beliefs" must treat degrees of belief as probabilities; that simple laws or hypotheses should be viewed as separate models with nonzero prior probabilities; and that a useful, logically consistent method of hypothesis testing must be comparative and based on the data at hand rather than on data that were never observed. The Bayes factor was his attempt at a consistent method of model selection and hypothesis testing that remedies the weaknesses of p-value testing.
 

@@ -61,6 +61,8 @@ $$
 
 compared with 4 without virtualization.
 
+:::
+
 The TLB caches the combined translation, so this cost is paid only on TLB misses, and large pages (2 MiB or 1 GiB) in the host shorten the walks. In practice nested paging is far faster than shadow paging for most workloads, and it is the default everywhere. The hypervisor can also *overcommit* memory, promising guests more than exists, by reclaiming pages through a *balloon driver* in the guest (which allocates memory inside the guest and hands those pages back to the hypervisor), by sharing identical pages between VMs (KSM in Linux), and by swapping.
 
 ### 9.2.4. I/O Virtualization

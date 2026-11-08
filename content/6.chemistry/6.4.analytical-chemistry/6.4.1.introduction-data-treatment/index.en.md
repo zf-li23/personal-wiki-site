@@ -1,7 +1,7 @@
 ---
 title: Introduction and Treatment of Analytical Data
 description: The tasks and classification of analytical methods; accuracy and precision, systematic and random error; the normal and t distributions and confidence intervals; t, F, Grubbs and Q tests; propagation of error and measurement uncertainty; significant figures and rounding; calibration curves, sensitivity, detection limit, matrix effects, standard addition and internal standards.
-source_hash: 74794161a694
+source_hash: 4c0b6d9d21cd
 ---
 
 Analytical chemistry answers four questions about a material: what it contains, how much of each component is present, where the components are, and in what structure or form they occur. The other central activity of chemistry is synthesis, but the products of synthesis, the quality of foods and drugs, and environmental and clinical testing all depend on analysis for identification and quantification. Every measurement carries error, so the value of an analytical result depends on whether we can state how reliable it is. This chapter first outlines the tasks and methods of analytical chemistry (Section 1.1) and then develops the means of evaluating and treating analytical data: the concept and classification of errors (Sections 1.2–1.3), the statistics of random error and confidence intervals (1.4), significance tests and suspect values (1.5), propagation of error (1.6), and significant figures (1.7). The last section covers the calibration and performance characteristics common to the whole course (1.8): the titrations of the following chapters ([6.4.2](/6.4.2)–[6.4.5](/6.4.5)) and the instrumental methods ([6.4.6](/6.4.6)–[6.4.15](/6.4.15)) all use the calibration curve, detection limit, standard addition and internal standard introduced here, and add only what is specific to each. The mathematics of the statistical methods is given in the statistics courses ([probability theory](/3.1), [statistical inference](/3.2), [linear regression](/3.3)); here we treat their use and decision criteria in analytical chemistry, linking each concept back.
@@ -110,6 +110,8 @@ The standard deviation of reproducibility is always larger than that of repeatab
 ![Results of four analysts for the same reference material (dots are single results, short vertical bars are the means, the dashed line is the certified value)](./plots/accuracy-precision.py)
 
 **Solution** The results of A are tightly clustered and their mean is close to the true value: both accuracy and precision are high. B is precise, but the mean is systematically low, so there is a systematic error. C is poor in both accuracy and precision. The mean of D happens to be close to the true value, but the individual results scatter widely, so this "accuracy" is accidental and unreliable. $\square$
+
+:::
 
 Two conclusions follow: precision is a prerequisite for accuracy, and results of poor precision cannot be called accurate; but high precision does not guarantee high accuracy, because a systematic error does not affect precision.
 
@@ -295,6 +297,8 @@ if $Q > Q_{n,\alpha}$ the suspect value is rejected, otherwise it is retained. T
 
 **Solution** The mean is 40.14 if 40.02 is retained and 40.17 if it is rejected. Grubbs test: $\bar x = 40.143$, $s = 0.066$, and $G = (40.143 - 40.02)/0.066 = 1.86 > G_{6,0.05} = 1.82$, so the value is rejected. Q test: $Q = (40.12 - 40.02)/(40.20 - 40.02) = 0.56$, which just fails to exceed $Q_{0.90} = 0.560$, so it is retained. $\square$
 
+:::
+
 It is not unusual for the two tests to disagree. The Q test uses only three data and is easy to compute, but its statistical efficiency is low and it tends to retain values lying far from the rest; the Grubbs test uses $s$ from all the data, is more reliable, and should be preferred. Note also that rejecting data changes the conclusion, and data must not be discarded at will to improve the precision: the 95% confidence interval for the values 40.12, 40.16, 40.18 is 40.08–40.23, but if 40.12 is rejected the interval from the remaining two data widens to 40.04–40.30, because the $t$ value for $n = 2$ is much larger. For a general discussion of outliers see regression diagnostics ([3.3.6](/3.3.6#sec-6.1.3)): an outlying datum should first be investigated for its cause, rather than deleted on the strength of a test alone.
 
 ## 1.6. Propagation of Error
@@ -326,6 +330,8 @@ The two kinds of result differ as follows: the limiting error assumes that all e
 **Example 1.6.1** The measurement errors of the buret and the balance determine the minimum quantities used in titrimetric analysis.
 
 **Solution** A buret can be read to $\pm0.01\,\mathrm{mL}$, and a titration requires two readings, so the limiting error of the volume is $\pm0.02\,\mathrm{mL}$. For the relative error of the volume not to exceed $\pm0.1\%$, the titration volume must be at least $0.02/0.001 = 20\,\mathrm{mL}$, and in practice it is kept at 20–30 mL. An analytical balance reading to $0.1\,\mathrm{mg}$ has an error of $\pm0.1\,\mathrm{mg}$ per weighing; weighing by difference requires two weighings, so the limiting error is $\pm0.2\,\mathrm{mg}$, and for the relative error not to exceed $\pm0.1\%$ the sample mass must be at least $0.2\,\mathrm{g}$. If the random errors are combined, the standard deviation of two readings is $\sqrt2$ times that of one, and the conclusion is the same. Since the mass fraction $w = c_{\mathrm{B}}V_{\mathrm{B}}M_{\mathrm{A}}/m$ is a product and quotient, the relative errors of the individual steps (standard solution concentration, volume, weighing) combine as a sum of squares, and each step must be good to about one part per thousand. $\square$
+
+:::
 
 Current metrological practice no longer speaks only of error but evaluates measurement results by their uncertainty.
 

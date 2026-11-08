@@ -1,7 +1,7 @@
 ---
 title: Logic Gates and Their Electrical Characteristics
 description: Classification, scale and packaging of integrated circuits; the switch model of the MOS transistor and the structure of the CMOS inverter, NAND, NOR and compound gates; voltage transfer characteristic, logic levels and noise margins, fan-in and fan-out, propagation delay, static and dynamic power; open-drain gates and wired-AND, tri-state gates and buses; TTL as a historical comparison.
-source_hash: 83adb9774f99
+source_hash: d7ab7cc31b42
 ---
 
 The [previous chapter](/4.9.2) treated a logic gate as an ideal operation: as soon as an input changes, the output changes according to the **truth table**. A real gate is a circuit built from transistors: its output voltage represents $0$ and $1$ only within certain ranges, changes take time, the load it can drive is limited, and it consumes power. This chapter explains how gates are implemented and the external characteristics that a user must care about: voltage levels and noise margins decide whether gates can be cascaded reliably, fan-out and delay decide how fast a circuit can be, and power decides how large a chip can be. These characteristics are the physical origin of races and hazards in [Combinational Logic Circuits](/4.9.4) and of the timing parameters in [Latches and Flip-Flops](/4.9.6).
@@ -157,6 +157,8 @@ The delay therefore increases linearly with fan-out (load capacitance). Increasi
 
 **Example 3.4.2 (Ring Oscillator)** Connecting an odd number $N$ of inverters head to tail gives a circuit with no stable state, which oscillates by itself: a transition takes $N t_{\mathrm{pd}}$ to go once around the ring, and the output flips twice in one period, so the oscillation period is $T = 2N t_{\mathrm{pd}}$. Measuring $T$ gives the average delay of a single gate, which is the standard method by which semiconductor manufacturers evaluate process speed. It is not a "perpetual motion machine": the energy of the oscillation comes from the supply, and every flip consumes power in charging and discharging capacitances.
 
+:::
+
 Typical gate delays: about $100\,\mathrm{ns}$ for 4000-series CMOS ($5\,\mathrm{V}$), about $10\,\mathrm{ns}$ for standard TTL and 74HC, and about $4\,\mathrm{ns}$ for 74LVC; these all include the time to drive the chip pins and external loads (tens of pF). A gate inside a chip drives only a load of a few fF, and in advanced processes the delay of one gate is only about $10\,\mathrm{ps}$.
 
 ### 3.4.4. Power Dissipation
@@ -172,6 +174,8 @@ The power dissipation of a CMOS circuit has three components:
 3. Static power: a transistor that is off does not conduct completely: there are subthreshold leakage current and gate leakage current. In advanced processes, leakage power can account for a considerable fraction of the total power.
 
 **Example 3.4.3** Suppose that on average a total equivalent capacitance of $C = 10\,\mathrm{nF}$ flips in each cycle of a chip (the sum of $\alpha C_L$), $V_{\mathrm{DD}} = 0.8\,\mathrm{V}$ and $f = 3\,\mathrm{GHz}$. Then $P_{\mathrm{dyn}} = 10^{-8}\times0.64\times3\times10^9 \approx 19\,\mathrm{W}$. If the voltage drops to $0.7\,\mathrm{V}$, the power falls to $(0.7/0.8)^2 \approx 77\%$ of the original.
+
+:::
 
 Dynamic power is proportional to $V_{\mathrm{DD}}^2$, so lowering the voltage is the most effective way to save energy, but a lower voltage makes the transistors slower. The low-power techniques of modern chips all start from this formula: dynamic voltage and frequency scaling (DVFS) lowers both $V_{\mathrm{DD}}$ and $f$ under light load; clock gating stops idle modules from toggling ($\alpha = 0$); and power gating cuts off the supply of idle modules to eliminate leakage.
 

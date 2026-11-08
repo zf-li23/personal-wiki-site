@@ -1,6 +1,6 @@
 ---
 title: The Divergence Theorem, Stokes' Theorem and Vector Fields
-source_hash: 79df51f9a207
+source_hash: 6889d1247a25
 ---
 
 Green's theorem in [2.2.13](/2.2.13) relates a double integral over a plane region to a **line integral of a vector field** around its boundary. This chapter extends it to space: the divergence theorem relates a triple integral over a spatial region to a **surface integral of a vector field** over its closed boundary surface, and Stokes' theorem relates a surface integral of a vector field over a surface to a line integral around its boundary curve. The three theorems share a common form, "the integral of a certain derivative over a region equals an integral over its boundary", in direct line of descent from the one-variable **fundamental theorem of calculus**; in modern mathematics they are unified in the general Stokes theorem for differential forms, $\int_M\mathrm{d}\omega=\int_{\partial M}\omega$.
@@ -362,6 +362,8 @@ $$
 \oiint_S\boldsymbol{F}\cdot\mathrm{d}\boldsymbol{S}=-4\pi G\,(m_{i_1}+\cdots+m_{i_s}),
 $$
 which is Gauss's law for gravitation: the flux depends only on the total mass enclosed by the surface. From the point of view of Theorem 14.2.2, the point masses are "sinks" of the gravitational field, with strength proportional to the mass.
+
+:::
 
 Can a solenoidal field be written as a curl? As for irrotational fields, the answer depends on whether the region has "cavities".
 

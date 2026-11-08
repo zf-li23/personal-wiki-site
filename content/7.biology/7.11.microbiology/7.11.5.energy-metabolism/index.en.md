@@ -25,6 +25,8 @@ $$
 | glucose → 2 ethanol + 2 $\ce{CO2}$ | $2(-181.7) + 2(-394.4) + 917.2 = -235$ |
 | glucose + 6 $\ce{O2}$ → 6 $\ce{CO2}$ + 6 $\ce{H2O}$ | $6(-394.4) + 6(-237.2) + 917.2 = -2872$ |
 
+:::
+
 Fermentation releases less than a tenth of the energy available from respiration, because its products, lactate and ethanol, are still highly reduced.
 
 The actual $\Delta_{\mathrm{r}}G$ in a habitat depends on the concentrations ([Formula 16.2.1](/7.1.16#fml-16.2.1)). Usually the correction is modest, but for reactions that produce $\ce{H2}$ it is decisive: hydrogen-consuming organisms keep its partial pressure so low that reactions endergonic under standard conditions become exergonic. This is the basis of **syntrophy** (7.11.7).
@@ -45,6 +47,8 @@ where $F = 96.485\,\mathrm{kJ\,mol^{-1}\,V^{-1}}$ is the Faraday constant.
 ![The redox tower: reduction potentials E°′ at pH 7 of redox couples used in microbial energy metabolism, from CO₂/glucose and 2H⁺/H₂ at the top to ½O₂/H₂O at the bottom (number of electrons in parentheses). Couples used mainly as electron donors are on the left, couples used mainly as electron acceptors on the right; the cellular carriers NAD⁺/NADH, menaquinone, ubiquinone and cytochrome c are marked. Right: the Gibbs energy released when H₂ (z = 2 per H₂) reduces different acceptors, from Formula 5.1.2. Values from Thauer et al. (1977) and Madigan et al. (2019).](./plots/redox-tower.py)
 
 **Example 5.1.2** Hydrogen ($E^\circ{}' = -0.414\,\mathrm{V}$) can be oxidized by several acceptors. Per $\ce{H2}$ ($z = 2$): with $\ce{O2}$ ($+0.816\,\mathrm{V}$), $\Delta E^\circ{}' = 1.230\,\mathrm{V}$ and $\Delta_{\mathrm{r}}G^\circ{}' = -237\,\mathrm{kJ}$; with nitrate reduced to nitrite ($+0.43\,\mathrm{V}$), $-163\,\mathrm{kJ}$; with fumarate ($+0.03\,\mathrm{V}$), $-86\,\mathrm{kJ}$; with sulfate reduced to sulfide ($-0.22\,\mathrm{V}$), $-38\,\mathrm{kJ}$; with $\ce{CO2}$ reduced to methane ($-0.24\,\mathrm{V}$), $-33\,\mathrm{kJ}$. Per molecule of acceptor the last two are larger ($-152$ and $-131\,\mathrm{kJ}$ for four $\ce{H2}$), but per electron they are small, which is why sulfate reducers and methanogens make little ATP per electron pair (7.11.7). The complete oxidation of acetate by $\ce{O2}$ ($\ce{CH3COO- + H+ + 2O2 -> 2CO2 + 2H2O}$, $z = 8$, $E^\circ{}'(\ce{CO2}/\text{acetate}) = -0.29\,\mathrm{V}$) gives $-8 \times 96.485 \times 1.106 = -854\,\mathrm{kJ}$, in agreement with $-854\,\mathrm{kJ}$ from free energies of formation.
+
+:::
 
 The tower organizes the whole of microbial metabolism. Chemoorganotrophy and chemolithotrophy differ in the donor near the top; aerobic and anaerobic respiration differ in the acceptor near the bottom; fermentation is the case in which the donor and the acceptor are both derived from the substrate. Wherever a donor and an acceptor that are far enough apart meet, some microorganism usually exploits the gap.
 
@@ -235,6 +239,8 @@ Growth on acetate or fatty acids, which enter metabolism as acetyl-CoA, requires
 Per glucose oxidized completely through glycolysis and the citric acid cycle, a bacterium obtains 4 ATP by substrate-level phosphorylation and about 10 NAD(P)H and 2 reduced quinones. How much more ATP the respiratory chain makes depends on its composition:
 
 **Example 5.4.1** For *E. coli* with NDH-1 and cytochrome $bo_3$, the 10 NADH translocate $10 \times 8 = 80$ protons and the 2 quinols from succinate $2 \times 4 = 8$, in total 88; at 3.3 protons per ATP this gives about 26 ATP, or about 30 ATP per glucose in all. With NDH-2 and cytochrome $bd$, the protons are $10 \times 2 + 2 \times 2 = 24$, about 7 ATP from the chain and 11 in all. A mitochondrion, with a P/O ratio of about 2.5 for NADH and 1.5 for succinate ([7.1.23](/7.1.23#sec-23.3.5)), makes about 30–32 ATP per glucose. The figure of 38 ATP per glucose found in older textbooks assumed integral P/O ratios of 3 and 2, which are not observed.
+
+:::
 
 ![ATP made per glucose by different modes of energy metabolism (theoretical values from the pathway stoichiometries in this chapter). Fermentations by substrate-level phosphorylation yield 1–3 ATP: heterolactic (1), ethanol by *Zymomonas* through the ED pathway (1), homolactic (2), ethanol by yeast (2), bifid shunt (2.5), butyrate (3). Aerobic respiration by *E. coli* yields about 11 (NDH-2 + bd) to 30 ATP (NDH-1 + bo₃); mitochondria about 32. Respiratory yields assume 3.3 H⁺ per ATP for *E. coli* and P/O ratios of 2.5 and 1.5 for mitochondria; actual values are lower because part of the proton-motive force is spent on transport and leaks.](./plots/atp-yields.py)
 

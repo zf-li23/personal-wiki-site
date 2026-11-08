@@ -29,6 +29,8 @@ The recognition of Chi was first seen as Chi-specific nicking. In the classic ex
 
 **Example 9.2.1 (Chi is overrepresented)** A particular octamer occurs by chance once every $4^8 = 65{,}536$ positions. The *E. coli* chromosome has $2\times4.64\times10^6$ positions (both strands), so about $140$ Chi sequences would be expected, whereas $1009$ are found, a sevenfold excess; Chi occurs on average every $4.6\,\mathrm{kb}$ (in either orientation). Chi sites are also strongly biased in orientation: most lie on the leading-strand template in the orientation that RecBCD recognizes when it enters at a broken fork and moves back toward *oriC*. The two biases are the signature of selection for a sequence that marks the bacterium's own chromosome, which RecBCD repairs, and distinguishes it from foreign DNA, which lacks Chi at this frequency and is degraded. Recognition is probabilistic: RecBCD recognizes a Chi site with a probability of about $0.3$ at each encounter and continues through the others.
 
+:::
+
 Without RecBCD, *E. coli* uses the RecF pathway, in which the RecQ helicase and the RecJ **exonuclease** resect breaks and RecF, RecO and RecR load RecA onto single-stranded gaps coated with **SSB**. This pathway is the main route for repairing the gaps left behind forks at lesions ([7.2.8](/7.2.8#sec-8.6)).
 
 ## 9.3. RecA: Filament, Homology Search and Strand Invasion
@@ -143,6 +145,8 @@ The chemistry of RAG is that of a transposase: a nick, then attack of the libera
 Three mechanisms generate the diversity of antibodies: combinatorial joining of segments, imprecise joining, and, after **antigen** stimulation, somatic hypermutation of the rearranged genes by the cytidine deaminase AID.
 
 **Example 9.7.1** With the segment numbers of 9.7.1, combinatorial joining gives $40\times23\times6 = 5520$ heavy-chain variable regions and $40\times5 + 30\times4 = 320$ light-chain variable regions. Since any heavy chain can pair with any light chain, there are $5520\times320 \approx 1.8\times10^6$ combinations. Junctional diversity is larger. At each of the two junctions of a heavy chain, trimming of $0$–$10$ nucleotides from each end and addition of $0$–$10$ N nucleotides, each of four kinds, give a number of possible junction sequences that is dominated by the N regions: already two N regions of up to five nucleotides allow $(\sum_{k=0}^{5}4^k)^2 \approx 1.9\times10^6$ sequences. Multiplying the combinatorial and junctional factors gives potential repertoires conventionally quoted at $10^{11}$ to more than $10^{13}$, although frameshifts at the junctions make about two thirds of the joins nonproductive. Only a small part of this potential is realized: a human has about $10^{11}$ B cells, and sequencing estimates the number of distinct heavy chains in one person at $10^8$–$10^{10}$.
+
+:::
 
 The same mechanism assembles T-cell-receptor genes, and the same rule applies; class switching and somatic hypermutation, which modify the rearranged genes later, are described with the immunological context in [7.15](/7.15).
 

@@ -219,6 +219,8 @@ Biological membranes are permeable to uncharged molecules but not to ions (7.1.1
 
 ![Fraction of a drug in its uncharged, membrane-permeant form as a function of pH (Henderson–Hasselbalch equation). The weak acid aspirin (pKa 3.5) is mostly uncharged in the stomach (97 % at pH 2) and mostly ionized in the small intestine and in plasma (3 % uncharged at pH 5); the weak base lidocaine (pKa 7.9) is mostly protonated at pH 7.4 and becomes uncharged only above pH 8](./plots/drug-ionization.py)
 
+:::
+
 This *pH-partition* reasoning predicts that weak acids are absorbed from the stomach and weak bases from the intestine, and it explains ion trapping: aspirin that has entered the cells of the gastric mucosa (pH 7) ionizes and cannot leave, which contributes to its irritant effect. The prediction is only part of the story, however: because the small intestine has a surface area several hundred times that of the stomach and a longer residence time, most aspirin is in fact absorbed there despite the low uncharged fraction. Weak bases show the mirror image; for example, local anesthetics such as lidocaine ($\mathrm{p}K_{\mathrm{a}} = 7.9$) act from inside the nerve cell but must cross its membrane uncharged, which is why they work poorly in inflamed, acidic tissue.
 
 ## 2.4. Water as a Reactant and as Part of Structure

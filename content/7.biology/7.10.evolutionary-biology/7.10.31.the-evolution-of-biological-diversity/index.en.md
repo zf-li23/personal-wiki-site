@@ -126,6 +126,8 @@ $$
 $$
 (a one-sided sign test). The weevils and leaf beetles, with about 130 000 species, contrast with their fungus- and detritus-feeding relatives, with fewer than 10 000; the moths and butterflies (about 140 000 species) with their sister group, the caddisflies (about 7000). Later analyses supported the conclusion, in part because herbivorous species diverge in diet and specialize on different plants.
 
+:::
+
 Plants show the converse: clades that evolved latex (milkweeds) or resin canals (pines), defenses against herbivorous insects, are more diverse than their sister groups, and diversification rates are twice as high in plant families with extrafloral nectaries, glands that attract ants and other protective arthropods, as in families without them. Some features increase diversity simply by promoting speciation. The nectar spurs of columbines (*Aquilegia*) let different species use pollinators of different tongue lengths, which also contributes to reproductive isolation, and the evolution of spurs was followed by a burst of speciation not seen in the spurless sister group; plant clades with bilaterally symmetrical flowers have speciated faster than those with radial symmetry. Several factors may act together: across the lakes of Africa, the number of cichlid species that arose within a lake depends both on lake depth and incident energy and on features related to **sexual selection** ([7.10.13](/7.10.13)), such as sexual dichromatism and the egg spots on the fins of male haplochromines.
 
 ### 31.5.3. Trait-Dependent Diversification and Tree Shape

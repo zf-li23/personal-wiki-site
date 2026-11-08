@@ -108,6 +108,8 @@ small when the center is depleted relative to both flanks. Sites with FOS below 
 
 ![Two signatures of ATAC-seq data (simulated). A: the fragment-length distribution: nucleosome-free fragments with a 10.5-bp helical modulation (inset), and fragments spanning one, two and three nucleosomes, above a smooth background. B: aggregate insertion profiles around motif sites of a transcription factor, bound (with a footprint over the motif) and unbound. C: footprint occupancy scores (Formula 8.3.1) of single sites](./plots/atac_fragments.py)
 
+:::
+
 Footprints have limits. DNase I and Tn5 have sequence preferences that produce footprint-like shapes even on naked DNA, which must be corrected by models of the enzyme's bias estimated from deproteinized DNA (methods such as TOBIAS); and factors that bind briefly, such as nuclear receptors, leave little or no footprint although they regulate their targets (Sung and colleagues, 2014). The absence of a footprint is therefore weak evidence of absence of binding.
 
 ### 8.3.3. Motif Accessibility and Single-Cell ATAC
@@ -276,6 +278,8 @@ negative at the end of a domain and positive at its start; a hidden Markov model
 **Example 8.6.2** On the simulated chromosome (figure), the insulation score with $w = 5$ bins finds all $19$ true domain boundaries in the interior, within one bin, together with $7$ further minima; all seven lie at switches between compartments, which also reduce the contacts crossing them. Domain and compartment boundaries coincide in part in real data as well, and callers are compared on their agreement across methods and resolutions rather than with a ground truth.
 
 ![Domains and their boundaries in the simulated, balanced Hi-C map. A: the matrix for bins 100–200 with true domain boundaries (ticks at the top edge) and boundaries called from the insulation score (dashed). B: the insulation score (Definition 8.6.3; triangles: called minima; dotted: true boundaries). C: the directionality index (Eq. (8.5))](./plots/tad_insulation.py)
+
+:::
 
 At kilobase resolution, many domains are seen to be bounded by peaks of contact between their corners: loops. HiCCUPS (Rao and colleagues, 2014) finds them as pixels enriched over a local background (a "donut" around the pixel and the regions below and to the left of it, all at the same distance from the diagonal), with Poisson tests and a false discovery rate computed separately for ranges of expected counts. About $10\,000$ loops were found in GM12878, and in more than $90\,\%$ of the loops with CTCF motifs at both anchors the two motifs point toward each other, a convergent orientation that inverting a single motif disrupts.
 

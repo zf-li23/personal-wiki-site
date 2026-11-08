@@ -1,6 +1,6 @@
 ---
 title: Crystal Structures and Intermolecular Forces
-source_hash: 6d1e25582604
+source_hash: c3fe624a624a
 ---
 
 The previous chapter dealt with chemical bonds within single molecules; this chapter deals with how large numbers of particles aggregate into solids. By the type of force between the particles, crystals fall into four classes: metallic, ionic, molecular and covalent network crystals. The first two are held together by the nondirectional metallic and ionic bonds, and their particles pack as closely as rigid spheres; molecular crystals are held together by van der Waals forces and hydrogen bonds, which are much weaker than chemical bonds; covalent network crystals are joined into a single whole by directional covalent bonds. This chapter discusses in turn the packing of equal spheres (the geometric basis of metallic and ionic crystal structures), metallic bonding and energy bands, lattice enthalpy and structure types of ionic crystals, ionic polarization, intermolecular forces and hydrogen bonding, and finally covalent network crystals and crystal defects.
@@ -53,6 +53,8 @@ The hcp and ccp packings have the same coordination number and the same packing 
 - Face-centered cubic: each cell contains $8\times\frac18 + 6\times\frac12 = 4$ spheres, tangent along the face diagonal, $\sqrt{2}a = 4r$, and the packing efficiency is $\frac{4\cdot\frac43\pi r^3}{(2\sqrt2 r)^3} = \frac{\pi}{3\sqrt2} = 74.0\%$.
 
 The packing efficiency of hcp is also $74.0\%$. Kepler conjectured in 1611 that this is the maximum density of packing of equal spheres, and this "Kepler conjecture" was proved only in 1998, by Hales with the aid of a computer.
+
+:::
 
 The density of a crystal can be calculated from the lattice parameters: copper is ccp with $a = 361.5\,\mathrm{pm}$ and $M = 63.55\,\mathrm{g\,mol^{-1}}$, so
 

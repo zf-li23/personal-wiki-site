@@ -1,7 +1,7 @@
 ---
 title: Kinematics of a Particle
 description: Reference frames and the particle model; position, displacement, velocity and acceleration; uniformly accelerated motion and projectiles; tangential and normal acceleration in intrinsic coordinates and angular quantities of circular motion; plane polar coordinates; relative motion and the Galilean velocity transformation.
-source_hash: e49a28abf6de
+source_hash: 240dd72954a6
 ---
 
 Mechanics studies the motion of bodies, that is, the change of their positions with time. This chapter is the first step. *Kinematics* describes motion itself (where a body is at each instant, how fast it moves, and how its velocity changes) without asking why the motion changes; the cause, force, is the subject of the next chapter, [5.1.2](/5.1.2). The language of this description is the calculus of vectors and **vector-valued functions**: position is a vector function of time, and velocity and acceleration are its first and second derivatives ([2.2.11](/2.2.11)). The **inner product** and the **cross product** from vector algebra ([2.2.11](/2.2.11#def-11.1.1)) appear throughout this and the following chapters. We discuss in turn reference frames and the particle model, the description in Cartesian coordinates, uniformly accelerated motion, intrinsic coordinates and circular motion, plane polar coordinates, and finally the transformation of velocities between reference frames, which relativity will correct in [5.1.8](/5.1.8).
@@ -165,6 +165,8 @@ v = v_0 + at, \qquad x = x_0 + v_0 t + \frac12 at^2, \qquad v^2 - v_0^2 = 2a(x -
 $$
 
 **Example 1.4.1** A bungee jumping platform is $55\,\mathrm{m}$ high. Treating the jumper as a body in free fall from zero initial velocity, the speed after falling $55\,\mathrm{m}$ is $v = \sqrt{2gh} = \sqrt{2 \times 9.8 \times 55}\,\mathrm{m\,s^{-1}} \approx 33\,\mathrm{m\,s^{-1}}$. This is an upper bound: a real cord begins to stretch and decelerate the jumper before the bottom is reached, and air resistance lowers the speed further.
+
+:::
 
 A real falling body also experiences air resistance. The resistance grows with speed and, after a sufficiently long fall, balances the weight; the body then falls at constant speed, called the terminal velocity. The terminal velocity of raindrops is of the order of a few meters per second (about $9\,\mathrm{m\,s^{-1}}$ for large drops). Calculating the terminal velocity belongs to dynamics; see Example 2.5.3 in [5.1.2](/5.1.2).
 

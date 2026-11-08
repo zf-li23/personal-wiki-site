@@ -37,6 +37,8 @@ Klug and colleagues (Miller, McLachlan and Klug, 1985) found that TFIIIA ([7.2.1
 
 **Example 14.2.1 (Zif268)** The crystal structure of the three fingers of the mouse activator Zif268 (also called Egr1; it is not TFIIIA, as sometimes labeled) bound to its site $\mathrm{GCGTGGGCG}$ (Pavletich and Pabo, 1991) shows how fingers read DNA. The three fingers are arranged in a C-shape that follows the major groove, all approaching the DNA from the same angle. In each finger the β-hairpin contacts the backbone and positions the helix, and amino acids at positions $-1$, $3$ and $6$ of the helix (numbered from its start) contact three successive bases, mostly on one strand (the G-rich one): finger 1 reads $\mathrm{GCG}$, finger 2 $\mathrm{TGG}$, finger 3 $\mathrm{GCG}$. Most contacts are with bases rather than with the backbone, and the construction is modular: fingers can be shuffled and redesigned to read new triplets, the basis of engineered zinc-finger nucleases ([7.2.24](/7.2.24)).
 
+:::
+
 Two other zinc-containing modules are unrelated in structure:
 
 - *The GAL4 binuclear cluster.* GAL4, the yeast activator of the galactose genes, binds its upstream activating sequence ($\mathrm{UAS_G}$, a $17$ bp site $\mathrm{CGG{-}N_{11}{-}CCG}$) as a dimer. Its DNA-binding motif lies in residues $1$–$40$: six cysteines coordinate two zinc ions in a $\mathrm{Zn_2Cys_6}$ cluster that holds a short recognition helix in the major groove at the $\mathrm{CGG}$ triplet. Residues $50$–$94$ form an α-helix that pairs with the helix of the other monomer in a parallel **coiled coil**, and the linker between the two sets the $11$ bp spacing of the half-sites (Marmorstein, Harrison and colleagues, 1992).
@@ -92,6 +94,8 @@ A common misstatement is that "the affinity varies with the square of the free e
 ## 14.3. Independence of the Domains
 
 **Example 14.3.1 (A chimeric activator)** Brent and Ptashne (1985) fused the DNA-binding domain of the bacterial repressor LexA, which has no activation domain and binds lexA **operators**, to the activation domain of GAL4. In yeast cells carrying a reporter gene with a lexA operator in place of the GAL4-binding site, the hybrid protein activated transcription; LexA alone did not, and GAL4 did not activate this reporter. The activation domain therefore works when brought to DNA by any DNA-binding domain, even a bacterial one, and the DNA-binding domain needs no particular partner. Domain-swap experiments with GCN4 and GAL4 (Hope and Struhl, 1986; Keegan, Gill and Ptashne, 1986) gave the same result.
+
+:::
 
 The independence of the two domains became a tool.
 
@@ -211,6 +215,8 @@ Mediator has about $25$ subunits in yeast and $30$ in humans (about $1.4$ and $2
 Cyclic AMP activates bacterial operons by binding CAP directly ([7.2.11](/7.2.11)); in eukaryotes it acts through a signal-transduction pathway.
 
 **Example 14.8.2 (The CREB pathway)** Genes induced by cAMP have a cAMP response element (CRE, $\mathrm{TGACGTCA}$), bound by the bZIP protein CREB even before stimulation. When a hormone raises cAMP, the catalytic subunit of PKA, the cAMP-dependent **protein kinase**, enters the nucleus and phosphorylates CREB at Ser133. Phosphorylated CREB binds the KIX domain of CBP (CREB-binding protein, Chrivia, Goodman and colleagues, 1993), and CBP, which binds components of the basal machinery and is itself a histone acetyltransferase, recruits the machinery to the promoter and acetylates the surrounding chromatin. Unphosphorylated CREB is bound to the CRE but cannot activate.
+
+:::
 
 CBP and its homolog p300 are coactivators for many activators besides CREB: nuclear receptors, AP-1, NF-κB, p53, STATs. For nuclear receptors, the link is a family of p160 steroid receptor coactivators (SRC-1, SRC-2, SRC-3), whose LXXLL motifs bind the groove created on the ligand-binding domain when hormone binds (Example 14.2.2); SRC in turn binds CBP/p300 and the arginine methyltransferase CARM1. Because CBP/p300 is present in limiting amounts and shared, activators compete for it, and one pathway can inhibit another. CARM1 makes this competition directional: it methylates an arginine in the KIX domain of CBP that is required for binding CREB, so that hormone-activated nuclear receptors, by recruiting CARM1, divert CBP away from CREB-dependent genes (Xu, Evans and colleagues, 2001).
 

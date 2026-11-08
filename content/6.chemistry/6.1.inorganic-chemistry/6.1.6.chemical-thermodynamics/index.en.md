@@ -1,6 +1,6 @@
 ---
 title: Fundamentals of Chemical Thermodynamics
-source_hash: 200ec6580f4b
+source_hash: 39f91294c5a3
 ---
 
 In studying a chemical reaction we care first about the transformation of matter (the synthesis of ammonia, the removal of mercury) and second about the transformation of energy (the heat released in combustion, the discharge of a storage battery). Starting from the conversion of energy, chemical thermodynamics answers three questions: how much heat a reaction absorbs or releases (thermochemistry), whether a reaction can proceed spontaneously under given conditions (the direction of reaction), and how far it proceeds (chemical equilibrium, [6.1.8](/6.1.8)). The basic laws of thermodynamics were established in physics: Carnot studied the efficiency of heat engines in 1824, Mayer (1842), Joule (1843–1850), and Helmholtz (1847) established the conservation of energy, and Clausius introduced entropy in 1865; the first and second laws are treated in [5.2.3](/5.2.3) and [5.2.4](/5.2.4). It was Gibbs (1876–1878) who applied them systematically to chemical systems and founded chemical thermodynamics. This chapter first reviews the basic concepts and the first law briefly (6.1, 6.2) and then concentrates on what is specific to chemistry: the extent of reaction, standard states, and the calculation of the various reaction enthalpies (6.3), and the use of entropy and the Gibbs energy to determine the direction of reaction (6.4). The results are used in chemical equilibrium ([6.1.8](/6.1.8)), electrode potentials ([6.1.11](/6.1.11)), and the chapters on descriptive chemistry of the elements. More advanced topics such as chemical potential, partial molar quantities, the Gibbs–Helmholtz equation, and statistical thermodynamics are treated in [Physical Chemistry](/6.3).
@@ -288,6 +288,8 @@ Strictly speaking, the enthalpy changes of ionization and electron attachment at
 
 ![Enthalpy diagram of the Born–Haber cycle for KBr: starting from the elements, via atomization, ionization, and electron attachment to the gaseous ions, then down to the crystal; upward arrows are endothermic and downward arrows exothermic](./plots/born-haber-kbr.py)
 
+:::
+
 The steps of the cycle show that KBr is stable because of its large lattice enthalpy: the ionization of K ($+418.8$) is much larger than the energy released when Br gains an electron ($324.5$), so a gaseous ion pair is itself not more stable than the atoms. Other uses of the Born–Haber cycle include calculating hard-to-measure electron affinities from theoretical lattice enthalpies, judging the degree of covalent character in a crystal by comparison with values calculated from the ionic model (the ionic polarization of [6.1.4](/6.1.4)), and explaining why $\ce{NaCl2}$ does not exist: the second ionization energy of Na ($4562\,\mathrm{kJ\,mol^{-1}}$) is so large that no lattice enthalpy can compensate for it.
 
 ## 6.4. The Direction of Chemical Reactions
@@ -375,6 +377,8 @@ $$
 $$
 The water of crystallization bound in the crystal becomes liquid water and a gas is released, so the entropy increases greatly. The mixing of barium hydroxide crystals with an ammonium salt is strongly endothermic (it can freeze the water under the beaker), yet the reaction proceeds spontaneously, and it is this entropy increase that drives it.
 
+:::
+
 The sign of the entropy change can also be judged qualitatively without tables: the entropy increases when particles gain more room to move and when the number of particles increases. The most important rule is that a reaction in which the number of gas molecules increases ($\Delta\nu_{\mathrm{g}} > 0$) has $\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}} > 0$, such as $\ce{2Na2O2(s) + 2H2O(l) -> 4NaOH(s) + O2(g)}$, and one in which the number of gas molecules decreases has $\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}} < 0$, such as $\ce{CO(g) -> C(s) + 1/2O2(g)}$.
 
 Thus $\Delta_{\mathrm{r}}H$ and $\Delta_{\mathrm{r}}S$ are the two factors that determine the direction of a reaction: an exothermic reaction with increasing entropy always proceeds spontaneously, and an endothermic reaction with decreasing entropy never does; when the two factors act in opposite directions, a quantitative criterion combining them is needed.
@@ -408,6 +412,8 @@ $$
 \end{aligned}
 $$
 The entropy of the system decreases, but the large amount of heat released raises the entropy of the surroundings even more; the total entropy increases and the reaction can proceed spontaneously.
+
+:::
 
 Substituting $\Delta S_{\mathrm{surr}} = -\Delta H/T$ into $\Delta S_{\mathrm{total}} \ge 0$ and multiplying by $T$ gives a criterion containing only properties of the system: at constant temperature and pressure with only pressure–volume work,
 $$
@@ -467,6 +473,8 @@ $$
 \Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -91.8 - 298.15\times(-0.1981) = -32.7\,\mathrm{kJ\,mol^{-1}},
 $$
 and the two methods agree.
+
+:::
 
 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ determines the direction of reaction only when all substances are in their standard states and cannot be used directly for an arbitrary composition; at an arbitrary composition $\Delta_{\mathrm{r}}G_{\mathrm{m}} = \Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} + RT\ln Q$ (the **reaction isotherm**, [6.1.8](/6.1.8)). When $\lvert\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}\rvert$ exceeds about $40\,\mathrm{kJ\,mol^{-1}}$, however, the equilibrium constant at room temperature is larger than $10^7$ or smaller than $10^{-7}$, a change of composition can hardly reverse the direction of the reaction, and the sign of $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ in effect determines the direction.
 

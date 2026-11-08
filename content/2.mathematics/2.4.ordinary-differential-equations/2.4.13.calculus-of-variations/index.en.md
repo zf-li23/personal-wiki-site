@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Calculus of Variations
-source_hash: 1894a564a332
+source_hash: d238092759cd
 ---
 
 Extremum problems in calculus ask for the points at which a function attains an extremum. Many problems in geometry and physics ask instead for the **functions** or curves at which some quantity attains an extremum: the shortest curve joining two points, the curve whose surface of revolution has the least area, the track along which a particle slides down fastest, the curve of given length enclosing the largest area. Such "functions of functions" are called functionals, and the study of their extrema is called the calculus of variations. Its basic result is that an extremal curve must satisfy a second-order ordinary differential equation, the Euler–Lagrange equation. A variational problem thus reduces to a boundary value problem for a differential equation, which is why this chapter belongs in a course on ordinary differential equations; conversely, the equations of motion of mechanics can be viewed as the Euler–Lagrange equations of a functional (Hamilton's principle).
@@ -187,6 +187,8 @@ $$
 F_{\varphi'}=\frac{R\,\varphi'\sin^2\theta}{\sqrt{1+\varphi'^2\sin^2\theta}}=RC.
 $$
 By the symmetry of the sphere, we may choose coordinates so that the starting point $A$ is the north pole $\theta=0$. Since $\Big|\dfrac{u\sin^2\theta}{\sqrt{1+u^2\sin^2\theta}}\Big|\le|\sin\theta|$ for every real $u$, letting $\theta\to0^+$ gives $C=0$, hence $\varphi'\equiv0$ and $\varphi=\varphi_0$ is constant: the curve is the meridian $x=R\sin\theta\cos\varphi_0$, $y=R\sin\theta\sin\varphi_0$, $z=R\cos\theta$, that is, the intersection of the sphere with the plane through $A$, $B$ and the center, an arc of a great circle. If $A$ is not taken to be a pole, $C$ is in general nonzero, and the result is still a great circle, only with a more complicated equation.
+
+:::
 
 Such "locally shortest curves" are called *geodesics*. This is why long-haul flight routes follow great circles and appear curved on a Mercator map.
 

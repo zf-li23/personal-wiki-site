@@ -35,6 +35,8 @@ $$
 
 对任意初始分布 $\boldsymbol{x}$，$A^t\boldsymbol{x} \to (x_1 + x_2)\boldsymbol{x}_1$：总人口不变，最终按 $1 : 4$ 分布在两地。
 
+:::
+
 这里的关键是方程组 $A\boldsymbol{x} = \lambda\boldsymbol{x}$，其中 $\lambda$ 不是给定的参数，而是要由 $A$ 确定的、使方程组有非零解的数。它表示 $\boldsymbol{x}$ 在变换下的像 $A\boldsymbol{x}$ 与 $\boldsymbol{x}$ 共线。
 
 **例 6.1.2（平面上的保距变换）** 由例 4.3.1，$\mathbb{R}^2$ 上的保距变换有反射与旋转两类：
@@ -380,6 +382,8 @@ $$
 
 由于 $|\lambda_2| < 1$，$F_n$ 就是 $\lambda_1^n/\sqrt{5}$ 四舍五入后的整数，$F_{n+1}/F_n \to \lambda_1$（黄金比）。
 
+:::
+
 一般地，若 $A$ 可对角化，$A^t\boldsymbol{x} = \sum_i k_i\lambda_i^t\boldsymbol{x}_i$，$t$ 很大时由绝对值最大的特征值主导：若所有特征值的绝对值都小于 $1$，则 $A^t\boldsymbol{x} \to \boldsymbol{0}$；若最大者大于 $1$，则一般 $\|A^t\boldsymbol{x}\| \to \infty$。例 6.1.1 中特征值 $1$ 决定了极限分布，$0.5$ 决定了收敛的速度。下面的代码验证这两个例子：
 
 ```python
@@ -483,6 +487,8 @@ $\det A = -2 \ne 0$，$A$ 可逆。由 $A(A - 5I_2) = 2I_2$ 得
 $$
 A^{-1} = \frac{1}{2}(A - 5I_2), \qquad A^{-2} = \frac{1}{4}(A - 5I_2)^2 = \frac{1}{4}(-5A + 27I_2).
 $$
+
+:::
 
 类似地，$A$ 的任意次幂（包括负整数次幂）都可以写成 $A$ 与 $I_2$ 的线性组合。一般地，对 $n$ 阶方阵与多项式 $f$，用 $p_A$ 对 $f$ 做带余除法 $f = qp_A + r$（$\deg r < n$），则 $f(A) = r(A)$：任意多项式在 $A$ 上的值都可以化为次数小于 $n$ 的多项式，这是[第 11 章](/2.1.11)计算矩阵函数的出发点。
 

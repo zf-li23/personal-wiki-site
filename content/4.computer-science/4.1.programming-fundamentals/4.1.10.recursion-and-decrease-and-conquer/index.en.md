@@ -1,7 +1,7 @@
 ---
 title: Recursion and Decrease and Conquer
 description: Recursion and mathematical induction, how recursion executes on the call stack, key points in designing recursive functions; the decrease-and-conquer idea (recursive selection sort, spiral filling of a number square, binary search, the Euclidean algorithm); analyzing recursion with AND-OR graphs; repeated subproblems and memoization in binomial coefficients and the Fibonacci sequence; the Tower of Hanoi.
-source_hash: 90cf6aa928f4
+source_hash: c957d501146c
 ---
 
 From this chapter on, the emphasis shifts from "what the language provides" to "how to come up with a solution". The next five chapters discuss several basic problem-solving strategies: recursion and decrease and conquer in this chapter, divide and conquer in [4.1.11](/4.1.11), enumeration and backtracking in [4.1.12](/4.1.12), dynamic programming in [4.1.13](/4.1.13), and state-space search in [4.1.14](/4.1.14). They share one starting point: reduce a problem to smaller problems of the same kind. Recursion is the most direct program structure for expressing this idea, and it is two sides of the same coin as mathematical induction: induction derives larger cases from smaller ones, whereas recursion reduces larger cases to smaller ones. This chapter first explains what a recursive function is and how it executes, then the decrease-and-conquer strategy of shrinking the problem a little at a time and the AND-OR graph as a tool for analyzing recursion; it then uses binomial coefficients and the Fibonacci sequence to show the repeated computation in recursion and how to remove it, and finally discusses the Tower of Hanoi. These chapters concentrate on ideas and modeling; complexity analysis of algorithms is only touched on, and a systematic treatment is in [4.3 Data Structures and Algorithms](/4.3).
@@ -205,6 +205,8 @@ for row in m:
     print("".join(f"{x:3}" for x in row))
 ```
 
+:::
+
 This example shows the typical use of decrease and conquer: first find the part such that "once it is done, what remains is the same problem", and then put the parameters needed to describe the subproblem (here the starting number, position, and side length) into the function's parameter list.
 
 ### 10.2.3. AND-OR Graphs
@@ -255,6 +257,8 @@ F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2} \ (n \geq 2),
 $$
 
 and the sequence is $0, 1, 1, 2, 3, 5, 8, 13, \dots$; in month 12 there are $F_{12} = 144$ pairs.
+
+:::
 
 Written directly from the definition as a recursive function, the calls of `fib(5)` form a tree:
 
@@ -357,6 +361,8 @@ move(3, "A", "B", "C")
 ```
 
 Let $T(n)$ be the number of steps needed to move $n$ discs. Then $T(0) = 0$ and $T(n) = 2T(n-1) + 1$, so $T(n) + 1 = 2\bigl(T(n-1) + 1\bigr)$, which gives $T(n) = 2^n - 1$. This is also the minimum number of steps: the largest disc must move at least once; before it moves, all other $n - 1$ discs must be on the intermediate peg, and after it moves they must all be moved on top of it, each of these two stages requiring at least $T(n-1)$ steps. The legendary 64 golden discs would need $2^{64} - 1 \approx 1.8 \times 10^{19}$ steps, which at one move per second would take about 580 billion years.
+
+:::
 
 The Tower of Hanoi illustrates the expressive power of recursion: without recursion, it is hard to say directly which disc to move at step $k$ (although such iterative solutions do exist); with recursion, three lines of code suffice. It also shows that a recursive program can run for an extremely long time: a short program does not mean a small amount of computation.
 

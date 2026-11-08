@@ -86,6 +86,8 @@ This is the method of Staden (1989), used by FIMO of the MEME suite (Grant, Bail
 
 ![Scanning with a position weight matrix. A: the exact distribution of the CTCF PWM score of a random 19-bp window (gray, human background) and of a site drawn from the motif model (blue), computed by convolution over positions (Algorithm 8.3.1), on a logarithmic scale; dashed lines are the thresholds with background p-values 10⁻⁴, 10⁻⁵ and 10⁻⁶ (7.3, 12.4 and 16.7 bits). B: as the threshold rises, the expected number of chance matches in a 3.1-Gb genome scanned on both strands (red, logarithmic left axis) falls by a factor of 10 for every 4 to 5 bits, while the fraction of motif-model sites above the threshold (green, right axis) falls slowly at first and then steeply: no threshold separates real sites from chance matches in a whole genome](./plots/score-threshold.py)
 
+:::
+
 When thousands of sequences are scanned, p-values are converted into q-values with the **false discovery rate** procedures (the **Benjamini–Hochberg procedure**, or Storey's q-values, as FIMO reports), but the FDR controls only the statistical error of declaring a background window a match, not the biological error of declaring an unbound match a binding site.
 
 ### 8.3.2. The Lactase-Persistence Enhancer
@@ -107,6 +109,8 @@ Given a set of sequences believed to share a regulator (the promoters of coregul
 The simplest approach counts words. For every $k$-mer (or every degenerate word over IUPAC codes), compare the number of target sequences that contain it with the number of background sequences that do, and test the excess with the **hypergeometric distribution** (Fisher's exact test). Exhaustive counting of all $4^k$ words is fast for $k \le 12$ and finds strong motifs reliably; the best words are then extended and turned into matrices.
 
 **Example 8.4.1** An $8$-mer occurs in $300$ of $1000$ ChIP-seq peak sequences and in $200$ of $5000$ background sequences with matched GC content. The odds ratio is $(300 \times 4800)/(700 \times 200) = 10.3$, and the hypergeometric probability of at least $300$ occurrences among $1000$ sequences drawn from $6000$ of which $500$ contain the word is $1.7\times10^{-119}$. Since about $4^8/2 = 32\,768$ distinct words (up to reverse complement) were tested, a Bonferroni correction multiplies this by $3\times10^4$, without changing the conclusion.
+
+:::
 
 HOMER (Heinz and colleagues 2010) and STREME (Bailey 2021) work this way, with refinements: STREME builds its candidate words with a suffix tree, tests them on held-out sequences and refines them into PWMs, and both use background sequences matched in GC content, without which GC-rich peaks would make every GC-rich word look enriched.
 
@@ -178,6 +182,8 @@ The splice sites are the best-studied motifs of eukaryotic genes. The **5′ spl
 **Example 8.7.1** From the $1883$ introns of the curated protein-coding genes on human chromosome 21 (one transcript per gene), the donor logo has $8.2$ bits, $3.9$ of them in the invariant GT, and peaks of about $1$ bit at the G of position $-1$ and of $0.6$ to $1.0$ bits at positions $+3$ to $+5$; the acceptor logo has $9.3$ bits, $4.0$ of them in the AG, $0.8$ bits at the C or T of position $-3$ and $0.1$ to $0.5$ bits per position spread over the polypyrimidine tract.
 
 ![Splice-site signals of human introns: counts at the 1883 introns of the longest RefSeq transcript of each of the 228 curated protein-coding genes on chromosome 21 (GRCh38), read on the strand of the gene. A: 5′ splice site (donor), exon positions −3 to −1 and intron positions +1 to +6; 98.9 % of introns begin with GT and 0.8 % with GC. B: 3′ splice site (acceptor), intron positions −20 to −1 and exon positions +1 to +3: the invariant AG is preceded by a pyrimidine-rich tract. Dashed lines mark the exon–intron boundaries; stack heights are information contents in bits](./plots/splice-sites.py)
+
+:::
 
 The positions of the donor site are not independent (base pairing with U1 snRNA can be made up by stronger pairing elsewhere in the site), so the PWM is improved by models with dependencies: MaxEntScan (Yeo and Burge 2004) fits the maximum entropy distribution consistent with low-order marginal frequencies, an application of the **maximum entropy principle**, and is the standard for scoring the effect of variants on splice sites. Splice sites alone, however, are not enough: their information content is far below what is needed to find introns in a genome, and the decision depends on exonic and intronic splicing enhancers and silencers and on the exon–intron architecture. Deep networks that read $10$ kb of context (SpliceAI, Jaganathan and colleagues 2019) predict splice sites from sequence with high accuracy and are used to interpret variants that create or destroy them ([7.8.15](/7.8.15)).
 

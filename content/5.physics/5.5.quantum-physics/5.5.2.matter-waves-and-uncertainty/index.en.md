@@ -1,7 +1,7 @@
 ---
 title: Matter Waves and the Uncertainty Relation
 description: The de Broglie hypothesis and matter waves, electron diffraction experiments, phase and group velocities of matter waves, calculation of the de Broglie wavelength; the single-electron double-slit experiment, the wave function and Born's statistical interpretation, superposition of probability amplitudes and the superposition principle of states, plane waves of a free particle; the position–momentum and energy–time uncertainty relations and order-of-magnitude estimates.
-source_hash: 892b096040a0
+source_hash: 7f9127dc28f2
 ---
 
 The previous chapter ([5.5.1](/5.5.1)) showed that light is both a wave and a particle: the energy and momentum of a **photon**, $\varepsilon=h\nu$ and $p=h/\lambda$, connect its particle nature with its wave nature. This chapter asks the converse question: do massive particles such as electrons and protons also have a wave nature? De Broglie answered yes in 1924, and electron diffraction experiments confirmed it three years later (Section 2.1). What kind of wave is a matter wave? The single-electron double-slit experiment and Born's statistical interpretation show that it is a probability wave describing the probability of finding the particle at each point in space, and that the essence of the wave nature is the coherent superposition of probability amplitudes (Section 2.2). The coexistence of particle and wave nature invalidates the classical concept of a "trajectory", and its quantitative expression is Heisenberg's uncertainty relation (Section 2.3).
@@ -50,6 +50,8 @@ $$
 $$
 so the electron current $I$ shows a series of equally spaced maxima as a function of $\sqrt{U}$, exactly as observed.
 
+:::
+
 In the same year G. P. Thomson sent a high-energy electron beam (about $10$–$60\,\mathrm{keV}$) through thin polycrystalline films of gold, aluminum and other metals and obtained on a photographic plate concentric rings exactly analogous to those of X-ray powder diffraction. In 1961 Jönsson performed single-, double-, triple- and four-slit diffraction experiments with electrons and obtained patterns identical to those of multiple-slit diffraction of light. De Broglie received the 1929 Nobel Prize in Physics for the discovery of the wave nature of electrons; Davisson and G. P. Thomson shared the 1937 Nobel Prize in Physics (his father J. J. Thomson had received the 1906 prize for discovering the electron as a particle).
 
 Subsequently, diffraction was observed for protons, neutrons, helium atoms (Estermann and Stern, 1930) and even $\ce{C60}$ molecules (Arndt, Zeilinger and others, 1999): all massive particles have a wave nature. Electron diffraction and neutron diffraction, like X-ray diffraction, are now routine means of studying the structure of crystals and molecules; the electron microscope exploits the extremely short wavelength of electrons, and its resolving power is far higher than that of the optical microscope ([5.4.2](/5.4.2)).
@@ -60,6 +62,8 @@ $$
 \lambda=\frac{h}{mv}=\frac{6.63\times10^{-34}}{0.01\times300}\,\mathrm{m}=2.2\times10^{-34}\,\mathrm{m},
 $$
 which is $10^{19}$ times smaller than an atomic nucleus. No apparatus could reveal its diffraction, so macroscopic objects show only their particle nature.
+
+:::
 
 Nature has two yardsticks: the speed of light $c$ and the **Planck constant** $h$. For $v\ll c$ (formally $c\to\infty$) relativity reduces to Newtonian mechanics; when the action is much larger than $h$ (formally $h\to0$) the wavelength tends to zero and quantum physics reduces to classical physics.
 
@@ -293,6 +297,8 @@ $$
 p\approx\frac{E_{\mathrm{k}}}{c}=\frac{10^8\times1.60\times10^{-19}}{3.00\times10^8}\,\mathrm{kg\,m\,s^{-1}}=5.3\times10^{-20}\,\mathrm{kg\,m\,s^{-1}}.
 $$
 Since $p\gg\Delta p_x$, on this scale the coordinate and momentum of the electron can be regarded as simultaneously definite, and the concept of a trajectory applies. In experiments, high-energy particles are in fact studied through the tracks they leave in cloud chambers and bubble chambers.
+
+:::
 
 Comparing Example 2.3.1 with Example 2.3.5 shows that whether the concept of a trajectory applies depends on the scale of the problem: it depends on whether the $\Delta p$ given by the uncertainty relation is negligible compared with the momentum of the particle itself, that is, on whether the de Broglie wavelength is negligible compared with the characteristic length of the problem.
 

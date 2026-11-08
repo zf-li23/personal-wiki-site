@@ -41,6 +41,8 @@ far below the 5 % critical value $3.84$ for one degree of freedom. The white var
 
 **Example 1.1.2** A short-winged fly crossed with a wild-type long-winged fly gives 788 progeny: 196 short-winged males, 194 short-winged females, 197 long-winged males and 201 long-winged females. About half the progeny are short-winged in both sexes. This is the 1:1 ratio expected if the short-winged parent is heterozygous for a dominant mutant allele $SH$ on an autosome ($SH/+ \times +/+$ gives $\tfrac12\, SH/+$ and $\tfrac12\, +/+$). The hypothesis predicts further ratios, which is how it is tested: two short-winged $\mathrm{F}_1$ flies crossed together should give $\tfrac14\, SH/SH$, $\tfrac12\, SH/+$, $\tfrac14\, +/+$, so 3/4 short-winged progeny if $SH/SH$ is viable, and 2/3 if it is lethal (7.4.3); two long-winged $\mathrm{F}_1$ flies should give only long-winged progeny. The mutation identifies a gene whose wild-type form is needed for normal wing development.
 
+:::
+
 In both examples the genotypes are hidden and inferred from ratios, and the inference makes testable predictions. This is the core of genetic analysis.
 
 ## 1.2. Forward and Reverse Genetics
@@ -228,6 +230,8 @@ n \ge \frac{\ln 0.05}{\ln 0.75} = \frac{-2.996}{-0.288} = 10.4,
 $$
 
 so $n = 11$ progeny ($(3/4)^{11} = 0.042$, while $(3/4)^{10} = 0.056$). For a class of probability $1/16$ (the double recessive of a dihybrid cross), $n \ge \ln 0.05 / \ln(15/16) = 46.4$, so 47 progeny are needed; for $1/64$ (three **genes**), 191.
+
+:::
 
 The same reasoning, with the **binomial distribution** in place of a single trial, gives the probability of any number of progeny in a class, and it underlies the χ² test (7.4.2), the risk calculations of pedigrees (7.4.7) and the estimation of recombination frequencies (7.4.8). The following table lists the main tools of the course and where they appear.
 

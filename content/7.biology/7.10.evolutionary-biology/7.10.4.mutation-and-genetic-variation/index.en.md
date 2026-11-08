@@ -86,6 +86,8 @@ Mutation rates are estimated in four ways ([7.4.12](/7.4.12#sec-12.5) for the cl
 
 **Example 4.3.1** (a) A trio in which 70 new single-nucleotide mutations are found at $2.8 \times 10^9$ callable sites gives $\hat\mu = 70/(2 \times 2.8 \times 10^9) = 1.25 \times 10^{-8}$ per site per generation, with a standard error of about $12\%$. (b) Human and chimpanzee genomes differ at about $1.2\%$ of aligned sites. Taking a split 6.5 Myr ago and a generation time of 25 years ($2.6 \times 10^5$ generations) gives $\hat\mu = 0.012/(2 \times 2.6 \times 10^5) = 2.3 \times 10^{-8}$, about twice the direct estimate. The discrepancy comes from the assumptions of the phylogenetic method: the genomes diverged before the species split, because ancestral polymorphism takes time to sort ([7.10.7](/7.10.7)); generation times and rates may have changed; and the date itself is uncertain. Reconciling the two estimates is a research problem of molecular dating ([7.10.24](/7.10.24)).
 
+:::
+
 The methods have complementary weaknesses. The phylogenetic method applies only to neutral sequences and needs the number of generations; mutation accumulation gives few mutations and works only for organisms that can be propagated in the laboratory; direct sequencing has no such assumptions, but mutations in any one gene are so rare that it gives only averages over large regions of the genome, and it must distinguish true mutations from sequencing errors.
 
 ## 4.4. The Effects of Mutations
@@ -201,6 +203,8 @@ Equivalently, $\pi$ is the gene diversity computed site by site and averaged ove
 ```
 
 There are $S = 5$ segregating sites among $L = 24$. The ten pairwise differences are 1, 1, 2, 1 (sequence 1 against 2–5), 2, 3, 2 (sequence 2 against 3–5), 3, 2 (sequence 3 against 4, 5) and 3 (4 against 5), summing to 20, so the mean is $2.0$ differences and $\pi = 2.0/24 = 0.083$. Translating, sequence 1 encodes Met-Ser-Leu-Thr-Asn-Lys-Asn-Val; only the change in sequence 2 (TCT→GCT, serine to alanine) is nonsynonymous; the others are synonymous: TCT→TCG (still serine), CTC→TTG (still leucine, a change at two sites) and GTC→GTG (still valine). Synonymous polymorphisms are more common than nonsynonymous ones because most amino acid changes are deleterious and are removed by selection.
+
+:::
 
 Under neutrality, mutation–drift equilibrium gives $\mathbb{E}[\pi] = \theta = 4N_{\mathrm{e}}\mu$ per site ([Formula 23.7.1 in 7.4.23](/7.4.23#fml-23.7.1)), and $S$ gives a second estimate of $\theta$ (Watterson's, [7.10.7](/7.10.7)); the comparison of estimates from different aspects of the data is the basis of tests of neutrality ([7.10.8](/7.10.8)). With the human $\pi \approx 0.0008$–$0.001$ and $\mu = 1.2 \times 10^{-8}$, $N_{\mathrm{e}} \approx \pi/4\mu \approx 17{,}000$–$21{,}000$, far smaller than the present population, a reflection of its small size during most of its history.
 

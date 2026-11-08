@@ -79,6 +79,8 @@ $$
 $$
 a few hundred thousand years for small animals with annual generations, a geological instant compared with the half-billion years since the Cambrian.
 
+:::
+
 Moreover, a part that was initially merely advantageous can become indispensable once other characters evolve to depend on it. Many annelids with lensless eyes do well without acuity, but an eagle, whose way of hunting became possible only through acute vision, could not survive without its lens. Dependence can also be lost: many cave and burrowing vertebrates have degenerate eyes ([7.10.1](/7.10.1#sec-1.7.3)).
 
 ### 32.3.3. Homology and the Emergence of New Characters

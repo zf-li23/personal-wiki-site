@@ -110,6 +110,8 @@ $\{a_n\}$ 有下界。由**单调收敛定理** $\{a_n\}$ 收敛，其极限记�
 
 **证明** 由推论 5.1.1，$f'\equiv a$；再由 Lagrange 中值定理 $f(x)-f(0) = f'(\xi)x = ax$，$f(x) = ax+b$，$b = f(0)$。 $\square$
 
+:::
+
 归纳可得：若 $f^{(n+1)}\equiv0$，则 $f$ 是次数不超过 $n$ 的多项式。
 
 ### 5.1.3. Cauchy 中值定理
@@ -244,6 +246,8 @@ $$
 
 **证明** $\lim\limits_{x\to+\infty}\frac{(\ln x)^\beta}{x^\alpha} = \lim\limits_{x\to+\infty}\frac{\beta(\ln x)^{\beta-1}}{\alpha x^\alpha}$，每用一次法则 $\ln x$ 的幂次降低 $1$；用 $k$ 次（$k-1<\beta\le k$）后分子的幂次 $\beta-k\le0$，极限为 $0$。也可令 $x = \mathrm{e}^t$ 化为例 5.2.4。 $\square$
 
+:::
+
 例 5.2.4、5.2.5 说明，$x\to+\infty$ 时三类无穷大的增长速度满足
 
 $$
@@ -346,6 +350,8 @@ $$
 **例 5.3.5** 求 $f(x) = x\mathrm{e}^{-x^2}$ 在 $(-\infty,+\infty)$ 上的最大值和最小值。
 
 解：区间无界，先说明最值存在。$x\to\infty$ 时 $f(x)\to0$，而 $f(1)>0$，$f(-1)<0$，所以存在 $M>1$，$|x|>M$ 时 $f(-1)<f(x)<f(1)$。$f$ 在 $[-M,M]$ 上的最值就是在 $\mathbb{R}$ 上的最值，且不在端点 $\pm M$ 取得，因此在内部驻点取得。由 $f'(x) = (1-2x^2)\mathrm{e}^{-x^2} = 0$ 得 $x = \pm\frac{1}{\sqrt2}$，最大值 $f\bigl(\frac1{\sqrt2}\bigr) = \frac{1}{\sqrt{2\mathrm{e}}}$，最小值 $f\bigl(-\frac1{\sqrt2}\bigr) = -\frac{1}{\sqrt{2\mathrm{e}}}$。
+
+:::
 
 实际问题中常常只有一个驻点，这时有下面的简便判别。
 
@@ -481,6 +487,8 @@ $$
 $$
 
 再由 $\ln$ 的单调性即得。$x_i$ 中有 $0$ 时不等式显然。 $\square$
+
+:::
 
 这就是算术–几何平均不等式（inequality of arithmetic and geometric means）。同样的论证给出加权形式与幂平均形式：若 $x_i\ge0$，$\lambda_i\ge0$，$\sum\lambda_i = 1$，则
 
@@ -644,6 +652,8 @@ $$
 f(x) = 4+5(x-1)+3(x-1)^2+(x-1)^3.
 $$
 
+:::
+
 一般地，$n$ 次多项式的 $n$ 阶 Taylor 多项式就是它自身，在 $x_0$ 处的 Taylor 公式就是按 $x-x_0$ 的幂重新展开（与 [2.1.9](/2.1.9) 中按 $x-c$ 的幂展开多项式的综合除法一致）。
 
 下面的定理给出求 Taylor 多项式的另一种方法：不必逐阶求导，只要用任何方法得到形如"多项式 $+\,o((x-x_0)^n)$"的展开，它就是 Taylor 公式。
@@ -693,6 +703,8 @@ $$
 
 解：$10^\circ = \frac{\pi}{18}\approx0.174533$。用一阶 Taylor 多项式 $\sin10^\circ\approx0.174533$，误差 $|R_1| = \bigl\lvert\frac{\sin(\xi+\pi)}{2!}\bigr\rvert(0.174533)^2<0.02$；用三阶 Taylor 多项式 $\sin10^\circ\approx0.174533-\frac16(0.174533)^3\approx0.173647$，误差 $|R_3| = \bigl\lvert\frac{\sin(\xi+2\pi)}{4!}\bigr\rvert(0.174533)^4\le\frac{(0.174533)^5}{4!}<10^{-5}$（这里 $0<\xi<0.174533$，$|\sin\xi|\le\xi$；由于 $P_3 = P_4$，误差实际上不超过 $\frac{(0.174533)^5}{5!}\approx1.4\times10^{-6}$）。若要求误差不超过 $10^{-6}$，求使 $\frac{(0.174533)^{n+1}}{(n+1)!}<10^{-6}$ 的最小 $n$，得 $n = 5$（$n = 4$ 时约为 $1.4\times10^{-6}$，$n = 5$ 时约为 $3.9\times10^{-8}$）。
 
+:::
+
 求极限。把分子分母展开到同一阶，就把不定式化为多项式之比；它是等价无穷小替换的精确化，可以处理加减运算中的抵消。
 
 **例 5.5.7** 求 $\lim\limits_{x\to0}\frac{\sqrt[3]{\cos x}-1-x(\mathrm{e}^x-1)}{(2^x-1)\tan x}$。
@@ -702,6 +714,8 @@ $$
 **例 5.5.8** 求 $\lim\limits_{x\to0^+}\frac{\mathrm{e}^{x^2}-\cos(2\sqrt x)-2x}{x^2}$。
 
 解：$\mathrm{e}^{x^2} = 1+x^2+o(x^2)$，$\cos(2\sqrt x) = 1-\frac{(2\sqrt x)^2}{2}+\frac{(2\sqrt x)^4}{4!}+o(x^2) = 1-2x+\frac23x^2+o(x^2)$，所以分子 $= \frac13x^2+o(x^2)$，原极限为 $\frac13$。
+
+:::
 
 证明有界性与不等式。
 

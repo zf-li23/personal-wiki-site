@@ -1,6 +1,6 @@
 ---
 title: 留数的应用
-source_hash: 7322b56f3e16
+source_hash: df402b9c1f78
 ---
 
 [2.3.6](/2.3.6) 的**留数定理**把围道积分化为有限个留数之和。本章把这一观察发展成一套实用的方法。许多 $[0, 2\pi]$ 上或实轴上的定积分（包括原函数不是初等函数的积分），只要选取适当的闭围道并证明辅助部分的贡献趋于零，就成为某个围道积分的实部。同样的估计（大圆弧引理、Jordan 引理与小圆弧引理）也用来计算 Fourier 变换、用留数求 Laplace 逆变换，[2.5.6](/2.5.6) 正是这样把这些变换用于偏微分方程的。留数还可以把某些级数求成闭合形式。
@@ -75,6 +75,8 @@ $$
 
 **例 7.2.1** 1. $\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{(x^2 + 1)^2}$：上半平面内唯一的极点是二阶极点 $\mathrm{i}$，留数为 $\frac{\mathrm{d}}{\mathrm{d}z}(z + \mathrm{i})^{-2}\big|_{z=\mathrm{i}} = -2(2\mathrm{i})^{-3} = \frac{1}{4\mathrm{i}}$。积分等于 $2\pi\mathrm{i}\cdot\frac{1}{4\mathrm{i}} = \frac\pi2$。
 2. $\int_0^\infty\frac{\mathrm{d}x}{x^4 + 1} = \frac12\int_{-\infty}^\infty\frac{\mathrm{d}x}{x^4 + 1}$。上半平面内的极点是 $\mathrm{e}^{\mathrm{i}\pi/4}$ 与 $\mathrm{e}^{3\mathrm{i}\pi/4}$，留数为 $-\frac{z_k}{4}$（例 6.3.1），之和为 $-\frac{\mathrm{i}\sqrt2}{4}$。因此 $\int_0^\infty\frac{\mathrm{d}x}{x^4 + 1} = \frac12\cdot2\pi\mathrm{i}\cdot\left(-\frac{\mathrm{i}\sqrt2}{4}\right) = \frac{\pi}{2\sqrt2}$。
+
+:::
 
 被积函数有旋转对称性时，半圆以外的围道也很有用。
 
@@ -152,6 +154,8 @@ $$
 
 这一对函数（Lorentz 函数与双边指数函数）在 [2.5.6](/2.5.6) 中以及上半平面的 Poisson 核中还会出现。
 
+:::
+
 $F(s)$ 的 Laplace 逆变换由 Bromwich 积分给出
 
 $$
@@ -205,6 +209,8 @@ $$
 
 **例 7.4.2** $\int_0^\infty\frac{1 - \cos x}{x^2}\,\mathrm{d}x = \frac\pi2$。考虑 $f(z) = \frac{1 - \mathrm{e}^{\mathrm{i}z}}{z^2}$。由于 $1 - \mathrm{e}^{\mathrm{i}z} = -\mathrm{i}z + \frac{z^2}{2} + \cdots$，$f$ 在 $0$ 处有单极点，留数为 $-\mathrm{i}$；在大半圆周上 $\lvert f\rvert \le 2/R^2$。定理 7.4.1 的论证给出 $\operatorname{PV}\int_{-\infty}^\infty f(x)\,\mathrm{d}x = \pi\mathrm{i}\cdot(-\mathrm{i}) = \pi$。取实部得 $\int_{-\infty}^\infty\frac{1 - \cos x}{x^2}\,\mathrm{d}x = \pi$，而被积函数是偶函数。
 
+:::
+
 ![三种常用围道。(a) 用上半圆周 C_R 封闭的线段 [-R, R]；只有上半平面内的极点（红色）有贡献，圆弧上的积分由大圆弧引理或 Jordan 引理趋于零。(b) 同一围道在实轴上的单极点处用小半圆周 C_ε 挖去一小块。(c) 用于沿正实轴有支割线的被积函数的锁孔围道：割线的上下两岸上 z^α 或 log z 取不同的值](./plots/contours.py)
 
 ## 7.5. 含多值函数的积分
@@ -226,6 +232,8 @@ $$
 $$
 
 令 $x = t^n$、$\alpha = \frac1n$，式 (7.5) 就成为例 7.2.2 的公式。用 Gamma 函数表示，式 (7.5) 就是余元公式 $\Gamma(\alpha)\Gamma(1 - \alpha) = \frac{\pi}{\sin\pi\alpha}$。
+
+:::
 
 同样的论证给出：若有理函数 $R$ 在 $[0, \infty)$ 上没有极点，且在 $0$ 与 $\infty$ 处 $\lvert x^\alpha R(x)\rvert \to 0$，则
 

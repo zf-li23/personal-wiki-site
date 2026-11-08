@@ -195,6 +195,8 @@ $$
 $$
 Simulate $y\sim t_1$ and $u\sim\mathrm{U}(0,1)$; if $u<\dfrac{(1+y^2)\sin^2y}{2y^2}$, return $X=y$; otherwise repeat.
 
+:::
+
 For importance sampling the same issue arises, because $w=p/q$ needs normalized densities. Let $\tilde w=\tilde p/\tilde q$. Then
 
 $$
@@ -265,6 +267,8 @@ for all $n$ and all states. It is time-homogeneous if $\mathbb{P}(X_{t+1}=j\mid 
 A Markov chain thus requires three elements: a sequence of random variables (the chain), a state space (the values they take) and a transition matrix (the rules for the transitions). All chains below are time-homogeneous.
 
 **Example 9.3.1** Let $X_t$ be the last number seen at time $t$ when drawing numbers from $\{1,2,3\}$. Drawing with replacement, the $X_t$ are i.i.d., which is a (trivial) Markov chain. Drawing without replacement, $X_t$ is not a Markov chain: the distribution of $X_3$ given $X_2$ depends on $X_1$, since the numbers already drawn cannot reappear.
+
+:::
 
 A Markov chain is essentially a random walk on a graph. In a directed graph $G=(V,E)$ each vertex is a state and each edge carries the probability of moving from one state to the other; for each vertex $x$ the outgoing edges form a distribution, $\sum_jp_{xj}=1$. Starting at a vertex $x_0$, pick an outgoing edge at random according to these probabilities, move to $x_1$, and repeat. For example, on $S=\{1,2,3\}$,
 
@@ -441,6 +445,8 @@ $$
 \alpha(y\mid x)=\min\Bigl\{1,\frac{\tilde\pi(y)q(x\mid y)}{\tilde\pi(x)q(y\mid x)}\Bigr\}=\begin{cases}\min\Bigl\{1,\dfrac{\lambda}{x+1}\Bigr\},&y=x+1,\\[2ex]\min\Bigl\{1,\dfrac{x}{\lambda}\Bigr\},&y=x-1.\end{cases}
 $$
 If $u\le\alpha(y\mid x)$, set $X_{t+1}=y$; otherwise $X_{t+1}=x$.
+
+:::
 
 For continuous random variables the same algorithm applies with densities: computers represent the reals by a fine finite grid, the target and proposal probabilities of a grid cell are approximately density times cell length, and the cell lengths cancel in the Hastings ratio $\frac{\tilde\pi(y)q(x\mid y)}{\tilde\pi(x)q(y\mid x)}$. So the theory of chains on finite spaces carries over; a rigorous treatment uses transition kernels on general state spaces.
 

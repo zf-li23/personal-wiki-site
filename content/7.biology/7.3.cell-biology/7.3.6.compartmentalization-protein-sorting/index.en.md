@@ -205,6 +205,8 @@ Import across the two membranes needs three inputs of energy. ATP in the cytosol
 
 **Example 6.5.1** How strong is the electrophoretic pull? A presequence with $z = 4$ net positive charges in an inner membrane of thickness $d \approx 4\,\mathrm{nm}$ with $\Delta\psi = 160\,\mathrm{mV}$ feels a force $F = ze\Delta\psi/d = 4 \times 1.6\times10^{-19}\,\mathrm{C} \times 0.16\,\mathrm{V}/(4\times10^{-9}\,\mathrm{m}) \approx 26\,\mathrm{pN}$, and gains an energy $ze\Delta\psi = 0.64\,\mathrm{eV} \approx 24\,k_{\mathrm{B}}T$. That is enough to pull the presequence across the membrane and partly unfold a weakly folded domain that follows, but not a stable one; and the force acts only on the charges in the membrane, so it cannot import the rest of the chain. The motor does that.
 
+:::
+
 Classical experiments established that the chain crosses both membranes at once, unfolded, at sites where the two membranes are close. A fusion of a presequence to mouse **dihydrofolate reductase** (DHFR) is imported normally; in the presence of methotrexate, which binds DHFR and stabilizes its fold, import stops with the presequence in the matrix (where it is cleaved by MPP) and the DHFR domain outside the outer membrane. Such stalled intermediates span TOM and TIM23 simultaneously: imports through the two membranes are coupled.
 
 ### 6.5.3. The Import Motor as a Brownian Ratchet

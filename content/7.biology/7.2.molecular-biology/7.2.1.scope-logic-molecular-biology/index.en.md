@@ -175,6 +175,8 @@ A protein present at 100 copies is therefore at about $0.17\,\mu\mathrm{M}$, and
 | RNA polymerases | $10^3$–$10^4$ | about $10^5$ (Pol II) |
 | A typical transcription factor | $10$–$10^3$ | $10^3$–$10^5$ |
 
+:::
+
 The small numbers have two consequences that recur in the course: reactions involving one gene and a few regulatory molecules are noisy ([7.2.22](/7.2.22)), and the time a regulator needs to find its site is limited by diffusion ([7.2.22](/7.2.22)).
 
 ### 1.5.4. Rates and Error Frequencies
@@ -195,6 +197,8 @@ $$
 \frac{2.2\times10^6\,\mathrm{nt}}{2.4\times10^3\,\mathrm{nt\,min^{-1}}} \approx 920\,\mathrm{min} \approx 15\,\mathrm{h},
 $$
 close to the 16 hours measured in muscle cells. A long gene thus cannot respond to a signal faster than its transcription time, a constraint that matters in development, where some long genes are not transcribed to completion within a short cell cycle.
+
+:::
 
 The accuracy of the three general transfers differs by six orders of magnitude, and so does what an error costs: a replication error is inherited by every descendant cell, whereas a transcription or translation error affects one short-lived molecule.
 

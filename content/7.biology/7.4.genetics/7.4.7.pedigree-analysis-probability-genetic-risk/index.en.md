@@ -85,6 +85,8 @@ When two traits are determined by unlinked autosomal **loci**, their transmissio
 
 **Example 7.3.2** A man with polydactyly (autosomal dominant, heterozygous $Pp$) and a woman with normal fingers have a child with albinism (autosomal recessive) and normal fingers. The parents must be $Pp\,Aa$ and $pp\,Aa$. For the next child $p_1 = \mathbb{P}(\text{polydactyly}) = 1/2$ and $p_2 = \mathbb{P}(\text{albinism}) = 1/4$, so both conditions $1/8$, polydactyly only $3/8$, albinism only $1/8$, exactly one $1/2$, neither $3/8$.
 
+:::
+
 The rule fails when the loci are linked (the probabilities depend on the phase and the **recombination frequency**, [7.4.8](/7.4.8)) and, in particular, when both are X-linked: a woman heterozygous at two X-linked loci transmits her two X **chromosomes** as wholes, apart from **crossing over**. If her alleles $a$ and $b$ are on the same X (coupling) and the loci are closely linked, her sons are mostly either doubly affected or unaffected; if they are on different X chromosomes (repulsion), her sons are mostly affected by one condition or the other.
 
 **Remark 7.3.1 (Whose Sex Is Given?)** Problems distinguish "the probability that a son is affected" from "the probability that a child is an affected son". The first is conditional on the child being male; the second includes the probability $1/2$ that the child is male:
@@ -177,6 +179,8 @@ $$
 
 The same result by natural frequencies: of 200 such daughters, 100 are $Mm$, of whom 50 are affected, and 100 are $mm$, of whom 5 are affected; of the 55 affected daughters, 50 are $Mm$. The prior $1/2$ from Mendel's law becomes $10/11$ once the phenotype is known; it would be $1$ only if the disease never occurred in $mm$.
 
+:::
+
 Posterior probabilities are passed down a pedigree like priors: once updated, a person's genotype probabilities are used for his or her descendants.
 
 **Example 7.4.5** A woman (II-6) is the daughter of a carrier of hemophilia A and an unaffected father, so her prior carrier probability is $1/2$. She has six unaffected children, three sons and three daughters. Only the sons carry information about her: $\mathbb{P}(\text{3 unaffected sons} \mid \text{carrier}) = (1/2)^3$, and by Formula 7.4.1 her posterior is $\frac{1/16}{1/16 + 1/2} = 1/9$. One of her daughters (III-2, whose father is unaffected) is a carrier with probability $\frac19 \cdot \frac12 = \frac1{18}$, and her first son is affected with probability $\frac1{18} \cdot \frac12 = \frac1{36}$. If III-2 marries a man with hemophilia, the answer for her sons does not change (a son receives his X from the mother), but her daughters are then affected with probability $\frac1{18} \cdot \frac12 = \frac1{36}$ and are all at least carriers.
@@ -233,9 +237,13 @@ since with probability $F$ its two alleles are IBD (one allele, mutant with prob
 
 **Example 7.5.2** For **phenylketonuria** with $q = 0.01$ (incidence $10^{-4}$), the child of first cousins has risk $10^{-4} + \frac1{16}(0.01)(0.99) \approx 7.2\times10^{-4}$, a relative risk of about 7. For a rarer disease with $q = 0.001$ the risk is $10^{-6} + \frac{1}{16}(0.001)(0.999) \approx 6.3\times10^{-5}$, a relative risk of about 63. If 1 % of marriages are between first cousins, the fraction of all affected children of the rarer disease who are born to first cousins is $\frac{0.01 \times 6.3\times10^{-5}}{0.01 \times 6.3\times10^{-5} + 0.99 \times 10^{-6}} \approx 0.39$: the rarer the disease, the more its patients concentrate in consanguineous families, which is how Garrod recognized recessive inheritance.
 
+:::
+
 The population figure of the formula applies to a couple about whom nothing else is known. When the family history is known, the pedigree itself gives the risk.
 
 **Example 7.5.3** A man whose brother has an **autosomal** recessive disease marries his first cousin, the daughter of his father's sister; nobody else in the family is affected. The man is a carrier with probability $2/3$ (Proposition 7.3.1). His father is an obligate carrier, so one of the father's parents is a carrier, and the father's sister is a carrier with probability $1/2$ (ignoring the small chance of an allele entering from outside); her daughter is a carrier with probability $1/4$. The risk to their child is $\frac23 \cdot \frac14 \cdot \frac14 = \frac{1}{24}$, about 400 times the population risk $q^2 = 10^{-4}$ for $q = 0.01$.
+
+:::
 
 ![Consanguinity and recessive disease. A: relative risk that the child of relatives is homozygous for a recessive allele of frequency q, compared with the child of unrelated parents, for F = 1/4 (siblings or parent and child), 1/16 (first cousins) and 1/64 (second cousins): it rises roughly as F/q for rare alleles. B: fraction of all affected children who are born to first cousins, when a fraction c of all marriages is between first cousins: for rare alleles most patients come from consanguineous families even if consanguineous marriages are uncommon](./plots/consanguinity-risk.py)
 

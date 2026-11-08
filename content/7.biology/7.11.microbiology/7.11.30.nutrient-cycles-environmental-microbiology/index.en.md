@@ -182,6 +182,8 @@ S = 0.5 \times \frac{1 + 0.17\times5}{5\times(0.9 - 0.17) - 1} = 0.5 \times \fra
 $$
 At $10\,^\circ\mathrm{C}$, $\mu_{\max}$ falls to about $0.46\,\mathrm{d^{-1}}$ and $b$ to about $0.11\,\mathrm{d^{-1}}$, and the same SRT gives $S \approx 1.1\,\mathrm{mg\,N\,L^{-1}}$; at $3\,\mathrm{d}$ the nitrifiers are lost altogether. Plants that must nitrify in winter therefore run at SRTs of 10–20 days, with correspondingly large tanks, whereas the removal of BOD alone needs only a few days.
 
+:::
+
 The model explains several practical rules: the SRT, set by the rate of sludge wasting, is the main control variable of a plant; nitrification fails first when the temperature falls or the SRT is shortened; and organisms with low growth rates, such as nitrifiers and anammox bacteria, need long sludge ages or biofilms and granules that retain them. It also shows why the effluent concentration is independent of the influent concentration as long as the organisms are not washed out: a higher load produces more biomass, not a higher effluent concentration.
 
 ### 30.9.4. Removal of Nitrogen and Phosphorus

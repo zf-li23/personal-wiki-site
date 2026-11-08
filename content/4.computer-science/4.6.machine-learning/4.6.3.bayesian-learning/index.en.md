@@ -1,7 +1,7 @@
 ---
 title: Bayesian Learning
 description: The Bayesian view in machine learning. Computing posterior probabilities of hypotheses with Bayes' theorem; MAP and ML hypotheses, regularization as a prior, maximum likelihood and least squares; the Bayes optimal classifier and the Gibbs algorithm; the naive Bayes classifier, Laplace smoothing and Dirichlet priors, three event models, log probabilities and practical points; spam filtering and word sense disambiguation.
-source_hash: 0ecf4df49bf8
+source_hash: 446d62892b8e
 ---
 
 Bayesian learning treats learning as probabilistic inference: every hypothesis has a probability, and after the training data are observed, **Bayes' theorem** ([3.1.2](/3.1.2)) updates the prior probabilities into posterior probabilities, from which one chooses a hypothesis or makes predictions directly. This view is useful in two ways. In theory, it gives many learning algorithms a unified interpretation: least squares, regularization and ensembles can all be seen as approximations to some kind of Bayesian inference. In practice, it directly yields a family of simple, fast and effective algorithms, the most important of which is the naive Bayes classifier, still the standard baseline for text classification. This chapter emphasizes the latter: how to turn Bayesian principles into a usable classifier, and the numerical, smoothing and feature issues to watch for in use. Statistical concepts such as prior, posterior and conjugate prior were defined in [Bayesian Inference](/3.2.7) and are cited here only when needed; for a more systematic and theoretical treatment see [Bayesian Statistics](/3.7). The evaluation methods of the [previous chapter](/4.6.2) apply to the classifiers of this chapter, while the $k$-nearest neighbors method of the [next chapter](/4.6.4) takes an entirely different approach: it makes no assumption about the distribution of the data.
@@ -59,6 +59,8 @@ When the hypotheses are described by continuous parameters, these are the **maxi
 **Example 3.2.2** There are two coins whose probabilities of heads are $p$ and $q$. Each time, coin 1 is chosen with probability $a$ and coin 2 with probability $1-a$, and the chosen coin is tossed several times. The parameters $a, p, q$ are all unknown. Four records are observed (the digit is the chosen coin): 2HHHT, 1HTHT, 2HHHT, 2HTTH. Find the ML estimates of $a, p, q$.
 
 Consider first a single coin: $m$ tosses give $k$ heads, and the log-likelihood is $\ell(p) = k\log p + (m-k)\log(1-p)$. Setting $\ell'(p) = \frac{k}{p} - \frac{m-k}{1-p} = 0$ gives $\hat p = k/m$. The likelihood of the three parameters can be maximized separately, each in this form: coin 1 was chosen once among 4 records, so $\hat a = 1/4$; coin 1 was tossed 4 times with 2 heads, so $\hat p = 2/4$; coin 2 was tossed 12 times with 8 heads, so $\hat q = 8/12$.
+
+:::
 
 If the records did not contain the coin labels, the likelihood would involve a latent variable and could no longer be maximized separately; this is exactly the problem handled by the **EM algorithm**, and [3.5.6](/3.5.6) uses precisely the two-coin example.
 
@@ -262,6 +264,8 @@ print(clf.predict_proba(["win a prize", "notes for the meeting", "free lunch"])[
 ```text
 [0.926 0.124 0.458]
 ```
+
+:::
 
 (Python 3.12, NumPy 2.5, scikit-learn 1.9.) Several points about using naive Bayes can be drawn from this example.
 

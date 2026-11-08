@@ -142,6 +142,8 @@ $$
 
 ![Benjamini-Hochberg procedure on simulated data: 1000 tests, of which 100 have a true effect. Sorted p-values against their rank, the BH line i alpha/m and the Bonferroni threshold alpha/m (log scale); BH rejects all hypotheses up to the last p-value below its line.](./plots/bh-procedure.py)
 
+:::
+
 More recent work extends FDR control in many directions, for example to e-values (Wang and Ramdas, 2022).
 
 ## 12.3. Correspondence Analysis

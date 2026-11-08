@@ -121,6 +121,8 @@ with codon frequencies usually set to their observed values. It is maximized num
 
 The first model is the model underlying NG86, and its estimates are close to those of NG86 ($\hat t = 0.363$ substitutions per codon, or 171.4 over the gene, against 141 observed differences). Estimating $\kappa$ improves the log likelihood by 12.07, so $2\Delta\ell = 24.1$ against $\chi^2_1$ rejects $\kappa = 1$ decisively; it changes $S$ much more than the numbers of substitutions, and because $S$ is the smaller count, $d_{\mathrm{S}}$ and $\omega$ change most. Allowing unequal codon frequencies improves the fit far more and moves $\omega$ in the other direction.
 
+:::
+
 The likelihood approach has two advantages over counting. Conceptually, only the instantaneous rates have to be specified; at that level there are no multiple changes in a codon, every change is clearly synonymous or not, and the weighting of pathways, the correction for multiple hits and the irregularities of the code are handled by the probability calculus. Practically, more realistic models (a GTR mutation process, variable $\omega$) are easy to add.
 
 ### 23.2.4. Interpreting ω in Comparative Genomics

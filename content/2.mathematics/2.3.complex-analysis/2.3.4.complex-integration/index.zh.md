@@ -1,6 +1,6 @@
 ---
 title: 复积分与 Cauchy 定理
-source_hash: 1cbcf631ca38
+source_hash: 179dd3a7dca9
 ---
 
 本章是整门课程的核心。解析函数沿闭曲线的积分为零（Cauchy 积分定理）；先除以 $\zeta-z$ 再积分，得到 $2\pi\mathrm{i}f(z)$（Cauchy 积分公式）。由这两个事实，几乎不费什么力气就能推出使解析函数与众不同的几乎全部性质：解析函数无穷次可导，有界整函数是常数，每个多项式都有根，$|f|$ 在边界上取得最大值。后面各章也建立在同一基础上：把 Cauchy 核 $\frac1{\zeta-z}$ 展开成几何级数，就得到幂级数与 Laurent 级数（[2.3.5](/2.3.5)）；留数定理（[2.3.6](/2.3.6)）就是 Cauchy 定理在有洞区域上的应用。复积分实际上就是**第二型曲线积分**，证明最初几个定理的主要工具是 [2.2.13](/2.2.13) 的 **Green 公式**；所用的曲线、区域和定向都来自 [2.3.1](/2.3.1)。
@@ -72,6 +72,8 @@ $$
 $$
 \Big|\int_{\Gamma_R}\frac{\mathrm{d}z}{z^2+1}\Big|\le\frac{\pi R}{R^2-1}\to0\qquad(R\to\infty).
 $$
+
+:::
 
 这一估计是用留数计算 $\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{x^2+1}$ 的第一步（[2.3.7](/2.3.7)）。一般地，只要在 $\Gamma_R$ 上 $Rf(z)\to0$ 一致成立，即 $f$ 比 $1/|z|$ 衰减得快，就有 $\int_{\Gamma_R}f\,\mathrm{d}z\to0$。
 
@@ -203,6 +205,8 @@ Cauchy 积分公式表明，解析函数在曲线内部的值完全由它在曲�
 $$
 \oint_{|z|=2}\frac{\sin z}{z^2+1}\,\mathrm{d}z=\frac{2\pi\mathrm{i}}{2\mathrm{i}}\big(\sin\mathrm{i}-\sin(-\mathrm{i})\big)=2\pi\sin\mathrm{i}=2\pi\mathrm{i}\sinh1.
 $$
+
+:::
 
 在式 (4.6) 中取 $C$ 为圆周 $|\zeta-z_0|=r$，$\zeta=z_0+r\mathrm{e}^{\mathrm{i}t}$，得到下面的推论。
 

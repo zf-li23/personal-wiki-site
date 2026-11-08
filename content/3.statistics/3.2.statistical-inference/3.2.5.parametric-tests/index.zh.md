@@ -1,7 +1,7 @@
 ---
 title: 参数假设检验
 description: 原假设与备择假设、拒绝域与检验函数、两类错误、功效与 p 值；正态、两点与 Poisson 总体参数的检验；似然比检验与 Wilks 定理；Neyman–Pearson 引理与一致最大功效检验；与置信区间的对偶；线性回归与两因素方差分析中的检验。
-source_hash: 602061cb542a
+source_hash: 2989832b9678
 ---
 
 参数估计与假设检验是统计推断的两大任务。在参数问题中，总体分布的形式已知，为 $\{f(x;\theta)\colon\theta\in\Theta\}$，我们要判断感兴趣的参数是否落在参数空间的某个指定子集中；若分布形式未知，检验方法就不能依赖于它，这是 [3.2.6](/3.2.6) 非参数检验的内容。本章先建立基本概念（假设、拒绝域、两类错误、功效与 $p$ 值），并给出正态、两点与 Poisson 总体的经典检验，其检验统计量依赖于 [3.2.2](/3.2.2) 的抽样分布。然后介绍构造检验的两种一般原理：建立在**极大似然估计**（[3.2.3](/3.2.3)）之上的似然比检验，以及 Neyman–Pearson 的最大功效检验理论。最后说明检验与**置信区间**（[3.2.4](/3.2.4)）是同一对象的两种描述，并把理论用于线性回归与方差分析，它们在 [3.3](/3.3) 中进一步展开。
@@ -309,6 +309,8 @@ c=3,\qquad r=\frac{0.05-0.01837}{0.06100}=0.518.
 $$
 观测值 $T=3$ 恰好落在边界上：检验以概率 $0.518$ 拒绝 $H_0$（拒绝进货）。
 
+:::
+
 对 $H_0\colon\theta\ge\theta_0$ vs. $H_1\colon\theta<\theta_0$，检验在 $T$ 小时拒绝：$T<c$ 时 $\varphi=1$，$T=c$ 时为 $r$，$T>c$ 时为 $0$，其中 $\mathbb{P}_{\theta_0}(T<c)+r\,\mathbb{P}_{\theta_0}(T=c)=\alpha$。对双侧问题，
 
 $$
@@ -356,6 +358,8 @@ $$
 \lvert t\rvert=\frac{\lvert\bar x-\bar y\rvert}{s_p\sqrt{1/156+1/74}}=5.74>2.598,
 $$
 故拒绝 $H_0$；$p$ 值为 $\mathbb{P}(\lvert t_{228}\rvert\ge5.74)=3\times10^{-8}$。
+
+:::
 
 情形 (c) 是 Behrens–Fisher 问题，它没有上述那种精确解。当 $m,n$ 不大时，B. L. Welch（1938）提出统计量
 
@@ -441,6 +445,8 @@ $$
 \lvert u^*\rvert=\frac{\lvert422.16-465.13\rvert}{\sqrt{54.80^2/156+49.20^2/74}}=5.96>2.576,
 $$
 仍然拒绝 $H_0$；$p$ 值为 $\mathbb{P}(\lvert\mathcal{N}(0,1)\rvert\ge5.96)=2.5\times10^{-9}$。
+
+:::
 
 同样的思路适用于两点分布与 Poisson 分布的均值。对来自 $\mathrm{Ber}(\theta)$ 的样本，$\sqrt{n}(\bar X-\theta)/\sqrt{\theta(1-\theta)}\xrightarrow{d}\mathcal{N}(0,1)$，故在 $H_0\colon\theta=\theta_0$ 下
 
@@ -752,6 +758,8 @@ f(x;\theta)=\frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\theta^2/(2\sigma^2)}\,\math
 $$
 故 $T(x)=x$，$Q(\theta)=\theta/\sigma^2$ 严格递增。$\theta\le\theta_0$ vs. $\theta>\theta_0$ 的 UMP 检验在 $\sum x_i>C$ 时拒绝（$\gamma=0$），由 $\alpha=\mathbb{P}_{\theta_0}\big(\sqrt{n}(\bar X-\theta_0)/\sigma>(C-n\theta_0)/(\sigma\sqrt{n})\big)$ 得 $C=n\theta_0+z_\alpha\sigma\sqrt{n}$，即单侧 Z 检验 $\sqrt{n}(\bar x-\theta_0)/\sigma>z_\alpha$，功效为 $\pi(\theta)=1-\Phi\big(z_\alpha+\sqrt{n}(\theta_0-\theta)/\sigma\big)$。所以 5.2.1 节的单侧 Z 检验是最优的。
 
+:::
+
 对例 5.1.4 的区间问题，UMP 检验也存在。
 
 **定理 5.4.3** 在定理 5.4.2 的条件下，对 $H_0\colon\theta\le\theta_1$ 或 $\theta\ge\theta_2$ vs. $H_1\colon\theta_1<\theta<\theta_2$，检验
@@ -774,6 +782,8 @@ $$
 \Phi\Big(\frac{C_2-25}{5}\Big)-\Phi\Big(\frac{C_1-25}{5}\Big)=\Phi\Big(\frac{C_2-75}{5}\Big)-\Phi\Big(\frac{C_1-75}{5}\Big)=0.01,
 $$
 由对称性，$C_1+C_2=100$ 时它们成立。令 $C_1=C$，由 $\Phi\big((75-C)/5\big)-\Phi\big((C-25)/5\big)=0.01$ 得 $C=36.6$。所以 $36.6\le\sum x_i\le63.4$ 时拒绝 $H_0$；功效为 $\pi(1.5)=\pi(2.5)=0.569$，$\pi(2)=0.992$。
+
+:::
 
 对 $\theta=\theta_0$ vs. $\theta\ne\theta_0$ 这样的双侧问题，一般不存在 UMP 检验（例 5.4.2），必须缩小参与比较的检验类。推论 5.4.1 提示了一个自然的限制：合理的检验在 $H_1$ 为真时拒绝的概率应当不低于 $\alpha$。
 

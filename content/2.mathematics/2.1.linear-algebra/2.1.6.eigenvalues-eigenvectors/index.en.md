@@ -1,6 +1,6 @@
 ---
 title: Eigenvalues and Eigenvectors
-source_hash: 2cb9bf76e49b
+source_hash: 0d661fb982f4
 ---
 
 The previous chapters studied a single linear map $\boldsymbol{x} \mapsto A\boldsymbol{x}$: its range, its zeros (solution sets) and best approximation. This chapter studies the iteration of a linear transformation: how does $A^t\boldsymbol{x}$ behave for large $t$, and are there directions that stay fixed? The key is the equation $A\boldsymbol{x} = \lambda\boldsymbol{x}$: if we can find $n$ linearly independent vectors along each of which $A$ acts merely as a stretch, then in this basis $A$ is a diagonal matrix, and $A^t$ becomes transparent.
@@ -35,6 +35,8 @@ A^t = X\Lambda^tX^{-1} = \begin{bmatrix} 0.2 & 1 \\ 0.8 & -1 \end{bmatrix}\begin
 $$
 
 For every initial distribution $\boldsymbol{x}$, $A^t\boldsymbol{x} \to (x_1 + x_2)\boldsymbol{x}_1$: the total population is preserved, and in the long run it splits $1 : 4$ between the two regions.
+
+:::
 
 The key here is the system $A\boldsymbol{x} = \lambda\boldsymbol{x}$, in which $\lambda$ is not a given parameter but a number, to be determined from $A$, for which the system has a nonzero solution. The equation says that the image $A\boldsymbol{x}$ of $\boldsymbol{x}$ is collinear with $\boldsymbol{x}$.
 
@@ -381,6 +383,8 @@ $$
 
 Since $|\lambda_2| < 1$, $F_n$ is the integer nearest to $\lambda_1^n/\sqrt{5}$, and $F_{n+1}/F_n \to \lambda_1$ (the golden ratio).
 
+:::
+
 In general, if $A$ is diagonalizable, then $A^t\boldsymbol{x} = \sum_i k_i\lambda_i^t\boldsymbol{x}_i$, and for large $t$ the eigenvalue of largest absolute value dominates: if all eigenvalues have absolute value less than $1$, then $A^t\boldsymbol{x} \to \boldsymbol{0}$; if the largest exceeds $1$, then in general $\|A^t\boldsymbol{x}\| \to \infty$. In Example 6.1.1, the eigenvalue $1$ determines the limiting distribution and $0.5$ determines the rate of convergence. The following code checks these two examples:
 
 ```python
@@ -484,6 +488,8 @@ Since $\det A = -2 \ne 0$, $A$ is invertible. From $A(A - 5I_2) = 2I_2$ we get
 $$
 A^{-1} = \frac{1}{2}(A - 5I_2), \qquad A^{-2} = \frac{1}{4}(A - 5I_2)^2 = \frac{1}{4}(-5A + 27I_2).
 $$
+
+:::
 
 Similarly, every power of $A$ (including negative integer powers) can be written as a linear combination of $A$ and $I_2$. In general, for a square matrix of order $n$ and a polynomial $f$, division with remainder by $p_A$, $f = qp_A + r$ with $\deg r < n$, gives $f(A) = r(A)$: the value of any polynomial at $A$ reduces to that of a polynomial of degree less than $n$. This is the starting point for computing matrix functions in [Chapter 11](/2.1.11).
 

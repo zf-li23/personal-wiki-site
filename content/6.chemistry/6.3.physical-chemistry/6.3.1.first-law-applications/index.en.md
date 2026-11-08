@@ -1,7 +1,7 @@
 ---
 title: The First Law and Its Applications
 description: "Methods and basic concepts of chemical thermodynamics; expansion work, reversible processes and limiting work; heat at constant volume and constant pressure, heat capacity, the general relation for C_p − C_V and internal pressure; four standard processes of the ideal gas; real gases: the virial equation, Boyle temperature, reduced variables and the principle of corresponding states, compressibility charts, throttling, the Joule–Thomson coefficient and inversion curves; enthalpies of transition; thermochemistry made rigorous: the relation between Δ_rH and Δ_rU, Kirchhoff's law, adiabatic flame temperature and calorimetry."
-source_hash: a5ced9af2b6b
+source_hash: ca6f6951b831
 ---
 
 Physical chemistry studies chemical change with the principles and methods of physics, and thermodynamics is its earliest mature and most reliable part: starting from a few empirical laws, deduction yields conclusions of complete generality that do not depend on the microscopic structure of matter. The first law of thermodynamics was established in physics ([5.2.3](/5.2.3)), and the basic concepts of chemical thermodynamics and the methods of thermochemical calculation were introduced in [6.1.6](/6.1.6). The task of this chapter is to make them rigorous and quantitative: to state the conditions of validity of every formula, to learn to compute changes of state functions for complicated processes by "designing a path", and to apply the first law to three kinds of objects, namely simple $pVT$ changes (ideal and real gases), phase transitions and chemical reactions. The treatment of real gases is new material: the virial equation, the principle of corresponding states and compressibility charts underlie chemical-engineering calculations, and throttling and the Joule–Thomson coefficient are the principle behind gas liquefaction and refrigeration. The next chapter ([6.3.2](/6.3.2)) introduces entropy through the second law and answers the question of the direction of processes, which the first law cannot; the heat capacities, enthalpies of transition and reaction enthalpies of this chapter are the raw data from which entropy changes are computed there, and Gibbs energies and equilibrium constants later ([6.3.3](/6.3.3), [6.3.7](/6.3.7)).
@@ -300,6 +300,8 @@ $V_2 = nRT_2/p_2 = 0.0640\,\mathrm{m^3}$; $W = \Delta U = -5.40\,\mathrm{kJ}$, $
 | (3) Reversible adiabatic | $0.0398$ | $108.7$ | $-9.03$ | $0$ | $-9.03$ | $-15.05$ |
 | (4) Adiabatic, constant external pressure | $0.0640$ | $174.8$ | $-5.40$ | $0$ | $-5.40$ | $-9.00$ |
 
+:::
+
 Several general conclusions follow. Starting from the same initial state, reversible and irreversible isothermal processes can reach the same final state, but reversible and irreversible adiabatic processes cannot ($108.7\,\mathrm{K}$ versus $174.8\,\mathrm{K}$); this is explained by entropy in the next chapter ([6.3.2](/6.3.2), Example 2.3.1). In an adiabatic expansion all the work done by the system comes from its internal energy, and reversible expansion does the most work and therefore cools the gas the most. Among the four processes, reversible isothermal expansion does the most work and adiabatic expansion against a constant external pressure the least.
 
 ## 1.5. Real Gases
@@ -568,6 +570,8 @@ print(brentq(lambda t: DH + heat_products(t, products), 300, 5000))  # about 233
 The result is $T \approx 2330\,\mathrm{K}$. Excess air lowers the flame temperature (figure below), because the surplus $\ce{O2}$ and $\ce{N2}$ must also be heated. The actual flame temperature is somewhat lower (about $2225\,\mathrm{K}$), because at high temperature $\ce{CO2}$ and $\ce{H2O}$ partly dissociate into CO, $\ce{H2}$, OH and so on, and dissociation absorbs heat; accounting for dissociation requires solving the chemical equilibrium at the same time ([6.3.7](/6.3.7)). With pure oxygen in place of air the calculated value without dissociation is as high as $4800\,\mathrm{K}$, but dissociation brings the actual value down to about $3000\,\mathrm{K}$. An acetylene–oxygen flame ($\ce{C2H2 + 5/2O2 -> 2CO2 + H2O}$, $\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} = -1256.2\,\mathrm{kJ\,mol^{-1}}$ for gaseous water, with fewer product molecules and a smaller heat capacity) reaches about $3400\,\mathrm{K}$ and is used in gas welding and cutting.
 
 ![Adiabatic flame temperature of methane burning at constant pressure, against the ratio of air supplied to stoichiometric air (heat capacities from the empirical fits, dissociation neglected)](./plots/flame-temperature.py)
+
+:::
 
 The choice of rocket propellants rests on the same thermochemistry: hydrazine and dinitrogen tetroxide, $\ce{2N2H4(l) + N2O4(g) -> 3N2(g) + 4H2O(l)}$, release $1.26 \times 10^3\,\mathrm{kJ\,mol^{-1}}$ (for liquid water), and the products are gases of small molar mass, which gives a high exhaust velocity.
 

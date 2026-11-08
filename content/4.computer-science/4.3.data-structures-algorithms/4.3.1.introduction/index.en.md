@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Elements of an algorithm and finiteness (the hailstone sequence); the Turing machine and RAM models of computation; worst-case time and space complexity; big O, Omega and Theta notation and the hierarchy of complexities; analysis of series and iteration, back-of-the-envelope estimates; recursion traces, recurrence relations, the master theorem and the Akra–Bazzi theorem; four algorithms for the maximum subarray problem; dynamic programming for Fibonacci numbers and longest common subsequences.
-source_hash: e599fed58bb0
+source_hash: 22ff7e66902e
 ---
 
 [4.1 Programming Fundamentals](/4.1) is about how to come up with a solution: recursion, divide and conquer, backtracking, dynamic programming. This course answers two other questions: whether a solution is correct and what it costs, and how to organize data so that the common operations are all fast enough. The first question needs a machine-independent yardstick and a set of analysis tools; the second is the subject of data structures. This chapter first explains algorithms and models of computation, then builds the yardstick of asymptotic notation, then introduces the basic methods for analyzing iteration and recursion, including the master theorem for divide-and-conquer recurrences. Finally, three examples (the maximum subarray problem, Fibonacci numbers and longest common subsequences) show how algorithms for one problem improve step by step from exponential or cubic time to linear time. Every result in the later chapters (vectors, lists, stacks and queues, trees, graphs, hashing, and so on) is proved with the methods introduced here.
@@ -173,6 +173,8 @@ A Turing machine can only move one cell at a time, so reaching distant data cost
 
 For $c = 12$ and $d = 5$, 14 instructions are executed and the result is 3. In general, the time cost is the sum of the execution counts of the instructions, here $3\lceil c/d \rceil + 5$.
 
+:::
+
 In the RAM model, the running time of an algorithm is the number of basic operations it executes. Each statement of a high-level language (arithmetic, comparison, assignment, array indexing, function call and return) is equivalent to a constant number of RAM instructions, and branches, loops and recursive calls are all jumps in essence. Hence, asymptotically, we may count high-level statements directly, without translating into RAM instructions.
 
 Strictly speaking, "each register holds an arbitrarily large integer and operations take constant time" makes the model too powerful (the whole input can be encoded in one integer). Modern textbooks use the word RAM: each word has $w \geq \log_2 n$ bits, and operations on words are constant time. This course assumes this model by default: arithmetic on indices, pointers and ordinary integers takes $O(1)$.
@@ -258,6 +260,8 @@ print(subset_sum(s, 9), subset_sum(s, 30))   # True False
 ```
 
 In the worst case it examines all $2^n$ subsets. The subset sum problem is NP-complete: if it had a polynomial-time algorithm, then every NP problem (a problem whose solutions can be verified in polynomial time) would too, that is, $\mathrm{P} = \mathrm{NP}$. This conjecture remains open; it is widely believed that $\mathrm{P} \neq \mathrm{NP}$, but nobody can currently prove that no polynomial algorithm exists for subset sum. Note also that **dynamic programming** solves it in $O(nt)$ time, but this is not polynomial time: in the input, $t$ occupies only $\log t$ bits, so $O(nt)$ is exponential in the input length (this is called pseudo-polynomial time).
+
+:::
 
 The figure below shows the growth curves of common functions. For very small sizes, a lower-order function is not necessarily smaller ($2^n \leq n^2$ when $n \leq 4$); once the size is somewhat larger, the order of growth decides: a fast start does not win the long race.
 

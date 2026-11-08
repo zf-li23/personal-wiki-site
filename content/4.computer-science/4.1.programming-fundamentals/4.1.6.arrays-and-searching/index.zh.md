@@ -25,6 +25,8 @@ for (int i = 0; i < 7; ++i) {
 std::cout << (sum - max_score - min_score) / 5.0 << '\n';   // 5.0: floating-point division
 ```
 
+:::
+
 但如果还要计算这 5 个分数的方差，就要在求出平均值以后再访问每个分数一次，数据必须保存下来。即使不需要，先把全部输入存好、再进行计算，也能把输入输出与计算分开，使程序更清晰、更容易测试。这就需要数组。
 
 ### 6.1.2. C++ 的数组
@@ -112,6 +114,8 @@ while (x := int(input())) != -1:           # one integer per line, stop at -1
 total = sum(v for v in nums if v % 3 == 0 or v % 5 == 0)
 print(f"{len(nums)} numbers, sum = {total}")
 ```
+
+:::
 
 `std::vector` 的常用操作：
 

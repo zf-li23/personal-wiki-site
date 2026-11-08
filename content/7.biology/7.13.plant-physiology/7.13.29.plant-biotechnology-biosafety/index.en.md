@@ -1,7 +1,7 @@
 ---
 title: Plant Biotechnology and Biosafety
 description: Applications of plant tissue culture (rapid propagation, virus elimination, haploid breeding, germplasm conservation); the development of crop-improvement technologies (conventional breeding, mutagenesis, molecular markers, transgenesis, genome editing); the physiology of released traits (insect resistance, herbicide tolerance, virus resistance, quality improvement); principles of biosafety assessment (substantial equivalence, case-by-case analysis, step-by-step evaluation) and regulatory frameworks; and a population-genetic model of resistance management with refuges
-source_hash: 1200c792fea9
+source_hash: b28d02dba9fc
 ---
 
 The preceding chapters described how plants grow, develop, and respond to their environment; this chapter asks how people use that knowledge to modify plants. The totipotency of plant cells allows a small piece of tissue to regenerate a whole plant, and this is the starting point of plant biotechnology: it underlies rapid propagation and virus elimination, and it is equally the common basis of haploid breeding, germplasm conservation, and genetic transformation. On this foundation, crop improvement has passed through successive stages, from selection, crossing, and mutagenesis to molecular markers, transgenesis, and genome editing. The transgenic traits that are grown on a large scale are mainly insect resistance, herbicide tolerance, virus resistance, and quality improvement. Each works because of a clear physiological basis, and each also raises new questions: whether such crops are safe for people and the environment, how they should be assessed and regulated, and whether insect resistance will fail as pests evolve.
@@ -21,6 +21,8 @@ N_n = N_0\, m^{\,n}. \tag{29.1}
 $$
 
 **Example 29.1.1** A cultivar is subcultured every 4 weeks, and each culture vessel is divided on average into 3 new cultures each time. A year has about 13 cycles, so $N_{13} = 3^{13} \approx 1.6 \times 10^6$. In practice, contamination, vitrification, and a multiplication rate that declines with the number of subcultures, together with the fact that only a fraction of cultures proceed to rooting and acclimatization, make the number of plants obtained much lower than the theoretical value of Eq. (29.1). It is still several orders of magnitude higher than that obtained by cuttings or division.
+
+:::
 
 Micropropagation is suited to several kinds of material: heterozygous material that cannot be propagated by seed (banana, many ornamentals and fruit-tree rootstocks); species with tiny seeds that germinate poorly (orchids); cultivars whose clonal uniformity must be maintained; and forest trees, for which producing planting stock is much faster than field propagation. Its costs are equipment and labor, and the negative consequence of clonal uniformity: the genetic base is narrow, so that when a new disease appears the whole clone is susceptible ([7.13.25](/7.13.25#sec-25.7)).
 

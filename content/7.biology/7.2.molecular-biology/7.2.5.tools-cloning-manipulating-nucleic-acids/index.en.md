@@ -184,6 +184,8 @@ and every $1\%$ of mismatched pairs lowers $T_{\mathrm{m}}$ by about $1$–$1.5\
 
 **Example 5.5.2** A homolog with $80\%$ identity to the probe forms hybrids melting some $20$–$30\,^\circ\mathrm{C}$ below the perfect hybrid. Finding it therefore requires washing at lower temperature or higher salt than for the perfect match: lowering stringency tolerates mismatches at the price of more false positives, and this trade-off, not the labeling chemistry, is what determines whether a cross-species screen succeeds.
 
+:::
+
 The alternative to hybridization is amplification. By the late 1980s a short unique sequence (a *sequence-tagged site*) could be detected by PCR in pools of clones, and Olson, Hood, Cantor and Botstein (1989) proposed building physical maps of the human genome from such sites; screening pooled clones needs about $\log_2 N$ rounds of pooling instead of $N$ separate tests.
 
 ## 5.6. The Polymerase Chain Reaction
@@ -219,6 +221,8 @@ Saturation in fact begins earlier, because the product competes with the primers
 Taq polymerase has no $3' \to 5'$ proofreading exonuclease (Section 5.7) and misincorporates at about $10^{-5}$ per base per duplication; proofreading archaeal enzymes err at about $10^{-6}$ or less. If each duplication introduces errors at rate $\varepsilon$ per base, then after $d$ effective duplications a product of length $L$ carries on average $\lambda = \varepsilon L d$ errors and a fraction $\mathrm{e}^{-\lambda}$ of the molecules are error-free.
 
 **Example 5.6.2** For a $1$ kb product after $30$ duplications, $\varepsilon = 2 \times 10^{-5}$ gives $\lambda = 0.6$ and only about $55\%$ correct molecules, whereas $\varepsilon = 1 \times 10^{-6}$ gives $\lambda = 0.03$ and $97\%$. Products destined to be cloned and expressed are therefore made with proofreading enzymes and the clones are sequenced; for simple detection, fidelity is irrelevant.
+
+:::
 
 PCR is now the first step of most manipulations: adding restriction or type IIS sites and assembly overlaps through 5′ tails; introducing a point mutation by amplifying the whole plasmid with primers that carry it and removing the methylated template with DpnI (Section 5.1.4); testing colonies for inserts; amplifying cDNA to detect and quantify transcripts ([7.2.6](/7.2.6)); and detecting pathogens or genotypes, where exponential amplification gives single-molecule sensitivity and carry-over of earlier products is the main hazard.
 

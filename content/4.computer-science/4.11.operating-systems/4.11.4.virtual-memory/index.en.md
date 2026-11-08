@@ -147,6 +147,8 @@ A modern core has a small first-level TLB (around 64 entries for data) and a lar
 
 **Example 4.4.1** An array of ten 4-byte integers starts at virtual address 100 in a toy system with 16-byte pages (OSTEP, chapter 19). The elements occupy addresses 100 to 139, that is page 6 (addresses 96–111: `a[0]` to `a[2]`), page 7 (112–127: `a[3]` to `a[6]`) and page 8 (128–143: `a[7]` to `a[9]`). Summing the array with an initially empty TLB misses on `a[0]`, `a[3]` and `a[7]` and hits on the other seven accesses: hit rate 70 %. With 4 KiB pages, a sequential pass over an array of `int`s misses once per 1024 elements.
 
+:::
+
 The effective cost of a memory access with TLB hit rate $h$, memory access time $m$ and a page walk of $k$ memory accesses is roughly $h\,m + (1 - h)(k + 1)\,m$. With $m = 100\,\mathrm{ns}$, $k = 4$ (§4.5) and $h = 0.99$ this is $99 + 5 = 104\,\mathrm{ns}$; with $h = 0.9$, $90 + 50 = 140\,\mathrm{ns}$. (In practice page-table entries are themselves cached in the data caches, so a walk is usually cheaper than $k$ full memory accesses.)
 
 The TLB's reach, its number of entries times the page size, limits how much memory a program can touch without TLB misses. The following program reads one integer from each of $n$ pages, repeatedly, and prints the average time per access:
@@ -243,6 +245,8 @@ flowchart LR
   L2 --> L1["Page table<br/>entry 325"]
   L1 --> F["Frame + offset 0x678<br/>= physical address"]
 ```
+
+:::
 
 A process that uses one contiguous megabyte of memory needs one table at each level, four pages or 16 KiB of page tables, instead of the 512 GiB of a linear table. On the laptop of this course, all page tables of all processes together took 65 MiB (`PageTables` in `/proc/meminfo`) for about 3.6 GiB of process memory. Since Linux 4.14, processors with five-level paging (Intel *LA57*, 57-bit addresses, 128 PiB of user space) can use a fifth level; the kernel enables it only when the hardware supports it. RISC-V defines the analogous schemes Sv39, Sv48 and Sv57 with 3, 4 and 5 levels ([4.10.3](/4.10.3)); ARMv8 uses up to four levels of 4, 16 or 64 KiB granules.
 
@@ -404,6 +408,8 @@ CLOCK 7 faults, 4 hits
 FIFO with 3 frames: 9 faults; LRU: 10 faults
 FIFO with 4 frames: 10 faults; LRU: 8 faults
 ```
+
+:::
 
 On this short string LRU matches OPT. The last two lines show *Belady's anomaly*: with FIFO, the string `1 2 3 4 1 2 5 1 2 3 4 5` causes 9 faults with three frames but 10 with four. More memory can make FIFO worse. LRU cannot behave this way: it is a *stack algorithm*, meaning that the set of pages it keeps with $k$ frames is always a subset of the set it keeps with $k + 1$ frames, so adding frames never adds misses.
 

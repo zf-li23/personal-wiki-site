@@ -44,6 +44,8 @@ $$
 
 **例 16.1.1** 若 $\lambda_1,\dots,\lambda_m$ 互不相等，则 $\mathrm{e}^{\lambda_1x},\dots,\mathrm{e}^{\lambda_mx}$ 在任何区间上线性无关。设 $\sum c_k\mathrm{e}^{\lambda_kx}=0$，求导 $0,1,\dots,m-1$ 次后令 $x=x_0$，得关于 $c_k\mathrm{e}^{\lambda_kx_0}$ 的齐次线性方程组，系数矩阵是 **Vandermonde 矩阵** $(\lambda_k^{j})$，其行列式 $\prod_{j<k}(\lambda_k-\lambda_j)\ne0$，所以 $c_k=0$。
 
+:::
+
 这个例子的方法是一般的：一个线性关系对所有 $x$ 成立，求导后仍成立，于是得到一个数字线性方程组。
 
 **定义 16.1.2** 设 $\varphi_1,\dots,\varphi_m$ 在 $I$ 上有 $m-1$ 阶导数，称
@@ -329,6 +331,8 @@ y=\int(\cos x\ln\cos x+x\sin x)\,\mathrm{d}x=\sin x\ln\cos x-x\cos x+\ln(\sec x+
 $$
 其中 $\int\cos x\ln\cos x\,\mathrm{d}x=\sin x\ln\cos x+\int\frac{\sin^2x}{\cos x}\,\mathrm{d}x=\sin x\ln\cos x-\sin x+\ln(\sec x+\tan x)$，$\int x\sin x\,\mathrm{d}x=-x\cos x+\sin x$。通解 $y=C_1+C_2\cos x+C_3\sin x+\sin x\ln\cos x-x\cos x+\ln(\sec x+\tan x)$。
 
+:::
+
 方法（2）：右端为指数函数。由 $P(\mathrm{D})\mathrm{e}^{\lambda x}=P(\lambda)\mathrm{e}^{\lambda x}$ 与引理 16.3.1：
 
 **命题 16.4.1** 若 $P(\lambda)\ne0$，则 $\dfrac{\mathrm{e}^{\lambda x}}{P(\lambda)}$ 是 $P(\mathrm{D})y=\mathrm{e}^{\lambda x}$ 的特解。若 $\lambda$ 是 $k$ 重根，$P(\mu)=(\mu-\lambda)^kR(\mu)$，则 $\dfrac{x^k\mathrm{e}^{\lambda x}}{k!\,R(\lambda)}$ 是特解。
@@ -342,6 +346,8 @@ $$
 （3）$y^{(4)}-y=\mathrm{e}^x$：$1$ 是单根，$P(\mu)=(\mu-1)(\mu+1)(\mu^2+1)$，$R(1)=4$，特解 $\dfrac{x\mathrm{e}^x}4$，通解 $C_1\mathrm{e}^x+C_2\mathrm{e}^{-x}+C_3\cos x+C_4\sin x+\dfrac{x\mathrm{e}^x}{4}$。
 
 （4）$y''+y'-2y=2\sin x$：$P(\mathrm{i})=-3+\mathrm{i}$，$\dfrac{2\mathrm{e}^{\mathrm{i}x}}{-3+\mathrm{i}}=-\dfrac{(3+\mathrm{i})(\cos x+\mathrm{i}\sin x)}{5}$，取虚部得特解 $-\dfrac{\cos x+3\sin x}5$。
+
+:::
 
 方法（3）：右端为多项式。若 $f$ 是 $m$ 次多项式且 $P(0)\ne0$，把 $\dfrac1{P(\lambda)}$ 在 $\lambda=0$ 处展开为幂级数 $b_0+b_1\lambda+b_2\lambda^2+\cdots$（用长除法，按升幂排列），则
 
@@ -584,6 +590,8 @@ $$
 **例 16.6.5** 解 $\begin{cases}x_1'=3x_1-x_2,\\x_2'=x_1+x_2.\end{cases}$ 由第一式 $x_2=3x_1-x_1'$，代入第二式 $3x_1'-x_1''=x_1+3x_1-x_1'$，即 $x_1''-4x_1'+4x_1=0$，$x_1=\mathrm{e}^{2t}(C_1+C_2t)$。于是 $x_2=3x_1-x_1'=\mathrm{e}^{2t}(C_1-C_2+C_2t)$。这里 $A=\begin{bmatrix}3&-1\\1&1\end{bmatrix}$ 有二重特征值 $2$ 而只有一个特征向量方向，不可对角化，解中出现 $t\mathrm{e}^{2t}$。
 
 **例 16.6.6** 解 $x'''-3x''+2x'=0$。令 $y=x'$，$z=x''$，得方程组 $x'=y$，$y'=z$，$z'=-2y+3z$。特征多项式 $\lambda(\lambda^2-3\lambda+2)$，特征值 $0,1,2$，特征向量 $(1,0,0)^{\mathsf T}$，$(1,1,1)^{\mathsf T}$，$(1,2,4)^{\mathsf T}$（友矩阵关于 $\lambda$ 的特征向量总是 $(1,\lambda,\lambda^2)^{\mathsf T}$）。取第一个分量：$x=C_1+C_2\mathrm{e}^t+C_3\mathrm{e}^{2t}$，与直接用特征方程 $\lambda^3-3\lambda^2+2\lambda=0$ 的结果一致。
+
+:::
 
 二阶方程 (16.4) 化为方程组 $x'=v$，$v'=-\omega^2x-2kv$ 后，可以在 $(x,v)$ 相平面上观察三种阻尼的区别：欠阻尼的轨线是绕原点的螺线，临界阻尼与过阻尼的轨线不绕原点、直接进入原点。
 

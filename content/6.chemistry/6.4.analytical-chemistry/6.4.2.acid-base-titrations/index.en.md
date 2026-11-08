@@ -1,7 +1,7 @@
 ---
 title: Titrimetric Analysis and Acid–Base Titrations
 description: Modes of titration, primary standards, titer and calculations; activity and concentration constants; distribution fractions, proton conditions, and exact and approximate formulas for pH; preparation of buffers (ionic-strength corrections, Tris and Good's buffers); indicators and mixed indicators; titration of polyprotic acids and bases and of mixed acids, the double-indicator method; the end-point error formula and criteria for feasibility of titration; the Kjeldahl method and titration of amino acids.
-source_hash: f70d8022938a
+source_hash: 33cc4fbf9a17
 ---
 
 Section [6.1.9](/6.1.9) has already treated the Brønsted–Lowry theory of acids and bases, the pH of weak acids, weak bases, and amphoteric species, buffer solutions, and the simplest titration curves ([9.6](/6.1.9#sec-9.6)). This chapter organizes titration as a quantitative method. We first present the modes and calculations of titrimetric analysis (Section 2.1), then explain when activities must replace concentrations (2.2). On the basis of 6.1.9 we then give the rigorous treatment of acid–base equilibria and the criteria for approximations (2.3), physiological and biochemical buffers (2.4), the choice of indicators (2.5), titration curves of polyprotic systems (2.6), the quantitative formula for the end-point error and the feasibility criteria that follow from it (2.7), and finally applications such as the Kjeldahl method and the titration of amino acids (2.8). The distribution fractions of 2.3 and the end-point error formula of 2.7 form the common framework of the next three chapters: complexometric titration ([6.4.3](/6.4.3)), precipitation titration ([6.4.4](/6.4.4)), and redox titration ([6.4.5](/6.4.5)) merely replace the proton by a metal ion, a precipitant, or an electron, and pH by pM or the electrode potential.
@@ -137,6 +137,8 @@ $$
 $$
 An ionic strength of 0.1 lowers $\mathrm{p}K_{\mathrm{a}}$ by about 0.2, and the effect is larger for equilibria involving divalent ions ($\lg\gamma$ is four times that of a univalent ion). $\square$
 
+:::
+
 Calculations for acid–base titrations generally neglect activities: a difference of about 0.2 in $\mathrm{p}K$ shifts the pH at the stoichiometric point by only a few tenths and has little effect on the choice of indicator or the estimate of the end-point error. Activities must be considered when calculating or preparing buffer solutions with a definite pH (especially pH standard buffers, 2.4), in solutions of high ionic strength, when ion activities are measured with ion-selective electrodes ([6.4.6](/6.4.6#sec-6.3)), and when thermodynamic constants are derived from measured pH.
 
 ## 2.3. Quantitative Treatment of Acid–Base Equilibria
@@ -197,6 +199,8 @@ $$
 $$
 The simplest formula, wrongly applied, gives $\mathrm{pH} = 6.64$, with $[\ce{H+}]$ about 8% too low. $\square$
 
+:::
+
 For the amphoteric species $\ce{NaHA}$ (concentration $c$) the proton condition $[\ce{H+}] + [\ce{H2A}] = [\ce{A^2-}] + [\ce{OH-}]$ gives the exact formula
 
 $$
@@ -218,6 +222,8 @@ At $I = 0.05$ the Davies equation gives $\lg\gamma_2 = -0.34$, so $\mathrm{pH} =
 **Example 2.3.4** In a saturated aqueous solution of $\ce{CO2}$ at room temperature $c(\ce{H2CO3}) \approx 0.040\,\mathrm{mol\,L^{-1}}$ (including dissolved $\ce{CO2}$); find the pH.
 
 **Solution** Since $K_{\mathrm{a}1} \gg K_{\mathrm{a}2}$, the acid is treated as monoprotic; $cK_{\mathrm{a}1} \gg 20K_{\mathrm{w}}$ and $c/K_{\mathrm{a}1} = 9\times10^4 \gg 105$, so $[\ce{H+}] = \sqrt{0.040\times10^{-6.35}}$ and $\mathrm{pH} = 3.87$. This is the pH of the solution at the second stoichiometric point of the titration of a carbonate with HCl (2.6). $\square$
+
+:::
 
 | System | Proton condition | Simplest formula | Conditions (error ≤ 5%) |
 |---|---|---|---|
@@ -555,6 +561,8 @@ The mass fraction of nitrogen is $w(\ce{N}) = \dfrac{c(\ce{HCl})(V - V_{\text{bl
 **Example 2.8.2** $0.5000\,\mathrm{g}$ of milk powder is treated by the Kjeldahl method and absorbed in boric acid; titration with $0.1000\,\mathrm{mol\,L^{-1}}$ HCl consumes $14.20\,\mathrm{mL}$, and the blank consumes $0.10\,\mathrm{mL}$. Find the protein content.
 
 **Solution** $w(\ce{N}) = \dfrac{0.1000\times(14.20 - 0.10)\times10^{-3}\times14.007}{0.5000} = 3.950\%$, and the protein content is $6.38\times3.950\% = 25.2\%$. $\square$
+
+:::
 
 The Kjeldahl method determines total organic nitrogen and ammonium nitrogen and cannot distinguish protein nitrogen from other nitrogen-containing substances (nitrate and heterocyclic nitrogen require an additional reduction treatment). The 2008 incident in which melamine ($\ce{C3H6N6}$, 66.6% nitrogen) was added to milk powder to pass as protein exploited exactly this limitation; since then a liquid chromatography–mass spectrometry method for melamine has been added to the testing of dairy products ([6.4.15](/6.4.15#sec-15.5.1)). Modern laboratories also commonly use combustion (the Dumas method) to determine total nitrogen: the sample is burned at high temperature in oxygen, the nitrogenous substances are converted to $\ce{N2}$, which is determined with a thermal conductivity detector ([6.4.13](/6.4.13#sec-13.6.4)); a sample takes a few minutes and no concentrated sulfuric acid is needed.
 

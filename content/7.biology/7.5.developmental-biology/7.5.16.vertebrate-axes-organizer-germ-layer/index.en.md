@@ -71,6 +71,8 @@ $$
 
 **Example 16.3.1** Dyson and Gurdon (1998) estimated that *Xenopus* animal-cap cells have about 5000 Activin receptors, and that occupancy of about 100 switches on *brachyury* (Xbra, a general mesoderm gene) and about 300 switches on *goosecoid* (dorsal mesoderm). By Eq. (16.1) the corresponding concentrations are $c_1 = K_{\mathrm{D}} \times 100/4900 = 0.020\,K_{\mathrm{D}}$ and $c_2 = K_{\mathrm{D}} \times 300/4700 = 0.064\,K_{\mathrm{D}}$, a ratio of 3.1. At such low occupancies the cell counts receptors almost linearly with concentration, and a threefold change in concentration separates the two fates. The cells responded to the absolute number of occupied receptors, not to the fraction: caps with fewer receptors (made by reducing their expression) required proportionally more Activin for the same response.
 
+:::
+
 A threshold on a graded input gives graded boundaries unless the targets reinforce the decision. *goosecoid* and *brachyury* repress each other, and their mutual repression sharpens the boundary between organizer and general mesoderm.
 
 **Formula 16.3.2 (Mutual repression sharpens a threshold)** Let $s_1 = R/R_1$ and $s_2 = R/R_2$ be the occupancy relative to the two thresholds, $h(u) = u^m/(1 + u^m)$, and $B$, $G$ the levels of Brachyury and Goosecoid. Then

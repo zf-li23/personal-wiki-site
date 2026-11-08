@@ -1,6 +1,6 @@
 ---
 title: Higher-Order Linear Differential Equations
-source_hash: 2a681439ae54
+source_hash: cad2f0616067
 ---
 
 The $n$th-order linear equation $y^{(n)}+p_1(x)y^{(n-1)}+\cdots+p_n(x)y=f(x)$ is the most common type of equation in physics and engineering: vibrations, electric circuits, the bending of beams and the stationary equations of quantum mechanics all belong to it. With $\boldsymbol{x}=(y,y',\dots,y^{(n-1)})^{\mathsf T}$ it becomes a first-order **system of linear differential equations** whose coefficient matrix is a **companion matrix**. Hence the whole theory of the previous chapter applies directly: global existence and uniqueness, the solution space, the Wronskian and Liouville's formula, and the variation of constants formula. This chapter translates these results into the language of $n$th-order equations, with emphasis on two formulas that are very useful in applications: the variation of constants formula written in terms of cofactors, and the Cauchy function $K(x,t)$ derived from it, which expresses a particular solution of the nonhomogeneous equation as $\int K(x,t)f(t)\,\mathrm{d}t$.
@@ -273,6 +273,8 @@ and the $n$ functions corresponding to all the roots form a fundamental set of s
 **Example 9.5.1** (1) $x^2y''-xy'+y=0$: $F(\lambda)=\lambda(\lambda-1)-\lambda+1=(\lambda-1)^2$, and the general solution is $y=(C_1+C_2\ln x)x$.
 
 (2) $x^2y''+3xy'+5y=0$: $F(\lambda)=\lambda^2+2\lambda+5$ with roots $-1\pm2\mathrm{i}$, and the general solution is $y=\dfrac1x\big(C_1\cos(2\ln x)+C_2\sin(2\ln x)\big)$.
+
+:::
 
 A nonhomogeneous Cauchy–Euler equation is transformed into an equation with constant coefficients and then solved by the kernel formula of Section 9.2.3 or by undetermined coefficients ([Example 16.4.10 of 2.2.16](/2.2.16#ex-16.4.10)). The Cauchy–Euler equation is the prototype of the theory of regular singular points in the next chapter: the indicial equation is the second-order case of (9.8).
 

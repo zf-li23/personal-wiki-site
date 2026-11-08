@@ -1,6 +1,6 @@
 ---
 title: Antiderivatives and Indefinite Integrals
-source_hash: a16a67bea75e
+source_hash: c5a0fdf8a907
 ---
 
 The basic problem of differential calculus is to find the derivative of a given function. This chapter treats the inverse problem: given a derivative $f$, find a function $F$ with $F' = f$. This is the problem of finding an antiderivative, or computing an indefinite integral, and it is the inverse of differentiation. Because the rules of differentiation can be applied mechanically, the derivative of every elementary function can be computed; finding antiderivatives, by contrast, has no general algorithm. There are only a few basic methods (substitution, integration by parts, and systematic treatments of rational functions, rational functions of sines and cosines, and a few classes of irrational functions), and each of them is some differentiation rule read backwards. A small change in the form of the integrand can turn an easy integral into a hard one, or even into one whose antiderivative cannot be expressed in elementary functions. This chapter relies on the differentiation formulas of [2.2.4](/2.2.4) and on the **mean value theorem** of [2.2.5](/2.2.5); in the next chapter ([2.2.7](/2.2.7)) the **fundamental theorem of calculus** reduces the evaluation of definite integrals to finding antiderivatives, and the solution of ordinary differential equations ([2.2.15](/2.2.15)) makes heavy use of the integration techniques developed here.
@@ -258,6 +258,8 @@ Integration by parts converts $\int u\,\mathrm{d}v$ into $\int v\,\mathrm{d}u$; 
 
 **Example 6.3.1** $\int x\sin3x\,\mathrm{d}x = \int x\,\mathrm{d}\Bigl(-\frac13\cos3x\Bigr) = -\frac13x\cos3x+\frac13\int\cos3x\,\mathrm{d}x = -\frac19(3x\cos3x-\sin3x)+C$.
 
+:::
+
 How should we choose $u$ and $v'$ when integrating $\int f_1(x)f_2(x)\,\mathrm{d}x$ by parts? The principle is that $v'$ should be easy to integrate and $u$ should become simpler when differentiated.
 
 1. If the product contains one of $\mathrm{e}^{ax}$, $\sin ax$ ($\cos ax$), $x^m$, it is usually chosen as $v'$, in the order of preference $\mathrm{e}^{ax}$, $\sin ax$ ($\cos ax$), $x^m$;
@@ -359,6 +361,8 @@ $$
 
 This reduction formula is needed in Section 6.4 for integrating rational functions.
 
+:::
+
 It is also common to substitute first and then integrate by parts:
 
 **Example 6.3.4** (1) $\int\frac{\ln^2x\cos(\ln x)}{x}\,\mathrm{d}x\overset{u = \ln x}{=}\int u^2\cos u\,\mathrm{d}u = u^2\sin u+2u\cos u-2\sin u+C$, that is, $(\ln^2x-2)\sin\ln x+2\ln x\cos\ln x+C$.
@@ -401,6 +405,8 @@ $$
 $$
 
 (2) Write $\frac{3x^2+2}{x^2(x^2+1)} = \frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+1}$. Comparing coefficients gives $A = 0$, $B = 2$, $C = 0$, $D = 1$, that is, $\frac{3x^2+2}{x^2(x^2+1)} = \frac2{x^2}+\frac1{x^2+1}$.
+
+:::
 
 All four types of partial fractions can be integrated:
 
@@ -470,6 +476,8 @@ $$
 $$
 \int\frac{\mathrm{d}x}{a\cos x+b\sin x} = \frac1{\sqrt{a^2+b^2}}\int\csc(x+\varphi)\,\mathrm{d}x = \frac{1}{\sqrt{a^2+b^2}}\ln\bigl\lvert\csc(x+\varphi)-\cot(x+\varphi)\bigr\rvert+C.
 $$
+
+:::
 
 When no shortcut is available, the substitution $t = \tan\frac x2$ always turns a rational function of sine and cosine into a rational function; this is the *Weierstrass substitution* (also called the tangent half-angle substitution). On $(-\pi,\pi)$ we have $x = 2\arctan t$, and
 

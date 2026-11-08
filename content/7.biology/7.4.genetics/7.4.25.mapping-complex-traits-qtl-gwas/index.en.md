@@ -233,6 +233,8 @@ $R^2$ approaches $h^2$ only when $N \gg M_e/h^2$; for humans $M_e$ is about $5 \
 
 ![Expected accuracy of a polygenic score against GWAS sample size (Formula 25.6.1), for SNP heritability 0.5 and 0.2 with M_e = 60 000 effective independent segments, and for h² = 0.5 with M_e = 20 000; dotted: the ceiling h². Dots: simulations with M_e independent standardized SNPs whose estimated effects are the true effects plus sampling noise of variance 1/N; the score's R² in a new sample, (β̂·β)²/|β̂|², follows the formula](./plots/pgs-accuracy.py)
 
+:::
+
 Three limitations shape the use of polygenic scores.
 
 - Portability. Accuracy falls in populations whose ancestry differs from the GWAS sample, because LD between tag SNPs and causal variants differs, allele frequencies differ, and effects may interact with environment: scores derived from European-ancestry GWAS are about 2 times less accurate in East Asian and 4–5 times less accurate in African-ancestry samples (Martin and colleagues 2019). About $80$–$90\,\%$ of GWAS participants have been of European ancestry, so the inequity is a direct consequence of study design; diverse biobanks are correcting it.

@@ -87,6 +87,8 @@ The three notions are different. A high-leverage point that lies on the trend of
 
 ![Three regressions with one added observation (triangle), fitted with all data (solid) and without the triangle (dashed): A, a high-leverage point on the trend; B, an outlier with low leverage; C, a high-leverage outlier that changes the slope; the titles give its leverage h, studentized deleted residual t and Cook's distance D](./plots/leverage-influence.py)
 
+:::
+
 Panel C also shows why raw residuals are a poor guide to outliers: an influential point drags the line towards itself, so its own residual is smaller than its discrepancy. The same happens in a well-known small data set of the number of pubs and the number of deaths in eight cities, where one city with five times as many pubs as the others lies far off the line through the other seven points but has a modest raw residual, while its studentized residual is enormous. The remedy is to scale each residual by its standard deviation, and to compare $Y_i$ with a fit that does not use $Y_i$.
 
 **Definition 6.1.3 (Standardized and Studentized Residuals)** Since $\operatorname{Var}(e_i) = \sigma^2(1 - h_{ii})$ ([Section 7.3.3](/3.3.7#sec-7.3.3)), the estimated standard deviation of $e_i$ is $s\{e_i\} = \sqrt{\mathrm{MSE}(1 - h_{ii})}$.
@@ -233,6 +235,8 @@ $$
 $$
 Whether this transformation gives a good fit must be checked like any other model: the reciprocal also transforms the errors, small velocities at low concentrations become large values of $1/V$ with large variability, and the observations with the smallest $C$ (largest $1/C$) have high leverage.
 
+:::
+
 Many other times such transformations do not exist. If we do not want to alter the assumptions on the errors, we can instead perform a *nonlinear regression* analysis: the mean response varies with $X$ in a nonlinear manner, and the observations deviate about these means just as in linear regression, $Y_i = f(X_i; \boldsymbol{\theta}) + \varepsilon_i$ with $f$ nonlinear in the parameters $\boldsymbol{\theta}$. The least squares estimates then have no closed form and are computed iteratively (R `nls`, nonlinear least squares).
 
 ### 6.2.2. Nonconstant Variance
@@ -352,6 +356,8 @@ a1$tplasma <- a1$plasma^(-0.5)            # apply the chosen transformation
 ```
 
 ![Box-Cox procedure on simulated data with five observations at each of five predictor values: the spread of Y shrinks as X grows, Y^(-1/2) has nearly constant spread, and the profile log-likelihood of lambda is maximized near -0.5 with a 95% confidence interval that excludes both 1 and 0](./plots/box-cox-profile.py)
+
+:::
 
 When the error variance is constant but the relation is curved, one transforms $X$ instead, which leaves the error distribution unchanged; when the error variance also changes with $X$, one transforms $Y$, possibly combined with a transformation of $X$. The prototype patterns are:
 

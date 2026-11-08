@@ -202,6 +202,8 @@ $$
 
 ![Left: vapor pressure of water from 0 to 100 °C on a logarithmic scale, comparing the IAPWS reference curve with Clausius–Clapeyron integrated from the normal boiling point with a constant enthalpy of vaporization and with a temperature-dependent one (Kirchhoff's law). Right: relative errors of the two approximations; the constant-enthalpy form overestimates the pressure by up to 37 % at 0 °C, the Kirchhoff-corrected form by less than 5 %](./plots/clausius-clapeyron-accuracy.py)
 
+:::
+
 许多正常液体（非极性、分子不缔合）在正常沸点的摩尔蒸发熵相近，**Trouton 规则**（[6.1.1](/6.1.1)）给出 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}/T_{\mathrm{b}} \approx 85$–$88\,\mathrm{J\,mol^{-1}\,K^{-1}}$，缺少数据时可以用来估计蒸发焓。它的含义是：在同样的蒸气密度（$1\,\mathrm{atm}$）下，由液体变为气体时分子获得的"位置自由"大致相同；水与醇的氢键使液体更有序，蒸发熵偏大。
 
 把式 (8.3) 中的蒸发焓换成升华焓，就得到固体的蒸气压方程。在**三相点**，冰的升华曲线与水的蒸发曲线压力相同，斜率之比为
@@ -228,6 +230,8 @@ $$
 \frac{\mathrm{d}T}{\mathrm{d}p} = \frac{T\,\Delta_{\mathrm{fus}}V_{\mathrm{m}}}{\Delta_{\mathrm{fus}}H_{\mathrm{m}}} = \frac{273.15 \times (-1.634 \times 10^{-6})}{6010}\,\mathrm{K\,Pa^{-1}} = -7.43 \times 10^{-8}\,\mathrm{K\,Pa^{-1}},
 $$
 即每增加 $1\,\mathrm{MPa}$（约 10 atm），熔点降低约 $0.074\,\mathrm{K}$；反过来，要使熔点降低 $1\,\mathrm{K}$ 需要约 $13.5\,\mathrm{MPa}$。
+
+:::
 
 "冰刀的高压使冰熔化、形成水膜"是流传很广的滑冰解释，但按例 8.3.2 的数字它不成立：体重约 $700\,\mathrm{N}$ 的人站在接触面积约 $1\,\mathrm{cm^2}$ 的冰刀上，压强约 $7\,\mathrm{MPa}$，熔点只降低约 $0.5\,\mathrm{K}$，解释不了 $-20\,{}^\circ\mathrm{C}$ 时冰面仍然很滑。现在认为起主要作用的是冰表面本身：表面上的水分子比体相中少一半氢键，在熔点以下很宽的温度范围内就有一层活动性很强的表面层（表面预熔），滑动时摩擦生热又会加强这一效应。表面层的结构（是否可以称为液膜、厚度多少）仍在研究中，2018–2021 年 Bonn 等人的摩擦与光谱实验表明，润滑来自高度活动的表面分子，而不是加压熔化产生的宏观水膜。
 

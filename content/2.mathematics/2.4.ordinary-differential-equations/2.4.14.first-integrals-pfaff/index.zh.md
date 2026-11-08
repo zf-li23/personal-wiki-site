@@ -44,6 +44,8 @@ $$
 $$
 可以直接用 (14.2) 验证。$\Phi$ 在平衡点 $(\gamma/\delta,\alpha/\beta)$ 处取严格最小值，等值线是围绕它的闭曲线，所以所有正解都是周期的（参见[系统生物学](/7.9.14#sec-14.2)与[生态学](/7.19)）。
 
+:::
+
 非自治方程组 $\boldsymbol{x}'=\boldsymbol{f}(t,\boldsymbol{x})$ 可以把 $t$ 当作第 $n+1$ 个未知函数（$t'=1$）化为自治方程组，首次积分相应地是 $\Phi(t,\boldsymbol{x})$，判别条件为 $\frac{\partial\Phi}{\partial t}+\sum_if_i\frac{\partial\Phi}{\partial x_i}=0$。
 
 ### 14.1.2. 独立的首次积分与求解
@@ -110,6 +112,8 @@ $$
 **例 14.2.1** 解 $x\dfrac{\partial u}{\partial x}+y\dfrac{\partial u}{\partial y}=0$（$x\ne0$）。
 
 **解** 特征方程组 $\frac{\mathrm{d}x}{x}=\frac{\mathrm{d}y}{y}$，首次积分 $y/x$，通解 $u=G(y/x)$：零次**齐次函数**。特征线是过原点的射线，解沿射线不变。
+
+:::
 
 对拟线性方程 $\sum_if_i(\boldsymbol{x},u)\frac{\partial u}{\partial x_i}=g(\boldsymbol{x},u)$，可以把 $u$ 也当作变量：若 $V(\boldsymbol{x},u)=0$ 隐式地给出解 $u$，则 $V$ 满足 $n+1$ 元齐次方程 $\sum_if_i\frac{\partial V}{\partial x_i}+g\frac{\partial V}{\partial u}=0$，相应的特征方程组为
 
@@ -237,6 +241,8 @@ $$
 |x_1|^{m_1}|x_2|^{m_2}\cdots|x_n|^{m_n}=C\quad(C>0).
 $$
 
+:::
+
 一般情形下完全可积的条件用外微分的语言表述最为简洁。记 $\omega=\sum_kM_k\,\mathrm{d}x_k$，可积条件为 $\omega\wedge\mathrm{d}\omega=0$，在坐标中即对所有 $i<j<k$，
 
 $$
@@ -302,6 +308,8 @@ $$
 z=-\frac{a^2+b^2}{s}+s=\frac1s.
 $$
 所以 $x^2+y^2+z^2=1$（$z>0$）：奇积分是上半单位球面。几何上，完全积分是所有到原点距离为 $1$、且原点位于其下方的平面（$z=ax+by+s$ 到原点的距离为 $s/\sqrt{1+a^2+b^2}=1$），它们的包络自然是单位球面。
+
+:::
 
 一般的一阶非线性偏微分方程也可以用特征线方法求解（Lagrange–Charpit 方法），完全积分与奇积分的理论在那里起核心作用，见 [2.5](/2.5)。
 

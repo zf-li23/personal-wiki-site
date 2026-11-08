@@ -1,7 +1,7 @@
 ---
 title: "Computer Systems: An Overview"
 description: "A brief history of computers and Moore's law; the von Neumann architecture, its five components and the instruction cycle; the layers of a computer system, the instruction set architecture and the microarchitecture; the seven great ideas of computer architecture; measuring performance: response time and throughput, CPU time and CPI, the limits of MIPS, benchmarks, the power wall and Amdahl's law."
-source_hash: 51d6e7ce2076
+source_hash: ff1a3dddf546
 ---
 
 Computer organization studies how the hardware of a computer executes programs: how the instruction set that programmers see is implemented by the arithmetic unit, the control unit, the memory and the input/output devices, and how to implement it faster. This chapter introduces the whole course and answers three questions: how computers evolved into today's structure; into which layers a computer system divides, from program to circuit, and where this course sits among them; and how to compare the speed of two computers objectively. The first two questions set up the framework used throughout the course. The third gives the yardstick for judging every design: CPU time is the product of the instruction count, the CPI and the clock cycle time. The next chapter, [4.10.2](/4.10.2), discusses the interface between hardware and software, the instruction set. Components at the digital-circuit level are covered in [4.9 Digital Logic Circuits](/4.9), and the programmer's viewpoint in [4.1.1](/4.1.1).
@@ -278,6 +278,8 @@ MIPS shares its name with the MIPS instruction set but is entirely unrelated to 
 
 The code from compiler 1 needs $5 + 2 + 3 = 10 \times 10^9$ cycles and runs in 2.5 s, with $7 \times 10^9 / (2.5 \times 10^6) = 2800$ MIPS; the code from compiler 2 needs $15 \times 10^9$ cycles and runs in 3.75 s, with $12 \times 10^9 / (3.75 \times 10^6) = 3200$ MIPS. Compiler 2 has the higher MIPS, yet its program is 50% slower: the extra instructions it generates are all simple class A instructions, which pull the average CPI down.
 
+:::
+
 FLOPS (**floating-point operations** per second), commonly used in scientific computing, has similar problems, but because it counts the operations that the program itself requires (independently of the instruction set), it remains comparable across different implementations of the same algorithm. The conclusion is that the only reliable measure of performance is the execution time of real programs.
 
 ### 1.4.4. Benchmarks
@@ -322,6 +324,8 @@ $$
 $$
 that is, the power falls to about half. Lowering the voltage is the most effective way to save energy, because power is proportional to the square of the voltage.
 
+:::
+
 In the era when Dennard scaling held, each process generation shrank the linear dimensions of transistors by a factor of $1/k$ ($k \approx \sqrt{2}$), the capacitance and voltage both shrank by $1/k$, and the switching speed rose by a factor of $k$. The dynamic power of each transistor then became $\frac{1}{k} \cdot \frac{1}{k^2} \cdot k = \frac{1}{k^2}$ of its former value, while the number of transistors per unit area grew by a factor of $k^2$, so the power density stayed constant. The frequency rose with every generation while the chip got no hotter, which underlay three decades of rapid frequency growth.
 
 Voltage cannot be lowered indefinitely: as it approaches the threshold voltage of the transistor, the transistor can no longer be switched on and off reliably, and lowering the threshold voltage makes the leakage current grow exponentially. Around 2005 the supply voltage stalled at about 1 V and Dennard scaling broke down. Raising the frequency further then means higher power density, while the heat a chip can dissipate (about a hundred watts with air cooling) is limited.
@@ -349,6 +353,8 @@ This is **Amdahl's law** ([4.4.7](/4.4.7#sec-7.4.4) uses it to analyze the speed
 **Example 1.4.6** A program runs for 100 s, of which multiplication takes 80 s. How much faster must multiplication become to make the program 4 times as fast? And 5 times as fast?
 
 Four times as fast means 25 s: $80/s + 20 = 25$, so $s = 16$. Five times as fast means 20 s: $80/s + 20 = 20$ has no solution, so it is impossible however fast the multiplier is, because the rest already takes 20 s.
+
+:::
 
 Two design principles follow. The first is "make the common case fast": spend effort on the part that accounts for a large fraction of the execution time. The second is to beware of the mistake of improving only one part of the system and expecting the overall performance to improve in proportion. A related common fallacy is that an idle computer uses almost no power: a server at 10% load still consumes a considerable fraction of its peak power, so energy-efficiency evaluations (such as SPECpower) measure at different load levels.
 

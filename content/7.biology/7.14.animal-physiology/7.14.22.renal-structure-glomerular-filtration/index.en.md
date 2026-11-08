@@ -1,7 +1,7 @@
 ---
 title: Renal Structure and Glomerular Filtration
 description: "The four classes of renal function; the bladder, the micturition reflex and its control by the brain; gross structure, vasculature, cortical and juxtamedullary nephrons and the juxtaglomerular apparatus; the four processes of urine formation; clearance, glomerular filtration rate (inulin, creatinine), renal plasma flow (PAH and extraction ratio) and filtration fraction with worked examples; net filtration pressure, the four Starling forces and filtration equilibrium; the filtration coefficient and the filtration barrier; the effects of afferent and efferent resistance on GFR and renal blood flow; neural, humoral and autoregulatory control (myogenic mechanism and tubuloglomerular feedback); evolution and comparison: protonephridia, metanephridia, Malpighian tubules and the diversity of vertebrate nephrons."
-source_hash: 6f77be19cfa8
+source_hash: 8b8aacd1d6ad
 ---
 
 Every day about $1000\,\mathrm{L}$ of plasma flows through the human kidneys, of which about $180\,\mathrm{L}$ is filtered into the renal tubules, and in the end only $1$–$1.5\,\mathrm{L}$ becomes urine. The kidney first filters out almost all small molecules without selection and then takes back what is needed; this design of "filter everything first, reclaim selectively afterward" lets it clear any substance that is not specifically reclaimed, including foreign compounds it has never encountered. This chapter deals with the first step of this design: the functions of the kidney (Section 22.1) and the structure of the urinary system and micturition (Section 22.2); the structure of the kidney, especially the nephron, the functional unit in which vessels and tubule are coupled (Section 22.3); the four processes of urine formation and the clearance used to quantify them (Section 22.4); and the physics (Section 22.5), determinants (Section 22.6) and regulation (Section 22.7) of glomerular filtration. How the tubules reabsorb and secrete is in Chapter 23, and the concentration of urine in Chapter 24. The Starling forces at capillaries were treated in [Chapter 15](/7.14.15) and are applied here to a special kind of capillary; the development of the kidney is in [7.5.25](/7.5.25).
@@ -151,6 +151,8 @@ where $H$ is the **hematocrit**. Normal RPF is about $650\,\mathrm{mL\,min^{-1}}
 
 In such calculations one should check that the result is reasonable: the filtration fraction cannot approach $100\%$, otherwise the blood in the efferent arteriole would lose almost all its plasma and could not flow; if urine PAH were only $6\,\mathrm{mg\,mL^{-1}}$, the calculation would give $\mathrm{RPF} = 160\,\mathrm{mL\,min^{-1}}$ and $\mathrm{FF} = 94\%$, indicating that the data are wrong.
 
+:::
+
 With GFR known, the clearance of any substance can be compared: $C_X < \mathrm{GFR}$ shows that it is net reabsorbed (such as $\ce{Na+}$ and urea), and $C_X > \mathrm{GFR}$ that it is net secreted (such as PAH). $C_X/\mathrm{GFR}$ equals the fractional excretion of $X$, the fraction of filtered $X$ that finally appears in the urine.
 
 ## 22.5. Glomerular Filtration
@@ -249,6 +251,8 @@ Humoral factors act mainly by constricting (lowering flow) or dilating (increasi
 **Autoregulation** ([Chapter 1](/7.14.1)) is most prominent in the kidney: when renal arterial pressure varies between about $80$ and $180\,\mathrm{mmHg}$ ($10.7$–$24\,\mathrm{kPa}$; the limits differ somewhat between measurements, the lower one about $75$–$80$ and the upper one about $160$–$180\,\mathrm{mmHg}$), renal blood flow and GFR remain essentially unchanged even when innervation has been removed (isolated perfused kidney or transplanted kidney). Its significance is to isolate excretion from fluctuations in blood pressure.
 
 **Example 22.7.1 (What If Autoregulation Is Lost?)** Normally arterial pressure is $100\,\mathrm{mmHg}$, $\mathrm{GFR} = 180\,\mathrm{L\,d^{-1}}$, tubular reabsorption is $178.5\,\mathrm{L\,d^{-1}}$ and urine volume $1.5\,\mathrm{L\,d^{-1}}$. Suppose there is no autoregulation and that a $25\%$ rise in blood pressure to $125\,\mathrm{mmHg}$ also raises GFR by $25\%$, to $225\,\mathrm{L\,d^{-1}}$; if reabsorption stays the same, urine volume would be $225 - 178.5 = 46.5\,\mathrm{L\,d^{-1}}$, 30 times normal. Since the plasma totals only about $3\,\mathrm{L}$, severe dehydration would develop within a few hours. In fact the change of GFR with blood pressure is limited to a small range by autoregulation, and the residual change in GFR is further partly offset by a corresponding change in tubular reabsorption (**glomerulotubular balance**, Chapter 23); the two layers of protection make urine volume very insensitive to short-term fluctuations in blood pressure. (In the model of Section 22.6 without autoregulation, the change in GFR is even larger than the change in blood pressure, because the net filtration pressure is only $P_{\mathrm{GC}}$ minus a nearly constant large number.)
+
+:::
 
 It should be pointed out that "insensitive" applies only to short-term fluctuations; long-term changes in blood pressure markedly alter the excretion of $\ce{Na+}$ and water through **pressure natriuresis**, which is the basis of the long-term regulation of blood pressure (Chapter 24).
 

@@ -1,7 +1,7 @@
 ---
 title: Photoperiodism and Florigen
 description: The discovery of photoperiodism (Garner and Allard and the Maryland Mammoth tobacco); the astronomical day-length formula and the annual course of day length at different latitudes; long-day, short-day, day-neutral and dual-day-length plants, qualitative and quantitative responses, the critical day length; the decisive role of the dark period, the critical night length, night breaks and red/far-red reversibility; photoperiodic induction and leaf perception; the hourglass model, Bünning's clock hypothesis and the external coincidence model, CO–FT in Arabidopsis and Hd1–Hd3a in rice with a numerical simulation; temperature sensing; florigen from grafting experiments to the FT protein; photoperiod and geographic distribution, introduction of crops, off-season breeding and control of flowering time
-source_hash: e0980bf5c785
+source_hash: bca7d4777ca0
 ---
 
 When a plant flowers determines whether it can pollinate and set seed in the most favorable season, and whether it flowers in synchrony with other individuals of its species so that outcrossing is possible. A plant can neither "read" a calendar nor consult a thermometer; the most reliable seasonal signal available to it is day length. At a given latitude the day length on a given date is the same every year, whereas temperature fluctuates strongly from year to year. This chapter discusses how plants measure day length and how the day-length signal measured in the leaf is converted into a command to flower at the shoot apex.
@@ -48,6 +48,8 @@ $$
 At the summer solstice $\delta = 23.44^\circ$. With the simplified formula: $\tan 39.9^\circ = 0.836$, $\tan 23.44^\circ = 0.433$, $\cos H_0 = -0.362$, $H_0 = 111.3^\circ$, and $N = 2 \times 111.3/15 = 14.8\ \mathrm{h}$. Including refraction and the radius of the solar disk ($h_0 = -0.833^\circ$) gives $15.0\ \mathrm{h}$, and including civil twilight ($h_0 = -6^\circ$) gives $16.1\ \mathrm{h}$. By the same method the day length at the winter solstice is $9.3\ \mathrm{h}$ (with twilight, $10.4\ \mathrm{h}$).
 
 Which of these values matters to plants? The light intensity required for photoperiodic responses is very low (many plants respond to a few $\mu\mathrm{mol\,m^{-2}\,s^{-1}}$, far below the light compensation point of photosynthesis), and part of the twilight is counted as light period, so the effective day length perceived by plants is usually $0.5$–$1\ \mathrm{h}$ longer than the astronomical day length. This difference must be kept in mind when critical day lengths measured in growth chambers are applied in the field.
+
+:::
 
 Equation (21.1) yields several regularities (Figure 1):
 
@@ -290,6 +292,8 @@ For example, soybean is a short-day plant: a southern soybean cultivar planted i
 **Example 21.7.1** A short-day soybean cultivar has a critical day length of 13.5 h (astronomical day length with $h_0 = -0.833^\circ$). Compare when the short-day condition is met after sowing in Harbin, Beijing and Haikou.
 
 Calculating day by day with Eqs. (21.1) and (21.2) (Figure 1): in Harbin day length at the summer solstice is 15.7 h and falls below 13.5 h around 28 August; in Beijing it is 15.0 h at the summer solstice and falls below 13.5 h around 21 August; in Haikou it is only 13.3 h at the summer solstice, shorter than the critical day length all year. This cultivar sown in spring in Harbin therefore starts to be induced only at the end of August, a week earlier in Beijing; in Haikou the seedlings begin to flower as soon as they pass the juvenile phase, vegetative growth is insufficient, and plants are small and yields very low. If twilight is considered to increase the effective day length by about 0.5–1 h, the dates when the short-day condition is met are delayed by a few days to a week or two at each place.
+
+:::
 
 In actual breeding, the expansion of soybean to low latitudes has depended on alleles of photoperiod insensitivity or a long juvenile phase: for example, loss of function of *E1* (a transcription factor that represses *FT* homologs) and mutation of *J* (a homolog of *Arabidopsis* *ELF3*; the "long juvenile" trait) allow soybean to obtain enough vegetative growth at low latitudes such as in Brazil (Lu et al., 2017). Photoperiod-insensitive alleles of wheat such as *Ppd-D1a* allow winter wheat to head on time at lower latitudes, and together with dwarfing genes they underlie the adaptation of Green Revolution cultivars to wide areas ([7.13.28](/7.13.28)).
 

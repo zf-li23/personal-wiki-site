@@ -1,7 +1,7 @@
 ---
 title: Electromagnetic Induction
 description: Faraday's law of induction and Lenz's law, flux linkage and induced charge; motional emf and the Lorentz force; the induced electric field, eddy currents, the betatron and the skin effect; mutual inductance, self-inductance and RL circuits; magnetic field energy and energy density; superconductivity and the Meissner effect.
-source_hash: 051e359e0ff6
+source_hash: 8ab502e80342
 ---
 
 After Ørsted discovered that an electric current produces a magnetic field, it was natural to ask about the inverse effect: can a magnetic field produce a current? After nearly a decade of searching, Faraday discovered electromagnetic induction in 1831: a steady magnetic field produces no current, but a changing magnetic flux does. Electromagnetic induction truly ties the electric and magnetic fields together, and it is the principle of generators, transformers, inductors and wireless charging. This chapter first gives Faraday's law and Lenz's law, which determines the direction, and then analyzes two mechanisms of the induced **electromotive force**: when a **conductor** moves in a magnetic field, the **non-electrostatic force** is the **Lorentz force** (motional emf, [5.3.7](/5.3.7)); when the conductor is at rest and the magnetic field changes, the non-electrostatic force comes from the induced electric field that the changing magnetic field excites in space. The latter is the first of Maxwell's equations ([5.3.10](/5.3.10)). Next we discuss induction in a circuit by itself and between circuits (self-inductance and mutual inductance), from which the energy of the magnetic field is derived; RL circuits and LC circuits correspond to first-order and second-order linear differential equations with constant coefficients, respectively ([2.4](/2.4)). Finally we give a brief introduction to superconductivity; Section 9.7 is optional.
@@ -194,6 +194,8 @@ $$
 M=\mu_0n_1n_2lS=\mu_0n_1n_2V.
 $$
 The self-inductances of the two coils (Section 9.5) are $L_1=\mu_0n_1^2V$ and $L_2=\mu_0n_2^2V$, so $M=\sqrt{L_1L_2}$. In general $M=k\sqrt{L_1L_2}$, where $0\le k\le1$ is called the coupling coefficient, and $k=1$ means that all the flux of one coil passes through the other coil (no leakage flux).
+
+:::
 
 Transformers, instrument transformers and wireless charging all use mutual inductance: in an ideal transformer the two coils are wound on the same closed iron core, the flux per turn is the same, and the ratio of the voltages on the two sides equals the ratio of the numbers of turns.
 

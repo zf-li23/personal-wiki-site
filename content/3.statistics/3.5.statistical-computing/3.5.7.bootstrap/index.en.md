@@ -11,6 +11,8 @@ Statistical inference uses the information in a sample to learn about the whole 
 
 **Example 7.1.1** The US Census states that $27.5\%$ of US adults aged at least 25 have a bachelor's degree or higher. In a random sample of $200$ such residents, $58$ have a degree. The population parameter is $p=0.275$ and the sample statistic is $\hat p=58/200=0.29$. Drawing $10\,000$ samples of size $200$ from the population and computing $\hat p$ for each gives an approximation of the **sampling distribution** of $\hat p$: the distribution of the statistic over samples of the same size from the same population.
 
+:::
+
 The **standard error** $\operatorname{se}(\hat\theta)$ of a statistic is the standard deviation of its sampling distribution, a typical distance between the statistic and the parameter. A small standard error means that the statistic varies little from sample to sample. The sample size matters: as $n$ grows the variability decreases and the statistic tends to be closer to the parameter.
 
 An interval estimate has the form "point estimate $\pm$ margin of error"; the margin of error reflects the precision of the point estimate. A **confidence interval** is computed from the data by a method that captures the parameter for a specified proportion of all samples, the **confidence level**. The parameter is fixed; it is the interval that varies. If the sampling distribution is roughly symmetric and bell-shaped, a $95\%$ interval is approximately
@@ -111,6 +113,8 @@ whereas $\mathbb{P}(\hat\theta=\theta)=0$ and $n(\theta-X_{(n)})/\theta$ converg
 
 ![Bootstrap distributions for one sample of size 50 from U(0, 1). The bootstrap means (left) form a smooth bell-shaped histogram; the bootstrap maxima (right) take only the few largest observed values, with about 63% of the mass at the sample maximum itself.](./plots/bootstrap-mean-vs-max.py)
 
+:::
+
 How to diagnose a clumpy bootstrap plot: a large $n$ does not automatically fix the standard bootstrap.
 
 - First ask whether the functional is Hadamard differentiable at the population level. If not (maximum, minimum, Lasso), the standard bootstrap fails at the root.
@@ -162,6 +166,8 @@ $$
 The bias-corrected estimate is $\hat\theta-\widehat{\operatorname{Bias}}(\hat\theta)=2\hat\theta-\bar\theta^*$. The correction adds variability, so it is worthwhile only when the bias is large compared with the standard error; a common rule of thumb ignores a bias smaller than $0.25\,\widehat{\operatorname{se}}$. Any of the intervals below can likewise be shifted by $\widehat{\operatorname{Bias}}(\hat\theta)$.
 
 **Example 7.3.2** For the law school data the bootstrap bias of $r$ is small (about $-0.005$ to $-0.01$, depending on the run), negligible against the standard error $0.13$.
+
+:::
 
 The data `patch` (package `bootstrap`) contain measurements of a hormone in the blood of $8$ subjects after wearing a placebo patch, an old patch and a new patch. The parameter of interest is
 
@@ -298,6 +304,8 @@ n <- length(x); B <- 1000
 means <- replicate(B, mean(rnorm(n, mean = mean(x), sd = sd(x))))   # simulate from N(xbar, s^2)
 quantile(means, c(0.025, 0.975))
 ```
+
+:::
 
 Knowing the family $P_{\boldsymbol\theta}$ is a strong assumption and rarely justified in practice, so the most common form is the nonparametric bootstrap. The parametric bootstrap is useful when the model is trusted, for small samples, and when the statistic has a discrete or degenerate nonparametric bootstrap distribution.
 

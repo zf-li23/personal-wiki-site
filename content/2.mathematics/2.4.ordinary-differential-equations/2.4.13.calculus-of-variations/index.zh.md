@@ -187,6 +187,8 @@ F_{\varphi'}=\frac{R\,\varphi'\sin^2\theta}{\sqrt{1+\varphi'^2\sin^2\theta}}=RC.
 $$
 由球面的对称性，可以选取坐标使起点 $A$ 是北极 $\theta=0$。由于对任意实数 $u$ 都有 $\Big|\dfrac{u\sin^2\theta}{\sqrt{1+u^2\sin^2\theta}}\Big|\le|\sin\theta|$，令 $\theta\to0^+$ 得 $C=0$，从而 $\varphi'\equiv0$，$\varphi=\varphi_0$ 为常数：曲线是经线 $x=R\sin\theta\cos\varphi_0$，$y=R\sin\theta\sin\varphi_0$，$z=R\cos\theta$，即过 $A$、$B$ 和球心的平面与球面的交线——大圆的一段。若不把 $A$ 取为极点，$C$ 一般不为零，得到的仍是大圆，只是方程较复杂。
 
+:::
+
 这样的"局部最短线"称为测地线（geodesic）。航空公司的远程航线沿大圆飞行，在墨卡托地图上看起来是弯曲的，原因就在这里。
 
 ## 13.4. 推广

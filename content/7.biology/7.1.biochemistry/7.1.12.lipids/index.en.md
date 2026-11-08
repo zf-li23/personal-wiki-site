@@ -84,6 +84,8 @@ Fat has two advantages over polysaccharides as a fuel store, and both follow fro
 
 ![Fuel reserves. A: energy released on complete oxidation per gram of stored material; because glycogen is stored with about 2 g of water per gram, hydrated glycogen yields only about 6 kJ per gram of stored mass, against 37 kJ for anhydrous triacylglycerol. B: the fuel reserves of a 70 kg adult (logarithmic scale) and the time each would last at a resting expenditure of 8000 kJ per day.](./plots/fuel-reserves.py)
 
+:::
+
 Glycogen has the opposite advantages: it can be mobilized very fast, its glucose can be used without oxygen (**glycolysis**, 7.1.18), and the brain can use glucose but not fatty acids; the two stores therefore complement each other (7.1.29). In many animals subcutaneous fat also provides thermal insulation (seals, whales and penguins) and, in hibernating mammals, months of fuel.
 
 ### 12.3.3. Waxes

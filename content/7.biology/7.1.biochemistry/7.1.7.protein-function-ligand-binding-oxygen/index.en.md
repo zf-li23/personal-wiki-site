@@ -44,6 +44,8 @@ The curve is a rectangular hyperbola with horizontal asymptote $\theta = 1$ (and
 
 **Example 7.1.1** A protein has $K_\mathrm{d} = 2.0\ \mu\mathrm{M}$. The free ligand concentration needed for $\theta = 0.6$ is $[\mathrm{L}] = 0.6 \times 2.0\ \mu\mathrm{M}/0.4 = 3.0\ \mu\mathrm{M}$.
 
+:::
+
 Formula 7.1.1 assumes that binding does not appreciably deplete the free ligand, which holds when the total ligand concentration greatly exceeds the concentration of sites, as for most ligands in cells. When the protein concentration $[\mathrm{P}]_\mathrm{T}$ is comparable to $K_\mathrm{d}$ (typical in titrations of tight binders), the mass balances lead to a quadratic,
 
 $$

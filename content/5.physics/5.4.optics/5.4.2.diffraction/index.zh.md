@@ -198,6 +198,8 @@ $$
 
 **解** 有 $N-1=3$ 条暗纹，对应 $k=0$，$m=1,2,3$：$\sin\theta=\frac{\lambda}{4d},\frac{2\lambda}{4d},\frac{3\lambda}{4d}$，相邻缝的相位差 $\Delta\varphi=\frac\pi2,\pi,\frac{3\pi}2$。用振幅矢量图看，四个矢量依次转过 $90^\circ$、$180^\circ$、$270^\circ$，分别构成正方形、两两反向的折线和反向绕行的正方形，合矢量都为零。两条暗纹之间有 $N-2=2$ 个次极大。
 
+:::
+
 主极大的半角宽 $\Delta\theta$ 定义为主极大中心与相邻第一条暗纹的衍射角之差。$k$ 级主极大满足 $d\sin\theta_k=k\lambda$，相邻暗纹满足 $d\sin(\theta_k+\Delta\theta)=k\lambda+\lambda/N$，两式相减，并利用 $\Delta\theta$ 很小，$\sin(\theta_k+\Delta\theta)-\sin\theta_k\approx\cos\theta_k\,\Delta\theta$，得
 
 $$

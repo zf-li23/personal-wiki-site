@@ -177,6 +177,8 @@ F = \sum m(1, 3, 6, 7) = \prod M(0, 2, 4, 5), \qquad \overline{F} = \sum m(0, 2,
 $$
 用代数方法得到同样的结果：$AB = AB(C + \overline{C}) = ABC + AB\overline{C}$，$\overline{A}C = \overline{A}BC + \overline{A}\,\overline{B}C$。
 
+:::
+
 标准形式唯一，适合判断两个函数是否相等，但通常很长：$n$ 变量的函数可能需要多达 $2^{n-1}$ 个最小项（例如 $n$ 变量的奇偶函数），因此需要化简。
 
 ## 2.4. 公式法化简
@@ -208,6 +210,8 @@ F &= A\overline{B} + B\overline{C} + \overline{B}C(A + \overline{A}) + \overline
 \end{aligned}
 $$
 换一种配项方式还可以得到 $F = A\overline{C} + \overline{B}C + \overline{A}B$，同样是三项、每项两个变量。两个结果都是最简与或式，这说明最简式不唯一，也说明公式法依赖技巧、难以确认结果已经最简。
+
+:::
 
 最简或与式可以对偶地化简：例如 $(A + B)(A + \overline{B})(B + C) = A(B + C)$。也可以先求 $\overline{F}$ 的最简与或式，再用反演定理得到 $F$ 的最简或与式。
 
@@ -250,6 +254,8 @@ F = \overline{A}B\overline{C} + \overline{A}CD + A\overline{C}D + ABC .
 $$
 "先圈最大的块"只是寻找素蕴涵项的经验，选择时应从本质素蕴涵项出发。
 
+:::
+
 由 $0$ 可以求反函数与或与式：在卡诺图上圈 $0$，按同样的规则得到 $\overline{F}$ 的最简与或式；再取反（反演定理）即得 $F$ 的最简或与式。例 2.3.1 的 $F = \sum m(1,3,6,7)$ 中，$0$ 位于 $m_0, m_2, m_4, m_5$，圈出 $\overline{A}\,\overline{C}$（$m_0, m_2$）与 $A\overline{B}$（$m_4, m_5$），所以 $\overline{F} = \overline{A}\,\overline{C} + A\overline{B}$，$F = (A + C)(\overline{A} + B)$。
 
 ### 2.5.3. 无关项
@@ -264,6 +270,8 @@ $$
 F = \sum m(5, 6, 7, 8, 9) + \sum d(10, 11, 12, 13, 14, 15).
 $$
 如右图，把无关项当作 $1$，可以圈出 $8$ 格的块 $A$ 和两个 $4$ 格的块 $BD$、$BC$：$F = A + BD + BC$。若不利用无关项，最简式是 $A\overline{B}\,\overline{C} + \overline{A}BD + \overline{A}BC$，每个与门都多了输入。
+
+:::
 
 卡诺图适用于不超过 $4$ 个变量的函数；$5$、$6$ 个变量时要用两张或四张四变量图叠起来看，相邻关系不再直观，更多的变量只能交给计算机。多输出函数（同一组输入有多个输出）化简时，还要尽量找出可以被多个输出共享的乘积项；单个输出可能因此不是最简，但整个电路最省。这类问题由下节的方法和逻辑综合工具处理。
 

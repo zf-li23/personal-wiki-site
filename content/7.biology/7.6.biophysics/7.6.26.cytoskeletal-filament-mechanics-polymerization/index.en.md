@@ -36,6 +36,8 @@ Stretching by a strain $\varepsilon$ costs $\frac12 EA\varepsilon^2 L$ for a cro
 | Flexural rigidity $EI$ | $\approx 7\times10^{-26}\,\mathrm{N\,m^2}$ ($0.07\,\mathrm{pN\,\mu m^2}$) | $\approx 2.6\times10^{-23}\,\mathrm{N\,m^2}$ ($26\,\mathrm{pN\,\mu m^2}$) | $\sim 4\times10^{-27}\,\mathrm{N\,m^2}$ |
 | **Persistence length** $EI/k_{\mathrm{B}}T$ | $10$–$17\,\mu\mathrm{m}$ | $1$–$6\,\mathrm{mm}$ | $0.5$–$3\,\mu\mathrm{m}$ |
 
+:::
+
 With $\ell_{\mathrm{p}} = EI/k_{\mathrm{B}}T$, these rigidities are the persistence lengths of [Definition 15.3.1](/7.3.15#def-15.3.1) in 7.3.15 and of the **worm-like chain** of [7.6.21](/7.6.21#sec-21.3). At the scale of a cell, $10\,\mu\mathrm{m}$, a microtubule is a rigid rod, an actin filament a semiflexible polymer and an intermediate filament a flexible rope: strong in tension, useless in compression.
 
 ### 26.1.2. Stiffness of Filaments in Cells
@@ -143,6 +145,8 @@ $$
 where $a$ is the length added per subunit. At steady state ($c = C_{\mathrm{c}}$) the mean is constant but the spread keeps growing, and lengths diffuse.
 
 **Example 26.3.1 (Equilibrium is too slow)** How long would an equilibrium filament take to change its length by $1\,\mu\mathrm{m}$ by fluctuations? At $c = C_{\mathrm{c}}$, $D_L = a^2k_{\mathrm{off}}$ per end. For actin, $a = 2.7\,\mathrm{nm}$ and $k_{\mathrm{off}} \approx 1\,\mathrm{s^{-1}}$ at both ends give $D_L \approx 2 \times 7.3\,\mathrm{nm^2\,s^{-1}}$, and $t = L^2/2D_L = 10^6/29\,\mathrm{s} \approx 10\,\mathrm{h}$. For a microtubule ($k_{\mathrm{on}} = 5\,\mu\mathrm{M^{-1}\,s^{-1}}$ per protofilament end, $10\,\mu\mathrm{M}$ **tubulin**, $a = 0.62\,\mathrm{nm}$), $D_L \approx 18\,\mathrm{nm^2\,s^{-1}}$ and the length wanders by only $\sqrt{2D_Lt} \approx 46\,\mathrm{nm}$ in a minute. In cells, filaments grow and shrink by micrometers in seconds to minutes and their subunits turn over in minutes. Equilibrium polymerization cannot do this; nucleotide hydrolysis does.
+
+:::
 
 ![Equilibrium polymers and seeded growth (Theorem 26.3.1, Formula 26.3.1). A: mean length of polymers against total subunit concentration in units of C_c, for a single-stranded polymer (σ = 1) and for nucleation penalties σ = 10⁻³ and 10⁻⁵; dashed, Eq. (26.6). B: fraction of subunits in polymers: a small σ produces a sharp critical concentration. C: growth of 50 seeded actin filaments (plus-end rate constants 11.6 µM⁻¹ s⁻¹ and 1.4 s⁻¹, 2 µM actin, 1 nM seeds) simulated with the Gillespie algorithm (gray: five filaments; red: the mean) and the rate equation with depletion (dashed); once the free actin has fallen to C_c the mean stops growing while individual lengths keep diffusing](./plots/equilibrium-polymer.py)
 

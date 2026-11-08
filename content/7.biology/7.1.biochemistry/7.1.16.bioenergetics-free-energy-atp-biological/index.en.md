@@ -74,6 +74,8 @@ The two standard states differ only for reactions in which $\ce{H+}$ (or $\ce{Mg
 
 **Example 16.2.1** Phosphoglucomutase interconverts glucose 1-phosphate and glucose 6-phosphate. Starting from 20 mM glucose 1-phosphate at pH 7 and $25\,^\circ\mathrm{C}$, the equilibrium mixture contains 1.0 mM glucose 1-phosphate and 19 mM glucose 6-phosphate. Then $K' = 19$ and $\Delta_{\mathrm{r}}G'^{\circ} = -(2.479\,\mathrm{kJ\,mol^{-1}})\ln 19 = -7.3\,\mathrm{kJ\,mol^{-1}}$: formation of glucose 6-phosphate is favorable, and the reverse reaction has $+7.3\,\mathrm{kJ\,mol^{-1}}$.
 
+:::
+
 A table of $\Delta_{\mathrm{r}}G'^{\circ}$ values shows a pattern that recurs throughout metabolism (values from Lehninger 8e, Table 13-4):
 
 | Reaction type | Example | $\Delta_{\mathrm{r}}G'^{\circ}/(\mathrm{kJ\,mol^{-1}})$ |
@@ -155,6 +157,8 @@ These are lower limits. Much of the ADP in a cell is bound to proteins, and the 
 The equilibrium of ATP hydrolysis lies very far to the side of ADP: with $K' \approx 1.4 \times 10^{5}\,\mathrm{M}$ at $37\,^\circ\mathrm{C}$ and 1.65 mM $\mathrm{P_i}$, equilibrium would be reached at [ATP]/[ADP] $\approx 10^{-8}$, whereas the erythrocyte maintains a ratio of 9. The cell is therefore displaced from equilibrium by a factor of about $10^{9}$, and this displacement, not the chemistry of ATP alone, is what makes ATP useful. If the ATP level drops, not only is there less fuel, the fuel itself loses its strength, because $\Delta G_{\mathrm{p}}$ becomes less negative. Much of the regulation described in Part II exists to keep the ratio [ATP]/([ADP][$\mathrm{P_i}$]) high (7.1.17).
 
 ![The phosphorylation potential. A: actual Gibbs energy of ATP hydrolysis at 37 °C against the mass-action ratio Q = [ADP][Pᵢ]/[ATP] (logarithmic scale); the line meets zero at equilibrium (Q = K′ ≈ 1.4 × 10⁵ M), and the points mark the ratios computed from the total nucleotide concentrations of four cell types, all between −46 and −53 kJ mol⁻¹, far from equilibrium. The standard value, −30.5 kJ mol⁻¹, corresponds to Q = 1 M. B: phosphorylation potential of the same cells and of resting muscle with the estimated free ADP concentration (25 µM), compared with the standard value](./plots/atp-hydrolysis-dg.py)
+
+:::
 
 ATP is not a storage form of energy. A resting adult turns over roughly 40 kg of ATP per day (of the order of the body mass), and during strenuous exercise several times more, while the amount of ATP present in the body at any moment is only of the order of 100 g; a given ATP molecule is consumed within about a minute of its formation. The concentration of ATP stays constant because its synthesis matches its consumption, a **dynamic steady state**. Longer-term stores are glycogen and fat, and in muscle the short-term buffer phosphocreatine (16.3.5).
 
@@ -306,6 +310,8 @@ with the **Faraday constant** $F = 96.485\,\mathrm{kJ\,V^{-1}\,mol^{-1}}$ (the r
 **Example 16.4.2** The span from NADH to $\ce{O2}$ is the largest in aerobic metabolism: $\Delta E'^{\circ} = 0.816 - (-0.320) = 1.136\,\mathrm{V}$, so NADH + $\ce{H+}$ + $\tfrac12\ce{O2}$ → $\ce{NAD+}$ + $\ce{H2O}$ has $\Delta_{\mathrm{r}}G'^{\circ} = -2 \times 96.5 \times 1.136 = -219\,\mathrm{kJ\,mol^{-1}}$, enough in principle for several ATP. The respiratory chain releases this free energy in steps between carriers of increasing potential (NADH → flavin → ubiquinone → cytochromes → $\ce{O2}$), each step large enough to pump protons (7.1.23).
 
 ![The redox tower. Standard transformed reduction potentials E′° of biologically important redox pairs at pH 7 (left axis), with strong reductants at the bottom and strong oxidants at the top; electrons flow spontaneously upward. The right axis gives the corresponding standard Gibbs energy for the transfer of two electrons to O₂, ΔrG′° = −2F(0.816 V − E′°). The arrow from NAD⁺/NADH to O₂/H₂O spans 1.136 V, or −219 kJ mol⁻¹; the respiratory chain (7.1.23) divides this drop among carriers of intermediate potential (FMN, ubiquinone, cytochromes)](./plots/redox-tower.py)
+
+:::
 
 Complete oxidation of glucose, glucose + 6 $\ce{O2}$ → 6 $\ce{CO2}$ + 6 $\ce{H2O}$, transfers 24 electrons and has $\Delta_{\mathrm{r}}G'^{\circ} = -2840\,\mathrm{kJ\,mol^{-1}}$, far more than the 50–60 kJ needed to make one ATP in a cell. Cells do not oxidize glucose in one step; they remove its electrons in a series of dehydrogenations, each of which releases free energy of the same order as that needed for ATP synthesis, and channel the electrons into a few universal carriers.
 

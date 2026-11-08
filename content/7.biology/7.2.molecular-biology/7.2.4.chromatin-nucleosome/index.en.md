@@ -69,6 +69,8 @@ In the early 1970s chromatin was imagined as DNA coated more or less uniformly w
 
 **Example 4.2.4 (The core particle)** Prolonged MNase digestion does not end with a 200 bp unit: the linker is trimmed further until a stable particle containing the octamer and about $146$–$147$ bp of DNA remains, with a transient pause at about $167$ bp while H1 is still bound. Neutron scattering, which can distinguish protein from DNA by contrast matching in $\mathrm{H_2O}$/$\mathrm{D_2O}$ mixtures, showed that the DNA lies outside the protein. Crystal structures at $7$ Å (Richmond, Klug and colleagues, 1984) and $2.8$ Å (Luger et al., 1997) confirmed the 1.65-turn left-handed superhelix.
 
+:::
+
 Kornberg's 1974 proposal described the whole repeat: about 200 bp of DNA, an octamer of the four core histones and one H1. Van Holde and colleagues emphasized the roughly 140 bp nuclease-resistant core containing only the octamer, with H1 associated with the linker. Both were right about different objects, and the vocabulary of Definition 4.1.3 (nucleosome, core particle, linker, chromatosome) records the resolution of the debate.
 
 ## 4.3. Higher-Order Structure
@@ -182,6 +184,8 @@ $$
 \frac{6.2 \times 10^9\ \mathrm{bp}}{200\ \mathrm{bp}} \approx 3 \times 10^7
 $$
 nucleosomes. Their histone mass, $3.1 \times 10^7 \times 109\,\mathrm{kDa}/N_{\mathrm{A}} \approx 5.6\,\mathrm{pg}$, matches the DNA mass, $6.2 \times 10^9 \times 650\,\mathrm{Da}/N_{\mathrm{A}} \approx 6.7\,\mathrm{pg}$, as Example 4.2.3 requires. In an S phase of about $8$ hours the cell must make the core histones for half of these octamers (the other half are recycled), about $1.2 \times 10^8$ histone molecules, or some $4000$ per second. This demand explains the many copies of the replication-dependent histone genes, their coupling to DNA synthesis, and their short, unspliced, rapidly processed mRNAs.
+
+:::
 
 How tightly is DNA held on the octamer? Single-molecule force spectroscopy answers this directly. A single nucleosome tethered between a surface and a bead in an optical trap is pulled with force $F$; when the outer part of the wrapped DNA comes off, the tether lengthens by $\Delta z$. Treat the nucleosome as a two-state system, closed and open, with free-energy difference $\Delta G = G_{\mathrm{open}} - G_{\mathrm{closed}} > 0$ at zero force. The force does work $F\Delta z$ on opening, so the free-energy difference becomes $\Delta G - F\Delta z$, and the **Boltzmann distribution** gives the following.
 

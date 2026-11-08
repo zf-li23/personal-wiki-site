@@ -1,7 +1,7 @@
 ---
 title: The d-Block and f-Block Elements
 description: Electron configurations, physical properties, the lanthanide contraction, oxidation states and colors of the d-block elements; redox chemistry of the titanium, vanadium, chromium and manganese groups and the iron triad (Frost diagrams, the chromate–dichromate equilibrium, potassium permanganate); chemistry and ion identification of copper, silver, zinc and mercury; valence structure, oxidation states, colors, magnetism and compounds of the lanthanoids and rare-earth elements.
-source_hash: 1e93bc1d9a01
+source_hash: b6f4577b7e63
 ---
 
 The d-block elements (Groups 3–12) form the large block of metals in the middle of the periodic table, and the f-block elements (the lanthanoids and actinoids) are the two rows inserted into the sixth and seventh periods. Unlike those of the s and p blocks, their additional electrons enter the penultimate $(n-1)\mathrm{d}$ subshell or the antepenultimate $(n-2)\mathrm{f}$ subshell while the outermost shell hardly changes, so the properties change much more gradually across a period; the d and f electrons also bring properties rare among the main-group elements: several oxidation states and a rich redox chemistry, colored compounds, paramagnetism and a very strong tendency to form complexes. This chapter first discusses the general features of the d block (Section 15.1), then introduces the representative elements of the first transition series group by group (Sections 15.2–15.8), and finally the lanthanoids (Section 15.9). Three groups of tools from the earlier chapters are used here extensively: crystal field theory of complexes ([6.1.5](/6.1.5)) explains colors, magnetism and the stability of certain oxidation states; Latimer and Frost diagrams ([6.1.12](/6.1.12)) summarize redox behavior; and coordination and precipitation equilibria ([6.1.9](/6.1.9), [6.1.10](/6.1.10)) explain the identification and separation of ions. The magnetism of the lanthanoids requires the term symbols of atoms ([5.5.4](/5.5.4)). The bioinorganic chemistry of metalloenzymes, hemoglobin and so on is covered in chemical biology ([6.6](/6.6)) and biochemistry ([7.1](/7.1)), and the bonding theories of coordination compounds in [Structural Chemistry](/6.2).
@@ -107,6 +107,8 @@ When zinc granules are added to an acidic solution of a vanadate, the color chan
 
 Solution. $E^\circ(\ce{Fe^3+}/\ce{Fe^2+}) = 0.771\,\mathrm{V}$ lies between $E^\circ(\ce{VO2+}/\ce{VO^2+}) = 0.991\,\mathrm{V}$ and $E^\circ(\ce{VO^2+}/\ce{V^3+}) = 0.337\,\mathrm{V}$, so $\ce{VO2+ + Fe^2+ + 2H+ -> VO^2+ + Fe^3+ + H2O}$ can proceed, whereas $\ce{VO^2+}$ is not reduced further. The reaction stops quantitatively at V(IV), so vanadium can be titrated with a standard $\ce{Fe^2+}$ solution (or V(IV) can be titrated back to V(V) with $\ce{KMnO4}$); this is the redox volumetric analysis of vanadium ([Analytical Chemistry](/6.4)). Oxalic acid acts in the same way: $\ce{2VO2+ + H2C2O4 + 2H+ ->[\Delta] 2VO^2+ + 2CO2 ^ + 2H2O}$. $\square$
 
+:::
+
 Vanadium pentoxide $\ce{V2O5}$ is an orange-red powder ($\mathrm{d}^0$, the color arises from charge transfer), toxic and slightly soluble in water. V(V) has no d electrons and $\ce{V2O5}$ is a **diamagnetic substance**, whereas VO, $\ce{V2O3}$ and $\ce{VO2}$ have unpaired d electrons and are **paramagnetic substances**. $\ce{V2O5}$ is an amphoteric oxide that is mainly acidic and has some oxidizing power:
 
 $$
@@ -184,6 +186,8 @@ From the Latimer diagram, Cr(III) is very difficult to oxidize in acid ($E^\circ
 | d electrons of $\ce{M^3+}$ | $\mathrm{d}^2$ | $\mathrm{d}^3$ | $\mathrm{d}^4$ | $\mathrm{d}^5$ | $\mathrm{d}^6$ |
 
 Solution. The more negative $E^\circ$ is, the more difficult it is to reduce $\ce{M^3+}$. The value for $\ce{Cr^3+}$ is the most negative, so it gains electrons with the greatest difficulty; at the same time, oxidizing Cr(III) to Cr(VI) in acid also requires $1.36\,\mathrm{V}$. The reason is that the $\mathrm{d}^3$ configuration of $\ce{Cr^3+}$ is $t_{2g}^3$ in an octahedral field: each of the three electrons occupies one $t_{2g}$ orbital, and the **crystal field stabilization energy** is $-1.2\Delta_{\mathrm{o}}$ ($-12\,Dq$), the largest of the high-spin configurations (the same as for $\mathrm{d}^8$). Adding an electron requires entering an $e_g$ orbital and removing one loses stabilization energy, so $\ce{Cr^3+}$ is particularly stable; it is also kinetically inert, with very slow ligand exchange ([6.1.5](/6.1.5#sec-5.5.6)). In contrast, $\ce{Ti^3+}$ and $\ce{V^3+}$ lose electrons easily and are reducing agents; $\ce{Mn^3+}$ (becoming the half-filled $\mathrm{d}^5$ is very favorable) and $\ce{Co^3+}$ gain electrons easily and are oxidizing agents, and $\ce{Mn^3+}$ and $\ce{Co^3+}$ can even oxidize water. $\square$
+
+:::
 
 A mixture of saturated potassium dichromate solution and concentrated sulfuric acid is called chromic acid cleaning solution; it is strongly oxidizing and was formerly used to clean glassware in laboratories. Cr(VI) compounds are toxic and carcinogenic and pollute the environment, so chromic acid cleaning solution is no longer recommended; alkaline cleaning solutions, persulfate cleaning solutions or special detergents are used instead, and wastewater containing Cr(VI) must first be reduced to Cr(III) and then precipitated.
 
@@ -504,6 +508,8 @@ $$
 Of the nine electrons of $\ce{Dy^3+}$, seven with spin up fill the seven orbitals and the other two with spin down occupy $m_l = 3, 2$: $S = \frac{5}{2}$ and $L = 5$ (H); the subshell is more than half full, so $J = L + S = \frac{15}{2}$, the ground term is $^6\mathrm{H}_{15/2}$, $g_J = \frac{4}{3}$ and $\mu_{\mathrm{eff}} = \frac{4}{3}\sqrt{63.75}\,\mu_{\mathrm{B}} = 10.65\,\mu_{\mathrm{B}}$.
 
 The experimental values are about $3.5$ and $10.5\,\mu_{\mathrm{B}}$, respectively, in agreement with the calculated ones; the spin-only formula gives $\sqrt{3\cdot5} = 3.87$ and $\sqrt{5\cdot7} = 5.92\,\mu_{\mathrm{B}}$, almost a factor of two too small for $\ce{Dy^3+}$. $\square$
+
+:::
 
 Panel c of the figure above shows the calculated and experimental values for all the $\ce{Ln^3+}$ ions: the magnetic moment has two peaks as a function of the number of 4f electrons, and the maximum is not at $\ce{Gd^3+}$, which has the most unpaired electrons ($7.9\,\mu_{\mathrm{B}}$, $L = 0$), but at $\ce{Dy^3+}$ and $\ce{Ho^3+}$ (about $10.6\,\mu_{\mathrm{B}}$), where the orbital and spin magnetic moments add; in the first half $J = L - S$ and the two partly cancel. The experimental values for $\ce{Sm^3+}$ and $\ce{Eu^3+}$ deviate from the calculated ones (the ground state $^7\mathrm{F}_0$ of $\ce{Eu^3+}$ has zero moment, whereas about $3.4\,\mu_{\mathrm{B}}$ is observed) because the first excited $J$ levels lie so close to the ground state that they are appreciably populated at room temperature.
 

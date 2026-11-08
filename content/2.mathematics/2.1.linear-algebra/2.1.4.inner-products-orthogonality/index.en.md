@@ -1,6 +1,6 @@
 ---
 title: Inner Products and Orthogonality
-source_hash: da411057596d
+source_hash: d0d17b09e003
 ---
 
 The first three chapters used only the linear operations on vectors: whether the system $A\boldsymbol{x} = \boldsymbol{b}$ is solvable and how large its solution set is are both answered by the **rank** and the four fundamental subspaces. When $\boldsymbol{b} \notin \mathcal{R}(A)$ and the system has no solution, however, we still want the $\boldsymbol{x}$ that comes "closest", and for that we need to measure lengths and angles. This chapter introduces the inner product on $\mathbb{R}^n$, uses it to define length, angle and orthogonality, and then follows a single theme, "reduce the problem to the orthogonal case": orthonormal bases make coordinates a matter of inner products; Gram–Schmidt orthogonalization turns any basis into an orthonormal one, and in matrix form it is the QR decomposition; orthogonal complements and orthogonal projections give a geometric description of "best approximation"; finally, we solve least squares problems by the normal equations or by the QR decomposition and apply them to data fitting.
@@ -20,6 +20,8 @@ Geometrically, we drop a perpendicular from $\boldsymbol{b}$ to the line $\opera
 $$
 \hat{x} = \frac{\boldsymbol{a}^{\mathsf T}\boldsymbol{b}}{\boldsymbol{a}^{\mathsf T}\boldsymbol{a}} = \frac{8}{5}, \qquad \boldsymbol{r} = \boldsymbol{b} - \frac{\boldsymbol{a}^{\mathsf T}\boldsymbol{b}}{\boldsymbol{a}^{\mathsf T}\boldsymbol{a}}\boldsymbol{a} = \frac{6}{5}\begin{bmatrix} -1 \\ 2 \end{bmatrix}, \qquad \|\boldsymbol{r}\| = \frac{6}{\sqrt{5}}.
 $$
+
+:::
 
 Both "length" and "perpendicular" in this example can be expressed through $\boldsymbol{a}^{\mathsf T}\boldsymbol{b}$. We now generalize this to $\mathbb{R}^n$.
 

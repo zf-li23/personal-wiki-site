@@ -1,6 +1,6 @@
 ---
 title: Determinants
-source_hash: 72b943932395
+source_hash: de3a8c8980bf
 ---
 
 The determinant assigns a number to a square matrix. It has two equally important interpretations: the signed volume of the parallelepiped whose edges are the columns of the matrix, and the factor by which the corresponding linear transformation scales volumes. Rather than starting from an expansion formula, this chapter abstracts three axioms from signed area (multilinearity in the columns, antisymmetry in the columns, normalization), derives all properties of the determinant and its uniqueness from the axioms, and then uses an expansion formula to prove that a function satisfying the axioms actually exists.
@@ -49,6 +49,8 @@ We will prove that a determinant function of order $n$ exists and is unique (The
 $$
 \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}.
 $$
+
+:::
 
 By multilinearity in the columns, $\det(kA) = k^n\det A$, in agreement with how volumes scale. Hence for $n > 1$ the determinant is not a linear function: in general $\det(A + B) \ne \det A + \det B$.
 
@@ -189,6 +191,8 @@ $$
 
 The function $X \mapsto \det\begin{bmatrix} X & O \\ O & I \end{bmatrix}$ satisfies the three axioms of Definition 5.1.1, so it equals $\det X$; in the second factor, column additions using the earlier columns eliminate $A^{-1}C$ without changing the determinant, and the same argument gives $\det\begin{bmatrix} I & O \\ O & B \end{bmatrix} = \det B$.
 
+:::
+
 Item 3 and the QR decomposition give an intuitive interpretation of the determinant: if $A = QR$ (Chapter 4), then $\det A = \det Q\det R$, where $\det Q = \pm 1$ is the sign of the signed volume and $\det R = \prod_i r_{ii} = \prod_i \|\tilde{\boldsymbol{q}}_i\| \ge 0$ is its size. Here $\|\tilde{\boldsymbol{q}}_i\|$ is the distance from $\boldsymbol{a}_i$ to the subspace spanned by the first $i-1$ edges, that is, the successive "heights" of the parallelepiped, so $|\det A|$ is the $n$-dimensional generalization of "base times height".
 
 ![The case of order 2: the parallelogram with sides a1, a2 and the rectangle with base a1 and height q2 (from Gram–Schmidt) have the same area, |det A| = ||a1|| · ||q2||](./plots/base-times-height.py)
@@ -279,6 +283,8 @@ Expanding completely gives
 $$
 \det A = a_{11}a_{22}a_{33} - a_{11}a_{32}a_{23} + a_{21}a_{32}a_{13} - a_{21}a_{12}a_{33} + a_{31}a_{12}a_{23} - a_{31}a_{22}a_{13}.
 $$
+
+:::
 
 We now generalize this to order $n$: we express a determinant of order $n$ recursively through determinants of order $n-1$, which at the same time proves that a determinant function exists.
 

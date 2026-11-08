@@ -41,6 +41,8 @@ since the work $Fd$ done per step cannot exceed the free energy supplied. The ra
 
 ![The energy scale of molecular motors. A: stall force against the step per fuel molecule (logarithmic axes). Diagonal lines are constant work per step, Fd = 1, 10 and 20 kBT (kBT = 4.1 pN nm); the shaded region above the 20 kBT line is forbidden for a motor that takes one step per ATP (Formula 27.1.1). Points are representative single-molecule measurements: kinesin-1, yeast cytoplasmic dynein, myosin V, skeletal myosin II (a single power stroke), *E. coli* RNA polymerase and the φ29 packaging motor. B: the work at stall per fuel molecule as a fraction of 20 kBT, including F₁-ATPase (torque 40 pN nm times 120°); in single-molecule assays with little ADP and phosphate the free energy of ATP is closer to 25 kBT, so values slightly above 1 are allowed](./plots/motor-energetics.py)
 
+:::
+
 The force a single head exerts can also be estimated from the top down.
 
 **Example 27.1.2 (Force per myosin head)** A human biceps has a cross-section of roughly $\pi(3\,\mathrm{cm})^2$; thick filaments sit about $60\,\mathrm{nm}$ apart in the myofibrillar lattice, so a cross-section contains about $(3\times10^{-2}/6\times10^{-8})^2 \approx 2.5\times10^{11}$ thick filaments, each with about $300$ heads, some $10^{14}$ heads in parallel. A maximal force of about $100\,\mathrm{N}$ (holding $10\,\mathrm{kg}$) shared among them is $1\,\mathrm{pN}$ per head, of the order of the $2$–$4\,\mathrm{pN}$ measured for a single head in an optical trap; only part of the heads are attached at any moment (**duty ratio**, [7.3.13](/7.3.13#sec-13.5.5)). **Sarcomeres** in series add their shortening velocities, heads in parallel add their forces.

@@ -15,6 +15,8 @@ The genes for the large ribosomal RNAs are unlike other nuclear genes. They are 
 
 **Example 12.1.1 (Separation by ion-exchange chromatography)** Roeder and Rutter (1969) applied extracts of sea urchin embryo nuclei to DEAE-Sephadex, an anion exchanger, and eluted the bound proteins with a gradient of increasing ammonium sulfate concentration (**ion-exchange chromatography**). Fractions were assayed for protein ($A_{280}$) and for RNA polymerase activity, measured as the incorporation of labeled UMP into acid-insoluble RNA on a DNA template. Activity eluted in three peaks, named in order of elution RNA polymerases I, II and III. The peaks did not coincide with the major protein peaks: the polymerases are minor proteins, and each peak represents a distinct enzyme, not a different state of one enzyme, as later shown by their subunit compositions and drug sensitivities.
 
+:::
+
 Fractionation of rat liver nuclei located the enzymes: polymerase I was found in the nucleolar fraction, polymerases II and III in the nucleoplasm. The nucleolar location suggested that polymerase I makes rRNA, and in vitro transcription of cloned genes with purified enzymes and nuclear extracts later established the division of labor in the table.
 
 | Polymerase | Location | Products | Share of nuclear transcription (growing cell) |
@@ -144,6 +146,8 @@ Two classic mutagenesis experiments, on two different promoters, gave two differ
 
 ![Two ways of dissecting a class II promoter (idealized data). A: linker scanning of the HSV thymidine kinase promoter: transcription relative to wild type when successive 10 bp blocks are replaced, with dips at the TATA box, the two GC boxes and the CCAAT box (after McKnight and Kingsbury, 1982). B: start-site distributions mapped by S1 protection for the SV40 early promoter with and without its TATA box: removing the TATA box scatters initiation over tens of base pairs without abolishing it (after Benoist and Chambon, 1981)](./plots/promoter-dissection.py)
 
+:::
+
 The two results are reconciled by what binds the TATA box ([7.2.13](/7.2.13)). The TATA box is the site where assembly of the preinitiation complex usually begins: TBP binds it and fixes the position of the polymerase. Where strong upstream elements can recruit TBP indirectly (the SV40 GC boxes and enhancer), the TATA box is dispensable for the amount of transcription but still needed for its precision; where they cannot, it is needed for both. TATA-less promoters still require TBP, which is then held in place by other proteins bound to the Inr, the DPE or upstream elements.
 
 ## 12.5. Proximal Promoter Elements
@@ -183,6 +187,8 @@ Pol III transcribes short genes, most of them shorter than $300$ bp, and termina
 | 2 | tRNAs, 7SL RNA (weak), Alu and other **SINEs** | internal: box A (near $+10$ to $+20$) and box B ($30$–$60$ bp further downstream), which encode parts of the D and T arms of tRNA | TFIIIC, TFIIIB |
 | 3 | U6 snRNA, 7SK RNA, RNase P (H1) and MRP RNAs | upstream only: distal sequence element (DSE, about $-240$), proximal sequence element (PSE, about $-55$) and TATA box (about $-25$) | SNAPc, TFIIIB (with Brf2), Oct-1 at the DSE |
 
+:::
+
 Internal promoters have a curious consequence: the promoter is transcribed as part of the RNA, so tRNA and 5S rRNA sequences are constrained both by the function of the RNA and by the binding of transcription factors to the gene. Some genes combine both arrangements. Ullu and Weiner (1985) found that the 7SL RNA gene has a weak internal promoter but requires its $5'$-flanking region for high-level transcription. This explains why the hundreds of 7SL **pseudogenes** and the roughly one million copies of the related Alu **SINEs** in the human genome are poorly transcribed: they carry the internal promoter but lack the upstream element.
 
 The type 3 promoters of the U6 and U2 snRNA genes illustrate how the choice of polymerase is encoded. Both have a DSE and a PSE, but U6 has a TATA box and is transcribed by Pol III, whereas U2 has none and is transcribed by Pol II. Inserting a TATA box into the U2 promoter converts it into a Pol III promoter, and destroying the TATA box of the U6 promoter converts it into a Pol II promoter (Lobo and Hernandez, 1989; Mattaj and colleagues, 1988). Type 3 promoters need no sequence inside the transcribed region and start at a defined nucleotide (a G for U6), and transcription ends at a run of T: this is why the U6 and H1 promoters are used to express short hairpin RNAs and the guide RNAs of CRISPR systems ([7.2.24](/7.2.24)).
@@ -194,6 +200,8 @@ The type 3 promoters of the U6 and U2 snRNA genes illustrate how the choice of p
 Enhancers were discovered in viruses. A $72$ bp repeated sequence of SV40, placed on a **plasmid** in either orientation, upstream or downstream of a rabbit β-globin gene, and more than $3\,\mathrm{kb}$ away from it, increased transcription of the gene about $200$-fold in transfected cells (Banerji, Rusconi and Schaffner, 1981). The first cellular enhancer was found in an **intron** of an **immunoglobulin** heavy-chain gene.
 
 **Example 12.8.1 (An immunoglobulin enhancer)** Gillies, Tonegawa and colleagues (1983) transfected a rearranged mouse immunoglobulin $\gamma 2\mathrm{b}$ heavy-chain gene into myeloma cells and measured its mRNA by **Northern blot**. Deleting an $XbaI$ fragment from the intron between the joining (J) segment and the constant region reduced transcription drastically. When the fragment was reinserted in the reverse orientation, or moved upstream of the promoter, transcription was restored: the region contained an element that stimulated transcription from a nearby promoter independently of its position and orientation, an enhancer. The enhancer worked only in B-lymphocyte-derived cells, the first indication that enhancers confer cell-type specificity.
+
+:::
 
 Enhancers act through the proteins bound to them, activators, which contact coactivators and the general transcription factors at the promoter and stimulate assembly of the preinitiation complex; how they do so over large distances is the subject of [7.2.14](/7.2.14). Three properties of enhancers deserve emphasis:
 

@@ -1,7 +1,7 @@
 ---
 title: "Plant Hormones I: Overview and Auxin"
 description: Plant growth substances, plant hormones and plant growth regulators; the nine hormone classes and their shared logic (homeostasis, derepression, dose-response); the discovery of auxin (Darwin, Boysen-Jensen, Paál, Went and the Avena curvature test), its types and antagonists; the TAA-YUC pathway, conjugation and degradation; the chemiosmotic model of polar transport (AUX1/LAX, PIN, ABCB) and its quantitative advection-diffusion description; physiological effects on cell elongation, vascular differentiation, lateral and adventitious roots, flowers and fruit, and parthenocarpy; dose-response and organ sensitivity; synthetic auxins and herbicides.
-source_hash: 179c42d8cfee
+source_hash: cc7a91e1bc00
 ---
 
 Plants have no nervous system and no glands dedicated to secreting hormones, yet a leaf far from the root tip "knows" that the soil is drying, a shoot apex decides when the axillary buds below it may grow, and a coleoptile illuminated from one side bends toward the light within tens of minutes. This coordination is carried mainly by a group of small molecules present at very low concentrations: the plant hormones. This chapter first presents the general concept of a plant hormone and the logic shared by all of them: how the concentration is set jointly by synthesis, transport, conjugation and degradation, how cells turn concentration into a response through receptors, and why the same hormone can have opposite effects at different concentrations or in different organs (Section 13.1). It then turns to auxin, the first hormone to be discovered and the one studied most deeply: the classic experiments of its discovery (Section 13.2), its biosynthesis and metabolism (Section 13.3), its polar transport, the only directional cell-to-cell transport known for a plant hormone (Section 13.4), its physiological effects and dose-response relations (Section 13.5), and the agricultural use of synthetic auxins and their action as herbicides (Section 13.6).
@@ -202,6 +202,8 @@ $$
 **Example 13.4.1** The cell wall pH is 5.5, the cytosolic pH is 7.2, and the $\mathrm{p}K_{\mathrm{a}}$ of IAA is 4.75. (a) What fraction of IAA in the cell wall is undissociated? (b) By IAAH diffusion alone, how many-fold can the cell concentrate auxin at equilibrium?
 
 **Solution** (a) $10^{5.5-4.75} = 10^{0.75} = 5.62$, so $f_{\mathrm{HA}} = 1/6.62 = 15\%$ (36% at a cell wall pH of 5). (b) In the cytosol $10^{7.2-4.75} = 10^{2.45} = 282$, and by Eq. (13.5), $c_{\mathrm{in}}/c_{\mathrm{out}} = 283/6.62 \approx 43$. Almost all (99.6%) of the IAA in the cytosol is present as the anion.
+
+:::
 
 If cells only took up auxin and had no efflux pathway, auxin would accumulate in the cells and would not be transported. The second part of the model is asymmetric efflux:
 

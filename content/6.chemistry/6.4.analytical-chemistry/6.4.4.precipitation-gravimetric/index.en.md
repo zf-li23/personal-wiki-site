@@ -1,6 +1,6 @@
 ---
 title: Precipitation Titrations and Gravimetric Analysis
-source_hash: 5f0b7358e8c7
+source_hash: 492fed3e4597
 ---
 
 [6.1.10](/6.1.10) introduced the **solubility product** and the effects of the common ion, added salts, acidity, and complex formation on solubility. This chapter applies precipitation equilibria to two classical quantitative methods. The first is gravimetric analysis, in which the analyte is converted into a precipitate of definite composition and its content is found by weighing. It depends only on mass measurements and atomic masses, needs no standard solution, and is among the most accurate methods of chemical analysis. The second is precipitation titration, of which the only widely used form is argentometry, titration with $\ce{Ag+}$ for the determination of halides and $\ce{SCN-}$. Both methods require a precipitate that is sparingly soluble and pure. We therefore first use the side-reaction coefficients of [6.4.3](/6.4.3#sec-3.2) to quantify the factors that affect solubility, which leads to the conditional solubility product (Section 4.1). We then discuss how precipitates form and why they are contaminated (4.2), from which the conditions for obtaining a pure, easily filtered precipitate follow (4.3). Gravimetric analysis (4.4) and argentometry (4.5) conclude the chapter. The thermodynamics of nucleation and of the solubility of small particles is treated in [6.3.19](/6.3.19), and the structure and coagulation of colloids in [6.3.21](/6.3.21).
@@ -48,6 +48,8 @@ The **common-ion effect** ([6.1.10](/6.1.10#sec-10.3.1)) decreases the solubilit
 **Solution** (1) $s = \sqrt{K_{\mathrm{sp}}} = 1.04\times10^{-5}\,\mathrm{mol\,L^{-1}}$, and the loss is $1.04\times10^{-5}\times0.200\times233.39\,\mathrm{g} = 0.49\,\mathrm{mg}$. This exceeds the $0.2\,\mathrm{mg}$ allowed in gravimetric analysis (the weighing error of an ordinary analytical balance).
 
 (2) $s = [\ce{SO4^2-}] = K_{\mathrm{sp}}/[\ce{Ba^2+}] = 1.08\times10^{-9}\,\mathrm{mol\,L^{-1}}$, and the loss is only $5\times10^{-5}\,\mathrm{mg}$, which is negligible.
+
+:::
 
 More precipitant is not always better. A large excess increases the salt effect, sometimes leads to complex formation (for example AgCl in excess $\ce{Cl-}$, Section 4.1.3), which raises the solubility, and increases coprecipitation of impurities. The usual rule is an excess of 50%–100% for a precipitant that is volatilized on ignition and 20%–30% for one that is not.
 
@@ -317,6 +319,8 @@ $$
 E_{\mathrm{t}} = \frac{2.3\times10^{-5}\times 2V}{0.1000\,V} = +0.05\%.
 $$
 The error is small. For more dilute analyte solutions the relative error is larger and can be corrected by an indicator blank (titrating to the same color in a $\ce{Cl-}$-free solution containing an equal amount of suspended $\ce{CaCO3}$).
+
+:::
 
 Acidity: pH 6.5–10.0.
 

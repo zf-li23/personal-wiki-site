@@ -35,6 +35,8 @@ The probability of a skew below a level $c<\frac12$ is $\mathbb{P}(f\le c)=\sum_
 
 ![Chance in development: random X inactivation. A: distribution of the fraction f of cells that keep the wild-type X active in a tissue founded by N = 8, 16 or 64 precursors (Formula 38.2.1); the shaded region f ≤ 0.4 corresponds to clotting-factor levels in the range of mild hemophilia. B: probability of f ≤ 0.4 and of f ≤ 0.1 against N on a logarithmic scale: skewed inactivation is common in small founder pools and vanishingly rare in large ones](./plots/xci-skew.py)
 
+:::
+
 The same reasoning applies to any decision fixed early in a few cells: the left–right decision when cilia-driven flow is weak ([7.5.17](/7.5.17)), the incomplete **penetrance** of many developmental mutations (**penetrance**, [7.4.3](/7.4.3#sec-3.5.1)), and the different phenotypes of **monozygotic twins**.
 
 ## 38.3. Genetic Syndromes
@@ -105,6 +107,8 @@ A large index means that the agent malforms at doses that do not kill the embryo
 
 **Example 38.4.1** In the simulated assay of the figure (true $\mathrm{EC}_{50}=8$, $\mathrm{LC}_{50}=60$), the fits give $\mathrm{EC}_{50}\approx7.7$ (95 % CI 6.1–9.6) and $\mathrm{LC}_{50}\approx60$ (52–70), $\mathrm{TI}\approx7.8$: at doses between about 15 and 30 most embryos survive but are malformed. An agent that kills and malforms at similar doses (TI near 1) is an embryotoxin rather than a specific teratogen.
 
+:::
+
 Species differ: the thalidomide disaster was not prevented by tests in rats and mice, which are insensitive to it, and teratogenicity testing has since been required in a second, non-rodent species, usually the rabbit.
 
 ### 38.4.2. Thalidomide
@@ -170,6 +174,8 @@ with endogenous synthesis $s$, an external dose $u(t)$, basal and CYP26-dependen
 **Example 38.4.3** With $s=1$, $k_0=0.2$, $k=1$, $c_0=0.05$, $a=0.6$, $K=1.5$, $n=2$ and $\delta=0.05\,\mathrm{h^{-1}}$ (a CYP26 half-life of about $14\,\mathrm{h}$), a six-hour pulse that raises RA ninefold induces CYP26 about twofold; when the pulse ends, RA falls to about half of its steady-state level and remains more than 20 % below it for about 19 hours. Larger pulses deepen and lengthen the deficit, which saturates at about 55 % below steady state. In embryos, Lee and colleagues (2012) found that a teratogenic dose of RA indeed induces *Cyp26* and lowers RA signaling below normal for a prolonged period, and that the malformations resemble those of RA deficiency.
 
 ![Why an excess of retinoic acid can end as a deficiency (Formula 38.4.4, illustrative parameters). A: a 6-hour pulse of RA (shaded) raises RA about ninefold and induces the slowly degraded enzyme CYP26; after the pulse, RA falls to about half of its steady state and recovers only as CYP26 decays. B: the largest fall of RA below its steady state (solid) and the time spent more than 20 % below it (dashed) against the pulse amplitude](./plots/ra-feedback.py)
+
+:::
 
 Isotretinoin is now prescribed only with pregnancy-prevention programs. Vitamin A itself is teratogenic in high doses (above about 10,000 IU per day as supplements), whereas vitamin A deficiency causes eye, heart and lung malformations: the developmental system needs RA within a window.
 
@@ -316,6 +322,8 @@ with a threshold size $x_0$ and a transition width $w\ll\sigma$. The density of 
 **Example 38.8.1** With $\mu=3.2\,\mathrm{mm}$, $\sigma=0.35\,\mathrm{mm}$ and $x_0=3.25\,\mathrm{mm}$, $1-\Phi(0.14)\approx0.44$ of males are horned. A population whose threshold is $0.3\,\mathrm{mm}$ higher has only $1-\Phi(1.0)\approx0.16$ horned males on the same food. Such differences evolved within decades between populations of *Onthophagus taurus* introduced into Australia and into the eastern United States (Moczek and Nijhout 2003): the threshold itself is heritable, a link between plasticity and evolution taken up in [7.5.39](/7.5.39).
 
 ![A threshold polyphenism in dung beetles (Formula 38.8.1). A: horn length against body size for 2000 simulated males (body size normally distributed, mean 3.2 mm, SD 0.35 mm; sigmoid with threshold 3.25 mm; small noise in horn growth). B: the resulting horn lengths are bimodal: hornless and fully horned males, few intermediates. C: shifting the threshold by 0.3 mm on the same distribution of body sizes lowers the fraction of horned males from 44 % to 16 %](./plots/horn-threshold.py)
+
+:::
 
 The same structure, a continuous internal variable read through a threshold, underlies the queen–worker switch (nutrition and **juvenile hormone**), caste determination in ants, and the **liability** models of human malformations (38.1).
 

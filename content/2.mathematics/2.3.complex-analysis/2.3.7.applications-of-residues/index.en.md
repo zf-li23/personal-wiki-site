@@ -75,6 +75,8 @@ One may equally close in the lower half-plane; the result is then $-2\pi\mathrm{
 **Example 7.2.1** 1. $\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{(x^2 + 1)^2}$: the only pole in the upper half-plane is $\mathrm{i}$, of order $2$, with residue $\frac{\mathrm{d}}{\mathrm{d}z}(z + \mathrm{i})^{-2}\big|_{z=\mathrm{i}} = -2(2\mathrm{i})^{-3} = \frac{1}{4\mathrm{i}}$. The integral is $2\pi\mathrm{i}\cdot\frac{1}{4\mathrm{i}} = \frac\pi2$.
 2. $\int_0^\infty\frac{\mathrm{d}x}{x^4 + 1} = \frac12\int_{-\infty}^\infty\frac{\mathrm{d}x}{x^4 + 1}$. The poles in the upper half-plane are $\mathrm{e}^{\mathrm{i}\pi/4}$ and $\mathrm{e}^{3\mathrm{i}\pi/4}$, with residues $-\frac{z_k}{4}$ (Example 6.3.1), whose sum is $-\frac{\mathrm{i}\sqrt2}{4}$. Hence $\int_0^\infty\frac{\mathrm{d}x}{x^4 + 1} = \frac12\cdot2\pi\mathrm{i}\cdot\left(-\frac{\mathrm{i}\sqrt2}{4}\right) = \frac{\pi}{2\sqrt2}$.
 
+:::
+
 Contours other than semicircles are useful when the integrand has a rotational symmetry.
 
 **Example 7.2.2** For an integer $n \ge 2$,
@@ -151,6 +153,8 @@ $$
 
 This pair (a Lorentzian and a two-sided exponential) reappears in [2.5.6](/2.5.6) and in the Poisson kernel of the half-plane.
 
+:::
+
 The inverse Laplace transform of $F(s)$ is given by the Bromwich integral
 
 $$
@@ -204,6 +208,8 @@ $$
 
 **Example 7.4.2** $\int_0^\infty\frac{1 - \cos x}{x^2}\,\mathrm{d}x = \frac\pi2$. Consider $f(z) = \frac{1 - \mathrm{e}^{\mathrm{i}z}}{z^2}$. Since $1 - \mathrm{e}^{\mathrm{i}z} = -\mathrm{i}z + \frac{z^2}{2} + \cdots$, $f$ has a simple pole at $0$ with residue $-\mathrm{i}$; on large semicircles $\lvert f\rvert \le 2/R^2$. The argument of Theorem 7.4.1 gives $\operatorname{PV}\int_{-\infty}^\infty f(x)\,\mathrm{d}x = \pi\mathrm{i}\cdot(-\mathrm{i}) = \pi$. Taking real parts, $\int_{-\infty}^\infty\frac{1 - \cos x}{x^2}\,\mathrm{d}x = \pi$, and the integrand is even.
 
+:::
+
 ![Three standard contours. (a) The segment [-R, R] closed by the upper semicircle C_R; only the poles in the upper half-plane (red) contribute, and the arc vanishes by the large-arc lemma or Jordan's lemma. (b) The same contour indented by a small semicircle C_ε around a simple pole on the real axis. (c) The keyhole contour for integrands with a branch cut along the positive real axis: the two edges of the cut carry different values of z^α or log z](./plots/contours.py)
 
 ## 7.5. Integrals Involving Multivalued Functions
@@ -225,6 +231,8 @@ $$
 $$
 
 With $x = t^n$ and $\alpha = \frac1n$, Eq. (7.5) becomes the formula of Example 7.2.2. In terms of the Gamma function, Eq. (7.5) is the reflection formula $\Gamma(\alpha)\Gamma(1 - \alpha) = \frac{\pi}{\sin\pi\alpha}$.
+
+:::
 
 The same argument gives, for a rational function $R$ without poles on $[0, \infty)$ and $\lvert x^\alpha R(x)\rvert \to 0$ at both $0$ and $\infty$,
 

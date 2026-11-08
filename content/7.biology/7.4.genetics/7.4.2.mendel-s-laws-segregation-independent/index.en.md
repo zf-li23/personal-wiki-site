@@ -93,11 +93,15 @@ This is a **conditional probability** ([3.1.2](/3.1.2#sec-2.3)): knowing the phe
 
 **Example 2.2.1 (Mendel's F3 test)** Mendel self-fertilized 565 round-seeded $\mathrm{F}_2$ plants and examined their seeds: 193 gave only round seeds and 372 gave round and wrinkled in about 3:1, a ratio of 1:1.93. For seed color, 166 of 519 yellow plants bred true and 353 segregated (1:2.13). The expected counts for 1:2 are $188.3 : 376.7$ and $173 : 346$; the χ² values (2.5.1) are $0.17$ and $0.42$ with one degree of freedom, both consistent with the model. Recessive $\mathrm{F}_2$ plants, as predicted, bred true.
 
+:::
+
 A more direct test of an individual's genotype is to cross it with the recessive homozygote, whose gametes carry only the recessive allele, so that every progeny's phenotype shows which allele it received from the tested parent.
 
 **Definition 2.2.7 (Testcross)** A **testcross** is a cross between an individual of dominant phenotype and unknown genotype and a homozygous recessive individual. If the tested individual is homozygous dominant, all progeny show the dominant phenotype; if it is heterozygous, half show the dominant and half the recessive phenotype (1:1).
 
 **Example 2.2.2** A purple-flowered plant of unknown genotype is testcrossed with a white-flowered plant. (a) All of 20 progeny are purple. If the plant were heterozygous, the probability of this would be $(1/2)^{20} \approx 9.5 \times 10^{-7}$, so it is homozygous $PP$ beyond reasonable doubt. (b) With only 3 progeny, all purple, the probability under heterozygosity is $(1/2)^3 = 1/8$, and the result is inconclusive. The testcross makes each gamete of the tested parent visible, which is why it is also the basic tool of linkage analysis (7.4.8).
+
+:::
 
 A testcross answers three questions at once: the genotype of the tested individual, the kinds of gametes it makes, and their proportions, because each class of testcross progeny corresponds to one class of gametes. It is a special case of a more general cross.
 
@@ -251,6 +255,8 @@ The rules can also be inverted: from the progeny ratio, infer the genotypes of t
 
 **Example 2.4.7** Two pea plants are crossed and give 152 tall purple, 148 tall white, 51 dwarf purple and 49 dwarf white progeny. Height: $300$ tall : $100$ dwarf $= 3:1$, so $Dd \times Dd$. Flower color: $203$ purple : $197$ white $\approx 1:1$, so $Pp \times pp$. The parents are $DdPp$ (tall purple) and $Ddpp$ (tall white), and the joint ratio should be $(3:1)(1:1) = 3:3:1:1$: expected $150 : 150 : 50 : 50$, $\chi^2 = 0.093$ with three degrees of freedom ($p = 0.99$).
 
+:::
+
 Questions about gametes are inverted in the same way. An individual heterozygous at $m$ of its loci and homozygous at the rest makes $2^m$ kinds of gametes, each with probability $(1/2)^m$, and the number of different combinations of gametes in a cross is the product of the numbers of gamete kinds of the two parents.
 
 **Example 2.4.8** (a) $AaBbCc \times AaBBCc$: the parents make $8$ and $4$ kinds of gametes, so there are $8 \times 4 = 32$ gamete combinations, which give $3 \times 2 \times 3 = 18$ genotypes and $2 \times 1 \times 2 = 4$ phenotypes. (b) A plant heterozygous or homozygous recessive at four unlinked loci produces $abcd$ gametes with frequency $1/8$. Since $(1/2)^m = 1/8$, it is heterozygous at $m = 3$ loci and homozygous recessive at the fourth: $aaBbCcDd$, $AabbCcDd$, $AaBbccDd$ or $AaBbCcdd$.
@@ -286,6 +292,8 @@ $$
 $$
 
 with three degrees of freedom; $p = 0.93$. The deviations are well within chance.
+
+:::
 
 The test needs counts, not percentages: 60 % versus an expected 75 % is strong evidence against 3:1 among 1 000 progeny ($\chi^2 = 120$) but none among 20 ($\chi^2 = 2.4$, $p = 0.12$). For small samples with two classes, the exact binomial probability of a deviation at least as large can be computed instead.
 

@@ -41,6 +41,8 @@ The first column is the sum of the others, so $X$ has **rank** $r<r+1$ and $X^{\
 
 All three give the same means, so no data can distinguish them.
 
+:::
+
 A linear function of the parameters that has a linear unbiased estimator is called an *estimable function*; equivalently, it is a linear function of the cell means $\mu_i=\mu+\tau_i$. The combinations $\mu+\tau_i$ are estimable, estimated by the sample means $\bar Y_{i\cdot}$, and so are differences $\tau_i-\tau_k=\mu_i-\mu_k$; but $\mu$ and the individual $\tau_i$ are not. The solution is to put one linear constraint on the $\tau_i$, which reduces the number of free parameters by one and gives a design matrix of full column rank. Common choices are:
 
 | Constraint | Meaning of $\mu$ | Design matrix |

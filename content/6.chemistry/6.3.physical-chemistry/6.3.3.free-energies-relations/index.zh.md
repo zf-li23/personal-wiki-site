@@ -444,6 +444,8 @@ $$
 $$
 即室温下约 $1.5\,\mathrm{GPa}$ 以上金刚石才比石墨稳定。$\square$
 
+:::
+
 再由 $(\partial\Delta G/\partial T)_p = -\Delta S$（$\Delta_{\mathrm{trs}}S^\circ_{\mathrm{m}} = 2.38 - 5.74 = -3.36\,\mathrm{J\,mol^{-1}\,K^{-1}}$），升温使平衡压力升高，相界的斜率 $\mathrm{d}p/\mathrm{d}T = \Delta S/\Delta V \approx 1.8\,\mathrm{MPa\,K^{-1}}$（这就是 [6.3.8](/6.3.8) 的 Clapeyron 方程）。高温下 $\Delta S$、$\Delta V$ 本身随温度变化，实验测得的相界（Berman–Simon 线）更陡。热力学只说明高压有利于金刚石；石墨在常温下转变的活化能极高，实际合成要在 $5$–$6\,\mathrm{GPa}$、$1600$–$2100\,\mathrm{K}$ 下借助熔融金属（Fe、Ni、Co）作溶剂与催化剂。低压化学气相沉积（CVD）生长的金刚石处于亚稳状态，靠的是表面反应的动力学选择，而不是改变了热力学平衡。
 
 ![石墨–金刚石转变：298.15 K 时 $\Delta_{\mathrm{trs}}G_{\mathrm{m}}$ 随压力的变化（左，设 $\Delta V$ 为常数）；两相平衡线（右）：本节的常数 $\Delta S$、$\Delta V$ 近似与实验的 Berman–Simon 线，以及工业高温高压合成的大致范围。](./plots/graphite-diamond.py)
@@ -494,6 +496,8 @@ $$
 \frac{\Delta G(T_2)}{T_2} = 40650 \times \left(\frac{1}{298.15} - \frac{1}{373.15}\right) + 42 \times \left(\ln\frac{298.15}{373.15} + \frac{373.15}{298.15} - 1\right) = (27.40 + 1.14)\,\mathrm{J\,K^{-1}},
 $$
 $\Delta G(T_2) = 298.15 \times 28.54\,\mathrm{J} = 8.51\,\mathrm{kJ}$，与解法 1 相同（两者用了同样的数据与近似）。$\square$
+
+:::
 
 Gibbs–Helmholtz 方程用于 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$，就是平衡常数随温度变化的 van 't Hoff 方程（[6.3.7](/6.3.7)）；用于 $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$，就由电动势及其温度系数求反应焓（[6.3.13](/6.3.13)）。
 

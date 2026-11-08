@@ -478,6 +478,8 @@ With single-instance resources such as locks, the four conditions are also suffi
 
 **Example 6.5.1** Ten units of one resource; three threads with maximum demands 8, 4 and 6 currently hold 3, 2 and 2 units, so 3 units are free and the remaining needs are 5, 2 and 4. The state is safe: thread 2 can get its 2 and finish (5 free), then thread 3 its 4 (7 free), then thread 1 its 5. If thread 3 now requests 2 units, granting would leave 1 free with needs 5, 2 and 2: no thread could finish for certain, the state would be unsafe, so the request is delayed. A request by thread 1 for 1 unit, in contrast, leaves 2 free with needs 4, 2 and 4, and the order 2, 3, 1 still finishes; it is granted.
 
+:::
+
 Avoidance needs advance knowledge that general-purpose programs do not have, and it is rarely used outside special systems. *Detection and recovery* lets deadlocks happen, finds cycles in the wait graph periodically and breaks them by aborting a participant; databases do exactly this, aborting and retrying one of the deadlocked transactions. Many systems, finally, ignore the problem (the "ostrich algorithm"), relying on lock ordering in the code and on a restart when it hangs.
 
 ### 6.5.4. Priority Inversion

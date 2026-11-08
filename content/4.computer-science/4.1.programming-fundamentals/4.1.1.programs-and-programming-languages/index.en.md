@@ -1,7 +1,7 @@
 ---
 title: Programs and Programming Languages
 description: Programs and algorithms; the von Neumann architecture and the instruction cycle; machine language, assembly language and high-level languages; compilation and interpretation; the C++ and Python toolchains; the structure of a first program; standard input and output and online judges; code style and kinds of program errors.
-source_hash: 1bd9490a8f74
+source_hash: 68d8383bb7f6
 ---
 
 This chapter answers three basic questions: what a program is, how a computer executes it, and what tools we use to write it. We first distinguish algorithms from programs, then start from the von Neumann architecture to explain why programming languages are needed and how compilation and interpretation turn a high-level language into machine actions. Finally we set up the C++ and Python toolchains and write a first program. The ideas of this chapter run through the whole course: from [4.1.2](/4.1.2) on we treat data, control structures and functions step by step, [4.2](/4.2) covers object-oriented programming, [4.3](/4.3) studies algorithms and data structures systematically, and [4.4](/4.4) uses Python for scientific computing; the internal details of the computer are left to [4.10 Computer Organization](/4.10) and [4.11 Operating Systems](/4.11).
@@ -45,6 +45,8 @@ while b != 0:          # repeat until the remainder is zero
     a, b = b, a % b
 print(a)               # prints 21
 ```
+
+:::
 
 The two programs differ greatly in syntax, yet the algorithm is exactly the same. The core of programming is designing algorithms and organizing data; Wirth summarized this as "algorithms + data structures = programs", and the language is only a tool of expression. A systematic analysis of the correctness and efficiency of algorithms is in [4.3.1](/4.3.1).
 

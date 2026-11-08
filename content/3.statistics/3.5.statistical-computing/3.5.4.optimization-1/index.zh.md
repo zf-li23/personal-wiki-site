@@ -1,7 +1,7 @@
 ---
 title: 优化（一）
 description: 数值优化的框架（优化与求根、极大似然、迭代算法的三要素、收敛阶与收敛率），直接搜索法（黄金分割法、抛物线插值、Nelder–Mead 方法）与求根方法（二分法、不动点迭代、Jacobi、Gauss–Seidel 与 SOR 迭代、坐标下降法、弦截法与 Brent 法），以及 R 的 optimize、optim 和 uniroot。
-source_hash: a8defdc8fdb3
+source_hash: 511c2a4deec2
 ---
 
 统计计算在很大程度上就是求解优化问题：**极大似然估计**要使对数似然最大，最小二乘要使平方和最小，Bayes 分析要寻找后验分布的众数。本章与下一章（[3.5.5](/3.5.5)）讨论这类问题的数值方法。本章先建立框架：优化问题有哪些类型，好算法应具备什么特质；为什么优化与求根是同一问题的两面；**梯度**告诉我们什么；极大似然如何纳入这一框架；迭代算法的快慢如何用收敛阶和收敛率来衡量。随后介绍两类几乎不需要导数信息的方法。直接搜索法只比较函数值：一维问题用黄金分割法和抛物线插值，多维问题用 Nelder–Mead 单纯形法。梯度方法把优化转化为求 $f(x)=g'(x)=0$ 的根：二分法之类的划界法可靠但慢，不动点迭代之类的开放法快但可能发散（其中包括线性方程组的经典迭代法和坐标下降法），Brent 法之类的混合法则兼取两者之长。使用二阶导数的牛顿法及其变形见 [3.5.5](/3.5.5)，它们所需的线性代数见 [3.5.3](/3.5.3)。其间我们还会认识 R 的 `optimize`、`optim` 和 `uniroot` 默认使用的方法。
@@ -75,6 +75,8 @@ L(b)=\prod_{i=1}^n\frac1b\boldsymbol{1}_{[0,b]}(x_i)=\frac1{b^n}\boldsymbol{1}\{
 $$
 在 $b<x_{(n)}$ 时为零，在 $b\ge x_{(n)}$ 时递减，所以 MLE 是样本最大值 $\hat b=X_{(n)}$；若 $n=10$，$\max(\boldsymbol{x})=2$，则 $\hat b=2$。似然在最大值点不可微，得分方程没有根。
 
+:::
+
 轮廓似然。 对高维的 $\boldsymbol{\theta}$ 可以降低维数。把 $\boldsymbol{\theta}=(\boldsymbol{\theta}_1,\boldsymbol{\theta}_2)$ 分成感兴趣的参数 $\boldsymbol{\theta}_1$ 和讨厌参数 $\boldsymbol{\theta}_2$，并设 $\boldsymbol{\theta}_1$ 固定时关于 $\boldsymbol{\theta}_2$ 的极大值点 $\hat{\boldsymbol{\theta}}_2(\boldsymbol{\theta}_1)$ 容易求出。于是
 
 $$
@@ -134,6 +136,8 @@ $$
 - $\gamma^{n^2}\to0$ 是超线性收敛：$\gamma^{(n+1)^2}/\gamma^{n^2}=\gamma^{2n+1}\to0$；但不是二次收敛，因为 $\gamma^{(n+1)^2}/(\gamma^{n^2})^2=\gamma^{-n^2+2n+1}\to\infty$。
 - $\gamma^{2^n}\to0$ 是二次收敛：$\gamma^{2^{n+1}}/(\gamma^{2^n})^2=1$。
 
+:::
+
 所以收敛阶 $\alpha$ 越大、同阶时收敛率 $c$ 越小，收敛越快。收敛阶远比收敛率重要。
 
 **例 4.1.3** 设 $\lvert\varepsilon^{(t)}\rvert\le0.003$，且 $t$ 充分大时方法 A 满足 $\lvert\varepsilon^{(t+1)}\rvert/\lvert\varepsilon^{(t)}\rvert\approx0.5$（线性），方法 B 满足 $\lvert\varepsilon^{(t+1)}\rvert/\lvert\varepsilon^{(t)}\rvert^2\approx0.5$（二次）。要达到 $10^{-9}$ 的精度，各自还需要多少次迭代？对方法 A，$\lvert\varepsilon^{(t+k)}\rvert/\lvert\varepsilon^{(t)}\rvert\approx2^{-k}$，由 $2^{-k}\cdot0.003=10^{-9}$ 得 $k=\log_2(3\times10^6)\approx21.5$，需 $22$ 次。对方法 B，
@@ -142,6 +146,8 @@ $$
 \lvert\varepsilon^{(t+2)}\rvert\approx\frac{\lvert\varepsilon^{(t+1)}\rvert^2}2\approx\frac{\lvert\varepsilon^{(t)}\rvert^4}{2^3}=\frac{0.003^4}8\approx10^{-11},
 $$
 只需再走 $2$ 步。
+
+:::
 
 不过，收敛阶更高的方法并不总是更可取：每步的代价（导数、线性方程组）、存储、能够收敛的区域大小以及收敛有无保证，都同样重要。
 
@@ -259,6 +265,8 @@ $$
 $g'(x)=\dfrac{1+1/x-\log x}{(1+x)^2}$ 的根无法解析求出；极大值在 $x^*\approx3.59112$ 处。
 
 **例 4.3.2** 数据 $1.77,-0.23,2.76,3.80,3.47,56.75,-1.34,4.24,-2.44,3.29,3.71,-2.40,4.53,-0.07,-1.05,-13.87,-2.53,-1.75,0.27,43.21$ 是来自尺度为 $1$ 的 **Cauchy 分布** $\mathrm{Cauchy}(\theta)$ 的独立同分布样本，似然函数为 $\prod_{i=1}^{20}\frac1{\pi(1+(x_i-\theta)^2)}$。它的**得分函数** $l'(\theta)$ 有多个根（局部极大值点在 $-0.19$、$2.82$ 和 $42.8$ 附近，其间夹着局部极小值点），所以 MLE 需要数值求解，而且要小心。
+
+:::
 
 非线性方程的解法分为四类：
 
@@ -636,6 +644,8 @@ $$
 | 弦截法 | 6 | 1.839286755226924 |
 | 逆二次插值，初始点 $1,\frac32,2$ | 5 | 1.8392867552230825 |
 | Brent 法 | 6 | 1.8392867552141612 |
+
+:::
 
 在这里 Brent 法与开放法一样快，同时又有二分法的保证。在 R 中，例 4.3.1 写成
 

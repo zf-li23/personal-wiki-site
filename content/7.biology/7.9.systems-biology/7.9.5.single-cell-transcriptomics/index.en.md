@@ -11,6 +11,8 @@ An average can hide everything that matters. A bulk measurement cannot tell whet
 
 **Example 5.1.1** A tissue contains cell type A, expressing a gene at $10$ molecules per cell, and type B at $100$. If the fraction of B rises from $20\,\%$ to $40\,\%$ after an injury, the bulk level rises from $0.8 \times 10 + 0.2 \times 100 = 28$ to $0.6 \times 10 + 0.4 \times 100 = 46$, a $1.64$-fold increase, without any cell changing its expression. A bulk differential expression analysis would report an induced gene; single-cell data report a change of composition.
 
+:::
+
 Variation between cells of one type is itself informative. Gene expression is stochastic, with transcripts made in **transcriptional bursts** ([7.6.32](/7.6.32#sec-32.4)), and cells pass through states (cycle phases, differentiation stages, responses to signals) at different times, so a snapshot of many cells samples a dynamic process. Single-cell data have revealed new cell types (for example a subset of dendritic cells in human blood, Villani and colleagues, 2017), rare cells such as the pulmonary ionocyte that expresses most of the *CFTR* mRNA of the airway epithelium (2018), and the composition of tumors and their immune infiltrates. The Human Cell Atlas (founded in 2016) aims at reference maps of all human cell types; Tabula Sapiens (2022) profiled about $500\,000$ cells from $24$ organs, most from the same donors; perturbation atlases now profile cells after thousands of drug or genetic perturbations, up to about $10^8$ cells in one data set.
 
 ## 5.2. Technologies
@@ -47,6 +49,8 @@ $$
 The multiplet rate grows linearly with the number of cells loaded.
 
 **Example 5.2.1** A channel produces of the order of $10^5$ droplets, and about $60\,\%$ of the loaded cells are recovered. Recovering $1000$ cells requires loading about $1650$, so $\lambda = 0.0165$ and $m = 0.8\,\%$, the multiplet rate of "about $0.8\,\%$ per $1000$ cells" quoted for such instruments; for $10\,000$ recovered cells, $\lambda = 0.165$ and $m = 8.0\,\%$ (figure in 5.3.4, panel B). Experimenters trade throughput against multiplets, and sample multiplexing (5.3.3) lets them overload a channel and remove the multiplets afterwards. Only $1.6\,\%$ of droplets contain a cell at $\lambda = 0.0165$: the rest contain only beads and ambient RNA.
+
+:::
 
 In combinatorial indexing, a cell's barcode is the combination of indices received in $r$ rounds of splitting into $b$ wells, so there are $B = b^r$ barcodes; with $N$ cells, a given cell shares its combination with another with probability $1 - (1 - 1/B)^{N - 1} \approx 1 - \mathrm{e}^{-N/B}$. Three rounds of $96$ wells give $B = 884\,736$; with $10^5$ cells, $10.7\,\%$ of the cells collide, so a fourth round or fewer cells are needed.
 
@@ -191,6 +195,8 @@ The Leiden algorithm runs in time nearly linear in the number of edges, seconds 
 **Example 5.5.1** In the simulation of the figure, $600$ cells of five types, one of which differs from another in only $16$ of $400$ genes, give a neighbor graph with $7100$ edges ($k = 15$ on $15$ components). The Louvain algorithm (a numpy implementation; the Leiden implementation `leidenalg` gave the same partitions up to a few cells) finds four communities for $\gamma_{\mathrm{r}} \le 0.3$, which merge the subtype with its parent (adjusted Rand index $0.93$ against the true types); five for $0.5 \le \gamma_{\mathrm{r}} \le 1.5$, which recover the types (index $0.99$, modularity $Q_1 = 0.75$); and $7$, $10$ and $12$ communities at $\gamma_{\mathrm{r}} = 2$, $2.5$ and $3$, which split the largest type into pieces with no biological meaning. A plateau of the number of clusters over a range of resolutions, visualized as a tree of clusters across resolutions (clustree), is the usual evidence of a natural scale.
 
 ![Clustering cells by community detection on a nearest-neighbor graph (simulated data: 600 cells of five types, the fifth differing from the fourth in 16 of 400 genes; 15 principal components, 15 nearest neighbors, 7100 edges). A: the graph in a force-directed layout, cells colored by their true type. B: the communities found by the Louvain algorithm at resolution 1 (colored by the type that dominates each), which recover the five types. C: the number of communities and the adjusted Rand index against the true types as functions of the resolution parameter: small values merge the subtype with its parent, large values split the largest type](./plots/knn_leiden.py)
+
+:::
 
 Clusters are not cell types by themselves. A continuous process, such as differentiation along a trajectory ([7.9.7](/7.9.7)), is cut into arbitrary clusters at any resolution; doublets and stressed cells form clusters of their own; and a statistically distinct cluster may be a state of a known type rather than a new type. The interpretation comes from markers, references and experiments (5.6).
 

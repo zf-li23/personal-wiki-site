@@ -76,6 +76,8 @@ The integrand, the *lethal rate*, falls tenfold for each $10$ degrees below the 
 
 **Example 10.2.1** A sterilization process must reduce a population of $10^4$ spores of an indicator organism with $D_{121.1} = 1.5\,\mathrm{min}$ to a survival probability of $10^{-6}$. It needs $\log_{10}(10^4/10^{-6}) = 10$ decimal reductions, that is, $F_0 = 10 \times 1.5 = 15\,\mathrm{min}$. At $115\,^\circ\mathrm{C}$, where $D = 1.5 \times 10^{0.61} = 6.1\,\mathrm{min}$, the same effect would take $61$ minutes.
 
+:::
+
 ![Kinetics of heat killing. A: survival curves of a mesophilic bacterium at 50, 60 and 70 °C, with decimal reduction times of 42, 12 and 3 min (data from Madigan et al. 2019); on a logarithmic axis first-order death gives straight lines, and D is the time for one tenfold fall (arrow, at 60 °C). B: D against temperature on a logarithmic axis: the mesophile of A (z about 17 °C) and spores of *Clostridium botulinum* (D at 121.1 °C = 0.21 min, z = 10 °C); a rise of z degrees reduces D tenfold. C: a canning process: the temperature at the centre of a can in a retort at 121 °C (red; heating and cooling modeled as first-order lags, illustrative) and the accumulated lethality F0 (dashed), which exceeds the 12D value for *C. botulinum* spores (2.5 min, dotted) only after the centre has been close to the retort temperature for some minutes](./plots/heat-kill.py)
 
 ### 10.2.3. The Autoclave and Dry Heat

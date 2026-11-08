@@ -1,6 +1,6 @@
 ---
 title: Series of Functions, Power Series and Fourier Series
-source_hash: 75c41227fd82
+source_hash: 927851f8f450
 ---
 
 Every term of the series in [Chapter 8](/2.2.8) is a number; in this chapter every term is a function, as in $\sum x^n$ or $\sum\frac{\sin nx}{n}$. For each fixed $x$ such a series is a numerical series, and the tests of Chapter 8 still apply. The new questions concern the properties of the sum: is an infinite sum of continuous functions continuous? May we integrate or differentiate term by term? The answer is in general no, and the crucial additional hypothesis is uniform convergence (9.1).
@@ -22,6 +22,8 @@ Finding the domain of convergence means testing a numerical series for each $x$.
 1. $\sum_{n=0}^\infty ax^n$ ($a \ne 0$): a **geometric series**, with domain of convergence $(-1,1)$ and sum function $\frac{a}{1-x}$.
 2. $\sum_{n=1}^\infty\frac{x^n}{n^p}$: $\left|\frac{u_{n+1}}{u_n}\right| \to |x|$, so the series converges absolutely for $|x| < 1$, and its general term does not tend to zero for $|x| > 1$. At $x = \pm1$, the **p-series** and the **Leibniz test** show that the domain of convergence is $(-1,1)$ for $p \le 0$, $[-1,1)$ for $0 < p \le 1$, and $[-1,1]$ for $p > 1$.
 3. $\sum_{n=1}^\infty\left(\frac{n+1}{n}\right)^nx^n$: $\sqrt[n]{|u_n|} = \left(1 + \frac1n\right)|x| \to |x|$, and for $|x| = 1$, $|u_n| \to \mathrm{e} \ne 0$. The domain of convergence is $(-1,1)$.
+
+:::
 
 Let $I$ be contained in the domain of convergence. We ask three questions:
 
@@ -120,6 +122,8 @@ The hypothesis for termwise differentiation is imposed on the series of derivati
 **Example 9.1.7** The function $S(x) = \sum_{n=1}^\infty n\mathrm{e}^{-nx}$ is continuous and differentiable on $(0, +\infty)$.
 
 **Proof** Take any $x_0 > 0$ and let $\delta = x_0/2$. On $[\delta, +\infty)$ we have $n\mathrm{e}^{-nx} \le n\mathrm{e}^{-n\delta}$, and $\sum n\mathrm{e}^{-n\delta}$ converges (ratio test), so by the Weierstrass M-test the series converges uniformly on $[\delta, +\infty)$, and $S$ is continuous at $x_0$. The series of derivatives $\sum(-n^2\mathrm{e}^{-nx})$ has the majorant $\sum n^2\mathrm{e}^{-n\delta}$, so likewise $S$ is differentiable at $x_0$. $\square$
+
+:::
 
 Neither series converges uniformly on $(0, +\infty)$ (as $x \to 0^+$ the terms are not uniformly small), but continuity and differentiability are local properties: it suffices to have uniform convergence on a closed interval around each point. This is called *uniform convergence on compact subsets* (or locally uniform convergence).
 
@@ -222,6 +226,8 @@ The symbol $\sim$ indicates that the Taylor series is only written down formally
 
 **Example 9.2.3** Let $f(x) = \mathrm{e}^{-1/x^2}$ ($x \ne 0$) and $f(0) = 0$. One can check that $f$ is infinitely differentiable on $\mathbb{R}$ and that $f^{(n)}(0) = 0$ for all $n$ (each differentiation produces an expression of the form $P(1/x)\mathrm{e}^{-1/x^2}$ with $P$ a polynomial, which tends to zero as $x \to 0$). Hence the Maclaurin series of $f$ converges everywhere to $0$, but it equals $f(x)$ only at $x = 0$.
 
+:::
+
 When does the Taylor series equal $f$? By **Taylor's formula**, $f(x) = \sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + R_n(x)$, and the partial sums of the Taylor series are exactly the **Taylor polynomials**; therefore:
 
 **Theorem 9.2.6** Let $f$ have derivatives of all orders on $(x_0 - R, x_0 + R)$. Then $f$ can be expanded in its Taylor series on this interval (that is, the Taylor series converges to $f(x)$) if and only if the remainder satisfies $R_n(x) \to 0$ ($n \to \infty$) for every $x$ in the interval.
@@ -248,6 +254,8 @@ $$
 (1 + x)^\alpha = \sum_{n=0}^\infty\binom\alpha nx^n, \qquad |x| < 1;
 $$
 the right-hand side is called the *binomial series*. When $\alpha$ is a nonnegative integer it is a finite sum, namely the binomial theorem, valid for all $x$. The behavior at the endpoints depends on $\alpha$: for $\alpha \le -1$ the series diverges at both endpoints and the expansion holds on $(-1,1)$; for $-1 < \alpha < 0$ it converges only at $x = 1$ and the expansion holds on $(-1, 1]$; for $\alpha > 0$ it converges at both endpoints and the expansion holds on $[-1, 1]$. The case $\alpha = -1$ is $\frac{1}{1+x} = \sum(-1)^nx^n$.
+
+:::
 
 ![The Taylor partial sums of 1/(1+x^2) approximate the function for |x| < 1 and diverge for |x| > 1, although the function is smooth on the whole real line](./plots/taylor-radius.py)
 
@@ -316,6 +324,8 @@ $$
 $$
 so $\frac{1}{\sqrt{2\pi}}, \frac{\cos x}{\sqrt\pi}, \frac{\sin x}{\sqrt\pi}, \dots$ is orthonormal. More generally, $1, \cos\frac{n\pi x}{l}, \sin\frac{n\pi x}{l}$ ($n \ge 1$) is an orthogonal system of functions on any interval of length $2l$.
 
+:::
+
 Suppose $f$ has period $2\pi$, $f(x) = \frac{a_0}{2} + \sum_{n=1}^\infty(a_n\cos nx + b_n\sin nx)$, and the right-hand side may be integrated term by term (for instance, if it converges uniformly). Integrating both sides over $[-\pi,\pi]$, orthogonality leaves only one term: $\int_{-\pi}^\pi f\,\mathrm{d}x = \pi a_0$. Multiplying both sides by $\cos nx$ and integrating leaves only $\int_{-\pi}^\pi f(x)\cos nx\,\mathrm{d}x = a_n\pi$; multiplying by $\sin nx$ works the same way. This is exactly the principle that "coordinates with respect to an orthogonal basis are obtained by taking inner products".
 
 **Definition 9.3.2 (Fourier Series)** Let $f$ have period $2\pi$ and be integrable on $[-\pi, \pi]$. The numbers
@@ -353,6 +363,8 @@ $$
 
 At the jumps, the series converges to the average $0$ of the one-sided limits. Setting $x = \frac\pi2$ gives $1 - \frac13 + \frac15 - \cdots = \frac\pi4$.
 
+:::
+
 ![Fourier partial sums of the square wave: they converge to 0 at the jump (left); near the jump the overshoot narrows as the number of terms grows, but its height does not decrease and stays at about 9% of the jump (right)](./plots/fourier-gibbs.py)
 
 The figure shows that near a jump the partial sums always have a peak of about $1.179$ (the jump has height $2$, so the overshoot of about $0.179$ is about $9\%$ of it). As the number of terms increases, the peak moves toward the jump and becomes narrower, but its height does not decrease. This is called the *Gibbs phenomenon*. It does not contradict Dirichlet's convergence theorem: for each fixed $x \ne 0$ the peak eventually moves to the left of $x$, and $S_N(x) \to 1$; but the convergence is not uniform near the jump. This is also the contrapositive of Theorem 9.1.4: a uniform limit of continuous functions (the partial sums) must be continuous, whereas the square wave is not.
@@ -368,6 +380,8 @@ Since $f$ is continuous and $f(-\pi) = f(\pi)$, Dirichlet's convergence theorem 
 $$
 \sum_{k=0}^\infty\frac{1}{(2k+1)^2} = \frac{\pi^2}{8}, \qquad \text{hence} \quad \sum_{n=1}^\infty\frac{1}{n^2} = \frac{\pi^2}{8} + \frac14\sum_{n=1}^\infty\frac{1}{n^2} \;\Rightarrow\; \sum_{n=1}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}.
 $$
+
+:::
 
 The triangle wave is continuous, and its coefficients decay like $\frac{1}{n^2}$; the square wave has jumps, and its coefficients decay only like $\frac1n$. The smoother the function, the faster its Fourier coefficients decay.
 

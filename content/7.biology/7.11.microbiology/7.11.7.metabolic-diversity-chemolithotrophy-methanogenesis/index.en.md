@@ -319,6 +319,8 @@ which is negative only for $p(\ce{H2}) < \mathrm{e}^{-31.0/4.96} \approx 2\times
 
 ![The thermodynamic window of syntrophy (ΔG = ΔG'° + RT ln Q at 25 °C with 1 mM fatty acids and acetate, 50 mM bicarbonate and 0.5 bar CH₄; standard values after Thauer et al. 1977). A: butyrate oxidation to acetate and H₂ becomes exergonic below about 2 × 10⁻³ bar H₂, methanogenesis from H₂ above about 2 × 10⁻⁶ bar; both partners can gain energy within the shaded window. B: for propionate, with three H₂ per molecule and a more positive ΔG'° (+76.1 kJ), the window shrinks to about 2 × 10⁻⁶ to 10⁻⁴ bar. The methanogenic reaction is scaled to the H₂ produced by one fatty acid.](./plots/syntrophy-window.py)
 
+:::
+
 Within the window, each partner has to live on a few tens of kilojoules per reaction, near the minimum discussed in 7.1.1. The syntroph faces an additional problem: it must produce $\ce{H2}$ ($-0.41\,\mathrm{V}$ at standard pressure) from NADH ($-0.32\,\mathrm{V}$) or, in fatty acid oxidation, from the electron-transfer flavoprotein of butyryl-CoA dehydrogenase (about $-0.1\,\mathrm{V}$), which needs reverse electron transport or electron confurcation, consuming part of the meagre energy. The rate of degradation is limited by the diffusion of $\ce{H2}$ between the partners, and syntrophs and methanogens grow in close contact in flocs and granules; formate is an alternative carrier, and some partners exchange electrons directly.
 
 ### 7.5.2. Syntrophy in the Anaerobic Food Chain

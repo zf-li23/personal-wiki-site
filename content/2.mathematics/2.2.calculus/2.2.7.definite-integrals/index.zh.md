@@ -222,6 +222,8 @@ $$
 1. $\int_0^1\frac{x}{\sqrt{1+x^2}}\,\mathrm{d}x = \sqrt{1+x^2}\Big|_0^1 = \sqrt2 - 1$；$\int_1^{\mathrm{e}}\frac{\ln^2 x}{x}\,\mathrm{d}x = \frac13\ln^3x\Big|_1^{\mathrm{e}} = \frac13$。
 2. $\int_{-\pi/2}^{\pi/2}\sqrt{1 - \cos x}\,\mathrm{d}x$：由 $1 - \cos x = 2\sin^2\frac{x}{2}$，被积函数是 $\sqrt2\,\bigl|\sin\frac{x}{2}\bigr|$，开方后的绝对值不能丢。它是**偶函数**，所以积分等于 $2\sqrt2\int_0^{\pi/2}\sin\frac{x}{2}\,\mathrm{d}x = 2\sqrt2\left(-2\cos\frac x2\right)\Big|_0^{\pi/2} = 4(\sqrt2 - 1)$。
 
+:::
+
 Riemann 和的极限与分割、取点无关。反过来，若已知 $f \in C[0,1]$，就可以取等分点与右端点，把某些和式的极限化为积分。
 
 **算法 7.3.1（用定积分求和式极限）** 设 $f \in C[0,1]$，则
@@ -362,6 +364,8 @@ $$
 S = \int_0^{2\pi a}y\,\mathrm{d}x = \int_0^{2\pi}a^2(1 - \cos t)^2\,\mathrm{d}t = a^2(2\pi + \pi) = 3\pi a^2.
 $$
 
+:::
+
 最后是极坐标。在平面上取极点 $O$ 与从 $O$ 出发的极轴 $Ox$，点 $P$ 由它到 $O$ 的距离 $r$（极径）与 $OP$ 和极轴的夹角 $\theta$（极角）确定，$(r,\theta)$ 称为 $P$ 的极坐标（polar coordinates）。以直角坐标的原点为极点、$x$ 轴正向为极轴时，$x = r\cos\theta$，$y = r\sin\theta$。曲线写成 $r = r(\theta)$，例如 $r = a$ 是以极点为圆心的圆，$\theta = \theta_0$ 是从极点出发的射线。
 
 设 $r = r(\theta)$ 在 $[\alpha,\beta]$ 上连续非负，求它与射线 $\theta = \alpha$、$\theta = \beta$ 围成的曲边扇形 $D$ 的面积。分割 $[\alpha,\beta]$，射线 $\theta = \theta_i$ 把 $D$ 分成小块，第 $i$ 块近似为半径 $r(\xi_i)$、圆心角 $\Delta\theta_i$ 的扇形，面积 $\frac12r(\xi_i)^2\Delta\theta_i$。求和取极限：
@@ -442,6 +446,8 @@ $$
 
 **例 7.5.6** 椭圆 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 绕 $x$ 轴旋转：$V = \pi\int_{-a}^a\frac{b^2}{a^2}(a^2 - x^2)\,\mathrm{d}x = \frac43\pi ab^2$；$a = b = R$ 时得球的体积 $\frac43\pi R^3$。
 
+:::
+
 参数方程与极坐标的情形：
 
 - 曲线 $x = x(t)$、$y = y(t)$ 绕 $x$ 轴：$V = \pi\int_\alpha^\beta y(t)^2x'(t)\,\mathrm{d}t$。例如旋轮线一拱绕 $x$ 轴旋转，$V = \pi a^3\int_0^{2\pi}(1 - \cos t)^3\,\mathrm{d}t = 5\pi^2a^3$。
@@ -501,6 +507,8 @@ $$
 \int_1^{+\infty}\frac{\mathrm{d}x}{x^p}\;\begin{cases}= \dfrac{1}{p-1}, & p > 1,\\[1ex] \text{发散}, & 0 < p \le 1.\end{cases}
 $$
 
+:::
+
 收敛的无穷积分可以照常使用换元法、分部积分法和 Newton–Leibniz 公式，只要把 $G(+\infty)$ 理解为 $\lim_{x\to+\infty}G(x)$。
 
 **例 7.7.2**
@@ -536,6 +544,8 @@ $$
 **例 7.7.5** 求 $\lim_{n\to\infty}\dfrac{\sqrt[n]{n!}}{n}$。
 
 **解** 取对数，$\ln\frac{\sqrt[n]{n!}}{n} = \frac1n\sum_{i=1}^n\ln\frac in$，这是 $\ln x$ 在 $(0,1]$ 上的 Riemann 和。$\ln x$ 在 $0$ 附近无界，严格地说要对瑕积分单独论证（$\ln x$ 单调，可以用单调函数的上下和夹逼）；结果是 $\frac1n\sum\ln\frac in \to \int_0^1\ln x\,\mathrm{d}x = -1$，故极限为 $\mathrm{e}^{-1}$。
+
+:::
 
 瑕积分可以化成无穷积分：设 $a$ 是瑕点，令 $x = a + \frac1u$，
 
@@ -591,6 +601,8 @@ $$
 2. $\int_1^{+\infty}\frac{\ln(x+2) - \ln x}{\sqrt x}\,\mathrm{d}x$ 收敛：$x^{3/2}\cdot\frac{\ln(1 + 2/x)}{\sqrt x} = x\ln\left(1 + \frac2x\right) \to 2$，取 $p = \frac32$。
 3. $\int_1^{+\infty}x^2\mathrm{e}^{-x}\sin x\,\mathrm{d}x$ 绝对收敛：$x^2\cdot x^2\mathrm{e}^{-x}|\sin x| \to 0$。被积函数变号时，先判断 $|f|$ 的积分是否收敛。
 
+:::
+
 瑕积分的对应结论：设 $a$ 是 $\int_a^b f$ 的瑕点。
 
 **定理 7.7.6（瑕积分的 Cauchy 收敛准则）** $\int_a^b f$ 收敛 $\iff$ 对任意 $\varepsilon > 0$，存在 $\delta \in (0, b-a)$，当 $0 < \eta_1 < \eta_2 < \delta$ 时 $\left|\int_{a+\eta_1}^{a+\eta_2}f(x)\,\mathrm{d}x\right| < \varepsilon$。
@@ -607,6 +619,8 @@ $$
 - $\alpha < 1$ 时取 $p = \frac{1+\alpha}{2} \in (\alpha, 1)$，$x^p\cdot\frac{|\ln x|}{x^\alpha} = x^{p-\alpha}|\ln x| \to 0$，收敛；
 - $\alpha \ge 1$ 时取 $p = \alpha$，$x^\alpha\cdot\frac{|\ln x|}{x^\alpha} = |\ln x| \to +\infty$，发散（$\alpha \le 0$ 时 $0$ 不是瑕点，积分是正常的，结论"收敛"也成立）。
 
+:::
+
 一个积分可能同时是无穷积分和瑕积分，此时把它拆成每段只含一种"反常"的积分，要求各段都收敛。概率论中两个最重要的含参反常积分就是这样讨论的。
 
 **定义 7.7.4（Gamma 函数）** 对 $s > 0$，令
@@ -616,6 +630,8 @@ $$
 $$
 
 **例 7.7.8** 这个积分收敛当且仅当 $s > 0$。拆成 $I_1 = \int_0^1x^{s-1}\mathrm{e}^{-x}\,\mathrm{d}x$ 与 $I_2 = \int_1^{+\infty}x^{s-1}\mathrm{e}^{-x}\,\mathrm{d}x$。$I_2$ 对一切 $s$ 收敛（例 7.7.6）。$s < 1$ 时 $0$ 是 $I_1$ 的瑕点，取 $p = 1 - s$，$x^p\cdot x^{s-1}\mathrm{e}^{-x} \to 1$：$s > 0$ 即 $p < 1$ 时收敛，$s \le 0$ 即 $p \ge 1$ 时发散。
+
+:::
 
 Gamma 函数的基本性质：
 
@@ -630,6 +646,8 @@ $$
 $$
 
 **例 7.7.9** 这个积分收敛当且仅当 $\alpha > 0$ 且 $\beta > 0$。可能的瑕点是 $0$ 与 $1$，在 $\frac12$ 处拆开。在 $0$ 附近，取 $p = 1 - \alpha$，$x^p\cdot x^{\alpha-1}(1-x)^{\beta-1} \to 1$，收敛 $\iff p < 1 \iff \alpha > 0$；在 $1$ 附近同理，取 $p = 1 - \beta$，收敛 $\iff \beta > 0$。
+
+:::
 
 令 $x = 1 - t$ 得 $\mathrm{B}(\alpha,\beta) = \mathrm{B}(\beta,\alpha)$；令 $x = \sin^2\theta$ 得 $\mathrm{B}(\alpha,\beta) = 2\int_0^{\pi/2}\sin^{2\alpha-1}\theta\cos^{2\beta-1}\theta\,\mathrm{d}\theta$，例如 $\mathrm{B}\left(\frac12,\frac12\right) = \pi$，这与 Wallis 积分是同一类积分。两个函数之间有关系 $\mathrm{B}(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$，证明同样要用二重积分（[第 12 章](/2.2.12)）。
 

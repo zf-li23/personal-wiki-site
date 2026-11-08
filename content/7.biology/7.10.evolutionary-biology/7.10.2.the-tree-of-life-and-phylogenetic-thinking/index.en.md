@@ -108,6 +108,8 @@ Phylogenetic inference seeks the tree that best explains the distribution of cha
 
 ![Inferring a phylogeny by parsimony (Example 2.4.1). A: a hypothetical stretch of a hemoglobin gene in four squirrels: the ground squirrel (outgroup) and three species of *Sciurus*; only sites 3 and 9 vary (bold; derived states colored). B: the three possible rooted trees of the ingroup. Red bars: the change T to A at site 3; blue bars: the change A to T at site 9. Tree 1 needs 2 changes, trees 2 and 3 need 3, so parsimony chooses tree 1](./plots/squirrel-parsimony.py)
 
+:::
+
 The example shows both the logic and its limits. Parsimony assumes that changes are rare; when the same change is likely to happen more than once, because mutation rates are high, times are long or many lineages are sampled, the fewest-change tree can be wrong, and on trees with long branches parsimony is even statistically inconsistent (**long-branch attraction**, [7.8.6](/7.8.6#def-6.4.2)). Model-based methods, maximum likelihood and Bayesian inference, use explicit models of character change and are the standard for molecular data ([7.10.20](/7.10.20)–[7.10.22](/7.10.22)). The example also assumes that the gene's history is the species' history, which need not be true (Section 2.5). When successive branchings were so rapid that few changes accumulated between them, the data may be unable to resolve the order, and the tree is drawn with a polytomy, a node with three or more descendant branches; such a polytomy expresses ignorance (soft polytomy) rather than a real simultaneous split (hard polytomy).
 
 When different kinds of data give different trees, the conflict is resolved by more data and by characters that are less prone to homoplasy, as the history of the whales shows.

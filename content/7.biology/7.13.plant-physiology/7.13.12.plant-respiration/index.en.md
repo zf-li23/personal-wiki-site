@@ -1,7 +1,7 @@
 ---
 title: Plant Respiration
 description: "The concept, significance and measures of plant respiration (respiration rate, respiratory quotient and its calculation); degradation of starch and sucrose; features of plant glycolysis (PPi-dependent phosphofructokinase, the PEP carboxylase bypass, bottom-up regulation) and fermentation; features of the plant TCA cycle and malic enzyme; the glyoxylate cycle and germination of oilseeds; the physiological role of the pentose phosphate pathway; branches of plant mitochondrial electron transport: external and internal NAD(P)H dehydrogenases, alternative oxidase and cyanide-resistant respiration, uncoupling protein and thermogenesis; other terminal oxidases; regulation of respiration; growth and maintenance respiration; effects of temperature, O₂ and CO₂ and Q₁₀; respiration and storage of agricultural products."
-source_hash: 5e6d583d6d86
+source_hash: 09a64fa6eeaa
 ---
 
 Photosynthesis stores light energy in sugars, and respiration releases that energy again in a controlled manner for use by the cell, at the same time producing the carbon skeletons needed for the synthesis of many other substances. In broad outline plant respiration is the same as in animals (glycolysis, the citric acid cycle, oxidative phosphorylation), and the reactions and stoichiometry of these pathways were covered in biochemistry ([7.1.18](/7.1.18), [7.1.20](/7.1.20), [7.1.23](/7.1.23)). This chapter treats only what is distinctive in plants: the substrates of plant respiration are mainly sucrose and starch rather than glucose; glycolysis has several parallel bypasses and is regulated "from the bottom up"; and mitochondria have malic enzyme, non-proton-pumping NAD(P)H dehydrogenases and an alternative oxidase, which animals lack, so that a large electron flux can bypass ATP synthesis and be used to keep carbon metabolism flowing, to prevent the production of reactive oxygen species, and even to produce heat. These features reflect a basic circumstance of plant energy metabolism: plants are usually not short of energy (sunlight) but are limited more by water, nutrients and other factors, so metabolic flexibility often matters more than energy efficiency.
@@ -52,6 +52,8 @@ RQ depends on the degree of oxidation of the substrate: the higher the ratio of 
 - oxalic acid: $\ce{C2H2O4 + 0.5O2 -> 2CO2 + H2O}$, $\mathrm{RQ} = 4$.
 
 The RQ of protein is about 0.8. Thus $\mathrm{RQ} \approx 1$ when carbohydrate is the substrate, $\mathrm{RQ} < 1$ for fat or protein, and $\mathrm{RQ} > 1$ for organic acids.
+
+:::
 
 RQ also reflects the supply of $\ce{O2}$ and the fate of the substrate:
 
@@ -127,6 +129,8 @@ Efficiency of fermentation. The $\Delta_{\mathrm{r}}G'^{\circ}$ of complete oxid
 Because the energy recovery of fermentation is so low, sugar breakdown must speed up to maintain the ATP supply needed to keep the cell alive. This is how the **Pasteur effect** appears in plants: the rate of glycolysis rises on the change from aerobic to anaerobic conditions and falls on the change from anaerobic to aerobic conditions.
 
 **Example 12.3.1 (How Fast Sugar Must Be Broken Down Under Oxygen Deficiency)** Aerobically each sucrose broken down gives about 60 ATP, and fermentation gives 4 (about 5 via the sucrose synthase pathway). To maintain the same ATP supply, the rate of sucrose breakdown in fermentation must be $60/4 = 15$ times that under aerobic conditions. In practice glycolysis in oxygen-deficient tissue can speed up only several-fold, the ATP supply still falls substantially, and metabolism turns to maintaining only the most basic functions.
+
+:::
 
 Genes of glycolytic and fermentation enzymes are induced under oxygen deficiency. One mechanism by which plants sense oxygen is the N-end rule pathway: the N-terminal cysteine of group VII ERF transcription factors is oxidized by plant cysteine oxidase in the presence of oxygen, and the protein is then degraded; under oxygen deficiency they are stabilized and enter the nucleus to activate hypoxia-response genes. Over the long term under anoxic conditions plants grow poorly or even die, for three reasons: little energy is produced and respiratory substrates are consumed excessively; few intermediates are produced, so that insufficient raw material is available for the synthesis of cell components; and the accumulation of ethanol, lactate and acetaldehyde is toxic to cells. Many flood-tolerant plants (rice, sunflower) rely on **aerenchyma** running from leaf to root to deliver oxygen to the roots, and in mangroves *Avicennia*, *Rhizophora* and others grow respiratory roots that project above the water.
 

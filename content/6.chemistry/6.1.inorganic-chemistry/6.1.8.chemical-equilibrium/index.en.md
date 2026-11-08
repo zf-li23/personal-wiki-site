@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: bbe44af2379e
+source_hash: 0ffe86568eb4
 ---
 
 [6.1.6](/6.1.6) gave the criterion for the direction of a reaction: at constant temperature and pressure, with no **non-expansion work**, a reaction with $\Delta_{\mathrm{r}}G_{\mathrm{m}} < 0$ can proceed spontaneously. Most reactions, however, do not go to completion but stop at a state in which reactants and products coexist, after which the macroscopic composition no longer changes. This state has two equivalent descriptions. Kinetically ([6.1.7](/6.1.7)), the rates of the forward and reverse reactions are equal; thermodynamically, the **Gibbs free energy** of the system passes through a minimum as a function of the extent of reaction, so that $\Delta_{\mathrm{r}}G_{\mathrm{m}} = 0$. This chapter first describes chemical equilibrium and the equilibrium constant (8.1, 8.2), then derives from thermodynamics the reaction isotherm and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$ (8.3), which connects the thermodynamic data of Chapter 6 with equilibrium compositions, and finally discusses the effects of concentration, pressure, and temperature on equilibrium (8.4). The standard equilibrium constant and the isotherm of this chapter are the common basis of the four great equilibria that follow (acid–base, complexation, precipitation, and redox, [6.1.9](/6.1.9)–[6.1.12](/6.1.12)). A rigorous treatment of chemical potential, activity coefficients and fugacity, and phase equilibria and the phase rule is given in [Physical Chemistry](/6.3).
@@ -134,6 +134,8 @@ $$
 K^\circ = \frac{K_cRT}{p^\circ} = \frac{360 \times 8.314 \times 373}{10^5} = 11.
 $$
 The values of $K^\circ$ and $K_c$ for a gas-phase reaction can differ greatly and must not be mixed up.
+
+:::
 
 The equilibrium constant describes only the equilibrium state. For a system at an arbitrary moment (not necessarily at equilibrium), a ratio of the same form can be written.
 
@@ -370,6 +372,8 @@ $$
 \frac{\partial\ln Q}{\partial n_{\ce{N2}}} = \frac{2}{n} - \frac{1}{n_{\ce{N2}}},
 $$
 which is positive when $x_{\ce{N2}} = n_{\ce{N2}}/n > \frac{1}{2}$: adding $\ce{N2}$ makes $Q > K^\circ$, and the equilibrium shifts instead toward the decomposition of ammonia. The reason is that although adding $\ce{N2}$ increases the partial pressure of $\ce{N2}$, it also dilutes $\ce{H2}$ and $\ce{NH3}$, and $\ce{H2}$ appears to the third power in $Q$. Only when $x_{\ce{N2}} < \frac{1}{2}$ (including the usual case of a 1 : 3 feed) does adding $\ce{N2}$ shift the equilibrium forward. At constant volume, adding $\ce{N2}$ does not change the other partial pressures, and the equilibrium always shifts forward.
+
+:::
 
 A catalyst accelerates the forward and reverse reactions equally ([6.1.7](/6.1.7)) and does not change $K^\circ$, so it does not shift the equilibrium and only shortens the time needed to reach it.
 

@@ -1,7 +1,7 @@
 ---
 title: Neural Circuits and Rhythm Generation
 description: Firing and facilitated zones of a neuronal pool (a threshold-of-6 example); divergence and convergence, reciprocal and recurrent inhibition; afterdischarge (synaptic afterdischarge and reverberating circuits) as a recurrent excitation plus slow negative feedback model; sustained output, baseline and oscillatory output; fatigue and inhibition stabilize circuits; feedforward inhibition as a time gate (τ about 15 ms, window about 2 ms), shunting inhibition τ_eff = τ_m/(1 + g R_in), VIP→SST disinhibition; rate models; central pattern generators, half-center oscillators and adaptation variables; the stomatogastric ganglion, leech heartbeat, mollusc swimming and the segmental CPG of the lamprey.
-source_hash: 80e081b29f3b
+source_hash: 275198bc2f49
 ---
 
 Chapter 5 explained how a single neuron integrates synaptic inputs and passes the signal on to the next cell through a synapse ([7.14.5](/7.14.5)). The functions of the nervous system arise from circuits in which many neurons are wired together in particular patterns. The same neurons, wired differently, can amplify or confine a signal, make the output outlast the input, pick out inputs that are scattered in time, or generate a rhythm on their own in the absence of rhythmic input. This chapter first treats the classical circuit elements in the style of Guyton (neuronal pools, divergence and convergence, reciprocal inhibition, afterdischarge, oscillation), and then uses several phenomenological rate models to show how inhibition controls timing and gain and how rhythms emerge from connectivity. These circuits recur in later chapters: the **baroreceptor reflex** (Chapter 16), the respiratory rhythm (Chapter 20), and spinal reflexes and locomotion (Chapter 44). The models in this course are phenomenological simulations that serve to motivate the physiology; the dynamical-systems analysis (phase plane, bifurcations) and network theory belong to computational neuroscience ([7.16](/7.16)) and ordinary differential equations ([2.4](/2.4)).
@@ -19,6 +19,8 @@ A pool may contain only a few neurons (the ganglia of some invertebrates) or hun
 - Only fiber 1 is excited: a fires; b and c receive only 3 synapses, which is below threshold, but their membrane potentials are closer to threshold, so they are facilitated.
 - Only fiber 2 is excited: d fires, and b and c are facilitated.
 - Both fibers are excited together: b and c each receive 6 synapses and fire, so the number of activated neurons increases from 2 to 4.
+
+:::
 
 The stimulus field of each fiber is thus divided into two parts: a central discharge zone (activation zone), whose neurons are activated by this fiber alone, and a peripheral facilitated zone, whose neurons are facilitated and can fire only with the cooperation of other inputs. Where the facilitated zones of two fibers overlap, **spatial summation** takes effect. Inhibitory fibers have analogous zones: neurons in the central region are strongly inhibited and those in the periphery are partially inhibited.
 

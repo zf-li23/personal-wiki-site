@@ -1,6 +1,6 @@
 ---
 title: Hermitian Operators, Bilinear Forms and Tensors
-source_hash: 45d95f7f1934
+source_hash: b594f919bc4f
 ---
 
 The [previous chapter](/2.1.12) proved that the normal operators are exactly the operators that can be diagonalized in an orthonormal basis. There is a clear correspondence between normal matrices and complex numbers: the normal matrices whose eigenvalues are all real (the Hermitian matrices) play the role of real numbers, and those whose eigenvalues have modulus $1$ (the unitary matrices) play the role of unit complex numbers. Following this analogy, the first half of the chapter generalizes the polar form $z = r\mathrm{e}^{\mathrm{i}\theta}$ of a complex number to the polar decomposition $A = R\mathrm{e}^{\mathrm{i}M}$ of a matrix; it then carries the real **quadratic forms**, **congruence of matrices**, **Sylvester's law of inertia** and positive definite matrices of [Chapter 7](/2.1.7) over to the complex field, obtaining Hermitian forms and \*-congruence; finally it states the **singular value decomposition** of complex matrices and explains its relation to the polar decomposition. Most proofs are the same as in the real case and are only sketched.
@@ -42,6 +42,8 @@ $$
 
 Hence $D^* = -D$: $D$ is not self-adjoint but skew-adjoint, with eigenvalues $0, \pm \mathrm{i}$ (corresponding to the complex functions $1, \mathrm{e}^{\pm \mathrm{i}x}$). The underlying reason is integration by parts: for periodic functions, $\langle f', g \rangle = -\langle f, g' \rangle$. Correspondingly, $-D^2 = -\frac{\mathrm{d}^2}{\mathrm{d}x^2}$ is self-adjoint, which is the starting point of the Fourier series method in partial differential equations.
 
+:::
+
 Every complex square matrix can be written uniquely as $A = H + K$, where $H = \frac12(A + A^{\mathsf H})$ is Hermitian and $K = \frac12(A - A^{\mathsf H})$ is skew-Hermitian; this is the analogue of splitting $z = a + b\mathrm{i}$ into real and imaginary parts. Expanding $AA^{\mathsf H}$ and $A^{\mathsf H}A$ shows that $A$ is normal $\Leftrightarrow$ $HK = KH$.
 
 ## 13.2. The Polar Decomposition
@@ -72,6 +74,8 @@ $R$ is a Hermitian matrix with nonnegative eigenvalues and $M$ is Hermitian; bot
 The factorization $A = R\mathrm{e}^{\mathrm{i}M}$ is called the *polar decomposition* of the normal matrix $A$. Since $A^{\mathsf H}A = \mathrm{e}^{-\mathrm{i}M}R^2\mathrm{e}^{\mathrm{i}M} = R^2$, the factor $R = (A^{\mathsf H}A)^{1/2}$ is uniquely determined by $A$ (taking the positive semidefinite square root); $M$ is not unique: each $\theta_j$ may be changed by an integer multiple of $2\pi$, and when $A$ is singular the arguments of the zero eigenvalues are arbitrary. This answers the question raised at the beginning of [Chapter 11](/2.1.11).
 
 **Example 13.2.1** The matrix $A = \begin{bmatrix} r\cos\theta & -r\sin\theta \\ r\sin\theta & r\cos\theta \end{bmatrix}$ corresponding to the complex number $z = r\mathrm{e}^{\mathrm{i}\theta}$ has the polar decomposition $R = rI$, $M = \begin{bmatrix} 0 & \mathrm{i}\theta \\ -\mathrm{i}\theta & 0 \end{bmatrix}$: $M$ is Hermitian, $\mathrm{i}M = \theta\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$, and $\mathrm{e}^{\mathrm{i}M}$ is the rotation matrix through the angle $\theta$ (Example 11.8.1). Here the polar decomposition of the matrix and the polar form of the complex number coincide completely.
+
+:::
 
 A general square matrix (not necessarily normal) also has a polar decomposition $A = UP$ ($U$ unitary, $P$ positive semidefinite Hermitian), but $U$ and $P$ need not commute; see Section 13.5.
 
@@ -159,6 +163,8 @@ The $\sigma_i$ are the arithmetic square roots of the positive eigenvalues of $A
 **Proof** $A^{\mathsf H}A$ is a positive semidefinite Hermitian matrix (Property 13.4.1), so by Theorem 13.1.1 there is a unitary $V = (\boldsymbol{v}_1, \dots, \boldsymbol{v}_n)$ with $V^{\mathsf H}A^{\mathsf H}AV = \operatorname{diag}(\sigma_1^2, \dots, \sigma_r^2, 0, \dots, 0)$. For $i > r$, $\|A\boldsymbol{v}_i\|^2 = 0$. Let $\boldsymbol{u}_i = \frac{1}{\sigma_i}A\boldsymbol{v}_i$ ($i \le r$); then $\langle \boldsymbol{u}_j, \boldsymbol{u}_i \rangle = \frac{1}{\sigma_i\sigma_j}\boldsymbol{v}_i^{\mathsf H}A^{\mathsf H}A\boldsymbol{v}_j = \frac{\sigma_j^2}{\sigma_i\sigma_j}\delta_{ij} = \delta_{ij}$. Extending $\boldsymbol{u}_1, \dots, \boldsymbol{u}_r$ to an orthonormal basis of $\mathbb{C}^m$ gives a unitary $U$ with $AV = U\Sigma$. $\square$
 
 **Example 13.5.1** A matrix $A = u\boldsymbol{v}^{\mathsf H}$ of rank $1$ (with nonzero $\boldsymbol{u} \in \mathbb{C}^m$, $\boldsymbol{v} \in \mathbb{C}^n$) has the single singular value $\sigma_1 = \|\boldsymbol{u}\|\,\|\boldsymbol{v}\|$, with $\boldsymbol{u}_1 = \boldsymbol{u} / \|\boldsymbol{u}\|$, $\boldsymbol{v}_1 = \boldsymbol{v} / \|\boldsymbol{v}\|$ and $A = \sigma_1\boldsymbol{u}_1\boldsymbol{v}_1^{\mathsf H}$; the remaining columns are arbitrary extensions. For example, for the $3 \times 2$ all-ones matrix $A = (1, 1, 1)^{\mathsf T}(1, 1)$, $\sigma_1 = \sqrt3 \cdot \sqrt2 = \sqrt6$, $\boldsymbol{u}_1 = \frac{1}{\sqrt3}(1, 1, 1)^{\mathsf T}$ and $\boldsymbol{v}_1 = \frac{1}{\sqrt2}(1, 1)^{\mathsf T}$.
+
+:::
 
 The singular value decomposition extends the spectral decomposition of normal matrices to arbitrary matrices, at the price of using two different unitary matrices on the left and on the right. It immediately yields the polar decomposition of a general square matrix.
 
@@ -262,6 +268,8 @@ $$
 A direct computation gives $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$, and dividing by $E_0^2$ yields $x'^2 - c^2t'^2 = x^2 - c^2t^2$, so $g(T\alpha, T\alpha) = g(\alpha, \alpha)$; by polarization of the symmetric bilinear form, $g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$. $T$ is a Lorentz transformation, and the isometry group $O(3, 1)$ of the Lorentz form is called the *Lorentz group*.
 
 **Example 13.7.2** The oriented area $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ on $\mathbb{R}^2$ is a symplectic form. Real $2 \times 2$ matrices satisfy the identity $M^{\mathsf T}JM = (\det M)J$, so $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$: in two dimensions the symplectic transformations are exactly the linear transformations preserving oriented area. In higher dimensions the symplectic condition is much stronger than volume preservation. The phase space of Hamiltonian mechanics carries a natural symplectic form, and the time evolution of the system preserves it.
+
+:::
 
 ![Isometries of three bilinear forms in the plane. Left: rotations preserve x^2 + y^2, and points move along circles. Middle: Lorentz transformations (with c = 1) preserve x^2 - t^2, points move along hyperbolas, and the light cone x = ±t is invariant. Right: matrices of determinant 1 preserve oriented area; after a shear and a squeeze the unit disk still has area π](./plots/isometry-groups.py)
 

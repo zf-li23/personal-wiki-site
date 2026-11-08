@@ -1,6 +1,6 @@
 ---
 title: Acid–Base and Complexation Equilibria
-source_hash: 75077763c1cc
+source_hash: d3c6bce262d5
 ---
 
 Most inorganic reactions take place in aqueous solution, where acids, bases, and salts dissociate into ions and the reactions between ions give rise to the four main types of equilibrium in solution: acid–base equilibria and complexation equilibria (this chapter), precipitation–dissolution equilibria ([6.1.10](/6.1.10)), and redox equilibria ([6.1.11](/6.1.11)). All of them are specific forms of the **chemical equilibrium** of [6.1.8](/6.1.8) in solution: the equilibrium constants are all **standard equilibrium constants**, the direction of reaction is always decided by comparing the **reaction quotient** with the equilibrium constant, and every equilibrium constant can be linked to thermodynamic data through $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$. We first compare the three theories of acids and bases (9.1), then treat the equilibrium calculations for water and pH (9.2), weak acids and bases (9.3), salt solutions (9.4), and buffer solutions (9.5). Acid–base titration is introduced briefly (9.6), and the chapter ends with the dissociation equilibria of complexes in solution (9.7). The common method of calculation is to write down all the equilibria, identify the dominant one, make a reasonable approximation, and finally check that the approximation holds; if it does not, we write the equations of charge balance and mass balance and solve them numerically. A systematic treatment of the proton condition and distribution fractions, titration curves and end-point errors, and EDTA and conditional stability constants are found in [Analytical Chemistry](/6.4); activity coefficients and ionic strength are found in [Physical Chemistry](/6.3).
@@ -81,6 +81,8 @@ The essence of a Lewis acid–base reaction is the formation of a **coordinate b
 **Example 9.1.1** Identify the Lewis acid and base in each of the following reactions: (1) $\ce{BrF3 + F- -> [BrF4]-}$; (2) $\ce{(CH3)2CO + I2 -> (CH3)2CO*I2}$; (3) $\ce{KH + H2O -> KOH + H2}$.
 
 **Solution** (1) $\ce{BrF3}$ is the acid and $\ce{F-}$ is the base. (2) Acetone is the base and $\ce{I2}$ is the acid: a lone pair on the carbonyl O of acetone enters the empty σ* antibonding orbital of $\ce{I2}$ to form a charge-transfer complex (this is why $\ce{I2}$ is brown in acetone but violet in $\ce{CCl4}$). (3) The ionic hydride supplies the base $\ce{H-}$, which combines with the acid $\ce{H+}$ of water to give $\ce{H2}$.
+
+:::
 
 The Lewis theory frees acids and bases from the requirement that they contain a particular element or be in a particular solvent, and reveals their essence in terms of electron-pair donation and acceptance; it has the widest scope. Its limitation is that it is too general: almost every compound can be regarded as an acid–base adduct, and there is no unified quantitative scale of strength, since the order of strength of one Lewis base toward different Lewis acids can differ. The principle of hard and soft acids and bases partly remedies this shortcoming.
 
@@ -258,6 +260,8 @@ K_{\mathrm{a}} = \frac{x^2}{0.10 - x} = 1.75 \times 10^{-5}.
 $$
 Solving the quadratic equation $x^2 + K_{\mathrm{a}}x - K_{\mathrm{a}}c = 0$ gives $x = 1.31 \times 10^{-3}$. If we assume $x \ll 0.10$ and $0.10 - x \approx 0.10$, then $x = \sqrt{K_{\mathrm{a}}c} = 1.32 \times 10^{-3}$, which differs by only 0.7%. Thus $\mathrm{pH} = 2.88$ and the degree of dissociation is $\alpha = x/c = 1.3\%$.
 
+:::
+
 In general, for a monoprotic weak acid of concentration $c$, when the dissociation of water can be neglected,
 
 $$
@@ -324,6 +328,8 @@ $$
 $$
 From the second dissociation, $K_{\mathrm{a2}} = [\ce{H+}][\ce{S^2-}]/[\ce{HS-}]$ and $[\ce{H+}] \approx [\ce{HS-}]$, we obtain $[\ce{S^2-}] \approx K_{\mathrm{a2}}$; and $[\ce{OH-}] = K_{\mathrm{w}}/[\ce{H+}] = 1.1 \times 10^{-10}$.
 
+:::
+
 Two general rules follow:
 
 1. When $K_{\mathrm{a1}} \gg K_{\mathrm{a2}} \gg \cdots$ (differing by more than $10^3$) for a polyprotic acid, $[\ce{H+}]$ can be calculated by treating the acid as monoprotic, and $K_{\mathrm{a1}}$ can serve as the measure of its acid strength.
@@ -386,6 +392,8 @@ $$
 **Example 9.4.2** Calculate the pH of a $0.10\,\mathrm{mol\,L^{-1}}$ $\ce{NH4Cl}$ solution and the degree of dissociation (degree of hydrolysis) of $\ce{NH4+}$.
 
 **Solution** $K_{\mathrm{a}}(\ce{NH4+}) = \frac{K_{\mathrm{w}}}{K_{\mathrm{b}}(\ce{NH3})} = 5.6 \times 10^{-10}$ and $c/K_{\mathrm{a}} > 400$, so $[\ce{H+}] = \sqrt{5.6 \times 10^{-10} \times 0.10} = 7.5 \times 10^{-6}$, $\mathrm{pH} = 5.13$; and $h = 7.5 \times 10^{-6}/0.10 = 0.0075\%$.
+
+:::
 
 Salts of polyprotic weak acids with strong bases ($\ce{Na2CO3}$, $\ce{Na3PO4}$, $\ce{Na2S}$) hydrolyze stepwise. For $\ce{PO4^3-}$, the three values of $K_{\mathrm{b}}$ are obtained from Eq. (9.1) by pairing in reverse order with the three $K_{\mathrm{a}}$ values of phosphoric acid:
 
@@ -595,6 +603,8 @@ $$
 $$
 At the stoichiometric point, pH = 7.00. At 0.1% past it, $20.02\,\mathrm{mL}$ has been added, the excess NaOH gives $[\ce{OH-}] = 5.0 \times 10^{-5}$, and $\mathrm{pH} = 9.70$. The jump range is 4.30–9.70: with only about half a drop ($0.04\,\mathrm{mL}$) more titrant, the pH changes by 5.4 units. At a concentration of $0.01000\,\mathrm{mol\,L^{-1}}$, $[\ce{H+}]$ and $[\ce{OH-}]$ before and after the stoichiometric point are both reduced to 1/10, and the jump range is 5.30–8.70, narrowed by 2 pH units.
 
+:::
+
 The significance of the jump is that if an indicator changes color within the jump range, the end point differs from the stoichiometric point by no more than 0.1%. This gives the principle for choosing an indicator: the transition range of the indicator should lie wholly or partly within the jump range. For a $0.1\,\mathrm{mol\,L^{-1}}$ strong acid–strong base titration, methyl red and phenolphthalein can be used (methyl orange also, with somewhat larger error); at $0.01\,\mathrm{mol\,L^{-1}}$ methyl orange is no longer suitable.
 
 The whole titration curve can be calculated point by point from the charge balance. When NaOH (concentration $c$, volume added $V$) is used to titrate HCl (concentration $c$, volume $V_0$), $[\ce{Na+}] + [\ce{H+}] = [\ce{Cl-}] + [\ce{OH-}]$, that is,
@@ -666,6 +676,8 @@ K^\circ = \frac{[\ce{[Ag(CN)2]-}][\ce{NH3}]^2}{[\ce{[Ag(NH3)2]+}][\ce{CN-}]^2} =
 $$
 $K^\circ$ is very large, and the reaction proceeds very completely to the right: a complex ion always converts into the more stable complex ion.
 
+:::
+
 Stability constants can also be used to calculate the concentration of free metal ion in solution.
 
 **Example 9.7.2** To $1\,\mathrm{mL}$ of $0.040\,\mathrm{mol\,L^{-1}}$ $\ce{AgNO3}$ solution is added $1\,\mathrm{mL}$ of $2.0\,\mathrm{mol\,L^{-1}}$ aqueous ammonia. Calculate $[\ce{Ag+}]$ and $[\ce{[Ag(NH3)]+}]$ at equilibrium. Take $\beta_2 = 1.7 \times 10^{7}$ and $K_1 = 2.0 \times 10^{3}$.
@@ -681,6 +693,8 @@ $$
 \beta_2 = \frac{0.020 - x}{x(0.96 + 2x)^2} \approx \frac{0.020}{x \times 0.96^2} = 1.7 \times 10^{7}, \qquad x = 1.3 \times 10^{-9}\,\mathrm{mol\,L^{-1}}.
 $$
 $[\ce{[Ag(NH3)]+}] = K_1[\ce{Ag+}][\ce{NH3}] = 2.0 \times 10^{3} \times 1.3 \times 10^{-9} \times 0.96 = 2.5 \times 10^{-6}\,\mathrm{mol\,L^{-1}}$, only 0.013% of the total silver, so the assumption that everything forms $\ce{[Ag(NH3)2]+}$ holds. The concentration of free $\ce{Ag+}$ has been lowered by seven orders of magnitude; this is why complexation can dissolve precipitates and change electrode potentials.
+
+:::
 
 Finally, complexation equilibria often coexist with other equilibria, and the equilibrium constant of the overall reaction is obtained by combining them by the rule of multiple equilibria:
 

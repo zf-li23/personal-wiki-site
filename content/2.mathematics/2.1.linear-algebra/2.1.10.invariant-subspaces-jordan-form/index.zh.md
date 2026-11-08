@@ -116,6 +116,8 @@ $$
 2. $A_1 = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix}$ 有特征向量 $\boldsymbol{q}_1 = (1, 2)^{\mathsf T}$（$A_1\boldsymbol{q}_1 = \boldsymbol{0}$），扩充为 $\boldsymbol{q}_1, \boldsymbol{e}_2$，$Q = \begin{bmatrix} 1 & 0 \\ 2 & 1 \end{bmatrix}$，$Q^{-1}A_1Q = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$。
 3. $P = P_1\operatorname{diag}(1, Q) = \begin{bmatrix} 1 & 0 & 0 \\ 1 & 1 & 0 \\ 1 & 2 & 1 \end{bmatrix}$，$P^{-1}AP = \begin{bmatrix} 1 & -1 & 2 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix}$。
 
+:::
+
 [第 12 章](/2.1.12)将把 Schur 定理加强为：$P$ 可以取成酉矩阵。
 
 ## 10.4. 广义特征向量与根子空间
@@ -250,6 +252,8 @@ $$
 **例 10.6.1** $A = \operatorname{diag}(1, 1, 2)$ 的特征多项式是 $(x - 1)^2(x - 2)$，极小多项式是 $(x - 1)(x - 2)$；$\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$ 的极小多项式是 $(x - 1)^2$，有重根，所以不可对角化。
 
 **例 10.6.2** 若 $A^2 = I_n$，则 $x^2 - 1 = (x - 1)(x + 1)$ 是化零多项式，$m_A$ 整除它而没有重根，故 $A$ 可对角化。同理，满足 $A^2 = A$（投影）或 $A^k = I$ 的复矩阵都可对角化。
+
+:::
 
 判断能否对角化只需要检验一个多项式有没有重根，而后者又可以用 $\gcd(m_A, m_A')$ 判断（[第 9 章](/2.1.9)的**最大公因式**），不需要求出任何特征向量。
 
@@ -421,6 +425,8 @@ Jordan 形只需要秩，而 Jordan 基 $P$ 需要逐条构造 Jordan 链。构�
 2. 记 $N = A - 2I$。$\operatorname{rank}(N) = 4$，$\operatorname{rank}(N^2) = 2$，$\operatorname{rank}(N^3) = 1 = 6 - 5$，停止。关于 $2$ 的阶数 $\ge 1, \ge 2, \ge 3$ 的块数分别为 $6 - 4 = 2$、$4 - 2 = 2$、$2 - 1 = 1$，即一个 $3$ 阶块和一个 $2$ 阶块：$J = \operatorname{diag}(1, J_{2,3}, J_{2,2})$。
 3. $\mu = 1$：$\boldsymbol{p}_1 = \boldsymbol{e}_1$。$\mu = 2$ 的第 $3$ 层：取 $\boldsymbol{y} = (-2, 0, 0, 0, 1, 0)^{\mathsf T} \in N_3 \setminus N_2$，链为 $N^2\boldsymbol{y} = (1, 1, 0, 0, 0, 0)^{\mathsf T}$，$N\boldsymbol{y} = (3, 2, 1, 1, 0, 0)^{\mathsf T}$，$\boldsymbol{y}$。第 $2$ 层：$N_2$ 由 $N_1 = \operatorname{span}\{(1,1,0,0,0,0)^{\mathsf T}, (1,0,1,0,0,0)^{\mathsf T}\}$ 及 $\boldsymbol{e}_4$、$(3, 0, 0, 0, -2, 1)^{\mathsf T}$ 张成。$\boldsymbol{e}_4$ 不能选：$\boldsymbol{e}_4 = N\boldsymbol{y} - 2(1,1,0,0,0,0)^{\mathsf T} - (1,0,1,0,0,0)^{\mathsf T}$ 落在 $N_1 + \operatorname{span}\{N\boldsymbol{y}\}$ 中，它的链底 $N\boldsymbol{e}_4 = N^2\boldsymbol{y}$ 与第一条链重合。取 $\boldsymbol{z} = (3, 0, 0, 0, -2, 1)^{\mathsf T}$，链为 $N\boldsymbol{z} = (-4, -1, -3, 0, 0, 0)^{\mathsf T}$，$\boldsymbol{z}$。
 4. $P = (\boldsymbol{e}_1, N^2\boldsymbol{y}, N\boldsymbol{y}, \boldsymbol{y}, N\boldsymbol{z}, \boldsymbol{z}) = \begin{bmatrix} 1 & 1 & 3 & -2 & -4 & 3 \\ 0 & 1 & 2 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & -3 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & -2 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$，$\det P = -3 \ne 0$，$P^{-1}AP = J$。
+
+:::
 
 Jordan 形是理论上的最简形，却不适合浮点计算：它不是矩阵元素的连续函数。下面的代码把 $J_{0,10}$ 的一个元素改动 $10^{-10}$，特征值就从全为 $0$ 变成模都等于 $(10^{-10})^{1/10} = 0.1$ 的十个不同的数，Jordan 形从一个 $10$ 阶块变成对角阵。
 

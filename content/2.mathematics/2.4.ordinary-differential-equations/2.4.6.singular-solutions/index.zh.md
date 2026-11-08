@@ -34,6 +34,8 @@ $$
 $$
 由 $p'=1$ 得 $p=x+C$，代回得通解 $y=\dfrac{x^2}{2}+Cx+C^2$。由 $2p-x=0$ 得 $p=\dfrac x2$，代回得 $y=\dfrac{x^2}{4}$，验证它满足方程，是不含于通解的解。例 6.3.2 将说明它是奇解。
 
+:::
+
 形如 $y=x\varphi(p)+\psi(p)$ 的方程称为 Lagrange 方程（d'Alembert 方程），用微分法求导后得到 $\big(p-\varphi(p)\big)\dfrac{\mathrm{d}x}{\mathrm{d}p}-x\varphi'(p)=\psi'(p)$，是 $x$ 关于 $p$ 的一阶线性方程。$\varphi(p)=p$ 的特例就是下面的 Clairaut 方程。
 
 ### 6.1.2. 参数法

@@ -130,6 +130,8 @@ $$
 
 又如 $X \sim \mathcal{N}(0, 1)$，$Y = X^2$：$\operatorname{Cov}(X, Y) = \mathbb{E}X^3 = 0$，而 $Y$ 完全由 $X$ 决定。Pearson 相关系数只度量线性关联；非线性关联需要用其他工具度量，如 Spearman 秩相关系数、互信息等。
 
+:::
+
 正态分布是一个重要的例外。
 
 **例 10.3.2** 设 $(X, Y) \sim \mathcal{N}(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$，则 $X, Y$ 独立当且仅当 $X, Y$ 不相关。这是因为由例 10.2.1，不相关即 $\rho = 0$，而由定理 6.4.1，$\rho = 0$ 当且仅当独立。注意前提是 $(X, Y)$ 服从二元正态分布，仅仅 $X$、$Y$ 各自服从正态分布是不够的。
@@ -142,6 +144,8 @@ $$
 \mathbb{E}[(X - \mu)Y] = \mathbb{E}\big[Y\,\mathbb{E}(X - \mu \mid Y)\big] = \mathbb{E}[Y(\mu - \mu)] = 0,
 $$
 所以 $\operatorname{Cov}(X, Y) = \mathbb{E}[(X - \mu)Y] - \mathbb{E}(X - \mu)\,\mathbb{E}Y = 0$，$X, Y$ 不相关，再由例 10.3.2 得独立。 $\square$
+
+:::
 
 证明的前半部分对任何方差有限的 $(X, Y)$ 都成立：$\mathbb{E}(X \mid Y)$ 为常数蕴含不相关。但一般分布下这不蕴含独立：例 10.3.1 中由对称性 $\mathbb{E}(X \mid Y) = 0$，$X, Y$ 却不独立。三个条件的强弱关系是
 

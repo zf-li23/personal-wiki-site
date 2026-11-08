@@ -1,7 +1,7 @@
 ---
 title: Carbon Assimilation in C3, C4 and CAM Plants
 description: C3, C4 and CAM plants; competition between carboxylation and oxygenation by Rubisco, the temperature dependence of Γ* and the CO2 compensation point; the physiological significance of photorespiration; the three decarboxylation subtypes of C4 plants, CO2 concentration and leakage in the bundle sheath, the energy budget, light regulation and cold sensitivity of key enzymes, single-cell C4; the four phases of CAM, energy and water, facultative CAM; a full comparison of the three plant types; carbon isotope discrimination Δ and δ13C, Δ and water-use efficiency; the evolution of C4 photosynthesis and C4 rice.
-source_hash: 6eadcdbcd6fd
+source_hash: 08562b991251
 ---
 
 The ATP and NADPH produced by the light reactions are used to reduce $\ce{CO2}$ to sugar. All oxygenic photosynthetic organisms fix carbon with the same enzyme, **Rubisco**, and the same **Calvin cycle**; their biochemical steps, stoichiometry and light regulation were written up in [7.1.25](/7.1.25), where the reaction sequences of the **C4 pathway** and **crassulacean acid metabolism** are also given. This chapter answers three questions from the viewpoint of plant physiology: Rubisco catalyzes both carboxylation and oxygenation, so what are the consequences of this competition at the leaf level (photorespiration, the **CO₂ compensation point**); how C4 and CAM plants avoid this problem through anatomy, biochemistry and regulation, and what each pays and gains; and how the photosynthetic type of a plant and its stomatal behavior during growth can be inferred from its carbon isotope composition. The structure of the leaf (**Kranz anatomy**) is in [7.12.23](/7.12.23#sec-23.5.6), the quantitative responses of photosynthetic rate to light, $\ce{CO2}$ and temperature are in the next chapter ([7.13.9](/7.13.9)), and the transport and partitioning of photosynthate are in [7.13.11](/7.13.11).
@@ -52,6 +52,8 @@ $$
 $$
 
 **Example 8.2.1** At 25 °C take $\Gamma^* = 42.75$, $K_{\mathrm{c}} = 404.9\,\mathrm{\mu mol\,mol^{-1}}$, $K_{\mathrm{o}} = 278.4\,\mathrm{mmol\,mol^{-1}}$ and $O = 210\,\mathrm{mmol\,mol^{-1}}$ (Bernacchi et al., 2001); then $K = 404.9 \times (1 + 210/278.4) = 710\,\mathrm{\mu mol\,mol^{-1}}$. If $V_{\mathrm{cmax}} = 60$ and $R_{\mathrm{d}} = 1\,\mathrm{\mu mol\,m^{-2}\,s^{-1}}$, then by Eq. (8.2), $\Gamma = (42.75 + 710/60)/(1 - 1/60) = 54.8/0.983 = 55.5\,\mathrm{\mu mol\,mol^{-1}}$. Day respiration raises the compensation point about 13 units above $\Gamma^*$.
+
+:::
 
 The CO₂ compensation point of C3 plants is generally 40–100 $\mathrm{\mu mol\,mol^{-1}}$ at 25 °C and rises with temperature; that of C4 plants is 0–10 $\mathrm{\mu mol\,mol^{-1}}$ and is almost unaffected by $\ce{O2}$ and temperature. A classical demonstration puts a C3 plant and a C4 plant together in a sealed transparent container in the light: both draw $\ce{CO2}$ down to their own compensation points, the C4 plant pulling the concentration below the compensation point of the C3 plant, so that the C3 plant becomes a net releaser even in the light, the carbon it releases is taken up by the C4 plant, and after a few weeks the C3 plant dies. On this basis Chinese textbooks call C3 plants "high-compensation-point plants" and C4 plants "low-compensation-point plants".
 
@@ -129,6 +131,8 @@ $$
 which is 5 without leakage and 5.5 at $\varphi = 0.2$. The NADPH requirement is the same in both (2 per $\ce{CO2}$). Differences among subtypes: the NADP-ME and NAD-ME types both regenerate PEP with PPDK and have the same theoretical value; the PCK branch consumes 1 ATP in the bundle sheath and returns PEP directly, saving the 2 of PPDK, so that if all decarboxylation were through PCK the theoretical cost would be about 4 ATP per $\ce{CO2}$, which may be why the PCK branch is so widespread. The statement in Chinese textbooks that "C4 consumes 2 more ATP per $\ce{CO2}$ fixed, that is $\ce{CO2}$:ATP:NADPH = 1:5:2" corresponds to the NADP-ME or NAD-ME type without leakage.
 
 **Example 8.3.2** Use Eqs. (8.4) and (8.5) to decide which is more economical. At 25 °C and $c_{\mathrm{c}} = 250\,\mathrm{\mu mol\,mol^{-1}}$, $\phi = 2 \times 42.75/250 = 0.34$, and C3 needs $(3 + 1.20)/(1 - 0.17) = 5.06$ ATP, slightly below the 5.5 of C4. At 35 °C $\Gamma^* = 70$, $\phi = 0.56$, C3 needs $(3 + 1.96)/(1 - 0.28) = 6.9$, and C4 is much cheaper. Under light-limited conditions ATP consumption directly determines the quantum yield, so the quantum yield of C3 leaves is higher than that of C4 at low temperature and lower at high temperature, with a crossover temperature of about 25–30 °C (Ehleringer and Björkman, 1977; [7.13.9](/7.13.9)).
+
+:::
 
 The benefit of C4 is not only in energy. $\ce{CO2}$ concentration lets Rubisco work at nearly saturating substrate, so a C4 leaf needs only a fraction of the Rubisco of a C3 leaf to reach a higher photosynthetic rate, and its photosynthetic nitrogen-use efficiency is high; a C4 leaf can maintain the same assimilation at lower stomatal conductance, and its water-use efficiency is about twice that of C3 ([7.13.3](/7.13.3), [7.13.10](/7.13.10)). The costs are more ATP, more complex anatomy and gene regulation, and stronger sensitivity to low temperature.
 

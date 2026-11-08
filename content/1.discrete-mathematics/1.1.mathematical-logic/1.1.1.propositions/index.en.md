@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Propositions
-source_hash: a2a7ff623245
+source_hash: 193b4580c49e
 ---
 
 The core of mathematical logic is the symbolization of logical reasoning. This chapter starts with the simplest case, *propositional logic*: we first explain what a proposition is, then introduce the connectives that combine propositions, define the legitimate formulas and their truth tables, and finally present tautologies and the substitution rule. The next chapter builds on this to discuss equivalence between formulas, normal forms, and inference.
@@ -16,6 +16,8 @@ The basic elements of logical reasoning are propositions.
 Every proposition has a unique truth value: it cannot be neither true nor false, nor both true and false. The truth value may, however, be unknown for the time being, that is, "undetermined".
 
 **Example 1.1.1** A conjecture that has not yet been proved is a proposition whose truth value is undetermined. "$x$ is greater than $y$", without further conditions, may be true or false; it has no unique truth value and is not a proposition. "I am lying" cannot be judged true or false, so it is not a proposition either.
+
+:::
 
 Symbolization of propositions: we denote propositions by lowercase letters $p, q, r, \cdots$.
 

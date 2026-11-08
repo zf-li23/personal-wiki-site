@@ -222,6 +222,8 @@ F(q) = \frac{3}{R^3}\int_0^R r^2\frac{\sin qr}{qr}\,\mathrm{d}r = \frac{3(\sin q
 $$
 $P(q) = F^2$ has its first zero at $qR = 4.493$ (the first root of $\tan x = x$), then a series of maxima falling as $q^{-4}$. Real proteins are not uniform spheres, but their curves show the same first decay; the side maxima are smeared by the irregular shape and by the spread of sizes.
 
+:::
+
 ![Scattering curves I(q)/I(0) of four bodies of uniform density, computed with the Debye formula (Theorem 9.3.1) from points of a cubic lattice filling each body: a solid sphere of radius 50 Å, a hollow sphere (shell from 40 to 50 Å), a rod (cylinder of radius 10 Å and length 200 Å) and a dumbbell (two spheres of radius 25 Å with centres 70 Å apart). The dashed curve is the exact form factor of the solid sphere, which the Debye sum reproduces, including the first minimum at qR = 4.493. Dotted guides: π/(qL), the intermediate region of a long rod, and 9/[2(qR)⁴], the Porod envelope of the sphere (Theorem 9.6.1). Bodies of different shape differ most at qR between 2 and 10](./plots/debye-shapes.py)
 
 The figure shows what the curves can and cannot tell. At small $q$ all curves start alike (9.4); they separate once $q$ exceeds the inverse size. The rod shows an extended region where $I \propto q^{-1}$, characteristic of a one-dimensional object; the hollow sphere decays faster than the solid one of the same outer radius because its mass is farther from the centre; the dumbbell shows a shoulder from the interference between its two lobes.

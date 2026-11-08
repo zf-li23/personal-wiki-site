@@ -101,6 +101,8 @@ x5 -> no augmenting path; Y0 = ['y1']
 maximum matching: [('x1', 'y2'), ('x2', 'y1'), ('x3', 'y4'), ('x4', 'y3')] size 4
 ```
 
+:::
+
 每个 $x$ 的搜索至多检查每条边一次，所以算法的时间复杂度为 $O(nm)$；Hopcroft–Karp 算法每轮同时沿多条最短增广路增广，把复杂度降到 $O(m\sqrt{n})$。
 
 ## 5.2. 完全匹配

@@ -1,6 +1,6 @@
 ---
 title: Covariance and Correlation
-source_hash: 3a21c3933e7a
+source_hash: 076987982db8
 ---
 
 Expectation and variance summarize a single random variable; this chapter introduces numerical characteristics that summarize the relationship between two random variables. In portfolio theory, Markowitz (Nobel Memorial Prize in Economics, 1990) measured the return of a portfolio by its expectation and its risk by its variance, and the variance of a portfolio depends not only on the variances of the individual assets but also on the covariances between them; in neuroscience, the "functional connectivity" between the signals of two brain regions is often measured by a correlation coefficient. We first define the covariance and establish its properties, then standardize it into the correlation coefficient, discuss the relation between uncorrelatedness and independence, the geometric meaning of the correlation coefficient (the cosine of an angle) and the best linear predictor, and finally extend these notions to random vectors by defining the covariance matrix. The chapter uses the expectation and variance of [3.1.8](/3.1.8) and the conditional expectation of [3.1.9](/3.1.9); the covariance matrix is the foundation of the multivariate normal distribution ([3.1.15](/3.1.15)), linear regression ([3.3](/3.3)) and multivariate statistical analysis.
@@ -131,6 +131,8 @@ By Remark 6.3.1, however, $X$ and $Y$ are not independent: for example, $\mathbb
 
 As another example, let $X \sim \mathcal{N}(0, 1)$ and $Y = X^2$. Then $\operatorname{Cov}(X, Y) = \mathbb{E}X^3 = 0$, although $Y$ is completely determined by $X$. The Pearson correlation coefficient measures only linear association; nonlinear association requires other tools, such as Spearman's rank correlation coefficient or mutual information.
 
+:::
+
 The normal distribution is an important exception.
 
 **Example 10.3.2** Let $(X, Y) \sim \mathcal{N}(\mu_1, \mu_2, \sigma_1^2, \sigma_2^2, \rho)$. Then $X$ and $Y$ are independent if and only if they are uncorrelated. Indeed, by Example 10.2.1 uncorrelatedness means $\rho = 0$, and by Theorem 6.4.1, $\rho = 0$ if and only if $X$ and $Y$ are independent. Note that the hypothesis is that $(X, Y)$ is jointly bivariate normal; it is not enough that $X$ and $Y$ are each normally distributed.
@@ -143,6 +145,8 @@ $$
 \mathbb{E}[(X - \mu)Y] = \mathbb{E}\big[Y\,\mathbb{E}(X - \mu \mid Y)\big] = \mathbb{E}[Y(\mu - \mu)] = 0,
 $$
 so $\operatorname{Cov}(X, Y) = \mathbb{E}[(X - \mu)Y] - \mathbb{E}(X - \mu)\,\mathbb{E}Y = 0$. Thus $X$ and $Y$ are uncorrelated, and Example 10.3.2 gives independence. $\square$
+
+:::
 
 The first half of the proof holds for any $(X, Y)$ with finite variances: a constant $\mathbb{E}(X \mid Y)$ implies uncorrelatedness. For general distributions it does not imply independence: in Example 10.3.1, symmetry gives $\mathbb{E}(X \mid Y) = 0$, yet $X$ and $Y$ are dependent. The three conditions are ordered by strength as
 

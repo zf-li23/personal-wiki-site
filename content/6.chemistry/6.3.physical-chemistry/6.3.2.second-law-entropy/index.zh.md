@@ -199,6 +199,8 @@ $$
 
 系统是孤立的，熵增加，热传导是自发的不可逆过程。注意孤立系统的 $\Delta U = 0$ 而 $\Delta H \ne 0$：$\Delta H = \Delta U + V\Delta p$，两侧压力都变了。
 
+:::
+
 一般地，两个等压热容为 $C_p$ 的相同物体，温度分别为 $T_{\mathrm{h}}$ 与 $T_{\mathrm{c}}$，接触后达到 $T_2 = (T_{\mathrm{h}} + T_{\mathrm{c}})/2$，
 
 $$
@@ -292,6 +294,8 @@ $$
 
 过冷水结冰是自发的不可逆过程。系统的熵减小，但凝固放出的热使环境的熵增加得更多。也可以直接用 Clausius 不等式：$\Delta S = -20.6\,\mathrm{J\,K^{-1}} > Q/T_{\mathrm{sur}} = -21.41\,\mathrm{J\,K^{-1}}$，过程不可逆。
 
+:::
+
 ![Freezing of 1 mol of water at 100 kPa as a function of temperature: the entropy decrease of the water and the entropy increase of the surroundings nearly cancel; their sum is positive below 273.15 K (freezing is spontaneous) and negative above it (melting is spontaneous)](./plots/supercooled-freezing.py)
 
 上图把例 2.3.6 推广到其他温度：$\Delta S_{\text{孤立}}$ 只在 $273.15\,\mathrm{K}$ 时为零，这正是两相平衡的温度；离平衡温度越远，结冰（或熔化）的推动力越大。$\Delta S_{\text{孤立}}$ 乘以 $-T$ 就是下一章的 $\Delta G$（[6.3.3](/6.3.3)）。
@@ -365,6 +369,8 @@ $$
 解：冰的低温热容积分（数值计算，$10\,\mathrm{K}$ 以下按 $T^3$ 外推）给出 $S_{\mathrm{m}}(\text{冰}, 273.15\,\mathrm{K}) = 38.1\,\mathrm{J\,mol^{-1}\,K^{-1}}$；熔化 $+6010/273.15 = 22.0$；液态水从 $273.15$ 到 $373.12\,\mathrm{K}$（$C_{p,\mathrm{m}} = 75.3$）$+23.5$；汽化 $+40650/373.12 = 108.9$；水蒸气从 $373.12$ 到 $423.15\,\mathrm{K}$（$C_{p,\mathrm{m}} \approx 33.8$）$+4.3$。合计 $S_{\mathrm{m}} \approx 196.8\,\mathrm{J\,mol^{-1}\,K^{-1}}$；换算到标准压力再加 $R\ln(101.325/100) = 0.11$。汽化一项占总熵的一半以上：气体的熵远大于凝聚相。
 
 ![Calorimetric entropy of water from 0 K to 423 K (approximate heat capacities). Upper panel: Cp,m/T, whose area gives the heating contributions; lower panel: Sm(T), with jumps of ΔfusH/Tfus at the melting point and ΔvapH/Tb at the boiling point](./plots/water-entropy.py)
+
+:::
 
 由光谱数据与统计热力学算出的 $\ce{H2O(g)}$ 的熵（约 $200.7\,\mathrm{J\,mol^{-1}\,K^{-1}}$，$423\,\mathrm{K}$）比上面的量热熵大 $3$–$4\,\mathrm{J\,mol^{-1}\,K^{-1}}$。差别主要来自冰中氢原子位置的无序：冰不是完美晶体，$0\,\mathrm{K}$ 时仍有约 $R\ln\frac{3}{2} = 3.4\,\mathrm{J\,mol^{-1}\,K^{-1}}$ 的残余熵（Pauling 1935），量热法测不到这一部分。热力学数据表中的 $S^\circ_{\mathrm{m}}$ 已经计入了它（[6.3.11](/6.3.11)）。
 

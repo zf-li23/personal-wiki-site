@@ -128,6 +128,8 @@ A specified cell has undergone **determination** when it develops according to i
 
 ![Testing commitment in the presumptive eye of an amphibian embryo. Top: the eye region of an early gastrula (yellow) forms eye tissue when cultured in a neutral medium (it is specified), but grafted into the trunk of a neurula it forms somite tissue like its neighbors (it is not determined). Bottom: the eye region of a neurula forms eye-like tissue even in the trunk (it is determined). The isolation test asks whether a tissue has a fate of its own; the heterotopic graft asks whether that fate can still be changed](./plots/specification-tests.py)
 
+:::
+
 The potential of embryonic cells follows a few general rules:
 
 - it narrows as development proceeds;
@@ -212,6 +214,8 @@ Without feedback ($n=0$) the level is proportional to the dosage ($S=1$). With s
 **Example 1.8.1** With $a = 20$ the wild-type steady state is $u^* = 4.0$ for $n=1$, $2.6$ for $n=2$ and $1.79$ for $n=4$, with sensitivities $S = 0.56$, $0.37$ and $0.22$. In a heterozygote ($g = 1/2$) the level falls to $68\,\%$, $77\,\%$ and $86\,\%$ of the **wild type**, compared with $50\,\%$ without feedback. If the synthesis rate varies between cells by a log-normal factor with standard deviation $0.3$ in $\ln g$, the standard deviation of $\ln u^*$ is $0.3$ without feedback and about $0.06$ with $n = 4$.
 
 ![Negative autoregulation buffers gene dosage. A: the circuit: a protein X represses its own promoter; synthesis is proportional to the gene dosage g. B: steady-state level against dosage, both relative to the wild type, on logarithmic scales, from Eq. (1.1) with a = 20: without feedback the line has slope 1 (a heterozygote has half the protein, red dot), with feedback the slope is the sensitivity S of Eq. (1.2), 0.22 for n = 4 (blue dot: 86 % of the wild-type level). C: steady-state levels in 4000 simulated cells whose synthesis rates vary with a standard deviation of 0.3 in ln g: the distribution with feedback (n = 4, blue) is five times narrower than without (red)](./plots/feedback-dosage.py)
+
+:::
 
 The price of this buffering is that the level is less responsive to deliberate regulation as well; developmental genes that must respond to graded signals often combine negative feedback on some time scales with positive feedback that locks in a decision (**bistability**, [7.3.18](/7.3.18)).
 

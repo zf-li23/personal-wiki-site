@@ -1,6 +1,6 @@
 ---
 title: Matrices and Systems of Linear Equations
-source_hash: ab1287ad5f9a
+source_hash: 5d0f298e572b
 ---
 
 Linear algebra studies linear relations among variables in many dimensions. Single-variable calculus deals with nonlinear functions of one variable; linear algebra deals with functions $\boldsymbol{y} = A\boldsymbol{x}$ whose inputs and outputs are vectors but whose rule is linear. Multivariable calculus ([2.2](/2.2)) combines the two, and its central technique is precisely local linearization. This chapter starts from vectors and linear operations in $\mathbb{R}^m$ and introduces linear maps and the matrices that represent them. The most basic problem of linear algebra, solving a system of linear equations, asks for the preimage of a given image. We reduce a system to echelon form by elementary operations, which yields a standard procedure for solving it (Gaussian elimination and Gauss–Jordan elimination) together with a criterion for solvability. Finally, the sum, scalar multiple and composition of maps lead to the linear operations on matrices, the transpose and matrix multiplication.
@@ -85,6 +85,8 @@ The two properties can be combined into $f(k\boldsymbol{x} + \ell\boldsymbol{y})
 
   Thus the rotation is completely determined by the images of the standard coordinate vectors.
 - The reflection $H_\theta$ in the line $\ell_\theta: x_2\cos\theta - x_1\sin\theta = 0$ through the origin (which makes the angle $\theta$ with the $x_1$-axis) is a linear transformation; a reflection in a line not through the origin is not linear.
+
+:::
 
 The rotation example illustrates a general rule. Let $f\colon \mathbb{R}^n \to \mathbb{R}^m$ be a linear map and put $\boldsymbol{a}_i = f(\boldsymbol{e}_i) \in \mathbb{R}^m$. For $\boldsymbol{x} = x_1\boldsymbol{e}_1 + \cdots + x_n\boldsymbol{e}_n$,
 
@@ -522,6 +524,8 @@ $$
 A^k = \boldsymbol{u}(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})\cdots(\boldsymbol{v}^{\mathsf T}\boldsymbol{u})\boldsymbol{v}^{\mathsf T} = (\boldsymbol{v}^{\mathsf T}\boldsymbol{u})^{k-1}\boldsymbol{u}\boldsymbol{v}^{\mathsf T}.
 $$
 
+:::
+
 Matrix multiplication differs from multiplication of numbers in three main respects:
 
 - It is not commutative in general. $AB$ and $BA$ need not both be defined; when both are defined, they have the same size only if $A$ and $B$ are square matrices of the same order; and even then they may differ:
@@ -535,6 +539,8 @@ Matrix multiplication differs from multiplication of numbers in three main respe
 - There are zero divisors: the product of two nonzero matrices can be the zero matrix, so $AB = O$ does not imply $A = O$ or $B = O$.
 
 **Example 1.10.3** $I_mA = A = AI_n$; $kI_n$ is called a scalar matrix, and $(kI_n)A = kA$. The composition of two rotations of the plane is again a rotation, $R_{\theta_1}R_{\theta_2} = R_{\theta_1 + \theta_2} = R_{\theta_2}R_{\theta_1}$, and comparing the entries of both sides gives the angle-addition formulas of trigonometry. A reflection composed with itself is the identity: $H_\theta^2 = I_2$, which can be verified directly using $\cos^2 2\theta + \sin^2 2\theta = 1$.
+
+:::
 
 Finally, we define a frequently used numerical characteristic.
 

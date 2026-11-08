@@ -1,7 +1,7 @@
 ---
 title: Finite Automata
 description: Definition of deterministic finite automata (DFA), transition diagrams and tables, the extended transition function and language, DFA design; nondeterministic finite automata (NFA); the subset construction and its correctness, equivalence of DFA and NFA, and the exponential lower bound on the number of states; automata for text search (relation to KMP and Aho–Corasick); NFAs with ε-transitions, ε-closure, and the modified subset construction.
-source_hash: fcd56760a83b
+source_hash: 6e1d4aabcac9
 ---
 
 [Chapter 1](/4.8.1) explained that the second route to describing a language is recognition: design a machine with only finitely many states that reads symbols one at a time, and say that a string belongs to the language if the machine is in an "accepting" state when the input is exhausted. This chapter formalizes such a machine as the *finite automaton* and discusses three models in turn: the **deterministic finite automaton** (DFA), which has exactly one move at each step; the nondeterministic finite automaton (NFA), which may have several moves at each step; and the ε-NFA, which may also change state without reading input. Nondeterminism makes design easier but adds no recognition power: the subset construction turns any NFA into an equivalent DFA, the central theorem of this chapter, at the price of a possibly exponential growth in the number of states. Finite automata are the common model of lexical analyzers, regular-expression engines, string-matching algorithms (the KMP algorithm of [4.3.13](/4.3.13) is a special DFA), and sequential circuits in digital logic ([4.9.7](/4.9.7)). Chapter 5 proves that finite automata describe the same family of languages as the regular expressions of Chapter 3, and Chapter 6 studies the properties of this family and gives an algorithm for minimizing DFAs.
@@ -46,6 +46,8 @@ flowchart LR
 ```
 
 Reading a 1 switches between the upper and lower rows, and reading a 0 switches between the left and right columns. On the input $0010$ the automaton passes through $q_0, q_2, q_0, q_1, q_3$ and stops in an accepting state, so $0010$ is accepted; on $011$ it stops in $q_2$ and does not accept.
+
+:::
 
 To describe the state reached after reading a string, we extend $\delta$ from single symbols to strings.
 
@@ -304,6 +306,8 @@ flowchart LR
 ```
 
 The ε-transition $q_0 \to q_1$ means that the sign may be omitted; $q_1 \xrightarrow{\cdot} q_2 \xrightarrow{\text{digit}} q_3$ handles the case without digits before the point, and $q_1 \xrightarrow{\text{digit}} q_4 \xrightarrow{\cdot} q_3$ handles the case with digits before the point; the ε-transition $q_3 \to q_5$ only serves to make the accepting state a state of its own.
+
+:::
 
 ε-transitions may occur consecutively, so we first define the states reachable from a state by ε-transitions alone.
 

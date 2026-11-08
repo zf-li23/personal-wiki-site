@@ -66,6 +66,8 @@ Notation varies between textbooks: many write $\operatorname{Ln}z$ for the multi
 
 **Example 3.2.1** $\operatorname{Log}(-1)=\mathrm{i}\pi$ and $\log(-1)=\{(2k+1)\pi\mathrm{i}\}$; $\log\mathrm{i}=\{\mathrm{i}(\frac\pi2+2k\pi)\}$; $\operatorname{Log}(-1-\mathrm{i})=\frac12\ln2-\frac{3\pi}4\mathrm{i}$; and $\log1=\{2k\pi\mathrm{i}\}$: even a positive real number has infinitely many complex logarithms, of which only the principal one is real.
 
+:::
+
 As sets,
 
 $$

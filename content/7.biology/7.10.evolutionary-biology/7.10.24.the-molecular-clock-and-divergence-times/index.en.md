@@ -24,6 +24,8 @@ The same rate dates a gene duplication. The α and β chains, which form the $\a
 
 ![The α-globin clock (Example 24.1.1). Percent amino acid differences in α-globin among eight vertebrates (the classic table reproduced in Barton et al. (2007), Fig. 13.26), converted to Poisson distances K = −ln(1 − p) and plotted against approximate fossil dates of the branch points. A: human against each other species. B: each branch point, averaging all comparisons that span it, which uses every sequence. The dashed lines through the origin have slope 2k; the estimated rate k is about 0.8 to 0.9 × 10⁻⁹ substitutions per site per year. The chicken lies below the line; modern estimates of some branch points also differ from the classic ones (for example about 180 Mya for monotremes and 160 Mya for marsupials against placentals), but the approximate linearity remains](./plots/alpha-globin-clock.py)
 
+:::
+
 Clocklike evolution seemed incompatible with a selection-dominated view, since species as different as elephants and mice live under very different selective regimes; when the neutral theory was proposed, the clock became "perhaps the strongest evidence for the theory" (Kimura and Ohta 1971). If a fraction $f_0$ of mutations, at rate $\mu$, is neutral and the rest strongly deleterious, the substitution rate is the neutral mutation rate $\mu f_0$, independent of population size and environment ([Theorem 23.7.1](/7.4.23#thm-23.7.1)). The neutral theory, however, neither is the only explanation of a clock nor always predicts one: it predicts constancy per generation, and for nearly neutral mutations the rate depends on the effective population size ([7.10.6](/7.10.6#sec-6.6.2)).
 
 ### 24.1.2. Why Rates Differ among Lineages

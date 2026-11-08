@@ -41,6 +41,8 @@ $$
 
 回文（$w = w^{\mathrm{R}}$）的语言由 $G_{\mathrm{pal}} = (\{P\}, \{0, 1\}, P, P)$ 生成，产生式为 $P \to \varepsilon \mid 0 \mid 1 \mid 0P0 \mid 1P1$：空串和单个符号是回文，回文两边各加一个相同的符号仍是回文。
 
+:::
+
 本课程沿用 Hopcroft 等人教材的记号约定：$A, B, C, S$ 等大写字母表示非终结符；$a, b, c$ 和数字表示终结符；$X, Y, Z$ 表示一个可能是终结符也可能是非终结符的文法符号；$u, v, w, x, y, z$ 表示终结符串；$\alpha, \beta, \gamma$ 表示 $(V \cup T)^*$ 中的串。
 
 ## 2.2. 推导与递归推理
@@ -73,6 +75,8 @@ $$
 $$
 E \Rightarrow EOE \Rightarrow E \times E \Rightarrow E \times (E) \Rightarrow v \times (E) \Rightarrow v \times (EOE) \Rightarrow v \times (E + E) \Rightarrow v \times (v + E) \Rightarrow v \times (v + d).
 $$
+
+:::
 
 同一个串的推导一般不止一个，因为每一步可以选择替换哪个非终结符。规定选择方式就得到两种规范的推导。
 

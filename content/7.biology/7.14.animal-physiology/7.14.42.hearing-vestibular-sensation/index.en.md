@@ -1,7 +1,7 @@
 ---
 title: Hearing and Vestibular Sensation
 description: Sound pressure and the decibel; impedance matching by the middle ear; the cochlea, endocochlear potential, traveling wave and place principle; hair cell transduction, adaptation and the cochlear amplifier; central auditory pathways and sound localization; vestibular organs, semicircular canals, otolith organs and the vestibulo-ocular reflex; evolution and comparison of hearing.
-source_hash: b906820a0232
+source_hash: 3dda539ae623
 ---
 
 Hearing and the vestibular sense use the same receptor cell, the hair cell of the inner ear, to convert extremely small mechanical movements into electrical signals; the differences between the two senses arise almost entirely from the accessory structures surrounding the hair cells. The cochlea decomposes sound by frequency along the basilar membrane and raises sensitivity more than a thousandfold with an amplifier powered by cells; the vestibular organs convert angular and linear acceleration of the head into deflection of hair bundles. This chapter first covers the physics of sound and impedance matching by the outer and middle ear, then the mechanics of the cochlea, transduction and amplification by hair cells, central pathways and sound localization, then the vestibular system, and finally compares the diversity of hearing organs in the animal kingdom. The general principles of sensation are in Chapter 39 ([7.14.39](/7.14.39)); the physics of the gating spring and active amplification of hair cells was discussed in biophysics ([7.6.25](/7.6.25#sec-25.6.3), [7.6.31](/7.6.31#sec-31.5)), and the physics of sound waves is in wave motion in 5.1 Mechanics.
@@ -60,6 +60,8 @@ The pressure gain comes from two parts:
 The total pressure gain is about $17\times1.3 \approx 22$-fold (about $27\,\mathrm{dB}$), compensating most of the loss in Eq. (42.3). Note that the ossicular lever by itself amplifies the force only about 1.3-fold; the roughly 20-fold pressure amplification comes mainly from the area ratio, not the lever.
 
 **Example 42.2.1** A sound of $60\,\mathrm{dB}$ at the eardrum has an rms sound pressure of $20\,\mathrm{mPa}$. Amplified 22-fold by the middle ear, the sound pressure acting on the oval window is about $0.44\,\mathrm{Pa}$, equivalent to "seeing" a sound of about $87\,\mathrm{dB}$ on the fluid side. Without the middle ear (for example, with the ossicular chain fixed by otosclerosis), sound can reach the inner ear only through the round window and the skull, and the hearing threshold rises by about $30$–$60\,\mathrm{dB}$, which is conductive hearing loss.
+
+:::
 
 The inner ear is a closed fluid chamber and the fluid is almost incompressible: when the stapes pushes the oval window inward, the round window membrane must bulge outward for the fluid to move. The eustachian tube connects the tympanic cavity with the nasopharynx, equalizing air pressure on the two sides of the eardrum. Sound can also vibrate the skull and reach the inner ear directly (bone conduction), with efficiency far lower than air conduction; clinically, comparing air- and bone-conduction thresholds distinguishes conductive hearing loss from sensorineural hearing loss.
 
@@ -208,6 +210,8 @@ $$
 and at low frequencies, because of diffraction, the ITD is about $3(a/c)\sin\theta$. Taking $a = 8.75\,\mathrm{cm}$, the maximum ITD (source directly to the side) is about $0.66\,\mathrm{ms}$.
 
 **Example 42.4.1** Humans can resolve an ITD of about $10\,\mu\mathrm{s}$ near straight ahead. By Eq. (42.7), for small $\theta$, $\mathrm{ITD} \approx 2a\theta/c$, so $\Delta\theta \approx c\,\Delta\mathrm{ITD}/2a = 343\times10^{-5}/0.175 \approx 0.02\,\mathrm{rad} \approx 1^\circ$. $10\,\mu\mathrm{s}$ is only about one hundredth of the width of an action potential, and the auditory system relies on precisely phase-locked firing and specialized synapses to compare such small time differences.
+
+:::
 
 The two cues each cover a range of frequencies. ITD relies on phase locking to compare the phase of the sound wave at the two ears. The maximum ITD is about $0.66\,\mathrm{ms}$; once the period is shorter than twice this value (frequencies above about $0.76\,\mathrm{kHz}$), the same phase difference corresponds to two possible azimuths, and by about $1.5\,\mathrm{kHz}$ the period (about $0.67\,\mathrm{ms}$) is comparable to the maximum ITD itself, so the ambiguity is severe and the cue is essentially lost; at high frequency, however, head shadowing is pronounced and the ILD can reach $10$–$20\,\mathrm{dB}$. Low-frequency sounds are therefore localized by ITD and high-frequency sounds by ILD. Neither cue can distinguish front from back (the same ITD corresponds to a "cone of confusion"); distinguishing front from back and up from down relies on the spectral cues of the pinna and on head turning.
 

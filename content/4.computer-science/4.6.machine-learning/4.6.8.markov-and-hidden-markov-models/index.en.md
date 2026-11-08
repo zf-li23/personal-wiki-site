@@ -1,7 +1,7 @@
 ---
 title: "Sequence Models: Markov and Hidden Markov Models"
 description: The first-order Markov assumption, Markov models and their parameter estimation; the definition and three basic problems of hidden Markov models; the forward and backward algorithms, the Viterbi algorithm and the Baum–Welch algorithm; applications to pinyin input methods, part-of-speech tagging, speech recognition and biological sequences.
-source_hash: 8596bad7e896
+source_hash: 37ceb4022d1a
 ---
 
 The preceding chapters all assumed that examples are independent and identically distributed, but much data comes in sequences with an order: the weather, the number of infections in an epidemic, speech, text, gene sequences, the clicks and purchases of a user, the sensor readings of a robot. Adjacent elements of a sequence depend on one another, and ignoring the order discards the most important information. This chapter introduces the most classical sequence models: the Markov model assumes that the next state depends only on the current state; the hidden Markov model (HMM) assumes further that the state itself cannot be observed and can only be inferred indirectly from the observations it generates. All three basic problems of the HMM can be solved efficiently by **dynamic programming** ([4.1.13](/4.1.13)), exploiting the special structure of the model, and the learning problem is a special case of the **EM algorithm** ([3.5.6](/3.5.6)). The probability theory of Markov chains is in [3.5.9](/3.5.9); methods that model sequences with neural networks (recurrent neural networks, the Transformer) are in [4.7.5](/4.7.5) and [4.7.6](/4.7.6).
@@ -60,6 +60,8 @@ $$
 \mathbb{P}(w_3 = \text{rainy} \mid w_1 = \text{foggy}) = \sum_k a_{\text{foggy},k}\,a_{k,\text{rainy}} = 0.2 \times 0.05 + 0.3 \times 0.6 + 0.5 \times 0.3 = 0.34,
 $$
 which is precisely the (foggy, rainy) entry of the matrix $A^2$. In general the $k$-step transition probabilities are the entries of $A^k$; a chain satisfying certain conditions (irreducible and aperiodic) converges from any initial distribution to a unique **stationary distribution** ([3.5.9](/3.5.9)).
+
+:::
 
 The Markov model is also the simplest language model. Regard words as states; the probability of a sentence is then the product of the transition probabilities of the adjacent word pairs. For example, if the transition probabilities the → big, big → dog, dog → just and just → died are 0.4, 0.6, 0.2 and 0.4 in turn, then
 
@@ -339,6 +341,8 @@ best path: ['Healthy', 'Healthy', 'Fever'] probability 0.01512
 ```
 
 The most probable sequence is "Healthy, Healthy, Fever", with joint probability $0.01512$. For example, $\delta_2(\text{Healthy}) = \max(0.3 \times 0.7,\ 0.04 \times 0.4) \times 0.4 = 0.084$, with predecessor Healthy.
+
+:::
 
 The figure below is a longer example: the "occasionally dishonest casino" alternates between a fair die and a loaded die that shows a six with probability $1/2$. Seeing only the numbers rolled, the forward–backward algorithm gives the posterior probability at each time that the loaded die is in use, and the Viterbi algorithm gives the most probable sequence of dice; both roughly locate the periods of cheating.
 

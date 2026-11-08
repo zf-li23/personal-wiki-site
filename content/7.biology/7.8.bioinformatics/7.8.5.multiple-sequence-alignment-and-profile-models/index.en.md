@@ -90,6 +90,8 @@ Since the optimum of the objective is not computable and the objective is only a
 
 **Example 5.3.1** Let the reference align three sequences as `AC-GT`, `ACAGT`, `A-AGT` and the test as `ACG-T`, `ACAGT`, `A-AGT`. The reference has $11$ aligned residue pairs ($3$ in the first column, $1$ in the second, $1$ in the third, $3$ in the fourth, $3$ in the fifth); the test differs only in row $1$, where G is now aligned with the A of rows $2$ and $3$ instead of with their G. The reference pairs lost are (G of row $1$, G of row $2$) and (G of row $1$, G of row $3$), so the SP accuracy is $9/11 = 0.82$; the reference columns $1$, $2$ and $5$ are reproduced and columns $3$ and $4$ are not, so the TC accuracy is $3/5 = 0.6$.
 
+:::
+
 On BAliBASE, the accuracy of all methods falls steeply below about $25\,\%$ identity, and the differences between methods are largest there. For alignments used in phylogenetics, columns that are unreliable (with many gaps or low agreement) are often removed before tree inference, with programs such as trimAl ([7.8.6](/7.8.6)).
 
 ## 5.4. Position-Specific Scoring Matrices

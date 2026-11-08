@@ -1,7 +1,7 @@
 ---
 title: "Hypothesis Testing: One-Sample Inference"
 description: The logic of hypothesis testing (the jury analogy, null and alternative hypotheses, the two types of error, significance level, critical values and p-values, one- and two-sided tests); z and t tests for a normal mean; the duality of tests and confidence intervals; power and sample size; the chi-square test for a normal variance; one-sample binomial and Poisson tests and the standardized mortality ratio; misuses of the p-value, effect sizes and the ASA statement. Illustrated with the birth weight of a low-income population, cholesterol in immigrants, low birth weight among smoking mothers and an occupational cohort.
-source_hash: 7cc7e043b49c
+source_hash: fedc30b5f870
 ---
 
 [7.7.5](/7.7.5) used confidence intervals to answer "roughly what is the parameter". Many research questions, however, take the form "whether": is the mean birth weight of newborns in a low-income region lower than the national level? Is the risk of low birth weight higher among smoking mothers than among nonsmoking mothers? Do rubber workers die of bladder cancer more often than the general population? **Hypothesis testing** provides the standard procedure for answering such questions: first assume "no difference", then see how far the data are from this assumption, and use probability to measure whether the departure is too large to be explained by chance. This chapter treats the situation with a single sample compared with a known reference value, one-sample inference: the z test and t test for a mean, the chi-square test for a variance, the binomial test for a proportion, and the Poisson test for counts and the standardized mortality ratio. The logic of testing (the two types of error, the p-value, power) is worked out thoroughly here, and the tests in all later chapters follow the same logic. The chapter also discusses the commonest misuses of the p-value: statistical significance does not imply importance, and nonsignificance does not imply no difference. The mathematical theory of testing (the Neyman–Pearson lemma, likelihood ratio tests, uniformly most powerful tests) is in [3.2.5](/3.2.5); two-group comparisons are in [7.7.7](/7.7.7), and the problems of carrying out thousands of tests at once are in [7.7.20](/7.7.20).
@@ -115,6 +115,8 @@ t = \frac{2771.9 - 3400}{659.6/\sqrt{74}} = \frac{-628.1}{76.7} = -8.19, \qquad 
 $$
 The result is extremely significant but hard to interpret: birthwt comes from pregnant women treated at one medical center, and the infants of nonsmoking mothers have a mean of only 3056 g, also far below 3400 g. A comparison with an external reference value confounds the effect of smoking with the characteristics of this sample's population (socioeconomic status, racial composition, the catchment of this hospital). To isolate the effect of smoking one should compare smoking and nonsmoking mothers within the same sample, which is the two-sample t test of [7.7.7](/7.7.7). A one-sample test is appropriate only when the reference value truly applies to the population studied.
 
+:::
+
 The premises of the t test are independent observations and a normal population. Thanks to the central limit theorem it is quite robust to non-normality when $n$ is large; when $n$ is small and the data are clearly skewed or contain outliers, one can transform the data first (such as by taking logarithms) or use the sign test or the Wilcoxon signed-rank test ([7.7.8](/7.7.8)). A violation of independence (repeated measurements on the same person, members of the same family) is not compensated by a large sample.
 
 ### 6.2.3. Using Tables
@@ -204,6 +206,8 @@ and the two-sided $p = 2\,\mathbb{P}(\chi^2_9 \le 2.10) = 0.021$, so $H_0$ is re
 
 ![Exact one-sample tests. A: bladder cancer deaths in a cohort of rubber workers (Andjelkovic et al. 1976): 21 observed, 18.1 expected from general population mortality. The bars are the Poisson(18.1) distribution, and the two-sided p-value is twice the right tail from 21 upward (shaded), p = 0.55, standardized mortality ratio 116%. B: the variance of the differences between two observers' readings with the new blood pressure monitor, s² = 8.178 (n = 10), compared with the variance 35 of the standard instrument: the statistic (n − 1)s²/35 = 2.10 is below the lower 2.5% quantile 2.70 of the chi-square distribution with 9 degrees of freedom (shaded rejection region), two-sided p = 0.021](./plots/exact-tests.py)
 
+:::
+
 Unlike the t test for a mean, the chi-square test for a variance is very sensitive to the normality assumption: when the population has heavy tails, the actual Type I error rate can be far above $\alpha$ even for a large sample. Normality must be checked first (the QQ plots of [7.7.2](/7.7.2)), and when in doubt a bootstrap interval should be used (Section 5.10 of [7.7.5](/7.7.5)).
 
 ## 6.6. The One-Sample Binomial Test
@@ -241,6 +245,8 @@ Under $H_0$ (the mortality of the study population equals that of the reference 
 **Formula 6.7.1 (One-Sample Poisson Test)** Let $O \sim \mathrm{Poi}(\mu)$ and test $H_0\colon \mu = E$. The exact two-sided p-value is $\min\{2\,\mathbb{P}(X \ge O \mid E), 1\}$ for $O \ge E$ and $\min\{2\,\mathbb{P}(X \le O \mid E), 1\}$ for $O < E$. For $E \ge 10$ the approximation $X^2 = (O - E)^2/E \overset{H_0}{\approx} \chi^2_1$ can be used. Equivalently, $H_0$ is rejected if and only if $E$ is not within the exact confidence interval for $\mu$ (Formula 5.7.1 of [7.7.5](/7.7.5)).
 
 **Example 6.7.1 (Rubber workers)** In the rubber worker cohort of Example 5.7.1 of [7.7.5](/7.7.5), 4 deaths from Hodgkin's disease were observed against 3.3 expected from the mortality of white men in the United States. SMR $= 4/3.3 = 121\%$ and the two-sided $p = 2\,\mathbb{P}(X \ge 4 \mid 3.3) = 2 \times (1 - 0.580) = 0.84$. For bladder cancer 21 deaths were observed against 18.1 expected, SMR $= 116\%$ and $p = 2\,\mathbb{P}(X \ge 21 \mid 18.1) = 0.55$ (panel A above); the approximation gives $X^2 = 2.9^2/18.1 = 0.46$ and $p = 0.50$. Neither cause of death shows a significant excess. This agrees with the confidence intervals: $E = 3.3$ is within $(1.09, 10.24)$ and $E = 18.1$ is within $(13.00, 32.10)$. Note that the interval for Hodgkin's disease shows that such data are compatible with a mortality risk of either 1/3 or 3 times that of the general population: the result is nonsignificant because there are too few cases, not because the absence of risk has been demonstrated.
+
+:::
 
 There are two pitfalls in interpreting the SMR. First, the "healthy worker effect": those at work must be healthy enough to work, and their overall mortality is often lower than that of the general population, so the SMR underestimates the harm of occupational exposure. Second, the SMRs of different study populations should not be compared directly, because they are weighted by their own age compositions (the difference between indirect and direct standardization, [7.7.13](/7.7.13)).
 

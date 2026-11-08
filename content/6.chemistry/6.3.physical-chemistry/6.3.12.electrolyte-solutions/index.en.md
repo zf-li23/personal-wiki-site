@@ -1,7 +1,7 @@
 ---
 title: Electrolyte Solutions
 description: Ionic conductors and Faraday's laws of electrolysis; electric mobility, transport numbers and the Hittorf method; conductivity, molar conductivity and Kohlrausch's law; the law of independent migration of ions and applications of conductometry; the chemical potential of electrolytes, mean ionic activity coefficients and ionic strength; Debye–Hückel theory from the linearized Poisson–Boltzmann equation, and the Debye–Hückel–Onsager theory of conductivity.
-source_hash: 828f8cb72437
+source_hash: c44c7bf8de72
 ---
 
 Electrochemistry studies the interconversion of chemical and electrical energy. Its history is almost as long as that of electricity itself: Galvani (1791) observed "animal electricity" in a frog's leg; Volta (1800) built the first sustained source of current from a pile of zinc and copper disks separated by brine-soaked cardboard; Faraday (1833–1834) found that the amount of product in electrolysis is proportional to the quantity of electricity passed; Kohlrausch (1875–1879) measured the conductivity of a great many solutions; Arrhenius (1884–1887) proposed the theory of electrolytic dissociation; Nernst (1889) related the cell potential to the Gibbs energy of the cell reaction; and Tafel (1905) gave the empirical relation between overpotential and current. An electrochemical system consists of an electrolyte, two electrodes and an external circuit. These correspond to this chapter, to [6.3.13](/6.3.13) (the equilibrium at the electrode–solution interface at zero current) and to [6.3.14](/6.3.14) (the kinetics of electrode processes when current flows).
@@ -172,6 +172,8 @@ The cathode reaction $\tfrac12\ce{Cu^2+ + e- -> 1/2Cu}$ decreases the amount of 
 $$
 t(\ce{Cu^2+}) = \frac{1.42\times10^{-4}}{3.754\times10^{-4}} = 0.38, \qquad t(\ce{SO4^2-}) = 1 - 0.38 = 0.62. \qquad \square
 $$
+
+:::
 
 The errors of the Hittorf method come mainly from convection and diffusion, which mix the electrode compartments, and from solvation: ions carry water of hydration as they migrate, so the measured transport number is an "apparent" one referred to the solvent.
 
@@ -485,6 +487,8 @@ The sum runs over every ion actually present in the solution (whichever electrol
 **Example 12.6.2** Find the ionic strength of the following solutions: (1) a mixture of $0.10\,\mathrm{mol\,kg^{-1}}$ $\ce{NaCl}$ and $0.20\,\mathrm{mol\,kg^{-1}}$ $\ce{CaCl2}$; (2) $\ce{CuSO4}$ at molality $b$; (3) $0.10\,\mathrm{mol\,kg^{-1}}$ acetic acid with a degree of ionization of 0.013.
 
 **Solution** (1) $b(\ce{Na+}) = 0.10$, $b(\ce{Ca^2+}) = 0.20$, $b(\ce{Cl-}) = 0.10 + 2\times0.20 = 0.50$, so $I_b = \frac12(0.10 + 4\times0.20 + 0.50) = 0.70\,\mathrm{mol\,kg^{-1}}$. (2) $I_b = \frac12(4b + 4b) = 4b$; in general, for 1-1, 2-1 (or 1-2), 2-2 and 3-1 electrolytes, $I_b$ is $b$, $3b$, $4b$ and $6b$, respectively. (3) Only the dissociated part counts: $b(\ce{H+}) = b(\ce{CH3COO-}) = 0.0013$, so $I_b = 0.0013\,\mathrm{mol\,kg^{-1}}$. $\square$
+
+:::
 
 The **salt effect** of [6.1.10](/6.1.10) is now explained quantitatively: when an unrelated strong electrolyte is added to a saturated solution of a sparingly soluble salt, the ionic strength increases and $\gamma_\pm$ decreases; the solubility product $K_{\mathrm{sp}} = \gamma_\pm^2(b_+/b^\circ)(b_-/b^\circ)$ stays constant, so the solubility increases. The "salting in" of proteins is the same effect; at high ionic strength proteins are "salted out" again, which results from the lowered activity of water and the strengthened hydrophobic interaction and lies beyond the theory of dilute solutions.
 

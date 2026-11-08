@@ -18,6 +18,8 @@ with typical force constants $k_b \approx 300\,\mathrm{kcal\,mol^{-1}\,\text{Å}
 
 **Example 7.1.1** For a C–C bond $\kappa = 620\,\mathrm{kcal\,mol^{-1}\,\text{Å}^{-2}} = 431\,\mathrm{N\,m^{-1}}$, so at $298\,\mathrm{K}$ the root-mean-square fluctuation is $\sqrt{k_{\mathrm{B}}T/\kappa} = \sqrt{4.11\times10^{-21}/431}\,\mathrm{m} = 0.031\,\text{Å}$, two percent of the bond length. A bond angle with $\kappa = 126\,\mathrm{kcal\,mol^{-1}\,rad^{-2}}$ fluctuates by $0.069\,\mathrm{rad} = 3.9^\circ$. A torsion with a barrier of $3\,\mathrm{kcal\,mol^{-1}} \approx 5k_{\mathrm{B}}T$, by contrast, explores a whole well $\pm 30^\circ$ wide and hops between wells on a nanosecond time scale.
 
+:::
+
 The conformations of a macromolecule are therefore, to a good approximation, the values of its **torsion angles** at fixed bond lengths and angles. This separation of stiff and soft coordinates is what makes the Ramachandran description of proteins and the six-torsion description of nucleic acids possible, and it is also the reason why **molecular dynamics** needs femtosecond time steps (to follow bond vibrations) while the interesting motions are millions of times slower.
 
 ### 7.1.2. The Peptide Group and Its Two Torsions
@@ -54,6 +56,8 @@ where $p_c$ is the equilibrium probability of conformation $c$ (for continuous c
 If the probability were spread uniformly over $W$ of $N$ cells, $S_{\mathrm{conf}} = k_{\mathrm{B}}\ln W$ (the **Boltzmann entropy formula**); for any distribution $\mathrm{e}^{S_{\mathrm{conf}}/k_{\mathrm{B}}}$ is the effective number of accessible cells, and its ratio to $N$ is the accessible fraction plotted in panel D.
 
 **Example 7.1.3** In the model of the figure the accessible fraction is $f_{\mathrm{Ala}} = 0.084$ and $f_{\mathrm{Gly}} = 0.31$. Fixing a residue in one conformation (as in a helix) therefore costs glycine more entropy than alanine, by $\Delta S = R\ln(f_{\mathrm{Gly}}/f_{\mathrm{Ala}}) = 10.8\,\mathrm{J\,mol^{-1}\,K^{-1}}$, or $T\Delta S = 3.2\,\mathrm{kJ\,mol^{-1}}$ at $298\,\mathrm{K}$. The measured difference in helix propensity between Gly and Ala is about $4\,\mathrm{kJ\,mol^{-1}}$, of the same size; this is why Ala is the strongest helix former and Gly a helix breaker. Per residue, the unfolded chain of a protein retains roughly $R\ln(0.1 \times 3600) \approx 50\,\mathrm{J\,mol^{-1}\,K^{-1}}$ relative to a single $6^\circ \times 6^\circ$ cell of a folded residue; with backbone and side chains together, a typical estimate is $T\Delta S_{\mathrm{conf}} \approx 5$–$10\,\mathrm{kJ\,mol^{-1}}$ per residue at room temperature, which a folded protein must repay with its enthalpy and the **hydrophobic effect** (and the reason why the net stability is small, [7.6.8](/7.6.8)).
+
+:::
 
 The model is deliberately crude: without water it overweights conformations with internal hydrogen bonds, and real residues in proteins populate the α region far more than panel B suggests, because a helix is stabilized cooperatively by the hydrogen bonds between residues $i$ and $i+4$, not by local energy. Its value is that it shows which part of the Ramachandran plot is set by sterics (the forbidden regions are the same as with hard spheres), and how an energy landscape becomes a probability and an entropy.
 
@@ -96,6 +100,8 @@ The computed parameters agree with the measured ones within the accuracy of the 
 ### 7.2.2. The α Helix as a Physical Object
 
 **Example 7.2.1** Each peptide group carries an **electric dipole moment** of about $3.5\,\mathrm{D}$ ($1.17\times10^{-29}\,\mathrm{C\,m}$), and in an α helix all of them point nearly along the axis, from C- to N-terminus. A row of dipoles $p$ spaced $d = 1.5\,\text{Å}$ apart is equivalent, far from its ends, to a charge $\pm p/d$ at each end: $p/d = 7.8\times10^{-20}\,\mathrm{C} \approx 0.49\,e$. A helix thus behaves as if it carried about half an elementary charge of positive sign at its N-terminus and of negative sign at its C-terminus. This helix macrodipole is why phosphate groups and other anions are often bound at the N-termini of helices (in nucleotide-binding P-loops, in the selectivity filter of potassium channels, [7.6.30](/7.6.30)), and why acidic residues near the N-terminus and basic residues near the C-terminus stabilize isolated helices. In water and inside proteins the field is screened, and the effect is worth a few kJ/mol rather than the tens suggested by vacuum electrostatics.
+
+:::
 
 The non-integer number of residues per turn has a geometric consequence for helices that pack against each other. In a **coiled coil** the hydrophobic residues occupy positions $a$ and $d$ of a heptad repeat ([7.1.5](/7.1.5#sec-5.3.2)), and seven residues of a straight α helix rotate by $7 \times 100^\circ = 700^\circ$, $20^\circ$ short of two turns. The stripe of $a$ and $d$ residues therefore winds slowly around the helix in a left-handed sense, and two helices can keep their stripes in contact only by winding around each other.
 
@@ -218,6 +224,8 @@ Because the screw can be repeated indefinitely, helical assemblies are open-ende
 | Bacterial flagellar filament | about $5.5$ subunits per turn | 11 protofilaments that switch between two lengths to make the filament supercoil |
 
 **Example 7.4.1** The RNA of tobacco mosaic virus has $6\,395$ nucleotides and each coat-protein subunit binds three of them, so the rod contains about $2\,130$ subunits. At $16.33$ subunits per turn that is $130.5$ turns, and with a pitch of $2.3\,\mathrm{nm}$ the rod is $300\,\mathrm{nm}$ long, exactly the length seen in the electron microscope. The genome is the ruler: TMV coat protein alone forms rods of any length, and the RNA fixes the length of the virion.
+
+:::
 
 The two notations for actin illustrate the convention of the previous paragraph: successive subunits along the 1-start helix are related by $-166.6^\circ$ and $2.75\,\mathrm{nm}$, which places them on alternate long-pitch strands; within one strand, subunits are related by twice the screw, $2 \times (-166.6^\circ) + 360^\circ = 26.8^\circ$ and $5.5\,\mathrm{nm}$. (A description in which adjacent subunits "of one protofilament" are rotated by $167^\circ$ and raised by $2.7\,\mathrm{nm}$ mixes the two.) The polymerization dynamics of these filaments, treadmilling and dynamic instability, are treated in [7.3.13](/7.3.13), [7.3.14](/7.3.14) and [7.6.26](/7.6.26).
 

@@ -1,7 +1,7 @@
 ---
 title: X-Rays, Lasers and Molecular Spectra
 description: The continuous X-ray spectrum (bremsstrahlung and the cutoff wavelength) and the characteristic spectrum (K and L series, Moseley's law) with applications; spontaneous emission, stimulated absorption, stimulated emission and the Einstein coefficients, population inversion, the He–Ne laser, longitudinal and transverse modes of the optical resonator; electronic, vibrational and rotational levels of molecules, rotational spectra, rovibrational spectra and band spectra.
-source_hash: 902629ec3ba2
+source_hash: c72fd99a6a41
 ---
 
 The previous chapter ([5.5.4](/5.5.4)) treated the electrons in atoms with quantum mechanics: energy levels, quantum numbers, the structure of **electron shells** and the **Pauli exclusion principle**. This chapter discusses three important applications of atomic and molecular energy levels, each an example of atomic physics moving from "explaining spectra" to "using spectra". Section 5.1 treats X-ray spectra: the continuous spectrum comes from the radiation of electrons decelerating in the target, and its short-wavelength limit is another piece of evidence for the **photon** theory; the characteristic spectrum comes from transitions of inner-shell electrons, and Moseley used it to establish the physical meaning of the atomic number. The discovery of X-rays, their wave nature and their **diffraction** by crystals were covered in [5.4.2](/5.4.2#sec-2.5), so here we discuss only the spectra. Section 5.2 treats lasers: in 1916–1917 Einstein introduced stimulated emission in order to bring atoms and radiation into thermal equilibrium, and some forty years later it became the principle of the laser; the coherence of laser light was already used in [5.4.1](/5.4.1#sec-1.2). Section 5.3 (optional) treats molecular spectra: a molecule has two kinds of motion beyond those of an atom, vibration and rotation, whose energy levels are those of the **quantum harmonic oscillator** of [5.5.3](/5.5.3) and of the quantized rigid rotor, respectively; the resulting infrared and microwave spectra are basic tools in chemistry for identifying molecular structure.
@@ -230,6 +230,8 @@ $$
 Shortening the cavity to $0.1\,\mathrm{m}$ increases $\Delta\nu_q$ to $1.5\times10^9\,\mathrm{Hz}$, which exceeds the linewidth, so only one longitudinal mode remains within the gain curve, and a single-longitudinal-mode output is obtained (figure below).
 
 ![Longitudinal modes on the gain curve. Left: cavity length L = 1 m, mode spacing 150 MHz; about ten modes whose gain exceeds the threshold (dashed line) oscillate simultaneously. Right: L = 0.1 m, mode spacing 1.5 GHz is larger than the width of the gain curve, and only one mode oscillates](./plots/laser-modes.py)
+
+:::
 
 The linewidth of a single-longitudinal-mode laser is determined by the quality of the resonator and is far smaller than the width of the atomic line. The linewidth of an ordinary single-mode He–Ne laser is of order $\mathrm{kHz}$ to $\mathrm{MHz}$ ($\Delta\nu/\nu\sim10^{-12}$–$10^{-9}$); with frequency stabilization on an atomic or molecular line and locking of the laser to a high-quality reference cavity, $\Delta\nu/\nu$ can reach $10^{-15}$ or even less, and such lasers are the basis of optical clocks and gravitational-wave detection. From the **coherence length** $L_{\mathrm{c}}\approx c/\Delta\nu$ of [5.4.1](/5.4.1#sec-1.3.3), a laser with a linewidth of $1\,\mathrm{MHz}$ has a coherence length of about $300\,\mathrm{m}$, whereas ordinary light sources have only micrometers to millimeters.
 

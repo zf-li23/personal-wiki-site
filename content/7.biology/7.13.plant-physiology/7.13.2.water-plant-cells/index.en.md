@@ -1,7 +1,7 @@
 ---
 title: Water and Plant Cells
 description: The structure and properties of water; water potential and its solute, pressure, gravitational and matric components, the van 't Hoff relation and the osmotic coefficient; diffusion, bulk flow and osmosis; imbibition, pressure-driven and osmotic water uptake, and plasmolysis; Höfler diagrams, the volumetric elastic modulus and pressure–volume curves; membrane hydraulic conductivity and the half-time of cell water exchange; aquaporins and their gating; water flow between cells; methods for measuring water potential.
-source_hash: 1ee48e911b66
+source_hash: 20e78bad668a
 ---
 
 Plants use far more water than animals do: about 97% of the water absorbed by roots is lost by evaporation from the leaves, only about 2% remains in the plant for growth, and about 1% takes part in photosynthesis and other metabolic reactions; for every $\ce{CO2}$ molecule it absorbs, a leaf loses several hundred water molecules. On the other hand, plant cells have a **cell wall** that allows a hydrostatic pressure of several atmospheres to build up inside, which makes the water relations of plant cells quite different from those of wall-less animal cells: growth, stomatal movement, phloem transport and the upright posture of non-woody tissues all depend on **turgor pressure**. This chapter answers, at the cellular scale, the question "why and how does water enter and leave plant cells?" We begin with the properties of water (2.1), then use **water potential** to describe the free energy of water in a unified way (2.2), followed by the three modes of water movement (2.3), water uptake and plasmolysis of cells (2.4), how the properties of the wall and membrane determine cell volume and the rate of water exchange (2.5), aquaporins (2.6), water flow between cells (2.7) and the measurement of water potential (2.8).
@@ -255,6 +255,8 @@ The direction of water movement between two adjacent cells depends on the differ
 **Example 2.7.1 (Two adjacent cells)** Cell A has $\Psi_{\mathrm{s}} = -1.5\,\mathrm{MPa}$ and $\Psi_{\mathrm{p}} = 0.7\,\mathrm{MPa}$; the adjacent cell B has $\Psi_{\mathrm{s}} = -1.2\,\mathrm{MPa}$ and $\Psi_{\mathrm{p}} = 0.6\,\mathrm{MPa}$. In which direction does water flow?
 
 $\Psi_{\mathrm{w,A}} = -1.5 + 0.7 = -0.8\,\mathrm{MPa}$ and $\Psi_{\mathrm{w,B}} = -1.2 + 0.6 = -0.6\,\mathrm{MPa}$. B has the higher water potential, so water flows from B to A; after A takes up water its $\Psi_{\mathrm{p}}$ rises and $\Psi_{\mathrm{s}}$ rises slightly, and the opposite happens in B, until $\Delta\Psi_{\mathrm{w}} = 0$. Note that A has the higher turgor than B, yet water flows to A: high turgor does not mean high water potential.
+
+:::
 
 The same holds for several cells in a row. If the water potential in a xylem vessel is $-0.1\,\mathrm{MPa}$ (for example $\Psi_{\mathrm{s}} = -0.05$ and $\Psi_{\mathrm{p}} = -0.05\,\mathrm{MPa}$), and three mesophyll cells lined up beside it have $\Psi_{\mathrm{s}}$ of $-0.5$, $-0.4$ and $-0.5\,\mathrm{MPa}$ and $\Psi_{\mathrm{p}}$ of $0.3$, $0.1$ and $0.1\,\mathrm{MPa}$, their water potentials are in turn $-0.2$, $-0.3$ and $-0.4\,\mathrm{MPa}$, and water flows along this declining gradient from the vessel to the farthest cell. The same principle extends between organs and to the whole plant: from the soil through root, stem and leaf to the atmosphere the water potential declines step by step, and water moves along this continuous gradient ([7.13.3](/7.13.3)).
 

@@ -1,6 +1,6 @@
 ---
 title: The Second Law of Thermodynamics
-source_hash: 79f6b1d61b09
+source_hash: 820331ce769c
 ---
 
 Thermodynamics rests on three laws drawn from experiment: the zeroth law gives **temperature** ([5.2.1](/5.2.1)), the first law gives **internal energy** and energy conservation ([5.2.3](/5.2.3)), and the second law, the subject of this chapter, gives the direction of natural processes; in thermal physics they play the role that Newton's laws play in mechanics. The first law says only that energy is conserved in transformations and places no restriction on their direction: at the end of the previous chapter we saw that turning all the absorbed **heat** into **work** does not violate energy conservation, yet it has never been achieved. This chapter first states the second law in the two forms due to Kelvin and Clausius, and derives from it Carnot's theorem and the **thermodynamic temperature scale**; it then introduces a new state function, the entropy, from the Clausius equality, and writes the second law in the quantitative form of the principle of increase of entropy; finally it uses Boltzmann's statistical viewpoint to explain the microscopic meaning of entropy: entropy is the logarithm of the number of microstates, and the second law is a statistical law. The concept of entropy will reappear in physical chemistry (chemical equilibrium and free energy), information theory and statistical learning.
@@ -303,6 +303,8 @@ $$
 $$
 the same as the result obtained with Clausius entropy in Example 4.5.2. The size $V_0$ of the cells cancels in the entropy change.
 
+:::
+
 Statistical physics can prove in general that the Boltzmann entropy and the Clausius entropy are equivalent. More generally, if the system is in the microstates with probabilities $p_i$, the entropy is $S = -k_{\mathrm{B}}\sum_ip_i\ln p_i$ (the Gibbs entropy), which returns to Eq. (4.3) when the probabilities are equal; apart from the constant $k_{\mathrm{B}}$ and the base of the logarithm, this is the same expression as Shannon's [information entropy](/4.5.6#def-6.2.1).
 
 ## 4.9. The Temperature–Entropy Diagram
@@ -330,6 +332,8 @@ The increase of entropy is a measure of energy degradation.
 **Example 4.10.1 (Work into Heat)** Work $W$ is turned by friction into heat $Q = W$ in a reservoir at temperature $T$, and the entropy increases by $\Delta S = W/T$. The best way to reuse this heat is to run a Carnot engine between $T$ and $T_0$, which yields at most work $W(1 - T_0/T)$. The degraded energy is $E_{\mathrm{d}} = W - W(1 - T_0/T) = T_0W/T = T_0\,\Delta S$.
 
 **Example 4.10.2 (Heat Conduction across a Finite Temperature Difference)** Heat $Q$ flows from a body at temperature $T_{\mathrm{h}}$ to a body at temperature $T_{\mathrm{l}}$, and the entropy increases by $\Delta S = Q\left(\frac{1}{T_{\mathrm{l}}} - \frac{1}{T_{\mathrm{h}}}\right)$. While $Q$ is in the hotter body it can be converted into at most work $Q(1 - T_0/T_{\mathrm{h}})$; after flowing to the colder body it can be converted into only $Q(1 - T_0/T_{\mathrm{l}})$. The degraded energy is the difference of the two, $QT_0\left(\frac{1}{T_{\mathrm{l}}} - \frac{1}{T_{\mathrm{h}}}\right) = T_0\,\Delta S$.
+
+:::
 
 Energy degradation is a consequence of the second law and reflects the passage of natural processes from order to disorder. In the 19th century Clausius extended the principle of increase of entropy to the whole universe, arguing that the universe would eventually reach a "heat death" in which the temperature is the same everywhere and no macroscopic process occurs any more. On the other hand, the world we see is full of processes that go from disorder to order: the evolution of life, the development of organisms, the growth of crystals, the regular patterns formed in convection. This does not violate the second law: living organisms and other self-organizing systems are all **open systems**; they obtain low-entropy energy from the environment (for the Earth, radiation from the hot Sun) and discharge high-entropy heat and matter into the environment, so that their own entropy can decrease while the total entropy of system and environment still increases. Whether the universe as a whole can be regarded as an isolated system and whether the "heat death" hypothesis holds involve the expansion of the universe and the peculiar thermodynamic properties of gravitating systems; these are questions of cosmology and cannot simply be deduced from the principle of increase of entropy.
 

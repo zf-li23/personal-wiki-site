@@ -57,6 +57,8 @@ $$
 \frac{\mathrm{d}[S]}{\mathrm{d}t} = -k_1(E_{\mathrm{T}} - [C])[S] + k_{-1}[C], \qquad \frac{\mathrm{d}[C]}{\mathrm{d}t} = k_1(E_{\mathrm{T}} - [C])[S] - (k_{-1} + k_2)[C]. \tag{14.2}
 $$
 
+:::
+
 Conservation laws matter numerically as well as conceptually: if all $m$ equations are kept, the Jacobian of the system is singular (14.4), and the steady state is not unique until the conserved totals are fixed.
 
 ### 14.2.3. Time-Scale Separation and Quasi-Steady States
@@ -118,6 +120,8 @@ The Euler method follows the tangent of the solution through the current point f
 
 **Example 14.3.1** For $\dot x = a - bx$ with $a = 20$, $b = 2$, $x(0) = 5$ and $h = 0.05$, the first steps are $\dot x(0) = 20 - 10 = 10$, $x_1 = 5 + 0.05 \times 10 = 5.5$; $\dot x = 20 - 11 = 9$, $x_2 = 5.5 + 0.05 \times 9 = 5.95$. The exact solution is $x(t) = a/b - (a/b - c)\mathrm{e}^{-bt}$ with $c = x(0)$, so $x(1) = 10 - 5\mathrm{e}^{-2} = 9.3233$; twenty Euler steps give $9.3921$, an error of $0.069$. With $h = 0.025$ the error is $0.034$: halving the step halves the error.
 
+:::
+
 Two properties of a method determine its use.
 
 **Theorem 14.3.1 (Convergence of the Euler Method)** Let $\boldsymbol{f}$ be continuously differentiable and Lipschitz in $\boldsymbol{x}$ with constant $L$, and let the solution have a bounded second derivative, $\lVert\ddot{\boldsymbol{x}}\rVert \le M$, on $[t_0, T]$. Then the Euler approximations satisfy
@@ -148,6 +152,8 @@ The Runge–Kutta method of Algorithm 14.3.2 has order $4$: its global error is 
 
 **Example 14.3.2** For the equation of Example 14.3.1 the Runge–Kutta error at $t = 1$ is $1.2 \times 10^{-6}$ with $h = 0.05$ and $7.3 \times 10^{-8}$ with $h = 0.025$, a ratio of $16.7$. For the Lotka–Volterra system of panel C ($\alpha = 1$, $\beta = 0.1$, $\gamma = 1.5$, $\delta = 0.075$), the first integral $\Phi$ should stay at its initial value $-3.813$. After $50$ time units (about nine periods of $5.48$) Euler's method has increased it by $0.51$ with $h = 0.01$ ($5000$ steps) and by $0.036$ with $h = 0.001$; the Runge–Kutta method has changed it by $4 \times 10^{-6}$ with $h = 0.1$ ($500$ steps, $2000$ evaluations). A method that does not preserve the first integral turns a conservative system into a dissipative or an explosive one, a qualitative error that can be mistaken for biology.
 
+:::
+
 Fixed steps waste effort where the solution is smooth and are too large where it changes quickly. Modern solvers choose the step adaptively. An embedded pair of Runge–Kutta formulas of orders $p$ and $p + 1$ that share their evaluations (Dormand and Prince, orders $4$ and $5$, the default `RK45` of `solve_ivp`) gives two estimates of $\boldsymbol{x}_{n+1}$; their difference estimates the local error, the step is accepted if the error is below $\mathrm{atol} + \mathrm{rtol}\,\lvert x\rvert$ componentwise and rejected otherwise, and the next step is enlarged or reduced accordingly. In the Lotka–Volterra example, `RK45` with $\mathrm{rtol} = 10^{-3}$ needs $566$ evaluations and changes $\Phi$ by $0.011$, with $\mathrm{rtol} = 10^{-6}$ it needs $1676$ evaluations and changes it by $2 \times 10^{-6}$. The tolerances are part of the model specification: $\mathrm{atol}$ must be small compared with the smallest concentration that matters, or species at low concentration are computed with no accurate digits. The solvers and their options are described in [4.4.4](/4.4.4#sec-4.3.2).
 
 ### 14.3.3. Stiffness
@@ -155,6 +161,8 @@ Fixed steps waste effort where the solution is smooth and are too large where it
 Biochemical networks combine fast and slow processes: binding in milliseconds, transcription in minutes, growth in hours. When a system has decaying modes much faster than the solution that is being followed, explicit methods must take steps limited by the fastest mode, $h < 2/\lambda_{\max}$, long after that mode has died away. Such a system is stiff (**stiffness**, [4.4.4](/4.4.4#sec-4.3.3)). The ratio of the largest to the smallest decay rate, the eigenvalues of the Jacobian (14.4), measures it.
 
 **Example 14.3.3** The enzyme system (14.2) with $k_1 = 1$, $k_{-1} = 9$, $k_2 = 1$, $E_{\mathrm{T}} = 0.1$ and $S_0 = 50$ has, after the initial transient, Jacobian eigenvalues $-60.0$ (relaxation of the complex) and $-2.8 \times 10^{-4}$ (conversion of the substrate), a ratio of $2 \times 10^5$. Integrating to $t = 1500$, which converts almost all the substrate, with $\mathrm{rtol} = 10^{-6}$: the explicit `RK45` needs $65\,630$ evaluations of $\boldsymbol{f}$; the implicit `BDF` (backward differentiation formulas) $518$, `Radau` (implicit Runge–Kutta) $1084$, and `LSODA`, which switches automatically between explicit and implicit methods, $463$.
+
+:::
 
 Implicit methods, such as the backward Euler method $\boldsymbol{x}_{n+1} = \boldsymbol{x}_n + h\boldsymbol{f}(t_{n+1}, \boldsymbol{x}_{n+1})$, solve an equation at every step, by Newton's method with the Jacobian, and are stable for all step sizes on decaying modes: for $\dot x = -\lambda x$ the backward Euler iteration $x_{n+1} = x_n/(1 + h\lambda)$ decays for every $h > 0$. Their cost per step is higher, their number of steps is set by accuracy instead of stability. A practical rule for network models: try an explicit solver; if it is slow or needs very small steps, switch to `LSODA` or `BDF` and supply the Jacobian if it can be written down.
 
@@ -194,6 +202,8 @@ A change of qualitative behavior as a parameter passes a critical value is a **b
 
 **Example 14.4.2** Setting $\operatorname{tr}J = 0$ gives $(T^* + K_{\mathrm{m}})^2 = k_{\mathrm{p}}/k_1 = 300$. With $T^* = 0.1364K_{\mathrm{m}}$, the critical value is $K_{\mathrm{m}} = \sqrt{300}/1.1364 = 15.24$, and the eigenvalues there are $\pm 0.1126\,\mathrm{i}$, so the oscillation is born with period $2\pi/0.1126 = 55.8$. Simulation shows a supercritical bifurcation: the amplitude of the cycle grows continuously from zero as $K_{\mathrm{m}}$ decreases below $15.24$, approximately as $4.6\sqrt{15.24 - K_{\mathrm{m}}}$ in $G$ ($0.94$ at $K_{\mathrm{m}} = 15.2$, $2.26$ at $15.0$), and trajectories started near or far from the steady state reach the same cycle. At $K_{\mathrm{m}} = 13$ the cycle has period $68.5$, $G$ oscillates between $3.07$ and $17.6$ and $T$ between $0.05$ and $12.4$: far from the Hopf point the oscillation is a large, nonsinusoidal relaxation with a lengthened period.
 
+:::
+
 A brute-force bifurcation diagram, as in panel C, simulates the model for many parameter values and records the extremes of the variables after transients have died out. Near the bifurcation the transients decay slowly (at $K_{\mathrm{m}} = 15.3$ the real part of the eigenvalues is only $-1.3 \times 10^{-4}$, a decay time of several thousand time units), and a simulation of limited length misplaces the critical point: a sweep that records only the last $500$ time units after a short run places it near $16$ instead of $15.24$. The analytic condition, or numerical continuation, avoids this. Continuation methods follow a branch of steady states as a parameter varies by predicting the next point from the tangent of the branch and correcting it with Newton's method (pseudo-arclength continuation, which also passes around folds where the branch turns back), monitor the eigenvalues of $J$ along the branch to detect saddle-node and Hopf points, and then follow the periodic orbits born at Hopf points; AUTO, MatCont and XPPAUT implement them. The **saddle-node bifurcations** behind switches and hysteresis are treated in [7.6.33](/7.6.33#sec-33.2.2), and the biological uses of such diagrams, in cell-fate switches and in the cell cycle, in [7.9.16](/7.9.16).
 
 ## 14.5. Sensitivity and Control
@@ -222,6 +232,8 @@ $$
 \frac{\partial x}{\partial\beta} = \frac{1 - \mathrm{e}^{-\alpha t}}{\alpha}, \qquad \frac{\partial x}{\partial\alpha} = -\frac{\beta}{\alpha^2}\bigl(1 - \mathrm{e}^{-\alpha t}\bigr) + \frac{\beta}{\alpha}t\,\mathrm{e}^{-\alpha t}.
 $$
 At steady state $S^x_\beta = 1$ and $S^x_\alpha = -1$. At early times, $\partial x/\partial\beta \approx t$ and $\partial x/\partial\alpha \approx -\beta t^2/2$: the sensitivity to the degradation rate is of second order in $t$, which is why early measurements determine $\beta$ and not $\alpha$.
+
+:::
 
 Local sensitivities describe small changes around one parameter set. When parameters are uncertain by orders of magnitude, global methods sample the parameter space, for example on a Latin hypercube in logarithmic coordinates, and decompose the variance of the output into contributions of each parameter and their interactions (Sobol indices); the parameter-robustness study of the segment polarity network ([7.6.40](/7.6.40#sec-40.2.3)) is a global analysis of this kind.
 
@@ -311,6 +323,8 @@ Nonlinear least-squares problems can have several local minima, and an iterative
 
 **Example 14.6.1** In the figure the best fit has residual sum of squares $1.04$ (the expected value for the noise is $41 \times 0.04 = 1.64$, minus the fitted parameters), the local minimum near $\omega = 4.00$ has $19.8$, close to the value $20$ of a constant model: it fits a slow, weak wave and explains almost nothing. Of $200$ Levenberg–Marquardt runs from random starting frequencies, $39$ ($19.5\,\%$) find the best minimum.
 
+:::
+
 Two remedies are standard. Multistart: run a local optimizer from many starting points spread over the plausible region (uniformly on logarithmic scales for rate constants, or on a Latin hypercube) and keep the best result; if the best value is found repeatedly from different starts, it is probably the global minimum, and if the best few minima have nearly equal $\chi^2$ but different parameters, the data do not distinguish them. Global optimizers (differential evolution, scatter search, **simulated annealing**) explore the space more systematically and are usually followed by a local refinement; benchmarks on published models of signaling and metabolic networks have found multistart of a gradient-based local optimizer with sensitivities (Raue and colleagues, 2013) and hybrids of a global search with local refinement (Villaverde and colleagues, 2019) to be the most efficient strategies. Where the model is linear in some parameters, as $c$, $a$, $b$ here, they can be eliminated by linear least squares for each value of the others, which leaves a low-dimensional search (the profile in panel B). Bounds on parameters enforce physical sense, but an estimate that ends on a bound is a warning that the model or the data are inadequate, not a result.
 
 ## 14.7. Uncertainty, Identifiability and Model Selection
@@ -324,6 +338,8 @@ A fit returns numbers; the question is which of them the data determine.
 **Example 14.7.1** A gene is induced at $t = 0$, $\dot x = ku - \gamma x$ with $u = 1$ and $x(0) = 0$, and is measured by fluorescence $y = sx$ with an unknown scale $s$. Then $y(t) = (sk/\gamma)(1 - \mathrm{e}^{-\gamma t})$: the data determine $\gamma$ and the product $sk$, but not $s$ and $k$ separately. Any $(s, k)$ with the same product fits equally well. The remedy is either to fix the scale by calibration or to reparametrize the model in identifiable combinations.
 
 **Example 14.7.2** An enzyme subject to competitive inhibition by its product follows $\mathrm{d}[S]/\mathrm{d}t = -V_{\max}[S]/\bigl(K_{\mathrm{M}}(1 + [P]/K_{\mathrm{p}}) + [S]\bigr)$. In a single progress curve $[P] = S_0 - [S]$, so the denominator is $a + b[S]$ with $a = K_{\mathrm{M}}(1 + S_0/K_{\mathrm{p}})$ and $b = 1 - K_{\mathrm{M}}/K_{\mathrm{p}}$, and the curve is exactly a Michaelis–Menten progress curve with apparent constants $K' = a/b$ and $V' = V_{\max}/b$. Three parameters enter through two combinations: from one progress curve, product inhibition is structurally indistinguishable from a larger $K_{\mathrm{M}}$. With $K_{\mathrm{M}} = 10$, $V_{\max} = 1$, $K_{\mathrm{p}} = 20$ and $S_0 = 50$, $K' = 70$ and $V' = 2$; a simulated curve with noise ($\sigma = 0.5$, $15$ points) is fitted by plain Michaelis–Menten with $K' = 94$, $V' = 2.47$, and by the product-inhibition model with the same $\chi^2$ to eight digits; the third singular value of the Jacobian of the residuals is $7 \times 10^{-7}$ against $147$ and $13.7$ for the first two. Progress curves started at several $S_0$, in which $[P]$ and $[S]$ vary independently, make all three parameters identifiable (Example 14.7.5).
+
+:::
 
 Structural identifiability can be checked symbolically, by differential algebra or by Taylor-series expansion of the outputs (tools such as SIAN or StructuralIdentifiability.jl), or numerically, by the rank of the sensitivity matrix at random parameter values: a zero singular value, as in Example 14.7.2, reveals a combination of parameters that does not change the outputs.
 
@@ -346,6 +362,8 @@ $$
 is an approximate $95\,\%$ confidence interval for $\theta_j$, by the asymptotic distribution of the **likelihood ratio test** statistic. A parameter is practically non-identifiable if its profile does not exceed the threshold on one or both sides; it is structurally non-identifiable if the profile is flat.
 
 **Example 14.7.4 (continued)** In panel B of the figure, the profile of $K_{\mathrm{M}}$ for the high design crosses $3.84$ at $8.9$ and $19.8$, a closed interval around the true value $10$, close to the Wald interval. For the low design it crosses at $3.6$ on the left but rises only to $0.55$ as $K_{\mathrm{M}} \to \infty$: no upper limit exists, because for $K_{\mathrm{M}} \gg S_0$ every progress curve is the same exponential decay. The Wald interval, $1.1$ to $205$, misrepresents both sides. The parametric bootstrap (panel C) agrees with the profile: $26\,\%$ of the low-design estimates of $K_{\mathrm{M}}$ exceed $100$, some by many orders of magnitude.
+
+:::
 
 Profiles have a second use: following the other parameters along the profile of a non-identifiable one shows the functional relation between them (here $V_{\max}/K_{\mathrm{M}}$ constant), which suggests a reparametrization or the experiment that would break it. Profiles of predictions, computed in the same way for a model output instead of a parameter, show whether a prediction is determined even if the parameters are not: in a sloppy model, predictions that depend on the stiff combinations are often precise.
 

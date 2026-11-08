@@ -1,7 +1,7 @@
 ---
 title: "Introduction: The Internal Environment, Homeostasis and Physiological Control"
 description: What physiology studies; from Hippocrates and Galen to Harvey's quantitative argument and on to Bernard's internal environment and Cannon's homeostasis; the fluid compartments and the composition of the internal environment; neural, humoral and autoregulation; negative feedback and feedback gain, integral control and delay, positive feedback and vicious cycles, feedforward control; the cell cycle as a complex control system; conformers and regulators, and the evolution of animals from open body fluids to a barrier-protected internal environment.
-source_hash: 74fcd9a542f4
+source_hash: d337f5ae1e57
 ---
 
 Physiology asks how living organisms work: how the heart can beat continuously for several billion cycles, how the kidney processes $180\,\mathrm{L}$ of filtrate into $1.5\,\mathrm{L}$ of urine in a day, how a nerve fiber generates and transmits an electrical signal within a millisecond. These functions belong to different systems, yet they serve a single goal: to keep every cell of the body immersed in a liquid environment whose composition, temperature and pressure are almost constant. This chapter introduces three concepts that run through the whole course: the internal environment (the extracellular fluid in which cells live), homeostasis (the relative constancy of the physical and chemical properties of the internal environment), and the physiological regulation that maintains it (neural, humoral and autoregulation, and the control modes of negative feedback, positive feedback and feedforward).
@@ -33,6 +33,8 @@ Early physiology relied mainly on direct observation and speculative reasoning, 
 William Harvey's (1578–1657) *De motu cordis* of 1628 marks the point at which physiology became an experimental science. His key argument was quantitative.
 
 **Example 1.2.1 (Harvey's Argument for the Circulation of the Blood)** Galen's doctrine held that blood is continually made from food in the liver and flows through the veins to be consumed throughout the body. Harvey took a conservative estimate: each beat of the ventricle ejects about half an ounce (about $14\,\mathrm{g}$) of blood, and the heart beats more than a thousand times in half an hour, so more than $14\,\mathrm{kg}$ of blood passes out of the heart in half an hour, more than the total amount of blood in the body and far more than the food eaten in that time. Blood cannot be made and consumed so fast; it must be the same blood circulating again and again. With modern numbers, a **stroke volume** of about $70\,\mathrm{mL}$ and a heart rate of about 70 beats per minute give a **cardiac output** of about $5\,\mathrm{L\,min^{-1}}$, or about $7000\,\mathrm{L}$ per day, more than a thousand times the blood volume (about $5\,\mathrm{L}$).
+
+:::
 
 Harvey also used ligation experiments to show that the venous valves allow blood to flow only toward the heart. He could not see the connections between arteries and veins; in 1661 Marcello Malpighi saw capillaries in the frog lung with a microscope, supplying the last link of the circulation. The microscope also revealed the fine structure of a great many organs, the first typical example of instruments driving physiology forward.
 
@@ -147,6 +149,8 @@ $$
 The larger the absolute value of the gain, the smaller the residual error.
 
 **Example 1.6.1 (Gain of the Baroreceptor Reflex and of Thermoregulation)** When a large volume of blood is infused into a person whose **baroreceptor reflex** has been abolished, arterial pressure rises from $100\,\mathrm{mmHg}$ to $175\,\mathrm{mmHg}$ ($\Delta_0 = +75\,\mathrm{mmHg}$); with the reflex intact, the same infusion raises pressure by only $25\,\mathrm{mmHg}$. The correction is $-50\,\mathrm{mmHg}$ and the error is $+25\,\mathrm{mmHg}$, so the gain is $G = -50/25 = -2$: any perturbation that changes blood pressure has only one third of its effect without feedback, consistent with the $1/(1+2)$ of Eq. (1.1). The system that maintains core temperature in moderate cold has a gain of about $-33$, reducing perturbations to about $1/34$.
+
+:::
 
 Eq. (1.1) describes proportional control: the correction is proportional to the current error. If the controller accumulates the integral of the error over time, the correction keeps growing as long as the error is nonzero, until the error is zero; this is **integral feedback**. The mechanism by which the kidney regulates blood volume and long-term arterial pressure by excreting sodium and water has this property: as long as arterial pressure is above the kidney's set point, sodium and water excretion exceed intake and blood volume keeps falling, until pressure returns to the set point (Chapters 16 and 24). It is therefore called "infinite gain" feedback and is the final determinant of the long-term level of arterial pressure.
 

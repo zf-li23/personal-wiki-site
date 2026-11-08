@@ -227,6 +227,8 @@ a = \frac{1}{2\pi}\int_0^{2\pi}\frac{K\,\mathrm{d}t}{1 + (a - b\cos t)^{2}},\qqu
 $$
 For small $b$ the second equation gives $b = 2aKb/(1 + a^2)^2$ and the first $a(1 + a^2) = K$, so a nonzero $b$ first appears when $2a^2/(1 + a^2) = 1$, at $a = 1$, $K = 2$: the threshold of Proposition 23.3.2. Evaluating the integrals (by residues, or numerically) gives the exact solution $a = \sqrt{K - 1}$, $b = \sqrt{2(K - 2)}$ for $K \ge 2$. At $K = 3$, $b = 1.41$; the exact square wave between $x_0 = 0.382$ and $x_1 = 2.618$ has half-amplitude $1.118$ and first Fourier harmonic $(4/\pi)(1.118) = 1.42$. The one-harmonic approximation recovers both the threshold and the amplitude of the oscillation.
 
+:::
+
 At this level of description the delayed oscillator and the van der Pol oscillator behave alike, and models of the segmentation clock are often written with an effective local oscillator, with suitable parameters, when the question concerns populations of cells.
 
 ![Elementary oscillators. (A) Lotka–Volterra model (23.5) with $a = b = c = d = 1$: closed orbits, level curves of the first integral $cH + bL - d\ln H - a\ln L$, around the steady state $(1, 1)$; the amplitude is set by the initial condition. (B) The limit cycle model (23.6): trajectories from inside and outside converge on the circle $r = 1$. (C) The van der Pol oscillator with $\varepsilon = 0.1$ started at $x = 0.2$: the numerical solution (thin) and the amplitude predicted by the method of averaging, $A(t) = 2/(1 + C\mathrm{e}^{-\varepsilon t})^{1/2}$ (thick envelope); the amplitude grows to 2. (D) For $\varepsilon = 5$ the oscillation is a relaxation oscillation with slow phases and fast jumps, far from the averaging regime](./plots/elementary-oscillators.py)
@@ -415,6 +417,8 @@ $$
 \frac{\varepsilon}{\nu} < \frac14 .
 $$
 The inhibitor $h$ must diffuse at least four times faster than the activator $a$. At threshold the critical wave number is $k_c^2 = 1/(16\varepsilon)$.
+
+:::
 
 The stability of the uniform state without diffusion is mathematically convenient but has no particular biological justification: there is no reason to imagine diffusion being switched on. A model closer to the situation in the anterior PSM has a diffusing substrate $a$, produced uniformly, and a **cell-autonomous**, self-enhancing species $h$ that consumes it (an activator–substrate, or depletion, model of the **Gierer–Meinhardt model** family):
 

@@ -1,6 +1,6 @@
 ---
 title: The Multivariate Normal Distribution
-source_hash: 914bfffed48e
+source_hash: b910d7b2b53d
 ---
 
 The normal distribution is important for two reasons: the central limit theorem ([3.1.13](/3.1.13)), and the fact that it is closed under linear operations and easy to compute with. This chapter extends it to random vectors. [3.1.6](/3.1.6) defined the bivariate normal distribution through its joint density; in general dimension a more convenient definition is "a linear transformation of independent standard normal random variables". From it we derive, in a unified way, the joint density, the characteristic function, the marginal distributions, linear transformations, criteria for independence and the conditional distributions; the main tools are characteristic functions ([3.1.11](/3.1.11)) and matrix algebra ([2.1](/2.1)). These properties of the multivariate normal distribution underlie the sampling distributions of normal populations in statistical inference ([3.2.2](/3.2.2)), linear regression and multivariate statistical analysis. The chapter ends with the law of large numbers and the central limit theorem for random vectors.
@@ -134,6 +134,8 @@ $$
 A\Sigma A^{\mathsf T} = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}\begin{pmatrix} 4 & -2 \\ -2 & 9 \end{pmatrix}\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 4 & 2 \\ 2 & 9 \end{pmatrix},
 $$
 so $(Y_1, Y_2)^{\mathsf T} = (1 + X_1, X_1 + X_2)^{\mathsf T} \sim \mathcal{N}\left(\begin{pmatrix} 2 \\ -4 \end{pmatrix}, \begin{pmatrix} 4 & 2 \\ 2 & 9 \end{pmatrix}\right)$.
+
+:::
 
 Taking $A$ to be a row vector $\boldsymbol{a}^{\mathsf T}$ gives the one-dimensional case. Its converse also holds, and this is the most practical tool for recognizing a multivariate normal distribution.
 
@@ -276,6 +278,8 @@ $$
 (n-1)S_n^2 = \sum_{i=1}^{n} X_i^2 - n\bar X^2 = \boldsymbol{Y}^{\mathsf T}\boldsymbol{Y} - Y_1^2 = Y_2^2 + \cdots + Y_n^2.
 $$
 Hence $\bar X = Y_1/\sqrt{n} \sim \mathcal{N}(0, 1/n)$ and $(n-1)S_n^2 \sim \chi^2_{n-1}$; the former depends only on $Y_1$ and the latter only on $Y_2, \dots, Y_n$, so they are independent. $\square$
+
+:::
 
 This theorem is the cornerstone of statistical inference for normal populations (the $t$-test, the $\chi^2$-test and the $F$-test; see [3.2](/3.2)); in higher dimensions there is an analogous result (the Wishart distribution).
 

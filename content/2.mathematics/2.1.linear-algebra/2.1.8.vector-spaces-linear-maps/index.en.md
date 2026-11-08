@@ -1,6 +1,6 @@
 ---
 title: Vector Spaces and Linear Maps
-source_hash: 3dec4e6c1ef3
+source_hash: 94df76556e32
 ---
 
 The first seven chapters work in $\mathbb{R}^n$: vectors are arrays of numbers and linear maps are matrices. But linearity is far more widespread. Solutions of a homogeneous linear differential equation can be added and scaled; polynomials, matrices and functions can all be combined linearly; differentiation, transposition, taking the trace, and evaluation at given points all obey the superposition principle. This chapter abstracts the notions of $\mathbb{R}^n$ into vector spaces and linear maps over a number field, so that all of the preceding theory applies to such objects.
@@ -85,6 +85,8 @@ $$
 **Proof** (cyclic) $1\Rightarrow2$: clear. $2\Rightarrow3$: for $m\in M_1\cap M_2$, $0=m+(-m)$ with $m\in M_1$ and $-m\in M_2$, so $m=0$. $3\Rightarrow1$: if $m=m_1+m_2=m_1'+m_2'$, then $m_1-m_1'=m_2'-m_2\in M_1\cap M_2=\{0\}$. $\square$
 
 **Example 8.2.1** Let $\mathcal{U},\mathcal{L}$ be the sets of upper and lower triangular matrices of order $n$, let $\mathcal{S}$ consist of every **symmetric matrix** of order $n$, and let $\mathcal{K}$ consist of every **skew-symmetric matrix** of order $n$; all are subspaces of $\mathbb{F}^{n\times n}$. $\mathcal{U}\cap\mathcal{L}$ consists of the diagonal matrices, and $\mathcal{U}+\mathcal{L}=\mathbb{F}^{n\times n}$, but this sum is not direct. Every square matrix decomposes uniquely as $A=\frac12(A+A^{\mathsf T})+\frac12(A-A^{\mathsf T})$, and $\mathcal{S}\cap\mathcal{K}=\{O\}$, so $\mathbb{F}^{n\times n}=\mathcal{S}\oplus\mathcal{K}$.
+
+:::
 
 The decomposition $\mathbb{R}^n=M\oplus M^\perp$ of [Chapter 4](/2.1.4) is another example of a direct sum. Direct sums of several subspaces and decompositions of a space under a linear transformation are treated in [Chapter 10](/2.1.10).
 
@@ -282,6 +284,8 @@ $$
 
 whose $(i,k)$ entry (indexed from $0$) is $\binom ki(-x_0)^{k-i}$, and $[a_0\ \cdots\ a_{n-1}]^{\mathsf T}=T\tilde{\boldsymbol{f}}$.
 
+:::
+
 Different bases of the same space have different strengths. The figure below shows three bases of $\mathbb{R}[x]_4$. The monomial basis is the most convenient for computation, but on $[0,1]$ the graphs of $x^2$ and $x^3$ differ little, so coefficients with respect to it are very sensitive to errors (the corresponding Vandermonde matrices are ill-conditioned). In the shifted basis $(x-x_0)^k$ the coordinates are the Taylor coefficients of $f$ at $x_0$ (Example 8.5.2). The Lagrange basis $L_0,\dots,L_3$ with nodes $0,\frac13,\frac23,1$ satisfies $L_i(a_j)=\delta_{ij}$, so the coordinates of a polynomial in this basis are its values at the four nodes (Theorem 9.4.2).
 
 ![Three bases of R[x]_4 on [0, 1]: the monomial basis 1, x, x^2, x^3; the shifted basis (x − 1/2)^k; and the Lagrange basis with nodes 0, 1/3, 2/3, 1, where L_i equals 1 at the i-th node (open circles) and 0 at the other nodes (filled circles)](./plots/polynomial-bases.py)
@@ -436,6 +440,8 @@ $$
 and with respect to the basis $\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ the matrix of $S$ is $\operatorname{diag}(1,1,1,0)$.
 
 **Example 8.7.2** The matrix of $D$ on $\operatorname{span}(1,\sin x,\cos x)$ in Example 8.6.2 has characteristic polynomial $\lambda(\lambda^2+1)$, whose only real eigenvalue is $0$, so $D$ is not diagonalizable over the real field. If complex coefficients are allowed, $\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ and $\mathrm{e}^{-\mathrm{i}x}$ are eigenvectors for $\pm\mathrm{i}$, and the matrix of $D$ with respect to the basis $1,\mathrm{e}^{\mathrm{i}x},\mathrm{e}^{-\mathrm{i}x}$ is $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$. Diagonalizability depends on the number field, which is why [Chapter 9](/2.1.9) discusses complex numbers and the factorization of polynomials.
+
+:::
 
 The various equivalence relations on matrices in this course can all be understood as representations of one object with respect to different bases:
 

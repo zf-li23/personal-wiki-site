@@ -1,7 +1,7 @@
 ---
 title: Solute Transport and Ion Uptake by Roots
 description: Electrochemical potential and passive and active transport; diffusion potentials, the Goldman equation and electrogenic proton pumps; using the Nernst equation to identify active transport (the classical pea root data); the proton-motive force and the maximum accumulation ratio of cotransport; channels, carriers and pumps, the plasma membrane H⁺-ATPase, the vacuolar V-ATPase and H⁺-pyrophosphatase; carrier kinetics and biphasic uptake; ion exchange adsorption, apparent free space and Donnan equilibrium; the apoplastic and symplastic pathways in the root, the Casparian strip and xylem loading; selective absorption, physiologically acid and alkaline salts, single-salt toxicity and ion antagonism; environmental factors affecting uptake; foliar nutrition; transport and reutilization of mineral elements in the plant.
-source_hash: d63860079678
+source_hash: 6663280565f8
 ---
 
 The previous chapter ([7.13.4](/7.13.4)) described which elements plants need and how soil supplies them to the root surface. This chapter describes how ions enter root cells and cross the root to the xylem, and how they are transported and redistributed within the plant. The central problem is energy. The concentrations of many nutrients in the soil solution are in the micromolar range, whereas in the cytosol they are in the millimolar range, so roots must accumulate them against a concentration gradient; at the same time $\ce{Na+}$ and $\ce{Ca^2+}$ must be excluded from the cytosol. Deciding whether the transport of an ion runs "downhill" or "uphill" requires considering both the concentration difference and the membrane potential, which is the electrochemical potential. Plant cells use proton pumps in the plasma membrane to establish an electrochemical gradient of protons, and then use it to drive the active transport of almost all other solutes; in this they differ from animal cells, which are organized around the sodium–potassium pump. The general principles of membrane transport and the structure of transport proteins are covered in biochemistry [7.1.13](/7.1.13), cell biology [7.3.5](/7.3.5) and biophysics [7.6.30](/7.6.30); here we treat only what is specific to plant cells, together with quantitative tests. For root anatomy see [7.12.20](/7.12.20), and for the movement of water along the same pathways see [7.13.3](/7.13.3).
@@ -109,6 +109,8 @@ $$
 
 **Example 5.2.1** Take $V_{\mathrm{m}} = -150\,\mathrm{mV}$ and $\Delta\mathrm{pH} = 1.7$. (a) If $\ce{NO3-}$ is transported through a channel ($z = -1$, $n = 0$), $\lg(c^{\mathrm{i}}/c^{\mathrm{o}}) = -150/59.2 = -2.5$: the internal concentration can be at most $1/340$ of the external one, so passive uptake is impossible. (b) Electroneutral symport of $1\ce{H+} : 1\ce{NO3-}$ ($z + n = 0$) uses only the pH gradient: $\lg(c^{\mathrm{i}}/c^{\mathrm{o}}) = 1.7$, an accumulation of at most 50-fold. (c) Electrogenic symport of $2\ce{H+} : 1\ce{NO3-}$ (one net positive charge moved inward per cycle): $\lg(c^{\mathrm{i}}/c^{\mathrm{o}}) = 150/59.2 + 2 \times 1.7 = 5.9$, an accumulation of about $10^6$-fold, enough to take up nitrate from a micromolar soil solution. Experiments show that the $\ce{H+}/\ce{NO3-}$ ratio of the nitrate transporter NRT1.1 is greater than 1, consistent with this.
 
+:::
+
 ![Equilibrium accumulation ratio $c_{\mathrm{in}}/c_{\mathrm{out}}$ attainable by cotransport as a function of membrane potential (Eq. (5.4); apoplast pH 5.5, cytosol pH 7.2, $25\,^\circ\mathrm{C}$). The curves are, in order, a $\ce{K+}$ channel ($z = +1$, $n = 0$), a $\ce{NO3-}$ channel ($z = -1$, $n = 0$, which can only make anions flow out), $\ce{H+}$–sucrose symport (uncharged substrate, 1 $\ce{H+}$), electroneutral $1\ce{H+} : 1\ce{NO3-}$ symport (independent of membrane potential) and electrogenic $2\ce{H+} : 1\ce{NO3-}$ symport. The yellow band is the usual range of membrane potential in root cells.](./plots/cotransport-accumulation.py)
 
 ### 5.2.3. Ion Pumps
@@ -170,6 +172,8 @@ Part of the volume of root tissue is a region that ions can enter and leave by f
 $$
 \mathrm{RFS} = \frac{\text{volume of free space}}{\text{total tissue volume}} \times 100\,\% = \frac{\text{amount of solute in the free space}}{\text{external solution concentration} \times \text{total tissue volume}} \times 100\,\%.
 $$
+
+:::
 
 It is called "apparent" because the values measured with different ions differ. The pectin of the cell wall contains many dissociated carboxyl groups, which are fixed negative charges; cations are enriched in the wall and anions are excluded, so the apparent free space measured with cations is too large and that measured with anions too small. The free space is therefore divided into two parts: the "water free space", whose solution is the same as the external one, and the "Donnan free space", which is affected by the fixed charges. Cell walls generally make up 5%–20% of the volume of plant tissue, and the relative free space of roots is mostly in this range.
 

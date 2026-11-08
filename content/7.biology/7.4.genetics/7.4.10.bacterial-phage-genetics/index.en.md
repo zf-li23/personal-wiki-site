@@ -61,6 +61,8 @@ Two markers can also be acquired together on two separate fragments, and the two
 
 **Example 10.3.1** DNA from a $trp^{+}\,his^{+}$ strain of *B. subtilis* transforms a $trp^{-}\,his^{-}$ recipient. Among $10^{8}$ recipients there are $5600$ $trp^{+}$ transformants (4000 $trp^{+}\,his^{-}$ and 1600 $trp^{+}\,his^{+}$) and $4600$ $his^{+}$ transformants (3000 $his^{+}\,trp^{-}$ and 1600 double). Independent uptake would give about $5600 \times 4600/10^{8} \approx 0.26$ doubles; 1600 are observed, so the markers are cotransformed on one fragment. The cotransformation frequency of $his$ with selected $trp$ is $1600/5600 = 0.29$. Diluting the DNA tenfold would lower singles and doubles tenfold each, confirming linkage.
 
+:::
+
 Transformation maps genes within a few tens of kilobases, the size of the fragments. It is also how many bacteria acquire new genes in nature: in *Neisseria gonorrhoeae*, penicillin resistance arose by transformation with fragments of *penA* (encoding a penicillin-binding **protein**) from commensal *Neisseria* species, producing mosaic genes whose products bind penicillin poorly. The ecology of such transfer is treated in [7.11](/7.11).
 
 ## 10.4. Conjugation
@@ -192,6 +194,8 @@ Lateral transduction, found in *Staphylococcus aureus* (Chen and colleagues, 201
 Phages have their own genetics. Mutations of phage T4 change plaque morphology (*r*, rapid lysis, large sharp-edged plaques), host range (*h*, ability to grow on a resistant host) or make growth conditional (temperature-sensitive mutants; amber mutants, which grow only on a host carrying a suppressor **tRNA**). Hershey and Rotman (1949) crossed phages by infecting bacteria simultaneously with two mutants (a mixed infection at high multiplicity) and scoring the progeny plaques.
 
 **Example 10.6.1** Cells are infected with T4 $h\,r^{+}$ and $h^{+}\,r$; of 1000 progeny plaques plated on a mixed indicator lawn, 430 are $h\,r^{+}$, 412 $h^{+}\,r$, 82 $h^{+}\,r^{+}$ and 76 $h\,r$. The recombination frequency is $(82 + 76)/1000 = 15.8\,\%$. Phage maps built this way are additive over short distances and, for T4, circular, although the genome in each particle is linear; this paradox is explained by headful packaging of terminally redundant, circularly permuted genomes.
+
+:::
 
 Phage recombination differs from meiotic recombination: phage DNA molecules recombine repeatedly during several rounds of replication in the cell, as in a random-mating population, so the recombination frequency of unlinked phage markers does not reach $50\,\%$ in one cross, and close double exchanges are in excess (negative **interference**, [7.4.8](/7.4.8#sec-8.4.3)). The enormous numbers of progeny (a cross can produce $10^{9}$ phages) allow recombination frequencies as low as $10^{-6}$ to be measured with selective hosts, the resolution that Benzer used to map mutations within the *rII* gene down to single **base pairs** ([7.4.13](/7.4.13)).
 

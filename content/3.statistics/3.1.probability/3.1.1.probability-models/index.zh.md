@@ -126,6 +126,8 @@ $$
 
 ![约会问题：单位正方形中带状区域 M 的面积 7/16 即相会的概率；散点是 400 次模拟，落在 M 中的点表示相会](./plots/meeting-problem.py)
 
+:::
+
 一般地，记 $\mathbb{R}^r=\{(x_1,\dots,x_r)\colon x_i\in\mathbb{R}\}$；对 $\mathbb{R}^r$ 的子集 $A$，用 $m(A)=\int_A\mathrm{d}x_1\cdots\mathrm{d}x_r$ 表示 $A$ 的体积（$r=1,2$ 时即长度、面积）。
 
 **定义 1.2.5（几何概型）** 设样本空间 $\Omega\subset\mathbb{R}^r$ 的体积 $0<m(\Omega)<\infty$，且 $\Omega$ 中每个结果发生的可能性相同（落在一个区域内的概率只与该区域的体积有关），则事件 $A\subset\Omega$ 的概率为

@@ -158,6 +158,8 @@ BED, BAM (internally), the UCSC databases and most programming libraries (Python
 | HGVS, relative to the *LCT* transcript | `c.-13910C>T` (upstream of the start codon, minus strand) |
 | UCSC browser position | `chr2:135,851,076` |
 
+:::
+
 In VCF, a deletion of the bases $\mathrm{CT}$ after a $\mathrm{G}$ at position $1000$ is written `POS=1000 REF=GCT ALT=G`: the record starts at the base preceding the event (the *anchor* or *padding* base), so that both alleles are non-empty. An insertion of $\mathrm{AA}$ after the same base is `POS=1000 REF=G ALT=GAA`. Inside a repeat, the same deletion can be placed at several positions with identical resulting sequences; VCF tools *normalize* such variants by shifting them as far left as possible and removing shared bases (`bcftools norm`), so that the same event always has the same record.
 
 ![The same interval and the same variants in the two coordinate systems. Top: a reference sequence with zero-based positions (between bases, as fence posts) and one-based positions (on bases); the highlighted interval of four bases is start 3, end 7 (half-open) in BED and 4–7 in GFF and VCF, and its length is 7 − 3 = 7 − 4 + 1 = 4. Bottom: a substitution, a deletion and an insertion as VCF records, the latter two anchored on the preceding base; in half-open coordinates the deleted bases are start 8, end 10 and the insertion point is the empty interval at 6](./plots/coordinate-systems.py)
@@ -176,6 +178,8 @@ A separate *linear index* stores, for each $16$-kb window, the smallest file off
 The binning scheme is a simplified **interval tree**: every interval is stored in exactly one node, and a query visits one root-to-leaf path plus the bins that the query itself spans. For a short query, at most six bins (one per level) are examined, and the time is proportional to the number of records in them rather than to the size of the file. Bin $0$ holds the few records longer than $64\,\mathrm{Mb}$, so even they are found.
 
 **Example 1.4.3** For rs4988235, $[s, e) = [135\,851\,075, 135\,851\,076)$ and $\lfloor s/2^{14}\rfloor = 8291$, so the record lies in the $16$-kb bin $4681 + 8291 = 12\,972$. A query for the same base examines bins $0, 3, 25, 202, 1621$ and $12\,972$, one per level. A $50$-kb record covering $[135\,830\,000, 135\,880\,000)$ crosses a $16$-kb boundary but not a $128$-kb one, and is stored in bin $585 + \lfloor 135\,830\,000/2^{17}\rfloor = 585 + 1036 = 1621$.
+
+:::
 
 ![Hierarchical binning for indexing genomic intervals. Bins at successive levels are 8 times smaller (only the top three of the six levels drawn); each record is stored in the smallest bin that contains it, so a short record crossing the boundary at 3/8 of the genome ends up in bin 0. A query (dashed line) examines one bin per level (shaded), the bins on the path from the root to the finest bin containing the queried position, and tests only the records stored there for overlap](./plots/binning-index.py)
 

@@ -280,6 +280,8 @@ u(z)=\frac1\pi\operatorname{Arg}\Big(\mathrm{i}\frac{1+z}{1-z}\Big)=\frac12+\fra
 $$
 where the second form follows from $\mathrm{i}\frac{1+z}{1-z}=\frac{-2r\sin\theta+\mathrm{i}(1-r^2)}{\lvert1-z\rvert^2}$, whose imaginary part is positive. At the center $u(0)=\frac12$, the average of the boundary values. The same function is obtained by evaluating Poisson's formula (8.8), with much more effort; its level curves are the circular arcs through $\pm1$, the images of the rays from $0$ in the $w$-plane.
 
+:::
+
 The interplay works in both directions: complex analysis gives explicit harmonic functions, and harmonic functions model physical fields in the plane. For a two-dimensional ideal fluid flow or electrostatic field, a potential $\phi$ and a stream function (or flux function) $\psi$ combine into the complex potential $\phi+\mathrm{i}\psi$, an analytic function; the curves $\phi=\text{const}$ and $\psi=\text{const}$ are orthogonal families of equipotentials and streamlines ([2.3.8](/2.3.8)).
 
 ## 8.5. Dirichlet's Principle

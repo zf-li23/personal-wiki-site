@@ -60,6 +60,8 @@ The cost is a few low-dimensional optimizations per event, linear in the number 
 
 ![How certain is a percent spliced in? A: the posterior distribution of PSI for one skipped exon with the same ratio of inclusion to skipping reads (I : S = 3 : 1, PSI = 0.60) at three depths (uniform prior on the probability that a junction read supports inclusion, transformed with the effective lengths for 100-nt reads and an 8-nt anchor). B, C: differential splicing with three replicates per condition in a model like that of rMATS (Algorithm 4.1.1): points, PSI of each replicate with its 95% interval; lines, fitted group means. In B the replicates agree and the likelihood ratio test is significant; in C they disagree and the evidence is weak, although a Fisher test on the pooled counts still reports a tiny p-value](./plots/psi_uncertainty.py)
 
+:::
+
 Other tools differ in the unit of analysis and the model:
 
 | Tool | Unit | Model | Note |
@@ -161,6 +163,8 @@ The work is linear in the number of codons of all candidates.
 
 **Example 4.4.2** For an ORF with $p_1 = 10^{-4}$ and $p_2 = 0.02$, $Z = (3.719 + 2.054)/\sqrt2 = 4.08$ and the combined $p = 2.2\times10^{-5}$: stronger than either test alone, because both point the same way. In panel C of the figure, $60$ codons of a translated ORF give $p = 9\times10^{-21}$, while coverage of the same depth without phase gives $p = 0.5$.
 
+:::
+
 Applied to many tissues and tumors, such methods find thousands of translated uORFs and small ORFs, some encoding peptides with demonstrated functions (in muscle, for example, myoregulin and other micropeptides that regulate the calcium pump SERCA). Most translated uORFs act by regulating the translation of the main ORF downstream rather than through their peptides ([7.2.20](/7.2.20#sec-20.5.2)), and tumors often differ from normal tissue in the use of uORFs, a reflection of the stress signaling that controls reinitiation. The translatome is also context-dependent: the set of translated ORFs changes with stress, differentiation and the cell cycle, so annotation from one condition is incomplete.
 
 ### 4.4.4. mRNA and Protein Levels
@@ -178,6 +182,8 @@ $$
 A uniform profile has $\rho = 0$; ribosomes piled up near the start give $\rho < 0$, near the stop $\rho > 0$; the change $\Delta\rho$ between conditions detects a change of the elongation profile independently of the total.
 
 **Example 4.4.3** In a $300$-codon coding sequence, a fivefold excess of density over the first $30$ codons gives $\rho = -0.26$; uniform density gives $0$.
+
+:::
 
 A reanalysis of $49$ published ribosome profiling studies (Li and colleagues, 2023) computed $\Delta\rho$ for every gene and treatment and found that some perturbations shift ribosomes along coding sequences, contrary to the second assumption. The clearest was rocaglamide A (RocA), a natural product of plants of the genus *Aglaia* and a candidate anticancer drug, known to inhibit translation initiation by clamping the RNA helicase eIF4A (an **initiation factor** of the cap-binding complex, [7.2.20](/7.2.20#sec-20.4)) onto polypurine sequences in $5'$ leaders, which blocks the scanning small subunit (Iwasaki, Floor and Ingolia, 2016). Reanalyzing those data with a dose series of RocA, the study divided the significantly changed genes into two groups: $643$ genes with fewer footprints on the coding sequence and ribosomes accumulating in the $5'$ leader, as expected for an initiation block (initiation-responsive genes), and $374$ genes with more footprints, concentrated over roughly the first hundred codons (elongation-responsive genes). The second group had been missed because a TE analysis that assumes a constant profile reads more footprints as more translation. The proposed explanation is that RocA-bound eIF4A on polypurine motifs within coding sequences also blocks elongating ribosomes, whose collisions activate the ribotoxic stress kinase ZAKα and the p38 and JNK pathways. The figure models the two patterns: an initiation block lowers the density uniformly and leaves $\rho$ unchanged, an elongation block piles ribosomes near the start and makes $\rho$ negative.
 
@@ -203,6 +209,8 @@ $$
 **Example 4.5.1** Take reads with $n = 30$ uridines, $p_{\mathrm{c}} = 0.04$ and $p_{\mathrm{e}} = 0.001$. A read of new RNA has no conversion with probability $0.96^{30} = 0.29$, a read of old RNA has at least one with probability $1 - 0.999^{30} = 0.03$. If $\theta = 0.3$, the fraction of reads with a conversion is $0.3 \times 0.71 + 0.7 \times 0.03 = 0.23$. After $t = 2\,\mathrm{h}$ of labeling in cells doubling every $24\,\mathrm{h}$, the true $\theta = 0.3$ gives $k_{\mathrm{deg}} = 0.149\,\mathrm{h^{-1}}$ and $t_{1/2} = 4.6\,\mathrm{h}$; taking the share of converted reads, $0.23$, as $\theta$ would give $t_{1/2} = 6.7\,\mathrm{h}$, a $45\,\%$ overestimate. In the simulation of the figure, the naive estimate is about $0.65$ times the true $\theta$ for every gene, while the mixture recovers $\theta$ with a root-mean-square error of $0.04$ from $300$ reads per gene.
 
 ![Estimating the new fraction of each mRNA from metabolic labeling (simulated reads). A: T-to-C conversions per read for one gene (400 reads with about 28 uridines; 30% new RNA, conversion rate 0.04 per uridine in new RNA, error rate 0.001 in old RNA), with the two components of the binomial mixture of Formula 4.5.1 fitted by EM. B: new fractions of 300 genes estimated by the mixture (dark) and by the share of reads with at least one conversion (light), which misses the new molecules whose reads carry no conversion. C: half-life from the new fraction after 2 h of labeling in cells doubling every 24 h, Eq. (4.5)](./plots/slam_mixture.py)
+
+:::
 
 Time courses of labeling (and of chasing the label) give synthesis, processing and degradation rates of every transcript; combined with a perturbation, they show whether a regulator acts on transcription or on stability. The same mixture idea applies to single cells (scSLAM-seq, NASC-seq), where the new and old RNA of one cell give a direct estimate of the recent change of its state, the experimental counterpart of RNA velocity ([7.9.7](/7.9.7)).
 
@@ -250,6 +258,8 @@ $$
 DaPars (Xia and colleagues, 2014) finds the proximal site without annotation as the change point of the coverage that minimizes the squared deviation of a two-level step function.
 
 **Example 4.7.1** Coverage $100$ upstream of the proximal site and $30$ between the sites gives $W_{\mathrm{L}} = 30$, $W_{\mathrm{S}} = 70$ and $\mathrm{PDUI} = 0.3$: $30\,\%$ of the transcripts have the long $3'$ UTR. A tumor in which the same gene has coverage $100$ and $10$ has $\mathrm{PDUI} = 0.1$, a shortening.
+
+:::
 
 Shorter $3'$ UTRs are a widespread feature of proliferating cells (Sandberg and colleagues, 2008) and of many cancers (Mayr and Bartel, 2009), in which oncogenes escape repression by microRNAs. Since PDUI is a ratio within one transcript, like $\psi$, it is analysed with the same replicate models.
 

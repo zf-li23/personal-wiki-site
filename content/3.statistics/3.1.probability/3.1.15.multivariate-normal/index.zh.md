@@ -134,6 +134,8 @@ A\Sigma A^{\mathsf T} = \begin{pmatrix} 1 & 0 \\ 1 & 1 \end{pmatrix}\begin{pmatr
 $$
 所以 $(Y_1, Y_2)^{\mathsf T} = (1 + X_1, X_1 + X_2)^{\mathsf T} \sim \mathcal{N}\left(\begin{pmatrix} 2 \\ -4 \end{pmatrix}, \begin{pmatrix} 4 & 2 \\ 2 & 9 \end{pmatrix}\right)$。
 
+:::
+
 取 $A$ 为行向量 $\boldsymbol{a}^{\mathsf T}$，就得到一维的情形；它的逆命题也成立，这是判断多元正态分布最实用的工具。
 
 **定理 15.3.3（判定法则）** $\boldsymbol{X} = (X_1, \dots, X_n)^{\mathsf T} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$ 的充要条件是：对任何 $\boldsymbol{a} = (a_1, \dots, a_n)^{\mathsf T} \in \mathbb{R}^n$，
@@ -275,6 +277,8 @@ $$
 (n-1)S_n^2 = \sum_{i=1}^{n} X_i^2 - n\bar X^2 = \boldsymbol{Y}^{\mathsf T}\boldsymbol{Y} - Y_1^2 = Y_2^2 + \cdots + Y_n^2.
 $$
 所以 $\bar X = Y_1/\sqrt{n} \sim \mathcal{N}(0, 1/n)$；$(n-1)S_n^2 \sim \chi^2_{n-1}$；前者只依赖 $Y_1$，后者只依赖 $Y_2, \dots, Y_n$，两者独立。 $\square$
+
+:::
 
 这个定理是正态总体统计推断的基石（$t$ 检验、$\chi^2$ 检验、$F$ 检验，见 [3.2](/3.2)）；高维情形有类似的结论（Wishart 分布）。
 

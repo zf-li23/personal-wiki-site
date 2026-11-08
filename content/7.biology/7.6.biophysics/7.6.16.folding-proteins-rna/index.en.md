@@ -36,6 +36,8 @@ with $y_{\mathrm{N}}$ and $y_{\mathrm{U}}$ the baselines of the pure states, ext
 
 **Example 16.1.1 (A Urea Melt)** In a urea titration followed by intrinsic tryptophan fluorescence, the Gibbs energy of unfolding in the transition region falls linearly with urea concentration, $\Delta G_{\mathrm{U}} = \Delta G_{\mathrm{U}}(\ce{H2O}) - m[\text{urea}]$, with $m = 3.9\,\mathrm{kJ\,mol^{-1}\,M^{-1}}$ ($0.93\,\mathrm{kcal\,mol^{-1}\,M^{-1}}$) and $\Delta G_{\mathrm{U}}(\ce{H2O}) = 9.8\,\mathrm{kJ\,mol^{-1}}$ ($2.34\,\mathrm{kcal\,mol^{-1}}$). The midpoint is at $C_{\mathrm{m}} = \Delta G_{\mathrm{U}}(\ce{H2O})/m = 2.5\,\mathrm{M}$, and at $25\,^\circ\mathrm{C}$ in water $K = \mathrm{e}^{-9.8/2.48} = 0.019$: about $2\,\%$ of the molecules are unfolded at any moment. The $m$ value measures how much surface is exposed on unfolding; empirically (Myers, Pace and Scholtz 1995) $m/(\mathrm{cal\,mol^{-1}\,M^{-1}}) \approx 374 + 0.11\,\Delta\mathrm{ASA}/\text{Å}^2$ for urea, where $\Delta\mathrm{ASA}$ is the accessible surface area exposed on unfolding, so this protein exposes about $5000\,\text{Å}^2$ ($50\,\mathrm{nm^2}$), as expected for a small domain of $50$–$60$ residues.
 
+:::
+
 The linear extrapolation is an empirical rule (the linear extrapolation model, [7.1.6](/7.1.6#fml-6.2.2)); it works because denaturants act by preferential interaction with the exposed surface, roughly in proportion to its area. Thermal melts give $T_{\mathrm{m}}$, $\Delta H$ and, by calorimetry, $\Delta C_p$; their extrapolation to room temperature requires the full stability curve ([7.6.8](/7.6.8)) and fails for proteins that aggregate on heating. Native-state hydrogen exchange measures stability without any extrapolation: an amide proton exchanges only when the structure that protects it opens, and the **protection factor** of the most protected amides equals $1/K$ of global unfolding ([7.6.13](/7.6.13#sec-13.6.5)).
 
 ## 16.2. Energy Landscapes
@@ -147,6 +149,8 @@ If the mutated side chain makes its native interactions already in the transitio
 
 **Example 16.3.2 (Two Transition States)** For the barley chymotrypsin inhibitor 2 (CI2, $64$ residues), the most thoroughly mapped two-state folder, almost all phi values are fractional, about $0.2$–$0.6$, with the highest in the α-helix and in contacts between the helix and two β-strands. The transition state is an expanded version of the native state in which secondary and **tertiary structure** form together around a diffuse nucleus: the nucleation–condensation mechanism. In barnase ($110$ residues), by contrast, phi values are near $1$ in parts of the β-sheet and the first helix and near $0$ elsewhere, a polarized transition state in which some elements are essentially complete while others have not started.
 
+:::
+
 Phi values are interpreted with care. A mutation must not change the structure of the native or the unfolded state, its $\Delta\Delta G_{\mathrm{U}}$ must be large enough (more than about $2.5\,\mathrm{kJ\,mol^{-1}}$) for the ratio to be measured precisely, and $\phi$ near $0$ or $1$ is unambiguous while fractional values can mean either partial structure or heterogeneous pathways. The analysis is the kinetic analog of the **Hammond postulate** and of the **Brønsted catalysis law**: as the native state is destabilized, the transition state becomes more native-like, which appears as curvature (a Hammond shift) in the chevron arms of strongly destabilized proteins. In computation, phi values are calculated from transition-state ensembles of simulations and are the most direct test of simulated folding mechanisms.
 
 ### 16.3.3. Topology Sets the Rate: Contact Order
@@ -211,6 +215,8 @@ $$
 p_{\mathrm{fold}} = \frac{\mathrm{e}^{-2\beta\varepsilon}}{\mathrm{e}^{-2\beta\varepsilon} + 2\mathrm{e}^{-4\beta\varepsilon}},
 $$
 which falls sigmoidally from $1$ at low temperature towards $1/3$, a melting curve. Enumerating all $2^6 = 64$ sequences, $19$ have a unique ground state: $10$ fold into the U shape, $6$ and $3$ into the other two structures.
+
+:::
 
 The idea that a binary pattern of hydrophobic and polar residues is the main determinant of a fold has been used in **protein design**. Hecht and colleagues designed libraries of four-helix bundles with the pattern PHPPHHP repeated, which places a hydrophobic residue every three or four positions in register with the $3.6$ residues per turn of an α-helix; the residues within each class were chosen at random, and a large fraction of the designed sequences formed helical bundles, some with enzymatic activity. The same binary patterning with alternating H and P gives β-strands and, at high concentration, amyloid-like fibrils.
 
@@ -277,6 +283,8 @@ For early times the fibril mass grows as $\cosh(\kappa t) - 1$ with $\kappa = \s
 
 **Example 16.6.1 (Amyloid-β 42)** Cohen and colleagues (2013) fitted aggregation curves of the Alzheimer amyloid-β 42 peptide over a range of concentrations with Formula 16.6.2 and found $k_+k_{\mathrm{n}} \approx 3\times10^{-1}\,\mathrm{M^{-2}\,s^{-2}}$ and $k_+k_2 \approx 4\times10^{10}\,\mathrm{M^{-3}\,s^{-2}}$, with $\gamma \approx -1.3$. Once a small amount of fibril is present, more than $99\,\%$ of new nuclei are produced by secondary nucleation, and these small, newly formed oligomers are the most toxic species to neurons in culture. The analysis turned a qualitative distinction (nucleation versus growth) into a basis for drug design: molecular chaperones and small molecules that bind fibril surfaces suppress secondary nucleation specifically, reducing the flux of oligomers without necessarily slowing fibril growth.
 
+:::
+
 The same kinetics, with a lag that is abolished by seeding, underlies the propagation of **prions** ([7.1.6](/7.1.6#def-6.5.2)) and the cell-to-cell spread of α-synuclein and tau aggregates. The structures of amyloid fibrils, insoluble and heterogeneous, are determined by solid-state NMR and **cryo-electron microscopy** of helical filaments ([7.6.14](/7.6.14)), which revealed that one peptide can form several distinct fibril polymorphs and that patients with different diseases carry different polymorphs of the same protein.
 
 ## 16.7. RNA Folding
@@ -310,6 +318,8 @@ Each term has an enthalpy and an entropy measured from optical melting of model 
 For RNA at $37\,^\circ\mathrm{C}$, Watson–Crick stacks contribute from about $-0.9\,\mathrm{kcal\,mol^{-1}}$ (5′-AA-3′/3′-UU-5′) to $-3.4\,\mathrm{kcal\,mol^{-1}}$ (5′-GC-3′/3′-CG-5′), with enthalpies of $-7$ to $-14\,\mathrm{kcal\,mol^{-1}}$; the order follows the stacking strength of G·C pairs, not merely their three hydrogen bonds. Loops cost free energy because they restrict the chain: a hairpin loop of four nucleotides costs about $+4.5$ to $+5.6\,\mathrm{kcal\,mol^{-1}}$ before sequence-specific bonuses. A single base pair cannot pay for the loop it closes, so a hairpin is stable only when several consecutive stacks form beneath the loop, and hairpin formation is nucleated at the loop and zips down the stem.
 
 **Example 16.7.1 (A Tetraloop Hairpin)** The hairpin 5′-GGAC(UUCG)GUCC-3′ has a four-pair stem with three stacks, GG/CC ($-3.26$), GA/CU ($-2.35$) and AC/UG ($-2.24\,\mathrm{kcal\,mol^{-1}}$), and a UUCG loop that, including its favorable terminal mismatch and the bonus of this unusually stable tetraloop, costs about $+4.5\,\mathrm{kcal\,mol^{-1}}$. Then $\Delta G^\circ_{37} \approx -3.4\,\mathrm{kcal\,mol^{-1}}$ ($-14\,\mathrm{kJ\,mol^{-1}}$), $K = \mathrm{e}^{3.4/0.616} \approx 250$, and with $\Delta H^\circ \approx -37\,\mathrm{kcal\,mol^{-1}}$ from the stacks the hairpin melts, as a unimolecular two-state transition, at $T_{\mathrm{m}} = \Delta H^\circ/\Delta S^\circ \approx 68\,^\circ\mathrm{C}$ in $1\,\mathrm{M}$ NaCl.
+
+:::
 
 The nearest-neighbor model is the basis of secondary-structure prediction: since the free energy is additive over nested elements, the minimum-free-energy structure and the full **partition function** over all secondary structures are computed by dynamic programming in $O(N^3)$ time (Zuker's algorithm, McCaskill's algorithm; the algorithms belong to [7.8.16](/7.8.16#sec-16.2)). Predicted structures of single sequences are about $70\,\%$ correct for RNAs of a few hundred nucleotides; accuracy improves with comparative sequence analysis and chemical probing data (16.7.5).
 

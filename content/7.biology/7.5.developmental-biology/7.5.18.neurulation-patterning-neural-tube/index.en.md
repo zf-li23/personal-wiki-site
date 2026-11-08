@@ -67,6 +67,8 @@ with an approximate 95% confidence interval $\exp\bigl(\ln \mathrm{RR} \pm 1.96\
 
 ![Folic acid and neural tube defects. (A) The MRC Vitamin Study (1991), a randomized trial in women who had already had an affected pregnancy: recurrence in the arms with folic acid (4 mg per day) and without it, with Wilson 95% confidence intervals; the relative risk is 0.29 (95% CI 0.12-0.71 by the log method). (B) The China community intervention (Berry et al. 1999): prevalence of neural tube defects among pregnancies of women who took 0.4 mg folic acid daily around conception and of those who did not, in a northern high-prevalence region and a southern region; the absolute benefit is largest where the baseline risk is high](./plots/folic-acid-trials.py)
 
+:::
+
 How folate acts is not fully known. Folate, as **tetrahydrofolate**, carries one-carbon units for the synthesis of thymidylate and purines and for the methionine cycle that supplies **S-adenosylmethionine** to methylation reactions ([7.1](/7.1)); a rapidly proliferating neural plate with a high demand for nucleotides, or a requirement for methylation of DNA and proteins during closure, are both plausible targets. Mutations of the folate receptor (*Folr1*) cause NTDs in mice that folate rescues, but many mouse NTDs, such as those of *curly tail* (a **hypomorph** of *Grhl3*), are folate-resistant; *curly tail* responds instead to inositol. About 30% of human NTDs are thought to be folate-resistant, which is why fortification lowers prevalence but does not abolish it. Prenatal detection uses maternal serum α-fetoprotein, which leaks from an open defect, and ultrasound; in utero surgical repair of myelomeningocele improves motor outcome (the MOMS trial, 2011).
 
 ## 18.4. Secondary Neurulation and Other Modes
@@ -123,6 +125,8 @@ $$
 $$
 
 which becomes singular at $t = 1/c$: material converging along $x = -y$ collapses onto the line $x = y$. In the neural plate the analogous singularity is convergence of the tissue onto the midline.
+
+:::
 
 Three conclusions follow. First, the keyhole shape is obtained easily: a tension that increases posteriorly behind the notochord tip produces extension along the notochord and medio-lateral convergence over it, while the anterior plate, beyond the reach of the notochord, stays broad. The general expansion of the lower layer means that the plate cells must still shrink their apical area, as in the original model. Second, the interfacial tension must be lower along the notochord than on either side (the notochord adheres strongly to the plate, the paraxial mesoderm less so, a reversal of tractions relative to the upper surface), so $\nabla^{2}T > 0$ near the midline and $\nabla^{2}T < 0$ beside it; by Eq. (18.2) the lower layer then thins in the midline and thickens on either side, predicting a groove flanked by two ridges, the configuration of the neural groove and folds. Third, the same two-layer geometry, with a reversal of stress at the interface and contractile stress directed toward the midline on the upper surface, suggests a push-pull mechanism for the formation of the avian **primitive streak**.
 

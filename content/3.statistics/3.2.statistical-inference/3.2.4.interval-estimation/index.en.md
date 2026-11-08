@@ -13,6 +13,8 @@ Let $\boldsymbol{X}=(X_1,\dots,X_n)$ be a random sample from $\mathcal{F}=\{f(x;
 
 **Example 4.1.1** For the heights of eighteen-year-old Hong Kong children, consider samples of size $n=100$ and the interval $[\bar X-1.96S/\sqrt n,\ \bar X+1.96S/\sqrt n]$ for the mean height $\mu$. The interval is random: it moves from sample to sample. In $1000$ repeated samples from a population with mean $68$ in, $94.7\%$ of these intervals covered the true mean. The narrower interval $[\bar X-0.5S/\sqrt n,\ \bar X+0.5S/\sqrt n]$ covered it only $38.2\%$ of the time. A good interval must be judged by both its coverage and its length.
 
+:::
+
 Two criteria evaluate an interval estimate:
 
 - *reliability*, the probability $\mathbb{P}_\theta(g(\theta)\in[\hat g_1(\boldsymbol{X}),\hat g_2(\boldsymbol{X})])$ that it covers the parameter;
@@ -116,6 +118,8 @@ For given $\sigma$ and $\alpha$, the precision can only be increased by increasi
 
 Why a symmetric interval? Any $a<b$ with $\mathbb{P}(a\le Z\le b)=1-\alpha$ gives an interval of length $(b-a)\sigma/\sqrt n$, and since the $\mathcal{N}(0,1)$ density is symmetric and unimodal, $b-a$ is minimized by $b=-a=z_{\alpha/2}$. The same principle, putting the interval where the density of the pivot is highest, gives shortest intervals for other unimodal pivots, and equal tails are a convenient approximation when the pivot is skewed.
 
+:::
+
 The method of Example 4.2.1 consists of four steps.
 
 1. Find a random variable that contains the parameter $\theta$ and the sample $X_1,\dots,X_n$, preferably through a sufficient statistic, and whose distribution is known exactly or at least approximately.
@@ -178,6 +182,8 @@ $$
 $$
 
 For the children's heights, a sample of size $n=100$ from a population with $(\mu,\sigma^2)=(68,3.6)$ gave $\bar x=67.8$ and $s^2=4.13$. With $t_{99,0.025}=1.984$, $\chi^2_{99,0.025}=128.4$ and $\chi^2_{99,0.975}=73.4$, the $95\%$ confidence intervals are $[67.4,68.2]$ for $\mu$ and $[3.18,5.57]$ for $\sigma^2$; both contain the true values.
+
+:::
 
 The four intervals for a normal population are:
 
@@ -474,6 +480,8 @@ $$
 $$
 
 For the children, the $95\%$ region is $[125.5,\ 127.9]$ lb for the mean weight times $[67.75,\ 68.15]$ in for the mean height. The Bonferroni correction generalizes immediately to $(\mu_1,\dots,\mu_k)$, using level $1-\alpha/k$ for each interval, and it handles different sample sizes with no extra effort. A less conservative refinement, used in multiple testing, is the Holm–Bonferroni method.
+
+:::
 
 For the professor salaries, the Bonferroni $95\%$ region is $[122\,941,\ 130\,603]\times[78\,485,\ 83\,067]$, slightly larger than the Šidák region $[122\,950,\ 130\,595]\times[78\,491,\ 83\,061]$. The comparison is general: the Šidák correction requires independence (more generally, positive dependence of a suitable kind) and is slightly less conservative, since $(1-\alpha)^{1/k}<1-\alpha/k$; the Bonferroni correction is valid for both independent and dependent estimators.
 

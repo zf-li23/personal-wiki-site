@@ -1,6 +1,6 @@
 ---
 title: Unitary Spaces and Normal Operators
-source_hash: 717ee5d4a2c6
+source_hash: 7d19594f1f95
 ---
 
 [Chapter 4](/2.1.4) used the **inner product** on $\mathbb{R}^n$ to define length, angle and orthogonality, and from them obtained Gram–Schmidt orthogonalization, the **QR decomposition**, **orthogonal projection** and least squares. Those results use only three properties of the inner product: symmetry, bilinearity and positive definiteness. This chapter takes these three properties as axioms and generalizes in two directions: first, inner products are placed on arbitrary vector spaces, so that function spaces and matrix spaces also acquire lengths and angles; second, the real numbers are replaced by the complex numbers, and symmetry is replaced accordingly by conjugate symmetry. Wherever a proof is the same as in the case of $\mathbb{R}^n$, we only sketch it.
@@ -42,6 +42,8 @@ $$
 **Example 12.1.3** On $C[a, b]$ (the real continuous functions on $[a, b]$), $\langle f, g \rangle = \int_a^b f(t)g(t)\,\mathrm{d}t$ is an inner product. It is the continuous version of the dot product on $\mathbb{R}^n$: $\int_a^b fg\,\mathrm{d}t = \lim_{n \to \infty}\frac{b - a}{n}\sum_i f(t_i)g(t_i)$. Positive definiteness holds because the integral of a nonnegative continuous function vanishes if and only if the function vanishes identically. Since $C[a, b]$ is infinite-dimensional, it is an inner product space but not a Euclidean space.
 
 **Example 12.1.4** On $\mathbb{R}^{n\times n}$, $\langle A, B \rangle = \operatorname{tr}(AB^{\mathsf T}) = \sum_{i,j}a_{ij}b_{ij}$, and on $\mathbb{C}^{n\times n}$, $\langle A, B \rangle = \operatorname{tr}(AB^{\mathsf H})$; this is called the *Frobenius inner product*. It is the standard inner product obtained by regarding a matrix as a vector with $n^2$ entries; the property $\operatorname{tr}(AB^{\mathsf T}) = \operatorname{tr}(BA^{\mathsf T})$ of the **trace** gives symmetry, and $\operatorname{tr}(AA^{\mathsf T}) = \sum a_{ij}^2$ gives positive definiteness.
+
+:::
 
 In general, let $\alpha_1, \dots, \alpha_n$ be a basis of an inner product space $V$. The matrix $G = (\langle \alpha_i, \alpha_j \rangle)_{n \times n}$ is called the metric matrix of the inner product with respect to this basis; it is the **Gram matrix** of these vectors (Definition 11.2.2 of [Chapter 11](/2.1.11) is the special case of the integral inner product on a function space). If $\alpha = \sum x_i\alpha_i$ and $\beta = \sum y_j\alpha_j$, then
 
@@ -103,6 +105,8 @@ $$
 
 form an orthonormal set (for example, $\int_{-\pi}^\pi \sin x\cos x\,\mathrm{d}x = \frac12\int_{-\pi}^\pi \sin 2x\,\mathrm{d}x = 0$). The coordinates given by part 2 of Property 12.3.1 are the Fourier coefficients.
 
+:::
+
 In $\mathbb{C}^n$, let $A = (\boldsymbol{u}_1, \dots, \boldsymbol{u}_n)$. Then $\boldsymbol{u}_1, \dots, \boldsymbol{u}_n$ is an orthonormal basis $\Leftrightarrow$ $\boldsymbol{u}_j^{\mathsf H}\boldsymbol{u}_i = \delta_{ij}$ $\Leftrightarrow$ $A^{\mathsf H}A = I_n$. In the real case this is an **orthogonal matrix**.
 
 **Definition 12.3.2 (Unitary Matrix)** A complex square matrix $A$ with $A^{\mathsf H}A = AA^{\mathsf H} = I_n$ (that is, $A^{-1} = A^{\mathsf H}$) is called a **unitary matrix**.
@@ -152,6 +156,8 @@ One can check that $\langle \boldsymbol{w}_3, \boldsymbol{q}_1 \rangle = \frac{1
 3. $\langle x^2, q_1 \rangle = \frac{\sqrt2}{3}$, $\langle x^2, q_2 \rangle = 0$, $w_3 = x^2 - \frac13$, $\|w_3\|^2 = \int_{-1}^1(x^2 - \frac13)^2\,\mathrm{d}x = \frac{8}{45}$, $q_3 = \sqrt{\frac{45}{8}}\left(x^2 - \frac13\right)$.
 
 $q_1, q_2, q_3$ are the normalized *Legendre polynomials* $1, x, \frac12(3x^2 - 1)$. Continuing the orthogonalization with $x^3, x^4, \dots$ produces all Legendre polynomials, which appear again and again in approximation theory and partial differential equations.
+
+:::
 
 In numerical computation, classical Gram–Schmidt gradually loses orthogonality because of rounding errors; in practice the QR decomposition is computed by modified Gram–Schmidt or by **Householder reflections** ([Chapter 4](/2.1.4)).
 
@@ -266,6 +272,8 @@ $$
 
 Alternatively, use Theorem 12.7.2: extend $u$ to an orthonormal basis $e_1 = u, e_2, \dots, e_n$; then $Te_1 = -e_1$ and $Te_j = e_j$ ($j \ge 2$), and the matrix $\operatorname{diag}(-1, 1, \dots, 1)$ is orthogonal. $T$ is the reflection in the hyperplane $u^\perp$; in $\mathbb{R}^n$ it is the Householder reflection $I - 2\boldsymbol{u}\boldsymbol{u}^{\mathsf T}$.
 
+:::
+
 Let $T$ be an orthogonal transformation of a Euclidean space; its matrix $A$ with respect to an orthonormal basis is orthogonal, so $\det A = \pm 1$. If $\det A = 1$, $T$ is called a proper orthogonal transformation (a rotation), and if $\det A = -1$, an improper one. For example, on $\mathbb{R}^2$, $\begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$ is proper and $\begin{bmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{bmatrix}$ (the reflection in the line through the origin at angle $\theta/2$) is improper. The orthogonal transformations form a group, and the proper ones form a subgroup; these are the groups $O(n)$ and $\operatorname{SO}(n)$ of [1.3.5](/1.3.5). [Chapter 13](/2.1.13) revisits these groups from the point of view of bilinear forms.
 
 ## 12.8. Orthogonal and Unitary Similarity
@@ -345,6 +353,8 @@ This is the spectral decomposition of real symmetric matrices in Theorem 7.1.1 o
 
 **Example 12.10.1** Real normal matrices of order 2. Let $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathbb{R}^{2\times 2}$. Comparing $AA^{\mathsf T}$ and $A^{\mathsf T}A$ gives $b^2 = c^2$ and $(c - b)(a - d) = 0$, so $A$ is normal if and only if $A$ is symmetric ($b = c$) or $A = \begin{bmatrix} a & b \\ -b & a \end{bmatrix}$ ($b \ne 0$). The latter is the matrix representation of the complex number $a - b\mathrm{i}$ ([Chapter 9](/2.1.9)); its eigenvalues are $a \pm b\mathrm{i}$, the corresponding eigenvectors $\frac{1}{\sqrt2}(1, \pm \mathrm{i})^{\mathsf T}$ are orthogonal, $U = \frac{1}{\sqrt2}\begin{bmatrix} 1 & 1 \\ \mathrm{i} & -\mathrm{i} \end{bmatrix}$ is unitary, and $U^{\mathsf H}AU = \operatorname{diag}(a + b\mathrm{i}, a - b\mathrm{i})$. It has no real eigenvectors in $\mathbb{R}^2$ and cannot be orthogonally diagonalized, but it can be unitarily diagonalized.
 
+:::
+
 The difference between normal and non-normal matrices can also be seen in the *numerical range* $W(A) = \{\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} \mid \|\boldsymbol{x}\| = 1\}$. It always contains all the eigenvalues (take $\boldsymbol{x}$ to be a unit eigenvector), and it is convex (the Toeplitz–Hausdorff theorem). If $A = U\Lambda U^{\mathsf H}$ is normal, put $\boldsymbol{y} = U^{\mathsf H}\boldsymbol{x}$; then $\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} = \sum_i \lambda_i|y_i|^2$ with $\sum_i |y_i|^2 = 1$, so $W(A)$ is exactly the convex hull of the eigenvalues. The numerical range of a non-normal matrix can be much larger. The powers of the non-normal matrix in [Chapter 11](/2.1.11), which first grow and then decay, are a manifestation of the same phenomenon.
 
 ![Numerical ranges of two 3 x 3 matrices with the same eigenvalues (1, -0.5+i, -0.8-0.6i). Left: a normal matrix, whose numerical range is the triangle spanned by the eigenvalues. Right: a non-normal upper triangular matrix, whose numerical range is much larger than the triangle. The scattered points are values x^H A x for random unit vectors x](./plots/numerical-range.py)
@@ -362,6 +372,8 @@ Unitary diagonalization of a normal matrix combines two standard problems:
 1. $\lambda = \mathrm{i}$: a basis of the solutions of $(A - \mathrm{i}I)\boldsymbol{x} = \boldsymbol{0}$ is $(-\mathrm{i}, 1, 0)^{\mathsf T}$, $(0, 0, 1)^{\mathsf T}$; these are already orthogonal, and normalizing gives $\boldsymbol{u}_1 = \frac{1}{\sqrt2}(-\mathrm{i}, 1, 0)^{\mathsf T}$ and $\boldsymbol{u}_2 = (0, 0, 1)^{\mathsf T}$. Had we chosen a non-orthogonal basis (for example $(-\mathrm{i}, 1, 1)^{\mathsf T}$ and $(0, 0, 1)^{\mathsf T}$), Gram–Schmidt would be needed first.
 2. $\lambda = -\mathrm{i}$: a basis is $(\mathrm{i}, 1, 0)^{\mathsf T}$, giving $\boldsymbol{u}_3 = \frac{1}{\sqrt2}(\mathrm{i}, 1, 0)^{\mathsf T}$, which is automatically orthogonal to $\boldsymbol{u}_1, \boldsymbol{u}_2$.
 3. $U = (\boldsymbol{u}_1, \boldsymbol{u}_2, \boldsymbol{u}_3)$ and $U^{\mathsf H}AU = \operatorname{diag}(\mathrm{i}, \mathrm{i}, -\mathrm{i})$.
+
+:::
 
 Numerical software does not follow Algorithm 12.10.1 (the eigenspace of a multiple eigenvalue is hard to compute accurately in floating-point arithmetic); instead it computes the unitary triangularization of Theorem 12.9.1 directly, and for a normal matrix the resulting triangular matrix is diagonal.
 

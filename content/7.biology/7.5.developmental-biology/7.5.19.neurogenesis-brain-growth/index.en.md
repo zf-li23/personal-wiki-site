@@ -71,6 +71,8 @@ The threshold $q = \tfrac12$ is the critical point of a **branching process** ([
 
 ![How the schedule of division modes sets the number of cortical neurons (the Q-fraction model, Formula 19.3.1). (A) In the mouse dorsal cortex about 11 cell cycles span neurogenesis (E11-E17); the fraction Q of daughters that leave the cycle rises from about 0 to 1 (here a logistic curve with Q = 0.5 at cycle 8). The progenitor pool P grows while Q < 1/2 and shrinks after; neurons accumulate mostly in the last cycles. (B) Neurons per founder when the schedule is preceded by extra symmetric proliferative cycles (Q = 0): each extra cycle doubles the output. A schedule of the same shape stretched over 28 cycles gives far more neurons than one over 11](./plots/division-mode-model.py)
 
+:::
+
 The exponential sensitivity of neuron number to the timing of the switch is the basis of the radial unit hypothesis (Rakic 1995): the number of founder radial glia, set by the symmetric divisions before neurogenesis, determines the number of radial columns and so the surface area of the cortex, while the number of neurogenic divisions per founder determines its thickness. Primate cortex has expanded enormously in area and only modestly in thickness, which points to an extension of the proliferative phase, and in primates to the additional amplification provided by oRG and IPs in the outer SVZ (19.5). The model is deterministic; the lineages of individual radial glia vary considerably, and their statistics are treated by the stochastic models of [7.5.36](/7.5.36).
 
 ## 19.4. Migration and Lamination

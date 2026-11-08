@@ -1,6 +1,6 @@
 ---
 title: Equivalence and Inference in Predicate Logic
-source_hash: c171bbb512c5
+source_hash: 7b6c77ee2cde
 ---
 
 Much of this chapter can be learned by analogy with propositional logic: the notions of equivalence, normal forms, rules of inference, and resolution are all carried over from [1.1.2](/1.1.2), and what is new is how to handle quantifiers. For the same reason, this chapter also serves as a review of propositional logic.
@@ -290,6 +290,8 @@ Proving $A_1 \land A_2 \land \cdots \land A_n \Rightarrow B$ is equivalent to pr
 Resolution in predicate logic requires *unification*: finding a substitution (such as $\{x / a\}$) that turns some pair of literals in two clauses into a complementary pair; this pair is then eliminated and the remaining parts are joined by disjunction to give the resolvent.
 
 **Example 5.6.1** Let $C_1 = P(x) \lor Q(x)$ and $C_2 = \lnot P(a) \lor R(y)$. After applying the substitution $\{x / a\}$ to $C_1$, $P(a)$ and $\lnot P(a)$ form a complementary pair, and resolution yields $Q(a) \lor R(y)$.
+
+:::
 
 The heart of resolution in predicate logic is the handling of atomic formulas containing variables: unification finds a substitution that makes atomic formulas complementary, and then the resolution rule is applied. This lets resolution handle inferences involving quantifiers and lays the foundation for automated theorem proving. Resolution in predicate logic is complete: if $G$ is unsatisfiable, the empty clause can always be derived in finitely many steps; but if $G$ is satisfiable, the process may never terminate. This is consistent with the undecidability of first-order logic (Theorem 4.6.1).
 

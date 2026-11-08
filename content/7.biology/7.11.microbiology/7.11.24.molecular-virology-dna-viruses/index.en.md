@@ -35,6 +35,8 @@ The ends of linear genomes are where the special structures live, because ends a
 
 **Example 24.1.1** Hepatitis B virus encodes the polymerase, core, surface and X proteins in 3.2 kb by reading the same nucleotides in two frames and by starting the surface protein at three in-frame initiation codons. Any mutation is therefore likely to alter two proteins at once, which constrains the virus and complicates genetic analysis.
 
+:::
+
 A genome sequence, however, is only a parts list. It predicts proteins; it says very little about how the virus interacts with a cell, a host or a population. Metagenomic surveys return enormous numbers of viral sequences whose hosts are unknown and which cannot yet be studied at all — more than 93% of the genes of *Pandoravirus salinus* resemble nothing known.
 
 ## 24.2. Viral Genetics and Reverse Genetics
@@ -96,6 +98,8 @@ A virus that borrows the cellular replication machine can only replicate in a ce
 ![How small DNA viruses push a quiescent cell into S phase. Simian virus 40 large T antigen, adenovirus E1A and papillomavirus E7 all bind the retinoblastoma protein and release E2F, which activates the genes of S phase; large T antigen, adenovirus E1B-55K (with E4orf6) and papillomavirus E6 inactivate or degrade p53, so the resulting replication stress does not trigger arrest or apoptosis. The cell enters S phase, deoxynucleotides and replication proteins accumulate, and the viral genome is replicated; in the absence of a complete productive cycle, the same two lesions are the first steps of transformation.](./plots/s-phase-push.py)
 
 **Example 24.4.1** In human papillomavirus types associated with cervical carcinoma, E7 binds Rb and E6 recruits a cellular ubiquitin ligase that degrades p53. In the normal life of the virus these activities keep differentiating keratinocytes replication-competent, which is where viral genomes are amplified. Integration of the viral DNA into a host chromosome, which is not part of the productive cycle, usually disrupts the E2 gene; loss of E2 repression raises E6 and E7 expression and is a step towards cancer. The cell-biological consequences are those of [7.3.20](/7.3.20) and [7.3.26](/7.3.26) and are not repeated here; tumour viruses as a class return in [7.11.27](/7.11.27).
+
+:::
 
 Not every infection ends in lysis, and viruses that persist must replicate their genomes in step with the cell rather than exponentially. Epstein–Barr virus maintains its episome at a few copies per cell using OriP and the viral protein EBNA-1, which tethers the genome to mitotic chromosomes so that both daughter cells inherit it, and replicates it once per cell cycle with cellular enzymes. Papillomaviruses run three programmes from one genome: establishment, maintenance at 50–100 copies in basal cells, and amplification to thousands of copies in differentiated cells where particles are made.
 

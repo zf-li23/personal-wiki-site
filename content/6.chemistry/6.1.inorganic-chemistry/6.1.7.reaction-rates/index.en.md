@@ -1,6 +1,6 @@
 ---
 title: Rates of Chemical Reactions
-source_hash: 20e1c9b8a7b7
+source_hash: 82dbdf6e4613
 ---
 
 The criterion based on the **Gibbs free energy** in the previous chapter ([6.1.6](/6.1.6)) answers the question "can the reaction proceed spontaneously?" but not "how fast does it proceed?" For $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -237.1\,\mathrm{kJ\,mol^{-1}}$ and the driving force is large, yet a mixture of hydrogen and oxygen can be kept at room temperature for a long time. For $\ce{2NO2(g) -> N2O4(g)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -4.7\,\mathrm{kJ\,mol^{-1}}$ and the driving force is small, yet the reaction is complete almost instantly. The study of the rates and mechanisms of chemical reactions and of how they depend on concentration, temperature, catalysts, and other conditions is called *chemical kinetics*. Thermodynamics speaks of possibility and kinetics of actuality: whether a thermodynamically allowed reaction takes place in the required time is decided by kinetics.
@@ -104,6 +104,8 @@ Collision theory thus predicts that the rate of a bimolecular reaction is propor
 
 **Example 7.2.1 (Order of Magnitude)** For $\ce{2HI(g) -> H2(g) + I2(g)}$ at $973\,\mathrm{K}$, $c(\ce{HI}) = 1.0 \times 10^{-3}\,\mathrm{mol\,L^{-1}}$, that is, $n = 6.0 \times 10^{23}\,\mathrm{m^{-3}}$. Take the collision diameter of $\ce{HI}$ as $d \approx 0.35\,\mathrm{nm}$ and $\mu = m(\ce{HI})/2$; then $\bar v_{\mathrm{rel}} \approx 570\,\mathrm{m\,s^{-1}}$ and $Z_{\mathrm{AA}} \approx 4 \times 10^{31}\,\mathrm{m^{-3}\,s^{-1}} = 4 \times 10^{28}\,\mathrm{L^{-1}\,s^{-1}}$. If every collision led to reaction, $v = Z_{\mathrm{AA}}/N_{\mathrm{A}} \approx 6 \times 10^4\,\mathrm{mol\,L^{-1}\,s^{-1}}$, and $10^{-3}\,\mathrm{mol\,L^{-1}}$ of $\ce{HI}$ would decompose completely in less than $10^{-7}\,\mathrm{s}$, which is clearly contrary to fact. The activation energy of this reaction is about $184\,\mathrm{kJ\,mol^{-1}}$, and the energy factor is $\mathrm{e}^{-184100/(8.314 \times 973)} \approx 1.3 \times 10^{-10}$: the great majority of collisions are ineffective, and the rate falls to the order of $10^{-5}\,\mathrm{mol\,L^{-1}\,s^{-1}}$.
 
+:::
+
 Collision theory is intuitive, but neither $E_{\mathrm{c}}$ nor $P$ can be calculated from the theory; both must be determined by experiment. Nor does it say how the chemical bonds change in the course of the reaction.
 
 ### 7.2.2. Transition State Theory
@@ -189,6 +191,8 @@ k = \frac{7.9 \times 10^{-7}}{(0.0010)^2 \times 0.0060}\,\mathrm{L^2\,mol^{-2}\,
 $$
 That the reaction is first order in $\ce{H2}$ rather than second order as in the equation shows that it does not take place in one step.
 
+:::
+
 Collision theory describes reactions that take place in one step. The experimental rate law often does not correspond to the equation, because most reactions proceed in several steps.
 
 **Definition 7.3.2** A reaction in which reactant particles (molecules, atoms, ions, or radicals) are converted directly into products in a single effective collision is called an **elementary reaction** (elementary step), such as $\ce{NO2 + CO -> NO + CO2}$ and $\ce{2NO2 -> 2NO + O2}$. A reaction consisting of two or more elementary reactions is called a **complex reaction** (nonelementary reaction); the series of elementary reactions that make up a complex reaction is called its **reaction mechanism**.
@@ -211,6 +215,8 @@ The probability of three particles colliding at once is already very small, and 
 
 Solution. (1) $v = kc(\ce{SO2Cl2})$, first order, unimolecular; (2) $v = kc(\ce{NO2})c(\ce{CO})$, second order, bimolecular; (3) $v = kc(\ce{NO2})^2$, second order, bimolecular.
 
+:::
+
 When a complex reaction consists of elementary steps in series and one step is much slower than the others, the overall rate is approximately equal to the rate of this step. This step is called the *rate-determining step* (also the rate-limiting step), and on the potential energy diagram it corresponds to the highest transition state. The fast steps before the rate-determining step are often reversible and much faster than the rate-determining step in both directions, so they remain approximately at equilibrium; expressing the concentration of the intermediate in the rate-determining step through the equilibrium relation gives the rate law of the overall reaction. This treatment is called the *pre-equilibrium approximation*.
 
 **Example 7.3.3** The mechanism of $\ce{H2 + I2 -> 2HI}$ is believed to be
@@ -231,6 +237,8 @@ $$
 v = \frac{k_1k_2}{k_{-1}}c(\ce{H2})c(\ce{I2}) = k\,c(\ce{H2})c(\ce{I2}), \qquad k = \frac{k_1k_2}{k_{-1}}.
 $$
 This agrees with the experimental rate law. The approximation holds if the recombination of I atoms (the $k_{-1}$ step) is much faster than their consumption by $\ce{H2}$ (the $k_2$ step), that is, $k_{-1} \gg k_2c(\ce{H2})$. From $k = k_1k_2/k_{-1}$ and the Arrhenius equation of 7.3.3, the apparent activation energy is $E_{\mathrm{a}} = E_{\mathrm{a},1} + E_{\mathrm{a},2} - E_{\mathrm{a},-1}$.
+
+:::
 
 $\ce{H2 + I2}$ was long regarded as the classic bimolecular elementary reaction (Bodenstein, 1890s), and only photochemical experiments in the 1960s showed that I atoms take part. This shows that the rate law is only a necessary condition for testing a mechanism: if the rate law derived from a mechanism disagrees with experiment, the mechanism must be wrong; if it agrees, the mechanism is only possibly correct.
 
@@ -255,6 +263,8 @@ and the answer is (d). Rate law (b) contains the concentration of the intermedia
 3. $\ce{I2 + I- -> I3-}$ (fast).
 
 Adding the three steps gives the overall reaction; the rate-determining step (1) is a bimolecular elementary reaction and gives $v = kc(\ce{C2H4Br2})c(\ce{I-})$, in agreement with experiment. The coefficient of $\ce{I-}$ in the overall reaction is 3, yet the rate law is only first order in it: fast steps after the rate-determining step do not affect the rate.
+
+:::
 
 The pre-equilibrium approximation and the more general steady-state approximation both exploit the great disparity between the time scales of fast and slow steps to eliminate the intermediates. The same disparity makes the system of differential equations for such mechanisms a **stiffness** problem, so direct numerical integration requires implicit methods ([4.4.4](/4.4.4#sec-4.3.3)). The steady-state approximation and the general treatment of consecutive, parallel, and opposing reactions are given in [Physical Chemistry](/6.3).
 
@@ -300,6 +310,8 @@ c = np.array([0.200, 0.180, 0.161, 0.144, 0.130, 0.104, 0.084, 0.068])   # mol/L
 slope, intercept = np.polyfit(t, np.log(c), 1)
 print(-slope)   # 3.61e-04 s^-1
 ```
+
+:::
 
 The decay of radioactive nuclides is a strictly first-order process: the probability per unit time that each nucleus decays is a constant $k$ (the decay constant), independent of the "age" of the nucleus, so the lifetime of a single nucleus follows an **exponential distribution** ([3.1.4](/3.1.4#def-4.2.3)), which is its **memorylessness**; the number $N$ of a large number of nuclei satisfies $\frac{\mathrm{d}N}{\mathrm{d}t} = -kN$ and $N = N_0\mathrm{e}^{-kt}$. The decay constant is almost unaffected by temperature, pressure, and chemical state, so radioactive nuclides are natural "clocks". The method of estimating the age of a sample from the present amount of a radioactive nuclide in it and the amount of its decay product is called *radiometric dating*:
 
@@ -370,6 +382,8 @@ $$
 **Example 7.3.11** The activation energy of $\ce{PH3(g) + B2H6(g) -> PH3BH3(g) + BH3(g)}$ is $48.0\,\mathrm{kJ\,mol^{-1}}$. At what temperature is the rate constant twice its value at $298\,\mathrm{K}$?
 
 Solution. From Eq. (7.2), $\frac{1}{T_2} = \frac{1}{298\,\mathrm{K}} - \frac{R\ln 2}{E_{\mathrm{a}}} = 3.3557 \times 10^{-3}\,\mathrm{K^{-1}} - 1.2006 \times 10^{-4}\,\mathrm{K^{-1}}$, so $T_2 = 309\,\mathrm{K}$: a rise of about 11 K doubles the rate constant.
+
+:::
 
 The activation energy in collision theory is a critical value of the energy (Definition 7.2.1), whereas $E_{\mathrm{a}}$ in the Arrhenius equation is an experimental quantity defined through $k(T)$. The connection between them is given by the following theorem, which also corrects the common statement that "the activation energy is the difference between the minimum energy of an effective collision and the average energy".
 

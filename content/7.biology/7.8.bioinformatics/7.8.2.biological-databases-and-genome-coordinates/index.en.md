@@ -99,6 +99,8 @@ An interval is converted by mapping its bases; `liftOver` (UCSC) accepts the res
 
 **Example 2.2.1 (rs4988235 in Two Assemblies)** In GRCh37, rs4988235 is at chromosome 2, position $136\,608\,646$; in GRCh38 at $135\,851\,076$. The chain block containing it maps the region with a shift of $-757\,570$ bases, so the whole *LCT*–*MCM6* locus moves by the same amount: *LCT*, for example, starts near $136.545\,\mathrm{Mb}$ in GRCh37 and near $135.788\,\mathrm{Mb}$ in GRCh38. Identifiers such as `rs4988235` do not depend on the assembly; this is the reason to exchange variant lists with rs identifiers (or HGVS names on versioned RefSeq records) as well as positions.
 
+:::
+
 ![Liftover with a chain file (toy coordinates). Gap-free blocks align segments of the source assembly (top) to the target (bottom); between blocks, sequence may be inserted or deleted in either assembly. A position inside a block maps by a constant offset (green); a position in a segment deleted from the target has no image and fails to lift over (red); a block on a reversed chain maps with a strand flip. Shading connects aligned blocks](./plots/liftover-chain.py)
 
 ```bash
@@ -148,6 +150,8 @@ The semantic similarity of two terms in the sense of Resnik is the information c
 **Example 2.5.1** In the toy annotation set of the figure below, $100$ genes are annotated to the biological-process root. After propagation $8$ genes are annotated to DNA replication initiation, $20$ to DNA replication, $20$ to DNA repair, $45$ to DNA metabolic process and $30$ to the cellular response to DNA damage stimulus. Then $\operatorname{IC}(\text{replication initiation}) = \log_2(100/8) = 3.64$ bits and $\operatorname{IC}(\text{DNA repair}) = 2.32$ bits. Their most informative common ancestor is DNA metabolic process, so their Resnik similarity is $\log_2(100/45) = 1.15$ bits; DNA repair and the response to DNA damage, which share the response term ($1.74$ bits), are more similar.
 
 ![A fragment of the biological-process aspect of the Gene Ontology around the terms annotated to MCM6, with a toy annotation set. Thin black arrows are is_a relations, thick open blue arrows part_of, dashed arrows paths through omitted intermediate terms. Each term shows the number of genes annotated to it directly and, after propagation by the true-path rule, in total, with the information content in bits. DNA repair has two parents, so the graph is not a tree](./plots/go-dag.py)
+
+:::
 
 Other ontologies used in this course are the Sequence Ontology (SO), whose terms name the feature types of GFF3 files and the consequences of variants (`missense_variant`, `splice_donor_variant`, [7.8.12](/7.8.12)), and the Human Phenotype Ontology (HPO), with over $1.8\times10^4$ terms for clinical abnormalities, used to describe patients and to rank candidate genes in rare-disease diagnosis.
 

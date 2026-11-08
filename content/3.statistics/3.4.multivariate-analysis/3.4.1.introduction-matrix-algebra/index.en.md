@@ -187,6 +187,8 @@ An important step in the analysis of any data set is *exploratory data analysis*
 
 **Example 1.4.1** If a sample has median $8$, $Q_1 = 4$ and $Q_3 = 10$, then $\mathrm{IQR} = 6$ and the normal range is $[4 - 9,\ 10 + 9] = [-5, 19]$. The upper whisker ends at $\min(19, \max_j x_j)$ and the lower whisker at $\max(-5, \min_j x_j)$.
 
+:::
+
 Side-by-side boxplots compare groups. For the fuel efficiency of American, Japanese and European cars, they show at once that Japanese cars are more efficient (the box of the American cars lies below that of the Japanese cars, and the least efficient Japanese car beats about half of the American cars) and that one very fuel-efficient car (a diesel Volkswagen) is an outlier. A boxplot shows location, spread, skewness and outliers, but it cannot show multimodality or subclusters.
 
 A histogram approximates the density, so it shows multimodality and subclusters as well. It is not unique: its appearance depends on the bin width $h$ and the origin. For data from a normal distribution with standard deviation $\sigma$, the bin width minimizing the asymptotic mean integrated squared error is
@@ -397,6 +399,8 @@ $$
 where $H = J^{\mathsf T}$ denotes the denominator-layout derivative. The order of the factors reverses with the transpose.
 
 **Example 1.8.1** Let $\boldsymbol{y} = A\boldsymbol{x}$ with $A = \begin{bmatrix} 1 & 3 \\ 0 & 2 \\ 0 & 1 \end{bmatrix}$, that is, $y_1 = x_1 + 3x_2$, $y_2 = 2x_2$, $y_3 = x_2$. In the numerator layout $\frac{\partial\boldsymbol{y}}{\partial\boldsymbol{x}} = \begin{bmatrix} 1 & 3 \\ 0 & 2 \\ 0 & 1 \end{bmatrix} = A$; in the denominator layout $\frac{\partial\boldsymbol{y}}{\partial\boldsymbol{x}} = \begin{bmatrix} 1 & 0 & 0 \\ 3 & 2 & 1 \end{bmatrix} = A^{\mathsf T}$.
+
+:::
 
 Unless stated otherwise we use the denominator layout.
 

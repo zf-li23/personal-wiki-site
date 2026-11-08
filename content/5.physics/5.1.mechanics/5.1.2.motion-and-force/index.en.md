@@ -1,7 +1,7 @@
 ---
 title: Motion and Force
 description: Newton's laws of motion and inertial frames; the defining constants of the 2019 SI and dimensional analysis; common forces and the four fundamental interactions; applications of Newton's laws; inertial forces in translating and rotating non-inertial frames, the equivalence principle, tides, the centrifugal force and the Coriolis force.
-source_hash: c9fbf921cf82
+source_hash: 852359e206db
 ---
 
 The previous chapter, [5.1.1](/5.1.1), only described motion; this chapter discusses the causes of changes in motion. *Dynamics* studies how the interactions (forces) between bodies determine the **acceleration** of a body. Newton's laws of motion are the foundation of classical mechanics, and the momentum theorem ([5.1.3](/5.1.3)), the work-energy theorem and energy conservation ([5.1.4](/5.1.4)), and the law of rotation of rigid bodies ([5.1.5](/5.1.5)) in the following chapters are all consequences of them. We first state the three laws and the concept of an inertial frame, then introduce the International System of Units and dimensions, the common forces and the four fundamental interactions, and use worked examples to show the general procedure for solving problems with Newton's laws; the equations one writes down are often a **differential equation** ([2.2.15](/2.2.15)), which can be solved analytically or numerically ([4.4.4](/4.4.4)). Finally we discuss non-inertial frames: in an accelerating or rotating **reference frame** we introduce inertial forces so that Newton's laws can still be used, which explains weightlessness, the tides, the variation of gravity with latitude, and the many phenomena of the Coriolis force.
@@ -147,6 +147,8 @@ The water surface is a paraboloid of revolution, and $z_0$ is the height of the 
 
 5. Check the result: $\dim\dfrac{\omega^2r^2}{g} = \dfrac{\mathsf{T}^{-2}\mathsf{L}^2}{\mathsf{L}\,\mathsf{T}^{-2}} = \mathsf{L}$, consistent with $z$; for $\omega = 0$, $z = h$ and the surface is horizontal; the larger $\omega$ is, the lower the center and the higher the edge.
 
+:::
+
 This example shows that, besides the dynamical equations, one often needs supplementary kinematic equations or geometric constraints (here the relation between the slope of the surface and the direction of the normal).
 
 **Example 2.5.3 (Terminal Velocity)** A body of mass $m$ falls vertically from rest in air.
@@ -162,6 +164,8 @@ $$
 v(t) = v_{\mathrm{T}}\tanh\frac{gt}{v_{\mathrm{T}}}, \qquad v_{\mathrm{T}} = \sqrt{\frac{2mg}{C\rho A}}.
 $$
 In both cases the speed increases monotonically and approaches the limiting value $v_{\mathrm{T}}$, at which the resistance balances gravity and the body falls at constant speed. This limiting speed is called the *terminal velocity*. From the expression for $v_{\mathrm{T}}$, a larger body of the same shape has a larger terminal velocity: $m \propto r^3$ and $A \propto r^2$, so $v_{\mathrm{T}} \propto \sqrt{r}$.
+
+:::
 
 For a projectile subject to both gravity and quadratic drag, the equations for the two components are coupled through $\lvert\boldsymbol{v}\rvert$ and have no elementary solution; they can be solved numerically with `scipy.integrate.solve_ivp` (the initial value problem of [4.4.4](/4.4.4)).
 

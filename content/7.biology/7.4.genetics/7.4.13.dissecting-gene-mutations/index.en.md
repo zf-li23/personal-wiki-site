@@ -131,6 +131,8 @@ The relation between genetic and physical distance differs enormously among orga
 
 **Example 13.3.1** Two point mutations $2\,\mathrm{kb}$ apart within a gene are expected to recombine with a frequency of about $2/0.9 \times 10^{-3}\,\mathrm{cM}$, that is $2 \times 10^{-5}$, in humans: one recombinant per $50\,000$ meioses, impossible to observe in families. In yeast the same distance is about $0.7\,\mathrm{cM}$, one recombinant **tetrad** spore in about 150, and in T4 about 18 map units. This is why intragenic recombination was studied in phage, bacteria and fungi, and why the fine structure of human genes is studied by sequencing rather than recombination. Recombination within a gene in fungi also produces **gene conversion** (non-reciprocal transfer between alleles, [7.4.9](/7.4.9)), so very close mutations do not always behave like points on a line.
 
+:::
+
 Averages hide variation within genomes: recombination is concentrated in hotspots of 1–2 kb (in mammals defined by PRDM9 binding **motifs**), so the local ratio varies by orders of magnitude ([7.4.8](/7.4.8)).
 
 ## 13.4. Mutations Reveal Gene Function

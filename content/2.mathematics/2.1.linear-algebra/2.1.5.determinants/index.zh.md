@@ -49,6 +49,8 @@ $$
 \begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}.
 $$
 
+:::
+
 由列多线性，$\det(kA) = k^n\det A$，与体积的缩放规律一致。因此 $n > 1$ 时行列式不是线性函数：一般 $\det(A + B) \ne \det A + \det B$。
 
 **性质 5.1.1（共线为零）** 设 $A$ 是 $n$ 阶方阵。
@@ -188,6 +190,8 @@ $$
 
 函数 $X \mapsto \det\begin{bmatrix} X & O \\ O & I \end{bmatrix}$ 满足定义 5.1.1 的三条公理，故等于 $\det X$；在第二个因子中，用前面的列做倍加列变换可消去 $A^{-1}C$ 而不改变行列式，再用同样的论证得 $\det\begin{bmatrix} I & O \\ O & B \end{bmatrix} = \det B$。
 
+:::
+
 由第 3 条与 QR 分解可以得到行列式的一个直观解释：设 $A = QR$（第 4 章），则 $\det A = \det Q\det R$，其中 $\det Q = \pm 1$ 表示有向体积的符号，$\det R = \prod_i r_{ii} = \prod_i \|\tilde{\boldsymbol{q}}_i\| \ge 0$ 是体积的大小。$\|\tilde{\boldsymbol{q}}_i\|$ 是 $\boldsymbol{a}_i$ 到前 $i-1$ 个棱张成的子空间的距离，即平行体逐层的"高"，所以 $|\det A|$ 就是"底面积乘高"的 $n$ 维推广。
 
 ![二阶情形：以 a1, a2 为邻边的平行四边形与以 a1 为底、Gram–Schmidt 得到的 q2 为高的矩形面积相等，都是 |det A| = ||a1|| · ||q2||](./plots/base-times-height.py)
@@ -278,6 +282,8 @@ $$
 $$
 \det A = a_{11}a_{22}a_{33} - a_{11}a_{32}a_{23} + a_{21}a_{32}a_{13} - a_{21}a_{12}a_{33} + a_{31}a_{12}a_{23} - a_{31}a_{22}a_{13}.
 $$
+
+:::
 
 下面把这一做法推广到 $n$ 阶：用 $n-1$ 阶行列式递归地表示 $n$ 阶行列式，这同时证明了行列式函数的存在性。
 

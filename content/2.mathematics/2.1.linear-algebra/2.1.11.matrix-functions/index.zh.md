@@ -124,6 +124,8 @@ $$
 
 **例 11.4.1** $J_{2,3} = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{bmatrix}$，$f(x) = x^3$。$f(2) = 8$，$f'(2) = 12$，$\frac{1}{2}f''(2) = 6$，故 $J_{2,3}^3 = \begin{bmatrix} 8 & 12 & 6 \\ 0 & 8 & 12 \\ 0 & 0 & 8 \end{bmatrix}$。
 
+:::
+
 所以计算 $f(A)$ 只需要知道 $f$ 在每个特征值 $\mu_i$ 处直到 $m_i - 1$ 阶的导数值，$m_i$ 是关于 $\mu_i$ 的最大 Jordan 块的阶数，即 $\mu_i$ 在极小多项式中的重数。这个观察给出了一般函数的定义。
 
 ## 11.5. 矩阵函数的谱定义
@@ -247,6 +249,8 @@ E = matrix_function(B, [(2, 1), (4, 1)], lambda mu, j: np.exp(mu))
 print(np.abs(E - expm(B)).max())
 ```
 
+:::
+
 插值法对小矩阵和精确计算很方便，但它需要准确的特征值和重数，而带导数条件的 Vandermonde 方程组在特征值相近时病态。数值软件中的 `expm` 采用"缩放与平方"配合有理逼近：先算 $\mathrm{e}^{A/2^s}$（$\|A/2^s\|$ 很小，用 Padé 逼近），再平方 $s$ 次。
 
 ## 11.7. 幂级数定义
@@ -367,6 +371,8 @@ $$
 $$
 
 给定初值 $\boldsymbol{X}(0) = \boldsymbol{x}_0$ 时，$\boldsymbol{c} = P^{-1}\boldsymbol{x}_0$，$P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$。例如 $\boldsymbol{x}_0 = (1, 0, 0)^{\mathsf T} = \boldsymbol{p}_3$ 时 $\boldsymbol{c} = (0, 0, 1)^{\mathsf T}$，$\boldsymbol{X}(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$。
+
+:::
 
 非齐次方程组的解由齐次解加上输入的"累积响应"组成。
 

@@ -1,7 +1,7 @@
 ---
 title: Branches, Loops and Enumeration
 description: if, else and multiway branches; logical operations, short-circuit evaluation and writing natural-language conditions as logical expressions; bitwise operations; while, do-while and for loops, break and continue, loop variables and loop invariants; exhaustive search and its three ingredients, solving logic puzzles by enumeration, narrowing the search range.
-source_hash: 034ed80022f2
+source_hash: 23374970a06c
 ---
 
 The programs of the previous chapter executed sequentially from beginning to end. This chapter introduces two structures that change the flow of execution: branches (choosing which piece to execute according to a condition) and loops (executing a piece repeatedly). Sequence, branch and loop suffice to express any algorithm, which is the basic conclusion of *structured programming*. With loops, what computers do best, tireless repetition, can come into play, and the second half of this chapter uses it to introduce the first algorithmic idea: exhaustive search, which checks all possibilities one by one. For the relation between logical expressions and **propositions** and propositional logic see [1.1](/1.1); exhaustive search develops into backtracking in [4.1.12](/4.1.12) and into state-space search in [4.1.14](/4.1.14); the analysis of the cost of loops is in [4.3.1](/4.3.1).
@@ -433,6 +433,8 @@ while True:                       # E saw x5 fish, x5 % 5 == 1
 ```
 
 They caught at least 3121 fish. Note that the $x_{k-1} = \frac{5}{4}x_k + 1$ obtained from the recurrence automatically satisfies $x_{k-1} \equiv 1 \pmod 5$, so only whether $x_k$ is divisible by 4 needs to be tested.
+
+:::
 
 Ways of narrowing the range include: using mathematical relations to switch to another object of enumeration (enumerating the square root instead of the square, the last term instead of the first), using constraints to exclude candidates early, and using symmetry to enumerate only part of the candidates. When the number of candidates grows exponentially with the problem size ($2^n$ combinations for $n$ people), plain enumeration soon becomes infeasible, and more advanced methods such as backtracking with pruning ([4.1.12](/4.1.12)) and dynamic programming ([4.1.13](/4.1.13)) are needed.
 

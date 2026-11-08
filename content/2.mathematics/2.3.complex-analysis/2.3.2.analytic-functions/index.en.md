@@ -257,6 +257,8 @@ and $f(0)=0$ forces $c=0$, so $f(z)=z^3+z^2$.
 
 By method 3 with $f'=v_y+\mathrm{i}v_x$: we compute $v_y=2x-\frac{x^2-y^2}{(x^2+y^2)^2}$ and $v_x=2y+\frac{2xy}{(x^2+y^2)^2}$, so $v_y(z,0)=2z-\frac1{z^2}$ and $v_x(z,0)=0$. Thus $f'(z)=2z-\frac1{z^2}$ and $f(z)=z^2+\frac1z+c$ with $c$ real (since $\operatorname{Im}f$ is prescribed). From $f(1)=2+c=3$ we get $f(z)=z^2+\frac1z+1$. Check: $\operatorname{Im}z^2=2xy$ and $\operatorname{Im}\frac1z=-\frac{y}{x^2+y^2}$.
 
+:::
+
 Problems in which $u$ contains exponentials or trigonometric functions are solved the same way once $\mathrm{e}^z$ and $\sin z$ are available; see Example 3.1.2 in [2.3.3](/2.3.3).
 
 ## 2.6. Geometric Meaning of the Derivative
@@ -277,6 +279,8 @@ A map with these properties is called conformal at $z_0$; conformal mappings are
 ![The map w = z^2 applied to a grid in the first quadrant. The vertical lines x = c and horizontal lines y = c become two families of parabolas that still cross at right angles, and a small square becomes a small curvilinear square; at z = 0, where the derivative vanishes, the right angle between the positive axes is doubled into a straight angle.](./plots/square-map.py)
 
 **Example 2.6.1** For $w=z^2$, the vertical line $x=c$ is mapped to $u=c^2-y^2$, $v=2cy$, i.e. the parabola $u=c^2-\frac{v^2}{4c^2}$, opening to the left; the horizontal line $y=c$ goes to $u=x^2-c^2$, $v=2cx$, i.e. $u=\frac{v^2}{4c^2}-c^2$, opening to the right. At an intersection point $z_0=c_1+\mathrm{i}c_2\ne0$ the two lines are orthogonal and $f'(z_0)=2z_0\ne0$, so the two parabolas are orthogonal as well. At $z_0=0$, $f'(0)=0$ and the angle $\frac\pi2$ between the positive real and imaginary axes becomes the angle $\pi$ between the positive and negative real axes.
+
+:::
 
 The same computation, read backwards, explains a classical fact about level curves.
 

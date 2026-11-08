@@ -1,6 +1,6 @@
 ---
 title: Theories of Reaction Rates
-source_hash: 9ef37e4b498f
+source_hash: 4691977ddb97
 ---
 
 [6.3.15](/6.3.15) treated rate constants as parameters determined by experiment. A theory of reaction rates must answer the question whether rate constants can be calculated from the properties of molecules (size, mass, structure, interaction potential energy). A satisfactory theory must at least yield the **law of mass action** and the **Arrhenius equation**, and explain the physical meaning of the activation energy and of the **pre-exponential factor**. [6.1.7](/6.1.7#sec-7.2) gave qualitative pictures of **collision theory** and **transition state theory**; this chapter makes them quantitative.
@@ -118,6 +118,8 @@ $$
 \sigma\bar v_{\mathrm{rel}}N_{\mathrm{A}} = 0.435 \times 10^{-18} \times 2.66 \times 10^3 \times 6.022 \times 10^{23}\,\mathrm{m^3\,mol^{-1}\,s^{-1}} = 7.0 \times 10^{11}\,\mathrm{L\,mol^{-1}\,s^{-1}},
 $$
 in agreement with the theoretical value in the table; comparison with the experimental value gives $P \approx 2 \times 10^{-6}$: hydrogenation requires the two H atoms of $\ce{H2}$ to interact with the C=C double bond simultaneously, and the geometric requirement is extremely strict.
+
+:::
 
 The case $P > 1$ for $\ce{K + Br2}$ is explained by the "harpoon mechanism": the K atom "throws" its valence electron to $\ce{Br2}$ at a distance much larger than the hard-sphere collision diameter, and the $\ce{K+}$ and $\ce{Br2-}$ formed are pulled together by Coulomb attraction, so the effective reaction cross section is much larger than the geometric cross section.
 

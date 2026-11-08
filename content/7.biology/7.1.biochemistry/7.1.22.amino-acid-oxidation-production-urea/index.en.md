@@ -219,6 +219,8 @@ The simple model in the figure shows why PKU behaves as a threshold disease and 
 
 ![Phenylketonuria as a threshold disease (Example 22.3.1). A: steady-state plasma [Phe] against the residual activity of phenylalanine hydroxylase (logarithmic scale) for a normal and a phenylalanine-restricted input; the dashed line marks the level of classic PKU and the band the treatment target. As the residual activity falls toward the input rate, the saturable hydroxylase can no longer keep up and [Phe] rises steeply to the level set by the slow first-order routes. B: plasma [Phe] after birth in a child with 1% residual activity, untreated and with a restricted diet from day 7; the time constant of about six days is set by the slow routes](./plots/phe-steady-state.py)
 
+:::
+
 Alkaptonuria is mild: homogentisate is excreted and its oxidation turns the urine black on standing; in middle age, its polymer deposits in cartilage cause ochronosis and arthritis. Nitisinone, an inhibitor of p-hydroxyphenylpyruvate dioxygenase, lowers homogentisate. The same drug treats tyrosinemia type I, a severe defect of fumarylacetoacetase in which the accumulated fumarylacetoacetate is converted to toxic succinylacetone that damages liver and kidney: blocking the pathway upstream of the defect, at the price of a diet low in tyrosine and phenylalanine, prevents the toxic products, an instructive application of pathway logic. Albinism results from defects of tyrosinase, which begins the synthesis of melanin.
 
 ### 22.3.5. Five Amino Acids Are Converted to α-Ketoglutarate

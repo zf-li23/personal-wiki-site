@@ -96,6 +96,8 @@ The average seek is about a third of a full stroke and is quoted by manufacturer
 
 Small random requests reach about 82 operations per second and one seven-hundredth of the drive's bandwidth: positioning dominates. The same drive that streams a BAM file at 250 MB/s needs about two and a half hours to read the same 3 GB in random 4-KiB pieces. Every design choice for disks (FFS's placement policy in [4.11.7](/4.11.7#sec-7.3), log-structured writes, large I/O sizes, sorting data before random lookups) aims to turn random access into sequential access.
 
+:::
+
 ![Effective throughput of a single outstanding request of a given size, modeled as size / (fixed cost + size / bandwidth), for a hard disk, a SATA SSD and an NVMe SSD with typical parameters. The dotted lines are the sustained bandwidths; the dots mark the request size latency x bandwidth at which half of the bandwidth is reached (about 3 MB, 55 KB and 420 KB).](./plots/throughput-vs-request-size.py)
 
 The drive has a cache of tens to hundreds of megabytes. It reads ahead the rest of a track and, with *write-back caching*, reports a write complete as soon as the data are in its cache, which is fast but unsafe on power loss; this is why file systems must issue explicit cache flushes to make data durable ([4.11.7](/4.11.7#sec-7.4.3)).
@@ -121,6 +123,8 @@ Because the cost of a request depends on where the head is, the order in which q
 | C-LOOK, moving upward | 65, 67, 98, 122, 124, 183, then jump to 14, 37 | $130 + 169 + 23 = 322$ |
 
 SSTF is greedy and can *starve* requests at the edges if new requests keep arriving near the head; the elevator variants bound the waiting time at the cost of some extra movement.
+
+:::
 
 Inside Linux the choice now happens at two levels. Modern drives accept many requests at once (32 with SATA native command queuing, up to 64K queues of 64K entries with NVMe) and reorder them internally with full knowledge of their geometry. The kernel's multi-queue block layer offers the schedulers `mq-deadline` (sorts requests and enforces a deadline to prevent **starvation**; the usual default for rotating disks), `bfq` (budget fair queueing, which divides bandwidth fairly between processes; good for desktops), `kyber` (latency targets for fast devices) and `none` (no reordering, the default for NVMe SSDs, where reordering gains nothing). The active one is shown in brackets:
 
@@ -205,6 +209,8 @@ and writes the new data and the new parity: four I/Os for one logical write. Thi
 In RAID 4 every small write touches the single parity disk, which serializes all writes: random write throughput is $R/2$ no matter how many disks there are. RAID 5 rotates the parity across disks so that the four I/Os of different writes fall on different disks, and $N$ disks together sustain $N R / 4$. RAID 6 must update two parities, six I/Os per small write. Writes of whole stripes avoid the problem entirely, since the parity is computed from the new data alone; the file system on top can align its allocations to the stripe (ext4's `stride` and `stripe_width`, XFS's `su` and `sw`).
 
 **Example 8.4.1 (Choosing a Level)** A lab server has eight 20-TB disks. The usable capacity is 160 TB with RAID 0, 80 TB with RAID 10, 140 TB with RAID 5 and 120 TB with RAID 6. After a disk fails, the array runs *degraded* and must be *rebuilt* onto a replacement by reading all surviving disks: at 250 MB/s, writing 20 TB takes $20 \times 10^{12} / (250 \times 10^6)\,\mathrm{s} \approx 22$ hours, longer while the array is serving users. During this time RAID 5 has no redundancy left. Worse, the rebuild must read all $7 \times 20\,\mathrm{TB} = 1.12 \times 10^{15}$ bits of the other disks; with the unrecoverable read error rate of $10^{-15}$ per bit that enterprise drives specify, the expected number of unreadable sectors during the rebuild is 1.12 and, modeling errors as a Poisson process, the probability of finishing without one is $\mathrm{e}^{-1.12} \approx 0.33$. (Specified rates are conservative and an unreadable sector loses one stripe rather than the array, but the conclusion stands.) With disks this large, RAID 6 or mirroring is the reasonable choice, and RAID 5 is not.
+
+:::
 
 RAID protects against the failure of disks, nothing else. It does not protect against deleting a file, a bug that corrupts data, ransomware, theft or a fire; every write, including a mistaken `rm -rf`, is faithfully applied to all copies. RAID is not a backup: important data, in particular raw sequencing data that cannot be regenerated, need copies in another place, preferably following the 3-2-1 rule (three copies, on two kinds of media, one off-site). Modern storage systems also go beyond fail-stop: ZFS and Btrfs checksum every block, detect *silent* corruption (latent sector errors, misdirected writes) and repair it from the redundant copy, and periodic *scrubbing* reads all data to find errors before a disk fails. Large storage systems replace RAID by *erasure coding* across many servers, a generalization of parity (Reed–Solomon codes) that tolerates the loss of several whole machines.
 

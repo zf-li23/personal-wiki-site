@@ -345,6 +345,8 @@ For spherical shapes the orientation is irrelevant, so the spherical models are 
 
 ![Simulated data with three clusters, two of them elongated bands. Left: k-means, which favors compact spherical clusters, cuts across the bands. Middle: a Gaussian mixture with unrestricted covariance matrices fitted by EM recovers the three groups; ellipses show the fitted components. Right: BIC of Gaussian mixtures (lower is better) against the number of components, minimized at k = 3.](./plots/kmeans-vs-gmm.py)
 
+:::
+
 Gaussian mixtures and the EM algorithm have many successful applications, for example statistical modeling of the loads in electric distribution systems and adaptive background subtraction in video. In theory, finite Gaussian mixtures are dense in the set of all densities in the $L^1$ metric (Li and Barron, 1999), so with enough components they can approximate any distribution. Extensions include Bayesian and infinite Gaussian mixtures (Rasmussen, 1999), split-and-merge EM (Ueda et al., 2000), competitive EM (Zhang et al., 2004), and finite mixtures of other distributions (McLachlan et al., 2019).
 
 ## 11.5. Discussion

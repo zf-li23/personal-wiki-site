@@ -74,6 +74,8 @@ $$
 
 where the driving term $D$ is fixed by the concentrations of the source $X_0$ and the sink $X_n$ and by the equilibrium constants of the steps. Viewed as a function of the amount $E$ of one enzyme, with the resistance $R$ of all the other steps fixed, $J = D/(1/(kE) + R)$, which has the form
 
+:::
+
 $$
 J(E) = J_{\max}\,\frac{E}{E + K_E}, \qquad J_{\max} = \frac{D}{R}, \quad K_E = \frac{1}{kR},
 $$
@@ -137,6 +139,8 @@ The ABO system shows multiple alleles, codominance and complete dominance in one
 $I^A$ and $I^B$ are codominant with each other and both are completely dominant over $i$: the three alleles give $3 \times 4/2 = 6$ genotypes and 4 phenotypes. People have antibodies against the A or B antigens they lack (formed early in life in response to similar carbohydrates on gut bacteria), so transfused cells carrying a foreign antigen are agglutinated and destroyed. Type O cells (no A, no B) can be given to anyone in emergencies; type AB recipients can accept cells of any ABO type.
 
 **Example 3.3.2** (a) Parents of types A and B, both heterozygous ($I^Ai \times I^Bi$), have children of types AB, A, B and O with probability $1/4$ each. (b) A type O mother has a type AB child. The child received $i$ from the mother, so it cannot be AB: either the mother is not $ii$ (a Bombay phenotype that only looks like O, 7.4.4), or the child has been switched, or a rare cis-AB allele is present. (c) A type A mother ($I^A\_$) and a type B child: the father must carry $I^B$, so a type A or O man is excluded as the father, while any B or AB man is not excluded. Blood groups can exclude paternity but cannot prove it; DNA markers with many alleles are used today (7.4.14, 7.4.22).
+
+:::
 
 The *ABO* gene lies on the long arm of **chromosome** 9 (9q34). The possible blood types of children for every combination of parental types follow from the genotypes each parental type can have:
 
@@ -202,6 +206,8 @@ $v = 1$ gives $f = 3/4$ (the 3:1 ratio) and $v = 0$ gives $f = 2/3$ (2:1).
 ![A recessive lethal with a dominant visible effect: yellow mice (A^y A) crossed together. Of the four equally likely combinations of gametes, the A^y A^y embryo (crossed out) dies after implantation; among the survivors, A^y A (yellow) and A A (agouti) are in the ratio 2:1](./plots/lethal-punnett.py)
 
 **Example 3.4.1** (a) Yellow × yellow mice give 230 yellow and 100 agouti progeny. Then $f = 230/330 = 0.697$ and $v = (2.091 - 2)/0.303 = 0.30$: these data would suggest that 30 % of $A^yA^y$ embryos survive. A χ² test against 2:1 (expected 220 : 110) gives $\chi^2 = 0.45 + 0.91 = 1.36$, $p = 0.24$, so the data are also consistent with complete lethality; the estimate of $v$ is imprecise. (b) A dihybrid $A^yA\,Bb \times A^yA\,Bb$, with $B$ (black) dominant over $b$ (brown) at an independent **locus**, gives $(2:1) \times (3:1) = 6:3:2:1$ (yellow black : agouti black : yellow brown : agouti brown), 12 parts instead of 16. A total number of parts that is not a power of 4 is the signature of lethality ([7.4.4](/7.4.4#sec-4.8)).
+
+:::
 
 The molecular basis of $A^y$ was found in the 1990s: it is a deletion of about 170 kb that fuses the coding region of *agouti* to the **promoter** of the neighboring gene *Raly*, which is expressed everywhere. Agouti **protein**, which normally acts only in the hair follicle (where it switches melanocytes to yellow pheomelanin, [7.4.4](/7.4.4#sec-4.7)), is made in every tissue: the mice are yellow, and also obese and diabetic, because agouti blocks melanocortin **receptors** in the brain that regulate appetite. The deletion also destroys *Raly*, and the loss of both copies of *Raly* is lethal. The dominant visible phenotype and the recessive lethality are therefore effects on two different genes of one mutation.
 

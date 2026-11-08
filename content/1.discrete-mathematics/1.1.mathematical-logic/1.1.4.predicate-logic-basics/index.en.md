@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Predicate Logic
-source_hash: e7026f3182ee
+source_hash: 54551ec5e748
 ---
 
 Propositional logic treats simple propositions as indivisible wholes, so it cannot analyze their internal logical structure (such as the relation between subject and predicate) or quantitative relations (such as "all" and "some"). To overcome these limitations we introduce *predicate logic*. Predicate logic can be viewed as an extension of propositional logic: it introduces **individual terms**, **predicates**, and **quantifiers**, which allow a finer description of the structure of sentences and of reasoning. This chapter deals only with first-order predicate logic, historically also called the restricted predicate calculus; the next chapter treats equivalence and inference in it.
@@ -30,6 +30,8 @@ Propositional logic treats simple propositions as indivisible wholes, so it cann
 **Definition 4.1.6 (Unary and $n$-ary Predicates)** A predicate describing a property of a single individual is called a **unary predicate** and is written $P(x), Q(x), \cdots$. A predicate describing a relation among several individuals is called a **many-place predicate**; a predicate with $n$ individual variables is called an $n$-ary predicate and is written $P(x_1, x_2, \cdots, x_n)$ ($n \geq 1$).
 
 **Example 4.1.1** $P(x)$: $x$ is a student; this is a unary predicate. $P(x, y)$: $x$ and $y$ are classmates; this is a binary predicate.
+
+:::
 
 In general:
 

@@ -93,6 +93,8 @@ The arrival rate can be estimated from the encounter rate of swimming sperm with
 
 ![A Poisson model of polyspermy (Formula 4.3.1). A: probability that a fertilized egg becomes polyspermic against the rate λ at which fusion-competent sperm arrive, with a slow block only (effective after 60 s) or with a fast block after 1 s that reduces fusion a hundredfold until the slow block is complete. B: for eggs exposed to sperm for 5 min, the probability of fertilization (dashed) and of fertilization by exactly one sperm (solid): normal fertilization is possible only in a window of sperm densities, which the fast block widens by about two orders of magnitude](./plots/polyspermy.py)
 
+:::
+
 The model makes the evolutionary problem explicit. Externally fertilizing animals face both sperm limitation, when gametes are too dilute, and polyspermy, when they are too dense, and the probability of normal fertilization is maximal at intermediate densities. A fast block shifts the polyspermy limit to densities about $1/\varepsilon$ times higher; mammals, in which the female tract lets only a few sperm reach the egg (Section 4.4.1), can rely on slower blocks. In real eggs not every encounter leads to fusion, and the egg coat and the jelly regulate access, so the measured arrival rates are lower than the estimate.
 
 ### 4.3.7. Calcium and the Activation of the Egg
@@ -130,6 +132,8 @@ The front moves into the resting region ($v>0$) only if the threshold $a$ is bel
 **Example 4.3.2** With an effective diffusion coefficient of calcium in buffered cytoplasm $D = 20\,\mu\mathrm{m^2\,s^{-1}}$, $k = 10\,\mathrm{s^{-1}}$ and $a = 0.25$, the front width is $w = \sqrt{2\cdot20/10}\,\mu\mathrm{m} = 2\,\mu\mathrm{m}$ and the speed $v = \sqrt{100}\cdot0.5\,\mu\mathrm{m\,s^{-1}} = 5\,\mu\mathrm{m\,s^{-1}}$: the wave crosses an egg of $80\,\mu\mathrm{m}$ in about 16 s, in agreement with the measured speed of fertilization waves, which is close to $10\,\mu\mathrm{m\,s^{-1}}$ in eggs of very different sizes (Jaffe's observation of a nearly universal speed). Larger eggs therefore take longer to be activated: about 4 min for the 1.2-mm *Xenopus* egg at $5\,\mu\mathrm{m\,s^{-1}}$, 2 min at the measured $10\,\mu\mathrm{m\,s^{-1}}$.
 
 ![Calcium at fertilization. A: kymograph of a bistable calcium front (Eq. 4.2; D = 20 µm²/s, k = 10 s⁻¹, a = 0.25) started by a local release at the sperm entry point and crossing an 80-µm egg; the dashed line has the predicted slope v = 5 µm/s (Formula 4.3.2). B: calcium profiles every 3 s: a front of constant shape and speed. C: a minimal model of calcium oscillations (Goldbeter, Dupont and Berridge 1990) with a sustained level of IP₃ receptor activation β: repetitive spikes instead of one wave, at higher frequency for stronger stimulation (β = 0.3, blue; β = 0.5, orange). The model's time scale is seconds; mammalian eggs spike every 10–20 min, but the frequency coding is the same](./plots/calcium-wave.py)
+
+:::
 
 The calcium release starts a programmed series of responses, early (within about a minute) and late (minutes to an hour); approximate times for sea urchins, after Whitaker and Steinhardt (1985) and Mohri and colleagues (1995):
 

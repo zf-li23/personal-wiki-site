@@ -22,6 +22,8 @@ $$
 
 两边求导，记 $a=\rho g/H$，得 $y''=a\sqrt{1+y'^2}$，并且 $y(0)=0$，$y'(0)=0$。这是一个含二阶导数的方程，例 15.5.4 将解出 $y=\dfrac{\cosh ax-1}{a}$。
 
+:::
+
 前两例只需要积分，第三例中未知函数的导数之间互相牵连，需要新的方法。
 
 ### 15.1.2. 基本概念
@@ -90,6 +92,8 @@ $$
 
 ![初值问题 y' = 3y^{2/3}, y(0) = 0 的几个解：沿 x 轴走到 x = c 后分出立方曲线 (x - c)^3；c 取遍非负实数，解有无穷多个](./plots/nonuniqueness.py)
 
+:::
+
 对一阶线性方程 $y'+p(x)y=q(x)$，只要 $p,q$ 在区间 $I$ 上连续，初值问题的解就在整个 $I$ 上存在且唯一（定理 15.3.1 的公式直接给出了它）。
 
 ## 15.2. 变量分离方程及可化为变量分离的方程
@@ -153,6 +157,8 @@ $$
 
 **例 15.2.6** 解 $y'=(2x+y+3)^2$。令 $u=2x+y+3$，$u'=2+u^2$，$\dfrac{\mathrm{d}u}{2+u^2}=\mathrm{d}x$，$\dfrac{1}{\sqrt2}\arctan\dfrac{u}{\sqrt2}=x+C$，所以通解为 $2x+y+3=\sqrt2\tan(\sqrt2x+C)$。
 
+:::
+
 类型（2）：$y'=f\!\left(\dfrac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}\right)$。分三种情形：
 
 - $c_1=c_2=0$：右端是 $y/x$ 的函数，为齐次型方程。
@@ -175,6 +181,8 @@ $$
 $$
 (x-4y+3)(2x+y-3)^2=C.
 $$
+
+:::
 
 类型（3）：$yf(xy)\,\mathrm{d}x+xg(xy)\,\mathrm{d}y=0$。令 $z=xy$，则 $y=\dfrac zx$，$x\,\mathrm{d}y=\mathrm{d}z-\dfrac zx\,\mathrm{d}x$，代入得 $\dfrac zxf(z)\,\mathrm{d}x+g(z)\Big(\mathrm{d}z-\dfrac zx\mathrm{d}x\Big)=0$，即
 
@@ -298,6 +306,8 @@ $$
 
 （3）解 $y'+\dfrac yx=ay^2\ln x$。令 $u=y^{-1}$，$u'-\dfrac ux=-a\ln x$，$u=x\big(-\int\frac{a\ln x}{x}\,\mathrm{d}x+C\big)=x\Big(C-\dfrac a2\ln^2x\Big)$，即 $y=\dfrac{1}{x\big(C-\frac a2\ln^2x\big)}$；另有解 $y=0$。
 
+:::
+
 Bernoulli 方程说明了变量代换的作用：表面上非线性的方程，换一个未知函数就成了线性方程。再如 $y'=1+\mathrm{e}^{-y}\sin x$，两边乘以 $\mathrm{e}^y$ 得 $(\mathrm{e}^y)'=\mathrm{e}^y+\sin x$，它是 $u=\mathrm{e}^y$ 的线性方程，解得 $\mathrm{e}^y=C\mathrm{e}^x-\dfrac12(\sin x+\cos x)$。
 
 ## 15.4. 全微分方程与积分因子
@@ -393,6 +403,8 @@ $$
 \frac{\mathrm{d}x}{x}+\Big(\frac{y^4}{x^5}\,\mathrm{d}x-\frac{y^3}{x^4}\,\mathrm{d}y\Big)=\mathrm{d}\Big(\ln\lvert x\rvert-\frac{y^4}{4x^4}\Big)=0,
 $$
 通解 $\ln\lvert x\rvert-\dfrac{y^4}{4x^4}=C$，即 $x=C\mathrm{e}^{y^4/(4x^4)}$。（它也是齐次型方程，可以用算法 15.2.2 求解。）
+
+:::
 
 更多时候积分因子靠观察得到：把方程中能凑成某个常用微分（表中各式的分子）的项分出来，选一个积分因子使它变成全微分，同时剩下的项仍是全微分。
 

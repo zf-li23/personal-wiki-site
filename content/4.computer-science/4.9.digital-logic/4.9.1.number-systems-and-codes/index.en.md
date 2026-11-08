@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Number Systems and Codes"
 description: Analog and digital signals, the noise immunity of binary logic, and the abstraction levels of digital design; positional number systems and base conversion; BCD codes (8421, 5421, 2421, excess-3) and addition correction; construction, conversion and uses of Gray codes; ASCII; parity codes and code distance.
-source_hash: b4ae61a35132
+source_hash: 136f3b8c7273
 ---
 
 Digital logic studies how to carry out computation, control and storage with signals that take only two values and with switching networks built from transistors. It sits at the lowest level of computer hardware: [Computer Organization](/4.10) explains which components a processor is logically made of, while this course explains how those components (adders, decoders, registers, counters, state machines) are implemented with gates and flip-flops, and how they are described in a hardware description language and realized on an FPGA. The mathematical tool of the course is switching algebra, that is, the use of **Boolean algebra** from discrete mathematics in two-valued circuits (Chapter 2); the electrical behavior of gates is the subject of Chapter 3; Chapters 4 and 5 treat combinational and arithmetic circuits, Chapters 6–8 treat sequential circuits, and Chapter 9 treats programmable devices and hardware description languages.
@@ -96,11 +96,15 @@ To convert from decimal to base $R$, the integer part and the fractional part ar
 
 Reading from the bottom up, $(75)_{10} = (1001011)_2$. For the fraction $(0.625)_{10}$: $0.625\times2 = 1.25$ gives $1$, $0.25\times2 = 0.5$ gives $0$, and $0.5\times 2 = 1.0$ gives $1$, so $(0.625)_{10} = (0.101)_2$. By contrast, $(0.1)_{10} = (0.0\overline{0011})_2$ is an infinite repeating fraction: a finite decimal fraction is a finite binary fraction only if its denominator (in lowest terms) has no prime factor other than $2$, and this is the source of rounding error in **floating-point numbers** (see [Number Representation in Computers](/3.5.1)).
 
+:::
+
 To convert between binary and octal or hexadecimal, group the digits in sets of $3$ (octal) or $4$ (hexadecimal) outward from the radix point, to the left and to the right, padding with $0$ where necessary, and replace each group by one digit; the reverse conversion expands each digit into $3$ or $4$ bits.
 
 **Example 1.2.2**
 - $(1101101)_2 = (001\ 101\ 101)_2 = (155)_8$; $(1101101)_2 = (0110\ 1101)_2 = (6\mathrm{D})_{16}$.
 - $(573)_8 = (101\ 111\ 011)_2$; $(5\mathrm{A}3\mathrm{F})_{16} = (0101\ 1010\ 0011\ 1111)_2$.
+
+:::
 
 The process of repeated division by $R$ can be written directly as a program:
 
@@ -156,6 +160,8 @@ There are $16$ four-bit codes, of which only $10$ are used; the other $6$ are in
 Addition in the 8421 code needs a correction. Adding two BCD digits as binary numbers gives a sum between $0$ and $19$. If the sum does not exceed $9$, the result is already a correct BCD code; if the sum exceeds $9$ (the four-bit result is an invalid code, or a carry is produced), add $6 = (0110)_2$ to skip the $6$ invalid codes and carry $1$ into the next higher digit.
 
 **Example 1.3.1** $8 + 5$: $1000 + 0101 = 1101 > 9$; adding $0110$ gives $1\ 0011$, which is the BCD code of $13$. $9 + 9$: $1001 + 1001 = 1\ 0010$ has a carry, so add $0110$ to the low $4$ bits to get $1000$, and the result is $1\ 1000$, that is, $18$.
+
+:::
 
 The corresponding rule for excess-3 addition is as follows: the sum of two excess-3 codes contains two "$+3$" offsets. If there is no carry, subtract $3$ from the result; if there is a carry, the carry has already absorbed $16 - 10 = 6$, that is, the two "$+3$" offsets, and $3$ must be added back to the low four bits. For example, $1 + 3$: $0100 + 0110 = 1010$ has no carry, and subtracting $0011$ gives $0111$ (that is, $4$); $5 + 6$: $1000 + 1001 = 1\ 0001$ has a carry, so adding $0011$ to the low four bits gives $0100$ (that is, $1$), and the carry $1$ written in excess-3 code is $0100$, so the result is $0100\ 0100$, that is, $11$.
 

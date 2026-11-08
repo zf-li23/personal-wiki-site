@@ -76,6 +76,8 @@ u(x,t)=\frac{1}{2c}\,\big\lvert(x-ct,x+ct)\cap(-a,a)\big\rvert,
 $$
 where $\lvert\cdot\rvert$ is the length of an interval. For $t>a/c$, the profile is a trapezoid of height $a/c$ whose flat top $\lvert x\rvert<ct-a$ widens with speed $c$: unlike the plucked string, the struck string does not return to rest, it is displaced permanently.
 
+:::
+
 ![d'Alembert's formula. Left: a plucked string splits into two half-height pulses. Right: a pulse on a semi-infinite string with a fixed end at x = 0 is reflected upside down (odd extension)](./plots/dalembert-reflection.py)
 
 In these two examples the data are not $C^2$ (the triangle has corners, the velocity jumps), so Eq. (3.3) is not a classical solution. It is a generalized solution: the uniform limit of classical solutions with smoothed data, and a solution in the integral sense. The examples show what happens to singularities: the corners of the triangle travel along the characteristics through the corners at $t=0$. For the wave equation, singularities of the data persist and propagate along characteristics, in contrast to the heat equation, which smooths them out instantly ([2.5.4](/2.5.4#sec-4.2)).

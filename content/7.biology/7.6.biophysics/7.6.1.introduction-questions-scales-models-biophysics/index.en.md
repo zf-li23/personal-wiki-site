@@ -181,6 +181,8 @@ N_{\mathrm{prot}} \approx \frac{1.5\times10^{-13}\,\mathrm{g}}{5.5\times10^{-20}
 $$
 The measured value for a cell doubling every 40 minutes is $2.4\times10^6$.
 
+:::
+
 Two further conversions are used constantly. In a volume of $1\,\mathrm{fL}$, one molecule corresponds to a concentration of
 
 $$
@@ -290,6 +292,8 @@ Because $c \gg \delta$ for HIV, Eq. (1.6) has a shoulder of duration about $1/c$
 ![Decay of HIV-1 under potent therapy in a model with three populations of virus-producing cells: cells in the eclipse phase (becoming productive at rate 1 per day), short-lived productive cells (death rate δ₁ = 0.5 per day, 99 % of production) and long-lived infected cells (δ₂ = 0.04 per day, 1 %), with virion clearance c = 3 per day; therapy blocks all new infections at t = 0 and the plasma virus starts at 10⁵ copies/mL. A: the plasma virus shows a shoulder of about a day, a first phase whose slope gives δ₁ (half-life 1.4 d) and a second phase whose slope gives δ₂ (half-life 17 d); dashed, the much faster decay at rate c that would follow if virion production stopped at once. B: the expected number of new virions per day carrying a particular single, double or triple point mutation, Nμ^k with N = 10¹⁰ virions per day and μ = 3 × 10⁻⁵ per base per replication cycle](./plots/hiv-dynamics.py)
 
 **Example 1.6.1 (Turnover and the case for combination therapy)** At steady state the number of virions made per day equals the number cleared, $cV$ times the volume of fluid that contains them. With $V = 10^5\,\mathrm{mL^{-1}}$ and $c = 3\,\mathrm{d^{-1}}$ in about $15\,\mathrm{L}$ of extracellular fluid, production is $3\times10^5\,\mathrm{mL^{-1}\,d^{-1}}\times1.5\times10^4\,\mathrm{mL} \approx 5\times10^9$ virions per day; the estimate from the patients' data was about $10^{10}$ per day, and with the faster clearance measured later the true value is larger still. Reverse transcriptase makes about $3\times10^{-5}$ errors per base per replication cycle, and the genome has about $10^4$ bases, so every possible single point mutation arises some $10^{10}\times3\times10^{-5} = 3\times10^5$ times a day, and any one double mutant about $10^{10}\times(3\times10^{-5})^2 \approx 10$ times a day, before any selection. A single drug, to which one mutation confers resistance, must fail; three drugs, requiring three simultaneous specific mutations ($3\times10^{-4}$ per day), can hold the virus down for years. Combination antiretroviral therapy, introduced in 1996, turned HIV infection from a fatal disease into a chronic one.
+
+:::
 
 The model also showed what it leaves out. After the first phase the decay slows (the second phase in the figure), revealing a small population of longer-lived infected cells, and below the detection limit a reservoir of latently infected resting memory T cells with a half-life of years persists, which is why therapy cannot be stopped. Each departure from the simplest model identified a new biological compartment. The case shows all five steps of 1.6.4: a quantitative phenomenon, estimates, a minimal model, a functional prediction (a two-exponential decay) and a confrontation with data that both measured the parameters and revealed what the model lacked.
 

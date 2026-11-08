@@ -62,6 +62,8 @@ The helix is the simplest arrangement that uses every backbone N–H and C=O in 
 
 **Example 5.2.1** A polypeptide of $80$ residues forms a single continuous α helix. With a rise of $0.54\ \mathrm{nm}/3.6 = 0.15\ \mathrm{nm}$ per residue, its length is $80 \times 0.15\ \mathrm{nm} = 12\ \mathrm{nm}$. The same chain fully extended in a β strand ($0.35\ \mathrm{nm}$ per residue) would be $28\ \mathrm{nm}$ long.
 
+:::
+
 Related helices differ in the spacing of the hydrogen bonds. The $3_{10}$ helix ($i \to i+3$, $3.0$ residues per turn, rise $0.20\ \mathrm{nm}$) is tighter and occurs mostly as short pieces at the ends of α helices; the π helix ($i \to i+5$) is wider and rare.
 
 *Sequence determines helix stability.* Not every sequence can form a stable α helix. Five kinds of constraint act together:

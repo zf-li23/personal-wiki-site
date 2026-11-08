@@ -1,6 +1,6 @@
 ---
 title: Multiple Integrals and Integrals Depending on a Parameter
-source_hash: 2cf595dd7dc2
+source_hash: b13a9c02e593
 ---
 
 The definite integral is the quantity obtained on an interval by "partition, approximate, sum, take the limit". Replacing the interval by a plane or spatial region, the same four steps give double and triple integrals, collectively called multiple integrals: the volume of a solid under a curved top, the mass of a nonuniform plate or body, centers of mass and moments of inertia are all expressed by them. The definition and properties of multiple integrals are copied almost verbatim from those of the definite integral; the difficulty lies in computation. There are two basic strategies. One is to reduce the integral to iterated integrals, that is, to compute definite integrals one after another, the key being to read off the limits of integration from the shape of the region. The other is a change of variables that transforms the region into a simple shape, at the cost of multiplying the area or volume element by the absolute value of the **Jacobian determinant**; this is the local manifestation of the meaning of the **determinant** in linear algebra as a [volume scaling factor](/2.1.5#sec-5.3.1).
@@ -63,6 +63,8 @@ When using symmetry, the symmetry of the region and the parity of the integrand 
 2. By symmetry under interchange of variables, $\iint_Dx^2\,\mathrm{d}\sigma=\iint_Dy^2\,\mathrm{d}\sigma=\frac12\iint_D(x^2+y^2)\,\mathrm{d}\sigma$, and the latter is easily computed in polar coordinates ([12.2.4](#sec-12.2.4)) to be $\frac{\pi R^4}{4}$.
 
 **Example 12.1.2** Estimate $I=\iint_D\dfrac{\mathrm{d}\sigma}{100+\cos^2x+\cos^2y}$ with $D=\{|x|+|y|\le10\}$. $D$ is a square with diagonals of length $20$ and area $200$; the integrand lies between $\frac1{102}$ and $\frac1{100}$, so $\frac{200}{102}\le I\le2$.
+
+:::
 
 The table compares the properties of definite and multiple integrals (for line and surface integrals see [2.2.13](/2.2.13)):
 
@@ -136,6 +138,8 @@ I=\int_0^{1/2}\mathrm{d}x\int_0^{\sqrt{2x}}f\,\mathrm{d}y+\int_{1/2}^{\sqrt2}\ma
 $$
 
 ![The region of Example 12.2.3: slicing into horizontal strips (first in x, then in y) needs only one iterated integral, while slicing into vertical strips (first in y, then in x) needs three pieces](./plots/integration-order.py)
+
+:::
 
 Sometimes the order must be changed to make the integral computable at all, because certain functions (such as $\mathrm{e}^{y^2}$ and $\frac{\sin y}y$) have no elementary antiderivatives.
 
@@ -440,6 +444,8 @@ $$
 $$
 I_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
 $$
+
+:::
 
 Finally, gravitational attraction. The force exerted by a body of density $\rho$ on a particle of unit mass at $P_0(x_0,y_0,z_0)$ is $\boldsymbol{F}=G\iiint_\Omega\dfrac{\rho\,(x-x_0,y-y_0,z-z_0)}{r^3}\,\mathrm{d}V$, where $r$ is the distance from $(x,y,z)$ to $P_0$ and $G$ is the gravitational constant. Each component is a triple integral. One can compute, for example, that a uniform ball attracts a particle outside it as if its entire mass were concentrated at its center; in [2.2.14](/2.2.14) this conclusion is obtained more simply from the divergence theorem.
 

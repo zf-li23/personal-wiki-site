@@ -1,7 +1,7 @@
 ---
 title: Oscillations
 description: Definition, criteria, characteristic quantities and phasor representation of simple harmonic motion; small oscillations near a stable equilibrium; superposition of simple harmonic motions (beats, Lissajous figures, normal modes of coupled oscillators); harmonic analysis and spectra; damped oscillation and the quality factor; forced oscillation and resonance.
-source_hash: "443e75311359"
+source_hash: b970ef089de4
 ---
 
 A process in which a physical quantity varies back and forth about some value is called an oscillation. Oscillations are not confined to mechanical motion: the current in an alternating-current circuit, the electric field in an electromagnetic wave and the positions of atoms in a molecule all oscillate, and they satisfy equations of the same form. According to the forces involved, oscillations are classified as undamped free oscillation, damped free oscillation and forced oscillation. The simplest and most fundamental case is simple harmonic motion in undamped free oscillation, which is the focus of this chapter: on the one hand, many small oscillations in practice can be treated as simple harmonic; on the other hand, any complicated oscillation can be decomposed into a superposition of simple harmonic motions.
@@ -97,6 +97,8 @@ $$
 E_{\mathrm{p}}(x)\approx\frac12E_{\mathrm{p}}''(0)\,x^2=\frac12kx^2,\qquad k=E_{\mathrm{p}}''(0)>0,
 $$
 so $f=-\dfrac{\mathrm{d}E_{\mathrm{p}}}{\mathrm{d}x}=-kx$, a linear restoring force. $\square$
+
+:::
 
 This is the linearization of the equation at an **equilibrium point** ([2.4.11](/2.4.11)). Vibrations of atoms and molecules (the potential energy curve of [Example 4.6.2](/5.1.4#ex-4.6.2) is approximately parabolic near its minimum) and lattice vibrations in solids are small oscillations of exactly this kind.
 

@@ -35,6 +35,8 @@ X_1\equiv5\cdot5+1=26\equiv2,\quad X_2\equiv11\equiv3,\quad X_3\equiv16\equiv0,\
 $$
 and then $X_5=6$, $X_6=7$, $X_7=4$, $X_8=5$, $X_9=2$. The random numbers are $R_1,\dots,R_9=0.25,\ 0.375,\ 0,\ 0.125,\ 0.75,\ 0.875,\ 0.5,\ 0.625,\ 0.25$. The sequence "looks" random, but $X_i$ can only take the $m$ values $0,1,\dots,m-1$, and it repeats after $8$ steps.
 
+:::
+
 Three observations hold in general.
 
 - The sequence is periodic. The integers $X_i$ are nonnegative and bounded by $m$, so the sequence repeats in a cycle of period at most $m$. Generating more numbers than the period does not produce new points.
@@ -64,6 +66,8 @@ The formula $X_i\equiv a^iX_0$ follows by induction: $X_{i+1}\equiv aX_i\equiv a
   $$
   so $X_{i+2}\equiv6X_{i+1}-9X_i$ and $9R_i-6R_{i+1}+R_{i+2}$ is an integer. As it lies strictly between $-6$ and $10$, all triples $(R_i,R_{i+1},R_{i+2})$ fall on just $15$ parallel planes. This discovery cast doubt on Monte Carlo results obtained with RANDU in the 1960s and 1970s.
 - $X_{i+1}\equiv16807X_i\pmod{2^{31}-1}$, proposed by Lewis, Goodman and Miller (1969) for the IBM System/360. The modulus is a prime and $16807=7^5$ is a primitive root, so the period is $2^{31}-2$. Because of its performance in empirical tests and its ease of implementation, Park and Miller (1988) proposed it as the minimal standard against which other generators should be compared; it was built into operating systems, the IMSL library, MATLAB and many simulation packages.
+
+:::
 
 More generally, Marsaglia (1968) showed that the $d$-tuples $(R_i,\dots,R_{i+d-1})$ of any LCG lie on at most $(d!\,m)^{1/d}$ parallel hyperplanes. With $m=2^{31}$ and $d=10$ this is only about $39$, so LCGs are unsuitable for high-dimensional Monte Carlo.
 
@@ -187,6 +191,8 @@ F(a)=\int_0^a\frac{x}{\sigma^2}\mathrm{e}^{-x^2/(2\sigma^2)}\,\mathrm{d}x=\Bigl[
 $$
 and solving $u=F(x)$ gives $x=\sqrt{-2\sigma^2\log(1-u)}$.
 
+:::
+
 The method also applies to discrete distributions (Lemma 8.2.3), but it has two limitations. It needs a closed-form, cheaply invertible distribution function (exponential, uniform, Bernoulli, Rayleigh, Cauchy, ...); for the normal or gamma distributions the inverse must be computed numerically. And distribution functions exist only in one dimension: for distributions on $\mathbb{R}^d$ with $d>1$ more sophisticated methods are required.
 
 ## 8.3. Rejection Sampling
@@ -269,6 +275,8 @@ $$
 Minimizing $c(\lambda)$ gives $\lambda=1$ and $c=\sqrt{2\mathrm{e}/\pi}\approx1.315$, an acceptance rate of $1/c\approx0.76$. Finally, standard normal values are obtained by attaching to each accepted $X_n$ a random sign, $+X_n$ or $-X_n$ with probability $1/2$ each.
 
 ![Envelope rejection sampling of the half-normal density with Exp(1) proposals. Left: proposals (X, c g(X) U) are uniform under the envelope c g; those under f are accepted. Right: the accepted values with random signs follow N(0, 1).](./plots/rejection-half-normal.py)
+
+:::
 
 The proposal density $g$ is chosen to maximize the efficiency.
 
@@ -359,6 +367,8 @@ Rectangles determine the distribution, so $(X,Y)$ is uniform on $A$. $\square$
 Sampling from a density is therefore the same as sampling uniformly from the region under its graph, one dimension higher. This is exactly why envelope rejection works: $(X_k,cg(X_k)U_k)$ is uniform under $cg$, and the accepted points are uniform under $f$, so their first coordinates have density $f$.
 
 **Example 8.3.5** To sample $X$ with density $p(x)=2x$, $0\le x\le1$, generate $Y\sim\mathrm{U}(0,1)$ and $U_1\sim\mathrm{U}(0,1)$, and set $U=2U_1$; $(Y,U)$ is uniform on the box $[0,1]\times[0,2]$, which contains the graph since $p(x)\in[0,2]$. The points under the curve $u=2y$ are the ones we want: $X=Y\mid U<2Y$ has density $p$. In terms of envelope rejection, $g=1$ and $f/g=2x\le2=c$, so the mean number of trials per simulated value is $c=2$.
+
+:::
 
 In general, to sample a density $f\colon[a,b]\to\mathbb{R}$ with $f\le M$: let $(X_k,Y_k)$ be i.i.d. uniform on the rectangle $R=[a,b]\times[0,M]$, let $A=\{(x,y)\in R\mid y\le f(x)\}$ and $N=\min\{k\mid(X_k,Y_k)\in A\}$. Then $(X_N,Y_N)$ is uniform on $A$ and $X_N$ has density $f$. When $f$ lives on an unbounded set, replace the rectangle by the region $\{(x,y)\mid0\le y<cg(x)\}$ under an envelope, which is envelope rejection sampling again.
 

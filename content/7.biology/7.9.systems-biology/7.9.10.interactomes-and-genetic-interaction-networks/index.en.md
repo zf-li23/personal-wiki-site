@@ -116,6 +116,8 @@ $$
 
 ![Combining evidence channels into one confidence score per protein pair (Formula 10.5.1; illustrative channel scores). A: a small network; each edge carries its combined score; blue: S ≥ 0.7, black: 0.4 ≤ S < 0.7, dashed grey: S < 0.4. B: the channels of the pair A–B and their combination](./plots/string_evidence.py)
 
+:::
+
 Independence is an assumption: text mining partly re-reports the experiments, and co-expression and pathway databases partly reflect each other, so the combination is optimistic when channels share sources. A combined score is a confidence that two proteins are functionally associated, not that they bind; users who need physical interactions select the physical subnetwork or the experimental channel.
 
 ### 10.5.2. Measuring Quality
@@ -172,6 +174,8 @@ Two genes with similar profiles share interaction partners: they buffer, and are
 
 ![Genetic-interaction profiles group genes into modules (simulation). A: interaction scores ε of 72 query genes (six modules of 12, random order) with the first 120 of 300 array genes; red: negative, green: positive. B: the Pearson correlations between query profiles, ordered by average-linkage hierarchical clustering on 1 − r; coloured bar: true module](./plots/gi_profiles.py)
 
+:::
+
 Genetic and physical networks are complementary: genes linked by positive interactions and similar profiles often encode physically interacting proteins, whereas negative interactions mostly join proteins that do not touch. Comparing the two maps identifies "between-pathway" models, in which many negative interactions join two physically defined complexes that back each other up. Interactions also depend on the environment: differential genetic-interaction maps measured under DNA damage or drugs reveal rewiring of the network in response to the condition. Because each double mutant is measured once in a large screen, profile-based inferences are robust to noise in individual scores, much as the regulon-based inference of [7.9.3](/7.9.3#sec-3.4) is robust to noise in individual genes.
 
 ## 10.7. CRISPR Screens
@@ -201,6 +205,8 @@ The minimum over $j$ asks: is there some number of guides that are all ranked su
 **Example 10.7.2** In the simulated screen of the figure ($2000$ genes, $4$ guides each, $100$ essential genes, $15\%$ inactive guides, and $84$ guides of nonessential genes that deplete through toxic off-target cutting), $\alpha$-RRA with permutation p-values calls $66$ genes at an FDR of $0.05$: $64$ essential genes and $2$ others. One of the two false hits has two off-target guides, the other a single strongly depleted one: for a single extreme guide, $\rho = 1 - (1 - r_1)^4 \approx 4r_1$, so robust rank aggregation, like the mean, can be driven by one guide. Ranking genes by the median guide fold change, which needs at least two concordant guides, gives the best precision–recall curve in this simulation (average precision $0.96$, against $0.93$ for the mean and $0.91$ for RRA). The top RRA p-values reach the floor $1/20\,001$ of the $20\,000$ permutations. In practice, analyses require hits to be supported by at least two guides and remove guides with predicted off-target sites or in amplified regions.
 
 ![A pooled CRISPR knockout screen for essential genes (simulation; 2000 genes × 4 guides, 100 essential genes, 15% inactive guides, 1% toxic off-target guides among nonessential genes; negative binomial counts). A: guide log2 fold changes. B: gene-level −log10 p of α-robust rank aggregation against the median guide fold change; red: essential genes; dashed: FDR 0.05. C: precision–recall curves for ranking genes by the RRA score and by the mean and median guide fold changes](./plots/crispr_screen.py)
+
+:::
 
 Other methods model the problem differently. BAGEL (Hart and Moffat, 2016) computes a Bayes factor of each gene's fold changes against the distributions of reference essential and nonessential genes. MAGeCK-MLE fits a negative binomial generalized linear model with guide efficiencies to several conditions jointly. CERES and its successor Chronos, used in the Cancer Dependency Map (DepMap) of more than a thousand cancer cell lines, model the time course of guide depletion with a gene effect, a guide efficiency and a copy-number term, which removes the copy-number artifact and makes gene effects comparable across lines ([7.9.13](/7.9.13)). The same analysis applied to many cell lines yields co-essentiality: genes whose dependency profiles across lines are correlated tend to be in the same complex or pathway, a human analogue of genetic-interaction profiles (Definition 10.6.1).
 

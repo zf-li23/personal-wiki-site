@@ -1,7 +1,7 @@
 ---
 title: High-Performance Liquid Chromatography and Electrophoresis
 description: Instrumentation, gradient elution, columns and ultra-high-performance liquid chromatography, and detectors of HPLC; adsorption, partition and bonded-phase, normal-phase and reversed-phase, hydrophilic interaction, ion-exchange and ion chromatography, size-exclusion, affinity and chiral chromatography; chromatographic separation of proteins, peptides, nucleic acids and amino acids; supercritical fluid chromatography and extraction, preparative chromatography; capillary electrophoresis and electroosmotic flow, micellar electrokinetic chromatography, capillary gel electrophoresis and DNA sequencing, SDS-PAGE, isoelectric focusing and two-dimensional electrophoresis.
-source_hash: 94a073b91607
+source_hash: 43c3c6ab1555
 ---
 
 Gas chromatography is suitable only for substances that can be vaporized without decomposition, whereas the great majority of biomolecules (amino acids, sugars, nucleotides, peptides, proteins and nucleic acids), as well as most drugs, natural products and ions, are nonvolatile or decompose on heating. Analyzing them requires liquid chromatography, with a liquid as the mobile phase, or electrophoresis, in which an electric field drives charged molecules. This chapter first treats the instrumentation and detectors of high-performance liquid chromatography (Section 14.1), then the various modes of liquid chromatography according to separation mechanism (Section 14.2), then the chromatographic separation of proteins, peptides and nucleic acids (Section 14.3) and supercritical fluid chromatography, supercritical fluid extraction and preparative chromatography (Section 14.4), and finally electrophoresis: capillary electrophoresis, gel electrophoresis, DNA sequencing and two-dimensional electrophoresis of proteins (Section 14.5). The retention factor, plate height, van Deemter equation and resolution equation of the previous chapter ([6.4.13](/6.4.13)) apply here directly; the physical chemistry of electrophoresis (**electrophoresis**, **electroosmosis** and the **zeta potential**) was treated in [6.3.21](/6.3.21#sec-21.5), and only its results are used here. Coupling the separation methods of this chapter with mass spectrometry is the basis of proteomics in [6.4.15](/6.4.15#sec-15.5.3).
@@ -154,6 +154,8 @@ $$
 **Example 14.2.1** A component has $k = 12$ in acetonitrile–water (30:70), which is too strongly retained. What is $k$ approximately after changing to acetonitrile–water (50:50)?
 
 **Solution** $P'_1 = 0.3 \times 5.8 + 0.7 \times 10.2 = 8.88$ and $P'_2 = 0.5 \times 5.8 + 0.5 \times 10.2 = 8.00$. In reversed phase $k_2 = 12 \times 10^{(8.00 - 8.88)/2} = 12 \times 0.36 = 4.4$, which lies within the suitable range. $\square$
+
+:::
 
 The parameter $P'$ only adjusts the strength ($k$) and cannot improve the selectivity ($\alpha$). Snyder plotted the relative proportions $x_{\mathrm{e}}$, $x_{\mathrm{d}}$ and $x_{\mathrm{n}}$ (summing to 1) of the three interactions for 81 solvents in a triangular diagram; solvents of similar selectivity cluster together and fall into 8 groups, which is the solvent selectivity triangle. When one solvent does not give a satisfactory $\alpha$, replacing it with a solvent from another group (for example replacing methanol with acetonitrile or tetrahydrofuran and adjusting the proportion so that $P'$ is unchanged) often improves the separation markedly.
 

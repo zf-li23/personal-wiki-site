@@ -170,6 +170,8 @@ $$
 
 ![Detecting a somatic variant. A: the expected variant-allele fraction (Formula 12.7.1) against the fraction p of cells carrying the mutation, for a heterozygous mutation at a diploid locus, after loss of the other allele, and with the mutant allele duplicated; the dotted line is a fraction of 0.05. B: the probability of observing at least five supporting reads, 1 − P(Bin(n, f) ≤ 4), against depth, for allele fractions 0.02 to 0.25. At 100× a variant at f = 0.05 is seen with probability 0.56 and at f = 0.10 with 0.98; f = 0.02 needs about 400× for a probability of 0.9. The dashed line is the chance that five or more reads carry the same wrong base at Q30: 3 × 10⁻¹⁰ at depth 100 but 3 × 10⁻⁵ at depth 1000, so very deep sequencing needs error models per context or molecular identifiers rather than a fixed read threshold](./plots/somatic-detection.py)
 
+:::
+
 Two further problems are specific to somatic calling. Clonal haematopoiesis puts real somatic mutations in the "normal" blood sample, where they are mistaken for artefacts or, worse, cause a true tumour variant to be filtered; and low-level contamination of the normal with tumour does the same. And at low allele fractions the error processes of the library (oxidative damage during fragmentation, deamination in formalin-fixed tissue) dominate, which is why liquid-biopsy assays use **unique molecular identifiers** and duplex consensus reads ([7.8.9](/7.8.9#sec-9.3.3)).
 
 ## 12.8. Annotation and Interpretation
@@ -204,6 +206,8 @@ $$
 
 ![The Bayesian reading of the ACMG/AMP rules. A: posterior probability that a variant is pathogenic against the summed points of evidence (Formula 12.8.1), for three prior probabilities; the dotted lines are the class boundaries 0.99, 0.90, 0.10 and 0.001, which with the prior 0.1 fall at +10, +6, −1 and −7 points. The vertical axis is on a logit scale, on which the curves are straight lines: each point of evidence multiplies the odds by 350^(1/8) = 2.08. B: the points assigned to the criteria by their strength; benign criteria count negative](./plots/acmg-points.py)
 
+:::
+
 Most variants collect too little evidence and remain *variants of uncertain significance*, which cannot be used for clinical decisions. The fraction is higher for people whose ancestry is under-represented in the databases, since the population-frequency and segregation evidence is weaker. ClinVar collects submitted classifications with their evidence and flags conflicts between laboratories; ClinGen expert panels write gene-specific rules, which is the practical answer to the generic guidelines being too loose for any one gene.
 
 ## 12.9. Diagnosing a Rare Disease
@@ -211,6 +215,8 @@ Most variants collect too little evidence and remain *variants of uncertain sign
 Exome or genome sequencing of a patient yields some $4\times10^6$ variants, of which one or two may explain the disease. The analysis is a sequence of filters, each justified by genetics rather than by convenience: variants frequent in the matched population are excluded (Section 12.8.2); the consequence and the gene are required to fit the phenotype; and the inheritance pattern in the family must hold — a de novo variant for a sporadic dominant disorder, two variants in trans for a recessive one (phase matters, and can be determined from the parents or from long reads), homozygosity in a consanguineous family ([7.4.14](/7.4.14#sec-14.11)).
 
 **Example 12.9.1** A trio gives the strongest design for a severe sporadic disorder. Each child carries about $74$ new single-nucleotide mutations genome-wide ($6.2\times10^9$ base pairs at $1.2\times10^{-8}$ per base pair per generation), of which about $0.8$ falls in the $35\,\mathrm{Mb}$ of coding exons. A damaging new mutation in a constrained gene whose function fits the phenotype is therefore, by itself, strong evidence. The filter is only as good as the genotypes: as Section 12.5 showed, genotyping errors produce Mendelian violations in numbers far exceeding the true de novo count, so candidates are confirmed by inspecting the reads and by an independent assay.
+
+:::
 
 Phenotype-driven tools (Exomiser and similar) rank candidate genes by the semantic similarity between the patient's Human Phenotype Ontology terms and the phenotypes recorded for each gene, in humans and in model organisms, combined with the variant-level evidence; this converts the physician's observations into a prior over genes. Where no diagnosis is found, the causes are in order: the variant is of a class not well detected (structural, repeat expansion, deep intronic, mosaic), the gene is not yet known to cause disease, or the phenotype is not genetic in the assumed way. Re-analysis of unsolved cases after one or two years yields further diagnoses at an appreciable rate, purely because gene–disease knowledge has grown, which is an argument for storing the data in a reanalysable form ([7.8.1](/7.8.1#sec-1.6)).
 

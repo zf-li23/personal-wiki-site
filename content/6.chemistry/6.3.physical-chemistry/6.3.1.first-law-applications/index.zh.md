@@ -299,6 +299,8 @@ $V_2 = nRT_2/p_2 = 0.0640\,\mathrm{m^3}$；$W = \Delta U = -5.40\,\mathrm{kJ}$�
 | (3) 绝热可逆 | $0.0398$ | $108.7$ | $-9.03$ | $0$ | $-9.03$ | $-15.05$ |
 | (4) 绝热恒外压 | $0.0640$ | $174.8$ | $-5.40$ | $0$ | $-5.40$ | $-9.00$ |
 
+:::
+
 由此可以得出几条一般结论：从同一始态出发，等温可逆与等温不可逆过程可以到达同一终态，绝热可逆与绝热不可逆过程却不能（$108.7\,\mathrm{K}$ 对 $174.8\,\mathrm{K}$），这在下一章由熵得到解释（[6.3.2](/6.3.2) 例 2.3.1）；绝热膨胀中系统对外做的功全部来自内能，可逆膨胀做功最多，所以降温最多；四个过程中等温可逆膨胀做功最多，绝热恒外压膨胀做功最少。
 
 ## 1.5. 实际气体
@@ -566,6 +568,8 @@ print(brentq(lambda t: DH + heat_products(t, products), 300, 5000))  # about 233
 得 $T \approx 2330\,\mathrm{K}$。过量空气使火焰温度降低（下图）：多余的 $\ce{O2}$ 与 $\ce{N2}$ 也要被加热。实际火焰温度更低一些（约 $2225\,\mathrm{K}$），因为高温下 $\ce{CO2}$ 与 $\ce{H2O}$ 部分离解为 CO、$\ce{H2}$、OH 等，离解吸热；考虑离解需要同时求解化学平衡（[6.3.7](/6.3.7)）。用纯氧代替空气，不计离解的计算值高达 $4800\,\mathrm{K}$，但离解使实际值只有约 $3000\,\mathrm{K}$；乙炔–氧焰（$\ce{C2H2 + 5/2O2 -> 2CO2 + H2O}$，$\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} = -1256.2\,\mathrm{kJ\,mol^{-1}}$，以生成气态水计，产物分子少、热容小）可达约 $3400\,\mathrm{K}$，用于气焊与切割。
 
 ![Adiabatic flame temperature of methane burning at constant pressure, against the ratio of air supplied to stoichiometric air (heat capacities from the empirical fits, dissociation neglected)](./plots/flame-temperature.py)
+
+:::
 
 火箭推进剂的选择也基于同样的热化学：肼与四氧化二氮 $\ce{2N2H4(l) + N2O4(g) -> 3N2(g) + 4H2O(l)}$ 放热 $1.26 \times 10^3\,\mathrm{kJ\,mol^{-1}}$（以液态水计），产物是摩尔质量小的气体，喷出速度高。
 

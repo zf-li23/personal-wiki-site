@@ -229,6 +229,8 @@ The same initial data are perfectly reasonable for the wave equation $u_{yy}=u_{
 
 **Example 1.4.2 (The Backward Heat Equation)** On $0<x<\pi$ with $u(0,t)=u(\pi,t)=0$, the function $u_n=\mathrm{e}^{-n^2t}\sin nx$ solves $u_t=u_{xx}$. Suppose we want to recover the initial temperature from the temperature at time $T>0$. Final data $u(x,T)=\varepsilon\sin nx$ lead to the initial state $u(x,0)=\varepsilon\mathrm{e}^{n^2T}\sin nx$: a change of size $\varepsilon$ in the final data changes the initial state by $\varepsilon\mathrm{e}^{n^2T}$, which is unbounded in $n$. Heat conduction destroys information about fine details (high frequencies) exponentially fast, so reconstructing the past from the present is unstable.
 
+:::
+
 Ill-posed problems are not meaningless: deblurring an image, computed tomography and other inverse problems are of this kind. They require extra a priori information about the solution (regularization), which is a subject of its own.
 
 ## 1.5. Classification of Second-Order Linear Equations

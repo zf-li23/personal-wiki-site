@@ -20,6 +20,8 @@ $$
 \hat{x} = \frac{\boldsymbol{a}^{\mathsf T}\boldsymbol{b}}{\boldsymbol{a}^{\mathsf T}\boldsymbol{a}} = \frac{8}{5}, \qquad \boldsymbol{r} = \boldsymbol{b} - \frac{\boldsymbol{a}^{\mathsf T}\boldsymbol{b}}{\boldsymbol{a}^{\mathsf T}\boldsymbol{a}}\boldsymbol{a} = \frac{6}{5}\begin{bmatrix} -1 \\ 2 \end{bmatrix}, \qquad \|\boldsymbol{r}\| = \frac{6}{\sqrt{5}}.
 $$
 
+:::
+
 这个例子用到的"长度""垂直"都可以用 $\boldsymbol{a}^{\mathsf T}\boldsymbol{b}$ 表达，下面把它推广到 $\mathbb{R}^n$。
 
 ### 4.1.1. 内积与长度

@@ -1,6 +1,6 @@
 ---
 title: Precipitation–Dissolution Equilibria
-source_hash: c7cfb6a7c9bd
+source_hash: 7ee6fb05582f
 ---
 
 Many important chemical processes involve the formation and dissolution of sparingly soluble substances: gravimetric analysis and the separation and identification of ions in analytical chemistry, impurity removal and hydrometallurgy in industry, the formation and removal of boiler scale, the formation of minerals, bone, and teeth in nature, and even the colloidal synthesis of size-uniform semiconductor nanocrystals such as CdS and PbS (whose nucleation and growth are likewise governed by precipitation–dissolution equilibrium and supersaturation). This chapter applies the equilibrium principles of [6.1.8](/6.1.8) to the heterogeneous ionic equilibrium between a solid and its saturated solution. We first define the solubility product and discuss its relation to solubility (10.1), then derive from the comparison of the reaction quotient with the solubility product the criteria for precipitation and dissolution (10.2). Next we discuss the effects of the common ion, of added salt, of acid, and of oxidation–reduction and complexation on the equilibrium (10.3), which draw on the acid–base and complexation equilibria of [6.1.9](/6.1.9), and finally treat fractional precipitation, the conversion of precipitates, and the separation of metal ions (10.4). The quantitative treatment of the effective concentration of ions (activity) and of ionic strength is found in [Physical Chemistry](/6.3); gravimetric analysis, precipitation titration, and systematic qualitative analysis are found in [Analytical Chemistry](/6.4).
@@ -73,6 +73,8 @@ $$
 K_{\mathrm{sp}} = S(2S)^2 = 4S^3, \qquad S = \sqrt[3]{\frac{5.61 \times 10^{-12}}{4}} = 1.12 \times 10^{-4}\,\mathrm{mol\,L^{-1}}.
 $$
 So $[\ce{Mg^2+}] = 1.12 \times 10^{-4}$, $[\ce{OH-}] = 2.24 \times 10^{-4}$, and $\mathrm{pH} = 10.35$.
+
+:::
 
 In general, for $\ce{A_nB_m}$, $[\ce{A^{m+}}] = nS$, $[\ce{B^{n-}}] = mS$, and $K_{\mathrm{sp}} = (nS)^n(mS)^m$:
 
@@ -150,6 +152,8 @@ When $\ce{BaCl2}$ or $\ce{Na2SO4}$ is added to a saturated solution of $\ce{BaSO
 
 At the same concentration of common ion, $\ce{F-}$ lowers the solubility far more: $[\ce{F-}]$ appears squared in $K_{\mathrm{sp}}$, so the solubility is inversely proportional to the square of the added $\ce{F-}$ concentration, but only to the square root of the added $\ce{Ca^2+}$ concentration.
 
+:::
+
 ![Left: solubility of CaF₂ as a function of the added Ca²⁺ or F⁻ concentration (common-ion effect, log–log axes); right: ratio of the solubility of BaSO₄ in KNO₃ solution to that in pure water (salt effect, activity coefficients estimated with the Davies equation)](./plots/common-ion-salt-effect.py)
 
 Practical applications of the common-ion effect:
@@ -202,6 +206,8 @@ $$
 [\ce{NH4+}] \ge \frac{K_{\mathrm{b}}[\ce{NH3}]}{[\ce{OH-}]} = \frac{1.8 \times 10^{-5} \times 0.050}{4.7 \times 10^{-6}} = 0.19.
 $$
 The required $\ce{NH4Cl}$ is $0.19 \times 0.40\,\mathrm{L} \times 53.49\,\mathrm{g\,mol^{-1}} = 4.1\,\mathrm{g}$. This is the principle by which an $\ce{NH3}$–$\ce{NH4Cl}$ buffer is used in qualitative analysis to precipitate $\ce{Fe^3+}$ and $\ce{Al^3+}$ while $\ce{Mg^2+}$ stays in solution.
+
+:::
 
 Now consider sparingly soluble sulfides. The dissolution of a sulfide in acid can be written as the sum of three equilibria:
 
@@ -334,6 +340,8 @@ $$
 [\ce{H+}] \ge \sqrt{\frac{0.10 \times 0.10}{3 \times 10^{10}}} = 5.8 \times 10^{-7}, \qquad \mathrm{pH} \le 6.2.
 $$
 With the pH controlled between 2.2 and 6.2 (for example with an HAc–NaAc buffer), ZnS precipitates completely while MnS does not.
+
+:::
 
 The same calculation for the separation of $\ce{Cd^2+}$ and $\ce{Zn^2+}$ (each $0.10\,\mathrm{mol\,L^{-1}}$) shows that complete precipitation of CdS requires $[\ce{H+}] \le 1.1\,\mathrm{mol\,L^{-1}}$ and non-precipitation of ZnS requires $[\ce{H+}] \ge 0.58\,\mathrm{mol\,L^{-1}}$, a very narrow window. In actual qualitative analysis, CdS, PbS, CuS, HgS, and so on are precipitated by passing $\ce{H2S}$ into about $0.3\,\mathrm{mol\,L^{-1}}$ HCl (the hydrogen sulfide group). By the data in the table above, ZnS is already supersaturated under these conditions (the $[\ce{Zn^2+}]$ allowed to remain in solution is only about $0.03\,\mathrm{mol\,L^{-1}}$), but ZnS nucleates very slowly from acidic solution and does not precipitate in the usual working time: the separation exploits differences in rate as well as in equilibrium. This again shows that sulfide data can be used only as order-of-magnitude estimates. The systematic grouping scheme of qualitative analysis is found in [Analytical Chemistry](/6.4).
 

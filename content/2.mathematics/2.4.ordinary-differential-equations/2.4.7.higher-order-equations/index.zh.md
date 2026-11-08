@@ -71,6 +71,8 @@ $$
 
 ![单摆 theta'' + sin theta = 0 的能量等值线 (theta')^2/2 - cos theta = E：闭曲线是往复摆动，上下两侧的曲线是旋转运动，经过 (±pi, 0) 的分界线（E = 1）把两者分开](./plots/pendulum-energy.py)
 
+:::
+
 $y''=f(ax+by)$（$b\ne0$）也可化为这一类型：令 $z=ax+by$，则 $z''=by''=bf(z)$。
 
 ### 7.1.4. 只含两个相邻或相隔一阶的导数的方程

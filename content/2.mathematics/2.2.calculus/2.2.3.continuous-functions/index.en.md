@@ -1,6 +1,6 @@
 ---
 title: Continuous Functions
-source_hash: f9cc027ba1a1
+source_hash: 4728a95393cd
 ---
 
 Intuitively, the graph of a continuous function is a curve "without breaks." This chapter makes the intuition precise in the language of limits from [Chapter 2](/2.2.2): $f$ is continuous at $x_0$ when $\lim\limits_{x \to x_0} f(x) = f(x_0)$, that is, when the limit equals the value of the function. On this basis we discuss in turn the classification of points of discontinuity, the behavior of continuity under operations, and the continuity of elementary functions. We then establish two further forms of the completeness of the real numbers, the nested interval theorem and the Bolzano–Weierstrass theorem, and use them to prove the three basic properties of continuous functions on closed intervals (Bolzano's theorem, the intermediate value theorem and the extreme value theorem) as well as the sufficiency part of the Cauchy criterion. Finally we introduce uniform continuity, a global property that [Chapter 7](/2.2.7) needs to prove that continuous functions are integrable.
@@ -39,6 +39,8 @@ From the relation between one-sided limits and limits, $f$ is continuous at $x_0
 **Example 3.1.1** Prove that $a^x$ ($a > 0$, $a \ne 1$) is continuous everywhere on $(-\infty, +\infty)$.
 
 **Proof** Take any $x_0$. Then $\Delta y = a^{x_0 + \Delta x} - a^{x_0} = a^{x_0}(a^{\Delta x} - 1)$; by Example 2.3.3, $a^{\Delta x} \to 1$ as $\Delta x \to 0$, so $\Delta y \to 0$. $\square$
+
+:::
 
 Examples 2.3.3 and 2.4.2 of [Chapter 2](/2.2.2) have already shown that the limits of $\sin x$, $\cos x$, $a^x$ and $\ln x$ at every point of their domains equal their values; in general, the basic elementary functions are continuous at every point of their domains (§3.1.3).
 
@@ -230,6 +232,8 @@ The key to applying Bolzano's theorem and the intermediate value theorem is to c
 
 **Proof** By local sign preservation for limits of functions, there exists $X > a$ such that $f(x) < 0$ for $x > X$. Then $f$ is continuous on the closed interval $[a, X + 1]$ and takes values of opposite signs at its endpoints, and Bolzano's theorem gives the result. $\square$
 
+:::
+
 The trick in Example 3.3.4 is to use the limit to "truncate" a problem on an infinite interval to one on a closed interval.
 
 **Theorem 3.3.3 (Extreme Value Theorem)** Let $f \in C[a, b]$. Then
@@ -270,6 +274,8 @@ That $f$ is continuous on an interval $I$ means that for every point $v \in I$ a
 
 **Proof** For all $u, v$, $|\sin u - \sin v| = 2\left|\cos\frac{u + v}2\right|\left|\sin\frac{u - v}2\right| \leq |u - v|$. Given $\varepsilon > 0$, take $\delta = \varepsilon$. $\square$
 
+:::
+
 In general, if there is a constant $L$ with $|f(u) - f(v)| \leq L|u - v|$ for all $u, v \in I$ (a Lipschitz condition), then $f$ is uniformly continuous on $I$, with $\delta = \frac\varepsilon L$. [Chapter 5](/2.2.5) shows that functions with bounded derivatives satisfy this condition; but a bounded derivative is only a sufficient condition for uniform continuity, not a necessary one: $\sqrt x$ is uniformly continuous on $[0, 1]$ (Theorem 3.4.1), although its derivative is unbounded near $0$.
 
 **Example 3.4.2** $f(x) = \frac1x$ is not uniformly continuous on $(0, +\infty)$.
@@ -279,6 +285,8 @@ In general, if there is a constant $L$ with $|f(u) - f(v)| \leq L|u - v|$ for al
 $$
 |f(u) - f(v)| = \frac2\delta - \frac1\delta = \frac1\delta > 1 = \varepsilon_0. \qquad \square
 $$
+
+:::
 
 Similarly, $x^2$ is not uniformly continuous on $(-\infty, +\infty)$ (take $u_n = n + \frac1n$ and $v_n = n$; then $u_n^2 - v_n^2 = 2 + \frac1{n^2} > 2$). These two counterexamples represent the two ways uniform continuity can fail: becoming infinitely steep near a finite endpoint ($\frac1x$ near $0$), or becoming steeper and steeper at infinity ($x^2$). The next theorem shows that neither can happen on a bounded closed interval.
 
@@ -297,6 +305,8 @@ As in the proof of the extreme value theorem, the key is conclusion 2 of the Bol
 
 **Proof** Let $A$ be the limit. Given $\varepsilon > 0$, there exists $X > a$ such that $|f(x) - A| < \frac\varepsilon2$ for $x > X$, so $|f(u) - f(v)| < \varepsilon$ for $u, v \in (X, +\infty)$. By the Heine–Cantor theorem, $f$ is uniformly continuous on $[a, X + 1]$: there exists $\delta \in (0, 1)$ such that $|f(u) - f(v)| < \varepsilon$ whenever $u, v \in [a, X + 1]$ and $|u - v| < \delta$. Now take any $u, v \in [a, +\infty)$ with $|u - v| < \delta < 1$: if the smaller of the two points is $\leq X$, then both lie in $[a, X + 1]$; otherwise both lie in $(X, +\infty)$. In either case $|f(u) - f(v)| < \varepsilon$. $\square$
 
+:::
+
 Letting the two intervals overlap ($[a, X + 1]$ and $(X, +\infty)$) and taking $\delta < 1$ guarantees that any two sufficiently close points lie in the same piece; this is the standard technique for proving uniform continuity piece by piece.
 
 Finally, consider bounded open intervals. By Example 3.4.2, $\frac1x$ is continuous but not uniformly continuous on $(0, 1)$, because its one-sided limit at the endpoint $0$ does not exist. This turns out to be the only obstruction.
@@ -312,6 +322,8 @@ Necessity: we treat only $x \to a^+$. Given $\varepsilon > 0$, take $\delta$ as 
 **Proof** By Theorem 3.4.2, $f$ extends to a continuous function on $[a, b]$, which is bounded by the extreme value theorem. $\square$
 
 One can also estimate directly without Theorem 3.4.2: for $\varepsilon = 1$, take $\delta$ as in the definition of uniform continuity and fix $x_0 \in (a, b)$. For any $x \in (a, b)$, insert division points between $x_0$ and $x$ so that adjacent points are less than $\delta$ apart; since $|x - x_0| < b - a$, the number $l$ of pieces can be taken to be at most $k = \left\lfloor \frac{2(b - a)}{\delta} \right\rfloor + 1$ (independent of $x$). Estimating piece by piece gives $|f(x) - f(x_0)| < l \leq k$, so $|f(x)| < |f(x_0)| + k$. $\square$
+
+:::
 
 The converse fails: $\sin\frac1x$ is bounded and continuous on $(0, 1)$, but its limit as $x \to 0^+$ does not exist, so by Theorem 3.4.2 it is not uniformly continuous.
 

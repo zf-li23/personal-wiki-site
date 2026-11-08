@@ -1,6 +1,6 @@
 ---
 title: Analysis and Design of Synchronous Sequential Circuits
-source_hash: 99702f0b3a1e
+source_hash: 0ea1c666cef4
 ---
 
 With **flip-flops** ([4.9.6](/4.9.6)) we can build arbitrary **sequential circuits**. This chapter treats the most important class: synchronous sequential circuits, in which all flip-flops are controlled by the same clock. Their mathematical model is the finite-state machine, which comes in Moore and Mealy types and corresponds one to one with the **finite automata** ([4.8.4](/4.8.4)) of formal language theory: an automaton only answers "accept or reject", whereas a state machine produces an output at every step. We first establish the model and the descriptive tools (state tables and state diagrams), then give methods of analysis (from circuit to function) and of design (from function to circuit). State minimization in design uses **equivalence relations** and **partitions** from discrete mathematics. Finally we discuss the timing constraints of synchronous circuits and the maximum clock frequency. The counters and registers of the next chapter are direct applications of the methods here; the hidden Markov model ([4.6.8](/4.6.8)) is the probabilistic version of a finite-state machine, in which both state transitions and outputs occur with probabilities.
@@ -142,6 +142,8 @@ D_0 = \bar Q_2^n\,(Q_0^n + \bar Q_1^n).
 $$
 
 The next states of the six states in the valid cycle are unchanged (verify one by one), while $010 \to 100$ and $101 \to 010 \to 100$. The modified circuit is self-starting.
+
+:::
 
 More examples of analysis (binary counters, decimal counters) are in [4.9.8](/4.9.8).
 

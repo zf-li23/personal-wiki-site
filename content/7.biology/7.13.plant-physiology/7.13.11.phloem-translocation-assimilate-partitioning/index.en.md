@@ -1,7 +1,7 @@
 ---
 title: Phloem Translocation and Assimilate Partitioning
 description: Evidence for the phloem pathway (girdling, ¹⁴C tracing, aphid stylets); physiology of the sieve element–companion cell complex; composition of phloem sap; direction, velocity and specific mass transfer rate; source, sink and source–sink unit, and the sink-to-source transition of the leaf; the pressure-flow hypothesis, the one-dimensional Münch model and its tests; apoplastic loading (SWEET efflux and sucrose–H⁺ symport), polymer trapping and passive loading; unloading pathways and their developmental switches; allocation and partitioning of assimilates, sink strength, source–sink coordination and sugar signaling; protein and RNA signals in the phloem.
-source_hash: b7c8d1ad3480
+source_hash: d11677ce81c3
 ---
 
 The photosynthetic assimilates made in leaves are the source of all plant biomass, but only mature leaves make them in quantity, whereas growth, storage and reproduction take place in root tips, shoot tips, young leaves, tubers, fruits and seeds. It is the **phloem** that carries sugar from the "place of production" to the "place of use." This pathway determines how much of the photosynthate enters harvested organs and in what proportion, and therefore to a large extent the yield and quality of crops: at the same photosynthetic rate, the more assimilate is partitioned to the grain, the higher the harvest index. The phloem also carries signals between organs: sucrose itself, hormones, proteins and RNA all move with the sap, and the flowering signal **florigen** is one example.
@@ -81,6 +81,8 @@ $$
 right at the upper end of the measured range. To reach $200\ \mathrm{g\,h^{-1}\,cm^{-2}}$ at 0.5 M would require a velocity of about $12\ \mathrm{m\,h^{-1}}$, inconsistent with all measurements.
 
 **Example 11.4.2 (Estimating the Specific Mass Transfer Rate from Sink Growth)** A squash fruit increased in dry weight by 250 g in 33 days; the phloem cross-sectional area in the fruit stalk is $0.20\ \mathrm{cm^2}$, of which sieve tubes make up about 1/5. If all the dry matter of the fruit entered through the stalk phloem and the respiratory consumption of the fruit amounts to a further 15% of the input, then the import rate is $250/(1 - 0.15)/(33\times24) = 0.37\ \mathrm{g\,h^{-1}}$; the specific mass transfer rate based on phloem cross section is $0.37/0.20 = 1.9\ \mathrm{g\,h^{-1}\,cm^{-2}}$ and that based on sieve tube cross section is $9.3\ \mathrm{g\,h^{-1}\,cm^{-2}}$. This method of estimation from sink growth and the cross section of the transport channel was the earliest way of determining the specific mass transfer rate (values illustrative).
+
+:::
 
 Transport velocity can be measured by pulse labeling: a source leaf is fed $\ce{^{14}CO2}$ (or short-lived $\ce{^{11}CO2}$) for a short time, and the arrival time of the label is recorded at two positions along the pathway or in the sink.
 
@@ -166,6 +168,8 @@ $$
 -\frac{\mathrm{d}P}{\mathrm{d}x} = \frac{8\eta f u}{a^2} = \frac{8\times1.7\times10^{-3}\times2\times2.78\times10^{-4}}{(10\times10^{-6})^2}\ \mathrm{Pa\,m^{-1}} \approx 0.076\ \mathrm{MPa\,m^{-1}}.
 $$
 Herbaceous plants have transport distances of less than 1 m, and the sieve element turgor of 0.7–1.5 MPa measured with aphid stylets is sufficient to drive flow; but if the tube diameter were constant, a 50 m tree would need a pressure difference of about 4 MPa, whereas the turgor measured or calculated in trees is similar to that of herbaceous plants (Section 11.6.3). This is the main quantitative problem facing the pressure-flow hypothesis in large plants.
+
+:::
 
 ![Numerical solution of the one-dimensional Münch model (Eqs. (11.1)–(11.3)). A 1 m sieve tube, with 0–0.2 m the source region (sucrose loaded at constant rate) and 0.8–1.0 m the sink region (unloading by first-order kinetics), xylem water potential −0.5 MPa. A: turgor P along the tube falls from about 0.84 MPa to about 0.79 MPa, and this small pressure difference is enough to drive bulk flow; B: sucrose concentration rises to about 0.6 M in the source region, is slightly diluted in the transport region by the entry of a little water, and falls with unloading in the sink region; C: the cross-sectional mean velocity increases in the source region as water enters, is about 0.8 m/h in the transport region, and decreases in the sink region as water leaves. Parameters: radius 10 µm, viscosity 1.7 mPa s, sieve plate resistance factor 2, membrane hydraulic conductivity 5 × 10⁻¹⁴ m s⁻¹ Pa⁻¹, 25 °C](./plots/pressure-flow.py)
 

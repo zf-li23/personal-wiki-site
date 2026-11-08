@@ -1,7 +1,7 @@
 ---
 title: Properties of Regular Languages
 description: The pumping lemma for regular languages and its applications (including an example showing that the pumping lemma is not sufficient); closure under union, concatenation, closure, complement, intersection, difference, reversal, homomorphism, and inverse homomorphism, and the product automaton; decision problems of emptiness, membership, finiteness, and equivalence; equivalence and distinguishability of states, the table-filling algorithm and its correctness, DFA minimization; the Myhill–Nerode theorem and uniqueness of the minimal DFA.
-source_hash: 2aa5aa605e73
+source_hash: cf3a5d459633
 ---
 
 The previous two chapters proved that **regular expressions**, **DFAs**, NFAs, and ε-NFAs describe the same family of languages. This chapter studies the properties of this family as a whole and answers four kinds of questions. Which languages are not regular? The pumping lemma and the Myhill–Nerode theorem provide tools for proofs: finitely many states can remember only finite information. Under which operations do regular languages stay regular? Union, intersection, complement, reversal, homomorphism, and others all work; these closure properties are both a means of constructing automata and a means of proving nonregularity. Which questions about regular languages have algorithms? Emptiness, membership, finiteness, and equivalence are all decidable. Finally, a regular language has infinitely many DFAs, among which the one with the fewest states is essentially unique and can be found by the table-filling algorithm. Chapter 9 discusses the same questions for context-free languages, where many answers differ: context-free languages are not closed under intersection and complement, and equivalence is undecidable.
@@ -59,6 +59,8 @@ where $1 + t \ge 2$ and $p - t \ge p - n \ge 2$, so the product is not prime. $\
 
 **Example 6.1.5 (Pumping Down)** $\{0^i1^j \mid i > j\}$ is not regular. Take $w = 0^{n+1}1^n$. Pumping up only produces more 0s and is useless; take $k = 0$: $xz = 0^{n+1-t}1^n$ with $t \ge 1$ has no more 0s than 1s.
 
+:::
+
 The pumping lemma is only a necessary condition: some nonregular languages also satisfy its conclusion.
 
 **Example 6.1.6** $L = \{a^ib^jc^k \mid i, j, k \ge 0, \text{ if } i = 1 \text{ then } j = k\}$ satisfies the conclusion of the pumping lemma (with $n = 2$) but is not regular (Example 6.2.4). Let $w = a^ib^jc^k \in L$ with $\lvert w\rvert \ge 2$, and take $x = \varepsilon$:
@@ -67,6 +69,8 @@ The pumping lemma is only a necessary condition: some nonregular languages also 
 - $i = 1$: take $y = a$. After pumping, the number of $a$s is $k$; for $k \ne 1$ there is no restriction, and for $k = 1$ the string is $w$ itself; all belong to $L$.
 - $i = 2$: take $y = aa$. After pumping, the number of $a$s is even and different from 1.
 - $i \ge 3$: take $y = a$. After pumping, the number of $a$s is at least $i - 1 \ge 2$.
+
+:::
 
 In all four cases $\lvert xy\rvert \le 2$. This example shows that the pumping lemma cannot prove the nonregularity of certain languages; in that case one can resort to closure properties (Section 6.2) or the Myhill–Nerode theorem (Section 6.5), the latter giving a necessary and sufficient condition for regularity.
 
@@ -228,6 +232,8 @@ No arc enters $D$, so it is unreachable from $A$ and is deleted first. We fill t
 | $H$ | 1 | $=$ | 0 | 1 | 1 | 1 |
 
 Round 0 marks $C$ against all other states. In round 1, for example for $\{A, B\}$: on reading 1 they go to $F$ and $C$, and $\{C, F\}$ is already marked. In round 2, for $\{A, G\}$: on reading 0 they go to $B$ and $G$, and $\{B, G\}$ was marked in round 1. $\{A, E\}$ goes to $\{B, H\}$ on reading 0 and both go to $F$ on reading 1; $\{B, H\}$ both go to $G$ on reading 0 and both go to $C$ on reading 1; these two pairs are never marked, so $A \equiv E$ and $B \equiv H$, and all other states are pairwise distinguishable.
+
+:::
 
 Scanning all pairs of states round by round as in the definition takes $O(n^2\lvert\Sigma\rvert)$ per round and at most $O(n^2)$ rounds. If for each pair of states we record "which pairs of states reach it by reading one symbol" and propagate marks along these reverse links when a pair is marked, the total time drops to $O(n^2\lvert\Sigma\rvert)$. Hopcroft's partition refinement algorithm achieves $O(n\lvert\Sigma\rvert\log n)$ and is the practical minimization algorithm.
 

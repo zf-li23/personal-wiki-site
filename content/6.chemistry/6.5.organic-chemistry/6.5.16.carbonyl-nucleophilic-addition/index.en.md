@@ -1,6 +1,6 @@
 ---
 title: Nucleophilic Addition to Aldehydes and Ketones
-source_hash: d92e680b0bee
+source_hash: 19965d56d88c
 ---
 
 The carbonyl group, C=O, is the most important functional group in organic chemistry: the chemistry of aldehydes and ketones, carboxylic acids and their derivatives, sugars, and many biomolecules is built on its reactions. In contrast to the π bond of an alkene, the π bond of a carbonyl group is strongly polarized and the carbon end is electron-poor, so the characteristic reaction of aldehydes and ketones is not electrophilic addition but nucleophilic addition, in which a **nucleophile** attacks the carbonyl carbon. This chapter begins with the structure of the carbonyl group and its **frontier orbitals**, and then discusses the thermodynamics of nucleophilic addition, the trajectory of attack (the Bürgi–Dunitz angle), acid and base catalysis, reactivity, and stereochemistry (the Felkin–Anh model, which draws on the **conformational analysis** of [6.5.4](/6.5.4#sec-4.2) and the Re/Si faces of [6.5.5](/6.5.5#sec-5.9.2)). It then treats additions of oxygen, sulfur, carbon, and nitrogen nucleophiles in turn, and ends with umpolung, the strategy that turns the carbonyl carbon into a nucleophilic center. Addition of hydride (reduction), oxidation, and the conjugate addition to α,β-unsaturated aldehydes and ketones are covered in the next chapter, [6.5.17](/6.5.17); reactions at the α carbon (enols and enolates) are in [6.5.21](/6.5.21) and [6.5.22](/6.5.22); nucleophilic acyl substitution of carboxylic acid derivatives is in [6.5.19](/6.5.19). Acetals (glycosides), imines (Schiff bases), and the umpolung chemistry of vitamin B1 recur throughout biochemistry, so this chapter emphasizes their mechanisms.
@@ -140,6 +140,8 @@ The model rests on two arguments. (1) In the staggered conformation, the attacki
 
 **Example 16.4.1** Addition of $\ce{CH3MgI}$ to (S)-2-phenylpropanal. On the α carbon, L = Ph, M = $\ce{CH3}$, S = H. According to the Felkin–Anh model, methyl attacks past H, and the major product is (2S,3S)-3-phenylbutan-2-ol, in a ratio of about 2:1 to the minor diastereomer (Cram's 1952 data). Modest selectivity is typical: when M and S on the α carbon differ little in size, the diastereoselectivity is only 2:1 to 5:1.
 
+:::
+
 There are two important extensions:
 
 - The polar Felkin–Anh model. When the α carbon carries an electronegative group (halogen, OR, $\ce{NR2}$), the σ* orbital of the C–X bond is low in energy, and this group occupies the position of L (anti to Nu) regardless of its size. This also explains the selectivity of α-halo ketones. Cornforth and coworkers (1959) explained the same phenomenon by dipole repulsion: the conformation in which the C=O and C–Cl dipoles are antiparallel is the most stable, and the nucleophile attacks from the side of the small group. The two models give the same prediction for most substrates, and recent calculations favor a modified Cornforth conformation (Evans and coworkers, 2003).
@@ -203,6 +205,8 @@ CCOC(=O)CCC(C)=O>>CCOC(=O)CCC1(C)OCCO1
 CCOC(=O)CCC1(C)OCCO1>>OCCCC1(C)OCCO1
 OCCCC1(C)OCCO1>>CC(=O)CCCO
 ```
+
+:::
 
 Conversely, an aldehyde group can be protected while an alkene is oxidized: acrolein is first converted to its diethyl acetal with ethanol in dry HCl, the double bond is then dihydroxylated with cold dilute permanganate, and hydrolysis of the acetal finally gives glyceraldehyde. Without protection, the aldehyde group would be oxidized first. A summary of the choice of protecting groups and of orthogonal protection (protecting groups removed one at a time under mutually compatible conditions) is in [6.5.20](/6.5.20#sec-20.8.3).
 

@@ -1,6 +1,6 @@
 ---
 title: Real Symmetric Matrices
-source_hash: 3e28167632ce
+source_hash: d99b0771c632
 ---
 
 A general square matrix need not be diagonalizable, and even when it is, the eigenvectors used need not be orthogonal. Real symmetric matrices have both properties at once: they can always be diagonalized by an **orthogonal matrix**. Starting from this fact, the chapter treats in turn the spectral decomposition of real symmetric matrices, quadratic forms and the Rayleigh quotient, positive definite matrices and congruence; finally it extends "orthogonal diagonalization of symmetric matrices" to arbitrary $m\times n$ matrices, obtaining the singular value decomposition, and uses it to define the pseudoinverse and the spectral norm.
@@ -71,6 +71,8 @@ $$
 P=Q\begin{bmatrix}I_r&\\&O\end{bmatrix}Q^{\mathsf T}=\boldsymbol{q}_1\boldsymbol{q}_1^{\mathsf T}+\cdots+\boldsymbol{q}_r\boldsymbol{q}_r^{\mathsf T}.
 $$
 
+:::
+
 The spectral decomposition $A=Q\Lambda Q^{\mathsf T}$ can also be written $Q^{\mathsf T}AQ=\Lambda$, which leads to the following equivalence relation.
 
 **Definition 7.1.1 (Orthogonal Similarity)** Real square matrices $A,B$ are said to be **orthogonally similar** if there is an orthogonal matrix $Q$ such that $Q^{\mathsf T}AQ=B$.
@@ -112,6 +114,8 @@ f(\boldsymbol{x})=f(\boldsymbol{x}_0)+\nabla f(\boldsymbol{x}_0)^{\mathsf T}(\bo
 $$
 
 where $\nabla f(\boldsymbol{x}_0)=\Big[\frac{\partial f}{\partial x_i}(\boldsymbol{x}_0)\Big]_{n\times1}$ is the gradient and $H(\boldsymbol{x}_0)=\Big[\frac{\partial^2 f}{\partial x_i\partial x_j}(\boldsymbol{x}_0)\Big]_{n\times n}$ is called the *Hessian matrix* of $f$ at $\boldsymbol{x}_0$. When the second partial derivatives are continuous, mixed partials do not depend on the order of differentiation, so the Hessian matrix is real symmetric and the second-order term of the Taylor expansion is a quadratic form.
+
+:::
 
 The spectral decomposition removes the cross terms of a quadratic form. Let $A=Q\Lambda Q^{\mathsf T}$ and make the orthogonal change of variables $\boldsymbol{y}=Q^{\mathsf T}\boldsymbol{x}$; then
 
@@ -241,6 +245,8 @@ The algorithm uses only the lower triangular part of $A$ and takes about $\frac1
 $$
 A=\begin{bmatrix}2&&\\1&2&\\1&1&2\end{bmatrix}\begin{bmatrix}2&1&1\\&2&1\\&&2\end{bmatrix}.
 $$
+
+:::
 
 Over the complex field, a positive definite Hermitian matrix likewise has a unique factorization $A=R^{\mathsf H}R$ with $R$ upper triangular with positive real diagonal; see [Chapter 13](/2.1.13).
 
@@ -383,6 +389,8 @@ Adding $\boldsymbol{u}_3=\boldsymbol{e}_3$ gives $U=[U_1\ \boldsymbol{e}_3]$, $\
 
 ![Left: A maps the unit circle onto an ellipse with semi-axes σ_i u_i. Right: the relative error of the truncated SVD of an 80×60 matrix as a function of the rank k](./plots/svd-geometry-low-rank.py)
 
+:::
+
 The SVD is the most widely used matrix factorization in data analysis. The terms of the rank-one expansion are ordered by decreasing $\sigma_i$, and truncating after $k$ terms gives the best rank-$k$ approximation of $A$ (Theorem 7.6.2), the basis of "low-rank models" in image compression, denoising and recommender systems. For a centered data matrix, the right singular vectors are the principal component directions; the number of singular values that are not negligible compared with the others measures the numerical rank; and the pseudoinverse of the next section handles all kinds of linear systems and least squares problems in a unified way.
 
 ## 7.5. The Moore–Penrose Pseudoinverse
@@ -464,6 +472,8 @@ Another commonly used matrix norm is the *Frobenius norm* $\|A\|_{\mathrm{F}}=\s
 The proof of this inequality (Weyl's inequality) requires the Courant–Fischer minimax principle and is omitted here. It says that singular values are well-conditioned: they change by at most as much as the matrix does. Eigenvalues behave differently.
 
 **Example 7.6.1 (Singular Values Versus Eigenvalues)** Let $J_n(0)$ be the Jordan block of order $n$ (zero diagonal, ones on the superdiagonal). Then $J_n(0)^{\mathsf T}J_n(0)=\operatorname{diag}(0,1,\dots,1)$, so $J_n(0)$ has the $n$-fold eigenvalue $0$ and singular values $1$ ($n-1$ times) and $0$ (once). Changing the $(n,1)$ entry of $J_n(0)$ to $10^{-n}$ gives $\tilde J$ with $\|\tilde J-J_n(0)\|=10^{-n}$. Now $\tilde J^{\mathsf T}\tilde J=\operatorname{diag}(10^{-2n},1,\dots,1)$, so the singular values are $1$ ($n-1$ times) and $10^{-n}$, a change of exactly $10^{-n}$; but the characteristic polynomial is $\lambda^n-10^{-n}$, with eigenvalues $10^{-1}\mathrm{e}^{2\pi\mathrm{i}j/n}$ ($j=1,\dots,n$), a change of $10^{-1}$, which is $10^{n-1}$ times the perturbation. In general the change of the eigenvalues can only be bounded as $|\tilde\lambda_i-\lambda_i|\le C_A\|\tilde A-A\|^{1/n}$, where $C_A$ is a constant depending on $A,\tilde A$; this is why eigenvalues are said to be ill-conditioned. Symmetric matrices are the exception: if $A,\tilde A$ are both real symmetric with eigenvalues in decreasing order, then likewise $|\tilde\lambda_i-\lambda_i|\le\|\tilde A-A\|$ (also a consequence of the minimax principle), so the eigenvalue problem for real symmetric matrices is well-conditioned.
+
+:::
 
 The extremal characterization of singular values also answers the question "how well can $A$ be approximated by a matrix of low rank?"
 

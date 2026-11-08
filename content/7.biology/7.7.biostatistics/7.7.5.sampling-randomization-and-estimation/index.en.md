@@ -1,7 +1,7 @@
 ---
 title: Sampling, Randomization and Estimation
 description: Designs for probability sampling (simple random, systematic, stratified, cluster); randomization methods and blinding in randomized clinical trials; properties of point estimators and maximum likelihood; confidence intervals for means, variances, proportions and Poisson rates (t and chi-square intervals, Wilson and Clopper–Pearson intervals, exact Poisson intervals); one-sided intervals, sample size and margin of error; bootstrap intervals; Bayesian estimation with the beta–binomial model. Illustrated with birth weight, diagnostic accuracy, an occupational cohort and lung cancer screening.
-source_hash: e3bafdc7f11b
+source_hash: c35aa411766b
 ---
 
 Statistical inference goes from the data to the population, and where the data come from determines whether this step can be taken. The first half of this chapter treats the two "good sources" of data: probability sampling from a population, which ensures that the sample can represent the population, and random allocation in an experiment, which ensures that differences between groups can arise only from the treatment or from chance. The second half treats estimation: using a number computed from the sample (a point estimate) to estimate a population parameter, and expressing the uncertainty of that estimate by an interval (a confidence interval). The construction of intervals relies on the sampling distributions of the previous chapter: the sample mean is approximately normal, the $t$ distribution is used when $\sigma$ is unknown, the chi-square distribution for variances, and there are special methods for proportions and counts. The examples continue the main threads: the mean birth weight and the proportion of low birth weight among infants of smoking mothers (birthwt), the sensitivity and specificity of the CT scores in [7.7.3](/7.7.3), the lung cancer mortality in the NLST, and the median of FEV; randomization is illustrated with the Physicians' Health Study (PHS). The mathematics of the properties of estimators, maximum likelihood and interval estimation is in [3.2.3](/3.2.3) and [3.2.4](/3.2.4), the bootstrap in [3.5.7](/3.5.7) and Bayesian inference in [3.2.7](/3.2.7); the next chapter, [7.7.6](/7.7.6), uses the same sampling distributions for hypothesis tests, and the two are two sides of one coin.
@@ -264,6 +264,8 @@ Round up the result. Since $\sigma$ and $p$ are unknown, substitute values from 
 
 **Example 5.9.1** To estimate the mean birth weight of newborns in a region to within ±100 g with 95% confidence, take $\sigma = 729$ g: $n = (1.96 \times 729/100)^2 = 204.2$, so 205 newborns are needed. To estimate the smoking rate of pregnant women to within ±3 percentage points with nothing known about the smoking rate, take $p = 0.5$: $n = 1.96^2 \times 0.25/0.03^2 = 1067.1$, so 1068 people are needed; if the smoking rate is expected to be about 20%, only 683 are needed. These formulas assume simple random sampling, and for cluster sampling they must also be multiplied by the design effect.
 
+:::
+
 Note that the formulas guarantee only the margin of error and not the ability to "detect a difference": the sample size for a test must take power into account, see Section 6.4 of [7.7.6](/7.7.6).
 
 ## 5.10. Bootstrap Confidence Intervals
@@ -282,6 +284,8 @@ For statistics such as the median, a ratio, a correlation coefficient or the AUC
 
 ![Bootstrap confidence intervals for the FEV data (654 children in East Boston; Tager et al. 1979; the public version is from the Vanderbilt Department of Biostatistics database). A: bootstrap distribution of the median FEV of all children (10,000 resamples with replacement); the shaded area is the 95% percentile interval between the 2.5th and 97.5th percentiles; the median can take only values in the sample, so the distribution is jagged. B: bootstrap distribution of the ratio of mean FEV of smoking to nonsmoking children (resampling within each group)](./plots/bootstrap.py)
 
+:::
+
 The bootstrap presupposes that the sample represents the population (independent and identically distributed); it cannot correct a biased sample and cannot handle correlated data (for repeated measurements and cluster samples one resamples by individual or by cluster). The percentile interval has inaccurate coverage when the statistic is biased or the distribution skewed, and the bias-corrected BCa interval can be used ([3.5.7](/3.5.7)).
 
 ## 5.11. A Glimpse of Bayesian Estimation
@@ -294,6 +298,8 @@ The frequentist approach treats the parameter as a fixed unknown constant, and t
 - The informative prior $\mathrm{Beta}(2, 8)$ (the historical response rate of similar drugs is about 20%, equivalent to the information of 10 patients): the posterior is $\mathrm{Beta}(8, 22)$, with mean 0.267, 95% credible interval $(0.127, 0.435)$ and $\mathbb{P}(p > 0.2 \mid \text{data}) = 0.79$. The prior pulls the estimate toward 0.2.
 
 ![Bayesian estimation of a response rate: 6 of 20 patients responded in a phase II trial. A: under the uniform prior Beta(1, 1) the posterior is Beta(7, 15), essentially the normalized likelihood. B: under the informative prior Beta(2, 8) (mean 0.2, equivalent to 10 historical patients) the posterior Beta(8, 22) is pulled toward 0.2. Shaded areas are 95% equal-tailed credible intervals. Illustrative values](./plots/beta-binomial.py)
+
+:::
 
 The beta prior $\mathrm{Beta}(a, b)$ can be understood as "having already observed $a - 1$ responses and $b - 1$ nonresponses" (for the uniform prior, $a = b = 1$ amounts to no data), and the posterior simply adds the new data. The more data, the smaller the influence of the prior. Bayesian methods are useful in early clinical trials: they can directly answer "how probable is it that the response rate of the new drug exceeds that of the standard therapy", and are updated continually as data accumulate to decide whether to continue the trial. The price is that the choice of prior must be justified, and the sensitivity of the conclusions to the prior should be reported.
 

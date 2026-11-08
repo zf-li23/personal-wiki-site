@@ -1,7 +1,7 @@
 ---
 title: Tubular Reabsorption and Secretion
 description: Starling forces in the peritubular capillaries; selectivity of reabsorption, transcellular and paracellular pathways; primary and secondary active transport; transporter-limited and gradient-time systems (transport maximum, glucose titration curve, renal threshold and diabetes); segmental Na⁺ reabsorption and the driving forces in the proximal tubule, loop of Henle, distal convoluted tubule and collecting duct; Cl⁻ absorption; coupling of water to Na⁺ and TF/P along the proximal tubule; renal oxygen consumption; glomerulotubular balance; K⁺ handling; urea, Ca²⁺, Mg²⁺, the threshold model for phosphate, secretion of organic anions and cations; diuretics; evolution and comparison, with uric acid secretion and cloacal reabsorption in birds and reptiles and the Malpighian tubule–hindgut system of insects.
-source_hash: "299e97637495"
+source_hash: ed324b80ab7d
 ---
 
 Each day the glomeruli filter about $180\,\mathrm{L}$ of fluid, more than $25\,000\,\mathrm{mmol}$ of $\ce{Na+}$ and $180\,\mathrm{g}$ of glucose, and almost all of it must be retrieved by the renal tubules, in amounts adjusted precisely to the needs of the body. This chapter explains how the tubules do so. We begin with the general principles of reabsorption and secretion, including the transport pathways, their driving forces and their limits (Section 23.1). We then follow $\ce{Na+}$ segment by segment, along with the reabsorption of $\ce{Cl-}$ and water (Section 23.2), and describe the glomerulotubular balance that makes reabsorption track filtration (Section 23.3). Next come the handling of $\ce{K+}$ (Section 23.4) and of urea, divalent ions, phosphate and organic compounds (Section 23.5), and finally the diuretics that act on the transporters of each segment (Section 23.6). Urine concentration and the hormonal regulation of $\ce{Na+}$ balance are the subject of Chapter 24, and the transport of $\ce{H+}$ and $\ce{HCO3-}$ of Chapter 25. For the basic mechanisms of membrane transport (channels, carriers, pumps and cotransport), see [Chapter 3](/7.14.3) and [7.3.5](/7.3.5).
@@ -190,6 +190,8 @@ $$
 where $C_0$ is the renal threshold for plasma phosphate, normally about $0.8$–$1.35\,\mathrm{mmol\,L^{-1}}$, almost coinciding with the normal plasma concentration of $1.0$–$1.4\,\mathrm{mmol\,L^{-1}}$. In the steady state excretion equals net intestinal absorption, so that plasma phosphate is $P_{\mathrm{P}} = C_0 + (\text{net absorption})/\mathrm{GFR}$.
 
 **Example 23.5.1** Let GFR $= 120\,\mathrm{mL\,min^{-1}}$ ($173\,\mathrm{L\,d^{-1}}$), $C_0 = 1.0\,\mathrm{mmol\,L^{-1}}$, and the net intestinal absorption of phosphate $30\,\mathrm{mmol}$ per day. The steady-state plasma phosphate is $1.0 + 30/173 = 1.17\,\mathrm{mmol\,L^{-1}}$. If dietary phosphate doubles (net absorption $60\,\mathrm{mmol}$), it rises only to $1.35\,\mathrm{mmol\,L^{-1}}$; whereas if $C_0$ falls to $0.7$ (increased parathyroid hormone or FGF23), it falls to $0.87\,\mathrm{mmol\,L^{-1}}$ even with unchanged intake.
+
+:::
 
 Plasma phosphate is therefore set mainly by $C_0$, and $C_0$ is regulated by hormones: parathyroid hormone and FGF23, secreted by osteocytes, both promote the endocytosis of NaPi-IIa, lowering $T_{\mathrm{mP}}$ and increasing phosphate excretion (Chapter 36). When GFR falls severely (chronic kidney disease), excretion cannot keep up with intake even when $C_0$ has been lowered to a very low value, plasma phosphate rises, and secondary hyperparathyroidism and vascular calcification follow.
 

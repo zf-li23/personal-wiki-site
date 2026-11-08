@@ -1,6 +1,6 @@
 ---
 title: Structure of Coordination Compounds
-source_hash: 4a33ee9eda66
+source_hash: 342dd0e45a26
 ---
 
 Coordination compounds (also called complexes) consist of a central atom bound to a set of ligands through coordinate bonds. They are the largest and most structurally varied class of inorganic compounds: the heme in hemoglobin is an Fe(II) complex, chlorophyll is a Mg(II) complex, cisplatin is an anticancer drug, and EDTA titrations, the hydrometallurgy of metals, and many industrial catalysts all depend on coordination. This chapter applies the structural theory of the preceding chapters to these compounds. We first introduce their composition, nomenclature, and types (5.1), then discuss geometries and isomerism (5.2) and magnetism (5.3). Two theories then explain their behavior: valence bond theory (5.4) extends the **hybrid orbitals** of [6.1.3](/6.1.3) to central atoms that use d orbitals, and crystal field theory (5.5) uses the splitting of the d orbitals in the electrostatic field of the ligands to account for magnetism, color, and thermodynamic properties in a single picture. The stability of complexes in solution (stability constants and complexation equilibria) is treated in [6.1.9](/6.1.9), the electrode potentials of complex couples in [6.1.11](/6.1.11), and the chemistry of transition-metal complexes in [6.1.15](/6.1.15). A rigorous treatment of ligand field theory, the molecular orbital theory of complexes, and term symbols is given in [Structural Chemistry](/6.2), and a systematic treatment of stereochemistry in [Organic Chemistry](/6.5).
@@ -217,6 +217,8 @@ Conversely, the number of unpaired electrons can be determined from the measured
 
 **Example 5.3.1** $\ce{Mn^2+}$ is $3\mathrm{d}^5$. If all five d electrons are unpaired, $\mu_{\mathrm{eff}} = \sqrt{5\times7}\,\mu_{\mathrm{B}} = 5.92\,\mu_{\mathrm{B}}$, in agreement with the measured value for $\ce{[Mn(H2O)6]^2+}$. For $\ce{[FeF6]^3-}$ the measured value is $5.90\,\mu_{\mathrm{B}}$, so the five d electrons of $\ce{Fe^3+}$ are also all unpaired. For $\ce{[Fe(CN)6]^3-}$ the measured value is about $2.4\,\mu_{\mathrm{B}}$, closest to the $1.73\,\mu_{\mathrm{B}}$ of $n = 1$, so there is only one unpaired electron. $\ce{[Ni(CN)4]^2-}$ is diamagnetic, $n = 0$.
 
+:::
+
 The spin-only formula is an approximation. The measured value for $\ce{[Fe(CN)6]^3-}$ is clearly larger than $1.73\,\mu_{\mathrm{B}}$ because in its $t_{2g}^5$ configuration the degenerate orbitals are unevenly occupied and the orbital angular momentum is not completely quenched. The deviation, however, generally does not exceed the gap between neighboring values of $n$, so the determination of the number of unpaired electrons is unaffected. The 4f electrons of lanthanide ions are shielded by outer electrons, their orbital angular momentum is not quenched, and their magnetic moments must be calculated from the total angular momentum, see [6.1.15](/6.1.15).
 
 ## 5.4. Valence Bond Theory of Complexes
@@ -357,6 +359,8 @@ Take d⁶ as an example and compare the energies of the two arrangements (with t
 | $\ce{[Fe(CN)6]^4-}$ | d⁶ | 33 800 | 17 600 | low spin $t_{2g}^6$ | 0 |
 | $\ce{[CoF6]^3-}$ | d⁶ | 13 000 | 21 000 | high spin | 4 |
 | $\ce{[Co(NH3)6]^3+}$ | d⁶ | 22 900 | 21 000 | low spin, diamagnetic | 0 |
+
+:::
 
 All conclusions agree with the magnetic measurements (5.3). The electron cloud in a complex is more expanded than in the free ion, and the actual $P$ is 15%–30% smaller than that of the free ion, so caution is needed when $\Delta_{\mathrm{o}}$ and $P$ are close. The general rules are:
 

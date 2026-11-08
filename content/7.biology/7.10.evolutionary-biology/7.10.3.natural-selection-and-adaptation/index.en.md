@@ -40,6 +40,8 @@ Only the ratio $w_A/w_B$, the **relative fitness**, appears in the frequency: wh
 
 ![Natural selection as differential reproduction (Example 3.2.1). Two asexual genotypes of an annual plant start with 10 individuals each; genotype A leaves 3 offspring per individual, genotype B leaves 4. A: numbers of individuals on a log scale; both grow, B faster. B: the frequency of B rises from 0.5 to 0.88 in 7 generations (dots), as given by Formula 3.2.1 (lines)](./plots/genotype-growth.py)
 
+:::
+
 In sexual organisms genotypes are broken up by segregation and recombination in each generation, whereas genes are copied; it is therefore often useful to speak of the fitness of an allele and of selection among genes (Section 3.3). Natural selection also works on traits inherited epigenetically or culturally, to the extent that they are transmitted ([7.10.4](/7.10.4#sec-4.7)), but it has no lasting effect without inheritance.
 
 Natural selection is not an agent and has no purpose. Darwin, criticized for speaking of selection "as an active power or Deity", answered that this was a metaphor like the attraction of gravity "ruling" the planets. To say that selection "favors" a trait, or to call selection a "force", is shorthand: natural selection is a name for statistical differences in reproductive success, and nothing more.

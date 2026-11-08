@@ -1,7 +1,7 @@
 ---
 title: Independence and Random Variables
 description: Independence and conditional independence of two events, mutual and pairwise independence of a collection of events, the second part of the Borel–Cantelli lemma, the gambler's ruin; the definition of random variables, Borel sets and measurable functions; mutual independence of random variables, i.i.d. sequences and independence of their functions.
-source_hash: 3ee97af0dc97
+source_hash: c38de33b4e30
 ---
 
 The conditional probability of the previous chapter, [3.1.2](/3.1.2), describes how information about one event affects another. This chapter first treats the case of "no effect", the independence of events. It looks simple, but several details are easily confused: independence versus mutual exclusiveness, independence versus conditional independence, mutual versus pairwise independence. Independence reduces many computations to multiplication, and the gambler's ruin model shows how the law of total probability works together with recursion. The second half of the chapter introduces random variables: by turning the outcomes of an experiment into numbers, they let us describe random phenomena with functions, operations and distributions, and we extend independence to random variables. The next chapter, [3.1.4](/3.1.4), presents the common discrete and continuous random variables, and [3.1.5](/3.1.5) describes random variables uniformly by their distribution functions.
@@ -11,6 +11,8 @@ The conditional probability of the previous chapter, [3.1.2](/3.1.2), describes 
 ### 3.1.1. Independence of Two Events
 
 **Example 3.1.1** A biased coin lands heads with probability $p$ and is tossed three times. In a tree-diagram model, the branch probabilities of every toss are $p$ and $1-p$, regardless of the earlier results. Let $H_i$ and $T_i$ denote heads and tails on toss $i$. Then $\mathbb{P}(H_2\mid H_1)=\mathbb{P}(H_2\mid T_1)=p$, and by the law of total probability $\mathbb{P}(H_2)=\mathbb{P}(H_2\mid H_1)\mathbb{P}(H_1)+\mathbb{P}(H_2\mid T_1)\mathbb{P}(T_1)=p$. That is, the result of the first toss does not change the probability of heads on the second.
+
+:::
 
 Intuitively, if the occurrence of an event $B$ brings no new information about an event $A$, that is, $\mathbb{P}(A\mid B)=\mathbb{P}(A)$, we call $A$ and $B$ independent. Rewriting this as a product gives a definition that is symmetric and does not require $\mathbb{P}(B)>0$.
 
@@ -113,6 +115,8 @@ $$
 $$
 If 1000 people are screened, this probability becomes $1-0.9996^{1000}\approx33\%$: an event of small probability is almost certain to appear in a large number of independent repetitions.
 
+:::
+
 The same argument proves the second part of the Borel–Cantelli lemma of [3.1.2](/3.1.2).
 
 **Theorem 3.1.2 (Borel–Cantelli Lemma, Second Part)** If the sequence of events $\{A_n\}$ is mutually independent and $\sum_{n=1}^\infty\mathbb{P}(A_n)=\infty$, then $\mathbb{P}(\limsup_{n\to\infty}A_n)=1$.
@@ -137,6 +141,8 @@ $$
 q(a)=1-\frac aN=\frac b{a+b}.
 $$
 With a finite starting capital $a$, the greedier the target $b$, the larger the probability of ruin; if A keeps gambling indefinitely ($b\to\infty$), he is ruined with probability 1.
+
+:::
 
 In general, if each round is won with probability $p\ne1/2$, set $r=(1-p)/p$; the same recursion $q(k)=pq(k+1)+(1-p)q(k-1)$ gives $q(k+1)-q(k)=r[q(k)-q(k-1)]$, and solving yields
 
@@ -163,6 +169,8 @@ $$
 For every $x\in\mathbb{R}$, $\{X\le x\}$ is an event; since the values of $X$ are numbers, we can perform mathematical operations on them.
 
 **Example 3.2.3** Toss a fair coin twice and let $X$ be the number of heads: $\Omega=\{HH,HT,TH,TT\}$, and $X$ takes values in $\{0,1,2\}$. A family plans to have two children, whose sexes are independent and equally likely to be male or female; let $X$ be the number of girls: $\Omega=\{BB,BG,GB,GG\}$, and again $X$ takes values in $\{0,1,2\}$. The experiments differ, but the probability models are identical.
+
+:::
 
 These examples show three advantages of introducing random variables:
 

@@ -105,6 +105,8 @@ $$
 
 ![Lateral inhibition by Notch–Delta signaling (Collier and colleagues 1996). A: the feedback between two neighboring cells: Delta in one activates Notch in the other, and Notch represses Delta in its own cell, a double-negative loop that amplifies differences. B: Eq. (24.1) on a sheet of 14 × 12 hexagonal cells with periodic boundaries (a = 0.01, b = 100, v = 1), starting from the uniform state with 1 % noise: after 120 time units the sheet has resolved into isolated high-Delta cells (dark; future neural precursors or hair cells) surrounded by low-Delta cells. C: Delta levels of several cells against time: equal at first, the differences grow exponentially and saturate](./plots/lateral-inhibition.py)
 
+:::
+
 Cells that have become different must also stay together with their own kind. Cells sort out by their adhesion molecules and cortical tension, as described for **cadherins** and the **differential adhesion hypothesis** in [7.3.23](/7.3.23#sec-23.3.2); boundaries between compartments are sharpened by sorting and maintained by signaling at the boundary.
 
 ### 24.3.4. Hormones, Matrix, Cell Number and Feedback

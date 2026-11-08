@@ -124,6 +124,8 @@ The specimen is destroyed by the beam. Each inelastic event deposits tens of ele
 
 **Example 14.3.1** How large a radiation dose does a typical image impose? The stopping power of water for $300\,\mathrm{keV}$ electrons is about $2.4\,\mathrm{MeV\,cm^2\,g^{-1}}$. An exposure of $1\,\mathrm{e^-}/\text{Å}^2 = 10^{16}\,\mathrm{e^-\,cm^{-2}}$ deposits $2.4\times10^{16}\,\mathrm{MeV\,g^{-1}} = 3.8\times10^{3}\,\mathrm{J\,g^{-1}}$, an absorbed dose of $3.8\,\mathrm{MGy}$. A single-particle image of $40\,\mathrm{e^-}/\text{Å}^2$ thus delivers about $150\,\mathrm{MGy}$, some $10^7$ times the dose that kills a human and comparable to the doses that destroy protein crystals at synchrotrons in a fraction of a second.
 
+:::
+
 Damage proceeds from fine to coarse: side chains, especially carboxylates of aspartate and glutamate and disulfide bonds, lose definition first, while **secondary structure** survives much longer. The decay of the signal with exposure has been measured as a function of spatial frequency.
 
 **Formula 14.3.1 (Critical Exposure)** At $300\,\mathrm{kV}$ the amplitude of the image signal at spatial frequency $k$ decays with accumulated exposure $N$ as $\exp[-N/(2N_{\mathrm{e}}(k))]$, with the *critical exposure*
@@ -165,6 +167,8 @@ $$
 This is the **weak-phase-object approximation**. A small amplitude loss (absorption, or electrons scattered outside the objective aperture) is included as $\psi \approx 1 + \mathrm{i}\sigma\varphi - \varepsilon\varphi$ with a small $\varepsilon$.
 
 **Example 14.4.1** The mean inner potential of protein is about $7\,\mathrm{V}$ and that of vitreous ice about $4\,\mathrm{V}$, so a protein of thickness $5\,\mathrm{nm}$ in ice adds a projected potential of about $3\,\mathrm{V} \times 5\,\mathrm{nm} = 15\,\mathrm{V\,nm}$. At $300\,\mathrm{kV}$ ($\sigma = 0.0065\,\mathrm{rad\,V^{-1}\,nm^{-1}}$) the phase shift is $0.1\,\mathrm{rad}$. Proteins and nucleic acids in ice are weak phase objects; heavy-atom clusters and thick crystals are not.
+
+:::
 
 The approximation makes image formation linear in $\varphi$, which is what allows the whole of 14.4–14.9 to be written in Fourier space. Its weakness is the projection approximation itself: a straight-line path is accurate only within the *depth of field* $D \approx d^2/(2\lambda)$ for resolution $d$, which at $300\,\mathrm{kV}$ and $d = 3\,\text{Å}$ is $9/(2\cdot0.0197)\,\text{Å} \approx 23\,\mathrm{nm}$. For particles larger than this, such as large viruses at high resolution, the curvature of the Ewald sphere ([7.6.10](/7.6.10)) must be taken into account in reconstruction.
 

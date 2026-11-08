@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions and Regular Languages
 description: Syntax and semantics of regular expressions, operator precedence and derived operations; comparison with practical regex; the inductive definition of regular languages; methods for designing regular expressions; algebraic laws, the concretization test for laws, and Arden's lemma.
-source_hash: 170efa52c45b
+source_hash: 292d2a4a6f0b
 ---
 
 The simplest class of **grammars** (type 3) in Chapter 2 generates the regular languages. This chapter describes these languages from another angle: starting from single symbols and using only three operations, union, concatenation, and **Kleene closure**, we construct languages, and the algebraic expressions we write down are regular expressions. They are the most common way, besides finite automata, to describe regular languages, and they are the mathematical core of the **regular expressions** ([4.2.11](/4.2.11)) familiar to programmers; most constructs of practical regular expressions can be reduced to these three operations. This chapter defines regular expressions and their languages, practices designing expressions for given languages, and then discusses the algebraic laws of regular expressions. Chapter 4 introduces finite automata, and Chapter 5 proves that the two describe the same family of languages.
@@ -34,6 +34,8 @@ Common derived notations are $E^+ = EE^*$ (one or more times), $E^? = \varepsilo
 - $1^*0(0 + 1)^*$ denotes the strings containing at least one 0: before the first 0 there are only 1s, and after it anything.
 - $(0 + 1)^*00(0 + 1)^*$ denotes the strings containing the substring 00.
 - $\varnothing^*$ denotes $\{\varepsilon\}$; $0\varnothing$ denotes $\varnothing$.
+
+:::
 
 Practical regular expressions (the notation of libraries such as C++ `<regex>` and Python `re` in [4.2.11](/4.2.11)) correspond to the formal definition here as follows:
 
@@ -121,6 +123,8 @@ Hence if $L(C) = L(D)$, then for any substitution the languages of $E$ and $F$ b
 - Verify $(L + M)^* = (L^*M^*)^*$: concretized, $(a + b)^* = (a^*b^*)^*$; both sides are the set of all strings over $\{a, b\}$, so the law holds.
 - Verify $LL^* = L^*L$: $aa^*$ and $a^*a$ both denote $\{a^n \mid n \ge 1\}$, so it holds.
 - Test $L + ML = (L + M)L$: concretized, $a + ba$ and $(a + b)a$; $aa \in L((a + b)a)$ but $aa \notin L(a + ba)$, so this is not a law.
+
+:::
 
 By Chapter 6, whether two variable-free regular expressions are equivalent is decidable, so Theorem 3.4.2 gives an algorithm for deciding any candidate law. Note that the method applies only to expressions built from union, concatenation, and closure; if intersection is introduced, the concretization test fails. For example, $L \cap M \cap N = L \cap M$ becomes $\varnothing = \varnothing$ after concretization, yet it is clearly not a law.
 

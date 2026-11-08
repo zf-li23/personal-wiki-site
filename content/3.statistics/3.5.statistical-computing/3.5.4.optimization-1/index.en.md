@@ -74,6 +74,8 @@ L(b)=\prod_{i=1}^n\frac1b\boldsymbol{1}_{[0,b]}(x_i)=\frac1{b^n}\boldsymbol{1}\{
 $$
 is zero for $b<x_{(n)}$ and decreasing for $b\ge x_{(n)}$, so the MLE is $\hat b=X_{(n)}$, the sample maximum; with $n=10$ and $\max(\boldsymbol{x})=2$, $\hat b=2$. The likelihood is not differentiable at its maximum, and the score equation has no root.
 
+:::
+
 *Profile likelihood.* For a high-dimensional $\boldsymbol{\theta}$ the dimension can be reduced. Split $\boldsymbol{\theta}=(\boldsymbol{\theta}_1,\boldsymbol{\theta}_2)$ into parameters of interest $\boldsymbol{\theta}_1$ and nuisance parameters $\boldsymbol{\theta}_2$, and suppose that $\hat{\boldsymbol{\theta}}_2(\boldsymbol{\theta}_1)$, the maximizer over $\boldsymbol{\theta}_2$ for fixed $\boldsymbol{\theta}_1$, is easy to compute. Then
 
 $$
@@ -133,6 +135,8 @@ where $c\in(0,1)$ if $\alpha=1$ and $c\in(0,\infty)$ if $\alpha>1$. Order $\alph
 - $\gamma^{n^2}\to0$ superlinearly: $\gamma^{(n+1)^2}/\gamma^{n^2}=\gamma^{2n+1}\to0$; but not quadratically, since $\gamma^{(n+1)^2}/(\gamma^{n^2})^2=\gamma^{-n^2+2n+1}\to\infty$.
 - $\gamma^{2^n}\to0$ quadratically: $\gamma^{2^{n+1}}/(\gamma^{2^n})^2=1$.
 
+:::
+
 So a method with larger order $\alpha$ and, for equal order, smaller rate $c$ converges faster. The order matters much more than the rate.
 
 **Example 4.1.3** Suppose $\lvert\varepsilon^{(t)}\rvert\le0.003$ and that for large $t$, method A has $\lvert\varepsilon^{(t+1)}\rvert/\lvert\varepsilon^{(t)}\rvert\approx0.5$ (linear) while method B has $\lvert\varepsilon^{(t+1)}\rvert/\lvert\varepsilon^{(t)}\rvert^2\approx0.5$ (quadratic). How many further iterations does each need for a precision of $10^{-9}$? For method A, $\lvert\varepsilon^{(t+k)}\rvert/\lvert\varepsilon^{(t)}\rvert\approx2^{-k}$ and $2^{-k}\cdot0.003=10^{-9}$ gives $k=\log_2(3\times10^6)\approx21.5$: $22$ iterations. For method B,
@@ -141,6 +145,8 @@ $$
 \lvert\varepsilon^{(t+2)}\rvert\approx\frac{\lvert\varepsilon^{(t+1)}\rvert^2}2\approx\frac{\lvert\varepsilon^{(t)}\rvert^4}{2^3}=\frac{0.003^4}8\approx10^{-11}:
 $$
 only $2$ more steps.
+
+:::
 
 Still, a higher order of convergence is not always preferable: the cost per iteration (derivatives, linear systems), the storage, the size of the region from which the method converges at all, and whether convergence is guaranteed all count as well.
 
@@ -258,6 +264,8 @@ $$
 with respect to $x$. We cannot find the root of $g'(x)=\dfrac{1+1/x-\log x}{(1+x)^2}$ analytically; the maximum occurs at $x^*\approx3.59112$.
 
 **Example 4.3.2** The data $1.77,-0.23,2.76,3.80,3.47,56.75,-1.34,4.24,-2.44,3.29,3.71,-2.40,4.53,-0.07,-1.05,-13.87,-2.53,-1.75,0.27,43.21$ are an iid sample from a **Cauchy distribution** $\mathrm{Cauchy}(\theta)$ with scale $1$. The likelihood function is $\prod_{i=1}^{20}\frac1{\pi(1+(x_i-\theta)^2)}$. Its **score function** $l'(\theta)$ has multiple roots (local maxima near $-0.19$, $2.82$ and $42.8$, and local minima between them), so the MLE requires a numerical solution and some care.
+
+:::
 
 The methods for nonlinear equations fall into four groups:
 
@@ -635,6 +643,8 @@ Output $b$ (or $s$) as the root.
 | Secant | 6 | 1.839286755226924 |
 | IQI with $1,\frac32,2$ | 5 | 1.8392867552230825 |
 | Brent | 6 | 1.8392867552141612 |
+
+:::
 
 Brent's method is as fast as the open methods here, with the guarantee of bisection. In R, Example 4.3.1 becomes
 

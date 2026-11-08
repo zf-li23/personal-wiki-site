@@ -95,6 +95,8 @@ $$
 2. $\sum\frac{1}{\sqrt{n^2 + 2n + 100}}$：$n \ge 2$ 时 $n^2 + 2n + 100 \le 100n^2$，通项 $\ge \frac{1}{10n}$，由调和级数发散知它发散。
 3. $\sum\frac{n!}{n^n}$：$\frac{n!}{n^n} = \frac1n\cdot\frac2n\cdots\frac nn \le \frac{2}{n^2}$（$n \ge 2$），收敛。
 
+:::
+
 取 $p$ 级数作比较对象，得到：
 
 **推论 8.2.1（比阶判别法）** 设 $\sum u_n$ 是正项级数，$M > 0$。
@@ -134,6 +136,8 @@ $$
 
 **例 8.2.4** $\sum\left[\frac1n - \ln\left(1 + \frac1n\right)\right]$：由**泰勒公式** $\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$，通项 $= \frac{1}{2n^2} + o\left(\frac{1}{n^2}\right) > 0$，$n^2u_n \to \frac12$，收敛。由此 $1 + \frac12 + \cdots + \frac1n - \ln(n+1) = \sum_{k=1}^n\left[\frac1k - \ln\left(1 + \frac1k\right)\right]$ 收敛，其极限就是 Euler 常数 $\gamma \approx 0.5772$。
 
+:::
+
 用 Taylor 公式求通项的主部，再用比阶判别法，是判断这类级数最有效的方法。
 
 ### 8.2.2. 比值判别法与根值判别法
@@ -155,6 +159,8 @@ $q = 1$ 时不能判断。
 2. $\sum\frac{1}{3^n - n^3}$：比值 $\to \frac13$，收敛。
 3. $\sum\frac{(n!)^2}{(2n)!}$：$\frac{u_{n+1}}{u_n} = \frac{(n+1)^2}{(2n+2)(2n+1)} \to \frac14$，收敛。
 
+:::
+
 含阶乘、指数的通项适合用比值判别法。$q = 1$ 时它失效：$\sum\frac1n$ 与 $\sum\frac1{n^2}$ 的比值极限都是 $1$，前者发散、后者收敛，此时改用比阶判别法。
 
 **定理 8.2.4（根值判别法）** 设 $u_n \ge 0$，$\lim_{n\to\infty}\sqrt[n]{u_n} = q$（或 $+\infty$）。
@@ -171,6 +177,8 @@ $q = 1$ 时不能判断。
 1. $\sum\frac{n^2}{3^n + 2^n}$：$\sqrt[n]{u_n} \to \frac13$，收敛。
 2. $\sum\left(\frac{n+1}{n}\right)^{n^2}\frac{1}{3^n}$：$\sqrt[n]{u_n} = \left(1 + \frac1n\right)^n\cdot\frac13 \to \frac{\mathrm{e}}{3} < 1$，收敛。
 3. $\sum\frac{n\,[\sqrt2 + (-1)^n]^n}{3^n}$：通项 $\le \frac{n(\sqrt2 + 1)^n}{3^n}$，后者的 $n$ 次根 $\to \frac{\sqrt2 + 1}{3} < 1$，由比较判别法收敛。这里相邻项之比 $u_{n+1}/u_n$ 在 $n$ 为奇数、偶数时分别趋于 $+\infty$ 与 $0$，比值判别法无法使用。
+
+:::
 
 一般地，比值极限存在时根值极限也存在且相等，所以根值判别法适用的范围更广；但比值往往更容易计算。两者都只能判断"像几何级数一样快"收敛的级数，对 $p$ 级数一类的级数总是 $q = 1$。
 
@@ -228,6 +236,8 @@ $$
 余项估计说明：用部分和近似交错级数的和，误差不超过第一个被略去的项。例如 $\sum\frac{(-1)^{n-1}}{n} = \ln2$（[第 9 章](/2.2.9)），取前 $1000$ 项误差小于 $10^{-3}$。
 
 **例 8.3.1** $\sum\frac{(-1)^n}{n}$、$\sum\frac{(-1)^n}{\sqrt n}$、$\sum_{n=2}^\infty\frac{(-1)^n}{n\ln n}$ 都满足 Leibniz 判别法的条件，因而收敛。
+
+:::
 
 单调性不能省略：$u_{2k-1} = \frac1k$，$u_{2k} = \frac{1}{k^2}$ 时 $u_n \to 0$，但 $\sum(-1)^{n-1}u_n$ 的前 $2n$ 项之和 $= \sum_{k=1}^n\left(\frac1k - \frac1{k^2}\right) \to +\infty$。
 
@@ -351,6 +361,8 @@ $$
 部分和有界，而 $\frac1n$ 单调趋于零，由 Dirichlet 判别法收敛。$x \ne k\pi$ 时它条件收敛：$|\sin nx| \ge \sin^2nx = \frac12(1 - \cos2nx)$，而 $\sum\frac1{2n}$ 发散、$\sum\frac{\cos2nx}{2n}$ 收敛（同理）。这个级数是[第 9 章](/2.2.9)中 Fourier 级数的一个典型例子。
 
 **例 8.3.7** $\sum\frac{(-1)^n}{n}\left(1 + \frac1n\right)^n$ 收敛：$\sum\frac{(-1)^n}{n}$ 收敛，$\left(1 + \frac1n\right)^n$ 单调增加且有界（趋于 $\mathrm{e}$），由 Abel 判别法。
+
+:::
 
 把本章的方法串起来，就是判断收敛性的一般流程。
 

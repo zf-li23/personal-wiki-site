@@ -1,6 +1,6 @@
 ---
 title: Stability and Qualitative Theory
-source_hash: 1fa2925554af
+source_hash: 43bf36705741
 ---
 
 Most nonlinear equations cannot be solved in closed form, yet in applications what matters is often not a formula for the solution but its long-term behavior: whether an equilibrium recovers from a small perturbation, whether the system settles into a sustained oscillation, where the trajectories eventually go. Qualitative theory answers these questions directly from the equation, without solving it. The approach was founded by Poincaré and Lyapunov at the end of the nineteenth century and today underlies dynamical systems, control theory and mathematical biology.
@@ -34,6 +34,8 @@ Stability means that "a small perturbation of the initial value causes only a sm
 - $x'=-x^3$: $x^{-2}=x_0^{-2}+2(t-t_0)$, so $\lvert x\rvert$ decreases monotonically to $0$; the zero solution is asymptotically stable, but the decay is slower than exponential. The zero solution of $x'=x^3$ is unstable (solutions blow up in finite time).
 
 The last two equations both have the linear approximation $x'=0$, which shows that the linear approximation sometimes cannot decide stability (the critical case of Theorem 11.4.1).
+
+:::
 
 The stability requirement in the definition of asymptotic stability cannot be dropped: there are planar autonomous systems in which every solution tends to the origin, yet some solutions starting arbitrarily close to the origin first move away to a fixed distance before returning (Vinograd's example).
 
@@ -101,6 +103,8 @@ The proof is long and relies on the argument principle of complex analysis or on
 | 5 | $a_1>0$, $a_5>0$, $a_1a_2>a_3$, $a_1(a_2a_3-a_1a_4+a_5)>a_3^2$, $a_1(a_2a_3a_4-a_2^2a_5-a_1a_4^2+2a_4a_5)-a_3^2a_4+a_2a_3a_5-a_5^2>0$ |
 
 For example, for $n=3$ we have $\Delta_2=a_1a_2-a_3$ and $\Delta_3=a_3\Delta_2$, and the three conditions $a_1>0$, $\Delta_2>0$, $a_3>0$ already imply $a_2>0$. In general, stability of a polynomial of degree $n$ is characterized by $n$ independent inequalities.
+
+:::
 
 In practice one often uses the equivalent Routh array. The first two rows are $a_0,a_2,a_4,\dots$ and $a_1,a_3,a_5,\dots$, and each subsequent row is computed from the two rows above it: if these are $u_1,u_2,\dots$ and $v_1,v_2,\dots$, the new row is $w_i=\dfrac{v_1u_{i+1}-u_1v_{i+1}}{v_1}$ (missing entries are taken to be 0). The polynomial $f$ is stable if and only if all entries of the first column of the array ($n+1$ numbers in all) are positive.
 
@@ -217,6 +221,8 @@ is negative definite, so the zero solution is asymptotically stable: the center 
 
 **Example 11.4.3** For the linear system $\boldsymbol{x}'=A\boldsymbol{x}$, consider a quadratic Lyapunov function $V=\boldsymbol{x}^{\mathsf T}P\boldsymbol{x}$: then $\dot V=\boldsymbol{x}^{\mathsf T}(A^{\mathsf T}P+PA)\boldsymbol{x}$. One can show that all eigenvalues of $A$ have negative real parts if and only if, for some (equivalently, every) **positive definite matrix** $Q$, the Lyapunov equation $A^{\mathsf T}P+PA=-Q$ has a positive definite solution $P$ (stated without proof). This $V$ remains a Lyapunov function near the origin for the nonlinear system (11.2), which gives another proof of part 1 of Theorem 11.3.1, and every small ellipsoid $V<c$ lies in the region of attraction.
 
+:::
+
 There is no general method for constructing Lyapunov functions. For physical systems one often takes the energy, and for ecological models functions such as $\sum_i(x_i-x_i^*-x_i^*\ln\frac{x_i}{x_i^*})$.
 
 ## 11.5. Planar Autonomous Systems
@@ -282,6 +288,8 @@ The direction of rotation of a focus or center can be read off directly: at the 
 ![Classification of planar linear systems in the trace–determinant plane (p, q) = (tr A, det A): saddles for q < 0; foci above the parabola p^2 = 4q and nodes below it (q > 0); asymptotically stable for p < 0 and unstable for p > 0; centers on the positive q-axis; star nodes or degenerate nodes on the parabola itself](./plots/trace-determinant-plane.py)
 
 **Example 11.5.1** Classify the origin in each case. (1) $A=\begin{bmatrix}1&2\\3&2\end{bmatrix}$: $q=-4<0$, a saddle. (2) $A=\begin{bmatrix}-1&1\\-4&-1\end{bmatrix}$: $p=-2$, $q=5$, $\Delta=-16<0$, a stable focus; $a_{21}=-4<0$, so the rotation is clockwise. (3) $A=\begin{bmatrix}-3&1\\1&-3\end{bmatrix}$: $p=-6$, $q=8$, $\Delta=4>0$, a stable node with eigenvalues $-2,-4$; the trajectories are tangent at the origin to the slow direction $(1,1)^{\mathsf T}$.
+
+:::
 
 For the nonlinear system (11.4), we classify an equilibrium by its Jacobian matrix. If $P,Q\in C^2$ and the linear approximation is a saddle, a node with distinct eigenvalues or a focus, then near the equilibrium the nonlinear system has the same type of trajectories and the same stability as its linear approximation. If the linear approximation is a center, the nonlinear system may be a center (as for the undamped pendulum) or a focus (Example 11.4.2), and must be examined separately.
 

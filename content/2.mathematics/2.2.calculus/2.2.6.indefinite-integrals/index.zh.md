@@ -257,6 +257,8 @@ $$
 
 **例 6.3.1** $\int x\sin3x\,\mathrm{d}x = \int x\,\mathrm{d}\Bigl(-\frac13\cos3x\Bigr) = -\frac13x\cos3x+\frac13\int\cos3x\,\mathrm{d}x = -\frac19(3x\cos3x-\sin3x)+C$。
 
+:::
+
 用分部积分计算 $\int f_1(x)f_2(x)\,\mathrm{d}x$ 时，怎样选择 $u$ 与 $v'$？原则是：$v'$ 要容易积分，$u$ 求导后要变简单。
 
 1. 乘积中有 $\mathrm{e}^{ax}$、$\sin ax$（$\cos ax$）、$x^m$ 之一时，常选为 $v'$，优先顺序为 $\mathrm{e}^{ax}$，$\sin ax$（$\cos ax$），$x^m$；
@@ -358,6 +360,8 @@ $$
 
 这个递推公式在 6.4 节有理函数的积分中要用到。
 
+:::
+
 先换元再分部积分也很常见：
 
 **例 6.3.4**（1） $\int\frac{\ln^2x\cos(\ln x)}{x}\,\mathrm{d}x\overset{u = \ln x}{=}\int u^2\cos u\,\mathrm{d}u = u^2\sin u+2u\cos u-2\sin u+C$，即 $(\ln^2x-2)\sin\ln x+2\ln x\cos\ln x+C$。
@@ -400,6 +404,8 @@ $$
 $$
 
 (2) 设 $\frac{3x^2+2}{x^2(x^2+1)} = \frac Ax+\frac B{x^2}+\frac{Cx+D}{x^2+1}$，比较系数得 $A = 0$，$B = 2$，$C = 0$，$D = 1$，即 $\frac{3x^2+2}{x^2(x^2+1)} = \frac2{x^2}+\frac1{x^2+1}$。
+
+:::
 
 四类最简分式都可以积出：
 
@@ -469,6 +475,8 @@ $$
 $$
 \int\frac{\mathrm{d}x}{a\cos x+b\sin x} = \frac1{\sqrt{a^2+b^2}}\int\csc(x+\varphi)\,\mathrm{d}x = \frac{1}{\sqrt{a^2+b^2}}\ln\bigl\lvert\csc(x+\varphi)-\cot(x+\varphi)\bigr\rvert+C.
 $$
+
+:::
 
 没有简便方法时，总可以用代换 $t = \tan\frac x2$ 把三角函数有理式化为有理函数，这称为万能代换（Weierstrass substitution）。在 $(-\pi,\pi)$ 上 $x = 2\arctan t$，并且
 

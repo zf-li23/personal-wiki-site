@@ -226,6 +226,8 @@ The model is generational. Within an organism, a chromatin state is copied at ea
 
 **Example 18.7.1** For a CG site with $\alpha = 6 \times 10^{-4}$ and $\beta = 3 \times 10^{-4}$: (a) $\pi = 3/9 = 0.33$; (b) $\lambda = 1 - 9 \times 10^{-4}$, so the deviation of a population of sites from equilibrium halves in $\ln 2/(9 \times 10^{-4}) \approx 770$ generations; (c) a site methylated today is still methylated after 30 generations with probability $\pi + (1-\pi)\lambda^{30} = 0.333 + 0.667 \times 0.9734 = 0.982$, so about 1.8 % of the sites methylated in the ancestor have lost methylation in a line after 30 generations, and two such lines differ at about $2 \times 0.982 \times 0.018 \approx 3.5\,\%$ of them. In a genome with $5 \times 10^6$ methylated CG sites, that is about $9 \times 10^4$ changed sites per line, against fewer than one new base substitution per $10^8$ bases per generation.
 
+:::
+
 ![Inheritance of epigenetic states as a two-state Markov chain, Eq. (18.1). A: five simulated lineages of a single epiallele that switches from M to U with probability α = 0.05 and back with β = 0.02 per generation; the state persists for runs of many generations but is lost and regained. B: the probability of methylation in generation t for lines that start fully methylated (solid) or unmethylated (dashed), for the same rates and for the rates estimated for single CG sites in *Arabidopsis* (α = 6 × 10⁻⁴, β = 3 × 10⁻⁴); both converge on π = β/(α + β), at rate α + β per generation (note the logarithmic time axis)](./plots/epiallele-markov.py)
 
 ## Summary

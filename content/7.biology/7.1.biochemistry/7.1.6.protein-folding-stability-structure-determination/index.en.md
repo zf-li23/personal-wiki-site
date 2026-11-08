@@ -88,6 +88,8 @@ Three consequences follow.
 
 **Example 6.2.1** For the stable protein of the figure ($T_\mathrm{m} = 333.15\ \mathrm{K}$, $\Delta_{\mathrm{U}}H_\mathrm{m} = 350\ \mathrm{kJ\,mol^{-1}}$, $\Delta_{\mathrm{U}}C_p = 6\ \mathrm{kJ\,mol^{-1}\,K^{-1}}$), $T_\mathrm{s} = 333.15\ \mathrm{K} \times \mathrm{e}^{-350/(333.15 \times 6)} = 279.6\ \mathrm{K}$ ($6.5\ ^\circ\mathrm{C}$) and $\Delta_{\mathrm{U}}G^\circ(T_\mathrm{s}) = 28.9\ \mathrm{kJ\,mol^{-1}}$. At $25\ ^\circ\mathrm{C}$, $\Delta_{\mathrm{U}}G^\circ = 25.3\ \mathrm{kJ\,mol^{-1}}$, so $K_\mathrm{U} = \mathrm{e}^{-25.3/2.479} = 3.7\times 10^{-5}$: about one molecule in $27\,000$ is unfolded at any instant; at $37\ ^\circ\mathrm{C}$ ($\Delta_{\mathrm{U}}G^\circ = 19.3\ \mathrm{kJ\,mol^{-1}}$) it is one in $1\,800$. Solving $\Delta_{\mathrm{U}}G^\circ(T) = 0$ numerically gives the cold-denaturation temperature $229\ \mathrm{K}$ ($-44\ ^\circ\mathrm{C}$).
 
+:::
+
 The heat-capacity change is the thermodynamic fingerprint of the hydrophobic effect: it is roughly proportional to the nonpolar surface area exposed on unfolding, about $50$–$60\ \mathrm{J\,mol^{-1}\,K^{-1}}$ per residue. Proteins of thermophiles reach higher $T_\mathrm{m}$ by raising the whole stability curve, by flattening it (a smaller $\Delta_{\mathrm{U}}C_p$), or by shifting it to higher temperature, rather than by a single universal mechanism.
 
 ### 6.2.3. Chemical Denaturation and Linear Extrapolation

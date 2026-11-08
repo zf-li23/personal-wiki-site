@@ -193,6 +193,8 @@ $$
 | Haldane $d$ / cM | 5.3 | 11.2 | 25.5 | 45.8 | 80.5 | 115.1 |
 | Kosambi $d$ / cM | 5.0 | 10.1 | 21.2 | 34.7 | 54.9 | 73.6 |
 
+:::
+
 ![Mapping functions. Left: recombination frequency r against map distance d for the linear relation r = d (valid for short intervals), the Haldane function (no interference) and the Kosambi function (interference decreasing with distance); both approach the ceiling r = 1/2. Right: the inverse functions, used to convert observed recombination frequencies into additive map distances; for r above about 0.3 the two give very different distances.](./plots/mapping-functions.py)
 
 ### 8.5.2. The Choice of Function
@@ -276,6 +278,8 @@ Before estimating a distance we ask whether the **loci** are linked at all: is a
 4. If the **null hypothesis** of independence is rejected and the parental classes are in excess, conclude that the loci are linked, and estimate $\hat r$.
 
 **Example 8.7.1** For Example 8.1.1 the table is: $b^{+}vg^{+}$ 405, $b^{+}vg$ 88, $b\,vg^{+}$ 92, $b\,vg$ 415. The margins are 493, 507 (rows) and 497, 503 (columns), so for instance $E_{11} = 493 \times 497/1000 = 245.0$. Then $\chi^2 = 409.6$ with 1 degree of freedom, $p \approx 10^{-90}$: strong evidence of linkage. With small samples the decision is much less clear: 40 offspring with 14 recombinants ($\hat r = 0.35$) give $\chi^2 = 3.6$ (if the margins are 20:20), not significant at $5\,\%$, although the **genes** may well be linked. Sample size is an essential part of any conclusion of "no linkage".
+
+:::
 
 The **likelihood** ratio of $r = \hat r$ against $r = 1/2$ is the basis of the LOD score of human genetics: the LOD is $\log_{10}$ of this **likelihood ratio** ([3.2.5](/3.2.5#sec-5.3)), $Z = \log_{10}\bigl[\hat r^{R}(1 - \hat r)^{n - R}/(1/2)^n\bigr]$. For Example 8.1.1, $Z = 96.3$. In human families, where each **meiosis** is precious, the evidence is accumulated across families, and a LOD of 3 is the conventional threshold ([7.4.14](/7.4.14)).
 

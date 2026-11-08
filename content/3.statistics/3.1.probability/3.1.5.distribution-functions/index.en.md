@@ -1,7 +1,7 @@
 ---
 title: Distribution Functions and Functions of Random Variables
 description: The distribution function, its relation to the probability mass function and the density, its characteristic properties (monotone, limits at infinity, right-continuous) and how it determines the type of a random variable; the standard normal distribution function and the 3σ rule, geometric versus exponential distributions, mixed and singular distributions; distributions of functions of discrete and continuous random variables, with density formulas for monotone and general transformations.
-source_hash: 17248cad7cd4
+source_hash: af6de21927b3
 ---
 
 In [3.1.4](/3.1.4) discrete random variables were described by probability mass functions and continuous ones by densities, but each tool has a limited range: some random variables are neither discrete nor continuous. This chapter introduces the distribution function $F(x)=\mathbb{P}(X\le x)$, which applies to every random variable. It determines the distribution completely, places discrete and continuous distributions in a common framework (so that, for instance, the geometric and exponential distributions can be compared directly), and tells us which type a random variable is. The second half of the chapter treats the distribution of a function $Y=g(X)$: the general method is to compute the distribution function of $Y$ and then differentiate, and for monotone or piecewise monotone $g$ there are formulas that pass directly from the density of $X$ to that of $Y$. These methods are extended to random vectors and their functions in [3.1.6](/3.1.6) and [3.1.7](/3.1.7).
@@ -75,6 +75,8 @@ Let $X_2\sim\mathrm{Exp}(\lambda)$; then $F_2(x)=\int_0^x\lambda\mathrm{e}^{-\la
 
 ![Step distribution function of the geometric distribution on the lattice nδ compared with the exponential distribution function 1 − e^(−x), for δ = 0.5 and δ = 0.1](./plots/geometric-exponential.py)
 
+:::
+
 Distribution functions can also describe random variables that are neither discrete nor continuous.
 
 **Example 5.1.3 (A Mixed Random Variable)** Toss a fair coin. On heads you receive 0.5 yuan; on tails you spin a prize wheel and receive an amount distributed as $\mathrm{U}(0,1)$ (in yuan). The amount $X$ received has distribution function
@@ -139,6 +141,8 @@ Therefore $f$ is a probability density of $X$. $\square$
 **Remark 5.1.1** The continuity of $F$ in Theorem 5.1.3 is essential. If $X\sim\mathrm{Bin}(n,p)$, then $F'(x)=0$ except at finitely many points, yet $X$ has no density. On the other hand, continuity of $F$ does not guarantee that $X$ is a continuous random variable, as the next example shows; the example also shows that the restriction on the set $A$ in the theorem cannot be dropped.
 
 **Example 5.1.4 (Cantor Distribution)** The Cantor set $C$ is what remains of $[0,1]$ after removing the open middle third $(1/3,2/3)$, then the open middle third of each remaining interval, and so on indefinitely. Define $F(x)=0$ for $x\le0$ and $F(x)=1$ for $x\ge1$; let $F=1/2$ on the interval $[1/3,2/3]$ removed in the first step, $F=1/4$ and $3/4$ on the intervals $[1/9,2/9]$ and $[7/9,8/9]$ removed in the second step, and, on the $2^{n-1}$ intervals removed in step $n$, the values $\frac1{2^n},\frac3{2^n},\dots,\frac{2^n-1}{2^n}$ from left to right. One can show that $F$ extends to all of $\mathbb{R}$ as a nondecreasing continuous function with $F(-\infty)=0$ and $F(\infty)=1$, so it is a distribution function, called the Cantor function (Lebesgue's singular function). At every point outside $C$ we have $F'(x)=0$, and the total length of $C$ is $1-\sum_{n\ge1}2^{n-1}/3^n=0$, so $F'=0$ almost everywhere. If $X$ had a density $f$, then $f=F'=0$ almost everywhere and $\int f=0\ne1$, a contradiction. A random variable with the Cantor distribution therefore takes each value with probability zero, and yet it is not a continuous random variable.
+
+:::
 
 A distribution function that is continuous, not constant, and differentiable almost everywhere with derivative zero almost everywhere is called singular. One can show that every distribution function decomposes uniquely as a convex combination of a discrete, an absolutely continuous (that is, having a density) and a singular part (the Lebesgue decomposition); elementary probability meets only the first two and their mixtures.
 
@@ -269,6 +273,8 @@ $$
 and differentiation gives the same result. This is the arcsine distribution. Its density tends to infinity near $\pm r$, because the projection of a point rotating at constant speed spends the most time near the two ends.
 
 ![Left: y = r cos x on (0, 2π), where each y ∈ (−r, r) has two preimages h1(y) and h2(y); right: histogram of 100,000 simulated values of Y = r cos X with the density 1/(π√(r² − y²))](./plots/cosine-transform.py)
+
+:::
 
 Either method may be used; what matters is solving the problem. The distribution function method always works; the density formulas are quicker but require finding every branch of the inverse correctly. Another useful technique is to recognize the "kernel" of a density: if the density obtained is proportional to a known density (such as $y^{-1/2}\mathrm{e}^{-y/2}$ in Example 5.2.3), normalization determines the constant and identifies the distribution.
 

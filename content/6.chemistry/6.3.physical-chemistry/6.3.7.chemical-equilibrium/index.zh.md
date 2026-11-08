@@ -237,6 +237,8 @@ $$
 
 ![合成氨（½N₂ + 3/2H₂ ⇌ NH₃）的 van 't Hoff 作图：忽略 ΔrCp 的直线与计入热容的曲线在高温下明显分开（左）；反应热容随温度的变化（右）](./plots/ammonia-heat-capacity.py)
 
+:::
+
 定性结论：吸热反应升温使 $K^\circ$ 增大，放热反应升温使 $K^\circ$ 减小。一个常见的疑问：$\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} > 0$、$\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}} < 0$ 的反应，升温时 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} - T\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$ 增大，$K^\circ$ 是否因此减小？不是：决定 $K^\circ$ 的是 $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/T = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}}/T - \Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$，它随 $T$ 升高而减小，所以 $K^\circ$ 增大，与 van 't Hoff 方程一致（尽管 $K^\circ$ 始终小于 1）。放热反应低温有利于平衡，但生产上不能一味降温：温度太低反应太慢，要在平衡与速率之间折中（合成氨，[6.1.8](/6.1.8)）。
 
 ### 7.5.2. 压力
@@ -281,6 +283,8 @@ $$
 **例 7.5.4** 某温度、总压 $p^\circ$ 下 $\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$ 平衡时 $n(\ce{N2}) = 3.00\,\mathrm{mol}$，$n(\ce{H2}) = n(\ce{NH3}) = 1.00\,\mathrm{mol}$。保持温度与总压不变，(1) 加入 $0.10\,\mathrm{mol}$ $\ce{N2}$；(2) 把 $\ce{H2}$ 增加到 $3.10\,\mathrm{mol}$，平衡各向哪个方向移动？
 
 **解** 平衡时摩尔分数为 $0.6$、$0.2$、$0.2$，$K^\circ = \frac{0.2^2}{0.6 \times 0.2^3} = 8.33$（$p = p^\circ$）。(1) 总量 $5.1\,\mathrm{mol}$，$Q = \frac{(1/5.1)^2}{(3.1/5.1)(1/5.1)^3} = 8.39 > K^\circ$，平衡左移：这里 $x(\ce{N2}) = 0.6 > 1/2$。(2) 总量 $7.1\,\mathrm{mol}$，$Q = \frac{(1/7.1)^2}{(3/7.1)(3.1/7.1)^3} = 0.564 < K^\circ$，平衡右移。多种因素同时改变时不能简单套用定性结论，可靠的方法始终是比较新状态的 $Q$ 与 $K^\circ$。
+
+:::
 
 Le Chatelier 在 1884 年把平衡移动的规律概括为一条经验原理（**Le Chatelier 原理**，[6.1.8](/6.1.8#sec-8.4.4)）。它的定性表述在什么条件下严格成立，可以由热力学推出。
 

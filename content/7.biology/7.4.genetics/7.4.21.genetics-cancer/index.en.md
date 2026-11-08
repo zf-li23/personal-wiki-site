@@ -19,6 +19,8 @@ That cancer needs several mutations in one lineage is an inference from the shap
 
 **Example 21.1.1** The incidence of colorectal cancer rises about 1000-fold between ages 30 and 80. (a) On a log–log plot, $\log(1000)/\log(80/30) = 3/0.426 = 7.0$, so the slope is about 7 and $k \approx 8$. (b) If one step is made ten times faster (by a mutator **phenotype** or a **carcinogen**), the incidence at any age is multiplied by 10, since $h$ is proportional to the product of the rates. (c) If instead an inherited mutation removes one step, the incidence becomes proportional to $t^{k-2}$: at age 40 the ratio of hereditary to sporadic incidence is roughly $k/(\mu t)$, a large number, which is why hereditary cancers appear decades earlier.
 
+:::
+
 Two warnings belong with the inference. Clonal expansion between mutational steps mimics extra steps ([7.3.26](/7.3.26#sec-26.2.2)), so $k$ estimated from the slope is an upper bound on the number of mutations; and exposures that change with the calendar year (tobacco in the twentieth century) distort age curves measured across birth cohorts.
 
 ### 21.1.3. Drivers, Passengers and Signatures
@@ -87,6 +89,8 @@ In either case the probability of developing at least one tumor, the **penetranc
 With $N \approx 1.5 \times 10^5$ retinoblasts at risk and $\mu \approx 4 \times 10^{-6}$ per allele per year ([7.3.26](/7.3.26#sec-26.2.2)), a carrier has $m_1 \approx 3$ tumors by age five, so the **penetrance** is $1 - \mathrm{e}^{-3} = 0.95$ and about 64 % of affected carriers have bilateral disease, while a non-carrier has $m_2 \approx 6 \times 10^{-5}$, about one case in 17 000 children, unilateral in nearly every case. These numbers reproduce the clinical picture, and they explain the 90 % penetrance quoted for hereditary retinoblastoma without any special assumption: the missing 10 % are carriers in whom no second hit happened to occur before the retinoblasts stopped dividing.
 
 **Example 21.3.1** (a) The expected number of tumors in a carrier by age 5 is $m_1 = 1.5 \times 10^5 \times 4 \times 10^{-6} \times 5 = 3.0$. (b) The probability of no tumor is $\mathrm{e}^{-3} = 0.050$, so the penetrance is 95 %. (c) Each eye contains $N/2$ cells and is affected with probability $1 - \mathrm{e}^{-1.5} = 0.777$, so both eyes are affected in $0.777^2 = 0.60$ of all carriers, that is $0.60/0.95 = 0.64$ of those who develop any tumor. (d) A sporadic case, needing two hits, has $m_2 = 1.5 \times 10^5 \times (4 \times 10^{-6} \times 5)^2 = 6 \times 10^{-5}$: about one child in 17 000, and the probability of a second, independent tumor in such a child is again $6 \times 10^{-5}$, which is why sporadic cases are unilateral.
+
+:::
 
 A further prediction distinguishes the two forms without any molecular test. The fraction of carriers still free of disease at age $t$ is $\mathrm{e}^{-N\mu t}$, which is a straight line on a semi-logarithmic plot against age, whereas for non-carriers it is $\mathrm{e}^{-N\mu^2t^2}$, a straight line against $t^2$. Knudson's 1971 analysis of 48 cases showed exactly this, and it was the first quantitative argument for the number of events in a human cancer.
 

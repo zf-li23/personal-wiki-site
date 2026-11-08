@@ -21,6 +21,8 @@ The first problem is that frequentist inference generally does not condition on 
 
 **Example 7.1.1** Let $X_1,X_2\overset{\text{iid}}{\sim}\mathrm{U}(\theta-0.5,\theta+0.5)$ with order statistics $X_{(1)}\le X_{(2)}$. Since $\theta$ lies between $X_1$ and $X_2$ exactly when one of them is below $\theta$ and the other above, $\mathbb{P}_\theta\big(X_{(1)}\le\theta\le X_{(2)}\big)=2\cdot\frac12\cdot\frac12=\frac12$: the interval $[X_{(1)},X_{(2)}]$ is a confidence interval with confidence level $0.5$. Suppose that in the observed data $x_{(2)}-x_{(1)}>0.5$, which happens in a quarter of all data sets (the range of two such uniforms exceeds $0.5$ with probability $(1-0.5)^2=1/4$). Then both points lie within $0.5$ of $\theta$ and more than $0.5$ apart, so it must hold that $\theta\in[x_{(1)},x_{(2)}]$. For these data we are certain that the interval covers $\theta$, yet the frequentist statement still reports confidence $0.5$.
 
+:::
+
 The second problem is that frequentist inference depends on data that were never observed.
 
 **Definition 7.1.1 (Likelihood Principle)** The **likelihood principle** states: if two experiments $E_1,E_2$ about $\theta$ give data $y_1,y_2$ whose likelihood functions are proportional, i.e. for some constant $c>0$
@@ -144,6 +146,8 @@ $$
 $$
 This has the same form as the prior, so the normal–gamma family is conjugate. The posterior mean of $\mu$, $\nu'$, is a weighted average of the prior mean $\nu$ and $\bar x$, with weights $k$ and $n$: the prior acts like $k$ additional observations.
 
+:::
+
 The examples are instances of a general fact for exponential families (Definition 2.2.1).
 
 **Theorem 7.3.1 (Conjugate Priors for Exponential Families)** Let the sample have the exponential-family density
@@ -188,6 +192,8 @@ which is a probability density if and only if $\int_\Theta L(\theta;x)\,\mathrm{
 
 **Example 7.4.1** Let $X\sim\mathrm{Exp}(1/\mu)$ (mean $\mu$) and observe only $N=\boldsymbol{1}_{\{X<1\}}\in\{0,1\}$. Suppose we observe $N=0$. Then $L(\mu;0)=\mathbb{P}(X\ge1)=\exp(-1/\mu)$, and with $\pi(\mu)\propto1$ on $\mu>0$ we get $\pi(\mu\mid N=0)\propto\exp(-1/\mu)$. This is improper: $\exp(-1/\mu)\to1$ as $\mu\to\infty$, so $\int_0^\infty\exp(-1/\mu)\,\mathrm{d}\mu$ diverges.
 
+:::
+
 If the prior is uniform (perhaps improper) but the posterior is proper, and treating all parameter values as equally probable a priori is a fair representation of prior knowledge, the uniform prior may be useful (see also Example 7.4.4).
 
 ### 7.4.3. Jeffreys' Prior
@@ -206,6 +212,8 @@ where $l=\log f(X\mid\theta)$ and $I(\theta)$ is the Fisher information ([3.2.3]
 **Proof** By the change-of-variables formula, $\pi_\Psi(\psi)\propto\pi(g(\psi))\lvert g'(\psi)\rvert=\sqrt{I_{g(\psi)}}\,\lvert g'(\psi)\rvert$. By the chain rule $\frac{\partial l}{\partial\psi}=\frac{\partial l}{\partial\theta}g'(\psi)$, so $I_\psi=g'(\psi)^2I_{g(\psi)}$. Hence $\pi_\Psi(\psi)\propto\sqrt{I_\psi}$. $\square$
 
 **Example 7.4.2** For $X\sim\mathrm{Ber}(\theta)$, $I(\theta)=\frac{1}{\theta(1-\theta)}$, so Jeffreys' prior is $\pi(\theta)\propto\theta^{-1/2}(1-\theta)^{-1/2}$, the $\mathrm{Beta}(\frac12,\frac12)$ distribution. For $X\sim\mathcal{N}(\mu,\sigma^2)$ with $\sigma^2$ known, $I(\mu)=1/\sigma^2$ is constant and Jeffreys' prior on $\mu$ is the (improper) uniform prior.
+
+:::
 
 It is sometimes desirable, on subjective grounds, to have a prior that is invariant under reparametrization; Jeffreys' prior provides one.
 
@@ -433,6 +441,8 @@ $$
 \alpha_0=\mathbb{P}(\theta\le100\mid x)=0.106,\qquad\alpha_1=\mathbb{P}(\theta>100\mid x)=0.894,
 $$
 so we reject $H_0$.
+
+:::
 
 The posterior odds depend on the prior probabilities $\pi_0=\mathbb{P}(\theta\in\Theta_0)$ and $\pi_1=\mathbb{P}(\theta\in\Theta_1)$. Dividing them out isolates the evidence provided by the data.
 

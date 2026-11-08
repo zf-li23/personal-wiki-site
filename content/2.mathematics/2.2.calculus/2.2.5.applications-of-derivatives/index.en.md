@@ -1,6 +1,6 @@
 ---
 title: Studying Functions with Derivatives
-source_hash: 05bc2f04ea7f
+source_hash: f29a102741be
 ---
 
 The previous chapter ([2.2.4](/2.2.4)) defined the **derivative** and established the rules of differentiation; this chapter uses derivatives to study functions themselves: monotonicity, local and global extrema, convexity and inflection points, asymptotes and curve sketching, as well as computing limits with derivatives (L'Hôpital's rule), proving inequalities, and approximating functions by polynomials (Taylor's formula). The bridge between derivatives (local information) and function values (global information) is the mean value theorem, which relies on the **extreme value theorem** for **continuous functions** on closed intervals ([2.2.3](/2.2.3)); almost everything else in the chapter follows from it. Taylor's formula is the other core topic of the chapter: it pushes the idea of **equivalent infinitesimals** to arbitrary order, is a powerful tool for computing limits and estimating errors, and underlies the Taylor series of [2.2.9](/2.2.9) as well as the multivariable Taylor formula and the tests for extrema in [2.2.11](/2.2.11). Convex functions and Jensen's inequality are also used frequently in probability theory.
@@ -110,6 +110,8 @@ In particular, $\sqrt[n]{b}-\sqrt[n]{a}<\sqrt[n]{b-a}$ ($n\ge2$).
 **Example 5.1.6** Let $f$ be twice differentiable on $(-\infty,+\infty)$ with $f''\equiv0$. Prove that $f(x) = ax+b$.
 
 **Proof** By Corollary 5.1.1, $f'\equiv a$; then by the Lagrange mean value theorem $f(x)-f(0) = f'(\xi)x = ax$, so $f(x) = ax+b$ with $b = f(0)$. $\square$
+
+:::
 
 By induction: if $f^{(n+1)}\equiv0$, then $f$ is a polynomial of degree at most $n$.
 
@@ -245,6 +247,8 @@ $$
 
 **Proof** $\lim\limits_{x\to+\infty}\frac{(\ln x)^\beta}{x^\alpha} = \lim\limits_{x\to+\infty}\frac{\beta(\ln x)^{\beta-1}}{\alpha x^\alpha}$; each application of the rule lowers the power of $\ln x$ by $1$, and after $k$ applications ($k-1<\beta\le k$) the power in the numerator is $\beta-k\le0$, so the limit is $0$. Alternatively, substitute $x = \mathrm{e}^t$ to reduce to Example 5.2.4. $\square$
 
+:::
+
 Examples 5.2.4 and 5.2.5 show that, as $x\to+\infty$, the three kinds of infinitely large quantities grow at rates satisfying
 
 $$
@@ -347,6 +351,8 @@ and at the endpoints $f(-1) = 6$ and $f(3) = 0$. Comparing, the maximum is $f(1-
 **Example 5.3.5** Find the maximum and minimum of $f(x) = x\mathrm{e}^{-x^2}$ on $(-\infty,+\infty)$.
 
 **Solution** The interval is unbounded, so we first show that the extreme values exist. As $x\to\infty$, $f(x)\to0$, while $f(1)>0$ and $f(-1)<0$; hence there exists $M>1$ such that $f(-1)<f(x)<f(1)$ for $|x|>M$. The extreme values of $f$ on $[-M,M]$ are then its extreme values on $\mathbb{R}$, and they are not attained at the endpoints $\pm M$, so they are attained at interior stationary points. From $f'(x) = (1-2x^2)\mathrm{e}^{-x^2} = 0$ we get $x = \pm\frac{1}{\sqrt2}$; the maximum is $f\bigl(\frac1{\sqrt2}\bigr) = \frac{1}{\sqrt{2\mathrm{e}}}$ and the minimum is $f\bigl(-\frac1{\sqrt2}\bigr) = -\frac{1}{\sqrt{2\mathrm{e}}}$.
+
+:::
 
 Practical problems often have only one stationary point, in which case the following simple test applies.
 
@@ -482,6 +488,8 @@ $$
 $$
 
 and the result follows from the monotonicity of $\ln$. If some $x_i$ is $0$, the inequality is obvious. $\square$
+
+:::
 
 This is the *inequality of arithmetic and geometric means*. The same argument gives the weighted form and the power mean form: if $x_i\ge0$, $\lambda_i\ge0$ and $\sum\lambda_i = 1$, then
 
@@ -645,6 +653,8 @@ $$
 f(x) = 4+5(x-1)+3(x-1)^2+(x-1)^3.
 $$
 
+:::
+
 In general, the Taylor polynomial of degree $n$ of a polynomial of degree $n$ is the polynomial itself, and its Taylor formula at $x_0$ is simply its re-expansion in powers of $x-x_0$ (in agreement with the expansion of a polynomial in powers of $x-c$ by synthetic division in [2.1.9](/2.1.9)).
 
 The next theorem gives another way to find Taylor polynomials: there is no need to differentiate order by order; any expansion of the form "polynomial $+\,o((x-x_0)^n)$," however obtained, is the Taylor formula.
@@ -694,6 +704,8 @@ Error estimates. The error in approximating $f(x)$ by $P_n(x)$ is the Lagrange r
 
 **Solution** $10^\circ = \frac{\pi}{18}\approx0.174533$. The first-order Taylor polynomial gives $\sin10^\circ\approx0.174533$ with error $|R_1| = \bigl\lvert\frac{\sin(\xi+\pi)}{2!}\bigr\rvert(0.174533)^2<0.02$; the third-order Taylor polynomial gives $\sin10^\circ\approx0.174533-\frac16(0.174533)^3\approx0.173647$ with error $|R_3| = \bigl\lvert\frac{\sin(\xi+2\pi)}{4!}\bigr\rvert(0.174533)^4\le\frac{(0.174533)^5}{4!}<10^{-5}$ (here $0<\xi<0.174533$ and $|\sin\xi|\le\xi$; since $P_3 = P_4$, the error is in fact at most $\frac{(0.174533)^5}{5!}\approx1.4\times10^{-6}$). If the error is required not to exceed $10^{-6}$, we look for the smallest $n$ with $\frac{(0.174533)^{n+1}}{(n+1)!}<10^{-6}$ and find $n = 5$ (for $n = 4$ the bound is about $1.4\times10^{-6}$, for $n = 5$ about $3.9\times10^{-8}$).
 
+:::
+
 Computing limits. Expanding numerator and denominator to the same order turns an indeterminate form into a ratio of polynomials; this is a refinement of the substitution of equivalent infinitesimals that can handle cancellation in sums and differences.
 
 **Example 5.5.7** Find $\lim\limits_{x\to0}\frac{\sqrt[3]{\cos x}-1-x(\mathrm{e}^x-1)}{(2^x-1)\tan x}$.
@@ -703,6 +715,8 @@ Computing limits. Expanding numerator and denominator to the same order turns an
 **Example 5.5.8** Find $\lim\limits_{x\to0^+}\frac{\mathrm{e}^{x^2}-\cos(2\sqrt x)-2x}{x^2}$.
 
 **Solution** $\mathrm{e}^{x^2} = 1+x^2+o(x^2)$ and $\cos(2\sqrt x) = 1-\frac{(2\sqrt x)^2}{2}+\frac{(2\sqrt x)^4}{4!}+o(x^2) = 1-2x+\frac23x^2+o(x^2)$, so the numerator equals $\frac13x^2+o(x^2)$ and the limit is $\frac13$.
+
+:::
 
 Proving boundedness and inequalities.
 

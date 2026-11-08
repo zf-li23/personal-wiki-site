@@ -1,7 +1,7 @@
 ---
 title: Correlation and Linear Regression
 description: Scatter plots and the meaning and pitfalls of Pearson's correlation coefficient (Anscombe's quartet); the t test for the correlation coefficient, Fisher's z-transformation and comparison of two correlations; least squares for simple linear regression, the meaning of the slope and regression toward the mean; inference for the slope, the ANOVA table, the coefficient of determination, confidence intervals for the mean and prediction intervals for an individual; residual diagnostics and log transformation; standard curves and inverse prediction; multiple linear regression, partial regression coefficients and confounding; dummy variables and interaction terms; model selection, collinearity and influential points; partial correlation. The running example is children's FEV against height and smoking, with the DNase ELISA standard curve as the laboratory example.
-source_hash: 39812a413f32
+source_hash: 9b0e6d0ecb66
 ---
 
 The preceding chapters compared "groups": the FEV of two groups of children, tooth growth at three doses. In many problems, however, the independent variable is continuous: how does FEV change with height? What is the relationship between optical density and DNase concentration? Can a mother's weight predict her baby's birth weight? The association between two continuous variables is described by the **correlation coefficient**; predicting one variable from another while controlling for the influence of other variables is the business of regression. This chapter starts from the scatter plot and Pearson's correlation coefficient and treats inference for the correlation coefficient; it then covers simple linear regression (least squares, inference, prediction, diagnostics), its commonest use in the laboratory, the standard curve and inverse prediction, and finally multiple linear regression. The main thread returns to the question posed in [7.7.1](/7.7.1): among the 654 children in East Boston the FEV of smokers is actually higher ([7.7.7](/7.7.7) Example 7.3.2), and this is caused by age and body size; multiple regression lets us for the first time "adjust" for these variables within one model, and the coefficient of smoking then becomes negative. The mathematics of regression (properties of the least-squares estimators, the matrix form, the derivation of diagnostic statistics) is treated fully in [3.3](/3.3); here we give only results, conditions and uses in biomedicine. Nonlinear standard curves and enzyme-kinetic fitting are in [7.7.11](/7.7.11), and analysis of variance as a special case of regression is in [7.7.12](/7.7.12).
@@ -22,6 +22,8 @@ where $s_{xy}$ is the sample **covariance** and $s_x, s_y$ are the sample standa
 $r$ estimates the population **correlation coefficient** $\rho = \operatorname{Cov}(X, Y)/\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}$ ([3.1.10](/3.1.10)). It is a standardized covariance: it has no units, is unchanged by linear transformations of $x$ or $y$ (such as converting inches to centimeters), and is unchanged when $x$ and $y$ are interchanged. It measures the strength of linear association: $r^2$ is the proportion of the variation in $y$ that can be explained by a linear function of $x$ (Section 10.4).
 
 **Example 10.1.1 (FEV)** Among the 654 children, the correlation of FEV with height is $r = 0.868$, with age $r = 0.756$, and between height and age $r = 0.792$. Height has more linear explanatory power for FEV ($r^2 = 0.754$) than age ($0.572$): lung size is more directly determined by body size.
+
+:::
 
 By convention $\lvert r\rvert < 0.3$ is often called weak, $0.3$–$0.7$ moderate and $> 0.7$ strong, but this grading is only a habit: in biomedicine an association with $r = 0.3$ may be important (blood pressure and later cardiovascular events), and $r = 0.95$ may still be insufficient (agreement between two measurement methods, [7.7.11](/7.7.11), Section 11.3).
 
@@ -81,6 +83,8 @@ Z = \frac{z_1 - z_2}{\sqrt{1/(n_1 - 3) + 1/(n_2 - 3)}} \ \overset{H_0}{\approx}\
 $$
 
 **Example 10.2.3 (Familial Correlation of Blood Pressure)** Imagine a study comparing the correlation of blood pressure between mothers and children: $r_1 = 0.35$ for 1000 pairs of children raised by their biological mothers and $r_2 = 0.06$ for 100 pairs raised by adoptive mothers. A stronger correlation in the biological group would suggest a genetic contribution. $z_1 = 0.365$, $z_2 = 0.060$, $Z = 0.305/\sqrt{1/997 + 1/97} = 2.87$, and $p = 0.004$. Note that one must not test the two groups separately (biological group $p < 10^{-29}$, adopted group $p = 0.55$) and then say "one is significant and the other is not, so they differ": contrasting two p-values is not a test of the difference, and the adopted group is nonsignificant mainly because it has only 100 pairs.
+
+:::
 
 Two correlation coefficients computed on the same individuals (such as FEV with height and FEV with age, which share FEV) are not independent, and a method that takes the covariance between the correlation coefficients into account (such as the Steiger test) must be used instead of the formula above.
 
@@ -240,6 +244,8 @@ An unknown sample whose two wells have mean optical density 0.50 has $\hat x_0 =
 
 ![A linear standard curve and inverse prediction: duplicate wells at the lowest 5 concentrations of run 1 of the rat serum DNase ELISA (Davidian and Giltinan 1995; R datasets::DNase). A: the least-squares line, the 95% prediction band for the mean of two wells, and the inverse prediction for an unknown sample with optical density 0.50 (arrow) with its 95% interval on the concentration axis. B: residuals: the line is systematically too low at both ends, indicating that the response has already started to curve](./plots/standard-curve-linear.py)
 
+:::
+
 Key points for a linear standard curve: the standards should cover the range of the unknown samples, with no extrapolation; check linearity within the range used (inspect the residuals, or use a lack-of-fit test with the replicates, [7.7.11](/7.7.11), Section 11.2); run a standard curve of its own on every plate and in every assay; and report an interval for the concentration of the unknown sample. When the variance of the signal increases with concentration, use **weighted least squares** ([7.7.11](/7.7.11), Section 11.2).
 
 Another common use of linearization is to turn a nonlinear relationship into a straight line for fitting. The **Lineweaver–Burk plot** of enzyme kinetics ([6.3.17](/6.3.17)) rewrites the Michaelis–Menten equation $v = V_{\max}[\ce{S}]/(K_{\mathrm{M}} + [\ce{S}])$ as $1/v = 1/V_{\max} + (K_{\mathrm{M}}/V_{\max})(1/[\ce{S}])$ and regresses $1/v$ on $1/[\ce{S}]$. For the Puromycin data (cells treated with puromycin, 12 reactions) this gives $V_{\max} = 195.8$ and $K_{\mathrm{M}} = 0.048$ ppm, with regression $r^2 = 0.86$; direct nonlinear fitting gives $V_{\max} = 212.7$ and $K_{\mathrm{M}} = 0.064$ ppm. The difference arises from the distortion of the errors by the reciprocal transformation: at low concentrations $v$ is small, the error of $1/v$ is magnified many times, and the two least precise points dominate the line. Linearization can give rough starting values for the parameters, but the parameters should be estimated by nonlinear regression ([7.7.11](/7.7.11), Section 11.4).
@@ -323,6 +329,8 @@ After fitting a multiple regression, check in turn: residual plots against the f
 An association between two variables may arise from a third variable on which both depend. The **partial correlation coefficient** ([3.3.9](/3.3.9)) is the correlation between two variables after controlling for other variables: regress $x$ and $y$ each on the control variable $z$, and the correlation coefficient of the two sets of residuals is the partial correlation $r_{xy \cdot z}$ of $x$ and $y$ given $z$; its t test is equivalent to the t test for the corresponding coefficient in multiple regression.
 
 **Example 10.9.1** The simple correlation of FEV with age is 0.756, and after controlling for height the partial correlation falls to 0.227 ($p = 4 \times 10^{-9}$): most of the correlation between age and FEV is that "older children are taller", but among children of the same height the older ones still have slightly higher FEV (maturation of the lungs). After controlling for age, height and sex, the partial correlation of smoking with log FEV is $-0.086$ ($p = 0.028$), the same test as that of the coefficient of smoking in Example 10.7.1.
+
+:::
 
 The size of a partial correlation indicates only the strength of linear association and, again, is meaningful only if the model (linearity, correct choice of control variables) holds. For monotone but nonlinear associations use **Spearman's rank correlation coefficient** ([7.7.8](/7.7.8); for FEV and height $r_s = 0.888$, slightly higher than Pearson's 0.868 because the relationship curves upward).
 

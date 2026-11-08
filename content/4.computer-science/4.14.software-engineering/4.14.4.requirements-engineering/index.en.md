@@ -291,6 +291,8 @@ Each path from the root to a leaf becomes one rule of the decision table:
 
 The table is complete and consistent: with four Boolean conditions there are $2^4 = 16$ combinations, and the rules cover $8 + 4 + 2 + 1 + 1 = 16$ of them, each exactly once (a rule with $k$ don't-care entries covers $2^k$ combinations). Checks of this kind are mechanical, which is one reason decision tables are also a standard source of black-box **test cases** ([4.14.11](/4.14.11)); 4.6.3 turns this very table into an executable test.
 
+:::
+
 A decision tree is easier to read when the conditions are naturally asked in sequence; a decision table is easier to check for completeness and scales better when many conditions interact.
 
 ### 4.3.4. UML and Use Cases
@@ -326,6 +328,8 @@ flowchart LR
   U1 --- BU
   U5 --- BU
 ```
+
+:::
 
 Use cases are found in three steps:
 
@@ -408,6 +412,8 @@ sequenceDiagram
 ```
 
 The diagram makes the cost of the design visible: eleven connection setups for one page, which is why HTTP/1.1 made connections persistent (and HTTP/2 and HTTP/3 multiplex requests on one connection).
+
+:::
 
 Sequence diagrams can be derived systematically from a textual description by extracting subject–verb–object triples.
 
@@ -570,6 +576,8 @@ The first defect to look for is ambiguity: a sentence that seems clear can have 
 
 **Example 4.4.1** "Sound the alarm when a flying object is detected that is unfriendly and has an unknown mission or might enter restricted airspace within 5 minutes." Write $A$ for "the object is unfriendly", $B$ for "its mission is unknown" and $C$ for "it might enter restricted airspace within 5 minutes". The sentence can be read as $(A \land B) \lor C$ or as $A \land (B \lor C)$. The two readings differ exactly when $A$ is false and $C$ is true: a friendly aircraft about to stray into restricted airspace triggers the alarm under the first reading but not under the second. Which reading is meant is a domain decision that only the stakeholders can make; drawing both decision trees, or writing the condition as a formula, exposes the question.
 
+:::
+
 Certain words are reliable signs of ambiguity:
 
 | Avoid | Instead |
@@ -595,6 +603,8 @@ Completeness means that each requirement must contain all necessary information,
 
 What should happen when the customer selects the optimal plan without evidence, with evidence, or provides evidence without selecting it? The three question marks are three missing requirements.
 
+:::
+
 A requirement must also be singular: a paragraph that mixes several needs must be split.
 
 **Example 4.4.3** A paragraph from a real specification: "The system must check the consistency of account data between the active account log and the account management archive. The logic used to produce the comparison data should be based on the logic of the existing consistency checking tool; in other words, the new code does not need to be developed from scratch. However, additional logic must be added to identify whether the database is an authoritative source of information. The new functionality will include writing data to a table to indicate how and where inconsistencies were resolved. In addition, the code should also check for exception conditions that violate the security tool database. Once a violation occurs, an automatic warning email should be sent to the security compliance team." The analyst's questions:
@@ -608,6 +618,8 @@ A requirement must also be singular: a paragraph that mixes several needs must b
 7. The paragraph contains at least five requirements and should be split into separate, individually verifiable statements.
 
 After the questions are answered, the paragraph might become: "REQ-1. Every night at 02:00 the system shall compare the account records in the active account log with those in the account management archive. REQ-2. For each account whose records differ, the system shall write a row to the resolution table containing the account ID, the differing fields and the source declared authoritative. REQ-3. When a record violates a rule in the security tool database, the system shall send a warning email to the security compliance team within 5 minutes." Each statement can now be tested on its own.
+
+:::
 
 Finally, before a set of requirements is baselined, it is validated: does it describe what the stakeholders actually need? The main techniques are reviews and inspections of the written requirements by stakeholders of each kind (with a checklist built from the characteristics above), prototypes that let users try the intended behavior, and acceptance tests written from the requirements before the code exists. Writing tests early is itself a review: every requirement that cannot be turned into a test is sent back.
 

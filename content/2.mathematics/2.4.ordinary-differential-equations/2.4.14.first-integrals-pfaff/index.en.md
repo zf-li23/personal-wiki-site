@@ -1,6 +1,6 @@
 ---
 title: First Integrals and Pfaffian Equations
-source_hash: 86ae68435753
+source_hash: b4393b313cae
 ---
 
 The general integral $u(x,y)=C$ of a first-order equation $M\,\mathrm{d}x+N\,\mathrm{d}y=0$ is a function that stays constant along every integral curve ([2.4.2](/2.4.2)). This chapter extends this point of view to higher dimensions in two directions.
@@ -45,6 +45,8 @@ $$
 \Phi(x,y)=\delta x-\gamma\ln x+\beta y-\alpha\ln y,
 $$
 which can be verified directly with Eq. (14.2). $\Phi$ attains a strict minimum at the equilibrium $(\gamma/\delta,\alpha/\beta)$, and its level curves are closed curves around it, so every positive solution is periodic (see [Systems Biology](/7.9.14#sec-14.2) and [Ecology](/7.19)).
+
+:::
 
 A nonautonomous system $\boldsymbol{x}'=\boldsymbol{f}(t,\boldsymbol{x})$ can be made autonomous by treating $t$ as an $(n+1)$st unknown function ($t'=1$). First integrals are then functions $\Phi(t,\boldsymbol{x})$, and the criterion becomes $\frac{\partial\Phi}{\partial t}+\sum_if_i\frac{\partial\Phi}{\partial x_i}=0$.
 
@@ -112,6 +114,8 @@ The geometric meaning of Theorem 14.2.1 is that solutions of Eq. (14.4) are cons
 **Example 14.2.1** Solve $x\dfrac{\partial u}{\partial x}+y\dfrac{\partial u}{\partial y}=0$ ($x\ne0$).
 
 **Solution** The characteristic system is $\frac{\mathrm{d}x}{x}=\frac{\mathrm{d}y}{y}$, with first integral $y/x$, so the general solution is $u=G(y/x)$: a **homogeneous function** of degree zero. The characteristic curves are rays through the origin, and the solutions are constant along the rays.
+
+:::
 
 For a quasilinear equation $\sum_if_i(\boldsymbol{x},u)\frac{\partial u}{\partial x_i}=g(\boldsymbol{x},u)$, we may treat $u$ as a variable as well: if $V(\boldsymbol{x},u)=0$ defines a solution $u$ implicitly, then $V$ satisfies the homogeneous equation in $n+1$ variables $\sum_if_i\frac{\partial V}{\partial x_i}+g\frac{\partial V}{\partial u}=0$, whose characteristic system is
 
@@ -240,6 +244,8 @@ $$
 |x_1|^{m_1}|x_2|^{m_2}\cdots|x_n|^{m_n}=C\quad(C>0).
 $$
 
+:::
+
 In general, the condition for complete integrability is stated most concisely in the language of exterior differential forms. Writing $\omega=\sum_kM_k\,\mathrm{d}x_k$, the integrability condition is $\omega\wedge\mathrm{d}\omega=0$; in coordinates, for all $i<j<k$,
 
 $$
@@ -305,6 +311,8 @@ $$
 z=-\frac{a^2+b^2}{s}+s=\frac1s.
 $$
 Hence $x^2+y^2+z^2=1$ ($z>0$): the singular integral is the upper unit hemisphere. Geometrically, the complete integral consists of all planes at distance $1$ from the origin that lie above it (the distance from the origin to $z=ax+by+s$ is $s/\sqrt{1+a^2+b^2}=1$), and their envelope is naturally the unit sphere.
+
+:::
 
 General first-order nonlinear partial differential equations can also be solved by the method of characteristics (the Lagrange–Charpit method), in which the theory of complete and singular integrals plays a central role; see [2.5](/2.5).
 

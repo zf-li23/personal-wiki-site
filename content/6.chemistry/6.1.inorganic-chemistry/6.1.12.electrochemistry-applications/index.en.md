@@ -1,6 +1,6 @@
 ---
 title: Applications of Electrode Potentials and Electrochemistry
-source_hash: 70b0a53c976d
+source_hash: 3a53a7b9f67c
 ---
 
 [6.1.11](/6.1.11) established the concept of the electrode potential and obtained from thermodynamics $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$ and the **Nernst equation**. In this chapter we use these two relations to solve practical problems in chemistry: comparing the strengths of oxidizing and reducing agents, calculating equilibrium constants of redox reactions, finding solubility products from electromotive forces, and deciding the direction and extent of reactions (12.1). We then plot the standard electrode potentials among the oxidation states of an element as a Latimer diagram and a Frost diagram, from which one can see at a glance which oxidation states are stable and which disproportionate (12.2), and plot electrode potential against pH on the same diagram to decide whether a substance can exist stably in water (12.3). Finally we discuss two technological directions of electrochemistry: electrolysis, in which electrical energy drives nonspontaneous reactions (12.4), and electrochemical power sources, which store chemical energy and convert it to electrical energy on demand (12.5). Latimer and Frost diagrams are the main tools of the descriptive chemistry of the elements in [6.1.13](/6.1.13)–[6.1.15](/6.1.15). The theory of electrode kinetics and overpotential, and corrosion and its prevention, are found in [Physical Chemistry](/6.3); redox titration and potentiometric analysis are found in [Analytical Chemistry](/6.4).
@@ -34,6 +34,8 @@ $$
 \lg K^\circ = \frac{2 \times 0.152}{0.05916} = 5.14, \qquad K^\circ = 1.4\times10^5.
 $$
 For the second, $z = 1$: $\lg K^{\circ\prime} = 2.57$ and $K^{\circ\prime} = 3.7\times10^2 = (K^\circ)^{1/2}$. When the stoichiometric coefficients of the equation change, $E^\circ_{\mathrm{cell}}$ is unchanged, and $z$ and $\lg K^\circ$ change in proportion; this agrees with the rule for writing equilibrium constants ([6.1.8](/6.1.8)). $\square$
+
+:::
 
 Finally, consider the criterion for a reaction to go to completion. It is often said that "a reaction with a standard electromotive force greater than 0.3 V goes essentially to completion", but this statement has a premise. From Eq. (12.1), for $K^\circ \ge 10^n$ we need
 
@@ -69,6 +71,8 @@ $$
 -0.358 = -0.126 + \frac{0.05916}{2}\lg K_{\mathrm{sp}}, \qquad \lg K_{\mathrm{sp}} = -7.84, \qquad K_{\mathrm{sp}} = 1.4\times10^{-8}.
 $$
 The value obtained from the solubility is $2.5\times10^{-8}$, a difference of less than a factor of two. $\lg K_{\mathrm{sp}}$ is very sensitive to the electromotive force (for $z = 2$, each $0.01\,\mathrm{V}$ corresponds to a factor of 2.2 in $K_{\mathrm{sp}}$), so an electromotive force with two significant figures gives only the order of magnitude of $K_{\mathrm{sp}}$; an accurate determination also requires activities in place of concentrations. $\square$
+
+:::
 
 The same method can be used to find **stability constants**: $\lg\beta_4$ follows from the difference between $E^\circ([\ce{Cu(NH3)4}]^{2+}/\ce{Cu})$ and $E^\circ(\ce{Cu^2+}/\ce{Cu})$ (11.5.4 of [6.1.11](/6.1.11)), and one can also find the dissociation constants of weak acids and the ion product of water.
 
@@ -223,6 +227,8 @@ In reality the decomposition of water also has kinetic barriers: evolving $\ce{H
 **Example 12.3.1** Decide whether $\ce{F2}$ and $\ce{Na}$ can exist stably in water.
 
 **Solution** For $\ce{F2 + 2e- <=> 2F-}$, $E^\circ = 2.866\,\mathrm{V}$; for $\ce{Na+ + e- <=> Na}$, $E^\circ = -2.71\,\mathrm{V}$. Neither electrode reaction involves $\ce{H+}$ or $\ce{OH-}$, so the potentials are independent of pH and are horizontal lines on the diagram. The former lies above line b and also above line d; the latter lies below line a and also below line c. Even allowing for the stability region extended by overpotential, $\ce{F2}$ and Na cannot exist stably in aqueous solution at any pH: $\ce{F2}$ oxidizes water ($\ce{2F2 + 2H2O -> 4HF + O2}$) and is itself reduced to $\ce{F-}$; Na reduces water ($\ce{2Na + 2H2O -> 2NaOH + H2}$) and is itself oxidized to $\ce{Na+}$. $\square$
+
+:::
 
 For systems containing metals, drawing on the potential–pH diagram the equilibrium lines among the species of the metal (metal, ions, hydroxides, oxoanions) allows one to delineate the immunity, corrosion, and passivation regions of the metal. This is the basic tool for discussing metal corrosion, hydrometallurgy, and geochemistry, and a systematic treatment is found in [Physical Chemistry](/6.3).
 

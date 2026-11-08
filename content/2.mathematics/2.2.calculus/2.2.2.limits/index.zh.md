@@ -76,6 +76,8 @@ $$
 
 **证明** 记 $a = 1 + b$，$b > 0$。$n \geq 2$ 时 $a^n \geq \binom n2 b^2$，故 $0 < \frac{n}{a^n} \leq \frac{2}{(n - 1)b^2}$，取 $N = \left\lfloor \frac{2}{\varepsilon b^2} \right\rfloor + 1$ 即可。$\square$
 
+:::
+
 用同样的方法（展开到 $b^{k+1}$ 项）可证 $\lim\limits_{n \to \infty} \frac{n^k}{a^n} = 0$（$a > 1$，$k \in \mathbb{N}_+$）：指数增长快于任何多项式增长。例 2.1.2–例 2.1.5 是最常用的四个基本极限：
 
 $$
@@ -87,6 +89,8 @@ $$
 **证明** 任给 $\varepsilon \in (0, 1)$。$\left|\arctan n - \frac\pi2\right| = \frac\pi2 - \arctan n < \varepsilon$ 等价于 $\tan\left(\frac\pi2 - \arctan n\right) < \tan\varepsilon$，即 $\cot(\arctan n) = \frac1n < \tan\varepsilon$。取 $N = \left\lfloor \frac1{\tan\varepsilon} \right\rfloor$ 即可。$\square$
 
 同理 $\lim\limits_{n \to \infty} \arctan(-n) = -\frac\pi2$，$\lim\limits_{n \to \infty} \operatorname{arccot} n = 0$，$\lim\limits_{n \to \infty} \operatorname{arccot}(-n) = \pi$。
+
+:::
 
 直接由定义可以得到下面的等价关系，它们把一般的极限问题化为"趋于 $0$"的问题：
 
@@ -103,6 +107,8 @@ $$
 \left|\frac{b_1 + \cdots + b_n}{n}\right| \leq \frac{|b_1 + \cdots + b_{N_1}|}{n} + \frac{n - N_1}{n}\varepsilon < \frac{|b_1 + \cdots + b_{N_1}|}{n} + \varepsilon.
 $$
 $N_1$ 固定后第一项的分子是常数，存在 $N_2$ 使 $n > N_2$ 时第一项小于 $\varepsilon$。取 $N = \max\{N_1, N_2\}$，$n > N$ 时上式小于 $2\varepsilon$。$\square$
+
+:::
 
 这个证明的"分段估计"是常用技巧：前有限项用"分子固定、分母趋于无穷"控制，后面的项用极限的定义控制。逆命题不成立：$a_n = (-1)^n$ 发散，而其算术平均趋于 $0$。
 
@@ -267,6 +273,8 @@ $$
 
 **证明** 取 $\varepsilon_0 > 0$ 使 $r = q + \varepsilon_0 < 1$。存在 $N$，当 $n \geq N$ 时 $\frac{a_{n+1}}{a_n} < r$，于是 $n > N$ 时 $0 < a_n < r a_{n-1} < \cdots < r^{n-N}a_N$。右边 $= \frac{a_N}{r^N} r^n \to 0$，由夹逼定理 $a_n \to 0$。$\square$
 
+:::
+
 由此立即得到 $\frac{n^k}{a^n} \to 0$（$a > 1$）、$\frac{a^n}{n!} \to 0$ 等结论：比值分别趋于 $\frac1a$ 与 $0$。这是[第 8 章](/2.2.8)比值判别法的雏形。
 
 **例 2.2.5** 求曲线 $y = x^2$、直线 $x = 1$ 与 $x$ 轴围成的区域 $D$ 的面积 $S$。
@@ -382,6 +390,8 @@ $$
 |a_{2j} - a_j| = \sum_{k=j+1}^{2j} \frac1k \geq j \cdot \frac1{2j} = \frac12 = \varepsilon_0.
 $$
 故 $\{a_n\}$ 不是 Cauchy 数列，从而发散。又 $\{a_n\}$ 单调增加，由单调收敛定理它无上界，即 $a_n \to +\infty$。$\square$
+
+:::
 
 例 2.2.10 与例 2.2.11 是[第 8 章](/2.2.8)交错级数与调和级数的雏形。
 

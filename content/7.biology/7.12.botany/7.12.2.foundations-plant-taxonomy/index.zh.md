@@ -259,6 +259,8 @@ description: 分类学的任务；分类阶元与词尾、植物的物种问题�
 
 **例 2.4.2（杉木的学名）** 杉木最早由 Lambert 在 1803 年发表为 *Pinus lanceolata* Lamb.；1826 年 Robert Brown 又将它命名为 *Cunninghamia sinensis* R.Br. ex Rich.。1827 年 Hooker 研究了原始文献，认为它应属于杉木属（*Cunninghamia*），按优先律保留最早的种加词 *lanceolata*，作出新组合 *Cunninghamia lanceolata* (Lamb.) Hook.。这就是杉木的正确名称；*Pinus lanceolata* Lamb. 是其基原异名，*Cunninghamia sinensis* 是分类学异名。白头翁 *Pulsatilla chinensis* (Bunge) Regel 的基原异名是 *Anemone chinensis* Bunge，番茄 *Solanum lycopersicum* L. 在被放在番茄属时期写作 *Lycopersicon esculentum* Mill.，都是同类的例子。
 
+:::
+
 合格发表的名称还要合法，才能成为正确名称。
 
 **定义 2.4.6（合法名称与不合法名称）** 合格发表并符合法规规则的名称是**合法名称**。合格发表但违反某些规则的名称不合法，主要有两类：**晚出同名**，与同等级的另一分类单元早已合格发表的名称拼写完全相同、却基于不同模式的名称；**多余名**，发表时作者已把应当采用的合法名称（或其模式）包括在内、却另起的新名称。

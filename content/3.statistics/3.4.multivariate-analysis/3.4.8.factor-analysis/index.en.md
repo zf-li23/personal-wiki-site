@@ -60,6 +60,8 @@ $$
 $$
 has the form $LL^{\mathsf T}+\Psi$ with $m=2$. For the first variable, $\sigma_{11}=19=h_1^2+\psi_1$ with communality $h_1^2=l_{11}^2+l_{12}^2=4^2+1^2=17$ and specific variance $\psi_1=2$.
 
+:::
+
 There is a useful geometric picture. For centered random variables with finite variance, $\langle U,W\rangle=\mathbb{E}(UW)$ is an inner product, in which the length of $U$ is its standard deviation and the cosine of the angle between $U$ and $W$ is their correlation. In this space $F_1,\dots,F_m$ form an orthonormal system, and $X_i-\mu_i=\tilde X_i+\varepsilon_i$ with $\tilde X_i=l_{i1}F_1+\cdots+l_{im}F_m$ in the span of the factors and $\varepsilon_i$ orthogonal to it and to every other $\varepsilon_k$. The loadings $l_{ij}=\langle X_i,F_j\rangle$ are the coordinates of $\tilde X_i$ in the factor basis, $h_i^2=\|\tilde X_i\|^2$, and $\psi_i=\|\varepsilon_i\|^2$.
 
 ### 8.1.4. Reduction, Non-Identifiability and Scale Invariance
@@ -128,6 +130,8 @@ By construction the diagonal of $S$ is reproduced exactly, but the off-diagonal 
 | $3$ | add the third column $(1.3,-0.8,-0.3,0.2)$ | $0.1,\ 0.0,\ 1.0,\ 0.6$ |
 
 With $m=2$ the off-diagonal residuals are at most $1.05$ in absolute value, and $S\approx\tilde L\tilde L^{\mathsf T}+\tilde\Psi$ reproduces $S$ well; with $m=1$ the residuals are as large as $19$. Note that the estimated $\tilde L$ and $\tilde\Psi$ differ from the $L$ and $\Psi$ used to construct $S$ in Example 8.1.3, although both reproduce $S$ well: the loadings are not unique, and the principal component method tends to attribute too much variance to the common factors.
+
+:::
 
 How many factors should be used? As in PCA, the residual matrix measures the quality of the approximation.
 

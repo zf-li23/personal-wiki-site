@@ -102,6 +102,8 @@ $$
 $$
 不随 $n$ 变化，$X_n$ 不依概率收敛到 $X_1$。依分布收敛只说分布越来越像，不说取值越来越近。
 
+:::
+
 极限是常数时，情况不同。
 
 **例 14.3.2** 设 $C$ 为常数，则 $X_n \xrightarrow{d} C \Leftrightarrow X_n \xrightarrow{p} C$。
@@ -129,6 +131,8 @@ $$
 \sum_{n=1}^{\infty}\mathbb{P}(A_n) = \sum_{n=1}^{\infty}\frac{1}{n} = \infty,
 $$
 由 Borel–Cantelli 引理的第二部分（定理 3.1.2），"$A_n$ 发生无穷多次"的概率为 $1$，即几乎每条样本轨道上 $X_n = 1$ 无穷多次，$X_n$ 不几乎处处收敛到 $0$。
+
+:::
 
 不借助独立性，也可以在几何概型上直接构造依概率收敛但处处不收敛的序列。
 
@@ -198,6 +202,8 @@ $$
 \sqrt{n}\left(\bar X_n(1 - \bar X_n) - p(1 - p)\right) \xrightarrow{d} \mathcal{N}\left(0, (1 - 2p)^2 p(1 - p)\right).
 $$
 
+:::
+
 连续性定理（定理 11.3.6）把依分布收敛转化为特征函数的逐点收敛，是概率论中最常用、最重要的定理之一。概率母函数、矩母函数在满足唯一性的条件下，也可以代替特征函数用于连续性定理。
 
 **例 14.4.3** 用连续性定理可以证明 Khinchin 大数定律（定理 12.3.2，证明见 [3.1.13](/3.1.13) 定理 13.1.1 之后），以及二项分布的 Poisson 近似：设 $X_n \sim \mathrm{Bin}(n, p_n)$，$np_n = \lambda$，则 $X_n$ 的特征函数
@@ -206,6 +212,8 @@ $$
 \left(1 - p_n + p_n\mathrm{e}^{\mathrm{i}t}\right)^n = \left(1 + \frac{\lambda(\mathrm{e}^{\mathrm{i}t} - 1)}{n}\right)^n \to \mathrm{e}^{\lambda(\mathrm{e}^{\mathrm{i}t} - 1)},
 $$
 后者是 $\mathrm{Poi}(\lambda)$ 的特征函数，所以 $X_n \xrightarrow{d} \mathrm{Poi}(\lambda)$。
+
+:::
 
 对随机向量，依分布收敛（联合分布函数在极限的连续点处收敛）同样可以借助特征函数判断。
 

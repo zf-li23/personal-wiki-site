@@ -47,6 +47,8 @@ which is the one-sided Fisher exact test of the $2 \times 2$ table of genes clas
 
 **Example 3.2.2** In the airway data take as background the $11\,707$ tested genes that have at least one biological-process annotation, and as list the $402$ of them induced by dexamethasone (adjusted $p < 0.05$, more than twofold). Testing the $3013$ biological-process terms with $10$ to $500$ genes in the background, $27$ are significant at an FDR of $0.05$. The strongest are "negative regulation of cell motility" ($22$ of $218$ genes, $7.5$ expected, $p = 5.9\times10^{-6}$), "extracellular matrix organization" ($17$ of $167$), "retinol metabolic process" ($8$ of $37$) and "cellular response to hormone stimulus" ($29$ of $385$). Along the path in the figure, "response to glucocorticoid" contains $10$ of the induced genes against $2.6$ expected ($p = 2.6\times10^{-4}$, FDR $0.034$), and its child "cellular response to glucocorticoid stimulus" $7$ against $1.1$ ($p = 1.1\times10^{-4}$). The $384$ repressed genes give $164$ significant terms, led by neuron projection morphogenesis and axon guidance, developmental programs whose genes are expressed in many non-neural cells.
 
+:::
+
 The second example also shows a limit of annotation. *FKBP5*, *TSC22D3*, *PER1* and *ZBTB16*, among the best-known glucocorticoid-induced genes and all in the induced list, are not annotated to "response to glucocorticoid" or to any of its ancestors up to "response to steroid hormone"; the term owes its significance to genes such as *DUSP1*, *KLF9*, *FOXO3*, *ERRFI1* and *CFLAR*. Absence of an annotation is not evidence of absence of the function.
 
 ### 3.2.2. The Background

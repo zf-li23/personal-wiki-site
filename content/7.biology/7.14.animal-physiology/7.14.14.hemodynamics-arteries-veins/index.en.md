@@ -1,7 +1,7 @@
 ---
 title: Hemodynamics, Arteries and Veins
 description: Functions and classification of the vascular system; cross-sectional area and flow velocity; laminar flow, turbulent flow and the Reynolds number; driving pressure, hydrostatic pressure and transmural pressure; the Ohm's law of blood flow, the PRU and the Poiseuille law; viscosity, hematocrit and the Fåhræus–Lindqvist effect; series and parallel; Laplace's law, compliance and delayed compliance; systolic pressure, diastolic pressure, pulse pressure, mean arterial pressure and the Windkessel model; the Moens–Korteweg equation for pulse wave velocity; central venous pressure, gravity, venous valves and the muscle pump, blood reservoirs; the giraffe, snakes and Murray's law.
-source_hash: 06c140427a91
+source_hash: cccd4f87d32e
 ---
 
 Chapters 12 and 13 treated the heart as a pump that ejects about $70\,\mathrm{mL}$ of blood per beat and about $5\,\mathrm{L}$ per minute ([7.14.12](/7.14.12)). This chapter follows that blood out of the heart and asks how the vascular system turns an intermittent, high-pressure output into continuous, steady flow distributed on demand throughout the body. The physics used is elementary fluid mechanics: continuity, pressure and resistance, the **Hagen–Poiseuille law** of viscous flow, and the mechanics of elastic vessel walls (derivations in biophysics, [7.6.22](/7.6.22)). This physics determines several basic facts of the circulation: why blood pressure falls fastest in the arterioles, why arterial pressure is pulsatile while flow in the capillaries is continuous, why the arterial pressure in the feet approaches $190\,\mathrm{mmHg}$ on standing, and why most of the blood is stored in the veins. The next chapter takes up exchange between the capillaries and the interstitial fluid ([7.14.15](/7.14.15)), and Chapter 16 discusses how nerves and humoral factors regulate these quantities ([7.14.16](/7.14.16)).
@@ -117,6 +117,8 @@ The unit of resistance commonly used in physiology is the peripheral resistance 
 
 **Example 14.3.1 (Resistance of the Systemic and Pulmonary Circulations)** The systemic flow is about $100\,\mathrm{mL\,s^{-1}}$ and the difference between mean aortic pressure and right atrial pressure is about $100\,\mathrm{mmHg}$, so the total peripheral resistance is about $1\,\mathrm{PRU}$. With intense vasoconstriction throughout the body it can rise to about $4\,\mathrm{PRU}$, and with extreme vasodilation fall to about $0.2\,\mathrm{PRU}$. The pulmonary circulation has the same flow, the difference between mean pulmonary arterial pressure and left atrial pressure is about $14\,\mathrm{mmHg}$, and the pulmonary vascular resistance is about $0.14\,\mathrm{PRU}$. In SI, $1\,\mathrm{PRU} = 133.3\,\mathrm{Pa}/(10^{-6}\,\mathrm{m^3\,s^{-1}}) \approx 1.3\times10^{8}\,\mathrm{Pa\,s\,m^{-3}}$.
 
+:::
+
 Equation (14.3) is the basis of quantitative reasoning in circulatory physiology: cardiac output = arterial pressure / total peripheral resistance, and the blood flow of each organ = arterial pressure / resistance of that organ. The discussion of "controlling pressure or controlling flow" in Chapter 16 rests on it.
 
 ### 14.3.4. The Poiseuille Law
@@ -181,6 +183,8 @@ is called **Laplace's law**. When the wall thickness is $h$, the circumferential
 It is the same force balance as the Laplace formula for surface tension (excess pressure $2\gamma/R$, [5.1.2](/5.1.2)), written for a different material.
 
 **Example 14.4.1 (Wall Tension in the Aorta and a Capillary)** In the aorta $P \approx 100\,\mathrm{mmHg} = 13.3\,\mathrm{kPa}$ and $r \approx 1.2\,\mathrm{cm}$, so $T \approx 1.3\times10^4 \times 0.012\,\mathrm{N\,m^{-1}} \approx 160\,\mathrm{N\,m^{-1}}$. In a capillary $P \approx 25\,\mathrm{mmHg} = 3.3\,\mathrm{kPa}$ and $r \approx 4\,\mu\mathrm{m}$, so $T \approx 0.013\,\mathrm{N\,m^{-1}}$, about $10^4$ times smaller than in the aorta. A capillary with only one endothelial layer (about $0.5\,\mu\mathrm{m}$ thick) can therefore withstand a pressure similar to that of the small arteries without bursting, whereas the aorta needs thick elastic fibers and collagen; the wall stress $\sigma = Pr/h$ is fairly similar in arteries of different size, and wall thickness is roughly proportional to radius.
+
+:::
 
 Laplace's law also explains the danger of an aneurysm. When a local part of the wall weakens and bulges, $r$ increases, the tension needed at the same blood pressure increases, the wall is stretched further, and $r$ continues to increase: this is a **positive feedback** that can end in rupture. The same relation appears in a dilated ventricle: when the ventricular radius increases, a greater wall tension is needed to produce the same intracavitary pressure ([7.14.12](/7.14.12)), and in the alveolus it appears as the relation between surface tension and alveolar size ([7.14.18](/7.14.18)).
 

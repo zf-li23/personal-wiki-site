@@ -1,7 +1,7 @@
 ---
 title: Molecular Partition Functions and Ideal-Gas Properties
 description: Factorization of the molecular partition function into translational, rotational, vibrational, electronic and nuclear parts; thermal wavelength, rotational and vibrational characteristic temperatures, symmetry number and the correction series for the rotational partition function; internal energy, heat capacity and the Einstein function of an ideal gas; the Sackur–Tetrode equation and statistical entropy, comparison with calorimetric entropy, and residual entropy; vapor pressure from statistical entropy; standard equilibrium constants from partition functions (dissociation of I₂, H₂ + D₂ exchange).
-source_hash: ff8d20e5cc4f
+source_hash: 343005a028d9
 ---
 
 The previous chapter ([6.3.10](/6.3.10)) set up the framework of statistical thermodynamics: once the energy levels of a molecule are known, we can compute the **molecular partition function** $q$, and from the system partition function $Z = q^N/N!$ all the thermodynamic functions of an ideal gas. This chapter carries the program through. The energy of a molecule can be approximately decomposed into translational, rotational, vibrational, electronic and nuclear parts, and $q$ factorizes accordingly into five factors. Each factor can be computed from the mass, moments of inertia, vibrational frequencies and electronic levels of the molecule, all of which come from spectroscopy ([5.5.5](/5.5.5#sec-5.3)). The results explain how heat capacities vary with temperature (when the equipartition theorem holds, and why vibrations are "frozen out" at ordinary temperatures), give statistical entropies that are independent of calorimetry and often more accurate, and reveal the origin of residual entropy. The last section computes standard equilibrium constants directly from partition functions. This connects the $K^\circ$ of [6.3.7](/6.3.7) with molecular structure and is the starting point of transition state theory in [6.3.16](/6.3.16).
@@ -79,6 +79,8 @@ $$
 q_{\mathrm{t}} = \frac{V}{\Lambda^3} = 3.56\times10^{30}, \qquad \frac{q_{\mathrm{t}}}{N_{\mathrm{A}}} = 5.9\times10^6 \gg 1.
 $$
 (Many textbooks take $V = 0.0245\,\mathrm{m^3}$, which corresponds to the old standard pressure of $101.325\,\mathrm{kPa}$ rather than the current $p^\circ$.) Each molecule has on average about $6\times10^6$ accessible translational quantum states, so Boltzmann statistics applies fully. By contrast, the conduction electrons in a metal have a small mass and a high number density, $N\Lambda^3/V \sim 10^3$, and require Fermi–Dirac statistics ([5.5.6](/5.5.6)).
+
+:::
 
 From $\ln q_{\mathrm{t}} = \frac{3}{2}\ln T + \ln V + \text{const}$, the translational contributions to the internal energy and heat capacity are
 
@@ -195,6 +197,8 @@ The latter is more commonly used.
 
 If the harmonic constant of $\ce{N2}$, $\tilde\omega_{\mathrm{e}} = 2358.6\,\mathrm{cm^{-1}}$, is used instead, $\Theta_{\mathrm{v}} = 3394\,\mathrm{K}$, slightly higher than the value from the fundamental. Both choices appear in the literature, so values of $\Theta_{\mathrm{v}}$ from different sources often differ slightly. When the harmonic-oscillator model is used for a real molecule, taking the measured fundamental (the $v = 0 \to 1$ spacing) makes the most important low-lying spacing correct, and this chapter always uses the fundamental. The two choices differ appreciably only at high temperatures, where anharmonicity itself must also be taken into account.
 
+:::
+
 A polyatomic molecule has several vibrational modes. $n$ atoms have $3n$ degrees of freedom; subtracting 3 translations and 3 rotations (2 for a linear molecule) leaves $3n - 6$ ($3n - 5$ for linear) **normal modes**, each an independent harmonic oscillator:
 
 $$
@@ -222,6 +226,8 @@ $$
 q_{\mathrm{e}} = 2 + 2\,\mathrm{e}^{-172/298.15} = 3.12,
 $$
 not 2. This pair of levels gives the heat capacity of $\ce{NO}$ a Schottky-type peak near $70\,\mathrm{K}$ ([Example 10.3.1 of 6.3.10](/6.3.10#ex-10.3.1)). The $^2\mathrm{P}_{1/2}$ excited state of the halogen atoms (for the iodine atom, $7603\,\mathrm{cm^{-1}}$ higher) contributes less than $10^{-4}$ even at $1000\,\mathrm{K}$ and can be neglected.
+
+:::
 
 Nuclear excitation energies are of the order of $\mathrm{MeV}$, and except in nuclear reactions nuclei are always in their ground states. Taking the ground state as the zero, the nuclear partition function is just the nuclear-spin degeneracy:
 
@@ -310,6 +316,8 @@ $$
 $$
 the same as the result of classical thermodynamics by constructing a reversible path (heating at constant volume plus isothermal volume change, $C_{V,\mathrm{m}} = \frac{3}{2}R$, [6.3.2](/6.3.2#sec-2.3.2)).
 
+:::
+
 When ideal gases mix at constant temperature and pressure ([Definition 2.3.1 of 6.3.2](/6.3.2#def-2.3.1)), the range available to each kind of molecule expands from $V_{\mathrm{B}}$ to $V$, the translational partition function increases by the factor $V/V_{\mathrm{B}} = 1/x_{\mathrm{B}}$, and the rotational and vibrational parts are unchanged. The **entropy of mixing** therefore comes entirely from the translational entropy: $\Delta_{\mathrm{mix}}S = \sum_{\mathrm{B}} n_{\mathrm{B}}R\ln(V/V_{\mathrm{B}}) = -R\sum_{\mathrm{B}} n_{\mathrm{B}}\ln x_{\mathrm{B}}$. If both sides contain the same gas, the molecules are indistinguishable once the partition is removed, and the $N!$ in $q^N/N!$ makes the entropy change zero (the resolution of the Gibbs paradox).
 
 ### 11.6.3. Statistical versus Calorimetric Entropy: Residual Entropy
@@ -324,6 +332,8 @@ $$
 S_{\mathrm{res,m}} = k_{\mathrm{B}}\ln 2^{N_{\mathrm{A}}} = R\ln 2 = 5.76\,\mathrm{J\,mol^{-1}\,K^{-1}}.
 $$
 The measured value is slightly smaller, showing that some order was already present at freezing.
+
+:::
 
 Other typical examples:
 

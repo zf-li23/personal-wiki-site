@@ -1,7 +1,7 @@
 ---
 title: Work and Energy
 description: Work and the work-kinetic energy theorem, the work of a pair of forces, conservative forces and potential energy, forces from potential energy and potential energy curves, the work-energy principle and conservation of mechanical energy, central force fields and the effective potential, conservation laws and symmetry, collisions, König's theorem and the two-body problem, the continuity equation and Bernoulli's equation for ideal fluids.
-source_hash: c09edd91f230
+source_hash: 5ea3c8b258b2
 ---
 
 [The previous chapter](/5.1.3) discussed the accumulation of force over time: **impulse** changes **momentum**, and **angular impulse** changes **angular momentum**. This chapter discusses the accumulation of force over space: the integral of a force along a path is work, and work changes kinetic energy. A force whose work is independent of the path can be replaced by a scalar function (the potential energy), which leads to the law of conservation of mechanical energy; together with conservation of momentum and of angular momentum, it forms the three conservation laws of mechanics. Mathematically, work is a **line integral of a vector field**, a conservative force is a **conservative vector field**, the potential energy is a **potential function** (up to a sign), and finding the force from the potential energy means taking a **gradient**; all of this was covered in [2.2.14](/2.2.14), and this chapter stresses the physical meaning: whether each quantity belongs to a **particle** or to a system, and whether it depends on the **reference frame**. The central-force problem uses the two conserved quantities, energy and angular momentum, to reduce the equations of motion to first order, a typical application of the method of **first integrals** ([2.4.14](/2.4.14)). The last two sections apply the work-energy relations to fluids and lead to Bernoulli's equation. The next chapter, [5.1.5](/5.1.5), applies these laws to rigid bodies; the first law of thermodynamics in the thermal physics part ([5.2.3](/5.2.3)) is the extension of the law of conservation of energy to thermal phenomena.
@@ -287,6 +287,8 @@ $$
 - $m_1=m_2$: $v_1=v_{20}$ and $v_2=v_{10}$; the two balls exchange velocities.
 - $m_2\gg m_1$ and $v_{20}=0$: $v_1\approx-v_{10}$ and $v_2\approx0$; the small ball bounces back with its original speed.
 
+:::
+
 A general one-dimensional collision is usually described by the coefficient of restitution $e=\dfrac{v_2-v_1}{v_{10}-v_{20}}$: $e=1$ for an elastic collision, $e=0$ for a perfectly inelastic collision, and $0<e<1$ for an inelastic collision. The kinetic energy lost in a perfectly inelastic collision is given in Section 4.10.3.
 
 ## 4.10. Work-Energy Relations in the Center-of-Mass Frame
@@ -411,6 +413,8 @@ $$
 the same as the speed of a particle falling freely from height $h$ (Torricelli's law).
 
 **Example 4.13.2 (Low Pressure Where the Flow Is Fast)** In a horizontal stream tube $h$ is the same everywhere, and $p_1+\frac12\rho v_1^2=p_2+\frac12\rho v_2^2$. By the continuity equation, the flow velocity is greater where the cross section is smaller, and the pressure is therefore lower. The Venturi flowmeter measures the flow rate from the pressure difference between two cross sections.
+
+:::
 
 Several phenomena are often explained qualitatively by "low pressure where the flow is fast":
 

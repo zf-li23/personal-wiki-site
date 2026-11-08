@@ -297,6 +297,8 @@ global depth 3
 
 Inserting 11 overflows bucket B, whose local depth 1 is below the global depth 2: B splits on the second bit and the directory keeps its size. Inserting 10 overflows bucket C, whose local depth equals the global depth: the directory doubles to 8 entries and C splits on the third bit into `[2, 10]` (low bits 010) and `[6]` (low bits 110). Buckets A, B and D are untouched and are now each referenced by two directory entries.
 
+:::
+
 If many keys share the same hash value, no number of splits separates them, and overflow pages are still needed.
 
 ### 8.3.3. Hash Indexes in Practice

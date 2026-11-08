@@ -96,6 +96,8 @@ Natural sex reversal is common in fish and amphibians and occurs in birds. An ol
 
 **Example 6.1.3 (Progeny of Sex-Reversed Animals)** A sex-reversed ZW "rooster" mated to a normal ZW hen gives zygotes $\frac14 ZZ$, $\frac12 ZW$ and $\frac14 WW$. WW embryos lack all Z-linked genes and die, so the surviving progeny are $\frac13$ males and $\frac23$ females, a $1{:}2$ sex ratio. By contrast, a hormone-reversed XY female fish mated to an XY male gives $\frac14 XX$ (female), $\frac12 XY$ and $\frac14 YY$ (both male, where YY is viable): $1$ female : $3$ males.
 
+:::
+
 In cattle twins of opposite sex, the placental circulations usually fuse early, and the female twin of a bull calf is, in about 90 % of cases, a sterile *freemartin*: her ovaries are masculinized and her Müllerian ducts regress. The cause is anti-Müllerian hormone and other factors from the male twin's testes, which differentiate first, reaching her through the shared circulation (Lillie 1917 proposed a hormonal cause; anti-Müllerian hormone is now thought to be the main agent). Blood **stem cells** are exchanged too, so both twins are XX/XY blood **chimeras**, which is used to diagnose freemartins from a blood sample.
 
 ## 6.2. Sex Determination in Humans
@@ -191,6 +193,8 @@ The difference between **reciprocal crosses** is the operational test of sex lin
 
 **Example 6.4.1** In cross B, $X^{+}X^{w} \times X^{+}Y$: daughters are $\frac12 X^{+}X^{+} + \frac12 X^{+}X^{w}$, all red; sons are $\frac12 X^{+}Y + \frac12 X^{w}Y$, half white. Overall, red females : red males : white males $= 2 : 1 : 1$, which is Morgan's result. In cross C, $X^{+}X^{w} \times X^{w}Y$: in both sexes half red, half white, a $1{:}1{:}1{:}1$ ratio of the four sex–phenotype classes, which looks like an autosomal **testcross**; only cross D distinguishes X-linkage clearly.
 
+:::
+
 Morgan tested the hypothesis with three crosses whose outcomes it predicts exactly: (1) single-pair matings of $\mathrm{F}_2$ red-eyed females with white-eyed males should give two kinds of families in equal numbers, all red-eyed ($X^{+}X^{+}$ mothers) or $1{:}1$ red : white in both sexes ($X^{+}X^{w}$ mothers); (2) white-eyed females × red-eyed males (cross D) should give red-eyed daughters and white-eyed sons; (3) white-eyed females × white-eyed males should breed true. All three were confirmed, and the second, which no autosomal hypothesis can produce, was decisive.
 
 ### 6.4.2. Nondisjunction Proves the Chromosome Theory
@@ -210,6 +214,8 @@ e = \frac{s/2}{1 - s/2} = \frac{s}{2 - s}, \qquad s = \frac{2e}{1 + e}.
 $$
 
 **Example 6.4.2** If $4.3\,\%$ of the progeny of $X^{w}X^{w}Y$ females are exceptional, then $s = 2(0.043)/1.043 \approx 0.082$: about 8 % of meioses in such females segregate the X chromosomes together. Compare primary nondisjunction, which in normal XX females occurs in roughly one meiosis in a thousand.
+
+:::
 
 The same mechanisms produce human sex chromosome aneuploidies. About half of 47,XXY Klinefelter cases arise by nondisjunction in the father (in meiosis I, where X and Y must recombine in the short PAR1 to segregate properly), and half in the mother; 45,X usually results from loss of the paternal sex chromosome. The **cell biology** of nondisjunction and its maternal age dependence are discussed in [7.3.21](/7.3.21#sec-21.7.5), and the genetics of aneuploid syndromes in [7.4.16](/7.4.16).
 
@@ -235,6 +241,8 @@ For an X-linked dominant allele the same reasoning gives the opposite sex bias.
 **Formula 6.4.3 (Population Frequencies of X-Linked Dominant Phenotypes)** Under the assumptions of Formula 6.4.2, a fully penetrant X-linked dominant phenotype has frequency $q$ in males and $q^2 + 2pq = q(2 - q)$ in females, so the ratio of affected females to affected males is $2 - q$, close to $2$ for a rare allele; most affected females are heterozygotes, which are often less severely affected than hemizygous males because of X inactivation (Section 6.5.1).
 
 **Example 6.4.3** If 8 % of men are color blind, a single allele with $q = 0.08$ would make $q^2 = 0.64\,\%$ of women color blind. The observed figure is lower, about $0.4$–$0.5\,\%$, because the 8 % comprise two different **loci**: protan defects (red opsin, about 2 % of men) and deutan defects (green opsin, about 6 %). A woman heterozygous for one protan and one deutan allele has normal color vision, because between her two X chromosomes she has a functional opsin gene of each kind (one on each X): the alleles complement ([7.4.4](/7.4.4)). The predicted frequency of affected women is $0.02^2 + 0.06^2 = 0.04\,\%$ $+ 0.36\,\% = 0.40\,\%$, in agreement with observation.
+
+:::
 
 Two X-linked genes can be mapped in human families by following the sons of women who are heterozygous at both loci, because a son's single X is a direct sample of his mother's meiosis. The difficulty is the phase of the mother, and the classical solution is to infer it from her father.
 

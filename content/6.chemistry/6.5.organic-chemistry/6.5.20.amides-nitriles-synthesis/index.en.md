@@ -1,7 +1,7 @@
 ---
 title: Amides, Nitriles, Carbonic Acid Derivatives and Synthesis Design
 description: Acidity and basicity of amides; the Hofmann rearrangement (mechanism, retention of configuration, the concerted pathway and nitrenes); dehydration of amides; structure, acidity and basicity, preparation, hydrolysis, reduction, reaction with Grignard reagents, and the Ritter reaction of nitriles; carbonic acid derivatives (phosgene, chloroformates, isocyanates, carbamates, urea and urease, the biuret reaction, carbonates); orthoesters and guanidines, peracids and diacyl peroxides, isocyanides; an overview of the preparation and interconversion of carboxylic acids and their derivatives; retrosynthetic analysis, synthons, and protecting groups.
-source_hash: d2d7a7d4a7a4
+source_hash: b1c0a2222a44
 ---
 
 This is the last chapter of the unit on carboxylic acids and their derivatives. The first half discusses several classes of reactions and compounds not covered in [6.5.19](/6.5.19): the acidity and basicity of amides, the Hofmann rearrangement, and dehydration of amides; nitriles, which are in the same oxidation state as carboxylic acids but have no carbonyl group; carbonic acid derivatives, in which carbon bears the most bonds to heteroatoms (phosgene, urea, carbamates, carbonates); and "special" derivatives of carboxylic acids such as orthoesters, guanidines, peracids, and isocyanides. The second half organizes the reactions of [6.5.18](/6.5.18)–[6.5.20](/6.5.20) into an overview of preparation and interconversion and uses it to introduce the basic ideas of synthesis design: retrosynthetic analysis, synthons and equivalents, functional group interconversion, and **protecting groups**.
@@ -356,6 +356,8 @@ $$
 Forward: ethylbenzene $\xrightarrow{\text{NBS, benzoyl peroxide}}$ 1-bromo-1-phenylethane $\xrightarrow{\text{NaCN, DMSO}}$ 2-phenylpropanenitrile $\xrightarrow{\ce{H3O+},\ \Delta}$ 2-phenylpropanoic acid. (SN2 on a secondary benzylic bromide competes with elimination; forming the Grignard reagent with Mg and treating it with $\ce{CO2}$ also works, but benzylic Grignard reagents are prone to Wurtz coupling.)
 
 The two bromo analogues illustrate the importance of the order of steps. 2-(3-Bromophenyl)propanoic acid requires bromine meta to the side chain: acetophenone is brominated first ($\ce{Br2}$, excess $\ce{AlCl3}$; the acetyl group is a meta director) to give 3-bromoacetophenone, which is then reduced, brominated, cyanated, and hydrolyzed; if ethylbenzene were brominated first, the ethyl group, an ortho/para director, would not give the meta product. 2-(4-Bromophenyl)propanoic acid requires bromine para to the alkyl group: ethylbenzene is brominated first ($\ce{Br2}$, $\ce{FeBr3}$, mainly para) to give 4-bromoethylbenzene, followed by benzylic bromination, cyanation, and hydrolysis. Neither route can use the Grignard method, because the bromine on the aromatic ring would also react with magnesium.
+
+:::
 
 The industrial synthesis of ibuprofen offers another perspective. The original Boots route had six steps and an atom economy of about 40%; the BHC route put into production in 1992 has only three steps: Friedel–Crafts acetylation of isobutylbenzene (HF as both catalyst and solvent, recycled), catalytic hydrogenation to the alcohol, and Pd-catalyzed carbonylation to introduce the carboxyl group directly, with an atom economy of about 77% (approaching 100% when the acetic acid is recovered), and it won the 1997 US Presidential Green Chemistry Challenge Award.
 

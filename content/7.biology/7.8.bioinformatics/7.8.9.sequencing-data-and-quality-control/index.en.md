@@ -156,6 +156,8 @@ The algorithm finds the suffix with the largest total deficit $\sum_{i \ge k}(T 
 
 **Example 9.4.1** For the $15$ qualities $38, 38, 37, 36, 35, 34, 30, 22, 18, 25, 12, 8, 15, 5, 2$ and $T = 20$, the running sum from the end is $18, 33, 38, 50, 58$ (after the bases with $2, 5, 15, 8, 12$), then $53$, $55$, $53$, $43$, $29$, $14$ and $-2$. Its maximum, $58$, is reached after base $11$ (Q$12$), so bases $11$–$15$ are removed and the first $10$ kept, including Q$18$ at position $9$, which is followed by the better Q$25$.
 
+:::
+
 ```bash
 # Paired-end trimming and filtering with fastp: adapters detected by overlap, poly-G tails removed,
 # 3' ends cut where a 4-base window falls below Q20, reads shorter than 36 nt dropped
@@ -213,6 +215,8 @@ This is the model of GenomeScope (which also includes duplicated sequence at $3\
 
 ![The 21-mer spectrum of a simulated diploid genome (haploid size 100 Mb, heterozygosity 1 %, 30× coverage with 150-nt reads, base error rate 0.2 %) and a GenomeScope-style fit. Error k-mers form the peak at counts 1–3; k-mers on one haplotype only form the heterozygous peak at 13, k-mers shared by both haplotypes the homozygous peak at 26. The red line is the fitted mixture of two negative binomials (Formula 9.5.2) at counts of 6 or more; dashed lines are its components. The fit recovers the simulated genome size and heterozygosity](./plots/kmer-spectrum.py)
 
+:::
+
 ```bash
 # 21-mer spectrum of trimmed reads and a GenomeScope fit
 jellyfish count -C -m 21 -s 5G -t 16 -o reads.jf <(zcat trim_R1.fq.gz trim_R2.fq.gz)
@@ -237,6 +241,8 @@ The first design question is the depth. The **sequencing coverage** $c = N\ell/G
 Real coverage is less uniform than the Poisson model, because fragmentation, amplification and capture favour some sequences (GC-rich and AT-rich regions are underrepresented in PCR-amplified libraries). Uniformity is summarized by the fraction of the target above a threshold and, for capture data, by the *fold-80 base penalty*: the factor by which the mean depth would have to be raised for $80\,\%$ of the target bases to reach the current mean, equal to the mean divided by the 20th percentile of depth.
 
 **Example 9.6.1** Suppose the mean depth of the exome targets is $100\times$ but their depths vary across targets as a gamma distribution with shape $4$ (coefficient of variation $0.5$). The fraction of targets below $20\times$ is $0.91\,\%$, the 20th percentile of depth is $57\times$, and the fold-80 penalty is $100/57 = 1.74$. With perfectly uniform coverage, $20\times$ everywhere would need a mean of only about $20\times$; non-uniformity, not the Poisson variance, sets the $100\times$ standard.
+
+:::
 
 Read length and type matter as much as depth. Short reads cannot be placed uniquely in repeats longer than the fragment: several percent of the human genome, including many segmental duplications and genes with pseudogenes (*SMN1* and *SMN2*, *CYP2D6*, *PMS2*), is *difficult* for short reads, and long reads or linked approaches are needed there. Paired reads with longer inserts resolve more. For a fixed budget, the choice is between more samples at lower depth and fewer at higher depth, a statistical design question of the kind treated in [7.7.18](/7.7.18).
 

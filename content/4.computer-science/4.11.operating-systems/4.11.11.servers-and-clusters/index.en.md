@@ -154,6 +154,8 @@ This is the proportional-share idea of CPU scheduling ([4.11.3](/4.11.3)) applie
 
 ![Gantt charts of Example 11.3.1 on 8 cores. Top: jobs start strictly in priority order, and two cores stay idle for the first four hours. Bottom: with backfill, job C starts immediately in the idle cores and finishes before job B's reservation at hour 4 (dashed line).](./plots/backfill-schedule.py)
 
+:::
+
 Backfilling depends on time limits: the scheduler knows only the requested `--time`, not the true run time. Accurate time limits therefore get jobs started sooner, and a job that requests the partition's maximum of several days by default is backfilled almost never.
 
 ## 11.4. Parallel Jobs

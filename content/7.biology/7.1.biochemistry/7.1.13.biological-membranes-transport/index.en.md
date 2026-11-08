@@ -317,6 +317,8 @@ the condition that the total $\Delta G_{\mathrm{t}}$ of the coupled transport (F
 
 **Example 13.5.1** With $[\ce{Na+}]_{\text{out}} = 145\,\mathrm{mM}$, $[\ce{Na+}]_{\text{in}} = 12\,\mathrm{mM}$, $\Delta\varphi = -50\,\mathrm{mV}$ and $37\,^\circ\mathrm{C}$, each entering $\ce{Na+}$ releases $11.2\,\mathrm{kJ\,mol^{-1}}$ (Example 13.3.1), two release $22.4\,\mathrm{kJ\,mol^{-1}}$, and $\ln(\text{ratio}) = 22.4/2.58 = 8.7$: SGLT1 can concentrate glucose up to about 6000-fold. A membrane potential of $-70\,\mathrm{mV}$ raises the limit to about $3\times10^{4}$; a symporter with a single $\ce{Na+}$ would reach only about 80-fold at $-50\,\mathrm{mV}$. The coupling stoichiometry enters as an exponent, which is why transporters that must work against steep gradients couple more ions.
 
+:::
+
 The kidney recovers glucose from the glomerular filtrate in the same way, mostly through SGLT2 in the proximal tubule. Its inhibitors, the gliflozins (dapagliflozin, empagliflozin), lower blood glucose in type 2 diabetes by letting glucose escape into the urine, and have proved to protect the heart and kidneys as well. The oral rehydration solution that has saved millions of lives in cholera contains glucose together with salt, because SGLT1 still works in the intestine of a cholera patient and its uptake of $\ce{Na+}$ and glucose draws water with it ([7.1.14](/7.1.14)).
 
 ### 13.5.6. Ionophores
@@ -353,6 +355,8 @@ $$
 2\pi Dac = 2\pi\,(2\times10^{-9})(5\times10^{-10})(9.0\times10^{25})\,\mathrm{s^{-1}} \approx 6\times10^{8}\,\mathrm{s^{-1}},
 $$
 the same order as the measured flux; equivalently, a single-channel current of $16\,\mathrm{pA}$ ($10^8$ elementary charges per second) is near the largest observed. Ion passage through the open channel is thus nearly a **diffusion-controlled reaction** ([6.3.17](/6.3.17#sec-17.1.3)), like catalysis by the most efficient enzymes ([7.1.9](/7.1.9)).
+
+:::
 
 Like most channels, $\ce{K+}$ channels are gated: ligand-gated channels open when a molecule binds, voltage-gated channels when the membrane potential moves a charged domain of the protein. How channels are gated and how they make electrical signals is the subject of [7.1.14](/7.1.14), and how their currents produce the action potential of [7.16](/7.16).
 

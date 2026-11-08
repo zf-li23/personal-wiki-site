@@ -140,6 +140,8 @@ $$
 
 **例 9.2.2** 设 $A=\begin{bmatrix}a&-b\\b&a\end{bmatrix}$，$T(\boldsymbol{x})=A\boldsymbol{x}$。$\mathbb{C}^2$ 取标准内积，$\boldsymbol{e}_1,\boldsymbol{e}_2$ 是标准正交基。令 $\boldsymbol{v}_1=\frac1{\sqrt2}[1\ {-\mathrm{i}}]^{\mathsf T}$，$\boldsymbol{v}_2=\frac1{\sqrt2}[1\ \mathrm{i}]^{\mathsf T}$，则 $\boldsymbol{v}_1^{\mathsf H}\boldsymbol{v}_1=\boldsymbol{v}_2^{\mathsf H}\boldsymbol{v}_2=1$，$\boldsymbol{v}_2^{\mathsf H}\boldsymbol{v}_1=0$，也是一组标准正交基，且 $A\boldsymbol{v}_1=(a+b\mathrm{i})\boldsymbol{v}_1$，$A\boldsymbol{v}_2=(a-b\mathrm{i})\boldsymbol{v}_2$。所以 $T$ 在标准正交基 $\boldsymbol{v}_1,\boldsymbol{v}_2$ 下的矩阵是 $\operatorname{diag}(a+b\mathrm{i},a-b\mathrm{i})$：实矩阵 $A$ 不能在 $\mathbb{R}$ 上对角化，却能在 $\mathbb{C}$ 上用"复的正交矩阵"（酉矩阵）对角化。
 
+:::
+
 这引出高等线性代数部分的几个目标，它们都是把复数的性质推广到矩阵：
 
 | 复数 | 矩阵 | 章节 |
@@ -233,6 +235,8 @@ $$
 $$
 x^4-2x^3+3=(x-2)^4+6(x-2)^3+12(x-2)^2+8(x-2)+3.
 $$
+
+:::
 
 由 Taylor 公式，$b_k=f^{(k)}(2)/k!$；这就是 [第 8 章](/2.1.8) 例 8.5.2 中 $f$ 在基 $1,x-2,\dots,(x-2)^{n-1}$ 下的坐标，但这里不必求导，也不必求过渡矩阵的逆，只用 $\frac{n(n+1)}2$ 次乘法。
 
@@ -330,6 +334,8 @@ $$
 
 所以 $(f,g)=x-1$。
 
+:::
+
 辗转相除法只用 $\mathbb{F}$ 中的四则运算，所以最大公因式与数域的选取无关：$f,g\in\mathbb{Q}[x]$ 在 $\mathbb{Q}[x]$ 中与在 $\mathbb{C}[x]$ 中的最大公因式相同。这一点很重要：不知道多项式的根，也能判断两个多项式有没有公共根。
 
 **定理 9.5.1（Bézout 等式）** 设 $f,g\in \mathbb{F}[x]$，则存在 $u,v\in \mathbb{F}[x]$ 使
@@ -353,6 +359,8 @@ $$
 $$
 x^2-2=g-(x+1)(f-g)=-(x+1)f+(x+2)g.
 $$
+
+:::
 
 $u,v$ 不唯一：$u'=u+\frac gd$，$v'=v-\frac fd$（$d=(f,g)\neq0$）也满足 $u'f+v'g=d$。另外，$uf+vg=h$ 一般不能推出 $h$ 是最大公因式（例如 $1\cdot x+(-1)\cdot x=0$），但 $h=1$ 时可以，这就是下一节的互素判别法。用 1.3.3 的语言说，$\{uf+vg\mid u,v\in \mathbb{F}[x]\}$ 是 $\mathbb{F}[x]$ 的一个**理想**，Bézout 等式说它由 $(f,g)$ 生成：$\mathbb{F}[x]$ 的每个理想都由一个多项式生成。
 
@@ -464,6 +472,8 @@ $$
 x^4+2=\big(x^2-2^{3/4}x+\sqrt2\big)\big(x^2+2^{3/4}x+\sqrt2\big).
 $$
 
+:::
+
 引言中 $\lambda^4+1$ 的实分解也是这样得到的。可见次数 $\ge3$ 的实多项式总是可约的。
 
 ### 9.8.3. 有理系数多项式
@@ -516,6 +526,8 @@ $$
   $$
   $p$ 整除 $\binom pi$（$1\le i\le p-1$），$p^2\nmid\binom p{p-1}=p$，所以 $\Phi_p(y+1)$ 不可约，从而 $\Phi_p(x)$ 在 $\mathbb{Q}$ 上不可约（$f(x)\mapsto f(y+1)$ 保持乘法与次数）。
 
+:::
+
 三个数域上的不可约多项式对比如下：
 
 | 数域 | 不可约多项式 | 判别方法 |
@@ -567,6 +579,8 @@ $$
 - 若三个根都是实数，则 $D\ge0$，且 $D=0$ 当且仅当有重根。
 
 由于实三次多项式的复根成对出现，只有这两种情形，所以：$D>0$ 时有三个不同的实根，$D=0$ 时有重根（都是实根），$D<0$ 时有一个实根和一对共轭复根。例如 $x^3+9x+r$ 的判别式 $-4\cdot9^3-27r^2<0$ 对任意实数 $r$ 成立，所以它总是恰有一个实根（这也可以由 $f'=3x^2+9>0$，$f$ 严格递增看出）；$x^3-3x-1$ 的判别式 $108-27=81>0$，有三个不同的实根（而由 §9.8.3，它们都是无理数）。
+
+:::
 
 二次、三次、四次方程都有求根公式，但 Abel 与 Galois 证明了五次及以上的一般方程没有根式解。因此矩阵的特征值不是先求特征多项式再套公式算出的，而是用迭代算法（如 QR 算法）直接计算；反过来，数值软件求多项式的根时，正是计算它的**友矩阵**的特征值（例如 `numpy.roots`）。
 

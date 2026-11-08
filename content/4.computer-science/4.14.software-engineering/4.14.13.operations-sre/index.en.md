@@ -79,6 +79,8 @@ $$
 
 If the extra replicas, engineering time and slower releases needed for the fourth nine cost more than 900 dollars per year, the improvement is not worth making.
 
+:::
+
 Availability is not the only dimension of risk. The two Google advertising systems of the SRE book differ in latency requirements: ads shown next to search results must not slow down the search page, while ads served on publishers' websites can tolerate more latency. Infrastructure services, which have many clients with different needs, can expose several explicit levels of service and let clients choose: a low-latency cluster provisioned with spare capacity for interactive users and a cheaper high-throughput cluster for batch users, as with Google's Bigtable deployments.
 
 ### 13.2.2. Service Level Indicators, Objectives and Agreements
@@ -146,6 +148,8 @@ budget remaining   : 169,200 (32.6%)
 ```
 
 The background errors alone spend half the budget, more than the incident. This is typical: chronic small problems often cost more than the outage everyone remembers, and the budget makes them visible. With a third of the budget left, the team may continue to release, but fixing the background error rate is a better use of the next sprint than a risky launch.
+
+:::
 
 The rate at which a service spends its budget is called the *burn rate*: a burn rate of 1 spends exactly the budget over the SLO period, a burn rate of $b$ exhausts it in $1/b$ of the period. Alerting on the burn rate, rather than on the raw error rate, connects alerts directly to the SLO. The *Site Reliability Workbook* recommends paging when 2% of a 30-day budget is spent within one hour, which is a burn rate of
 
@@ -484,6 +488,8 @@ To *diagnose*, several techniques narrow the search:
 | where in the server is the CPU time used? | **profiling** shows it is sorting entries in logs checkpointed to disk |
 | where in the log-sorting code? | when evaluating a regular expression against paths to log files |
 | solutions | rewrite the regular expression to avoid backtracking; look for similar patterns in the code base; consider RE2, which does not backtrack and guarantees running time linear in the input size |
+
+:::
 
 Finally, *test and treat*. A good test should distinguish between hypotheses (its possible results point in different directions); ideal tests come first in order of likelihood and cost; and a test can have side effects, so changing the system to test a hypothesis must itself be done with care. Notes of what was tested, and what the result was, keep the team from repeating work and become the timeline of the postmortem. A cure is confirmed only when the problem can be shown to have gone away for the right reason; ideally, the failure is reproduced in a test environment.
 

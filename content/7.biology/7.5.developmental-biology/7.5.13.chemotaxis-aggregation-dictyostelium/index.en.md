@@ -149,6 +149,8 @@ At the onset of a non-oscillatory instability ($\sigma\to0$) the problem reduces
 
 **Example 13.5.1** Take $\nu_1=1$, $\nu_2=4$, $f_1/\mu=f_2/\mu=1$, $\kappa_1=1$, $\kappa_2=0$ and $\alpha=\begin{bmatrix}2&-3\\5&-5\end{bmatrix}$. Then $\operatorname{tr}\alpha=-3$ and $\det\alpha=5$, but $\nu_1\alpha_{22}+\nu_2\alpha_{11}=3<2\sqrt{\nu_1\nu_2\det\alpha}=2\sqrt{20}=8.94$: the chemicals alone have no Turing instability. With chemotaxis, $R=\begin{bmatrix}3&-3\\6&-5\end{bmatrix}$, $\det R=3$, and $\nu_1R_{22}+\nu_2R_{11}=7>2\sqrt{12}=6.93$: a finite band of wave numbers is unstable, if only just.
 
+:::
+
 Chemotaxis can thus realize a capacity for diffusive instability that the chemistry already has (a destabilizing tendency at long wavelengths) but cannot express alone. At the other extreme, if $\alpha$ is symmetric negative definite ("absolutely stable") with a nondegenerate leading eigenvector $\boldsymbol{v}$, and $f$, $\kappa$ are both parallel to $\boldsymbol{v}$ with the product of their lengths chosen to make the largest eigenvalue of $R$ zero, then $\rho^{\mathsf T}B\rho>0$ for all $k\ne0$ and the instability sets in at infinite wavelength. In a real tissue the size and shape of the domain decide which of these limits applies.
 
 ## 13.6. Nonlinear Theory

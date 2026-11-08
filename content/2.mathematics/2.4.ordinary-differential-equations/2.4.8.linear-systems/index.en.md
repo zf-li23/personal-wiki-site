@@ -1,6 +1,6 @@
 ---
 title: Systems of Linear Differential Equations
-source_hash: 799b4933554f
+source_hash: 6d10f51a67fe
 ---
 
 This chapter studies first-order **systems of linear differential equations** $\boldsymbol{x}'=A(t)\boldsymbol{x}+\boldsymbol{f}(t)$. Such a system is the vector form of the first-order linear equation $x'=a(t)x+f(t)$, and the resemblance is more than formal: global existence of solutions, the structure "particular solution plus general solution of the homogeneous equation", and the variation of constants formula all carry over unchanged, except that the number $\mathrm{e}^{\int a}$ is replaced by a matrix $\Phi(t)$. Linear systems are also the foundation of the nonlinear theory: the behavior of a nonlinear equation near an equilibrium point is determined by its linearization ([2.4.11](/2.4.11)), and the derivatives of solutions with respect to initial values satisfy the linear variational equation ([2.4.7](/2.4.7)). The next chapter treats $n$th-order linear equations as a special case of this one.
@@ -156,6 +156,8 @@ $$
 \Phi(t)=\begin{bmatrix}t&t^2\\1&2t\end{bmatrix},\qquad\det\Phi(t)=t^2,
 $$
 in agreement with Liouville's formula: $\operatorname{tr}(A)=\frac2t$ and $\det\Phi(1)\exp\big(\int_1^t\frac2s\,\mathrm{d}s\big)=t^2$. The principal fundamental matrix at $t_0=1$ is $\Phi(t)\Phi^{-1}(1)=\begin{bmatrix}2t-t^2&t^2-t\\2-2t&2t-1\end{bmatrix}$.
+
+:::
 
 For systems with variable coefficients there is in general no method for finding a fundamental matrix. A tempting but often wrong "formula" is $\exp\big(\int_{t_0}^tA(s)\,\mathrm{d}s\big)$: it is a fundamental matrix only when $A(t)$ commutes with $\int_{t_0}^tA(s)\,\mathrm{d}s$ (for example, when $A(t)=a(t)B$ with $B$ a constant matrix). In the example above, $A(1)$ does not commute with $\int_1^2A(s)\,\mathrm{d}s$.
 
@@ -337,6 +339,8 @@ $$
 \mathrm{e}^{tA}=\begin{bmatrix}\mathrm{e}^{2t}&t\mathrm{e}^{2t}&2\mathrm{e}^{3t}-(2+t)\mathrm{e}^{2t}\\0&\mathrm{e}^{2t}&\mathrm{e}^{3t}-\mathrm{e}^{2t}\\0&0&\mathrm{e}^{3t}\end{bmatrix}.
 $$
 One can check that $\det\mathrm{e}^{tA}=\mathrm{e}^{7t}=\mathrm{e}^{t\operatorname{tr}(A)}$.
+
+:::
 
 Computing $\mathrm{e}^{tA}$ by interpolation ([Section 11.6 of 2.1.11](/2.1.11#sec-11.6)) is a third approach: $\mathrm{e}^{tA}=r(A)$, where $r$ is the polynomial that agrees with $\mathrm{e}^{tz}$, together with sufficiently many derivatives, on the spectrum of $A$. All three methods give the same matrix.
 

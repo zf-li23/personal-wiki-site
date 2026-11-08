@@ -85,6 +85,8 @@ By Theorems 6.1.1 and 6.1.2, an isolated singularity is removable if and only if
 
 **Example 6.1.3** $0$ is an essential singularity of $\mathrm{e}^{1/z} = \sum_{n\ge0}\frac{1}{n!z^n}$. Along the positive real axis $\mathrm{e}^{1/x} \to +\infty$; along the negative real axis $\mathrm{e}^{1/x} \to 0$; on the imaginary axis $\lvert\mathrm{e}^{1/(\mathrm{i}y)}\rvert = 1$. Similarly $\sin\frac1z$ and $\cos\frac1z$ have essential singularities at $0$.
 
+:::
+
 Near an essential singularity, the behavior is in fact as wild as possible:
 
 **Theorem 6.1.5 (Casorati–Weierstrass Theorem)** If $z_0$ is an essential singularity of $f$, then for every $A \in \mathbb{C}$ there is a sequence $z_n \to z_0$ with $f(z_n) \to A$. Equivalently, the image of every punctured disk $0 < \lvert z - z_0\rvert < \delta$ is dense in $\mathbb{C}$.
@@ -104,6 +106,8 @@ $$
 tend to $0$ as $\lvert k\rvert \to \infty$. Thus every nonzero value is taken infinitely often in every disk around $0$.
 
 ![Domain coloring of 1/z^2 (left) and e^{1/z} (right) near 0: the hue shows the argument of f(z), the bright bands are level sets of log2 |f(z)|. Around the pole of order 2 every color appears twice and the modulus grows uniformly; near the essential singularity the colors and bands crowd together and every value is taken infinitely often. White dots: solutions of e^{1/z} = 1 + i, which accumulate at 0](./plots/singularity-types.py)
+
+:::
 
 The classification is summarized as follows.
 
@@ -147,6 +151,8 @@ The first term is analytic except at $z = 1$; the other two are analytic except 
 - $z = k\pi$, $k \ne 0$: $z\sin z$ has a simple zero, so $\frac{1}{z\sin z}$ has a simple pole, while the other terms are analytic. So each $k\pi$ is a simple pole.
 - $z = 1$: $z\,\mathrm{e}^{1/(z-1)}$ has infinitely many negative powers of $z - 1$ (Example 5.5.4), and the other terms are analytic at $1$. So $1$ is an essential singularity.
 - $z = \infty$: the poles $k\pi$ accumulate at $\infty$, so $\infty$ is a non-isolated singularity.
+
+:::
 
 Note that a sum may have a better singularity than its summands (at $0$), but never a better one at a point where only one summand is singular.
 

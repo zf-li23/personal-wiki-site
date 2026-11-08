@@ -467,6 +467,8 @@ The result is again $\boldsymbol{x} = (3, 2)$ with $g(\boldsymbol{x}) = 0$ and $
 
 ![Contours of Himmelblau's function (on a log scale) with its four local minima and the local maximum. Newton's method from (-2, -2) crosses the central hill and converges to (3, 2); BFGS with backtracking from (-2, -2) descends to (-3.779, -3.283), and from (-4, 0) to (3, 2).](./plots/himmelblau-newton-bfgs.py)
 
+:::
+
 The R function `optim` minimizes by default. Consider
 
 ```r

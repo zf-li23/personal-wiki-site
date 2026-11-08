@@ -1,6 +1,6 @@
 ---
 title: The First Law of Thermodynamics
-source_hash: 663b6e0dea92
+source_hash: 1868beea2a32
 ---
 
 The previous two chapters used a molecular model to study the properties of **equilibrium states**; from this chapter on we turn to the methods of thermodynamics, which study the changes of the state of a system starting only from macroscopic experimental laws, without relying on any microscopic model. The core of this chapter is the first law of thermodynamics, the **law of conservation of energy** extended to include thermal phenomena. It generalizes **work** in mechanics ([5.1.4](/5.1.4)) to **thermodynamic systems**, defines **internal energy** through adiabatic work, and then defines heat in terms of internal energy and work. With this law we can compute the work, heat and change of internal energy of an **ideal gas** in various processes, and it leads to the concepts of heat capacity, enthalpy and cycle efficiency; the upper bound on the efficiency of the Carnot cycle prepares the way for the second law of thermodynamics in the next chapter ([5.2.4](/5.2.4)). The concepts of this chapter (internal energy, heat, enthalpy, heat capacity) and its sign conventions are shared with physical chemistry.
@@ -14,6 +14,8 @@ A change of a system from one equilibrium state to another is called a thermodyn
 Only an infinitely slow process is strictly quasi-static. "Slow" is relative, and the standard of comparison is the *relaxation time* $\tau$, the time a system needs to return to equilibrium after its equilibrium has been disturbed. If the time $\Delta t$ over which the state variables change appreciably in the process satisfies $\Delta t \gg \tau$, the process can be regarded as quasi-static.
 
 **Example 3.1.1** The relaxation time of the pressure in the cylinder of an internal combustion engine can be estimated by the time a pressure disturbance takes to cross the cylinder: the linear size of the cylinder is $L \sim 10^{-1}\,\mathrm{m}$ and the **mean speed** of the molecules is $\bar v \sim 10^2\,\mathrm{m\,s^{-1}}$, so $\tau_p \sim L/\bar v \sim 10^{-3}\,\mathrm{s}$. One stroke cycle of the piston takes about $10^{-2}\,\mathrm{s}$, an order of magnitude longer than $\tau_p$, so the compression and expansion in the cylinder can be treated approximately as quasi-static processes.
+
+:::
 
 A quasi-static process can be described in a diagram of state variables: a point in the $p$–$V$ diagram represents an equilibrium state, and a curve represents a quasi-static process; the intermediate states of a non-quasi-static process cannot be shown in the diagram.
 

@@ -187,6 +187,8 @@ The force is independent of the tether length: membrane flows from the vesicle i
 
 **Example 24.3.2** Tethers pulled from ER and Golgi membranes, or formed by **kinesin** motors on microtubules in vitro, require about $10\,\mathrm{pN}$ (Koster and colleagues 2003). With $\kappa = 20\,k_{\mathrm{B}}T = 8.2\times10^{-20}\,\mathrm{J}$, the tension is $\sigma = f^2/(8\pi^2\kappa) = 10^{-22}/(6.5\times10^{-18})\,\mathrm{N\,m^{-1}} = 1.5\times10^{-5}\,\mathrm{N\,m^{-1}}$, a few thousandths of the lysis tension, and the tether radius $\sqrt{\kappa/2\sigma} = 52\,\mathrm{nm}$, as seen in electron micrographs of ER tubules. A single kinesin, with a stall force of $6\,\mathrm{pN}$, cannot pull a tube; a few motors acting together can, and tubes start abruptly once a threshold number of motors is reached. In cells, tether forces of $10$–$50\,\mathrm{pN}$ report effective tensions of $10^{-5}$–$10^{-4}\,\mathrm{N\,m^{-1}}$ that include the adhesion of the plasma membrane to the cortex ([7.3.4](/7.3.4#sec-4.7.1)).
 
+:::
+
 The tether is also a tool for measuring how proteins respond to curvature. Stepping the tension with the pipette sets the tube radius through $r = \sqrt{\kappa/2\sigma} = f/4\pi\sigma$. **Dynamin** injected into such an experiment polymerizes into a helix only on tubes thinner than a critical radius of about $10\,\mathrm{nm}$, and, once polymerized, holds the tube by itself, relaxing the force on the bead (Roux and colleagues 2010): curvature sensing and force generation of a fission protein measured in one setup.
 
 ## 24.4. Vesicles and Budding
@@ -196,6 +198,8 @@ The tether is also a tool for measuring how proteins respond to curvature. Stepp
 Cells make vesicles all the time: for endocytosis, for secretion and for traffic between compartments ([7.3.8](/7.3.8), [7.3.10](/7.3.10)). The bending energy of a spherical vesicle, $8\pi\kappa \approx 250$–$500\,k_{\mathrm{B}}T$ for $\kappa = 10$–$20\,k_{\mathrm{B}}T$, is independent of its size, and must be supplied by the proteins and lipids that bud it.
 
 **Example 24.4.1 (A vesicle budget)** A fibroblast internalizes the equivalent of its whole plasma membrane, about $2000\,\mu\mathrm{m^2}$, in about an hour. If the vesicles are $100\,\mathrm{nm}$ in diameter (area $3\times10^4\,\mathrm{nm^2}$, probably an overestimate of their size), that is $6\times10^4$ vesicles per hour, $1000$ per minute. At $500\,k_{\mathrm{B}}T$ each, the bending energy alone is the free energy of about $25$ ATP per vesicle, or $2.5\times10^4$ ATP per minute, a negligible fraction of the ATP turnover of a mammalian cell ($10^7$–$10^9$ per second). The cost of traffic lies not in bending but in the machinery: coat assembly and disassembly (the uncoating ATPase Hsc70 must at least undo the binding energy that drove budding), GTP hydrolysis by Arf, Sar1, Rab and dynamin, and **SNARE** recycling by **NSF**.
+
+:::
 
 A synaptic vesicle of $40\,\mathrm{nm}$ diameter has an internal volume of about $2\times10^4\,\mathrm{nm^3}$; with a neurotransmitter such as acetylcholine at the measured $0.1$–$0.5\,\mathrm{M}$ in the lumen, it holds a few thousand molecules, the quantum of synaptic transmission ([7.6.30](/7.6.30)).
 
@@ -263,6 +267,8 @@ Fission is not simply fusion backwards: the neck that connects a bud to its pare
 Many organelles are far from spherical: the ER is a network of tubules and sheets, the Golgi a stack of flattened cisternae, the inner mitochondrial membrane folded into cristae joined to the boundary membrane by narrow **crista** junctions. Their membranes contain far more area than the plasma membrane suggests.
 
 **Example 24.6.1 (Membrane area in a mitochondrion)** Model a mitochondrion as a spherocylinder of diameter $0.8\,\mu\mathrm{m}$ and length $1\,\mu\mathrm{m}$ (cylindrical part $0.2\,\mu\mathrm{m}$). Its volume is $\frac43\pi(0.4)^3 + \pi(0.4)^2 \times 0.2 = 0.37\,\mu\mathrm{m^3}$ and its outer membrane area $4\pi(0.4)^2 + 2\pi \times 0.4 \times 0.2 = 2.5\,\mu\mathrm{m^2}$. If the inner membrane forms $15$ disc-shaped cristae of radius $0.4\,\mu\mathrm{m}$, each a flattened sac with two faces, the inner membrane has $2.5 + 2 \times 15 \times \pi(0.4)^2 \approx 17\,\mu\mathrm{m^2}$, seven times the outer. A fibroblast with a few hundred mitochondria therefore has several thousand square micrometers of inner mitochondrial membrane, more than its plasma membrane of about $2000\,\mu\mathrm{m^2}$; with the ER, intracellular membranes exceed the plasma membrane tenfold or more.
+
+:::
 
 The shapes of these membranes are held by proteins rather than by lipid elasticity alone: **reticulons** and DP1 (Yop1) insert wedge-shaped hairpins that stabilize the high curvature of ER tubules, atlastins fuse tubules into a network, **ATP synthase** dimers bend the rims of cristae and the **MICOS** complex holds the **crista junctions**, whose saddle shape has negative Gaussian curvature. The elastic energies of 24.2 set the forces these proteins must exert; the proteins themselves and their interaction with the bilayer are the subject of [7.6.25](/7.6.25).
 

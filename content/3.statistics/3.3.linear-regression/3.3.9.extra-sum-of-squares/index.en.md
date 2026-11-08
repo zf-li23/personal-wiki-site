@@ -155,6 +155,8 @@ The interpretation needs care. The $t$-test assesses the significance of $X_3$ *
 
 Skinfold alone is a highly significant linear predictor: $\hat Y=-1.496+0.857X_1$ with $t=6.66$, $R^2=0.711$ and $\mathrm{SSE}=143.12$ on $18$ degrees of freedom. Do the other two variables contribute beyond skinfold? The general linear test of $H_0\colon\beta_2=\beta_3=0$ gives $\mathrm{SSR}(X_2,X_3\mid X_1)=143.120-98.405=44.715$ on $2$ degrees of freedom, $F^*=(44.715/2)/6.150=3.635$ and $p=0.0500$: they do help, borderline. Perhaps the best model contains two predictors ([3.3.10](/3.3.10)).
 
+:::
+
 Two practical notes. Usually the alternative hypothesis is just that at least one variable of the null group matters, and often we hope to fail to reject, because the goal is to eliminate unnecessary variables. Then power and sample size are essential: with a small sample we may wrongly remove variables. In Example 8.1.1 of [3.3.8](/3.3.8), with $n=224$, the $p$-value $0.436$ for adding hss, satm and satv to hsm and hse justifies discarding them.
 
 ### 9.2.4. Linear Hypotheses
@@ -193,6 +195,8 @@ C <- matrix(c(0, 0, 1, -1,
 linearHypothesis(reg1, hypothesis.matrix = C, rhs = c(0, 12))
 ```
 
+:::
+
 The statistic of Theorem 9.2.2 is the same quadratic form as in the $F$-test of [3.4.7](/3.4.7) and has the structure of Hotelling's $T^2$: a squared distance of $C\boldsymbol{b}$ from $\boldsymbol{t}$ in the metric of its estimated covariance matrix.
 
 ## 9.3. Partial Determination and Partial Correlation
@@ -216,6 +220,8 @@ $$
 R^2_{\text{gpa, hse}\mid\text{hsm, hss}}=\frac{0.665}{0.665+107.750}=0.0061:
 $$
 hse explains $0.6\%$ of the variation left after hsm and hss. Similarly, if $\mathrm{SSTO}=100$, $X_1$ explains $60$, $X_2$ explains $20$ of the remaining $40$ and $X_3$ explains $5$ of the remaining $20$, then $R^2_{Y2\mid1}=20/40=0.5$ and $R^2_{Y3\mid12}=5/20=0.25$.
+
+:::
 
 By Definition 9.2.1, for $H_0\colon\beta_k=0$ the partial $F$-statistic is a monotone function of the partial coefficient: $F^*=\dfrac{R^2_{Yk\mid-k}}{1-R^2_{Yk\mid-k}}\cdot(n-p)$.
 

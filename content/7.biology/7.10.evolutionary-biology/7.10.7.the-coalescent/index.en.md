@@ -107,6 +107,8 @@ $$
 
 **Example 7.3.1** Ten sequences of 1000 bp have $S = 20$ segregating sites. With $a_{10} = 2.829$, $\hat\theta_W = 7.07$ per locus, or $0.0071$ per site. Its standard deviation, from Eq. (7.5) with $b_{10} = 1.540$, is $\sqrt{7.07 \cdot 2.829 + 7.07^2 \cdot 1.540}/2.829 = 3.5$: a coefficient of variation of about $50\,\%$, which more sequences of the same locus would reduce only slowly.
 
+:::
+
 The variance of $\hat\theta_W$ falls only like $1/\ln n$ as the sample grows, and that of $\hat\theta_\pi$,
 
 $$
@@ -154,6 +156,8 @@ $$
 where $f(G, \boldsymbol{t} \mid \theta)$ is the coalescent density (a product of exponential densities, by Definition 7.2.1) and $f(X \mid G, \boldsymbol{t})$ is the phylogenetic likelihood of the alignment on the genealogy, computed by **Felsenstein's pruning algorithm** ([Algorithm 6.5.1](/7.8.6#alg-6.5.1)) under a finite-site substitution model. The sum over genealogies is far too large to enumerate, but **Markov chain Monte Carlo** ([3.5.9](/3.5.9)) can sample genealogies and $\theta$ jointly from their **posterior distribution**: proposals change node ages, rearrange the genealogy (for example by subtree pruning and regrafting) and change $\theta$. Such genealogy-based estimates can be much more efficient than $\hat\theta_W$ and $\hat\theta_\pi$, because they use the information in the shape of the tree.
 
 **Example 7.3.2** For three noncoding human loci of 6.6–10 kb with 54–63 sequences each, sampled from African and non-African populations, a Bayesian analysis under the JC69 model with a gamma prior of mean $0.001$ gave a posterior mean of $\theta = 0.00053$ per site, with $95\,\%$ credibility interval $(0.00037, 0.00072)$ (Rannala and Yang 2003). With a mutation rate of $10^{-9}$ per site per year and 20-year generations, this corresponds to $N_{\mathrm{e}} \approx 0.00053/(4 \cdot 20 \cdot 10^{-9}) \approx 6600$, with interval $4600$–$9000$; the posterior mean times to the most recent common ancestor of the three loci were about $0.36$, $0.69$ and $0.49$ million years.
+
+:::
 
 ![The site frequency spectrum and estimators of θ (Theorems 7.3.2 and 7.3.3). A: mean unfolded site frequency spectrum of 2000 simulated samples of n = 20 sequences with θ = 10 per locus (bars) and the neutral expectation θ/i (dots and line). B: sampling distributions of Watterson's estimator θ_W = S/a_n and of Tajima's θ_π over the same simulations; both are centered on θ = 10 (vertical line) but are broad, and θ_π is broader, as Eq. (7.6) predicts](./plots/sfs.py)
 

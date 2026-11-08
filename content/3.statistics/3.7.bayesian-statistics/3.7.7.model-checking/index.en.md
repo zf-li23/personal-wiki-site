@@ -123,6 +123,8 @@ A probability model can fail to reflect the process that generated the data in a
 
 The normal sampling model is inadequate for the extremes of the data. A revised model replaces it with a heavy-tailed one, $y_i\mid\mu,\sigma^2\sim t_\nu(\mu,\sigma^2)$, in which a few large deviations are expected and have less influence on the inference about $\mu$.
 
+:::
+
 The second test quantity illustrates a real advantage over classical testing. A classical test statistic may depend on the data only, and its distribution under the null must be known or approximated. A Bayesian test quantity may depend on the data and on the parameters and hyperparameters, its exact distribution is never needed (both $T(y,\theta)$ and $T(y^{\mathrm{rep}},\theta)$ are unknowns represented by simulations), and many problems have a function of data and parameters that addresses a particular aspect of the model directly, where a function of the data alone would be difficult or awkward.
 
 ### 7.3.4. Interpreting Posterior Predictive p-Values

@@ -1,6 +1,6 @@
 ---
 title: Infinite Series
-source_hash: c3187806bc1f
+source_hash: 50040bc7520f
 ---
 
 Does it make sense to add infinitely many numbers? The sum $1 + \frac12 + \frac14 + \cdots$ ought to equal $2$, whereas $1 - 1 + 1 - 1 + \cdots$ seems to equal nothing at all. This chapter defines an infinite sum as the limit of the **sequence** of partial sums, so convergence of a series is just convergence of a sequence in the sense of [Chapter 2](/2.2.2), and the **Cauchy criterion** and the **monotone convergence theorem** can be used directly.
@@ -96,6 +96,8 @@ Throughout, $\sum u_n$ and $\sum v_n$ are series of nonnegative terms.
 2. $\sum\frac{1}{\sqrt{n^2 + 2n + 100}}$: for $n \ge 2$, $n^2 + 2n + 100 \le 100n^2$, so the general term is at least $\frac{1}{10n}$; since the harmonic series diverges, so does this series.
 3. $\sum\frac{n!}{n^n}$: $\frac{n!}{n^n} = \frac1n\cdot\frac2n\cdots\frac nn \le \frac{2}{n^2}$ ($n \ge 2$), so the series converges.
 
+:::
+
 Taking a $p$-series as the comparison series gives:
 
 **Corollary 8.2.1 (p-Test)** Let $\sum u_n$ be a series of nonnegative terms and $M > 0$.
@@ -135,6 +137,8 @@ This is completely parallel to the $p$-test for improper integrals over unbounde
 
 **Example 8.2.4** Consider $\sum\left[\frac1n - \ln\left(1 + \frac1n\right)\right]$. By **Taylor's formula** $\ln(1 + x) = x - \frac{x^2}{2} + o(x^2)$, the general term equals $\frac{1}{2n^2} + o\left(\frac{1}{n^2}\right) > 0$, and $n^2u_n \to \frac12$, so the series converges. Consequently $1 + \frac12 + \cdots + \frac1n - \ln(n+1) = \sum_{k=1}^n\left[\frac1k - \ln\left(1 + \frac1k\right)\right]$ converges; its limit is the Euler constant $\gamma \approx 0.5772$.
 
+:::
+
 Finding the principal part of the general term with Taylor's formula and then applying the $p$-test is the most effective way to handle series of this kind.
 
 ### 8.2.2. The Ratio Test and the Root Test
@@ -156,6 +160,8 @@ If $q = 1$, the test is inconclusive.
 2. $\sum\frac{1}{3^n - n^3}$: the ratio tends to $\frac13$, so the series converges.
 3. $\sum\frac{(n!)^2}{(2n)!}$: $\frac{u_{n+1}}{u_n} = \frac{(n+1)^2}{(2n+2)(2n+1)} \to \frac14$, so the series converges.
 
+:::
+
 The ratio test suits general terms involving factorials and exponentials. It fails when $q = 1$: for both $\sum\frac1n$ and $\sum\frac1{n^2}$ the limit of the ratio is $1$, yet the first diverges and the second converges; in that case use the $p$-test instead.
 
 **Theorem 8.2.4 (Root Test)** Let $u_n \ge 0$ and $\lim_{n\to\infty}\sqrt[n]{u_n} = q$ (or $+\infty$).
@@ -172,6 +178,8 @@ If $q = 1$, the test is inconclusive.
 1. $\sum\frac{n^2}{3^n + 2^n}$: $\sqrt[n]{u_n} \to \frac13$, so the series converges.
 2. $\sum\left(\frac{n+1}{n}\right)^{n^2}\frac{1}{3^n}$: $\sqrt[n]{u_n} = \left(1 + \frac1n\right)^n\cdot\frac13 \to \frac{\mathrm{e}}{3} < 1$, so the series converges.
 3. $\sum\frac{n\,[\sqrt2 + (-1)^n]^n}{3^n}$: the general term is at most $\frac{n(\sqrt2 + 1)^n}{3^n}$, whose $n$-th root tends to $\frac{\sqrt2 + 1}{3} < 1$, so the series converges by the comparison test. Here the ratio $u_{n+1}/u_n$ tends to $+\infty$ along odd $n$ and to $0$ along even $n$, so the ratio test cannot be applied.
+
+:::
 
 In general, if the limit of the ratios exists, then the limit of the roots also exists and the two are equal, so the root test has a wider range of applicability; the ratio, however, is often easier to compute. Both tests can only detect series that converge "as fast as a geometric series"; for series like the $p$-series they always give $q = 1$.
 
@@ -229,6 +237,8 @@ so they are bounded above, and hence $S_{2n} \to S$. Also $S_{2n-1} = S_{2n} + u
 The remainder estimate says that when the sum of an alternating series is approximated by a partial sum, the error is at most the first omitted term. For example, $\sum\frac{(-1)^{n-1}}{n} = \ln2$ ([Chapter 9](/2.2.9)), and taking the first $1000$ terms gives an error less than $10^{-3}$.
 
 **Example 8.3.1** The series $\sum\frac{(-1)^n}{n}$, $\sum\frac{(-1)^n}{\sqrt n}$ and $\sum_{n=2}^\infty\frac{(-1)^n}{n\ln n}$ all satisfy the hypotheses of the Leibniz test and therefore converge.
+
+:::
 
 Monotonicity cannot be dropped: with $u_{2k-1} = \frac1k$ and $u_{2k} = \frac{1}{k^2}$ we have $u_n \to 0$, but the sum of the first $2n$ terms of $\sum(-1)^{n-1}u_n$ is $\sum_{k=1}^n\left(\frac1k - \frac1{k^2}\right) \to +\infty$.
 
@@ -352,6 +362,8 @@ $$
 so the partial sums are bounded, while $\frac1n$ decreases monotonically to zero; by Dirichlet's test the series converges. For $x \ne k\pi$ the convergence is conditional: $|\sin nx| \ge \sin^2nx = \frac12(1 - \cos2nx)$, where $\sum\frac1{2n}$ diverges and $\sum\frac{\cos2nx}{2n}$ converges (by the same argument). This series is a typical example of the Fourier series of [Chapter 9](/2.2.9).
 
 **Example 8.3.7** The series $\sum\frac{(-1)^n}{n}\left(1 + \frac1n\right)^n$ converges: $\sum\frac{(-1)^n}{n}$ converges, and $\left(1 + \frac1n\right)^n$ is increasing and bounded (it tends to $\mathrm{e}$), so Abel's test applies.
+
+:::
 
 Putting the methods of this chapter together gives a general procedure for testing convergence.
 

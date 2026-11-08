@@ -31,6 +31,8 @@ Without Hardy–Weinberg proportions the two copies in one individual are not in
 
 **Example 22.1.1** A sample of $n = 1000$ people typed for the MN blood group contains 298 $MM$, 489 $MN$ and 213 $NN$. The genotype frequencies are $0.298$, $0.489$, $0.213$; the allele frequency of $M$ is $p = (2 \cdot 298 + 489)/2000 = 1085/2000 = 0.5425$, and $q = 0.4575$. By Eq. (22.1), $\operatorname{SE}(\hat p) = \sqrt{0.5425 \cdot 0.4575/2000} = 0.011$.
 
+:::
+
 At an **X-linked** locus males are **hemizygous**: each man carries one gene copy and each woman two, so in a sample of $m$ men and $f$ women the gene pool has $m + 2f$ copies, and the allele frequency is (number of copies in men + number in women)$/(m + 2f)$.
 
 ## 22.2. The Hardy–Weinberg Law
@@ -58,6 +60,8 @@ The law holds under the following idealized assumptions about the population and
 The same result follows from the table of the nine mating types: for example $AA \times AA$ matings occur with frequency $P^2$ and give only $AA$; $AA \times Aa$ with frequency $2PH$ give $AA$ and $Aa$ in equal numbers; summing the contributions gives offspring frequency $P^2 + PH + H^2/4 = (P + H/2)^2 = p^2$ for $AA$. The gamete argument is shorter and generalizes immediately.
 
 **Example 22.2.1** A population founded by 1000 $AA$ and 1000 $aa$ individuals, equally divided between the sexes, has $p = q = 0.5$ and no **heterozygotes**. After one generation of random mating, $25\,\%$ of the offspring are $AA$, $50\,\%$ $Aa$ and $25\,\%$ $aa$, and these proportions persist.
+
+:::
 
 Three consequences deserve emphasis.
 
@@ -99,6 +103,8 @@ $$
 $$
 
 **Example 22.2.3** Cystic fibrosis affects about 1 in 2500 newborns of European ancestry. Then $q = \sqrt{1/2500} = 0.02$ and the **carrier** frequency is $2 \cdot 0.98 \cdot 0.02 = 0.039$, about 1 in 25: for every affected child there are about $2/q = 98$ carriers. The probability that two unrelated people are both carriers is $0.039^2 \approx 1/650$, and their child is affected with probability $1/4$ of that, $1/2600$, close to the incidence, as it must be.
+
+:::
 
 Equation (22.2) explains a basic fact of human genetics: nearly all copies of a rare recessive allele are hidden in healthy **carriers**. It also shows why selection against affected homozygotes is slow (Formula 23.3.3) and why **consanguinity** concentrates rare recessive disease (§22.4.2). The estimate is only as good as the assumptions: inbreeding or population subdivision inflates the frequency of homozygotes, so that $\sqrt{Q}$ overestimates $q$.
 
@@ -156,6 +162,8 @@ Each iteration increases the likelihood; convergence to the maximum likelihood e
 
 **Example 22.2.5** Red–green color vision defects affect about $8\,\%$ of men of European ancestry, so $q \approx 0.08$; the predicted frequency in women is $q^2 = 0.0064$, close to the observed $0.4$–$0.5\,\%$, and $2pq = 0.147$ of women are carriers. (The calculation treats the several alleles at the *OPN1LW*/*OPN1MW* gene cluster as one.) This is why rare X-linked recessive diseases such as hemophilia A, with $q \approx 10^{-4}$ in males, are almost never seen in women. For an X-linked dominant trait the relation is reversed: males are affected with frequency $q$, females with frequency $q^2 + 2pq = q(2 - q)$, so a rare X-linked dominant condition affects nearly twice as many women as men.
 
+:::
+
 When allele frequencies are estimated from a sample that contains both sexes, the gene copies must be counted, not the individuals: each woman carries two X chromosomes, each man one.
 
 **Formula 22.2.4 (X-Linked Allele Frequency by Gene Counting)** In a sample of $N_f$ women, of whom $n_{aa}$ are homozygous and $n_{Aa}$ heterozygous for allele $a$, and $N_m$ men, of whom $n_a$ carry $a$,
@@ -165,6 +173,8 @@ $$
 $$
 
 **Example 22.2.6** A school survey of 300 girls and 300 boys for red–green color vision finds 3 affected girls, 42 carrier girls (identified from their families or by genotyping) and 21 affected boys. Then $\hat q = (2 \cdot 3 + 42 + 21)/(2 \cdot 300 + 300) = 69/900 = 0.077$, and $\hat p = 0.923$. Averaging the proportions of affected boys ($0.070$) and of $a$ alleles in girls ($48/600 = 0.080$) with equal weights would give $0.075$, a different answer, because the girls contribute two thirds of the X chromosomes.
+
+:::
 
 The approach to equilibrium differs from the autosomal case. A son receives his X from his mother; a daughter one X from each parent. If $q_m$ and $q_f$ are the frequencies in males and females of one generation, then in the next
 
@@ -206,6 +216,8 @@ $|D'| = 1$ means that at least one of the four haplotypes is absent (no evidence
 The two identities in Eq. (22.6) are equivalent: substituting $p_{Ab} = p_A - p_{AB}$, $p_{aB} = p_B - p_{AB}$ and $p_{ab} = 1 - p_A - p_B + p_{AB}$ gives $p_{AB}p_{ab} - p_{Ab}p_{aB} = p_{AB} - p_Ap_B$. Note also $p_{AB} = p_Ap_B + D$, $p_{Ab} = p_Ap_b - D$, $p_{aB} = p_ap_B - D$, $p_{ab} = p_ap_b + D$.
 
 **Example 22.3.1** Suppose two SNPs, $A/a$ and $B/b$, each have allele frequencies $1/2$ and the haplotype frequencies are $p_{AB} = p_{ab} = 0.4$, $p_{Ab} = p_{aB} = 0.1$. Then $D = 0.4 - 0.25 = 0.15$; $D_{\max} = \min(0.25, 0.25) = 0.25$, so $D' = 0.6$; and $r^2 = 0.15^2/0.5^4 = 0.36$. In linkage equilibrium all four haplotypes would have frequency $0.25$.
+
+:::
 
 The two measures answer different questions. $D'$ reflects the recombination history of a pair of sites and tends to be near 1 within blocks of the genome that have rarely recombined; $r^2$ measures how well one site predicts the other, which is what matters for mapping: a test at a marker in LD $r^2$ with a causal variant has the power of a test at the causal variant with $r^2$ times the **sample size** ([7.4.25](/7.4.25)).
 
@@ -309,6 +321,8 @@ $$
 
 **Example 22.4.1** Two equal subpopulations have allele frequencies $0.2$ and $0.8$. Each is in HWE ($0.04 : 0.32 : 0.64$ and $0.64 : 0.32 : 0.04$), so the pooled sample is $0.34 : 0.32 : 0.34$. The pooled allele frequency is $\bar p = 0.5$, for which HWE predicts $0.25 : 0.5 : 0.25$; the heterozygote deficit is $0.18 = 2\operatorname{Var}(p)$ with $\operatorname{Var}(p) = 0.09$, and $F_{\mathrm{ST}} = 0.09/0.25 = 0.36$. A χ² test on a pooled sample would reject HWE and might be misread as evidence of inbreeding or selection.
 
+:::
+
 For humans, $F_{\mathrm{ST}}$ between continental populations averaged over the genome is about $0.1$–$0.15$; equivalently, about $85$–$90\,\%$ of human genetic diversity is found within any one population, and only a small part distinguishes populations (Lewontin 1972, confirmed by genome sequencing). Differentiation is larger at a minority of loci under local selection (skin pigmentation, lactase persistence, high-altitude adaptation). Population structure is the main confounder of association studies, because allele frequencies and disease rates may both differ between subpopulations ([7.4.25](/7.4.25)); the balance between drift, which creates $F_{\mathrm{ST}}$, and migration, which erodes it, is treated in [7.4.23](/7.4.23).
 
 ![The Wahlund effect (Theorem 22.4.1). A: two equal subpopulations with allele frequencies 0.2 and 0.8, each in Hardy–Weinberg proportions; their pooled sample (0.34 : 0.32 : 0.34) has far fewer heterozygotes than Hardy–Weinberg proportions at the pooled frequency 0.5 (0.25 : 0.50 : 0.25). B: for two equal subpopulations with frequencies 0.5 − x and 0.5 + x, the heterozygote deficit 2 Var(p) = 2x² and the fixation index F_ST = 4x²; dots mark the example of panel A (x = 0.3)](./plots/wahlund.py)
@@ -334,6 +348,8 @@ A_iA_i\colon \frac{[2\theta + (1 - \theta)p_i][3\theta + (1 - \theta)p_i]}{(1 + 
 $$
 
 **Example 22.5.1** A three-locus profile is heterozygous at locus 1 for alleles of frequencies $0.1$ and $0.2$, homozygous at locus 2 for an allele of frequency $0.15$, and heterozygous at locus 3 for alleles of frequencies $0.05$ and $0.3$. By the product rule, RMP $= (2 \cdot 0.1 \cdot 0.2)(0.15^2)(2 \cdot 0.05 \cdot 0.3) = 0.04 \cdot 0.0225 \cdot 0.03 = 2.7 \times 10^{-5}$, about 1 in 37 000. With $\theta = 0.01$ the RMP is $4.6 \times 10^{-5}$ (1 in 22 000), with $\theta = 0.03$ it is $1.1 \times 10^{-4}$ (1 in 9400): the correction always favors the defendant, and its effect is largest for rare alleles and homozygotes. With 20 loci, typical profiles have RMPs of $10^{-20}$ or less.
+
+:::
 
 The random match probability is not the probability that the suspect is innocent. Confusing the two is the prosecutor's fallacy: if 1 person in a million matches and the population of possible sources is 10 million, about 10 people would match, and without other evidence the match alone gives a posterior probability of guilt of about $1/11$ (**Bayes' theorem**). The proper summary is the **likelihood ratio** of the evidence under the two hypotheses (the suspect is the source; an unknown person is the source), which for a simple match is $1/\text{RMP}$. Relatives of the suspect have far higher match probabilities than unrelated people (a full sib shares both alleles at a locus with probability $1/4$ or more), which is why familial searching of databases works.
 

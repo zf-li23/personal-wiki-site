@@ -1,6 +1,6 @@
 ---
 title: Sturm Theory and Boundary Value Problems
-source_hash: f7d7d22e73a8
+source_hash: 8033ef5df2f3
 ---
 
 A second-order linear equation with variable coefficients $y''+a_1(x)y'+a_2(x)y=0$ generally cannot be solved, yet many properties of its solutions can still be read off directly from the equation. The protagonists of this chapter are the zeros of solutions: where they are, how dense they are, and how the zeros of two solutions are arranged. Sturm's idea is to compare the equation under study with an equation whose solutions are known (often one with constant coefficients): the equation with the larger coefficient oscillates faster and has denser zeros. This "qualitative theory without solving" serves two purposes. One is to decide whether solutions oscillate and to estimate the spacing of their zeros. The other is the study of boundary value problems, eigenvalue problems in which conditions are imposed at both ends of an interval and an unknown parameter $\lambda$ is sought at the same time. The latter leads to Sturm–Liouville theory: the eigenvalues are real, countable and tend to infinity, and the eigenfunctions are mutually orthogonal and can be used to expand functions; trigonometric series ([2.2.9](/2.2.9#sec-9.3)) are just a special case. The method of separation of variables for partial differential equations ([2.5](/2.5)) rests on exactly this theory.
@@ -232,6 +232,8 @@ Common homogeneous boundary conditions are the *Dirichlet boundary condition* $y
 
 **Solution** If $\lambda=-k^2<0$, the general solution is $y=c_1\mathrm{e}^{kx}+c_2\mathrm{e}^{-kx}$, and the boundary conditions give $c_1=c_2=0$. If $\lambda=0$, then $y=c_1x+c_2$, and again there is only the zero solution. If $\lambda=k^2>0$ ($k>0$), then $y=c_1\cos kx+c_2\sin kx$; $y(0)=0$ gives $c_1=0$, and $y(\pi)=c_2\sin k\pi=0$ with $c_2\ne0$ gives $k\in\mathbb{N}_+$. Hence the eigenvalues are $\lambda_n=n^2$ and the eigenfunctions are $\sin nx$, $n=1,2,\dots$ (negative integers $k$ give negative multiples of the same eigenfunctions, not new eigenvalues).
 
+:::
+
 The same method gives the following table (on the interval $[0,l]$; for a general interval $[a,b]$ replace $x$ by $x-a$ and $l$ by $b-a$).
 
 | Boundary conditions | Eigenvalues $\lambda_n$ | Eigenfunctions | Range of $n$ |
@@ -331,6 +333,8 @@ $$
 For example, for $f\equiv1$, $y=\int_0^xt(1-x)\,\mathrm{d}t+\int_x^1x(1-t)\,\mathrm{d}t=\frac{x(1-x)}{2}$, and one checks directly that $-y''=1$. Here $G\ge0$: an upward force bends the string upward everywhere.
 
 ![The Green's function G(x, t) of -y'' = f, y(0) = y(1) = 0: piecewise linear graphs for several fixed values of t](./plots/green-function.py)
+
+:::
 
 If the homogeneous problem has a nontrivial solution $\varphi$ (that is, $0$ is an eigenvalue), the Green's function does not exist. In this case, for self-adjoint operators we have the *Fredholm alternative*: $Ly=f$ with the boundary conditions is solvable if and only if $\int_a^bf\varphi\,\mathrm{d}x=0$, and when it is solvable the solutions differ by arbitrary multiples of $\varphi$. For example, $-y''=f$, $y'(0)=y'(1)=0$ ($\varphi=1$) is solvable if and only if $\int_0^1f\,\mathrm{d}x=0$: for a rod insulated at both ends, a steady-state temperature is possible only if the heat sources add up to zero.
 

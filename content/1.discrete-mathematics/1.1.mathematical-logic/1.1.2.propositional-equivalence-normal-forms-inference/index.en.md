@@ -1,6 +1,6 @@
 ---
 title: Equivalence, Normal Forms, and Inference in Propositional Logic
-source_hash: a7904b1ee166
+source_hash: d91ab51178e9
 ---
 
 With truth tables, we can in principle determine the truth value of any formula under any assignment, but the method is rather brute-force. This chapter introduces more elegant tools. We first discuss the "equals sign" between formulas, namely logical equivalence, and collect the commonly used equivalences; we then show that every formula can be brought into a standard normal form; finally, we pass from equivalence to inference and present tautological implication, rules of inference, and resolution, a method well suited to machines. This material has something of a logic puzzle about it: it is worth trying to read and understand every formula, as an exercise in careful thinking.
@@ -33,6 +33,8 @@ flowchart LR
 ```
 
 A conditional is equivalent to its contrapositive: $p \to q = \lnot q \to \lnot p$; the converse of a conditional is equivalent to its inverse: $q \to p = \lnot p \to \lnot q$.
+
+:::
 
 Equivalent formulas can replace each other inside a larger formula; this is the *replacement rule*.
 
@@ -309,6 +311,8 @@ By convention, the principal conjunctive normal form of a tautology is the empty
 $$
 p \to q = m_0 \lor m_1 \lor m_3 = (\lnot p \land \lnot q) \lor (\lnot p \land q) \lor (p \land q) = M_2 = \lnot p \lor q
 $$
+
+:::
 
 Principal normal forms exploit the completeness of AND, OR, and NOT: the principal disjunctive and conjunctive normal forms correspond, respectively, to writing a formula "from the rows with value 1" and "from the rows with value 0" in [Section 2.3](#sec-2.3). In the notation above, converting one into the other is very convenient: the subscripts of the principal conjunctive normal form are exactly the complement of those of the principal disjunctive normal form.
 

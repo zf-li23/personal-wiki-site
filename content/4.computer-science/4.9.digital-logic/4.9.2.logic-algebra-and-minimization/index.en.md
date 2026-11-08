@@ -1,7 +1,7 @@
 ---
 title: Logic Algebra and Minimization
 description: Basic and compound operations of logic algebra, gate symbols and the completeness of NAND; basic identities, the substitution, complementation and duality rules, and Shannon expansion; minterms, maxterms and canonical forms; algebraic, Karnaugh-map (with don't-cares) and Quine–McCluskey minimization, with a Python implementation and its complexity.
-source_hash: 9d24e769bc66
+source_hash: 6f26f38cb5da
 ---
 
 The inputs and outputs of a digital circuit are binary signals, and how the output depends on the inputs is described by logic algebra. Logic algebra is the two-element case $\{0, 1\}$ of **Boolean algebra** from discrete mathematics, and its operations correspond one to one with the connectives of propositional logic: AND corresponds to **conjunction**, OR to **disjunction**, and NOT to negation. This chapter rewrites these existing mathematical tools in the language of circuit designers (operations correspond to gates, expressions to circuits), and focuses on one engineering problem: a logic function has infinitely many expressions, so how do we find the one that uses the fewest gates and the fewest gate inputs? This is the minimization of logic functions, and the chapter presents three methods: the algebraic method, which relies on identities; the Karnaugh-map method, which relies on a diagram; and the Quine–McCluskey tabular method, which can be programmed. The results of minimization become actual circuits in [Logic Gates](/4.9.3) and [Combinational Logic Circuits](/4.9.4).
@@ -178,6 +178,8 @@ F = \sum m(1, 3, 6, 7) = \prod M(0, 2, 4, 5), \qquad \overline{F} = \sum m(0, 2,
 $$
 The algebraic method gives the same result: $AB = AB(C + \overline{C}) = ABC + AB\overline{C}$ and $\overline{A}C = \overline{A}BC + \overline{A}\,\overline{B}C$.
 
+:::
+
 The canonical forms are unique and suitable for deciding whether two functions are equal, but they are usually long: a function of $n$ variables may need as many as $2^{n-1}$ minterms (for example, the parity function of $n$ variables), so minimization is needed.
 
 ## 2.4. Algebraic Minimization
@@ -209,6 +211,8 @@ F &= A\overline{B} + B\overline{C} + \overline{B}C(A + \overline{A}) + \overline
 \end{aligned}
 $$
 Another way of adding terms gives $F = A\overline{C} + \overline{B}C + \overline{A}B$, which also has three terms with two variables each. Both results are minimal sums of products, which shows that the minimal form is not unique, and also that the algebraic method depends on skill and makes it hard to confirm that a result is already minimal.
+
+:::
 
 The minimal product of sums can be obtained dually: for example, $(A + B)(A + \overline{B})(B + C) = A(B + C)$. Alternatively, find the minimal sum of products of $\overline{F}$ first and then use the complementation theorem to obtain the minimal product of sums of $F$.
 
@@ -251,6 +255,8 @@ F = \overline{A}B\overline{C} + \overline{A}CD + A\overline{C}D + ABC .
 $$
 "Circle the largest blocks first" is only a rule of thumb for finding prime implicants; the selection should start from the essential prime implicants.
 
+:::
+
 The complement function and the product of sums can be obtained from the $0$s: circle the $0$s on the Karnaugh map and apply the same rules to obtain the minimal sum of products of $\overline{F}$; complementing it (complementation theorem) gives the minimal product of sums of $F$. For $F = \sum m(1,3,6,7)$ of Example 2.3.1, the $0$s are at $m_0, m_2, m_4, m_5$; circling $\overline{A}\,\overline{C}$ ($m_0, m_2$) and $A\overline{B}$ ($m_4, m_5$) gives $\overline{F} = \overline{A}\,\overline{C} + A\overline{B}$, so $F = (A + C)(\overline{A} + B)$.
 
 ### 2.5.3. Don't-Care Terms
@@ -265,6 +271,8 @@ $$
 F = \sum m(5, 6, 7, 8, 9) + \sum d(10, 11, 12, 13, 14, 15).
 $$
 As in the right map, treating the don't-care terms as $1$ lets us circle an $8$-cell block $A$ and two $4$-cell blocks $BD$ and $BC$, giving $F = A + BD + BC$. Without using the don't-care terms, the minimal expression is $A\overline{B}\,\overline{C} + \overline{A}BD + \overline{A}BC$, in which every AND gate has more inputs.
+
+:::
 
 Karnaugh maps are suitable for functions of at most $4$ variables; for $5$ or $6$ variables two or four four-variable maps must be stacked and the adjacency is no longer intuitive, and more variables can only be left to computers. When minimizing multiple-output functions (several outputs for the same inputs), we also try to find product terms that can be shared by several outputs; a single output may then fail to be minimal, but the whole circuit is the cheapest. Such problems are handled by the methods of the next section and by logic synthesis tools.
 

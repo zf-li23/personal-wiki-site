@@ -95,6 +95,8 @@ The time step is limited by the fastest motion. The stretching of bonds to hydro
 
 **Example 15.2.1** How much computing does a microsecond cost? At $\Delta t = 2\,\mathrm{fs}$, $1\,\mu\mathrm{s}$ is $5\times10^8$ steps. A membrane protein in a lipid bilayer with water has about $10^5$ atoms; with cutoffs and particle-mesh Ewald a force evaluation costs some $10^7$–$10^8$ floating-point operations, so a microsecond needs about $10^{16}$–$10^{17}$ operations. A modern graphics processor runs such a system at a few hundred nanoseconds per day; special-purpose machines (Anton, D. E. Shaw Research) reach tens of microseconds per day and have simulated the folding of small fast-folding proteins to their native states, repeatedly, in millisecond-long trajectories (Lindorff-Larsen and colleagues, 2011).
 
+:::
+
 ![Molecular dynamics of a two-dimensional Lennard-Jones fluid (64 particles, reduced units). A: final positions and the trajectories of four particles over 1000 steps. B: deviation of the total energy from its initial value (log scale): with velocity Verlet it fluctuates without drift and grows as Δt², while the explicit Euler method drifts away within a few time units. C: the kinetic temperature in a microcanonical run and with a Langevin thermostat set to T = 0.7, which brings the system to the target temperature and keeps it there with canonical fluctuations](./plots/md-lj.py)
 
 ### 15.2.3. Thermostats and Barostats

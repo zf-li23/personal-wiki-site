@@ -1,7 +1,7 @@
 ---
 title: Magnetic Fields and Their Sources
 description: The connection between magnetic phenomena and moving charges, the Lorentz force and the magnetic flux density, magnetic field lines, magnetic flux and Gauss's law for magnetism, the Biot–Savart law and its applications (straight wires, current loops and magnetic dipoles, Helmholtz coils, solenoids, moving charges), Ampère's circuital law and its applications, polar and axial vectors, displacement current and the Ampère–Maxwell law.
-source_hash: bf15ff1a9a4e
+source_hash: 43cf711d654f
 ---
 
 The previous five chapters studied the electric fields of static charges and **steady currents**. This chapter turns to another effect of electric current, the magnetic field. In 1820 Ørsted discovered that an electric current deflects a compass needle, and within half a year it was recognized that all magnetic phenomena originate in the motion of electric charges: a magnetic field is produced by moving charges (currents) and exerts forces only on moving charges. The basic quantity describing a magnetic field is the magnetic flux density $\boldsymbol{B}$, which is defined through the Lorentz force on a moving charge; the law by which currents produce magnetic fields is the Biot–Savart law. From it follow the two fundamental theorems of the magnetic field, which are exactly "complementary" to the two fundamental theorems of the electrostatic field ([5.3.1](/5.3.1), [5.3.2](/5.3.2)):
@@ -155,6 +155,8 @@ $$
 B = \oint\frac{\mu_0I}{4\pi r^2}\frac Rr\,\mathrm{d}l = \frac{\mu_0IR}{4\pi r^3}\cdot2\pi R = \frac{\mu_0IR^2}{2(R^2 + x^2)^{3/2}},
 $$
 directed along the axis and related to the current by the right-hand rule. At the center, $B = \dfrac{\mu_0I}{2R}$.
+
+:::
 
 Far away ($x \gg R$), $B \approx \dfrac{\mu_0IR^2}{2x^3}$, which has the same form as the **electric field strength** $E = \dfrac{p}{2\pi\varepsilon_0x^3}$ on the axis of an **electric dipole**. Introduce the vector $\boldsymbol{m} = IS\boldsymbol{e}_{\mathrm{n}}$ ($S = \pi R^2$ is the area enclosed by the current and $\boldsymbol{e}_{\mathrm{n}}$ is the unit normal related to the current by the right-hand rule), called the magnetic moment of the coil; then $\boldsymbol{B} = \dfrac{\mu_0\boldsymbol{m}}{2\pi x^3}$.
 

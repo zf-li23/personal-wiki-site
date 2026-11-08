@@ -22,6 +22,8 @@ title: 函数项级数、幂级数与 Fourier 级数
 2. $\sum_{n=1}^\infty\frac{x^n}{n^p}$：$\left|\frac{u_{n+1}}{u_n}\right| \to |x|$，$|x| < 1$ 时绝对收敛，$|x| > 1$ 时通项不趋于零。在 $x = \pm1$ 处由 **p 级数**与 **Leibniz 判别法**：$p \le 0$ 时收敛域为 $(-1,1)$；$0 < p \le 1$ 时为 $[-1,1)$；$p > 1$ 时为 $[-1,1]$。
 3. $\sum_{n=1}^\infty\left(\frac{n+1}{n}\right)^nx^n$：$\sqrt[n]{|u_n|} = \left(1 + \frac1n\right)|x| \to |x|$；$|x| = 1$ 时 $|u_n| \to \mathrm{e} \ne 0$。收敛域为 $(-1,1)$。
 
+:::
+
 设 $I$ 含于收敛域，我们关心三个问题：
 
 1. 若每个 $u_n$ 在 $x_0$ 处连续，$S$ 是否在 $x_0$ 处连续？即能否逐项求极限：$\lim_{x\to x_0}\sum u_n(x) = \sum\lim_{x\to x_0}u_n(x)$？
@@ -119,6 +121,8 @@ $$
 **例 9.1.7** $S(x) = \sum_{n=1}^\infty n\mathrm{e}^{-nx}$ 在 $(0, +\infty)$ 内连续且可导。
 
 **证明** 任取 $x_0 > 0$，令 $\delta = x_0/2$。在 $[\delta, +\infty)$ 上 $n\mathrm{e}^{-nx} \le n\mathrm{e}^{-n\delta}$，$\sum n\mathrm{e}^{-n\delta}$ 收敛（比值判别法），由 Weierstrass 判别法，级数在 $[\delta, +\infty)$ 上一致收敛，$S$ 在 $x_0$ 处连续。导数级数 $\sum(-n^2\mathrm{e}^{-nx})$ 有优级数 $\sum n^2\mathrm{e}^{-n\delta}$，同理 $S$ 在 $x_0$ 处可导。$\square$
+
+:::
 
 两个级数在 $(0, +\infty)$ 上都不一致收敛（$x \to 0^+$ 时通项不一致地小），但连续、可导是局部性质，只需在每一点附近的闭区间上一致收敛，这称为内闭一致收敛（uniform convergence on compact subsets）。
 
@@ -219,6 +223,8 @@ $$
 
 **例 9.2.3** $f(x) = \mathrm{e}^{-1/x^2}$（$x \ne 0$），$f(0) = 0$。可以验证 $f$ 在 $\mathbb{R}$ 上无穷次可导，且 $f^{(n)}(0) = 0$ 对一切 $n$ 成立（每次求导得到 $P(1/x)\mathrm{e}^{-1/x^2}$ 的形式，$P$ 是多项式，$x \to 0$ 时趋于零）。于是 $f$ 的 Maclaurin 级数处处收敛于 $0$，但除 $x = 0$ 外不等于 $f(x)$。
 
+:::
+
 什么时候 Taylor 级数等于 $f$？由**泰勒公式**，$f(x) = \sum_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + R_n(x)$，Taylor 级数的部分和恰好是 **Taylor 多项式**，于是：
 
 **定理 9.2.6** 设 $f$ 在 $(x_0 - R, x_0 + R)$ 内有任意阶导数，则 $f$ 在该区间内可以展开成 Taylor 级数（即 Taylor 级数收敛于 $f(x)$）的充分必要条件是：对区间内每个 $x$，余项 $R_n(x) \to 0$（$n \to \infty$）。
@@ -245,6 +251,8 @@ $$
 (1 + x)^\alpha = \sum_{n=0}^\infty\binom\alpha nx^n, \qquad |x| < 1,
 $$
 右端称为二项式级数（binomial series）。$\alpha$ 是非负整数时它是有限和，即二项式定理，对一切 $x$ 成立。端点的情况依赖于 $\alpha$：$\alpha \le -1$ 时两端都发散，展开在 $(-1,1)$ 上成立；$-1 < \alpha < 0$ 时只在 $x = 1$ 处收敛，展开在 $(-1, 1]$ 上成立；$\alpha > 0$ 时两端都收敛，展开在 $[-1, 1]$ 上成立。$\alpha = -1$ 就是 $\frac{1}{1+x} = \sum(-1)^nx^n$。
+
+:::
 
 ![1/(1+x^2) 的 Taylor 部分和在 |x| < 1 内逼近函数，在 |x| > 1 处发散，尽管函数在整个实轴上光滑](./plots/taylor-radius.py)
 
@@ -313,6 +321,8 @@ $$
 $$
 所以 $\frac{1}{\sqrt{2\pi}}, \frac{\cos x}{\sqrt\pi}, \frac{\sin x}{\sqrt\pi}, \dots$ 是规范正交的。一般地，$1, \cos\frac{n\pi x}{l}, \sin\frac{n\pi x}{l}$（$n \ge 1$）是任意长为 $2l$ 的区间上的正交函数系。
 
+:::
+
 设 $f$ 以 $2\pi$ 为周期，$f(x) = \frac{a_0}{2} + \sum_{n=1}^\infty(a_n\cos nx + b_n\sin nx)$，且右端可以逐项积分（例如一致收敛）。两边在 $[-\pi,\pi]$ 上积分，由正交性只剩一项：$\int_{-\pi}^\pi f\,\mathrm{d}x = \pi a_0$；两边乘 $\cos nx$ 再积分，只剩 $\int_{-\pi}^\pi f(x)\cos nx\,\mathrm{d}x = a_n\pi$；乘 $\sin nx$ 同理。这正是"在正交基下求坐标只需作内积"。
 
 **定义 9.3.2（Fourier 级数）** 设 $f$ 以 $2\pi$ 为周期，在 $[-\pi, \pi]$ 上可积。称
@@ -350,6 +360,8 @@ $$
 
 在跳跃点处，级数收敛到左右极限的平均值 $0$。取 $x = \frac\pi2$ 得 $1 - \frac13 + \frac15 - \cdots = \frac\pi4$。
 
+:::
+
 ![方波的 Fourier 部分和：在跳跃点收敛到 0（左）；跳跃点附近的过冲随项数增加而变窄，但高度不减，约为跳跃高度的 9%（右）](./plots/fourier-gibbs.py)
 
 图中可以看到，在跳跃点附近，部分和总有一个约 $1.179$ 的峰（跳跃高度为 $2$，过冲约 $0.179$，即约 $9\%$），项数增加时峰向跳跃点靠拢、变窄，但高度不降低。这称为 Gibbs 现象（Gibbs phenomenon）。它与 Dirichlet 收敛定理并不矛盾：对每个固定的 $x \ne 0$，峰终将移到 $x$ 的左边，$S_N(x) \to 1$；但收敛在跳跃点附近不是一致的。这也是定理 9.1.4 的反面：连续函数（部分和）一致收敛的极限必连续，而方波不连续。
@@ -365,6 +377,8 @@ $f$ 连续且 $f(-\pi) = f(\pi)$，由 Dirichlet 收敛定理，$f(x) = \frac4\p
 $$
 \sum_{k=0}^\infty\frac{1}{(2k+1)^2} = \frac{\pi^2}{8}, \qquad \text{于是} \quad \sum_{n=1}^\infty\frac{1}{n^2} = \frac{\pi^2}{8} + \frac14\sum_{n=1}^\infty\frac{1}{n^2} \;\Rightarrow\; \sum_{n=1}^\infty\frac{1}{n^2} = \frac{\pi^2}{6}.
 $$
+
+:::
 
 三角波连续，系数按 $\frac{1}{n^2}$ 衰减；方波有跳跃，系数只按 $\frac1n$ 衰减。函数越光滑，Fourier 系数衰减越快。
 

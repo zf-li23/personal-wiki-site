@@ -49,6 +49,8 @@ an allele increases when its marginal fitness exceeds the mean. The difference $
 
 **Example 5.2.1** The genotypes $A_1A_1$, $A_1A_2$ and $A_2A_2$ survive from egg to adult with probabilities $0.90$, $0.85$ and $0.75$, and surviving females lay $50$, $55$ and $70$ eggs. By Eq. (5.1) the absolute fitnesses are $45$, $46.75$ and $52.5$, so with $A_1A_1$ as reference $w_{11} = 1$, $w_{12} = 1.039$, $w_{22} = 1.167$: the genotype with the poorest survival is the fittest, because fecundity outweighs it. At $p_2 = 0.5$ the mean fitness is $0.25 + 0.519 + 0.292 = 1.061$, and the frequency of $A_2$ after one generation is $(0.25 \cdot 1.167 + 0.25 \cdot 1.039)/1.061 = 0.520$.
 
+:::
+
 In continuous time, with overlapping generations, the natural measure is the Malthusian fitness $m = \ln W$ per unit time, the exponential growth rate of a genotype; differences in $m$ play the role of selection coefficients, and the logistic equation of §5.3 is exact for them.
 
 ## 5.3. Positive Selection and the Rate of Adaptation
@@ -108,6 +110,8 @@ $$
 Unlike the neutral rate $k = \mu$ ([Theorem 23.7.1](/7.4.23#thm-23.7.1)), the adaptive rate grows with population size, because a large population produces more mutations while drift loses the same fraction of them.
 
 **Example 5.3.1** Let $\mu_{\mathrm{b}} = 10^{-8}$ and $s = 0.01$. In a population of $N = 10^4$, an established beneficial mutation appears on average once every $1/(4N\mu_{\mathrm{b}}s) = 250\,000$ generations: adaptation at this locus is limited by the supply of mutations. In a population of $N = 10^8$, one appears every 25 generations, much faster than the roughly $(2/s)\ln(4Ns) \approx 3000$ generations that a sweep takes; several beneficial mutations then compete, the regime of **clonal interference** in asexual populations ([§41.4.4](/7.6.41#sec-41.4.4) of 7.6.41), and the rate of adaptation is set by the time a sweep takes rather than by the mutation supply.
+
+:::
 
 The waiting time for a new mutation can be avoided when the allele is already present. *Standing genetic variation* is the genetic variation present in a population before a change in the environment makes some of it beneficial; an allele at frequency $p_0$ is established almost surely if $2Np_0 \gg 1/(2s)$ copies are present. Adaptation from standing variation is faster than from new mutation, starts from alleles that have already passed the filter of purifying selection in the old environment, and is less affected by Haldane's sieve.
 
@@ -211,6 +215,8 @@ The type with the larger geometric mean fitness wins, whatever the arithmetic me
 
 **Example 5.5.1** A species has two generations a year with identical survival and fecundities $50$, $55$, $70$ for $A_1A_1$, $A_1A_2$, $A_2A_2$ in spring and $70$, $65$, $55$ in autumn. The geometric means are $\sqrt{3500} = 59.2$, $\sqrt{3575} = 59.8$ and $\sqrt{3850} = 62.0$: $A_2A_2$ has the highest and $A_2$ is fixed, although it is the worst genotype every autumn. With fecundities $55$, $65$, $75$ in spring and $75$, $65$, $55$ in autumn, the geometric means are $64.2$, $65.0$ and $64.2$: the heterozygote, never the best, has the highest geometric mean, and both alleles are maintained.
 
+:::
+
 Because the geometric mean penalizes variance (for small fluctuations it is about the arithmetic mean minus half the variance), traits that reduce the variance of fitness across years can be favored even at a cost to mean fitness, the principle of **bet hedging** taken up in [7.10.15](/7.10.15). Fluctuations that are fast relative to the response average out; slow ones let one allele drift toward fixation in each phase.
 
 ![Selection that maintains variation (Theorem 5.5.1, Formula 5.5.1). A: change in frequency per generation in haploid models of frequency-dependent selection, w_A − w_a = −0.2(p − 0.5) (negative, a stable equilibrium at 0.5, filled dot) and +0.2(p − 0.5) (positive, an unstable threshold, open dot); arrows give the direction of change. B: the Levene model with two equal niches: fitness of allele A in niche 1 and niche 2 (that of a is 1); in the shaded region the arithmetic mean exceeds 1 and the harmonic mean is below 1, so both alleles increase when rare; the dots mark v = (1.5, 0.6) and (0.6, 1.5), protected, and (1.1, 0.85), not protected. C: two generations a year with the fecundities of Example 5.5.1; with schedule 1 the allele A₂ is fixed, with schedule 2 the heterozygote has the highest geometric mean fitness and the frequency settles near 0.5 (shown once a year; within each year it oscillates)](./plots/balancing.py)
@@ -242,6 +248,8 @@ $$
 The additive variance of fitness at one locus in Hardy–Weinberg proportions is $2pq\alpha^2$ ([Theorem 24.3.1](/7.4.24#thm-24.3.1), with fitness as the trait), which completes the proof. $\square$
 
 **Example 5.7.1** With $w_{11} = 1$, $w_{12} = 1.05$, $w_{22} = 1.1$ and the frequency of $A_2$ equal to $0.5$, the average effect of $A_2$ is $\alpha = 1.075 - 1.025 = 0.05$, so $V_A = 2 \cdot 0.25 \cdot 0.0025 = 0.00125$ and $\bar w = 1.05$. The theorem predicts $\Delta\bar w = 0.00125/1.05 = 0.00119$. Directly, $\Delta p = 0.25 \cdot 0.05/1.05 = 0.0119$, and since $\bar w = 1 + 0.1p$ here, $\Delta\bar w = 0.00119$: for additive fitnesses the curvature term vanishes and the theorem is exact.
+
+:::
 
 Because a variance is never negative, selection increases mean fitness, and does so fastest when the additive variance in fitness is largest. This explains the rhythm of a sweep: $\bar w$ hardly changes while the favored allele is rare, rises fastest near $p = 1/2$, and stops at fixation. At one locus with any number of alleles and constant fitnesses, mean fitness indeed never decreases under random mating (Kingman 1961). Fisher stated the theorem for the whole genome, and in that form it is a statement about the part of the change in mean fitness caused by natural selection: the "environment", including the genetic background and the other members of the population, deteriorates as the population evolves, so that the total change in $\bar w$ can be zero or negative even when selection constantly pushes it up. Estimates of the additive variance in relative fitness are often a few percent; mean fitness does not rise by a few percent per generation, because changing environments, new deleterious mutations and competition take back what selection gives.
 

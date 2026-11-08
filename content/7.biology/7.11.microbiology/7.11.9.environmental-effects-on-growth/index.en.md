@@ -91,6 +91,8 @@ Water activity is the thermodynamic activity of water: its chemical potential is
 
 **Example 9.3.1** Seawater contains about $3\,\%$ NaCl, about $0.5\,\mathrm{mol\,kg^{-1}}$; with $\nu = 2$ and $\phi \approx 0.92$, $\ln a_{\mathrm{w}} = -2 \times 0.5 \times 0.92 \times 0.018 = -0.017$, so $a_{\mathrm{w}} \approx 0.98$. A saturated NaCl solution ($6.1\,\mathrm{mol\,kg^{-1}}$, $\phi \approx 1.27$) has $a_{\mathrm{w}} \approx 0.75$. The osmotic pressure of seawater is $\Pi = (8.314 \times 298/1.8\times10^{-5}) \times 0.017 \approx 2.4\,\mathrm{MPa}$, about $24$ times atmospheric pressure.
 
+:::
+
 Because the cytoplasm normally contains more solutes than the surroundings, water tends to flow into the cell, which is said to be in positive water balance; the wall bears the resulting turgor pressure. If the outside becomes more concentrated than the inside, water flows out, the cytoplasm shrinks away from the wall (plasmolysis), and the cell cannot grow. The water activities of some materials are shown in the figure above (panel C): seawater $0.98$, bread $0.95$, salami $0.85$, jams $0.80$, salt lakes and salted fish $0.75$, cereals and dried fruit $0.70$. The lowest water activity at which growth has been observed, about $0.61$, belongs to xerophilic fungi such as *Xeromyces bisporus* growing on sugary substrates; it seems to be a physicochemical limit common to all three domains. This is the basis of the oldest methods of food preservation, salting, sugaring and drying.
 
 ### 9.3.2. Salt and Sugar Classes

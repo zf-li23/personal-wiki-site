@@ -256,6 +256,8 @@ In PostgreSQL each row version (**tuple**) stores the identifier of the **transa
 | (`S01`, age 54) | 90 | 100 | yes: 90 committed, 100 in progress for 101 | no: deleted by committed 100 |
 | (`S01`, age 55) | 100 | 0 | no: 100 in progress for 101 | yes |
 
+:::
+
 Both readers proceed without waiting, each seeing a consistent state. Old versions that no snapshot can see any more are removed by `VACUUM` (run automatically by autovacuum). Transaction identifiers are 32-bit numbers compared modulo $2^{32}$, so very old versions must be *frozen* (marked as visible to everyone) before the counter wraps around, which is another task of `VACUUM`.
 
 InnoDB and Oracle update rows in place and keep the previous versions in *undo logs*; a reader with an older *read view* reconstructs the version it should see by applying undo records. DuckDB also updates in place and keeps undo information in memory, per transaction.

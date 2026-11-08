@@ -75,6 +75,8 @@ $$
 \mathbb{E}X = 0.5 \times \frac{1}{2} + \int_0^1 x \cdot \frac{1}{2}\,\mathrm{d}x = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}.
 $$
 
+:::
+
 一般地（了解即可），设 $X$ 的分布函数为 $F$，可以统一地定义 $\mathbb{E}X = \int_{\mathbb{R}} x\,\mathrm{d}F(x)$（Lebesgue–Stieltjes 积分）。若 $F = F_1 + F_2$，其中 $F_1(x) = \int_{-\infty}^x f_0(s)\,\mathrm{d}s$ 有密度，$F_2$ 只在可列个点 $x_j$ 处跳跃，跳跃高度为 $\mathbb{P}(X = x_j)$，则只要 $\int \lvert x \rvert f_0(x)\,\mathrm{d}x + \sum_j \lvert x_j \rvert\mathbb{P}(X = x_j) < \infty$，
 
 $$
@@ -283,6 +285,8 @@ $\operatorname{Var}(X) = 2 - 1 = 1$。$I_k$ 之间不独立，但期望的线性
 1. $X \sim \chi^2_n$：$X$ 与 $Z_1^2 + \cdots + Z_n^2$ 同分布（定理 7.1.6），$\mathbb{E}Z_i^2 = 1$，$\mathbb{E}Z_i^4 = 3$（例 8.2.2 取 $\alpha = 4$），故 $\mathbb{E}X = n$，$\operatorname{Var}(X) = n(3 - 1) = 2n$。
 2. $T \sim t_n$：$n \ge 2$ 时期望存在，由对称性 $\mathbb{E}T = 0$；$n \ge 3$ 时，由 $T = Z/\sqrt{X/n}$ 与独立性，$\operatorname{Var}(T) = \mathbb{E}Z^2 \cdot n\mathbb{E}X^{-1} = \frac{n}{n - 2}$，其中 $\mathbb{E}X^{-1} = \frac{1}{n - 2}$ 由 $\chi^2_n = \Gamma(n/2, 1/2)$ 的密度直接积分得到。$n = 1$ 时期望不存在（例 8.2.7），$n = 2$ 时方差为无穷。
 3. $F \sim F_{m,n}$：$n \ge 3$ 时，$\mathbb{E}F = \mathbb{E}\frac{X}{m}\cdot\mathbb{E}\frac{n}{Y} = 1\cdot\frac{n}{n - 2} = \frac{n}{n - 2}$。
+
+:::
 
 这里用的方法是：利用三大分布与正态分布的关系把期望化为独立变量乘积的期望，或者利用密度函数的归一性（把积分凑成另一个密度）。
 

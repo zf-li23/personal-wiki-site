@@ -157,6 +157,8 @@ coef(fits)[whichIsBest, ]
 
 The coefficients chosen by generalized cross-validation are much smaller and of more plausible size; the least efficiently estimated coefficients shrink the fastest.
 
+:::
+
 Why penalize the size of the coefficients? A large coefficient puts much emphasis on one feature. When a polynomial of increasing degree is fitted to a fixed set of points, the residual sum of squares keeps decreasing while the coefficients explode in size and alternate in sign: the fit models intricate relations that belong to the particular training data, which is **overfitting**. Bounding $\sum_j\beta_j^2$ rules such fits out.
 
 **Example 12.1.3** Suppose software can only compute OLS, $(X^{\mathsf T}X)^{-1}X^{\mathsf T}\boldsymbol{Y}$. To obtain the ridge estimator, augment the data with $p$ pseudo-observations:

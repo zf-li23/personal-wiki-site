@@ -49,6 +49,8 @@ where $\gamma \le 1$ accounts for the compression of the signal by the platform 
 
 **Example 13.2.1** In the figure $\rho = 0.7$ and the tumor ploidy is $\psi = 2.67$. A segment with the normal state $(1, 1)$ has $\mathrm{logR} = \log_2(2/2.47) = -0.30$, not $0$: in a hyperdiploid tumor, a segment with two copies is relatively lost. The single-copy loss $(1, 0)$ has $\mathrm{logR} = -0.92$ and $\mathrm{BAF} = 0.23$ (or $0.77$); the copy-neutral **loss of heterozygosity** $(2, 0)$ has the same $\mathrm{logR}$ as $(1, 1)$, $-0.30$, but $\mathrm{BAF} = 0.15$; the states $(2, 2)$ and $(3, 1)$ share $\mathrm{logR} = 0.46$ and differ only in the BAF, $0.50$ against $0.29$. Neither signal alone determines the state; together they do, and the search over $(\rho, \psi)$ recovers $\rho = 0.70$ and $\psi = 2.7$ on a grid of step $0.075$.
 
+:::
+
 Methods such as ASCAT, ABSOLUTE, FACETS and Battenberg fit purity and ploidy in this way, by requiring that the segments take integer states. Their typical failure is an ambiguity of ploidy: a near-diploid solution and a near-tetraploid solution of lower purity can explain the same data almost equally well, and whole-genome doubling, common in advanced tumors, has to be decided from such a choice, from subclonal patterns or from single-cell data.
 
 ### 13.2.3. Clonal Structure
@@ -62,6 +64,8 @@ $$
 Mutations with $\mathrm{CCF} \approx 1$ are clonal, present in every tumor cell; mutations with smaller CCF are subclonal.
 
 **Example 13.2.2** In a sample of purity $0.6$, two heterozygous mutations at diploid loci have allele fractions $0.30$ and $0.18$. Their cancer cell fractions are $0.30 \times 2/0.6 = 1.0$ and $0.18 \times 2/0.6 = 0.6$: the first is clonal, the second marks a subclone of $60\,\%$ of the tumor cells.
+
+:::
 
 Clustering the CCFs of all mutations of a tumor, with binomial read-count likelihoods and a Dirichlet-process mixture (PyClone, DPClust), finds the subclones; the pigeonhole principle orders them into a phylogeny (two subclones whose CCFs sum to more than one must be nested), and sampling several regions of a tumor, or the same tumor before and after treatment, shows how the clones are distributed in space and selected in time. Normal tissues are also mosaics: sequencing of morphologically normal skin, esophagus, urothelium and blood finds clones carrying cancer driver mutations in a large fraction of cells, more with age and exposure, and clonal hematopoiesis in the blood confounds tumor–normal comparisons ([7.8.12](/7.8.12#sec-12.7)). A driver mutation is therefore necessary but not sufficient for cancer.
 
@@ -127,6 +131,8 @@ The rate is not constant. It varies by three orders of magnitude between tumor t
 
 **Example 13.4.1** A gene with $1.5\,\mathrm{kb}$ of coding sequence is mutated $8$ times in $500$ tumors. With a background rate of $1$ per megabase, $\lambda = 1500 \times 500 \times 10^{-6} = 0.75$ and $\mathbb{P}(X \ge 8) = 1.3 \times 10^{-6}$, which passes a **Bonferroni correction** for $18\,000$ genes ($2.8 \times 10^{-6}$). If the gene lies in a late-replicating region with three times the average rate, $\lambda = 2.25$ and $\mathbb{P}(X \ge 8) = 0.0023$: not significant. A threefold error in the background, well within the observed variation, decides the call.
 
+:::
+
 MutSigCV (Lawrence and colleagues, 2013) estimates a gene-specific background from the silent mutations in the gene and in genes with similar covariates (expression, replication time, chromatin state), and tests the excess of non-silent mutations against it. Modern methods combine evidence of three kinds: excess frequency, functional impact (truncating mutations in tumor suppressors, damaging missense changes) and positional clustering.
 
 ![Why recurrence tests need the right background mutation rate (simulation). 18 000 genes with log-normal coding lengths (median 1.2 kb) are sequenced in 400 tumors; the background rate varies with a covariate x (standing for replication timing and expression), log μ_g = log(1.5 × 10⁻⁶) + 0.6x + u_g with u_g ~ N(0, 0.5²), and 40 driver genes carry an excess of mutations. A: mutations per Mb per tumor against x (drivers red; genes without mutations at the bottom), with the fitted rate (solid) and the genome-wide rate (dashed). B: quantile–quantile plot of −log₁₀ p for the non-driver genes under three background models: one genome-wide rate (Poisson), a rate depending on x (Poisson regression), and the same with overdispersion (negative binomial, dispersion by moments after leaving out the 1 % of genes with the largest residuals). C: genes called at a false discovery rate of 10 % (Benjamini–Hochberg), true drivers and false positives](./plots/driver_qq.py)
@@ -144,6 +150,8 @@ $$
 estimates the relative rate at which non-synonymous mutations are retained: $\omega > 1$ indicates positive selection, $\omega < 1$ negative selection, $\omega = 1$ neutrality. Separate ratios are computed for missense and truncating mutations.
 
 **Example 13.4.3** A gene with $20$ missense and $2$ synonymous mutations, whose sequence offers three times as many opportunities for missense as for synonymous changes, has $\omega = (20/3)/(2/1) = 3.3$: an estimated $70\,\%$ of its missense mutations ($1 - 1/\omega$) are retained because of selection.
+
+:::
 
 The same ratio taken over all genes measures selection genome-wide. In about $7700$ tumors of $29$ types, dN/dS indicated that a tumor carries on average about four coding substitutions under positive selection, from fewer than one in some types to more than ten in others, and that negative selection on somatic mutations is very weak outside a few essential genes, so most passenger mutations are tolerated (Martincorena and colleagues, 2017). The method needs no assumption on covariates, because synonymous mutations calibrate the rate gene by gene, but it has low power for genes with few mutations and assumes that synonymous mutations are neutral, which fails where they disrupt splicing.
 
@@ -188,6 +196,8 @@ Mutation profiles should classify tumors better than expression profiles: they a
 
 **Example 13.5.1** In the toy example only $33\,\%$ of pairs of tumors of the same subtype share a mutated gene. The mean cosine similarity of raw profiles is $0.12$ within subtypes and $0.05$ between them, and a rank-$2$ NMF of the raw matrix assigns $75\,\%$ of the tumors correctly; after propagation the similarities are $0.53$ and $0.31$ and the factorization assigns $95\,\%$ correctly. Propagation does not create information: it converts "mutated in the same pathway" into similarity, which is exactly the assumption that tumors of a subtype disrupt the same pathways.
 
+:::
+
 Applied to somatic mutations of ovarian, uterine and lung tumors from TCGA with several human interaction networks, the method found subtypes that were associated with survival or with histology, whereas clustering of the raw mutation profiles was not informative (Hofree and colleagues, 2013). The subtypes are only as good as the network: interaction maps are biased toward well-studied cancer genes ([7.9.12](/7.9.12#sec-12.1.2)), which can make known cancer genes central for reasons of ascertainment, and the result should be compared against degree-preserving randomized networks.
 
 ### 13.5.5. Mutations That Rewire Signaling
@@ -216,6 +226,8 @@ With thousands of genes and tens to hundreds of patients, a classifier will fit 
 ![Selection bias in cross-validation (simulation in the design of Simon and colleagues, 2003). Each data set has 20 specimens, 10 per class, and 6000 genes with independent standard normal log-ratios in both classes: there is nothing to predict. The classifier is the compound covariate predictor built from the 10 genes with the largest two-sample t statistics. For 300 data sets: the cumulative proportion of data sets with at most a given number of misclassifications out of 20, estimated by resubstitution, by leave-one-out cross-validation after selecting the genes on all 20 specimens, and by leave-one-out cross-validation with the selection repeated in each fold. Only the last is centered near 10, the expected number for a random guess](./plots/selection_bias.py)
 
 **Example 13.6.1** In the simulation, resubstitution misclassifies no specimen in $99\,\%$ of the data sets. Leave-one-out cross-validation applied after selecting the genes on all specimens is hardly better: no error in $91\,\%$ of the data sets, a mean of $0.09$ errors out of $20$. With the selection inside each fold, the mean is $10.7$ errors and the central $90\,\%$ of the data sets lie between $3$ and $18$: the correct estimate of a classifier with no information, and a reminder of how variable error estimates are with $20$ specimens. Simon and colleagues (2003) made this point against published microarray classifiers; it applies to every high-dimensional predictor ([7.7.21](/7.7.21), [4.6.2](/4.6.2)).
+
+:::
 
 The same leakage arises when normalization, batch correction, imputation or the choice of a cutpoint uses all samples, and when the "independent" validation set was used to choose among several candidate models. The only fully honest estimate comes from data not touched during development, ideally from another cohort and platform.
 
@@ -261,6 +273,8 @@ Somatic mutations in expressed genes can create neoantigens, mutant peptides pre
 Across $27$ tumor types, the median TMB of a tumor type correlated with the objective response rate to PD-1 or PD-L1 inhibitors with a correlation coefficient of $0.74$ (Yarchoan, Hopkins and Jaffee, 2017). Tumors with mismatch-repair deficiency, whose TMB is very high, responded to PD-1 blockade regardless of their organ (Le and colleagues, 2015), and in 2017 this became the first tissue-agnostic approval of a cancer drug; in 2020 PD-1 blockade was approved for solid tumors with a TMB of at least $10$ mutations per megabase measured by a specified panel.
 
 **Example 13.7.1** A targeted panel covers $1.1\,\mathrm{Mb}$ of coding sequence and finds $12$ somatic coding mutations: $\mathrm{TMB} = 12/1.1 = 10.9$ per megabase. Counting the mutations as Poisson, the exact $95\,\%$ interval for the count is $6.2$ to $21.0$, so for TMB it is $5.6$ to $19.1$ per megabase: the tumor is on the threshold of $10$ within sampling error. A tumor with $8$ mutations ($7.3$ per megabase, interval $3.1$ to $14.3$) has a probability of $0.18$ of showing $11$ or more mutations (above the threshold) in a repeated measurement if its true expectation were $8$. Thresholds on small panels classify tumors near the cutoff unreliably, and TMB values from different panels need calibration against whole-exome sequencing, because panels differ in size, gene content and the filtering of germline variants.
+
+:::
 
 TMB is an imperfect biomarker: it ignores which mutations are clonal (clonal neoantigens are better targets than subclonal ones), whether they are expressed and presented, the immune composition of the tumor (13.6.4) and the loss of antigen presentation by mutation of *B2M* or loss of HLA alleles. Models that combine these features predict response better than TMB alone, but none is yet accurate for individual patients.
 

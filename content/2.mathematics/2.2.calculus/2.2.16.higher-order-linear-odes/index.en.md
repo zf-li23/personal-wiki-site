@@ -1,6 +1,6 @@
 ---
 title: Higher-Order Linear Differential Equations and Linear Systems
-source_hash: 8cf4b31163cf
+source_hash: 15e1f302ae41
 ---
 
 The first-order linear equations of the [previous chapter](/2.2.15) have two features: the solution set has the structure "one particular solution plus the general solution of the homogeneous equation", and the solutions of the homogeneous equation form a one-dimensional vector space. This chapter extends both features to $n$th-order linear equations and to linear systems: the solution set of the homogeneous equation is an $n$-dimensional **vector space**, finding the general solution means finding a **basis** of it, and deciding whether $n$ solutions form a basis requires the Wronskian. The language of linear algebra ([2.1](/2.1)) here is not a metaphor but literal: differentiation is a linear map, a linear differential equation is an equation for a linear map, and the superposition principle, the structure of solutions, bases and dimension are all concrete instances of the results of [2.1.3](/2.1.3) and [2.1.8](/2.1.8).
@@ -44,6 +44,8 @@ In the language of linear algebra, $L$ is a linear map from $C^n(I)$ to $C(I)$; 
 This is the definition of linear dependence from [2.1.3](/2.1.3), with a function space as the vector space. For example, $x^2+1$, $2x^2$, $1$ are linearly dependent ($2(x^2+1)-2x^2-2\cdot1=0$), while $\cos x,\sin x$ are linearly independent on every interval.
 
 **Example 16.1.1** If $\lambda_1,\dots,\lambda_m$ are distinct, then $\mathrm{e}^{\lambda_1x},\dots,\mathrm{e}^{\lambda_mx}$ are linearly independent on every interval. Suppose $\sum c_k\mathrm{e}^{\lambda_kx}=0$. Differentiating $0,1,\dots,m-1$ times and setting $x=x_0$ gives a homogeneous linear system for the numbers $c_k\mathrm{e}^{\lambda_kx_0}$ whose coefficient matrix is the **Vandermonde matrix** $(\lambda_k^{j})$, with determinant $\prod_{j<k}(\lambda_k-\lambda_j)\ne0$; hence $c_k=0$.
+
+:::
 
 The method of this example is general: a linear relation that holds for all $x$ still holds after differentiation, which yields a linear system with numerical coefficients.
 
@@ -330,6 +332,8 @@ y=\int(\cos x\ln\cos x+x\sin x)\,\mathrm{d}x=\sin x\ln\cos x-x\cos x+\ln(\sec x+
 $$
 where $\int\cos x\ln\cos x\,\mathrm{d}x=\sin x\ln\cos x+\int\frac{\sin^2x}{\cos x}\,\mathrm{d}x=\sin x\ln\cos x-\sin x+\ln(\sec x+\tan x)$ and $\int x\sin x\,\mathrm{d}x=-x\cos x+\sin x$. The general solution is $y=C_1+C_2\cos x+C_3\sin x+\sin x\ln\cos x-x\cos x+\ln(\sec x+\tan x)$.
 
+:::
+
 Method (2): exponential right-hand sides. From $P(\mathrm{D})\mathrm{e}^{\lambda x}=P(\lambda)\mathrm{e}^{\lambda x}$ and Lemma 16.3.1:
 
 **Proposition 16.4.1** If $P(\lambda)\ne0$, then $\dfrac{\mathrm{e}^{\lambda x}}{P(\lambda)}$ is a particular solution of $P(\mathrm{D})y=\mathrm{e}^{\lambda x}$. If $\lambda$ is a root of multiplicity $k$ and $P(\mu)=(\mu-\lambda)^kR(\mu)$, then $\dfrac{x^k\mathrm{e}^{\lambda x}}{k!\,R(\lambda)}$ is a particular solution.
@@ -343,6 +347,8 @@ Method (2): exponential right-hand sides. From $P(\mathrm{D})\mathrm{e}^{\lambda
 (3) $y^{(4)}-y=\mathrm{e}^x$: $1$ is a simple root, $P(\mu)=(\mu-1)(\mu+1)(\mu^2+1)$ and $R(1)=4$, so a particular solution is $\dfrac{x\mathrm{e}^x}4$ and the general solution is $C_1\mathrm{e}^x+C_2\mathrm{e}^{-x}+C_3\cos x+C_4\sin x+\dfrac{x\mathrm{e}^x}{4}$.
 
 (4) $y''+y'-2y=2\sin x$: $P(\mathrm{i})=-3+\mathrm{i}$ and $\dfrac{2\mathrm{e}^{\mathrm{i}x}}{-3+\mathrm{i}}=-\dfrac{(3+\mathrm{i})(\cos x+\mathrm{i}\sin x)}{5}$; taking the imaginary part gives the particular solution $-\dfrac{\cos x+3\sin x}5$.
+
+:::
 
 Method (3): polynomial right-hand sides. If $f$ is a polynomial of degree $m$ and $P(0)\ne0$, expand $\dfrac1{P(\lambda)}$ in a power series $b_0+b_1\lambda+b_2\lambda^2+\cdots$ about $\lambda=0$ (by long division in ascending powers). Then
 
@@ -585,6 +591,8 @@ The coefficient matrix is a **companion matrix**, whose characteristic polynomia
 **Example 16.6.5** Solve $\begin{cases}x_1'=3x_1-x_2,\\x_2'=x_1+x_2.\end{cases}$ From the first equation $x_2=3x_1-x_1'$; substituting into the second gives $3x_1'-x_1''=x_1+3x_1-x_1'$, that is, $x_1''-4x_1'+4x_1=0$, so $x_1=\mathrm{e}^{2t}(C_1+C_2t)$. Then $x_2=3x_1-x_1'=\mathrm{e}^{2t}(C_1-C_2+C_2t)$. Here $A=\begin{bmatrix}3&-1\\1&1\end{bmatrix}$ has the double eigenvalue $2$ but only one eigenvector direction, so it is not diagonalizable, and $t\mathrm{e}^{2t}$ appears in the solution.
 
 **Example 16.6.6** Solve $x'''-3x''+2x'=0$. Letting $y=x'$ and $z=x''$ gives the system $x'=y$, $y'=z$, $z'=-2y+3z$. The characteristic polynomial is $\lambda(\lambda^2-3\lambda+2)$, with eigenvalues $0,1,2$ and eigenvectors $(1,0,0)^{\mathsf T}$, $(1,1,1)^{\mathsf T}$, $(1,2,4)^{\mathsf T}$ (an eigenvector of a companion matrix for $\lambda$ is always $(1,\lambda,\lambda^2)^{\mathsf T}$). Taking the first component, $x=C_1+C_2\mathrm{e}^t+C_3\mathrm{e}^{2t}$, in agreement with the result obtained directly from the characteristic equation $\lambda^3-3\lambda^2+2\lambda=0$.
+
+:::
 
 After the second-order equation (16.4) is converted into the system $x'=v$, $v'=-\omega^2x-2kv$, the differences among the three damping regimes can be seen in the $(x,v)$ phase plane: underdamped trajectories are spirals around the origin, while critically damped and overdamped trajectories enter the origin directly without winding around it.
 

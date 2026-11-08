@@ -1,6 +1,6 @@
 ---
 title: Matrix Functions
-source_hash: 0ab5431b4579
+source_hash: 2017b9a7a178
 ---
 
 This chapter answers two questions. First, a complex number has the polar form $z = r\mathrm{e}^{\mathrm{i}\theta}$; can a matrix likewise be written as "a stretch times a rotation", $A = R\mathrm{e}^{\mathrm{i}M}$? This requires a definition of $\mathrm{e}^{\mathrm{i}M}$, and the answer is the polar decomposition of [Chapter 13](/2.1.13). Second, the solution of the scalar equation $x'(t) = kx(t)$ is $x(t) = x(0)\mathrm{e}^{kt}$; can the solution of the system $\boldsymbol{X}'(t) = A\boldsymbol{X}(t)$ be written as $\boldsymbol{X}(t) = \mathrm{e}^{At}\boldsymbol{X}(0)$? Both questions require extending a complex function $f\colon \mathbb{C} \to \mathbb{C}$ to a map $f\colon \mathbb{C}^{n\times n} \to \mathbb{C}^{n\times n}$ on matrices.
@@ -125,6 +125,8 @@ $$
 
 **Example 11.4.1** Let $J_{2,3} = \begin{bmatrix} 2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{bmatrix}$ and $f(x) = x^3$. Then $f(2) = 8$, $f'(2) = 12$ and $\frac{1}{2}f''(2) = 6$, so $J_{2,3}^3 = \begin{bmatrix} 8 & 12 & 6 \\ 0 & 8 & 12 \\ 0 & 0 & 8 \end{bmatrix}$.
 
+:::
+
 Hence computing $f(A)$ only requires the derivatives of $f$ of order up to $m_i - 1$ at each eigenvalue $\mu_i$, where $m_i$ is the order of the largest Jordan block for $\mu_i$, that is, the multiplicity of $\mu_i$ in the minimal polynomial. This observation yields the definition for general functions.
 
 ## 11.5. The Spectral Definition of a Matrix Function
@@ -248,6 +250,8 @@ E = matrix_function(B, [(2, 1), (4, 1)], lambda mu, j: np.exp(mu))
 print(np.abs(E - expm(B)).max())
 ```
 
+:::
+
 The interpolation method is convenient for small matrices and exact computation, but it needs accurate eigenvalues and multiplicities, and the Vandermonde system with derivative conditions is ill-conditioned when eigenvalues are close together. The `expm` of numerical software uses "scaling and squaring" combined with rational approximation: it first computes $\mathrm{e}^{A/2^s}$ (with $\|A/2^s\|$ small, by Padé approximation) and then squares the result $s$ times.
 
 ## 11.7. The Power Series Definition
@@ -368,6 +372,8 @@ $$
 $$
 
 For a given initial value $\boldsymbol{X}(0) = \boldsymbol{x}_0$, $\boldsymbol{c} = P^{-1}\boldsymbol{x}_0$ with $P = (\boldsymbol{p}_1, \boldsymbol{p}_2, \boldsymbol{p}_3)$. For example, for $\boldsymbol{x}_0 = (1, 0, 0)^{\mathsf T} = \boldsymbol{p}_3$ we get $\boldsymbol{c} = (0, 0, 1)^{\mathsf T}$ and $\boldsymbol{X}(t) = \mathrm{e}^{4t}(1 + 2t, -2t, 0)^{\mathsf T}$.
+
+:::
 
 The solution of an inhomogeneous system consists of a homogeneous solution plus the "accumulated response" to the input.
 

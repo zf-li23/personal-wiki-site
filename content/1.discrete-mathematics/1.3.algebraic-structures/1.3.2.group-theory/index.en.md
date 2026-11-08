@@ -1,6 +1,6 @@
 ---
 title: Group Theory
-source_hash: 288666e3817d
+source_hash: ea5579ed84a3
 ---
 
 A group is an algebraic system with a single binary operation that can be "undone". It is the basic language of symmetry: the symmetries of an object (the transformations preserving its structure) always form a group under composition. The previous chapter gave the general definitions of **algebraic systems**, **identity elements**, **inverse elements** and **homomorphisms**; this chapter develops these notions concretely for the most important class of systems.
@@ -207,6 +207,8 @@ When $A$ is a finite set with $|A| = n$, a bijective transformation of $A$ is ca
 **Example 2.4.1** Label the vertices of an equilateral triangle $1, 2, 3$. There are $6$ rigid motions of the plane that map the triangle to itself: the three rotations through $0^\circ$, $120^\circ$ and $240^\circ$, and the three reflections in the axes of symmetry. Each motion permutes the three vertices, and every permutation in $S_3$ is realized by exactly one motion, so the symmetry group of the equilateral triangle is isomorphic to $S_3$: the rotation through $120^\circ$ corresponds to the cycle $(1\ 2\ 3)$, and the reflection in the axis through vertex $1$ corresponds to $(2\ 3)$. This group is not commutative: performing $(2\ 3)$ first and then $(1\ 2\ 3)$ gives $(1\ 2\ 3)(2\ 3) = (1\ 2)$, whereas $(2\ 3)(1\ 2\ 3) = (1\ 3)$.
 
 ![The six symmetries of an equilateral triangle and the Cayley table of $S_3$. Top: where the numbered vertices go under each symmetry; $r$ is the rotation by $120^\circ$ (the cycle $(1\ 2\ 3)$) and $s_i$ the reflection in the axis through vertex $i$ (dashed). Bottom: row $x$, column $y$ holds $xy$ (first $y$, then $x$); every element occurs once in each row and column, and the table is not symmetric about its diagonal because the group is not commutative](./plots/triangle-s3.py)
+
+:::
 
 This is exactly how chemistry describes the symmetry of molecules: the ammonia molecule $\ce{NH3}$ is a trigonal pyramid, and its symmetry operations (rotations about the central axis and reflections in three mirror planes) form the point group $C_{3\mathrm{v}}$, which is isomorphic to the $S_3$ above.
 

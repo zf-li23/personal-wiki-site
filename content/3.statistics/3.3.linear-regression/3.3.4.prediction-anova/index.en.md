@@ -215,6 +215,8 @@ so the band at each point is an individual interval of level $98.46\%$.
 
 ![The Toluca data with the fitted line, the 95 percent pointwise confidence intervals for the mean response, the wider 95 percent Working-Hotelling confidence band, and the much wider 95 percent prediction intervals; all are narrowest at the mean lot size 70](./plots/toluca-intervals.py)
 
+:::
+
 A confidence band is useful to
 
 - evaluate the reliability of the model: it shows the range of uncertainty of the fitted line, a narrow band meaning high precision and a wide band high uncertainty;

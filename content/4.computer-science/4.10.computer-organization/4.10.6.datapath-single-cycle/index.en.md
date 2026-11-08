@@ -1,7 +1,7 @@
 ---
 title: Datapath and the Single-Cycle Processor
 description: The five stages of instruction execution and three ways to implement them; the combinational and state elements of a datapath (PC, register file, memories) and the clocking methodology; step-by-step construction of the RV32I datapath for add, sub, addi, lw, sw, branches, jal, jalr, lui, and auipc; the immediate generator; control signals and their truth table, a SystemVerilog implementation of the controller; critical path, clock cycle time, and the performance of the single-cycle processor.
-source_hash: 3b19c2cb5cd1
+source_hash: 7f4ab98015c7
 ---
 
 The previous chapters gave the **instruction formats** of **RISC-V** and the arithmetic unit. This chapter combines them into a processor that can execute instructions: we first determine which components are needed to execute an instruction and how data flows between them (the datapath), and then design the controller that generates the control signals of each component from the instruction. The simplest organization lets every instruction complete in one **clock cycle**; this is called the single-cycle processor. Its structure and timing are simple, and it is the basis for understanding the multicycle processors and pipelines of later chapters; its drawback (the clock cycle is set by the slowest instruction) is exactly the starting point of those improvements. This chapter takes a set of RV32I instructions covering all six instruction formats as its example: `add`, `sub`, `addi`, `lw`, `sw`, `beq` (and the other branches), `jal`, `jalr`, `lui`, and `auipc`; the other instructions are implemented on the same principles.
@@ -379,6 +379,8 @@ where $t_{\mathrm{pcq}}$ is the **clock-to-Q delay** of the **flip-flop**, $t_{\
 | branches, `jal` | PC → IMEM → ImmGen → BSel → ALU → PCSel → PC | $30 + 200 + 50 + 20 + 150 + 20 + 20 = 490\ \mathrm{ps}$ |
 
 The other path of a branch (register file → comparator → controller → PCSel) is $30 + 200 + 100 + 80 + 30 + 20 + 20 = 480\ \mathrm{ps}$ (assuming the controller needs $30\ \mathrm{ps}$ to produce PCSel from the comparison result), slightly shorter than the target address computation. The path of `jalr` is close to that of R-type: the ALU result is written to PC, and PC $+ 4$ has long been stable. The critical path is the `lw` path of fetch, register read, address computation, memory read, and write back; the clock cycle must be at least $740\ \mathrm{ps}$, a frequency of about $1.35\ \mathrm{GHz}$.
+
+:::
 
 There is also a **hold time** constraint: the delay of the shortest path must be no less than the hold time of the destination flip-flop, otherwise new data would change the input of the flip-flop too soon after the edge. In the single-cycle processor even the shortest path passes through a memory or the register file, so this is generally not a problem.
 

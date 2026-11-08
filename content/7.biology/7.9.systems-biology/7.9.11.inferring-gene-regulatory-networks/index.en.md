@@ -62,6 +62,8 @@ Applied to DNase-seq of $41$ human cell types, with about $500$ million cleavage
 
 **Example 11.2.1** How much overlap would be expected by chance? A network of $11\,193$ arcs among $475$ factors has density $11\,193/475^2 = 0.0496$ (counting self-arcs). Two such networks drawn independently would share on average $11\,193^2/475^2 = 555$ arcs, also about $5\,\%$ of each. The figure of $5\,\%$ shared by all cell types is therefore not small: arcs shared by $41$ independent networks of this density would number $475^2 \times 0.0496^{41} \approx 10^{-48}$. The comparison shows that "only $5\,\%$" and "far more than chance" are both true, and that a statement about overlap needs its null model.
 
+:::
+
 The cell-type specificity has several causes: factors and cofactors are expressed differently, chromatin accessibility differs, so that the same motif is occupied in one cell type and closed in another; but also technical ones, since footprints are noisy, motifs are incomplete, and a missing arc in one cell type may be a false negative. Systematic comparison helps to separate them: the networks of functionally related cell types were more similar to each other than to those of unrelated cell types, as measured by a normalized degree vector of the $475$ factors (the contribution of each factor to the arcs of the network), so that clustering the cell types by their networks grouped functionally related types together. Despite the different arcs, all $41$ networks had similar global architectures, and the same small subgraphs, in particular the feed-forward loop, were enriched in all of them as **network motifs** ([1.4.7](/1.4.7#def-7.8.4); their function is the subject of [7.9.15](/7.9.15)).
 
 The limitations of binding networks are those of their evidence: motifs are known for only part of the factors and the recognition sequences are of varying quality; distal elements are missed by a window around the promoter; indirect binding through other proteins leaves no motif; and occupancy is not activity. Binding maps therefore serve best as a prior that restricts which arcs are allowed, to be combined with expression data (11.5.3, 11.7).
@@ -85,6 +87,8 @@ $$
 \rho_{XZ\cdot Y} = \frac{\rho_{XZ} - \rho_{XY}\rho_{YZ}}{\sqrt{(1 - \rho_{XY}^2)(1 - \rho_{YZ}^2)}} = \frac{0.64 - 0.64}{0.36} = 0,
 $$
 and the edge disappears.
+
+:::
 
 Conditioning on all other genes at once has a compact form for the **multivariate normal distribution**.
 
@@ -129,6 +133,8 @@ it lies in $[0, 1]$ and is large when $i$ and $j$ are connected to each other an
 ![Weighted co-expression network analysis of 600 simulated genes in 60 samples: five modules of 140, 110, 80, 50 and 20 genes, each following a module eigengene with gene-specific loadings of random sign, and 200 noise genes. A: the scale-free topology fit index for the unsigned adjacency |r|^β; it exceeds the conventional cutoff 0.8 (dashed) already at β = 4 (dotted) and stays high for all larger β. B: the mean connectivity falls by orders of magnitude over the same range (dotted: β = 6). C: the topological overlap at β = 6, with genes ordered by average-linkage clustering on 1 − TOM; the bar marks the simulated modules (grey: noise genes). Cutting the tree at height 0.97 and keeping branches of at least 15 genes recovers the five modules (adjusted Rand index 0.99); no noise gene enters a module and 3 module genes are left unassigned](./plots/wgcna_modules.py)
 
 The simulation shows both the strength of the method and the weakness of its tuning rule. Modules of correlated genes stand out clearly in the topological overlap, and the noise genes, whose correlations with everything are small, are excluded. But the scale-free fit index is high over a wide range of $\beta$, here for every $\beta \ge 4$, although the simulated network has no scale-free structure at all: the criterion constrains $\beta$ only loosely, and the premise that co-expression networks should be scale-free is itself an assumption (on the evidence for scale-free biological networks see [1.4.7](/1.4.7#sec-7.4.5) and [7.9.12](/7.9.12#sec-12.1)). In practice the modules are robust to the choice of $\beta$ within that range, and it is the module structure, not the exponent, that carries the biology.
+
+:::
 
 Module–trait correlations are associations: a module correlated with a disease state may cause it, respond to it, or reflect a change in cell-type composition of the samples, which is the most common cause of large modules in tissue data. Modules found in bulk tissue should therefore be compared with cell-type signatures ([7.9.5](/7.9.5)), and in single-cell data co-expression is computed within cell types, on aggregated metacells or **pseudobulk** profiles, because the sparsity of single-cell counts weakens gene–gene correlations (hdWGCNA; Morabito and colleagues, 2023).
 
@@ -205,6 +211,8 @@ Step 1 costs $O(p^2n)$ with the Gaussian estimator and up to $O(p^2n\log n)$ wit
 
 The figure shows what the inequality buys and what it costs. Of the $26$ edges with significant mutual information, $18$ are indirect, and pruning removes all of them while keeping $7$ of the $8$ true edges. The lost edge is part of a feed-forward loop, a triangle in which all three edges are direct: the inequality assumes that one of them is indirect, and removes the weakest ($I_{AG} = 0.28$ against $I_{AB} = 0.34$ and $I_{BG} = 0.44$ nats). Feed-forward loops are a common motif of transcription networks ([7.9.15](/7.9.15)), so ARACNe systematically underrepresents them; the tolerance $\varepsilon$ keeps triangles whose weakest edge is close to the others, at the price of keeping some indirect edges. The output is undirected; when only factors are allowed as regulators, edges between a factor and a non-factor are read as factor-to-gene arcs.
 
+:::
+
 ARACNe was introduced with a network of human B cells reconstructed from expression profiles of normal and malignant B cells; the MYC regulon it predicted, with MYC as a major **hub** of the network, was validated by chromatin immunoprecipitation (Basso and colleagues, 2005). It has since been applied to many tumor types, where it supplies the regulons used in 11.7, and its adaptive-partitioning implementation (ARACNe-AP; Lachmann and colleagues, 2016) runs on whole genomes.
 
 ### 11.4.4. Context Likelihood of Relatedness
@@ -217,6 +225,8 @@ z_{ij} = \sqrt{z_i^2 + z_j^2}.
 $$
 
 **Example 11.4.2** A pair has $I_{ij} = 0.30$; gene $i$ has background $\mu_i = 0.10$, $\sigma_i = 0.05$ and gene $j$ has $\mu_j = 0.25$, $\sigma_j = 0.10$. Then $z_i = 4$, $z_j = 0.5$ and $z_{ij} = \sqrt{16.25} = 4.03$: the pair is exceptional for gene $i$ though ordinary for gene $j$.
+
+:::
 
 Applied to $445$ microarray profiles of *Escherichia coli*, CLR recovered known regulatory interactions and predicted $1079$ interactions at an estimated precision of $60\,\%$, of which a sample was confirmed by ChIP (Faith and colleagues, 2007).
 
@@ -232,6 +242,8 @@ A factor's effect on its targets often depends on a third molecule: a kinase tha
 4. Call $M$ a modulator of $T$ if it changes the regulation of a significant number of the targets of $T$.
 
 **Example 11.4.3** If the correlation between factor and target is $0.7$ in samples with high modulator and $0.1$ in samples with low modulator, Formula 11.4.1 gives $I^+ = 0.337$ and $I^- = 0.005$ nats, and $\Delta I = 0.33$ nats; the modulator, invisible to any pairwise analysis if its own correlation with the target is weak, gates the regulation.
+
+:::
 
 In human B cells, MINDy identified post-translational modulators of MYC, among them the kinase STK38, which affects MYC phosphorylation and degradation, BHLHB2, which antagonizes MYC activity, and MEF2B, which enhances it (Wang and colleagues, 2009). Three-way analyses need many samples with a wide range of each variable. Tumors provide them: variation among tumors of the same cancer type, a nuisance for many analyses, is the dynamic range from which regulatory interactions are inferred, which is why several hundred tumor profiles of one type are a standard input.
 
@@ -312,6 +324,8 @@ $$
 R = \begin{bmatrix} 1 & 0 & 0 \\ 0.8 & 1 & 0 \\ 0.64 & 0.8 & 1 \end{bmatrix}:
 $$
 perturbing gene $1$ changes gene $3$ by $0.64$, an indirect effect that a screen would report as a hit. Inverting $R$ gives back $r_{31} = 0$, $r_{21} = r_{32} = 0.8$. With noise of standard deviation $0.05$ added to each entry of $R$, the recovered coefficients are $r_{21} = 0.72$, $r_{32} = 0.79$ and spurious values of $0.01$–$0.03$ for the absent arcs: the inversion amplifies noise, more so for larger networks and when perturbation effects are small.
+
+:::
 
 The approach requires one perturbation per gene, effects in the linear range, and a steady state; it handles feedback loops, which Bayesian networks cannot. In large Perturb-seq data, most perturbations have small effects and many share a generic stress response, so direct effects are estimated with regularized versions of the same idea, and with ordinary differential equation models for time courses (**ordinary differential equations**, [7.9.14](/7.9.14)). Inferring causal networks from single-cell perturbation screens is an active field whose methods are still being benchmarked against simple baselines ([7.9.7](/7.9.7#sec-7.7.3)).
 

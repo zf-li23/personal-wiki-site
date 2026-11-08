@@ -1,7 +1,7 @@
 ---
 title: Rotation of Rigid Bodies
 description: Motion of a rigid body and its angular velocity; the law of rotation about a fixed axis and the moment of inertia (parallel- and perpendicular-axis theorems); work, energy and angular momentum conservation for fixed-axis rotation; the relation between angular momentum and angular velocity, precession and nutation; degrees of freedom and Euler angles; plane motion of a rigid body (instantaneous center, rolling without slipping, König's theorem).
-source_hash: 12a483b9271a
+source_hash: 0fc42880c858
 ---
 
 A rigid body is an idealized system of **particles** whose mutual distances never change. Hence all the laws for systems of particles in [5.1.3](/5.1.3) and [5.1.4](/5.1.4) (the **center-of-mass theorem**, the **angular momentum theorem**, the **work–energy principle**) apply to it without change, and the rigidity constraint reduces them to especially simple forms. For rotation about a fixed axis a single angular coordinate suffices; the **dynamics** equation $M=J\alpha$ corresponds one-to-one to **Newton's second law** $F=ma$, with the moment of inertia playing the role of mass. This chapter begins with the **kinematics** of a rigid body (the **angular velocity** does not depend on the base point), then treats the law of rotation about a fixed axis, the computation of moments of inertia, and the work–energy and angular momentum relations. It next discusses precession, which arises when the **angular momentum** is not parallel to the angular velocity, and from there introduces the notion of degrees of freedom. It ends with a short account of the plane motion of a rigid body (rolling). The mathematics used includes the **cross product** ($\boldsymbol{v}=\boldsymbol{\omega}\times\boldsymbol{r}$), the **moment of inertia** as an integral ([2.2.12](/2.2.12)), and the principal axes of a **symmetric matrix** (the inertia tensor). The notion of degrees of freedom is used again in the equipartition theorem of thermal physics ([5.2.1](/5.2.1)).
@@ -362,6 +362,8 @@ and on a plane $a_C$ is simply the acceleration of the center of mass.
 **Example 5.8.1** A uniform sphere of mass $m$ and radius $R$ rolls without slipping on a horizontal plane with center-of-mass speed $v_C$. Find its angular momentum about a fixed axis $O$ in the ground perpendicular to the direction of motion. Is it conserved?
 
 **Solution** $L_O=J_C\omega+mv_CR=\frac25mR^2\cdot\frac{v_C}{R}+mv_CR=\frac75mv_CR$ (the two terms have the same direction). When the sphere rolls uniformly, the lines of action of gravity (acting at the center of mass) and of the normal force (acting at the contact point) are both vertical, at the same horizontal distance from the axis $O$ and on opposite sides, so their torques about $O$ cancel and no friction is needed; hence $L_O$ is conserved.
+
+:::
 
 For the energy, by **König's theorem** ([Theorem 4.10.1](/5.1.4#thm-4.10.1)) the kinetic energy of a rigid body equals the translational kinetic energy of the center of mass plus the rotational kinetic energy about the base axis through the center of mass:
 

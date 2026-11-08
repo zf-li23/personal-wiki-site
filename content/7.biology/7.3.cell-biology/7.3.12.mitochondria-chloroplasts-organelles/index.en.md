@@ -199,6 +199,8 @@ which approaches $h_0(1 - h_0)$ as each lineage becomes fixed for one genotype (
 
 ![Segregation of mtDNA heteroplasmy through the germline bottleneck (Formula 12.5.1, neutral binomial sampling). A: heteroplasmy in ten maternal lineages over eight generations starting from 30% mutant mtDNA, with N = 10 (red) and N = 100 (blue) effective segregating units per generation: with the narrow bottleneck, lineages drift quickly, some to loss of the mutation and some above the threshold of 70% (dashed), within a few generations. B: distribution of heteroplasmy among the children of a mother with h₀ = 0.3 (dotted) for N = 10, 30 and 200, plotted as a density. C: probability that a child exceeds the 70% threshold as a function of N for mothers with h₀ = 0.2, 0.3 and 0.5 (logarithmic axes; the steps come from the discreteness of the binomial)](./plots/mtdna-bottleneck.py)
 
+:::
+
 The neutral model is a baseline. Severe mutations are selected against in the female germline (purifying selection), so their transmitted heteroplasmy is lower than predicted, while some variants are favored within cells or tissues (selfish replication). Within a person, heteroplasmy also drifts among tissues during development and aging, and deletions accumulate clonally in postmitotic cells such as neurons and muscle fibers, partly because shorter genomes may replicate faster. Mitochondrial replacement by nuclear transfer into an enucleated donor oocyte, which bypasses the bottleneck, is described in [7.1.23](/7.1.23#sec-23.5.4); the transmission genetics of organelle genes is treated in 7.4.
 
 ## 12.6. Quality Control

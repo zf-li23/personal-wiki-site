@@ -107,6 +107,8 @@ f_{X+Y}(z) = \int_0^z \frac{\lambda^{\alpha_1}}{\Gamma(\alpha_1)} x^{\alpha_1 - 
 $$
 最后的积分是 **Beta 函数** $\mathrm{B}(\alpha_1, \alpha_2) = \frac{\Gamma(\alpha_1)\Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)}$，代入即得 $\Gamma(\alpha_1 + \alpha_2, \lambda)$ 的密度。 $\square$
 
+:::
+
 特别地，$n$ 个独立的 $\mathrm{Exp}(\lambda) = \Gamma(1, \lambda)$ 之和服从 $\Gamma(n, \lambda)$。
 
 **例 7.1.6** 设 $(X, Y)$ 有联合密度 $f(x, y)$，则 $Z = X/Y$ 有密度 $f_Z(z) = \int_{-\infty}^{\infty} \lvert y \rvert f(zy, y)\,\mathrm{d}y$。特别地，$X, Y$ 独立且都服从 $\mathcal{N}(0, 1)$ 时，$Z$ 服从 Cauchy 分布。
@@ -143,6 +145,9 @@ $$
 $$
 \frac{\partial(x, y)}{\partial(u, v)} = \det\begin{bmatrix} \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[2mm] \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} \end{bmatrix}.
 $$
+
+:::
+
 矩阵按行排 $x, y$、按列排 $u, v$（分子布局），或者取其转置（分母布局），行列式相同，因此公式与布局约定无关。实际计算时，若从 $(x, y)$ 解出 $(u, v)$ 较方便，可以利用 $\dfrac{\partial(x, y)}{\partial(u, v)} = \Big(\dfrac{\partial(u, v)}{\partial(x, y)}\Big)^{-1}$。定理可以直接推广到 $n$ 维。证明的思路是重积分的变量替换：对 $D$ 中的区域 $B$，$\mathbb{P}((U, V) \in B) = \sum_i \mathbb{P}((X, Y) \in \Delta_i(B)) = \sum_i \int_{\Delta_i(B)} f\,\mathrm{d}x\,\mathrm{d}y = \int_B \sum_i f(x_i, y_i)\lvert J_i \rvert\,\mathrm{d}u\,\mathrm{d}v$。
 
 **例 7.1.7** 设 $X, Y$ 独立且都服从 $\mathcal{N}(0, 1)$，$(R, \Theta)$ 由极坐标变换 $X = R\cos\Theta$，$Y = R\sin\Theta$ 决定，求 $(R, \Theta)$ 的联合密度。

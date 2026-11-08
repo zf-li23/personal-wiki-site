@@ -153,6 +153,8 @@ Here $\Delta G(0)$ is the free energy of unfolding at zero force including the c
 
 **Example 17.4.1 (The P5ab Hairpin)** Liphardt, Tinoco, Bustamante and colleagues (2001) held the P5ab hairpin of the *Tetrahymena* **group I intron** in a dual optical trap. Near $14.5\,\mathrm{pN}$ it hopped between folded and unfolded states every few seconds, with $\Delta x \approx 18\,\mathrm{nm}$; from the force dependence of the populations they obtained the folding free energy, in agreement with the nearest-neighbor prediction ([7.6.16](/7.6.16#sec-16.7.2)), and from the rates the location of the transition state. Woodside, Block and colleagues (2006) later reconstructed full one-dimensional energy landscapes of DNA hairpins from such constant-force trajectories, by inverting the extension histogram, $G(x) = -k_{\mathrm{B}}T\ln p(x)$, after deconvolving the instrument's response.
 
+:::
+
 Force also changes binding. If a ligand binds one conformation of a mechanically loaded protein, the affinity becomes force dependent, $K_{\mathrm{d}}(F) = K_{\mathrm{d}}(0)\mathrm{e}^{-\Delta\Phi(F)/k_{\mathrm{B}}T}$, where $\Delta\Phi(F) = \int_0^F[x_{\mathrm{o}}(f) - x_{\mathrm{c}}(f)]\,\mathrm{d}f$ is the difference of the elastic free energies of the two conformations, computed from their force–extension curves. Talin's rod domains, which unfold at $5$–$25\,\mathrm{pN}$ and expose cryptic vinculin-binding sites, are the best-characterized example of such mechanochemical coupling (Yan and colleagues; [7.3.23](/7.3.23#sec-23.4.4)).
 
 ## 17.5. Bond Rupture under Force

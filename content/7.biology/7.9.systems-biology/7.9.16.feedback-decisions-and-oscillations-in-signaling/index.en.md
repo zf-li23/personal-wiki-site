@@ -164,6 +164,8 @@ The consequence, pointed out by Tsai and colleagues (2008), is that the frequenc
 
 ![Frequency tuning with negative feedback only and with coupled positive and negative feedback. A: time courses, each normalized to its maximum, of a Goodwin loop (dx₁/dt = 10/(1 + x₃¹²) − x₁, dx₂/dt = x₁ − x₂, dx₃/dt = g(x₂ − x₃)) for g = 0.7 and 2.5 (violet, below) and of the activator–repressor relaxation oscillator of 7.6.33 (with the repressor rate multiplied by e) for e = 1 and 0.3 (green, above, offset). B: amplitude against frequency as g or e is scanned (both relative to their extremes): the negative-feedback loop oscillates in a narrow band of frequencies and its amplitude vanishes at both ends, the coupled oscillator is tuned over two decades at nearly constant amplitude](./plots/coupled_oscillator.py)
 
+:::
+
 The embryonic cell cycle is the canonical case: cyclin synthesis is the slow input, the doubly positive Cdk1 switch (16.2.2) provides the hysteresis, and APC/C, activated by Cdk1 with a delay, destroys cyclin; removing the positive feedback by a Cdk1 mutant that Wee1 cannot inhibit turns sustained oscillations into damped ones (Pomerening, Kim and Ferrell, 2005). The minimal models and their phase planes are in [7.3.20](/7.3.20#sec-20.6.3) and [7.6.34](/7.6.34#sec-34.2.1). How growth and the cell cycle are coordinated so that cells keep their size, the adder and sizer models, is treated in [7.6.39](/7.6.39#sec-39.2.4).
 
 ### 16.4.5. Ca²⁺ Oscillations
@@ -219,6 +221,8 @@ Oscillations and pulses are not only clocks: they carry information. Several tra
 One advantage of frequency encoding is that it preserves the ratios between the expression of target genes with different affinities.
 
 **Example 16.5.1** Two genes are activated by a factor $X$ with $g_i = \beta_iX/(K_i + X)$, $K_1 = 0.1$, $K_2 = 1$. With amplitude encoding, $X \propto s$; as $X$ goes from $0.01$ to $10$, the ratio $g_1/g_2 = (\beta_1/\beta_2)(K_2 + X)/(K_1 + X)$ changes from $9.2\,\beta_1/\beta_2$ to $1.09\,\beta_1/\beta_2$: the high-affinity gene saturates first, and the composition of the response changes with the signal. With frequency encoding, $X$ is either $0$ or $X_{\mathrm{high}} = 10$, and the fraction of time it is high is proportional to $s$; if the targets respond slowly compared with the pulses, the mean production of each gene is $s$ times its rate at $X_{\mathrm{high}}$, and the ratio $g_1/g_2 = 1.09\,\beta_1/\beta_2$ is the same at every signal level. Crz1 target genes with very different promoters responded to Ca²⁺ with proportional changes, as this argument predicts (Cai, Dalal and Elowitz, 2008). The cost is stochastic: at low signal there are few pulses per response time, and the number of pulses fluctuates.
+
+:::
 
 Pulses have a second use: an incoherent feed-forward loop downstream of a constant factor adapts and stops responding ([7.9.15](/7.9.15#sec-15.4.4)), whereas a pulsing factor keeps exciting it. And a target's response to an oscillating factor depends on its own lifetime: a stable protein integrates the pulses, an unstable one follows them (Question 10). The decoding of dynamics by downstream networks, and the information capacity of such channels ([7.6.35](/7.6.35#sec-35.3)), are active research topics.
 

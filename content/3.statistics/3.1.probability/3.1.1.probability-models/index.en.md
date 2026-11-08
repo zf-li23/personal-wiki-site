@@ -1,7 +1,7 @@
 ---
 title: Probability Models and Their Properties
 description: Random phenomena and the development of probability theory; sample spaces, events and the axioms of probability; classical and geometric probability models and the Bertrand paradox; properties derived from the axioms (inclusion–exclusion, the Boole and Bonferroni inequalities); counting in the four kinds of random sampling and in random allocation.
-source_hash: 40f6f419b9a8
+source_hash: ffed477fca9f
 ---
 
 Probability theory studies the quantitative laws of random phenomena. This chapter first explains what a probability model consists of: the sample space of an experiment and a probability satisfying three axioms. The two most basic models are the classical model, with finitely many equally likely outcomes, and the geometric model, which assigns probability in proportion to volume; the Bertrand paradox warns that "equally likely" must be made precise before anything can be computed. We then derive from the axioms a series of identities and inequalities for probabilities, which serve as the basic tools for computation and proof throughout the course. Finally we discuss counting in the classical model: the four sampling schemes (with or without replacement, ordered or unordered) and their correspondence with "placing particles into boxes". The next chapter, [3.1.2](/3.1.2), makes the intuitive models of this chapter rigorous as probability spaces and introduces conditional probability. The set operations used here are reviewed in discrete mathematics, [1.2.1](/1.2.1).
@@ -126,6 +126,8 @@ $$
 and the required probability is the area of $M$, $1-(3/4)^2=7/16$ (the square minus two right triangles with legs $3/4$).
 
 ![The meeting problem: the area 7/16 of the band M in the unit square is the probability of meeting; the scatter shows 400 simulations, and points falling in M are meetings](./plots/meeting-problem.py)
+
+:::
 
 In general, write $\mathbb{R}^r=\{(x_1,\dots,x_r)\colon x_i\in\mathbb{R}\}$, and for a subset $A$ of $\mathbb{R}^r$ let $m(A)=\int_A\mathrm{d}x_1\cdots\mathrm{d}x_r$ denote its volume (length and area for $r=1,2$).
 

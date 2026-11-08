@@ -1,7 +1,7 @@
 ---
 title: Amines
 description: Classification and nomenclature of amines, alkaloids; physical properties, hydrogen bonding, and spectra (N–H stretching, the nitrogen rule, and α-cleavage); tetrahedral structure, nitrogen inversion, and chiral amines; basicity (electronic, steric, and solvation effects in alkylamines, arylamines and substituents, amides, pyridine, amidines and guanidines, the unified table of conjugate-acid pKa) and acid–base extraction; preparation of amines (the problem of direct alkylation, the Gabriel synthesis, reduction of azides and nitriles, reductive amination, reduction of amides and nitro compounds, degradation of carboxylic acid derivatives); acylation, sulfonylation, and protection; quaternary ammonium salts, phase-transfer catalysis, and phospholipids; the mechanism, orientation, and exhaustive methylation of the Hofmann elimination, and the Cope elimination.
-source_hash: 8dd01a02c7b9
+source_hash: eb2d161b5121
 ---
 
 Amines are the hydrocarbyl derivatives of ammonia and the most important organic bases. The lone pair on nitrogen determines all of their chemistry: when it accepts a proton, the amine is a base; when it attacks an electron-poor carbon, the amine is a **nucleophile**. Amine structures are ubiquitous, from neurotransmitters, alkaloids, and amino acids to the great majority of drug molecules: about four-fifths of small-molecule drugs contain nitrogen, most of them as amines or nitrogen heterocycles. This chapter first treats the structure, physical properties, and basicity of amines (the basicity data are taken uniformly from the [pKa table of 6.5.3](/6.5.3#sec-3.1.4)), then the preparation and reactions of amines, and finally quaternary ammonium salts and the Hofmann elimination. The reaction of amines with nitrous acid (**diazotization**) and other nitrogen-containing functional groups are in [6.5.24](/6.5.24#sec-24.2); cyclic amines and aromatic nitrogen heterocycles are in [6.5.25](/6.5.25); the formation of **imines** and **enamines** from amines and aldehydes or ketones is in [6.5.16](/6.5.16#sec-16.9), and the structure of amides and the **Hofmann rearrangement** are in [6.5.20](/6.5.20#sec-20.2); the chemistry of amino acids and peptides is in [6.5.33](/6.5.33).
@@ -177,6 +177,8 @@ An amine and an acid form an ammonium salt, an ionic compound that is readily so
 **Example 23.4.1** How are aniline, phenol, and toluene separated from their solution in ether?
 
 **Solution** Extract with dilute hydrochloric acid: aniline (conjugate acid 4.60) is protonated to anilinium and enters the aqueous layer, whereas phenol and toluene stay in the ether layer. Then extract the ether layer with aqueous NaOH: phenol (9.99) enters the aqueous layer as the sodium salt ($K = 10^{14.00 - 9.99} \approx 10^4$), and toluene stays in the ether layer. Making the first aqueous layer basic with NaOH and extracting with ether gives aniline; acidifying the second aqueous layer gives phenol. $\square$
+
+:::
 
 The distribution of drug molecules in the body follows the same rules: amine drugs are almost completely protonated in the stomach (pH about 2), and in the small intestine (pH about 6–7) a part is present in the neutral form and can cross cell membranes and be absorbed (the **partition coefficient** varies with pH, [6.4](/6.4)).
 

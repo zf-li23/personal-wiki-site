@@ -1,7 +1,7 @@
 ---
 title: Debugging and Testing
 description: Kinds of program errors and compiler warnings; the debugging process of reproduce, diagnose, fix and reflect; print debugging; breakpoints, conditional breakpoints, single stepping, watching variables and the call stack in a debugger (GDB, VS Code, pdb); AddressSanitizer and UBSan; test cases, boundary conditions and off-by-one errors, unit testing and differential testing; defensive programming and assertions.
-source_hash: 4cbb2bb50db5
+source_hash: e65da3db8e25
 ---
 
 More than half of the time spent writing programs often goes into finding errors. *Debugging* is the process of finding and correcting program errors, and testing is the process of finding errors by running the program: testing answers "is there an error?", and debugging answers "where is it?". This chapter introduces the methods and current tools for both: it first explains the kinds of errors and the general debugging process, then introduces debuggers, compiler warnings and runtime checking tools, and finally discusses how to design tests and how to use assertions to expose errors early. The examples in this chapter use the loops, functions and arrays of the first four chapters; the causes of memory errors such as out-of-bounds array access and dangling pointers are in [4.1.8](/4.1.8); the systematic approach to testing in software engineering (test frameworks, continuous integration, coverage) is in [4.14](/4.14); when AI tools are used to assist debugging, the results must likewise be verified with the testing methods of this chapter ([4.2.14](/4.2.14)).
@@ -46,6 +46,8 @@ std::cout << x << '\n';            // prints 1
 ```
 
 Observation: the output is exactly the first term, so we hypothesize that "the value of the second term is $0$". Experiment: print `1 / (2 * 2 + 1)` alone, and it is indeed `0`; the denominator `2 * 2 + 1` is `5`, which is not wrong; print `1 / 5` and it is still `0`. Conclusion: dividing two integers is integer division ([4.1.2](/4.1.2)), and changing `1` to `1.0` fixes it. Reflection: for every expression containing a division, think about the types of the operands.
+
+:::
 
 The idea most often used in diagnosis is bisection: check an intermediate result in the middle of the program; if it is already wrong, the error is in the first half, otherwise in the second half, halving the suspect range each time.
 

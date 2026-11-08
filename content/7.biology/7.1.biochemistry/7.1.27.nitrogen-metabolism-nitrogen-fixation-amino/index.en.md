@@ -45,6 +45,8 @@ The electrons come from reduced ferredoxin or flavodoxin (from **photosynthesis*
 
 **Example 27.1.1** Compare the cost of nitrogen from $\ce{N2}$ and from nitrate. By Eq. (27.1), each $\ce{NH4+}$ from $\ce{N2}$ costs 8 ATP and 4 electrons (2 NAD(P)H equivalents, about 5 ATP equivalents): about 13 ATP equivalents. Nitrate needs 8 electrons (4 NAD(P)H equivalents, about 10 ATP equivalents) but no ATP. Assimilation into glutamate costs a further 1 ATP and 1 NAD(P)H in both cases. Fixation is thus somewhat more expensive than nitrate uptake, which is why legumes reduce nodulation when soil nitrate is plentiful; legumes spend roughly 6–12 g of carbon from photosynthesis for each gram of nitrogen fixed by their symbionts.
 
+:::
+
 Nitrogenase is destroyed by $\ce{O2}$: the Fe protein has a half-life of about 30 s in air, the MoFe protein about 10 min. Diazotrophs protect it in several ways:
 
 - strict anaerobes fix nitrogen only without $\ce{O2}$, and many facultative species repress the *nif* **genes** in its presence;

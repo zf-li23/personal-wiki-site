@@ -85,6 +85,8 @@ $$
 
 **例 8.2.1** 设 $\mathcal{U},\mathcal{L}$ 分别是 $n$ 阶上三角、下三角矩阵的全体，$\mathcal{S},\mathcal{K}$ 分别是 $n$ 阶**对称矩阵**、**反对称矩阵**的全体，它们都是 $\mathbb{F}^{n\times n}$ 的子空间。$\mathcal{U}\cap\mathcal{L}$ 是对角矩阵的全体，$\mathcal{U}+\mathcal{L}=\mathbb{F}^{n\times n}$，但这个和不是直和。任意方阵唯一地分解为 $A=\frac12(A+A^{\mathsf T})+\frac12(A-A^{\mathsf T})$，且 $\mathcal{S}\cap\mathcal{K}=\{O\}$，所以 $\mathbb{F}^{n\times n}=\mathcal{S}\oplus\mathcal{K}$。
 
+:::
+
 [第 4 章](/2.1.4) 的 $\mathbb{R}^n=M\oplus M^\perp$ 是直和的另一个例子。多个子空间的直和与线性变换下的空间分解见 [第 10 章](/2.1.10)。
 
 ## 8.3. 线性相关性、基与维数
@@ -281,6 +283,8 @@ $$
 
 其 $(i,k)$ 元（从 $0$ 编号）为 $\binom ki(-x_0)^{k-i}$，且 $[a_0\ \cdots\ a_{n-1}]^{\mathsf T}=T\tilde{\boldsymbol{f}}$。
 
+:::
+
 同一个空间的不同的基各有所长。下图画出 $\mathbb{R}[x]_4$ 的三组基：单项式基最便于运算，但在 $[0,1]$ 上 $x^2$ 与 $x^3$ 的图像相差不大，用它表示函数时系数对误差很敏感（相应的 Vandermonde 矩阵病态）；平移后的基 $(x-x_0)^k$ 下的坐标是 $f$ 在 $x_0$ 处的 Taylor 系数（例 8.5.2）；以 $0,\frac13,\frac23,1$ 为节点的 Lagrange 基 $L_0,\dots,L_3$ 满足 $L_i(a_j)=\delta_{ij}$，多项式在这组基下的坐标就是它在四个节点处的值（定理 9.4.2）。
 
 ![R[x]_4 的三组基在 [0, 1] 上的图像：单项式基 1, x, x^2, x^3；平移基 (x − 1/2)^k；以 0, 1/3, 2/3, 1 为节点的 Lagrange 基，L_i 在第 i 个节点取 1（空心点）、在其余节点取 0（实心点）](./plots/polynomial-bases.py)
@@ -435,6 +439,8 @@ $$
 在基 $\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ 下，$S$ 的矩阵是 $\operatorname{diag}(1,1,1,0)$。
 
 **例 8.7.2** 例 8.6.2 中 $D$ 在 $\operatorname{span}(1,\sin x,\cos x)$ 上的矩阵的特征多项式是 $\lambda(\lambda^2+1)$，在 $\mathbb{R}$ 上只有特征值 $0$，所以 $D$ 在实数域上不能对角化。若允许复系数，$\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ 与 $\mathrm{e}^{-\mathrm{i}x}$ 是属于 $\pm\mathrm{i}$ 的特征向量，$D$ 在基 $1,\mathrm{e}^{\mathrm{i}x},\mathrm{e}^{-\mathrm{i}x}$ 下的矩阵是 $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$。能否对角化取决于数域，这是 [第 9 章](/2.1.9) 讨论复数与多项式分解的原因。
+
+:::
 
 本课程中矩阵的几种等价关系，都可以理解为同一个对象在不同基下的表示：
 

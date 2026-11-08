@@ -246,6 +246,8 @@ $$
 
 **Example 10.5.1** For $K_{\mathrm{d}} = 100\,\mathrm{\mu M}$ and $c_{\mathrm{eff}} = 10\,\mathrm{mM}$, Eq. (10.3) gives $K_{\mathrm{d}}^{(2)} \approx 10^{-8}/10^{-2} = 10^{-6}\,\mathrm{M}$: two weak contacts give one micromolar interaction, 100 times tighter than either. With $j$ sites the gain is of order $(c_{\mathrm{eff}}/K_{\mathrm{d}})^{j-1}$, so a pentavalent toxin such as cholera toxin, binding five GM1 molecules, adheres almost irreversibly. Multivalency also sharpens selectivity: a surface with a slightly lower density of ligand forms fewer simultaneous bonds and is bound far less, which is how leukocytes can distinguish inflamed from resting endothelium.
 
+:::
+
 The same reasoning explains why selectin bonds suit rolling: each bond is weak and breaks within a fraction of a second under the shear force of blood flow, but new bonds form continuously at the leading edge of the cell, so the leukocyte is slowed without being stopped.
 
 ## 10.6. Working with Carbohydrates

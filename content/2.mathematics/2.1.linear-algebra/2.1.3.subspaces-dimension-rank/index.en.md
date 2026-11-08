@@ -1,6 +1,6 @@
 ---
 title: Subspaces, Dimension and Rank
-source_hash: fd82a18a9890
+source_hash: 82096bc7b8d1
 ---
 
 The solvability criterion of [Chapter 1](/2.1.1) tells us whether a linear system has a solution and whether the solution is unique, but not what the solution set looks like when the solution is not unique. This chapter looks at $A\boldsymbol{x} = \boldsymbol{b}$ from the column point of view: the system is solvable exactly when $\boldsymbol{b}$ is a linear combination of the columns of $A$. Around the notion of linear combination we raise four questions in turn. Which vectors can a given set of vectors produce (subspaces and spans)? Is the representation unique (linear independence)? Which vectors are essential (maximal linearly independent subsets and bases)? Which quantity stays unchanged under transformations (rank and dimension)? Once these are answered, the rank of a matrix unifies the results of the previous two chapters: the solution set is a particular solution plus the null space, the null space has dimension $n - \operatorname{rank}(A)$, and the dimensions of the four fundamental subspaces are completely determined by the rank.
@@ -131,6 +131,8 @@ By Proposition 3.3.4, the selected vectors are linearly independent at every ste
 **Proposition 3.5.1** Every finite list of vectors, not all zero, has a maximal linearly independent subset, and the sifting method produces one.
 
 **Example 3.5.1** Take $\boldsymbol{a}_1 = [1\ {-1}\ 0]^{\mathsf T}$, $\boldsymbol{a}_2 = [1\ 0\ {-1}]^{\mathsf T}$, $\boldsymbol{a}_3 = [0\ 1\ {-1}]^{\mathsf T}$: $\boldsymbol{a}_1 \ne \boldsymbol{0}$ is selected; $\boldsymbol{a}_2$ is not a multiple of $\boldsymbol{a}_1$ and is selected; $\boldsymbol{a}_3 = -\boldsymbol{a}_1 + \boldsymbol{a}_2$ is discarded. So $\boldsymbol{a}_1, \boldsymbol{a}_2$ is a maximal linearly independent subset. In fact any two of these vectors form a maximal linearly independent subset, so maximal linearly independent subsets are in general not unique.
+
+:::
 
 The sifting method must decide a linear representation, that is, solve a system, at every step; Section 3.7 gives a method that needs only one elimination. To compare different maximal linearly independent subsets, we first discuss linear representations between lists of vectors.
 
@@ -266,6 +268,8 @@ $$
 \boldsymbol{a}_3 = \boldsymbol{a}_1 - \boldsymbol{a}_2, \qquad \boldsymbol{a}_5 = -\tfrac76\boldsymbol{a}_1 - \tfrac56\boldsymbol{a}_2 - \tfrac13\boldsymbol{a}_4.
 $$
 
+:::
+
 Computer algebra systems perform exact computations by the same method. In numerical computation, however, one must be careful: rounding in floating-point arithmetic turns a pivot that is "exactly zero" into a tiny nonzero number, so deciding the rank by elimination is unreliable. Numerical software uses singular values instead ([Chapter 7](/2.1.7)) together with a tolerance:
 
 ```python
@@ -382,6 +386,8 @@ $$
 $$
 
 so $\mathcal{N}(A) = \{x_3\boldsymbol{k}_1 + x_5\boldsymbol{k}_2 \mid x_3, x_5 \in \mathbb{R}\}$ and $\dim\mathcal{N}(A) = 2 = 5 - 3$.
+
+:::
 
 Conversely, a basis of the null space determines the nonzero rows of the reduced row echelon form. For example, if the null space of a $4 \times 5$ matrix $A$ has the basis $\boldsymbol{k}_1, \boldsymbol{k}_2$ above, then the vectors of $\mathcal{N}(A)$ have the form $[-c_1 + \frac76c_2\ \ c_1 + \frac56c_2\ \ c_1\ \ \frac13c_2\ \ c_2]^{\mathsf T}$; that is, $x_3 = c_1$ and $x_5 = c_2$ are free variables, and $x_1 + x_3 - \frac76x_5 = 0$, $x_2 - x_3 - \frac56x_5 = 0$, $x_4 - \frac13x_5 = 0$. The coefficients of these three equations are the three nonzero rows of $\operatorname{rref}(A)$ (by Corollary 3.7.1, the reduced row echelon form is uniquely determined by the null space).
 

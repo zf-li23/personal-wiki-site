@@ -130,6 +130,8 @@ $$
 
 **Example 17.6.1** For *t* haplotypes with $k = 0.95$ in males and lethality of $t/t$, the model predicts that $1 - \sqrt{0.05/0.95} = 77\,\%$ of adult mice carry *t*, so that the frequency of *t* among chromosomes 17 is about $39\,\%$. In wild populations carriers are usually only $10$–$25\,\%$. The discrepancy shows what the model leaves out: females mate with several males, and the sperm of $+/t$ males compete poorly with those of $+/+$ males, so the effective transmission ratio is lower; small, inbred demes lose *t* by drift or are founded without it; and females may avoid $+/t$ males. Each of these mechanisms has been documented, and population cages and wild populations in which polyandry is prevented show higher *t* frequencies.
 
+:::
+
 Drive in female meiosis works through the asymmetry of the divisions: only one of four products becomes the egg ([7.3.21](/7.3.21#sec-21.7.4)), and a chromosome whose centromere binds the **spindle** more strongly tends to stay in the egg instead of going to the **polar body**. Such centromere drive may explain the rapid evolution of centromeric DNA and of centromeric **histones**, and the preferential transmission of Robertsonian fusions in some mammals ([7.4.15](/7.4.15)). **B chromosomes** ([7.3.17](/7.3.17#sec-17.5.3)) accumulate by directed **nondisjunction** at the first pollen **mitosis** of rye and maize, which places both chromatids of the B in the generative nucleus that forms the sperm: their transmission ratio through pollen exceeds one half, which balances the loss of fertility they cause when numerous.
 
 ### 17.6.3. Homing Endonuclease Genes

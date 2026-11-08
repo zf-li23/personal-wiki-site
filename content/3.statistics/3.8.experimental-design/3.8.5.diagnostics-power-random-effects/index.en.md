@@ -528,6 +528,8 @@ Whether a factor should be treated as fixed or random has little to do with the 
 | Estimation targets | treatment means, contrasts, multiple comparisons | variance components, $\rho_I$, the population mean $\mu$ |
 | Scope of conclusions | these $a$ levels | the whole population of levels |
 
+:::
+
 The random-effects model is the frequentist counterpart of a **hierarchical model** ([3.7.6](/3.7.6)): there the group effects are given a common prior distribution whose parameters are estimated or given a hyperprior, and the posterior means of the group effects are shrunken toward the overall mean, just like the predicted random effects $\tilde\tau_i$ of `lmer`. Models with both fixed and random factors, mixed models, appear in the later chapters on blocking and multifactor designs.
 
 ## 5.4. The Regression Approach for a Quantitative Factor

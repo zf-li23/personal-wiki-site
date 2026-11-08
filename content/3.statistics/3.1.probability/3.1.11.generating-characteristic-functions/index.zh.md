@@ -193,6 +193,9 @@ $$
 $$
 M_X(s) = \int_0^{\infty} \mathrm{e}^{sx} \left[\frac{2}{3} \cdot 6\mathrm{e}^{-6x} + \frac{1}{3} \cdot 4\mathrm{e}^{-4x}\right] \mathrm{d}x = \frac{2}{3} \cdot \frac{6}{6 - s} + \frac{1}{3} \cdot \frac{4}{4 - s}.
 $$
+
+:::
+
 反过来，由唯一性，若已知 $X$ 的矩母函数形如 $p_1 \frac{\lambda_1}{\lambda_1 - s} + p_2 \frac{\lambda_2}{\lambda_2 - s}$（$p_1 + p_2 = 1$），则 $X$ 是 $\mathrm{Exp}(\lambda_1)$ 与 $\mathrm{Exp}(\lambda_2)$ 以概率 $p_1, p_2$ 混合而成的，密度为 $p_1 f_{X_1}(x) + p_2 f_{X_2}(x)$。
 
 **例 11.2.4（正态分布）** 设 $X \sim \mathcal{N}(\mu_1, \sigma_1^2)$，$Y \sim \mathcal{N}(\mu_2, \sigma_2^2)$ 相互独立，求 $Z = X + Y$ 的分布。
@@ -208,6 +211,8 @@ $$
 M_Z(s) = M_X(s) M_Y(s) = \exp\left\{(\mu_1 + \mu_2)s + \frac{(\sigma_1^2 + \sigma_2^2)s^2}{2}\right\},
 $$
 它对一切 $s$ 有限，且是 $\mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$ 的矩母函数，由第 4 条，$Z \sim \mathcal{N}(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$。独立正态随机变量之和仍是正态的。
+
+:::
 
 顺便求出标准正态分布的各阶矩：$M_V(s) = \mathrm{e}^{s^2/2} = \sum_{k=0}^{\infty} \frac{s^{2k}}{2^k k!}$，与 $\sum_n \frac{\mathbb{E}V^n}{n!} s^n$ 比较系数，得 $\mathbb{E}V^{2k-1} = 0$，$\mathbb{E}V^{2k} = \frac{(2k)!}{2^k k!} = (2k-1)!!$。例如 $\mathbb{E}V^4 = 3$。
 
@@ -308,6 +313,8 @@ $$
 
 (ii) 设 $Y \sim \mathcal{N}(\mu, \sigma^2)$，则 $Y = \mu + \sigma X$，$X \sim \mathcal{N}(0, 1)$，由性质 11.3.1 的第 4 条，$\mathbb{E}\mathrm{e}^{\mathrm{i}tY} = \mathrm{e}^{\mathrm{i}t\mu} \mathbb{E}\mathrm{e}^{\mathrm{i}t\sigma X} = \exp\left(\mathrm{i}\mu t - \frac{1}{2}\sigma^2 t^2\right)$。 $\square$
 
+:::
+
 由第 5 条，若 $X_1, \dots, X_m$ 相互独立，$X_j \sim \mathcal{N}(\mu_j, \sigma_j^2)$，则 $X_1 + \cdots + X_m \sim \mathcal{N}\left(\sum_j \mu_j, \sum_j \sigma_j^2\right)$。
 
 下面两例的计算需要复变函数或较繁的积分技巧，结论可以直接使用。
@@ -317,6 +324,8 @@ $$
 **例 11.3.8（Laplace 分布）** 密度为 $f(x) = \frac{1}{2}\mathrm{e}^{-\lvert x \rvert}$ 的 Laplace 分布的特征函数为 $\varphi(t) = \dfrac{1}{1 + t^2}$。
 
 例 11.3.7 与例 11.3.8 互为对偶：Laplace 密度的 Fourier 变换是 Cauchy 型函数，反之亦然。
+
+:::
 
 ![几种对称分布的特征函数：N(0,1)、U(-1,1)、Laplace 与标准 Cauchy；对称分布的特征函数是实值偶函数](./plots/characteristic-functions.py)
 
@@ -397,6 +406,8 @@ $$
 **解** $\varphi_X(t) = \mathrm{e}^{-\lvert t \rvert}$，$\varphi_Y(t) = \mathbb{E}\mathrm{e}^{\mathrm{i}(at)X} = \mathrm{e}^{-a\lvert t \rvert}$，$\varphi_{X+Y}(t) = \mathbb{E}\mathrm{e}^{\mathrm{i}t(1 + a)X} = \mathrm{e}^{-(1 + a)\lvert t \rvert} = \varphi_X(t)\varphi_Y(t)$。
 
 此例说明：和的特征函数等于特征函数之积，推不出独立；判断独立性必须用定理 11.3.5 中的联合特征函数 $\varphi(t_1, t_2)$。
+
+:::
 
 至此我们有三套完整刻画随机变量全部信息的工具：离散型随机变量用分布列、分布函数、特征函数；连续型随机变量用密度、分布函数、特征函数；一般的随机变量用分布函数、特征函数。相应地，独立性有三种等价的判别方式。
 

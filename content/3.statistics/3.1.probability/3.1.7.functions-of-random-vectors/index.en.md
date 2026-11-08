@@ -1,6 +1,6 @@
 ---
 title: Functions of Random Vectors, Order Statistics and Quantiles
-source_hash: 48be28e18eea
+source_hash: 650782c2a60f
 ---
 
 [3.1.5](/3.1.5) dealt with the distribution of a function $g(X)$ of one random variable: in general one first finds the distribution function of $g(X)$ and then differentiates, and when $g$ is monotone or piecewise monotone the density of $g(X)$ can be written down directly from that of $X$. This chapter extends both routes to functions $g(X_1, \dots, X_n)$ of random vectors. The general method is still "find the distribution function first"; the most important special cases are the distribution of a sum (the convolution formula) and the joint density of several functions (the change-of-variables formula). As applications we derive the relations between the normal distribution and the three main distributions of statistics ($\chi^2$, $t$ and $F$), and study a special class of functions, the order statistics, which describe extremes such as the minimum and maximum of a sample. Finally we define the $p$-quantile of an arbitrary distribution function (its generalized inverse), which is both the source of critical values in statistical inference and a way to generate random numbers from any distribution using uniform ones. The chapter relies on the joint densities, marginal densities and independence criteria of [3.1.6](/3.1.6); the sampling distributions of statistical inference ([3.2](/3.2)) are built on it.
@@ -108,6 +108,8 @@ f_{X+Y}(z) = \int_0^z \frac{\lambda^{\alpha_1}}{\Gamma(\alpha_1)} x^{\alpha_1 - 
 $$
 The last integral is the **beta function** $\mathrm{B}(\alpha_1, \alpha_2) = \frac{\Gamma(\alpha_1)\Gamma(\alpha_2)}{\Gamma(\alpha_1 + \alpha_2)}$, and substituting it gives the density of $\Gamma(\alpha_1 + \alpha_2, \lambda)$. $\square$
 
+:::
+
 In particular, the sum of $n$ independent $\mathrm{Exp}(\lambda) = \Gamma(1, \lambda)$ variables has distribution $\Gamma(n, \lambda)$.
 
 **Example 7.1.6** If $(X, Y)$ has joint density $f(x, y)$, then $Z = X/Y$ has density $f_Z(z) = \int_{-\infty}^{\infty} \lvert y \rvert f(zy, y)\,\mathrm{d}y$. In particular, if $X, Y$ are independent and both $\mathcal{N}(0, 1)$, then $Z$ has the Cauchy distribution.
@@ -144,6 +146,9 @@ Here
 $$
 \frac{\partial(x, y)}{\partial(u, v)} = \det\begin{bmatrix} \dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[2mm] \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v} \end{bmatrix}.
 $$
+
+:::
+
 Whether the matrix has $x, y$ along the rows and $u, v$ along the columns (numerator layout) or is transposed (denominator layout), the determinant is the same, so the formula does not depend on the layout convention. In computations, when it is easier to solve for $(u, v)$ in terms of $(x, y)$, one can use $\dfrac{\partial(x, y)}{\partial(u, v)} = \Big(\dfrac{\partial(u, v)}{\partial(x, y)}\Big)^{-1}$. The theorem extends directly to $n$ dimensions. The proof is the change of variables in multiple integrals: for a region $B$ in $D$, $\mathbb{P}((U, V) \in B) = \sum_i \mathbb{P}((X, Y) \in \Delta_i(B)) = \sum_i \int_{\Delta_i(B)} f\,\mathrm{d}x\,\mathrm{d}y = \int_B \sum_i f(x_i, y_i)\lvert J_i \rvert\,\mathrm{d}u\,\mathrm{d}v$.
 
 **Example 7.1.7** Let $X, Y$ be independent, both $\mathcal{N}(0, 1)$, and let $(R, \Theta)$ be given by the polar transformation $X = R\cos\Theta$, $Y = R\sin\Theta$. Find the joint density of $(R, \Theta)$.

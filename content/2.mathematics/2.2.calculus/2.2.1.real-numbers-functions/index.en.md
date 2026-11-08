@@ -1,6 +1,6 @@
 ---
 title: Real Numbers and Functions
-source_hash: d7cc114db433
+source_hash: c4dc08ba9383
 ---
 
 Calculus studies functions defined on the set of real numbers, and its tool is the limit. This chapter lays two foundations. The first is the structure of the real line, in particular intervals, neighborhoods and suprema: the least-upper-bound property expresses that the real numbers have "no gaps," and it is the source of every existence theorem for limits in the next chapter. The second is a review of the basic notions of functions, their common properties and the elementary functions used throughout the course. Much of this material is treated more generally in discrete mathematics: the construction of the **real numbers** is in [1.2.4](/1.2.4#sec-4.1); functions as relations, injections and surjections, and inverse functions are in [1.2.3](/1.2.3); the **supremum** in a poset is in [1.2.2](/1.2.2#def-2.8.6). Here we restate these ideas on $\mathbb{R}$ in the language of calculus and add the facts that analysis needs.
@@ -305,6 +305,8 @@ An equation need not determine a unique function: under the restrictions $y \geq
 **Example 1.2.6** For $x < 0$, does the equation $2^y = xy + 2$ determine $y$ as a function of $x$?
 
 **Solution** Fix $x_0 < 0$ and consider, in the $(y, u)$-plane, the curve $u = 2^y$ and the line $u = x_0 y + 2$. The former is strictly increasing and takes every value in $(0, +\infty)$; the latter is strictly decreasing and takes every value in $\mathbb{R}$; so they meet in exactly one point $(y_0, u_0)$. Hence for every $x_0 < 0$ the equation has exactly one solution $y_0$, and it determines an implicit function on $(-\infty, 0)$.
+
+:::
 
 A function given by parametric equations has the form
 

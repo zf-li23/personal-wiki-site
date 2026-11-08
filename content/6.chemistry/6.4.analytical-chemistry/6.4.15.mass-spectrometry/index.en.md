@@ -1,7 +1,7 @@
 ---
 title: Mass Spectrometry
 description: Mass-to-charge ratio, exact mass and resolving power; the EI, CI, ESI, APCI and MALDI ion sources and deconvolution of multiply charged ions; magnetic-sector, quadrupole, ion-trap, time-of-flight, Orbitrap and FT-ICR mass analyzers, tandem mass spectrometry and the SIM and SRM scan modes; the molecular ion, the nitrogen rule, isotope peaks and the main fragmentation rules (alpha cleavage, McLafferty rearrangement); GC-MS, LC-MS/MS and isotope dilution; proteomics (b/y ions, peptide mass fingerprinting, quantitative proteomics), mass spectrometry imaging and ICP-MS.
-source_hash: 9620f580e2c0
+source_hash: 5b5f0faa6549
 ---
 
 The methods of the preceding chapters measure how matter interacts with electromagnetic radiation or with an electrode. Mass spectrometry instead "weighs" molecules directly: it converts molecules into gas-phase ions, separates the ions by their mass-to-charge ratio and counts them. The result is more than a molecular mass. High-resolution spectra give the elemental composition, the way the ions fragment gives the structure, and the intensity of the ion current gives the amount. Since the introduction of electrospray ionization and matrix-assisted laser desorption/ionization, proteins, nucleic acids, carbohydrates and even whole virus particles can be brought intact into the gas phase, and mass spectrometry has become a central tool of proteomics, metabolomics and clinical testing. This chapter treats in turn the basic quantities (mass-to-charge ratio, exact mass, resolving power), the ion sources, the mass analyzers and tandem mass spectrometry, the interpretation of organic mass spectra, and finally the coupling to chromatography and biological mass spectrometry. The motion of ions in electric and magnetic fields comes from physics ([5.3.7](/5.3.7)), and the concept of an **isotope** is found in [6.1.2](/6.1.2); the principles of chromatography and electrophoresis are in [6.4.13](/6.4.13) and [6.4.14](/6.4.14), and the **calibration curve**, the **internal standard method** and the **limit of detection** in [6.4.1](/6.4.1#sec-1.8). The interpretation of spectra of the large variety of organic compounds is left to the spectroscopy chapter of [organic chemistry](/6.5); here we only make clear the principles on which the interpretation rests.
@@ -47,6 +47,8 @@ $$
 **Example 15.1.1** The molecular ion of a compound is measured at $m/z\ 150.0679$ with a mass accuracy of $\pm 3\,\mathrm{ppm}$. The candidate molecular formulas of nominal mass 150 are $\ce{C9H10O2}$ ($150.068\,08$), $\ce{C8H10N2O}$ ($150.079\,31$), $\ce{C10H14O}$ ($150.104\,47$), $\ce{C9H14N2}$ ($150.115\,70$) and $\ce{C8H6O3}$ ($150.031\,69$) (all monoisotopic masses of the neutral molecules; for the molecular ion subtract a further $0.000\,55$). Which one fits?
 
 **Solution** The calculated value for the molecular ion $\ce{C9H10O2+}$ is $150.067\,53$, a deviation of $(150.0679 - 150.06753)/150.06753\times10^6 = +2.5\,\mathrm{ppm}$, within the error limits; the deviations of all the other candidates exceed $70\,\mathrm{ppm}$. The molecular formula is therefore $\ce{C9H10O2}$. At $m/z$ 150, $3\,\mathrm{ppm}$ corresponds to only $0.000\,45$, and modern high-resolution mass spectrometry (Section 15.3.5) can often narrow the candidates to one for $m/z < 500$; for larger molecules the number of candidates grows rapidly and the isotope peaks (Section 15.4.2) must be used as well. $\square$
+
+:::
 
 For large molecules the monoisotopic peak is no longer the most intense: a protein of about $17\,\mathrm{kDa}$ contains roughly 750 carbon atoms and thus on average eight $^{13}\mathrm{C}$ atoms, and the intensity of its monoisotopic peak is less than one thousandth of that of the most intense isotope peak. For biological macromolecules one therefore usually reports the average mass or the mass of the most intense peak, and only high-resolution spectra are fitted with a calculated isotope envelope to determine the monoisotopic mass.
 
@@ -165,6 +167,8 @@ $$
 **Example 15.2.1** In the ESI spectrum of horse heart myoglobin (apomyoglobin, without heme) in acidic water–methanol there is a pair of adjacent peaks at $m/z\ 998.15$ and $942.76$. Find the charge number and the molecular mass.
 
 **Solution** $z = (942.76 - 1.007)/(998.15 - 942.76) = 941.75/55.39 = 17.0$, so $z = 17$; $M = 17\times(998.15 - 1.007) = 16\,951.4\,\mathrm{Da}$, in agreement with the average mass $16\,951.5\,\mathrm{Da}$ calculated from the amino acid sequence. In practice one averages over the whole charge-state series or uses software to transform all peaks onto the mass axis (deconvolution), with an accuracy of up to $0.01\%$. $\square$
+
+:::
 
 ![Schematic ESI spectra of a protein of molecular mass 16 951.5 Da: in denaturing solution the protein is unfolded and the charge-state distribution is broad and highly charged (11+ to 27+); in ammonium acetate at pH 7 it stays folded (native mass spectrometry), carries only 7–10 charges and appears at high m/z; right, the mass spectrum obtained by deconvolution of the denatured spectrum](./plots/esi-charge-states.py)
 
@@ -359,6 +363,8 @@ Tandem mass spectrometry can be realized in space (different analyzers in series
 In a triple quadrupole the ions enter a collision cell filled with Ar or $\ce{N2}$ with a kinetic energy of $10$–$50\,\mathrm{eV}$ and are heated stepwise by many collisions; the internal energy is distributed over all vibrational degrees of freedom of the molecule and the weakest bonds break first ("slow heating"). Higher-energy collisional dissociation (HCD) in Orbitrap instruments is carried out in a separate multipole cell and has no low-mass cutoff, unlike CID in an ion trap. Besides collisions, electron-transfer dissociation (ETD) and electron-capture dissociation (ECD) let multiply charged positive ions acquire an electron, and the radical-induced cleavage preferentially breaks the $\mathrm{N}$–$\mathrm{C}_\alpha$ bond of the peptide chain while retaining modifications such as phosphorylation and glycosylation; ultraviolet photodissociation (UVPD) fragments ions with a laser.
 
 **Example 15.3.1** A protonated precursor ion of $m/z$ 170 gives product ions of $m/z$ 93, 77 and 65 after CID. The ion at $m/z$ 77 is the phenyl cation $\ce{C6H5+}$, and 93 and 65 differ by 28; this series suggests that the precursor contains a phenoxy or an anilino group ($\ce{C6H5O+}$ and $\ce{C6H7N+}$ are both 93). A product-ion scan assigns every product ion to the same precursor, which makes it easier to interpret than the fragments in a single-stage mass spectrum; to establish the identity of 93 further, one can perform another $\mathrm{MS}^3$ experiment on 93, or use the exact mass to distinguish $\ce{C6H5O+}$ ($93.034$) from $\ce{C6H7N+}$ ($93.057$). $\square$
+
+:::
 
 Tandem mass spectrometry has several scan modes; taking the triple quadrupole as an example:
 

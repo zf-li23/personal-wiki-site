@@ -320,6 +320,8 @@ Ann's interval is the classical $t$ interval (§3.3.3). Bob's prior mean lies ab
 
 ![Cheese moisture example. Left and middle: contours of the joint posterior density of (μ, σ) for Ann (non-informative prior) and Bob (conjugate prior), with 400 posterior draws obtained by drawing σ² and then μ given σ². Right: the marginal posterior t-densities of μ and Bob's prior mean.](./plots/cheese_joint_posterior.py)
 
+:::
+
 *The non-informative prior as a limit.* Letting $\kappa_0\to0$, $\nu_0\to-1$ and $\sigma_0^2\to0$ in the density of Definition 3.4.1 gives
 
 $$

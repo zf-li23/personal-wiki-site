@@ -76,6 +76,8 @@ The course covers the basic concepts of statistical inference (this chapter and 
 
 **Example 1.2.2** For the video time of a phone model, the population is all phones of that model sold, each phone is an individual, and a sample is, say, 100 phones selected from the population. Let $X$ be the video time of a phone; a statistical model is an assumption on the distribution of $X$, for instance $X\sim\mathcal{N}(a,\sigma^2)$.
 
+:::
+
 What we care about in a population is not the individuals themselves but the distribution of the quantity measured on them. A population is therefore identified with a random variable $X$, or with its distribution function $F$ or density $f$, which is unknown or not fully specified. Sampling draws $n$ observations from it, and inference goes back from the sample to the population. When $X_1,\dots,X_n$ are drawn independently from the population $F$ (or $f$, or $X$), we write
 
 $$
@@ -189,6 +191,8 @@ $$
 \frac1{n-1}\sum_{i=1}^n(X_i-\mu)^2
 $$
 is not a statistic, because it cannot be computed from the data; it becomes a statistic when $\mu$ is known. Which statistic to use depends on the problem.
+
+:::
 
 Like the sample, a statistic has two faces. Before sampling it is a random variable (or random vector) $T(\boldsymbol{X})$; after sampling it is the real number (or vector) $T(\boldsymbol{x})$ computed from the observed values, for instance the observed sample mean $\bar x=\frac1n\sum_{i=1}^nx_i$ and sample variance $s^2=\frac1{n-1}\sum_{i=1}^n(x_i-\bar x)^2$.
 

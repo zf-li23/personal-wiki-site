@@ -294,6 +294,8 @@ with a critical length $L_{\mathrm{c}} = 1.5\,\mathrm{kb}$. The shortest of 92 n
 
 ![Telomere shortening counts divisions, Eq. (25.2). (A) One lineage: the mean length of 92 telomeres (blue) and the shortest telomere (red) fall by about 80 bp per division; the cell senesces when the shortest telomere reaches the critical length (dashed line), long before the average is critical. (B) Replicative lifespans of 2000 lineages from a young donor (initial mean length 10 kb, median about 59 divisions) and an old donor (7.5 kb, median about 28). (C) Cumulative population doublings of cultures with one division per day: the young-donor and old-donor cultures slow and reach a plateau, the Hayflick limit, whereas cells expressing hTERT keep doubling](./plots/telomere-senescence.py)
 
+:::
+
 Mice have telomeres of 20–50 kb and express telomerase in many somatic cells, so their cells in culture stop instead because of oxidative damage at atmospheric oxygen (they divide indefinitely at 3% $\ce{O2}$; Parrinello et al. 2003). Mice lacking the telomerase RNA (*Terc*) are normal in the first generation, but their telomeres shorten from generation to generation, and after four to six generations they are infertile and show defects of highly proliferative tissues (blood, intestine, skin) and premature aging (Blasco et al. 1997), a model of human telomere syndromes such as dyskeratosis congenita.
 
 ### 25.7.3. Markers of Senescent Cells

@@ -244,6 +244,8 @@ The buddy of the block at offset $a$ with size $2^k$ is at offset $a \oplus 2^k$
 
 **Example 5.3.1** A 1 MiB region is empty. A request for 100 KiB is rounded to 128 KiB. The region is split into two 512 KiB buddies, the first of those into two 256 KiB buddies, and the first of those into two 128 KiB buddies; the request gets the block at offset 0, wasting 28 KiB to internal fragmentation. Free blocks remain at offsets 128 KiB (128 KiB), 256 KiB (256 KiB) and 512 KiB (512 KiB). A request for 200 KiB then takes the 256 KiB block at offset 256 KiB. When the first block is freed, its buddy at offset $0 \oplus 128\,\mathrm{KiB} = 128\,\mathrm{KiB}$ is free, so they merge into a 256 KiB block at offset 0; that block's buddy, at offset 256 KiB, is allocated, so merging stops.
 
+:::
+
 The buddy system coalesces quickly but rounding to powers of two wastes up to half of each block. The Linux kernel uses it to manage physical **page frames**: it allocates blocks of $2^k$ contiguous pages for *order* $k$ from 0 to 10 (4 KiB to 4 MiB). `/proc/buddyinfo` shows the number of free blocks of each order:
 
 ```text

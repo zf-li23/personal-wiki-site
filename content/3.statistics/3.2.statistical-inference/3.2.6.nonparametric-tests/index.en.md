@@ -113,6 +113,8 @@ U=\frac{2n_+-n_0}{\sqrt{n_0}}=\frac{10300-10000}{100}=3,\qquad p=\mathbb{P}(\lve
 $$
 At level $0.01$ we reject the hypothesis that the two recipes are equally popular: the survey shows a significant preference for the traditional recipe. With a large sample, a small difference in proportions can be statistically significant.
 
+:::
+
 The sign test also tests a hypothesis about the median $m_{0.5}$ of a single population: apply it to $Y_i=X_i-m_0$.
 
 **Example 6.2.4 (Fineness of Vinylon)** The deniers (fineness) of $100$ vinylon fibers are grouped as follows.
@@ -122,6 +124,8 @@ The sign test also tests a hypothesis about the median $m_{0.5}$ of a single pop
 | Frequency | 1 | 4 | 7 | 22 | 23 | 25 | 10 | 6 | 1 | 1 |
 
 Test $H_0\colon m_{0.5}=1.40$ against $H_1\colon m_{0.5}\ne1.40$ at $\alpha=0.05$. With $Y_i=X_i-1.40$, under $H_0$ we have $\mathbb{P}(Y_i>0)=\mathbb{P}(Y_i<0)=0.5$; no $Y_i$ is zero, so $n=n_++n_-=100$ and $n_+\sim\mathrm{Bin}(100,\theta)$, and we test $\theta=0.5$. The large-sample rejection region is $\{\lvert 2n_+-n\rvert/\sqrt n>z_{0.025}=1.96\}$. Here $n_+=25+10+6+1+1=43$ and $\lvert 86-100\rvert/10=1.4<1.96$: there is not enough evidence to reject $H_0$.
+
+:::
 
 The one-sided problem $H_0\colon\theta\le0.5$ against $H_1\colon\theta>0.5$ is treated in the same way, rejecting for large $n_+$. The sign test is the simplest test that the population median is zero and the nonparametric analogue of the one-sample $t$ test. Its drawback is that it ignores the magnitudes completely, which makes it inefficient (of low power). Many nonparametric methods instead replace the raw values by their ranks, the positions in the ordered sample: the data $3.2, 2.4, 5, 3.8$ have ranks $2, 1, 4, 3$. In case of ties, mid-ranks (average ranks) are used: the data $105, 120, 120, 121$ have ranks $1, 2.5, 2.5, 4$.
 
@@ -159,6 +163,8 @@ y <- c(0.7, 0.8, 1.1, 0.1, -0.1, 4.4, 5.5, 1.6, 4.6, 3.4)
 wilcox.test(y - x, correct = FALSE, exact = FALSE)   # V = 42, p-value = 0.02077
 wilcox.test(y, x, correct = FALSE, exact = FALSE, paired = TRUE)   # the same test
 ```
+
+:::
 
 The signed-rank test assumes that the distribution of the differences is symmetric; it then tests whether the center of symmetry, which is both the mean and the median, is zero. The three one-sample procedures differ in how much of the data they use: the $t$ test uses the values of the observations, the sign test only their signs, and the signed-rank test lies in between, using signs and ranks.
 
@@ -214,6 +220,8 @@ wilcox.test(y, x, exact = FALSE)   # W = 27, p-value = 0.672 (normal approximati
 ```
 
 By default R computes an exact $p$-value when both samples have fewer than $50$ values and there are no ties, and a normal approximation otherwise.
+
+:::
 
 In short, the signed-rank test is the alternative to the one-sample (or paired) $t$ test and the rank-sum test is the alternative to the two-sample $t$ test. Rank tests are attractive when the parametric assumptions are believed to be violated. Their drawback is that, being based on ranks, they say little about the size of the effect; they are most attractive when what is needed is a $p$-value.
 
@@ -275,6 +283,8 @@ With $r-1=3$ degrees of freedom, $p(k_0)\approx\mathbb{P}(\chi^2_3\ge0.470)=0.92
 ```r
 chisq.test(c(315, 101, 108, 32), p = c(9, 3, 3, 1) / 16)   # X-squared = 0.47002, df = 3, p-value = 0.9254
 ```
+
+:::
 
 If $F$ is a continuous distribution on $\mathbb{R}$, we group the data. Choose constants $-\infty=a_0<a_1<\cdots<a_{r-1}<a_r=+\infty$ that divide the line into the intervals
 

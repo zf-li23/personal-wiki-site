@@ -1,7 +1,7 @@
 ---
 title: Membrane Transport and the Movement of Water
 description: Why membrane transport is needed; simple diffusion and the permeability coefficient P = KD/Δx; protein pores, ion channels and carriers, selectivity and the two-state Boltzmann form of gating; saturation kinetics of facilitated diffusion J = k₃R₀A/(A + K_d); electrochemical potential and net driving force; primary active transport (Na⁺/K⁺-ATPase, Ca²⁺ pump, H⁺ pump) and secondary active transport (1:1 and 2:1 concentrating power of SGLT, the Ca²⁺ gradient NCX can maintain); comparison of the classes of transport proteins; water transport, aquaporins, osmolarity and osmotic pressure (1 mOsm/L ≈ 19.3 mmHg), isosmotic versus isotonic solutions, cell volume; coupled ion and water absorption across epithelia; Na⁺-driven and H⁺/K⁺-driven secondary transport and the evolution of aquaporins across groups.
-source_hash: 9ed9a1b0b673
+source_hash: 23fde315afd6
 ---
 
 The cell is an open functional unit: it must take up glucose, amino acids and $\ce{O2}$ from the extracellular fluid, expel $\ce{CO2}$, $\ce{H+}$ and metabolic waste, maintain an ionic composition quite different from that of the extracellular fluid (Chapter 1), and change the permeability to certain substances as function demands. The **lipid bilayer** by itself lets almost no ions or polar molecules through, so the two basic features of membrane transport are necessity and controllability: almost every substance needs membrane proteins to cross the membrane at a physiologically useful rate, and the type, number, distribution and activity of these proteins are all regulated. This chapter classifies membrane transport by driving force and carrier (Sections 3.1–3.4), compares the classes of transport proteins (Section 3.5), then treats the movement of water and cell volume (Section 3.6) and how epithelia combine the transport of single cells into transepithelial absorption and secretion (Section 3.7). The next chapter derives the membrane potential from the same ion gradients.
@@ -85,6 +85,8 @@ where the first term is the chemical potential difference, the second the electr
 
 **Example 3.4.1 (Driving Force for $\ce{Na+}$ Influx)** At $37\,{}^\circ\mathrm{C}$ ($RT = 2.58\,\mathrm{kJ\,mol^{-1}}$), take $[\ce{Na+}]_{\mathrm{o}} = 145$, $[\ce{Na+}]_{\mathrm{i}} = 12\,\mathrm{mmol\,L^{-1}}$ and $V_{\mathrm{m}} = -70\,\mathrm{mV}$: the chemical term is $2.58\ln(12/145) = -6.4\,\mathrm{kJ\,mol^{-1}}$, the electrical term $96.5 \times (-0.070) = -6.8\,\mathrm{kJ\,mol^{-1}}$, and the total $-13.2\,\mathrm{kJ\,mol^{-1}}$. Both terms drive $\ce{Na+}$ inward and are of similar size: the electrochemical gradient of $\ce{Na+}$ is a considerable store of free energy in the cell, about one quarter of the free energy of ATP hydrolysis (about $-50$ to $-60\,\mathrm{kJ\,mol^{-1}}$ in the cell). Most secondary active transport in animal cells is driven by this energy.
 
+:::
+
 Setting Eq. (3.5) to zero gives the membrane potential at which an ion is at equilibrium; the difference between this potential and the actual membrane potential is the net electrochemical driving force on that ion. These are the subject of the next chapter.
 
 ### 3.4.2. Primary Active Transport
@@ -160,6 +162,8 @@ $$
 $$
 
 **Example 3.6.1** $5.85\,\mathrm{g}$ of NaCl made up to $1\,\mathrm{L}$: $0.1\,\mathrm{mol}$ NaCl, $0.2\,\mathrm{Osm}$, osmotic pressure about $0.2 \times 19\,300 = 3860\,\mathrm{mmHg}$ (about $515\,\mathrm{kPa}$; $3590\,\mathrm{mmHg}$ with $\phi = 0.93$). The osmolarity of plasma is about $290\,\mathrm{mOsm\,L^{-1}}$ and its osmotic pressure about $5600\,\mathrm{mmHg}$ (about $0.75\,\mathrm{MPa}$, more than 7 atmospheres).
+
+:::
 
 Plasma, interstitial fluid and intracellular fluid have the same osmolarity (about $290\,\mathrm{mOsm\,kg^{-1}}$), but from different sources: that of the extracellular fluid comes mainly from $\ce{Na+}$, $\ce{Cl-}$ and $\ce{HCO3-}$, that of the intracellular fluid mainly from $\ce{K+}$ and organic phosphates, proteins and their counterions.
 

@@ -29,6 +29,8 @@ For a gradient system with isotropic noise of strength $\sigma$, $p_{\mathrm{s}}
 
 ![A Waddington landscape from a two-gene toggle switch (simulated, Eq. (7.1) with a = 3 and n = 2, Langevin dynamics). A: the quasi-potential −ln p (Definition 7.1.1) estimated from the stationary distribution of 4000 cells with noise σ = 0.2; the valleys are the two attractors, separated by a saddle; thin lines are the nullclines; ten cells started at the saddle fall into one valley or the other (colored by the valley reached). B: the fraction of cells started at the saddle that end in attractor 1 when the inputs are biased by δ, for weak and strong noise](./plots/landscape.py)
 
+:::
+
 The landscape metaphor has limits. The real state space has thousands of dimensions, of which a two-dimensional picture is a projection; the density of cells reflects not only stability but also how fast cells pass through a region and how they proliferate or die there; and attractors are an idealization for terminally differentiated cells, whereas progenitor states are often transient. Attractor networks with many stored states, the **Hopfield network** of [7.6.33](/7.6.33#sec-33.7), show how a single network can hold many cell types as separate minima.
 
 ### 7.1.3. Archetypes: Cells That Divide Tasks
@@ -159,6 +161,8 @@ and the expected number of steps before absorption is $(I - Q)^{-1}\boldsymbol{1
 
 **Example 7.3.2** A progenitor state P stays with probability $0.5$ or moves to an intermediate state I; from I the chain returns to P with probability $0.2$, or is absorbed in fate A ($0.5$) or fate B ($0.3$). Then $Q = \begin{bmatrix} 0.5 & 0.5 \\ 0.2 & 0 \end{bmatrix}$, $R = \begin{bmatrix} 0 & 0 \\ 0.5 & 0.3 \end{bmatrix}$, $(I - Q)^{-1} = \begin{bmatrix} 2.5 & 1.25 \\ 0.5 & 1.25 \end{bmatrix}$ and both P and I reach A with probability $0.625$ and B with $0.375$; the expected numbers of steps to commitment are $3.75$ from P and $1.75$ from I. In the simulated branching data of Example 7.2.1, with a pseudotime-directed kernel, progenitor cells have fate probabilities near $0.44$ for fate A, and the probabilities sharpen after the branch point: $75\,\%$ of the cells within the first tenth of a branch, and all cells in its later part, have their larger probability for the branch they are on (figure in 7.2.2, panel C).
 
+:::
+
 Fate probabilities make testable predictions: genes whose expression correlates with the probability of one fate among the still uncommitted cells are candidate drivers of the decision. They inherit all the weaknesses of the kernel, however; a probability computed from wrong velocities is precisely wrong.
 
 ## 7.4. Lineage Tracing
@@ -238,6 +242,8 @@ The cost is dominated by the neighborhood sums, $O(F \cdot \bar d^{\,\ell})$ for
 
 **Example 7.6.1** Take four factors and six target genes, with gene scores $G$ from fold changes and adjusted p-values: $T_1$ ($\log_2\mathrm{FC} = 3$, $p = 10^{-8}$, $G = 24$), $T_2$ ($1.5$, $10^{-3}$, $4.5$), $T_3$ ($0.5$, $0.2$, $0.35$), $T_4$ ($2$, $10^{-2}$, $4$), and genes $g_1, \dots, g_6$ with $G = 40, 31.5, 15, 0.04, 21, 0.09$. Let $T_1$ regulate $g_1$, $g_2$ and $T_2$; $T_2$ regulate $g_3$; $T_3$ regulate $g_1$, $g_2$, $g_3$, $g_5$; and $T_4$ regulate $g_4$, $g_5$, $g_6$. Then $N_{T_1} = (40 + 31.5 + 4.5)/3 + 15/(2 \cdot 1) = 32.8$, $N_{T_2} = 15$, $N_{T_3} = (40 + 31.5 + 15 + 21)/4 = 26.9$ and $N_{T_4} = 7.0$. The rank sums are $2$ ($T_1$), $5$ ($T_2$), $6$ ($T_3$) and $7$ ($T_4$). $T_3$, hardly induced itself, ranks second in the network score because its targets are; this is how the method finds factors that are expressed in both cell types but act differently. Its targets overlap those of $T_1$ except $g_5$, so it is kept as covering an additional identity gene.
 
+:::
+
 Mogrify predicted known conversions and new ones, two of which were confirmed, including the conversion of dermal fibroblasts into keratinocytes. CellOracle (Kamimoto and colleagues, 2023) takes a dynamic view: it infers a cell-type-specific gene regulatory network from single-cell RNA and chromatin accessibility data ([7.9.8](/7.9.8), [7.9.11](/7.9.11)), simulates the shift in expression caused by knocking out or overexpressing a factor by propagating the change through the linear network for a few steps, and compares the simulated shift with the developmental flow on the neighbor graph, predicting whether the perturbation pushes cells toward or away from a fate. Both approaches inherit the incompleteness of the networks they use, and their predictions are starting points for experimental screens, now often run by CRISPR activation of candidate factors (**CRISPR activation**, [7.2.24](/7.2.24)).
 
 ## 7.7. Perturbation Atlases
@@ -261,6 +267,8 @@ The running sums are the same as those of the **enrichment score** of gene set e
 **Example 7.7.1** In the figure, a query of $100$ up and $100$ down genes is scored against references of $10\,000$ ranked genes. A reference that mimics the query gives $\mathrm{ks}_{\mathrm{up}} = +0.431$ and $\mathrm{ks}_{\mathrm{down}} = -0.410$, a raw score of $+0.841$; a reversing one gives $-0.871$. Among $2000$ random references, $49\,\%$ score exactly $0$ because the two sets deviate in the same direction, and $99\,\%$ have $\lvert\text{score}\rvert < 0.26$; references with half the shift score on average $+0.48$ and $-0.47$, all beyond $0.35$ in absolute value. The zero rule makes the score conservative but produces a spike in the null distribution, so significance is assessed by permutation.
 
 ![The connectivity score (Algorithm 7.7.1) on simulated profiles: a query of 100 up and 100 down genes against references ranking 10000 genes. A: running sums for a reference that mimics the query: the up set (red) deviates early, the down set (blue) late. B: a reference that reverses the query. C: scores of 2000 random references and of 20 weaker mimicking and 20 weaker reversing references (logarithmic axis)](./plots/cmap_score.py)
+
+:::
 
 Reversal of disease signatures has suggested candidates for drug repurposing that were then tested in animal models, but most such predictions do not survive: cell lines differ from the diseased tissue, and a reversed signature need not reverse the disease. The method is better at recognizing mechanisms (compounds with the same target give similar profiles) than at curing.
 

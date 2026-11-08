@@ -180,6 +180,8 @@ Acceptance criteria:
 3. Given an account without orders, when the report is generated, then it lists the account with zero revenue.
 ```
 
+:::
+
 The third criterion is written in the Given–When–Then form of behavior-driven development, which translates directly into an automated acceptance test ([4.14.12](/4.14.12)). A story is a placeholder for a conversation, not a complete specification: the details are agreed when the team works on it. Requirements engineering ([4.14.4](/4.14.4)) compares stories with use cases and other forms of specification.
 
 Stories are grouped in a hierarchy of scope. An *epic* is a large body of work that is broken down into stories and delivered over several sprints, typically within a month or a quarter; its scope is flexible, as stories are added or removed. An *initiative* is a collection of epics that drive toward a common goal over several quarters to a year. Bill Wake's mnemonic INVEST lists the properties of a good story:
@@ -279,6 +281,8 @@ where PM is effort in person-months, KSLOC the size in thousands of source lines
 
 **Example 2.5.1** For a 50 KSLOC project with all factors nominal ($\sum \mathrm{SF}_j = 18.97$, all $\mathrm{EM}_i = 1$): $E = 1.0997$, $\mathrm{PM} = 2.94 \times 50^{1.0997} \approx 217$ person-months, $F \approx 0.318$, $\mathrm{TDEV} \approx 3.67 \times 217^{0.318} \approx 20$ months, which corresponds to an average team of about 11 people.
 
+:::
+
 Two cautions apply to every estimate. Early estimates are very uncertain: at the stage of the initial concept, actual effort commonly ends up anywhere from a quarter to four times the estimate (the *cone of uncertainty*), and the range narrows only as requirements and design are settled. And people and months are not interchangeable: *Brooks's law* states that adding manpower to a late software project makes it later, because new members need training and the number of communication paths among $n$ people grows as $n(n-1)/2$.
 
 ### 2.5.2. Activity Networks and the Critical Path
@@ -317,6 +321,8 @@ flowchart LR
 | M | 5 | 40 | 45 | 40 | 45 | 0 |
 
 The project takes 45 days, and the critical path is A–B–C–D–H–K–L–M. Speeding up E, which has 13 days of slack, gains nothing. Shortening C by 3 days shortens the project by 3 days, but shortening it by 5 days gains only 4, because the path through F and G (slack 4) then becomes critical.
+
+:::
 
 A *Gantt chart* (after Henry Gantt, 1861–1919) shows the same schedule as horizontal bars on a calendar, which makes it the usual way to communicate a plan.
 
@@ -359,6 +365,8 @@ gantt
 ```
 
 The project ends on 11 May, after 41 days. The critical path is A–B–C–D–E–J–K–L ($3 + 3 + 8 + 7 + 10 + 6 + 2 + 2 = 41$). Increment two's analysis, design and coding (G, H, I) finish on 22 April but testing it (J) also depends on the testing of increment one (E), which ends on 1 May, so these three tasks have 9 days of slack; installing increment one (F) has 3 days. The chart also exposes the real bottleneck: testing increment one is the longest task, and it is on the critical path.
+
+:::
 
 In agile projects the critical path matters less inside an iteration, where the Daily Scrum reveals dependencies every day. It matters between teams and over longer horizons. Teams on multi-team projects end their Sprint Planning with a five-minute *rolling lookahead* at the next one to three sprints to identify dependencies between teams. On a very complex project, the first defense is to write mostly independent backlog items: if items can be developed in any order, critical-path problems disappear. Only when that is impossible is it worth drawing a task network of the next three to six months of stories and analyzing its critical path.
 

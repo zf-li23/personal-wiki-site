@@ -57,6 +57,8 @@ the cell responding when $R$ exceeds its threshold $\theta$. With thresholds dis
 
 ![Competence limits the response to an inducer in time. A: the competence of a responding tissue rises at about 4 h and falls at about 10 h (Formula 3.4.1); three 2-h pulses of inducer give integrated signals R of 0.34, about 2 and 0.63 h. B: fraction of cells responding against the start time of the pulse, for pulses of 1, 2 and 4 h (thresholds log-normal with median 1 h): the response is possible only when the pulse overlaps the competence window (shaded), and short signals work only in its middle](./plots/competence-window.py)
 
+:::
+
 The model shows why the timing of an experiment matters: a negative result of a graft or of adding a factor may mean that the responding tissue was not, or no longer, competent. It also shows why development can use the same signal at different times for different purposes: what changes is the competence of the cells.
 
 ### 3.4.2. Instructive and Permissive Interactions
@@ -161,6 +163,8 @@ and a cell adopts the 1° fate if $a_i > 1/2$, otherwise the 2° fate if $n_i$ e
 **Example 3.7.1** With $s_0 = 1$, $\ell = 0.7$, $K = 0.35$, $K_n = 0.3$ and a 2° threshold $n_i > 0.4$, P6.p receives $s = 1$ and reaches $a \approx 0.98$, while P5.p and P7.p receive $s = 0.24$, so $h \approx 0.18$, and their lateral input from P6.p ($n \approx 0.98$) suppresses their 1° program tenfold: they become 2°. P4.p and P8.p receive almost neither signal and become 3°. Setting $s_0 = 0$ (anchor cell ablated) gives all 3°; removing the lateral term gives 3° 3° 3° 1° 3° 3°; fixing $n_i$ high (LIN-12 gain of function) gives all 2°. With a uniform excess of LIN-3 ($s_i = 2$) all cells start alike, and **lateral inhibition** amplifies small differences into an alternating pattern of 1° and 2° cells; without LIN-12 all six become 1°.
 
 ![A minimal model of vulval patterning (Formula 3.7.1). Top: LIN-3 from the anchor cell, highest at P6.p. Rows: fates of P3.p–P8.p in the model: 1° (blue), 2° (pink), 3° (gray). The wild type gives 3° 3° 2° 1° 2° 3°; without the anchor cell all are 3°; without LIN-12 there are no 2° fates; with constitutive LIN-12 all are 2°; uniform excess LIN-3 gives alternating 1° and 2° fates by lateral inhibition, and all 1° fates without LIN-12](./plots/vulva-model.py)
+
+:::
 
 The vulva shows in miniature the logic of much of development: a graded paracrine signal gives a coarse spatial cue, juxtacrine signaling refines it into sharp, non-overlapping fates, and the same pathways (EGF, Notch, Wnt, which also acts on the precursors) are reused, here and elsewhere, with different outcomes.
 

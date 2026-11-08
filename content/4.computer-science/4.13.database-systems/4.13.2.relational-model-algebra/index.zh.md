@@ -1,7 +1,7 @@
 ---
 title: 关系模型与关系代数
 description: Codd 定义的关系模型：域、属性、关系模式、元组与关系；超码、候选码、主码、外码与参照完整性；关系代数（选择、投影、并、差、笛卡儿积、更名，以及导出的连接、交和除）及其导出运算的证明与查询实例；代数等价式；元组关系演算、域关系演算与关系完备性；空值与三值逻辑。
-source_hash: 7635f9ea1097
+source_hash: 8cb4888dc6aa
 ---
 
 E. F. Codd 在 1970 年提出的**关系模型**是 SQL 和大多数**数据库系统**的基础。它的思想是用一种简单的结构，即关系，来表示所有数据，关系就是离散数学意义上的元组的集合（[1.2](/1.2)），并用关系上的一小组运算，即关系代数，来回答查询。关系不涉及自身如何存储，因此该模型具有 [4.13.1](/4.13.1#sec-1.3.2) 所述的**物理数据独立性**；运算数量少且定义精确，因此查询可以被分析、改写和优化（[4.13.9](/4.13.9)）。本章定义模型的结构与码、关系代数及其与关系演算的关系，以及每个实际系统都要增加的空值。下一章 [4.13.3](/4.13.3) 说明 SQL 如何表达这一切；本章的例子已经使用它所创建的基因表达**数据库**。
@@ -69,6 +69,8 @@ $\mathit{gene}$ 当前实例的一部分（标识符只保留末几位数字）�
 **定义 2.2.2（主码）** 关系模式的**主码**是设计者选定的、用作识别元组的主要手段的候选码。主码属性不能为空。
 
 **例 2.2.1** 在 $\mathit{gene}$ 中，标识符 $\{\mathit{gene\_id}\}$ 与符号 $\{\mathit{symbol}\}$ 都是**候选码**（HGNC 给每个基因分配唯一的符号），而 $\{\mathit{gene\_id}, \mathit{chrom}\}$ 是**超码**但不是候选码。**主码**取 $\mathit{gene\_id}$，因为符号偶尔会改名，而 Ensembl 标识符是稳定的。在 $\mathit{measurement}$ 中，$\mathit{sample\_id}$ 和 $\mathit{gene\_id}$ 单独都不是码，但二者构成的对是码：每个基因在每个样本中至多测量一次。$\mathit{gene}$ 的另一个候选码在 SQL 中用 `UNIQUE` 声明。
+
+:::
 
 每个关系至少有一个超码，即它全部**属性**的集合 $R$（关系是集合，不会有两个元组处处相同），因而至少有一个候选码。好的主码应当极小、不为空，并且是*稳定*的，因为对该元组的每个引用都要存储它。没有合适的自然属性时，就使用由系统生成的代理键（surrogate key）（[4.13.3](/4.13.3#sec-3.2.2)）。
 
@@ -194,6 +196,8 @@ $$
 
 因为 EGFR 在 S05 和 S06 中缺失。在定理 2.3.3 的公式中，$(\Pi_Y(r) \times s) - r$ 是两个缺失的（样本，基因）对 (S05, EGFR) 与 (S06, EGFR) 构成的集合。SQL 没有**除**运算符；[4.13.4](/4.13.4#sec-4.2) 用 `NOT EXISTS` 和计数来表达这个查询。
 
+:::
+
 *赋值* $\mathit{temp} \leftarrow E$ 把 $E$ 的结果存放在一个临时名字之下，供后面的表达式使用，使长查询更易读；它是 SQL 的 `WITH` 子句在代数中的对应物。
 
 ### 2.3.3. 扩展运算
@@ -227,6 +231,8 @@ GAPDH（Glycolysis）和 CDKN1A（p53-dependent G1 arrest）在肺样本中超�
 $$
 \Pi_{\mathit{name}}\Bigl(\bigl(\sigma_{\mathit{tpm} > 100}(\mathit{measurement}) \bowtie \sigma_{\mathit{tissue} = \text{lung}}(\mathit{sample})\bigr) \bowtie \mathit{gene\_pathway} \bowtie \mathit{pathway}\Bigr).
 $$
+
+:::
 
 只有当共有的属性名含义相同时，这里使用自然连接才是安全的。把 $\mathit{pathway}$ 与 $\mathit{gene}$ 连接会得到笛卡儿积，而连接两个都有属性 $\mathit{name}$ 但含义不同的关系，则会悄悄地要求名字相等。
 
@@ -285,6 +291,8 @@ $$
 $$
 \{\, t \mid \exists s \in \mathit{sample}\,\bigl(t[\mathit{sample\_id}] = s[\mathit{sample\_id}] \land \forall g \in \mathit{gene}\; \exists m \in \mathit{measurement}\,(m[\mathit{sample\_id}] = s[\mathit{sample\_id}] \land m[\mathit{gene\_id}] = g[\mathit{gene\_id}])\bigr) \,\}.
 $$
+
+:::
 
 并非每个公式都是合理的查询。$\{\, t \mid \lnot (t \in \mathit{gene}) \,\}$ 描述所有不是基因的元组，这是一个无限集，取决于**域**而不是**数据库**。如果一个演算表达式的结果中所有的值都来自其中提到的**关系**和常量，它就是*安全*的；安全性的形式定义对否定和量词加以限制，使这一点成立。SQL 的 `NOT EXISTS` 与 `EXISTS` 子查询（[4.13.4](/4.13.4#sec-4.1)）直接取自元组关系演算。
 

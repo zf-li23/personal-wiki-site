@@ -92,6 +92,8 @@ The transcript fractions are $\rho_t = (\alpha_t/\tilde\ell_t)/\sum_u(\alpha_u/\
 
 ![The EM algorithm for two isoforms. A: isoform T1 (exons 1–3) and T2 (exons 1 and 3), and the three compatibility classes of 2000 simulated reads. B: the estimated read fraction of T1 from five starting values, converging to the maximum-likelihood estimate (dashed). C: the log-likelihood increases at every iteration](./plots/isoform_em.py)
 
+:::
+
 Transcript estimates are summed to genes for gene-level testing (the tximport approach), using the estimated counts and an offset for the average transcript length of each gene in each sample, so that a change in isoform usage is not mistaken for a change in expression. Pseudoalignment is an order of magnitude faster than spliced alignment and gives comparable gene-level results; alignment remains necessary for new transcripts, variants and visualization.
 
 ```bash

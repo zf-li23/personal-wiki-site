@@ -1,7 +1,7 @@
 ---
 title: Combinational Logic Circuits
 description: Analysis and design of combinational circuits; decoders (enable inputs, expansion, address decoding, display decoding), multiplexers and implementing arbitrary functions with them, encoders and priority encoders, magnitude comparators, parity checkers; ROM and PLA as arrays implementing combinational functions; the causes, detection and elimination of races and hazards.
-source_hash: db4a443d245f
+source_hash: e784da5c12ce
 ---
 
 A circuit whose output depends only on the present inputs is called a combinational circuit. This chapter first gives the general method of analyzing and designing combinational circuits, which combines the tools of [Logic Algebra and Minimization](/4.9.2) with the implementation constraints of [Logic Gates](/4.9.3); it then discusses, one by one, the medium-scale combinational building blocks that recur in digital systems: decoders, multiplexers, encoders, comparators and **parity check** circuits. These blocks are both stand-alone chips of the 74 series and basic components inside processors; for example, the read ports of a register file are multiplexers, the opcode of an instruction goes through a decoder, and an interrupt controller uses a priority encoder. Next, read-only memories and programmable logic arrays are viewed as regular arrays that implement arbitrary combinational functions; finally we discuss the races and hazards caused by gate delays. Adders and the arithmetic logic unit are the subject of the [next chapter](/4.9.5).
@@ -60,6 +60,8 @@ module majority3 (
 endmodule
 ```
 
+:::
+
 In today's design flow, steps 3 and 4 are done by the synthesis tool: the designer writes a truth table or an expression, and the tool chooses the implementation according to the cell library of the target technology (or the lookup tables of an FPGA). The manual methods of analysis and design remain the basis for understanding synthesis results and for estimating circuit size and delay.
 
 ## 4.2. Decoders
@@ -116,6 +118,8 @@ The most important use of decoders in computers is address decoding: the process
 | 001 | Chip 1 | `0x20`–`0x3F` |
 | … | … | … |
 | 111 | Chip 7 | `0xE0`–`0xFF` |
+
+:::
 
 Peripheral registers can be assigned addresses in the same way, which is called memory-mapped I/O; modern processors such as RISC-V access peripherals this way ([Computer Organization](/4.10)).
 
@@ -192,6 +196,8 @@ By definition, the output $\sum m_iD_i$ of a $2^n$-to-$1$ multiplexer is exactly
 |---|---|---|---|---|---|---|---|---|
 | Minterms | $m_0, m_1$ | $m_2, m_3$ | $m_4, m_5$ | $m_6, m_7$ | $m_8, m_9$ | $m_{10}, m_{11}$ | $m_{12}, m_{13}$ | $m_{14}, m_{15}$ |
 | $D_i$ | $0$ | $D$ | $1$ | $D$ | $D$ | $0$ | $D$ | $1$ |
+
+:::
 
 This method needs no minimization, and when the function changes only the connections of the data inputs need to change. This is exactly the idea behind the lookup table (LUT), the basic logic element of an FPGA: a $k$-input lookup table is a $2^k$-to-$1$ multiplexer whose data inputs are connected to $2^k$ programmable memory bits, and storing the truth table implements an arbitrary $k$-variable function ([Programmable Logic and HDL](/4.9.9)).
 
@@ -285,6 +291,8 @@ Any combinational function can be written as a sum of products, so it can be imp
 
 **Example 4.7.1** Compute the square of a $3$-bit binary number $X$ with a ROM. $X^2 \le 49$ requires $6$ output bits, but bit $0$ of $X^2$ equals bit $0$ of $X$ and bit $1$ is always $0$ (a square modulo $4$ can only be $0$ or $1$), so an $8$-word $\times$ $4$-bit ROM suffices to store the remaining $4$ bits.
 
+:::
+
 The drawback of a ROM is that its size grows exponentially with the number of input bits: however many product terms the function needs, the AND array produces all $2^n$ minterms.
 
 ### 4.7.2. PLA
@@ -311,6 +319,8 @@ The AND array has $8$ columns ($4$ variables and their complements) and $7$ rows
 | PLA | Programmable | Programmable | Produces only the needed product terms; most flexible |
 | PAL | Programmable | Fixed | A fixed number of product terms per output; fast and easy to manufacture |
 
+:::
+
 The regular structure of a PLA was also used for control logic inside processors (instruction decoding). The architectures of programmable devices such as PAL, GAL, CPLD and FPGA are covered in [Programmable Logic and HDL](/4.9.9).
 
 ## 4.8. Races and Hazards
@@ -324,6 +334,8 @@ So far we have treated combinational circuits as ideal functions. In fact every 
 ![A static-1 hazard: for F = AB + A'C with B = C = 1, after A falls, AB becomes 0 first and A'C becomes 1 one gate delay later, so the output shows a brief 0; after adding the consensus term BC, the glitch disappears](./plots/static-hazard.py)
 
 **Example 4.8.1** Take $F = AB + \overline{A}C$ with $B = C = 1$, so that $F = A + \overline{A} = 1$ regardless of $A$. But $\overline{A}$ is produced by an inverter and lags $A$ by one gate delay. When $A$ goes from $1$ to $0$, the AND gate $AB$ first outputs $0$, while the AND gate $\overline{A}C$ outputs $1$ only one more gate delay later; during this interval both AND gates output $0$, and $F$ shows a negative pulse about one gate delay wide. Dually, $F = (A + B)(\overline{A} + C)$ with $B = C = 0$ gives $F = A\overline{A} = 0$ and may show a positive pulse, a static-0 hazard.
+
+:::
 
 The above are hazards caused by the change of a single input, called logic hazards; they depend on the specific structure of the circuit and can be eliminated by modifying the circuit. When several inputs change at the same time, even if every gate is ideal, the inputs arrive in different orders and the circuit briefly "passes through" intermediate input combinations; if the outputs for the intermediate combinations differ, a glitch results. This is called a function hazard, which is a property of the function itself and cannot be eliminated by adding redundant terms.
 

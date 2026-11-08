@@ -181,6 +181,8 @@ and each pool is consumed by DNA synthesis in proportion to its share $p_X$ of t
 
 ![Simulation of the model of Example 28.4.1. (A) Starting from empty pools, the feedback loops of the specificity and activity sites bring the four dNTPs to a balanced steady state within about 20 minutes. (B) Steady-state pools against an extra influx of dATP from deoxyadenosine, as in adenosine deaminase deficiency: above a threshold dATP shuts the enzyme down at the activity site and dGTP, dCTP and dTTP collapse (logarithmic scale). (C) Steady-state pools against an extra influx of dTTP from thymidine: dTTP shifts the specificity site toward GDP, dGTP rises and dCTP falls, which stops DNA replication (the thymidine block)](./plots/rnr-pool-model.py)
 
+:::
+
 In mammals the supply of dNTPs is coupled to the cell cycle also by the amount of enzyme: the R2 subunit is made in S phase and degraded in mitosis, and a p53-inducible R2 variant (p53R2) supplies dNTPs for repair in resting cells ([7.2.8](/7.2.8)). Hydroxyurea, which scavenges the tyrosyl radical, and gemcitabine, a difluoro analog of deoxycytidine whose diphosphate inactivates the enzyme, are used against cancer.
 
 ### 28.4.4. Thymidylate

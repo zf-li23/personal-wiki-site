@@ -15,6 +15,8 @@ This chapter carries the inference for the mean of a normal population ([3.2.4](
 |---|---|---|---|---|---|
 | 5.118 | 5.021 | 4.717 | 3.668 | 4.592 | 5.101 |
 
+:::
+
 Natural questions are: Is the mean vector equal to a hypothesized value? How confident are we about the mean vector as a whole? How confident are we about an integrated value such as $\frac{1}{2}\mu_{\text{Achievement}} + \frac{1}{2}\mu_{\text{Independence}}$? And what if several such integrated values are of interest at once?
 
 Throughout the chapter we assume that $\boldsymbol{X}_1, \dots, \boldsymbol{X}_n$ is a random sample from $\mathcal{N}_p(\boldsymbol{\mu}, \Sigma)$ with both $\boldsymbol{\mu}$ and $\Sigma$ unknown: the $\boldsymbol{X}_j$ are mutually independent and each $\boldsymbol{X}_j \sim \mathcal{N}_p(\boldsymbol{\mu}, \Sigma)$. The point estimators are $\bar{\boldsymbol{X}}$ and $S = \frac{1}{n-1}\sum_j(\boldsymbol{X}_j - \bar{\boldsymbol{X}})(\boldsymbol{X}_j - \bar{\boldsymbol{X}})^{\mathsf T}$, which are unbiased (Theorem 2.2.1), are the maximum likelihood estimators up to the factor $\frac{n-1}{n}$ (Theorem 2.5.1), and are sufficient (Theorem 2.5.2). Inference needs their joint distribution.

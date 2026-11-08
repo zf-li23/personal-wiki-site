@@ -694,6 +694,8 @@ Refinement adjusts the parameters of the model (coordinates, B-factors, occupanc
 
 **Example 10.12.1 (Observations per Parameter)** Lysozyme has about $1000$ non-hydrogen atoms, so an isotropic model has $4000$ parameters. By Example 10.2.2 there are about $2300$ unique reflections at $3.0\,\text{Å}$, $7800$ at $2.0\,\text{Å}$ and $18\,000$ at $1.5\,\text{Å}$. At $3\,\text{Å}$ there are fewer observations than parameters, at $2\,\text{Å}$ only two per parameter. A protein model refined against X-ray data alone would be underdetermined or badly overfitted at all but atomic resolution.
 
+:::
+
 The deficit is filled with prior knowledge. **Bond lengths**, **bond angles**, planarity of peptides and aromatic rings, chirality and non-bonded contacts are known from small-molecule structures (the Engh–Huber library) and enter the refinement as restraints, additional "observations" with a tolerance. The refinement minimizes
 
 $$

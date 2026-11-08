@@ -1,6 +1,6 @@
 ---
 title: First-Order Differential Equations
-source_hash: aa161314ea20
+source_hash: b172b7f4ac98
 ---
 
 Many problems in geometry and physics do not give the unknown function itself but a relation between the function and its derivatives: the slope of the tangent line at each point of a curve, the velocity and acceleration of a body, the growth rate of a population. Such a relation is a differential equation, and finding the functions that satisfy it is "solving the differential equation". Single-variable integration ([2.2.6](/2.2.6), [2.2.7](/2.2.7)) finds antiderivatives, which amounts to solving the simplest equation $y'=f(x)$; this chapter extends that task to the case where the unknown function also appears on the right-hand side.
@@ -22,6 +22,8 @@ y'=\tan\theta=\frac{\rho g}{H}\int_0^x\sqrt{1+y'(s)^2}\,\mathrm{d}s.
 $$
 
 Differentiating both sides and writing $a=\rho g/H$, we obtain $y''=a\sqrt{1+y'^2}$ with $y(0)=0$, $y'(0)=0$. This equation involves the second derivative; Example 15.5.4 will solve it and obtain $y=\dfrac{\cosh ax-1}{a}$.
+
+:::
 
 The first two examples require only integration. In the third, the derivatives of the unknown function are tied to one another, and new methods are needed.
 
@@ -91,6 +93,8 @@ is differentiable on $\mathbb{R}$, satisfies the equation and has $y(0)=0$. The 
 
 ![Several solutions of the initial value problem y' = 3y^{2/3}, y(0) = 0: each runs along the x-axis up to x = c and then branches off as the cubic (x - c)^3; c ranges over all nonnegative reals, so there are infinitely many solutions](./plots/nonuniqueness.py)
 
+:::
+
 For a first-order linear equation $y'+p(x)y=q(x)$, as long as $p$ and $q$ are continuous on an interval $I$, the solution of the initial value problem exists and is unique on the whole of $I$ (the formula in Theorem 15.3.1 gives it explicitly).
 
 ## 15.2. Separable Equations and Equations Reducible to Them
@@ -154,6 +158,8 @@ Type (1): $y'=f(ax+by+c)$ ($b\ne0$). Let $u=ax+by+c$. Then $u'=a+bf(u)$, which i
 
 **Example 15.2.6** Solve $y'=(2x+y+3)^2$. Let $u=2x+y+3$; then $u'=2+u^2$, $\dfrac{\mathrm{d}u}{2+u^2}=\mathrm{d}x$, $\dfrac{1}{\sqrt2}\arctan\dfrac{u}{\sqrt2}=x+C$, so the general solution is $2x+y+3=\sqrt2\tan(\sqrt2x+C)$.
 
+:::
+
 Type (2): $y'=f\!\left(\dfrac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}\right)$. There are three cases:
 
 - $c_1=c_2=0$: the right-hand side is a function of $y/x$, so the equation is homogeneous.
@@ -176,6 +182,8 @@ Integration gives $\dfrac13\ln\lvert4w-1\rvert+\dfrac23\ln\lvert w+2\rvert=-\ln\
 $$
 (x-4y+3)(2x+y-3)^2=C.
 $$
+
+:::
 
 Type (3): $yf(xy)\,\mathrm{d}x+xg(xy)\,\mathrm{d}y=0$. Let $z=xy$. Then $y=\dfrac zx$ and $x\,\mathrm{d}y=\mathrm{d}z-\dfrac zx\,\mathrm{d}x$; substituting gives $\dfrac zxf(z)\,\mathrm{d}x+g(z)\Big(\mathrm{d}z-\dfrac zx\mathrm{d}x\Big)=0$, that is,
 
@@ -299,6 +307,8 @@ so $y^{-4}=-x+\dfrac14+C\mathrm{e}^{-4x}$; there is also the solution $y=0$.
 
 (3) Solve $y'+\dfrac yx=ay^2\ln x$. Letting $u=y^{-1}$ gives $u'-\dfrac ux=-a\ln x$, and $u=x\big(-\int\frac{a\ln x}{x}\,\mathrm{d}x+C\big)=x\Big(C-\dfrac a2\ln^2x\Big)$, that is, $y=\dfrac{1}{x\big(C-\frac a2\ln^2x\big)}$; there is also the solution $y=0$.
 
+:::
+
 Bernoulli equations illustrate the power of a change of variables: an equation that looks nonlinear becomes linear once we change the unknown function. As another example, multiplying both sides of $y'=1+\mathrm{e}^{-y}\sin x$ by $\mathrm{e}^y$ gives $(\mathrm{e}^y)'=\mathrm{e}^y+\sin x$, a linear equation for $u=\mathrm{e}^y$, whose solution is $\mathrm{e}^y=C\mathrm{e}^x-\dfrac12(\sin x+\cos x)$.
 
 ## 15.4. Exact Equations and Integrating Factors
@@ -395,6 +405,8 @@ $$
 \frac{\mathrm{d}x}{x}+\Big(\frac{y^4}{x^5}\,\mathrm{d}x-\frac{y^3}{x^4}\,\mathrm{d}y\Big)=\mathrm{d}\Big(\ln\lvert x\rvert-\frac{y^4}{4x^4}\Big)=0,
 $$
 and the general solution is $\ln\lvert x\rvert-\dfrac{y^4}{4x^4}=C$, that is, $x=C\mathrm{e}^{y^4/(4x^4)}$. (It is also a homogeneous equation and can be solved by Algorithm 15.2.2.)
+
+:::
 
 More often an integrating factor is found by inspection: separate out the terms of the equation that can be combined into one of the common differentials (the numerators in the table), and choose an integrating factor that makes them exact while keeping the remaining terms exact as well.
 

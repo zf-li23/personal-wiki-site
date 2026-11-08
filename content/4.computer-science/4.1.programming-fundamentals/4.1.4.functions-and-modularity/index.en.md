@@ -1,7 +1,7 @@
 ---
 title: Functions and Modularity
 description: Functions in programs and their four elements; declaration, definition and call; parameters and arguments, pass by value and pass by reference, and Python's passing of object references; scope, local and global variables, lifetime; the call stack and stack frames; modular design by top-down stepwise refinement; eliminating repetition with functions (the calendar program); multiple files and modules.
-source_hash: 1422dc1e8b08
+source_hash: d435ef6f6f69
 ---
 
 Loops eliminate "the same piece of code repeated consecutively", but programs contain another kind of repetition: the same computation appears in different places with different data, such as testing whether a number is prime in several places. A function packages a computation, gives it a name, and calls it with different arguments wherever it is needed. The function is the basic unit of procedural programming: a complex problem is decomposed into several subproblems, each solved by one function, which is modularity. This chapter covers defining and calling functions, how arguments are passed, where variables are visible, how calls are implemented with the call stack, and how to organize programs with functions. A function that calls itself is recursion ([4.1.10](/4.1.10)); organizing functions together with the data they operate on leads to the object-oriented programming of [4.2](/4.2); the call stack as a data structure is in [4.3.4](/4.3.4).
@@ -399,6 +399,8 @@ print_month(2026, 10)
 ```
 
 1 October 2026 is a Thursday, so there are three blanks before the dates in the first line of output. Each function is short and does one thing, and can be tested separately: `weekday(2026, 10, 1)` should be $3$ and `days_in_month(2024, 2)` should be $29$. To print the calendar of a whole year, it suffices to call `print_month` in a loop over $m = 1, \dots, 12$ in `main`. The `calendar.month(2026, 10)` of the Python standard library gives the same result and can be used for checking.
+
+:::
 
 This example shows the role of functions at two levels: at the implementation level, the same computation is written once and a change is made in only one place; at the design level, the problem is decomposed into several subproblems that can be understood and verified separately, and the complexity of the program is greatly reduced.
 

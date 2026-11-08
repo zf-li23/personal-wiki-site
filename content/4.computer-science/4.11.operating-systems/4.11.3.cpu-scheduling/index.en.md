@@ -73,6 +73,8 @@ With interactive users the response time matters. STCF is poor here: in Example 
 
 **Example 3.3.1** A, B and C arrive at time 0, each with run time 5. SJF (here the same as FIFO) runs them one after another: response times 0, 5, 10 (mean 5), turnaround times 5, 10, 15 (mean 10). RR with a time slice of 1 runs A, B, C, A, B, C, …: response times 0, 1, 2 (mean 1), but A completes only at 13, B at 14, C at 15, so the mean turnaround is 14, worse than SJF and close to the worst possible.
 
+:::
+
 The examples can be checked with a small simulator:
 
 ```python
@@ -284,6 +286,8 @@ Eligibility preserves fairness (no task runs ahead of its share by more than a s
 | 11 | 11/2 | 6 | 5 | B | 9 | 6 | B |
 
 In the first 12 ms each task receives 6 ms, as their equal weights demand, but B never waits more than 3 ms while A, which asked for long slices, gets them in one piece.
+
+:::
 
 In Linux the default requested slice is the *base slice* (`/sys/kernel/debug/sched/base_slice_ns`, about 3 ms on machines with 8 or more CPUs); since Linux 6.12 a task may request a different one through the `sched_setattr` system call. The lag of a task that sleeps is remembered and decays, so that a task cannot gain service by sleeping or lose it by being briefly blocked. The real implementation keeps the runnable tasks in an augmented red-black tree that finds the eligible task with the earliest deadline in $O(\log n)$.
 

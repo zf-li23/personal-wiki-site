@@ -199,6 +199,8 @@ The three polymerizations of the **central dogma** run at very different speeds.
 
 **Example 20.5.1 (Timing the machines)** (a) *Replication.* The 4.6 Mb chromosome is copied by two **replisomes** moving in opposite directions from the **origin of replication**; at about $1000\,\mathrm{bp\,s^{-1}}$ each, replication takes $4.6\times10^6/2000 \approx 2300\,\mathrm{s} \approx 40\,\mathrm{min}$, the measured C period ([7.2.7](/7.2.7)). (b) *Transcription.* A typical mRNA of $1000\,\mathrm{nt}$ (a 300-residue protein) at $40$–$80\,\mathrm{nt\,s^{-1}}$ takes $15$–$25\,\mathrm{s}$. (c) *Translation.* The required $2.4\times10^5$ amino acids per second, divided among $2\times10^4$ ribosomes, give $12\,\mathrm{aa\,s^{-1}}$ per ribosome, close to the measured $12$–$20\,\mathrm{aa\,s^{-1}}$ (higher in fast growth); a 300-residue protein takes about $20\,\mathrm{s}$.
 
+:::
+
 Translation is slower per monomer than transcription, but each mRNA is translated by many ribosomes at once, spaced about 100 nucleotides apart in a **polysome**, and in bacteria translation begins on the nascent mRNA while it is still being transcribed. The net rate of a process is the speed of one machine times the number of machines, and the second factor is under regulation: growing faster requires more ribosomes rather than faster ones ([7.6.39](/7.6.39)).
 
 ### 20.5.2. Lifetimes and Dilution

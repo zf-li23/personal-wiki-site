@@ -1,7 +1,7 @@
 ---
 title: "Curve Fitting: Standard Curves, Nonlinear Regression and Dose Response"
 description: The three elements of a fit (parameters, their errors, goodness of fit); least squares as maximum likelihood under normal errors; weighted least squares, chi-square fitting and the Q value, replicates and the lack-of-fit test; Deming regression and Bland–Altman agreement analysis when both coordinates have error; Gauss–Newton and Levenberg–Marquardt iteration, starting values, asymptotic intervals, profile intervals and joint confidence regions for nonlinear least squares; the four-parameter logistic standard curve for ELISA, the quantification range and inverse prediction for unknown samples; dose-response curves, EC50 and relative potency, the extra-sum-of-squares F test of parallelism; correlated errors and over-interpretation; the F test and AIC for model comparison. The examples are the DNase ELISA and Puromycin enzyme kinetics.
-source_hash: 64459c8c2978
+source_hash: 14d163612015
 ---
 
 Most quantitative relationships in the laboratory are not straight lines: the optical density of an ELISA saturates in an S shape with concentration, the rate of an enzymatic reaction approaches a limit with substrate concentration according to the Michaelis–Menten equation, and the effect of a drug changes with dose according to the Hill equation. [7.7.10](/7.7.10) showed that forcing such relationships straight (using only a "linear range", or using a Lineweaver–Burk plot) produces systematic bias and distortion of the errors. This chapter explains how to fit mechanistically meaningful nonlinear models directly, and how to answer the three questions of a fit: what are the parameters, how uncertain are they, and does the model agree with the data. The first two sections set up the general framework (least squares and maximum likelihood, weighting and $\chi^2$); Section 11.3 treats the case in which both variables have error (method comparison); Section 11.4 covers the algorithms and intervals of nonlinear least squares; Sections 11.5 and 11.6 are the two commonest applications, standard curves and dose-response curves; and the chapter ends with correlated errors and model comparison. The examples are two laboratory data sets from main thread 4: the ELISA of rat serum DNase (whose duplicate wells were used in [7.7.2](/7.7.2)) and the enzyme kinetics of puromycin-treated and untreated cells (Puromycin). For the principle of ELISA see [7.1.7](/7.1.7); for the Michaelis–Menten equation and the biochemistry of enzyme kinetics see [6.3.17](/6.3.17) and [7.1.9](/7.1.9); for the Hill equation see [7.1.7](/7.1.7); the mathematics of nonlinear regression and iterative algorithms is in [3.3.6](/3.3.6) and [3.5.5](/3.5.5).
@@ -79,6 +79,8 @@ If the differences are approximately normal and do not vary with the mean, about
 
 **Example 11.3.1 (Automatic Blood Pressure Monitor)** In [7.7.1](/7.7.1) Example 1.1.1, at site C an automatic blood pressure monitor was compared with manual measurement in 98 people; the mean difference between the two was 14.0 mmHg with standard deviation 11.7. The 95% limits of agreement are $14.0 \pm 1.96 \times 11.7 = (-8.9, 36.9)$ mmHg: the automatic monitor reads 14 mmHg higher on average, and the individual differences range from reading nearly 9 mmHg low to reading 37 mmHg high. Correcting only the mean bias is not enough; the range of individual differences is too wide, and the two methods are not interchangeable.
 
+:::
+
 The figure below is a simulated method comparison: 100 patients are each measured once by the reference method and the new method, the standard deviation of the measurement error is 12 for both, and the new method reads 5 above the truth. The ordinary least-squares slope is 0.90 (diluted by the error of the reference method) and Deming regression ($\lambda = 1$) gives 1.00; the correlation of the two methods is 0.89, whereas the Bland–Altman plot shows a bias of 4.4 and limits of agreement $(-30.2, 38.9)$: the correlation is high yet individual readings can differ by more than 30.
 
 ![Comparison of two measurement methods (simulation: 100 patients, true values uniform on 80–200, measurement-error standard deviation 12 for both methods, new method 5 too high). A: new method against reference method, dotted line the identity line; the ordinary least-squares slope 0.90 is diluted by the error of the reference method, and the Deming regression slope is 1.00. B: Bland–Altman plot: the difference against the mean of the two methods, solid line the mean difference (bias 4.4), dashed lines the 95% limits of agreement (−30.2 and 38.9)](./plots/method-comparison.py)
@@ -104,6 +106,8 @@ When $\lambda$ is very small step 2 is a Gauss–Newton step, and when $\lambda$
 - From the starting value $(100, 1.0)$ far from the solution, the Gauss–Newton method jumps to negative parameters at the first step and then diverges; the residual sums of squares of the Levenberg–Marquardt method are 110 764, 74 872, 51 939, 2396, 1382, 1201, 1195.5, reaching the same solution at the 8th step.
 
 The converged result is $\hat V_{\max} = 212.7$ (standard error 6.95) and $\hat K_{\mathrm{M}} = 0.0641$ ppm (0.0083), with residual standard deviation $s = 10.9$ (10 degrees of freedom). For the untreated group: $\hat V_{\max} = 160.3$ (6.48), $\hat K_{\mathrm{M}} = 0.0477$ (0.0078), $s = 9.8$.
+
+:::
 
 Choice of starting values: read rough parameter values from the structure of the model, with $V_{\max}$ the largest observed rate and $K_{\mathrm{M}}$ the concentration at which the rate reaches half of it; or use the result of a linearization (Lineweaver–Burk or Hanes plot). Different starting values converging to different solutions, or iterations that do not converge, often indicate that the model is too complex or that the data are insufficient to determine the parameters.
 
@@ -239,6 +243,8 @@ The standard errors of least squares assume that the residuals are mutually inde
 
 ![Correlated residuals make ordinary standard errors too small (simulation): 200 two-dimensional Brownian trajectories (D = 1, 1000 steps). For each trajectory the time-averaged mean squared displacement (MSD) is computed at lags 1–100 and fitted by least squares with MSD = 4D·lag. A: MSD curves of 20 trajectories: adjacent lags share almost the same displacements, and each curve deviates smoothly from the true value (dashed). B: histogram of the 200 estimates of D (standard deviation 0.219), far wider than the range claimed by the ordinary least-squares standard error of a single fit (horizontal bar: mean ± 1.96 times the median standard error 0.0044)](./plots/msd-correlated.py)
 
+:::
+
 Another kind of over-interpretation is to treat a descriptive fit as a mechanism. [7.6.23](/7.6.23) discussed that a power-law exponent fitted to the overall MSD over one or two orders of magnitude (an "anomalous diffusion exponent of 0.7") is only a description: fractional Brownian motion, continuous-time random walks and diffusion among obstacles can all give the same exponent. A good fit shows only that the model can describe the data, not that it is the only model that can. Distinguishing mechanisms requires data for which the models make different predictions (the time-averaged MSD of single trajectories, the distribution of displacements, the velocity autocorrelation, perturbation experiments). Likewise, a good 4PL fit does not show that binding follows a cooperative mechanism, and a Hill slope $b = 0.94$ is not the number of binding sites.
 
 ## 11.8. Model Comparison
@@ -265,6 +271,8 @@ where $S$ is the residual sum of squares and the $M + 1$ counts the error varian
 | 5PL | 5 | 0.004684 | $-118.2$ | $-108.8$ |
 
 The three models fit almost equally well, and $\mathrm{AIC_c}$ prefers the simplest, 3PL. For the three models for the two Puromycin groups (Example 11.6.2): the full model 113.33, shared $K_{\mathrm{M}}$ 113.32, identical groups 138.41, in agreement with the conclusions of the F tests.
+
+:::
 
 The principles of model selection are the same as in [7.7.10](/7.7.10), Section 10.8: prefer mechanistic models; keep the number of parameters small relative to the data; report the selection process; and do not try dozens of curves on the same data and report the best. More flexible nonparametric curves (splines, Gaussian process regression) are suitable for describing shape but do not give biologically meaningful parameters.
 

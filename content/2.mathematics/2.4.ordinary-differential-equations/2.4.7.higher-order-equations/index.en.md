@@ -1,6 +1,6 @@
 ---
 title: Higher-Order Equations and Dependence on Initial Values
-source_hash: f978f39ca19e
+source_hash: 357867873adc
 ---
 
 This chapter moves from first-order equations to higher-order equations and systems. We first present several classes of higher-order equations whose order can be reduced, supplementing §15.5 of [2.2.15](/2.2.15). We then show that every higher-order equation or system in normal form is equivalent to a first-order system $\boldsymbol{y}'=\boldsymbol{f}(x,\boldsymbol{y})$; once a norm is introduced on $\mathbb{R}^n$, the existence and uniqueness theorems and the extension theorem of [2.4.4](/2.4.4) and [2.4.5](/2.4.5) carry over word for word. Finally we discuss how solutions depend on initial values and parameters: under a Lipschitz condition the solution depends continuously on initial values and parameters (the error grows at most exponentially, as controlled by Grönwall's inequality), and when the right-hand side is smooth the solution is differentiable, its derivatives satisfying the variational equation. This is a prerequisite for a differential equation to describe physical phenomena, and it is the starting point of the stability theory of [2.4.11](/2.4.11). The systematic theory of linear systems and higher-order linear equations is given in [2.4.8](/2.4.8) and [2.4.9](/2.4.9).
@@ -71,6 +71,8 @@ $$
 an elliptic integral; the larger the amplitude, the longer the period. For $E>\omega^2$ the pendulum passes over the top and rotates indefinitely; the borderline case $E=\omega^2$ corresponds to motions that approach the inverted position. In the $(\theta,\theta')$-plane, the level curves of the energy integral are the trajectories of the solutions.
 
 ![Energy level curves (theta')^2/2 - cos theta = E of the pendulum theta'' + sin theta = 0: the closed curves are oscillations, the curves above and below are rotations, and the separatrix through (±pi, 0) (E = 1) separates the two](./plots/pendulum-energy.py)
+
+:::
 
 The equation $y''=f(ax+by)$ ($b\ne0$) can also be reduced to this type: with $z=ax+by$ we get $z''=by''=bf(z)$.
 

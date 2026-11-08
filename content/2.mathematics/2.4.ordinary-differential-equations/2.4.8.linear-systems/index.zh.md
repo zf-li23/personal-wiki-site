@@ -156,6 +156,8 @@ $$
 $$
 与 Liouville 公式一致：$\operatorname{tr}(A)=\frac2t$，$\det\Phi(1)\exp\big(\int_1^t\frac2s\,\mathrm{d}s\big)=t^2$。在 $t_0=1$ 处的标准基解矩阵为 $\Phi(t)\Phi^{-1}(1)=\begin{bmatrix}2t-t^2&t^2-t\\2-2t&2t-1\end{bmatrix}$。
 
+:::
+
 变系数方程组一般没有求基解矩阵的通用方法。一个容易误用的"公式"是 $\exp\big(\int_{t_0}^tA(s)\,\mathrm{d}s\big)$：只有当 $A(t)$ 与 $\int_{t_0}^tA(s)\,\mathrm{d}s$ 可交换时它才是基解矩阵（例如 $A(t)=a(t)B$，$B$ 为常数矩阵）。上例中 $A(1)$ 与 $\int_1^2A(s)\,\mathrm{d}s$ 不可交换。
 
 ## 8.3. 非齐次方程组与常数变易公式
@@ -336,6 +338,8 @@ $$
 \mathrm{e}^{tA}=\begin{bmatrix}\mathrm{e}^{2t}&t\mathrm{e}^{2t}&2\mathrm{e}^{3t}-(2+t)\mathrm{e}^{2t}\\0&\mathrm{e}^{2t}&\mathrm{e}^{3t}-\mathrm{e}^{2t}\\0&0&\mathrm{e}^{3t}\end{bmatrix}.
 $$
 可以检验 $\det\mathrm{e}^{tA}=\mathrm{e}^{7t}=\mathrm{e}^{t\operatorname{tr}(A)}$。
+
+:::
 
 用插值法求 $\mathrm{e}^{tA}$（[2.1.11 的 11.6 节](/2.1.11#sec-11.6)）是第三种途径：$\mathrm{e}^{tA}=r(A)$，$r$ 是在 $A$ 的谱上与 $\mathrm{e}^{tz}$ 的值及若干阶导数相同的多项式。三种方法给出同一个矩阵。
 

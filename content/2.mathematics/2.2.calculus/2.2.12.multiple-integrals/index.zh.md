@@ -63,6 +63,8 @@ $f$ 称为被积函数，$\mathrm{d}\sigma$ 称为面积元。上面的和式是
 
 **例 12.1.2** 估计 $I=\iint_D\dfrac{\mathrm{d}\sigma}{100+\cos^2x+\cos^2y}$，$D=\{|x|+|y|\le10\}$。$D$ 是对角线长 $20$ 的正方形，面积为 $200$；被积函数介于 $\frac1{102}$ 与 $\frac1{100}$ 之间，所以 $\frac{200}{102}\le I\le2$。
 
+:::
+
 下表比较定积分与重积分的性质（曲线、曲面积分见 [2.2.13](/2.2.13)）：
 
 | 性质 | 定积分 $\int_a^b$ | 重积分 |
@@ -135,6 +137,8 @@ I=\int_0^{1/2}\mathrm{d}x\int_0^{\sqrt{2x}}f\,\mathrm{d}y+\int_{1/2}^{\sqrt2}\ma
 $$
 
 ![例 12.2.3 的区域：按横条分割（先 x 后 y）只需一个累次积分，按竖条分割（先 y 后 x）要分成三块](./plots/integration-order.py)
+
+:::
 
 有时必须交换次序才能积出，因为某些函数（如 $\mathrm{e}^{y^2}$、$\frac{\sin y}y$）的原函数不是初等函数。
 
@@ -439,6 +443,8 @@ $$
 $$
 I_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
 $$
+
+:::
 
 最后是引力。密度为 $\rho$ 的物体对位于 $P_0(x_0,y_0,z_0)$ 处单位质量质点的引力为 $\boldsymbol{F}=G\iiint_\Omega\dfrac{\rho\,(x-x_0,y-y_0,z-z_0)}{r^3}\,\mathrm{d}V$，$r$ 为 $(x,y,z)$ 到 $P_0$ 的距离，$G$ 为引力常数。每个分量都是一个三重积分。例如可以算出，均匀球体对球外质点的引力等于把全部质量集中在球心时的引力，这一结论在 [2.2.14](/2.2.14) 中用 Gauss 公式更简单地得到。
 

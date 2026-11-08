@@ -137,6 +137,8 @@ $$
 
 **Example 36.3.1** With $D = 60\,\mu\mathrm{m^2\,s^{-1}}$ for MinD in buffer, $c = 1\,\mu\mathrm{M} = 600\,\mu\mathrm{m^{-3}}$ and $d = 5\,\mathrm{nm}$, $v = 60 \times (5\times10^{-3})^2 \times 600 = 0.9\,\mu\mathrm{m\,s^{-1}}$, the observed order of magnitude. In the cell, cytoplasmic diffusion is slower and the standing wave of wavelength $\lambda \approx 2L \approx 5\,\mu\mathrm{m}$ (a half-wavelength fits the cell) and period $T \approx 50\,\mathrm{s}$ corresponds to two counter-propagating waves of speed $\lambda/T \approx 0.1\,\mu\mathrm{m\,s^{-1}}$.
 
+:::
+
 The tenfold larger wavelength in vitro long puzzled modelers. It is explained by geometry: on a flat bilayer the bulk solution above the membrane is millimeters deep, whereas in a cell the ratio of cytoplasmic volume to membrane area is about $0.2\,\mu\mathrm{m}$; in vitro systems confined to compartments of cellular dimensions recover the in vivo patterns (Halatek and Frey, 2018). The Min system has since been used to build synthetic, programmable patterns: tuning the expression of MinD and MinE in engineered cells changes the frequency and wavelength of the oscillation, and Min waves can position other proteins fused to MinD.
 
 ## 36.4. Mass-Conserved Reaction–Diffusion and Cell Polarity
@@ -209,6 +211,8 @@ For the cubic $f(u) = ku(1 - u)(u - a)$ the front can be found exactly, $U = [1 
 The two cases differ in a way that matters for biology. A Fisher front is *pulled*: its speed is set by the linear growth of small amplitudes far ahead of the front, so it is sensitive to fluctuations at the leading edge (with few molecules or cells the speed is reduced, and the approach to the asymptotic speed is slow, with a correction $\propto 1/t$). A bistable front is *pushed*: its speed is set by the nonlinear region of the front itself, it has a threshold (a small perturbation does not start it), and it is robust. Cells use bistable switches for trigger waves when the wave must start only on a real signal and propagate reliably.
 
 **Example 36.5.1** For mitotic waves in *Xenopus* extracts, Chang and Ferrell (2013) measured about $60\,\mu\mathrm{m\,min^{-1}}$. With $v \sim \sqrt{D/\tau}$, an effective diffusion coefficient of $D \approx 600\,\mu\mathrm{m^2\,min^{-1}}$ ($10\,\mu\mathrm{m^2\,s^{-1}}$) and a switching time of the Cdk1 positive feedback loop of $\tau \approx D/v^2 \approx 0.2\,\mathrm{min}$ reproduce the speed; the wave crosses a $1.2\,\mathrm{mm}$ egg in about $20\,\mathrm{min}$, where diffusion alone would need hours. In the egg, the mitotic wave becomes visible as the surface contraction waves that precede each cleavage.
+
+:::
 
 ![Trigger waves in one dimension (lengths in units of √(D/k), times in 1/k). A: profiles every 10 time units of a bistable front, ∂ₜu = ∂ₓ²u + u(1 − u)(u − a) with a = 0.25 (solid), and of a Fisher–KPP front, ∂ₜu = ∂ₓ²u + u(1 − u) (dashed), both started from a step. B: front positions against time; lines have the slopes √(1/2)(1 − 2a) and 2: the bistable front moves at its predicted speed at once, the Fisher front approaches its speed slowly from below; the point at which a step spreading by diffusion alone reaches u = 0.1 advances only as √t (dotted). C: speed of the bistable front against the threshold a, from simulations (points) and the exact formula (line): the front reverses at a = 1/2 (Theorem 36.5.1)](./plots/trigger-waves.py)
 

@@ -1,7 +1,7 @@
 ---
 title: 点估计
 description: 估计量的评价准则（无偏性、有效性、均方误差、相合性、渐近正态性），矩估计法，极大似然估计，一致最小方差无偏估计理论（Rao–Blackwell 定理、Lehmann–Scheffé 定理与 Cramér–Rao 不等式），线性回归中的估计，核密度估计，以及高维稀疏估计简介。
-source_hash: 8595ebd0180d
+source_hash: 6bde553605bd
 ---
 
 点估计用一个统计量去估计未知参数，例如总体的平均收入或 Bernoulli 试验的成功概率。估计量是随机样本的函数，其取值随样本而变，因此要问的不是某一个估计值对不对，而是估计量在重复抽样下表现如何。本章先建立比较估计量的准则（无偏性、有效性、均方误差、相合性与渐近正态性），再介绍两种构造估计量的一般方法——矩估计法与极大似然估计，最后寻求最优估计量：借助 [3.2.2](/3.2.2) 的**充分统计量**与**完备统计量**得到一致最小方差无偏估计，并用 Cramér–Rao 下界衡量无偏估计所能达到的精度。本章以两个应用收尾：线性回归模型中的估计（在课程 [3.3](/3.3) 中深入讨论），以及核密度估计这一最初的非参数方法（参见 [3.6](/3.6)）；选读一节简述参数个数超过样本量时的估计。所用的概率工具是**大数定律**、**中心极限定理**和 [3.1.14](/3.1.14) 中的各种收敛概念。给点估计附上精度度量的区间估计见 [3.2.4](/3.2.4)。
@@ -341,6 +341,8 @@ $$
 
 **例 3.3.10** 若 $\alpha$ 与 $\beta$ 都未知，$L(\alpha,\beta;\boldsymbol{x})$ 在 $\alpha\le x_{(1)}$、$x_{(n)}\le\beta$ 且 $\beta-\alpha$ 尽可能小时达到最大，即 $\hat\alpha=x_{(1)}$，$\hat\beta=x_{(n)}$。
 
+:::
+
 极大似然估计不一定唯一，也不一定有闭式解；后一种情形下要用数值方法极大化 $L(\theta;\boldsymbol{x})$，并注意找到的是全局最大值而不是局部极大值。
 
 **例 3.3.11（不唯一性）** 设 $X_1,\dots,X_n$ 是来自 $\mathrm{U}(\theta,\theta+1)$（$\theta\in\mathbb{R}$）的随机样本。若 $\theta\le x_{(1)}$ 且 $x_{(n)}\le\theta+1$，似然等于 $1$，否则为 $0$，即 $L(\theta;\boldsymbol{x})=\boldsymbol{1}\{x_{(n)}-1\le\theta\le x_{(1)}\}$。区间 $[x_{(n)}-1,x_{(1)}]$ 中的每一点都使它达到最大，因此对每个 $0\le\lambda\le1$，
@@ -415,6 +417,8 @@ $$
 
 ![U(0, 2) 下三个估计量——矩估计 2 倍样本均值、极大似然估计 X_(n) 与纠偏后的 (n+1)/n X_(n)——的偏差、方差与均方误差，每个样本量模拟 5000 个样本。极大似然估计向下偏，但其均方误差远低于无偏的矩估计。](./plots/uniform-estimators.py)
 
+:::
+
 第二个性质与重新参数化有关。在例 3.3.3 中，我们可能想估计概率 $\mathbb{P}_\theta(X=0)=\mathrm{e}^{-\theta}$ 而不是 $\theta$；在例 3.3.4 中 $\mathbb{E}_\theta X=1/\theta$，估计均值 $1/\theta$ 可能更自然。$g(\theta)$ 的极大似然估计如何确定？若 $g$ 不是一一的，不同的 $\theta$ 可以给出同一个值 $\theta^*=g(\theta)$，这时定义诱导似然
 
 $$
@@ -469,6 +473,8 @@ $$
 
 **例 3.3.14** 对 $n=500$ 名香港儿童的身高样本，平均身高的矩估计为 $\bar x=67.9$ 英寸（$172.5$ 厘米）；假定 $\mathcal{N}(\mu,\sigma^2)$，极大似然估计与之相同。对某品牌的 $5$ 只灯泡做寿命试验，寿命分别为 $2,3,1,3,4$ 年。平均寿命的矩估计为 $\bar x=2.6$ 年；假定 $\mathrm{Exp}(\theta)$，$\mathbb{E}X=\theta^{-1}=g(\theta)$，由不变性，$g(\theta)$ 的极大似然估计也是 $\bar x=2.6$。从 $\mathrm{Exp}(2.6)$（均值 $1/2.6\approx0.385$）中模拟抽样，均值的极大似然估计 $\bar X$ 在 $n=5,50,100,500$ 时的经验方差为 $0.0307$、$0.00293$、$0.00149$、$0.000301$，接近精确值 $\frac{1}{2.6^2n}=0.0296$、$0.00296$、$0.00148$、$0.000296$。
 
+:::
+
 | | 矩估计法 | 极大似然估计 |
 |---|---|---|
 | 模型 | 只需矩存在，不需要分布形式 | 必须知道密度的形式 |
@@ -502,6 +508,8 @@ $$
 $$
 
 左边是 $p$ 的次数至多为 $n+1$ 的多项式，且不恒为零（它在 $p=0$ 处的值为 $-1$），至多有 $n+1$ 个根，矛盾。
+
+:::
 
 求一致最小方差无偏估计有三种方法：零无偏估计法、充分完备统计量法（Lehmann–Scheffé）以及 Cramér–Rao 不等式。它们都以 Rao–Blackwell 定理为基础。
 
@@ -558,6 +566,8 @@ $$
 **例 3.4.3** 在例 3.4.2 中，设 $\delta(T)$ 对一切 $p$ 满足 $\mathbb{E}_p\delta(T)=0$，记 $a_i=\delta(i)$。则 $\sum_{i=0}^na_i\binom nip^i(1-p)^{n-i}=0$；两边除以 $(1-p)^n$ 并令 $\varphi=p/(1-p)\in(0,\infty)$，得 $\sum_{i=0}^na_i\binom ni\varphi^i=0$ 对一切 $\varphi>0$ 成立，所以一切 $a_i=0$，$\delta\equiv0$。于是 $\operatorname{Cov}_p(\bar X,\delta(T))=0$，$\bar X$ 是 $p$ 的一致最小方差无偏估计。
 
 **例 3.4.4** 设 $X_1,\dots,X_n$ 是来自 $\mathrm{U}(0,\theta)$ 的随机样本。极大似然估计 $T=X_{(n)}$ 充分但有偏，$h(T)=\frac{n+1}nT$ 无偏，方差为 $\frac{\theta^2}{n(n+2)}$（例 3.3.13）。若 $\mathbb{E}_\theta\delta(T)=\int_0^\theta\delta(t)\frac{nt^{n-1}}{\theta^n}\,\mathrm{d}t=0$ 对一切 $\theta>0$ 成立，则 $\int_0^\theta\delta(t)t^{n-1}\,\mathrm{d}t=0$ 对一切 $\theta$ 成立，求导得 $\delta(\theta)\theta^{n-1}=0$，所以 $\delta=0$（几乎处处）。因此 $\frac{n+1}nX_{(n)}$ 是 $\theta$ 的一致最小方差无偏估计，$\frac{n+1}{2n}X_{(n)}$ 是均值 $\theta/2$ 的一致最小方差无偏估计，优于无偏的 $\bar X$。可见哪个估计量最优取决于模型：对正态总体，$\bar X$ 是均值的一致最小方差无偏估计（例 3.4.7）。
+
+:::
 
 在这两个例子中，$T$ 的零无偏估计都被迫为零，这恰好是 $T$ 的完备性（定义 2.3.3）。由此得到一般的方法。
 
@@ -659,6 +669,8 @@ $$
 **例 3.4.8** 对 $\mathrm{Ber}(\theta)$，$\log f=x\log\theta+(1-x)\log(1-\theta)$，$\frac{\partial\log f}{\partial\theta}=\frac x\theta-\frac{1-x}{1-\theta}=\frac{x-\theta}{\theta(1-\theta)}$，故 $I(\theta)=\frac{\operatorname{Var}(X)}{\theta^2(1-\theta)^2}=\frac1{\theta(1-\theta)}$。$\theta$ 的无偏估计的下界为 $\frac{\theta(1-\theta)}n=\operatorname{Var}(\bar X)$。
 
 **例 3.4.9** 对 $\mathrm{Poi}(\theta)$，$\frac{\partial\log f}{\partial\theta}=\frac x\theta-1$，$I(\theta)=\frac1\theta$，下界 $\frac\theta n$ 等于 $\operatorname{Var}(\bar X)$。对密度为 $\theta\mathrm{e}^{-\theta x}$ 的 $\mathrm{Exp}(\theta)$，$\frac{\partial\log f}{\partial\theta}=\frac1\theta-x$，$I(\theta)=\operatorname{Var}(X)=\frac1{\theta^2}$；对 $g(\theta)=1/\theta$，下界为 $\frac{(1/\theta^2)^2}{n/\theta^2}=\frac1{n\theta^2}=\operatorname{Var}(\bar X)$，所以 $\bar X$ 是均值 $1/\theta$ 的一致最小方差无偏估计。对 $\sigma^2$ 已知的 $\mathcal{N}(\mu,\sigma^2)$，$I(\mu)=1/\sigma^2$，下界 $\sigma^2/n$ 由 $\bar X$ 达到。若 $\mu$ 已知，$I(\sigma^2)=\frac1{2\sigma^4}$，下界 $\frac{2\sigma^4}n$ 由 $S_\mu^2=\frac1n\sum_{i=1}^n(X_i-\mu)^2$ 达到，因此它是 $\sigma^2$ 的一致最小方差无偏估计。
+
+:::
 
 对 $k$ 维参数 $\boldsymbol{\theta}=(\theta_1,\dots,\theta_k)^{\mathsf T}$，若 $A-B$ 是**半正定矩阵**，记 $A\succeq B$。在类似的正则条件下，$\boldsymbol{\theta}$ 的每个无偏估计 $\hat{\boldsymbol{\theta}}$ 满足
 

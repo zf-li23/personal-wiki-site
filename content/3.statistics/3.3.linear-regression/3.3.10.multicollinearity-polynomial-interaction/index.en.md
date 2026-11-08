@@ -90,6 +90,8 @@ Solving the statistical problem also solves the numerical one.
 
 The standard errors of the grade coefficients grow about ninefold, all three change sign, and hsm is no longer significant. The sequential sums of squares of hsm, hss and hse are unchanged ($25.81$, $1.24$, $0.67$) and hs1 adds $1.12$, but the Type II sums of squares of hsm, hss and hse drop to $0.46$, $0.95$, $0.90$. Meanwhile $R^2$ and the fitted values hardly change; $R^2$ always increases when a variable is added, and here even $R_a^2$ does.
 
+:::
+
 The effects of multicollinearity can be summarized as follows. The regression coefficients are poorly estimated and may be meaningless, and so are their standard errors; the Type I and Type II sums of squares differ; $R^2$ and the predicted values are usually fine; and there is a risk of overfitting ([3.3.11](/3.3.11)). Ask what the purpose of the analysis is. For prediction within the range of the data, collinearity matters little, and a larger sample is a viable remedy. For explanation, collinearity is a real problem.
 
 **Example 10.1.4** For the body fat data, the three two-variable models are
@@ -168,6 +170,8 @@ reg6 <- lm(cycles ~ schrate + stemp + I(schrate^2) + I(stemp^2) + I(schrate * st
 Now the linear terms are clearly significant and the second-order terms are not. The general linear test of the three second-order terms gives $F^*=0.78$ on $(3,5)$ degrees of freedom, $p=0.553$, so the first-order model $\hat Y=160.58-139.58X_1+7.55X_2$ ($R^2=0.873$) suffices.
 
 The sequential ANOVA table of the centered model is *exactly* the same as before ($18704$, $34201$, $1646$, $285$, $529$, residual $5240$). This is no coincidence: the sequence of column spaces is the same. For example, $\{1,X_1\}$ and $\{1,X_1-\bar X_1\}$ span the same space, and $(X_1-\bar X_1)^2=X_1^2-2\bar X_1X_1+\bar X_1^2$ lies in the span of $\{1,X_1,X_1^2\}$, so each sequential extra sum of squares, and the fitted values, are unchanged. The $t$-test of the highest-order term is also unchanged; what centering changes are the coefficients and $t$-tests of the lower-order terms.
+
+:::
 
 That observation explains a rule from the design of experiments: it is usually a bad idea to eliminate lower-order terms from a model before the higher-order terms, even if they are not significant (the *hierarchy principle*). An additive change of scale of $X$ changes the $t$-statistics of all but the highest-order term, so the significance of a lower-order term depends on an arbitrary origin. Removing a lower-order term imposes a special structure: just as setting the intercept to zero forces the regression through the origin, setting $a_1=0$ in $y=a_0+a_1x+a_2x^2$ gives $y=a_0+a_2(x-0)^2$, whose extremum is at $x=0$.
 

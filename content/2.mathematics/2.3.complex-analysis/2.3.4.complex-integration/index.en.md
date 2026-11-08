@@ -73,6 +73,8 @@ $$
 \Big|\int_{\Gamma_R}\frac{\mathrm{d}z}{z^2+1}\Big|\le\frac{\pi R}{R^2-1}\to0\qquad(R\to\infty).
 $$
 
+:::
+
 This estimate is the first step in evaluating $\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{x^2+1}$ by residues ([2.3.7](/2.3.7)). In general, $\int_{\Gamma_R}f\,\mathrm{d}z\to0$ whenever $Rf(z)\to0$ uniformly on $\Gamma_R$, i.e. whenever $f$ decays faster than $1/|z|$.
 
 ## 4.2. Cauchy's Integral Theorem
@@ -206,6 +208,8 @@ Cauchy's integral formula says that the values of an analytic function inside a 
 $$
 \oint_{|z|=2}\frac{\sin z}{z^2+1}\,\mathrm{d}z=\frac{2\pi\mathrm{i}}{2\mathrm{i}}\big(\sin\mathrm{i}-\sin(-\mathrm{i})\big)=2\pi\sin\mathrm{i}=2\pi\mathrm{i}\sinh1.
 $$
+
+:::
 
 Taking $C$ to be the circle $|\zeta-z_0|=r$ and $\zeta=z_0+r\mathrm{e}^{\mathrm{i}t}$ in Eq. (4.6) gives the following.
 

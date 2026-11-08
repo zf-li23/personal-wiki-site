@@ -149,6 +149,8 @@ $$
 $$
 so Laplace concluded that the boy birth rate in Paris is above $0.5$ with practical certainty.
 
+:::
+
 The computation did not need $p(y)$. It is usually easier to work with the proportional form of Bayes' rule,
 
 $$

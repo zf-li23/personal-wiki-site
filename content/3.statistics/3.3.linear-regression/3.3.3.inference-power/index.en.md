@@ -54,6 +54,8 @@ t_0=\frac{175.27-174}{2.28/\sqrt{15}}=2.15.
 $$
 Critical value approach: the upper $0.05$ quantile is $t_{14,0.05}=1.761$, and $t_0>1.761$, so $H_0$ is rejected. $p$-value approach: $\mathbb{P}(T>t_0)=0.025$ for $T\sim t_{14}$, which is below $0.05$, so $H_0$ is rejected. The test is significant: the data support that Tsinghua male students are taller than $174$ cm on average.
 
+:::
+
 For the two-sided problem $H_0\colon\mu=\mu_0$ against $H_1\colon\mu\ne\mu_0$, the test statistic is $T=(\bar X-\mu_0)/(s/\sqrt n)\overset{H_0}{\sim}t_{n-1}$. With $t_0$ its observed value,
 
 - critical value approach: reject $H_0$ if $\lvert t_0\rvert>t_{n-1,\alpha/2}$;
@@ -83,6 +85,8 @@ $$
 175.27\pm2.145\times\frac{2.28}{\sqrt{15}}=(174.00,\ 176.53).
 $$
 We are $95\%$ confident that the average height of Tsinghua male students lies between $174.00$ and $176.53$ cm.
+
+:::
 
 Tests and intervals are two sides of the same coin ([3.2.5](/3.2.5)). For $H_0\colon\mu=\mu_0$ against $H_1\colon\mu\ne\mu_0$, construct the $100(1-\alpha)\%$ confidence interval: if it contains $\mu_0$, do not reject $H_0$; if not, reject. This is equivalent to the critical value and $p$-value approaches for the two-sided hypothesis. For a one-sided hypothesis at level $\alpha$, the same cutoff is obtained from a $100(1-2\alpha)\%$ two-sided interval: in Example 3.1.1 the $90\%$ interval has lower limit $175.27-1.761\times2.28/\sqrt{15}=174.23>174$, so $H_0\colon\mu=174$ is rejected against $\mu>174$, in agreement with Example 3.1.1, while the $95\%$ interval excludes $174$ only barely (its two-sided $p$-value is $0.0496$).
 

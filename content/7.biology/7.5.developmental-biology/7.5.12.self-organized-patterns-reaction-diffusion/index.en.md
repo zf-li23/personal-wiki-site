@@ -249,6 +249,8 @@ The switch point is close to $h=1$, where the three branches merge, which sugges
 
 ![The switch point of the Gierer-Meinhardt model (12.4) with mu = 0 and lambda = 1. A: the three branches of the activator null-cline; the jump from A0 to A2 occurs at h_s. B: at h_s the areas of f(a, h_s) above and below the axis between A0 and A2 cancel (a_s = 1.515, h_s = 0.920). C: the resulting potential V(h) has a kink at h_s, the condition for relative size regulation](./plots/gm-switch.py)
 
+:::
+
 Near the switch point all three-state systems behave alike when $\varepsilon\to0$: an activated plateau on $A_2(h_s)$ to one side of the switch, $A_0$ on the other, going over to the corresponding branches $A(h)$ for larger excursions.
 
 ### 12.5.1. Amplification of a Weak Source and Polarity

@@ -1,7 +1,7 @@
 ---
 title: Magnetic Forces
 description: Cyclotron and helical motion of charged particles in magnetic fields and magnetic confinement, the relativity of electric and magnetic fields, the Hall effect and the quantum Hall effect, the Ampère force on a current-carrying wire and the definition of the ampere, the magnetic moment of a current loop and the torque and potential energy in a magnetic field.
-source_hash: 42af553e1705
+source_hash: c77f3eb17a23
 ---
 
 The previous chapter ([5.3.6](/5.3.6)) discussed how a magnetic field is produced by currents; this chapter discusses how a magnetic field acts on moving charges and currents. There is only one basic law: a charge $q$ with velocity $\boldsymbol{v}$ experiences the **Lorentz force** $q\boldsymbol{v}\times\boldsymbol{B}$. Starting from it, this chapter discusses in turn the motion of a single charged particle (cyclotrons, mass spectrometers, magnetic confinement), two macroscopic manifestations of the force on the many charge carriers in a **conductor** (the Hall effect and the Ampère force on a current-carrying wire), and the torque on a current-carrying coil. A section in the middle uses special relativity ([5.1.8](/5.1.8)) to show that the magnetic and electric forces are manifestations of one interaction in different reference frames. The magnetic moment introduced here is the starting point for understanding the magnetism of matter in the next chapter ([5.3.8](/5.3.8)); the calculation of torque and energy runs completely parallel to that of an **electric dipole** in an electric field ([5.3.2](/5.3.2)).
@@ -35,6 +35,8 @@ v_{\max}=\frac{qBR}{m},\qquad E_{\mathrm{k}}=\frac{q^2B^2R^2}{2m}.
 $$
 
 **Example 7.1.1 (Energy Limit of a Cyclotron)** Take $B=1\,\mathrm{T}$ and $R=1\,\mathrm{m}$. For a proton, $p=eBR$ and $pc=e\,B\,R\,c\approx300\,\mathrm{MeV}$; the energy–momentum relation ([5.1.8](/5.1.8#sec-8.9.3)) gives the kinetic energy $E_{\mathrm{k}}=\sqrt{(pc)^2+(m_{\mathrm{p}}c^2)^2}-m_{\mathrm{p}}c^2\approx47\,\mathrm{MeV}$ ($48\,\mathrm{MeV}$ by the nonrelativistic formula), and $v\approx0.3c$. Here $\gamma\approx1.05$, the cyclotron frequency is already about 5% lower than at low speed, and the particle gradually falls behind the phase of the accelerating voltage. A classical fixed-frequency cyclotron can therefore accelerate protons only to about $20\,\mathrm{MeV}$; higher energies require lowering the voltage frequency as the energy rises (the synchrocyclotron), making $B$ increase with radius (the isochronous cyclotron), or letting the particles move on a circular orbit of fixed radius while $B$ is increased in synchrony (the synchrotron).
+
+:::
 
 The *mass spectrometer* distinguishes masses by magnetic deflection. The ions first pass through a velocity selector in which the electric field $\boldsymbol{E}$ and the magnetic field $\boldsymbol{B}$ are perpendicular to each other; only ions for which the electric and magnetic forces balance ($qE=qvB$) pass straight through, all with speed $v=E/B$. After entering another magnetic field $B'$ they move on semicircles of radius $R=mv/(qB')\propto m/q$. Isotopes of the same charge land at different positions on the plate, so one can measure the masses and abundances of isotopes or separate them.
 
@@ -82,6 +84,8 @@ $$
 F_y=q(E_y-uB_z)=\frac{q\gamma\sigma}{2\varepsilon_0}\Big(1-\frac{u^2}{c^2}\Big)=\frac{q\sigma}{2\varepsilon_0\gamma}=\frac{F'_y}{\gamma}.
 $$
 This is exactly what the relativistic transformation of force ([5.1.8](/5.1.8#sec-8.11)) requires: for the force measured in the rest frame of the particle, in a frame in which the particle moves with velocity $u$, the component along the motion is unchanged and the perpendicular component becomes $1/\gamma$ of its original value. Conversely, if in S one considered only the electric force $qE_y$, one would obtain $\gamma F'_y$, contradicting the transformation of force: the magnetic force is exactly what is needed to ensure that the **principle of relativity** holds.
+
+:::
 
 In general, let frame S′ move with velocity $v$ in the $x$ direction relative to S; the **Lorentz transformation** and the transformation of force yield the transformation of the electromagnetic field:
 

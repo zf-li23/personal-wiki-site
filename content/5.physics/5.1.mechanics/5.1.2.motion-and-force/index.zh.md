@@ -146,6 +146,8 @@ $$
 
 5. 验结果：$\dim\dfrac{\omega^2r^2}{g} = \dfrac{\mathsf{T}^{-2}\mathsf{L}^2}{\mathsf{L}\,\mathsf{T}^{-2}} = \mathsf{L}$，与 $z$ 一致；$\omega = 0$ 时 $z = h$，水面水平；$\omega$ 越大，中心越低、边缘越高。
 
+:::
+
 这个例子说明，除动力学方程外，常常还需要补充运动学方程或几何约束方程（这里是水面斜率与法线方向的关系）。
 
 **例 2.5.3（收尾速率）** 质量为 $m$ 的物体从静止开始在空气中竖直下落。
@@ -161,6 +163,8 @@ $$
 v(t) = v_{\mathrm{T}}\tanh\frac{gt}{v_{\mathrm{T}}}, \qquad v_{\mathrm{T}} = \sqrt{\frac{2mg}{C\rho A}}.
 $$
 两种情形下速率都单调增大并趋于极限值 $v_{\mathrm{T}}$，此时阻力与重力平衡，物体匀速下落。这个极限速率称为收尾速率（terminal velocity）。由 $v_{\mathrm{T}}$ 的表达式，同样形状的物体越大，收尾速率越大：$m \propto r^3$，$A \propto r^2$，所以 $v_{\mathrm{T}} \propto \sqrt{r}$。
+
+:::
 
 抛体同时受重力与平方阻力时，两个分量的方程通过 $\lvert\boldsymbol{v}\rvert$ 耦合在一起，没有初等解，可以用 `scipy.integrate.solve_ivp` 数值求解（[4.4.4](/4.4.4) 的初值问题）。
 

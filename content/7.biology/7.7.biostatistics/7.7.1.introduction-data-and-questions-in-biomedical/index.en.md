@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Data and Questions in Biomedical Research"
 description: What biostatistics studies; populations and samples, parameters and statistics; levels of measurement; the unit × variable × time structure of data and cross-sectional, longitudinal and time-to-event data; study design and the hierarchy of evidence; the datasets and Python environment used throughout the course.
-source_hash: 30f386cf8a15
+source_hash: 8b47f337b595
 ---
 
 Does a new drug work? What causes cancer? How long will a patient live? Does smoking in childhood impair lung development? None of these questions can be answered by looking at a single patient: individuals differ greatly, and even repeated measurements on the same person do not agree. *Biostatistics* is the methodology for drawing reliable conclusions in the presence of such variation. This chapter first describes the role of statistics in biomedical research and its history, and then builds the basic vocabulary of the course: populations and samples, parameters and statistics, types of variables and levels of measurement. We then distinguish cross-sectional, longitudinal and time-to-event data along the three dimensions "unit × variable × time" and survey study design and the hierarchy of evidence; these two threads, the structure of the data and the design of the study, determine which methods the later chapters use. The chapter closes with the real datasets and analysis tools used throughout the course. Rigorous mathematical statements belong to the statistics courses ([3.1](/3.1) Probability Theory, [3.2](/3.2) Statistical Inference); here we concentrate on how methods are used, on their conditions and on the interpretation of results, and link back when a derivation is needed.
@@ -63,6 +63,8 @@ We are always interested in the population: whether a drug works for all patient
 Numbers describing a population (the population mean $\mu$, the population standard deviation $\sigma$, the prevalence $\pi$) are called parameters; they are fixed but unknown constants and are usually denoted by Greek letters. The corresponding numbers computed from a sample ($\bar x$, $s$, $\hat p$) are called **statistics** ([3.2.1](/3.2.1)) and are denoted by Latin letters. A statistic varies from sample to sample: with a different sample $\bar x$ would be different, and this difference caused by sampling is called sampling error. The central question of statistical inference is how far a statistic can be from the parameter ([7.7.4](/7.7.4), [7.7.5](/7.7.5)).
 
 **Example 1.2.1** Around 1980 a study in East Boston measured the forced expiratory volume in one second (FEV, in L) of 654 children aged 3–19. The population is the children of that age range in the area, and the sample is these 654 children; "the mean FEV of the children in the area" is the parameter, and the sample mean $\bar x = 2.637\,\mathrm{L}$ is the statistic.
+
+:::
 
 The reason statistics exists is variation. The individuals in a population must share common properties (homogeneity) for them to form a population that can be studied: averaging the lung function of children and adults together is meaningless. At the same time individuals differ (variation); if everyone had the same FEV, measuring one person would suffice. The task of statistics is to describe what members of the same population have in common despite variation, and to reveal differences between populations.
 

@@ -28,6 +28,8 @@ Reproductive isolation in ecological speciation evolves by **pleiotropy** or by 
 
 The sexual isolation index, the excess of same-population over different-population matings as a fraction of all matings, is $I = (19 + 22 - 7 - 8)/56 = 0.46$. Females preferred males adapted to their own medium in all 16 pairs of populations adapted to different media, significantly so in 11, whereas no pair adapted to the same medium showed a significant preference. In about 20 generations, divergent selection had produced roughly half of complete sexual isolation. The genes responsible were not identified; either the genes for adaptation to the media also affected mating behaviour (pleiotropy) or selected alleles carried linked alleles affecting it.
 
+:::
+
 Sticklebacks provide a natural example. In several lakes of British Columbia formed after the last glaciation, less than $10\,000$ years ago, two forms of the three-spined stickleback (*Gasterosteus aculeatus*) coexist: a benthic form feeding near the shore and a limnetic form feeding in open water. They differ in morphology, feeding behaviour and mate preference; they hybridize, but hybrids grow more slowly than either parent in its own habitat. Nuclear gene genealogies show that the pairs did not originate within the lakes: the lakes were colonized twice from the sea; the first colonists evolved an intermediate form, and when a second invasion arrived, the residents specialized as benthics and the newcomers as limnetics, a case of ecological divergence driven by competition, **character displacement** ([7.10.17](/7.10.17)).
 
 ### 12.1.2. Mutation-Order Speciation

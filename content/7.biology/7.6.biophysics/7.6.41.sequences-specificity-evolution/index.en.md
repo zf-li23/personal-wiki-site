@@ -86,6 +86,8 @@ If substitutions accumulate at a roughly constant rate, divergence measures time
 
 **Example 41.2.2 (What a Dinosaur Saw)** The rod pigment rhodopsin of vertebrates absorbs maximally at wavelengths from about $480$ to $510\,\mathrm{nm}$, depending on a few residues near the retinal ([7.6.18](/7.6.18)). Chang and colleagues (2002) inferred the most probable sequence of the rhodopsin of the common ancestor of birds and crocodilians, an archosaur of about $240$ million years ago, synthesized the gene, expressed the protein and measured its absorption maximum: $508\,\mathrm{nm}$, slightly red-shifted like the rhodopsins of modern birds. Ancestral sequence reconstruction turns phylogenies into experiments on extinct proteins.
 
+:::
+
 ![Divergence and the molecular clock. A: the fraction of differing sites between two sequences against the true number of substitutions per site separating them, under the Jukes–Cantor model (line, Formula 41.2.1) and for simulated sequences of 1000 sites (circles); the observed difference saturates at 3/4, and the Jukes–Cantor correction (squares) recovers the true distance with increasing scatter as saturation is approached. B: root-to-tip regression with simulated sequences, in the manner of the dating of HIV-1: 60 sequences of 2500 sites sampled between 1983 and 1997 from lineages that left a common ancestor in 1930 and accumulate substitutions at 2.4 × 10⁻³ per site per year with lineage-to-lineage rate variation, and one sample from 1959 (diamond); the regression line extrapolated to zero distance estimates the date of the ancestor, with a bootstrap 95 % interval (shaded) of a few decades](./plots/divergence.py)
 
 ## 41.3. Sequence and Specificity

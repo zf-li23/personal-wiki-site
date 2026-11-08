@@ -1,7 +1,7 @@
 ---
 title: Cell Motility
 description: "Definition and types of cell motility; passive diffusion versus directed movement (x² = 2Dt and x = vt, diffusion time table); low Reynolds number, Stokes drag and the energy budget of swimming; bacterial flagella and eukaryotic cilia, power and recovery strokes, synchronization of ciliary arrays, ventricular flow and mucociliary clearance; directed migration on surfaces: the source–sink model of a gradient λ = √(D/k), relative gradients and the optimal concentration window, receptor counting noise and signal-to-noise ratio, amplification by PI3K/PTEN and the excitable network, weighted integration of multiple cues and winner-take-all; leading-edge protrusion, the molecular clutch, the Bell model and catch bonds, contraction and rear detachment, amoeboid migration; neutrophil homing, wound healing and sperm; convergent evolution of bacterial and eukaryotic motors, ciliary gliding in placozoans and the modes of migration across groups."
-source_hash: 79d94dddc3db
+source_hash: 914238cb6e18
 ---
 
 Movement is one of the most conspicuous physiological features of animals, but it begins at the cellular level: sperm swim toward the egg, neutrophils cross the vessel wall to reach a focus of infection, fibroblasts crawl into a wound, and cilia of the tracheal epithelium sweep mucus out of the lung. Cell motility obeys physics quite unlike that of macroscopic movement: at the scale of a cell, water is as viscous as honey, inertia is negligible, and diffusion is fast over micrometers but too slow to be useful over millimeters. This chapter first uses these physical rules to establish why cells must move actively, and how (Sections 2.1–2.3), then treats the two classes of cellular motors, flagella and cilia (Section 2.4), and then, taking directed migration of cells on surfaces as the example, discusses "which way to go" and "how to go" in two steps (Sections 2.5–2.6), and finally covers the role of these mechanisms in physiology and their evolution across groups (Sections 2.7–2.8).
@@ -66,6 +66,8 @@ $$
 \mathcal{P} = Fv = 3\pi\eta Lv^2 = 3\pi \times 10^{-3} \times 10^{-6} \times (10^{-5})^2\,\mathrm{W} \approx 10^{-18}\,\mathrm{W}.
 $$
 The hydrolysis of one ATP releases about $10^{-19}\,\mathrm{J}$ (about $20\,k_{\mathrm{B}}T$), and bacterial metabolism produces about $10^7$ ATP per second, a power of about $10^{-12}\,\mathrm{W}$. Swimming itself therefore requires only about one millionth of the metabolic energy. Even allowing for a propulsion efficiency of the flagellum of only about $1\%$, the energy cost of swimming is only about one ten-thousandth (a more precise budget is in [7.6.22](/7.6.22)).
+
+:::
 
 For cells crawling on a surface, fluid drag is even more negligible. A fibroblast of diameter $10\,\mu\mathrm{m}$ moving at $1\,\mu\mathrm{m\,min^{-1}}$ experiences a Stokes drag $6\pi\eta Rv \approx 6\pi \times 10^{-3} \times 5\times10^{-6} \times 1.7\times10^{-8}\,\mathrm{N} \approx 2\times10^{-15}\,\mathrm{N}$, about $2\,\mathrm{fN}$, whereas the traction force such cells exert on the substrate is of the order of nanonewtons, about six orders of magnitude larger. The forces of a crawling cell are not used to "push water aside" but to overcome adhesion to the matrix, deform the cell body and squeeze it through the pores of the tissue (Section 2.6). In three-dimensional tissue, when pores are distinctly smaller than the nucleus, migration requires deformation of the nucleus or degradation of the matrix by proteases.
 
@@ -169,6 +171,8 @@ $$
 where $\delta$ is the length by which each monomer lengthens the filament.
 
 **Example 2.6.1 (Advance Speed and Stall Force of an Actin Filament)** Take $\delta = 2.7\,\mathrm{nm}$ (each subunit lengthens the double-helical filament by $2.7\,\mathrm{nm}$), $k_{\mathrm{on}} = 11.6\,\mu\mathrm{M^{-1}\,s^{-1}}$, free monomer $C = 10\,\mu\mathrm{M}$ and $k_{\mathrm{off}} = 1\,\mathrm{s^{-1}}$. Without load, $v = 2.7\,\mathrm{nm} \times 115\,\mathrm{s^{-1}} \approx 0.3\,\mu\mathrm{m\,s^{-1}}$, about $19\,\mu\mathrm{m\,min^{-1}}$, of the same order as the leading-edge speed of fast cells. Setting $v = 0$ gives the **stall force** $F_{\mathrm{s}} = (k_{\mathrm{B}}T/\delta)\ln(k_{\mathrm{on}}C/k_{\mathrm{off}}) = (4.1/2.7) \times \ln 116\,\mathrm{pN} \approx 7\,\mathrm{pN}$. The leading edge has several hundred filament ends per square micrometer, of which only the fraction with suitable orientation and length that are in a growing state push the membrane; branching and **nucleation** continually supply new ends, and **capping proteins** limit the elongation of existing filaments and regulate network turnover.
+
+:::
 
 Protrusion of the leading edge does not mean advance of the cell. If the polymerizing network is not coupled to the outside, the resistance of the membrane pushes the whole network backward, forming retrograde actin flow, and the cell stays in place.
 

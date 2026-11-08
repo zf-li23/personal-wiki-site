@@ -1,7 +1,7 @@
 ---
 title: Juvenility, Vernalization and the Integration of Flowering
 description: "The three phases of flowering and ripeness to flower; the juvenile phase, phase change and ivy, the miR156–SPL age timer; vernalization: conditions (temperature, duration, oxygen, water, sugar, light), site and Melchers' grafting, winter and spring habit, devernalization and stabilization, a dose–response model; FRI–FLC, COOLAIR, VIN3 and PRC2 epigenetic memory and the digital switch at the single-cell level, the VRN genes of cereals; the autonomous, gibberellin, age and ambient-temperature pathways and nutrition, the historical place of the C/N ratio theory, hormones and flowering; integration of flowering signals at FT, SOC1, LFY and AP1, and a light–temperature model; morphological and physiological changes in flower bud differentiation and their conditions, determination of floral organ identity; types of sex differentiation, genetic and environmental control, hormonal regulation (cucumber, melon, maize)"
-source_hash: 276030cf30c4
+source_hash: 7a64890d78b4
 ---
 
 The previous chapter discussed how a single environmental signal, photoperiod, is measured by the leaf and carried to the shoot apex in the form of florigen ([7.13.21](/7.13.21)). Whether a plant flowers, however, depends on more factors: whether it has "grown up" to an age at which it can flower, whether it has experienced winter cold, the state of its endogenous hormones and carbohydrates, and whether the ambient temperature is suitable. The genetics of *Arabidopsis* groups these factors into several flowering pathways, which converge on a few "integrator" genes; the integrators decide when the shoot apical meristem changes into an inflorescence and flowers.
@@ -120,6 +120,8 @@ where $D_0$ is the number of days to flowering without any cold, $D_{\min}$ is t
 **Example 22.3.1** A winter wheat cultivar has $D_0 = 160\ \mathrm{d}$, $D_{\min} = 55\ \mathrm{d}$ and $V_{\mathrm{s}} = 15\ \mathrm{d}$; $r(T)$ is 1 between 1 and 7 °C, decreases linearly to 0 between 7 and 12 °C and is 0 below $-2$ °C (Figure 2A). During winter it experiences 30 d at 2 °C, 20 d at 9 °C and 10 d at $-5$ °C. Find the number of days to flowering, and compare with spring sowing in which it experiences only 10 effective vernalization days.
 
 $r(2) = 1$, $r(9) = (12 - 9)/5 = 0.6$, $r(-5) = 0$, so $V = 30 + 12 + 0 = 42\ \mathrm{d}$. $D = 55 + 105\,\mathrm{e}^{-42/15} = 55 + 105 \times 0.061 = 61\ \mathrm{d}$. With spring sowing $V = 10\ \mathrm{d}$ and $D = 55 + 105\,\mathrm{e}^{-0.67} = 55 + 54 = 109\ \mathrm{d}$; heading is delayed by about 7 weeks and often meets high temperature and drought, so the yield is very low. This is why winter wheat cannot be spring-sown.
+
+:::
 
 Besides low temperature, vernalization also requires oxygen, water and sugar. Vernalization is an active metabolic process: in the absence of oxygen, cold is ineffective; only fully imbibed seeds can be vernalized, and dry seeds cannot pass through vernalization at low temperature (the water content of the seed usually has to be above 40%–50%); vernalization also cannot be completed if respiratory substrate is insufficient, and isolated embryos can be vernalized only on a sugar-containing medium. Vernalization also requires cell division and DNA replication (Section 22.3.3).
 

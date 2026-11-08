@@ -1,7 +1,7 @@
 ---
 title: Descriptive Statistics and Data Display
 description: Measures of location (mean, median, mode, geometric mean), measures of spread (range, interquartile range, standard deviation, coefficient of variation, MAD), quantiles and medical reference intervals, skewness and kurtosis, z-scores, frequency tables and statistical graphics (histograms, stem-and-leaf plots, box plots, QQ plots), and the identification and handling of outliers, illustrated with the FEV and birthwt data.
-source_hash: 3806e971e417
+source_hash: 57f72e3415a8
 ---
 
 When we receive a dataset, the first step is not to run a test but to look at it: where the data are concentrated, how widely they are spread, what shape the distribution has, and whether any values are implausible. Descriptive statistics answers these questions with a few numbers and a few graphs. It determines all later choices: whether skewed data are summarized by the median or the mean, whether to take logarithms, whether methods based on the normal distribution can be used; it is also the best opportunity to discover data entry errors and unexpected patterns. This chapter follows the two datasets introduced in [7.7.1](/7.7.1): the lung function (FEV) of 654 children and the birth weight (birthwt) of 189 newborns, with antibody titers and ELISA replicate wells as laboratory examples. In the FEV plots we see for the first time the source of the paradox "smoking children have better lung function". The mathematical properties of sample moments, order statistics and the empirical distribution function are in [3.2.1](/3.2.1); this chapter treats their use, and their pitfalls, with biomedical data.
@@ -57,6 +57,8 @@ the geometric mean is $G = 2^{5.571} = 47.6$, reported as a mean titer of about 
 
 ![Antibody titers of 112 children after vaccination. A: on the linear scale the distribution is right-skewed, and the arithmetic mean (69.3) is pulled up by a few high titers. B: on the $\log_2$ scale the dilutions are equally spaced and the distribution is approximately symmetric; the mean of the $\log_2$ titers is 5.57, whose antilogarithm is the geometric mean 47.6 (about 1:48)](./plots/geometric-mean.py)
 
+:::
+
 The geometric mean is appropriate when the data are approximately log-normally distributed (approximately normal after taking logarithms, [7.7.4](/7.7.4)) or change by multiples; it cannot be used directly when the data contain zeros or negative numbers. The harmonic mean is used to average quantities of the "rate" type; its most common use is to summarize the "average sample size" when the groups have unequal sizes (the Tukey–Kramer method in [7.7.12](/7.7.12)).
 
 ### 2.1.5. Choosing a Measure of Location
@@ -110,6 +112,8 @@ The mean absolute deviation is intuitive, but absolute values are inconvenient a
 Standard deviations of variables with different units, or with widely different means, cannot be compared directly. The **sample coefficient of variation** $\mathrm{CV} = s/\bar x$ (often expressed as a percentage) is a dimensionless relative spread and is meaningful only for positive variables on a ratio scale.
 
 **Example 2.2.1** For 40 seven-year-old children in a region, the mean height is $121.48\,\mathrm{cm}$ with a standard deviation of $4.65\,\mathrm{cm}$, and the mean weight is $22.18\,\mathrm{kg}$ with a standard deviation of $2.35\,\mathrm{kg}$. The $\mathrm{CV}$ of height is $4.65/121.48 = 3.83\%$ and that of weight is $2.35/22.18 = 10.60\%$: the relative variation of weight among children of the same age is about 3 times that of height.
+
+:::
 
 The coefficient of variation is the standard measure of the precision of laboratory assays. The CV between replicate wells of the same sample on the same plate is called the intra-assay (within-plate) CV, and the CV between measurements on different days or in different batches is the inter-assay CV; immunoassays such as ELISA usually require an intra-assay CV < 10% and an inter-assay CV < 15%.
 
@@ -294,6 +298,8 @@ An outlier may come from an entry or measurement error (a weight of 30 kg entere
 - The generalized extreme studentized deviate (ESD) test: under an assumption of approximate normality, it tests the most extreme values one at a time while controlling the probability of misclassifying normal data as outliers; it can test several outliers without their masking one another.
 
 **Example 2.7.1** For FEV, $Q_1 = 1.981$ and $Q_3 = 3.119$ (linear interpolation), the upper fence is $3.119 + 1.5 \times 1.138 = 4.825\,\mathrm{L}$, and 10 children exceed it (4.83–5.79 L); there are no extreme outliers. The maximum $5.793\,\mathrm{L}$ has $z = 3.64$. These are older, taller boys, entirely plausible given that FEV increases with age and height (panel C above), and should not be deleted: they are "outliers" only because we put children aged 3 and 19 into the same distribution. In the group of smoking mothers the newborn of 709 g is below the lower fence of the box plot (1058 g); it is a genuine very low birth weight infant, one of the most important individuals precisely when studying low birth weight.
+
+:::
 
 The principles for handling outliers: first check the original records; correct or delete values confirmed as errors and say so in the report; keep values that cannot be confirmed as errors, and a sensitivity analysis may be done (analyze once with and once without the value and compare the conclusions), or use methods insensitive to outliers (median, rank methods, [7.7.8](/7.7.8)). Data must never be deleted because the "result becomes more significant" without them.
 

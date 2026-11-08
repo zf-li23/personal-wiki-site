@@ -1,7 +1,7 @@
 ---
 title: Ultraviolet–Visible Absorption Spectrophotometry
 description: Molecular energy levels and band spectra; σ→σ*, n→σ*, π→π*, n→π* and charge-transfer transitions, chromophores, auxochromes, bathochromic and hypsochromic shifts, ultraviolet absorption of proteins and nucleic acids; derivation of the absorption law, additivity and deviations, transmittance and isosbestic points; spectrophotometers, the dual-wavelength method, derivative spectra and measurement error; multicomponent determination, composition of complexes and determination of pKa; surface plasmon resonance and circular dichroism.
-source_hash: d18088c66b01
+source_hash: f5b5ad77125d
 ---
 
 The energies of valence-electron transitions in molecules lie at roughly $1.5$–$6\,\mathrm{eV}$, corresponding to ultraviolet–visible light of $200$–$800\,\mathrm{nm}$. Measuring the absorption of light in this range by a solution serves two purposes: the position and shape of the absorption bands reveal the conjugated systems and chromophores in the molecule (the first step of spectral interpretation in 6.5, Organic Chemistry), and the strength of the absorption gives the concentration. The spectrophotometer is the most commonly used instrument in chemical and biological laboratories, indispensable for measuring the concentration of proteins and nucleic acids, following enzymatic reactions and measuring equilibrium constants. The **Beer–Lambert law**, **absorbance** and the **molar absorption coefficient** were defined in [6.3.17](/6.3.17#def-17.2.3); this chapter treats the physical origin of the law, the conditions under which it applies, and measurement error. The physics of molecular energy levels and of the **band spectrum** is in [5.5.5](/5.5.5#sec-5.3), and the principles of the source, monochromator and detector of spectroscopic instruments are in [6.4.7](/6.4.7#sec-7.1.3). At the end of the chapter we introduce two optical methods widely used in bioanalysis: surface plasmon resonance, which measures molecular interactions, and circular dichroism, which is used to determine protein secondary structure. The next chapter ([6.4.10](/6.4.10)) treats how molecules emit light after absorbing photons.
@@ -300,6 +300,8 @@ A = \lg\mathrm{e} = 0.434.
 $$
 
 **Example 9.4.1** Let $\Delta\tau = \pm 0.005$. At $A = 0.434$, $|\Delta c/c| = \frac{0.4343\times0.005}{0.368\times0.434} = 1.36\%$; at $A = 0.2$ ($\tau = 0.631$) and at $A = 0.8$ ($\tau = 0.158$) it is about $1.7\%$ in both cases; and at $A = 1.5$ it rises to $4.6\%$. In measurements one therefore adjusts the sample concentration or the path length of the cell so that the absorbance falls between $0.2$ and $0.8$.
+
+:::
 
 The conclusion $A = 0.434$ depends on the premise that $\Delta\tau$ is constant. The photomultiplier tubes or photodiodes of modern instruments are often limited by photon shot noise, and the standard deviation of the transmittance is roughly proportional to $\sqrt{\tau^2 + \tau}$; the optimal absorbance then moves to about $0.96$, and the error remains modest even at $A$ of $1.5$–$2$; at the high-absorbance end, what finally limits the measurement is stray light (Section 9.3.2). For samples of high concentration whose absorbance lies outside the range, a standard solution of slightly lower concentration can be used as the reference in place of the blank (differential spectrophotometry), which amounts to expanding the transmittance scale.
 

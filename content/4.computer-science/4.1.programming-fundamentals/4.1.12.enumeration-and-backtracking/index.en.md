@@ -1,7 +1,7 @@
 ---
 title: Enumeration and Backtracking
 description: Enumerating all solutions of a multistep choice with recursion (the staircase problem and the knight's path problem); the "try, recurse, undo" pattern of backtracking and the book assignment problem; the eight queens problem from brute-force enumeration to backtracking and pruning; decision trees, depth-first search, and their relation to backtracking.
-source_hash: c4c2da28e2d0
+source_hash: 0c14f7cbe018
 ---
 
 The **exhaustive search** of [4.1.3](/4.1.3) uses several nested loops to check every possible answer one by one. When a solution consists of a number of choices and the number of steps is unknown in advance or varies from case to case, the number of nested loops cannot be written down: how many steps it takes to go down a staircase depends on how many stairs each step covers. Recursion solves this problem: each level of recursion is responsible for one choice, enumerates all possibilities for this step with a loop, and for each possibility recursively handles the remaining steps. This chapter first uses two problems, going downstairs and the knight's path, to establish this pattern of "recursive enumeration", then discusses backtracking for the case where the choices constrain one another: make a choice, recurse, undo the choice, and try the next. The eight queens problem shows how excluding impossible branches as early as possible (pruning) reduces the amount of search by several orders of magnitude. These problems are in essence all depth-first searches on a "decision tree"; [4.1.14](/4.1.14) extends this viewpoint to general state spaces, and [4.3.4](/4.3.4) reexamines trial and backtracking from the viewpoint of the stack.
@@ -154,6 +154,8 @@ print(plans, "plans")                                 # 37
 
 There are 37 ways. Since jumps go only to the right, the abscissa strictly increases at every step, so the recursion must terminate and no point can appear twice on one path; if leftward jumps were allowed, we would have to record the points already visited to avoid going in circles, which is exactly the problem that [4.1.14](/4.1.14) deals with.
 
+:::
+
 The programs for going downstairs and for the knight's path have exactly the same structure: the parameters of the recursive function describe "where we are", and the body first tests whether the goal is reached, then enumerates all choices for this step with a loop, recursing for each feasible choice. The two problems differ only in the meaning of "position" and "choice".
 
 ## 12.2. Backtracking
@@ -256,6 +258,8 @@ print(plans, "plans")                                # 2
 ```
 
 There are only two assignments: D likes only book 3, so A can take only book 2; B can take only book 0; C and E split books 1 and 4. If the "take back" step is forgotten, then after the first assignment is found all the books remain marked as given out, every later attempt fails, and the program finds only one assignment.
+
+:::
 
 Another way to undo choices is not to share the state: pass the assignment state as a parameter using **pass by value**, so that each level of recursion gets a copy, modifying the copy does not affect the previous level, and nothing needs to be restored on return. In C++ one can wrap the array in a structure or pass a `std::array` by value; in Python one must copy explicitly (`owner.copy()`), because a list argument is passed as a reference ([4.1.8](/4.1.8)). Copying is less error-prone, but it copies the entire state at every level; when the state is large, "modify, recurse, restore" saves time and space.
 

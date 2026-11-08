@@ -1,6 +1,6 @@
 ---
 title: Expectation, Variance and Inequalities
-source_hash: 561dc46634f1
+source_hash: 3d0c8c0518c0
 ---
 
 A distribution describes a random variable completely, but many problems call for summarizing it by one or two numbers: when comparing two investment products, people look first at the "average return" and the "risk"; when a game is interrupted and the stakes must be divided, we need to know how much each player "can expect to win". This chapter introduces the two most important numerical characteristics: the expectation, which describes the center of a distribution, and the variance, which describes how concentrated the distribution is around its expectation. The expectation has three complementary interpretations: algebraically it is a weighted average, physically it is the center of mass of the distribution, and in optimization terms it is the best constant prediction in the mean-square sense. Linearity of expectation reduces many complicated computations to simple ones (breaking a big problem into small ones). The chapter closes with several basic probability inequalities (Markov, Chebyshev, Cauchy–Schwarz and Jensen), which bound probabilities and expectations without detailed knowledge of the distribution and are the tools behind limit theorems such as the law of large numbers ([3.1.12](/3.1.12)). We use the common distributions of [3.1.4](/3.1.4) and the random vectors of [3.1.6](/3.1.6) and [3.1.7](/3.1.7); conditional expectation and covariance are treated in [3.1.9](/3.1.9) and [3.1.10](/3.1.10).
@@ -75,6 +75,8 @@ In particular $\mathbb{E}X = \mu$ for $X \sim \mathcal{N}(\mu, \sigma^2)$. This 
 $$
 \mathbb{E}X = 0.5 \times \frac{1}{2} + \int_0^1 x \cdot \frac{1}{2}\,\mathrm{d}x = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}.
 $$
+
+:::
 
 In general (stated for reference), if $X$ has distribution function $F$, the expectation can be defined uniformly as $\mathbb{E}X = \int_{\mathbb{R}} x\,\mathrm{d}F(x)$ (a Lebesgue–Stieltjes integral). If $F = F_1 + F_2$, where $F_1(x) = \int_{-\infty}^x f_0(s)\,\mathrm{d}s$ has a density and $F_2$ jumps only at countably many points $x_j$, with jump heights $\mathbb{P}(X = x_j)$, then, provided $\int \lvert x \rvert f_0(x)\,\mathrm{d}x + \sum_j \lvert x_j \rvert\mathbb{P}(X = x_j) < \infty$,
 
@@ -284,6 +286,8 @@ and $\operatorname{Var}(X) = 2 - 1 = 1$. The $I_k$ are not independent, yet line
 1. $X \sim \chi^2_n$: $X$ has the same distribution as $Z_1^2 + \cdots + Z_n^2$ (Theorem 7.1.6), and $\mathbb{E}Z_i^2 = 1$, $\mathbb{E}Z_i^4 = 3$ (Example 8.2.2 with $\alpha = 4$), so $\mathbb{E}X = n$ and $\operatorname{Var}(X) = n(3 - 1) = 2n$.
 2. $T \sim t_n$: for $n \ge 2$ the expectation exists and $\mathbb{E}T = 0$ by symmetry; for $n \ge 3$, $T = Z/\sqrt{X/n}$ and independence give $\operatorname{Var}(T) = \mathbb{E}Z^2 \cdot n\mathbb{E}X^{-1} = \frac{n}{n - 2}$, where $\mathbb{E}X^{-1} = \frac{1}{n - 2}$ is obtained by integrating directly against the density of $\chi^2_n = \Gamma(n/2, 1/2)$. For $n = 1$ the expectation does not exist (Example 8.2.7), and for $n = 2$ the variance is infinite.
 3. $F \sim F_{m,n}$: for $n \ge 3$, $\mathbb{E}F = \mathbb{E}\frac{X}{m}\cdot\mathbb{E}\frac{n}{Y} = 1\cdot\frac{n}{n - 2} = \frac{n}{n - 2}$.
+
+:::
 
 The methods used here are to reduce the expectation, through the relation between these distributions and the normal distribution, to the expectation of a product of independent variables, or to use the normalization of a density (rearranging the integral into another density).
 

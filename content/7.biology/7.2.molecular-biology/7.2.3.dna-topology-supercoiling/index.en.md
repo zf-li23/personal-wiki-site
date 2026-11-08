@@ -51,9 +51,13 @@ $\mathrm{Lk}_0$ is not a topological invariant: it depends on temperature, ionic
 
 **Example 3.1.1** A relaxed closed circle of $2100\,\mathrm{bp}$ has $\mathrm{Lk}_0 = 2100/10.5 = 200$. Removing two turns gives $\mathrm{Lk} = 198$, $\Delta\mathrm{Lk} = -2$ and $\sigma = -2/200 = -0.01$. A $4200\,\mathrm{bp}$ circle with $\mathrm{Lk} = 374$ has $\mathrm{Lk}_0 = 400$ and $\sigma = -26/400 = -0.065$, a typical value for a plasmid isolated from bacteria; with $\mathrm{Lk} = 412$ the same circle would be positively supercoiled with $\sigma = +0.03$.
 
+:::
+
 Topoisomers can be separated by agarose gel electrophoresis: the more writhe a circle has, the more compact it is and the faster it migrates, and topoisomers differing by one unit of $\mathrm{Lk}$ form a ladder of bands. Such gels give the most direct measurement of the helical repeat of DNA in solution.
 
 **Example 3.1.2 (The helical repeat from topoisomer ladders)** Circles of $3990$, $3995$ and $4011\,\mathrm{bp}$ are relaxed completely with a type I topoisomerase (3.3) and run on a gel. The $3990$ and $4011\,\mathrm{bp}$ circles migrate together, but the $3995\,\mathrm{bp}$ circle, only $5\,\mathrm{bp}$ longer than the first, migrates faster. With $h = 10.5$, $\mathrm{Lk}_0 = 380.0$ for $3990\,\mathrm{bp}$ and $382.0$ for $4011\,\mathrm{bp}$, so both can be completely relaxed with integer $\mathrm{Lk}$; for $3995\,\mathrm{bp}$, $\mathrm{Lk}_0 = 380.48$ and every topoisomer has $\lvert\Delta\mathrm{Lk}\rvert \geq 0.48$, hence some writhe and a faster migration. The pattern repeats with a period of $10.5\,\mathrm{bp}$ in length, which is the helical repeat.
+
+:::
 
 Intercalating dyes lower the twist without breaking a strand. Each ethidium ion that slides between two **base pairs** unwinds the helix by about $26^\circ$, so at fixed $\mathrm{Lk}$ it raises the writhe by $26/360 \approx 0.072$. Adding ethidium to a negatively supercoiled circle first relaxes it and then makes it positively supercoiled: a $5\,\mathrm{kb}$ plasmid at $\sigma = -0.06$ ($\Delta\mathrm{Lk} \approx -29$) is relaxed by about $29/0.072 \approx 400$ bound ethidium ions. Low concentrations of intercalators (chloroquine) are added to gels to shift the topoisomers of a sample into the range where they are resolved.
 

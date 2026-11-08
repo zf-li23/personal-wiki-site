@@ -429,6 +429,8 @@ v_C = \frac{m_1v_1 + m_2v_2}{m_1 + m_2} = \frac{8m_1m_2m_3}{(m_1 + m_2)D}v_0.
 $$
 若 $m_1 \ne m_2$，则 $v_1 \ne v_2$，碰后杆既随质心平动又绕质心转动，角速度为 $\omega = \dfrac{\lvert v_1 - v_2\rvert}{l} = \dfrac{4m_3\lvert m_2 - m_1\rvert}{Dl}v_0$。
 
+:::
+
 动量与角动量的对比：
 
 | | 动量 | 角动量 |

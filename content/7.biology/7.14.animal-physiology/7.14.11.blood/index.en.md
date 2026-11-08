@@ -1,7 +1,7 @@
 ---
 title: Blood
 description: "Composition and physicochemical properties of blood (plasma proteins, crystalloid and colloid osmotic pressure, pH, viscosity); erythrocyte shape, number, properties and oxygen-carrying capacity; sites and timing of hematopoiesis, the erythropoietin negative feedback, iron, vitamin B12 and folate, and erythrocyte destruction; the optimum of hematocrit, viscosity and oxygen transport; platelets and the four steps of hemostasis; clotting factors and the coagulation cascade, thrombin positive feedback and a threshold model, vitamin K and bleeding disorders; anticoagulation and fibrinolysis; the ABO and Rh blood groups and the principles of transfusion; leukocyte types, lifespan, diapedesis and phagocytosis, and the vascular response in inflammation; evolution and comparative biology: blood, lymph and hemolymph, respiratory pigments and nucleated erythrocytes, Antarctic icefish, clotting in horseshoe crabs and crustaceans, and the evolution of the cascade."
-source_hash: d70168c1e1f4
+source_hash: 63fb4022a5c9
 ---
 
 Blood is a connective tissue that flows inside closed vessels, and it is the medium carried by the body's largest "logistics system." It moves $\ce{O2}$, nutrients, hormones and heat from where they are produced or taken up to where they are consumed, and carries $\ce{CO2}$ and metabolic wastes to the lungs and kidneys. At the same time it buffers pH, maintains the osmotic pressure of the extracellular fluid, and seals leaks in its own container when a vessel is torn. Chapter 1 called the **extracellular fluid** the **internal environment** in which cells live; plasma is the part of it that moves fastest and exchanges most directly with the outside world, so the **homeostasis** of blood composition is a precondition for every other form of homeostasis. This chapter first treats the composition and physicochemical properties of blood (Section 11.1), then the three classes of blood cells: erythrocytes and hematopoiesis (Section 11.2), platelets and hemostasis (Sections 11.3–11.5), and leukocytes and inflammation (Section 11.7). Between them comes the blood group system of transfusion physiology (Section 11.6). The positive feedback and threshold of thrombin, and the trade-off between hematocrit and viscosity, are written as quantitative models. The mechanics of blood flow in vessels (viscosity, **Poiseuille's law**) is in Chapter 14, fluid exchange between plasma and **interstitial fluid** (**Starling forces**) is in Chapter 15, and the oxygen binding of hemoglobin and gas transport are in Chapter 19. The developmental origin of hematopoiesis is in [7.5.29](/7.5.29); immune recognition, lymphocytes, antibodies and the immunological mechanisms of blood groups belong to 7.15 Immunology.
@@ -56,6 +56,8 @@ The main component of the erythrocyte is hemoglobin. The hemoglobin concentratio
 
 **Example 11.2.1 (Why Hemoglobin Is Needed)** Each gram of fully saturated hemoglobin binds about $1.34\,\mathrm{mL}$ of $\ce{O2}$ (theoretical value $1.39\,\mathrm{mL}$; the measured value is slightly lower because of a little methemoglobin and so on). Arterial blood with hemoglobin at $150\,\mathrm{g\,L^{-1}}$ carries about $150 \times 1.34 \times 0.97 \approx 195\,\mathrm{mL\,L^{-1}}$ of oxygen (arterial saturation about 97%). The solubility of $\ce{O2}$ in plasma is only $0.03\,\mathrm{mL\,L^{-1}\,mmHg^{-1}}$, so at $P_{\ce{O2}} = 100\,\mathrm{mmHg}$ about $3\,\mathrm{mL\,L^{-1}}$ dissolves. Hemoglobin raises the oxygen-carrying capacity of blood about 65-fold: without it, at a resting oxygen consumption of $250\,\mathrm{mL\,min^{-1}}$, even if all the oxygen in the arterial blood were extracted, the **cardiac output** would have to exceed $80\,\mathrm{L\,min^{-1}}$.
 
+:::
+
 Packaging hemoglobin in cells rather than dissolving it in plasma has two advantages. The same amount of hemoglobin dissolved in plasma would raise the colloid osmotic pressure of plasma to about three times its normal value (tetramer $64.5\,\mathrm{kDa}$, so $150\,\mathrm{g\,L^{-1}}$ is $2.3\,\mathrm{mmol\,L^{-1}}$, about 3.4 times the molar concentration of albumin) and greatly increase the viscosity, and free hemoglobin would also be filtered by the glomerulus and scavenge nitric oxide. Inside the cell, regulatory molecules such as **2,3-bisphosphoglycerate** and carbonic anhydrase can be kept at high local concentration, and a reducing system prevents oxidation of the heme iron.
 
 ### 11.2.2. Physiological Properties of Erythrocytes
@@ -63,6 +65,8 @@ Packaging hemoglobin in cells rather than dissolving it in plasma has two advant
 The biconcave disk shape gives the erythrocyte a surplus of surface area.
 
 **Example 11.2.2 (Surplus Surface Area)** A sphere of volume $90\,\mathrm{\mu m^3}$ has a surface area of $(36\pi)^{1/3} V^{2/3} \approx 97\,\mathrm{\mu m^2}$; the actual surface area of an erythrocyte is about $135\,\mathrm{\mu m^2}$, about 40% more. The area of the erythrocyte membrane can hardly be stretched (it ruptures when the area increases by 3%–4%) but it bends and shears easily, so as long as the cell does not become spherical it can change shape greatly with both volume and area unchanged. An erythrocyte $7.5\,\mathrm{\mu m}$ in diameter can therefore squeeze through capillaries of $3\,\mathrm{\mu m}$ inner diameter and through the slits of the splenic sinuses.
+
+:::
 
 Three physiological properties of erythrocytes all derive from this geometry and membrane mechanics:
 
@@ -100,6 +104,8 @@ flowchart LR
 Erythrocyte development: erythroid committed progenitors pass through the proerythroblast and the early, intermediate and late erythroblast stages, becoming progressively smaller while hemoglobin accumulates; the late erythroblast extrudes its nucleus and becomes a reticulocyte (which still contains a few ribosomes and mitochondria, and shows a reticular structure with basic dyes). Reticulocytes enter the blood and mature within 1–2 days by losing their remaining organelles. Reticulocytes make up 0.5%–1.5% of the erythrocytes in peripheral blood, and their proportion reflects the rate at which the marrow produces erythrocytes: it rises within a few days after acute blood loss or after hematopoietic raw materials are supplied.
 
 **Example 11.2.3 (Production Rate)** A person of 70 kg has 5 L of blood, so the erythrocytes number about $5 \times 10^{12}\,\mathrm{L^{-1}} \times 5\,\mathrm{L} = 2.5 \times 10^{13}$, with a mean lifespan of 120 days ($1.04 \times 10^7\,\mathrm{s}$). In the steady state the marrow must produce $2.5 \times 10^{13} / 1.04 \times 10^7 \approx 2.4 \times 10^6$ erythrocytes per second, about $2 \times 10^{11}$ per day, that is, about 0.8% of the erythrocytes are renewed each day. The hemoglobin synthesized each day is about $750\,\mathrm{g} \times 0.8\% \approx 6\,\mathrm{g}$, which requires about $20\,\mathrm{mg}$ of iron.
+
+:::
 
 Raw materials of hematopoiesis: hemoglobin synthesis requires iron and protein, and erythrocyte proliferation requires DNA synthesis.
 

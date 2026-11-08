@@ -197,6 +197,8 @@ p_{\mathrm{bound}} = \frac{1}{1 + \dfrac{N_{\mathrm{NS}}}{P}\,\mathrm{e}^{\Delta
 $$
 With $P = 500$ polymerases available and $\Delta\varepsilon = -5\,k_{\mathrm{B}}T$, $(N_{\mathrm{NS}}/P)\mathrm{e}^{\Delta\varepsilon} = 10^4\times6.7\times10^{-3} = 67$ and $p_{\mathrm{bound}} \approx 0.015$; a strong promoter with $\Delta\varepsilon = -12\,k_{\mathrm{B}}T$ is occupied 94 % of the time. The genome itself acts as the solvent, the ratio $P/N_{\mathrm{NS}}$ as the concentration, and the occupancy rises with the number of polymerases exactly as a binding curve rises with ligand concentration. Regulators that bind next to the promoter change its effective $\Delta\varepsilon$; this is the starting point of the **thermodynamic model** of gene regulation ([7.2.11](/7.2.11)).
 
+:::
+
 ![Ligand binding as statistical mechanics. A, B: occupancy p_b = cⁿ/(cⁿ + Kⁿ) for a simple site (n = 1) and for all-or-none binding of n = 2 and 4 ligands with the same half-saturation concentration K, on linear (A) and logarithmic (B) concentration axes; dotted lines in B mark 10 % and 90 % occupancy, between which c changes 81-fold for n = 1, 9-fold for n = 2 and 3-fold for n = 4. C: the lattice model of Theorem 3.3.1 with Ω = 1000 sites and Δε = −2 kBT: the exact occupancy (points) follows the dilute result c/(c + K_d) (line) while the ligand is dilute and exceeds it as the lattice fills](./plots/binding-curves.py)
 
 ### 3.3.2. Two Routes to the Same Result
@@ -244,6 +246,8 @@ $$
 \Delta p = -170\,\mathrm{mV} - 61.5\,\mathrm{mV}\times0.5 \approx -201\,\mathrm{mV},
 $$
 of which 85 % is electrical. Each proton entering the matrix releases $F\,\lvert\Delta p\rvert = 96\,485\,\mathrm{C\,mol^{-1}}\times0.201\,\mathrm{V} = 19.4\,\mathrm{kJ\,mol^{-1}}$, $7.5\,k_{\mathrm{B}}T$ per proton.
+
+:::
 
 In *E. coli* at an external pH of 7 the proton-motive force is of the same magnitude, mostly electrical. In illuminated chloroplasts it is mostly chemical: the thylakoid membrane is permeable to $\ce{Cl-}$ and $\ce{Mg^2+}$, which neutralize the charge of the pumped protons, so the lumen acidifies by 2–3 pH units below the stroma while $\Delta\Psi$ stays small.
 
@@ -298,6 +302,8 @@ with transmission coefficient $\kappa \le 1$ and $k_{\mathrm{B}}T/h = 6.5\times1
 An enzyme lowers $\Delta G^\ddagger$ without changing $\Delta G$: it speeds both directions by the same factor and leaves the equilibrium untouched. A rate enhancement of $10^{10}$, typical of enzymes, corresponds to lowering the barrier by $23\,k_{\mathrm{B}}T$ ([7.1.8](/7.1.8)).
 
 **Example 3.5.1 (Temperature coefficients)** The empirical **Arrhenius equation** $k = A\,\mathrm{e}^{-E_{\mathrm{a}}/RT}$ gives the ratio of rates at $310$ and $300\,\mathrm{K}$, the $Q_{10}$, as $\exp[(E_{\mathrm{a}}/R)(1/300 - 1/310)\,\mathrm{K^{-1}}]$: $1.9$ for $E_{\mathrm{a}} = 50\,\mathrm{kJ\,mol^{-1}}$ and $3.6$ for $100\,\mathrm{kJ\,mol^{-1}}$. Most enzymatic and physiological rates have $Q_{10}$ between 2 and 3, which is why the metabolism of an ectotherm slows severalfold in cold weather. Much steeper temperature dependences, $Q_{10}$ of 10 to 100, signal something other than a single barrier: the large enthalpy changes of the temperature-gated channels of thermosensation (7.6.4) or of protein unfolding (7.6.8).
+
+:::
 
 For conformational changes of macromolecules in water, the prefactor $k_{\mathrm{B}}T/h$ of Eq. (3.20), the frequency of crossing a barrier in a gas, is not appropriate: the motion along the reaction coordinate is overdamped by the solvent, and the prefactor is set by friction. The theory for that case, that of Kramers, requires the theory of Brownian motion and is developed in 7.6.5; it gives prefactors of $10^6$–$10^8\,\mathrm{s^{-1}}$ for protein folding, the "speed limit" of 7.6.16.
 

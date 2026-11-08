@@ -66,6 +66,8 @@ $$
 
 **Example 18.2.1** For $N = 22$, the conjugated length of β-carotene, and $a = 0.14\,\mathrm{nm}$, $L = 2.94\,\mathrm{nm}$, $h^2/(8m_{\mathrm{e}}L^2) = 0.0435\,\mathrm{eV}$ and $\Delta E = 23 \times 0.0435 = 1.00\,\mathrm{eV}$, $\lambda = 1240\,\mathrm{nm}$. β-carotene actually absorbs at $452\,\mathrm{nm}$ ($2.74\,\mathrm{eV}$). With $a = 0.10\,\mathrm{nm}$, the value used in some textbooks, the model gives $632\,\mathrm{nm}$ and seems to work; but the carbon–carbon distance in a polyene is $0.13$–$0.15\,\mathrm{nm}$, and the apparent agreement is fortuitous.
 
+:::
+
 The model gets the main trend right: longer conjugated systems absorb at longer wavelengths, because confinement energies fall as $1/L^2$ while the number of electrons, and with it the index of the HOMO, grows only as $L$; the gap therefore falls as $1/L$. A chain of 15–25 atoms absorbs in the visible, the size of the conjugated systems of all biological pigments. Chlorophyll, whose $\pi$ system is a ring rather than a chain, is better described as a particle on a ring, with the same scaling.
 
 ### 18.2.2. Beyond the Box: Bond Alternation and the Protein Environment
@@ -197,6 +199,8 @@ Marcus predicted the inverted region in 1960; it was found experimentally only i
 
 **Example 18.4.1** With $\lambda = 0.6\,\mathrm{eV}$ at $298\,\mathrm{K}$ ($k_{\mathrm{B}}T = 25.7\,\mathrm{meV}$), a reaction with $\Delta G^\circ = -0.3\,\mathrm{eV}$ has $\Delta G^\ddagger = 0.3^2/2.4 = 0.0375\,\mathrm{eV} = 1.5\,k_{\mathrm{B}}T$, while one with $\Delta G^\circ = -1.5\,\mathrm{eV}$ has $\Delta G^\ddagger = 0.9^2/2.4 = 0.34\,\mathrm{eV} = 13.1\,k_{\mathrm{B}}T$: although it releases five times more free energy, it is $\mathrm{e}^{11.7} \approx 10^5$ times slower at the same coupling.
 
+:::
+
 ![Marcus theory. A: free-energy parabolas along the nuclear coordinate (λ = 0.5 eV) for the donor state and for acceptor states in the normal region (ΔG° = −0.2 eV), activationless (−0.5 eV) and inverted (−1.0 eV); dots mark the crossing points, whose height is the activation free energy. B: logarithm of the rate against the driving force for λ = 0.25, 0.5 and 1 eV (|H_DA| = 1 meV, 298 K), and for λ = 0.5 eV split into a classical solvent part and a quantized vibration (dashed), which makes the inverted region shallower; the points mark a forward step and a recombination with −ΔG° = 0.5 and 1.2 eV. C: temperature dependence for λ = 0.5 eV: the activationless reaction is almost independent of temperature, the others slow down on cooling](./plots/marcus.py)
 
 ### 18.4.4. The Moser–Dutton Ruler and the Design of Reaction Centers
@@ -227,6 +231,8 @@ the maximal work that can be extracted per excitation.
 
 **Example 18.4.3** In full sunlight a chlorophyll is excited about $10$ times per second and the excitation lives about $2\,\mathrm{ns}$, so $f = 2\times10^{-8}$; with $g \approx 3$, $k_{\mathrm{B}}T\ln(g/f) = 0.0257\times18.8 = 0.48\,\mathrm{eV}$, and $\Delta\mu \approx 1.34\,\mathrm{eV}$ of the $1.82\,\mathrm{eV}$. This estimate (Duysens 1958; Ross and Calvin 1967) shows that about a quarter of the photon energy is lost unavoidably, whatever the mechanism; the free energy actually stored by the photosystems ($\mathrm{P680^+}$ and $\mathrm{Q_A^-}$ differ by about $1.2\,\mathrm{V}$) is close to this limit.
 
+:::
+
 Following the energy further, through the losses of the Z scheme, the respiration of the plant and the **photorespiration** of rubisco, gives the familiar maximal efficiencies of photosynthesis in the field: about $4.6\,\%$ of the total solar energy converted into biomass for C3 plants and $6\,\%$ for C4 plants (Zhu, Long and Ort 2008), achieved only briefly; crops average about $1\,\%$ over a season.
 
 ## 18.5. Retinal Proteins and Photoreceptors
@@ -242,6 +248,8 @@ Absorption of a photon at $568\,\mathrm{nm}$ isomerizes the retinal in about $0.
 ![The photocycle of bacteriorhodopsin. Intermediates are named by letters with their absorption maxima in nanometers; arrows carry approximate time constants at room temperature and the proton transfers. Photon absorption isomerizes all-trans retinal to 13-cis (bR → K); the Schiff base (SB) donates its proton to Asp85 and a proton is released to the extracellular side (L → M); Asp96 reprotonates the Schiff base (M → N) and takes up a proton from the cytoplasm as the retinal reisomerizes (N → O); Asp85 returns its proton to the release group (O → bR). One cycle pumps one proton outward and takes about 10–15 ms](./plots/bacteriorhodopsin-cycle.py)
 
 **Example 18.5.1 (Efficiency of the Pump)** A $568\,\mathrm{nm}$ photon carries $2.18\,\mathrm{eV}$. Pumping one proton against a **proton-motive force** of $250\,\mathrm{mV}$ ([7.6.3](/7.6.3#fml-3.4.1)) stores $0.25\,\mathrm{eV}$, and only $64\,\%$ of absorbed photons pump: the efficiency is $0.64\times0.25/2.18 \approx 7\,\%$, several times lower than that of the photosystems, whose electron transfer stores more than half of the photon. The pump is simple, robust and cheap to make, and the proton gradient drives an ordinary **ATP synthase**. Expressed in *Escherichia coli* whose respiration is blocked, a bacteriorhodopsin-like pump alone keeps the flagellar motor turning in green light, and stops it in red light.
+
+:::
 
 Proteorhodopsins, discovered in marine bacteria in 2000 by environmental genome sequencing, are found in a large fraction of the bacteria in the sunlit ocean; by some estimates retinal-based phototrophy captures as much light energy in the sea as chlorophyll-based photosynthesis, although without fixing carbon.
 

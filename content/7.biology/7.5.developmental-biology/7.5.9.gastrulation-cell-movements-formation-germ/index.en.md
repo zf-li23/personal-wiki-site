@@ -201,6 +201,8 @@ x_2(t) = \left(\frac{\tau A}{2(\tau + \sigma)}\right)^{1/2}\tanh\left(\frac{\sqr
 $$
 so the half-width relaxes to its equilibrium value $(\tau A/2(\tau + \sigma))^{1/2}$ on a time scale of order $\eta\sqrt{A}/\sqrt{\tau(\tau + \sigma)}$.
 
+:::
+
 For a ring of epithelial cells, a two-dimensional section of a blastula wall, each cell $i$ is a wedge of fixed area with an outer (apical) side, an inner (basal) side and lateral sides, with their tensions, and the dissipation includes friction against the substrate and the internal viscosity of the cells. Percus and Childress found numerically that enhancing the outer tension of a group of cells makes the ring invaginate, until neighboring cells collide (the model has no exclusion between cells). The figure below shows the same result in a vertex model: each of 40 cells is a quadrilateral whose apical and basal edges are contractile springs with preferred lengths, whose lateral edges carry a tension, and whose area is elastic; the blastocoel resists changes of its area weakly; the vertices move by the gradient dynamics of Proposition 9.5.3. Shortening the preferred apical length of five cells at the vegetal pole, as apical constriction does, makes them wedge-shaped and dimples the outer surface, forming a pit about one cell height deep within the time the constriction takes. The model shows that apical constriction of a small group of cells suffices to start an invagination; it also shows its limits: the pit stays shallow, and the deep invagination of real embryos needs further forces, such as the swelling of the hyaline layer in the sea urchin, vegetal rotation in the frog, or basal relaxation and tissue-scale tension in the *Drosophila* furrow.
 
 ![Invagination of an epithelial ring by apical constriction (vertex model with the gradient dynamics of Proposition 9.5.3). A: snapshots; the five constricting cells (red) at the vegetal pole become wedges, and the outer surface dimples into a pit. B: depth of the pit (in cell heights) and apical width of the constricting cells over time](./plots/epithelial-ring.py)
@@ -245,6 +247,8 @@ $$
 \tag{9.8}
 $$
 For complete wetting ($\theta_0 = 0$), $a^3 = a_0^3 + 3K_et$: the ribbon spreads as $t^{1/3}$, its edge slowing as $t^{-2/3}$. For $\theta_0 > 0$ the half-width approaches $\theta_0^{-1/2}$, the spreading stopping when the edge reaches the equilibrium angle; with $\bar a = a\theta_0^{1/2}$, separation of variables gives $-\bar a + \tfrac12\ln\lvert(1 + \bar a)/(1 - \bar a)\rvert = \theta_0^{3/2}K_et + \mathrm{const}$.
+
+:::
 
 A simpler lubrication calculation shows how a gradient of tension in the substrate, rather than wetting, can move cells. For a layer of constant cell density, incompressible ($\nabla\cdot\boldsymbol{u} = 0$) and in **Stokes flow**, with no slip on the substrate and the substrate supplying a tangential traction $-\nabla T(\boldsymbol{x})$ at $z = 0$, neglecting pressure, $\boldsymbol{v} = -z\nabla T/\eta$ and
 

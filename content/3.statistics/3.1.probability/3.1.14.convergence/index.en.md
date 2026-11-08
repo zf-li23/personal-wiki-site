@@ -1,6 +1,6 @@
 ---
 title: Modes of Convergence
-source_hash: 1bfcf0d7a17a
+source_hash: 0584ab106d08
 ---
 
 The main line of probability theory runs: probability space $(\Omega, \mathcal{F}, \mathbb{P})$ → random variables (vectors) and their distributions → numerical characteristics → limits of sequences of random variables $X_n \to\ ?$. The **law of large numbers** and the **central limit theorem** of the previous two chapters use convergence in probability, almost sure convergence and convergence in distribution. This chapter steps back from those two specific theorems and studies the modes of convergence of a general sequence of random variables systematically: their definitions, how they compare in strength, counterexamples that expose the differences, and several convergence theorems used again and again in statistics: the continuous mapping theorem, Slutsky's theorem, the delta method and the continuity theorem for characteristic functions. These tools are the foundation of large-sample theory in statistical inference ([3.2.2](/3.2.2), [3.2.3](/3.2.3)).
@@ -103,6 +103,8 @@ $$
 $$
 does not depend on $n$, and $X_n$ does not converge to $X_1$ in probability. Convergence in distribution says only that the distributions become more and more alike, not that the values get closer.
 
+:::
+
 When the limit is a constant, the situation is different.
 
 **Example 14.3.2** Let $C$ be a constant. Then $X_n \xrightarrow{d} C \Leftrightarrow X_n \xrightarrow{p} C$.
@@ -130,6 +132,8 @@ $$
 \sum_{n=1}^{\infty}\mathbb{P}(A_n) = \sum_{n=1}^{\infty}\frac{1}{n} = \infty,
 $$
 so by the second part of the Borel–Cantelli lemma (Theorem 3.1.2), "$A_n$ occurs infinitely often" has probability $1$: on almost every sample path $X_n = 1$ infinitely often, and $X_n$ does not converge to $0$ almost surely.
+
+:::
 
 Without using independence, one can also construct directly, on a geometric probability model, a sequence that converges in probability but converges nowhere.
 
@@ -199,6 +203,8 @@ $$
 \sqrt{n}\left(\bar X_n(1 - \bar X_n) - p(1 - p)\right) \xrightarrow{d} \mathcal{N}\left(0, (1 - 2p)^2 p(1 - p)\right).
 $$
 
+:::
+
 The continuity theorem (Theorem 11.3.6) turns convergence in distribution into pointwise convergence of characteristic functions, and it is one of the most frequently used and most important theorems of probability theory. Probability generating functions and moment generating functions, under conditions ensuring uniqueness, can also replace characteristic functions in the continuity theorem.
 
 **Example 14.4.3** The continuity theorem proves Khinchin's law of large numbers (Theorem 12.3.2; see the proof after Theorem 13.1.1 in [3.1.13](/3.1.13)), as well as the Poisson approximation to the binomial distribution: if $X_n \sim \mathrm{Bin}(n, p_n)$ with $np_n = \lambda$, then the characteristic function of $X_n$ satisfies
@@ -207,6 +213,8 @@ $$
 \left(1 - p_n + p_n\mathrm{e}^{\mathrm{i}t}\right)^n = \left(1 + \frac{\lambda(\mathrm{e}^{\mathrm{i}t} - 1)}{n}\right)^n \to \mathrm{e}^{\lambda(\mathrm{e}^{\mathrm{i}t} - 1)},
 $$
 which is the characteristic function of $\mathrm{Poi}(\lambda)$, so $X_n \xrightarrow{d} \mathrm{Poi}(\lambda)$.
+
+:::
 
 For random vectors, convergence in distribution (convergence of the joint distribution functions at continuity points of the limit) can likewise be decided by characteristic functions.
 

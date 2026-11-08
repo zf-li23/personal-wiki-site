@@ -38,6 +38,8 @@ $$
 
 **Example 24.1.1** Two inbred lines have mean ear lengths of $40$ and $20\,\mathrm{cm}$; $V_{F_1} = 4\,\mathrm{cm^2}$ and $V_{F_2} = 14\,\mathrm{cm^2}$. Then $n = 20^2/(8 \cdot 10) = 5$ loci, each with $a = 20/(2 \cdot 5) = 2\,\mathrm{cm}$.
 
+:::
+
 The estimate is a lower bound: unequal effects, linkage in **coupling**, increasing alleles dispersed between the parents (so that the parental difference understates the genetic differences), dominance and **epistasis** all make it smaller than the true number of segregating loci. Genome-wide mapping ([7.4.25](/7.4.25)) shows that for most traits the true number is very large, with a few loci of moderate effect and many of tiny effect.
 
 ### 24.1.3. Describing a Quantitative Trait
@@ -167,6 +169,8 @@ It determines the resemblance between parents and offspring and the response to 
 - *Additive gene action.* $B_1B_1$, $B_1B_2$, $B_2B_2$ have 1, 2, 3 flowers; $M = 2$; $a = 1$, $d = 0$, $\alpha = 1$; $V_A = 2 \cdot 0.25 \cdot 1 = 0.5 = V_G$, so $h^2 = H^2 = 1$. Selecting plants with 3 flowers selects $B_2B_2$, whose offspring all have 3 flowers: the parental superiority is fully transmitted.
 - *$B_2$ dominant.* The values are 1, 3, 3; $M = 2.5$; $a = 1$, $d = 1$, $\alpha = a + d(q - p) = 1$; $V_A = 0.5$, $V_D = (2 \cdot 0.25 \cdot 1)^2 = 0.25$, $V_G = 0.75$ (check: $0.25 \cdot 1.5^2 + 0.75 \cdot 0.5^2 = 0.75$). So $H^2 = 1$ but $h^2 = 0.5/0.75 = 0.67$. The 3-flowered plants are $B_2B_2$ and $B_1B_2$ in the ratio $1 : 2$; among them $B_2$ has frequency $2/3$, and their randomly mated offspring are $4/9$ $B_2B_2$, $4/9$ $B_1B_2$, $1/9$ $B_1B_1$, with mean $25/9 = 2.78$ flowers, less than the parents' 3. When there is dominance, the phenotype is not fully heritable in the narrow sense.
 
+:::
+
 In plant breeding, $V_A$ is often estimated from the generations of a single cross: the two parental lines, the $\mathrm{F}_1$, the $\mathrm{F}_2$ and the two backcrosses $\mathrm{B}_1 = \mathrm{F}_1 \times \mathrm{P}_1$ and $\mathrm{B}_2 = \mathrm{F}_1 \times \mathrm{P}_2$, all grown together.
 
 **Formula 24.3.1 (Narrow-Sense Heritability from Backcrosses)** If the loci in which the parents differ are unlinked and there is no epistasis or genotype–environment interaction,
@@ -235,6 +239,8 @@ The first relation is Falconer's formula. Modern twin analyses fit the ACE (or A
 
 **Example 24.4.1** For adult height, correlations of about $r_{\mathrm{MZ}} = 0.86$ and $r_{\mathrm{DZ}} = 0.47$ give $h^2 = 2 \cdot 0.39 = 0.78$, $c^2 = 0.94 - 0.86 = 0.08$ and $\mathrm{e}^2 = 0.14$. A negative $c^2$ (when $r_{\mathrm{MZ}} > 2r_{\mathrm{DZ}}$) signals dominance or epistasis.
 
+:::
+
 Twin estimates rest on assumptions: that MZ twins are not treated more alike than DZ twins in ways that matter for the trait, that twins are representative of the population, and that **assortative mating** ([7.4.22](/7.4.22), §22.4.1) is negligible (it raises the DZ correlation and biases $h^2$ downward). MZ twins reared apart, and adoption studies, which compare adopted children with their biological and adoptive parents, offer partial checks; for height, body mass index and many psychiatric traits all designs give substantial heritabilities.
 
 ## 24.5. Response to Selection
@@ -294,6 +300,8 @@ b = \frac{t - t_R}{\mu_{\mathrm{aff}}}, \qquad h^2 \approx \frac{b}{r}. \tag{24.
 $$
 
 **Example 24.6.1** A disease has prevalence $K = 1\,\%$ and occurs in $5\,\%$ of the sibs of patients. Then $t = 2.326$, $t_R = 1.645$, $\mu_{\mathrm{aff}} = \varphi(2.326)/0.01 = 2.665$, $b = 0.681/2.665 = 0.256$, and $h^2 \approx 0.256/0.5 = 0.51$. The exact bivariate-normal model with $h^2 = 0.51$ gives a sib risk of $4.5\,\%$, so Falconer's approximation slightly underestimates $h^2$; modern analyses fit the bivariate normal model directly.
+
+:::
 
 The model makes characteristic predictions: the recurrence risk is higher when the **proband** is more severely affected or when two relatives are already affected; it is higher for relatives of the less often affected sex (Carter effect: in pyloric stenosis, five times more common in boys, the relatives of affected girls have the higher risk, because girls need a greater liability); and it falls much faster than by half with each degree of relationship, because only the tail of the liability distribution counts.
 

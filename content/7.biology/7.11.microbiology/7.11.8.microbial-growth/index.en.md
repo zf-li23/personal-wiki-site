@@ -178,6 +178,8 @@ The total number of cells, living and dead, can be counted in a microscope. In a
 
 **Example 8.6.1** A Petroff–Hausser chamber has a grid of $1\,\mathrm{mm^2}$ divided into $25$ large squares, and a depth of $0.02\,\mathrm{mm}$. If a large square contains on average $12$ cells, the grid contains $12 \times 25 = 300$ cells in $0.02\,\mathrm{mm^3}$, that is $1.5 \times 10^4$ cells per $\mathrm{mm^3}$ and $1.5 \times 10^7$ cells per milliliter.
 
+:::
+
 Microscopic counts are fast but imprecise; they need at least about $10^6$ cells per milliliter, they cannot tell live cells from dead ones without special stains, and small cells and debris are easily confused. For natural samples, cells are collected on a filter and stained with a DNA dye such as DAPI or SYBR Green, or with fluorescent probes for particular groups (fluorescence in situ hybridization, [7.11.29](/7.11.29)); stains that enter only cells with damaged membranes distinguish live from dead cells. **Flow cytometry** counts cells in a stream one at a time by their light scattering and fluorescence, thousands per second, and can sort them; it is the standard method for counting marine picoplankton. Electronic particle counters (Coulter counters) count and size cells by the change in electrical resistance as each passes through an aperture.
 
 ### 8.6.2. Viable Counts

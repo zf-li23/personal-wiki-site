@@ -42,6 +42,8 @@ $$
 
 **例 12.1.4** $\mathbb{R}^{n\times n}$ 上 $\langle A, B \rangle = \operatorname{tr}(AB^{\mathsf T}) = \sum_{i,j}a_{ij}b_{ij}$，$\mathbb{C}^{n\times n}$ 上 $\langle A, B \rangle = \operatorname{tr}(AB^{\mathsf H})$，称为 Frobenius 内积（Frobenius inner product）。它就是把矩阵看作 $n^2$ 维向量后的标准内积；**迹**的性质 $\operatorname{tr}(AB^{\mathsf T}) = \operatorname{tr}(BA^{\mathsf T})$ 给出对称性，$\operatorname{tr}(AA^{\mathsf T}) = \sum a_{ij}^2$ 给出正定性。
 
+:::
+
 一般地，设 $\alpha_1, \dots, \alpha_n$ 是内积空间 $V$ 的基，称 $G = (\langle \alpha_i, \alpha_j \rangle)_{n \times n}$ 为内积在这组基下的度量矩阵，也就是这组向量的 **Gram 矩阵**（[第 11 章](/2.1.11)定义 11.2.2 是函数空间中积分内积的特例）。若 $\alpha = \sum x_i\alpha_i$，$\beta = \sum y_j\alpha_j$，则
 
 $$
@@ -102,6 +104,8 @@ $$
 
 是标准正交向量组（例如 $\int_{-\pi}^\pi \sin x\cos x\,\mathrm{d}x = \frac12\int_{-\pi}^\pi \sin 2x\,\mathrm{d}x = 0$）。性质 12.3.1 的第 2 条给出的坐标就是 Fourier 系数。
 
+:::
+
 在 $\mathbb{C}^n$ 中，设 $A = (\boldsymbol{u}_1, \dots, \boldsymbol{u}_n)$。$\boldsymbol{u}_1, \dots, \boldsymbol{u}_n$ 是标准正交基 $\Leftrightarrow$ $\boldsymbol{u}_j^{\mathsf H}\boldsymbol{u}_i = \delta_{ij}$ $\Leftrightarrow$ $A^{\mathsf H}A = I_n$。实情形就是**正交矩阵**。
 
 **定义 12.3.2（酉矩阵）** 满足 $A^{\mathsf H}A = AA^{\mathsf H} = I_n$（即 $A^{-1} = A^{\mathsf H}$）的复方阵 $A$ 称为**酉矩阵**。
@@ -151,6 +155,8 @@ $$
 3. $\langle x^2, q_1 \rangle = \frac{\sqrt2}{3}$，$\langle x^2, q_2 \rangle = 0$，$w_3 = x^2 - \frac13$，$\|w_3\|^2 = \int_{-1}^1(x^2 - \frac13)^2\,\mathrm{d}x = \frac{8}{45}$，$q_3 = \sqrt{\frac{45}{8}}\left(x^2 - \frac13\right)$。
 
 $q_1, q_2, q_3$ 是归一化的 Legendre 多项式（Legendre polynomials）$1, x, \frac12(3x^2 - 1)$。继续对 $x^3, x^4, \dots$ 正交化就得到全部 Legendre 多项式，它们在逼近论与偏微分方程中反复出现。
+
+:::
 
 数值计算中，经典 Gram–Schmidt 会因舍入误差逐渐失去正交性，实践中用修正的 Gram–Schmidt 或 **Householder 变换**（[第 4 章](/2.1.4)）计算 QR 分解。
 
@@ -265,6 +271,8 @@ $$
 
 也可以用定理 12.7.2：把 $u$ 扩充为标准正交基 $e_1 = u, e_2, \dots, e_n$，则 $Te_1 = -e_1$，$Te_j = e_j$（$j \ge 2$），矩阵 $\operatorname{diag}(-1, 1, \dots, 1)$ 是正交矩阵。$T$ 是关于超平面 $u^\perp$ 的镜面反射，在 $\mathbb{R}^n$ 中就是 Householder 变换 $I - 2\boldsymbol{u}\boldsymbol{u}^{\mathsf T}$。
 
+:::
+
 设 $T$ 是欧氏空间上的正交变换，在标准正交基下的矩阵 $A$ 是正交矩阵，$\det A = \pm 1$。$\det A = 1$ 时称 $T$ 为第一类正交变换（旋转），$\det A = -1$ 时称为第二类正交变换。例如 $\mathbb{R}^2$ 上 $\begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$ 是第一类的，$\begin{bmatrix} \cos\theta & \sin\theta \\ \sin\theta & -\cos\theta \end{bmatrix}$（关于倾角为 $\theta/2$ 的直线的反射）是第二类的。所有正交变换构成群，第一类正交变换构成它的子群，对应 [1.3.5](/1.3.5) 中的 $O(n)$ 与 $\operatorname{SO}(n)$；[第 13 章](/2.1.13)将从双线性型的角度重新认识这些群。
 
 ## 12.8. 正交相似与酉相似
@@ -344,6 +352,8 @@ $$
 
 **例 12.10.1** 2 阶实正规矩阵。设 $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in \mathbb{R}^{2\times 2}$，比较 $AA^{\mathsf T}$ 与 $A^{\mathsf T}A$ 得 $b^2 = c^2$ 与 $(c - b)(a - d) = 0$，所以 $A$ 正规当且仅当 $A$ 对称（$b = c$），或 $A = \begin{bmatrix} a & b \\ -b & a \end{bmatrix}$（$b \ne 0$）。后者是复数 $a - b\mathrm{i}$ 的矩阵表示（[第 9 章](/2.1.9)），特征值 $a \pm b\mathrm{i}$，对应的特征向量 $\frac{1}{\sqrt2}(1, \pm \mathrm{i})^{\mathsf T}$ 正交，$U = \frac{1}{\sqrt2}\begin{bmatrix} 1 & 1 \\ \mathrm{i} & -\mathrm{i} \end{bmatrix}$ 是酉矩阵，$U^{\mathsf H}AU = \operatorname{diag}(a + b\mathrm{i}, a - b\mathrm{i})$。它在 $\mathbb{R}^2$ 中没有实特征向量，不能正交对角化，但可以酉对角化。
 
+:::
+
 正规与非正规的差别也可以从数值域（numerical range）$W(A) = \{\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} \mid \|\boldsymbol{x}\| = 1\}$ 看出。它总包含全部特征值（取 $\boldsymbol{x}$ 为单位特征向量），并且是凸集（Toeplitz–Hausdorff 定理）。若 $A = U\Lambda U^{\mathsf H}$ 正规，令 $\boldsymbol{y} = U^{\mathsf H}\boldsymbol{x}$，则 $\boldsymbol{x}^{\mathsf H}A\boldsymbol{x} = \sum_i \lambda_i|y_i|^2$，$\sum_i |y_i|^2 = 1$，所以 $W(A)$ 恰好是特征值的凸包；非正规矩阵的数值域可以大得多。[第 11 章](/2.1.11)中非正规矩阵的幂先增长后衰减，也是同一现象。
 
 ![两个特征值相同（1、-0.5+i、-0.8-0.6i）的 3 阶矩阵的数值域：左为正规矩阵，数值域就是特征值构成的三角形；右为上三角的非正规矩阵，数值域远大于三角形；散点是随机单位向量 x 给出的 x^H A x](./plots/numerical-range.py)
@@ -361,6 +371,8 @@ $$
 1. $\lambda = \mathrm{i}$：$(A - \mathrm{i}I)\boldsymbol{x} = \boldsymbol{0}$ 的基为 $(-\mathrm{i}, 1, 0)^{\mathsf T}$、$(0, 0, 1)^{\mathsf T}$，它们已经正交，单位化得 $\boldsymbol{u}_1 = \frac{1}{\sqrt2}(-\mathrm{i}, 1, 0)^{\mathsf T}$，$\boldsymbol{u}_2 = (0, 0, 1)^{\mathsf T}$。若取的基不正交（例如 $(-\mathrm{i}, 1, 1)^{\mathsf T}$ 与 $(0, 0, 1)^{\mathsf T}$），就需要先作 Gram–Schmidt。
 2. $\lambda = -\mathrm{i}$：基为 $(\mathrm{i}, 1, 0)^{\mathsf T}$，$\boldsymbol{u}_3 = \frac{1}{\sqrt2}(\mathrm{i}, 1, 0)^{\mathsf T}$，它与 $\boldsymbol{u}_1, \boldsymbol{u}_2$ 自动正交。
 3. $U = (\boldsymbol{u}_1, \boldsymbol{u}_2, \boldsymbol{u}_3)$，$U^{\mathsf H}AU = \operatorname{diag}(\mathrm{i}, \mathrm{i}, -\mathrm{i})$。
+
+:::
 
 数值软件不按算法 12.10.1 计算（重特征值的特征子空间在浮点运算中难以准确求出），而是直接计算推广的 Schur 定理中的酉三角化；对正规矩阵，得到的三角阵就是对角阵。
 

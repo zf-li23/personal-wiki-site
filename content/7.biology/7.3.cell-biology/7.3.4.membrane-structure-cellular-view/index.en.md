@@ -155,6 +155,8 @@ The formula is that of resistors in series: a molecule traveling a distance $L$ 
 
 ![Hop diffusion in the picket-fence model, simulated as a random walk on a lattice (spacing 5 nm, D_µ = 5 µm² s⁻¹) divided into square compartments of side 100 nm whose walls are crossed with probability p = 0.003 per attempt. A: a 50 ms trajectory, colored by time; the molecule explores each compartment and hops occasionally to a neighbor. B: mean squared displacement divided by 4t, the apparent diffusion coefficient, for 400 walkers: at short times it equals D_µ, at long times it falls to the value of Formula 4.5.1 (dashed line, 0.28 µm² s⁻¹), with a transition at about the time to cross one compartment (L²/4D_µ ≈ 0.5 ms). Free diffusion (gray) gives a constant](./plots/hop-diffusion.py)
 
+:::
+
 Compartmentalization has consequences for signaling. A receptor that binds its ligand and assembles a large cytoplasmic complex, or that oligomerizes, crosses the fences much less often than a monomer (oligomerization-induced trapping), so activated receptors and their partners stay together in a small area, which increases the rate of their encounters ([7.3.18](/7.3.18)).
 
 ### 4.5.4. What Sets Membrane Fluidity
@@ -212,6 +214,8 @@ The erythrocyte skeleton is a nearly hexagonal network whose nodes are junctiona
 ![The erythrocyte membrane skeleton. A: the network seen from the cytoplasm (schematic): junctional complexes (short actin filaments with protein 4.1) at the nodes, spectrin tetramers (αβ heterodimers joined head to head, at the dots) between them, and ankyrin–band 3 complexes near the middle of each tetramer. B: the vertical linkages in side view: band 3 dimers in the bilayer bind ankyrin, which binds β-spectrin; glycophorin C binds protein 4.1 at a junctional complex. Defects in the vertical linkages (ankyrin, band 3, β-spectrin, protein 4.2) cause hereditary spherocytosis; defects in the horizontal ones (spectrin self-association, spectrin–actin–4.1) cause hereditary elliptocytosis](./plots/rbc-membrane-skeleton.py)
 
 **Example 4.6.1** Hereditary spherocytosis, the most common inherited hemolytic anemia in people of northern European descent (about 1 in 2000), is caused by mutations in ankyrin (about half of the cases), band 3, β-spectrin, α-spectrin or protein 4.2. Each weakens the vertical attachment of the skeleton to the bilayer. Patches of bilayer not held by the skeleton are released as small vesicles, so the cell gradually loses surface area while keeping its volume; it becomes a sphere, the shape with the least area for its volume, and can no longer deform. Spherocytes are osmotically fragile (a sphere cannot swell without stretching its membrane, so they lyse in mildly hypotonic saline, the basis of the osmotic fragility test, [7.3.5](/7.3.5#sec-5.3)) and are trapped and destroyed in the spleen, causing anemia, jaundice and gallstones; removing the spleen relieves the anemia, although the cells remain spherical. In hereditary elliptocytosis the horizontal links are defective, the network fails to recover its shape after shear, and the cells become permanently elongated.
+
+:::
 
 Nucleated cells have spectrin, ankyrin and protein 4.1 homologs in a much denser and dynamic cortex built mainly of actin filaments and myosin ([7.3.13](/7.3.13)). The cortex supports the plasma membrane, anchors membrane proteins in specialized domains (ankyrin-G at the axon initial segment and at nodes of Ranvier), forms the fences of hop diffusion, and, through its tension, governs the shape of the cell.
 

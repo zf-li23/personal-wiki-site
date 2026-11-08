@@ -1,7 +1,7 @@
 ---
 title: The Arithmetic Unit
 description: "Function and organization of the arithmetic unit; from the 1-bit ALU to the 32-bit ALU: full adders, ripple and carry-lookahead, subtraction, comparison and overflow detection, the barrel shifter, the RV32I ALU; multiplication: the shift-and-add algorithm and three hardware organizations, Booth's algorithm, fast multipliers and the RISC-V M extension; division: restoring and non-restoring methods, signed division and RISC-V division semantics; floating-point addition, subtraction, and multiplication, guard bits and the implementation of rounding, properties of floating-point arithmetic, and the RISC-V F/D extensions."
-source_hash: 25b9893497f8
+source_hash: 1144b7410cf4
 ---
 
 The arithmetic unit is the part of a processor that performs arithmetic and logic operations. The previous chapter gave the encodings of data in the machine; this chapter discusses how to implement operations on these encodings with combinational and **sequential circuits**: starting from a 1-bit **ALU**, we extend the width and the functions to obtain the 32-bit ALU needed by RV32I; then we use adders, **shift registers**, and control logic to implement multiplication and division; finally we discuss the steps of floating-point arithmetic and rounding. The gate-level design of adders (full adders, carry-lookahead) was covered in [Arithmetic Circuits](/4.9.5) and is recalled here only when needed; the emphasis is on how the arithmetic unit is organized in a processor. The next chapter puts the ALU into a datapath to form a processor that can execute RISC-V instructions.
@@ -85,6 +85,8 @@ Many processors set flag bits after an operation for use by later conditional br
 **Proof** When two numbers of opposite signs are added, the absolute value of the sum does not exceed the larger of the two, so no overflow occurs; when two numbers of the same sign are added, the true sum has that same sign, and on overflow the result truncated to $n$ bits differs from the true value by $2^n$, so its sign is exactly the opposite; hence (1)$\Leftrightarrow$(2). Now look at the top bit: $s_{n-1} = a_{n-1} \oplus b_{n-1} \oplus c_{n-1}$ and $c_n = a_{n-1}b_{n-1} + (a_{n-1} \oplus b_{n-1})c_{n-1}$. If $a_{n-1} \ne b_{n-1}$, then $c_n = c_{n-1}$, and neither (2) nor (3) holds. If $a_{n-1} = b_{n-1} = 0$, then $c_n = 0$ and $s_{n-1} = c_{n-1}$; if $a_{n-1} = b_{n-1} = 1$, then $c_n = 1$ and $s_{n-1} = c_{n-1}$. In both cases $s_{n-1} \ne a_{n-1}$ is equivalent to $c_{n-1} \ne c_n$, so (2)$\Leftrightarrow$(3). $\square$
 
 **Example 5.2.1** The $4$-bit two's complement addition $0111 + 0001 = 1000$: the true result of $7 + 1$ is $8$, outside $[-8, 7]$; two positive numbers give a negative number, and $c_3 = 1 \ne c_4 = 0$, so overflow occurs. For $1111 + 1111 = 1\,1110$: $(-1) + (-1) = -2$, and $c_3 = c_4 = 1$, so there is no overflow; the discarded top carry $c_4 = 1$ is meaningful only for unsigned operations ($15 + 15$ produces a carry).
+
+:::
 
 Comparison is also done by subtraction. A signed comparison $a < b$ holds if and only if the true value of $a - b$ is negative, that is, $N \oplus V = 1$ (on overflow the sign bit is inverted); an unsigned comparison $a < b$ holds if and only if $a + {\sim}b + 1$ produces no carry out of the top bit, that is, $C = 0$ (equivalent to a borrow). And $a = b$ if and only if the result of $a - b$ is zero.
 
@@ -247,6 +249,8 @@ The algorithm need not distinguish the sign bit from the value bits; the sign bi
 
 The product is $AQ = 1111\,0110 = -10$.
 
+:::
+
 Booth's algorithm reduces the number of additions when the multiplier has long runs of $1$s, but in the worst case (alternating $0101\cdots$) it adds or subtracts at every step. Its real value lies in handling signed numbers uniformly and in the radix-4 extension of the next section.
 
 ### 5.3.3. Fast Multiplication and the RISC-V M Extension
@@ -319,6 +323,8 @@ Each step performs exactly one addition or subtraction, so control is simple and
 
 The quotient is $0011 = 3$, and the remainder $1$ is nonnegative, so no correction is needed.
 
+:::
+
 Division of two's complement numbers is similar to division of **sign-magnitude** numbers: divide the two's complement numbers directly, with the first step choosing subtraction or addition according to whether the dividend and divisor have the same sign; thereafter, when the remainder and divisor have the same sign, the quotient bit is $1$ and the next step subtracts, and when the signs differ the quotient bit is $0$ and the next step adds; finally the quotient is corrected (by computing one extra bit and rounding, or by forcing the lowest bit to $1$). In actual processors it is more common to take absolute values first, divide as unsigned numbers, and then adjust the result according to the sign rules.
 
 ### 5.4.3. Signed Division and the RISC-V Division Instructions
@@ -366,6 +372,8 @@ Let $x = M_x \times 2^{E_x}$ and $y = M_y \times 2^{E_y}$. The steps of floating
 
 The result is $1.000_2 \times 2^{-4} = 0.0625$, which is correct.
 
+:::
+
 The hardware of a floating-point adder is organized according to these steps: a small ALU computes the exponent difference and also controls three multiplexers that select the larger exponent, the mantissa of the larger number, and the mantissa that must be shifted right; the right shifter performs the alignment; the big ALU adds or subtracts the mantissas; then come normalization (leading-zero detection plus a shifter, with the exponent adjusted at the same time) and the rounding unit, and if renormalization is needed after rounding, control returns to the normalization unit. The hardware cost depends mainly on the widths of the exponent and mantissa.
 
 ```mermaid
@@ -409,6 +417,8 @@ Floating-point multiplication is simpler than addition and needs no alignment:
 Division is symmetric: subtract the exponents (and add back the bias) and divide the mantissas.
 
 **Example 5.5.3** Compute $0.5 \times (-0.4375) = (1.000_2 \times 2^{-1}) \times (-1.110_2 \times 2^{-2})$. Exponent: $-1 + (-2) = -3$, and the biased exponent is $126 + 125 - 127 = 124$. Mantissa: $1.000_2 \times 1.110_2 = 1.110000_2$, which is already normalized and rounds to $4$ bits as $1.110_2$. Sign: $0 \oplus 1 = 1$. The result is $-1.110_2 \times 2^{-3} = -0.21875$, which is correct.
+
+:::
 
 Modern processors generally provide *fused multiply-add* (FMA), that is, $a \times b + c$: the product is added to $c$ without rounding, so the whole operation is rounded only once, which is faster and more accurate than a separate multiplication and addition. IEEE 754-2008 lists it as a basic operation, and the RISC-V instructions `fmadd.s`, `fmsub.s`, `fnmadd.s`, and `fnmsub.s` implement it.
 

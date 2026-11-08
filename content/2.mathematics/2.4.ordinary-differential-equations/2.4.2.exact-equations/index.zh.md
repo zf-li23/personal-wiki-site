@@ -198,6 +198,8 @@ $$
 
 **例 2.3.2** 变量分离方程 $X(x)Y_1(y)\,\mathrm{d}x+X_1(x)Y(y)\,\mathrm{d}y=0$ 有积分因子 $\dfrac{1}{X_1(x)Y_1(y)}$（在 $X_1Y_1\ne0$ 处），乘以它后成为 $\dfrac{X}{X_1}\,\mathrm{d}x+\dfrac{Y}{Y_1}\,\mathrm{d}y=0$，两项各自是全微分。
 
+:::
+
 同样的推导适用于形如 $\mu=\mu\big(\omega(x,y)\big)$ 的积分因子（$\omega$ 是给定的函数，如 $x+y$、$xy$、$x^2+y^2$）：代入式 (2.6) 得
 
 $$

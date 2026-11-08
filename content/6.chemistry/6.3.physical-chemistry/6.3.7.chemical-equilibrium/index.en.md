@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: 892d80605e6d
+source_hash: c150f664abb2
 ---
 
 [6.1.8](/6.1.8) started from the empirical equilibrium constant and, with the help of ideal-gas and dilute-solution approximations, wrote down the **reaction isotherm** and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$, and discussed the effects of concentration, pressure, and temperature on equilibrium. With the **chemical potential** ([6.3.4](/6.3.4)) and the **activity** ([6.3.6](/6.3.6)) in hand, these results can be derived rigorously for any system. This chapter answers three questions: why a chemical reaction in general cannot go to completion and what the condition for equilibrium is (7.1); how the standard equilibrium constant is defined from chemical potentials and what form it takes for gases, solutions, and heterogeneous reactions (7.2–7.3); and how $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ is obtained and used (7.4). We then revisit the shift of equilibrium within the rigorous framework, including the van 't Hoff equation for $\Delta_{\mathrm{r}}C_p \ne 0$, the fugacity correction at high pressure, and the precise statement of Le Chatelier's principle (7.5). Finally we discuss simultaneous equilibria and coupled reactions, taking biochemical reactions driven by ATP hydrolysis as the example (7.6).
@@ -238,6 +238,8 @@ where the integration constant $I$ is fixed by $K^\circ$ at one temperature. In 
 
 ![van 't Hoff plot for ammonia synthesis (½N₂ + 3/2H₂ ⇌ NH₃): the straight line that neglects ΔrCp and the curve that includes the heat capacities diverge markedly at high temperature (left); temperature dependence of the reaction heat capacity (right)](./plots/ammonia-heat-capacity.py)
 
+:::
+
 Qualitatively, raising the temperature increases $K^\circ$ for an endothermic reaction and decreases it for an exothermic one. A common puzzle: for a reaction with $\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} > 0$ and $\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}} < 0$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} - T\Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$ increases with temperature, so does $K^\circ$ decrease? No: what determines $K^\circ$ is $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}/T = \Delta_{\mathrm{r}}H^\circ_{\mathrm{m}}/T - \Delta_{\mathrm{r}}S^\circ_{\mathrm{m}}$, which decreases as $T$ rises, so $K^\circ$ increases, in agreement with the van 't Hoff equation (even though $K^\circ$ remains less than 1). For an exothermic reaction, low temperature favors the equilibrium, but in production one cannot simply keep lowering the temperature: at too low a temperature the reaction is too slow, and a compromise between equilibrium and rate must be made (ammonia synthesis, [6.1.8](/6.1.8)).
 
 ### 7.5.2. Pressure
@@ -282,6 +284,8 @@ Adding a reactant or removing a product decreases $Q$ and shifts the equilibrium
 **Example 7.5.4** For $\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$ at a certain temperature and total pressure $p^\circ$, the equilibrium amounts are $n(\ce{N2}) = 3.00\,\mathrm{mol}$ and $n(\ce{H2}) = n(\ce{NH3}) = 1.00\,\mathrm{mol}$. At constant temperature and total pressure, (1) add $0.10\,\mathrm{mol}$ of $\ce{N2}$; (2) increase $\ce{H2}$ to $3.10\,\mathrm{mol}$. In which direction does the equilibrium shift?
 
 **Solution** At equilibrium the mole fractions are $0.6$, $0.2$, $0.2$, and $K^\circ = \frac{0.2^2}{0.6 \times 0.2^3} = 8.33$ ($p = p^\circ$). (1) The total is $5.1\,\mathrm{mol}$, $Q = \frac{(1/5.1)^2}{(3.1/5.1)(1/5.1)^3} = 8.39 > K^\circ$, so the equilibrium shifts to the left: here $x(\ce{N2}) = 0.6 > 1/2$. (2) The total is $7.1\,\mathrm{mol}$, $Q = \frac{(1/7.1)^2}{(3/7.1)(3.1/7.1)^3} = 0.564 < K^\circ$, so the equilibrium shifts to the right. When several factors change simultaneously, qualitative rules cannot simply be applied; the reliable method is always to compare $Q$ in the new state with $K^\circ$.
+
+:::
 
 In 1884 Le Chatelier summarized the regularities of equilibrium shift in an empirical principle (**Le Chatelier's principle**, [6.1.8](/6.1.8#sec-8.4.4)). The conditions under which its qualitative statement holds rigorously can be derived from thermodynamics.
 

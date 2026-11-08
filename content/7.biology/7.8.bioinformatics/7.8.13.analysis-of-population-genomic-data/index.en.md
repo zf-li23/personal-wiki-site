@@ -29,6 +29,8 @@ The program PLINK (Purcell and colleagues 2007; PLINK 1.9 and PLINK 2, Chang and
 
 **Example 13.1.1** For $n = 5\times10^5$ individuals and $m = 8\times10^5$ array SNPs the `.bed` file has $10^{11}$ bytes ($100\,\mathrm{GB}$), and any variant can be read by seeking to byte $3 + j\lceil n/4\rceil$. An uncompressed VCF of the same genotypes, with at least four characters (`0/1` and a tab) per genotype, would exceed $1.6\,\mathrm{TB}$. PLINK 2's `.pgen` format compresses further by storing each variant relative to a similar earlier one (linkage disequilibrium makes neighboring variants alike), and adds dosages, phase and multiallelic variants; `.pvar` and `.psam` replace `.bim` and `.fam`.
 
+:::
+
 ```bash
 # VCF (from joint calling or an imputation server) to PLINK 2 and PLINK 1 binary filesets
 plink2 --vcf cohort.vcf.gz --set-all-var-ids '@:#:$r:$a' --max-alleles 2 --make-pgen --out cohort
@@ -54,6 +56,8 @@ $$
 It estimates the **inbreeding coefficient** of [7.4.7](/7.4.7#sec-7.5.1): $\hat F_i = 0$ for the homozygosity expected in a random-mating population, $1$ when every genotype is homozygous. On the X chromosome, PLINK's sex check calls an individual male if $\hat F > 0.8$ and female if $\hat F < 0.2$.
 
 **Example 13.2.1** At $N = 10\,000$ non-missing X-chromosome SNPs whose allele frequencies give $E = 7000$ expected homozygotes, a sample with $O = 9990$ homozygous genotypes has $\hat F = 2990/3000 = 0.997$ (male; the $10$ heterozygous calls are genotyping errors), and one with $O = 7100$ has $\hat F = 0.033$ (female). If the first sample is recorded as female, it is flagged.
+
+:::
 
 *Missingness and heterozygosity.* A sample whose DNA was degraded or too dilute fails at many SNPs; samples missing more than $2$–$5\,\%$ of genotypes are removed. The heterozygosity rate $(N_i - O_i)/N_i$ over autosomal SNPs (pruned for linkage disequilibrium, §13.2.3) has a narrow distribution among good samples: a higher rate indicates contamination by DNA of a second person (a mixture of two genotypes looks heterozygous wherever they differ), a lower rate indicates **consanguinity** or a sample from a population with less diversity than the rest. Samples outside the mean $\pm3$ standard deviations are inspected and usually removed. Contamination can also be estimated directly from the allele fractions in sequencing reads (VerifyBamID) or in the array intensities.
 
@@ -86,6 +90,8 @@ For unrelated individuals in Hardy–Weinberg proportions at a SNP with allele f
 
 **Example 13.2.2** Two samples have $N^{(i)}_{\mathrm{het}} = 205\,000$ and $N^{(j)}_{\mathrm{het}} = 195\,000$ heterozygous SNPs, $N_{\mathrm{het},\mathrm{het}} = 102\,000$ and $N_{\mathrm{IBS0}} = 1000$. Then $\hat\varphi = (102\,000 - 2000)/400\,000 = 0.25$: a first-degree pair. The small but nonzero IBS0 count could be genotyping error in a parent–offspring pair or a full-sib pair; with $m \approx 10^6$ SNPs of mean opposite-homozygote probability $\overline{2p^2q^2} \approx 0.07$ (frequencies spread between $0.05$ and $0.5$), unrelated pairs have IBS0 at about $7\,\%$ of SNPs and full siblings at a quarter of that, so a count of $1000$ ($0.1\,\%$ of the SNPs) indicates parent and child.
 
+:::
+
 ![Relationship inference from genotypes (simulated: 20 000 independent SNPs; pairs of six relationships drawn with their IBD probabilities). Each point is a pair: the KING-robust kinship (Formula 13.2.2) against the fraction of SNPs at which the two are opposite homozygotes. Relationships of different degree separate along the kinship axis at 1/2, 1/4, 1/8, 1/16 and 0; dashed lines are the KING thresholds. Parent–offspring and full-sib pairs have the same kinship but differ in IBS0 (zero for parent and child, a quarter of the unrelated value for siblings). On real chromosomes IBD is shared in long segments, which spreads each cloud more than here](./plots/kinship.py)
 
 Removing relatives requires choosing which members of related groups to drop. The pairs above a threshold define a graph on the individuals ([1.4.1](/1.4.1)), and the largest unrelated subset is a maximum independent set of this graph, a problem that is NP-hard in general. PLINK 2's `--king-cutoff` uses a greedy rule: repeatedly remove the individual involved in the most remaining related pairs. Biobank analyses with mixed models (§13.5.2) keep the relatives instead and model their correlation, which preserves sample size.
@@ -109,6 +115,8 @@ $$
 for $n_{AB}$ of the same parity as $n_A$. The $p$-value is the sum of the probabilities of all values of $n_{AB}$ that are no more probable than the observed one (Wigginton and colleagues 2005). The probabilities can be computed by a recurrence from the mode in $O(\min(n_A, n_B))$ time.
 
 **Example 13.2.3** Among $n = 1000$ controls a SNP has $980$ $AA$, $18$ $AB$ and $2$ $BB$ genotypes, so $\hat p_B = 0.011$ and the expected counts are $978.1$, $21.8$ and $0.12$. The χ² statistic is $29.8$ with $p = 4.7\times10^{-8}$, driven entirely by the expected count of $0.12$ for $BB$; the exact test gives $p = 0.0052$, a mild departure that would not be filtered at $10^{-6}$. For a common SNP with $300$, $400$ and $300$ genotypes (expected $250$, $500$, $250$) both tests give $p = 2.3\times10^{-10}$ and $2.5\times10^{-10}$: a heterozygote deficit of this size in controls almost always means that the heterozygote cluster was miscalled.
+
+:::
 
 *LD pruning.* Analyses that treat SNPs as independent pieces of evidence (heterozygosity, kinship, PCA) are dominated by regions of high linkage disequilibrium if all SNPs are used. *Pruning* keeps an approximately independent subset: in windows of, say, $50$ SNPs moved by $5$, any pair with $r^2 > 0.2$ loses one member. Long-range LD regions (the major histocompatibility complex on chromosome 6, inversions on 8p23 and 17q21) are excluded altogether, because otherwise they produce principal components that describe a single locus rather than ancestry.
 
@@ -146,6 +154,8 @@ How much structure does PCA detect? Under the null of no structure, the eigenval
 **Example 13.3.1** The figure shows three simulated populations, each derived from a common ancestral population with divergence $F = 0.05$, $0.08$ and $0.12$, and $40$ individuals admixed between the first two. With $n = 340$ and $m = 5000$ SNPs, the Marchenko–Pastur edge is $(1 + \sqrt{340/5000})^2 = 1.59$. The two leading eigenvalues are $21.8$ and $14.1$, the third ($1.5$) lies below the edge: $K = 3$ populations produce $K - 1 = 2$ informative components. Admixed individuals lie on the segment between their two source populations, at a position proportional to their ancestry proportion, because their expected genotypes are the corresponding mixtures of the source frequencies.
 
 ![Genotype PCA of simulated data (Balding–Nichols model, 5000 SNPs): three populations of 100 individuals with divergence F = 0.05, 0.08 and 0.12 from a common ancestral population, and 40 individuals admixed between populations 1 and 2, colored by their true proportion of ancestry from population 1 (dark 0, yellow 1). A: the first two principal components of the standardized genotypes; admixed individuals lie between their sources. B: the leading eigenvalues of ZZᵀ/m on a log scale against the upper edge of the Marchenko–Pastur law for unstructured data (dashed): two eigenvalues stand far above it](./plots/genotype-pca.py)
+
+:::
 
 Interpreting principal components requires care. The components reflect the genealogy of the sample (McVean 2009): the average coalescence times within and between groups. They depend on the composition of the sample, so an over-represented population dominates the top components; a group of relatives or a long-range LD region can produce its own component; and continuous gradients of variation, such as isolation by distance, appear as arcs and horseshoes that do not mean discrete groups. A PCA map of European genomes resembles the geographic map of Europe (Novembre and colleagues 2008) because genetic similarity decays with distance, not because PCA knows geography.
 
@@ -247,6 +257,8 @@ $$
 the ratio of the variance of the dosages to the binomial variance expected of true genotypes. Confident imputations produce dosages near $0$, $1$ and $2$ with the full variance ($\hat R^2 \approx 1$); uninformative imputations give every individual the dosage $2\hat p$ ($\hat R^2 = 0$). A variant imputed with $\hat R^2 = r^2$ carries the information of a sample of size $r^2 n$ with true genotypes, by the same argument as for a **tag SNP** ([Formula 25.2.1](/7.4.25#fml-25.2.1)).
 
 **Example 13.4.1** Twelve individuals have dosages $0.02, 1.0, 1.9, 0.1, 0.95, 1.05, 0.0, 2.0, 0.9, 0.15, 1.1, 0.05$. Then $\hat p = 0.384$, the variance of the dosages is $0.466$ and $2\hat p(1 - \hat p) = 0.473$, so $\hat R^2 = 0.98$. If instead all dosages lie between $0.4$ and $0.6$ (mean $0.5$, variance $0.0042$), $\hat p = 0.25$ and $\hat R^2 = 0.011$: the panel gave no information about this variant, and an association test on it would have essentially no power. Variants with $\hat R^2 < 0.3$ are usually removed, and fine-mapping uses stricter thresholds.
+
+:::
 
 Association tests use the dosages directly, as a continuous predictor; the uncertainty of imputation reduces power but, if the imputation is unbiased, does not create false positives.
 
@@ -368,6 +380,8 @@ Standardization by frequency is needed because, even without selection, a young 
 **Example 13.6.2** In the simulated sweep of the figure, the derived allele reached frequency $0.5$ in $300$ generations, so derived haplotypes keep the sweeping haplotype for a mean distance of $1/(300\times10^{-8}) = 333\,\mathrm{kb}$ on each side. At $100\,\mathrm{kb}$ from the core, $\mathrm{EHH}_D = 0.62$ while $\mathrm{EHH}_A = 0.005$. The integrals are $\mathrm{iHH}_D = 372\,\mathrm{kb}$ and $\mathrm{iHH}_A = 22\,\mathrm{kb}$, so the unstandardized score is $\ln(22/372) = -2.84$, far in the tail of neutral loci. In Europeans, the haplotype carrying the lactase persistence allele extends over more than $1\,\mathrm{Mb}$ at a frequency above $0.5$ (Bersaglieri and colleagues 2004), and the region is among the strongest iHS signals in the genome; the long haplotype is also why the allele is well tagged by array SNPs and accurately imputed.
 
 ![Extended haplotype homozygosity around a recent selective sweep (simulated: 100 haplotypes with the derived core allele, descended from one haplotype that rose to frequency 0.5 in 300 generations, and 100 haplotypes with the ancestral allele; 401 SNPs over ±1 Mb, recombination 10⁻⁸ per bp per generation, background linkage disequilibrium decaying over about 100 kb). A: EHH against distance for the two core alleles; the derived allele's haplotypes stay identical over hundreds of kilobases (iHH_D = 372 kb against iHH_A = 22 kb; unstandardized iHS −2.84). B: the haplotypes, sorted by core allele and by the extent of the sweeping haplotype; dark cells differ from the haplotype that swept, so the white block around the core is the shared haplotype, broken at different distances by recombination in each lineage](./plots/ehh-sweep.py)
+
+:::
 
 Selection scans share a difficulty: demographic events (bottlenecks, expansions, admixture) also produce long haplotypes and differentiated SNPs across the genome, and background selection reduces diversity near genes. A candidate region is therefore credible when it is extreme relative to the genome and to demographic simulations, when several statistics agree, and when a functional variant and a plausible selective agent can be identified, as for *LCT* and dairying, *EDAR* in East Asians, or the Denisovan *EPAS1* haplotype in Tibetans ([7.4.14](/7.4.14#sec-14.6)).
 

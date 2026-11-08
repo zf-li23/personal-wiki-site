@@ -1,6 +1,6 @@
 ---
 title: Singular Solutions and Envelopes
-source_hash: 8fc513fb4669
+source_hash: 211a75338f9e
 ---
 
 A first-order equation usually has a **general solution** containing one arbitrary constant, and it may also have special solutions that are not contained in the general solution. One class of such solutions has a striking geometric feature: at each of its points another solution is tangent to it, so uniqueness fails everywhere along it. Such solutions are called singular solutions. This chapter first completes the treatment of implicit first-order equations $F(x,y,y')=0$, which elementary integration has not yet covered (the differentiation method, the parametric method, Clairaut's equation). We then study singular solutions from two points of view: without knowing the general solution, we look for singular solutions through the $p$-discriminant; when the general solution is known, a singular solution is the envelope of the family of integral curves and is found from the $C$-discriminant. Finally we turn to geometric applications of envelopes: curves determined by properties of their tangent lines, the astroid, evolutes and involutes, and envelopes of families of surfaces.
@@ -34,6 +34,8 @@ $$
 (2p-x)(p'-1)=0.
 $$
 From $p'=1$ we get $p=x+C$, and substituting back gives the general solution $y=\dfrac{x^2}{2}+Cx+C^2$. From $2p-x=0$ we get $p=\dfrac x2$, and substituting back gives $y=\dfrac{x^2}{4}$; one checks that it satisfies the equation, so it is a solution not contained in the general solution. Example 6.3.2 will show that it is a singular solution.
+
+:::
 
 An equation of the form $y=x\varphi(p)+\psi(p)$ is called a Lagrange equation (or d'Alembert equation). The differentiation method turns it into $\big(p-\varphi(p)\big)\dfrac{\mathrm{d}x}{\mathrm{d}p}-x\varphi'(p)=\psi'(p)$, a first-order linear equation for $x$ as a function of $p$. The special case $\varphi(p)=p$ is Clairaut's equation, treated below.
 

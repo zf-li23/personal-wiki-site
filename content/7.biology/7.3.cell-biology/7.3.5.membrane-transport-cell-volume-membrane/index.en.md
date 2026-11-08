@@ -189,6 +189,8 @@ The flux equation gives zero flux at the Nernst potential of the ion; the voltag
 
 ![The membrane potential from the Goldman–Hodgkin–Katz equation (37 °C; inside Na⁺ 12, K⁺ 140, Cl⁻ 8 mM). A: as the external K⁺ concentration is raised (with Na⁺ + K⁺ = 150 mM), V_m follows the Nernst potential E_K at high [K⁺]ₒ but deviates from it at low [K⁺]ₒ, where the small Na⁺ permeability (P_Na : P_K = 0.05) becomes important; the dotted curve includes the electrogenic pump (r = 3/2). Measured resting potentials show exactly this shape, the classical evidence that the resting potential is mainly a K⁺ diffusion potential. B: V_m against P_Na/P_K: a rise in Na⁺ permeability by a factor of several hundred, as when voltage-gated Na⁺ channels open, carries the potential from near E_K to near E_Na, the peak of the action potential](./plots/ghk-potential.py)
 
+:::
+
 The equation explains the main facts about membrane potentials. Raising external $\ce{K+}$ depolarizes cells, which is why hyperkalemia is dangerous to the heart and why concentrated KCl stops it. Changes in relative permeability change the potential quickly, without any change in concentrations: opening $\ce{Na+}$ or $\ce{Ca^2+}$ channels depolarizes, opening $\ce{K+}$ or (in mature neurons, where $E_{\mathrm{Cl}}$ is near or below the resting potential) $\ce{Cl-}$ channels hyperpolarizes or clamps the potential. These changes are the language of electrical signaling.
 
 ### 5.6.3. The Action Potential in Outline

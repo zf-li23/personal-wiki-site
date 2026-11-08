@@ -1,6 +1,6 @@
 ---
 title: The Central Limit Theorem
-source_hash: db8f40c1275a
+source_hash: 36913b16f753
 ---
 
 The **law of large numbers** ([3.1.12](/3.1.12)) states that the sample mean $M_n = (X_1 + \cdots + X_n)/n$ converges to the population mean $\mu$, but it says nothing about how fast it converges or how the error $M_n - \mu$ is distributed. Simulation shows that the speed depends on the spread of the distribution: a variable taking the values $\pm 10$ converges much more slowly than one taking the values $\pm 1$; yet once the error is magnified by $\sqrt{n}$ and divided by the standard deviation, the distribution of $\sqrt{n}\,(M_n - \mu)/\sigma$ settles down. To what does it settle? The central limit theorem gives the answer: whatever the original distribution, as long as its variance is finite, the standardized sum exhibits **convergence in distribution** to the standard normal distribution. This explains why the normal distribution is so ubiquitous in nature and in statistics (the superposition of many independent random effects is approximately normal), and it provides a single tool for determining sample sizes, approximating probabilities and constructing confidence intervals.
@@ -209,6 +209,8 @@ Equating the two expressions yields Stirling's formula $n! \approx \sqrt{2\pi n}
 **Example 13.4.4** Let $X_1, X_2, \dots$ be independent standard Cauchy random variables and $M_n = (X_1 + \cdots + X_n)/n$. What is the distribution of $M_n$?
 
 **Solution** By Example 11.3.7, the characteristic function of $M_n$ is $[\mathrm{e}^{-\lvert t/n \rvert}]^n = \mathrm{e}^{-\lvert t \rvert}$, so for every $n$, $M_n$ is again standard Cauchy: it neither concentrates nor becomes approximately normal.
+
+:::
 
 Here the central limit theorem (and the law of large numbers) fails, because the theorem requires a finite variance, whereas the Cauchy distribution does not even have a mean. Is the finite-variance condition necessary? For an iid sequence, if there are constants $a_n$ such that $(S_n - a_n)/\sqrt{n}$ converges in distribution to a nondegenerate normal distribution, then $\mathbb{E}X_1^2 < \infty$; so under the $\sqrt{n}$ normalization the condition is necessary. With other normalizing constants, some distributions with infinite variance (for example, those whose density behaves like $\lvert x \rvert^{-3}$ in the tails) can still be approximately normal, while distributions with even heavier tails, such as the Cauchy, have other stable distributions as limits.
 

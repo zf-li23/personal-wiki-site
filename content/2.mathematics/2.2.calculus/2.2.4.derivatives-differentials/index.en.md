@@ -1,6 +1,6 @@
 ---
 title: Derivatives and Differentials
-source_hash: e3e5fdb5b68b
+source_hash: 7adf48b65ed1
 ---
 
 With this chapter we enter differential calculus. The derivative describes the rate of change of a function at a point: geometrically it is the slope of the tangent line to a curve, physically it is instantaneous velocity. The differential describes the linear principal part of the increment of a function, that is, "replacing the curve locally by a straight line." The chapter first defines the derivative through the **limit of a function** and discusses one-sided derivatives and the relation between differentiability and **continuous functions**. It then establishes the arithmetic rules, the chain rule and the rule for inverse functions, and computes the derivatives of all **basic elementary functions**, so that every **elementary function** can be differentiated mechanically. Next come logarithmic differentiation, derivatives of functions given parametrically or implicitly, higher-order derivatives and the Leibniz rule, and finally the differential and its invariance of form. The next chapter ([2.2.5](/2.2.5)) uses derivatives to study monotonicity, extrema, convexity and Taylor expansions; [2.2.6](/2.2.6) goes in the opposite direction and recovers functions from their derivatives; partial derivatives and total differentials of functions of several variables are treated in [2.2.10](/2.2.10).
@@ -229,6 +229,8 @@ $$
 y' = \frac{1}{\sqrt{1-\arctan^2x}}\cdot\frac1{1+x^2}+\frac{1}{\arccos x\,\ln a}\cdot\Bigl(-\frac{1}{\sqrt{1-x^2}}\Bigr).
 $$
 
+:::
+
 We have now found the derivatives of all six classes of basic elementary functions. By the arithmetic rules and the chain rule, every elementary function can be differentiated by formula on the intervals of its domain (except at isolated points), and its derivative is again an elementary function.
 
 | Function | Derivative | Function | Derivative |
@@ -268,6 +270,8 @@ One may also write $y = \mathrm{e}^{v\ln u}$ directly and apply the chain rule, 
 $$
 y' = (\arccos x)^{\arctan x}\Bigl[\frac{\ln\arccos x}{1+x^2}-\frac{\arctan x}{\arccos x\,\sqrt{1-x^2}}\Bigr].
 $$
+
+:::
 
 For a product of several factors $y = f_1f_2\cdots f_n$, we have $\frac{y'}{y} = (\ln|y|)' = \frac{f_1'}{f_1}+\cdots+\frac{f_n'}{f_n}$ (wherever no factor vanishes), which is just another way of writing the product rule.
 
@@ -322,6 +326,8 @@ Notation: $f\in C^n(I)$ means that $f$ has a continuous $n$-th derivative on $I$
 $$
 f''(0) = \lim_{x\to0}\frac{f'(x)-f'(0)}{x} = \lim_{x\to0}\Bigl(4x^2\cos\frac1x+x\sin\frac1x\Bigr) = 0.
 $$
+
+:::
 
 At a breakpoint of a piecewise function, higher-order derivatives must be computed order by order from the definition; one may not differentiate the piecewise expressions and then take limits.
 
@@ -393,6 +399,8 @@ $$
 \Bigl(\frac{\ln x}{x}\Bigr)^{(n)} = \frac{(-1)^nn!}{x^{n+1}}\Bigl(\ln x-\sum_{k=1}^n\frac1k\Bigr).
 $$
 
+:::
+
 Second derivatives of parametric equations. Let $x = \varphi(t)$ and $y = \psi(t)$ be twice differentiable with $\varphi'\ne0$. The derivative $\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\psi'(t)}{\varphi'(t)}$ is still a function of $t$, so differentiating it with respect to $x$ requires multiplying by $\frac{\mathrm{d}t}{\mathrm{d}x} = \frac1{\varphi'(t)}$:
 
 $$
@@ -416,6 +424,8 @@ y'' = \frac{y'(\mathrm{e}^y-x)-y(\mathrm{e}^yy'-1)}{(\mathrm{e}^y-x)^2} = \frac{
 $$
 
 where in the last step we substituted $y' = \frac{y}{\mathrm{e}^y-x}$.
+
+:::
 
 Second derivatives of inverse functions. Let $y = f(x)$ be twice differentiable with $f'\ne0$, and let $x = g(y)$ be its inverse function. Differentiating the identity $f(g(y)) = y$ twice gives $f'(g(y))g'(y) = 1$ and $f''(g(y))g'(y)^2+f'(g(y))g''(y) = 0$, so
 
@@ -450,6 +460,8 @@ For functions of one variable, having a derivative and having a differential are
 
 **Example 4.5.1** $\mathrm{d}\cos x = -\sin x\,\mathrm{d}x$, $\mathrm{d}\ln x = \frac{\mathrm{d}x}{x}$ and $\mathrm{d}a^x = a^x\ln a\,\mathrm{d}x$.
 
+:::
+
 Geometric interpretation of the differential. Let the curve $y = f(x)$ be differentiable at $x_0$. When the independent variable has an increment $\Delta x$, $\Delta y$ is the increment of the ordinate along the curve, whereas $\mathrm{d}y = f'(x_0)\Delta x$ is exactly the increment of the ordinate along the tangent line $y = y_0+f'(x_0)(x-x_0)$; their difference is an infinitesimal of higher order than $\Delta x$. Replacing the increment by the differential means replacing the curve by its tangent line near $x_0$ (local linearization).
 
 ![Δy is the increment of the ordinate along the curve, dy = f'(x₀)Δx is the increment along the tangent line, and the two differ by o(Δx).](./plots/differential-vs-increment.py)
@@ -465,6 +477,8 @@ $$
 **Example 4.5.2** Use differentials to approximate $\sqrt{1.02}$.
 
 **Solution** Take $f(x) = \sqrt x$ and $x_0 = 1$; then $f'(x) = \frac{1}{2\sqrt x}$ and $\sqrt{1.02}\approx1+\frac12\times0.02 = 1.01$ (the exact value is $1.00995\cdots$).
+
+:::
 
 In choosing $x_0$ we must balance two requirements: $x_0$ should be close enough to $x$, and $f(x_0)$ and $f'(x_0)$ should be easy to compute. This approximation has two shortcomings: (1) a suitable $x_0$ is not always easy to find; (2) the accuracy is limited, and no error estimate is given. Improving it with higher-order derivatives leads to Taylor's formula in the next chapter ([2.2.5](/2.2.5)).
 

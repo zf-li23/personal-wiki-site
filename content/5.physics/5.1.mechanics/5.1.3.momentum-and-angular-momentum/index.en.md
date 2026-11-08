@@ -1,7 +1,7 @@
 ---
 title: Momentum and Angular Momentum
 description: Impulse and the momentum theorem; the momentum theorem and conservation of momentum for systems of particles; variable-mass systems and the rocket equation; the center of mass, the center-of-mass motion theorem and the center-of-mass frame; angular momentum and torque of a particle and of a system, the angular momentum theorem, conservation of angular momentum and Kepler's second law; the angular momentum theorem in the center-of-mass frame.
-source_hash: 74fadff212ac
+source_hash: 2c3ce7696aba
 ---
 
 **Newton's second law** ([5.1.2](/5.1.2)) is an instantaneous relation between force and **acceleration**. In many problems we care not about the force at each instant but about its cumulative effect over an interval: the accumulation of force over time changes the momentum of a body, and the accumulation of torque over time changes its angular momentum. In this chapter we derive the momentum theorem and the angular momentum theorem from Newton's laws and extend them to systems of **particles**. The internal forces of a system occur in pairs and cancel in the sum, which yields two conservation laws: the momentum of a system on which no external force acts is conserved, and the angular momentum of a system on which no external torque acts is conserved. They are more widely applicable than Newton's laws and remain valid in relativity ([5.1.8](/5.1.8)) and quantum physics ([5.5](/5.5)); by Noether's theorem they correspond to the translational and rotational symmetry of space, respectively ([5.1.4](/5.1.4)). The **center of mass** ([2.2.12](/2.2.12#def-12.5.1)) is the other central concept of this chapter: the overall motion of a system of particles resembles that of a single particle located at the center of mass and carrying the entire mass. The next chapter, [5.1.4](/5.1.4), discusses the accumulation of force over space (work) and energy, and [5.1.5](/5.1.5) applies the angular momentum theorem of this chapter to rigid bodies.
@@ -429,6 +429,8 @@ $$
 v_C = \frac{m_1v_1 + m_2v_2}{m_1 + m_2} = \frac{8m_1m_2m_3}{(m_1 + m_2)D}v_0.
 $$
 If $m_1 \ne m_2$, then $v_1 \ne v_2$, and after the collision the rod both translates with the center of mass and rotates about it, with angular velocity $\omega = \dfrac{\lvert v_1 - v_2\rvert}{l} = \dfrac{4m_3\lvert m_2 - m_1\rvert}{Dl}v_0$.
+
+:::
 
 Comparison of momentum and angular momentum:
 

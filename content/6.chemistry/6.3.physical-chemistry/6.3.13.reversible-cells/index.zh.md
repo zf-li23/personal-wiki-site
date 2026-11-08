@@ -320,6 +320,8 @@ E_{\mathrm{l}}(\ce{HCl}) = (0.83 - 0.17)\times0.05916\,\mathrm{V}\times0.944 = 0
 $$
 $\ce{HCl}$ 溶液之间的液接电势达到 37 mV，而 $\ce{KCl}$ 由于 $t_+ \approx t_-$，液接电势只有约 1 mV。$\square$
 
+:::
+
 盐桥的作用正基于这一点：用饱和（约 $4.2\,\mathrm{mol\,L^{-1}}$）$\ce{KCl}$ 琼脂凝胶连接两种溶液，形成两个液接界面，界面上的迁移主要由大量的 $\ce{K+}$ 与 $\ce{Cl-}$ 承担，两者迁移数接近，每个界面的液接电势都很小，而且两者符号相反，总和一般在 1–2 mV 以下。对盐桥的要求是：正、负离子迁移数接近，浓度远高于被连接的溶液，不与溶液中的物质反应（含 $\ce{Ag+}$ 的溶液改用 $\ce{KNO3}$ 或 $\ce{NH4NO3}$ 盐桥）。
 
 ## 13.5. 电极电势
@@ -361,6 +363,8 @@ $$
 **例 13.5.1** 用两种方法写出 $\ce{Zn} \mid \ce{Zn^2+}(a_1) \parallel \ce{Cu^2+}(a_2) \mid \ce{Cu}$ 的电动势。
 
 **解** 方法一：$E_{\mathrm{cell}} = \left[E^\circ(\ce{Cu^2+}/\ce{Cu}) + \frac{RT}{2F}\ln a_2\right] - \left[E^\circ(\ce{Zn^2+}/\ce{Zn}) + \frac{RT}{2F}\ln a_1\right]$。方法二：电池反应 $\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$，$E_{\mathrm{cell}} = E^\circ_{\mathrm{cell}} - \frac{RT}{2F}\ln\frac{a_1}{a_2}$，$E^\circ_{\mathrm{cell}} = 0.342 - (-0.762) = 1.104\,\mathrm{V}$。两式相同。$\square$
+
+:::
 
 相互关联的电对，其标准电极电势不能直接加减，而要按 $\Delta_{\mathrm{r}}G^\circ = -zFE^\circ$ 加减（[6.1.12 的定理 12.2.1](/6.1.12#thm-12.2.1)）：$E^\circ$ 是强度量，$zE^\circ$ 才可以相加。
 

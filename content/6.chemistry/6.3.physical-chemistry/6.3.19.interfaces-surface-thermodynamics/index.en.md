@@ -1,6 +1,6 @@
 ---
 title: Interfacial Phenomena and Surface Thermodynamics
-source_hash: facd22fa027b
+source_hash: e7a0eaad1171
 ---
 
 The systems treated in the preceding chapters tacitly assumed that the molecules at interfaces can be neglected: in a glass of water only about $10^{-8}$ of the molecules are at the surface. Once matter is highly dispersed, the situation is different: 1 g of water in the form of one sphere has a surface area of about $5\,\mathrm{cm^2}$ and a surface energy of about $3.5 \times 10^{-5}\,\mathrm{J}$; divided into droplets of radius $1\,\mathrm{nm}$, the surface area grows to about $3000\,\mathrm{m^2}$ and the surface energy to about $220\,\mathrm{J}$, enough to heat that 1 g of water by $50\,\mathrm{K}$. This chapter treats interfaces with the thermodynamics established earlier (the **fundamental equations of thermodynamics**, the **chemical potential** and the **Gibbs–Duhem equation**, [6.3.3](/6.3.3), [6.3.4](/6.3.4)): we first define the surface tension and write the fundamental equations including surface work (19.1); then discuss the additional pressure caused by curved interfaces, the changes of vapor pressure and solubility, and the metastable states and nucleation when a new phase forms (19.2); then follow the measurement of surface tension (19.3), adsorption at solution surfaces and the Gibbs adsorption isotherm (19.4), spreading and monolayers at liquid–liquid interfaces (19.5), wetting at solid–liquid interfaces (19.6), and finally surfactants and micelles (19.7). This chapter is the basis of the next two: a solid surface can lower its surface energy only by adsorption, which is the subject of [6.3.20](/6.3.20); colloids are dispersed systems with significant interfacial energy, treated in [6.3.21](/6.3.21). In biology, the lipid bilayer of the cell membrane, pulmonary surfactant, capillary action in plants and ice-nucleating proteins are all direct applications of the principles of this chapter.
@@ -69,6 +69,8 @@ The left-hand side is the increase of the entropy of the system when a unit area
 
 **Example 19.1.1** At $25\,{}^\circ\mathrm{C}$, water has $\gamma = 71.99\,\mathrm{mN\,m^{-1}}$ and $\mathrm{d}\gamma/\mathrm{d}T \approx -0.15\,\mathrm{mN\,m^{-1}\,K^{-1}}$. The surface entropy is $s^\sigma = 0.15\,\mathrm{mJ\,m^{-2}\,K^{-1}}$; when $1\,\mathrm{m^2}$ of water surface is created isothermally and reversibly, the system absorbs heat $Ts^\sigma = 45\,\mathrm{mJ}$, the surroundings do work $72\,\mathrm{mJ}$, and the surface enthalpy is $h^\sigma = 72 + 45 = 117\,\mathrm{mJ\,m^{-2}}$. If the surface is enlarged adiabatically, the liquid cools.
 
+:::
+
 Far from the critical point the variation of surface tension with temperature is approximately linear. For nonassociated liquids there is an empirical rule:
 
 **Formula 19.1.1 (Eötvös Rule)** $\gamma V_{\mathrm{m}}^{2/3} = k(T_{\mathrm{c}} - T)$, where $V_{\mathrm{m}}$ is the molar volume of the liquid, $T_{\mathrm{c}}$ the critical temperature, and the constant $k \approx 2.1 \times 10^{-7}\,\mathrm{J\,K^{-1}\,mol^{-2/3}}$ is approximately the same for most nonpolar liquids. Ramsay and Shields improved it to $\gamma V_{\mathrm{m}}^{2/3} = k(T_{\mathrm{c}} - T - 6\,\mathrm{K})$.
@@ -126,6 +128,8 @@ Some remarks:
 
 **Example 19.2.1** At room temperature water has $\gamma = 72.8\,\mathrm{mN\,m^{-1}}$. For a water drop of radius $1\,\mathrm{mm}$, $\Delta p = 2\gamma/r = 146\,\mathrm{Pa}$; for $r = 10\,\mu\mathrm{m}$, $\Delta p = 14.6\,\mathrm{kPa} \approx 0.15\,p^\circ$; for $r = 10\,\mathrm{nm}$, $\Delta p = 14.6\,\mathrm{MPa} \approx 146\,p^\circ$. The additional pressure of millimeter-sized drops can be neglected, but in nanometer-sized particles it can reach a hundred times the standard pressure, and many properties of liquids and solids change as a result (19.2.3, 19.2.4).
 
+:::
+
 An alveolus is an air sac about $0.2\,\mathrm{mm}$ in diameter whose inner wall is covered with a liquid layer. If the surface tension of this liquid were close to that of plasma (about $50\,\mathrm{mN\,m^{-1}}$), the additional pressure of an alveolus of radius $0.1\,\mathrm{mm}$ would be about $1\,\mathrm{kPa}$, which inhalation would have to overcome additionally, and small alveoli, having a higher pressure, would also expel gas into larger ones and collapse. Pulmonary surfactant (a lipoprotein complex consisting mainly of dipalmitoylphosphatidylcholine) spreads over the liquid surface; on exhalation the alveolus shrinks and the film is compressed, and the surface tension can fall to nearly zero, keeping alveoli of different sizes stable. Premature infants lacking this substance develop respiratory distress syndrome, and one treatment is to supply surfactant to the lungs (for monolayers see 19.5.3).
 
 ### 19.2.2. Capillarity
@@ -141,6 +145,8 @@ $$
 The height of rise is inversely proportional to the tube radius (Jurin's law). For $\theta < 90^\circ$, $h > 0$, and for $\theta > 90^\circ$, $h < 0$ (mercury falls in a glass tube).
 
 **Example 19.2.2** Water at $20\,{}^\circ\mathrm{C}$ ($\gamma = 72.8\,\mathrm{mN\,m^{-1}}$, $\rho = 998\,\mathrm{kg\,m^{-3}}$, $\theta \approx 0$) rises in a clean glass tube of inner radius $0.1\,\mathrm{mm}$ by $h = 2 \times 0.0728/(998 \times 9.81 \times 10^{-4})\,\mathrm{m} = 0.149\,\mathrm{m}$.
+
+:::
 
 The fine pores in soil form a network of capillaries along which groundwater rises to the surface layer and evaporates; hoeing cuts the capillaries of the surface layer and reduces water loss, which is the principle of "hoeing to conserve soil moisture". The xylem vessels of plants have radii of about $10$–$100\,\mu\mathrm{m}$, and capillary action can lift water only tens of centimeters to a little more than a meter; water transport in tall trees depends mainly on the negative pressure created in the water column by transpiration from the leaves (the cohesion–tension theory), but the menisci in the nanometer-sized pores of the mesophyll cell walls can bear such negative pressure, again by virtue of the Young–Laplace equation: the finer the pore, the larger the pressure difference the meniscus can support.
 
@@ -172,6 +178,8 @@ The term $V_{\mathrm{m}}(p_r - p^*)$ on the left-hand side is exactly the effect
 | $p_r/p^*$ | 1.001 | 1.011 | 1.11 | 2.86 | 0.90 |
 
 The effect becomes significant only for radii below about $10\,\mathrm{nm}$; a "droplet" of $r = 1\,\mathrm{nm}$ contains only about 140 molecules, the macroscopic $\gamma$ is no longer fully applicable, and the Kelvin equation gives only the order of magnitude.
+
+:::
 
 The Kelvin equation also holds for volatile solids ($\gamma$ replaced by $\gamma_{\mathrm{sg}}$): fine particles of iodine or camphor sublime faster. The vapor pressure over a concave surface is lower than over a flat surface, so in a porous solid the vapor can condense in fine pores below the saturated vapor pressure; this is **capillary condensation** ([6.3.20](/6.3.20)) and is one reason why fine-pored silica gel can take up water from unsaturated air.
 
