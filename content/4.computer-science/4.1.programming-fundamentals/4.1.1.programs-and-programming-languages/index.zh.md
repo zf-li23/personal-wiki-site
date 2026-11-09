@@ -206,7 +206,7 @@ print(value)          # prints -5.263728500633433
 
 ### 1.4.3. 标准输入输出与在线评测
 
-程序与外界交换数据最基本的渠道是标准流（standard streams）中的标准输入和标准输出：前者默认来自键盘，后者默认送往屏幕。两者都可以重定向到文件：
+程序与外界交换数据最基本的渠道是**标准流**中的标准输入和标准输出：前者默认来自键盘，后者默认送往屏幕。两者都可以重定向到文件：
 
 ```bash
 ./solve < input.txt > output.txt     # read from input.txt, write to output.txt

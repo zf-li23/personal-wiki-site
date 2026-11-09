@@ -1,7 +1,7 @@
 ---
 title: Instance-Based Learning
 description: Parametric and nonparametric methods; instance-based (lazy) learning; the nearest neighbor rule, Voronoi diagrams and the Cover–Hart bound; distance measures, attribute normalization and weighting, choice of k and tie breaking for k-nearest neighbors; the curse of dimensionality; nearest neighbor queries with k-d trees and approximate nearest neighbor search (LSH, HNSW, IVF-PQ, FAISS); distance-weighted k-nearest neighbors, kernel regression and locally weighted regression.
-source_hash: f0e83e0cad70
+source_hash: e753a2093d73
 ---
 
 The methods of the preceding chapters all follow a "three-step" path: estimate the characteristics of the problem, make a model assumption (a linear function, normal noise, conditional independence, and so on), and then find the optimal parameters. This chapter introduces a method that does not take this path: it builds no explicit model and only stores the training examples; when a new example must be predicted, it finds the training examples most similar to it and answers with their outputs. This is the idea that "birds of a feather flock together": thinking as recall and analogy. The most typical method is $k$-nearest neighbors, which already appeared in multivariate analysis in the statistics courses ([3.4.12](/3.4.12)); this chapter discusses its design choices systematically (the distance, the treatment of attributes, the choice of $k$) as well as its two fundamental difficulties: distances lose their meaning in high-dimensional spaces (the curse of dimensionality), and the computational cost at prediction time. The latter leads to the k-d tree ([4.3.7](/4.3.7)) and to the approximate nearest neighbor search that underlies vector retrieval today. Finally, the idea of "weighting by distance" is extended to regression, giving kernel regression and locally weighted regression, the machine learning view of nonparametric regression in statistics ([3.3.12](/3.3.12), to be discussed systematically in [Nonparametric Statistics](/3.6)).
@@ -67,7 +67,7 @@ This is **k-nearest neighbors** (KNN). For $k = 1$ it is the nearest neighbor ru
 |---|---|---|---|---|---|
 | John | 35 | 35 | 3 | No | $\sqrt{2^2 + 15^2 + 1^2} \approx 15.17$ |
 | Mary | 22 | 50 | 2 | Yes | $\sqrt{15^2 + 0^2 + 0^2} = 15$ |
-| Hannah | 63 | 200 | 1 | No | $\approx 152.23$ |
+| Hannah | 63 | 200 | 1 | No | $\approx 152.24$ |
 | Tom | 59 | 170 | 1 | No | $\approx 122.00$ |
 | Nellie | 25 | 40 | 4 | Yes | $\sqrt{12^2 + 10^2 + 2^2} \approx 15.75$ |
 | David | 37 | 50 | 2 | ? | |
@@ -121,7 +121,7 @@ Other commonly used distances and similarities:
 | Canberra distance | $\sum_k \frac{\lvert x_{ik} - x_{jk}\rvert}{\lvert x_{ik}\rvert + \lvert x_{jk}\rvert}$ | Data with values near $0$; sensitive to small differences |
 | Bray–Curtis dissimilarity | $\frac{\sum_k \lvert x_{ik} - x_{jk}\rvert}{\sum_k (x_{ik} + x_{jk})}$ | Nonnegative count or abundance data (ecology) |
 | Hamming distance | Number of attributes with different values | Categorical attributes |
-| **Cosine similarity** | $\frac{x_i^{\mathsf T}\boldsymbol{x}_j}{\|\boldsymbol{x}_i\|\,\|\boldsymbol{x}_j\|}$ | Text, embedding vectors: looks at direction only, not length |
+| **Cosine similarity** | $\frac{\boldsymbol{x}_i^{\mathsf T}\boldsymbol{x}_j}{\|\boldsymbol{x}_i\|\,\|\boldsymbol{x}_j\|}$ | Text, embedding vectors: looks at direction only, not length |
 
 For unit vectors, $\|\boldsymbol{x}_i - \boldsymbol{x}_j\|^2 = 2 - 2\cos\theta$, so after normalizing the vectors to unit length, the Euclidean nearest neighbor and the cosine nearest neighbor coincide. This is commonly used in vector retrieval.
 

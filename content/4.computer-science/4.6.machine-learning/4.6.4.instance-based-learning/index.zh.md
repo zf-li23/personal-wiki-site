@@ -66,7 +66,7 @@ $$
 |---|---|---|---|---|---|
 | John | 35 | 35 | 3 | 否 | $\sqrt{2^2 + 15^2 + 1^2} \approx 15.17$ |
 | Mary | 22 | 50 | 2 | 是 | $\sqrt{15^2 + 0^2 + 0^2} = 15$ |
-| Hannah | 63 | 200 | 1 | 否 | $\approx 152.23$ |
+| Hannah | 63 | 200 | 1 | 否 | $\approx 152.24$ |
 | Tom | 59 | 170 | 1 | 否 | $\approx 122.00$ |
 | Nellie | 25 | 40 | 4 | 是 | $\sqrt{12^2 + 10^2 + 2^2} \approx 15.75$ |
 | David | 37 | 50 | 2 | ? | |
@@ -120,7 +120,7 @@ $$
 | Canberra 距离 | $\sum_k \frac{\lvert x_{ik} - x_{jk}\rvert}{\lvert x_{ik}\rvert + \lvert x_{jk}\rvert}$ | 取值在 $0$ 附近的数据，对小的差别敏感 |
 | Bray–Curtis 相异度 | $\frac{\sum_k \lvert x_{ik} - x_{jk}\rvert}{\sum_k (x_{ik} + x_{jk})}$ | 非负的计数或丰度数据（生态学） |
 | Hamming 距离 | 取值不同的属性个数 | 类别型属性 |
-| **余弦相似度** | $\frac{x_i^{\mathsf T}\boldsymbol{x}_j}{\|\boldsymbol{x}_i\|\,\|\boldsymbol{x}_j\|}$ | 文本、嵌入向量：只看方向不看长度 |
+| **余弦相似度** | $\frac{\boldsymbol{x}_i^{\mathsf T}\boldsymbol{x}_j}{\|\boldsymbol{x}_i\|\,\|\boldsymbol{x}_j\|}$ | 文本、嵌入向量：只看方向不看长度 |
 
 对单位向量，$\|\boldsymbol{x}_i - \boldsymbol{x}_j\|^2 = 2 - 2\cos\theta$，所以先把向量归一化到单位长度，欧氏最近邻与余弦最近邻就相同。这在向量检索中很常用。
 

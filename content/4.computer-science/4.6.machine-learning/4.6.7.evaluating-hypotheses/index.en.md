@@ -224,7 +224,7 @@ $$
 $$
 is approximately distributed as the t-distribution with 5 degrees of freedom under the null hypothesis that the two algorithms do not differ.
 
-The two training sets of a two-fold cross-validation do not overlap, so the two differences within each repetition are approximately independent; the repetition 5 times serves to estimate the variance more stably. In Dietterich's simulations, the type I error probabilities of both the 5×2cv t-test and McNemar's test were close to the nominal level, whereas those of the t-test with repeated random splits and the t-test with 10-fold cross-validation were too high. The numerator uses only $p_1^{(1)}$, so the result depends on the first split; Alpaydin (1999) used all 10 differences to construct a combined F statistic
+The two training sets of a two-fold cross-validation do not overlap, so the two differences within each repetition are approximately independent; the five repetitions serve to estimate the variance more stably. In Dietterich's simulations, the type I error probabilities of both the 5×2cv t-test and McNemar's test were close to the nominal level, whereas those of the t-test with repeated random splits and the t-test with 10-fold cross-validation were too high. The numerator uses only $p_1^{(1)}$, so the result depends on the first split; Alpaydin (1999) used all 10 differences to construct a combined F statistic
 
 $$
 F = \frac{\sum_{i=1}^5\sum_{j=1}^2\big(p_i^{(j)}\big)^2}{2\sum_{i=1}^5 s_i^2},
