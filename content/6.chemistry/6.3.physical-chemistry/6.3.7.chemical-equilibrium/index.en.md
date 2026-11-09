@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: c150f664abb2
+source_hash: 947b931760ea
 ---
 
 [6.1.8](/6.1.8) started from the empirical equilibrium constant and, with the help of ideal-gas and dilute-solution approximations, wrote down the **reaction isotherm** and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$, and discussed the effects of concentration, pressure, and temperature on equilibrium. With the **chemical potential** ([6.3.4](/6.3.4)) and the **activity** ([6.3.6](/6.3.6)) in hand, these results can be derived rigorously for any system. This chapter answers three questions: why a chemical reaction in general cannot go to completion and what the condition for equilibrium is (7.1); how the standard equilibrium constant is defined from chemical potentials and what form it takes for gases, solutions, and heterogeneous reactions (7.2–7.3); and how $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$ is obtained and used (7.4). We then revisit the shift of equilibrium within the rigorous framework, including the van 't Hoff equation for $\Delta_{\mathrm{r}}C_p \ne 0$, the fugacity correction at high pressure, and the precise statement of Le Chatelier's principle (7.5). Finally we discuss simultaneous equilibria and coupled reactions, taking biochemical reactions driven by ATP hydrolysis as the example (7.6).
@@ -143,7 +143,7 @@ Because the activity of a condensed phase is 1, $K^\circ$ contains only the part
 The products written directly in terms of equilibrium partial pressures, mole fractions, or concentrations, $K_p = \prod p_{\mathrm{B}}^{\nu_{\mathrm{B}}}$, $K_x = \prod x_{\mathrm{B}}^{\nu_{\mathrm{B}}}$, $K_c = \prod c_{\mathrm{B}}^{\nu_{\mathrm{B}}}$, are called empirical **equilibrium constants** ([6.1.8](/6.1.8#def-8.2.1)) and generally have units. For an ideal-gas reaction, with $\Delta\nu_{\mathrm{g}} = \sum_{\mathrm{B(g)}}\nu_{\mathrm{B}}$,
 
 $$
-K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_x\left(\frac{p}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{c^\circ RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}. \tag{7.5}
+K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_x\left(\frac{p}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}. \tag{7.5}
 $$
 $K^\circ$, $K_p$, and $K_c$ depend only on temperature; $K_x$ also depends on the total pressure (when $\Delta\nu_{\mathrm{g}} \ne 0$), and it is through $K_x$ that pressure affects the equilibrium composition (7.5.2). For real gases $K_p$ is no longer constant but varies with pressure.
 
@@ -151,7 +151,7 @@ $K^\circ$, $K_p$, and $K_c$ depend only on temperature; $K_x$ also depends on th
 
 Two quantities measure the position of equilibrium: the equilibrium **conversion** (the fraction of a reactant that has been converted at equilibrium relative to the amount charged) and the equilibrium yield (the amount of a product at equilibrium as a fraction of the theoretical yield if all the feed were converted). They differ when side reactions occur: the converted feed does not all become the desired product.
 
-The steps for calculating an equilibrium composition are: (1) write the amount of each substance and the total amount in terms of the extent of reaction $\xi$; (2) write the activities (partial pressures, mole fractions, etc.); (3) substitute into $K^\circ$ to obtain an equation in $\xi$ and solve it. The equation is generally of high degree, and numerical root finding is the most convenient approach: the range of $\xi$ is fixed by the requirement that all amounts be nonnegative, and within this interval $\ln Q(\xi)$ increases monotonically (7.5.4), so the root is unique and can be found with `scipy.optimize.brentq` between the endpoints of the interval ([4.4.4](/4.4.4#sec-4.2.2)). When there are several independent reactions, the unknowns are several extents of reaction, and one solves the simultaneous equations with `scipy.optimize.fsolve` or directly minimizes $G$ under constraints (7.6.1).
+The steps for calculating an equilibrium composition are: (1) write the amount of each substance and the total amount in terms of the extent of reaction $\xi$; (2) write the activities (partial pressures, mole fractions, etc.); (3) substitute into $K^\circ$ to obtain an equation in $\xi$ and solve it. The equation is generally of high degree, and numerical root finding is the most convenient approach: the range of $\xi$ is fixed by the requirement that all amounts be nonnegative, and within this interval $\ln Q(\xi)$ increases monotonically ($RT\,\mathrm{d}\ln Q/\mathrm{d}\xi = G_{\xi\xi} > 0$, that is, $G(\xi)$ is convex; see 7.1.1 and the proof of Theorem 7.5.2), so the root is unique and can be found with `scipy.optimize.brentq` between the endpoints of the interval ([4.4.4](/4.4.4#sec-4.2.2)). When there are several independent reactions, the unknowns are several extents of reaction, and one solves the simultaneous equations with `scipy.optimize.fsolve` or directly minimizes $G$ under constraints (7.6.1).
 
 ```python
 from scipy.optimize import brentq

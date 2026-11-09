@@ -1,7 +1,7 @@
 ---
 title: Molecular Partition Functions and Ideal-Gas Properties
 description: Factorization of the molecular partition function into translational, rotational, vibrational, electronic and nuclear parts; thermal wavelength, rotational and vibrational characteristic temperatures, symmetry number and the correction series for the rotational partition function; internal energy, heat capacity and the Einstein function of an ideal gas; the Sackur–Tetrode equation and statistical entropy, comparison with calorimetric entropy, and residual entropy; vapor pressure from statistical entropy; standard equilibrium constants from partition functions (dissociation of I₂, H₂ + D₂ exchange).
-source_hash: d356f00c2f8d
+source_hash: c163bd3098f7
 ---
 
 The previous chapter ([6.3.10](/6.3.10)) set up the framework of statistical thermodynamics: once the energy levels of a molecule are known, we can compute the **molecular partition function** $q$, and from the system partition function $Z = q^N/N!$ all the thermodynamic functions of an ideal gas. This chapter carries the program through. The energy of a molecule can be approximately decomposed into translational, rotational, vibrational, electronic and nuclear parts, and $q$ factorizes accordingly into five factors. Each factor can be computed from the mass, moments of inertia, vibrational frequencies and electronic levels of the molecule, all of which come from spectroscopy ([5.5.5](/5.5.5#sec-5.3)). The results explain how heat capacities vary with temperature (when the equipartition theorem holds, and why vibrations are "frozen out" at ordinary temperatures), give statistical entropies that are independent of calorimetry and often more accurate, and reveal the origin of residual entropy. The last section computes standard equilibrium constants directly from partition functions. This connects the $K^\circ$ of [6.3.7](/6.3.7) with molecular structure and is the starting point of transition state theory in [6.3.16](/6.3.16).
@@ -346,19 +346,19 @@ In thermodynamic data tables the $S^\circ_{\mathrm{m}}$ of these substances is t
 
 ### 11.6.4. Example: Vapor Pressure from Statistical Entropy
 
-**Example 11.6.5** At $84\,\mathrm{K}$ the molar entropy of solid Ar is $38.3\,\mathrm{J\,mol^{-1}\,K^{-1}}$ and its molar enthalpy of sublimation is $7940\,\mathrm{J\,mol^{-1}}$. Assuming Ar vapor to be an ideal gas, find the equilibrium vapor pressure $p$ of solid Ar at $84\,\mathrm{K}$.
+**Example 11.6.5** At $84\,\mathrm{K}$ the molar entropy of solid Ar is $38.3\,\mathrm{J\,mol^{-1}\,K^{-1}}$ and its molar enthalpy of sublimation is $7700\,\mathrm{J\,mol^{-1}}$ (the sum of the enthalpy of fusion, $1.18\,\mathrm{kJ\,mol^{-1}}$, and the enthalpy of vaporization near the triple point, about $6.5\,\mathrm{kJ\,mol^{-1}}$). Assuming Ar vapor to be an ideal gas, find the equilibrium vapor pressure $p$ of solid Ar at $84\,\mathrm{K}$.
 
 **Solution** At solid–gas equilibrium $\Delta_{\mathrm{sub}}G_{\mathrm{m}} = 0$ and $\Delta_{\mathrm{sub}}S_{\mathrm{m}} = \Delta_{\mathrm{sub}}H_{\mathrm{m}}/T$, so the molar entropy of the vapor at the equilibrium pressure $p$ is (the effect of pressure on the entropy of the solid is negligible)
 
 $$
-S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{s}) + \frac{\Delta_{\mathrm{sub}}H_{\mathrm{m}}}{T} = 38.3 + \frac{7940}{84} = 132.8\,\mathrm{J\,mol^{-1}\,K^{-1}}.
+S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{s}) + \frac{\Delta_{\mathrm{sub}}H_{\mathrm{m}}}{T} = 38.3 + \frac{7700}{84} = 130.0\,\mathrm{J\,mol^{-1}\,K^{-1}}.
 $$
 On the other hand, from the Sackur–Tetrode equation (11.10), $S_{\mathrm{m}}(\mathrm{g}, p^\circ) = 128.5\,\mathrm{J\,mol^{-1}\,K^{-1}}$ at $84\,\mathrm{K}$ and $p^\circ$, and $S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{g}, p^\circ) - R\ln(p/p^\circ)$. Hence
 
 $$
-\ln\frac{p}{p^\circ} = \frac{128.5 - 132.8}{8.314} = -0.52, \qquad p \approx 0.60\,p^\circ = 60\,\mathrm{kPa}.
+\ln\frac{p}{p^\circ} = \frac{128.5 - 130.0}{8.314} = -0.18, \qquad p \approx 0.84\,p^\circ = 84\,\mathrm{kPa}.
 $$
-The triple point of Ar is $83.81\,\mathrm{K}$ and $68.9\,\mathrm{kPa}$, so the computed value is about $14\%$ low. An error of $0.14$ in $\ln p$ corresponds to an entropy error of only $0.14R = 1.2\,\mathrm{J\,mol^{-1}\,K^{-1}}$, within the precision of the data given: the vapor pressure obtained from entropies is very sensitive to the data. The point of the example is that, using only calorimetric data for the condensed phase and the mass of the gas molecule, one obtains the correct order of magnitude of the vapor pressure from "first principles".
+The triple point of Ar is $83.81\,\mathrm{K}$ and $68.9\,\mathrm{kPa}$, so the computed value is about $20\%$ high. An error of about $0.2$ in $\ln p$ corresponds to an entropy error of only $0.2R \approx 1.7\,\mathrm{J\,mol^{-1}\,K^{-1}}$ (or an error of about $140\,\mathrm{J\,mol^{-1}}$ in the enthalpy of sublimation), within the precision of the data given: the vapor pressure obtained from entropies is very sensitive to the data. The point of the example is that, using only calorimetric data for the condensed phase and the mass of the gas molecule, one obtains the correct order of magnitude of the vapor pressure from "first principles".
 
 ## 11.7. Equilibrium Constants from Partition Functions
 

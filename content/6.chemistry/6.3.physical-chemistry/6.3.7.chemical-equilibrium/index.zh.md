@@ -142,7 +142,7 @@ $$
 用平衡分压、摩尔分数或浓度直接写出的乘积 $K_p = \prod p_{\mathrm{B}}^{\nu_{\mathrm{B}}}$、$K_x = \prod x_{\mathrm{B}}^{\nu_{\mathrm{B}}}$、$K_c = \prod c_{\mathrm{B}}^{\nu_{\mathrm{B}}}$ 称为经验**平衡常数**（[6.1.8](/6.1.8#def-8.2.1)），一般有单位。对理想气体反应，记 $\Delta\nu_{\mathrm{g}} = \sum_{\mathrm{B(g)}}\nu_{\mathrm{B}}$，
 
 $$
-K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_x\left(\frac{p}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{c^\circ RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}. \tag{7.5}
+K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_x\left(\frac{p}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}. \tag{7.5}
 $$
 $K^\circ$、$K_p$、$K_c$ 只与温度有关；$K_x$ 还与总压有关（$\Delta\nu_{\mathrm{g}} \ne 0$ 时），压力正是通过它影响平衡组成（7.5.2）。实际气体的 $K_p$ 不再是常数，随压力变化。
 
@@ -150,7 +150,7 @@ $K^\circ$、$K_p$、$K_c$ 只与温度有关；$K_x$ 还与总压有关（$\Delt
 
 衡量平衡位置的量有两个：平衡**转化率**（某反应物平衡时已转化的量占投入量的分数）与平衡产率（平衡时某产物的量占原料全部转化时理论产量的分数）。有副反应时两者不同：转化的原料不一定全部变成所需产物。
 
-计算平衡组成的步骤：(1) 用反应进度 $\xi$ 写出各物质的量与总量；(2) 写出活度（分压、摩尔分数等）；(3) 代入 $K^\circ$ 得到关于 $\xi$ 的方程并求解。方程一般是高次的，用数值求根最方便：$\xi$ 的取值范围由各物质的量非负确定，在该区间内 $\ln Q(\xi)$ 单调增加（7.5.4），所以根唯一，可以用 `scipy.optimize.brentq` 在区间端点之间求根（[4.4.4](/4.4.4#sec-4.2.2)）。有几个独立反应时变量是几个反应进度，用 `scipy.optimize.fsolve` 解联立方程，或直接对 $G$ 求约束极小（7.6.1）。
+计算平衡组成的步骤：(1) 用反应进度 $\xi$ 写出各物质的量与总量；(2) 写出活度（分压、摩尔分数等）；(3) 代入 $K^\circ$ 得到关于 $\xi$ 的方程并求解。方程一般是高次的，用数值求根最方便：$\xi$ 的取值范围由各物质的量非负确定，在该区间内 $\ln Q(\xi)$ 单调增加（$RT\,\mathrm{d}\ln Q/\mathrm{d}\xi = G_{\xi\xi} > 0$，即 $G(\xi)$ 是凸函数，见 7.1.1 与定理 7.5.2 的证明），所以根唯一，可以用 `scipy.optimize.brentq` 在区间端点之间求根（[4.4.4](/4.4.4#sec-4.2.2)）。有几个独立反应时变量是几个反应进度，用 `scipy.optimize.fsolve` 解联立方程，或直接对 $G$ 求约束极小（7.6.1）。
 
 ```python
 from scipy.optimize import brentq

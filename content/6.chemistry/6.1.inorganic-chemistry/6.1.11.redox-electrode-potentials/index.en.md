@@ -1,6 +1,6 @@
 ---
 title: Redox Reactions and Electrode Potentials
-source_hash: c9b7815f86d7
+source_hash: efbfa4017cc3
 ---
 
 The acid–base, complexation, and precipitation reactions of the preceding chapters are all recombinations of ions or protons, and the charge state of each element is unchanged by the reaction. Another large class of reactions involves the transfer of electrons from one substance to another: redox reactions. Combustion, the smelting and corrosion of metals, photosynthesis and respiration, batteries and electrolysis are all redox reactions. In this chapter we first use oxidation numbers to describe electron transfer and to balance equations (11.1, 11.2). We then let the oxidizing and reducing agents react at two separate electrodes, so that electron transfer becomes a current in an external circuit; this is the galvanic cell (11.3). The electromotive force of a galvanic cell can be measured precisely, and this gives the standard electrode potential, a measure of the oxidizing or reducing power of a redox couple (11.4). Its relation to the **Gibbs energy** of [6.1.6](/6.1.6) is $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, and translating the **reaction isotherm** of [6.1.8](/6.1.8) into electrical language gives the Nernst equation, treated in Section 11.5, which handles in a unified way the effects of concentration, acidity, precipitation, and complexation on the electrode potential. Applications of electrode potentials, Latimer diagrams, electrolysis, and electrochemical power sources are found in [6.1.12](/6.1.12). Cell thermodynamics, the rigorous form of activities and the Nernst equation, and the kinetics of electrode processes are found in [Physical Chemistry](/6.3); potentiometric analysis and redox titration are found in [Analytical Chemistry](/6.4).
@@ -359,8 +359,8 @@ Arranging the standard electrode potentials of couples in order of magnitude giv
 | $\ce{Ag+}/\ce{Ag}$ | $\ce{Ag+ + e- <=> Ag}$ | $0.800$ |
 | $\ce{Br2}/\ce{Br-}$ | $\ce{Br2(l) + 2e- <=> 2Br-}$ | $1.066$ |
 | $\ce{O2}/\ce{H2O}$ | $\ce{O2 + 4H+ + 4e- <=> 2H2O}$ | $1.229$ |
+| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.232$ |
 | $\ce{Cl2}/\ce{Cl-}$ | $\ce{Cl2 + 2e- <=> 2Cl-}$ | $1.358$ |
-| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.36$ |
 | $\ce{MnO4-}/\ce{Mn^2+}$ | $\ce{MnO4- + 8H+ + 5e- <=> Mn^2+ + 4H2O}$ | $1.507$ |
 | $\ce{S2O8^2-}/\ce{SO4^2-}$ | $\ce{S2O8^2- + 2e- <=> 2SO4^2-}$ | $2.010$ |
 | $\ce{F2}/\ce{F-}$ | $\ce{F2 + 2e- <=> 2F-}$ | $2.866$ |
@@ -472,7 +472,7 @@ $$
 \begin{aligned}
 \ce{Fe^3+ + e- <=> Fe^2+}:&\quad E = 0.771\,\mathrm{V} + 0.05916\,\mathrm{V}\,\lg\frac{[\ce{Fe^3+}]}{[\ce{Fe^2+}]},\\
 \ce{2H+ + 2e- <=> H2}:&\quad E = \frac{0.05916\,\mathrm{V}}{2}\lg\frac{[\ce{H+}]^2}{p_{\ce{H2}}/p^\circ},\\
-\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}:&\quad E = 1.36\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg\frac{[\ce{Cr2O7^2-}][\ce{H+}]^{14}}{[\ce{Cr^3+}]^2}.
+\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}:&\quad E = 1.232\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg\frac{[\ce{Cr2O7^2-}][\ce{H+}]^{14}}{[\ce{Cr^3+}]^2}.
 \end{aligned}
 $$
 
@@ -483,7 +483,7 @@ E_{\mathrm{cell}} = 1.104\,\mathrm{V} - \frac{0.05916\,\mathrm{V}}{2}\lg\frac{[\
 $$
 As the cell discharges, $[\ce{Zn^2+}]$ increases and $[\ce{Cu^2+}]$ decreases, and the electromotive force falls gradually; when $E_{\mathrm{cell}} = 0$ the reaction is at equilibrium, and the concentration ratio at that point is the **standard equilibrium constant**: $\lg K^\circ = 2 \times 1.104/0.05916 = 37.3$, so $K^\circ \approx 2\times10^{37}$. An equilibrium constant this large means that $[\ce{Cu^2+}]$ at equilibrium is too small to detect, and the reaction effectively goes to completion. The relation $\lg K^\circ = zE^\circ_{\mathrm{cell}}/(0.05916\,\mathrm{V})$ is the basis of the calculation of redox equilibrium constants in [6.1.12](/6.1.12).
 
-![The Nernst equation (298.15 K). Left: the electrode potential of Fe³⁺/Fe²⁺ varies linearly with the logarithm of the concentration ratio, rising 0.0592 V per tenfold change; middle: the electromotive force of the Cu–Zn cell falls with lg([Zn²⁺]/[Cu²⁺]) and reaches zero at lg K° = 37.3; right: for [Cr₂O₇²⁻] = [Cr³⁺] = 1 mol L⁻¹, the electrode potential of Cr₂O₇²⁻/Cr³⁺ falls with pH, and above pH about 2 it can no longer oxidize Br⁻ to Br₂](./plots/nernst-dependence.py)
+![The Nernst equation (298.15 K). Left: the electrode potential of Fe³⁺/Fe²⁺ varies linearly with the logarithm of the concentration ratio, rising 0.0592 V per tenfold change; middle: the electromotive force of the Cu–Zn cell falls with lg([Zn²⁺]/[Cu²⁺]) and reaches zero at lg K° = 37.3; right: for [Cr₂O₇²⁻] = [Cr³⁺] = 1 mol L⁻¹, the electrode potential of Cr₂O₇²⁻/Cr³⁺ falls with pH, and above pH about 1.2 it can no longer oxidize Br⁻ to Br₂](./plots/nernst-dependence.py)
 
 ### 11.5.2. Concentration and Gas Partial Pressure
 
@@ -502,9 +502,9 @@ $$
 When $\ce{H+}$ or $\ce{OH-}$ takes part in the electrode reaction, the acidity of the solution is often the main factor affecting the electrode potential. Take $\ce{Cr2O7^2-}/\ce{Cr^3+}$ as an example, with $[\ce{Cr2O7^2-}] = [\ce{Cr^3+}] = 1\,\mathrm{mol\,L^{-1}}$ fixed:
 
 $$
-E = 1.36\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg[\ce{H+}]^{14} = 1.36\,\mathrm{V} - 0.138\,\mathrm{V}\times\mathrm{pH}.
+E = 1.232\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg[\ce{H+}]^{14} = 1.232\,\mathrm{V} - 0.138\,\mathrm{V}\times\mathrm{pH}.
 $$
-At $[\ce{H+}] = 1\,\mathrm{mol\,L^{-1}}$, $E = 1.36\,\mathrm{V}$; at $[\ce{H+}] = 10^{-3}\,\mathrm{mol\,L^{-1}}$, $E = 0.95\,\mathrm{V}$. When an oxoanion acts as the oxidizing agent, the electrode reaction consumes a large amount of $\ce{H+}$ to combine with O and form water, so the oxidizing power of $\ce{K2Cr2O7}$ and $\ce{KMnO4}$ increases markedly with acidity, and in experiments their oxidizing power is adjusted by adjusting the acidity.
+At $[\ce{H+}] = 1\,\mathrm{mol\,L^{-1}}$, $E = 1.232\,\mathrm{V}$; at $[\ce{H+}] = 10^{-3}\,\mathrm{mol\,L^{-1}}$, $E = 0.82\,\mathrm{V}$. When an oxoanion acts as the oxidizing agent, the electrode reaction consumes a large amount of $\ce{H+}$ to combine with O and form water, so the oxidizing power of $\ce{K2Cr2O7}$ and $\ce{KMnO4}$ increases markedly with acidity, and in experiments their oxidizing power is adjusted by adjusting the acidity.
 
 **Example 11.5.2** Given $K_{\mathrm{a}}(\ce{HAc}) = 1.75\times10^{-5}$, hydrogen at $p_{\ce{H2}} = 100\,\mathrm{kPa}$ is bubbled through a $0.10\,\mathrm{mol\,L^{-1}}$ acetic acid solution. Find the electrode potential of the hydrogen electrode.
 

@@ -358,8 +358,8 @@ $$
 | $\ce{Ag+}/\ce{Ag}$ | $\ce{Ag+ + e- <=> Ag}$ | $0.800$ |
 | $\ce{Br2}/\ce{Br-}$ | $\ce{Br2(l) + 2e- <=> 2Br-}$ | $1.066$ |
 | $\ce{O2}/\ce{H2O}$ | $\ce{O2 + 4H+ + 4e- <=> 2H2O}$ | $1.229$ |
+| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.232$ |
 | $\ce{Cl2}/\ce{Cl-}$ | $\ce{Cl2 + 2e- <=> 2Cl-}$ | $1.358$ |
-| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.36$ |
 | $\ce{MnO4-}/\ce{Mn^2+}$ | $\ce{MnO4- + 8H+ + 5e- <=> Mn^2+ + 4H2O}$ | $1.507$ |
 | $\ce{S2O8^2-}/\ce{SO4^2-}$ | $\ce{S2O8^2- + 2e- <=> 2SO4^2-}$ | $2.010$ |
 | $\ce{F2}/\ce{F-}$ | $\ce{F2 + 2e- <=> 2F-}$ | $2.866$ |
@@ -471,7 +471,7 @@ $$
 \begin{aligned}
 \ce{Fe^3+ + e- <=> Fe^2+}:&\quad E = 0.771\,\mathrm{V} + 0.05916\,\mathrm{V}\,\lg\frac{[\ce{Fe^3+}]}{[\ce{Fe^2+}]},\\
 \ce{2H+ + 2e- <=> H2}:&\quad E = \frac{0.05916\,\mathrm{V}}{2}\lg\frac{[\ce{H+}]^2}{p_{\ce{H2}}/p^\circ},\\
-\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}:&\quad E = 1.36\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg\frac{[\ce{Cr2O7^2-}][\ce{H+}]^{14}}{[\ce{Cr^3+}]^2}.
+\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}:&\quad E = 1.232\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg\frac{[\ce{Cr2O7^2-}][\ce{H+}]^{14}}{[\ce{Cr^3+}]^2}.
 \end{aligned}
 $$
 
@@ -482,7 +482,7 @@ E_{\mathrm{cell}} = 1.104\,\mathrm{V} - \frac{0.05916\,\mathrm{V}}{2}\lg\frac{[\
 $$
 电池放电时 $[\ce{Zn^2+}]$ 增大、$[\ce{Cu^2+}]$ 减小，电动势逐渐下降；当 $E_{\mathrm{cell}} = 0$ 时反应达到平衡，此时的浓度比就是**标准平衡常数**：$\lg K^\circ = 2 \times 1.104/0.05916 = 37.3$，$K^\circ \approx 2\times10^{37}$。这样大的平衡常数意味着平衡时 $[\ce{Cu^2+}]$ 小到无法检测，反应实际上进行到底。这一关系 $\lg K^\circ = zE^\circ_{\mathrm{cell}}/(0.05916\,\mathrm{V})$ 是 [6.1.12](/6.1.12) 计算氧化还原平衡常数的基础。
 
-![Nernst 方程（298.15 K）。左：Fe³⁺/Fe²⁺ 电极电势随浓度比的对数线性变化，每十倍升高 0.0592 V；中：Cu–Zn 电池的电动势随 lg([Zn²⁺]/[Cu²⁺]) 下降，降为零处即 lg K° = 37.3；右：[Cr₂O₇²⁻] = [Cr³⁺] = 1 mol L⁻¹ 时 Cr₂O₇²⁻/Cr³⁺ 电极电势随 pH 下降，pH 约 2 以上已不能把 Br⁻ 氧化为 Br₂](./plots/nernst-dependence.py)
+![Nernst 方程（298.15 K）。左：Fe³⁺/Fe²⁺ 电极电势随浓度比的对数线性变化，每十倍升高 0.0592 V；中：Cu–Zn 电池的电动势随 lg([Zn²⁺]/[Cu²⁺]) 下降，降为零处即 lg K° = 37.3；右：[Cr₂O₇²⁻] = [Cr³⁺] = 1 mol L⁻¹ 时 Cr₂O₇²⁻/Cr³⁺ 电极电势随 pH 下降，pH 约 1.2 以上已不能把 Br⁻ 氧化为 Br₂](./plots/nernst-dependence.py)
 
 ### 11.5.2. 浓度与气体分压
 
@@ -501,9 +501,9 @@ $$
 电极反应中有 $\ce{H+}$ 或 $\ce{OH-}$ 参加时，溶液的酸度往往是影响电极电势的主要因素。以 $\ce{Cr2O7^2-}/\ce{Cr^3+}$ 为例，固定 $[\ce{Cr2O7^2-}] = [\ce{Cr^3+}] = 1\,\mathrm{mol\,L^{-1}}$，
 
 $$
-E = 1.36\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg[\ce{H+}]^{14} = 1.36\,\mathrm{V} - 0.138\,\mathrm{V}\times\mathrm{pH}.
+E = 1.232\,\mathrm{V} + \frac{0.05916\,\mathrm{V}}{6}\lg[\ce{H+}]^{14} = 1.232\,\mathrm{V} - 0.138\,\mathrm{V}\times\mathrm{pH}.
 $$
-$[\ce{H+}] = 1\,\mathrm{mol\,L^{-1}}$ 时 $E = 1.36\,\mathrm{V}$；$[\ce{H+}] = 10^{-3}\,\mathrm{mol\,L^{-1}}$ 时 $E = 0.95\,\mathrm{V}$。含氧酸根作氧化剂时，电极反应要消耗大量 $\ce{H+}$ 来结合 O 生成水，所以 $\ce{K2Cr2O7}$、$\ce{KMnO4}$ 的氧化性随酸度增大而显著增强，实验中通过调节酸度来调节它们的氧化能力。
+$[\ce{H+}] = 1\,\mathrm{mol\,L^{-1}}$ 时 $E = 1.232\,\mathrm{V}$；$[\ce{H+}] = 10^{-3}\,\mathrm{mol\,L^{-1}}$ 时 $E = 0.82\,\mathrm{V}$。含氧酸根作氧化剂时，电极反应要消耗大量 $\ce{H+}$ 来结合 O 生成水，所以 $\ce{K2Cr2O7}$、$\ce{KMnO4}$ 的氧化性随酸度增大而显著增强，实验中通过调节酸度来调节它们的氧化能力。
 
 **例 11.5.2** 已知 $K_{\mathrm{a}}(\ce{HAc}) = 1.75\times10^{-5}$。在 $0.10\,\mathrm{mol\,L^{-1}}$ 的醋酸溶液中通入 $p_{\ce{H2}} = 100\,\mathrm{kPa}$ 的氢气，求氢电极的电极电势。
 

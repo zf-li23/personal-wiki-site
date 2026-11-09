@@ -345,19 +345,19 @@ $$
 
 ### 11.6.4. 例：由统计熵求蒸气压
 
-**例 11.6.5** 已知 $84\,\mathrm{K}$ 时固态 Ar 的摩尔熵为 $38.3\,\mathrm{J\,mol^{-1}\,K^{-1}}$，摩尔升华焓为 $7940\,\mathrm{J\,mol^{-1}}$。设 Ar 蒸气是理想气体，求 $84\,\mathrm{K}$ 时固态 Ar 的平衡蒸气压 $p$。
+**例 11.6.5** 已知 $84\,\mathrm{K}$ 时固态 Ar 的摩尔熵为 $38.3\,\mathrm{J\,mol^{-1}\,K^{-1}}$，摩尔升华焓为 $7700\,\mathrm{J\,mol^{-1}}$（熔化焓 $1.18\,\mathrm{kJ\,mol^{-1}}$ 与三相点附近的蒸发焓约 $6.5\,\mathrm{kJ\,mol^{-1}}$ 之和）。设 Ar 蒸气是理想气体，求 $84\,\mathrm{K}$ 时固态 Ar 的平衡蒸气压 $p$。
 
 **解** 固气平衡时 $\Delta_{\mathrm{sub}}G_{\mathrm{m}} = 0$，$\Delta_{\mathrm{sub}}S_{\mathrm{m}} = \Delta_{\mathrm{sub}}H_{\mathrm{m}}/T$，所以蒸气在平衡压力 $p$ 下的摩尔熵为（固体的熵受压力的影响可以忽略）
 
 $$
-S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{s}) + \frac{\Delta_{\mathrm{sub}}H_{\mathrm{m}}}{T} = 38.3 + \frac{7940}{84} = 132.8\,\mathrm{J\,mol^{-1}\,K^{-1}}.
+S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{s}) + \frac{\Delta_{\mathrm{sub}}H_{\mathrm{m}}}{T} = 38.3 + \frac{7700}{84} = 130.0\,\mathrm{J\,mol^{-1}\,K^{-1}}.
 $$
 另一方面，由 Sackur–Tetrode 方程 (11.10)，$84\,\mathrm{K}$、$p^\circ$ 下 $S_{\mathrm{m}}(\mathrm{g}, p^\circ) = 128.5\,\mathrm{J\,mol^{-1}\,K^{-1}}$，且 $S_{\mathrm{m}}(\mathrm{g}, p) = S_{\mathrm{m}}(\mathrm{g}, p^\circ) - R\ln(p/p^\circ)$。于是
 
 $$
-\ln\frac{p}{p^\circ} = \frac{128.5 - 132.8}{8.314} = -0.52, \qquad p \approx 0.60\,p^\circ = 60\,\mathrm{kPa}.
+\ln\frac{p}{p^\circ} = \frac{128.5 - 130.0}{8.314} = -0.18, \qquad p \approx 0.84\,p^\circ = 84\,\mathrm{kPa}.
 $$
-Ar 的三相点为 $83.81\,\mathrm{K}$、$68.9\,\mathrm{kPa}$，计算值偏低约 $14\%$。$\ln p$ 的误差 $0.14$ 只对应熵的误差 $0.14R = 1.2\,\mathrm{J\,mol^{-1}\,K^{-1}}$，在所给数据的精度之内：由熵求蒸气压对数据非常敏感。这个例子的意义在于，它只用了凝聚相的量热数据与气体分子的质量，就从"第一原理"给出了蒸气压的正确量级。
+Ar 的三相点为 $83.81\,\mathrm{K}$、$68.9\,\mathrm{kPa}$，计算值偏高约 $20\%$。$\ln p$ 的误差约 $0.2$ 只对应熵的误差 $0.2R \approx 1.7\,\mathrm{J\,mol^{-1}\,K^{-1}}$（或升华焓的误差约 $140\,\mathrm{J\,mol^{-1}}$），在所给数据的精度之内：由熵求蒸气压对数据非常敏感。这个例子的意义在于，它只用了凝聚相的量热数据与气体分子的质量，就从"第一原理"给出了蒸气压的正确量级。
 
 ## 11.7. 由配分函数求平衡常数
 

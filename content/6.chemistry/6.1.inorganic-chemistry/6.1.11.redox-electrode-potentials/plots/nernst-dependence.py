@@ -37,7 +37,7 @@ ax.set_title("Cu-Zn cell: emf falls as the reaction proceeds", fontsize=10)
 
 ax = axes[2]
 pH = np.linspace(0, 7, 100)
-ax.plot(pH, 1.36 - 14 * s / 6 * pH, color="C2", lw=1.8, label=r"$\mathrm{Cr_2O_7^{2-}/Cr^{3+}}$")
+ax.plot(pH, 1.232 - 14 * s / 6 * pH, color="C2", lw=1.8, label=r"$\mathrm{Cr_2O_7^{2-}/Cr^{3+}}$")
 ax.axhline(1.066, color="C4", lw=1.2, ls="--", label=r"$\mathrm{Br_2/Br^-}$")
 ax.axhline(0.5355, color="C5", lw=1.2, ls="--", label=r"$\mathrm{I_2/I^-}$")
 ax.set_xlabel("pH")

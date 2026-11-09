@@ -1,7 +1,7 @@
 ---
 title: The d-Block and f-Block Elements
 description: Electron configurations, physical properties, the lanthanide contraction, oxidation states and colors of the d-block elements; redox chemistry of the titanium, vanadium, chromium and manganese groups and the iron triad (Frost diagrams, the chromate–dichromate equilibrium, potassium permanganate); chemistry and ion identification of copper, silver, zinc and mercury; valence structure, oxidation states, colors, magnetism and compounds of the lanthanoids and rare-earth elements.
-source_hash: b6f4577b7e63
+source_hash: 3b226c4eba50
 ---
 
 The d-block elements (Groups 3–12) form the large block of metals in the middle of the periodic table, and the f-block elements (the lanthanoids and actinoids) are the two rows inserted into the sixth and seventh periods. Unlike those of the s and p blocks, their additional electrons enter the penultimate $(n-1)\mathrm{d}$ subshell or the antepenultimate $(n-2)\mathrm{f}$ subshell while the outermost shell hardly changes, so the properties change much more gradually across a period; the d and f electrons also bring properties rare among the main-group elements: several oxidation states and a rich redox chemistry, colored compounds, paramagnetism and a very strong tendency to form complexes. This chapter first discusses the general features of the d block (Section 15.1), then introduces the representative elements of the first transition series group by group (Sections 15.2–15.8), and finally the lanthanoids (Section 15.9). Three groups of tools from the earlier chapters are used here extensively: crystal field theory of complexes ([6.1.5](/6.1.5)) explains colors, magnetism and the stability of certain oxidation states; Latimer and Frost diagrams ([6.1.12](/6.1.12)) summarize redox behavior; and coordination and precipitation equilibria ([6.1.9](/6.1.9), [6.1.10](/6.1.10)) explain the identification and separation of ions. The magnetism of the lanthanoids requires the term symbols of atoms ([5.5.4](/5.5.4)). The bioinorganic chemistry of metalloenzymes, hemoglobin and so on is covered in chemical biology ([6.6](/6.6)) and biochemistry ([7.1](/7.1)), and the bonding theories of coordination compounds in [Structural Chemistry](/6.2).
@@ -132,7 +132,7 @@ Chromium (Cr), molybdenum (Mo) and tungsten (W) are in Group 6 (Group VIB in old
 The Latimer diagram of chromium (V):
 
 $$
-\text{acidic: }\ \ce{Cr2O7^2- ->[1.36] Cr^3+ ->[-0.407] Cr^2+ ->[-0.913] Cr}, \qquad E^\circ(\ce{Cr^3+}/\ce{Cr}) = -0.744\,\mathrm{V};
+\text{acidic: }\ \ce{Cr2O7^2- ->[1.232] Cr^3+ ->[-0.407] Cr^2+ ->[-0.913] Cr}, \qquad E^\circ(\ce{Cr^3+}/\ce{Cr}) = -0.744\,\mathrm{V};
 $$
 
 $$
@@ -164,7 +164,7 @@ $\ce{PbCrO4}$ is the pigment "chrome yellow"; the formation of $\ce{Ag2CrO4}$ in
 
 ### 15.4.2. Interconversion of Cr(III) and Cr(VI)
 
-From the Latimer diagram, Cr(III) is very difficult to oxidize in acid ($E^\circ(\ce{Cr2O7^2-}/\ce{Cr^3+}) = 1.36\,\mathrm{V}$) but much easier in base ($E^\circ(\ce{CrO4^2-}/\ce{Cr(OH)3}) = -0.13\,\mathrm{V}$). Conversely, Cr(VI) is a strong oxidizing agent in acid:
+From the Latimer diagram, Cr(III) is very difficult to oxidize in acid ($E^\circ(\ce{Cr2O7^2-}/\ce{Cr^3+}) = 1.232\,\mathrm{V}$) but much easier in base ($E^\circ(\ce{CrO4^2-}/\ce{Cr(OH)3}) = -0.13\,\mathrm{V}$). Conversely, Cr(VI) is a strong oxidizing agent in acid:
 
 | Conversion | Reaction | Remark |
 |---|---|---|
@@ -174,7 +174,7 @@ From the Latimer diagram, Cr(III) is very difficult to oxidize in acid ($E^\circ
 | Cr(VI) → Cr(III) | $\ce{Cr2O7^2- + 3SO3^2- + 8H+ -> 2Cr^3+ + 3SO4^2- + 4H2O}$ | treatment of chromium-containing wastewater |
 | | $\ce{Cr2O7^2- + 3H2S + 8H+ -> 2Cr^3+ + 3S v + 7H2O}$ | |
 | | $\ce{Cr2O7^2- + 6I- + 14H+ -> 2Cr^3+ + 3I2 + 7H2O}$ | iodometry |
-| | $\ce{K2Cr2O7 + 14HCl(conc) -> 2KCl + 2CrCl3 + 3Cl2 ^ + 7H2O}$ | reacts only with concentrated hydrochloric acid ($1.36 \approx 1.358\,\mathrm{V}$) |
+| | $\ce{K2Cr2O7 + 14HCl(conc) -> 2KCl + 2CrCl3 + 3Cl2 ^ + 7H2O}$ | reacts only with concentrated hydrochloric acid: under standard conditions $1.232 < 1.358\,\mathrm{V}$, but in concentrated HCl the high $[\ce{H+}]$ raises the potential of $\ce{Cr2O7^2-}/\ce{Cr^3+}$ and the high $[\ce{Cl-}]$ lowers that of $\ce{Cl2}/\ce{Cl-}$ (about 1.38 and 1.29 V at $12\,\mathrm{mol\,L^{-1}}$, estimated from concentrations), reversing the order |
 | | $\ce{Cr2O7^2- + 6Fe^2+ + 14H+ -> 2Cr^3+ + 6Fe^3+ + 7H2O}$ | determination of iron by dichromate; $\ce{K2Cr2O7}$ is a **primary standard** |
 | | $\ce{Cr2O7^2- + 3Sn^2+ + 14H+ -> 2Cr^3+ + 3Sn^4+ + 7H2O}$ | |
 
@@ -185,7 +185,7 @@ From the Latimer diagram, Cr(III) is very difficult to oxidize in acid ($E^\circ
 | $E^\circ$ / V | −0.255 | −0.407 | 1.51 | 0.771 | 1.92 |
 | d electrons of $\ce{M^3+}$ | $\mathrm{d}^2$ | $\mathrm{d}^3$ | $\mathrm{d}^4$ | $\mathrm{d}^5$ | $\mathrm{d}^6$ |
 
-Solution. The more negative $E^\circ$ is, the more difficult it is to reduce $\ce{M^3+}$. The value for $\ce{Cr^3+}$ is the most negative, so it gains electrons with the greatest difficulty; at the same time, oxidizing Cr(III) to Cr(VI) in acid also requires $1.36\,\mathrm{V}$. The reason is that the $\mathrm{d}^3$ configuration of $\ce{Cr^3+}$ is $t_{2g}^3$ in an octahedral field: each of the three electrons occupies one $t_{2g}$ orbital, and the **crystal field stabilization energy** is $-1.2\Delta_{\mathrm{o}}$ ($-12\,Dq$), the largest of the high-spin configurations (the same as for $\mathrm{d}^8$). Adding an electron requires entering an $e_g$ orbital and removing one loses stabilization energy, so $\ce{Cr^3+}$ is particularly stable; it is also kinetically inert, with very slow ligand exchange ([6.1.5](/6.1.5#sec-5.5.6)). In contrast, $\ce{Ti^3+}$ and $\ce{V^3+}$ lose electrons easily and are reducing agents; $\ce{Mn^3+}$ (becoming the half-filled $\mathrm{d}^5$ is very favorable) and $\ce{Co^3+}$ gain electrons easily and are oxidizing agents, and $\ce{Mn^3+}$ and $\ce{Co^3+}$ can even oxidize water. $\square$
+Solution. The more negative $E^\circ$ is, the more difficult it is to reduce $\ce{M^3+}$. The value for $\ce{Cr^3+}$ is the most negative, so it gains electrons with the greatest difficulty; at the same time, oxidizing Cr(III) to Cr(VI) in acid also requires $1.232\,\mathrm{V}$. The reason is that the $\mathrm{d}^3$ configuration of $\ce{Cr^3+}$ is $t_{2g}^3$ in an octahedral field: each of the three electrons occupies one $t_{2g}$ orbital, and the **crystal field stabilization energy** is $-1.2\Delta_{\mathrm{o}}$ ($-12\,Dq$), the largest of the high-spin configurations (the same as for $\mathrm{d}^8$). Adding an electron requires entering an $e_g$ orbital and removing one loses stabilization energy, so $\ce{Cr^3+}$ is particularly stable; it is also kinetically inert, with very slow ligand exchange ([6.1.5](/6.1.5#sec-5.5.6)). In contrast, $\ce{Ti^3+}$ and $\ce{V^3+}$ lose electrons easily and are reducing agents; $\ce{Mn^3+}$ (becoming the half-filled $\mathrm{d}^5$ is very favorable) and $\ce{Co^3+}$ gain electrons easily and are oxidizing agents, and $\ce{Mn^3+}$ and $\ce{Co^3+}$ can even oxidize water. $\square$
 
 :::
 
@@ -430,7 +430,7 @@ The last reaction gives a gray-black mixture and is used to identify $\ce{Hg2^2+
 | Ion | Method | Observation and reaction |
 |---|---|---|
 | $\ce{Zn^2+}$ | $\ce{H2S}$ | $\ce{Zn^2+ + H2S -> ZnS v (white) + 2H+}$; precipitation is complete in ammoniacal or weakly acidic solution, and the precipitate dissolves in $0.3\,\mathrm{mol\,L^{-1}}$ HCl |
-| $\ce{Zn^2+}$ | dithizone (basic, in $\ce{CCl4}$) | after shaking, the aqueous layer is pink (zinc chelate) and the $\ce{CCl4}$ layer changes from green to brown |
+| $\ce{Zn^2+}$ | dithizone (strongly basic, in $\ce{CCl4}$) | after shaking, the aqueous layer is pink: in strong base the zinc chelate stays in the aqueous layer as an anion, which is characteristic of zinc; the $\ce{CCl4}$ layer changes from green to brown. In nearly neutral solution the neutral chelate $\ce{Zn(HDz)2}$ is instead extracted into the $\ce{CCl4}$ layer, which turns purple-red |
 | $\ce{Cd^2+}$ | $\ce{H2S}$ | $\ce{Cd^2+ + H2S -> CdS v (yellow) + 2H+}$; precipitation is complete in dilute acid, and the precipitate dissolves in $6\,\mathrm{mol\,L^{-1}}$ HCl (separation from ZnS) |
 | $\ce{Hg^2+}$ | $\ce{SnCl2}$ | $\ce{2Hg^2+ + Sn^2+ + 8Cl- -> Hg2Cl2 v (white) + [SnCl6]^2-}$; with excess $\ce{SnCl2}$, $\ce{Hg2Cl2 + Sn^2+ + 4Cl- -> 2Hg v (black) + [SnCl6]^2-}$; conversely, $\ce{HgCl2}$ can be used to identify $\ce{Sn^2+}$ |
 | $\ce{NH4+}$ | Nessler's reagent | red-brown precipitate ([6.1.14](/6.1.14#sec-14.4.2)) |

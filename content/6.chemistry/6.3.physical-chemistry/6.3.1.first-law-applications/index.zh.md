@@ -394,7 +394,7 @@ $$
 $$
 称为 **Joule–Thomson 系数**，它是强度性质的状态函数，表示等焓条件下压力降低单位值引起的温度变化。$\mu_{\mathrm{JT}} > 0$ 时节流后降温（正效应），$\mu_{\mathrm{JT}} < 0$ 时升温（负效应）。$\mu_{\mathrm{JT}} = 0$ 的温度称为**转换温度** $T_{\mathrm{inv}}$，它与气体的种类和压力有关。
 
-$298\,\mathrm{K}$、常压附近，$\ce{N2}$ 的 $\mu_{\mathrm{JT}} \approx 2.7\,\mathrm{K\,MPa^{-1}}$，$\ce{CO2}$ 约 $11\,\mathrm{K\,MPa^{-1}}$，He 约 $-0.6\,\mathrm{K\,MPa^{-1}}$；理想气体的焓只与温度有关，$\mu_{\mathrm{JT}} = 0$。实际气体的焓 $H = H(T, p)$，在等焓线上 $\mathrm{d}H = C_p\,\mathrm{d}T + (\partial H/\partial p)_T\,\mathrm{d}p = 0$，这就是隐函数求导的循环关系（[2.2.10](/2.2.10#sec-10.8.1)）：
+$298\,\mathrm{K}$、常压附近，$\ce{N2}$ 的 $\mu_{\mathrm{JT}} \approx 2.2\,\mathrm{K\,MPa^{-1}}$，$\ce{CO2}$ 约 $11\,\mathrm{K\,MPa^{-1}}$，He 约 $-0.6\,\mathrm{K\,MPa^{-1}}$；理想气体的焓只与温度有关，$\mu_{\mathrm{JT}} = 0$。实际气体的焓 $H = H(T, p)$，在等焓线上 $\mathrm{d}H = C_p\,\mathrm{d}T + (\partial H/\partial p)_T\,\mathrm{d}p = 0$，这就是隐函数求导的循环关系（[2.2.10](/2.2.10#sec-10.8.1)）：
 
 $$
 \mu_{\mathrm{JT}} = -\frac{(\partial H/\partial p)_T}{(\partial H/\partial T)_p} = -\frac{1}{C_p}\left(\frac{\partial H}{\partial p}\right)_T, \qquad \left(\frac{\partial H}{\partial p}\right)_T = -C_p\mu_{\mathrm{JT}}.
