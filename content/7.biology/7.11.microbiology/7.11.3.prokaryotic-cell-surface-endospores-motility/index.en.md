@@ -114,14 +114,14 @@ From outside to inside, a mature spore consists of:
 
 Three features of the core explain the spore's resistance:
 
-- *Dehydration.* The core contains only about $10$–$25\,\%$ water, against $80$–$90\,\%$ in a vegetative cell, so proteins and DNA are immobilized and protected from heat denaturation; the pH of the core is also about one unit lower.
+- *Dehydration.* The core contains only about $25$–$50\,\%$ water, against $75$–$80\,\%$ in a vegetative cell, so proteins and DNA are immobilized and protected from heat denaturation; the pH of the core is also about one unit lower.
 - *Calcium dipicolinate.* Ca–DPA replaces much of the water and stabilizes DNA, partly by intercalating between its bases.
 - *Small acid-soluble spore proteins* (SASPs), made only during sporulation, coat the DNA, change it to a more A-like form and protect it against heat, drying, ultraviolet light and chemicals; on germination they are degraded and serve as a source of amino acids.
 
 | Property | Vegetative cell | Endospore |
 |---|---|---|
 | Structure | Gram-positive wall | Thick cortex, spore coat, sometimes exosporium |
-| Water content | $80$–$90\,\%$ | $10$–$25\,\%$ in the core |
+| Water content | $75$–$80\,\%$ | $25$–$50\,\%$ in the core |
 | Calcium, DPA, SASPs | Low or absent | High; present |
 | Metabolism, macromolecular synthesis | Active | None detectable |
 | Enzyme activity | High | Low |
@@ -242,7 +242,7 @@ Hydrogenosomes occur in the human parasite *Trichomonas vaginalis*, in ciliates 
 
 3. A culture of *Bacillus subtilis* is heated to $80\,^\circ\mathrm{C}$ for $10\,\mathrm{min}$ and plated. Colonies appear from a starved culture but not from an exponentially growing one. Explain, and name the features of the spore responsible.
 
-   **Answer** Exponentially growing cells do not sporulate, and vegetative cells are killed at $80\,^\circ\mathrm{C}$. A starved culture contains endospores, which survive because their core is dehydrated (about $10$–$25\,\%$ water), stabilized by calcium dipicolinate and protected by SASPs bound to DNA; heating also activates them, and on the plate they germinate and grow into colonies. The method is used to count or select spores.
+   **Answer** Exponentially growing cells do not sporulate, and vegetative cells are killed at $80\,^\circ\mathrm{C}$. A starved culture contains endospores, which survive because their core is dehydrated (about $25$–$50\,\%$ water), stabilized by calcium dipicolinate and protected by SASPs bound to DNA; heating also activates them, and on the plate they germinate and grow into colonies. The method is used to count or select spores.
 
 4. Compare how a bacterial flagellum and an archaellum grow and what powers them, and explain what this suggests about their evolutionary origins.
 

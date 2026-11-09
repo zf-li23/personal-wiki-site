@@ -1,7 +1,7 @@
 ---
 title: Photoperiodism and Florigen
 description: The discovery of photoperiodism (Garner and Allard and the Maryland Mammoth tobacco); the astronomical day-length formula and the annual course of day length at different latitudes; long-day, short-day, day-neutral and dual-day-length plants, qualitative and quantitative responses, the critical day length; the decisive role of the dark period, the critical night length, night breaks and red/far-red reversibility; photoperiodic induction and leaf perception; the hourglass model, Bünning's clock hypothesis and the external coincidence model, CO–FT in Arabidopsis and Hd1–Hd3a in rice with a numerical simulation; temperature sensing; florigen from grafting experiments to the FT protein; photoperiod and geographic distribution, introduction of crops, off-season breeding and control of flowering time
-source_hash: bca7d4777ca0
+source_hash: 79cf8ffa663e
 ---
 
 When a plant flowers determines whether it can pollinate and set seed in the most favorable season, and whether it flowers in synchrony with other individuals of its species so that outcrossing is possible. A plant can neither "read" a calendar nor consult a thermometer; the most reliable seasonal signal available to it is day length. At a given latitude the day length on a given date is the same every year, whereas temperature fluctuates strongly from year to year. This chapter discusses how plants measure day length and how the day-length signal measured in the leaf is converted into a command to flower at the shoot apex.
@@ -100,11 +100,11 @@ Critical day lengths of several plants and the minimum number of inductive cycle
 |---|---|---|---|
 | Short-day plants | Cocklebur (*Xanthium strumarium*) | 15.5 | 1 |
 | | Japanese morning glory (*Ipomoea nil*, "Violet" cultivar) | 14–15 | 1 |
-| | Duckweed (*Lemna paucicostata* strain 6746) | about 14 | 1 |
+| | Duckweed (*Lemna paucicostata* strain 6746) | about 12–14 | 1 |
 | | Perilla (*Perilla frutescens* var. *crispa*, red-leaf cultivar) | about 14 | 12 |
 | | Soybean (Biloxi cultivar) | 13.5–14 | 2–3 |
 | | Kalanchoe (*Kalanchoe blossfeldiana*) | 12 | 2 |
-| | Chrysanthemum (*Chrysanthemum morifolium*) | 16 | 12 |
+| | Chrysanthemum (*Chrysanthemum morifolium*) | about 13–16 (varies with cultivar) | 12 |
 | Long-day plants | Spinach (*Spinacia oleracea*) | 13 | 1 |
 | | White mustard (*Sinapis alba*) | about 14 | 1 |
 | | Darnel (*Lolium temulentum*) | 11 | 1 |

@@ -1,7 +1,7 @@
 ---
 title: "Plant Hormones I: Overview and Auxin"
 description: Plant growth substances, plant hormones and plant growth regulators; the nine hormone classes and their shared logic (homeostasis, derepression, dose-response); the discovery of auxin (Darwin, Boysen-Jensen, Paál, Went and the Avena curvature test), its types and antagonists; the TAA-YUC pathway, conjugation and degradation; the chemiosmotic model of polar transport (AUX1/LAX, PIN, ABCB) and its quantitative advection-diffusion description; physiological effects on cell elongation, vascular differentiation, lateral and adventitious roots, flowers and fruit, and parthenocarpy; dose-response and organ sensitivity; synthetic auxins and herbicides.
-source_hash: cc7a91e1bc00
+source_hash: 658d4eef6bdd
 ---
 
 Plants have no nervous system and no glands dedicated to secreting hormones, yet a leaf far from the root tip "knows" that the soil is drying, a shoot apex decides when the axillary buds below it may grow, and a coleoptile illuminated from one side bends toward the light within tens of minutes. This coordination is carried mainly by a group of small molecules present at very low concentrations: the plant hormones. This chapter first presents the general concept of a plant hormone and the logic shared by all of them: how the concentration is set jointly by synthesis, transport, conjugation and degradation, how cells turn concentration into a response through receptors, and why the same hormone can have opposite effects at different concentrations or in different organs (Section 13.1). It then turns to auxin, the first hormone to be discovered and the one studied most deeply: the classic experiments of its discovery (Section 13.2), its biosynthesis and metabolism (Section 13.3), its polar transport, the only directional cell-to-cell transport known for a plant hormone (Section 13.4), its physiological effects and dose-response relations (Section 13.5), and the agricultural use of synthetic auxins and their action as herbicides (Section 13.6).
@@ -140,7 +140,7 @@ The IPyA pathway was established through genetics. The dominant *Arabidopsis* mu
 
 ### 13.3.2. Conjugation and Degradation
 
-Auxin in a tissue exists in two states. Free IAA is physiologically active and can be transported polarly; conjugated IAA is covalently linked to sugars, inositol, amino acids or peptides and has little or no activity. In many tissues the conjugated form is by far the larger pool: in *Arabidopsis* seedlings free IAA is about 1% of the total, amide conjugates about 90% and ester conjugates about 10%; in maize kernels IAA esters with glucose and inositol predominate.
+Auxin in a tissue exists in two states. Free IAA is physiologically active and can be transported polarly; conjugated IAA is covalently linked to sugars, inositol, amino acids or peptides and has little or no activity. In many tissues the conjugated form is by far the larger pool: in *Arabidopsis* seedlings free IAA is about 1% of the total, amide conjugates roughly nine-tenths and ester conjugates most of the remainder (under a tenth); in maize kernels IAA esters with glucose and inositol predominate.
 
 Conjugates fall into two classes according to their fate:
 

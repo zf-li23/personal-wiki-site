@@ -1,7 +1,7 @@
 ---
 title: Juvenility, Vernalization and the Integration of Flowering
 description: "The three phases of flowering and ripeness to flower; the juvenile phase, phase change and ivy, the miR156–SPL age timer; vernalization: conditions (temperature, duration, oxygen, water, sugar, light), site and Melchers' grafting, winter and spring habit, devernalization and stabilization, a dose–response model; FRI–FLC, COOLAIR, VIN3 and PRC2 epigenetic memory and the digital switch at the single-cell level, the VRN genes of cereals; the autonomous, gibberellin, age and ambient-temperature pathways and nutrition, the historical place of the C/N ratio theory, hormones and flowering; integration of flowering signals at FT, SOC1, LFY and AP1, and a light–temperature model; morphological and physiological changes in flower bud differentiation and their conditions, determination of floral organ identity; types of sex differentiation, genetic and environmental control, hormonal regulation (cucumber, melon, maize)"
-source_hash: 786c1200b8d5
+source_hash: 170b8d184c55
 ---
 
 The previous chapter discussed how a single environmental signal, photoperiod, is measured by the leaf and carried to the shoot apex in the form of florigen ([7.13.21](/7.13.21)). Whether a plant flowers, however, depends on more factors: whether it has "grown up" to an age at which it can flower, whether it has experienced winter cold, the state of its endogenous hormones and carbohydrates, and whether the ambient temperature is suitable. The genetics of *Arabidopsis* groups these factors into several flowering pathways, which converge on a few "integrator" genes; the integrators decide when the shoot apical meristem changes into an inflorescence and flowers.

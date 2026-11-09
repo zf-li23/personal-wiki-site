@@ -85,7 +85,7 @@ SAR11 分支（Pelagibacterales 目），在培养中以"*Candidatus* Pelagibact
 β-变形菌纲是需氧或兼性厌氧的化能有机营养菌和化能无机营养菌，常见于淡水、土壤和污水中，那里营养物时有时无。
 
 - 氨氧化菌：欧洲亚硝化单胞菌（*Nitrosomonas europaea*）和亚硝化螺菌（*Nitrosospira*）用氨单加氧酶和羟胺氧化还原酶把氨氧化为亚硝酸盐，这是**硝化作用**的第一步（[7.11.7](/7.11.7#sec-7.2.4)）。它们是专性化能无机自养菌，有成叠的内膜；在许多土壤和海洋中，它们的数量不及氨氧化古菌（[7.11.19](/7.11.19#sec-19.6.2)）。
-- 氢和硫氧化菌：嗜铜贪铜菌（*Cupriavidus necator*，旧称 *Ralstonia eutropha*）以 $\ce{H2}$ 和 $\ce{CO2}$ 生长并储存大量**聚羟基丁酸酯**，使它成为生产生物塑料的经典生物（[7.11.7](/7.11.7#sec-7.2.1)）；脱氮硫杆菌（*Thiobacillus denitrificans*）以硝酸盐为受体氧化硫化合物。
+- 氢和硫氧化菌：钩虫贪铜菌（*Cupriavidus necator*，旧称 *Ralstonia eutropha*）以 $\ce{H2}$ 和 $\ce{CO2}$ 生长并储存大量**聚羟基丁酸酯**，使它成为生产生物塑料的经典生物（[7.11.7](/7.11.7#sec-7.2.1)）；脱氮硫杆菌（*Thiobacillus denitrificans*）以硝酸盐为受体氧化硫化合物。
 - 鞘细菌：浮游球衣菌（*Sphaerotilus natans*）和纤发菌（*Leptothrix*）以杆菌链的形式在蛋白质和多糖构成的管内生长，游动细胞从管中逸出。*Sphaerotilus* 在被污染的溪流和活性污泥中繁盛，其丝状体在那里造成"膨胀"，即污泥不能沉降；*Leptothrix* 在鞘中沉积铁和锰的氧化物。动胶菌（*Zoogloea*）形成使活性污泥发挥作用的黏性絮体（[7.11.30](/7.11.30)）。
 - 病原体：淋病奈瑟氏菌（*Neisseria gonorrhoeae*）（淋病）和脑膜炎奈瑟氏菌（*N. meningitidis*）（流行性脑脊髓膜炎）是定殖于黏膜的需氧、氧化酶阳性的双球菌；它们对转化有天然感受态，加上菌毛和外膜蛋白的相变与抗原变异，使它们成为免疫逃避的高手（[7.11.34](/7.11.34)）。百日咳博德特氏菌（*Bordetella pertussis*）以 AB 毒素引起百日咳。洋葱伯克霍尔德氏菌复合体（*Burkholderia cepacia* complex）由代谢多样的土壤细菌构成，感染囊性纤维化患者的肺，类鼻疽伯克霍尔德氏菌（*B. pseudomallei*）在东南亚和澳大利亚北部引起类鼻疽；茄科雷尔氏菌（*Ralstonia solanacearum*）引起番茄和马铃薯的青枯病。
 

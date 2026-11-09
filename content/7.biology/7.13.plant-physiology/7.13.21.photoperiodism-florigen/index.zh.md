@@ -99,11 +99,11 @@ $$
 |---|---|---|---|
 | 短日植物 | 苍耳（*Xanthium strumarium*） | 15.5 | 1 |
 | | 裂叶牵牛（*Ipomoea nil*，"紫"品种） | 14–15 | 1 |
-| | 浮萍（*Lemna paucicostata* 6746 品系） | 约 14 | 1 |
+| | 浮萍（*Lemna paucicostata* 6746 品系） | 约 12–14 | 1 |
 | | 紫苏（*Perilla frutescens* var. *crispa*，红叶品种） | 约 14 | 12 |
 | | 大豆（Biloxi 品种） | 13.5–14 | 2–3 |
 | | 长寿花（*Kalanchoe blossfeldiana*） | 12 | 2 |
-| | 菊花（*Chrysanthemum morifolium*） | 16 | 12 |
+| | 菊花（*Chrysanthemum morifolium*） | 约 13–16（因品种而异） | 12 |
 | 长日植物 | 菠菜（*Spinacia oleracea*） | 13 | 1 |
 | | 白芥（*Sinapis alba*） | 约 14 | 1 |
 | | 毒麦（*Lolium temulentum*） | 11 | 1 |

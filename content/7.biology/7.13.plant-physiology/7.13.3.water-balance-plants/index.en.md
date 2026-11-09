@@ -1,7 +1,7 @@
 ---
 title: Water Balance of Plants
 description: Soil water types and soil water potential, field capacity and the permanent wilting percentage; sites, pathways and driving forces of water uptake by roots, root pressure, bleeding and guttation; Hagen–Poiseuille flow in the xylem, the pressure needed to lift water to the top of a 100-m tree, and the cohesion–tension theory; cavitation, embolism and vulnerability curves; modes, indices and driving forces of transpiration, and stomatal and boundary-layer conductance; transpiration ratio and water-use efficiency; the series-resistance model of the soil–plant–atmosphere continuum; rational irrigation.
-source_hash: f8988b68d0b4
+source_hash: ad1ecd012bc1
 ---
 
 Terrestrial plants face an unavoidable dilemma: photosynthesis requires taking up $\ce{CO2}$ from the atmosphere, but the passages through which $\ce{CO2}$ enters the leaf also let water vapor escape, and the water vapor concentration difference that drives water loss is much larger than the concentration difference that drives $\ce{CO2}$ uptake. The plant's solution is a physical system that consumes almost no metabolic energy and continually replenishes from the soil the water lost in transpiration: water in the soil is absorbed by roots, rises through the xylem by bulk flow for several meters to over a hundred meters, evaporates from the surfaces of mesophyll cell walls, and diffuses out through the stomata as vapor. The energy that drives all of this ultimately comes from the sun.
@@ -45,8 +45,8 @@ The difference between field capacity and permanent wilting percentage is the wa
 | Soil (typical range of volumetric water content) | Field capacity | Permanent wilting percentage | Available water |
 |---|---|---|---|
 | Sand | 8%–12% | 3%–5% | about 5%–8% |
-| Loam | 25%–30% | 10%–14% | about 15% |
-| Clay | 35%–45% | 20%–28% | about 15% |
+| Loam | 25%–32% | 10%–14% | about 15%–20% |
+| Clay | 35%–40% | 20%–28% | about 12%–15% |
 
 Clay holds the most water but also binds it most tightly, so its permanent wilting percentage is high; loam has the most available water. Conversely, at the same water content, sand holds more available water than clay: sand with 20% water is wet, whereas clay with the same 20% is already close to the wilting point.
 
@@ -212,7 +212,7 @@ Methods of measurement: gravimetric methods (rapid weighing of detached organs, 
 
 Liquid water within the leaf is driven by water potential gradients, but the last segment from leaf to atmosphere is diffusion of water vapor, controlled by the water vapor concentration gradient. The transpiration rate depends on two factors: the water vapor concentration difference between the internal air spaces of the leaf and the external atmosphere, $\Delta c_{\mathrm{wv}} = c_{\mathrm{wv(leaf)}} - c_{\mathrm{wv(air)}}$, and the resistance of this diffusion path.
 
-The volume of the internal air spaces of the leaf is not large (about 5% of leaf volume in pine needles, 10% in maize leaves, 30% in barley, 40% in tobacco), but the surface area of the evaporating cell walls is 7 to 30 times the external surface area of the leaf, so the air in the leaf is nearly in water potential equilibrium with the cell wall surfaces. From the relation $\Psi = (RT/\bar V_{\mathrm{w}})\ln\mathrm{RH}$ of [7.6.3](/7.6.3#eq-3.7), even when the leaf water potential is as low as $-2\,\mathrm{MPa}$ the relative humidity of the air in the leaf remains above 98%: for example, at 25 °C the relative humidity of the internal air space is 0.99, with a water potential of $-1.38\,\mathrm{MPa}$; the relative humidity of air just outside the stoma drops to about 0.47, with a water potential of $-104\,\mathrm{MPa}$. The water vapor concentration in the leaf can therefore be estimated from the saturation water vapor concentration at leaf temperature, and leaf temperature is easy to measure.
+The volume of the internal air spaces of the leaf is not large (about 5% of leaf volume in pine needles, 10% in maize leaves, 30% in barley, 40% in tobacco), but the surface area of the evaporating cell walls is 7 to 30 times the external surface area of the leaf, so the air in the leaf is nearly in water potential equilibrium with the cell wall surfaces. From the relation $\Psi = (RT/\bar V_{\mathrm{w}})\ln\mathrm{RH}$ of [7.6.3](/7.6.3#eq-3.7), even when the leaf water potential is as low as $-2\,\mathrm{MPa}$ the relative humidity of the air in the leaf remains above 98%: for example, at 25 °C the relative humidity of the internal air space is 0.99, with a water potential of $-1.38\,\mathrm{MPa}$; air outside the leaf at a relative humidity of 0.50 has a water potential of about $-95\,\mathrm{MPa}$. The water vapor concentration in the leaf can therefore be estimated from the saturation water vapor concentration at leaf temperature, and leaf temperature is easy to measure.
 
 The saturated vapor pressure rises nearly exponentially with temperature (the **Clausius–Clapeyron equation**), commonly approximated by the empirical Tetens formula:
 

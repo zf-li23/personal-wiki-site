@@ -1,7 +1,7 @@
 ---
 title: Pollination, Fertilization, Seed and Fruit Development
 description: Chemical composition and viability of pollen, its decay in time and storage; physiology and receptivity of the stigma, effects of external conditions on pollination; pollen–stigma recognition (the FER/ANJ receptor and RALF peptide lock and key); types, genetics and molecular mechanisms of self-incompatibility (S-RNase and SLF, SCR–SRK–ARC1, PrsS–PrpS) and how to overcome it; tip growth of the pollen tube, Ca²⁺ and pH gradients and a delayed negative feedback model of growth oscillation; pollen tube guidance (LURE–PRK6, XIUQIU), integrity and reception (BUPS–ANX, RALF34, FERONIA); metabolic changes in the pistil after fertilization; stages of seed development, accumulation of reserves and the logistic description of grain filling, hormone dynamics, desiccation tolerance and LEA proteins, effects of external conditions on seed composition; fruit set and single- and double-sigmoid fruit growth curves; the climacteric, climacteric and non-climacteric fruit, system 1 and system 2 ethylene and the bifurcation of an autocatalytic switch, ripening regulators such as RIN, color, flavor and softening
-source_hash: 5711d81909e7
+source_hash: 731bbf9d5b90
 ---
 
 Sexual reproduction in angiosperms unfolds on two scales. Morphologically, male and female gametophytes form in the anthers and ovules, pollen is carried to the stigma, the pollen tube delivers the sperm cells into the embryo sac to complete double fertilization, the ovule develops into a seed and the ovary into a fruit; these steps have been covered in the botany courses ([7.12.28](/7.12.28)–[7.12.31](/7.12.31)). This chapter goes through the process again from the standpoint of physiology, concentrating on the materials, energy and signals of each step: why pollen lives for such a short time, how the stigma distinguishes "self" from "other," why the pollen tube can travel through the style at millimeters or even centimeters per hour and find the ovule accurately, how a seed stays alive after losing more than 90% of its water, and why a fruit suddenly begins to ripen at a certain moment and cannot be stopped once it has begun.
@@ -35,9 +35,8 @@ The longevity of pollen differs greatly among plants:
 | Rice | 10–15 min; seed set after pollination 5 min after anther dehiscence has already fallen below 50% |
 | Wheat | Viability begins to fall within a few hours; seed set after pollination 5 h after anther dehiscence is about 6.4% |
 | Maize | Only 1–2 h under hot, dry field conditions; one or two days when cool and humid |
-| Fruit trees (apple, pear, etc.) | Weeks to months |
+| Rosaceous fruit trees (apple, pear, etc.) | Weeks to months; several years when stored cold and dry |
 | Sunflower | Up to 1 year |
-| Some fruit trees of the Rosaceae | Several years under suitable storage |
 
 Pollen of grasses is short-lived for two reasons: it is tricellular, with vigorous metabolism and few reserves; and its water content at shedding is high (about 35%–60% in grasses, whereas most bicellular pollen has only 10%–20% at shedding), so it does not tolerate desiccation and dies quickly from water loss in air. Bicellular pollen is already dehydrated before shedding and its metabolism has fallen to a very low level, so it lives much longer.
 

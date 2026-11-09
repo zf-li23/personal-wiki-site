@@ -197,7 +197,7 @@ Some features are shared by all known life: DNA as genetic material, essentially
 
 ### 1.7.3. Embryology and Vestigial Features
 
-Development often passes through stages that would be unnecessary if it were not a modification of an ancestral development. Fetal anteaters form tooth primordia that are later resorbed; human embryos have pharyngeal pouches like those that form gill slits in fish embryos, and a tail that is mostly lost by cell death ([7.5.39](/7.5.39)).
+Development often passes through stages that would be unnecessary if it were not a modification of an ancestral development. Fetal baleen whales form tooth buds that are later resorbed; human embryos have pharyngeal pouches like those that form gill slits in fish embryos, and a tail that is mostly lost by cell death ([7.5.39](/7.5.39)).
 
 **Definition 1.7.1 (Vestigial Organ)** A **vestigial organ** (vestigial structure) is a reduced or rudimentary feature that is homologous to a fully developed, functional feature in related species or ancestors, and that has lost its ancestral function or most of it.
 
@@ -238,7 +238,7 @@ Molecular biology adds evidence of a kind Darwin could not imagine. Phylogenies 
 |---|---|
 | Nested hierarchy, universal arbitrary features | groups within groups; one genetic code; L-amino acids |
 | Homology | tetrapod forelimbs; human genes rescuing yeast |
-| Embryology, vestigial organs (Definition 1.7.1) | tooth buds of anteaters; cave-fish eyes; pseudogenes |
+| Embryology, vestigial organs (Definition 1.7.1) | tooth buds of baleen whale embryos; cave-fish eyes; pseudogenes |
 | Convergence, imperfect design | vertebrate and octopus eyes; the blind spot |
 | Biogeography | island faunas; Wallace's line; Gondwanan distributions |
 | Fossils | order of appearance; law of succession; tetrapods, birds, whales |

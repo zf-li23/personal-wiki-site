@@ -2,7 +2,7 @@
 # Gross and net primary production: terrestrial GPP about 120 (Beer et al. 2010); NPP about 56 on land and
 # 49 in the ocean (Field et al. 1998). Anthropogenic perturbation, 2013-2022 decadal means of the Global
 # Carbon Budget 2023 (Friedlingstein et al. 2023): fossil CO2 emissions 9.6, land-use change 1.3, growth of
-# atmospheric CO2 5.2, ocean sink 2.9, land sink 3.3. Atmospheric stock about 880 Pg C in 2022 (2.12 Pg C per
+# atmospheric CO2 5.2, ocean sink 2.8, land sink 3.3. Atmospheric stock about 880 Pg C in 2022 (2.12 Pg C per
 # ppm of CO2; about 590 Pg C before industrialization).
 import wikibio as bio
 
@@ -25,7 +25,7 @@ bio.label(ax, (6.35, 5.5), "respiration,\ndecay", size="tiny", color=P.edge("neu
 flow((6.6, 4.3), (9.9, 9.35), "", (0, 0), "negative")
 bio.label(ax, (9.3, 7.1), "land use\n1.3", size="tiny", color=P.edge("negative"))
 bio.label(ax, (4.2, 2.6), "NPP ≈ 56; net sink 3.3", size="tiny", color=P.on_fill())
-flow((13.6, 9.35), (17.0, 4.3), "net uptake 2.9", (16.6, 7.1), "channel")
+flow((13.6, 9.35), (17.0, 4.3), "net uptake 2.8", (16.6, 7.1), "channel")
 bio.label(ax, (17.8, 2.6), "phytoplankton NPP ≈ 49", size="tiny", color=P.on_fill())
 flow((11.0, 1.65), (11.0, 9.35), "fossil\n9.6", (11.7, 5.6), "negative")
 bio.label(ax, (11.0, 11.5), "atmospheric increase +5.2 per year", size="tiny", bold=True)

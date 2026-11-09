@@ -270,7 +270,7 @@ Most biochemical tests detect an enzyme or a pathway with an indicator that chan
 | **Catalase** | $\ce{2H2O2 -> 2H2O + O2}$ | bubbles when $\ce{H2O2}$ is added to cells | staphylococci (+) versus streptococci and enterococci (–) |
 | Oxidase | cytochrome $c$ oxidase oxidizes a redox dye (tetramethyl-$p$-phenylenediamine) | dark purple within seconds | *Pseudomonas*, *Neisseria*, *Vibrio* (+) versus Enterobacterales (–) |
 | Sugar fermentation | acid (and gas) from a sugar | pH indicator changes; gas in an inverted Durham tube | species of Enterobacterales, streptococci |
-| Methyl red (MR) | mixed-acid fermentation keeps the pH below about 4.5 | red with methyl red | *E. coli* (+) |
+| Methyl red (MR) | mixed-acid fermentation keeps the pH below about 4.4 | red with methyl red | *E. coli* (+) |
 | Voges–Proskauer (VP) | acetoin, intermediate of the butanediol fermentation ([7.11.5](/7.11.5)) | red after adding α-naphthol and KOH | *Klebsiella*, *Enterobacter* (+) |
 | Indole | tryptophanase: tryptophan → indole + pyruvate + $\ce{NH3}$ | red with Kovács reagent | *E. coli* (+) |
 | Citrate | growth on citrate as sole carbon source | growth, indicator turns blue | *Klebsiella*, *Salmonella* (+), *E. coli* (–) |

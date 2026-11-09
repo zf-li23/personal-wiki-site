@@ -41,7 +41,7 @@ c = (6.0, 2.4)
 LAYERS = [("Exosporium", 9.2, 4.0, "neutral", True), ("Spore coat", 8.2, 3.5, "protein", False),
           ("Outer membrane", 7.3, 3.05, "lipid_head", False), ("Cortex", 7.0, 2.9, "cell_wall", False),
           ("Germ cell wall", 5.0, 2.05, "nag", False), ("Inner membrane", 4.65, 1.9, "lipid_head", False),
-          ("Core: DNA, ribosomes, Ca–DPA,\nSASPs; 10–25% water", 4.4, 1.75, "cytoplasm", False)]
+          ("Core: DNA, ribosomes, Ca–DPA,\nSASPs; 25–50% water", 4.4, 1.75, "cytoplasm", False)]
 for k, (name, w, h, tok, dashed) in enumerate(LAYERS):
     ax.add_patch(Ellipse(c, w, h, facecolor=P.fill(tok) if not dashed else "none", edgecolor=P.edge(tok), lw=1.1,
                          ls="--" if dashed else "-", zorder=4 + k))
