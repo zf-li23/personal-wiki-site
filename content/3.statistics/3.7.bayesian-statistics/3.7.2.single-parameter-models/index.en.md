@@ -231,7 +231,7 @@ The prior is worth $\nu_0$ observations with mean squared deviation $\sigma_0^2$
 $$
 \sigma_0^2=25\times0.4549=11.37,\qquad\sigma^2\sim\mathrm{Inv}\text{-}\chi^2(1,11.37).
 $$
-The weights of $10$ bottles are $1011,1009,1019,1012,1011,1016,1018,1021,1016,1012$. Their deviations from $1015$ are $-4,-6,4,-3,-4,1,3,6,1,-3$, so $nv=\sum_i(y_i-1015)^2=149$ and $v=14.9$ (and $\sqrt v=3.862$). The posterior is
+The weights of $10$ bottles are $1011,1009,1019,1012,1011,1016,1018,1021,1016,1012$. Their deviations from $1015$ are $-4,-6,4,-3,-4,1,3,6,1,-3$, so $nv=\sum_i(y_i-1015)^2=149$ and $v=14.9$ (and $\sqrt v=3.860$). The posterior is
 
 $$
 \sigma^2\mid y\sim\mathrm{Inv}\text{-}\chi^2\Big(11,\;\frac{11.37+149}{11}\Big)=\mathrm{Inv}\text{-}\chi^2(11,\;14.58).
@@ -396,7 +396,7 @@ Each posterior has the form $\sigma^2=S/Z$ with $Z\sim\chi^2_\nu$; the summaries
 | Jeffreys $p(\sigma^2)\propto\sigma^{-2}$ | $\mathrm{Inv}\text{-}\chi^2(10,14.9)$ | 3.524 | 4.316 | 3.680 | 4.183 | 3.994 | $[2.70,\,6.77]$ |
 | uniform $p(\sigma)\propto1$ | $\mathrm{Inv}\text{-}\chi^2(9,16.56)$ | 3.680 | 4.614 | 3.860 | 4.452 | 4.226 | $[2.80,\,7.43]$ |
 
-For $\sigma^2=S/Z$ the posterior density of $\sigma$ is proportional to $\sigma^{-(\nu+1)}\exp(-S/(2\sigma^2))$, with mode $\sqrt{S/(\nu+1)}$ and mean $\sqrt{S/2}\,\Gamma(\frac{\nu-1}{2})/\Gamma(\frac\nu2)$. Under the uniform prior on $\sigma$ the posterior mode of $\sigma$ is the maximum likelihood estimate $\sqrt v=3.862$, as it must be when the prior is flat in the parameter considered. The conjugate prior with one prior degree of freedom changes little compared with Jeffreys' prior. The uniform prior on $\sigma$, which favors larger values relative to Jeffreys' prior, shifts the posterior visibly upward, especially its right tail: with only ten observations, the scale on which the prior is flat matters.
+For $\sigma^2=S/Z$ the posterior density of $\sigma$ is proportional to $\sigma^{-(\nu+1)}\exp(-S/(2\sigma^2))$, with mode $\sqrt{S/(\nu+1)}$ and mean $\sqrt{S/2}\,\Gamma(\frac{\nu-1}{2})/\Gamma(\frac\nu2)$. Under the uniform prior on $\sigma$ the posterior mode of $\sigma$ is the maximum likelihood estimate $\sqrt v=3.860$, as it must be when the prior is flat in the parameter considered. The conjugate prior with one prior degree of freedom changes little compared with Jeffreys' prior. The uniform prior on $\sigma$, which favors larger values relative to Jeffreys' prior, shifts the posterior visibly upward, especially its right tail: with only ten observations, the scale on which the prior is flat matters.
 
 ![Powder milk example: posterior densities of σ under the conjugate prior, Jeffreys' prior and the uniform prior on σ, together with the conjugate prior of σ (dashed).](./plots/powder_milk_priors.py)
 
