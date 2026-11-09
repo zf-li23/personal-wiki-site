@@ -407,7 +407,7 @@ $$
 
 This Welch interval is what R's `t.test` reports by default (`var.equal = FALSE`), and it is recommended over the pooled interval unless the variances are known to be equal.
 
-For the professor salaries (Example 4.2.8), professors versus assistant professors give: equal-variance interval $[39\,255,\ 52\,737]$; normal approximation $[42\,133,\ 49\,860]$; and Welch's interval with $r=324.3$, $[42\,118,\ 49\,874]$. The last two agree, and both differ markedly from the equal-variance interval, which was shown inappropriate. For men versus women, the normal approximation gives about $[5\,354,\ 22\,822]$, close to the equal-variance interval $[4\,131,\ 24\,045]$, as expected when the variance ratio is compatible with $1$.
+For the professor salaries (Example 4.2.8), professors versus assistant professors give: equal-variance interval $[39\,255,\ 52\,737]$; normal approximation $[42\,133,\ 49\,860]$; and Welch's interval with $r=324.3$, $[42\,118,\ 49\,874]$. The last two agree, and both differ markedly from the equal-variance interval, which was shown inappropriate. For men versus women, the normal approximation gives about $[5\,363,\ 22\,813]$, close to the equal-variance interval $[4\,131,\ 24\,045]$, as expected when the variance ratio is compatible with $1$.
 
 ## 4.4. Confidence Regions
 
