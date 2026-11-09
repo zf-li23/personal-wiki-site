@@ -1,7 +1,7 @@
 ---
 title: Introduction
 description: Elements of an algorithm and finiteness (the hailstone sequence); the Turing machine and RAM models of computation; worst-case time and space complexity; big O, Omega and Theta notation and the hierarchy of complexities; analysis of series and iteration, back-of-the-envelope estimates; recursion traces, recurrence relations, the master theorem and the Akra–Bazzi theorem; four algorithms for the maximum subarray problem; dynamic programming for Fibonacci numbers and longest common subsequences.
-source_hash: 22ff7e66902e
+source_hash: f1784a16b631
 ---
 
 [4.1 Programming Fundamentals](/4.1) is about how to come up with a solution: recursion, divide and conquer, backtracking, dynamic programming. This course answers two other questions: whether a solution is correct and what it costs, and how to organize data so that the common operations are all fast enough. The first question needs a machine-independent yardstick and a set of analysis tools; the second is the subject of data structures. This chapter first explains algorithms and models of computation, then builds the yardstick of asymptotic notation, then introduces the basic methods for analyzing iteration and recursion, including the master theorem for divide-and-conquer recurrences. Finally, three examples (the maximum subarray problem, Fibonacci numbers and longest common subsequences) show how algorithms for one problem improve step by step from exponential or cubic time to linear time. Every result in the later chapters (vectors, lists, stacks and queues, trees, graphs, hashing, and so on) is proved with the methods introduced here.
@@ -433,7 +433,7 @@ The recurrence of a divide-and-conquer algorithm generally has the form $T(n) = 
 2. if $f(n) = \Theta(n^p \log^k n)$ for some $k \geq 0$, then $T(n) = \Theta(n^p \log^{k+1} n)$;
 3. if $f(n) = \Omega(n^{p + \varepsilon})$ for some $\varepsilon > 0$, and there is $c < 1$ such that $a f(n/b) \leq c f(n)$ for all sufficiently large $n$, then $T(n) = \Theta(f(n))$.
 
-**Proof** We prove only the case where $n$ is a power of $b$ and $k = 0$ (for the general case see Chapter 4 of CLRS). Level $j$ of the recursion tree ($0 \leq j < \log_b n$) has $a^j$ instances of size $n/b^j$, and there are $a^{\log_b n} = n^{\log_b a} = n^p$ leaves, so
+**Proof** We prove only the case where $n$ is a power of $b$ and $k = 0$ (for the general case see CLRS (Cormen et al., Introduction to Algorithms)). Level $j$ of the recursion tree ($0 \leq j < \log_b n$) has $a^j$ instances of size $n/b^j$, and there are $a^{\log_b n} = n^{\log_b a} = n^p$ leaves, so
 
 $$
 T(n) = \Theta(n^p) + \sum_{j=0}^{\log_b n - 1} a^j f(n/b^j).

@@ -1,7 +1,7 @@
 ---
 title: Vectors
 description: Abstract data types and data structures; the vector interface and a class-template implementation; capacity doubling and amortized analysis, incremental growth, shrinking and the load factor, how Python list and C++ vector grow; insertion, removal, search, deduplication and traversal of unsorted vectors; uniquification of sorted vectors, three versions of binary search, Fibonacci search and interpolation search; bubble sort and merge sort, stability and the lower bound for comparison sorting; bitmaps and sieves.
-source_hash: 286ccda2b7ca
+source_hash: 52b830ec31a1
 ---
 
 The array is the most basic way to organize data, but its length is fixed and its interface is crude. This chapter wraps the array into an abstract data type, the vector. The vector is the first complete data structure, and the stacks, heaps, hash tables and adjacency lists of graphs that follow are all built on it. The chapter has three threads. The first is the separation of interface from implementation (abstract data types). The second is dynamic space management and its analysis tool, amortized analysis. The third is the value of order: once a vector is sorted, search drops from linear to logarithmic time and deduplication from quadratic to linear time. [4.1.6](/4.1.6) covered how to use arrays and binary search, and [4.2.10](/4.2.10) covered how to use `std::vector`; this chapter shows how they are implemented and how their complexities are proved.
@@ -306,7 +306,7 @@ Trading space for time costs only a constant factor here: the doubling strategy 
 
 ### 2.2.3. Shrinking
 
-Deletion lowers the load factor. If we halve the capacity when the load factor falls below some threshold, the threshold cannot be $1/2$. Suppose the capacity is $2c$ and there are exactly $c + 1$ elements, and we alternate deletions and insertions: each deletion drops the load factor below $1/2$ and shrinks the capacity to $c$, each insertion then fills the vector and expands the capacity back to $2c$, and every operation copies about $c$ elements.
+Deletion lowers the load factor. If we halve the capacity when the load factor falls to some threshold, the threshold cannot be $1/2$. Suppose the capacity is $2c$ and there are exactly $c + 1$ elements, and we alternate deletions and insertions: each deletion drops the load factor to $1/2$ and shrinks the capacity to $c$, each insertion then fills the vector and expands the capacity back to $2c$, and every operation copies about $c$ elements.
 
 The implementation above halves the capacity only when the load factor falls below $1/4$. After each reallocation, the load factor is about $1/2$: after an expansion the number of elements is about half the new capacity $C$; before a shrink the number of elements is below $1/4$ of the old capacity, which is about half the new capacity $C$. From this state, if the next reallocation is an expansion, at least about $C/2$ more elements must be inserted, and about $C$ elements are copied; if it is a shrink, at least about $C/4$ more elements must be deleted, and fewer than $C/4$ elements are copied. In either case the number of elements copied is at most a constant multiple (about 2) of the number of operations in the meantime, so with arbitrarily interleaved insertions and deletions the amortized time per operation is still $O(1)$.
 

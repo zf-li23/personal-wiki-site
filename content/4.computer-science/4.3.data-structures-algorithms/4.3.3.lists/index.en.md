@@ -31,7 +31,7 @@ This chapter implements a *doubly linked list*: each node records both its prede
 
 ### 3.2.1. Interface
 
-List nodes must first be encapsulated independently: a node is to a list what a carriage is to a train. A node stores its data `data`, and the positions of its predecessor and successor, `pred` and `succ`. The list interface is as follows ($p$ denotes the position of a node, that is, a pointer to the node):
+List nodes must first be encapsulated independently: a node is to a list what a car is to a train. A node stores its data `data`, and the positions of its predecessor and successor, `pred` and `succ`. The list interface is as follows ($p$ denotes the position of a node, that is, a pointer to the node):
 
 | Operation | Function | Applies to |
 |---|---|---|

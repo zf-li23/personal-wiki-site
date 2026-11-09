@@ -432,7 +432,7 @@ $$
 2. 若存在 $k \geq 0$ 使 $f(n) = \Theta(n^p \log^k n)$，则 $T(n) = \Theta(n^p \log^{k+1} n)$；
 3. 若存在 $\varepsilon > 0$ 使 $f(n) = \Omega(n^{p + \varepsilon})$，并且存在 $c < 1$ 使 $a f(n/b) \leq c f(n)$ 对充分大的 $n$ 成立，则 $T(n) = \Theta(f(n))$。
 
-**证明** 只对 $n$ 是 $b$ 的幂、$k = 0$ 的情形证明（一般情形的处理见 CLRS 第 4 章）。递归树的第 $j$ 层（$0 \leq j < \log_b n$）有 $a^j$ 个规模为 $n/b^j$ 的实例，叶子共有 $a^{\log_b n} = n^{\log_b a} = n^p$ 个，于是
+**证明** 只对 $n$ 是 $b$ 的幂、$k = 0$ 的情形证明（一般情形的处理见 CLRS（Cormen 等的《算法导论》））。递归树的第 $j$ 层（$0 \leq j < \log_b n$）有 $a^j$ 个规模为 $n/b^j$ 的实例，叶子共有 $a^{\log_b n} = n^{\log_b a} = n^p$ 个，于是
 
 $$
 T(n) = \Theta(n^p) + \sum_{j=0}^{\log_b n - 1} a^j f(n/b^j).
