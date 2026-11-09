@@ -659,7 +659,7 @@ flowchart TB
   E -->|rejected| R[Request rejected]
   E -->|approved| A[Change approved]
   A --> I[Modifier implements change]
-  I -->|cancelled| C[Change cancelled]
+  I -->|canceled| C[Change canceled]
   I --> V[Requester verifies change]
   V -->|fails| I
   V -->|passes| D[Closed]
