@@ -399,6 +399,8 @@ if __name__ == "__main__":
     main()
 ```
 
+The two versions have the same structure and differ in the "find the word" step: the C++ version searches the array sequentially, so for an article with $n$ words of which $k$ are distinct, the total number of comparisons can reach the order of $nk$; a Python dictionary is implemented as a hash table, and each lookup takes constant time on average. The corresponding C++ containers are `std::unordered_map` (a hash table) and `std::map` (ordered, based on a balanced search tree), see [4.2.10](/4.2.10); the principles are in [4.3.9](/4.3.9) and [4.3.6](/4.3.6). The benefit of stepwise refinement is also visible here: replacing the data structure requires rewriting only the `find_word` layer, and the main loop is unchanged. The Python standard library's `collections.Counter` compresses the whole count into one line, and `Counter(words).most_common(10)` directly gives the 10 most frequent words.
+
 ## Summary
 
 - A structure packs the data describing one object into a single type; use an array of structures instead of parallel arrays.
