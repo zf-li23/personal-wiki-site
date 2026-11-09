@@ -1,7 +1,7 @@
 ---
 title: Decision Trees
 description: The decision tree model and partitions of the feature space; entropy, conditional entropy, and information gain, gain ratio, and the Gini index; the ID3 and C4.5 generation algorithms with examples; pre-pruning and post-pruning, loss-based pruning, and the cost-complexity pruning of CART; CART classification and regression trees; from decision trees to random forests and gradient boosting.
-source_hash: 3a3f580ec214
+source_hash: 96f05f7479f5
 ---
 
 A decision tree classifies samples with a series of yes-or-no questions: first ask the question that best separates the classes, split the samples into groups according to the answer, and continue to ask questions of each group until each group belongs essentially to one class. Its structure matches the way people make judgments, and the learned model can be read directly as if-then rules, which makes it one of the most interpretable machine learning models. This chapter discusses three questions: which question is best to ask at each step (feature selection: information gain, gain ratio, the Gini index), how to generate the whole tree recursively (ID3, C4.5, CART), and how to avoid **overfitting** by keeping the tree from growing too complex (pruning). [3.4.10](/3.4.10) briefly described decision trees from the viewpoint of discriminant analysis, and [3.3.12](/3.3.12) introduced **regression trees**; this chapter gives the complete algorithms. A single decision tree is unstable and of limited accuracy; random forests and gradient boosting, which combine many trees, are among the strongest methods on tabular data, as discussed in [4.6.6](/4.6.6).
