@@ -154,7 +154,7 @@ E_{\mathrm{p}}(r)=4\varepsilon\Big[\Big(\frac{\sigma}{r}\Big)^{12}-\Big(\frac{\s
 $$
 它在 $r_0=2^{1/6}\sigma$ 处取极小值 $-\varepsilon$，$\varepsilon$ 是势阱深度。分子在 $r_0$ 附近的小振动就是分子振动；实际双原子分子中电子的贡献要用量子力学计算，Lennard-Jones 势更适合描述惰性气体原子之间的作用（[5.2.2](/5.2.2) 讨论分子力与真实气体）。
 
-![Lennard-Jones potential energy E_p(r) and the corresponding force f(r) = -dE_p/dr in reduced units; the minimum at r0 = 2^(1/6) sigma is the equilibrium separation, the force is repulsive for r < r0 and attractive for r > r0](./plots/lennard-jones.py)
+![Lennard-Jones 势能 $E_{\mathrm{p}}(r)$ 与相应的力 $f(r) = -\mathrm{d}E_{\mathrm{p}}/\mathrm{d}r$（约化单位）；$r_0 = 2^{1/6}\sigma$ 处的极小点是平衡间距，$r < r_0$ 时力为斥力，$r > r_0$ 时为引力](./plots/lennard-jones.py)
 
 ## 4.7. 功能原理和机械能守恒定律
 
@@ -245,11 +245,11 @@ $$
 
 有效势能只说明 $r$ 的变化范围；轨道恰好是圆锥曲线（封闭的椭圆）是平方反比力的特殊性质，可以从式 (4.2) 与 $mr^2\dot\theta=L$ 消去 $t$ 积分得到。
 
-![Left: effective potential E_eff(r) = L^2/(2 m r^2) - G M m / r for fixed angular momentum, with energy levels of a circular orbit, an ellipse (r_min to r_max), the parabolic case E = 0 and a hyperbola; right: orbits launched from the same point with velocity perpendicular to the radius and increasing speed (circle, ellipse, parabola, hyperbola)](./plots/effective-potential.py)
+![左：角动量固定时的有效势能 $E_{\mathrm{eff}}(r) = L^2/(2mr^2) - GMm/r$，图中标出圆轨道、椭圆（$r_{\min}$ 到 $r_{\max}$）、抛物线（$E = 0$）与双曲线对应的能量；右：从同一点垂直于半径方向射出、速率依次增大的轨道（圆、椭圆、抛物线、双曲线）](./plots/effective-potential.py)
 
 势能函数确定后，改变初始条件就能改变轨道。例如飞船绕地球作**速率**为 $v_0$ 的匀速圆周运动，在极短时间内沿径向向外（或向内）喷气，获得一个指向（或背离）地心的小速度 $\alpha v_0$。喷气瞬间位矢不变，切向速度不变，所以角动量 $L$ 不变，而机械能增加 $\frac12m\alpha^2v_0^2$：新轨道是过喷气点的椭圆，两种喷气方向得到的椭圆关于喷气点的径向对称，一个的近地点在喷气点之前，一个在之后。
 
-![A ship on a circular orbit receives a small radial velocity kick alpha v0 (alpha = 0.3) at the marked point; the dashed and dotted ellipses are the new orbits for an inward and an outward kick, both with the same angular momentum as the circle](./plots/orbit-kick.py)
+![圆轨道上的飞船在标记点获得一个小的径向速度 $\alpha v_0$（$\alpha = 0.3$）；虚线与点线分别是径向向内与向外获得速度后的新轨道，角动量都与圆轨道相同](./plots/orbit-kick.py)
 
 实际航天任务正是这样设计的。1978 年发射的 ISEE-3 探测器原本停在日地 L1 点附近的晕轨道上，1982–1983 年经过一系列点火与五次飞掠月球（借月球引力变轨）离开地月系统，更名为 ICE，1985 年穿过 Giacobini–Zinner 彗星的彗尾（第一个穿过彗尾的航天器），1986 年在远距离上观测了哈雷彗星，2014 年回到地球附近。
 
@@ -432,7 +432,7 @@ $$
 | 功能原理 | $W_{\mathrm{ext}}+W_{\mathrm{nc,int}}=\Delta E$ | 系统 | 在惯性系与质心系中成立 |
 | 机械能守恒 | 只有保守内力做功时 $E$ 不变 | 系统 | 是否守恒与惯性系的选择有关 |
 | König 定理 | $E_{\mathrm{k}}=E_{\mathrm{k}}'+\frac12mv_C^2$ | 质点系 | 联系惯性系与质心系 |
-| Bernoulli 方程 | $p+\frac12\rho v^2+\rho gh=\text{const}$ | 理想流体的稳定流动 | 流体静止的参考系 |
+| Bernoulli 方程 | $p+\frac12\rho v^2+\rho gh=\text{const}$ | 理想流体的稳定流动 | 流动保持稳定的参考系 |
 
 ## 思考题
 

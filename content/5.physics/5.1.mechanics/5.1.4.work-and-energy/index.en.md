@@ -1,7 +1,7 @@
 ---
 title: Work and Energy
 description: Work and the work-kinetic energy theorem, the work of a pair of forces, conservative forces and potential energy, forces from potential energy and potential energy curves, the work-energy principle and conservation of mechanical energy, central force fields and the effective potential, conservation laws and symmetry, collisions, König's theorem and the two-body problem, the continuity equation and Bernoulli's equation for ideal fluids.
-source_hash: 5ea3c8b258b2
+source_hash: 1fed86ef5ebf
 ---
 
 [The previous chapter](/5.1.3) discussed the accumulation of force over time: **impulse** changes **momentum**, and **angular impulse** changes **angular momentum**. This chapter discusses the accumulation of force over space: the integral of a force along a path is work, and work changes kinetic energy. A force whose work is independent of the path can be replaced by a scalar function (the potential energy), which leads to the law of conservation of mechanical energy; together with conservation of momentum and of angular momentum, it forms the three conservation laws of mechanics. Mathematically, work is a **line integral of a vector field**, a conservative force is a **conservative vector field**, the potential energy is a **potential function** (up to a sign), and finding the force from the potential energy means taking a **gradient**; all of this was covered in [2.2.14](/2.2.14), and this chapter stresses the physical meaning: whether each quantity belongs to a **particle** or to a system, and whether it depends on the **reference frame**. The central-force problem uses the two conserved quantities, energy and angular momentum, to reduce the equations of motion to first order, a typical application of the method of **first integrals** ([2.4.14](/2.4.14)). The last two sections apply the work-energy relations to fluids and lead to Bernoulli's equation. The next chapter, [5.1.5](/5.1.5), applies these laws to rigid bodies; the first law of thermodynamics in the thermal physics part ([5.2.3](/5.2.3)) is the extension of the law of conservation of energy to thermal phenomena.
@@ -433,7 +433,7 @@ Several phenomena are often explained qualitatively by "low pressure where the f
 | Work-energy principle | $W_{\mathrm{ext}}+W_{\mathrm{nc,int}}=\Delta E$ | system | holds in inertial and center-of-mass frames |
 | Conservation of mechanical energy | $E$ constant when only conservative internal forces do work | system | whether it is conserved depends on the choice of inertial frame |
 | König's theorem | $E_{\mathrm{k}}=E_{\mathrm{k}}'+\frac12mv_C^2$ | system of particles | links inertial and center-of-mass frames |
-| Bernoulli's equation | $p+\frac12\rho v^2+\rho gh=\text{const}$ | steady flow of an ideal fluid | the frame in which the fluid is at rest |
+| Bernoulli's equation | $p+\frac12\rho v^2+\rho gh=\text{const}$ | steady flow of an ideal fluid | the frame in which the flow is steady |
 
 ## Questions
 
