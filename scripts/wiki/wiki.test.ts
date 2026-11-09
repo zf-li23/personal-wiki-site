@@ -161,6 +161,11 @@ describe('notation', () => {
     // T as a variable: integral bounds, powers, the Poisson distribution, closures in set theory
     assert.equal(fixNotation(String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + tr(R)`, '3.1.1'), String.raw`\int_{-T}^T f + \int_{T_{\mathrm{b}}}^{T} g + n^T + P(\lambda) + \operatorname{tr}(R)`);
     assert.equal(fixNotation(String.raw`tr(R)`, '1.2.2'), 'tr(R)');
+    // projectors and polynomials named P keep their letter
+    assert.equal(fixNotation(String.raw`P^2-P=P(P-I)=O`, '3.5.3'), String.raw`P^2-P=P(P-I)=O`);
+    assert.equal(fixNotation(String.raw`P(P\boldsymbol{v}-\boldsymbol{v})=(P^2-P)\boldsymbol{v}`, '3.5.3'), String.raw`P(P\boldsymbol{v}-\boldsymbol{v})=(P^2-P)\boldsymbol{v}`);
+    assert.equal(fixNotation(String.raw`P(A\cap B)`, '3.1.2'), String.raw`\mathbb{P}(A\cap B)`);
+    assert.equal(fixNotation(String.raw`P(X+Y>1)=0`, '3.1.6'), String.raw`\mathbb{P}(X+Y>1)=0`);
   });
   it('only touches formulas', () => {
     const { text, changes } = fixNotationInMarkdown('Text e^x and `A^T`.\n\n$$\nA^T\n$$\n\n```\nA^T\n```\n', '2.1.1');

@@ -25,6 +25,8 @@ export interface NotationRule {
   scope?: string[];
   /** The rule applies only to formulas matching this. */
   onlyIn?: RegExp;
+  /** The rule does not apply to formulas matching this. */
+  unlessIn?: RegExp;
 }
 
 // Not preceded by a letter or a backslash (so `\exp`, `\Pr`, `ae^` are not touched).
@@ -90,11 +92,15 @@ export const NOTATION_RULES: NotationRule[] = [
     onlyIn: /\\i+nt|\\oint/,
   },
   { id: 'expectation', advice: String.raw`\mathbb{E} for expectation`, pattern: new RegExp(String.raw`${START}(?<![{_^])E(?=\s*[(\[]|[A-Z](?![A-Za-z]))`, 'g'), fix: String.raw`\mathbb{E}`, scope: ['3'] },
-  { id: 'probability', advice: String.raw`\mathbb{P} for probability`, pattern: new RegExp(String.raw`${START}(?<![{_^])P(?=\s*(?:[(\[]|\\\{|\\left|\\big))(?!\s*\(\s*\\(?:lambda|theta|mu)\s*\))`, 'g'), fix: String.raw`\mathbb{P}`, scope: ['3'] },
+  { id: 'probability', advice: String.raw`\mathbb{P} for probability`, pattern: new RegExp(String.raw`${START}(?<![{_^])P(?=\s*(?:[(\[]|\\\{|\\left|\\big))(?!\s*\(\s*\\(?:lambda|theta|mu)\s*\))`, 'g'), fix: String.raw`\mathbb{P}`, scope: ['3'],
+    // P is a matrix (projector, permutation) or a polynomial when it is squared, multiplies a
+    // vector or matrix, or takes a matrix argument: P^2, P\boldsymbol{v}, P(P-I), P(A)=O, P\,(…)
+    unlessIn: /(?<![\\A-Za-z])P\s*(?:\^\s*\{?\s*[2-9T]|\\boldsymbol|\\,|\(\s*P\b)|\)\s*=\s*O\b/ },
 ];
 
 function applies(rule: NotationRule, tex: string, pageId: string): boolean {
   if (rule.scope && !rule.scope.some((s) => pageId === s || pageId.startsWith(`${s}.`))) return false;
+  if (rule.unlessIn?.test(tex)) return false;
   return !rule.onlyIn || rule.onlyIn.test(tex);
 }
 
