@@ -232,7 +232,7 @@ $$
 $$
 u_t=w(x,t;t)+\int_0^tw_t(x,t;s)\,\mathrm{d}s=f(x,t)+\int_0^tk\Delta w(x,t;s)\,\mathrm{d}s=f(x,t)+k\Delta u.
 $$
-The difficulty is that the second derivatives of $\Phi(x-y,t-s)$ are not integrable near $s=t$. The remedy is to substitute $y\mapsto x-y$ and $s\mapsto t-s$, writing $u=\int_0^t\int\Phi(y,s)f(x-y,t-s)\,\mathrm{d}y\,\mathrm{d}s$, so that all derivatives fall on $f$; the singular part near $s=0$ is then handled by integrating by parts in $y$ and using $\Phi_s=k\Delta\Phi$ (see Evans, *Partial Differential Equations*, for details). The bound $\lvert u\rvert\le t\sup\lvert f\rvert$, which follows from $\int\Phi=1$, gives continuity at $t=0$. $\square$
+The difficulty is that the second derivatives of $\Phi(x-y,t-s)$ are not integrable near $s=t$. The remedy is to substitute $y\mapsto x-y$ and $s\mapsto t-s$, writing $u=\int_0^t\int\Phi(y,s)f(x-y,t-s)\,\mathrm{d}y\,\mathrm{d}s$, so that all derivatives fall on $f$; the singular part near $s=0$ is then handled by integrating by parts in $y$ and using $\Phi_s=k\Delta\Phi$ (see the textbook by Evans for details). The bound $\lvert u\rvert\le t\sup\lvert f\rvert$, which follows from $\int\Phi=1$, gives continuity at $t=0$. $\square$
 
 The structure is the same as the **variation of constants formula** for linear ODEs: the solution operator of the homogeneous problem, applied to the source at each earlier time and integrated. On a bounded interval the same principle, combined with the eigenfunction expansions of [2.5.4](/2.5.4), gives the series solution of nonhomogeneous problems.
 
