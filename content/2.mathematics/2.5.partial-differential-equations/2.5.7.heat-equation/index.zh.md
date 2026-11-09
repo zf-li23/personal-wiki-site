@@ -1,6 +1,6 @@
 ---
 title: 热方程
-source_hash: 09f7acd73bfa
+source_hash: 6e77db873de7
 ---
 
 **热方程** $u_t=k\Delta u$（扩散系数 $k>0$，[2.5.1](/2.5.1)）支配着一切由随机的局部运动引起扩散的过程：固体中的热量、溶剂中的溶质、移动的生物种群、Brown 粒子的概率密度。它的解与**波动方程**（[2.5.3](/2.5.3)）的解表现迥异：热量瞬间传遍整个空间，但到达远处的量极小；粗糙的初始数据立即变得光滑；时间有方向，因为方程一般不能逆向求解；解通过极值原理由它在"抛物边界"上的值所控制。
@@ -233,7 +233,7 @@ $$
 $$
 u_t=w(x,t;t)+\int_0^tw_t(x,t;s)\,\mathrm{d}s=f(x,t)+\int_0^tk\Delta w(x,t;s)\,\mathrm{d}s=f(x,t)+k\Delta u.
 $$
-困难在于 $\Phi(x-y,t-s)$ 的二阶导数在 $s=t$ 附近不可积。补救的办法是作代换 $y\mapsto x-y$、$s\mapsto t-s$，写成 $u=\int_0^t\int\Phi(y,s)f(x-y,t-s)\,\mathrm{d}y\,\mathrm{d}s$，使所有导数都落在 $f$ 上；然后对 $y$ 分部积分并利用 $\Phi_s=k\Delta\Phi$ 处理 $s=0$ 附近的奇异部分（见 Evans 的教材 §2.3）。由 $\int\Phi=1$ 得到的估计 $\lvert u\rvert\le t\sup\lvert f\rvert$ 给出 $t=0$ 处的连续性。$\square$
+困难在于 $\Phi(x-y,t-s)$ 的二阶导数在 $s=t$ 附近不可积。补救的办法是作代换 $y\mapsto x-y$、$s\mapsto t-s$，写成 $u=\int_0^t\int\Phi(y,s)f(x-y,t-s)\,\mathrm{d}y\,\mathrm{d}s$，使所有导数都落在 $f$ 上；然后对 $y$ 分部积分并利用 $\Phi_s=k\Delta\Phi$ 处理 $s=0$ 附近的奇异部分（细节见 Evans 的《偏微分方程》）。由 $\int\Phi=1$ 得到的估计 $\lvert u\rvert\le t\sup\lvert f\rvert$ 给出 $t=0$ 处的连续性。$\square$
 
 其结构与线性常微分方程的**常数变易公式**相同：把齐次问题的解算子作用于此前每个时刻的源项，再积分起来。在有界区间上，同一原理与 [2.5.4](/2.5.4) 的特征函数展开相结合，给出非齐次问题的级数解。
 

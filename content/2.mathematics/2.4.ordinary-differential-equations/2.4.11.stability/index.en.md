@@ -1,6 +1,6 @@
 ---
 title: Stability and Qualitative Theory
-source_hash: 43bf36705741
+source_hash: cff056cc607e
 ---
 
 Most nonlinear equations cannot be solved in closed form, yet in applications what matters is often not a formula for the solution but its long-term behavior: whether an equilibrium recovers from a small perturbation, whether the system settles into a sustained oscillation, where the trajectories eventually go. Qualitative theory answers these questions directly from the equation, without solving it. The approach was founded by Poincaré and Lyapunov at the end of the nineteenth century and today underlies dynamical systems, control theory and mathematical biology.
@@ -33,7 +33,7 @@ Stability means that "a small perturbation of the initial value causes only a sm
 - $x'=x$: $x=x_0\mathrm{e}^{t-t_0}$, which is unstable;
 - $x'=-x^3$: $x^{-2}=x_0^{-2}+2(t-t_0)$, so $\lvert x\rvert$ decreases monotonically to $0$; the zero solution is asymptotically stable, but the decay is slower than exponential. The zero solution of $x'=x^3$ is unstable (solutions blow up in finite time).
 
-The last two equations both have the linear approximation $x'=0$, which shows that the linear approximation sometimes cannot decide stability (the critical case of Theorem 11.4.1).
+The last two equations both have the linear approximation $x'=0$, which shows that the linear approximation sometimes cannot decide stability (the critical case of Theorem 11.3.1).
 
 :::
 

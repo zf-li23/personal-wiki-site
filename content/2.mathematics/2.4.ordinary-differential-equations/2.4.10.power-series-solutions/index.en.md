@@ -1,6 +1,6 @@
 ---
 title: Power Series Solutions
-source_hash: ff44977df870
+source_hash: 1fc22a565d71
 ---
 
 Linear equations with variable coefficients generally cannot be solved in terms of elementary functions. The most important variable-coefficient equations of physics (the Legendre, Bessel, Hermite and Airy equations, among others) arise from solving partial differential equations by separation of variables: separating Laplace's equation in spherical coordinates gives the Legendre equation, and separating Laplace's equation, the wave equation or the heat equation in cylindrical or polar coordinates gives the Bessel equation. Their solutions define new "special functions", and the most direct way to study them is to write the solutions as **power series**.
