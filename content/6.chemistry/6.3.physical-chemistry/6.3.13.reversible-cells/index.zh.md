@@ -589,7 +589,7 @@ $$
 
 3. 为测 $\ce{AgCl}$ 的溶度积，应设计什么电池？
 
-   **答** $\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$，电池反应 $\ce{Ag+ + Cl- -> AgCl}$ 的逆反应即溶解平衡，例 13.7.1。
+   **答** $\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$，电池反应 $\ce{AgCl -> Ag+ + Cl-}$ 即溶解平衡，例 13.7.1。
 
 4. 电池反应的标准平衡常数有哪些求法？
 

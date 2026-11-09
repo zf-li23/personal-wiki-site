@@ -1,7 +1,7 @@
 ---
 title: Reversible Cells and Electromotive Force
 description: Reversible cells and the three kinds of reversible electrodes; terminal voltage, the compensation method and the standard cell; the Nernst equation from the reaction isotherm, and the relations of the cell potential to ΔrG, K°, ΔrS, ΔrH and the reversible heat; inner and outer potentials and the electrochemical potential, the components of the cell potential and the liquid junction potential; electrode potentials and reference electrodes; concentration cells and the design of cells for given reactions; potentiometric determination of equilibrium constants, activity coefficients, standard electrode potentials, transport numbers and pH; the Fe–H₂O potential–pH diagram; membrane potentials, the resting potential of cells and the glass electrode.
-source_hash: 490f5e937827
+source_hash: 57c9f98bcb21
 ---
 
 [6.3.12](/6.3.12) studied the electrolyte solution itself; this chapter studies the equilibrium properties of a cell when the current tends to zero. The chemical reaction in the cell then proceeds reversibly, and the measured cell potential gives the molar Gibbs energy of the reaction directly: $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$. The cell potential can be measured to $10^{-5}\,\mathrm{V}$ or better, so electrochemical measurement is an accurate method for determining $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}}$, $K^\circ$, $\Delta_{\mathrm{r}}S_{\mathrm{m}}$, $\Delta_{\mathrm{r}}H_{\mathrm{m}}$, mean activity coefficients and pH.
@@ -590,7 +590,7 @@ Changing the material of the sensing membrane gives other ion-selective electrod
 
 3. What cell should be designed to measure the solubility product of $\ce{AgCl}$?
 
-   **Answer** $\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$; the cell reaction $\ce{Ag+ + Cl- -> AgCl}$ is the reverse of the dissolution equilibrium, Example 13.7.1.
+   **Answer** $\ce{Ag} \mid \ce{AgNO3}(\mathrm{aq}) \parallel \ce{HCl}(\mathrm{aq}) \mid \ce{AgCl(s)} \mid \ce{Ag}$; the cell reaction $\ce{AgCl -> Ag+ + Cl-}$ is the dissolution equilibrium itself, Example 13.7.1.
 
 4. By what methods can the standard equilibrium constant of a cell reaction be found?
 
