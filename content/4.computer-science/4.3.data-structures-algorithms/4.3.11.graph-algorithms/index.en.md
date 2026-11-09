@@ -1,7 +1,7 @@
 ---
 title: Graph Applications
 description: Topological sorting by the zero in-degree algorithm and by DFS; cut vertices, cut edges and biconnected components with the highest connected ancestor and the Hopcroft–Tarjan algorithm; the unified framework of priority-first search and its complexity; Dijkstra's algorithm and shortest-path trees, Prim's algorithm and the cut property, with correctness proofs; Kruskal's algorithm and union by rank with path compression; the dynamic programming of the Floyd–Warshall algorithm.
-source_hash: bb66a6dcb44e
+source_hash: 2613c9b88233
 ---
 
 [4.3.10](/4.3.10) presented the representations of graphs and the two basic traversals. This chapter solves several classical problems on top of these traversals. The first two sections use information that DFS leaves behind: listing vertices in reverse order of finishing time gives a topological order of a directed acyclic graph, and the highest ancestor reachable through back edges lets a single DFS find all cut vertices and biconnected components of an undirected graph. The third section unifies BFS and DFS as priority-first search: the traversals differ only in which vertex is visited next, and this is determined by the priority of each vertex. With different priority-update rules, the same framework yields Dijkstra's algorithm for single-source shortest paths and Prim's algorithm for minimum spanning trees. The last two sections present two other approaches: Kruskal's algorithm greedily selects edges in increasing order of weight, and its efficiency rests on the disjoint-set data structure; the Floyd–Warshall algorithm uses **dynamic programming** to compute the shortest paths between all pairs of vertices at once. The mathematical background of these problems (the existence of shortest paths and minimum spanning trees, and the steps of the classical algorithms) was covered in [1.4.2](/1.4.2) and [1.4.3](/1.4.3); here we concentrate on implementation, complexity and correctness proofs.
@@ -42,7 +42,7 @@ The other direction is to output vertices in reverse order: a vertex of out-degr
 
 **Theorem 11.1.2** Run DFS over the whole graph of a DAG. Then $f(u) < f(v)$ for every edge $(v, u)$. Hence listing the vertices in decreasing order of finishing time $f$ gives a topological order.
 
-**Proof** When the edge $(v, u)$ is examined, DFS($v$) is executing. The vertex $u$ cannot be `DISCOVERED`, for otherwise $(v, u)$ would be a **back edge** and the graph would contain a cycle by Theorem 10.5.5. If $u$ is `UNDISCOVERED`, then $u$ becomes a descendant of $v$, and $f(u) < f(v)$ by the **parenthesis theorem**; if $u$ is `VISITED`, then $f(u)$ is earlier than the current time while $f(v)$ is later. $\square$
+**Proof** When the edge $(v, u)$ is examined, DFS($v$) is executing. The vertex $u$ cannot be `DISCOVERED`, for otherwise $(v, u)$ would be a **back edge** and the graph would contain a cycle by Theorem 10.5.5. If $u$ is `UNDISCOVERED`, then $u$ becomes a descendant of $v$, and $f(u) < f(v)$ by the **parenthesis lemma**; if $u$ is `VISITED`, then $f(u)$ is earlier than the current time while $f(v)$ is later. $\square$
 
 Thus it suffices to push each vertex onto a stack whenever it is marked `VISITED` during DFS, and to pop the stack when the DFS ends; as soon as a back edge is found, the algorithm reports "not a DAG" and exits. The complexity is that of DFS, namely $O(n + m)$.
 
@@ -215,7 +215,7 @@ In particular, a leaf is never a cut vertex: after deleting it, the remaining ve
 
 To check condition (2) efficiently during DFS, we introduce the following quantity.
 
-**Definition 11.2.2 (Highest Connected Ancestor)** For a vertex $v$ of the DFS tree, let $\operatorname{hca}(v)$ be the minimum of $d(v)$ and the discovery times of all vertices reachable from vertices of $\operatorname{subtree}(v)$ through one back edge. By the parenthesis theorem, ancestors are discovered earlier than descendants, so a smaller $\operatorname{hca}(v)$ means that $\operatorname{subtree}(v)$ can reach a more senior ancestor through back edges; we call it the **highest connected ancestor** of $v$.
+**Definition 11.2.2 (Highest Connected Ancestor)** For a vertex $v$ of the DFS tree, let $\operatorname{hca}(v)$ be the minimum of $d(v)$ and the discovery times of all vertices reachable from vertices of $\operatorname{subtree}(v)$ through one back edge. By the parenthesis lemma, ancestors are discovered earlier than descendants, so a smaller $\operatorname{hca}(v)$ means that $\operatorname{subtree}(v)$ can reach a more senior ancestor through back edges; we call it the **highest connected ancestor** of $v$.
 
 In Tarjan's original paper this quantity is called the low value. It satisfies the recurrence
 
@@ -890,7 +890,7 @@ Disjoint sets are used far beyond Kruskal's algorithm: maintaining the connectiv
 
 ### 11.7.1. The Problem
 
-Given a weighted network $G$, find the shortest distances between all pairs of vertices. This underlies many problems, for example determining the center of a network: the radius of a vertex $s$ is defined as the maximum distance from the vertices to $s$, and the vertex of minimum radius is the center, the best place for a service station.
+Given a weighted network $G$, find the shortest distances between all pairs of vertices. This underlies many problems, for example determining the center of a network: the eccentricity of a vertex $s$ is defined as the maximum distance from the vertices to $s$, and the vertex of minimum eccentricity is the center, the best place for a service station.
 
 The direct method runs Dijkstra's algorithm once from each vertex: $O(n^3)$ in total with arrays, and $O(n(n + m) \log n)$ with binary heaps. The Floyd–Warshall algorithm also runs in $O(n^3)$, and its value lies elsewhere: it is simple, compact, easy to implement and has a small constant; moreover, it allows negative edges (though still no negative cycles).
 

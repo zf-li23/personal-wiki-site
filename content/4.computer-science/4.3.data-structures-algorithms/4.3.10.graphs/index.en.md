@@ -1,7 +1,7 @@
 ---
 title: Graphs
 description: Graph terminology and the graph ADT, implementation, space and operation costs of adjacency matrices and adjacency lists, sparse and dense graphs, breadth-first search with BFS trees, shortest-path properties and bipartiteness testing, depth-first search with active intervals, the parenthesis theorem, the white-path theorem and edge classification (tree, back, forward and cross edges) with its criteria, and iterative DFS.
-source_hash: c6611ad76936
+source_hash: e754dd56e0e9
 ---
 
 In a linear structure each element has at most one predecessor and one successor, and in a tree each node has at most one parent; a graph allows a relation between any two objects and is the most general structure for expressing "relations". Road networks, computer networks, social relations, the call relations of programs and the dependencies among tasks are all naturally modeled as graphs. The mathematical theory of graphs was covered in the graph theory part of discrete mathematics ([1.4](/1.4)); this chapter discusses two questions from the viewpoint of data structures: how graphs are represented in a computer, and how to visit all vertices and edges of a graph systematically. The latter is graph traversal, mainly of two kinds, breadth-first search and depth-first search, which turn a nonlinear graph into a traversal tree (or a forest) and leave behind time labels of vertices and a classification of edges during the traversal. This information is the basis of algorithms such as topological sorting, biconnected components, shortest paths and minimum spanning trees in [4.3.11](/4.3.11). The search on a state space in [4.1.14](/4.1.14) is precisely a traversal on a graph that is given implicitly.
@@ -98,7 +98,7 @@ A few remarks:
 - If in-edges are often needed, one can maintain a reverse adjacency list as well (a list of in-edges for each vertex), which doubles the space but keeps it $O(n + m)$.
 - If edge existence is often tested, each $L_v$ can be replaced by a **hash table** ([4.3.9](/4.3.9)): the expected time of testing an edge is $O(1)$, "the same" as for the adjacency matrix, and the space is still $O(n + m)$.
 - For a large graph that is not modified after construction, all adjacency lists are often concatenated end to end into one array of length $m$, and another array of length $n + 1$ records the starting point of the list of each vertex in it. This compressed sparse row (CSR) format stores everything fully contiguously, has the highest cache efficiency, and is the standard format of graph-computation libraries and sparse matrices ([4.4](/4.4)).
-- Adjacency matrices still have their uses: besides dense graphs, some graphs are given implicitly, such as the Euclidean graph in which points of the plane at distance at most $r$ are connected, interval intersection graphs, and the **state space** in [4.1.14](/4.1.14). Such graphs need not be stored explicitly; as long as the question "what are the neighbors of $v$" can be answered, traversal algorithms work.
+- Some graphs are given implicitly, such as the Euclidean graph in which points of the plane at distance at most $r$ are connected, interval intersection graphs, and the **state space** in [4.1.14](/4.1.14). Such graphs need not be stored explicitly; as long as the question "what are the neighbors of $v$" can be answered, traversal algorithms work.
 
 | When to use | Adjacency matrix | Adjacency list |
 |---|---|---|
