@@ -1,7 +1,7 @@
 ---
 title: Electric Potential
 description: Conservative nature of the electrostatic field and its circulation theorem, potential difference and electric potential, superposition of potentials, equipotential surfaces, the potential gradient and Poisson's equation, Earnshaw's theorem, electrostatic potential energy of charges and dipoles in an external field, electrostatic energy of charge systems, energy density of the electrostatic field, and the theoretical structure of electrostatics.
-source_hash: 30a2ad5dd09b
+source_hash: 58263e2ccc1b
 ---
 
 [The previous chapter](/5.3.1) used **Gauss's law** to describe the flux of the electrostatic field; this chapter studies its circulation. The work done by electrostatic forces is independent of the path, so the electrostatic field is a **conservative vector field**, and just as potential energy is introduced from a conservative force in mechanics ([5.1.4](/5.1.4)), we can introduce a scalar function, the electric potential, that describes the electrostatic field equivalently. The potential is a scalar and adds algebraically, which makes it easier to compute than the **electric field strength**; taking the **gradient** of the potential gives the field strength. Combining Gauss's law with $\boldsymbol{E}=-\nabla\varphi$ reduces electrostatics to the **Poisson equation** for the potential, the very equation studied in [2.5.8](/2.5.8). The chapter ends with the electrostatic energy of charge systems and shows that this energy is stored in the electric field. The next chapter, [5.3.3](/5.3.3), uses these tools to treat conductors; in steady currents ([5.3.5](/5.3.5)) the potential generalizes to voltage. Section 2.6 is optional.
@@ -57,7 +57,7 @@ From the definition, $\varphi_1-\varphi_2=\int_{P_1}^{O}\boldsymbol{E}\cdot\math
 
 Some remarks on the potential:
 
-- Relativity: the numerical value of the potential at a point depends on the choice of zero.
+- Relative nature: the numerical value of the potential at a point depends on the choice of zero.
 - Intrinsic nature: the potential is a property of the electric field itself and does not depend on whether, or how much, charge is placed at the point.
 - Relation to mathematics: $-\varphi$ is the **potential function** of the electrostatic field ([Definition 14.4.2](/2.2.14#def-14.4.2)); the sign difference arises for the same reason as for potential energy: physically, "the electrostatic force does positive work" corresponds to "the potential decreases".
 - Notation: in this wiki the potential is written $\varphi$ and the potential difference (voltage) $U$; the phase in vibrations and waves is also written $\varphi$, but the two never occur in the same place.
@@ -271,7 +271,7 @@ This result is used to estimate the Coulomb energy of nuclei: with $Z$ protons u
 
 ### 2.7.1. Energy Stored in the Field
 
-From $W_{\mathrm{e}}=\frac12\int\varphi\,\mathrm{d}q$ it might seem that the electrostatic energy is concentrated where the charge is. But take the uniformly charged spherical surface: the charge is only on the surface, yet $E=0$ inside, and the energy must reside somewhere. In fact, the electrostatic energy is stored in the space occupied by the electric field. In electrostatics both views give the same total energy and cannot be distinguished; for time-varying fields, the field can exist independently of charge and carry energy as it propagates (electromagnetic waves, [5.3.10](/5.3.10)), and only the view that the energy belongs to the field is correct.
+From $W_{\mathrm{e}}=\frac12\int\varphi\,\mathrm{d}q$ it might seem that the electrostatic energy is concentrated where the charge is. But take the uniformly charged spherical surface: the charge is only on the surface and $E=0$ inside, yet, as Example 2.7.1 shows, the energy is distributed over all the space outside it. In fact, the electrostatic energy is stored in the space occupied by the electric field. In electrostatics both views give the same total energy and cannot be distinguished; for time-varying fields, the field can exist independently of charge and carry energy as it propagates (electromagnetic waves, [5.3.10](/5.3.10)), and only the view that the energy belongs to the field is correct.
 
 **Formula 2.7.1 (Energy Density of the Electrostatic Field)** The *energy density of the electric field* in vacuum is
 

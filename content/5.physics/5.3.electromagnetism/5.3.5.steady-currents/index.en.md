@@ -1,7 +1,7 @@
 ---
 title: Steady Currents
 description: Current and current density, the charge continuity equation, steady currents and steady electric fields, Kirchhoff's current law, Ohm's law in integral and differential form and the computation of resistance, electromotive force and thermoelectricity, the Ohm's law of a complete circuit and Kirchhoff's voltage law, joint solution of steady current fields and electrostatic fields, the Drude model and Joule's law, and charging and discharging of RC circuits.
-source_hash: 7881c5be3304
+source_hash: 58aa64f7f6ef
 ---
 
 The previous chapters studied the electric field of stationary charges. Charges in organized motion form a current; a current whose distribution does not change with time is called a steady current, and this is the first step from electrostatics toward electrodynamics. In a steady current the charge distribution is constant, and the electric field it produces still satisfies the two basic theorems of the electrostatic field. Unlike in electrostatics, however, the **electric field strength** inside a **conductor** is not zero: the field does work on the charges and converts energy into heat, and maintaining it requires the non-electrostatic force supplied by a source. This chapter first describes current by the vector field of current density and writes the current continuity equation from the **law of conservation of charge**. It then discusses the relation between current and field strength in a conductor (Ohm's law), the electromotive force of a source and the two laws for circuits (Kirchhoff's laws). Finally it gives a classical microscopic picture of current and discusses the charging and discharging of a **capacitor**, the simplest nonsteady process.
@@ -465,7 +465,7 @@ Energy during charging: the source does work $\int_0^\infty\mathcal{E}i\,\mathrm
 
 1. What force drives the carriers along a wire? When a wire bends, how do the carriers "turn the corner"?
 
-   **Answer** the driving force is the electric field, produced jointly by the two terminals of the source and by the charges on the wire surface. The instant the circuit is closed, charge accumulates on the wire surface (especially at bends) until the field inside the wire points along the wire everywhere; the field of these surface charges makes the carriers turn, while the hand bending the wire acts only as a "constraint".
+   **Answer** the driving force is the electric field, produced jointly by the two terminals of the source and by the charges on the wire surface. The instant the circuit is closed, charge accumulates on the wire surface (especially at bends) until the field inside the wire points along the wire everywhere; the field of these surface charges makes the carriers turn, while the shape of the wire acts only as a "constraint".
 
 2. The drift velocity of electrons in a conductor is only $0.01$–$0.1\,\mathrm{mm\,s^{-1}}$. Why does the bulb light immediately when the switch is pressed, even with a very long wire?
 
