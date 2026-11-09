@@ -1,6 +1,6 @@
 ---
 title: The Divergence Theorem, Stokes' Theorem and Vector Fields
-source_hash: 6889d1247a25
+source_hash: c1b698e49cfe
 ---
 
 Green's theorem in [2.2.13](/2.2.13) relates a double integral over a plane region to a **line integral of a vector field** around its boundary. This chapter extends it to space: the divergence theorem relates a triple integral over a spatial region to a **surface integral of a vector field** over its closed boundary surface, and Stokes' theorem relates a surface integral of a vector field over a surface to a line integral around its boundary curve. The three theorems share a common form, "the integral of a certain derivative over a region equals an integral over its boundary", in direct line of descent from the one-variable **fundamental theorem of calculus**; in modern mathematics they are unified in the general Stokes theorem for differential forms, $\int_M\mathrm{d}\omega=\int_{\partial M}\omega$.
@@ -384,7 +384,7 @@ When the region is not volume-simply-connected, conclusion (2) may fail: the fie
 
 **Definition 14.5.3 (Harmonic Vector Field and Harmonic Function)** A vector field that is both a gradient field and solenoidal is called a **harmonic vector field**. If $\boldsymbol{v}=\nabla f$ is a harmonic field, then $\Delta f=\nabla\cdot\nabla f=0$. A function on a region that has continuous second-order partial derivatives and satisfies the Laplace equation $\Delta f=0$ is called a **harmonic function**.
 
-For example, $\frac1{\sqrt{x^2+y^2+z^2}}$ is harmonic on $\mathbb{R}^3\setminus\{0\}$ (its gradient is exactly $-1$ times the field of Example 14.2.6); in the plane, $x^2-y^2$, $\mathrm{e}^x\sin y$ and $\ln(x^2+y^2)$ are harmonic functions. The electric potential in a charge-free region of an electrostatic field and the temperature in a steady-state temperature field are harmonic functions.
+For example, $\frac1{\sqrt{x^2+y^2+z^2}}$ is harmonic on $\mathbb{R}^3\setminus\{0\}$ (its gradient is exactly $-1$ times the field of Example 14.2.6); in the plane, $x^2-y^2$ and $\mathrm{e}^x\sin y$ are harmonic functions, and so is $\ln(x^2+y^2)$ on $\mathbb{R}^2\setminus\{0\}$. The electric potential in a charge-free region of an electrostatic field and the temperature in a steady-state temperature field are harmonic functions.
 
 **Theorem 14.5.2 (Green's First Identity)** Let $\Omega$ be a bounded closed region with piecewise smooth boundary $\partial\Omega$ and outward normal $\boldsymbol{n}$, and let $f,g$ have continuous second-order partial derivatives on $\Omega$. Then
 

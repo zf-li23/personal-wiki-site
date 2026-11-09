@@ -265,7 +265,7 @@ $$
 $$
 \int_{L_1}\boldsymbol{v}\cdot\mathrm{d}\boldsymbol{l}=\int_0^1x^2\,\mathrm{d}x=\frac13,\quad\int_{L_2}\boldsymbol{v}\cdot\mathrm{d}\boldsymbol{l}=\int_0^1(3x^3-2x^2)\,\mathrm{d}x=\frac1{12},\quad\int_{L_3}\boldsymbol{v}\cdot\mathrm{d}\boldsymbol{l}=\int_0^1(3x^5+x^4-3x^3)\,\mathrm{d}x=-\frac1{20}.
 $$
-The work done by $\boldsymbol{u}$ is the same along all three paths, while that done by $\boldsymbol{v}$ is not. The reason is that $\boldsymbol{u}$ is the **gradient** of the function $x^2y$: $\boldsymbol{u}\cdot\mathrm{d}\boldsymbol{l}=\mathrm{d}(x^2y)$, and the integral equals the difference of the values of $x^2y$ at the terminal and initial points. When a line integral is independent of the path is the subject of the section on conservative fields in [2.2.14](/2.2.14).
+The work done by $\boldsymbol{u}$ is the same along all three paths, while that done by $\boldsymbol{v}$ is not. The reason is that $\boldsymbol{u}$ is the **gradient** of the function $x^2y$: $\boldsymbol{u}\cdot\mathrm{d}\boldsymbol{l}=\mathrm{d}(x^2y)$, and the integral equals the difference of the values of $x^2y$ at the terminal and initial points. The question of when a line integral is independent of the path is the subject of the section on conservative fields in [2.2.14](/2.2.14).
 
 ![Work done by two plane vector fields along three paths from (0,0) to (1,1): for the gradient field on the left it is independent of the path, for the field on the right it depends on the path](./plots/work-path-dependence.py)
 
