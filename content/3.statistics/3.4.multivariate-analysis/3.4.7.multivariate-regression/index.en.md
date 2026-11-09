@@ -224,7 +224,7 @@ $$
 F_C=\frac{(C\hat{\boldsymbol{\beta}}-C\boldsymbol{\beta})^{\mathsf T}\{C(X^{\mathsf T}X)^{-1}C^{\mathsf T}\}^{-1}(C\hat{\boldsymbol{\beta}}-C\boldsymbol{\beta})}{l\,\hat\sigma^2}\sim F_{l,n-p}.
 $$
 
-**Proof** The numerator times $l/\sigma^2$ is a quadratic form $\boldsymbol{Z}^{\mathsf T}\Sigma_Z^{-1}\boldsymbol{Z}$ of a normal vector $\boldsymbol{Z}\sim\mathcal{N}_l(\boldsymbol{0},\Sigma_Z)$, hence $\chi^2_l$; it is a function of $\hat{\boldsymbol{\beta}}$ and so independent of $(n-p)\hat\sigma^2/\sigma^2\sim\chi^2_{n-p}$. The ratio of the two chi-square variables divided by their degrees of freedom is $F_{l,n-p}$. $\square$
+**Proof** The numerator divided by $\sigma^2$ is a quadratic form $\boldsymbol{Z}^{\mathsf T}\Sigma_Z^{-1}\boldsymbol{Z}$ of a normal vector $\boldsymbol{Z}\sim\mathcal{N}_l(\boldsymbol{0},\Sigma_Z)$, hence $\chi^2_l$; it is a function of $\hat{\boldsymbol{\beta}}$ and so independent of $(n-p)\hat\sigma^2/\sigma^2\sim\chi^2_{n-p}$. The ratio of the two chi-square variables divided by their degrees of freedom is $F_{l,n-p}$. $\square$
 
 For example, with $C=\begin{bmatrix}\boldsymbol{0}&I_{p-1}\end{bmatrix}$ we get $C\boldsymbol{\beta}=(\beta_2,\dots,\beta_p)^{\mathsf T}$, and $F_C$ with $C\boldsymbol{\beta}=\boldsymbol{0}$ tests whether any covariate besides the intercept matters. The statistic has the same structure as Hotelling's $T^2$ in [3.4.3](/3.4.3): a squared distance in the metric of the inverse covariance matrix.
 

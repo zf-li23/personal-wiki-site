@@ -266,7 +266,7 @@ The interpretability of the retained components and the purpose of the analysis 
 **Example 5.4.1** Jolicoeur and Mosimann measured the length, width and height of the carapaces (shells) of $24$ female and $24$ male painted turtles. For the male turtles the data are right-skewed, so we first take logarithms. PCA of the covariance matrix of the log-measurements (`prcomp` in R, which returns the square roots of the eigenvalues as `sdev`) gives component standard deviations $0.1527, 0.0245, 0.0190$, so the first component explains $96.05\%$ of the total variance and clearly one component captures essentially all the variation. Its coefficient vector is $(0.683, 0.510, 0.523)^{\mathsf T}$, so very approximately
 
 $$
-\hat y_1 \approx 0.5\big[\log(\text{length}) + \log(\text{width}) + \log(\text{height})\big] = 0.5\log(\text{volume}),
+\hat y_1 \approx 0.58\big[\log(\text{length}) + \log(\text{width}) + \log(\text{height})\big] = 0.58\log(\text{volume}),
 $$
 
 and the first component measures the logarithm of the shell's volume, that is, its overall size.

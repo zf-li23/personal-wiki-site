@@ -1,7 +1,7 @@
 ---
 title: 线性回归模型
 description: 从多元的角度看经典线性回归模型：最小二乘及其作为正交投影的几何，Gauss–Markov 假定与正态假定下的性质、t 与 F 推断和预测区间，以及岭回归、主成分回归与 Lasso 等正则化方法。
-source_hash: 86458a1df6c6
+source_hash: 206a2788b148
 ---
 
 统计与机器学习中的许多问题都在问：响应如何依赖于若干个协变量？例如明年的收入如何依赖于年龄、受教育程度和过去的收入，孩子的身高如何依赖于父母的身高。线性回归模型是最简单而又不平凡的回答。它自然地属于多元统计课程，因为它的一切都是矩阵代数：最小二乘拟合是到**设计矩阵**列空间上的**正交投影**，其分布由 [3.4.2](/3.4.2) 的**多元正态分布**得出，检验一组系数的统计量与 [3.4.3](/3.4.3) 中的 Hotelling $T^2$ 是同一类二次型。本章先建立模型与最小二乘估计，再在三层逐渐加强的假定（无假定、Gauss–Markov 模型、正态误差）下研究它的性质，最后讨论协变量很多的情形：岭回归、主成分回归（建立在 [3.4.5](/3.4.5) 的**主成分分析**之上）和 **Lasso** 以少量偏差换取方差的大幅减小。估计理论与 [3.2.3](/3.2.3) 有重叠，检验与 [3.2.5](/3.2.5) 有重叠；模型诊断、变量选择与一般线性模型在线性回归课程 [3.3](/3.3) 中展开。
@@ -225,7 +225,7 @@ $$
 F_C=\frac{(C\hat{\boldsymbol{\beta}}-C\boldsymbol{\beta})^{\mathsf T}\{C(X^{\mathsf T}X)^{-1}C^{\mathsf T}\}^{-1}(C\hat{\boldsymbol{\beta}}-C\boldsymbol{\beta})}{l\,\hat\sigma^2}\sim F_{l,n-p}.
 $$
 
-**证明** 分子乘以 $l/\sigma^2$ 是正态向量 $\boldsymbol{Z}\sim\mathcal{N}_l(\boldsymbol{0},\Sigma_Z)$ 的二次型 $\boldsymbol{Z}^{\mathsf T}\Sigma_Z^{-1}\boldsymbol{Z}$，故服从 $\chi^2_l$；它是 $\hat{\boldsymbol{\beta}}$ 的函数，因而与 $(n-p)\hat\sigma^2/\sigma^2\sim\chi^2_{n-p}$ 独立。两个卡方变量各除以自由度后的比服从 $F_{l,n-p}$。$\square$
+**证明** 分子除以 $\sigma^2$ 是正态向量 $\boldsymbol{Z}\sim\mathcal{N}_l(\boldsymbol{0},\Sigma_Z)$ 的二次型 $\boldsymbol{Z}^{\mathsf T}\Sigma_Z^{-1}\boldsymbol{Z}$，故服从 $\chi^2_l$；它是 $\hat{\boldsymbol{\beta}}$ 的函数，因而与 $(n-p)\hat\sigma^2/\sigma^2\sim\chi^2_{n-p}$ 独立。两个卡方变量各除以自由度后的比服从 $F_{l,n-p}$。$\square$
 
 例如取 $C=\begin{bmatrix}\boldsymbol{0}&I_{p-1}\end{bmatrix}$，则 $C\boldsymbol{\beta}=(\beta_2,\dots,\beta_p)^{\mathsf T}$，在 $C\boldsymbol{\beta}=\boldsymbol{0}$ 下的 $F_C$ 检验截距以外是否有任何协变量起作用。这个统计量与 [3.4.3](/3.4.3) 中 Hotelling $T^2$ 的结构相同：都是在协方差矩阵之逆所定义的度量下的平方距离。
 
