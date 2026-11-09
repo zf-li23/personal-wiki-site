@@ -1,6 +1,6 @@
 ---
 title: Exact Equations and Integrating Factors
-source_hash: 0dd9af0f84d8
+source_hash: c3b97560a5ac
 ---
 
 The starting point of elementary integration is this: if the left-hand side of a first-order equation in symmetric form $P\,\mathrm{d}x+Q\,\mathrm{d}y=0$ happens to be the total differential of some function, the equation is "integrated" at once. In this chapter we first give a rigorous proof of the necessary and sufficient condition $\partial P/\partial y=\partial Q/\partial x$ for this to happen, together with two integration paths for constructing the potential and the common formulas for recognizing total differentials. We then study integrating factors, which turn a general equation into an exact one: the partial differential equation they satisfy, the necessary and sufficient condition for an integrating factor depending on one variable only, the set of all integrating factors, and the method of finding integrating factors by grouping terms. The separable and first-order linear equations of the next chapter, [2.4.3](/2.4.3), can be viewed as special cases of what is done here. The routine solution steps and more examples are in calculus, [2.2.15](/2.2.15#sec-15.4); here the emphasis is on the theory.
@@ -258,7 +258,7 @@ Taking $g_1(u)=u^{-2}$ makes the left-hand side $\dfrac{1}{x^5y^2}$, and taking 
 $$
 \frac{\mathrm{d}(xy)}{(xy)^2}-\frac{2\,\mathrm{d}x}{x^5}=\mathrm{d}\Big(-\frac{1}{xy}+\frac{1}{2x^4}\Big)=0,
 $$
-with general integral $\dfrac{1}{2x^4}-\dfrac{1}{xy}=C$, that is, $y-2x^3=2Cx^4y$. The integrating factor is undefined on $x=0$ and $y=0$; checking shows that $x=0$ and $y=0$ are also solutions. The solution $y=0$ is not contained in the general integral (no value of $C$ produces it) and must be listed separately.
+with general integral $\dfrac{1}{2x^4}-\dfrac{1}{xy}=C$, that is, $y-2x^3=2Cx^4y$. The integrating factor is undefined on $x=0$ and $y=0$; checking shows that $x=0$ and $y=0$ are also solutions. Neither is contained in the general integral (no finite value of $C$ produces them), so they must be listed separately.
 
 ## Summary
 
