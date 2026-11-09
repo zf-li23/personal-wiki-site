@@ -471,7 +471,7 @@ ORDER BY symbol"""))
 └─────────┴───────────────┴───────────────┴──────────────┴──────────────┘
 ```
 
-The treatment induces the p53 targets CDKN1A and MDM2 in both tissues while TP53 itself changes little, the pattern expected of a DNA-damaging drug. The query reads only the three columns it needs from the file and evaluates the `IN` condition on the column `symbol`; for files in object storage, DuckDB fetches only the needed byte ranges over HTTP.
+The treatment induces the p53 targets CDKN1A and MDM2 in both tissues while TP53 itself changes little, the pattern expected of a DNA-damaging drug. The query reads only the four columns it needs from the file and evaluates the `IN` condition on the column `symbol`; for files in object storage, DuckDB fetches only the needed byte ranges over HTTP.
 
 ## 12.8. Vector Search
 
@@ -494,7 +494,7 @@ CREATE INDEX ON protein USING hnsw (embedding vector_cosine_ops);
 SELECT id, name FROM protein ORDER BY embedding <=> $1 LIMIT 10;
 ```
 
-Expression profiles are vectors too. In the running example, the profile of a gene is its vector of $\log_2(\mathrm{TPM} + 1)$ values across the six samples; centred on its mean, the cosine similarity of two profiles is their Pearson correlation, the standard measure of co-expression. DuckDB stores such vectors in fixed-size arrays and computes the similarity directly (exact search; its `vss` extension adds HNSW indexes):
+Expression profiles are vectors too. In the running example, the profile of a gene is its vector of $\log_2(\mathrm{TPM} + 1)$ values across the six samples; centered on its mean, the cosine similarity of two profiles is their Pearson correlation, the standard measure of co-expression. DuckDB stores such vectors in fixed-size arrays and computes the similarity directly (exact search; its `vss` extension adds HNSW indexes):
 
 ```python
 import duckdb
@@ -538,7 +538,7 @@ ORDER BY similarity DESC"""))
 └─────────┴────────────┘
 ```
 
-EGFR is missing because it has no measurement in sample `S05`. MDM2, like CDKN1A a transcriptional target of p53, has an almost identical profile, a typical result of a co-expression search, here on invented values; the housekeeping genes GAPDH and ACTB, which mainly differ between tissues, are less similar.
+EGFR is missing because it has no measurement in samples `S05` and `S06`. MDM2, like CDKN1A a transcriptional target of p53, has an almost identical profile, a typical result of a co-expression search, here on invented values; the housekeeping genes GAPDH and ACTB, which mainly differ between tissues, are less similar.
 
 ## 12.9. Databases in Data Analysis and Bioinformatics
 

@@ -18,7 +18,7 @@ For the theory we abstract a **database** as a set of named *data items* $A, B, 
 1. **Atomicity**: either all operations of the **transaction** are reflected in the database or none are.
 2. **Consistency**: executed alone on a consistent database (one that satisfies the **integrity constraints** and the application's invariants), the transaction leaves the database consistent.
 3. **Isolation**: although transactions may run concurrently, each transaction is unaware of the others; for every pair $T_i, T_j$ it appears to $T_i$ that $T_j$ finished before $T_i$ started or started after $T_i$ finished.
-4. **Durability**: once a transaction has committed, its changes persist, even if the system fails afterwards.
+4. **Durability**: once a transaction has committed, its changes persist, even if the system fails afterward.
 
 **Consistency** is largely the responsibility of the programmer, who writes transactions that preserve the invariants, assisted by the integrity constraints the **DBMS** checks ([4.13.6](/4.13.6)). **Atomicity** and durability are provided by the *recovery system* (§10.4–§10.7), isolation by *concurrency control* ([4.13.11](/4.13.11)).
 
@@ -172,7 +172,7 @@ The inclusions are strict: $W_1(A), W_2(A), C_1, C_2$ is cascadeless but not str
 | System crash | power failure, operating-system or DBMS crash | main memory (buffer pool, in-memory state); persistent storage survives | recovery from the log at restart |
 | Media failure | disk failure, corrupted device | part of persistent storage | restore a backup and replay the archived log; replication |
 
-The recovery system assumes *fail-stop* behaviour: a crash halts the system without corrupting persistent storage. Partial writes of a **page** (a *torn page*) do happen, and systems detect them with page checksums and repair them from a full-page image in the log (PostgreSQL's `full_page_writes`) or from a second copy (InnoDB's doublewrite buffer).
+The recovery system assumes *fail-stop* behavior: a crash halts the system without corrupting persistent storage. Partial writes of a **page** (a *torn page*) do happen, and systems detect them with page checksums and repair them from a full-page image in the log (PostgreSQL's `full_page_writes`) or from a second copy (InnoDB's doublewrite buffer).
 
 ### 10.4.2. Stable Storage and Buffer Policies
 
@@ -214,7 +214,7 @@ The first rule makes **steal** safe: whatever uncommitted value reaches the disk
 ### 10.5.2. Undo, Redo and Rollback
 
 - $\operatorname{redo}(\langle T_i, X, V_1, V_2 \rangle)$ sets $X$ to $V_2$; $\operatorname{undo}$ sets $X$ to $V_1$. Both write *values*, not differences, so applying them twice has the same effect as applying them once: they are idempotent, which matters if the system crashes during recovery.
-- A *rollback* of $T_i$ during normal operation scans the log backwards; for each update record $\langle T_i, X, V_1, V_2 \rangle$ it restores $X := V_1$ and logs a redo-only record $\langle T_i, X, V_1 \rangle$; at $\langle T_i\ \mathrm{start} \rangle$ it logs $\langle T_i\ \mathrm{abort} \rangle$. Logging the undo actions turns **rollback** itself into ordinary history that can be repeated by redo.
+- A *rollback* of $T_i$ during normal operation scans the log backward; for each update record $\langle T_i, X, V_1, V_2 \rangle$ it restores $X := V_1$ and logs a redo-only record $\langle T_i, X, V_1 \rangle$; at $\langle T_i\ \mathrm{start} \rangle$ it logs $\langle T_i\ \mathrm{abort} \rangle$. Logging the undo actions turns **rollback** itself into ordinary history that can be repeated by redo.
 
 ### 10.5.3. Checkpoints
 
@@ -273,7 +273,7 @@ flowchart LR
     L12 --> X{{crash}}
 ```
 
-At the checkpoint all dirty pages were flushed, so the disk then held $A = 950$, $B = 2050$ (an uncommitted value, written under the steal policy), $C = 700$, $D = 50$. Afterwards each of the pages of $A$, $C$ and $D$ may or may not have been written back. The simulation runs Algorithm 10.5.1 on one possible disk state with a trace, and then on all eight, checking that recovering a second time from the extended log changes nothing.
+At the checkpoint all dirty pages were flushed, so the disk then held $A = 950$, $B = 2050$ (an uncommitted value, written under the steal policy), $C = 700$, $D = 50$. Afterward each of the pages of $A$, $C$ and $D$ may or may not have been written back. The simulation runs Algorithm 10.5.1 on one possible disk state with a trace, and then on all eight, checking that recovering a second time from the extended log changes nothing.
 
 ```python
 from itertools import product
@@ -367,7 +367,7 @@ after recovery: {'A': 950, 'B': 2000, 'C': 600, 'D': 50}
 8 possible disk states, distinct outcomes: {(('A', 950), ('B', 2000), ('C', 600), ('D', 50))}
 ```
 
-The redo phase starts after the checkpoint and repeats the updates of all transactions, the losers' included. The undo list $\{T_2, T_4\}$ consists of $T_2$ from the checkpoint record and $T_4$, which started later and never committed, while $T_3$ was added and removed again. The undo phase crosses the checkpoint backwards to reach $T_2$'s update of $B$ at **LSN** 4, which is why the checkpoint must record the active transactions. The result reflects $T_1$ ($A = 950$) and $T_3$ ($C = 600$) and nothing of $T_2$ and $T_4$, for every possible disk state, as Theorem 10.5.1 asserts.
+The redo phase starts after the checkpoint and repeats the updates of all transactions, the losers' included. The undo list $\{T_2, T_4\}$ consists of $T_2$ from the checkpoint record and $T_4$, which started later and never committed, while $T_3$ was added and removed again. The undo phase crosses the checkpoint backward to reach $T_2$'s update of $B$ at **LSN** 4, which is why the checkpoint must record the active transactions. The result reflects $T_1$ ($A = 950$) and $T_3$ ($C = 600$) and nothing of $T_2$ and $T_4$, for every possible disk state, as Theorem 10.5.1 asserts.
 
 ## 10.6. ARIES
 
