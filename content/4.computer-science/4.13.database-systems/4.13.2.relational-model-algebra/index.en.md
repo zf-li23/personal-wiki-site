@@ -217,7 +217,7 @@ where the constant relation has one tuple on $S - R$. In SQL these are the **lef
 
 ### 2.3.4. Writing Queries in the Algebra
 
-An algebra expression is a tree whose leaves are relations and whose inner nodes are operations, evaluated from the leaves up; this tree is also the form in which a **database system** represents a query plan ([4.13.9](/4.13.9)). A query is usually developed backwards from the result: which attributes are wanted, which relations contain them, how the relations are connected, and which conditions restrict them.
+An algebra expression is a tree whose leaves are relations and whose inner nodes are operations, evaluated from the leaves up; this tree is also the form in which a **database system** represents a query plan ([4.13.9](/4.13.9)). A query is usually developed backward from the result: which attributes are wanted, which relations contain them, how the relations are connected, and which conditions restrict them.
 
 **Example 2.3.6** "Names of the pathways containing a gene with more than 100 TPM in some lung sample." The answer attribute $\mathit{name}$ is in $\mathit{pathway}$; the TPM values are in $\mathit{measurement}$, the tissue in $\mathit{sample}$, and $\mathit{gene\_pathway}$ connects measurements (through $\mathit{gene\_id}$) with pathways. All connections are on equally named attributes, so natural joins suffice:
 

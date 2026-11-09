@@ -47,7 +47,7 @@ The subquery refers to `g`, a table of the outer query.
 
 **Definition 4.1.2 (Correlated Subquery)** A subquery is **correlated** if it refers to columns of an enclosing query. Its meaning is that it is evaluated once for each row of the enclosing query, with the outer columns fixed to the values in that row.
 
-The most recently collected sample of each tissue compares each sample with the maximum date of its own tissue:
+The most recently collected sample of each tissue is found by comparing each sample with the maximum date of its own tissue:
 
 ```sql
 SELECT sample_id, tissue, collected_on FROM sample AS s

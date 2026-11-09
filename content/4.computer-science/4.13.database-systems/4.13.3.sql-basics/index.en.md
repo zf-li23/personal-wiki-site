@@ -595,7 +595,7 @@ ORDER BY p.name, g.symbol;
 
 SQLite sorts strings by their bytes, so lower-case `p53-...` comes after the capitalized names, and it places nulls first in ascending order; PostgreSQL sorts under the **database**'s collation (typically case-insensitive at the first level) and places nulls last (§3.5). `RIGHT JOIN` and `FULL JOIN` are available in SQLite since version 3.39; MySQL has no `FULL JOIN`.
 
-The placement of a condition matters in an outer join. A condition in `ON` decides which rows are partners; a condition in `WHERE` filters the joined result afterwards, and a `WHERE` condition on the right table rejects the null-extended rows, turning the outer join back into an inner join:
+The placement of a condition matters in an outer join. A condition in `ON` decides which rows are partners; a condition in `WHERE` filters the joined result afterward, and a `WHERE` condition on the right table rejects the null-extended rows, turning the outer join back into an inner join:
 
 ```sql
 -- Every gene, with PW3 if the gene belongs to it
