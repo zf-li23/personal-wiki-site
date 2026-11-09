@@ -1,11 +1,11 @@
 ---
 title: Rate Laws and Composite Reactions
-source_hash: 541df423e5e4
+source_hash: 7e62dd349793
 ---
 
 [6.1.7](/6.1.7) gave the framework of chemical kinetics: the **rate of reaction**, the **rate law**, the **elementary reaction** and the **reaction mechanism**, the integrated forms for first- and second-order reactions, the **Arrhenius equation** and the **pre-equilibrium approximation**. This chapter makes that framework systematic and quantitative. A reaction mechanism is a set of ordinary differential equations for the concentrations of the species, and the "phenomenological" part of chemical kinetics comes down to solving, or approximately solving, these equations ([2.4](/2.4)). The integrated forms for simple reactions of integer order (15.2) and the determination of the order from experimental data (15.3) are the simplest cases. The three typical kinds of composite reactions, opposing, parallel and consecutive (15.4), lead to linear systems that can be treated uniformly with the **matrix exponential**. The influence of temperature and the **principle of microscopic reversibility** (15.5) connect kinetics with the chemical equilibrium of [6.3.7](/6.3.7). When the equations are nonlinear and have no analytical solution, the rate-determining step, the **steady-state approximation** and the pre-equilibrium approximation (15.6) use the disparity of time scales to eliminate intermediates; these are the main tools of mechanism derivation (15.7 chain reactions, 15.8 proposing a mechanism). Finally, the relaxation methods for fast reactions (15.9) are a direct application of linearization near the equilibrium point.
 
-The next chapter ([6.3.16](/6.3.16)) calculates rate constants from molecular properties, [6.3.17](/6.3.17) discusses the effects of solvents, light and catalysts, and the chemical oscillations and dissipative structures of [6.3.18](/6.3.18) are built on the nonlinear rate equations of this chapter. We use the notation of this book: the rate of reaction is $v$ (many textbooks write $r$), the rate constant is $k$, the rate constant of the reverse reaction is always written $k_{-1}$, and $[\ce{B}]$ and $c_{\mathrm{B}}$ both denote concentration.
+The next chapter ([6.3.16](/6.3.16)) calculates rate constants from molecular properties, [6.3.17](/6.3.17) discusses the effects of solvents, light and catalysts, and the chemical oscillations and dissipative structures of [6.3.18](/6.3.18) are built on the nonlinear rate equations of this chapter. We use the notation of this site: the rate of reaction is $v$ (many textbooks write $r$), the rate constant is $k$, the rate constant of the reverse reaction is always written $k_{-1}$, and $[\ce{B}]$ and $c_{\mathrm{B}}$ both denote concentration.
 
 ## 15.1. Basic Concepts
 
@@ -118,7 +118,7 @@ In concentration units, $k_c = k_pRT = 9.83 \times 10^{-8} \times 8.314 \times 1
 $$
 E_{\mathrm{a}} \approx R\,\frac{\ln(k_2/k_1)}{1/T_1 - 1/T_2} = 8.314 \times \frac{\ln(9.83/1.67)}{1/970 - 1/1030}\,\mathrm{J\,mol^{-1}} = 245\,\mathrm{kJ\,mol^{-1}},
 $$
-in agreement with the activation energy of the uncatalyzed decomposition of $\ce{N2O}$ in the table of [6.1.7](/6.1.7#sec-7.3.4) (calculating from $k_c$ adds about $RT \approx 8\,\mathrm{kJ\,mol^{-1}}$, within the precision of the data).
+in agreement with the activation energy of the uncatalyzed decomposition of $\ce{N2O}$ in the table of [6.1.7](/6.1.7#sec-7.3.4) (calculating from $k_c$ gives a value larger by about $RT \approx 8\,\mathrm{kJ\,mol^{-1}}$, within the precision of the data).
 
 (3) When the partial pressure of $\ce{N2O}$ consumed is $y$, $y$ of $\ce{N2}$ and $y/2$ of $\ce{O2}$ are formed, and the total pressure is $p = p_0 + y/2$. At $p = 64.0\,\mathrm{kPa}$, $y = 21.4\,\mathrm{kPa}$ and $p_{\ce{N2O}} = 31.9\,\mathrm{kPa}$. From the integrated second-order law,
 
