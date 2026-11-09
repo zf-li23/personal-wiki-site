@@ -1,7 +1,7 @@
 ---
 title: Arrays and Searching
 description: Definition, initialization, memory layout and out-of-bounds access of arrays; arrays as function parameters; std::array, std::vector and Python's list; the sieve of Eratosthenes; linear search and binary search, the loop invariant of binary search, midpoint overflow, and lower_bound / bisect.
-source_hash: 51dcacc965f2
+source_hash: acbdf96a8371
 ---
 
 So far every piece of data in a program has had its own variable name. Handling the scores of 7 judges might still be done with 7 variables, but handling 1000 numbers cannot, to say nothing of the case where the number of data items is known only at run time. An array stores a batch of data of the same type contiguously in memory and accesses any one of them by "name + index"; the index can be a variable, so a loop can process all the data one by one. This chapter introduces C++ arrays and `std::vector` and Python lists, together with two classical algorithms based on arrays: the sieve for finding primes, and linear search and binary search for finding a value in data. The next chapter [4.1.7](/4.1.7) discusses character arrays (strings), two-dimensional arrays and sorting; the relation between arrays and pointers is in [4.1.8](/4.1.8); the implementation of vectors (dynamic resizing and amortized analysis) and more searching algorithms are in [4.3.2](/4.3.2); NumPy's multidimensional arrays are in [4.4.2](/4.4.2).

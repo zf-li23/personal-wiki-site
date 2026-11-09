@@ -223,7 +223,7 @@ Several features deserve comment.
 - The hierarchical model has $8$ group parameters plus $\mu$ and $\tau$, yet its effective number of parameters is between $1.0$ and $2.8$, because the posterior of $\tau$ is concentrated near small values and the $\theta_j$ are strongly pooled (Example 8.3.1). AIC cannot handle it at all.
 - LOO-CV is not available for no pooling: with a flat prior on each $\theta_j$, the posterior given the other seven schools says nothing about the left-out school, and its predictive distribution is improper.
 
-The differences between complete pooling and the hierarchical model are well under $2$ on the deviance scale: with only eight data points, the data cannot distinguish them by predictive accuracy, which is consistent with the posterior of $\tau$ having much of its mass near $0$. The hierarchical model is still the natural choice, since it contains both extremes and lets the data determine the amount of pooling; the criteria confirm that the extra flexibility costs little.
+The differences between complete pooling and the hierarchical model are less than $2$ on the deviance scale: with only eight data points, the data cannot distinguish them by predictive accuracy, which is consistent with the posterior of $\tau$ having much of its mass near $0$. The hierarchical model is still the natural choice, since it contains both extremes and lets the data determine the amount of pooling; the criteria confirm that the extra flexibility costs little.
 
 ## 8.7. Bayesian Information Criterion
 

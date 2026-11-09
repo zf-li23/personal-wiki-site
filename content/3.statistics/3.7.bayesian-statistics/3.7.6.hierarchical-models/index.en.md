@@ -363,7 +363,7 @@ Averaging over $\tau$ gives the marginal posterior of each school effect. Quanti
 |---|---|---|---|---|---|---|---|
 | A | 28 | 15 | $-2$ | 6 | 10 | 16 | 32 |
 | B | 8 | 10 | $-5$ | 4 | 8 | 12 | 21 |
-| C | $-3$ | 16 | $-11$ | 2 | 7 | 11 | 21 |
+| C | $-3$ | 16 | $-11$ | 2 | 7 | 11 | 20 |
 | D | 7 | 11 | $-6$ | 4 | 8 | 12 | 21 |
 | E | $-1$ | 9 | $-9$ | 1 | 6 | 9 | 16 |
 | F | 1 | 11 | $-9$ | 2 | 7 | 10 | 19 |
@@ -379,7 +379,7 @@ Predictions fit into the simulations already done, in the two situations of §6.
 1. *A new observation $\tilde y$ from a school $j$ already observed* (for example the estimated effect in a repetition of the study at school $j$, with standard error $\sigma_j$): for each draw $k$, sample $\tilde y_j^k\sim\mathcal{N}(\theta_j^k,\sigma_j^2)$. If $m$ observations are needed, draw $m$ values from the same distribution.
 2. *An observation from a new school $\tilde j$*: for each draw $k$, first sample the new school's effect from the population distribution, $\theta_{\tilde j}^k\sim\mathcal{N}(\mu^k,(\tau^k)^2)$, a draw from the prior for $\theta$ given the hyperparameters, not from the posterior of any existing $\theta_j$; then sample $\tilde y_{\tilde j}^k\sim\mathcal{N}(\theta_{\tilde j}^k,\tilde\sigma^2)$, and similarly for $m$ observations.
 
-The key difference is whether a new $\theta$ must be drawn or an existing one can be used. The second situation leads to more variable predictions, because there is less information about the corresponding $\theta$: the $95\%$ predictive interval for the effect $\theta_{\tilde j}$ of a new school is about $[-12,29]$, wider than the posterior interval for any existing school except A, and adding sampling error with $\tilde\sigma=10$ widens it to about $[-20,36]$.
+The key difference is whether a new $\theta$ must be drawn or an existing one can be used. The second situation leads to more variable predictions, because there is less information about the corresponding $\theta$: the $95\%$ predictive interval for the effect $\theta_{\tilde j}$ of a new school is about $[-12,29]$, wider than the posterior interval for any existing school (A's is the widest, about $34$ units against $41$), and adding sampling error with $\tilde\sigma=10$ widens it to about $[-20,36]$.
 
 ## Summary
 
