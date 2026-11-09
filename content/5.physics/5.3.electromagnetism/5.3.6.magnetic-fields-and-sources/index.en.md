@@ -1,7 +1,7 @@
 ---
 title: Magnetic Fields and Their Sources
 description: The connection between magnetic phenomena and moving charges, the Lorentz force and the magnetic flux density, magnetic field lines, magnetic flux and Gauss's law for magnetism, the Biot–Savart law and its applications (straight wires, current loops and magnetic dipoles, Helmholtz coils, solenoids, moving charges), Ampère's circuital law and its applications, polar and axial vectors, displacement current and the Ampère–Maxwell law.
-source_hash: 43cf711d654f
+source_hash: 3060202f12b8
 ---
 
 The previous five chapters studied the electric fields of static charges and **steady currents**. This chapter turns to another effect of electric current, the magnetic field. In 1820 Ørsted discovered that an electric current deflects a compass needle, and within half a year it was recognized that all magnetic phenomena originate in the motion of electric charges: a magnetic field is produced by moving charges (currents) and exerts forces only on moving charges. The basic quantity describing a magnetic field is the magnetic flux density $\boldsymbol{B}$, which is defined through the Lorentz force on a moving charge; the law by which currents produce magnetic fields is the Biot–Savart law. From it follow the two fundamental theorems of the magnetic field, which are exactly "complementary" to the two fundamental theorems of the electrostatic field ([5.3.1](/5.3.1), [5.3.2](/5.3.2)):
@@ -117,7 +117,7 @@ $$
 \boldsymbol{B} = \frac{\mu_0}{4\pi}\int_L\frac{I\,\mathrm{d}\boldsymbol{l}\times\boldsymbol{e}_r}{r^2} .
 $$
 
-**Remark** Before the 2019 revision of the SI, the ampere was defined through the force between parallel wires, and $\mu_0 = 4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ was exact. After the revision the **elementary charge** $e$ is fixed instead and $\mu_0$ becomes an experimentally determined quantity, $\mu_0 = 1.256\,637\,061\,27(20)\times10^{-6}\,\mathrm{N\,A^{-2}}$, which differs from $4\pi\times10^{-7}$ only in the tenth significant digit, so $4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ may still be used in calculations. The relation $\varepsilon_0\mu_0 = 1/c^2$ still holds exactly.
+**Remark** Before the 2019 revision of the SI, the ampere was defined through the force between parallel wires, and $\mu_0 = 4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ was exact. After the revision the **elementary charge** $e$ is fixed instead and $\mu_0$ becomes an experimentally determined quantity, $\mu_0 = 1.256\,637\,061\,27(20)\times10^{-6}\,\mathrm{N\,A^{-2}}$, which differs from $4\pi\times10^{-7}$ only in the eleventh significant digit, so $4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ may still be used in calculations. The relation $\varepsilon_0\mu_0 = 1/c^2$ still holds exactly.
 
 ### 6.3.1. Ampère's Law and Newton's Third Law
 

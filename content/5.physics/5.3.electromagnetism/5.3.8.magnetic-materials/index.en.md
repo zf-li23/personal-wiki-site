@@ -1,7 +1,7 @@
 ---
 title: Magnetic Materials in Magnetic Fields
 description: Paramagnetic, diamagnetic and ferromagnetic substances; orbital, spin and nuclear magnetic moments, Larmor precession and diamagnetism; magnetization and magnetization current; the magnetic field strength H, its circulation theorem, boundary conditions and magnetic shielding; magnetic domains, magnetization curves, hysteresis loops and the Curie temperature; simple magnetic circuits.
-source_hash: d9469a7ddd14
+source_hash: 34917b0a9b76
 ---
 
 The preceding chapters dealt with magnetic fields in vacuum. Real magnetic fields always involve matter, and any substance is magnetized in a magnetic field and in turn modifies the field; from this point of view all substances are called magnetic materials. The structure of this chapter runs completely parallel to that of the **dielectrics** in [5.3.4](/5.3.4): we first explain microscopically why matter is magnetized (the magnetic moments of atoms, corresponding to the **electric dipole moments** of molecules), then use the magnetization to describe the degree of magnetization and the magnetization current to describe the contribution of magnetization to the field (corresponding to the **electric polarization** and the **bound charge**), and finally introduce the auxiliary quantity, the magnetic field strength $\boldsymbol{H}$, so that only conduction currents, which can be controlled, appear in the circulation theorem (corresponding to the **electric displacement field** $\boldsymbol{D}$). What differs from dielectrics is the ferromagnetic substance: its magnetization can make the field thousands of times stronger than the applied field, and it depends on the history of magnetization; this is the basis of electromagnets, transformers and permanent magnets. Magnetism is in the end a quantum phenomenon; the classical picture in this chapter is only a usable model, and the quantum theory of electron spin and atomic magnetic moments is given in [5.5.4](/5.5.4). Section 8.6 is optional.
@@ -122,7 +122,7 @@ For a paramagnetic substance $\boldsymbol{M}$ is parallel to $\boldsymbol{B}$, f
 
 ### 8.3.2. Magnetization Current
 
-In a magnetized medium, the ordered arrangement of the molecular currents appears macroscopically as an equivalent current distribution, called the *magnetization current* (also the bound current). As far as producing a magnetic field and being acted on by one are concerned, the magnetization current is completely equivalent to a conduction current; the difference is that it involves no macroscopic motion of charge and produces no Joule heat. Inside a uniformly magnetized medium neighboring molecular currents cancel and only an uncancelled part remains on the surface; when the magnetization is nonuniform there is also magnetization current inside the medium.
+In a magnetized medium, the ordered arrangement of the molecular currents appears macroscopically as an equivalent current distribution, called the *magnetization current* (also the bound current). As far as producing a magnetic field and being acted on by one are concerned, the magnetization current is completely equivalent to a conduction current; the difference is that it involves no macroscopic motion of charge and produces no Joule heat. Inside a uniformly magnetized medium neighboring molecular currents cancel and only an uncanceled part remains on the surface; when the magnetization is nonuniform there is also magnetization current inside the medium.
 
 We now find the relation between the magnetization current and the magnetization. Take an arbitrary closed path $L$ in the medium and find the magnetization current $I'$ linked with it. Let each molecular current be $i$ with area $S_{\mathrm{mol}}$, magnetic moment $\boldsymbol{m}_{\mathrm{mol}}=iS_{\mathrm{mol}}\boldsymbol{e}_{\mathrm{n}}$, and let the number density of molecules be $n$. Only the molecular currents "threaded" by $L$ are linked once with $L$, and they contribute to $I'$; molecular currents that are not threaded either do not meet $L$ or pass twice through a surface bounded by $L$, and contribute nothing. The centers of the molecular currents threaded by a line element $\mathrm{d}\boldsymbol{l}$ lie in an oblique cylinder with base $S_{\mathrm{mol}}$ and axis $\mathrm{d}\boldsymbol{l}$, of volume $S_{\mathrm{mol}}\,\mathrm{d}l\cos\theta$ ($\theta$ is the angle between $\boldsymbol{e}_{\mathrm{n}}$ and $\mathrm{d}\boldsymbol{l}$), so
 
@@ -159,7 +159,7 @@ Here the magnetization current is completely equivalent to the medium.
 
 ### 8.4.1. The Magnetic Field Strength
 
-In the presence of a medium the magnetic field is still produced by all currents (the conduction current $I_0$ and the magnetization current $I'$), so the **divergence theorem** for the magnetic field (**Gauss's law for magnetism**) and the circuital law still hold:
+In the presence of a medium the magnetic field is still produced by all currents (the conduction current $I_0$ and the magnetization current $I'$), so **Gauss's law for magnetism** (the continuity of magnetic flux) and the circuital law still hold:
 
 $$
 \oiint_S\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=0,\qquad \oint_L\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l}=\mu_0\big(I_{0,\mathrm{enc}}+I'_{\mathrm{enc}}\big).

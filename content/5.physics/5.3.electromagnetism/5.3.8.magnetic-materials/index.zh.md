@@ -158,7 +158,7 @@ $$
 
 ### 8.4.1. 磁场强度
 
-有介质时，磁场仍由全部电流（传导电流 $I_0$ 与磁化电流 $I'$）产生，所以磁场的 **Gauss 定理**（**磁通连续定理**）与环路定理照样成立：
+有介质时，磁场仍由全部电流（传导电流 $I_0$ 与磁化电流 $I'$）产生，所以磁场的 Gauss 定理（**磁通连续定理**）与环路定理照样成立：
 
 $$
 \oiint_S\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{S}=0,\qquad \oint_L\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l}=\mu_0\big(I_{0,\mathrm{enc}}+I'_{\mathrm{enc}}\big).

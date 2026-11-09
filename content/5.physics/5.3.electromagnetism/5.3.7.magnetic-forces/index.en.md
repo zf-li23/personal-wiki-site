@@ -1,7 +1,7 @@
 ---
 title: Magnetic Forces
 description: Cyclotron and helical motion of charged particles in magnetic fields and magnetic confinement, the relativity of electric and magnetic fields, the Hall effect and the quantum Hall effect, the Ampère force on a current-carrying wire and the definition of the ampere, the magnetic moment of a current loop and the torque and potential energy in a magnetic field.
-source_hash: c77f3eb17a23
+source_hash: 564564dbd397
 ---
 
 The previous chapter ([5.3.6](/5.3.6)) discussed how a magnetic field is produced by currents; this chapter discusses how a magnetic field acts on moving charges and currents. There is only one basic law: a charge $q$ with velocity $\boldsymbol{v}$ experiences the **Lorentz force** $q\boldsymbol{v}\times\boldsymbol{B}$. Starting from it, this chapter discusses in turn the motion of a single charged particle (cyclotrons, mass spectrometers, magnetic confinement), two macroscopic manifestations of the force on the many charge carriers in a **conductor** (the Hall effect and the Ampère force on a current-carrying wire), and the torque on a current-carrying coil. A section in the middle uses special relativity ([5.1.8](/5.1.8)) to show that the magnetic and electric forces are manifestations of one interaction in different reference frames. The magnetic moment introduced here is the starting point for understanding the magnetism of matter in the next chapter ([5.3.8](/5.3.8)); the calculation of torque and energy runs completely parallel to that of an **electric dipole** in an electric field ([5.3.2](/5.3.2)).
@@ -22,7 +22,7 @@ Let a particle enter a uniform magnetic field with velocity $\boldsymbol{v}\perp
 $$
 R=\frac{mv}{qB}=\frac{p}{qB},\qquad T=\frac{2\pi R}{v}=\frac{2\pi m}{qB},\qquad \omega_{\mathrm{c}}=\frac{qB}{m}.
 $$
-$\omega_{\mathrm{c}}$ is called the *cyclotron frequency*. The essential point is that the period is independent of the speed and the radius: fast particles travel on large circles and slow particles on small circles, but one revolution takes the same time. Viewed along the direction of $\boldsymbol{B}$, a positive charge circles clockwise and a negative charge counterclockwise.
+$\omega_{\mathrm{c}}$ is called the *cyclotron frequency*. The essential point is that the period is independent of the speed and the radius: fast particles travel on large circles and slow particles on small circles, but one revolution takes the same time. Viewed with $\boldsymbol{B}$ pointing toward the observer, a positive charge circles clockwise and a negative charge counterclockwise.
 
 For fast particles the radius formula $R=p/(qB)$ still holds, but $p$ must be the **relativistic momentum** $p=\gamma mv$ ([5.1.8](/5.1.8#sec-8.7)); the cyclotron frequency becomes $\omega=qB/(\gamma m)$ and decreases as the energy increases. A practical formula often used in high-energy physics is $pc\,[\mathrm{GeV}]\approx0.3\,B\,[\mathrm{T}]\,R\,[\mathrm{m}]$ ($q=e$): measuring the radius of curvature of a track gives the momentum of the particle.
 

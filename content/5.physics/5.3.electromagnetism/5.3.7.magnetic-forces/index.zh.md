@@ -21,7 +21,7 @@ $$
 $$
 R=\frac{mv}{qB}=\frac{p}{qB},\qquad T=\frac{2\pi R}{v}=\frac{2\pi m}{qB},\qquad \omega_{\mathrm{c}}=\frac{qB}{m}.
 $$
-$\omega_{\mathrm{c}}$ 称为回旋频率（cyclotron frequency）。它的要点是：周期与速率、半径无关，快的粒子走大圆，慢的粒子走小圆，转一圈的时间相同。从 $\boldsymbol{B}$ 的方向看去，正电荷沿顺时针方向回旋，负电荷沿逆时针方向回旋。
+$\omega_{\mathrm{c}}$ 称为回旋频率（cyclotron frequency）。它的要点是：周期与速率、半径无关，快的粒子走大圆，慢的粒子走小圆，转一圈的时间相同。使 $\boldsymbol{B}$ 指向观察者，则正电荷沿顺时针方向回旋，负电荷沿逆时针方向回旋。
 
 高速粒子的半径公式 $R=p/(qB)$ 仍然成立，只是 $p$ 要用**相对论动量** $p=\gamma mv$（[5.1.8](/5.1.8#sec-8.7)）；回旋频率则变为 $\omega=qB/(\gamma m)$，随能量增大而减小。高能物理中常用的实用公式是 $pc\,[\mathrm{GeV}]\approx0.3\,B\,[\mathrm{T}]\,R\,[\mathrm{m}]$（$q=e$），测量径迹的曲率半径就能求出粒子的动量。
 

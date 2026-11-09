@@ -1,7 +1,7 @@
 ---
 title: Electromagnetic Induction
 description: Faraday's law of induction and Lenz's law, flux linkage and induced charge; motional emf and the Lorentz force; the induced electric field, eddy currents, the betatron and the skin effect; mutual inductance, self-inductance and RL circuits; magnetic field energy and energy density; superconductivity and the Meissner effect.
-source_hash: 8ab502e80342
+source_hash: 5f1f3126b45f
 ---
 
 After Ørsted discovered that an electric current produces a magnetic field, it was natural to ask about the inverse effect: can a magnetic field produce a current? After nearly a decade of searching, Faraday discovered electromagnetic induction in 1831: a steady magnetic field produces no current, but a changing magnetic flux does. Electromagnetic induction truly ties the electric and magnetic fields together, and it is the principle of generators, transformers, inductors and wireless charging. This chapter first gives Faraday's law and Lenz's law, which determines the direction, and then analyzes two mechanisms of the induced **electromotive force**: when a **conductor** moves in a magnetic field, the **non-electrostatic force** is the **Lorentz force** (motional emf, [5.3.7](/5.3.7)); when the conductor is at rest and the magnetic field changes, the non-electrostatic force comes from the induced electric field that the changing magnetic field excites in space. The latter is the first of Maxwell's equations ([5.3.10](/5.3.10)). Next we discuss induction in a circuit by itself and between circuits (self-inductance and mutual inductance), from which the energy of the magnetic field is derived; RL circuits and LC circuits correspond to first-order and second-order linear differential equations with constant coefficients, respectively ([2.4](/2.4)). Finally we give a brief introduction to superconductivity; Section 9.7 is optional.
@@ -140,7 +140,7 @@ The minus sign means that the induced electric field circulates opposite to the 
 
 When a bulk conductor is in a changing magnetic field, the induced electric field drives closed induced currents inside the conductor, called *eddy currents*. The resistance of a bulk conductor is small, so eddy currents can be large.
 
-- Heating: in a cylindrical conductor, if the magnetic field varies uniformly along the axis, the induced electric field at radius $r$ is $E\propto r$ and the heating power per unit volume $\sigma E^2\propto r^2$, so the outer layers heat more; together with the skin effect of Section 9.3.4, the heating at the surface is even more concentrated, which suits the surface hardening of metal parts. A high-frequency induction furnace uses eddy currents to melt metal in a crucible without contact with the charge, which is convenient for melting in vacuum. An induction cooktop uses an alternating magnetic field to produce eddy currents in the bottom of the pot to heat it.
+- Heating: in a cylindrical conductor, if the magnetic field is parallel to the axis, uniform in space and changing with time, the induced electric field at radius $r$ is $E\propto r$ and the heating power per unit volume $\sigma E^2\propto r^2$, so the outer layers heat more; together with the skin effect of Section 9.3.4, the heating at the surface is even more concentrated, which suits the surface hardening of metal parts. A high-frequency induction furnace uses eddy currents to melt metal in a crucible without contact with the charge, which is convenient for melting in vacuum. An induction cooktop uses an alternating magnetic field to produce eddy currents in the bottom of the pot to heat it.
 - Electromagnetic damping: when a conductor moves in a magnetic field, the Ampère force on the eddy currents opposes the motion (Lenz's law), which is used for damping the pointers of meters and for eddy-current braking of trains.
 - Reducing eddy currents: the cores of transformers and motors are built of mutually insulated silicon-steel laminations parallel to the direction of the field, which cut the eddy-current paths perpendicular to the field; and since silicon steel has a rather high **electrical resistivity**, the eddy-current loss is greatly reduced.
 
@@ -162,7 +162,7 @@ A quantitative treatment requires Maxwell's equations: in a good conductor the *
 $$
 J(d)=J_0\,\mathrm{e}^{-d/\delta},\qquad \delta=\sqrt{\frac{2}{\omega\mu\sigma}}=\frac{1}{\sqrt{\pi f\mu\sigma}},
 $$
-and $\delta$ is called the skin depth. For copper ($\sigma=5.96\times10^7\,\mathrm{S/m}$), $\delta\approx9.2\,\mathrm{mm}$ at $50\,\mathrm{Hz}$, about $66\,\mu\mathrm{m}$ at $1\,\mathrm{MHz}$ and about $2\,\mu\mathrm{m}$ at $1\,\mathrm{GHz}$. High-frequency circuits therefore use stranded wire made of many thin insulated strands, or hollow copper tubes, and microwave components need only be silver-plated on the surface.
+and $\delta$ is called the skin depth. For copper ($\sigma=5.96\times10^7\,\mathrm{S/m}$), $\delta\approx9.2\,\mathrm{mm}$ at $50\,\mathrm{Hz}$, about $65\,\mu\mathrm{m}$ at $1\,\mathrm{MHz}$ and about $2\,\mu\mathrm{m}$ at $1\,\mathrm{GHz}$. High-frequency circuits therefore use stranded wire made of many thin insulated strands, or hollow copper tubes, and microwave components need only be silver-plated on the surface.
 
 ### 9.3.5. The Relativity of Motional and Induced Emf
 

@@ -116,7 +116,7 @@ $$
 \boldsymbol{B} = \frac{\mu_0}{4\pi}\int_L\frac{I\,\mathrm{d}\boldsymbol{l}\times\boldsymbol{e}_r}{r^2} .
 $$
 
-**注** 2019 年 SI 修订以前，安培由平行导线间的力定义，$\mu_0 = 4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ 是精确值。修订后改为固定**元电荷** $e$，$\mu_0$ 成为由实验测定的量，$\mu_0 = 1.256\,637\,061\,27(20)\times10^{-6}\,\mathrm{N\,A^{-2}}$，与 $4\pi\times10^{-7}$ 只在第十位有效数字上有差别，计算中仍可取 $4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$。$\varepsilon_0\mu_0 = 1/c^2$ 仍然精确成立。
+**注** 2019 年 SI 修订以前，安培由平行导线间的力定义，$\mu_0 = 4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$ 是精确值。修订后改为固定**元电荷** $e$，$\mu_0$ 成为由实验测定的量，$\mu_0 = 1.256\,637\,061\,27(20)\times10^{-6}\,\mathrm{N\,A^{-2}}$，与 $4\pi\times10^{-7}$ 只在第十一位有效数字上有差别，计算中仍可取 $4\pi\times10^{-7}\,\mathrm{N\,A^{-2}}$。$\varepsilon_0\mu_0 = 1/c^2$ 仍然精确成立。
 
 ### 6.3.1. Ampère 定律与 Newton 第三定律
 
@@ -248,7 +248,7 @@ $$
 1. 在垂直于电流的平面内、以电流为圆心的圆形回路：$B = \dfrac{\mu_0I}{2\pi r}$，方向沿回路的切向，$\oint\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l} = \dfrac{\mu_0I}{2\pi r}\cdot2\pi r = \mu_0I$。
 2. 在垂直于电流的平面内、包围电流的任意回路：$\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l} = B\,r\,\mathrm{d}\phi$，$\mathrm{d}\phi$ 是 $\mathrm{d}\boldsymbol{l}$ 对电流所张的角，$\oint\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l} = \oint\dfrac{\mu_0I}{2\pi r}r\,\mathrm{d}\phi = \dfrac{\mu_0I}{2\pi}\cdot2\pi = \mu_0I$。
 3. 不包围电流的平面回路：从电流所在处引两条切线，把回路分成 $L_1$、$L_2$ 两段，它们对电流所张的角大小相等、符号相反，$\oint\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l} = \dfrac{\mu_0I}{2\pi}\big[\phi + (-\phi)\big] = 0$。
-4. 非平面的闭合路径：把每个线元分解为平行于垂直平面的分量 $\mathrm{d}\boldsymbol{l}_\parallel$ 与沿电流方向的分量 $\mathrm{d}\boldsymbol{l}_\perp$。$\boldsymbol{B}$ 垂直于电流，$\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l}_\perp = 0$，只剩回路在垂直平面上的投影，化为 2、3 的情形。
+4. 非平面的闭合路径：把每个线元分解为垂直于电流的平面内的分量 $\mathrm{d}\boldsymbol{l}_\parallel$ 与沿电流方向的分量 $\mathrm{d}\boldsymbol{l}_\perp$。$\boldsymbol{B}$ 垂直于电流，$\boldsymbol{B}\cdot\mathrm{d}\boldsymbol{l}_\perp = 0$，只剩回路在垂直平面上的投影，化为 2、3 的情形。
 5. 多根载流导线：由叠加原理，环量等于各电流单独贡献之和。
 
 任意形状的闭合恒定电流可以看成许多电流元组成的回路，用 Biot–Savart 定律可以对一般情形证明这个定理，这里从略。
