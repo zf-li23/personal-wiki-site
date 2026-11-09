@@ -68,7 +68,7 @@ so $T$ is a composition of three kinds of elementary maps: translations $z \maps
 
 **Theorem 8.2.1** Every Möbius transformation is a conformal mapping of $\hat{\mathbb{C}}$ onto itself. Here conformality at $\infty$ and at $-d/c$ is understood in the coordinate $\zeta = 1/z$ near $\infty$ (respectively $1/w$ near $w = \infty$).
 
-**Proof** On $\mathbb{C}\setminus\{-d/c\}$, $T' \ne 0$. Near $z = -d/c$ the function $1/T(z) = \frac{cz + d}{az + b}$ is analytic with nonzero derivative, and near $\infty$ the function $T(1/\zeta) = \frac{a + b\zeta}{c + d\zeta}$ is analytic in $\zeta$ with nonzero derivative at $\zeta = 0$. $\square$
+**Proof** On $\mathbb{C}\setminus\{-d/c\}$, $T' \ne 0$. Let $c \ne 0$. Near $z = -d/c$ the function $1/T(z) = \frac{cz + d}{az + b}$ is analytic with nonzero derivative, and near $\infty$ the function $T(1/\zeta) = \frac{a + b\zeta}{c + d\zeta}$ is analytic in $\zeta$ with nonzero derivative at $\zeta = 0$. If $c = 0$, the only special point is $\infty$, and $1/T(1/\zeta) = \frac{d\zeta}{a + b\zeta}$ has derivative $d/a \ne 0$ at $\zeta = 0$. $\square$
 
 ### 8.2.2. Circles and Symmetric Points
 
