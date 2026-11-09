@@ -555,6 +555,6 @@ The chemistry of the d-block elements is determined by the d electrons: the numb
 
    **Answer** In the former case the lanthanide contraction makes the radii of the fifth- and sixth-period elements of the same group almost equal; within the lanthanoids, adjacent elements differ in electron configuration by only one 4f electron, which hardly takes part in bonding, and the radii differ by only about $1\,\mathrm{pm}$, so the differences in chemical properties are even smaller.
 
-4. Why does $\ce{Gd^3+} $, which has the most unpaired electrons, not have the largest magnetic moment among the lanthanoid ions?
+4. Why does $\ce{Gd^3+}$, which has the most unpaired electrons, not have the largest magnetic moment among the lanthanoid ions?
 
    **Answer** For $\ce{Gd^3+}$ ($4\mathrm{f}^7$) $L = 0$, and the magnetic moment comes from spin alone ($7.9\,\mu_{\mathrm{B}}$); for the ions in the second half of the series $J = L + S$, the orbital and spin magnetic moments add, and $\ce{Dy^3+}$ and $\ce{Ho^3+}$ reach about $10.6\,\mu_{\mathrm{B}}$.

@@ -1,6 +1,6 @@
 ---
 title: Applications of Electrode Potentials and Electrochemistry
-source_hash: 3a53a7b9f67c
+source_hash: fa585e4e11e9
 ---
 
 [6.1.11](/6.1.11) established the concept of the electrode potential and obtained from thermodynamics $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$ and the **Nernst equation**. In this chapter we use these two relations to solve practical problems in chemistry: comparing the strengths of oxidizing and reducing agents, calculating equilibrium constants of redox reactions, finding solubility products from electromotive forces, and deciding the direction and extent of reactions (12.1). We then plot the standard electrode potentials among the oxidation states of an element as a Latimer diagram and a Frost diagram, from which one can see at a glance which oxidation states are stable and which disproportionate (12.2), and plot electrode potential against pH on the same diagram to decide whether a substance can exist stably in water (12.3). Finally we discuss two technological directions of electrochemistry: electrolysis, in which electrical energy drives nonspontaneous reactions (12.4), and electrochemical power sources, which store chemical energy and convert it to electrical energy on demand (12.5). Latimer and Frost diagrams are the main tools of the descriptive chemistry of the elements in [6.1.13](/6.1.13)–[6.1.15](/6.1.15). The theory of electrode kinetics and overpotential, and corrosion and its prevention, are found in [Physical Chemistry](/6.3); redox titration and potentiometric analysis are found in [Analytical Chemistry](/6.4).
@@ -133,7 +133,7 @@ E^\circ_{\mathrm{B}}:\quad \ce{MnO4^- ->[0.56] MnO4^2- ->[0.60] MnO2 ->[-0.20] M
 $$
 Couples between nonadjacent species are also often marked on the diagram (drawn above or below the main line), such as, in acidic solution, $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 1.68\,\mathrm{V}$, $E^\circ(\ce{MnO4-}/\ce{Mn^2+}) = 1.51\,\mathrm{V}$, and $E^\circ(\ce{MnO2}/\ce{Mn^2+}) = 1.23\,\mathrm{V}$; and in basic solution $E^\circ(\ce{MnO4-}/\ce{MnO2}) = 0.59\,\mathrm{V}$ and $E^\circ(\ce{MnO2}/\ce{Mn(OH)2}) = -0.05\,\mathrm{V}$. They can be calculated from the adjacent couples (12.2.2).
 
-Comparing the two rows, the potential of the same couple is generally much higher in acidic than in basic solution (except for the couples below $\ce{MnO2}$): oxoanions are strong oxidizing agents in acidic solution, while low oxidation states ($\ce{Mn(OH)2}$) are fairly strong reducing agents in basic solution and are readily oxidized by air.
+Comparing the two rows, the potential of the same couple is generally much higher in acidic than in basic solution (except $\ce{MnO4-}/\ce{MnO4^2-}$, whose electrode reaction involves neither $\ce{H+}$ nor $\ce{OH-}$ and which has the same potential in both media): oxoanions are strong oxidizing agents in acidic solution, while low oxidation states ($\ce{Mn(OH)2}$) are fairly strong reducing agents in basic solution and are readily oxidized by air.
 
 ### 12.2.2. Finding the Standard Potential of an Unknown Couple from Adjacent Couples
 

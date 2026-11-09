@@ -1,7 +1,7 @@
 ---
 title: Hydrogen and the s-Block Elements
 description: General properties of the alkali and alkaline earth metals, their reactions with oxygen and water, hydroxide basicity and ionic potential, melting points, solubility and thermal stability of salts, the anomalous behavior of lithium and beryllium and the diagonal relationship; isotopes and position of hydrogen, molecular, ionic and metallic hydrides, hydrogen storage materials.
-source_hash: f8bb23010a0b
+source_hash: 20be6338cfff
 ---
 
 From this chapter on we turn to descriptive inorganic chemistry: following the blocks of the periodic table, we survey the elements and their important compounds group by group and explain their properties with the principles of the earlier chapters. The s block comprises Groups 1 and 2 ($n\mathrm{s}^{1\text{–}2}$) together with hydrogen. These are the most typical metals, and their chemistry is determined almost entirely by the ease with which they lose their s electrons to form cations with a noble-gas configuration. The main tools of this chapter are therefore the periodicity of **ionization energy** and radius ([6.1.2](/6.1.2)), ionic crystals and **ionic polarization** ([6.1.4](/6.1.4)), thermochemical cycles ([6.1.6](/6.1.6)) and **standard electrode potentials** ([6.1.11](/6.1.11)). Hydrogen occupies a special position; it is treated separately in Section 13.2, together with the hydrides of the other blocks. The spectra of the alkali metals are discussed in [5.5.4](/5.5.4#sec-4.2.5); the roles of $\ce{Na+}$, $\ce{K+}$, $\ce{Mg^2+}$ and $\ce{Ca^2+}$ in living organisms belong to biology ([7](/7)). The p-, d- and f-block elements are treated in [6.1.14](/6.1.14) and [6.1.15](/6.1.15).
@@ -76,7 +76,7 @@ The smaller the sum, the easier the process $\ce{M -> M+(aq)}$ and the more nega
 
 The oxides (except BeO) react with water to form hydroxides: $\ce{M2O + H2O -> 2MOH}$, $\ce{MO + H2O -> M(OH)2}$.
 
-Solubility. The hydroxides of the alkali metals are all very soluble in water and dissolve with the release of much heat (LiOH is less soluble). The hydroxides of the alkaline earth metals are far less soluble, and their solubility increases with atomic number: $\ce{Be(OH)2}$ is practically insoluble (**solubility product** about $7\times10^{-22}$), $\ce{Mg(OH)2}$ is sparingly soluble ($K_{\mathrm{sp}} = 5.6\times10^{-12}$), $\ce{Ca(OH)2}$ is slightly soluble (about $0.02\,\mathrm{mol\,L^{-1}}$), and the solubilities of $\ce{Sr(OH)2}$ and $\ce{Ba(OH)2}$ are about $0.07$ and $0.2\,\mathrm{mol\,L^{-1}}$ ($20\,{}^\circ\mathrm{C}$).
+Solubility. The hydroxides of the alkali metals are all very soluble in water and dissolve with the release of much heat (LiOH is less soluble). The hydroxides of the alkaline earth metals are far less soluble, and their solubility increases with atomic number: $\ce{Be(OH)2}$ is practically insoluble (**solubility product** about $7\times10^{-22}$), $\ce{Mg(OH)2}$ is sparingly soluble ($K_{\mathrm{sp}} = 5.6\times10^{-12}$), $\ce{Ca(OH)2}$ is slightly soluble (about $0.02\,\mathrm{mol\,L^{-1}}$), and the solubilities of $\ce{Sr(OH)2}$ and $\ce{Ba(OH)2}$ are about $0.15$ and $0.2\,\mathrm{mol\,L^{-1}}$ ($20\,{}^\circ\mathrm{C}$).
 
 Basicity. The alkali metal hydroxides are all strong bases. Among the alkaline earth metals, $\ce{Be(OH)2}$ is amphoteric (it dissolves in both acids and strong bases: $\ce{Be(OH)2 + 2OH- -> [Be(OH)4]^2-}$), $\ce{Mg(OH)2}$ is a moderately strong base, and $\ce{Ca(OH)2}$, $\ce{Sr(OH)2}$ and $\ce{Ba(OH)2}$ are strong bases. Basicity increases down a group.
 

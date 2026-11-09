@@ -1,9 +1,9 @@
 ---
 title: Redox Reactions and Electrode Potentials
-source_hash: 7d2a0808a5c9
+source_hash: c9b7815f86d7
 ---
 
-The acid–base, complexation, and precipitation reactions of the preceding chapters are all recombinations of ions or protons, and the charge state of each element is unchanged by the reaction. Another large class of reactions involves the transfer of electrons from one substance to another: redox reactions. Combustion, the smelting and corrosion of metals, photosynthesis and respiration, batteries and electrolysis are all redox reactions. In this chapter we first use oxidation numbers to describe electron transfer and to balance equations (11.1, 11.2). We then let the oxidizing and reducing agents react at two separate electrodes, so that electron transfer becomes a current in an external circuit; this is the galvanic cell (11.3). The electromotive force of a galvanic cell can be measured precisely, and this gives the standard electrode potential, a measure of the oxidizing or reducing power of a redox couple (11.4). Its relation to the **Gibbs energy** of [6.1.6](/6.1.6) is $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, and translating the **reaction isotherm** of [6.1.8](/6.1.8) into electrical language gives the Nernst equation, treated in 11.5, which treats in a unified way the effects of concentration, acidity, precipitation, and complexation on the electrode potential. Applications of electrode potentials, Latimer diagrams, electrolysis, and electrochemical power sources are found in [6.1.12](/6.1.12). Cell thermodynamics, the rigorous form of activities and the Nernst equation, and the kinetics of electrode processes are found in [Physical Chemistry](/6.3); potentiometric analysis and redox titration are found in [Analytical Chemistry](/6.4).
+The acid–base, complexation, and precipitation reactions of the preceding chapters are all recombinations of ions or protons, and the charge state of each element is unchanged by the reaction. Another large class of reactions involves the transfer of electrons from one substance to another: redox reactions. Combustion, the smelting and corrosion of metals, photosynthesis and respiration, batteries and electrolysis are all redox reactions. In this chapter we first use oxidation numbers to describe electron transfer and to balance equations (11.1, 11.2). We then let the oxidizing and reducing agents react at two separate electrodes, so that electron transfer becomes a current in an external circuit; this is the galvanic cell (11.3). The electromotive force of a galvanic cell can be measured precisely, and this gives the standard electrode potential, a measure of the oxidizing or reducing power of a redox couple (11.4). Its relation to the **Gibbs energy** of [6.1.6](/6.1.6) is $\Delta_{\mathrm{r}}G_{\mathrm{m}} = -zFE_{\mathrm{cell}}$, and translating the **reaction isotherm** of [6.1.8](/6.1.8) into electrical language gives the Nernst equation, treated in Section 11.5, which handles in a unified way the effects of concentration, acidity, precipitation, and complexation on the electrode potential. Applications of electrode potentials, Latimer diagrams, electrolysis, and electrochemical power sources are found in [6.1.12](/6.1.12). Cell thermodynamics, the rigorous form of activities and the Nernst equation, and the kinetics of electrode processes are found in [Physical Chemistry](/6.3); potentiometric analysis and redox titration are found in [Analytical Chemistry](/6.4).
 
 ## 11.1. Redox Reactions
 
@@ -359,8 +359,8 @@ Arranging the standard electrode potentials of couples in order of magnitude giv
 | $\ce{Ag+}/\ce{Ag}$ | $\ce{Ag+ + e- <=> Ag}$ | $0.800$ |
 | $\ce{Br2}/\ce{Br-}$ | $\ce{Br2(l) + 2e- <=> 2Br-}$ | $1.066$ |
 | $\ce{O2}/\ce{H2O}$ | $\ce{O2 + 4H+ + 4e- <=> 2H2O}$ | $1.229$ |
-| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.36$ |
 | $\ce{Cl2}/\ce{Cl-}$ | $\ce{Cl2 + 2e- <=> 2Cl-}$ | $1.358$ |
+| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | $\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$ | $1.36$ |
 | $\ce{MnO4-}/\ce{Mn^2+}$ | $\ce{MnO4- + 8H+ + 5e- <=> Mn^2+ + 4H2O}$ | $1.507$ |
 | $\ce{S2O8^2-}/\ce{SO4^2-}$ | $\ce{S2O8^2- + 2e- <=> 2SO4^2-}$ | $2.010$ |
 | $\ce{F2}/\ce{F-}$ | $\ce{F2 + 2e- <=> 2F-}$ | $2.866$ |
