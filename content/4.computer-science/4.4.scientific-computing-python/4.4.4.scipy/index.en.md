@@ -187,7 +187,7 @@ print(sol.t.size, sol.nfev)            # 345 2174
 print(sol.sol(10.0).round(4))          # [ 8.0066 11.4162]
 ```
 
-With these tolerances $H$ varies by $3 \times 10^{-8}$ along the computed solution; with the default tolerances, the solver takes only 44 steps (350 evaluations) and $H$ varies by $0.04$, which is visible as a slow drift of the orbit.
+With these tolerances $H$ varies by $3 \times 10^{-8}$ along the computed solution; with the default tolerances, the solver takes only 43 steps (350 evaluations) and $H$ varies by $0.04$, which is visible as a slow drift of the orbit.
 
 ![Lotka-Volterra model solved with solve_ivp: prey and predator populations against time (left), and closed orbits in the phase plane for three initial conditions around the equilibrium (c/d, a/b) (right)](./plots/lotka-volterra.py)
 
@@ -479,7 +479,7 @@ The system with $10^4$ unknowns is solved in 0.03 s. The last line checks a cons
 
 The matrix is symmetric and, thanks to the Dirichlet segment, positive definite (with insulated edges only, it would be singular, since adding a constant to $T$ changes nothing). Conjugate gradients therefore also applies: `spla.cg(A, b, rtol=1e-10)` needs 458 iterations and 0.06 s here. The classical iterations that update one cell at a time from its neighbors, the **Jacobi method** $T_{i,j} \leftarrow \frac14\bigl(\sum \text{neighbors} + qh^2/\alpha\bigr)$ and the **Gauss–Seidel method** ([3.5.4](/3.5.4#sec-4.3.4)), need no matrix at all but converge much more slowly, with a number of iterations proportional to $n^2$; multigrid methods (the package PyAMG), which correct the error on a hierarchy of coarser grids, solve such problems in a time proportional to the number of unknowns. For problems in three dimensions, preconditioned iterative methods are usually the only option.
 
-For the time-dependent equation, discretizing only in space (the *method of lines*) gives the linear ODE system $\boldsymbol{T}' = -\frac{\alpha}{h^2}A\boldsymbol{T} + q\boldsymbol{1}$. Its stepping with the explicit Euler method of §4.3.4 is
+For the time-dependent equation, discretizing only in space (the *method of lines*) gives the linear ODE system $\boldsymbol{T}' = -\frac{\alpha}{h^2}A\boldsymbol{T} + q\boldsymbol{1}$. Stepping this system with the explicit Euler method of §4.3.4 gives
 
 $$
 \boldsymbol{T}^{m+1} = \boldsymbol{T}^m - r A\boldsymbol{T}^m + \Delta t\,q\boldsymbol{1}, \qquad r = \frac{\alpha\,\Delta t}{h^2}.

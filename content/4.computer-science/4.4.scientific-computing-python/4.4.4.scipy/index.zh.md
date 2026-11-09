@@ -1,7 +1,7 @@
 ---
 title: SciPy
 description: SciPy 的结构及其与 NumPy 的关系；scipy.linalg 与可重复使用的矩阵分解；用 scipy.optimize 做极小化、求根与曲线拟合；用 solve_ivp 求积分与初值问题，包括 Gauss 求积、Euler 与 Runge–Kutta 步进、刚性与方法的选择；插值与样条；scipy.stats 中的分布对象与检验；稀疏数组、存储格式与稀疏求解器；热传导方程的有限差分、稀疏矩阵的组装与显式时间步进的稳定性；快速 Fourier 变换。
-source_hash: 7a02d8113380
+source_hash: 55f413b91e93
 ---
 
 NumPy 提供数组及其上的基本运算；SciPy 提供建立在其上的数值算法：优化、函数与微分方程的积分、插值、统计、稀疏矩阵、信号处理与 Fourier 变换。这些算法大多已有几十年历史，由经过充分检验的 Fortran、C 和 C++ 库（QUADPACK、ODEPACK、FITPACK、ARPACK、SuperLU 等）或精心编写的 Python 代码实现，所以用户的任务仍然是：把问题表述成库所期望的形式，选择方法，并检验结果。本章对最常用的子包做一次导览。与 [4.4.3](/4.4.3) 一样，方法的理论在别处讲解，这里只给出链接：优化与求根见 [3.5.4](/3.5.4) 和 [3.5.5](/3.5.5)，微分方程见 2.4（[2.4.4](/2.4.4)），插值与条件数见 [3.5.1](/3.5.1)。示例使用 SciPy 1.18（2026 年 10 月）与 NumPy 2.5；数据表格是下一章 [4.4.5](/4.4.5) 的主题。
@@ -188,7 +188,7 @@ print(sol.t.size, sol.nfev)            # 345 2174
 print(sol.sol(10.0).round(4))          # [ 8.0066 11.4162]
 ```
 
-在这些容差下，$H$ 沿计算出的解的变化为 $3 \times 10^{-8}$；用默认的容差时，求解器只走 44 步（350 次求值），$H$ 的变化为 $0.04$，表现为轨道的缓慢漂移。
+在这些容差下，$H$ 沿计算出的解的变化为 $3 \times 10^{-8}$；用默认的容差时，求解器只走 43 步（350 次求值），$H$ 的变化为 $0.04$，表现为轨道的缓慢漂移。
 
 ![用 solve_ivp 求解的 Lotka-Volterra 模型：被捕食者与捕食者的种群随时间的变化（左），以及围绕平衡点 (c/d, a/b) 的三个初始条件在相平面上的闭轨道（右）](./plots/lotka-volterra.py)
 
@@ -301,7 +301,7 @@ for h in [0.1, 0.05, 0.025]:
 | `make_smoothing_spline(x, y, lam)` | 平滑样条 | 对有噪声的数据不做精确插值 |
 | `RegularGridInterpolator`、`griddata` | 多维 | 规则网格、散乱数据 |
 
-三次样条（cubic spline）是在每个区间 $[x_i, x_{i+1}]$ 上为三次多项式、在结点处二阶连续可微的函数；再加两个边界条件（默认是 not-a-knot 条件）就能使它唯一。它的光滑性对光滑数据是理想的，但在有阶跃的数据上会过冲，这对必须保持在某个范围内的量，如浓度或概率，是不可接受的。PCHIP 与修正的 Akima 插值保持单调性，代价是二阶导数不连续：
+三次样条（cubic spline）是在每个区间 $[x_i, x_{i+1}]$ 上为三次多项式、在节点处二阶连续可微的函数；再加两个边界条件（默认是 not-a-knot 条件）就能使它唯一。它的光滑性对光滑数据是理想的，但在有阶跃的数据上会过冲，这对必须保持在某个范围内的量，如浓度或概率，是不可接受的。PCHIP 与修正的 Akima 插值保持单调性，代价是二阶导数不连续：
 
 ```python
 from scipy import interpolate
@@ -314,7 +314,7 @@ print(cs([2.5, 3.5]), pc([2.5, 3.5]))   # [0.5   1.125] [0.5 1. ]: the spline ov
 print(cs.derivative()(2.5), cs.integrate(0, 5))   # 1.1666666666666665 2.5
 ```
 
-![左：用 np.interp、CubicSpline、PchipInterpolator 和修正的 Akima 对阶跃形的数据插值；三次样条出现过冲。右：取 11 个等距结点的 Runge 函数；10 次插值多项式在两端附近振荡，三次样条则没有](./plots/interpolation.py)
+![左：用 np.interp、CubicSpline、PchipInterpolator 和修正的 Akima 对阶跃形的数据插值；三次样条出现过冲。右：取 11 个等距节点的 Runge 函数；10 次插值多项式在两端附近振荡，三次样条则没有](./plots/interpolation.py)
 
 插值对象都是可调用的，并有计算导数、原函数、积分与根的方法。较老的类 `interp1d` 现在被标为遗留（legacy）；上面的类可以取代它。`interp2d` 已在 SciPy 1.14 中移除：二维及更高维的网格数据用 `RegularGridInterpolator`（光滑样条用 `RectBivariateSpline`），散乱数据用 `griddata` 或 `RBFInterpolator`。
 

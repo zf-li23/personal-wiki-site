@@ -398,7 +398,7 @@ print(D.shape)     # (5, 3): D[i, j] is the distance from P[i] to Q[j]
 |---|---|
 | `for i: y[i] = f(x[i])`，其中是算术运算 | 数组上的算术运算、通用函数 |
 | 循环内的 `if` | `np.where(cond, a, b)`、布尔索引、`np.clip` |
-| 累积求和、最大值、计数 | `sum`、`max`、`np.count_nonzero`，配合 `axis` |
+| 循环中累加求和、取最大值、计数 | `sum`、`max`、`np.count_nonzero`，配合 `axis` |
 | 累计总和 | `cumsum`、`cumprod`、`np.maximum.accumulate` |
 | 对数对的嵌套循环 | 用 `None` 做广播 |
 | 直方图、按类别计数 | `np.bincount`、`np.histogram`、`np.unique(..., return_counts=True)` |
