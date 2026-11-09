@@ -110,7 +110,7 @@ $$
 | 压缩 $W/\mathrm{kJ}$ | $72$ | $48$ | $44$ | $33.3$ |
 | 循环一周 $\sum W/\mathrm{kJ}$ | $54$ | $24$ | $18$ | $0$ |
 
-![Isothermal expansion and compression of an ideal gas between 4 kPa, 6 m³ and 1 kPa, 24 m³: the work is minus the area under the external-pressure path. More steps bring the staircase closer to the reversible isotherm](./plots/expansion-work.py)
+![理想气体在 $4\,\mathrm{kPa}$、$6\,\mathrm{m^3}$ 与 $1\,\mathrm{kPa}$、$24\,\mathrm{m^3}$ 两个状态之间的等温膨胀与压缩：功等于外压途径下方面积的负值；步数越多，阶梯越贴近可逆等温线](./plots/expansion-work.py)
 
 同样的始态与终态，途径不同，功就不同，所以计算功一定要说清过程。在 $p$–$V$ 图上，功等于外压曲线下面积的负值：膨胀的步数越多，阶梯越贴近等温线，系统对外做的功越多；步数趋于无穷时得到可逆膨胀，系统做功最多；压缩时反之，可逆压缩环境做的功最少。理想气体等温过程 $\Delta U = 0$，所以每个循环中环境多做的功 $\sum W$ 都以热的形式留在了热源中：经过不可逆循环，系统复原了，环境却"失功得热"。
 
@@ -365,7 +365,7 @@ $$
 
 $Z_{\mathrm{c}}$ 是临界压缩因子。若对应状态原理成立，$V_{\mathrm{r}}$ 是 $p_{\mathrm{r}}$、$T_{\mathrm{r}}$ 的普适函数；而实验表明大多数气体的 $Z_{\mathrm{c}}$ 相近（Ne 0.31，Ar、$\ce{CH4}$、$\ce{O2}$、$\ce{N2}$ 0.29，CO 0.30，强极性的 $\ce{H2O}$ 只有 0.23），所以 $Z \approx f(p_{\mathrm{r}}, T_{\mathrm{r}})$ 对各种气体近似相同。把大量实测数据画成以 $T_{\mathrm{r}}$ 为参数的 $Z$–$p_{\mathrm{r}}$ 曲线，就是普遍化压缩因子图。它不受状态方程适用范围的限制，在高压化工计算中很有用。vdW 方程给出的 $Z_{\mathrm{c}} = 3/8$ 明显偏大，用式 (1.6) 算出的"压缩因子图"（下图）在临界区附近与实测图差别很大，远离临界区时定性一致：低温时 $Z$ 先随压力下降、后上升，$T_{\mathrm{r}}$ 在 Boyle 温度附近时 $Z \approx 1$ 的范围最宽。
 
-![Z against p_r at several reduced temperatures, computed from the reduced van der Waals equation (vapour-like root). The shape resembles the measured generalized chart, but the van der Waals critical compressibility 3/8 is too large](./plots/reduced-compressibility.py)
+![几个对比温度下 $Z$ 随 $p_{\mathrm{r}}$ 的变化，由 vdW 对比方程（取类气体的根）算出：曲线形状与实测的普遍化压缩因子图相似，但 vdW 方程的临界压缩因子 $3/8$ 明显偏大](./plots/reduced-compressibility.py)
 
 **例 1.5.1** 求 $304\,\mathrm{K}$、$11.15\,\mathrm{MPa}$ 下 $\ce{CO2}$ 的摩尔体积。已知 $T_{\mathrm{c}} = 304.13\,\mathrm{K}$，$p_{\mathrm{c}} = 7.38\,\mathrm{MPa}$。
 
@@ -417,7 +417,7 @@ $$
 
 曲线以内 $\mu_{\mathrm{JT}} > 0$；$p_{\mathrm{r}} > 9$ 时任何温度下节流都升温。
 
-![Joule–Thomson inversion curve of a van der Waals gas in reduced variables. Inside the curve throttling cools the gas. The triangles mark measured upper inversion temperatures at low pressure divided by Tc: the van der Waals value 27/4 is too high for Ar and N2](./plots/jt-inversion-curve.py)
+![vdW 气体在对比变量下的 Joule–Thomson 转换曲线：曲线以内节流使气体降温；三角形是低压下实测的上转换温度与 $T_{\mathrm{c}}$ 之比，vdW 方程给出的 $27/4$ 对 Ar 与 $\ce{N2}$ 偏高](./plots/jt-inversion-curve.py)
 
 实测的低压转换温度：$\ce{N2}$ $621\,\mathrm{K}$，Ar $723\,\mathrm{K}$，$\ce{CO2}$ 约 $1500\,\mathrm{K}$，都远高于室温，可以直接节流制冷；$\ce{H2}$ 为 $202\,\mathrm{K}$，He 只有 $40\,\mathrm{K}$，必须先用液氮或其他方法预冷到转换温度以下，才能用节流液化。Linde 液化空气的方法就是节流加逆流换热：节流后变冷的气体回过头来预冷后来的高压气体，温度逐级下降直到液化。冰箱与空调中，液态制冷剂通过膨胀阀节流时部分汽化而强烈降温，这一步也是节流（此时伴随相变，降温主要来自汽化吸热）。
 
@@ -446,9 +446,9 @@ $$
 ```mermaid
 flowchart LR
   A["H2O(l), 298.15 K"] -->|"ΔvapHm(298.15 K) = ?"| D["H2O(g), 298.15 K"]
-  A -->|"ΔH1: heat liquid"| B["H2O(l), 373.12 K"]
+  A -->|"ΔH1：加热液体"| B["H2O(l), 373.12 K"]
   B -->|"ΔH2 = 40.65 kJ/mol"| C["H2O(g), 373.12 K"]
-  C -->|"ΔH3: cool vapour"| D
+  C -->|"ΔH3：冷却蒸气"| D
 ```
 
 $$
@@ -467,9 +467,9 @@ $$
 
 ```mermaid
 flowchart LR
-  R["reactants (T, p1, V1)"] -->|"I: constant T and p, Qp = ΔrH(I)"| P1["products (T, p1, V2)"]
-  R -->|"II: constant T and V, QV = ΔrU(II)"| P2["products (T, p2, V1)"]
-  P2 -->|"III: isothermal, ΔH(III)"| P1
+  R["反应物 (T, p1, V1)"] -->|"I：恒 T、恒 p，Qp = ΔrH(I)"| P1["产物 (T, p1, V2)"]
+  R -->|"II：恒 T、恒 V，QV = ΔrU(II)"| P2["产物 (T, p2, V1)"]
+  P2 -->|"III：等温，ΔH(III)"| P1
 ```
 
 由于 $H$ 是状态函数，$\Delta_{\mathrm{r}}H_{\mathrm{I}} = \Delta_{\mathrm{r}}H_{\mathrm{II}} + \Delta H_{\mathrm{III}} = \Delta_{\mathrm{r}}U_{\mathrm{II}} + \Delta(pV)_{\mathrm{II}} + \Delta H_{\mathrm{III}}$，所以
@@ -567,7 +567,7 @@ print(brentq(lambda t: DH + heat_products(t, products), 300, 5000))  # about 233
 
 得 $T \approx 2330\,\mathrm{K}$。过量空气使火焰温度降低（下图）：多余的 $\ce{O2}$ 与 $\ce{N2}$ 也要被加热。实际火焰温度更低一些（约 $2225\,\mathrm{K}$），因为高温下 $\ce{CO2}$ 与 $\ce{H2O}$ 部分离解为 CO、$\ce{H2}$、OH 等，离解吸热；考虑离解需要同时求解化学平衡（[6.3.7](/6.3.7)）。用纯氧代替空气，不计离解的计算值高达 $4800\,\mathrm{K}$，但离解使实际值只有约 $3000\,\mathrm{K}$；乙炔–氧焰（$\ce{C2H2 + 5/2O2 -> 2CO2 + H2O}$，$\Delta_{\mathrm{r}}H^\circ_{\mathrm{m}} = -1256.2\,\mathrm{kJ\,mol^{-1}}$，以生成气态水计，产物分子少、热容小）可达约 $3400\,\mathrm{K}$，用于气焊与切割。
 
-![Adiabatic flame temperature of methane burning at constant pressure, against the ratio of air supplied to stoichiometric air (heat capacities from the empirical fits, dissociation neglected)](./plots/flame-temperature.py)
+![甲烷恒压燃烧的绝热火焰温度随供给空气与理论空气量之比的变化（热容取自经验拟合式，不计离解）](./plots/flame-temperature.py)
 
 :::
 

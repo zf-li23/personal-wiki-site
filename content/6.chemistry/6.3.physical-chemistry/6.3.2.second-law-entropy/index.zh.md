@@ -48,7 +48,7 @@ $$
 
 效率只由压缩比决定。$T_{\mathrm{comp}}$ 不能超过燃烧室温度 $T_2$，所以 $\eta < 1 - T_1/T_2$：$T_{\mathrm{comp}} \to T_2$ 时效率趋于工作在 $T_1$、$T_2$ 之间的 Carnot 效率，但此时燃烧室几乎不再加热，每摩尔空气的净功 $nC_{p,\mathrm{m}}[(T_2 - T_3) - (T_{\mathrm{comp}} - T_1)]$ 趋于零。因此"最大效率 $1 - T_1/T_2$"只是一个达不到的上限；实际设计关心的是净功最大的工况：对 $T_{\mathrm{comp}}$ 求极值得 $T_{\mathrm{comp}} = \sqrt{T_1T_2}$，此时 $\eta = 1 - \sqrt{T_1/T_2}$。取 $T_1 = 300\,\mathrm{K}$、$T_2 = 1500\,\mathrm{K}$，Carnot 上限为 $0.80$，净功最大时效率为 $0.55$，压缩比约 $17$。Brayton 循环的效率低于 Carnot 效率，原因是它在一个温度范围内吸热、在另一个温度范围内放热，而不是只与两个恒温热源交换热量。
 
-![Ideal Brayton cycle between ambient 300 K and burner 1500 K: the efficiency rises towards the Carnot limit as the compression outlet temperature Tcomp approaches T2, while the net work per mole of air vanishes there; the work is largest at Tcomp = √(T1T2)](./plots/brayton-cycle.py)
+![环境温度 $300\,\mathrm{K}$、燃烧室温度 $1500\,\mathrm{K}$ 之间的理想 Brayton 循环：压缩机出口温度 $T_{\mathrm{comp}}$ 趋于 $T_2$ 时效率趋于 Carnot 极限，而每摩尔空气的净功趋于零；净功在 $T_{\mathrm{comp}} = \sqrt{T_1T_2}$ 时最大](./plots/brayton-cycle.py)
 
 ## 2.2. 熵与 Clausius 不等式
 
@@ -296,7 +296,7 @@ $$
 
 :::
 
-![Freezing of 1 mol of water at 100 kPa as a function of temperature: the entropy decrease of the water and the entropy increase of the surroundings nearly cancel; their sum is positive below 273.15 K (freezing is spontaneous) and negative above it (melting is spontaneous)](./plots/supercooled-freezing.py)
+![$100\,\mathrm{kPa}$ 下 $1\,\mathrm{mol}$ 水结冰的熵变随温度的变化：水的熵减小与环境的熵增加几乎抵消；二者之和在 $273.15\,\mathrm{K}$ 以下为正（结冰自发），以上为负（熔化自发）](./plots/supercooled-freezing.py)
 
 上图把例 2.3.6 推广到其他温度：$\Delta S_{\text{孤立}}$ 只在 $273.15\,\mathrm{K}$ 时为零，这正是两相平衡的温度；离平衡温度越远，结冰（或熔化）的推动力越大。$\Delta S_{\text{孤立}}$ 乘以 $-T$ 就是下一章的 $\Delta G$（[6.3.3](/6.3.3)）。
 
@@ -368,7 +368,7 @@ $$
 
 解：冰的低温热容积分（数值计算，$10\,\mathrm{K}$ 以下按 $T^3$ 外推）给出 $S_{\mathrm{m}}(\text{冰}, 273.15\,\mathrm{K}) = 38.1\,\mathrm{J\,mol^{-1}\,K^{-1}}$；熔化 $+6010/273.15 = 22.0$；液态水从 $273.15$ 到 $373.12\,\mathrm{K}$（$C_{p,\mathrm{m}} = 75.3$）$+23.5$；汽化 $+40650/373.12 = 108.9$；水蒸气从 $373.12$ 到 $423.15\,\mathrm{K}$（$C_{p,\mathrm{m}} \approx 33.8$）$+4.3$。合计 $S_{\mathrm{m}} \approx 196.8\,\mathrm{J\,mol^{-1}\,K^{-1}}$；换算到标准压力再加 $R\ln(101.325/100) = 0.11$。汽化一项占总熵的一半以上：气体的熵远大于凝聚相。
 
-![Calorimetric entropy of water from 0 K to 423 K (approximate heat capacities). Upper panel: Cp,m/T, whose area gives the heating contributions; lower panel: Sm(T), with jumps of ΔfusH/Tfus at the melting point and ΔvapH/Tb at the boiling point](./plots/water-entropy.py)
+![水从 $0\,\mathrm{K}$ 到 $423\,\mathrm{K}$ 的量热熵（热容取近似值）。上图：$C_{p,\mathrm{m}}/T$，其下的面积给出各加热段的熵变；下图：$S_{\mathrm{m}}(T)$，在熔点与沸点处分别跃升 $\Delta_{\mathrm{fus}}H/T_{\mathrm{fus}}$ 与 $\Delta_{\mathrm{vap}}H/T_{\mathrm{b}}$](./plots/water-entropy.py)
 
 :::
 
