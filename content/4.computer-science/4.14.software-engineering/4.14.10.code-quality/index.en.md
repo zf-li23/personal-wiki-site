@@ -658,10 +658,10 @@ $ pytest -q test_shipping.py
 $ radon cc -s shipping.py
 shipping.py
     F 8:0 shipping_cost - A (3)
-    F 21:0 base_cost - A (3)
-    F 35:0 handling_surcharge - A (3)
-    F 17:0 qualifies_for_free_shipping - A (2)
-    F 29:0 international_surcharge - A (2)
+    F 23:0 base_cost - A (3)
+    F 37:0 handling_surcharge - A (3)
+    F 19:0 qualifies_for_free_shipping - A (2)
+    F 31:0 international_surcharge - A (2)
 ```
 
 The behavior is unchanged, as the same nine tests confirm. The total complexity is about the same, since the decisions are inherent in the **business rules**, but it is now spread over five functions, each of which can be read, named, tested and changed on its own; `shipping_cost` itself reads as a summary of the pricing policy, and a change to the surcharges for one country touches only a table.
