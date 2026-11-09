@@ -1,7 +1,7 @@
 ---
 title: 使用 React 的前端开发
 description: 现代前端工具链（DOM、Node.js 与 npm、TypeScript、Vite）与 React 19 的核心思想：组件与 JSX、props、状态与事件、单向数据流、Hook、Effect 以及从后端 API 获取数据、表单、客户端路由、用 Vitest 做组件测试、单页应用的构建与部署，以及何时使用 React 框架；附留言板示例的前端，以及与编程智能体一起做前端工作。
-source_hash: 8dca336ab8f9
+source_hash: 90391cc0c1da
 ---
 
 本章构建 [4.14.7](/4.14.7) 中分离式架构的前端：一个运行在浏览器中、只通过后端的 API 与后端交谈的**单页应用**。它使用最广泛的用户界面构建库 React，配合 TypeScript 和构建工具 Vite。重点在于思想而不是语法：组件库解决什么问题，React 如何把用户界面看作状态的函数，渲染与外部世界的边界在哪里，以及前端如何构建、测试和部署。代码是贯穿 [4.14.7](/4.14.7) 至 [4.14.9](/4.14.9) 的留言板的前端：它列出留言，并让用户登录和发布留言。所有内容都用 Node.js 24、React 19.3、Vite 8.3、TypeScript 6.0、React Router 8.5 和 Vitest 5.0 运行过；细节请以 react.dev 和 vite.dev 的官方文档为准。

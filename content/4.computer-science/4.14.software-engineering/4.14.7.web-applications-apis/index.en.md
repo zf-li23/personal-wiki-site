@@ -294,7 +294,7 @@ A collection that can grow must be returned in pages.
 | when items are inserted while paging | items are skipped or repeated | stable |
 | typical use | admin tables | feeds, infinite scrolling, large collections |
 
-The message board uses page numbers; its list response carries the total count and links to the neighbouring pages:
+The message board uses page numbers; its list response carries the total count and links to the neighboring pages:
 
 ```json
 {"count": 4, "next": null, "previous": null,

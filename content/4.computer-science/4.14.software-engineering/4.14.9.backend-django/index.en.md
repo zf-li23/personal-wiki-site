@@ -510,7 +510,7 @@ For deeper **debugging**: with `DEBUG = True`, an unhandled exception produces a
 
 Manual requests check a change once; automated tests check it after every change. In a large project, a change in one place often breaks a function elsewhere, and a fixed set of test programs and **test cases**, run on every commit by **continuous integration** ([4.14.3](/4.14.3#sec-3.8)), ensures that only versions that pass reach users. For a back end, a test plays the role of the front end and of a database inspector at once: it treats the routing and the views as a black box, sends simulated requests, and asserts what the response must be and how the database must have changed, much like the test data of an **online judge** that define what the output for each input must be. The tests should cover the normal cases and as many corner cases as possible: invalid and missing fields, boundary lengths, missing credentials, someone else's object.
 
-Django's `TestCase` creates a separate test database, runs each test inside a **transaction** that is rolled back afterwards (so that tests do not see each other's data), and provides a `Client` that sends requests to the application without a network; DRF's `APITestCase` and `APIClient` add JSON handling and `force_authenticate`. The tests of the message board:
+Django's `TestCase` creates a separate test database, runs each test inside a **transaction** that is rolled back afterward (so that tests do not see each other's data), and provides a `Client` that sends requests to the application without a network; DRF's `APITestCase` and `APIClient` add JSON handling and `force_authenticate`. The tests of the message board:
 
 ```python
 from django.contrib.auth.models import User

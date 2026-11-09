@@ -43,7 +43,7 @@ The last term also grows with $N$, but so does its denominator, since each peer 
 
 | System | Year | Idea | Remarks |
 |---|---|---|---|
-| Napster | 1999 | a central index server lists which peer has which song; files are transferred directly between peers | created by Shawn Fanning as a freshman at Northeastern University; sued by the RIAA for contributory copyright infringement in 2000 and shut down in July 2001 |
+| Napster | 1999 | a central index server lists which peer has which song; files are transferred directly between peers | created by Shawn Fanning as a freshman at Northeastern University; sued by the RIAA for contributory copyright infringement in December 1999 and shut down in July 2001 |
 | BitTorrent | 2001 | a file is split into chunks; peers exchanging chunks of one file form a *torrent*, and a *tracker* (or a distributed hash table) tracks the peers in it | designed by Bram Cohen; peers download the rarest chunks first and upload preferentially to peers that upload to them ("tit-for-tat"); still one of the most common protocols for large files |
 | Bitcoin | 2009 | a peer-to-peer payment system: transactions between users are verified by network nodes and recorded in a public distributed ledger, the *blockchain* | no intermediary; consensus by proof of work |
 | Dragonfly | 2017 | peer-to-peer distribution of container images and other large files inside a data center: hosts that already have pieces of an image serve them to other hosts | developed at Alibaba, a graduated CNCF project since 2025; also used to distribute AI model weights; a scheduler coordinates the peers, so it is not purely P2P |
