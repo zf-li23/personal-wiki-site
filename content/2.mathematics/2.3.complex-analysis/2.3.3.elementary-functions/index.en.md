@@ -106,7 +106,7 @@ This jump is exactly what makes the keyhole contours of [2.3.7](/2.3.7) work.
 
 ### 3.2.3. Riemann Surfaces
 
-Instead of cutting the plane, Riemann proposed to enlarge the domain. Take countably many copies ("sheets") $S_k$ of the slit plane, $k\in\mathbb{Z}$, carrying the branches $\operatorname{Log}z+2k\pi\mathrm{i}$, and glue the lower edge of the cut on $S_k$ to the upper edge of the cut on $S_{k+1}$. The result is a connected spiral surface, the *Riemann surface* of $\log z$, on which $\log$ is a single-valued analytic function: walking once around $0$ moves us to the next sheet. For $\sqrt z$ two sheets suffice, glued crosswise along the cut, since going around $0$ twice returns the original value.
+Instead of cutting the plane, Riemann proposed to enlarge the domain. Take countably many copies ("sheets") $S_k$ of the slit plane, $k\in\mathbb{Z}$, carrying the branches $\operatorname{Log}z+2k\pi\mathrm{i}$, and glue the upper edge of the cut on $S_k$ to the lower edge of the cut on $S_{k+1}$. The result is a connected spiral surface, the *Riemann surface* of $\log z$, on which $\log$ is a single-valued analytic function: walking once around $0$ moves us to the next sheet. For $\sqrt z$ two sheets suffice, glued crosswise along the cut, since going around $0$ twice returns the original value.
 
 ![Riemann surfaces. Left: the height is Im log z = arg z over three turns around the origin; each turn is one sheet, and the sheets join into a single spiral around the branch point 0. Right: the height is Re sqrt z over two turns; after one turn the surface comes back with the opposite sign, after two turns it closes up.](./plots/riemann-surfaces.py)
 

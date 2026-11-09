@@ -1,6 +1,6 @@
 ---
 title: 幂级数与 Laurent 级数
-source_hash: 4c1205c140fc
+source_hash: fcef35a53801
 ---
 
 在实分析中，一个函数可以无穷次可导却不等于它的 Taylor 级数之和，而 Taylor 级数的收敛半径往往无法单从实轴上得到解释（[2.2.9](/2.2.9)）。在复平面上，这两个疑问都消失了。Cauchy 积分公式（[2.3.4](/2.3.4)）表明，解析函数在每一点附近都是一个收敛的**幂级数**之和，而且这个级数在函数保持解析的最大圆盘内收敛。因此解析性就是局部可展开为幂级数的性质，由此又得到零点的孤立性和唯一性定理：区域上的解析函数由它在任何一个有极限点的集合上的值所决定。
@@ -82,7 +82,7 @@ $$
 对于缺项级数，相邻系数之比没有定义，这时必须用 $\limsup$ 的形式。
 
 **例 5.2.1** 1. $\sum_{n\ge1}\frac{n^n}{n!}z^{2n}$。级数只含偶次幂：$z^k$ 的系数为 $c_{2n} = \frac{n^n}{n!}$，$c_{2n+1} = 0$。由 Stirling 公式 $\sqrt[n]{n^n/n!} \to \mathrm{e}$，故 $\limsup\sqrt[k]{\lvert c_k\rvert} = \lim\left(\frac{n^n}{n!}\right)^{1/(2n)} = \sqrt{\mathrm{e}}$，$R = \mathrm{e}^{-1/2}$。等价地，令 $w = z^2$：关于 $w$ 的级数收敛半径为 $1/\mathrm{e}$，所以当 $\lvert z\rvert^2 < 1/\mathrm{e}$ 时收敛。
-2. $\sum_{n\ge0} 2^{n^2}z^{n^2}$：当 $k = n^2$ 时 $\sqrt[k]{\lvert c_k\rvert} = 2^{n}$，否则为 $0$，所以 $\limsup$ 为 $+\infty$，$R = 0$。
+2. $\sum_{n\ge0} 2^{n^2}z^{n^2}$：当 $k = n^2$ 时 $\sqrt[k]{\lvert c_k\rvert} = 2$，否则为 $0$，所以 $\limsup$ 为 $2$，$R = \frac12$（事实上该级数就是 $\sum(2z)^{n^2}$）。
 3. $\sum_{n\ge1}(1 - \mathrm{i})^n n^{-2} z^n$：$\sqrt[n]{\lvert c_n\rvert} = \sqrt2\,n^{-2/n} \to \sqrt2$，所以 $R = 1/\sqrt2$。
 
 ### 5.2.2. 在收敛圆周上的性态
@@ -227,7 +227,7 @@ $$
 
 - 实的恒等式可以推广到 $\mathbb{C}$：$\sin^2z + \cos^2z - 1$ 是整函数，在 $\mathbb{R}$ 上为零，所以处处为零。同样的论证证明了 [2.3.3](/2.3.3) 中 $\mathrm{e}^z$、$\sin z$、$\cos z$ 的和角公式。
 - 若 $D$ 上的解析函数 $f$ 与更大区域 $G \supseteq D$ 上的解析函数 $g$ 在 $D$ 上相等，则 $g$ 是 $f$ 到 $G$ 上的唯一这样的延拓，称为 $f$ 到 $G$ 上的解析延拓（analytic continuation）。例如 $\sum z^n$（$\lvert z\rvert < 1$）解析延拓为 $\mathbb{C}\setminus\{1\}$ 上的 $\frac1{1-z}$。
-- 这个定理对光滑实函数不成立：$\mathrm{e}^{-1/x^2}$（在 $0$ 处补充定义为 $0$）与零函数在 $(-\infty, 0]$ 上相等，却并不相同。
+- 这个定理对光滑实函数不成立：在 $x > 0$ 时等于 $\mathrm{e}^{-1/x^2}$、在 $x \le 0$ 时等于 $0$ 的函数是光滑的，它与零函数在 $(-\infty, 0]$ 上相等，却并不相同。
 
 **例 5.4.1** 是否存在在 $\mathbb{D}$ 内解析的函数 $f$，使 $f\left(\frac1n\right) = \frac{(-1)^n}{n}$，$n = 2, 3, \dots$？点列 $\frac1{2k}$ 聚集于 $0 \in \mathbb{D}$，且 $f\left(\frac1{2k}\right) = \frac1{2k}$，由唯一性定理 $f(z) = z$。于是 $f\left(\frac1{2k+1}\right) = \frac1{2k+1} \ne -\frac1{2k+1}$，矛盾；所以这样的 $f$ 不存在。另一方面，$f(z) = z^2$ 满足 $f\left(\frac1n\right) = \frac1{n^2}$，而且是 $\mathbb{D}$ 上唯一满足这一条件的解析函数。
 

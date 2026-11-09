@@ -81,7 +81,7 @@ with $1/0 = +\infty$ and $1/\infty = 0$. If $\lim\lvert c_{n+1}/c_n\rvert = \rho
 The $\limsup$ form is needed for series with gaps, where the ratio of consecutive coefficients is undefined.
 
 **Example 5.2.1** 1. $\sum_{n\ge1}\frac{n^n}{n!}z^{2n}$. Only even powers occur: the coefficient of $z^k$ is $c_{2n} = \frac{n^n}{n!}$ and $c_{2n+1} = 0$. By Stirling's formula $\sqrt[n]{n^n/n!} \to \mathrm{e}$, hence $\limsup\sqrt[k]{\lvert c_k\rvert} = \lim\left(\frac{n^n}{n!}\right)^{1/(2n)} = \sqrt{\mathrm{e}}$ and $R = \mathrm{e}^{-1/2}$. Equivalently, set $w = z^2$: the series in $w$ has radius $1/\mathrm{e}$, so it converges for $\lvert z\rvert^2 < 1/\mathrm{e}$.
-2. $\sum_{n\ge0} 2^{n^2}z^{n^2}$: $\sqrt[k]{\lvert c_k\rvert}$ equals $2^{n}$ for $k = n^2$ and $0$ otherwise, so the $\limsup$ is $+\infty$ and $R = 0$.
+2. $\sum_{n\ge0} 2^{n^2}z^{n^2}$: $\sqrt[k]{\lvert c_k\rvert}$ equals $2$ for $k = n^2$ and $0$ otherwise, so the $\limsup$ is $2$ and $R = \frac12$ (indeed the series is $\sum(2z)^{n^2}$).
 3. $\sum_{n\ge1}(1 - \mathrm{i})^n n^{-2} z^n$: $\sqrt[n]{\lvert c_n\rvert} = \sqrt2\,n^{-2/n} \to \sqrt2$, so $R = 1/\sqrt2$.
 
 ### 5.2.2. Behavior on the Circle of Convergence
@@ -226,7 +226,7 @@ An analytic function on a domain is therefore determined by its values on an arb
 
 - Real identities extend to $\mathbb{C}$: $\sin^2z + \cos^2z - 1$ is entire and vanishes on $\mathbb{R}$, so it vanishes everywhere. The same argument proves the addition formulas for $\mathrm{e}^z$, $\sin z$ and $\cos z$ in [2.3.3](/2.3.3).
 - If an analytic function $f$ on $D$ and an analytic function $g$ on a larger domain $G \supseteq D$ agree on $D$, then $g$ is the only such extension of $f$ to $G$; it is called the *analytic continuation* of $f$ to $G$. For example $\sum z^n$ ($\lvert z\rvert < 1$) continues analytically to $\frac1{1-z}$ on $\mathbb{C}\setminus\{1\}$.
-- The theorem fails for smooth real functions: $\mathrm{e}^{-1/x^2}$ (extended by $0$) and the zero function agree on $(-\infty, 0]$ without being equal.
+- The theorem fails for smooth real functions: the function equal to $\mathrm{e}^{-1/x^2}$ for $x > 0$ and to $0$ for $x \le 0$ is smooth and agrees with the zero function on $(-\infty, 0]$ without being equal to it.
 
 **Example 5.4.1** Is there a function $f$ analytic in $\mathbb{D}$ with $f\left(\frac1n\right) = \frac{(-1)^n}{n}$ for $n = 2, 3, \dots$? The points $\frac1{2k}$ accumulate at $0 \in \mathbb{D}$ and $f\left(\frac1{2k}\right) = \frac1{2k}$, so $f(z) = z$ by the identity theorem. Then $f\left(\frac1{2k+1}\right) = \frac1{2k+1} \ne -\frac1{2k+1}$, a contradiction; no such $f$ exists. On the other hand, $f\left(\frac1n\right) = \frac1{n^2}$ is satisfied by $f(z) = z^2$, and by no other analytic function on $\mathbb{D}$.
 
