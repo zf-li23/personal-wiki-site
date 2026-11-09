@@ -1,7 +1,7 @@
 ---
 title: Titrimetric Analysis and Acid–Base Titrations
 description: Modes of titration, primary standards, titer and calculations; activity and concentration constants; distribution fractions, proton conditions, and exact and approximate formulas for pH; preparation of buffers (ionic-strength corrections, Tris and Good's buffers); indicators and mixed indicators; titration of polyprotic acids and bases and of mixed acids, the double-indicator method; the end-point error formula and criteria for feasibility of titration; the Kjeldahl method and titration of amino acids.
-source_hash: 33cc4fbf9a17
+source_hash: 783caf950a88
 ---
 
 Section [6.1.9](/6.1.9) has already treated the Brønsted–Lowry theory of acids and bases, the pH of weak acids, weak bases, and amphoteric species, buffer solutions, and the simplest titration curves ([9.6](/6.1.9#sec-9.6)). This chapter organizes titration as a quantitative method. We first present the modes and calculations of titrimetric analysis (Section 2.1), then explain when activities must replace concentrations (2.2). On the basis of 6.1.9 we then give the rigorous treatment of acid–base equilibria and the criteria for approximations (2.3), physiological and biochemical buffers (2.4), the choice of indicators (2.5), titration curves of polyprotic systems (2.6), the quantitative formula for the end-point error and the feasibility criteria that follow from it (2.7), and finally applications such as the Kjeldahl method and the titration of amino acids (2.8). The distribution fractions of 2.3 and the end-point error formula of 2.7 form the common framework of the next three chapters: complexometric titration ([6.4.3](/6.4.3)), precipitation titration ([6.4.4](/6.4.4)), and redox titration ([6.4.5](/6.4.5)) merely replace the proton by a metal ion, a precipitant, or an electron, and pH by pM or the electrode potential.
@@ -14,9 +14,9 @@ Section [6.1.9](/6.1.9) has already treated the Brønsted–Lowry theory of acid
 
 **Definition 2.1.1** The reagent solution of accurately known concentration that is added from the buret in a titration is called the **titrant**.
 
-By the type of reaction, titrimetric analysis falls into four classes, to each of which this course devotes one chapter:
+By the type of reaction, titrimetric analysis falls into four classes, each treated in one chapter:
 
-| Class | Reaction | Example | In this course |
+| Class | Reaction | Example | Chapter |
 |---|---|---|---|
 | Acid–base titration | Proton transfer | $\ce{H+ + OH- -> H2O}$ | This chapter |
 | Complexometric titration | Complex formation | $\ce{Zn^2+ + Y^4- -> ZnY^2-}$ (Y is EDTA) | [6.4.3](/6.4.3) |
@@ -344,7 +344,7 @@ OCCN1CC[NH+](CCS(=O)(=O)[O-])CC1 4
 | Buffer | $\mathrm{p}K_{\mathrm{a}}$ ($25\,^\circ\mathrm{C}$) | $\mathrm{d}\,\mathrm{p}K_{\mathrm{a}}/\mathrm{d}T$ / $\mathrm{K^{-1}}$ | Buffering range |
 |---|---|---|---|
 | MES | 6.27 | $-0.011$ | 5.5–6.7 |
-| PIPES | 7.14 | $-0.008$ | 6.1–7.5 |
+| PIPES | 6.76 | $-0.008$ | 6.1–7.5 |
 | MOPS | 7.18 | $-0.011$ | 6.5–7.9 |
 | HEPES | 7.56 | $-0.014$ | 6.8–8.2 |
 | Tris | 8.07 | $-0.028$ | 7.1–9.1 |
