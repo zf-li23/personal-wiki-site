@@ -1,6 +1,6 @@
 ---
 title: Chemical Equilibrium
-source_hash: 095b0d5658cc
+source_hash: a01ec8728b44
 ---
 
 [6.1.6](/6.1.6) gave the criterion for the direction of a reaction: at constant temperature and pressure, with no **non-expansion work**, a reaction with $\Delta_{\mathrm{r}}G_{\mathrm{m}} < 0$ can proceed spontaneously. Most reactions, however, do not go to completion but stop at a state in which reactants and products coexist, after which the macroscopic composition no longer changes. This state has two equivalent descriptions. Kinetically ([6.1.7](/6.1.7)), the rates of the forward and reverse reactions are equal; thermodynamically, the **Gibbs free energy** of the system passes through a minimum as a function of the extent of reaction, so that $\Delta_{\mathrm{r}}G_{\mathrm{m}} = 0$. This chapter first describes chemical equilibrium and the equilibrium constant (8.1, 8.2), then derives from thermodynamics the reaction isotherm and $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$ (8.3), which connects the thermodynamic data of Chapter 6 with equilibrium compositions, and finally discusses the effects of concentration, pressure, and temperature on equilibrium (8.4). The standard equilibrium constant and the isotherm of this chapter are the common basis of the four great equilibria that follow (acid–base, complexation, precipitation, and redox, [6.1.9](/6.1.9)–[6.1.12](/6.1.12)). A rigorous treatment of chemical potential, activity coefficients and fugacity, and phase equilibria and the phase rule is given in [Physical Chemistry](/6.3).
@@ -123,7 +123,7 @@ with pure solids, pure liquids, and the solvent not appearing (equivalent to tak
 For example, for $a\mathrm{A(aq)} + b\mathrm{B(aq)} \ce{<=>} g\mathrm{G(aq)} + h\mathrm{H(aq)}$, $K^\circ = \frac{([\mathrm{G}]/c^\circ)^g([\mathrm{H}]/c^\circ)^h}{([\mathrm{A}]/c^\circ)^a([\mathrm{B}]/c^\circ)^b}$, and for $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$, $K^\circ = p_{\ce{CO2}}/p^\circ$. Since $c^\circ = 1\,\mathrm{mol\,L^{-1}}$, the $K^\circ$ of a reaction in solution is numerically equal to $K_c$ in units of $\mathrm{mol\,L^{-1}}$. Gas-phase reactions are different:
 
 $$
-K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{c^\circ RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}.
+K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}.
 $$
 
 **Example 8.2.1** Find $K^\circ$ for $\ce{N2O4(g) <=> 2NO2(g)}$ at $373\,\mathrm{K}$.

@@ -122,7 +122,7 @@ $$
 例如 $a\mathrm{A(aq)} + b\mathrm{B(aq)} \ce{<=>} g\mathrm{G(aq)} + h\mathrm{H(aq)}$ 的 $K^\circ = \frac{([\mathrm{G}]/c^\circ)^g([\mathrm{H}]/c^\circ)^h}{([\mathrm{A}]/c^\circ)^a([\mathrm{B}]/c^\circ)^b}$，$\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$ 的 $K^\circ = p_{\ce{CO2}}/p^\circ$。由于 $c^\circ = 1\,\mathrm{mol\,L^{-1}}$，溶液反应的 $K^\circ$ 在数值上等于以 $\mathrm{mol\,L^{-1}}$ 为单位的 $K_c$。气相反应则不同：
 
 $$
-K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{c^\circ RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}.
+K^\circ = K_p(p^\circ)^{-\Delta\nu_{\mathrm{g}}} = K_c\left(\frac{RT}{p^\circ}\right)^{\Delta\nu_{\mathrm{g}}}.
 $$
 
 **例 8.2.1** 求 $373\,\mathrm{K}$ 时 $\ce{N2O4(g) <=> 2NO2(g)}$ 的 $K^\circ$。

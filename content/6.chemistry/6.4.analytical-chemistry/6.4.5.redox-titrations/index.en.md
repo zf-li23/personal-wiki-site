@@ -1,6 +1,6 @@
 ---
 title: Redox Titrations
-source_hash: 58054551c73a
+source_hash: 9458c7ca25d3
 ---
 
 Redox titrations are based on electron-transfer reactions. They can be used to determine oxidizing or reducing substances directly (iron, copper, hydrogen peroxide, vitamin C, glucose, organic pollutants in water), and also, through a quantitative chemical conversion, substances that are not themselves redox active (calcium via calcium oxalate, magnesium via 8-hydroxyquinoline). [6.1.11](/6.1.11) introduced the **electrode potential** and the **Nernst equation**, and [6.1.12](/6.1.12#sec-12.1) used standard electrode potentials to decide the direction and extent of reactions. In real titration solutions, however, the ionic strength is high and side reactions (precipitation, complex formation, protonation) are present, so standard potentials often lead to wrong conclusions: on the basis of standard potentials $\ce{Cu^2+}$ cannot oxidize $\ce{I-}$, yet the reaction proceeds quantitatively. This chapter applies the method of side-reaction coefficients and conditional constants of [6.4.3](/6.4.3) to electron-transfer reactions. We first introduce the formal potential (Section 5.1) and the conditional equilibrium constant, and discuss the completeness and rate of the reaction (5.2); we then calculate titration curves and choose indicators (5.3); and finally we describe the pretreatment before titration (5.4) and the permanganate, dichromate, and iodine methods (5.5). The chapter is also a direct prerequisite of the potentiometric methods of [6.4.6](/6.4.6): potentiometric titration ([6.4.6](/6.4.6#sec-6.4.5)) measures the titration curves of this chapter with an indicator electrode.
@@ -48,7 +48,7 @@ When $\ce{H+}$ or $\ce{OH-}$ takes part in the half-reaction, its concentration 
 |---|---|---|---|
 | $\ce{Ce^4+}/\ce{Ce^3+}$ | — | $1\,\mathrm{mol\,L^{-1}}$ $\ce{HClO4}$ / $\ce{HNO3}$ / $\ce{H2SO4}$ / HCl | 1.70 / 1.61 / 1.44 / 1.28 |
 | $\ce{Fe^3+}/\ce{Fe^2+}$ | 0.771 | $1\,\mathrm{mol\,L^{-1}}$ $\ce{HClO4}$ / HCl / $\ce{H2SO4}$; $2\,\mathrm{mol\,L^{-1}}$ $\ce{H3PO4}$ | 0.73 / 0.70 / 0.68; 0.46 |
-| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | 1.36 | $1\,\mathrm{mol\,L^{-1}}$ HCl / $3\,\mathrm{mol\,L^{-1}}$ HCl | 1.00 / 1.08 |
+| $\ce{Cr2O7^2-}/\ce{Cr^3+}$ | 1.232 | $1\,\mathrm{mol\,L^{-1}}$ HCl / $3\,\mathrm{mol\,L^{-1}}$ HCl | 1.00 / 1.08 |
 | $\ce{MnO4-}/\ce{Mn^2+}$ | 1.507 | $1\,\mathrm{mol\,L^{-1}}$ $\ce{HClO4}$ | 1.45 |
 | $\ce{I3-}/\ce{I-}$ | 0.536 | $0.5\,\mathrm{mol\,L^{-1}}$ $\ce{H2SO4}$ | 0.545 |
 | $\ce{Sn^4+}/\ce{Sn^2+}$ | 0.151 | $1\,\mathrm{mol\,L^{-1}}$ HCl | 0.14 |
@@ -353,7 +353,7 @@ The advantages of permanganometry are its strong oxidizing power and wide applic
 
 **Definition 5.5.2 (Dichromate Titration)** A redox titration with $\ce{K2Cr2O7}$ as titrant is called a **dichromate titration** (dichromatometry).
 
-$\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$, $E^\circ = 1.36\,\mathrm{V}$. $\ce{K2Cr2O7}$ is a somewhat weaker oxidant than $\ce{KMnO4}$ but has several outstanding advantages. It is easily purified and, after drying at $140$–$150\,^\circ\mathrm{C}$, can be used as a primary standard to prepare the standard solution directly. Its solutions are very stable and can be stored for a long time. In $1\,\mathrm{mol\,L^{-1}}$ HCl, $E^{\circ\prime} = 1.00\,\mathrm{V}$, which is lower than $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.358\,\mathrm{V}$, so $\ce{Cl-}$ is not oxidized at room temperature and titrations can be carried out in HCl medium. The drawbacks are that the reduction product $\ce{Cr^3+}$ is green, so an indicator (sodium diphenylamine sulfonate) is needed, and that Cr(VI) is toxic and carcinogenic, so waste solutions must be reduced to Cr(III) before disposal.
+$\ce{Cr2O7^2- + 14H+ + 6e- <=> 2Cr^3+ + 7H2O}$, $E^\circ = 1.232\,\mathrm{V}$. $\ce{K2Cr2O7}$ is a somewhat weaker oxidant than $\ce{KMnO4}$ but has several outstanding advantages. It is easily purified and, after drying at $140$–$150\,^\circ\mathrm{C}$, can be used as a primary standard to prepare the standard solution directly. Its solutions are very stable and can be stored for a long time. In $1\,\mathrm{mol\,L^{-1}}$ HCl, $E^{\circ\prime} = 1.00\,\mathrm{V}$, which is lower than $E^\circ(\ce{Cl2}/\ce{Cl-}) = 1.358\,\mathrm{V}$, so $\ce{Cl-}$ is not oxidized at room temperature and titrations can be carried out in HCl medium. The drawbacks are that the reduction product $\ce{Cr^3+}$ is green, so an indicator (sodium diphenylamine sulfonate) is needed, and that Cr(VI) is toxic and carcinogenic, so waste solutions must be reduced to Cr(III) before disposal.
 
 1. Determination of iron: this is the most important application of the dichromate titration and the standard method for total iron in iron ore. The sample is dissolved in HCl and prereduced with $\ce{SnCl2}$ (or by the mercury-free $\ce{SnCl2}$–$\ce{TiCl3}$ method), a mixed $\ce{H2SO4}$–$\ce{H3PO4}$ acid is added, and the solution is titrated with standard $\ce{K2Cr2O7}$ solution, with sodium diphenylamine sulfonate as indicator, until the color changes from green to purple:
 
