@@ -30,7 +30,7 @@ source_hash: 1e35a6b0eab9
 $$
 \boldsymbol{h}_t = f(\boldsymbol{h}_{t-1}, \boldsymbol{x}_t; \boldsymbol{\theta}), \qquad \hat{\boldsymbol{y}}_t = g(\boldsymbol{h}_t; \boldsymbol{\theta}),
 $$
-其中状态 $\boldsymbol{h}_t$ 概括了 $\boldsymbol{x}_1, \dots, \boldsymbol{x}_t$ 中对未来有用的一切信息。把递推式展开 $T$ 步，就把 $\boldsymbol{h}_T$ 写成 $f$ 的 $T$ 个副本的复合，$\boldsymbol{h}_T = f(f(\cdots f(\boldsymbol{h}_0, \boldsymbol{x}_1)\cdots, \boldsymbol{x}_{T-1}), \boldsymbol{x}_T)$，所以展开后的系统是一个深度**前馈网络**，其深度就是序列长度，各层共享参数 $\boldsymbol{\theta}$。这两点都很重要：共享参数使同一个模型适用于任意长度，而深度既说明了循环网络的能力，也说明了训练它们的困难。**Markov 模型**（[4.6.8](/4.6.8)）的状态是最近的 $n$ 个符号，与 $n$ 阶 Markov 模型相比，循环网络的状态是一个连续向量，原则上可以保留任意久远之前的信息。
+其中状态 $\boldsymbol{h}_t$ 概括了 $\boldsymbol{x}_1, \dots, \boldsymbol{x}_t$ 中对未来有用的一切信息。把递推式展开 $T$ 步，就把 $\boldsymbol{h}_T$ 写成 $f$ 的 $T$ 个副本的复合，$\boldsymbol{h}_T = f(f(\cdots f(\boldsymbol{h}_0, \boldsymbol{x}_1)\cdots, \boldsymbol{x}_{T-1}), \boldsymbol{x}_T)$，所以展开后的系统是一个深度**前馈网络**，其深度就是序列长度，各层共享参数 $\boldsymbol{\theta}$。这两点都很重要：共享参数使同一个模型适用于任意长度，而深度既说明了循环网络的能力，也说明了训练它们的困难。$n$ 阶 **Markov 模型**（[4.6.8](/4.6.8)）的状态是最近的 $n$ 个符号，相比之下，循环网络的状态是一个连续向量，原则上可以保留任意久远之前的信息。
 
 ## 5.2. 循环神经网络
 
@@ -359,11 +359,11 @@ $$
 
 ### 5.6.2. 层次 softmax
 
-层次 softmax（hierarchical softmax）（Morin 与 Bengio 2005；Mnih 与 Hinton 2009）把词表排成一棵**二叉树**的叶子，用沿着从根到目标词的路径的一系列二元决策取代扁平的 softmax。每个内部结点 $n$ 有一个向量 $\boldsymbol{u}_n$，在 $n$ 处向左的概率是 $\sigma(\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c)$，向右的概率是 $\sigma(-\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c) = 1 - \sigma(\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c)$。一个词的概率是其路径上各决策的概率之积，
+层次 softmax（hierarchical softmax）（Morin 与 Bengio 2005；Mnih 与 Hinton 2009）把词表排成一棵**二叉树**的叶子，用沿着从根到目标词的路径的一系列二元决策取代扁平的 softmax。每个内部节点 $n$ 有一个向量 $\boldsymbol{u}_n$，在 $n$ 处向左的概率是 $\sigma(\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c)$，向右的概率是 $\sigma(-\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c) = 1 - \sigma(\boldsymbol{u}_n^{\mathsf T}\boldsymbol{v}_c)$。一个词的概率是其路径上各决策的概率之积，
 $$
 \mathbb{P}(w \mid c) = \prod_{j=1}^{L(w)}\sigma\bigl(\pm\boldsymbol{u}_{n(w, j)}^{\mathsf T}\boldsymbol{v}_c\bigr),
 $$
-其中路径的第 $j$ 个结点 $n(w, j)$ 处向左转取 $+$，向右转取 $-$。由于每个结点处两个分支的概率之和为 $1$，这些概率在叶子上的总和也为 $1$，无需任何归一化。树有 $\lvert V\rvert - 1$ 个内部结点，所以参数个数与扁平 softmax 的输出向量大致相同，但一个训练对的代价是 $O(\log\lvert V\rvert)$ 而不是 $O(\lvert V\rvert)$。word2vec 使用按词频构造的 **Huffman 树**，它使高频词的路径较短，并使期望代价最小。这条由相互依赖的决策组成的顺序路径在 GPU 上并行性很差，这是负采样更流行的原因之一。
+其中路径的第 $j$ 个节点 $n(w, j)$ 处向左转取 $+$，向右转取 $-$。由于每个节点处两个分支的概率之和为 $1$，这些概率在叶子上的总和也为 $1$，无需任何归一化。树有 $\lvert V\rvert - 1$ 个内部节点，所以参数个数与扁平 softmax 的输出向量大致相同，但一个训练对的代价是 $O(\log\lvert V\rvert)$ 而不是 $O(\lvert V\rvert)$。word2vec 使用按词频构造的 **Huffman 树**，它使高频词的路径较短，并使期望代价最小。这条由相互依赖的决策组成的顺序路径在 GPU 上并行性很差，这是负采样更流行的原因之一。
 
 ### 5.6.3. 负采样
 
@@ -507,7 +507,7 @@ wider -> ['wi', 'd', 'e', 'r', '</w>']
 另外两种算法也得到了广泛使用。
 
 - WordPiece（Schuster 与 Nakajima 2012；BERT 使用，词表有 $30{,}522$ 个词元）像 BPE 一样通过合并构建词表，但选择的是使训练数据在符号的一元模型下的似然增加最多的对，这相当于 $\#(ab)/(\#(a)\#(b))$ 最大，是一个类似 PMI 的准则；它用 `##` 标记词内部的片段，如 "token ##ization"，并按最长匹配贪心地分词。
-- 一元语言模型分词（unigram language model）分词器（Kudo 2018）则反其道而行之：从一个很大的候选子词集合出发，把切分建模为独立抽取的子词序列，其概率为 $p(s)$，用 EM 算法（[3.5.6](/3.5.6)）估计，并反复删除那些删除后使似然降低最少的子词。文本按最可能的切分来分词，该切分由 **Viterbi 算法**求出；改为对切分进行采样（子词正则化（subword regularization））则是一种**数据增强**，使模型对切分方式具有稳健性。
+- 一元语言模型分词（unigram language model）方法（Kudo 2018）则反其道而行之：从一个很大的候选子词集合出发，把切分建模为独立抽取的子词序列，其概率为 $p(s)$，用 EM 算法（[3.5.6](/3.5.6)）估计，并反复删除那些删除后使似然降低最少的子词。文本按最可能的切分来分词，该切分由 **Viterbi 算法**求出；改为对切分进行采样（子词正则化（subword regularization））则是一种**数据增强**，使模型对切分方式具有稳健性。
 
 SentencePiece（Kudo 与 Richardson 2018）是直接在原始文本上实现 BPE 与一元模型的库：它把输入看作包括空格在内的 Unicode 字符序列，并把空格替换为可见符号 "▁"，所以不需要特定语言的预分词，解码也是无损的；这对没有空格的中文与日文很重要。T5、LLaMA 1 与 2 以及 Gemma 使用 SentencePiece 分词器。
 
