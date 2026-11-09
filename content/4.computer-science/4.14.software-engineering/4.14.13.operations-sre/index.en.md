@@ -315,7 +315,7 @@ http_request_duration_seconds_count 4.0
 http_request_duration_seconds_sum 1.1400000000000001
 ```
 
-A counter only increases; the histogram counts observations at or below each bucket bound `le`, which lets the server estimate percentiles later. In a real service the same objects are updated in the request handlers, and a web framework integration serves the text at `/metrics`.
+A counter only increases; the histogram counts observations at or below each bucket bound `le`, which lets the server estimate percentiles later. (The library also exports a `_created` timestamp gauge for each series; it is omitted from the output above.) In a real service the same objects are updated in the request handlers, and a web framework integration serves the text at `/metrics`.
 
 ### 13.5.2. Collection and Storage
 
