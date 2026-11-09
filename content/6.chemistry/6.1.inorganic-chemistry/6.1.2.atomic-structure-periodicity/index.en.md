@@ -1,7 +1,7 @@
 ---
 title: Atomic Structure and Periodicity
 description: The nuclear atom; the hydrogen spectrum, Bohr theory and a review of wave–particle duality; chemical representations of atomic orbitals (real orbitals, radial nodes and nodal planes, electron clouds, angular distribution plots); the four quantum numbers; shielding, effective nuclear charge and Slater's rules, penetration and energy level crossing; electron configurations, periods and groups, blocks; periodic trends of atomic radius, lanthanide contraction, ionization energy, electron affinity and electronegativity.
-source_hash: 40d558bba001
+source_hash: 9249675d61d7
 ---
 
 In a chemical reaction the nucleus is unchanged and only the state of the extranuclear electrons changes, so atomic structure is the starting point for understanding chemical bonds, molecular structure and the properties of the elements. The quantum-mechanical treatment of the hydrogen atom (the solution of the Schrödinger equation, quantum numbers, electron clouds and radial probability distributions, electron spin, the Pauli principle and the basic rules for electron configurations) has already been given systematically in the quantum part of physics ([5.5.3](/5.5.3), [5.5.4](/5.5.4)). Sections 2.1–2.2 of this chapter only review it and concentrate on how atomic orbitals are used in chemistry: real atomic orbitals, angular distribution plots with their signs, nodes and nodal planes, which are the language of valence bond theory and molecular orbital theory in the next chapter ([6.1.3](/6.1.3)). Section 2.3 treats many-electron atoms: how shielding and penetration determine the order of energy levels, and from this the electron configurations and the structure of the periodic table. Section 2.4 uses the effective nuclear charge to explain the periodic variation of atomic radius, ionization energy, electron affinity and electronegativity, regularities that run through all later chapters on the properties of the elements ([6.1.13](/6.1.13)–[6.1.15](/6.1.15)). The self-consistent field method for many-electron atoms, atomic term symbols and relativistic effects belong to structural chemistry ([6.2](/6.2)).
@@ -111,7 +111,7 @@ Plotting $\lvert Y\rvert^2$ in the same way gives the angular distribution plot 
 
 ![Angular distributions in the xz plane: the orbital angular function Y (top, with signs) and the electron-cloud angular function |Y|² (bottom) for s, pz, dz² and dxz](./plots/angular-distribution.py)
 
-![Angular distribution surfaces |Y(θ, φ)| of the three real p orbitals and five real d orbitals, coloured by the sign of Y (red positive, blue negative)](./plots/real-orbitals-3d.py)
+![Angular distribution surfaces |Y(θ, φ)| of the three real p orbitals and five real d orbitals, colored by the sign of Y (red positive, blue negative)](./plots/real-orbitals-3d.py)
 
 Two points should be noted about these plots:
 
@@ -191,7 +191,7 @@ Within the same shell, s electrons penetrate strongly and are shielded somewhat 
 | $Z_{\mathrm{eff}}(2\mathrm{s})$ (Clementi) | 2.58 | 3.22 | 3.85 | 4.49 | 5.13 | 5.76 |
 | $Z_{\mathrm{eff}}(2\mathrm{p})$ (Clementi) | 2.42 | 3.14 | 3.83 | 4.45 | 5.10 | 5.76 |
 
-From C to N the $Z_{\mathrm{eff}}$ of 2p increases by 0.69, but from N to O only by 0.62: the additional 2p electron of O must enter a 2p orbital that already holds an electron, and the repulsion between two electrons in the same orbital is stronger, so more of the increase in nuclear charge is cancelled.
+From C to N the $Z_{\mathrm{eff}}$ of 2p increases by 0.69, but from N to O only by 0.62: the additional 2p electron of O must enter a 2p orbital that already holds an electron, and the repulsion between two electrons in the same orbital is stronger, so more of the increase in nuclear charge is canceled.
 
 Penetration and shielding together determine the order of energy levels in many-electron atoms. For the same $n$, the smaller $l$ is, the stronger the penetration, the weaker the shielding and the lower the energy, so the levels of one shell split into $E_{n\mathrm{s}} < E_{n\mathrm{p}} < E_{n\mathrm{d}} < E_{n\mathrm{f}}$ (energy level splitting). When the penetration effect is strong enough, the energy of an orbital with larger $n$ can even be lower than that of one with smaller $n$:
 
@@ -266,7 +266,7 @@ The ds block is the usual division in Chinese textbooks; IUPAC counts Groups 11 
 
 **Definition 2.3.5** The elements of the s and p blocks (Groups 1, 2 and 13–18) are called **main-group elements**. Elements whose atoms have an incompletely filled d subshell, or that can form cations with an incompletely filled d subshell, are called **transition elements** (transition metals), that is, Groups 3–11; Chinese textbooks customarily call the d and ds blocks together (Groups 3–12) the transition elements. The 15 elements from La to Lu are called **lanthanoids** and the 15 elements from Ac to Lr **actinoids**; their last electron mostly enters the $(n-2)\mathrm{f}$ subshell, and they are also called **inner transition elements**.
 
-Groups of the periodic table are numbered in two ways. IUPAC recommends numbering the 18 columns as Groups 1–18; the traditional Chinese-textbook notation labels main groups A and subgroups B (groups IA–VIIIA in older Chinese textbooks), and the correspondence is:
+Groups of the periodic table are numbered in two ways. IUPAC recommends numbering the 18 columns as Groups 1–18; the traditional Chinese-textbook notation labels main groups A and subgroups B, and the correspondence is:
 
 | IUPAC | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8–10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

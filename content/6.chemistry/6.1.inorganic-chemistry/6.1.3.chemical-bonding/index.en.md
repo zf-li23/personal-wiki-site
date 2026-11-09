@@ -1,6 +1,6 @@
 ---
 title: Chemical Bonding and Molecular Structure
-source_hash: 1ae69d6a47c3
+source_hash: 26adb2f0c162
 ---
 
 What holds atoms together in molecules and crystals, and what shape the resulting molecules have, are among the central questions of chemistry. The strong interactions between adjacent atoms (or ions) in a molecule or crystal are called *chemical bonds*, with bond energies generally in the range $100$–$800\,\mathrm{kJ\,mol^{-1}}$; the van der Waals forces and hydrogen bonds between molecules are weaker by one to two orders of magnitude and are left to the next chapter. This chapter presents several theories of chemical bonding in historical and logical order: the ionic bond theory (Kossel); the classical valence bond theory centered on the shared electron pair (Lewis); the modern valence bond theory that explains the shared pair by quantum mechanics (Heitler–London, Pauling) and its extension, hybrid orbital theory; valence shell electron pair repulsion theory, which predicts molecular geometry from electron-pair repulsion alone; and molecular orbital theory, which regards electrons as belonging to the whole molecule. Finally we discuss bond polarity and molecular polarity.
@@ -47,7 +47,7 @@ Finally, the radius of the ion. The electron cloud of an ion has no definite bou
 
 **Definition 3.1.2 (Ionic Radius)** The internuclear distance $d$ between adjacent cations and anions in an ionic crystal is regarded as the sum of the two ionic radii, $d = r_+ + r_-$; the radii obtained by apportioning the internuclear distance between the ions according to a convention (for example taking $r(\ce{O^2-}) = 140\,\mathrm{pm}$) are called **ionic radii**.
 
-The internuclear distance can be determined accurately by X-ray diffraction, but the way it is apportioned is a convention. The commonly used sets are the Pauling radii and the Shannon effective ionic radii (1976), the latter giving separate values for different coordination numbers. In this course Shannon radii (six-coordinate) are used throughout. The trends are as follows:
+The internuclear distance can be determined accurately by X-ray diffraction, but the way it is apportioned is a convention. The commonly used sets are the Pauling radii and the Shannon effective ionic radii (1976), the latter giving separate values for different coordination numbers. In this chapter Shannon radii (six-coordinate) are used throughout. The trends are as follows:
 
 1. For ions of the same group and charge, the radius increases down the group: $\ce{F-}$ $133$ < $\ce{Cl-}$ $181$ < $\ce{Br-}$ $196$ < $\ce{I-}$ $220\,\mathrm{pm}$.
 2. For cations of the same period with the same electron configuration, the higher the charge the smaller the radius: $\ce{Na+}$ $102$ > $\ce{Mg^2+}$ $72$ > $\ce{Al^3+}$ $54\,\mathrm{pm}$ (the nuclear charge increases, and so does the **effective nuclear charge**).

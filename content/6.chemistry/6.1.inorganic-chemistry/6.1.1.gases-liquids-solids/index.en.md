@@ -1,7 +1,7 @@
 ---
 title: Gases, Liquids and Solids
 description: Using the ideal gas equation in chemical calculations; partial pressure, Dalton's law and mole fraction; energy distribution and the Boltzmann factor; effusion and Graham's law; real gases, critical parameters, phase diagrams and supercritical fluids; saturated vapor pressure and the Clausius–Clapeyron equation; boiling, supercooling and liquid crystals; crystals, lattices and unit cells, the seven crystal systems and 14 Bravais lattices; amorphous solids.
-source_hash: df7aecea118c
+source_hash: 003f39592bdb
 ---
 
 The macroscopic properties of matter are determined by the particles that compose it and the interactions between them, so inorganic chemistry begins with the three states of aggregation. In a gas the molecules are far apart and move almost freely; in a liquid they are in contact but can flow past one another; in a crystal the particles are arranged periodically and regularly. The kinetic theory of gases and real gases have already been treated systematically in the thermal physics part of physics ([5.2.1](/5.2.1), [5.2.2](/5.2.2)), so this chapter only reviews them and concentrates on their uses in chemistry: finding amounts of substance and molar masses from the equation of state, partial pressures in gas mixtures, the connection between energy distributions and reaction rates, and isotope separation. For liquids we discuss how the saturated vapor pressure varies with temperature (the Clausius–Clapeyron equation) and phase diagrams, which are an introduction to the phase-equilibrium theory of physical chemistry ([6.3](/6.3)). For solids we introduce the language of lattices and unit cells, which [6.1.4](/6.1.4) then uses to describe metallic, ionic and molecular crystals; the systematic theory of crystal symmetry and diffraction belongs to structural chemistry ([6.2](/6.2)). The Boltzmann factor of this chapter will be used in [6.1.7](/6.1.7) to explain the activation energy, and the condition for phase equilibrium will be fully understood only after Gibbs energy is introduced in [6.1.6](/6.1.6).
@@ -10,7 +10,7 @@ The macroscopic properties of matter are determined by the particles that compos
 
 ### 1.1.1. The Ideal Gas Equation of State
 
-Four quantities describe the state of a fixed amount of gas: the pressure $p$ (chemists usually call it pressure, with the SI unit $\mathrm{Pa}$), the volume $V$, the temperature $T$ and the amount of substance $n$. Boyle's law ($pV$ is constant at fixed $T$ and $n$), Charles's law ($V \propto T$ at fixed $p$ and $n$) and Avogadro's law (equal volumes of gases at the same temperature and pressure contain equal numbers of molecules, $V \propto n$), established between the 17th and 19th centuries, combine to give the **equation of state** of the **ideal gas** ([5.2.1](/5.2.1#sec-1.1.6)):
+Four quantities describe the state of a fixed amount of gas: the pressure $p$ (SI unit $\mathrm{Pa}$), the volume $V$, the temperature $T$ and the amount of substance $n$. Boyle's law ($pV$ is constant at fixed $T$ and $n$), Charles's law ($V \propto T$ at fixed $p$ and $n$) and Avogadro's law (equal volumes of gases at the same temperature and pressure contain equal numbers of molecules, $V \propto n$), established between the 17th and 19th centuries, combine to give the **equation of state** of the **ideal gas** ([5.2.1](/5.2.1#sec-1.1.6)):
 
 $$
 pV = nRT, \qquad pV_{\mathrm{m}} = RT,
@@ -348,7 +348,7 @@ In each crystal system, besides the primitive cell, some also admit centered non
 | Monoclinic | Primitive monoclinic mP, base-centered monoclinic mC |
 | Triclinic | Primitive triclinic aP |
 
-![The 14 Bravais lattices (conventional cells); lattice points at the corners are shown in grey, centring points in colour](./plots/bravais-lattices.py)
+![The 14 Bravais lattices (conventional cells); lattice points at the corners are shown in gray, centering points in color](./plots/bravais-lattices.py)
 
 Not every combination of the 7 crystal systems with the 4 centering types gives a new lattice. For example, "base-centered tetragonal" can be re-described by a primitive tetragonal cell of half the volume, identical to tP; "base-centered cubic" destroys the four threefold axes and is not a cubic lattice. Frankenheim (1842) listed 15 lattices, and Bravais (1848) proved that two of them are the same, leaving 14.
 

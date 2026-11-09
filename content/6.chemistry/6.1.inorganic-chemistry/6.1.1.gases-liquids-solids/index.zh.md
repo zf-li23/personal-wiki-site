@@ -101,7 +101,7 @@ $$
 
 解：$298.15\,\mathrm{K}$ 时 $x = 20.17$，$\mathrm{e}^{-x} = 1.74 \times 10^{-9}$；$308.15\,\mathrm{K}$ 时 $x = 19.52$，$\mathrm{e}^{-x} = 3.35 \times 10^{-9}$。温度只升高 $10\,\mathrm{K}$（平均动能只增加 $3\%$），高能分子的分数却几乎加倍（按三维公式也是 $1.9$ 倍）。这正是许多反应"温度每升高 $10\,\mathrm{K}$ 速率增大 2—4 倍"的原因，[6.1.7](/6.1.7) 将由此引出活化能与 Arrhenius 方程。
 
-![Distribution of molecular translational energy at two temperatures. The shaded tails are the fractions with E ≥ E0 = 50 kJ/mol; the inset shows that a 10 K rise nearly doubles this fraction](./plots/energy-distribution.py)
+![两个温度下分子平动能的分布。阴影部分是 E ≥ E0 = 50 kJ/mol 的分子分数；插图表明温度升高 10 K 使这一分数几乎加倍](./plots/energy-distribution.py)
 
 ### 1.1.4. 扩散与泻流
 
@@ -165,7 +165,7 @@ $$
 
 **定义 1.1.4（相图）** 以温度与压力为坐标，表示纯物质在各种条件下以哪一相稳定存在、哪些相可以平衡共存的图称为该物质的**相图**。图中的线是两相平衡线（液–气线即饱和蒸气压曲线，固–气线为升华曲线，固–液线为熔化曲线），三条线交于一点，在这一温度与压力下固、液、气三相平衡共存，称为**三相点**。
 
-![Phase diagram of CO2 (schematic; logarithmic pressure axis). At 101.325 kPa solid CO2 sublimes at 194.7 K instead of melting, because the triple-point pressure (518 kPa) is higher than atmospheric pressure](./plots/co2-phase-diagram.py)
+![CO2 的相图（示意图，压力轴为对数坐标）。101.325 kPa 下固态 CO2 在 194.7 K 升华而不熔化，因为三相点压力（518 kPa）高于大气压](./plots/co2-phase-diagram.py)
 
 $\ce{CO2}$ 的三相点为 $216.6\,\mathrm{K}$、$518\,\mathrm{kPa}$，高于大气压，所以常压下固体 $\ce{CO2}$（干冰）不熔化，而是在 $194.7\,\mathrm{K}$（$-78.5\,{}^\circ\mathrm{C}$）直接升华，可作致冷剂。水的三相点为 $273.16\,\mathrm{K}$、$611.7\,\mathrm{Pa}$，常压下冰先熔化；水的熔化曲线斜率为负（冰的密度比水小，加压使冰熔化），$\ce{CO2}$ 与绝大多数物质的熔化曲线斜率为正。液–气线终止于临界点（$\ce{CO2}$：$304.1\,\mathrm{K}$、$7.38\,\mathrm{MPa}$），在临界点以上液体与气体没有区别。
 
@@ -223,7 +223,7 @@ $$
 
 式 (1.1) 说明 $\ln p$ 与 $1/T$ 成直线关系，斜率为 $-\Delta_{\mathrm{vap}}H_{\mathrm{m}}/R$：测出不同温度的蒸气压作图（或做线性回归），就能求出蒸发焓。教材中常写成常用对数的形式 $\lg p = -\dfrac{\Delta_{\mathrm{vap}}H_{\mathrm{m}}}{2.303R}\cdot\dfrac{1}{T} + B$（$2.303 = \ln 10$）。实际的 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}$ 随温度缓慢减小，精确的蒸气压数据常用经验的 Antoine 方程 $\lg p = A - \frac{B}{T + C}$ 拟合，在不太宽的温度范围内它与直线几乎重合。把 $\Delta_{\mathrm{vap}}H_{\mathrm{m}}$ 换成摩尔升华焓 $\Delta_{\mathrm{sub}}H_{\mathrm{m}}$，同样的公式描述固体的蒸气压（相图中的升华曲线）。
 
-![ln(p/kPa) against 1000 K/T for water, ethanol and benzene, computed from Antoine equations. The lines are nearly straight with slope −ΔvapHm/R; the dashed line p = 101.325 kPa crosses them at the normal boiling points](./plots/vapor-pressure.py)
+![水、乙醇与苯的 ln(p/kPa) 对 1000 K/T 作图，由 Antoine 方程算出。各线近似为直线，斜率为 −ΔvapHm/R；虚线 p = 101.325 kPa 与各线的交点对应正常沸点](./plots/vapor-pressure.py)
 
 **例 1.2.1** 苯酚的正常沸点为 $455.1\,\mathrm{K}$，$\Delta_{\mathrm{vap}}H_{\mathrm{m}} = 48.14\,\mathrm{kJ\,mol^{-1}}$。外压降至 $13.33\,\mathrm{kPa}$ 时苯酚在多少度沸腾？
 
@@ -347,7 +347,7 @@ CCCCCc1ccc(cc1)-c1ccc(cc1)C#N 5CB
 | 单斜 | 简单单斜 mP、底心单斜 mC |
 | 三斜 | 简单三斜 aP |
 
-![The 14 Bravais lattices (conventional cells); lattice points at the corners are shown in grey, centring points in colour](./plots/bravais-lattices.py)
+![14 种 Bravais 点阵（惯用晶胞）；顶点上的点阵点用灰色表示，带心的点阵点用彩色表示](./plots/bravais-lattices.py)
 
 7 个晶系与 4 种带心形式的组合并不都给出新的点阵。例如"底心四方"可以重新选取一个体积减半的简单四方晶胞，与 tP 相同；"底心立方"破坏了 4 条三重轴，不是立方点阵。Frankenheim（1842）列出过 15 种，Bravais（1848）证明了其中两种相同，只有 14 种。
 

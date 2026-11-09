@@ -1,7 +1,7 @@
 ---
 title: The Phase Rule and One-Component Systems
 description: Phases and the condition for phase equilibrium; number of species, independent reactions, concentration restrictions and the number of components; the variance and the derivation of the Gibbs phase rule, conditional variance and the generalized phase rule; the Clapeyron and Clausius–Clapeyron equations (with the temperature dependence of the enthalpy of vaporization), solid–liquid equilibrium and the effect of external pressure on vapor pressure; first-order and second-order transitions, the Ehrenfest equations and lambda transitions; the phase diagram of water, the triple point and the freezing point, high-pressure ices, CO₂ and supercritical fluids.
-source_hash: 3bb2011c5a22
+source_hash: 1d026431f98d
 ---
 
 Dissolution, distillation, crystallization, extraction, metallurgy, and even the gel–liquid-crystal transition of a cell membrane are all processes in which a multiphase system approaches equilibrium. The previous chapter dealt with chemical equilibrium; this chapter and the next deal with phase equilibrium. The same thermodynamic principle applies, now to the exchange of matter between phases: at equilibrium, each substance has the same **chemical potential** in every phase in which it is present ([6.3.4](/6.3.4)). We begin with the Gibbs phase rule, a counting rule obeyed by every system at phase equilibrium. It involves no specific substance, yet it tells us how many phases can coexist at most and how many intensive variables are needed to fix the state of a system. We then use the equality of chemical potentials to derive the equation for the two-phase equilibrium line of a pure substance (the Clapeyron equation), which puts the Clausius–Clapeyron equation of [6.1.1](/6.1.1#sec-1.2.2) on a rigorous footing and clarifies its approximations and corrections. Next we classify phase transitions according to the continuity of the derivatives of the chemical potential, which covers the ferromagnetic and superconducting transitions met in physics ([5.3.8](/5.3.8), [5.3.9](/5.3.9)). Finally we learn to read the phase diagram of a one-component system. [6.3.9](/6.3.9) applies the phase rule and the methods of this chapter to two- and three-component systems; the effect of surfaces and curved interfaces on phase equilibrium (the Kelvin equation) is left to [6.3.19](/6.3.19).
@@ -139,7 +139,7 @@ $$
 \mathrm{d}\mu^* = -S_{\mathrm{m}}\,\mathrm{d}T + V_{\mathrm{m}}\,\mathrm{d}p .
 $$
 
-The slope of a two-phase equilibrium line is given by the *Clapeyron equation*, which Clapeyron obtained in 1834 while extending Carnot's work, and which Clausius later derived rigorously from the second law of thermodynamics.
+The slope of a two-phase equilibrium line is given by the **Clapeyron equation**, which Clapeyron obtained in 1834 while extending Carnot's work, and which Clausius later derived rigorously from the second law of thermodynamics.
 
 **Theorem 8.3.1 (Clapeyron equation)** When phases $\alpha$ and $\beta$ of a pure substance coexist in equilibrium, the rate of change of the equilibrium pressure with temperature is
 

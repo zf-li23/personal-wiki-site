@@ -94,7 +94,7 @@ $\lvert\psi\rvert^2$ 是电子在核外某点附近单位体积内出现的概�
 
 例如 2s 轨道有一个径向节点（$r = 2a_0$），3s 有两个（$r = 1.90a_0$ 与 $7.10a_0$）；$\mathrm{p}_z$ 轨道的节面是 $xy$ 平面，$\mathrm{p}_x$、$\mathrm{p}_y$ 分别是 $yz$、$xz$ 平面；$\mathrm{d}_{xy}$ 的两个节面是 $xz$ 与 $yz$ 平面，$\mathrm{d}_{x^2-y^2}$ 的是 $x = \pm y$ 两个平面，而 $\mathrm{d}_{z^2}$ 的两个角节面是顶角为 $2 \times 54.7^\circ$ 的圆锥面（$3\cos^2\theta = 1$）。节点越多，波函数振荡越剧烈，动能越大，这与一维势阱中驻波的规律相同（[5.5.3](/5.5.3)）。
 
-![Wave functions ψ of hydrogen orbitals in the xz plane (red positive, blue negative; length unit a0). Radial nodes appear as circles (2s, 3s, 3p) and nodal planes or cones as straight lines through the nucleus (2p, 3p, 3d)](./plots/orbital-maps.py)
+![氢原子轨道的波函数 ψ 在 xz 平面内的分布（红色为正，蓝色为负；长度单位 a0）。径向节点表现为圆（2s、3s、3p），节面或节锥面表现为过原子核的直线（2p、3p、3d）](./plots/orbital-maps.py)
 
 径向概率密度反映了电子分布的层次性：$n$ 越大，主峰离核越远。$l = n - 1$ 的轨道（1s、2p、3d、…）只有一个极大，位于 $r = n^2a_0$（对氢，2p 在 $212\,\mathrm{pm}$、3d 在 $476\,\mathrm{pm}$）；其他轨道的最外一个极大更远一些，2s 约在 $5.2a_0$、3s 约在 $13.1a_0$。同时，$n$ 相同时 $l$ 越小，径向分布在主峰以内的小峰越多、伸得离核越近：
 
@@ -108,9 +108,9 @@ $\lvert\psi\rvert^2$ 是电子在核外某点附近单位体积内出现的概�
 
 把 $\lvert Y\rvert^2$ 按同样的方法作图，得到电子云的角度分布图。两种图有两点不同：电子云角度分布图没有正负号；平方使 $\lvert Y\rvert$ 较小的方向相对更小，所以电子云角度分布图的各瓣比原子轨道角度分布图更"瘦"，更集中在极大值的方向上。
 
-![Angular distributions in the xz plane: the orbital angular function Y (top, with signs) and the electron-cloud angular function |Y|² (bottom) for s, pz, dz² and dxz](./plots/angular-distribution.py)
+![xz 平面内的角度分布：s、pz、dz² 与 dxz 的轨道角度函数 Y（上排，带正负号）和电子云角度函数 |Y|²（下排）](./plots/angular-distribution.py)
 
-![Angular distribution surfaces |Y(θ, φ)| of the three real p orbitals and five real d orbitals, coloured by the sign of Y (red positive, blue negative)](./plots/real-orbitals-3d.py)
+![三个实 p 轨道与五个实 d 轨道的角度分布曲面 |Y(θ, φ)|，按 Y 的符号着色（红色为正，蓝色为负）](./plots/real-orbitals-3d.py)
 
 关于这些图有两点要注意：
 
@@ -261,7 +261,7 @@ Cr、Cu 等的例外可以用半满、全满的稳定性理解；但这只是经
 
 ds 区是中国教材的习惯分法，IUPAC 把 11、12 族也算作 d 区。
 
-![Blocks of the periodic table: s block (groups 1–2 and He), p block (13–18), d block (3–10), ds block (11–12) and f block (lanthanoids and actinoids). Above the columns are the IUPAC group numbers 1–18 and the traditional A/B labels](./plots/periodic-table-blocks.py)
+![周期表的分区：s 区（1—2 族与 He）、p 区（13—18 族）、d 区（3—10 族）、ds 区（11—12 族）与 f 区（镧系与锕系）。各列上方是 IUPAC 族号 1–18 与传统的 A/B 族号](./plots/periodic-table-blocks.py)
 
 **定义 2.3.5** s 区与 p 区的元素（1、2、13—18 族）称为**主族元素**。原子具有未充满的 d 亚层、或能形成具有未充满 d 亚层的阳离子的元素称为**过渡元素**（过渡金属），即 3—11 族；中国教材习惯把 d 区与 ds 区（3—12 族）统称为过渡元素。从 La 到 Lu 的 15 种元素称为**镧系元素**，从 Ac 到 Lr 的 15 种元素称为**锕系元素**；它们的最后一个电子大多填入 $(n-2)\mathrm{f}$ 亚层，又称**内过渡元素**。
 
@@ -286,7 +286,7 @@ ds 区是中国教材的习惯分法，IUPAC 把 11、12 族也算作 d 区。
 
 原子的电子层结构呈周期性变化，与之直接相关的原子参数——原子半径、电离能、电子亲和能、电负性——也呈周期性变化。它们可以统一地用两个因素解释：电子层数（$n$）与价电子感受到的有效核电荷 $Z_{\mathrm{eff}}$。
 
-![Periodic trends for Z = 1–56: atomic radius (covalent single-bond radii for most elements), first ionization energy, electron affinity (open circles: anion not stable, plotted at zero) and Pauling electronegativity. Vertical lines mark the noble gases](./plots/periodic-trends.py)
+![Z = 1–56 元素性质的周期性：原子半径（多数元素用共价单键半径）、第一电离能、电子亲和能（空心圆表示负离子不稳定，画在零处）与 Pauling 电负性。竖线标出稀有气体](./plots/periodic-trends.py)
 
 ### 2.4.1. 原子半径
 

@@ -138,7 +138,7 @@ $$
 \mathrm{d}\mu^* = -S_{\mathrm{m}}\,\mathrm{d}T + V_{\mathrm{m}}\,\mathrm{d}p .
 $$
 
-两相平衡线的斜率由 Clapeyron 方程（Clapeyron equation）给出，它是 1834 年 Clapeyron 在推广 Carnot 的工作时得到的，后来 Clausius 用热力学第二定律给出了严格推导。
+两相平衡线的斜率由 **Clapeyron 方程**给出，它是 1834 年 Clapeyron 在推广 Carnot 的工作时得到的，后来 Clausius 用热力学第二定律给出了严格推导。
 
 **定理 8.3.1（Clapeyron 方程）** 纯物质的 $\alpha$、$\beta$ 两相平衡共存时，平衡压力随温度的变化率为
 

@@ -46,7 +46,7 @@ $$
 
 **定义 3.1.2（离子半径）** 离子晶体中相邻正、负离子的核间距 $d$ 看作两个离子半径之和，$d = r_+ + r_-$；用一组约定（例如取 $r(\ce{O^2-}) = 140\,\mathrm{pm}$）把核间距分摊到各个离子，得到的半径称为**离子半径**。
 
-核间距可以由 X 射线衍射精确测定，但分摊的方式是约定。常用的有 Pauling 半径与 Shannon 有效离子半径（1976），后者对不同配位数分别给值。本课程统一用 Shannon 半径（6 配位）。变化规律如下：
+核间距可以由 X 射线衍射精确测定，但分摊的方式是约定。常用的有 Pauling 半径与 Shannon 有效离子半径（1976），后者对不同配位数分别给值。本章统一用 Shannon 半径（6 配位）。变化规律如下：
 
 1. 同族、同电荷的离子，自上而下半径增大：$\ce{F-}$ $133$ < $\ce{Cl-}$ $181$ < $\ce{Br-}$ $196$ < $\ce{I-}$ $220\,\mathrm{pm}$。
 2. 同周期电子构型相同的正离子，电荷越高半径越小：$\ce{Na+}$ $102$ > $\ce{Mg^2+}$ $72$ > $\ce{Al^3+}$ $54\,\mathrm{pm}$（核电荷增大，**有效核电荷**增大）。
@@ -72,7 +72,7 @@ $$
 3. 每个连接先画一条单键，剩余电子以孤对的形式补给末端原子，再补给中心原子；
 4. 中心原子不满 8 电子时，把末端原子的孤对改为双键或三键。
 
-![Lewis structures with lone pairs and formal charges. Top: H₂O, NH₃, NH₄⁺ and CH₄; bottom: N₂, CO₂, CO, O₃ and the nitrate ion (one resonance form each)](./plots/lewis-structures.py)
+![带孤对电子与形式电荷的 Lewis 结构式。上排：H₂O、NH₃、NH₄⁺ 与 CH₄；下排：N₂、CO₂、CO、O₃ 与硝酸根离子（各画一种共振式）](./plots/lewis-structures.py)
 
 ### 3.2.2. 形式电荷
 
@@ -110,7 +110,7 @@ $$
 
 Heitler–London 的简单计算给出 $r_{\mathrm{e}} \approx 87\,\mathrm{pm}$、$D_{\mathrm{e}} \approx 303\,\mathrm{kJ\,mol^{-1}}$，定量上不够准确，但第一次从第一性原理得出了"两个氢原子能结合"的结论；更精确的变分计算可以与实验完全一致，这些属于[结构化学](/6.2)。
 
-![Potential energy curves of H₂: the bound ground state with antiparallel spins (experiment and the Heitler–London estimate) and the repulsive state with parallel spins](./plots/h2-potential-curves.py)
+![H₂ 的势能曲线：自旋相反的成键基态（实验值与 Heitler–London 估算）和自旋平行的排斥态](./plots/h2-potential-curves.py)
 
 这正是 [5.1.4](/5.1.4) 中**势能曲线**的图像：曲线的极小点是稳定平衡位置，分子在其附近振动（[5.5.5](/5.5.5#sec-5.3.3)）。计算还表明，基态中两核之间的电子概率密度显著增大，排斥态中则减小：两个 1s 轨道以相同符号叠加时，波函数在核间相加，电子出现在核间的概率增大，同时吸引两个原子核，把它们"粘"在一起。
 
@@ -196,7 +196,7 @@ $\mathrm{sp}^3$：$\cos\theta = -\frac13$，$\theta = 109.47^\circ$；$\mathrm{s
 
 式 (3.1) 也可以反过来用：$\ce{H2O}$ 的键角 $104.5^\circ$ 对应 $\lambda^2 = -1/\cos 104.5^\circ \approx 4.0$，即 O 用于成键的两个杂化轨道约含 20% 的 s 成分，比 $\mathrm{sp}^3$ 的 25% 少，多出来的 s 成分留给了孤对电子。
 
-![sp, sp² and sp³ hybrids built from hydrogen-like 2s and 2p orbitals, drawn as contours in one plane: each hybrid is concentrated on one side of the nucleus](./plots/hybrid-orbitals.py)
+![由类氢 2s 与 2p 轨道构成的 sp、sp² 与 sp³ 杂化轨道，在同一平面内画成等值线：每个杂化轨道都集中在原子核的一侧](./plots/hybrid-orbitals.py)
 
 ### 3.4.2. sp³、sp² 与 sp 杂化
 
@@ -306,7 +306,7 @@ $$
 | | | 1 | $\mathrm{AX_5E}$ | 四方锥 | $\ce{BrF5}$ |
 | | | 2 | $\mathrm{AX_4E_2}$ | 平面正方形 | $\ce{XeF4}$ |
 
-![VSEPR: the five electron-pair geometries (rows for 2 and 3, 4, 5, 6 pairs) and the molecular shapes derived from them; blue balls are bonded atoms, orange lobes are lone pairs](./plots/vsepr-geometries.py)
+![VSEPR：五种电子对构型（2 对与 3 对、4 对、5 对、6 对各占一行）及由它们导出的分子构型；蓝色球为成键原子，橙色瓣为孤对电子](./plots/vsepr-geometries.py)
 
 价层电子对数与杂化类型一一对应：2 对 sp，3 对 $\mathrm{sp}^2$，4 对 $\mathrm{sp}^3$（5、6 对的主族分子见 §3.4.5 的说明）。因此通常先用 VSEPR 判断构型，再用杂化轨道描述成键。
 
@@ -394,7 +394,7 @@ $$
 
 差别来自 s–p 混杂：2s 与 $2\mathrm{p}_z$ 能量相近时，由它们组成的对称性相同的 σ 轨道（$\sigma_{2\mathrm{s}}$ 与 $\sigma_{2\mathrm{p}}$，$\sigma^*_{2\mathrm{s}}$ 与 $\sigma^*_{2\mathrm{p}}$）进一步相互作用，按式 (3.3) 的规律一降一升，使 $\sigma_{2\mathrm{p}}$ 升到 $\pi_{2\mathrm{p}}$ 之上。从 Li 到 F，核电荷增大，2s 能级比 2p 下降得快（2s 的钻穿效应更强，[6.1.2](/6.1.2)），两者的差距增大，s–p 混杂减弱，到 O、F 时顺序翻转。$\ce{B2}$ 是顺磁性的、$\ce{C2}$ 是抗磁性的，都证实了 $\pi_{2\mathrm{p}}$ 低于 $\sigma_{2\mathrm{p}}$。
 
-![Schematic valence MO energy diagrams: O₂ without s–p mixing, N₂ with s–p mixing (σ₂ₚ above π₂ₚ), and the heteronuclear CO with its HOMO and LUMO](./plots/mo-diagrams.py)
+![价层分子轨道能级示意图：O₂（无 s–p 混杂）、N₂（有 s–p 混杂，σ₂ₚ 高于 π₂ₚ）与异核的 CO（标出 HOMO 与 LUMO）](./plots/mo-diagrams.py)
 
 **定义 3.6.3（键级）** 分子的**键级**定义为
 
