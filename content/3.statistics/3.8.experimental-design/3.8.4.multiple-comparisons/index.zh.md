@@ -1,7 +1,7 @@
 ---
 title: 单因子实验：多重比较
 description: 方差分析 F 检验显著之后怎么办；多重性问题、族错误率与错误发现率；Fisher 最小显著差数、Benjamini–Hochberg 方法、Bonferroni 校正、Tukey HSD 与 Tukey–Kramer 方法、对全部对照的 Scheffé 方法，以及与对照比较的 Dunnett 方法；它们的临界值、功效与软件输出。
-source_hash: e05e86799160
+source_hash: 25a0af2a037f
 ---
 
 [3.8.3](/3.8.3) 的方差分析 $F$ 检验回答了关于单因子实验的第一个问题：各处理均值是否全部相等？对等离子体刻蚀实验，回答是明确的否定（$F_0 = 66.8$，$p = 2.9\times10^{-9}$）。第二个问题是哪些均值有差异，差异多大。回答它需要在同一批数据上作许多比较，而每个比较都是又一次出现假阳性的机会；本章讨论如何控制这种风险，同时又不过分牺牲功效。我们先通过两种错误率，即**族错误率**与**错误发现率**，把多重性问题说精确，然后逐一研究各种标准方法：Fisher 最小显著差数、Benjamini–Hochberg、Bonferroni、Tukey、Scheffé 与 Dunnett，最后比较它们的临界值，并决定何时用哪一种。回归课程简要地接触过其中的几种方法（[3.3.13](/3.3.13)），多元分析课程接触过错误发现率（[3.4.12](/3.4.12)）；这里把它们放在一起展开，讲清统计量、各自控制的错误率以及报告它的软件输出。
@@ -431,7 +431,7 @@ $$
 $$
 \mathrm{FWER} = \mathbb{P}\Bigl(\text{对某个 } C,\ F_0(C) > F_{a-1,N-a,\alpha}\Bigr) = \mathbb{P}\bigl(F_0 > F_{a-1,N-a,\alpha}\bigr) = \alpha.
 $$
-对均值的任意配置，对 $\bar y_{i\cdot} - \mu_i$ 代替 $\bar y_{i\cdot}$ 作同样的论证：量 $\sum_in_i\bigl((\bar y_{i\cdot} - \mu_i) - \overline{(\bar y - \mu)}\bigr)^2/((a - 1)\mathrm{MS}_{\mathrm{E}})$ 服从 $F_{a-1,N-a}$ 分布，并对每个对照同时界住 $(\hat C - C)^2/((a - 1)\widehat{\operatorname{Var}}(\hat C))$，所以区间
+对均值的任意配置，用 $\bar y_{i\cdot} - \mu_i$ 代替 $\bar y_{i\cdot}$ 作同样的论证：量 $\sum_in_i\bigl((\bar y_{i\cdot} - \mu_i) - \overline{(\bar y - \mu)}\bigr)^2/((a - 1)\mathrm{MS}_{\mathrm{E}})$ 服从 $F_{a-1,N-a}$ 分布，并且同时是每个对照的 $(\hat C - C)^2/((a - 1)\widehat{\operatorname{Var}}(\hat C))$ 的上界，所以区间
 
 $$
 \hat C \pm \sqrt{(a - 1)F_{a-1,N-a,\alpha}}\sqrt{\mathrm{MS}_{\mathrm{E}}\sum_i\frac{c_i^2}{n_i}}
@@ -615,7 +615,7 @@ b2 - b0 >= 0 -7.4667     -Inf -3.9657
 b3 - b0 >= 0 -1.6667     -Inf  0.2647
 ```
 
-`Quantile = 2.1829` 是单侧 Dunnett 临界值 $d_{3,37,0.05}$，即 $\max_k(-T_k)$ 的 $0.95$ 分位数，由 `mvtnorm::qmvt(p = .95, tail = "lower.tail", corr = R, df = nu)` 算出。上限是估计值 $+\,2.1829 \times$ 标准误，例如 $-7.4667 + 2.1829 \times 1.6038 = -3.966$。在 95% 的族置信水平下，毯子 $b_2$ 至少使平均恢复时间缩短 $4$ 分钟；$b_1$ 与 $b_3$ 的区间包含 $0$。
+`Quantile = 2.1829` 是单侧 Dunnett 临界值 $d_{3,37,0.05}$，即 $\max_k(-T_k)$ 的 $0.95$ 分位数，由 `mvtnorm::qmvt(p = .95, tail = "lower.tail", corr = R, df = nu)` 算出。上限是估计值 $+\,2.1829 \times$ 标准误，例如 $-7.4667 + 2.1829 \times 1.6038 = -3.966$。在 95% 的族置信水平下，毯子 $b_2$ 至少使平均恢复时间缩短 $3.97$ 分钟，约 $4$ 分钟；$b_1$ 与 $b_3$ 的区间包含 $0$。
 
 ## 4.9. 方法的比较与选择
 
@@ -739,4 +739,4 @@ summary(glht(fit, linfct = mcp(treatment = "Dunnett")))
 
 9. 某实验的整体方差分析 $F$ 检验在水平 $\alpha$ 下不显著。Scheffé 方法能找到显著的对照吗？如果 $F$ 检验显著，Scheffé 方法一定能找到显著的成对差吗？
 
-   **答** 都不能。每个对照都满足 $F_0(C) \le F_0$（定理 4.7.1），所以如果 $F_0 \le F_{a-1,N-a,\alpha}$，没有对照超过 Scheffé 的临界值。如果 $F_0$ 显著，则 $c_i \propto n_i(\bar y_{i\cdot} - \bar y_{\cdot\cdot})$ 的对照在 Scheffé 方法下显著，但成对差是一个特殊的对照，它的 $F_0(C)$ 可能远低于 $F_0$，所以不一定显著。
+   **答** 不能，也不一定。每个对照都满足 $F_0(C) \le F_0$（定理 4.7.1），所以如果 $F_0 \le F_{a-1,N-a,\alpha}$，没有对照超过 Scheffé 的临界值。如果 $F_0$ 显著，则 $c_i \propto n_i(\bar y_{i\cdot} - \bar y_{\cdot\cdot})$ 的对照在 Scheffé 方法下显著，但成对差是一个特殊的对照，它的 $F_0(C)$ 可能远低于 $F_0$，所以不一定显著。

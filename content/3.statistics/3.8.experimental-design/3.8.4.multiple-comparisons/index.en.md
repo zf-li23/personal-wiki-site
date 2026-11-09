@@ -613,7 +613,7 @@ b2 - b0 >= 0 -7.4667     -Inf -3.9657
 b3 - b0 >= 0 -1.6667     -Inf  0.2647
 ```
 
-`Quantile = 2.1829` is the one-sided Dunnett critical value $d_{3,37,0.05}$, the $0.95$ quantile of $\max_k(-T_k)$, computed by `mvtnorm::qmvt(p = .95, tail = "lower.tail", corr = R, df = nu)`. The upper limits are estimate $+\,2.1829 \times$ standard error, for example $-7.4667 + 2.1829 \times 1.6038 = -3.966$. With 95% family-wise confidence, blanket $b_2$ shortens the mean recovery time by at least $4$ minutes; the intervals for $b_1$ and $b_3$ contain $0$.
+`Quantile = 2.1829` is the one-sided Dunnett critical value $d_{3,37,0.05}$, the $0.95$ quantile of $\max_k(-T_k)$, computed by `mvtnorm::qmvt(p = .95, tail = "lower.tail", corr = R, df = nu)`. The upper limits are estimate $+\,2.1829 \times$ standard error, for example $-7.4667 + 2.1829 \times 1.6038 = -3.966$. With 95% family-wise confidence, blanket $b_2$ shortens the mean recovery time by at least $3.97$ minutes, about $4$; the intervals for $b_1$ and $b_3$ contain $0$.
 
 ## 4.9. Comparing and Choosing the Methods
 
