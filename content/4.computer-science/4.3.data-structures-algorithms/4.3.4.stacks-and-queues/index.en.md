@@ -1,7 +1,7 @@
 ---
 title: Stacks and Queues
 description: The stack interface and its implementation on vectors and linked lists; the call stack and the space complexity of recursion, tail recursion and recursion elimination; base conversion, parenthesis matching, stack permutations and Catalan numbers; evaluation of infix expressions and reverse Polish notation; queues, circular buffers and double-ended queues, collections.deque and the C++ deque; monotonic stacks and the largest rectangle in a histogram; the aggregate, accounting and potential methods of amortized analysis; Steap and Queap; backtracking with a stack.
-source_hash: 313e79936ab5
+source_hash: d78862b57323
 ---
 
 Stacks and queues are restricted sequences: a stack allows insertion and deletion at one end only, and a queue allows insertion at one end and deletion at the other. The restriction buys simplicity and efficiency: all operations are $O(1)$. More importantly, the structure of many problems is exactly "last in, first out" or "first in, first out": function calls and returns, nesting of parentheses, operator precedence in expressions and the path in a backtracking search are all last in, first out; waiting in line, serving in turn and searches that expand level by level are all first in, first out. This chapter first implements the stack, explains how the call stack supports recursion and how to rewrite recursion as iteration, and then discusses several classic applications of stacks. It then implements queues and double-ended queues. Finally, it uses a queue made of two stacks to introduce the three methods of amortized analysis systematically, and discusses monotonic stacks, stacks and queues that support retrieving the maximum, and backtracking implemented with a stack. [4.1.12](/4.1.12) and [4.1.14](/4.1.14) already covered backtracking and search using recursion and `std::queue`; this chapter treats the structures themselves.
@@ -958,8 +958,6 @@ $$
 
 In fact a single linear scan can find all $s(r)$ and $t(r)$: maintain a stack that holds, from bottom to top, the **ranks** of the bars whose right boundary is not yet determined, and whose heights are nondecreasing from bottom to top. When the scan reaches bar $t$, every bar in the stack taller than $H[t]$ has met here the first shorter bar to its right, that is, $t(r) = t$, and these are popped in turn; for a popped bar $r$, the new stack top $l$ is the nearest bar to the left of $r$ that is not taller than it, so its rectangle covers $[l + 1, t)$. Then $t$ is pushed onto the stack, and the monotonicity of the stack is preserved. When the scan ends (treating $t = n$ as a bar of height 0), the right boundary of every bar left in the stack is $n$.
 
-**Definition 4.6.1 (Monotonic Stack)** A stack in which, before a new element is pushed, all top elements that would destroy monotonicity are popped, so that the elements of the stack (with respect to some key) are always monotone from bottom to top, is called a **monotonic stack**.
-
 ```cpp tab
 // Stack<T> and its #includes as in Section 4.1.
 #include <algorithm>
@@ -1010,6 +1008,8 @@ print(max_rectangle([2, 1, 5, 6, 2, 3]),
 ```
 
 Correctness: if the bar heights are distinct, when $r$ is popped, $H[t] < H[r]$ while everything scanned before is no lower than $H[r]$, so $t = t(r)$; if the $l$ below $r$ in the stack were taller than $H[r]$ it would have been popped long ago, so $H[l] < H[r]$, and the bars between $l$ and $r$ have all been popped and are all taller than $H[r]$, so $l + 1 = s(r)$. When there are equal heights, the left boundary computed for some bar may be too far right, but the maximal rectangle of the leftmost bar in a group of equal-height bars is always computed exactly, so the maximum is unaffected. Complexity: each bar is pushed exactly once and popped at most once, so the total number of iterations of the inner `while` loop is at most $n$, and the total time is $O(n)$. This is again an amortized argument: a single scan step may pop many elements, but the total number of pops is bounded by the total number of pushes.
+
+**Definition 4.6.1 (Monotonic Stack)** A stack in which, before a new element is pushed, all top elements that would destroy monotonicity are popped, so that the elements of the stack (with respect to some key) are always monotone from bottom to top, is called a **monotonic stack**.
 
 The typical use of a monotonic stack is to find, for each element, "the first smaller (larger) element to its left (right)"; replacing the stack by a monotonic queue that can delete at both ends gives the maximum in a sliding window in $O(n)$ time (see the Queap in Section 4.8).
 

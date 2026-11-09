@@ -1,6 +1,6 @@
 ---
 title: Multiple Integrals and Integrals Depending on a Parameter
-source_hash: 1856fb6174d6
+source_hash: 6837f32601eb
 ---
 
 The definite integral is the quantity obtained on an interval by "partition, approximate, sum, take the limit". Replacing the interval by a plane or spatial region, the same four steps give double and triple integrals, collectively called multiple integrals: the volume of a solid under a curved top, the mass of a nonuniform plate or body, centers of mass and moments of inertia are all expressed by them. The definition and properties of multiple integrals carry over almost verbatim from those of the definite integral; the difficulty lies in computation. There are two basic strategies. One is to reduce the integral to iterated integrals, that is, to compute definite integrals one after another, the key being to read off the limits of integration from the shape of the region. The other is a change of variables that transforms the region into a simple shape, at the cost of multiplying the area or volume element by the absolute value of the **Jacobian determinant**; this is the local manifestation of the meaning of the **determinant** in linear algebra as a [volume scaling factor](/2.1.5#sec-5.3.1).
@@ -431,7 +431,7 @@ $$
 
 The center of mass of a plane lamina is defined similarly by double integrals. When the density is constant, the center of mass is called the centroid and depends only on the shape; by symmetry, the centroid lies on any axis (plane) of symmetry.
 
-**Definition 12.5.2 (Moment of Inertia)** The **moment of inertia** of a body $\Omega$ about an axis is $I=\iiint_\Omega d^2\rho\,\mathrm{d}V$, where $d$ is the distance from the point to the axis. For example, about the $z$-axis $I_z=\iiint_\Omega(x^2+y^2)\rho\,\mathrm{d}V$; for a plane lamina about the $x$-axis $I_x=\iint_Dy^2\mu\,\mathrm{d}\sigma$.
+**Definition 12.5.2 (Moment of Inertia)** The **moment of inertia** of a body $\Omega$ about an axis is $J=\iiint_\Omega d^2\rho\,\mathrm{d}V$, where $d$ is the distance from the point to the axis. For example, about the $z$-axis $J_z=\iiint_\Omega(x^2+y^2)\rho\,\mathrm{d}V$; for a plane lamina about the $x$-axis $J_x=\iint_Dy^2\mu\,\mathrm{d}\sigma$ ($\mu$ is the surface density).
 
 **Example 12.5.1** The centroid of the uniform half-disk $D=\{x^2+y^2\le a^2,\ y\ge0\}$: by symmetry $\bar x=0$, and
 
@@ -439,10 +439,10 @@ $$
 \bar y=\frac{1}{\pi a^2/2}\int_0^\pi\mathrm{d}\theta\int_0^ar\sin\theta\cdot r\,\mathrm{d}r=\frac{2}{\pi a^2}\cdot2\cdot\frac{a^3}3=\frac{4a}{3\pi}.
 $$
 
-**Example 12.5.2** The moment of inertia of a uniform ball of mass $M$ and radius $R$ about a diameter. Take the diameter as the $z$-axis; the density is $\rho_0=\frac{3M}{4\pi R^3}$, and in spherical coordinates
+**Example 12.5.2** The moment of inertia of a uniform ball of mass $M$ and radius $R$ about a diameter. Take the diameter as the $z$-axis and use spherical coordinates. Here $\rho$ is the distance to the origin in spherical coordinates (Definition 12.3.2), so the constant density is written $\rho_0=\frac{3M}{4\pi R^3}$:
 
 $$
-I_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
+J_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
 $$
 
 :::

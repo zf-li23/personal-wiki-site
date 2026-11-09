@@ -1,6 +1,6 @@
 ---
 title: Rings and Fields
-source_hash: e29cc4989f25
+source_hash: 61d0eadf58e0
 ---
 
 A group has a single operation, whereas integers, polynomials and matrices all have both addition and multiplication, linked by the **distributive law** (Section 1.3.3). A ring is the abstraction of such systems in which one can add, subtract and multiply; a field further requires multiplication to be commutative and every nonzero element to be invertible, so that one can also divide.
@@ -139,7 +139,7 @@ $$
 a'b' = ab + (aj + ib + ij),
 $$
 
-and by absorption $aj, ib, ij \in I$, so $a'b' + I = ab + I$; multiplication does not depend on representatives either. In other words, "$a \sim b \iff a - b \in I$" is a **congruence relation** (Definition 1.4.7) with respect to both addition and multiplication, and $R/I$ is the corresponding **quotient algebra**; associativity and distributivity are inherited from $R$ by Theorem 1.4.2. $\square$
+and by absorption $aj, ib, ij \in I$, so $a'b' + I = ab + I$; multiplication does not depend on representatives either. In other words, "$a \sim b \iff a - b \in I$" is a **congruence relation** (Definition 1.4.7) with respect to both addition and multiplication, and $R/I$ is the corresponding **quotient algebra**; associativity of multiplication is inherited from $R$ by Theorem 1.4.2. Distributivity is not covered by Theorem 1.4.2, but it can be checked directly: $(a + I)\big((b + I) + (c + I)\big) = a(b + c) + I = (ab + ac) + I = (a + I)(b + I) + (a + I)(c + I)$, and similarly for the right distributive law. $\square$
 
 For example, the ring of residue classes modulo $n$, $\mathbb{Z}_n$, is the quotient ring $\mathbb{Z}/n\mathbb{Z}$ of the ring of integers $\mathbb{Z}$ by the ideal $n\mathbb{Z}$. This agrees with the group-theoretic view of the cyclic group $\mathbb{Z}_n$ as the quotient group of $\mathbb{Z}$ by the subgroup $n\mathbb{Z}$.
 

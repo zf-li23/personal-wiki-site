@@ -37,7 +37,7 @@ For $g\colon \mathbb{R}^p \to \mathbb{R}$ the update is $\boldsymbol{x}^{(t+1)} 
 $$
 h^{(t)} = \frac{(x^{(t)} + 1)\bigl(1 + 1/x^{(t)} - \log x^{(t)}\bigr)}{3 + 4/x^{(t)} + 1/(x^{(t)})^2 - 2\log x^{(t)}}.
 $$
-Starting from $x^{(0)} = 3$, Newton's method finds $x^{(4)} = 3.59112$ after four steps; by comparison, the bisection method does not determine the first five decimal places correctly until iteration 19.
+Starting from $x^{(0)} = 3$, Newton's method finds $x^{(4)} = 3.59112$ after four steps; by comparison, the bisection method on $[1, 5]$ (Example 4.3.1), which halves the bracket at each step, needs about $20$ iterations to fix the first five decimal places.
 
 **Theorem 5.1.1 (Quadratic Convergence of Newton's Method)** Let $f$ be twice continuously differentiable near a simple root $x^*$ ($f(x^*) = 0$, $f'(x^*) \ne 0$), and let $x^{(t+1)} = x^{(t)} - f(x^{(t)})/f'(x^{(t)})$. If $x^{(0)}$ is close enough to $x^*$, then $x^{(t)} \to x^*$, and the errors $\varepsilon^{(t)} = x^{(t)} - x^*$ satisfy
 

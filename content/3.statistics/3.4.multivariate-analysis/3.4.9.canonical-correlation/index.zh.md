@@ -1,7 +1,7 @@
 ---
 title: 典型相关分析
 description: 两组变量的典型相关分析：用奇异值分解求总体典型变量，通过系数与相关系数解释典型变量，对标准化的不变性，样本典型相关及例子，典型变量对个数的似然比检验，以及推广。
-source_hash: e473cde8449a
+source_hash: f1be19a10c5e
 ---
 
 常常在同一批个体上测量两类不同的变量：运动变量（在台阶机上的攀爬速度、跑一定距离的速度、卧推重量、每分钟俯卧撑个数）与健康变量（血压、胆固醇、血糖水平、体重指数）；销售业绩与能力测验成绩；图像特征与图像说明文字中的词语。典型相关分析（canonical correlation analysis），简称 CCA，由 H. Hotelling（1936）提出，它通过少数几对线性组合——每组变量各取一个，使其相关尽可能大——来研究两组变量之间的关联。它识别并量化两组变量之间的关联，并把含 $pq$ 个元素的交叉协方差矩阵 $\Sigma_{12}$ 约简为 $p$ 个典型相关系数。与**主成分分析**（[3.4.5](/3.4.5)）一样，它在不相关约束下逐次最大化，但最大化的是两组之间的相关而不是一组之内的方差，它的解来自一个标准化的交叉协方差矩阵的**奇异值分解**（[2.1](/2.1)）。第一组只有一个变量时，它就是回归中的复相关（[3.4.7](/3.4.7)）；因子分析（[3.4.8](/3.4.8)）对两组变量有一个概率版本，见 9.5 节；9.4 节的似然比检验依赖于**多元正态分布**（[3.4.2](/3.4.2)）。这一方法是许多现代多视图数据技术的出发点，例如图像与文本的跨模态检索，以及把脑成像数据与行为测量联系起来。
@@ -258,7 +258,7 @@ $$
 ## 9.5. 推广
 
 - 概率 CCA（F. Bach 与 M. Jordan，2005）是一个因子分析风格的潜变量模型：$\boldsymbol{X}=W_1\boldsymbol{Z}+\boldsymbol{\mu}_1+\boldsymbol{\varepsilon}_1$，$\boldsymbol{Y}=W_2\boldsymbol{Z}+\boldsymbol{\mu}_2+\boldsymbol{\varepsilon}_2$，共享的 $\boldsymbol{Z}\sim\mathcal{N}(\boldsymbol{0},I_k)$，$\boldsymbol{\varepsilon}_i\sim\mathcal{N}(\boldsymbol{0},\Psi_i)$；其极大似然估计恢复出典型方向，并可推广为条件生成模型。
-- 核 CCA（S. Akaho，2006）像 [3.4.6](/3.4.6) 中的核 PCA 那样，把两组变量映射到再生核 Hilbert 空间，以刻画非线性关联。
+- 核 CCA（S. Akaho，2001；P. L. Lai 与 C. Fyfe，2000）像 [3.4.6](/3.4.6) 中的核 PCA 那样，把两组变量映射到再生核 Hilbert 空间，以刻画非线性关联。
 - 稀疏 CCA（D. Witten、R. Tibshirani 与 T. Hastie，2009）通过惩罚矩阵分解对系数向量加 $\ell_1$ 惩罚，使每个典型变量只涉及少数变量；当 $p$、$q$ 超过 $n$ 时这是必不可少的。
 - 深度 CCA（G. Andrew、R. Arora、J. Bilmes 与 K. Livescu，2013）在两个神经网络 $f$ 与 $g$ 上最大化 $\operatorname{Corr}\big(f(\boldsymbol{X};\theta_f),g(\boldsymbol{Y};\theta_g)\big)$。
 

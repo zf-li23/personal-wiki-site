@@ -69,12 +69,12 @@ $$
 
 形式上，这对应于向量代数中的 $\boldsymbol{a}\times\boldsymbol{a}=\boldsymbol{0}$ 与 $\boldsymbol{a}\cdot(\boldsymbol{a}\times\boldsymbol{b})=0$。14.4、14.5 节将讨论它们的逆命题：无旋场是否是梯度场，无源场是否是旋度场——答案取决于区域的形状。
 
-**定义 14.1.4（Laplace 算子）** 称
+**定义 14.1.4（Laplace 算子）** 记
 
 $$
 \Delta f=\nabla\cdot\nabla f=\operatorname{div}\operatorname{grad}f=\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}+\frac{\partial^2f}{\partial z^2}
 $$
-为 $f$ 的 Laplace 算子，$\Delta=\nabla^2$ 称为 **Laplace 算子**。
+称 $\Delta=\nabla^2$ 为 **Laplace 算子**，$\Delta f$ 是它作用于 $f$ 的结果。
 
 用旋度与散度的语言，Green 公式的两种形式（定理 13.4.1、13.4.2）写成
 

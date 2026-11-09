@@ -1,7 +1,7 @@
 ---
 title: 用 R 进行统计计算
 description: 作为统计计算工具的 R 语言：原子向量与列表，类型、强制类型转换与属性，因子、矩阵、数组与数据框，函数与流程控制，算术运算、矩阵运算与取子集，用 apply 族函数实现向量化，循环与递归的代价，以及多维数据的可视化。
-source_hash: a56b13c2cc38
+source_hash: f56662abf44c
 ---
 
 本课程的全部计算都用 R 完成。本章汇集了可靠地用 R 进行统计计算所需的知识，重点是 R 怎样表示数据，因为 R 中的编程错误大多源于对其对象的误解：被悄悄转换成字符的向量，悄悄丢掉一个维度的矩阵，用错了括号的列表取子集。本章先介绍基本对象（向量、列表、因子、矩阵、数组、数据框、函数），再介绍对它们的基本操作（输入输出、算术运算、逻辑运算与矩阵运算、取子集），然后是向量化，即 R 避免显式循环的方式，最后是多维数据的可视化工具。R 中的浮点数已在 [3.5.1](/3.5.1) 中讨论；建立在 R 矩阵运算之上的数值线性代数见 [3.5.3](/3.5.3)。
@@ -1025,7 +1025,7 @@ persp(x, y, z, theta = 45, phi = 30, col = "green", ticktype = "detailed",
       ltheta = 120, shade = 0.75, xlab = "X", ylab = "Y", zlab = "f(x, y)", expand = 0.6)
 ```
 
-交互式图形可以用鼠标旋转。`rgl` 包绘制 OpenGL 场景，`rglwidget()` 生成可在浏览器中查看的 WebGL 版本；`plotly`、`threejs` 和 `graph3D` 包创建交互式 JavaScript 图形（`plot_ly()` 把 R 对象映射到 plotly.js，这是一个采用 MIT 许可证的网页图表库）：
+交互式图形可以用鼠标旋转。`rgl` 包绘制 OpenGL 场景，`rglwidget()` 生成可在浏览器中查看的 WebGL 版本；`plotly`、`threejs` 和 `graph3d`（JavaScript 库 vis-graph3d 的 R 接口）包创建交互式 JavaScript 图形（`plot_ly()` 把 R 对象映射到 plotly.js，这是一个采用 MIT 许可证的网页图表库）：
 
 ```r
 library(rgl)

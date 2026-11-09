@@ -1024,7 +1024,7 @@ persp(x, y, z, theta = 45, phi = 30, col = "green", ticktype = "detailed",
       ltheta = 120, shade = 0.75, xlab = "X", ylab = "Y", zlab = "f(x, y)", expand = 0.6)
 ```
 
-Interactive graphics can be rotated with the mouse. The package `rgl` draws OpenGL scenes, and `rglwidget()` produces a WebGL version for a browser; the packages `plotly`, `threejs` and `graph3D` create interactive JavaScript plots (`plot_ly()` maps R objects to plotly.js, an MIT-licensed web-based charting library):
+Interactive graphics can be rotated with the mouse. The package `rgl` draws OpenGL scenes, and `rglwidget()` produces a WebGL version for a browser; the packages `plotly`, `threejs` and `graph3d` (a wrapper of the JavaScript library vis-graph3d) create interactive JavaScript plots (`plot_ly()` maps R objects to plotly.js, an MIT-licensed web-based charting library):
 
 ```r
 library(rgl)

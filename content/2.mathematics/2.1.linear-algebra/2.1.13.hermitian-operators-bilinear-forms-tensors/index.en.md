@@ -1,6 +1,6 @@
 ---
 title: Hermitian Operators, Bilinear Forms and Tensors
-source_hash: 301aa90c924a
+source_hash: eb640accfd45
 ---
 
 The [previous chapter](/2.1.12) proved that the normal operators are exactly the operators that can be diagonalized in an orthonormal basis. There is a clear correspondence between normal matrices and complex numbers: the normal matrices whose eigenvalues are all real (the Hermitian matrices) play the role of real numbers, and those whose eigenvalues have modulus $1$ (the unitary matrices) play the role of unit complex numbers. Following this analogy, the first half of the chapter generalizes the polar form $z = r\mathrm{e}^{\mathrm{i}\theta}$ of a complex number to the polar decomposition $A = R\mathrm{e}^{\mathrm{i}M}$ of a matrix; it then carries the real **quadratic forms**, **congruence of matrices**, **Sylvester's law of inertia** and positive definite matrices of [Chapter 7](/2.1.7) over to the complex field, obtaining Hermitian forms and \*-congruence; finally it states the **singular value decomposition** of complex matrices and explains its relation to the polar decomposition. Most proofs are the same as in the real case and are only sketched.
@@ -259,13 +259,13 @@ $\operatorname{Isom}(V, g)$ is a group under composition: compositions and inver
 | $\operatorname{diag}(I_p, -I_q)$ | Indefinite orthogonal group $O(p, q)$ | $M^{\mathsf T}\operatorname{diag}(I_p, -I_q)M = \operatorname{diag}(I_p, -I_q)$ |
 | $\operatorname{diag}(J, \dots, J)$ | Symplectic group $\operatorname{Sp}(2m, \mathbb{R})$ | $M^{\mathsf T}GM = G$ |
 
-**Example 13.7.1** Give $\mathbb{R}^4$ the Lorentz form of Example 13.6.1. Let $0 < v < c$, $E_0 = \sqrt{1 - v^2/c^2}$, and
+**Example 13.7.1** Give $\mathbb{R}^4$ the Lorentz form of Example 13.6.1. Let $0 < v < c$, $\beta = v/c$, $\gamma = 1/\sqrt{1 - \beta^2}$, and
 
 $$
-T\colon (x, y, z, t)^{\mathsf T} \mapsto (x', y', z', t')^{\mathsf T}, \qquad x' = \frac{x - vt}{E_0}, \quad y' = y, \quad z' = z, \quad t' = \frac{t - vx/c^2}{E_0}.
+T\colon (x, y, z, t)^{\mathsf T} \mapsto (x', y', z', t')^{\mathsf T}, \qquad x' = \gamma(x - vt), \quad y' = y, \quad z' = z, \quad t' = \gamma\left(t - \frac{vx}{c^2}\right).
 $$
 
-A direct computation gives $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$, and dividing by $E_0^2$ yields $x'^2 - c^2t'^2 = x^2 - c^2t^2$, so $g(T\alpha, T\alpha) = g(\alpha, \alpha)$; by polarization of the symmetric bilinear form, $g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$. $T$ is a Lorentz transformation, and the isometry group $O(3, 1)$ of the Lorentz form is called the *Lorentz group*.
+A direct computation gives $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = (1 - \beta^2)(x^2 - c^2t^2)$, and multiplying by $\gamma^2 = 1/(1 - \beta^2)$ yields $x'^2 - c^2t'^2 = x^2 - c^2t^2$, so $g(T\alpha, T\alpha) = g(\alpha, \alpha)$; by polarization of the symmetric bilinear form, $g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$. $T$ is a Lorentz transformation, and the isometry group $O(3, 1)$ of the Lorentz form is called the *Lorentz group*.
 
 **Example 13.7.2** The oriented area $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ on $\mathbb{R}^2$ is a symplectic form. Real $2 \times 2$ matrices satisfy the identity $M^{\mathsf T}JM = (\det M)J$, so $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$: in two dimensions the symplectic transformations are exactly the linear transformations preserving oriented area. In higher dimensions the symplectic condition is much stronger than volume preservation. The phase space of Hamiltonian mechanics carries a natural symplectic form, and the time evolution of the system preserves it.
 

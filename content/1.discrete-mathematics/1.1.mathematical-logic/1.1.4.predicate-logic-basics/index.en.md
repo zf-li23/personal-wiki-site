@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Predicate Logic
-source_hash: 8457b3dffd11
+source_hash: 313296cae125
 ---
 
 Propositional logic treats simple propositions as indivisible wholes, so it cannot analyze their internal logical structure (such as the relation between subject and predicate) or quantitative relations (such as "all" and "some"). To overcome these limitations we introduce *predicate logic*. Predicate logic can be viewed as an extension of propositional logic: it introduces **individual terms**, **predicates**, and **quantifiers**, which allow a finer description of the structure of sentences and of reasoning. This chapter deals only with first-order predicate logic, historically also called the restricted predicate calculus; the next chapter treats equivalence and inference in it.
@@ -173,7 +173,7 @@ Characteristic predicates are added as follows:
 
 ### 4.4.5. A Formal Description of the Natural Numbers
 
-In this section the domain is the set of natural numbers, and we formalize sentences describing basic properties of the natural numbers. These formulas can serve as axioms for the set of natural numbers. Let:
+In this section the domain is the set of natural numbers, and we formalize sentences describing basic properties of the natural numbers. The following examples formalize several of the axioms for the natural numbers (the Peano axioms) that concern the successor; on their own they do not characterize the set of natural numbers. Let:
 
 - the predicate $E(x, y)$ mean $x = y$;
 - the function $f(x)$ denote the successor of $x$, that is, $f(x) = x + 1$;
@@ -252,8 +252,10 @@ The validity and satisfiability of a formula may depend on the number of individ
 **Property 4.6.1** Let $k \geq 1$.
 
 - If a formula is valid (or satisfiable) over some domain with $k$ elements, then it is valid (or satisfiable) over every domain with $k$ elements;
-- If a formula is valid over domains with $k$ elements, then it is also valid over domains with $k - 1$ elements ($k \geq 2$);
-- If a formula is satisfiable over domains with $k$ elements, then it is also satisfiable over domains with $k + 1$ elements.
+- If a formula contains no equality symbol (equality is not a logical symbol with a fixed interpretation; it may appear as an ordinary predicate such as $E(x, y)$) and is valid over domains with $k$ elements, then it is also valid over domains with $k - 1$ elements ($k \geq 2$);
+- If a formula contains no equality symbol and is satisfiable over domains with $k$ elements, then it is also satisfiable over domains with $k + 1$ elements.
+
+The reason for the last two items is that duplicating an individual, with the copy satisfying exactly the same predicates and function relations as the original, does not change the truth value of the formula. With equality this construction fails: $(\forall x)(\forall y)(x = y)$ is valid over a one-element domain but unsatisfiable over a two-element domain.
 
 ### 4.6.5. The Decision Problem for Predicate Logic
 

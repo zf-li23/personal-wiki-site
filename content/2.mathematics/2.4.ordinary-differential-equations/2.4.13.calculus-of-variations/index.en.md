@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Calculus of Variations
-source_hash: d238092759cd
+source_hash: 7a9efa299798
 ---
 
 Extremum problems in calculus ask for the points at which a function attains an extremum. Many problems in geometry and physics ask instead for the **functions** or curves at which some quantity attains an extremum: the shortest curve joining two points, the curve whose surface of revolution has the least area, the track along which a particle slides down fastest, the curve of given length enclosing the largest area. Such "functions of functions" are called functionals, and the study of their extrema is called the calculus of variations. Its basic result is that an extremal curve must satisfy a second-order ordinary differential equation, the Euler–Lagrange equation. A variational problem thus reduces to a boundary value problem for a differential equation, which is why this chapter belongs in a course on ordinary differential equations; conversely, the equations of motion of mechanics can be viewed as the Euler–Lagrange equations of a functional (Hamilton's principle).
@@ -238,7 +238,7 @@ Idea of the proof: take two test functions and form the two-parameter variation 
 $$
 y+\lambda\sqrt{1+y'^2}-\frac{\lambda y'^2}{\sqrt{1+y'^2}}=y+\frac{\lambda}{\sqrt{1+y'^2}}=c_2,
 $$
-that is, $(y-c_2)^2(1+y'^2)=\lambda^2$. Setting $y'=\tan t$ gives $y-c_2=\lambda\cos t$ and $\mathrm{d}x=\frac{\mathrm{d}y}{y'}=-\lambda\cos t\,\mathrm{d}t$, so $x-c_1=-\lambda\sin t$, and hence
+that is, $(y-c_2)^2(1+y'^2)=\lambda^2$. Setting $y'=\tan t$ ($\lvert t\rvert<\frac\pi2$), so that $\frac1{\sqrt{1+y'^2}}=\cos t$, gives $y-c_2=-\lambda\cos t$ and $\mathrm{d}x=\frac{\mathrm{d}y}{y'}=\frac{\lambda\sin t\,\mathrm{d}t}{\tan t}=\lambda\cos t\,\mathrm{d}t$, so $x-c_1=\lambda\sin t$, and hence
 
 $$
 (x-c_1)^2+(y-c_2)^2=\lambda^2:

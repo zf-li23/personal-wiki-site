@@ -180,6 +180,7 @@ the average dissimilarity to the closest cluster other than its own. The **silho
 $$
 s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}} \in [-1, 1].
 $$
+If $C(i)$ contains only the point $i$, then $a(i)$ is undefined, and by convention $s(i) = 0$ (Rousseeuw, 1987).
 
 A value close to $1$ means that the point is much closer to its own cluster than to the next one; a value near $0$ means it lies between two clusters; a negative value suggests that it is in the wrong cluster.
 

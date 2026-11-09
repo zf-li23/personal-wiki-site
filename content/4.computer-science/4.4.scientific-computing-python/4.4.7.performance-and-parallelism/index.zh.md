@@ -1,7 +1,7 @@
 ---
 title: 性能与并行
 description: 让科学计算的 Python 代码变快：计时与性能分析（cProfile、line_profiler、采样分析器），再谈向量化，用 Numba 做即时编译，全局解释器锁，进程池与 joblib，multiprocessing 的启动方式，自由线程 Python，Amdahl 定律，实测比较，以及用 CuPy 与 Numba CUDA 核函数做 GPU 计算。
-source_hash: 55888387bcd8
+source_hash: ac0d9757159a
 ---
 
 Python 在单个运算的层面上很慢，而当繁重的工作在编译库中运行时，在整个程序的层面上却很快。前面几章通过**向量化**利用了这一点：NumPy、SciPy 和 pandas 在编译的循环中做算术，解释器只负责调度。本章讨论这还不够的情形：无法向量化的代码（每一步依赖前一步的随机模拟），本身很快但必须运行成千上万次的代码（参数扫描、**自助法**重复、大量样本），以及瓶颈并不在作者所以为之处的代码。所用的工具是测量（计时与性能分析）、编译（Numba）和并行执行（进程、线程、CPython 新的自由线程构建，以及 GPU）。某些计算为何昂贵或不稳定的数值原因是 [3.5](/3.5) 的主题；作为操作系统对象的进程与线程在 [4.11](/4.11) 中讨论。
@@ -239,7 +239,7 @@ if __name__ == "__main__":         # required: workers re-import the main module
 | `forkserver` | 从早先启动的干净服务进程派生 | Python 3.14 起的 Linux（以及除 macOS 外的其他 POSIX 系统） |
 | `spawn` | 导入主模块的全新解释器 | Windows；自 Python 3.8 起的 macOS |
 
-`fork` 很快，但会复制 fork 时刻所有线程的状态，当父进程运行着线程（BLAS 等库就会这样）时可能死锁；Python 3.12 开始对 fork 多线程进程发出警告，3.14 把 Linux 上的默认值改为 `forkserver`。依赖工作进程继承父进程中设置的**全局变量**（已配置的日志记录器、在导入之后于模块级别载入的数据）的代码，在新的默认值下行为不同；显式传参，或在确知 fork 安全的地方使用 `multiprocessing.get_context("fork")`，可以解决这一问题。即使在 `fork` 下，CPython 的**引用计数**也会写入工作进程触及的每个对象，所以父进程的**写时复制**页面会被逐渐复制。
+`fork` 很快，但子进程会继承父进程中其他线程在 fork 时刻持有的锁，当父进程运行着线程（BLAS 等库就会这样）时可能死锁；Python 3.12 开始对 fork 多线程进程发出警告，3.14 把 Linux 上的默认值改为 `forkserver`。依赖工作进程继承父进程中设置的**全局变量**（已配置的日志记录器、在导入之后于模块级别载入的数据）的代码，在新的默认值下行为不同；显式传参，或在确知 fork 安全的地方使用 `multiprocessing.get_context("fork")`，可以解决这一问题。即使在 `fork` 下，CPython 的**引用计数**也会写入工作进程触及的每个对象，所以父进程的**写时复制**页面会被逐渐复制。
 
 joblib 是 scikit-learn 的并行后端，它把这种模式包装成紧凑的 API，默认使用稳健的 `loky` 进程池（配合 cloudpickle，因此在 Jupyter 中交互式定义的函数也能用），并为昂贵的函数调用增加磁盘缓存（`joblib.Memory`）：
 

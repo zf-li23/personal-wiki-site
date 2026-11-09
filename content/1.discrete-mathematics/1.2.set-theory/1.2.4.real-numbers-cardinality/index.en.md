@@ -1,6 +1,6 @@
 ---
 title: The Real Numbers and Cardinality
-source_hash: 77ebdf4b54ac
+source_hash: b15400976044
 ---
 
 This chapter first constructs the integers, the rational numbers and the real numbers in turn within set theory, and then uses **bijections** to compare the sizes of arbitrary sets: it introduces equinumerosity, finite and infinite sets, cardinal numbers with their arithmetic and comparison, and finally discusses countable sets and the continuum hypothesis. The cardinality of finite sets from Chapter 1 (Definition 1.6.1) is extended here to arbitrary sets.
@@ -190,7 +190,7 @@ $$
 \operatorname{card}(\mathbb{Z}) = \operatorname{card}(\mathbb{Q}) = \operatorname{card}(\mathbb{N} \times \mathbb{N}) = \aleph_0.
 $$
 
-For instance, $f(\langle m, n \rangle) = \dfrac{(m + n)(m + n + 1)}{2} + m$ is a bijection from $\mathbb{N} \times \mathbb{N}$ to $\mathbb{N}$ (it numbers the pairs diagonal by diagonal, according to the value of $m + n$).
+For instance, $f(\langle m, n \rangle) = \dfrac{(m + n)(m + n + 1)}{2} + n$ is a bijection from $\mathbb{N} \times \mathbb{N}$ to $\mathbb{N}$ (it numbers the pairs diagonal by diagonal, according to the value of $m + n$).
 
 The cardinal number of the set $\mathbb{R}$ of real numbers is neither a natural number nor $\aleph_0$ (since $\mathbb{N} \not\approx \mathbb{R}$). It is usually denoted by $\aleph$ (or $\mathfrak{c}$) and called the cardinality of the continuum. One can prove that
 

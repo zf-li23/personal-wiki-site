@@ -237,7 +237,7 @@ $$
 $$
 y+\lambda\sqrt{1+y'^2}-\frac{\lambda y'^2}{\sqrt{1+y'^2}}=y+\frac{\lambda}{\sqrt{1+y'^2}}=c_2,
 $$
-即 $(y-c_2)^2(1+y'^2)=\lambda^2$。令 $y'=\tan t$，得 $y-c_2=\lambda\cos t$，$\mathrm{d}x=\frac{\mathrm{d}y}{y'}=-\lambda\cos t\,\mathrm{d}t$，$x-c_1=-\lambda\sin t$，于是
+即 $(y-c_2)^2(1+y'^2)=\lambda^2$。令 $y'=\tan t$（$\lvert t\rvert<\frac\pi2$），则 $\frac1{\sqrt{1+y'^2}}=\cos t$，得 $y-c_2=-\lambda\cos t$，$\mathrm{d}x=\frac{\mathrm{d}y}{y'}=\frac{\lambda\sin t\,\mathrm{d}t}{\tan t}=\lambda\cos t\,\mathrm{d}t$，$x-c_1=\lambda\sin t$，于是
 
 $$
 (x-c_1)^2+(y-c_2)^2=\lambda^2:

@@ -178,7 +178,7 @@ Suppose $X\sim p$ and we want $\mathbb{P}(X>x_0)=\mathbb{E}_p[\boldsymbol{1}\{X>
 $$
 w(y)=\frac{\mathcal{N}(y;\mu,\sigma^2)}{\mathcal{N}(y;x_0,\sigma^2)}=\exp\Bigl(-\frac{(y-\mu)^2}{2\sigma^2}+\frac{(y-x_0)^2}{2\sigma^2}\Bigr),\qquad\hat\theta_n^{\mathrm{IS}}=\frac1n\sum_{i=1}^nw(Y_i)\boldsymbol{1}\{Y_i>x_0\}.
 $$
-For $\mathbb{P}(X>4)=3.17\times10^{-5}$ with $X\sim\mathcal{N}(0,1)$ and $q=\mathcal{N}(4,1)$, $100$ estimates with $n=1000$ each have a standard deviation about $100$ times smaller than those of crude Monte Carlo, most of which are exactly $0$.
+For $\mathbb{P}(X>4)=3.17\times10^{-5}$ with $X\sim\mathcal{N}(0,1)$ and $q=\mathcal{N}(4,1)$, $100$ estimates with $n=1000$ each have a standard deviation about two orders of magnitude smaller than those of crude Monte Carlo, most of which are exactly $0$; in theory the ratio of the two standard deviations is about $84$.
 
 ![Importance sampling. Left: running estimates of E_p[1] = 1 for the target Gamma(0.5, 2.5); the proposal Gamma(2, 2) violates a < 2 alpha and is hit by huge weights, while Gamma(0.5, 1) converges. Right: 100 estimates of P(X > 4) for X ~ N(0, 1) with n = 1000: crude Monte Carlo mostly returns 0, importance sampling from N(4, 1) is accurate.](./plots/importance-sampling.py)
 

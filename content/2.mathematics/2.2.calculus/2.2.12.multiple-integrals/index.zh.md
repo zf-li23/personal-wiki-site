@@ -430,7 +430,7 @@ $$
 
 平面薄板的质心类似地用二重积分定义。密度为常数时质心称为形心，只与形状有关；由对称性，形心在对称轴（对称面）上。
 
-**定义 12.5.2（转动惯量）** 物体 $\Omega$ 绕某轴的**转动惯量**为 $I=\iiint_\Omega d^2\rho\,\mathrm{d}V$，其中 $d$ 是点到轴的距离。例如绕 $z$ 轴 $I_z=\iiint_\Omega(x^2+y^2)\rho\,\mathrm{d}V$；平面薄板绕 $x$ 轴 $I_x=\iint_Dy^2\mu\,\mathrm{d}\sigma$。
+**定义 12.5.2（转动惯量）** 物体 $\Omega$ 绕某轴的**转动惯量**为 $J=\iiint_\Omega d^2\rho\,\mathrm{d}V$，其中 $d$ 是点到轴的距离。例如绕 $z$ 轴 $J_z=\iiint_\Omega(x^2+y^2)\rho\,\mathrm{d}V$；平面薄板绕 $x$ 轴 $J_x=\iint_Dy^2\mu\,\mathrm{d}\sigma$（$\mu$ 为面密度）。
 
 **例 12.5.1** 均匀半圆盘 $D=\{x^2+y^2\le a^2,\ y\ge0\}$ 的形心：由对称性 $\bar x=0$，
 
@@ -438,10 +438,10 @@ $$
 \bar y=\frac{1}{\pi a^2/2}\int_0^\pi\mathrm{d}\theta\int_0^ar\sin\theta\cdot r\,\mathrm{d}r=\frac{2}{\pi a^2}\cdot2\cdot\frac{a^3}3=\frac{4a}{3\pi}.
 $$
 
-**例 12.5.2** 质量为 $M$、半径为 $R$ 的均匀球体绕直径的转动惯量。取直径为 $z$ 轴，密度 $\rho_0=\frac{3M}{4\pi R^3}$，用球坐标：
+**例 12.5.2** 质量为 $M$、半径为 $R$ 的均匀球体绕直径的转动惯量。取直径为 $z$ 轴，用球坐标。这里 $\rho$ 是球坐标中到原点的距离（定义 12.3.2），常数密度另记作 $\rho_0=\frac{3M}{4\pi R^3}$：
 
 $$
-I_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
+J_z=\rho_0\int_0^{2\pi}\mathrm{d}\theta\int_0^\pi\mathrm{d}\varphi\int_0^R\rho^2\sin^2\varphi\cdot\rho^2\sin\varphi\,\mathrm{d}\rho=\rho_0\cdot2\pi\cdot\frac43\cdot\frac{R^5}5=\frac25MR^2.
 $$
 
 :::

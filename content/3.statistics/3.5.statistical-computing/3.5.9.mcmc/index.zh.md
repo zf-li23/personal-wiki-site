@@ -1,7 +1,7 @@
 ---
 title: Markov 链 Monte Carlo
 description: 蒙特卡洛积分（投点法与均值法）、重要性抽样及其方差、稀有事件与自归一化权重；Markov 链、平稳分布、细致平衡与基本极限定理；Metropolis–Hastings 算法、Gibbs 抽样与收敛诊断。
-source_hash: 39bc6bf5ac3e
+source_hash: c55da48b639a
 ---
 
 Markov 链 Monte Carlo（Markov chain Monte Carlo），简称 MCMC，用模拟来估计复杂模型中某个统计量的期望。相继的随机抽取构成一条 Markov 链，其平稳分布就是目标分布。它特别适用于计算复杂贝叶斯模型中的后验分布。在 Metropolis–Hastings 算法中，候选点从任意的提议分布中抽取，再按接受规则决定保留与否；Gibbs 抽样是它的特例，提议分布是向量中单个分量的条件分布。本章是课程的最后一章，把两条线索汇合在一起。第一部分接续 [3.1.12](/3.1.12) 的**蒙特卡洛方法**与 [3.5.8](/3.5.8) 的抽样方法：蒙特卡洛积分的两种方法与重要性抽样——它是拒绝抽样的镜像，在高维中以另一种方式失效。第二部分介绍 Markov 链、平稳分布与基本极限定理，并把两者结合成 MCMC。贝叶斯背景（**先验分布**、**后验分布**、**可信区间**）见 [3.2.7](/3.2.7)；贝叶斯统计（[3.7](/3.7)）通篇依赖这些抽样方法。
@@ -179,7 +179,7 @@ $$
 $$
 w(y)=\frac{\mathcal{N}(y;\mu,\sigma^2)}{\mathcal{N}(y;x_0,\sigma^2)}=\exp\Bigl(-\frac{(y-\mu)^2}{2\sigma^2}+\frac{(y-x_0)^2}{2\sigma^2}\Bigr),\qquad\hat\theta_n^{\mathrm{IS}}=\frac1n\sum_{i=1}^nw(Y_i)\boldsymbol{1}\{Y_i>x_0\}.
 $$
-对 $X\sim\mathcal{N}(0,1)$ 的 $\mathbb{P}(X>4)=3.17\times10^{-5}$，取 $q=\mathcal{N}(4,1)$，每个用 $n=1000$ 的 $100$ 个估计的标准差，比朴素蒙特卡洛的小约 $100$ 倍，而后者的估计大多恰好为 $0$。
+对 $X\sim\mathcal{N}(0,1)$ 的 $\mathbb{P}(X>4)=3.17\times10^{-5}$，取 $q=\mathcal{N}(4,1)$，每个用 $n=1000$ 的 $100$ 个估计的标准差，比朴素蒙特卡洛的小约两个数量级，而后者的估计大多恰好为 $0$；理论上两者标准差之比约为 $84$。
 
 ![重要性抽样。左：目标 Gamma(0.5, 2.5) 下 E_p[1] = 1 的逐步估计；提议 Gamma(2, 2) 违反 a < 2 alpha，被巨大的权重击中，而 Gamma(0.5, 1) 收敛。右：X ~ N(0, 1) 时 P(X > 4) 的 100 个估计（n = 1000）：朴素蒙特卡洛多数返回 0，从 N(4, 1) 作重要性抽样则很准确。](./plots/importance-sampling.py)
 

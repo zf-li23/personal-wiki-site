@@ -138,7 +138,7 @@ $$
 a'b' = ab + (aj + ib + ij),
 $$
 
-由吸收性 $aj, ib, ij \in I$，所以 $a'b' + I = ab + I$，乘法也与代表元无关。换言之，"$a \sim b \iff a - b \in I$"对加法和乘法都是**同余关系**（定义 1.4.7），$R/I$ 是相应的**商代数**；结合律与分配律由定理 1.4.2 从 $R$ 继承。 $\square$
+由吸收性 $aj, ib, ij \in I$，所以 $a'b' + I = ab + I$，乘法也与代表元无关。换言之，"$a \sim b \iff a - b \in I$"对加法和乘法都是**同余关系**（定义 1.4.7），$R/I$ 是相应的**商代数**；乘法的结合律由定理 1.4.2 从 $R$ 继承。分配律不在定理 1.4.2 之列，但可以直接验证：$(a + I)\big((b + I) + (c + I)\big) = a(b + c) + I = (ab + ac) + I = (a + I)(b + I) + (a + I)(c + I)$，右分配律同理。 $\square$
 
 例如，模 $n$ 剩余类环 $\mathbb{Z}_n$ 就是整数环 $\mathbb{Z}$ 关于理想 $n\mathbb{Z}$ 的商环 $\mathbb{Z}/n\mathbb{Z}$，这与群论中把循环群 $\mathbb{Z}_n$ 看作 $\mathbb{Z}$ 关于子群 $n\mathbb{Z}$ 的商群是一致的。
 

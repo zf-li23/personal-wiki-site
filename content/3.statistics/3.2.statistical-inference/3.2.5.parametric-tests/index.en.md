@@ -974,9 +974,7 @@ The level-$\alpha$ tests reject $H_{0,A}$ when $F_A>F_{I-1,(I-1)(J-1),\alpha}$ a
 
 and $F_A=\mathrm{MS}_A/\mathrm{MS}_e$, $F_B=\mathrm{MS}_B/\mathrm{MS}_e$.
 
-**Remark 5.6.1** Here $\Theta$ has dimension $I+J$ ($\mu$, $I-1$ free $\alpha_i$, $J-1$ free $\beta_j$, $\sigma^2$) and $\Theta_0$ under $H_{0,A}$ has dimension $J+1$, so Theorem 5.3.1 would suggest $-2\log\lambda\approx\chi^2_{I-1}$. With one observation per cell, however, the number of parameters grows with $J$, and the regularity conditions fail: since $-2\log\lambda=IJ\log(1+\mathrm{SS}_A/\mathrm{SS}_e)$ and $\mathrm{SS}_e/(IJ)\to\frac{I-1}{I}\sigma^2$ as $J\to\infty$, the limit under $H_{0,A}$ is $\frac{I}{I-1}\chi^2_{I-1}$, not $\chi^2_{I-1}$. The exact $F$-test of Theorem 5.6.2 should be used.
-
-For the data below (three brands, four workers),
+Returning to Example 5.6.2, for the data below (three brands, four workers),
 
 | brand | worker 1 | worker 2 | worker 3 | worker 4 | $\bar y_{i\cdot}$ |
 |---|---|---|---|---|---|
@@ -996,6 +994,8 @@ $$
 F_A=\frac{(104/3)/2}{12/6}=\frac{26}{3}=8.667>F_{2,6,0.05}=5.143,\qquad F_B=\frac{(147/12)/3}{12/6}=\frac{147}{72}=2.042<F_{3,6,0.05}=4.757,
 $$
 so the hypothesis of no brand effect is rejected and that of no worker effect is not. The same arguments extend to two-way layouts with several observations per cell.
+
+**Remark 5.6.1** Here $\Theta$ has dimension $I+J$ ($\mu$, $I-1$ free $\alpha_i$, $J-1$ free $\beta_j$, $\sigma^2$) and $\Theta_0$ under $H_{0,A}$ has dimension $J+1$, so Theorem 5.3.1 would suggest $-2\log\lambda\approx\chi^2_{I-1}$. With one observation per cell, however, the number of parameters grows with $J$, and the regularity conditions fail: since $-2\log\lambda=IJ\log(1+\mathrm{SS}_A/\mathrm{SS}_e)$ and $\mathrm{SS}_e/(IJ)\to\frac{I-1}{I}\sigma^2$ as $J\to\infty$, the limit under $H_{0,A}$ is $\frac{I}{I-1}\chi^2_{I-1}$, not $\chi^2_{I-1}$. The exact $F$-test of Theorem 5.6.2 should be used.
 
 ## Summary {#summary}
 

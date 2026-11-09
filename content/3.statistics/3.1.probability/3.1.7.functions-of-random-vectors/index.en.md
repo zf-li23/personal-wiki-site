@@ -1,6 +1,6 @@
 ---
 title: Functions of Random Vectors, Order Statistics and Quantiles
-source_hash: 5dbf71acf4f1
+source_hash: 03d8de5bf491
 ---
 
 [3.1.5](/3.1.5) dealt with the distribution of a function $g(X)$ of one random variable: in general one first finds the distribution function of $g(X)$ and then differentiates, and when $g$ is monotone or piecewise monotone the density of $g(X)$ can be written down directly from that of $X$. This chapter extends both routes to functions $g(X_1, \dots, X_n)$ of random vectors. The general method is still "find the distribution function first"; the most important special cases are the distribution of a sum (the convolution formula) and the joint density of several functions (the change-of-variables formula). As applications we derive the relations between the normal distribution and the three main distributions of statistics ($\chi^2$, $t$ and $F$), and study a special class of functions, the order statistics, which describe extremes such as the minimum and maximum of a sample. Finally we define the $p$-quantile of an arbitrary distribution function (its generalized inverse), which is both the source of critical values in statistical inference and a way to generate random numbers from any distribution using uniform ones. The chapter relies on the joint densities, marginal densities and independence criteria of [3.1.6](/3.1.6); the sampling distributions of statistical inference ([3.2](/3.2)) are built on it.
@@ -239,7 +239,7 @@ then $X$ is said to have the **F-distribution** with $(m, n)$ degrees of freedom
 
 **Theorem 7.1.8** If $X \sim \chi^2_m$ and $Y \sim \chi^2_n$ are independent, then $F = \dfrac{X/m}{Y/n} \sim F_{m,n}$. In particular, if $X_1, \dots, X_m, Y_1, \dots, Y_n \overset{\text{iid}}{\sim} \mathcal{N}(0, 1)$, then $\dfrac{\frac{1}{m}\sum_i X_i^2}{\frac{1}{n}\sum_j Y_j^2} \sim F_{m,n}$.
 
-The proof is the same as for Theorem 7.1.7: apply Theorem 7.1.4 to $(F, W) = \big(\frac{X/m}{Y/n}, Y\big)$ and integrate over $W$. The definition also shows that $1/F \sim F_{n,m}$ when $F \sim F_{m,n}$, and $T^2 \sim F_{1,n}$ when $T \sim t_n$. The $F$-distribution was introduced by R. A. Fisher (1924) and plays an important role in the analysis of variance and in linear regression. The expectations and variances of the three distributions are computed in [3.1.8](/3.1.8), and their role in sampling from normal populations is discussed in [3.2.2](/3.2.2) of statistical inference.
+The proof is the same as for Theorem 7.1.7: apply Theorem 7.1.4 to $(F, W) = \big(\frac{X/m}{Y/n}, Y\big)$ and integrate over $W$. The definition also shows that $1/F \sim F_{n,m}$ when $F \sim F_{m,n}$, and $T^2 \sim F_{1,n}$ when $T \sim t_n$. The $F$-distribution goes back to R. A. Fisher's 1924 work on variance ratios (he used $z = \frac12\ln F$); G. W. Snedecor tabulated it in 1934 and named it $F$ after Fisher's initial. It plays an important role in the analysis of variance and in linear regression. The expectations and variances of the three distributions are computed in [3.1.8](/3.1.8), and their role in sampling from normal populations is discussed in [3.2.2](/3.2.2) of statistical inference.
 
 ## 7.2. Order Statistics
 

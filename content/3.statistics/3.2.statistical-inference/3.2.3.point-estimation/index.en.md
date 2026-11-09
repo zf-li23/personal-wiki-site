@@ -707,7 +707,7 @@ By Examples 3.4.8–3.4.10, $\bar X$ is efficient for $\theta$ in the Bernoulli 
 
 ### 3.5.1. The Simple Linear Regression Model
 
-The Ames Housing data record about $2000$ house sales in Ames, Iowa (2006–2010) with $82$ variables. To predict the sale price $y$ (the dependent variable) from the above-ground living area $x$ (the independent variable), consider the *simple linear regression model*
+The Ames Housing data (De Cock, 2011) record $2930$ house sales in Ames, Iowa (2006–2010) with $82$ variables; the fits below use a subset of about $2000$ of these sales, so their coefficients differ somewhat from fits to the full data. To predict the sale price $y$ (the dependent variable) from the above-ground living area $x$ (the independent variable), consider the *simple linear regression model*
 
 $$
 y_i=\beta_0+\beta_1x_i+\varepsilon_i,\qquad i=1,\dots,n,

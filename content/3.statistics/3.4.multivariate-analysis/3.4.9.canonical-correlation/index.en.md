@@ -257,7 +257,7 @@ The tests are applied sequentially for $k=0,1,2,\dots$ until $H_0^{(k)}$ is not 
 ## 9.5. Extensions
 
 - *Probabilistic CCA* (F. Bach and M. Jordan, 2005) is a latent variable model in the spirit of factor analysis: $\boldsymbol{X}=W_1\boldsymbol{Z}+\boldsymbol{\mu}_1+\boldsymbol{\varepsilon}_1$, $\boldsymbol{Y}=W_2\boldsymbol{Z}+\boldsymbol{\mu}_2+\boldsymbol{\varepsilon}_2$ with a shared $\boldsymbol{Z}\sim\mathcal{N}(\boldsymbol{0},I_k)$ and $\boldsymbol{\varepsilon}_i\sim\mathcal{N}(\boldsymbol{0},\Psi_i)$; its maximum likelihood estimates recover the canonical directions, and it extends to conditional generative models.
-- *Kernel CCA* (S. Akaho, 2006) maps both sets into reproducing kernel Hilbert spaces, as kernel PCA does in [3.4.6](/3.4.6), to capture nonlinear associations.
+- *Kernel CCA* (S. Akaho, 2001; also P. L. Lai and C. Fyfe, 2000) maps both sets into reproducing kernel Hilbert spaces, as kernel PCA does in [3.4.6](/3.4.6), to capture nonlinear associations.
 - *Sparse CCA* (D. Witten, R. Tibshirani and T. Hastie, 2009) adds $\ell_1$ penalties to the coefficient vectors through a penalized matrix decomposition, so that each canonical variate involves only a few variables, which is essential when $p$ and $q$ exceed $n$.
 - *Deep CCA* (G. Andrew, R. Arora, J. Bilmes and K. Livescu, 2013) maximizes $\operatorname{Corr}\big(f(\boldsymbol{X};\theta_f),g(\boldsymbol{Y};\theta_g)\big)$ over two neural networks $f$ and $g$.
 

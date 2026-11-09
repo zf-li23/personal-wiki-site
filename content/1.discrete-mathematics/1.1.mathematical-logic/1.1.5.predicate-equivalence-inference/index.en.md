@@ -1,6 +1,6 @@
 ---
 title: Equivalence and Inference in Predicate Logic
-source_hash: 7b6c77ee2cde
+source_hash: 2dd79a0979e7
 ---
 
 Much of this chapter can be learned by analogy with propositional logic: the notions of equivalence, normal forms, rules of inference, and resolution are all carried over from [1.1.2](/1.1.2), and what is new is how to handle quantifiers. For the same reason, this chapter also serves as a review of propositional logic.
@@ -197,6 +197,8 @@ The result is $(\forall y)(\forall z)(\forall v)P(a, y, z, f(y, z), v, g(y, z, v
 **Definition 5.3.3 ($\exists$-Prenex Normal Form)** A prenex normal form of the shape $(\exists x_1)\cdots(\exists x_i)(\forall x_{i+1})\cdots(\forall x_n)M$, that is, one in which all existential quantifiers precede all universal quantifiers and there is at least one existential quantifier, is called an **$\exists$-prenex normal form**.
 
 **Theorem 5.3.2** Every formula $A$ of first-order logic can be converted into a corresponding $\exists$-prenex normal form, and $A$ is valid if and only if its $\exists$-prenex normal form is valid.
+
+The conversion generally introduces new predicate symbols, so the $\exists$-prenex normal form is not equivalent to $A$; it only preserves validity. It is dual to the $\forall$-prenex normal form below: $A$ is valid if and only if $\lnot A$ is unsatisfiable, so we convert $\lnot A$ into a prenex form with the universal quantifiers in front that preserves unsatisfiability and then negate it, which puts the existential quantifiers in front.
 
 ### 5.3.5. $\forall$-Prenex Normal Form
 

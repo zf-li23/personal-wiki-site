@@ -479,7 +479,7 @@ $$
 \left[\bar X-t_{n-1,\alpha/4}\frac{S_X}{\sqrt n},\ \bar X+t_{n-1,\alpha/4}\frac{S_X}{\sqrt n}\right]\times\left[\bar Y-t_{n-1,\alpha/4}\frac{S_Y}{\sqrt n},\ \bar Y+t_{n-1,\alpha/4}\frac{S_Y}{\sqrt n}\right].
 $$
 
-For the children, the $95\%$ region is $[125.5,\ 127.9]$ lb for the mean weight times $[67.75,\ 68.15]$ in for the mean height. The Bonferroni correction generalizes immediately to $(\mu_1,\dots,\mu_k)$, using level $1-\alpha/k$ for each interval, and it handles different sample sizes with no extra effort. A less conservative refinement, used in multiple testing, is the Holm–Bonferroni method.
+For the children, the $95\%$ region is $[125.5,\ 127.9]$ lb for the mean weight times $[67.70,\ 68.10]$ in for the mean height (with $t_{499,0.0125}=2.25$). The Bonferroni correction generalizes immediately to $(\mu_1,\dots,\mu_k)$, using level $1-\alpha/k$ for each interval, and it handles different sample sizes with no extra effort. A less conservative refinement, used in multiple testing, is the Holm–Bonferroni method.
 
 :::
 

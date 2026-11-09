@@ -343,7 +343,7 @@ The extensions of this chapter are of four kinds: the same problem with a better
 | linear → nonlinear | statistical learning | kernel PCA, sparse PCA, SVM |
 | independent observations → time series | time series analysis | matrix factor models |
 | continuous → discrete data | logistic regression, categorical data analysis | correspondence analysis, logistic PCA, logistic regression |
-| correlation → causality | [Causal Inference](/3.9) | network analysis |
+| correlation → causality | [Causal Inference](/3.9) | graphs encoding conditional independence (Section 12.6) |
 | priors and posterior inference | [Bayesian Statistics](/3.7) | Bayes classifier, Bayesian Gaussian mixtures |
 | algorithms | [Statistical Computing](/3.5) | EM algorithm, SVD, iterative clustering |
 

@@ -32,7 +32,7 @@ In simple cases the sampling distribution and the standard error can be derived 
 
 ## 7.2. Bootstrap Basics
 
-The name comes from the phrase "to pull oneself up by one's bootstraps", traced to Raspe's *The Surprising Adventures of Baron Munchausen*, in which the Baron, at the bottom of a deep lake, saves himself by pulling on his own bootstraps. Ideally we would sample repeatedly from the population; the key idea is to pretend, for the moment, that the population consists of many copies of the observed sample. Sampling from this hypothetical population is the same as sampling with replacement from the sample itself.
+The name comes from the phrase "to pull oneself up by one's bootstraps", which describes an impossible feat of self-help. It is often traced to Raspe's *The Surprising Adventures of Baron Munchausen*, although in the book the Baron pulls himself (and his horse) out of a swamp by his own pigtail, not by his bootstraps. Ideally we would sample repeatedly from the population; the key idea is to pretend, for the moment, that the population consists of many copies of the observed sample. Sampling from this hypothetical population is the same as sampling with replacement from the sample itself.
 
 ### 7.2.1. Bootstrap Samples and the Bootstrap Principle
 

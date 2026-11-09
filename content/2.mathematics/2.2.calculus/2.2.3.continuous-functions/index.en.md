@@ -1,6 +1,6 @@
 ---
 title: Continuous Functions
-source_hash: 4728a95393cd
+source_hash: 93b7e3347435
 ---
 
 Intuitively, the graph of a continuous function is a curve "without breaks." This chapter makes the intuition precise in the language of limits from [Chapter 2](/2.2.2): $f$ is continuous at $x_0$ when $\lim\limits_{x \to x_0} f(x) = f(x_0)$, that is, when the limit equals the value of the function. On this basis we discuss in turn the classification of points of discontinuity, the behavior of continuity under operations, and the continuity of elementary functions. We then establish two further forms of the completeness of the real numbers, the nested interval theorem and the Bolzano–Weierstrass theorem, and use them to prove the three basic properties of continuous functions on closed intervals (Bolzano's theorem, the intermediate value theorem and the extreme value theorem) as well as the sufficiency part of the Cauchy criterion. Finally we introduce uniform continuity, a global property that [Chapter 7](/2.2.7) needs to prove that continuous functions are integrable.
@@ -73,7 +73,7 @@ Discontinuity occurs in two ways: $f$ is not defined at $x_0$ (as $\frac{x}{x - 
 
 **Solution** $f$ is undefined at $x = 0$. For $0 < x < 1$, $f(x) = 0$; for $-1 < x < 0$, $f(x) = -\frac1x \to +\infty$ ($x \to 0^-$), so $x = 0$ is a discontinuity of the second kind (an infinite discontinuity). At an integer $n \ne 0$, $\lim\limits_{x \to n^-} f(x) = \frac{n - 1}{n}$ and $\lim\limits_{x \to n^+} f(x) = \frac nn = 1$; these differ, so $n$ is a discontinuity of the first kind (a jump discontinuity). At all other points $f$ is a quotient of continuous functions and hence continuous (Theorem 3.1.2).
 
-**Example 3.1.5** The **Dirichlet function** $D(x)$ is discontinuous everywhere: every interval contains both rational and irrational numbers (Theorem 1.1.2), so at every point $x_0$ we can choose a sequence of rationals and a sequence of irrationals tending to $x_0$, along which $D$ takes the values $1$ and $0$, respectively. By Heine's theorem, $\lim\limits_{x \to x_0} D(x)$ does not exist, and every point is a discontinuity of the second kind (an oscillating discontinuity). By contrast, $xD(x)$ is continuous only at $x = 0$: $|xD(x)| \leq |x|$.
+**Example 3.1.5** The **Dirichlet function** $D(x)$ is discontinuous everywhere: every interval $(a, b)$ contains both rational and irrational numbers. The rationals are provided by Theorem 1.1.2; applying Theorem 1.1.2 to the interval $(a - \sqrt2, b - \sqrt2)$ gives a rational $r$, and then $r + \sqrt2 \in (a, b)$ is irrational. Hence at every point $x_0$ we can choose a sequence of rationals and a sequence of irrationals tending to $x_0$, along which $D$ takes the values $1$ and $0$, respectively. By Heine's theorem, $\lim\limits_{x \to x_0} D(x)$ does not exist, and every point is a discontinuity of the second kind (an oscillating discontinuity). By contrast, $xD(x)$ is continuous only at $x = 0$: $|xD(x)| \leq |x|$.
 
 ### 3.1.2. Elementary Properties of Continuous Functions
 

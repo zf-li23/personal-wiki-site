@@ -258,13 +258,13 @@ $\operatorname{Isom}(V, g)$ 关于复合构成群：等距变换的复合与逆�
 | $\operatorname{diag}(I_p, -I_q)$ | 不定正交群 $O(p, q)$ | $M^{\mathsf T}\operatorname{diag}(I_p, -I_q)M = \operatorname{diag}(I_p, -I_q)$ |
 | $\operatorname{diag}(J, \dots, J)$ | 辛群 $\operatorname{Sp}(2m, \mathbb{R})$ | $M^{\mathsf T}GM = G$ |
 
-**例 13.7.1** 在 $\mathbb{R}^4$ 上取例 13.6.1 的 Lorentz 型。设 $0 < v < c$，$E_0 = \sqrt{1 - v^2/c^2}$，
+**例 13.7.1** 在 $\mathbb{R}^4$ 上取例 13.6.1 的 Lorentz 型。设 $0 < v < c$，$\beta = v/c$，$\gamma = 1/\sqrt{1 - \beta^2}$，
 
 $$
-T\colon (x, y, z, t)^{\mathsf T} \mapsto (x', y', z', t')^{\mathsf T}, \qquad x' = \frac{x - vt}{E_0}, \quad y' = y, \quad z' = z, \quad t' = \frac{t - vx/c^2}{E_0}.
+T\colon (x, y, z, t)^{\mathsf T} \mapsto (x', y', z', t')^{\mathsf T}, \qquad x' = \gamma(x - vt), \quad y' = y, \quad z' = z, \quad t' = \gamma\left(t - \frac{vx}{c^2}\right).
 $$
 
-直接计算 $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = \left(1 - \frac{v^2}{c^2}\right)(x^2 - c^2t^2)$，除以 $E_0^2$ 得 $x'^2 - c^2t'^2 = x^2 - c^2t^2$，所以 $g(T\alpha, T\alpha) = g(\alpha, \alpha)$；由对称双线性型的极化，$g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$。$T$ 是 Lorentz 变换，Lorentz 型的等距群 $O(3, 1)$ 称为 Lorentz 群（Lorentz group）。
+直接计算 $(x - vt)^2 - c^2\left(t - \frac{vx}{c^2}\right)^2 = (1 - \beta^2)(x^2 - c^2t^2)$，乘以 $\gamma^2 = 1/(1 - \beta^2)$ 得 $x'^2 - c^2t'^2 = x^2 - c^2t^2$，所以 $g(T\alpha, T\alpha) = g(\alpha, \alpha)$；由对称双线性型的极化，$g(T\alpha_1, T\alpha_2) = g(\alpha_1, \alpha_2)$。$T$ 是 Lorentz 变换，Lorentz 型的等距群 $O(3, 1)$ 称为 Lorentz 群（Lorentz group）。
 
 **例 13.7.2** $\mathbb{R}^2$ 上的有向面积 $g(\boldsymbol{\alpha}, \boldsymbol{\beta}) = \det(\boldsymbol{\alpha}, \boldsymbol{\beta})$ 是辛型。对 2 阶实矩阵有恒等式 $M^{\mathsf T}JM = (\det M)J$，所以 $M \in \operatorname{Sp}(2, \mathbb{R})$ $\Leftrightarrow$ $\det M = 1$：二维的辛变换就是保持有向面积的线性变换。高维时辛条件比保持体积强得多。Hamilton 力学的相空间带有自然的辛型，系统随时间的演化保持这个辛型。
 

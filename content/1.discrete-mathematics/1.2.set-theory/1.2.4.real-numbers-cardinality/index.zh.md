@@ -189,7 +189,7 @@ $$
 \operatorname{card}(\mathbb{Z}) = \operatorname{card}(\mathbb{Q}) = \operatorname{card}(\mathbb{N} \times \mathbb{N}) = \aleph_0.
 $$
 
-例如 $f(\langle m, n \rangle) = \dfrac{(m + n)(m + n + 1)}{2} + m$ 是 $\mathbb{N} \times \mathbb{N}$ 到 $\mathbb{N}$ 的双射（按 $m + n$ 的值逐条斜线编号）。
+例如 $f(\langle m, n \rangle) = \dfrac{(m + n)(m + n + 1)}{2} + n$ 是 $\mathbb{N} \times \mathbb{N}$ 到 $\mathbb{N}$ 的双射（按 $m + n$ 的值逐条斜线编号）。
 
 实数集合 $\mathbb{R}$ 的基数不是自然数，也不是 $\aleph_0$（因为 $\mathbb{N} \not\approx \mathbb{R}$）。通常把 $\operatorname{card}(\mathbb{R})$ 记作 $\aleph$（也记作 $\mathfrak{c}$），称为连续统的基数。可以证明
 

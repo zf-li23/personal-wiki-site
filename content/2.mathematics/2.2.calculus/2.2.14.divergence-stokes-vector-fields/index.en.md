@@ -1,6 +1,6 @@
 ---
 title: The Divergence Theorem, Stokes' Theorem and Vector Fields
-source_hash: c1b698e49cfe
+source_hash: d060af07b013
 ---
 
 Green's theorem in [2.2.13](/2.2.13) relates a double integral over a plane region to a **line integral of a vector field** around its boundary. This chapter extends it to space: the divergence theorem relates a triple integral over a spatial region to a **surface integral of a vector field** over its closed boundary surface, and Stokes' theorem relates a surface integral of a vector field over a surface to a line integral around its boundary curve. The three theorems share a common form, "the integral of a certain derivative over a region equals an integral over its boundary", in direct line of descent from the one-variable **fundamental theorem of calculus**; in modern mathematics they are unified in the general Stokes theorem for differential forms, $\int_M\mathrm{d}\omega=\int_{\partial M}\omega$.

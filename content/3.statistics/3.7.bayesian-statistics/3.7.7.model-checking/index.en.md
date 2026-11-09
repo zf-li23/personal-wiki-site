@@ -184,7 +184,7 @@ With a common rate, the realized discrepancy, about $143$, is twice what replica
 **Example 7.4.3** A study investigated the sodium content of beer: $6$ brands were chosen at random, and $8$ randomly chosen bottles or cans of each brand were analyzed, giving the sodium content $y_{ij}$ (in $\mathrm{mg}$) of bottle $i$ of brand $j$. The brand means differ considerably (from about $10$ to about $24\,\mathrm{mg}$), and bottles within a brand vary little. A hierarchical normal model as in [3.7.6](/3.7.6) treats the brand means $\theta_j$ as draws from $\mathcal{N}(\mu,\tau^2)$, with the sampling variance of each brand mean treated as known, $\sigma_j^2=0.0895$, derived from the mean squared error of a one-way **analysis of variance**. The posterior summaries are
 
 $$
-\mathbb{E}(\tau\mid y)=6.448,\quad\operatorname{mode}(\tau\mid y)=4.61,\quad\mathbb{E}(\tau^2\mid y)=50.85,\quad\operatorname{mode}(\tau^2\mid y)=21.25,\quad\mathbb{E}(\mu\mid y)=17.67,\quad\operatorname{sd}(\mu\mid y)=2.928.
+\mathbb{E}(\tau\mid y)=6.448,\quad\operatorname{mode}(\tau\mid y)=4.61,\quad\mathbb{E}(\tau^2\mid y)=50.85,\quad\mathbb{E}(\mu\mid y)=17.67,\quad\operatorname{sd}(\mu\mid y)=2.928.
 $$
 The amount of shrinkage is visible in the conditional posterior mean
 
