@@ -319,7 +319,7 @@ F_n(x)-F(x)\le F_n(x_j)-F(x_{j-1})=F_n(x_j)-F(x_j)+\frac1k,\qquad F_n(x)-F(x)\ge
 $$
 so $D_n\le\max_{0\le j\le k}|F_n(x_j)-F(x_j)|+1/k$. By Theorem 1.5.1 the maximum over finitely many points tends to $0$ almost surely, so $\limsup_nD_n\le1/k$ almost surely for every $k$, hence $D_n\to0$ almost surely. For general $F$ the same argument works with the left limits $F(x_j-)$ and $F_n(x_j-)$ added at the jump points. $\square$
 
-The Glivenko–Cantelli theorem is sometimes called the fundamental theorem of statistics: with probability one, the empirical distribution of a large enough sample is uniformly close to the population distribution, so the sample eventually determines the population. This justifies using sample quantities as estimates of population quantities. The rate is $1/\sqrt n$: $\sqrt nD_n$ has a nondegenerate limiting distribution (Kolmogorov's theorem), which is the basis of the Kolmogorov–Smirnov test in [3.2.6](/3.2.6).
+The Glivenko–Cantelli theorem is sometimes called the fundamental theorem of statistics: with probability one, the empirical distribution of a large enough sample is uniformly close to the population distribution, so the sample eventually determines the population. This justifies using sample statistics as estimates of the corresponding population quantities. The rate is $1/\sqrt n$: $\sqrt nD_n$ has a nondegenerate limiting distribution (Kolmogorov's theorem), which is the basis of the Kolmogorov–Smirnov test in [3.2.6](/3.2.6).
 
 ![Kolmogorov distance between the empirical and the true distribution function for twenty growing normal samples; the distance decreases like the reference line 1 over root n](./plots/glivenko-cantelli.py)
 

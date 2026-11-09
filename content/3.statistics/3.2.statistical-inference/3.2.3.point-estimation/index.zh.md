@@ -1,10 +1,10 @@
 ---
 title: 点估计
 description: 估计量的评价准则（无偏性、有效性、均方误差、相合性、渐近正态性），矩估计法，极大似然估计，一致最小方差无偏估计理论（Rao–Blackwell 定理、Lehmann–Scheffé 定理与 Cramér–Rao 不等式），线性回归中的估计，核密度估计，以及高维稀疏估计简介。
-source_hash: 6bde553605bd
+source_hash: 149e88a27393
 ---
 
-点估计用一个统计量去估计未知参数，例如总体的平均收入或 Bernoulli 试验的成功概率。估计量是随机样本的函数，其取值随样本而变，因此要问的不是某一个估计值对不对，而是估计量在重复抽样下表现如何。本章先建立比较估计量的准则（无偏性、有效性、均方误差、相合性与渐近正态性），再介绍两种构造估计量的一般方法——矩估计法与极大似然估计，最后寻求最优估计量：借助 [3.2.2](/3.2.2) 的**充分统计量**与**完备统计量**得到一致最小方差无偏估计，并用 Cramér–Rao 下界衡量无偏估计所能达到的精度。本章以两个应用收尾：线性回归模型中的估计（在课程 [3.3](/3.3) 中深入讨论），以及核密度估计这一最初的非参数方法（参见 [3.6](/3.6)）；选读一节简述参数个数超过样本量时的估计。所用的概率工具是**大数定律**、**中心极限定理**和 [3.1.14](/3.1.14) 中的各种收敛概念。给点估计附上精度度量的区间估计见 [3.2.4](/3.2.4)。
+点估计用一个统计量去估计未知参数，例如总体的平均收入或 Bernoulli 试验的成功概率。估计量是随机样本的函数，其取值随样本而变，因此要问的不是某一个估计值对不对，而是估计量在重复抽样下表现如何。本章先建立比较估计量的准则（无偏性、有效性、均方误差、相合性与渐近正态性），再介绍两种构造估计量的一般方法——矩估计法与极大似然估计，最后寻求最优估计量：借助 [3.2.2](/3.2.2) 的**充分统计量**与**完全统计量**得到一致最小方差无偏估计，并用 Cramér–Rao 下界衡量无偏估计所能达到的精度。本章以两个应用收尾：线性回归模型中的估计（在课程 [3.3](/3.3) 中深入讨论），以及核密度估计这一最初的非参数方法（参见 [3.6](/3.6)）；选读一节简述参数个数超过样本量时的估计。所用的概率工具是**大数定律**、**中心极限定理**和 [3.1.14](/3.1.14) 中的各种收敛概念。给点估计附上精度度量的区间估计见 [3.2.4](/3.2.4)。
 
 ## 3.1. 估计量的评价准则
 
@@ -387,7 +387,7 @@ $$
 
 **证明** 由推论 2.2.1，记 $D=\log C$，左边等于 $n\,\partial D/\partial\theta_i=-n\,\mathbb{E}_{\boldsymbol{\theta}}T_i(X)$，所以方程组就是 $\mathbb{E}_{\boldsymbol{\theta}}T_i(X)=\frac1n\sum_jT_i(x_j)$：充分统计量的总体均值与样本均值相等。此外 $l$ 的 Hesse 矩阵为 $n\,\partial^2D/\partial\theta_i\partial\theta_j=-n\operatorname{Cov}_{\boldsymbol{\theta}}(T_i(X),T_j(X))$，在满秩假设下负定。因此 $l$ 在凸集 $\Theta$ 上严格凹，$\Theta_0$ 中的驻点是唯一的全局最大值点，而且驻点至多一个。$\square$
 
-因此在指数族中无需检验二阶导数。例如，设 $X_1,\dots,X_m\overset{\text{iid}}{\sim}\mathcal{N}(\mu_1,\sigma^2)$ 与 $Y_1,\dots,Y_n\overset{\text{iid}}{\sim}\mathcal{N}(\mu_2,\sigma^2)$ 是方差相同的两个独立样本，联合密度构成三参数指数族，充分完备统计量为 $\left(\sum X_i,\sum Y_j,\sum X_i^2+\sum Y_j^2\right)$，由似然方程得
+因此在指数族中无需检验二阶导数。例如，设 $X_1,\dots,X_m\overset{\text{iid}}{\sim}\mathcal{N}(\mu_1,\sigma^2)$ 与 $Y_1,\dots,Y_n\overset{\text{iid}}{\sim}\mathcal{N}(\mu_2,\sigma^2)$ 是方差相同的两个独立样本，联合密度构成三参数指数族，充分完全统计量为 $\left(\sum X_i,\sum Y_j,\sum X_i^2+\sum Y_j^2\right)$，由似然方程得
 
 $$
 \hat\mu_1=\bar X,\qquad\hat\mu_2=\bar Y,\qquad\hat\sigma^2=\frac1{m+n}\left[\sum_{i=1}^m(X_i-\bar X)^2+\sum_{j=1}^n(Y_j-\bar Y)^2\right].
@@ -511,7 +511,7 @@ $$
 
 :::
 
-求一致最小方差无偏估计有三种方法：零无偏估计法、充分完备统计量法（Lehmann–Scheffé）以及 Cramér–Rao 不等式。它们都以 Rao–Blackwell 定理为基础。
+求一致最小方差无偏估计有三种方法：零无偏估计法、充分完全统计量法（Lehmann–Scheffé）以及 Cramér–Rao 不等式。它们都以 Rao–Blackwell 定理为基础。
 
 ### 3.4.2. Rao–Blackwell 定理
 
@@ -545,7 +545,7 @@ $$
 
 若统计量 $l(\boldsymbol{X})$ 对一切 $\theta$ 满足 $\mathbb{E}_\theta l(\boldsymbol{X})=0$，则它是零的无偏估计。把它加到一个无偏估计上仍保持无偏，因此一个无偏估计是最优的，恰好当它不能用这种方式改进。
 
-**定理 3.4.2** 设 $\hat g(\boldsymbol{X})$ 是 $g(\theta)$ 的无偏估计，且对一切 $\theta\in\Theta$ 有 $\operatorname{Var}_\theta(\hat g)<\infty$。若对每个对一切 $\theta$ 满足 $\mathbb{E}_\theta l(\boldsymbol{X})=0$ 与 $\operatorname{Var}_\theta(l)<\infty$ 的统计量 $l(\boldsymbol{X})$，都有
+**定理 3.4.2** 设 $\hat g(\boldsymbol{X})$ 是 $g(\theta)$ 的无偏估计，且对一切 $\theta\in\Theta$ 有 $\operatorname{Var}_\theta(\hat g)<\infty$。若对每个满足 $\mathbb{E}_\theta l(\boldsymbol{X})=0$ 与 $\operatorname{Var}_\theta(l)<\infty$（对一切 $\theta$）的统计量 $l(\boldsymbol{X})$，都有
 
 $$
 \operatorname{Cov}_\theta(\hat g,l)=\mathbb{E}_\theta[\hat g(\boldsymbol{X})l(\boldsymbol{X})]=0\qquad\text{对一切 }\theta\in\Theta,
@@ -561,7 +561,7 @@ $$
 
 这个条件也是必要的：若对某个 $l$ 与 $\theta_0$ 有 $\operatorname{Cov}_{\theta_0}(\hat g,l)\ne0$，则取 $c=\operatorname{Cov}_{\theta_0}(\hat g,l)/\operatorname{Var}_{\theta_0}(l)$，$\hat g-cl$ 在 $\theta_0$ 处的方差更小。这个准则能验证候选估计是一致最小方差无偏估计，却不能构造它。结合 Rao–Blackwell 定理，只需检验充分统计量的函数。
 
-**推论 3.4.1** 设 $T$ 是充分统计量，$h(T)$ 是 $g(\theta)$ 的方差有限的无偏估计。若对每个对一切 $\theta$ 满足 $\mathbb{E}_\theta\delta(T)=0$ 的 $\delta(T)$，都有 $\operatorname{Cov}_\theta(h(T),\delta(T))=0$ 对一切 $\theta$ 成立，则 $h(T)$ 是 $g(\theta)$ 的一致最小方差无偏估计。
+**推论 3.4.1** 设 $T$ 是充分统计量，$h(T)$ 是 $g(\theta)$ 的方差有限的无偏估计。若对每个满足 $\mathbb{E}_\theta\delta(T)=0$（对一切 $\theta$）的 $\delta(T)$，都有 $\operatorname{Cov}_\theta(h(T),\delta(T))=0$ 对一切 $\theta$ 成立，则 $h(T)$ 是 $g(\theta)$ 的一致最小方差无偏估计。
 
 **例 3.4.3** 在例 3.4.2 中，设 $\delta(T)$ 对一切 $p$ 满足 $\mathbb{E}_p\delta(T)=0$，记 $a_i=\delta(i)$。则 $\sum_{i=0}^na_i\binom nip^i(1-p)^{n-i}=0$；两边除以 $(1-p)^n$ 并令 $\varphi=p/(1-p)\in(0,\infty)$，得 $\sum_{i=0}^na_i\binom ni\varphi^i=0$ 对一切 $\varphi>0$ 成立，所以一切 $a_i=0$，$\delta\equiv0$。于是 $\operatorname{Cov}_p(\bar X,\delta(T))=0$，$\bar X$ 是 $p$ 的一致最小方差无偏估计。
 
@@ -569,19 +569,19 @@ $$
 
 :::
 
-在这两个例子中，$T$ 的零无偏估计都被迫为零，这恰好是 $T$ 的完备性（定义 2.3.3）。由此得到一般的方法。
+在这两个例子中，$T$ 的零无偏估计都被迫为零，这恰好是 $T$ 的完全性（定义 2.3.3）。由此得到一般的方法。
 
 ### 3.4.4. Lehmann–Scheffé 定理
 
-**定理 3.4.3（Lehmann–Scheffé 定理）** 设 $T(\boldsymbol{X})$ 是 $\theta$ 的充分完备统计量。若 $\hat g(T)$ 是 $g(\theta)$ 的无偏估计，则 $\hat g(T)$ 是 $g(\theta)$ 的（以概率一）唯一的一致最小方差无偏估计。特别地，对 $g(\theta)$ 的任一无偏估计 $U$，$\mathbb{E}(U\mid T)$ 就是一致最小方差无偏估计。
+**定理 3.4.3（Lehmann–Scheffé 定理）** 设 $T(\boldsymbol{X})$ 是 $\theta$ 的充分完全统计量。若 $\hat g(T)$ 是 $g(\theta)$ 的无偏估计，则 $\hat g(T)$ 是 $g(\theta)$ 的（以概率一）唯一的一致最小方差无偏估计。特别地，对 $g(\theta)$ 的任一无偏估计 $U$，$\mathbb{E}(U\mid T)$ 就是一致最小方差无偏估计。
 
-**证明** 先证在 $T$ 的函数中的唯一性：若 $\hat g_1(T)$ 是另一个无偏估计，则 $\delta(T)=\hat g(T)-\hat g_1(T)$ 对一切 $\theta$ 满足 $\mathbb{E}_\theta\delta(T)=0$，由完备性 $\mathbb{P}_\theta(\delta(T)=0)=1$。
+**证明** 先证在 $T$ 的函数中的唯一性：若 $\hat g_1(T)$ 是另一个无偏估计，则 $\delta(T)=\hat g(T)-\hat g_1(T)$ 对一切 $\theta$ 满足 $\mathbb{E}_\theta\delta(T)=0$，由完全性 $\mathbb{P}_\theta(\delta(T)=0)=1$。
 
 再证最优性：设 $U$ 是任一无偏估计。由 Rao–Blackwell 定理，$h(T)=\mathbb{E}(U\mid T)$ 无偏，且 $\operatorname{Var}_\theta(h(T))\le\operatorname{Var}_\theta(U)$。由唯一性，$\hat g(T)=h(T)$ 以概率一成立，故 $\operatorname{Var}_\theta(\hat g(T))\le\operatorname{Var}_\theta(U)$ 对一切 $\theta$ 成立。$\square$
 
-这个定理（E. L. Lehmann 与 H. Scheffé，1950）对多维 $\theta$ 同样成立。它给出两种做法：找一个充分完备统计量的无偏函数，通常是计算 $T$ 的简单函数的期望再加以调整；或者把任一简单的无偏估计对 $T$ 取条件期望。对满秩指数族，自然充分统计量是完备的（定理 2.3.2）。
+这个定理（E. L. Lehmann 与 H. Scheffé，1950）对多维 $\theta$ 同样成立。它给出两种做法：找一个充分完全统计量的无偏函数，通常是计算 $T$ 的简单函数的期望再加以调整；或者把任一简单的无偏估计对 $T$ 取条件期望。对满秩指数族，自然充分统计量是完全的（定理 2.3.2）。
 
-**例 3.4.5** 对 $\mathrm{Ber}(\theta)$，$T=\sum_{i=1}^nX_i\sim\mathrm{Bin}(n,\theta)$ 是充分完备统计量（例 2.3.7），所以 $\bar X=T/n$ 是 $\theta$ 的一致最小方差无偏估计。对 $g(\theta)=\theta(1-\theta)$：$\mathbb{E}T=n\theta$，$\mathbb{E}T^2=n\theta(1-\theta)+n^2\theta^2=\mathbb{E}T+n(n-1)\theta^2$，故 $\theta^2=\mathbb{E}\left[\frac{T^2-T}{n(n-1)}\right]$，从而
+**例 3.4.5** 对 $\mathrm{Ber}(\theta)$，$T=\sum_{i=1}^nX_i\sim\mathrm{Bin}(n,\theta)$ 是充分完全统计量（例 2.3.7），所以 $\bar X=T/n$ 是 $\theta$ 的一致最小方差无偏估计。对 $g(\theta)=\theta(1-\theta)$：$\mathbb{E}T=n\theta$，$\mathbb{E}T^2=n\theta(1-\theta)+n^2\theta^2=\mathbb{E}T+n(n-1)\theta^2$，故 $\theta^2=\mathbb{E}\left[\frac{T^2-T}{n(n-1)}\right]$，从而
 
 $$
 \frac Tn-\frac{T^2-T}{n(n-1)}=\frac{T(n-T)}{n(n-1)}
@@ -589,7 +589,7 @@ $$
 
 是 $\theta(1-\theta)$ 的无偏估计；它是 $T$ 的函数，因而是一致最小方差无偏估计。注意它等于 $\frac n{n-1}\bar X(1-\bar X)$，即例 3.2.3 中矩估计的纠偏形式。
 
-**例 3.4.6** 设 $X_1,\dots,X_n$ 是来自 $\mathrm{Poi}(\theta)$ 的随机样本，$T=\sum X_i\sim\mathrm{Poi}(n\theta)$ 是充分完备统计量。
+**例 3.4.6** 设 $X_1,\dots,X_n$ 是来自 $\mathrm{Poi}(\theta)$ 的随机样本，$T=\sum X_i\sim\mathrm{Poi}(n\theta)$ 是充分完全统计量。
 
 1. $\bar X$ 是 $\theta$ 的一致最小方差无偏估计。
 2. 对 $g(\theta)=\theta^r$（$r$ 为正整数），无偏的 $\delta(T)$ 必须满足 $\sum_{t=0}^\infty\delta(t)\frac{(n\theta)^t}{t!}\mathrm{e}^{-n\theta}=\theta^r$，即
@@ -605,7 +605,7 @@ $$
    $$
    （$t\ge x$；$t<x$ 时为 $0$）是一致最小方差无偏估计。与之比较，极大似然估计 $\mathrm{e}^{-\bar X}\bar X^x/x!$ 是有偏的。
 
-**例 3.4.7** 设 $X_1,\dots,X_n$ 是来自 $\mathcal{N}(\mu,\sigma^2)$ 的随机样本。则 $T_1=\bar X$ 与 $T_2=\sum_{i=1}^n(X_i-\bar X)^2$ 独立，$T_1\sim\mathcal{N}(\mu,\sigma^2/n)$，$T_2/\sigma^2\sim\chi^2_{n-1}$，且 $(T_1,T_2)$ 是充分完备统计量（例 2.3.10）。
+**例 3.4.7** 设 $X_1,\dots,X_n$ 是来自 $\mathcal{N}(\mu,\sigma^2)$ 的随机样本。则 $T_1=\bar X$ 与 $T_2=\sum_{i=1}^n(X_i-\bar X)^2$ 独立，$T_1\sim\mathcal{N}(\mu,\sigma^2/n)$，$T_2/\sigma^2\sim\chi^2_{n-1}$，且 $(T_1,T_2)$ 是充分完全统计量（例 2.3.10）。
 
 1. $\bar X$ 是 $\mu$ 的一致最小方差无偏估计，$S^2=T_2/(n-1)$ 是 $\sigma^2$ 的一致最小方差无偏估计。
 2. 对 $g=\sigma^r$（$r>-(n-1)$），利用 $\mathbb{E}(\chi^2_{n-1})^{r/2}=2^{r/2}\Gamma\left(\frac{n-1+r}2\right)/\Gamma\left(\frac{n-1}2\right)$，
@@ -790,7 +790,7 @@ $$
 
 **证明** 对一切 $\boldsymbol{\beta}$ 无偏意味着 $CX=I_{p+1}$。记 $C=(X^{\mathsf T}X)^{-1}X^{\mathsf T}+D$，则 $DX=O$。于是 $\operatorname{Cov}(\tilde{\boldsymbol{\beta}})=\sigma^2CC^{\mathsf T}=\sigma^2(X^{\mathsf T}X)^{-1}+\sigma^2DD^{\mathsf T}$，交叉项因 $DX=O$ 而为零，且 $\sigma^2DD^{\mathsf T}$ 半正定。$\square$
 
-与 Cramér–Rao 下界不同，这一最优性不需要分布假定，但只限于关于 $\boldsymbol{Y}$ 线性的估计量。在正态误差下，$\hat{\boldsymbol{\beta}}$ 甚至是一致最小方差无偏估计，因为此时模型是指数族，$(X^{\mathsf T}\boldsymbol{Y},\boldsymbol{Y}^{\mathsf T}\boldsymbol{Y})$ 是其充分完备统计量。
+与 Cramér–Rao 下界不同，这一最优性不需要分布假定，但只限于关于 $\boldsymbol{Y}$ 线性的估计量。在正态误差下，$\hat{\boldsymbol{\beta}}$ 甚至是一致最小方差无偏估计，因为此时模型是指数族，$(X^{\mathsf T}\boldsymbol{Y},\boldsymbol{Y}^{\mathsf T}\boldsymbol{Y})$ 是其充分完全统计量。
 
 ## 3.6. 核密度估计
 
@@ -914,11 +914,11 @@ $\ell_1$ 惩罚有两个关键性质。$\ell_1$ 球的顶点位于坐标轴上�
 |---|---|---|---|
 | 矩估计法 | 简单；只需矩，不需要模型 | 可能不唯一、效率低或超出参数空间 | 初步估计、复杂模型、迭代初值 |
 | 极大似然估计 | 具有不变性；相合、渐近正态且渐近有效 | 需要模型；可能没有闭式解；对模型误差敏感 | 参数模型、大样本 |
-| 一致最小方差无偏估计 | 对每个 $n$ 都在无偏估计中最优 | 不一定存在；构造需要充分完备统计量 | 指数族中的精确小样本推断 |
+| 一致最小方差无偏估计 | 对每个 $n$ 都在无偏估计中最优 | 不一定存在；构造需要充分完全统计量 | 指数族中的精确小样本推断 |
 | 核密度估计 | 不需要参数假定；灵活 | 收敛速度慢（$n^{-4/5}$）；对带宽敏感 | 探索性分析、非参数密度估计 |
 
 - 固定 $n$ 时用偏差、方差与均方误差比较估计量，$n$ 很大时用相合性与渐近方差比较。均方误差 $=$ 方差 $+$ 偏差$^2$，少量偏差可以换来方差的大幅下降。
 - 极大似然估计使似然最大；它是任一充分统计量的函数，在重新参数化下不变，在正则条件下渐近服从 $\mathcal{N}(\theta,1/(nI(\theta)))$。
-- Rao–Blackwell 定理通过对充分统计量取条件期望改进无偏估计；Lehmann–Scheffé 定理表明，充分完备统计量的无偏函数是唯一的一致最小方差无偏估计。
+- Rao–Blackwell 定理通过对充分统计量取条件期望改进无偏估计；Lehmann–Scheffé 定理表明，充分完全统计量的无偏函数是唯一的一致最小方差无偏估计。
 - Cramér–Rao 不等式给出无偏估计方差的下界 $[g'(\theta)]^2/(nI(\theta))$；下界只在指数族中才能达到，并据此定义估计量的效率。
 - 在正态误差的线性回归中，最小二乘、矩估计与极大似然给出相同的系数估计，在 Gauss–Markov 假定下它是最优线性无偏估计。
