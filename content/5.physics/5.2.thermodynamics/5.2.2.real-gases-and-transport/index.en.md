@@ -256,8 +256,8 @@ The three transport coefficients are related by the simple relations $\eta = \rh
 
 1. Why does lowering the pressure not reduce the thermal conductivity of a gas at first, while a high vacuum provides very good insulation?
 
-   **Answer** in $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ the product $\rho\bar\lambda$ is independent of pressure until $\bar\lambda$ reaches the linear size of the container (Example 2.4.1).
+   **Answer** In $\kappa = \frac{1}{3}\rho c_V\bar v\bar\lambda$ the product $\rho\bar\lambda$ is independent of pressure until $\bar\lambda$ reaches the linear size of the container (Example 2.4.1).
 
 2. Why do the viscosities of liquids and gases vary with temperature in opposite ways?
 
-   **Answer** the internal friction of a gas comes from the transfer of molecules between layers, and the higher the temperature, the larger $\bar v$; the internal friction of a liquid comes from attraction between molecules, and as the temperature rises the molecules break free of their neighbors more easily.
+   **Answer** The internal friction of a gas comes from the transfer of molecules between layers, and the higher the temperature, the larger $\bar v$; the internal friction of a liquid comes from attraction between molecules, and as the temperature rises the molecules break free of their neighbors more easily.

@@ -1,6 +1,6 @@
 ---
 title: The Second Law of Thermodynamics
-source_hash: 820331ce769c
+source_hash: 2cef5672fb90
 ---
 
 Thermodynamics rests on three laws drawn from experiment: the zeroth law gives **temperature** ([5.2.1](/5.2.1)), the first law gives **internal energy** and energy conservation ([5.2.3](/5.2.3)), and the second law, the subject of this chapter, gives the direction of natural processes; in thermal physics they play the role that Newton's laws play in mechanics. The first law says only that energy is conserved in transformations and places no restriction on their direction: at the end of the previous chapter we saw that turning all the absorbed **heat** into **work** does not violate energy conservation, yet it has never been achieved. This chapter first states the second law in the two forms due to Kelvin and Clausius, and derives from it Carnot's theorem and the **thermodynamic temperature scale**; it then introduces a new state function, the entropy, from the Clausius equality, and writes the second law in the quantitative form of the principle of increase of entropy; finally it uses Boltzmann's statistical viewpoint to explain the microscopic meaning of entropy: entropy is the logarithm of the number of microstates, and the second law is a statistical law. The concept of entropy will reappear in physical chemistry (chemical equilibrium and free energy), information theory and statistical learning.
@@ -259,7 +259,7 @@ This is a basic assumption of statistical mechanics, and its correctness is guar
 
 **Definition 4.7.2** The number $\Omega$ of microstates corresponding to a macrostate is called the **thermodynamic probability** of that macrostate.
 
-The thermodynamic probability is not a probability in the usual sense (it is an integer greater than 1); dividing by the total number of microstates gives a probability. For large $N$ the binomial distribution is sharply concentrated near $n = N/2$: the standard deviation is $\frac{1}{2}\sqrt{N}$ and the relative **fluctuation** is $\sim 1/\sqrt{N}$; by Stirling's formula ([3.1.13](/3.1.13#ex-13.4.3)),
+The thermodynamic probability is not a probability in the usual sense (it is an integer not less than 1); dividing by the total number of microstates gives a probability. For large $N$ the binomial distribution is sharply concentrated near $n = N/2$: the standard deviation is $\frac{1}{2}\sqrt{N}$ and the relative **fluctuation** is $\sim 1/\sqrt{N}$; by Stirling's formula ([3.1.13](/3.1.13#ex-13.4.3)),
 $$
 \Omega\left(\tfrac{N}{2}\right) = \frac{N!}{\left[(N/2)!\right]^2} \approx 2^N\sqrt{\frac{2}{\pi N}}.
 $$
@@ -363,8 +363,8 @@ flowchart LR
 
 1. A cup of hot water cools at room temperature, and the entropy of the water decreases. Does this contradict the principle of increase of entropy?
 
-   **Answer** the water is not an isolated system; the entropy of the isolated system consisting of the water and the surrounding air increases (compare Example 4.5.1).
+   **Answer** The water is not an isolated system; the entropy of the isolated system consisting of the water and the surrounding air increases (compare Example 4.5.1).
 
 2. In summer an air conditioner moves heat from the room to the hotter outdoors. Does this violate the Clausius statement?
 
-   **Answer** no, the surroundings (the power grid) do work on it, and the transfer of heat is not the "only effect".
+   **Answer** No, the surroundings (the power grid) do work on it, and the transfer of heat is not the "only effect".

@@ -422,4 +422,4 @@ The first excited level has 4 orbital states while the ground level has only 1 (
 
 2. At room temperature, which has the larger mean translational kinetic energy, an $\ce{N2}$ or an $\ce{O2}$ molecule in air? Which has the larger root-mean-square speed?
 
-   **Answer** the mean translational kinetic energy depends only on temperature, so they are equal; $v_{\mathrm{rms}} \propto 1/\sqrt{M}$, so that of $\ce{N2}$ is slightly larger.
+   **Answer** The mean translational kinetic energy depends only on temperature, so they are equal; $v_{\mathrm{rms}} \propto 1/\sqrt{M}$, so that of $\ce{N2}$ is slightly larger.

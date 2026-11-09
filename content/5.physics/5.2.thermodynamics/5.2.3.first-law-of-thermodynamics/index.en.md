@@ -1,6 +1,6 @@
 ---
 title: The First Law of Thermodynamics
-source_hash: 1868beea2a32
+source_hash: 2deccb79a896
 ---
 
 The previous two chapters used a molecular model to study the properties of **equilibrium states**; from this chapter on we turn to the methods of thermodynamics, which study the changes of the state of a system starting only from macroscopic experimental laws, without relying on any microscopic model. The core of this chapter is the first law of thermodynamics, the **law of conservation of energy** extended to include thermal phenomena. It generalizes **work** in mechanics ([5.1.4](/5.1.4)) to **thermodynamic systems**, defines **internal energy** through adiabatic work, and then defines heat in terms of internal energy and work. With this law we can compute the work, heat and change of internal energy of an **ideal gas** in various processes, and it leads to the concepts of heat capacity, enthalpy and cycle efficiency; the upper bound on the efficiency of the Carnot cycle prepares the way for the second law of thermodynamics in the next chapter ([5.2.4](/5.2.4)). The concepts of this chapter (internal energy, heat, enthalpy, heat capacity) and its sign conventions are shared with physical chemistry.
@@ -79,7 +79,7 @@ For an infinitesimal process, $\mathrm{d}U = \delta Q + \delta W$; for a quasi-s
 
 The first law of thermodynamics is the law of conservation and transformation of energy including thermal phenomena, and applies to any process of any system, including non-quasi-static processes (in a non-quasi-static process $W$ cannot be computed as $-\int p\,\mathrm{d}V$, but it can still be computed from the work actually done by the surroundings). The internal energy $U$ is a state function and $W$ is a process quantity, so $Q = \Delta U - W$ is also a process quantity; neither $\delta Q$ nor $\delta W$ is a total differential, but their sum $\mathrm{d}U$ is.
 
-**Remark 3.3.1 (The Convention in Physics Textbooks)** Many physics textbooks (including the textbook of this course) use the work done by the system on the surroundings, $W' = -W$, and write the first law as $Q = \Delta U + W'$, read as "the heat absorbed by the system equals the increase in internal energy plus the work done by the system on the surroundings", with pressure–volume work $W' = \int p\,\mathrm{d}V$. The physical content of the two forms is identical; this wiki uses Eq. (3.2) throughout, in agreement with chemistry and the ISO standards.
+**Remark 3.3.1 (The Convention in Physics Textbooks)** Many physics textbooks (including many Chinese textbooks) use the work done by the system on the surroundings, $W' = -W$, and write the first law as $Q = \Delta U + W'$, read as "the heat absorbed by the system equals the increase in internal energy plus the work done by the system on the surroundings", with pressure–volume work $W' = \int p\,\mathrm{d}V$. The physical content of the two forms is identical; this wiki uses Eq. (3.2) throughout, in agreement with chemistry and the ISO standards.
 
 In the past, people tried to build machines that keep doing work on the surroundings without consuming energy, that is, a *perpetual motion machine of the first kind*. The first law of thermodynamics shows that for a machine operating in cycles, $\Delta U = 0$ when it returns to its initial state, and the work done on the surroundings is $-W = Q$: no work can be done without absorbing heat, so a perpetual motion machine of the first kind cannot be built.
 
@@ -323,7 +323,7 @@ The coefficient of performance need not be less than 1. Taking room temperature 
 
 | $T_2/\mathrm{K}$ | 273 | 223 | 100 | 5 | 1 |
 |---|---|---|---|---|---|
-| $\varepsilon_{\mathrm{C}}$ | 13.6 | 3.2 | 0.52 | 0.017 | 0.0034 |
+| $\varepsilon_{\mathrm{C}}$ | 13.7 | 3.2 | 0.52 | 0.017 | 0.0034 |
 
 The lower the temperature of the low-temperature reservoir, the smaller the coefficient of performance and the harder the refrigeration: to extract $1\,\mathrm{J}$ of heat from a body at $1\,\mathrm{K}$, at least about $300\,\mathrm{J}$ of work must be done. The coefficient of performance of an ordinary household refrigerator is about 2–7. The same machine used to heat a room is a heat pump, whose heating coefficient $\lvert Q_1\rvert/W = T_1/(T_1 - T_2)$ is always greater than 1: a heat pump delivers more heat into the room than the electrical energy it consumes. This does not violate energy conservation, since the surplus is carried from the low-temperature reservoir outdoors.
 
@@ -340,8 +340,8 @@ The lower the temperature of the low-temperature reservoir, the smaller the coef
 
 1. Why is $C_{p,\mathrm{m}} > C_{V,\mathrm{m}}$? Why is the difference very small for solids and liquids?
 
-   **Answer** in isobaric heating, work $p\,\mathrm{d}V$ must be done on the surroundings; the thermal expansion of solids and liquids is very small, so this work can be neglected.
+   **Answer** In isobaric heating, work $p\,\mathrm{d}V$ must be done on the surroundings; the thermal expansion of solids and liquids is very small, so this work can be neglected.
 
 2. In a closed, adiabatic room, the refrigerator door is opened and the refrigerator is left running. How does the temperature of the room change?
 
-   **Answer** take the room as the system; the power supply does work $W > 0$ on it, $Q = 0$, so $\Delta U = W > 0$ and the temperature rises.
+   **Answer** Take the room as the system; the power supply does work $W > 0$ on it, $Q = 0$, so $\Delta U = W > 0$ and the temperature rises.
