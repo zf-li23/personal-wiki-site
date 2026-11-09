@@ -176,7 +176,7 @@ $$
 
 **例 7.1.9** 设 $X, Y$ 独立且都服从 $\mathcal{N}(0, 1)$，求 $U = X/Y$ 与 $V = X^2 + Y^2$ 的联合密度。
 
-**解** $D = \{(u, v) \mid u \in \mathbb{R}, v > 0\}$。由 $u = x/y$，$v = x^2 + y^2$ 解出两组逆变换 $y = \pm\sqrt{v/(1 + u^2)}$，$x = uy$，分别把 $D$ 映到上、下半平面。两组的 Jacobi 行列式的绝对值都是 $\frac{1}{2(1 + u^2)}$（可由 $\frac{\partial(u, v)}{\partial(x, y)} = -\frac{2(x^2 + y^2)}{y^2} = -2(1 + u^2)$ 取倒数得到），而 $f(x, y) = \frac{1}{2\pi}\mathrm{e}^{-v/2}$ 在两组逆变换处取值相同。由定理 7.1.4，
+**解** $D = \{(u, v) \mid u \in \mathbb{R}, v > 0\}$。由 $u = x/y$，$v = x^2 + y^2$ 解出两组逆变换 $y = \pm\sqrt{v/(1 + u^2)}$，$x = uy$，分别把 $D$ 映到上、下半平面。两组的 Jacobi 行列式的绝对值都是 $\frac{1}{2(1 + u^2)}$（可由 $\frac{\partial(u, v)}{\partial(x, y)} = \frac{2(x^2 + y^2)}{y^2} = 2(1 + u^2)$ 取倒数得到），而 $f(x, y) = \frac{1}{2\pi}\mathrm{e}^{-v/2}$ 在两组逆变换处取值相同。由定理 7.1.4，
 
 $$
 g(u, v) = 2 \cdot \frac{1}{2\pi}\mathrm{e}^{-v/2} \cdot \frac{1}{2(1 + u^2)} = \frac{1}{\pi(1 + u^2)} \cdot \frac{1}{2}\mathrm{e}^{-v/2}, \quad u \in \mathbb{R},\ v > 0.
@@ -227,7 +227,7 @@ $$
 f_T(t) = \frac{1}{\sqrt{2\pi n}\,2^{n/2}\Gamma(n/2)} \int_0^{\infty} w^{\frac{n+1}{2} - 1}\mathrm{e}^{-\frac{w}{2}(1 + t^2/n)}\,\mathrm{d}w = \frac{\Gamma\big(\frac{n + 1}{2}\big)}{\sqrt{n\pi}\,\Gamma\big(\frac{n}{2}\big)}\Big(1 + \frac{t^2}{n}\Big)^{-\frac{n + 1}{2}}. \qquad \square
 $$
 
-$t$ 分布由 W. S. Gosset 以笔名 Student 提出。它关于 0 对称（$T \sim t_\nu$ 时 $-T \sim t_\nu$），尾部按幂律衰减，比正态分布重尾；$\nu$ 很大时 $t_\nu$ 接近标准正态分布（以后用大数定律证明，[3.1.12](/3.1.12)）；$\nu = 1$ 时 $t_1$ 就是 Cauchy 分布（例 7.1.6）。
+$t$ 分布由 W. S. Gosset 以笔名 Student 提出。它关于 0 对称（$T \sim t_\nu$ 时 $-T \sim t_\nu$），尾部按幂律衰减，比正态分布重尾；$\nu$ 很大时 $t_\nu$ 接近标准正态分布（以后用大数定律与 Slutsky 定理证明，见 [3.1.14](/3.1.14)）；$\nu = 1$ 时 $t_1$ 就是 Cauchy 分布（例 7.1.6）。
 
 **定义 7.1.3（F 分布）** 设 $m, n$ 是正整数，如果 $X$ 的密度是
 

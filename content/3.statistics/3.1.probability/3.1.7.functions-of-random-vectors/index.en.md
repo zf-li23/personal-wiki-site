@@ -1,6 +1,6 @@
 ---
 title: Functions of Random Vectors, Order Statistics and Quantiles
-source_hash: 650782c2a60f
+source_hash: 5dbf71acf4f1
 ---
 
 [3.1.5](/3.1.5) dealt with the distribution of a function $g(X)$ of one random variable: in general one first finds the distribution function of $g(X)$ and then differentiates, and when $g$ is monotone or piecewise monotone the density of $g(X)$ can be written down directly from that of $X$. This chapter extends both routes to functions $g(X_1, \dots, X_n)$ of random vectors. The general method is still "find the distribution function first"; the most important special cases are the distribution of a sum (the convolution formula) and the joint density of several functions (the change-of-variables formula). As applications we derive the relations between the normal distribution and the three main distributions of statistics ($\chi^2$, $t$ and $F$), and study a special class of functions, the order statistics, which describe extremes such as the minimum and maximum of a sample. Finally we define the $p$-quantile of an arbitrary distribution function (its generalized inverse), which is both the source of critical values in statistical inference and a way to generate random numbers from any distribution using uniform ones. The chapter relies on the joint densities, marginal densities and independence criteria of [3.1.6](/3.1.6); the sampling distributions of statistical inference ([3.2](/3.2)) are built on it.
@@ -177,7 +177,7 @@ This gives a way to generate normal random numbers from uniform ones.
 
 **Example 7.1.9** Let $X, Y$ be independent, both $\mathcal{N}(0, 1)$. Find the joint density of $U = X/Y$ and $V = X^2 + Y^2$.
 
-**Solution** Let $D = \{(u, v) \mid u \in \mathbb{R}, v > 0\}$. Solving $u = x/y$, $v = x^2 + y^2$ gives two inverse branches $y = \pm\sqrt{v/(1 + u^2)}$, $x = uy$, which map $D$ onto the upper and lower half-planes respectively. Both Jacobian determinants have absolute value $\frac{1}{2(1 + u^2)}$ (the reciprocal of $\frac{\partial(u, v)}{\partial(x, y)} = -\frac{2(x^2 + y^2)}{y^2} = -2(1 + u^2)$), and $f(x, y) = \frac{1}{2\pi}\mathrm{e}^{-v/2}$ takes the same value on both branches. By Theorem 7.1.4,
+**Solution** Let $D = \{(u, v) \mid u \in \mathbb{R}, v > 0\}$. Solving $u = x/y$, $v = x^2 + y^2$ gives two inverse branches $y = \pm\sqrt{v/(1 + u^2)}$, $x = uy$, which map $D$ onto the upper and lower half-planes respectively. Both Jacobian determinants have absolute value $\frac{1}{2(1 + u^2)}$ (the reciprocal of $\frac{\partial(u, v)}{\partial(x, y)} = \frac{2(x^2 + y^2)}{y^2} = 2(1 + u^2)$), and $f(x, y) = \frac{1}{2\pi}\mathrm{e}^{-v/2}$ takes the same value on both branches. By Theorem 7.1.4,
 
 $$
 g(u, v) = 2 \cdot \frac{1}{2\pi}\mathrm{e}^{-v/2} \cdot \frac{1}{2(1 + u^2)} = \frac{1}{\pi(1 + u^2)} \cdot \frac{1}{2}\mathrm{e}^{-v/2}, \quad u \in \mathbb{R},\ v > 0.
@@ -228,7 +228,7 @@ $$
 f_T(t) = \frac{1}{\sqrt{2\pi n}\,2^{n/2}\Gamma(n/2)} \int_0^{\infty} w^{\frac{n+1}{2} - 1}\mathrm{e}^{-\frac{w}{2}(1 + t^2/n)}\,\mathrm{d}w = \frac{\Gamma\big(\frac{n + 1}{2}\big)}{\sqrt{n\pi}\,\Gamma\big(\frac{n}{2}\big)}\Big(1 + \frac{t^2}{n}\Big)^{-\frac{n + 1}{2}}. \qquad \square
 $$
 
-The $t$-distribution was introduced by W. S. Gosset under the pseudonym Student. It is symmetric about $0$ ($T \sim t_\nu$ implies $-T \sim t_\nu$), and its tails decay like a power, so it is heavier-tailed than the normal distribution; for large $\nu$, $t_\nu$ is close to the standard normal distribution (proved later with the law of large numbers, [3.1.12](/3.1.12)); for $\nu = 1$, $t_1$ is the Cauchy distribution (Example 7.1.6).
+The $t$-distribution was introduced by W. S. Gosset under the pseudonym Student. It is symmetric about $0$ ($T \sim t_\nu$ implies $-T \sim t_\nu$), and its tails decay like a power, so it is heavier-tailed than the normal distribution; for large $\nu$, $t_\nu$ is close to the standard normal distribution (proved later with the law of large numbers and Slutsky's theorem, see [3.1.14](/3.1.14)); for $\nu = 1$, $t_1$ is the Cauchy distribution (Example 7.1.6).
 
 **Definition 7.1.3 (F-Distribution)** Let $m, n$ be positive integers. If $X$ has density
 
