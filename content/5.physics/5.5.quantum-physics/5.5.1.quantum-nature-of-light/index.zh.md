@@ -79,7 +79,7 @@ $$
 \lambda_{\mathrm{m}}T=b,\qquad b=2.898\times10^{-3}\,\mathrm{m\,K}.
 $$
 
-Wien 在 1893 年由热力学导出了这一规律。注意 $M_\nu$ 与 $M_\lambda$ 是两种不同的密度，它们的峰值并不对应同一处的频谱：$c/\lambda_{\mathrm{m}}=c\,T/b\approx0.57\,\nu_{\mathrm{m}}$，不等于 $\nu_{\mathrm{m}}$。
+Wien 在 1893 年由热力学导出了这一规律。注意 $M_\nu$ 与 $M_\lambda$ 是两种不同的密度，它们的峰值并不对应同一处的频谱：$c/\lambda_{\mathrm{m}}=c\,T/b\approx1.76\,\nu_{\mathrm{m}}$，不等于 $\nu_{\mathrm{m}}$。
 
 两条定律是高温测量、遥感和红外追踪的物理基础。把太阳近似看作黑体，测得其辐射谱的峰值波长 $\lambda_{\mathrm{m}}\approx510\,\mathrm{nm}$，由 Wien 位移定律得表面温度 $T\approx5700\,\mathrm{K}$（由总辐出度定出的有效温度为 $5772\,\mathrm{K}$）；人体的 $\lambda_{\mathrm{m}}\approx9.3\,\mu\mathrm{m}$；宇宙微波背景辐射是温度 $2.725\,\mathrm{K}$ 的近乎理想的黑体辐射，$\lambda_{\mathrm{m}}\approx1.06\,\mathrm{mm}$。
 

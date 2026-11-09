@@ -224,7 +224,7 @@ $L=1\,\mathrm{m}$、$n\approx1$ 时 $\Delta\nu_q=1.5\times10^8\,\mathrm{Hz}$，�
 **例 5.2.1（He–Ne 激光器的纵模数）** 氖的 $632.8\,\mathrm{nm}$ 谱线由于原子热运动的 **Doppler 效应**而展宽，**谱线宽度**约为 $\Delta\nu=1.3\times10^9\,\mathrm{Hz}$。只有落在增益曲线上、增益超过损耗的纵模才能起振。腔长 $1\,\mathrm{m}$ 时，可以存在的纵模数约为
 
 $$
-N\approx\frac{\Delta\nu}{\Delta\nu_q}=\frac{1.3\times10^9}{1.5\times10^8}\approx8.
+N\approx\frac{\Delta\nu}{\Delta\nu_q}=\frac{1.3\times10^9}{1.5\times10^8}\approx9.
 $$
 把腔长缩短到 $0.1\,\mathrm{m}$，$\Delta\nu_q$ 增大到 $1.5\times10^9\,\mathrm{Hz}$，超过**谱线宽度**，增益曲线内只剩一个纵模，就得到单纵模输出（下图）。
 

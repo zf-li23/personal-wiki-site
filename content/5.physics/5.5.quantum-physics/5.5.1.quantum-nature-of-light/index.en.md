@@ -1,7 +1,7 @@
 ---
 title: The Quantum Nature of Light
 description: Thermal radiation and black bodies, Kirchhoff's law, the Stefan–Boltzmann law and Wien's displacement law, the ultraviolet catastrophe, Planck's law and the energy quantum; the photoelectric effect, Einstein's photon theory and the photoelectric equation; photon energy and momentum, wave–particle duality of light; Compton scattering and the Compton wavelength.
-source_hash: 170728eaafea
+source_hash: 63fe423bfdaf
 ---
 
 By the end of the nineteenth century classical physics seemed nearly complete: Newtonian and analytical mechanics handled mechanical problems, Maxwell's theory unified electricity, magnetism and light, and thermodynamics and statistical mechanics explained thermal phenomena. Yet one of the "two clouds" that Kelvin saw on the horizon, the distribution of thermal radiation over frequency, could not be explained correctly by classical theory (the other led to special relativity, see [5.1.8](/5.1.8)). In 1900 Planck proposed the energy quantum hypothesis to solve this problem, and quantum theory was born. In 1905 Einstein introduced the light quantum; in 1913 Bohr applied quantization to the atom; in 1923 Compton scattering confirmed the momentum of the photon. In 1924 de Broglie proposed matter waves; in 1925–1926 Heisenberg's matrix mechanics and Schrödinger's wave mechanics were established one after the other, and Born gave the statistical interpretation of the wave function. In 1927 electron **diffraction** confirmed matter waves and Heisenberg stated the uncertainty relation, and in 1928 Dirac wrote down the relativistic **wave equation** of the electron. Together with relativity, quantum mechanics forms one of the two pillars of modern physics; it underlies atomic, molecular, solid-state and nuclear physics, as well as the theory of the chemical bond and physical chemistry.
@@ -80,7 +80,7 @@ $$
 \lambda_{\mathrm{m}}T=b,\qquad b=2.898\times10^{-3}\,\mathrm{m\,K}.
 $$
 
-Wien derived this law from thermodynamics in 1893. Note that $M_\nu$ and $M_\lambda$ are two different densities, so their peaks do not correspond to the same place in the spectrum: $c/\lambda_{\mathrm{m}}=c\,T/b\approx0.57\,\nu_{\mathrm{m}}$, which is not equal to $\nu_{\mathrm{m}}$.
+Wien derived this law from thermodynamics in 1893. Note that $M_\nu$ and $M_\lambda$ are two different densities, so their peaks do not correspond to the same place in the spectrum: $c/\lambda_{\mathrm{m}}=c\,T/b\approx1.76\,\nu_{\mathrm{m}}$, which is not equal to $\nu_{\mathrm{m}}$.
 
 The two laws are the physical basis of high-temperature measurement, remote sensing and infrared tracking. Treating the Sun as a black body and measuring the peak wavelength of its radiation spectrum, $\lambda_{\mathrm{m}}\approx510\,\mathrm{nm}$, Wien's displacement law gives a surface temperature $T\approx5700\,\mathrm{K}$ (the effective temperature determined from the total exitance is $5772\,\mathrm{K}$). For the human body $\lambda_{\mathrm{m}}\approx9.3\,\mu\mathrm{m}$; the cosmic microwave background is nearly ideal blackbody radiation at a temperature of $2.725\,\mathrm{K}$, with $\lambda_{\mathrm{m}}\approx1.06\,\mathrm{mm}$.
 
@@ -304,7 +304,7 @@ $$
 $$
 \boldsymbol{p}_{\mathrm{e}}=\boldsymbol{p}_0-\boldsymbol{p},\qquad E_{\mathrm{e}}=(p_0-p)c+m_{\mathrm{e}}c^2.
 $$
-The energy and momentum of the electron satisfy $E_{\mathrm{e}}^2-p_{\mathrm{e}}^2c^2=m_{\mathrm{e}}^2c^4$ (Eq. [(8.13)](/5.1.8#eq-8.13)), and $p_{\mathrm{e}}^2=p_0^2+p^2-2p_0p\cos\theta$. Substituting and cancelling $m_{\mathrm{e}}^2c^4$ gives
+The energy and momentum of the electron satisfy $E_{\mathrm{e}}^2-p_{\mathrm{e}}^2c^2=m_{\mathrm{e}}^2c^4$ (Eq. [(8.13)](/5.1.8#eq-8.13)), and $p_{\mathrm{e}}^2=p_0^2+p^2-2p_0p\cos\theta$. Substituting and canceling $m_{\mathrm{e}}^2c^4$ gives
 
 $$
 c^2(p_0-p)^2+2(p_0-p)m_{\mathrm{e}}c^3-c^2\big(p_0^2+p^2-2p_0p\cos\theta\big)=0,
@@ -367,23 +367,23 @@ Compton received the 1927 Nobel Prize in Physics for this work. Today Compton sc
 
 1. When an iron block is heated, why does its color change from dull red to orange, yellow-white and blue-white?
 
-   **Answer** by Wien's displacement law, the peak of the radiation spectrum moves toward shorter wavelengths as the temperature rises, while by the Stefan–Boltzmann law the total radiation increases sharply. At about $800\,\mathrm{K}$ only the long-wavelength tail enters the visible region, and we see dull red; at higher temperatures the proportions of the visible wavelengths become more even, the color turns white, and finally bluish.
+   **Answer** By Wien's displacement law, the peak of the radiation spectrum moves toward shorter wavelengths as the temperature rises, while by the Stefan–Boltzmann law the total radiation increases sharply. At about $800\,\mathrm{K}$ only the long-wavelength tail enters the visible region, and we see dull red; at higher temperatures the proportions of the visible wavelengths become more even, the color turns white, and finally bluish.
 
 2. Why do some people in the African deserts wear black robes?
 
-   **Answer** a black robe absorbs more sunlight and its outer surface becomes very hot, but it is held at some distance from the skin and the heat is carried away mainly by air convecting between the robe and the body; black is also a good emitter in the infrared (Kirchhoff's law) and blocks more ultraviolet light.
+   **Answer** A black robe absorbs more sunlight and its outer surface becomes very hot, but it is held at some distance from the skin and the heat is carried away mainly by air convecting between the robe and the body; black is also a good emitter in the infrared (Kirchhoff's law) and blocks more ultraviolet light.
 
 3. What is the role of the accelerating voltage in the photoelectric experiment? Why is there still a photocurrent at zero or even reverse voltage?
 
-   **Answer** the accelerating voltage collects the emitted photoelectrons at the anode; photoelectrons leave with initial kinetic energy, so as long as the reverse voltage is less than the stopping voltage, some of them still reach the anode.
+   **Answer** The accelerating voltage collects the emitted photoelectrons at the anode; photoelectrons leave with initial kinetic energy, so as long as the reverse voltage is less than the stopping voltage, some of them still reach the anode.
 
 4. When light of a given wavelength shines on a metal, why do the emitted photoelectrons have different speeds?
 
-   **Answer** the electrons in the metal are in different energy states and at different depths, and the work done to overcome the binding differs when they escape; $h\nu-W_0$ is only the maximum initial kinetic energy.
+   **Answer** The electrons in the metal are in different energy states and at different depths, and the work done to overcome the binding differs when they escape; $h\nu-W_0$ is only the maximum initial kinetic energy.
 
 5. Are the bright colors of bird feathers thermal radiation?
 
-   **Answer** no. The colors of feathers come from selective absorption of sunlight (pigments) or from interference caused by microstructures (structural color, [5.4.1](/5.4.1)); at room temperature the thermal radiation of the feathers themselves lies in the infrared.
+   **Answer** No. The colors of feathers come from selective absorption of sunlight (pigments) or from interference caused by microstructures (structural color, [5.4.1](/5.4.1)); at room temperature the thermal radiation of the feathers themselves lies in the infrared.
 
 6. In Compton scattering, the shorter the wavelength of the incident photon, the larger the fraction of the incident energy that the recoil electron receives. Why?
 

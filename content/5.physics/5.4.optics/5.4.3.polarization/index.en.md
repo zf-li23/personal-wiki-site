@@ -197,7 +197,7 @@ $$
 
 This kind of scattering is called *Rayleigh scattering*. Its origin is that electrons in the scatterer are set into forced oscillation by the electric field of the incident light and become oscillating electric dipoles, and the power of electric dipole radiation is proportional to $\omega^4$ ([5.3.10](/5.3.10#sec-10.4.2)). When the size of the scatterer exceeds about $0.1\lambda$, the dependence of the scattered intensity on wavelength gradually becomes less pronounced (Mie scattering), and for sizes much larger than the wavelength it is almost independent of wavelength.
 
-By Rayleigh's scattering law, violet light of $\lambda=400\,\mathrm{nm}$ is $(700/400)^4\approx9.4$ times stronger than red light of $\lambda=700\,\mathrm{nm}$. This is why a clear sky is blue (the solar spectrum has relatively little violet and the eye is not sensitive to violet, so the sky looks blue rather than violet). At sunrise and sunset sunlight passes through a thick layer of atmosphere, the short-wavelength components are scattered away, and the remaining light is reddish, so the rising and setting Sun look red. Clouds consist of water droplets much larger than the wavelength of visible light, so their scattering is independent of wavelength and they are white. In space there is no atmospheric scattering, so the sky is black and the Sun does not radiate in all directions as it appears to from the ground.
+By Rayleigh's scattering law, violet light of $\lambda=400\,\mathrm{nm}$ is $(700/400)^4\approx9.4$ times stronger than red light of $\lambda=700\,\mathrm{nm}$. This is why a clear sky is blue (the solar spectrum has relatively little violet and the eye is not sensitive to violet, so the sky looks blue rather than violet). At sunrise and sunset sunlight passes through a thick layer of atmosphere, the short-wavelength components are scattered away, and the remaining light is reddish, so the rising and setting Sun look red. Clouds consist of water droplets much larger than the wavelength of visible light, so their scattering is independent of wavelength and they are white. In space there is no atmospheric scattering, so the sky is black and the Sun has no surrounding glow.
 
 ### 3.4.3. Polarization of Scattered Light
 
@@ -498,24 +498,24 @@ This nonreciprocity can be used to make an optical isolator: behind a polarizing
 
 1. How can one distinguish the two kinds of partially polarized light, "unpolarized + elliptically polarized" and "unpolarized + linearly polarized"?
 
-   **Answer** with a polarizing sheet alone, both show varying intensity without extinction. First find with the sheet the direction of maximum intensity, place the optic axis of a quarter-wave plate along this direction, and rotate the sheet again. For the latter, the direction of vibration of the linearly polarized part lies along the optic axis and is unchanged by the plate, so the direction of maximum intensity does not change; for the former, the major axis of the elliptically polarized part lies along the optic axis and the plate turns it into linearly polarized light oblique to the optic axis, so the direction of maximum intensity turns through some angle.
+   **Answer** With a polarizing sheet alone, both show varying intensity without extinction. First find with the sheet the direction of maximum intensity, place the optic axis of a quarter-wave plate along this direction, and rotate the sheet again. For the latter, the direction of vibration of the linearly polarized part lies along the optic axis and is unchanged by the plate, so the direction of maximum intensity does not change; for the former, the major axis of the elliptically polarized part lies along the optic axis and the plate turns it into linearly polarized light oblique to the optic axis, so the direction of maximum intensity turns through some angle.
 
 2. How can one distinguish partially polarized light consisting of "unpolarized + circularly polarized" light from unpolarized light?
 
-   **Answer** first pass it through a quarter-wave plate of any orientation, which turns the circularly polarized part into linearly polarized light, and then rotate a polarizing sheet: the intensity of unpolarized light stays constant, while that of the partially polarized light varies without extinction.
+   **Answer** First pass it through a quarter-wave plate of any orientation, which turns the circularly polarized part into linearly polarized light, and then rotate a polarizing sheet: the intensity of unpolarized light stays constant, while that of the partially polarized light varies without extinction.
 
 3. What happens when circularly polarized light passes through a half-wave plate?
 
-   **Answer** it is still circularly polarized, but the handedness is reversed.
+   **Answer** It is still circularly polarized, but the handedness is reversed.
 
 4. Is there necessarily no birefringence when unpolarized light enters a crystal along the optic axis?
 
-   **Answer** when light propagates along the optic axis inside the crystal, the o and e rays have the same speed and there is no birefringence. But if the light strikes the crystal surface obliquely, after refraction its direction of propagation in the crystal is no longer along the optic axis, and birefringence still occurs. In addition, in an optically active crystal such as quartz there is "circular birefringence" of left- and right-handed circularly polarized light for propagation along the optic axis (Section 3.9.2).
+   **Answer** When light propagates along the optic axis inside the crystal, the o and e rays have the same speed and there is no birefringence. But if the light strikes the crystal surface obliquely, after refraction its direction of propagation in the crystal is no longer along the optic axis, and birefringence still occurs. In addition, in an optically active crystal such as quartz there is "circular birefringence" of left- and right-handed circularly polarized light for propagation along the optic axis (Section 3.9.2).
 
 5. Asphalt roads in summer sunlight give a dazzling glare. Can polarizing glasses replace ordinary sunglasses, and what is the advantage?
 
-   **Answer** the s component (horizontal vibration) predominates in the light reflected from the road, and polarizing glasses with a vertical transmission axis selectively weaken the glare, while the diffuse light from other objects is reduced by only about half, so one sees more clearly.
+   **Answer** The s component (horizontal vibration) predominates in the light reflected from the road, and polarizing glasses with a vertical transmission axis selectively weaken the glare, while the diffuse light from other objects is reduced by only about half, so one sees more clearly.
 
 6. Why is the sky blue? Why is the Sun red at sunrise and sunset?
 
-   **Answer** see Section 3.4.2.
+   **Answer** See Section 3.4.2.

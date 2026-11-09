@@ -19,7 +19,7 @@ Since light has a particle nature, do massive particles have a wave nature? Guid
 $$
 E=h\nu=\hbar\omega,\qquad p=\frac{h}{\lambda}=\hbar k,\tag{2.1}
 $$
-where $\hbar=h/(2\pi)$, $\omega=2\pi\nu$ and $k=2\pi/\lambda$. Equation (2.1) is called the Einstein–de Broglie relations, and $\lambda=h/p$ is called the **de Broglie wavelength** of the particle.
+where $\hbar=h/(2\pi)$, $\omega=2\pi\nu$ and $k=2\pi/\lambda$. Equations (2.1) are called the Einstein–de Broglie relations, and $\lambda=h/p$ is called the **de Broglie wavelength** of the particle.
 
 The quantity $\hbar$ is called the *reduced Planck constant*,
 
@@ -319,20 +319,20 @@ Comparing Example 2.3.1 with Example 2.3.5 shows that whether the concept of a t
 
 1. Which has the larger de Broglie wavelength, an electron or a proton of the same speed? What if they have the same kinetic energy?
 
-   **Answer** in both cases the electron's is larger. For the same speed $\lambda=h/(mv)\propto1/m$; for the same kinetic energy (nonrelativistic) $\lambda=h/\sqrt{2mE_{\mathrm{k}}}\propto1/\sqrt{m}$.
+   **Answer** In both cases the electron's is larger. For the same speed $\lambda=h/(mv)\propto1/m$; for the same kinetic energy (nonrelativistic) $\lambda=h/\sqrt{2mE_{\mathrm{k}}}\propto1/\sqrt{m}$.
 
 2. Is a matter wave an **electromagnetic wave**?
 
-   **Answer** no. An electromagnetic wave is an oscillation of the electromagnetic field, whereas a matter wave is an oscillation of the probability amplitude; uncharged particles such as neutrons also have matter waves.
+   **Answer** No. An electromagnetic wave is an oscillation of the electromagnetic field, whereas a matter wave is an oscillation of the probability amplitude; uncharged particles such as neutrons also have matter waves.
 
 3. Is the wave nature more pronounced the larger the momentum of the particle?
 
-   **Answer** on the contrary, the larger the momentum, the shorter the wavelength, the harder it is to observe diffraction at obstacles of a given size, and the more pronounced the particle nature.
+   **Answer** On the contrary, the larger the momentum, the shorter the wavelength, the harder it is to observe diffraction at obstacles of a given size, and the more pronounced the particle nature.
 
 4. In the single-electron double-slit experiment, what happens to the pattern on the screen if a detector is placed behind one slit to determine through which slit each electron passes?
 
-   **Answer** the interference fringes disappear and the distribution becomes $P_1+P_2$. A measurement that can distinguish the paths necessarily disturbs the electron, so that the probability amplitudes of the two paths are no longer coherent.
+   **Answer** The interference fringes disappear and the distribution becomes $P_1+P_2$. A measurement that can distinguish the paths necessarily disturbs the electron, so that the probability amplitudes of the two paths are no longer coherent.
 
 5. Is the uncertainty relation caused by insufficiently precise measuring instruments?
 
-   **Answer** no. It comes from the properties of the wave function itself: the more concentrated the coordinate wave function, the more spread out its Fourier transform (the momentum probability amplitude), independently of the means of measurement.
+   **Answer** No. It comes from the properties of the wave function itself: the more concentrated the coordinate wave function, the more spread out its Fourier transform (the momentum probability amplitude), independently of the means of measurement.

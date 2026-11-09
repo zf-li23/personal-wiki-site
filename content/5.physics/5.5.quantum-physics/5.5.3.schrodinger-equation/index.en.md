@@ -341,20 +341,20 @@ The error is about $10^{-5}$ and decreases as $h^2$. The condition $\psi=0$ at t
 
 1. Is the Schrödinger equation rigorously derived?
 
-   **Answer** no. The argument in Section 3.1.1 only shows that it is compatible with the plane wave of a free particle; it is a basic postulate, tested by experiment.
+   **Answer** No. The argument in Section 3.1.1 only shows that it is compatible with the plane wave of a free particle; it is a basic postulate, tested by experiment.
 
 2. How does the Schrödinger equation guarantee that wave functions obey the superposition principle?
 
-   **Answer** the equation is linear and homogeneous in $\Psi$, so linear combinations of solutions are again solutions.
+   **Answer** The equation is linear and homogeneous in $\Psi$, so linear combinations of solutions are again solutions.
 
 3. For a particle in the ground state of an infinite square well and of a harmonic oscillator, how many points other than the boundary have zero probability density? What about the $n$th excited state?
 
-   **Answer** the ground state has no nodes; $\psi_n$ of the square well has $n-1$ nodes, and $\psi_n$ of the oscillator has $n$ nodes (the oscillator is numbered from $n=0$), so in both cases the $k$th excited state has $k$ nodes.
+   **Answer** The ground state has no nodes; $\psi_n$ of the square well has $n-1$ nodes, and $\psi_n$ of the oscillator has $n$ nodes (the oscillator is numbered from $n=0$), so in both cases the $k$th excited state has $k$ nodes.
 
 4. In an infinite well of width $2a$ the bottom of the right half is raised by $U_0$ ($E>U_0$). On which side is the wavelength larger? On which side is the amplitude of the wave function larger?
 
-   **Answer** on the right the kinetic energy $E-U_0$ is smaller, so the momentum is smaller and the wavelength larger; the particle moves more slowly on the right and stays longer there, so the amplitude is also larger.
+   **Answer** On the right the kinetic energy $E-U_0$ is smaller, so the momentum is smaller and the wavelength larger; the particle moves more slowly on the right and stays longer there, so the amplitude is also larger.
 
 5. Compare the classical and quantum one-dimensional harmonic oscillators.
 
-   **Answer** continuous versus equally spaced discrete energies; minimum energy zero versus zero-point energy $\frac12\hbar\omega$; probability largest at the two ends versus ground state largest at the center; particle cannot enter versus can enter the region $U>E$.
+   **Answer** Continuous versus equally spaced discrete energies; minimum energy zero versus zero-point energy $\frac12\hbar\omega$; probability largest at the two ends versus ground state largest at the center; particle cannot enter versus can enter the region $U>E$.

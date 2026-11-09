@@ -423,7 +423,7 @@ In 1935 Einstein, Podolsky and Rosen argued, with a thought experiment on two en
 
 1. Why does a beam of ground-state silver atoms ($l=0$) split into two beams, rather than one or three, in the Stern–Gerlach experiment?
 
-   **Answer** the splitting comes from the spin of the 5s valence electron, with the two orientations $m_s=\pm\frac12$; the number of components due to orbital angular momentum, $2l+1$, is always odd.
+   **Answer** The splitting comes from the spin of the 5s valence electron, with the two orientations $m_s=\pm\frac12$; the number of components due to orbital angular momentum, $2l+1$, is always odd.
 
 2. How are the electrons of a copper atom ($Z=29$) arranged?
 
@@ -435,4 +435,4 @@ In 1935 Einstein, Podolsky and Rosen argued, with a thought experiment on two en
 
 4. Why can air molecules at room temperature be treated with classical statistics, whereas the electrons in a metal cannot?
 
-   **Answer** compare $n\lambda_{\mathrm{th}}^3$; electrons have small mass and hence a large thermal wavelength, and the electron density in a metal is high, so $n\lambda_{\mathrm{th}}^3\gg1$.
+   **Answer** Compare $n\lambda_{\mathrm{th}}^3$; electrons have small mass and hence a large thermal wavelength, and the electron density in a metal is high, so $n\lambda_{\mathrm{th}}^3\gg1$.

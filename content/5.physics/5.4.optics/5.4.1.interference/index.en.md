@@ -333,7 +333,7 @@ Applications of the wedge:
 - Measurement: with $\theta$ and $n$ known, measuring $L$ gives the wavelength $\lambda$; with $\lambda$ and $\theta$ known, measuring $L$ gives the refractive index $n$. A thin wire or sheet clamped at one end between two flat glass plates can be measured for its diameter or thickness. A wedge formed by a standard gauge block, the block to be tested and optical flats allows a precise comparison of lengths. In an interference dilatometer, the thickness of the wedge changes as the sample lengthens on heating, and counting the number of fringes that move past gives the expansion (each fringe corresponds to a thickness change of $\lambda/2$).
 - Testing surface flatness: a standard optical flat is placed on the workpiece to be tested, and an air wedge forms between them. If the workpiece surface is flat, the fringes are equally spaced straight lines. If at some place the fringes bend toward the edge (the side where the film is thinner), the air layer there is thicker than on either side, so the workpiece has a depression; if the fringes bend away from the edge, there is a bump. The ratio of the amount of bending to the fringe spacing, multiplied by $\lambda/2$, is the depth of the depression or bump.
 
-**Example 1.6.1 (Measuring the Diameter of a Thin Wire)** Two flat glass plates touch at one end and a thin wire is clamped at the other end, forming an air wedge. The wedge is illuminated at normal incidence with sodium yellow light of wavelength $\lambda=589.3\,\mathrm{nm}$, and from the edge (the $0$-th dark fringe) to the wire there are exactly $30$ dark fringes, the last being the $30$-th. Find the diameter of the wire.
+**Example 1.6.1 (Measuring the Diameter of a Thin Wire)** Two flat glass plates touch at one end and a thin wire is clamped at the other end, forming an air wedge. The wedge is illuminated at normal incidence with sodium yellow light of wavelength $\lambda=589.3\,\mathrm{nm}$, and the wire lies exactly at the $30$-th dark fringe counted from the edge (the $0$-th dark fringe). Find the diameter of the wire.
 
 **Solution** At the $k$-th dark fringe $2e+\lambda/2=(2k+1)\lambda/2$, that is, $e=k\lambda/2$. The diameter of the wire is
 
@@ -510,23 +510,23 @@ To analyze an interference problem, first identify which two beams interfere; th
 
 1. A thin lens is cut in two along a line through its center, and the two halves are displaced by a small distance $h$ perpendicular to the cut (a Billet split lens). A point source $S$ is placed at $2f$ in front of the lens, and the screen is at $10f$ behind it. Are interference fringes seen on the screen? What is the fringe spacing?
 
-   **Answer** each half-lens images $S$ at $2f$ behind the lens with magnification $-1$; the two real images are $2h$ apart and are two coherent point sources, equivalent to a double slit with slit separation $d=2h$ and slit-to-screen distance $D=8f$, so $\Delta x=4f\lambda/h$.
+   **Answer** Each half-lens images $S$ at $2f$ behind the lens with magnification $-1$; the two real images are $2h$ apart and are two coherent point sources, equivalent to a double slit with slit separation $d=2h$ and slit-to-screen distance $D=8f$, so $\Delta x=4f\lambda/h$.
 
 2. In double-slit interference, how do the fringes change when the slit separation $d$ increases? What if the source $S$ is moved down perpendicular to the axis?
 
-   **Answer** as $d$ increases the fringes become denser; when the source moves down, the zeroth-order bright fringe (where the optical path difference is zero) moves up and the whole set of fringes shifts upward with unchanged spacing.
+   **Answer** As $d$ increases the fringes become denser; when the source moves down, the zeroth-order bright fringe (where the optical path difference is zero) moves up and the whole set of fringes shifts upward with unchanged spacing.
 
 3. When a soap bubble is blown, colors first appear on it, then change continually everywhere as the bubble expands, and finally it turns black and immediately bursts. Explain.
 
-   **Answer** as the bubble expands the film gets thinner, and the wavelengths satisfying the constructive condition change accordingly; when the film thickness is much smaller than the wavelength, $\delta\approx\lambda/2$ (only the reflection from the outer surface has a half-wave loss), all wavelengths cancel and the film appears black; the film is by then extremely thin and bursts soon.
+   **Answer** As the bubble expands the film gets thinner, and the wavelengths satisfying the constructive condition change accordingly; when the film thickness is much smaller than the wavelength, $\delta\approx\lambda/2$ (only the reflection from the outer surface has a half-wave loss), all wavelengths cancel and the film appears black; the film is by then extremely thin and bursts soon.
 
 4. In double-slit interference, a thin mica sheet is placed over one slit. Do the fringe spacing and the position of the central fringe change?
 
-   **Answer** the spacing is unchanged and the central bright fringe moves toward the side with the mica (Example 1.5.1).
+   **Answer** The spacing is unchanged and the central bright fringe moves toward the side with the mica (Example 1.5.1).
 
 5. Why is the edge of an air wedge dark? How can one tell on which side the edge lies?
 
-   **Answer** at the edge $e=0$, only the $\lambda/2$ from the half-wave loss remains, and the two reflected beams cancel. Raise the upper plate slightly in parallel: the thickness increases everywhere and the fringes move toward the edge as a whole. Alternatively, use white light: the edge is dark, outside it are colored fringes whose colors fade at higher orders, and the side where the fringes are sharper is nearer the edge.
+   **Answer** At the edge $e=0$, only the $\lambda/2$ from the half-wave loss remains, and the two reflected beams cancel. Raise the upper plate slightly in parallel: the thickness increases everywhere and the fringes move toward the edge as a whole. Alternatively, use white light: the edge is dark, outside it are colored fringes whose colors fade at higher orders, and the side where the fringes are sharper is nearer the edge.
 
 6. Observe Newton's rings and fringes of equal inclination with the same monochromatic light. Both are concentric rings; how do they differ?
 
@@ -534,4 +534,4 @@ To analyze an interference problem, first identify which two beams interfere; th
 
 7. Can fringes still be seen in a Michelson interferometer without the compensating plate, with monochromatic light? With white light?
 
-   **Answer** with monochromatic light they can still be seen, only the position of zero optical path difference shifts; glass has **dispersion**, so the extra optical path difference differs for different wavelengths, and without the compensating plate the zeroth-order fringes of different wavelengths do not coincide, so white-light fringes are not seen.
+   **Answer** With monochromatic light they can still be seen, only the position of zero optical path difference shifts; glass has **dispersion**, so the extra optical path difference differs for different wavelengths, and without the compensating plate the zeroth-order fringes of different wavelengths do not coincide, so white-light fringes are not seen.

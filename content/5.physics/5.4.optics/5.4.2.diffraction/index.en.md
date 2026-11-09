@@ -1,7 +1,7 @@
 ---
 title: Diffraction of Light
 description: The Huygens–Fresnel principle, Fresnel and Fraunhofer diffraction; single-slit diffraction by half-period zones and by phasors; grating diffraction, missing orders and grating spectra; circular-aperture diffraction, the Rayleigh criterion and the resolving power of optical instruments; X-ray diffraction and the Bragg equation; Fraunhofer diffraction and the Fourier transform.
-source_hash: 3db0ed2639a1
+source_hash: d7227ca324d8
 ---
 
 When light meets an obstacle it bends around the edge into the geometric shadow and forms an alternating bright and dark intensity distribution in space; this is the **diffraction** of light. [5.1.7](/5.1.7#sec-7.6) used **Huygens' principle** to explain the direction of diffraction, but the wavelet construction cannot give the intensity, and the previous chapter [5.4.1](/5.4.1) treated the **interference** of a finite number of beams. This chapter combines the two: the coherent superposition of infinitely many wavelets on the **wavefront** determines the intensity of the diffracted field (the Huygens–Fresnel principle, Section 2.1). On this basis we discuss in turn Fraunhofer diffraction by a single slit (Section 2.2), diffraction by many slits, that is, a grating (Section 2.3), diffraction by a circular aperture and the limit it sets on the resolving power of optical instruments (Section 2.4), and finally X-ray diffraction, in which a crystal acts as a three-dimensional grating (Section 2.5). Computationally, the intensity of the single slit is found by adding **phasors** (amplitude vectors), exactly as in the superposition of oscillations of the same frequency in [5.1.6](/5.1.6#sec-6.2.1); mathematically, the amplitude distribution of Fraunhofer diffraction is the **Fourier transform** of the aperture function ([2.5.6](/2.5.6)), and the results for the single slit, the grating and the circular aperture are all special cases of this fact (Section 2.3.7). Diffraction also limits microscopes that use electrons as "light", where the de Broglie wavelength of the electron enters ([5.5.2](/5.5.2)); the spectrum and production of X-rays are discussed in [5.5.5](/5.5.5), and crystal-structure determination has wide applications in biophysics ([7.6](/7.6)) and chemistry.
@@ -161,7 +161,7 @@ The bright fringes of single-slit diffraction are wide and dim and unsuitable fo
 
 **Definition 2.3.1 (Diffraction Grating)** An optical element made of a large number of parallel slits (or reflecting surfaces) of equal width and equal spacing is called a **diffraction grating**. The sum $d=a+b$ of the width $a$ of the transmitting (or reflecting) part and the width $b$ of the opaque (or non-reflecting) part is called the **grating constant**; it is the spatial period of the grating.
 
-Gratings are either transmission gratings or reflection gratings. Ordinary gratings have tens to thousands of lines per millimeter, and ruling with an electron beam can reach tens of thousands per millimeter ($d\sim10^{-7}\,\mathrm{m}$). In a broad sense, any spatially periodic structure made of diffracting units is a grating, for example a crystal for X-rays (Section 2.5) or an antenna array for radio waves (Section 2.3.5). Polychromatic light passing through a grating is spread by wavelength into a spectrum, so the grating is a basic element of spectral analysis (Section 2.4.4).
+Gratings are either transmission gratings or reflection gratings. Ordinary gratings have tens to thousands of lines per millimeter, and ruling with an electron beam can reach tens of thousands per millimeter ($d\sim10^{-7}\,\mathrm{m}$). In a broad sense, any spatially periodic structure made of diffracting units is a grating, for example a crystal for X-rays (Section 2.5) or an antenna array for radio waves (Section 2.3.6). Polychromatic light passing through a grating is spread by wavelength into a spectrum, so the grating is a basic element of spectral analysis (Section 2.4.4).
 
 ### 2.3.2. Multiple-Beam Interference and the Grating Equation
 
@@ -434,24 +434,24 @@ W. H. Bragg and W. L. Bragg shared the 1915 Nobel Prize in Physics for the analy
 
 1. In a single-slit diffraction experiment, if the slit is translated along the optical axis, does the diffraction pattern move? What if it is translated perpendicular to the optical axis?
 
-   **Answer** in neither case does the pattern move. A Fraunhofer diffraction pattern depends only on the diffraction angle, and parallel light of the same diffraction angle always converges to the same point in the focal plane of the lens, regardless of the position of the slit (this is also why the diffraction patterns of the slits in a grating can coincide).
+   **Answer** In neither case does the pattern move. A Fraunhofer diffraction pattern depends only on the diffraction angle, and parallel light of the same diffraction angle always converges to the same point in the focal plane of the lens, regardless of the position of the slit (this is also why the diffraction patterns of the slits in a grating can coincide).
 
 2. Why must telescopes have especially large apertures?
 
-   **Answer** first for the resolving power, $\theta_{\min}=1.22\lambda/D$; second to collect more light and detect fainter objects, the light-gathering power being proportional to $D^2$.
+   **Answer** First for the resolving power, $\theta_{\min}=1.22\lambda/D$; second to collect more light and detect fainter objects, the light-gathering power being proportional to $D^2$.
 
 3. What are the differences among resolving power, angular dispersion and chromatic resolving power?
 
-   **Answer** the resolving power describes the ability of an instrument to resolve two close object points and is determined by the aperture; the angular dispersion describes how far apart in angle the centers of the lines of two wavelengths are, is determined by $k/(d\cos\theta)$ and is independent of $N$; the chromatic resolving power also takes into account the width of the lines themselves, $R=Nk$.
+   **Answer** The resolving power describes the ability of an instrument to resolve two close object points and is determined by the aperture; the angular dispersion describes how far apart in angle the centers of the lines of two wavelengths are, is determined by $k/(d\cos\theta)$ and is independent of $N$; the chromatic resolving power also takes into account the width of the lines themselves, $R=Nk$.
 
 4. How do the angular dispersion and the chromatic resolving power of a grating change when the grating constant $d$ decreases?
 
-   **Answer** the angular dispersion $k/(d\cos\theta_k)$ of a given order increases; the chromatic resolving power $Nk$ is unchanged for fixed $N$ and $k$, but the highest usable order $d/\lambda$ decreases.
+   **Answer** The angular dispersion $k/(d\cos\theta_k)$ of a given order increases; the chromatic resolving power $Nk$ is unchanged for fixed $N$ and $k$, but the highest usable order $d/\lambda$ decreases.
 
 5. Sketch the intensity curve of grating diffraction for $N=3$ and $d=4a$.
 
-   **Answer** the principal maxima are at $\sin\theta=k\lambda/d$, with orders $\pm4,\pm8,\dots$ missing; between adjacent principal maxima there are $2$ dark fringes and $1$ secondary maximum, whose intensity is $1/9$ of that of a principal maximum (without the single-slit factor); the whole pattern is modulated by the $(\sin\alpha/\alpha)^2$ envelope.
+   **Answer** The principal maxima are at $\sin\theta=k\lambda/d$, with orders $\pm4,\pm8,\dots$ missing; between adjacent principal maxima there are $2$ dark fringes and $1$ secondary maximum, whose intensity is $1/9$ of that of a principal maximum (without the single-slit factor); the whole pattern is modulated by the $(\sin\alpha/\alpha)^2$ envelope.
 
 6. The wavelength of sound is comparable to the size of doors and windows, while visible light has a wavelength far smaller, so we can "hear but not see" a person around a corner. What would the world be like if the wavelength of light were also of the order of meters?
 
-   **Answer** light would bend around houses and people as sound does, shadows would be blurred, the resolution of imaging systems would be extremely low, and an eye would have to be as large as a house to see objects clearly.
+   **Answer** Light would bend around houses and people as sound does, shadows would be blurred, the resolution of imaging systems would be extremely low, and an eye would have to be as large as a house to see objects clearly.

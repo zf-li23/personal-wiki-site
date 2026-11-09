@@ -365,20 +365,20 @@ where $W_0$ is the work function; as the electron crosses the surface, the momen
 
 1. Why does the resistance of a metal increase with temperature while that of a semiconductor decreases?
 
-   **Answer** the number of carriers in a metal is almost constant and scattering by lattice vibrations strengthens with temperature; the number of carriers in a semiconductor increases rapidly with temperature as $\mathrm{e}^{-E_{\mathrm{g}}/(2k_{\mathrm{B}}T)}$.
+   **Answer** The number of carriers in a metal is almost constant and scattering by lattice vibrations strengthens with temperature; the number of carriers in a semiconductor increases rapidly with temperature as $\mathrm{e}^{-E_{\mathrm{g}}/(2k_{\mathrm{B}}T)}$.
 
 2. The valence-electron number density of sodium is $2.65\times10^{28}\,\mathrm{m^{-3}}$. Estimate its Fermi energy and Fermi temperature.
 
-   **Answer** from Eq. (6.2), $E_{\mathrm{F}}\approx3.2\,\mathrm{eV}$, $T_{\mathrm{F}}\approx3.8\times10^4\,\mathrm{K}$.
+   **Answer** From Eq. (6.2), $E_{\mathrm{F}}\approx3.2\,\mathrm{eV}$, $T_{\mathrm{F}}\approx3.8\times10^4\,\mathrm{K}$.
 
 3. According to classical theory the free electrons in a metal should increase the molar heat capacity by $\frac32R$; why is this not observed experimentally?
 
-   **Answer** only electrons within a range of about $k_{\mathrm{B}}T$ near the Fermi level, a fraction of about $T/T_{\mathrm{F}}$, can be thermally excited.
+   **Answer** Only electrons within a range of about $k_{\mathrm{B}}T$ near the Fermi level, a fraction of about $T/T_{\mathrm{F}}$, can be thermally excited.
 
 4. Divalent magnesium has two 3s electrons per atom, which exactly fill the 3s band; why is it still a metal?
 
-   **Answer** the 3s band overlaps the 3p band.
+   **Answer** The 3s band overlaps the 3p band.
 
 5. Why is silicon unsuitable for making light-emitting diodes?
 
-   **Answer** silicon is an indirect-gap semiconductor; recombination of an electron and a hole must also conserve momentum and requires the participation of lattice vibrations, so the probability of radiative recombination is very small.
+   **Answer** Silicon is an indirect-gap semiconductor; recombination of an electron and a hole must also conserve momentum and requires the participation of lattice vibrations, so the probability of radiative recombination is very small.
