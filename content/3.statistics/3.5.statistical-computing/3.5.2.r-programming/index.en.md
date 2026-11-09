@@ -514,7 +514,7 @@ In (1:8) * (1:3) :
 
 Common calculations are `max()`, `min()`, `range()`, `length()`, `sort()`, `sum()`, `prod()`, `mean()`, `sd()` and `var()`.
 
-For matrices, `t()` transposes and `diag(v)` creates a diagonal matrix; `solve(A, b)` solves the linear system $A\boldsymbol{x}=\boldsymbol{b}$ and `solve(A)` returns the inverse. It is called `solve` because solving a system, by an LU decomposition ([3.5.3](/3.5.3)), is cheaper and more accurate than forming $A^{-1}$ and multiplying, which is why one should write `solve(A, b)` rather than `solve(A) %*% b`. Further indicators are the determinant `det()`, the eigenvalues and eigenvectors `eigen()`, the trace `sum(diag(M))` and the rank `qr(M)$rank`. Matrix multiplication is `%*%`; the operators `+ - * / ^` are elementwise. Elementwise operations between two matrices require the same dimensions; between a matrix and a vector, the vector is recycled along the columns, and the length of the matrix must be a multiple of the length of the vector.
+For matrices, `t()` transposes and `diag(v)` creates a diagonal matrix; `solve(A, b)` solves the linear system $A\boldsymbol{x}=\boldsymbol{b}$ and `solve(A)` returns the inverse. The purpose of `solve` is to solve systems: solving a system, by an LU decomposition ([3.5.3](/3.5.3)), is cheaper and more accurate than forming $A^{-1}$ and multiplying, so one should write `solve(A, b)` rather than `solve(A) %*% b`. Further indicators are the determinant `det()`, the eigenvalues and eigenvectors `eigen()`, the trace `sum(diag(M))` and the rank `qr(M)$rank`. Matrix multiplication is `%*%`; the operators `+ - * / ^` are elementwise. Elementwise operations between two matrices require the same dimensions; between a matrix and a vector, the vector is recycled along the columns, and the length of the matrix must be a multiple of the length of the vector.
 
 **Example 2.5.1** Let `A <- matrix(1:4, 2, 2)`, that is, $A=\begin{bmatrix}1&3\\2&4\end{bmatrix}$, and `b <- c(1, 2)`. Then
 
@@ -785,7 +785,7 @@ x[!apply(x, 1, function(row) -1 %in% row), ]
 4     d -1.00000
 ```
 
-The second call removes nothing: the rows are character vectors such as `"b" "-1.00000"`, and `-1 %in% row` compares the string `"-1"` with `"-1.00000"` (`'-1' %in% '-1'` is `TRUE`, `'-1' %in% '-1.000000'` is `FALSE`). Working on the numeric column avoids the problem: `x[x$score != -1, ]`, `x[!sapply(x[, 2], function(v) -1 %in% v), ]`, or `x[x == -1] <- NA; na.omit(x)`.
+The second call removes nothing: the rows are character vectors such as `"b" "-1.00000"`, and `-1 %in% row` compares the string `"-1"` with `"-1.00000"` (`'-1' %in% '-1'` is `TRUE`, `'-1' %in% '-1.00000'` is `FALSE`). Working on the numeric column avoids the problem: `x[x$score != -1, ]`, `x[!sapply(x[, 2], function(v) -1 %in% v), ]`, or `x[x == -1] <- NA; na.omit(x)`.
 
 `mapply()` is the multivariate version of `sapply()`: it applies a function of several arguments $f(x_1,x_2,\dots)$ elementwise to several vectors; `MoreArgs` supplies arguments that are not vectorized over.
 
