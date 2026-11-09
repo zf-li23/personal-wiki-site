@@ -1,6 +1,6 @@
 ---
 title: First Integrals and Pfaffian Equations
-source_hash: b4393b313cae
+source_hash: 56fcde843483
 ---
 
 The general integral $u(x,y)=C$ of a first-order equation $M\,\mathrm{d}x+N\,\mathrm{d}y=0$ is a function that stays constant along every integral curve ([2.4.2](/2.4.2)). This chapter extends this point of view to higher dimensions in two directions.
@@ -83,7 +83,7 @@ If the $\lambda_i$ can be chosen so that the denominator $\sum\lambda_if_i=0$ wh
 $$
 x+y+z=C_1,\qquad x^2+y^2+z^2=C_2,
 $$
-the intersections of planes perpendicular to the line $x=y=z$ with spheres centered at the origin: circles with axis $x=y=z$. The system describes exactly a rigid rotation about the axis $(1,1,1)$, with $\boldsymbol{f}=(1,1,1)\times(x,y,z)$.
+the intersections of planes perpendicular to the line $x=y=z$ with spheres centered at the origin: circles with axis $x=y=z$. The system describes exactly a rigid rotation about the axis $(1,1,1)$, with $\boldsymbol{f}=(x,y,z)\times(1,1,1)$.
 
 ![Integral curves of dx/(y - z) = dy/(z - x) = dz/(x - y): the intersections of the planes x + y + z = C₁ with the spheres x² + y² + z² = C₂, all of them circles with axis x = y = z](./plots/symmetric-form-circles.py)
 
