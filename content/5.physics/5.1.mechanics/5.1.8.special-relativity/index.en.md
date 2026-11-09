@@ -1,6 +1,6 @@
 ---
 title: Foundations of Special Relativity
-source_hash: dfaa164cb731
+source_hash: 8cfab5d4670f
 ---
 
 By the end of the 19th century, Newtonian mechanics, heat and the kinetic theory of molecules, wave optics and Maxwell's electromagnetic theory had all been enormously successful: Newtonian mechanics had predicted Neptune from the perturbations of the orbit of Uranus, and Maxwell's equations had predicted electromagnetic waves. In a 1900 lecture Kelvin said that only "two clouds" floated in the clear sky of physics: the null result of the ether-drift experiments and the difficulty of equipartition of energy in blackbody radiation. The first led to special relativity (1905) and the second to the quantum theory ([5.5.1](/5.5.1)); together with general relativity (1916), which revealed the relation between spacetime and gravitation, and quantum mechanics (1925), these conceptual revolutions of the early 20th century completely changed our understanding of time, space and matter.
@@ -168,7 +168,7 @@ Any process consists of a series of successive events, so observed from one iner
 - Time dilation is reciprocal: S considers clocks at rest relative to S′ to run slow, and S′ also considers clocks at rest relative to S to run slow. There is no contradiction, because the two judgments compare different pairs of events and require different notions of "simultaneous".
 - For $v\ll c$, $\Delta t\approx\tau$, which returns to absolute time.
 
-**Example 8.5.1 (Lifetime of the $\pi$ Meson)** A charged $\pi$ meson decays into a $\mu$ lepton and a neutrino, $\pi^+\to\mu^++\nu_\mu$, with mean lifetime at rest $\tau\approx2.6\times10^{-8}\,\mathrm{s}$. If a beam of $\pi$ mesons moves at $v=0.99c$ and the measured mean flight distance is $l\approx53\,\mathrm{m}$, the mean lifetime in the laboratory is $\Delta t=l/v\approx1.8\times10^{-7}\,\mathrm{s}$, and $\tau/\Delta t\approx0.15$; the theoretical value is $\sqrt{1-\beta^2}=\sqrt{1-0.99^2}\approx0.14$, and the two agree within experimental error. Without time dilation the mean flight distance would be only $v\tau\approx7.7\,\mathrm{m}$. That $\mu$ leptons produced by cosmic rays at high altitude arrive at the ground in large numbers is also a result of time dilation.
+**Example 8.5.1 (Lifetime of the $\pi$ Meson)** A charged $\pi$ meson decays into a muon and a neutrino, $\pi^+\to\mu^++\nu_\mu$, with mean lifetime at rest $\tau\approx2.6\times10^{-8}\,\mathrm{s}$. If a beam of $\pi$ mesons moves at $v=0.99c$ and the measured mean flight distance is $l\approx53\,\mathrm{m}$, the mean lifetime in the laboratory is $\Delta t=l/v\approx1.8\times10^{-7}\,\mathrm{s}$, and $\tau/\Delta t\approx0.15$; the theoretical value is $\sqrt{1-\beta^2}=\sqrt{1-0.99^2}\approx0.14$, and the two agree within experimental error. Without time dilation the mean flight distance would be only $v\tau\approx7.7\,\mathrm{m}$. That muons produced by cosmic rays at high altitude arrive at the ground in large numbers is also a result of time dilation.
 
 ### 8.5.3. Length Contraction
 
@@ -328,7 +328,7 @@ $$
 $$
 so $M=2\gamma m>2m$: the mass of the particle before the split exceeds the sum of the masses of the two pieces afterward; in relativity mass is not additive. In S′ we verify conservation of energy ([Section 8.9](#sec-8.9)): $Mc^2=2\gamma mc^2$, which likewise holds. The role of $\gamma_B m$ can also be read off from the momentum conservation equation: if $m_B=\gamma_Bm$ is called the "mass" of B, the momentum can still be written as "mass times velocity".
 
-**Remark 8.7.1 (Relativistic Mass)** Many older textbooks (including the textbook used in this course) call $m(v)=\gamma m_0$ the "relativistic mass" or "moving mass" and $m_0$ the "rest mass", so that $\boldsymbol{p}=m(v)\boldsymbol{v}$ and $E=m(v)c^2$. This notation is numerically equivalent to that of this chapter, but modern physics literature (including the Particle Data Group) uses only the invariant mass $m$, which does not change with velocity: $m(v)$ is merely another name for the total energy $E/c^2$, it does not satisfy $\boldsymbol{F}=m(v)\boldsymbol{a}$ ([Section 8.8](#sec-8.8)), and it can mislead one into thinking that the "inertia" or gravitational mass of a fast-moving body has "increased". This wiki uses $\boldsymbol{p}=\gamma m\boldsymbol{v}$ and $E=\gamma mc^2$ throughout, with $m$ the mass of the particle.
+**Remark 8.7.1 (Relativistic Mass)** Many older textbooks (including many current Chinese textbooks) call $m(v)=\gamma m_0$ the "relativistic mass" or "moving mass" and $m_0$ the "rest mass", so that $\boldsymbol{p}=m(v)\boldsymbol{v}$ and $E=m(v)c^2$. This notation is numerically equivalent to that of this chapter, but modern physics literature (including the Particle Data Group) uses only the invariant mass $m$, which does not change with velocity: $m(v)$ is merely another name for the total energy $E/c^2$, it does not satisfy $\boldsymbol{F}=m(v)\boldsymbol{a}$ ([Section 8.8](#sec-8.8)), and it can mislead one into thinking that the "inertia" or gravitational mass of a fast-moving body has "increased". This wiki uses $\boldsymbol{p}=\gamma m\boldsymbol{v}$ and $E=\gamma mc^2$ throughout, with $m$ the mass of the particle.
 
 | Total energy of an electron $E/\mathrm{MeV}$ | $\gamma=E/(mc^2)$ | $v/c$ |
 |---|---|---|
@@ -405,10 +405,10 @@ $$
 $$
 The decrease $\Delta m$ of the sum of the particle masses before and after the reaction is called the *mass defect*; the rest energy corresponding to the mass defect is converted into kinetic energy of the reaction products (energy is released).
 
-**Example 8.9.1 (D–T Fusion)** In the thermonuclear reaction $\ce{^2_1H + ^3_1H -> ^4_2He + ^1_0n}$, the atomic masses ($m_{\mathrm{D}}=2.014\,10\,\mathrm{u}$, $m_{\mathrm{T}}=3.016\,05\,\mathrm{u}$, $m_{\mathrm{He}}=4.002\,60\,\mathrm{u}$, $m_{\mathrm{n}}=1.008\,66\,\mathrm{u}$) give the mass defect
+**Example 8.9.1 (D–T Fusion)** In the thermonuclear reaction $\ce{^2_1H + ^3_1H -> ^4_2He + ^1_0n}$, the atomic masses ($m_{\mathrm{D}}=2.014\,102\,\mathrm{u}$, $m_{\mathrm{T}}=3.016\,049\,\mathrm{u}$, $m_{\mathrm{He}}=4.002\,603\,\mathrm{u}$, $m_{\mathrm{n}}=1.008\,665\,\mathrm{u}$) give the mass defect
 
 $$
-\Delta m=(m_{\mathrm{D}}+m_{\mathrm{T}})-(m_{\mathrm{He}}+m_{\mathrm{n}})=0.018\,88\,\mathrm{u}\approx3.136\times10^{-29}\,\mathrm{kg},
+\Delta m=(m_{\mathrm{D}}+m_{\mathrm{T}})-(m_{\mathrm{He}}+m_{\mathrm{n}})=0.018\,883\,\mathrm{u}\approx3.136\times10^{-29}\,\mathrm{kg},
 $$
 and the energy released is $\Delta E=\Delta m\,c^2\approx2.818\times10^{-12}\,\mathrm{J}\approx17.6\,\mathrm{MeV}$ ($1\,\mathrm{u}\cdot c^2=931.494\,\mathrm{MeV}$). Each kilogram of D–T fuel releases about $3.4\times10^{14}\,\mathrm{J}$, about ten million times the heat of combustion of $1\,\mathrm{kg}$ of good coal (about $2.9\times10^7\,\mathrm{J}$). The mass–energy relation ushered in the atomic age.
 

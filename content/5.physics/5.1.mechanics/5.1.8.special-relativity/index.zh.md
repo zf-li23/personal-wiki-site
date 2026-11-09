@@ -327,7 +327,7 @@ $$
 $$
 所以 $M=2\gamma m>2m$：分裂前粒子的质量大于分裂后两块质量之和，相对论中质量不是可加的。在 S′ 系中验证能量守恒（[8.9 节](#sec-8.9)）：$Mc^2=2\gamma mc^2$，同样成立。从动量守恒式还可以读出 $\gamma_B m$ 的作用：如果把 $m_B=\gamma_Bm$ 叫作 B 的"质量"，动量就仍可写成"质量乘速度"。
 
-**注 8.7.1（相对论质量）** 许多较早的教材（包括本课程所用教材）把 $m(v)=\gamma m_0$ 称为"相对论质量"或"运动质量"，$m_0$ 称为"静止质量"，于是 $\boldsymbol{p}=m(v)\boldsymbol{v}$，$E=m(v)c^2$。这种写法在数值上与本章等价，但现代物理文献（包括粒子数据组）只使用不随速度变化的不变质量 $m$：$m(v)$ 只是总能量 $E/c^2$ 的另一个名字，它并不满足 $\boldsymbol{F}=m(v)\boldsymbol{a}$（[8.8 节](#sec-8.8)），也会让人误以为高速物体的"惯性"或引力质量"变大了"。本站一律用 $\boldsymbol{p}=\gamma m\boldsymbol{v}$、$E=\gamma mc^2$，$m$ 就是粒子的质量。
+**注 8.7.1（相对论质量）** 许多较早的教材（包括不少现行的中文教材）把 $m(v)=\gamma m_0$ 称为"相对论质量"或"运动质量"，$m_0$ 称为"静止质量"，于是 $\boldsymbol{p}=m(v)\boldsymbol{v}$，$E=m(v)c^2$。这种写法在数值上与本章等价，但现代物理文献（包括粒子数据组）只使用不随速度变化的不变质量 $m$：$m(v)$ 只是总能量 $E/c^2$ 的另一个名字，它并不满足 $\boldsymbol{F}=m(v)\boldsymbol{a}$（[8.8 节](#sec-8.8)），也会让人误以为高速物体的"惯性"或引力质量"变大了"。本站一律用 $\boldsymbol{p}=\gamma m\boldsymbol{v}$、$E=\gamma mc^2$，$m$ 就是粒子的质量。
 
 | 电子的总能量 $E/\mathrm{MeV}$ | $\gamma=E/(mc^2)$ | $v/c$ |
 |---|---|---|
@@ -404,10 +404,10 @@ $$
 $$
 反应前后粒子质量之和的减少量 $\Delta m$ 称为质量亏损（mass defect）；质量亏损对应的静能转化为反应产物的动能（释放能量）。
 
-**例 8.9.1（D–T 聚变）** 热核反应 $\ce{^2_1H + ^3_1H -> ^4_2He + ^1_0n}$ 中，由原子质量（$m_{\mathrm{D}}=2.014\,10\,\mathrm{u}$，$m_{\mathrm{T}}=3.016\,05\,\mathrm{u}$，$m_{\mathrm{He}}=4.002\,60\,\mathrm{u}$，$m_{\mathrm{n}}=1.008\,66\,\mathrm{u}$）得质量亏损
+**例 8.9.1（D–T 聚变）** 热核反应 $\ce{^2_1H + ^3_1H -> ^4_2He + ^1_0n}$ 中，由原子质量（$m_{\mathrm{D}}=2.014\,102\,\mathrm{u}$，$m_{\mathrm{T}}=3.016\,049\,\mathrm{u}$，$m_{\mathrm{He}}=4.002\,603\,\mathrm{u}$，$m_{\mathrm{n}}=1.008\,665\,\mathrm{u}$）得质量亏损
 
 $$
-\Delta m=(m_{\mathrm{D}}+m_{\mathrm{T}})-(m_{\mathrm{He}}+m_{\mathrm{n}})=0.018\,88\,\mathrm{u}\approx3.136\times10^{-29}\,\mathrm{kg},
+\Delta m=(m_{\mathrm{D}}+m_{\mathrm{T}})-(m_{\mathrm{He}}+m_{\mathrm{n}})=0.018\,883\,\mathrm{u}\approx3.136\times10^{-29}\,\mathrm{kg},
 $$
 释放能量 $\Delta E=\Delta m\,c^2\approx2.818\times10^{-12}\,\mathrm{J}\approx17.6\,\mathrm{MeV}$（$1\,\mathrm{u}\cdot c^2=931.494\,\mathrm{MeV}$）。每千克 D–T 燃料释放约 $3.4\times10^{14}\,\mathrm{J}$，约为 $1\,\mathrm{kg}$ 优质煤燃烧热（约 $2.9\times10^7\,\mathrm{J}$）的一千万倍。质能关系的提出开创了原子能时代。
 

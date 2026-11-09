@@ -1,12 +1,12 @@
 ---
 title: Oscillations
 description: Definition, criteria, characteristic quantities and phasor representation of simple harmonic motion; small oscillations near a stable equilibrium; superposition of simple harmonic motions (beats, Lissajous figures, normal modes of coupled oscillators); harmonic analysis and spectra; damped oscillation and the quality factor; forced oscillation and resonance.
-source_hash: b970ef089de4
+source_hash: 2f6b9110eaf5
 ---
 
 A process in which a physical quantity varies back and forth about some value is called an oscillation. Oscillations are not confined to mechanical motion: the current in an alternating-current circuit, the electric field in an electromagnetic wave and the positions of atoms in a molecule all oscillate, and they satisfy equations of the same form. According to the forces involved, oscillations are classified as undamped free oscillation, damped free oscillation and forced oscillation. The simplest and most fundamental case is simple harmonic motion in undamped free oscillation, which is the focus of this chapter: on the one hand, many small oscillations in practice can be treated as simple harmonic; on the other hand, any complicated oscillation can be decomposed into a superposition of simple harmonic motions.
 
-Mathematically, the equations of this chapter are all second-order **linear differential equations** with constant coefficients. Their solution was treated in the section on oscillation problems in [2.2.16](/2.2.16#sec-16.5) and in [2.4.9](/2.4.9) and is not repeated here; instead we stress the physical picture: representing oscillations with **complex numbers** and phasors, judging the nature of an oscillation from its energy, and understanding resonance through the frequency response. The normal modes of coupled oscillations are a direct application of the **eigenvalue** problem of linear algebra, and harmonic analysis is the **Fourier series**. The **potential energy curve** of the previous chapter ([5.1.4](/5.1.4)) explains why oscillation occurs near a stable equilibrium; the next chapter, [5.1.7](/5.1.7), studies the propagation of oscillations through space, that is, waves.
+Mathematically, the equations of this chapter are all second-order **linear differential equations** with constant coefficients. Their solution was treated in the section on oscillation problems in [2.2.16](/2.2.16#sec-16.5) and in [2.4.9](/2.4.9) and is not repeated here; instead we stress the physical picture: representing oscillations with **complex numbers** and phasors, judging the nature of an oscillation from its energy, and understanding resonance through the frequency response. The normal modes of coupled oscillations are a direct application of the **eigenvalue** problem of linear algebra, and harmonic analysis is the **Fourier series**. The **potential energy curve** ([5.1.4](/5.1.4)) explains why oscillation occurs near a stable equilibrium; the next chapter, [5.1.7](/5.1.7), studies the propagation of oscillations through space, that is, waves.
 
 ## 6.1. Simple Harmonic Motion
 
@@ -228,7 +228,7 @@ By observing on an oscilloscope the Lissajous figure formed by combining a known
 
 If the frequency ratio is irrational, the trajectory is not closed and after a long enough time almost fills the whole rectangle $\lvert x\rvert\le A_x$, $\lvert y\rvert\le A_y$.
 
-If two originally independent oscillations of nearby frequencies are weakly coupled physically, their frequency ratio may be "pulled" to a nearby simple integer ratio and remain locked there, a phenomenon called *frequency locking*, also known as synchronization. In 1665 Huygens observed that two pendulum clocks hung on the same beam gradually synchronize; the entrainment of biological clocks to the 24-hour day by circadian rhythms is another example of frequency locking.
+If two originally independent oscillations of nearby frequencies are weakly coupled physically, their frequency ratio may be "pulled" to a nearby simple integer ratio and remain locked there, a phenomenon called *frequency locking*, also known as synchronization. In 1665 Huygens observed that two pendulum clocks hung on the same beam gradually synchronize; the entrainment of circadian rhythms to the 24-hour day is another example of frequency locking.
 
 ![Lissajous figures x = cos(m t), y = cos(n t + phi) for frequency ratios 1:1, 1:2 and 2:3 (rows) and phase differences 0, pi/4 and pi/2 (columns)](./plots/lissajous.py)
 
@@ -257,7 +257,7 @@ with $A_{2n}=0$; partial sums of the first few terms approximate the square wave
 
 ![Fourier synthesis of a square wave: partial sums with the first one, two, three and twenty odd harmonics (left) and its discrete amplitude spectrum A_k = 4/(pi k) for odd k (right)](./plots/square-wave-fourier.py)
 
-A non-periodic oscillation (such as the sound of a single knock) can be regarded as the limit of an infinite period; its spectrum becomes continuous and is given by the **Fourier transform** ([2.5.6](/2.5.6)). The spectrum of a discrete signal measured in practice is computed with the **fast Fourier transform** ([4.4.4](/4.4.4#sec-4.7)). When a singer is praised for a "resonant voice, wide range and sweet timbre", these correspond respectively to a large amplitude (sound intensity), a wide range of variation of the fundamental frequency and pleasant harmonic content.
+A non-periodic oscillation (such as the sound of a single knock) can be regarded as the limit of an infinite period; its spectrum becomes continuous and is given by the **Fourier transform** ([2.5.6](/2.5.6)). The spectrum of a discrete signal measured in practice is computed with the **fast Fourier transform** ([4.4.4](/4.4.4#sec-4.7)). When a singer is praised for a "powerful voice, wide range and sweet timbre", these correspond respectively to a large amplitude (sound intensity), a wide range of variation of the fundamental frequency and pleasant harmonic content.
 
 ## 6.4. Damped Oscillation
 
