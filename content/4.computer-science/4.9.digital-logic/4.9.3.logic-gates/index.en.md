@@ -1,7 +1,7 @@
 ---
 title: Logic Gates and Their Electrical Characteristics
 description: Classification, scale and packaging of integrated circuits; the switch model of the MOS transistor and the structure of the CMOS inverter, NAND, NOR and compound gates; voltage transfer characteristic, logic levels and noise margins, fan-in and fan-out, propagation delay, static and dynamic power; open-drain gates and wired-AND, tri-state gates and buses; TTL as a historical comparison.
-source_hash: d7ab7cc31b42
+source_hash: 68cb357da7ac
 ---
 
 The [previous chapter](/4.9.2) treated a logic gate as an ideal operation: as soon as an input changes, the output changes according to the **truth table**. A real gate is a circuit built from transistors: its output voltage represents $0$ and $1$ only within certain ranges, changes take time, the load it can drive is limited, and it consumes power. This chapter explains how gates are implemented and the external characteristics that a user must care about: voltage levels and noise margins decide whether gates can be cascaded reliably, fan-out and delay decide how fast a circuit can be, and power decides how large a chip can be. These characteristics are the physical origin of races and hazards in [Combinational Logic Circuits](/4.9.4) and of the timing parameters in [Latches and Flip-Flops](/4.9.6).
@@ -230,7 +230,7 @@ Today, chip interiors and FPGA interiors no longer use tri-state buses but selec
 
 ## 3.6. A Brief Look at TTL
 
-TTL (transistor–transistor logic) is built from bipolar transistors, and the 7400 series introduced by Texas Instruments in the 1960s became the industry standard. The classic TTL NAND gate consists of five transistors:
+TTL (transistor–transistor logic) is built from bipolar transistors, and the 7400 series introduced by Texas Instruments in the 1960s became the industry standard. The classic 7400 NAND gate consists of four transistors (plus a diode and a few resistors):
 
 - the input stage is a multi-emitter transistor; when any input is low, it draws current away from the next stage, which performs the AND function;
 - the middle stage is a phase splitter;

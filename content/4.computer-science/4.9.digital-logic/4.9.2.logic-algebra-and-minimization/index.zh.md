@@ -199,7 +199,7 @@ $$
 | 消项 | 一致性定理 | $AB + \overline{A}C + BCD = AB + \overline{A}C$ |
 | 配项 | $A = A(B + \overline{B})$ 或 $A = A + A$ | 先拆开再与其他项合并，见例 2.4.1 |
 
-**例 2.4.1** 化简 $F = A\overline{B} + B\overline{C} + \overline{B}C + \overline{A}B$。在 $\overline{B}C$ 上配项 $A + \overline{A}$、在 $B\overline{C}$ 上也配项后合并：
+**例 2.4.1** 化简 $F = A\overline{B} + B\overline{C} + \overline{B}C + \overline{A}B$。在 $\overline{B}C$ 上配项 $A + \overline{A}$、在 $\overline{A}B$ 上配项 $C + \overline{C}$ 后合并：
 
 $$
 \begin{aligned}

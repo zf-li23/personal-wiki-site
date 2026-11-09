@@ -1,7 +1,7 @@
 ---
 title: Combinational Logic Circuits
 description: Analysis and design of combinational circuits; decoders (enable inputs, expansion, address decoding, display decoding), multiplexers and implementing arbitrary functions with them, encoders and priority encoders, magnitude comparators, parity checkers; ROM and PLA as arrays implementing combinational functions; the causes, detection and elimination of races and hazards.
-source_hash: e784da5c12ce
+source_hash: 894e9bc1a1da
 ---
 
 A circuit whose output depends only on the present inputs is called a combinational circuit. This chapter first gives the general method of analyzing and designing combinational circuits, which combines the tools of [Logic Algebra and Minimization](/4.9.2) with the implementation constraints of [Logic Gates](/4.9.3); it then discusses, one by one, the medium-scale combinational building blocks that recur in digital systems: decoders, multiplexers, encoders, comparators and **parity check** circuits. These blocks are both stand-alone chips of the 74 series and basic components inside processors; for example, the read ports of a register file are multiplexers, the opcode of an instruction goes through a decoder, and an interrupt controller uses a priority encoder. Next, read-only memories and programmable logic arrays are viewed as regular arrays that implement arbitrary combinational functions; finally we discuss the races and hazards caused by gate delays. Adders and the arithmetic logic unit are the subject of the [next chapter](/4.9.5).

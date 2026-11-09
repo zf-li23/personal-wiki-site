@@ -113,7 +113,7 @@ The classic positive-edge D flip-flop of the TTL era (such as the 74LS74) uses s
 
 - When $\mathrm{CLK} = 0$, the two clocked gates both output 1, so the output latch holds; the other two gates of the input stage follow $D$ and prepare $D$ and $\bar D$ in advance.
 - When the rising edge arrives, the two clocked gates produce a 0 at one output according to the prepared values, which sets or resets the output latch.
-- While $\mathrm{CLK} = 1$, the gate whose output is 0 locks the input stage through an internal feedback line: if a 0 was stored, one line "sustains the 0 and blocks the 1"; if a 1 was stored, the other line "sustains the 1 and blocks the 0". No change of $D$ can get in afterwards, hence the name sustain-block structure.
+- While $\mathrm{CLK} = 1$, the gate whose output is 0 locks the input stage through an internal feedback line: if a 0 was stored, one line "sustains the 0 and blocks the 1"; if a 1 was stored, the other line "sustains the 1 and blocks the 0". No change of $D$ can get in afterward, hence the name sustain-block structure.
 
 This structure directly explains the timing parameters of Section 6.7. Before the rising edge, $D$ must have enough time to pass through the two gate levels of the input stage (the setup time is about two gate delays); after the rising edge, $D$ must be held until the feedback line has locked the input stage (the hold time is about one gate delay).
 
@@ -160,7 +160,7 @@ Integrated examples: the 74LS112 is a dual negative-edge JK flip-flop, and the 7
 
 Early JK flip-flops used the master-slave structure. The master flip-flop accepts $J\bar Q$ and $KQ$ while $\mathrm{CLK} = 1$; at the falling edge the slave flip-flop accepts the state of the master. The output changes at the falling edge and looks like that of a negative-edge flip-flop, but the mode of operation is different.
 
-While $\mathrm{CLK} = 1$, the output $Q$ of the slave does not change, so at most one of the two master inputs $J\bar Q$ and $KQ$ can be active: with $Q = 0$ the master can only be set, and with $Q = 1$ it can only be reset. Hence the master changes at most once during one high level of the clock. This leads to the so-called "ones-catching" problem. Let $Q = 0$ and suppose that $J$ shows a brief 1 (for example, noise) while $\mathrm{CLK} = 1$; the master is set. Afterwards $J$ returns to 0 and $K = 1$, but $KQ = 0$, so the master cannot be reset again; at the falling edge the output becomes 1, although $J = 0, K = 1$ at that moment should give $Q = 0$.
+While $\mathrm{CLK} = 1$, the output $Q$ of the slave does not change, so at most one of the two master inputs $J\bar Q$ and $KQ$ can be active: with $Q = 0$ the master can only be set, and with $Q = 1$ it can only be reset. Hence the master changes at most once during one high level of the clock. This leads to the so-called "ones-catching" problem. Let $Q = 0$ and suppose that $J$ shows a brief 1 (for example, noise) while $\mathrm{CLK} = 1$; the master is set. Afterward $J$ returns to 0 and $K = 1$, but $KQ = 0$, so the master cannot be reset again; at the falling edge the output becomes 1, although $J = 0, K = 1$ at that moment should give $Q = 0$.
 
 So the function table of a master-slave JK flip-flop holds only under the premise that $J$ and $K$ do not change while $\mathrm{CLK} = 1$. Its noise immunity is poor, and only narrow positive clock pulses can be used. An edge-triggered JK flip-flop has no such problem: its output depends only on $J$ and $K$ at the specified transition.
 

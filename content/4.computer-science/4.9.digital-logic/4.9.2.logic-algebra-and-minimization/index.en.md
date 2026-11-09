@@ -1,7 +1,7 @@
 ---
 title: Logic Algebra and Minimization
 description: Basic and compound operations of logic algebra, gate symbols and the completeness of NAND; basic identities, the substitution, complementation and duality rules, and Shannon expansion; minterms, maxterms and canonical forms; algebraic, Karnaugh-map (with don't-cares) and Quine–McCluskey minimization, with a Python implementation and its complexity.
-source_hash: 6f26f38cb5da
+source_hash: 99bbe324f959
 ---
 
 The inputs and outputs of a digital circuit are binary signals, and how the output depends on the inputs is described by logic algebra. Logic algebra is the two-element case $\{0, 1\}$ of **Boolean algebra** from discrete mathematics, and its operations correspond one to one with the connectives of propositional logic: AND corresponds to **conjunction**, OR to **disjunction**, and NOT to negation. This chapter rewrites these existing mathematical tools in the language of circuit designers (operations correspond to gates, expressions to circuits), and focuses on one engineering problem: a logic function has infinitely many expressions, so how do we find the one that uses the fewest gates and the fewest gate inputs? This is the minimization of logic functions, and the chapter presents three methods: the algebraic method, which relies on identities; the Karnaugh-map method, which relies on a diagram; and the Quine–McCluskey tabular method, which can be programmed. The results of minimization become actual circuits in [Logic Gates](/4.9.3) and [Combinational Logic Circuits](/4.9.4).

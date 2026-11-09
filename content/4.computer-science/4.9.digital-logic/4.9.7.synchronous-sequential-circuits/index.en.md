@@ -1,6 +1,6 @@
 ---
 title: Analysis and Design of Synchronous Sequential Circuits
-source_hash: 0ea1c666cef4
+source_hash: 8de9da33e29d
 ---
 
 With **flip-flops** ([4.9.6](/4.9.6)) we can build arbitrary **sequential circuits**. This chapter treats the most important class: synchronous sequential circuits, in which all flip-flops are controlled by the same clock. Their mathematical model is the finite-state machine, which comes in Moore and Mealy types and corresponds one to one with the **finite automata** ([4.8.4](/4.8.4)) of formal language theory: an automaton only answers "accept or reject", whereas a state machine produces an output at every step. We first establish the model and the descriptive tools (state tables and state diagrams), then give methods of analysis (from circuit to function) and of design (from function to circuit). State minimization in design uses **equivalence relations** and **partitions** from discrete mathematics. Finally we discuss the timing constraints of synchronous circuits and the maximum clock frequency. The counters and registers of the next chapter are direct applications of the methods here; the hidden Markov model ([4.6.8](/4.6.8)) is the probabilistic version of a finite-state machine, in which both state transitions and outputs occur with probabilities.
@@ -156,7 +156,7 @@ Design is the inverse of analysis: find the circuit from a verbal description of
 1. Determine the input and output variables, and choose the Moore or Mealy type.
 2. Draw the original state diagram and list the original state table: assign a state to each "history" that must be distinguished. Do not try to save states at this point, but consider where each state goes under each input.
 3. State minimization: merge **equivalent states** to obtain the minimal state table (Section 7.5).
-4. State assignment: assign a binary code to each state, which determines the number of flip-flops (Section 7.5.4).
+4. State assignment: assign a binary code to each state, which determines the number of flip-flops (Section 7.5.3).
 5. Choose the type of flip-flop; from the encoded state table and the **excitation table** of the flip-flop, find the excitation functions and output functions and simplify them with **Karnaugh maps**.
 6. Check self-starting and draw the logic diagram.
 
