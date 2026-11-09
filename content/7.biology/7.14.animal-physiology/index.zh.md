@@ -5,7 +5,7 @@ courses:
   - { code: "30450373", name: 生理学, name_en: Physiology }
 textbooks:
   - { title: 医学生理学, author: 管又飞, edition: 4, title_en: Medical Physiology, author_en: Youfei Guan }
-  - { title: 生理学, author: 朱大年、王庭槐, edition: 8, title_en: Physiology, author_en: "Danian Zhu, Tinghuai Wang" }
+  - { title: 生理学, author: 王庭槐（主编）、朱大年（主审）, edition: 9, title_en: Physiology, author_en: "Tinghuai Wang (ed.), Danian Zhu (chief reviewer)" }
   - { title: 人体及动物生理学, author: 左明雪, edition: 4, title_en: Human and Animal Physiology, author_en: Mingxue Zuo }
   - { title: 人体生理学, author: 姚泰, edition: 4, title_en: Human Physiology, author_en: Tai Yao }
   - { title: 生理学原理, author: 王世强、梅岩艾、朱景宁, title_en: Principles of Physiology, author_en: "Shiqiang Wang, Yanai Mei, Jingning Zhu" }
