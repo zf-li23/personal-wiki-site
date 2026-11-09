@@ -1,7 +1,7 @@
 ---
 title: Strings
 description: The string matching problem and the brute-force algorithm; the failure function of the KMP algorithm, an O(n+m) amortized analysis and its improvement; the bad character and good suffix rules of the Boyer–Moore algorithm; fingerprints, rolling hashes and collision probability in the Karp–Rabin algorithm; exponentiation by squaring and cost criteria; tries and their variants; string matching in standard libraries.
-source_hash: 2bd71e8f25e7
+source_hash: a9a5dc9e7f68
 ---
 
 A **string** is a finite sequence of characters over a finite alphabet; its basic representation and operations were discussed in [4.1.7](/4.1.7) and [4.2.11](/4.2.11). Unlike a **vector** or a list, a string can be very long (a book, a genome) while the alphabet is usually small (binary, the four bases of DNA, ASCII), and the most common way of access is neither **call-by-rank** nor access by key but "access by pattern": finding in a long string the places that equal a given short string. This chapter is organized around this string matching problem: we first see why the brute-force algorithm is slow, then present three classical ideas for improvement, namely the KMP algorithm, which uses the information of the part already matched so that the text pointer never moves back; the BM algorithm, which compares from right to left and jumps far ahead using the mismatched character; and the Karp–Rabin algorithm, which regards strings as numbers and quickly rules out positions by hash values. Finally we discuss tries, which handle a set of strings. A **regular expression** ([4.2.11](/4.2.11)) describes a class of strings rather than a single string, and matching it requires finite automata, see [4.8](/4.8); the KMP algorithm can be viewed as a special case.
@@ -320,7 +320,7 @@ $\mathit{gs}[i]$ takes the smallest of all candidates, and `build_gs` below achi
 | $\mathit{ss}[j]$ | 0 | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 15 |
 | $\mathit{gs}[j]$ | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 12 | 6 | 12 | 15 | 15 | 1 |
 
-For example, on a mismatch at $P[10] = \texttt{P}$, the good suffix $\texttt{RICE}$ occurs again at $P[5, 9)$, preceded by a space rather than $\texttt{P}$, so the shift is $10 - 4 = 6$ positions; on a mismatch at $P[12]$, the good suffix $\texttt{CE}$ occurs at two other places in $P$, both preceded by $\texttt{I}$, the same as the mismatched $P[12]$, so it would necessarily mismatch again, and $P$ has no prefix ending in $\texttt{E}$, so the shift is 15 positions.
+For example, on a mismatch at $P[10] = \texttt{P}$, the good suffix $\texttt{RICE}$ occurs again at $P[5, 9)$, preceded by a space rather than $\texttt{P}$, so the shift is $10 - 4 = 6$ positions; on a mismatch at $P[12]$, the good suffix $\texttt{CE}$ occurs at two other places in $P$, both preceded by $\texttt{I}$, the same as the mismatched $P[12]$, so it would necessarily mismatch again, and no prefix of $P$ equals a suffix of $\texttt{CE}$ (that is, $\texttt{E}$ or $\texttt{CE}$), so the shift is 15 positions.
 
 ```cpp tab
 #include <algorithm>
