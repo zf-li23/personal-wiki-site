@@ -64,7 +64,7 @@ $$
 $$
 等号成立当且仅当存在 $c \ne 0$ 使 $\boldsymbol{a} = c\,S_{\mathrm{pooled}}^{-1}\boldsymbol{d}$。两边除以 $\boldsymbol{a}^{\mathsf T}S_{\mathrm{pooled}}\boldsymbol{a} > 0$ 即得上界 $D^2$，它在 $\hat{\boldsymbol{a}} = S_{\mathrm{pooled}}^{-1}\boldsymbol{d}$ 处取到。$\square$
 
-最大分离度 $D^2$ 是两个样本均值之间的 **Mahalanobis 距离**的平方；两样本 **Hotelling T² 统计量** 统计量正是由它构成的，$T^2 = \frac{n_1 n_2}{n_1+n_2}D^2$（[3.4.4](/3.4.4)）。因此 Fisher 方向就是两样本检验看到差异最大的方向。从几何上看，$S_{\mathrm{pooled}}^{-1}$ 先把数据"白化"，使类内散布变成球形；在白化后的坐标中，最佳方向就是连接两个均值的直线。
+最大分离度 $D^2$ 是两个样本均值之间的 **Mahalanobis 距离**的平方；两样本 **Hotelling T² 统计量**正是由它构成的，$T^2 = \frac{n_1 n_2}{n_1+n_2}D^2$（[3.4.4](/3.4.4)）。因此 Fisher 方向就是两样本检验看到差异最大的方向。从几何上看，$S_{\mathrm{pooled}}^{-1}$ 先把数据"白化"，使类内散布变成球形；在白化后的坐标中，最佳方向就是连接两个均值的直线。
 
 对新观测 $\boldsymbol{x}_0$ 分类时，计算 $\hat y_0 = \hat{\boldsymbol{a}}^{\mathsf T}\boldsymbol{x}_0$，与投影均值的中点
 
@@ -281,7 +281,7 @@ $$
 $$
 \text{若 } (\boldsymbol{y}-\boldsymbol{\mu}_{kY})^{\mathsf T}(\boldsymbol{y}-\boldsymbol{\mu}_{kY}) = \sum_{j=1}^r(y_j - \mu_{kY_j})^2 \le \sum_{j=1}^r(y_j - \mu_{iY_j})^2 \text{ 对一切 } i \ne k \text{ 成立，则判给 } \pi_k,
 $$
-实际计算时代入样本量 $\hat{\boldsymbol{a}}_j$ 与 $\bar{\boldsymbol{x}}_i$。在判别坐标中各类散布是球形的，所以那里的欧氏距离就是原空间中的 Mahalanobis 距离；用全部 $s$ 个判别函数时，该规则与定理 10.5.1 中先验相等的线性规则一致。投影的价值在于：通常 $r = 1$ 或 $2$ 个判别函数就承载了几乎全部的分离信息，并且可以画出来。
+实际计算时代入样本估计值 $\hat{\boldsymbol{a}}_j$ 与 $\bar{\boldsymbol{x}}_i$。在判别坐标中各类散布是球形的，所以那里的欧氏距离就是原空间中的 Mahalanobis 距离；用全部 $s$ 个判别函数时，该规则与定理 10.5.1 中先验相等的线性规则一致。投影的价值在于：通常 $r = 1$ 或 $2$ 个判别函数就承载了几乎全部的分离信息，并且可以画出来。
 
 **注 10.5.1** 求方向并不需要协方差矩阵相等：最大化 $\boldsymbol{a}^{\mathsf T}B\boldsymbol{a}/\boldsymbol{a}^{\mathsf T}W\boldsymbol{a}$ 只是寻找使各类中心相对于类内散布最分散的投影。分类这一步才需要这个假设：若协方差矩阵不同，投影后各类没有共同的球形散布，用到投影均值的欧氏距离来分类就不再合理。
 
