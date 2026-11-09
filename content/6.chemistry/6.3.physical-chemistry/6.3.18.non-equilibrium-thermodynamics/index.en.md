@@ -1,7 +1,7 @@
 ---
 title: Nonequilibrium Thermodynamics
 description: Entropy flow and entropy production, local equilibrium and the entropy balance equation; phenomenological relations in the linear region, Onsager reciprocal relations, cross effects, membrane transport and active transport, the principle of minimum entropy production; dissipative structures far from equilibrium, Brusselator oscillation and Hopf bifurcation, the BZ reaction, Turing patterns; negative entropy flow in living systems.
-source_hash: d29732537d01
+source_hash: 9af6f02f4fa2
 ---
 
 The thermodynamics of the preceding chapters deals only with equilibrium states and with reversible processes that connect them: for irreversible processes it gives only the direction ($\Delta S_{\text{isolated}} > 0$, $\Delta G < 0$) and does not answer "how fast" or "how coupled". Yet almost all the striking phenomena in nature occur under nonequilibrium conditions: heat conduction along a temperature gradient, transport of matter across a membrane, chemical reactions that go on continuously, and also chemical oscillations, spatial patterns and life itself. This chapter extends thermodynamics to nonequilibrium systems. Section 18.1 decomposes the change of entropy into entropy flow and entropy production and, under the local equilibrium hypothesis, writes the entropy balance equation, from which the entropy production is expressed as a sum of "flux × force"; Section 18.2 discusses the near-equilibrium linear region: phenomenological relations, the Onsager reciprocal relations and their microscopic basis, cross effects such as thermoelectricity and thermal diffusion, the equations of membrane transport and active transport across biological membranes, and the principle of minimum entropy production; Section 18.3 enters the far-from-equilibrium nonlinear region and uses the kinetics of the previous three chapters ([6.3.15](/6.3.15)–[6.3.17](/6.3.17)) together with the stability theory of ordinary differential equations ([2.4.11](/2.4.11)) to analyze chemical oscillations and Turing patterns, showing how ordered structures are maintained by continuous dissipation; Section 18.4 returns to living systems and ties in with the **principle of entropy increase** in physics ([5.2.4](/5.2.4#thm-4.6.2)) and with the prelude at the end of [6.3.2](/6.3.2). This is the chapter in which physical chemistry connects most closely with biophysics: a cell is an open system far from equilibrium, and its energy conversion, transport and timekeeping all have to be described in the language developed here.
@@ -566,7 +566,7 @@ The three are unified in statistical mechanics: the Gibbs entropy $S = -k_{\math
    $$
    T\,\mathrm{d}_{\mathrm{i}}S = T\,\mathrm{d}S - \mathrm{d}U + \delta W' = -\mathrm{d}A + \delta W' \ge 0 .
    $$
-   For a cell in which a single reaction takes place, $-\mathrm{d}A = \mathcal{A}\,\mathrm{d}\xi$ at constant $T$ and $V$; on discharge the cell does electrical work $zFE_{\mathrm{cell}}\,\mathrm{d}\xi$ on the external circuit, i.e. $\delta W' = -zFE_{\mathrm{cell}}\,\mathrm{d}\xi$, and therefore
+   For a battery in which a single reaction takes place, $-\mathrm{d}A = \mathcal{A}\,\mathrm{d}\xi$ at constant $T$ and $V$; on discharge the battery does electrical work $zFE_{\mathrm{cell}}\,\mathrm{d}\xi$ on the external circuit, i.e. $\delta W' = -zFE_{\mathrm{cell}}\,\mathrm{d}\xi$, and therefore
 
    $$
    \mathrm{d}_{\mathrm{i}}S = \frac{(\mathcal{A} - zFE_{\mathrm{cell}})\,\mathrm{d}\xi}{T} \ge 0 ,
@@ -577,7 +577,7 @@ The three are unified in statistical mechanics: the Gibbs entropy $S = -k_{\math
 
    **Answer** $\mathcal{A}/RT = 5000/(8.314 \times 298.15) = 2.017$. The exact form gives $v/v_+ = 1 - \mathrm{e}^{-2.017} = 0.867$; the linear approximation (taking $v_+$ as $v_{\mathrm{eq}}$ and $1 - \mathrm{e}^{-x} \approx x$) gives $v/v_+ \approx 2.017$, a relative error of $(2.017 - 0.867)/0.867 \approx 133\%$. The linear approximation even gives $v > v_+$, which is impossible (the reverse rate cannot be negative): $\mathcal{A} = 5\,\mathrm{kJ\,mol^{-1}}$ is about $2RT$, already outside the linear region.
 
-4. If a transporter accompanies each glucose transported by only 1 $\ce{Na+}$, what is the maximum ratio of glucose concentrations inside and outside the cell, with the data of Example 18.2.2?
+4. If a transporter moves each glucose together with only 1 $\ce{Na+}$, what is the maximum ratio of glucose concentrations inside and outside the cell, with the data of Example 18.2.2?
 
    **Answer** Glucose is uncharged, so at equilibrium its chemical potential difference $RT\ln(c_{\text{in}}/c_{\text{out}})$ equals the drop of the electrochemical potential of one $\ce{Na+}$ entering the cell, $13.2\,\mathrm{kJ\,mol^{-1}}$; hence $c_{\text{in}}/c_{\text{out}} \le \exp(13.2/2.58) \approx 1.7\times10^2$. This is two orders of magnitude below the value of about $3\times10^4$ for 2 $\ce{Na+}$: the stoichiometry enters the exponent, which is why the transporter of the intestinal epithelium uses a 2:1 stoichiometry.
 

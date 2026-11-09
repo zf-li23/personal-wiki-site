@@ -368,7 +368,7 @@ n_\infty = \frac{\mathrm{e}A_{\mathrm{H}}\kappa^3}{768\pi k_{\mathrm{B}}T\gamma_
 $$
 再代入 $\kappa^2 = 2n_\infty z^2e^2/(\varepsilon k_{\mathrm{B}}T)$，$\kappa^3 = (2z^2e^2/(\varepsilon k_{\mathrm{B}}T))^{3/2}n_\infty^{3/2}$，解出 $n_\infty$ 即得。$\square$
 
-粒子半径 $r$ 在结果中消去了，聚沉值与粒子大小无关，这与实验一致。表面电势较低时 $\gamma_0 \approx ze\psi_{\mathrm{d}}/(4k_{\mathrm{B}}T)$，$n_{\mathrm{c}} \propto \psi_{\mathrm{d}}^4/z^2$，价数的影响减弱；实际溶胶的聚沉值随价数的变化常介于 $z^{-2}$ 与 $z^{-6}$ 之间，高价反离子的特性吸附还会降低 $\psi_{\mathrm{d}}$，使高价离子的聚沉能力更强。DLVO 理论还解释了感胶离子序以外的大部分现象，但没有考虑水合作用、空间位阻与离子的特异性，这些"非 DLVO 力"在近距离很重要。蛋白质溶液在低盐下因静电排斥而稳定，在高盐下发生盐析，也可以部分地用 DLVO 理论理解。
+粒子半径 $r$ 在结果中消去了，聚沉值与粒子大小无关，这与实验一致。表面电势较低时 $\gamma_0 \approx ze\psi_{\mathrm{d}}/(4k_{\mathrm{B}}T)$，$n_{\mathrm{c}} \propto \psi_{\mathrm{d}}^4/z^2$，价数的影响减弱；实际溶胶的聚沉值随价数的变化常介于 $z^{-2}$ 与 $z^{-6}$ 之间，高价反离子的特性吸附还会降低 $\psi_{\mathrm{d}}$，使高价离子的聚沉能力更强。DLVO 理论能解释除感胶离子序以外的大部分现象，但没有考虑水合作用、空间位阻与离子的特异性，这些"非 DLVO 力"在近距离很重要。蛋白质溶液在低盐下因静电排斥而稳定，在高盐下发生盐析，也可以部分地用 DLVO 理论理解。
 
 ## 21.7. 乳状液与微乳液
 
