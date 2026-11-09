@@ -1,7 +1,7 @@
 ---
 title: Binary Trees
 description: Terminology and representations of rooted and ordered trees; properties of binary trees, perfect, proper and complete binary trees; recursive and iterative algorithms for preorder, inorder, postorder and level-order traversal and their analysis; reconstructing a binary tree from traversal sequences; prefix codes and Huffman coding; lower bounds and reductions for comparison-based algorithms.
-source_hash: d2758a3aec7d
+source_hash: f2fd5e71598c
 ---
 
 A **vector** ([4.3.2](/4.3.2)) lets us access an element by **rank** in constant time, but insertion and deletion must move many elements; a **list** ([4.3.3](/4.3.3)) supports insertion and deletion in constant time, but access by rank must count from the head. Trees combine the strengths of both: as long as a tree is "short" enough, search, insertion and deletion all take only logarithmic time. Trees are also the natural tool for representing hierarchical relations: expressions, file systems, URLs and the syntactic structure of programs are all trees. A tree is not a linear structure, but once an access order (a traversal) is fixed it acquires linear features, which is why it is called a semilinear structure.
@@ -12,7 +12,7 @@ This chapter first builds the terminology of rooted trees on the basis of graph 
 
 ### 5.1.1. Rooted Trees and Ordered Trees
 
-In graph theory, a connected graph without cycles is called a tree ([1.4.3](/1.4.3)): a tree with $n$ nodes has exactly $n - 1$ edges, it is a minimal connected graph and also a maximal acyclic graph, and there is a unique path between any two nodes. Almost all trees used in data structures designate one node as the starting point; in graph theory these are the rooted trees, or **arborescence**s in the terminology of graph theory.
+In graph theory, a connected graph without cycles is called a tree ([1.4.3](/1.4.3)): a tree with $n$ nodes has exactly $n - 1$ edges, it is a minimal connected graph and also a maximal acyclic graph, and there is a unique path between any two nodes. Almost all trees used in data structures designate one node as the starting point; in graph theory these are the rooted trees, or **arborescence**s.
 
 **Definition 5.1.1 (Rooted Tree)** Designating a node $r$ of a tree, called the **root** of the tree, gives a rooted tree. For any node $v$, write the unique path from the root to $v$ as $\operatorname{path}(v)$:
 
@@ -200,8 +200,8 @@ In the C++ version, deleting a node recursively frees the whole subtree through 
 **Definition 5.3.1 (Traversal)** Visiting the nodes of a tree in some order so that each node is visited exactly once is called a **traversal** of the tree. Write a binary tree as $T = L \cup \{x\} \cup R$, where $x$ is the root and $L$, $R$ are the left and right subtrees. According to when the root is visited relative to the subtrees, there are three recursively defined traversals:
 
 - **Preorder traversal**: visit the root $x$ first, then traverse $L$ in preorder, and finally traverse $R$ in preorder ($x \mid L \mid R$);
-- **inorder traversal**: traverse $L$ in inorder first, then visit $x$, and finally traverse $R$ in inorder ($L \mid x \mid R$);
-- **postorder traversal**: traverse $L$ in postorder first, then $R$ in postorder, and finally visit $x$ ($L \mid R \mid x$).
+- **Inorder traversal**: traverse $L$ in inorder first, then visit $x$, and finally traverse $R$ in inorder ($L \mid x \mid R$);
+- **Postorder traversal**: traverse $L$ in postorder first, then $R$ in postorder, and finally visit $x$ ($L \mid R \mid x$).
 
 The result of a traversal is a linear sequence, which is exactly what "semilinear" means: once a traversal order is fixed, the nodes of the tree have predecessors and successors.
 
@@ -736,7 +736,7 @@ which is the weighted path length WPL of the graph theory chapter ([1.4.3](/1.4.
 An optimal coding tree has the following features:
 
 1. Two children: an optimal coding tree is a proper binary tree. If some internal node has only one child, replacing the node by this child decreases the depth of all leaf nodes in its subtree by $1$, and the code lengths can only become shorter.
-2. Layering: if a node has smaller depth than another node, its frequency should not be lower; otherwise swapping the two decreases $\operatorname{wald}$ by $(d_1 - d_2)(w_1 - w_2) \le 0$. In particular, with equal frequencies leaf nodes can appear only on the bottom two levels, and a complete proper binary tree is optimal; but when the character frequencies differ, a complete binary tree is not necessarily optimal. For example, in `mammamia` the frequencies of m, a, i are $4, 3, 1$; fixed-length coding needs $16$ bits, whereas the code with $1$ bit for m and $2$ bits for a and i needs only $4 \cdot 1 + 3 \cdot 2 + 1 \cdot 2 = 12$ bits.
+2. Layering: if a node has depth $d_1$ smaller than the depth $d_2$ of another node, its frequency $w_1$ should not be lower than $w_2$; otherwise swapping the two decreases $\operatorname{wald}$ by $(d_1 - d_2)(w_1 - w_2) > 0$. In particular, with equal frequencies leaf nodes can appear only on the bottom two levels, and a complete proper binary tree is optimal; but when the character frequencies differ, a complete binary tree is not necessarily optimal. For example, in `mammamia` the frequencies of m, a, i are $4, 3, 1$; fixed-length coding needs $16$ bits, whereas the code with $1$ bit for m and $2$ bits for a and i needs only $4 \cdot 1 + 3 \cdot 2 + 1 \cdot 2 = 12$ bits.
 
 ### 5.5.2. Huffman's Algorithm
 

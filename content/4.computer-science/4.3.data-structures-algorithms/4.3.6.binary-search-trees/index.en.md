@@ -1,7 +1,7 @@
 ---
 title: Binary Search Trees
 description: Access by key and entries, the ordering property and monotone inorder sequence of binary search trees, search, insertion and deletion, expected height under random insertion versus random shape, ideal and asymptotic balance, equivalence transformations (rotations), and AVL trees with their height bound, rebalancing after insertion and deletion, and trinode restructuring.
-source_hash: 218186c80cb0
+source_hash: 507760d27d07
 ---
 
 **Vectors** and lists both organize data by position (**rank**), so neither supports efficient search and efficient modification at once. A sorted vector admits **binary search**, but insertion and deletion take $O(n)$ time; a list supports insertion and deletion in $O(1)$ time, but search takes $O(n)$. The binary search trees of this chapter organize data by key and carry the idea of binary search over to binary trees: as long as the height stays $O(\log n)$, search, insertion and deletion all take only $O(\log n)$ time.
@@ -425,7 +425,7 @@ That is, $b$ becomes the root, $a$ and $c$ its left and right children, and the 
 
 ### 6.5.4. Implementation
 
-The implementation below is recursive: on the way back from an insertion or deletion, `rebalance` is called for each ancestor; it updates the height and performs a single or double rotation if necessary. Since the height of an AVL tree is $O(\log n)$, the recursion depth is no problem. When the deleted node has two children, `pop_min` removes the minimum node of the right subtree (the successor) and its key is moved up. The test program periodically verifies the heights and balance conditions of all nodes during random operations, and finally inserts $2^{20}$ keys in increasing order: a plain binary search tree would degenerate into a chain of height $2^{20} - 1$, whereas the height of the AVL tree is exactly $20$.
+The implementation below is recursive: on the way back from an insertion or deletion, `rebalance` is called for each ancestor; it updates the height and performs a single or double rotation if necessary. Since the height of an AVL tree is $O(\log n)$, the recursion depth is no problem. When the deleted node has two children, `pop_min` removes the minimum node of the right subtree (the successor) and its key is moved up. The test program periodically verifies the heights and balance conditions of all nodes during random operations, and finally inserts $2^{20}$ keys in increasing order ($2^{16}$ in the Python version): a plain binary search tree would degenerate into a chain of height $2^{20} - 1$, whereas the height of the AVL tree is exactly $20$ ($2^{16} - 1$ and $16$ in the Python version).
 
 ```cpp tab
 #include <algorithm>

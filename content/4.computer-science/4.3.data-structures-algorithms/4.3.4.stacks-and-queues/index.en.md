@@ -1,7 +1,7 @@
 ---
 title: Stacks and Queues
 description: The stack interface and its implementation on vectors and linked lists; the call stack and the space complexity of recursion, tail recursion and recursion elimination; base conversion, parenthesis matching, stack permutations and Catalan numbers; evaluation of infix expressions and reverse Polish notation; queues, circular buffers and double-ended queues, collections.deque and the C++ deque; monotonic stacks and the largest rectangle in a histogram; the aggregate, accounting and potential methods of amortized analysis; Steap and Queap; backtracking with a stack.
-source_hash: d78862b57323
+source_hash: 6c136ff2fde2
 ---
 
 Stacks and queues are restricted sequences: a stack allows insertion and deletion at one end only, and a queue allows insertion at one end and deletion at the other. The restriction buys simplicity and efficiency: all operations are $O(1)$. More importantly, the structure of many problems is exactly "last in, first out" or "first in, first out": function calls and returns, nesting of parentheses, operator precedence in expressions and the path in a backtracking search are all last in, first out; waiting in line, serving in turn and searches that expand level by level are all first in, first out. This chapter first implements the stack, explains how the call stack supports recursion and how to rewrite recursion as iteration, and then discusses several classic applications of stacks. It then implements queues and double-ended queues. Finally, it uses a queue made of two stacks to introduce the three methods of amortized analysis systematically, and discusses monotonic stacks, stacks and queues that support retrieving the maximum, and backtracking implemented with a stack. [4.1.12](/4.1.12) and [4.1.14](/4.1.14) already covered backtracking and search using recursion and `std::queue`; this chapter treats the structures themselves.
@@ -705,7 +705,7 @@ How do we convert an infix expression to reverse Polish notation? Manual convers
 
 Moving the operators and removing the parentheses gives `0 ! 1 + 2 3 ! 4 + ^ * 5 ! 67 - 8 9 + - -`. Automatic conversion needs only a slight modification of the evaluation algorithm of the previous section: when an operand is read, append it to the reverse Polish expression; when an operator is popped for execution, append it too. The program of the previous section already does this, and its RPN output line is the result of the conversion. We see that the order in which operators appear in the reverse Polish expression is exactly the order in which they are executed, and the structure of the original expression is fully embodied in this order.
 
-Stack-based computation models are still widely used today. The syntax of PostScript, the page description language born in 1985, is reverse Polish (`4 4 mul 5 5 mul add`), and its interpreter maintains five stacks, including the operand stack. The bytecode of the Java virtual machine and of CPython is also stack-based: using the `dis` module to inspect the compilation of `(a + b) * c - d` gives `LOAD a`, `LOAD b`, `BINARY_OP +`, `LOAD c`, `BINARY_OP *`, `LOAD d`, `BINARY_OP -` in turn, which is exactly the reverse Polish expression `a b + c * d -`.
+Stack-based computation models are still widely used today. The syntax of PostScript, the page description language born in 1985, is reverse Polish (`4 4 mul 5 5 mul add`), and its interpreter maintains several stacks, including the operand stack. The bytecode of the Java virtual machine and of CPython is also stack-based: using the `dis` module to inspect the compilation of `(a + b) * c - d` gives `LOAD a`, `LOAD b`, `BINARY_OP +`, `LOAD c`, `BINARY_OP *`, `LOAD d`, `BINARY_OP -` in turn, which is exactly the reverse Polish expression `a b + c * d -`.
 
 ## 4.5. Queues
 
@@ -1109,7 +1109,7 @@ Let us reprove the conclusion on capacity doubling in [4.3.2](/4.3.2) with the p
 
 Besides the stack interface, also support `get_max()`, which returns the largest element in the stack, with all operations required to be $O(1)$. The way is to push and pop another stack $P$ in step with $S$, where each element of $P$ is the maximum of the corresponding prefix of $S$: when $e$ is pushed, push $\max(e, P.\mathrm{top}())$ onto $P$; on pop, pop both stacks together; `get_max()` is the top of $P$. Such a structure may be called a Steap (stack + heap).
 
-$P$ often contains many repeated elements. They can be removed: $P$ records only each change of the prefix maximum, plus a counter recording how many consecutive levels this maximum has been held. When an element not exceeding the current maximum is pushed, only the count increases; on pop the count decreases, and the top of $P$ is popped only when the count reaches zero.
+$P$ often contains many repeated elements. The duplicates can be removed: $P$ records only each change of the prefix maximum, plus a counter recording how many consecutive levels this maximum has been held. When an element not exceeding the current maximum is pushed, only the count increases; on pop the count decreases, and the top of $P$ is popped only when the count reaches zero.
 
 ### 4.8.2. A Queue Supporting Maximum Queries
 
