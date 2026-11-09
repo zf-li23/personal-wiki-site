@@ -186,7 +186,7 @@ $$
 1. $H_0\colon\beta_k=0$ 对 $H_1\colon\beta_k\ne0$ 的水平 $\alpha$ 检验在 $\lvert t^*\rvert>t_{n-p,\alpha/2}$ 时拒绝，其中 $t^*=b_k/s(b_k)$；
 2. $\beta_k$ 的 $100(1-\alpha)\%$ 置信区间为 $b_k\pm t_{n-p,\alpha/2}\,s(b_k)$。
 
-**证明** 由定理 8.2.1，$(b_k-\beta_k)/\big(\sigma\sqrt{[(X^{\mathsf T}X)^{-1}]_{kk}}\big)\sim\mathcal{N}(0,1)$ 与 $(n-p)s^2/\sigma^2\sim\chi^2_{n-p}$ 独立；前者除以后者除以 $n-p$ 后的平方根，正是 $(b_k-\beta_k)/s(b_k)$。$\square$
+**证明** 由定理 8.2.1，$(b_k-\beta_k)/\big(\sigma\sqrt{[(X^{\mathsf T}X)^{-1}]_{kk}}\big)\sim\mathcal{N}(0,1)$ 与 $(n-p)s^2/\sigma^2\sim\chi^2_{n-p}$ 独立；前者与后者除以 $n-p$ 后的平方根之比，正是 $(b_k-\beta_k)/s(b_k)$。$\square$
 
 这个 $t$ 检验评价的是给定模型中其他变量时的 $X_k$，同样是"最后加入变量"检验。作为一般线性检验，它把完全模型与只删去 $X_k$ 所得的简化模型
 

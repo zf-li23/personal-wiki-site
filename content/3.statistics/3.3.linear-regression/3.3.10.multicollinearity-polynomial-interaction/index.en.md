@@ -88,7 +88,7 @@ Solving the statistical problem also solves the numerical one.
 | hs1 | | $1.410$ $(0.930)$ |
 | $R^2$, $R_a^2$ | $0.2046$, $0.1937$ | $0.2128$, $0.1985$ |
 
-The standard errors of the grade coefficients grow about ninefold, all three change sign, and hsm is no longer significant. The sequential sums of squares of hsm, hss and hse are unchanged ($25.81$, $1.24$, $0.67$) and hs1 adds $1.12$, but the Type II sums of squares of hsm, hss and hse drop to $0.46$, $0.95$, $0.90$. Meanwhile $R^2$ and the fitted values hardly change; $R^2$ always increases when a variable is added, and here even $R_a^2$ does.
+The standard errors of the grade coefficients grow about eight- to ninefold, all three change sign, and hsm is no longer significant. The sequential sums of squares of hsm, hss and hse are unchanged ($25.81$, $1.24$, $0.67$) and hs1 adds $1.12$, but the Type II sums of squares of hsm, hss and hse drop to $0.46$, $0.95$, $0.90$. Meanwhile $R^2$ and the fitted values hardly change; $R^2$ always increases when a variable is added, and here even $R_a^2$ does.
 
 :::
 

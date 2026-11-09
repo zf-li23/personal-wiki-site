@@ -202,7 +202,7 @@ $$
 
 模型关于参数是线性的，预测变量可以是原始变量的函数。几种重要的模型都是它的特例。
 
-- $p - 1$ 阶多项式模型$Y_i = \beta_0 + \beta_1X_i + \beta_2X_i^2 + \cdots + \beta_{p-1}X_i^{p-1} + \varepsilon_i$ 以一个变量的各次幂为预测变量。
+- $p - 1$ 阶多项式模型 $Y_i = \beta_0 + \beta_1X_i + \beta_2X_i^2 + \cdots + \beta_{p-1}X_i^{p-1} + \varepsilon_i$ 以一个变量的各次幂为预测变量。
 - 解释变量之间的交互作用可以用它们的乘积（交叉项）表示并放进模型。
 - 有些解释变量可以是指示变量。虚拟变量（dummy variable）是取值 $0$ 与 $1$（或其他不同数值）、用来编码定性变量各类别的预测变量。
 
@@ -424,7 +424,7 @@ $$
 $$
 (X\boldsymbol{\beta})^{\mathsf T}\Big(H - \frac1nJ\Big)(X\boldsymbol{\beta}) = \boldsymbol{\beta}^{\mathsf T}\Big(X^{\mathsf T}HX - \frac1nX^{\mathsf T}JX\Big)\boldsymbol{\beta} = \boldsymbol{\beta}^{\mathsf T}\Big(X^{\mathsf T}X - \frac1nX^{\mathsf T}JX\Big)\boldsymbol{\beta} = (X\boldsymbol{\beta})^{\mathsf T}\Big(I_n - \frac1nJ\Big)X\boldsymbol{\beta}.
 $$
-除以 $p - 1$ 即得 $\mathbb{E}(\mathrm{MSR})$。$I_n - \frac1nJ$ 幂等，因而半正定，这个二次型等于 $\|(I_n - \frac1nJ)X\boldsymbol{\beta}\|^2$，它为零恰当 $X\boldsymbol{\beta}$ 是 $\boldsymbol{1}_n$ 的倍数；由于 $X$ 的各列线性无关，这恰在 $\beta_1 = \cdots = \beta_{p-1} = 0$ 时发生。$\square$
+除以 $p - 1$ 即得 $\mathbb{E}(\mathrm{MSR})$。$I_n - \frac1nJ$ 幂等，因而半正定，这个二次型等于 $\|(I_n - \frac1nJ)X\boldsymbol{\beta}\|^2$，它为零当且仅当 $X\boldsymbol{\beta}$ 是 $\boldsymbol{1}_n$ 的倍数；由于 $X$ 的各列线性无关，这恰在 $\beta_1 = \cdots = \beta_{p-1} = 0$ 时发生。$\square$
 
 所以没有预测变量起作用时，$\mathrm{MSR}$ 与 $\mathrm{MSE}$ 估计同一个 $\sigma^2$，否则 $\mathrm{MSR}$ 倾向于更大：它们的比值是自然的检验统计量。
 
