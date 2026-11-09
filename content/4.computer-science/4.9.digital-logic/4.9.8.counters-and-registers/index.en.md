@@ -293,7 +293,7 @@ A shift register whose feedback function is an exclusive or is called a linear-f
 
 ## Summary
 
-- A counter is a **Moore machine** with only a clock input. Bit $i$ of a synchronous binary counter toggles when all lower bits are 1: $T_i = Q_{i-1} \cdots Q_0$. Decimal and reversible counters are designed by the methods of the previous chapter, with unused states as don't-cares, and self-starting must be checked afterwards.
+- A counter is a **Moore machine** with only a clock input. Bit $i$ of a synchronous binary counter toggles when all lower bits are 1: $T_i = Q_{i-1} \cdots Q_0$. Decimal and reversible counters are designed by the methods of the previous chapter, with unused states as don't-cares, and self-starting must be checked afterward.
 - Integrated counter 74163: synchronous clear > synchronous load > count > hold. Counters of arbitrary modulus are built with feedback clear or feedback load, preferring the synchronous methods; large moduli use cascading, and fast cascading drives the ENP of each chip from the RCO of the lowest chip.
 - A register = **D flip-flops** + a multiplexer in front of $D$ (hold, select, load, shift); do not implement holding with a gated clock.
 - Ring counters (modulus $n$, one-hot) and twisted-ring counters (modulus $2n$, unit-distance code) have the simplest structure, but both need modified feedback to be self-starting.

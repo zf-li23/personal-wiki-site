@@ -1,6 +1,6 @@
 ---
 title: Programmable Logic Devices and Hardware Description Languages
-source_hash: 97d07ca4f863
+source_hash: 0880086c878d
 ---
 
 In the previous chapters we built circuits from gates, **flip-flops** and medium-scale chips, where the function of a circuit is determined by the wiring between chips and changing the function means rewiring. Programmable logic devices make the "wiring" a writable configuration as well: the same chip becomes a different circuit when a different configuration is written to it. Following the historical development of the devices, this chapter proceeds from simple devices built around an AND-OR array (ROM, **PLA**, PAL, GAL) to CPLDs and to FPGAs built around lookup tables, and uses current AMD (formerly Xilinx) devices as examples of the on-chip resources of an FPGA. Once devices reach millions of logic cells, circuits can no longer be drawn as logic diagrams and must be written in a hardware description language. The second half of the chapter therefore introduces, mainly in SystemVerilog (with VHDL for comparison), how to write combinational logic, sequential logic and **finite-state machines**, together with testbenches and simulation, the flow of synthesis and implementation, and the principles of synchronous design. The Karnaugh-map minimization, state assignment and timing constraints learned earlier are all done automatically by EDA tools here, but understanding them is what makes it possible to write good hardware descriptions; the experiments of computer organization ([4.10](/4.10)) implement a processor on an FPGA using the methods of this chapter.
@@ -34,7 +34,7 @@ The technology that stores the configuration determines whether a device can be 
 
 A ROM consists of an address **decoder** and a storage matrix: the $n$ address bits select one of the $2^n$ word lines through the decoder, and the contents of the $m$ storage cells on the selected word line are sent to the $m$ bit lines through sense amplifiers. Logically, the decoder is a fixed AND array in which each word line is a minterm of the address variables; the storage matrix is a programmable OR array in which output bit $j$ is the OR of "those word lines whose cell is 1".
 
-By the way of writing, ROMs include mask ROM (written at manufacture), PROM (written once by the user), EPROM (erased by ultraviolet light), EEPROM (electrically erased) and Flash (electrically erased by block). The latter kinds can in fact all be written, but writing is much slower than reading and needs special operations, so they are still counted as ROM; the program memory of today's microcontrollers and solid-state drives use Flash ([4.11.8](/4.11.8)).
+By the way data are written, ROMs include mask ROM (written at manufacture), PROM (written once by the user), EPROM (erased by ultraviolet light), EEPROM (electrically erased) and Flash (electrically erased by block). The latter kinds can in fact all be written, but writing is much slower than reading and needs special operations, so they are still counted as ROM; the program memory of today's microcontrollers and solid-state drives are built from Flash ([4.11.8](/4.11.8)).
 
 ### 9.2.2. Implementing Combinational Logic with a ROM
 
@@ -112,7 +112,7 @@ The characteristics of a CPLD follow from its structure:
 - Any two macrocells are connected through the same interconnect matrix, so the delay is fixed and predictable.
 - The product-term structure suits wide-input decoding logic, but the number of macrocells is usually only tens to hundreds, with few flip-flops.
 
-CPLDs are therefore suited to "glue logic" such as address decoding, level translation and power-up sequencing, and on motherboards and computer-organization lab boards they are often used to assist the FPGA (for example, a CPLD implementing the serial port on a lab board). Current products include AMD's CoolRunner-II and XC9500XL (both mature, older products) and Intel's MAX V. Larger needs are now met by small FPGAs with on-chip Flash (the Intel MAX 10 and Lattice MachXO series), which are also ready for use at power-up and are often put by vendors in the same category of use.
+CPLDs are therefore suited to "glue logic" such as address decoding, level translation and power-up sequencing, and on motherboards and computer-organization lab boards they are often used to assist the FPGA (for example, a CPLD implementing the serial port on a lab board). Current products include AMD's CoolRunner-II and XC9500XL (both mature, older products) and Intel's MAX V. Larger needs are now met by small FPGAs with on-chip Flash (the Intel MAX 10 and Lattice MachXO series), which are also ready for use at power-up and are often positioned by vendors for the same uses.
 
 ## 9.6. FPGAs
 
@@ -554,7 +554,7 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 create_clock -period 10.000 -name sys_clk [get_ports clk]
 ```
 
-The clock constraint tells the static timing analysis tool the **setup time** and **hold time** constraints that every path must satisfy (Eq. (7.1) and Eq. (7.2) of [4.9.7](/4.9.7#sec-7.6)). In the post-implementation timing report, a negative worst negative slack (WNS) means that timing is not met, and the design must be optimized (pipelining, fewer logic levels) or the frequency lowered.
+The clock constraint tells the static timing analysis tool the **setup time** and **hold time** constraints that every path must satisfy (Eq. (7.1) and Eq. (7.2) of [4.9.7](/4.9.7#sec-7.6)). In the post-implementation timing report, a negative worst slack (WNS, worst negative slack) means that timing is not met, and the design must be optimized (pipelining, fewer logic levels) or the frequency lowered.
 
 Besides the vendor tools (AMD Vivado, Altera Quartus Prime, Lattice Radiant/Diamond), there are mature open-source toolchains:
 
