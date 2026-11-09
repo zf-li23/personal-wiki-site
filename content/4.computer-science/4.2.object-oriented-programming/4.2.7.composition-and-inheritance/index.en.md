@@ -28,7 +28,7 @@ Both are means of reusing existing code; they differ in what is reused. Composit
 Composition is written by declaring objects of existing classes as data members of the new class. Sub-objects can be placed in different access regions:
 
 - As public members: users call the sub-object's interface directly through `car.engine.start()`. This is convenient to write, but the internal structure of the whole object is exposed, and it is hard to replace the part later.
-- As private members: the whole object offers an interface itself and forwards requests to the sub-objects internally, and can also combine the operations of several sub-objects into new operations. This amounts to a conversion of the old interface and is the usual practice.
+- As private members: the whole object offers an interface itself and forwards requests to the sub-objects internally, and can also combine the operations of several sub-objects into new operations. This adapts the old interface and is the usual practice.
 
 ```cpp tab
 #include <array>
@@ -339,7 +339,7 @@ int main() {
 }
 ```
 
-The same effect can be obtained with composition (making `std::vector<int>` a private member), with looser coupling, and composition is generally preferred; private inheritance is necessary only when access to protected members of the base class or overriding its virtual functions is needed.
+The same effect can be obtained with composition (making `std::vector<int>` a private member), and this gives looser coupling, so composition is generally preferred; private inheritance is necessary only when access to protected members of the base class or overriding its virtual functions is needed.
 
 ### 7.3.4. Composition or Inheritance
 
@@ -353,7 +353,7 @@ The basic criterion for the choice is the relation between the two kinds of obje
 | Coupling | Depends only on the public interface of the sub-object | Depends on the protected members and internal conventions of the base class |
 | Replaceable at run time | Yes (when holding a pointer or reference) | No, fixed at compile time |
 
-Is-a must be understood behaviorally: a derived-class object must be able to replace a base-class object anywhere one is used without breaking the correctness of the program (the Liskov substitution principle, see [4.2.13](/4.2.13)). The classic counterexample is "a square is a kind of rectangle": it holds mathematically, but if `Rectangle` provides `setWidth` and `setHeight` that set the width and height separately, `Square` cannot keep the width and height equal while satisfying this interface, and expressing them with inheritance actually goes wrong.
+Is-a must be understood behaviorally: a derived-class object must be able to replace a base-class object anywhere one is used without breaking the correctness of the program (the Liskov substitution principle, see [4.2.13](/4.2.13)). The classic counterexample is "a square is a kind of rectangle": it holds mathematically, but if `Rectangle` provides `setWidth` and `setHeight` that set the width and height separately, `Square` cannot keep the width and height equal while satisfying this interface, so modeling them with inheritance goes wrong.
 
 The rule of thumb is to prefer composition: inheritance makes the derived class depend on implementation details of the base class, and changes in the base class affect all derived classes; composition depends only on the interface and is easier to replace and test. Inheritance suits situations where many kinds of objects really must be handled uniformly through a base-class interface, which is exactly the use of polymorphism in Chapter 8.
 
@@ -414,7 +414,7 @@ int main() {
 }
 ```
 
-`using` has appeared in three uses in this chapter, all of which "bring a name from elsewhere into the current scope": bringing in the base class's overloaded versions, inheriting constructors, and reopening members in private inheritance.
+`using` has three uses in this chapter, all of which "bring a name from elsewhere into the current scope": bringing in the base class's overloaded versions, inheriting constructors, and reopening members in private inheritance.
 
 ## 7.5. Multiple Inheritance
 

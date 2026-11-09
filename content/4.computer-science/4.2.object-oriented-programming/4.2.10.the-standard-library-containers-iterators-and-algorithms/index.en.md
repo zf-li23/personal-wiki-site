@@ -1,7 +1,7 @@
 ---
 title: "The Standard Library: Containers, Iterators and Algorithms"
 description: Namespaces; the structure of the Standard Template Library, with containers, iterators and algorithms kept separate; pair and tuple; usage and complexity of sequence, associative and unordered containers; iterator categories and iterator invalidation; standard algorithms and C++20 ranges; Python's built-in containers, collections and the iterator protocol.
-source_hash: e66ec02bc447
+source_hash: 74e1fe0533e9
 ---
 
 With **templates** (Chapter 9), a data structure or algorithm can be written once and used for any element type. The part of the C++ standard library written with templates is called the Standard Template Library, and it is the most heavily used part of everyday C++ programming: one almost never hand-writes a dynamic array, a linked list or a sort any more. This chapter treats the standard library from the user's point of view: namespaces, the choice among containers and their complexities, the iterators that connect containers to algorithms, the iterator invalidation problem that is the most common source of errors when using iterators, and finally the standard algorithms and C++20 ranges. How the data structures behind the containers (dynamic arrays, **linked lists**, red-black trees, hash tables) are implemented, and where their complexities come from, is the subject of [4.3 Data Structures and Algorithms](/4.3); this chapter only touches on it.
@@ -244,7 +244,7 @@ int main() {
 }
 ```
 
-Each deletion in the correct loop above moves the following elements, for a total cost of $O(n^2)$; `std::erase_if` (or the traditional erase–remove idiom `v.erase(std::remove_if(v.begin(), v.end(), pred), v.end())`) moves the retained elements forward in a single pass, needing only $O(n)$, and cannot be written wrongly.
+Each deletion in the correct loop above moves the following elements, for a total cost of $O(n^2)$; `std::erase_if` (or the traditional erase–remove idiom `v.erase(std::remove_if(v.begin(), v.end(), pred), v.end())`) moves the retained elements forward in a single pass, needing only $O(n)$, and is hard to get wrong.
 
 ## 10.6. Associative Containers
 

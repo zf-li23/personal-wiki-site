@@ -1,7 +1,7 @@
 ---
 title: Function Objects, Lambdas and Smart Pointers
 description: Function pointers and function objects; lambda expressions, captures and closures, generic lambdas; std::function and callbacks; the problems of raw pointers and ownership; unique_ptr, shared_ptr and reference counting, weak_ptr and reference cycles; Python's first-class functions, closures, reference counting and garbage collection.
-source_hash: 81189651566a
+source_hash: 02bd658d79ab
 ---
 
 This chapter discusses two topics that seem unrelated but are both about "wrapping behavior and resources into objects". The first half shows how to pass functions around as values: function pointers, function objects that can carry state, lambda expressions that define a function in place, and `std::function`, which can hold all of them. They let the algorithms of Chapter 10 accept user-defined comparisons and predicates, and they are a lightweight way to write the strategy pattern of Chapter 13. The second half covers smart pointers: class templates that write "who is responsible for releasing this memory" into the type, so that dynamically allocated objects are released automatically like local objects. They are a direct application of **resource acquisition is initialization** ([4.2.4](/4.2.4)) and **move semantics** ([4.2.6](/4.2.6)) to memory management, and modern C++ code almost never needs a hand-written `delete`.
