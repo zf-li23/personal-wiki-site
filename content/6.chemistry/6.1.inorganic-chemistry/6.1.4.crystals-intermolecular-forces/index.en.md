@@ -1,6 +1,6 @@
 ---
 title: Crystal Structures and Intermolecular Forces
-source_hash: c3fe624a624a
+source_hash: a41e742eef82
 ---
 
 The previous chapter dealt with chemical bonds within single molecules; this chapter deals with how large numbers of particles aggregate into solids. By the type of force between the particles, crystals fall into four classes: metallic, ionic, molecular and covalent network crystals. The first two are held together by the nondirectional metallic and ionic bonds, and their particles pack as closely as rigid spheres; molecular crystals are held together by van der Waals forces and hydrogen bonds, which are much weaker than chemical bonds; covalent network crystals are joined into a single whole by directional covalent bonds. This chapter discusses in turn the packing of equal spheres (the geometric basis of metallic and ionic crystal structures), metallic bonding and energy bands, lattice enthalpy and structure types of ionic crystals, ionic polarization, intermolecular forces and hydrogen bonding, and finally covalent network crystals and crystal defects.
@@ -212,7 +212,7 @@ When $r_+/r_-$ is smaller than the critical value for a coordination number, the
 The radius ratio rule gives the correct coordination number for most strongly ionic crystals ($\ce{NaCl}$ $0.56$, $\ce{MgO}$ $0.51$, $\ce{CsCl}$ $0.96$; in $\ce{CaF2}$ the $0.84$ of $\ce{Ca^2+}$ corresponds to 8-coordination, and in $\ce{TiO2}$ the $0.43$ of $\ce{Ti^4+}$ to 6-coordination), but there are many exceptions (right of the figure above):
 
 - Among the alkali halides, $\ce{KCl}$ (0.76) and $\ce{RbCl}$ (0.84) have radius ratios above 0.732 but are of the NaCl type at ordinary pressure: the energy difference between 6- and 8-coordination is only a few percent, and factors other than the radius ratio are enough to change the result.
-- $\ce{AgI}$ (0.45), $\ce{CuCl}$ and others have radius ratios in the 6-coordinate range but are in fact 4-coordinate, of the ZnS type: ionic polarization gives the bond considerable covalent character (Section 4.3.5).
+- $\ce{AgI}$ (0.52), $\ce{CuCl}$ and others have radius ratios in the 6-coordinate range but are in fact 4-coordinate, of the ZnS type: ionic polarization gives the bond considerable covalent character (Section 4.3.5).
 
 Ions are not rigid spheres, and the ionic radius itself depends on the coordination number and the radius system used, so the radius ratio rule can serve only as a rough criterion.
 
@@ -300,7 +300,7 @@ Estimates of the intermolecular interaction energies of several molecules (data 
 | HI | 0.025 | 0.113 | 25.87 | 26.00 |
 | HBr | 0.69 | 0.50 | 21.94 | 23.11 |
 | HCl | 3.31 | 1.00 | 16.83 | 21.14 |
-| $\ce{NH3}$ | 13.31 | 1.55 | 14.95 | 29.60 |
+| $\ce{NH3}$ | 13.31 | 1.55 | 14.95 | 29.80 |
 | $\ce{H2O}$ | 36.39 | 1.93 | 9.00 | 47.31 |
 
 Characteristics of van der Waals forces:
@@ -358,7 +358,7 @@ In ice each water molecule forms tetrahedrally oriented hydrogen bonds with four
 
 ### 4.5.1. Covalent Network Crystals
 
-In diamond, elemental silicon and boron, $\ce{SiO2}$, SiC, cubic BN and the like, covalent bonds join all the atoms into a three-dimensional network; there are no discrete small molecules in the crystal, and the whole crystal can be regarded as one giant molecule. In diamond each C is $\mathrm{sp}^3$ hybridized and forms tetrahedrally oriented covalent bonds with 4 C atoms (coordination number 4, C–C bond length $154\,\mathrm{pm}$); Si and Ge have the same structure as diamond; in quartz each Si and 4 O form a tetrahedron and each O links two Si.
+In diamond, elemental silicon and boron, $\ce{SiO2}$, SiC, cubic BN and the like, covalent bonds join all the atoms into a three-dimensional network; there are no discrete small molecules in the crystal, and the whole crystal can be regarded as one giant molecule. In diamond each C is $\mathrm{sp}^3$ hybridized and forms tetrahedrally oriented covalent bonds with 4 C atoms (coordination number 4, C–C bond length $154\,\mathrm{pm}$); Si and Ge have the same structure as diamond; in quartz each Si is bonded to 4 O in a tetrahedron and each O links two Si.
 
 Covalent network crystals have high melting points and great hardness (diamond is the hardest natural substance), are nonvolatile and insoluble in common solvents, and are generally electrical insulators and poor conductors of heat (diamond is in fact an excellent thermal conductor, conducting heat by lattice vibrations); Si, Ge and SiC are semiconductors.
 

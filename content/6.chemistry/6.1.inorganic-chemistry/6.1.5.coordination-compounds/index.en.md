@@ -1,6 +1,6 @@
 ---
 title: Structure of Coordination Compounds
-source_hash: 342dd0e45a26
+source_hash: c24138ba15ae
 ---
 
 Coordination compounds (also called complexes) consist of a central atom bound to a set of ligands through coordinate bonds. They are the largest and most structurally varied class of inorganic compounds: the heme in hemoglobin is an Fe(II) complex, chlorophyll is a Mg(II) complex, cisplatin is an anticancer drug, and EDTA titrations, the hydrometallurgy of metals, and many industrial catalysts all depend on coordination. This chapter applies the structural theory of the preceding chapters to these compounds. We first introduce their composition, nomenclature, and types (5.1), then discuss geometries and isomerism (5.2) and magnetism (5.3). Two theories then explain their behavior: valence bond theory (5.4) extends the **hybrid orbitals** of [6.1.3](/6.1.3) to central atoms that use d orbitals, and crystal field theory (5.5) uses the splitting of the d orbitals in the electrostatic field of the ligands to account for magnetism, color, and thermodynamic properties in a single picture. The stability of complexes in solution (stability constants and complexation equilibria) is treated in [6.1.9](/6.1.9), the electrode potentials of complex couples in [6.1.11](/6.1.11), and the chemistry of transition-metal complexes in [6.1.15](/6.1.15). A rigorous treatment of ligand field theory, the molecular orbital theory of complexes, and term symbols is given in [Structural Chemistry](/6.2), and a systematic treatment of stereochemistry in [Organic Chemistry](/6.5).
@@ -170,7 +170,7 @@ Octahedral complexes have more geometric isomers. The $\ce{MA4B2}$ type has a ci
 
 **Definition 5.2.3 (Chirality)** The property of an object that cannot be superimposed on its mirror image, like the left and right hands, is called **chirality**. A molecule with this property is called a chiral molecule.
 
-The rigorous criterion for a chiral molecule is that it has no improper rotation axis of any order (including mirror planes and centers of inversion; see the point groups in [Structural Chemistry](/6.2)). For the examples in this course it suffices to check for mirror planes and a center of inversion.
+The rigorous criterion for a chiral molecule is that it has no improper rotation axis of any order (including mirror planes and centers of inversion; see the point groups in [Structural Chemistry](/6.2)). For the examples here it suffices to check for mirror planes and a center of inversion.
 
 **Definition 5.2.4 (Enantiomer)** Two stereoisomers that are nonsuperimposable mirror images of each other are called a pair of **enantiomers**. The isomerism caused by enantiomers is called **optical isomerism**.
 
