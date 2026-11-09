@@ -511,12 +511,12 @@ So after a stone is thrown into deep water, the group of waves forming a ring of
 
 1. Why must one often adjust the length of the string (or the tension, or the driving frequency) in standing-wave experiments?
 
-   **Answer** a stable, pronounced standing wave forms only when the driving frequency equals one of the normal-mode frequencies; changing the length or tension changes the normal-mode frequencies.
+   **Answer** A stable, pronounced standing wave forms only when the driving frequency equals one of the normal-mode frequencies; changing the length or tension changes the normal-mode frequencies.
 
 2. In a plane harmonic wave, what are the kinetic and potential energies of an element as it passes through the equilibrium position? How does this differ from a spring oscillator?
 
-   **Answer** both are maximal at the same time; see [Section 7.5.1](#sec-7.5.1).
+   **Answer** Both are maximal at the same time; see [Section 7.5.1](#sec-7.5.1).
 
 3. A sound source and an observer move with the same **speed** $v$, in one case "the source moves toward the observer" and in the other "the observer moves toward the source". Is the received frequency the same? What about light?
 
-   **Answer** for sound the former gives $\frac{u}{u-v}\nu_{\mathrm{S}}$ and the latter $\frac{u+v}{u}\nu_{\mathrm{S}}$, the former being higher; for light only the relative velocity matters and the two are the same.
+   **Answer** For sound the former gives $\frac{u}{u-v}\nu_{\mathrm{S}}$ and the latter $\frac{u+v}{u}\nu_{\mathrm{S}}$, the former being higher; for light only the relative velocity matters and the two are the same.

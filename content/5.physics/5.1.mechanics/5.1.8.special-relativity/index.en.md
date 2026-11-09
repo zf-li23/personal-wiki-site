@@ -492,16 +492,16 @@ the component of force along the direction of motion is unchanged, and the perpe
 
 1. Time dilation says "moving clocks run slow", and S and S′ each consider the other's clocks to be slow. Is this self-contradictory?
 
-   **Answer** the two judgments compare different pairs of events; each reference frame uses its own row of synchronized clocks, and the other frame considers this row not to be synchronized ([Section 8.3](#sec-8.3)).
+   **Answer** The two judgments compare different pairs of events; each reference frame uses its own row of synchronized clocks, and the other frame considers this row not to be synchronized ([Section 8.3](#sec-8.3)).
 
 2. Can the mass of a particle be changed by accelerating it? What is wrong with the statement that "the mass of a moving body increases"?
 
-   **Answer** the mass $m$ is a Lorentz invariant ($E^2-p^2c^2=m^2c^4$); what increases is the energy $\gamma mc^2$ and the momentum (Remark 8.7.1).
+   **Answer** The mass $m$ is a Lorentz invariant ($E^2-p^2c^2=m^2c^4$); what increases is the energy $\gamma mc^2$ and the momentum (Remark 8.7.1).
 
 3. Does the mass of a box change when the gas in it is heated?
 
-   **Answer** yes, $\Delta m=\Delta E_0/c^2$, but for everyday amounts of heat $\Delta m$ is too small to measure ($1\,\mathrm{J}$ corresponds to $1.1\times10^{-17}\,\mathrm{kg}$).
+   **Answer** Yes, $\Delta m=\Delta E_0/c^2$, but for everyday amounts of heat $\Delta m$ is too small to measure ($1\,\mathrm{J}$ corresponds to $1.1\times10^{-17}\,\mathrm{kg}$).
 
 4. The spot of a searchlight sweeping across distant clouds can move faster than $c$. Does this violate relativity?
 
-   **Answer** the illumination of different positions on the spot consists of different events with no causal connection; no signal or energy is transmitted, and $c$ imposes no limit.
+   **Answer** The illumination of different positions on the spot consists of different events with no causal connection; no signal or energy is transmitted, and $c$ imposes no limit.

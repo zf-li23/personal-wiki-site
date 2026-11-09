@@ -325,24 +325,24 @@ flowchart LR
 
 1. Are the potentials at any two points on the same field line equal?
 
-   **Answer** no. Along a field line the potential decreases monotonically.
+   **Answer** No. Along a field line the potential decreases monotonically.
 
 2. Is the electrostatic potential energy of a charge always larger where the potential is higher?
 
-   **Answer** not necessarily. $E_{\mathrm{p}}=q\varphi$, and for a negative charge the higher the potential, the lower the energy.
+   **Answer** Not necessarily. $E_{\mathrm{p}}=q\varphi$, and for a negative charge the higher the potential, the lower the energy.
 
 3. Can the field lines of an electrostatic field close?
 
-   **Answer** no. Along a closed field line $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$, contradicting the circulation theorem.
+   **Answer** No. Along a closed field line $\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{l}>0$, contradicting the circulation theorem.
 
 4. Show that the potential is zero at every point of the perpendicular bisector plane of an electric dipole.
 
-   **Answer** every point of the plane is equidistant from $+q$ and $-q$, whose potentials there are equal and opposite (with the zero at infinity).
+   **Answer** Every point of the plane is equidistant from $+q$ and $-q$, whose potentials there are equal and opposite (with the zero at infinity).
 
 5. Is the potential necessarily zero where the field strength is zero? Is the field strength necessarily zero where the potential is zero?
 
-   **Answer** neither. Inside a uniformly charged spherical surface $E=0$ but $\varphi\ne0$; on the perpendicular bisector plane of a dipole $\varphi=0$ but $E\ne0$. The field strength is determined only by the spatial rate of change of the potential.
+   **Answer** Neither. Inside a uniformly charged spherical surface $E=0$ but $\varphi\ne0$; on the perpendicular bisector plane of a dipole $\varphi=0$ but $E\ne0$. The field strength is determined only by the spatial rate of change of the potential.
 
 6. Where the field strength is larger, is the energy density of the field higher? And where the potential is higher?
 
-   **Answer** the former, yes, since $w_{\mathrm{e}}=\frac12\varepsilon_0E^2$; the latter, not necessarily, since the value of the potential depends on the choice of zero and is not directly related to the energy density.
+   **Answer** The former, yes, since $w_{\mathrm{e}}=\frac12\varepsilon_0E^2$; the latter, not necessarily, since the value of the potential depends on the choice of zero and is not directly related to the energy density.

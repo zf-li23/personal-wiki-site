@@ -433,8 +433,8 @@ Plane motion is the translation of the center of mass (center-of-mass theorem) p
 
 1. How can one measure the moment of inertia of an irregularly shaped object in the laboratory?
 
-   **Answer** the falling-body method of Example 5.4.1; or treat the object as a physical pendulum or torsion pendulum and measure the period of small oscillations ([5.1.6](/5.1.6)), from which $J$ follows.
+   **Answer** The falling-body method of Example 5.4.1; or treat the object as a physical pendulum or torsion pendulum and measure the period of small oscillations ([5.1.6](/5.1.6)), from which $J$ follows.
 
 2. In Example 5.6.2, how should the interaction force between the clay and the disk be handled if the clay and the disk are analyzed as separate free bodies?
 
-   **Answer** after sticking there is an unknown internal force between them; write Newton's equation for the clay and the law of rotation and center-of-mass theorem for the disk separately, and the internal force cancels when they are added, giving the same result as using the center-of-mass theorem for the whole system.
+   **Answer** After sticking there is an unknown internal force between them; write Newton's equation for the clay and the law of rotation and center-of-mass theorem for the disk separately, and the internal force cancels when they are added, giving the same result as using the center-of-mass theorem for the whole system.

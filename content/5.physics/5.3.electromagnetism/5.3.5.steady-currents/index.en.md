@@ -465,16 +465,16 @@ Energy during charging: the source does work $\int_0^\infty\mathcal{E}i\,\mathrm
 
 1. What force drives the carriers along a wire? When a wire bends, how do the carriers "turn the corner"?
 
-   **Answer** the driving force is the electric field, produced jointly by the two terminals of the source and by the charges on the wire surface. The instant the circuit is closed, charge accumulates on the wire surface (especially at bends) until the field inside the wire points along the wire everywhere; the field of these surface charges makes the carriers turn, while the shape of the wire acts only as a "constraint".
+   **Answer** The driving force is the electric field, produced jointly by the two terminals of the source and by the charges on the wire surface. The instant the circuit is closed, charge accumulates on the wire surface (especially at bends) until the field inside the wire points along the wire everywhere; the field of these surface charges makes the carriers turn, while the shape of the wire acts only as a "constraint".
 
 2. The drift velocity of electrons in a conductor is only $0.01$–$0.1\,\mathrm{mm\,s^{-1}}$. Why does the bulb light immediately when the switch is pressed, even with a very long wire?
 
-   **Answer** what is needed to establish the current is the field in the wire, which is established along the wire at nearly the speed of light (through the redistribution of surface charge), so electrons everywhere begin to drift almost simultaneously; the electrons do not need to travel from the switch to the bulb.
+   **Answer** What is needed to establish the current is the field in the wire, which is established along the wire at nearly the speed of light (through the redistribution of surface charge), so electrons everywhere begin to drift almost simultaneously; the electrons do not need to travel from the switch to the bulb.
 
 3. By Ohm's law, electrons in a wire must move against the field lines, whereas electrons in vacuum need not. Why?
 
-   **Answer** electrons in a wire collide constantly and have no "memory", so the average velocity is determined by the local, instantaneous field ($\boldsymbol{v}_{\mathrm{d}} \propto -\boldsymbol{E}$); electrons in vacuum do not collide, the field determines their acceleration, and the velocity also depends on the initial velocity and past forces, just as the velocity of a projectile need not point along gravity.
+   **Answer** Electrons in a wire collide constantly and have no "memory", so the average velocity is determined by the local, instantaneous field ($\boldsymbol{v}_{\mathrm{d}} \propto -\boldsymbol{E}$); electrons in vacuum do not collide, the field determines their acceleration, and the velocity also depends on the initial velocity and past forces, just as the velocity of a projectile need not point along gravity.
 
 4. The steady electric field also satisfies the circulation theorem, so the work done by the steady field on an electron going once around the circuit is zero. How is electrical energy converted into other forms?
 
-   **Answer** in the external circuit the steady field does positive work on the electrons, which hand the energy to the lattice through collisions (Joule heat); inside the source the electrons move against the electrostatic force, the electrostatic field does negative work, and this energy is supplied by the non-electrostatic force. The steady field only serves to transmit energy; the source of the energy is the non-electrostatic force in the source.
+   **Answer** In the external circuit the steady field does positive work on the electrons, which hand the energy to the lattice through collisions (Joule heat); inside the source the electrons move against the electrostatic force, the electrostatic field does negative work, and this energy is supplied by the non-electrostatic force. The steady field only serves to transmit energy; the source of the energy is the non-electrostatic force in the source.

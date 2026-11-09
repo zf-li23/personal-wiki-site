@@ -234,23 +234,23 @@ If the sphere is insulated and carries charge $Q$ instead of being grounded, pla
 
 1. Is the field inside a conductor in electrostatic equilibrium zero only for spherical conductors?
 
-   **Answer** no. For a conductor of any shape the field inside is zero in electrostatic equilibrium; this is the equilibrium condition and is independent of the shape.
+   **Answer** No. For a conductor of any shape the field inside is zero in electrostatic equilibrium; this is the equilibrium condition and is independent of the shape.
 
 2. After an isolated conductor is given a positive charge, does its mass increase, decrease or stay the same?
 
-   **Answer** it decreases. Becoming positively charged means losing electrons, but the decrease (each electron has mass $9.1\times10^{-31}\,\mathrm{kg}$) is minuscule.
+   **Answer** It decreases. Becoming positively charged means losing electrons, but the decrease (each electron has mass $9.1\times10^{-31}\,\mathrm{kg}$) is minuscule.
 
 3. When a charged body is brought near a conducting shell, is the field that the body alone produces in the cavity zero? How does electrostatic shielding come about?
 
-   **Answer** it is not zero. The body induces charge on the outer surface, and the field of the induced charge in the cavity exactly cancels that of the body; shielding is the result of this superposition.
+   **Answer** It is not zero. The body induces charge on the outer surface, and the field of the induced charge in the cavity exactly cancels that of the body; shielding is the result of this superposition.
 
 4. A point charge is placed at the center of an isolated conducting spherical shell. Is the charge distribution on the inner and outer surfaces uniform? What if the charge is off-center?
 
-   **Answer** at the center both surfaces are uniform; off-center the inner surface is nonuniform while the outer surface is still uniform (Example 3.4.1).
+   **Answer** At the center both surfaces are uniform; off-center the inner surface is nonuniform while the outer surface is still uniform (Example 3.4.1).
 
 5. The field is stronger where the surface of a charged conductor has greater curvature. Starting at a point $a$ on a conductor, go along a field line for some distance, then go perpendicular to the field lines onto another field line, follow it back to a point $b$ on the conductor, and finally return to $a$ along the conductor surface. The field at $a$ is stronger than at $b$. Is the circulation along this closed path nonzero, violating the circulation theorem?
 
-   **Answer** no. The segment perpendicular to the field lines lies on an equipotential surface, and the integrals along the two field-line segments both equal the potential difference between the conductor and this equipotential surface, so they are equal; the field is stronger at $a$, but that segment is also shorter (the equipotential surfaces are denser there). The integrals along the conductor surface and along the perpendicular segment vanish, so the total circulation is zero.
+   **Answer** No. The segment perpendicular to the field lines lies on an equipotential surface, and the integrals along the two field-line segments both equal the potential difference between the conductor and this equipotential surface, so they are equal; the field is stronger at $a$, but that segment is also shorter (the equipotential surfaces are denser there). The integrals along the conductor surface and along the perpendicular segment vanish, so the total circulation is zero.
 
 6. Find the image charges for the following problems, or show that they do not exist: (1) a point charge $q$ inside the right angle formed by two perpendicular grounded conducting half-planes; (2) an infinitely long uniformly charged line (linear density $\lambda$) parallel to a grounded conducting plane; (3) a point charge inside the $270^\circ$ angle formed by two grounded conducting half-planes; (4) a point charge midway between two parallel grounded conducting plates; (5) a point charge $q$ outside an insulated conducting sphere carrying charge $Q$.
 
