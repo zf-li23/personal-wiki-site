@@ -1,7 +1,7 @@
 ---
 title: Search
 description: Formulation of search problems and the general graph-search framework; uninformed search (depth-first, breadth-first, iterative deepening) and uniform-cost search; heuristic functions, algorithm A and the A* algorithm, the admissibility theorem, comparing heuristics, and consistency; designing heuristics (relaxed problems, effective branching factor) with an eight-puzzle experiment; local search, dynamic programming, and Viterbi decoding.
-source_hash: c169ec2554a4
+source_hash: 37ee638a80f6
 ---
 
 Many intelligent tasks can be reduced to "finding a path to a goal in a huge space of possibilities": a navigation system looks for the shortest route in a road network, a sliding puzzle needs a sequence of moves that turns a scrambled arrangement into an ordered one, and an input method must find the most fluent sentence among the combinations of thousands of homophones. [4.1.14](/4.1.14) has already shown how to model such problems as a **state space** and solve them with **depth-first search** and **breadth-first search**; [4.3.10](/4.3.10) and [4.3.11](/4.3.11) covered graph traversal and the implementation and correctness of **Dijkstra's algorithm**. The question of this chapter is: when the state space is too large to check state by state, how can we use knowledge about the problem to search as little as possible and still guarantee an optimal solution? The core is the A* algorithm and its two properties: if the heuristic function never overestimates, an optimal solution is always found (admissibility); if the heuristic function satisfies the triangle inequality, each node needs to be expanded only once (consistency). The chapter ends with local search and dynamic programming; the latter, in sequence-decoding problems such as pinyin input, takes the form of the Viterbi algorithm, which reappears in the hidden Markov models of [4.6.8](/4.6.8). The next chapter, [4.5.3](/4.5.3), discusses search with an adversary.
@@ -489,7 +489,7 @@ For each depth $d$, we sample 100 states at random from those whose optimal solu
 | 20 | 2252.9 | 1.38 | 229.5 | 1.20 |
 | 24 | 12475.6 | 1.41 | 763.6 | 1.23 |
 
-For comparison, the average branching factor of the eight-puzzle is about 2.67 (the blank has 2 successors in a corner, 3 on an edge, and 4 at the center). Breadth-first search without heuristic information expands over a hundred thousand nodes at $d = 24$, nearly all of the 181440 reachable states. At $d = 24$, $h_2$ expands about 94% fewer nodes than $h_1$.
+For comparison, the average branching factor of the eight-puzzle is about 2.67 (the blank has 2 successors in a corner, 3 on an edge, and 4 at the center). Breadth-first search without heuristic information expands over a hundred thousand nodes at $d = 24$, more than 70% of the 181440 reachable states. At $d = 24$, $h_2$ expands about 94% fewer nodes than $h_1$.
 
 Several further methods:
 
