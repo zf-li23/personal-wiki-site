@@ -3441,7 +3441,7 @@ terms:
   - { zh: 元组关系演算, en: tuple relational calculus }
   - { zh: 域关系演算, en: domain relational calculus }
   - { zh: 关系完备性, en: relational completeness, aliases: [relationally complete] }
-  - { zh: 空值, en: null value, aliases: ["NULL"], scope: ["4.13", "4.14"] }
+  - { zh: 空值, en: null value, aliases: ["NULL", "null"], scope: ["4.13", "4.14"] }
   - { zh: 三值逻辑, en: three-valued logic }
   - { zh: SQL, en: SQL, aliases: [Structured Query Language, 结构化查询语言] }
   - { zh: 多重集, en: multiset, aliases: [bag, 包] }

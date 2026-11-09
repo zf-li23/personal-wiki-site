@@ -21,7 +21,7 @@ A **database** lives on several kinds of storage at once. The table gives typica
 | Hard disk drive | 5–10 ms | 150–300 MB/s | yes | bulk and archival data, backups |
 | Cloud object storage (e.g. Amazon S3) | 10–100 ms to first byte | high in aggregate | yes | data lakes, cloud warehouses |
 
-Two facts dominate the design of storage engines. First, persistent storage is between two and five orders of magnitude slower than memory, so the number of page transfers between disk and memory, not the number of CPU instructions, usually determines the running time of a query on data that is not cached. Second, sequential access is much cheaper than **random access**. On a hard disk a random read pays a **seek time** and a **rotational latency** of several milliseconds, after which the next megabyte streams in about as fast; on a flash SSD the gap is smaller but still present, because the **flash translation layer** and the device's internal parallelism favour large, aligned requests ([4.11.8](/4.11.8#sec-8.3)). **Database systems** therefore prefer algorithms that read and write long runs of consecutive pages, and they use **RAID** or replication across machines for capacity and availability.
+Two facts dominate the design of storage engines. First, persistent storage is between two and five orders of magnitude slower than memory, so the number of page transfers between disk and memory, not the number of CPU instructions, usually determines the running time of a query on data that is not cached. Second, sequential access is much cheaper than **random access**. On a hard disk a random read pays a **seek time** and a **rotational latency** of several milliseconds, after which the next megabyte streams in about as fast; on a flash SSD the gap is smaller but still present, because the **flash translation layer** and the device's internal parallelism favor large, aligned requests ([4.11.8](/4.11.8#sec-8.3)). **Database systems** therefore prefer algorithms that read and write long runs of consecutive pages, and they use **RAID** or replication across machines for capacity and availability.
 
 ### 7.1.2. Pages and the I/O Cost Model
 
@@ -165,7 +165,7 @@ clock sweep, 100 frames:       0.874
 clock sweep, 84 frames + ring: 0.898
 ```
 
-The best possible hit rate here is about 0.9, since the 10% of point accesses to the 4,950 cold pages almost always miss. Plain LRU and plain clock sweep both lose the hot pages to every scan and must reload them afterwards; the scan ring keeps them, although it leaves the point queries fewer frames. The effect grows with the ratio of scan length to pool size and with the cost of reloading the hot set.
+The best possible hit rate here is about 0.9, since the 10% of point accesses to the 4,950 cold pages almost always miss. Plain LRU and plain clock sweep both lose the hot pages to every scan and must reload them afterward; the scan ring keeps them, although it leaves the point queries fewer frames. The effect grows with the ratio of scan length to pool size and with the cost of reloading the hot set.
 
 ### 7.2.3. Why Not Let the Operating System Do It?
 
@@ -210,7 +210,7 @@ Inside a page, variable-length records must be able to grow, shrink and move (fo
 
 ![A slotted page. Each slot points to its record; slot 3 is unused because its record was deleted. Records can move inside the page as long as their slots are updated, so a record identifier stays valid.](./plots/slotted-page.py)
 
-Insertion takes a new slot (or reuses an unused one) and places the record at the end of the free space. Deletion marks the slot unused; the space of the record can be reclaimed by compacting the records towards the end of the page and updating their offsets, which leaves every **RID** valid. If a record grows and no longer fits, it is moved to another page and its old slot keeps a *forwarding address*.
+Insertion takes a new slot (or reuses an unused one) and places the record at the end of the free space. Deletion marks the slot unused; the space of the record can be reclaimed by compacting the records toward the end of the page and updating their offsets, which leaves every **RID** valid. If a record grows and no longer fits, it is moved to another page and its old slot keeps a *forwarding address*.
 
 In PostgreSQL every page has this form: a 24-byte page header (with `pd_lower` and `pd_upper` delimiting the free space and `pd_lsn`, the log position of the last change, used in recovery), 4-byte *line pointers* as slots, and the tuples from the end of the page. The RID is called a *tuple identifier* and is visible as the system column `ctid`: the query `SELECT ctid, * FROM measurement` shows values such as `(0,1)`, `(0,2)`, meaning page 0, line pointers 1, 2. An update in PostgreSQL writes a new version of the row with a new `ctid` and links the old version to it ([4.13.11](/4.13.11)). SQLite's **B-tree** pages are **slotted pages** too: a *cell pointer array* of 2-byte offsets follows the page header and the cells fill the page from the end.
 
@@ -232,7 +232,7 @@ Searching by key can use **binary search** over the pages, and a range query rea
 
 ### 7.4.3. Clustered Organizations
 
-An organization in which records with equal or neighbouring key values are stored physically together is called *clustered*. The most important form today stores the table itself in the leaves of a **B+ tree** on the **primary key**.
+An organization in which records with equal or neighboring key values are stored physically together is called *clustered*. The most important form today stores the table itself in the leaves of a **B+ tree** on the **primary key**.
 
 **Definition 7.4.3 (Index-Organized Table)** An **index-organized table** (or clustered table) stores its records in the leaf pages of a B+ tree ordered by a key, usually the primary key; there is no separate heap file. Other indexes on the table refer to a record by its key value instead of by a RID.
 
@@ -316,7 +316,7 @@ Everything so far stored each record contiguously. That is ideal for transaction
 
 **Definition 7.5.1 (Row Store and Column Store)** In the **N-ary storage model** (NSM, *row store*), the values of all attributes of a record are stored together and pages hold whole records. In the **decomposition storage model** (DSM, *column store*), the values of each attribute are stored together, in record order, in a separate sequence of pages; the $i$-th values of all columns together form the $i$-th record. The **PAX** layout (Partition Attributes Across) is a hybrid: records are assigned to pages (or larger *row groups*) as in NSM, but inside each, the values are grouped by column as in DSM.
 
-The column layout is the **database** analogue of storing a table in **long format** and processing it column by column, as NumPy and pandas do ([4.4.5](/4.4.5)): an operator reads one contiguous array of values of one type, which is ideal for CPU caches, SIMD instructions and compression. Its cost is in reconstructing rows and in updates: inserting one row touches every column. **Column stores** therefore buffer insertions in a row-oriented area and merge them into the columns in batches.
+The column layout is the **database** analog of storing a table in **long format** and processing it column by column, as NumPy and pandas do ([4.4.5](/4.4.5)): an operator reads one contiguous array of values of one type, which is ideal for CPU caches, SIMD instructions and compression. Its cost is in reconstructing rows and in updates: inserting one row touches every column. **Column stores** therefore buffer insertions in a row-oriented area and merge them into the columns in batches.
 
 | | Row store | Column store |
 |---|---|---|

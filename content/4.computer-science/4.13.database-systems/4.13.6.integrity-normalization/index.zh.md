@@ -1,7 +1,7 @@
 ---
 title: 完整性约束与规范化
 description: 数据库如何保证数据正确，以及如何识别好的关系模式：域完整性、实体完整性与参照完整性（含 ON DELETE 动作与延迟检查）、断言与触发器；更新异常；函数依赖、Armstrong 公理及其可靠性与完备性的证明、属性闭包、正则覆盖；无损分解与保持依赖；第一、第二、第三范式与 BC 范式及其分解与合成算法；多值依赖与第四范式；把实验室电子表格逐步规范化为运行示例的完整过程。
-source_hash: d96578f1b4f2
+source_hash: 77f62e66174d
 ---
 
 如果**数据库**能够记录世界的每一种合法状态，并且只记录合法状态，同时不把任何事实存储两次，那么**模式**就是好的。本章处理这句话的两个方面。第一部分说明完整性约束和触发器如何让 **DBMS** 自己拒绝非法数据，而不是信任每一个写数据库的程序。第二部分发展函数依赖理论，它使“把事实存储两次”变得精确，并引出范式（保证这种冗余不会出现的模式条件），以及把坏模式分解为好模式而不丢失信息的算法。[4.13.5](/4.13.5) 的 E-R 设计通常产生已经规范化的模式；规范化是检验它是否如此的手段，也是以现有的表（如电子表格）为起点时的首选方法。例子使用 [4.13.3](/4.13.3#sec-3.2.3) 的运行示例；所用的逻辑和集合论见 [1.1](/1.1) 和 [1.2](/1.2)。
@@ -659,7 +659,7 @@ BCNF: {gene_id, pathway_id, sample_id}
 
 最后一个模式 $(\mathit{sample\_id}, \mathit{gene\_id}, \mathit{pathway\_id})$ 属于 BCNF 但不属于 **4NF**，原因是 $\mathit{gene\_id} \twoheadrightarrow \mathit{pathway\_id}$（§6.7.5）。由 Fagin 定理，它可以无损地分解为 $(\mathit{gene\_id}, \mathit{pathway\_id})$（即 $\mathit{gene\_pathway}$）和 $(\mathit{gene\_id}, \mathit{sample\_id})$，后者已包含在 $\mathit{measurement}$ 中而被舍去。结果恰好是 [4.13.3](/4.13.3#sec-3.2.3) 的模式，现在还证明了它没有 §6.2 的任何异常。它还解决了电子表格中依赖没有显示出来的一个缺陷：没有通路的基因（如 ACTB）在 $\mathit{results}$ 中只能在码属性 $\mathit{pathway\_id}$ 上存放**空值**，而规范化后的模式只是在 $\mathit{gene\_pathway}$ 中没有它的行。
 
-**3NF** 合成算法在这里给出同样的结果：除了合并左部为 $\mathit{gene\_id}$ 的两个依赖之外，$F$ 已经是**正则覆盖**；对应于 $\mathit{symbol} \to \mathit{gene\_id}$ 和 $\mathit{pathway\_name} \to \mathit{pathway\_id}$ 的模式分别被 $\mathit{gene\_id}$ 和 $\mathit{pathway\_id}$ 的模式包含而被删除，并加入候选码 $(\mathit{sample\_id}, \mathit{gene\_id}, \mathit{pathway\_id})$ 的模式。
+**3NF** 合成算法在这里给出同样的结果：$F$ 已经是**正则覆盖**；对应于 $\mathit{symbol} \to \mathit{gene\_id}$ 和 $\mathit{pathway\_name} \to \mathit{pathway\_id}$ 的模式分别被 $\mathit{gene\_id}$ 和 $\mathit{pathway\_id}$ 的模式包含而被删除，并加入候选码 $(\mathit{sample\_id}, \mathit{gene\_id}, \mathit{pathway\_id})$ 的模式。
 
 ## 6.9. 规范化的实践
 
