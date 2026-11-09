@@ -251,7 +251,7 @@ docker images; docker ps -a            # list images and containers
 
 通常根本不需要 Dockerfile：BioContainers 项目为每个 Bioconda 软件包自动构建镜像，并发布在 `quay.io/biocontainers/<tool>:<version>--<build>`。
 
-Docker 的架构对共享机器有一个弱点。`docker` 命令与以 root 身份运行的守护进程 `dockerd` 通信，任何被允许使用它的用户都可以把宿主的根目录**挂载**进容器并修改它：属于 `docker` 组等同于拥有 root 权限。*Podman*（Red Hat）提供相同的命令行界面，但没有守护进程，并且默认以*无根*方式运行，利用 user 命名空间，使容器的权利不超过启动它的用户。Docker 也可以无根运行；而跨多台机器编排容器的 Kubernetes，通过 containerd 或 CRI-O 使用 OCI 运行时。
+Docker 的架构对共享机器有一个弱点。`docker` 命令与以 root 身份运行的守护进程 `dockerd` 通信，任何被允许使用它的用户都可以把宿主的根目录**挂载**进容器并修改它：属于 `docker` 组等同于拥有 root 权限。*Podman*（Red Hat）提供相同的命令行界面，但没有守护进程，并且默认以*无根*方式运行，利用 user 命名空间，使容器的权限不超过启动它的用户。Docker 也可以无根运行；而跨多台机器编排容器的 Kubernetes，通过 containerd 或 CRI-O 使用 OCI 运行时。
 
 ## 9.6. 集群上的 Apptainer
 
