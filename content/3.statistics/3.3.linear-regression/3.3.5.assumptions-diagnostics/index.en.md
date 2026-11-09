@@ -141,7 +141,7 @@ and departures from a line indicate departures from normality. Some texts plot $
 | Pattern of the points | Distribution |
 |---|---|
 | close to the line | normal |
-| S-shaped: flat in the middle, ends bending towards the horizontal | light tails (platykurtic) |
+| S-shaped: steep in the middle, ends bending towards the horizontal | light tails (platykurtic) |
 | inverted S: lower end below, upper end above the line | heavy tails (leptokurtic) |
 | convex curve, above the line at both ends | right skew |
 | concave curve, below the line at both ends | left skew |

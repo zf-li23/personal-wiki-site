@@ -144,7 +144,7 @@ predict(reg, newdata = data.frame(lotsize = c(65, 100)),
 | $65$ | $294.43$ | $(191.37,\ 397.49)$ | $206$ | $41$ |
 | $100$ | $419.39$ | $(314.16,\ 524.61)$ | $210$ | $59$ |
 
-The prediction intervals are about five times as wide as the confidence intervals, and they vary much less with $X_h$, since the dominant term is the error variance $\mathrm{MSE}=2384$.
+The prediction intervals are three to five times as wide as the confidence intervals, and they vary much less with $X_h$, since the dominant term is the error variance $\mathrm{MSE}=2384$.
 
 ### 4.2.3. The Mean of Several New Observations
 
@@ -386,7 +386,7 @@ By Theorem 4.4.1, $0\le R^2\le1$; $R^2=1$ if all points lie on the fitted line, 
 
 **Proof** $b_1=S_{XY}/S_{XX}=r\sqrt{S_{XX}\mathrm{SSTO}}/S_{XX}=r\sqrt{\mathrm{SSTO}/S_{XX}}$, hence $\mathrm{SSR}=b_1^2S_{XX}=r^2\,\mathrm{SSTO}$. $\square$
 
-So $r=\pm\sqrt{R^2}$, with the sign of $b_1$. For the Pisa data, $R^2=15804.5/(15804.5+192.3)=0.988$ and $r=0.994$; for the Toluca data, $R^2=252378/(252378+54825)=0.8215$ and $r=0.906$. R reports $R^2$ as `Multiple R-squared`; the adjusted $R^2$ printed next to it penalizes the number of predictors and is discussed with multiple regression ([3.3.8](/3.3.8)).
+So $r=\pm\sqrt{R^2}$, with the sign of $b_1$. For the Pisa data, $R^2=15804.5/(15804.5+192.3)=0.988$ and $r=0.994$; for the Toluca data, $R^2=252378/(252378+54825)=0.8215$ and $r=0.906$. R reports $R^2$ as `Multiple R-squared`; the adjusted $R^2$ printed next to it penalizes the number of predictors and is discussed with multiple regression ([3.3.7](/3.3.7)).
 
 Both $R^2$ and $r$ measure linear association only, and they are easily misread.
 

@@ -1,7 +1,7 @@
 ---
 title: 补救措施与若干专题
 description: 更多的残差诊断（R 的四幅诊断图，杠杆值、离群值与强影响点，标准化残差与学生化删除残差，Cook 距离，失拟 F 检验），针对非线性、异方差与非正态误差的补救措施（非线性回归与加权回归、广义线性模型、方差稳定化变换与 Box–Cox 变换），过原点的回归、反向预测、两条回归直线以及 R² 的局限。
-source_hash: 2328b5cf10c1
+source_hash: bc691512e26b
 ---
 
 [3.3.5](/3.3.5) 列出了简单线性回归可能出现的问题以及如何发现它们。本章完成诊断并转向补救。第一部分细化残差分析：从 R 自带的诊断图出发，区分离群值、高杠杆点和强影响点，引入按各自标准差缩放的残差和 Cook 距离；在相同的 $X$ 值处有重复观测时，[3.3.4](/3.3.4) 的**一般线性检验**成为失拟的正式检验。第二部分讨论补救措施：非线性回归、加权、广义线性模型，以及最重要的变换，并用 Box–Cox 方法选择变换。最后一部分汇集简单回归的几个专题：过原点的回归、反向预测、两条回归直线与相关系数的关系，以及 $R^2$ 的局限。[3.3.7](/3.3.7) 的矩阵方法将把这些推广到多个预测变量。
@@ -148,12 +148,12 @@ H_0\colon \text{线性回归模型不存在失拟} \quad\text{vs}\quad H_1\colon
 $$
 可以通过比较两个模型的一般线性检验来比较。
 
-设预测变量有 $c$ 个不同的水平 $X_1, \dots, X_c$，在水平 $X_i$ 处有 $n_i$ 个观测 $Y_{i1}, \dots, Y_{in_i}$，$\sum_{i=1}^c n_i = n$。在 $H_0\colon \beta_1 = 0$ 的一般线性检验（[3.3.4](/3.3.4)）中，全模型是 $Y_i = \beta_0 + \beta_1X_i + \varepsilon_i$，简化模型是 $Y_i = \beta_0 + \varepsilon_i$。对 $H_0\colon \mu_i = \beta_0 + \beta_1X_i$ 与 $H_1\colon \mu_i \ne \beta_0 + \beta_1X_i$ 的失拟检验，全模型允许每个水平有任意的均值，线性模型则是简化模型：
+设预测变量有 $c$ 个不同的水平 $X_1, \dots, X_c$，在水平 $X_i$ 处有 $n_i$ 个观测 $Y_{i1}, \dots, Y_{in_i}$，$\sum_{i=1}^c n_i = n$。在 $H_0\colon \beta_1 = 0$ 的一般线性检验（[3.3.4](/3.3.4)）中，完全模型是 $Y_i = \beta_0 + \beta_1X_i + \varepsilon_i$，简化模型是 $Y_i = \beta_0 + \varepsilon_i$。对 $H_0\colon \mu_i = \beta_0 + \beta_1X_i$ 与 $H_1\colon \mu_i \ne \beta_0 + \beta_1X_i$ 的失拟检验，完全模型允许每个水平有任意的均值，线性模型则是简化模型：
 
 $$
-\text{全模型：} Y_{ij} = \mu_i + \varepsilon_{ij}, \qquad \text{简化模型：} Y_{ij} = \beta_0 + \beta_1X_i + \varepsilon_{ij}, \qquad i = 1, \dots, c,\ j = 1, \dots, n_i.
+\text{完全模型：} Y_{ij} = \mu_i + \varepsilon_{ij}, \qquad \text{简化模型：} Y_{ij} = \beta_0 + \beta_1X_i + \varepsilon_{ij}, \qquad i = 1, \dots, c,\ j = 1, \dots, n_i.
 $$
-全模型的最小二乘拟合是水平均值 $\bar Y_i$，每个观测与回归直线的误差偏差分解为
+完全模型的最小二乘拟合是水平均值 $\bar Y_i$，每个观测与回归直线的误差偏差分解为
 
 $$
 Y_{ij} - \hat Y_{ij} = (Y_{ij} - \bar Y_i) + (\bar Y_i - \hat Y_{ij}).
@@ -182,7 +182,7 @@ $$
 | $\quad$ 纯误差 | $\mathrm{SSPE} = \sum\sum(Y_{ij} - \bar Y_i)^2$ | $n - c$ | $\mathrm{MSPE} = \mathrm{SSPE}/(n - c)$ |
 | 总计 | $\mathrm{SSTO} = \sum\sum(Y_{ij} - \bar Y)^2$ | $n - 1$ | |
 
-简化（线性）模型的误差平方和是 $\mathrm{SSE}$，全模型的是 $\mathrm{SSPE}$，二者之差是 $\mathrm{SSLF}$。期望均方为
+简化（线性）模型的误差平方和是 $\mathrm{SSE}$，完全模型的是 $\mathrm{SSPE}$，二者之差是 $\mathrm{SSLF}$。期望均方为
 
 $$
 \mathbb{E}(\mathrm{MSPE}) = \sigma^2, \qquad \mathbb{E}(\mathrm{MSLF}) = \sigma^2 + \frac{\sum_{i=1}^c n_i\big(\mu_i - (\beta_0 + \beta_1X_i)\big)^2}{c - 2},
@@ -196,9 +196,9 @@ F^* = \frac{(\mathrm{SSE} - \mathrm{SSPE})/\big((n - 2) - (n - c)\big)}{\mathrm{
 $$
 当 $F^* > F_{c-2,n-c,\alpha}$ 时在水平 $\alpha$ 下拒绝 $H_0$（不存在失拟）。
 
-这正是全模型对简化模型的一般线性检验统计量。这个检验只给出反对线性的证据：若拒绝原假设，我们断定线性回归函数不合适，但检验并不告诉我们什么样的（非线性）回归函数才合适。
+这正是完全模型对简化模型的一般线性检验统计量。这个检验只给出反对线性的证据：若拒绝原假设，我们断定线性回归函数不合适，但检验并不告诉我们什么样的（非线性）回归函数才合适。
 
-**例 6.1.2（Toluca 数据）** $n = 25$ 次生产有 $c = 11$ 个不同的批量。在 R 中，把批量当作因子、不带截距即可拟合全模型，再用 `anova` 比较两个模型：
+**例 6.1.2（Toluca 数据）** $n = 25$ 次生产有 $c = 11$ 个不同的批量。在 R 中，把批量当作因子、不带截距即可拟合完全模型，再用 `anova` 比较两个模型：
 
 ```r
 reg  <- lm(hours ~ lotsize, data = toluca)                   # reduced model

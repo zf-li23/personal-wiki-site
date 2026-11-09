@@ -237,7 +237,7 @@ Whether this transformation gives a good fit must be checked like any other mode
 
 :::
 
-Many other times such transformations do not exist. If we do not want to alter the assumptions on the errors, we can instead perform a *nonlinear regression* analysis: the mean response varies with $X$ in a nonlinear manner, and the observations deviate about these means just as in linear regression, $Y_i = f(X_i; \boldsymbol{\theta}) + \varepsilon_i$ with $f$ nonlinear in the parameters $\boldsymbol{\theta}$. The least squares estimates then have no closed form and are computed iteratively (R `nls`, nonlinear least squares).
+In many other cases such transformations do not exist. If we do not want to alter the assumptions on the errors, we can instead perform a *nonlinear regression* analysis: the mean response varies with $X$ in a nonlinear manner, and the observations deviate about these means just as in linear regression, $Y_i = f(X_i; \boldsymbol{\theta}) + \varepsilon_i$ with $f$ nonlinear in the parameters $\boldsymbol{\theta}$. The least squares estimates then have no closed form and are computed iteratively (R `nls`, nonlinear least squares).
 
 ### 6.2.2. Nonconstant Variance
 
