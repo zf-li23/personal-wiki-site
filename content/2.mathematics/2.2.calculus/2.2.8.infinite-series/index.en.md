@@ -1,6 +1,6 @@
 ---
 title: Infinite Series
-source_hash: 50040bc7520f
+source_hash: a70e9af2761a
 ---
 
 Does it make sense to add infinitely many numbers? The sum $1 + \frac12 + \frac14 + \cdots$ ought to equal $2$, whereas $1 - 1 + 1 - 1 + \cdots$ seems to equal nothing at all. This chapter defines an infinite sum as the limit of the **sequence** of partial sums, so convergence of a series is just convergence of a sequence in the sense of [Chapter 2](/2.2.2), and the **Cauchy criterion** and the **monotone convergence theorem** can be used directly.
@@ -157,7 +157,7 @@ If $q = 1$, the test is inconclusive.
 **Example 8.2.5**
 
 1. $\sum\frac{n^2}{3^n}$: $\frac{u_{n+1}}{u_n} = \frac{(n+1)^2}{3n^2} \to \frac13$, so the series converges.
-2. $\sum\frac{1}{3^n - n^3}$: the ratio tends to $\frac13$, so the series converges.
+2. $\sum_{n=4}^\infty\frac{1}{3^n - n^3}$ (the denominator vanishes at $n = 3$, so the sum starts at $n = 4$): the ratio tends to $\frac13$, so the series converges.
 3. $\sum\frac{(n!)^2}{(2n)!}$: $\frac{u_{n+1}}{u_n} = \frac{(n+1)^2}{(2n+2)(2n+1)} \to \frac14$, so the series converges.
 
 :::
