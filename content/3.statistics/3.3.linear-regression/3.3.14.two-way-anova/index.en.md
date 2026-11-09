@@ -199,7 +199,7 @@ LS-means are also called estimated marginal means, predicted (population) margin
 | 1 | 41 | 65.5 | 40.5 |
 | 2 | 44 | 68.5 | 43.5 |
 
-and the LS-means are $(41+44)/2=42.5$, $67$ and $42$. The raw mean $43$ gives the wide display, which sells more, two of the three remaining bottom-shelf observations; the LS-mean $42.5$ removes this imbalance. The name "predicted means" comes from this construction: the LS-mean of a level is the average of the model's predictions over the levels of the other factor.
+and the LS-means are $(41+44)/2=42.5$, $67$ and $42$. Two of the three remaining bottom-shelf observations come from the wide display, which sells more, and the raw mean $43$ reflects this; the LS-mean $42.5$ removes the imbalance. The name "predicted means" comes from this construction: the LS-mean of a level is the average of the model's predictions over the levels of the other factor.
 
 ```r
 library(emmeans)
