@@ -421,7 +421,7 @@ Thus $\Theta\sim\mathrm{U}(0,2\pi)$ and $R$ are independent, and $R$ has the Ray
 2. Let $R=\sqrt{-2\log U}$.
 3. Then $(X,Y)=\varphi(R,\Theta)=(R\cos\Theta,R\sin\Theta)$ is standard normally distributed in $\mathbb{R}^2$: $X$ and $Y$ are independent $\mathcal{N}(0,1)$.
 
-This method of converting pairs of uniform samples into pairs of normal samples, the **Box–Muller transform** (Box and Muller, 1958), was met as an example of change of variables in [3.1.7](/3.1.7).
+This method of converting pairs of uniform samples into pairs of normal samples, the **Box–Muller transform** (Box and Muller, 1958), appeared as an example of change of variables in [3.1.7](/3.1.7).
 
 ### 8.4.3. The Multivariate Normal Distribution
 
@@ -536,7 +536,7 @@ for (i in 1:5)
 
 | Method | Target | Key step | Efficiency and caveats |
 |---|---|---|---|
-| LCG $X_{i+1}\equiv aX_i+c\pmod m$ | $\mathrm{U}(0,1)$ | $R_i=X_i/m$ | period $\le m$ (Hull–Dobell for $m$); lattice structure in high dimensions |
+| LCG $X_{i+1}\equiv aX_i+c\pmod m$ | $\mathrm{U}(0,1)$ | $R_i=X_i/m$ | period $\le m$ (full period: Hull–Dobell theorem); lattice structure in high dimensions |
 | Mersenne Twister | $\mathrm{U}(0,1)$ | twisted 19937-bit state | period $2^{19937}-1$; default in R; not cryptographic |
 | discrete inversion | any discrete distribution | $K=\min\{k\colon\sum_{i\le k}p_i\ge U\}$ | geometric: $\lceil\log(1-U)/\log(1-p)\rceil$ |
 | inverse transform | one-dimensional, invertible $F$ | $x=F^{-1}(u)$ | fast, but needs $F^{-1}$; one dimension only |

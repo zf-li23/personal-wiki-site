@@ -214,7 +214,7 @@ $$
 \bigl(\hat\theta^*_{\alpha/2},\ \hat\theta^*_{1-\alpha/2}\bigr).
 $$
 
-The percentile interval is appealing for its simplicity, but it relies on the bootstrap distribution, based on one particular sample, being a good approximation of the true distribution of $\hat\theta$. It is transformation invariant: for a monotone $g$, the percentile interval for $g(\theta)$ is the image of that for $\theta$. Its weakness is median bias: if $\hat\theta$ is not median-unbiased, the interval is wrong with confidence.
+The percentile interval is appealing for its simplicity, but it relies on the bootstrap distribution, based on one particular sample, being a good approximation of the true distribution of $\hat\theta$. It is transformation invariant: for a monotone $g$, the percentile interval for $g(\theta)$ is the image of that for $\theta$. Its weakness is median bias: if $\hat\theta$ is not median-unbiased, the interval is confidently wrong.
 
 **Definition 7.3.6 (BCa Interval)** The $100(1-\alpha)\%$ **bias-corrected and accelerated interval** (BCa interval) is $(\hat\theta^*_{\alpha_1},\hat\theta^*_{\alpha_2})$, with adjusted levels
 
@@ -236,7 +236,7 @@ The leave-one-out estimates $\hat\theta_{(1)},\dots,\hat\theta_{(n)}$ are the re
 |---|---|---|---|
 | normal | $\hat\theta\pm z_{\alpha/2}\widehat{\operatorname{se}}$ | $n$ large and the limit distribution clearly normal (sample mean) | wrong if the distribution is asymmetric or $\hat\theta$ is biased |
 | basic | $(2\hat\theta-\hat\theta^*_{1-\alpha/2},2\hat\theta-\hat\theta^*_{\alpha/2})$ | assumes the fluctuation of $\hat\theta-\theta$ is mirrored by that of $\hat\theta^*-\hat\theta$, no normality | reverses the quantiles, so under strong skewness it overcorrects in the wrong direction and may leave the parameter space |
-| percentile | $(\hat\theta^*_{\alpha/2},\hat\theta^*_{1-\alpha/2})$ | skewed data but nearly unbiased estimator; transformation invariant | wrong with confidence under large median bias |
+| percentile | $(\hat\theta^*_{\alpha/2},\hat\theta^*_{1-\alpha/2})$ | skewed data but nearly unbiased estimator; transformation invariant | confidently wrong under large median bias |
 | BCa | $(\hat\theta^*_{\alpha_1},\hat\theta^*_{\alpha_2})$ | default in practice; corrects bias $\hat z_0$ and acceleration $\hat a$ | more computation (jackknife, large $B$) |
 
 ![Bootstrap distribution of the law school correlation (B = 2000) and four 95% intervals. The distribution is skewed to the left; the normal and basic intervals extend beyond the upper bound 1 of a correlation, whereas the percentile and BCa intervals respect it, and BCa shifts the interval further toward the long left tail.](./plots/law-correlation-bootstrap.py)
@@ -263,7 +263,7 @@ T(\boldsymbol{z})=\frac{\bar z-\mu_0}{\widehat{\operatorname{se}}}=\frac{\bar z-
 $$
 The **p-value** is the probability, under the null hypothesis, of a value at least as extreme as the observed one, $\mathbb{P}_{H_0}(\lvert T\rvert\ge\lvert T_{\mathrm{obs}}\rvert)$. The question is how to obtain the null distribution of $T$ from the observed sample. There are two ways.
 
-1. Through a confidence interval: compute a bootstrap interval for $\mu$ and reject $H_0$ at level $\alpha$ if $\mu_0$ is outside the $100(1-\alpha)\%$ interval (the duality of tests and confidence intervals). For instance, when a drug is given to $8$ patients and the change in their condition is measured, the drug is declared ineffective at level $0.05$ if the $95\%$ bootstrap interval of the mean change covers $0$.
+1. Through a confidence interval: compute a bootstrap interval for $\mu$ and reject $H_0$ at level $\alpha$ if $\mu_0$ is outside the $100(1-\alpha)\%$ interval (the duality of tests and confidence intervals). For instance, when a drug is given to $8$ patients and the change in their condition is measured, the drug cannot be declared effective at level $0.05$ if the $95\%$ bootstrap interval of the mean change covers $0$.
 2. Through a p-value: shift the data so that the null hypothesis holds, and resample from the shifted data.
 
 **Algorithm 7.3.1 (Bootstrap Test for One Mean)**

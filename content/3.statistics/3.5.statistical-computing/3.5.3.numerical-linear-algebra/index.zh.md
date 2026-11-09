@@ -1,7 +1,7 @@
 ---
 title: 数值线性代数
 description: 线性方程组、最小二乘问题和特征值问题在计算机上的解法：带选主元的 LU 分解与 Cholesky 分解，投影算子，Gram–Schmidt、Householder 与 Givens 三种 QR 分解，奇异值分解及其应用，幂迭代法与 Schur 形，以及它们的运算量与稳定性。
-source_hash: 7ad17d3ef16a
+source_hash: 727016e2761b
 ---
 
 几乎所有统计计算最终都落到线性代数上：回归拟合要解一个**最小二乘**问题，Gauss 似然需要协方差矩阵的行列式和逆矩阵的二次型，主成分是特征向量，[3.5.5](/3.5.5) 的每一步牛顿迭代都要解一个线性方程组。这些问题的理论已在线性代数（[2.1](/2.1)）中建立：**LU 分解**见 [2.1.2](/2.1.2)，正交性与 **QR 分解**见 [2.1.4](/2.1.4)，特征值见 [2.1.6](/2.1.6)，**Cholesky 分解**与**奇异值分解**见 [2.1.7](/2.1.7)，Jordan 形与 Schur 形见 [2.1.10](/2.1.10) 和 [2.1.12](/2.1.12)。本章把同样的分解当作算法来看：怎样计算，要多少次浮点运算，舍入误差（[3.5.1](/3.5.1)）如何在其中传播。全章按三个基本问题分为三部分：线性方程组 $A\boldsymbol{x}=\boldsymbol{b}$（Gauss 消元、选主元、Cholesky 分解），最小二乘问题 $A\boldsymbol{x}\approx\boldsymbol{b}$（投影算子、计算 QR 分解的三种方法、奇异值分解），特征值问题 $A\boldsymbol{x}=\lambda\boldsymbol{x}$（幂迭代法与揭示特征值的分解）。贯穿始终的原则是：没有最好的算法，只有最适合手头问题的算法——速度、稳定性和适用范围往往相互牵制。文中反复使用的 R 函数 `solve`、`chol`、`qr`、`svd`、`eigen` 调用的是 LINPACK 和 LAPACK 中实现下述算法的子程序。
@@ -210,7 +210,7 @@ $$
 $$
 \sum_{k=1}^m\sum_{j=k+1}^m2(m-j+1)\sim2\sum_{k=1}^m\sum_{j=1}^{m-k}j\sim\sum_{k=1}^mk^2\sim\frac13m^3\ \text{flops},
 $$
-是 Gauss 消元法的一半。该算法总是稳定的：由于 $\|R\|_2=\|R^{\mathsf H}\|_2=\|A\|_2^{1/2}$，不会出现比 $A$ 的元素大得多的数；又因为正定矩阵的"分量"大多集中在对角线上，不需要选主元。对 SPD 矩阵 $A$，解 $A\boldsymbol{x}=\boldsymbol{b}$ 的标准方法是把它化为 $R^{\mathsf H}R\boldsymbol{x}=\boldsymbol{b}$，依次解 $R^{\mathsf H}\boldsymbol{y}=\boldsymbol{b}$ 和 $R\boldsymbol{x}=\boldsymbol{y}$；每个三角方程组只需 $\sim m^2$ flops，总量仍为 $\sim\frac13m^3$ flops，整个过程是后向稳定的。
+是 Gauss 消元法的一半。该算法总是稳定的：由于 $\|R\|_2=\|R^{\mathsf H}\|_2=\|A\|_2^{1/2}$，不会出现比 $A$ 的元素大得多的数；又因为正定矩阵的"权重"大多集中在对角线上，不需要选主元。对 SPD 矩阵 $A$，解 $A\boldsymbol{x}=\boldsymbol{b}$ 的标准方法是把它化为 $R^{\mathsf H}R\boldsymbol{x}=\boldsymbol{b}$，依次解 $R^{\mathsf H}\boldsymbol{y}=\boldsymbol{b}$ 和 $R\boldsymbol{x}=\boldsymbol{y}$；每个三角方程组只需 $\sim m^2$ flops，总量仍为 $\sim\frac13m^3$ flops，整个过程是后向稳定的。
 
 **例 3.1.2（滑动平均过程的似然）** 设 $\varepsilon_t$（$t\in\mathbb{Z}$）独立同分布于 $\mathcal{N}(0,\delta)$（方差为 $\delta>0$ 的 Gauss 白噪声），$0<b<1$。过程 $X_t=\varepsilon_t+b\varepsilon_{t-1}$ 是一阶滑动平均过程 MA(1)。对 $\boldsymbol{X}=(X_1,\dots,X_n)^{\mathsf T}$，有 $\mathbb{E}\boldsymbol{X}=\boldsymbol{0}$ 和三对角协方差矩阵
 
@@ -283,11 +283,11 @@ $$
 
 **定义 3.2.1（投影算子）** 满足 $P^2=P$（幂等）的方阵 $P$ 称为**投影算子**。矩阵 $I-P$ 称为 $P$ 的**互补投影**。若 $\mathcal{R}(P)$ 与 $\mathcal{N}(P)$ 正交，则称投影算子 $P$ 为**正交投影算子**，否则称为斜投影。
 
-光线的方向是 $P\boldsymbol{v}-\boldsymbol{v}$，它属于 $\mathcal{N}(P)$，因为 $\mathbb{P}(P\boldsymbol{v}-\boldsymbol{v})=(P^2-P)\boldsymbol{v}=\boldsymbol{0}$。斜投影与正交投影的区别在于投影线是否与投影平面垂直。注意正交投影算子不是正交矩阵（除非 $P=I$）。
+光线的方向是 $P\boldsymbol{v}-\boldsymbol{v}$，它属于 $\mathcal{N}(P)$，因为 $P\,(P\boldsymbol{v}-\boldsymbol{v})=(P^2-P)\boldsymbol{v}=\boldsymbol{0}$。斜投影与正交投影的区别在于投影线是否与投影平面垂直。注意正交投影算子不是正交矩阵（除非 $P=I$）。
 
 **命题 3.2.1** 设 $P\in\mathbb{C}^{m\times m}$ 为投影算子。
 
-1. 它的特征值为 $0$ 和 $1$，且可对角化，因为 $P^2-P=\mathbb{P}(P-I)=O$ 而多项式 $z(z-1)$ 的根互不相同；因此 $\operatorname{tr}(P)=\operatorname{rank}(P)$。
+1. 它的特征值为 $0$ 和 $1$，且可对角化，因为 $P^2-P=P\,(P-I)=O$ 而多项式 $z(z-1)$ 的根互不相同；因此 $\operatorname{tr}(P)=\operatorname{rank}(P)$。
 2. 除 $P=I$ 外，$P$ 都是奇异的：若 $P^{-1}$ 存在，则 $P=P^{-1}P^2=I$。
 3. $I-P$ 也是投影算子，$\mathcal{R}(I-P)=\mathcal{N}(P)$，$\mathcal{N}(I-P)=\mathcal{R}(P)$，且 $\mathcal{R}(P)\cap\mathcal{N}(P)=\{\boldsymbol{0}\}$。因此 $\mathbb{C}^m=\mathcal{R}(P)\oplus\mathcal{N}(P)$：$P$ 沿 $\mathcal{N}(P)$ 投影到 $\mathcal{R}(P)$ 上，每个 $\boldsymbol{v}$ 都唯一地分解为 $\boldsymbol{v}=P\boldsymbol{v}+(I-P)\boldsymbol{v}$。
 
@@ -526,7 +526,7 @@ $$
 $$
 \text{Householder：}\|I-\tilde Q^{\mathsf T}\tilde Q\|\le c\,\varepsilon_{\mathrm{mach}},\qquad \text{MGS：}\|I-\tilde Q^{\mathsf T}\tilde Q\|\le c\,\varepsilon_{\mathrm{mach}}\kappa(A),\qquad \text{CGS：}\|I-\tilde Q^{\mathsf T}\tilde Q\|\le c\,\varepsilon_{\mathrm{mach}}\kappa(A)^2,
 $$
-最后一个界在 $\varepsilon_{\mathrm{mach}}\kappa(A)^2$ 远小于 $1$ 时成立。Householder 把 $\tilde Q$ 算成精确反射（在舍入意义下正交）的乘积，而 Gram–Schmidt 中没有任何机制能在舍入误差面前迫使 $\tilde Q$ 保持标准正交。因此 Householder 三角化是计算 QR 分解的主要方法。
+最后一个界在 $\varepsilon_{\mathrm{mach}}\kappa(A)^2$ 远小于 $1$ 时成立。Householder 把 $\tilde Q$ 算成准确的反射（在舍入意义下正交）的乘积，而 Gram–Schmidt 中没有任何机制能在舍入误差面前迫使 $\tilde Q$ 保持标准正交。因此 Householder 三角化是计算 QR 分解的主要方法。
 
 ![对条件数给定的 50 x 12 测试矩阵，所得 Q 的正交性损失。Householder QR 始终保持在机器精度的量级；修正 Gram–Schmidt 的正交性损失与 kappa(A) 成正比，经典 Gram–Schmidt 则与 kappa(A)^2 成正比，直到各列完全失去线性无关性。](./plots/qr-orthogonality-loss.py)
 
@@ -683,7 +683,7 @@ for (j in c(3, 5, 10, 20, 30)) {
 
 :::
 
-主成分分析。 高维数据矩阵难以使用。样本量 $n$ 固定而变量数 $p$ 增大时，良好预测所需的样本数呈指数增长，算法容易过拟合，其表现随 $p$ 先升后降（Hughes 现象）。这是维数灾难的一部分：空间的体积增长得如此之快，以致现有数据变得稀疏，大部分数据集中在一层薄"壳"中，所有点彼此几乎等距，基于距离的方法表现很差，数据也无法再可视化。降低数据矩阵 $X_{n\times p}$ 的维数，是指在尽可能保留方差的前提下减少变量数 $p$。**主成分分析**（[3.4.5](/3.4.5)）借助 SVD 做到这一点。
+主成分分析。 高维数据矩阵难以使用。样本量 $n$ 固定而变量数 $p$ 增大时，良好预测所需的样本数呈指数增长，算法容易过拟合，其表现随 $p$ 先升后降（Hughes 现象）。这是维数灾难的一部分：空间的体积增长得如此之快，以致数据变得稀疏，大部分数据集中在一层薄"壳"中，所有点彼此几乎等距，基于距离的方法表现很差，数据也无法再可视化。降低数据矩阵 $X_{n\times p}$ 的维数，是指在尽可能保留方差的前提下减少变量数 $p$。**主成分分析**（[3.4.5](/3.4.5)）借助 SVD 做到这一点。
 
 把 $X$ 的行 $\boldsymbol{X}_{(i)}^{\mathsf T}$ 看作数据点，并设 $X$ 的各列已中心化（如有需要也已标准化）。数据点在单位向量 $\boldsymbol{v}_1$ 上的投影为 $\boldsymbol{v}_1\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}$，系数为 $\boldsymbol{v}_1^{\mathsf T}\boldsymbol{X}_{(i)}=\boldsymbol{X}_{(i)}^{\mathsf T}\boldsymbol{v}_1$；对所有点合写为 $\boldsymbol{Y}_1=X\boldsymbol{v}_1\in\mathbb{R}^n$。利用样本协方差矩阵 $\frac1{n-1}X^{\mathsf T}X$，
 
@@ -743,7 +743,7 @@ A=\begin{bmatrix}1&2\\0&1\end{bmatrix},\qquad \det(A-\lambda I)=(1-\lambda)^2,\q
 $$
 特征值 $1$ 的代数重数为 $2$，几何重数却为 $1$。
 
-$A$ 的**极小多项式** $\mu_A$ 是使 $\mathbb{P}(A)=O$ 的次数最低的首一多项式 $P$；任何满足 $Q(A)=O$ 的多项式 $Q$ 都是 $\mu_A$ 的倍式。由 **Cayley–Hamilton 定理**，矩阵满足它自己的特征方程 $p_A(A)=O$，所以 $\mu_A\mid p_A$：若 $p_A(z)=\prod_j(z-\lambda_j)^{k_j}$，则 $\mu_A(z)=\prod_j(z-\lambda_j)^{s_j}$，$1\le s_j\le k_j$。在 $A$ 的 **Jordan 标准形**（[2.1.10](/2.1.10)）中，$\lambda$ 的几何重数是属于 $\lambda$ 的 Jordan 块的个数，代数重数是这些块的阶数之和，它在 $\mu_A$ 中的重数 $s_j$ 是其中最大块的阶数；$A$ 可对角化当且仅当每个 Jordan 块都是 1 阶的，即当且仅当 $\mu_A$ 只有单根。
+$A$ 的**极小多项式** $\mu_A$ 是使 $f(A)=O$ 的次数最低的首一多项式 $f$；任何满足 $Q(A)=O$ 的多项式 $Q$ 都是 $\mu_A$ 的倍式。由 **Cayley–Hamilton 定理**，矩阵满足它自己的特征方程 $p_A(A)=O$，所以 $\mu_A\mid p_A$：若 $p_A(z)=\prod_j(z-\lambda_j)^{k_j}$，则 $\mu_A(z)=\prod_j(z-\lambda_j)^{s_j}$，$1\le s_j\le k_j$。在 $A$ 的 **Jordan 标准形**（[2.1.10](/2.1.10)）中，$\lambda$ 的几何重数是属于 $\lambda$ 的 Jordan 块的个数，代数重数是这些块的阶数之和，它在 $\mu_A$ 中的重数 $s_j$ 是其中最大块的阶数；$A$ 可对角化当且仅当每个 Jordan 块都是 1 阶的，即当且仅当 $\mu_A$ 只有单根。
 
 矩阵的秩是非零奇异值的个数，却不是非零特征值的个数：$A=\begin{bmatrix}0&1\\0&0\end{bmatrix}$ 的秩为 $1$，$\sigma_1=1$，$\sigma_2=0$，但 $\lambda_1=\lambda_2=0$。对可对角化矩阵两者一致，这时 $\mathcal{N}(A)=E_0(A)$，$\mathcal{R}(A)$ 是 $\lambda\ne0$ 的各特征子空间之和。
 

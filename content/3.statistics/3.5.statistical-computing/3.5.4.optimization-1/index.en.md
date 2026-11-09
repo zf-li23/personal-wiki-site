@@ -263,7 +263,7 @@ g(x)=\frac{\log x}{1+x}
 $$
 with respect to $x$. We cannot find the root of $g'(x)=\dfrac{1+1/x-\log x}{(1+x)^2}$ analytically; the maximum occurs at $x^*\approx3.59112$.
 
-**Example 4.3.2** The data $1.77,-0.23,2.76,3.80,3.47,56.75,-1.34,4.24,-2.44,3.29,3.71,-2.40,4.53,-0.07,-1.05,-13.87,-2.53,-1.75,0.27,43.21$ are an iid sample from a **Cauchy distribution** $\mathrm{Cauchy}(\theta)$ with scale $1$. The likelihood function is $\prod_{i=1}^{20}\frac1{\pi(1+(x_i-\theta)^2)}$. Its **score function** $l'(\theta)$ has multiple roots (local maxima near $-0.19$, $2.82$ and $42.8$, and local minima between them), so the MLE requires a numerical solution and some care.
+**Example 4.3.2** The data $1.77,-0.23,2.76,3.80,3.47,56.75,-1.34,4.24,-2.44,3.29,3.71,-2.40,4.53,-0.07,-1.05,-13.87,-2.53,-1.75,0.27,43.21$ are an iid sample from a **Cauchy distribution** $\mathrm{Cauchy}(\theta)$ with scale $1$. The likelihood function is $\prod_{i=1}^{20}\frac1{\pi(1+(x_i-\theta)^2)}$. Its **score function** $l'(\theta)$ has multiple roots (local maxima near $-0.19$, $2.82$, $42.8$ and $56.3$, and local minima between them), so the MLE requires a numerical solution and some care.
 
 :::
 
@@ -393,7 +393,7 @@ The theorem, named after Stefan Banach, who first stated it in 1922, guarantees 
 $$
 G(x)=\alpha g'(x)+x,\qquad G'(x)=\alpha g''(x)+1,
 $$
-for a suitable $\alpha$, found by trial and error or by an analysis of $g''$. Each step $x^{(t+1)}=x^{(t)}+\alpha g'(x^{(t)})$ moves from the point $(x^{(t)},g'(x^{(t)}))$ along a line of slope $-1/\alpha$ to the axis: all these lines are parallel, and the method is also called the method of parallel chords. For Example 4.3.1 scaling with $\alpha=4$ works well. In maximum likelihood, if $l(\theta)$ is approximately quadratic, then $l'(\theta)$ is approximately linear and $l''(\theta)\approx\gamma$, a constant; taking $\alpha=-1/\gamma$ makes $G'(\theta^*)\approx0$, and the updating equation
+for a suitable $\alpha$, found by trial and error or by an analysis of $g''$. Each step $x^{(t+1)}=x^{(t)}+\alpha g'(x^{(t)})$ moves from the point $(x^{(t)},g'(x^{(t)}))$ along a line of slope $-1/\alpha$ to the axis: all these lines are parallel, and the method is also called the method of parallel chords. For Example 4.3.1, $g''(x^*)\approx-0.0169$, so $\alpha=4$ gives $G'(x^*)\approx0.93$ and converges, but slowly; $\alpha\approx59$ would make $G'(x^*)\approx0$. In maximum likelihood, if $l(\theta)$ is approximately quadratic, then $l'(\theta)$ is approximately linear and $l''(\theta)\approx\gamma$, a constant; taking $\alpha=-1/\gamma$ makes $G'(\theta^*)\approx0$, and the updating equation
 
 $$
 \theta^{(t+1)}=\theta^{(t)}-\frac{l'(\theta^{(t)})}{\gamma}
