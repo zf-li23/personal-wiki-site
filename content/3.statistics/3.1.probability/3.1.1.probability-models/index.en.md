@@ -1,7 +1,7 @@
 ---
 title: Probability Models and Their Properties
 description: Random phenomena and the development of probability theory; sample spaces, events and the axioms of probability; classical and geometric probability models and the Bertrand paradox; properties derived from the axioms (inclusion–exclusion, the Boole and Bonferroni inequalities); counting in the four kinds of random sampling and in random allocation.
-source_hash: ffed477fca9f
+source_hash: 4daffbcce1e9
 ---
 
 Probability theory studies the quantitative laws of random phenomena. This chapter first explains what a probability model consists of: the sample space of an experiment and a probability satisfying three axioms. The two most basic models are the classical model, with finitely many equally likely outcomes, and the geometric model, which assigns probability in proportion to volume; the Bertrand paradox warns that "equally likely" must be made precise before anything can be computed. We then derive from the axioms a series of identities and inequalities for probabilities, which serve as the basic tools for computation and proof throughout the course. Finally we discuss counting in the classical model: the four sampling schemes (with or without replacement, ordered or unordered) and their correspondence with "placing particles into boxes". The next chapter, [3.1.2](/3.1.2), makes the intuitive models of this chapter rigorous as probability spaces and introduces conditional probability. The set operations used here are reviewed in discrete mathematics, [1.2.1](/1.2.1).
@@ -287,7 +287,7 @@ The count for unordered sampling with replacement is derived in Section 1.5.2. N
 $$
 \mathbb{P}(\text{at least two share a birthday})=1-\frac{P_N^n}{N^n}=1-\prod_{k=1}^{n-1}\Big(1-\frac kN\Big)\approx1-\exp\Big\{-\frac{n(n-1)}{2N}\Big\},
 $$
-where the approximation uses $1-x\approx\mathrm{e}^{-x}$ (the first two terms of the Taylor expansion of $\mathrm{e}^x$). Already for $n=23$ this probability exceeds $1/2$, a far smaller number of people than intuition suggests.
+where the approximation uses $1-x\approx\mathrm{e}^{-x}$ (the first two terms of the Taylor expansion of $\mathrm{e}^{-x}$). Already for $n=23$ this probability exceeds $1/2$, a far smaller number of people than intuition suggests.
 
 ![The birthday problem: the probability that at least two people share a birthday as a function of the number of people n; the dashed curve is the exponential approximation; the probability first exceeds 1/2 at n = 23](./plots/birthday-problem.py)
 

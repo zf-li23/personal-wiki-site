@@ -286,7 +286,7 @@ $$
 $$
 \mathbb{P}(\text{至少两人生日相同})=1-\frac{P_N^n}{N^n}=1-\prod_{k=1}^{n-1}\Big(1-\frac kN\Big)\approx1-\exp\Big\{-\frac{n(n-1)}{2N}\Big\},
 $$
-近似用到 $1-x\approx\mathrm{e}^{-x}$（$\mathrm{e}^x$ 的 Taylor 展开的前两项）。$n=23$ 时这一概率已超过 $1/2$，远小于直觉所认为的人数。
+近似用到 $1-x\approx\mathrm{e}^{-x}$（$\mathrm{e}^{-x}$ 的 Taylor 展开的前两项）。$n=23$ 时这一概率已超过 $1/2$，远小于直觉所认为的人数。
 
 ![生日问题：至少两人生日相同的概率随人数 n 的变化，虚线是指数近似；n = 23 时概率首次超过 1/2](./plots/birthday-problem.py)
 

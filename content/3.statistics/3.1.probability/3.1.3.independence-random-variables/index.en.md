@@ -1,7 +1,7 @@
 ---
 title: Independence and Random Variables
 description: Independence and conditional independence of two events, mutual and pairwise independence of a collection of events, the second part of the Borel–Cantelli lemma, the gambler's ruin; the definition of random variables, Borel sets and measurable functions; mutual independence of random variables, i.i.d. sequences and independence of their functions.
-source_hash: c38de33b4e30
+source_hash: ab0ec2d3c046
 ---
 
 The conditional probability of the previous chapter, [3.1.2](/3.1.2), describes how information about one event affects another. This chapter first treats the case of "no effect", the independence of events. It looks simple, but several details are easily confused: independence versus mutual exclusiveness, independence versus conditional independence, mutual versus pairwise independence. Independence reduces many computations to multiplication, and the gambler's ruin model shows how the law of total probability works together with recursion. The second half of the chapter introduces random variables: by turning the outcomes of an experiment into numbers, they let us describe random phenomena with functions, operations and distributions, and we extend independence to random variables. The next chapter, [3.1.4](/3.1.4), presents the common discrete and continuous random variables, and [3.1.5](/3.1.5) describes random variables uniformly by their distribution functions.

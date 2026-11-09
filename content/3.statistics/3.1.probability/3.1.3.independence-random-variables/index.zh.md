@@ -22,7 +22,7 @@ $$
 $$
 则称 $A$ 与 $B$ **相互独立**，简称**独立**。
 
-这一定义关于 $A$、$B$ 对称，对 $\mathbb{P}(B)=0$ 也适用；当 $\mathbb{P}(B)>0$ 时它等价于 $\mathbb{P}(A\mid B)=\mathbb{P}(A)$。由定义，不可能事件 $\varnothing$ 与必然事件 $\Omega$ 与任何事件独立；更一般地，概率为 0 或 1 的事件与任何事件独立。
+这一定义关于 $A$、$B$ 对称，对 $\mathbb{P}(B)=0$ 也适用；当 $\mathbb{P}(B)>0$ 时它等价于 $\mathbb{P}(A\mid B)=\mathbb{P}(A)$。由定义，不可能事件 $\varnothing$ 和必然事件 $\Omega$ 都与任何事件独立；更一般地，概率为 0 或 1 的事件与任何事件独立。
 
 **性质 3.1.1** 若 $A$ 与 $B$ 独立，则 $A$ 与 $B^{\mathsf c}$、$A^{\mathsf c}$ 与 $B$、$A^{\mathsf c}$ 与 $B^{\mathsf c}$ 也都独立。
 
