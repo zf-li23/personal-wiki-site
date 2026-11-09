@@ -1,6 +1,6 @@
 ---
 title: Taylor's Formula, Geometric Applications and Extrema
-source_hash: 97529322cab1
+source_hash: 3af171f6120f
 ---
 
 The total differential of the previous chapter is the first-order approximation of a function of several variables. This chapter puts it to work in two directions. Geometrically, the first-order approximation gives tangent lines to space curves and tangent planes to surfaces. Analytically, the second-order approximation (Taylor's formula) gives tests for extrema: the second-order term is a quadratic form, and the type of an extremum is decided by the definiteness of the Hessian matrix. Finally we treat extremum problems with constraints; the method of Lagrange multipliers rests on the implicit function theorem of [2.2.10](/2.2.10), and its geometric meaning is that the level curve of the objective function is tangent to the constraint curve.
@@ -390,7 +390,7 @@ Eliminating $\lambda$ from the first two equations gives $y^2=x(x-1)$, and subst
 
 ![Level curves of f = xy and the constraint circle (x − 1)² + y² = 1: at the maximum and minimum points the level curves are tangent to the circle and ∇f is parallel to ∇g](./plots/lagrange-tangency.py)
 
-**Example 11.6.2** The box requiring the least material: when is the surface area $S=2(xy+yz+zx)$ of a rectangular box of volume $a$ smallest? From $\nabla S=\lambda\nabla(xyz)$ we get $2(y+z)=\lambda yz$, $2(x+z)=\lambda xz$ and $2(x+y)=\lambda xy$. Subtracting the first two gives $2(y-x)=\lambda z(y-x)$; if $x\ne y$ then $\lambda z=2$, and substituting back into the first equation gives $2y=0$, a contradiction. So $x=y$, and likewise $y=z$; that is, $x=y=z=\sqrt[3]{a}$, and the cube uses the least material (the surface area tends to infinity as any of $x,y,z\to0^+$ or $\to+\infty$, so the minimum exists).
+**Example 11.6.2** The box requiring the least material: when is the surface area $S=2(xy+yz+zx)$ of a rectangular box of volume $a$ smallest? From $\nabla S=\lambda\nabla(xyz)$ we get $2(y+z)=\lambda yz$, $2(x+z)=\lambda xz$ and $2(x+y)=\lambda xy$. Subtracting the first two gives $2(y-x)=\lambda z(y-x)$; if $x\ne y$ then $\lambda z=2$, and substituting back into the first equation gives $2z=0$, a contradiction. So $x=y$, and likewise $y=z$; that is, $x=y=z=\sqrt[3]{a}$, and the cube uses the least material (the surface area tends to infinity as any of $x,y,z\to0^+$ or $\to+\infty$, so the minimum exists).
 
 **Example 11.6.3** Let $a>0$. Find the maximum of the product $\prod x_i$ of positive numbers $x_1,\dots,x_n$ with $\sum x_i=a$. Let $L=\prod x_i-\lambda(\sum x_i-a)$. Then $L_{x_i}=\prod_{j\ne i}x_j-\lambda=0$; multiplying each equation by $x_i$ gives $\prod_jx_j=\lambda x_i$, so $x_1=\cdots=x_n=\frac an$ and the maximum is $\big(\frac an\big)^n$ (the product tends to $0$ at the boundary $x_i\to0$). Hence $\sqrt[n]{x_1\cdots x_n}\le\frac{x_1+\cdots+x_n}{n}$ for any positive numbers $x_i$, which is the **AM–GM inequality**.
 

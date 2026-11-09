@@ -389,7 +389,7 @@ $$
 
 ![f = xy 的等值线与约束圆 (x − 1)² + y² = 1：在最大值点与最小值点处等值线与圆相切，∇f 与 ∇g 平行](./plots/lagrange-tangency.py)
 
-**例 11.6.2** 用料最省的长方体盒子：容积为 $a$ 的长方体，表面积 $S=2(xy+yz+zx)$ 何时最小？由 $\nabla S=\lambda\nabla(xyz)$ 得 $2(y+z)=\lambda yz$，$2(x+z)=\lambda xz$，$2(x+y)=\lambda xy$。前两式相减得 $2(y-x)=\lambda z(y-x)$，若 $x\ne y$ 则 $\lambda z=2$，代回第一式得 $2y=0$，矛盾；所以 $x=y$，同理 $y=z$，即 $x=y=z=\sqrt[3]{a}$，正方体用料最省（表面积在 $x,y,z\to0^+$ 或 $\to+\infty$ 时趋于无穷，最小值存在）。
+**例 11.6.2** 用料最省的长方体盒子：容积为 $a$ 的长方体，表面积 $S=2(xy+yz+zx)$ 何时最小？由 $\nabla S=\lambda\nabla(xyz)$ 得 $2(y+z)=\lambda yz$，$2(x+z)=\lambda xz$，$2(x+y)=\lambda xy$。前两式相减得 $2(y-x)=\lambda z(y-x)$，若 $x\ne y$ 则 $\lambda z=2$，代回第一式得 $2z=0$，矛盾；所以 $x=y$，同理 $y=z$，即 $x=y=z=\sqrt[3]{a}$，正方体用料最省（表面积在 $x,y,z\to0^+$ 或 $\to+\infty$ 时趋于无穷，最小值存在）。
 
 **例 11.6.3** 设 $a>0$，求正数 $x_1,\dots,x_n$ 满足 $\sum x_i=a$ 时乘积 $\prod x_i$ 的最大值。令 $L=\prod x_i-\lambda(\sum x_i-a)$，$L_{x_i}=\prod_{j\ne i}x_j-\lambda=0$，各式乘以 $x_i$ 得 $\prod_jx_j=\lambda x_i$，所以 $x_1=\cdots=x_n=\frac an$，最大值为 $\big(\frac an\big)^n$（乘积在边界 $x_i\to0$ 处趋于 $0$）。于是对任意正数 $x_i$，$\sqrt[n]{x_1\cdots x_n}\le\frac{x_1+\cdots+x_n}{n}$，这就是**算术–几何平均不等式**。
 

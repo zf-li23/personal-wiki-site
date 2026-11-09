@@ -1,6 +1,6 @@
 ---
 title: Limits, Continuity and Differentiation in Several Variables
-source_hash: 0b7881a7fdf0
+source_hash: 17fa0df6712a
 ---
 
 With this chapter we enter multivariable calculus. It is a direct generalization of single-variable calculus: limits, continuity, derivatives and differentials all have multivariable versions, and most of the rules of computation keep their form. Once the independent variable ranges over the plane or space instead of a line, however, there are infinitely many ways to "approach a point", and phenomena appear that have no counterpart in one variable: a function may have the same limit along every line through a point and still have no limit there, and a function may have all its partial derivatives and still be discontinuous. The guiding thread of the chapter is to compare, at every step, what changes and what stays the same relative to the one-variable case.
