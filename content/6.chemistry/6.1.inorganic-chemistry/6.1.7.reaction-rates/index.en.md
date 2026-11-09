@@ -1,6 +1,6 @@
 ---
 title: Rates of Chemical Reactions
-source_hash: 82dbdf6e4613
+source_hash: 22c17644af8a
 ---
 
 The criterion based on the **Gibbs free energy** in the previous chapter ([6.1.6](/6.1.6)) answers the question "can the reaction proceed spontaneously?" but not "how fast does it proceed?" For $\ce{H2(g) + 1/2O2(g) -> H2O(l)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -237.1\,\mathrm{kJ\,mol^{-1}}$ and the driving force is large, yet a mixture of hydrogen and oxygen can be kept at room temperature for a long time. For $\ce{2NO2(g) -> N2O4(g)}$, $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -4.7\,\mathrm{kJ\,mol^{-1}}$ and the driving force is small, yet the reaction is complete almost instantly. The study of the rates and mechanisms of chemical reactions and of how they depend on concentration, temperature, catalysts, and other conditions is called *chemical kinetics*. Thermodynamics speaks of possibility and kinetics of actuality: whether a thermodynamically allowed reaction takes place in the required time is decided by kinetics.
@@ -150,7 +150,7 @@ That is, $v = k\,c(\ce{N2O5})$ with $k \approx 0.35\,\mathrm{min^{-1}}$.
 **Definition 7.3.1 (Rate Law)** An expression that relates the reaction rate to the concentrations at a given temperature is called a **rate law**. The rate law of many reactions has the power-law form
 
 $$
-v = k\,c_{\mathrm{A}}^{\alpha}c_{\mathrm{B}}^{\beta}\cdots,
+v = k\,c_{\mathrm{A}}^{\alpha}c_{\mathrm{B}}^{\beta}\cdots.
 $$
 The proportionality coefficient $k$ is called the **rate constant**, the reaction rate when all concentrations are unity (also the specific rate); the exponents $\alpha$ and $\beta$ are called the **order of reaction** with respect to A and B (partial orders), and $n = \alpha + \beta + \cdots$ is called the overall order of the reaction.
 
@@ -313,7 +313,7 @@ print(-slope)   # 3.61e-04 s^-1
 
 :::
 
-The decay of radioactive nuclides is a strictly first-order process: the probability per unit time that each nucleus decays is a constant $k$ (the decay constant), independent of the "age" of the nucleus, so the lifetime of a single nucleus follows an **exponential distribution** ([3.1.4](/3.1.4#def-4.2.3)), which is its **memorylessness**; the number $N$ of a large number of nuclei satisfies $\frac{\mathrm{d}N}{\mathrm{d}t} = -kN$ and $N = N_0\mathrm{e}^{-kt}$. The decay constant is almost unaffected by temperature, pressure, and chemical state, so radioactive nuclides are natural "clocks". The method of estimating the age of a sample from the present amount of a radioactive nuclide in it and the amount of its decay product is called *radiometric dating*:
+The decay of radioactive nuclides is a strictly first-order process: the probability per unit time that each nucleus decays is a constant $k$ (the decay constant), independent of the "age" of the nucleus, so the lifetime of a single nucleus follows an **exponential distribution** ([3.1.4](/3.1.4#def-4.2.3)), which is its **memorylessness**; the number $N$ of nuclei in a large sample satisfies $\frac{\mathrm{d}N}{\mathrm{d}t} = -kN$ and $N = N_0\mathrm{e}^{-kt}$. The decay constant is almost unaffected by temperature, pressure, and chemical state, so radioactive nuclides are natural "clocks". The method of estimating the age of a sample from the present amount of a radioactive nuclide in it and the amount of its decay product is called *radiometric dating*:
 
 $$
 t = \frac{1}{k}\ln\frac{N_0}{N} = \frac{t_{1/2}}{\ln 2}\ln\frac{N_0}{N}.
@@ -456,7 +456,7 @@ Complete oxidation is overwhelmingly favored thermodynamically, but an Ag cataly
 
 **Definition 7.3.7** A catalytic reaction in which the catalyst and the reactants are in the same phase is called **homogeneous catalysis**, such as the catalysis of the decomposition of $\ce{H2O2}$ by $\ce{I-}$ and of the hydrolysis of ethylene oxide to ethylene glycol by $\ce{H2SO4}$. A catalytic reaction in which the catalyst and the reactants are in different phases (usually the catalyst is a solid and the reactants are gases or liquids) is called **heterogeneous catalysis**.
 
-Heterogeneous catalysis is the mainstay of the chemical industry: ammonia synthesis ($\ce{N2 + 3H2 <=> 2NH3}$, Fe catalyst), ammonia oxidation ($\ce{4NH3 + 5O2 -> 4NO + 6H2O}$, Pt–Rh gauze), and the three-way catalytic converter for automobile exhaust (Pt–Pd–Rh, which simultaneously oxidizes CO and hydrocarbons and reduces NO, as in $\ce{2CO + 2NO -> 2CO2 + N2}$, the reaction at the start of this section). The steps of heterogeneous catalysis are diffusion of the reactants to the surface, adsorption, reaction on the surface, desorption of the products, and diffusion away; when the active sites of the surface are saturated, the reaction appears zeroth order (7.3.2). The quantitative treatment of surface adsorption and surface reaction kinetics is given in [Physical Chemistry](/6.3).
+Heterogeneous catalysis is the mainstay of the chemical industry: ammonia synthesis ($\ce{N2 + 3H2 <=> 2NH3}$, Fe catalyst), ammonia oxidation ($\ce{4NH3 + 5O2 -> 4NO + 6H2O}$, Pt–Rh gauze), and the three-way catalytic converter for automobile exhaust (Pt–Pd–Rh, which simultaneously oxidizes CO and hydrocarbons and reduces NO, as in $\ce{2CO + 2NO -> 2CO2 + N2}$, the reaction at the start of 7.2). The steps of heterogeneous catalysis are diffusion of the reactants to the surface, adsorption, reaction on the surface, desorption of the products, and diffusion away; when the active sites of the surface are saturated, the reaction appears zeroth order (7.3.2). The quantitative treatment of surface adsorption and surface reaction kinetics is given in [Physical Chemistry](/6.3).
 
 Enzymes are the catalysts of living organisms; the great majority are proteins (a few are RNA, called ribozymes), and the reactants of an enzyme-catalyzed reaction are called substrates. The characteristics of *enzyme catalysis* are:
 

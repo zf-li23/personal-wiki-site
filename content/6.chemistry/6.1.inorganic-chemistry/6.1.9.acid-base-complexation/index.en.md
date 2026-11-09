@@ -1,6 +1,6 @@
 ---
 title: Acid–Base and Complexation Equilibria
-source_hash: d3c6bce262d5
+source_hash: aaf096c34273
 ---
 
 Most inorganic reactions take place in aqueous solution, where acids, bases, and salts dissociate into ions and the reactions between ions give rise to the four main types of equilibrium in solution: acid–base equilibria and complexation equilibria (this chapter), precipitation–dissolution equilibria ([6.1.10](/6.1.10)), and redox equilibria ([6.1.11](/6.1.11)). All of them are specific forms of the **chemical equilibrium** of [6.1.8](/6.1.8) in solution: the equilibrium constants are all **standard equilibrium constants**, the direction of reaction is always decided by comparing the **reaction quotient** with the equilibrium constant, and every equilibrium constant can be linked to thermodynamic data through $\Delta_{\mathrm{r}}G^\circ_{\mathrm{m}} = -RT\ln K^\circ$. We first compare the three theories of acids and bases (9.1), then treat the equilibrium calculations for water and pH (9.2), weak acids and bases (9.3), salt solutions (9.4), and buffer solutions (9.5). Acid–base titration is introduced briefly (9.6), and the chapter ends with the dissociation equilibria of complexes in solution (9.7). The common method of calculation is to write down all the equilibria, identify the dominant one, make a reasonable approximation, and finally check that the approximation holds; if it does not, we write the equations of charge balance and mass balance and solve them numerically. A systematic treatment of the proton condition and distribution fractions, titration curves and end-point errors, and EDTA and conditional stability constants are found in [Analytical Chemistry](/6.4); activity coefficients and ionic strength are found in [Physical Chemistry](/6.3).
@@ -324,7 +324,7 @@ Adding the two gives $\ce{H2S <=> 2H+ + S^2-}$, with $K = K_{\mathrm{a1}}K_{\mat
 **Solution** Since $K_{\mathrm{a1}} \gg K_{\mathrm{a2}}$, the $\ce{H+}$ from the second dissociation can be neglected and the acid treated as monoprotic; since $c/K_{\mathrm{a1}} > 400$,
 
 $$
-[\ce{H+}] \approx [\ce{HS-}] \approx \sqrt{K_{\mathrm{a1}}c} = \sqrt{8.9 \times 10^{-8} \times 0.10} = 9.4 \times 10^{-5}, \qquad \mathrm{pH} = 4.02.
+[\ce{H+}] \approx [\ce{HS-}] \approx \sqrt{K_{\mathrm{a1}}c} = \sqrt{8.9 \times 10^{-8} \times 0.10} = 9.4 \times 10^{-5}, \qquad \mathrm{pH} = 4.03.
 $$
 From the second dissociation, $K_{\mathrm{a2}} = [\ce{H+}][\ce{S^2-}]/[\ce{HS-}]$ and $[\ce{H+}] \approx [\ce{HS-}]$, we obtain $[\ce{S^2-}] \approx K_{\mathrm{a2}}$; and $[\ce{OH-}] = K_{\mathrm{w}}/[\ce{H+}] = 1.1 \times 10^{-10}$.
 
@@ -340,9 +340,9 @@ Two general rules follow:
 The equilibrium constant of the overall reaction also shows how pH controls the concentration of the acid anion. For any diprotic acid $\ce{H2A}$,
 
 $$
-[\ce{A^2-}] = \frac{K_{\mathrm{a1}}K_{\mathrm{a2}}[\ce{H2A}]}{[\ce{H+}]^2}: \tag{9.3}
+[\ce{A^2-}] = \frac{K_{\mathrm{a1}}K_{\mathrm{a2}}[\ce{H2A}]}{[\ce{H+}]^2}. \tag{9.3}
 $$
-for a given $[\ce{H2A}]$, the anion concentration is inversely proportional to $[\ce{H+}]^2$, so adjusting the pH controls $[\ce{A^2-}]$ and hence the effective concentration of precipitants such as $\ce{CO3^2-}$, $\ce{C2O4^2-}$, and $\ce{PO4^3-}$ ([6.1.10](/6.1.10)).
+For a given $[\ce{H2A}]$, the anion concentration is inversely proportional to $[\ce{H+}]^2$, so adjusting the pH controls $[\ce{A^2-}]$ and hence the effective concentration of precipitants such as $\ce{CO3^2-}$, $\ce{C2O4^2-}$, and $\ce{PO4^3-}$ ([6.1.10](/6.1.10)).
 
 ### 9.3.6. Distribution Fractions
 
@@ -601,7 +601,7 @@ There are two ways to prepare a standard solution.
 $$
 [\ce{H+}] = \frac{0.02 \times 0.1000}{39.98} = 5.0 \times 10^{-5}, \qquad \mathrm{pH} = 4.30.
 $$
-At the stoichiometric point, pH = 7.00. At 0.1% past it, $20.02\,\mathrm{mL}$ has been added, the excess NaOH gives $[\ce{OH-}] = 5.0 \times 10^{-5}$, and $\mathrm{pH} = 9.70$. The jump range is 4.30–9.70: with only about half a drop ($0.04\,\mathrm{mL}$) more titrant, the pH changes by 5.4 units. At a concentration of $0.01000\,\mathrm{mol\,L^{-1}}$, $[\ce{H+}]$ and $[\ce{OH-}]$ before and after the stoichiometric point are both reduced to 1/10, and the jump range is 5.30–8.70, narrowed by 2 pH units.
+At the stoichiometric point, pH = 7.00. At 0.1% past it, $20.02\,\mathrm{mL}$ has been added, the excess NaOH gives $[\ce{OH-}] = 5.0 \times 10^{-5}$, and $\mathrm{pH} = 9.70$. The jump range is 4.30–9.70: with only about one drop ($0.04\,\mathrm{mL}$) more titrant, the pH changes by 5.4 units. At a concentration of $0.01000\,\mathrm{mol\,L^{-1}}$, $[\ce{H+}]$ and $[\ce{OH-}]$ before and after the stoichiometric point are both reduced to 1/10, and the jump range is 5.30–8.70, narrowed by 2 pH units.
 
 :::
 

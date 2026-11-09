@@ -323,7 +323,7 @@ $$
 **解** $K_{\mathrm{a1}} \gg K_{\mathrm{a2}}$，二级解离产生的 $\ce{H+}$ 可以忽略，按一元弱酸处理；$c/K_{\mathrm{a1}} > 400$，
 
 $$
-[\ce{H+}] \approx [\ce{HS-}] \approx \sqrt{K_{\mathrm{a1}}c} = \sqrt{8.9 \times 10^{-8} \times 0.10} = 9.4 \times 10^{-5}, \qquad \mathrm{pH} = 4.02.
+[\ce{H+}] \approx [\ce{HS-}] \approx \sqrt{K_{\mathrm{a1}}c} = \sqrt{8.9 \times 10^{-8} \times 0.10} = 9.4 \times 10^{-5}, \qquad \mathrm{pH} = 4.03.
 $$
 由二级解离 $K_{\mathrm{a2}} = [\ce{H+}][\ce{S^2-}]/[\ce{HS-}]$ 与 $[\ce{H+}] \approx [\ce{HS-}]$，得 $[\ce{S^2-}] \approx K_{\mathrm{a2}}$；$[\ce{OH-}] = K_{\mathrm{w}}/[\ce{H+}] = 1.1 \times 10^{-10}$。
 
@@ -339,7 +339,7 @@ $$
 由总反应的平衡常数还可以看出 pH 对酸根浓度的控制作用。对任意二元弱酸 $\ce{H2A}$，
 
 $$
-[\ce{A^2-}] = \frac{K_{\mathrm{a1}}K_{\mathrm{a2}}[\ce{H2A}]}{[\ce{H+}]^2}: \tag{9.3}
+[\ce{A^2-}] = \frac{K_{\mathrm{a1}}K_{\mathrm{a2}}[\ce{H2A}]}{[\ce{H+}]^2}. \tag{9.3}
 $$
 在 $[\ce{H2A}]$ 一定时，酸根浓度与 $[\ce{H+}]^2$ 成反比，调节 pH 就能控制 $[\ce{A^2-}]$，进而控制 $\ce{CO3^2-}$、$\ce{C2O4^2-}$、$\ce{PO4^3-}$ 一类沉淀剂的有效浓度（[6.1.10](/6.1.10)）。
 
@@ -600,7 +600,7 @@ $$
 $$
 [\ce{H+}] = \frac{0.02 \times 0.1000}{39.98} = 5.0 \times 10^{-5}, \qquad \mathrm{pH} = 4.30.
 $$
-化学计量点时 pH = 7.00。计量点后 0.1%：加入 $20.02\,\mathrm{mL}$，过量 NaOH 使 $[\ce{OH-}] = 5.0 \times 10^{-5}$，$\mathrm{pH} = 9.70$。突跃范围为 4.30–9.70：滴定剂只多加约半滴（$0.04\,\mathrm{mL}$），pH 就变化了 5.4 个单位。浓度为 $0.01000\,\mathrm{mol\,L^{-1}}$ 时，计量点前后的 $[\ce{H+}]$、$[\ce{OH-}]$ 都缩小到 1/10，突跃范围为 5.30–8.70，缩小了 2 个 pH 单位。
+化学计量点时 pH = 7.00。计量点后 0.1%：加入 $20.02\,\mathrm{mL}$，过量 NaOH 使 $[\ce{OH-}] = 5.0 \times 10^{-5}$，$\mathrm{pH} = 9.70$。突跃范围为 4.30–9.70：滴定剂只多加约一滴（$0.04\,\mathrm{mL}$），pH 就变化了 5.4 个单位。浓度为 $0.01000\,\mathrm{mol\,L^{-1}}$ 时，计量点前后的 $[\ce{H+}]$、$[\ce{OH-}]$ 都缩小到 1/10，突跃范围为 5.30–8.70，缩小了 2 个 pH 单位。
 
 :::
 
