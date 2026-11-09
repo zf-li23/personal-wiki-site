@@ -43,7 +43,7 @@ $$
 
 恒压下的 $T$–$x$ 图可以由实验测定（测不同组成的溶液的沸点与沸腾时气、液两相的组成），也可以由 $p$–$x$ 关系计算：对每个液相组成，求总压等于外压 $p$ 时的温度。苯–甲苯是接近理想的系统，下图用 Antoine 方程与 Raoult 定律算出了它的两种相图。$T$–$x$ 图中，易挥发组分沸点低，液相线（沸点线）在下、气相线（露点线）在上，两条线都是曲线；两相区之上为气相区、之下为液相区，与 $p$–$x$ 图上下颠倒。
 
-![Benzene–toluene computed from Raoult's law with Antoine vapor pressures. Left: p–x diagram at 90 °C; the liquid line is straight and lies above the vapor line, and the dashed lines are the partial pressures. Right: T–x diagram at 101.325 kPa; the boiling-point (bubble) line lies below the dew-point line. The tie line a–O–b at 95 °C joins the liquid and vapor compositions in equilibrium with the system point O (overall benzene mole fraction 0.5)](./plots/benzene-toluene.py)
+![由 Raoult 定律与 Antoine 蒸气压计算的苯–甲苯相图。左：90 °C 的 p–x 图，液相线是直线、位于气相线上方，虚线是各组分的分压。右：101.325 kPa 的 T–x 图，沸点线（泡点线）在露点线下方。95 °C 的连结线 a–O–b 连接与物系点 O（总组成为苯的摩尔分数 0.5）平衡的液相与气相组成](./plots/benzene-toluene.py)
 
 **定义 9.1.1** 相图中表示系统总组成（与温度、压力）的点称为**物系点**，表示某一相的组成的点称为**相点**。单相区中物系点与相点重合；在两相区中，物系点落在连接两个相点的水平线上，这条连接平衡两相相点的线称为连结线（tie line）。
 
@@ -95,7 +95,7 @@ $$
 2. 它是混合物而不是化合物：改变压力，恒沸点的温度与组成都随之改变。由相律，恒压下两相共存 $F^* = 1$，恒沸条件 $x_{\mathrm{B}} = y_{\mathrm{B}}$ 再给出一个关系，于是 $F^* = 0$：一定压力下恒沸物的组成与沸点都是确定的。
 3. 具有恒沸物的系统，用普通精馏不能同时得到两种纯组分。这类相图可以看作两张"偏差不大"的相图在恒沸点处拼接而成：对最低恒沸系统，塔顶得到恒沸物，塔釜得到原料所在那一侧的纯组分。
 
-![T–x–y diagrams at 101.325 kPa computed from Raoult's law with activity coefficients. Left: ethanol + water (van Laar model), with a minimum-boiling azeotrope at x(ethanol) ≈ 0.92, 78.2 °C (measured: 0.894, 78.15 °C). Right: acetone + chloroform (one-parameter Margules model), with a maximum-boiling azeotrope at x(acetone) ≈ 0.38, 64.3 °C](./plots/azeotropes.py)
+![由含活度因子的 Raoult 定律计算的 101.325 kPa 下的 T–x–y 图。左：乙醇 + 水（van Laar 模型），最低恒沸点在 x(乙醇) ≈ 0.92、78.2 °C（实测 0.894、78.15 °C）。右：丙酮 + 氯仿（单参数 Margules 模型），最高恒沸点在 x(丙酮) ≈ 0.38、64.3 °C](./plots/azeotropes.py)
 
 | 系统（$101.325\,\mathrm{kPa}$） | 类型 | 恒沸点 | 恒沸组成 |
 |---|---|---|---|
@@ -187,7 +187,7 @@ T_{\mathrm{c}} = \frac{W}{2R}.
 $$
 对称模型的两相组成满足 $\ln\dfrac{x}{1 - x} = \dfrac{W}{RT}(2x - 1)$，即两相共存线。二阶导数为零的曲线 $T = 2Wx(1 - x)/R$ 称为旋节线（spinodal）：在共存线与旋节线之间，均匀溶液对小的涨落是稳定的，分相要通过成核进行（亚稳）；在旋节线以内，任意小的组成涨落都会自发长大（旋节分解）。
 
-![Symmetric regular solution. Left: Gibbs energy of mixing against composition for W/RT = 0, 1.5, 2 and 2.8; for W/RT > 2 the curve has two minima and the common tangent gives the compositions of the two coexisting liquids. Right: coexistence curve and spinodal in reduced temperature T/Tc, with Tc = W/(2R) the upper critical solution temperature; a tie line l1–l2 is shown at T/Tc = 0.8](./plots/regular-solution-miscibility.py)
+![对称正规溶液。左：W/RT = 0、1.5、2、2.8 时混合 Gibbs 自由能随组成的变化；W/RT > 2 时曲线有两个极小值，公切线给出两个平衡共存液相的组成。右：以约化温度 T/Tc 表示的共存曲线与旋节线，Tc = W/(2R) 是最高会溶温度；图中画出 T/Tc = 0.8 时的连结线 l1–l2](./plots/regular-solution-miscibility.py)
 
 同样的热力学（推广到高分子的 Flory–Huggins 理论）用来理解细胞中蛋白质与 RNA 的液–液相分离：一些含有低复杂度序列的蛋白质在一定浓度与温度下从胞质中分出富含蛋白质的液滴，形成没有膜包围的细胞器（生物分子凝聚体），如核仁与应激颗粒（[7.3](/7.3)）。
 
@@ -250,7 +250,7 @@ $$
 
 **例 9.4.1** Bi：$T_{\mathrm{f}}^* = 544.55\,\mathrm{K}$，$\Delta_{\mathrm{fus}}H_{\mathrm{m}} = 11.30\,\mathrm{kJ\,mol^{-1}}$；Cd：$T_{\mathrm{f}}^* = 594.22\,\mathrm{K}$，$\Delta_{\mathrm{fus}}H_{\mathrm{m}} = 6.21\,\mathrm{kJ\,mol^{-1}}$。按理想溶解度方程算得低共熔点 $408\,\mathrm{K}$，$x(\mathrm{Cd}) = 0.565$（Cd 的质量分数 41%）。实测低共熔点约 $419\,\mathrm{K}$（$146\,{}^\circ\mathrm{C}$），Cd 的质量分数约 40%：组成符合得很好，温度低了约 $10\,\mathrm{K}$，说明液态 Bi–Cd 对理想溶液有正偏差。
 
-![Bi–Cd simple eutectic system. Left: liquidus curves computed from the ideal solubility equation; they meet at the eutectic point E (408 K in the ideal model, about 419 K measured), and the horizontal line through E is the three-phase line Bi(s) + Cd(s) + liquid E. Right: simulated cooling curves for pure Bi, x(Cd) = 0.20, the eutectic composition, 0.80 and pure Cd: pure metals and the eutectic show only a plateau, the other mixtures show a break at the liquidus followed by the eutectic plateau](./plots/bi-cd-eutectic.py)
+![Bi–Cd 简单低共熔系统。左：由理想溶解度方程算出的液相线，交于低共熔点 E（理想模型 408 K，实测约 419 K），过 E 的水平线是 Bi(s) + Cd(s) + 液相 E 的三相线。右：纯 Bi、x(Cd) = 0.20、低共熔组成、0.80 与纯 Cd 的模拟步冷曲线；纯金属与低共熔组成只有水平段，其余组成在液相线温度出现转折，随后是低共熔水平段](./plots/bi-cd-eutectic.py)
 
 由步冷曲线读相图（右图）：纯 Bi 与纯 Cd 冷却到熔点时出现水平段（$C = 1$、$P = 2$，$F^* = 0$）；$x(\mathrm{Cd}) = 0.20$ 的样品在液相线温度开始析出 Bi(s)（$F^* = 1$，转折），液相组成沿液相线移向 E，到达低共熔温度时再析出 Cd(s)，三相共存出现水平段，水平段的长度与低共熔混合物的数量成正比；恰为低共熔组成的样品没有转折，只有一个水平段，看起来像纯物质。
 
@@ -271,7 +271,7 @@ $$
 
 相图中稳定化合物 C 是一条竖直线，液相线在 C 的组成处出现最高点（相合熔点 D）。整张相图可以看作 A–C 与 C–B 两张简单低共熔相图并排拼成，有两个低共熔点。若液态中化合物部分解离，最高点是圆滑的；解离越少，最高点越尖。苯酚–苯胺（生成 1∶1 化合物）、$\ce{CuCl}$–$\ce{FeCl3}$ 属于这一类；$\ce{H2O}$–$\ce{H2SO4}$ 生成 $\ce{H2SO4.H2O}$、$\ce{H2SO4.2H2O}$、$\ce{H2SO4.4H2O}$ 三种稳定水合物，相图由四张简单低共熔图拼成。
 
-![Schematic solid–liquid phase diagrams built from ideal-solubility liquidus curves. (a) A compound C = AB with a congruent melting point D: the diagram is two simple eutectic diagrams side by side. (b) A compound with an incongruent melting point: C decomposes at the peritectic temperature D into solid A and liquid M; E is the eutectic. (c) Complete solid solubility, computed for Cu–Ni as ideal solid and liquid solutions (a lens between liquidus and solidus). (d) Partial solid solubility with a eutectic: two terminal solid solutions α and β separated by solvus lines](./plots/solid-liquid-types.py)
+![由理想溶解度液相线构成的固–液相图示意图。(a) 化合物 C = AB 有相合熔点 D：相图是两张简单低共熔图并排。(b) 化合物有不相合熔点：C 在转熔温度 D 分解为固体 A 与液相 M，E 是低共熔点。(c) 固态完全互溶，按理想固溶体与理想溶液计算的 Cu–Ni 系统（液相线与固相线之间是透镜形区域）。(d) 固态部分互溶并有低共熔点：两个端际固溶体 α 与 β 由固溶度线分隔](./plots/solid-liquid-types.py)
 
 浓硫酸在冬季的运输说明读图的用处：质量分数 98% 的硫酸位于 $\ce{H2SO4}$ 的液相线上，凝固点在 $0\,{}^\circ\mathrm{C}$ 以上，冬天会在管道中冻结；质量分数约 93% 的硫酸接近 $\ce{H2SO4}$ 与 $\ce{H2SO4.H2O}$ 之间的低共熔点，凝固点低于 $-25\,{}^\circ\mathrm{C}$，所以冬季输送的硫酸通常调到 93% 左右。
 
@@ -373,7 +373,7 @@ Weston **标准电池**（[6.3.13](/6.3.13)）的负极用 Cd 的质量分数为
 2. 过某一顶点的直线上，另外两个组分的含量之比相同；向系统中加入（或除去）纯组分，物系点沿该组分的顶点与原物系点的连线移动。
 3. 两个系统混合，新的物系点在两点的连线上，位置由杠杆规则确定；三个系统混合，新物系点在三点构成的三角形的重心（以物质的量为权）。
 
-![Equilateral triangular coordinates. Left: reading the composition of point O (x_A = 0.2, x_B = 0.3, x_C = 0.5) with lines parallel to the three sides. Right: a partially miscible three-liquid system A + C with solute B, computed from a ternary regular-solution model; the binodal curve encloses the two-liquid region, the tie lines slope upward to the right because B prefers the C-rich phase, and they shrink to the plait point](./plots/ternary-extraction.py)
+![等边三角形坐标。左：用平行于三边的直线读出点 O 的组成（x_A = 0.2、x_B = 0.3、x_C = 0.5）。右：部分互溶的三液系，A 与 C 部分互溶、B 为溶质，由三元正规溶液模型计算；双结线围成两液相区，连结线向右上倾斜（B 更倾向于富含 C 的一相），并缩成褶点](./plots/ternary-extraction.py)
 
 ### 9.6.2. 部分互溶的三液系与萃取
 

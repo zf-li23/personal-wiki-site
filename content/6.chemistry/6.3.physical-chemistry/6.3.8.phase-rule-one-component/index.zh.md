@@ -200,7 +200,7 @@ $$
 
 （2）取 $C_{p,\mathrm{m}}(\mathrm{H_2O, g}) = 33.6$、$C_{p,\mathrm{m}}(\mathrm{H_2O, l}) = 75.3\,\mathrm{J\,mol^{-1}\,K^{-1}}$，$\Delta C_{p,\mathrm{m}} = -41.7\,\mathrm{J\,mol^{-1}\,K^{-1}}$，由式 (8.5) 得 $p_2 = 4.38\,\mathrm{kPa}$，误差降到 3%。剩下的误差主要来自水蒸气的非理想性与 $\Delta C_{p,\mathrm{m}}$ 随温度的变化。
 
-![Left: vapor pressure of water from 0 to 100 °C on a logarithmic scale, comparing the IAPWS reference curve with Clausius–Clapeyron integrated from the normal boiling point with a constant enthalpy of vaporization and with a temperature-dependent one (Kirchhoff's law). Right: relative errors of the two approximations; the constant-enthalpy form overestimates the pressure by up to 37 % at 0 °C, the Kirchhoff-corrected form by less than 5 %](./plots/clausius-clapeyron-accuracy.py)
+![左：水在 0–100 °C 的蒸气压（对数坐标），比较 IAPWS 参考曲线与从正常沸点出发积分的 Clausius–Clapeyron 方程（蒸发焓取常数，以及按 Kirchhoff 定律随温度变化）。右：两种近似的相对误差；蒸发焓取常数时在 0 °C 偏高多达 37 %，经 Kirchhoff 修正后偏差小于 5 %](./plots/clausius-clapeyron-accuracy.py)
 
 :::
 
@@ -304,7 +304,7 @@ $$
 
 但更多的这类相变并不符合 Ehrenfest 的图像。液氦（$^4\mathrm{He}$）在 $2.17\,\mathrm{K}$ 由普通液体 He I 转变为超流体 He II，没有相变焓，热容曲线却在转变点两侧对数发散，形状像希腊字母 $\lambda$，称为 λ 相变；铁磁质在 **Curie 温度**（[5.3.8](/5.3.8#sec-8.5.4)）失去自发磁化、合金（如 $\beta$ 黄铜 CuZn）的有序–无序转变、某些**液晶**的相变（如近晶 A 相–向列相）也属于这一类。热容发散时"二阶导数有限突变"的说法不再适用，所以现代文献不再使用 Ehrenfest 的高级分类，而只分为一级相变与连续相变（广义的**二级相变**）：前者有潜热、两相共存；后者没有潜热，一个描述有序程度的量（序参量，如自发磁化强度、超流组分的比例）在转变点连续地降为零，转变点附近的涨落很大，各种性质按幂律变化（临界现象）。气–液临界点就是一个连续相变点：到临界点时蒸发焓与 $\Delta V_{\mathrm{m}}$ 同时趋于零。临界现象的统一理论（Landau 理论与重整化群）属于统计物理。
 
-![Schematic molar Gibbs energy (chemical potential), molar entropy and heat capacity against temperature at constant pressure for a first-order transition (kinked μ, entropy jump equal to the enthalpy of transition divided by T, delta-function peak in Cp), an Ehrenfest second-order transition (continuous μ and S, finite jump in Cp) and a lambda transition (Cp diverges on both sides)](./plots/transition-order.py)
+![恒压下摩尔 Gibbs 自由能（化学势）、摩尔熵与热容随温度变化的示意图：一级相变（$\mu$ 有折点，熵的突变等于相变焓除以 $T$，$C_p$ 出现 $\delta$ 函数峰）、Ehrenfest 意义的二级相变（$\mu$ 与 $S$ 连续，$C_p$ 有限跃变）与 λ 相变（$C_p$ 在两侧发散）](./plots/transition-order.py)
 
 生物膜中的磷脂双分子层在升温时由排列整齐的凝胶相转变为烃链无序的液晶相（主相变，二棕榈酰磷脂酰胆碱 DPPC 约 $41\,{}^\circ\mathrm{C}$），这是一个较弱的一级相变，用差示扫描量热法测到的尖锐吸热峰说明转变是高度协同的；细胞通过调节脂肪酸链的长度与不饱和度，使膜在生理温度下保持流动性（[7.6](/7.6)）。
 
@@ -327,7 +327,7 @@ $$
 - 熔化曲线（固–液平衡线）：斜率为负、几乎竖直（例 8.3.2），压力升高时冰的熔点降低。冰 Ih 的熔点最低降到 $251.165\,\mathrm{K}$（$208.6\,\mathrm{MPa}$），此后与冰 III 相遇。
 - 蒸发曲线越过三相点向低温的延长线是过冷水的饱和蒸气压曲线。它高于同温下冰的升华曲线：同一温度下过冷水的蒸气压比冰高，化学势也比冰高，所以过冷水是亚稳的，一旦有晶核就会结冰。
 
-![Phase diagram of water on a logarithmic pressure axis computed from the IAPWS correlations: sublimation, vaporization (ending at the critical point 647.096 K, 22.064 MPa) and melting curves; the melting curve of ordinary ice Ih is almost vertical with a negative slope, and at high pressure the melting curves of ices III, V, VI and VII follow (boundaries between the solid phases are omitted). The dashed line is the vapor pressure of supercooled water](./plots/water-phase-diagram.py)
+![水的相图（压力用对数坐标，由 IAPWS 关联式计算）：升华曲线、蒸发曲线（终止于临界点 647.096 K、22.064 MPa）与熔化曲线；普通冰 Ih 的熔化曲线斜率为负、几乎竖直，高压下依次接续冰 III、V、VI、VII 的熔化曲线（略去固相之间的边界）。虚线是过冷水的蒸气压](./plots/water-phase-diagram.py)
 
 相图的用途是：给定条件，读出系统处于哪一相；条件改变时，预测相态的变化。例如在 $p^\circ$ 下由 $-10\,{}^\circ\mathrm{C}$ 等压加热，物系点沿水平线依次越过熔化线（$0\,{}^\circ\mathrm{C}$，冰与水两相共存，$F^* = 0$，温度不变直到冰全部熔化）与蒸发线（$99.61\,{}^\circ\mathrm{C}$，水与水蒸气共存）。在低于三相点的压力下加热冰，物系点只越过升华线，冰不经熔化直接变成水蒸气，所以冰升华的必要条件是压力低于三相点压力 $611.657\,\mathrm{Pa}$。冷冻干燥正是利用这一点：把含水的样品冷冻后在低于三相点的压力下使冰升华，样品不经过液态，蛋白质、疫苗、细菌菌种与食品的结构与活性得以保存。
 

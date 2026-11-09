@@ -1,7 +1,7 @@
 ---
 title: Molecular Partition Functions and Ideal-Gas Properties
 description: Factorization of the molecular partition function into translational, rotational, vibrational, electronic and nuclear parts; thermal wavelength, rotational and vibrational characteristic temperatures, symmetry number and the correction series for the rotational partition function; internal energy, heat capacity and the Einstein function of an ideal gas; the Sackur–Tetrode equation and statistical entropy, comparison with calorimetric entropy, and residual entropy; vapor pressure from statistical entropy; standard equilibrium constants from partition functions (dissociation of I₂, H₂ + D₂ exchange).
-source_hash: 343005a028d9
+source_hash: d356f00c2f8d
 ---
 
 The previous chapter ([6.3.10](/6.3.10)) set up the framework of statistical thermodynamics: once the energy levels of a molecule are known, we can compute the **molecular partition function** $q$, and from the system partition function $Z = q^N/N!$ all the thermodynamic functions of an ideal gas. This chapter carries the program through. The energy of a molecule can be approximately decomposed into translational, rotational, vibrational, electronic and nuclear parts, and $q$ factorizes accordingly into five factors. Each factor can be computed from the mass, moments of inertia, vibrational frequencies and electronic levels of the molecule, all of which come from spectroscopy ([5.5.5](/5.5.5#sec-5.3)). The results explain how heat capacities vary with temperature (when the equipartition theorem holds, and why vibrations are "frozen out" at ordinary temperatures), give statistical entropies that are independent of calorimetry and often more accurate, and reveal the origin of residual entropy. The last section computes standard equilibrium constants directly from partition functions. This connects the $K^\circ$ of [6.3.7](/6.3.7) with molecular structure and is the starting point of transition state theory in [6.3.16](/6.3.16).
@@ -121,7 +121,7 @@ Characteristic temperatures of common diatomic molecules (computed from the grou
 | $\tilde B_0/\mathrm{cm^{-1}}$ | 59.32 | 1.990 | 1.438 | 1.923 | 10.44 | 0.0374 |
 | $\Theta_{\mathrm{r}}/\mathrm{K}$ | 85.3 | 2.86 | 2.07 | 2.77 | 15.0 | 0.054 |
 | $\tilde\nu/\mathrm{cm^{-1}}$ | 4161 | 2330 | 1556 | 2143 | 2886 | 214.5* |
-| $\Theta_{\mathrm{v}}/\mathrm{K}$ | 5987 | 3352 | 2239 | 3084 | 4152 | 308 |
+| $\Theta_{\mathrm{v}}/\mathrm{K}$ | 5987 | 3352 | 2239 | 3084 | 4152 | 309 |
 
 (* For $\ce{I2}$ the harmonic constant $\tilde\omega_{\mathrm{e}}$ is used; the fundamental, $213.3\,\mathrm{cm^{-1}}$, gives $307\,\mathrm{K}$.)
 
