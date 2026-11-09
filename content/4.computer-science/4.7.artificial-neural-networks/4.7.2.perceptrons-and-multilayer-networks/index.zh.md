@@ -254,13 +254,13 @@ $$
 
 训练 MLP 就是对所有权重和偏置 $\boldsymbol{\theta}$ 最小化平均损失 $E(\boldsymbol{\theta}) = \frac{1}{m}\sum_{i=1}^m E_i(\boldsymbol{\theta})$，其中 $E_i$ 是第 $i$ 个样例上的损失。如 [3.5.5](/3.5.5) 所述，**梯度下降法**以学习率 $\eta$ 迭代 $\boldsymbol{\theta} \leftarrow \boldsymbol{\theta} - \eta\nabla E(\boldsymbol{\theta})$；**随机梯度下降**用单个样例上的梯度代替完整梯度，而**小批量梯度下降**用随机批 $\mathcal{B}$ 上的梯度 $\frac{1}{\lvert\mathcal{B}\rvert}\sum_{i \in \mathcal{B}}\nabla E_i$，这是以很小的代价得到的无偏估计。网络的损失关于其权重不是凸的：它有许多**鞍点**和局部极小点，也有许多由对称性联系的全局极小点（置换一层中的隐藏神经元不改变函数）。在高维中，大多数损失较高的临界点是**鞍点**而不是不好的局部极小点，随机梯度方法能逃离它们；它们为什么仍能找到好的解，至今只被部分地理解（[4.7.4](/4.7.4)）。
 
-无论用什么优化器，它都需要 $\nabla E_i$，即损失对可能多达数十亿个参数中每一个的导数。用有限差分去近似每个偏导数，每个参数要花一次前向传播。反向传播只用一次反向传播就精确算出全部导数。
+无论用什么优化器，它都需要 $\nabla E_i$，即损失对可能多达数十亿个参数中每一个的导数。用有限差分去近似每个偏导数，每个参数要花一次前向传播。反向传播只需一次从输出向输入的反向遍历，就能精确算出全部导数。
 
 ### 2.4.2. 计算图与标量例子
 
-**定义 2.4.1（计算图）** 函数的**计算图**是一个有向无环图，其结点是输入变量和各个基本运算（加法、乘法、矩阵乘积、激活函数等）的结果，其边由每个运算的参数指向它的结果。
+**定义 2.4.1（计算图）** 函数的**计算图**是一个有向无环图，其节点是输入变量和各个基本运算（加法、乘法、矩阵乘积、激活函数等）的结果，其边由每个运算的参数指向它的结果。
 
-考虑 $f(x, y, z) = (x + y)z$，在 $x = -2$、$y = 5$、$z = -4$ 处。图中有一个中间结点 $q = x + y = 3$ 和输出 $f = qz = -12$。每个运算都知道自己的局部导数：$\partial q/\partial x = \partial q/\partial y = 1$，$\partial f/\partial q = z = -4$，$\partial f/\partial z = q = 3$。由**链式法则**，$f$ 对某个结点的导数等于从上方传来的导数（上游梯度）乘以局部导数：
+考虑 $f(x, y, z) = (x + y)z$，在 $x = -2$、$y = 5$、$z = -4$ 处。图中有一个中间节点 $q = x + y = 3$ 和输出 $f = qz = -12$。每个运算都知道自己的局部导数：$\partial q/\partial x = \partial q/\partial y = 1$，$\partial f/\partial q = z = -4$，$\partial f/\partial z = q = 3$。由**链式法则**，$f$ 对某个节点的导数等于从上方传来的导数（上游梯度）乘以局部导数：
 
 $$
 \frac{\partial f}{\partial x} = \frac{\partial f}{\partial q}\frac{\partial q}{\partial x} = -4, \qquad \frac{\partial f}{\partial y} = -4, \qquad \frac{\partial f}{\partial z} = 3 .
@@ -325,7 +325,7 @@ $$
 
 按行写的公式是定理 2.4.1 对批量求和后的转置。反向传播每层需要两次矩阵乘法（一次求权重梯度，一次求误差信号），前向只需一次，所以一个训练步骤约花三次前向传播的代价；对大语言模型，这给出经验法则：对 $N$ 个参数，每个训练**词元**约需 $6N$ 次**浮点运算**（[4.7.8](/4.7.8)）。存储下来的激活值 $A^{(l)}$ 正是训练耗费大量内存的原因。
 
-**定义 2.4.2（反向传播）** **反向传播**是这样一种计算：通过把误差信号从输出沿计算图向后传播，在每个结点上应用链式法则，算出标量损失对网络所有参数的梯度，如算法 2.4.1 所示。
+**定义 2.4.2（反向传播）** **反向传播**是这样一种计算：通过把误差信号从输出沿计算图向后传播，在每个节点上应用链式法则，算出标量损失对网络所有参数的梯度，如算法 2.4.1 所示。
 
 ### 2.4.4. 自动微分
 
@@ -570,7 +570,7 @@ $$
 
 - 人工神经元计算 $\varphi(\boldsymbol{w}^{\mathsf T}\boldsymbol{x} + b)$。感知机增加了出错时 $\boldsymbol{w} \leftarrow \boldsymbol{w} + \eta y\tilde{\boldsymbol{x}}$ 的规则，在线性可分数据上至多更新 $(R/\gamma)^2$ 次（Novikoff），但不能表示异或。
 - 带非线性可微激活的隐藏层消除了这一限制。MLP 计算 $\boldsymbol{a}^{(l)} = \varphi(W^{(l)}\boldsymbol{a}^{(l-1)} + \boldsymbol{b}^{(l)})$；有一个宽的隐藏层和任意非多项式连续激活时，它能逼近紧集上的任意连续函数，而深度使许多函数的表示代价指数地降低。
-- 反向传播用一次反向传播算出全部梯度：$\boldsymbol{\delta}^{(l)} = (W^{(l+1)\mathsf T}\boldsymbol{\delta}^{(l+1)}) \odot \varphi'(\boldsymbol{z}^{(l)})$，$\partial E/\partial W^{(l)} = \boldsymbol{\delta}^{(l)}\boldsymbol{a}^{(l-1)\mathsf T}$；softmax 加**交叉熵**时输出误差为 $\hat{\boldsymbol{y}} - \boldsymbol{y}$。它是计算图上的反向模式自动微分，代价是前向传播的几倍，但需要存储激活值。
+- 反向传播只需一次反向遍历就算出全部梯度：$\boldsymbol{\delta}^{(l)} = (W^{(l+1)\mathsf T}\boldsymbol{\delta}^{(l+1)}) \odot \varphi'(\boldsymbol{z}^{(l)})$，$\partial E/\partial W^{(l)} = \boldsymbol{\delta}^{(l)}\boldsymbol{a}^{(l-1)\mathsf T}$；softmax 加**交叉熵**时输出误差为 $\hat{\boldsymbol{y}} - \boldsymbol{y}$。它是计算图上的反向模式自动微分，代价是前向传播的几倍，但需要存储激活值。
 - 损失是与输出激活配对的负对数似然；交叉熵避免了平方误差在 sigmoid 输出下的饱和。
 - ReLU 因不饱和而在隐藏层取代了 sigmoid 与 tanh；GELU 和带门控的 SwiGLU 是 Transformer 中的标准选择。
 - 随机初始化打破对称性；Xavier（$2/(n_{\mathrm{in}} + n_{\mathrm{out}})$）与 He（$2/n_{\mathrm{in}}$）的方差使激活值与梯度不随深度爆炸或消失。

@@ -158,7 +158,7 @@ In the language of representation theory, convolution is an **equivariant map** 
 - A *1×1 convolution* combines the channels at each position without mixing positions: it is a fully connected layer applied independently to every pixel. It changes the number of channels cheaply and is used to reduce the channels before expensive convolutions (GoogLeNet, ResNet bottlenecks).
 - A *depthwise separable convolution* factors a $k \times k$ convolution into a depthwise convolution (one $k \times k$ filter per channel, no mixing) followed by a $1 \times 1$ convolution, reducing the cost by a factor of about $k^2$ (MobileNet, Xception, ConvNeXt).
 - A grouped convolution splits the channels into $g$ groups and convolves each separately, with $1/g$ of the parameters (AlexNet, ResNeXt); depthwise convolution is the extreme case $g = C_{\mathrm{in}}$.
-- A *transposed convolution* is the linear map whose matrix is the transpose of that of a strided convolution; it upsamples feature maps in decoders and generators (§3.5.3 explains why it is also the backward pass of a convolution).
+- A *transposed convolution* is the linear map whose matrix is the transpose of that of a strided convolution; it upsamples feature maps in decoders and generators (§3.5.2 explains why it is also the backward pass of a convolution).
 - Deformable convolutions learn offsets for the kernel taps; three-dimensional convolutions process video and volumetric data; one-dimensional convolutions over word embeddings classify sentences (Kim 2014) and process audio.
 
 ### 3.3.5. Implementations
