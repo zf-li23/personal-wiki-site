@@ -1,7 +1,7 @@
 ---
 title: Ultraviolet–Visible Absorption Spectrophotometry
 description: Molecular energy levels and band spectra; σ→σ*, n→σ*, π→π*, n→π* and charge-transfer transitions, chromophores, auxochromes, bathochromic and hypsochromic shifts, ultraviolet absorption of proteins and nucleic acids; derivation of the absorption law, additivity and deviations, transmittance and isosbestic points; spectrophotometers, the dual-wavelength method, derivative spectra and measurement error; multicomponent determination, composition of complexes and determination of pKa; surface plasmon resonance and circular dichroism.
-source_hash: f5b5ad77125d
+source_hash: f14c21aeffd5
 ---
 
 The energies of valence-electron transitions in molecules lie at roughly $1.5$–$6\,\mathrm{eV}$, corresponding to ultraviolet–visible light of $200$–$800\,\mathrm{nm}$. Measuring the absorption of light in this range by a solution serves two purposes: the position and shape of the absorption bands reveal the conjugated systems and chromophores in the molecule (the first step of spectral interpretation in 6.5, Organic Chemistry), and the strength of the absorption gives the concentration. The spectrophotometer is the most commonly used instrument in chemical and biological laboratories, indispensable for measuring the concentration of proteins and nucleic acids, following enzymatic reactions and measuring equilibrium constants. The **Beer–Lambert law**, **absorbance** and the **molar absorption coefficient** were defined in [6.3.17](/6.3.17#def-17.2.3); this chapter treats the physical origin of the law, the conditions under which it applies, and measurement error. The physics of molecular energy levels and of the **band spectrum** is in [5.5.5](/5.5.5#sec-5.3), and the principles of the source, monochromator and detector of spectroscopic instruments are in [6.4.7](/6.4.7#sec-7.1.3). At the end of the chapter we introduce two optical methods widely used in bioanalysis: surface plasmon resonance, which measures molecular interactions, and circular dichroism, which is used to determine protein secondary structure. The next chapter ([6.4.10](/6.4.10)) treats how molecules emit light after absorbing photons.
@@ -110,7 +110,7 @@ Conjugation: the larger the conjugated system, the smaller the gap between the h
 | 1,3,5-Hexatriene | 3 | $258$ | $35\,000$ | Colorless |
 | β-Carotene | 11 | $451$ | $1.4\times10^5$ | Orange |
 
-β-Carotene absorbs blue light, which is why carrots are orange; the protonated Schiff base of retinal in the retina (11 conjugated bonds plus the protein environment) absorbs at about $500\,\mathrm{nm}$ and is the molecular basis of vision. The empirical rules for estimating $\lambda_{\max}$ from structure (the Woodward–Fieser rules) are treated in 6.5, Organic Chemistry, together with structure determination.
+β-Carotene absorbs blue light, which is why carrots are orange; the protonated Schiff base of retinal in the retina (six conjugated double bonds including $\ce{C=N}$, plus the protein environment) absorbs at about $500\,\mathrm{nm}$ and is the molecular basis of vision. The empirical rules for estimating $\lambda_{\max}$ from structure (the Woodward–Fieser rules) are treated in 6.5, Organic Chemistry, together with structure determination.
 
 ```smiles
 CC1=C(C(C)(C)CCC1)/C=C/C(C)=C/C=C/C(C)=C/C=C/C=C(C)/C=C/C=C(C)/C=C/C2=C(C)CCCC2(C)C
