@@ -114,7 +114,7 @@ To generate the empty string, one more production $S \to \varepsilon$ is often a
 **Theorem 8.4.1** Every nonempty **context-free language** not containing $\varepsilon$ has a **grammar** in Chomsky normal form.
 
 **Proof** By Theorem 8.3.2 we may assume that $G$ has no ε-productions, no unit productions, and no useless symbols. Then every production with a right side of length 1 has the form $A \to a$ and already meets the requirement. For productions with right sides of length at least 2, we make two transformations:
-1. Separate the terminals: for every terminal $a$ occurring in such right sides, introduce a new variable $C_a$ and a production $C_a \to a$, and replace $a$ in these right sides by $C_a$. Afterwards every right side of length at least 2 contains only variables.
+1. Separate the terminals: for every terminal $a$ occurring in such right sides, introduce a new variable $C_a$ and a production $C_a \to a$, and replace $a$ in these right sides by $C_a$. Afterward every right side of length at least 2 contains only variables.
 2. Binarize: replace $A \to B_1B_2\cdots B_k$ ($k > 2$) by the sequence of productions
 
    $$
@@ -135,7 +135,7 @@ $$
 S \to ZB, \qquad B \to ZE \mid 1, \qquad E \to BC, \qquad C \to 1, \qquad Z \to 0.
 $$
 
-**Remark** The cost of simplification. Eliminating unit productions can make the length of the grammar grow quadratically; when ε-productions are eliminated, a right side with $m$ nullable symbols becomes $2^m$ right sides, which is exponential growth in the worst case. If we binarize first and eliminate ε-productions afterwards, every right side has at most 2 symbols and yields at most 3 productions, so the whole transformation produces a result of size $O(n^2)$ ($n$ is the length of the original grammar). Binarization is not unique; practical parsers merge symbol pairs that often occur next to each other into the same new variable, to reduce the number of new variables.
+**Remark** The cost of simplification. Eliminating unit productions can make the length of the grammar grow quadratically; when ε-productions are eliminated, a right side with $m$ nullable symbols becomes $2^m$ right sides, which is exponential growth in the worst case. If we binarize first and eliminate ε-productions afterward, every right side has at most 2 symbols and yields at most 3 productions, so the whole transformation produces a result of size $O(n^2)$ ($n$ is the length of the original grammar). Binarization is not unique; practical parsers merge symbol pairs that often occur next to each other into the same new variable, to reduce the number of new variables.
 
 ### 8.4.2. Greibach Normal Form
 

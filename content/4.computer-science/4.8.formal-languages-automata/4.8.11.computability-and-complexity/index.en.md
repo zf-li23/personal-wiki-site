@@ -424,7 +424,7 @@ For every position $(i, j)$ and every symbol $X$ (a tape symbol or a state) intr
 
 $E_{M,w}$ is satisfiable if and only if there is a legal table, that is, if $M$ has a computation accepting $w$. $E_{M,w}$ has $O(p(n)^2)$ parts of constant size, the variable subscripts are written in binary, so the encoding length is $O(p(n)^2\log p(n))$, and a deterministic **Turing machine** can write it out part by part from $w$ in polynomial time. Hence $w \mapsto E_{M,w}$ is a polynomial-time reduction from $L$ to SAT. $\square$
 
-Cook (1971) and Levin (1973) proved this theorem independently. Afterwards Karp (1972) used reductions to prove 21 combinatorial problems NP-complete, and NP-completeness became the universal tool for judging the difficulty of problems.
+Cook (1971) and Levin (1973) proved this theorem independently. Afterward Karp (1972) used reductions to prove 21 combinatorial problems NP-complete, and NP-completeness became the universal tool for judging the difficulty of problems.
 
 ### 11.6.3. Typical NP-Complete Problems
 

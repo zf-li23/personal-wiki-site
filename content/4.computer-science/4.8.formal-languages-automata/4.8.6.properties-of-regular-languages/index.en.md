@@ -1,7 +1,7 @@
 ---
 title: Properties of Regular Languages
 description: The pumping lemma for regular languages and its applications (including an example showing that the pumping lemma is not sufficient); closure under union, concatenation, closure, complement, intersection, difference, reversal, homomorphism, and inverse homomorphism, and the product automaton; decision problems of emptiness, membership, finiteness, and equivalence; equivalence and distinguishability of states, the table-filling algorithm and its correctness, DFA minimization; the Myhill–Nerode theorem and uniqueness of the minimal DFA.
-source_hash: cf3a5d459633
+source_hash: 63efb7029598
 ---
 
 The previous two chapters proved that **regular expressions**, **DFAs**, NFAs, and ε-NFAs describe the same family of languages. This chapter studies the properties of this family as a whole and answers four kinds of questions. Which languages are not regular? The pumping lemma and the Myhill–Nerode theorem provide tools for proofs: finitely many states can remember only finite information. Under which operations do regular languages stay regular? Union, intersection, complement, reversal, homomorphism, and others all work; these closure properties are both a means of constructing automata and a means of proving nonregularity. Which questions about regular languages have algorithms? Emptiness, membership, finiteness, and equivalence are all decidable. Finally, a regular language has infinitely many DFAs, among which the one with the fewest states is essentially unique and can be found by the table-filling algorithm. Chapter 9 discusses the same questions for context-free languages, where many answers differ: context-free languages are not closed under intersection and complement, and equivalence is undecidable.
@@ -66,7 +66,7 @@ The pumping lemma is only a necessary condition: some nonregular languages also 
 **Example 6.1.6** $L = \{a^ib^jc^k \mid i, j, k \ge 0, \text{ if } i = 1 \text{ then } j = k\}$ satisfies the conclusion of the pumping lemma (with $n = 2$) but is not regular (Example 6.2.4). Let $w = a^ib^jc^k \in L$ with $\lvert w\rvert \ge 2$, and take $x = \varepsilon$:
 
 - $i = 0$: take $y$ to be the first symbol of $w$. The pumped strings still have the form $b^*c^*$, contain no $a$, and belong to $L$.
-- $i = 1$: take $y = a$. After pumping, the number of $a$s is $k$; for $k \ne 1$ there is no restriction, and for $k = 1$ the string is $w$ itself; all belong to $L$.
+- $i = 1$: take $y = a$. After pumping $y$ $m$ times, the number of $a$s is $m$: for $m \ne 1$ there is no restriction, and for $m = 1$ the string is $w$ itself; all belong to $L$.
 - $i = 2$: take $y = aa$. After pumping, the number of $a$s is even and different from 1.
 - $i \ge 3$: take $y = a$. After pumping, the number of $a$s is at least $i - 1 \ge 2$.
 

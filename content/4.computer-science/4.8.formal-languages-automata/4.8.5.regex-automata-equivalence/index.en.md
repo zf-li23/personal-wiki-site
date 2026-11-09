@@ -75,7 +75,7 @@ Properties 2 and 3 are not decoration. In the construction for closure, if we di
 
 Each step adds at most two states and four arcs, so a regular expression of length $n$ (counting operators and symbols) yields an ε-NFA with at most $2n$ states and $4n$ arcs, each state having at most two outgoing arcs, and the construction takes $O(n)$ time.
 
-**Example 5.1.1** The **Thompson's construction** for $1^*0(0 + 1)^*$, from the inside out: $1$, $0$, $0$, $1$ are each a basic automaton with two states; $1^*$ is obtained by the closure construction as $a$–$d$; $0 + 1$ is obtained by the union construction as $h$–$m$, and the closure construction then gives $g$–$n$; finally two concatenations join the three pieces.
+**Example 5.1.1** Apply **Thompson's construction** to $1^*0(0 + 1)^*$, from the inside out: $1$, $0$, $0$, $1$ are each a basic automaton with two states; $1^*$ is obtained by the closure construction as $a$–$d$; $0 + 1$ is obtained by the union construction as $h$–$m$, and the closure construction then gives $g$–$n$; finally two concatenations join the three pieces.
 
 ```mermaid
 flowchart LR
