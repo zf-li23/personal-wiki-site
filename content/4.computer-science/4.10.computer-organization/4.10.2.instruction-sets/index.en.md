@@ -1,7 +1,7 @@
 ---
 title: Instruction Sets
 description: "The role of instructions and the instruction set, and its design requirements; functional classes of instructions; number of operands and the classification of ISAs (stack, accumulator, register-memory, load-store); instruction length, fixed- and variable-length instructions; opcodes and opcode expansion (the prefix-code condition); the x86 instruction format; addressing modes: immediate, register, direct, indirect, register indirect, indexed, base, PC-relative and stack addressing; the history, characteristics and performance comparison of CISC and RISC."
-source_hash: a0e1571bd73f
+source_hash: 4ed8f2208a90
 ---
 
 The previous chapter made the **instruction set architecture** the interface between software and hardware. This chapter discusses the general questions that arise in designing this interface, not tied to any one processor: which instructions a computer needs; how an instruction is represented as a string of bits, that is, the instruction format and the encoding of opcodes; how an instruction indicates where its data are, that is, the addressing modes; and the two opposing design philosophies in history, complex **instruction sets** (CISC) and reduced instruction sets (RISC). The examples in this chapter come mainly from x86 and RISC-V, two very different **instruction sets**. The next chapter, [4.10.3](/4.10.3), teaches RISC-V in full, and [4.10.6](/4.10.6) then shows from the hardware side how a regular instruction format simplifies processor design.
@@ -101,7 +101,7 @@ $$
 N_3 \cdot 2^{12} + N_2 \cdot 2^{8} + N_1 \cdot 2^{4} + N_0 \le 2^{16}.
 $$
 
-**Proof** Necessity: an opcode of length $\ell$ is followed by $16 - \ell$ address bits, and occupies all the $2^{16-\ell}$ instruction words that have it as a prefix. No opcode is a prefix of another, so different opcodes occupy disjoint sets of instruction words, and the total does not exceed $2^{16}$. Sufficiency: allocate opcodes from short to long. First assign the 4-bit codes $0, 1, \dots, N_3 - 1$ to the three-address instructions; each of the remaining $16 - N_3$ 4-bit codes is extended by 4 bits, giving $(16 - N_3) \cdot 16$ 8-bit codes, from which $N_2$ are taken for the two-address instructions; continue in this way. The number of codes finally available for zero-address instructions is $((16 - N_3) \cdot 16 - N_2) \cdot 16 - N_1) \cdot 16 = 2^{16} - N_3 2^{12} - N_2 2^8 - N_1 2^4$, and the inequality says precisely that this is not less than $N_0$; it also guarantees that the remainder at each intermediate step is nonnegative. $\square$
+**Proof** Necessity: an opcode of length $\ell$ is followed by $16 - \ell$ address bits, and occupies all the $2^{16-\ell}$ instruction words that have it as a prefix. No opcode is a prefix of another, so different opcodes occupy disjoint sets of instruction words, and the total does not exceed $2^{16}$. Sufficiency: allocate opcodes from short to long. First assign the 4-bit codes $0, 1, \dots, N_3 - 1$ to the three-address instructions; each of the remaining $16 - N_3$ 4-bit codes is extended by 4 bits, giving $(16 - N_3) \cdot 16$ 8-bit codes, from which $N_2$ are taken for the two-address instructions; continue in this way. The number of codes finally available for zero-address instructions is $(((16 - N_3) \cdot 16 - N_2) \cdot 16 - N_1) \cdot 16 = 2^{16} - N_3 2^{12} - N_2 2^8 - N_1 2^4$, and the inequality says precisely that this is not less than $N_0$; it also guarantees that the remainder at each intermediate step is nonnegative. $\square$
 
 This is exactly the Kraft inequality $\sum_i 2^{-\ell_i} \le 1$ for prefix codes, multiplied by $2^{16}$. Both schemes of Example 2.2.1 attain equality: $15 \cdot 4096 + 15 \cdot 256 + 15 \cdot 16 + 16 = 65536$ and $14 \cdot 4096 + 30 \cdot 256 + 31 \cdot 16 + 16 = 65536$, so the code space is used up entirely. If we require 15 three-address and 15 two-address instructions and no zero-address instructions, there can be at most $(65536 - 61440 - 3840)/16 = 16$ one-address instructions.
 
@@ -234,12 +234,12 @@ $$
 \frac{\text{Time}}{\text{Program}} = \frac{\text{Instructions}}{\text{Program}} \times \frac{\text{Clock cycles}}{\text{Instruction}} \times \frac{\text{Time}}{\text{Clock cycle}}.
 $$
 
-CISC reduces the first factor, and RISC lowers the second and third. Engineers at DEC compared the VAX and MIPS in similar technology and found that the VAX executed about 75% as many instructions as MIPS for a program, but its average number of cycles per instruction was five to six times that of MIPS. The two had similar **clock rates**, so
+CISC reduces the first factor, and RISC lowers the second and third. Engineers at DEC compared the VAX and MIPS in similar technology and found that the VAX executed about half as many instructions as MIPS for a program, but its average number of cycles per instruction was five to six times that of MIPS. The two had similar **clock rates**, so
 
 $$
-\frac{T_{\mathrm{VAX}}}{T_{\mathrm{MIPS}}} \approx 0.75 \times 5.5 \approx 4,
+\frac{T_{\mathrm{VAX}}}{T_{\mathrm{MIPS}}} \approx 0.5 \times 5.5 \approx 3,
 $$
-and the RISC processor was about 4 times as fast.
+and the RISC processor was about 3 times as fast (Bhandarkar and Clark, 1991, measured about 2.7 times on average over their programs).
 
 **Example 2.4.1** A program needs $10^9$ instructions on a RISC machine, with a **CPI** of 1.2 and a clock rate of 2 GHz; on a CISC machine it needs only $0.6 \times 10^9$ instructions, with a CPI of 3.0 and a clock rate of 2.5 GHz. By Eq. (1.1), the RISC machine takes $10^9 \times 1.2 / (2 \times 10^9) = 0.6\ \mathrm{s}$ and the CISC machine takes $0.6 \times 10^9 \times 3.0 / (2.5 \times 10^9) = 0.72\ \mathrm{s}$. The CISC machine has 40% fewer instructions and a 25% higher clock rate, yet is still 20% slower.
 
@@ -262,4 +262,4 @@ Both x86 and ARM are proprietary: using ARM requires a license fee, and x86 is e
 - By the source of the operands of arithmetic instructions, instruction sets divide into stack, accumulator, register-memory and load-store types; almost all modern instruction sets are of the load-store type.
 - The instruction format specifies how bits are allocated to the opcode and the address fields. Fixed-length instructions ease decoding and pipelining, and variable-length instructions give compact code. Opcode expansion extends the opcode with the bits freed by instructions with fewer address fields; all opcodes must form a **prefix code**, and the necessary and sufficient condition for feasibility is the Kraft inequality.
 - Addressing modes give the address of an operand or of the next instruction: immediate, register, direct, indirect, register indirect, indexed, base, PC-relative and stack. RISC-V uses only four: immediate, register, base and PC-relative.
-- CISC uses complex instructions to reduce the instruction count, while RISC uses simple, regular instructions to lower the CPI and the **clock cycle time**; in similar technology RISC is about 4 times as fast. Today x86 internally decodes instructions into RISC-like micro-operations, and the competition among instruction sets lies mainly in ecosystem and licensing; RISC-V is an open RISC standard.
+- CISC uses complex instructions to reduce the instruction count, while RISC uses simple, regular instructions to lower the CPI and the **clock cycle time**; in similar technology RISC is about 3 times as fast. Today x86 internally decodes instructions into RISC-like micro-operations, and the competition among instruction sets lies mainly in ecosystem and licensing; RISC-V is an open RISC standard.
