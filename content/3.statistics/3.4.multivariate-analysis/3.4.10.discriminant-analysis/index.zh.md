@@ -432,7 +432,7 @@ $$
 \max_{\boldsymbol{\beta}, \beta_0, \|\boldsymbol{\beta}\| = 1} M \quad \text{使得 } y_i(\boldsymbol{\beta}^{\mathsf T}\boldsymbol{x}_i + \beta_0) \ge M(1 - \varepsilon_i), \quad \varepsilon_i \ge 0, \quad \sum_i\varepsilon_i \le C.
 $$
 
-决策树每次按一个变量递归地分割数据，每次分割都使所得结点中类别比例的不纯度函数最小，直到满足停止规则；然后对树剪枝。常用的不纯度函数有两个：熵，其最小化对应于结点标签的多项似然最大化；Gini 指数 $\sum_k \hat p_k(1-\hat p_k)$，它是按结点比例 $\hat p_k$ 随机给点贴标签的规则的期望误判率。
+决策树每次按一个变量递归地分割数据，每次分割都使所得节点中类别比例的不纯度函数最小，直到满足停止规则；然后对树剪枝。常用的不纯度函数有两个：熵，其最小化对应于节点标签的多项似然最大化；Gini 指数 $\sum_k \hat p_k(1-\hat p_k)$，它是按节点比例 $\hat p_k$ 随机给点贴标签的规则的期望误判率。
 
 ## 小结 {#summary}
 

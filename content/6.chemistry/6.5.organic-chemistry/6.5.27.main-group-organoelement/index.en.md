@@ -270,7 +270,7 @@ Hydroboration of a diene with $\ce{ThxBH2}$ gives a cyclic borane first, and on 
 
 Matteson homologation:
 
-**Definition 27.4.2 (Matteson Homologation)** The method in which the alkylboronic ester of a chiral diol (such as pinanediol) reacts with dichloromethyllithium at low temperature to form a borate, an alkyl group displaces one chlorine by 1,2-metallate rearrangement to give an α-chloroboronic ester with one more carbon, and the latter reacts with a Grignard reagent or another nucleophile and displaces the second chlorine by a second 1,2-metallate rearrangement, so that each round adds one carbon and creates one stereocenter of defined configuration, is called **Matteson homologation**. Homologation means the conversion of a compound into its homologue having more carbon atoms.
+**Definition 27.4.2 (Matteson Homologation)** The method in which the alkylboronic ester of a chiral diol (such as pinanediol) reacts with dichloromethyllithium at low temperature to form a borate, an alkyl group displaces one chlorine by 1,2-metallate rearrangement to give an α-chloroboronic ester with one more carbon, and the latter reacts with a Grignard reagent or another nucleophile and displaces the second chlorine by a second 1,2-metallate rearrangement, so that each round adds one carbon and creates one stereocenter of defined configuration, is called **Matteson homologation**. Homologation means the conversion of a compound into its homolog having more carbon atoms.
 
 ![Matteson homologation: dichloromethyllithium (made from $\ce{CH2Cl2}$ and LDA at $-100\,^\circ\mathrm{C}$) adds to the empty orbital of a boronic ester to form a borate; promoted by $\ce{ZnCl2}$, the propyl group migrates with its bonding electrons from boron to the $\ce{CHCl2}$ carbon while one chloride leaves from the back, giving an α-chloroboronic ester. The chiral diol actually used (such as pinanediol) determines which chlorine leaves and hence the configuration of the new stereocenter](./plots/matteson.py)
 
@@ -371,7 +371,7 @@ Allylsilanes are neutral, stable compounds that can be purified by column chroma
 
 ### 27.5.5. The Peterson Olefination
 
-**Definition 27.5.4 (Peterson Olefination)** The reaction in which an α-silyl carbanion (such as $\ce{Me3SiCH2Li}$ or $\ce{Me3SiCH2MgCl}$) adds to an aldehyde or ketone to give a β-hydroxysilane, which eliminates $\ce{R3SiOH}$ to give an alkene, is called the **Peterson olefination** (1968) and can be regarded as the silicon analogue of the **Wittig reaction**.
+**Definition 27.5.4 (Peterson Olefination)** The reaction in which an α-silyl carbanion (such as $\ce{Me3SiCH2Li}$ or $\ce{Me3SiCH2MgCl}$) adds to an aldehyde or ketone to give a β-hydroxysilane, which eliminates $\ce{R3SiOH}$ to give an alkene, is called the **Peterson olefination** (1968) and can be regarded as the silicon analog of the **Wittig reaction**.
 
 Silicon stabilizes an α-**carbanion** (trimethylsilylmethyllithium is made from chloromethyltrimethylsilane and lithium) because of the high polarizability of silicon and **negative hyperconjugation** of the carbanion lone pair (the σ electrons of the C–M bond) into the Si–C σ* orbital; the explanation by "pπ–dπ bonding of 3d orbitals" is outdated. The β-oxidosilane formed in the addition can be isolated as the β-hydroxysilane if the counterion is Li or Mg (strong O–M bond); if it is K or Na, the oxide immediately attacks silicon and eliminates.
 

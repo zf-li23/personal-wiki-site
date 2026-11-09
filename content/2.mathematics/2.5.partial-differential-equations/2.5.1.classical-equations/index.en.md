@@ -204,7 +204,7 @@ Problems for partial differential equations come from models whose data are meas
 
 A problem that is not well-posed is called ill-posed.
 
-Condition 3 is the analogue of **continuous dependence** for ordinary differential equations ([2.4.7](/2.4.7)). The norms are part of the definition: for the wave equation, for example, one measures data and solutions by their maximum or their energy. The classical problems of this course are well-posed: the initial value problem for the wave equation ([2.5.3](/2.5.3)), the initial and initial-boundary value problems for the heat equation ([2.5.7](/2.5.7)) and the Dirichlet problem for the Laplace equation ([2.5.8](/2.5.8)). The point of the definition is that well-posedness depends on matching the type of conditions to the type of equation, as the following classical example shows.
+Condition 3 is the analog of **continuous dependence** for ordinary differential equations ([2.4.7](/2.4.7)). The norms are part of the definition: for the wave equation, for example, one measures data and solutions by their maximum or their energy. The classical problems of this course are well-posed: the initial value problem for the wave equation ([2.5.3](/2.5.3)), the initial and initial-boundary value problems for the heat equation ([2.5.7](/2.5.7)) and the Dirichlet problem for the Laplace equation ([2.5.8](/2.5.8)). The point of the definition is that well-posedness depends on matching the type of conditions to the type of equation, as the following classical example shows.
 
 **Example 1.4.1 (Hadamard's Example)** Consider the initial value problem for the Laplace equation in the half-plane $y>0$:
 

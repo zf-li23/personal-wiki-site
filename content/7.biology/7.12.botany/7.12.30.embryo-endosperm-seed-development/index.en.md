@@ -1,7 +1,7 @@
 ---
 title: Development of the Embryo, Endosperm and Seed
 description: "How an ovule becomes a seed after double fertilization: polarity and first division of the zygote, apical and basal cells, proembryo and suspensor; embryogenesis of shepherd's purse from octant, globular and heart stages through torpedo stage to mature embryo, embryo types and primary meristems; development of the scutellum, coleoptile, coleorhiza and epiblast in the wheat embryo; nuclear, cellular and helobial endosperm, ploidy of the endosperm, perisperm and the division of storage, origin of the endosperm; development of the integuments into the seed coat, arils and fleshy seed coats; seed maturation and desiccation; the angiosperm life cycle compared with those of ferns and gymnosperms."
-source_hash: 75828b22c8e7
+source_hash: c18bf69f2352
 ---
 
 **Double fertilization** ([7.12.29](/7.12.29)) starts two developmental programs at once in the embryo sac: the zygote, formed by the fusion of a sperm cell with the egg cell, develops into the embryo, and the primary endosperm nucleus, formed by the fusion of the other sperm cell with the central cell, develops into the endosperm. At the same time the **integuments** surrounding the embryo sac develop into the seed coat, the whole **ovule** becomes the seed, and the ovary develops into the fruit ([7.12.31](/7.12.31)). The gametophytes of the previous chapter consist of only a few cells; this chapter follows how, within a few weeks, they become a seed containing a young plant, a storage tissue and a protective shell. The mature structure, types, dormancy and germination of seeds were treated in [7.12.19](/7.12.19); this chapter deals with their origin: how the embryo builds an apical–basal axis and the three primary meristems from a single cell (Section 30.1), in which three ways the endosperm develops and why it is triploid (Section 30.2), how the seed coat and aril form (Section 30.3), and how the seed matures and desiccates into a resting state (Section 30.4). Finally the flower, gametophytes, fertilization and seed are joined into the complete life cycle of angiosperms, which is compared with those of ferns and gymnosperms (Section 30.5). The hormonal and genetic control of embryonic pattern formation, and the physiology of storage accumulation and desiccation tolerance in seeds, belong to plant physiology; this chapter describes only morphology and developmental processes.
@@ -26,7 +26,7 @@ Suspensor cells themselves have the potential to develop into an embryo, which i
 
 ### 30.1.2. Dicot Embryo Development: Shepherd's Purse
 
-Development of the dicot embryo is classically studied in shepherd's purse (*Capsella bursa-pastoris*) (Figure 1). Its ovule is campylotropous, and the embryo bends with it during development. The process can be divided into the stages of proembryo, globular embryo, heart-shaped embryo, torpedo-shaped embryo and mature embryo:
+Development of the dicot embryo is classically studied in shepherd's purse (*Capsella bursa-pastoris*) (see the figure below). Its ovule is campylotropous, and the embryo bends with it during development. The process can be divided into the stages of proembryo, globular embryo, heart-shaped embryo, torpedo-shaped embryo and mature embryo:
 
 1. Two-cell stage: the zygote divides unequally and transversely into the apical cell and the basal cell.
 2. Formation of the suspensor: the basal cell, which is slightly larger, divides repeatedly in the transverse plane to form a suspensor of a row of 6–10 cells; the cell nearest the micropyle is especially large, is called the basal cell of the suspensor, is highly vacuolated, and absorbs nutrients from its surroundings.
@@ -55,7 +55,7 @@ By the direction of division of the zygote and of the apical and basal cells, an
 
 The early embryo of monocots also passes through a globular proembryo stage; the difference comes after the cotyledon forms: only one cotyledon forms, located at the apex of the embryo, and the shoot apical meristem lies to one side of the base of the cotyledon, enclosed by a sheath extending from the cotyledon base. The embryo of arrowhead (*Sagittaria*) is of this kind: after the transverse division of the zygote the basal cell becomes a large suspensor cell, the descendants of the apical cell form a cylindrical embryo proper, the cotyledon is terminal, and the depression on one side is the shoot apex.
 
-The grass embryo is the most highly differentiated embryo among angiosperms (for the mature structure see [7.12.19](/7.12.19)). Taking wheat as an example (Figure 2):
+The grass embryo is the most highly differentiated embryo among angiosperms (for the mature structure see [7.12.19](/7.12.19)). Taking wheat as an example (see the figure below):
 
 1. Proembryo: the first division of the zygote is oblique, and each of the two daughter cells divides obliquely once more to give a proembryo of 4 cells; divisions then occur in all directions, and by the 16- to 32-cell stage the embryo is club-shaped, the swollen upper part being the forerunner of the embryo proper and the slender lower part differentiating into the suspensor, with the whole embryo proper covered by a layer of protoderm.
 2. Notch and scutellum: a small notch appears on one side of the club-shaped embryo proper, and at the notch the shoot apical meristem of the axis forms; the part above the notch develops into the cotyledon, which grows rapidly and projects above the apical meristem; later the cells near the top undergo intercalary growth, which extends the cotyledon upward into the **scutellum**, which encloses one side of the embryo and lies against the endosperm.
@@ -105,7 +105,7 @@ Embryo sacs of other types have endosperm of different ploidy ([7.12.28](/7.12.2
 
 ### 30.2.2. Nuclear Endosperm
 
-Endosperm of angiosperms develops in three ways (Figure 3).
+Endosperm of angiosperms develops in three ways (see the figure of endosperm development in Section 30.2.4).
 
 **Definition 30.2.1 (Nuclear, Cellular and Helobial Endosperm)** By whether cell walls form immediately after division of the primary endosperm nucleus, endosperm development is divided into three types:
 
@@ -191,7 +191,7 @@ Seed formation is coordinated with fruit growth: the fertilized ovule sends sign
 
 ### 30.5.1. From Seed to Seed
 
-The whole course of developmental and reproductive stages through which a plant passes in its life, following one another and recurring in regular sequence, is called the *life cycle*. The life cycle of an angiosperm generally begins with a seed (Figure 4): the seed passes through dormancy and, under suitable conditions, germinates into a seedling and gradually grows into a plant with root, stem and leaf; after a period of vegetative growth, some terminal or axillary buds change into flower buds and form flowers; pollen grains form in the anthers of the stamens and embryo sacs in the ovules of the ovary of the pistil; the pollen grains and embryo sacs produce sperm cells and egg cells respectively; after pollination and double fertilization, one sperm cell fuses with the egg cell into the zygote, which later develops into the embryo, and the other fuses with the two polar nuclei of the central cell and develops into the endosperm; the ovary develops into the fruit and the ovules into seeds. The embryo in the seed is the rudiment of the next generation of the plant, and so the whole course "from seed to seed" is generally called the life cycle of an angiosperm.
+The whole course of developmental and reproductive stages through which a plant passes in its life, following one another and recurring in regular sequence, is called the *life cycle*. The life cycle of an angiosperm generally begins with a seed (see the figure below): the seed passes through dormancy and, under suitable conditions, germinates into a seedling and gradually grows into a plant with root, stem and leaf; after a period of vegetative growth, some terminal or axillary buds change into flower buds and form flowers; pollen grains form in the anthers of the stamens and embryo sacs in the ovules of the ovary of the pistil; the pollen grains and embryo sacs produce sperm cells and egg cells respectively; after pollination and double fertilization, one sperm cell fuses with the egg cell into the zygote, which later develops into the embryo, and the other fuses with the two polar nuclei of the central cell and develops into the endosperm; the ovary develops into the fruit and the ovules into seeds. The embryo in the seed is the rudiment of the next generation of the plant, and so the whole course "from seed to seed" is generally called the life cycle of an angiosperm.
 
 The life cycle of angiosperms has two generations (**alternation of generations**, [7.4.1](/7.4.1)):
 

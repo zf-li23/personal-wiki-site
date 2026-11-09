@@ -1,7 +1,7 @@
 ---
 title: "Monocots IV: Poales"
 description: Circumscription and characters of Poales (14 families in APG IV; silica bodies, absence of raphides, repeated origins of wind pollination); Typhaceae (Typha, Sparganium), Bromeliaceae (the multiple fruit of pineapple, air plants and tank bromeliads, crassulacean acid metabolism), Juncaceae, Eriocaulaceae; Cyperaceae (triangular, solid, nodeless culms, three-ranked leaves, closed sheaths, nutlets and perigynia; Schoenoplectus, Cyperus, purple nutsedge, tiger nut, papyrus, Carex, Eleocharis; holocentric chromosomes) and how they differ from Poaceae; Poaceae (culm, leaf sheath, ligule, auricle, structure of spikelet and floret, caryopsis; the 12 subfamilies of Soreng et al. 2017, the BOP and PACMAD clades; rhizome types and flowering of bamboos; rice, wheat and the allohexaploid origin of wheat, barley, oat, reed, feather grass, millet, sugarcane, sorghum, maize and teosinte); the repeated origins of C4 photosynthesis in grasses; the origin and domestication of cereal crops.
-source_hash: e55699cadaa7
+source_hash: 762ef248af2b
 ---
 
 Poales are the order of monocots with the second-largest number of species after Asparagales, about 23,000 species; its Poaceae and Cyperaceae make up the bulk of the world's grasslands, meadows and wetlands, and Poaceae alone provide more than half of the calories consumed by humans: rice, wheat and maize together account for more than 80% of world cereal production, and with barley, sorghum, millet, oat, sugarcane and bamboo the economic importance of Poaceae exceeds that of any other plant family. Most plants of Poales have small flowers without a showy perianth and are wind-pollinated; Cronquist placed such families (Cyperaceae, Poaceae, Juncaceae, Typhaceae) in the subclass Commelinidae, and put the showy, animal-pollinated Bromeliaceae in the Zingiberidae; molecular phylogenetics shows that Bromeliaceae are one of the earliest-diverging families of Poales, and that wind pollination and floral simplification arose several times independently within Poales. This chapter first treats the circumscription of the order and several small families (§39.1), then Cyperaceae (§39.2) and Poaceae (§39.3). For the synapomorphies of the commelinids see [7.12.38](/7.12.38#sec-38.1); for the terminology of the grass flower and spikelet see [7.12.27](/7.12.27#sec-27.5); for leaf structure and the Kranz anatomy of C4 plants see [7.12.23](/7.12.23#sec-23.5.5); for the caryopsis and the structure of the grass seed see [7.12.19](/7.12.19) and [7.12.31](/7.12.31).
@@ -81,7 +81,7 @@ Key characters of the family: culm triangular, solid, nodeless; leaves in 3 rank
 
 ### 39.2.4. How Cyperaceae Differ from Poaceae
 
-Cyperaceae and Poaceae are both wind-pollinated herbs with highly simplified flowers, and in the field they are often lumped together as "grass". They can be distinguished by the following table (Fig. 39.2.1):
+Cyperaceae and Poaceae are both wind-pollinated herbs with highly simplified flowers, and in the field they are often lumped together as "grass". They can be distinguished by the following table (see also the figure below):
 
 | Character | Cyperaceae | Poaceae |
 |---|---|---|
@@ -192,7 +192,7 @@ Pooideae are the main body of temperate grasses, including the cereals (tribe Tr
 
 ### 39.3.7. The Allohexaploid Origin of Wheat
 
-Bread wheat is an allohexaploid ($2n = 6x = 42$, genome AABBDD) formed from three diploid ancestors ($2n = 2x = 14$) by two natural hybridizations and chromosome doublings (Fig. 39.3.3; [7.4.16](/7.4.16), [7.10.12](/7.10.12#sec-12.1.6)):
+Bread wheat is an allohexaploid ($2n = 6x = 42$, genome AABBDD) formed from three diploid ancestors ($2n = 2x = 14$) by two natural hybridizations and chromosome doublings (see the figure below; [7.4.16](/7.4.16), [7.10.12](/7.10.12#sec-12.1.6)):
 
 1. The A genome comes from *Triticum urartu* (AA); the B genome comes from a goatgrass such as *Aegilops speltoides* (SS, the ancestor of BB). The two hybridized naturally some hundreds of thousands of years ago, and the chromosomes of the hybrid doubled, forming the allotetraploid wild emmer wheat (*T. turgidum* subsp. *dicoccoides*, AABB, $2n = 28$).
 2. About 10,000 years ago people in the Fertile Crescent (now southeastern Turkey, Syria and northern Iraq) domesticated wild emmer, giving cultivated emmer (AABB); its descendants include the durum wheat used today for pasta (*T. turgidum* subsp. *durum*).

@@ -1,7 +1,7 @@
 ---
 title: Carbon Assimilation in C3, C4 and CAM Plants
 description: C3, C4 and CAM plants; competition between carboxylation and oxygenation by Rubisco, the temperature dependence of Γ* and the CO2 compensation point; the physiological significance of photorespiration; the three decarboxylation subtypes of C4 plants, CO2 concentration and leakage in the bundle sheath, the energy budget, light regulation and cold sensitivity of key enzymes, single-cell C4; the four phases of CAM, energy and water, facultative CAM; a full comparison of the three plant types; carbon isotope discrimination Δ and δ13C, Δ and water-use efficiency; the evolution of C4 photosynthesis and C4 rice.
-source_hash: 3a71f256c3f6
+source_hash: df9b4dc4cb18
 ---
 
 The ATP and NADPH produced by the light reactions are used to reduce $\ce{CO2}$ to sugar. All oxygenic photosynthetic organisms fix carbon with the same enzyme, **Rubisco**, and the same **Calvin cycle**; their biochemical steps, stoichiometry and light regulation were written up in [7.1.25](/7.1.25), where the reaction sequences of the **C4 pathway** and **crassulacean acid metabolism** are also given. This chapter answers three questions from the viewpoint of plant physiology: Rubisco catalyzes both carboxylation and oxygenation, so what are the consequences of this competition at the leaf level (photorespiration, the **CO₂ compensation point**); how C4 and CAM plants avoid this problem through anatomy, biochemistry and regulation, and what each pays and gains; and how the photosynthetic type of a plant and its stomatal behavior during growth can be inferred from its carbon isotope composition. The structure of the leaf (**Kranz anatomy**) is in [7.12.23](/7.12.23#sec-23.5.6), the quantitative responses of photosynthetic rate to light, $\ce{CO2}$ and temperature are in the next chapter ([7.13.9](/7.13.9)), and the transport and partitioning of photosynthate are in [7.13.11](/7.13.11).
@@ -39,7 +39,7 @@ $$
 $$
 and equals 25, 43 and 70 $\mathrm{\mu mol\,mol^{-1}}$ at 15, 25 and 35 °C. Warming strengthens photorespiration for two reasons: the solubility of $\ce{CO2}$ falls faster than that of $\ce{O2}$, and the specificity factor of Rubisco also falls with temperature.
 
-The carbon lost by a C3 leaf, $0.5\phi$, thus depends on both temperature and $\ce{CO2}$ concentration (Figure 4). Taking intercellular $\ce{CO2}$ as 0.7 of atmospheric, in today's atmosphere (about $420\,\mathrm{\mu mol\,mol^{-1}}$) the loss is about 15% at 25 °C and about 24% at 35 °C; at 35 °C under the last glacial atmosphere ($180\,\mathrm{\mu mol\,mol^{-1}}$) the loss was as high as 56%.
+The carbon lost by a C3 leaf, $0.5\phi$, thus depends on both temperature and $\ce{CO2}$ concentration (see the figure below). Taking intercellular $\ce{CO2}$ as 0.7 of atmospheric, in today's atmosphere (about $420\,\mathrm{\mu mol\,mol^{-1}}$) the loss is about 15% at 25 °C and about 24% at 35 °C; at 35 °C under the last glacial atmosphere ($180\,\mathrm{\mu mol\,mol^{-1}}$) the loss was as high as 56%.
 
 ![Carbon lost to photorespiration in C3 photosynthesis as a function of leaf temperature and atmospheric CO₂. $\Gamma^*$ is calculated from Eq. (8.1) with intercellular CO₂ $c_{\mathrm{i}} = 0.7c_{\mathrm{a}}$ (mesophyll resistance neglected), and the fraction lost is $0.5\phi = \Gamma^*/c_{\mathrm{i}}$. A: contours of the fraction lost; dashed lines are the CO₂ concentrations of the last glacial period (180), the preindustrial period (280), today (about 420) and a high-emission future (700 µmol mol⁻¹); the thick green line marks where the ATP consumed per net CO₂ fixed by C3, $(3 + 3.5\phi)/(1 - 0.5\phi)$, equals that of C4 (5.5 ATP at 20% leakage, Eq. (8.5)); to its lower right (hotter, lower CO₂) C4 is more economical: at 180, 280, 420 and 700 µmol mol⁻¹ the crossover temperatures are about 15, 23, 31 and 42 °C. B: fraction lost against temperature at four CO₂ concentrations](./plots/photorespiration-map.py)
 
@@ -162,7 +162,7 @@ Kranz anatomy is not required for C4 photosynthesis. The Central Asian desert ch
 
 CAM plants make up about 6% of vascular plant species and are concentrated in the Crassulaceae, Cactaceae, Agavaceae, Bromeliaceae and Orchidaceae, including many epiphytes and desert succulents, and crops such as pineapple, agave and prickly pear; the aquatic quillwort *Isoetes* takes up $\ce{CO2}$ from water at night and is also a CAM plant. The name of crassulacean acid metabolism comes from the Crassulaceae: their leaves taste sour in the morning and not sour in the evening.
 
-According to the daily course of stomata and enzyme activity, CAM is divided into four phases (Osmond, 1978; Figure 2):
+According to the daily course of stomata and enzyme activity, CAM is divided into four phases (Osmond, 1978; see the figure below):
 
 | Phase | Time | Stomata | Carbon metabolism |
 |---|---|---|---|
@@ -248,7 +248,7 @@ In C4 plants PEPC fixes $\ce{HCO3-}$; the equilibrium fractionation of $\ce{CO2}
 $$
 \Delta_{\mathrm{C4}} = a + (b_4 + b_3\varphi - a)\,\frac{c_{\mathrm{i}}}{c_{\mathrm{a}}}, \tag{8.9}
 $$
-where $b_3 \approx 30$‰ and $\varphi$ is the leakiness. Since $b_4 + b_3\varphi - a$ is close to zero, $\Delta$ of C4 plants is only 3–5‰ and hardly varies with $c_{\mathrm{i}}/c_{\mathrm{a}}$ (Figure 3). CAM plants fix with PEPC at night and directly with Rubisco in phases II and IV, so their $\delta^{13}\mathrm{C}$ lies between C4 and C3 according to the proportion of the two, and can be used to estimate the share of night-time fixation.
+where $b_3 \approx 30$‰ and $\varphi$ is the leakiness. Since $b_4 + b_3\varphi - a$ is close to zero, $\Delta$ of C4 plants is only 3–5‰ and hardly varies with $c_{\mathrm{i}}/c_{\mathrm{a}}$ (see the figure below). CAM plants fix with PEPC at night and directly with Rubisco in phases II and IV, so their $\delta^{13}\mathrm{C}$ lies between C4 and C3 according to the proportion of the two, and can be used to estimate the share of night-time fixation.
 
 **Example 8.6.1** For a C3 leaf with $c_{\mathrm{i}}/c_{\mathrm{a}} = 0.7$: by Eq. (8.8), $\Delta = 4.4 + 22.6 \times 0.7 = 20.2$‰; by Eq. (8.7), $\delta_{\mathrm{p}} = (\delta_{\mathrm{a}} - \Delta)/(1 + \Delta) = (-8.5 - 20.2)/1.0202 = -28.1$‰. For a C4 leaf with $c_{\mathrm{i}}/c_{\mathrm{a}} = 0.4$ and $\varphi = 0.3$: $b_4 + b_3\varphi - a = -5.7 + 9.0 - 4.4 = -1.1$‰, $\Delta = 4.4 - 0.44 = 4.0$‰, $\delta_{\mathrm{p}} = -12.5$‰. The two fall within the typical ranges of C3 (about −28‰) and C4 (about −14‰), differing by about 15‰, which is easily distinguished by mass spectrometry.
 

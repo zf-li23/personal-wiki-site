@@ -911,7 +911,7 @@ def reverse_2(a: list) -> list:      # move the last element to rank i: O(n^2) i
 
 `reverse_2` is linear on a linked list, but on a Python `list` each `insert(i, ...)` shifts $n - i$ elements, for $\Theta(n^2)$ in all. When frequent insertion and deletion at both ends are needed, Python's choice is `collections.deque`: CPython implements it as a chain of doubly linked blocks, each holding 64 elements, and `append`, `appendleft`, `pop` and `popleft` at the two ends are all $O(1)$, while access by index must advance block by block from the nearer end ([4.3.4](/4.3.4)).
 
-The asymptotic advantage of linked lists is often cancelled by constant factors in practice: nodes are scattered across memory, so traversal has a low cache hit rate, and every node must additionally store two pointers. Unless one really needs frequent insertion and deletion at known positions, or needs the addresses of elements to stay unchanged under insertion and deletion, a vector is usually the better choice ([4.2.10](/4.2.10)).
+The asymptotic advantage of linked lists is often canceled by constant factors in practice: nodes are scattered across memory, so traversal has a low cache hit rate, and every node must additionally store two pointers. Unless one really needs frequent insertion and deletion at known positions, or needs the addresses of elements to stay unchanged under insertion and deletion, a vector is usually the better choice ([4.2.10](/4.2.10)).
 
 ## Summary
 

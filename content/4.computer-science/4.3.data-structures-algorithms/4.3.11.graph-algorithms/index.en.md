@@ -48,7 +48,7 @@ Thus it suffices to push each vertex onto a stack whenever it is marked `VISITED
 
 ### 11.1.4. Implementation
 
-The programs below implement both algorithms. The six courses A–F in the example have the prerequisite relations shown below; afterwards the edge $F \to B$ is added, creating the cycle $B \to D \to F \to B$.
+The programs below implement both algorithms. The six courses A–F in the example have the prerequisite relations shown below; afterward the edge $F \to B$ is added, creating the cycle $B \to D \to F \to B$.
 
 ```mermaid
 flowchart LR
@@ -613,7 +613,7 @@ $$
 $$
 where the second inequality uses the nonnegativity of the weights ($y$ lies on a shortest path from $s$ to $v$). But the algorithm has chosen $v$ rather than $y$ at this moment, so $\operatorname{priority}(v) \le \operatorname{priority}(y)$, a contradiction. $\square$
 
-**Example 11.4.1** A negative edge breaks the second inequality in the proof above. Let the directed edge $A \to B$ have weight $2$, $A \to C$ weight $3$, and $C \to B$ weight $-2$. Starting from $A$, Dijkstra's algorithm first adds $B$ to the tree with distance $2$ and never modifies it afterwards, whereas in fact $\operatorname{dist}(A, B) = 3 - 2 = 1$.
+**Example 11.4.1** A negative edge breaks the second inequality in the proof above. Let the directed edge $A \to B$ have weight $2$, $A \to C$ weight $3$, and $C \to B$ weight $-2$. Starting from $A$, Dijkstra's algorithm first adds $B$ to the tree with distance $2$ and never modifies it afterward, whereas in fact $\operatorname{dist}(A, B) = 3 - 2 = 1$.
 
 :::
 

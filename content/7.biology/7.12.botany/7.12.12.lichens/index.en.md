@@ -1,7 +1,7 @@
 ---
 title: Lichens
 description: "The composition of lichens: the mycobiont and the photobiont, the third partner problem (basidiomycete yeasts and bacteria in lichens); crustose, foliose and fruticose lichens and the scaly, gelatinous and powdery forms; homoiomerous and heteromerous structure (upper cortex, algal layer, medulla, lower cortex, rhizines and umbilicus); vegetative propagation by fragmentation, soredia and isidia and sexual reproduction by apothecia, perithecia and basidiocarps, and reestablishment of the symbiosis; the old classes Ascolichenes, Basidiolichenes and Deuterolichenes and the multiple origins of lichenization, representative genera; lichens as pioneer organisms and indicators of air pollution, and their economic importance."
-source_hash: 0721e772e391
+source_hash: 74c97909d81b
 ---
 
 A lichen is a stable symbiosis of a fungus with a green alga or a cyanobacterium: the hyphae of the fungus surround the photosynthetic cells, and together they form a thallus that is relatively constant in form, structure, physiology and genetics, and different from either partner growing alone. This association allows lichens to grow on cliffs, bare rock, bark, deserts and polar tundra, where they form extensive communities in places where other plants cannot survive; with the lichen acids they secrete they slowly weather rock and so create soil for later plants. Traditional botany treated lichens as a separate division (Lichenes), together with the algae and fungi among the lower plants ([7.12.1](/7.12.1#sec-1.1)); today lichens are classified by their fungus, and "lichen" is a way of life, not a taxon.
@@ -35,7 +35,7 @@ Most lichens love light and require fresh air. They generally grow slowly: crust
 
 ### 12.2.1. Growth Forms
 
-The form of lichens can be divided basically into three types (Figure 1):
+The form of lichens can be divided basically into three types (see the figure below):
 
 **Definition 12.2.1 (Crustose, Foliose and Fruticose Lichens)** A lichen whose thallus is crust-like, with hyphae tightly attached to the substrate (some even penetrating into it), and which is very difficult to detach, is called a *crustose lichen*; a lichen whose thallus is leaf-like with lobes around the margin, attached to the substrate by rhizines or an umbilicus on the lower surface, and easily detached, is called a *foliose lichen*; and a lichen whose thallus is erect or pendent and tree-like, attached to the substrate only at its base, is called a *fruticose lichen*.
 
@@ -52,7 +52,7 @@ Crustose lichens account for about 80% of all lichens. The three types are not s
 
 ### 12.2.2. Structure of Lichens
 
-A cross section of a foliose lichen can be divided from top to bottom into upper cortex, algal layer, medulla and lower cortex (Figure 2):
+A cross section of a foliose lichen can be divided from top to bottom into upper cortex, algal layer, medulla and lower cortex (see the figure below):
 
 - Upper and lower cortex: made of tightly interwoven hyphae, often forming a pseudoparenchyma ([7.12.10](/7.12.10#sec-10.4.2)), with hyphal walls often gelatinized; the upper cortex often contains large amounts of pigments and lichen substances, which make lichens yellow, orange or brown and protect the algal cells from strong light and ultraviolet radiation.
 - Algal layer: below the upper cortex, a layer formed by an aggregation of algal cells, interspersed with hyphae.
@@ -69,7 +69,7 @@ Heteromerous lichens include *Physcia* and *Parmelia*; homoiomerous lichens incl
 
 ### 12.3.1. Vegetative Reproduction
 
-Vegetative reproduction is the commonest mode of reproduction in lichens. Its advantage is that mycobiont and photobiont are dispersed together and need not combine anew in every generation. The main modes are the following (Figure 3):
+Vegetative reproduction is the commonest mode of reproduction in lichens. Its advantage is that mycobiont and photobiont are dispersed together and need not combine anew in every generation. The main modes are the following (see the figure of reproductive structures below):
 
 - Fragmentation: a thallus breaks into several lobes, each of which can develop into a new individual; in fruticose lichens that are brittle when dry (such as the reindeer lichens), trampling by animals and scattering by wind are the main means of spread.
 - Soredia and isidia:
@@ -82,7 +82,7 @@ Soredia are often produced in particular places on the thallus surface or lobe m
 
 Sexual reproduction is carried out by the mycobiont of the lichen and produces ascospores or basidiospores; the former are ascolichens, which make up the great majority of lichen species, and the latter basidiolichens, which are few.
 
-- Apothecia: the mycobiont of most lichens forms apothecia, in which the hymenium contains asci and ascospores, with paraphyses between the asci (Figure 3). Apothecia project from the surface of the lichen. By the structure of the margin they fall into two types: lecanorine apothecia have around the margin a ring (thalline margin) that contains algal cells and is like the thallus, as in *Lecanora*, *Parmelia* and *Usnea*; lecideine apothecia have a margin made of fungal hyphae only, with no algal cells, and are often black, as in *Lecidea* and *Rhizocarpon*. The apothecia of *Graphis* are narrow and curved like writing and are called lirellae. Lichen apothecia can live for many years, producing spores slowly and continuously.
+- Apothecia: the mycobiont of most lichens forms apothecia, in which the hymenium contains asci and ascospores, with paraphyses between the asci (see the figure below). Apothecia project from the surface of the lichen. By the structure of the margin they fall into two types: lecanorine apothecia have around the margin a ring (thalline margin) that contains algal cells and is like the thallus, as in *Lecanora*, *Parmelia* and *Usnea*; lecideine apothecia have a margin made of fungal hyphae only, with no algal cells, and are often black, as in *Lecidea* and *Rhizocarpon*. The apothecia of *Graphis* are narrow and curved like writing and are called lirellae. Lichen apothecia can live for many years, producing spores slowly and continuously.
 - Perithecia: when the mycobiont is an ascomycete that forms perithecia, the perithecia are embedded in the lichen body or slightly exposed, with only the pore opening at the surface, as in *Verrucaria* (common on wet rock and on the seashore).
 - Pycnidia: many lichens form embedded pycnidia on the thallus that produce minute conidia, which can act as spermatia or germinate into hyphae.
 
@@ -102,7 +102,7 @@ Lichens were long treated as a separate group alongside fungi and algae. Chinese
 
 ### 12.4.2. The Present Classification: Multiple Origins of Lichenization
 
-The 1950 Stockholm International Botanical Congress ruled that the name of a lichen applies to its mycobiont; since then lichens have been incorporated into the classification of fungi and placed in classes, orders and families according to the relationships of the mycobiont, while the photobionts have their own names. Molecular phylogeny shows that lichen-forming fungi are scattered across many classes of the Ascomycota and in the Agaricomycetes of the Basidiomycota (Figure 4); that is, the way of life of forming lichens with algae arose independently many times in the fungi (at least five times, Gargas et al. 1995) and was lost again in some lineages. Lutzoni et al. (2001) even argued that the ancestors of many nonlichenized ascomycetes, such as *Penicillium* and *Aspergillus*, were lichenized.
+The 1950 Stockholm International Botanical Congress ruled that the name of a lichen applies to its mycobiont; since then lichens have been incorporated into the classification of fungi and placed in classes, orders and families according to the relationships of the mycobiont, while the photobionts have their own names. Molecular phylogeny shows that lichen-forming fungi are scattered across many classes of the Ascomycota and in the Agaricomycetes of the Basidiomycota (see the figure below); that is, the way of life of forming lichens with algae arose independently many times in the fungi (at least five times, Gargas et al. 1995) and was lost again in some lineages. Lutzoni et al. (2001) even argued that the ancestors of many nonlichenized ascomycetes, such as *Penicillium* and *Aspergillus*, were lichenized.
 
 According to the tally of Lücking et al. (2017), lichen-forming fungi belong to about eight classes of the Ascomycota and to the Agaricomycetes of the Basidiomycota, as follows:
 

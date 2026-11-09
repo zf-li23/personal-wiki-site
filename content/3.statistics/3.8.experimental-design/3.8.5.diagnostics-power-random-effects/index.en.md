@@ -165,7 +165,7 @@ Before an experiment is run, one should decide how many replicates are needed. T
 
 **Definition 5.2.2 (Noncentral F-Distribution)** If $U\sim\chi^2_{\nu_1}(\lambda)$ and $V\sim\chi^2_{\nu_2}$ are independent, the distribution of $(U/\nu_1)/(V/\nu_2)$ is the **noncentral F-distribution** $F_{\nu_1,\nu_2}(\lambda)$; for $\lambda=0$ it is the central **F-distribution**.
 
-These are the analogues of the **noncentral t-distribution** used for the power of $t$-tests ([3.3.3](/3.3.3), [3.8.2](/3.8.2)). The larger the **noncentrality parameter** $\lambda$, the further the distribution is shifted to the right, and the more likely the statistic exceeds a fixed critical value.
+These are the analogs of the **noncentral t-distribution** used for the power of $t$-tests ([3.3.3](/3.3.3), [3.8.2](/3.8.2)). The larger the **noncentrality parameter** $\lambda$, the further the distribution is shifted to the right, and the more likely the statistic exceeds a fixed critical value.
 
 **Theorem 5.2.1** In the balanced one-way fixed-effects model with $n$ observations per level,
 

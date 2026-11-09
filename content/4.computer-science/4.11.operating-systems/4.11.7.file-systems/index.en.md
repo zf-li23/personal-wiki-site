@@ -142,7 +142,7 @@ Symbolic links are everywhere in practice: `/bin -> usr/bin`, versioned shared l
 
 A Linux system has one directory tree, but it is assembled from many file systems.
 
-**Definition 7.1.4 (Mount)** To **mount** a file system is to attach the root of its directory tree to an existing directory, the *mount point*, of the tree already in use; afterwards path names under the mount point are resolved inside the mounted file system.
+**Definition 7.1.4 (Mount)** To **mount** a file system is to attach the root of its directory tree to an existing directory, the *mount point*, of the tree already in use; afterward path names under the mount point are resolved inside the mounted file system.
 
 `findmnt` lists the mounts; on the machine used here, for example:
 
@@ -294,7 +294,7 @@ The early approach was to let inconsistencies happen and repair them at boot wit
 
 The idea of journaling, borrowed from databases, is to write a description of an update to a log before performing it.
 
-**Definition 7.4.2 (Journaling)** A **journaling file system** reserves an area of the device, the *journal*, and performs each update in two phases. First it writes a *transaction* to the journal: a begin block, the new contents of every block the update will change, and finally a *commit* block. Only after the commit block is durable does it *checkpoint*, writing the blocks to their final locations; afterwards the transaction's space in the journal can be reused. This technique is also called **write-ahead logging**.
+**Definition 7.4.2 (Journaling)** A **journaling file system** reserves an area of the device, the *journal*, and performs each update in two phases. First it writes a *transaction* to the journal: a begin block, the new contents of every block the update will change, and finally a *commit* block. Only after the commit block is durable does it *checkpoint*, writing the blocks to their final locations; afterward the transaction's space in the journal can be reused. This technique is also called **write-ahead logging**.
 
 Recovery after a crash is short and simple: the file system scans the journal and *replays* every committed transaction, writing its blocks to their final locations (writing them twice is harmless, since the writes are idempotent), and ignores incomplete transactions. The time is proportional to the size of the journal, not of the file system. The commit block is written separately, and only after the device confirms that the rest of the transaction is durable (using a cache flush, or a checksum over the transaction so that a partially written transaction is detected), because the device may reorder the writes inside its own cache.
 

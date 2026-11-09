@@ -169,7 +169,7 @@ The general model of a process makes the roles of the different inputs explicit 
 
 ![General model of a process: experimental units enter the process, controllable factors x_1 to x_p act from above, uncontrollable factors z_1 to z_q from below, and the output is the response y = f(x_1, ..., x_p) + epsilon](./plots/process_model.py)
 
-**Definition 1.4.1 (Cause-and-Effect Diagram)** A **cause-and-effect diagram** (fishbone or Ishikawa diagram) is a chart in which the response is placed at the head of a horizontal spine and the potential causes of its variation are attached as branches, grouped into categories. It is drawn backwards, from $y$ to the potential $x$'s.
+**Definition 1.4.1 (Cause-and-Effect Diagram)** A **cause-and-effect diagram** (fishbone or Ishikawa diagram) is a chart in which the response is placed at the head of a horizontal spine and the potential causes of its variation are attached as branches, grouped into categories. It is drawn backward, from $y$ to the potential $x$'s.
 
 The traditional categories are measurement, materials, methods, environment, personnel and machines. For planning an experiment it is more useful to sort the causes by how they will be handled in the design. The figure shows such a diagram for an experiment on turbine blades produced by a computer-numerical-controlled (CNC) machine, with the blade profile, surface finish and defects as responses: the controllable design factors are varied in the experiment, held-constant factors are fixed at one level, nuisance factors such as the operator or the tool vendor are known sources of variation that can be handled by blocking ([3.8.2](/3.8.2)), and uncontrollable factors such as the ambient temperature are left to randomization or measured as covariates.
 

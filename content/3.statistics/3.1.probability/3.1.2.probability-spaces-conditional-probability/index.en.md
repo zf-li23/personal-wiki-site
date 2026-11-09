@@ -1,7 +1,7 @@
 ---
 title: Probability Spaces and Conditional Probability
 description: Event fields (σ-algebras), probability measures and probability spaces; monotone sequences of events and the continuity of probability, limits superior and inferior of events and the Borel–Cantelli lemma; conditional probability and the multiplication rule, the law of total probability and Bayes' theorem built on it.
-source_hash: 2d97058c00a1
+source_hash: 532b5adc5cf9
 ---
 
 The previous chapter, [3.1.1](/3.1.1), described a random experiment by "a sample space plus a probability satisfying the axioms", but left a question open: can every subset of the sample space be assigned a probability? This chapter answers it first. Events are restricted to a family of subsets closed under countable set operations (an event field), a probability is a measure defined on that family, and the three together form a probability space, the core of Kolmogorov's axiomatic system. The first consequence of countable additivity is the continuity of probability, which allows us to discuss limits of sequences of events and leads to the Borel–Cantelli lemma. The second half of the chapter introduces conditional probability: how to update our beliefs about events once new information is obtained. The multiplication rule, the law of total probability and Bayes' theorem, all derived from conditional probability, are the three most frequently used tools for computing probabilities. The next chapter, [3.1.3](/3.1.3), uses conditional probability to define independence and introduces random variables.

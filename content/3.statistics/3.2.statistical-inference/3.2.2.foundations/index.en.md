@@ -358,7 +358,7 @@ The support $\{x\colon f(x;\theta)>0\}=\{x\colon h(x)>0\}$ of an exponential fam
 
 ### 2.2.3. The Natural Form
 
-Writing $\varphi_i=Q_i(\theta)$ and expressing $C(\theta)$ as a function $C^*(\varphi)$ of $\varphi=(\varphi_1,\dots,\varphi_k)$ simplifies the form; afterwards we rename $\varphi_i$ as $\theta_i$.
+Writing $\varphi_i=Q_i(\theta)$ and expressing $C(\theta)$ as a function $C^*(\varphi)$ of $\varphi=(\varphi_1,\dots,\varphi_k)$ simplifies the form; afterward we rename $\varphi_i$ as $\theta_i$.
 
 **Definition 2.2.2 (Natural Form)** An exponential family written as
 

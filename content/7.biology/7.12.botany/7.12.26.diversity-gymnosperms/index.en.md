@@ -61,7 +61,7 @@ Only the gnetophytes remain uncertain in the relationships among the subclasses.
 
 ### 26.2.1. Characters of Cycadales
 
-The cycads are the most primitive group of living seed plants. They arose in the Permian and were at their height in the Jurassic (together with the similar-looking bennettitaleans, which is why the Mesozoic is often called the "Age of Cycads"), and declined afterwards; about 370 species survive in the tropics and subtropics.
+The cycads are the most primitive group of living seed plants. They arose in the Permian and were at their height in the Jurassic (together with the similar-looking bennettitaleans, which is why the Mesozoic is often called the "Age of Cycads"), and declined afterward; about 370 species survive in the tropics and subtropics.
 
 - Evergreen woody plants with stout stems that are often unbranched ("pachycaulous"), a very thick pith and cortex and only a narrow ring of xylem; the cambium is active only briefly, and some species undergo anomalous secondary growth through successive cambial rings arising in the cortex; leaf bases persist, so the stem surface is covered with leaf scars.
 - Leaves are spirally arranged and of two kinds: small scale leaves densely covered with brown felt, and large once-pinnate (rarely bipinnate) foliage leaves, borne in alternating whorls; the foliage leaves are crowded at the top of the stem, stiff and leathery; the young leaves and leaflets of *Cycas* are circinate, as in ferns.

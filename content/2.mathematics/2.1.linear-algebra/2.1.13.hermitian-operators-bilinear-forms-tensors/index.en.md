@@ -44,7 +44,7 @@ Hence $D^* = -D$: $D$ is not self-adjoint but skew-adjoint, with eigenvalues $0,
 
 :::
 
-Every complex square matrix can be written uniquely as $A = H + K$, where $H = \frac12(A + A^{\mathsf H})$ is Hermitian and $K = \frac12(A - A^{\mathsf H})$ is skew-Hermitian; this is the analogue of splitting $z = a + b\mathrm{i}$ into real and imaginary parts. Expanding $AA^{\mathsf H}$ and $A^{\mathsf H}A$ shows that $A$ is normal $\Leftrightarrow$ $HK = KH$.
+Every complex square matrix can be written uniquely as $A = H + K$, where $H = \frac12(A + A^{\mathsf H})$ is Hermitian and $K = \frac12(A - A^{\mathsf H})$ is skew-Hermitian; this is the analog of splitting $z = a + b\mathrm{i}$ into real and imaginary parts. Expanding $AA^{\mathsf H}$ and $A^{\mathsf H}A$ shows that $A$ is normal $\Leftrightarrow$ $HK = KH$.
 
 ## 13.2. The Polar Decomposition
 

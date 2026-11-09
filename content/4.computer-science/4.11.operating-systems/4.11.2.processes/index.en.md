@@ -465,7 +465,7 @@ int main(void) {
 reaped 5 children
 ```
 
-A handler interrupts a blocking system call such as `read`; with the flag `SA_RESTART` the kernel restarts the call afterwards, otherwise it fails with `EINTR` and the program must retry. Linux also offers `signalfd`, which turns signals into data read from a file descriptor, so that an event loop ([4.11.6](/4.11.6)) can handle them synchronously like any other input. Multithreaded programs commonly block all signals in every thread and dedicate one thread to waiting for them with `sigwait`.
+A handler interrupts a blocking system call such as `read`; with the flag `SA_RESTART` the kernel restarts the call afterward, otherwise it fails with `EINTR` and the program must retry. Linux also offers `signalfd`, which turns signals into data read from a file descriptor, so that an event loop ([4.11.6](/4.11.6)) can handle them synchronously like any other input. Multithreaded programs commonly block all signals in every thread and dedicate one thread to waiting for them with `sigwait`.
 
 ## Summary
 

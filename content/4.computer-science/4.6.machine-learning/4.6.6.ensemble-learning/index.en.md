@@ -1,7 +1,7 @@
 ---
 title: Ensemble Learning
 description: Why ensembles work (diversity and the bias–variance trade-off); weak learners; the weighted majority algorithm and its mistake bound; stacking; bagging, random forests and out-of-bag error; boosting, AdaBoost and its training error bound; gradient boosting, XGBoost, LightGBM and CatBoost.
-source_hash: d4d01e5ee225
+source_hash: 2e584841a000
 ---
 
 "Three cobblers with their wits combined equal Zhuge Liang," says a Chinese proverb. Ensemble learning combines the predictions of several learners to obtain a prediction that is more accurate and more stable than any one of them. It is one of the most effective techniques of classical machine learning: random forests and gradient boosted trees are still the methods of first choice for tabular data and have long topped data science competitions. This chapter first explains why ensembles work and then introduces four ways of combining: the weighted majority algorithm, which takes weighted votes of different algorithms on the same data; stacking, which uses another learner to learn how to combine; bagging and random forests, which train the same algorithm on bootstrap samples; and boosting, AdaBoost and gradient boosting, which attend sequentially to the "hard" examples. The base learner is often the **decision tree** of [4.5.6](/4.5.6); bagging builds on the **bootstrap** ([3.5.7](/3.5.7)), and the mechanism by which ensembles reduce error can be understood through the **bias–variance trade-off**; statistical methods for evaluating the effect of an ensemble are in [4.6.7](/4.6.7).

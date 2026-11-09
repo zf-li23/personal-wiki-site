@@ -1,6 +1,6 @@
 ---
 title: Basic Concepts of Propositions
-source_hash: 193b4580c49e
+source_hash: 97c209c18d6f
 ---
 
 The core of mathematical logic is the symbolization of logical reasoning. This chapter starts with the simplest case, *propositional logic*: we first explain what a proposition is, then introduce the connectives that combine propositions, define the legitimate formulas and their truth tables, and finally present tautologies and the substitution rule. The next chapter builds on this to discuss equivalence between formulas, normal forms, and inference.

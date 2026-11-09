@@ -84,7 +84,7 @@ Since $\mu = 0$ and $\sigma^2 = \frac{1}{3}$, the central limit theorem gives $S
 $$
 \mathbb{P}(940 \le M_n \le 960) = \mathbb{P}\left(\frac{940 - 1000}{50/\sqrt{n}} \le \frac{M_n - 1000}{50/\sqrt{n}} \le \frac{960 - 1000}{50/\sqrt{n}}\right) \approx \Phi(-4.38) - \Phi(-6.57) \approx 6 \times 10^{-6}.
 $$
-An event of such small probability did occur, so the baker's claim is not credible, and Poincaré complained to the bakery. He kept weighing afterwards and found that the weights now had almost no mass below 950 g but a long right tail, like a bell curve with its left half cut off: the baker was still making light loaves and simply handed the heavier ones to him. Bread weight is affected by many factors (the amounts of flour, water and yeast, the temperature, and so on) and by the central limit theorem should be approximately normal, so the abnormal shape of the distribution is itself evidence of cheating.
+An event of such small probability did occur, so the baker's claim is not credible, and Poincaré complained to the bakery. He kept weighing afterward and found that the weights now had almost no mass below 950 g but a long right tail, like a bell curve with its left half cut off: the baker was still making light loaves and simply handed the heavier ones to him. Bread weight is affected by many factors (the amounts of flour, water and yeast, the temperature, and so on) and by the central limit theorem should be approximately normal, so the abnormal shape of the distribution is itself evidence of cheating.
 
 ## 13.3. Theoretical Extensions
 

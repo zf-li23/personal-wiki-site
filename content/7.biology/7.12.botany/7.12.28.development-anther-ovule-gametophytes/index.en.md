@@ -1,7 +1,7 @@
 ---
 title: Development of the Anther, Ovule and Gametophytes
 description: Development of the anther wall (endothecium, middle layers, tapetum; four types of wall development; secretory and amoeboid tapetum) and dehiscence; meiosis of the pollen mother cell and successive and simultaneous cytokinesis; development of the pollen grain (vegetative and generative cells, two- and three-celled pollen), layers of the pollen wall and apertures; pollen abortion and male sterility (genic, cytoplasmic and the three-line system); structure of the ovule, types of integument and nucellus and the five ovule types; megasporogenesis and development of the Polygonum-type embryo sac, monosporic, bisporic and tetrasporic embryo sacs.
-source_hash: 4b047522a1c5
+source_hash: ca46deebe81b
 ---
 
 The previous chapter treated the stamen as a microsporophyll and the carpel as a megasporophyll ([7.12.27](/7.12.27)). This chapter looks inside them and explains how the two gametophytes of angiosperms arise. In the anther, pollen mother cells undergo meiosis to form microspores, and each microspore develops into a pollen grain, the male gametophyte; in the nucellus of the ovule, a megasporocyte undergoes meiosis to form megaspores, and a megaspore develops into the embryo sac, the female gametophyte. The **alternation of generations** reaches an extreme here: both gametophytes are reduced to a few cells and depend entirely on the sporophyte. Compared with gymnosperms ([7.12.25](/7.12.25)), the male gametophyte is reduced from the 4 cells of pine (plus the early-degenerating prothallial cells) to 2–3 cells, and the female gametophyte from a tissue of several thousand cells with archegonia to 7 cells without archegonia. The structures and embryological terms of this chapter are the basis for double fertilization in [7.12.29](/7.12.29) and for the development of embryo and endosperm in [7.12.30](/7.12.30); the morphology of pollen and embryo sacs is also important taxonomic evidence ([7.12.33](/7.12.33)). The cytology of meiosis is treated in [7.4.1](/7.4.1).
@@ -12,13 +12,13 @@ The previous chapter treated the stamen as a microsporophyll and the carpel as a
 
 A stamen consists of a filament and an anther. The filament is not directly involved in reproduction; it holds the anther in a position favorable to pollination and conveys nutrients to it. Its structure is simple: the outermost layer is a cutinized epidermis, sometimes with hairs and stomata; inside the epidermis is parenchyma, with a single amphivasal (concentric) vascular bundle at the center, composed of sieve tubes and spiral tracheary elements, which runs up to the connective.
 
-The anther is the main part of the stamen and corresponds to a group of microsporangia. In most angiosperms the anther has 4 pollen sacs (microsporangia) in two halves (two thecae) joined by the connective; in a few groups the anther has only 2 pollen sacs, as in the Malvaceae (anthers 1-locular) and some Lamiaceae. When the anther matures, the partition between the two pollen sacs of each side breaks down so that the two sacs are continuous and each side appears to have a single pollen sac, from the opening of which the pollen is shed ([7.12.27](/7.12.27), Figure 2).
+The anther is the main part of the stamen and corresponds to a group of microsporangia. In most angiosperms the anther has 4 pollen sacs (microsporangia) in two halves (two thecae) joined by the connective; in a few groups the anther has only 2 pollen sacs, as in the Malvaceae (anthers 1-locular) and some Lamiaceae. When the anther matures, the partition between the two pollen sacs of each side breaks down so that the two sacs are continuous and each side appears to have a single pollen sac, from the opening of which the pollen is shed (see the figure of the parts of the flower in [7.12.27](/7.12.27)).
 
 ### 28.1.2. Development of the Anther Wall
 
 The apical part of the stamen primordium develops into the anther and the base elongates into the filament. A young anther is very simple in structure: a layer of protoderm outside and, inside, a mass of similar, actively dividing cells. Soon the four corners of the anther primordium divide faster, giving a four-ribbed cross section, and beneath the epidermis at each corner one or several large cells with dense cytoplasm and large nuclei differentiate, called archesporial cells. In cross section the archesporial cells of each corner are in some species single (wheat, cotton) and in most several; in longitudinal section they form one or several rows. The cells in the middle of the anther later differentiate into the parenchyma and vascular bundle of the connective.
 
-An archesporial cell divides once periclinally into two layers, an outer and an inner. The outer layer is called the primary parietal cell (also primary parietal layer); it will form, together with the epidermis, the wall of the pollen sac. The inner layer is the primary sporogenous cell, which will develop into pollen mother cells. The primary parietal cells divide periclinally and anticlinally to form 3–5 layers, which differentiate from the outside inward into the endothecium, the middle layer and the tapetum (Figure 1).
+An archesporial cell divides once periclinally into two layers, an outer and an inner. The outer layer is called the primary parietal cell (also primary parietal layer); it will form, together with the epidermis, the wall of the pollen sac. The inner layer is the primary sporogenous cell, which will develop into pollen mother cells. The primary parietal cells divide periclinally and anticlinally to form 3–5 layers, which differentiate from the outside inward into the endothecium, the middle layer and the tapetum (see the figure below).
 
 **Definition 28.1.1 (Anther Wall)** The wall of the pollen sac consists, from the outside inward, of:
 
@@ -27,7 +27,7 @@ An archesporial cell divides once periclinally into two layers, an outer and an 
 - the middle layer: 1–3 layers of cells inside the endothecium, which at first store much starch and other reserves; during meiosis of the pollen mother cells the reserves decrease, the cells are flattened, and finally the layer disintegrates and disappears;
 - the **tapetum**: the innermost layer of the wall of the pollen sac, with large cells with dense cytoplasm and the features of gland cells, which supplies nutrients and materials for pollen development and breaks down before the pollen matures.
 
-How the primary parietal cells divide to give these layers varies among groups. Davis (1966) distinguished four types of anther wall development according to the division pattern of the secondary parietal layers (Figure 1B). The primary parietal cell first divides periclinally into an outer and an inner secondary parietal cell, and then:
+How the primary parietal cells divide to give these layers varies among groups. Davis (1966) distinguished four types of anther wall development according to the division pattern of the secondary parietal layers (panel B of the figure below). The primary parietal cell first divides periclinally into an outer and an inner secondary parietal cell, and then:
 
 | Type | Outer secondary parietal cell | Inner secondary parietal cell | Wall layers before maturity | Examples |
 |---|---|---|---|---|
@@ -69,7 +69,7 @@ The primary sporogenous cells undergo several mitoses (in some cases none) to fo
 
 Before the pollen mother cells begin meiosis, plasmodesmata connect the cells to one another and the pollen mother cells to the tapetum, and there are even rather wide cytoplasmic channels between pollen mother cells, which keep meiosis synchronous. In prophase I a callose wall forms outside the protoplast of the pollen mother cell, separating each cell from its surroundings; after meiosis is complete each microspore is likewise enclosed by callose.
 
-After the two nuclear divisions of meiosis, cytokinesis proceeds in one of two ways (Figure 2A):
+After the two nuclear divisions of meiosis, cytokinesis proceeds in one of two ways (panel A of the figure below):
 
 | Type of cytokinesis | Process | Arrangement of the tetrad | Common in |
 |---|---|---|---|
@@ -84,7 +84,7 @@ The microspores of a tetrad usually separate later and each develops into a sing
 
 ### 28.3.1. Development of the Male Gametophyte
 
-A microspore released from the tetrad is a uninucleate cell with a very thin wall, dense cytoplasm and a central nucleus, called a uninucleate pollen grain. It takes up nutrients from the tapetum and grows rapidly, and a large vacuole appears that pushes the nucleus against one side of the cell wall (the vacuolate stage). The nucleus then undergoes an asymmetric mitosis (pollen mitosis I), and a curved cell plate divides the cell into two cells of very unequal size (Figure 2B).
+A microspore released from the tetrad is a uninucleate cell with a very thin wall, dense cytoplasm and a central nucleus, called a uninucleate pollen grain. It takes up nutrients from the tapetum and grows rapidly, and a large vacuole appears that pushes the nucleus against one side of the cell wall (the vacuolate stage). The nucleus then undergoes an asymmetric mitosis (pollen mitosis I), and a curved cell plate divides the cell into two cells of very unequal size (panel B of the figure of microsporogenesis in Section 28.2).
 
 **Definition 28.3.1 (Vegetative Cell and Generative Cell)** Of the two cells produced by the asymmetric division of the microspore, the larger is the vegetative cell, which later forms the pollen tube and contains large amounts of starch, lipids and other reserves; the smaller is the generative cell, which later divides once to produce two **sperm cells**, the male gametes.
 
@@ -103,7 +103,7 @@ Development of the pollen wall begins soon after meiosis ends: the exine forms f
 
 **Definition 28.3.2 (Pollen Wall)** The wall of a mature pollen grain has two layers. The **exine** is thick and hard and lacks elasticity; its main component is **sporopollenin**, and its surface often carries various kinds of ornamentation. The intine is thin, soft and elastic, composed of cellulose, pectin, hemicellulose and protein, and surrounds the protoplast of the pollen. The exine has thin areas or openings of definite shape, number and position through which the pollen tube emerges, called **apertures**.
 
-The exine itself has a complex layering (Figure 2C). In Erdtman's terminology the exine is divided into an outer layer (sexine) and an inner layer (nexine): the sexine consists of the roof-like tectum and a row of rod-like columellae supporting it; the nexine consists of the continuous foot layer and the innermost endexine. In the terminology of Faegri and Iversen, the tectum, columellae and foot layer together are called the ektexine, as opposed to the endexine; both sets of terms are in common use. Perforations, spines and reticulate patterns on the tectum make up the ornamentation of the pollen; the cavities between the columellae store substances and exine proteins derived from the tapetum. The pattern of the exine is already fixed at the tetrad stage: inside the callose wall, the microspore first forms a layer of polysaccharide primexine outside the plasma membrane as a template, and sporopollenin is then deposited on the template.
+The exine itself has a complex layering (panel C of the figure of microsporogenesis in Section 28.2). In Erdtman's terminology the exine is divided into an outer layer (sexine) and an inner layer (nexine): the sexine consists of the roof-like tectum and a row of rod-like columellae supporting it; the nexine consists of the continuous foot layer and the innermost endexine. In the terminology of Faegri and Iversen, the tectum, columellae and foot layer together are called the ektexine, as opposed to the endexine; both sets of terms are in common use. Perforations, spines and reticulate patterns on the tectum make up the ornamentation of the pollen; the cavities between the columellae store substances and exine proteins derived from the tapetum. The pattern of the exine is already fixed at the tetrad stage: inside the callose wall, the microspore first forms a layer of polysaccharide primexine outside the plasma membrane as a template, and sporopollenin is then deposited on the template.
 
 Sporopollenin is one of the most chemically resistant biopolymers known, withstanding strong acids, strong bases and microbial degradation, and is preserved in sedimentary rocks for hundreds of millions of years. It is built of aliphatic polyketides and phenylpropanoid monomers cross-linked by ester and ether bonds and is universal in the spore and pollen walls of land plants, one of the key adaptations for the colonization of land ([7.12.14](/7.12.14)). For this reason pollen of ancient plants can be found in strata and peat everywhere, from which the vegetation and climate of the time can be inferred; the discipline that uses pollen morphology to identify plants and study evolutionary relationships and geographic distribution is **palynology** ([7.12.33](/7.12.33)).
 
@@ -111,7 +111,7 @@ The size, shape and ornamentation of pollen grains vary among plants. Most angio
 
 ### 28.3.3. Apertures and Pollen Types
 
-At an aperture the exine is absent or very thin, and the intine is often thickened. By shape, apertures are of two kinds: elongated ones are called colpi (singular colpus, a furrow) and round ones pori (singular porus, a pore); a furrow with a pore at its center is a colporus. According to the number and position of apertures, the common pollen types are (Figure 2D):
+At an aperture the exine is absent or very thin, and the intine is often thickened. By shape, apertures are of two kinds: elongated ones are called colpi (singular colpus, a furrow) and round ones pori (singular porus, a pore); a furrow with a pore at its center is a colporus. According to the number and position of apertures, the common pollen types are (panel D of the figure of microsporogenesis in Section 28.2):
 
 | Type | Apertures | Examples |
 |---|---|---|
@@ -171,7 +171,7 @@ In agriculture, male sterility is also induced with chemicals, called chemical e
 
 ### 28.5.1. Structure of the Ovule
 
-The **ovule** develops from a protuberance formed on the inner surface of the carpel at the ventral suture (on the placenta) (its origin is compared with that of the gymnosperm ovule in [7.12.25](/7.12.25)). By nature, the carpel corresponds to a megasporophyll and the ovule to a megasporangium surrounded by integuments, just as the anther is made of microsporangia. A mature ovule consists of the nucellus, integuments, micropyle, funiculus and chalaza (Figure 3).
+The **ovule** develops from a protuberance formed on the inner surface of the carpel at the ventral suture (on the placenta) (its origin is compared with that of the gymnosperm ovule in [7.12.25](/7.12.25)). By nature, the carpel corresponds to a megasporophyll and the ovule to a megasporangium surrounded by integuments, just as the anther is made of microsporangia. A mature ovule consists of the nucellus, integuments, micropyle, funiculus and chalaza (see the figure of ovule types in Section 28.5.3).
 
 **Definition 28.5.1 (Funiculus and Chalaza)** The stalk-like structure joining the base of the ovule to the placenta is called the funiculus; the vascular bundle of the carpel branches into the ovule through the funiculus. The region at the base of the ovule where integuments, nucellus and funiculus are joined is called the chalaza; it lies opposite the micropyle, and the vascular bundle ends in the chalaza after entering the ovule. In an anatropous ovule, the outer integument next to the funiculus is fused with it, forming an outward-projecting longitudinal ridge called the raphe.
 
@@ -190,7 +190,7 @@ The crassinucellate ovule is the ancestral state and is found in most basal angi
 
 ### 28.5.3. Ovule Types
 
-As the ovule grows, the funiculus and the other parts grow at unequal rates, so that the orientation of the ovule on the funiculus differs (Figure 3):
+As the ovule grows, the funiculus and the other parts grow at unequal rates, so that the orientation of the ovule on the funiculus differs (see the figure below):
 
 **Definition 28.5.3 (Ovule Types)** According to the relative positions of micropyle, nucellus and funiculus, ovules are divided into:
 
@@ -212,11 +212,11 @@ When the integuments begin to form, or slightly earlier, changes also take place
 
 **Definition 28.6.1 (Megasporocyte)** The diploid cell of the nucellus that develops from the archesporial cell (or sporogenous cell) and is about to undergo meiosis to produce megaspores is called the megasporocyte (also the embryo sac mother cell).
 
-Callose also accumulates around the megasporocyte. In the commonest case, after meiosis, with new walls formed after each nuclear division, it produces four haploid **megaspores** in a row at the micropylar end (a linear tetrad), or occasionally in a T shape. Of these, the one at the chalazal end, farthest from the micropyle, enlarges and becomes the functional megaspore; the three at the micropylar end degenerate and disappear by programmed cell death (Figure 4). This process is called megasporogenesis, and the subsequent development of the megaspore into the embryo sac is called megagametogenesis.
+Callose also accumulates around the megasporocyte. In the commonest case, after meiosis, with new walls formed after each nuclear division, it produces four haploid **megaspores** in a row at the micropylar end (a linear tetrad), or occasionally in a T shape. Of these, the one at the chalazal end, farthest from the micropyle, enlarges and becomes the functional megaspore; the three at the micropylar end degenerate and disappear by programmed cell death (see the figure of embryo-sac development in Section 28.6.2). This process is called megasporogenesis, and the subsequent development of the megaspore into the embryo sac is called megagametogenesis.
 
 ### 28.6.2. Development of the Polygonum-Type Embryo Sac and Structure of the Mature Embryo Sac
 
-In about 70% of angiosperms the embryo sac develops from a single megaspore by three mitoses; it is called the Polygonum-type embryo sac, after the genus *Polygonum* in which it was first described in detail, and is also called the normal type. The process is as follows (Figure 4):
+In about 70% of angiosperms the embryo sac develops from a single megaspore by three mitoses; it is called the Polygonum-type embryo sac, after the genus *Polygonum* in which it was first described in detail, and is also called the normal type. The process is as follows (see the figure below):
 
 1. The functional megaspore absorbs nutrients from its surroundings and gradually enlarges, develops a large vacuole (the uninucleate embryo sac) and finally comes to occupy most of the volume of the nucellus.
 2. The nucleus of the uninucleate embryo sac undergoes the first mitosis, and the two daughter nuclei move to the two ends of the embryo sac, with the large vacuole in the center (the binucleate embryo sac).
@@ -237,7 +237,7 @@ Structure and function of the cells of the mature embryo sac:
 
 ### 28.6.3. Types of Embryo Sac
 
-According to the number of megaspore nuclei taking part in forming the embryo sac, embryo sac development falls into three broad classes (Figure 5):
+According to the number of megaspore nuclei taking part in forming the embryo sac, embryo sac development falls into three broad classes (see the figure below):
 
 - Monosporic embryo sac: in meiosis of the megasporocyte, walls form after both divisions, giving four megaspores, of which only one develops into the embryo sac;
 - Bisporic embryo sac: a wall forms after the first meiotic division, giving a dyad; one of the dyad cells degenerates, and the other undergoes the second division without wall formation, so that two haploid nuclei jointly take part in forming the embryo sac;

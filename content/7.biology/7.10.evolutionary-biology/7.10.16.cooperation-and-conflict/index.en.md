@@ -39,7 +39,7 @@ $$
 w > \frac{c}{b}.
 $$
 
-**Proof** The expected number of rounds is $1/(1 - w)$. TFT against TFT cooperates throughout and gains $(b - c)/(1 - w)$. ALLD against TFT gains $b$ in the first round and nothing afterwards, since TFT then defects. TFT resists invasion by rare ALLD if $(b - c)/(1 - w) > b$, that is $b - c > b - bw$, or $w > c/b$. $\square$
+**Proof** The expected number of rounds is $1/(1 - w)$. TFT against TFT cooperates throughout and gains $(b - c)/(1 - w)$. ALLD against TFT gains $b$ in the first round and nothing afterward, since TFT then defects. TFT resists invasion by rare ALLD if $(b - c)/(1 - w) > b$, that is $b - c > b - bw$, or $w > c/b$. $\square$
 
 ALLD can also never be invaded by rare TFT (TFT loses $c$ against ALLD), so the population is bistable: cooperation established among a cluster of reciprocators can spread, but it cannot start from a single mutant in a population of defectors unless interactions are clustered. In Axelrod's computer tournaments (Axelrod and Hamilton 1981), TFT was a successful strategy; with errors, more forgiving strategies, such as "win–stay, lose–shift", which repeats its last move after a good outcome and switches after a bad one, do better (Nowak and Sigmund 1993). Reciprocal cooperation has been described in several fishes, birds and mammals. Common vampire bats (*Desmodus rotundus*), which starve if they miss a blood meal for a few nights, regurgitate blood to roost-mates, including unrelated individuals with which they have long-term bonds; female yellow baboons (*Papio cynocephalus*) with strong social bonds to other females have offspring that survive better. In both, individuals interact repeatedly over long periods.
 

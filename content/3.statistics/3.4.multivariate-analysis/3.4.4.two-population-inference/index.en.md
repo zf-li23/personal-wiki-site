@@ -376,7 +376,7 @@ The idea is simple. If $X_1, \dots, X_n$ are iid with continuous distribution fu
 2. Compute the $\chi^2_p$ quantiles $q_{(j)} = \chi^2_{p,\,1 - p_{(j)}}$, that is, the $p_{(j)}$ quantiles of $\chi^2_p$.
 3. Plot the pairs $(q_{(j)}, d_{(j)}^2)$ and compare them with the line $y = x$.
 
-The *chi-square plot* is the $\chi^2_p$ analogue of the Q–Q plot: under normality the $d_j^2$ are approximately $\chi^2_p$, and the points should lie near the $45°$ line. Points bending upward at the right indicate heavier tails than the normal; isolated points far above the line are candidates for outliers.
+The *chi-square plot* is the $\chi^2_p$ analog of the Q–Q plot: under normality the $d_j^2$ are approximately $\chi^2_p$, and the points should lie near the $45°$ line. Points bending upward at the right indicate heavier tails than the normal; isolated points far above the line are candidates for outliers.
 
 ![Chi-square plots for n = 100 observations in p = 4 dimensions: multivariate normal data follow the line y = x (left), data from a multivariate t distribution with 4 degrees of freedom curve upward because of heavy tails (right)](./plots/chi-square-plot.py)
 

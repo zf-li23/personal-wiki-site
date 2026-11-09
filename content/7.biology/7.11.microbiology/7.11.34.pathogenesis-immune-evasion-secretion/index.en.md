@@ -50,7 +50,7 @@ Antibody is the host's most specific weapon against an extracellular bacterium, 
 
 ### 34.3.1. Destroying or Misusing Antibody
 
-Secretory IgA, the antibody of mucosal surfaces, is cut in its hinge region by IgA1 proteases secreted by *Neisseria gonorrhoeae*, *N. meningitidis*, *Haemophilus influenzae* and *S. pneumoniae* — all of them mucosal colonizers, a striking convergence. Protein A of *S. aureus* and protein G of some streptococci bind the Fc region of IgG, so that the antibody coats the bacterium upside down, its antigen-binding arms pointing outwards and its Fc hidden, exactly the orientation that phagocyte Fc receptors cannot use. (The same binding makes protein A the standard reagent for purifying antibody.)
+Secretory IgA, the antibody of mucosal surfaces, is cut in its hinge region by IgA1 proteases secreted by *Neisseria gonorrhoeae*, *N. meningitidis*, *Haemophilus influenzae* and *S. pneumoniae* — all of them mucosal colonizers, a striking convergence. Protein A of *S. aureus* and protein G of some streptococci bind the Fc region of IgG, so that the antibody coats the bacterium upside down, its antigen-binding arms pointing outward and its Fc hidden, exactly the orientation that phagocyte Fc receptors cannot use. (The same binding makes protein A the standard reagent for purifying antibody.)
 
 ### 34.3.2. Looking like the Host
 

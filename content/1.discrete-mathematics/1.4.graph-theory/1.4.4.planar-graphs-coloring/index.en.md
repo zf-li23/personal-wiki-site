@@ -141,7 +141,7 @@ Both proofs use a bound on the number of edges: $K_5$ has one edge more than the
 
 Second method (Kuratowski's theorem): after deleting the two dashed edges in the figure below, the $3$ blue and the $3$ red vertices have degree $3$ and the other $4$ vertices have degree $2$. Suppressing the vertices of degree $2$, every blue vertex is joined to every red vertex, which gives $K_{3,3}$. Hence the Petersen graph contains a subgraph of type $K^{(2)}$ and, by Theorem 4.3.3, is not planar. $\square$
 
-![A subdivision of K3,3 in the Petersen graph: the blue and red vertices form the two parts of K3,3, the white vertices are degree-2 vertices inserted into its edges, and the two grey dashed edges are not used](./plots/kuratowski.py)
+![A subdivision of K3,3 in the Petersen graph: the blue and red vertices form the two parts of K3,3, the white vertices are degree-2 vertices inserted into its edges, and the two gray dashed edges are not used](./plots/kuratowski.py)
 
 The Petersen graph contains no subdivision of $K_5$ (all its vertices have degree $3$, whereas a subdivision of $K_5$ needs $5$ vertices of degree $4$), so neither $K_5$ nor $K_{3,3}$ can be dropped from Kuratowski's theorem.
 

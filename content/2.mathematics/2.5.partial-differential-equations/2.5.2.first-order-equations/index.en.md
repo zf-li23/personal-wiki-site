@@ -230,7 +230,7 @@ Uniqueness follows from Theorem 2.2.1, since every solution is constant along th
 $$
 T^*=\frac{\mathrm{e}^{1/2}}{\sqrt2}=\sqrt{\frac{\mathrm e}{2}}\approx1.166.
 $$
-The front of the hump steepens, becomes vertical at $t=T^*$, and afterwards the formula (2.11) describes a multivalued "breaking wave", like a wave overturning on a beach.
+The front of the hump steepens, becomes vertical at $t=T^*$, and afterward the formula (2.11) describes a multivalued "breaking wave", like a wave overturning on a beach.
 
 ![Burgers' equation with u(x, 0) = exp(-x²). Left: the characteristics x = x₀ + f(x₀)t cross after the breaking time T* ≈ 1.17. Right: the profile steepens and becomes multivalued for t > T*; the shock (dashed) replaces the overturned part](./plots/burgers-breaking.py)
 

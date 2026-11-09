@@ -224,7 +224,7 @@ $$
 \int_0^\infty\frac{x^{\alpha - 1}}{1 + x}\,\mathrm{d}x = \frac{\pi}{\sin\pi\alpha}. \tag{7.5}
 $$
 
-On the large circle $\lvert zf(z)\rvert \approx R^{\alpha - 1} \to 0$, and on the small circle $\lvert zf(z)\rvert \approx \varepsilon^\alpha \to 0$, so both circles contribute nothing in the limit (Lemma 7.2.1 and its analogue for $\varepsilon \to 0$). The only pole is $-1 = \mathrm{e}^{\mathrm{i}\pi}$ (with the chosen branch), and the residue there is $\mathrm{e}^{\mathrm{i}\pi(\alpha - 1)} = -\mathrm{e}^{\mathrm{i}\pi\alpha}$. Hence
+On the large circle $\lvert zf(z)\rvert \approx R^{\alpha - 1} \to 0$, and on the small circle $\lvert zf(z)\rvert \approx \varepsilon^\alpha \to 0$, so both circles contribute nothing in the limit (Lemma 7.2.1 and its analog for $\varepsilon \to 0$). The only pole is $-1 = \mathrm{e}^{\mathrm{i}\pi}$ (with the chosen branch), and the residue there is $\mathrm{e}^{\mathrm{i}\pi(\alpha - 1)} = -\mathrm{e}^{\mathrm{i}\pi\alpha}$. Hence
 
 $$
 \left(1 - \mathrm{e}^{2\pi\mathrm{i}\alpha}\right)I = -2\pi\mathrm{i}\,\mathrm{e}^{\mathrm{i}\pi\alpha}, \qquad I = \frac{2\pi\mathrm{i}}{\mathrm{e}^{\mathrm{i}\pi\alpha} - \mathrm{e}^{-\mathrm{i}\pi\alpha}} = \frac{\pi}{\sin\pi\alpha}.

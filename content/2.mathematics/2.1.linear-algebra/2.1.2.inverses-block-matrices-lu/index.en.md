@@ -446,7 +446,7 @@ and reading off the lower triangular part of $L$ column by column as $(1, 1, 1)$
 
 :::
 
-Step $j$ of Algorithm 2.10.2 updates $(n-j)^2$ entries, each with one multiplication and one subtraction, for a total of about $\frac23n^3$ floating-point operations; afterwards each system costs only two triangular solves, about $2n^2$. The left panel of the figure below compares the costs of several computations; the right panel shows that when many right-hand sides $\boldsymbol{b}$ must be solved with the same coefficient matrix, "factor once, substitute many times" is far cheaper than eliminating anew each time.
+Step $j$ of Algorithm 2.10.2 updates $(n-j)^2$ entries, each with one multiplication and one subtraction, for a total of about $\frac23n^3$ floating-point operations; afterward each system costs only two triangular solves, about $2n^2$. The left panel of the figure below compares the costs of several computations; the right panel shows that when many right-hand sides $\boldsymbol{b}$ must be solved with the same coefficient matrix, "factor once, substitute many times" is far cheaper than eliminating anew each time.
 
 ![Left: floating-point operation counts of the LU decomposition, of the two triangular solves and of Gauss–Jordan inversion (gray lines are the asymptotic formulas); right: total cost of solving for k right-hand sides when n = 200](./plots/lu-operation-counts.py)
 

@@ -29,7 +29,7 @@ $$
 P_{ij} = \binom{2N}{j}\Bigl(\frac{i}{2N}\Bigr)^j\Bigl(1 - \frac{i}{2N}\Bigr)^{2N - j}. \tag{6.1}
 $$
 
-The states $0$ and $2N$ are absorbing, and the distribution $\boldsymbol{\phi}_t$ of the state over replicate populations evolves as $\boldsymbol{\phi}_{t+1}^{\mathsf T} = \boldsymbol{\phi}_t^{\mathsf T}P$, the discrete-time analogue of a **master equation** ([7.6.32](/7.6.32#sec-32.2)). Two facts follow from linear algebra.
+The states $0$ and $2N$ are absorbing, and the distribution $\boldsymbol{\phi}_t$ of the state over replicate populations evolves as $\boldsymbol{\phi}_{t+1}^{\mathsf T} = \boldsymbol{\phi}_t^{\mathsf T}P$, the discrete-time analog of a **master equation** ([7.6.32](/7.6.32#sec-32.2)). Two facts follow from linear algebra.
 
 **Theorem 6.2.1 (Spectrum of the Wright–Fisher Chain)** The eigenvalues of $P$ are $\lambda_0 = \lambda_1 = 1$ and
 

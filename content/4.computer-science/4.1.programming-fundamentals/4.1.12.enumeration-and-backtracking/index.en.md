@@ -1,7 +1,7 @@
 ---
 title: Enumeration and Backtracking
 description: Enumerating all solutions of a multistep choice with recursion (the staircase problem and the knight's path problem); the "try, recurse, undo" pattern of backtracking and the book assignment problem; the eight queens problem from brute-force enumeration to backtracking and pruning; decision trees, depth-first search, and their relation to backtracking.
-source_hash: 0c14f7cbe018
+source_hash: 5ab6e33e7cd2
 ---
 
 The **exhaustive search** of [4.1.3](/4.1.3) uses several nested loops to check every possible answer one by one. When a solution consists of a number of choices and the number of steps is unknown in advance or varies from case to case, the number of nested loops cannot be written down: how many steps it takes to go down a staircase depends on how many stairs each step covers. Recursion solves this problem: each level of recursion is responsible for one choice, enumerates all possibilities for this step with a loop, and for each possibility recursively handles the remaining steps. This chapter first uses two problems, going downstairs and the knight's path, to establish this pattern of "recursive enumeration", then discusses backtracking for the case where the choices constrain one another: make a choice, recurse, undo the choice, and try the next. The eight queens problem shows how excluding impossible branches as early as possible (pruning) reduces the amount of search by several orders of magnitude. These problems are in essence all depth-first searches on a "decision tree"; [4.1.14](/4.1.14) extends this viewpoint to general state spaces, and [4.3.4](/4.3.4) reexamines trial and backtracking from the viewpoint of the stack.

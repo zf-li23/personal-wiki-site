@@ -127,7 +127,7 @@ Test $H_0\colon m_{0.5}=1.40$ against $H_1\colon m_{0.5}\ne1.40$ at $\alpha=0.05
 
 :::
 
-The one-sided problem $H_0\colon\theta\le0.5$ against $H_1\colon\theta>0.5$ is treated in the same way, rejecting for large $n_+$. The sign test is the simplest test that the population median is zero and the nonparametric analogue of the one-sample $t$ test. Its drawback is that it ignores the magnitudes completely, which makes it inefficient (of low power). Many nonparametric methods instead replace the raw values by their ranks, the positions in the ordered sample: the data $3.2, 2.4, 5, 3.8$ have ranks $2, 1, 4, 3$. In case of ties, mid-ranks (average ranks) are used: the data $105, 120, 120, 121$ have ranks $1, 2.5, 2.5, 4$.
+The one-sided problem $H_0\colon\theta\le0.5$ against $H_1\colon\theta>0.5$ is treated in the same way, rejecting for large $n_+$. The sign test is the simplest test that the population median is zero and the nonparametric analog of the one-sample $t$ test. Its drawback is that it ignores the magnitudes completely, which makes it inefficient (of low power). Many nonparametric methods instead replace the raw values by their ranks, the positions in the ordered sample: the data $3.2, 2.4, 5, 3.8$ have ranks $2, 1, 4, 3$. In case of ties, mid-ranks (average ranks) are used: the data $105, 120, 120, 121$ have ranks $1, 2.5, 2.5, 4$.
 
 ### 6.2.3. The Wilcoxon Signed-Rank Test
 

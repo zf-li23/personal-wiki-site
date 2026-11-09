@@ -85,7 +85,7 @@ The singular values of $L$ are $\sqrt{3 + \varepsilon^2}, \varepsilon, \varepsil
 
 PCA starts from an $n \times p$ data matrix and produces an $n \times k$ matrix of coordinates. In *multidimensional scaling* (MDS) the observed data are only an $n \times n$ matrix $D = (d_{ij})$ of proximities between the $n$ units; a data matrix $X$ may or may not exist. The aim is to represent the proximities by a simple geometric model or map: points $\boldsymbol{z}_1, \dots, \boldsymbol{z}_n$ in a low-dimensional space whose distances reproduce the $d_{ij}$ as well as possible.
 
-Proximity matrices (similarity, dissimilarity or distance matrices) arise either directly, from experiments in which subjects assess the similarity of pairs of stimuli, or indirectly, as correlations, covariances or distances computed from raw profile data. For instance, in a classic study two subjects rated the dissimilarity of every pair of ten brands of cola on a visual analogue scale from $0$ ("same") to $100$ ("different"); the resulting matrix is symmetric and distance-like but need not satisfy the triangle inequality. The airline distances between ten US cities, by contrast, are symmetric, metric (they satisfy the triangle inequality) and nearly Euclidean.
+Proximity matrices (similarity, dissimilarity or distance matrices) arise either directly, from experiments in which subjects assess the similarity of pairs of stimuli, or indirectly, as correlations, covariances or distances computed from raw profile data. For instance, in a classic study two subjects rated the dissimilarity of every pair of ten brands of cola on a visual analog scale from $0$ ("same") to $100$ ("different"); the resulting matrix is symmetric and distance-like but need not satisfy the triangle inequality. The airline distances between ten US cities, by contrast, are symmetric, metric (they satisfy the triangle inequality) and nearly Euclidean.
 
 **Definition 6.2.1 (Proximity Matrix)** An $n \times n$ matrix $D = (d_{ij})$ is called a **proximity matrix** if
 
@@ -308,7 +308,7 @@ t-SNE is designed for the visualization of high-dimensional data in low dimensio
 
 - it gives no explicit map, so it cannot be applied directly to new data;
 - it tends to preserve local structure; distances between clusters and cluster sizes in the map are not meaningful, and data of intrinsically high dimension cannot be represented well in two or three dimensions;
-- it is slow; when the original dimension is very high, PCA is usually applied first and t-SNE afterwards.
+- it is slow; when the original dimension is very high, PCA is usually applied first and t-SNE afterward.
 
 A more recent method with similar aims is UMAP (Uniform Manifold Approximation and Projection, McInnes et al., 2018; R package `umap`), which is faster and preserves more of the global structure.
 

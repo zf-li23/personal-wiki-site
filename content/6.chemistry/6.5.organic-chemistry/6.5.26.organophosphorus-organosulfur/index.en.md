@@ -46,7 +46,7 @@ Phosphorus and nitrogen both belong to Group 15, with valence configuration $3\m
 
 **Definition 26.2.1 (Phosphine)** Phosphine $\ce{PH3}$ and its derivatives $\ce{R_nPH_{3-n}}$ ($n = 1, 2, 3$) in which hydrogen atoms are replaced by hydrocarbon groups are collectively called **phosphines**. According to the number of hydrocarbon groups they are classified as primary, secondary and tertiary phosphines.
 
-The most commonly used tertiary phosphines are triphenylphosphine ($\ce{Ph3P}$, a white crystalline solid stable in air) and tributylphosphine (a liquid readily oxidized by air); trimethylphosphine and many lower trialkylphosphines ignite spontaneously in air. Nitrogen has no five-coordinate analogue, whereas phosphorus forms five-coordinate compounds such as $\ce{Ph5P}$ (Section 26.3.3).
+The most commonly used tertiary phosphines are triphenylphosphine ($\ce{Ph3P}$, a white crystalline solid stable in air) and tributylphosphine (a liquid readily oxidized by air); trimethylphosphine and many lower trialkylphosphines ignite spontaneously in air. Nitrogen has no five-coordinate analog, whereas phosphorus forms five-coordinate compounds such as $\ce{Ph5P}$ (Section 26.3.3).
 
 ### 26.2.2. Derivatives of Phosphorus Oxoacids
 
@@ -338,8 +338,8 @@ This is the same chemistry as the deoxygenation of epoxides by $\ce{Ph3P}$ menti
 Many organophosphorus compounds are strongly bioactive because they resemble phosphate esters in structure:
 
 - Organophosphorus pesticides (trichlorfon, parathion, malathion) and nerve agents (sarin, VX) are derivatives of phosphate or phosphonate esters carrying good leaving groups (F, 4-nitrophenol, enols, and so on). The hydroxyl group of the active-site serine of acetylcholinesterase attacks their phosphorus (substitution at phosphorus, Section 26.3.3), the **leaving group** leaves, the enzyme is irreversibly phosphorylated and inactivated, and acetylcholine accumulates in the synapse, causing poisoning (covalent inhibition in **enzyme catalysis**, [6.3.17](/6.3.17)). The antidote pralidoxime (2-PAM) is a pyridinium oxime whose oximate oxygen is a strong α-effect **nucleophile** and can transfer the phosphoryl group off the serine before "aging" occurs.
-- Glyphosate ($\ce{HO2CCH2NHCH2P(=O)(OH)2}$) contains a P–C bond and is an analogue of phosphoenolpyruvate that inhibits EPSP synthase in the plant pathway of aromatic amino acid biosynthesis.
-- Bisphosphonates (P–C–P) are analogues of pyrophosphate (P–O–P) that are not hydrolyzed in the body; they bind to hydroxyapatite in bone and are used to treat osteoporosis. Phosphonate nucleotide analogues (tenofovir) and "ProTide" prodrugs (sofosbuvir) exploit the stability of P–C or P–N bonds in vivo.
+- Glyphosate ($\ce{HO2CCH2NHCH2P(=O)(OH)2}$) contains a P–C bond and is an analog of phosphoenolpyruvate that inhibits EPSP synthase in the plant pathway of aromatic amino acid biosynthesis.
+- Bisphosphonates (P–C–P) are analogs of pyrophosphate (P–O–P) that are not hydrolyzed in the body; they bind to hydroxyapatite in bone and are used to treat osteoporosis. Phosphonate nucleotide analogs (tenofovir) and "ProTide" prodrugs (sofosbuvir) exploit the stability of P–C or P–N bonds in vivo.
 
 ![Organophosphate inhibition of acetylcholinesterase and reactivation by pralidoxime. Top: the hydroxyl group of the active-site serine attacks the phosphorus of sarin while the imidazole of histidine simultaneously removes the O–H proton; fluoride leaves, serine is phosphonylated, and the enzyme is inactivated. Bottom: the oximate oxygen of pralidoxime (2-PAM, an α-effect nucleophile) attacks the same phosphorus, the serine oxygen leaves, and the enzyme is restored (effective only before the phosphonylated enzyme "ages" by losing its isopropyl group)](./plots/ache-phosphorylation.py)
 
@@ -347,7 +347,7 @@ Many organophosphorus compounds are strongly bioactive because they resemble pho
 
 ### 26.7.1. Classification and Nomenclature
 
-Sulfur and oxygen are both in Group 16, and many oxygen-containing compounds have sulfur analogues; the **oxidation state** of sulfur can also range from −2 to +6, and there are families of compounds with no oxygen counterparts:
+Sulfur and oxygen are both in Group 16, and many oxygen-containing compounds have sulfur analogs; the **oxidation state** of sulfur can also range from −2 to +6, and there are families of compounds with no oxygen counterparts:
 
 | Oxygen compound | Sulfur compound | Structure | Name |
 |---|---|---|---|
@@ -364,7 +364,7 @@ Sulfur and oxygen are both in Group 16, and many oxygen-containing compounds hav
 | none | sulfoxide, sulfone | $\ce{R2S=O}$, $\ce{R2SO2}$ | sulfoxide, sulfone |
 | none | sulfenic, sulfinic, sulfonic acid | RSOH, $\ce{RSO2H}$, $\ce{RSO3H}$ | sulfenic, sulfinic, sulfonic acid |
 
-The last three families and the sulfoxides and sulfones have no oxygen analogues and can be regarded as derivatives of sulfuric or sulfurous acid (a sulfonic acid is sulfuric acid with one OH replaced by a hydrocarbon group, a sulfone has both OH groups replaced). In nomenclature, –SH as a substituent is called sulfanyl (IUPAC 2013) and RS– is called alkylsulfanyl (methylsulfanyl, $\ce{CH3S-}$); when a thiol is the **principal characteristic group**, the suffix -thiol is added to the parent name (ethanethiol).
+The last three families and the sulfoxides and sulfones have no oxygen analogs and can be regarded as derivatives of sulfuric or sulfurous acid (a sulfonic acid is sulfuric acid with one OH replaced by a hydrocarbon group, a sulfone has both OH groups replaced). In nomenclature, –SH as a substituent is called sulfanyl (IUPAC 2013) and RS– is called alkylsulfanyl (methylsulfanyl, $\ce{CH3S-}$); when a thiol is the **principal characteristic group**, the suffix -thiol is added to the parent name (ethanethiol).
 
 ### 26.7.2. Features of Bonding at Sulfur
 
@@ -519,10 +519,10 @@ DMSO can also be activated by other electrophiles: $\ce{SO3}$·pyridine (the Par
 
 ### 26.9.3. Other Reactions of Sulfoxides
 
-- Thermal elimination: a sulfoxide with a β-H undergoes syn elimination on heating (about $100$–$150\,^\circ\mathrm{C}$) through a five-membered transition state (the Ei mechanism), giving an alkene and a sulfenic acid RSOH. The selenium analogue, a selenoxide, eliminates at room temperature, so introducing selenium α to a carbonyl group with PhSeCl and then oxidizing with $\ce{H2O2}$ is a common route from aldehydes and ketones to α,β-unsaturated aldehydes and ketones.
+- Thermal elimination: a sulfoxide with a β-H undergoes syn elimination on heating (about $100$–$150\,^\circ\mathrm{C}$) through a five-membered transition state (the Ei mechanism), giving an alkene and a sulfenic acid RSOH. The selenium analog, a selenoxide, eliminates at room temperature, so introducing selenium α to a carbonyl group with PhSeCl and then oxidizing with $\ce{H2O2}$ is a common route from aldehydes and ketones to α,β-unsaturated aldehydes and ketones.
 - Pummerer rearrangement: a sulfoxide is acylated in acetic anhydride and loses an α-H to give a thionium ion $\ce{RS+=CH2}$; acetate adds to carbon, giving an α-acetoxy sulfide, which amounts to oxidation of the α carbon of a sulfide.
 - The [2,3]-**sigmatropic rearrangement** between allylic sulfoxides and sulfenates (the **Mislow–Evans rearrangement**) and the [2,3] shift of sulfonium ylides are treated in [6.5.30](/6.5.30#sec-30.8.4).
-- Chiral sulfoxides can serve as **chiral auxiliaries**: the addition of the α-**carbanion** of a sulfoxide to carbonyl compounds shows good diastereoselectivity, and sulfur can afterwards be removed with Raney Ni or by thermal elimination.
+- Chiral sulfoxides can serve as **chiral auxiliaries**: the addition of the α-**carbanion** of a sulfoxide to carbonyl compounds shows good diastereoselectivity, and sulfur can afterward be removed with Raney Ni or by thermal elimination.
 
 ![Syn elimination of a selenoxide (Ei): 2-(phenylselanyl)cyclohexanone is oxidized by $\ce{H2O2}$ to the selenoxide, which at room temperature passes through a five-membered transition state in which the oxygen on selenium removes the hydrogen on the adjacent ring carbon (Se and H leave from the same side); the electrons of the C–H bond form the C=C bond and the C–Se bond breaks, giving cyclohex-2-en-1-one and benzeneselenenic acid PhSeOH; thermal elimination of sulfoxides follows the same mechanism but requires heating](./plots/selenoxide-elimination.py)
 

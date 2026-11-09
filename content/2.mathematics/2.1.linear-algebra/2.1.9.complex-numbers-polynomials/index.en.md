@@ -3,7 +3,7 @@ title: Complex Numbers and Polynomials
 source_hash: 69008a5193b0
 ---
 
-How far a matrix can be simplified depends on how far its characteristic polynomial factors over the given number field. For example, $\lambda^4+1$ is irreducible over $\mathbb{Q}$, factors over $\mathbb{R}$ as $(\lambda^2+\sqrt2\lambda+1)(\lambda^2-\sqrt2\lambda+1)$, and factors over $\mathbb{C}$ into four linear factors $\prod_{k=0}^{3}(\lambda-\mathrm{e}^{\mathrm{i}(2k+1)\pi/4})$; correspondingly, a real matrix with this characteristic polynomial can only be reduced to two $2\times2$ blocks over $\mathbb{R}$, but is diagonalizable over $\mathbb{C}$. Example 8.7.2 of [Chapter 8](/2.1.8) makes the same point. This chapter first introduces complex numbers systematically, the number field over which every polynomial factors completely, together with complex matrices and complex vector spaces; it then studies polynomials in one variable over a general number field $\mathbb{F}$: division with remainder, divisibility, greatest common divisors, irreducible polynomials and factorization; and finally it discusses factorization over $\mathbb{C}$, $\mathbb{R}$ and $\mathbb{Q}$ and the relations between roots and coefficients.
+How far a matrix can be simplified depends on how far its characteristic polynomial factors over the given field. For example, $\lambda^4+1$ is irreducible over $\mathbb{Q}$, factors over $\mathbb{R}$ as $(\lambda^2+\sqrt2\lambda+1)(\lambda^2-\sqrt2\lambda+1)$, and factors over $\mathbb{C}$ into four linear factors $\prod_{k=0}^{3}(\lambda-\mathrm{e}^{\mathrm{i}(2k+1)\pi/4})$; correspondingly, a real matrix with this characteristic polynomial can only be reduced to two $2\times2$ blocks over $\mathbb{R}$, but is diagonalizable over $\mathbb{C}$. Example 8.7.2 of [Chapter 8](/2.1.8) makes the same point. This chapter first introduces complex numbers systematically, the field over which every polynomial factors completely, together with complex matrices and complex vector spaces; it then studies polynomials in one variable over a general field $\mathbb{F}$: division with remainder, divisibility, greatest common divisors, irreducible polynomials and factorization; and finally it discusses factorization over $\mathbb{C}$, $\mathbb{R}$ and $\mathbb{Q}$ and the relations between roots and coefficients.
 
 Polynomial theory is used in [Chapter 10](/2.1.10) for minimal polynomials and the generalized eigenspace decomposition: splitting a space into a direct sum of invariant subspaces of a linear transformation rests precisely on coprimality of polynomials and Bézout's identity; deciding whether a matrix is diagonalizable comes down to checking whether its minimal polynomial has repeated roots, which in turn requires only one greatest common divisor computed by the Euclidean algorithm. The matrix functions of [Chapter 11](/2.1.11) are computed with interpolation polynomials. The whole chapter can be read in parallel with the integers: like $\mathbb{Z}$, $\mathbb{F}[x]$ has division with remainder, greatest common divisors and unique factorization, and both are examples of the **polynomial rings** and **integral domains** of discrete mathematics ([1.3.3](/1.3.3)). Polynomial computations also illustrate "standardized solving" throughout: division reduces to synthetic division, the greatest common divisor to repeated division with remainder, and rational roots to finitely many checks.
 
@@ -23,7 +23,7 @@ $$
 
 **Definition 9.1.2 (Complex Conjugate)** The **complex conjugate** of $z=a+b\mathrm{i}$ is $\bar z=a-b\mathrm{i}$. The real number $|z|=\sqrt{a^2+b^2}$ is called the **modulus** of $z$.
 
-Basic properties of conjugation: $\bar z=z$ if and only if $z\in\mathbb{R}$; $\bar z=-z$ if and only if $z$ is zero or purely imaginary; $\overline{z_1\pm z_2}=\bar z_1\pm\bar z_2$ and $\overline{z_1z_2}=\bar z_1\bar z_2$; $z\bar z=a^2+b^2=|z|^2$. By the last identity, for $z\neq0$ we have $\dfrac1z=\dfrac{\bar z}{|z|^2}$ and $\dfrac{z_1}{z_2}=\dfrac{z_1\bar z_2}{|z_2|^2}$. Thus $\mathbb{C}$ is closed under the four arithmetic operations; it is a **number field**, and in fact the largest one.
+Basic properties of conjugation: $\bar z=z$ if and only if $z\in\mathbb{R}$; $\bar z=-z$ if and only if $z$ is zero or purely imaginary; $\overline{z_1\pm z_2}=\bar z_1\pm\bar z_2$ and $\overline{z_1z_2}=\bar z_1\bar z_2$; $z\bar z=a^2+b^2=|z|^2$. By the last identity, for $z\neq0$ we have $\dfrac1z=\dfrac{\bar z}{|z|^2}$ and $\dfrac{z_1}{z_2}=\dfrac{z_1\bar z_2}{|z_2|^2}$. Thus $\mathbb{C}$ is closed under the four arithmetic operations; it is a **field**, and in fact the largest subfield of $\mathbb{C}$.
 
 ### 9.1.2. Geometric Representation and Exponential Form
 
@@ -154,11 +154,11 @@ This points to several goals of the advanced part of linear algebra, all of whic
 
 ## 9.3. Polynomials in One Variable and Division with Remainder
 
-### 9.3.1. Polynomials over a Number Field
+### 9.3.1. Polynomials over a Field
 
-The coefficients of a polynomial are taken from a **number field** $\mathbb{F}$ (Definition 8.1.1 of [Chapter 8](/2.1.8)). Besides $\mathbb{Q},\mathbb{R},\mathbb{C}$ there are many intermediate number fields. For example, $\mathbb{Q}(\sqrt2)=\{a+b\sqrt2\mid a,b\in\mathbb{Q}\}$ is a number field: it is clearly closed under addition, subtraction and multiplication, and for $a+b\sqrt2\neq0$ we have $\dfrac1{a+b\sqrt2}=\dfrac{a-b\sqrt2}{a^2-2b^2}\in\mathbb{Q}(\sqrt2)$ ($a^2-2b^2\neq0$ because $\sqrt2$ is irrational). But $\{a+b\sqrt2+c\sqrt3\mid a,b,c\in\mathbb{Q}\}$ is not a number field, since $\sqrt2\cdot\sqrt3=\sqrt6$ does not belong to it; adding $\sqrt6$ gives $\mathbb{Q}(\sqrt2,\sqrt3)=\{a+b\sqrt2+c\sqrt3+d\sqrt6\}$, which is a number field (closure under multiplication is checked by expanding; to invert an element, first multiply by its "conjugate" with the sign of $\sqrt3$ changed, which yields an element of $\mathbb{Q}(\sqrt2)$, and then use the formula above). The positive reals and the integers are not number fields.
+The coefficients of a polynomial are taken from a field $\mathbb{F}$, a subfield of $\mathbb{C}$ (Definition 8.1.1 of [Chapter 8](/2.1.8)). Besides $\mathbb{Q},\mathbb{R},\mathbb{C}$ there are many intermediate fields. For example, $\mathbb{Q}(\sqrt2)=\{a+b\sqrt2\mid a,b\in\mathbb{Q}\}$ is a field: it is clearly closed under addition, subtraction and multiplication, and for $a+b\sqrt2\neq0$ we have $\dfrac1{a+b\sqrt2}=\dfrac{a-b\sqrt2}{a^2-2b^2}\in\mathbb{Q}(\sqrt2)$ ($a^2-2b^2\neq0$ because $\sqrt2$ is irrational). But $\{a+b\sqrt2+c\sqrt3\mid a,b,c\in\mathbb{Q}\}$ is not a field, since $\sqrt2\cdot\sqrt3=\sqrt6$ does not belong to it; adding $\sqrt6$ gives $\mathbb{Q}(\sqrt2,\sqrt3)=\{a+b\sqrt2+c\sqrt3+d\sqrt6\}$, which is a field (closure under multiplication is checked by expanding; to invert an element, first multiply by its "conjugate" with the sign of $\sqrt3$ changed, which yields an element of $\mathbb{Q}(\sqrt2)$, and then use the formula above). The positive reals and the integers are not fields.
 
-**Definition 9.3.1 (Polynomial)** Let $\mathbb{F}$ be a number field and $x$ an indeterminate. An expression of the form $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ ($a_i\in \mathbb{F}$) is called a **polynomial** (in one variable) over $\mathbb{F}$. When $a_n\neq0$, $a_nx^n$ is called the leading term, $a_n$ the leading coefficient, and $n$ the degree of $f$, written $\deg f$; $a_0$ is called the constant term. A polynomial with leading coefficient $1$ is called a **monic polynomial**. The polynomial whose coefficients are all zero is called the zero polynomial, and its degree is left undefined. The set of all polynomials over $\mathbb{F}$ is written $\mathbb{F}[x]$.
+**Definition 9.3.1 (Polynomial)** Let $\mathbb{F}$ be a field and $x$ an indeterminate. An expression of the form $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ ($a_i\in \mathbb{F}$) is called a **polynomial** (in one variable) over $\mathbb{F}$. When $a_n\neq0$, $a_nx^n$ is called the leading term, $a_n$ the leading coefficient, and $n$ the degree of $f$, written $\deg f$; $a_0$ is called the constant term. A polynomial with leading coefficient $1$ is called a **monic polynomial**. The polynomial whose coefficients are all zero is called the zero polynomial, and its degree is left undefined. The set of all polynomials over $\mathbb{F}$ is written $\mathbb{F}[x]$.
 
 Two polynomials are equal when all their corresponding coefficients are equal. Numbers in $\mathbb{F}$ can be substituted for $x$, and so can square matrices over $\mathbb{F}$: for $f(x)=x^2+2x-3$ and a square matrix $A$, $f(A)=A^2+2A-3I$. The latter is the starting point of matrix functions (Chapter 11).
 
@@ -184,7 +184,7 @@ $q$ and $r$ are called the quotient and the remainder of $f$ divided by $g$.
 
 **Proof** Existence: if $f=0$ or $\deg f<\deg g$, take $q=0$, $r=f$. Otherwise let the leading terms of $f,g$ be $a_nx^n$ and $b_mx^m$ ($n\ge m$); then $f_1=f-\frac{a_n}{b_m}x^{n-m}g$ is zero or of degree less than $n$, and induction on $\deg f$ completes the argument. Uniqueness: if $q_1g+r_1=q_2g+r_2$, then $(q_1-q_2)g=r_2-r_1$; if $q_1\neq q_2$, the left side has degree $\ge\deg g$ while the right side is zero or of degree $<\deg g$, a contradiction. So $q_1=q_2$ and $r_1=r_2$. $\square$
 
-The existence proof is just long division: each step uses the leading term to cancel the leading term of the current dividend. The whole process uses only the four arithmetic operations in $\mathbb{F}$, so the quotient and remainder lie in $\mathbb{F}[x]$ and do not change when $\mathbb{F}$ is replaced by a larger number field; the number of multiplications is about $(\deg f-\deg g+1)(\deg g+1)$.
+The existence proof is just long division: each step uses the leading term to cancel the leading term of the current dividend. The whole process uses only the four arithmetic operations in $\mathbb{F}$, so the quotient and remainder lie in $\mathbb{F}[x]$ and do not change when $\mathbb{F}$ is replaced by a larger field; the number of multiplications is about $(\deg f-\deg g+1)(\deg g+1)$.
 
 **Example 9.3.1** $6x^4-9x^2+18=(6x^2+9)(x^2-3)+45$; $x^5-x^3+3x^2-1=(x^2+2)(x^3-3x+2)+(x^2+6x-5)$.
 
@@ -194,7 +194,7 @@ Basic properties of divisibility:
 
 - if $f\mid g$ and $g\mid f$ ($f,g\neq0$), then $f=cg$ for a nonzero constant $c$ (we then call $f,g$ associates): from $f=gh$ and $g=fk$ we get $f=fkh$, so $\deg(kh)=0$;
 - if $f\mid g_1$ and $f\mid g_2$, then $f\mid g_1h_1+g_2h_2$ for all $h_1,h_2\in \mathbb{F}[x]$;
-- divisibility does not change when the number field is enlarged: if $f,g\in \mathbb{F}[x]$ and $\mathbb{F}\subseteq \mathbb{K}$, then $g\mid f$ in $\mathbb{K}[x]$ if and only if $g\mid f$ in $\mathbb{F}[x]$ (the result of division with remainder does not depend on the field).
+- divisibility does not change when the field is enlarged: if $f,g\in \mathbb{F}[x]$ and $\mathbb{F}\subseteq \mathbb{K}$, then $g\mid f$ in $\mathbb{K}[x]$ if and only if $g\mid f$ in $\mathbb{F}[x]$ (the result of division with remainder does not depend on the field).
 
 ## 9.4. The Remainder Theorem, Synthetic Division and Interpolation
 
@@ -398,7 +398,7 @@ Irreducible polynomials are the "primes" among polynomials: their only factors a
 **Proposition 9.7.1** Let $p\in \mathbb{F}[x]$ be irreducible over $\mathbb{F}$.
 
 1. For a nonzero constant $c$, $cp$ is also irreducible;
-2. if $\mathbb{F}\subseteq \mathbb{K}$ are number fields and $p\in \mathbb{F}[x]$ is irreducible over $\mathbb{K}$, then it is irreducible over $\mathbb{F}$;
+2. if $\mathbb{F}\subseteq \mathbb{K}$ are fields and $p\in \mathbb{F}[x]$ is irreducible over $\mathbb{K}$, then it is irreducible over $\mathbb{F}$;
 3. for every $g\in \mathbb{F}[x]$, either $(p,g)=1$ or $p\mid g$;
 4. if $p\mid gh$, then $p\mid g$ or $p\mid h$.
 
@@ -409,7 +409,7 @@ Irreducible polynomials are the "primes" among polynomials: their only factors a
 1. $f$ can be written as a product of finitely many irreducible polynomials over $\mathbb{F}$;
 2. if $f=p_1p_2\cdots p_s=q_1q_2\cdots q_t$ are two such factorizations, then $s=t$ and, after suitable reordering, $p_i=c_iq_i$ with nonzero constants $c_i$.
 
-**Proof** Existence: induction on $\deg f$. If $f$ is irreducible we are done; otherwise $f=f_1f_2$ with $1\le\deg f_i<\deg f$, and we apply the induction hypothesis to $f_1,f_2$. Uniqueness: induction on $s$. Since $p_1\mid q_1\cdots q_t$, part 4 of Proposition 9.7.1 (extended to several factors) shows that $p_1$ divides some $q_j$, say $j=1$; as $q_1$ is irreducible, $q_1=c_1'p_1$. Cancelling $p_1$ gives $p_2\cdots p_s=c_1'q_2\cdots q_t$, and we apply the induction hypothesis. $\square$
+**Proof** Existence: induction on $\deg f$. If $f$ is irreducible we are done; otherwise $f=f_1f_2$ with $1\le\deg f_i<\deg f$, and we apply the induction hypothesis to $f_1,f_2$. Uniqueness: induction on $s$. Since $p_1\mid q_1\cdots q_t$, part 4 of Proposition 9.7.1 (extended to several factors) shows that $p_1$ divides some $q_j$, say $j=1$; as $q_1$ is irreducible, $q_1=c_1'p_1$. Canceling $p_1$ gives $p_2\cdots p_s=c_1'q_2\cdots q_t$, and we apply the induction hypothesis. $\square$
 
 Pulling out the leading coefficient of each irreducible factor and combining equal factors gives the standard factorization of $f$:
 
@@ -587,7 +587,7 @@ Quadratic, cubic and quartic equations have formulas for their roots, but Abel a
 
 ## Summary
 
-The two threads of this chapter: the complex numbers form the number field over which every polynomial factors completely, and complex arithmetic can be realized by real $2\times2$ matrices; $\mathbb{F}[x]$, like the integers, has division with remainder, greatest common divisors and unique factorization, and all its basic operations have standardized algorithms.
+The two threads of this chapter: the complex numbers form the field over which every polynomial factors completely, and complex arithmetic can be realized by real $2\times2$ matrices; $\mathbb{F}[x]$, like the integers, has division with remainder, greatest common divisors and unique factorization, and all its basic operations have standardized algorithms.
 
 | Topic | Core results | Algorithms and cost |
 |---|---|---|

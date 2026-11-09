@@ -1,6 +1,6 @@
 ---
 title: Fourier 变换与 Laplace 变换
-source_hash: 0908943f98ef
+source_hash: 85002ddeb577
 ---
 
 在有界区间上分离变量，得到的是离散的特征值和 **Fourier 级数**。在整条直线上，没有边界条件把频率"量子化"：每个频率 $\xi\in\mathbb{R}$ 都是允许的，级数变成了积分。Fourier 变换把函数分解为平面波 $\mathrm{e}^{\mathrm{i}\xi x}$，它们是求导运算的特征函数：$\frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^{\mathrm{i}\xi x}=\mathrm{i}\xi\,\mathrm{e}^{\mathrm{i}\xi x}$。在变换之下，求导变为乘以 $\mathrm{i}\xi$，$\mathbb{R}$ 上的常系数线性偏微分方程变为关于其余变量的常微分方程，解的公式则以卷积的形式出现。Fourier 变换在偏微分方程之外同样基本：信号处理、光学、概率论（分布的特征函数就是 Fourier 变换）、量子力学和数值分析都离不开它。

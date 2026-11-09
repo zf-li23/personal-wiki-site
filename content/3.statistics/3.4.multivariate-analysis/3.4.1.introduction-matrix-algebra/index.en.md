@@ -175,7 +175,7 @@ $$
 $$
 because the cross covariances vanish by independence and $\operatorname{Cov}(Y_i, Y_k) = \sigma_{ik}$ because the distributions are equal. Hence $\operatorname{Cov}(\boldsymbol{X} - \boldsymbol{Y}) = 2\Sigma$ and $\mathbb{E}[\boldsymbol{Z}^{\mathsf T}\Sigma^{-1}\boldsymbol{Z}] = \operatorname{tr}(\Sigma^{-1} \cdot 2\Sigma) = 2p$. $\square$
 
-The entrywise computation in the proof is worth doing once; afterwards one should write directly $\operatorname{Cov}(\boldsymbol{X} - \boldsymbol{Y}) = \operatorname{Cov}(\boldsymbol{X}) + \operatorname{Cov}(\boldsymbol{Y}) = 2\Sigma$, exactly as in one dimension. Unlike the Euclidean distance, the expected squared Mahalanobis distance does not depend on the scales or the correlations of the variables: each of the $p$ standardized, decorrelated directions contributes $1$.
+The entrywise computation in the proof is worth doing once; afterward one should write directly $\operatorname{Cov}(\boldsymbol{X} - \boldsymbol{Y}) = \operatorname{Cov}(\boldsymbol{X}) + \operatorname{Cov}(\boldsymbol{Y}) = 2\Sigma$, exactly as in one dimension. Unlike the Euclidean distance, the expected squared Mahalanobis distance does not depend on the scales or the correlations of the variables: each of the $p$ standardized, decorrelated directions contributes $1$.
 
 ## 1.4. Exploratory Data Analysis
 
@@ -250,7 +250,7 @@ An $m \times k$ matrix $A = [\boldsymbol{a}_1, \dots, \boldsymbol{a}_k]$ maps $\
 
 A square matrix $P$ is an **orthogonal matrix** if its rows, viewed as vectors, are mutually perpendicular unit vectors, that is, $PP^{\mathsf T} = I$. Equivalently $P^{-1} = P^{\mathsf T}$, so also $P^{\mathsf T}P = I$ and the columns are orthonormal as well. We usually write an orthogonal matrix by its columns, $P = [\boldsymbol{e}_1, \dots, \boldsymbol{e}_p]$ with $\boldsymbol{e}_i^{\mathsf T}\boldsymbol{e}_k = 0$ for $i \ne k$ and $\boldsymbol{e}_i^{\mathsf T}\boldsymbol{e}_i = 1$.
 
-Orthogonal matrices preserve lengths and angles, and they act as changes of orthonormal coordinate systems. If $\boldsymbol{x}$ is the coordinate vector of a point in the original system and the axes are rotated anticlockwise by $\theta$, the coordinates of the same point in the rotated system are
+Orthogonal matrices preserve lengths and angles, and they act as changes of orthonormal coordinate systems. If $\boldsymbol{x}$ is the coordinate vector of a point in the original system and the axes are rotated counterclockwise by $\theta$, the coordinates of the same point in the rotated system are
 
 $$
 P\boldsymbol{x}, \qquad P = \begin{bmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{bmatrix};

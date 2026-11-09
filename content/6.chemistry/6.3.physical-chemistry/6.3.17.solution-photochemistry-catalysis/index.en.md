@@ -1,6 +1,6 @@
 ---
 title: Reactions in Solution, Photochemistry and Catalysis
-source_hash: ce2e58b88cbf
+source_hash: 24fe7567f495
 ---
 
 The rate theories of [6.3.16](/6.3.16) treat isolated collisions in the gas phase. Real chemistry, and especially the chemistry of living systems, mostly takes place in solution, is often driven by light, and almost always involves a catalyst. This chapter discusses how these three factors change reaction rates. For reactions in solution (17.1) we must account for the surrounding solvent molecules: the reactants first have to diffuse together, and diffusion itself may be the rate-determining step; reactions between ions are also affected by ionic strength and by the dielectric constant, where we use the Debye–Hückel theory of [6.3.12](/6.3.12) and the transition state theory of [6.3.16](/6.3.16). Photochemistry (17.2) studies excited-state molecules produced by the absorption of photons: their energy comes from light rather than from thermal motion, so they can undergo reactions with $\Delta_{\mathrm{r}}G > 0$, as in photosynthesis; the decay processes of excited states (fluorescence, phosphorescence, quenching) are also the basis of fluorescence spectroscopy, a basic tool of biology. Catalytic kinetics (17.3) makes the qualitative description of catalysts in [6.1.7](/6.1.7#sec-7.3.4) quantitative, and ends with the Michaelis–Menten kinetics of enzymes.

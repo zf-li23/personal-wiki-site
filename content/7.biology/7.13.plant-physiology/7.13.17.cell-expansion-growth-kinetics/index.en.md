@@ -1,7 +1,7 @@
 ---
 title: Cell Expansion and Growth Kinetics
 description: "Growth, differentiation and development; cell wall physiology: microfibril orientation and anisotropic growth, diffuse and tip growth, wall stress; the Lockhart equation, yield threshold and wall extensibility, coupling to water uptake and stress relaxation; the acid growth hypothesis and expansins, other hormones and elongation; growth measurement and growth analysis (RGR = NAR × LAR); the grand period of growth and logistic and Gompertz curves; cardinal temperatures, thermoperiodism and thermal time, effects of light, water and minerals; root–shoot ratio, functional balance and allometry."
-source_hash: a60c6516557a
+source_hash: 70ab51b93d4c
 ---
 
 Almost all of plant form is shaped by growth. A plant cannot let its cells migrate and fold into shape the way an animal embryo does; every organ results from cells produced by meristems expanding in place, and the direction and rate of that expansion are set by the cell wall that surrounds each cell. This chapter moves from the scale of the cell to that of the whole plant and the stand. We first show how cells enlarge by letting the wall yield under **turgor pressure** (the Lockhart equation, acid growth and expansins). We then show how to measure and describe whole-plant growth (the relative growth rate and its decomposition, the S-shaped curve of the grand period of growth). Finally we treat how temperature, light, water and nutrients modify growth, and the growth proportions between roots and shoots.
@@ -64,7 +64,7 @@ where $P$ is the **turgor pressure** (that is, the **pressure potential** $\Psi_
 
 ### 17.2.3. Microfibril Orientation and Anisotropic Growth
 
-Turgor pressure is equal in all directions, but wall extension is anisotropic. Microfibrils resist tension, so the wall can hardly lengthen along the microfibrils and can only extend perpendicular to them, by letting microfibrils slide apart. The direction of cell expansion is therefore determined by the orientation of the newly deposited microfibrils (Figure 1).
+Turgor pressure is equal in all directions, but wall extension is anisotropic. Microfibrils resist tension, so the wall can hardly lengthen along the microfibrils and can only extend perpendicular to them, by letting microfibrils slide apart. The direction of cell expansion is therefore determined by the orientation of the newly deposited microfibrils (see the figure below).
 
 - Meristematic cells are isodiametric. If the microfibrils in the primary wall are randomly oriented, the cell expands isotropically and tends toward a sphere.
 - In the side walls of elongating cells such as those of the cortex and vascular tissues of stems and roots, microfibrils are deposited circumferentially (transversely) and restrict radial expansion like barrel hoops, so the cell can only elongate along its long axis. Equation (17.1) shows that the circumferential stress is the largest, and transverse microfibrils reinforce exactly this direction.
@@ -109,7 +109,7 @@ $$
 $$
 where $\phi$ is called the **wall extensibility** (in $\mathrm{h^{-1}\,MPa^{-1}}$) and $Y$ the **yield threshold** (in $\mathrm{MPa}$). This relation is called the Lockhart equation (Lockhart 1965).
 
-Equation (17.2) describes the wall as a Bingham-type viscoplastic material: it does not flow below the yield stress and flows in proportion to the excess above it. The yield threshold of growing tissues is usually $0.1$–$0.5\,\mathrm{MPa}$, which is $0.1$–$0.3\,\mathrm{MPa}$ below the turgor pressure; from diffuse growth rates of 1 %–10 % per hour, $\phi$ is of the order of a few tenths per hour per megapascal. A change in any of turgor, $\phi$ and $Y$ can change the growth rate; hormones and the environment act mainly by changing $\phi$ and $Y$ (the "yielding properties" of the wall) (Figure 2A).
+Equation (17.2) describes the wall as a Bingham-type viscoplastic material: it does not flow below the yield stress and flows in proportion to the excess above it. The yield threshold of growing tissues is usually $0.1$–$0.5\,\mathrm{MPa}$, which is $0.1$–$0.3\,\mathrm{MPa}$ below the turgor pressure; from diffuse growth rates of 1 %–10 % per hour, $\phi$ is of the order of a few tenths per hour per megapascal. A change in any of turgor, $\phi$ and $Y$ can change the growth rate; hormones and the environment act mainly by changing $\phi$ and $Y$ (the "yielding properties" of the wall) (panel A of the Lockhart-model figure in Section 17.3.3).
 
 The rate of water uptake of the same cell is determined by the water potential difference across the membrane (or through the tissue):
 
@@ -141,7 +141,7 @@ $$
 P(t) = Y + (P_0 - Y)\,\mathrm{e}^{-t/\tau}, \qquad \tau = \frac{1}{\varepsilon\phi}.
 \tag{17.6}
 $$
-This is the basis of the in vivo stress relaxation method (Cosgrove 1985): a growing stem segment is excised from its water source and placed at saturating humidity to prevent transpiration, and turgor is followed with a pressure chamber or pressure probe; the final value of turgor gives $Y$, and the decay time constant gives $\varepsilon\phi$ (Figure 2B). Another method measures the growth rate at different osmotic potentials of the external solution and obtains the slope $\phi$ and the intercept $Y$ from the straight line of $\mathrm{d}V/\mathrm{d}t$ against turgor. Isolated walls (killed by freezing and thawing, with turgor removed) are subjected to constant load in an extensometer and their creep is measured, to study the relaxation mechanism of the wall itself (Section 17.4).
+This is the basis of the in vivo stress relaxation method (Cosgrove 1985): a growing stem segment is excised from its water source and placed at saturating humidity to prevent transpiration, and turgor is followed with a pressure chamber or pressure probe; the final value of turgor gives $Y$, and the decay time constant gives $\varepsilon\phi$ (panel B of the figure below). Another method measures the growth rate at different osmotic potentials of the external solution and obtains the slope $\phi$ and the intercept $Y$ from the straight line of $\mathrm{d}V/\mathrm{d}t$ against turgor. Isolated walls (killed by freezing and thawing, with turgor removed) are subjected to constant load in an extensometer and their creep is measured, to study the relaxation mechanism of the wall itself (Section 17.4).
 
 **Example 17.3.1 (Steady-State Growth and Stress Relaxation)** An etiolated hypocotyl segment has $\phi = 0.20\,\mathrm{h^{-1}\,MPa^{-1}}$, $Y = 0.30\,\mathrm{MPa}$, $L = 1.0\,\mathrm{h^{-1}\,MPa^{-1}}$, cell solute potential $\Psi_{\mathrm{s}} = -0.80\,\mathrm{MPa}$, xylem water potential $\Psi_{\mathrm{o}} = -0.10\,\mathrm{MPa}$ and $\varepsilon = 10\,\mathrm{MPa}$.
 
@@ -289,7 +289,7 @@ r(T) = r_{\max}\left(\frac{T_{\max} - T}{T_{\max} - T_{\mathrm{opt}}}\right)\lef
 \tag{17.11}
 $$
 
-Using only three biologically meaningful parameters (the base temperature $T_{\mathrm{b}}$, the optimum temperature $T_{\mathrm{opt}}$ and the maximum temperature $T_{\max}$), it describes an asymmetric bell-shaped curve from the minimum to the maximum temperature: above the optimum the rate declines faster than it rises below. Between the minimum and the optimum temperature the rate rises approximately linearly with temperature (Figure 3A), which is the basis of the concept of thermal time.
+Using only three biologically meaningful parameters (the base temperature $T_{\mathrm{b}}$, the optimum temperature $T_{\mathrm{opt}}$ and the maximum temperature $T_{\max}$), it describes an asymmetric bell-shaped curve from the minimum to the maximum temperature: above the optimum the rate declines faster than it rises below. Between the minimum and the optimum temperature the rate rises approximately linearly with temperature (panel A of the figure below), which is the basis of the concept of thermal time.
 
 **Definition 17.7.1 (Thermal Time)** Between $T_{\mathrm{b}}$ and the optimum temperature, the rate of development is approximately proportional to $T - T_{\mathrm{b}}$, and the sum of temperature times duration needed to complete a developmental stage is approximately constant. The quantity computed from daily mean temperature,
 

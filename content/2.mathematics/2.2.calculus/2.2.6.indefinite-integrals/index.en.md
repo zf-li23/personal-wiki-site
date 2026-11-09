@@ -3,7 +3,7 @@ title: Antiderivatives and Indefinite Integrals
 source_hash: c5a0fdf8a907
 ---
 
-The basic problem of differential calculus is to find the derivative of a given function. This chapter treats the inverse problem: given a derivative $f$, find a function $F$ with $F' = f$. This is the problem of finding an antiderivative, or computing an indefinite integral, and it is the inverse of differentiation. Because the rules of differentiation can be applied mechanically, the derivative of every elementary function can be computed; finding antiderivatives, by contrast, has no general algorithm. There are only a few basic methods (substitution, integration by parts, and systematic treatments of rational functions, rational functions of sines and cosines, and a few classes of irrational functions), and each of them is some differentiation rule read backwards. A small change in the form of the integrand can turn an easy integral into a hard one, or even into one whose antiderivative cannot be expressed in elementary functions. This chapter relies on the differentiation formulas of [2.2.4](/2.2.4) and on the **mean value theorem** of [2.2.5](/2.2.5); in the next chapter ([2.2.7](/2.2.7)) the **fundamental theorem of calculus** reduces the evaluation of definite integrals to finding antiderivatives, and the solution of ordinary differential equations ([2.2.15](/2.2.15)) makes heavy use of the integration techniques developed here.
+The basic problem of differential calculus is to find the derivative of a given function. This chapter treats the inverse problem: given a derivative $f$, find a function $F$ with $F' = f$. This is the problem of finding an antiderivative, or computing an indefinite integral, and it is the inverse of differentiation. Because the rules of differentiation can be applied mechanically, the derivative of every elementary function can be computed; finding antiderivatives, by contrast, has no general algorithm. There are only a few basic methods (substitution, integration by parts, and systematic treatments of rational functions, rational functions of sines and cosines, and a few classes of irrational functions), and each of them is some differentiation rule read backward. A small change in the form of the integrand can turn an easy integral into a hard one, or even into one whose antiderivative cannot be expressed in elementary functions. This chapter relies on the differentiation formulas of [2.2.4](/2.2.4) and on the **mean value theorem** of [2.2.5](/2.2.5); in the next chapter ([2.2.7](/2.2.7)) the **fundamental theorem of calculus** reduces the evaluation of definite integrals to finding antiderivatives, and the solution of ordinary differential equations ([2.2.15](/2.2.15)) makes heavy use of the integration techniques developed here.
 
 ## 6.1. The Indefinite Integral and Its Properties
 
@@ -41,7 +41,7 @@ Geometrically, the graph of an antiderivative $y = F(x)$ is called an integral c
 
 ### 6.1.3. Table of Basic Integrals
 
-Reading the table of derivatives in [2.2.4](/2.2.4) backwards gives the basic integration formulas:
+Reading the table of derivatives in [2.2.4](/2.2.4) backward gives the basic integration formulas:
 
 | Integral | Result | Integral | Result |
 |---|---|---|---|
@@ -112,7 +112,7 @@ $$
 
 ### 6.2.1. The First Substitution Rule
 
-Reading the chain rule $\bigl(F(\varphi(x))\bigr)' = F'(\varphi(x))\varphi'(x)$ backwards gives the first substitution rule.
+Reading the chain rule $\bigl(F(\varphi(x))\bigr)' = F'(\varphi(x))\varphi'(x)$ backward gives the first substitution rule.
 
 **Theorem 6.2.1 (First Substitution Rule)** If $\int f(u)\,\mathrm{d}u = F(u)+C$ and $\varphi$ is differentiable, then
 
@@ -557,7 +557,7 @@ $$
 
 ## Summary
 
-Each method of indefinite integration is a differentiation rule read backwards:
+Each method of indefinite integration is a differentiation rule read backward:
 
 | Method | Formula | Corresponding differentiation rule | When to use |
 |---|---|---|---|

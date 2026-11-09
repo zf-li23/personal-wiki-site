@@ -1,7 +1,7 @@
 ---
 title: "Monocots I: Acorales, Alismatales, Dioscoreales, Pandanales and Liliales"
 description: Circumscription, synapomorphies and exceptions of the monocots and the 11 orders of APG IV; Acorales (Acoraceae separated from Araceae); Alismatales (spathe and spadix of Araceae, duckweeds; Alismataceae, Butomaceae, Hydrocharitaceae and water pollination, Potamogetonaceae and seagrasses); Petrosaviales and Dioscoreales (Dioscoreaceae, Tacca, diosgenin); Pandanales (Pandanaceae, Stemonaceae, Triuridaceae); Liliales (Liliaceae s.s., Melanthiaceae, Smilacaceae, Colchicaceae and colchicine, Alstroemeriaceae); the splitting of the broadly defined Liliaceae in APG IV.
-source_hash: 320e24f39c10
+source_hash: 093161da6582
 ---
 
 The monocots comprise some 65,000 to 70,000 species, more than a fifth of all angiosperms, and include the most important food plants of humankind (rice, wheat, maize), sugar plants (sugarcane), oil and fruit plants (oil palm, coconut, banana, pineapple), spices (ginger, vanilla, saffron) and by far the largest number of ornamentals (orchids, lilies, tulips, irises). They are one of the few large angiosperm groups recognized as a natural group in both traditional classification and molecular phylogenetics: from de Candolle to Cronquist the monocots formed a class, and in the APG system they are a clade within the Mesangiospermae, alongside the magnoliids, Chloranthales, Ceratophyllales and the eudicots ([7.12.33](/7.12.33#sec-33.5.1)). What has changed most is the internal classification: Cronquist's five subclasses have been regrouped into 11 orders, and his Liliaceae has been split into a dozen or more families placed in two orders. The monocots are treated in four chapters. This chapter gives an overview of the monocots and treats the earliest-diverging orders: Acorales, Alismatales, Petrosaviales, Dioscoreales, Pandanales and Liliales. [7.12.37](/7.12.37) treats Asparagales (Orchidaceae, Iridaceae, Amaryllidaceae, Asparagaceae and others), and [7.12.38](/7.12.38) and [7.12.39](/7.12.39) treat the commelinid orders Arecales, Commelinales, Zingiberales and Poales. For the origin of the monocots see [7.12.34](/7.12.34#sec-34.2.5); for the anatomy of roots, stems and leaves see [7.12.20](/7.12.20)–[7.12.23](/7.12.23); for the notation of floral formulas see [7.12.27](/7.12.27#sec-27.6).
@@ -43,7 +43,7 @@ All of these characters have exceptions, and the exceptions are concentrated in 
 
 ### 36.1.4. Phylogeny of the Monocots
 
-The 11 orders of APG IV (Fig. 36.1.2) diverge in the following sequence: Acorales are sister to all other monocots; next come Alismatales; Petrosaviales are sister to all the remaining orders; Dioscoreales and Pandanales form a clade; further up come Liliales, Asparagales and the commelinids in turn. The commelinids comprise Arecales, Poales and the sister orders Commelinales and Zingiberales ([7.12.38](/7.12.38)).
+The 11 orders of APG IV (see the monocot phylogeny in Section 36.6.1) diverge in the following sequence: Acorales are sister to all other monocots; next come Alismatales; Petrosaviales are sister to all the remaining orders; Dioscoreales and Pandanales form a clade; further up come Liliales, Asparagales and the commelinids in turn. The commelinids comprise Arecales, Poales and the sister orders Commelinales and Zingiberales ([7.12.38](/7.12.38)).
 
 | Order | Main families (APG IV) | This course |
 |---|---|---|
@@ -235,7 +235,7 @@ APG IV Liliales comprise 10 families and about 1500 species: Alstroemeriaceae, C
 
 **Definition 36.6.1 (Broadly and narrowly defined Liliaceae)** The Liliaceae of Cronquist's system and of the Chinese textbooks, which include almost all monocot herbs with a petaloid perianth, 6 stamens and a superior or inferior ovary, are called **Liliaceae s.l.** (*sensu lato*, broadly defined Liliaceae); the Liliaceae of APG IV include only about 15 genera most closely related to *Lilium* and are called **Liliaceae s.s.** (*sensu stricto*, narrowly defined Liliaceae).
 
-Cronquist's broadly defined Liliaceae had about 280 genera and 4000 species, which research following Dahlgren (1985) and APG has distributed among a dozen or more families in two orders (Table 36.6.1, Fig. 36.1.2). The differences among these groups are subtle in morphology, which is why Cronquist preferred to combine them in one large family; but molecular evidence shows that their shared characters (6 tepals, 6 stamens, 3 fused carpels) are **plesiomorphies** of the monocots, so that Liliaceae s.l. is a **paraphyletic group** in which morphologically specialized families such as Orchidaceae and Iridaceae are nested. The result of the split is that the groups with spotted tepals, pale seeds and nectaries at the base of the tepals remain in Liliales, while the groups with often black seeds and mostly septal nectaries move to Asparagales.
+Cronquist's broadly defined Liliaceae had about 280 genera and 4000 species, which research following Dahlgren (1985) and APG has distributed among a dozen or more families in two orders (Table 36.6.1 and the phylogeny below). The differences among these groups are subtle in morphology, which is why Cronquist preferred to combine them in one large family; but molecular evidence shows that their shared characters (6 tepals, 6 stamens, 3 fused carpels) are **plesiomorphies** of the monocots, so that Liliaceae s.l. is a **paraphyletic group** in which morphologically specialized families such as Orchidaceae and Iridaceae are nested. The result of the split is that the groups with spotted tepals, pale seeds and nectaries at the base of the tepals remain in Liliales, while the groups with often black seeds and mostly septal nectaries move to Asparagales.
 
 | Genera of the Chinese textbook Liliaceae | Family in APG IV | Order | This course |
 |---|---|---|---|
@@ -308,7 +308,7 @@ In Cronquist's system Smilacaceae were a separate family in Liliales; the Chines
 
 ### 36.6.5. Colchicaceae
 
-Colchicaceae (the autumn crocus family) are perennial herbs with corms or rhizomes; leaves alternate, often clasping; tepals 6, free or fused at the base into a tube; stamens 6; ovary superior, 3-locular, 3 styles; fruit a capsule, rarely a berry. Many species (for example in *Colchicum* and *Gloriosa*) contain colchicine and its analogues. About 15 genera and 250 species occur in the Old World, and *Uvularia* in North America.
+Colchicaceae (the autumn crocus family) are perennial herbs with corms or rhizomes; leaves alternate, often clasping; tepals 6, free or fused at the base into a tube; stamens 6; ovary superior, 3-locular, 3 styles; fruit a capsule, rarely a berry. Many species (for example in *Colchicum* and *Gloriosa*) contain colchicine and its analogs. About 15 genera and 250 species occur in the Old World, and *Uvularia* in North America.
 
 Floral formula: $\ast P_{3+3} A_{3+3} \underline{G}_{(3:3:\infty)}$.
 

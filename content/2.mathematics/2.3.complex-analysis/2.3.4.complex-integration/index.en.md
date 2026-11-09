@@ -199,7 +199,7 @@ $$
 
 The first term is $2\pi\mathrm{i}f(z)$ by Eq. (4.3). By the ML inequality the second is at most $2\pi\rho\cdot\frac1\rho\max_{|\zeta-z|=\rho}|f(\zeta)-f(z)|$, which tends to $0$ as $\rho\to0$ by continuity of $f$. The left side does not depend on $\rho$, so the second term is $0$. $\square$
 
-Cauchy's integral formula says that the values of an analytic function inside a curve are completely determined by its values on the curve, a statement with no analogue for real differentiable functions. It also turns integrals into evaluations.
+Cauchy's integral formula says that the values of an analytic function inside a curve are completely determined by its values on the curve, a statement with no analog for real differentiable functions. It also turns integrals into evaluations.
 
 **Example 4.4.1** $\displaystyle\oint_{|z|=2}\frac{\mathrm{e}^z}{z-1}\,\mathrm{d}z=2\pi\mathrm{i}\,\mathrm{e}$, by Eq. (4.6) with $f=\mathrm{e}^z$ and $z=1$.
 
@@ -243,7 +243,7 @@ Since every point of a region $D$ lies inside a small circle in $D$, we obtain a
 
 **Corollary 4.4.2** If $f$ is analytic on an open set $D$, then so is $f'$; hence $f$ has complex derivatives of all orders on $D$. The real and imaginary parts of $f$ have continuous partial derivatives of all orders.
 
-This completes the proof of Theorem 2.5.1 in [2.3.2](/2.3.2), and it is the first sign that the theory of analytic functions differs from the theory of real differentiable functions: there is no complex analogue of a function that is differentiable once but not twice. In applications Eq. (4.7) is used in reverse, to evaluate integrals.
+This completes the proof of Theorem 2.5.1 in [2.3.2](/2.3.2), and it is the first sign that the theory of analytic functions differs from the theory of real differentiable functions: there is no complex analog of a function that is differentiable once but not twice. In applications Eq. (4.7) is used in reverse, to evaluate integrals.
 
 **Example 4.4.3** $\displaystyle\oint_{|z|=1}\frac{\mathrm{e}^{2z}}{z^4}\,\mathrm{d}z=\frac{2\pi\mathrm{i}}{3!}\,\frac{\mathrm{d}^3}{\mathrm{d}z^3}\mathrm{e}^{2z}\Big|_{z=0}=\frac{2\pi\mathrm{i}\cdot8}{6}=\frac{8\pi\mathrm{i}}3$.
 

@@ -28,7 +28,7 @@ The performance of a tree-building method is judged by several criteria:
 
 | Criterion | Meaning |
 |---|---|
-| Consistency | the probability of recovering the true tree tends to $1$ as the number of sites tends to infinity, the analogue of a **consistent estimator** |
+| Consistency | the probability of recovering the true tree tends to $1$ as the number of sites tends to infinity, the analog of a **consistent estimator** |
 | Efficiency | the probability of recovering the true tree with a given finite number of sites, relative to other methods |
 | Robustness | the method still performs well when its assumptions are violated |
 | Computation | the time needed, which decides what is feasible with thousands of taxa |

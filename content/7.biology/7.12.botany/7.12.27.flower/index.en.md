@@ -1,7 +1,7 @@
 ---
 title: "The Flower: Structure, Evolution and Inflorescences"
 description: The angiosperm flower; the view of the flower as a modified short shoot and the ABC, ABCDE and floral quartet models of flower development; pedicel and receptacle, calyx and corolla (corolla types, aestivation), androecium (fusion and relative length of stamens, anther attachment and dehiscence), gynoecium (carpels, stigma, style, ovary, placentation types) and ovary position; flower sex and symmetry; evolutionary trends in floral parts; the spikelet and floret of grasses; the floral formula convention used throughout this course and floral diagrams; indeterminate and determinate inflorescences and their flowering sequences.
-source_hash: 8536f05aa6b9
+source_hash: ecf0c753ee31
 ---
 
 The flower is the most distinctive feature of the angiosperms and the central tool of the second half of this course. Angiosperm classification ([7.12.33](/7.12.33)–[7.12.49](/7.12.49)) rests almost entirely on floral structure: the diagnostic characters of every family are written as a floral formula, and many families are illustrated with a floral diagram. The two preceding chapters dealt with the origin of seeds and the reproduction of gymnosperms ([7.12.25](/7.12.25), [7.12.26](/7.12.26)): the **ovules** of a gymnosperm lie exposed on the megasporophylls (ovuliferous scales), and the megasporophylls and microsporophylls are grouped into unisexual **strobili**. In angiosperms the microsporophylls (stamens) and megasporophylls (carpels) are brought together on a single short axis of determinate growth and surrounded by a sterile perianth; the carpels close and enclose the ovules in an ovary. This structure is the flower. This chapter begins with the concept of the flower and the genetic model of floral organ identity, then treats the parts of the flower in turn, flower sex and symmetry, evolutionary trends in floral parts, the specialized flowers of grasses, the floral formula and floral diagram, and finally the arrangement of flowers on the plant, the inflorescence. How gametophytes arise inside the anther and the ovule is the subject of the next chapter ([7.12.28](/7.12.28)); anthesis, pollination and fertilization follow in [7.12.29](/7.12.29), and the fruit in [7.12.31](/7.12.31). The physiology of flowering (photoperiod, vernalization and the regulatory network of flowering genes) belongs to plant physiology; here we cover only morphology and the models needed for it.
@@ -26,7 +26,7 @@ Why are the parts of the flower always arranged from the outside in as sepals, p
 
 **Definition 27.1.2 (ABC Model of Flower Development)** The four whorls of organs of a typical eudicot flower are, from the outside in, sepals, petals, stamens and carpels, and their identities are determined by the combination of three classes of function: A function acts in whorls 1 and 2, B function in whorls 2 and 3, and C function in whorls 3 and 4. A alone specifies sepals, A + B specifies petals, B + C specifies stamens, and C alone specifies carpels; moreover, A and C are mutually antagonistic, so that when one is absent the other extends into all four whorls. This model is called the **ABC model of flower development**.
 
-In *Arabidopsis*, A function is provided by *APETALA1* (*AP1*) and *APETALA2* (*AP2*), B function by *APETALA3* (*AP3*) and *PISTILLATA* (*PI*), and C function by *AGAMOUS* (*AG*). Except for *AP2*, these are all MADS-box genes encoding MADS-domain transcription factors. The strength of the model is that it predicts the phenotypes of single and multiple mutants (Figure 1):
+In *Arabidopsis*, A function is provided by *APETALA1* (*AP1*) and *APETALA2* (*AP2*), B function by *APETALA3* (*AP3*) and *PISTILLATA* (*PI*), and C function by *AGAMOUS* (*AG*). Except for *AP2*, these are all MADS-box genes encoding MADS-domain transcription factors. The strength of the model is that it predicts the phenotypes of single and multiple mutants (see the figure below):
 
 | Mutant | Function lost | Whorl 1 | Whorl 2 | Whorl 3 | Whorl 4 |
 |---|---|---|---|---|---|
@@ -46,7 +46,7 @@ The domain of B-class gene expression differs among groups, which explains many 
 
 ### 27.1.3. The ABCDE Model and the Floral Quartet Model
 
-Later research added two more classes of function to ABC, giving the ABCDE model (Figure 1B):
+Later research added two more classes of function to ABC, giving the ABCDE model (panel B of the figure above):
 
 - D function specifies ovule identity. When the petunia genes *FBP7* and *FBP11* are cosuppressed, ovules are converted into carpel-like structures (Colombo et al. 1995); the corresponding *Arabidopsis* genes are *SEEDSTICK* (*STK*) and *SHATTERPROOF1/2* (*SHP1/2*).
 - E function is a cofactor required for the action of all the A, B, C and D functions, and is provided by *SEPALLATA1–4* (*SEP1–4*). In *sep1 sep2 sep3* triple mutants, petals, stamens and carpels all become sepal-like (Pelaz et al. 2000), and in the quadruple mutant all floral organs become leaf-like (Ditta et al. 2004).
@@ -59,7 +59,7 @@ The ABC model specifies only "what organ each whorl is", not "where flowers form
 
 ## 27.2. The Parts of the Flower
 
-A typical flower consists of five parts: pedicel, receptacle, perianth, androecium and gynoecium (Figure 2). The pedicel and receptacle are modifications of the stem; the perianth, stamens and pistil are modifications of leaves.
+A typical flower consists of five parts: pedicel, receptacle, perianth, androecium and gynoecium (see the figure below). The pedicel and receptacle are modifications of the stem; the perianth, stamens and pistil are modifications of leaves.
 
 ![The parts of the flower. Left: longitudinal section of a complete flower; the tip of the pedicel is swollen into the receptacle, which bears from the outside inward the sepals (together the calyx), petals (together the corolla), stamens (filament and anther) and pistil (stigma, style and the ovary containing ovules). Right: the external form of a stamen and a cross section of the anther: the anther consists of two thecae joined by the connective, each theca containing two pollen sacs (microsporangia), and the connective contains a vascular bundle](./plots/flower-structure.py)
 
@@ -146,7 +146,7 @@ Imbricate arrangement provides a well-known diagnostic character in the Fabaceae
 
 The androecium lies inside or above the perianth, with its members arranged spirally or in whorls on the receptacle. Stamens are usually inserted directly on the receptacle; some are inserted on the corolla (epipetalous stamens, as in Solanaceae, Lamiaceae and Primulaceae), and some are fused with the pistil into a gynostemium (Orchidaceae and the milkweed group). In a few primitive angiosperms the stamen is not differentiated into filament and anther but is a flat, leaf-like blade with the pollen sacs embedded in its adaxial or abaxial surface, as in *Degeneria* of Fiji and the Australian genera *Austrobaileya* and *Galbulimima* (*Himantandra*); the stamens of *Magnolia* are also broad and flat with an extended connective. Such stamens support the view that the stamen is a modified leaf. The filament also varies: in the lotus it is flat and ribbon-like, in gardenia (*Gardenia*) it almost disappears, and in canna (*Canna*) most of the stamens are petaloid, with only one stamen retaining half an anther on one side. A stamen that has lost its anther and cannot produce pollen is called a *staminode*; it often becomes nectary-like or petal-like, as in *Scrophularia* and canna.
 
-The number, relative length and fusion of stamens are important taxonomic characters (Figure 3A):
+The number, relative length and fusion of stamens are important taxonomic characters (panel A of the figure of stamen types in Section 27.2.4):
 
 | Type | Characteristics | Examples |
 |---|---|---|
@@ -161,9 +161,9 @@ The number, relative length and fusion of stamens are important taxonomic charac
 
 The stamens of the Cucurbitaceae are often described as "syngenesious", but the situation is more complex: in most genera, of 5 stamens, 4 are fused in pairs and 1 is free, appearing as "3 stamens"; the thecae are often sinuous, and in some genera (such as *Cucurbita*) the anthers are fused entirely into a head ([7.12.43](/7.12.43)).
 
-Anthers are attached to the filament in three ways (Figure 3B). When the tip of the filament joins the base of the anther, the anther is basifixed (innate), as in barberry (*Berberis*) and sedges (Cyperaceae); when the back of the anther is attached along the filament, it is dorsifixed (adnate), as in *Magnolia*; when the tip of the filament is joined to a single point at the middle of the back of the anther so that the anther can swing, it is versatile, as in lily and grasses, whose anthers shake easily in the wind or when touched by insects and so shed their pollen. An anther that opens toward the pistil is introrse, and one that opens toward the corolla is extrorse.
+Anthers are attached to the filament in three ways (panel B of the figure of stamen types below). When the tip of the filament joins the base of the anther, the anther is basifixed (innate), as in barberry (*Berberis*) and sedges (Cyperaceae); when the back of the anther is attached along the filament, it is dorsifixed (adnate), as in *Magnolia*; when the tip of the filament is joined to a single point at the middle of the back of the anther so that the anther can swing, it is versatile, as in lily and grasses, whose anthers shake easily in the wind or when touched by insects and so shed their pollen. An anther that opens toward the pistil is introrse, and one that opens toward the corolla is extrorse.
 
-When the anther is mature it dehisces in a characteristic way and releases the pollen (Figure 3C):
+When the anther is mature it dehisces in a characteristic way and releases the pollen (panel C of the figure below):
 
 | Mode of dehiscence | Characteristics | Examples |
 |---|---|---|
@@ -205,7 +205,7 @@ The **ovary** is the enlarged basal part of the pistil and consists of the ovary
 
 **Definition 27.2.5 (Placenta)** The site in the ovary where the ovules are borne is called the placenta and often forms a fleshy protuberance; the way in which the ovules are attached in the ovary is called the type of **placentation**.
 
-The type of placentation is determined by the number of carpels, the way they are fused and the number of locules (Figure 4B):
+The type of placentation is determined by the number of carpels, the way they are fused and the number of locules (panel B of the figure below):
 
 | Placentation type | Pistil | Locules | Position of ovules | Examples |
 |---|---|---|---|---|
@@ -223,7 +223,7 @@ The evolutionary trend in placentation is roughly: laminar or marginal placentat
 
 ### 27.2.7. Ovary Position
 
-Changes in the shape of the receptacle alter the relative positions of the floral parts on it. The most important of these is the height of the ovary relative to the insertion of the calyx, corolla and stamens (Figure 4A).
+Changes in the shape of the receptacle alter the relative positions of the floral parts on it. The most important of these is the height of the ovary relative to the insertion of the calyx, corolla and stamens (panel A of the figure above).
 
 **Definition 27.2.6 (Ovary Position)** When the ovary is attached to the receptacle only by its base, and the calyx, corolla and stamens are inserted on the receptacle below the ovary, the ovary is said to be superior. When the ovary is sunk in a concave receptacle (or receptacle tube), the ovary wall is completely fused with it, and the calyx, corolla and stamens are inserted above the ovary, the ovary is inferior. When the lower half of the ovary is fused with the receptacle tube and the upper half is free, the ovary is half-inferior. Correspondingly, according to the insertion of the perianth and stamens, a flower with a superior ovary in which the floral parts are inserted below the ovary is a **hypogynous flower**; a flower whose parts are inserted on the rim of a cup-shaped receptacle (hypanthium) that surrounds the ovary but is not fused with it is a **perigynous flower**; and a flower whose parts are inserted above the ovary is an **epigynous flower**.
 
@@ -280,7 +280,7 @@ Three cautions apply when using these trends. First, the parts of a flower do no
 
 ## 27.5. The Flower of Grasses
 
-The flower of the grass family Poaceae ([7.12.39](/7.12.39)) is highly specialized and quite different from the general form described above. Wheat, rice, maize and many weeds are grasses; we take wheat as the example below (Figure 5D shows it as a floral diagram).
+The flower of the grass family Poaceae ([7.12.39](/7.12.39)) is highly specialized and quite different from the general form described above. Wheat, rice, maize and many weeds are grasses; we take wheat as the example below (panel D of the figure in Section 27.6.2 shows it as a floral diagram).
 
 **Definition 27.5.1 (Spikelet and Floret)** The basic unit of the grass inflorescence is called the **spikelet**: at the base of the spikelet axis are two firm bracts called **glumes**, the lower being the outer (first) glume and the upper the inner (second) glume; above the glumes are borne one to several **florets**. Each floret is enclosed by two scale-like bracts: the outer is called the **lemma** and the inner the **palea**; inside the palea are 2 (–3) small, sac-like **lodicules**, which absorb water and swell at anthesis, forcing the lemma and palea apart.
 
@@ -311,7 +311,7 @@ The notation of floral formulae differs among textbooks. This course uses throug
 7. **Symmetry**: radial symmetry is written $\ast$ and bilateral symmetry $\uparrow$, placed before the calyx.
 8. **Sex**: a male flower is written ♂ and a female flower ♀; a bisexual flower is left unmarked (or written ⚥); for unisexual flowers the female and male flowers are written separately, a monoecious species is written "♂ …; ♀ …", and dioecy is noted in the accompanying text.
 
-Examples (Figure 5):
+Examples (see the figure of floral diagrams in Section 27.6.2):
 
 | Plant | Floral formula | Meaning |
 |---|---|---|
@@ -331,7 +331,7 @@ Other textbooks write it differently. English-language textbooks often write "CA
 
 **Definition 27.6.3 (Floral Diagram)** A schematic cross section of a flower that shows the number, fusion, arrangement and relative positions of its parts is called a **floral diagram**. A floral diagram is the projection of the parts of the flower onto a plane perpendicular to the floral axis.
 
-Conventions for drawing a floral diagram (Figure 5):
+Conventions for drawing a floral diagram (see the figure below):
 
 1. The floral axis (the inflorescence axis or the parent axis bearing the flower) is represented by a small circle at the top of the diagram; the bract is drawn at the bottom as a crescent-shaped arc with a central protrusion (the midrib), and bracteoles are drawn at the left and right. A terminal flower is drawn without axis or bract.
 2. The calyx is represented by crescent-shaped arcs with a midrib (or a short line), and the corolla by solid crescent-shaped arcs; free members are drawn separately, and fused ones are linked by a line joining adjacent arcs; a spur is shown by an extension of the arc; the aestivation (valvate, imbricate, contorted) can also be drawn according to the overlap of the members.
@@ -353,7 +353,7 @@ Among angiosperms, the flowers of some species are borne singly at the tip of a 
 
 Bracts and involucres protect the flower buds or fruits. Some of the leaves below an inflorescence are reduced, and others are very large and colored, serving as "petals" that attract pollinators: the large bract outside the inflorescence of the Araceae is called the *spathe*, as in calla lily (*Zantedeschia*) and anthurium (*Anthurium*); the purple-red "petals" of bougainvillea (*Bougainvillea*) are three bracts; and the red "flower" at the top of poinsettia is made of bracts. The involucral bracts (phyllaries) outside the capitulum of the Asteraceae are also bracts. The glumes at the base of the grass spikelet are likewise specialized bracts.
 
-There are many types of inflorescence, differing in the length of the axis, branching or not, the presence or absence of pedicels on the flowers, the sequence of flowering and so on. According to whether the tip of the inflorescence axis continues to grow and the order in which flowers open, inflorescences fall into two broad classes, indeterminate and determinate (Figure 6).
+There are many types of inflorescence, differing in the length of the axis, branching or not, the presence or absence of pedicels on the flowers, the sequence of flowering and so on. According to whether the tip of the inflorescence axis continues to grow and the order in which flowers open, inflorescences fall into two broad classes, indeterminate and determinate (see the figure of inflorescence types in Section 27.7.3).
 
 ### 27.7.2. Indeterminate Inflorescences
 
@@ -410,7 +410,7 @@ Note that the distinction between "scorpioid cyme" (cincinnus) and "helicoid cym
 
 The inflorescences of many plants combine features of both classes. One with an indeterminate main axis and cymose lateral branches is called a thyrse, as in lilac, horse chestnut and grape; the capitula of the Asteraceae arranged again in a corymb or panicle, and the compound umbels of the Apiaceae, are also compound. A solitary flower is sometimes really an inflorescence reduced to a single flower. In describing an inflorescence one must distinguish the "unit" (capitulum, spikelet, cyathium) from the way the units are arranged.
 
-The sequence of flowering reflects the development of the inflorescence meristem. The tip of an indeterminate inflorescence always remains an inflorescence meristem and produces flower primordia successively on its flanks, so the flowers at the base (or periphery) are the oldest and open first; in a determinate inflorescence the apical meristem converts to a floral meristem very early and growth is continued by lateral branches, so the flowers at the tip (or center) are the oldest and open first (in Figure 6 the size of the flowers shows the order of opening). In *Arabidopsis*, *TFL1* maintains the indeterminacy of the inflorescence apex, and in *tfl1* mutants a terminal flower forms at the tip of the raceme and the inflorescence becomes determinate; *LFY* and *AP1*, in turn, convert the meristem into a flower. Differences in the timing and place of expression of such genes are the developmental basis of inflorescence diversity, and the mechanisms are left to plant physiology.
+The sequence of flowering reflects the development of the inflorescence meristem. The tip of an indeterminate inflorescence always remains an inflorescence meristem and produces flower primordia successively on its flanks, so the flowers at the base (or periphery) are the oldest and open first; in a determinate inflorescence the apical meristem converts to a floral meristem very early and growth is continued by lateral branches, so the flowers at the tip (or center) are the oldest and open first (in the figure of inflorescence types above, the size of the flowers shows the order of opening). In *Arabidopsis*, *TFL1* maintains the indeterminacy of the inflorescence apex, and in *tfl1* mutants a terminal flower forms at the tip of the raceme and the inflorescence becomes determinate; *LFY* and *AP1*, in turn, convert the meristem into a flower. Differences in the timing and place of expression of such genes are the developmental basis of inflorescence diversity, and the mechanisms are left to plant physiology.
 
 The type of inflorescence has ecological significance for pollination and reproduction: racemes and panicles flower for a long period and continuously attract pollinators; capitula, umbels and corymbs assemble many small flowers into a conspicuous "pseudanthium", so that a pollinator landing once can visit several flowers; catkins and spikes produce large amounts of pollen and suit wind pollination. The capitulum is one of the important reasons for the great diversity of the Asteraceae ([7.12.49](/7.12.49)).
 

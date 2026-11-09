@@ -1,7 +1,7 @@
 ---
 title: Photoperiodism and Florigen
 description: The discovery of photoperiodism (Garner and Allard and the Maryland Mammoth tobacco); the astronomical day-length formula and the annual course of day length at different latitudes; long-day, short-day, day-neutral and dual-day-length plants, qualitative and quantitative responses, the critical day length; the decisive role of the dark period, the critical night length, night breaks and red/far-red reversibility; photoperiodic induction and leaf perception; the hourglass model, Bünning's clock hypothesis and the external coincidence model, CO–FT in Arabidopsis and Hd1–Hd3a in rice with a numerical simulation; temperature sensing; florigen from grafting experiments to the FT protein; photoperiod and geographic distribution, introduction of crops, off-season breeding and control of flowering time
-source_hash: 79cf8ffa663e
+source_hash: 8492c4cb6c76
 ---
 
 When a plant flowers determines whether it can pollinate and set seed in the most favorable season, and whether it flowers in synchrony with other individuals of its species so that outcrossing is possible. A plant can neither "read" a calendar nor consult a thermometer; the most reliable seasonal signal available to it is day length. At a given latitude the day length on a given date is the same every year, whereas temperature fluctuates strongly from year to year. This chapter discusses how plants measure day length and how the day-length signal measured in the leaf is converted into a command to flower at the shoot apex.
@@ -51,7 +51,7 @@ Which of these values matters to plants? The light intensity required for photop
 
 :::
 
-Equation (21.1) yields several regularities (Figure 1):
+Equation (21.1) yields several regularities (see the figure below):
 
 1. At the equinoxes $\delta = 0$ and day and night are equal everywhere (about $12\ \mathrm{h}$).
 2. In the summer half-year (equinox to equinox) the higher the latitude the longer the day, and in the winter half-year the higher the latitude the shorter the day. The annual amplitude of day length increases with latitude: near the equator it is about $12\ \mathrm{h}$ all year, in Haikou ($20.0^\circ\mathrm{N}$) it ranges from $10.9$ to $13.3\ \mathrm{h}$, in Harbin ($45.8^\circ\mathrm{N}$) from $8.7$ to $15.7\ \mathrm{h}$, and inside the Arctic Circle there are polar days and polar nights.
@@ -77,7 +77,7 @@ Common examples of each class:
 
 The photoperiodic type of a crop often differs among cultivars. The ancestors of cultivated rice, maize, soybean and cotton were short-day plants; as people carried them to higher latitudes they selected variants insensitive to day length, so many early-maturing cultivars are nearly day-neutral (Section 21.7). In general, early-maturing cultivars of a crop are mostly long-day or day-neutral and late-maturing cultivars mostly short-day.
 
-Responses are further divided by strictness into qualitative and quantitative. Some plants have a "qualitative" requirement: they never flower under an unsuitable day length (the obligate long-day plant henbane, the obligate short-day plant cocklebur, Maryland Mammoth tobacco), and are called qualitative (obligate) long-day or short-day plants. More plants respond "quantitatively": a suitable day length makes flowering earlier, but under an unsuitable day length they eventually flower after a longer time (*Arabidopsis*, wheat, many rice cultivars); these are called quantitative (facultative) long-day or short-day plants (Figure 2).
+Responses are further divided by strictness into qualitative and quantitative. Some plants have a "qualitative" requirement: they never flower under an unsuitable day length (the obligate long-day plant henbane, the obligate short-day plant cocklebur, Maryland Mammoth tobacco), and are called qualitative (obligate) long-day or short-day plants. More plants respond "quantitatively": a suitable day length makes flowering earlier, but under an unsuitable day length they eventually flower after a longer time (*Arabidopsis*, wheat, many rice cultivars); these are called quantitative (facultative) long-day or short-day plants (see the figure of photoperiodic response types in Section 21.2.2).
 
 There are also dual-day-length and intermediate types: a few plants require two day lengths in sequence, or flower only within a certain range of day length:
 
@@ -111,7 +111,7 @@ Critical day lengths of several plants and the minimum number of inductive cycle
 | | Henbane (*Hyoscyamus niger*) | 11.5 | 2–3 |
 | | Scarlet pimpernel (*Anagallis arvensis*) | 12–12.5 | 1 |
 
-The table contains a fact that is at first surprising: the critical day length of the long-day plant henbane (11.5 h) is shorter than that of the short-day plant cocklebur (15.5 h). Under day lengths of 12–15 h both flower (Figure 2). Evidently "long-day" and "short-day" do not refer to absolute day lengths but to the direction of the response: a long-day plant flowers when day length exceeds the critical value, and a short-day plant flowers when day length is shorter than the critical value.
+The table contains a fact that is at first surprising: the critical day length of the long-day plant henbane (11.5 h) is shorter than that of the short-day plant cocklebur (15.5 h). Under day lengths of 12–15 h both flower (see the figure below). Evidently "long-day" and "short-day" do not refer to absolute day lengths but to the direction of the response: a long-day plant flowers when day length exceeds the critical value, and a short-day plant flowers when day length is shorter than the critical value.
 
 Two further points deserve notice. Within the inductive range a long-day plant flowers earlier the longer the day, earliest under continuous light. A short-day plant, by contrast, does not do better the shorter the day: if the day is too short, photosynthate is insufficient, vegetative growth is poor and flowering is impaired (Section 21.3.3).
 
@@ -142,7 +142,7 @@ The strongest evidence for the dark-period view is the night break: a brief expo
 
 **Definition 21.3.2 (Night Break)** A treatment in which a short exposure to light is given in the dark period of the photoperiod, interrupting the continuous darkness, is called a **night break**. A night break prevents flowering of short-day plants and makes long-day plants flower under short days.
 
-Night breaks have three important features (Figure 3):
+Night breaks have three important features (see the figure below):
 
 - The amount of light required is very small. Short-day plants such as cocklebur and Japanese morning glory need only a few minutes or even tens of seconds of weak light in the dark period; long-day plants usually need longer irradiation. This shows that the night break is a light-signal response and that photosynthesis does not supply the energy.
 - Timing is critical. In a 16 h dark period, a night break is most effective about 8 h after the start of the dark period (the middle of the night) and has little effect at the beginning or end.
@@ -219,7 +219,7 @@ $$
 \tag{21.3}
 $$
 
-where the degradation rate constant $k_{\mathrm{d}}(t)$ is large in darkness (COP1–SPA), intermediate in morning light (phyB) and small in afternoon light (phyA, CRY); $K$ is the half-saturation concentration for activation of *FT* by CO and the Hill coefficient $n$ describes the cooperativity of activation ([7.6.4](/7.6.4)). For rice the activation term is replaced by a term for repression of *Hd3a* by Hd1 in the light, $v K_{\mathrm{r}}^n/(K_{\mathrm{r}}^n + (L P)^n)$. The numerical solution (Figure 4) shows:
+where the degradation rate constant $k_{\mathrm{d}}(t)$ is large in darkness (COP1–SPA), intermediate in morning light (phyB) and small in afternoon light (phyA, CRY); $K$ is the half-saturation concentration for activation of *FT* by CO and the Hill coefficient $n$ describes the cooperativity of activation ([7.6.4](/7.6.4)). For rice the activation term is replaced by a term for repression of *Hd3a* by Hd1 in the light, $v K_{\mathrm{r}}^n/(K_{\mathrm{r}}^n + (L P)^n)$. The numerical solution (see the figure below) shows:
 
 - Under long days CO protein shows a sharp peak in the evening and disappears quickly after nightfall, and *FT* mRNA peaks in the evening accordingly; under short days, although the peak of *CO* mRNA is equally high, CO protein stays low throughout and *FT* is hardly expressed.
 - The daily mean of *FT* expression increases sigmoidally with photoperiod, rising rapidly between 12 and 14 h, which corresponds to a "critical day length"; *Hd3a*, in contrast, decreases as the photoperiod lengthens. The critical day length is not the direct value of any single parameter but an emergent property determined jointly by the phase of the clock (the time of the peak of $m$), the degradation kinetics and the activation threshold: if the time of the peak of $m$ is changed (a mutation of clock phase or period), the critical day length shifts accordingly. This is why many clock mutants alter flowering time.
@@ -242,9 +242,9 @@ At the molecular level, temperature and light signals share components. The Pfr 
 
 The leaf perceives photoperiod and the shoot apex forms flowers, so there must be a mobile signal between them. **Grafting** experiments demonstrated this and revealed several of its properties:
 
-1. It can be transmitted between plants by grafting. Chailakhyan joined several cocklebur plants in a chain by approach grafting and kept only one leaf of the first plant under short days with all the others under long days; all of the plants flowered (Figure 5A). The grafting of induced perilla leaves (Section 21.4.2) also shows this (Figure 5B).
+1. It can be transmitted between plants by grafting. Chailakhyan joined several cocklebur plants in a chain by approach grafting and kept only one leaf of the first plant under short days with all the others under long days; all of the plants flowered (panel A of the figure of grafting experiments below). The grafting of induced perilla leaves (Section 21.4.2) also shows this (panel B of the figure below).
 2. It is transported through the phloem. Killing the phloem of the petiole with steam or treating it with an anesthetic, or blocking export of assimilates from the leaf, prevents the flowering stimulus from leaving; the stimulus moves in the same direction as assimilates, from source leaves to sinks such as the shoot apex ([7.13.11](/7.13.11)).
-3. It is the same among plants of different photoperiodic types. When the long-day plant henbane is grafted onto the short-day plant Maryland Mammoth tobacco, both flower under long days; conversely, tobacco induced under short days can also make a henbane grafted onto it flower under short days (Figure 5C). Grafts among day-neutral, long-day and short-day plants all transmit the flowering stimulus, even across species and genera.
+3. It is the same among plants of different photoperiodic types. When the long-day plant henbane is grafted onto the short-day plant Maryland Mammoth tobacco, both flower under long days; conversely, tobacco induced under short days can also make a henbane grafted onto it flower under short days (panel C of the figure below). Grafts among day-neutral, long-day and short-day plants all transmit the flowering stimulus, even across species and genera.
 
 In 1936 Chailakhyan named this hypothetical flowering hormone **florigen**. In the following decades attempts to extract florigen from induced leaves all failed, and florigen became for a time "the most famous nonexistent hormone" in plant physiology. During this period Chailakhyan (1958) also proposed that florigen consists of two parts, gibberellin and "anthesin": day-neutral plants have both; long-day plants have anthesin, and gibberellin is synthesized only under long days; short-day plants have gibberellin, and anthesin is synthesized only under short days. The hypothesis is of historical interest only today, but it already noted the effect of gibberellin on flowering of long-day plants ([7.13.22](/7.13.22)).
 
@@ -278,7 +278,7 @@ The photoperiodic response type of a plant is the result of long-term adaptation
 
 ### 21.7.2. Introduction of Crops
 
-When a plant is introduced from one place to another, the difference in photoperiod between the two places must be considered, together with temperature conditions (low-temperature vernalization, [7.13.22](/7.13.22)). Figure 1 yields the rule for introductions: in the growing season in China (roughly equinox to equinox), on the same date the day length in the north is longer than in the south.
+When a plant is introduced from one place to another, the difference in photoperiod between the two places must be considered, together with temperature conditions (low-temperature vernalization, [7.13.22](/7.13.22)). The day-length figure in Section 21.1.2 yields the rule for introductions: in the growing season in China (roughly equinox to equinox), on the same date the day length in the north is longer than in the south.
 
 | Plant type | Direction of introduction | Effect on flowering | If seed or fruit is to be harvested |
 |---|---|---|---|
@@ -291,7 +291,7 @@ For example, soybean is a short-day plant: a southern soybean cultivar planted i
 
 **Example 21.7.1** A short-day soybean cultivar has a critical day length of 13.5 h (astronomical day length with $h_0 = -0.833^\circ$). Compare when the short-day condition is met after sowing in Harbin, Beijing and Haikou.
 
-Calculating day by day with Eqs. (21.1) and (21.2) (Figure 1): in Harbin day length at the summer solstice is 15.7 h and falls below 13.5 h around 28 August; in Beijing it is 15.0 h at the summer solstice and falls below 13.5 h around 21 August; in Haikou it is only 13.3 h at the summer solstice, shorter than the critical day length all year. This cultivar sown in spring in Harbin therefore starts to be induced only at the end of August, a week earlier in Beijing; in Haikou the seedlings begin to flower as soon as they pass the juvenile phase, vegetative growth is insufficient, and plants are small and yields very low. If twilight is considered to increase the effective day length by about 0.5–1 h, the dates when the short-day condition is met are delayed by a few days to a week or two at each place.
+Calculating day by day with Eqs. (21.1) and (21.2) (see the day-length figure in Section 21.1.2): in Harbin day length at the summer solstice is 15.7 h and falls below 13.5 h around 28 August; in Beijing it is 15.0 h at the summer solstice and falls below 13.5 h around 21 August; in Haikou it is only 13.3 h at the summer solstice, shorter than the critical day length all year. This cultivar sown in spring in Harbin therefore starts to be induced only at the end of August, a week earlier in Beijing; in Haikou the seedlings begin to flower as soon as they pass the juvenile phase, vegetative growth is insufficient, and plants are small and yields very low. If twilight is considered to increase the effective day length by about 0.5–1 h, the dates when the short-day condition is met are delayed by a few days to a week or two at each place.
 
 :::
 

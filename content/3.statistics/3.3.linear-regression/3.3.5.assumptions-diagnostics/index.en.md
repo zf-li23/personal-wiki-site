@@ -141,7 +141,7 @@ and departures from a line indicate departures from normality. Some texts plot $
 | Pattern of the points | Distribution |
 |---|---|
 | close to the line | normal |
-| S-shaped: steep in the middle, ends bending towards the horizontal | light tails (platykurtic) |
+| S-shaped: steep in the middle, ends bending toward the horizontal | light tails (platykurtic) |
 | inverted S: lower end below, upper end above the line | heavy tails (leptokurtic) |
 | convex curve, above the line at both ends | right skew |
 | concave curve, below the line at both ends | left skew |
@@ -331,7 +331,7 @@ fit4 <- lm(y ~ x, data = a100b1[-(n + 1), ])  # without the outlier
 | outlier at $X = 50$ | $459.0$ ($973.9$) | $51.72$ ($17.35$) | $2237$ | $8.89$ ($0.0077$) |
 | outlier at $X = 100$ | $861.8$ ($903.5$) | $25.04$ ($15.25$) | $2111$ | $2.69$ ($0.117$) |
 
-The outlier at $X = 50$, close to $\bar X = 48.5$, shifts the whole line upward and so changes the intercept, but hardly the slope; it inflates $s$ more than tenfold and with it all standard errors. The outlier at the extreme value $X = 100$ also tilts the line: the slope is halved, and it is no longer significant at the $0.05$ level. In the residual plot of the first fit the outlier stands out with a residual of about $9500$; in the second the line has been pulled towards the outlier, so the remaining residuals show a spurious increasing trend. An outlier has a large effect on the slope when its $X$ value is far from $\bar X$, and a small one when it is near $\bar X$: this is the leverage of [3.3.6](/3.3.6).
+The outlier at $X = 50$, close to $\bar X = 48.5$, shifts the whole line upward and so changes the intercept, but hardly the slope; it inflates $s$ more than tenfold and with it all standard errors. The outlier at the extreme value $X = 100$ also tilts the line: the slope is halved, and it is no longer significant at the $0.05$ level. In the residual plot of the first fit the outlier stands out with a residual of about $9500$; in the second the line has been pulled toward the outlier, so the remaining residuals show a spurious increasing trend. An outlier has a large effect on the slope when its $X$ value is far from $\bar X$, and a small one when it is near $\bar X$: this is the leverage of [3.3.6](/3.3.6).
 
 ![Two regressions with one outlier each, fitted with and without the outlier: an outlier near the mean of X shifts the line but leaves the slope almost unchanged, while an outlier at an extreme X value tilts the line and halves the slope](./plots/outlier-influence.py)
 

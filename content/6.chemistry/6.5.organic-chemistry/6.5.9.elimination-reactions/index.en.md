@@ -148,7 +148,7 @@ Vicinal dihalides lose halogen on heating with zinc or magnesium to give alkenes
 $$
 \ce{BrCH2CH2Br + Zn -> CH2=CH2 + ZnBr2}.
 $$
-This dehalogenation goes through metal insertion or **single electron transfer** and in many systems is an anti elimination; it is not an E1cb reaction, and it is used mainly to protect double bonds (bromine is added first and removed afterwards). Two successive E2 eliminations of a vicinal or geminal dihalide with $\ce{NaNH2}$ give an alkyne, one of the methods for preparing alkynes ([6.5.11](/6.5.11#sec-11.13)).
+This dehalogenation goes through metal insertion or **single electron transfer** and in many systems is an anti elimination; it is not an E1cb reaction, and it is used mainly to protect double bonds (bromine is added first and removed afterward). Two successive E2 eliminations of a vicinal or geminal dihalide with $\ce{NaNH2}$ give an alkyne, one of the methods for preparing alkynes ([6.5.11](/6.5.11#sec-11.13)).
 
 ![Debromination of 1,2-dibromoethane with zinc: zinc inserts into one C–Br bond (by electron transfer from the metal surface) to give 2-bromoethylzinc bromide; the electron pair of the polar C–Zn bond forms the π bond while bromide leaves from the neighboring carbon, giving ethene and ZnBr2](./plots/zn-dehalogenation.py)
 

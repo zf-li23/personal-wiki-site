@@ -1,6 +1,6 @@
 ---
 title: Discrete Mathematics
-source_hash: 6b22ff97f0b4
+source_hash: eea5dd83eb70
 ---
 
 Discrete mathematics studies discrete objects and their structure. Its objects are usually finite or countable in number and separate from one another, rather than varying continuously like points on the real line. Its concern is not limits and continuity but things that can be listed one by one and built up step by step: propositions and inferences, sets and relations, algebraic systems equipped with operations, and graphs made of vertices and edges. Accordingly, this subject is divided into four courses: mathematical logic, set theory, algebraic structures, and graph theory.

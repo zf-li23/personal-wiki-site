@@ -96,7 +96,7 @@ For a nonrandomized test $\pi_\varphi(\theta)=\mathbb{P}_\theta(\boldsymbol{X}\i
 $$
 \alpha(\theta)=\pi_\varphi(\theta)\ (\theta\in\Theta_0),\qquad \beta(\theta)=1-\pi_\varphi(\theta)\ (\theta\in\Theta_1).
 $$
-A good power function is small (at most $\alpha$) on $\Theta_0$ and rises quickly towards $1$ on $\Theta_1$.
+A good power function is small (at most $\alpha$) on $\Theta_0$ and rises quickly toward $1$ on $\Theta_1$.
 
 ![Type I and type II error probabilities of the one-sided test that rejects H₀: μ ≤ μ₀ when Z = √n (X̄ − μ₀)/σ > z_α. Moving the critical value to the right decreases α but increases β](./plots/type-errors.py)
 
@@ -614,7 +614,7 @@ A testing problem has many tests of the same level; how should they be compared?
 
 **Definition 5.4.1 (Uniformly Most Powerful Test)** Consider $H_0\colon\theta\in\Theta_0$ vs. $H_1\colon\theta\in\Theta_1$. Let $\varphi$ be a test of level $\alpha$. If $\pi_\varphi(\theta)\ge\pi_{\varphi^*}(\theta)$ for all $\theta\in\Theta_1$ and every test $\varphi^*$ of level $\alpha$, then $\varphi$ is called a **uniformly most powerful test** (UMP test) of level $\alpha$. When $H_1$ is simple, $\Theta_1=\{\theta_1\}$, a UMP test is called a **most powerful test** (MP test).
 
-**Remark 5.4.1** UMP tests are rare. They exist essentially only when $\theta$ is real-valued, for certain forms of $H_0$ and $H_1$ (mainly one-sided ones) and for special families $f(x;\theta)$. For multidimensional parameters, reasonable tests are constructed by other principles: likelihood ratio tests, goodness-of-fit tests ([3.2.6](/3.2.6)), decision-theoretic tests, and so on. For a simple null against a simple alternative an MP test always exists, by the Neyman–Pearson lemma below. That problem is unrealistic in itself, but it is the first step towards one-sided composite problems.
+**Remark 5.4.1** UMP tests are rare. They exist essentially only when $\theta$ is real-valued, for certain forms of $H_0$ and $H_1$ (mainly one-sided ones) and for special families $f(x;\theta)$. For multidimensional parameters, reasonable tests are constructed by other principles: likelihood ratio tests, goodness-of-fit tests ([3.2.6](/3.2.6)), decision-theoretic tests, and so on. For a simple null against a simple alternative an MP test always exists, by the Neyman–Pearson lemma below. That problem is unrealistic in itself, but it is the first step toward one-sided composite problems.
 
 ### 5.4.2. The Neyman–Pearson Lemma
 

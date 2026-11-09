@@ -331,7 +331,7 @@ $$
 
 ### 8.3.4. Abel's Test and Dirichlet's Test
 
-For a series of the form $\sum a_nb_n$ in which $\{a_n\}$ is monotone and the partial sums of $\sum b_n$ are under control, "summation by parts" turns it into an absolutely convergent series; this is the discrete analogue of integration by parts.
+For a series of the form $\sum a_nb_n$ in which $\{a_n\}$ is monotone and the partial sums of $\sum b_n$ are under control, "summation by parts" turns it into an absolutely convergent series; this is the discrete analog of integration by parts.
 
 **Lemma 8.3.1 (Abel Transformation)** Let $B_k = b_1 + \cdots + b_k$ and $B_0 = 0$. Then
 

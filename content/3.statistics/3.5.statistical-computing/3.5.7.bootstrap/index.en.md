@@ -94,7 +94,7 @@ $$
 $$
 a normal distribution $\mathcal{N}(0,\sigma^2)$ with $\sigma^2=\operatorname{Var}(\phi'_F(G_F))$. Moreover the nonparametric bootstrap is consistent: conditionally on the data, $\sqrt n(\phi(F_n^*)-\phi(F_n))$ converges in distribution to the same limit in probability, where $F_n^*$ is the empirical distribution function of a bootstrap sample.
 
-This is the infinite-dimensional analogue of the **delta method**. Hadamard differentiability is a sufficient condition for the bootstrap, not a necessary one, but it explains the three typical situations.
+This is the infinite-dimensional analog of the **delta method**. Hadamard differentiability is a sufficient condition for the bootstrap, not a necessary one, but it explains the three typical situations.
 
 | Situation | Examples | Behavior of the standard bootstrap |
 |---|---|---|

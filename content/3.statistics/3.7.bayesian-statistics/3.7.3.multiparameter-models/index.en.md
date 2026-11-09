@@ -43,7 +43,7 @@ A document can be summarized by how often each word of a vocabulary occurs in it
 $$
 p(\boldsymbol{y}\mid\boldsymbol{\theta})\propto\prod_{j=1}^k\theta_j^{y_j},\qquad\boldsymbol{\theta}\in\Delta_k=\Big\{\boldsymbol{\theta}\colon\theta_j\ge0,\ \sum_{j=1}^k\theta_j=1\Big\},
 $$
-a generalization of the binomial likelihood $\theta^y(1-\theta)^{n-y}$ (the case $k=2$). The parameter has $k-1$ free components. Just as the Beta family is conjugate to the binomial ([3.7.1](/3.7.1)), its multivariate analogue is conjugate to the multinomial.
+a generalization of the binomial likelihood $\theta^y(1-\theta)^{n-y}$ (the case $k=2$). The parameter has $k-1$ free components. Just as the Beta family is conjugate to the binomial ([3.7.1](/3.7.1)), its multivariate analog is conjugate to the multinomial.
 
 ### 3.2.2. The Dirichlet Distribution
 
@@ -368,11 +368,11 @@ with the sum-of-squares matrix $S$ (the **sample covariance matrix** times $n-1$
 The two simpler cases are the multivariate versions of [3.7.2](/3.7.2):
 
 - *Known $\Sigma$.* The prior $\boldsymbol{\mu}\sim\mathcal{N}_d(\boldsymbol{\mu}_0,\Lambda_0)$ is conjugate, and $\boldsymbol{\mu}\mid\boldsymbol{y}\sim\mathcal{N}_d(\boldsymbol{\mu}_n,\Lambda_n)$ with $\Lambda_n^{-1}=\Lambda_0^{-1}+n\Sigma^{-1}$ and $\boldsymbol{\mu}_n=\Lambda_n(\Lambda_0^{-1}\boldsymbol{\mu}_0+n\Sigma^{-1}\bar{\boldsymbol{y}})$: precision matrices add, and the posterior mean is a precision-weighted average.
-- *Known $\boldsymbol{\mu}$.* The likelihood $(\det\Sigma)^{-n/2}\exp(-\frac12\operatorname{tr}(\Sigma^{-1}S_0))$ is, as a function of $\Sigma$, the kernel of the inverse-Wishart distribution defined below, the matrix analogue of the scaled inverse-$\chi^2$.
+- *Known $\boldsymbol{\mu}$.* The likelihood $(\det\Sigma)^{-n/2}\exp(-\frac12\operatorname{tr}(\Sigma^{-1}S_0))$ is, as a function of $\Sigma$, the kernel of the inverse-Wishart distribution defined below, the matrix analog of the scaled inverse-$\chi^2$.
 
 ### 3.6.2. Wishart, Inverse-Wishart and Multivariate t-Distributions
 
-Recall the **Wishart distribution** of [3.4.3](/3.4.3): if $\boldsymbol{z}_1,\dots,\boldsymbol{z}_\nu\overset{\text{iid}}{\sim}\mathcal{N}_d(\boldsymbol{0},\Lambda)$, then $W=\sum_{i=1}^\nu\boldsymbol{z}_i\boldsymbol{z}_i^{\mathsf T}\sim W_d(\nu,\Lambda)$, with mean $\nu\Lambda$. It is the multivariate analogue of a scaled $\chi^2$: for $d=1$, $\sum_iz_i^2\sim\tau^2\chi^2_\nu$ when $z_i\sim\mathcal{N}(0,\tau^2)$.
+Recall the **Wishart distribution** of [3.4.3](/3.4.3): if $\boldsymbol{z}_1,\dots,\boldsymbol{z}_\nu\overset{\text{iid}}{\sim}\mathcal{N}_d(\boldsymbol{0},\Lambda)$, then $W=\sum_{i=1}^\nu\boldsymbol{z}_i\boldsymbol{z}_i^{\mathsf T}\sim W_d(\nu,\Lambda)$, with mean $\nu\Lambda$. It is the multivariate analog of a scaled $\chi^2$: for $d=1$, $\sum_iz_i^2\sim\tau^2\chi^2_\nu$ when $z_i\sim\mathcal{N}(0,\tau^2)$.
 
 **Definition 3.6.1 (Inverse-Wishart Distribution)** Let $\nu>d-1$ and let $\Psi$ be a symmetric positive definite $d\times d$ matrix. A random symmetric positive definite matrix $\Sigma$ has the **inverse-Wishart distribution** $\mathrm{Inv}\text{-}W_d(\nu,\Psi)$ with $\nu$ degrees of freedom and scale matrix $\Psi$ if $\Sigma^{-1}\sim W_d(\nu,\Psi^{-1})$. Its density is
 

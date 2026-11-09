@@ -202,7 +202,7 @@ In [3.1.15](/3.1.15) the distribution was defined as $\boldsymbol{\mu} + B\bolds
 $$
 \boldsymbol{\mu} = \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix} = \begin{bmatrix} \mathbb{E}X_1 \\ \mathbb{E}X_2 \end{bmatrix}, \qquad \Sigma = \begin{bmatrix} \sigma_{11} & \sigma_{12} \\ \sigma_{21} & \sigma_{22} \end{bmatrix} = \begin{bmatrix} \sigma_{11} & \rho_{12}\sqrt{\sigma_{11}\sigma_{22}} \\ \rho_{12}\sqrt{\sigma_{11}\sigma_{22}} & \sigma_{22} \end{bmatrix},
 $$
-and Eq. (2.1) reduces to the **bivariate normal distribution** of [3.1.6](/3.1.6). With $\sigma_{11} = \sigma_{22}$ and $\rho_{12} = 0$ the density surface is a rotationally symmetric bell; with $\rho_{12} = 0.75$ it is a ridge along the diagonal. As $\rho_{12}$ increases from $0$ towards $1$ the contours change from circles to ever thinner ellipses along the line $x_2 = x_1$, and for negative $\rho_{12}$ along $x_2 = -x_1$.
+and Eq. (2.1) reduces to the **bivariate normal distribution** of [3.1.6](/3.1.6). With $\sigma_{11} = \sigma_{22}$ and $\rho_{12} = 0$ the density surface is a rotationally symmetric bell; with $\rho_{12} = 0.75$ it is a ridge along the diagonal. As $\rho_{12}$ increases from $0$ toward $1$ the contours change from circles to ever thinner ellipses along the line $x_2 = x_1$, and for negative $\rho_{12}$ along $x_2 = -x_1$.
 
 :::
 

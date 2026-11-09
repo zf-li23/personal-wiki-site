@@ -378,7 +378,7 @@ By the proof of Proposition 5.1.2, any positive definite $M^{(t)}$ ensures desce
 
 #### 5.1.4.3. The Discrete Newton Method
 
-The analogue of the one-dimensional secant method approximates the Hessian by differences of gradients:
+The analog of the one-dimensional secant method approximates the Hessian by differences of gradients:
 
 $$
 M_{ij}^{(t)} = \frac{g_i'\bigl(\boldsymbol{x}^{(t)} + h_{ij}^{(t)}\boldsymbol{e}_j\bigr) - g_i'(\boldsymbol{x}^{(t)})}{h_{ij}^{(t)}},

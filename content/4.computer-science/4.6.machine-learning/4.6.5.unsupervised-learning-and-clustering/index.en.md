@@ -238,7 +238,7 @@ Hierarchical clustering lets us observe the data at different granularities and 
 
 The number of clusters $k$ is best determined by the problem itself: for example, clothes are grouped into the three sizes S, M, L, so $k = 3$. Only when the data are not sparse and no dimension is noticeably noisy is it appropriate to let the data alone determine $k$. Data-driven methods all examine how the within-cluster dissimilarity $W_k$ (such as the objective $J$ of k-means) varies with $k$; $W_k$ decreases monotonically in $k$ and equals 0 at $k = n$, so we cannot simply take its minimum.
 
-- The **elbow method**: $W_k$ drops sharply up to the true number of clusters and changes slowly afterwards; take the bend of the curve.
+- The **elbow method**: $W_k$ drops sharply up to the true number of clusters and changes slowly afterward; take the bend of the curve.
 - The **gap statistic**: cluster reference data without cluster structure (for example, uniformly distributed over the range of the data) with the same algorithm, compare $\ln W_k$ with its expected value on the reference data, and take the $k$ with a large gap.
 - The **silhouette coefficient**: take the $k$ that maximizes the average silhouette coefficient over all objects. It depends only on dissimilarities, so it also applies to k-medoids and hierarchical clustering.
 - Model-based clustering selects $k$ with an information criterion such as BIC ([3.4.11](/3.4.11#def-11.4.2)).

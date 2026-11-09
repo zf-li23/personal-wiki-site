@@ -76,7 +76,7 @@ The method of building a datapath is to start from the simplest instruction, add
 
 ### 6.3.1. R-Type Instructions
 
-`add rd, rs1, rs2` performs $R[\mathrm{rd}] \gets R[\mathrm{rs1}] + R[\mathrm{rs2}]$, and `sub` performs subtraction; afterwards PC $\gets$ PC $+ 4$. The required paths are:
+`add rd, rs1, rs2` performs $R[\mathrm{rd}] \gets R[\mathrm{rs1}] + R[\mathrm{rs2}]$, and `sub` performs subtraction; afterward PC $\gets$ PC $+ 4$. The required paths are:
 
 1. instruction fetch: PC goes to the address input of IMEM, which reads the $32$-bit instruction inst; PC also goes to the adder to give PC $+ 4$, which is written back to PC at the end of the cycle;
 2. register read: inst[19:15] (rs1) and inst[24:20] (rs2) go to AddrA and AddrB of the register file;

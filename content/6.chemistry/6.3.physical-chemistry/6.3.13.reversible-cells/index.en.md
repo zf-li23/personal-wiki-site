@@ -48,7 +48,7 @@ The rules for writing a **cell diagram** are given in [6.1.11](/6.1.11): the neg
 The cell reaction is the overall change that occurs at the two electrodes and in the whole cell on discharge: oxidation at the left electrode and reduction at the right electrode, added after the numbers of electrons have been made equal. In writing a cell reaction:
 
 1. The two electrode reactions must involve the same number of electrons; $z$ is the number of electrons transferred when the cell reaction as written proceeds by $1\,\mathrm{mol}$.
-2. Do not combine ions into electrolyte molecules arbitrarily; a species can be cancelled between the two sides only if it is in the same phase and the same state.
+2. Do not combine ions into electrolyte molecules arbitrarily; a species can be canceled between the two sides only if it is in the same phase and the same state.
 3. Do not include in the equation species that are not in the cell diagram (except $\ce{H2O}$ in aqueous solution).
 
 | Cell | Electrode reactions | Cell reaction ($z$) |

@@ -1,7 +1,7 @@
 ---
 title: "Fungi and Fungus-like Organisms I: Slime Molds, Oomycetes and Introduction to the Fungi"
 description: The traditional "fungal plants" and their placement in the modern system; plasmodial slime molds (plasmodium, sporangia and life history), the fate of dictyostelids, Acrasis and plasmodiophorids; oomycetes (characteristics, the diplanetism and internal proliferation of Saprolegnia, downy mildews, Plasmopara, Phytophthora and Pythium); the vegetative body of fungi, hyphal tissues and modes of nutrition; asexual spores, the five modes of plasmogamy, homothallism and heterothallism, sexual spores and the dikaryotic phase; Ainsworth's five subdivisions and the current phylum-level system; chytrids, Blastocladiomycota, Mucoromycota (the life history of Rhizopus, Pilobolus) and Glomeromycotina.
-source_hash: 3d48cee821a5
+source_hash: 144d773ea92e
 ---
 
 Traditional botany grouped the nonphotosynthetic, heterotrophic lower plants as the "fungal plants" (Chinese textbooks' term), comprising three phyla: bacteria, slime molds and fungi. Like the algae they lack roots, stems and leaves, reproduce by spores and have mostly unicellular reproductive organs, so the two-kingdom system placed them in the plant kingdom, together with the algae and lichens, as the "lower plants" ([7.12.1](/7.12.1#sec-1.1)). Molecular phylogenies show that this "fungal" assemblage comes from at least three supergroups of the eukaryotic tree: the fungi belong with the animals in the opisthokonts, the slime molds are amoebozoans, and the oomycetes belong with the brown algae and diatoms among the **stramenopiles**. Nevertheless, the morphology, life histories and classification of these organisms have long been part of botany, their names are governed by the *International Code of Nomenclature for algae, fungi, and plants* ([7.12.2](/7.12.2#sec-2.4)), and they are closely tied to plants in plant diseases, mycorrhizae, lichens and the origin of land plants.
@@ -26,7 +26,7 @@ In 1969 Whittaker's five-kingdom system divided the multicellular eukaryotes by 
 
 ### 10.1.2. Modern Placement
 
-Molecular phylogenies scatter the "fungal plants" among several supergroups of the eukaryotic tree (Figure 1; see also the tree of life in [7.12.1](/7.12.1#sec-1.1.3)):
+Molecular phylogenies scatter the "fungal plants" among several supergroups of the eukaryotic tree (see the phylogeny below; see also the tree of life in [7.12.1](/7.12.1#sec-1.1.3)):
 
 | Traditional group | Current placement | Evidence |
 |---|---|---|
@@ -65,7 +65,7 @@ When food is exhausted and the plasmodium has migrated to a dry, bright place, i
 
 Take *Stemonitis* as an example. The plasmodium forms many hair-like projections on rotting wood, and each develops into a stalked sporangium. The sporangium is elongate-cylindrical, purple-brown, enclosed by a peridium; the part of the stalk that extends into the sporangium is the columella, and the capillitium threads in the sporangium interweave into a capillitial network. The protoplasm of the plasmodium cleaves into many uninucleate pieces, each secreting a wall and becoming a spore, lodged in the meshes of the capillitium; when ripe, the peridium breaks and the elasticity of the capillitium scatters the spores. The presence and form of capillitium, the structure of the peridium and columella and the color of the spores are the main bases for dividing the slime molds into genera: in *Trichia* the capillitial threads have spiral thickenings, in *Arcyria* the capillitium expands into a cottony mass after the peridium breaks, and in *Cribraria* (formerly *Dictydium*) only a lattice remains of the peridium.
 
-The **life history** (Figure 2) is of a type other than zygotic meiosis: the vegetative body (the plasmodium) is diploid, and meiosis takes place during spore formation (in most species after the spore is cleaved off, 3 of the 4 nuclei produced by meiosis in each spore degenerating), so the spores are haploid. A spore germinates to release one myxamoeba or a flagellated swarm cell with two unequal whiplash flagella; the two forms can interconvert, feed on bacteria and multiply by mitosis. Two swarm cells or myxamoebae of compatible mating types fuse as gametes (karyogamy follows plasmogamy immediately), the zygote undergoes no resting period, its nucleus divides repeatedly by mitosis without cytokinesis, and it grows into a new diploid plasmodium. In a few strains the plasmodium grows directly from a single myxamoeba and is haploid (apomixis).
+The **life history** (see the figure below) is of a type other than zygotic meiosis: the vegetative body (the plasmodium) is diploid, and meiosis takes place during spore formation (in most species after the spore is cleaved off, 3 of the 4 nuclei produced by meiosis in each spore degenerating), so the spores are haploid. A spore germinates to release one myxamoeba or a flagellated swarm cell with two unequal whiplash flagella; the two forms can interconvert, feed on bacteria and multiply by mitosis. Two swarm cells or myxamoebae of compatible mating types fuse as gametes (karyogamy follows plasmogamy immediately), the zygote undergoes no resting period, its nucleus divides repeatedly by mitosis without cytokinesis, and it grows into a new diploid plasmodium. In a few strains the plasmodium grows directly from a single myxamoeba and is haploid (apomixis).
 
 ![Life history of plasmodial slime molds (represented by *Stemonitis* and *Physarum*). The blue background marks the diploid ($2n$) phase and orange the haploid ($n$) phase. When food is exhausted, the diploid plasmodium forms stalked sporangia (with columella and capillitium); meiosis takes place during spore formation, and the spores germinate into myxamoebae or swarm cells; two compatible gametes fuse into a zygote, whose nucleus divides repeatedly without cell division and grows into a new plasmodium. On drying the plasmodium becomes a sclerotium, which resumes activity when conditions improve.](./plots/myxomycete-life-cycle.py)
 
@@ -106,7 +106,7 @@ The sexual organs of oomycetes are the *oogonium* (called the egg sac in Chinese
 
 ### 10.3.2. Water Molds (*Saprolegnia*)
 
-*Saprolegnia* belongs to the order Saprolegniales and is mostly a saprotroph in fresh water, living on the bodies of dead fishes, tadpoles, insects and other animals; there are also parasitic species, such as *S. parasitica*, which grows on the gill covers, lateral lines and other injured skin of freshwater fish and on fish eggs and is a great scourge of fish (Figure 3).
+*Saprolegnia* belongs to the order Saprolegniales and is mostly a saprotroph in fresh water, living on the bodies of dead fishes, tadpoles, insects and other animals; there are also parasitic species, such as *S. parasitica*, which grows on the gill covers, lateral lines and other injured skin of freshwater fish and on fish eggs and is a great scourge of fish (see the life history of *Saprolegnia* below).
 
 The mycelium is white and downy, develops from a single cell, and is aseptate and multinucleate. There are two kinds of hyphae: short rhizoidal hyphae that penetrate the host tissue to absorb nutrients, and long, slender, branched hyphae that grow outward from the surface of the substrate and form a small, richly branched mycelium.
 
@@ -186,7 +186,7 @@ Fungi are heterotrophic in three ways:
 
 ## 10.5. Reproduction of Fungi
 
-Fungal reproduction is usually of three kinds: vegetative reproduction, asexual reproduction and sexual reproduction. The form of the spores and of the structures bearing them is the main basis of fungal identification and classification (for diagrams of the various spores see Figure 3 of [7.11.21](/7.11.21#sec-21.4.1)).
+Fungal reproduction is usually of three kinds: vegetative reproduction, asexual reproduction and sexual reproduction. The form of the spores and of the structures bearing them is the main basis of fungal identification and classification (for diagrams of the various spores see the spore figure in [7.11.21](/7.11.21#sec-21.4.1)).
 
 ### 10.5.1. Vegetative Reproduction and Asexual Spores
 
@@ -215,7 +215,7 @@ In the lower fungi karyogamy follows plasmogamy immediately and the dikaryotic p
 
 ### 10.5.3. Modes of Plasmogamy
 
-The structures that take part in plasmogamy are very diverse in fungi; according to Alexopoulos et al. (1996) there are five modes (Figure 5):
+The structures that take part in plasmogamy are very diverse in fungi; according to Alexopoulos et al. (1996) there are five modes (see the figure below):
 
 | Mode | Process | Examples |
 |---|---|---|
@@ -275,7 +275,7 @@ The five subdivisions of this system are all defined by single characters: flage
 
 ### 10.6.2. The Current Phylum-Level System
 
-The main differences between the fungal system reconstructed by molecular phylogenetics (rRNA, multigene and phylogenomic analyses) and the old system are that the Mastigomycota and Zygomycota are broken up, several parasitic groups have been added to the kingdom Fungi, and the ascomycetes and basidiomycetes form the subkingdom Dikarya. This course adopts the phylum-level framework of Spatafora et al. (2016) (Figure 1):
+The main differences between the fungal system reconstructed by molecular phylogenetics (rRNA, multigene and phylogenomic analyses) and the old system are that the Mastigomycota and Zygomycota are broken up, several parasitic groups have been added to the kingdom Fungi, and the ascomycetes and basidiomycetes form the subkingdom Dikarya. This course adopts the phylum-level framework of Spatafora et al. (2016) (see the phylogeny in Section 10.1.2):
 
 | Phylum (subphylum) | Main characters | Representatives | Position in the old system |
 |---|---|---|---|
@@ -315,7 +315,7 @@ The life cycle of *Allomyces* thus has both **sporic meiosis** and two morpholog
 
 The Mucoromycota (the order Mucorales of the Mucoromycotina is the main body of what Chinese textbooks call Zygomycotina) have well-developed aseptate multinucleate hyphae in which rapid cytoplasmic streaming is often visible; asexual reproduction produces sporangiospores in sporangia, and sexual reproduction is by the copulation of two gametangia, forming **zygospores**. Most are saprotrophs, a few parasitize plants, insects or small animals, and occasionally they cause serious infections of humans and livestock (mucormycosis). From the Mastigomycotina to the Zygomycotina the fungi evolve clearly from aquatic to terrestrial life: zoospores become nonmotile spores spread by air currents, and the union of motile gametes becomes the copulation of gametangia.
 
-The commonest species of *Rhizopus* is *R. stolonifer* (also called black bread mold), which lives on bread, steamed buns and other starch-rich foods and causes them to rot, and is an important pathogen of stored fruits, vegetables and sweet potatoes (soft rot of sweet potato: hyphae enter through wounds and secrete pectinase that breaks down the cell walls, the flesh turns to mush, and white hairs and black sporangia cover the diseased part). Its life history is as follows (Figure 6):
+The commonest species of *Rhizopus* is *R. stolonifer* (also called black bread mold), which lives on bread, steamed buns and other starch-rich foods and causes them to rot, and is an important pathogen of stored fruits, vegetables and sweet potatoes (soft rot of sweet potato: hyphae enter through wounds and secrete pectinase that breaks down the cell walls, the flesh turns to mush, and white hairs and black sporangia cover the diseased part). Its life history is as follows (see the figure below):
 
 1. A spore lands on the substrate and germinates with a germ tube, growing into a cottony mycelium. Most of the hyphae grow in the substrate and absorb nutrients; arched aerial hyphae, the stolons, spread over the surface of the substrate, and where they touch the substrate (at the nodes) they produce rhizoids that penetrate it.
 2. Above the rhizoids one or several erect sporangiophores arise, each swelling at the tip into a sporangium. Much cytoplasm and many nuclei flow into the young sporangium and spread around it, leaving an empty central part separated from the periphery by a wall, which becomes the columella; the protoplasm around the columella cleaves into many multinucleate sporangiospores. The sporangial wall turns black at maturity, which makes this mold black; after the wall ruptures the spores are released and germinate into new mycelium. After the sporangium bursts the columella collapses at the top of the sporangiophore, shaped like an umbrella (the apophysis).

@@ -282,7 +282,7 @@ A map with these properties is called conformal at $z_0$; conformal mappings are
 
 :::
 
-The same computation, read backwards, explains a classical fact about level curves.
+The same computation, read backward, explains a classical fact about level curves.
 
 **Theorem 2.6.1** Let $f=u+\mathrm{i}v$ be analytic with $f'(z_0)\ne0$. Then the level curves $u=u(z_0)$ and $v=v(z_0)$ intersect orthogonally at $z_0$.
 

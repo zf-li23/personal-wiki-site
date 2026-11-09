@@ -257,7 +257,7 @@ The auxiliary space of quicksort is the depth of the recursion. In the best case
 
 **Proof** Each time we enter a level of recursion, the length of the subinterval being processed is at most half the length of the interval at the previous level (the shorter side is at most half), and an interval of length 1 is not recursed on, so the recursion has at most $\log_2 n$ levels. $\square$
 
-This technique is equivalent to eliminating tail recursion by hand. One can also avoid recursion altogether and keep the subintervals to be sorted in an explicit **stack**: after each partition, push the longer subinterval first and the shorter one afterwards, so that the shorter one is processed first, and the size of the stack is again $O(\log n)$ (provable by induction on $n$). Note that this controls only space and does not change time: in the worst case there are still $\Theta(n)$ unbalanced partitions, for a total time of $\Theta(n^2)$.
+This technique is equivalent to eliminating tail recursion by hand. One can also avoid recursion altogether and keep the subintervals to be sorted in an explicit **stack**: after each partition, push the longer subinterval first and the shorter one afterward, so that the shorter one is processed first, and the size of the stack is again $O(\log n)$ (provable by induction on $n$). Note that this controls only space and does not change time: in the worst case there are still $\Theta(n)$ unbalanced partitions, for a total time of $\Theta(n^2)$.
 
 ### 14.2.2. Randomization and Recursion Depth
 

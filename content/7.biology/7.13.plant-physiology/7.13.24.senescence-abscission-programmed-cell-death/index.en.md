@@ -1,7 +1,7 @@
 ---
 title: Senescence, Abscission and Programmed Cell Death
 description: "The concept, types and significance of plant senescence, and its distinction from animal aging, necrosis and programmed cell death; the course of leaf senescence, its physiological and biochemical changes and a logistic description of its time course; the PAO pathway of chlorophyll degradation and stay-green mutants; protein degradation and nutrient remobilization (resorption efficiency); senescence-associated genes and NAC and WRKY transcription factors; regulation by hormones (cytokinin and the IPT experiment; ethylene, abscisic acid, jasmonic acid, salicylic acid) and by the environment; whole-plant senescence of monocarpic plants and several theories of senescence; types of plant programmed cell death (vacuolar and necrotic), executioners (vacuolar processing enzymes, metacaspases) and developmental examples (vessel elements, aleurone layer, tapetum, megaspores), the hypersensitive response and autophagy; abscission: developmental stages of the abscission zone, cell wall hydrolases, the auxin gradient theory, ethylene and abscisic acid, the IDA–HAE/HSL2 peptide signal, the time course of break strength, environmental factors and applications in production; postharvest physiology and preservation: temperature coefficient, ethylene and storage life"
-source_hash: 664b028ee3b4
+source_hash: 01df76de3b15
 ---
 
 Death of cells, organs and even whole plants is a regular part of plant life histories: vessel elements die as they mature, and only then become water-conducting pipes; before autumn leaves die they transport more than half of the nitrogen and phosphorus in the leaf back to the stem; annual crops die as whole plants after setting seed, committing the material accumulated over a lifetime to the seeds. These deaths are not the passive result of wear and tear but developmental processes controlled by genes and carried out according to a program. This chapter discusses three closely related processes: senescence (Sections 24.1–24.3), programmed cell death (Section 24.4) and abscission of organs (Section 24.5), and finally their application to the postharvest preservation of agricultural products (Section 24.6).
@@ -73,7 +73,7 @@ The color change of autumn leaves is the outward manifestation of this process: 
 | **Reactive oxygen species** | Free radicals and reactive oxygen species (superoxide anion, hydrogen peroxide, hydroxyl radical, singlet oxygen) increase, while the capacity of scavenging systems such as superoxide dismutase, catalase, peroxidase, ascorbate and glutathione declines; lipoxygenase activity rises and catalyzes peroxidation of membrane lipids |
 | Sugars | Soluble sugars in the leaf often increase (rather than decrease), and sugar accumulation itself can promote senescence (Section 24.3) |
 
-The time course of leaf senescence can be described by several reversed logistic curves (Figure 1). Let an index (chlorophyll, protein, nitrogen, photosynthetic rate) have the value 1 in the mature leaf and finally fall to $y_\infty$:
+The time course of leaf senescence can be described by several reversed logistic curves (see the figure below). Let an index (chlorophyll, protein, nitrogen, photosynthetic rate) have the value 1 in the mature leaf and finally fall to $y_\infty$:
 
 $$
 y(t) = y_\infty + \frac{1 - y_\infty}{1 + \mathrm{e}^{(t - t_{50})/s}},
@@ -86,7 +86,7 @@ $t_{50}$ is the time to fall to half (relative to the part that can fall) and $s
 
 ### 24.2.3. Degradation of Chlorophyll
 
-Chlorophyll must be broken down safely in senescence: free chlorophyll and its colored intermediates produce singlet oxygen on absorbing light and are strongly photosensitizing toxins, so the cell cannot let them accumulate. The degradation pathway of chlorophyll is called the PAO pathway (named for its key enzyme), and its products are collectively called phyllobilins (Figure 2):
+Chlorophyll must be broken down safely in senescence: free chlorophyll and its colored intermediates produce singlet oxygen on absorbing light and are strongly photosensitizing toxins, so the cell cannot let them accumulate. The degradation pathway of chlorophyll is called the PAO pathway (named for its key enzyme), and its products are collectively called phyllobilins (see the figure below):
 
 1. Chlorophyll b is converted to chlorophyll a by chlorophyll b reductases (NYC1 and NOL) and 7-hydroxymethyl chlorophyll a reductase (HCAR). Chlorophyll b can therefore be degraded only after passing through chlorophyll a.
 2. The magnesium ion is removed, producing pheophytin a. The catalyst of this step is the STAY-GREEN (SGR) protein, which is a "reverse reaction" enzyme of magnesium chelatase (Mg-dechelatase, Shimoda et al., 2016); SGR also dissociates chlorophyll–protein complexes (especially LHCII), releasing the apoproteins for degradation by proteases.
@@ -258,7 +258,7 @@ Abscission is a process that requires energy and new protein synthesis: oxygen d
 
 ### 24.5.3. Hormonal Control of Abscission
 
-First auxin. Auxin produced in the leaf inhibits abscission of the leaf. Addicott et al. (1955) proposed the auxin gradient theory: what determines abscission is not the absolute content of auxin but the relative auxin concentration on the two sides of the abscission zone. When the concentration on the distal side (organ side) is higher than on the proximal side (stem side), the organ does not abscise; when the difference between the two sides is small or absent, the organ abscises; when the concentration on the distal side is lower than on the proximal side, abscission is accelerated. The classic experiment is as follows: if the blade is cut off and the petiole kept, the petiole soon abscises; if auxin is applied to the cut end of the petiole, abscission is delayed; if auxin is applied to the proximal side of the abscission zone (the stem side), abscission is instead accelerated. The theory can be written as a dose–response relation (Figure 3A): let $r = A_{\mathrm{distal}}/A_{\mathrm{proximal}}$; the probability of abscission is
+First auxin. Auxin produced in the leaf inhibits abscission of the leaf. Addicott et al. (1955) proposed the auxin gradient theory: what determines abscission is not the absolute content of auxin but the relative auxin concentration on the two sides of the abscission zone. When the concentration on the distal side (organ side) is higher than on the proximal side (stem side), the organ does not abscise; when the difference between the two sides is small or absent, the organ abscises; when the concentration on the distal side is lower than on the proximal side, abscission is accelerated. The classic experiment is as follows: if the blade is cut off and the petiole kept, the petiole soon abscises; if auxin is applied to the cut end of the petiole, abscission is delayed; if auxin is applied to the proximal side of the abscission zone (the stem side), abscission is instead accelerated. The theory can be written as a dose–response relation (panel A of the abscission-model figure in Section 24.5.5): let $r = A_{\mathrm{distal}}/A_{\mathrm{proximal}}$; the probability of abscission is
 
 $$
 p = \frac{1}{1 + (r/r_{50})^h},
@@ -287,7 +287,7 @@ The IDA–HAE/HSL2 pathway and the ethylene pathway are parallel and interact: i
 
 ### 24.5.5. Quantifying Abscission: Time Course of Break Strength
 
-The course of abscission in the abscission zone is often quantified by the break strength (the force required to pull the organ off at the abscission zone). When petiole abscission zone explants of bean, cotton and others are placed in ethylene (for example $10\ \mu\mathrm{L\,L^{-1}}$), the break strength falls rapidly after a lag phase (Figure 3B), which can be approximated by
+The course of abscission in the abscission zone is often quantified by the break strength (the force required to pull the organ off at the abscission zone). When petiole abscission zone explants of bean, cotton and others are placed in ethylene (for example $10\ \mu\mathrm{L\,L^{-1}}$), the break strength falls rapidly after a lag phase (panel B of the figure below), which can be approximated by
 
 $$
 F(t) = F_{\min} + (F_0 - F_{\min})\,\mathrm{e}^{-k(t - t_{\mathrm{lag}})}, \qquad t > t_{\mathrm{lag}},
@@ -335,7 +335,7 @@ L(T) = L_0\,Q_{10}^{-(T - T_0)/10}.
 \tag{24.5}
 $$
 
-The $Q_{10}$ of most fruits and vegetables is between 2 and 3 and is often higher in the low temperature range of 0–10 °C. If the storage life at 20 °C is 7 d and $Q_{10} = 3$, it is 21 d at 10 °C and 63 d at 0 °C (Figure 4). Rapid precooling after harvest and a complete cold chain are therefore the most effective means of preservation. But fruits and vegetables of tropical and subtropical origin (banana, mango, cucumber, tomato, sweet potato) suffer **chilling injury** below a certain temperature (about 10–13 °C) ([7.13.27](/7.13.27)), expressed as browning and pitting of the skin and failure to ripen normally, and their optimum storage temperature is above the chilling temperature.
+The $Q_{10}$ of most fruits and vegetables is between 2 and 3 and is often higher in the low temperature range of 0–10 °C. If the storage life at 20 °C is 7 d and $Q_{10} = 3$, it is 21 d at 10 °C and 63 d at 0 °C (see the figure below). Rapid precooling after harvest and a complete cold chain are therefore the most effective means of preservation. But fruits and vegetables of tropical and subtropical origin (banana, mango, cucumber, tomato, sweet potato) suffer **chilling injury** below a certain temperature (about 10–13 °C) ([7.13.27](/7.13.27)), expressed as browning and pitting of the skin and failure to ripen normally, and their optimum storage temperature is above the chilling temperature.
 
 Next is ethylene. Ethylene accelerates ripening of climacteric fruits ([7.13.23](/7.13.23#sec-23.10.2)), yellowing of leafy vegetables (broccoli, spinach), wilting and petal abscission of cut flowers, sprouting of potatoes and development of bitterness in carrots. Adding the effect of ethylene to Eq. (24.5) gives
 

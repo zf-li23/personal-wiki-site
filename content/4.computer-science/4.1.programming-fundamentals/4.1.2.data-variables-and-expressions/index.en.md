@@ -33,7 +33,7 @@ print(f"{fahrenheit} F = {celsius} C")
 
 With input `98.6`, both programs print a result close to `37`. A quantity in a program that can be stored and changed while the program runs is a variable.
 
-**Definition 2.1.1 (Variable)** A **variable** is a named storage unit in a program. In C++, a variable has four attributes: its name, its type, the memory location it occupies, and the value currently stored; the type is fixed at definition and does not change afterwards.
+**Definition 2.1.1 (Variable)** A **variable** is a named storage unit in a program. In C++, a variable has four attributes: its name, its type, the memory location it occupies, and the value currently stored; the type is fixed at definition and does not change afterward.
 
 In C++ a variable must be defined before it is used:
 

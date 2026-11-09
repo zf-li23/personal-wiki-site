@@ -23,7 +23,7 @@ $$
 \int_\Omega\big(u\,\Delta v-v\,\Delta u\big)\,\mathrm{d}V=\oint_{\partial\Omega}\Big(u\frac{\partial v}{\partial\boldsymbol{n}}-v\frac{\partial u}{\partial\boldsymbol{n}}\Big)\mathrm{d}S.\tag{8.2}
 $$
 
-The identity is the multidimensional analogue of Lagrange's identity for Sturm–Liouville operators ([2.4.12](/2.4.12#sec-12.5.1)): it says that $\Delta$ is symmetric on functions satisfying homogeneous Dirichlet or Neumann conditions. Two immediate consequences concern the boundary value problems.
+The identity is the multidimensional analog of Lagrange's identity for Sturm–Liouville operators ([2.4.12](/2.4.12#sec-12.5.1)): it says that $\Delta$ is symmetric on functions satisfying homogeneous Dirichlet or Neumann conditions. Two immediate consequences concern the boundary value problems.
 
 **Theorem 8.1.2** Let $u\in C^2(\bar\Omega)$.
 

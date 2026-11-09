@@ -326,7 +326,7 @@ Every item arrived exactly once, divided among the consumers by the scheduler. T
 
 ## 6.4. Semaphores
 
-**Definition 6.4.1 (Semaphore)** A **semaphore** (Dijkstra, 1965) is an integer variable with two atomic operations: `wait` (originally P; `sem_wait`) decrements the value and, if the result would be negative, blocks until it can decrement; `post` (originally V; `sem_post`) increments the value and wakes a waiting thread if there is one. The initial value determines its use: a *binary semaphore* initialized to 1 acts as a lock; a semaphore initialized to 0 lets one thread wait for an event signalled by another; a *counting semaphore* initialized to $n$ admits at most $n$ threads at a time.
+**Definition 6.4.1 (Semaphore)** A **semaphore** (Dijkstra, 1965) is an integer variable with two atomic operations: `wait` (originally P; `sem_wait`) decrements the value and, if the result would be negative, blocks until it can decrement; `post` (originally V; `sem_post`) increments the value and wakes a waiting thread if there is one. The initial value determines its use: a *binary semaphore* initialized to 1 acts as a lock; a semaphore initialized to 0 lets one thread wait for an event signaled by another; a *counting semaphore* initialized to $n$ admits at most $n$ threads at a time.
 
 ```c
 #include <pthread.h>
@@ -371,7 +371,7 @@ at most 2 workers were inside at once
 
 (The maximum is recorded with a compare-and-swap loop: it retries until it either sees a value at least as large or installs its own.) The bounded buffer can also be written with semaphores: `empty` initialized to the capacity, `full` initialized to 0, and a binary semaphore `mutex` around the buffer updates. A producer does `wait(empty); wait(mutex); insert; post(mutex); post(full)`. The order matters: a producer that took `mutex` first and then blocked on `wait(empty)` would hold the mutex while sleeping, and no consumer could ever make room, a deadlock.
 
-Semaphores are more general than locks but less structured than condition variables: the meaning of a semaphore's value is implicit, and a forgotten `post` is hard to find. Two further classical patterns: a *reader–writer lock* (`pthread_rwlock_t`) lets any number of readers or one writer hold it, which helps data that is read much more often than written (at the risk of starving writers); and the *dining philosophers* problem (five philosophers, five forks, each needs both neighbouring forks) is the standard illustration of deadlock, solved by making one philosopher pick up the forks in the opposite order, an instance of lock ordering (§6.5.3).
+Semaphores are more general than locks but less structured than condition variables: the meaning of a semaphore's value is implicit, and a forgotten `post` is hard to find. Two further classical patterns: a *reader–writer lock* (`pthread_rwlock_t`) lets any number of readers or one writer hold it, which helps data that is read much more often than written (at the risk of starving writers); and the *dining philosophers* problem (five philosophers, five forks, each needs both neighboring forks) is the standard illustration of deadlock, solved by making one philosopher pick up the forks in the opposite order, an instance of lock ordering (§6.5.3).
 
 ## 6.5. Concurrency Bugs and Deadlock
 

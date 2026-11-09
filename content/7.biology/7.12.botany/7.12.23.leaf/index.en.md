@@ -1,7 +1,7 @@
 ---
 title: The Leaf
 description: Leaf functions; blade, petiole, stipules, and the sheath, ligule and auricle of grasses; terminology of leaf shape, apex, base, margin, lobing, venation, simple and compound leaves, phyllotaxis, leaf mosaics, heterophylly and indumentum; leaf primordia, apical, marginal and intercalary growth, dorsiventrality and the molecular framework of compound-leaf development; anatomy of eudicot, grass, C3 and C4 (Kranz) leaves and pine needles; ecological leaf types; leaf fall, abscission zone and abscission layer.
-source_hash: 6d9d9feaead6
+source_hash: 0d2d5c5cc15b
 ---
 
 The leaf is the main organ of photosynthesis and transpiration in seed plants, and also the most variable organ in their morphology. Leaf form is fairly constant within a species but differs enormously between species, so the terminology of leaf morphology is the basic language for describing and identifying plants and will be used repeatedly in the chapters on angiosperm classification ([7.12.33](/7.12.33)–[7.12.49](/7.12.49)). This chapter first treats the functions and parts of the leaf, then gives the morphological terminology systematically, then describes how leaves arise at the shoot apex and differentiate, and the anatomy of three kinds of leaf (eudicot, grass and pine). It ends with the ecological types of leaves and leaf fall. The leaves of seed plants are **megaphylls**; their origin is discussed in [7.12.16](/7.12.16), the arrangement of leaves on the stem and its mathematics in the chapter on the stem ([7.12.21](/7.12.21)), and the modifications of leaves in the next chapter ([7.12.24](/7.12.24)). The tissues on which the leaf depends (epidermis, stomata, vascular bundles and so on) were covered in [7.12.4](/7.12.4) and [7.12.5](/7.12.5). The physiological mechanisms of photosynthesis, transpiration, stomatal movement and leaf abscission belong to plant physiology, so only morphology and anatomy are treated here.
@@ -43,7 +43,7 @@ How the blade is attached to the stem is also a commonly described character: pe
 
 ### 23.2.2. Grass Leaves
 
-The leaf of a grass is simple, without petiole or stipules, and consists of a blade and a sheath; at their junction there are several characteristic appendages (Fig. 1B).
+The leaf of a grass is simple, without petiole or stipules, and consists of a blade and a sheath; at their junction there are several characteristic appendages (panel B of the figure below).
 
 **Definition 23.2.2 (Leaf Sheath, Ligule and Auricle)** The expanded base of a grass leaf that wraps around the culm is the **leaf sheath**. The membranous or hairy, upward-projecting structure on the adaxial side at the junction of blade and sheath is the **ligule**. The pair of flap-like, claw-like or hairy projections that extend from the blade margin at its base on either side of the ligule are the **auricles**. The paler band on the outer (abaxial) side of the junction is the collar.
 
@@ -71,7 +71,7 @@ Leaf shape generally refers to the outline of the whole blade and is determined 
 
 When describing shape, qualifiers such as "narrowly", "broadly" and "ob-" (inverted) are added to the basic shape: an elliptic leaf that is long is narrowly elliptic or oblong, an ovate leaf that is wide is broadly ovate, an ovate leaf inverted (broad at the apex, narrow at the base) is obovate, and likewise oblanceolate, obcordate and so on. The ratios in the table are approximate and individual plants may deviate; transitions between two shapes are expressed by compound terms such as "ovate-lanceolate" or "elliptic-lanceolate", in which the first word is the minor component.
 
-Besides those in the table, common leaf shapes include the following (Fig. 2A).
+Besides those in the table, common leaf shapes include the following (panel A of the figure of leaf terms in Section 23.3.3).
 
 - Acicular (needle-shaped): slender with a sharp tip, as in the leaves of pine and spruce.
 - Linear: narrow and long, with nearly parallel margins, as in the leaves of rice, wheat, chive, daffodil and fir.
@@ -91,7 +91,7 @@ Besides those in the table, common leaf shapes include the following (Fig. 2A).
 
 ### 23.3.2. Leaf Apex and Base
 
-The shape of the apex and the base is described separately from the shape of the whole blade (Fig. 2B, 2C). Common types of apex are as follows.
+The shape of the apex and the base is described separately from the shape of the whole blade (panels B and C of the figure of leaf terms in Section 23.3.3). Common types of apex are as follows.
 
 | Apex | Features | Examples |
 |---|---|---|
@@ -129,7 +129,7 @@ Some leaf-base types are the same as those of the apex (acute, obtuse, rounded, 
 
 ### 23.3.3. Leaf Margin and Lobing
 
-The edge of the blade is the margin. By the degree of indentation, the types of margin are as follows (Fig. 2D).
+The edge of the blade is the margin. By the degree of indentation, the types of margin are as follows (panel D of the figure below).
 
 | Margin | Features | Examples |
 |---|---|---|
@@ -162,7 +162,7 @@ Divided leaves are easily confused with compound leaves. The difference is that 
 
 **Definition 23.3.1 (Veins and Venation)** The vascular bundles running through the mesophyll, together with the mechanical tissue around them, are the **veins**. They are the conducting and supporting structures of the leaf and connect through the petiole with the vascular tissue of the stem. The pattern in which the veins are distributed in the blade is **venation**. The largest, central vein is the midrib; veins branching from it are lateral veins, finer ones are collectively veinlets, and the ends of the veinlets are vein endings.
 
-There are three main kinds of venation: reticulate, parallel and dichotomous (Fig. 3A).
+There are three main kinds of venation: reticulate, parallel and dichotomous (panel A of the figure of venation and compound leaves below).
 
 - Reticulate venation: there is a distinct main vein from which lateral veins branch, these branch again and again, and the veinlets join into a network. This is the venation of most dicotyledons. Where there is a single main vein with lateral veins arranged feather-like on both sides, the venation is pinnate (privet, peach, plum); where several main veins arise together from the leaf base and are arranged like a palm, it is palmate (castor bean, grape, cotton). Palmate venation with only three main veins is trinerved: if all three arise from the leaf base it is basal (jujube), and if the two lateral main veins leave the midrib some distance above the base it is suprabasal (camphor tree). In peltate leaves the main veins radiate from the point of petiole attachment (lotus, nasturtium). If the lateral veins run to the margin and end in the teeth, the venation is craspedodromous (elm, chestnut); if they curve within the margin and join one another in arcs, it is brochidodromous (privet).
 - Parallel venation: the veins are nearly parallel, connected by fine cross veins, and common in monocotyledons. Where the veins run parallel from base to apex it is straight-parallel (rice, wheat, maize); where they leave the base parallel, gradually diverge in arcs and converge again at the apex it is arcuate (plantain, hosta); where they radiate from the base it is radiating (Chinese fan palm, windmill palm); where the midrib is prominent and the lateral veins leave it at right angles or obliquely and run parallel to the margin it is pinnate-parallel (banana, plantain, canna).
@@ -174,7 +174,7 @@ The distinction of venation between monocotyledons and dicotyledons is only appr
 
 **Definition 23.3.2 (Simple and Compound Leaves)** A leaf with one blade on a petiole is a **simple leaf**; a leaf with two or more blades on one petiole is a **compound leaf**. The petiole of a compound leaf is the common petiole; the axis bearing the leaflets above it is the rachis; the blades borne on the rachis are leaflets; and the stalk of a leaflet is a petiolule.
 
-By the arrangement of the leaflets, compound leaves fall into the following types (Fig. 3B).
+By the arrangement of the leaflets, compound leaves fall into the following types (panel B of the figure below).
 
 - Pinnately compound leaf: leaflets arranged feather-like on both sides of the rachis. If there is a terminal leaflet and the total number of leaflets is odd, the leaf is odd-pinnate (rose, black locust, Japanese pagoda tree, wisteria); if the tip bears a pair of leaflets and the total is even, it is even-pinnate (peanut, honey locust); the faba bean, with only a short point at the tip of the rachis, is also even-pinnate. If the rachis is unbranched the leaf is once-pinnate (black locust); if the rachis branches once and each branch (pinna) bears leaflets it is twice-pinnate (silk tree, *Albizia julibrissin*); branching twice gives a thrice-pinnate leaf (heavenly bamboo, *Nandina domestica*), and more times a multiply pinnate leaf (chinaberry, *Melia azedarach*). A leaf with an especially large terminal leaflet and smaller lower leaflets is lyrate; one with large and small leaflets alternating is interruptedly pinnate (potato).
 - Palmately compound leaf: the leaflets are all borne at the tip of the common petiole and spread like a palm, as in horse chestnut, *Vitex negundo* and *Schefflera*. Where the lateral petiolules branch again to bear leaflets and the whole resembles a bird's foot, the leaf is pedate (*Cayratia japonica*, jiaogulan).
@@ -295,7 +295,7 @@ The structure of the petiole is simpler than that of the blade and resembles the
 
 ### 23.5.5. The Grass Leaf Blade
 
-The leaves of monocotyledons vary in shape: linear (rice, wheat), tubular (onion), ensiform (iris), ovate (hosta), lanceolate (dayflower, *Commelina*); the venation is mostly parallel, rarely reticulate (*Dioscorea*, *Smilax*). The grass blade likewise consists of epidermis, mesophyll and veins, but each part has its own characteristics (Fig. 4B).
+The leaves of monocotyledons vary in shape: linear (rice, wheat), tubular (onion), ensiform (iris), ovate (hosta), lanceolate (dayflower, *Commelina*); the venation is mostly parallel, rarely reticulate (*Dioscorea*, *Smilax*). The grass blade likewise consists of epidermis, mesophyll and veins, but each part has its own characteristics (panel B of the figure of leaf cross sections in Section 23.5.6).
 
 The epidermal cells are regular in shape and arranged in longitudinal rows, of two kinds, long cells and short cells. Long cells are rectangular prisms, with their long axes parallel to the long axis of the leaf and nearly square in cross section; their walls are not only cutinized but also heavily silicified, which is characteristic of grass leaves. Short cells are of two kinds, silica cells and cork cells; the silica cells are often filled with a single silica body (phytolith), and the cork cell walls are suberized. On the epidermis, one long cell generally alternates with two short cells (one silica cell and one cork cell), and sometimes several short cells are clustered together. Grass leaves are stiff and their edges can cut a finger because of the silica they contain; the phytoliths formed by silica cells differ in shape, and phytoliths in soils and archaeological deposits can be used to identify ancient cereal crops. Both upper and lower epidermis have stomata, arranged in longitudinal rows parallel to the veins, consisting of two dumbbell-shaped guard cells and two subsidiary cells ([7.12.4](/7.12.4)). In the upper epidermis there are also several rows of large, thin-walled cells between two vascular bundles:
 
@@ -309,7 +309,7 @@ The vascular bundles of the veins are collateral bundles with limited growth (no
 
 ### 23.5.6. Leaves of C3 and C4 Plants
 
-By the first product of carbon dioxide fixation in photosynthesis, plants are divided into C3 and C4 plants ([7.1.25](/7.1.25)). The **C4 pathway** divides the labor in space: mesophyll cells first fix $\ce{HCO3-}$ into a four-carbon acid, which enters the bundle-sheath cells and is decarboxylated, raising the $\ce{CO2}$ concentration around Rubisco. This division of labor requires a special leaf anatomy (Fig. 4).
+By the first product of carbon dioxide fixation in photosynthesis, plants are divided into C3 and C4 plants ([7.1.25](/7.1.25)). The **C4 pathway** divides the labor in space: mesophyll cells first fix $\ce{HCO3-}$ into a four-carbon acid, which enters the bundle-sheath cells and is decarboxylated, raising the $\ce{CO2}$ concentration around Rubisco. This division of labor requires a special leaf anatomy (see the figure below).
 
 **Definition 23.5.5 (Kranz Anatomy)** In the leaves of C4 plants, the bundle sheath consists of one layer of large, neatly arranged parenchyma cells rich in chloroplasts, and closely adjacent to its outside is a ring of radially arranged mesophyll cells; in cross section the two form two concentric rings. This arrangement is **Kranz anatomy** (German *Kranz*, "wreath").
 
@@ -332,7 +332,7 @@ C4 plants are not confined to grasses: they also occur in Cyperaceae, Amaranthac
 
 ### 23.5.7. Pine Needles
 
-The leaves of the gymnosperm genus *Pinus* are needles, commonly called pine needles, borne at the tip of short shoots, solitary or in fascicles of two to five (rarely up to eight) with a sheath at the base formed by bud scales; a needle fascicle is in fact a short shoot of limited growth ([7.12.26](/7.12.26)). The number of needles per fascicle differs, and so does the shape of the cross section: Masson pine (*Pinus massoniana*), Chinese pine (*P. tabuliformis*) and Taiwan pine (*P. taiwanensis*) have two needles per fascicle and semicircular cross sections; Yunnan pine (*P. yunnanensis*, three needles) and Armand pine (*P. armandii*, five needles) have triangular (sector-shaped) cross sections. The small surface area of the needle reduces the transpiring surface, and needles often have a xeromorphic form. Taking Masson pine as an example, the structure of the needle from outside to inside is as follows (Fig. 5).
+The leaves of the gymnosperm genus *Pinus* are needles, commonly called pine needles, borne at the tip of short shoots, solitary or in fascicles of two to five (rarely up to eight) with a sheath at the base formed by bud scales; a needle fascicle is in fact a short shoot of limited growth ([7.12.26](/7.12.26)). The number of needles per fascicle differs, and so does the shape of the cross section: Masson pine (*Pinus massoniana*), Chinese pine (*P. tabuliformis*) and Taiwan pine (*P. taiwanensis*) have two needles per fascicle and semicircular cross sections; Yunnan pine (*P. yunnanensis*, three needles) and Armand pine (*P. armandii*, five needles) have triangular (sector-shaped) cross sections. The small surface area of the needle reduces the transpiring surface, and needles often have a xeromorphic form. Taking Masson pine as an example, the structure of the needle from outside to inside is as follows (see the figure below).
 
 - Epidermis: the cell walls are very thick and lignified, the cell lumina very small, and there is a well-developed cuticle outside. The stomata are arranged in longitudinal rows on the epidermis, the guard cells sunken beneath the subsidiary cells, and the cavity above them is often plugged with wax ([7.12.4](/7.12.4)), so the needle surface bears white stomatal lines.
 - Hypodermis: one to several layers of thick-walled, lignified fiber-like cells beneath the epidermis, thicker at the corners, giving support.

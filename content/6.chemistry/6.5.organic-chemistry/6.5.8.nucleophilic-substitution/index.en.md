@@ -301,7 +301,7 @@ C[C@@H](OS(=O)(=O)c1ccc(C)cc1)CCCCCC.[Br-]>>C[C@H](Br)CCCCCC (S)
 
 ![Converting an alcohol into a tosylate retains its configuration. Top: the oxygen lone pair of (R)-2-octanol attacks sulfur of tosyl chloride and chloride leaves; pyridine removes the proton from the oxonium ion. Only the O–H bond is broken; the C–O bond is untouched. Bottom: bromide attacks the stereocenter from the back (SN2) and the tosylate anion leaves with inversion, giving (S)-2-bromooctane. Ar = 4-methylphenyl, R = n-hexyl](./plots/tosylate-formation.py)
 
-The differences in leaving ability allow "exchange first, substitute afterwards": a primary alkyl chloride hydrolyzes very slowly in water, but after a little $\ce{I-}$ is added, $\ce{I-}$ first displaces $\ce{Cl-}$ by SN2 to give the alkyl iodide, which hydrolyzes much faster and releases $\ce{I-}$ again; the iodide acts as a nucleophilic catalyst. Dimethyl sulfate $\ce{(CH3O)2SO2}$ and iodomethane are common methylating reagents in the laboratory (both are highly toxic and carcinogenic, and must be used in a fume hood).
+The differences in leaving ability allow "exchange first, substitute afterward": a primary alkyl chloride hydrolyzes very slowly in water, but after a little $\ce{I-}$ is added, $\ce{I-}$ first displaces $\ce{Cl-}$ by SN2 to give the alkyl iodide, which hydrolyzes much faster and releases $\ce{I-}$ again; the iodide acts as a nucleophilic catalyst. Dimethyl sulfate $\ce{(CH3O)2SO2}$ and iodomethane are common methylating reagents in the laboratory (both are highly toxic and carcinogenic, and must be used in a fume hood).
 
 ## 8.7. Nucleophiles
 

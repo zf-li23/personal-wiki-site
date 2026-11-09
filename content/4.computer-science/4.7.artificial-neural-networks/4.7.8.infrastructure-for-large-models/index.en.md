@@ -283,7 +283,7 @@ Only stage 3 reduces the memory without a floor: ZeRO-1 and ZeRO-2 keep 4 and 2 
 
 ### 8.5.2. Fully Sharded Data Parallelism
 
-**Definition 8.5.2 (Fully Sharded Data Parallelism)** **Fully sharded data parallelism** (FSDP) is PyTorch's implementation of ZeRO stage 3. The model is divided into units, typically one Transformer block each; in the forward pass each unit's parameters are all-gathered just before use and freed afterwards; in the backward pass they are all-gathered again, and the gradients are reduce-scattered so that each GPU keeps the gradients of its own shard.
+**Definition 8.5.2 (Fully Sharded Data Parallelism)** **Fully sharded data parallelism** (FSDP) is PyTorch's implementation of ZeRO stage 3. The model is divided into units, typically one Transformer block each; in the forward pass each unit's parameters are all-gathered just before use and freed afterward; in the backward pass they are all-gathered again, and the gradients are reduce-scattered so that each GPU keeps the gradients of its own shard.
 
 Communication runs on a separate stream and is *prefetched*: the all-gather of unit $k + 1$ is issued while unit $k$ computes, so the GPU waits only when the transfer is slower than the computation (for GPT-175B, backward prefetching made training about 18% faster). FSDP2 (2024) shards every tensor by rows instead of flattening all parameters of a unit into one buffer, which composes cleanly with tensor parallelism and with FP8 scales. *Hybrid sharding* (HSDP) shards within a server, so that the all-gathers stay on NVLink, and replicates across servers like plain data parallelism; the price is that each GPU keeps $1/8$ of the model states however many servers are used, 141 GB for Llama-3-70B, too much on its own.
 

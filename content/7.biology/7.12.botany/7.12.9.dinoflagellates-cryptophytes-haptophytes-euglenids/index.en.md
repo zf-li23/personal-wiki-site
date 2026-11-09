@@ -1,7 +1,7 @@
 ---
 title: Dinoflagellates, Cryptophytes, Haptophytes and Euglenids; Ecology and Uses of Algae
 description: Dinoflagellates (thecal plates, cingulum and sulcus, the dinokaryon, reproduction and cysts, old and current classification, representative genera, symbiotic dinoflagellates and red tides); cryptophytes (periplast, ejectosomes, nucleomorph); haptophytes (haptonema, scales and coccolithophores); euglenids (pellicle, eyespot and paraflagellar body, paramylon, plastids of green algal origin) and chlorarachniophytes; evolutionary trends in algal cells, thalli, reproduction and life cycles and their endosymbiotic interpretation; the ecology and economic importance of algae.
-source_hash: 713dc5359b01
+source_hash: a580ecc3fa2b
 ---
 
 This chapter completes the survey of the algae with the groups that consist mainly of unicellular flagellates: the dinoflagellates, cryptophytes, haptophytes and euglenids, together with the chlorarachniophytes, which Chinese textbooks do not rank as a phylum. These organisms are small, mostly motile and nutritionally versatile, and all of their plastids arose by secondary (in dinoflagellates, sometimes tertiary) endosymbiosis. The plastids of dinoflagellates, cryptophytes and haptophytes come from red algae; those of euglenids and chlorarachniophytes come from green algae. For this reason these groups were the hardest to place in the old "pigment lineage" scheme, and they are the clearest illustrations of the endosymbiotic framework. The last two sections summarize the algae as a whole: evolutionary trends (§9.5) and ecological and economic importance (§9.6).
@@ -170,7 +170,7 @@ The older interpretation, using the structure of photosynthetic pigments and the
 
 On this interpretation the transition from prokaryotic to eukaryotic algae occurred independently in the three lineages, at different times: the earliest eukaryotic algae were the red algae, followed by the algae containing chlorophylls *a* and *c*, and finally those containing chlorophylls *a* and *b*.
 
-The endosymbiotic tree rearranges these facts ([7.12.6](/7.12.6#sec-6.2.6), Figure 1). The eukaryotic cell arose only once, and plastids entered eukaryotes through a single primary endosymbiosis (the Archaeplastida). The three "lineages" are actually the three branches of the Archaeplastida (glaucophytes, red algae, green plants) and the other groups that obtained plastids from red and green algae through secondary endosymbiosis.
+The endosymbiotic tree rearranges these facts (see the figure of plastid evolution in [7.12.6](/7.12.6#sec-6.2.6)). The eukaryotic cell arose only once, and plastids entered eukaryotes through a single primary endosymbiosis (the Archaeplastida). The three "lineages" are actually the three branches of the Archaeplastida (glaucophytes, red algae, green plants) and the other groups that obtained plastids from red and green algae through secondary endosymbiosis.
 
 - The chlorophyll *a* and phycobilin lineage corresponds to the glaucophytes and red algae of the Archaeplastida, which retain phycobilisomes; cyanobacteria are their common plastid source, not the host ancestor of the red algae.
 - The chlorophyll *a* and *c* lineage is the range of distribution of secondary plastids of red algal origin. Its groups (cryptophytes, haptophytes, heterokonts, dinoflagellates) belong to three supergroups, and the host relationships among them are still unresolved. The phycobiliproteins and the nucleomorph of cryptophytes are direct evidence of this origin and do not mean that they are "primitive".

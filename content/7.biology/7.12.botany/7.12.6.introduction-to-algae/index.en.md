@@ -1,7 +1,7 @@
 ---
 title: Introduction to the Algae; Cyanobacteria
 description: General features of the algae and their thallus types; the criteria used to delimit algal divisions (pigments, storage products, cell walls, flagella, nucleus, chromatophore membranes and thylakoids); the "three pigment lines" and primary, secondary and tertiary endosymbiosis; the traditional algal divisions compared with the current higher classification of eukaryotes; algal reproduction, alternation of nuclear phases and life-cycle types; the cell structure, reproduction, representative genera and current classification of cyanobacteria, the prochlorophytes, and the place of cyanobacteria in the evolution of the plant kingdom.
-source_hash: d8e0f4a3c120
+source_hash: b2655622d670
 ---
 
 In traditional botany the "lower plants" comprise the algae, fungi and lichens, and among them the **algae** are the largest and most diverse group. Photosynthetic algae live everywhere, from the marine prochlorophyte *Prochlorococcus*, less than 1 µm across, to giant kelp tens of meters long, and from hot springs and snowfields to the sea floor below 100 m. There are two reasons for studying algae in botany. First, algae are the main primary producers of aquatic ecosystems and are also food, industrial raw materials and indicators of water quality, so their form, life history and classification are the basis for understanding and using them. Second, the algae preserve the successive stages by which the plant body evolved from single cells to multicellular organisms, from undifferentiated to differentiated tissues, from isogamy to oogamy, and from no alternation of generations to alternation of generations. They are the frame of reference for understanding why the **embryophytes** are the way they are.
@@ -77,7 +77,7 @@ Storage products of photosynthesis are also diagnostic of divisions, and their c
 | Mannitol, floridoside | Sugar alcohol, galactosyl glycerol | In the cytoplasm (dissolved) | Brown algae; red algae |
 | Oil (lipid) | Triglyceride | In the cytoplasm | Xanthophytes, diatoms, chrysophytes, dinoflagellates and others |
 
-Figure 2 summarizes the main pigments and storage products of each group in a matrix.
+The figure below summarizes the main pigments and storage products of each group in a matrix.
 
 ![Photosynthetic pigments and storage products of the algal groups (matrix). Dark cells mark the main light-harvesting or diagnostic pigments of a group, pale cells pigments that are present but not major, and blank cells absence. By pigment combination the groups fall into three sets: chlorophyll *a* with phycobiliproteins only (cyanobacteria, glaucophytes, red algae), chlorophyll *a* + *b* (prochlorophytes, green algae, euglenids, chlorarachniophytes) and chlorophyll *a* + *c* (cryptophytes, haptophytes, dinoflagellates and heterokont algae), the traditional "three pigment lines"; cryptophytes combine chlorophyll *c* with phycobiliproteins. The right column gives the storage product and its location (P: inside the chromatophore; C: in the cytoplasm; V: in vacuoles). Compiled from Raven 8th ed. Table 15-1, Graham et al. *Algae* and the text of this section.](./plots/pigment-matrix.py)
 

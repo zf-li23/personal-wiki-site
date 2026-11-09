@@ -131,7 +131,7 @@ This is a separable equation, and the constant solutions $P=0$ and $P=K$ are its
 $$
 P(t)=\frac{K}{1+A\mathrm{e}^{-kt}},\qquad A=\frac{K-P_0}{P_0},
 $$
-where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the *logistic growth* of biology (modelled in [Ecology](/7.19)).
+where $P_0=P(0)$; the same formula holds for $P_0>K$. Whatever the initial value ($P_0>0$), $P(t)\to K$ as $t\to+\infty$. For $0<P_0<K/2$ the curve is S-shaped, with an inflection point at $P=K/2$, where growth is fastest. This is the *logistic growth* of biology (modeled in [Ecology](/7.19)).
 
 ![Direction field and solution curves of the logistic equation P' = kP(1 - P/K) (k = 1, K = 1): P = 0 and P = K are equilibrium solutions, and every other positive solution tends monotonically to K; solutions starting from P_0 < K/2 are S-shaped and grow fastest at P = K/2](./plots/logistic.py)
 

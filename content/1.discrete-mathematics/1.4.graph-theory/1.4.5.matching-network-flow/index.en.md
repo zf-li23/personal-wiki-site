@@ -25,7 +25,7 @@ $$
 
 Take the matching $M = \{x_1y_1, x_3y_2\}$, which saturates $x_1, x_3, y_1, y_2$. Then $P = x_2y_1x_1y_2x_3y_3$ is an alternating path: $x_2y_1, x_1y_2, x_3y_3 \notin M$ and $y_1x_1, y_2x_3 \in M$. Both of its ends $x_2, y_3$ are unsaturated, so $P$ is an augmenting path, and $M \oplus P = \{x_2y_1, x_1y_2, x_3y_3\}$ has one edge more than $M$: the edges of $P$ that were in $M$ leave it, and the others enter.
 
-![Example 5.1.1: a matching M (blue edges; unsaturated vertices grey); an augmenting path P (edges of M blue, the others red) whose ends x2, y3 are both unsaturated; M ⊕ P swaps the roles of the two kinds of edges on P and has one edge more](./plots/augmenting-path.py)
+![Example 5.1.1: a matching M (blue edges; unsaturated vertices gray); an augmenting path P (edges of M blue, the others red) whose ends x2, y3 are both unsaturated; M ⊕ P swaps the roles of the two kinds of edges on P and has one edge more](./plots/augmenting-path.py)
 
 ### 5.1.2. A Characterization of Maximum Matchings
 

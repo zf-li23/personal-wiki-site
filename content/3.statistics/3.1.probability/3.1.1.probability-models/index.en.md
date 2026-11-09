@@ -1,7 +1,7 @@
 ---
 title: Probability Models and Their Properties
 description: Random phenomena and the development of probability theory; sample spaces, events and the axioms of probability; classical and geometric probability models and the Bertrand paradox; properties derived from the axioms (inclusion–exclusion, the Boole and Bonferroni inequalities); counting in the four kinds of random sampling and in random allocation.
-source_hash: 4daffbcce1e9
+source_hash: f823f16958e5
 ---
 
 Probability theory studies the quantitative laws of random phenomena. This chapter first explains what a probability model consists of: the sample space of an experiment and a probability satisfying three axioms. The two most basic models are the classical model, with finitely many equally likely outcomes, and the geometric model, which assigns probability in proportion to volume; the Bertrand paradox warns that "equally likely" must be made precise before anything can be computed. We then derive from the axioms a series of identities and inequalities for probabilities, which serve as the basic tools for computation and proof throughout the course. Finally we discuss counting in the classical model: the four sampling schemes (with or without replacement, ordered or unordered) and their correspondence with "placing particles into boxes". The next chapter, [3.1.2](/3.1.2), makes the intuitive models of this chapter rigorous as probability spaces and introduces conditional probability. The set operations used here are reviewed in discrete mathematics, [1.2.1](/1.2.1).
@@ -41,7 +41,7 @@ Probability theory originated in the analysis of gambling problems, grew into a 
 | 1922 | Lindeberg gives the Lindeberg condition for the central limit theorem |
 | 1933 | Kolmogorov publishes *Grundbegriffe der Wahrscheinlichkeitsrechnung* (Foundations of the Theory of Probability), building an axiomatic system for probability on measure theory |
 
-Kolmogorov's axiomatic system treats events as sets, probability as a measure, mathematical expectation as an integral and independence of random variables as an analogue of orthogonality of functions, and thereby turns probability theory into a deductive mathematical discipline. This chapter and the next present the elementary part of that system.
+Kolmogorov's axiomatic system treats events as sets, probability as a measure, mathematical expectation as an integral and independence of random variables as an analog of orthogonality of functions, and thereby turns probability theory into a deductive mathematical discipline. This chapter and the next present the elementary part of that system.
 
 ## 1.2. Probability Models
 

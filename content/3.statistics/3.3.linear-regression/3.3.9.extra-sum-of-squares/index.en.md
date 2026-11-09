@@ -324,7 +324,7 @@ $$
 $$
 so the two variables together explain more than the sum of what they explain separately, and each acts as a suppressor for the other. In the Venn diagram of Section 9.3.1 the overlap $C$ would be negative. The condition implies $R^2_{Y2\mid1}>R^2_{Y2}$, because $R^2_{Y2\mid1}=\mathrm{SSR}(X_2\mid X_1)/\mathrm{SSE}(X_1)$ and $\mathrm{SSE}(X_1)\le\mathrm{SSTO}$; the converse fails, as the uncorrelated case at the end of Section 9.4.2 shows. In terms of correlations, the condition reads $R^2>r_{Y1}^2+r_{Y2}^2$; the classical example is $r_{Y1}\approx0$ and $r_{12}\ne0$, where $R^2_{Y2\mid1}\approx r_{Y2}^2/(1-r_{12}^2)>r_{Y2}^2$.
 
-![Partial coefficient of determination of Y and X2 given X1 when X1 is uncorrelated with Y (r_Y1 = 0), for r_Y2 = 0.2, 0.3, 0.5: R^2_{Y2|1} = r_Y2^2 / (1 - r_12^2) starts at r_Y2^2 (dotted lines) and grows towards 1 as the correlation r_12 between the two explanatory variables approaches its largest admissible value](./plots/suppressor-effect.py)
+![Partial coefficient of determination of Y and X2 given X1 when X1 is uncorrelated with Y (r_Y1 = 0), for r_Y2 = 0.2, 0.3, 0.5: R^2_{Y2|1} = r_Y2^2 / (1 - r_12^2) starts at r_Y2^2 (dotted lines) and grows toward 1 as the correlation r_12 between the two explanatory variables approaches its largest admissible value](./plots/suppressor-effect.py)
 
 **Example 9.4.1** In the body fat data, $r_{Y3}=0.14$ for midarm while $r_{13}=0.46$. The sequential sums of squares in the two orders are
 

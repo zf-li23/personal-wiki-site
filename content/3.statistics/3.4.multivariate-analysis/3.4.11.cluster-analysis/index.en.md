@@ -102,7 +102,7 @@ The linkages produce clusters of different shapes.
 | single | handles irregularly shaped (non-elliptical) clusters fairly naturally | sensitive to noise and outliers, which produce "chaining": long straggly clusters joined through intermediate points |
 | complete | less sensitive to noise and outliers; compact clusters | clusters are biased toward globular shapes and may violate closeness (a point may be much closer to some points of a neighboring cluster than to its own), which shows as breaking large clusters |
 | average | a compromise between single and complete linkage: globular clusters like complete linkage, less sensitive to noise than single linkage | |
-| Ward | similar to average linkage when the dissimilarity is the squared distance; a hierarchical analogue of $k$-means, sometimes used to initialize $k$-means | biased toward globular clusters of similar size |
+| Ward | similar to average linkage when the dissimilarity is the squared distance; a hierarchical analog of $k$-means, sometimes used to initialize $k$-means | biased toward globular clusters of similar size |
 
 **Example 11.2.2** For the iris data with the Euclidean distance (in R, `hclust(dist(iris[, -5]), method)` followed by `cutree(res, k = 3)`), single linkage separates setosa but chains all the versicolor and virginica flowers except two outlying points into one cluster, so its three clusters have sizes $50$, $98$ and $2$. Complete, average and Ward linkage give dendrograms with more balanced branches and also separate setosa. Average and Ward linkage split the remaining flowers roughly along the species, with about $15$ virginica flowers grouped with versicolor, while complete linkage breaks the versicolor flowers into two parts, the "breaking large clusters" weakness.
 
@@ -159,7 +159,7 @@ is the objective that $k$-means minimizes, and Algorithm 11.3.1 is coordinate de
 
 Choosing $k$ is a matter of balance: with too few clusters many points are far from their centroid; with too many, adding clusters barely reduces the average distance. The SSE alone cannot decide, since it decreases as $k$ increases and is $0$ when every point is its own cluster. Common approaches are the following.
 
-1. The *elbow method*: plot the minimal SSE against $k$; it falls rapidly up to some $k$ and changes little afterwards, and the turning point of the curve is chosen as $k$.
+1. The *elbow method*: plot the minimal SSE against $k$; it falls rapidly up to some $k$ and changes little afterward, and the turning point of the curve is chosen as $k$.
 2. An empirical rule of thumb: $k \approx \sqrt{n/2}$ for $n$ points, for instance $k = 10$ for $n = 200$.
 3. The silhouette coefficient (Definition 11.3.1): choose the $k$ that maximizes the average silhouette over all points.
 4. The *gap statistic* (Tibshirani, Walther and Hastie, 2001): compare $\ln\mathrm{SSE}_k$ with its expectation under a reference distribution without clusters, and choose the $k$ where the gap is large (in R, `cluster::clusGap`).

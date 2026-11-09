@@ -137,7 +137,7 @@ Most cells are nearly transparent in bright-field microscopy. For staining, a dr
 
 ### 2.5.2. The Gram Stain
 
-**Definition 2.5.1 (Gram Stain)** The **Gram stain** (Hans Christian Gram, 1884) is a differential stain in which fixed cells are stained with crystal violet, treated with iodine, briefly decolorized with ethanol or acetone–ethanol and counterstained with safranin. **Gram-positive bacteria** retain the crystal violet–iodine complex and appear purple; **gram-negative bacteria** are decolorized and appear pink or red from the counterstain.
+**Definition 2.5.1 (Gram Stain)** The **Gram stain** (Hans Christian Gram, 1884) is a differential stain in which fixed cells are stained with crystal violet, treated with iodine, briefly decolorized with ethanol or acetone–ethanol and counterstained with safranin. **Gram-positive bacteria** retain the crystal violet–iodine complex and appear purple; **Gram-negative bacteria** are decolorized and appear pink or red from the counterstain.
 
 ![The four steps of the Gram stain for a Gram-positive coccus and a Gram-negative rod. 1: crystal violet (about one minute) stains all cells purple. 2: iodine (about one minute) forms an insoluble crystal violet–iodine complex in the cells. 3: ethanol (a few seconds) dehydrates the thick peptidoglycan of the Gram-positive cell, which shrinks and traps the complex; it dissolves the outer membrane of the Gram-negative cell and extracts the complex through the thin peptidoglycan, leaving the cell colorless. 4: safranin (about one minute) stains the colorless cells pink; Gram-positive cells stay purple](./plots/gram-stain.py)
 

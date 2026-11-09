@@ -154,7 +154,7 @@ Direct evidence for the bromonium ion came from Olah, who observed the ethyleneb
 
 The halogens differ: chlorine is small and weakly polarizable, so the bridge is weaker and more positive charge falls on carbon, especially for substrates such as phenyl-substituted alkenes that can stabilize a cation, and chlorination is less stereoselectively anti; the addition of iodine is reversible and the diiodides are unstable; fluorine reacts violently with alkenes and cannot be controlled.
 
-Opening of onium ions derived from cyclohexene follows the rule of trans-diaxial opening (the Fürst–Plattner rule): the nucleophile attacks antiperiplanar to the leaving bond and directly gives a **chair conformation** in which both new bonds are **axial bonds**, which only afterwards undergoes a **ring flip** to the more stable diequatorial conformation ([6.5.4](/6.5.4#sec-4.5.1)). In rings whose conformation is locked (such as 4-tert-butylcyclohexene), this rule decides which trans isomer is formed.
+Opening of onium ions derived from cyclohexene follows the rule of trans-diaxial opening (the Fürst–Plattner rule): the nucleophile attacks antiperiplanar to the leaving bond and directly gives a **chair conformation** in which both new bonds are **axial bonds**, which only afterward undergoes a **ring flip** to the more stable diequatorial conformation ([6.5.4](/6.5.4#sec-4.5.1)). In rings whose conformation is locked (such as 4-tert-butylcyclohexene), this rule decides which trans isomer is formed.
 
 ### 11.4.3. Halohydrins
 

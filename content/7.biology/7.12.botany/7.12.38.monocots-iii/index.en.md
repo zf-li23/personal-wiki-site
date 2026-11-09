@@ -1,7 +1,7 @@
 ---
 title: "Monocots III: Arecales, Commelinales and Zingiberales"
 description: "Circumscription and synapomorphies of the commelinids (ferulic acid and UV fluorescence in cell walls, silica bodies); Arecales (Arecaceae: single apical meristem, primary thickening and establishment growth, plicate leaf development, five subfamilies; Trachycarpus, Livistona, coconut, oil palm, areca palm, date palm, Calamus, Caryota, talipot, Nypa; Dasypogonaceae); Commelinales (Commelinaceae: staminal hairs of Commelina and Tradescantia; Pontederiaceae: invasion of water hyacinth and tristyly, Monochoria); Zingiberales (Musaceae: triploid origin and parthenocarpy of banana, Fusarium wilt; Strelitziaceae, Heliconiaceae, Lowiaceae; Cannaceae, Marantaceae; Zingiberaceae: the labellum as two fused staminodes, ginger, Alpinia, Amomum, Curcuma; Costaceae); the series of reduction of fertile stamens and petaloidy of staminodes in Zingiberales."
-source_hash: 1a21c8df249b
+source_hash: f0f9f99a2bbd
 ---
 
 The latest-diverging branch of the monocots is called the commelinids; it comprises Arecales, Commelinales, Zingiberales and Poales, about 30,000 species. They differ enormously in outward appearance: there are tall palms and the giant herbs of banana, but also delicate dayflowers, the aquatic water hyacinth and the most numerous of all, the grasses. What links them is not the structure of the flower but the chemistry of the cell wall. This chapter treats the characters of the commelinids (§38.1) and three of their orders: Arecales (§38.2), Commelinales (§38.3) and Zingiberales (§38.4); Poales is left to [7.12.39](/7.12.39). In Cronquist's system these plants belonged to three subclasses: Arecaceae to Arecidae (together with Araceae and Pandanaceae), Commelinaceae to Commelinidae, Pontederiaceae to Liliidae, and Zingiberales and Bromeliales formed the Zingiberidae ([7.12.33](/7.12.33#sec-33.5.2)). For the overview of the monocots and the phylogenetic tree see [7.12.36](/7.12.36).
@@ -133,7 +133,7 @@ Changes in circumscription: Cronquist's Zingiberidae comprised Zingiberales and 
 
 ### 38.4.2. Reduction of Fertile Stamens and Petaloidy of Staminodes
 
-The flowers of the families of Zingiberales can be arranged in a series that shows how the androecium is reduced step by step and "turns into petals" (Fig. 38.4.1). The basis is the androecium of a trimerous pentacyclic flower: 3 stamens in the outer whorl (1 abaxial median and 2 adaxial-lateral) and 3 in the inner whorl (1 adaxial median and 2 abaxial-lateral).
+The flowers of the families of Zingiberales can be arranged in a series that shows how the androecium is reduced step by step and "turns into petals" (see the numbers of fertile stamens in the Zingiberales phylogeny above). The basis is the androecium of a trimerous pentacyclic flower: 3 stamens in the outer whorl (1 abaxial median and 2 adaxial-lateral) and 3 in the inner whorl (1 adaxial median and 2 abaxial-lateral).
 
 | Family | Fertile stamens | Staminodes | Conspicuous part of the flower |
 |---|---|---|---|

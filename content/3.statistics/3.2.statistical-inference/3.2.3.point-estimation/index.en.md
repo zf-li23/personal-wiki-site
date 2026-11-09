@@ -328,7 +328,7 @@ the fraction of $A$ alleles among all the genes in the sample.
 
 ### 3.3.3. Computing the MLE from the Definition
 
-**Example 3.3.8** For a single observation $X\sim\mathrm{U}(0,\theta)$, $\theta>0$, the likelihood is $L(\theta;x)=\theta^{-1}\boldsymbol{1}_{[x,\infty)}(\theta)$: it is $0$ for $\theta<x$ and $1/\theta$ for $\theta\ge x$, jumping up at $\theta=x$ and decreasing afterwards. The likelihood equation has no solution; the maximum is attained at the jump, $\hat\theta=x$.
+**Example 3.3.8** For a single observation $X\sim\mathrm{U}(0,\theta)$, $\theta>0$, the likelihood is $L(\theta;x)=\theta^{-1}\boldsymbol{1}_{[x,\infty)}(\theta)$: it is $0$ for $\theta<x$ and $1/\theta$ for $\theta\ge x$, jumping up at $\theta=x$ and decreasing afterward. The likelihood equation has no solution; the maximum is attained at the jump, $\hat\theta=x$.
 
 **Example 3.3.9** Let $X_1,\dots,X_n$ be a random sample from $\mathrm{U}(\alpha,\beta)$, $\alpha<\beta$, where only one endpoint is unknown. Since $f(x_i)=\frac1{\beta-\alpha}\boldsymbol{1}_{[\alpha,\beta]}(x_i)$,
 
@@ -358,7 +358,7 @@ $$
 L(N;x_1,\dots,x_{20})=\frac{\binom{N-10}{16}\binom{10}{4}}{\binom N{20}},\qquad N\ge26.
 $$
 
-Since $N$ is an integer, we compare consecutive values: $L(N)/L(N-1)=\frac{(N-10)(N-20)}{N(N-26)}\ge1$ if and only if $N\le\frac{10\cdot20}4=50$, with equality at $N=50$. Hence $L$ increases up to $N=49$, $L(49)=L(50)$, and $L$ decreases afterwards: both $\hat N=49$ and $\hat N=50$ are MLEs, the latter agreeing with the intuitive estimate. In general the MLE is $\lfloor Mn/t\rfloor$ for $M$ tagged animals, a recapture of size $n$ and $t$ tagged recaptures, with a tie when $Mn/t$ is an integer.
+Since $N$ is an integer, we compare consecutive values: $L(N)/L(N-1)=\frac{(N-10)(N-20)}{N(N-26)}\ge1$ if and only if $N\le\frac{10\cdot20}4=50$, with equality at $N=50$. Hence $L$ increases up to $N=49$, $L(49)=L(50)$, and $L$ decreases afterward: both $\hat N=49$ and $\hat N=50$ are MLEs, the latter agreeing with the intuitive estimate. In general the MLE is $\lfloor Mn/t\rfloor$ for $M$ tagged animals, a recapture of size $n$ and $t$ tagged recaptures, with a tie when $Mn/t$ is an integer.
 
 ### 3.3.4. MLE in an Exponential Family
 

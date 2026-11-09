@@ -1,7 +1,7 @@
 ---
 title: "Monocots II: Asparagales"
 description: "Circumscription and synapomorphies of Asparagales (14 families in APG IV; phytomelan seed coat, septal nectaries, change of telomere repeats, anomalous secondary growth); Orchidaceae (gynostemium, labellum, pollinia, resupination, dust-like seeds and mycorrhizal dependence; five subfamilies and the reduction of stamen number; Neuwiedia, Cypripedium, Paphiopedilum, Orchis, Spiranthes, Bletilla, Dendrobium, Cymbidium, Phalaenopsis, Gastrodia, Vanilla; deceptive pollination; CITES protection); Hypoxidaceae; Iridaceae (three stamens, petaloid style branches; Iris, Crocus, Gladiolus); Asphodelaceae (Hemerocallis, Aloe); Amaryllidaceae (Allioideae: Allium and sulfur compounds; Amaryllidoideae: Lycoris, Narcissus, Clivia; Agapanthoideae); Asparagaceae (7 subfamilies: Asparagus, Polygonatum, Ophiopogon, Convallaria, Hosta, Agave, Yucca, Hyacinthus, Dracaena)."
-source_hash: f465fcfc41fb
+source_hash: 587d8bd50d27
 ---
 
 Asparagales are the largest order of monocots, with about 36,000 species, roughly half of all monocots, of which Orchidaceae alone account for about 28,000. The order includes some of the horticulturally most important plants (orchids, irises, gladiolus, daffodils, clivia, hyacinths, hostas, aloes, agaves), vegetables (onion, garlic, leek, asparagus, daylily buds), and many medicinal "lilioid" plants such as *Gastrodia*, *Dendrobium*, *Polygonatum*, *Ophiopogon* and *Anemarrhena*. In Cronquist's system these plants were divided between Liliales of the subclass Liliidae (broadly defined Liliaceae, into which Amaryllidaceae were also merged; Iridaceae, Agavaceae and others) and Orchidales (Orchidaceae); APG combines the groups of the broadly defined Liliaceae that have black seeds and mostly septal nectaries with Orchidaceae and Iridaceae in Asparagales ([7.12.36](/7.12.36#sec-36.6.1)). This chapter first treats the circumscription and characters of the order (§37.1), then Orchidaceae (§37.2), Iridaceae (§37.3), Asphodelaceae (§37.4), Amaryllidaceae (§37.5) and Asparagaceae (§37.6). For the pollination mechanisms of orchids see [7.12.29](/7.12.29#sec-29.3.6); for bulbs, corms and cladodes and other underground stems and modified organs see [7.12.24](/7.12.24#sec-24.3).
@@ -60,7 +60,7 @@ The "dust seed" of orchids has only an undifferentiated embryo of several tens t
 
 ### 37.2.3. Five Subfamilies and the Reduction of Stamen Number
 
-Orchidaceae have about 750 genera and 28,000 species, distributed worldwide and most numerous in tropical montane rain forests; China has about 190 genera and over 1500 species, mainly south of the Yangtze, with the southwest and Taiwan richest. Molecular phylogenetics divides the family into 5 subfamilies (Chase et al. 2003, 2015), which diverge in the following order (Fig. 37.2.2):
+Orchidaceae have about 750 genera and 28,000 species, distributed worldwide and most numerous in tropical montane rain forests; China has about 190 genera and over 1500 species, mainly south of the Yangtze, with the southwest and Taiwan richest. Molecular phylogenetics divides the family into 5 subfamilies (Chase et al. 2003, 2015), which diverge in the following order (see the phylogeny of the orchid subfamilies below):
 
 | Subfamily | Species | Fertile stamens | Pollen | Habit | Representative genera |
 |---|---|---|---|---|---|

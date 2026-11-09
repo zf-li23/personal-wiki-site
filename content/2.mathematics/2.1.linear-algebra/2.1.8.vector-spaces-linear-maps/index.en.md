@@ -3,19 +3,19 @@ title: Vector Spaces and Linear Maps
 source_hash: 94df76556e32
 ---
 
-The first seven chapters work in $\mathbb{R}^n$: vectors are arrays of numbers and linear maps are matrices. But linearity is far more widespread. Solutions of a homogeneous linear differential equation can be added and scaled; polynomials, matrices and functions can all be combined linearly; differentiation, transposition, taking the trace, and evaluation at given points all obey the superposition principle. This chapter abstracts the notions of $\mathbb{R}^n$ into vector spaces and linear maps over a number field, so that all of the preceding theory applies to such objects.
+The first seven chapters work in $\mathbb{R}^n$: vectors are arrays of numbers and linear maps are matrices. But linearity is far more widespread. Solutions of a homogeneous linear differential equation can be added and scaled; polynomials, matrices and functions can all be combined linearly; differentiation, transposition, taking the trace, and evaluation at given points all obey the superposition principle. This chapter abstracts the notions of $\mathbb{R}^n$ into vector spaces and linear maps over a field of numbers, so that all of the preceding theory applies to such objects.
 
-This chapter is the turning point of the course. Sections 8.1–8.3 carry subspaces, linear dependence, bases and dimension over to general vector spaces (the arguments are those of [Chapter 3](/2.1.3), but no longer rely on the concrete form of matrices) and add intersections, sums and direct sums of subspaces. Sections 8.4–8.7 form the core of the chapter: once a basis is fixed, abstract vectors become coordinates, linear maps become matrices, composition becomes **matrix multiplication**, and kernels and images become **null spaces** and **column spaces**; changing bases changes the matrix of a linear map by an equivalence and the matrix of a linear transformation by a similarity. All earlier results on matrices thus become properties of linear maps themselves, and "simplifying a matrix" becomes "choosing a good basis for a linear map". The following chapters pursue exactly this program: [Chapter 10](/2.1.10) looks for a basis in which the matrix of a linear transformation is as simple as possible (the Jordan canonical form), [Chapter 12](/2.1.12) requires that basis to be orthonormal, and [Chapter 13](/2.1.13) studies the congruence of bilinear forms under change of basis. Section 8.8 introduces dual spaces, which explain the meaning of the transpose $A^{\mathsf T}$ and are the starting point for the bilinear forms and tensors of Chapter 13. The abstract definition here agrees with that of a **vector space** over a field in discrete mathematics ([1.3.3](/1.3.3)), except that the scalars are taken from a number field.
+This chapter is the turning point of the course. Sections 8.1–8.3 carry subspaces, linear dependence, bases and dimension over to general vector spaces (the arguments are those of [Chapter 3](/2.1.3), but no longer rely on the concrete form of matrices) and add intersections, sums and direct sums of subspaces. Sections 8.4–8.7 form the core of the chapter: once a basis is fixed, abstract vectors become coordinates, linear maps become matrices, composition becomes **matrix multiplication**, and kernels and images become **null spaces** and **column spaces**; changing bases changes the matrix of a linear map by an equivalence and the matrix of a linear transformation by a similarity. All earlier results on matrices thus become properties of linear maps themselves, and "simplifying a matrix" becomes "choosing a good basis for a linear map". The following chapters pursue exactly this program: [Chapter 10](/2.1.10) looks for a basis in which the matrix of a linear transformation is as simple as possible (the Jordan canonical form), [Chapter 12](/2.1.12) requires that basis to be orthonormal, and [Chapter 13](/2.1.13) studies the congruence of bilinear forms under change of basis. Section 8.8 introduces dual spaces, which explain the meaning of the transpose $A^{\mathsf T}$ and are the starting point for the bilinear forms and tensors of Chapter 13. The abstract definition here agrees with that of a **vector space** over a field in discrete mathematics ([1.3.3](/1.3.3)), except that the scalars are taken from a subfield of $\mathbb{C}$.
 
-Notation: from this chapter on, a general number field is denoted $\mathbb{F}$; abstract vector spaces are denoted by italic capitals $V, W$, and their elements (including the zero vector $0$) by plain italic letters $v, w$, not bold; only column vectors in $\mathbb{F}^n$ are bold, including the coordinates of abstract vectors with respect to a basis (such as $\hat{\boldsymbol{x}}\in\mathbb{F}^n$). Whether a symbol is bold thus signals whether the object is a concrete array or an abstract vector.
+Notation: from this chapter on, a general field is denoted $\mathbb{F}$; abstract vector spaces are denoted by italic capitals $V, W$, and their elements (including the zero vector $0$) by plain italic letters $v, w$, not bold; only column vectors in $\mathbb{F}^n$ are bold, including the coordinates of abstract vectors with respect to a basis (such as $\hat{\boldsymbol{x}}\in\mathbb{F}^n$). Whether a symbol is bold thus signals whether the object is a concrete array or an abstract vector.
 
-## 8.1. Number Fields and Vector Spaces
+## 8.1. Fields and Vector Spaces
 
-**Definition 8.1.1 (Number Field)** Let $\mathbb{F}$ be a subset of the set $\mathbb{C}$ of complex numbers that contains at least one nonzero complex number and is closed under the four arithmetic operations of addition, subtraction, multiplication and division (by nonzero numbers). Then $\mathbb{F}$ is called a **number field**.
+**Definition 8.1.1 (Subfield of the Complex Numbers)** Let $\mathbb{F}$ be a subset of the set $\mathbb{C}$ of complex numbers that contains at least one nonzero complex number and is closed under the four arithmetic operations of addition, subtraction, multiplication and division (by nonzero numbers). Then $\mathbb{F}$ is called a **subfield of the complex numbers** (a *subfield of* $\mathbb{C}$), or simply a field.
 
-Since $\mathbb{F}$ contains a nonzero number $a$, it contains $a-a=0$ and $a/a=1$, and hence all rational numbers: every number field contains $\mathbb{Q}$. Common number fields are the rational numbers $\mathbb{Q}$, the real numbers $\mathbb{R}$ and the complex numbers $\mathbb{C}$; the natural numbers $\mathbb{N}$ and the integers $\mathbb{Z}$ are not number fields (they are not closed under subtraction or division). $\mathbb{Q}(\sqrt2)=\{a+b\sqrt2\mid a,b\in\mathbb{Q}\}$ is also a number field; more examples appear in [Chapter 9](/2.1.9). Gaussian elimination uses only the four arithmetic operations, so a linear system over a number field $\mathbb{F}$ that has a solution has a solution in $\mathbb{F}$; likewise the rank, invertibility and so on of a matrix do not change when $\mathbb{F}$ is regarded as a subfield of a larger number field.
+Since $\mathbb{F}$ contains a nonzero number $a$, it contains $a-a=0$ and $a/a=1$, and hence all rational numbers: every such field contains $\mathbb{Q}$. Common examples are the rational numbers $\mathbb{Q}$, the real numbers $\mathbb{R}$ and the complex numbers $\mathbb{C}$; the natural numbers $\mathbb{N}$ and the integers $\mathbb{Z}$ are not fields (they are not closed under subtraction or division). $\mathbb{Q}(\sqrt2)=\{a+b\sqrt2\mid a,b\in\mathbb{Q}\}$ is also a field; more examples appear in [Chapter 9](/2.1.9). Gaussian elimination uses only the four arithmetic operations, so a linear system over a field $\mathbb{F}$ that has a solution has a solution in $\mathbb{F}$; likewise the rank, invertibility and so on of a matrix do not change when $\mathbb{F}$ is regarded as a subfield of a larger field.
 
-**Definition 8.1.2 (Vector Space)** Let $V$ be a nonempty set and $\mathbb{F}$ a number field. Suppose $V$ carries an addition (to any $a,b\in V$ corresponds a unique element $a+b$ of $V$) and a scalar multiplication (to any $a\in V$ and $k\in \mathbb{F}$ corresponds a unique element $ka$ of $V$) such that for all $a,b,c\in V$ and $k,\ell\in \mathbb{F}$ the following eight axioms hold. Then $V$ is called a **vector space** (or linear space) over $\mathbb{F}$, and its elements are called vectors:
+**Definition 8.1.2 (Vector Space)** Let $V$ be a nonempty set and $\mathbb{F}$ a field. Suppose $V$ carries an addition (to any $a,b\in V$ corresponds a unique element $a+b$ of $V$) and a scalar multiplication (to any $a\in V$ and $k\in \mathbb{F}$ corresponds a unique element $ka$ of $V$) such that for all $a,b,c\in V$ and $k,\ell\in \mathbb{F}$ the following eight axioms hold. Then $V$ is called a **vector space** (or linear space) over $\mathbb{F}$, and its elements are called vectors:
 
 1. associativity of addition: $(a+b)+c=a+(b+c)$;
 2. commutativity of addition: $a+b=b+a$;
@@ -35,7 +35,7 @@ In the language of algebraic systems, the first four axioms say that $(V,+)$ is 
 3. cancellation: $a+b=a+c$ implies $b=c$;
 4. moving a term: $a+b=c$ implies $a=c-b$;
 5. $0a=0$, $(-1)a=-a$, $k0=0$;
-6. cancelling a scalar: $ka=b$ with $k\neq0$ implies $a=\frac1kb$.
+6. canceling a scalar: $ka=b$ with $k\neq0$ implies $a=\frac1kb$.
 
 **Proof** 1: if $0,\tilde{0}$ are both zero vectors, then $\tilde{0}=\tilde{0}+0=0$. 2: if $b,c$ are both negatives of $a$, then $b=b+(a+c)=(b+a)+c=c$. 3, 4: add $-a$ or $-b$ to both sides. 5: $0a=(0+0)a=0a+0a$, so $0a=0$ by cancellation; $(-1)a+a=0a=0$, so $(-1)a=-a$; $k0+ka=k(0+a)=ka$, so $k0=0$ by cancellation. 6: $a=(\frac1kk)a=\frac1k(ka)=\frac1kb$. $\square$
 
@@ -54,11 +54,11 @@ Common vector spaces (with the usual addition and scalar multiplication):
 | $\mathbb{R}$ | real numbers | a vector space both over $\mathbb{R}$ and over $\mathbb{Q}$ |
 | $\operatorname{Hom}(U,V)$ | linear maps from $U$ to $V$ | see §8.4 |
 
-The last rows show that the same set gives different vector spaces over different number fields, possibly of different dimensions (§8.3).
+The last rows show that the same set gives different vector spaces over different fields, possibly of different dimensions (§8.3).
 
 ## 8.2. Intersections, Sums and Direct Sums of Subspaces
 
-**Definition 8.2.1 (Subspace)** Let $V$ be a vector space over a number field $\mathbb{F}$ and $M$ a nonempty subset of $V$. If $M$ is itself a vector space under the addition and scalar multiplication of $V$, then $M$ is called a (linear) **subspace** of $V$.
+**Definition 8.2.1 (Subspace)** Let $V$ be a vector space over a field $\mathbb{F}$ and $M$ a nonempty subset of $V$. If $M$ is itself a vector space under the addition and scalar multiplication of $V$, then $M$ is called a (linear) **subspace** of $V$.
 
 **Proposition 8.2.1** A nonempty subset $M$ of a vector space $V$ is a subspace if and only if $M$ is closed under addition and scalar multiplication.
 
@@ -94,7 +94,7 @@ The decomposition $\mathbb{R}^n=M\oplus M^\perp$ of [Chapter 4](/2.1.4) is anoth
 
 ### 8.3.1. Linear Combinations and Linear Dependence
 
-**Definition 8.3.1 (Linear Representation)** Let $V$ be a vector space over a number field $\mathbb{F}$, $a_1,\dots,a_n\in V$ and $k_1,\dots,k_n\in \mathbb{F}$. The vector $k_1a_1+\cdots+k_na_n$ is called a **linear combination** of $a_1,\dots,a_n$. If a vector $b$ equals some linear combination of $a_1,\dots,a_n$, we say that $b$ can be linearly represented by $a_1,\dots,a_n$; if every vector of a list $b_1,\dots,b_m$ can be linearly represented by $a_1,\dots,a_n$, we say that the former list can be linearly represented by the latter; two lists that can be linearly represented by each other are called linearly equivalent.
+**Definition 8.3.1 (Linear Representation)** Let $V$ be a vector space over a field $\mathbb{F}$, $a_1,\dots,a_n\in V$ and $k_1,\dots,k_n\in \mathbb{F}$. The vector $k_1a_1+\cdots+k_na_n$ is called a **linear combination** of $a_1,\dots,a_n$. If a vector $b$ equals some linear combination of $a_1,\dots,a_n$, we say that $b$ can be linearly represented by $a_1,\dots,a_n$; if every vector of a list $b_1,\dots,b_m$ can be linearly represented by $a_1,\dots,a_n$, we say that the former list can be linearly represented by the latter; two lists that can be linearly represented by each other are called linearly equivalent.
 
 Imitating the product of a matrix and a vector, we introduce the formal notation
 
@@ -118,13 +118,13 @@ Accordingly, starting from the first nonzero vector of a list and checking each 
 
 **Proof** Write $(b_1,\dots,b_t)=(a_1,\dots,a_s)K$ with $K$ an $s\times t$ matrix. The homogeneous system $K\boldsymbol{k}=\boldsymbol{0}$ has fewer equations than unknowns and so a nonzero solution $\boldsymbol{k}$, and then $(b_1,\dots,b_t)\boldsymbol{k}=(a_1,\dots,a_s)(K\boldsymbol{k})=0$. $\square$
 
-Lemma 8.3.1 reduces a question about a general vector space to a homogeneous linear system over the number field, a technique used again and again in this chapter. It immediately implies that two linearly equivalent lists that are each linearly independent have the same number of vectors.
+Lemma 8.3.1 reduces a question about a general vector space to a homogeneous linear system over the field, a technique used again and again in this chapter. It immediately implies that two linearly equivalent lists that are each linearly independent have the same number of vectors.
 
 **Definition 8.3.3 (Maximal Linearly Independent Subset and Rank)** A sublist $a_{i_1},\dots,a_{i_r}$ of a list $S:a_1,\dots,a_s$ is called a **maximal linearly independent subset** of $S$ if it is linearly independent and $S$ can be linearly represented by it. Any two maximal linearly independent subsets of $S$ are linearly equivalent and hence contain the same number of vectors; this number is called the **rank** of the list $S$, written $\operatorname{rank}(S)$. A list consisting only of zero vectors has rank zero by convention.
 
 ### 8.3.2. Bases and Dimension
 
-**Definition 8.3.4 (Basis and Dimension)** Let $V$ be a vector space over a number field $\mathbb{F}$. A linearly independent list in $V$ by which every vector of $V$ can be linearly represented is called a **basis** of $V$. If a basis of $V$ contains $n$ vectors, $V$ is called an $n$-dimensional vector space and its **dimension** is $n$, written $\dim V=n$. If $V$ contains arbitrarily many linearly independent vectors, $V$ is called infinite-dimensional; otherwise $V$ is a **finite-dimensional vector space**. The zero space $\{0\}$ has dimension $0$ by convention.
+**Definition 8.3.4 (Basis and Dimension)** Let $V$ be a vector space over a field $\mathbb{F}$. A linearly independent list in $V$ by which every vector of $V$ can be linearly represented is called a **basis** of $V$. If a basis of $V$ contains $n$ vectors, $V$ is called an $n$-dimensional vector space and its **dimension** is $n$, written $\dim V=n$. If $V$ contains arbitrarily many linearly independent vectors, $V$ is called infinite-dimensional; otherwise $V$ is a **finite-dimensional vector space**. The zero space $\{0\}$ has dimension $0$ by convention.
 
 By Lemma 8.3.1, any two bases of a finite-dimensional space contain the same number of vectors, so the dimension is well defined; when the field needs emphasis we write $\dim_{\mathbb{F}}V$.
 
@@ -150,7 +150,7 @@ The dimension formula has the same form as the inclusion–exclusion principle f
 
 ### 8.3.3. Examples
 
-**Example 8.3.1** The choice of number field affects the dimension:
+**Example 8.3.1** The choice of field affects the dimension:
 
 - $\mathbb{R}$ as a vector space over $\mathbb{R}$ has any nonzero real number as a basis and dimension $1$; as a vector space over $\mathbb{Q}$, the numbers $1,\pi,\dots,\pi^n$ are linearly independent for every $n$ ($\pi$ is transcendental, i.e., not a root of any nonzero polynomial with rational coefficients), so it is infinite-dimensional.
 - $\mathbb{C}$ as a vector space over $\mathbb{R}$ has the basis $1,\mathrm{i}$, so $\dim_{\mathbb{R}}\mathbb{C}=2$; as a vector space over $\mathbb{C}$, $\dim_{\mathbb{C}}\mathbb{C}=1$.
@@ -175,7 +175,7 @@ and the **determinant** of the coefficient matrix, $\mathrm{e}^{(\lambda_1+\lamb
 
 ## 8.4. Linear Maps
 
-**Definition 8.4.1 (Linear Map)** Let $U,V$ be vector spaces over a number field $\mathbb{F}$. A map $f\colon U\to V$ that preserves addition and scalar multiplication, that is,
+**Definition 8.4.1 (Linear Map)** Let $U,V$ be vector spaces over a field $\mathbb{F}$. A map $f\colon U\to V$ that preserves addition and scalar multiplication, that is,
 
 1. additivity: $f(a+b)=f(a)+f(b)$ for all $a,b\in U$;
 2. homogeneity: $f(ka)=kf(a)$ for all $a\in U$ and $k\in \mathbb{F}$,
@@ -212,7 +212,7 @@ $f+g$, $kf$ and $gf$ are again linear maps, and $\operatorname{Hom}(U,V)$ is a v
 
 ## 8.5. Isomorphisms and Coordinates
 
-**Definition 8.5.1 (Isomorphism)** Let $U,V$ be vector spaces over a number field $\mathbb{F}$. If there is a bijective $f\in\operatorname{Hom}(U,V)$, then $U$ and $V$ are said to be (linearly) isomorphic, and $f$ is called an **isomorphism** from $U$ to $V$. An isomorphism from $U$ to itself is called an **automorphism** of $U$.
+**Definition 8.5.1 (Isomorphism)** Let $U,V$ be vector spaces over a field $\mathbb{F}$. If there is a bijective $f\in\operatorname{Hom}(U,V)$, then $U$ and $V$ are said to be (linearly) isomorphic, and $f$ is called an **isomorphism** from $U$ to $V$. An isomorphism from $U$ to itself is called an **automorphism** of $U$.
 
 **Proposition 8.5.1** If $f\colon U\to V$ and $g\colon V\to W$ are isomorphisms, then so are $gf\colon U\to W$ and $f^{-1}\colon V\to U$. Hence isomorphism of vector spaces is an **equivalence relation**.
 
@@ -228,7 +228,7 @@ $$
 \sigma_{e_1,\dots,e_n}\colon V\to \mathbb{F}^n,\quad x\mapsto\hat{\boldsymbol{x}},\qquad \sigma^{-1}_{e_1,\dots,e_n}\colon \mathbb{F}^n\to V,\quad\hat{\boldsymbol{x}}\mapsto(e_1,\dots,e_n)\hat{\boldsymbol{x}}.
 $$
 
-**Theorem 8.5.1** The coordinate map $\sigma_{e_1,\dots,e_n}\colon V\to \mathbb{F}^n$ is an isomorphism. Consequently, two finite-dimensional vector spaces over a number field $\mathbb{F}$ are isomorphic if and only if they have the same dimension: dimension is a complete invariant of isomorphism, and $\mathbb{F}^n$ is the canonical form of $n$-dimensional spaces.
+**Theorem 8.5.1** The coordinate map $\sigma_{e_1,\dots,e_n}\colon V\to \mathbb{F}^n$ is an isomorphism. Consequently, two finite-dimensional vector spaces over a field $\mathbb{F}$ are isomorphic if and only if they have the same dimension: dimension is a complete invariant of isomorphism, and $\mathbb{F}^n$ is the canonical form of $n$-dimensional spaces.
 
 **Proof** $\sigma$ is a bijection, and $kx+\ell y=(e_1,\dots,e_n)(k\hat{\boldsymbol{x}}+\ell\hat{\boldsymbol{y}})$ gives $\sigma(kx+\ell y)=k\sigma(x)+\ell\sigma(y)$. So every $n$-dimensional space is isomorphic to $\mathbb{F}^n$, and hence any two are isomorphic. Conversely, if $f\colon U\to V$ is an isomorphism and $e_1,\dots,e_n$ is a basis of $U$, then $f(e_1),\dots,f(e_n)$ is linearly independent ($f$ is injective) and spans $V$ ($f$ is surjective), so it is a basis of $V$ and $\dim V=n$. $\square$
 
@@ -393,7 +393,7 @@ Through matrix representations, the eigenvalue problem for a linear transformati
 
 **Proof** Take $S=T$ in Theorem 8.7.1. $\square$
 
-**Theorem 8.7.4** Two square matrices $A,B$ of order $n$ over a number field $\mathbb{F}$ are **similar matrices** if and only if they are the matrices of one linear transformation of some $n$-dimensional vector space $V$ with respect to two bases.
+**Theorem 8.7.4** Two square matrices $A,B$ of order $n$ over a field $\mathbb{F}$ are **similar matrices** if and only if they are the matrices of one linear transformation of some $n$-dimensional vector space $V$ with respect to two bases.
 
 **Proof** Sufficiency is Theorem 8.7.3. Necessity: let $B=T^{-1}AT$. Take any basis $e_1,\dots,e_n$ of $V$; by Proposition 8.6.1 there is a linear transformation $f$ with $f(e_1,\dots,e_n)=(e_1,\dots,e_n)A$. Let $(t_1,\dots,t_n)=(e_1,\dots,e_n)T$; this is a basis, and the matrix of $f$ with respect to it is $T^{-1}AT=B$. $\square$
 
@@ -439,7 +439,7 @@ $$
 
 and with respect to the basis $\begin{bmatrix}1&0\\0&0\end{bmatrix},\begin{bmatrix}0&0\\0&1\end{bmatrix},\begin{bmatrix}0&1\\1&0\end{bmatrix},\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ the matrix of $S$ is $\operatorname{diag}(1,1,1,0)$.
 
-**Example 8.7.2** The matrix of $D$ on $\operatorname{span}(1,\sin x,\cos x)$ in Example 8.6.2 has characteristic polynomial $\lambda(\lambda^2+1)$, whose only real eigenvalue is $0$, so $D$ is not diagonalizable over the real field. If complex coefficients are allowed, $\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ and $\mathrm{e}^{-\mathrm{i}x}$ are eigenvectors for $\pm\mathrm{i}$, and the matrix of $D$ with respect to the basis $1,\mathrm{e}^{\mathrm{i}x},\mathrm{e}^{-\mathrm{i}x}$ is $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$. Diagonalizability depends on the number field, which is why [Chapter 9](/2.1.9) discusses complex numbers and the factorization of polynomials.
+**Example 8.7.2** The matrix of $D$ on $\operatorname{span}(1,\sin x,\cos x)$ in Example 8.6.2 has characteristic polynomial $\lambda(\lambda^2+1)$, whose only real eigenvalue is $0$, so $D$ is not diagonalizable over the real field. If complex coefficients are allowed, $\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x$ and $\mathrm{e}^{-\mathrm{i}x}$ are eigenvectors for $\pm\mathrm{i}$, and the matrix of $D$ with respect to the basis $1,\mathrm{e}^{\mathrm{i}x},\mathrm{e}^{-\mathrm{i}x}$ is $\operatorname{diag}(0,\mathrm{i},-\mathrm{i})$. Diagonalizability depends on the field, which is why [Chapter 9](/2.1.9) discusses complex numbers and the factorization of polynomials.
 
 :::
 
@@ -456,7 +456,7 @@ The various equivalence relations on matrices in this course can all be understo
 
 For fixed $\boldsymbol{u}$, the inner product $\langle\boldsymbol{x},\boldsymbol{u}\rangle$ is a linear function of $\boldsymbol{x}$; the trace is a linear function of matrices; the definite integral is a linear function of continuous functions. Such linear maps "vector ↦ number" themselves form a vector space, dual to the original one, and this is where the transpose finds its explanation.
 
-**Definition 8.8.1 (Linear Functional)** Let $V$ be a vector space over a number field $\mathbb{F}$. A linear map $f\colon V\to \mathbb{F}$ (with $\mathbb{F}$ regarded as a one-dimensional vector space) is called a **linear functional** on $V$.
+**Definition 8.8.1 (Linear Functional)** Let $V$ be a vector space over a field $\mathbb{F}$. A linear map $f\colon V\to \mathbb{F}$ (with $\mathbb{F}$ regarded as a one-dimensional vector space) is called a **linear functional** on $V$.
 
 By Proposition 8.6.1, a linear functional is determined by its values on a basis. For example, if $f\colon \mathbb{R}^2\to\mathbb{R}$ has $f(\boldsymbol{e}_1)=10$ and $f(\boldsymbol{e}_2)=1$, then $f\big([a\ b]^{\mathsf T}\big)=af(\boldsymbol{e}_1)+bf(\boldsymbol{e}_2)=10a+b$. Other examples: the trace on $\mathbb{F}^{n\times n}\to \mathbb{F}$; $C[a,b]\to\mathbb{R}$, $g\mapsto\int_a^bg(x)\,\mathrm{d}x$; $\mathbb{F}[x]\to \mathbb{F}$, $p\mapsto p(c)$; and taking the $i$-th coordinate, $\boldsymbol{x}\mapsto x_i$.
 
@@ -525,11 +525,11 @@ So the **transpose** of a matrix is the matrix of the dual map. All properties o
 
 ## Summary
 
-This chapter extends the theory of $\mathbb{R}^n$ to vector spaces over a number field and, by "choosing a basis", translates abstract problems back into matrix problems.
+This chapter extends the theory of $\mathbb{R}^n$ to vector spaces over a field and, by "choosing a basis", translates abstract problems back into matrix problems.
 
 | Topic | Definitions and results | Reduction to matrices |
 |---|---|---|
-| Number fields and vector spaces | subsets of $\mathbb{C}$ closed under the four operations; eight axioms; $\mathbb{F}^m$, $\mathbb{F}^{m\times n}$, function spaces, $\mathbb{F}[x]_n$ | — |
+| Fields and vector spaces | subsets of $\mathbb{C}$ closed under the four operations; eight axioms; $\mathbb{F}^m$, $\mathbb{F}^{m\times n}$, function spaces, $\mathbb{F}[x]_n$ | — |
 | Sums and direct sums of subspaces | $M_1+M_2$; direct ⇔ zero decomposes uniquely ⇔ $M_1\cap M_2=\{0\}$ | $\mathcal{R}(A)+\mathcal{R}(B)=\mathcal{R}([A\ B])$ |
 | Bases and dimension | Lemma 8.3.1 (a longer list represented by a shorter one is dependent); basis extension; dimension formula $\dim(M_1+M_2)=\dim M_1+\dim M_2-\dim(M_1\cap M_2)$ | homogeneous system $K\boldsymbol{k}=\boldsymbol{0}$ |
 | Linear maps | $\operatorname{Hom}(U,V)$; kernel $\mathcal{N}(f)$, image $\mathcal{R}(f)$; injective ⇔ $\mathcal{N}(f)=\{0\}$ | — |

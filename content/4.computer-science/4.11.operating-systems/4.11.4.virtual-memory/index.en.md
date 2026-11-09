@@ -128,7 +128,7 @@ The standard page size on x86-64 and most ARM systems is 4 KiB ($p = 12$); Apple
 
 **Definition 4.3.2 (Page Table Entry)** A **page table entry** (PTE) holds the frame number of a page and status bits, the most important being: *present* (valid) — the page is in memory; *writable* and *user* — access permissions (a user-mode access to a page without the user bit faults); *no-execute* — instructions may not be fetched from the page; *accessed* (referenced) — set by the hardware on every access; *dirty* — set by the hardware on every write.
 
-**Example 4.3.1** A 32-bit address space with 4 KiB pages: 20 bits of page number, 12 bits of offset. The virtual address `0x00403A7C` has VPN `0x00403` and offset `0xA7C`. If entry `0x403` of the page table holds frame number `0x001F2` with the present bit set, the physical address is `0x001F2A7C`. A store to this address succeeds only if the entry also has the writable bit; afterwards the hardware has set its accessed and dirty bits. An access to a page whose entry is not present raises a page fault (§4.6).
+**Example 4.3.1** A 32-bit address space with 4 KiB pages: 20 bits of page number, 12 bits of offset. The virtual address `0x00403A7C` has VPN `0x00403` and offset `0xA7C`. If entry `0x403` of the page table holds frame number `0x001F2` with the present bit set, the physical address is `0x001F2A7C`. A store to this address succeeds only if the entry also has the writable bit; afterward the hardware has set its accessed and dirty bits. An access to a page whose entry is not present raises a page fault (§4.6).
 
 ### 4.3.2. Two Problems: Space and Time
 

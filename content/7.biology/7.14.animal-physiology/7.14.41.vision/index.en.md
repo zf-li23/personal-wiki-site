@@ -1,7 +1,7 @@
 ---
 title: Vision
 description: Optics of the eye, accommodation and refractive errors, pupil and intraocular pressure; retina, rods and cones, rhodopsin and the visual cycle, phototransduction and adaptation, color vision; retinal circuits; central visual pathways and cortex; eye movements; evolution and comparison of eyes.
-source_hash: f51f75687415
+source_hash: 2d53cbc72fba
 ---
 
 Of all human senses, vision provides the most information: about a third of the cerebral cortex takes part in visual processing. The eye must do three things: form a sharp image on the retina (optics), convert photons into neural signals (phototransduction), and perform a first round of processing of the image before sending it to the brain (retinal circuits). This chapter treats these three layers in turn, then the central visual pathways and eye movements, and finally compares the diversity of eyes in the animal kingdom. The general principles of sensation (the **labeled line principle**, **receptor potentials**, **adaptation**, **receptive fields**, and **lateral inhibition**) are in Chapter 39 ([7.14.39](/7.14.39)); the physics of photons, pigments, and single-photon detection was discussed in biophysics ([7.6.18](/7.6.18#sec-18.6)), and diffraction and resolving power in optics ([5.4.2](/5.4.2#sec-2.4)); only their conclusions are used here, and the emphasis is on the physiology of organs and circuits.

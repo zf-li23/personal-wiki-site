@@ -277,7 +277,7 @@ where the cosets are pairwise disjoint.
 
 **Definition 2.5.2** The number of left cosets of a subgroup $H$ in a group $G$ is called the **index** of $H$ in $G$, written $[G:H]$. (The map $aH \mapsto Ha^{-1}$ is a bijection between left and right cosets, so counting right cosets gives the same number.)
 
-![Cosets and the quotient group. A: the subgroup $H = \{0, 3\}$ splits $\mathbb{Z}_6$ into three cosets of equal size, $H$, $1 + H$ and $2 + H$ (one colour each), and $6 = 3 \times 2$ as Lagrange's theorem requires. B: the cosets, added as sets, form the quotient group $\mathbb{Z}_6/H$, whose table is that of $\mathbb{Z}_3$](./plots/z6-cosets.py)
+![Cosets and the quotient group. A: the subgroup $H = \{0, 3\}$ splits $\mathbb{Z}_6$ into three cosets of equal size, $H$, $1 + H$ and $2 + H$ (one color each), and $6 = 3 \times 2$ as Lagrange's theorem requires. B: the cosets, added as sets, form the quotient group $\mathbb{Z}_6/H$, whose table is that of $\mathbb{Z}_3$](./plots/z6-cosets.py)
 
 ### 2.5.4. Lagrange's Theorem
 

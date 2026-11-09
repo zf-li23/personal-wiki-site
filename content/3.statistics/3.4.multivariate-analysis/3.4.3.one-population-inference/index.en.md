@@ -3,7 +3,7 @@ title: Inference for a Single Mean Vector
 description: Sampling distribution of the sample mean vector and sample covariance matrix of a normal sample and the Wishart distribution; Hotelling's T² statistic, its F distribution, the test for a mean vector and its invariance; confidence ellipsoids; individual, Bonferroni and T² simultaneous confidence intervals for linear combinations; the relation between T² and the likelihood ratio test.
 ---
 
-This chapter carries the inference for the mean of a normal population ([3.2.4](/3.2.4), [3.2.5](/3.2.5)) over to a mean vector, when the covariance matrix is unknown. Each one-dimensional object has a $p$-dimensional analogue: the sample variance becomes the sample covariance matrix, whose distribution is the Wishart distribution (a matrix version of the scaled chi-square distribution); the square of the $t$ statistic becomes Hotelling's $T^2$ statistic, which again has an $F$ distribution after scaling; the confidence interval becomes a confidence ellipsoid. One idea, however, has no counterpart in one dimension: with several means, or several linear combinations of them, we usually want intervals that are correct simultaneously, and the chapter compares the Bonferroni intervals with the $T^2$ intervals obtained from the confidence ellipsoid. The tools are the properties of the multivariate normal distribution ([3.4.2](/3.4.2)) and the maximization lemma ([3.4.1](/3.4.1)). The comparison of two or more mean vectors and large-sample inference follow in [3.4.4](/3.4.4).
+This chapter carries the inference for the mean of a normal population ([3.2.4](/3.2.4), [3.2.5](/3.2.5)) over to a mean vector, when the covariance matrix is unknown. Each one-dimensional object has a $p$-dimensional analog: the sample variance becomes the sample covariance matrix, whose distribution is the Wishart distribution (a matrix version of the scaled chi-square distribution); the square of the $t$ statistic becomes Hotelling's $T^2$ statistic, which again has an $F$ distribution after scaling; the confidence interval becomes a confidence ellipsoid. One idea, however, has no counterpart in one dimension: with several means, or several linear combinations of them, we usually want intervals that are correct simultaneously, and the chapter compares the Bonferroni intervals with the $T^2$ intervals obtained from the confidence ellipsoid. The tools are the properties of the multivariate normal distribution ([3.4.2](/3.4.2)) and the maximization lemma ([3.4.1](/3.4.1)). The comparison of two or more mean vectors and large-sample inference follow in [3.4.4](/3.4.4).
 
 ## 3.1. The Setting and the Sampling Distributions
 
@@ -25,7 +25,7 @@ The two probabilistic tools are Theorem 2.4.7, which says that $(\boldsymbol{X} 
 
 ### 3.1.2. The Wishart Distribution
 
-In one dimension, if $z_1, \dots, z_m$ are iid $\mathcal{N}(0, \sigma^2)$, then $\sum_iz_i^2 \sim \sigma^2\chi^2_m$. The multivariate analogue replaces squares by outer products.
+In one dimension, if $z_1, \dots, z_m$ are iid $\mathcal{N}(0, \sigma^2)$, then $\sum_iz_i^2 \sim \sigma^2\chi^2_m$. The multivariate analog replaces squares by outer products.
 
 **Definition 3.1.1 (Wishart Distribution)** Let $\boldsymbol{Z}_1, \dots, \boldsymbol{Z}_m$ be iid $\mathcal{N}_p(\boldsymbol{0}, \Sigma)$. The distribution of the $p \times p$ random matrix
 
@@ -34,7 +34,7 @@ $$
 $$
 is called the **Wishart distribution** with $m$ degrees of freedom and scale matrix $\Sigma$, written $W_p(m, \Sigma)$.
 
-The distribution is named after John Wishart, who derived it in 1928. It is the multivariate analogue of a scaled chi-square distribution: $W_1(m, \sigma^2) = \sigma^2\chi^2_m$, and the diagonal entries of $A \sim W_p(m, \Sigma)$ are $\sigma_{kk}\chi^2_m$. Its mean is $\mathbb{E}A = m\Sigma$. When $m \ge p$ and $\Sigma$ is positive definite, $A$ is positive definite with probability one and has a density, which we shall not need; some authors write $W_m(\cdot \mid \Sigma)$ for the same distribution. Besides testing problems in multivariate analysis, it is the conjugate prior for the precision matrix in Bayesian statistics.
+The distribution is named after John Wishart, who derived it in 1928. It is the multivariate analog of a scaled chi-square distribution: $W_1(m, \sigma^2) = \sigma^2\chi^2_m$, and the diagonal entries of $A \sim W_p(m, \Sigma)$ are $\sigma_{kk}\chi^2_m$. Its mean is $\mathbb{E}A = m\Sigma$. When $m \ge p$ and $\Sigma$ is positive definite, $A$ is positive definite with probability one and has a density, which we shall not need; some authors write $W_m(\cdot \mid \Sigma)$ for the same distribution. Besides testing problems in multivariate analysis, it is the conjugate prior for the precision matrix in Bayesian statistics.
 
 **Property 3.1.1** Let $A_1 \sim W_p(m_1, \Sigma)$ and $A_2 \sim W_p(m_2, \Sigma)$ be independent, and $A \sim W_p(m, \Sigma)$. Then
 
@@ -298,11 +298,11 @@ In one dimension the identity is the familiar decomposition $\sum_j(x_j - \mu_0)
 $$
 T^2 = \frac{(n-1)\det\hat\Sigma_0}{\det\hat\Sigma} - (n-1) = (n-1)\frac{\det\left(\sum_{j=1}^{n}(\boldsymbol{x}_j - \boldsymbol{\mu}_0)(\boldsymbol{x}_j - \boldsymbol{\mu}_0)^{\mathsf T}\right)}{\det\left(\sum_{j=1}^{n}(\boldsymbol{x}_j - \bar{\boldsymbol{x}})(\boldsymbol{x}_j - \bar{\boldsymbol{x}})^{\mathsf T}\right)} - (n-1).
 $$
-The likelihood ratio approach extends to hypotheses for which no $T^2$ analogue is apparent, and for large $n$, $-2\log\Lambda = n\log(1 + T^2/(n-1))$ is approximately $\chi^2_p$ under $H_0$ ([3.4.4](/3.4.4)).
+The likelihood ratio approach extends to hypotheses for which no $T^2$ analog is apparent, and for large $n$, $-2\log\Lambda = n\log(1 + T^2/(n-1))$ is approximately $\chi^2_p$ under $H_0$ ([3.4.4](/3.4.4)).
 
 ## Summary
 
-- Normal sample: $\bar{\boldsymbol{X}} \sim \mathcal{N}_p(\boldsymbol{\mu}, \Sigma/n)$, $(n-1)S \sim W_p(n-1, \Sigma)$, independent; the Wishart distribution $W_p(m, \Sigma)$ is the distribution of $\sum_{j=1}^{m}\boldsymbol{Z}_j\boldsymbol{Z}_j^{\mathsf T}$ with $\boldsymbol{Z}_j$ iid $\mathcal{N}_p(\boldsymbol{0}, \Sigma)$, the analogue of $\sigma^2\chi^2_m$.
+- Normal sample: $\bar{\boldsymbol{X}} \sim \mathcal{N}_p(\boldsymbol{\mu}, \Sigma/n)$, $(n-1)S \sim W_p(n-1, \Sigma)$, independent; the Wishart distribution $W_p(m, \Sigma)$ is the distribution of $\sum_{j=1}^{m}\boldsymbol{Z}_j\boldsymbol{Z}_j^{\mathsf T}$ with $\boldsymbol{Z}_j$ iid $\mathcal{N}_p(\boldsymbol{0}, \Sigma)$, the analog of $\sigma^2\chi^2_m$.
 - Hotelling's $T^2 = n(\bar{\boldsymbol{X}} - \boldsymbol{\mu}_0)^{\mathsf T}S^{-1}(\bar{\boldsymbol{X}} - \boldsymbol{\mu}_0)$ generalizes $t^2$; under $H_0$, $\frac{n-p}{p(n-1)}T^2 \sim F_{p,n-p}$; reject when $T^2 > \frac{p(n-1)}{n-p}F_{p,n-p,\alpha}$. $T^2$ is invariant under nonsingular affine transformations and is equivalent to the likelihood ratio test, $\Lambda = (1 + T^2/(n-1))^{-n/2}$.
 - Confidence region: the ellipsoid $\{\boldsymbol{\mu}\colon n(\bar{\boldsymbol{x}} - \boldsymbol{\mu})^{\mathsf T}S^{-1}(\bar{\boldsymbol{x}} - \boldsymbol{\mu}) \le c^2\}$ with axes $\pm\sqrt{\lambda_i}\,c\,\boldsymbol{e}_i/\sqrt{n}$.
 - Intervals for $\boldsymbol{a}^{\mathsf T}\boldsymbol{\mu}$ have the form $\boldsymbol{a}^{\mathsf T}\bar{\boldsymbol{x}} \pm c\sqrt{\boldsymbol{a}^{\mathsf T}S\boldsymbol{a}/n}$: $c = t_{n-1,\alpha/2}$ (individual), $t_{n-1,\alpha/(2m)}$ (Bonferroni, $m$ combinations), $\sqrt{p(n-1)F_{p,n-p,\alpha}/(n-p)}$ ($T^2$, all combinations, the projections of the confidence ellipsoid). Simultaneous coverage is the new idea of the chapter.

@@ -242,7 +242,7 @@ terms:
   - { zh: 零因子, en: zero divisor }
   - { zh: 整环, en: integral domain }
   - { zh: 除环, en: division ring, aliases: [体, skew field] }
-  - { zh: 数域, en: number field }
+  - { zh: 数域, en: subfield of the complex numbers, aliases: [number field] }
   - { zh: 分配格, en: distributive lattice }
   - { zh: 模格, en: modular lattice }
   - { zh: 布尔代数, en: Boolean algebra, aliases: [布尔格] }
@@ -6294,7 +6294,7 @@ terms:
   - { zh: 血红素, en: heme, aliases: [haem] }
   - { zh: T 态, en: T state }
   - { zh: R 态, en: R state }
-  - { zh: 别构蛋白, en: allosteric protein, aliases: [变构蛋白] }
+  - { zh: 变构蛋白, en: allosteric protein, aliases: [别构蛋白] }
   - { zh: 协同性, en: cooperativity, aliases: [cooperative binding, 协同结合] }
   - { zh: Hill 方程, en: Hill equation, aliases: [希尔方程] }
   - { zh: Hill 系数, en: Hill coefficient }
@@ -8351,7 +8351,7 @@ terms:
   - { zh: 巨正则分布, en: grand canonical distribution, aliases: [Gibbs distribution, 吉布斯分布] }
   - { zh: Ising 模型, en: Ising model }
   - { zh: Adair 方程, en: Adair equation }
-  - { zh: 别构, en: allostery, aliases: [别构效应, allosteric regulation] }
+  - { zh: 变构, en: allostery, aliases: [别构, 别构效应, 变构效应, allosteric regulation] }
   - { zh: 随机行走, en: random walk, aliases: [随机游走] }
   - { zh: 扩散系数, en: diffusion coefficient, aliases: [diffusion constant] }
   - { zh: Péclet 数, en: Péclet number, aliases: [Peclet number] }
@@ -9528,7 +9528,7 @@ terms:
   - { zh: 突变方差, en: mutational variance, aliases: [V_M] }
   - { zh: Bulmer 效应, en: Bulmer effect }
   - { zh: 多基因适应, en: polygenic adaptation }
-  - { zh: 邻域大小, en: neighbourhood size, aliases: [neighborhood size, "Wright's neighborhood"] }
+  - { zh: 邻域大小, en: neighborhood size, aliases: [neighbourhood size, "Wright's neighborhood"] }
   - { zh: 空间分选, en: spatial sorting }
   - { zh: 同胞种, en: sibling species }
   - { zh: 一般谱系物种概念, en: general lineage concept, aliases: [general lineage species concept] }
@@ -9617,8 +9617,8 @@ terms:
   - { zh: 无菌技术, en: aseptic technique }
   - { zh: 菌落, en: colony, scope: ["7"] }
   - { zh: 革兰氏染色, en: Gram stain, aliases: [革兰染色, Gram staining] }
-  - { zh: 革兰氏阳性菌, en: gram-positive bacteria, aliases: [gram-positive, 革兰氏阳性细菌] }
-  - { zh: 革兰氏阴性菌, en: gram-negative bacteria, aliases: [gram-negative, 革兰氏阴性细菌] }
+  - { zh: 革兰氏阳性菌, en: Gram-positive bacteria, aliases: [Gram-positive, 革兰氏阳性细菌] }
+  - { zh: 革兰氏阴性菌, en: Gram-negative bacteria, aliases: [Gram-negative, 革兰氏阴性细菌] }
   - { zh: 抗酸染色, en: acid-fast stain, aliases: [抗酸性染色] }
   - { zh: 外膜, en: outer membrane, scope: ["7.11"] }
   - { zh: 磷壁酸, en: teichoic acid, aliases: [teichoic acids] }
@@ -9993,7 +9993,7 @@ terms:
   - { zh: 异化硝酸盐还原为铵, en: dissimilatory nitrate reduction to ammonium, aliases: [DNRA] }
   - { zh: 电缆细菌, en: cable bacteria }
   - { zh: 有机卤呼吸, en: organohalide respiration, aliases: [dehalorespiration, 脱卤呼吸] }
-  - { zh: 电子歧化, en: electron bifurcation, aliases: [flavin-based electron bifurcation, 黄素基电子歧化, 电子分叉] }
+  - { zh: 电子分叉, en: electron bifurcation, aliases: [flavin-based electron bifurcation, 黄素基电子分叉, 电子歧化, 黄素基电子歧化] }
   - { zh: 甲烷厌氧氧化, en: anaerobic oxidation of methane, aliases: [AOM] }
   - { zh: Winogradsky 柱, en: Winogradsky column, aliases: [维诺格拉茨基柱] }
   - { zh: 三基点温度, en: cardinal temperature, aliases: [cardinal temperatures] }
@@ -10093,7 +10093,7 @@ terms:
   - { zh: 末端冗余, en: terminal redundancy, aliases: [terminally redundant] }
   - { zh: 受体结合蛋白, en: receptor-binding protein, aliases: [RBP, RBPs] }
   - { zh: 超感染排斥, en: superinfection exclusion }
-  - { zh: 防御岛, en: defence island, aliases: [defense island, defence islands] }
+  - { zh: 防御岛, en: defense island, aliases: [defence island] }
   - { zh: 铺板效率, en: plating efficiency, aliases: [efficiency of plating, EOP] }
   - { zh: 病毒滴度, en: virus titer, aliases: [viral titre, virus titre, 病毒效价], scope: ["7.11"] }
   - { zh: 感染性克隆, en: infectious clone, aliases: [infectious cDNA clone] }
@@ -10595,7 +10595,7 @@ terms:
   - { zh: 直根系, en: taproot system }
   - { zh: 须根系, en: fibrous root system }
   - { zh: 根尖, en: root tip }
-  - { zh: 静止中心, en: quiescent centre, aliases: [quiescent center, 不活动中心] }
+  - { zh: 静止中心, en: quiescent center, aliases: [quiescent centre, 不活动中心] }
   - { zh: 质外体, en: apoplast }
   - { zh: 共质体, en: symplast }
   - { zh: 通道细胞, en: passage cell, aliases: [passage cells] }
@@ -11300,7 +11300,7 @@ terms:
   - { zh: 直接测热法, en: direct calorimetry }
   - { zh: 间接测热法, en: indirect calorimetry }
   - { zh: 非蛋白呼吸商, en: non-protein respiratory quotient, aliases: [NPRQ] }
-  - { zh: 双标记水法, en: doubly labelled water method, aliases: [doubly labeled water, DLW] }
+  - { zh: 双标记水法, en: doubly labeled water method, aliases: [doubly labeled water, doubly labelled water method, DLW] }
   - { zh: 野外代谢率, en: field metabolic rate, aliases: [FMR] }
   - { zh: 基础代谢率, en: basal metabolic rate, aliases: [BMR, 基础代谢] }
   - { zh: 标准代谢率, en: standard metabolic rate }

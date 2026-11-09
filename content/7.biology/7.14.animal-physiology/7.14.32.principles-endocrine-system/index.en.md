@@ -156,7 +156,7 @@ What a hormone–receptor complex can do depends not only on the hormone and the
 
 ### 32.4.3. The Number and Sensitivity of Receptors Are Also Regulated
 
-The response of target cells to a hormone is not fixed. After prolonged exposure to a high concentration of hormone, receptors are phosphorylated and uncoupled from G proteins and are internalized and degraded, and the number of receptors falls; this is called **receptor down-regulation**. A weakening of the response over a short time without a change in receptor number is called **desensitization** ([7.1.14](/7.1.14#sec-14.2.4)). Conversely, some hormones increase (up-regulate) the receptors for themselves or for other hormones: estrogen increases the progesterone receptors of the endometrium in the follicular phase of the **menstrual cycle**, preparing for the action of progesterone after ovulation; prolactin increases the number of its own receptors in the mammary gland at the end of pregnancy. Down-regulation and desensitization explain why many hormones are secreted in pulses, and why continuous administration of a GnRH analogue paradoxically inhibits the pituitary (Chapter 33).
+The response of target cells to a hormone is not fixed. After prolonged exposure to a high concentration of hormone, receptors are phosphorylated and uncoupled from G proteins and are internalized and degraded, and the number of receptors falls; this is called **receptor down-regulation**. A weakening of the response over a short time without a change in receptor number is called **desensitization** ([7.1.14](/7.1.14#sec-14.2.4)). Conversely, some hormones increase (up-regulate) the receptors for themselves or for other hormones: estrogen increases the progesterone receptors of the endometrium in the follicular phase of the **menstrual cycle**, preparing for the action of progesterone after ovulation; prolactin increases the number of its own receptors in the mammary gland at the end of pregnancy. Down-regulation and desensitization explain why many hormones are secreted in pulses, and why continuous administration of a GnRH analog paradoxically inhibits the pituitary (Chapter 33).
 
 ## 32.5. General Features of Hormone Action
 
@@ -260,7 +260,7 @@ The plasma concentration of hormones lies between picomolar and nanomolar, and o
 - The **enzyme-linked immunosorbent assay** and its chemiluminescent variants: enzyme or luminescent labels replace the radiolabel, and the "sandwich" format uses two antibodies that recognize different **epitopes**, for greater specificity; this is now the main clinical method (principle in [7.1.7](/7.1.7#sec-7.4.4)).
 - Liquid chromatography–**tandem mass spectrometry**: it distinguishes structurally similar steroids by molecular weight and fragments, is free of the cross-reactivity of antibodies, and has become the reference method for measuring testosterone, estradiol and cortisol.
 
-Three points need attention when interpreting measurements: whether the total or the free concentration was measured (Example 32.7.1); the relation of the sampling time to pulses and circadian rhythms; and the interference of prohormones, fragments and structural analogues with immunoassays. A "normal concentration" of a hormone does not mean "normal action": a defect in the receptor or downstream of it produces a high hormone level with absent action (hormone resistance syndromes, such as the growth hormone receptor mutation of Laron syndrome, Chapter 34).
+Three points need attention when interpreting measurements: whether the total or the free concentration was measured (Example 32.7.1); the relation of the sampling time to pulses and circadian rhythms; and the interference of prohormones, fragments and structural analogs with immunoassays. A "normal concentration" of a hormone does not mean "normal action": a defect in the receptor or downstream of it produces a high hormone level with absent action (hormone resistance syndromes, such as the growth hormone receptor mutation of Laron syndrome, Chapter 34).
 
 ## 32.9. Evolution and Comparison
 
@@ -274,7 +274,7 @@ Many hormone families can be found throughout the bilaterians: peptides of the o
 
 Steroid receptors are a paradigm of evolutionary study, because ancestral sequences can be inferred by phylogenetics, synthesized in the laboratory, and the function of the ancestral receptor measured directly (**ancestral sequence reconstruction**). The studies of Thornton and colleagues led to several conclusions with experimental support:
 
-- The six steroid receptors of vertebrates (two estrogen receptors, and the glucocorticoid, mineralocorticoid, progesterone and androgen receptors) arose by gene duplication from one ancestral receptor. The reconstructed ancestral receptor responded to estrogen, whereas the homologue of the estrogen receptor in a mollusk (the sea hare *Aplysia*) is active without any hormone (2003): the earliest steroid receptor was probably estrogen receptor–like.
+- The six steroid receptors of vertebrates (two estrogen receptors, and the glucocorticoid, mineralocorticoid, progesterone and androgen receptors) arose by gene duplication from one ancestral receptor. The reconstructed ancestral receptor responded to estrogen, whereas the homolog of the estrogen receptor in a mollusk (the sea hare *Aplysia*) is active without any hormone (2003): the earliest steroid receptor was probably estrogen receptor–like.
 - Before the mineralocorticoid and glucocorticoid receptors separated, the reconstructed ancestral corticosteroid receptor could already be activated by aldosterone, although aldosterone appeared only in tetrapods (2006). This "**preadaptation**" of a receptor to a hormone that arose later shows that new hormone–receptor pairs can form by recruiting the latent binding capacity of an existing receptor (molecular exploitation).
 - The change of the glucocorticoid receptor from the ancestral state to specificity for cortisol required substitutions at only a few key sites, and the order of the substitutions was constrained by **epistasis**: certain permissive substitutions had to occur first (a series of studies from 2007 on).
 
@@ -284,7 +284,7 @@ These studies turned the question of how receptors and hormones coevolve into on
 
 The insect endocrine system provides an independent design in contrast to that of vertebrates; the molting and **metamorphosis** that it controls were covered in developmental biology ([7.5.33](/7.5.33#sec-33.3)):
 
-| Component | Hormone | Action | Vertebrate analogue |
+| Component | Hormone | Action | Vertebrate analog |
 |---|---|---|---|
 | Neurosecretory cells of the brain → neurohemal organ (corpora cardiaca; in Lepidoptera PTTH is released from the corpora allata) | Neuropeptides such as prothoracicotropic hormone (PTTH) | Stimulate the prothoracic gland | Hypothalamus → neurohypophysis |
 | Prothoracic gland | **Ecdysone** (converted to 20-hydroxyecdysone in the periphery) | Initiates **molting** | Steroid hormones acting through nuclear receptors (EcR/USP) |

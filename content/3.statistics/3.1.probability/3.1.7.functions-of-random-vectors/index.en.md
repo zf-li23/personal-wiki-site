@@ -331,7 +331,7 @@ The proof is the same as for Property 7.2.3: apply Property 7.2.2 to the joint d
 
 **Example 7.2.2** Each classroom in a building used to have 4 light bulbs; after renovation each has 24. The caretaker feels that bulbs now burn out more easily. Explain why.
 
-**Solution** Assume that the lifetimes of all bulbs are independent, each $\mathrm{Exp}(\lambda)$. Before the renovation the waiting time until the first bulb in a room fails is $X = \min\{X_1, \dots, X_4\}$; afterwards it is $Y = \min\{X_1, \dots, X_{24}\}$. From $\mathbb{P}(X_{(1)} > t) = [1 - F(t)]^n = \mathrm{e}^{-n\lambda t}$ we get $X \sim \mathrm{Exp}(4\lambda)$ and $Y \sim \mathrm{Exp}(24\lambda)$, so
+**Solution** Assume that the lifetimes of all bulbs are independent, each $\mathrm{Exp}(\lambda)$. Before the renovation the waiting time until the first bulb in a room fails is $X = \min\{X_1, \dots, X_4\}$; afterward it is $Y = \min\{X_1, \dots, X_{24}\}$. From $\mathbb{P}(X_{(1)} > t) = [1 - F(t)]^n = \mathrm{e}^{-n\lambda t}$ we get $X \sim \mathrm{Exp}(4\lambda)$ and $Y \sim \mathrm{Exp}(24\lambda)$, so
 
 $$
 \mathbb{P}(X > t) = \mathrm{e}^{-4\lambda t}, \qquad \mathbb{P}(Y > t) = \mathrm{e}^{-24\lambda t}.

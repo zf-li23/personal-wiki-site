@@ -78,7 +78,7 @@ for i in range(1, 6):
 print(total)
 ```
 
-Debugging messages are written to standard error `std::cerr` (in Python, `print(..., file=sys.stderr)`), which is separate from standard output, so it does not get mixed into the formal output of the program, and an **online judge** does not check it. `__LINE__` is the current line number (C++20 also has `std::source_location`). The drawback of print debugging is that the program must be modified and recompiled repeatedly and the statements must be deleted afterwards; for more complex programs a debugger is more effective. Formal programs use logging (the Python standard library `logging`) in place of scattered output statements, which can be turned on or off by level.
+Debugging messages are written to standard error `std::cerr` (in Python, `print(..., file=sys.stderr)`), which is separate from standard output, so it does not get mixed into the formal output of the program, and an **online judge** does not check it. `__LINE__` is the current line number (C++20 also has `std::source_location`). The drawback of print debugging is that the program must be modified and recompiled repeatedly and the statements must be deleted afterward; for more complex programs a debugger is more effective. Formal programs use logging (the Python standard library `logging`) in place of scattered output statements, which can be turned on or off by level.
 
 ## 5.2. Debuggers
 
@@ -220,7 +220,7 @@ Testing can show that errors exist but cannot show that there are none (Dijkstra
 
 The most common boundary error is the *off-by-one error*: a loop executing once too many or too few times, an index one too large or too small, confusing `<` and `<=`. Array indices run from $0$ to $n-1$, an interval $[a, b)$ of length $n$ contains $b - a$ integers and $[a, b]$ contains $b - a + 1$; all of this must be thought through when writing loops.
 
-**Example 5.4.1** Decide whether a string is a palindrome (reads the same forwards and backwards). The following implementation has errors:
+**Example 5.4.1** Decide whether a string is a palindrome (reads the same forward and backward). The following implementation has errors:
 
 ```cpp
 bool is_palindrome(const std::string& s) {

@@ -217,7 +217,7 @@ $$
 
 **Proof** Write both posteriors by Bayes' rule; the marginal $p(y)$ cancels in the ratio. $\square$
 
-The likelihood ratio is the factor by which the data change the odds; for composite hypotheses its analogue is the **Bayes factor** ([3.7.8](/3.7.8)).
+The likelihood ratio is the factor by which the data change the odds; for composite hypotheses its analog is the **Bayes factor** ([3.7.8](/3.7.8)).
 
 **Example 1.5.1** Observe $y=1$ success in $n=5$ trials, where it is known that $\theta=0.1$ or $\theta=0.2$. The likelihoods are
 

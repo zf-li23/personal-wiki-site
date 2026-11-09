@@ -83,13 +83,13 @@ Leverage is a measure of how far the predictor value of an observation is from t
 
 The three notions are different. A high-leverage point that lies on the trend of the other points is harmless; an outlier with low leverage mainly shifts the line and inflates $s$ (Example 5.3.4); an outlier with high leverage is typically influential (Example 5.3.5).
 
-**Example 6.1.1** In each panel below, nine points follow a line and a tenth point (the triangle) is added. In panel A the triangle has $X = 20$, far from the others, but lies on the trend: high leverage, not an outlier, little influence. In panel B it has an ordinary $X$ but a response far below the line: an outlier with low leverage, which moves the line only slightly. In panel C it is both far out in $X$ and far from the trend: it pulls the line towards itself and is influential.
+**Example 6.1.1** In each panel below, nine points follow a line and a tenth point (the triangle) is added. In panel A the triangle has $X = 20$, far from the others, but lies on the trend: high leverage, not an outlier, little influence. In panel B it has an ordinary $X$ but a response far below the line: an outlier with low leverage, which moves the line only slightly. In panel C it is both far out in $X$ and far from the trend: it pulls the line toward itself and is influential.
 
 ![Three regressions with one added observation (triangle), fitted with all data (solid) and without the triangle (dashed): A, a high-leverage point on the trend; B, an outlier with low leverage; C, a high-leverage outlier that changes the slope; the titles give its leverage h, studentized deleted residual t and Cook's distance D](./plots/leverage-influence.py)
 
 :::
 
-Panel C also shows why raw residuals are a poor guide to outliers: an influential point drags the line towards itself, so its own residual is smaller than its discrepancy. The same happens in a well-known small data set of the number of pubs and the number of deaths in eight cities, where one city with five times as many pubs as the others lies far off the line through the other seven points but has a modest raw residual, while its studentized residual is enormous. The remedy is to scale each residual by its standard deviation, and to compare $Y_i$ with a fit that does not use $Y_i$.
+Panel C also shows why raw residuals are a poor guide to outliers: an influential point drags the line toward itself, so its own residual is smaller than its discrepancy. The same happens in a well-known small data set of the number of pubs and the number of deaths in eight cities, where one city with five times as many pubs as the others lies far off the line through the other seven points but has a modest raw residual, while its studentized residual is enormous. The remedy is to scale each residual by its standard deviation, and to compare $Y_i$ with a fit that does not use $Y_i$.
 
 **Definition 6.1.3 (Standardized and Studentized Residuals)** Since $\operatorname{Var}(e_i) = \sigma^2(1 - h_{ii})$ ([Section 7.3.3](/3.3.7#sec-7.3.3)), the estimated standard deviation of $e_i$ is $s\{e_i\} = \sqrt{\mathrm{MSE}(1 - h_{ii})}$.
 
@@ -419,7 +419,7 @@ be the sample **correlation coefficient**, and $s_X$, $s_Y$ the sample standard 
 $$
 Y = b_0 + b_1X, \qquad X = a_0 + a_1Y, \qquad b_1 = r\frac{s_Y}{s_X}, \qquad a_1 = r\frac{s_X}{s_Y},
 $$
-both pass through $(\bar X, \bar Y)$, and $a_1b_1 = r^2$. Drawn in the same $(X, Y)$-plane, the second line is $Y = -a_0/a_1 + X/a_1$. Since $0 \le a_1b_1 \le 1$, we have $\lvert b_1\rvert \le 1/\lvert a_1\rvert$ (for $r \ne 0$): the regression of $Y$ on $X$ is always the flatter one, and both are systematically pulled away from the major axis of the data towards the mean of the predicted variable.
+both pass through $(\bar X, \bar Y)$, and $a_1b_1 = r^2$. Drawn in the same $(X, Y)$-plane, the second line is $Y = -a_0/a_1 + X/a_1$. Since $0 \le a_1b_1 \le 1$, we have $\lvert b_1\rvert \le 1/\lvert a_1\rvert$ (for $r \ne 0$): the regression of $Y$ on $X$ is always the flatter one, and both are systematically pulled away from the major axis of the data toward the mean of the predicted variable.
 
 **Proposition 6.3.1** Let $\theta$ be the angle between the two regression lines, $r \ne 0$. Then
 

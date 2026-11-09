@@ -365,7 +365,7 @@ If $u,v$ both satisfy (12.13), then at $x=a$ the nonzero vector $(\alpha_1,-\alp
 $$
 \int_a^b vLu\,\mathrm{d}x=\int_a^b uLv\,\mathrm{d}x.
 $$
-In terms of the inner product $\langle u,v\rangle=\int_a^b uv\,\mathrm{d}x$, this says $\langle Lu,v\rangle=\langle u,Lv\rangle$: $L$ is symmetric on the space of functions satisfying (12.13). This is the analogue of a real symmetric matrix (a **self-adjoint operator**) in finite dimensions, and the theorems below correspond one to one to the facts that "the eigenvalues of a real symmetric matrix are real and eigenvectors belonging to distinct eigenvalues are orthogonal".
+In terms of the inner product $\langle u,v\rangle=\int_a^b uv\,\mathrm{d}x$, this says $\langle Lu,v\rangle=\langle u,Lv\rangle$: $L$ is symmetric on the space of functions satisfying (12.13). This is the analog of a real symmetric matrix (a **self-adjoint operator**) in finite dimensions, and the theorems below correspond one to one to the facts that "the eigenvalues of a real symmetric matrix are real and eigenvectors belonging to distinct eigenvalues are orthogonal".
 
 ### 12.5.2. Properties of Eigenvalues and Eigenfunctions
 

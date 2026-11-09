@@ -367,7 +367,7 @@ $$
 
 where $Z_{\mathrm{c}}$ is the critical compressibility factor. If the principle of corresponding states holds, $V_{\mathrm{r}}$ is a universal function of $p_{\mathrm{r}}$ and $T_{\mathrm{r}}$; and experiment shows that most gases have similar $Z_{\mathrm{c}}$ (Ne 0.31; Ar, $\ce{CH4}$, $\ce{O2}$, $\ce{N2}$ 0.29; CO 0.30; strongly polar $\ce{H2O}$ only 0.23), so that $Z \approx f(p_{\mathrm{r}}, T_{\mathrm{r}})$ is approximately the same for all gases. Plotting a large amount of measured data as $Z$–$p_{\mathrm{r}}$ curves with $T_{\mathrm{r}}$ as a parameter gives the generalized compressibility chart. It is not restricted by the range of validity of an equation of state and is very useful in high-pressure chemical-engineering calculations. The vdW equation gives $Z_{\mathrm{c}} = 3/8$, which is clearly too large, and the "compressibility chart" computed from Eq. (1.6) (figure below) differs greatly from the measured chart near the critical region, though it agrees qualitatively far from it: at low temperature $Z$ first falls with pressure and then rises, and the range over which $Z \approx 1$ is widest when $T_{\mathrm{r}}$ is near the Boyle temperature.
 
-![Z against p_r at several reduced temperatures, computed from the reduced van der Waals equation (vapour-like root). The shape resembles the measured generalized chart, but the van der Waals critical compressibility 3/8 is too large](./plots/reduced-compressibility.py)
+![Z against p_r at several reduced temperatures, computed from the reduced van der Waals equation (vapor-like root). The shape resembles the measured generalized chart, but the van der Waals critical compressibility 3/8 is too large](./plots/reduced-compressibility.py)
 
 **Example 1.5.1** Find the molar volume of $\ce{CO2}$ at $304\,\mathrm{K}$ and $11.15\,\mathrm{MPa}$. Given $T_{\mathrm{c}} = 304.13\,\mathrm{K}$ and $p_{\mathrm{c}} = 7.38\,\mathrm{MPa}$.
 
@@ -450,7 +450,7 @@ flowchart LR
   A["H2O(l), 298.15 K"] -->|"ΔvapHm(298.15 K) = ?"| D["H2O(g), 298.15 K"]
   A -->|"ΔH1: heat liquid"| B["H2O(l), 373.12 K"]
   B -->|"ΔH2 = 40.65 kJ/mol"| C["H2O(g), 373.12 K"]
-  C -->|"ΔH3: cool vapour"| D
+  C -->|"ΔH3: cool vapor"| D
 ```
 
 $$

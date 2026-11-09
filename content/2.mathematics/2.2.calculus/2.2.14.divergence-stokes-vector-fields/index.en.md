@@ -183,7 +183,7 @@ $$
 \oint_{\partial S}X\,\mathrm{d}x+Y\,\mathrm{d}y+Z\,\mathrm{d}z=\iint_S\begin{vmatrix}\mathrm{d}y\wedge\mathrm{d}z&\mathrm{d}z\wedge\mathrm{d}x&\mathrm{d}x\wedge\mathrm{d}y\\ \dfrac{\partial}{\partial x}&\dfrac{\partial}{\partial y}&\dfrac{\partial}{\partial z}\\ X&Y&Z\end{vmatrix}.
 $$
 
-**Proof** Let $S$ be the graph of $z=z(x,y)$ over $D_{xy}$ ($z$ with continuous second-order partial derivatives), with its upper side; a general surface is split into such pieces and the results added, the line integrals over common boundaries cancelling. We prove only $\oint_{\partial S}X\,\mathrm{d}x=\iint_S\frac{\partial X}{\partial z}\,\mathrm{d}z\wedge\mathrm{d}x-\frac{\partial X}{\partial y}\,\mathrm{d}x\wedge\mathrm{d}y$; the terms in $Y$ and $Z$ are similar. The projection of $\partial S$ onto the $xy$-plane is $\partial D_{xy}$ (positively oriented), and $z=z(x,y)$ along $\partial S$, so
+**Proof** Let $S$ be the graph of $z=z(x,y)$ over $D_{xy}$ ($z$ with continuous second-order partial derivatives), with its upper side; a general surface is split into such pieces and the results added, the line integrals over common boundaries canceling. We prove only $\oint_{\partial S}X\,\mathrm{d}x=\iint_S\frac{\partial X}{\partial z}\,\mathrm{d}z\wedge\mathrm{d}x-\frac{\partial X}{\partial y}\,\mathrm{d}x\wedge\mathrm{d}y$; the terms in $Y$ and $Z$ are similar. The projection of $\partial S$ onto the $xy$-plane is $\partial D_{xy}$ (positively oriented), and $z=z(x,y)$ along $\partial S$, so
 
 $$
 \oint_{\partial S}X(x,y,z)\,\mathrm{d}x=\oint_{\partial D_{xy}}X(x,y,z(x,y))\,\mathrm{d}x=-\iint_{D_{xy}}\Big(\frac{\partial X}{\partial y}+\frac{\partial X}{\partial z}z_y\Big)\mathrm{d}x\,\mathrm{d}y,

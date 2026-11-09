@@ -49,7 +49,7 @@ $$
 
 The efficiency is determined by the compression ratio alone. $T_{\mathrm{comp}}$ cannot exceed the combustion-chamber temperature $T_2$, so $\eta < 1 - T_1/T_2$: as $T_{\mathrm{comp}} \to T_2$ the efficiency tends to the Carnot efficiency for operation between $T_1$ and $T_2$, but then the combustion chamber hardly heats the air any more, and the net work per mole of air, $nC_{p,\mathrm{m}}[(T_2 - T_3) - (T_{\mathrm{comp}} - T_1)]$, tends to zero. The "maximum efficiency $1 - T_1/T_2$" is therefore an unattainable upper bound; in practical design the operating point of interest is that of maximum net work. Extremizing with respect to $T_{\mathrm{comp}}$ gives $T_{\mathrm{comp}} = \sqrt{T_1T_2}$, at which $\eta = 1 - \sqrt{T_1/T_2}$. For $T_1 = 300\,\mathrm{K}$ and $T_2 = 1500\,\mathrm{K}$ the Carnot limit is $0.80$, the efficiency at maximum net work is $0.55$, and the compression ratio is about $17$. The efficiency of the Brayton cycle is below the Carnot efficiency because it absorbs heat over one range of temperatures and releases heat over another, instead of exchanging heat only with two isothermal reservoirs.
 
-![Ideal Brayton cycle between ambient 300 K and burner 1500 K: the efficiency rises towards the Carnot limit as the compression outlet temperature Tcomp approaches T2, while the net work per mole of air vanishes there; the work is largest at Tcomp = √(T1T2)](./plots/brayton-cycle.py)
+![Ideal Brayton cycle between ambient 300 K and burner 1500 K: the efficiency rises toward the Carnot limit as the compression outlet temperature Tcomp approaches T2, while the net work per mole of air vanishes there; the work is largest at Tcomp = √(T1T2)](./plots/brayton-cycle.py)
 
 ## 2.2. Entropy and the Clausius Inequality
 

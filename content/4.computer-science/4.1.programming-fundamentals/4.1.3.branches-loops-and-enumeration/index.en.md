@@ -396,7 +396,7 @@ The answer is $1369 = 37^2$. The Python version converts the number to a string 
 
 **Example 3.4.4 (Fishing Partners)** Five people A, B, C, D, E went fishing together and fell asleep. A woke up first, divided the fish into five equal shares, threw the one extra fish back into the lake, and took his own share; B woke up, thought that nobody else had taken any yet, also divided the remaining fish into five equal shares, threw away the extra fish and took one share; C, D and E did the same in turn. What is the least number of fish they caught?
 
-Let the $k$-th person see $x_k$ fish when waking up. Then $x_k \equiv 1 \pmod 5$ and $x_{k+1} = \frac{4}{5}(x_k - 1)$, that is, $x_k = \frac{5}{4}x_{k+1} + 1$. A relation between successive terms of this kind is called a recurrence relation, and a loop is used to derive each term from the next one. Enumerating $x_1$ directly requires many trials; a better way is to enumerate the number $x_5$ seen by the last person (satisfying $x_5 \equiv 1 \pmod 5$, that is $6, 11, 16, \dots$) and work backwards, requiring an integer at every step:
+Let the $k$-th person see $x_k$ fish when waking up. Then $x_k \equiv 1 \pmod 5$ and $x_{k+1} = \frac{4}{5}(x_k - 1)$, that is, $x_k = \frac{5}{4}x_{k+1} + 1$. A relation between successive terms of this kind is called a recurrence relation, and a loop is used to derive each term from the next one. Enumerating $x_1$ directly requires many trials; a better way is to enumerate the number $x_5$ seen by the last person (satisfying $x_5 \equiv 1 \pmod 5$, that is $6, 11, 16, \dots$) and work backward, requiring an integer at every step:
 
 ```cpp tab
 #include <iostream>

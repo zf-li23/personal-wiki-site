@@ -552,7 +552,7 @@ $$
 
 (2) Cancel the common factor $x - 1$: $\frac{x^m - 1}{x^n - 1} = \frac{1 + x + \cdots + x^{m-1}}{1 + x + \cdots + x^{n-1}} \to \frac mn$.
 
-(3) $x^{n+1} - (n+1)x + n = x(x^n - 1) - n(x - 1) = (x - 1)\bigl[(x - 1) + (x^2 - 1) + \cdots + (x^n - 1)\bigr]$ (pair off the terms of $x(1 + x + \cdots + x^{n-1}) - n$), and cancelling one factor $x - 1$,
+(3) $x^{n+1} - (n+1)x + n = x(x^n - 1) - n(x - 1) = (x - 1)\bigl[(x - 1) + (x^2 - 1) + \cdots + (x^n - 1)\bigr]$ (pair off the terms of $x(1 + x + \cdots + x^{n-1}) - n$), and canceling one factor $x - 1$,
 
 $$
 \lim_{x \to 1} \frac{(x - 1) + (x^2 - 1) + \cdots + (x^n - 1)}{x - 1} = 1 + 2 + \cdots + n = \frac{n(n + 1)}{2}.

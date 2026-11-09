@@ -213,7 +213,7 @@ $$
 \forall a, b, c \in R,\ a \neq 0:\quad ab = ac \Rightarrow b = c.
 $$
 
-**Proof**: If $R$ has no zero divisors and $ab = ac$, then $a(b-c) = 0$, and $a \neq 0$ gives $b-c=0$, that is, $b = c$. Conversely, if the cancellation law holds and $ab = 0$ with $a \neq 0$, then $ab = a \cdot 0$, and cancelling $a$ gives $b = 0$; so $R$ has no zero divisors. $\square$
+**Proof**: If $R$ has no zero divisors and $ab = ac$, then $a(b-c) = 0$, and $a \neq 0$ gives $b-c=0$, that is, $b = c$. Conversely, if the cancellation law holds and $ab = 0$ with $a \neq 0$, then $ab = a \cdot 0$, and canceling $a$ gives $b = 0$; so $R$ has no zero divisors. $\square$
 
 ### 3.4.2. Integral Domains
 

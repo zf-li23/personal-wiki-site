@@ -76,7 +76,7 @@ The fundamental limitation of fixed-point numbers is that their gaps are fixed: 
 
 ### 1.2.2. Floating-Point Numbers
 
-The solution is the scientific notation: $-0.9876\times10^{-3}$ consists of the sign of the mantissa, the mantissa $0.9876$ (whose length fixes the number of significant digits), the base $10$ and the signed exponent $-3$, which "floats" the point to the right position. Floating-point arithmetic is the hardware analogue of this notation.
+The solution is the scientific notation: $-0.9876\times10^{-3}$ consists of the sign of the mantissa, the mantissa $0.9876$ (whose length fixes the number of significant digits), the base $10$ and the signed exponent $-3$, which "floats" the point to the right position. Floating-point arithmetic is the hardware analog of this notation.
 
 **Definition 1.2.2 (Floating-Point Number)** Let $b\ge2$ be an integer (the *radix*) and $p\ge1$ (the *precision*). A **floating-point number** is a number of the form
 

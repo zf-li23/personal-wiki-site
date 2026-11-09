@@ -154,10 +154,10 @@ $$
 
 **算法 6.4.1（随机森林）** 设训练集有 $n$ 个样本、$p$ 个特征，参数为树的棵数 $T$ 和每次分裂考虑的特征数 $k$。
 
-1. 对 $t = 1, \dots, T$：从训练集中自助采样 $n$ 个样本；在其上生长一棵决策树，树的每个结点都先从 $p$ 个特征中随机选出 $k$ 个，只在这 $k$ 个特征中寻找最优的分裂；树充分生长，不剪枝。
+1. 对 $t = 1, \dots, T$：从训练集中自助采样 $n$ 个样本；在其上生长一棵决策树，树的每个节点都先从 $p$ 个特征中随机选出 $k$ 个，只在这 $k$ 个特征中寻找最优的分裂；树充分生长，不剪枝。
 2. 分类时对 $T$ 棵树多数投票（回归时取平均）。
 
-"对每棵树随机选取 $p$ 个特征中的 $k$ 个来建树"是随机子空间方法（Ho，1998）；Breiman 的随机森林在每个结点重新选择特征，树之间的差异更大。常用的默认值是分类时 $k = \lfloor\sqrt p\rfloor$，回归时 $k = \lfloor p/3\rfloor$；$k = p$ 时退化为普通的 Bagging。$k$ 越小，单棵树越弱，但树之间越不相关。
+"对每棵树随机选取 $p$ 个特征中的 $k$ 个来建树"是随机子空间方法（Ho，1998）；Breiman 的随机森林在每个节点重新选择特征，树之间的差异更大。常用的默认值是分类时 $k = \lfloor\sqrt p\rfloor$，回归时 $k = \lfloor p/3\rfloor$；$k = p$ 时退化为普通的 Bagging。$k$ 越小，单棵树越弱，但树之间越不相关。
 
 随机森林的优点：
 
@@ -255,8 +255,8 @@ AdaBoost 是对指数损失的前向分步拟合。Friedman（2001）把这一�
 1. 初始化为最优常数 $F_0(x) = \arg\min_c\sum_i L(y_i, c)$。
 2. 对 $m = 1, \dots, M$：
    - 计算伪残差 $r_{im} = -\left.\dfrac{\partial L(y_i, F)}{\partial F}\right|_{F = F_{m-1}(x_i)}$；
-   - 用一棵回归树拟合 $\{(x_i, r_{im})\}$，得到叶结点区域 $R_{1m}, \dots, R_{Jm}$；
-   - 对每个叶结点求最优的取值 $c_{jm} = \arg\min_c\sum_{x_i \in R_{jm}} L(y_i, F_{m-1}(x_i) + c)$；
+   - 用一棵回归树拟合 $\{(x_i, r_{im})\}$，得到叶节点区域 $R_{1m}, \dots, R_{Jm}$；
+   - 对每个叶节点求最优的取值 $c_{jm} = \arg\min_c\sum_{x_i \in R_{jm}} L(y_i, F_{m-1}(x_i) + c)$；
    - 更新 $F_m(x) = F_{m-1}(x) + \nu\sum_{j=1}^J c_{jm}\boldsymbol{1}\{x \in R_{jm}\}$。
 3. 输出 $F_M$。
 
@@ -266,13 +266,13 @@ AdaBoost 是对指数损失的前向分步拟合。Friedman（2001）把这一�
 
 梯度提升决策树（GBDT）的三个主流实现在算法上各有改进，都支持并行与 GPU 训练，是目前表格数据上最常用的模型。
 
-- XGBoost（Chen 与 Guestrin，2016）对损失做二阶 Taylor 展开，并在目标中加入树复杂度的正则项 $\Omega(f) = \gamma J + \frac12\lambda\sum_{j=1}^J w_j^2$（$J$ 是叶结点数，$w_j$ 是叶结点的取值）。记叶结点 $j$ 中样本的一阶、二阶导数之和为 $G_j$、$H_j$，则最优取值为 $w_j^* = -G_j/(H_j + \lambda)$，把一个结点分成左右两部分的增益为
+- XGBoost（Chen 与 Guestrin，2016）对损失做二阶 Taylor 展开，并在目标中加入树复杂度的正则项 $\Omega(f) = \gamma J + \frac12\lambda\sum_{j=1}^J w_j^2$（$J$ 是叶节点数，$w_j$ 是叶节点的取值）。记叶节点 $j$ 中样本的一阶、二阶导数之和为 $G_j$、$H_j$，则最优取值为 $w_j^* = -G_j/(H_j + \lambda)$，把一个节点分成左右两部分的增益为
 
   $$
   \frac12\left[\frac{G_L^2}{H_L + \lambda} + \frac{G_R^2}{H_R + \lambda} - \frac{(G_L + G_R)^2}{H_L + H_R + \lambda}\right] - \gamma ,
   $$
   增益为负就不分裂。它还能自动学习缺失值应该走哪个分支。
-- LightGBM（Ke 等，2017）把特征值分箱成直方图来寻找分裂点，按叶结点（选增益最大的叶结点分裂）而不是按层生长，并用基于梯度的单边采样（GOSS，保留梯度大的样本、对梯度小的样本抽样）和互斥特征捆绑（EFB）减少计算，在大数据上很快。scikit-learn 的 `HistGradientBoostingClassifier` 采用了类似的直方图算法。
+- LightGBM（Ke 等，2017）把特征值分箱成直方图来寻找分裂点，按叶节点（选增益最大的叶节点分裂）而不是按层生长，并用基于梯度的单边采样（GOSS，保留梯度大的样本、对梯度小的样本抽样）和互斥特征捆绑（EFB）减少计算，在大数据上很快。scikit-learn 的 `HistGradientBoostingClassifier` 采用了类似的直方图算法。
 - CatBoost（Prokhorenkova 等，2018）用有序提升（ordered boosting）避免用同一样本既计算梯度又拟合所造成的预测偏移，并原生支持类别型特征（有序的目标统计量编码），默认参数下就有很好的效果。
 
 在中小规模的表格数据上，经过调参的梯度提升树通常仍优于深度神经网络（Grinsztajn 等，2022）；近年预训练的表格基础模型（如 TabPFN，Hollmann 等，2025）在小数据集上已能与之竞争。
@@ -347,7 +347,7 @@ random forest: OOB accuracy 0.892, test accuracy 0.917
 | 加权多数 | 不同的算法 | 加权投票，出错时乘以 $\beta$ | 错误数 $\le 2.41(m + \log_2 n)$（$\beta = 1/2$） |
 | Stacking | 不同的算法 | 次级学习器 | 用折外预测训练次级学习器 |
 | Bagging | 自助样本 | 等权投票或平均 | 降低方差；袋外误差 |
-| 随机森林 | 自助样本 + 每个结点的随机特征 | 等权投票或平均 | 降低树间相关性；特征重要性 |
+| 随机森林 | 自助样本 + 每个节点的随机特征 | 等权投票或平均 | 降低树间相关性；特征重要性 |
 | AdaBoost | 样本权重 | $\alpha_t = \frac12\ln\frac{1-\varepsilon_t}{\varepsilon_t}$ 加权 | 训练误差 $\le \exp(-2\sum_t\gamma_t^2)$；指数损失 |
 | 梯度提升 | 拟合负梯度 | 加性模型，学习率 $\nu$ | 任意可微损失；XGBoost、LightGBM、CatBoost |
 
