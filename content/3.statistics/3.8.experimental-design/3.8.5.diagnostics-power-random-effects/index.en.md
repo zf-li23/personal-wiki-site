@@ -38,7 +38,7 @@ A rough check for outliers uses the scaled residuals
 $$
 d_{ij}=\frac{e_{ij}}{\sqrt{\mathrm{MS}_{\mathrm{E}}}}.
 $$
-If the errors are $\mathcal{N}(0,\sigma^2)$, then $d_{ij}$ is approximately $\mathcal{N}(0,1)$, so about $95\%$ of them should lie within $\pm2$ and practically all within $\pm3$; a residual with $\lvert d_{ij}\rvert>3$ is a potential **outlier** and should be investigated (a recording error, a faulty run, or a genuine but unusual response). These $d_{ij}$ are what DAE texts call standardized residuals; they differ from the internally **standardized residuals** of regression, $r_{ij}=e_{ij}/\sqrt{\mathrm{MS}_{\mathrm{E}}(1-h_{ij})}$, only by the factor $\sqrt{1-1/n_i}$, because the leverage is $h_{ij}=1/n_i$ (Proposition 5.1.1 below).
+If the errors are $\mathcal{N}(0,\sigma^2)$, then $d_{ij}$ is approximately $\mathcal{N}(0,1)$, so about $95\%$ of them should lie within $\pm2$ and practically all within $\pm3$; a residual with $\lvert d_{ij}\rvert>3$ is a potential **outlier** and should be investigated (a recording error, a faulty run, or a genuine but unusual response). These $d_{ij}$ are what texts on the design and analysis of experiments call standardized residuals; they differ from the internally **standardized residuals** of regression, $r_{ij}=e_{ij}/\sqrt{\mathrm{MS}_{\mathrm{E}}(1-h_{ij})}$, only by the factor $\sqrt{1-1/n_i}$, because the leverage is $h_{ij}=1/n_i$ (Proposition 5.1.1 below).
 
 For the etching data $\mathrm{MS}_{\mathrm{E}}=333.7$, so $\sqrt{\mathrm{MS}_{\mathrm{E}}}=18.27$, and the largest residual $25.6$ gives $\max\lvert d_{ij}\rvert=1.40$: no outliers. The normal probability plot in the figure below is close to a straight line.
 

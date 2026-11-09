@@ -349,7 +349,7 @@ and the ANOVA table is
 | Residual | $\mathrm{SS}_{\mathrm{Res}}$ | $(a-1)(b-1)$ | $\mathrm{MS}_{\mathrm{Res}}$ | |
 | Total | $\sum_{i,j}(y_{ij}-\bar y_{\cdot\cdot})^2$ | $ab-1$ | | |
 
-The validity of the tests rests on the assumption of no interaction. If there is interaction, $\mathbb{E}[\mathrm{MS}_{\mathrm{Res}}]=\sigma^2+\sum_{i,j}(\alpha\beta)_{ij}^2/[(a-1)(b-1)]$ overestimates $\sigma^2$, and the tests of the main effects become conservative. No test for the full interaction is possible: the interaction line of the replicated table has been sacrificed to estimate the error.
+The validity of the tests rests on the assumption of no interaction. If there is interaction, $\mathbb{E}[\mathrm{MS}_{\mathrm{Res}}]=\sigma^2+\sum_{i,j}(\alpha\beta)_{ij}^2/[(a-1)(b-1)]$ overestimates $\sigma^2$, and the tests of the main effects become conservative. No test for the full interaction is possible: the interaction line of the full ANOVA table has been sacrificed to estimate the error.
 
 **Example 6.4.1** The impurity present in a chemical product is affected by two factors, pressure and temperature. The data from a single replicate of a factorial experiment are
 
@@ -480,7 +480,7 @@ with every effect summing to zero over each of its indices, and the analysis of 
 | Error | $abc(n-1)$ | $\sigma^2$ | |
 | Total | $abcn-1$ | | |
 
-Each sum of squares is $n$ times the number of observations sharing a given estimated effect, times the sum of the squared estimated effects; for instance $\mathrm{SS}_A=bcn\sum_i(\bar y_{i\cdot\cdot\cdot}-\bar y_{\cdot\cdot\cdot\cdot})^2$. The number of runs, $abcn$, grows quickly; at least two replicates ($n\ge2$) are needed to test the three-factor interaction.
+Each sum of squares is the number of observations sharing a given estimated effect times the sum of the squared estimated effects; for instance $\mathrm{SS}_A=bcn\sum_i(\bar y_{i\cdot\cdot\cdot}-\bar y_{\cdot\cdot\cdot\cdot})^2$. The number of runs, $abcn$, grows quickly; at least two replicates ($n\ge2$) are needed to test the three-factor interaction.
 
 **Example 6.5.1** A soft drink bottler is interested in obtaining more uniform fill heights in the bottles produced by the manufacturing process. The filling machine should fill each bottle to the correct target height, but in practice there is variation around this target, and the bottler would like to understand its sources better and eventually reduce it. The process engineer can control three variables during the filling process: the percent carbonation ($A$, which is difficult to control in production; 3 levels: $10$, $12$, $14\%$), the operating pressure in the filler ($B$; 2 levels: $25$, $30$ psi) and the line speed in bottles produced per minute ($C$; 2 levels: $200$, $250$). Two replicates of the full factorial design are run, so all $3\times2\times2\times2=24$ runs are taken in random order. The response is the average deviation from the target fill height observed in a production run of bottles at each set of conditions (negative values are fill heights below the target):
 
