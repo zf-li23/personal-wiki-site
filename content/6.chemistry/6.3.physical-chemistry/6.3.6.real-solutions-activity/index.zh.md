@@ -102,7 +102,7 @@ $$
 
 对凝聚相，压力项在压力不大时通常可以忽略，于是 $\mu_{\mathrm{B}} \approx \mu^\circ_{\mathrm{B}}(T) + RT\ln a_{\mathrm{B}}$，这就是 [6.3.7](/6.3.7) 推导平衡常数时所用的形式。
 
-另一种常见约定（IUPAC 的相对活度）把压力项并入活度：$a_{\mathrm{B}} = \exp[(\mu_{\mathrm{B}} - \mu^\circ_{\mathrm{B}})/RT]$，此时 $p \ne p^\circ$ 下的纯液体 $a \ne 1$。两者相差因子 $\exp(\int V\,\mathrm{d}p/RT)$，对水在 $1\,\mathrm{MPa}$ 下只有 $1.007$。本课程沿用把参考态取在实际压力下的约定，纯凝聚相的活度恒为 1。
+另一种常见约定（IUPAC 的相对活度）把压力项并入活度：$a_{\mathrm{B}} = \exp[(\mu_{\mathrm{B}} - \mu^\circ_{\mathrm{B}})/RT]$，此时 $p \ne p^\circ$ 下的纯液体 $a \ne 1$。两者相差因子 $\exp(\int V\,\mathrm{d}p/RT)$，对水在 $1\,\mathrm{MPa}$ 下只有 $1.007$。本章沿用把参考态取在实际压力下的约定，纯凝聚相的活度恒为 1。
 
 ## 6.3. 活度的测定
 

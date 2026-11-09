@@ -1,6 +1,6 @@
 ---
 title: "Real Solutions: Activities and Excess Functions"
-source_hash: 9b41c36938b6
+source_hash: 6c94d210241a
 ---
 
 The two kinds of ideal solution in [6.3.5](/6.3.5) are only limits: an ideal liquid mixture requires the molecules of all components to be nearly identical, and an ideal dilute solution requires the solute to be infinitely dilute. At finite concentrations every real solution deviates from Raoult's law and Henry's law, and the direction and size of the deviation reflect the intermolecular interactions. Lewis's remedy is exactly parallel to the introduction of the **fugacity** for real gases ([6.3.4](/6.3.4)): keep the form of the chemical potential of an ideal solution but replace the concentration by an "effective concentration", the **activity**, so that the departure from ideality is concentrated in the activity coefficient. This chapter first describes the deviations (6.1), then defines the activity and the activity coefficient and discusses the choice of standard state (6.2), and presents methods for measuring activities (6.3). It then describes the nonideality of the solution as a whole by means of excess functions, taking the one-parameter regular solution model as an example (6.4), and finally treats the distribution of a solute between two immiscible solvents and extraction (6.5). Activities are the basis for writing the general equilibrium constant in [6.3.7](/6.3.7); the activities of electrolyte solutions (mean activity, Debye–Hückel theory) are left to [6.3.12](/6.3.12), and the determination of activities from cell potentials is discussed in [6.3.13](/6.3.13).
@@ -31,7 +31,7 @@ In an ideal liquid mixture $\mu_{\mathrm{B}} = \mu^*_{\mathrm{B}}(\mathrm{l}, T,
 $$
 \mu_{\mathrm{B}}(\mathrm{sln}, T, p) = \mu^{\mathrm{ref}}_{\mathrm{B}}(T, p) + RT\ln a_{\mathrm{B}},
 $$
-The dimensionless quantity $a_{\mathrm{B}}$ is called the activity of B; the ratio of the activity to the corresponding concentration is called the **activity coefficient** of B. There are two kinds of reference state:
+the dimensionless quantity $a_{\mathrm{B}}$ is called the activity of B; the ratio of the activity to the corresponding concentration is called the **activity coefficient** of B. There are two kinds of reference state:
 
 1. Following Raoult's law (for the solvent, or for components of a mixture that are treated on an equal footing): the reference state is pure liquid B at the same temperature and pressure, $\mu^{\mathrm{ref}}_{\mathrm{B}} = \mu^*_{\mathrm{B}}(\mathrm{l}, T, p)$, $a_{\mathrm{B}} = \gamma_{\mathrm{B}}x_{\mathrm{B}}$, and $\gamma_{\mathrm{B}} \to 1$ as $x_{\mathrm{B}} \to 1$;
 2. Following Henry's law (for solutes): the reference state is the hypothetical state at $x_{\mathrm{B}} = 1$, $b_{\mathrm{B}} = b^\circ$ or $c_{\mathrm{B}} = c^\circ$ in which B would still obey Henry's law, with $a_{x,\mathrm{B}} = \gamma_{x,\mathrm{B}}x_{\mathrm{B}}$, $a_{b,\mathrm{B}} = \gamma_{b,\mathrm{B}}b_{\mathrm{B}}/b^\circ$, $a_{c,\mathrm{B}} = \gamma_{c,\mathrm{B}}c_{\mathrm{B}}/c^\circ$, and all three activity coefficients tend to 1 as $x_{\mathrm{B}} \to 0$.
