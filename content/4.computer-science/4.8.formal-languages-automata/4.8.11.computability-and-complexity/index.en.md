@@ -1,7 +1,7 @@
 ---
 title: Introduction to Computability and Computational Complexity
 description: Problems and languages; encoding Turing machines and the diagonalization language; universal Turing machines and the universal language; reductions, the halting problem, and Rice's theorem; Post's correspondence problem and undecidable problems about context-free grammars; P and NP, polynomial-time reductions, NP-completeness and the Cook–Levin theorem; typical NP-complete problems.
-source_hash: 9540e441a375
+source_hash: 7b1ddd4e1adb
 ---
 
 The previous chapter ([4.8.10](/4.8.10)) showed that **Turing machines** can simulate any reasonable model of computation; by the **Church–Turing thesis** they capture the full power of "algorithms". This chapter answers two questions. The first is computability: are there problems for which no algorithm exists at all? The answer is yes, and such problems are not rare: deciding whether a program halts, or whether two context-free grammars are equivalent, are examples. The core of the proof is Cantor's diagonal method together with reductions, which transform one problem into another. The second question is complexity: among the problems that do have algorithms, which can be solved efficiently (in polynomial time)? This leads to the classes $\mathrm{P}$ and $\mathrm{NP}$, and to a large family of mutually equivalent NP-complete problems for which it is still unknown whether polynomial-time algorithms exist. Section [4.3.1](/4.3.1) already mentioned $\mathrm{P}$, $\mathrm{NP}$, and the subset sum problem; here we give their precise definitions on Turing machines.
@@ -90,7 +90,7 @@ $U$ accepts $\langle M, w\rangle$ if and only if $M$ accepts $w$. $\square$
 A **universal Turing machine** is an interpreter: the program (the encoding of $M$) and the data ($w$) lie on the same tape, which is precisely the idea of the stored-program computer. The following program is its Python version: it encodes the Turing machine of Example 11.2.1 as a string of 0's and 1's, and the "universal machine" then decodes and runs it.
 
 ```python
-# Encoding: states q1, q2, ... (q1 start, q2 the only final state);
+# Machine code: states q1, q2, ... (q1 start, q2 the only final state);
 # tape symbols X1 = 0, X2 = 1, X3 = B; directions D1 = L, D2 = R.
 # delta(q_i, X_j) = (q_k, X_l, D_m) is coded as 0^i 1 0^j 1 0^k 1 0^l 1 0^m, joined by "11".
 SYM, DIR = {1: "0", 2: "1", 3: "B"}, {1: "L", 2: "R"}
@@ -338,7 +338,7 @@ and $G_B$ similarly (with $x_i$ and the variable $B$). The strings of $L_A = L(G
 3. whether $L(G_1) = L(G_2)$; whether $L(G_1) \subseteq L(G_2)$;
 4. whether $L(G_1) = L(R)$; whether $L(R) \subseteq L(G_1)$.
 
-**Proof** 1: $L_A \cap L_B \ne \varnothing$ if and only if the PCP instance has a solution. 2: $\overline{L_A}$ is a context-free language ($L_A$ can be recognized by a deterministic pushdown automaton and the deterministic context-free languages are closed under complement; a grammar can also be written down directly), so $\overline{L_A} \cup \overline{L_B}$ is a context-free language, and it equals the universal language $(\Sigma \cup \{a_1, \dots, a_k\})^*$ if and only if $L_A \cap L_B = \varnothing$, that is, if the PCP has no solution. 3, 4: taking $G_2$ or $R$ to be a grammar or regular expression generating the universal language, problem 2 is a special case of them. $\square$
+**Proof** 1: $L_A \cap L_B \ne \varnothing$ if and only if the PCP instance has a solution. 2: $\overline{L_A}$ is a context-free language ($L_A$ can be recognized by a deterministic pushdown automaton and the deterministic context-free languages are closed under complement; a grammar can also be written down directly), so $\overline{L_A} \cup \overline{L_B}$ is a context-free language, and it equals the universal language $(\Sigma \cup \{a_1, \dots, a_k\})^*$ if and only if $L_A \cap L_B = \varnothing$, that is, if the PCP has no solution. 3, 4: let one side of an equality, or the contained side of an inclusion ($G_1$ or $R$), be a grammar or regular expression generating the universal language; then problem 2 is a special case of them. $\square$
 
 ## 11.5. P and NP
 
@@ -456,7 +456,7 @@ flowchart LR
   $$
   (l_1 \lor l_2 \lor y_1) \land (\lnot y_1 \lor l_3 \lor y_2) \land (\lnot y_2 \lor l_4 \lor y_3) \land \cdots \land (\lnot y_{k-3} \lor l_{k-1} \lor l_k).
   $$
-  If some $l_j$ in the original clause is true, let the $y$'s before $j$ be true and those after it false, and every new clause is satisfied; conversely, if all $l_j$ are false, then starting from the first clause we deduce successively that $y_1, y_2, \dots, y_{k-3}$ must all be true, and the last clause is false.
+  If some $l_j$ in the original clause is true, let $y_i$ be true for $i \le j - 2$ and false otherwise, and every new clause is satisfied; conversely, if all $l_j$ are false, then starting from the first clause we deduce successively that $y_1, y_2, \dots, y_{k-3}$ must all be true, and the last clause is false.
 
 The replacement of each clause preserves satisfiability only over the new variables, and the size grows linearly. $\square$
 

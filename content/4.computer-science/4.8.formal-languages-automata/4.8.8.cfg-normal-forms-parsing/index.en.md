@@ -1,7 +1,7 @@
 ---
 title: Simplification and Parsing of Context-Free Grammars
 description: Eliminating useless symbols, ε-productions, and unit productions; Chomsky and Greibach normal forms; correctness and O(n³) complexity of the CYK algorithm; the Earley algorithm.
-source_hash: b1f1795dfb28
+source_hash: 8f834118b8bb
 ---
 
 A single **context-free language** has infinitely many **grammars**, many of which contain "superfluous" parts: symbols that can never be used, productions that merely rename a variable, and productions that generate the empty string. In this chapter we first give algorithms that eliminate them, and then bring grammars into the uniform Chomsky normal form. The normal form is itself a tool for proofs (the pumping lemma of [4.8.9](/4.8.9) rests on it) and the starting point of algorithms: for a grammar in Chomsky normal form, **dynamic programming** decides in $O(n^3)$ time whether a string belongs to the language of the grammar (the CYK algorithm). Finally we present the Earley algorithm, which does not require a normal form and is more flexible in practice. The chapter uses the notation of [4.8.2](/4.8.2): a grammar is $G = (V, T, P, S)$; $A, B, C$ denote variables, $a, b$ terminals, $X, Y$ grammar symbols (variables or terminals), and $\alpha, \beta, \gamma$ strings of grammar symbols.
@@ -143,7 +143,7 @@ $$
 
 **Theorem 8.4.2** Every nonempty context-free language not containing $\varepsilon$ has a grammar in Greibach normal form (Greibach, 1965).
 
-The proof requires eliminating left recursion and is rather tedious, so it is omitted here. The significance of Greibach normal form is that every derivation step produces exactly one terminal: a string of length $n$ is derived in exactly $n$ steps. Applying the construction of Theorem 7.5.1 to such a grammar gives a **PDA** that reads one input symbol in every move and has no ε-transitions.
+The proof requires eliminating left recursion and is rather tedious, so it is omitted here. The significance of Greibach normal form is that every derivation step produces exactly one terminal: a string of length $n$ is derived in exactly $n$ steps. Applying the construction of Theorem 7.5.1 to such a grammar, with "expanding a variable" and "matching its first terminal" merged into one move ($A \to a\alpha$ corresponds to $(q, \alpha) \in \delta(q, a, A)$), gives a **PDA** that reads one input symbol in every move and has no ε-transitions.
 
 ## 8.5. The CYK Algorithm
 

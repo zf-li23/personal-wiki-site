@@ -89,7 +89,7 @@ $U$ 接受 $\langle M, w\rangle$ 当且仅当 $M$ 接受 $w$。$\square$
 **通用图灵机**就是一个解释器：程序（$M$ 的编码）与数据（$w$）放在同一条纸带上，这正是存储程序式计算机的思想。下面的程序是它的 Python 版本：把例 11.2.1 的图灵机编码成 0、1 串，再由"通用机"解码并运行。
 
 ```python
-# Encoding: states q1, q2, ... (q1 start, q2 the only final state);
+# Machine code: states q1, q2, ... (q1 start, q2 the only final state);
 # tape symbols X1 = 0, X2 = 1, X3 = B; directions D1 = L, D2 = R.
 # delta(q_i, X_j) = (q_k, X_l, D_m) is coded as 0^i 1 0^j 1 0^k 1 0^l 1 0^m, joined by "11".
 SYM, DIR = {1: "0", 2: "1", 3: "B"}, {1: "L", 2: "R"}
@@ -337,7 +337,7 @@ $G_B$ 同理（用 $x_i$ 与变元 $B$）。$L_A = L(G_A)$ 中的串形如 $w_{i
 3. $L(G_1) = L(G_2)$ 是否成立；$L(G_1) \subseteq L(G_2)$ 是否成立；
 4. $L(G_1) = L(R)$ 是否成立；$L(R) \subseteq L(G_1)$ 是否成立。
 
-**证明** 1：$L_A \cap L_B \ne \varnothing$ 当且仅当 PCP 实例有解。2：$\overline{L_A}$ 是上下文无关语言（$L_A$ 可由确定下推自动机识别，而确定上下文无关语言对补封闭；也可以直接写出文法），所以 $\overline{L_A} \cup \overline{L_B}$ 是上下文无关语言，它等于全集 $(\Sigma \cup \{a_1, \dots, a_k\})^*$ 当且仅当 $L_A \cap L_B = \varnothing$，即 PCP 无解。3、4：取 $G_2$ 或 $R$ 为生成全集的文法或正规表达式，问题 2 就是它们的特例。$\square$
+**证明** 1：$L_A \cap L_B \ne \varnothing$ 当且仅当 PCP 实例有解。2：$\overline{L_A}$ 是上下文无关语言（$L_A$ 可由确定下推自动机识别，而确定上下文无关语言对补封闭；也可以直接写出文法），所以 $\overline{L_A} \cup \overline{L_B}$ 是上下文无关语言，它等于全集 $(\Sigma \cup \{a_1, \dots, a_k\})^*$ 当且仅当 $L_A \cap L_B = \varnothing$，即 PCP 无解。3、4：令等式中的一方、或包含式中被包含的一方（$G_1$ 或 $R$）为生成全集的文法或正规表达式，问题 2 就是它们的特例。$\square$
 
 ## 11.5. P 与 NP
 
@@ -455,7 +455,7 @@ flowchart LR
   $$
   (l_1 \lor l_2 \lor y_1) \land (\lnot y_1 \lor l_3 \lor y_2) \land (\lnot y_2 \lor l_4 \lor y_3) \land \cdots \land (\lnot y_{k-3} \lor l_{k-1} \lor l_k).
   $$
-  若原子句中某个 $l_j$ 为真，令 $j$ 之前的 $y$ 为真、之后的为假，各个新子句都被满足；反之若所有 $l_j$ 为假，从第一个子句起依次推出 $y_1, y_2, \dots, y_{k-3}$ 都必须为真，最后一个子句为假。
+  若原子句中某个 $l_j$ 为真，令 $y_i$ 在 $i \le j - 2$ 时为真、其余为假，各个新子句都被满足；反之若所有 $l_j$ 为假，从第一个子句起依次推出 $y_1, y_2, \dots, y_{k-3}$ 都必须为真，最后一个子句为假。
 
 每个子句的替换都只在新变元上保持可满足性，规模线性增长。$\square$
 
