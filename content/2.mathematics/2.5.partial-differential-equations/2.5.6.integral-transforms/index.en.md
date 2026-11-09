@@ -126,7 +126,7 @@ Properties 6 and 7 are the heart of the matter and are dual to each other:
 - Smoothness of $f$ gives decay of $\hat f$: if $f,f',\dots,f^{(k)}$ are absolutely integrable, then $(\mathrm{i}\xi)^k\hat f$ is bounded and tends to $0$ (Theorem 6.2.1), so $\hat f(\xi)=o(\lvert\xi\rvert^{-k})$.
 - Decay of $f$ gives smoothness of $\hat f$: if $x^kf$ is absolutely integrable, then $\hat f\in C^k$.
 
-The Gaussian is both infinitely smooth and rapidly decaying, and so is its transform. The rectangular pulse has jumps, and its transform decays only like $1/\xi$; the function $\mathrm{e}^{-a\lvert x\rvert}$ has a corner, and its transform decays like $1/\xi^2$, but it decays exponentially, so its transform $\frac{2a}{a^2+\xi^2}$ is infinitely differentiable.
+The Gaussian is both infinitely smooth and rapidly decaying, and so is its transform. The rectangular pulse has jumps, and its transform decays only like $1/\xi$; the function $\mathrm{e}^{-a\lvert x\rvert}$ has a corner, and its transform decays like $1/\xi^2$, but the function itself decays exponentially, so its transform $\frac{2a}{a^2+\xi^2}$ is infinitely differentiable.
 
 ### 6.2.4. Convolution
 

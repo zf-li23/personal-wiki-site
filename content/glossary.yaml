@@ -1488,7 +1488,7 @@ terms:
   - { zh: 特殊因子, en: specific factor }
   - { zh: 因子载荷, en: factor loading, aliases: [loading] }
   - { zh: 共同度, en: communality, aliases: [公因子方差] }
-  - { zh: 特殊方差, en: specific variance, aliases: [uniqueness] }
+  - { zh: 特殊方差, en: specific variance, aliases: [uniqueness], scope: ["3.4"] }
   - { zh: Heywood 情形, en: Heywood case }
   - { zh: 主成分法, en: principal component method, scope: ["3.4"] }
   - { zh: 方差最大旋转, en: varimax rotation, aliases: [varimax] }
