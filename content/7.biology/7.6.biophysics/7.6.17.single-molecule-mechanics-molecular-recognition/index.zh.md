@@ -1,7 +1,7 @@
 ---
 title: 单分子力学与分子识别
 description: 单分子尺度的力与识别：光镊、磁镊与原子力显微镜，单分子的弹性（自由连接链、蠕虫链、DNA 过拉伸），Bell 模型与动态力谱，Jarzynski 等式与 Crooks 定理，分子识别的亲和力与特异性、扩散限制的结合与靶搜索，动力学校对，以及相互作用的测量。
-source_hash: f7da0931ece8
+source_hash: 529dfbd82a8d
 ---
 
 生物分子是推、拉与抓握的机器，并且能在成千上万个相似者之中识别它们的伙伴。本章在单分子的层次上处理这两种能力。前一半是力学：如何把皮牛顿量级的力施加到单个分子上并测量它（17.1–17.3），聚合物如何响应它（17.4），键在负载下如何断裂（17.5），以及如何由不可逆拉伸得到平衡自由能（17.6）。后一半是识别：什么决定分子结合的亲和力与特异性（17.7），伙伴们找到彼此的速度有多快，包括蛋白质在基因组中寻找一个位点（17.8），细胞如何通过耗费能量来突破平衡特异性的极限（17.9），以及如何测量相互作用（17.10）。两半在与力有关的结合、**捕获键**和特异性的动力学观点中相遇：在这些问题里，重要的都是自由能景观以及越过其势垒的速率。
@@ -323,15 +323,15 @@ Riggs、Bourgeois 与 Cohn（1970）发现，lac 阻遏物找到其操纵子，�
 **定理 17.8.1（最优搜索时间）** 若相继各轮落在总长为 $M$ 个碱基对的 DNA 上互不相关的位置，则找到一个位点的平均时间为
 
 $$
-\tau_{\mathrm{s}} = \frac{M}{n}\left(\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}}\right), \qquad n = \frac{1}{b}\sqrt{\frac{8D_1\tau_{1\mathrm{D}}}{\pi}},
+\tau_{\mathrm{s}} = \frac{M}{n}\left(\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}}\right), \qquad n = \frac{1}{b}\sqrt{\frac{16D_1\tau_{1\mathrm{D}}}{\pi}},
 $$
 其中 $b = 0.34\,\mathrm{nm}$ 为每个碱基对的长度。在固定 $\tau_{3\mathrm{D}}$ 下，$\tau_{\mathrm{s}}$ 在 $\tau_{1\mathrm{D}} = \tau_{3\mathrm{D}}$ 时最小：蛋白质应当在 DNA 上与脱离 DNA 的时间相等，此时 $\tau_{\mathrm{s}}^* = 2M\tau_{3\mathrm{D}}/n(\tau_{3\mathrm{D}})$，比每轮只检验一个位点的纯三维搜索加快 $n/2$ 倍。
 
-**证明** 每一轮扫描 $n$ 个新位点，所以落点不相关时覆盖 DNA 一遍约需 $M/n$ 轮，每一轮平均持续 $\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}}$。一维**随机行走**在时间 $t$ 内访问的不同位点数是其范围，以长度单位计，其均值为 $\sqrt{8D_1t/\pi}$（Brown 运动的最大值减最小值的期望）。对 $\tau_{1\mathrm{D}}$ 最小化 $(\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}})/\sqrt{\tau_{1\mathrm{D}}}$：导数 $\frac12\tau_{1\mathrm{D}}^{-1/2} - \frac12\tau_{3\mathrm{D}}\tau_{1\mathrm{D}}^{-3/2}$ 在 $\tau_{1\mathrm{D}} = \tau_{3\mathrm{D}}$ 处为零。$\square$
+**证明** 每一轮扫描 $n$ 个新位点，所以落点不相关时覆盖 DNA 一遍约需 $M/n$ 轮，每一轮平均持续 $\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}}$。一维**随机行走**在时间 $t$ 内访问的不同位点数是其范围，以长度单位计，其均值为 $\sqrt{16D_1t/\pi}$：均方位移为 $2D_1t$ 的 Brown 运动，其最大值的期望为 $\sqrt{4D_1t/\pi}$，范围（最大值减最小值）是它的两倍。对 $\tau_{1\mathrm{D}}$ 最小化 $(\tau_{1\mathrm{D}} + \tau_{3\mathrm{D}})/\sqrt{\tau_{1\mathrm{D}}}$：导数 $\frac12\tau_{1\mathrm{D}}^{-1/2} - \frac12\tau_{3\mathrm{D}}\tau_{1\mathrm{D}}^{-3/2}$ 在 $\tau_{1\mathrm{D}} = \tau_{3\mathrm{D}}$ 处为零。$\square$
 
-![易化扩散：一个蛋白质在 4.6 Mbp 基因组中寻找一个位点的搜索时间，每次三维漫游的 τ₃D = 1 ms。A：三个一维扩散系数下的搜索时间随非特异结合时间比例的变化：每条曲线的极小值都在位于 DNA 上和脱离 DNA 的时间相等处（圆点），那里每一轮扫描 n* = 15–66 bp；在 0.046 µm²/s（在大肠杆菌（*E. coli*）中测得的 lac 阻遏物值）下，一个分子的最优搜索约需 5 min，而若每轮只检验一个位点则需 77 min（点线）；花在滑动上的时间过多与过少一样代价高昂。B：速度–稳定性问题：粗糙度为 σ 的非特异景观使滑动变慢，D₁ = D₀e^−(σ/kT)²（虚线，右轴；D₀ = 1 µm²/s），一旦 σ 超过 1–2 k_BT（阴影），最优搜索时间急剧上升](./plots/target-search.py)
+![易化扩散：一个蛋白质在 4.6 Mbp 基因组中寻找一个位点的搜索时间，每次三维漫游的 τ₃D = 1 ms。A：三个一维扩散系数下的搜索时间随非特异结合时间比例的变化：每条曲线的极小值都在位于 DNA 上和脱离 DNA 的时间相等处（圆点），那里每一轮扫描 n* = 21–94 bp；在 0.046 µm²/s（在大肠杆菌（*E. coli*）中测得的 lac 阻遏物值）下，一个分子的最优搜索约需 3.5 min，而若每轮只检验一个位点则需 77 min（点线）；花在滑动上的时间过多与过少一样代价高昂。B：速度–稳定性问题：粗糙度为 σ 的非特异景观使滑动变慢，D₁ = D₀e^−(σ/kT)²（虚线，右轴；D₀ = 1 µm²/s），一旦 σ 超过 1–2 k_BT（阴影），最优搜索时间急剧上升](./plots/target-search.py)
 
-**例 17.8.1（细胞中的 lac 阻遏物）** 取 $D_1 = 0.046\,\mu\mathrm{m^2\,s^{-1}}$ 与 $\tau_{1\mathrm{D}} = \tau_{3\mathrm{D}} = 1\,\mathrm{ms}$，$n = \sqrt{8\times4.6\times10^4\times10^{-3}/\pi}/0.34 \approx 32\,\mathrm{bp}$，$\tau_{\mathrm{s}} = (4.6\times10^6/32)\times2\,\mathrm{ms} \approx 290\,\mathrm{s}$：一个阻遏物约需五分钟，与 Hammar、Elf 及其合作者（2012）在活的大肠杆菌（*E. coli*）中测得的同一量级，而细胞中约十个阻遏物只需数十秒。测得的非特异结合时间比例约为 $90\,\%$（Elf、Li 与 Xie，2007），高于简单理论的最优值；相关的再结合（跳到被重新扫描的邻近位点）、拥挤、片段间转移以及与同一 DNA 竞争的大量 DNA 结合蛋白，在体内修正了最优值。
+**例 17.8.1（细胞中的 lac 阻遏物）** 取 $D_1 = 0.046\,\mu\mathrm{m^2\,s^{-1}}$ 与 $\tau_{1\mathrm{D}} = \tau_{3\mathrm{D}} = 1\,\mathrm{ms}$，$n = \sqrt{16\times4.6\times10^4\times10^{-3}/\pi}/0.34 \approx 45\,\mathrm{bp}$，$\tau_{\mathrm{s}} = (4.6\times10^6/45)\times2\,\mathrm{ms} \approx 200\,\mathrm{s}$：一个阻遏物约需三分半钟，与 Hammar、Elf 及其合作者（2012）在活的大肠杆菌（*E. coli*）中测得的同一量级，而细胞中约十个阻遏物只需数十秒。测得的非特异结合时间比例约为 $90\,\%$（Elf、Li 与 Xie，2007），高于简单理论的最优值；相关的再结合（跳到被重新扫描的邻近位点）、拥挤、片段间转移以及与同一 DNA 竞争的大量 DNA 结合蛋白，在体内修正了最优值。
 
 ### 17.8.3. 速度–稳定性问题
 
@@ -443,7 +443,7 @@ $$
 
 10. 用定理 17.8.1，取 $D_1 = 0.05\,\mu\mathrm{m^2\,s^{-1}}$ 与 $\tau_{3\mathrm{D}} = 0.5\,\mathrm{ms}$，计算最优滑动时间、每轮扫描的碱基对数，以及在 $4.6\,\mathrm{Mbp}$ 基因组中的搜索时间。若蛋白质有 $95\,\%$ 的时间在 DNA 上，搜索时间如何变化？
 
-    **答** 最优 $\tau_{1\mathrm{D}} = 0.5\,\mathrm{ms}$；$n = \sqrt{8\times5\times10^4\times5\times10^{-4}/\pi}/0.34 = \sqrt{63.7}/0.34 = 23.5\,\mathrm{bp}$；$\tau_{\mathrm{s}} = (4.6\times10^6/23.5)\times10^{-3}\,\mathrm{s} = 196\,\mathrm{s}$。$95\,\%$ 结合时，$\tau_{1\mathrm{D}} = 19\times0.5 = 9.5\,\mathrm{ms}$，$n = 23.5\sqrt{19} = 102\,\mathrm{bp}$，$\tau_{\mathrm{s}} = (4.6\times10^6/102)\times10\,\mathrm{ms} = 450\,\mathrm{s}$，约长 $2.3$ 倍。
+    **答** 最优 $\tau_{1\mathrm{D}} = 0.5\,\mathrm{ms}$；$n = \sqrt{16\times5\times10^4\times5\times10^{-4}/\pi}/0.34 = \sqrt{127.3}/0.34 = 33.2\,\mathrm{bp}$；$\tau_{\mathrm{s}} = (4.6\times10^6/33.2)\times10^{-3}\,\mathrm{s} = 139\,\mathrm{s}$。$95\,\%$ 结合时，$\tau_{1\mathrm{D}} = 19\times0.5 = 9.5\,\mathrm{ms}$，$n = 33.2\sqrt{19} = 145\,\mathrm{bp}$，$\tau_{\mathrm{s}} = (4.6\times10^6/145)\times10\,\mathrm{ms} = 318\,\mathrm{s}$，约长 $2.3$ 倍。
 
 11. 某酶以 $\Delta\Delta G = 4\,k_{\mathrm{B}}T$ 的结合差异区分两个底物。平衡选择给出什么误差？一个与两个理想校对步骤时又如何？为什么细胞不能无代价地达到后者？
 

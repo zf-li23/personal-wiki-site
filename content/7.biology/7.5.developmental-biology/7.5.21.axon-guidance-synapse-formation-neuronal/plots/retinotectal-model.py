@@ -5,7 +5,7 @@ of an axon at a site is the product of the two levels, and Monte Carlo exchanges
 total energy. (A) Starting from a random arrangement, the map becomes ordered and inverted: temporal axons (high
 EphA) end in the anterior tectum (low ephrin-A), nasal axons in the posterior. (B) The experiment of Brown et al.
 (2000): in half of the retinal ganglion cells, scattered at random, EphA3 is added (knock-in). The model, like the
-mice, forms two interleaved maps: knock-in axons, with uniformly higher EphA, take the anterior half of the
+mice, forms two juxtaposed maps: knock-in axons, with uniformly higher EphA, take the anterior half of the
 tectum in retinotopic order, the wild-type axons are displaced into the posterior half. Position on the tectum
 therefore depends on the EphA level of an axon relative to its competitors."""
 import numpy as np

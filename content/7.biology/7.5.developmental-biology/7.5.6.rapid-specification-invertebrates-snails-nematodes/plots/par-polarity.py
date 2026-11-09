@@ -5,7 +5,7 @@ circumference of the embryo (anterior pole at 0, posterior pole at 67 µm); para
 A: membrane concentrations after 50 min, starting from a posterior P domain covering 40 % of the cortex (as
 left by the cortical flow that the sperm centrosome triggers). B: the time course of the same simulation:
 the two domains stay separated by a sharp, stable boundary. C: the final width of the P domain against the
-size of the initial cue: a cue covering less than about a tenth of the cortex is erased and the zygote
+size of the initial cue: a cue covering less than about 5 % of the cortex is erased and the zygote
 stays unpolarized; any larger cue establishes polarity, and the final boundary settles near the middle of the
 embryo almost independently of the cue: the system is bistable, needs a cue above a threshold, and then
 maintains and positions its domains itself."""

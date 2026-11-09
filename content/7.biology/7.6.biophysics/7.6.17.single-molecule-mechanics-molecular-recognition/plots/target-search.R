@@ -1,7 +1,7 @@
 # Facilitated diffusion: search time against the fraction of time bound to DNA (base R).
 M <- 4.6e6; b <- 0.34; tau3 <- 1e-3            # bp, nm per bp, s
 tsearch <- function(tau1, D1) {                  # D1 in nm^2/s
-  n <- pmax(sqrt(8 * D1 * tau1 / pi) / b, 1)     # new base pairs scanned per round
+  n <- pmax(sqrt(16 * D1 * tau1 / pi) / b, 1)     # new base pairs scanned per round
   M / n * (tau1 + tau3)
 }
 f <- seq(0.005, 0.995, length.out = 400)

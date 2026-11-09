@@ -43,7 +43,7 @@ The fragments are joined by DNA ligase (Definition 5.3.1). Replication is theref
 
 ### 7.2.3. RNA Primers
 
-No DNA polymerase can start a chain: each can only extend a primer with a free $3'$-OH (7.3.1). Kornberg's group found that nascent Okazaki fragments of phages and of *E. coli* carry a few ribonucleotides at their $5'$ ends, and that in *E. coli* their synthesis is resistant to rifampicin, an inhibitor of RNA polymerase, so the **primers** are made by a separate enzyme.
+No DNA polymerase can start a chain: each can only extend a primer with a free $3'$-OH (7.3.1). Around 1971–1972, Kornberg's group showed with phage DNA replicated in vitro that new DNA chains start on RNA, and Okazaki's group (Sugino, Hirose and Okazaki, 1972) found that nascent Okazaki fragments of *E. coli* carry a few ribonucleotides at their $5'$ ends. In *E. coli* the synthesis of these fragments is resistant to rifampicin, an inhibitor of RNA polymerase, so the **primers** are made by a separate enzyme.
 
 **Definition 7.2.3 (Primase)** A **primase** is a DNA-dependent RNA polymerase that synthesizes the short RNA primers on which DNA polymerases start new DNA chains at replication origins and on the lagging strand. In *E. coli* the primase is DnaG, which makes primers of about $10$–$12$ nucleotides; in eukaryotes it is part of the DNA polymerase α–primase complex.
 

@@ -93,9 +93,11 @@ The measured values are $D_A = 0.28$ and $D_P = 0.15\,\mathrm{\mu m^2\,s^{-1}}$,
 
 **Example 6.4.1** Simulating (6.1)–(6.2) on 120 grid points (figure below) from a P domain covering 40 % of the cortex gives, after 50 min, an A domain of about $1.9\,\mathrm{\mu m^{-2}}$ in the anterior half and a P domain of about $4.2\,\mathrm{\mu m^{-2}}$ in the posterior half, separated by a front at about 35 µm. Starting from domains of 10 % to 60 %, the final P domain covers 45–52 % of the cortex; starting from 3–5 %, polarity is lost. The cortical flow triggered by the centrosome is thus needed only to supply a cue above threshold; the PAR network then decides where the boundary lies.
 
-The model also explains why polarity is robust to the amount of PAR proteins but sensitive to their ratio: changing $\rho_A$ or $\rho_P$ moves the boundary, as seen in embryos with reduced or increased dosage of PAR-2. Its limitations are known: it neglects the cortical flow itself, which also advects proteins during maintenance, and the oligomerization and clustering of PAR-3, which slow its diffusion; more complete models include both.
-
 ![A mass-conserved reaction–diffusion model of PAR polarity in the *C. elegans* zygote (Formula 6.4.1, measured parameters). A: membrane concentrations of anterior (red) and posterior (blue) PAR proteins after 50 min, from a posterior cue covering 40 % of the cortex. B: kymograph of the same simulation (red: anterior PARs dominate; blue: posterior): a sharp boundary is established and maintained. C: the final width of the posterior domain against the size of the initial cue: cues below about 5 % of the cortex are erased; larger ones polarize the zygote, and the boundary settles near the middle almost independently of the cue](./plots/par-polarity.py)
+
+:::
+
+The model also explains why polarity is robust to the amount of PAR proteins but sensitive to their ratio: changing $\rho_A$ or $\rho_P$ moves the boundary, as seen in embryos with reduced or increased dosage of PAR-2. Its limitations are known: it neglects the cortical flow itself, which also advects proteins during maintenance, and the oligomerization and clustering of PAR-3, which slow its diffusion; more complete models include both.
 
 ### 6.4.3. Asymmetric Division
 

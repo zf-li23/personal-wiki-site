@@ -197,7 +197,7 @@ Phages have their own genetics. Mutations of phage T4 change plaque morphology (
 
 :::
 
-Phage recombination differs from meiotic recombination: phage DNA molecules recombine repeatedly during several rounds of replication in the cell, as in a random-mating population, so the recombination frequency of unlinked phage markers does not reach $50\,\%$ in one cross, and close double exchanges are in excess (negative **interference**, [7.4.8](/7.4.8#sec-8.4.3)). The enormous numbers of progeny (a cross can produce $10^{9}$ phages) allow recombination frequencies as low as $10^{-6}$ to be measured with selective hosts, the resolution that Benzer used to map mutations within the *rII* gene down to single **base pairs** ([7.4.13](/7.4.13)).
+Phage recombination differs from meiotic recombination: phage DNA molecules recombine repeatedly during several rounds of replication in the cell, as in a random-mating population. Repeated rounds drive unlinked markers toward random association, but because some molecules never take part in a mating before they are packaged, the recombination frequency of unlinked phage markers in a cross stays below $50\,\%$; close double exchanges are in excess (negative **interference**, [7.4.8](/7.4.8#sec-8.4.3)). The enormous numbers of progeny (a cross can produce $10^{9}$ phages) allow recombination frequencies as low as $10^{-6}$ to be measured with selective hosts, the resolution that Benzer used to map mutations within the *rII* gene down to single **base pairs** ([7.4.13](/7.4.13)).
 
 ## 10.7. Comparing the Tools
 

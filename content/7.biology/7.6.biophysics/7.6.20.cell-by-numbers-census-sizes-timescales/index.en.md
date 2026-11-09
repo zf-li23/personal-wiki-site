@@ -47,9 +47,11 @@ The measured census agrees with these estimates to within a factor of two.
 | Glycogen | 2.5 | $4.4\times10^3$ granules | |
 | Small molecules and ions | 3.9 | water $2.3\times10^{10}$, ions $\sim 2\times10^8$ | as estimated |
 
-The table is for *E. coli* B/r doubling every 40 minutes (Neidhardt, 1990). The census immediately reveals the physical character of the cytoplasm: with $3\times10^6$ proteins of $5\,\mathrm{nm}$ and $2\times10^4$ ribosomes of $20$–$25\,\mathrm{nm}$ in $1\,\mathrm{fL}$, macromolecules occupy 20–30 % of the volume, and their mean spacing (20.2) is comparable to their size. This **macromolecular crowding** changes chemical equilibria and slows diffusion ([7.6.23](/7.6.23)).
-
 ![A molecular census of one *E. coli* cell (B/r, 40 min doubling time): numbers of molecules per cell on a logarithmic axis, from the compilation of Neidhardt (1990), with water and inorganic ions estimated from the wet mass. Open diamonds: the estimates of Example 20.1.1 and Example 1.5.1 of 7.6.1. Ten orders of magnitude separate water from the single peptidoglycan sacculus; proteins and lipids number in the millions, ribosomes in the tens of thousands, mRNAs in the thousands, and the genome is present in about two copies](./plots/ecoli-census.py)
+
+:::
+
+The table is for *E. coli* B/r doubling every 40 minutes (Neidhardt, 1990). The census immediately reveals the physical character of the cytoplasm: with $3\times10^6$ proteins of $5\,\mathrm{nm}$ and $2\times10^4$ ribosomes of $20$–$25\,\mathrm{nm}$ in $1\,\mathrm{fL}$, macromolecules occupy 20–30 % of the volume, and their mean spacing (20.2) is comparable to their size. This **macromolecular crowding** changes chemical equilibria and slows diffusion ([7.6.23](/7.6.23)).
 
 ### 20.1.3. How the Census Is Measured
 
@@ -128,7 +130,7 @@ Organelles are measured with the same geometry. Mitochondria of yeast grown on g
 $$
 A_{\mathrm{ER}} = 2\sum_iA_i = \frac{8\pi}{3d}\left(R_{\mathrm{out}}^3 - R_{\mathrm{n}}^3\right).
 $$
-With $R_{\mathrm{n}} = 5\,\mu\mathrm{m}$, $R_{\mathrm{out}} = 10\,\mu\mathrm{m}$ and $d = 50\,\mathrm{nm}$, $A_{\mathrm{ER}} \approx 1.5\times10^5\,\mu\mathrm{m}^2$, fifteen times the plasma membrane ($\sim 10^4\,\mu\mathrm{m}^2$). Electron-microscopic stereology of liver cells gives the same order: the ER and the inner mitochondrial membrane together exceed the plasma membrane twenty- to fiftyfold ([7.3.7](/7.3.7)). The cell's chemistry happens mainly on internal surfaces.
+With $R_{\mathrm{n}} = 5\,\mu\mathrm{m}$, $R_{\mathrm{out}} = 10\,\mu\mathrm{m}$ and $d = 50\,\mathrm{nm}$, $A_{\mathrm{ER}} \approx 1.5\times10^5\,\mu\mathrm{m}^2$, about a hundred times the surface of a sphere of radius $R_{\mathrm{out}}$ ($4\pi R_{\mathrm{out}}^2 \approx 1.3\times10^3\,\mu\mathrm{m}^2$) and still many times the plasma membrane of the whole cell. Electron-microscopic stereology of liver cells points the same way: the ER and the inner mitochondrial membrane together exceed the plasma membrane twenty- to fiftyfold ([7.3.7](/7.3.7)). The cell's chemistry happens mainly on internal surfaces.
 
 ### 20.3.3. Assemblies and Viruses
 

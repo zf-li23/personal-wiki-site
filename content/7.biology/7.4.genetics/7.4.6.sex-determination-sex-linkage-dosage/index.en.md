@@ -66,7 +66,7 @@ Most flowering plants have hermaphroditic (perfect) flowers. A species is *monoe
 
 | System | Examples | Genetics |
 |---|---|---|
-| XY chromosomes (male heterogametic) | hemp (*Cannabis sativa*), spinach, white campion (*Silene latifolia*, with a Y larger than the X), papaya; also the gymnosperm *Ginkgo* | heteromorphic sex chromosomes of flowering plants were first described in 1923 (*Silene*, *Rumex*, *Humulus*); in *Silene* the Y carries a dominant suppressor of female organs and a promoter of anther development |
+| XY chromosomes (male heterogametic) | hemp (*Cannabis sativa*), spinach, white campion (*Silene latifolia*, with a Y larger than the X), papaya; the gymnosperm *Ginkgo*, long described as XY, may instead be ZW according to genome data (Liao and colleagues, 2020) | heteromorphic sex chromosomes of flowering plants were first described in 1923 (*Silene*, *Rumex*, *Humulus*); in *Silene* the Y carries a dominant suppressor of female organs and a promoter of anther development |
 | ZW chromosomes (female heterogametic) | wild strawberries (*Fragaria virginiana*, *F. chiloensis*), some willows | female-determining region on the W |
 | one gene, male dominant | garden asparagus (*Asparagus officinalis*) | males $M\_$, females $mm$ (Rick and Hanna 1943); $M$ lies in a small male-specific region of an otherwise homomorphic Y, with two genes, a suppressor of female function and an anther-development gene (*aspTDF1*) |
 | three alleles at one locus | squirting cucumber (*Ecballium elaterium*) | dominance series $a^{D} > a^{+} > a^{d}$: $a^{D}\_$ male, $a^{+}a^{+}$ and $a^{+}a^{d}$ monoecious, $a^{d}a^{d}$ female |

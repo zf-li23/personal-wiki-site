@@ -95,6 +95,8 @@ A common misstatement is that "the affinity varies with the square of the free e
 
 **Example 14.3.1 (A chimeric activator)** Brent and Ptashne (1985) fused the DNA-binding domain of the bacterial repressor LexA, which has no activation domain and binds lexA **operators**, to the activation domain of GAL4. In yeast cells carrying a reporter gene with a lexA operator in place of the GAL4-binding site, the hybrid protein activated transcription; LexA alone did not, and GAL4 did not activate this reporter. The activation domain therefore works when brought to DNA by any DNA-binding domain, even a bacterial one, and the DNA-binding domain needs no particular partner. Domain-swap experiments with GCN4 and GAL4 (Hope and Struhl, 1986; Keegan, Gill and Ptashne, 1986) gave the same result.
 
+![The modularity of activators. A: a chimera of the LexA DNA-binding domain and the GAL4 activation domain activates a reporter with a lexA operator, while the parental proteins do not (Example 14.3.1). B: the yeast two-hybrid assay: a bait fused to the GAL4 DNA-binding domain binds the UAS of a reporter; only when the prey, fused to an activation domain, binds the bait is the reporter (HIS3 or lacZ) transcribed](./plots/modularity.py)
+
 :::
 
 The independence of the two domains became a tool.
@@ -102,8 +104,6 @@ The independence of the two domains became a tool.
 The **yeast two-hybrid** assay, introduced as a tool for mapping signaling interactions in [7.1.15](/7.1.15), is a direct application: it detects the interaction of two proteins X and Y by fusing X to a DNA-binding domain (the "bait") and Y to an activation domain (the "prey"), so that a reporter gene with the corresponding **binding site** is transcribed only when X and Y bind each other and thereby bring the activation domain to the promoter.
 
 Fields and Song (1989) tested the yeast proteins Snf1 and Snf4, known to interact, as fusions to the GAL4 DNA-binding domain and the GAL4 activation domain: the reporter ($\mathrm{GAL1}$–$lacZ$) was expressed only when both fusions were present. With a reporter that allows growth (*HIS3*) and a library of prey fusions, the assay screens a genome for the partners of a bait, and systematic screens of all pairs have mapped tens of thousands of binary interactions in yeast and human proteomes. Its limitations follow from its design: the interaction must occur in the nucleus, without the partners' normal modifications or compartments (membrane proteins need other versions, such as the split-ubiquitin assay); baits that activate on their own give false positives; and indirect interactions may be missed or mistaken. Variants detect DNA–protein (one-hybrid) and RNA–protein (three-hybrid) interactions, and the same modularity underlies the engineered transcription systems of genetics: GAL4–UAS expression in *Drosophila*, the tetracycline-controlled transactivator (TetR fused to VP16), and dCas9 fused to activation domains ([7.2.24](/7.2.24)).
-
-![The modularity of activators. A: a chimera of the LexA DNA-binding domain and the GAL4 activation domain activates a reporter with a lexA operator, while the parental proteins do not (Example 14.3.1). B: the yeast two-hybrid assay: a bait fused to the GAL4 DNA-binding domain binds the UAS of a reporter; only when the prey, fused to an activation domain, binds the bait is the reporter (HIS3 or lacZ) transcribed](./plots/modularity.py)
 
 ## 14.4. Activation by Recruitment
 

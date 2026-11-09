@@ -7,7 +7,7 @@ C: the interior density σ at the minimum along the two paths; the jump on the s
 edge of the wedge if the embryo stays in its minimum as long as it exists (perfect delay), and at v = 0 under
 the Maxwell convention (global minimum). D: the radial profile from the first integral, with σ = 1 held at the
 surface by adhesion to the hyaline layer: a thin shell of cells over a cavity, and for nearly equal minima a
-thick shell with a plateau (depth in units of the adhesion length ℓ = (Ja²c/24)^½)."""
+thick shell with a plateau (depth in units of the adhesion length ℓ = (Ja²c/48)^½)."""
 import numpy as np
 import wikibio as bio
 from wikibio import charts

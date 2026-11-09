@@ -85,7 +85,7 @@ which remains accurate when enzyme and substrate are comparable, as for many sig
 
 Above the level of single enzymes, models use phenomenological rate laws whose parameters summarize several elementary steps: Michaelis–Menten terms for modification enzymes, **Hill equations** for cooperative binding and transcriptional regulation ([7.6.4](/7.6.4), [7.6.33](/7.6.33#sec-33.1.2)), and their combination for covalent modification cycles, whose **zero-order ultrasensitivity** arises when both converting enzymes are saturated ([7.1.9](/7.1.9#sec-9.6.1)).
 
-**Example 14.2.4** A generic three-component repressive network (Mogilner, Wollman and Marshall, 2006, a simplified form of an oscillatory circuit in soil bacteria) has proteins $A$, $B$, $C$ that exist in unmodified and phosphorylated forms: $C$ catalyzes the phosphorylation of $A$, $A$ the dephosphorylation of $B$, and $B$ the dephosphorylation of $C$. With Michaelis–Menten rate laws for every conversion, the equations for $A$ and its phosphorylated form $A_{\mathrm{p}}$ are
+**Example 14.2.4** A generic three-component repressive network (a teaching example of Mogilner, Wollman and Marshall, 2006) has proteins $A$, $B$, $C$ that exist in unmodified and phosphorylated forms: $C$ catalyzes the phosphorylation of $A$, $A$ the dephosphorylation of $B$, and $B$ the dephosphorylation of $C$. With Michaelis–Menten rate laws for every conversion, the equations for $A$ and its phosphorylated form $A_{\mathrm{p}}$ are
 $$
 \frac{\mathrm{d}[A]}{\mathrm{d}t} = \frac{k_{\mathrm{p}1}[A_{\mathrm{p}}]}{[A_{\mathrm{p}}] + K_{\mathrm{p}1}} - \frac{k_{\mathrm{k}1}[A][C]}{[A] + K_{\mathrm{k}1}}, \qquad \frac{\mathrm{d}[A_{\mathrm{p}}]}{\mathrm{d}t} = -\frac{\mathrm{d}[A]}{\mathrm{d}t},
 $$

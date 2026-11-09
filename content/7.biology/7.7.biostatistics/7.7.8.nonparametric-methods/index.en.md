@@ -1,7 +1,7 @@
 ---
 title: Nonparametric Methods
 description: When nonparametric methods are needed (ordinal data, skewness, small samples, outliers); the idea of ranks and asymptotic relative efficiency; the sign test, Wilcoxon signed-rank test, Wilcoxon rank-sum test and Mann–Whitney U (equivalence with the AUC, ties and exact p-values), the Hodges–Lehmann estimator; the Kruskal–Wallis test and Dunn's test; permutation tests; the Kolmogorov–Smirnov test; Spearman and Kendall rank correlation; choosing between parametric and nonparametric methods. Examples are captopril blood-pressure reduction, Student's sleep data, children's FEV, CT rating scores and the guinea-pig vitamin C experiment.
-source_hash: 6d894b166901
+source_hash: 2049de563a8c
 ---
 
 The t methods of [7.7.6](/7.7.6) and [7.7.7](/7.7.7) assume that the data (or the differences) are approximately normal. When the sample is large, the **central limit theorem** makes them quite robust. Three kinds of data, however, give cause for concern: ordinal outcomes (pain scores, five-point imaging ratings, "improved / unchanged / worse"), for which arithmetic has no meaning in itself; small samples with clearly skewed distributions (length of hospital stay, cytokine concentrations); and small samples containing a few outliers. **Nonparametric tests** do not assume that the population belongs to a parametric family. Most of them use only the order of the observations (their ranks), and so are insensitive to the shape of the distribution and to outliers. This chapter treats, in turn, the sign test and Wilcoxon signed-rank test for paired data, the Wilcoxon rank-sum test for two independent samples, the Kruskal–Wallis test for several groups, the permutation test that needs no distribution table, the Kolmogorov–Smirnov test that compares whole distributions, and rank correlation. The examples continue those of the previous two chapters: the paired data on captopril and on sleeping pills; FEV in smokers and nonsmokers (rank methods reach the same conclusion as the t test, which again shows that the FEV paradox lies in the design, not in the test); the CT rating scores of [7.7.3](/7.7.3) (the Mann–Whitney statistic is the area under the ROC curve); and the guinea-pig vitamin C dose experiment. The null distributions and proofs for these tests are in [3.2.6](/3.2.6); here we cover their use, conditions and interpretation.
@@ -154,9 +154,11 @@ The one-sample form of the **Kolmogorov–Smirnov test** ([3.2.6](/3.2.6#sec-6.5
 
 **Example 8.7.1** For FEV in smokers and nonsmokers, $D = 0.435$, attained at FEV $\approx 2.9$ L (about 70% of nonsmokers lie below this value, against only 26% of smokers), and $p = 1.6 \times 10^{-10}$.
 
-The advantage of the KS test is that it can detect "any kind of difference"; the price is that for any one specific kind of difference (such as a location shift) its power is lower than that of a dedicated test. It is sensitive to differences in the middle of the distribution and insensitive to differences in the tails. When the one-sample KS test is used to test normality and the mean and standard deviation have been estimated from the same data, the standard critical values no longer apply (the test is too conservative); the Lilliefors correction or the **Shapiro–Wilk test** should be used instead, always together with a QQ plot ([7.7.2](/7.7.2)).
-
 ![Comparing whole distributions. A: the empirical distribution functions of FEV for the 589 nonsmokers and 65 smokers among 654 children in East Boston (Tager et al. 1979; public version Kahn 2005); the Kolmogorov–Smirnov statistic D = 0.435 is the largest vertical distance between the two step functions. B: the five-point CT ratings of Hanley and McNeil (1982), 58 normal and 51 abnormal subjects: the Mann–Whitney statistic U/(n1 n2) = 0.893 is the area under the ROC curve](./plots/fev-ecdf.py)
+
+:::
+
+The advantage of the KS test is that it can detect "any kind of difference"; the price is that for any one specific kind of difference (such as a location shift) its power is lower than that of a dedicated test. It is sensitive to differences in the middle of the distribution and insensitive to differences in the tails. When the one-sample KS test is used to test normality and the mean and standard deviation have been estimated from the same data, the standard critical values no longer apply (the test is too conservative); the Lilliefors correction or the **Shapiro–Wilk test** should be used instead, always together with a QQ plot ([7.7.2](/7.7.2)).
 
 ## 8.8. Rank Correlation
 

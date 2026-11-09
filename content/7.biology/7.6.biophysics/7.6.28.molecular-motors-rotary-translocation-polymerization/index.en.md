@@ -88,13 +88,13 @@ How does a proton flux produce torque? The c-ring carboxylates face the lipid on
 
 ### 28.4.1. Architecture and Numbers
 
-The flagellar motor of *E. coli* is a ring-shaped rotor of about $45\,\mathrm{nm}$ in the cytoplasmic membrane, with a C ring of about 34 copies of FliG, FliM and FliN on its cytoplasmic face, surrounded by up to eleven stator units that are anchored to the **peptidoglycan** and conduct protons ([7.3.14](/7.3.14#sec-14.6.5)). Each stator unit is a MotA₅MotB₂ complex; cryo-EM structures (Santiveri and colleagues, 2020; Deme and colleagues, 2020) suggest that proton flow through MotB rotates the MotA pentamer, which engages FliG like a gear. Measurements give:
+The flagellar motor of *E. coli* is a ring-shaped rotor of about $45\,\mathrm{nm}$ in the cytoplasmic membrane, with a C ring on its cytoplasmic face built from about 34 copies each of FliG and FliM and roughly four times as many FliN, surrounded by up to eleven stator units that are anchored to the **peptidoglycan** and conduct protons ([7.3.14](/7.3.14#sec-14.6.5)). Each stator unit is a MotA₅MotB₂ complex; cryo-EM structures (Santiveri and colleagues, 2020; Deme and colleagues, 2020) suggest that proton flow through MotB rotates the MotA pentamer, which engages FliG like a gear. Measurements give:
 
 | Quantity | Value | Method |
 |---|---|---|
 | Stall torque | $1300$–$2000\,\mathrm{pN\,nm}$ (*E. coli*, full complement of stators) | tethered cells, electrorotation, large beads |
 | Maximum speed | about $300\,\mathrm{Hz}$ (*E. coli*, $\ce{H+}$); up to $1700\,\mathrm{Hz}$ (*Vibrio*, $\ce{Na+}$) | small beads, gold particles |
-| Steps | 26 per revolution, the periodicity of the FliG ring | bead tracking at very low speed (Sowa and colleagues, 2005) |
+| Steps | 26 per revolution (first matched to a 26-fold rotor ring; current structures give about 34 FliG, so the origin of the number is unsettled) | bead tracking at very low speed (Sowa and colleagues, 2005) |
 | Ion flux | about 1000 protons per revolution | proton flux in *Streptococcus* (Meister, Lowe and Berg, 1987) |
 | Stator number | up to 11, dynamically exchanging | resurrection, fluorescence (Reid and colleagues, 2006; Leake and colleagues, 2006) |
 

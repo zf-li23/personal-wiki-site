@@ -198,15 +198,15 @@ The last term is a positive energy paid wherever the density changes, a surface 
 **Formula 5.5.1 (Continuum Equation of the Blastula)** In the continuum limit the cell density obeys
 
 $$
-E'(\sigma) = \frac{J a^2 c}{12}\,\nabla^2\sigma,
+E'(\sigma) = \frac{J a^2 c}{24}\,\nabla^2\sigma,
 \tag{5.4}
 $$
 with $E$ the local energy (5.3) and $\sigma = 1$ on the surface of the egg.
 
-Equation (5.4) is the Euler–Lagrange equation ([2.4.13](/2.4.13)) of the functional $\int\bigl[E(\sigma) + \tfrac{1}{24}Ja^2c\lvert\nabla\sigma\rvert^2\bigr]\,\mathrm{d}V$, the continuum version of the energy. Suppose $\sigma$ varies only with the radius and treat the problem as one-dimensional (this fails near the center, but the profile has usually levelled off by then). Multiplying $E'(\sigma) = \tfrac{1}{12}Ja^2c\,\sigma''$ by $\sigma'$ and integrating gives a **first integral** ([2.4.14](/2.4.14))
+Equation (5.4) is the Euler–Lagrange equation ([2.4.13](/2.4.13)) of the functional $\int\bigl[E(\sigma) + \tfrac{1}{48}Ja^2c\lvert\nabla\sigma\rvert^2\bigr]\,\mathrm{d}V$, the continuum version of the energy. Suppose $\sigma$ varies only with the radius and treat the problem as one-dimensional (this fails near the center, but the profile has usually levelled off by then). Multiplying $E'(\sigma) = \tfrac{1}{24}Ja^2c\,\sigma''$ by $\sigma'$ and integrating gives a **first integral** ([2.4.14](/2.4.14))
 
 $$
-\frac{J a^2 c}{24}\left(\frac{\mathrm{d}\sigma}{\mathrm{d}r}\right)^2 - E(\sigma) = K.
+\frac{J a^2 c}{48}\left(\frac{\mathrm{d}\sigma}{\mathrm{d}r}\right)^2 - E(\sigma) = K.
 \tag{5.5}
 $$
 
@@ -214,7 +214,7 @@ The constant $K$ is fixed by the interior: we ask that $\sigma$ level off, $\mat
 
 $$
 d(\sigma) = \ell\int_\sigma^1\frac{\mathrm{d}s}{\sqrt{E(s) - E(\sigma_{\min})}},
-\qquad \ell = \left(\frac{Ja^2c}{24}\right)^{1/2}.
+\qquad \ell = \left(\frac{Ja^2c}{48}\right)^{1/2}.
 $$
 
 The global picture repeats the local one. In the single-minimum regime the density falls from 1 at the surface to the interior minimum within a few adhesion lengths $\ell$: a thin shell of cells over a cavity, which deepens continuously as $\lambda$ increases. In the two-minimum regime, when the minimum near $\sigma = 1$ is only slightly higher than the cavity minimum, the profile stays close to the cellular state for a long distance before dropping: a thick shell, which becomes a thin one when the cellular minimum disappears (figure below, panel D). What matters globally, as locally, is the position of the control parameters relative to the singular set in the $(J, \lambda)$ plane.
@@ -356,7 +356,7 @@ The converse of twinning is a **chimera** ([7.4.20](/7.4.20)), an individual mad
 
 6. Derive the first integral (5.5) from (5.4) in one dimension, and estimate the thickness of the cell layer when $E(\sigma) - E(\sigma_{\min}) \approx \tfrac12 k(\sigma - \sigma_{\min})^2$ near the interior minimum.
 
-   **Answer** With $E'(\sigma) = (Ja^2c/12)\sigma''$, multiply by $\sigma'$: $\tfrac{\mathrm{d}}{\mathrm{d}r}E(\sigma) = (Ja^2c/24)\tfrac{\mathrm{d}}{\mathrm{d}r}(\sigma')^2$, so $(Ja^2c/24)(\sigma')^2 - E(\sigma)$ is constant. Near the minimum, $\sigma' = \pm(\sqrt{k/2}/\ell)(\sigma - \sigma_{\min})$, so $\sigma - \sigma_{\min} \propto \exp(-d\sqrt{k/2}/\ell)$: the density approaches its interior value exponentially with **decay length** $\ell\sqrt{2/k} = (Ja^2c/12k)^{1/2}$. The layer is a few cell diameters thick when $J$ and $k$ are comparable, as in a one-cell-thick blastula wall for moderate adhesion.
+   **Answer** With $E'(\sigma) = (Ja^2c/24)\sigma''$, multiply by $\sigma'$: $\tfrac{\mathrm{d}}{\mathrm{d}r}E(\sigma) = (Ja^2c/48)\tfrac{\mathrm{d}}{\mathrm{d}r}(\sigma')^2$, so $(Ja^2c/48)(\sigma')^2 - E(\sigma)$ is constant. Near the minimum, $\sigma' = \pm(\sqrt{k/2}/\ell)(\sigma - \sigma_{\min})$, so $\sigma - \sigma_{\min} \propto \exp(-d\sqrt{k/2}/\ell)$: the density approaches its interior value exponentially with **decay length** $\ell\sqrt{2/k} = (Ja^2c/24k)^{1/2}$. The layer is a few cell diameters thick when $J$ and $k$ are comparable, as in a one-cell-thick blastula wall for moderate adhesion.
 
 7. A mouse embryo is disaggregated at the 4-cell stage and a single blastomere is cultured. It forms a small blastocyst with a normal ICM. What does this show about the first lineage decision? What would you expect if a single blastomere of a 16-cell embryo, taken from the inside, were cultured alone?
 

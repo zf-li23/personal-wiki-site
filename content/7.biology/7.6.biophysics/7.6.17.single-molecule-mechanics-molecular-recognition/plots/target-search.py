@@ -1,6 +1,6 @@
 # Facilitated diffusion: search time of a DNA-binding protein for one site in a bacterial genome.
 # M = 4.6e6 bp, base-pair spacing b = 0.34 nm. Each round: three-dimensional excursion of mean duration tau3,
-# then nonspecific binding and one-dimensional sliding for tau1, which scans n = sqrt(8 D1 tau1 / pi) / b new
+# then nonspecific binding and one-dimensional sliding for tau1, which scans n = sqrt(16 D1 tau1 / pi) / b new
 # base pairs (the mean range of a 1D Brownian walk). Search time tau_s = (M / n)(tau1 + tau3).
 # A: tau_s against the fraction of time bound to DNA, f = tau1/(tau1 + tau3), for tau3 = 1 ms and three 1D
 #    diffusion coefficients; the optimum is at tau1 = tau3 (f = 1/2), and a purely 3D search (n = 1 per round)
@@ -18,7 +18,7 @@ M, b, tau3 = 4.6e6, 0.34, 1e-3
 
 
 def tsearch(tau1, D1):
-    n = np.maximum(np.sqrt(8 * D1 * tau1 / np.pi) / b, 1.0)
+    n = np.maximum(np.sqrt(16 * D1 * tau1 / np.pi) / b, 1.0)
     return M / n * (tau1 + tau3)
 
 
@@ -28,7 +28,7 @@ tau1 = f / (1 - f) * tau3
 for D1um, tok in ((0.01, "neutral"), (0.046, "dna"), (0.2, "rna")):
     D1 = D1um * 1e6  # nm^2/s
     ts = tsearch(tau1, D1)
-    ell = np.sqrt(8 * D1 * tau3 / np.pi) / b
+    ell = np.sqrt(16 * D1 * tau3 / np.pi) / b
     axs[0].semilogy(f, ts, color=charts.line(tok), lw=1.8, label=f"D₁ = {D1um:g} µm²/s (n* = {ell:.0f} bp)")
     axs[0].plot(0.5, tsearch(tau3, D1), "o", color=charts.line(tok), ms=4)
 axs[0].axhline(M * tau3, color=P.muted(), lw=0.8, ls=":")

@@ -232,10 +232,10 @@ Of the $22\,369$ genes with at least $10$ reads in total, $18\,899$ pass indepen
 | *KLF15* | 561 | 4.46 | $4.0\times10^{-100}$ | transcription factor, glucocorticoid-induced |
 | *PER1* | 777 | 3.19 | $1.0\times10^{-95}$ | clock gene with a glucocorticoid response element |
 | *VCAM1* | 508 | −3.68 | $1.0\times10^{-95}$ | adhesion molecule, repressed |
+| *CRISPLD2* | 3082 | 2.63 | $6.7\times10^{-60}$ | the gene highlighted by the original study |
 | *ZBTB16* | 385 | 7.35 | $2.1\times10^{-40}$ | transcription factor, strongly induced |
 | *FKBP5* | 2564 | 4.05 | $8.6\times10^{-26}$ | co-chaperone of the glucocorticoid receptor, negative feedback |
 | *TSC22D3* (GILZ) | 2206 | 3.19 | $3.3\times10^{-19}$ | glucocorticoid-induced leucine zipper |
-| *CRISPLD2* | 3082 | 2.63 | $6.7\times10^{-60}$ | the gene highlighted by the original study |
 
 The values were computed with pydeseq2, a reimplementation of DESeq2; the R package gives very similar numbers. The induction of *FKBP5*, *TSC22D3*, *PER1* and *DUSP1* in nearly every glucocorticoid-treated cell type makes them positive controls: their presence near the top of the list is part of quality control.
 

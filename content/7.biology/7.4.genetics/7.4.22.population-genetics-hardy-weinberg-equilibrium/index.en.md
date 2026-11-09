@@ -321,11 +321,11 @@ $$
 
 **Example 22.4.1** Two equal subpopulations have allele frequencies $0.2$ and $0.8$. Each is in HWE ($0.04 : 0.32 : 0.64$ and $0.64 : 0.32 : 0.04$), so the pooled sample is $0.34 : 0.32 : 0.34$. The pooled allele frequency is $\bar p = 0.5$, for which HWE predicts $0.25 : 0.5 : 0.25$; the heterozygote deficit is $0.18 = 2\operatorname{Var}(p)$ with $\operatorname{Var}(p) = 0.09$, and $F_{\mathrm{ST}} = 0.09/0.25 = 0.36$. A χ² test on a pooled sample would reject HWE and might be misread as evidence of inbreeding or selection.
 
+![The Wahlund effect (Theorem 22.4.1). A: two equal subpopulations with allele frequencies 0.2 and 0.8, each in Hardy–Weinberg proportions; their pooled sample (0.34 : 0.32 : 0.34) has far fewer heterozygotes than Hardy–Weinberg proportions at the pooled frequency 0.5 (0.25 : 0.50 : 0.25). B: for two equal subpopulations with frequencies 0.5 − x and 0.5 + x, the heterozygote deficit 2 Var(p) = 2x² and the fixation index F_ST = 4x²; dots mark the example of panel A (x = 0.3)](./plots/wahlund.py)
+
 :::
 
 For humans, $F_{\mathrm{ST}}$ between continental populations averaged over the genome is about $0.1$–$0.15$; equivalently, about $85$–$90\,\%$ of human genetic diversity is found within any one population, and only a small part distinguishes populations (Lewontin 1972, confirmed by genome sequencing). Differentiation is larger at a minority of loci under local selection (skin pigmentation, lactase persistence, high-altitude adaptation). Population structure is the main confounder of association studies, because allele frequencies and disease rates may both differ between subpopulations ([7.4.25](/7.4.25)); the balance between drift, which creates $F_{\mathrm{ST}}$, and migration, which erodes it, is treated in [7.4.23](/7.4.23).
-
-![The Wahlund effect (Theorem 22.4.1). A: two equal subpopulations with allele frequencies 0.2 and 0.8, each in Hardy–Weinberg proportions; their pooled sample (0.34 : 0.32 : 0.34) has far fewer heterozygotes than Hardy–Weinberg proportions at the pooled frequency 0.5 (0.25 : 0.50 : 0.25). B: for two equal subpopulations with frequencies 0.5 − x and 0.5 + x, the heterozygote deficit 2 Var(p) = 2x² and the fixation index F_ST = 4x²; dots mark the example of panel A (x = 0.3)](./plots/wahlund.py)
 
 ## 22.5. Applications: Forensic Identification and Paternity
 

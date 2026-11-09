@@ -1,7 +1,7 @@
 ---
 title: Design and Analysis of Epidemiologic Studies
 description: Cohort, case-control, cross-sectional and ecological studies and what each can estimate; risk difference, relative risk and odds ratio with confidence intervals, and the approximation of RR by OR for rare diseases; attributable fractions and the number needed to treat; selection bias, information bias and confounding; direct and indirect standardization; stratified analysis, the Mantel–Haenszel method and effect modification; dose response and the Bradford Hill criteria; matched case-control studies. The examples are the Doll–Hill case-control study, the British doctors' cohort, the Physicians' Health Study and a study of passive smoking.
-source_hash: 31097c83c31c
+source_hash: bc0f1121d0d2
 ---
 
 The preceding chapters treated the 2×2 table as an object of testing ([7.7.9](/7.7.9)): do the proportions in two groups differ? Epidemiology asks more specific questions. By how much does the exposure raise the risk of disease? How many cases in the population can be attributed to the exposure? Are the two groups compared comparable? The answers depend first of all on how the data were collected. This chapter begins by comparing four kinds of observational design (cohort, case-control, cross-sectional and ecological studies) and the measures of effect each can estimate (risk difference, relative risk, odds ratio), and then discusses the three kinds of bias in observational studies, with emphasis on confounding: standardization and stratified analysis (the Mantel–Haenszel method) are the classical tools for dealing with confounding before logistic regression, and they show most directly the difference between confounding and effect modification. The whole chapter develops along the thread of smoking: the Doll–Hill case-control study of [7.7.3](/7.7.3) Example 3.1.3 gave an odds ratio of 14, and here we add its interval and interpretation; the British doctors' cohort gives the dose-response relationship; and finally the Bradford Hill criteria answer "when can an association be regarded as causal?". The basic measures of disease frequency (**prevalence**, **cumulative incidence**, **person-time** and **incidence rate**) were defined in [7.7.3](/7.7.3); methods that adjust for several variables at once are the logistic and Poisson regression of [7.7.14](/7.7.14); the formal framework of causal inference is in [7.7.15](/7.7.15); the design of randomized controlled trials and meta-analysis are in [7.7.18](/7.7.18).
@@ -228,6 +228,8 @@ $\widehat{\mathrm{OR}}_{\mathrm{MH}}$ is a weighted average of the ORs of the st
 | | Controls | 80 | 155 | |
 | Smoker | Cases | 161 | 117 | 1.31 (0.93, 1.85) |
 | | Controls | 130 | 124 | |
+
+The table contains fewer than 518 cases (509) and controls (489), and the matched pairs have been broken up; we therefore analyze it as unmatched stratified data (analyses that keep the matching are in Section 13.8).
 
 In the nonsmoking stratum, $\mathbb{E}(a_1) = 231 \times 200/466 = 99.1$ and $\operatorname{Var}(a_1) = 28.6$; in the smoking stratum, $\mathbb{E}(a_2) = 278 \times 291/532 = 152.1$ and $\operatorname{Var}(a_2) = 33.0$. There are 281 observed cases with a smoking spouse, against 251.2 expected, and
 

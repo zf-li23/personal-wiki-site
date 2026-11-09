@@ -175,9 +175,9 @@ With the vegetal pole at the maximum of $T$, the characteristics converge on it 
 A fluid model hides the fact that cells need not move far. The movements can instead be read as a local strain field, which says how cells must change shape. Two two-dimensional flows tangential at the surface line $y = 0$, with stream function $\psi$ ($u = \psi_y$, $v = -\psi_x$) and stress tensor $\sigma = \begin{bmatrix} 2u_x & u_y + v_x \\ u_y + v_x & 2v_y\end{bmatrix}$, represent the two typical regions:
 
 $$
-\text{(a) } \psi = -\tfrac12 x(x^2 + y^2),\quad -\sigma = \begin{bmatrix}1 + 2y & x\\ x & -(1 + 2y)\end{bmatrix};
+\text{(a) } \psi = -\tfrac12 xy(1 + y),\quad -\sigma = \begin{bmatrix}1 + 2y & x\\ x & -(1 + 2y)\end{bmatrix};
 \qquad
-\text{(b) } \psi = \tfrac12 y^2,\quad -\sigma = \begin{bmatrix}0 & 1\\ 1 & 0\end{bmatrix}.
+\text{(b) } \psi = -\tfrac12 y^2,\quad -\sigma = \begin{bmatrix}0 & 1\\ 1 & 0\end{bmatrix}.
 $$
 
 Flow (a), near the site of invagination, stretches material perpendicularly to the surface and compresses it along the surface: a square element just below the surface becomes tall and narrow, with its narrowest part at the surface. That is the shape of a bottle cell, which is thus what the cells must do to produce the local flow of the gastrulation mode, or what they would be made to do by it. Flow (b), a simple shear, is typical of the region of surface streaming, where cells are stretched along the direction of streaming, as observed. Whether the bottle cells cause the movement or follow it cannot be decided from shapes alone; experiments decide: removing the bottle cells after they form does not stop involution, although they are needed to initiate the groove, and vegetal rotation and convergent extension supply most of the later force.

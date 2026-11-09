@@ -1,11 +1,11 @@
 """A two-variable model of the embryonic cell cycle of Xenopus (SH Eq. 20-1, after Ferrell, Tsai and
 Yang, 2011): dC/dt = a1 - b1 C A^n/(K^n + A^n) + a3 (1 - C) C^n/(K^n + C^n) and
 dA/dt = a2 (1 - A) C^n/(K^n + C^n) - b2 A, with C the active fraction of cyclin B-Cdk1 and A that of
-APC/C-Cdc20; a1 = 0.1, a2 = a3 = 3, b1 = 3, b2 = 1 (per minute), K = 0.5, n = 8. A: the
+APC/C-Cdc20; a1 = 0.1, a2 = a3 = 3, b1 = 3, b2 = 1 (rates per arbitrary time unit), K = 0.5, n = 8. A: the
 Cdk1 nullcline (red) is S-shaped because of the positive feedback, the APC/C nullcline (blue) is
 monotonic; they cross at an unstable fixed point (open circle) surrounded by a stable limit cycle
 (violet, with dots at equal time intervals). B: time courses: Cdk1 rises slowly, jumps, activates
-APC/C, and is switched off; period about 2.2 min in these units. C: with the positive feedback
+APC/C, and is switched off; period about 2.2 time units. C: with the positive feedback
 removed (a3 = 0, a1 raised to 0.3) the fixed point is stable and the oscillation is damped."""
 
 import numpy as np
@@ -54,7 +54,7 @@ ax.plot(sol.t, sol.y[1], color=charts.line("dna"), lw=1.3, label="APC/C")
 ax.set_xlim(0, 15)
 ax.set_ylim(0, 1.05)
 ax.legend(frameon=False, fontsize=bio.core.FONT["tiny"], labelcolor=P.ink(), ncol=2, loc="upper right")
-charts.style_axes(ax, "time / min", "activity")
+charts.style_axes(ax, "time (arbitrary units)", "activity")
 charts.title(ax, "B  Sustained oscillation")
 ax = axs[2]
 s2 = solve_ivp(rhs, (0, 15), [0.05, 0.05], args=(0.3, 0.0), max_step=0.005, rtol=1e-8)
@@ -62,5 +62,5 @@ ax.plot(s2.t, s2.y[0], color=charts.line("blood"), lw=1.3, label="Cdk1")
 ax.plot(s2.t, s2.y[1], color=charts.line("dna"), lw=1.3, label="APC/C")
 ax.set_ylim(0, 1.05)
 ax.legend(frameon=False, fontsize=bio.core.FONT["tiny"], labelcolor=P.ink(), ncol=2, loc="upper right")
-charts.style_axes(ax, "time / min", "activity")
+charts.style_axes(ax, "time (arbitrary units)", "activity")
 charts.title(ax, "C  No positive feedback")

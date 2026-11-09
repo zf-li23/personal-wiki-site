@@ -228,8 +228,9 @@ In bright light a leaf makes more triose phosphate than it needs. Part is export
 Inorganic pyrophosphatase in the plastid makes the overall reaction irreversible:
 
 $$
-\text{starch}_n + \text{glucose 1-phosphate} + \ce{ATP} \to \text{starch}_{n+1} + \ce{ADP} + 2\,\mathrm{P_i}, \qquad \Delta_{\mathrm{r}}G'^{\circ} \approx -50\,\mathrm{kJ\,mol^{-1}}. \tag{25.7}
+\text{starch}_n + \text{glucose 1-phosphate} + \ce{ATP} \to \text{starch}_{n+1} + \ce{ADP} + 2\,\mathrm{P_i}, \qquad \Delta_{\mathrm{r}}G'^{\circ} \approx -27\,\mathrm{kJ\,mol^{-1}}. \tag{25.7}
 $$
+The value is the sum of ATP hydrolysis ($-30.5\,\mathrm{kJ\,mol^{-1}}$) and the reverse of the phosphorylase reaction, glucose 1-phosphate + starch$_n$ → starch$_{n+1}$ + $\mathrm{P_i}$ (about $+3\,\mathrm{kJ\,mol^{-1}}$).
 The hexose phosphate for starch comes from fructose 6-phosphate of the Calvin cycle through the stromal phosphohexose isomerase and phosphoglucomutase. Granule-bound starch synthase makes the unbranched **amylose**; soluble starch synthases, **branching enzymes** and a **debranching enzyme** (isoamylase) that trims misplaced branches together build **amylopectin** with its clusters of parallel chains, which crystallize into the semicrystalline granule ([7.1.10](/7.1.10#sec-10.3.2)). "Waxy" maize and rice, without **amylose**, lack the granule-bound enzyme. AGPase, a heterotetramer of two large and two small subunits, is activated allosterically by 3-phosphoglycerate and inhibited by $\mathrm{P_i}$, and in leaves also activated by thioredoxin-dependent reduction of a disulfide between its small subunits. The ratio $[\text{3-phosphoglycerate}]/[\mathrm{P_i}]$ in the stroma, which rises when fixation outruns export, therefore sets the rate of starch synthesis.
 
 At night, transitory starch is degraded by an unusual route that starts with the phosphorylation of glucose residues at the granule surface by glucan, water dikinases, which loosens the crystalline structure; β-amylase then releases maltose, which is exported to the cytosol. The rate of degradation is set by the circadian clock so that starch falls linearly through the night and about 95% is used by dawn, whatever the length of the night (Graf, Schlereth, Stitt and Smith, 2010): a plant that runs out early starves before morning, and one that stops early wastes its store.
@@ -245,7 +246,7 @@ The first reaction is nearly balanced ($\Delta_{\mathrm{r}}G'^{\circ} = -5.7\,\m
 $$
 \text{sucrose} + \ce{UDP} \rightleftharpoons \text{UDP-glucose} + \text{fructose}.
 $$
-(The enzyme is named for the reverse reaction.) Unlike animal cells, plant cells have no inorganic pyrophosphatase in the cytosol; cytosolic $\mathrm{PP_i}$ is about 0.3 mM, which keeps UDP-glucose pyrophosphorylase readily reversible and allows $\mathrm{PP_i}$ to serve as an energy donor, for example in the $\mathrm{PP_i}$-dependent phosphofructokinase and the vacuolar proton-pumping pyrophosphatase. A few plants, notably sugar beet and sugarcane, store sucrose rather than starch.
+(The enzyme is named for the reverse reaction.) Unlike animal cells, plant cells have little inorganic pyrophosphatase activity in the cytosol (most of it is in the plastids); cytosolic $\mathrm{PP_i}$ is about 0.3 mM, which keeps UDP-glucose pyrophosphorylase readily reversible and allows $\mathrm{PP_i}$ to serve as an energy donor, for example in the $\mathrm{PP_i}$-dependent phosphofructokinase and the vacuolar proton-pumping pyrophosphatase. A few plants, notably sugar beet and sugarcane, store sucrose rather than starch.
 
 ### 25.5.3. Partitioning between Sucrose and Starch
 

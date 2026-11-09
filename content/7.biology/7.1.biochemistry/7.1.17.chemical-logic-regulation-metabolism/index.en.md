@@ -78,7 +78,7 @@ Amino acid side chains can act as acids, bases and nucleophiles, but they cannot
 The table collects the coenzymes of Part II. Each is described below by the chemistry that makes it useful.
 
 | Vitamin | Coenzyme | Group carried | Chemical principle | Representative enzymes (chapter) | Deficiency |
-|---|---|---|---|---|---|
+|---|---|---|---|
 | $\mathrm{B_1}$ thiamine | thiamine pyrophosphate (TPP) | aldehydes (activated two-carbon units) | thiazolium C-2 carbanion (ylide) adds to carbonyls; the ring is an electron sink | pyruvate decarboxylase (7.1.18), pyruvate and α-ketoglutarate dehydrogenases (7.1.20), **transketolase** (7.1.18, 7.1.25) | beriberi, Wernicke–Korsakoff syndrome |
 | $\mathrm{B_2}$ riboflavin | FAD, FMN | electrons (1 or 2) and protons | isoalloxazine ring with semiquinone; potential set by the **protein** | succinate and acyl-CoA dehydrogenases (7.1.20–7.1.21), **Complex I** (7.1.23) | ariboflavinosis (cheilosis, angular stomatitis) |
 | $\mathrm{B_3}$ niacin | NAD, NADP | hydride ion | C-4 of the pyridinium ring accepts $\ce{H-}$ | dehydrogenases (all chapters) | pellagra |
@@ -208,19 +208,19 @@ A step with $\Delta_{\mathrm{r}}G = -2\,\mathrm{kJ\,mol^{-1}}$ at $37\,^\circ\ma
 
 The two kinds of steps behave differently. A near-equilibrium step usually has an enzyme with a capacity far larger than the flux; its net rate is the small difference between two large one-way rates and follows any change in the concentrations of its substrate or product. It passes on whatever flux the neighboring steps impose, in either direction, and it cannot be the place where the flux is set (its flux control coefficient is small, 17.4). A step far from equilibrium is limited by the activity of its enzyme, its rate is insensitive to the concentration of its product, and changing the activity of its enzyme changes the flux through the pathway. Regulated enzymes therefore catalyze reactions far from equilibrium, and pathways have them where they need them: at the committed step, at **branch points**, and wherever a reversal of flux must be prevented.
 
-The data for glycolysis in heart muscle (Lehninger 8e, Table 13-10, from Newsholme and Start) show the pattern. The **mass-action ratios** of hexokinase, phosphofructokinase-1 and pyruvate kinase are three to five orders of magnitude below their equilibrium constants, those of the other seven enzymes within about one order:
+The data for glycolysis in heart muscle (Lehninger 8e, Table 13-10, from Newsholme and Start) show the pattern. Hexokinase, phosphofructokinase-1 and pyruvate kinase operate with $\Delta_{\mathrm{r}}G$ between about $-17$ and $-27\ \mathrm{kJ\,mol^{-1}}$: since $Q/K' = \mathrm{e}^{\Delta_{\mathrm{r}}G/RT}$, their **mass-action ratios** lie three to five orders of magnitude below their equilibrium constants. The other seven steps have $\lvert\Delta_{\mathrm{r}}G\rvert \lesssim 6\ \mathrm{kJ\,mol^{-1}}$, so their mass-action ratios are within about one order of magnitude of equilibrium:
 
-| Enzyme | $K'$ | $Q$ (heart) | $\Delta_{\mathrm{r}}G'^{\circ}$ / (kJ mol⁻¹) | $\Delta_{\mathrm{r}}G$ (heart) / (kJ mol⁻¹) | Near equilibrium? |
-|---|---|---|---|---|---|
-| hexokinase | $1 \times 10^{3}$ | $8 \times 10^{-2}$ | $-17$ | $-27$ | no |
-| phosphohexose isomerase | $4 \times 10^{-1}$ | $2.4 \times 10^{-1}$ | $+2.2$ | $-1.4$ | yes |
-| phosphofructokinase-1 | $1.0 \times 10^{3}$ | $3 \times 10^{-2}$ | $-14$ | $-23$ | no |
-| aldolase | $1.0 \times 10^{-4}$ | $9 \times 10^{-6}$ | $+24$ | $-6.0$ | yes |
-| triose phosphate isomerase | $4 \times 10^{-2}$ | $2.4 \times 10^{-1}$ | $+7.5$ | $+3.8$ | yes |
-| GAPDH + phosphoglycerate kinase | $2 \times 10^{3}$ | $9.0$ | $-13$ | $+3.5$ | yes |
-| phosphoglycerate mutase | $1 \times 10^{-1}$ | $1.2 \times 10^{-1}$ | $+4.4$ | $+0.6$ | yes |
-| enolase | $3$ | $1.4$ | $-3.2$ | $-0.5$ | yes |
-| pyruvate kinase | $2 \times 10^{4}$ | $40$ | $-31$ | $-17$ | no |
+| Enzyme | $\Delta_{\mathrm{r}}G'^{\circ}$ / (kJ mol⁻¹) | $\Delta_{\mathrm{r}}G$ (heart) / (kJ mol⁻¹) | Near equilibrium? |
+|---|---|---|---|
+| hexokinase | $-17$ | $-27$ | no |
+| phosphohexose isomerase | $+2.2$ | $-1.4$ | yes |
+| phosphofructokinase-1 | $-14$ | $-23$ | no |
+| aldolase | $+24$ | $-6.0$ | yes |
+| triose phosphate isomerase | $+7.5$ | $+3.8$ | yes |
+| GAPDH + phosphoglycerate kinase | $-13$ | $+3.5$ | yes |
+| phosphoglycerate mutase | $+4.4$ | $+0.6$ | yes |
+| enolase | $-3.2$ | $-0.5$ | yes |
+| pyruvate kinase | $-31$ | $-17$ | no |
 
 (Small positive values of $\Delta_{\mathrm{r}}G$ for net forward steps are within the uncertainty of the measured concentrations, most of them total rather than free concentrations.)
 

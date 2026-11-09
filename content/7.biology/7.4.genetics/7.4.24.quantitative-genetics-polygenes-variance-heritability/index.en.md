@@ -301,11 +301,11 @@ $$
 
 **Example 24.6.1** A disease has prevalence $K = 1\,\%$ and occurs in $5\,\%$ of the sibs of patients. Then $t = 2.326$, $t_R = 1.645$, $\mu_{\mathrm{aff}} = \varphi(2.326)/0.01 = 2.665$, $b = 0.681/2.665 = 0.256$, and $h^2 \approx 0.256/0.5 = 0.51$. The exact bivariate-normal model with $h^2 = 0.51$ gives a sib risk of $4.5\,\%$, so Falconer's approximation slightly underestimates $h^2$; modern analyses fit the bivariate normal model directly.
 
+![The liability-threshold model of a disease with prevalence K = 1 % (Definition 24.6.1). A: liability is standard normal in the population, and individuals above the threshold t = 2.33 are affected; the liability of first-degree relatives of affected individuals (h² = 0.5, normal approximation) is shifted to the right, so that 4.4 % of them exceed the threshold (exact bivariate-normal calculation). B: relative recurrence risk λ (risk to relatives divided by K) for monozygotic twins and first-, second- and third-degree relatives, for heritabilities of liability 0.5 and 0.8, against the halving with each degree expected for a rare dominant gene: under the threshold model the risk drops steeply with relatedness](./plots/liability-threshold.py)
+
 :::
 
 The model makes characteristic predictions: the recurrence risk is higher when the **proband** is more severely affected or when two relatives are already affected; it is higher for relatives of the less often affected sex (Carter effect: in pyloric stenosis, five times more common in boys, the relatives of affected girls have the higher risk, because girls need a greater liability); and it falls much faster than by half with each degree of relationship, because only the tail of the liability distribution counts.
-
-![The liability-threshold model of a disease with prevalence K = 1 % (Definition 24.6.1). A: liability is standard normal in the population, and individuals above the threshold t = 2.33 are affected; the liability of first-degree relatives of affected individuals (h² = 0.5, normal approximation) is shifted to the right, so that 4.4 % of them exceed the threshold (exact bivariate-normal calculation). B: relative recurrence risk λ (risk to relatives divided by K) for monozygotic twins and first-, second- and third-degree relatives, for heritabilities of liability 0.5 and 0.8, against the halving with each degree expected for a rare dominant gene: under the threshold model the risk drops steeply with relatedness](./plots/liability-threshold.py)
 
 ## 24.7. Heterosis and Inbreeding Depression
 
