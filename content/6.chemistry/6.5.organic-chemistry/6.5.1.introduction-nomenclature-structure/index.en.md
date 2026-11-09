@@ -1,7 +1,7 @@
 ---
 title: Introduction, Nomenclature and Structure
 description: The subject and methods of organic chemistry; skeletal formulas, formal charges and curly arrows; functional groups and oxidation states of carbon; systematic nomenclature following the IUPAC 2013 recommendations (substitutive nomenclature, seniority of principal characteristic groups, parent chains and numbering, rings, spiro and bridged compounds), with the correspondence to the Chinese Chemical Society rules of 2017; a review of hybridization and bond parameters; resonance theory, with the rules for writing resonance structures and judging their contributions.
-source_hash: cca4e0b8bd95
+source_hash: acad60d6e207
 ---
 
 Organic chemistry is the study of the compounds of carbon, chiefly hydrocarbons and their derivatives: their structures, properties, reactions and synthesis. Early in the nineteenth century it was believed that organic substances could be produced only by living organisms under the action of a "vital force". After Wöhler (1828) obtained urea from ammonium cyanate, acetic acid (Kolbe, 1845), fats (Berthelot, 1854) and many other compounds were made from inorganic starting materials, and the word "organic" kept only its historical meaning. Almost all later progress came from structural theory: Kekulé and Couper (1858) proposed the tetravalence of carbon and carbon chains, van 't Hoff and Le Bel (1874) the tetrahedral carbon atom, Lewis (1916) explained the covalent bond by the sharing of electron pairs, Pauling introduced **hybrid orbitals**, electronegativity and resonance theory in the 1930s, and Hückel and Mulliken developed molecular orbital theory. The central idea of organic chemistry is that structure determines properties: the distribution of electrons in a molecule and the spatial arrangement of its atoms determine where and how the molecule reacts.
@@ -264,7 +264,7 @@ A fused bicycle (two rings sharing one bond) is the special case $c = 0$ in von 
 
 ```smiles
 C1CCC2(C1)CCCCC2 7
-C1CC2CC1C2 8
+C1CC2CCC1C2 8
 C1CC2C=CC1C2 9
 CC1(C)C2CCC1(C)C(=O)C2 10
 C1CCC2CCCCC2C1 11
@@ -321,7 +321,7 @@ Hybridization affects bond length, bond strength and the electronegativity of th
 
 (The bond dissociation energy is the enthalpy needed to break one specific bond in a molecule and differs from the mean bond enthalpy of 1.1; see Definition 7.2.2.)
 
-The direction of a **polar bond** is determined by electronegativity. The C–O, C–N and C–X bonds in organic molecules are all polar covalent bonds in which the electrons are displaced toward the heteroatom and carbon carries a partial positive charge $\delta^+$; even with an electronegativity difference above 1.7, the C–F bond is covalent, and "an electronegativity difference above 1.7 means an ionic bond" is only a rough empirical boundary. The polarity of a molecule is determined by the vector sum of the bond dipoles: $\ce{CCl4}$ contains polar bonds but is a nonpolar molecule. The unit of **electric dipole moment** is $\mathrm{C\,m}$, but in organic chemistry the debye is customary ($1\,\mathrm{D} = 3.336\times10^{-30}\,\mathrm{C\,m}$): $\ce{CH3Cl}$ has $1.9\,\mathrm{D}$ and $\ce{CH3CN}$ has $3.9\,\mathrm{D}$.
+The direction of a **polar bond** is determined by electronegativity. The C–O, C–N and C–X bonds in organic molecules are all polar covalent bonds in which the electrons are displaced toward the heteroatom and carbon carries a partial positive charge $\delta^+$; even with a large electronegativity difference ($1.43$ for C–F), the C–F bond is covalent, and a very strong one; "an electronegativity difference above 1.7 means an ionic bond" is only a rough empirical boundary. The polarity of a molecule is determined by the vector sum of the bond dipoles: $\ce{CCl4}$ contains polar bonds but is a nonpolar molecule. The unit of **electric dipole moment** is $\mathrm{C\,m}$, but in organic chemistry the debye is customary ($1\,\mathrm{D} = 3.336\times10^{-30}\,\mathrm{C\,m}$): $\ce{CH3Cl}$ has $1.9\,\mathrm{D}$ and $\ce{CH3CN}$ has $3.9\,\mathrm{D}$.
 
 Carbon is not always tetravalent and four-coordinate. In the iron–molybdenum cofactor of nitrogenase there is a carbon atom bonded to six Fe atoms, and the carbon in $\ce{[C(AuPPh3)6]^2+}$ is also six-coordinate; the bonding of such hypercoordinate carbon involves multicenter bonds and cannot be described by two-center two-electron bonds.
 
