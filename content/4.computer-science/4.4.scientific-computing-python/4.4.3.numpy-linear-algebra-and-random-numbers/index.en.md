@@ -235,7 +235,7 @@ A seeded generator reproduces its stream exactly, which makes simulations repeat
 print(np.random.default_rng(2026).random() == np.random.default_rng(2026).random())   # True
 ```
 
-`np.random.default_rng()` without a seed draws fresh entropy from the operating system. For a reproducible analysis we can do this once, record the value, and seed with it afterwards: `np.random.SeedSequence().entropy` returns such a 128-bit integer.
+`np.random.default_rng()` without a seed draws fresh entropy from the operating system. For a reproducible analysis we can do this once, record the value, and seed with it afterward: `np.random.SeedSequence().entropy` returns such a 128-bit integer.
 
 Parallel simulations need several streams that do not overlap or correlate. Seeding the workers with `0, 1, 2, ...` is a common habit; with the seeding procedure of NumPy (`SeedSequence`, which hashes the seed) it is not wrong, but the clean solution is to *spawn* independent child generators from one parent:
 

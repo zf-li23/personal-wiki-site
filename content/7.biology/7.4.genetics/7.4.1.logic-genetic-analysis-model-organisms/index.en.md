@@ -132,7 +132,7 @@ The choice depends on the question. Bacteria and phages give enormous numbers of
 
 How **genes** are transmitted depends on how many copies of each **chromosome** a cell carries and on where in the life cycle **meiosis** occurs.
 
-**Definition 1.4.1 (Ploidy)** A set of chromosomes containing one copy of each different chromosome of a species is a chromosome set; its number of chromosomes is the haploid number $n$. The **ploidy** of a cell is the number of chromosome sets it contains. A **haploid** cell or organism has one set ($n$ chromosomes); a **diploid** has two sets ($2n$), one from each parent, so that every chromosome except, in some species, the sex chromosomes is present as a pair of **homologues**. Cells with three or more sets are polyploid (triploid $3n$, tetraploid $4n$; 7.4.16).
+**Definition 1.4.1 (Ploidy)** A set of chromosomes containing one copy of each different chromosome of a species is a chromosome set; its number of chromosomes is the haploid number $n$. The **ploidy** of a cell is the number of chromosome sets it contains. A **haploid** cell or organism has one set ($n$ chromosomes); a **diploid** has two sets ($2n$), one from each parent, so that every chromosome except, in some species, the sex chromosomes is present as a pair of **homologs**. Cells with three or more sets are polyploid (triploid $3n$, tetraploid $4n$; 7.4.16).
 
 Humans have $n = 23$: somatic cells are diploid with 46 chromosomes and gametes are haploid with 23. Ploidy counts chromosome sets, not DNA molecules: a diploid cell in G2 still has ploidy 2 although each chromosome consists of two sister chromatids. The amount of DNA is measured separately by the **C value** (7.4.5).
 
@@ -168,7 +168,7 @@ Genetic nomenclature carries information about the **gene** and the allele in th
 
 - gene names and symbols are written in italics (*lacZ*, *CDC28*, *white*); **proteins** are written in roman type (LacZ, Cdc28);
 - the wild-type allele is marked with a superscript plus ($w^{+}$, or simply $+$ in a genotype); mutant alleles are distinguished by superscripts or numbers ($w^{1118}$, $cdc28\text{-}1$);
-- in a genotype, the two alleles of a diploid at one locus are separated by a slash ($w^{+}/w^{1118}$, or $A/a$); genes on different **chromosomes** are separated by semicolons ($y;\,bw;\,st$), and genes on the same chromosome are listed in their order, with a slash between the two **homologues** ($th^{1}\,st^{2}/th^{2}\,st^{1}$); a single symbol means a homozygote unless heterozygosity is shown;
+- in a genotype, the two alleles of a diploid at one locus are separated by a slash ($w^{+}/w^{1118}$, or $A/a$); genes on different **chromosomes** are separated by semicolons ($y;\,bw;\,st$), and genes on the same chromosome are listed in their order, with a slash between the two **homologs** ($th^{1}\,st^{2}/th^{2}\,st^{1}$); a single symbol means a homozygote unless heterozygosity is shown;
 - sex chromosomes are written with capital roman letters (X, Y) and autosomes with numbers (1, 2, 21).
 
 | Organism | Gene symbol | Wild-type and mutant alleles | Protein |

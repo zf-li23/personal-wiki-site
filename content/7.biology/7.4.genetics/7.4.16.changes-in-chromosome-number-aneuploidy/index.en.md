@@ -11,7 +11,7 @@ The chromosome complement of a species is described by two numbers. The basic nu
 
 **Definition 16.1.1 (Euploidy and Aneuploidy)** A cell or organism is **euploid** if its chromosome number is an exact multiple of the basic number $x$ (monoploid $x$, diploid $2x$, triploid $3x$, tetraploid $4x$, ...), and **aneuploid** if it has gained or lost one or more individual chromosomes, so that its number is not a multiple of $x$ (aneuploidy, [7.3.21](/7.3.21#def-21.7.5)). Euploids with more than two sets are **polyploid**.
 
-**Definition 16.1.2 (Nullisomy, Monosomy, Trisomy, Tetrasomy)** Relative to a diploid $2n$: a **nullisomic** ($2n - 2$) lacks both **homologues** of one chromosome, a **monosomic** ($2n - 1$) lacks one, a **trisomic** ($2n + 1$) has one extra, and a **tetrasomic** ($2n + 2$) has two extra copies of the same chromosome. A double monosomic ($2n - 1 - 1$) lacks one copy of each of two different chromosomes, and a double trisomic ($2n + 1 + 1$) has one extra copy of each of two different chromosomes. Aneuploids with fewer chromosomes than $2n$ are hypoploid, those with more hyperploid.
+**Definition 16.1.2 (Nullisomy, Monosomy, Trisomy, Tetrasomy)** Relative to a diploid $2n$: a **nullisomic** ($2n - 2$) lacks both **homologs** of one chromosome, a **monosomic** ($2n - 1$) lacks one, a **trisomic** ($2n + 1$) has one extra, and a **tetrasomic** ($2n + 2$) has two extra copies of the same chromosome. A double monosomic ($2n - 1 - 1$) lacks one copy of each of two different chromosomes, and a double trisomic ($2n + 1 + 1$) has one extra copy of each of two different chromosomes. Aneuploids with fewer chromosomes than $2n$ are hypoploid, those with more hyperploid.
 
 **Definition 16.1.3 (Monoploid, Autopolyploid, Allopolyploid)** A **monoploid** has a single chromosome set ($x$). (A **haploid** has the gametic number $n$ of its species; for a diploid species the two coincide, but a haploid of hexaploid wheat has $3x$.) An **autopolyploid** has more than two sets from the same species; an **allopolyploid** has sets from two or more different species, usually two complete diploid genomes in an allotetraploid (an amphidiploid).
 
@@ -32,15 +32,15 @@ The chromosome complement of a species is described by two numbers. The basic nu
 
 Most aneuploid gametes arise by **nondisjunction** or by premature separation of **sister chromatids**. The two meiotic divisions give gametes of different content, and the difference can be read in the alleles that a trisomic child received from the parent in whom the error occurred.
 
-![Nondisjunction of one chromosome pair with the two homologues of the parent distinguished by alleles near the centromere (A on the blue homologue, a on the pink one; no crossing over between the locus and the centromere). A: nondisjunction in meiosis I sends both homologues to one secondary cell, giving two disomic gametes that carry A and a (heterodisomy) and two nullisomic gametes (O). B: nondisjunction in meiosis II in one secondary cell gives one disomic gamete with two copies of the same homologue (A and A, isodisomy), one nullisomic gamete and two normal gametes. C: trisomy rescue. A trisomic zygote (A and a from the egg, b from the sperm) that loses one of the three copies at random becomes disomic again; with probability 1/3 the lost copy is the paternal one, and the zygote has two maternal copies and none from the father (uniparental disomy)](./plots/nondisjunction-gametes.py)
+![Nondisjunction of one chromosome pair with the two homologs of the parent distinguished by alleles near the centromere (A on the blue homolog, a on the pink one; no crossing over between the locus and the centromere). A: nondisjunction in meiosis I sends both homologs to one secondary cell, giving two disomic gametes that carry A and a (heterodisomy) and two nullisomic gametes (O). B: nondisjunction in meiosis II in one secondary cell gives one disomic gamete with two copies of the same homolog (A and A, isodisomy), one nullisomic gamete and two normal gametes. C: trisomy rescue. A trisomic zygote (A and a from the egg, b from the sperm) that loses one of the three copies at random becomes disomic again; with probability 1/3 the lost copy is the paternal one, and the zygote has two maternal copies and none from the father (uniparental disomy)](./plots/nondisjunction-gametes.py)
 
-**Proposition 16.2.1 (Gametes from Nondisjunction)** For one pair of homologues and a **locus** tightly **linked** to the centromere, at which the parent is **heterozygous** $A/a$:
+**Proposition 16.2.1 (Gametes from Nondisjunction)** For one pair of homologs and a **locus** tightly **linked** to the centromere, at which the parent is **heterozygous** $A/a$:
 
 | Error | Gametes | Disomic gamete carries |
 |---|---|---|
 | none | $\frac12\,A$, $\frac12\,a$ | — |
-| meiosis I nondisjunction | $\frac12\,Aa$, $\frac12\,\mathrm{O}$ | both parental homologues ($Aa$) |
-| meiosis II nondisjunction (in one secondary cell) | $\frac14\,AA$ or $\frac14\,aa$, $\frac14\,\mathrm{O}$, $\frac12$ normal | two copies of one homologue |
+| meiosis I nondisjunction | $\frac12\,Aa$, $\frac12\,\mathrm{O}$ | both parental homologs ($Aa$) |
+| meiosis II nondisjunction (in one secondary cell) | $\frac14\,AA$ or $\frac14\,aa$, $\frac14\,\mathrm{O}$, $\frac12$ normal | two copies of one homolog |
 
 For loci far from the centromere, **crossing over** in meiosis I mixes the two patterns: an MI error leaves distal loci **homozygous** where a crossover moved the alleles, and an MII error leaves distal loci heterozygous. Mapping the transition from heterozygosity to homozygosity along the chromosome of a trisomic child with many markers therefore locates both the error and the crossovers; this is how most human data on the origin of trisomies were obtained.
 
@@ -93,7 +93,7 @@ In *Drosophila*, loss of one X chromosome in the first mitotic division of an XX
 
 A trisomic zygote can return to disomy by losing one of the three copies in an early **mitosis**. If the loss is random, the remaining two copies include one from each parent with probability $2/3$; with probability $1/3$ the lost copy is the one from the parent who contributed only one, and the cell now has two copies from the same parent.
 
-**Definition 16.2.2 (Uniparental Disomy)** **Uniparental disomy** (UPD) is the presence in a diploid cell of two copies of a chromosome, or of part of one, from the same parent and none from the other. In **heterodisomy** the two copies are the two different homologues of that parent; in **isodisomy** they are two copies of the same homologue. UPD most often results from **trisomy rescue**, the loss of one chromosome from a trisomic zygote or embryo, and less often from monosomy rescue (duplication of the single chromosome of a monosomic, which always gives isodisomy), from gamete **complementation**, or (for segments) from **mitotic recombination** (Definition 9.5.1).
+**Definition 16.2.2 (Uniparental Disomy)** **Uniparental disomy** (UPD) is the presence in a diploid cell of two copies of a chromosome, or of part of one, from the same parent and none from the other. In **heterodisomy** the two copies are the two different homologs of that parent; in **isodisomy** they are two copies of the same homolog. UPD most often results from **trisomy rescue**, the loss of one chromosome from a trisomic zygote or embryo, and less often from monosomy rescue (duplication of the single chromosome of a monosomic, which always gives isodisomy), from gamete **complementation**, or (for segments) from **mitotic recombination** (Definition 9.5.1).
 
 The type of UPD records the type of meiotic error: a meiosis I error followed by rescue gives heterodisomy near the centromere, a meiosis II error isodisomy, and crossovers make the pattern change along the chromosome (Proposition 16.2.1). UPD has two kinds of consequences:
 
@@ -112,16 +112,16 @@ The hypothesis explains several observations: aneuploidy of larger chromosomes, 
 
 ## 16.3. Segregation in Trisomics
 
-A trisomic forms a trivalent (or a bivalent and a univalent) in meiosis, and two of the three homologues go to one pole and one to the other. If all three are distinct and the orientation is random, each of the three pairs goes together with probability $1/3$.
+A trisomic forms a trivalent (or a bivalent and a univalent) in meiosis, and two of the three homologs go to one pole and one to the other. If all three are distinct and the orientation is random, each of the three pairs goes together with probability $1/3$.
 
-**Formula 16.3.1 (Gametes of a Trisomic)** Under random 2 : 1 segregation of three homologues, with no crossing over between the locus and the centromere, half of the gametes are disomic ($n + 1$) and half monosomic ($n$). A trisomic of genotype $AAa$ produces
+**Formula 16.3.1 (Gametes of a Trisomic)** Under random 2 : 1 segregation of three homologs, with no crossing over between the locus and the centromere, half of the gametes are disomic ($n + 1$) and half monosomic ($n$). A trisomic of genotype $AAa$ produces
 
 $$
 \tfrac16\,AA : \tfrac26\,Aa : \tfrac26\,A : \tfrac16\,a,
 $$
 so $5/6$ of the gametes carry $A$; a trisomic $Aaa$ produces $\frac16\,aa : \frac26\,Aa : \frac26\,a : \frac16\,A$.
 
-**Proof** The three pairs of homologues that can go together, $\{A_1A_2\}$, $\{A_1a\}$ and $\{A_2a\}$, each have probability $1/3$; each gives one disomic and one monosomic gamete with probability $1/2$ each: $AA$ and $a$ for the first, $Aa$ and $A$ for the other two. $\square$
+**Proof** The three pairs of homologs that can go together, $\{A_1A_2\}$, $\{A_1a\}$ and $\{A_2a\}$, each have probability $1/3$; each gives one disomic and one monosomic gamete with probability $1/2$ each: $AA$ and $a$ for the first, $Aa$ and $A$ for the other two. $\square$
 
 In practice $n + 1$ gametes are transmitted less often than $n$ gametes, especially through pollen, where they compete poorly; the expected ratios must then be corrected for the transmission rate of the extra chromosome.
 
@@ -138,9 +138,9 @@ Trisomics were the first method of assigning genes to chromosomes in plants with
 
 ## 16.4. Triploids
 
-A triploid has three homologues of each chromosome. At meiosis they form trivalents (or a bivalent and a univalent), and each trivalent sends two members to one pole and one to the other, independently of the other trivalents.
+A triploid has three homologs of each chromosome. At meiosis they form trivalents (or a bivalent and a univalent), and each trivalent sends two members to one pole and one to the other, independently of the other trivalents.
 
-**Formula 16.4.1 (Euploid Gametes of a Triploid)** If each of the $x$ trivalents of a triploid sends one or two homologues to a given pole with probability $1/2$ each, independently, the fraction of gametes with a complete euploid set ($x$ or $2x$ chromosomes) is
+**Formula 16.4.1 (Euploid Gametes of a Triploid)** If each of the $x$ trivalents of a triploid sends one or two homologs to a given pole with probability $1/2$ each, independently, the fraction of gametes with a complete euploid set ($x$ or $2x$ chromosomes) is
 
 $$
 \mathbb{P}(\text{euploid}) = 2\left(\tfrac12\right)^x = 2^{1 - x}.
@@ -158,9 +158,9 @@ The same reasoning explains the sterility of monoploids and of haploid plants of
 
 ### 16.5.1. Chromosome Segregation
 
-A tetraploid has four homologues of each chromosome. They may pair as two bivalents or as a quadrivalent, in which partners exchange along the chromosome. In autotetraploids the main configurations at **metaphase** I are one quadrivalent (IV) or two bivalents (II + II), with a trivalent and a univalent (III + I) or a bivalent and two univalents (II + I + I) in a minority of cells; most segregate 2 : 2, but III + I and unpaired univalents can give 3 : 1 segregation and aneuploid gametes. If the four homologues go two to each pole at random, and no crossing over separates the locus from the centromere, a gamete receives a random pair of the four homologues: there are $\binom{4}{2} = 6$ equally likely pairs.
+A tetraploid has four homologs of each chromosome. They may pair as two bivalents or as a quadrivalent, in which partners exchange along the chromosome. In autotetraploids the main configurations at **metaphase** I are one quadrivalent (IV) or two bivalents (II + II), with a trivalent and a univalent (III + I) or a bivalent and two univalents (II + I + I) in a minority of cells; most segregate 2 : 2, but III + I and unpaired univalents can give 3 : 1 segregation and aneuploid gametes. If the four homologs go two to each pole at random, and no crossing over separates the locus from the centromere, a gamete receives a random pair of the four homologs: there are $\binom{4}{2} = 6$ equally likely pairs.
 
-**Formula 16.5.1 (Gametes of an Autotetraploid under Chromosome Segregation)** For a locus close to the centromere, with random segregation of the four homologues two to each pole, the gametes ($2x$) of the five genotypes are:
+**Formula 16.5.1 (Gametes of an Autotetraploid under Chromosome Segregation)** For a locus close to the centromere, with random segregation of the four homologs two to each pole, the gametes ($2x$) of the five genotypes are:
 
 | Genotype | Name | Gametes $AA : Aa : aa$ | Recessive on selfing | Testcross to $aaaa$ |
 |---|---|---|---|---|
@@ -185,15 +185,15 @@ AA : Aa : aa = \frac{1 + 2\alpha}{6} : \frac{4(1 - \alpha)}{6} : \frac{1 + 2\alp
 $$
 and of a simplex $Aaaa$, $AA : Aa : aa = \dfrac{\alpha}{4} : \dfrac{1 - \alpha}{2} : \dfrac{2 + \alpha}{4}$. At $\alpha = 1/7$ the duplex gives $3 : 8 : 3$, and its selfed progeny contain a fraction $(3/14)^2 = 9/196$ of recessives, a ratio of about $20.8 : 1$.
 
-**Proof** For the duplex, two different homologues give $AA$ with probability $1/6$, $Aa$ with $4/6$ and $aa$ with $1/6$; two sister copies give $AA$ or $aa$ with probability $1/2$ each. Hence $\mathbb{P}(AA) = (1 - \alpha)/6 + \alpha/2 = (1 + 2\alpha)/6$, and similarly for the others. For the simplex, two different homologues give $Aa$ with probability $3/6$ and $aa$ with $3/6$; sister copies give $AA$ with probability $1/4$ and $aa$ with $3/4$. Under random chromatid segregation a gamete receives one of the $\binom{8}{2} = 28$ pairs of chromatids, of which 4 are sister pairs: $\alpha = 4/28 = 1/7$. $\square$
+**Proof** For the duplex, two different homologs give $AA$ with probability $1/6$, $Aa$ with $4/6$ and $aa$ with $1/6$; two sister copies give $AA$ or $aa$ with probability $1/2$ each. Hence $\mathbb{P}(AA) = (1 - \alpha)/6 + \alpha/2 = (1 + 2\alpha)/6$, and similarly for the others. For the simplex, two different homologs give $Aa$ with probability $3/6$ and $aa$ with $3/6$; sister copies give $AA$ with probability $1/4$ and $aa$ with $3/4$. Under random chromatid segregation a gamete receives one of the $\binom{8}{2} = 28$ pairs of chromatids, of which 4 are sister pairs: $\alpha = 4/28 = 1/7$. $\square$
 
-![Autotetraploid segregation. A: four homologues (one chromatid each) paired as two bivalents or as a quadrivalent in which they exchange partners. B: gametes of a duplex AAaa as functions of the double-reduction rate α (Formula 16.5.2): from 1:4:1 at α = 0 (random chromosome segregation) to 3:8:3 at α = 1/7 (random chromatid segregation). C: fraction of recessive offspring on selfing a duplex (from 1/36 to 9/196) and a simplex (from 1/4 to 225/784); circles: simulations of 20 000 offspring](./plots/tetraploid-gametes.py)
+![Autotetraploid segregation. A: four homologs (one chromatid each) paired as two bivalents or as a quadrivalent in which they exchange partners. B: gametes of a duplex AAaa as functions of the double-reduction rate α (Formula 16.5.2): from 1:4:1 at α = 0 (random chromosome segregation) to 3:8:3 at α = 1/7 (random chromatid segregation). C: fraction of recessive offspring on selfing a duplex (from 1/36 to 9/196) and a simplex (from 1/4 to 225/784); circles: simulations of 20 000 offspring](./plots/tetraploid-gametes.py)
 
 Because double reduction makes the ratios depend on the distance from the centromere, it can be used to map loci relative to centromeres in autotetraploids, as **tetrad analysis** does in fungi ([7.4.9](/7.4.9)). Its rate is usually much below $1/7$, because quadrivalents form only in part of the meioses.
 
 ### 16.5.3. Fertility and Stabilization
 
-Quadrivalents can segregate 3 : 1 instead of 2 : 2, and multivalents of several chromosomes make many new autotetraploids partially sterile. Established autotetraploid species and crops have evolved regular bivalent pairing (diploidization of meiosis), usually through genes that shorten the chromosome axes and limit crossovers, so that the four homologues pair two by two; in *Arabidopsis arenosa* the alleles that do this have been identified. Autopolyploids keep tetrasomic inheritance (any homologue can pair with any other), unlike allopolyploids.
+Quadrivalents can segregate 3 : 1 instead of 2 : 2, and multivalents of several chromosomes make many new autotetraploids partially sterile. Established autotetraploid species and crops have evolved regular bivalent pairing (diploidization of meiosis), usually through genes that shorten the chromosome axes and limit crossovers, so that the four homologs pair two by two; in *Arabidopsis arenosa* the alleles that do this have been identified. Autopolyploids keep tetrasomic inheritance (any homolog can pair with any other), unlike allopolyploids.
 
 ## 16.6. Allopolyploids and Whole-Genome Duplication
 
@@ -207,13 +207,13 @@ A hybrid of two diploid species with sets $A$ and $B$ has one set of each. If th
 
 :::
 
-An allotetraploid has disomic inheritance: each chromosome pairs only with its homologue from the same parental species, so its genes segregate in $3 : 1$ ratios like those of a diploid, while the two homoeologous copies (one from each subgenome) can diverge in function.
+An allotetraploid has disomic inheritance: each chromosome pairs only with its homolog from the same parental species, so its genes segregate in $3 : 1$ ratios like those of a diploid, while the two homoeologous copies (one from each subgenome) can diverge in function.
 
 ### 16.6.2. Wheat, *Brassica* and Cotton
 
 ![Allopolyploid crops. A: bread wheat arose by two rounds of hybridization followed by genome doubling. Tetraploid wheat (AABB, emmer and durum) formed about half a million years ago from *Triticum urartu* (A genome) and a species related to *Aegilops speltoides* (B genome); hexaploid bread wheat (AABBDD) formed about 10 000 years ago, in cultivated fields, from tetraploid wheat and the wild goat grass *Aegilops tauschii* (D genome). B: the triangle of U (1935): the three diploid *Brassica* species with genomes A, B and C and the allotetraploids formed from each pair, *B. juncea* (AABB), *B. napus* (AACC, rapeseed) and *B. carinata* (BBCC), whose chromosome numbers are the sums of those of their parents](./plots/allopolyploid-origins.py)
 
-Bread wheat pairs only true homologues thanks to the *Ph1* locus on chromosome 5B, which suppresses pairing between homoeologous chromosomes of the three subgenomes; without *Ph1*, multivalents form and fertility falls. Because each gene is present three times, bread wheat tolerates nullisomy, monosomy and the replacement of one chromosome by a homoeologue, and Ernest Sears's complete series of nullisomic–tetrasomic lines (1950s) assigned genes to chromosomes and showed which chromosomes of the three subgenomes compensate for each other. Cultivated upland cotton (*Gossypium hirsutum*, AADD, $2n = 52$) combines an Old World A genome with a New World D genome; its long spinnable fibers develop from the A genome's lineage but depend on both.
+Bread wheat pairs only true homologs thanks to the *Ph1* locus on chromosome 5B, which suppresses pairing between homoeologous chromosomes of the three subgenomes; without *Ph1*, multivalents form and fertility falls. Because each gene is present three times, bread wheat tolerates nullisomy, monosomy and the replacement of one chromosome by a homoeolog, and Ernest Sears's complete series of nullisomic–tetrasomic lines (1950s) assigned genes to chromosomes and showed which chromosomes of the three subgenomes compensate for each other. Cultivated upland cotton (*Gossypium hirsutum*, AADD, $2n = 52$) combines an Old World A genome with a New World D genome; its long spinnable fibers develop from the A genome's lineage but depend on both.
 
 ### 16.6.3. Whole-Genome Duplication in Evolution
 
@@ -254,7 +254,7 @@ Polyploidy has been frequent in plants: about $15\,\%$ of speciation events in f
    **Answer** $x = 7$, $n = 21$. Monosomic $2n - 1 = 41$; nullisomic $2n - 2 = 40$; double trisomic $2n + 1 + 1 = 44$; haploid $n = 21$ ($3x$); monoploid $x = 7$ (not viable as a plant, since it would contain only one of the three subgenomes).
 2. A woman heterozygous $A/a$ at a locus tightly linked to the centromere of chromosome 21 has a child with free trisomy 21. Give the probability that the child carries both $A$ and $a$ from her if the error was (a) in meiosis I, (b) in meiosis II. (c) At a marker far from the centromere, why can the pattern be reversed?
 
-   **Answer** (a) $1$: MI nondisjunction transmits both homologues. (b) $0$: MII nondisjunction transmits two copies of one homologue, $AA$ or $aa$. (c) A crossover between the marker and the centromere in meiosis I exchanges the distal parts of two non-sister chromatids; after an MI error the two transmitted chromatids (one from each homologue) can then carry the same distal allele, and after an MII error the two sister chromatids can carry different distal alleles. Distal markers therefore show reduction to homozygosity after MI errors and heterozygosity after MII errors in a fraction of cases that grows with the distance from the centromere.
+   **Answer** (a) $1$: MI nondisjunction transmits both homologs. (b) $0$: MII nondisjunction transmits two copies of one homolog, $AA$ or $aa$. (c) A crossover between the marker and the centromere in meiosis I exchanges the distal parts of two non-sister chromatids; after an MI error the two transmitted chromatids (one from each homolog) can then carry the same distal allele, and after an MII error the two sister chromatids can carry different distal alleles. Distal markers therefore show reduction to homozygosity after MI errors and heterozygosity after MII errors in a fraction of cases that grows with the distance from the centromere.
 3. Use Formula 16.2.1 to compute the risk of Down syndrome at birth for mothers aged 25 and 38, and the ratio of the two risks.
 
    **Answer** At 25: $\mathrm{e}^{-0.282(25 - 37.23)} = \mathrm{e}^{3.449} = 31.5$; $4.211/32.5 = 0.130$; $\mathrm{e}^{7.200} = 1340$; risk $\approx 1/1340$. At 38: $\mathrm{e}^{-0.217} = 0.805$; $4.211/1.805 = 2.333$; $\mathrm{e}^{4.997} = 148$; risk $\approx 1/149$. The ratio is about $9$.

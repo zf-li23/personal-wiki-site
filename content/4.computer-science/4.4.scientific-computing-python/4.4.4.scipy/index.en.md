@@ -510,7 +510,7 @@ The *discrete Fourier transform* (DFT) of a sequence $x_0, \dots, x_{N-1}$ is
 $$
 X_k = \sum_{n=0}^{N-1} x_n\,\mathrm{e}^{-2\pi\mathrm{i}kn/N}, \qquad k = 0, 1, \dots, N - 1,
 $$
-the discrete analogue of the **Fourier transform**; it decomposes the sequence into oscillations with frequencies $k/N$ cycles per sample. Evaluated directly, it costs $O(N^2)$ operations; the *fast Fourier transform* (FFT) computes it in $O(N \log N)$ operations by recursively splitting it into transforms of smaller sizes, a **divide and conquer** algorithm ([4.1.11](/4.1.11)). The FFT is one of the most important algorithms in scientific computing: it underlies spectral analysis, fast **convolution**, image processing and the numerical solution of **partial differential equations**.
+the discrete analog of the **Fourier transform**; it decomposes the sequence into oscillations with frequencies $k/N$ cycles per sample. Evaluated directly, it costs $O(N^2)$ operations; the *fast Fourier transform* (FFT) computes it in $O(N \log N)$ operations by recursively splitting it into transforms of smaller sizes, a **divide and conquer** algorithm ([4.1.11](/4.1.11)). The FFT is one of the most important algorithms in scientific computing: it underlies spectral analysis, fast **convolution**, image processing and the numerical solution of **partial differential equations**.
 
 `scipy.fft` (and the similar but smaller `numpy.fft`) provides:
 

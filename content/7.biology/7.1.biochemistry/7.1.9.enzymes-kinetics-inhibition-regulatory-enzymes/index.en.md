@@ -319,7 +319,7 @@ For $J_1 = J_2 = J$, the ratio of $V_1/V_2$ needed to go from $w = 0.1$ to $w = 
 $$
 R = 81\left(\frac{J + 0.1}{J + 0.9}\right)^{2},
 $$
-which falls from 81 for $J \gg 1$ (hyperbolic, like a single Michaelis–Menten enzyme) towards 1 for $J \ll 1$ (a switch).
+which falls from 81 for $J \gg 1$ (hyperbolic, like a single Michaelis–Menten enzyme) toward 1 for $J \ll 1$ (a switch).
 
 The steady-state equation can be solved for $w$ explicitly (the Goldbeter–Koshland function), but the inverse form above is all that is needed to plot the response. The mechanism is intuitive: when both enzymes are saturated, each works at its maximal rate almost independently of how much substrate it has. If $V_1 > V_2$ the kinase always wins and nearly all W ends up phosphorylated; if $V_1 < V_2$ nearly none; only in a narrow band around $V_1 = V_2$ are both forms present. The equivalent **Hill coefficient** is $\ln 81/\ln R$: about 3.7 already for $J = 0.1$ ($R = 3.24$) and about 26 for $J = 0.01$ ($R = 1.18$), far beyond what **cooperative binding** of a few **ligands** can give. The condition $W_{\mathrm{T}}$ much larger than the enzymes matters: if the enzymes sequester a significant fraction of their substrate, the switch is blunted.
 

@@ -123,7 +123,7 @@ P_t=\frac{\partial}{\partial x}\Big[Da(x)\frac{\partial}{\partial x}\frac{P}{a(x
 $$
 for the amount $P$ per unit length in a channel of cross-section $a(x)$.
 
-Writing $Da\,\partial_x(P/a)=D\partial_xP-D(\ln a)'P$ shows that the geometry acts as a drift towards the wider parts, an entropic force: at equilibrium without reaction, $P\propto a(x)$ and the concentration is uniform. Tapering ends of an embryo therefore modify the shape of a gradient even if the kinetics are uniform.
+Writing $Da\,\partial_x(P/a)=D\partial_xP-D(\ln a)'P$ shows that the geometry acts as a drift toward the wider parts, an entropic force: at equilibrium without reaction, $P\propto a(x)$ and the concentration is uniform. Tapering ends of an embryo therefore modify the shape of a gradient even if the kinetics are uniform.
 
 ## 11.4. The Synthesis–Diffusion–Degradation Model
 
@@ -205,7 +205,7 @@ $$
 $$
 so $\lambda$ grows with $L$ (for $L\gg\lambda$, $L/\lambda\approx\ln(2j\lambda/DT)$, a slowly varying ratio). The model makes a testable prediction: the gradient in a large tissue should take longer to form, because the expander must accumulate. The BMP gradient of the *Xenopus* embryo, in which the BMP-like ADMP and the antagonist Chordin play these roles, and the Dpp gradient of the growing wing disc are the best-studied cases ([7.5.16](/7.5.16), [7.5.33](/7.5.33)).
 
-![Robustness and scaling (D = 1). A: with linear degradation, doubling the influx shifts the threshold position by ln 2 decay lengths. B: with self-enhanced degradation and a strong source, the far part of the profile hardly depends on the influx, and the shift is about a tenth as large. C: expansion-repression in the quasi-steady limit: the decay length grows with the tissue (lambda / L from 0.31 to 0.23 as L grows from 2 to 8), so profiles plotted against x / L remain similar, whereas a fixed decay length (dashed) gives a pattern compressed towards the source](./plots/robustness.py)
+![Robustness and scaling (D = 1). A: with linear degradation, doubling the influx shifts the threshold position by ln 2 decay lengths. B: with self-enhanced degradation and a strong source, the far part of the profile hardly depends on the influx, and the shift is about a tenth as large. C: expansion-repression in the quasi-steady limit: the decay length grows with the tissue (lambda / L from 0.31 to 0.23 as L grows from 2 to 8), so profiles plotted against x / L remain similar, whereas a fixed decay length (dashed) gives a pattern compressed toward the source](./plots/robustness.py)
 
 A third design uses two gradients from opposite ends, $C_1=\mathrm{e}^{-x/\lambda}$ and $C_2=\mathrm{e}^{-(L-x)/\lambda}$, and a readout of their ratio. The boundary $C_1/C_2=r$ lies at $x^*=\frac L2-\frac\lambda2\ln r$: it stays near the middle in tissues of any size, and in the middle the position error is halved because the ratio changes twice as fast as either gradient. In the fly, Bicoid from the anterior and maternal Caudal and Nanos activities from the posterior provide such a pair.
 

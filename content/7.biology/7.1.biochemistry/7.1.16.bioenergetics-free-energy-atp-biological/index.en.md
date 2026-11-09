@@ -21,7 +21,7 @@ Catabolism proceeds in three stages, which converge:
 
 Anabolism diverges from a small number of precursors (pyruvate, acetyl-CoA, citric acid cycle intermediates, ribose 5-phosphate) to thousands of products. Catabolic and anabolic routes between the same two compounds are never the simple reverse of each other: at least one step differs, so that each direction can be regulated separately and each is thermodynamically favorable in its own direction (7.1.17, 7.1.19). The two directions are often in different compartments (fatty acid oxidation in the mitochondrial matrix, fatty acid synthesis in the cytosol). Besides linear pathways there are converging (catabolic), diverging (anabolic) and cyclic ones (the citric acid cycle, the **urea cycle**), in which one starting component is regenerated in every turn.
 
-![Catabolism and anabolism are coupled through two currencies. Left: the three stages of catabolism converge from proteins, polysaccharides and lipids (stage I, hydrolysis to amino acids, hexoses, fatty acids and glycerol) through a few intermediates, above all acetyl-CoA (stage II), to the citric acid cycle and oxidative phosphorylation (stage III), which end in CO₂, H₂O and NH₃. Right: anabolism diverges from a few precursors to the macromolecules of the cell. Centre: the free energy released by catabolism is passed on as ATP (from ADP + Pᵢ) and as reducing power, NADH (mainly used for ATP synthesis) and NADPH (used for reductive biosynthesis); their consumption drives biosynthesis, transport across membranes, movement and other work, and regenerates ADP and NADP⁺](./plots/energy-coupling.py)
+![Catabolism and anabolism are coupled through two currencies. Left: the three stages of catabolism converge from proteins, polysaccharides and lipids (stage I, hydrolysis to amino acids, hexoses, fatty acids and glycerol) through a few intermediates, above all acetyl-CoA (stage II), to the citric acid cycle and oxidative phosphorylation (stage III), which end in CO₂, H₂O and NH₃. Right: anabolism diverges from a few precursors to the macromolecules of the cell. Center: the free energy released by catabolism is passed on as ATP (from ADP + Pᵢ) and as reducing power, NADH (mainly used for ATP synthesis) and NADPH (used for reductive biosynthesis); their consumption drives biosynthesis, transport across membranes, movement and other work, and regenerates ADP and NADP⁺](./plots/energy-coupling.py)
 
 ### 16.1.2. ATP and NAD(P)H
 
@@ -235,7 +235,7 @@ All nucleoside triphosphates and deoxynucleoside triphosphates have essentially 
 
 **Definition 16.3.3 (Nucleoside Diphosphate Kinase and Adenylate Kinase)** **Nucleoside diphosphate kinase** catalyzes ATP + NDP ⇌ ADP + NTP (and the same with dNDP), with $\Delta_{\mathrm{r}}G'^{\circ} \approx 0$; it is nonspecific for the base and acts through a phospho-His intermediate (a **ping-pong mechanism**, [7.1.9](/7.1.9#sec-9.2.1)). **Adenylate kinase** (myokinase) catalyzes the reversible reaction 2 ADP ⇌ ATP + AMP, $\Delta_{\mathrm{r}}G'^{\circ} \approx 0$.
 
-Because [ATP]/[ADP] is high in cells, nucleoside diphosphate kinase runs in the direction of NTP synthesis. Adenylate kinase recovers a phosphoryl group from ADP when ATP is used rapidly (in contracting muscle) and regenerates ADP from AMP afterwards. Its equilibrium links [AMP] to the square of [ADP], which makes AMP a sensitive signal of the energy state of the cell (7.1.17).
+Because [ATP]/[ADP] is high in cells, nucleoside diphosphate kinase runs in the direction of NTP synthesis. Adenylate kinase recovers a phosphoryl group from ADP when ATP is used rapidly (in contracting muscle) and regenerates ADP from AMP afterward. Its equilibrium links [AMP] to the square of [ADP], which makes AMP a sensitive signal of the energy state of the cell (7.1.17).
 
 **Definition 16.3.4 (Phosphocreatine)** **Phosphocreatine** (creatine phosphate, PCr) is the phosphorylated guanidino compound that serves in vertebrate muscle and brain as a reservoir of phosphoryl groups for rapid regeneration of ATP; creatine kinase catalyzes ADP + PCr ⇌ ATP + creatine, $\Delta_{\mathrm{r}}G'^{\circ} = -12.5\,\mathrm{kJ\,mol^{-1}}$. Compounds with this function are called phosphagens (arginine phosphate in many invertebrates).
 
@@ -256,7 +256,7 @@ Carbon occurs in living matter in oxidation states from −4 to +4. Because C is
 | Compound | $\ce{CH4}$ | $\ce{CH3-CH3}$ | $\ce{CH2=CH2}$ | $\ce{CH3OH}$ | $\ce{HCHO}$ | $\ce{HCOOH}$ | $\ce{CO2}$ |
 |---|---|---|---|---|---|---|---|
 | Oxidation number of C | −4 | −3 | −2 | −2 | 0 | +2 | +4 |
-| Biological analogue | methane (archaea) | fatty acyl chain $\ce{-CH2-}$ (−2) | unsaturated chain | alcohol | aldehyde (sugar C-1) | carboxylic acid | end product |
+| Biological analog | methane (archaea) | fatty acyl chain $\ce{-CH2-}$ (−2) | unsaturated chain | alcohol | aldehyde (sugar C-1) | carboxylic acid | end product |
 
 The more reduced a fuel, the more electrons it can deliver to $\ce{O2}$ per carbon and the more free energy its complete oxidation releases: the mean oxidation number of carbon is about −1.75 in palmitate and 0 in glucose, which is why fat yields more than twice as much energy per gram as carbohydrate ([7.1.12](/7.1.12#sec-12.3.2)).
 

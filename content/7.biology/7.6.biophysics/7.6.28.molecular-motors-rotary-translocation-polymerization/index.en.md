@@ -156,7 +156,7 @@ F_{\mathrm{s}} = \frac{k_{\mathrm{B}}T}{d}\ln\left(1 + \frac{c}{K_{\mathrm{d}}}\
 $$
 the force at which the free energy gained by binding one more site equals the work against the load; its velocity, computed from the drift of a particle in a tilted periodic potential, approaches Eq. (28.6) for $c \gg K_{\mathrm{d}}$ and becomes negative beyond $F_{\mathrm{s}}$.
 
-The free energy of binding is the fuel; the chaperone's ATP cycle, which keeps it in a high-affinity state while bound and recycles it afterwards, maintains $c/K_{\mathrm{d}}$ out of equilibrium.
+The free energy of binding is the fuel; the chaperone's ATP cycle, which keeps it in a high-affinity state while bound and recycles it afterward, maintains $c/K_{\mathrm{d}}$ out of equilibrium.
 
 ![The translocation ratchet (units d, D and kBT). A: velocity against load w = Fd/kBT for the perfect ratchet (Theorem 28.5.1, line; Brownian-dynamics simulation of 2000 polymers, points) and for rapid reversible binding with c/K_d = 100, 10 and 1, computed as the drift of a particle in the tilted staircase potential; the reversible ratchets stall at w = ln(1 + c/K_d) (ticks, Formula 28.5.1) and run backward beyond. B: mean translocation time of a polymer with n binding sites: free diffusion (n²d²/2D) against the perfect ratchet (nd²/2D), a speed-up by the factor n](./plots/translocation-ratchet.py)
 

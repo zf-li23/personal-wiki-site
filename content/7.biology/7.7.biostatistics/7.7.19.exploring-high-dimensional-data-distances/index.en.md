@@ -170,7 +170,7 @@ The question of "how many clusters are there" in data often has no unique answer
 
 - The elbow method: plot $W(k)$ against $k$ and look for an elbow where the decrease clearly slows down. $W(k)$ always decreases with $k$, and the elbow is often unclear.
 - The **silhouette coefficient** ([Definition 11.3.1](/3.4.11#def-11.3.1)): compare the average distance $a(i)$ from each point to its own cluster with the average distance $b(i)$ to the nearest other cluster, $s(i) = [b(i) - a(i)]/\max\{a(i), b(i)\}$; the larger the average over all points, the clearer the classification. Above 0.5 the structure is usually considered clear, and below 0.25 weak or artificial.
-- The Calinski–Harabasz index (the pseudo-$F$ statistic in SAS output): $\dfrac{B(k)/(k - 1)}{W(k)/(n - k)}$, with $B(k)$ the between-cluster sum of squares, an analogue of the $F$ of analysis of variance; larger is better.
+- The Calinski–Harabasz index (the pseudo-$F$ statistic in SAS output): $\dfrac{B(k)/(k - 1)}{W(k)/(n - k)}$, with $B(k)$ the between-cluster sum of squares, an analog of the $F$ of analysis of variance; larger is better.
 - The **gap statistic**: compare $\log W(k)$ with its expectation simulated under a structureless reference distribution (a uniform distribution on the same range as the data) and take the $k$ with the largest gap; it can answer "$k = 1$, no clustering structure", which the earlier indices cannot.
 - Stability: re-cluster after resampling individuals or adding noise to the variables; only clusters that appear stably are credible.
 

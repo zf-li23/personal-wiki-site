@@ -175,7 +175,7 @@ The classes were defined by phenotype before any of the genes was cloned, and th
 
    **Answer** Ommatidia lack R7 when the R8 cell is marked (mutant), whatever the genotype of the R7 precursor: *boss* acts non-autonomously, in the signaling cell. Had the loss of R7 followed the genotype of the R7 precursor, *boss* would act cell-autonomously in R7, as a receptor or an intracellular component does.
 
-7. A **temperature-sensitive allele** gives the mutant phenotype when embryos are kept at the restrictive temperature from 0 to 10 h but not from 12 h onwards, and a shift back to the permissive temperature at 6 h rescues them. (a) What is the temperature-sensitive period? (b) What must be true of the protein for the conclusion to hold? (c) Why is a wild-type control at both temperatures necessary?
+7. A **temperature-sensitive allele** gives the mutant phenotype when embryos are kept at the restrictive temperature from 0 to 10 h but not from 12 h onward, and a shift back to the permissive temperature at 6 h rescues them. (a) What is the temperature-sensitive period? (b) What must be true of the protein for the conclusion to hold? (c) Why is a wild-type control at both temperatures necessary?
 
    **Answer** (a) Roughly 6–10 h: the phenotype requires the restrictive temperature during that window (a shift back at 6 h still rescues, so nothing before 6 h is sufficient; shifts up after 12 h are too late). (b) The protein must lose and regain activity quickly on shifting, so that the interval of inactivation corresponds to the interval of the shift. (c) Temperature itself changes developmental rate and can produce phenocopies, so the timing must be calibrated and the phenotype shown to be specific to the mutant.
 

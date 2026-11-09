@@ -126,17 +126,17 @@ Grafts of GFP-labeled wing bud cells to different sites showed that distal cells
 
 ### 31.5.3. The Hox and Meis Code
 
-The proximo-distal segments correspond to the expression of the 5′ genes of the *Hoxa* and *Hoxd* clusters (paralogues 9–13) and of *Meis1/2*: *Meis* in the stylopod, *Hox9* and *Hox10* paralogues in the stylopod, *Hox11* in the zeugopod, *Hox12* and *Hox13* in the autopod. Removing all copies of one paralog group deletes the corresponding segment, which is the strongest evidence for the code:
+The proximo-distal segments correspond to the expression of the 5′ genes of the *Hoxa* and *Hoxd* clusters (paralogs 9–13) and of *Meis1/2*: *Meis* in the stylopod, *Hox9* and *Hox10* paralogs in the stylopod, *Hox11* in the zeugopod, *Hox12* and *Hox13* in the autopod. Removing all copies of one paralog group deletes the corresponding segment, which is the strongest evidence for the code:
 
 | Genotype (mouse) | Phenotype |
 |---|---|
-| *Hoxa10*, *Hoxc10*, *Hoxd10* all null | no femur or patella (hindlimb stylopod); forelimbs nearly normal because *Hox9* paralogues are also expressed there |
+| *Hoxa10*, *Hoxc10*, *Hoxd10* all null | no femur or patella (hindlimb stylopod); forelimbs nearly normal because *Hox9* paralogs are also expressed there |
 | *Hoxa11*, *Hoxc11*, *Hoxd11* all null | no zeugopod: no radius and ulna, no tibia and fibula |
 | *Hoxa13*, *Hoxd13* null | no autopod |
 | Human *HOXD13* polyalanine expansion (heterozygous) | synpolydactyly: fused and duplicated digits |
 | Human *HOXA13* mutations | hand–foot–genital syndrome |
 
-**Hox genes** act less as switches of identity than as regulators of the growth and the condensation of the segments; the paralogues are partly redundant, and loss of one group produces a short, fused element rather than a transformation into another segment. Their expression is controlled in two phases by two large regulatory landscapes on either side of the *Hoxd* cluster: an early phase driven by enhancers on the telomeric side activates *Hoxd9–11* in the presumptive zeugopod, and a late phase driven by enhancers on the centromeric side activates *Hoxd13* (and *Hoxd10–12*) in the autopod; the two landscapes are separate **topologically associating domains**, and cells switch from one to the other ([7.2](/7.2) for **chromatin** domains). The late, centromeric regulation is tetrapod-specific in part, a point that matters for the evolution of the autopod ([7.5.32](/7.5.32)).
+**Hox genes** act less as switches of identity than as regulators of the growth and the condensation of the segments; the paralogs are partly redundant, and loss of one group produces a short, fused element rather than a transformation into another segment. Their expression is controlled in two phases by two large regulatory landscapes on either side of the *Hoxd* cluster: an early phase driven by enhancers on the telomeric side activates *Hoxd9–11* in the presumptive zeugopod, and a late phase driven by enhancers on the centromeric side activates *Hoxd13* (and *Hoxd10–12*) in the autopod; the two landscapes are separate **topologically associating domains**, and cells switch from one to the other ([7.2](/7.2) for **chromatin** domains). The late, centromeric regulation is tetrapod-specific in part, a point that matters for the evolution of the autopod ([7.5.32](/7.5.32)).
 
 ![The proximo-distal code. A: a paddle-stage bud with the nested domains of Meis1/2 (proximal), Hoxa11 (middle) and Hoxa13 (distal; they become mutually exclusive as development proceeds). B: the segments they correspond to. C: knockouts of whole paralog groups (schematic hindlimbs): without Hox10 the stylopod is missing, without Hox11 the zeugopod, without Hoxa13 and Hoxd13 the autopod](./plots/pd-hox-code.py)
 

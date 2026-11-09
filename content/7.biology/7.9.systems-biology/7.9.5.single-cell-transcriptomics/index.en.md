@@ -48,7 +48,7 @@ m(\lambda) = \frac{1 - \mathrm{e}^{-\lambda} - \lambda\mathrm{e}^{-\lambda}}{1 -
 $$
 The multiplet rate grows linearly with the number of cells loaded.
 
-**Example 5.2.1** A channel produces of the order of $10^5$ droplets, and about $60\,\%$ of the loaded cells are recovered. Recovering $1000$ cells requires loading about $1650$, so $\lambda = 0.0165$ and $m = 0.8\,\%$, the multiplet rate of "about $0.8\,\%$ per $1000$ cells" quoted for such instruments; for $10\,000$ recovered cells, $\lambda = 0.165$ and $m = 8.0\,\%$ (figure in 5.3.4, panel B). Experimenters trade throughput against multiplets, and sample multiplexing (5.3.3) lets them overload a channel and remove the multiplets afterwards. Only $1.6\,\%$ of droplets contain a cell at $\lambda = 0.0165$: the rest contain only beads and ambient RNA.
+**Example 5.2.1** A channel produces of the order of $10^5$ droplets, and about $60\,\%$ of the loaded cells are recovered. Recovering $1000$ cells requires loading about $1650$, so $\lambda = 0.0165$ and $m = 0.8\,\%$, the multiplet rate of "about $0.8\,\%$ per $1000$ cells" quoted for such instruments; for $10\,000$ recovered cells, $\lambda = 0.165$ and $m = 8.0\,\%$ (figure in 5.3.4, panel B). Experimenters trade throughput against multiplets, and sample multiplexing (5.3.3) lets them overload a channel and remove the multiplets afterward. Only $1.6\,\%$ of droplets contain a cell at $\lambda = 0.0165$: the rest contain only beads and ambient RNA.
 
 :::
 
@@ -222,7 +222,7 @@ Manual annotation is slow and subjective; with the growth of atlases, automatic 
 
 ### 5.6.3. Pseudoreplication and Pseudobulk
 
-Comparing conditions (disease against healthy donors, treated against control) is where single-cell data are most often analysed incorrectly. Cells of one donor are not independent replicates: they share the donor's genotype, age, sample handling and batch. A test that treats the cells of each condition as replicates confuses the variation between donors with an effect of the condition, and its false positive rate grows with the number of cells (Squair and colleagues, 2021; Zimmerman, Espeland and Langefeld, 2021).
+Comparing conditions (disease against healthy donors, treated against control) is where single-cell data are most often analyzed incorrectly. Cells of one donor are not independent replicates: they share the donor's genotype, age, sample handling and batch. A test that treats the cells of each condition as replicates confuses the variation between donors with an effect of the condition, and its false positive rate grows with the number of cells (Squair and colleagues, 2021; Zimmerman, Espeland and Langefeld, 2021).
 
 **Definition 5.6.1 (Pseudobulk)** The **pseudobulk** profile of a cell type in a sample is the sum (or mean) of the UMI counts of each gene over the cells of that type in that sample. Differential expression between conditions is then tested on the pseudobulk profiles, with the samples as replicates, by the count models of bulk RNA-seq (DESeq2, edgeR, limma-voom; [7.7.20](/7.7.20)).
 

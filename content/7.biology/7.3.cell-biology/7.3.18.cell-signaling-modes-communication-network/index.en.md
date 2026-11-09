@@ -139,7 +139,7 @@ The figure shows the four possibilities for $n = 4$, $K = 0.5$. Without feedback
 
 In negative feedback the output inhibits its own production. With little delay, negative feedback speeds up responses and stabilizes them against fluctuations (as for negative autoregulation in [7.2.22](/7.2.22#sec-22.6)); it also limits the response to a sustained stimulus. Cells use it to keep their sensitivity matched to the prevailing level of a signal.
 
-**Definition 18.4.4 (Adaptation)** **Adaptation** is the decline of a response to a sustained stimulus towards its prestimulus level, while the system remains able to respond to a further increase of the stimulus. Adaptation is **perfect adaptation** when the response returns exactly to its prestimulus level, whatever the magnitude of the sustained stimulus.
+**Definition 18.4.4 (Adaptation)** **Adaptation** is the decline of a response to a sustained stimulus toward its prestimulus level, while the system remains able to respond to a further increase of the stimulus. Adaptation is **perfect adaptation** when the response returns exactly to its prestimulus level, whatever the magnitude of the sustained stimulus.
 
 Receptor **desensitization** by GRKs and **arrestins** ([7.1.14](/7.1.14#sec-14.2.4)) is the best-known mechanism, but cells adapt at every level:
 
@@ -318,7 +318,7 @@ Signaling networks are built from a limited kit, about 520 protein kinases, 150 
 
 7. In PC12 cells EGF gives transient and NGF sustained ERK activation. Predict the fate of cells treated with (a) NGF plus a MEK inhibitor added 15 min later, (b) EGF in cells overexpressing the EGF receptor, (c) EGF in cells expressing a c-Fos mutant whose ERK and RSK sites are replaced by phosphomimetic residues.
 
-   **Answer** (a) ERK activity is cut short, as with EGF; c-Fos made after 30–60 min is not stabilized; the cells do not differentiate (they may proliferate or simply survive). (b) More receptors outlast down-regulation and negative feedback, ERK activity is sustained, and EGF induces neurite outgrowth (as observed by Traverse and colleagues). (c) c-Fos is stable without sustained ERK, so the persistence detector is bypassed and transient ERK signals can drive the late genes that c-Fos controls; this would be expected to push EGF-treated cells towards the responses normally reserved for sustained signals (in reality other duration sensors also contribute).
+   **Answer** (a) ERK activity is cut short, as with EGF; c-Fos made after 30–60 min is not stabilized; the cells do not differentiate (they may proliferate or simply survive). (b) More receptors outlast down-regulation and negative feedback, ERK activity is sustained, and EGF induces neurite outgrowth (as observed by Traverse and colleagues). (c) c-Fos is stable without sustained ERK, so the persistence detector is bypassed and transient ERK signals can drive the late genes that c-Fos controls; this would be expected to push EGF-treated cells toward the responses normally reserved for sustained signals (in reality other duration sensors also contribute).
 
 8. (Open question) mTORC1 is activated only when it is recruited to the lysosome by the Rag GTPases and activated there by Rheb. Explain why this spatial arrangement acts as an AND gate, and predict the effect on mTORC1 of (a) a constitutively active Rag mutant in amino acid–starved cells, (b) loss of TSC2 in cells without growth factors, (c) both together.
 

@@ -39,7 +39,7 @@ For perfect doubling ($E = 1$) the slope is $-1/\lg 2 = -3.32$: a tenfold differ
 
 ### 6.2.2. Detection Chemistries
 
-Two ways of making fluorescence report the product are standard. The dye *SYBR Green* binds double-stranded DNA and fluoresces far more strongly when bound; it detects every double-stranded product, including primer dimers and unintended products, so the specificity of the reaction is checked afterwards by a melting curve, in which a single product gives a single, sharp melting transition.
+Two ways of making fluorescence report the product are standard. The dye *SYBR Green* binds double-stranded DNA and fluoresces far more strongly when bound; it detects every double-stranded product, including primer dimers and unintended products, so the specificity of the reaction is checked afterward by a melting curve, in which a single product gives a single, sharp melting transition.
 
 **Definition 6.2.2** An oligonucleotide that pairs with the target between the two primers and carries a fluorophore at its 5′ end and a quencher at its 3′ end, and whose fluorescence is released when the $5' \to 3'$ exonuclease of the polymerase degrades it during extension, is called a **hydrolysis probe** (TaqMan probe).
 

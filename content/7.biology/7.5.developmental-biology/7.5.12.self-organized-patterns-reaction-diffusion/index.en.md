@@ -223,7 +223,7 @@ on a tissue of length $L=\sqrt{2\nu E}\big(\frac1{g_1}+\frac1{\lvert g_0\rvert}\
 
 **Proof** On each side $\nu h''=-V'$ is a constant, $-g_1$ or $+\lvert g_0\rvert$; the solutions pass through $h_s$ at $x=0$ with $\frac\nu2h'^2=E$ and have turning points at $x=\sqrt{2\nu E}/g_1$ and $-\sqrt{2\nu E}/\lvert g_0\rvert$. $\square$
 
-As $E$ grows, $V$ departs from linearity, first acquiring a horizontal tangent, so that the pattern shifts towards absolute regulation in large tissues; if a vertical tangent came first, there would be a maximum period, and larger tissues would have to repeat the pattern.
+As $E$ grows, $V$ departs from linearity, first acquiring a horizontal tangent, so that the pattern shifts toward absolute regulation in large tissues; if a vertical tangent came first, there would be a maximum period, and larger tissues would have to repeat the pattern.
 
 Where is the switch point? A jump of $a$ needs the activator diffusion that we neglected. With $\varepsilon a''+f(a,h)=0$ and small $\varepsilon$, $h$ (and even $h'$, since $\nu h''=-g$ is bounded) is continuous across the jump, and in the stretched variable $x=x_s+\varepsilon^{1/2}X$ the inner problem is
 

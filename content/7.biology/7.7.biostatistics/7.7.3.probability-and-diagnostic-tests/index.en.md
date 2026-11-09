@@ -60,7 +60,7 @@ Conditional probability is asymmetric: $\mathbb{P}(A \mid B)$ and $\mathbb{P}(B 
 $$
 \mathbb{P}(B_i \mid A) = \frac{\mathbb{P}(A \mid B_i)\,\mathbb{P}(B_i)}{\sum_{j=1}^k \mathbb{P}(A \mid B_j)\,\mathbb{P}(B_j)}.
 $$
-$\mathbb{P}(B_i)$ is the probability before $A$ is observed (the prior probability), and $\mathbb{P}(B_i \mid A)$ is the probability afterwards (the posterior probability).
+$\mathbb{P}(B_i)$ is the probability before $A$ is observed (the prior probability), and $\mathbb{P}(B_i \mid A)$ is the probability afterward (the posterior probability).
 
 **Example 3.1.3 (The case-control study of Doll and Hill)** In 1950 Doll and Hill surveyed 649 male lung cancer patients and 649 male controls of similar age in London hospitals, of whom 647 and 622, respectively, were smokers. From this we can estimate $\mathbb{P}(\text{smoker} \mid \text{lung cancer}) = 647/649 = 0.997$ and $\mathbb{P}(\text{smoker} \mid \text{control}) = 622/649 = 0.958$. But what we really want to know is the other direction, $\mathbb{P}(\text{lung cancer} \mid \text{smoker})$. A case-control study samples by disease status, with cases and controls each making up half, far above the proportion of lung cancer in the population, so $647/(647 + 622)$ cannot be used directly to estimate the disease risk of smokers; to use Bayes' formula we would also need the prevalence of lung cancer in the population. The quantity such a study can estimate directly is the **odds ratio**, $\frac{647 \times 27}{2 \times 622} = 14.0$, which for a rare disease approximates the ratio of the risk of smokers to that of nonsmokers ([7.7.13](/7.7.13)).
 

@@ -53,7 +53,7 @@ $$
 $$
 where $T_H$ and $T_S$ are the temperatures at which $\Delta H$ and $\Delta S$ vanish. For liquid hydrocarbons dissolving in water $T_H \approx 22\,^\circ\mathrm{C}$ and $T_S \approx 112\,^\circ\mathrm{C}$ (Baldwin's convergence temperatures). With $\Delta C_p = +225\,\mathrm{J\,mol^{-1}\,K^{-1}}$ for benzene the model gives $\Delta G(25\,^\circ\mathrm{C}) \approx +18\,\mathrm{kJ\,mol^{-1}}$, close to the value $-RT\ln x = +19\,\mathrm{kJ\,mol^{-1}}$ obtained from the solubility of benzene (mole fraction $x \approx 4 \times 10^{-4}$).
 
-![Thermodynamics of the hydrophobic effect: transfer of benzene from liquid benzene into water, modelled with a constant heat capacity change ΔCp = +225 J mol⁻¹ K⁻¹ and convergence temperatures T_H = 22 °C (ΔH = 0) and T_S = 112 °C (ΔS = 0). Near room temperature the unfavorable ΔG ≈ +18 kJ mol⁻¹ comes almost entirely from −TΔS, the ordering of water; at higher temperatures the entropic term shrinks and ΔH takes over, while ΔG changes little](./plots/hydrophobic-effect.py)
+![Thermodynamics of the hydrophobic effect: transfer of benzene from liquid benzene into water, modeled with a constant heat capacity change ΔCp = +225 J mol⁻¹ K⁻¹ and convergence temperatures T_H = 22 °C (ΔH = 0) and T_S = 112 °C (ΔS = 0). Near room temperature the unfavorable ΔG ≈ +18 kJ mol⁻¹ comes almost entirely from −TΔS, the ordering of water; at higher temperatures the entropic term shrinks and ΔH takes over, while ΔG changes little](./plots/hydrophobic-effect.py)
 
 Two consequences recur throughout the course. First, the Gibbs energy of transfer grows roughly in proportion to the nonpolar surface area buried, about $10\,\mathrm{kJ\,mol^{-1}\,nm^{-2}}$, or $3$–$4\,\mathrm{kJ\,mol^{-1}}$ per methylene group; this is the main driving force of protein folding (7.1.6), of the association of **subunits** (7.1.5) and of membrane formation (7.1.12–7.1.13). Second, the large $\Delta C_p$ of exposing nonpolar groups explains why proteins unfold not only on heating but also, less familiarly, on cooling (cold **denaturation**, 7.1.6). Hydrophobic pockets in enzymes and receptors bind nonpolar substrates and **ligands** such as **steroid hormones**; the release of ordered water from both surfaces when they meet favors binding, and drug design exploits this.
 
@@ -84,7 +84,7 @@ Each noncovalent interaction is only a few times the **thermal energy** $RT$ ($2
 
 ### 2.1.6. Concentrated Solutes Produce Osmotic Pressure
 
-Solutes lower the chemical potential of water ([6.3.5](/6.3.5#sec-5.3.4)). When two solutions are separated by a membrane permeable to water but not to the solutes, water moves towards the side with the higher solute concentration until the **osmotic pressure** difference is balanced. For dilute solutions the osmotic pressure is given by the van 't Hoff equation
+Solutes lower the chemical potential of water ([6.3.5](/6.3.5#sec-5.3.4)). When two solutions are separated by a membrane permeable to water but not to the solutes, water moves toward the side with the higher solute concentration until the **osmotic pressure** difference is balanced. For dilute solutions the osmotic pressure is given by the van 't Hoff equation
 
 $$
 \Pi = RT\sum_j i_j c_j,
@@ -150,7 +150,7 @@ One pH unit above the $\mathrm{p}K_{\mathrm{a}}$ the group is 91 % deprotonated,
 | $\ce{HCO3-}$ / $\ce{CO3^2-}$ | 10.33 |
 | $\ce{HPO4^2-}$ / $\ce{PO4^3-}$ | 12.4 |
 
-A $\mathrm{p}K_{\mathrm{a}}$ is not a fixed property of a functional group but of the group *in its environment*. The α-carboxyl group of glycine ($\mathrm{p}K_{\mathrm{a}} = 2.34$) is far more acidic than acetic acid (4.76), because the nearby positively charged α-amino group stabilizes the carboxylate anion (7.1.3). In proteins the shifts can be larger: a group buried in a nonpolar pocket, where the charged form is not stabilized by water, shifts its $\mathrm{p}K_{\mathrm{a}}$ towards the neutral form (the Lys at the active site of acetoacetate decarboxylase has $\mathrm{p}K_{\mathrm{a}} \approx 6$ instead of 10.5, and is therefore nucleophilic at neutral pH), whereas a neighboring opposite charge shifts it the other way. Enzymes exploit these shifts to tune acid–base catalysts (7.1.8).
+A $\mathrm{p}K_{\mathrm{a}}$ is not a fixed property of a functional group but of the group *in its environment*. The α-carboxyl group of glycine ($\mathrm{p}K_{\mathrm{a}} = 2.34$) is far more acidic than acetic acid (4.76), because the nearby positively charged α-amino group stabilizes the carboxylate anion (7.1.3). In proteins the shifts can be larger: a group buried in a nonpolar pocket, where the charged form is not stabilized by water, shifts its $\mathrm{p}K_{\mathrm{a}}$ toward the neutral form (the Lys at the active site of acetoacetate decarboxylase has $\mathrm{p}K_{\mathrm{a}} \approx 6$ instead of 10.5, and is therefore nucleophilic at neutral pH), whereas a neighboring opposite charge shifts it the other way. Enzymes exploit these shifts to tune acid–base catalysts (7.1.8).
 
 ### 2.2.3. Buffers in Numbers
 
@@ -263,7 +263,7 @@ Key numbers: hydrogen bond in water $23\,\mathrm{kJ\,mol^{-1}}$ (breaking), net 
 
 4. A patient's arterial blood has $p_{\ce{CO2}} = 8.0\,\mathrm{kPa}$ and $[\ce{HCO3-}] = 26\,\mathrm{mM}$. Calculate the pH and identify the disorder. What compensation is expected?
 
-   **Answer** $[\ce{CO2(d)}] = 0.23 \times 8.0 = 1.84\,\mathrm{mM}$; $\mathrm{pH} = 6.1 + \lg(26/1.84) = 6.1 + 1.15 = 7.25$. The pH is low and $p_{\ce{CO2}}$ high: respiratory acidosis (hypoventilation). The bicarbonate is only slightly raised, as expected from the buffering reaction in the acute phase; over days the kidneys excrete more $\ce{H+}$ and retain $\ce{HCO3-}$, raising $[\ce{HCO3-}]$ and bringing the pH back towards 7.4.
+   **Answer** $[\ce{CO2(d)}] = 0.23 \times 8.0 = 1.84\,\mathrm{mM}$; $\mathrm{pH} = 6.1 + \lg(26/1.84) = 6.1 + 1.15 = 7.25$. The pH is low and $p_{\ce{CO2}}$ high: respiratory acidosis (hypoventilation). The bicarbonate is only slightly raised, as expected from the buffering reaction in the acute phase; over days the kidneys excrete more $\ce{H+}$ and retain $\ce{HCO3-}$, raising $[\ce{HCO3-}]$ and bringing the pH back toward 7.4.
 
 5. A weakly basic drug with $\mathrm{p}K_{\mathrm{a}} = 8.4$ is given orally. Compute the fraction uncharged at pH 2.0 and pH 6.5. Where will it mainly be absorbed? After absorption, what happens to the drug that diffuses into the acidic lumen of the stomach?
 

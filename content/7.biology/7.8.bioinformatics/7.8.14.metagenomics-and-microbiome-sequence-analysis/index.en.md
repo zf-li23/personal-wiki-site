@@ -287,7 +287,7 @@ so each part's variance is balanced by negative covariances with the others. If 
 
 **Proof** $\sum_j\operatorname{Cov}(p_i, p_j) = \operatorname{Cov}\bigl(p_i, \sum_j p_j\bigr) = \operatorname{Cov}(p_i, 1) = 0$. With equal variances $\sigma^2$ and correlations $\rho$, the sum is $\sigma^2 + (D - 1)\rho\sigma^2 = 0$. $\square$
 
-Correlations between relative abundances are therefore biased towards negative values whatever the true relations of the absolute abundances, strongly when there are few taxa or one taxon dominates (Pearson's "spurious correlation", 1897). And changes are confounded: a change in one taxon changes the proportions of all.
+Correlations between relative abundances are therefore biased toward negative values whatever the true relations of the absolute abundances, strongly when there are few taxa or one taxon dominates (Pearson's "spurious correlation", 1897). And changes are confounded: a change in one taxon changes the proportions of all.
 
 **Example 14.5.1** Four taxa each have $100$ units of absolute abundance, so each has proportion $0.25$. Taxon D then grows tenfold while A, B and C are unchanged: the proportions become $100/1300 = 0.077$ for A, B and C and $0.769$ for D. A per-taxon test on proportions would report that A, B and C "decreased" more than threefold. The ratios $x_A/x_B$, $x_A/x_C$ and $x_B/x_C$ are $1$ before and after: ratios between parts are the only quantities that the data determine and that are unaffected by changes in other parts.
 
@@ -310,7 +310,7 @@ Logarithms require positive values, but microbiome tables are mostly zeros: a ta
 
 ### 14.5.3. Differential Abundance
 
-Testing which taxa differ between groups is the microbiome analogue of differential expression ([7.9.2](/7.9.2)), with stronger compositional effects because a few taxa often dominate and their changes shift all proportions. The methods differ in their assumptions:
+Testing which taxa differ between groups is the microbiome analog of differential expression ([7.9.2](/7.9.2)), with stronger compositional effects because a few taxa often dominate and their changes shift all proportions. The methods differ in their assumptions:
 
 | Method | Model | Assumption needed to interpret changes |
 |---|---|---|
@@ -339,7 +339,7 @@ A small $t_{ij}$ means that the two taxa are proportional across samples. SparCC
 
 Metagenomic next-generation sequencing (mNGS) of cerebrospinal fluid, blood, respiratory samples or tissue detects pathogens without a prior hypothesis: bacteria, viruses, fungi and parasites in one test. In a widely cited case, a boy with severe combined immunodeficiency and encephalitis of unknown cause was diagnosed with neuroleptospirosis from reads of *Leptospira* in his cerebrospinal fluid and recovered after treatment with penicillin (Wilson and colleagues 2014). Clinical mNGS has to solve problems that research metagenomics can often ignore:
 
-- Host reads make up more than $99\,\%$ of most samples, so the pathogen may be represented by a few reads; host depletion (before sequencing, or by alignment to the human **reference genome** and removal afterwards, as in the pipeline above) and depth determine sensitivity.
+- Host reads make up more than $99\,\%$ of most samples, so the pathogen may be represented by a few reads; host depletion (before sequencing, or by alignment to the human **reference genome** and removal afterward, as in the pipeline above) and depth determine sensitivity.
 - Reagents and laboratories contain microbial DNA (the "kitome"), which dominates samples of low biomass (Salter and colleagues 2014). Every batch includes negative controls; a taxon is reported only if it exceeds the controls by a set ratio of reads per million, and statistical methods identify contaminants as taxa whose abundance is inversely related to the sample's total DNA or that are prevalent in controls (decontam; Davis and colleagues 2018).
 - Interpretation requires knowing what is normally present: a skin commensal in blood may be contamination, a virus may be latent rather than causal.
 

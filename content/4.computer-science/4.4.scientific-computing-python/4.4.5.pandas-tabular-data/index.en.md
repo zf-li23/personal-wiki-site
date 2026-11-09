@@ -458,7 +458,7 @@ A reasonable rule: pandas remains the common language of the scientific Python e
 - Select with `loc` (labels) and `iloc` (positions); express analyses as method chains of `query`, `assign`, `groupby` and `merge`.
 - Prefer Parquet to CSV for intermediate data; fix the dtypes of identifier columns when reading text files; keep tables away from spreadsheets.
 - Missing values are skipped silently by reductions; decide explicitly how to treat them.
-- Tidy, long-format data suit grouping, modelling and plotting; wide matrices suit linear algebra; `melt` and `pivot` convert between them.
+- Tidy, long-format data suit grouping, modeling and plotting; wide matrices suit linear algebra; `melt` and `pivot` convert between them.
 - Split-apply-combine: `agg` gives one row per group, `transform` keeps the shape, `filter` keeps whole groups; named built-in aggregations are fast.
 - Joins multiply duplicated keys; use `validate=` and `indicator=True`.
 - pandas 3 uses Copy-on-Write: derived objects never alias their parent, chained assignment does nothing, and updates are single `loc` assignments.

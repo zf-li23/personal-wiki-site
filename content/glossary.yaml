@@ -6395,7 +6395,7 @@ terms:
   - { zh: 自杀性失活剂, en: suicide inactivator, aliases: [自杀性抑制剂, mechanism-based inactivator, suicide inactivators] }
   - { zh: 调节酶, en: regulatory enzyme, aliases: [regulatory enzymes] }
   - { zh: 变构酶, en: allosteric enzyme, aliases: [别构酶, allosteric enzymes] }
-  - { zh: 变构调节物, en: allosteric modulator, aliases: [别构效应物, allosteric effector] }
+  - { zh: 变构调节物, en: allosteric modulator, aliases: [变构效应物, 别构效应物, allosteric effector] }
   - { zh: 反馈抑制, en: feedback inhibition }
   - { zh: 蛋白激酶, en: protein kinase, aliases: [protein kinases] }
   - { zh: 蛋白磷酸酶, en: protein phosphatase, aliases: [protein phosphatases, phosphoprotein phosphatase] }

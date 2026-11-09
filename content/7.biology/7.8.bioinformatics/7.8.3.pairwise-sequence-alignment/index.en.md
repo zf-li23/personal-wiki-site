@@ -336,7 +336,7 @@ The full matrix of two $100$-kb sequences has $10^{10}$ cells, $40$ GB at four b
 **Algorithm 3.6.1 (Hirschberg's Algorithm)** To align $x_1 \cdots x_m$ with $y_1 \cdots y_n$ globally:
 
 1. If $m \le 1$, align directly.
-2. Let $h = \lfloor m/2\rfloor$. Compute the last row $f(j)$ of the forward matrix of $x_1 \cdots x_h$ against $y$, and the last row $r(j)$ of the matrix of the reversed sequences $x_m \cdots x_{h+1}$ against $y_n \cdots y_1$, read backwards, so that $r(j)$ is the best score of aligning $x_{h+1} \cdots x_m$ with $y_{j+1} \cdots y_n$. Both need only $O(n)$ space.
+2. Let $h = \lfloor m/2\rfloor$. Compute the last row $f(j)$ of the forward matrix of $x_1 \cdots x_h$ against $y$, and the last row $r(j)$ of the matrix of the reversed sequences $x_m \cdots x_{h+1}$ against $y_n \cdots y_1$, read backward, so that $r(j)$ is the best score of aligning $x_{h+1} \cdots x_m$ with $y_{j+1} \cdots y_n$. Both need only $O(n)$ space.
 3. Let $j^* = \arg\max_j[f(j) + r(j)]$: an optimal path crosses row $h$ at column $j^*$.
 4. Recursively align $x_1 \cdots x_h$ with $y_1 \cdots y_{j^*}$ and $x_{h+1} \cdots x_m$ with $y_{j^*+1} \cdots y_n$, and concatenate.
 

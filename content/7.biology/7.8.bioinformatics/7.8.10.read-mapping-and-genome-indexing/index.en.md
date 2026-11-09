@@ -21,7 +21,7 @@ Mappers follow the *seed-and-extend* paradigm of BLAST ([7.8.4](/7.8.4#sec-4.3))
 
 **Theorem 10.1.1 (Pigeonhole Bound)** If a read of length $L$ has an alignment to its source with at most $k$ substitutions, insertions or deletions (an **edit distance** of at most $k$), and the read is divided into $k + 1$ non-overlapping pieces, then at least one piece occurs exactly in the source. In particular there is an exact match of length at least $\lfloor L/(k+1)\rfloor$.
 
-**Proof** Each edit operation of the alignment affects the read at one position or, for a deletion, between two adjacent positions of the read, and so touches at most one piece if we assign a deletion between pieces to either neighbour. With $k$ edits and $k + 1$ pieces, some piece is touched by none, and it is copied exactly from the source. $\square$
+**Proof** Each edit operation of the alignment affects the read at one position or, for a deletion, between two adjacent positions of the read, and so touches at most one piece if we assign a deletion between pieces to either neighbor. With $k$ edits and $k + 1$ pieces, some piece is touched by none, and it is copied exactly from the source. $\square$
 
 **Formula 10.1.1 (Chance Seed Hits)** In a random genome of length $G$ with equal base frequencies, a given $s$-mer occurs on either strand at an expected number of
 $$
@@ -62,7 +62,7 @@ $$
 
 **Proof** Consider the rows whose last symbol is $c$; their rotations have the form $\alpha c$. Rotating each by one position gives $c\alpha$, the rows that begin with this same occurrence of $c$. Rows ending in $c$ are in the order of their $\alpha$ (the rows are sorted, and rows ending in $c$ are compared on $\alpha$, which comes first); rows $c\alpha$ that begin with $c$ are also in the order of $\alpha$. So the order of the occurrences of $c$ is the same in both columns. The rows beginning with $c$ form the block starting at $C[c]$, and the occurrence at $L[i]$ is the $(\mathrm{Occ}(L[i], i) + 1)$-th $c$ in $L$, hence the formula. $\square$
 
-Starting from row $0$, whose rotation begins with $\mathrm{}\char36$ (so $L[0]$ is the last letter of $T$), repeated application of $\mathrm{LF}$ visits the rows in which the text is rotated one more step to the right and reads $T$ backwards from $L$: the transform is inverted with only $L$ and the counts $C$ and $\mathrm{Occ}$.
+Starting from row $0$, whose rotation begins with $\mathrm{}\char36$ (so $L[0]$ is the last letter of $T$), repeated application of $\mathrm{LF}$ visits the rows in which the text is rotated one more step to the right and reads $T$ backward from $L$: the transform is inverted with only $L$ and the counts $C$ and $\mathrm{Occ}$.
 
 ### 10.2.4. The FM-Index and Backward Search
 
@@ -156,7 +156,7 @@ SMEMs covering each read position are found with a bidirectional FM-index (an in
 
 1. Seeding: compute the SMEMs of the read with the bidirectional FM-index; reseed long SMEMs that have few occurrences by shorter exact matches that occur more often, to find alternative locations; discard seeds with too many occurrences.
 2. Chaining: group seeds that are colinear (in the same order and on the same diagonal band in read and reference) into chains, and drop chains largely contained in better ones.
-3. Extension: from the ends of the seeds of each chain, extend by banded **dynamic programming** with an **affine gap penalty**, stopping when the score falls too far below the best (a Z-drop, the gapped analogue of the X-drop of [7.8.4](/7.8.4#sec-4.3.2)); bases at the read ends that do not align well are soft-clipped (Section 10.5).
+3. Extension: from the ends of the seeds of each chain, extend by banded **dynamic programming** with an **affine gap penalty**, stopping when the score falls too far below the best (a Z-drop, the gapped analog of the X-drop of [7.8.4](/7.8.4#sec-4.3.2)); bases at the read ends that do not align well are soft-clipped (Section 10.5).
 4. Pairing: estimate the insert-size distribution from confidently mapped pairs; choose for each pair the combination of mate alignments maximizing the sum of their scores and a penalty for improbable insert sizes, and if a mate is unmapped, search the window where it should lie by Smith–Waterman alignment (mate rescue).
 5. Report the best alignment with its mapping quality (Section 10.4), alternative hits as secondary alignments, and parts of a chimeric read aligned elsewhere as supplementary alignments.
 
@@ -250,7 +250,7 @@ The posterior is calibrated only if the model is right: if base qualities are wr
 
 ### 10.4.2. Mappability and Reference Bias
 
-The *mappability* of a position for reads of length $L$ is the fraction of reads covering it that can be placed uniquely; it is computed by mapping all $L$-mers of the reference back to itself. Low mappability marks segmental duplications, recent transposable elements, centromeric satellites and genes with close **pseudogenes**; analyses report "callable" regions and exclude blacklisted ones where artefactual signal accumulates. Longer reads and pairs raise mappability, which is one reason the complete T2T-CHM13 reference and long reads add correctly placed data in medically relevant genes that GRCh38 short-read pipelines miss. Reference bias is the complementary error: reads carrying a non-reference allele have one more mismatch and slightly lower alignment scores, so at heterozygous sites slightly fewer of them are mapped, and alleles at indels and divergent haplotypes are undercounted; variant callers that realign reads locally ([7.8.12](/7.8.12)) and graph references reduce it.
+The *mappability* of a position for reads of length $L$ is the fraction of reads covering it that can be placed uniquely; it is computed by mapping all $L$-mers of the reference back to itself. Low mappability marks segmental duplications, recent transposable elements, centromeric satellites and genes with close **pseudogenes**; analyses report "callable" regions and exclude blacklisted ones where artifactual signal accumulates. Longer reads and pairs raise mappability, which is one reason the complete T2T-CHM13 reference and long reads add correctly placed data in medically relevant genes that GRCh38 short-read pipelines miss. Reference bias is the complementary error: reads carrying a non-reference allele have one more mismatch and slightly lower alignment scores, so at heterozygous sites slightly fewer of them are mapped, and alleles at indels and divergent haplotypes are undercounted; variant callers that realign reads locally ([7.8.12](/7.8.12)) and graph references reduce it.
 
 ## 10.5. Alignment Files
 
@@ -334,7 +334,7 @@ Sorting by coordinate makes records of one region adjacent, and the index (`.bai
 
 ### 10.5.3. Genome Browsers
 
-Genome browsers display alignments over annotation tracks. In IGV, reads are drawn as bars with mismatching bases coloured, a coverage track above shows the allele fractions at positions where non-reference bases exceed a threshold, and pairs whose insert is larger than expected (a deletion between the mates) or smaller (an insertion) are coloured, red and blue by default; reads with MAPQ $0$ are drawn transparent. At rs4988235 in a heterozygous sample, the coverage bar splits into reference G and alternative A at roughly equal heights on the forward strand of the reference, the C and T of the *LCT* transcript on the minus strand ([7.8.1](/7.8.1)). The UCSC and Ensembl browsers ([7.8.2](/7.8.2)) display remote BAM or CRAM files by URL together with their own annotation and conservation tracks.
+Genome browsers display alignments over annotation tracks. In IGV, reads are drawn as bars with mismatching bases colored, a coverage track above shows the allele fractions at positions where non-reference bases exceed a threshold, and pairs whose insert is larger than expected (a deletion between the mates) or smaller (an insertion) are colored, red and blue by default; reads with MAPQ $0$ are drawn transparent. At rs4988235 in a heterozygous sample, the coverage bar splits into reference G and alternative A at roughly equal heights on the forward strand of the reference, the C and T of the *LCT* transcript on the minus strand ([7.8.1](/7.8.1)). The UCSC and Ensembl browsers ([7.8.2](/7.8.2)) display remote BAM or CRAM files by URL together with their own annotation and conservation tracks.
 
 ## 10.6. Application: Searching for CRISPR Off-Target Sites
 
@@ -385,7 +385,7 @@ cas-offinder input.txt G off_targets.txt         # G: run on the GPU
 
 2. Invert $L = \mathrm{gc}\char36\mathrm{aaac}$ by LF mapping and check that it gives $\mathrm{acaacg}$.
 
-   **Answer** $C$ as in Example 10.2.1; the ranks of the symbols of $L$ among equal symbols are $\mathrm{g}_0, \mathrm{c}_0, \mathrm{}\char36_0, \mathrm{a}_0, \mathrm{a}_1, \mathrm{a}_2, \mathrm{c}_1$. Start at row $0$: output $L[0] = \mathrm{g}$, go to $C[\mathrm{g}] + 0 = 6$; output $L[6] = \mathrm{c}$, go to $4 + 1 = 5$; output $\mathrm{a}$, go to $1 + 2 = 3$; output $\mathrm{a}$, go to $1 + 0 = 1$; output $\mathrm{c}$, go to $4 + 0 = 4$; output $\mathrm{a}$, go to $1 + 1 = 2$, which holds $\mathrm{}\char36$. The output $\mathrm{gcaaca}$ read backwards is $\mathrm{acaacg}$.
+   **Answer** $C$ as in Example 10.2.1; the ranks of the symbols of $L$ among equal symbols are $\mathrm{g}_0, \mathrm{c}_0, \mathrm{}\char36_0, \mathrm{a}_0, \mathrm{a}_1, \mathrm{a}_2, \mathrm{c}_1$. Start at row $0$: output $L[0] = \mathrm{g}$, go to $C[\mathrm{g}] + 0 = 6$; output $L[6] = \mathrm{c}$, go to $4 + 1 = 5$; output $\mathrm{a}$, go to $1 + 2 = 3$; output $\mathrm{a}$, go to $1 + 0 = 1$; output $\mathrm{c}$, go to $4 + 0 = 4$; output $\mathrm{a}$, go to $1 + 1 = 2$, which holds $\mathrm{}\char36$. The output $\mathrm{gcaaca}$ read backward is $\mathrm{acaacg}$.
 
 3. Why does an FM-index need a sampled suffix array, and what is the trade-off in choosing the sampling step $s$?
 

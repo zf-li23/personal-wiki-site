@@ -307,7 +307,7 @@ The model was calibrated against CRISPR interference of enhancers with a fluores
 
 ### 8.7.2. Variants in Regulatory Elements
 
-Most variants found by **genome-wide association studies** ([7.4.25](/7.4.25)) lie outside protein-coding sequence: $88\,\%$ of the trait-associated variants catalogued by 2009 were intronic or intergenic (Hindorff and colleagues, 2009). Regulatory maps turn such associations into mechanisms in three steps:
+Most variants found by **genome-wide association studies** ([7.4.25](/7.4.25)) lie outside protein-coding sequence: $88\,\%$ of the trait-associated variants cataloged by 2009 were intronic or intergenic (Hindorff and colleagues, 2009). Regulatory maps turn such associations into mechanisms in three steps:
 
 1. Which variant? Statistical **fine-mapping** ([7.4.25](/7.4.25#sec-25.4.1)) gives credible sets of candidate causal variants; those overlapping accessible chromatin, footprints or disrupted motifs in a relevant cell type gain priority.
 2. Which cell type? Heritability of the trait is enriched in the regulatory elements of the cell types through which it acts, as stratified LD score regression and related methods estimate; for example, variants for Alzheimer's disease are enriched in elements accessible in microglia and myeloid cells.

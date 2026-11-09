@@ -33,7 +33,7 @@ The angioblasts that build the dorsal aorta of zebrafish migrate from the latera
 
 **Definition 29.3.1 (Angiogenesis)** **Angiogenesis** is the formation of new vessels from pre-existing ones, chiefly by sprouting (endothelial cells migrate and proliferate to form a new branch) and by intussusception (an existing vessel splits in two by the insertion of a tissue pillar), together with the remodeling and pruning of the resulting network into arteries, capillaries and veins.
 
-The best-studied model is the mouse retina, whose vessels grow after birth from the optic nerve head outwards over a template of astrocytes that secrete VEGF-A in response to hypoxia (Gerhardt et al. 2003). Sprouting requires division of labor.
+The best-studied model is the mouse retina, whose vessels grow after birth from the optic nerve head outward over a template of astrocytes that secrete VEGF-A in response to hypoxia (Gerhardt et al. 2003). Sprouting requires division of labor.
 
 **Definition 29.3.2 (Tip Cell, Stalk Cell)** A **tip cell** is the endothelial cell at the leading end of a sprout, which extends many **filopodia**, migrates toward VEGF-A, divides little and does not form a lumen. The **stalk cells** behind it proliferate, elongate the sprout and form its lumen and junctions.
 

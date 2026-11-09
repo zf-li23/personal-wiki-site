@@ -104,7 +104,7 @@ $$
 $$
 with delays $\tau_1 = 0.8\,\mathrm{h}$ (Mdm2) and $\tau_2 = 1.5\,\mathrm{h}$ (Wip1). ATM protects p53 from Mdm2 (the factor $1 - 0.9A$), and positive feedback (autophosphorylation) makes ATM activation switchlike. Each pulse of ATM releases a pulse of p53, which induces Mdm2 (ending the p53 pulse) and Wip1 (ending the ATM pulse); as long as breaks remain, ATM fires again. The number of pulses therefore measures how long the damage persists, and so, on average, how much damage there was.
 
-![Digital pulses of p53, delay model Eq. (22.2). A: p53 in single simulated cells after damage that creates 5 (blue) or 40 (red) double-strand breaks; dotted steps show the unrepaired breaks (right axis). p53 rises in pulses about 6 h apart, of similar height whatever the dose; more damage gives more pulses, and the pulses stop when the breaks are repaired. B: number of p53 pulses in 40 simulated cells per dose (mean and range) rises with the number of breaks. C: the average over 100 cells after 20 breaks (red) looks like a damped oscillation, although single cells (grey) pulse with undamped amplitude and different timing: averaging over a population hides the single-cell dynamics](./plots/p53-pulses.py)
+![Digital pulses of p53, delay model Eq. (22.2). A: p53 in single simulated cells after damage that creates 5 (blue) or 40 (red) double-strand breaks; dotted steps show the unrepaired breaks (right axis). p53 rises in pulses about 6 h apart, of similar height whatever the dose; more damage gives more pulses, and the pulses stop when the breaks are repaired. B: number of p53 pulses in 40 simulated cells per dose (mean and range) rises with the number of breaks. C: the average over 100 cells after 20 breaks (red) looks like a damped oscillation, although single cells (gray) pulse with undamped amplitude and different timing: averaging over a population hides the single-cell dynamics](./plots/p53-pulses.py)
 
 ## 22.4. Coordinating Growth and Division
 
@@ -179,7 +179,7 @@ The controls of this chapter converge on two hubs (figure in 22.3.2): Rb, which 
 | Topic | Key points |
 |---|---|
 | Extracellular signals (Definition 22.1.1) | mitogens (division), growth factors (growth), survival factors (survival); TGF-β, myostatin inhibit; survival depends on signals from other cells |
-| Restriction point (Definition 22.2.1) | late G1 commitment, mitogen-independent afterwards; Start in yeast; Cdk2 bifurcation after mitosis |
+| Restriction point (Definition 22.2.1) | late G1 commitment, mitogen-independent afterward; Start in yeast; Cdk2 bifurcation after mitosis |
 | Rb–E2F (Definition 22.2.2) | cyclin D–Cdk4/6 starts, cyclin E–Cdk2 completes Rb phosphorylation; E2F induces cyclin E and itself; bistable switch with hysteresis, Eq. (22.1) |
 | Checkpoints (Definition 22.3.1) | G1/S, intra-S, G2/M, spindle assembly; separate from the events they monitor |
 | DNA damage response (Definitions 22.3.2, 22.3.3) | ATM–Chk2 (breaks), ATR–Chk1 (forks, ssDNA); fast arrest via Cdc25 inhibition; sustained arrest via p53–p21; Mdm2 keeps p53 low; apoptosis or senescence if severe |

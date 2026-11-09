@@ -22,7 +22,7 @@ The objects form a tree:
 | `Axis` | one axis of an Axes: limits, scale, ticks, tick labels | `set_major_locator`, `set_major_formatter` (usually reached through Axes methods) |
 | `Artist` | everything drawn: `Line2D`, `Text`, `Patch`, `AxesImage`, … | `set_color`, `set_linewidth`, `set_visible` |
 
-Every drawing method of an Axes returns the artists it created, so they can be modified afterwards. A minimal script in this style:
+Every drawing method of an Axes returns the artists it created, so they can be modified afterward. A minimal script in this style:
 
 ```python
 import numpy as np

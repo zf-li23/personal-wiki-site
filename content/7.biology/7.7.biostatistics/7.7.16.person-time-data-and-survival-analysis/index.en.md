@@ -192,7 +192,7 @@ The log-rank test has the highest power against proportional hazards alternative
 $$
 X^2_{\mathrm{LR}} = \frac{(64 - 64.50)^2}{30.41} = 0.0082, \qquad p = 0.93.
 $$
-The numbers of deaths in the two groups are almost exactly the numbers expected if the two groups had the same hazard: there is no evidence that the test chemotherapy changes survival. This agrees with the crossing curves in the figure: the test group had more deaths in the first 100 days and fewer afterwards, and overall the two cancel. For a randomized trial this is the main conclusion: in the prespecified intention-to-treat analysis ([7.7.18](/7.7.18)), the test chemotherapy showed no superiority over the standard chemotherapy.
+The numbers of deaths in the two groups are almost exactly the numbers expected if the two groups had the same hazard: there is no evidence that the test chemotherapy changes survival. This agrees with the crossing curves in the figure: the test group had more deaths in the first 100 days and fewer afterward, and overall the two cancel. For a randomized trial this is the main conclusion: in the prespecified intention-to-treat analysis ([7.7.18](/7.7.18)), the test chemotherapy showed no superiority over the standard chemotherapy.
 
 ### 16.6.3. The Stratified Log-Rank Test
 
@@ -428,7 +428,7 @@ The `CoxPHFitter` of lifelines uses the Efron approximation for ties by default,
 
 4. Prove that if the ratio of the hazards of two groups is constantly $\theta$, then $\ln(-\ln S_1(t)) - \ln(-\ln S_2(t)) = \ln\theta$; and explain what the convergence of the log-log curves of the Karnofsky groups in veteran means.
 
-   **Answer** $h_1 = \theta h_2$, and integrating gives $H_1(t) = \theta H_2(t)$; since $S = \mathrm{e}^{-H}$, $-\ln S_1 = \theta(-\ln S_2)$, and taking logarithms gives the constant difference $\ln\theta$. Convergence of the curves means that $\ln(H_{\text{low score}}/H_{\text{high score}})$ decreases over time: the ratio of cumulative hazards is falling, that is, the hazard ratio late is closer to 1 than early. This is consistent with the piecewise estimates of Example 16.7.2 (HR 0.63 per 10 points in the first 90 days and 1.06 afterwards).
+   **Answer** $h_1 = \theta h_2$, and integrating gives $H_1(t) = \theta H_2(t)$; since $S = \mathrm{e}^{-H}$, $-\ln S_1 = \theta(-\ln S_2)$, and taking logarithms gives the constant difference $\ln\theta$. Convergence of the curves means that $\ln(H_{\text{low score}}/H_{\text{high score}})$ decreases over time: the ratio of cumulative hazards is falling, that is, the hazard ratio late is closer to 1 than early. This is consistent with the piecewise estimates of Example 16.7.2 (HR 0.63 per 10 points in the first 90 days and 1.06 afterward).
 
 5. A researcher wants to compare two operations and finds that the 5-year survival of group A is higher than that of group B (60% versus 50%), but the log-rank test gives $p = 0.40$. Another researcher finds that the median survival time of group A is shorter. Is this possible? How should it be reported?
 

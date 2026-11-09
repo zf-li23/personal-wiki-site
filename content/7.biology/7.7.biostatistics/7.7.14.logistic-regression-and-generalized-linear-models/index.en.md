@@ -195,7 +195,7 @@ In a matched case-control study ([7.7.13](/7.7.13), Section 13.8) each matched s
 $$
 L(\boldsymbol{\beta}) = \prod_{\text{set } s} \frac{\exp(\boldsymbol{x}_{s,\text{case}}^{\mathsf T}\boldsymbol{\beta})}{\sum_{j \in s}\exp(\boldsymbol{x}_{sj}^{\mathsf T}\boldsymbol{\beta})}
 $$
-(with one case per set), in which the intercept of each set is cancelled; the method of estimating $\boldsymbol{\beta}$ from it is called **conditional logistic regression**.
+(with one case per set), in which the intercept of each set is canceled; the method of estimating $\boldsymbol{\beta}$ from it is called **conditional logistic regression**.
 
 For 1:1 pairs and one binary exposure, the conditional MLE is exactly $\ln(b/c)$ and the test is McNemar's test ([7.7.13](/7.7.13) Formula 13.8.1); conditional logistic regression extends this to 1:$m$ matching and several covariates. This likelihood has the same form as the partial likelihood of Cox regression (each matched set is like a risk set, [7.7.16](/7.7.16)), and software often fits it with the Cox routine. A study stratified by the matching factors (age–sex strata with many people in each) can instead add dummy variables for the strata directly in ordinary logistic regression.
 

@@ -94,7 +94,7 @@ $$
 $$
 a value in $(0, 1]$. The normalization $d_0$ is chosen so that the expected TM-score of two unrelated structures is independent of their length; the maximum is taken by the iterative search of Zhang and Skolnick (2004), which superposes on a fragment, keeps the residues that fall within a cutoff, superposes again and repeats, starting from fragments of several lengths and positions.
 
-Each residue contributes between $0$ and $1$ instead of a squared distance, so distant parts stop mattering instead of dominating, and the sum is divided by the length of the reference, so an unmatched region counts as zero. Empirically, pairs with $\operatorname{TM} > 0.5$ almost always have the same fold in SCOP or CATH and pairs below $0.3$ are unrelated (Xu and Zhang, 2010); the region between is the twilight zone of structure comparison, the analogue of the twilight zone of sequence identity ([7.8.3](/7.8.3)).
+Each residue contributes between $0$ and $1$ instead of a squared distance, so distant parts stop mattering instead of dominating, and the sum is divided by the length of the reference, so an unmatched region counts as zero. Empirically, pairs with $\operatorname{TM} > 0.5$ almost always have the same fold in SCOP or CATH and pairs below $0.3$ are unrelated (Xu and Zhang, 2010); the region between is the twilight zone of structure comparison, the analog of the twilight zone of sequence identity ([7.8.3](/7.8.3)).
 
 **Example 17.3.2** We generated self-avoiding chains of $\mathrm{C}_\alpha$ atoms with protein-like bond geometry, confined to a sphere of the radius of gyration expected for a globular protein of that length, and superposed unrelated pairs optimally. The RMSD of the best superposition grows from $8.6 \pm 0.9$ Å at $50$ residues to $23.5 \pm 1.5$ Å at $400$ residues, following the size of the molecule, while the TM-score stays at $0.19$ to $0.21$ at every length. A threshold of "RMSD below $4$ Å" is therefore strict for a domain of $50$ residues and generous for one of $400$, whereas the TM-score threshold of $0.5$ means the same thing throughout. The global distance test used in CASP, $\mathrm{GDT\_TS}$, achieves the same end differently: it averages the percentages of residues that can be superposed within $1$, $2$, $4$ and $8$ Å.
 
@@ -148,7 +148,7 @@ The architecture repays study, because each part encodes an idea about proteins.
 $$
 \boldsymbol{z}_{ik} \leftarrow \boldsymbol{z}_{ik} + g_{ik} \odot \sum_{j}a_{ij} \odot b_{jk},
 $$
-a learned analogue of composing two edges into a third. This is the step that turns a set of predicted pairwise relations into something that can be realized in three dimensions.
+a learned analog of composing two edges into a third. This is the step that turns a set of predicted pairwise relations into something that can be realized in three dimensions.
 
 *Frames and invariance.* The structure module gives every residue a local coordinate frame, a rotation and a translation derived from its N, $\mathrm{C}_\alpha$ and C atoms, and updates the frames by invariant point attention, in which points produced in one residue's frame are compared in another's. Because all geometric quantities are computed between frames, the output transforms correctly under a global rotation or translation of the whole structure: the network is equivariant by construction rather than by training on rotated copies.
 

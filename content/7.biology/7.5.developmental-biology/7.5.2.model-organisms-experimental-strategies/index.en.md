@@ -182,7 +182,7 @@ Human embryos are studied through donated material, imaging and, increasingly, s
 
 ![The human embryonic period, in days after fertilization (approximate). Colored bands: preimplantation development, implantation and the bilaminar disc, gastrulation, neurulation and somitogenesis, organogenesis. Marked events with their Carnegie stages: zygote, morula, blastocyst, implantation, primitive streak, neural plate, first somites, heartbeat, closure of the anterior and posterior neuropores, upper and lower limb buds, and the end of the embryonic period at day 56. Gestational age is about two weeks more](./plots/human-timeline.py)
 
-The embryonic period is the time of greatest sensitivity to **teratogens** (7.5.38), because the organs are being formed: an agent that disrupts limb outgrowth acts in weeks 4–6 and has little effect afterwards.
+The embryonic period is the time of greatest sensitivity to **teratogens** (7.5.38), because the organs are being formed: an agent that disrupts limb outgrowth acts in weeks 4–6 and has little effect afterward.
 
 ## Summary
 

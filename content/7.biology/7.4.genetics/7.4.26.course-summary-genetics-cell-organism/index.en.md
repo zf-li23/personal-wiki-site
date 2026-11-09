@@ -42,7 +42,7 @@ Almost every genetic inference is a calculation on counts. The table lists the t
 | Genome assembly | Lander–Waterman | uncovered $\mathrm{e}^{-c}$, **contigs** $N\mathrm{e}^{-c\sigma}$ | Formula 14.2.1 |
 | Linkage in human families | **LOD score** | $\log_{10}[\theta^R(1-\theta)^{n-R}2^n]$; $Z \ge 3$ | Formulas 14.9.1, 14.9.2, Proposition 14.9.1 |
 | Products of rearrangements | crossover in a loop; quadrivalent segregation | unbalanced $u = \tfrac12(1-\mathrm{e}^{-2d})$; **pseudolinkage** $r_1 + r_2 - 2r_1r_2$ | Formulas 15.4.1, 15.5.1–15.5.3 |
-| Aneuploids and polyploids | segregation of three or four homologues | trisomic $1:2:2:1$; duplex selfed $35:1$; triploid euploid $2^{1-x}$ | Formulas 16.3.1, 16.4.1, 16.5.1, 16.5.2 |
+| Aneuploids and polyploids | segregation of three or four homologs | trisomic $1:2:2:1$; duplex selfed $35:1$; triploid euploid $2^{1-x}$ | Formulas 16.3.1, 16.4.1, 16.5.1, 16.5.2 |
 | Selfish elements | copy number, drive | $n^* = (u - v - a)/b$; drive equilibrium | Formulas 17.6.1, 17.6.2, 19.6.1 |
 | **Epialleles** | two-state **Markov chain** | $\pi = \beta/(\alpha + \beta)$ | Formula 18.7.1 |
 | Screens and breeding schemes | Poisson saturation; low MOI | missed genes $\mathrm{e}^{-\lambda}$; $1/4$ experimental animals | Formulas 19.4.1, 19.4.2, 19.5.1, 19.5.2 |

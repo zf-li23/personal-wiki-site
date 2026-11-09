@@ -213,7 +213,7 @@ Because the nonoxidative reactions are reversible and share intermediates with g
 
 In mode 3, six turns of the oxidative phase oxidize the equivalent of one glucose 6-phosphate completely to six $\ce{CO2}$, with all the electrons collected as NADPH.
 
-![The four modes of the pentose phosphate pathway. In each panel the active routes are drawn in colour and the inactive ones are dashed and gray. Mode 1: fructose 6-phosphate and glyceraldehyde 3-phosphate from glycolysis are converted into ribose 5-phosphate by the nonoxidative reactions run in reverse. Mode 2: the oxidative phase alone, giving ribose 5-phosphate, CO₂ and 2 NADPH. Mode 3: the pentoses are recycled into glucose 6-phosphate, so that glucose 6-phosphate is oxidized completely to CO₂ and NADPH. Mode 4: the pentoses are converted into glycolytic intermediates and oxidized to pyruvate, yielding NADPH, ATP and NADH](./plots/ppp-modes.py)
+![The four modes of the pentose phosphate pathway. In each panel the active routes are drawn in color and the inactive ones are dashed and gray. Mode 1: fructose 6-phosphate and glyceraldehyde 3-phosphate from glycolysis are converted into ribose 5-phosphate by the nonoxidative reactions run in reverse. Mode 2: the oxidative phase alone, giving ribose 5-phosphate, CO₂ and 2 NADPH. Mode 3: the pentoses are recycled into glucose 6-phosphate, so that glucose 6-phosphate is oxidized completely to CO₂ and NADPH. Mode 4: the pentoses are converted into glycolytic intermediates and oxidized to pyruvate, yielding NADPH, ATP and NADH](./plots/ppp-modes.py)
 
 ### 18.6.4. Regulation and Partition of Glucose 6-Phosphate
 

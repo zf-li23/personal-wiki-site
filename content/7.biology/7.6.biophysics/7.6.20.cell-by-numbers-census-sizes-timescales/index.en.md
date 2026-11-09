@@ -354,7 +354,7 @@ Three views of biological time: procedural time is the duration of a procedure (
 
 8. In Proposition 20.6.1, show that with thresholds $K_i = iX_\infty/(n + 1)$ ($i = 1, \dots, n$) the delays between successive genes increase along the sequence, and compute the times for $n = 4$ in units of $T$.
 
-   **Answer** $t_i = -T\ln(1 - i/(n+1))$. For $n = 4$: $t_1 = 0.22T$, $t_2 = 0.51T$, $t_3 = 0.92T$, $t_4 = 1.61T$; delays $0.29T$, $0.41T$, $0.69T$, increasing because the activator approaches its plateau ever more slowly. Evenly spaced delays require thresholds that crowd towards $X_\infty$, or an activator that accumulates linearly, as a stable protein does at the start of its synthesis.
+   **Answer** $t_i = -T\ln(1 - i/(n+1))$. For $n = 4$: $t_1 = 0.22T$, $t_2 = 0.51T$, $t_3 = 0.92T$, $t_4 = 1.61T$; delays $0.29T$, $0.41T$, $0.69T$, increasing because the activator approaches its plateau ever more slowly. Evenly spaced delays require thresholds that crowd toward $X_\infty$, or an activator that accumulates linearly, as a stable protein does at the start of its synthesis.
 
 9. Estimate the diffusion time of a mitochondrion-sized vesicle ($D \approx 0.01\,\mu\mathrm{m^2\,s^{-1}}$ in cytoplasm) along a $1\,\mathrm{m}$ human motor axon, and the transport time by kinesin at $1\,\mu\mathrm{m\,s^{-1}}$. What happens to neurons when axonal transport fails?
 

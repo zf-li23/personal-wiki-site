@@ -53,7 +53,7 @@ Aging seems paradoxical: **natural selection** should favor organisms that maint
 $$
 s(a) \propto \int_a^\infty l(x)m(x)\,\mathrm{e}^{-rx}\,\mathrm{d}x,
 $$
-with $r$ the growth rate of the population (Hamilton 1966). The force of selection is maximal and constant before the age of first reproduction and declines afterwards, reaching zero once reproduction has ended.
+with $r$ the growth rate of the population (Hamilton 1966). The force of selection is maximal and constant before the age of first reproduction and declines afterward, reaching zero once reproduction has ended.
 
 Three theories build on this.
 
@@ -70,7 +70,7 @@ and the optimal investment $u^*$ satisfies $\frac{\mathrm{d}}{\mathrm{d}u}\ln R_
 
 **Example 37.2.1** With $B = 0.01$, $\gamma_0 = 1.5$ and $k = 3$ (time in units of the age at maturity), the optimal investment is $u^* \approx 0.52$ for extrinsic mortality $A = 0.02$, $0.41$ for $A = 0.1$ and $0.15$ for $A = 0.5$; the median lifespan falls from about 10 to about 1 time unit. When the world is dangerous, extra years of maintenance are rarely used, and selection favors spending on reproduction now. Two qualifications apply: if extrinsic mortality falls equally at all ages, it does not change the optimum in all models (it does when it affects some ages more, or when maintenance also protects against extrinsic deaths), and the model has no explicit mechanism for "damage", only a parameterized rate of aging.
 
-![A disposable-soma model (Formula 37.2.2). A: lifetime reproduction as a function of the fraction u of resources spent on maintenance, for three levels of extrinsic mortality A; dots mark the optimum, which shifts towards less maintenance as A increases. B: the optimal investment and the resulting median lifespan fall as extrinsic mortality rises: high-risk environments select for fast aging](./plots/disposable-soma.py)
+![A disposable-soma model (Formula 37.2.2). A: lifetime reproduction as a function of the fraction u of resources spent on maintenance, for three levels of extrinsic mortality A; dots mark the optimum, which shifts toward less maintenance as A increases. B: the optimal investment and the resulting median lifespan fall as extrinsic mortality rises: high-risk environments select for fast aging](./plots/disposable-soma.py)
 
 :::
 
@@ -125,7 +125,7 @@ The coenzyme NAD⁺, required for redox metabolism and as a substrate of sirtuin
 
 ### 37.3.5. Senescent Cells, Stem Cells and Circulating Factors
 
-Senescent cells accumulate with age and secrete the SASP (inflammatory cytokines, proteases, **growth factors**), which damages tissue function and spreads senescence; clearing them genetically or with **senolytic** drugs delays age-related decline and extends median lifespan in mice ([7.3.25](/7.3.25#sec-25.7.7)). Stem cells decline in number or function: **hematopoietic stem cells** shift towards myeloid output and lose regenerative capacity, and expanded clones carrying mutations in genes such as *DNMT3A* and *TET2* (clonal hematopoiesis of indeterminate potential) are found in more than 10% of people over 70 and raise the risk of **leukemia** and cardiovascular disease; muscle **satellite cells** regenerate less, partly through loss of Notch signaling; the melanocyte stem cells of the hair follicle become stranded in a compartment where they no longer receive the Wnt signal to mature, and the hair grays (Sun and colleagues 2023).
+Senescent cells accumulate with age and secrete the SASP (inflammatory cytokines, proteases, **growth factors**), which damages tissue function and spreads senescence; clearing them genetically or with **senolytic** drugs delays age-related decline and extends median lifespan in mice ([7.3.25](/7.3.25#sec-25.7.7)). Stem cells decline in number or function: **hematopoietic stem cells** shift toward myeloid output and lose regenerative capacity, and expanded clones carrying mutations in genes such as *DNMT3A* and *TET2* (clonal hematopoiesis of indeterminate potential) are found in more than 10% of people over 70 and raise the risk of **leukemia** and cardiovascular disease; muscle **satellite cells** regenerate less, partly through loss of Notch signaling; the melanocyte stem cells of the hair follicle become stranded in a compartment where they no longer receive the Wnt signal to mature, and the hair grays (Sun and colleagues 2023).
 
 Is the decline intrinsic to the stem cells or a property of their environment? Heterochronic parabiosis, the surgical joining of the circulations of an old and a young mouse, restored Notch activation and regeneration in old muscle **satellite cells** and the proliferation of old liver cells (Conboy and colleagues 2005), and young plasma improved neurogenesis and memory in old mice, whereas old plasma impaired them in young ones (Villeda and colleagues 2011, 2014). The systemic environment thus contributes. The report that the TGF-β family member GDF11 is the rejuvenating factor that declines in old blood (Loffredo and colleagues 2013) was contradicted by later work, which found that circulating GDF11 does not decline with age, that the assays had confounded it with the related myostatin (GDF8), and that GDF11 inhibits muscle regeneration (Egerman and colleagues 2015); its role remains unresolved. Diluting old blood with saline and albumin also rejuvenates several tissues (Mehdipour and colleagues 2020), which suggests that removing harmful factors from old blood matters at least as much as adding young ones.
 
@@ -162,7 +162,7 @@ Several interventions extend lifespan or healthspan in mice; their translation t
 | Intervention | Effect in mice | Status in humans |
 |---|---|---|
 | Dietary restriction | lifespan up to 30–50% (strain-dependent) | metabolic benefits (CALERIE); lifespan unknown |
-| Rapamycin and rapalogues | lifespan +9–26% even when started late | trials of immune and other endpoints |
+| Rapamycin and rapalogs | lifespan +9–26% even when started late | trials of immune and other endpoints |
 | **Senolytics** | median lifespan about +25% (genetic clearance), healthspan in disease models | early trials |
 | Telomerase gene therapy | median lifespan +13–24% | none |
 | Partial reprogramming (OSKM) | progeroid mice: lifespan about +30%; old wild-type mice: improved tissues | none |

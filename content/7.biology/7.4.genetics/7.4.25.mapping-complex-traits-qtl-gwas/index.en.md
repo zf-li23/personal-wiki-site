@@ -63,7 +63,7 @@ A panel of NILs whose donor segments end at different points within a QTL interv
 
 Because the relevant recombination events are those of all generations since a causal variant arose, LD extends over short distances (in humans typically $10$–$100\,\mathrm{kb}$, [7.4.22](/7.4.22), Theorem 22.3.1), and association mapping localizes much more finely than a cross. The price is that the markers must be dense and the samples large, and that the population must be homogeneous or its structure modeled (§25.3.3).
 
-Human **haplotypes** have a block structure: stretches of tens of kilobases with high LD and few common haplotypes, separated by **recombination hotspots**, which in humans are mostly specified by **binding sites** of the PRDM9 protein ([7.4.8](/7.4.8)). The International HapMap Project (2005) and the 1000 Genomes Project (2015) catalogued common variants and their LD in several populations.
+Human **haplotypes** have a block structure: stretches of tens of kilobases with high LD and few common haplotypes, separated by **recombination hotspots**, which in humans are mostly specified by **binding sites** of the PRDM9 protein ([7.4.8](/7.4.8)). The International HapMap Project (2005) and the 1000 Genomes Project (2015) cataloged common variants and their LD in several populations.
 
 **Definition 25.2.2 (Tag SNP)** A **tag SNP** is a SNP chosen to represent a group of SNPs in strong linkage disequilibrium with it (commonly $r^2 \geq 0.8$), so that genotyping the tag captures most of the information about the untyped variants. A set of tag SNPs, together with imputation of untyped variants from a reference panel of haplotypes, lets genotyping arrays of $10^5$–$10^6$ SNPs survey most common variation of a genome of $10^7$ common variants.
 

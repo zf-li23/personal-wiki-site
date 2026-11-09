@@ -218,7 +218,7 @@ In words: drift has no direction, but it has a rate, $1/2N$ per generation, at w
 - a new neutral mutation that is eventually fixed takes on average about $4N$ generations to do so; one that is lost disappears on average within about $2\ln(2N)$ generations;
 - the time to fixation or loss starting from $p_0$ is $\bar t(p_0) \approx -4N[p_0\ln p_0 + q_0\ln q_0]$, about $2.8N$ generations for $p_0 = 1/2$.
 
-![Genetic drift in the Wright–Fisher model (Definition 23.5.1). A–C: 20 replicate populations each of N = 10, 100 and 1000 diploids, all starting from p = 0.5 (orange: fixed; blue: lost; grey: still segregating after 200 generations). Small populations fix or lose the allele within tens of generations; large ones barely change. D: mean heterozygosity over 2000 replicate populations (dots) and the prediction H_t = H_0(1 − 1/2N)^t of Theorem 23.5.1 (lines)](./plots/drift.py)
+![Genetic drift in the Wright–Fisher model (Definition 23.5.1). A–C: 20 replicate populations each of N = 10, 100 and 1000 diploids, all starting from p = 0.5 (orange: fixed; blue: lost; gray: still segregating after 200 generations). Small populations fix or lose the allele within tens of generations; large ones barely change. D: mean heterozygosity over 2000 replicate populations (dots) and the prediction H_t = H_0(1 − 1/2N)^t of Theorem 23.5.1 (lines)](./plots/drift.py)
 
 ### 23.5.2. Effective Population Size
 

@@ -21,7 +21,7 @@ The relations make annotations propagate. By the true-path rule, a gene product 
 
 Evidence codes record how an annotation was obtained: from experiments (EXP, IDA direct assay, IMP mutant phenotype, IGI genetic interaction, IPI physical interaction, IEP expression pattern, and their high-throughput variants HDA, HMP and others), from phylogenetic inference (IBA), from sequence similarity (ISS), from author or curator statements (TAS, NAS, IC), or by automatic electronic assignment without curation (IEA). In the human annotation file of 2026, $19\%$ of the $860\,000$ UniProtKB annotations are electronic and $34\%$ come from physical interactions, mostly to the uninformative term "protein binding". Annotation is uneven: well-studied genes carry dozens of annotations and many genes have few or none.
 
-![A part of the Gene Ontology (biological process), from "cellular response to glucocorticoid stimulus" to the root, with is_a edges from child to parent; some parents of the lower terms are omitted. Each term shows the number n of tested airway genes annotated to it after propagation by the true-path rule, and how many (k) are among the 402 genes induced by dexamethasone; colour: one-sided hypergeometric p-value. A gene counted at a term is counted again at every ancestor](./plots/go_dag.py)
+![A part of the Gene Ontology (biological process), from "cellular response to glucocorticoid stimulus" to the root, with is_a edges from child to parent; some parents of the lower terms are omitted. Each term shows the number n of tested airway genes annotated to it after propagation by the true-path rule, and how many (k) are among the 402 genes induced by dexamethasone; color: one-sided hypergeometric p-value. A gene counted at a term is counted again at every ancestor](./plots/go_dag.py)
 
 ### 3.1.2. Pathways and Curated Sets
 
@@ -71,7 +71,7 @@ Because of the true-path rule, a strong signal at one specific term makes all it
 
 In RNA-seq, the power to detect a change grows with the number of reads, and at equal expression a longer transcript yields more reads. Differentially expressed lists are therefore enriched in long genes, and sets of long genes appear enriched whatever their biology (Oshlack and Wakefield, 2009). GOseq (Young and colleagues, 2010) corrects for this: it estimates the probability weighting function, the probability that a gene is in the list as a function of its length, and replaces the hypergeometric null, in which every gene is equally likely to be selected, by one in which genes are selected with these probabilities (computed by resampling or by the Wallenius noncentral hypergeometric approximation). The same correction applies to any covariate that affects detection, such as expression level or GC content.
 
-![Length bias in over-representation analysis (simulation, 15000 genes, 10% of them changed twofold independently of length, 3 + 3 negative binomial samples). A: the fraction of genes called changed rises with gene length; line: the fitted probability weighting function. B: p-values for 200 sets of long genes with no true association: hypergeometric p-values are strongly skewed towards zero, p-values from a length-weighted resampling null are close to uniform](./plots/length_bias.py)
+![Length bias in over-representation analysis (simulation, 15000 genes, 10% of them changed twofold independently of length, 3 + 3 negative binomial samples). A: the fraction of genes called changed rises with gene length; line: the fitted probability weighting function. B: p-values for 200 sets of long genes with no true association: hypergeometric p-values are strongly skewed toward zero, p-values from a length-weighted resampling null are close to uniform](./plots/length_bias.py)
 
 ## 3.3. Gene Set Enrichment Analysis
 
@@ -133,7 +133,7 @@ Pathway topology methods go a step further and use the diagrams themselves. Sign
 
 Beyond these, alternative explanations should be considered before a biological one. A study of a brain disease finds "synaptic transmission" enriched among changed genes: is this the disease, or more neurons in the patients' samples, or a background of all human genes when only brain-expressed genes could change? Enrichment results are hypotheses about processes, to be tested like any other.
 
-Displays of results should show effect, significance and size together: dot plots with the enrichment ratio or NES on one axis, the adjusted p-value as colour and the set size as dot size; enrichment plots like the one of 3.3.1 for single sets; heatmaps of sets across conditions or time points; and the changed genes coloured on a pathway map (KEGG, Reactome) to see which branches move.
+Displays of results should show effect, significance and size together: dot plots with the enrichment ratio or NES on one axis, the adjusted p-value as color and the set size as dot size; enrichment plots like the one of 3.3.1 for single sets; heatmaps of sets across conditions or time points; and the changed genes colored on a pathway map (KEGG, Reactome) to see which branches move.
 
 ## 3.6. Tools
 

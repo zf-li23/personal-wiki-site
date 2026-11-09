@@ -353,7 +353,7 @@ print(fev[(x < q1 - 1.5 * (q3 - q1)) | (x > q3 + 1.5 * (q3 - q1))])
 - Sample percentiles (Definition 2.3.1) can be computed in several ways, with little difference in large samples; the reference interval (Definition 2.3.2) is the middle 95% of a healthy population, needs enough reference individuals and is partitioned by age, sex and so on.
 - **Skewness**, **kurtosis** (note whether 3 is subtracted) and the $z$-score (Definition 2.4.1) describe shape and relative position; right-skewed positive data often become symmetric after taking logarithms.
 - Frequency tables and histograms (Definition 2.5.1), stem-and-leaf plots (Definition 2.6.1), **box plots** and **normal Q–Q plots** each have their uses; for continuous data draw the distribution rather than only a bar of the mean. The scatter plot of FEV against age first revealed the confounding in the comparison of smokers.
-- Outliers (Definition 2.7.1): check first, decide afterwards; genuine extreme values should be kept and a sensitivity analysis done.
+- Outliers (Definition 2.7.1): check first, decide afterward; genuine extreme values should be kept and a sensitivity analysis done.
 
 ## Questions
 

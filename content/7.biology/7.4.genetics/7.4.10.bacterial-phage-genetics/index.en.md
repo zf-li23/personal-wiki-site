@@ -245,7 +245,7 @@ Today a bacterial mutation is usually located by sequencing the whole genome of 
 
 6. Five Hfr strains transfer markers in these orders: Hfr1 *q r s t*; Hfr2 *v u t s*; Hfr3 *p w v u*; Hfr4 *r q p w*; Hfr5 *t u v w*. Draw the map, and mark each origin and direction.
 
-   **Answer** Joining overlaps: Hfr5 *t u v w*, Hfr3 reversed *u v w p*, Hfr4 reversed *w p q r*, Hfr1 *q r s t*: *t u v w p q r s t*, a circle *p q r s t u v w*. Origins (before the first marker, in the transfer direction): Hfr1 between *p* and *q*, clockwise (*q* → *r*); Hfr5 between *s* and *t*, clockwise; Hfr2 between *w* and *v*, anticlockwise (*v* → *u*); Hfr3 between *q* and *p*, anticlockwise; Hfr4 between *s* and *r*, anticlockwise.
+   **Answer** Joining overlaps: Hfr5 *t u v w*, Hfr3 reversed *u v w p*, Hfr4 reversed *w p q r*, Hfr1 *q r s t*: *t u v w p q r s t*, a circle *p q r s t u v w*. Origins (before the first marker, in the transfer direction): Hfr1 between *p* and *q*, clockwise (*q* → *r*); Hfr5 between *s* and *t*, clockwise; Hfr2 between *w* and *v*, counterclockwise (*v* → *u*); Hfr3 between *q* and *p*, counterclockwise; Hfr4 between *s* and *r*, counterclockwise.
 
 7. Why do recipients in an Hfr × F⁻ cross almost never become Hfr or F⁺, whereas recipients in F⁺ × F⁻ crosses always become F⁺?
 

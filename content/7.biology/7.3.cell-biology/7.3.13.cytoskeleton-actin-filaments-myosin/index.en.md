@@ -26,7 +26,7 @@ The three filaments differ in their subunits, their structure and therefore thei
 | Typical dynamics | treadmilling, turnover by severing | **dynamic instability** of plus ends | slow subunit exchange, disassembly by phosphorylation |
 | Specific drugs | cytochalasins, latrunculin, phalloidin | colchicine, nocodazole, vinca alkaloids, taxol | none |
 
-![The cytoskeleton of a crawling fibroblast. A (schematic, top view): actin (red) forms the branched network of the lamellipodium at the leading edge (right), parallel bundles in filopodia, contractile stress fibers ending in focal adhesions (yellow) and a thin cortex under the whole plasma membrane; microtubules (blue) radiate from the centrosome, which lies between the nucleus and the leading edge, with their plus ends (dots) at the periphery; intermediate filaments (green) form a cage around the nucleus and extend towards the cell surface. B: the three filaments drawn at the same scale (100 nm segments): a two-stranded actin filament, a microtubule of αβ-tubulin dimers, and a ropelike intermediate filament](./plots/cytoskeleton-overview.py)
+![The cytoskeleton of a crawling fibroblast. A (schematic, top view): actin (red) forms the branched network of the lamellipodium at the leading edge (right), parallel bundles in filopodia, contractile stress fibers ending in focal adhesions (yellow) and a thin cortex under the whole plasma membrane; microtubules (blue) radiate from the centrosome, which lies between the nucleus and the leading edge, with their plus ends (dots) at the periphery; intermediate filaments (green) form a cage around the nucleus and extend toward the cell surface. B: the three filaments drawn at the same scale (100 nm segments): a two-stranded actin filament, a microtubule of αβ-tubulin dimers, and a ropelike intermediate filament](./plots/cytoskeleton-overview.py)
 
 In a crawling fibroblast the three systems divide the work. Actin builds the protrusions at the front and the contractile bundles that pull the cell body forward; microtubules, growing from the centrosome placed in front of the nucleus, set the axis of the cell and carry membranes and **messenger RNAs** to the front; intermediate filaments resist stretching. In a polarized epithelial cell the same filaments build stable structures instead: actin cores of microvilli at the apical surface, a belt of actin and myosin at the **adherens junctions**, microtubules running from the apical to the basal surface with their minus ends at the top, and keratin filaments anchored at **desmosomes** and **hemidesmosomes** (cell junctions are treated in [7.3.23](/7.3.23)). At **mitosis** both kinds of cell take apart their **interphase** arrays within minutes and build a spindle and a contractile ring ([7.3.21](/7.3.21)).
 
@@ -232,7 +232,7 @@ With $k_{\mathrm{B}}T = 4.1\,\mathrm{pN\,nm}$, $k_{\mathrm{B}}T/\delta \approx 1
 The leading edge of a crawling cell such as a fish keratocyte or a fibroblast is a treadmilling network. The model of dendritic nucleation (Pollard and Borisy, 2003) combines the proteins of 13.3 into one cycle:
 
 1. A signal activates Rac at the plasma membrane; Rac-GTP and PI(3,4,5)P₃ activate the WAVE complex.
-2. WAVE activates the Arp2/3 complex on the side of existing filaments, near the membrane: new filaments branch at $70°$, so that most filaments point their plus ends towards the membrane at about $\pm 35°$.
+2. WAVE activates the Arp2/3 complex on the side of existing filaments, near the membrane: new filaments branch at $70°$, so that most filaments point their plus ends toward the membrane at about $\pm 35°$.
 3. The new plus ends, fed by profilin–actin, grow for a fraction of a second and push the membrane forward (Formula 13.4.1); then they are capped.
 4. Behind the edge, the filaments age: ATP is hydrolyzed, phosphate released, and cofilin binds and severs the ADP-actin, assisted by coronin and Aip1.
 5. Released ADP-actin binds profilin, exchanges ADP for ATP and diffuses back to the front.
@@ -249,7 +249,7 @@ Polymerization drives other movements as well: endocytic vesicles are pushed off
 
 ### 13.5.1. The Myosin Superfamily
 
-**Definition 13.5.1 (Myosin)** A **myosin** is an actin-based motor protein whose heavy chain has a conserved N-terminal motor domain (head) with an ATP site and an actin-binding site, followed by a neck (lever arm) of one to six IQ motifs, each binding a light chain of the calmodulin family, and a tail that varies among classes and determines dimerization and cargo. Almost all myosins move towards the plus end of actin filaments.
+**Definition 13.5.1 (Myosin)** A **myosin** is an actin-based motor protein whose heavy chain has a conserved N-terminal motor domain (head) with an ATP site and an actin-binding site, followed by a neck (lever arm) of one to six IQ motifs, each binding a light chain of the calmodulin family, and a tail that varies among classes and determines dimerization and cargo. Almost all myosins move toward the plus end of actin filaments.
 
 Sequence comparisons divide the superfamily into some 35 classes; humans have about 40 myosin genes. The main ones in animal cells:
 
@@ -258,13 +258,13 @@ Sequence comparisons divide the superfamily into some 35 classes; humans have ab
 | Myosin I | one; tail binds membranes | links membranes to actin, microvilli, endocytosis |
 | Myosin II | two; coiled-coil tail forms bipolar filaments | contraction: muscle, stress fibers, cortex, contractile ring |
 | Myosin V | two; long lever arm (6 IQ) | processive transport of vesicles, organelles and mRNA on actin cables |
-| Myosin VI | two; unique insert in the lever | moves towards the minus end; endocytosis, stereocilia |
+| Myosin VI | two; unique insert in the lever | moves toward the minus end; endocytosis, stereocilia |
 | Myosin VII, XV | two | stereocilia; mutations cause hereditary deafness (Usher syndrome type 1B: myosin VIIa) |
 | Myosin XI | two (plants) | cytoplasmic streaming, up to $60\,\mu\mathrm{m\,s^{-1}}$ in *Chara* |
 
 **Definition 13.5.2 (Myosin II)** **Myosin II**, conventional myosin, is a hexamer of two heavy chains (about $2000$ residues each) and two pairs of light chains (essential and regulatory) bound to the necks. The heavy chains dimerize through a long α-helical **coiled coil** (the tail) and assemble tail to tail into bipolar filaments, with heads at both ends pointing away from a central bare zone: about 300 heads in the $1.6\,\mu\mathrm{m}$ thick filament of skeletal muscle, 15–30 in the short minifilaments of non-muscle cells.
 
-A bipolar filament with heads walking towards the plus ends of two antiparallel sets of actin filaments pulls them towards each other. This simple arrangement contracts a sarcomere, a stress fiber, a contractile ring and the cortex alike.
+A bipolar filament with heads walking toward the plus ends of two antiparallel sets of actin filaments pulls them toward each other. This simple arrangement contracts a sarcomere, a stress fiber, a contractile ring and the cortex alike.
 
 ### 13.5.2. The Cross-Bridge Cycle
 
@@ -274,14 +274,14 @@ Myosin was purified from muscle in the 19th century (Kühne) and shown to be an 
 
 1. **Rigor**: without nucleotide, the head is bound tightly to actin with the lever in the post-stroke position;
 2. **ATP binding** opens the actin-binding cleft and the head detaches within milliseconds;
-3. **hydrolysis** on the detached head (ATP → ADP·Pi) re-cocks the lever (recovery stroke), and the head binds weakly to a new actin subunit further towards the plus end;
+3. **hydrolysis** on the detached head (ATP → ADP·Pi) re-cocks the lever (recovery stroke), and the head binds weakly to a new actin subunit further toward the plus end;
 4. **phosphate release** strengthens binding and triggers the **power stroke**, in which the lever arm swings by about $60°$ and moves the filament by $5$–$10\,\mathrm{nm}$; **ADP release** returns the head to rigor.
 
 One ATP is hydrolyzed per cycle. Without ATP heads stay in rigor: this is the cause of rigor mortis.
 
 The amplification is structural. Small movements in the nucleotide pocket, about $0.1$–$0.5\,\mathrm{nm}$, rotate a converter domain at the base of the neck, and the $8.5\,\mathrm{nm}$ lever arm, stiffened by its light chains, turns this rotation into a movement of $5\,\mathrm{nm}$ or more at its end. The step size scales with lever length: myosin V, with a lever three times longer, takes $36\,\mathrm{nm}$ steps; shortening or lengthening the lever of myosin II by protein engineering changes the sliding velocity proportionally (Uyeda, Abramson and Spudich, 1996).
 
-![The cross-bridge cycle of myosin II (schematic; actin plus end on the right, the thick filament above). 1, rigor: the nucleotide-free head is bound tightly, its lever in the post-stroke position. 2, ATP binds and the head detaches. 3, hydrolysis to ADP·Pi on the detached head re-cocks the lever (recovery stroke), and the head binds weakly to a subunit further towards the plus end. 4, phosphate release triggers the power stroke: the lever swings towards the plus end and the thick filament is pulled to the right relative to actin (compare the tail with the dashed mark, its position in state 1); ADP release returns the head to rigor](./plots/myosin-crossbridge-cycle.py)
+![The cross-bridge cycle of myosin II (schematic; actin plus end on the right, the thick filament above). 1, rigor: the nucleotide-free head is bound tightly, its lever in the post-stroke position. 2, ATP binds and the head detaches. 3, hydrolysis to ADP·Pi on the detached head re-cocks the lever (recovery stroke), and the head binds weakly to a subunit further toward the plus end. 4, phosphate release triggers the power stroke: the lever swings toward the plus end and the thick filament is pulled to the right relative to actin (compare the tail with the dashed mark, its position in state 1); ADP release returns the head to rigor](./plots/myosin-crossbridge-cycle.py)
 
 Two kinds of experiment measure the cycle on single molecules. In the *in vitro motility assay* (Sheetz and Spudich, 1983; Kron and Spudich, 1986) myosin is attached to a glass surface and fluorescent actin filaments glide over it when ATP is added; the velocity, a few micrometers per second for skeletal myosin II, equals that of unloaded muscle. In the optical-trap assay a filament held between two trapped beads is lowered onto a single myosin; its displacements reveal individual power strokes of a few nanometers and forces of a few piconewtons (Finer, Simmons and Spudich, 1994). The physics of these instruments is treated in [7.6.17](/7.6.17).
 

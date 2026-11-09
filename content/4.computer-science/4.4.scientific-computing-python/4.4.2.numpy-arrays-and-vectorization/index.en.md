@@ -330,7 +330,7 @@ Summation of **floating-point numbers** is not exact, and the order matters ([3.
 
 Arithmetic between an array and a scalar, `a * 2.5`, multiplies every element. Broadcasting generalizes this to arrays of different shapes.
 
-**Definition 2.6.1 (Broadcasting)** **Broadcasting** is the rule by which NumPy combines arrays of different shapes in an elementwise operation. The shapes are compared from the last axis backwards, after padding the shorter shape with 1s on the left; two lengths are compatible if they are equal or one of them is 1. The result has, along each axis, the larger of the two lengths, and an operand of length 1 along an axis is used repeatedly along it. If some pair of lengths is incompatible, the operation fails.
+**Definition 2.6.1 (Broadcasting)** **Broadcasting** is the rule by which NumPy combines arrays of different shapes in an elementwise operation. The shapes are compared from the last axis backward, after padding the shorter shape with 1s on the left; two lengths are compatible if they are equal or one of them is 1. The result has, along each axis, the larger of the two lengths, and an operand of length 1 along an axis is used repeatedly along it. If some pair of lengths is incompatible, the operation fails.
 
 | Shape of `a` | Shape of `b` | Shape of `a + b` |
 |---|---|---|
