@@ -1,7 +1,7 @@
 ---
 title: "Asterids IV: Campanulids"
 description: "Circumscription and synapomorphies of the campanulids (alternate leaves, inferior ovary, late sympetaly, polyacetylenes); Aquifoliales (Aquifoliaceae: holly, Ilex cornuta, large-leaved holly and kuding tea; the epiphyllous flowers of Helwingia); Asterales (Campanulaceae: Codonopsis, Platycodon, Adenophora, Lobelia and secondary pollen presentation; Menyanthaceae; Asteraceae: capitulum, involucre, five floret types, syngenesious stamens, cypsela and pappus, the traditional two subfamilies and the current 13, Artemisia and artemisinin, the golden angle in the sunflower disc, rubber dandelion, ragweed and Ageratina, reasons for the success of the family); Dipsacales (Adoxaceae and the names Adoxaceae and Viburnaceae, Viburnum and Sambucus; Caprifoliaceae s.l.: Lonicera, Weigela, Abelia, Linnaea, Dipsacus, Patrinia, Valeriana); Apiales (Pittosporaceae; Araliaceae: ginseng, notoginseng, Eleutherococcus, Aralia, ivy, rice-paper plant; Apiaceae: compound umbel, cremocarp and oil ducts, identification of carrot, celery, fennel, coriander, Angelica, Bupleurum, Ligusticum and poison hemlock); the fate of Cronquist's orders in APG IV."
-source_hash: a2b262b02c95
+source_hash: bb991b3afc5e
 ---
 
 The campanulids comprise about 35,000 species, two thirds of which belong to Asteraceae. They include familiar food, medicinal and ornamental plants such as chrysanthemum, sunflower, lettuce, carrot, celery, ginseng, notoginseng, honeysuckle, balloon flower and holly, as well as noxious invaders such as ragweed and Crofton weed. The campanulids are a group established by molecular systematics and agree with none of the earlier morphological systems: they unite the Campanulales, Asterales and Dipsacales of Cronquist's Asteridae with the Apiales and the Aquifoliaceae of Celastrales from the Rosidae. This chapter treats first the circumscription and synapomorphies of the campanulids (§49.1), then Aquifoliales (§49.2), Asterales (§49.3), Dipsacales (§49.4) and Apiales (§49.5); for the sister group, the lamiids, see [7.12.47](/7.12.47) and [7.12.48](/7.12.48). For the notation of floral formulas see [7.12.27](/7.12.27#sec-27.6).
@@ -296,7 +296,7 @@ The fate of the relevant orders of Cronquist's system in APG IV:
 | Asterales (Asteridae) | Asteraceae | Asterales |
 | Solanales (Asteridae) | Menyanthaceae | Asterales |
 | Dipsacales (Asteridae) | Caprifoliaceae, Valerianaceae, Dipsacaceae | Merged as Caprifoliaceae (Dipsacales) |
-| | Adoxaceae (including *Viburnum* and *Sambucus* of Caprifoliaceae) | Adoxaceae (Viburnaceae), Dipsacales |
+| | Adoxaceae (including *Viburnum* and *Sambucus* of Caprifoliaceae) | Adoxaceae (correct name Viburnaceae), Dipsacales |
 | Apiales (Rosidae) | Araliaceae | Apiales (including *Hydrocotyle* of the former Apiaceae) |
 | | Apiaceae | Apiales (including *Mackinlaya* of the former Araliaceae) |
 | Rosales (Rosidae) | Pittosporaceae | Apiales |

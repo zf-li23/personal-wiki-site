@@ -1,7 +1,7 @@
 ---
 title: Meristems, Dermal Tissue and Ground Tissue
 description: The concept and classification of plant tissues; meristems by position (apical, lateral, intercalary) and by origin (promeristem, primary, secondary) and the problem of classifying them; the four theories of apical organization and the WUS–CLV3 feedback; the structure, types and development of the epidermis, cuticle, stomatal complex and trichomes; the periderm, cork cambium and lenticels; types of parenchyma and transfer cells, the four types of collenchyma, and sclereids and fibers in sclerenchyma.
-source_hash: 1c40df7e0763
+source_hash: cc3b15684dac
 ---
 
 The previous chapter dealt with the individual cell; this chapter and the next describe how cells are organized into tissues. The body of a seed plant is built from only a few kinds of tissue: meristems, which retain the capacity to divide and continually produce new cells, and mature tissues, which differentiate from the derivative cells of meristems. This chapter treats the meristems and three of the simpler mature tissues: the dermal tissue that covers the surface (epidermis and periderm), and the parenchyma and mechanical tissues (collenchyma, sclerenchyma) that make up the "matrix" of the plant body. Conducting tissues, secretory structures and tissue systems follow in the next chapter. Almost all of the criteria for identifying these tissues are features of the cell wall: its thickness and the pattern of thickening, whether it is lignified or suberized, the type of pits, and whether the protoplast dies at maturity ([7.12.3](/7.12.3)). The chapters on root, stem and leaf ([7.12.20](/7.12.20)–[7.12.23](/7.12.23)) combine these tissues into organs; the molecular regulation of meristems and the mechanism of stomatal movement belong to plant physiology, and the general principles of stem cells and cell differentiation are in [7.3.24](/7.3.24).
@@ -249,7 +249,7 @@ The fibers of many plants are long, rich in cellulose and soft, and are importan
 |---|---|---|
 | Soft fibers | Phloem fibers of dicot stems | Ramie, flax (long and not lignified; used for clothing and tents); hemp; jute, kenaf, velvetleaf (shorter, somewhat lignified; used for sacks and ropes) |
 | Hard fibers | Fibers around the vascular bundles in monocot leaves | Sisal (*Agave sisalana*), abaca (Manila hemp, *Musa textilis*), used for cables |
-| Seed and fruit trichomes | Trichomes of the seed coat or inner fruit wall (not fibers) | Cotton (seed coat), kapok (inner fruit wall) |
+| Seed and fruit trichomes | Trichomes of the seed coat or inner fruit wall (not fibers) | Cotton (seed coat), red silk-cotton tree and kapok (inner fruit wall) |
 
 ![Mechanical tissues (schematic). Top row: the four types of collenchyma (cross sections; living cells, primary walls unevenly thickened, pale tone is wall material): angular, thickened at the corners where cells meet; lacunar, thickened around intercellular spaces; lamellar, thickened on tangential walls; annular, uniformly thickened, with circular lumen. Bottom row: sclerenchyma (dead cells, lignified secondary walls): brachysclereid (stone cell, as in pear flesh), with concentric wall layers and branched pit canals; astrosclereid (as in water lily leaf); osteosclereid (in seed coats and leaves); macrosclereid (palisade layer of legume seed coat); a fiber in longitudinal view, long and slender with pointed ends and slit-like pits; and a cross section of a fiber bundle, with thick walls and narrow lumina](./plots/mechanical-tissues.py)
 

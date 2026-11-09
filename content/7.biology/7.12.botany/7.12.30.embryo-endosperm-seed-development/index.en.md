@@ -1,7 +1,7 @@
 ---
 title: Development of the Embryo, Endosperm and Seed
 description: "How an ovule becomes a seed after double fertilization: polarity and first division of the zygote, apical and basal cells, proembryo and suspensor; embryogenesis of shepherd's purse from octant, globular and heart stages through torpedo stage to mature embryo, embryo types and primary meristems; development of the scutellum, coleoptile, coleorhiza and epiblast in the wheat embryo; nuclear, cellular and helobial endosperm, ploidy of the endosperm, perisperm and the division of storage, origin of the endosperm; development of the integuments into the seed coat, arils and fleshy seed coats; seed maturation and desiccation; the angiosperm life cycle compared with those of ferns and gymnosperms."
-source_hash: 08a8ff1320bf
+source_hash: 75828b22c8e7
 ---
 
 **Double fertilization** ([7.12.29](/7.12.29)) starts two developmental programs at once in the embryo sac: the zygote, formed by the fusion of a sperm cell with the egg cell, develops into the embryo, and the primary endosperm nucleus, formed by the fusion of the other sperm cell with the central cell, develops into the endosperm. At the same time the **integuments** surrounding the embryo sac develop into the seed coat, the whole **ovule** becomes the seed, and the ovary develops into the fruit ([7.12.31](/7.12.31)). The gametophytes of the previous chapter consist of only a few cells; this chapter follows how, within a few weeks, they become a seed containing a young plant, a storage tissue and a protective shell. The mature structure, types, dormancy and germination of seeds were treated in [7.12.19](/7.12.19); this chapter deals with their origin: how the embryo builds an apical–basal axis and the three primary meristems from a single cell (Section 30.1), in which three ways the endosperm develops and why it is triploid (Section 30.2), how the seed coat and aril form (Section 30.3), and how the seed matures and desiccates into a resting state (Section 30.4). Finally the flower, gametophytes, fertilization and seed are joined into the complete life cycle of angiosperms, which is compared with those of ferns and gymnosperms (Section 30.5). The hormonal and genetic control of embryonic pattern formation, and the physiology of storage accumulation and desiccation tolerance in seeds, belong to plant physiology; this chapter describes only morphology and developmental processes.
@@ -210,7 +210,7 @@ From ferns through gymnosperms to angiosperms the life cycle changes in one dire
 |---|---|---|---|
 | Sporophyte | With root, stem and leaf, independent, perennial herb | Tall woody plant with secondary growth | Woody or herbaceous, with the most complex structure |
 | Spores | Homosporous, shed | Heterosporous; the megaspore stays in the nucellus | Heterosporous; the megaspore stays in the nucellus |
-| Male gametophyte | Prothallus (bisexual), independent | Pollen grain, 4 cells when shed, with prothallial cells | Pollen grain, 2 or 3 cells |
+| Male gametophyte | Prothallus (bisexual), independent | Pollen grain, 4 cells when shed (including 2 prothallial cells) | Pollen grain, 2 or 3 cells |
 | Female gametophyte | Archegonia on the prothallus | Thousands of cells, with archegonia, inside the ovule | Embryo sac, 7 cells and 8 nuclei, without archegonia |
 | Nutrition of the gametophyte | Autotrophic | Dependent on the sporophyte | Dependent on the sporophyte |
 | Male gamete | Multiflagellate sperm | Nonflagellate sperm (flagellate in cycads and ginkgo) | Nonflagellate sperm cell |

@@ -3,7 +3,7 @@
 # the cortex produces inwards a zone of ground tissue with denser amphivasal secondary bundles (xylem
 # around phloem), outwards a little parenchyma. (B) Successive cambia: concentric rings of xylem and phloem,
 # each from a new cambium outside the last (Amaranthaceae stems, beet root). (C) Included phloem: strands of
-# phloem embedded in the secondary xylem (Mirabilis). (D) Furrowed xylem: in four sectors the cambium makes
+# phloem embedded in the secondary xylem (Strychnos). (D) Furrowed xylem: in four sectors the cambium makes
 # little xylem and much phloem, giving a cross-shaped xylem (Bignoniaceae lianas).
 import math
 

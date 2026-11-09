@@ -43,7 +43,7 @@ A few cells have two or more nuclei:
 
 | Situation | Examples |
 |---|---|
-| Normal coenocytes (nuclear division without cytokinesis) | Non-articulated laticifers; the free-nuclear phase of nuclear endosperm; the early female gametophyte of most gymnosperms and of *Selaginella* and *Isoetes*, and the free-nuclear stage of the gymnosperm proembryo; multinucleate algae such as *Vaucheria* and *Cladophora*, and the hyphae of many fungi |
+| Normal coenocytes (nuclear division without cytokinesis) | Non-articulated laticifers; the free-nuclear phase of nuclear endosperm; the early female gametophyte of most gymnosperms and of *Selaginella* and *Isoëtes*, and the free-nuclear stage of the gymnosperm proembryo; multinucleate algae such as *Vaucheria* and *Cladophora*, and the hyphae of many fungi |
 | Binucleate or multinucleate cells | Tapetal cells of the anther are often binucleate or multinucleate |
 | Nucleus degenerates at maturity | Sieve-tube elements ([7.12.5](/7.12.5)); dead cells such as vessel elements, tracheids and fibers |
 

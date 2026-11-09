@@ -1,7 +1,7 @@
 ---
 title: "Foundations of Plant Taxonomy: Ranks, Nomenclature, Identification and Phylogeny"
 description: The tasks of taxonomy; taxonomic ranks and their endings, the species problem in plants, subspecies, variety and forma; scientific names, binomial nomenclature and author citations; the principles of the International Code of Nomenclature for algae, fungi, and plants (Madrid Code, 2025), effective and valid publication, types, priority, synonyms and conserved names; identification keys, reference works, online resources and herbaria; phylogenetic classification, character polarity, molecular markers, the PhyloCode and the principles of the APG system.
-source_hash: 869a8333378a
+source_hash: fdb7f4656846
 ---
 
 Taxonomy is the oldest branch of botany and the foundation of the others: to study a plant we must first know what it is, what it is called, and which plants are its closest relatives. This chapter presents the basic tools of plant taxonomy: taxonomic ranks and species, the structure of scientific names, the international code that governs the names of algae, fungi and plants, the methods of recognizing and identifying plants (observation, keys, reference works and herbaria), and the principles and methods of basing classification on phylogeny. How to read phylogenetic trees and how to infer them were treated in evolutionary biology and bioinformatics ([7.10.2](/7.10.2), [7.10.20](/7.10.20)–[7.10.22](/7.10.22), [7.8.6](/7.8.6)), so we only recall the concepts needed and concentrate on what is specific to botany. These tools run through the whole course from the next chapter on: the classification of algae and fungi and the floral formulas and keys of seed plants all rest on this chapter. The history of angiosperm classification systems and the taxonomic evidence are treated systematically in [7.12.33](/7.12.33), and floral formulas and floral diagrams in [7.12.27](/7.12.27).
@@ -182,7 +182,7 @@ Other common abbreviations in scientific names are:
 
 **Definition 2.4.1 (International Code of Nomenclature for Algae, Fungi, and Plants)** The **International Code of Nomenclature for algae, fungi, and plants** (ICN) is the set of international rules for naming organisms (including fossils) traditionally treated as algae, fungi and plants; it is revised by the Nomenclature Section of the International Botanical Congress. Before 2011 it was called the International Code of Botanical Nomenclature (ICBN).
 
-Its precursor was the *Lois de la nomenclature botanique* drafted by Alphonse de Candolle and adopted at the International Botanical Congress in Paris in 1867 (the Paris Code); the second International Botanical Congress in Vienna in 1905 drew up the first internationally accepted rules, supplemented by the Brussels Congress of 1910. Thereafter it was revised about every six years at the Congress, and each edition is named after the host city, such as the Tokyo Code (1994), the St Louis Code (2000), the Vienna Code (2006), the Melbourne Code (2012) and the Shenzhen Code (2018). The current one is the Madrid Code: the twentieth International Botanical Congress met in Madrid in July 2024, its Nomenclature Section discussed 447 proposals, and the revised Code appeared in 2025 (Turland et al., 2025, *Regnum Vegetabile* 162), replacing the Shenzhen Code. The special rules for fungal names (Chapter F) are revised by the International Mycological Congress; the present version was adopted at the Maastricht Congress in 2024 and incorporated into the Madrid Code.
+Its precursor was the *Lois de la nomenclature botanique* drafted by Alphonse de Candolle and adopted at the International Botanical Congress in Paris in 1867 (the Paris Code); the second International Botanical Congress in Vienna in 1905 drew up the first internationally accepted rules, supplemented by the Brussels Congress of 1910. Thereafter it was revised about every six years at the Congress, and each edition is named after the host city, such as the Tokyo Code (1994), the St Louis Code (2000), the Vienna Code (2006), the Melbourne Code (2012) and the Shenzhen Code (2018). The current one is the Madrid Code: the twentieth International Botanical Congress met in Madrid in July 2024, its Nomenclature Section discussed several hundred proposals, and the revised Code appeared in 2025 (Turland et al., 2025), replacing the Shenzhen Code. The special rules for fungal names (Chapter F) are revised by the International Mycological Congress; the present version was adopted at the Maastricht Congress in 2024 and incorporated into the Madrid Code.
 
 The Code consists of principles, rules (articles) and recommendations. The six principles are:
 
@@ -272,7 +272,7 @@ Strict application of priority sometimes discards long-used names and causes con
 
 **Definition 2.4.7 (Conserved Name)** A **conserved name** (nomen conservandum) is a name approved by the International Botanical Congress and listed in an appendix of the Code that may be used as the correct name in violation of priority or other rules; the name it displaces is a rejected name.
 
-Conservation is mainly used for family and genus names and for a few species names. The scientific name of the apple is a recent case: whether the plant to which the earlier *Malus pumila* Mill. refers (its type) is the cultivated apple has long been disputed, and in 2017 the Nomenclature Committee for Vascular Plants recommended by a narrow majority that the widely used *Malus domestica* (Suckow) Borkh. be conserved, and databases such as POWO and WFO followed; *Flora Reipublicae Popularis Sinicae* and *Flora of China*, published earlier, still use *Malus pumila* Mill.
+Conservation is mainly used for family and genus names and for a few species names. The scientific name of the apple is a recent case: whether the plant to which the earlier *Malus pumila* Mill. refers (its type) is the cultivated apple has long been disputed, and in 2017 the Nomenclature Committee for Vascular Plants recommended that the widely used *Malus domestica* (Suckow) Borkh. be conserved, and databases such as POWO and WFO followed; *Flora Reipublicae Popularis Sinicae* and *Flora of China*, published earlier, still use *Malus pumila* Mill.
 
 Eight traditional family names that do not end in -aceae are by the Code treated as validly published and are used alongside the names formed from the type genus; Chinese textbooks often also call them conserved names:
 
@@ -383,7 +383,9 @@ A *herbarium* is an institution that systematically preserves plant specimens an
 | Royal Botanic Gardens, Kew | K | 7 million |
 | Missouri Botanical Garden | MO | 5.9 million |
 | Natural History Museum (London) | BM | 5.2 million |
-| Harvard University | GH | 5.2 million |
+| Harvard University Herbaria | A, GH and others | 5 million |
+
+Holdings are approximate figures published by the herbaria in recent years and change as the collections grow.
 
 In China there are also the herbaria of Northwest A&F University (WUK), Peking University (PEY), Beijing Normal University (BNU), Nanjing University (N), Wuhan University (WH) and others. The specimens of many large herbaria have been digitized, and images of type specimens can be viewed at CVH, JSTOR Global Plants or the websites of the herbaria themselves.
 
@@ -441,7 +443,7 @@ The debate between the two systems concerns stability: in the rank-based code na
 
 ### 2.6.6. Principles of the APG System
 
-The Angiosperm Phylogeny Group (APG) is an international research collaboration which in 1998 published the first classification of angiosperm families and orders built on phylogenetic analyses of DNA sequences (APG I: 40 orders, 462 families), followed by APG II (2003), APG III (2009) and APG IV (2016: 64 orders, 416 families). This course adopts APG IV (the adoption of the later APG V in China is still disputed). Its principles are:
+The Angiosperm Phylogeny Group (APG) is an international research collaboration which in 1998 published the first classification of angiosperm families and orders built on phylogenetic analyses of DNA sequences (APG I: 40 orders, 462 families), followed by APG II (2003), APG III (2009) and APG IV (2016: 64 orders, 416 families). This course adopts APG IV. Its principles are:
 
 - Only monophyletic groups are recognized; paraphyletic traditional families (such as Liliaceae in the broad sense, Scrophulariaceae and Saxifragaceae) are either split or merged with the groups embedded in them.
 - The formal classification goes only to the rank of order; above order informal unranked clade names are used ([7.12.33](/7.12.33)).

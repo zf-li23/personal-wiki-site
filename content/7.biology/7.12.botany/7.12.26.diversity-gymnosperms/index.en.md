@@ -1,7 +1,7 @@
 ---
 title: Diversity of Gymnosperms
-description: The classification of gymnosperms (the class and order system of Zheng Wanjun and Wu Guofang, the 4 subclasses, 8 orders and 12 families of Christenhusz et al. 2011, Taxodiaceae merged into Cupressaceae and Cephalotaxaceae into Taxaceae, the position of the gnetophytes); Cycadaceae and Zamiaceae (coralloid roots, megasporophylls, the Panzhihua cycad); ginkgo (long and short shoots, dichotomous venation, three-layered seed coat, living fossil and wild populations); Ephedraceae, Gnetaceae and Welwitschiaceae; the two subfamilies and 11 genera of Pinaceae (the two subgenera of Pinus and needle number); Araucariaceae and Podocarpaceae; Sciadopityaceae, Cupressaceae (seven subfamilies, the discovery of the dawn redwood) and Taxaceae (paclitaxel, harringtonines); gymnosperms of China, relict species and economic importance.
-source_hash: dab57bbbbf86
+description: The classification of gymnosperms (traditional class and order systems such as that of Zheng Wanjun, the 4 subclasses, 8 orders and 12 families of Christenhusz et al. 2011, Taxodiaceae merged into Cupressaceae and Cephalotaxaceae into Taxaceae, the position of the gnetophytes); Cycadaceae and Zamiaceae (coralloid roots, megasporophylls, the Panzhihua cycad); ginkgo (long and short shoots, dichotomous venation, three-layered seed coat, living fossil and wild populations); Ephedraceae, Gnetaceae and Welwitschiaceae; the two subfamilies and 11 genera of Pinaceae (the two subgenera of Pinus and needle number); Araucariaceae and Podocarpaceae; Sciadopityaceae, Cupressaceae (seven subfamilies, the discovery of the dawn redwood) and Taxaceae (paclitaxel, harringtonines); gymnosperms of China, relict species and economic importance.
+source_hash: 3646549a4a92
 ---
 
 The living gymnosperms number only a little over a thousand species, less than one percent of the angiosperms, yet they form extensive coniferous forests in cold-temperate regions and on high mountains and supply most of the world's timber and pulp. They include the tallest (coast redwood), the largest (giant sequoia) and the longest-lived (bristlecone pine) organisms on Earth. China is one of the richest countries in gymnosperms and the home of relict plants such as ginkgo, dawn redwood, Cathaya and golden larch. The previous chapter used pine to describe gymnosperm reproduction ([7.12.25](/7.12.25)); this chapter treats their diversity. We first follow the changes in classification up to the current system of Christenhusz et al. (2011) (§26.1), then follow that system through the cycads (§26.2), ginkgo (§26.3), the gnetophytes (§26.4) and the three orders of conifers (§26.5–§26.7), and finally treat the gymnosperm resources of China (§26.8). For each family we give diagnostic characters, representative genera and species, economic importance and the correspondence with the older system (changes of family and genus). The vegetative organs of gymnosperms (tracheid wood, resin canals, needle structure) were treated in [7.12.21](/7.12.21)–[7.12.23](/7.12.23).
@@ -22,7 +22,7 @@ Chinese gymnosperm classification long followed the system of Zheng Wanjun in vo
 | | Taxales | Taxaceae |
 | Gnetopsida | Ephedrales, Gnetales, Welwitschiales | Ephedraceae, Gnetaceae, Welwitschiaceae |
 
-In the second volume of the textbook *Botany* by Wu Guofang and colleagues, Podocarpaceae, Cephalotaxaceae and Taxaceae are separated from the conifers and placed in a separate class, Taxopsida, on the grounds that their megasporophylls are specialized into a receptacle or epimatium, they form no cones, and their seeds have a fleshy aril or outer seed coat; this gives 5 classes. The gnetophytes are also called Chlamydospermopsida. These systems rest mainly on morphology, and the division into classes gives great weight to whether cones are present.
+Most Chinese textbooks separate Podocarpaceae, Cephalotaxaceae and Taxaceae from the conifers and place them in a separate class, Taxopsida, on the grounds that their megasporophylls are specialized into a receptacle or epimatium, they form no cones, and their seeds have a fleshy aril or outer seed coat; this gives 5 classes. The gnetophytes are also called Chlamydospermopsida. These systems rest mainly on morphology, and the division into classes gives great weight to whether cones are present.
 
 ### 26.1.2. The System of Christenhusz et al. (2011)
 
@@ -32,7 +32,7 @@ Molecular phylogenetic studies changed this picture:
 - Podocarpaceae, Cephalotaxaceae and Taxaceae do not form one lineage: Cephalotaxaceae and Taxaceae are **sister groups** and are merged into Taxaceae in the broad sense, which belongs with Cupressaceae; Podocarpaceae is the sister group of Araucariaceae. "Taxopsida" is therefore invalid, and the presence of cones changed several times within the conifers.
 - The conifers fall into two branches: Pinaceae, and the "cupressophytes" (Cupressophyta, also called conifer II) comprising the remaining families.
 
-On this basis Christenhusz et al. (2011, *Phytotaxa* 19: 55–70) gave the living gymnosperms a linear classification into 4 subclasses, 8 orders, 12 families and 84 genera, treating them as one group:
+On this basis Christenhusz et al. (2011, *Phytotaxa* 19: 55–70) gave the living gymnosperms a linear classification into 4 subclasses, 8 orders, 12 families and just over 80 genera, treating them as one group:
 
 | Subclass | Order | Family | Genera/species (approx.) |
 |---|---|---|---|
@@ -113,7 +113,7 @@ The gnetophytes (subclass Gnetidae) have only three families and three genera, w
 
 ### 26.4.1. Ephedraceae
 
-Ephedraceae has a single genus, *Ephedra*, with about 70 species in the arid regions and deserts of Asia, southeastern Europe, North Africa and the Americas; China has 14 species (Flora of China), mostly in the northwest, Inner Mongolia and the southwestern plateau.
+Ephedraceae has a single genus, *Ephedra*, with about 70 species in the arid regions and deserts of Asia, southeastern Europe, North Africa and the Americas; China has a little more than ten species, mostly in the northwest, Inner Mongolia and the southwestern plateau.
 
 - Shrubs, subshrubs or herb-like plants, much branched, with opposite or whorled green jointed twigs with fine longitudinal grooves in the internodes, and the pith in cross section often reddish brown; they look much like horsetails but are woody and have vessels in the secondary xylem.
 - The leaves are reduced to membranous scales, 2–3 opposite or whorled and fused at the base into a sheath, and photosynthesis is carried out mainly by the green young stems.
@@ -244,7 +244,7 @@ The first five subfamilies are the traditional Taxodiaceae; they branch off succ
 China has 5 genera and 7 species of the former Taxodiaceae, with another 4 genera and 7 species introduced:
 
 - Chinese fir (*Cunninghamia lanceolata*): an evergreen tree with linear-lanceolate leaves with finely toothed margins, twisted at the base into two ranks on lateral branches, with stomatal lines on both sides; the cone is nearly spherical, the bract scale large with finely toothed margin, the seed scale small and three-lobed at the tip with three seeds on the adaxial side, and the seeds narrowly winged on both sides. It occurs mainly in China (possibly also native in Laos and northern Vietnam), is widely cultivated south of the Qinling, and is the main planted timber tree of the south by area, fast-growing, with light, soft, decay-resistant and easily worked wood. *C. konishii* of Chinese textbooks is now mostly treated as a variety or synonym of Chinese fir.
-- Japanese cedar (*Cryptomeria japonica* var. *sinensis*, *C. fortunei* in Chinese textbooks): the leaves are awl-shaped, spirally arranged and roughly in five ranks, curved inward at the tip; the cone is nearly spherical, the upper part of the seed scale with 4–5 teeth and 2 seeds per scale, in Tianmu Mountain in Zhejiang, Fujian and Jiangxi; the typical Japanese cedar has 2–5 seeds per scale.
+- Chinese cryptomeria (*Cryptomeria japonica* var. *sinensis*, *C. fortunei* in Chinese textbooks): the leaves are awl-shaped, spirally arranged and roughly in five ranks, curved inward at the tip; the cone is nearly spherical, the upper part of the seed scale with 4–5 teeth and 2 seeds per scale, in Tianmu Mountain in Zhejiang, Fujian and Jiangxi; the typical Japanese cedar has 2–5 seeds per scale.
 - Chinese swamp cypress (*Glyptostrobus pensilis*): the leaves are of three kinds (scale leaves persistent, linear and linear-awl-shaped leaves falling together with the lateral short shoots); the cone is erect, the seed scales woody with 6–10 pointed teeth on the upper margin, and the seeds have a long downward wing. It was widespread in the Northern Hemisphere in the Cretaceous and Cenozoic and survived after the Quaternary glaciations only in southern China and northern Vietnam, with very few wild individuals; it is a first-class nationally protected wild plant. It grows by water, has swollen roots and light wood, and was used for life preservers and bottle corks.
 - Bald cypress (*Taxodium distichum*) and pond cypress (*T. distichum* var. *imbricarium*, *T. ascendens* in Chinese textbooks): native to the southeastern United States, deciduous, the lateral twigs falling in winter together with the leaves; widely introduced in the water-network regions of the Yangtze basin.
 - Dawn redwood (*Metasequoia glyptostroboides*): a deciduous tree whose twigs, leaves and seed scales are all opposite (which is again like Cupressoideae); the linear leaves are twisted at the base into two ranks and fall in winter together with the lateral twigs; the seed scales of the cone are peltate with 5–9 seeds per scale.
@@ -321,7 +321,7 @@ Following Christenhusz et al. (2011), the living gymnosperms are divided into 4 
 
 Correspondence between the traditional and current systems:
 
-| Zheng Wanjun (1978) / Wu Guofang | Christenhusz et al. (2011) | Change |
+| Zheng Wanjun (1978) and Chinese textbooks | Christenhusz et al. (2011) | Change |
 |---|---|---|
 | Cycadopsida, Cycadaceae | Cycadidae, Cycadales: Cycadaceae, Zamiaceae | Zamiaceae (genera outside China) separated |
 | Ginkgopsida, Ginkgoaceae | Ginkgoidae, Ginkgoales, Ginkgoaceae | Unchanged |

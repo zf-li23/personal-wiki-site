@@ -1,7 +1,7 @@
 ---
 title: Ferns (Monilophytes)
 description: Scope and classification of the ferns (Polypodiopsida in PPG I), the euphyllophyte synapomorphies, and comparison with the Ching system; sporophyte morphology (rhizomes, hairs and scales, circinate megaphylls, trophophylls and sporophylls, eusporangia and leptosporangia, annulus, sori and indusia, sporocarps) and the gametophyte (prothallus); the bracken life cycle, cavitation-driven spore ejection in leptosporangia and a simple model, apogamy and apospory; representative plants of the horsetails, Ophioglossidae (Psilotales, Ophioglossales), Marattiidae and Polypodiidae; fern origin and evolution (Paleozoic ferns, the Cretaceous radiation, polyploidy); economic value.
-source_hash: 24901b6cb5e1
+source_hash: d2eb035c90eb
 ---
 
 Ferns are the largest group of vascular plants outside the seed plants, with about 10,000 living species. Most are herbs, a few are tree ferns up to 10 m or more tall, and they occupy habitats from tropical rain-forest trunks to temperate grasslands, paddy fields and desert rock crevices. China has more than 2000 species of lycophytes and ferns, especially rich in the southwest. In ferns both the sporophyte and the gametophyte live independently: the sporophyte has roots, stems, leaves and vascular tissue like a seed plant, whereas the gametophyte is a green prothallus a few millimeters across that needs water for fertilization, like a bryophyte. Ferns are therefore the key group for understanding how the sporophyte came to dominate on land while the gametophyte was reduced.
@@ -46,12 +46,12 @@ The relationships among the subclasses are Equisetidae + (Ophioglossidae + (Mara
 
 ### 17.1.3. Comparison with the Ching System
 
-Ren-Chang Ching (1978) divided the ferns of China into 5 subdivisions and 63 families, later revised to 52 families; the Chinese textbooks by Guofang Wu and colleagues follow this system, dividing the subdivision Filicophytina by sporangial development into Eusporangiatae, Primitive Leptosporangiatae and Leptosporangiatae, the last containing Polypodiales (Filicales), Marsileales and Salviniales. The correspondence between the two systems is as follows (for the lycophyte part see [7.12.16](/7.12.16#sec-16.5.1)):
+Ren-Chang Ching (1978) divided the ferns of China into 5 subdivisions and 63 families, later revised to 52 families; Chinese textbooks follow this system, dividing the subdivision Filicophytina by sporangial development into Eusporangiatae, Primitive Leptosporangiatae and Leptosporangiatae, the last containing Polypodiales (Filicales), Marsileales and Salviniales. The correspondence between the two systems is as follows (for the lycophyte part see [7.12.16](/7.12.16#sec-16.5.1)):
 
 | Ching system (Chinese textbooks) | PPG I | Change |
 |---|---|---|
 | Lycopodiophytina (Lycopodiales: Lycopodiaceae, Huperziaceae; Selaginellales: Selaginellaceae) | Lycopodiopsida: Lycopodiaceae in Lycopodiales, Selaginellaceae in Selaginellales | Removed from the ferns; Huperziaceae merged into Lycopodiaceae (subfamily Huperzioideae) |
-| Isoetophytina (Isoetales: Isoetaceae) | Lycopodiopsida: Isoetales | Removed from the ferns; sister group of Selaginellales |
+| Isoetophytina (Isoëtales: Isoëtaceae) | Lycopodiopsida: Isoëtales | Removed from the ferns; sister group of Selaginellales |
 | Psilophytina (Psilotales) | Ophioglossidae: Psilotales | Not a "relict of the rhyniophytes" but the sister group of the moonworts |
 | Sphenophytina (Equisetaceae: *Equisetum*, *Hippochaete*) | Equisetidae: Equisetales: Equisetaceae | *Hippochaete* and *Equisetum* merged into *Equisetum*, with *Hippochaete* reduced to a subgenus |
 | Filicophytina, Eusporangiatae: Ophioglossales (Ophioglossaceae, Botrychiaceae, Helminthostachyaceae) | Ophioglossidae: Ophioglossales: Ophioglossaceae | Three families merged |
@@ -365,7 +365,7 @@ Comparison of representative ferns and lycophytes (for the lycophytes see [7.12.
 
 | | *Lycopodium* | *Selaginella* | *Isoëtes* | *Psilotum* | *Equisetum* | *Angiopteris* | *Osmunda* | Polypodiales (bracken) | *Marsilea* | *Salvinia* |
 |---|---|---|---|---|---|---|---|---|---|---|
-| PPG I | Lycopodiopsida, Lycopodiales | Lycopodiopsida, Selaginellales | Lycopodiopsida, Isoetales | Ophioglossidae, Psilotales | Equisetidae | Marattiidae | Polypodiidae, Osmundales | Polypodiidae, Polypodiales | Polypodiidae, Salviniales | Polypodiidae, Salviniales |
+| PPG I | Lycopodiopsida, Lycopodiales | Lycopodiopsida, Selaginellales | Lycopodiopsida, Isoëtales | Ophioglossidae, Psilotales | Equisetidae | Marattiidae | Polypodiidae, Osmundales | Polypodiidae, Polypodiales | Polypodiidae, Salviniales | Polypodiidae, Salviniales |
 | Sporophyte | Root, stem, leaf | Root, stem, leaf, with rhizophores | Root, stem, leaf | Rhizome and aerial shoots, no roots, rhizoids | Root, stem, leaf | Root, stem, megaphyll | Root, stem, megaphyll | Root, rhizome, megaphyll | Root, rhizome, four-leaflet leaf | Stem, floating and submerged leaves, no roots |
 | Stem | Creeping and erect, dichotomous | Creeping or erect, dorsiventral | Short, stout, tuberous, with cambium | Aerial shoots repeatedly dichotomous | With nodes and internodes, internodes hollow, siliceous | Tuberous, fleshy | Short, stout, erect, covered with leaf bases | Creeping rhizome (bracken) | Slender, creeping, dichotomous | Prostrate, hairy |
 | Stele | Actinostele or plectostele | Protostele to polycyclic siphonostele | Protostele | Actinostele or siphonostele | Arthrostele | Polycyclic dictyostele | Ectophloic siphonostele | Dictyostele or polycyclic stele (two rings in bracken) | Amphiphloic siphonostele | Protostele (reduced) |
