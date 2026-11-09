@@ -59,7 +59,8 @@ export const NOTATION_RULES: NotationRule[] = [
   {
     id: 'operator',
     advice: String.raw`\operatorname{Var}, \operatorname{tr}, … for multi-letter operators`,
-    pattern: /\\(?:text|mathrm|mathop|rm)\s*\{\s*(Var|var|Cov|cov|Corr|corr|tr|rank|span|diag|sgn|sign)\s*\}/g,
+    // Not in subscripts: E_{\mathrm{corr}} (corrosion), \Delta_{\mathrm{tr}} are labels, not operators.
+    pattern: /(?<!_\s*\{?\s*)\\(?:text|mathrm|mathop|rm)\s*\{\s*(Var|var|Cov|cov|Corr|corr|tr|rank|span|diag|sgn|sign)\s*\}/g,
     fix: (_m, name) => op(name),
   },
   // Not in discrete mathematics, where tr(R) is the composite closure t(r(R)).

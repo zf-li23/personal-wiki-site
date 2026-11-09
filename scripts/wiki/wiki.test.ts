@@ -150,6 +150,8 @@ describe('notation', () => {
   it('rewrites unambiguous forms and respects scopes', () => {
     assert.equal(fixNotation(String.raw`\vec{x}^T A\vec x + Ae^{At} + a_1,...,a_n`, '2.1.1'), String.raw`\boldsymbol{x}^{\mathsf T} A\boldsymbol{x} + A\mathrm{e}^{At} + a_1,\dots,a_n`);
     assert.equal(fixNotation(String.raw`E(X)+EX+P\{X=1\}+\text{var}(X)+cov(X,Y)`, '3.1.8'), String.raw`\mathbb{E}(X)+\mathbb{E}X+\mathbb{P}\{X=1\}+\operatorname{Var}(X)+\operatorname{Cov}(X,Y)`);
+    // subscript labels are not operators: corrosion potential E_corr
+    assert.equal(fixNotation(String.raw`E_{\mathrm{corr}} + j_\mathrm{corr} + \mathrm{corr}(X,Y)`, '6.3.14'), String.raw`E_{\mathrm{corr}} + j_\mathrm{corr} + \operatorname{Corr}(X,Y)`);
     assert.equal(fixNotation(String.raw`\int f(x)dx + \frac{dy}{dx} + d(x,y)`, '2.2.4'), String.raw`\int f(x)\mathrm{d}x + \frac{\mathrm{d}y}{\mathrm{d}x} + d(x,y)`);
     // logic predicates, the group identity and power sets keep their letters
     assert.equal(fixNotation(String.raw`P(x) \land e^{-1} = e`, '1.3.2'), String.raw`P(x) \land e^{-1} = e`);

@@ -200,7 +200,7 @@ For a rigid molecule undergoing isotropic **rotational diffusion** with coeffici
 $$
 C(t) = \mathrm{e}^{-t/\tau_{\mathrm{c}}}, \qquad J(\omega) = \frac25\,\frac{\tau_{\mathrm{c}}}{1 + \omega^2\tau_{\mathrm{c}}^2}, \qquad \tau_{\mathrm{c}} = \frac{4\pi\eta r_{\mathrm{h}}^3}{3k_{\mathrm{B}}T}, \tag{13.13}
 $$
-the last by the Stokes–Einstein–Debye relation for a sphere of **hydrodynamic radius** $r_{\mathrm{h}}$ (the rotational analogue of the **Stokes–Einstein equation**). The spectral density is flat, $J(\omega) \approx \frac25\tau_{\mathrm{c}}$, up to $\omega \approx 1/\tau_{\mathrm{c}}$ and falls as $\omega^{-2}$ beyond. A slower molecule has more power at low frequencies and less at high ones; the total, $\int_0^\infty J\,\mathrm{d}\omega = \pi/5$, is fixed.
+the last by the Stokes–Einstein–Debye relation for a sphere of **hydrodynamic radius** $r_{\mathrm{h}}$ (the rotational analog of the **Stokes–Einstein equation**). The spectral density is flat, $J(\omega) \approx \frac25\tau_{\mathrm{c}}$, up to $\omega \approx 1/\tau_{\mathrm{c}}$ and falls as $\omega^{-2}$ beyond. A slower molecule has more power at low frequencies and less at high ones; the total, $\int_0^\infty J\,\mathrm{d}\omega = \pi/5$, is fixed.
 
 **Example 13.3.1 (Correlation Times of Proteins)** Eq. (13.13) with a hydration shell of $0.3\,\mathrm{g}$ of water per gram gives about $0.37\,\mathrm{ns}$ per kDa at $25\,{}^\circ\mathrm{C}$; measured values are larger, about $0.5$–$0.6\,\mathrm{ns}$ per kDa, because real proteins are not spheres and the hydration layer is thicker. **Ubiquitin** ($8.6\,\mathrm{kDa}$) has $\tau_{\mathrm{c}} \approx 4\,\mathrm{ns}$ in water at $25\,{}^\circ\mathrm{C}$, a $25\,\mathrm{kDa}$ protein $12$–$15\,\mathrm{ns}$, a $100\,\mathrm{kDa}$ protein about $50\,\mathrm{ns}$. Since $\tau_{\mathrm{c}} \propto \eta/T$, cooling a sample from 25 to $5\,{}^\circ\mathrm{C}$ almost doubles $\tau_{\mathrm{c}}$ (the viscosity of water rises from $0.89$ to $1.52\,\mathrm{mPa\,s}$), and $\mathrm{D_2O}$ is 25 % more viscous than $\mathrm{H_2O}$.
 
@@ -301,7 +301,7 @@ In an $\alpha$ helix ($\phi \approx -57^\circ$) $^3J \approx 4\,\mathrm{Hz}$, in
 
 ### 13.4.3. The Quantum Description: Density Operator and Product Operators
 
-The vector model fails as soon as couplings matter: the magnetization of a coupled spin can be converted into states that have no classical analogue, such as antiphase magnetization and multiple-quantum coherence, which carry the information of all multidimensional experiments. The quantum description is needed, and it is an elegant application of the linear algebra of $2\times2$ matrices.
+The vector model fails as soon as couplings matter: the magnetization of a coupled spin can be converted into states that have no classical analog, such as antiphase magnetization and multiple-quantum coherence, which carry the information of all multidimensional experiments. The quantum description is needed, and it is an elegant application of the linear algebra of $2\times2$ matrices.
 
 A single spin-1/2 has the basis states $|\alpha\rangle = (1, 0)^{\mathsf T}$ and $|\beta\rangle = (0, 1)^{\mathsf T}$ and the spin operators (in units of $\hbar$) $\hat{I}_k = \frac12\sigma_k$ with the Pauli matrices,
 
@@ -463,7 +463,7 @@ The restraints of an NMR structure are hundreds to thousands of bounds on distan
 **Algorithm 13.5.1 (Restraint-Driven Simulated Annealing)**
 
 1. Represent the molecule with standard covalent geometry and a simplified force field (bonds, angles, planarity, chirality, a purely repulsive van der Waals term).
-2. Define a target function $E = E_{\operatorname{Cov}} + E_{\mathrm{rep}} + w_{\mathrm{NOE}}\sum\max(0, r_{ij} - u_{ij})^2 + w_\phi\sum\Delta\phi^2 + w_D\sum(D^{\mathrm{calc}} - D^{\mathrm{obs}})^2 + \cdots$, a flat-bottom penalty for each violated restraint.
+2. Define a target function $E = E_{\mathrm{cov}} + E_{\mathrm{rep}} + w_{\mathrm{NOE}}\sum\max(0, r_{ij} - u_{ij})^2 + w_\phi\sum\Delta\phi^2 + w_D\sum(D^{\mathrm{calc}} - D^{\mathrm{obs}})^2 + \cdots$, a flat-bottom penalty for each violated restraint.
 3. Starting from random or extended conformations, run **molecular dynamics** (in Cartesian or torsion-angle coordinates) at high temperature with soft repulsion, so that chains can pass through each other, and cool slowly while raising the weights of the restraints and of the repulsion: **simulated annealing** ([7.6.9](/7.6.9#alg-9.11.1)).
 4. Repeat from 50–200 starting conformations; keep the 10–20 of lowest energy, refine them in a more complete force field with explicit or implicit solvent.
 5. Validate: restraint violations, Ramachandran statistics, packing, agreement with data not used in the calculation (cross-validated RDCs, chemical shifts).
