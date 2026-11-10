@@ -10063,7 +10063,7 @@ terms:
   - { zh: 瘤胃, en: rumen }
   - { zh: 微生物群, en: microbiota, aliases: [正常菌群, normal microbiota] }
   - { zh: 菌群失调, en: dysbiosis, aliases: [生态失调] }
-  - { zh: 定植抗力, en: colonization resistance, aliases: [定殖抗力] }
+  - { zh: 定植抗力, en: colonization resistance, aliases: [定殖抗力, 定植抗性] }
   - { zh: 无菌动物, en: germ-free animal, aliases: [germ-free, 悉生动物, gnotobiotic animal] }
   - { zh: 粪菌移植, en: fecal microbiota transplantation, aliases: [FMT, 粪便微生物移植] }
   - { zh: 益生菌, en: probiotic, aliases: [probiotics] }
@@ -11968,5 +11968,4 @@ terms:
   - { zh: 归巢受体, en: homing receptor, aliases: [homing receptors] }
   - { zh: 非典型趋化因子受体, en: atypical chemokine receptor, aliases: [ACKR, ACKRs] }
   - { zh: 黏膜相关恒定 T 细胞, en: mucosal-associated invariant T cell, aliases: [MAIT, MAIT 细胞, MAIT cells] }
-  - { zh: 定植抗性, en: colonization resistance }
   - { zh: 危险模型, en: danger model, aliases: [danger theory] }
