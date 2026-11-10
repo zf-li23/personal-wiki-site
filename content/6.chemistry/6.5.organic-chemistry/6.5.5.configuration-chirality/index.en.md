@@ -1,6 +1,6 @@
 ---
 title: Configuration and Chirality
-source_hash: e29635d866c1
+source_hash: 4a11bcf406ec
 ---
 
 [6.5.4](/6.5.4) discussed the conformations that interconvert without breaking bonds; this chapter discusses the **configuration**, which can be changed only by breaking bonds. Configurational isomerism includes cis–trans isomerism of double bonds and rings, and the enantiomeric and diastereomeric isomerism that arises from chirality. [6.1.5](/6.1.5) already introduced **chirality**, **enantiomers**, **diastereomers** and **racemates** with coordination compounds, and here we put them on a systematic basis: first the language for describing configuration (the Cahn–Ingold–Prelog rules, E/Z, R/S, the Fischer projection and D/L), then molecules with several stereocenters, chiral molecules without stereocenters, optical activity, and the ways of obtaining a single enantiomer. The last section, on homotopic, enantiotopic and diastereotopic relationships and the Re/Si faces, is the basis for deciding NMR equivalence in [6.5.6](/6.5.6#sec-6.5.1) and for the stereochemistry of carbonyl addition discussed in [6.5.16](/6.5.16#sec-16.4).
@@ -328,7 +328,7 @@ The industrial synthesis of the antidepressant duloxetine uses this method: race
 
 The yield of a classical kinetic resolution does not exceed $50\%$ (only one enantiomer is taken). If the two enantiomers of the substrate can interconvert rapidly under the reaction conditions, so that the slow-reacting enantiomer racemizes continuously to the fast-reacting one, the theoretical yield can reach $100\%$; this is called dynamic kinetic resolution.
 
-![Lipase-catalysed kinetic resolution of racemic 1-phenylethanol (for example with Candida antarctica lipase B). Top: the active-site serine (its proton is taken by the histidine of the catalytic triad, not drawn) adds to the carbonyl group of vinyl acetate, and the tetrahedral intermediate expels the enolate of vinyl alcohol, which tautomerizes to acetaldehyde, so acylation of the enzyme is irreversible. Bottom: the acyl-enzyme transfers the acetyl group to the alcohol; the large (phenyl) and medium (methyl) groups of the (R)-alcohol fit the two pockets of the active site and it reacts much faster, while the (S)-alcohol is left behind, and the two are separated as alcohol and ester](./plots/lipase-resolution.py)
+![Lipase-catalyzed kinetic resolution of racemic 1-phenylethanol (for example with *Candida antarctica* lipase B). Top: the active-site serine (its proton is taken by the histidine of the catalytic triad, not drawn) adds to the carbonyl group of vinyl acetate, and the tetrahedral intermediate expels the enolate of vinyl alcohol, which tautomerizes to acetaldehyde, so acylation of the enzyme is irreversible. Bottom: the acyl-enzyme transfers the acetyl group to the alcohol; the large (phenyl) and medium (methyl) groups of the (R)-alcohol fit the two pockets of the active site and it reacts much faster, while the (S)-alcohol is left behind, and the two are separated as alcohol and ester](./plots/lipase-resolution.py)
 
 ### 5.7.3. Enantiomeric Excess and Diastereomeric Excess
 
