@@ -11731,7 +11731,7 @@ terms:
   - { zh: 急性期反应, en: acute-phase response }
   - { zh: 急性期蛋白, en: acute-phase protein, aliases: [acute-phase proteins, 急性期反应蛋白] }
   - { zh: 炎症介质, en: inflammatory mediator, aliases: [inflammatory mediators] }
-  - { zh: 呼吸爆发, en: respiratory burst, aliases: [oxidative burst] }
+  - { zh: 呼吸爆发, en: respiratory burst, aliases: [oxidative burst, 氧化爆发] }
   - { zh: 吞噬溶酶体, en: phagolysosome, aliases: [phagolysosomes] }
   - { zh: 中性粒细胞胞外陷阱, en: neutrophil extracellular trap, aliases: [NET, NETs] }
   - { zh: 调理作用, en: opsonization, aliases: [opsonisation] }
