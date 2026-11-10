@@ -1,6 +1,6 @@
 ---
 title: Programmable Logic Devices and Hardware Description Languages
-source_hash: 0880086c878d
+source_hash: aeca1218040e
 ---
 
 In the previous chapters we built circuits from gates, **flip-flops** and medium-scale chips, where the function of a circuit is determined by the wiring between chips and changing the function means rewiring. Programmable logic devices make the "wiring" a writable configuration as well: the same chip becomes a different circuit when a different configuration is written to it. Following the historical development of the devices, this chapter proceeds from simple devices built around an AND-OR array (ROM, **PLA**, PAL, GAL) to CPLDs and to FPGAs built around lookup tables, and uses current AMD (formerly Xilinx) devices as examples of the on-chip resources of an FPGA. Once devices reach millions of logic cells, circuits can no longer be drawn as logic diagrams and must be written in a hardware description language. The second half of the chapter therefore introduces, mainly in SystemVerilog (with VHDL for comparison), how to write combinational logic, sequential logic and **finite-state machines**, together with testbenches and simulation, the flow of synthesis and implementation, and the principles of synchronous design. The Karnaugh-map minimization, state assignment and timing constraints learned earlier are all done automatically by EDA tools here, but understanding them is what makes it possible to write good hardware descriptions; the experiments of computer organization ([4.10](/4.10)) implement a processor on an FPGA using the methods of this chapter.
@@ -147,7 +147,7 @@ Other vendors have similar structures with different details: Altera (Intel) Agi
 
 ### 9.6.3. Current Devices and Configuration
 
-AMD completed its acquisition of Xilinx in 2022, and the current FPGA product lines include: the 28 nm 7 series (Spartan-7, Artix-7, Kintex-7, Virtex-7, still the most commonly used in teaching and in low- and mid-range applications); the 20/16 nm UltraScale and UltraScale+ (including Spartan UltraScale+, released in 2024, and the Zynq UltraScale+ MPSoC with integrated Arm processors); and the 7 nm Versal adaptive SoCs. Other major vendors are Altera (acquired by Intel in 2015 and operating independently under the Altera brand again since 2024; the Agilex, Cyclone and MAX series), Lattice (low-power, small devices) and Microchip (the Flash-based nonvolatile PolarFire series); in China there are Pango Microsystems (Unigroup Tongchuang), Anlogic, Gowin and others.
+AMD completed its acquisition of Xilinx in 2022, and the current FPGA product lines include: the 28 nm 7 series (Spartan-7, Artix-7, Kintex-7, Virtex-7, still the most commonly used in teaching and in low- and mid-range applications); the 20/16 nm UltraScale and UltraScale+ (including Spartan UltraScale+, released in 2024, and the Zynq UltraScale+ MPSoC with integrated Arm processors); and the 7 nm Versal adaptive SoCs. Other major vendors are Altera (acquired by Intel in 2015 and operating independently under the Altera brand again since 2024; the Agilex, Cyclone and MAX series), Lattice (low-power, small devices) and Microchip (the Flash-based nonvolatile PolarFire series); in China there are Pango Microsystems, Anlogic, Gowin and others.
 
 The configuration of an SRAM-based FPGA is lost at power-off; at every power-up the configuration data (the bitstream) must be loaded from an external Flash, or downloaded by a processor or **debugger** over JTAG. Flash-based FPGAs and CPLDs need no external configuration memory.
 
@@ -522,7 +522,7 @@ Inputs change after the falling clock edge and outputs are checked before the ri
 | Post-synthesis functional simulation | After synthesis | Netlist mapped to device primitives | Check whether synthesis changed the function (such as unintended latches) |
 | Timing simulation | After place and route | Gate and wire delays | Check timing problems; slow and resource-hungry, so usually replaced by static timing analysis |
 
-Behavioral simulation is enough to find the vast majority of logic errors. In simulation waveforms, Vivado shows unknown values X in red (mostly due to missing reset or multiple drivers) and high impedance Z in blue (mostly due to missing connections).
+Behavioral simulation is enough to find the vast majority of logic errors. In simulation waveforms, unknown values X are highlighted in red (mostly due to missing reset or multiple drivers), and high impedance Z is drawn as a line midway between the high and low levels (mostly due to missing connections).
 
 There are also problems simulation cannot see: interaction with real peripherals, clock-domain crossings and timing violations. These are debugged with an on-chip logic analyzer: insert an ILA (Integrated Logic Analyzer) IP core into the design, specify the signals to observe and the trigger conditions, re-synthesize and re-implement, download, and observe the waveforms inside the chip in real time in Vivado. It uses block RAM to store the samples, and every change of the observed signals requires a new implementation.
 
