@@ -1,7 +1,7 @@
 ---
 title: Nucleophilic Acyl Substitution and Carboxylic Acid Derivatives
 description: Structure, nomenclature, physical properties, and IR features of acyl halides, anhydrides, esters, and amides; the addition–elimination mechanism of nucleophilic acyl substitution, the tetrahedral intermediate, and the order of reactivity; acid–base catalysis and nucleophilic catalysis by DMAP; preparation and reactions of acyl chlorides and anhydrides; Fischer esterification and the four mechanisms of ester hydrolysis (BAc2, AAc2, AAc1, AAl1) with the evidence for them; lactones, transesterification, and polyesters (enzymatic degradation of PET); formation of amides (DCC) and their hydrolysis, nylons; reduction of derivatives and reactions with organometallic reagents; acyl transfer in biology (thioesters and coenzyme A, triglycerides and saponification, phospholipids).
-source_hash: 7d8f42f92916
+source_hash: d31ac6f7a2a9
 ---
 
 The carboxylic acid derivatives (acyl halides, anhydrides, esters, and amides) all contain the acyl group $\ce{RC(=O)-}$, and their interconversions with one another and with carboxylic acids follow a single mechanism: a **nucleophile** adds to the carbonyl carbon to give a tetrahedral intermediate, and a **leaving group** is then eliminated to regenerate C=O. This is nucleophilic acyl substitution. Together with nucleophilic substitution at saturated carbon in [6.5.8](/6.5.8), it is one of the two most fundamental substitution mechanisms in organic chemistry, and it is the most common reaction in protein synthesis, fat metabolism, and drug action in living organisms.
@@ -364,7 +364,7 @@ The reactions of organometallic reagents with derivatives follow the same patter
 ![Reaction of an ester with two equivalents of Grignard reagent: the C–Mg bond adds to the carbonyl carbon of methyl acetate, the tetrahedral intermediate loses methoxide to give acetone; acetone is attacked at once by a second equivalent of methylmagnesium bromide, and acidic workup gives tert-butyl alcohol](./plots/ester-grignard.py)
 
 ```smiles
-CC(=O)OC>>CC(C)(c1ccccc1)c1ccccc1
+CC(=O)OC>>CC(O)(c1ccccc1)c1ccccc1
 CCCC(=O)Cl>>CCCC(C)=O
 ```
 

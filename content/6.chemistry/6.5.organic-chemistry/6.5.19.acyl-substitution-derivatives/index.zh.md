@@ -363,7 +363,7 @@ N-甲氧基-N-甲基酰胺（Weinreb 酰胺，Nahm 与 Weinreb，1981）是一�
 ![酯与两当量 Grignard 试剂的反应：C–Mg 键加成到乙酸甲酯的羰基碳上，四面体中间体失去甲氧基生成丙酮；丙酮立即被第二当量的甲基溴化镁加成，酸性后处理得到叔丁醇](./plots/ester-grignard.py)
 
 ```smiles
-CC(=O)OC>>CC(C)(c1ccccc1)c1ccccc1
+CC(=O)OC>>CC(O)(c1ccccc1)c1ccccc1
 CCCC(=O)Cl>>CCCC(C)=O
 ```
 
