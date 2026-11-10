@@ -229,7 +229,7 @@ The azide ion $\ce{N3-}$ is a very good nucleophile and a very weak base ($\math
 
 SN2 of cyanide ion with an alkyl halide gives a nitrile, which is reduced with $\ce{LiAlH4}$ or by catalytic hydrogenation to $\ce{RCH2NH2}$, with one more carbon than the alkyl halide (chemistry of nitriles in [6.5.20](/6.5.20#sec-20.4)):
 
-![Reduction of a nitrile to a primary amine by LiAlH₄. Top: a hydride from AlH₄⁻ adds to the nitrile carbon, and one π pair of C≡N moves onto nitrogen to give an imide anion bound to aluminum. Bottom: a second hydride adds to the C=N carbon of this imine salt to give the dianionic aminoaluminate, which is protonated by water to pentan-1-amine](./plots/nitrile-reduction.py)
+![Reduction of a nitrile to a primary amine by LiAlH₄. Top: a hydride from AlH₄⁻ adds to the nitrile carbon, and one π pair of C≡N moves onto nitrogen to give an imine anion bound to aluminum. Bottom: a second hydride adds to the C=N carbon of this imine salt to give the dianionic aminoaluminate, which is protonated by water to pentan-1-amine](./plots/nitrile-reduction.py)
 
 ```smiles
 CCCCBr.[N-]=[N+]=[N-]>>CCCCN=[N+]=[N-]
