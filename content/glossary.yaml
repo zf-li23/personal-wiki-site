@@ -1928,6 +1928,7 @@ terms:
   - { zh: 区组, en: block, aliases: [blocks], scope: ["3", "7.7"] }
 
   # causal inference (3.9)
+  - { zh: Markov 父节点, en: Markov parents, aliases: [Markov parent], scope: ["3.9"] }
   - { zh: 分层随机化实验, en: stratified randomized experiment, aliases: [SRE, randomized block experiment], scope: ["3.9"] }
   - { zh: 配对随机化实验, en: paired randomized experiment, aliases: [pairwise randomized experiment, PRE], scope: ["3.9"] }
   - { zh: Fisher 精确 p 值, en: "Fisher's exact p-value", aliases: [FEP, Fisher randomization test, Fisher 随机化检验], scope: ["3.9"] }
