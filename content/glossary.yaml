@@ -7563,7 +7563,7 @@ terms:
   - { zh: 守护蛋白, en: shugoshin }
   - { zh: 极体, en: polar body }
   - { zh: 非整倍性, en: aneuploidy, aliases: [非整倍体] }
-  - { zh: 促分裂原, en: mitogen, aliases: [有丝分裂原, 促细胞分裂剂] }
+  - { zh: 促分裂原, en: mitogen, aliases: [有丝分裂原, 促细胞分裂剂, 丝裂原] }
   - { zh: 生长因子, en: growth factor }
   - { zh: 存活因子, en: survival factor }
   - { zh: 限制点, en: restriction point, aliases: [R 点] }
@@ -11659,3 +11659,314 @@ terms:
   - { zh: 边缘系统, en: limbic system }
   - { zh: 半脑睡眠, en: unihemispheric sleep, aliases: [unihemispheric slow-wave sleep] }
   - { zh: 脑化指数, en: encephalization quotient }
+  # biology: immunology (7.15); homonyms of terms in other disciplines are scoped to 7.15
+  - { zh: 免疫系统, en: immune system }
+  - { zh: 免疫防御, en: immune defense }
+  - { zh: 免疫监视, en: immune surveillance }
+  - { zh: 免疫自稳, en: immune homeostasis }
+  - { zh: 固有免疫, en: innate immunity, aliases: [天然免疫, 先天免疫, 非特异性免疫] }
+  - { zh: 适应性免疫, en: adaptive immunity, aliases: [获得性免疫, 特异性免疫] }
+  - { zh: 免疫应答, en: immune response, aliases: [immune responses] }
+  - { zh: 体液免疫, en: humoral immunity }
+  - { zh: 细胞免疫, en: cell-mediated immunity, aliases: [cellular immunity] }
+  - { zh: 免疫记忆, en: immunological memory, aliases: [immune memory] }
+  - { zh: 克隆选择学说, en: clonal selection theory, aliases: [clonal selection hypothesis] }
+  - { zh: 免疫网络学说, en: immune network theory, aliases: [idiotypic network theory] }
+  - { zh: 1 型免疫, en: type 1 immunity }
+  - { zh: 2 型免疫, en: type 2 immunity }
+  - { zh: 3 型免疫, en: type 3 immunity }
+  - { zh: 白细胞, en: leukocyte, aliases: [leukocytes, white blood cell] }
+  - { zh: 淋巴细胞, en: lymphocyte, aliases: [lymphocytes] }
+  - { zh: 髓系祖细胞, en: common myeloid progenitor, aliases: [CMP, 髓样干细胞] }
+  - { zh: 淋巴系祖细胞, en: common lymphoid progenitor, aliases: [CLP, 淋巴样干细胞] }
+  - { zh: T 细胞, en: T cell, aliases: [T cells, T 淋巴细胞, T lymphocyte] }
+  - { zh: B 细胞, en: B cell, aliases: [B cells, B 淋巴细胞, B lymphocyte] }
+  - { zh: 浆细胞, en: plasma cell, aliases: [plasma cells] }
+  - { zh: 初始淋巴细胞, en: naive lymphocyte, aliases: [幼稚淋巴细胞, naive lymphocytes] }
+  - { zh: 效应细胞, en: effector cell, aliases: [effector cells], scope: ["7.15"] }
+  - { zh: 记忆细胞, en: memory cell, aliases: [memory cells], scope: ["7.15"] }
+  - { zh: 粒细胞, en: granulocyte, aliases: [granulocytes] }
+  - { zh: 单核细胞, en: monocyte, aliases: [monocytes] }
+  - { zh: 巨噬细胞, en: macrophage, aliases: [macrophages] }
+  - { zh: 中性粒细胞, en: neutrophil, aliases: [neutrophils] }
+  - { zh: 嗜酸性粒细胞, en: eosinophil, aliases: [eosinophils] }
+  - { zh: 嗜碱性粒细胞, en: basophil, aliases: [basophils] }
+  - { zh: 肥大细胞, en: mast cell, aliases: [mast cells] }
+  - { zh: 树突状细胞, en: dendritic cell, aliases: [DC, dendritic cells] }
+  - { zh: 自然杀伤细胞, en: natural killer cell, aliases: [NK 细胞, NK cell, NK cells] }
+  - { zh: 中枢免疫器官, en: primary lymphoid organ, aliases: [primary lymphoid organs, 中枢淋巴器官] }
+  - { zh: 外周免疫器官, en: secondary lymphoid organ, aliases: [secondary lymphoid organs, 外周淋巴器官] }
+  - { zh: 胸腺, en: thymus }
+  - { zh: 淋巴结, en: lymph node, aliases: [lymph nodes] }
+  - { zh: 脾, en: spleen }
+  - { zh: 黏膜相关淋巴组织, en: mucosa-associated lymphoid tissue, aliases: [MALT] }
+  - { zh: 生发中心, en: germinal center, aliases: [germinal centers] }
+  - { zh: 高内皮微静脉, en: high endothelial venule, aliases: [HEV, high endothelial venules] }
+  - { zh: 淋巴细胞再循环, en: lymphocyte recirculation }
+  - { zh: 分化群, en: cluster of differentiation, aliases: [CD, 白细胞分化抗原] }
+  - { zh: 黏附分子, en: adhesion molecule, aliases: [adhesion molecules] }
+  - { zh: 免疫球蛋白超家族, en: immunoglobulin superfamily, aliases: [IgSF] }
+  - { zh: 白细胞黏附级联, en: leukocyte adhesion cascade, aliases: [leukocyte extravasation] }
+  - { zh: 淋巴细胞归巢, en: lymphocyte homing, aliases: [homing] }
+  - { zh: 趋化因子, en: chemokine, aliases: [chemokines, 趋化性细胞因子] }
+  - { zh: 趋化因子受体, en: chemokine receptor, aliases: [chemokine receptors] }
+  - { zh: 吞噬细胞, en: phagocyte, aliases: [phagocytes] }
+  - { zh: 组织驻留巨噬细胞, en: tissue-resident macrophage, aliases: [tissue-resident macrophages] }
+  - { zh: 巨噬细胞极化, en: macrophage polarization, aliases: [M1/M2 极化] }
+  - { zh: 脱颗粒, en: degranulation }
+  - { zh: 颗粒酶, en: granzyme, aliases: [granzymes] }
+  - { zh: 丢失自我, en: missing self, aliases: [missing-self recognition] }
+  - { zh: 固有淋巴细胞, en: innate lymphoid cell, aliases: [ILC, innate lymphoid cells] }
+  - { zh: γδ T 细胞, en: γδ T cell, aliases: [gamma delta T cell, γδ T cells] }
+  - { zh: NKT 细胞, en: natural killer T cell, aliases: [NKT cell, NKT cells] }
+  - { zh: 抗菌肽, en: antimicrobial peptide, aliases: [antimicrobial peptides, 宿主防御肽] }
+  - { zh: 防御素, en: defensin, aliases: [defensins] }
+  - { zh: Toll 样受体, en: Toll-like receptor, aliases: [TLR, TLRs, Toll-like receptors] }
+  - { zh: RIG-I 样受体, en: RIG-I-like receptor, aliases: [RLR, RLRs] }
+  - { zh: NOD 样受体, en: NOD-like receptor }
+  - { zh: cGAS–STING 通路, en: cGAS–STING pathway, aliases: [cGAS-STING pathway, cGAS-STING] }
+  - { zh: MyD88, en: MyD88, aliases: [myeloid differentiation primary response 88] }
+  - { zh: 干扰素调节因子, en: interferon regulatory factor, aliases: [IRF, IRFs] }
+  - { zh: 训练免疫, en: trained immunity, aliases: [先天免疫记忆, innate immune memory] }
+  - { zh: 急性期反应, en: acute-phase response }
+  - { zh: 急性期蛋白, en: acute-phase protein, aliases: [acute-phase proteins, 急性期反应蛋白] }
+  - { zh: 炎症介质, en: inflammatory mediator, aliases: [inflammatory mediators] }
+  - { zh: 呼吸爆发, en: respiratory burst, aliases: [oxidative burst] }
+  - { zh: 吞噬溶酶体, en: phagolysosome, aliases: [phagolysosomes] }
+  - { zh: 中性粒细胞胞外陷阱, en: neutrophil extracellular trap, aliases: [NET, NETs] }
+  - { zh: 调理作用, en: opsonization, aliases: [opsonisation] }
+  - { zh: 免疫原性, en: immunogenicity }
+  - { zh: 抗原性, en: antigenicity, aliases: [免疫反应性] }
+  - { zh: 线性表位, en: linear epitope, aliases: [sequential epitope, 顺序表位] }
+  - { zh: 构象表位, en: conformational epitope, aliases: [discontinuous epitope] }
+  - { zh: T 细胞表位, en: T-cell epitope, aliases: [T cell epitope] }
+  - { zh: B 细胞表位, en: B-cell epitope, aliases: [B cell epitope] }
+  - { zh: 半抗原–载体效应, en: hapten–carrier effect, aliases: [carrier effect] }
+  - { zh: 胸腺依赖性抗原, en: thymus-dependent antigen, aliases: [TD antigen, TD-Ag] }
+  - { zh: 胸腺非依赖性抗原, en: thymus-independent antigen, aliases: [TI antigen, TI-Ag] }
+  - { zh: 佐剂, en: adjuvant, aliases: [adjuvants] }
+  - { zh: 交叉反应, en: cross-reactivity, aliases: [cross-reaction, 共同抗原], scope: ["7.15"] }
+  - { zh: 自身抗原, en: autoantigen, aliases: [self antigen, 自体抗原] }
+  - { zh: 同种异型抗原, en: alloantigen, aliases: [alloantigens] }
+  - { zh: 同种异型, en: allotype, aliases: [allotypes] }
+  - { zh: 独特型, en: idiotype, aliases: [idiotypes] }
+  - { zh: 重链, en: heavy chain, aliases: [H chain], scope: ["7.15"] }
+  - { zh: 轻链, en: light chain, aliases: [L chain], scope: ["7.15"] }
+  - { zh: 可变区, en: variable region, aliases: [V region, variable domain], scope: ["7.15"] }
+  - { zh: 恒定区, en: constant region, aliases: [C region, constant domain], scope: ["7.15"] }
+  - { zh: 互补决定区, en: complementarity-determining region, aliases: [CDR, CDRs, 高变区] }
+  - { zh: Fab 片段, en: Fab fragment, aliases: [Fab] }
+  - { zh: Fc 片段, en: Fc fragment, aliases: [Fc] }
+  - { zh: 铰链区, en: hinge region }
+  - { zh: 亲合力, en: avidity, scope: ["7.15"] }
+  - { zh: 免疫复合物, en: immune complex, aliases: [immune complexes, 抗原抗体复合物] }
+  - { zh: IgG, en: IgG, aliases: [immunoglobulin G] }
+  - { zh: IgM, en: IgM, aliases: [immunoglobulin M] }
+  - { zh: IgA, en: IgA, aliases: [immunoglobulin A] }
+  - { zh: IgD, en: IgD, aliases: [immunoglobulin D] }
+  - { zh: IgE, en: IgE, aliases: [immunoglobulin E] }
+  - { zh: 分泌型 IgA, en: secretory IgA, aliases: [sIgA] }
+  - { zh: J 链, en: J chain }
+  - { zh: 嵌合抗体, en: chimeric antibody }
+  - { zh: 人源化抗体, en: humanized antibody }
+  - { zh: 双特异性抗体, en: bispecific antibody, aliases: [bispecific antibodies] }
+  - { zh: 纳米抗体, en: nanobody, aliases: [单域抗体, single-domain antibody] }
+  - { zh: 经典途径, en: classical pathway, scope: ["7.15"] }
+  - { zh: 旁路途径, en: alternative pathway, aliases: [替代途径], scope: ["7.15"] }
+  - { zh: 凝集素途径, en: lectin pathway }
+  - { zh: C3 转化酶, en: C3 convertase, aliases: [C3 convertases] }
+  - { zh: 攻膜复合体, en: membrane attack complex, aliases: [MAC] }
+  - { zh: 过敏毒素, en: anaphylatoxin, aliases: [anaphylatoxins] }
+  - { zh: 补体受体, en: complement receptor, aliases: [complement receptors] }
+  - { zh: 补体调节蛋白, en: complement regulatory protein, aliases: [complement regulatory proteins] }
+  - { zh: 甘露糖结合凝集素, en: mannose-binding lectin, aliases: [MBL] }
+  - { zh: 细胞因子, en: cytokine, aliases: [cytokines] }
+  - { zh: 白细胞介素, en: interleukin, aliases: [interleukins, IL] }
+  - { zh: 肿瘤坏死因子, en: tumor necrosis factor, aliases: [TNF] }
+  - { zh: 集落刺激因子, en: colony-stimulating factor, aliases: [CSF, colony-stimulating factors] }
+  - { zh: 转化生长因子-β, en: transforming growth factor-β, aliases: [TGF-β] }
+  - { zh: 细胞因子受体, en: cytokine receptor, aliases: [cytokine receptors] }
+  - { zh: 共同 γ 链, en: common γ chain, aliases: [γc, common gamma chain] }
+  - { zh: 可溶性细胞因子受体, en: soluble cytokine receptor, aliases: [soluble cytokine receptors] }
+  - { zh: 诱饵受体, en: decoy receptor, aliases: [decoy receptors] }
+  - { zh: 细胞因子多效性, en: cytokine pleiotropy }
+  - { zh: 细胞因子冗余, en: cytokine redundancy }
+  - { zh: 细胞因子风暴, en: cytokine storm, aliases: [细胞因子释放综合征, cytokine release syndrome] }
+  - { zh: 抗原受体, en: antigen receptor, aliases: [antigen receptors, 淋巴细胞抗原受体] }
+  - { zh: T 细胞受体, en: T-cell receptor, aliases: [TCR, T cell receptor, TCRs] }
+  - { zh: B 细胞受体, en: B-cell receptor, aliases: [BCR, B cell receptor, BCRs] }
+  - { zh: 组合多样性, en: combinatorial diversity }
+  - { zh: 连接多样性, en: junctional diversity }
+  - { zh: 等位排斥, en: allelic exclusion }
+  - { zh: 受体编辑, en: receptor editing }
+  - { zh: 体细胞高频突变, en: somatic hypermutation, aliases: [SHM, 体细胞超突变] }
+  - { zh: 类别转换重组, en: class switch recombination, aliases: [CSR, 类别转换, class switching, 同种型转换] }
+  - { zh: 活化诱导胞苷脱氨酶, en: activation-induced cytidine deaminase, aliases: [AID] }
+  - { zh: 免疫组库, en: immune repertoire, aliases: [repertoire, 抗原受体库] }
+  - { zh: 主要组织相容性复合体, en: major histocompatibility complex, aliases: [MHC] }
+  - { zh: 人类白细胞抗原, en: human leukocyte antigen, aliases: [HLA] }
+  - { zh: MHC I 类分子, en: MHC class I molecule, aliases: [MHC I, MHC class I, MHC I 类分子, 主要组织相容性复合体 I 类分子] }
+  - { zh: MHC II 类分子, en: MHC class II molecule, aliases: [MHC II, MHC class II, MHC II 类分子] }
+  - { zh: β2 微球蛋白, en: β2-microglobulin, aliases: [β2m, B2M] }
+  - { zh: 抗原肽结合槽, en: peptide-binding groove, aliases: [peptide-binding cleft] }
+  - { zh: 锚定残基, en: anchor residue, aliases: [anchor residues] }
+  - { zh: MHC 限制性, en: MHC restriction, aliases: [MHC-restricted] }
+  - { zh: MHC 多态性, en: MHC polymorphism }
+  - { zh: 共显性表达, en: codominant expression }
+  - { zh: 非经典 MHC 分子, en: nonclassical MHC molecule, aliases: [nonclassical MHC, MHC class Ib] }
+  - { zh: 抗原提呈细胞, en: antigen-presenting cell, aliases: [APC, antigen-presenting cells] }
+  - { zh: 专职抗原提呈细胞, en: professional antigen-presenting cell, aliases: [professional APC] }
+  - { zh: 抗原加工, en: antigen processing }
+  - { zh: 抗原提呈, en: antigen presentation }
+  - { zh: 内源性抗原, en: endogenous antigen, aliases: [endogenous antigens] }
+  - { zh: 外源性抗原, en: exogenous antigen, aliases: [exogenous antigens] }
+  - { zh: 免疫蛋白酶体, en: immunoproteasome }
+  - { zh: 抗原加工相关转运体, en: transporter associated with antigen processing, aliases: [TAP] }
+  - { zh: 恒定链, en: invariant chain, aliases: [Ii] }
+  - { zh: 交叉提呈, en: cross-presentation, aliases: [cross-priming] }
+  - { zh: CD1 分子, en: CD1 molecule, aliases: [CD1, CD1 molecules] }
+  - { zh: 经典树突状细胞, en: conventional dendritic cell, aliases: [cDC, 常规树突状细胞] }
+  - { zh: 浆细胞样树突状细胞, en: plasmacytoid dendritic cell, aliases: [pDC] }
+  - { zh: 胸腺细胞, en: thymocyte, aliases: [thymocytes] }
+  - { zh: 死亡忽视, en: death by neglect }
+  - { zh: 胸腺上皮细胞, en: thymic epithelial cell, aliases: [TEC, thymic epithelial cells] }
+  - { zh: 自身免疫调节因子, en: autoimmune regulator, aliases: [AIRE] }
+  - { zh: 前 TCR, en: pre-TCR, aliases: [pre-T cell receptor] }
+  - { zh: 免疫突触, en: immunological synapse, aliases: [immune synapse, 免疫学突触] }
+  - { zh: 共刺激分子, en: costimulatory molecule, aliases: [costimulatory molecules, 协同刺激分子] }
+  - { zh: 共受体, en: coreceptor, aliases: [co-receptor, coreceptors], scope: ["7.15"] }
+  - { zh: 免疫受体酪氨酸激活基序, en: immunoreceptor tyrosine-based activation motif, aliases: [ITAM, ITAMs] }
+  - { zh: T 细胞活化, en: T-cell activation, aliases: [T cell activation] }
+  - { zh: 白细胞介素-2, en: interleukin-2, aliases: [IL-2] }
+  - { zh: 辅助性 T 细胞, en: helper T cell, aliases: [Th 细胞, helper T cells, Th cell] }
+  - { zh: Th1 细胞, en: Th1 cell, aliases: [Th1, Th1 cells] }
+  - { zh: Th2 细胞, en: Th2 cell, aliases: [Th2, Th2 cells] }
+  - { zh: Th17 细胞, en: Th17 cell, aliases: [Th17, Th17 cells] }
+  - { zh: 滤泡辅助性 T 细胞, en: follicular helper T cell, aliases: [Tfh, Tfh 细胞, Tfh cell] }
+  - { zh: 调节性 T 细胞, en: regulatory T cell, aliases: [Treg, Treg 细胞, regulatory T cells] }
+  - { zh: 细胞毒性 T 淋巴细胞, en: cytotoxic T lymphocyte, aliases: [CTL, CTLs, 细胞毒性 T 细胞, cytotoxic T cell] }
+  - { zh: FOXP3, en: FOXP3, aliases: [Foxp3] }
+  - { zh: T 细胞极化, en: T-cell polarization, aliases: [Th 分化, helper T-cell differentiation] }
+  - { zh: 克隆扩增, en: clonal expansion }
+  - { zh: 初次免疫应答, en: primary immune response, aliases: [primary response, 初次应答] }
+  - { zh: 再次免疫应答, en: secondary immune response, aliases: [secondary response, 再次应答, 回忆应答, anamnestic response] }
+  - { zh: 记忆 T 细胞, en: memory T cell, aliases: [memory T cells] }
+  - { zh: 中央记忆 T 细胞, en: central memory T cell, aliases: [TCM, T_CM] }
+  - { zh: 组织驻留记忆 T 细胞, en: tissue-resident memory T cell, aliases: [TRM, T_RM] }
+  - { zh: 前 B 细胞, en: pre-B cell, aliases: [pre-B cells] }
+  - { zh: 未成熟 B 细胞, en: immature B cell }
+  - { zh: 滤泡 B 细胞, en: follicular B cell, aliases: [B-2 细胞, B-2 cell] }
+  - { zh: 边缘区 B 细胞, en: marginal zone B cell, aliases: [MZ B cell] }
+  - { zh: B-1 细胞, en: B-1 cell, aliases: [B-1 cells] }
+  - { zh: BCR 复合物, en: BCR complex }
+  - { zh: B 细胞共受体, en: B-cell coreceptor, aliases: [B cell coreceptor, CD19–CD21–CD81 复合物] }
+  - { zh: 生发中心反应, en: germinal center reaction }
+  - { zh: 亲和力成熟, en: affinity maturation }
+  - { zh: 滤泡树突状细胞, en: follicular dendritic cell, aliases: [FDC, follicular dendritic cells] }
+  - { zh: 长寿浆细胞, en: long-lived plasma cell, aliases: [long-lived plasma cells] }
+  - { zh: 记忆 B 细胞, en: memory B cell, aliases: [memory B cells] }
+  - { zh: 暗区, en: dark zone, scope: ["7.15"] }
+  - { zh: 明区, en: light zone, scope: ["7.15"] }
+  - { zh: 抗体依赖性细胞介导的细胞毒作用, en: antibody-dependent cell-mediated cytotoxicity, aliases: [ADCC, 抗体依赖的细胞毒作用] }
+  - { zh: 中和作用, en: neutralization, scope: ["7.15"] }
+  - { zh: Fc 受体, en: Fc receptor, aliases: [FcR, Fc receptors] }
+  - { zh: 新生儿 Fc 受体, en: neonatal Fc receptor, aliases: [FcRn] }
+  - { zh: 多聚免疫球蛋白受体, en: polymeric immunoglobulin receptor, aliases: [pIgR] }
+  - { zh: FcεRI, en: FcεRI, aliases: [high-affinity IgE receptor] }
+  - { zh: 派尔集合淋巴结, en: "Peyer's patch", aliases: ["Peyer's patches", Peyer 结] }
+  - { zh: M 细胞, en: M cell, aliases: [microfold cell, M cells] }
+  - { zh: 上皮内淋巴细胞, en: intraepithelial lymphocyte, aliases: [IEL, intraepithelial lymphocytes] }
+  - { zh: 免疫耐受, en: immune tolerance, aliases: [immunological tolerance] }
+  - { zh: 中枢耐受, en: central tolerance }
+  - { zh: 外周耐受, en: peripheral tolerance }
+  - { zh: 克隆清除, en: clonal deletion, aliases: [clonal elimination] }
+  - { zh: 克隆失能, en: clonal anergy, aliases: [anergy, 无能] }
+  - { zh: 免疫忽视, en: immunological ignorance }
+  - { zh: 免疫豁免, en: immune privilege, aliases: [immune-privileged site, 免疫赦免] }
+  - { zh: 口服耐受, en: oral tolerance }
+  - { zh: 免疫检查点, en: immune checkpoint, aliases: [immune checkpoints, checkpoint molecule] }
+  - { zh: CTLA-4, en: CTLA-4, aliases: [cytotoxic T-lymphocyte-associated protein 4, CD152] }
+  - { zh: PD-1, en: PD-1, aliases: [programmed cell death protein 1, CD279] }
+  - { zh: PD-L1, en: PD-L1, aliases: [programmed death-ligand 1, CD274] }
+  - { zh: T 细胞耗竭, en: T-cell exhaustion, aliases: [T cell exhaustion, exhausted T cell] }
+  - { zh: 抑制性受体, en: inhibitory receptor, aliases: [inhibitory receptors], scope: ["7.15"] }
+  - { zh: 活化诱导的细胞死亡, en: activation-induced cell death, aliases: [AICD] }
+  - { zh: 过敏原, en: allergen, aliases: [allergens, 变应原] }
+  - { zh: 特应性, en: atopy, aliases: [atopic] }
+  - { zh: 全身性过敏反应, en: anaphylaxis, aliases: [过敏性休克] }
+  - { zh: 变应原免疫治疗, en: allergen immunotherapy, aliases: [脱敏治疗, 特异性免疫治疗] }
+  - { zh: 迟发型超敏反应, en: delayed-type hypersensitivity, aliases: [DTH] }
+  - { zh: Arthus 反应, en: Arthus reaction }
+  - { zh: 血清病, en: serum sickness }
+  - { zh: 肉芽肿, en: granuloma, aliases: [granulomas] }
+  - { zh: 慢性炎症, en: chronic inflammation }
+  - { zh: 新生儿溶血病, en: hemolytic disease of the newborn, aliases: [HDN] }
+  - { zh: 自身免疫病, en: autoimmune disease, aliases: [autoimmune diseases, 自身免疫性疾病] }
+  - { zh: 自身抗体, en: autoantibody, aliases: [autoantibodies] }
+  - { zh: 分子模拟, en: molecular mimicry }
+  - { zh: 表位扩展, en: epitope spreading, aliases: [determinant spreading] }
+  - { zh: 系统性红斑狼疮, en: systemic lupus erythematosus, aliases: [SLE] }
+  - { zh: 类风湿关节炎, en: rheumatoid arthritis, aliases: [RA] }
+  - { zh: 重症肌无力, en: myasthenia gravis }
+  - { zh: 同种异体移植, en: allograft, aliases: [allogeneic transplantation, allografts] }
+  - { zh: 同种异体识别, en: allorecognition }
+  - { zh: 移植排斥, en: graft rejection, aliases: [transplant rejection, 排斥反应] }
+  - { zh: 移植物抗宿主病, en: graft-versus-host disease, aliases: [GVHD] }
+  - { zh: 混合淋巴细胞反应, en: mixed lymphocyte reaction, aliases: [MLR] }
+  - { zh: 免疫抑制剂, en: immunosuppressant, aliases: [immunosuppressive drug, immunosuppressants] }
+  - { zh: 免疫编辑, en: cancer immunoediting, aliases: [immunoediting] }
+  - { zh: 肿瘤相关抗原, en: tumor-associated antigen, aliases: [TAA] }
+  - { zh: 肿瘤特异性抗原, en: tumor-specific antigen, aliases: [TSA] }
+  - { zh: 新抗原, en: neoantigen, aliases: [neoantigens] }
+  - { zh: 肿瘤微环境, en: tumor microenvironment, aliases: [TME] }
+  - { zh: 肿瘤免疫逃逸, en: tumor immune escape, aliases: [tumor immune evasion] }
+  - { zh: 骨髓来源抑制细胞, en: myeloid-derived suppressor cell, aliases: [MDSC, MDSCs] }
+  - { zh: 肿瘤相关巨噬细胞, en: tumor-associated macrophage, aliases: [TAM, TAMs] }
+  - { zh: 嵌合抗原受体 T 细胞, en: CAR-T cell, aliases: [CAR-T, chimeric antigen receptor T cell] }
+  - { zh: 过继细胞治疗, en: adoptive cell therapy, aliases: [adoptive cell transfer, ACT] }
+  - { zh: 原发性免疫缺陷, en: primary immunodeficiency, aliases: [先天性免疫错误, inborn error of immunity, primary immunodeficiencies] }
+  - { zh: 继发性免疫缺陷, en: secondary immunodeficiency }
+  - { zh: 重症联合免疫缺陷, en: severe combined immunodeficiency, aliases: [SCID] }
+  - { zh: X 连锁无丙种球蛋白血症, en: X-linked agammaglobulinemia, aliases: [XLA, Bruton 无丙种球蛋白血症] }
+  - { zh: 慢性肉芽肿病, en: chronic granulomatous disease, aliases: [CGD] }
+  - { zh: 获得性免疫缺陷综合征, en: acquired immunodeficiency syndrome, aliases: [AIDS, 艾滋病] }
+  - { zh: 病原体免疫逃逸, en: pathogen immune evasion, aliases: [immune evasion] }
+  - { zh: 主动免疫, en: active immunity, aliases: [active immunization] }
+  - { zh: 被动免疫, en: passive immunity, aliases: [passive immunization, 被动免疫治疗] }
+  - { zh: 保护相关因子, en: correlate of protection, aliases: [correlates of protection] }
+  - { zh: 类毒素, en: toxoid, aliases: [toxoids] }
+  - { zh: 亚单位疫苗, en: subunit vaccine, aliases: [subunit vaccines] }
+  - { zh: 结合疫苗, en: conjugate vaccine, aliases: [conjugate vaccines] }
+  - { zh: 加强免疫, en: booster immunization, aliases: [booster, prime–boost] }
+  - { zh: 免疫组织化学, en: immunohistochemistry, aliases: [IHC, 免疫组化] }
+  - { zh: 质谱流式细胞术, en: mass cytometry, aliases: [CyTOF] }
+  - { zh: 荧光溢出, en: spectral spillover, aliases: [spillover, 荧光补偿] }
+  - { zh: 免疫沉淀, en: immunoprecipitation, aliases: [IP] }
+  - { zh: 酶联免疫斑点, en: ELISpot, aliases: [enzyme-linked immunospot] }
+  - { zh: pMHC 四聚体, en: pMHC tetramer, aliases: [MHC tetramer, 四聚体染色] }
+  - { zh: 凝集反应, en: agglutination, aliases: [agglutination reaction] }
+  - { zh: 免疫表型, en: immunophenotype, aliases: [immunophenotyping, immunophenotypes] }
+  - { zh: 谱系标志物, en: lineage marker, aliases: [lineage markers] }
+  - { zh: 活化标志物, en: activation marker, aliases: [activation markers] }
+  - { zh: 门控策略, en: gating strategy, aliases: [gating] }
+  - { zh: 抗体验证, en: antibody validation }
+
+  - { zh: 穿孔素, en: perforin, scope: ["7.15"] }
+  - { zh: C 反应蛋白, en: C-reactive protein, aliases: [CRP], scope: ["7.15"] }
+  - { zh: 同种型, en: isotype, aliases: [抗体类别, 免疫球蛋白类别], scope: ["7.15"] }
+  - { zh: 亲和力, en: affinity, scope: ["7.15"] }
+  - { zh: 补体, en: complement, aliases: [补体系统, complement system], scope: ["7.15"] }
+  - { zh: 阳性选择, en: positive selection, aliases: [胸腺阳性选择, thymic positive selection], scope: ["7.15"] }
+  - { zh: 阴性选择, en: negative selection, aliases: [胸腺阴性选择, thymic negative selection], scope: ["7.15"] }
+  - { zh: 效应记忆 T 细胞, en: effector memory T cell, aliases: [TEM, T_EM], scope: ["7.15"] }
+  - { zh: 三级淋巴结构, en: tertiary lymphoid structure, aliases: [TLS, tertiary lymphoid structures, 三级淋巴样结构], scope: ["7.15"] }
+  - { zh: 炎症性肠病, en: inflammatory bowel disease }
+  - { zh: 超敏反应, en: hypersensitivity, aliases: [hypersensitivity reaction, 变态反应], scope: ["7.15"] }
+  - { zh: 致敏, en: sensitization, scope: ["7.15"] }
+  - { zh: 多发性硬化, en: multiple sclerosis }
+  - { zh: 地址素, en: addressin, aliases: [addressins, 血管地址素] }
+  - { zh: 归巢受体, en: homing receptor, aliases: [homing receptors] }
+  - { zh: 非典型趋化因子受体, en: atypical chemokine receptor, aliases: [ACKR, ACKRs] }
+  - { zh: 黏膜相关恒定 T 细胞, en: mucosal-associated invariant T cell, aliases: [MAIT, MAIT 细胞, MAIT cells] }
+  - { zh: 定植抗性, en: colonization resistance }
+  - { zh: 危险模型, en: danger model, aliases: [danger theory] }
