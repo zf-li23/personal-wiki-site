@@ -367,7 +367,7 @@ The electron-withdrawing inductive effect of the hydroxy group makes hydroxy aci
 
 **Definition 18.7.1 (Lactone)** A cyclic ester formed by dehydration between the carboxyl group and the hydroxy group in the same molecule is called a **lactone**. According to the position of the hydroxy group on the carbon chain of the carboxylic acid, they are called β-lactones (four-membered ring), γ-lactones (five-membered ring), δ-lactones (six-membered ring), and so on; in systematic nomenclature the heterocycle name is used, for example γ-butyrolactone is oxolan-2-one.
 
-**Definition 18.7.2 (Lactide)** The six-membered cyclic diester (1,4-dioxane-2,5-dione) formed by mutual esterification of two molecules of α-hydroxy acid is called a **lactide** (the lactide of lactic acid is specifically called lactide proper).
+**Definition 18.7.2 (Lactide)** The six-membered cyclic diester (1,4-dioxane-2,5-dione) formed by mutual esterification of two molecules of α-hydroxy acid is called a **lactide** (in the narrow sense, the name lactide refers to the cyclic diester of lactic acid).
 
 | Position of OH | Product on heating (or acid catalysis) | Reason |
 |---|---|---|
