@@ -7,6 +7,9 @@
  *   dist/404.html                   SPA shell for unknown URLs
  *   dist/sitemap.xml, robots.txt
  *
+ * The published dist/data/pages/<lang>/<id>.json are rewritten without `html`: the article
+ * lives only in the route HTML (the dev server, which has no routes, keeps it in the JSON).
+ *
  * The client boots on top of the static article (see src/content/initial.ts).
  */
 import fs from 'node:fs';
@@ -17,6 +20,7 @@ import { ARTICLE_CLASS } from '../../src/shared/article.ts';
 import { sourceLines } from '../../src/shared/sources.ts';
 import type { PagePayload } from '../../src/shared/types.ts';
 import type { BuildResult } from './build.ts';
+import { PUBLIC_PATHS } from './paths.ts';
 
 const HTML_LANG: Record<Lang, string> = { zh: 'zh-Hans', en: 'en' };
 
@@ -115,6 +119,12 @@ export function prerender(outDir: string, result: BuildResult): number {
     };
     write(pagePath(payload.lang, payload.id), withBody(renderHead(template, head), staticPage(payload)));
     if (payload.status !== 'untranslated') urls.push(absolute(pagePath(payload.lang, payload.id)));
+    // Ship the article once: the route HTML above carries it, so the published JSON keeps only the
+    // metadata and the client reads the article from the route (src/content/pages.ts). Without this
+    // every article is published twice and the Pages artifact outgrows the deploy timeout.
+    const meta: Partial<PagePayload> = { ...payload };
+    delete meta.html;
+    fs.writeFileSync(path.join(outDir, PUBLIC_PATHS.pages, payload.lang, `${payload.id}.json`), JSON.stringify(meta));
   }
 
   fs.writeFileSync(path.join(outDir, '404.html'), template);

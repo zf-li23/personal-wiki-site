@@ -1,6 +1,7 @@
 /**
  * Page payload loading with an in-memory cache.
- * Payloads are static JSON written by the content pipeline: <base>/data/pages/<lang>/<id>.json
+ * Payloads are static JSON written by the content pipeline: <base>/data/pages/<lang>/<id>.json;
+ * in production the article HTML comes from the route page <base>/<lang>/<id>/ (see fetchArticle).
  */
 import { useEffect, useSyncExternalStore } from 'react';
 import type { Lang, PagePayload } from '../shared/types.ts';
@@ -47,11 +48,27 @@ function load(key: string): Promise<void> {
   return p;
 }
 
+/**
+ * The published JSON carries only metadata; the article itself is in the page's prerendered
+ * route HTML (scripts/wiki/prerender.ts), so it is shipped once. The dev server has no routes
+ * and still puts `html` in the JSON.
+ */
+async function fetchArticle(key: string): Promise<string> {
+  const res = await fetch(`${import.meta.env.BASE_URL}${key}/?v=${buildId}`);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+  const article = doc.getElementById('wiki-prerendered');
+  if (!article) throw new Error('article not found');
+  return article.innerHTML;
+}
+
 async function loadOnce(key: string) {
   try {
     const res = await fetch(`${import.meta.env.BASE_URL}data/pages/${key}.json?v=${buildId}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    cache.set(key, { payload: (await res.json()) as PagePayload });
+    const payload = (await res.json()) as Omit<PagePayload, 'html'> & { html?: string };
+    const html = typeof payload.html === 'string' ? payload.html : await fetchArticle(key);
+    cache.set(key, { payload: { ...payload, html } });
   } catch (e) {
     cache.set(key, { error: e instanceof Error ? e.message : String(e) });
   } finally {
