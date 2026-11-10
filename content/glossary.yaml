@@ -1395,7 +1395,7 @@ terms:
   - { zh: DFBETAS, en: DFBETAS }
   - { zh: 方差膨胀因子, en: variance inflation factor, aliases: [VIF] }
   - { zh: 容许度, en: tolerance, scope: ["3.3"] }
-  - { zh: White 估计量, en: White estimator, aliases: [三明治估计量, 异方差稳健估计量, sandwich estimator, heteroscedasticity-consistent estimator] }
+  - { zh: White 估计量, en: White estimator, aliases: [三明治估计量, 异方差稳健估计量, sandwich estimator, heteroscedasticity-consistent estimator, Eicker–Huber–White estimator, EHW] }
   - { zh: 加权最小二乘, en: weighted least squares, aliases: [WLS, 加权最小二乘法] }
   - { zh: 广义最小二乘, en: generalized least squares, aliases: [GLS] }
   - { zh: 迭代重加权最小二乘, en: iteratively reweighted least squares, aliases: [IRLS] }
@@ -1749,6 +1749,74 @@ terms:
   - { zh: 准确性, en: accuracy, aliases: [准确, accurate], scope: ["3.5"] }
   - { zh: 因子, en: factor, scope: ["3.5"] }
 
+  # nonparametric statistics (3.6)
+  - { zh: 平均方向, en: mean direction }
+  - { zh: 内部有效性, en: internal validity }
+  - { zh: 外部有效性, en: external validity }
+  - { zh: 经验过程, en: empirical process }
+  - { zh: 秩, en: rank, aliases: [ranks], scope: ["3.2.6", "3.6", "7.7.8"] }
+  - { zh: 游程, en: run, aliases: [runs], scope: ["3.6"] }
+  - { zh: 精确检验, en: exact test }
+  - { zh: 水平扭曲, en: size distortion, aliases: [size-distortion] }
+  - { zh: 秩统计量, en: rank statistic, aliases: [rank statistics] }
+  - { zh: 无分布统计量, en: distribution-free statistic, aliases: [无分布, distribution-free] }
+  - { zh: U 统计量, en: U-statistic, aliases: [U-statistics] }
+  - { zh: 经验分位数函数, en: empirical quantile function }
+  - { zh: Kolmogorov 距离, en: Kolmogorov distance }
+  - { zh: DKW 不等式, en: Dvoretzky–Kiefer–Wolfowitz inequality, aliases: [DKW inequality] }
+  - { zh: 二项检验, en: binomial test }
+  - { zh: 结, en: tie, aliases: [ties, 打结], scope: ["3"] }
+  - { zh: 平均秩, en: midrank, aliases: [mid-rank, midranks] }
+  - { zh: Walsh 平均, en: Walsh average, aliases: [Walsh averages] }
+  - { zh: 相对效率, en: relative efficiency }
+  - { zh: 效能, en: efficacy, scope: ["3.6"] }
+  - { zh: 伪中位数, en: pseudomedian }
+  - { zh: Agresti–Coull 区间, en: Agresti–Coull interval, aliases: [加四区间, plus-four interval] }
+  - { zh: Pitman 检验, en: Pitman test, aliases: [Fisher–Pitman permutation test, Fisher–Pitman 检验] }
+  - { zh: 正态得分检验, en: normal scores test, aliases: [Van der Waerden 检验, Van der Waerden test] }
+  - { zh: 线性秩统计量, en: linear rank statistic, aliases: [linear rank statistics, 线性符号秩统计量, linear signed rank statistic] }
+  - { zh: Brown 桥, en: Brownian bridge, aliases: [布朗桥] }
+  - { zh: Donsker 定理, en: "Donsker's theorem", aliases: [Donsker 不变原理, Donsker invariance principle] }
+  - { zh: Kolmogorov 分布, en: Kolmogorov distribution }
+  - { zh: Lilliefors 检验, en: Lilliefors test }
+  - { zh: 分位数检验, en: quantile test }
+  - { zh: Cox–Stuart 检验, en: Cox–Stuart test, aliases: [Cox–Stuart 趋势检验, Cox–Stuart trend test] }
+  - { zh: 游程检验, en: runs test, aliases: [Wald–Wolfowitz 游程检验, Wald–Wolfowitz runs test] }
+  - { zh: 角度数据, en: circular data, aliases: [方向数据, directional data, angular data, 圆形数据] }
+  - { zh: Kuiper 检验, en: "Kuiper's test", aliases: [Kuiper test] }
+  - { zh: 洗脱期, en: washout period }
+  - { zh: 一致对, en: concordant pair, aliases: [concordant pairs] }
+  - { zh: 不一致对, en: discordant pair, aliases: [discordant pairs] }
+  - { zh: 位置平移模型, en: location-shift model, aliases: [平移模型, shift model, location shift model] }
+  - { zh: 随机相等, en: stochastic equality }
+  - { zh: 随机占优, en: stochastic dominance, aliases: [随机大于, stochastically larger] }
+  - { zh: Brunner–Munzel 检验, en: Brunner–Munzel test }
+  - { zh: Mood 中位数检验, en: "Mood's median test", aliases: [中位数检验, median test] }
+  - { zh: Siegel–Tukey 检验, en: Siegel–Tukey test }
+  - { zh: Smirnov 检验, en: Smirnov test, aliases: [两样本 Kolmogorov–Smirnov 检验, two-sample Kolmogorov–Smirnov test] }
+  - { zh: 分位数回归, en: quantile regression }
+  - { zh: 分位数损失, en: check loss, aliases: [check 函数, check function, pinball loss, quantile loss] }
+  - { zh: Jonckheere–Terpstra 检验, en: Jonckheere–Terpstra test, aliases: [Jonckheere 趋势检验, "Jonckheere's trend test"] }
+  - { zh: Friedman 检验, en: Friedman test }
+  - { zh: Page 检验, en: "Page's test", aliases: [Page test, Page 趋势检验] }
+  - { zh: Cochran Q 检验, en: "Cochran's Q test", aliases: [Cochran Q test] }
+  - { zh: 平方秩检验, en: squared ranks test, aliases: [squared-rank test, Conover 平方秩检验] }
+  - { zh: Bowker 检验, en: "Bowker's test of symmetry", aliases: ["Bowker's test", Bowker 对称性检验] }
+  - { zh: Fisher–Freeman–Halton 检验, en: Fisher–Freeman–Halton test, aliases: [FFH 检验, Freeman–Halton test] }
+  - { zh: Ridit 分析, en: ridit analysis }
+  - { zh: 对数线性模型, en: log-linear model, aliases: [log-linear models] }
+  - { zh: 饱和模型, en: saturated model, scope: ["3"] }
+  - { zh: 影响函数, en: influence function }
+  - { zh: 崩溃点, en: breakdown point }
+  - { zh: M 估计, en: M-estimator, aliases: [M-估计, M-estimators, M-estimation, M 估计量] }
+  - { zh: Huber 损失, en: Huber loss, aliases: [Huber 损失函数, Huber loss function] }
+  - { zh: 边界偏误, en: boundary bias }
+  - { zh: k 近邻密度估计, en: k-nearest-neighbor density estimation, aliases: [k-NN 密度估计, k-NN density estimation] }
+  - { zh: Theil–Sen 估计, en: Theil–Sen estimator, aliases: [Theil–Sen 方法, Sen 斜率, "Sen's slope"] }
+  - { zh: 保序回归, en: isotonic regression, aliases: [单调回归, monotone regression] }
+  - { zh: PAVA, en: pool adjacent violators algorithm, aliases: [PAVA 算法, 相邻违背合并算法] }
+  - { zh: 局部多项式回归, en: local polynomial regression, aliases: [局部线性回归, local linear regression, 局部多项式拟合, local polynomial fitting] }
+  - { zh: 光滑样条, en: smoothing spline, aliases: [平滑样条, smoothing splines] }
   # Bayesian statistics (3.7)
   - { zh: 先验优势比, en: prior odds }
   - { zh: 先验预测分布, en: prior predictive distribution }
@@ -1801,7 +1869,7 @@ terms:
   - { zh: 超参数, en: hyperparameter, aliases: [hyperparameters], scope: ["3"] }
   - { zh: 风险函数, en: risk function, scope: ["3.7"] }
   - { zh: 可容许估计, en: admissible estimator, aliases: [可容许性, admissibility], scope: ["3"] }
-  - { zh: 可交换性, en: exchangeability, aliases: [exchangeable], scope: ["3.7"] }
+  - { zh: 可交换性, en: exchangeability, aliases: [exchangeable], scope: ["3.6", "3.7"] }
   - { zh: 偏差信息准则, en: deviance information criterion, aliases: [DIC], scope: ["3"] }
   - { zh: Dirichlet-多项分布, en: Dirichlet-multinomial distribution, aliases: [Dirichlet–multinomial distribution, 多元 Beta-二项分布] }
 
@@ -1832,7 +1900,7 @@ terms:
   - { zh: Satterthwaite 近似, en: Satterthwaite approximation, aliases: [Welch–Satterthwaite 公式, Welch–Satterthwaite equation, Satterthwaite 方法] }
   - { zh: 功效曲线, en: power curve }
   - { zh: OC 曲线, en: operating characteristic curve, aliases: [OC curve, 抽检特性曲线] }
-  - { zh: 完全随机化设计, en: completely randomized design, aliases: [完全随机设计, CRD] }
+  - { zh: 完全随机化设计, en: completely randomized design, aliases: [完全随机设计, CRD, completely randomized experiment, CRE, 完全随机化实验] }
   - { zh: Cochran 定理, en: "Cochran's theorem" }
   - { zh: 一般线性模型, en: general linear model }
   - { zh: 多重比较, en: multiple comparisons, aliases: [多重比较方法, multiple comparison procedure, multiple comparison] }
@@ -1855,6 +1923,98 @@ terms:
   - { zh: 重复, en: replication, aliases: [replicate, replicates], scope: ["3"] }
   - { zh: 区组, en: block, aliases: [blocks], scope: ["3", "7.7"] }
 
+  # causal inference (3.9)
+  - { zh: 分层随机化实验, en: stratified randomized experiment, aliases: [SRE, randomized block experiment], scope: ["3.9"] }
+  - { zh: 配对随机化实验, en: paired randomized experiment, aliases: [pairwise randomized experiment, PRE], scope: ["3.9"] }
+  - { zh: Fisher 精确 p 值, en: "Fisher's exact p-value", aliases: [FEP, Fisher randomization test, Fisher 随机化检验], scope: ["3.9"] }
+  - { zh: 匹配, en: matching, scope: ["3", "7.7"] }
+  - { zh: 结构方程模型, en: structural equation model, aliases: [SEM, 结构因果模型, structural causal model], scope: ["3.9"] }
+  - { zh: 个体因果效应, en: unit-level causal effect, aliases: [unit-level treatment effect, 单位因果效应] }
+  - { zh: 因果推断的基本问题, en: fundamental problem of causal inference }
+  - { zh: 稳定单元处理值假设, en: stable unit treatment value assumption, aliases: [SUTVA] }
+  - { zh: 排他性约束, en: exclusion restriction, aliases: [exclusion restrictions] }
+  - { zh: Lord 悖论, en: "Lord's paradox" }
+  - { zh: 分配机制, en: assignment mechanism }
+  - { zh: 单位分配概率, en: unit-level assignment probability }
+  - { zh: 个体化分配, en: individualistic assignment }
+  - { zh: 概率性分配, en: probabilistic assignment }
+  - { zh: 无混杂分配, en: unconfounded assignment, aliases: [无混杂性, unconfoundedness, 无混杂假设] }
+  - { zh: 强可忽略性, en: strong ignorability, aliases: [strongly ignorable treatment assignment, 强可忽略分配] }
+  - { zh: 可忽略分配, en: ignorable treatment assignment, aliases: [ignorability, 可忽略性] }
+  - { zh: 随机化实验, en: randomized experiment }
+  - { zh: 经典随机化实验, en: classical randomized experiment }
+  - { zh: 正则分配机制, en: regular assignment mechanism, aliases: [RAM] }
+  - { zh: Bernoulli 试验, en: Bernoulli trial, aliases: [Bernoulli experiment], scope: ["3.9"] }
+  - { zh: 超总体, en: super-population, aliases: [superpopulation] }
+  - { zh: 处理组平均处理效应, en: average treatment effect on the treated, aliases: [ATT] }
+  - { zh: Fisher 尖锐原假设, en: "Fisher's sharp null hypothesis", aliases: [sharp null hypothesis, 尖锐原假设] }
+  - { zh: 有限总体中心极限定理, en: finite population central limit theorem, aliases: [finite-population CLT] }
+  - { zh: Fisher 区间, en: Fisher interval, aliases: [Fisherian interval] }
+  - { zh: 均值差估计量, en: difference-in-means estimator, aliases: [Neyman 估计量, Neyman estimator] }
+  - { zh: Neyman 方差估计, en: Neyman variance estimator, aliases: [保守方差估计, conservative variance estimator] }
+  - { zh: 基于模型的插补, en: model-based imputation, aliases: [Bayesian model-based imputation] }
+  - { zh: 平衡得分, en: balancing score }
+  - { zh: Horvitz–Thompson 估计量, en: Horvitz–Thompson estimator }
+  - { zh: 线性化倾向评分, en: linearized propensity score, aliases: [log odds of the propensity score] }
+  - { zh: 倾向评分修剪, en: trimming, aliases: [propensity score trimming, 修剪] }
+  - { zh: 子类化, en: subclassification, aliases: [propensity score blocking, 倾向评分分块, 倾向评分分层] }
+  - { zh: 卡钳匹配, en: caliper matching, aliases: [caliper] }
+  - { zh: 匹配估计量, en: matching estimator }
+  - { zh: 偏差校正匹配估计量, en: bias-corrected matching estimator }
+  - { zh: 概率图模型, en: probabilistic graphical model, aliases: [PGM, 图模型, graphical model] }
+  - { zh: Markov 随机场, en: Markov random field, aliases: [Markov network, Markov 网络] }
+  - { zh: 骨架, en: skeleton, scope: ["3.9", "7.9"] }
+  - { zh: Markov 相容, en: Markov compatibility, aliases: [Markov compatible, Markov 条件, Markov condition] }
+  - { zh: 局部 Markov 条件, en: local Markov condition, aliases: [local Markov property] }
+  - { zh: d-分离, en: d-separation, aliases: [d-separated, d 分离] }
+  - { zh: v-结构, en: v-structure, aliases: [v-structures, immorality] }
+  - { zh: 忠实性, en: faithfulness, aliases: [faithful, 忠实性假设] }
+  - { zh: 因果 Bayes 网络, en: causal Bayesian network, aliases: [因果贝叶斯网络, causal Bayesian networks] }
+  - { zh: 干预, en: intervention, scope: ["3"] }
+  - { zh: do 算子, en: do-operator, aliases: [do operator, do(x)] }
+  - { zh: 截断分解, en: truncated factorization, aliases: [truncated factorization formula] }
+  - { zh: 反事实, en: counterfactual, aliases: [counterfactuals], scope: ["3"] }
+  - { zh: 因果阶梯, en: ladder of causation, aliases: [causal hierarchy, 因果层级] }
+  - { zh: 后门路径, en: backdoor path, aliases: [back-door path] }
+  - { zh: 调整公式, en: adjustment formula, aliases: [后门调整公式, backdoor adjustment formula] }
+  - { zh: 前门准则, en: front-door criterion, aliases: [frontdoor criterion] }
+  - { zh: do 演算, en: do-calculus, aliases: [do calculus, 干预演算] }
+  - { zh: 受控直接效应, en: controlled direct effect, aliases: [CDE] }
+  - { zh: 结构学习, en: structure learning }
+  - { zh: 搜索评分法, en: score-based method, aliases: [search-and-score method] }
+  - { zh: 约束法, en: constraint-based method, aliases: [基于约束的方法] }
+  - { zh: PC 算法, en: PC algorithm }
+  - { zh: IC 算法, en: IC algorithm, aliases: [inductive causation algorithm] }
+  - { zh: Meek 规则, en: Meek rules, aliases: ["Meek's rules"] }
+  - { zh: 部分有向无环图, en: partially directed acyclic graph, aliases: [PDAG, CPDAG, completed partially directed acyclic graph] }
+  - { zh: Gauss 图模型, en: Gaussian graphical model }
+  - { zh: 精度矩阵, en: precision matrix, aliases: [concentration matrix] }
+  - { zh: 结构 Hamming 距离, en: structural Hamming distance, aliases: [SHD] }
+  - { zh: 不依从, en: noncompliance }
+  - { zh: 依从类型, en: compliance type, aliases: [compliance types] }
+  - { zh: 依从者, en: complier, aliases: [compliers] }
+  - { zh: 永不接受者, en: never-taker, aliases: [never-takers] }
+  - { zh: 总是接受者, en: always-taker, aliases: [always-takers] }
+  - { zh: 违抗者, en: defier, aliases: [defiers] }
+  - { zh: 单侧不依从, en: one-sided noncompliance }
+  - { zh: 意向性治疗效应, en: intention-to-treat effect, aliases: [ITT effect] }
+  - { zh: 单调性假设, en: monotonicity assumption, aliases: [monotonicity, 无违抗者, no defiers] }
+  - { zh: 依从者平均因果效应, en: complier average causal effect, aliases: [CACE, 局部平均处理效应, local average treatment effect, LATE] }
+  - { zh: Wald 估计量, en: Wald estimator }
+  - { zh: 两阶段最小二乘, en: two-stage least squares, aliases: [2SLS, TSLS] }
+  - { zh: 鼓励设计, en: encouragement design }
+  - { zh: 自然实验, en: natural experiment, aliases: [natural experiments] }
+  - { zh: Balke–Pearl 界, en: Balke–Pearl bounds }
+  - { zh: 再随机化, en: rerandomization }
+  - { zh: 负对照, en: negative control, aliases: [负对照暴露, negative control exposure, 负对照结局, negative control outcome] }
+  - { zh: 主分层, en: principal stratification, aliases: [主层, principal stratum, principal strata] }
+  - { zh: 生存者平均因果效应, en: survivor average causal effect, aliases: [SACE] }
+  - { zh: 中介分析, en: mediation analysis }
+  - { zh: 自然直接效应, en: natural direct effect, aliases: [NDE] }
+  - { zh: 自然间接效应, en: natural indirect effect, aliases: [NIE] }
+  - { zh: 替代指标悖论, en: surrogate paradox, aliases: [intermediate variable paradox] }
+  - { zh: 独立因果机制原则, en: independent causal mechanisms principle, aliases: [ICM principle] }
+  - { zh: 因果表示学习, en: causal representation learning }
   # mathematical modelling in biology
   - { zh: 逻辑斯谛增长, en: logistic growth }
   - { zh: 分岔, en: bifurcation }
@@ -3367,7 +3527,7 @@ terms:
   - { zh: 影子页表, en: shadow page table }
   - { zh: 嵌套分页, en: nested paging, aliases: [扩展页表, EPT, NPT] }
   - { zh: Linux 命名空间, en: Linux namespace, scope: ["4.11"] }
-  - { zh: 控制组, en: control group, aliases: [cgroup, cgroups] }
+  - { zh: 控制组, en: control group, aliases: [cgroup, cgroups], scope: ["4"] }
   - { zh: 容器, en: container, aliases: [操作系统级虚拟化, OS-level virtualization], scope: ["4.11", "4.14"] }
   - { zh: 容器镜像, en: container image, aliases: [镜像], scope: ["4.11", "4.14"] }
   - { zh: Shell, en: shell, aliases: [命令解释器, 外壳], scope: ["4"] }
@@ -7849,7 +8009,7 @@ terms:
   - { zh: 关联作图, en: association mapping, aliases: [linkage disequilibrium mapping, 关联分析] }
   - { zh: 标签 SNP, en: tag SNP, aliases: [tag SNPs] }
   - { zh: 全基因组关联分析, en: genome-wide association study, aliases: [GWAS, 全基因组关联研究] }
-  - { zh: 优势比, en: odds ratio, aliases: [OR, 比值比], scope: ["7"] }
+  - { zh: 优势比, en: odds ratio, aliases: [OR, 比值比], scope: ["3", "7"] }
   - { zh: 群体分层, en: population stratification }
   - { zh: 基因组膨胀系数, en: genomic inflation factor, aliases: [λ_GC, lambda GC] }
   - { zh: 精细定位, en: fine-mapping, aliases: [fine mapping] }
@@ -8801,16 +8961,16 @@ terms:
   - { zh: 偏移项, en: offset, scope: ["7.7"] }
   - { zh: 生态学谬误, en: ecological fallacy }
   - { zh: 潜在结果, en: potential outcome, aliases: [反事实结局, counterfactual outcome, potential outcomes] }
-  - { zh: 平均处理效应, en: average treatment effect, aliases: [ATE] }
+  - { zh: 平均处理效应, en: average treatment effect, aliases: [ATE, average causal effect, ACE] }
   - { zh: 可交换性, en: exchangeability }
-  - { zh: 正值性, en: positivity }
+  - { zh: 正值性, en: positivity, aliases: [overlap] }
   - { zh: 因果图, en: causal diagram, aliases: [因果 DAG, causal DAG] }
   - { zh: 后门准则, en: backdoor criterion, aliases: [back-door criterion] }
   - { zh: 对撞因子, en: collider }
   - { zh: 对撞偏倚, en: collider bias, aliases: [Berkson 偏倚, "Berkson's bias"] }
   - { zh: 倾向评分, en: propensity score, aliases: [倾向得分] }
   - { zh: 逆概率加权, en: inverse probability weighting, aliases: [IPW] }
-  - { zh: 标准化均差, en: standardized mean difference, aliases: [SMD] }
+  - { zh: 标准化均差, en: standardized mean difference, aliases: [SMD, normalized difference] }
   - { zh: 工具变量, en: instrumental variable }
   - { zh: 中介变量, en: mediator, scope: ["7.7"] }   # causal mediator; the unscoped Mediator complex keeps other pages
   - { zh: E 值, en: E-value, scope: ["7.7"] }   # VanderWeele–Ding sensitivity analysis; BLAST E-value is scoped 7.8
@@ -9147,7 +9307,7 @@ terms:
   - { zh: 数据处理不等式, en: data processing inequality, aliases: [DPI] }
   - { zh: ARACNe, en: ARACNe }
   - { zh: 贝叶斯网络, en: Bayesian network, aliases: [Bayes 网络, Bayesian networks] }
-  - { zh: Markov 等价, en: Markov equivalence, aliases: [Markov equivalent, 马尔可夫等价] }
+  - { zh: Markov 等价, en: Markov equivalence, aliases: [Markov equivalent, 马尔可夫等价, observational equivalence] }
   - { zh: 调节子活性, en: regulon activity, aliases: [调控子活性] }
   - { zh: 中心性–致死性规则, en: centrality–lethality rule, aliases: [centrality-lethality rule] }
   - { zh: 活性子网络, en: active subnetwork, aliases: [active subnetworks, active module] }

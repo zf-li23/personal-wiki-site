@@ -1,0 +1,3 @@
+---
+title: Several-Sample Problems
+---

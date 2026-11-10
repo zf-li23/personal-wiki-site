@@ -1,0 +1,3 @@
+---
+title: Categorical Data Analysis
+---
