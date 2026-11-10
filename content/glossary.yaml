@@ -5345,7 +5345,7 @@ terms:
   - { zh: 酸效应曲线, en: Ringbom curve, aliases: [林邦曲线] }
   - { zh: 金属指示剂, en: metallochromic indicator, aliases: [金属离子指示剂, metal ion indicator] }
   - { zh: 指示剂的封闭, en: blocking of an indicator, aliases: [指示剂封闭, indicator blocking] }
-  - { zh: 指示剂的僵化, en: indicator ossification, aliases: [指示剂僵化] }
+  - { zh: 指示剂的僵化, en: sluggish end point, aliases: [指示剂僵化, indicator ossification] }
   - { zh: 掩蔽, en: masking, aliases: [掩蔽剂, masking agent] }
   - { zh: 解蔽, en: demasking, aliases: [解蔽剂, demasking agent] }
   - { zh: 水的硬度, en: water hardness, aliases: [硬度] }
@@ -5380,7 +5380,7 @@ terms:
   - { zh: 预氧化, en: preoxidation, aliases: [预还原, prereduction] }
   - { zh: 高锰酸钾法, en: permanganometry, aliases: [permanganate titration] }
   - { zh: 重铬酸钾法, en: dichromate titration, aliases: [dichromatometry] }
-  - { zh: 碘量法, en: iodometric titration, aliases: [碘量法滴定] }
+  - { zh: 碘量法, en: iodine titration, aliases: [碘量法滴定, iodometric titration] }
   - { zh: 直接碘量法, en: iodimetry }
   - { zh: 间接碘量法, en: iodometry }
   - { zh: 电化学分析, en: electroanalytical chemistry, aliases: [电分析化学, electrochemical analysis] }

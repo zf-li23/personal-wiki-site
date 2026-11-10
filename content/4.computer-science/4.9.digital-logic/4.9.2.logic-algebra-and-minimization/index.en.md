@@ -1,7 +1,7 @@
 ---
 title: Logic Algebra and Minimization
 description: Basic and compound operations of logic algebra, gate symbols and the completeness of NAND; basic identities, the substitution, complementation and duality rules, and Shannon expansion; minterms, maxterms and canonical forms; algebraic, Karnaugh-map (with don't-cares) and Quine–McCluskey minimization, with a Python implementation and its complexity.
-source_hash: 99bbe324f959
+source_hash: 5bf9e4985cbc
 ---
 
 The inputs and outputs of a digital circuit are binary signals, and how the output depends on the inputs is described by logic algebra. Logic algebra is the two-element case $\{0, 1\}$ of **Boolean algebra** from discrete mathematics, and its operations correspond one to one with the connectives of propositional logic: AND corresponds to **conjunction**, OR to **disjunction**, and NOT to negation. This chapter rewrites these existing mathematical tools in the language of circuit designers (operations correspond to gates, expressions to circuits), and focuses on one engineering problem: a logic function has infinitely many expressions, so how do we find the one that uses the fewest gates and the fewest gate inputs? This is the minimization of logic functions, and the chapter presents three methods: the algebraic method, which relies on identities; the Karnaugh-map method, which relies on a diagram; and the Quine–McCluskey tabular method, which can be programmed. The results of minimization become actual circuits in [Logic Gates](/4.9.3) and [Combinational Logic Circuits](/4.9.4).
@@ -66,7 +66,7 @@ XOR has several properties that are used repeatedly in arithmetic circuits: $A \
 
 **Theorem 2.1.1** $\{\text{NAND}\}$ and $\{\text{NOR}\}$ are each a **functionally complete set**: any logic function can be implemented using only **NAND gates** (or only **NOR gates**).
 
-**Proof** From the truth table we can write the AND-OR expression of any logic function ([§2.3](#sec-2.3)), so it suffices to express AND, OR and NOT using NAND:
+**Proof** From the truth table we can write the canonical sum of products of any logic function ([§2.3](#sec-2.3)), which uses only the operations AND, OR and NOT, so it suffices to express AND, OR and NOT using NAND:
 
 $$
 \overline{A} = \overline{A\cdot A},\qquad AB = \overline{\overline{AB}\cdot\overline{AB}},\qquad A + B = \overline{\overline{A}\cdot\overline{B}} = \overline{\overline{A\cdot A}\cdot\overline{B\cdot B}} .

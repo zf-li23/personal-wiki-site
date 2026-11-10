@@ -65,7 +65,7 @@ description: 逻辑代数的基本运算与复合运算、门电路符号与与�
 
 **定理 2.1.1** $\{\text{与非}\}$ 和 $\{\text{或非}\}$ 各自是**联结词的完备集**：任何逻辑函数都可以只用**与非门**（或只用**或非门**）实现。
 
-**证明** 由真值表可以写出任何逻辑函数的与或非表达式（[§2.3](#sec-2.3)），只需用与非表示与、或、非：
+**证明** 由真值表可以写出任何逻辑函数的标准与或式（[§2.3](#sec-2.3)），它只用到与、或、非三种运算，所以只需用与非表示与、或、非：
 
 $$
 \overline{A} = \overline{A\cdot A},\qquad AB = \overline{\overline{AB}\cdot\overline{AB}},\qquad A + B = \overline{\overline{A}\cdot\overline{B}} = \overline{\overline{A\cdot A}\cdot\overline{B\cdot B}} .

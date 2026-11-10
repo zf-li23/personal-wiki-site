@@ -318,9 +318,9 @@ The end point lies slightly after the stoichiometric point, with an error within
 
 For example, Eriochrome Black T is blocked by $\ce{Fe^3+}$, $\ce{Al^3+}$, $\ce{Cu^2+}$, $\ce{Co^2+}$, and $\ce{Ni^2+}$. The remedy is to add a masking agent to mask these ions (triethanolamine for $\ce{Fe^3+}$ and $\ce{Al^3+}$, KCN or $\ce{Na2S}$ for $\ce{Cu^2+}$, $\ce{Co^2+}$, and $\ce{Ni^2+}$), or to separate them first when present in large amount; when the ion being determined itself blocks the indicator (for example, $\ce{Al^3+}$ with xylenol orange), back titration is used instead (3.6). The distilled water used in complexometric titration must be freed of traces of heavy metal ions.
 
-**Definition 3.4.3 (Ossification of an Indicator)** The phenomenon in which an indicator or its metal complex has low solubility in water or forms a colloid, so that the displacement of the indicator complex by EDTA is slow and the end point is drawn out, is called **indicator ossification**.
+**Definition 3.4.3 (Sluggish End Point)** The phenomenon in which an indicator or its metal complex has low solubility in water or forms a colloid, so that the displacement of the indicator complex by EDTA is slow and the end point is drawn out, is called a **sluggish end point**.
 
-PAN and its metal complexes, for example, are poorly soluble in water and prone to ossification. The remedy is to add a little organic solvent such as ethanol to increase the solubility, or to warm moderately to speed up the displacement, and to titrate slowly with vigorous shaking near the end point.
+PAN and its metal complexes, for example, are poorly soluble in water and prone to give a sluggish end point. The remedy is to add a little organic solvent such as ethanol to increase the solubility, or to warm moderately to speed up the displacement, and to titrate slowly with vigorous shaking near the end point.
 
 ### 3.4.3. Common Metallochromic Indicators
 
@@ -335,7 +335,7 @@ Oc1ccc2ccccc2c1N=Nc1ccccn1 PAN
 | Eriochrome Black T (EBT) | 8–11 (10 commonly) | Wine red → blue | $\ce{Mg^2+}$, $\ce{Zn^2+}$, $\ce{Cd^2+}$, $\ce{Pb^2+}$, total Ca + Mg | Blocked by $\ce{Fe^3+}$, $\ce{Al^3+}$, $\ce{Cu^2+}$, $\ce{Ni^2+}$; color change not sharp for $\ce{Ca^2+}$ alone |
 | Calconcarboxylic acid (NN) | 12–13 | Wine red → blue | $\ce{Ca^2+}$ ($\ce{Mg^2+}$ already precipitated as $\ce{Mg(OH)2}$) | As above |
 | Xylenol orange (XO) | < 6.3 | Violet-red → bright yellow | pH 1–2: $\ce{Bi^3+}$; pH 5–6: $\ce{Zn^2+}$, $\ce{Pb^2+}$, $\ce{Cd^2+}$, rare earths | Blocked by $\ce{Fe^3+}$, $\ce{Al^3+}$, $\ce{Ni^2+}$ |
-| PAN | 2–12 | Red → yellow | $\ce{Cu^2+}$, $\ce{Ni^2+}$, $\ce{Zn^2+}$, etc. | Prone to ossification; add ethanol or heat |
+| PAN | 2–12 | Red → yellow | $\ce{Cu^2+}$, $\ce{Ni^2+}$, $\ce{Zn^2+}$, etc. | Sluggish end point; add ethanol or heat |
 | Sulfosalicylic acid (SSal) | 1.5–2.5 | Violet-red → bright yellow (the color of $\ce{FeY-}$) | $\ce{Fe^3+}$ | Colorless itself |
 
 Eriochrome Black T is a triprotic acid: $\ce{H2In-}$ ($\mathrm{pH} < 6.3$) is red, $\ce{HIn^2-}$ (6.3–11.6) is blue, and $\ce{In^3-}$ ($> 11.6$) is orange, whereas its metal complexes are wine red. Only between pH about 8 and 11 do the free indicator (blue) and the complex (red) differ clearly in color, so the working range is pH 8–11, and in practice it is mostly used in an ammoniacal buffer at pH 10. The complex of Eriochrome Black T with $\ce{Ca^2+}$ is not stable enough ($\lg K_{\mathrm{CaIn}} \approx 5.4$, smaller than 7.0 for $\mathrm{MgIn}$), and in the titration of $\ce{Ca^2+}$ alone the end point is early and the color change not sharp. One remedy is to add a little MgY to the solution: $\ce{MgY + Ca^2+ -> CaY + Mg^2+}$; the displaced $\ce{Mg^2+}$ gives the red color with Eriochrome Black T, and at the end point EDTA takes the $\ce{Mg^2+}$ from MgIn, so the color change is sharp; the MgY added equals in amount of substance the $\ce{Mg^2+}$ displaced and does not affect the result.
@@ -455,6 +455,6 @@ The strong complexation of metal ions by EDTA has many uses in biology and medic
 | Titration curve | $\mathrm{pM}'_{\mathrm{sp}} = \frac12(\lg K'_{\mathrm{MY}} + \mathrm{p}c_{\mathrm{M,sp}})$; the larger $K'$ and $c$, the larger the jump |
 | End-point error and criterion | $E_{\mathrm{t}} = (10^{\Delta\mathrm{pM}'} - 10^{-\Delta\mathrm{pM}'})/\sqrt{c_{\mathrm{M,sp}}K'_{\mathrm{MY}}}$; $\lg(cK') \ge 6$ (±0.1%); separate titration $\Delta\lg(cK) \ge 6$ (or 5, ±0.3%) |
 | Acidity | Highest acidity from $\lg\alpha_{\mathrm{Y(H)}} \le \lg K_{\mathrm{MY}} - 8$ (acid-effect curve), lowest acidity from hydrolysis (solubility product); control with buffers |
-| Metallochromic indicators | $\mathrm{pM}_{\mathrm{t}} = \lg K'_{\mathrm{MIn}}$; Eriochrome Black T (pH 10), calconcarboxylic acid (pH 12–13), xylenol orange (pH < 6), PAN, sulfosalicylic acid; blocking and ossification |
+| Metallochromic indicators | $\mathrm{pM}_{\mathrm{t}} = \lg K'_{\mathrm{MIn}}$; Eriochrome Black T (pH 10), calconcarboxylic acid (pH 12–13), xylenol orange (pH < 6), PAN, sulfosalicylic acid; blocking and sluggish end points |
 | Improving selectivity | Controlling acidity; complexation, precipitation, and redox masking and demasking; other ligands such as EGTA (Ca/Mg) and EDTP (Cu) |
 | Modes of titration | Direct (water hardness), back (Al, Ba), displacement (Al via $\ce{NH4F}$, Ag via $\ce{[Ni(CN)4]^2-}$), indirect ($\ce{PO4^3-}$, $\ce{Na+}$) |

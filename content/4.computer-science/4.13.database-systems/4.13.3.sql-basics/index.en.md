@@ -11,7 +11,7 @@ SQL is the language through which almost every program talks to a relational **d
 
 **Definition 3.1.1 (SQL)** **SQL** is the standard language for defining, querying and modifying relational databases. It is specified by the international standard ISO/IEC 9075, whose current edition is SQL:2023.
 
-**SQL** began as SEQUEL in IBM's System R project in the mid-1970s. The first standard appeared in 1986 (SQL-86), followed by SQL-92, which fixed the core still taught today; later editions added recursive queries and triggers (SQL:1999), window functions (SQL:2003), XML (SQL:2006), temporal tables (SQL:2011), JSON functions (SQL:2016) and, in SQL:2023, a native JSON type and property-graph queries (Part 16, SQL/PGQ).
+**SQL** began as SEQUEL in IBM's System R project in the mid-1970s. The first standard appeared in 1986 (SQL-86), followed by SQL-92, which fixed the core still taught today; later editions added recursive queries and triggers (SQL:1999), window functions and SQL/XML (SQL:2003; extended with XQuery support in SQL:2006), temporal tables (SQL:2011), JSON functions (SQL:2016) and, in SQL:2023, a native JSON type and property-graph queries (Part 16, SQL/PGQ).
 
 No product implements the whole standard, and every product adds extensions. This course uses PostgreSQL as the reference dialect because it follows the standard closely and is the most widely used open-source server system; the examples are executed with SQLite and DuckDB, which are embedded libraries that need no server.
 

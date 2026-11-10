@@ -261,7 +261,7 @@ For example, a $\ce{KMnO4}$ solution is purple-red and the reduction product $\c
 
 **Definition 5.3.3 (Specific Indicator)** A substance that is itself not redox active but forms a colored compound characteristically with a particular oxidation state (or reduced form) of the titrant or analyte, and thereby signals the end point, is called a **specific indicator**.
 
-The most important is starch in iodometry: polyiodide chains such as $\ce{I5-}$ are enclosed in the helical cavity of amylose to form a deep blue inclusion compound, and in the presence of $\ce{I-}$ the blue color is already visible at an $\ce{I2}$ concentration of about $10^{-5}\,\mathrm{mol\,L^{-1}}$; the reaction is reversible and sensitive. Another example is the red complex of $\ce{SCN-}$ with $\ce{Fe^3+}$, which can be used in the titration of $\ce{Ti^3+}$ with $\ce{Fe^3+}$.
+The most important is starch in iodine titrations: polyiodide chains such as $\ce{I5-}$ are enclosed in the helical cavity of amylose to form a deep blue inclusion compound, and in the presence of $\ce{I-}$ the blue color is already visible at an $\ce{I2}$ concentration of about $10^{-5}\,\mathrm{mol\,L^{-1}}$; the reaction is reversible and sensitive. Another example is the red complex of $\ce{SCN-}$ with $\ce{Fe^3+}$, which can be used in the titration of $\ce{Ti^3+}$ with $\ce{Fe^3+}$.
 
 ### 5.3.4. End-Point Error
 
@@ -366,7 +366,7 @@ The function of $\ce{H3PO4}$ is given in Example 5.3.2: it lowers $E^{\circ\prim
 
 ### 5.5.3. Iodometry and Iodimetry
 
-**Definition 5.5.3 (Iodometric Titration)** Redox titration methods that use the oxidizing property of $\ce{I2}$ and the reducing property of $\ce{I-}$ are called **iodometric titrations** (the iodine methods).
+**Definition 5.5.3 (Iodine Titration)** Redox titration methods that use the oxidizing property of $\ce{I2}$ and the reducing property of $\ce{I-}$ are called **iodine titrations** (iodine methods).
 
 The solubility of $\ce{I2}$ in water is very small (about $1.3\times10^{-3}\,\mathrm{mol\,L^{-1}}$), and what is actually used is $\ce{I3-}$ formed by dissolving it in KI solution:
 
