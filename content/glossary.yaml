@@ -1750,6 +1750,10 @@ terms:
   - { zh: 因子, en: factor, scope: ["3.5"] }
 
   # nonparametric statistics (3.6)
+  - { zh: Stuart–Maxwell 检验, en: Stuart–Maxwell test }
+  - { zh: Breslow–Day 检验, en: Breslow–Day test }
+  - { zh: Quade 检验, en: Quade test }
+  - { zh: Ansari–Bradley 检验, en: Ansari–Bradley test }
   - { zh: 平均方向, en: mean direction }
   - { zh: 内部有效性, en: internal validity }
   - { zh: 外部有效性, en: external validity }

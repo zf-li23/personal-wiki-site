@@ -1,7 +1,7 @@
 ---
 title: Nonparametric Methods
 description: When nonparametric methods are needed (ordinal data, skewness, small samples, outliers); the idea of ranks and asymptotic relative efficiency; the sign test, Wilcoxon signed-rank test, Wilcoxon rank-sum test and Mann–Whitney U (equivalence with the AUC, ties and exact p-values), the Hodges–Lehmann estimator; the Kruskal–Wallis test and Dunn's test; permutation tests; the Kolmogorov–Smirnov test; Spearman and Kendall rank correlation; choosing between parametric and nonparametric methods. Examples are captopril blood-pressure reduction, Student's sleep data, children's FEV, CT rating scores and the guinea-pig vitamin C experiment.
-source_hash: 1ef7d02756d1
+source_hash: d7190c891a66
 ---
 
 The t methods of [7.7.6](/7.7.6) and [7.7.7](/7.7.7) assume that the data (or the differences) are approximately normal. When the sample is large, the **central limit theorem** makes them quite robust. Three kinds of data, however, give cause for concern: ordinal outcomes (pain scores, five-point imaging ratings, "improved / unchanged / worse"), for which arithmetic has no meaning in itself; small samples with clearly skewed distributions (length of hospital stay, cytokine concentrations); and small samples containing a few outliers. **Nonparametric tests** do not assume that the population belongs to a parametric family. Most of them use only the order of the observations (their ranks), and so are insensitive to the shape of the distribution and to outliers. This chapter treats, in turn, the sign test and Wilcoxon signed-rank test for paired data, the Wilcoxon rank-sum test for two independent samples, the Kruskal–Wallis test for several groups, the permutation test that needs no distribution table, the Kolmogorov–Smirnov test that compares whole distributions, and rank correlation. The examples continue those of the previous two chapters: the paired data on captopril and on sleeping pills; FEV in smokers and nonsmokers (rank methods reach the same conclusion as the t test, which again shows that the FEV paradox lies in the design, not in the test); the CT rating scores of [7.7.3](/7.7.3) (the Mann–Whitney statistic is the area under the ROC curve); and the guinea-pig vitamin C dose experiment. The null distributions and proofs for these tests are in [3.2.6](/3.2.6); here we cover their use, conditions and interpretation.
@@ -110,7 +110,7 @@ is approximately $\chi^2_{k-1}$ under $H_0$ (all groups have the same distributi
 
 ### 8.5.1. Pairwise Comparisons: Dunn's Test
 
-A significant $H$ says only that "the groups are not all the same". To find out which two groups differ, *Dunn's test* compares the mean ranks of two groups:
+A significant $H$ says only that "the groups are not all the same". To find out which two groups differ, **Dunn's test** compares the mean ranks of two groups:
 
 **Formula 8.5.2 (Dunn's Test)** The statistic comparing group $i$ with group $j$ is
 

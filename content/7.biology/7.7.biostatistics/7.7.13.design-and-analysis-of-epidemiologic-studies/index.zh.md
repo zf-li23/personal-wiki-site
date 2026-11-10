@@ -215,7 +215,7 @@ $$
 $$
 X^2_{\mathrm{MH}} = \frac{\bigl(\lvert \sum_i a_i - \sum_i \mathbb{E}(a_i)\rvert - 0.5\bigr)^2}{\sum_i \operatorname{Var}(a_i)} \overset{H_0}{\approx} \chi^2_1.
 $$
-这个检验称为 Mantel–Haenszel 检验（Mantel–Haenszel test），也称 Cochran–Mantel–Haenszel 检验。只有一层时，它就是 2×2 表的卡方检验（分母差一个因子 $n/(n-1)$）；率数据有对应的形式，$\widehat{\mathrm{RR}}_{\mathrm{MH}} = \sum_i (a_i T_{0i}/T_i)/\sum_i (b_i T_{1i}/T_i)$（$a_i$、$b_i$ 为暴露者与非暴露者的病例数，$T_{1i}$、$T_{0i}$ 为两者的人时，$T_i = T_{1i} + T_{0i}$）。
+这个检验称为 **Mantel–Haenszel 检验**，也称 Cochran–Mantel–Haenszel 检验。只有一层时，它就是 2×2 表的卡方检验（分母差一个因子 $n/(n-1)$）；率数据有对应的形式，$\widehat{\mathrm{RR}}_{\mathrm{MH}} = \sum_i (a_i T_{0i}/T_i)/\sum_i (b_i T_{1i}/T_i)$（$a_i$、$b_i$ 为暴露者与非暴露者的病例数，$T_{1i}$、$T_{0i}$ 为两者的人时，$T_i = T_{1i} + T_{0i}$）。
 
 $\widehat{\mathrm{OR}}_{\mathrm{MH}}$ 是各层 OR 的加权平均，权重 $b_i c_i/n_i$ 近似与层内的信息量成正比；它在层数很多、每层很小（如匹配研究的每一对）时仍然相合，这是 Woolf 法的逆方差加权不具备的。$\ln\widehat{\mathrm{OR}}_{\mathrm{MH}}$ 的方差常用 Robins–Breslow–Greenland 公式估计（软件给出）。例 13.5.2 的英国医生数据中，$\widehat{\mathrm{RR}}_{\mathrm{MH}} = 1.42$，与直接标准化一致，MH 检验 $X^2 = 11.0$，$p = 0.0009$。
 
