@@ -1,6 +1,6 @@
 ---
 title: Dynamics of T-Cell Responses and Immunological Memory
-source_hash: cab8de50e7c6
+source_hash: 90d032b1abf4
 ---
 
 The last question on the knowledge path is "how is it remembered and switched off after clearance?" The previous two chapters described how T cells are activated ([7.15.16](/7.15.16)) and which effector cells they differentiate into ([7.15.17](/7.15.17)); this chapter looks back at the process in terms of time: in an infection, a naive T-cell clone first proliferates by several orders of magnitude, then contracts by more than 90% after the antigen is cleared, leaving a small number of memory cells, which on the next encounter with the same antigen respond faster and more strongly. This is the cellular basis of the fourth property of adaptive immunity, memory, and it is also the principle by which vaccines work ([7.15.33](/7.15.33)). The chapter first gives the three phases of the response and its quantitative picture, then covers the fate decisions of effector cells and the subsets and maintenance of memory cells, and finally uses a kinetic model to place expansion, contraction and the recall response in one framework, and discusses exhaustion caused by chronic stimulation and the immunosenescence that appears with age. The time course of the antibody response (affinity maturation and memory B cells) is covered in [7.15.20](/7.15.20), the integration of the immune response in space and time in [7.15.22](/7.15.22), and the molecular mechanisms of exhaustion and checkpoints in [7.15.25](/7.15.25).

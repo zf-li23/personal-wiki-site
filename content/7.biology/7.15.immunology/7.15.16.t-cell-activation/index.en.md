@@ -1,6 +1,6 @@
 ---
 title: T-Cell Activation
-source_hash: 79b48292d6fa
+source_hash: e28263e234ec
 ---
 
 The third question on the knowledge path is "how is the decision made after recognition?" When a naive T cell meets, in the lymph node, a dendritic cell displaying its cognate pMHC ([7.15.14](/7.15.14)), it must decide within hours whether to proliferate and differentiate into an effector cell, or to ignore, become anergic or die. This decision is not made by the TCR alone but integrates three kinds of signal: TCR recognition of pMHC gives the "what" (signal 1), costimulatory molecules give the "is it dangerous" (signal 2), and cytokines give the "how to respond" (signal 3). This chapter covers the molecular mechanisms of the first two signals, how the TCR makes extremely sensitive and specific judgments from minute differences in affinity, and IL-2, the most basic of the third signals; how the third signals determine the effector subset is covered in [7.15.17](/7.15.17), expansion and memory after activation in [7.15.18](/7.15.18), and the details of the "brakes" (coinhibitory receptors and checkpoints) in [7.15.25](/7.15.25). The general principles of signal transduction (kinase cascades, second messengers, activation of transcription factors) are in [7.1.14](/7.1.14), [7.1.15](/7.1.15) and [7.3.19](/7.3.19); only the parts specific to T cells are covered here.
@@ -158,7 +158,7 @@ The time course of activation is roughly as follows (naive T cells, in vitro sti
 | Time | Event |
 |---|---|
 | Seconds to minutes | ITAM phosphorylation, calcium influx, synapse formation |
-| 1–2 h | Immediate early genes: *FOS*, *MYC*; CD69 upregulated (the earliest **activation marker**, which transiently retains the T cell in the lymph node) |
+| 1–2 h | Immediate early genes: *FOS*, *MYC*; CD69 upregulated (the earliest *activation marker*, which transiently retains the T cell in the lymph node) |
 | Several hours | IL-2 mRNA and secretion; CD25 upregulated |
 | About 24 h | Blast transformation: cell size increases and metabolism shifts to aerobic glycolysis |
 | 24–48 h | First division; thereafter CD8⁺ T cells divide about every 6–8 h |

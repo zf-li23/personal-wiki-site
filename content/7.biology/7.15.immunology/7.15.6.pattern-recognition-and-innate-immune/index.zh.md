@@ -17,7 +17,7 @@ description: 固有识别的逻辑：病原体相关分子模式、损伤相关�
 | 脂蛋白、脂肽 | 细菌、支原体 | TLR2–TLR1（三酰基）、TLR2–TLR6（二酰基） |
 | **肽聚糖**片段 | 细菌细胞壁 | NOD1（含 meso-DAP 的片段）、NOD2（胞壁酰二肽） |
 | 脂磷壁酸 | 革兰氏阳性菌 | TLR2 |
-| **鞭毛蛋白** | 有鞭毛的细菌 | TLR5；胞质中的 NAIP–NLRC4 |
+| 鞭毛蛋白（flagellin） | 有鞭毛的细菌 | TLR5；胞质中的 NAIP–NLRC4 |
 | 未甲基化的 CpG DNA | 细菌、病毒 DNA | TLR9（内体） |
 | 双链 RNA | 多数病毒的复制中间物 | TLR3（内体）、MDA5（胞质） |
 | 单链 RNA（富含 GU） | RNA 病毒 | TLR7、TLR8（内体） |

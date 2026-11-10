@@ -1,6 +1,6 @@
 ---
 title: Barriers and Cells of Innate Immunity
-source_hash: ecf6734f9247
+source_hash: 990a508b8e44
 ---
 
 From this chapter on we enter the first link of the knowledge path, innate immunity. It answers the "fast version" of question 1 (who recognizes) and question 3 (what clears) of the five questions. This chapter introduces the executors: first the barriers that keep pathogens out (§5.1), then the phagocytes that are the first to fight once pathogens get in (§5.2–5.3), the granulocytes (§5.4), and the NK cells that recognize "abnormal self" (§5.5), and finally the innate lymphoid cells and innate-like lymphocytes that correspond one to one with T-cell subsets (§5.6–5.7). The receptors with which they recognize pathogens are the subject of the next chapter, and the processes of their recruitment, killing, and induction of inflammation are in [7.15.7](/7.15.7). The origin, numbers, and surface markers of each cell type were tabulated in [7.15.2](/7.15.2); here we describe how they work.
@@ -220,7 +220,7 @@ Among T cells and B cells there are also some "unconventional" subsets: they hav
 
 **Definition 5.7.2 (NKT Cell)** **NKT cells** (natural killer T cells) are T cells that express both an αβ TCR and NK cell receptors (such as NK1.1 and CD161); their main subset, invariant NKT cells (iNKT), expresses a nearly invariant TCR α chain (Vα24–Jα18 in humans, Vα14–Jα18 in mice) and recognizes glycolipid antigens presented by the nonclassical MHC molecule CD1d.
 
-After activation by glycolipids (in experiments, α-galactosylceramide derived from sponges is often used), iNKT cells secrete large amounts of both IFN-γ and IL-4 within minutes to hours and can rapidly influence the direction of the subsequent adaptive response. Similar are the mucosal-associated invariant T (MAIT) cells, which use an invariant TCR α chain to recognize bacterial riboflavin-synthesis intermediates presented by the MR1 molecule and are abundant in human blood and liver.
+After activation by glycolipids (in experiments, α-galactosylceramide derived from sponges is often used), iNKT cells secrete large amounts of both IFN-γ and IL-4 within minutes to hours and can rapidly influence the direction of the subsequent adaptive response. Similar are the *mucosal-associated invariant T cells* (MAIT cells), which use an invariant TCR α chain to recognize bacterial riboflavin-synthesis intermediates presented by the MR1 molecule and are abundant in human blood and liver.
 
 The **B-1 cell** among B cells is the corresponding innate-like B cell: found mainly in the peritoneal and pleural cavities, with limited receptor diversity biased toward recognizing conserved structures such as bacterial polysaccharides and phosphorylcholine, they produce "natural IgM" without T-cell help, antibodies that are present in serum even without infection and form an early line of defense against bacteria ([7.15.19](/7.15.19)).
 

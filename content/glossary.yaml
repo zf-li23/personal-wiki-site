@@ -11847,7 +11847,7 @@ terms:
   - { zh: 细胞毒性 T 淋巴细胞, en: cytotoxic T lymphocyte, aliases: [CTL, CTLs, 细胞毒性 T 细胞, cytotoxic T cell] }
   - { zh: FOXP3, en: FOXP3, aliases: [Foxp3] }
   - { zh: T 细胞极化, en: T-cell polarization, aliases: [Th 分化, helper T-cell differentiation] }
-  - { zh: 克隆扩增, en: clonal expansion }
+  - { zh: 克隆扩增, en: clonal expansion, scope: ["7.15"] }
   - { zh: 初次免疫应答, en: primary immune response, aliases: [primary response, 初次应答] }
   - { zh: 再次免疫应答, en: secondary immune response, aliases: [secondary response, 再次应答, 回忆应答, anamnestic response] }
   - { zh: 记忆 T 细胞, en: memory T cell, aliases: [memory T cells] }
