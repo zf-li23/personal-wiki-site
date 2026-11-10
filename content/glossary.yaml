@@ -11209,7 +11209,7 @@ terms:
   - { zh: 血液凝固, en: blood coagulation, aliases: [凝血, coagulation], scope: ["7"] }
   - { zh: 纤溶, en: fibrinolysis, aliases: [纤维蛋白溶解] }
   - { zh: 血型, en: blood group, aliases: [blood type] }
-  - { zh: 渗出, en: diapedesis, aliases: [血细胞渗出, 白细胞渗出], scope: ["7"] }
+  - { zh: 渗出, en: diapedesis, aliases: [血细胞渗出, 白细胞渗出, extravasation], scope: ["7"] }
   - { zh: 炎症, en: inflammation }
   - { zh: 开放式循环系统, en: open circulatory system }
   - { zh: 封闭式循环系统, en: closed circulatory system }
@@ -11703,7 +11703,7 @@ terms:
   - { zh: 生发中心, en: germinal center, aliases: [germinal centers] }
   - { zh: 高内皮微静脉, en: high endothelial venule, aliases: [HEV, high endothelial venules] }
   - { zh: 淋巴细胞再循环, en: lymphocyte recirculation }
-  - { zh: 分化群, en: cluster of differentiation, aliases: [CD, 白细胞分化抗原] }
+  - { zh: 分化群, en: cluster of differentiation, aliases: [CD, 白细胞分化抗原, leukocyte differentiation antigen, leukocyte differentiation antigens] }
   - { zh: 黏附分子, en: adhesion molecule, aliases: [adhesion molecules] }
   - { zh: 免疫球蛋白超家族, en: immunoglobulin superfamily, aliases: [IgSF] }
   - { zh: 白细胞黏附级联, en: leukocyte adhesion cascade, aliases: [leukocyte extravasation] }

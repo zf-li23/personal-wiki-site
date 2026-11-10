@@ -1,5 +1,6 @@
 ---
 title: Hematopoiesis and the Cells of the Immune System
+source_hash: a9af758d759f
 ---
 
 The previous chapter posed the five questions of an immune response; this chapter answers the most basic prerequisite among them: who the participating cells are, where they come from, and how many there are of each. All immune cells are blood cells and derive from **hematopoietic stem cells** in the bone marrow. The hematopoietic stem cell itself and the general principles of the hematopoietic hierarchy were covered in [7.3.24](/7.3.24), and the physiology of blood leukocytes (counts, extravasation, phagocytosis, and the vascular reaction of inflammation) is in [7.14.11](/7.14.11). Here these cells are reorganized from the immunological point of view: they are grouped by lineage (myeloid and lymphoid), for each cell type we remember only "what it recognizes, what it does, and where it is", and morphology, numbers, and surface markers are collected in a single summary table (§2.2). The places where cells act, the immune organs, are the subject of the next chapter; the effector mechanisms of the various cell types are developed in Chapters 5, 7, and 17; and the systematic method of identifying cells by surface markers is in [7.15.35](/7.15.35).
