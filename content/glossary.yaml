@@ -941,7 +941,7 @@ terms:
   - { zh: 法向量, en: normal vector }
   - { zh: 鞍点, en: saddle point }
   - { zh: 条件极值, en: constrained extremum }
-  - { zh: Lagrange 乘子法, en: method of Lagrange multipliers, aliases: [拉格朗日乘子法, Lagrange 乘数法, Lagrange 函数, Lagrange multiplier] }
+  - { zh: Lagrange 乘子法, en: method of Lagrange multipliers, aliases: [拉格朗日乘子法, Lagrange 乘数法, Lagrange 函数, Lagrange multiplier, Lagrange 乘子] }
   - { zh: 二重积分, en: double integral }
   - { zh: 三重积分, en: triple integral }
   - { zh: 重积分, en: multiple integral }
