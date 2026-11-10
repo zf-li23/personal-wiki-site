@@ -1,6 +1,6 @@
 ---
 title: Pericyclic Reactions
-source_hash: 1996a001309b
+source_hash: 28685dc22ac2
 ---
 
 The reactions of the preceding chapters all proceed through ionic or radical intermediates. This chapter treats a third class of mechanism: concerted reactions in which bond breaking and bond making occur together, through a cyclic transition state and without an intermediate. The Diels–Alder reaction, the Claisen rearrangement and the cyclization of polyenes all belong to this class. They are barely affected by solvent polarity, acids and bases, or radical initiators, yet they show extremely high stereospecificity, and heating and irradiation give products of opposite stereochemistry. In the 1960s Woodward and Hoffmann explained these regularities through the symmetry of molecular orbitals, and Fukui's **frontier orbital** theory provided an equivalent and simpler method of analysis; this is one of the most successful applications of **molecular orbital theory** in organic chemistry. We use directly the Hückel orbitals of linear and cyclic conjugated systems from [6.5.2](/6.5.2#sec-2.2); the excited states involved in photochemical reactions are described in [6.3.17](/6.3.17); and the theory of aromatic transition states (Section 12.6) anticipates the next chapter on aromaticity ([6.5.13](/6.5.13)). Applications and variants of pericyclic reactions reappear in the chapter on rearrangements ([6.5.30](/6.5.30)), and the inverse-electron-demand Diels–Alder reaction of tetrazines is one of the most important bioorthogonal reactions in chemical biology ([6.6](/6.6)).
@@ -224,7 +224,7 @@ The endo rule. When a cyclic diene (such as cyclopentadiene) reacts with a dieno
 **Definition 12.4.4 (Endo Rule)** In the Diels–Alder reaction, an unsaturated (especially carbonyl) substituent on the dienophile tends to lie beneath the π system of the diene in the transition state, so that the endo adduct is formed mainly. This empirical regularity is called the **endo rule** (Alder rule).
 
 ```smiles
-C1=CCC=C1.O=C1OC(=O)C=C1>>O=C1OC(=O)[C@H]2[C@H]3C=C[C@H](C3)[C@H]12 endo
+C1=CCC=C1.O=C1OC(=O)C=C1>>O=C1OC(=O)[C@H]2[C@@H]1[C@H]1C=C[C@@H]2C1 endo
 ```
 
 The classical explanation is secondary orbital interaction: in the endo transition state the LUMO lobe on the carbonyl carbon of the dienophile lies just below the HOMO lobe on C2 (or C3) of the diene, and the two overlap in phase; although no new bond is formed, the transition state is additionally stabilized. Modern calculations show that the contribution of secondary orbital interactions is smaller than originally thought, and that endo selectivity also arises from electrostatic interactions, dispersion and the geometry of the transition state, varying from system to system; as a predictive rule, however, the endo rule is quite reliable for cyclic dienes and electron-poor dienophiles, and Lewis acid catalysis usually raises the endo selectivity.
