@@ -1,6 +1,6 @@
 ---
 title: Nucleophilic Substitution at Saturated Carbon
-source_hash: 05e0a17a0b69
+source_hash: e15b5bd14a3e
 ---
 
 Nucleophilic substitution at a saturated carbon atom ($\mathrm{sp^3}$ carbon) was the first class of ionic reactions whose mechanisms were studied systematically, and it is the most frequently used "mechanistic template" of the whole course: an electron-rich reagent attacks an electron-poor carbon, and at the same moment, or soon afterward, a group departs with the bonding electron pair. In this chapter we take alkyl halides as substrates and, starting from rate laws, distinguish the SN2 and SN1 mechanisms. We discuss the structure, stability and rearrangements of carbocations, the stereochemistry of nucleophilic substitution, and the effects of the substrate, the leaving group, the nucleophile and the solvent on the rate and mechanism of the reaction, and we end with neighboring group participation.
@@ -196,7 +196,7 @@ CC(C)(C)CBr>>CCC(C)(C)OCC.CC=C(C)C
 
 A primary carbocation is extremely unstable, and departure of the bromide occurs concertedly with migration of a methyl group, giving a tertiary carbocation directly, which is captured by ethanol (2-ethoxy-2-methylbutane) or loses a proton (2-methylbut-2-ene).
 
-![Solvolysis of neopentyl bromide. A primary carbocation is too unstable to form; instead the methyl group anti to the leaving group migrates with its bonding pair to C1 as bromide leaves, giving the tertiary 2-methyl-2-butyl cation directly, which is captured by ethanol (2-ethoxy-2-methylbutane after loss of a proton) or loses a proton (2-methyl-2-butene)](./plots/neopentyl-rearrangement.py)
+![Solvolysis of neopentyl bromide. A primary carbocation is too unstable to form; instead the methyl group anti to the leaving group migrates with its bonding pair to C1 as bromide leaves, giving the tertiary 2-methylbutan-2-yl cation directly, which is captured by ethanol (2-ethoxy-2-methylbutane after loss of a proton) or loses a proton (2-methylbut-2-ene)](./plots/neopentyl-rearrangement.py)
 
 ## 8.4. Stereochemistry of Nucleophilic Substitution
 
@@ -270,7 +270,7 @@ The two mechanisms make opposite demands on the substrate: methyl and primary ha
 - Bridgehead halides: bridgehead halides such as 1-bromobicyclo[2.2.1]heptane (1-bromonorbornane) are extremely slow by both mechanisms: the back side is completely blocked by the cage skeleton, so SN2 is impossible, and the bridgehead carbon cannot become planar, so the empty orbital of the carbocation formed cannot become a p orbital and SN1 is extremely slow too (the same root as Bredt's rule, [6.5.9](/6.5.9#sec-9.1)). The solvolysis of 1-bromobicyclo[2.2.1]heptane in 80% ethanol is about $10^{13}$ times slower than that of *tert*-butyl bromide. 1-Bromoadamantane, with its larger and more flexible cage, can undergo SN1, because the adamantyl cation can flatten to a limited extent.
 - $\alpha$-Halo carbonyl compounds: the SN2 reaction of $\ce{ClCH2COCH3}$ with $\ce{I-}$ is tens of thousands of times faster than that of 1-chloropropane (the transition state is conjugated with the $\pi^*$ orbital of $\ce{C=O}$), but SN1 hardly occurs (the positive charge would be next to the electron-withdrawing carbonyl group).
 
-![SN1 of an allylic halide with allylic rearrangement. 1-Chloro-2-butene ionizes to the 1-methylallyl cation, whose positive charge is shared by C1 and C3 (resonance); water attacks either end, giving 2-buten-1-ol and 3-buten-2-ol after loss of a proton](./plots/allylic-sn1.py)
+![SN1 of an allylic halide with allylic rearrangement. 1-Chlorobut-2-ene ionizes to the 1-methylallyl cation, whose positive charge is shared by C1 and C3 (resonance); water attacks either end, giving but-2-en-1-ol and but-3-en-2-ol after loss of a proton](./plots/allylic-sn1.py)
 
 ## 8.6. Leaving Groups
 
@@ -322,7 +322,7 @@ Nucleophilicity often parallels basicity but not always. The rules are:
 In protic solvents, the order of nucleophilicity of common nucleophiles toward a saturated carbon is approximately:
 
 $$
-\ce{RS-} \approx \ce{ArS-} > \ce{CN-} > \ce{I-} > \ce{NH3}\,(\ce{RNH2}) > \ce{RO-} \approx \ce{HO-} > \ce{Br-} > \ce{PhO-} > \ce{Cl-} \gg \ce{H2O} > \ce{F-}.
+\ce{RS-} \approx \ce{ArS-} > \ce{CN-} > \ce{I-} > \ce{NH3}\,(\ce{RNH2}) > \ce{RO-} \approx \ce{HO-} > \ce{Br-} > \ce{PhO-} > \ce{Cl-} > \ce{F-} \gg \ce{H2O}.
 $$
 
 ### 8.7.2. The Swain–Scott Equation
