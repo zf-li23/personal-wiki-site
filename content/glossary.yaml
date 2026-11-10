@@ -1936,11 +1936,11 @@ terms:
   - { zh: Lord 悖论, en: "Lord's paradox" }
   - { zh: 分配机制, en: assignment mechanism }
   - { zh: 单位分配概率, en: unit-level assignment probability }
-  - { zh: 个体化分配, en: individualistic assignment }
-  - { zh: 概率性分配, en: probabilistic assignment }
-  - { zh: 无混杂分配, en: unconfounded assignment, aliases: [无混杂性, unconfoundedness, 无混杂假设] }
-  - { zh: 强可忽略性, en: strong ignorability, aliases: [strongly ignorable treatment assignment, 强可忽略分配] }
-  - { zh: 可忽略分配, en: ignorable treatment assignment, aliases: [ignorability, 可忽略性] }
+  - { zh: 个体化分配, en: individualistic assignment, aliases: [individualistic] }
+  - { zh: 概率性分配, en: probabilistic assignment, aliases: [probabilistic] }
+  - { zh: 无混杂分配, en: unconfounded assignment, aliases: [无混杂性, unconfoundedness, 无混杂假设, unconfounded] }
+  - { zh: 强可忽略性, en: strong ignorability, aliases: [strongly ignorable treatment assignment, 强可忽略分配, strongly ignorable] }
+  - { zh: 可忽略分配, en: ignorable treatment assignment, aliases: [ignorability, 可忽略性, ignorable] }
   - { zh: 随机化实验, en: randomized experiment }
   - { zh: 经典随机化实验, en: classical randomized experiment }
   - { zh: 正则分配机制, en: regular assignment mechanism, aliases: [RAM] }
