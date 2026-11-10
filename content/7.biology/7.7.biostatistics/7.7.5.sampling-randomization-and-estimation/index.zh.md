@@ -200,7 +200,7 @@ $$
 $$
 \frac{\hat p + \frac{z^2}{2n}}{1 + \frac{z^2}{n}} \pm \frac{z}{1 + \frac{z^2}{n}}\sqrt{\frac{\hat p(1 - \hat p)}{n} + \frac{z^2}{4n^2}}, \qquad z = z_{\alpha/2},
 $$
-称为比例的 **Wilson 区间**（Wilson score interval）。
+称为比例的 **Wilson 区间**。
 
 它的中心从 $\hat p$ 向 1/2 收缩，在 $\hat p = 0$ 时仍有正的上限，覆盖率在整个 $(0, 1)$ 上都接近名义水平。推导见 [3.2.4](/3.2.4)。
 
