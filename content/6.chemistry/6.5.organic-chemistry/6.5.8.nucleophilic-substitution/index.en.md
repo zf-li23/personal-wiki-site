@@ -1,6 +1,6 @@
 ---
 title: Nucleophilic Substitution at Saturated Carbon
-source_hash: e15b5bd14a3e
+source_hash: 5c8ded246ac0
 ---
 
 Nucleophilic substitution at a saturated carbon atom ($\mathrm{sp^3}$ carbon) was the first class of ionic reactions whose mechanisms were studied systematically, and it is the most frequently used "mechanistic template" of the whole course: an electron-rich reagent attacks an electron-poor carbon, and at the same moment, or soon afterward, a group departs with the bonding electron pair. In this chapter we take alkyl halides as substrates and, starting from rate laws, distinguish the SN2 and SN1 mechanisms. We discuss the structure, stability and rearrangements of carbocations, the stereochemistry of nucleophilic substitution, and the effects of the substrate, the leaving group, the nucleophile and the solvent on the rate and mechanism of the reaction, and we end with neighboring group participation.
@@ -383,11 +383,11 @@ A solvent changes the free energy of activation through different degrees of sol
 
 ![Effect of solvent on the two mechanisms (schematic free-energy profiles): (a) in SN1 the transition state has charge separation, and a polar protic solvent stabilizes the ions and the transition state, lowering the barrier; (b) in SN2 with an anionic nucleophile, a protic solvent stabilizes the small reactant anion by hydrogen bonding more than the transition state with its dispersed charge, raising the barrier](./plots/solvent-effect.py)
 
-In the rate-determining step of SN1 a pair of ions is formed from a neutral molecule, and the transition state has considerable charge separation. A polar protic solvent can stabilize the departing anion by dipoles and hydrogen bonds and the carbocation by lone pairs, greatly accelerating ionization. For the solvolysis of *tert*-butyl chloride in ethanol–water mixtures ($25\,^\circ\mathrm{C}$):
+In the rate-determining step of SN1 a pair of ions is formed from a neutral molecule, and the transition state has considerable charge separation. A polar protic solvent can stabilize the departing anion by dipoles and hydrogen bonds and the carbocation by lone pairs, greatly accelerating ionization. For the solvolysis of *tert*-butyl chloride in ethanol–water mixtures (by volume, $25\,^\circ\mathrm{C}$; rounded values calculated from the Grunwald–Winstein solvent ionizing power $Y$, defined for *tert*-butyl chloride by $\lg(k/k_0) = Y$, where $k_0$ is the rate constant in 80% ethanol):
 
 | Solvent | Ethanol | 40% water–60% ethanol | 80% water–20% ethanol | Water |
 |---|---|---|---|---|
-| Relative rate | 1 | 100 | 14 000 | 100 000 |
+| Relative rate | 1 | about $1\times10^3$ | about $1\times10^5$ | about $3\times10^5$ |
 
 For SN2 the situation depends on the charge type. In reactions of an anionic nucleophile with a neutral substrate ($\ce{Nu- + RX}$), the negative charge goes from being concentrated on the small $\ce{Nu-}$ to being dispersed over both Nu and X, and the transition state is less polar than the reactants. A protic solvent surrounds the small anion tightly with hydrogen bonds and stabilizes the reactant, so the reaction is slower; the positive ends of the dipoles of polar aprotic solvents (the S of DMSO, the C of DMF) are buried inside the molecule and cannot solvate anions effectively, and only the negative end (O) solvates the cation, so the anion is "naked", high in energy and strongly nucleophilic. For the reactions of halides with $\ce{CH3I}$ ($25\,^\circ\mathrm{C}$, taking $\ce{Br-}$ in methanol as 1):
 

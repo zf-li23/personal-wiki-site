@@ -1,6 +1,6 @@
 ---
 title: Reactions of Alkenes, Alkynes and Conjugated Dienes
-source_hash: f153d0e24e00
+source_hash: 3708402a8370
 ---
 
 The carbon–carbon π bond is the most common and most reactive functional group in organic chemistry. The preceding chapters dealt with substitution and elimination at saturated carbon ([6.5.8](/6.5.8), [6.5.9](/6.5.9)): elimination produces alkenes, and in this chapter we turn to the reverse process, addition to alkenes, alkynes and conjugated dienes. The π electrons are high in energy and far from the nuclei, so they are good electron donors, and the typical reaction of an unsaturated hydrocarbon is addition of an **electrophile**. Other reactions include radical addition, oxidation, catalytic hydrogenation, carbene addition and polymerization, and terminal alkynes show characteristic behavior of their own, namely acidity and nucleophilic addition. The tools used here come from earlier chapters: the structure of the π bond and **frontier orbitals** ([6.1.3](/6.1.3), [6.5.2](/6.5.2)), the stability of **carbocations** and radicals ([6.5.8](/6.5.8#sec-8.3.2), [6.5.7](/6.5.7#sec-7.3)), and reaction energy diagrams with kinetic versus thermodynamic control ([6.5.3](/6.5.3#sec-3.9.2)). Concerted reactions between conjugated dienes and π systems (the **Diels–Alder reaction** and others) are left to the next chapter, [6.5.12](/6.5.12), on **pericyclic reactions**.

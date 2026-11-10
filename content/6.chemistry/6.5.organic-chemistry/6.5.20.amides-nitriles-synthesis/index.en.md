@@ -1,7 +1,7 @@
 ---
 title: Amides, Nitriles, Carbonic Acid Derivatives and Synthesis Design
 description: Acidity and basicity of amides; the Hofmann rearrangement (mechanism, retention of configuration, the concerted pathway and nitrenes); dehydration of amides; structure, acidity and basicity, preparation, hydrolysis, reduction, reaction with Grignard reagents, and the Ritter reaction of nitriles; carbonic acid derivatives (phosgene, chloroformates, isocyanates, carbamates, urea and urease, the biuret reaction, carbonates); orthoesters and guanidines, peracids and diacyl peroxides, isocyanides; an overview of the preparation and interconversion of carboxylic acids and their derivatives; retrosynthetic analysis, synthons, and protecting groups.
-source_hash: b1c0a2222a44
+source_hash: 895f4075313f
 ---
 
 This is the last chapter of the unit on carboxylic acids and their derivatives. The first half discusses several classes of reactions and compounds not covered in [6.5.19](/6.5.19): the acidity and basicity of amides, the Hofmann rearrangement, and dehydration of amides; nitriles, which are in the same oxidation state as carboxylic acids but have no carbonyl group; carbonic acid derivatives, in which carbon bears the most bonds to heteroatoms (phosgene, urea, carbamates, carbonates); and "special" derivatives of carboxylic acids such as orthoesters, guanidines, peracids, and isocyanides. The second half organizes the reactions of [6.5.18](/6.5.18)–[6.5.20](/6.5.20) into an overview of preparation and interconversion and uses it to introduce the basic ideas of synthesis design: retrosynthetic analysis, synthons and equivalents, functional group interconversion, and **protecting groups**.
@@ -363,7 +363,7 @@ The industrial synthesis of ibuprofen offers another perspective. The original B
 
 **Example 20.8.2** Synthesize 3-[2,2-(ethylenedioxy)cyclohexyl]propanoic acid (the cyclohexanone ethylene glycol **ketal**, bearing $\ce{CH2CH2COOH}$ at position 2) from simple starting materials of up to $\mathrm{C_6}$.
 
-The target molecule contains a protected ketone and a carboxylic acid separated by three carbons (a 1,5-dicarbonyl relationship). Retrosynthesis: removing the protecting group gives 3-(2-oxocyclohexyl)propanoic acid, and disconnection of its C2–Cα bond corresponds to **conjugate addition** of an equivalent of the cyclohexanone **enol** to an acrylate (or acrolein). A reliable forward route:
+The target molecule contains a protected ketone and a carboxylic acid separated by three carbons (a 1,5-dicarbonyl relationship). Retrosynthesis: removing the protecting group gives 3-(2-oxocyclohexyl)propanoic acid, and disconnection of the bond between ring C1 (the $\alpha$ carbon of the ketone) and side-chain C3 corresponds to **conjugate addition** of an equivalent of the cyclohexanone **enol** to an acrylate (or acrolein). A reliable forward route:
 
 1. Cyclohexanone and pyrrolidine give the **enamine**, which undergoes conjugate addition to methyl acrylate (the **Stork enamine reaction**, Definition 21.8.1), and hydrolysis gives methyl 3-(2-oxocyclohexyl)propanoate;
 2. Ethylene glycol and p-toluenesulfonic acid, with water removed by a Dean–Stark trap, protect the ketone as the ketal;
