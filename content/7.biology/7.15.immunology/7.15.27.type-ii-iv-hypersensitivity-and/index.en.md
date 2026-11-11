@@ -1,7 +1,7 @@
 ---
 title: Type II–IV Hypersensitivity and Chronic Inflammation
 description: "How antibodies, immune complexes and T cells each cause tissue damage: Type II (transfusion reactions, hemolytic disease of the newborn, stimulation and blockade of receptors), Type III (formation, deposition and size of immune complexes, Arthus reaction, serum sickness, a precipitin-curve model), Type IV (delayed-type hypersensitivity, contact hypersensitivity, granulomas), and chronic inflammation when a response cannot be shut off."
-source_hash: 3e9f3cae9795
+source_hash: 324145867c56
 ---
 
 The preceding chapter ([7.15.26](/7.15.26)) described Type I hypersensitivity, carried out by IgE and mast cells. This chapter covers the other three types, following a single thread, the effector molecule: in Type II, antibody binds to antigen on cells or matrix; in Type III, complexes of antibody with soluble antigen are deposited in tissue; in Type IV, the effector is the **T cell**. These three pathways use effector mechanisms already introduced in earlier chapters: complement ([7.15.10](/7.15.10)), Fc receptors with phagocytes and NK cells ([7.15.21](/7.15.21)), activation of Th1 cells and macrophages ([7.15.17](/7.15.17)), and CTL killing. This chapter therefore introduces no new molecules, only effectors directed at the wrong target.
@@ -10,7 +10,7 @@ For each type there is only one question, which differs in the antigenic setting
 
 ## 27.1. Type II: Action of Antibody on Cellular and Matrix Antigens
 
-Type II hypersensitivity is caused by IgG or IgM binding to antigens on cell surfaces or in the extracellular matrix. The antigen may be an alloantigen (the ABO and Rh antigens of red cells, HLA), a self antigen whose structure has been altered, a drug hapten adsorbed to cells, or a self antigen (autoimmune disease). After antibody binding, harm or functional change results through four mechanisms:
+Type II hypersensitivity is caused by IgG or IgM binding to antigens on cell surfaces or in the extracellular matrix. The antigen may be an alloantigen (the ABO and Rh antigens of red cells, HLA), a self antigen whose structure has been altered, a drug hapten adsorbed to cells, or a self antigen (autoimmune disease). After antibody binding, harm or functional change results through five mechanisms:
 
 | Mechanism | Process | Typical targets and examples |
 |---|---|---|
@@ -76,7 +76,7 @@ $$
 p_{\mathrm{A}}\,p_{\mathrm{B}} > \frac{1}{f - 1}.
 $$
 
-In antibody excess ($F < A$) the product of $p_{\mathrm{A}} = F/A$ and $p_{\mathrm{B}} = 1$ is below 1, and likewise in antigen excess, so that the gel appears only in the "equivalence zone"
+In antibody excess ($F < A$) all antigen sites are bound, so $p_{\mathrm{A}} = 1$, $p_{\mathrm{B}} = F/A$ and the product is $F/A$; likewise in antigen excess the product is $A/F$. The gel therefore appears only in the "equivalence zone"
 
 $$
 \frac{1}{f - 1} < \frac{F}{A} < f - 1

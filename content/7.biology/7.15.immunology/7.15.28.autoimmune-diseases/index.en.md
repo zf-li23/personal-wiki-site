@@ -1,7 +1,7 @@
 ---
 title: Autoimmune Diseases
 description: The distinction between autoimmunity and autoimmune disease; mechanisms of etiology (failure of tolerance, molecular mimicry, epitope spreading, sequestered antigens and infectious triggers); HLA and non-HLA genetic susceptibility and the statistical interpretation of association strength; mechanistic examples of organ-specific and systemic autoimmune diseases; the pathogenic and marker roles of autoantibodies; animal models and the principles of treatment.
-source_hash: 65dc514914e4
+source_hash: f16ef91f085b
 ---
 
 The chapter on tolerance ([7.15.24](/7.15.24)) described how the immune system avoids attacking itself; this chapter describes what happens when that principle fails. Autoimmune disease is a special case of Type II, III and IV hypersensitivity ([7.15.27](/7.15.27)): there is nothing new in the effector mechanisms, the novelty being that the target is a self antigen, and self antigens are not cleared, so once the effector response has started it is hard to stop and the disease is chronic and progressive. The key to understanding it is to see two things at once: at which steps tolerance can fail, and why most people who carry susceptibility genes never develop disease.
@@ -197,7 +197,7 @@ Of these, antigen-specific therapy is the ideal and the most difficult direction
 
 2. Explain why anti-CD20 antibody can lower many autoantibodies but has little effect on the levels of some existing autoantibodies.
 
-   **Answer** CD20 is expressed on B cells from pro-B and pre-B cells to memory B cells but not on plasma cells (especially long-lived plasma cells), so what is depleted are the new antibody producers and the antigen-presenting B cells, not the plasma cells already differentiated, and existing long-lived plasma cells continue to secrete antibody; autoantibodies that depend on continual replenishment of plasma cells therefore fall, whereas those maintained by long-lived plasma cells change less.
+   **Answer** CD20 is expressed on B cells from pre-B cells to memory B cells but not on plasma cells (especially long-lived plasma cells), so what is depleted are the new antibody producers and the antigen-presenting B cells, not the plasma cells already differentiated, and existing long-lived plasma cells continue to secrete antibody; autoantibodies that depend on continual replenishment of plasma cells therefore fall, whereas those maintained by long-lived plasma cells change less.
 
 3. Suppose a patient with an autoimmune disease has antibodies against self protein X that appeared 5 years before onset. Can one conclude that this antibody caused the disease?
 

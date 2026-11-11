@@ -1,6 +1,6 @@
 ---
 title: CD Molecules, Adhesion Molecules and Chemokines
-source_hash: 0de100a74bce
+source_hash: db1b0aeeefae
 ---
 
 The previous two chapters described who immune cells are and where they live; this chapter describes the molecules with which they "recognize" one another and the means by which they get where they need to go. This is the common foundation for all the questions on the knowledge path: recognition (question 1) relies on surface receptors, decision (question 2) on costimulatory and coinhibitory molecules, and effector action (question 3) presupposes that effector cells reach the site of infection, all of which is written in molecules on the cell surface. The great majority of these molecules have been assigned CD numbers, whose names reveal nothing of function, which is the main source of the "too many names" problem in immunology. This chapter therefore first explains how CD names arose and then groups the molecules by function (§4.1); it next treats two classes of molecules that determine cell position, **adhesion molecules** (§4.2) and **chemokines** (§4.3); and it ends with their clinical uses (§4.4). A marker atlas organized by cell lineage is in [7.15.35](/7.15.35); the general structure of **integrins**, **selectins**, and **cadherins** as cell adhesion molecules was covered in [7.3.5](/7.3.5) and elsewhere, and the physiology of leukocyte extravasation is in [7.14.11](/7.14.11).
@@ -15,7 +15,7 @@ When hematopoietic stem cells differentiate into different lineages, when each l
 
 By the tenth workshop in 2014, human CD molecules had been numbered up to CD371. Several conventions apply when reading CD names:
 
-- The number reflects only the order of confirmation and has nothing to do with function: CD4 and CD8 are coreceptors of T cells, whereas CD5 and CD6 are members of the scavenger receptor family of limited function. This is the root cause of "names that reveal nothing of function", which is why the molecules must be regrouped by function (§4.1.3).
+- The number reflects only the order of confirmation and has nothing to do with function: CD4 and CD8 are coreceptors of T cells, whereas CD5 and CD6 are members of the scavenger receptor cysteine-rich family that modulate TCR signaling. This is the root cause of "names that reveal nothing of function", which is why the molecules must be regrouped by function (§4.1.3).
 - Different chains of the same complex are distinguished by letters: the γ, δ, and ε chains of CD3 are CD3g, CD3d, and CD3e; CD79a and CD79b are Igα and Igβ of the BCR. Some molecules retain customary names as well: CD25 (IL-2 receptor α chain), CD62L (L-selectin), CD279 (PD-1).
 - Expression is written as a superscript: CD4⁺ means expressed, CD8⁻ means not expressed, and CD56bright and the like indicate expression level (written hi/lo in flow cytometry); a combination such as "CD45RA⁺CCR7⁺" is called a phenotype ([7.15.35](/7.15.35)).
 - "CD" was originally used only for leukocytes, but many CD molecules are also expressed on endothelial, epithelial, and stromal cells (such as CD31, CD34, CD54), and today it is the general numbering for surface molecules.

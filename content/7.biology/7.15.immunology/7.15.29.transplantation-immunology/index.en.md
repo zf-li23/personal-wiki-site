@@ -1,7 +1,7 @@
 ---
 title: Transplantation Immunology
 description: Types of transplants and the immunological basis of rejection; the direct, indirect and semi-direct pathways of allorecognition; the mechanisms of hyperacute, acute and chronic rejection and of graft-versus-host disease; the principles of HLA matching and cross-matching and matching probabilities; the mode of action at each target of immunosuppressive therapy; transplantation tolerance and immune-privileged sites; and the barriers to xenotransplantation.
-source_hash: f4af868ead59
+source_hash: ad9cf887a2b6
 ---
 
 Transplantation immunology is the medical setting in which the ability of adaptive immunity to recognize "non-self" creates a problem: this time the "non-self" that is recognized is an organ from another individual of the same species. It is closely linked to earlier chapters: the core of rejection is recognition of **MHC** molecules by T cells ([7.15.13](/7.15.13), [7.15.14](/7.15.14)); rejection mediated by preformed antibody is Type II hypersensitivity ([7.15.27](/7.15.27)); drugs that suppress rejection act on every signal of T-cell activation ([7.15.16](/7.15.16)); and successful tolerance is an application of the chapters on tolerance ([7.15.24](/7.15.24)) and on the brakes ([7.15.25](/7.15.25)).

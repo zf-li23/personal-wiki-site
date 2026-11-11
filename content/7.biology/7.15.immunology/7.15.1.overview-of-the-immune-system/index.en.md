@@ -1,6 +1,6 @@
 ---
 title: "Overview of the Immune System: Functions, Two Branches of Immunity and a Map of the Course"
-source_hash: 53f8df3e8ad6
+source_hash: 19ad7f88458d
 ---
 
 Immunology often gives the impression of having too many names: hundreds of CD molecules, dozens of interleukins, more than a dozen T-cell subsets. But these names serve a small number of questions: who recognizes, what is recognized, how the decision is made after recognition, which effector mechanisms clear the threat, and how the response is remembered and brought to a close afterward. This chapter is the map for the whole course. It first describes the components and functions of the immune system (§1.1), then the division of labor between the two kinds of immune response (§1.2) and the central theory explaining adaptive immunity, the clonal selection theory (§1.3). A few key discoveries show how these concepts came to be understood (§1.4), and the chapter ends with the knowledge path that runs through the whole course (§1.5) and a classification of immune-related diseases (§1.6). The introduction of every later chapter states its position on this path.

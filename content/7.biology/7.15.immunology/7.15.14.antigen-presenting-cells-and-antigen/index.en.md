@@ -1,6 +1,6 @@
 ---
 title: Antigen-Presenting Cells and Antigen Processing and Presentation
-source_hash: 3aaa85dcdd72
+source_hash: b1e252e01dfa
 ---
 
 The previous chapter ([7.15.13](/7.15.13)) described what kinds of peptides MHC molecules can bind. This chapter answers the second half of the second question on the knowledge path, "what is recognized?": how a protein antigen becomes a peptide–MHC complex (pMHC) that a T cell can see, and which cells display it. The answer has two parts. All nucleated cells cut the proteins they synthesize themselves into peptides and load them onto MHC class I molecules for surveillance by CD8⁺ T cells. A few professional antigen-presenting cells take up proteins from the outside and load them onto MHC class II molecules for recognition by CD4⁺ T cells, and among them dendritic cells can also load exogenous antigen "across" onto MHC class I molecules to initiate CD8⁺ T-cell responses. Dendritic cells are at once sensors of innate immunity and initiators of adaptive immunity: they sense pathogens in the tissues (through **pattern recognition receptors**, [7.15.6](/7.15.6)) and then carry the antigen, together with "danger" signals, to the lymph node. How T cells read these signals is covered in [7.15.16](/7.15.16).

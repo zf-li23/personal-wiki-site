@@ -1,7 +1,7 @@
 ---
 title: Inflammation and Innate Effector Mechanisms
 description: How innate immunity acts once it has recognized a threat. The cascade of acute inflammation and its mediators, fever and the acute-phase response, the killing mechanisms of phagocytes (phagolysosome, respiratory burst, reactive nitrogen species, neutrophil extracellular traps), opsonization, the first line of antiviral defense, the three phases of innate immunity and the transition to adaptive immunity, resolution and dysregulation of inflammation, and a kinetic model of the race between pathogen and innate effector cells.
-source_hash: 44364663ed3a
+source_hash: fef24026d484
 ---
 
 [7.15.5](/7.15.5) introduced the barriers and cells of innate immunity, and [7.15.6](/7.15.6) described how they detect pathogens with pattern recognition receptors. This chapter answers the next question on the path of knowledge: once a pathogen has been recognized, what effectors does innate immunity use to eliminate it? (This is the innate-immunity answer to the "effector" question of [7.15.1](/7.15.1).) The core of the answer is **inflammation**. Sentinel cells in the tissue raise the alarm, the blood vessels deliver fluid, complement and leukocytes to the site of infection, and phagocytes there engulf and kill the microbes. The same alarm molecules also act on the liver and the hypothalamus, producing the acute-phase response and fever.
@@ -18,7 +18,7 @@ Acute inflammation is a chain of events, each causing the next. After a barrier 
 - Newly synthesized lipid mediators: **prostaglandins** and leukotrienes, made from arachidonic acid released from membrane phospholipids through the cyclooxygenase (COX) and 5-lipoxygenase pathways.
 - Newly transcribed proteins: the proinflammatory **cytokines** TNF-α, IL-1β and IL-6 and **chemokines** (such as CXCL8, also called IL-8). These require activation of transcription factors such as NF-κB and take tens of minutes to hours to appear.
 
-These molecules act on the small local vessels. Dilation of arterioles increases blood flow; the endothelial cells of the postcapillary venules contract and the gaps between them widen, so plasma proteins and fluid leak into the tissue. The exudate brings **complement**, antibodies, and components of the coagulation and kinin systems, and the tissue swells. The four cardinal signs of inflammation recorded by the Roman physician Celsus (redness, swelling, heat, pain), and loss of function added by Galen, can all be explained by these vascular changes:
+These molecules act on the small local vessels. Dilation of arterioles increases blood flow; the endothelial cells of the postcapillary venules contract and the gaps between them widen, so plasma proteins and fluid leak into the tissue. The exudate brings **complement**, antibodies, and components of the coagulation and kinin systems, and the tissue swells. The four cardinal signs of inflammation recorded by the Roman physician Celsus (redness, swelling, heat, pain), and loss of function, added later (usually credited to Virchow), can all be explained by these vascular changes:
 
 | Sign | Mechanism |
 |---|---|

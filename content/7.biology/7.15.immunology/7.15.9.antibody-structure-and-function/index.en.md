@@ -40,7 +40,7 @@ The hinge region has two functions: the disulfide bonds between the two heavy ch
 
 ## 9.2. Serotypes of Immunoglobulins
 
-Antibody molecules can themselves be recognized by antibodies: when the immunoglobulins of one animal are used to immunize another, the antibodies obtained distinguish different antigenic differences, which fall into three classes according to their distribution in the population, called serotypes.
+Antibody molecules can themselves be recognized by antibodies: when the immunoglobulins of one animal are used to immunize another, the antibodies obtained recognize several kinds of antigenic differences, which fall into three classes according to their distribution in the population, called serotypes.
 
 **Definition 9.2.1 (Isotype)** The antigenic differences shared by the antibodies of all individuals of a species and encoded by different constant-region genes are called **isotypes**; they include the class of the heavy chain (γ, μ, α, δ, ε), its subclass (human IgG1–4, IgA1–2) and the type of the light chain (κ, λ).
 

@@ -1,7 +1,7 @@
 ---
 title: "The Immune Response in Space and Time: From Infection to Memory"
 description: "Putting the molecules and cells of the preceding chapters back into the body: the distribution of immune cells at steady state; the timeline of a primary response from the local innate response through activation in the lymph node, homing of effector cells, clearance, contraction and memory; the two forms in which antigen reaches the lymph node; the search problem of rare lymphocytes; a three-layer kinetic model; tertiary lymphoid structures; and the connection to spatial omics."
-source_hash: 80313c07d318
+source_hash: 2861f773020f
 ---
 
 The preceding chapters answered, one by one, the five questions on the knowledge path: who recognizes, what is recognized, how the decision is made, with which effectors, and how the response is remembered and shut off ([7.15.1](/7.15.1)). But each question is answered at a particular place and a particular moment: innate cells at the site of infection, T cells in the paracortex of the lymph node, B cells in the follicles and germinal centers, plasma cells in the bone marrow, tissue-resident memory cells on barrier surfaces. This chapter arranges these fragments in a single spatiotemporal map and shows how a primary response unfolds across several organs within two or three weeks. The anatomy of the organs and of lymphocyte recirculation is described in [7.15.3](/7.15.3), adhesion molecules and chemokines in [7.15.4](/7.15.4), the dynamics of T-cell responses and memory in [7.15.18](/7.15.18), and the B-cell side in [7.15.20](/7.15.20); the particularities of barrier tissues are the subject of the next chapter ([7.15.23](/7.15.23)).
@@ -21,7 +21,7 @@ Immune cells do not simply "float" uniformly in the blood. An adult has about $5
 Two rules run through the chapter:
 
 1. Sentinels are in the periphery, decisions are made in lymphoid organs. The first to meet a pathogen are the innate cells and memory cells resident in tissues; activation of naive lymphocytes occurs almost only in secondary lymphoid organs, because only there can the rare antigen-specific lymphocytes, the antigen-bearing DCs and the helper cells be brought together.
-2. Position is state. The same cell type executes different programs at different positions: macrophages of the splenic red pulp clear aged red blood cells, macrophages of the subcapsular sinus of the lymph node capture particulate antigen in the lymph, and alveolar macrophages clear surfactant; CD8⁺ T cells in lymph nodes are mostly naive or central memory cells, whereas CD8⁺ T cells in the epidermis of the skin are mostly CD69⁺CD103⁺ resident memory cells. When reading immune cells in a tissue section, position is as important as phenotype (§22.8).
+2. Position is state. The same cell type executes different programs at different positions: macrophages of the splenic red pulp clear aged red blood cells, macrophages of the subcapsular sinus of the lymph node capture particulate antigen in the lymph, and alveolar macrophages clear surfactant; CD8⁺ T cells in lymph nodes are mostly naive or central memory cells, whereas CD8⁺ T cells in the epidermis of the skin are mostly CD69⁺CD103⁺ resident memory cells. When reading immune cells in a tissue section, position is as important as phenotype (§22.9).
 
 ## 22.2. Timeline of a Primary Response
 

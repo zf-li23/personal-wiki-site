@@ -1,7 +1,7 @@
 ---
 title: Genes and Diversity of Lymphocyte Antigen Receptors
 description: How one gene, one polypeptide can yield 10^11 antibodies. The structure of the immunoglobulin heavy-chain and light-chain loci, the immunological consequences of V(D)J recombination (combinatorial diversity, junctional diversity, heavy–light chain pairing), allelic exclusion, isotypic exclusion and receptor editing, somatic hypermutation and AID, class switch recombination and alternative splicing of membrane and secreted forms, the TCR loci, and the size of the immune repertoire and its readout by sequencing.
-source_hash: 3054cc206968
+source_hash: 0482dccbe640
 ---
 
 [7.15.9](/7.15.9) described the structure of antibodies: each antibody has one specific binding site formed by $\mathrm{V_H}$ and $\mathrm{V_L}$, whereas the clonal selection theory of [7.15.1](/7.15.1) requires an organism to have on the order of $10^{11}$ different specificities. This chapter answers the genetic part of the question "who recognizes?" on the path of knowledge ([7.15.1](/7.15.1)): how can a limited number of genes encode an almost unlimited number of specificities? The answer is a somatic, irreversible process of DNA rearrangement (its mechanism was introduced in [7.2.9](/7.2.9)); this chapter treats only its immunological consequences, namely the sources of diversity, the guarantee that a cell expresses only one receptor, the secondary remodeling of receptors during a response, and how to measure the whole "repertoire."
@@ -178,7 +178,7 @@ The repertoire can be read out by high-throughput sequencing: the region contain
 
 1. Why is combinatorial diversity alone not enough, so that junctional diversity is indispensable?
 
-   **Answer** Combinatorial diversity gives only about $10^6$ possibilities (Eq. (12.1)), whereas one person has $10^{10}$–$10^{11}$ B cells, so on average each receptor has more than $10^4$ cells and the "resolution" of specificity is inadequate. Junctional diversity adds random sequence at CDR3, increasing the number of possible receptors by several orders of magnitude (Eq. (12.2)), and concentrates it where contact with antigen is closest. The price is that about two thirds of junctions are frameshifted and wasted, but this is an investment in diversity.
+   **Answer** Combinatorial diversity gives only about $10^6$ possibilities (Eq. (12.1)), whereas one person has $10^{10}$–$10^{11}$ B cells, so on average each receptor corresponds to about $10^4$ cells and the "resolution" of specificity is inadequate. Junctional diversity adds random sequence at CDR3, increasing the number of possible receptors by several orders of magnitude (Eq. (12.2)), and concentrates it where contact with antigen is closest. The price is that about two thirds of junctions are frameshifted and wasted, but this is an investment in diversity.
 
 2. What is the significance of a B cell expressing only one heavy chain and one light chain? What would happen if it expressed two specificities at once?
 

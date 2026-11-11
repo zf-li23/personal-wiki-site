@@ -62,7 +62,7 @@ The situation for lymphocytes is the opposite. The human body has about $4 \time
 
 ## 2.2. Overview of Leukocytes
 
-**Definition 2.2.1 (Leukocyte)** **Leukocytes** are the nucleated blood cells of the blood, including granulocytes, monocytes, and lymphocytes; besides blood, they are abundant in lymph, lymphoid organs, and nearly all tissues.
+**Definition 2.2.1 (Leukocyte)** **Leukocytes** are nucleated blood cells, including granulocytes, monocytes, and lymphocytes; besides blood, they are abundant in lymph, lymphoid organs, and nearly all tissues.
 
 "White blood cell" is a hematological category (the thin white layer above the erythrocyte layer after centrifugation), not a functional one: mast cells, macrophages, and dendritic cells all derive from hematopoietic stem cells but, once mature, are found almost exclusively in tissues. The table below is the first "master table of names" of this course and will be used in all later chapters.
 
@@ -195,7 +195,7 @@ The detailed subdivision of memory subsets and the mechanisms of their maintenan
 
 1. Conditioning before bone marrow transplantation eliminates the recipient's hematopoietic stem cells. Which leukocytes recover first in the recipient's blood after transplantation? Why is full recovery of T cells much slower?
 
-   **Answer** Neutrophils recover first (usually in 2–3 weeks), because their lifespan is short and their pool is small, so the progeny of donor hematopoietic stem cells quickly reach the steady-state number (the logic of Example 2.1.1: the smaller $\tau$ is, the faster the approach to steady state). T-cell recovery is much slower (months to years): new naive T cells must develop in the thymus, and the adult thymus has involuted and exports little; the T cells that recover early are mainly peripheral expansion of mature T cells in the graft, with a narrow repertoire diversity.
+   **Answer** Neutrophils recover first (usually in 2–3 weeks), because their lifespan is short and their pool is small, so the progeny of donor hematopoietic stem cells quickly reach the steady-state number (the logic of Example 2.1.1: the smaller $\tau$ is, the faster the approach to steady state). T-cell recovery is much slower (months to years): new naive T cells must develop in the thymus, and the adult thymus has involuted and exports little; the T cells that recover early are mainly peripheral expansion of mature T cells in the graft, with limited repertoire diversity.
 
 2. Use the model of §2.1.3 to explain why the blood neutrophil count can rise within a few hours of infection, and why this early rise cannot be explained by "increased bone marrow production".
 
@@ -203,7 +203,7 @@ The detailed subdivision of memory subsets and the mechanisms of their maintenan
 
 3. Why is it said that "dendritic cell" and "follicular dendritic cell" are confused only in name? What is the essential difference in function?
 
-   **Answer** Dendritic cells are hematopoietic-derived leukocytes that take up antigen, degrade it intracellularly into peptides, and load them on MHC molecules to present to T cells; follicular dendritic cells are stromal cells (not hematopoietic in origin) in lymphoid follicles that do not process antigen but retain intact antigen (immune complexes) on their surface for a long time through complement receptors and Fc receptors, for recognition by the BCR of B cells. The former serves T cells and the latter serves B cells; they merely both have processes in morphology.
+   **Answer** Dendritic cells are hematopoietic-derived leukocytes that take up antigen, degrade it intracellularly into peptides, and load them on MHC molecules to present to T cells; follicular dendritic cells are stromal cells (not hematopoietic in origin) in lymphoid follicles that do not process antigen but retain intact antigen (immune complexes) on their surface for a long time through complement receptors and Fc receptors, for recognition by the BCR of B cells. The former serves T cells and the latter serves B cells; they merely resemble each other in having processes.
 
 4. A complete blood count shows leukocytes at $12 \times 10^{9}\,\mathrm{L^{-1}}$, of which 18% are eosinophils. Which effector module does this suggest is activated? What are possible causes?
 

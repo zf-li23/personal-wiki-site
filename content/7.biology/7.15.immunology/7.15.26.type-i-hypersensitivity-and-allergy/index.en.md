@@ -1,7 +1,7 @@
 ---
 title: Type I Hypersensitivity and Allergy
 description: "The four-type classification of hypersensitivity, then Type I in detail: allergens and sensitization (epithelial alarmins, Th2 cells and IgE production), FcεRI and mast cell activation (the bell-shaped dose response of multivalent cross-linking), mediators and the early and late phases, anaphylaxis, genetic and environmental factors in atopy and an assessment of the hygiene hypothesis, and the immunological principles of diagnosis and treatment."
-source_hash: 6a4ddf20c536
+source_hash: 9b06de36fe3b
 ---
 
 The preceding chapters described how immune responses are generated and how they are shut down; from this chapter on we turn to what happens when things go wrong. The common pattern of immunopathology is that a normal effector module is directed at the wrong target, or that its magnitude or duration is out of control. Type I hypersensitivity is the most typical example: it uses the module of **type 2 immunity**, which evolved to expel parasites and venoms (IL-4, IL-5, IL-13, **Th2 cells**, **IgE**, mast cells and eosinophils; see [7.15.17](/7.15.17), [7.15.20](/7.15.20), [7.15.21](/7.15.21)), but it is set off by harmless antigens such as pollen, dust mites and food proteins.
@@ -56,7 +56,7 @@ TSLP, IL-25 and IL-33 are epithelial "alarmins" ([7.15.6](/7.15.6)); they cause 
 
 ## 26.3. FcεRI and Mast Cell Activation
 
-**FcεRI** is an $\alpha\beta\gamma_2$ tetramer; the α chain binds the Cε3 domain of IgE, and the β and γ chains carry ITAMs ([7.15.21](/7.15.21)). Its affinity constant for IgE is about $10^{10}\,\mathrm{M^{-1}}$, so that even the very low serum concentration of IgE (about $10^{-7}\,\mathrm{M}$) occupies it stably: the half-life of free IgE is only 2–3 days, whereas receptor-bound IgE can persist for weeks. In turn, binding of IgE stabilizes the receptor and increases the amount of FcεRI on the mast cell surface, which is one reason the sensitized state sustains itself (and the basis for the receptor downregulation seen with anti-IgE therapy).
+**FcεRI** is an $\alpha\beta\gamma_2$ tetramer; the α chain binds the Cε3 domain of IgE, and the β and γ chains carry ITAMs ([7.15.21](/7.15.21)). Its affinity constant for IgE is about $10^{10}\,\mathrm{M^{-1}}$, so that even the very low serum concentration of IgE (about $10^{-9}\,\mathrm{M}$) occupies it stably: the half-life of free IgE is only 2–3 days, whereas receptor-bound IgE can persist for weeks. In turn, binding of IgE stabilizes the receptor and increases the amount of FcεRI on the mast cell surface, which is one reason the sensitized state sustains itself (and the basis for the receptor downregulation seen with anti-IgE therapy).
 
 **Mast cells** are located in tissues in contact with the outside world, such as the skin and the mucosa of the airways and digestive tract, and around blood vessels; **basophils** are in the blood and few in number. Both express FcεRI. **Degranulation** is triggered when antigen cross-links IgE–FcεRI:
 
