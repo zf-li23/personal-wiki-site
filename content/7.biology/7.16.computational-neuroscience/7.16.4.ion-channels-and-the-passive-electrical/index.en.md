@@ -17,15 +17,15 @@ Channels have two jobs: to let a chosen ion through at nearly the diffusion-limi
 
 | Family | Gating | Examples | Role |
 |---|---|---|---|
-| Voltage-gated $\ce{Na+}$ | voltage; fast inactivation | Na$_\mathrm{v}$1.1–1.9 | action potential upstroke |
+| Voltage-gated $\ce{Na+}$ | voltage; fast **inactivation** | Na$_\mathrm{v}$1.1–1.9 | action potential upstroke |
 | Voltage-gated $\ce{K+}$ | voltage; some inactivate | K$_\mathrm{v}$1–12 (about 40 genes) | repolarization, firing patterns |
-| Voltage-gated $\ce{Ca^2+}$ | voltage | Ca$_\mathrm{v}$1 (L), Ca$_\mathrm{v}$2 (N, P/Q), Ca$_\mathrm{v}$3 (T) | transmitter release, dendritic spikes |
+| Voltage-gated $\ce{Ca^2+}$ | voltage | Ca$_\mathrm{v}$1 (L), Ca$_\mathrm{v}$2 (N, P/Q), Ca$_\mathrm{v}$3 (T) | transmitter release, **dendritic spikes** |
 | Ligand-gated | transmitter | AMPA, NMDA, GABA$_\mathrm{A}$, nicotinic receptors | fast synaptic transmission |
 | Hyperpolarization-activated | voltage (opens on hyperpolarization), cyclic nucleotide | HCN | pacemaking, resonance |
 | Two-pore-domain $\ce{K+}$ | little (leak) | K2P | resting conductance |
 | Mechanosensitive, thermosensitive | tension, temperature | Piezo, TRP | sensory transduction |
 
-The voltage-gated channels form one superfamily of about 140 genes that evolved from a common ancestor; the diversity of firing patterns that the later chapters describe is largely a diversity of this repertoire and of its expression in different cell types ([7.16.5](/7.16.5#sec-5.4)).
+The voltage-gated channels form one superfamily of about 140 genes that evolved from a common ancestor; the diversity of firing patterns that the later chapters describe is largely a diversity of this repertoire and of its expression in different **cell types** ([7.16.5](/7.16.5#sec-5.4)).
 
 ## 4.2. Currents, Reversal Potentials and Rectification
 
@@ -63,7 +63,7 @@ In the Hodgkin–Huxley model, where driving forces reach $100\,\mathrm{mV}$, th
 
 ## 4.3. The Resting Potential
 
-In a membrane with several ions, each with a conductance $g_j$ and a reversal potential $E_j$, the net membrane current is $\sum_j g_j (V - E_j)$.
+In a membrane with several ions, each with a conductance $g_j$ and a **reversal potential** $E_j$, the net membrane current is $\sum_j g_j (V - E_j)$.
 
 **Proposition 4.3.1 (Resting Potential as a Weighted Mean)** In the ohmic approximation the potential at which the net ionic current vanishes is
 
@@ -118,7 +118,7 @@ where $\alpha(V)$ is the opening rate and $\beta(V)$ the closing rate, both in $
 
 **Definition 4.5.1 (Single-Channel Conductance and Open Probability)** The **single-channel conductance** $\gamma$ is the conductance of one open channel (about 10–100 pS, so that the single-channel current at $V - E = 50\,\mathrm{mV}$ is $0.5$–$5\,\mathrm{pA}$). The **open probability** $p_{\mathrm{o}}(t)$ is the probability that a channel is open at time $t$.
 
-The probability obeys the master equation $\mathrm{d}p_{\mathrm{o}}/\mathrm{d}t = \alpha(1 - p_{\mathrm{o}}) - \beta p_{\mathrm{o}}$, whose solution is exponential relaxation to $p_\infty = \alpha/(\alpha + \beta)$ with time constant $\tau = 1/(\alpha + \beta)$. This is the form of the gating equations of the Hodgkin–Huxley model ([7.16.5](/7.16.5#sec-5.2)), with $x_\infty = \alpha_x/(\alpha_x + \beta_x)$ and $\tau_x = 1/(\alpha_x + \beta_x)$, and it shows what a gating variable is: the open probability of a gate, or equivalently the fraction of channels with the gate open.
+The probability obeys the master equation $\mathrm{d}p_{\mathrm{o}}/\mathrm{d}t = \alpha(1 - p_{\mathrm{o}}) - \beta p_{\mathrm{o}}$, whose solution is exponential relaxation to $p_\infty = \alpha/(\alpha + \beta)$ with time constant $\tau = 1/(\alpha + \beta)$. This is the form of the gating equations of the Hodgkin–Huxley model ([7.16.5](/7.16.5#sec-5.2)), with $x_\infty = \alpha_x/(\alpha_x + \beta_x)$ and $\tau_x = 1/(\alpha_x + \beta_x)$, and it shows what a **gating variable** is: the open probability of a gate, or equivalently the fraction of channels with the gate open.
 
 A membrane has many channels. If $N$ identical, independent channels are present, the number open $K(t)$ is a sum of $N$ independent Bernoulli variables with success probability $p_{\mathrm{o}}(t)$, so the macroscopic current $I = i K$ with $i = \gamma(V - E)$ has
 
@@ -128,7 +128,7 @@ $$
 \operatorname{Var}(I) = N\,p_{\mathrm{o}}(1 - p_{\mathrm{o}})\,i^2.
 $$
 
-The relative fluctuation is $\sqrt{(1 - p_{\mathrm{o}})/(N p_{\mathrm{o}})}$, which declines as $N^{-1/2}$. With a few channels the current is a random staircase; with hundreds it is smooth with noise, and with $10^3$–$10^4$ channels (a node of Ranvier, or the soma of a neuron) the deterministic equation for the open probability (the master equation) is an excellent description (Figure 3A, B). Small compartments, such as the axon terminal or a dendritic spine, contain few channels, and the randomness of the gates matters there.
+The relative fluctuation is $\sqrt{(1 - p_{\mathrm{o}})/(N p_{\mathrm{o}})}$, which declines as $N^{-1/2}$. With a few channels the current is a random staircase; with hundreds it is smooth with noise, and with $10^3$–$10^4$ channels (a **node of Ranvier**, or the soma of a neuron) the deterministic equation for the open probability (the master equation) is an excellent description (Figure 3A, B). Small compartments, such as the axon terminal or a dendritic spine, contain few channels, and the randomness of the gates matters there.
 
 ![Channel noise. A: a single two-state channel switches randomly between closed (C) and open (O) states after a voltage step at $t = 0$ increases the opening rate; three trials. B: the fraction of open channels for $N = 10$, $100$, $1000$ channels in one trial each approaches the deterministic open probability from the master equation. C: nonstationary fluctuation analysis: variance against mean over 300 repeated trials of 200 channels, plotted in normalized units, follows the parabola $p(1-p)$](./plots/single-channel.py)
 
