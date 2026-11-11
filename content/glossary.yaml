@@ -12284,3 +12284,36 @@ terms:
   - { zh: 无模型强化学习, en: model-free reinforcement learning }
   - { zh: 两步任务, en: two-step task }
   - { zh: 元强化学习, en: meta-reinforcement learning, aliases: [meta-RL] }
+  - { zh: Kalman 滤波, en: Kalman filter, aliases: [卡尔曼滤波, Kalman filtering] }
+  - { zh: 内部模型, en: internal model, aliases: [internal models] }
+  - { zh: 传出副本, en: efference copy, aliases: [corollary discharge, 伴随放电] }
+  - { zh: Smith 预估器, en: Smith predictor }
+  - { zh: 信号依赖噪声, en: signal-dependent noise }
+  - { zh: 最优反馈控制, en: optimal feedback control }
+  - { zh: 最小干预原则, en: minimum intervention principle }
+  - { zh: 运动适应, en: motor adaptation }
+  - { zh: 持续内向电流, en: persistent inward current, aliases: [PICs] }
+  - { zh: 回路简并性, en: degeneracy of neural circuits, aliases: [circuit degeneracy], scope: ["7.16"] }
+  - { zh: Matsuoka 振荡器, en: Matsuoka oscillator }
+  - { zh: logistic 映射, en: logistic map }
+  - { zh: 混沌, en: chaos, scope: ["7.16"] }
+  - { zh: 储备池计算, en: reservoir computing }
+  - { zh: 回声状态网络, en: echo state network, aliases: [ESN] }
+  - { zh: 液体状态机, en: liquid state machine, aliases: [LSM] }
+  - { zh: 回声状态性质, en: echo state property }
+  - { zh: FORCE 学习, en: FORCE learning }
+  - { zh: 慢点, en: slow point, aliases: [slow points] }
+  - { zh: 稳定异宿通道, en: stable heteroclinic channel }
+  - { zh: 准备活动, en: preparatory activity }
+  - { zh: 输出零空间, en: output-null space, aliases: [output-null subspace] }
+  - { zh: 旋转动力学, en: rotational dynamics }
+  - { zh: 轨迹缠结度, en: trajectory tangling }
+  - { zh: 脑机接口, en: brain–machine interface, aliases: [brain–computer interface, BCI, 脑–机接口] }
+  - { zh: 小脑颗粒细胞, en: cerebellar granule cell, aliases: [cerebellar granule cells] }
+  - { zh: 平行纤维, en: parallel fiber, aliases: [parallel fibers, parallel fibre] }
+  - { zh: Purkinje 细胞, en: Purkinje cell, aliases: [Purkinje cells, 浦肯野细胞] }
+  - { zh: Cover 函数计数定理, en: "Cover's function counting theorem", aliases: ["Cover's theorem"] }
+  - { zh: Marr–Albus–Ito 理论, en: Marr–Albus–Ito theory }
+  - { zh: 小脑自适应滤波器, en: cerebellar adaptive filter, aliases: [adaptive filter model] }
+  - { zh: 神经积分器, en: neural integrator }
+  - { zh: 线吸引子, en: line attractor, aliases: [line attractors] }
