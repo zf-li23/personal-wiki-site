@@ -1,6 +1,6 @@
 ---
 title: "Effector T Cells: Th Subsets, CTLs and Tregs"
-source_hash: 1f6442733997
+source_hash: 48e72562b054
 ---
 
 The fourth question on the knowledge path is "which effector clears the threat?" Chapter [7.15.16](/7.15.16) described how a naive T cell is activated by three kinds of signal; of these, the third signal (cytokines) determines what it differentiates into, and that is the subject of this chapter. Different antigens require different effectors: intracellular pathogens and tumors depend on activated macrophages and killer T cells, parasites depend on IgE, eosinophils and mast cells, extracellular bacteria and fungi depend on neutrophils, the antibody response of B cells depends on help within the follicle, and all of these responses must eventually be switched off. CD4⁺ T cells encode the decision of "which one to choose" as several subsets, each operating by the same three-layer logic: polarizing cytokines → master regulator → effector cytokines; CD8⁺ T cells instead differentiate into cytotoxic T lymphocytes, which kill target cells directly. This chapter first gives this logic, then covers the subsets one by one, then uses a bistability model to explain why the subsets exclude one another, and finally covers CTLs. Corresponding to ILC1, ILC2 and ILC3 of innate immunity ([7.15.5](/7.15.5)), the three effector modules (type 1, type 2 and type 3 immunity) each have their own T-cell subsets in adaptive immunity. The structure and receptors of cytokines are covered in [7.15.11](/7.15.11), expansion and memory after activation in [7.15.18](/7.15.18), and the "brakes" on Tregs and effector cells in [7.15.24](/7.15.24) and [7.15.25](/7.15.25).
@@ -73,7 +73,7 @@ Patients with inactivation of Th1 cells and the IFN-γ pathway are highly suscep
 
 The IL-4 that polarizes Th2 can come from ILC2, mast cells, basophils, NKT cells and Tfh cells, and Th2 cells also secrete IL-4 themselves, forming a positive feedback. IL-4 induces GATA3 through STAT6, and GATA3 activates the *IL4*, *IL5* and *IL13* genes. In the presence of IL-4, naive CD4⁺ T cells tend to differentiate into Th2 even when IL-12 and IFN-γ are also present, showing that Th2 polarization has a strong advantage. As to effects:
 
-- IL-4 and IL-13 cause B cells to switch to **IgE** ([7.15.20](/7.15.20)); IgE binds to Fc receptors on mast cells and eosinophils, and cross-linking by helminth antigen causes the cells to degranulate;
+- IL-4 and IL-13 cause B cells to switch to **IgE** ([7.15.20](/7.15.20)); IgE binds to the high-affinity Fc receptor (FcεRI) on mast cells and basophils, and cross-linking by helminth antigen causes the cells to degranulate;
 - IL-5 recruits and activates **eosinophils**;
 - IL-13 acts on epithelial cells to promote goblet cell hyperplasia and mucus secretion and causes smooth muscle contraction, which together expel helminths from the gut.
 

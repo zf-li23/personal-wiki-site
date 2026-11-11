@@ -1,6 +1,6 @@
 ---
 title: Immunophenotyping and a Marker Atlas
-source_hash: d16c1ee1416d
+source_hash: 0e148d1ca815
 ---
 
 The preceding chapters repeatedly describe cells by the molecules they express: CD4⁺ T cells, CD20⁺ B cells, PD-1⁺ exhausted cells, CD103⁺ resident memory cells. This chapter turns these scattered descriptions into a systematic way of reading cells. It answers three questions: how a combination of surface and intracellular markers tells us what a cell is and what state it is in; how multidimensional data (flow cytometry, mass cytometry, multiplexed imaging) turn these combinations into cell populations; and when markers should not be trusted. In the logic of the course it corresponds to no single question but is the readout end of all of them: every step of recognition, decision, effector function, memory, and regulation is observed, in the laboratory and in pathology, as a change in markers. (CD molecules organized by function are in [7.15.4](/7.15.4), the technical principles in [7.15.34](/7.15.34), the position of cells in tissues in [7.15.22](/7.15.22), the tumor-infiltration readouts in [7.15.30](/7.15.30), and the analysis of spatial omics data in [7.9.6](/7.9.6).) This chapter deals only with meaning and interpretation, not with staining procedures.
@@ -138,9 +138,9 @@ States are continuous. For example, a CD8⁺ T cell moves along one or several t
 
 ### 35.4.1. The Logic of Gating
 
-Flow, mass cytometry, and imaging data all start in the same form: a matrix with one row per cell and one column per marker. There are two ways to turn this matrix into cell populations: a **gating strategy** in which a person circles populations step by step, and clustering by an algorithm followed by annotation.
+Flow, mass cytometry, and imaging data all start in the same form: a matrix with one row per cell and one column per marker. There are two ways to turn this matrix into cell populations: a **gating strategy** in which a person draws gates around populations step by step, and clustering by an algorithm followed by annotation.
 
-**Definition 35.4.1 (Gating Strategy)** A scheme that circles the target cell population step by step, using thresholds on a series of markers in a fixed order, is called a **gating strategy**: first exclude events that are not objects of the analysis (debris, doublets, dead cells), then define the lineage, and finally resolve subsets and states.
+**Definition 35.4.1 (Gating Strategy)** A scheme that isolates the target cell population step by step, using thresholds on a series of markers in a fixed order, is called a **gating strategy**: first exclude events that are not objects of the analysis (debris, doublets, dead cells), then define the lineage, and finally resolve subsets and states.
 
 The order of gating follows one principle: exclude first, define afterward; go from broad to narrow. The figure below shows a typical T cell gating scheme:
 
@@ -157,7 +157,7 @@ flowchart LR
 
 Each step removes an artifact. Doublets (two cells stuck together) display markers of both T and B lineages and look like "CD3⁺CD19⁺ double-positive cells"; dead cells bind antibodies nonspecifically and are the main source of false positives; the CD45 gate removes non-immune cells (epithelial, stromal, residual red cells). The gate boundaries depend on controls: unstained or FMO (fluorescence minus one: stained with everything except one fluorochrome) controls define the negative range, which is especially important for weakly expressed molecules (for compensation of fluorescence spillover see [7.15.34](/7.15.34)).
 
-**Example 35.4.1** The position of the threshold determines the false positives. Suppose the fluorescence intensity of the negative population is approximately normally distributed with mean $\mu$ and standard deviation $\sigma$, and the threshold is set at $\mu + k\sigma$. The probability that a negative cell is misclassified as positive is then $1 - \Phi(k)$, which is about $1.3\times 10^{-3}$ for $k = 3$ and about $2.9\times 10^{-7}$ for $k = 5$ ($\Phi$ is the standard normal distribution function; see [3.1](/3.1)). Analyze $10^6$ cells, 99.99% of which are negative: for $k=3$ there are about $1.3\times 10^3$ false positives but only about $10^2$ true positives, so most of the result is false positive; for $k = 5$ there is fewer than one false positive. Hence, to detect a rare population (such as antigen-specific T cells at a frequency below $10^{-4}$), one must either use a bright fluorochrome to push the positive population farther from the negative one, or use two independent markers jointly (the independent false-positive probabilities multiply). The negative population in real data usually has heavier tails than a normal distribution, so these numbers underestimate the false positives and serve only as order-of-magnitude estimates.
+**Example 35.4.1** The position of the threshold determines the false positives. Suppose the fluorescence intensity of the negative population is approximately normally distributed with mean $\mu$ and standard deviation $\sigma$, and the threshold is set at $\mu + k\sigma$. The probability that a negative cell is misclassified as positive is then $1 - \Phi(k)$, which is about $1.3\times 10^{-3}$ for $k = 3$ and about $2.9\times 10^{-7}$ for $k = 5$ ($\Phi$ is the standard normal distribution function; see [3.1](/3.1)). Analyze $10^6$ cells, 99.99% of which are negative: for $k=3$ there are about $1.3\times 10^3$ false positives but only about $10^2$ true positives, so most of the result is false positive; for $k = 5$ the expected number of false positives is below one. Hence, to detect a rare population (such as antigen-specific T cells at a frequency below $10^{-4}$), one must either use a bright fluorochrome to push the positive population farther from the negative one, or use two independent markers jointly (the independent false-positive probabilities multiply). The negative population in real data usually has heavier tails than a normal distribution, so these numbers underestimate the false positives and serve only as order-of-magnitude estimates.
 
 ### 35.4.2. Imaging Data and Unsupervised Clustering
 
@@ -277,7 +277,7 @@ The same cell type in mouse and human often uses different markers, and experien
 
 | Cell | Human | Mouse |
 |---|---|---|
-| B cells | CD19, CD20 | CD19, B220 (CD45R); mouse B cells have no broad expression equivalent to human CD20 |
+| B cells | CD19, CD20 | CD19, B220 (CD45R); mouse B cells also express CD20, but CD19 and B220 are more commonly used for flow-cytometric gating |
 | NK cells | CD3⁻CD56⁺ | CD3⁻NK1.1⁺ (some strains), NKp46⁺, CD49b |
 | Monocytes and macrophages | CD14, CD16, CD68, CD163 | Ly6C, CD11b, F4/80, CD64 |
 | Neutrophils | CD15, CD66b, CD16 | Ly6G, CD11b |
