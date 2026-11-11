@@ -1,6 +1,6 @@
 ---
 title: "Overview of the Immune System: Functions, Two Branches of Immunity and a Map of the Course"
-source_hash: 8bf7c0d635ce
+source_hash: 53f8df3e8ad6
 ---
 
 Immunology often gives the impression of having too many names: hundreds of CD molecules, dozens of interleukins, more than a dozen T-cell subsets. But these names serve a small number of questions: who recognizes, what is recognized, how the decision is made after recognition, which effector mechanisms clear the threat, and how the response is remembered and brought to a close afterward. This chapter is the map for the whole course. It first describes the components and functions of the immune system (§1.1), then the division of labor between the two kinds of immune response (§1.2) and the central theory explaining adaptive immunity, the clonal selection theory (§1.3). A few key discoveries show how these concepts came to be understood (§1.4), and the chapter ends with the knowledge path that runs through the whole course (§1.5) and a classification of immune-related diseases (§1.6). The introduction of every later chapter states its position on this path.
@@ -188,7 +188,7 @@ Most major concepts of immunology can be traced to a key experiment. The table b
 | 1984 | Davis, Hedrick, Mak, and colleagues clone the TCR genes | T-cell receptor | [7.15.12](/7.15.12) |
 | 1986 | Mosmann and Coffman distinguish Th1 and Th2 | Helper T-cell subsets | [7.15.17](/7.15.17) |
 | 1989–1998 | Janeway's pattern recognition hypothesis; antifungal role of *Drosophila* Toll (1996); TLR4 recognizes lipopolysaccharide (1998) | Pattern recognition receptors | [7.15.6](/7.15.6) |
-| 1995–2003 | Sakaguchi's CD25⁺ regulatory T cells; FOXP3 mutation causes fatal autoimmunity | Peripheral tolerance (Nobel Prize 2025) | [7.15.24](/7.15.24) |
+| 1995–2003 | Sakaguchi's CD25⁺ regulatory T cells; *FOXP3* mutation causes fatal autoimmunity | Peripheral tolerance (Nobel Prize 2025) | [7.15.24](/7.15.24) |
 | 1990s–2010s | Allison and Honjo: blockade of CTLA-4 and PD-1 | Immune checkpoint therapy | [7.15.25](/7.15.25), [7.15.30](/7.15.30) |
 
 Two threads deserve attention. First, the late nineteenth-century dispute between the "cellular school" (Metchnikoff) and the "humoral school" (Ehrlich, von Behring) in fact corresponds to today's division of labor between innate and adaptive immunity and between cell-mediated and humoral immunity; the two schools shared a Nobel Prize in 1908. Second, innate immunity was for a long time treated as a "nonspecific" background, until in 1989 Janeway pointed out that adaptive immunity needs an upstream system to judge "whether there is danger", and that this system must work by recognizing molecular patterns unique to microbes. This idea was confirmed by the discovery of the Toll-like receptors (Nobel Prize 2011, shared with the discovery of dendritic cells) and is also why this course teaches innate immunity before adaptive immunity.

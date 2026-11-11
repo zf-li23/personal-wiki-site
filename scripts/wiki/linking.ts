@@ -132,6 +132,17 @@ function isAbbreviation(name: string): boolean {
   return /^[A-Z0-9-]*[A-Z][A-Z0-9-]*$/.test(name) || /^\S+$/u.test(name) && /^.\S*\p{Lu}/u.test(name);
 }
 
+/**
+ * A gene symbol as written in italics: one token that contains a digit (*FOXP3*, *Foxp3*, *IL23R*),
+ * is all capitals (*AIRE*), or is a lower-case word with a capital at the end (*lacZ*, *recA*).
+ * Official gene symbols have no hyphens, so hyphenated protein names (*PD-L1*, *CTLA-4*) are not,
+ * nor are mixed-case names starting with a capital and without digits (*NoSQL*, *OpenAPI*).
+ */
+export function isGeneSymbol(text: string): boolean {
+  if (!/^[A-Za-z][A-Za-z0-9]*$/.test(text)) return false;
+  return /\d/.test(text) || /^[A-Z]{2,}$/.test(text) || /^[a-z]{2,}[A-Z]$/.test(text);
+}
+
 /** Concepts by name in one language (only those in scope for the page, when given). */
 function nameIndex(concepts: Concept[], lang: Lang, pageId?: string): (text: string) => Concept | undefined {
   const map = new Map<string, Concept>();
@@ -568,9 +579,10 @@ function markEmphasis(root: Root, concept: Concept, anchor: string, tags: string
       const child = children[i];
       if (child.type !== 'element' || skippable(child)) continue;
       // An italic abbreviation is a gene symbol (*FAS*, *MDM2*), not the defining mention, unless it
-      // spells the concept's own name (*NoSQL*).
+      // spells the concept's own name (*NoSQL*). A gene-symbol-shaped run never is, even then: the
+      // gene of a protein concept is written in italics (*FOXP3* for FOXP3, CONTENT_GUIDE §7.4).
       const text = hastToString(child).trim();
-      if (tags.includes(child.tagName) && (text === concept.en || !isAbbreviation(text)) && lookup(text)) {
+      if (tags.includes(child.tagName) && !isGeneSymbol(text) && (text === concept.en || !isAbbreviation(text)) && lookup(text)) {
         children[i] = el('dfn', { id: anchor, className: ['wiki-dfn'], dataConcept: concept.id }, [child]);
         done = true;
       } else walk(child);

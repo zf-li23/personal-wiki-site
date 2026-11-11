@@ -1,6 +1,6 @@
 ---
 title: T-Cell Development and Selection
-source_hash: 5f706876e1a2
+source_hash: 3a08861139dd
 ---
 
 The first question on the knowledge path is "who is recognizing?" Chapter [7.15.12](/7.15.12) explained how random rearrangement generates an almost unlimited number of TCRs, and chapters [7.15.13](/7.15.13) and [7.15.14](/7.15.14) described what the TCR is to recognize, the pMHC. Randomly generated TCRs have two problems: most cannot bind the individual's own MHC molecules at all and are therefore useless, and a few bind self pMHC too strongly and would attack the body's own tissues once in the periphery. The task of the **thymus** is to pick out of the random repertoire the small fraction that both "recognizes self MHC" and "does not react strongly to self," and this is positive and negative selection. This chapter follows the process in the order of thymocyte development and uses a simple Monte Carlo model to show how an "affinity window" produces both MHC restriction and self-tolerance. How peripheral T cells are activated is covered in [7.15.16](/7.15.16); the place of central tolerance among all tolerance mechanisms is covered in [7.15.24](/7.15.24).
@@ -90,7 +90,7 @@ A key question is how the thymus presents proteins expressed only in peripheral 
 
 Each mTEC expresses only a portion of the tissue-restricted antigens, and all mTECs together cover most of the peripheral self proteome. The transcription factor FEZF2 controls another set of tissue-restricted antigens independently of AIRE. mTECs can present these antigens directly or transfer them to medullary DCs for presentation; peripheral DCs that migrate into the thymus can also bring peripheral self antigens.
 
-People with AIRE mutations develop autoimmune polyendocrinopathy–candidiasis–ectodermal dystrophy (APECED, also called autoimmune polyendocrine syndrome type 1), in which multiple endocrine glands come under autoimmune attack; patients also often have neutralizing autoantibodies against IL-17 and IL-22, which explains the chronic mucocutaneous candidiasis ([7.15.28](/7.15.28)). In mice, the expression level of insulin in the thymus is correlated with susceptibility to type 1 diabetes.
+People with *AIRE* mutations develop autoimmune polyendocrinopathy–candidiasis–ectodermal dystrophy (APECED, also called autoimmune polyendocrine syndrome type 1), in which multiple endocrine glands come under autoimmune attack; patients also often have neutralizing autoantibodies against IL-17 and IL-22, which explains the chronic mucocutaneous candidiasis ([7.15.28](/7.15.28)). In mice, the expression level of insulin in the thymus is correlated with susceptibility to type 1 diabetes.
 
 Negative selection is not perfect: some self antigens are not expressed in the thymus or are expressed too weakly, and some self-reactive T cells have an affinity just below the deletion threshold. Cells that escape negative selection are controlled by peripheral tolerance mechanisms (**peripheral tolerance**, [7.15.24](/7.15.24)).
 

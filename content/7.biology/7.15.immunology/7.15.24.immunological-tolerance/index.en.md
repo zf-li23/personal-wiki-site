@@ -1,7 +1,7 @@
 ---
 title: Immunological Tolerance
 description: "How the immune system avoids attacking itself: the concept and antigen specificity of immunological tolerance; central and peripheral tolerance (anergy, ignorance, activation-induced death, regulatory T cells and tolerogenic DCs); the antigens, routes and host conditions that induce tolerance; oral tolerance; immune privilege and fetal–maternal tolerance; monogenic diseases of failed tolerance; a first-order kinetic model illustrating the two layers of defense; and clinical approaches to inducing and breaking tolerance."
-source_hash: 169c0858ea1c
+source_hash: 98264a9bc80c
 ---
 
 The preceding chapters answered how the immune system recognizes (receptors and MHC), how it decides (activation and polarization) and how it clears (antibodies and effector cells). This chapter answers half of the fifth question on the path: how it avoids attacking itself. Antigen receptors are produced by random rearrangement ([7.15.12](/7.15.12)), so receptors that recognize self molecules are not an exception but a certainty; if nothing were done about them, a considerable fraction of lymphocytes would be self-reactive. The solution of the immune system is not a single gate but defense in layers: self-reactive cells are deleted or reshaped during development ([7.15.15](/7.15.15), [7.15.19](/7.15.19)); cells that escape are rendered unresponsive, deleted or suppressed by regulatory cells in the periphery; and at some sites antigen is simply kept apart from lymphocytes. This chapter first gives the concepts and the layers, then goes through the peripheral mechanisms and the conditions for inducing tolerance one layer at a time, then discusses sites of immune privilege and fetal–maternal tolerance, uses a small model to show how the two layers of defense divide the work, and finally looks at what happens when tolerance fails ([7.15.28](/7.15.28)) and at how tolerance is exploited or reversed therapeutically. The molecular mechanisms of inhibitory receptors, checkpoints and Tregs are developed in [7.15.25](/7.15.25).
@@ -78,7 +78,7 @@ A summary of the peripheral mechanisms:
 | Ignorance | Low antigen concentration or affinity, sequestration | Present but not activated | Can be activated when antigen increases or with inflammation | Autoimmunity after infection or trauma |
 | Anergy | Signal 1 without signal 2 | No IL-2, no proliferation | Partly reversible (IL-2, strong inflammation) | Autoimmunity with abnormal costimulation |
 | Peripheral clonal deletion | Persistent strong stimulation (Fas), cytokine withdrawal (Bim) | Apoptosis | Irreversible | Fas, FasL mutations: lymphoproliferation and autoimmunity |
-| Tregs and tolerogenic DCs | Self antigen + TGF-β, IL-2 | Suppression of other cells | Depends on the number and function of Tregs | FOXP3 mutation: multiorgan autoimmunity |
+| Tregs and tolerogenic DCs | Self antigen + TGF-β, IL-2 | Suppression of other cells | Depends on the number and function of Tregs | *FOXP3* mutation: multiorgan autoimmunity |
 
 ## 24.4. Conditions for Inducing Tolerance
 
@@ -166,9 +166,9 @@ The most convincing genetic evidence comes from monogenic diseases, each corresp
 
 | Gene | Layer of tolerance defective | Disease (human) | Main features |
 |---|---|---|---|
-| AIRE | Central tolerance: mTECs do not express tissue-restricted antigens | Autoimmune polyendocrinopathy–candidiasis–ectodermal dystrophy (APECED) | Autoimmunity of endocrine glands such as the parathyroid and adrenal glands, chronic mucocutaneous candidiasis |
-| FOXP3 | Active regulation: loss of Tregs | IPEX (immune dysregulation, polyendocrinopathy, enteropathy, X-linked) | Enteropathy beginning in the neonatal period, type 1 diabetes, dermatitis, multiorgan autoimmunity (corresponding to scurfy in the mouse) |
-| IL2RA (CD25) | Active regulation: impaired survival and function of Tregs | CD25 deficiency | Autoimmunity and lymphocytic infiltration similar to IPEX |
+| *AIRE* | Central tolerance: mTECs do not express tissue-restricted antigens | Autoimmune polyendocrinopathy–candidiasis–ectodermal dystrophy (APECED) | Autoimmunity of endocrine glands such as the parathyroid and adrenal glands, chronic mucocutaneous candidiasis |
+| *FOXP3* | Active regulation: loss of Tregs | IPEX (immune dysregulation, polyendocrinopathy, enteropathy, X-linked) | Enteropathy beginning in the neonatal period, type 1 diabetes, dermatitis, multiorgan autoimmunity (corresponding to scurfy in the mouse) |
+| *IL2RA* (CD25) | Active regulation: impaired survival and function of Tregs | CD25 deficiency | Autoimmunity and lymphocytic infiltration similar to IPEX |
 | CTLA4 | Peripheral anergy and Treg function | CTLA-4 haploinsufficiency | Multiorgan lymphocytic infiltration, autoimmunity, hypogammaglobulinemia |
 | FAS, FASLG | Peripheral clonal deletion: defective activation-induced cell death | Autoimmune lymphoproliferative syndrome (ALPS) | Enlarged lymph nodes and spleen, autoimmune cytopenias, increased double-negative T cells (corresponding to lpr and gld in the mouse) |
 
@@ -199,7 +199,7 @@ The two directions share the same logic: central and peripheral tolerance are no
 - Conditions for inducing tolerance: antigen dose (low and high zones), form, route, adjuvant and state of APCs, and the age and physiological state of the host; T-cell tolerance is fast, durable and needs little antigen, and B-cell tolerance is slow, transient and needs much antigen. Oral tolerance (Definition 24.4.1) is the default state of the gut (§24.4).
 - Immune privilege (Definition 24.5.1) is relative and is maintained jointly by barriers, inhibitory factors and regulatory cells; fetal–maternal tolerance is active and multilayered (§24.5).
 - In the first-order model, central tolerance shrinks the pool of self-reactive cells proportionally (level), and peripheral regulation decides whether it is bounded (stability) (Example 24.6.1).
-- Failure of tolerance corresponds to monogenic diseases of different layers (AIRE, FOXP3, CTLA4, FAS) and also occurs after infection, molecular mimicry and release of antigen (§24.7).
+- Failure of tolerance corresponds to monogenic diseases of different layers (*AIRE*, *FOXP3*, *CTLA4*, *FAS*) and also occurs after infection, molecular mimicry and release of antigen (§24.7).
 - Therapeutically, tolerance is induced by blocking costimulation, antigen-specific therapy and regulatory cells, and broken by checkpoint blockade, agonistic costimulation and weakening of Tregs (§24.8).
 
 ## Questions
@@ -208,7 +208,7 @@ The two directions share the same logic: central and peripheral tolerance are no
 
    **Answer** Immunogen and tolerogen are not inherent classes of antigen but outcomes of the interaction of antigen and host, depending on the signal context. (1) Dose: intermediate doses produce a response, and doses that are too low (low zone) or too high (high zone) produce tolerance. (2) Form and route: soluble monomers are not efficiently taken up by APCs, and entry by the oral or intravenous route readily induces tolerance, whereas aggregated polymers, particles, and subcutaneous antigen with adjuvant readily induce a response. (3) Costimulation and state of the APC: without adjuvant and when presented by immature DCs, T cells receive signal 1 without signal 2 and go toward anergy or Treg differentiation; mature DCs that provide costimulation induce a response. In addition, the age and developmental stage of the host (tolerance is easily induced in the embryonic and neonatal periods) and whether the host is immunosuppressed also have an influence.
 
-2. Why do patients with AIRE mutations have mainly autoimmunity of endocrine glands? Does this defect affect central tolerance of B cells?
+2. Why do patients with *AIRE* mutations have mainly autoimmunity of endocrine glands? Does this defect affect central tolerance of B cells?
 
    **Answer** AIRE controls the expression by medullary thymic epithelial cells of large numbers of proteins that are normally expressed only in peripheral tissues (such as pancreatic islets, parathyroid and adrenal glands), so that the corresponding T-cell clones are deleted in the thymus or turned into Tregs; when AIRE is deficient, these clones escape to the periphery and attack tissues expressing the corresponding antigens, with the endocrine glands as the main target organs. Central tolerance of B cells takes place in the bone marrow and depends on self antigens on bone marrow stromal and hematopoietic cells, independent of AIRE; but production of autoantibodies usually needs Th-cell help, and AIRE deficiency lets self-reactive Th cells survive, so patients still develop autoantibodies.
 

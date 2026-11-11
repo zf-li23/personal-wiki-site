@@ -1,7 +1,7 @@
 ---
 title: Immunodeficiency Diseases
 description: "Primary immunodeficiencies as natural knockout experiments on every link of the knowledge pathway: severe combined immunodeficiency, antibody defects, phagocyte defects, complement and innate signaling defects, and immune regulation defects, each revealing an immune function and its characteristic pathogens; secondary immunodeficiency; the immunology of HIV infection and the target-cell-limited model; principles of immune reconstitution."
-source_hash: 118d317e8692
+source_hash: 045199834c2d
 ---
 
 The knowledge pathway keeps asking four questions: who recognizes, how the decision is made after recognition, which effectors clear the threat, and how the response is remembered and then shut off. The preceding chapters explained how each step works; this chapter asks the reverse question: what happens when one link is broken? Immunodeficiency belongs to the "too weak" category on the pathway (the other two being the "too strong" of hypersensitivity and autoimmunity and the "misdirected" of allergy and chronic inflammation, see [7.15.26](/7.15.26) and [7.15.28](/7.15.28)). It deserves a chapter because each single-gene defect is a knockout experiment performed by nature on humans: without RAG there are no lymphocytes, without CD40 ligand there is no class switching, without NADPH oxidase certain bacteria cannot be killed, and without the IFN-γ receptor mycobacteria cannot be held back. Reading backward from a patient's infection spectrum and laboratory phenotype to the damaged link also confirms the mechanisms of the earlier chapters. We first give the classification and diagnostic clues, then take the damaged links in turn: combined immunodeficiency, antibody defects, phagocyte defects, complement and innate signaling defects, and immune regulation defects. We then turn to secondary immunodeficiency and finish, at greater length, with the immunology of HIV infection, which is the best-studied acquired immunodeficiency and the most direct evidence for the central position of CD4⁺ T cells in the immune system. Pathogen biology and antiviral drugs are covered in [7.11.25](/7.11.25) and [7.11.28](/7.11.28); how the host organizes its response according to the site of infection is the subject of [7.15.32](/7.15.32).
@@ -34,7 +34,7 @@ flowchart LR
 | Phagocyte defects | Chronic granulomatous disease, leukocyte adhesion deficiency | Failed killing or recruitment | Abscesses of skin, lymph nodes and liver caused by staphylococci, enteric Gram-negative bacteria and fungi |
 | Complement defects | C1q, C2, C4 deficiency; C5–C9 deficiency; properdin deficiency | Poor clearance of immune complexes and apoptotic cells; loss of opsonization and lysis | Early-component defects with autoimmunity (systemic lupus erythematosus); late-component and properdin defects with susceptibility to *Neisseria* (sepsis, meningitis) |
 | Innate signaling defects | MyD88 / IRAK4, UNC93B1 / TLR3, IL-12 / IFN-γ axis | Failed recognition or activation for particular pathogens | Pyogenic bacteria; herpes simplex virus encephalitis; mycobacteria and *Salmonella* |
-| Regulation defects | AIRE, FOXP3, CTLA4, FAS | Failed tolerance and contraction | Autoimmunity and lymphoproliferation; sometimes infection |
+| Regulation defects | *AIRE*, *FOXP3*, *CTLA4*, *FAS* | Failed tolerance and contraction | Autoimmunity and lymphoproliferation; sometimes infection |
 
 ### 31.1.2. Clinical Clues and Laboratory Investigation
 
@@ -132,7 +132,7 @@ A too-weak and a too-strong immune system are not contradictory: self-tolerance 
 | Disease | Gene | Impaired tolerance mechanism | Presentation |
 |---|---|---|---|
 | APECED (APS-1) | *AIRE* | Medullary thymic epithelial cells express insufficient tissue-restricted antigens; negative selection and thymic Treg generation are impaired ([7.15.24](/7.15.24)) | Autoimmunity of multiple endocrine organs; chronic mucocutaneous candidiasis (patients produce autoantibodies against IL-17 and IL-22) |
-| IPEX | FOXP3 | Absence of Treg cells ([7.15.17](/7.15.17)) | Severe enteropathy beginning in the neonatal period, type 1 diabetes, eczema; often death before age 2 from sepsis and other causes |
+| IPEX | *FOXP3* | Absence of Treg cells ([7.15.17](/7.15.17)) | Severe enteropathy beginning in the neonatal period, type 1 diabetes, eczema; often death before age 2 from sepsis and other causes |
 | CD25 deficiency, CTLA4 haploinsufficiency | *IL2RA*, *CTLA4* | Treg function (IL-2 signaling, CTLA-4 inhibition) ([7.15.25](/7.15.25)) | IPEX-like autoimmunity; CTLA4 deficiency is often accompanied by hypogammaglobulinemia |
 | Autoimmune lymphoproliferative syndrome | *FAS*, *FASLG* | Activation-induced cell death and lymphocyte contraction ([7.15.18](/7.15.18)) | Enlarged lymph nodes and spleen, autoimmune cytopenias, increased double-negative T cells |
 
@@ -245,7 +245,7 @@ Treatment of primary immunodeficiency is built around "replace what is missing":
 - The defects of severe combined immunodeficiency (Definition 31.2.1) arise early in lymphocyte development and can be located by the T, B, NK phenotype to purine metabolism, V(D)J recombination, common γ chain and JAK3 signaling, pre-TCR signaling and other steps; defects of MHC, CD40L, STAT3 and WASP correspond to antigen presentation, T–B contact, Th17 and the synapse, respectively.
 - Antibody deficiencies (Definition 31.3.1 and others) cause recurrent infections with encapsulated bacteria and enteroviruses, with symptoms delayed until after 6 months by maternal IgG; treatment is periodic IgG replacement.
 - Defects of phagocytes, complement and innate signaling have narrow, specific infection spectra: chronic granulomatous disease (Definition 31.4.1) predisposes to catalase-positive microbes, late complement and properdin deficiency to *Neisseria*, early complement deficiency causes autoimmunity, and defects of the IL-12–IFN-γ axis predispose to mycobacteria.
-- Immune regulation defects (AIRE, FOXP3, CTLA4, FAS) present as autoimmunity and lymphoproliferation, and lymphopenia itself readily causes autoimmunity.
+- Immune regulation defects (*AIRE*, *FOXP3*, *CTLA4*, *FAS*) present as autoimmunity and lymphoproliferation, and lymphopenia itself readily causes autoimmunity.
 - The most common secondary immunodeficiency is malnutrition; others include drugs, tumors, infections and splenectomy.
 - HIV infects through CD4 and CCR5 or CXCR4; gut memory Th17 cells are lost first, followed by persistent immune activation and depletion of CD4⁺ T cells; a CD4⁺ T cell count below 200 / μl is AIDS (Definition 31.7.1), and opportunistic infections appear according to the CD4⁺ T cell count. The target-cell-limited model gives $R_0=\beta p T_0/(\delta c)$ and the steady state $T^*=T_0/R_0$ (Example 31.7.1).
 - The principle of treatment is to replace the missing protein, cells or genes while preventing infection.

@@ -18,7 +18,7 @@ import { Diagnostics } from './diagnostics.ts';
 import type { Lang } from '../../site.config.ts';
 import { parsePageFile, serializePageFile } from './frontmatter.ts';
 import { type Concept, conceptId } from './glossary.ts';
-import { buildLinkIndex, linkPage } from './linking.ts';
+import { buildLinkIndex, isGeneSymbol, linkPage } from './linking.ts';
 import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
 import { iconCredits, iconIds, licenseUrl, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
@@ -613,6 +613,18 @@ describe('cross-page linking', () => {
     const s = await site({ '1.3.2': 'en:## 2.1. A\n\nMutations in *FAS* cause ALPS.' });
     concepts.pop();
     assert.ok(!s.html('1.3.2').includes('wiki-dfn'));
+  });
+  it('never takes an italic gene symbol for a definition, even when it spells a protein concept', async () => {
+    concepts.push({ id: 'foxp3', zh: 'FOXP3', en: 'FOXP3', aliases: ['Foxp3'] });
+    const s = await site({
+      '7.15.17': '## 17.1. A\n\n**定义 17.1.1（调节性 T 细胞）** 以转录因子 **FOXP3** 为主调控因子的 T 细胞。',
+      '7.15.24': '## 24.1. B\n\n*FOXP3* 突变；小鼠 *Foxp3*、*lacZ* 与 *AIRE*。',
+    });
+    concepts.pop();
+    assert.deepEqual(s.diag.items.filter((d) => /already defined/.test(d.message)), []);
+    assert.ok(!s.html('7.15.24').includes('wiki-dfn'));
+    for (const g of ['FOXP3', 'Foxp3', 'IL23R', 'AIRE', 'lacZ', 'recA']) assert.ok(isGeneSymbol(g), g);
+    for (const w of ['NoSQL', 'OpenAPI', 'cis', 'Scrum', 'PD-L1', 'CTLA-4']) assert.ok(!isGeneSymbol(w), w);
   });
   it('matches a mixed-case single word (CaM, LINEs) only as written', async () => {
     concepts.push({ id: 'calmodulin', zh: '钙调蛋白', en: 'calmodulin', aliases: ['CaM'] });
