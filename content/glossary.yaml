@@ -12148,3 +12148,41 @@ terms:
   - { zh: 自适应指数整合发放模型, en: adaptive exponential integrate-and-fire model, aliases: [AdEx] }
   - { zh: Izhikevich 模型, en: Izhikevich model, aliases: [Izhikevich simple model] }
   - { zh: 放电频率适应, en: spike-frequency adaptation }
+  - { zh: 陈述性记忆, en: declarative memory, aliases: [外显记忆, explicit memory] }
+  - { zh: 模式分离, en: pattern separation }
+  - { zh: 模式完成, en: pattern completion }
+  - { zh: 位置细胞, en: place cell, aliases: [place cells] }
+  - { zh: 头朝向细胞, en: head direction cell, aliases: [head direction cells] }
+  - { zh: 网格细胞, en: grid cell, aliases: [grid cells] }
+  - { zh: 边界细胞, en: border cell, aliases: [border cells], scope: ["7.16"] }
+  - { zh: 相位进动, en: phase precession }
+  - { zh: 尖波涟漪, en: sharp-wave ripple, aliases: [sharp-wave ripples] }
+  - { zh: 重放, en: replay, aliases: [回放], scope: ["7.16"] }
+  - { zh: 记忆印迹, en: engram, aliases: [印迹, engrams] }
+  - { zh: 记忆巩固, en: memory consolidation }
+  - { zh: 再巩固, en: reconsolidation }
+  - { zh: 细胞集合, en: cell assembly, aliases: [cell assemblies] }
+  - { zh: 联想记忆, en: associative memory }
+  - { zh: 伪吸引子, en: spurious attractor, aliases: [spurious attractors] }
+  - { zh: 稠密联想记忆, en: dense associative memory }
+  - { zh: 键值记忆, en: key–value memory }
+  - { zh: 连续吸引子神经网络, en: continuous attractor neural network, aliases: [CANN, 连续吸引子网络, CANNs] }
+  - { zh: 环吸引子, en: ring attractor }
+  - { zh: 路径整合, en: path integration }
+  - { zh: theta 扫描, en: theta sweep, aliases: [theta sweeps] }
+  - { zh: 预测追踪, en: anticipative tracking }
+  - { zh: 工作记忆, en: working memory }
+  - { zh: 持续活动, en: persistent activity, aliases: [延迟期活动, delay activity] }
+  - { zh: 活动沉默的工作记忆, en: activity-silent working memory }
+  - { zh: theta–gamma 耦合, en: theta–gamma coupling }
+  - { zh: 认知地图, en: cognitive map, aliases: [cognitive maps] }
+  - { zh: 后继表征, en: successor representation, aliases: [SR] }
+  - { zh: Tolman–Eichenbaum 机器, en: Tolman–Eichenbaum machine }
+  - { zh: 事件边界, en: event boundary, aliases: [event boundaries] }
+  - { zh: 决策, en: decision, scope: ["7"] }
+  - { zh: 速度–准确性权衡, en: speed–accuracy trade-off }
+  - { zh: 漂移扩散模型, en: drift-diffusion model, aliases: [DDM, drift–diffusion model] }
+  - { zh: 序贯概率比检验, en: sequential probability ratio test, aliases: [SPRT] }
+  - { zh: 证据累积, en: evidence accumulation }
+  - { zh: 前景理论, en: prospect theory }
+  - { zh: 决策置信度, en: decision confidence }
