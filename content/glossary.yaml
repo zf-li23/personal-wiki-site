@@ -12232,3 +12232,55 @@ terms:
   - { zh: 微绒毛型光感受器, en: rhabdomeric photoreceptor, aliases: [rhabdomeric photoreceptors] }
   - { zh: 二色视觉, en: dichromacy }
   - { zh: 四色视觉, en: tetrachromacy }
+  - { zh: 内感受, en: interoception }
+  - { zh: 下丘脑, en: hypothalamus }
+  - { zh: AgRP 神经元, en: AgRP neuron, aliases: [AgRP neurons] }
+  - { zh: POMC 神经元, en: POMC neuron, aliases: [POMC neurons] }
+  - { zh: 终板, en: lamina terminalis }
+  - { zh: 驱力, en: drive, scope: ["7.16"] }
+  - { zh: 稳态奖赏, en: homeostatic reward }
+  - { zh: 转录–翻译负反馈环, en: transcription–translation feedback loop, aliases: [TTFL] }
+  - { zh: 触发器开关, en: flip-flop switch }
+  - { zh: 组织–激活假说, en: organizational–activational hypothesis }
+  - { zh: 性二型核团, en: sexually dimorphic nucleus }
+  - { zh: 情绪状态, en: emotion state }
+  - { zh: 恐惧条件反射, en: fear conditioning }
+  - { zh: 杏仁核, en: amygdala }
+  - { zh: 奖赏, en: reward, scope: ["7.16"] }
+  - { zh: 奖赏预测误差, en: reward prediction error, aliases: [RPE] }
+  - { zh: 成瘾, en: addiction, aliases: [物质使用障碍, substance use disorder] }
+  - { zh: 对手过程, en: opponent process }
+  - { zh: 经典条件反射, en: classical conditioning, aliases: [Pavlov 条件反射, Pavlovian conditioning] }
+  - { zh: 操作性条件反射, en: operant conditioning, aliases: [工具性条件反射, instrumental conditioning] }
+  - { zh: Rescorla–Wagner 规则, en: Rescorla–Wagner rule, aliases: [Rescorla–Wagner model] }
+  - { zh: 时序差分误差, en: temporal-difference error, aliases: [TD error, TD 误差] }
+  - { zh: 时序差分学习, en: temporal-difference learning, aliases: [TD learning, TD 学习] }
+  - { zh: 马尔可夫决策过程, en: Markov decision process, aliases: [MDP, Markov 决策过程] }
+  - { zh: 策略, en: policy, scope: ["7.16"] }
+  - { zh: 回报, en: return, scope: ["7.16"] }
+  - { zh: 价值函数, en: value function, scope: ["7.16"] }
+  - { zh: 动作价值函数, en: action-value function }
+  - { zh: Bellman 方程, en: Bellman equation }
+  - { zh: Bellman 最优方程, en: Bellman optimality equation }
+  - { zh: 策略迭代, en: policy iteration }
+  - { zh: 价值迭代, en: value iteration }
+  - { zh: SARSA, en: SARSA }
+  - { zh: Q 学习, en: Q-learning }
+  - { zh: ε-贪心策略, en: ε-greedy policy, aliases: [ε-greedy] }
+  - { zh: softmax 策略, en: softmax policy }
+  - { zh: 探索–利用权衡, en: exploration–exploitation trade-off }
+  - { zh: 深度 Q 网络, en: deep Q-network, aliases: [DQN] }
+  - { zh: 经验回放, en: experience replay }
+  - { zh: 分布式时序差分学习, en: distributional TD learning, aliases: [分布式强化学习, distributional reinforcement learning] }
+  - { zh: 超直接通路, en: hyperdirect pathway }
+  - { zh: 动作选择, en: action selection }
+  - { zh: 行动者–评价者, en: actor–critic, aliases: [actor-critic, 演员–评论家] }
+  - { zh: 目标导向行为, en: goal-directed behavior }
+  - { zh: 习惯, en: habit, aliases: [habits], scope: ["7.16"] }
+  - { zh: 策略梯度定理, en: policy gradient theorem }
+  - { zh: REINFORCE, en: REINFORCE }
+  - { zh: 优势函数, en: advantage function }
+  - { zh: 基于模型的强化学习, en: model-based reinforcement learning }
+  - { zh: 无模型强化学习, en: model-free reinforcement learning }
+  - { zh: 两步任务, en: two-step task }
+  - { zh: 元强化学习, en: meta-reinforcement learning, aliases: [meta-RL] }
