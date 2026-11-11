@@ -11633,7 +11633,7 @@ terms:
   - { zh: 味蕾, en: taste bud, aliases: [taste buds] }
   - { zh: 电感受, en: electroreception }
   - { zh: 电定位, en: electrolocation }
-  - { zh: 皮质脊髓束, en: corticospinal tract, aliases: [锥体束, pyramidal tract] }
+  - { zh: 皮质脊髓束, en: corticospinal tract, aliases: [锥体束, pyramidal tract, 皮层脊髓束] }
   - { zh: 外侧运动系统, en: lateral motor system }
   - { zh: 内侧运动系统, en: medial motor system }
   - { zh: 苔藓纤维, en: mossy fiber, aliases: [mossy fibers, mossy fibre] }
@@ -11988,7 +11988,7 @@ terms:
   - { zh: 选择概率, en: choice probability }
   - { zh: 噪声相关, en: noise correlation, aliases: [noise correlations] }
   - { zh: 信息限制相关, en: information-limiting correlations, aliases: [differential correlations, 差分相关] }
-  - { zh: 贝叶斯观察者, en: Bayesian observer }
+  - { zh: 贝叶斯观察者, en: Bayesian observer, aliases: [Bayes 观察者] }
   - { zh: 线索整合, en: cue integration, aliases: [cue combination] }
   - { zh: 腹语术效应, en: ventriloquist effect }
   - { zh: 因果推断模型, en: causal inference model, scope: ["7.16"] }
