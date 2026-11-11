@@ -89,7 +89,7 @@ The two classes of photoreceptors divide the range of intensities and trade sens
 | Distribution | Absent from the central fovea, densest at about $20^\circ$ | Peak density about $1.5$–$2\times10^5\,\mathrm{mm^{-2}}$ in the fovea |
 | Single-photon response | About $1\,\mathrm{pA}$, reliably detected | About $30$–$100$ times smaller, buried in noise |
 | Time to peak of dim-flash response | About $100$–$200\,\mathrm{ms}$ | About $30$–$50\,\mathrm{ms}$ |
-| Saturation | At moderate daylight | Practically never (bleaching adaptation) |
+| Saturation | At twilight to indoor light levels | Practically never (bleaching adaptation) |
 | Pigments | Rhodopsin, peak $498\,\mathrm{nm}$ | S, M, L opsins, peaks near $420$, $530$, $560\,\mathrm{nm}$ |
 | Convergence onto ganglion cells | High (sensitivity) | One-to-one in the fovea (acuity) |
 
@@ -171,7 +171,7 @@ The theorem makes three predictions that distinguish a correlation detector from
 
 - The response depends on the temporal frequency $f = v/\lambda$, not on the velocity $v$: it peaks at $f = 1/(2\pi\tau)$ for every wavelength.
 - The response grows with the square of contrast, because it is a product of two signals.
-- For wavelengths shorter than $2\Delta x$ the sine is negative and the detector signals the wrong direction (spatial aliasing); flies indeed turn against the motion of very fine gratings.
+- For wavelengths between $\Delta x$ and $2\Delta x$ the sine is negative and the detector signals the wrong direction (spatial aliasing); flies indeed turn against the motion of very fine gratings.
 
 In *Drosophila* the detector has been located: T4 cells compute the direction of moving ON edges and T5 cells that of OFF edges, each in four subtypes for the four cardinal directions, and they project to four layers of the lobula plate, where wide-field neurons integrate them. Their inputs come from neurons with different temporal filters at neighboring positions in the visual field (Mi1 and Tm3 for T4, for example), and T4 and T5 combine a Reichardt-like enhancement in the preferred direction with a Barlow–Levick-like suppression in the null direction (Haag, Arenz and Borst 2016). The correlation detector is also equivalent, for its average output, to the motion energy model of mammalian cortex ([7.16.18](/7.16.18)): different implementations of the same computation.
 

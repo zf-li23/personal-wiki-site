@@ -101,7 +101,7 @@ Real neurons are not Poisson at short time scales: after each spike there is an 
 
 **Theorem 16.4.2 (Fano Factor of a Renewal Process)** For a stationary renewal process with interval coefficient of variation $C_V$, the Fano factor of counts satisfies $F(T) \to C_V^2$ as $T \to \infty$.
 
-**Proof** Let $\mu = \langle\tau\rangle$ and $\sigma^2 = \operatorname{Var}(\tau)$. The time $S_n = \tau_1 + \cdots + \tau_n$ of the $n$-th spike has mean $n\mu$ and variance $n\sigma^2$, and by the **central limit theorem** it is approximately normal for large $n$. The event $\{n(T) \geq n\}$ is the event $\{S_n \leq T\}$. Writing $n = T/\mu + x\sqrt{T}$ and expanding, $\mathbb{P}(S_n \leq T) \approx \Phi\bigl(x\mu^{3/2}/\sigma\bigr)$, so $n(T)$ is approximately normal with mean $T/\mu$ and variance $\sigma^2T/\mu^3$. Hence $F = (\sigma^2T/\mu^3)/(T/\mu) = \sigma^2/\mu^2 = C_V^2$. $\square$
+**Proof** Let $\mu = \langle\tau\rangle$ and $\sigma^2 = \operatorname{Var}(\tau)$. The time $S_n = \tau_1 + \cdots + \tau_n$ of the $n$-th spike has mean $n\mu$ and variance $n\sigma^2$, and by the **central limit theorem** it is approximately normal for large $n$. The event $\{n(T) \geq n\}$ is the event $\{S_n \leq T\}$. Writing $n = T/\mu + x\sqrt{T}$ and expanding, $\mathbb{P}(S_n \leq T) \approx \Phi\bigl(-x\mu^{3/2}/\sigma\bigr)$, so $n(T)$ is approximately normal with mean $T/\mu$ and variance $\sigma^2T/\mu^3$. Hence $F = (\sigma^2T/\mu^3)/(T/\mu) = \sigma^2/\mu^2 = C_V^2$. $\square$
 
 For a dead-time process $\tau = \tau_{\mathrm{ref}} + \mathrm{Exp}$, the mean is $1/r$ and the standard deviation $1/r - \tau_{\mathrm{ref}}$, so $C_V = 1 - r\tau_{\mathrm{ref}}$: refractoriness makes firing more regular at high rates and matters little at low rates.
 
