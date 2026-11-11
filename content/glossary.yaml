@@ -12044,3 +12044,59 @@ terms:
   - { zh: BCM 规则, en: BCM rule, aliases: [Bienenstock–Cooper–Munro rule] }
   - { zh: 自组织映射, en: self-organizing map, aliases: [SOM, Kohonen map, Kohonen 映射] }
   - { zh: 竞争学习, en: competitive learning }
+  - { zh: 活性区, en: active zone }
+  - { zh: 量子含量, en: quantal content }
+  - { zh: 纳米域耦合, en: nanodomain coupling }
+  - { zh: 微米域耦合, en: microdomain coupling }
+  - { zh: 突触结合蛋白, en: synaptotagmin }
+  - { zh: 易释放池, en: readily releasable pool, aliases: [RRP] }
+  - { zh: 双脉冲比, en: paired-pulse ratio, aliases: [PPR] }
+  - { zh: 双脉冲易化, en: paired-pulse facilitation }
+  - { zh: 双脉冲压抑, en: paired-pulse depression }
+  - { zh: 突触易化, en: synaptic facilitation }
+  - { zh: 突触压抑, en: synaptic depression }
+  - { zh: 强直后增强, en: post-tetanic potentiation, aliases: [PTP] }
+  - { zh: 反转电位, en: reversal potential }
+  - { zh: AMPA 受体, en: AMPA receptor, aliases: [AMPA receptors] }
+  - { zh: NMDA 受体, en: NMDA receptor, aliases: [NMDA receptors] }
+  - { zh: 镁阻断, en: magnesium block, aliases: [Mg2+ block] }
+  - { zh: 巧合检测, en: coincidence detection, aliases: [coincidence detector] }
+  - { zh: 突触后致密区, en: postsynaptic density, aliases: [PSD] }
+  - { zh: 神经肽, en: neuropeptide, aliases: [neuropeptides] }
+  - { zh: 容积传递, en: volume transmission }
+  - { zh: 神经调质, en: neuromodulator, aliases: [neuromodulators] }
+  - { zh: 多巴胺, en: dopamine }
+  - { zh: 去甲肾上腺素, en: norepinephrine, aliases: [noradrenaline] }
+  - { zh: 5-羟色胺, en: serotonin, aliases: [5-HT, 血清素] }
+  - { zh: 乙酰胆碱, en: acetylcholine }
+  - { zh: 内源性大麻素, en: endocannabinoid, aliases: [endocannabinoids] }
+  - { zh: 电导型突触, en: conductance-based synapse }
+  - { zh: 电流型突触, en: current-based synapse }
+  - { zh: α 突触, en: alpha synapse }
+  - { zh: 短时程突触可塑性, en: short-term synaptic plasticity, aliases: [short-term plasticity, 短时程可塑性, STP] }
+  - { zh: Tsodyks–Markram 模型, en: Tsodyks–Markram model }
+  - { zh: 电紧张长度, en: electrotonic length }
+  - { zh: 等效圆柱, en: equivalent cylinder }
+  - { zh: 反向传播动作电位, en: back-propagating action potential, aliases: [bAP] }
+  - { zh: 树突锋电位, en: dendritic spike, aliases: [dendritic spikes] }
+  - { zh: 输入特异性, en: input specificity }
+  - { zh: 联合性, en: associativity, scope: ["7.16"] }
+  - { zh: CaMKII, en: CaMKII, aliases: [钙调蛋白依赖性蛋白激酶 II, Ca2+/calmodulin-dependent protein kinase II] }
+  - { zh: 钙控制假说, en: calcium control hypothesis }
+  - { zh: 元可塑性, en: metaplasticity }
+  - { zh: 脉冲时间依赖可塑性, en: spike-timing-dependent plasticity, aliases: [STDP] }
+  - { zh: 稳态可塑性, en: homeostatic plasticity }
+  - { zh: 突触缩放, en: synaptic scaling }
+  - { zh: 突触标记与捕获, en: synaptic tagging and capture }
+  - { zh: 行为时间尺度突触可塑性, en: behavioral timescale synaptic plasticity, aliases: [BTSP] }
+  - { zh: 三因子学习规则, en: three-factor learning rule }
+  - { zh: 资格迹, en: eligibility trace, aliases: [eligibility traces] }
+  - { zh: 非正规放大, en: non-normal amplification }
+  - { zh: Wilson–Cowan 模型, en: Wilson–Cowan model }
+  - { zh: 抑制稳定网络, en: inhibition-stabilized network, aliases: [ISN] }
+  - { zh: 悖论效应, en: paradoxical effect, scope: ["7.16"] }
+  - { zh: PING, en: PING, aliases: [pyramidal–interneuron network gamma] }
+  - { zh: ING, en: ING, aliases: [interneuron network gamma] }
+  - { zh: 相位响应曲线, en: phase response curve, aliases: [PRC] }
+  - { zh: 锁相态, en: phase-locked state }
+  - { zh: 平衡态, en: balanced state, aliases: [E–I 平衡态], scope: ["7.16"] }
