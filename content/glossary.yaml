@@ -11969,3 +11969,38 @@ terms:
   - { zh: 非典型趋化因子受体, en: atypical chemokine receptor, aliases: [ACKR, ACKRs] }
   - { zh: 黏膜相关恒定 T 细胞, en: mucosal-associated invariant T cell, aliases: [MAIT, MAIT 细胞, MAIT cells] }
   - { zh: 危险模型, en: danger model, aliases: [danger theory] }
+  # biology: computational neuroscience (7.16); homonyms of terms in other disciplines are scoped to 7.16
+  - { zh: 气味受体, en: odorant receptor, aliases: [odorant receptors] }
+  - { zh: 一个神经元一个受体规则, en: one-neuron–one-receptor rule }
+  - { zh: 除法归一化, en: divisive normalization }
+  - { zh: 蘑菇体, en: mushroom body, aliases: [mushroom bodies] }
+  - { zh: Kenyon 细胞, en: Kenyon cell, aliases: [Kenyon cells] }
+  - { zh: 局部敏感哈希, en: locality-sensitive hashing, aliases: [locality-sensitive hash, LSH] }
+  - { zh: gammatone 滤波器, en: gammatone filter }
+  - { zh: 向量强度, en: vector strength }
+  - { zh: Jeffress 模型, en: Jeffress model }
+  - { zh: TRPV1, en: TRPV1 }
+  - { zh: TRPM8, en: TRPM8 }
+  - { zh: 中枢敏化, en: central sensitization }
+  - { zh: 信号检测论, en: signal detection theory }
+  - { zh: 心理测量函数, en: psychometric function }
+  - { zh: 神经测量函数, en: neurometric function }
+  - { zh: 选择概率, en: choice probability }
+  - { zh: 噪声相关, en: noise correlation, aliases: [noise correlations] }
+  - { zh: 信息限制相关, en: information-limiting correlations, aliases: [differential correlations, 差分相关] }
+  - { zh: 贝叶斯观察者, en: Bayesian observer }
+  - { zh: 线索整合, en: cue integration, aliases: [cue combination] }
+  - { zh: 腹语术效应, en: ventriloquist effect }
+  - { zh: 因果推断模型, en: causal inference model, scope: ["7.16"] }
+  - { zh: 序列依赖, en: serial dependence }
+  - { zh: 概率群体编码, en: probabilistic population code }
+  - { zh: 群体状态空间, en: population state space }
+  - { zh: 参与比, en: participation ratio }
+  - { zh: 去混合主成分分析, en: demixed PCA, aliases: [dPCA, demixed principal component analysis] }
+  - { zh: 隐变量模型, en: latent variable model }
+  - { zh: 高斯过程因子分析, en: Gaussian-process factor analysis, aliases: [GPFA] }
+  - { zh: 一致流形逼近与投影, en: uniform manifold approximation and projection, aliases: [UMAP] }
+  - { zh: 神经流形, en: neural manifold, aliases: [neural manifolds] }
+  - { zh: jPCA, en: jPCA }
+  - { zh: 盲源分离, en: blind source separation }
+  - { zh: 独立成分分析, en: independent component analysis, aliases: [ICA] }
