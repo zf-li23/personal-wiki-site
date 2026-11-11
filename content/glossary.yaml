@@ -5448,7 +5448,7 @@ terms:
   - { zh: 负熵, en: negentropy, aliases: [negative entropy] }
   - { zh: 动力学校对, en: kinetic proofreading }
   - { zh: Landauer 原理, en: "Landauer's principle", aliases: [兰道尔原理] }
-  - { zh: Hopf 分岔, en: Hopf bifurcation, aliases: [霍普夫分岔] }
+  - { zh: Hopf 分岔, en: Hopf bifurcation, aliases: [霍普夫分岔, Andronov–Hopf bifurcation, Andronov–Hopf 分岔] }
   - { zh: 正氢, en: orthohydrogen }
   - { zh: 仲氢, en: parahydrogen }
   - { zh: Brønsted–Bjerrum 方程, en: Brønsted–Bjerrum equation }
@@ -7484,7 +7484,7 @@ terms:
   - { zh: 超敏性, en: ultrasensitivity, aliases: [ultrasensitive, 超敏] }
   - { zh: 双稳态, en: bistability, aliases: [bistable, 双稳], scope: ["7"] }
   - { zh: 滞后, en: hysteresis, aliases: [滞后效应, 迟滞], scope: ["7"] }
-  - { zh: 适应, en: adaptation, aliases: [信号适应, 感觉适应, sensory adaptation], scope: ["7.1", "7.3", "7.9", "7.6", "7.14"] }
+  - { zh: 适应, en: adaptation, aliases: [信号适应, 感觉适应, sensory adaptation], scope: ["7.1", "7.3", "7.9", "7.6", "7.14", "7.16"] }
   - { zh: 完全适应, en: perfect adaptation, aliases: [精确适应, exact adaptation] }
   - { zh: 钙振荡, en: calcium oscillation, aliases: [calcium oscillations, Ca2+ oscillation, Ca²⁺ 振荡] }
   - { zh: 相互作用结构域, en: interaction domain, aliases: [interaction domains, modular interaction domain] }
@@ -12100,3 +12100,51 @@ terms:
   - { zh: 相位响应曲线, en: phase response curve, aliases: [PRC] }
   - { zh: 锁相态, en: phase-locked state }
   - { zh: 平衡态, en: balanced state, aliases: [E–I 平衡态], scope: ["7.16"] }
+  - { zh: Marr 的三个分析层次, en: "Marr's levels of analysis", aliases: ["Marr's three levels"] }
+  - { zh: 细胞类型, en: cell type, aliases: [cell types], scope: ["7"] }
+  - { zh: 胶质细胞, en: glial cell, aliases: [glial cells, glia, 神经胶质细胞] }
+  - { zh: 髓鞘, en: myelin }
+  - { zh: 郎飞结, en: node of Ranvier, aliases: [nodes of Ranvier] }
+  - { zh: 回路模体, en: circuit motif, aliases: [circuit motifs] }
+  - { zh: 地形图, en: topographic map, aliases: [topographic maps], scope: ["7.16"] }
+  - { zh: 皮层放大因子, en: cortical magnification factor }
+  - { zh: 连接组, en: connectome }
+  - { zh: 钙成像, en: calcium imaging }
+  - { zh: 血流动力学响应函数, en: hemodynamic response function, aliases: [HRF] }
+  - { zh: 化学遗传学, en: chemogenetics }
+  - { zh: 锋电位分选, en: spike sorting }
+  - { zh: GHK 电流方程, en: GHK current, aliases: [Goldman–Hodgkin–Katz current] }
+  - { zh: Goldman 整流, en: Goldman rectification }
+  - { zh: 输入电阻, en: input resistance }
+  - { zh: 膜时间常数, en: membrane time constant }
+  - { zh: 单通道电导, en: single-channel conductance }
+  - { zh: 开放概率, en: open probability }
+  - { zh: 门控变量, en: gating variable, aliases: [gating variables] }
+  - { zh: 失活, en: inactivation, scope: ["7"] }
+  - { zh: A 型电流, en: A-type current, aliases: [A-current, A 电流] }
+  - { zh: M 电流, en: M-current, aliases: [M current] }
+  - { zh: 超极化激活电流, en: hyperpolarization-activated current, aliases: [I_h] }
+  - { zh: T 型钙电流, en: T-type calcium current, aliases: [T-type Ca2+ current, 低阈值钙电流] }
+  - { zh: 钙激活钾电流, en: calcium-activated potassium current, aliases: [Ca2+-activated K+ current] }
+  - { zh: 持续钠电流, en: persistent sodium current, aliases: [I_Na, p] }
+  - { zh: 相线, en: phase line, scope: ["7.16"] }
+  - { zh: FitzHugh–Nagumo 模型, en: FitzHugh–Nagumo model }
+  - { zh: Morris–Lecar 模型, en: Morris–Lecar model }
+  - { zh: 1 类兴奋性, en: class 1 excitability }
+  - { zh: 2 类兴奋性, en: class 2 excitability }
+  - { zh: 整合器, en: integrator, scope: ["7.16"] }
+  - { zh: 共振器, en: resonator, scope: ["7.16"] }
+  - { zh: 不变圆上的鞍结分岔, en: saddle-node on invariant circle, aliases: [SNIC, SNIC bifurcation] }
+  - { zh: 超临界 Andronov–Hopf 分岔, en: supercritical Andronov–Hopf bifurcation, aliases: [supercritical Hopf bifurcation, 超临界 Hopf 分岔] }
+  - { zh: 亚临界 Andronov–Hopf 分岔, en: subcritical Andronov–Hopf bifurcation, aliases: [subcritical Hopf bifurcation, 亚临界 Hopf 分岔] }
+  - { zh: 鞍点同宿轨分岔, en: saddle homoclinic orbit bifurcation, aliases: [homoclinic bifurcation, 同宿分岔] }
+  - { zh: 簇放电, en: bursting, scope: ["7"] }
+  - { zh: 快慢分解, en: fast–slow decomposition }
+  - { zh: 漏整合发放模型, en: leaky integrate-and-fire model, aliases: [LIF, LIF model, 泄漏整合发放模型] }
+  - { zh: 基强度, en: rheobase }
+  - { zh: 二次整合发放模型, en: quadratic integrate-and-fire model, aliases: [QIF] }
+  - { zh: theta 神经元, en: theta neuron, aliases: [theta neurons] }
+  - { zh: 指数整合发放模型, en: exponential integrate-and-fire model, aliases: [ExpIF, EIF] }
+  - { zh: 自适应指数整合发放模型, en: adaptive exponential integrate-and-fire model, aliases: [AdEx] }
+  - { zh: Izhikevich 模型, en: Izhikevich model, aliases: [Izhikevich simple model] }
+  - { zh: 放电频率适应, en: spike-frequency adaptation }
