@@ -12123,10 +12123,10 @@ terms:
   - { zh: 失活, en: inactivation, scope: ["7"] }
   - { zh: A 型电流, en: A-type current, aliases: [A-current, A 电流] }
   - { zh: M 电流, en: M-current, aliases: [M current] }
-  - { zh: 超极化激活电流, en: hyperpolarization-activated current, aliases: [I_h] }
+  - { zh: 超极化激活电流, en: hyperpolarization-activated current }
   - { zh: T 型钙电流, en: T-type calcium current, aliases: [T-type Ca2+ current, 低阈值钙电流] }
   - { zh: 钙激活钾电流, en: calcium-activated potassium current, aliases: [Ca2+-activated K+ current] }
-  - { zh: 持续钠电流, en: persistent sodium current, aliases: [I_Na, p] }
+  - { zh: 持续钠电流, en: persistent sodium current }
   - { zh: 相线, en: phase line, scope: ["7.16"] }
   - { zh: FitzHugh–Nagumo 模型, en: FitzHugh–Nagumo model }
   - { zh: Morris–Lecar 模型, en: Morris–Lecar model }

@@ -71,7 +71,7 @@ Loewi and Dale shared the 1936 Nobel Prize in Physiology or Medicine, Katz recei
 ### 8.3.2. The Process of Release
 
 1. The action potential reaches the terminal and opens the $\mathrm{Ca_V2.1}$ (P/Q-type) channels of the active zone. The electrochemical gradient of $\ce{Ca^2+}$ is very large (about $1$–$2\,\mathrm{mmol\,L^{-1}}$ outside, about $0.1\,\mu\mathrm{mol\,L^{-1}}$ inside), and in the "nanodomain" near the channel mouth $[\ce{Ca^2+}]$ rises to tens of $\mu\mathrm{mol\,L^{-1}}$ in less than 1 ms.
-2. $\ce{Ca^2+}$ binds to the vesicular $\ce{Ca^2+}$ sensor synaptotagmin, the already assembled **SNARE** proteins complete the membrane fusion, and ACh is released by **exocytosis**. From the action potential to the onset of the end-plate current takes about $0.5\,\mathrm{ms}$, the **synaptic delay**, spent mainly on the opening of $\ce{Ca^2+}$ channels and on fusion.
+2. $\ce{Ca^2+}$ binds to the vesicular $\ce{Ca^2+}$ sensor *synaptotagmin*, the already assembled **SNARE** proteins complete the membrane fusion, and ACh is released by **exocytosis**. From the action potential to the onset of the end-plate current takes about $0.5\,\mathrm{ms}$, the **synaptic delay**, spent mainly on the opening of $\ce{Ca^2+}$ channels and on fusion.
 3. A nerve impulse usually releases about 125–200 vesicles, that is, about $10^6$ ACh molecules.
 4. The vesicle membrane is recovered by endocytosis mediated by **clathrin** and refilled: choline acetyltransferase synthesizes ACh in the cytosol from acetyl coenzyme A and choline, and the vesicular ACh transporter pumps it into the vesicles; the choline needed for synthesis comes mainly from the part recovered by the high-affinity choline transporter after ACh has been hydrolyzed in the cleft.
 
