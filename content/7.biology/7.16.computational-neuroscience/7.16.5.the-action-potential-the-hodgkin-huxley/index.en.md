@@ -31,7 +31,7 @@ with $x_\infty = \alpha_x/(\alpha_x + \beta_x)$ and $\tau_x = 1/(\alpha_x + \bet
 
 **Definition 5.2.1 (Gating Variable)** A **gating variable** $x(t) \in [0, 1]$ is the probability that a gate of a given type is in its permissive state, equivalently the fraction of such gates that are permissive in a large population of channels; it obeys the first-order kinetics (5.2) with voltage-dependent opening rate $\alpha_x$ and closing rate $\beta_x$. A gate whose permissive probability increases with depolarization is an *activation* gate ($m$, $n$); one whose permissive probability decreases with depolarization is an **inactivation** gate ($h$).
 
-The three gates of the $\ce{Na+}$ conductance differ by an order of magnitude in speed: near threshold $\tau_m \approx 0.2$–$0.5\,\mathrm{ms}$, whereas $\tau_h$ and $\tau_n$ are 1–8 ms. This separation of time scales is what makes the spike possible, since $m$ follows $V$ almost instantly and opens the positive feedback before $h$ and $n$ can close it, and it is also what allows the reduction to two dimensions in [7.16.6](/7.16.6#sec-6.3).
+The three gating variables of the model differ by an order of magnitude in speed: near threshold $\tau_m \approx 0.2$–$0.5\,\mathrm{ms}$, whereas $\tau_h$ and $\tau_n$ are 1–8 ms. This separation of time scales is what makes the spike possible, since $m$ follows $V$ almost instantly and opens the positive feedback before $h$ and $n$ can close it, and it is also what allows the reduction to two dimensions in [7.16.6](/7.16.6#sec-6.3).
 
 ### 5.2.2. Why the Rates Have the Form They Have
 
@@ -113,7 +113,7 @@ $$
 
 with axon radius $a$ and axial resistivity $R_{\mathrm{i}}$, which has traveling-pulse solutions ([7.6.30](/7.6.30#sec-30.6.4)). For simulation the axon is divided into compartments of length $\Delta x$ much smaller than the **length constant** $\lambda$, each an HH membrane coupled to its neighbors by the axial conductance $\pi a^2/(R_{\mathrm{i}}\Delta x)$; the stiff coupling is best integrated implicitly (one tridiagonal solve per time step, as in the NEURON simulator). Figure 4A shows a pulse launched at one end of a $2\,\mu\mathrm{m}$ axon at $20\,^\circ\mathrm{C}$, traveling at $0.75\,\mathrm{m\,s^{-1}}$ with constant shape.
 
-Dimensional analysis gives the scaling of the velocity $v$. Rescaling $x$ by $\sqrt{a}$ leaves (5.3) invariant, so a pulse of the same shape travels with $v \propto \sqrt{a/(R_{\mathrm{i}}c_{\mathrm{m}}^2)}$ times a factor that depends only on the membrane kinetics. The simulated velocities follow the square-root law (Figure 4C, slope 1/2): doubling the speed costs four times the diameter and four times the cross section, which is why invertebrates that need fast escape conduction evolved giant axons.
+Dimensional analysis gives the scaling of the velocity $v$. Rescaling $x$ by $\sqrt{a}$ leaves (5.3) invariant, so a pulse of the same shape travels with $v \propto \sqrt{a/(R_{\mathrm{i}}c_{\mathrm{m}}^2)}$ times a factor that depends only on the membrane kinetics. The simulated velocities follow the square-root law (Figure 4C, slope 1/2): doubling the speed costs four times the diameter and sixteen times the cross section, which is why invertebrates that need fast escape conduction evolved giant axons.
 
 ### 5.5.2. Myelinated Axons
 

@@ -90,7 +90,7 @@ $$
 
 其中 $V_T$ 为脉冲起始阈值，斜率因子 $\Delta_T$ 度量脉冲起始的陡峭程度；$V$ 达到峰值（例如 0 mV）时被重置。
 
-当 $\Delta_T \to 0$ 时，ExpIF 变成阈值为 $V_T$ 的 LIF；$\Delta_T$ 越大，电压朝脉冲加速得越平缓（图 1D）。该模型由 Fourcaud-Trocmé、Hansel、van Vreeswijk 与 Brunel（2003）提出，他们证明它对快速输入的响应比 LIF 更好地再现了基于电导的神经元。右端的函数 $F(V)$ 可以在神经元上直接测量：注入噪声电流，作出平均 $\mathrm{d}V/\mathrm{d}t$ 对 $V$ 的图（"动态 I–V 曲线"）；在皮层锥体神经元中，它能很好地用指数形式拟合，斜率因子 $\Delta_T$ 为一到几毫伏（Badel 等，2008）。
+当 $\Delta_T \to 0$ 时，ExpIF 变成阈值为 $V_T$ 的 LIF；$\Delta_T$ 越大，电压朝脉冲加速得越平缓（图 1D）。该模型由 Fourcaud-Trocmé、Hansel、van Vreeswijk 与 Brunel（2003）提出，他们证明，它对快速输入的响应比 LIF 更好地再现了基于电导的神经元的响应。右端的函数 $F(V)$ 可以在神经元上直接测量：注入噪声电流，作出平均 $\mathrm{d}V/\mathrm{d}t$ 对 $V$ 的图（"动态 I–V 曲线"）；在皮层锥体神经元中，它能很好地用指数形式拟合，斜率因子 $\Delta_T$ 为一到几毫伏（Badel 等，2008）。
 
 ![整合发放模型。A：一个 LIF 神经元（$E_\mathrm{L} = V_\mathrm{reset} = -65$ mV，$V_\mathrm{th} = -50$ mV，$\tau_\mathrm{m} = 10$ ms，$R = 10$ MΩ，$\tau_\mathrm{ref} = 2$ ms）在 2 nA 电流阶跃下的电压：电压向 $E_\mathrm{L} + RI = -45$ mV 充电，每次达到阈值即被重置（脉冲画成竖线）。B：式 (8.1) 的 f–I 曲线（线）与模拟结果（点），分别为无不应期与 5 ms 不应期；基强度为 1.5 nA，不应期使曲线饱和。C：LIF、ExpIF（$V_T = -55$ mV，$\Delta_T = 2$ mV）与 QIF 模型在 $I = 0$ 时的右端函数 $F(V)$：非线性模型有第二个不稳定的零点，即阈值。D：ExpIF 神经元在 1.8 nA 阶跃后的第一个脉冲，取三个 $\Delta_T$ 值：斜率因子越小，脉冲起始越陡](./plots/lif.py)
 
@@ -143,7 +143,7 @@ $$
 
 ### 8.5.1. Ornstein–Uhlenbeck 近似
 
-皮层神经元每秒接收数千个突触输入，每个输入产生一个小而短暂的电流。若这些输入相互独立且各自很小，它们的和近似为一个常数均值加上 Gaussian **白噪声**（扩散近似）。LIF 神经元此时服从 **Langevin 方程**
+皮层神经元每秒接收数千个突触输入，每个输入产生一个小而短暂的电流。若这些输入相互独立且各自很小，它们的和近似为一个常数均值加上高斯**白噪声**（扩散近似）。LIF 神经元此时服从 **Langevin 方程**
 
 $$
 \tau_{\mathrm{m}}\frac{\mathrm{d}V}{\mathrm{d}t} = -(V - E_{\mathrm{L}}) + \mu + \sigma\sqrt{2\tau_{\mathrm{m}}}\,\xi(t), \tag{8.2}

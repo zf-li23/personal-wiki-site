@@ -1,7 +1,7 @@
 ---
 title: Tumor Immunology
 description: The evidence for immune surveillance and the three phases of cancer immunoediting; tumor-specific antigens, tumor-associated antigens and neoantigens; innate and adaptive antitumor effectors (the cancer–immunity cycle); the tumor microenvironment and mechanisms of immune escape; the principles of immunotherapy (checkpoint blockade, adoptive cell therapy and CAR-T cells, vaccines, cytokines, antibodies and immune-related adverse events); a tumor–effector competition model; and three infiltration phenotypes and their readout by spatial omics.
-source_hash: f580f5b2d1f8
+source_hash: 4a9d8e886719
 ---
 
 The central problem of immunology is how to distinguish "non-self" from "self". Tumors make this problem awkward: tumor cells come from the self, most of their components are self, but they have accumulated mutations, express molecules they should not express, and actively switch off immune responses. This chapter follows the chapters on effectors and brakes and addresses three questions: whether the immune system can recognize tumors, how tumors evade it, and how the immune system can be used to treat tumors.
