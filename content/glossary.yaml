@@ -2120,7 +2120,7 @@ terms:
   - { zh: 完全积分, en: complete integral }
   - { zh: 奇积分, en: singular integral, scope: ["2.4", "2.5"] }
   - { zh: 特征函数, en: eigenfunction, aliases: [本征函数], scope: ["2.4", "2.5", "5", "6", "7.5"] }
-  - { zh: 鞍点, en: saddle, scope: ["2.4", "7.4"] }
+  - { zh: 鞍点, en: saddle, scope: ["2.4", "7.4", "7.16"] }
   - { zh: 结点, en: node, scope: ["2.4", "7.4"] }
   - { zh: 焦点, en: focus, aliases: [spiral point], scope: ["2.4", "7.4"] }
   - { zh: 中心, en: center, scope: ["2.4", "7.4"] }
@@ -2825,7 +2825,7 @@ terms:
   - { zh: 合页损失, en: hinge loss, aliases: [铰链损失] }
   - { zh: 核技巧, en: kernel trick }
   - { zh: 决策树, en: decision tree }
-  - { zh: 信息熵, en: entropy, aliases: [熵, Shannon 熵, Shannon entropy], scope: ["3", "4"] }
+  - { zh: 信息熵, en: entropy, aliases: [熵, Shannon 熵, Shannon entropy], scope: ["3", "4", "7.16"] }
   - { zh: 条件熵, en: conditional entropy }
   - { zh: 信息增益, en: information gain }
   - { zh: 增益率, en: gain ratio, aliases: [信息增益比, information gain ratio] }
@@ -3011,7 +3011,7 @@ terms:
   - { zh: 交叉注意力, en: cross-attention, aliases: [编码器–解码器注意力, encoder–decoder attention] }
   - { zh: 多头注意力, en: multi-head attention, aliases: [MHA] }
   - { zh: 归纳头, en: induction head }
-  - { zh: Transformer, en: Transformer, aliases: [Transformer 模型], scope: ["4"] }
+  - { zh: Transformer, en: Transformer, aliases: [Transformer 模型], scope: ["4", "7.16"] }
   - { zh: 残差流, en: residual stream }
   - { zh: 后归一化, en: post-norm, aliases: [Post-LN] }
   - { zh: 前归一化, en: pre-norm, aliases: [Pre-LN] }
@@ -11179,8 +11179,8 @@ terms:
   - { zh: 长时程抑制, en: long-term depression, aliases: [LTD] }
   - { zh: Rall 3/2 律, en: "Rall's 3/2 power rule", aliases: [Rall 3/2 power law] }
   - { zh: 神经元池, en: neuronal pool }
-  - { zh: 辐散, en: divergence, aliases: [辐散式联系], scope: ["7.14"] }
-  - { zh: 聚合, en: convergence, aliases: [聚合式联系], scope: ["7.14"] }
+  - { zh: 辐散, en: divergence, aliases: [辐散式联系], scope: ["7.14", "7.16"] }
+  - { zh: 聚合, en: convergence, aliases: [聚合式联系], scope: ["7.14", "7.16"] }
   - { zh: 交互抑制, en: reciprocal inhibition }
   - { zh: 后放, en: afterdischarge }
   - { zh: 前馈抑制, en: feedforward inhibition, aliases: [feed-forward inhibition] }
@@ -11539,7 +11539,7 @@ terms:
   - { zh: 快适应感受器, en: rapidly adapting receptor, aliases: [时相型感受器, phasic receptor, rapidly adapting receptors] }
   - { zh: 慢适应感受器, en: slowly adapting receptor, aliases: [紧张型感受器, tonic receptor, slowly adapting receptors] }
   - { zh: 背柱–内侧丘系, en: dorsal column–medial lemniscal system, aliases: [背柱-内侧丘系, dorsal column-medial lemniscal system, DCML] }
-  - { zh: 感受野, en: receptive field, scope: ["7.14"] }
+  - { zh: 感受野, en: receptive field, scope: ["7"] }
   - { zh: 侧向抑制, en: lateral inhibition, scope: ["7.14"] }
   - { zh: 前外侧系统, en: anterolateral system }
   - { zh: 两点辨别阈, en: two-point discrimination threshold, aliases: [两点阈, two-point threshold] }
