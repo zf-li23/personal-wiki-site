@@ -12060,7 +12060,7 @@ terms:
   - { zh: AMPA 受体, en: AMPA receptor, aliases: [AMPA receptors] }
   - { zh: NMDA 受体, en: NMDA receptor, aliases: [NMDA receptors] }
   - { zh: 镁阻断, en: magnesium block, aliases: [Mg2+ block] }
-  - { zh: 巧合检测, en: coincidence detection, aliases: [coincidence detector] }
+  - { zh: 巧合检测, en: coincidence detection, aliases: [coincidence detector, 巧合检测器] }
   - { zh: 突触后致密区, en: postsynaptic density, aliases: [PSD] }
   - { zh: 神经肽, en: neuropeptide, aliases: [neuropeptides] }
   - { zh: 容积传递, en: volume transmission }

@@ -14,7 +14,7 @@ Loewi's experiment of 1921 established chemical transmission: perfusate from a f
 3. applied exogenously at that concentration it mimics the effect of nerve stimulation, including the same reversal potential and the same pharmacology (agonists mimic, antagonists block both);
 4. there is a mechanism that terminates its action (an enzyme or a transporter).
 
-The third criterion is the strongest test, because it identifies the receptors as well as the substance. Small-molecule transmitters (acetylcholine, the amino acids glutamate, GABA and glycine, the monoamines, ATP) are packed into small clear vesicles at the active zone and act on fast ionotropic as well as slow metabotropic receptors; neuropeptides are released from large dense-core vesicles, usually during high-frequency firing, and act on metabotropic receptors only ([7.16.11](/7.16.11)). In the vertebrate central nervous system the division of labor is stark: glutamate mediates almost all fast excitation, GABA (in the brain) and glycine (in the spinal cord and brainstem) almost all fast inhibition, and the monoamines and acetylcholine act mostly as modulators.
+The third criterion is the strongest test, because it identifies the receptors as well as the substance. Small-molecule transmitters (acetylcholine, the amino acids glutamate, GABA and glycine, the monoamines, ATP) are packed into small clear vesicles at the **active zone** and act on fast ionotropic as well as slow metabotropic receptors; **neuropeptides** are released from large dense-core vesicles, usually during high-frequency firing, and act on metabotropic receptors only ([7.16.11](/7.16.11)). In the vertebrate central nervous system the division of labor is stark: glutamate mediates almost all fast excitation, GABA (in the brain) and glycine (in the spinal cord and brainstem) almost all fast inhibition, and the monoamines and acetylcholine act mostly as modulators.
 
 | Receptor | Transmitter | Subunits | Permeability | Reversal potential | Notes |
 |---|---|---|---|---|---|
@@ -37,7 +37,7 @@ Near $E_{\mathrm{rev}}$ the current is described by a conductance and a driving 
 $$
 E_{\mathrm{rev}} = \frac{g_{\mathrm{Na}}E_{\mathrm{Na}} + g_{\mathrm{K}}E_{\mathrm{K}}}{g_{\mathrm{Na}} + g_{\mathrm{K}}}, \tag{10.1}
 $$
-the same rule that gives the resting potential as a weighted average of equilibrium potentials ([7.16.4](/7.16.4)); a more accurate form uses permeabilities in the **Goldman–Hodgkin–Katz equation**.
+the same rule that gives the **resting potential** as a weighted average of equilibrium potentials ([7.16.4](/7.16.4)); a more accurate form uses permeabilities in the **Goldman–Hodgkin–Katz equation**.
 
 **Example 10.2.1** In frog muscle, $[\ce{Na+}]_{\mathrm{o}} = 120$, $[\ce{Na+}]_{\mathrm{i}} = 10$, $[\ce{K+}]_{\mathrm{o}} = 2.5$ and $[\ce{K+}]_{\mathrm{i}} = 140\,\mathrm{mM}$, and the ACh receptor has $P_{\mathrm{K}}/P_{\mathrm{Na}} \approx 1.1$. The GHK voltage equation at $20^\circ\mathrm{C}$ ($RT/F = 25.3\,\mathrm{mV}$) gives
 $$
@@ -154,7 +154,7 @@ Two processes end the response. *Deactivation* is the closing that follows remov
 
 ![A kinetic scheme of an AMPA-type receptor (Formula 10.6.1, with $k_{\mathrm{on}} = 5\,\mathrm{mM^{-1}\,ms^{-1}}$, $k_{\mathrm{off}} = 4$, $\beta = 8$, $\alpha = 2$, $k_{\mathrm{d}} = 0.8$ and $k_{\mathrm{r}} = 0.015\,\mathrm{ms^{-1}}$). A: open probability during a $1\,\mathrm{ms}$ pulse of $1\,\mathrm{mM}$ glutamate (shaded), similar to synaptic release, which decays by deactivation within a few milliseconds, and during a prolonged application, which decays by desensitization with a time constant of about $8\,\mathrm{ms}$ to a small steady level. B: ratio of the second to the first peak for paired $1\,\mathrm{ms}$ pulses: even a brief pulse desensitizes some receptors, which recover over about $100\,\mathrm{ms}$.](./plots/receptor-kinetics.py)
 
-For network models such detailed schemes are usually too expensive. They are reduced to a single gating variable $s(t)$ with first-order kinetics, or replaced by fixed waveforms (exponential, α and difference-of-exponential conductances); these reductions, and the voltage-dependent NMDA conductance in the same form as Definition 10.3.3, are the subject of [7.16.12](/7.16.12).
+For network models such detailed schemes are usually too expensive. They are reduced to a single **gating variable** $s(t)$ with first-order kinetics, or replaced by fixed waveforms (exponential, α and difference-of-exponential conductances); these reductions, and the voltage-dependent NMDA conductance in the same form as Definition 10.3.3, are the subject of [7.16.12](/7.16.12).
 
 ## Summary
 

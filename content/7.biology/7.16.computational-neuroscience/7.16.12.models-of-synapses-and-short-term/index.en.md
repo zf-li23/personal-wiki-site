@@ -7,9 +7,9 @@ The two preceding chapters described how a synapse releases transmitter ([7.16.9
 
 ## 12.1. Why Model the Synapse
 
-Cognition is carried out by networks, and in a network each neuron influences the others only through its synapses. A synaptic model has to supply, for every presynaptic spike at time $t_k$, the current that it produces in the postsynaptic cell. Two properties make this more than a delay line. First, the response is spread over time (milliseconds for AMPA receptors, a hundred milliseconds for NMDA receptors), so successive inputs add (**temporal summation**) and the synaptic time constants set the time scale of network dynamics. Second, synapses are plastic: their strength changes with use over milliseconds to seconds (short-term plasticity, 12.5) and over hours to a lifetime (long-term plasticity, [7.16.14](/7.16.14)), which is the basis of learning and of many real-time computations.
+Cognition is carried out by networks, and in a network each neuron influences the others only through its synapses. A synaptic model has to supply, for every presynaptic spike at time $t_k$, the current that it produces in the postsynaptic cell. Two properties make this more than a delay line. First, the response is spread over time (milliseconds for **AMPA receptors**, a hundred milliseconds for **NMDA receptors**), so successive inputs add (**temporal summation**) and the synaptic time constants set the time scale of network dynamics. Second, synapses are plastic: their strength changes with use over milliseconds to seconds (short-term plasticity, 12.5) and over hours to a lifetime (long-term plasticity, [7.16.14](/7.16.14)), which is the basis of learning and of many real-time computations.
 
-Two modeling strategies are used, as for voltage-gated channels. *Phenomenological* models prescribe the shape of the conductance change after a spike directly, chosen to fit recorded currents. *Physiological* (kinetic) models describe the opening of the postsynaptic channels by a rate equation driven by the transmitter concentration, in analogy with the gating variables of the **Hodgkin–Huxley model** (12.3). Both enter the membrane equation of the postsynaptic neuron in the same way.
+Two modeling strategies are used, as for voltage-gated channels. *Phenomenological* models prescribe the shape of the conductance change after a spike directly, chosen to fit recorded currents. *Physiological* (kinetic) models describe the opening of the postsynaptic channels by a rate equation driven by the transmitter concentration, in analogy with the **gating variables** of the **Hodgkin–Huxley model** (12.3). Both enter the membrane equation of the postsynaptic neuron in the same way.
 
 ## 12.2. Phenomenological Synapses
 
@@ -25,7 +25,7 @@ With the sign convention of this course (outward current positive), the postsyna
 $$
 C_{\mathrm{m}}\frac{\mathrm{d}V}{\mathrm{d}t} = -g_{\mathrm{L}}(V - E_{\mathrm{L}}) - \sum_j \bar g_j\,s_j(t)\,(V - E_j) + I_{\mathrm{ext}}. \tag{12.2}
 $$
-The conductance-based form is the physically correct one: an excitatory synapse ($E_{\mathrm{syn}} \approx 0\,\mathrm{mV}$) can never drive $V$ above $E_{\mathrm{syn}}$, an inhibitory synapse near rest acts by **shunting inhibition** (Proposition 10.4.1), and every open synapse increases the total membrane conductance and so shortens the membrane time constant (12.6). The current-based form is linear in the inputs and therefore analytically convenient; it is adequate when $V$ stays far from all synaptic reversal potentials, which is roughly true for excitation of a cell below threshold but not for inhibition.
+The conductance-based form is the physically correct one: an excitatory synapse ($E_{\mathrm{syn}} \approx 0\,\mathrm{mV}$) can never drive $V$ above $E_{\mathrm{syn}}$, an inhibitory synapse near rest acts by **shunting inhibition** (Proposition 10.4.1), and every open synapse increases the total membrane conductance and so shortens the **membrane time constant** (12.6). The current-based form is linear in the inputs and therefore analytically convenient; it is adequate when $V$ stays far from all synaptic reversal potentials, which is roughly true for excitation of a cell below threshold but not for inhibition.
 
 ### 12.2.2. Four Kernels
 
@@ -72,7 +72,7 @@ With $T_{\max} = 1\,\mathrm{mM}$ and $t_{\mathrm{p}} = 1\,\mathrm{ms}$, fits to 
 
 ### 12.3.2. The NMDA Synapse
 
-The NMDA conductance needs two additions: its slow, saturating gating, and its voltage dependence. The magnesium block is the factor $B(V)$ of Definition 10.3.3; since unblocking is fast compared with the synaptic time course, it multiplies the instantaneous conductance.
+The NMDA conductance needs two additions: its slow, saturating gating, and its voltage dependence. The **magnesium block** is the factor $B(V)$ of Definition 10.3.3; since unblocking is fast compared with the synaptic time course, it multiplies the instantaneous conductance.
 
 **Formula 12.3.2 (Saturating NMDA Synapse)** A second-order model used in cortical network simulations (Wang, 2002) is
 $$
@@ -83,7 +83,7 @@ I_{\mathrm{NMDA}} = \bar g_{\mathrm{NMDA}}\,s\,B(V)\,(V - E_{\mathrm{NMDA}}),
 $$
 with $\tau_{\mathrm{r}} = 2\,\mathrm{ms}$, $\tau_{\mathrm{d}} = 100\,\mathrm{ms}$ and $a = 0.5\,\mathrm{ms^{-1}}$.
 
-The variable $x$ represents the transient of bound transmitter; $s$ integrates it with saturation. For a presynaptic neuron firing at rate $r$ the time-averaged $s$ is approximately $r\tau_{\mathrm{d}}/(1 + r\tau_{\mathrm{d}})$ up to a factor, which saturates above about $1/\tau_{\mathrm{d}} = 10\,\mathrm{Hz}$. The long $\tau_{\mathrm{d}}$ makes NMDA-mediated recurrent excitation a slow variable that can integrate inputs over hundreds of milliseconds; this is the basis of the attractor models of working memory and decision making ([7.16.45](/7.16.45), [7.16.47](/7.16.47)). The voltage dependence makes the same synapse a coincidence detector in the sense of Definition 10.3.4, the property on which long-term plasticity is built ([7.16.14](/7.16.14)).
+The variable $x$ represents the transient of bound transmitter; $s$ integrates it with saturation. For a presynaptic neuron firing at rate $r$ the time-averaged $s$ is approximately $r\tau_{\mathrm{d}}/(1 + r\tau_{\mathrm{d}})$ up to a factor, which saturates above about $1/\tau_{\mathrm{d}} = 10\,\mathrm{Hz}$. The long $\tau_{\mathrm{d}}$ makes NMDA-mediated recurrent excitation a slow variable that can integrate inputs over hundreds of milliseconds; this is the basis of the attractor models of working memory and decision making ([7.16.45](/7.16.45), [7.16.47](/7.16.47)). The voltage dependence makes the same synapse a **coincidence detector** in the sense of Definition 10.3.4, the property on which long-term plasticity is built ([7.16.14](/7.16.14)).
 
 ## 12.4. Electrical Synapses
 
@@ -93,7 +93,7 @@ I_{1\to2}(t) = g_{\mathrm{c}}\,\bigl(V_1(t) - V_2(t)\bigr) = -I_{2\to1}(t), \tag
 $$
 and enters the membrane equation of each cell with the appropriate sign: $C_{\mathrm{m}}\dot V_2 = \dots + g_{\mathrm{c}}(V_1 - V_2)$. The junction is bidirectional, passive and nonselective, and its conductance is independent of voltage and transmitter (rectifying junctions are the exception). In the steady state it transmits a fraction $k = g_{\mathrm{c}}/(g_{\mathrm{c}} + g_2)$ of a voltage change (Eq. (10.5)); for fast signals the membrane capacitance of the receiving cell attenuates it further.
 
-The main computational effect of gap junctions is synchronization. Consider two leaky integrate-and-fire neurons ([7.16.8](/7.16.8)) driven by slightly different constant currents and coupled by Eq. (12.6). Each spike of neuron 1 transmits a brief depolarizing potential (a spikelet) to neuron 2, which advances its next spike if neuron 2 is close to threshold, and the reset after the spike transmits a hyperpolarization, which delays neuron 2 if it lags far behind; between spikes the junction pulls the two subthreshold trajectories toward each other. The net effect is that the leader is slowed and the follower is accelerated, and the pair locks at a small phase difference (figure below). The analysis of such locking in terms of phase response curves is in [7.16.15](/7.16.15#sec-15.6). In the brain, gap junctions between parvalbumin-expressing interneurons of the same class contribute to the synchrony of gamma oscillations, and those of the inferior olive synchronize its subthreshold oscillations; in both cases electrical and chemical coupling act together.
+The main computational effect of gap junctions is synchronization. Consider two leaky integrate-and-fire neurons ([7.16.8](/7.16.8)) driven by slightly different constant currents and coupled by Eq. (12.6). Each spike of neuron 1 transmits a brief depolarizing potential (a spikelet) to neuron 2, which advances its next spike if neuron 2 is close to threshold, and the reset after the spike transmits a hyperpolarization, which delays neuron 2 if it lags far behind; between spikes the junction pulls the two subthreshold trajectories toward each other. The net effect is that the leader is slowed and the follower is accelerated, and the pair locks at a small phase difference (figure below). The analysis of such locking in terms of **phase response curves** is in [7.16.15](/7.16.15#sec-15.6). In the brain, gap junctions between parvalbumin-expressing interneurons of the same class contribute to the synchrony of gamma oscillations, and those of the inferior olive synchronize its subthreshold oscillations; in both cases electrical and chemical coupling act together.
 
 ![Synchronization of two leaky integrate-and-fire neurons by an electrical synapse ($\tau_{\mathrm{m}} = 20\,\mathrm{ms}$, $R = 100\,\mathrm{M\Omega}$, threshold $-50\,\mathrm{mV}$, reset $-65\,\mathrm{mV}$; currents $0.200$ and $0.205\,\mathrm{nA}$; a spike is represented by $1\,\mathrm{ms}$ at $+20\,\mathrm{mV}$). A: without coupling the faster neuron 2 (red) drifts relative to neuron 1 (blue). B: with $g_{\mathrm{c}} = 2\,\mathrm{nS}$ (steady coupling coefficient $0.17$) the spikes lock after about ten cycles. C: phase of neuron 2 relative to neuron 1 at each spike of neuron 1: it slides through all values without coupling (gray) and converges to a nearly synchronous state with coupling (green).](./plots/gap-junction-sync.py)
 
@@ -101,7 +101,7 @@ The main computational effect of gap junctions is synchronization. Consider two 
 
 ### 12.5.1. Resources and Utilization
 
-The phenomena of [7.16.9](/7.16.9#sec-9.6), facilitation from residual $\ce{Ca^2+}$ and depression from depletion of the readily releasable pool, can be captured by two variables per synapse.
+The phenomena of [7.16.9](/7.16.9#sec-9.6), facilitation from residual $\ce{Ca^2+}$ and depression from depletion of the **readily releasable pool**, can be captured by two variables per synapse.
 
 **Definition 12.5.1 (Short-Term Synaptic Plasticity)** **Short-term synaptic plasticity** is the change of the efficacy of a synapse, by synaptic facilitation or synaptic depression (Definition 9.6.2), that depends on the presynaptic spikes of the preceding tens of milliseconds to seconds and decays back to baseline without lasting change.
 
@@ -181,7 +181,7 @@ The postsynaptic membrane integrates the synaptic conductance. With a current-ba
 $$
 V(t) - E_{\mathrm{L}} = \frac{R_{\mathrm{in}}Q}{\tau_{\mathrm{m}} - \tau_{\mathrm{s}}}\left(\mathrm{e}^{-t/\tau_{\mathrm{m}}} - \mathrm{e}^{-t/\tau_{\mathrm{s}}}\right), \qquad t \ge 0, \tag{12.10}
 $$
-where $Q$ is the total charge, the **convolution** of the synaptic current with the impulse response of the membrane. The PSP is a difference of exponentials whose decay is set by the slower of the two time constants, usually the membrane. Successive PSPs add as long as they arrive within about $\tau_{\mathrm{m}}$ of each other: the membrane time constant defines the window of **temporal summation** ([7.14.5](/7.14.5#sec-5.3.2)).
+where $Q$ is the total charge, the **convolution** of the synaptic current with the impulse response of the membrane. The PSP is a difference of exponentials whose decay is set by the slower of the two time constants, usually the membrane. Successive PSPs add as long as they arrive within about $\tau_{\mathrm{m}}$ of each other: the **membrane time constant** defines the window of **temporal summation** ([7.14.5](/7.14.5#sec-5.3.2)).
 
 In a conductance-based model this window is not fixed. The total conductance in Eq. (12.2) is $g_{\mathrm{tot}}(t) = g_{\mathrm{L}} + \sum_j\bar g_js_j(t)$, and around any operating point the membrane relaxes with the effective time constant
 $$
@@ -203,7 +203,7 @@ In vivo, cortical neurons bombarded by thousands of excitatory and inhibitory in
 | Gap junction, Eq. (12.6) | none | Bidirectional coupling, synchrony | Rectification |
 | Tsodyks–Markram (Definition 12.5.2) | $u, x$ | Facilitation, depression | Slow forms (PTP), postsynaptic effects |
 
-- In the Tsodyks–Markram model, $U$, $\tau_{\mathrm{d}}$ and $\tau_{\mathrm{f}}$ determine whether a synapse depresses or facilitates; the paired-pulse ratio is Eq. (12.8) and the steady state Eq. (12.9).
+- In the Tsodyks–Markram model, $U$, $\tau_{\mathrm{d}}$ and $\tau_{\mathrm{f}}$ determine whether a synapse depresses or facilitates; the **paired-pulse ratio** is Eq. (12.8) and the steady state Eq. (12.9).
 - Depressing synapses saturate at a transmitted rate $1/\tau_{\mathrm{d}}$ (Proposition 12.5.1) and therefore signal relative changes of rate (gain control); facilitating synapses act as band-pass filters.
 - Gap junctions synchronize coupled neurons; synaptic conductances shorten the effective time constant (Eq. (12.11)) and narrow the window of temporal summation.
 
