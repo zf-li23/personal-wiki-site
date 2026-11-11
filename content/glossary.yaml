@@ -11639,8 +11639,8 @@ terms:
   - { zh: 苔藓纤维, en: mossy fiber, aliases: [mossy fibers, mossy fibre] }
   - { zh: 攀缘纤维, en: climbing fiber, aliases: [climbing fibers, climbing fibre] }
   - { zh: 基底神经节, en: basal ganglia, aliases: [基底核] }
-  - { zh: 直接通路, en: direct pathway, scope: ["7.14"] }
-  - { zh: 间接通路, en: indirect pathway, scope: ["7.14"] }
+  - { zh: 直接通路, en: direct pathway, scope: ["7.14", "7.16"] }
+  - { zh: 间接通路, en: indirect pathway, scope: ["7.14", "7.16"] }
   - { zh: 群体向量, en: population vector }
   - { zh: Parkinson 病, en: "Parkinson's disease", aliases: [帕金森病] }
   - { zh: Huntington 病, en: "Huntington's disease", aliases: [亨廷顿病] }
@@ -12186,3 +12186,49 @@ terms:
   - { zh: 证据累积, en: evidence accumulation }
   - { zh: 前景理论, en: prospect theory }
   - { zh: 决策置信度, en: decision confidence }
+  - { zh: 生成模型, en: generative model, aliases: [generative models], scope: ["7.16"] }
+  - { zh: 识别模型, en: recognition model }
+  - { zh: Helmholtz 机, en: Helmholtz machine }
+  - { zh: 醒–睡算法, en: wake–sleep algorithm, aliases: [wake-sleep algorithm] }
+  - { zh: 自编码器, en: autoencoder, aliases: [autoencoders, 自动编码器] }
+  - { zh: 变分自编码器, en: variational autoencoder, aliases: [VAE, VAEs] }
+  - { zh: β-VAE, en: β-VAE, aliases: [beta-VAE] }
+  - { zh: 解缠表示, en: disentangled representation, aliases: [disentangled representations, 解耦表示] }
+  - { zh: 预测编码, en: predictive coding }
+  - { zh: 对比学习, en: contrastive learning }
+  - { zh: 联合嵌入预测架构, en: joint-embedding predictive architecture, aliases: [JEPA] }
+  - { zh: 结构连接, en: structural connectivity }
+  - { zh: 功能连接, en: functional connectivity }
+  - { zh: 默认模式网络, en: default mode network, aliases: [DMN, 默认网络] }
+  - { zh: 内禀时间尺度, en: intrinsic time scale, aliases: [intrinsic timescale] }
+  - { zh: 神经雪崩, en: neuronal avalanche, aliases: [neuronal avalanches] }
+  - { zh: 分支比, en: branching ratio }
+  - { zh: 临界性, en: criticality, scope: ["7.16"] }
+  - { zh: 双通路模型, en: dual-stream model }
+  - { zh: 编码模型, en: encoding model, aliases: [encoding models], scope: ["7.16"] }
+  - { zh: 意识的神经相关物, en: neural correlates of consciousness, aliases: [NCC] }
+  - { zh: 全局神经工作空间理论, en: global neuronal workspace theory, aliases: [global workspace theory, GNW] }
+  - { zh: 整合信息理论, en: integrated information theory, aliases: [IIT] }
+  - { zh: 扰动复杂度指数, en: perturbational complexity index, aliases: [PCI] }
+  - { zh: 信用分配问题, en: credit assignment problem }
+  - { zh: 反馈对齐, en: feedback alignment }
+  - { zh: 脉冲神经网络, en: spiking neural network, aliases: [SNN, spiking neural networks] }
+  - { zh: 代理梯度, en: surrogate gradient, aliases: [surrogate gradients, 替代梯度] }
+  - { zh: 神经形态计算, en: neuromorphic computing }
+  - { zh: 忆阻器, en: memristor, aliases: [memristors] }
+  - { zh: Alzheimer 病, en: "Alzheimer's disease", aliases: [阿尔茨海默病] }
+  - { zh: 淀粉样蛋白假说, en: amyloid hypothesis, aliases: [amyloid cascade hypothesis, 淀粉样级联假说] }
+  - { zh: 朊病毒样传播, en: prion-like propagation }
+  - { zh: 易患性阈值模型, en: liability-threshold model, aliases: [threshold model] }
+  - { zh: 精神分裂症的多巴胺假说, en: dopamine hypothesis of schizophrenia }
+  - { zh: 孤独症谱系障碍, en: autism spectrum disorder, aliases: [autism, ASD, 自闭症] }
+  - { zh: Rett 综合征, en: Rett syndrome }
+  - { zh: 脆性 X 综合征, en: fragile X syndrome }
+  - { zh: 癫痫发作, en: seizure, aliases: [seizures], scope: ["7"] }
+  - { zh: 癫痫, en: epilepsy }
+  - { zh: 神经网, en: nerve net, aliases: [nerve nets] }
+  - { zh: 视蛋白, en: opsin, aliases: [opsins] }
+  - { zh: 纤毛型光感受器, en: ciliary photoreceptor, aliases: [ciliary photoreceptors] }
+  - { zh: 微绒毛型光感受器, en: rhabdomeric photoreceptor, aliases: [rhabdomeric photoreceptors] }
+  - { zh: 二色视觉, en: dichromacy }
+  - { zh: 四色视觉, en: tetrachromacy }
