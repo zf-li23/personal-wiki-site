@@ -623,8 +623,8 @@ describe('cross-page linking', () => {
     concepts.pop();
     assert.deepEqual(s.diag.items.filter((d) => /already defined/.test(d.message)), []);
     assert.ok(!s.html('7.15.24').includes('wiki-dfn'));
-    for (const g of ['FOXP3', 'Foxp3', 'IL23R', 'AIRE', 'lacZ', 'recA']) assert.ok(isGeneSymbol(g), g);
-    for (const w of ['NoSQL', 'OpenAPI', 'cis', 'Scrum', 'PD-L1', 'CTLA-4']) assert.ok(!isGeneSymbol(w), w);
+    for (const g of ['FOXP3', 'Foxp3', 'IL23R', 'lacZ', 'recA']) assert.ok(isGeneSymbol(g), g);
+    for (const w of ['NoSQL', 'OpenAPI', 'cis', 'Scrum', 'PD-L1', 'CTLA-4', 'NAND']) assert.ok(!isGeneSymbol(w), w);
   });
   it('matches a mixed-case single word (CaM, LINEs) only as written', async () => {
     concepts.push({ id: 'calmodulin', zh: '钙调蛋白', en: 'calmodulin', aliases: ['CaM'] });

@@ -133,14 +133,15 @@ function isAbbreviation(name: string): boolean {
 }
 
 /**
- * A gene symbol as written in italics: one token that contains a digit (*FOXP3*, *Foxp3*, *IL23R*),
- * is all capitals (*AIRE*), or is a lower-case word with a capital at the end (*lacZ*, *recA*).
+ * A gene symbol as written in italics: one token that contains a digit (*FOXP3*, *Foxp3*, *IL23R*)
+ * or is a lower-case word with a capital at the end (*lacZ*, *recA*). All-capital words without
+ * digits stay definition marks of their own concept (*NAND*); other abbreviations never are.
  * Official gene symbols have no hyphens, so hyphenated protein names (*PD-L1*, *CTLA-4*) are not,
  * nor are mixed-case names starting with a capital and without digits (*NoSQL*, *OpenAPI*).
  */
 export function isGeneSymbol(text: string): boolean {
   if (!/^[A-Za-z][A-Za-z0-9]*$/.test(text)) return false;
-  return /\d/.test(text) || /^[A-Z]{2,}$/.test(text) || /^[a-z]{2,}[A-Z]$/.test(text);
+  return /\d/.test(text) || /^[a-z]{2,}[A-Z]$/.test(text);
 }
 
 /** Concepts by name in one language (only those in scope for the page, when given). */
