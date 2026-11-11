@@ -12004,3 +12004,43 @@ terms:
   - { zh: jPCA, en: jPCA }
   - { zh: 盲源分离, en: blind source separation }
   - { zh: 独立成分分析, en: independent component analysis, aliases: [ICA] }
+  - { zh: 脉冲序列, en: spike train, aliases: [spike trains] }
+  - { zh: 发放率, en: firing rate, aliases: [firing rates], scope: ["7"] }
+  - { zh: 刺激后时间直方图, en: peri-stimulus time histogram, aliases: [PSTH] }
+  - { zh: 调谐曲线, en: tuning curve, aliases: [tuning curves] }
+  - { zh: 峰间间隔, en: interspike interval, aliases: [ISI, 脉冲间隔] }
+  - { zh: 变异系数, en: coefficient of variation, aliases: [C_V] }
+  - { zh: 脉冲触发平均, en: spike-triggered average, aliases: [STA] }
+  - { zh: 线性–非线性–Poisson 模型, en: linear–nonlinear–Poisson model, aliases: [LNP model, LNP 模型] }
+  - { zh: 率编码, en: rate code }
+  - { zh: 时间编码, en: temporal code }
+  - { zh: 相位编码, en: phase code }
+  - { zh: 群体编码, en: population code }
+  - { zh: 差分高斯, en: difference of Gaussians, aliases: [DoG, 高斯差分] }
+  - { zh: 方向选择性, en: direction selectivity }
+  - { zh: 星爆无长突细胞, en: starburst amacrine cell, aliases: [starburst amacrine cells] }
+  - { zh: Reichardt 检测器, en: Reichardt detector, aliases: [Hassenstein–Reichardt detector, Hassenstein–Reichardt 检测器] }
+  - { zh: 简单细胞, en: simple cell, aliases: [simple cells] }
+  - { zh: 复杂细胞, en: complex cell, aliases: [complex cells] }
+  - { zh: Gabor 滤波器, en: Gabor filter }
+  - { zh: 能量模型, en: energy model, scope: ["7.16"] }
+  - { zh: 方位柱, en: orientation column }
+  - { zh: 眼优势柱, en: ocular dominance column, aliases: [ocular dominance columns] }
+  - { zh: 方位图, en: orientation map }
+  - { zh: 风车中心, en: pinwheel, aliases: [pinwheels, 风车] }
+  - { zh: 面孔区, en: face patch, aliases: [face patches] }
+  - { zh: 表征相似性分析, en: representational similarity analysis, aliases: [RSA] }
+  - { zh: 高效编码假说, en: efficient coding hypothesis }
+  - { zh: 直方图均衡, en: histogram equalization }
+  - { zh: 白化, en: whitening }
+  - { zh: 稀疏编码, en: sparse coding }
+  - { zh: ephrin, en: ephrin, aliases: [ephrins, 肝配蛋白] }
+  - { zh: 弱视, en: amblyopia }
+  - { zh: 视网膜波, en: retinal wave, aliases: [retinal waves] }
+  - { zh: Hebb 规则, en: "Hebb's rule", aliases: [Hebb rule, Hebbian rule, 赫布规则] }
+  - { zh: 突触归一化, en: synaptic normalization }
+  - { zh: Oja 规则, en: "Oja's rule", aliases: [Oja rule] }
+  - { zh: 协方差规则, en: covariance rule }
+  - { zh: BCM 规则, en: BCM rule, aliases: [Bienenstock–Cooper–Munro rule] }
+  - { zh: 自组织映射, en: self-organizing map, aliases: [SOM, Kohonen map, Kohonen 映射] }
+  - { zh: 竞争学习, en: competitive learning }
