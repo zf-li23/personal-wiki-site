@@ -44,7 +44,7 @@ Sensory areas must follow rapidly changing input, while areas that integrate evi
 
 **Definition 49.2.1 (Intrinsic Time Scale)** The **intrinsic time scale** of a neuron or region is the decay time of the autocorrelation of its ongoing activity (spike counts in successive bins, or the field potential or BOLD signal), usually obtained by fitting $C(s) = A\,\mathrm{e}^{-s/\tau_{\mathrm{int}}} + B$ to the autocorrelation at lags $s$ during a baseline period.
 
-Murray and colleagues (2014) measured intrinsic time scales from the baseline activity of neurons recorded in different tasks in macaques and found that they increase along the anatomical hierarchy: from about $50$–$80\,\mathrm{ms}$ in early visual and somatosensory areas, through parietal areas, to about $200$–$350\,\mathrm{ms}$ in lateral and orbital prefrontal and anterior cingulate cortex. Human imaging shows the same ordering at longer scales: when subjects watch movies or listen to stories scrambled at different time scales, early auditory and visual areas respond reliably to segments of a fraction of a second, while the default mode network responds reliably only when paragraphs of tens of seconds are intact (temporal receptive windows; Hasson and colleagues, 2008).
+Murray and colleagues (2014) measured intrinsic time scales from the baseline activity of neurons recorded in different tasks in macaques and found that they increase along the anatomical hierarchy: from about $50$–$80\,\mathrm{ms}$ in early visual and somatosensory areas, through parietal areas, to about $200$–$350\,\mathrm{ms}$ in lateral and orbital prefrontal and anterior cingulate cortex. Human imaging shows the same ordering at longer scales: when subjects watch movies or listen to stories scrambled at different time scales, early auditory and visual areas respond reliably to segments of a fraction of a second, while the default mode network responds reliably only when paragraphs of tens of seconds are intact (temporal receptive windows; Hasson and colleagues, 2008; Lerner and colleagues, 2011).
 
 The mechanism in the model of Formula 49.1.1 is local recurrence. An isolated region with recurrent strength $w < 1$ obeys $\tau\dot x = -(1 - w)x + \xi$, so its time constant is
 $$
@@ -100,7 +100,7 @@ The acquisition of grammar has a **critical period** in the sense of [7.16.21](/
 
 Artificial language models ([Transformer](/4.7.6), [4.7.9](/4.7.9)) provide quantitative hypotheses about the representations of the language network. They are compared with brain recordings by encoding models.
 
-**Formula 49.4.1 (Encoding Model)** Let $\boldsymbol{y}_v \in \mathbb{R}^{\mathsf T}$ be the response of a voxel or electrode $v$ to $T$ words or sentences and $X \in \mathbb{R}^{T \times p}$ the activations of one layer of a language model for the same stimuli (convolved with the hemodynamic response function for fMRI). The encoding model is the ridge regression
+**Formula 49.4.1 (Encoding Model)** Let $\boldsymbol{y}_v \in \mathbb{R}^{T \times 1}$ be the response of a voxel or electrode $v$ to $T$ words or sentences and $X \in \mathbb{R}^{T \times p}$ the activations of one layer of a language model for the same stimuli (convolved with the hemodynamic response function for fMRI). The encoding model is the ridge regression
 $$
 \hat{\boldsymbol{\beta}}_v = (X^{\mathsf T}X + \alpha I)^{-1}X^{\mathsf T}\boldsymbol{y}_v, \tag{49.4}
 $$

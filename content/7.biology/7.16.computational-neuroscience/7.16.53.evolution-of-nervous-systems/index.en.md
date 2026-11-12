@@ -96,7 +96,7 @@ With one generation a year, fewer than half a million years suffice, a geologica
 
 ### 53.4.2. Trichromatic Vision in Primates
 
-Ancestral vertebrates had four classes of cone opsins, SWS1 (ultraviolet), SWS2 (blue), RH2 (green) and LWS (red), probably products of the two rounds of **whole-genome duplication** at the origin of vertebrates, and the rod opsin arose from a further duplication in jawed vertebrates. Many fishes, reptiles and birds retain all four and are tetrachromatic. During the long nocturnal phase of early mammalian evolution, two classes were lost, so that most mammals are dichromatic.
+Ancestral vertebrates had four classes of cone opsins, SWS1 (ultraviolet), SWS2 (blue), RH2 (green) and LWS (red), probably products of the two rounds of **whole-genome duplication** at the origin of vertebrates, and the rod opsin arose from a further duplication early in vertebrate evolution. Many fishes, reptiles and birds retain all four and are tetrachromatic. During the long nocturnal phase of early mammalian evolution, two classes were lost, so that most mammals are dichromatic.
 
 **Definition 53.4.3 (Dichromacy and Tetrachromacy)** An animal is **dichromatic** when its color vision rests on two classes of cones with different spectral sensitivities, so that any light can be matched by a mixture of two primaries, and **tetrachromatic** when it rests on four; **trichromacy** rests on three.
 
