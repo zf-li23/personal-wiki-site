@@ -10017,7 +10017,7 @@ terms:
   - { zh: 卫星病毒, en: satellite virus, aliases: [satellite viruses, 卫星 RNA] }
   - { zh: 病毒组, en: virome, aliases: [viromes] }
   - { zh: 病毒分流, en: viral shunt }
-  - { zh: 宿主范围, en: host range, scope: ["7"] }
+  - { zh: 宿主范围, en: host range, scope: ["7.4", "7.11"] }
   - { zh: 组织嗜性, en: tissue tropism, aliases: [tropism, 嗜性] }
   - { zh: 限制因子, en: restriction factor, aliases: [restriction factors, 宿主限制因子] }
   - { zh: 干扰素, en: interferon, aliases: [interferons, IFN] }
@@ -12930,3 +12930,38 @@ terms:
   - { zh: 增节变态, en: anamorphosis, scope: ["7.17"] }
   - { zh: 五界系统, en: five-kingdom system }
   - { zh: 条形码间隙, en: barcode gap, aliases: [DNA barcode gap] }
+  - { zh: 植食性, en: phytophagy, aliases: [phytophagous, 植食] }
+  - { zh: 潜道, en: leaf mine, aliases: [leaf mines] }
+  - { zh: 单食性, en: monophagous, aliases: [monophagy] }
+  - { zh: 寡食性, en: oligophagous, aliases: [oligophagy] }
+  - { zh: 多食性, en: polyphagous, aliases: [polyphagy], scope: ["7.17"] }
+  - { zh: 毒素隔离储存, en: sequestration, aliases: [隔离储存], scope: ["7.17"] }
+  - { zh: 访花专一性, en: flower constancy, aliases: [恒花性] }
+  - { zh: 榕–榕小蜂互利共生, en: fig–fig wasp mutualism, aliases: [fig-fig wasp mutualism] }
+  - { zh: 蚁栖植物, en: myrmecophyte, aliases: [myrmecophytes, ant-plants] }
+  - { zh: 虫室, en: domatium, aliases: [domatia] }
+  - { zh: 花外蜜腺, en: extrafloral nectary, aliases: [extrafloral nectaries] }
+  - { zh: 蚁播, en: myrmecochory }
+  - { zh: 油质体, en: elaiosome, aliases: [elaiosomes] }
+  - { zh: 虫瘿, en: insect gall, aliases: [zoocecidium] }
+  - { zh: 级型, en: caste, aliases: [castes], scope: ["7.17"] }
+  - { zh: 原始真社会性, en: primitively eusocial }
+  - { zh: 高等真社会性, en: advanced eusocial, aliases: [highly eusocial] }
+  - { zh: 蜂王浆, en: royal jelly, aliases: [王浆] }
+  - { zh: 超个体, en: superorganism, aliases: [superorganisms] }
+  - { zh: 摇摆舞, en: waggle dance, aliases: [8字舞] }
+  - { zh: 隐蔽, en: crypsis, aliases: [cryptic coloration] }
+  - { zh: 背景匹配, en: background matching }
+  - { zh: 干扰色, en: disruptive coloration }
+  - { zh: 反荫蔽, en: countershading }
+  - { zh: 拟物, en: masquerade }
+  - { zh: 机械性传播, en: mechanical transmission }
+  - { zh: 生物性传播, en: biological transmission }
+  - { zh: 媒介能力, en: vector competence }
+  - { zh: 法医昆虫学, en: forensic entomology }
+  - { zh: 经济损害水平, en: economic injury level, aliases: [EIL] }
+  - { zh: 经济阈值, en: economic threshold, aliases: [防治指标] }
+  - { zh: 杀虫剂抗性, en: insecticide resistance, scope: ["7.17"] }
+  - { zh: 生物防治, en: biological control, aliases: [biocontrol] }
+  - { zh: 有害生物综合治理, en: integrated pest management, aliases: [IPM, 综合防治] }
+  - { zh: 寄主范围, en: host range, scope: ["7.17"] }
