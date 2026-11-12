@@ -85,7 +85,7 @@ The properties of a connective tissue are determined mostly by its matrix. The f
 | Bone | Collagen mineralized with hydroxyapatite | Osteoblasts, osteocytes in lacunae, osteoclasts | Skeleton; calcium store ([7.14.36](/7.14.36)) |
 | Blood and lymph | Fluid plasma | Red and white blood cells, platelets | Transport, defense ([7.14.11](/7.14.11)) |
 
-Cartilage comes in three forms: hyaline cartilage, the most common, with fine collagen fibrils; elastic cartilage, with elastic fibers (external ear); and fibrocartilage, with dense collagen bundles (intervertebral discs). Bone is either compact, in which concentric lamellae surround central canals carrying blood vessels (the Haversian systems or osteons), or spongy, a lattice of trabeculae filled with marrow. The skeletal tissues and their development (**endochondral ossification** and **intramembranous ossification**, [7.5.24](/7.5.24)) are compared across the vertebrate classes in [7.17.55](/7.17.55) and [7.17.57](/7.17.57).
+Cartilage comes in three forms: hyaline cartilage, the most common, with fine collagen fibrils; elastic cartilage, with elastic fibers (external ear); and fibrocartilage, with dense collagen bundles (intervertebral discs). Bone is either compact, in which concentric lamellae surround central canals carrying blood vessels (the Haversian systems or osteons), or spongy, a lattice of trabeculae filled with marrow. The skeletal tissues and their development (**endochondral ossification** and **intramembranous ossification**, [7.5.24](/7.5.24)) are compared across the vertebrate classes in [7.17.56](/7.17.56) and [7.17.58](/7.17.58).
 
 ### 2.4.2. Connective Tissues of Invertebrates
 
@@ -129,15 +129,15 @@ The organ systems of animals and where they are treated on this site are summari
 
 | System | Main components | Comparative anatomy (vertebrates) | Physiology |
 |---|---|---|---|
-| Integumentary | Epidermis, dermis, glands, scales, feathers, hair | [7.17.56](/7.17.56) | [7.14.31](/7.14.31) (thermoregulation) |
-| Skeletal | Bone, cartilage; exoskeleton or hydrostatic skeleton in invertebrates | [7.17.57](/7.17.57)–[7.17.60](/7.17.60) | [7.14.36](/7.14.36) |
-| Muscular | Skeletal, cardiac and smooth muscle | [7.17.61](/7.17.61) | [7.14.8](/7.14.8)–[7.14.10](/7.14.10) |
-| Digestive | Gut and glands | [7.17.62](/7.17.62) | [7.14.26](/7.14.26)–[7.14.29](/7.14.29) |
-| Respiratory | Gills, lungs, tracheae | [7.17.63](/7.17.63) | [7.14.17](/7.14.17)–[7.14.20](/7.14.20) |
-| Circulatory | Heart, vessels, blood | [7.17.64](/7.17.64) | [7.14.11](/7.14.11)–[7.14.16](/7.14.16) |
-| Excretory and reproductive | Kidneys, gonads, ducts | [7.17.65](/7.17.65) | [7.14.21](/7.14.21)–[7.14.24](/7.14.24), [7.14.37](/7.14.37)–[7.14.38](/7.14.38) |
-| Nervous and endocrine | Brain, nerves, endocrine glands | [7.17.66](/7.17.66) | [7.14.32](/7.14.32)–[7.14.35](/7.14.35), [7.14.44](/7.14.44)–[7.14.46](/7.14.46) |
-| Sensory | Eyes, ears, chemoreceptors, lateral line | [7.17.67](/7.17.67) | [7.14.39](/7.14.39)–[7.14.43](/7.14.43) |
+| Integumentary | Epidermis, dermis, glands, scales, feathers, hair | [7.17.57](/7.17.57) | [7.14.31](/7.14.31) (thermoregulation) |
+| Skeletal | Bone, cartilage; exoskeleton or hydrostatic skeleton in invertebrates | [7.17.58](/7.17.58)–[7.17.61](/7.17.61) | [7.14.36](/7.14.36) |
+| Muscular | Skeletal, cardiac and smooth muscle | [7.17.62](/7.17.62) | [7.14.8](/7.14.8)–[7.14.10](/7.14.10) |
+| Digestive | Gut and glands | [7.17.63](/7.17.63) | [7.14.26](/7.14.26)–[7.14.29](/7.14.29) |
+| Respiratory | Gills, lungs, tracheae | [7.17.64](/7.17.64) | [7.14.17](/7.14.17)–[7.14.20](/7.14.20) |
+| Circulatory | Heart, vessels, blood | [7.17.65](/7.17.65) | [7.14.11](/7.14.11)–[7.14.16](/7.14.16) |
+| Excretory and reproductive | Kidneys, gonads, ducts | [7.17.66](/7.17.66) | [7.14.21](/7.14.21)–[7.14.24](/7.14.24), [7.14.37](/7.14.37)–[7.14.38](/7.14.38) |
+| Nervous and endocrine | Brain, nerves, endocrine glands | [7.17.67](/7.17.67) | [7.14.32](/7.14.32)–[7.14.35](/7.14.35), [7.14.44](/7.14.44)–[7.14.46](/7.14.46) |
+| Sensory | Eyes, ears, chemoreceptors, lateral line | [7.17.68](/7.17.68) | [7.14.39](/7.14.39)–[7.14.43](/7.14.43) |
 | Immune | Lymphoid organs and cells | — | [7.15](/7.15) |
 
 Organ systems are not independent. The coelom of annelids is at once a skeleton, a circulatory space and part of the excretory system; the vertebrate pharynx serves feeding in lancelets and respiration in fishes; the insect fat body combines the roles of liver and adipose tissue. Following such shifts of function through the phyla is one of the main tasks of comparative zoology.
@@ -155,7 +155,7 @@ Organ systems are not independent. The coelom of annelids is at once a skeleton,
 - The four basic tissues are **epithelial tissue** (Definition 2.3.1; sheets of polarized cells on a basal lamina), **connective tissue** (Definition 2.4.1; few cells in an abundant matrix, including cartilage, bone and blood), **muscle tissue** (Definition 2.5.1; skeletal, cardiac, smooth and obliquely striated) and **nervous tissue** (Definition 2.6.1; neurons and glia).
 - Invertebrate variants include the cuticle-secreting simple epidermis, syncytial teguments, the **mesoglea** of cnidarians and ctenophores (Definition 2.4.2), the mesohyl of sponges, the parenchyma of flatworms, cephalopod cartilage, echinoderm mutable collagenous tissue, and epitheliomuscular cells.
 - Grades of organization are levels, not clades: striated muscle, myelin and perhaps nervous systems evolved more than once, and simple bodies may be secondarily simplified.
-- Organ systems are compared across the vertebrate classes in 7.17.56–7.17.67 and their functions explained in 7.14.
+- Organ systems are compared across the vertebrate classes in 7.17.57–7.17.68 and their functions explained in 7.14.
 
 ## Questions
 

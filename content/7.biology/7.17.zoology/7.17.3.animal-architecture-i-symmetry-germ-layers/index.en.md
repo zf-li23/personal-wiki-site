@@ -111,7 +111,7 @@ A fluid-filled cavity between body wall and gut has several advantages, which ex
 - Transport and storage: coelomic fluid circulates nutrients, wastes and coelomocytes; in many small coelomates it serves as the circulatory medium.
 - Excretion and reproduction: the coelom opens to the outside through coelomoducts and is drained by metanephridia, which use it as the site of primary urine formation; gametes leave through the same ducts ([7.17.4](/7.17.4)).
 
-Different coelomic compartments can serve different functions in one animal. In vertebrates the coelom is divided into the pericardial, pleural and peritoneal cavities, which allow the heart and lungs to move freely ([7.17.62](/7.17.62)); in deuterostomes such as echinoderms and hemichordates the coelom is partitioned from front to back into three compartments (protocoel, mesocoel and metacoel), one of which forms the water-vascular system of echinoderms.
+Different coelomic compartments can serve different functions in one animal. In vertebrates the coelom is divided into the pericardial, pleural and peritoneal cavities, which allow the heart and lungs to move freely ([7.17.63](/7.17.63)); in deuterostomes such as echinoderms and hemichordates the coelom is partitioned from front to back into three compartments (protocoel, mesocoel and metacoel), one of which forms the water-vascular system of echinoderms.
 
 ## 3.5. Segmentation
 

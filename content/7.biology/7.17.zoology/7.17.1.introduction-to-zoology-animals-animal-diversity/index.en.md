@@ -77,13 +77,13 @@ Zoology can be divided by the kind of question asked or by the group of animals 
 
 | Branch | Questions | On this site |
 |---|---|---|
-| Morphology and anatomy | Form and structure of the body and its organs; comparative anatomy seeks homologies | This course (invertebrates by phylum; vertebrates in 7.17.55–7.17.67) |
+| Morphology and anatomy | Form and structure of the body and its organs; comparative anatomy seeks homologies | This course (invertebrates by phylum; vertebrates in 7.17.56–7.17.68) |
 | Histology and cell biology | Tissues and cells | [7.17.2](/7.17.2), [7.3](/7.3) |
 | Embryology and developmental biology | How the zygote becomes an adult | [7.17.5](/7.17.5), [7.5](/7.5) |
 | Physiology | How organs work: circulation, respiration, excretion, digestion, hormones, senses | [7.14](/7.14), [7.16](/7.16) |
 | Systematics and taxonomy | Naming, classifying and reconstructing phylogeny | This chapter, [7.17.6](/7.17.6), [7.10.2](/7.10.2) |
 | Evolutionary biology | How animal diversity arose | [7.10](/7.10) |
-| Ecology, ethology, zoogeography | Animals and their environment, behavior, geographic distribution | Adaptations in each chapter of this course; zoogeography in [7.17.68](/7.17.68) |
+| Ecology, ethology, zoogeography | Animals and their environment, behavior, geographic distribution | Adaptations in each chapter of this course; zoogeography in [7.17.69](/7.17.69) |
 
 By group, zoologists speak of protozoology (now part of protistology), helminthology (parasitic worms), malacology (molluscs), carcinology (crustaceans), arachnology, entomology, ichthyology, herpetology (amphibians and reptiles), ornithology and mammalogy. Applied zoology includes parasitology and medical entomology, the control of agricultural pests, fisheries and aquaculture, sericulture and apiculture, and the conservation of animals and their habitats.
 
@@ -168,9 +168,9 @@ Animals have no single morphological system comparable to the classical systems 
 | IV. Ecdysozoans and arthropods | [7.17.17](/7.17.17)–[7.17.21](/7.17.21) | Nematodes and their allies, the arthropod body plan, chelicerates, myriapods, crustaceans |
 | V. Entomology | [7.17.22](/7.17.22)–[7.17.40](/7.17.40) | Insect morphology, physiology, development, classification and biology |
 | VI. Deuterostomes | [7.17.41](/7.17.41)–[7.17.43](/7.17.43) | Hemichordates, echinoderms, invertebrate chordates |
-| VII. Vertebrate diversity | [7.17.44](/7.17.44)–[7.17.54](/7.17.54) | From jawless fishes to mammals |
-| VIII. Vertebrate comparative anatomy | [7.17.55](/7.17.55)–[7.17.67](/7.17.67) | The organ systems compared across the classes |
-| IX. Synthesis | [7.17.68](/7.17.68)–[7.17.69](/7.17.69) | Zoogeography and course summary |
+| VII. Vertebrate diversity | [7.17.45](/7.17.45)–[7.17.55](/7.17.55) | From jawless fishes to mammals |
+| VIII. Vertebrate comparative anatomy | [7.17.56](/7.17.56)–[7.17.68](/7.17.68) | The organ systems compared across the classes |
+| IX. Synthesis | [7.17.69](/7.17.69)–[7.17.70](/7.17.70) | Zoogeography and course summary |
 
 Insects receive a part of their own because they are by far the largest group of animals. Vertebrates are treated twice, first as groups and then system by system, because comparative anatomy needs all the classes at once. A reader interested in a single group can start from its place in [7.17.6](/7.17.6) and the body-plan concepts of [7.17.3](/7.17.3) and [7.17.4](/7.17.4).
 

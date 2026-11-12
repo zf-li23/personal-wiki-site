@@ -22,7 +22,7 @@ NEWICK = (
     "((Entoprocta,Cycliophora),Mollusca,(Annelida,Nemertea),(Bryozoa,(Phoronida,Brachiopoda))Lophophorata)Lophotrochozoa)Spiralia)Protostomia)Nephrozoa)Bilateria)"
     "Planulozoa)ParaHoxozoa)Myriazoa)Metazoa);")
 CH = {"Choanoflagellata": "", "Ctenophora": "8", "Porifera": "7", "Placozoa": "8", "Cnidaria": "9", "Xenacoelomorpha": "10",
-      "Echinodermata": "42", "Hemichordata": "41", "Cephalochordata": "43", "Urochordata": "43", "Vertebrata": "44–67",
+      "Echinodermata": "42", "Hemichordata": "41", "Cephalochordata": "43", "Urochordata": "43", "Vertebrata": "45–68",
       "Priapulida": "17", "Kinorhyncha": "17", "Loricifera": "17", "Nematoda": "17", "Nematomorpha": "17",
       "Tardigrada": "18", "Onychophora": "18", "Chelicerata": "19", "Myriapoda": "20", "Crustacea": "21",
       "Hexapoda": "22–40", "Chaetognatha": "12", "Gnathostomulida": "12", "Micrognathozoa": "12", "Rotifera": "12",
