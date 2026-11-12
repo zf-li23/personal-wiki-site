@@ -83,7 +83,7 @@ It is worth being clear about what is random here: the quantile $x_p$ is a fixed
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | $\mathbb{P}(K_p=k)$ | $0.000$ | $0.003$ | $0.016$ | $0.054$ | $0.121$ | $0.193$ | $0.226$ | $0.193$ | $0.121$ | $0.054$ | $0.016$ | $0.003$ | $0.000$ |
 
-Summing the middle entries from $k=2$ to $k=9$ gives $\mathbb{P}(X_{(3)}<\theta<X_{(10)})=0.9614$, the interval $(1,17)$ of Example 4.2.1, now obtained by counting three places in from each end of the sorted data.
+Summing the entries from $k=3$ to $k=9$ gives $\mathbb{P}(X_{(3)}<\theta<X_{(10)})=0.9614$, the interval $(1,17)$ of Example 4.2.1, now obtained by counting three places in from each end of the sorted data.
 
 :::
 

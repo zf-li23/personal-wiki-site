@@ -46,7 +46,7 @@ $$
 with exact coverage $\mathbb{P}(6\le S\le14)=1-2\times0.0207=0.959$. The interval excludes $9$, in agreement with the test.
 :::
 
-The duality between the test and the interval can also be read from the binomial side. The interval consists of the values $\theta_0$ for which the observed count below $\theta_0$ is compatible with $p=1/2$. If $14$ observations lie below $\theta_0$, the exact $95\%$ interval for $p$ is $(0.457,\,0.881)$, which contains $0.5$; if $15$ do, it is $(0.508,\,0.913)$, which does not; by symmetry $6$ is accepted and $5$ rejected. So $\theta_0$ is accepted exactly when between $6$ and $14$ observations lie below it, that is, when $x_{(6)}<\theta_0\le x_{(15)}$. Note that the upper end point is the $15$th order statistic, not the $14$th: the number $14$ is a count of observations, and $14$ observations lie below every $\theta_0$ in $(x_{(14)},x_{(15)}]$. The interval $[x_{(6)},x_{(14)}]=[6.6,\,8.4]$ would have coverage only $\mathbb{P}(6\le S\le13)=0.922$.
+The duality between the test and the interval can also be read from the binomial side. The interval consists of the values $\theta_0$ for which the observed count below $\theta_0$ is compatible with $p=1/2$. If $14$ observations lie below $\theta_0$, the exact $95\%$ interval for $p$ is $(0.457,\,0.881)$, which contains $0.5$; if $15$ do, it is $(0.509,\,0.913)$, which does not; by symmetry $6$ is accepted and $5$ rejected. So $\theta_0$ is accepted exactly when between $6$ and $14$ observations lie below it, that is, when $x_{(6)}<\theta_0\le x_{(15)}$. Note that the upper end point is the $15$th order statistic, not the $14$th: the number $14$ is a count of observations, and $14$ observations lie below every $\theta_0$ in $(x_{(14)},x_{(15)}]$. The interval $[x_{(6)},x_{(14)}]=[6.6,\,8.4]$ would have coverage only $\mathbb{P}(6\le S\le13)=0.922$.
 
 ## 7.2. Quantile Tests
 
@@ -423,7 +423,7 @@ Hence the rotated distances are $D_n^{+(c)}=\sup G-G(c)$ and $D_n^{-(c)}=G(c)-\i
 $$
 D_n^+=\max(0.5-0.222,\ 1-0.278)=0.722,\qquad D_n^-=\max(0.222-0,\ 0.278-0.5)=0.222 .
 $$
-Starting from $180^\circ$, $U_{(1)}=0.722$, $U_{(2)}=0.778$, and the values swap: $D_n^+=0.222$, $D_n^-=0.722$. Starting from $90^\circ$ ($U_{(1)}=0.472$, $U_{(2)}=0.528$), $D_n^+=D_n^-=0.472$. In every case $V_n=0.944$, while $D_n$ is $0.722$, $0.722$ and $0.472$.
+Starting from $180^\circ$, $U_{(1)}=0.722$, $U_{(2)}=0.778$, and the values swap: $D_n^+=0.222$, $D_n^-=0.722$. Starting from $270^\circ$ ($U_{(1)}=0.472$, $U_{(2)}=0.528$), $D_n^+=D_n^-=0.472$. In every case $V_n=0.944$, while $D_n$ is $0.722$, $0.722$ and $0.472$.
 
 :::
 
