@@ -129,7 +129,7 @@ The symmetry required by the signed-rank test is often natural for paired data, 
 
 **Proof** (1) $D=X-Y\overset{d}{=}Y-X=-D$. (2) $X-\theta\overset{d}{=}\theta-X$ and $Y-\theta\overset{d}{=}\theta-Y$, and by independence $D=(X-\theta)-(Y-\theta)\overset{d}{=}(\theta-X)-(\theta-Y)=-D$. $\square$
 
-Case 1 is exactly the null hypothesis of no treatment effect in a randomized paired experiment: if the treatment does nothing, the two responses of a subject are interchangeable. Under the symmetric assumption the alternative of interest is usually a shift of the centre only. Whether symmetry is plausible is checked on the $d_i$ themselves, for example with a plot or by comparing the mean and the median of the differences.
+Case 1 is exactly the null hypothesis of no treatment effect in a randomized paired experiment: if the treatment does nothing, the two responses of a subject are interchangeable. Under the symmetry assumption the alternative of interest is usually a shift of the centre only. Whether symmetry is plausible is checked on the $d_i$ themselves, for example with a plot or by comparing the mean and the median of the differences.
 
 **Example 8.2.2 (Response to Digital Information, Continued)** The ordered differences and their signed ranks (midranks for the ties) are
 
