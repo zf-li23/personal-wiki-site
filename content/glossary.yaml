@@ -8181,7 +8181,7 @@ terms:
   - { zh: 神经嵴, en: neural crest }
   - { zh: 生长锥, en: growth cone, aliases: [growth cones] }
   - { zh: 基板, en: placode, aliases: [placodes, 外胚层基板] }
-  - { zh: 体节, en: somite, aliases: [somites], scope: ["7"] }
+  - { zh: 体节, en: somite, aliases: [somites] }
   - { zh: 前体节中胚层, en: presomitic mesoderm, aliases: [PSM] }
   - { zh: 时钟–波前模型, en: clock-and-wavefront model, aliases: [clock and wavefront model] }
   - { zh: 软骨内成骨, en: endochondral ossification }
@@ -8372,7 +8372,7 @@ terms:
   - { zh: 膜内成骨, en: intramembranous ossification }
   - { zh: 成骨细胞, en: osteoblast, aliases: [osteoblasts] }
   - { zh: 软骨细胞, en: chondrocyte, aliases: [chondrocytes] }
-  - { zh: 再分节, en: resegmentation }
+  - { zh: 再分节, en: resegmentation, aliases: [重分节] }
   - { zh: 生长板, en: growth plate, aliases: [骺板, epiphyseal plate] }
   - { zh: 破骨细胞, en: osteoclast, aliases: [osteoclasts] }
   - { zh: 锁骨颅骨发育不全, en: cleidocranial dysplasia }
@@ -9678,7 +9678,7 @@ terms:
   - { zh: 性状, en: character, aliases: [characters], scope: ["7"] }
   - { zh: 适应, en: adaptation, aliases: [adaptations, 适应性状] }
   - { zh: K 选择, en: K-selection, scope: ["7"] }
-  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12"] }
+  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12", "7.17"] }
   - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
   - { zh: 保留指数, en: retention index, scope: ["7"] }
   - { zh: 分离位点, en: segregating site, aliases: [segregating sites] }
@@ -9780,7 +9780,7 @@ terms:
   - { zh: 纯培养, en: pure culture }
   - { zh: 富集培养, en: enrichment culture }
   - { zh: 无菌技术, en: aseptic technique }
-  - { zh: 菌落, en: colony, scope: ["7"] }
+  - { zh: 菌落, en: colony, scope: ["7.11"] }
   - { zh: 革兰氏染色, en: Gram stain, aliases: [革兰染色, Gram staining] }
   - { zh: 革兰氏阳性菌, en: Gram-positive bacteria, aliases: [Gram-positive, 革兰氏阳性细菌] }
   - { zh: 革兰氏阴性菌, en: Gram-negative bacteria, aliases: [Gram-negative, 革兰氏阴性细菌] }
@@ -10649,7 +10649,7 @@ terms:
   - { zh: 叶鞘, en: leaf sheath, aliases: [leaf sheaths] }
   - { zh: 叶耳, en: auricle, aliases: [auricles], scope: ["7.12"] }
   - { zh: 叶脉, en: vein, aliases: [veins, leaf vein], scope: ["7.12", "7.13"] }
-  - { zh: 脉序, en: venation }
+  - { zh: 脉序, en: venation, scope: ["7.12", "7.13"] }
   - { zh: 单叶, en: simple leaf, aliases: [simple leaves] }
   - { zh: 叶镶嵌, en: leaf mosaic }
   - { zh: 异形叶性, en: heterophylly }
@@ -10670,7 +10670,7 @@ terms:
   - { zh: 植物组织培养, en: plant tissue culture, aliases: [组织培养, 微繁殖, micropropagation] }
   - { zh: 雄配子体, en: male gametophyte, aliases: [microgametophyte, male gametophytes, microgametophytes], scope: ["7"] }
   - { zh: 雌配子体, en: female gametophyte, aliases: [megagametophyte, female gametophytes, megagametophytes], scope: ["7"] }
-  - { zh: 多胚现象, en: polyembryony }
+  - { zh: 多胚现象, en: polyembryony, aliases: [多胚生殖] }
   - { zh: 简单多胚现象, en: simple polyembryony }
   - { zh: 裂生多胚现象, en: cleavage polyembryony }
   - { zh: 苞鳞, en: bract scale, aliases: [bract scales] }
@@ -11211,8 +11211,8 @@ terms:
   - { zh: 血型, en: blood group, aliases: [blood type] }
   - { zh: 渗出, en: diapedesis, aliases: [血细胞渗出, 白细胞渗出, extravasation], scope: ["7"] }
   - { zh: 炎症, en: inflammation }
-  - { zh: 开放式循环系统, en: open circulatory system }
-  - { zh: 封闭式循环系统, en: closed circulatory system }
+  - { zh: 开放式循环系统, en: open circulatory system, aliases: [开管式循环系统] }
+  - { zh: 封闭式循环系统, en: closed circulatory system, aliases: [闭管式循环系统] }
   - { zh: 体循环, en: systemic circulation, aliases: [大循环] }
   - { zh: 肺循环, en: pulmonary circulation, aliases: [小循环] }
   - { zh: 心动周期, en: cardiac cycle }
@@ -11432,7 +11432,7 @@ terms:
   - { zh: 口咽泵, en: buccal pump, aliases: [buccal pumping, 口腔泵] }
   - { zh: 副支气管, en: parabronchus, aliases: [parabronchi] }
   - { zh: 气管系统, en: tracheal system }
-  - { zh: 肺泡, en: alveolus, aliases: [alveoli, pulmonary alveolus], scope: ["7.14", "7.5"] }
+  - { zh: 肺泡, en: alveolus, aliases: [alveoli, pulmonary alveolus], scope: ["7.14", "7.5", "7.17"] }
   - { zh: 肺泡液清除, en: alveolar fluid clearance }
   - { zh: 肺泡相互依存, en: alveolar interdependence }
   - { zh: 肺水肿, en: pulmonary edema, aliases: [pulmonary oedema] }
@@ -12317,3 +12317,388 @@ terms:
   - { zh: 小脑自适应滤波器, en: cerebellar adaptive filter, aliases: [adaptive filter model] }
   - { zh: 神经积分器, en: neural integrator }
   - { zh: 线吸引子, en: line attractor, aliases: [line attractors] }
+  # biology: zoology (7.17); homonyms of terms in other disciplines are scoped to 7.17 or to its chapters
+  - { zh: 后生动物, en: Metazoa, aliases: [metazoans, 多细胞动物] }
+  - { zh: 无脊椎动物, en: invertebrates, aliases: [invertebrate] }
+  - { zh: 国际动物命名法规, en: International Code of Zoological Nomenclature, aliases: [ICZN, 《国际动物命名法规》] }
+  - { zh: 上皮组织, en: epithelial tissue, aliases: [epithelium, 上皮] }
+  - { zh: 结缔组织, en: connective tissue }
+  - { zh: 肌肉组织, en: muscle tissue }
+  - { zh: 神经组织, en: nervous tissue }
+  - { zh: 中胶层, en: mesoglea }
+  - { zh: 体制, en: body plan, aliases: [Bauplan] }
+  - { zh: 演化级, en: grade, aliases: [evolutionary grade] }
+  - { zh: 辐射对称, en: radial symmetry }
+  - { zh: 两侧对称, en: bilateral symmetry }
+  - { zh: 五辐射对称, en: pentaradial symmetry }
+  - { zh: 头化, en: cephalization }
+  - { zh: 二胚层动物, en: diploblasts, aliases: [diploblastic animals, diploblast] }
+  - { zh: 三胚层动物, en: triploblasts, aliases: [triploblastic animals, triploblast] }
+  - { zh: 体腔, en: coelom, aliases: [body cavity] }
+  - { zh: 真体腔, en: eucoelom, aliases: [true coelom] }
+  - { zh: 假体腔, en: pseudocoel, aliases: [pseudocoelom] }
+  - { zh: 无体腔动物, en: acoelomates, aliases: [acoelomate] }
+  - { zh: 血腔, en: hemocoel }
+  - { zh: 体区, en: tagma, aliases: [tagmata] }
+  - { zh: 焰细胞, en: flame cell, aliases: [flame cells, 焰茎球] }
+  - { zh: 后肾管, en: metanephridium, aliases: [metanephridia] }
+  - { zh: 马氏管, en: Malpighian tubule, aliases: [Malpighian tubules] }
+  - { zh: 消化循环腔, en: gastrovascular cavity, aliases: [gastrovascular cavities] }
+  - { zh: 完全消化道, en: complete digestive tract, aliases: [through gut] }
+  - { zh: 滤食, en: filter feeding, aliases: [suspension feeding] }
+  - { zh: 梯形神经系统, en: ladder-like nervous system, aliases: [orthogon] }
+  - { zh: 链状神经系统, en: ventral nerve cord, aliases: [ganglionated ventral nerve cord, 腹神经索] }
+  - { zh: 原口动物, en: Protostomia, aliases: [protostomes] }
+  - { zh: 后口动物, en: Deuterostomia, aliases: [deuterostomes] }
+  - { zh: 裂体腔法, en: schizocoely }
+  - { zh: 肠体腔法, en: enterocoely }
+  - { zh: 辐射卵裂, en: radial cleavage }
+  - { zh: 决定型卵裂, en: determinate cleavage, aliases: [mosaic cleavage] }
+  - { zh: 浮浪幼虫, en: planula, aliases: [planula larva, planulae] }
+  - { zh: 担轮幼虫, en: trochophore, aliases: [trochophore larva] }
+  - { zh: 面盘幼虫, en: veliger, aliases: [veliger larva] }
+  - { zh: 无节幼体, en: nauplius, aliases: [nauplius larva, nauplii] }
+  - { zh: 双羽幼虫, en: dipleurula, aliases: [dipleurula larva] }
+  - { zh: 间接发育, en: indirect development }
+  - { zh: 生物发生律, en: biogenetic law, aliases: [recapitulation theory, 重演律] }
+  - { zh: 领鞭毛虫, en: Choanoflagellata, aliases: [choanoflagellates] }
+  - { zh: 原生动物, en: Protozoa, aliases: [protozoans, 原生动物门] }
+  - { zh: 两侧对称动物, en: Bilateria, aliases: [bilaterians] }
+  - { zh: 蜕皮动物, en: Ecdysozoa, aliases: [ecdysozoans] }
+  - { zh: 螺旋动物, en: Spiralia, aliases: [spiralians] }
+  - { zh: 冠轮动物, en: Lophotrochozoa, aliases: [lophotrochozoans] }
+  - { zh: 原肠祖假说, en: gastraea hypothesis, aliases: [Gastraea theory] }
+  - { zh: 海绵动物, en: Porifera, aliases: [sponges, 多孔动物, 海绵动物门] }
+  - { zh: 领细胞, en: choanocyte, aliases: [choanocytes, collar cell] }
+  - { zh: 中质, en: mesohyl }
+  - { zh: 骨针, en: spicule, aliases: [spicules] }
+  - { zh: 水沟系, en: aquiferous system, aliases: [canal system] }
+  - { zh: 芽球, en: gemmule, aliases: [gemmules] }
+  - { zh: 两囊幼虫, en: amphiblastula, aliases: [amphiblastula larva] }
+  - { zh: 栉水母动物, en: Ctenophora, aliases: [ctenophores, comb jellies, 栉水母, 栉水母动物门] }
+  - { zh: 栉板, en: comb plate, aliases: [comb plates, ctene] }
+  - { zh: 黏细胞, en: colloblast, aliases: [colloblasts, lasso cell] }
+  - { zh: 扁盘动物, en: Placozoa, aliases: [placozoans, 扁盘动物门] }
+  - { zh: 刺胞动物, en: Cnidaria, aliases: [cnidarians, 刺胞动物门, 腔肠动物] }
+  - { zh: 刺细胞, en: cnidocyte, aliases: [cnidocytes, stinging cell] }
+  - { zh: 刺丝囊, en: cnida, aliases: [cnidae, nematocyst, nematocysts, 刺胞] }
+  - { zh: 水螅型, en: polyp, aliases: [polyps, 水螅体] }
+  - { zh: 水母型, en: medusa, aliases: [medusae, 水母体] }
+  - { zh: 黏孢子虫, en: Myxozoa, aliases: [myxozoans, myxosporeans] }
+  - { zh: 水螅纲, en: Hydrozoa, aliases: [hydrozoans] }
+  - { zh: 钵水母纲, en: Scyphozoa, aliases: [true jellyfish] }
+  - { zh: 立方水母纲, en: Cubozoa, aliases: [box jellyfish] }
+  - { zh: 珊瑚虫纲, en: Anthozoa, aliases: [anthozoans, 花虫纲] }
+  - { zh: 管水母, en: siphonophore, aliases: [siphonophores, Siphonophorae] }
+  - { zh: 异无腔动物, en: Xenacoelomorpha, aliases: [xenacoelomorphs, 异无腔动物门] }
+  - { zh: 肾管动物, en: Nephrozoa, aliases: [nephrozoans] }
+  - { zh: 扁形动物, en: Platyhelminthes, aliases: [flatworms, 扁形动物门] }
+  - { zh: 新皮类, en: Neodermata, aliases: [neodermatans] }
+  - { zh: 被盖, en: tegument, aliases: [neodermis] }
+  - { zh: 中间宿主, en: intermediate host, aliases: [中间寄主] }
+  - { zh: 终宿主, en: definitive host, aliases: [终寄主] }
+  - { zh: 毛蚴, en: miracidium, aliases: [miracidia] }
+  - { zh: 尾蚴, en: cercaria, aliases: [cercariae] }
+  - { zh: 囊蚴, en: metacercaria, aliases: [metacercariae] }
+  - { zh: 囊尾蚴, en: cysticercus, aliases: [cysticerci] }
+  - { zh: 头节, en: scolex, aliases: [scoleces] }
+  - { zh: 节片, en: proglottid, aliases: [proglottids] }
+  - { zh: 吸虫纲, en: Trematoda, aliases: [trematodes, flukes] }
+  - { zh: 绦虫纲, en: Cestoda, aliases: [cestodes, tapeworms] }
+  - { zh: 涡虫纲, en: Turbellaria, aliases: [turbellarians, planarians] }
+  - { zh: 腹毛动物, en: Gastrotricha, aliases: [gastrotrichs, 腹毛动物门] }
+  - { zh: 有颚动物, en: Gnathifera, aliases: [gnathiferans] }
+  - { zh: 轮虫, en: Rotifera, aliases: [rotifers, 轮虫动物门] }
+  - { zh: 咀嚼器, en: mastax }
+  - { zh: 棘头虫, en: Acanthocephala, aliases: [acanthocephalans, thorny-headed worms, 棘头动物] }
+  - { zh: 毛颚动物, en: Chaetognatha, aliases: [chaetognaths, arrow worms, 毛颚动物门] }
+  - { zh: 软体动物, en: Mollusca, aliases: [molluscs, mollusks, 软体动物门] }
+  - { zh: 外套膜, en: mantle, aliases: [pallium], scope: ["7.17"] }
+  - { zh: 外套腔, en: mantle cavity, aliases: [pallial cavity] }
+  - { zh: 齿舌, en: radula, aliases: [radulae] }
+  - { zh: 栉鳃, en: ctenidium, aliases: [ctenidia] }
+  - { zh: 无板纲, en: Aplacophora, aliases: [aplacophorans, 无板类] }
+  - { zh: 多板纲, en: Polyplacophora, aliases: [chitons] }
+  - { zh: 单板纲, en: Monoplacophora, aliases: [monoplacophorans] }
+  - { zh: 腹足纲, en: Gastropoda, aliases: [gastropods, snails] }
+  - { zh: 头足纲, en: Cephalopoda, aliases: [cephalopods] }
+  - { zh: 双壳纲, en: Bivalvia, aliases: [bivalves, 瓣鳃纲] }
+  - { zh: 掘足纲, en: Scaphopoda, aliases: [tusk shells, scaphopods] }
+  - { zh: 钩介幼虫, en: glochidium, aliases: [glochidia] }
+  - { zh: 环节动物, en: Annelida, aliases: [annelids, segmented worms, 环节动物门] }
+  - { zh: 疣足, en: parapodium, aliases: [parapodia] }
+  - { zh: 刚毛, en: chaeta, aliases: [chaetae], scope: ["7.17"] }
+  - { zh: 多毛纲, en: Polychaeta, aliases: [polychaetes] }
+  - { zh: 环带纲, en: Clitellata, aliases: [clitellates] }
+  - { zh: 寡毛类, en: Oligochaeta, aliases: [oligochaetes, earthworms] }
+  - { zh: 蛭纲, en: Hirudinea, aliases: [leeches] }
+  - { zh: 纽形动物, en: Nemertea, aliases: [nemerteans, ribbon worms, Nemertini, 纽形动物门] }
+  - { zh: 触手冠, en: lophophore, aliases: [lophophores] }
+  - { zh: 触手冠动物, en: Lophophorata, aliases: [lophophorates] }
+  - { zh: 苔藓动物, en: Bryozoa, aliases: [bryozoans, Ectoprocta, ectoprocts, moss animals, 外肛动物] }
+  - { zh: 腕足动物, en: Brachiopoda, aliases: [brachiopods, lamp shells, 腕足动物门] }
+  - { zh: 个虫, en: zooid, aliases: [zooids] }
+  - { zh: 内肛动物, en: Entoprocta, aliases: [entoprocts, Kamptozoa] }
+  - { zh: 环口动物, en: Cycliophora, aliases: [cycliophorans, 环口动物门] }
+  - { zh: 帚虫动物, en: Phoronida, aliases: [phoronids, horseshoe worms] }
+  - { zh: 线虫动物, en: Nematoda, aliases: [nematodes, roundworms, 线虫动物门, 线虫] }
+  - { zh: 动吻动物, en: Kinorhyncha, aliases: [kinorhynchs] }
+  - { zh: 铠甲动物, en: Loricifera, aliases: [loriciferans] }
+  - { zh: 曳鳃动物, en: Priapulida, aliases: [priapulids, penis worms] }
+  - { zh: 线形动物, en: Nematomorpha, aliases: [nematomorphs, horsehair worms] }
+  - { zh: 缓步动物, en: Tardigrada, aliases: [tardigrades, water bears, 缓步动物门] }
+  - { zh: 有爪动物, en: Onychophora, aliases: [onychophorans, velvet worms, 有爪动物门] }
+  - { zh: 节肢动物, en: Arthropoda, aliases: [arthropods, 节肢动物门] }
+  - { zh: 外骨骼, en: exoskeleton, aliases: [exoskeletons] }
+  - { zh: 双枝型附肢, en: biramous appendage, aliases: [biramous appendages] }
+  - { zh: 单枝型附肢, en: uniramous appendage, aliases: [uniramous appendages] }
+  - { zh: 复眼, en: compound eye, aliases: [compound eyes] }
+  - { zh: 小眼, en: ommatidium, aliases: [ommatidia] }
+  - { zh: 有颚类, en: Mandibulata, aliases: [mandibulates] }
+  - { zh: 泛甲壳动物, en: Pancrustacea, aliases: [pancrustaceans, Tetraconata] }
+  - { zh: 叶足动物, en: Lobopodia, aliases: [lobopodians] }
+  - { zh: 三叶虫, en: trilobite, aliases: [trilobites, Trilobita] }
+  - { zh: 螯肢动物, en: Chelicerata, aliases: [chelicerates, 螯肢动物亚门] }
+  - { zh: 螯肢, en: chelicera, aliases: [chelicerae] }
+  - { zh: 须肢, en: pedipalp, aliases: [pedipalps, palp], scope: ["7.17"] }
+  - { zh: 书肺, en: book lung, aliases: [book lungs] }
+  - { zh: 书鳃, en: book gill, aliases: [book gills] }
+  - { zh: 纺器, en: spinneret, aliases: [spinnerets] }
+  - { zh: 蛛形纲, en: Arachnida, aliases: [arachnids] }
+  - { zh: 肢口纲, en: Merostomata, aliases: [horseshoe crabs, Xiphosura] }
+  - { zh: 海蜘蛛, en: sea spiders, aliases: [Pycnogonida, pycnogonids] }
+  - { zh: 蜘蛛目, en: Araneae, aliases: [spiders] }
+  - { zh: 蝎目, en: Scorpiones, aliases: [scorpions] }
+  - { zh: 蜱螨亚纲, en: Acari, aliases: [mites and ticks, Acarina, 蜱螨类] }
+  - { zh: 多足动物, en: Myriapoda, aliases: [myriapods, 多足亚门] }
+  - { zh: 唇足纲, en: Chilopoda, aliases: [centipedes] }
+  - { zh: 倍足纲, en: Diplopoda, aliases: [millipedes] }
+  - { zh: 甲壳动物, en: Crustacea, aliases: [crustaceans, 甲壳亚门] }
+  - { zh: 头胸甲, en: carapace, aliases: [carapaces] }
+  - { zh: 软甲纲, en: Malacostraca, aliases: [malacostracans] }
+  - { zh: 十足目, en: Decapoda, aliases: [decapods] }
+  - { zh: 桡足亚纲, en: Copepoda, aliases: [copepods] }
+  - { zh: 蔓足亚纲, en: Cirripedia, aliases: [barnacles, cirripeds] }
+  - { zh: 鳃足纲, en: Branchiopoda, aliases: [branchiopods, 枝角类] }
+  - { zh: 等足目, en: Isopoda, aliases: [isopods, woodlice] }
+  - { zh: 端足目, en: Amphipoda, aliases: [amphipods] }
+  - { zh: 磷虾目, en: Euphausiacea, aliases: [krill, euphausiids] }
+  - { zh: 六足动物, en: Hexapoda, aliases: [hexapods, 六足亚门] }
+  - { zh: 昆虫, en: Insecta, aliases: [insects, 昆虫纲] }
+  - { zh: 内颚类, en: Entognatha, aliases: [entognathans] }
+  - { zh: 弹尾目, en: Collembola, aliases: [springtails] }
+  - { zh: 原尾目, en: Protura, aliases: [proturans, coneheads] }
+  - { zh: 双尾目, en: Diplura, aliases: [diplurans] }
+  - { zh: 骨化, en: sclerotization, aliases: [sclerotisation, tanning] }
+  - { zh: 蜕裂线, en: ecdysial line, aliases: [ecdysial suture, ecdysial cleavage line] }
+  - { zh: 柄节, en: scape }
+  - { zh: 鞭节, en: antennal flagellum, aliases: [flagellomeres], scope: ["7.17"] }
+  - { zh: 江氏器, en: "Johnston's organ", aliases: [Johnston organ] }
+  - { zh: 咀嚼式口器, en: chewing mouthparts, aliases: [mandibulate mouthparts, 咀嚼式] }
+  - { zh: 刺吸式口器, en: piercing-sucking mouthparts, aliases: [piercing-sucking mouthpart] }
+  - { zh: 虹吸式口器, en: siphoning mouthparts, aliases: [siphoning mouthpart] }
+  - { zh: 舐吸式口器, en: sponging mouthparts, aliases: [sponging mouthpart, lapping mouthparts] }
+  - { zh: 嚼吸式口器, en: chewing-lapping mouthparts, aliases: [chewing-lapping mouthpart] }
+  - { zh: 锉吸式口器, en: rasping-sucking mouthparts, aliases: [rasping-sucking mouthpart] }
+  - { zh: 鞘翅, en: elytron, aliases: [elytra] }
+  - { zh: 半鞘翅, en: hemelytron, aliases: [hemelytra] }
+  - { zh: 覆翅, en: tegmen, aliases: [tegmina] }
+  - { zh: 平衡棒, en: halter, aliases: [halteres, haltere] }
+  - { zh: 翅缰, en: frenulum, aliases: [frenulae] }
+  - { zh: 翅轭, en: jugum, aliases: [juga] }
+  - { zh: 产卵器, en: ovipositor, aliases: [ovipositors] }
+  - { zh: 尾须, en: cercus, aliases: [cerci] }
+  - { zh: 间接飞行肌, en: indirect flight muscle, aliases: [indirect flight muscles] }
+  - { zh: 拍合-急甩, en: clap-and-fling, aliases: [clap and fling, 拍合–急甩] }
+  - { zh: 前缘涡, en: leading-edge vortex, aliases: [leading edge vortex, LEV] }
+  - { zh: 气门, en: spiracle, aliases: [spiracles] }
+  - { zh: 微气管, en: tracheole, aliases: [tracheoles] }
+  - { zh: 物理鳃, en: physical gill, aliases: [physical gills, compressible gas gill] }
+  - { zh: 气盾, en: plastron, aliases: [plastrons] }
+  - { zh: 脂肪体, en: fat body, aliases: [fat bodies] }
+  - { zh: 围食膜, en: peritrophic membrane, aliases: [peritrophic matrix] }
+  - { zh: 背血管, en: dorsal vessel }
+  - { zh: 咽侧体, en: corpora allata, aliases: [corpus allatum] }
+  - { zh: 心侧体, en: corpora cardiaca, aliases: [corpus cardiacum] }
+  - { zh: 前胸腺, en: prothoracic gland, aliases: [prothoracic glands] }
+  - { zh: 卵巢管, en: ovariole, aliases: [ovarioles] }
+  - { zh: 感器, en: sensillum, aliases: [sensilla] }
+  - { zh: 弦音器, en: chordotonal organ, aliases: [chordotonal organs, scolopidium, scolopidia] }
+  - { zh: 鼓膜听器, en: tympanal organ, aliases: [tympanal organs, tympanum] }
+  - { zh: 联立像眼, en: apposition eye, aliases: [apposition compound eye] }
+  - { zh: 重叠像眼, en: superposition eye, aliases: [superposition compound eye] }
+  - { zh: 幼体生殖, en: paedogenesis, aliases: [pedogenesis, neotenic reproduction] }
+  - { zh: 精包, en: spermatophore, aliases: [spermatophores] }
+  - { zh: 受精囊, en: spermatheca, aliases: [spermathecae] }
+  - { zh: 胚带, en: germ band, aliases: [germband], scope: ["7.17"] }
+  - { zh: 龄期, en: instar, aliases: [instars, 龄] }
+  - { zh: Dyar 规则, en: "Dyar's rule", aliases: ["Dyar's law", Dyar rule] }
+  - { zh: 不完全变态, en: hemimetaboly, aliases: [incomplete metamorphosis, hemimetabolous development] }
+  - { zh: 完全变态, en: holometaboly, aliases: [complete metamorphosis, holometabolous development] }
+  - { zh: 若虫, en: nymph, aliases: [nymphs] }
+  - { zh: 稚虫, en: naiad, aliases: [naiads] }
+  - { zh: 蛹, en: pupa, aliases: [pupae] }
+  - { zh: 离蛹, en: exarate pupa, aliases: [exarate pupae] }
+  - { zh: 被蛹, en: obtect pupa, aliases: [obtect pupae] }
+  - { zh: 围蛹, en: coarctate pupa, aliases: [coarctate pupae] }
+  - { zh: 有效积温法则, en: degree-day rule, aliases: [thermal summation rule, effective accumulated temperature rule] }
+  - { zh: 发育起点温度, en: developmental threshold temperature, aliases: [lower developmental threshold] }
+  - { zh: 滞育, en: diapause }
+  - { zh: 临界光周期, en: critical photoperiod }
+  - { zh: 化性, en: voltinism }
+  - { zh: 迁飞, en: insect migration, aliases: [migratory flight] }
+  - { zh: 有翅亚纲, en: Pterygota, aliases: [pterygotes, winged insects] }
+  - { zh: 古翅类, en: Palaeoptera, aliases: [paleopterans] }
+  - { zh: 新翅类, en: Neoptera, aliases: [neopterans] }
+  - { zh: 多新翅类, en: Polyneoptera, aliases: [polyneopterans] }
+  - { zh: 副新翅类, en: Paraneoptera, aliases: [paraneopterans] }
+  - { zh: 全变态类, en: Holometabola, aliases: [Endopterygota, holometabolans, 内翅部] }
+  - { zh: 无翅亚纲, en: Apterygota, aliases: [apterygotes, wingless insects] }
+  - { zh: 石蛃目, en: Archaeognatha, aliases: [jumping bristletails, bristletails] }
+  - { zh: 衣鱼目, en: Zygentoma, aliases: [silverfish, firebrats] }
+  - { zh: 蜉蝣目, en: Ephemeroptera, aliases: [mayflies] }
+  - { zh: 蜻蜓目, en: Odonata, aliases: [dragonflies and damselflies, dragonflies, damselflies] }
+  - { zh: 襀翅目, en: Plecoptera, aliases: [stoneflies, 渍翅目] }
+  - { zh: 革翅目, en: Dermaptera, aliases: [earwigs] }
+  - { zh: 直翅目, en: Orthoptera, aliases: [grasshoppers, crickets, katydids, 蝗虫] }
+  - { zh: 竹节虫目, en: Phasmatodea, aliases: [stick insects, phasmids, walking sticks] }
+  - { zh: 螳螂目, en: Mantodea, aliases: [mantises, praying mantises] }
+  - { zh: 蜚蠊目, en: Blattodea, aliases: [cockroaches, termites, 蜚蠊] }
+  - { zh: 纺足目, en: Embioptera, aliases: [webspinners, embiids] }
+  - { zh: 缺翅目, en: Zoraptera, aliases: [angel insects, zorapterans] }
+  - { zh: 蛩蠊目, en: Grylloblattodea, aliases: [ice crawlers, rock crawlers] }
+  - { zh: 螳䗛目, en: Mantophasmatodea, aliases: [gladiators, heelwalkers] }
+  - { zh: 啮虫目, en: Psocodea, aliases: [Psocoptera, booklice, barklice, 虱目, lice, Phthiraptera] }
+  - { zh: 缨翅目, en: Thysanoptera, aliases: [thrips] }
+  - { zh: 半翅目, en: Hemiptera, aliases: [true bugs, 同翅目] }
+  - { zh: 广翅目, en: Megaloptera, aliases: [alderflies, dobsonflies] }
+  - { zh: 蛇蛉目, en: Raphidioptera, aliases: [snakeflies] }
+  - { zh: 脉翅目, en: Neuroptera, aliases: [lacewings, antlions] }
+  - { zh: 脉翅总目, en: Neuropterida, aliases: [neuropterids] }
+  - { zh: 鞘翅目, en: Coleoptera, aliases: [beetles] }
+  - { zh: 捻翅目, en: Strepsiptera, aliases: [twisted-wing parasites, strepsipterans] }
+  - { zh: 膜翅目, en: Hymenoptera, aliases: [sawflies, wasps, bees and ants] }
+  - { zh: 长翅目, en: Mecoptera, aliases: [scorpionflies, hangingflies] }
+  - { zh: 蚤目, en: Siphonaptera, aliases: [fleas] }
+  - { zh: 双翅目, en: Diptera, aliases: [true flies, flies] }
+  - { zh: 毛翅目, en: Trichoptera, aliases: [caddisflies] }
+  - { zh: 鳞翅目, en: Lepidoptera, aliases: [butterflies and moths, butterflies, moths] }
+  - { zh: 小翅蛾, en: Micropterigidae, aliases: [mandibulate archaic moths] }
+  - { zh: 拟寄生物, en: parasitoid, aliases: [parasitoids, 拟寄生者] }
+  - { zh: 步带动物, en: Ambulacraria, aliases: [ambulacrarians] }
+  - { zh: 半索动物, en: Hemichordata, aliases: [hemichordates, 半索动物门] }
+  - { zh: 肠鳃纲, en: Enteropneusta, aliases: [acorn worms] }
+  - { zh: 羽鳃纲, en: Pterobranchia, aliases: [pterobranchs] }
+  - { zh: 棘皮动物, en: Echinodermata, aliases: [echinoderms, 棘皮动物门] }
+  - { zh: 水管系统, en: water vascular system, aliases: [ambulacral system] }
+  - { zh: 管足, en: tube foot, aliases: [tube feet, podia] }
+  - { zh: 可变结缔组织, en: mutable collagenous tissue, aliases: [catch connective tissue] }
+  - { zh: 海百合纲, en: Crinoidea, aliases: [crinoids, sea lilies, feather stars] }
+  - { zh: 海星纲, en: Asteroidea, aliases: [sea stars, starfish] }
+  - { zh: 蛇尾纲, en: Ophiuroidea, aliases: [brittle stars, ophiuroids] }
+  - { zh: 海胆纲, en: Echinoidea, aliases: [sea urchins, echinoids] }
+  - { zh: 海参纲, en: Holothuroidea, aliases: [sea cucumbers, holothurians] }
+  - { zh: 脊索动物, en: Chordata, aliases: [chordates, 脊索动物门] }
+  - { zh: 脊索, en: notochord, aliases: [notochords] }
+  - { zh: 背神经管, en: dorsal hollow nerve cord, aliases: [dorsal nerve cord] }
+  - { zh: 咽鳃裂, en: pharyngeal slit, aliases: [pharyngeal slits, pharyngeal gill slits, pharyngeal clefts] }
+  - { zh: 内柱, en: endostyle }
+  - { zh: 头索动物, en: Cephalochordata, aliases: [cephalochordates, lancelets, amphioxus, 文昌鱼, 头索动物亚门] }
+  - { zh: 尾索动物, en: Tunicata, aliases: [tunicates, Urochordata, urochordates, 被囊动物, 尾索动物亚门] }
+  - { zh: 海鞘纲, en: Ascidiacea, aliases: [ascidians, sea squirts] }
+  - { zh: 樽海鞘纲, en: Thaliacea, aliases: [salps, thaliaceans] }
+  - { zh: 尾海鞘纲, en: Appendicularia, aliases: [larvaceans, appendicularians] }
+  - { zh: 嗅觉类, en: Olfactores, aliases: [olfactorians] }
+  - { zh: 脊椎动物, en: Vertebrata, aliases: [vertebrates, 脊椎动物亚门] }
+  - { zh: 圆口类, en: Cyclostomata, aliases: [cyclostomes, jawless fishes extant, 圆口纲] }
+  - { zh: 盲鳗, en: hagfish, aliases: [hagfishes, Myxini] }
+  - { zh: 七鳃鳗, en: lamprey, aliases: [lampreys, Petromyzontida] }
+  - { zh: 有颌类, en: Gnathostomata, aliases: [gnathostomes, jawed vertebrates] }
+  - { zh: 软骨鱼, en: Chondrichthyes, aliases: [chondrichthyans, cartilaginous fishes, 软骨鱼纲] }
+  - { zh: 盾鳞, en: placoid scale, aliases: [placoid scales, dermal denticle, dermal denticles] }
+  - { zh: 鳍脚, en: clasper, aliases: [claspers] }
+  - { zh: 板鳃亚纲, en: Elasmobranchii, aliases: [elasmobranchs, sharks and rays] }
+  - { zh: 全头亚纲, en: Holocephali, aliases: [holocephalans, chimaeras] }
+  - { zh: 硬骨鱼, en: Osteichthyes, aliases: [bony fishes, osteichthyans, 硬骨鱼纲] }
+  - { zh: 辐鳍鱼, en: Actinopterygii, aliases: [ray-finned fishes, actinopterygians, 辐鳍鱼类] }
+  - { zh: 真骨鱼, en: Teleostei, aliases: [teleosts, 真骨鱼类] }
+  - { zh: 鳔, en: swim bladder, aliases: [gas bladder, 鱼鳔] }
+  - { zh: 韦伯器, en: Weberian apparatus, aliases: [Weberian ossicles] }
+  - { zh: 肉鳍鱼, en: Sarcopterygii, aliases: [lobe-finned fishes, sarcopterygians, 肉鳍鱼类] }
+  - { zh: 四足动物, en: Tetrapoda, aliases: [tetrapods] }
+  - { zh: 四足形类, en: Tetrapodomorpha, aliases: [tetrapodomorphs, stem tetrapods] }
+  - { zh: 腔棘鱼, en: coelacanth, aliases: [coelacanths, Actinistia] }
+  - { zh: 肺鱼, en: lungfish, aliases: [lungfishes, Dipnoi] }
+  - { zh: 两栖类, en: Lissamphibia, aliases: [lissamphibians, amphibians, 两栖纲, 现代两栖类] }
+  - { zh: 无尾目, en: Anura, aliases: [frogs and toads, anurans, frogs] }
+  - { zh: 有尾目, en: Caudata, aliases: [salamanders, urodeles, Urodela] }
+  - { zh: 无足目, en: Gymnophiona, aliases: [caecilians, Apoda] }
+  - { zh: 羊膜动物, en: Amniota, aliases: [amniotes] }
+  - { zh: 羊膜卵, en: amniotic egg, aliases: [amniote egg, cleidoic egg] }
+  - { zh: 颞孔, en: temporal fenestra, aliases: [temporal fenestrae, temporal opening] }
+  - { zh: 合弓类, en: Synapsida, aliases: [synapsids] }
+  - { zh: 蜥形类, en: Sauropsida, aliases: [sauropsids] }
+  - { zh: 鳞龙类, en: Lepidosauromorpha, aliases: [lepidosauromorphs] }
+  - { zh: 有鳞目, en: Squamata, aliases: [squamates, lizards and snakes] }
+  - { zh: 龟鳖目, en: Testudines, aliases: [turtles, chelonians, Chelonia] }
+  - { zh: 主龙类, en: Archosauria, aliases: [archosaurs, archosauromorphs] }
+  - { zh: 恐龙, en: Dinosauria, aliases: [dinosaurs, 恐龙类] }
+  - { zh: 蜥臀目, en: Saurischia, aliases: [saurischians] }
+  - { zh: 鸟臀目, en: Ornithischia, aliases: [ornithischians] }
+  - { zh: 鸟类, en: Aves, aliases: [birds, 鸟纲] }
+  - { zh: 气质骨, en: pneumatic bone, aliases: [pneumatic bones, pneumatized bone] }
+  - { zh: 犬齿兽类, en: Cynodontia, aliases: [cynodonts] }
+  - { zh: 哺乳形类, en: Mammaliaformes, aliases: [mammaliaforms] }
+  - { zh: 哺乳动物, en: Mammalia, aliases: [mammals, 哺乳纲] }
+  - { zh: 单孔类, en: Monotremata, aliases: [monotremes, 单孔目] }
+  - { zh: 有袋类, en: Marsupialia, aliases: [marsupials, Metatheria] }
+  - { zh: 真兽类, en: Eutheria, aliases: [eutherians, placental mammals, Placentalia] }
+  - { zh: 齿式, en: dental formula, aliases: [dental formulae] }
+  - { zh: 系列同源, en: serial homology, aliases: [serial homologues] }
+  - { zh: 膜骨, en: dermal bone, aliases: [membrane bone, dermal bones] }
+  - { zh: 软骨骨, en: cartilage bone, aliases: [endochondral bone, replacement bone] }
+  - { zh: 科斯莫鳞, en: cosmoid scale, aliases: [cosmoid scales] }
+  - { zh: 硬鳞, en: ganoid scale, aliases: [ganoid scales, ganoine scale] }
+  - { zh: 圆鳞, en: cycloid scale, aliases: [cycloid scales] }
+  - { zh: 栉鳞, en: ctenoid scale, aliases: [ctenoid scales] }
+  - { zh: 软颅, en: chondrocranium }
+  - { zh: 咽颅, en: splanchnocranium, aliases: [visceral skeleton, viscerocranium] }
+  - { zh: 膜颅, en: dermatocranium, aliases: [dermatocrania] }
+  - { zh: 颌弓, en: mandibular arch }
+  - { zh: 舌弓, en: hyoid arch }
+  - { zh: 舌颌骨, en: hyomandibula, aliases: [hyomandibular] }
+  - { zh: 舌接型, en: hyostylic suspension, aliases: [hyostyly, hyostylic] }
+  - { zh: 自接型, en: autostylic suspension, aliases: [autostyly, autostylic] }
+  - { zh: 颅接型, en: amphistylic suspension, aliases: [amphistyly, amphistylic] }
+  - { zh: 次生腭, en: secondary palate }
+  - { zh: 枕髁, en: occipital condyle, aliases: [occipital condyles] }
+  - { zh: 头骨可动性, en: cranial kinesis, aliases: [skull kinesis] }
+  - { zh: 椎体, en: centrum, aliases: [vertebral centrum, centra] }
+  - { zh: 双凹型, en: amphicoelous, aliases: [amphicoely] }
+  - { zh: 前凹型, en: procoelous, aliases: [procoely] }
+  - { zh: 后凹型, en: opisthocoelous, aliases: [opisthocoely] }
+  - { zh: 异凹型, en: heterocoelous, aliases: [heterocoely] }
+  - { zh: 肩带, en: pectoral girdle, aliases: [shoulder girdle] }
+  - { zh: 腰带, en: pelvic girdle, aliases: [hip girdle] }
+  - { zh: 轴上肌, en: epaxial muscle, aliases: [epaxial muscles, epaxial musculature] }
+  - { zh: 轴下肌, en: hypaxial muscle, aliases: [hypaxial muscles, hypaxial musculature] }
+  - { zh: 鳃节肌, en: branchiomeric muscle, aliases: [branchiomeric muscles, branchial muscles] }
+  - { zh: 槽生齿, en: thecodont, aliases: [thecodont teeth, thecodonty] }
+  - { zh: 二出齿, en: diphyodont, aliases: [diphyodonty] }
+  - { zh: 反刍胃, en: ruminant stomach, aliases: [ruminant stomachs] }
+  - { zh: 动脉弓, en: aortic arch, aliases: [aortic arches, arterial arches] }
+  - { zh: 脑神经, en: cranial nerve, aliases: [cranial nerves] }
+  - { zh: 体节, en: segment, aliases: [segments, metamere], scope: ["7.17.3", "7.17.15", "7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 分节, en: segmentation, aliases: [metamerism, 分节现象], scope: ["7.17"] }
+  - { zh: 原肾管, en: protonephridium, aliases: [protonephridia], scope: ["7.17.1", "7.17.2", "7.17.3", "7.17.4", "7.17.5", "7.17.6", "7.17.7", "7.17.8", "7.17.9", "7.17.10", "7.17.11", "7.17.12", "7.17.13", "7.17.14", "7.17.15", "7.17.16", "7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40", "7.17.41", "7.17.42", "7.17.43"] }
+  - { zh: 世代交替, en: metagenesis, scope: ["7.17"] }
+  - { zh: 群体, en: colony, scope: ["7.17"] }
+  - { zh: 头冠, en: corona, aliases: [coronal cilia] }
+  - { zh: 扭转, en: torsion, scope: ["7.17"] }
+  - { zh: 色素细胞, en: chromatophore, aliases: [chromatophores], scope: ["7.17"] }
+  - { zh: 环带, en: clitellum, aliases: [clitella], scope: ["7.17"] }
+  - { zh: 表皮层, en: cuticle, aliases: [角质膜], scope: ["7.17"] }
+  - { zh: 梗节, en: pedicel, scope: ["7.17"] }
+  - { zh: 脉序, en: wing venation, aliases: [Comstock-Needham system], scope: ["7.17"] }
+  - { zh: 病媒, en: vector, aliases: [disease vector, vectors, 病媒昆虫], scope: ["7.17"] }
+  - { zh: 龙骨突, en: keel, aliases: [carina, sternal keel], scope: ["7.17"] }
