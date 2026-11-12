@@ -171,7 +171,7 @@ The best known case concerns antiarrhythmic drugs. Irregular heartbeats after a 
 
 **Definition 15.6.1 (Surrogate Paradox)** For a treatment $T$, a surrogate $S$ and an endpoint $Y$, the **surrogate paradox** (intermediate variable paradox) occurs when $\mathrm{ACE}(T \to S) > 0$ and $\mathrm{ACE}(S \to Y) > 0$, but $\mathrm{ACE}(T \to Y) < 0$.
 
-The paradox does not require a direct effect of $T$ on $Y$; it can arise when the units for which $T$ raises $S$ are not the units for which $S$ raises $Y$. In the second form of the name, it is an intermediate variable paradox, of the same nature as **Simpson's paradox**: an unobserved variable $U$ that modifies both effects can reverse the conclusion.
+The paradox does not require a direct effect of $T$ on $Y$; it can arise when the units for which $T$ raises $S$ are not the units for which $S$ raises $Y$. Under its other name, the intermediate variable paradox, it is of the same nature as **Simpson's paradox**: an unobserved variable $U$ that modifies both effects can reverse the conclusion.
 
 **Example 15.6.1** Suppose $T$ acts on $Y$ only through $S$, so that $Y_{s,t} = Y_s$ and $Y_t = Y_{S_t}$, with three groups of units:
 
