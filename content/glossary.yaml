@@ -12409,7 +12409,7 @@ terms:
   - { zh: 腹毛动物, en: Gastrotricha, aliases: [gastrotrichs, 腹毛动物门] }
   - { zh: 有颚动物, en: Gnathifera, aliases: [gnathiferans] }
   - { zh: 轮虫, en: Rotifera, aliases: [rotifers, 轮虫动物门] }
-  - { zh: 咀嚼器, en: mastax }
+  - { zh: 咀嚼囊, en: mastax }
   - { zh: 棘头虫, en: Acanthocephala, aliases: [acanthocephalans, thorny-headed worms, 棘头动物] }
   - { zh: 毛颚动物, en: Chaetognatha, aliases: [chaetognaths, arrow worms, 毛颚动物门] }
   - { zh: 软体动物, en: Mollusca, aliases: [molluscs, mollusks, 软体动物门] }
@@ -12477,7 +12477,7 @@ terms:
   - { zh: 头胸甲, en: carapace, aliases: [carapaces] }
   - { zh: 软甲纲, en: Malacostraca, aliases: [malacostracans] }
   - { zh: 十足目, en: Decapoda, aliases: [decapods] }
-  - { zh: 桡足亚纲, en: Copepoda, aliases: [copepods] }
+  - { zh: 桡足纲, en: Copepoda, aliases: [copepods, 桡足亚纲] }
   - { zh: 蔓足亚纲, en: Cirripedia, aliases: [barnacles, cirripeds] }
   - { zh: 鳃足纲, en: Branchiopoda, aliases: [branchiopods, 枝角类] }
   - { zh: 等足目, en: Isopoda, aliases: [isopods, woodlice] }
@@ -12693,7 +12693,7 @@ terms:
   - { zh: 原肾管, en: protonephridium, aliases: [protonephridia], scope: ["7.17.1", "7.17.2", "7.17.3", "7.17.4", "7.17.5", "7.17.6", "7.17.7", "7.17.8", "7.17.9", "7.17.10", "7.17.11", "7.17.12", "7.17.13", "7.17.14", "7.17.15", "7.17.16", "7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40", "7.17.41", "7.17.42", "7.17.43"] }
   - { zh: 世代交替, en: metagenesis, scope: ["7.17"] }
   - { zh: 群体, en: colony, scope: ["7.17"] }
-  - { zh: 头冠, en: corona, aliases: [coronal cilia] }
+  - { zh: 头冠, en: corona, aliases: [coronal cilia, 纤毛冠, 轮盘, trochal disc] }
   - { zh: 扭转, en: torsion, scope: ["7.17"] }
   - { zh: 色素细胞, en: chromatophore, aliases: [chromatophores], scope: ["7.17"] }
   - { zh: 环带, en: clitellum, aliases: [clitella], scope: ["7.17"] }
@@ -12729,7 +12729,7 @@ terms:
   - { zh: 异态交替, en: heterogony, scope: ["7.17"] }
   - { zh: 中央管系统, en: Haversian system, aliases: [osteon, 骨单位] }
   - { zh: 斜纹肌, en: obliquely striated muscle }
-  - { zh: 上皮肌细胞, en: epitheliomuscular cell, aliases: [epitheliomuscular cells] }
+  - { zh: 上皮肌细胞, en: epitheliomuscular cell, aliases: [epitheliomuscular cells, 皮肌细胞, 上皮肌肉细胞] }
   - { zh: 上表皮, en: epicuticle, scope: ["7.17"] }
   - { zh: 外表皮, en: exocuticle, scope: ["7.17"] }
   - { zh: 内表皮, en: endocuticle, scope: ["7.17"] }
@@ -12782,3 +12782,89 @@ terms:
   - { zh: 咽下神经节, en: subesophageal ganglion, aliases: [食道下神经节] }
   - { zh: 体壁, en: integument, scope: ["7.17"] }
   - { zh: 原表皮, en: procuticle, scope: ["7.17"] }
+  - { zh: 扁细胞, en: pinacocyte, aliases: [pinacocytes] }
+  - { zh: 海绵丝, en: spongin, aliases: [海绵质纤维, spongin fibres] }
+  - { zh: 钙质海绵纲, en: Calcarea, aliases: [calcareous sponges] }
+  - { zh: 六放海绵纲, en: Hexactinellida, aliases: [glass sponges, hexactinellids] }
+  - { zh: 寻常海绵纲, en: Demospongiae, aliases: [demosponges] }
+  - { zh: 同骨海绵纲, en: Homoscleromorpha, aliases: [homoscleromorphs] }
+  - { zh: 实胚幼虫, en: parenchymella, aliases: [parenchymula, parenchymella larva] }
+  - { zh: 间细胞, en: interstitial cell, aliases: [i-cell, i-cells, interstitial cells], scope: ["7.17"] }
+  - { zh: 触手囊, en: rhopalium, aliases: [rhopalia] }
+  - { zh: 钵口幼体, en: scyphistoma, aliases: [scyphistomae, 螅状幼体] }
+  - { zh: 横裂体, en: strobila, aliases: [strobilation, 横裂生殖], scope: ["7.17.9"] }
+  - { zh: 链体, en: strobila, scope: ["7.17.11"] }
+  - { zh: 碟状幼体, en: ephyra, aliases: [ephyrae] }
+  - { zh: 口道, en: actinopharynx, aliases: [stomodeum], scope: ["7.17"] }
+  - { zh: 隔膜, en: mesentery, aliases: [mesenteries], scope: ["7.17.9"] }
+  - { zh: 八放珊瑚亚纲, en: Octocorallia, aliases: [octocorals] }
+  - { zh: 六放珊瑚亚纲, en: Hexacorallia, aliases: [hexacorals] }
+  - { zh: 十字水母纲, en: Staurozoa, aliases: [stalked jellyfish, stauromedusae] }
+  - { zh: 水母亚门, en: Medusozoa, aliases: [medusozoans] }
+  - { zh: 无腔类, en: Acoela, aliases: [acoels, 无肠目] }
+  - { zh: 纽皮类, en: Nemertodermatida, aliases: [nemertodermatids] }
+  - { zh: 卵黄腺, en: vitellarium, aliases: [vitellaria, yolk glands] }
+  - { zh: 单殖类, en: Monogenea, aliases: [monogeneans, 单殖亚纲] }
+  - { zh: 胞蚴, en: sporocyst, aliases: [sporocysts], scope: ["7.17"] }
+  - { zh: 雷蚴, en: redia, aliases: [rediae] }
+  - { zh: 六钩蚴, en: oncosphere, aliases: [hexacanth] }
+  - { zh: 棘球蚴, en: hydatid cyst, aliases: [hydatid cysts] }
+  - { zh: 咀嚼器, en: trophi }
+  - { zh: 蛭态类, en: Bdelloidea, aliases: [bdelloid rotifers, bdelloids, 蛭态目, 蛭形轮虫] }
+  - { zh: 单巢类, en: Monogononta, aliases: [monogononts, 单巢纲] }
+  - { zh: 周期性孤雌生殖, en: cyclical parthenogenesis }
+  - { zh: 混交雌体, en: mictic female, aliases: [mictic females] }
+  - { zh: 非混交雌体, en: amictic female, aliases: [amictic females] }
+  - { zh: 隐生, en: cryptobiosis, aliases: [anhydrobiosis, 失水蛰伏] }
+  - { zh: 宿主操纵, en: host manipulation, aliases: [parasite manipulation] }
+  - { zh: 袋形动物, en: Aschelminthes, aliases: [pseudocoelomates] }
+  - { zh: 原细胞, en: archaeocyte, aliases: [archaeocytes, 原始细胞], scope: ["7.17"] }
+  - { zh: 实质, en: parenchyma, scope: ["7.17"] }
+  - { zh: 环神经动物, en: Cycloneuralia }
+  - { zh: 细胞数恒定, en: eutely, aliases: [cell constancy] }
+  - { zh: 头感器, en: amphid, aliases: [amphids], scope: ["7.17"] }
+  - { zh: 持久型幼虫, en: dauer larva, aliases: [dauer] }
+  - { zh: 微丝蚴, en: microfilaria, aliases: [microfilariae] }
+  - { zh: 原肢, en: protopod, aliases: [protopodite, sympod], scope: ["7.17"] }
+  - { zh: 内肢, en: endopod, aliases: [endopodite] }
+  - { zh: 外肢, en: exopod, aliases: [exopodite] }
+  - { zh: 颚基, en: gnathobase, aliases: [gnathobases] }
+  - { zh: 表皮内突, en: apodeme, aliases: [apodemes] }
+  - { zh: 前脑, en: protocerebrum, scope: ["7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 中脑, en: deutocerebrum, scope: ["7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 后脑, en: tritocerebrum, scope: ["7.17.17", "7.17.18", "7.17.19", "7.17.20", "7.17.21", "7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 闰节, en: intercalary segment }
+  - { zh: 真节肢动物, en: Euarthropoda }
+  - { zh: 真螯肢动物, en: Euchelicerata }
+  - { zh: 肺书类, en: Arachnopulmonata }
+  - { zh: 盲蛛目, en: Opiliones, aliases: [harvestmen, daddy longlegs] }
+  - { zh: 伪蝎目, en: Pseudoscorpiones, aliases: [pseudoscorpions, 拟蝎目] }
+  - { zh: 听毛, en: trichobothrium, aliases: [trichobothria] }
+  - { zh: 蛛丝蛋白, en: spidroin, aliases: [spidroins] }
+  - { zh: 筛器, en: cribellum }
+  - { zh: 综合纲, en: Symphyla, aliases: [symphylans] }
+  - { zh: 少足纲, en: Pauropoda, aliases: [pauropods, 蠋蜒纲] }
+  - { zh: 前殖类, en: Progoneata }
+  - { zh: 颚肢, en: forcipule, aliases: [forcipules, 毒颚] }
+  - { zh: 双体节, en: diplosegment, aliases: [diplosegments] }
+  - { zh: 颚唇, en: gnathochilarium }
+  - { zh: 寡甲类, en: Oligostraca }
+  - { zh: 多甲类, en: Multicrustacea }
+  - { zh: 异甲类, en: Allotriocarida }
+  - { zh: 介形纲, en: Ostracoda, aliases: [ostracods, seed shrimps] }
+  - { zh: 五口纲, en: Pentastomida, aliases: [tongue worms, 舌形动物] }
+  - { zh: 鞘甲纲, en: Thecostraca }
+  - { zh: 桨足纲, en: Remipedia, aliases: [remipedes] }
+  - { zh: 头虾纲, en: Cephalocarida, aliases: [cephalocarids] }
+  - { zh: 口足目, en: Stomatopoda, aliases: [mantis shrimps] }
+  - { zh: 囊虾总目, en: Peracarida, aliases: [peracarids] }
+  - { zh: Y 器, en: Y-organ, aliases: [Y-organs] }
+  - { zh: 窦腺, en: sinus gland }
+  - { zh: 蜕皮抑制激素, en: molt-inhibiting hormone }
+  - { zh: 溞状幼体, en: zoea, aliases: [zoeae] }
+  - { zh: 大眼幼体, en: megalopa }
+  - { zh: 腺介幼体, en: cypris larva, aliases: [cyprid] }
+  - { zh: 触角腺, en: antennal gland, aliases: [green gland, 绿腺] }
+  - { zh: 颚足, en: maxilliped, aliases: [maxillipeds], scope: ["7.17"] }
+  - { zh: 胃磨, en: gastric mill }
+  - { zh: 蟹形化, en: carcinization }
