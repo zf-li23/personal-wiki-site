@@ -8156,7 +8156,7 @@ terms:
   - { zh: 中胚层, en: mesoderm }
   - { zh: 内胚层, en: endoderm }
   - { zh: 汇聚伸展, en: convergent extension }
-  - { zh: 下包, en: epiboly }
+  - { zh: 下包, en: epiboly, aliases: [外包] }
   - { zh: 胚孔, en: blastopore }
   - { zh: 原条, en: primitive streak }
   - { zh: 突变论, en: catastrophe theory }
@@ -8292,7 +8292,7 @@ terms:
   - { zh: 骨针间质, en: skeletogenic mesenchyme, aliases: [primary mesenchyme, 初级间质] }
   - { zh: 双负门控, en: double-negative gate }
   - { zh: 内陷, en: invagination, scope: ["7"] }
-  - { zh: 内卷, en: involution, scope: ["7"] }
+  - { zh: 内卷, en: involution, aliases: [内转], scope: ["7"] }
   - { zh: 内移, en: ingression }
   - { zh: 分层, en: delamination, scope: ["7"] }
   - { zh: 瓶状细胞, en: bottle cell, aliases: [bottle cells] }
@@ -12923,3 +12923,10 @@ terms:
   - { zh: 运输代价, en: cost of transport }
   - { zh: 波动性不对称, en: fluctuating asymmetry }
   - { zh: 定向不对称, en: directional asymmetry }
+  - { zh: 休眠卵, en: resting egg, aliases: [resting eggs], scope: ["7.17"] }
+  - { zh: 卵黄生殖腺, en: germovitellarium, aliases: [germovitellaria] }
+  - { zh: 周期变形, en: cyclomorphosis }
+  - { zh: 棘头体, en: cystacanth, aliases: [cystacanths] }
+  - { zh: 增节变态, en: anamorphosis, scope: ["7.17"] }
+  - { zh: 五界系统, en: five-kingdom system }
+  - { zh: 条形码间隙, en: barcode gap, aliases: [DNA barcode gap] }
