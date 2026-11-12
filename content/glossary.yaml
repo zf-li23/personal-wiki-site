@@ -12203,7 +12203,7 @@ terms:
   - { zh: 内禀时间尺度, en: intrinsic time scale, aliases: [intrinsic timescale] }
   - { zh: 神经雪崩, en: neuronal avalanche, aliases: [neuronal avalanches] }
   - { zh: 分支比, en: branching ratio }
-  - { zh: 临界性, en: criticality, scope: ["7.16"] }
+  - { zh: 临界性, en: criticality, aliases: [critical, 临界], scope: ["7.16"] }
   - { zh: 双通路模型, en: dual-stream model }
   - { zh: 编码模型, en: encoding model, aliases: [encoding models], scope: ["7.16"] }
   - { zh: 意识的神经相关物, en: neural correlates of consciousness, aliases: [NCC] }
