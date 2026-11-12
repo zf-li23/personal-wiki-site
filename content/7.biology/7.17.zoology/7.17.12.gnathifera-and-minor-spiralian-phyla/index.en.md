@@ -170,7 +170,7 @@ The pseudocoel itself can be understood as a consequence of small size and of th
 
 - Gnathifera (Definition 12.1.1) are spiralians with homologous cuticular jaws: Gnathostomulida (interstitial, monociliated epidermis), Micrognathozoa (*Limnognathia*, the most complex jaws) and Rotifera with Acanthocephala; Chaetognatha are their sister group. Gnathifera is the sister group of all other spiralians.
 - Rotifers (Definition 12.2.1) have a syncytial epidermis with an intracytoplasmic lamina (often a lorica), a corona (Definition 12.2.2), a mastax with trophi (Definition 12.2.3) whose types reflect diet, a pseudocoel, protonephridia with a bladder, and often eutely.
-- Seisonidea (sexual), Bdelloidea (only parthenogenetic) and Monogononta (cyclical parthenogenesis). In monogononts, amictic females multiply asexually; density-dependent mixis (Eq. (12.1)) produces males and resting eggs near the population peak.
+- Seisonidea (sexual), Bdelloidea (only parthenogenetic) and Monogononta (*cyclical parthenogenesis*). In monogononts, amictic females multiply asexually; density-dependent mixis (Eq. (12.1)) produces males and resting eggs near the population peak.
 - Bdelloids are ancient asexuals with degenerate tetraploid genomes, extensive horizontal gene transfer and anhydrobiosis.
 - Acanthocephala (Definition 12.4.1) are gutless parasitic rotifers with a hooked proboscis, lemnisci, a uterine bell, and a two-host life cycle with arthropod intermediate hosts whose behaviour they manipulate.
 - Chaetognatha (Definition 12.5.1) are planktonic predators with chitinous grasping spines; their deuterostome-like embryology misled classification, and they are now related to Gnathifera.

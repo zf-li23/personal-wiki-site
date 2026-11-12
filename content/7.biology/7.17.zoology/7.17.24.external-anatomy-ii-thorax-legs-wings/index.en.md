@@ -13,6 +13,19 @@ The thorax consists of the prothorax, mesothorax and metathorax, each with a pai
 
 The prothorax has no wings and its tergum, the pronotum, is a simple plate of very variable shape: saddle-shaped and covering the sides of the prothorax in locusts, a broad shield covering the head in cockroaches, large and often with processes in beetles and in treehoppers (Membracidae), where it can extend back over the whole body. Paranotal lobes of the pronotum in some Palaeozoic insects are part of the evidence on wing origin ([7.17.25](/7.17.25)).
 
+The pronotum takes remarkable shapes in some groups. In pygmy grasshoppers (Tetrigidae) it extends back over the whole abdomen and replaces the reduced forewings as a protective cover. In treehoppers (Membracidae) it forms helmets that imitate thorns, ants, seeds or droppings; because the helmet develops from paired outgrowths with a hinge-like joint and expresses some wing genes, it was proposed to be a serial homologue of wings (Prud'homme and coauthors 2011), an interpretation that remains disputed. In mole crickets the pronotum is a hard, rounded shield that protects the head while the animal digs, and in many male scarab beetles it carries horns used in fights.
+
+The thorax of the migratory locust illustrates the generalized condition. The large, saddle-shaped pronotum, with a median keel, covers the dorsal surface of the prothorax and extends back over the meso- and metanota and the upper parts of their pleura; the propleuron is a small plate and the prosternum is narrow, without the prosternal process found in many other grasshoppers such as *Oxya*. The meso- and metathorax each carry a pair of wings and a pair of legs; their terga and sterna are divided into several sclerites, and each pleuron is divided by the pleural suture into an episternum and an epimeron.
+
+Insects differ in which thoracic segment carries the main flight muscles, which can be read from the relative sizes of the segments.
+
+| Flight mode | Dominant segment | Orders |
+|---|---|---|
+| Both pairs of wings beat independently and similarly | Meso- and metathorax similar | Odonata, Neuroptera, Megaloptera, termites |
+| Mainly the forewings, hindwings coupled or reduced (anteromotoric) | Mesothorax enlarged | Diptera, Hymenoptera, Lepidoptera, Hemiptera, Trichoptera |
+| Mainly the hindwings, forewings protective (posteromotoric) | Metathorax enlarged | Coleoptera, Dermaptera, Strepsiptera, Orthoptera, Blattodea, Mantodea |
+| Wingless | Segments small, often similar | Fleas, lice, worker ants (thorax with reduced pterothorax) |
+
 ### 24.1.2. The Notum of a Wing-Bearing Segment
 
 The tergum of a wing-bearing segment is divided into two plates. The anterior *alinotum* carries the wings and is subdivided by sulci into a narrow prescutum, a large scutum and a posterior scutellum. The scutellum of the mesothorax is the triangular plate visible between the bases of the forewings of true bugs and beetles; in shield bugs it can cover most of the abdomen. Behind the alinotum lies the *postnotum*, which is the enlarged acrotergite of the following segment (secondary segmentation, [7.17.23](/7.17.23)); internally it bears a plate, the phragma, on which the dorsal longitudinal flight muscles insert. The lateral margins of the alinotum form the anterior and posterior notal wing processes, on which the first and fourth axillary sclerites of the wing articulate.
@@ -27,6 +40,8 @@ The pleuron of each thoracic segment is a sclerotized plate between the notum an
 
 The sternum of each thoracic segment is often divided into a basisternum in front and a furcasternum behind, the latter bearing internally a forked apophysis, the furca, to which the leg muscles and the ventral longitudinal muscles attach; a small spinasternum between segments bears a median apophysis, the spina. In many insects the sternum is partly fused with the pleura, forming bridges in front of (precoxal) and behind (postcoxal) the coxae. The pleural ridges and furcae together make an internal skeleton of the thorax, the endoskeleton that braces the box against the pull of the flight muscles.
 
+The thoracic box must be both rigid and elastic. Its sclerites are rigid enough to transmit the force of the flight muscles to the wing hinge, yet the whole structure deforms slightly at each wingbeat and stores elastic energy in the notum and in resilin pads of the wing hinge. In flies a small clutch-like mechanism at the wing base allows the wingbeat amplitude to be adjusted while the thorax vibrates at a fixed frequency; these mechanisms are treated with the flight muscles in [7.17.25](/7.17.25).
+
 ## 24.2. Legs
 
 ### 24.2.1. Segments and Joints
@@ -39,9 +54,19 @@ The number of tarsomeres is constant within many groups and is written as a tars
 
 Insects attach to smooth surfaces with adhesive pads on the pretarsus or on the undersides of tarsomeres. *Smooth* pads, such as the arolium of cockroaches, bugs, bees and ants and the euplantulae of many Polyneoptera, are soft cuticle that conforms to the surface; *hairy* pads, such as the pulvilli of flies and the tarsal soles of beetles, carry thousands of tenent setae with flattened tips. Both secrete a thin film of fluid and work by capillary and van der Waals forces. Pads can be released by peeling, controlled by the direction of pull, which is why an insect can run upside down on glass without being stuck.
 
+How much an insect can hold depends on the pad area, which scales with the square of body length while weight scales with its cube. Comparative measurements across arthropods and lizards (Labonte and coauthors 2016) found that the fraction of body surface covered by adhesive pads rises steeply with body size, from a tiny fraction of the surface in mites to several percent in geckos, and that adhesion per unit pad area also increases in larger animals; there is therefore an upper size limit for climbing with pads. Small insects have large safety margins. The tortoise beetle *Hemisphaerota cyanea*, a leaf beetle of Florida, presses tens of thousands of oil-wetted bristle tips on its tarsi onto a leaf when attacked by ants, and resists pulls of dozens of times its own weight for minutes (Eisner and Aneshansley 2000).
+
 ### 24.2.2. Walking
 
 Insects walk with an *alternating tripod gait*: the fore- and hindleg of one side and the midleg of the other side move together, while the other three legs support the body. A tripod is a statically stable support, so slow insects can stop at any moment without falling. At high speeds the gait becomes dynamic and some cockroaches run on their hind legs alone at more than 1 m s⁻¹, about 50 body lengths per second. Coordination is largely decentralized: each leg has its own rhythm generator in the thoracic ganglia, coupled to its neighbours by sensory feedback from leg proprioceptors ([7.14.44](/7.14.44#sec-44.6.3)).
+
+The tripod gait is not universal. Slow-walking *Drosophila* and stick insects often use tetrapod or wave-like (metachronal) gaits, in which waves of stepping pass from the hind to the front legs and four or five legs are on the ground at once; the gait shifts towards the tripod as speed increases, a continuum rather than a set of discrete gaits. Insects that have lost a leg change their coordination within a few steps, which shows that the pattern emerges from local rules rather than from a fixed central program. Stick insects (*Carausius morosus*), studied by Holk Cruse and colleagues, provided the rules on which many walking robots are based.
+
+Water striders (Gerridae) walk on the water surface. Their long middle and hind legs are covered with dense microsetae carrying nanoscale grooves that trap air, so that the legs are strongly water-repellent and only dimple the surface. The middle legs row, transferring momentum to the water through capillary waves and small vortices shed behind each stroke (Hu, Chan and Bush 2003); the hind legs steer.
+
+**Example 24.2.1** Can surface tension support a water strider? A leg pressed into the surface is held up by the surface tension $\gamma$ acting along both sides of the line of contact, so the maximum force is about $F = 2\gamma L$, where $L$ is the total length of leg in contact. For water $\gamma = 0.072\,\mathrm{N\,m^{-1}}$; with $L \approx 3\,\mathrm{cm}$ for the four long legs, $F \approx 2 \times 0.072 \times 0.03 \approx 4.3 \times 10^{-3}\,\mathrm{N}$. A water strider of 10 mg weighs $mg \approx 10^{-4}\,\mathrm{N}$, so the legs could carry over forty times the body weight, consistent with measurements showing that a single leg can support about fifteen times the body weight (Gao and Jiang 2004). The same estimate shows why larger animals cannot walk on water: weight grows as $L^3$ and supporting force only as $L$, and an animal of a few grams would need legs several metres long.
+
+:::
 
 ### 24.2.3. Leg Types
 
@@ -60,9 +85,24 @@ The same six-article plan is modified for many functions:
 
 ![Insect leg types: one segmented ground plan (coxa, trochanter, femur, tibia, tarsus with one to five tarsomeres, pretarsal claws) modified for different functions. Top: the insect in lateral view with the specialized pair coloured; bottom: that leg enlarged, segments coloured as in the key. Cursorial (running) legs are slender and similar (cockroach); saltatorial hind legs have an enlarged femur housing the jumping muscle, with its herringbone pattern, and a long spiny tibia (grasshopper, three tarsomeres); raptorial forelegs have an elongate coxa and a spiny femur and tibia that close like a jack-knife (mantis); fossorial forelegs are broad, the tibia bearing strong dactyls (mole cricket); natatorial hind legs are flattened and fringed with long setae, beating as oars (diving beetle). Proportions are schematic.](./plots/leg-types.py)
 
+Each type can be followed in particular species, and the details show how the six articles are reapportioned.
+
+- *Raptorial legs* of mantises (in China, for example, *Tenodera sinensis* and *Hierodula patellifera*): the coxa is as long as the femur, which lifts the grasping part far forward; the femur carries two rows of spines on its lower surface, and the tibia, with its own spines and an apical hook, folds into the groove between them. The strike lasts a few tens of milliseconds and is aimed by binocular vision of the large eyes. Raptorial forelegs have evolved independently in mantispids (Neuroptera), in assassin and ambush bugs, in some flies (Empididae, Ephydridae) and in the extinct Titanoptera.
+- *Fossorial legs* of mole crickets (*Gryllotalpa orientalis*, a pest of seedlings in China): the fore tibia is broad, with four large dactyls like the fingers of a mole's hand, and the tarsus is folded away to the side; the animal digs by sweeping the earth sideways. Males sing from burrows shaped like an exponential horn that amplifies the call ([7.17.27](/7.17.27)). Cicada nymphs and dung beetles dig with similar forelegs, an example of convergence among orders.
+- *Natatorial legs* of diving beetles (Dytiscidae, such as *Cybister*): the hind legs are flattened, with fringes of long setae that spread on the power stroke and fold on the recovery stroke, and the two hind legs beat together like oars, whereas water scavenger beetles move them alternately. Backswimmers (Notonectidae) swim upside down with long, oar-like hind legs; water boatmen (Corixidae) use similar legs but swim right side up.
+- *Corbiculate legs* of worker honey bees: the outer face of the hind tibia is concave, smooth and fringed with long curved hairs (the corbicula); the inner face of the large basitarsus carries rows of stiff bristles (the pollen comb). Pollen combed from the body is transferred to the comb of the opposite leg, pressed through the gap between tibia and basitarsus by a press formed by the auricle and the rastellum, and squeezed up into the basket, where it is moistened with nectar and accumulates as a pellet.
+- *Clinging legs* of the human head louse (*Pediculus humanus capitis*): each leg ends in a single large claw that folds against a thumb-like process of the tibia, gripping a hair of a diameter close to that of the gap; the legs of lice from different hosts are adapted to the hair diameter of their hosts.
+- *Clasping legs*: in males of diving beetles of the genus *Dytiscus*, the first three tarsomeres of the foreleg form a round disc covered with hundreds of small suckers and a few large ones, which hold the smooth back of the female during mating under water.
+
+Fleas jump with a different design. They have no enlarged femur; the energy is stored in a pad of **resilin** in the thorax above the hind coxae, compressed by muscles and held by a catch, and released through the leg as a lever. High-speed films (Sutton and Burrows 2011) showed that fleas push off with the tibia and tarsus rather than with the trochanter, as had been suggested earlier; a cat flea of about 0.5 mg takes off at about 1.5–2 m s⁻¹ after accelerating at more than 100 g for about a millisecond.
+
 Legs have many other special functions: cleaning (the antenna cleaner of bees and ants, a notch on the fore basitarsus closed by a tibial spur), hearing (tympanal organs on the fore tibiae of crickets and katydids, [7.17.27](/7.17.27)), sound production (the file on the hind femur of grasshoppers), tasting (chemosensilla on the tarsi of flies and butterflies) and walking on water (hydrophobic hairs on the long legs of water striders). Legs may also be reduced: the forelegs of nymphalid butterflies are small and are not used for walking.
 
 The jump of a locust is a catapult. Before the jump the hind tibia is fully flexed and held by a locking mechanism; the large extensor tibiae muscle in the femur contracts slowly against the co-contracting flexor, storing energy in two semi-lunar processes of the femoro-tibial joint and in the extensor tendon. Relaxation of the flexor releases the tibia, which extends in about 30 ms and launches the locust at about 3 m s⁻¹. The principle is the same as in the springtail of [7.17.22](/7.17.22): muscle power is too low for a fast jump, but elastic recoil is not.
+
+**Example 24.2.2** How much power does a locust jump need? An adult desert locust of $m = 2\,\mathrm{g}$ takes off at $v \approx 3.2\,\mathrm{m\,s^{-1}}$ (Bennet-Clark 1975), so the kinetic energy at take-off is $E = \tfrac12 m v^2 = \tfrac12 \times 0.002 \times 3.2^2 \approx 10\,\mathrm{mJ}$. Delivered by the two hind legs in about 30 ms, this is a mean power of about 0.34 W, or 0.17 W per leg. Each extensor tibiae muscle has a mass of about 70 mg, so the jump requires a mean power of about $0.17/7 \times 10^{-5} \approx 2.4\,\mathrm{kW}$ per kilogram of muscle, and the peak power is several times higher. The best insect muscles deliver a few hundred watts per kilogram. The difference is made up by the slow loading of the springs: the extensor contracts for about half a second while the tibia is locked, at a power well within its capacity, and the semi-lunar processes release the stored energy in a few tens of milliseconds. Burrows and colleagues showed that the extensor and flexor muscles are activated together during cocking ("co-contraction"), and that the jump is triggered when the flexor motor neurons are inhibited.
+
+:::
 
 ## 24.3. Wings
 
@@ -73,6 +113,8 @@ An insect wing is a flat outgrowth of the body wall between the notum and the pl
 The wing is joined to the thorax by a flexible membrane containing small *axillary sclerites*, which form a hinge with the notal wing processes and the pleural wing process. In Neoptera there are three axillary sclerites (and a fourth in some), plus median plates; the third axillary sclerite, moved by a dedicated muscle, folds the wing back over the abdomen. Mayflies and dragonflies (Palaeoptera) have a different articulation and cannot fold their wings ([7.17.25](/7.17.25), [7.17.30](/7.17.30)).
 
 The wing has three margins (anterior or costal, outer or apical, and posterior or anal) and three angles (humeral at the base of the costa, apical at the tip and anal between the outer and anal margins). Folding lines divide it into regions: the main area supported by most veins, the *remigium*; the *clavus* or anal area behind the claval furrow, which in the hindwings of many Polyneoptera is greatly expanded into a fan-folded *vannus* (anal fan); and the small *jugum* at the base of the posterior margin, behind the jugal fold. Many wings also have a thickened, often pigmented spot near the tip of the costal margin, the *pterostigma*, whose inertia damps flutter of the wing tip.
+
+The wing is a living structure. Hemolymph circulates through the veins, driven in many insects by accessory pulsatile organs ("wing hearts") at the wing base ([7.17.26](/7.17.26)), and supplies the sensory neurons and the epidermal cells that remain in the veins; the membrane between the veins consists essentially of dead cuticle. In dragonflies the joints between veins contain patches of resilin, which let the wing twist passively during the stroke and recover its shape. Norberg (1972) showed that the pterostigma raises the speed at which the wing would begin to flutter by about 10–25%, because its mass near the leading edge shifts the wing's centre of mass forwards; pterostigmata have evolved in several orders (dragonflies, Hymenoptera, Psocodea, Megaloptera) and are typically found in insects with long, fast-moving wings.
 
 ### 24.3.2. Venation
 
@@ -98,6 +140,8 @@ Venation characters of some orders, to be met again in the chapters on classific
 | Lepidoptera | Large discal cell; few crossveins; venation hidden under scales |
 | Trichoptera | Venation similar to that of Lepidoptera, wings hairy |
 
+Geneticists working on *Drosophila* use their own names for the veins, which correspond to the Comstock–Needham names as follows: the longitudinal veins L1, L2, L3, L4 and L5 are the costal margin with R1, R2+3, R4+5, M1+2 and CuA1, and the anterior and posterior crossveins are r-m and dm-cu. The wing of *Drosophila* is the main model of how venation is patterned: veins form where the signaling pathways of the EGF receptor, Decapentaplegic and Notch define narrow stripes of cells in the wing imaginal disc ([7.5](/7.5)).
+
 ### 24.3.3. Wing Types
 
 Wings are classified by texture as well as by venation. The ancestral type is the *membranous* wing, thin and transparent (Hymenoptera, Diptera, Odonata, the hindwings of most orders). Forewings are often hardened and protect the hindwings, which provide most of the thrust when folded hindwings are flown.
@@ -118,6 +162,15 @@ Halteres sense Coriolis forces acting on the vibrating knob when the body rotate
 
 Other textures are the *scaled* wings of Lepidoptera and the *hairy* wings of Trichoptera, from which these orders are named (Greek *lepis*, scale; *thrix*, hair), and the *fringed* wings of thrips (Thysanoptera, "fringe wings"), narrow straps with long marginal setae that act like a membrane at the low Reynolds numbers of these tiny insects.
 
+Several wing types are combined in one animal more often than the names suggest, and many groups have their own variants:
+
+- The scales of Lepidoptera are flattened setae arranged like roof tiles in rows; each carries longitudinal ridges and cross-ribs, and their pigments and nanostructures produce the colour patterns ([7.17.23](/7.17.23)). They also insulate, and they detach easily, which lets a moth escape from spider webs.
+- In many moths of the families Pterophoridae (plume moths) and Alucitidae (many-plume moths) the wings are divided into feather-like plumes.
+- Featherwing beetles (Ptiliidae), fairyflies (Mymaridae) and thrips have bristled (ptiloptera) hindwings or both pairs: a narrow blade with long marginal setae. At a Reynolds number of about 10, the setae move so much air with them that the comb behaves almost like a solid surface, while being lighter and easier to clap together ([7.17.25](/7.17.25)).
+- The forewings of cockroaches and mantises are tegmina, but those of the most specialized mantises and katydids (leaf mimics) are coloured and veined like leaves, with false midribs, blotches and imitated fungal damage.
+- Among Hemiptera, cicadas have two pairs of transparent membranous wings with strong veins, aphids a forewing with a pterostigma and a much reduced venation, and whiteflies wings covered with white wax powder.
+- In the reduced condition called brachyptery the wings are shorter than the abdomen and useless for flight (many grasshoppers, stoneflies and bugs); in aptery they are absent.
+
 ![Types of insect wings by texture: membranous (wasps and bees, with the pterostigma on the forewing and the hamuli, a row of hooks on the costal margin of the hindwing, that couple the two wings), the tegmen (a leathery forewing with veins; grasshoppers, cockroaches), the elytron (a hardened forewing without functional venation; beetles), the hemelytron (thickened corium and clavus with a membranous apex; true bugs), scaled wings (butterflies and moths) and the haltere, the hind wing reduced to a club that acts as a gyroscopic sense organ (true flies).](./plots/wing-types.py)
 
 ### 24.3.4. Wing Coupling and Folding
@@ -136,7 +189,29 @@ Many insects with two pairs of wings link them so that they beat as one surface 
 
 The frenulum is single and strong in males and multiple in females of many moths; butterflies have lost it. Coupling mechanisms differ between orders, which shows that functional two-wingedness evolved several times; in flies it was achieved by losing the hindwings, in beetles by turning the forewings into elytra.
 
+| Coupling mechanism | Structure | Orders and examples |
+|---|---|---|
+| None (independent wings) | — | Odonata, Ephemeroptera (hindwing small), Plecoptera, Orthoptera, Neuroptera, Megaloptera |
+| Hamuli | Row of hooks on the costal margin of the hindwing, catching a fold of the forewing | Hymenoptera (honey bee about 20 hamuli on each hindwing) |
+| Frenulum and retinaculum | Bristle(s) on the hindwing base, hooked under the forewing | Most moths (Noctuidae, Sphingidae, Pyralidae) |
+| Jugum (jugate coupling) | Forewing lobe overlapping the hindwing | Micropterigidae, Hepialidae (ghost moths) and other basal moths |
+| Amplexiform | Enlarged humeral lobe of the hindwing beneath the forewing | Butterflies, silkworm moths (Bombycidae), some Lasiocampidae |
+| Clavus folds and grooves | Interlocking edges of forewing clavus and hindwing | Hemiptera (cicadas, bugs) |
+| Hooked setae or folds | Setae along the wing margins | Trichoptera, Psocodea, some Mecoptera |
+| Hindwing lost (halteres) | Functional dipteran condition | Diptera; forewings lost in male Strepsiptera |
+| Forewings as covers | Elytra, tegmina, hemelytra hold position but are not coupled | Coleoptera, Dermaptera |
+
 Neopteran wings are folded at rest. In Orthoptera, cockroaches and mantises the hindwing folds like a fan along radiating lines in the anal area; beetles and earwigs fold their hindwings transversely as well as longitudinally, an origami-like pattern in which elastic resilin-rich joints spring the wing open. The ladybird hindwing is folded under the elytra by movements of the abdomen and unfolds in a fraction of a second at take-off.
+
+How a beetle folds its hindwing was long hidden by the elytra. Saito and coauthors (2014) replaced the elytra of a ladybird with transparent artificial ones and filmed the folding: the abdomen pushes the wing back and the folds are set by creases and by the curvature of the veins, like a tape measure that is flexible when curved one way and stiff when straightened. The fan of the earwig hindwing, which folds into about a tenth of its spread area, is bistable: elastic joints make it stable both fully open and fully folded, so that no muscle effort is needed to hold either state (Faber and coauthors 2018).
+
+### 24.3.5. Wing Polymorphism and Wing Loss
+
+Many species produce winged and wingless (or short-winged) individuals, and the choice is made during development in response to the environment. Flight muscles and wings are costly: in crickets of the genus *Gryllus* the short-winged females, studied in detail by Zera, mature earlier and lay more eggs than long-winged ones, a trade-off between dispersal and reproduction known as the oogenesis–flight syndrome. Wing polymorphism therefore reflects the value of dispersal from the current habitat.
+
+The brown planthopper *Nilaparvata lugens*, the most damaging pest of rice in Asia, has a long-winged (macropterous) form that migrates over long distances, carried by winds from southern to northern China and into Korea and Japan each year, and a short-winged (brachypterous) form that stays and reproduces on the same rice field. The switch depends on crowding and host-plant quality during nymphal development. Xu and coauthors (2015), at Zhejiang University, found that it is controlled by two insulin receptors: InR1 promotes the long-winged and InR2 the short-winged form, and knockdown of InR2 by RNA interference produces long-winged adults even under conditions that favour short wings. Aphids show a similar switch: crowding of the mother or poor host quality makes her produce winged daughters, which leave the colony ([7.17.29](/7.17.29)).
+
+Permanent loss of wings has occurred in many lineages, on islands and mountain tops, in ectoparasites, in social castes (whose queens and males shed their wings after the mating flight along preformed breaking lines) and in females of many moths; its causes are discussed in relation to flight energetics in [7.17.25](/7.17.25).
 
 ## 24.4. The Abdomen
 
@@ -147,6 +222,12 @@ The insect abdomen has eleven segments plus, in the embryo, a terminal telson; s
 **Definition 24.4.1 (Cercus)** A **cercus** (plural cerci) is one of a pair of segmented or unsegmented appendages of the eleventh abdominal segment of insects, usually sensory, rarely modified for defence or copulation.
 
 Cerci are long and multi-segmented in bristletails, silverfish, mayflies, stoneflies and cockroaches, where they carry wind-sensitive filiform hairs that trigger escape from predators; they are short in locusts and mantises, transformed into strong forceps in earwigs and in some diplurans (in the latter not homologous with insect cerci in the strict sense), used as claspers by males of many species and absent in many Holometabola. Bristletails, silverfish and most mayflies also have a median caudal filament, an extension of the epiproct, between the cerci, giving three "tails".
+
+The cerci of cockroaches are among the best-studied sense organs of insects. Each cercus of the American cockroach *Periplaneta americana* carries about 200 filiform hairs that are deflected by the slightest air movement; their sensory neurons excite giant interneurons in the terminal abdominal ganglion, whose large axons conduct to the thoracic ganglia and start a turn and run away from the source of the puff in a few tens of milliseconds. Jeffrey Camhi and colleagues showed that the direction of escape is computed from the pattern of activity across the population of giant interneurons, each tuned to a preferred wind direction ([7.16](/7.16)). Crickets have a similar system, which detects the approach of a predatory wasp or toad.
+
+The abdomen of the migratory locust shows the ground plan with few changes. All eleven segments are present, but only terga and sterna are sclerotized; the sides are pleural membrane, and the wide intersegmental membranes allow the abdomen to stretch, bend and pump during breathing. The first abdominal tergum carries the tympanal organs on each side, and the first sternum is fused to the metasternum. The ninth and tenth terga are short and partly fused; the eleventh tergum is the triangular supra-anal plate (epiproct), flanked by the paraprocts, and carries the short, unsegmented cerci. In the male nine sterna are visible, the ninth being divided by a transverse line and curved upwards into the spoon-shaped subgenital plate; in the female eight sterna are visible, and the ovipositor projects behind them.
+
+The number of visible segments is reduced in many orders. In higher flies only four or five pregenital segments are visible, the others being telescoped into the genital tip. In apocritan Hymenoptera the first segment belongs to the mesosoma, the petiole is formed by the second (in ants also by the third, the postpetiole), and the visible "abdomen" (the gaster) begins with segment 3 or 4; in cuckoo wasps (Chrysididae) only three or four terga are visible, and the female rolls into a ball protected by them. Aphids carry a pair of cornicles (siphunculi) on the fifth or sixth abdominal segment, from which they release droplets containing the alarm pheromone (*E*)-β-farnesene and a waxy secretion that hardens on the mouthparts of attacking predators.
 
 ### 24.4.2. Abdominal Appendages and Larval Prolegs
 
@@ -172,11 +253,38 @@ In many orders, including most Lepidoptera, Diptera and Coleoptera, the appendic
 
 The Chinese textbook names of the locust valves correspond as follows: the "dorsal valves" are the third valvulae, the "ventral valves" the first valvulae, and the small "inner valves" hidden within the dorsal ones the second valvulae. The female gonopore opens behind segment 7 or 8, on a genital chamber into which the duct of the spermatheca also opens ([7.17.26](/7.17.26)). A subgenital plate formed by the sternum of segment 7 or 8 often covers the base of the ovipositor.
 
+In the locust the ovipositor is used to dig. The female opens and closes the dorsal and ventral valves rhythmically while the abdomen, extended by the stretching of its intersegmental membranes, works its way down to a depth of several centimetres; she then lays a batch of a few dozen eggs (often 50–80 in *Locusta*), which are coated with a frothy secretion of the accessory glands that hardens into a pod, and seals the hole above with a plug of foam. The pod protects the eggs against desiccation, and the depth and density of pods in the soil are the data used to forecast locust outbreaks in the following season.
+
 ### 24.4.4. The Male Genitalia
 
 The male genitalia are derived from segment 9. The intromittent organ, the *phallus*, consists of a basal phallobase and a distal aedeagus, often with an eversible inner sac (endophallus) bearing spines and sclerites, through which the ejaculatory duct opens. Paired *parameres* beside the phallus, or claspers derived from gonocoxites and gonostyli of segment 9, grasp the female; in many species the cerci and the terminal terga help. In grasshoppers the ninth sternum forms a spoon-shaped subgenital plate that encloses the genitalia.
 
 Male genitalia are among the most variable structures in animals, differing even between closely related species, and they are the main characters for identifying species in many groups. The explanations of this diversity, the lock-and-key hypothesis and sexual selection by cryptic female choice and sexual conflict, are discussed in [7.17.28](/7.17.28). Dragonflies and damselflies are unusual: the male transfers sperm from the gonopore on segment 9 to a secondary copulatory organ on segments 2–3 before mating.
+
+The most extreme modification is traumatic insemination, found in bed bugs (Cimicidae) and several other groups: the male of *Cimex lectularius* pierces the body wall of the female with his sickle-shaped left paramere and injects sperm into her hemocoel, from which it migrates to the ovaries. Females have evolved a special organ (the spermalege) at the usual site of piercing, which reduces injury and infection, a clear case of sexual conflict shaping genital anatomy ([7.17.28](/7.17.28)).
+
+### 24.4.5. Glands and Other Organs of the Body Wall
+
+Many organs of the abdomen and thorax are derived from the epidermis: exocrine glands, sound-producing and sound-receiving organs and light organs. They are listed here by position, so that they can be recognized in descriptions of species; their functions are treated in the chapters on senses and communication ([7.17.27](/7.17.27)), social insects ([7.17.38](/7.17.38)) and defence ([7.17.39](/7.17.39)).
+
+| Organ | Position | Function | Examples |
+|---|---|---|---|
+| Wax glands | Sterna 4–7 of the abdomen | Secrete wax scales for comb building | Worker honey bees |
+| Nasonov gland | Between terga 6 and 7 | Orientation pheromone (geraniol, citral) released at the hive entrance and in swarms | Worker honey bees |
+| Venom gland and Dufour's gland | Associated with the sting (ovipositor) | Venom; trail and recognition pheromones | Aculeate Hymenoptera |
+| Wax glands of scale insects | Pores over the whole body | Wax covers of the body and egg sacs; white wax of *Ericerus pela* | Coccoidea, mealybugs, whiteflies |
+| Cornicles (siphunculi) | Abdominal segment 5 or 6 | Alarm pheromone and defensive wax | Aphids |
+| Metathoracic scent glands | Opening between the mid- and hindcoxae | Defensive aldehydes, the odour of stink bugs | Adult Heteroptera (nymphs have dorsal abdominal glands instead) |
+| Pygidial glands | Near the anus | Defensive quinones, in bombardier beetles ejected hot | Ground beetles, bombardier beetles |
+| Osmeterium | Eversible fork behind the head of caterpillars | Defensive terpenoid secretion | Swallowtails (Papilionidae) |
+| Tergal glands | Abdominal terga of males | Secretions eaten by the female during courtship | Cockroaches |
+| Silk glands | Labial glands (larvae); Malpighian tubules; fore basitarsi | Cocoons, cases, tubes and webs | Silkworm and caddisfly larvae; antlion larvae; webspinners (Embioptera) |
+| Light organs | Ventral sterna of abdominal segments 6–7 (adults) | Bioluminescent courtship signals (luciferin–luciferase) | Fireflies (Lampyridae) |
+| Tymbal organs | Sides of abdominal segment 1 | Sound production | Male cicadas |
+| Stridulatory file and scraper | Hind femur and tegmen; forewings; other body parts | Sound production | Grasshoppers; crickets and katydids |
+| Tympanal organs | Abdominal segment 1; fore tibiae; metathorax; other sites | Hearing | Grasshoppers and cicadas; crickets and katydids; noctuoid moths |
+
+The table shows how freely insects have used the integument for new organs: tympanal organs, for example, have evolved independently at least fifteen to twenty times, on almost every part of the body.
 
 ## Summary
 
@@ -191,6 +299,10 @@ Male genitalia are among the most variable structures in animals, differing even
 | Coupling | Hamuli, frenulum (Definition 24.3.6), jugum (24.3.7), amplexiform; fan and transverse folding |
 | Abdomen | 11 segments; pregenital, genital (8–9), postgenital; epiproct, paraprocts, cerci (Definition 24.4.1), median caudal filament; styli and vesicles; prolegs with or without crochets |
 | Genitalia | Ovipositor (Definition 24.4.2) from segments 8–9 (valvifers, three pairs of valvulae); substitutional ovipositor; sting; phallus (phallobase, aedeagus) and parameres from segment 9 |
+| Thorax in species | Locust pronotum saddle-shaped, no prosternal process; helmets of treehoppers, shield of pygmy grasshoppers; mesothorax dominant in anteromotoric, metathorax in posteromotoric fliers |
+| Mechanics of legs | Pad area limits climbing with size; tripod to wave gaits; surface tension supports water striders (Example 24.2.1); locust and flea catapults (Example 24.2.2) |
+| Wing polymorphism | Oogenesis–flight trade-off (*Gryllus*); insulin receptors InR1/InR2 switch planthopper wing forms; wing loss on islands, in parasites and castes |
+| Body-wall organs | Wax, Nasonov, venom and Dufour's glands; cornicles; scent glands, osmeteria; silk glands of several origins; light organs, tymbals, files and tympana |
 
 ## Questions
 
@@ -217,3 +329,11 @@ Male genitalia are among the most variable structures in animals, differing even
 6. (Open question) The female of the woodwasp parasitoid *Megarhyssa* drills several centimetres into wood with an ovipositor less than a millimetre thick. Suggest how its structure allows this without buckling.
 
    **Answer** Hints from the anatomy: the ovipositor consists of three pairs of valvulae linked by tongue-and-groove joints, which slide relative to each other. By pushing one valve forward while the others are anchored by teeth in the wood, and pulling on the anchored valves, the insect keeps the shaft mostly in tension rather than compression, so it does not buckle (a reciprocating "push–pull" mechanism also used by wood wasps and by some engineered probes). The tip is hardened by incorporated metals (manganese, zinc), and the abdomen and membranes guide the shaft at its base.
+
+7. (Calculation) A grasshopper of 0.2 g jumps with the same take-off speed as the 2 g locust of Example 24.2.2, and its jump also lasts about 30 ms. How do the required energy and the mean power per unit muscle mass compare, if muscle mass is a constant fraction of body mass?
+
+   **Answer** The energy $\tfrac12 m v^2$ is proportional to mass, so the smaller grasshopper needs a tenth of the energy (about 1 mJ); with the same push time and the same fraction of muscle the mean power per unit muscle mass is the same, about $2.4\,\mathrm{kW\,kg^{-1}}$. In reality a smaller animal has shorter legs and therefore a shorter push distance, so the same take-off speed must be reached in less time and the required power per unit mass is even higher; this is why the smallest jumpers (fleas, froghoppers, springtails) depend most strongly on catapults.
+
+8. Why do brown planthoppers produce long-winged adults when rice plants are crowded or senescent, and what does the discovery of two insulin receptors add to this explanation?
+
+   **Answer** Long wings and flight muscles allow migration but cost time and resources that short-winged females put into early and abundant reproduction. When the host is good and the density low, staying pays and the short-winged form is favoured; crowding and poor host quality predict that the field will soon be unsuitable, so investment in dispersal pays. The insulin receptors provide the mechanism by which nutritional state and density are translated into the developmental decision: signaling through InR1 promotes wing growth, whereas InR2 acts as a brake, and changing the balance between them (by environmental cues or experimentally by RNA interference) switches the morph. This makes the decision a nutrient-sensing polyphenism comparable to those controlling caste in social insects.

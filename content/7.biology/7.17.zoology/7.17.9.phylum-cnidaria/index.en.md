@@ -5,7 +5,7 @@ description: Cnidarians — the diploblastic body plan, polyp and medusa, epithe
 
 Cnidarians — sea anemones, corals, jellyfish, hydroids and their relatives — are the sister group of the bilaterian animals and the most diverse of the non-bilaterian phyla, with about 13,300 described species. They are built from two epithelia with a jelly between them, around a single gut cavity that opens through one mouth, yet they are efficient predators, build the largest biological structures on Earth (coral reefs), and include some of the most venomous animals known. All cnidarians possess cnidae, stinging or adhesive capsules discharged with one of the fastest movements in biology. Many alternate between a sessile polyp and a swimming medusa, two body forms so different that they were once classified in different groups.
 
-This chapter first describes the body plan (§9.1), the cnidae (§9.2) and the life cycles (§9.3). It then surveys the three subphyla: Anthozoa (§9.4), Medusozoa (§9.5) and the parasitic Endocnidozoa (§9.6). It ends with the phylogeny of the phylum (§9.7) and a comparison with the old phylum Coelenterata (§9.8). The concepts of diploblasty, the mesoglea and the gastrovascular cavity were introduced in [7.17.2](/7.17.2)–[7.17.4](/7.17.4), the planula larva in [7.17.5](/7.17.5). Cnidarians are the outgroup that allows us to reconstruct the first bilaterians ([7.17.10](/7.17.10)).
+This chapter first describes the body plan (§9.1), the cnidae (§9.2) and the life cycles (§9.3). It then surveys the three subphyla: Anthozoa (§9.4), Medusozoa (§9.5) and the parasitic Endocnidozoa (§9.6). It ends with the phylogeny of the phylum (§9.7), the relations between cnidarians and people (§9.8) and a comparison with the old phylum Coelenterata (§9.9). The concepts of diploblasty, the mesoglea and the gastrovascular cavity were introduced in [7.17.2](/7.17.2)–[7.17.4](/7.17.4), the planula larva in [7.17.5](/7.17.5). Cnidarians are the outgroup that allows us to reconstruct the first bilaterians ([7.17.10](/7.17.10)).
 
 ## 9.1. The Cnidarian Body Plan
 
@@ -36,6 +36,22 @@ Among the epithelial cells lie:
 - gland cells in the gastrodermis, which secrete enzymes into the gastrovascular cavity, and mucous cells around the mouth;
 - sensory cells and nerve cells.
 
+The cell types are best known in *Hydra*, whose body wall is shown in the figure and whose cells are listed in the table. A polyp a centimeter long contains on the order of $10^5$ cells of about a dozen differentiated types, all derived from three stem-cell lineages: the epidermal and the gastrodermal epithelial cells, which renew themselves, and the interstitial cells, which give rise to everything else.
+
+![The body wall of *Hydra* in longitudinal section (schematic). Epidermis (ectoderm, blue): epitheliomuscular cells, whose basal processes run along the body axis and form the longitudinal muscle layer; a nest of interstitial cells between their bases; a sensory cell with an apical cilium; a cnidocyte containing a nematocyst, with its cnidocil projecting from the surface; and a nerve cell at the base of the epidermis. Mesoglea (grey): a thin acellular matrix. Gastrodermis (endoderm, yellow): digestive (nutritive-muscular) cells with two flagella and food vacuoles, whose basal processes run around the body (circular muscle, cut across); a gland cell filled with enzyme granules; and a mucous cell. Only one example of each cell type is drawn](./plots/hydra-body-wall.py)
+
+| Cell type | Layer | Structure | Function |
+|---|---|---|---|
+| Epitheliomuscular cell | Epidermis | Columnar, with longitudinal basal myonemes | Covering; contraction shortens the body |
+| Digestive (nutritive-muscular) cell | Gastrodermis | Tall, with two flagella and pseudopodia; circular basal myonemes | Phagocytosis and intracellular digestion; contraction lengthens the body; in green hydras houses *Chlorella* |
+| Gland cell | Gastrodermis, mainly in the body column | Filled with zymogen granules | Secretes proteases into the gastrovascular cavity |
+| Mucous cell | Gastrodermis of the hypostome; epidermis of the basal disc | Large mucus vacuoles | Lubricates swallowing; attachment |
+| Interstitial cell | Mostly in the epidermis of the column, in nests | Small, round, with a large nucleus and little cytoplasm | Multipotent stem cell |
+| Cnidocyte | Epidermis, mainly in the tentacles | Capsule (cnida) and cnidocil | Prey capture and defense |
+| Sensory cell | Epidermis, especially of the hypostome and tentacles | Slender, with an apical cilium | Mechanoreception and chemoreception |
+| Nerve cell (ganglion cell) | Base of both epithelia | Bipolar or multipolar | Forms the nerve net |
+| Germ cells | Epidermis (testes, ovary) | Derived from interstitial cells | Gametes |
+
 Digestion begins extracellularly in the gastrovascular cavity, where proteases break prey into fragments, and is completed intracellularly in gastrodermal cells that phagocytose the fragments. Indigestible remains are expelled through the mouth. Gas exchange and excretion (mostly of ammonia) take place across the body surface, which in all cnidarians is within a few cell layers of the water.
 
 ### 9.1.3. Nerve Net and Sense Organs
@@ -43,6 +59,12 @@ Digestion begins extracellularly in the gastrovascular cavity, where proteases b
 The nervous system is a **nerve net** of neurons beneath the epidermis and the gastrodermis, connected by both chemical (mostly peptidergic) and electrical synapses. It conducts in all directions, so a stimulus applied anywhere spreads over the body. The net is not uniform: it is condensed around the mouth of polyps and into two nerve rings at the bell margin of hydromedusae, which act as a central pattern generator for swimming. Cnidarian neurons use many neuropeptides and the classical transmitters; their evolution is discussed in [7.16.53](/7.16.53#sec-53.1).
 
 Medusae have specialized sense organs at the bell margin. Statocysts, vesicles containing a calcareous statolith that touches sensory cilia, detect the orientation of the bell. Ocelli, from simple pigment-cup eyes to lensed eyes, detect light. In scyphozoans and cubozoans these structures are grouped in club-shaped marginal *rhopalia*, each with a statocyst, ocelli and a pacemaker that sets the rhythm of the bell. The rhopalia of box jellyfish carry six eyes each, four simple and two camera-type eyes with a lens, a cornea and a retina; with four rhopalia a box jellyfish thus has 24 eyes. The lensed eyes of the mangrove box jellyfish *Tripedalia cystophora* look up through the water surface and use the mangrove canopy to keep the animal near the roots where it feeds (Garm et al. 2011).
+
+### 9.1.4. Behavior
+
+Despite the absence of a brain, cnidarians show coordinated behavior. A *Hydra* left undisturbed contracts spontaneously into a ball every few minutes and slowly extends again, driven by pacemakers in the hypostome and the basal disc; it moves by gliding on the basal disc or by somersaulting, bending over to attach the tentacles and then flipping the base over. Feeding is a fixed sequence: nematocysts discharge on contact with prey, the tentacles bend toward the mouth, and the mouth opens. The last step is triggered chemically, by reduced glutathione leaking from the wounded prey; Loomis showed in 1955 that glutathione alone, at concentrations of about $10^{-6}\,\mathrm{M}$, makes a hungry *Hydra* open its mouth and writhe its tentacles, one of the first identifications of a chemical releaser of behavior.
+
+Sea anemones can swim away from predatory sea stars by thrashing (*Stomphia*), fight neighboring clones with special inflatable tentacles armed with nematocysts (the acrorhagi of *Anthopleura*), and expand and contract on a daily rhythm. Box jellyfish steer around obstacles and toward light using their eyes. In jellyfish of the genus *Cassiopea*, a sleep-like state at night, with reduced pulsing and responsiveness and a homeostatic rebound after deprivation, has been demonstrated, showing that sleep does not require a centralized brain (Nath et al. 2017).
 
 ## 9.2. Cnidae
 
@@ -102,7 +124,7 @@ Chinese textbooks call this "alternation of generations", the same term that is 
 - feeding polyps (*hydranths* or gastrozooids), each with a mouth on a hypostome, a ring of solid tentacles, and a cup-shaped extension of the perisarc (*hydrotheca*) into which it can withdraw;
 - reproductive polyps (*gonangia*), each a central stalk (blastostyle) without mouth or tentacles, enclosed in a vase-shaped gonotheca, on which medusae bud.
 
-The small medusae swim out through the opening of the gonotheca. They are tetramerous, with four radial canals and four gonads, a velum and many marginal tentacles; males and females are separate and spawn into the water. The zygote develops into a ciliated **planula**, which settles, attaches by its aboral end and grows into the first polyp of a new colony. Asexual growth of the colony then produces hundreds of hydranths and gonangia.
+The small medusae swim out through the opening of the gonotheca. A hydromedusa of this kind is the standard example of the medusa body: a manubrium hangs from the center of the subumbrella with the mouth at its tip; four radial canals run from the stomach to the ring canal; the velum, a shelf of epidermis and muscle around the inner margin of the bell, narrows the opening so that each contraction drives a faster jet; and at the bases of the marginal tentacles lie statocysts or ocelli and the two nerve rings that coordinate the swimming beat. The swimming muscle is a sheet of striated epitheliomuscular cells lining the subumbrella. They are tetramerous, with four radial canals and four gonads, a velum and many marginal tentacles; males and females are separate and spawn into the water. The zygote develops into a ciliated **planula**, which settles, attaches by its aboral end and grows into the first polyp of a new colony. Asexual growth of the colony then produces hundreds of hydranths and gonangia.
 
 ### 9.3.3. *Aurelia*: A Scyphozoan Life Cycle
 
@@ -120,6 +142,10 @@ Many cnidarians have shortened their life cycles. Anthozoans have no medusa: the
 
 With about 7,200 species, anthozoans comprise sea anemones, corals, sea fans, sea pens and tube anemones. The anthozoan polyp is larger and more complex than the hydrozoan polyp. The mouth, a slit on the oral disc, leads into an actinopharynx, an ectodermal tube with one or two siphonoglyphs, ciliated grooves that drive water into the gut and keep the hydrostatic skeleton inflated even when the mouth is closed. The gastrovascular cavity is divided by *mesenteries*, radial sheets of gastrodermis and mesoglea that run from the body wall toward the pharynx; complete mesenteries reach the pharynx, incomplete ones do not. The free edges of the mesenteries carry the *mesenterial filaments*, which secrete enzymes and absorb food, and in many sea anemones end in threadlike acontia armed with nematocysts that can be extruded through the mouth or the body wall for defence. Mesenteries also bear strong longitudinal retractor muscles and the gonads, which in anthozoans, as in scyphozoans and cubozoans, are gastrodermal; in hydrozoans they are epidermal.
 
+The sea anemone is the representative anthozoan of the textbooks. A large solitary polyp such as *Metridium* or *Actinia* has a thick column with a strong sphincter muscle near its top that closes over the oral disc when the animal contracts, and a pedal disc on which it can creep slowly. The mesenteries are added in cycles: six pairs of primary (complete) mesenteries, then six pairs of secondary, twelve of tertiary and so on, so that the number of mesenteries and of tentacles follows the series 6, 12, 24, 48. Two of the primary pairs, attached at the ends of the slit-shaped pharynx opposite the siphonoglyphs, are the *directives*, whose retractor muscles face away from each other. A sea anemone feeds on whatever its tentacles can catch and hold, from plankton to fishes and crabs; it reproduces sexually by spawning or brooding, and asexually by longitudinal fission or pedal laceration, in which fragments torn from the edge of the pedal disc grow into new polyps, so that one clone may cover a whole rock.
+
+Many sea anemones live in symbiosis. Anemonefishes (*Amphiprion*) live among the tentacles of a few large tropical species and gain protection, while the anemone gains nutrients from the fish's waste and defense against butterflyfishes. Hermit crabs place anemones (*Calliactis*) on their shells, and the anemones defend the crab against octopuses; when the crab changes shells it transfers its anemones.
+
 ### 9.4.1. Octocorallia, Hexacorallia and Ceriantharia
 
 | Subclass | Polyps | Skeleton | Groups |
@@ -134,15 +160,51 @@ With about 7,200 species, anthozoans comprise sea anemones, corals, sea fans, se
 
 Reef-building corals are colonial scleractinians whose polyps sit in cup-shaped corallites of an aragonite skeleton. The skeleton is secreted beneath the basal epidermis (the calicodermis), which pumps calcium ions and removes protons to raise the saturation state of aragonite in a thin calcifying fluid. Radial ridges of the skeleton, the septa, lie between the mesenteries, and a colony grows as polyps bud and lay down new skeleton beneath them, at rates of millimetres to centimetres per year. Over thousands of years the skeletons, cemented by coralline red algae, build reefs; the Great Barrier Reef extends for 2,300 km.
 
+The skeleton of each polyp, the corallite, consists of an outer wall (the theca), radiating septa added in cycles of six like the mesenteries between which they lie, and often a central axial rod (the columella); the corallites are joined by a common skeleton, the coenosteum, which is covered by living tissue connecting the polyps. Growth rates differ greatly with the form of the colony: massive corals such as *Porites* add about 1 cm of skeleton per year, and the annual density bands in their skeletons, like tree rings, record centuries of sea temperature, whereas branching *Acropora* extends 10–20 cm per year. A coral colony is a modular organism that can live for centuries; some massive *Porites* colonies are more than 500 years old.
+
+Charles Darwin classified reefs into three types and explained them by one process. Fringing reefs grow directly along a coast; barrier reefs are separated from the coast by a lagoon; atolls are rings of reef around a lagoon without an island. Darwin proposed (1842) that a fringing reef around a volcanic island becomes a barrier reef and then an atoll as the island subsides and the reef grows upward to stay in the photic zone. Drilling on Enewetak Atoll in 1952 confirmed the theory: it passed through about 1,300 m of reef limestone before reaching the volcanic basalt on which the reef had started some 50 million years earlier.
+
+| Reef type | Structure | Examples |
+|---|---|---|
+| Fringing reef | Attached to the shore, with at most a shallow channel | Coasts of Hainan Island, the Red Sea |
+| Barrier reef | Separated from the coast by a deep lagoon | Great Barrier Reef, Belize Barrier Reef |
+| Atoll | Ring of reef and islets around a lagoon, on a subsided volcano | Maldives; many reefs of the Xisha (Paracel) and Nansha (Spratly) Islands |
+
+Coral reefs cover well under 1% of the ocean floor, a few hundred thousand square kilometers, but harbor perhaps a quarter of all marine species, and their highest diversity, over 600 species of reef-building corals, lies in the Coral Triangle between Indonesia, the Philippines and New Guinea. The northern South China Sea, including the coasts of Hainan and Guangdong and the island groups to the south, lies at the northern margin of this region.
+
 Reef corals are mutualistic hosts of dinoflagellates of the family Symbiodiniaceae, the **zooxanthellae**, which live inside gastrodermal cells at densities of millions per square centimetre ([7.11.31](/7.11.31#sec-31.5.4)). The algae transfer most of their photosynthetic products to the coral, mainly glycerol, glucose and lipids, and the coral provides inorganic nutrients and carbon dioxide; photosynthesis also raises the pH at the calcifying site and accelerates calcification. This partnership explains why reefs thrive in clear, nutrient-poor tropical waters: nutrients are recycled within the holobiont rather than taken from the water. It also restricts reef corals to the photic zone, usually above 50 m. Most corals spawn their gametes in synchronized mass spawnings, timed by water temperature and the lunar cycle, and their planulae acquire symbionts from the environment.
 
 When water temperatures exceed the long-term summer maximum by about 1 °C for several weeks, the symbiosis breaks down: damaged algae produce reactive oxygen species, and the coral expels them. The coral loses its colour, revealing the white skeleton beneath the transparent tissue, which is **coral bleaching**. Bleached corals can recover if temperatures fall, but prolonged bleaching kills them. Global mass bleaching events (1998, 2010, 2014–2017, 2023–2025) have killed large parts of the world's reefs, and ocean acidification further reduces the saturation state of aragonite in seawater, which makes calcification more costly. Some corals tolerate heat better by hosting heat-tolerant symbionts (*Durusdinium*), a flexibility that may buy time but is unlikely to keep pace with warming.
+
+The relation between heat stress and bleaching is quantitative enough to be used for forecasting. Satellite monitoring of sea-surface temperature accumulates the heat stress as *degree heating weeks* (DHW): over a rolling 12-week window, each week in which the temperature $T$ exceeds the maximum of the climatological monthly mean temperatures (MMM) by at least 1 °C adds the excess,
+
+$$
+\mathrm{DHW} = \sum_{\text{12 weeks}} \left(T - T_{\mathrm{MMM}}\right) \quad \text{for } T - T_{\mathrm{MMM}} \geq 1\,^\circ\mathrm{C},
+$$
+
+in units of °C-weeks. Values above about 4 °C-weeks predict significant bleaching, and above about 8 °C-weeks widespread bleaching and mortality. A reef that is 2 °C above its usual summer maximum for six weeks thus accumulates 12 °C-weeks, enough for mass mortality.
+
+Ocean acidification adds a second, slower stress. The saturation state of aragonite, $\Omega = [\ce{Ca^2+}][\ce{CO3^2-}]/K_{\mathrm{sp}}$, measures how far seawater is supersaturated with respect to the coral skeleton; calcification is easy at high $\Omega$ and stops near $\Omega = 1$. As the ocean absorbs carbon dioxide, $\ce{CO2 + CO3^2- + H2O -> 2HCO3-}$ removes carbonate ions and lowers $\Omega$, so that corals must pump more protons out of their calcifying fluid to build the same skeleton.
+
+Reef protection combines global and local measures: limiting warming, which no local measure can replace; protected areas that reduce fishing, pollution and physical damage, such as the Sanya coral reef reserve in Hainan, established in 1990; control of outbreaks of the coral-eating crown-of-thorns sea star ([7.17.42](/7.17.42)); and restoration by transplanting fragments grown in nurseries, practiced on a growing scale in the South China Sea and elsewhere.
 
 Not all corals live in reefs. Deep-water scleractinians such as *Desmophyllum pertusum* (formerly *Lophelia*) form large mounds in cold, dark water without symbionts, feeding on plankton.
 
 ## 9.5. Subphylum Medusozoa
 
-The Medusozoa (about 3,900 species) are united by a medusa stage, although it has been lost in some lineages, by a linear mitochondrial genome (anthozoans, like other animals, have a circular one) and the cnidocil. They comprise four classes. Hydrozoa is the sister group of the other three (Staurozoa, Cubozoa, Scyphozoa), which together are called Acraspeda.
+The Medusozoa (about 3,900 species) are united by a medusa stage, although it has been lost in some lineages, by a linear mitochondrial genome (anthozoans, like other animals, have a circular one) and the cnidocil. They comprise four classes. Hydrozoa is the sister group of the other three (Staurozoa, Cubozoa, Scyphozoa), which together are called Acraspeda. The table compares them with the anthozoans.
+
+| Character | Anthozoa | Hydrozoa | Scyphozoa | Cubozoa | Staurozoa |
+|---|---|---|---|---|---|
+| Species (approx.) | 7,200 | 3,600 | 200 | 50 | 50 |
+| Dominant stage | Polyp only | Polyp colony, or both | Medusa | Medusa | Sessile medusa on a stalk |
+| Medusa formed by | — | Lateral budding | Strobilation | Metamorphosis of the whole polyp | Apical metamorphosis of the polyp |
+| Velum | — | Velum (true) | None | Velarium | None |
+| Marginal sense organs | — | Statocysts and ocelli at tentacle bases | Rhopalia | Rhopalia with lens eyes | Anchors (rhopalioids) |
+| Gonads | Gastrodermal, on mesenteries | Epidermal | Gastrodermal | Gastrodermal | Gastrodermal |
+| Mesoglea | Cellular | Acellular | Cellular | Cellular | Cellular |
+| Gastric filaments | On mesenteries | None | Present | Present | Present |
+| Fresh water | No | Several lineages (*Hydra*, *Craspedacusta*) | No | No | No |
 
 ### 9.5.1. Class Staurozoa
 
@@ -154,6 +216,10 @@ Stalked jellyfish, about 50 species of cold, shallow seas, are sessile medusae a
 
 Box jellyfish (about 50 species) are fast, agile swimmers of tropical and subtropical coasts, reaching speeds of several metres per minute and actively hunting fish and shrimps. The velarium, like the velum of hydromedusae, focuses the jet of water from the bell. Box jellyfish have elaborate courtship in some species, with males transferring a spermatophore to the female.
 
+The visual system of box jellyfish is the most elaborate of any cnidarian. Each rhopalium hangs on a flexible stalk and carries a heavy crystal at its tip, so that it always hangs vertically whatever the orientation of the bell. Of its six eyes, two are pairs of slit eyes and pit eyes without lenses, which detect light and its direction; the other two are camera-type eyes with a spherical lens of graded refractive index, an upper lens eye that looks up and a lower lens eye that looks down. The lenses focus the image behind the retina, so that the eyes are deliberately underfocused: they see only coarse shapes, such as the dark edges of the mangrove canopy or of roots, and filter out fine detail that a nerve net could not process (Nilsson et al. 2005). Visual signals from the rhopalia modulate the pacemakers that set the rhythm of the bell and the asymmetric contractions with which the animal turns.
+
+The venom of the Australian *Chironex fleckeri* and its Indo-Pacific relatives is delivered by billions of nematocysts on tentacles up to 3 m long, and its main components are pore-forming proteins of a family found only in cubozoans (§9.2.3). The small Irukandji jellyfish (*Carukia*, *Malo*), with a bell only 1–2 cm across, hunt larval fishes, which they lure by twitching tentacles bearing pigmented nematocyst clusters that resemble small plankton.
+
 ### 9.5.3. Class Scyphozoa
 
 **Definition 9.5.2 (Scyphozoa)** The **Scyphozoa** (true jellyfish) are medusozoans with a large medusa without a velum, with rhopalia in marginal notches, gastric filaments in the stomach and gastrodermal partitions or a system of branched canals, and a small polyp (scyphistoma) that produces ephyrae by strobilation.
@@ -164,7 +230,11 @@ The scyphozoans (about 200 species) are the familiar large jellyfish. The bell i
 - Rhizostomeae, without marginal tentacles; the oral arms are fused over the mouth, leaving thousands of small mouths on the arms (the order's name means "root mouth"). They include the edible jellyfish *Rhopilema esculentum*, harvested and cultured in China, and *Nemopilema nomurai*, whose medusae reach 2 m and 200 kg and periodically bloom in East Asian seas. The upside-down jellyfish *Cassiopea* lies on the bottom, oral arms up, and houses zooxanthellae.
 - Coronatae, deep-sea jellyfish with a coronal groove around the bell.
 
-Jellyfish blooms have increased in some coastal seas, apparently favoured by overfishing of competitors, eutrophication, warming and the multiplication of hard surfaces on which polyps settle. Blooms clog the cooling-water intakes of power plants and the nets of fishermen.
+The moon jellyfish, the representative scyphozoan, shows the structure of a scyphomedusa. The bell is fringed by many short tentacles and notched by eight rhopalia, each between two small lappets. The mouth, at the center of the subumbrella, is drawn out into four long oral arms with ciliated grooves. It leads into a central stomach with four gastric pouches; each pouch contains gastric filaments bearing nematocysts and gland cells and, on its floor, a horseshoe-shaped gonad, visible through the bell as four pink or violet rings. From the stomach a system of radial canals runs to a ring canal at the margin: eight unbranched adradial canals alternate with eight branched perradial and interradial canals, and the cilia of the canals keep the fluid moving. *Aurelia* feeds on plankton caught in mucus on the bell surface, which is carried by cilia to the margin and licked off by the oral arms. Below each gastric pouch an opening of the subumbrella, the subgenital pit, of uncertain function, gives the species its characteristic pattern.
+
+Jellyfish blooms have increased in some coastal seas, apparently favoured by overfishing of competitors, eutrophication, warming and the multiplication of hard surfaces on which polyps settle. Blooms clog the cooling-water intakes of power plants and the nets of fishermen. In the Yellow Sea and the East China Sea, giant *Nemopilema nomurai* bloomed almost every year from the early 2000s, with densities that tore trawl nets, and blooms of *Aurelia* have repeatedly blocked the cooling-water intakes of coastal power stations in China, Japan and Korea. Because a single scyphistoma can strobilate repeatedly and bud new polyps, the size of a bloom depends largely on the polyp population on the sea floor and on the temperature that triggers strobilation, which is why the search for polyp colonies on artificial structures such as piers, aquaculture rafts and offshore platforms has become part of bloom forecasting.
+
+Jellyfish are also food. Rhizostome jellyfish, above all *Rhopilema esculentum* in China and several species in Southeast Asia, are fished at a scale of several hundred thousand tonnes per year. They are processed with salt and alum, which dehydrate and firm the mesoglea, and eaten as a crunchy salad. In the Liaodong Bay and other parts of northern China, the wild stock has been supplemented since the 1980s by releasing juveniles reared from polyps in hatcheries, one of the few examples of the stock enhancement of an invertebrate on a large scale, and *Rhopilema* is also grown in ponds together with shrimps.
 
 ### 9.5.4. Class Hydrozoa
 
@@ -182,6 +252,16 @@ The siphonophores carry division of labour to an extreme. A siphonophore colony 
 
 The Portuguese man-of-war *Physalia physalis* has a gas-filled float up to 30 cm long that acts as a sail, and fishing tentacles many metres long; the deep-sea *Praya dubia* reaches 40 m and is among the longest animals. Siphonophores raise the question of what an individual is: each zooid is homologous to a free-living polyp or medusa, but none can live alone, and the colony behaves as one animal.
 
+The colony is built from a growth zone near its top. In most species the stem bears, from front to back, the float, a region of swimming bells (the nectosome) and a long region of feeding and reproductive zooids (the siphosome), where the zooids are budded in repeating groups called cormidia, each with a gastrozooid and its tentacle, bracts and gonophores. The three main groups differ in their propulsion:
+
+| Group | Float | Swimming bells | Examples |
+|---|---|---|---|
+| Cystonectae | Large pneumatophore | None | *Physalia* (Portuguese man-of-war), *Rhizophysa* |
+| Physonectae | Small pneumatophore | Present | *Nanomia*, *Apolemia*, *Praya*-like giants |
+| Calycophorae | None | One or two, often with an oil droplet for buoyancy | *Muggiaea*, *Chelophyes*, *Diphyes* |
+
+The float is a modified medusa-like zooid lined by a gas gland that secretes carbon monoxide-rich gas. The by-the-wind sailor *Velella* and the blue button *Porpita*, which also drift at the surface with a chitinous float, were long classified among the siphonophores (as "chondrophores"), but they are single, highly modified polyps of the Anthoathecata.
+
 ### 9.5.5. *Hydra*: The Representative Hydrozoan
 
 *Hydra* is a solitary freshwater hydrozoan polyp, 2–20 mm long, that hangs from plants in ponds and has been a laboratory animal since Trembley's experiments of 1744. Its body has the following parts:
@@ -196,7 +276,7 @@ The Portuguese man-of-war *Physalia physalis* has a gas-filled float up to 30 cm
 
 *Hydra* lacks a medusa and a larva. It reproduces asexually by budding when food is abundant and sexually, often in autumn, by forming testes and ovaries as swellings of the body wall; the embryo encysts and overwinters. Its cells belong to three self-renewing lineages, ectodermal and endodermal epithelial cells and interstitial cells, which divide continuously in the column and are displaced into the tentacles and the basal disc, where they are shed. A *Hydra* thus renews all its cells in about three weeks and shows no sign of ageing in the laboratory. Its regeneration, including the organizer in the hypostome, the Wnt pathway and the activator–inhibitor model, is treated in [7.5.35](/7.5.35#sec-35.2).
 
-Other freshwater hydrozoans include *Craspedacusta sowerbii*, a small limnomedusa of lakes and ponds, native to the Yangtze basin and now found on all continents except Antarctica.
+Other freshwater hydrozoans include *Craspedacusta sowerbii*, a small limnomedusa of lakes and ponds, native to the Yangtze basin and now found on all continents except Antarctica. Its polyp is tiny (about 2 mm), without tentacles, and multiplies by budding and by resting bodies called frustules; the medusae, about 2 cm across, appear suddenly in warm summers, often in a single sex because a pond has been colonized by one clone. Several species of the genus have been described from China, where these "peach-blossom jellyfish" have been known since antiquity.
 
 ## 9.6. Subphylum Endocnidozoa: Parasitic Cnidarians
 
@@ -218,7 +298,21 @@ This topology settles an old question. Classical zoology debated whether the fir
 
 Cnidarians have a long fossil record. Phosphatized embryos and polyps from the early Cambrian of southern China (about 535 million years ago) include medusozoans with tetraradial symmetry, some still enclosed in their egg membranes, and fossil medusae and scyphozoan-like polyps are known from the Cambrian onward. Many Ediacaran fossils, such as the frond-like *Charnia*, were once interpreted as sea pens, but most specialists no longer accept this. The stony corals appeared in the Middle Triassic; the Paleozoic reefs were built by two extinct orders, the rugose and tabulate corals, together with sponges.
 
-## 9.8. Comparison with Traditional Classifications
+## 9.8. Cnidarians and People
+
+| Aspect | Examples |
+|---|---|
+| Ecosystem engineers | Reef-building corals form the habitat of a quarter of marine species and protect coastlines from waves; coral reefs support the fisheries and tourism of hundreds of millions of people |
+| Food | Rhizostome jellyfish (*Rhopilema*), fished and released from hatcheries in China; some sea anemones eaten in southern Europe and East Asia |
+| Materials | Precious red and pink corals (*Corallium*), black corals; coral limestone used for building in the past; coral skeletons used as bone-graft scaffolds |
+| Hazards | Stings of box jellyfish, the Portuguese man-of-war and fire corals; blooms of scyphozoans that disrupt fisheries, aquaculture and power plants |
+| Pests and parasites | Myxozoans in fish farms (whirling disease, proliferative kidney disease of salmonids) |
+| Science and medicine | *Hydra* and *Nematostella* as models of regeneration, development and ageing; green fluorescent protein from the hydromedusa *Aequorea victoria* and the photoprotein aequorin, which made fluorescent tagging of proteins possible ([7.3](/7.3)); toxins of sea anemones as ion-channel probes and drug leads |
+| Climate records | Density bands and isotopes in coral skeletons record past sea temperature and rainfall over centuries |
+
+The discovery of green fluorescent protein illustrates how the study of an obscure animal can transform biology. Osamu Shimomura purified aequorin and GFP from *Aequorea* in the 1960s to understand its bioluminescence; three decades later the cloned GFP gene became a universal tag for proteins in living cells, and the discovery was recognized by the Nobel Prize in Chemistry in 2008.
+
+## 9.9. Comparison with Traditional Classifications
 
 | Traditional treatment | Current view |
 |---|---|
@@ -243,6 +337,9 @@ The representative animals of the Chinese textbooks (*Hydra*, *Obelia*, *Aurelia
 - Medusozoa: Staurozoa (stalked jellyfish), Cubozoa (Definition 9.5.1), Scyphozoa (Definition 9.5.2), Hydrozoa (Definition 9.5.3), the last with colonies (Definition 9.5.4), siphonophores (Definition 9.5.5) and *Hydra*.
 - Endocnidozoa: the Myxozoa (Definition 9.6.1), with polar capsules homologous to nematocysts and two-host life cycles, and *Polypodium*.
 - Anthozoa is the sister group of the other cnidarians, so the ancestral cnidarian was polyp-like and the medusa evolved once in Medusozoa.
+- *Hydra* has about a dozen cell types (epitheliomuscular and digestive cells, gland and mucous cells, interstitial cells, cnidocytes, sensory and nerve cells, germ cells) from three stem-cell lineages; its feeding response is released by glutathione.
+- Reefs are fringing, barrier or atolls (Darwin's subsidence theory); heat stress is measured in degree heating weeks (above about 4 °C-weeks bleaching, above 8 mass mortality), and acidification lowers the aragonite saturation state.
+- People: reefs, jellyfish fisheries and stock enhancement in China, blooms of *Nemopilema* and *Aurelia*, stings, myxozoan diseases of fish, GFP.
 
 ## Questions
 
@@ -261,3 +358,9 @@ The representative animals of the Chinese textbooks (*Hydra*, *Obelia*, *Aurelia
 5. Why are reef-building corals restricted to clear, shallow tropical waters, and why does warming threaten them even if the water never becomes too hot for the coral itself?
 
    **Answer** Most of their energy comes from photosynthesis by their symbiotic dinoflagellates, which needs light (hence clear water and the photic zone), and photosynthesis also raises the pH at the site of calcification; high temperature and aragonite saturation, found in tropical surface waters, favour rapid calcification. Warming threatens them through the symbiosis: a rise of about 1 °C above the usual summer maximum for several weeks damages the photosynthetic apparatus of the algae, which produce reactive oxygen species and are expelled. Without its symbionts the coral starves; the coral animal itself could survive the temperature, but not the loss of its partner.
+6. A reef has a climatological maximum monthly mean temperature of 29.0 °C. During a heat wave the weekly mean temperatures are 29.5, 30.2, 30.6, 31.0, 31.2, 30.8, 30.1 and 29.6 °C. Compute the degree heating weeks at the end of the eighth week and predict the outcome.
+
+   **Answer** Only weeks with an excess of at least 1 °C count: 30.2 (1.2), 30.6 (1.6), 31.0 (2.0), 31.2 (2.2), 30.8 (1.8) and 30.1 (1.1) °C, while 29.5 and 29.6 °C (excess 0.5 and 0.6) do not. The sum is $1.2 + 1.6 + 2.0 + 2.2 + 1.8 + 1.1 = 9.9$ °C-weeks, above the threshold of about 8 °C-weeks, so widespread bleaching and significant coral mortality are expected.
+7. Explain why the size of a scyphozoan bloom in a given year depends more on the polyps on the sea floor than on the medusae of the previous year.
+
+   **Answer** The medusae of most bloom-forming scyphozoans live less than a year, and the planulae they produce settle as scyphistomae. A scyphistoma multiplies asexually by budding and by podocysts, survives for years, and when triggered by temperature strobilates into many ephyrae, and it can strobilate repeatedly. The number of ephyrae released in spring is therefore the product of the size of the polyp population and the number of ephyrae per polyp, both of which depend on settling surfaces, food and temperature; a large polyp population can produce a bloom even after a year with few medusae.

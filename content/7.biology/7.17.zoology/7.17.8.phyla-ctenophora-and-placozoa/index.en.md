@@ -15,7 +15,7 @@ About 130 valid species are described, roughly 90 planktonic and 40 benthic, and
 
 ### 8.1.1. Symmetry and Axes
 
-The main axis runs from the mouth (oral pole) to the apical organ (aboral pole). Two planes of symmetry pass through it: the *tentacular plane*, containing the two tentacles, and the *sagittal* (pharyngeal or stomodeal) *plane*, containing the long axis of the flattened pharynx. The animal is therefore divisible into equal halves along two planes only, the condition called *biradial symmetry*: it is a form of **radial symmetry** with only two planes ([7.17.3](/7.17.3)). Strictly, the two halves are related by a 180° rotation rather than by reflection, because some organs, such as the anal pores, are arranged diagonally (rotational symmetry).
+The main axis runs from the mouth (oral pole) to the apical organ (aboral pole). Two planes of symmetry pass through it: the *tentacular plane*, containing the two tentacles, and the *sagittal* (pharyngeal or stomodeal) *plane*, containing the long axis of the flattened pharynx. The animal is therefore divisible into equal halves along two planes only, the condition called **biradial symmetry**: it is a form of **radial symmetry** with only two planes ([7.17.3](/7.17.3)). Strictly, the two halves are related by a 180° rotation rather than by reflection, because some organs, such as the anal pores, are arranged diagonally (rotational symmetry).
 
 ### 8.1.2. Comb Plates and Their Coordination
 

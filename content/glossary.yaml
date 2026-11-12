@@ -10645,7 +10645,7 @@ terms:
   - { zh: 个体发育, en: ontogeny }
   - { zh: 重演, en: recapitulation }
   - { zh: 叶片, en: leaf blade, aliases: [lamina, blade], scope: ["7.12", "7.13"] }
-  - { zh: 叶柄, en: petiole, aliases: [petioles] }
+  - { zh: 叶柄, en: petiole, aliases: [petioles], scope: ["7.12", "7.13"] }
   - { zh: 叶鞘, en: leaf sheath, aliases: [leaf sheaths] }
   - { zh: 叶耳, en: auricle, aliases: [auricles], scope: ["7.12"] }
   - { zh: 叶脉, en: vein, aliases: [veins, leaf vein], scope: ["7.12", "7.13"] }
@@ -12884,3 +12884,38 @@ terms:
   - { zh: 上游收集, en: upstream collecting }
   - { zh: 下游收集, en: downstream collecting }
   - { zh: 足面盘幼虫, en: pediveliger }
+  - { zh: 并胸腹节, en: propodeum }
+  - { zh: 中躯, en: mesosoma, scope: ["7.17"] }
+  - { zh: 后躯, en: metasoma, scope: ["7.17"] }
+  - { zh: 广腰亚目, en: Symphyta }
+  - { zh: 细腰亚目, en: Apocrita }
+  - { zh: 针尾类, en: Aculeata, aliases: [aculeates] }
+  - { zh: 蚁科, en: Formicidae, aliases: [ants] }
+  - { zh: 蜜蜂类, en: Anthophila, aliases: [bees] }
+  - { zh: 多分DNA病毒, en: polydnavirus, aliases: [polydnaviruses] }
+  - { zh: 长翅总目, en: Antliophora }
+  - { zh: 长角亚目, en: Nematocera }
+  - { zh: 短角亚目, en: Brachycera }
+  - { zh: 环裂类, en: Cyclorrhapha }
+  - { zh: 额囊, en: ptilinum }
+  - { zh: 围蛹壳, en: puparium, aliases: [puparia] }
+  - { zh: 昆虫不育技术, en: sterile insect technique }
+  - { zh: 媒介能量, en: vectorial capacity }
+  - { zh: 毛鳞总目, en: Amphiesmenoptera }
+  - { zh: 双孔类, en: Ditrysia, aliases: [ditrysians] }
+  - { zh: 亚成虫, en: subimago, aliases: [subimagos] }
+  - { zh: 卵鞘, en: ootheca, aliases: [oothecae], scope: ["7.17"] }
+  - { zh: 蝗亚目, en: Caelifera }
+  - { zh: 螽亚目, en: Ensifera }
+  - { zh: 差翅亚目, en: Anisoptera }
+  - { zh: 均翅亚目, en: Zygoptera }
+  - { zh: 网翅总目, en: Dictyoptera }
+  - { zh: 异翅亚目, en: Heteroptera }
+  - { zh: 胸喙亚目, en: Sternorrhyncha }
+  - { zh: 头喙亚目, en: Auchenorrhyncha }
+  - { zh: 蜜露, en: honeydew }
+  - { zh: 肉食亚目, en: Adephaga }
+  - { zh: 多食亚目, en: Polyphaga, scope: ["7.17"] }
+  - { zh: 复变态, en: hypermetamorphosis }
+  - { zh: 三爪蚴, en: triungulin, aliases: [triungulins] }
+  - { zh: 腹柄, en: petiole, aliases: [petioles], scope: ["7.17"] }

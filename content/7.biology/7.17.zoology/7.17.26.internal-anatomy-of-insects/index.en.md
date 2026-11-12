@@ -21,6 +21,8 @@ The insect gut is a tube from mouth to anus, divided into three regions of diffe
 
 The *foregut* consists of the pharynx, which in sucking insects forms a pump together with the cibarium; the esophagus; the *crop*, a dilatation for storage; and the *proventriculus*. In chewing insects such as cockroaches, crickets and many beetles, the proventriculus is a gizzard with a muscular wall and cuticular teeth that grind food; in others it is a simple valve. In honey bees it is a valve that separates nectar stored in the crop ("honey stomach") from food passed to the midgut; in flies and moths the crop is a lateral diverticulum in which liquid food is stored. A stomodeal (cardiac) valve projects into the midgut and prevents backflow.
 
+In the migratory locust the sequence can be followed from the mouth. Food chewed by the mandibles is mixed in the preoral cavity with saliva, which flows from the common salivary duct opening between the labium and the hypopharynx, and is then swallowed through the mouth into the pharynx. The esophagus widens into a large crop, where much of the digestion by salivary and regurgitated midgut enzymes takes place; the crop and the short proventriculus are lined with cuticular ridges and small teeth that help to break up the leaf fragments. Food then passes the cardiac valve into the midgut. The salivary glands are a pair of grape-like clusters of acini in the ventral thorax, whose ducts unite into one salivary duct on each side and finally into the common duct.
+
 The *midgut* (ventriculus, called the stomach in Chinese textbooks) usually bears blind pouches, the *gastric caeca*, near its anterior end: six in the locust, from two to many in other insects. Its epithelium consists of columnar cells with microvilli, which secrete enzymes and absorb nutrients, endocrine cells, and regenerative cells in nests (crypts) from which the epithelium is renewed.
 
 **Definition 26.2.1 (Peritrophic Membrane)** The **peritrophic membrane** (peritrophic matrix) is a thin, semipermeable sheath of chitin, proteins and glycoproteins that surrounds the food in the midgut of most insects, separating the lumen into an endoperitrophic space containing the food and an ectoperitrophic space next to the epithelium.
@@ -33,7 +35,23 @@ The *hindgut* begins at the pylorus, where the Malpighian tubules open, and cons
 
 The gut reflects the food. Insects that feed on solid food have a well-developed proventriculus and a short gut; liquid feeders store food in the crop and have a powerful sucking pump. Insects that feed on large volumes of dilute sap must get rid of excess water. In many Hemiptera, especially xylem and phloem feeders, the anterior midgut, the posterior midgut, the beginning of the hindgut and the Malpighian tubules are bound together in a *filter chamber*, in which water passes directly from the anterior midgut to the hindgut, bypassing the absorptive midgut, so that the nutrients are concentrated. Lepidopteran larvae feeding on leaves rich in tannins have an extremely alkaline midgut (pH up to 11–12), which prevents tannins from binding to proteins. Wood-feeding termites have a large hindgut paunch, a fermentation chamber containing cellulose-digesting symbionts: flagellate protists in the "lower" termites and bacteria in the higher termites ([7.11.31](/7.11.31)).
 
-Many insects that live on nutritionally poor diets, such as plant sap, blood or wood, depend on symbiotic microorganisms that supply amino acids, vitamins or digestive enzymes. Obligate symbionts are often housed inside specialized cells, *bacteriocytes* (mycetocytes), grouped into an organ, the bacteriome, in the body cavity or the gut wall, and transmitted to the eggs. The aphid–*Buchnera* symbiosis is treated in [7.11.31](/7.11.31#sec-31.4).
+Many insects that live on nutritionally poor diets, such as plant sap, blood or wood, depend on symbiotic microorganisms that supply amino acids, vitamins or digestive enzymes. Obligate symbionts are often housed inside specialized cells, **bacteriocytes** (mycetocytes), grouped into an organ, the bacteriome, in the body cavity or the gut wall, and transmitted to the eggs. The aphid–*Buchnera* symbiosis is treated in [7.11.31](/7.11.31#sec-31.4).
+
+The table compares the gut of insects with different diets.
+
+| Diet | Insect | Main features of the gut |
+|---|---|---|
+| Grass leaves | Migratory locust | Large crop, toothed proventriculus, six gastric caeca, short midgut; six rectal pads recover water |
+| Omnivorous | Cockroaches | Large crop, gizzard-like proventriculus with six strong teeth, eight gastric caeca |
+| Nectar and pollen | Honey bee | Crop as a "honey stomach" of up to about 60 µL in foragers, closed off by the proventricular valve, which strains pollen grains into the midgut |
+| Blood (females) and nectar | Mosquitoes | Nectar goes to a ventral crop diverticulum, blood directly to the midgut, where a type I peritrophic matrix forms around it within hours |
+| Phloem sap | Aphids | No filter chamber; gut loops back on itself so that water can move between parts; sucrose converted into oligosaccharides to lower the osmotic pressure of the gut contents |
+| Xylem sap | Cicadas, spittlebugs, sharpshooters | Filter chamber; large cibarial pump; copious dilute excreta |
+| Leaves rich in tannins | Caterpillars | Long, straight midgut with a type II peritrophic membrane; lumen pH up to 11–12 |
+| Wood | Termites | Hindgut paunch with symbionts (protists or bacteria) that ferment cellulose; proctodeal feeding between nestmates |
+| Decaying flesh | Blow fly larvae | Extra-oral digestion by secreted proteases; ammonia excreted, which raises the pH of the food |
+
+Xylem feeders illustrate the problem of a dilute diet. Xylem sap contains only a few millimoles of amino acids per litre and almost no sugar, so an insect must process enormous volumes to obtain enough nitrogen; the glassy-winged sharpshooter *Homalodisca vitripennis* passes about a hundred times or more its own mass of sap through its gut each day and excretes it almost unchanged as a fine spray of droplets. The filter chamber lets most of this water bypass the absorptive part of the midgut. In spittlebug nymphs the same watery excreta, mixed with secretions and air, form the protective froth in which they live.
 
 ## 26.3. Excretion and the Fat Body
 
@@ -42,6 +60,21 @@ Many insects that live on nutritionally poor diets, such as plant sap, blood or 
 **Malpighian tubules** ([7.17.4](/7.17.4)) are slender blind tubules that open into the gut at the junction of midgut and hindgut and lie free in the hemolymph. Their number varies from two (some scale insects) or four (flies, many beetles) to more than 200; the locust has about 300, in bundles. They are absent in springtails and aphids. The tubules produce a primary urine by actively secreting potassium ions (by a proton-pumping V-ATPase coupled to a cation/proton exchanger), followed by chloride and water; uric acid, other nitrogenous wastes and foreign substances such as plant toxins are also secreted into the lumen. The urine flows into the hindgut, where the rectal pads reabsorb water, ions, sugars and amino acids according to the needs of the insect, and uric acid precipitates and is excreted with the feces. Most terrestrial insects excrete nitrogen as uric acid, which can be eliminated almost without water. The physiology of this system, including its hormonal control by diuretic and antidiuretic hormones, is in [7.14.23](/7.14.23#sec-23.7.2).
 
 In the larvae of many beetles (such as mealworms, Tenebrionidae) and of Lepidoptera, the distal parts of the Malpighian tubules are closely applied to the rectum and enclosed by a perinephric membrane: in this *cryptonephric system*, the tubules extract water from the rectal contents by creating a high osmotic concentration around the rectum, so that the feces are extremely dry. Mealworms can even absorb water vapour from humid air through the rectum.
+
+Much of what is known about the tubules comes from two classic preparations. J. A. Ramsay (1954) placed an isolated Malpighian tubule in a drop of saline under liquid paraffin, with its open end pulled out into the paraffin, and collected the fluid it secreted as a separate droplet; by changing the bathing saline and analysing the droplets he showed that the primary urine is produced by active secretion of potassium, not by filtration. The "Ramsay assay" is still the standard method, used for instance on the tubules of *Drosophila*, in which genetic tools have shown that the principal cells transport cations and the smaller stellate cells chloride and water.
+
+Simon Maddrell's work on the blood-sucking bug *Rhodnius prolixus* showed how fast the system can work. A fifth-instar nymph takes a blood meal of up to about ten times its own mass, which would make it too heavy and too full to move safely; within minutes of feeding a diuretic hormone (with serotonin) is released, the four Malpighian tubules accelerate their secretion about a thousandfold, and the bug excretes the water and salt of the plasma within a few hours, keeping the concentrated blood cells. At their peak each tubule secretes a volume of fluid equal to its own volume every 10–15 seconds, one of the highest rates of fluid transport per cell known.
+
+**Example 26.3.1** A *Rhodnius* nymph of 40 mg takes a blood meal of 400 mg, about 80% of which (320 mg) is water. If it eliminates about half this water within three hours, the tubules must produce about 160 µL of urine, about 0.9 µL per minute on average, from four tubules; with the meal concentrated to about half its volume, the bug can walk and hide again soon after feeding. The excreted fluid is nearly isosmotic with the hemolymph but rich in sodium and chloride from the plasma, so the bug simultaneously solves a water problem and a salt problem; later in digestion the tubules switch to secreting uric acid and conserving water.
+
+:::
+
+| Nitrogenous waste | Insects | Notes |
+|---|---|---|
+| Uric acid (and urates) | Most terrestrial insects | Insoluble, excreted with little water; may be stored in urate cells or as pigment (white of pierids) |
+| Ammonia | Aquatic larvae and nymphs; blow fly larvae; some cockroaches | Soluble and toxic, requires abundant water |
+| Allantoin and allantoic acid | Many Lepidoptera, some Hemiptera | Products of uric acid breakdown |
+| Urea | Rare, in small amounts | Not a main nitrogenous waste in insects |
 
 Other excretory cells are the *nephrocytes* (pericardial cells along the heart and garland cells around the esophagus), which take up proteins and colloids from the hemolymph by endocytosis, and the urate cells of the fat body.
 
@@ -65,19 +98,29 @@ The tracheae arise as invaginations of the epidermis; they are lined with cuticl
 
 The arrangement of functional spiracles defines respiratory types, which are used in particular to describe larvae:
 
-| Type | Functional spiracles | Examples |
-|---|---|---|
-| Holopneustic | All ten pairs (two thoracic, eight abdominal) | Most adults and many nymphs (locust) |
-| Peripneustic | Nine pairs, one thoracic pair closed | Many larvae of Lepidoptera and Coleoptera |
-| Amphipneustic | Only the first thoracic and the last abdominal pairs | Larvae of many higher flies |
-| Metapneustic | Only the last abdominal pair | Mosquito larvae (at the tip of the siphon), larvae of some flies |
-| Apneustic | None; closed tracheal system | Many aquatic larvae and nymphs (mayflies, damselflies, some midges) |
+| Type | Functional spiracles | Way of life | Examples |
+|---|---|---|---|
+| Holopneustic | All ten pairs (two thoracic, eight abdominal) | Terrestrial, active, ventilating | Most adults and many nymphs (locust, cockroaches) |
+| Peripneustic | Nine pairs, the metathoracic pair closed | Terrestrial larvae living in or on food | Caterpillars, many beetle larvae |
+| Hemipneustic | One or more pairs closed (general term for reduced systems) | Varied | Larvae of some Diptera and Coleoptera |
+| Amphipneustic | Only the mesothoracic and the last abdominal pairs | Larvae in wet or semi-liquid media, breathing at both ends | Larvae of many higher flies (maggots in dung and carcasses) |
+| Propneustic | Only the mesothoracic pair (through respiratory trumpets) | Aquatic, breathing at the surface with the front end | Pupae of mosquitoes |
+| Metapneustic | Only the last abdominal pair | Aquatic or burrowing, breathing at the surface with the rear end | Mosquito larvae (siphon), rat-tailed maggots, larvae of crane flies and diving beetles |
+| Apneustic | None; closed tracheal system | Aquatic, breathing through the cuticle and gills; endoparasites | Nymphs of mayflies and damselflies, many midge larvae, early instars of parasitoids |
+
+The table shows a clear pattern: the fewer the functional spiracles, the more the insect lives in water, mud or semi-liquid food, where open spiracles would flood or clog. Insects that breathe at the surface keep only the spiracles at the end that touches the air, and their openings are surrounded by water-repellent hairs or valves.
+
+In the migratory locust there are ten pairs of spiracles, two on the thorax (meso- and metathoracic) and eight on the abdomen, each with a closing mechanism that limits water loss and keeps out particles. From each spiracle a short trachea leads to the main lateral longitudinal trunk of its side; dorsal and ventral longitudinal trunks and transverse commissures connect the whole system, and large air sacs fill much of the thorax and the base of the abdomen. During ventilation the anterior spiracles open mainly during inspiration and the posterior abdominal spiracles during expiration, so that a unidirectional stream of air passes through the body, as Miller showed in the 1960s by recording spiracle movements and air flow in desert locusts. Tracheoles, formed inside star-shaped tracheal end cells, are less than a micrometre in diameter and lack the spiral taenidia.
 
 ### 26.4.2. Diffusion and Ventilation
 
 Oxygen diffuses in air about $2 \times 10^{-5}\,\mathrm{m^2\,s^{-1}}$ and in water about $2 \times 10^{-9}\,\mathrm{m^2\,s^{-1}}$, ten thousand times more slowly, and air contains about thirty times more oxygen per volume than air-saturated water. By delivering oxygen in the gas phase almost to the mitochondria, the tracheal system avoids the slow step of diffusion through liquid over all but the last few micrometres. In small or inactive insects diffusion along the tracheae is sufficient (Krogh 1920). Large and active insects add convection: rhythmic contractions of the abdomen compress the air sacs and pump air in and out (in the locust air enters through the anterior spiracles and leaves through the posterior ones, so that it flows in one direction through the main trunks), and in flight the deformations of the thorax ventilate the thoracic air sacs. X-ray imaging of living insects showed that even the tracheae of the head and thorax of beetles and crickets are rhythmically compressed (Westneat and colleagues 2003). At rest, the liquid at the tips of the tracheoles limits diffusion; during intense activity metabolites raise the osmotic concentration of the surrounding tissue, the liquid is drawn out and air moves closer to the mitochondria.
 
 Many insects at rest show discontinuous gas exchange: long periods with closed spiracles, a phase of rapid fluttering and a burst of open spiracles in which accumulated $\ce{CO2}$ is released ([7.14.17](/7.14.17#sec-17.7.5)).
+
+Why discontinuous gas exchange evolved is still debated. The *hygric* hypothesis holds that keeping the spiracles closed most of the time reduces respiratory water loss; the *chthonic* hypothesis, that it lets insects living in burrows with high carbon dioxide and low oxygen maintain steep gradients for gas exchange; the *oxidative damage* hypothesis, that it keeps the oxygen partial pressure in the tissues low between bursts and so limits the formation of reactive oxygen species. Comparisons among species and experiments with altered humidity and oxygen give partial support to each; the pattern disappears as soon as metabolic rate rises, and it is shown mainly by resting, often diapausing, insects with low metabolic rates, such as pupae of moths, in which it was first described (Schneiderman and colleagues, 1950s).
+
+The tracheal system develops from clusters of epidermal cells, the tracheal placodes, one on each side of most trunk segments. In *Drosophila* the cells invaginate and migrate as branches guided by a fibroblast growth factor (Branchless) secreted by surrounding tissues and its receptor (Breathless) on the tracheal cells; the branches fuse with those of neighbouring segments into the longitudinal trunks, and in the larva the terminal cells sprout new tracheoles towards tissues that signal hypoxia, much as blood vessels grow towards hypoxic tissues in vertebrates ([7.5](/7.5)). The tracheal system therefore adjusts to the oxygen demand of the tissues during growth, and larvae reared in hypoxia develop more tracheoles.
 
 ### 26.4.3. The Diffusion Limit to Body Size
 
@@ -111,7 +154,11 @@ Insects have colonized fresh water many times, and their respiratory adaptations
 
 *Gills.* Insects with closed (apneustic) tracheal systems take up oxygen by diffusion through the cuticle, often through thin outgrowths rich in tracheae, the *tracheal gills*: abdominal gill plates of mayfly nymphs, caudal lamellae of damselfly nymphs, filamentous gills of stonefly nymphs and caddisfly larvae, and the rectal gills of dragonfly nymphs, which are ventilated by pumping water in and out of the rectum (and expelled forcefully for jet propulsion). Some midge larvae (bloodworms, *Chironomus*) living in oxygen-poor mud have hemoglobin in their hemolymph.
 
+Mayfly nymphs show how gills are ventilated. In still water many species beat their abdominal gill plates rhythmically, renewing the water over the gill surface, and the beating rate rises as dissolved oxygen falls; species of fast streams, by contrast, hold their gills still and rely on the current. Hemoglobin is rare in insects, but it has two notable uses: in *Chironomus* larvae it binds oxygen at the low partial pressures of the mud and stores it for periods when the burrow is not ventilated; in the backswimmer *Anisops* (Notonectidae), it releases oxygen into the air store during a dive, which keeps the volume of the store constant and allows the bug to remain neutrally buoyant in mid-water for minutes.
+
 *Air stores.* Many aquatic beetles and bugs carry air down with them, under the elytra, among hydrofuge hairs or as a bubble on the body surface, into which the spiracles open.
+
+The great diving beetles (*Dytiscus*, *Cybister*) store air under the elytra, to which the abdominal spiracles open, and renew it by raising the tip of the abdomen through the surface film; backswimmers carry air on the ventral side of the abdomen and under the wings; water scorpions (*Nepa*, *Ranatra*, Nepidae) breathe through a long siphon formed by two grooved cerci-like filaments at the tip of the abdomen, which they push through the surface while lying in wait for prey. Riffle beetles (Elmidae) and the bug *Aphelocheirus* have plastrons (below).
 
 **Definition 26.4.3 (Physical Gill)** A **physical gill** (compressible gas gill) is a bubble of air carried by a diving insect and connected with its spiracles, into which oxygen diffuses from the water as the insect uses the oxygen in the bubble, so that the insect obtains more oxygen than the bubble initially contained; the bubble shrinks as nitrogen diffuses out, and must be renewed at the surface.
 
@@ -133,6 +180,12 @@ Insects have an **open circulatory system** ([7.14.15](/7.14.15#sec-15.5.2)): he
 
 The heart is held in place by alary muscles fanning out to the terga. Peristaltic waves of contraction move hemolymph forward; in many insects the direction of the heartbeat reverses periodically, so that hemolymph also flows backward and helps ventilation and the regulation of temperature. In the locust the heart has seven chambers (each with a pair of ostia) in the abdomen. Because the hemolymph pressure from the heart is low, *accessory pulsatile organs* at the bases of the antennae, wings and legs pump hemolymph through these long appendages. Hemolymph pressure, generated by contraction of the body wall, is also used hydraulically: to expand the wings after the final molt, to extend the proboscis of butterflies, to evert glands and genital sacs, and to split the old cuticle at ecdysis.
 
+In the locust the dorsal vessel lies in the pericardial sinus. The heart, closed at its posterior end, consists of seven slightly swollen chambers in the abdomen, each with a pair of lateral ostia whose lips act as valves: they let hemolymph in when the heart relaxes and close when it contracts, so that hemolymph can only move forward. The aorta continues through the thorax into the head, where hemolymph leaves it near the brain; it then flows back through the thorax and legs into the perivisceral sinus and reaches the pericardial sinus from the posterior abdomen. The colourless hemolymph contains amoeboid, phagocytic hemocytes.
+
+The heart of *Drosophila* has become a model for the development of hearts in general. It forms from a row of mesodermal cardioblasts on each side, specified by the transcription factor Tinman, whose vertebrate homologue Nkx2-5 is required for heart development in mice and humans and is mutated in some congenital heart defects ([7.5](/7.5)). Flies with mutations in the genes that control vertebrate heart function also show heart defects, so that the fly heart is used to study the genetics of cardiac ageing and disease.
+
+Hemolymph can also be a weapon. Ladybirds, oil beetles (Meloidae) and some grasshoppers and stick insects release droplets of hemolymph from weak points of the cuticle, usually at the leg joints, when they are attacked ("reflex bleeding"); the hemolymph contains repellent or toxic compounds, such as the alkaloids of ladybirds or the cantharidin of blister beetles, and the bleeding is produced by contraction of the body wall that raises hemolymph pressure locally.
+
 ### 26.5.2. Hemolymph and Hemocytes
 
 Hemolymph makes up 15–75% of the body volume in different insects. Since the tracheae deliver oxygen, it carries little or no oxygen (except in the few insects with hemoglobin) and its main transport functions are those of nutrients, hormones and wastes. Its composition differs from that of vertebrate plasma: the main sugar is the disaccharide trehalose; amino acids are at very high concentrations; and in many phytophagous insects potassium and magnesium are high and sodium low. Hemolymph is also a water reserve and, with its proteins and antimicrobial peptides, part of the immune system.
@@ -149,6 +202,24 @@ The central nervous system of insects is a **ventral nerve cord** ([7.17.4](/7.1
 
 The *subesophageal ganglion* is formed by the fused ganglia of the mandibular, maxillary and labial segments and innervates the mouthparts and the neck. In the ventral nerve cord there are primitively three thoracic and eight abdominal ganglia (the last few fused), connected by paired connectives; in the locust there are three thoracic and five abdominal ganglia (the first abdominal ganglia fused with the metathoracic ganglion). The tendency to concentrate the ganglia is strongest in higher flies and many Hemiptera, in which all thoracic and abdominal ganglia are fused into a single mass in the thorax. A stomatogastric (visceral) nervous system, with the frontal ganglion in front of the brain and the hypocerebral ganglion behind it, controls the muscles of the foregut.
 
+In the migratory locust the nerves of each part can be traced. The protocerebrum, the largest part, sends nerves to the ocelli and, through the large optic lobes, receives the compound eyes; the paired, rounded deutocerebral lobes send nerves to the antennae; the small, conical tritocerebrum gives rise to the circumesophageal connectives that join the subesophageal ganglion below the gut. The subesophageal ganglion innervates the mouthparts and is connected behind with the three thoracic ganglia, which supply the legs, the wing muscles and the organs of the thorax; the metathoracic ganglion also supplies the first three abdominal segments, whose ganglia are fused with it. Five free abdominal ganglia follow, the last of which, a compound terminal ganglion, supplies the genitalia, the rectum and the cerci. The frontal ganglion, connected to the tritocerebrum, controls the peristalsis of the foregut.
+
+The degree of fusion of the ventral ganglia differs greatly among orders, and in holometabolous insects also between larva and adult.
+
+| Insect | Thoracic ganglia | Free abdominal ganglia |
+|---|---|---|
+| Jumping bristletails (Archaeognatha) | 3 | 8 |
+| American cockroach | 3 | 6 |
+| Migratory locust | 3 (the metathoracic ganglion fused with abdominal ganglia 1–3) | 5 |
+| Honey bee worker | 2 (meso- and metathoracic fused, with the first abdominal ganglia) | 5 |
+| Caterpillars | 3 | 7–8 (the last ones fused into a terminal ganglion) |
+| House fly, *Drosophila* (adults) | One thoracico-abdominal mass | None |
+| Heteroptera, many | One fused mass | None |
+
+Fusion shortens the connections between the centres that coordinate the legs and wings and the sense organs, and it is common in small, fast insects; elongate, segmentally organized animals such as caterpillars, which move by waves along the body, keep separate ganglia.
+
+Some insect neurons are large enough to be recorded individually and identified from animal to animal, which made insects central to the study of neural circuits. In locusts a single pair of neurons, the lobula giant movement detector (LGMD) and its postsynaptic partner, the descending contralateral movement detector (DCMD), responds specifically to objects approaching on a collision course and triggers jumping and gliding escape; F. Claire Rind and colleagues analysed the computation by which it distinguishes looming from other motion. The cercal giant interneurons of cockroaches and crickets ([7.17.24](/7.17.24)) and the giant fibres of flies, which trigger the escape jump ([7.17.25](/7.17.25)), are other examples.
+
 The adult brain of *Drosophila* contains about 140,000 neurons, whose complete wiring diagram has been mapped (the FlyWire connectome, 2024), and that of a honey bee about a million. The **mushroom bodies**, paired neuropils of the protocerebrum formed by thousands of intrinsic Kenyon cells, receive olfactory and, in many insects, visual information and are centres of associative learning and memory ([7.16.23](/7.16.23#sec-23.4.3), [7.16.38](/7.16.38#sec-38.4.2)); they are especially large in social Hymenoptera and in cockroaches. The *central complex*, a set of midline neuropils (protocerebral bridge, fan-shaped body, ellipsoid body, noduli), integrates sensory information for orientation and navigation: in *Drosophila* the ellipsoid body contains a ring of neurons whose activity encodes the head direction of the fly ([7.16.44](/7.16.44#sec-44.4.2)), and in locusts and bees the central complex represents the direction of polarized skylight used as a compass.
 
 ## 26.7. Endocrine Organs
@@ -162,6 +233,20 @@ Insect hormones are produced by neurosecretory cells of the brain and other gang
 **Definition 26.7.3 (Prothoracic Gland)** The **prothoracic glands** are a pair of diffuse endocrine glands of ectodermal origin in the prothorax of immature insects, which synthesize the molting hormone ecdysone in response to the brain neuropeptide prothoracicotropic hormone and usually degenerate after the final molt.
 
 The brain's neurosecretory cells, mainly in the pars intercerebralis and pars lateralis of the protocerebrum, send their axons to the corpora cardiaca, which form a neurohemal organ comparable to the vertebrate neurohypophysis ([7.14.32](/7.14.32#sec-32.9.3)). The corpora cardiaca, corpora allata and the hypocerebral ganglion together form the retrocerebral complex. In larvae of higher flies, the corpora allata, corpora cardiaca and prothoracic glands are fused into a single ring gland around the aorta. Other endocrine cells are the Inka cells of the epitracheal glands, which secrete ecdysis-triggering hormone, and the endocrine cells of the midgut epithelium. In adult females, the ovaries become a major source of ecdysteroids. The hormones of development are treated in [7.17.29](/7.17.29): prothoracicotropic hormone stimulates the prothoracic glands to produce **ecdysone**, which initiates each molt, while **juvenile hormone** determines whether the molt is larval, pupal or adult ([7.5.33](/7.5.33)).
+
+The endocrine organs were identified by a series of classic experiments, most of them performed before any insect hormone had been isolated chemically.
+
+| Year | Experiment | Conclusion |
+|---|---|---|
+| 1917–1922 | Stefan Kopeć ligated last-instar caterpillars of the gypsy moth (*Lymantria dispar*) behind the head at different times; parts behind the ligature pupated only if the ligature was applied after a critical period | The brain releases a factor into the blood that is needed for pupation: the first evidence of a neurohormone |
+| 1934–1940 | Vincent Wigglesworth decapitated nymphs of *Rhodnius prolixus*, which molt once after each blood meal, before and after a critical period, and joined decapitated nymphs in parabiosis | A brain hormone acting after feeding triggers molting; a factor from the head of young nymphs keeps them nymphal |
+| 1936 | Wigglesworth implanted corpora allata from fourth-instar nymphs into fifth-instar nymphs of *Rhodnius* | The recipients molted into giant sixth-instar nymphs instead of adults: the corpora allata secrete a "juvenile hormone" |
+| 1940 | Soichi Fukuda transplanted prothoracic glands into isolated abdomens of silkworm larvae | The prothoracic glands produce the molting hormone |
+| 1947–1952 | Carroll Williams worked with diapausing pupae of *Hyalophora cecropia*, implanting brains and prothoracic glands | The brain activates the prothoracic glands; both are needed to end pupal diapause |
+| 1954 | Adolf Butenandt and Peter Karlson isolated about 25 mg of crystalline ecdysone from 500 kg of silkworm pupae | The molting hormone is a steroid |
+| 1967 | Herbert Röller and colleagues determined the structure of juvenile hormone from the abdomens of male *Hyalophora* | Juvenile hormone is a sesquiterpenoid |
+
+Wigglesworth's choice of *Rhodnius* was decisive: because each nymphal instar takes one large blood meal and molts at a predictable time afterwards, the timing of hormone release could be determined simply by decapitating bugs at different intervals after feeding. The same experiments, repeated with radioimmunoassays and genetics, underlie the modern picture of the control of molting and metamorphosis ([7.17.29](/7.17.29)).
 
 ## 26.8. The Reproductive System
 
@@ -185,9 +270,15 @@ Meroistic ovarioles produce eggs faster, because the nurse cells, often polyploi
 
 The female tract has two kinds of ectodermal appendages: the **spermatheca**, a sac with a cuticular lining in which sperm received at mating are stored, often for the whole life of the female (for years in queen ants and honey bees), with a spermathecal gland that keeps them alive; and the *accessory glands* (colleterial glands), which secrete adhesives that attach eggs to the substrate or form the egg case (ootheca) of cockroaches and mantises and the foam around the egg pod of locusts. In many Lepidoptera (Ditrysia) the female has two genital openings: a copulatory opening on segment 8 leading to a sac, the bursa copulatrix, that receives the spermatophore, and an egg-laying opening on segment 9.
 
+In the female migratory locust each ovary consists of about forty or more closely packed panoistic ovarioles lying over the dorsal and lateral surfaces of the gut. The terminal filaments of the ovarioles unite into a ligament that attaches the ovary to the dorsal body wall of the thorax, and the bases of the ovarioles open into the lateral oviduct of their side. The two lateral oviducts run back beneath the gut and join in segment 7 into a short vagina (common oviduct), which opens at the base of the ovipositor. The front end of each lateral oviduct is drawn out into a tubular accessory gland that secretes the foam of the egg pod. A long, coiled duct opens on the dorsal wall of the vagina and ends in the spermatheca, where sperm from the spermatophores are stored; as each egg passes the opening of the duct, sperm are released and enter the egg through its micropyles.
+
+The number of ovarioles is one of the clearest measures of an insect's reproductive strategy: it is small in species that lay few large eggs or bear live young (tsetse flies have only two ovarioles in each ovary and produce one large larva at a time, nourished by "milk glands" in the uterus) and very large in species with huge fecundity (termite queens laying thousands of eggs per day). Within species it varies with nutrition during larval development, which is one of the ways in which larval food quality affects adult fecundity.
+
 ### 26.8.2. The Male Reproductive System
 
-The male has a pair of testes, each consisting of several sperm tubes (follicles) in which spermatogenesis proceeds in a sequence of cysts; the vasa deferentia carry sperm to seminal vesicles, where they are stored, and join a median ejaculatory duct that opens through the phallus ([7.17.24](/7.17.24)). Accessory glands of the male secrete the seminal fluid and, in many insects, the material of the **spermatophore**, a package in which sperm are transferred to the female. Seminal fluid proteins also affect the female: in *Drosophila* the sex peptide, transferred at mating, reduces the female's receptivity to other males and increases her egg laying. In the locust each testis is formed by many sperm tubes, the ejaculatory duct receives the secretions of about fifteen accessory glands on each side, and spermatophores are formed in a spermatophore sac and transferred into the female's spermatheca. Reproduction and the events of fertilization are treated in [7.17.28](/7.17.28).
+The male has a pair of testes, each consisting of several sperm tubes (follicles) in which spermatogenesis proceeds in a sequence of cysts; the vasa deferentia carry sperm to seminal vesicles, where they are stored, and join a median ejaculatory duct that opens through the phallus ([7.17.24](/7.17.24)). Accessory glands of the male secrete the seminal fluid and, in many insects, the material of the **spermatophore**, a package in which sperm are transferred to the female. Seminal fluid proteins also affect the female: in *Drosophila* the sex peptide, transferred at mating, reduces the female's receptivity to other males and increases her egg laying. Reproduction and the events of fertilization are treated in [7.17.28](/7.17.28).
+
+The male accessory glands can be numerous and varied. In the locust the paired testes lie close together above the gut, each formed by many sperm follicles that open into the vas deferens; the two vasa deferentia join beneath the rectum into a short, thick ejaculatory duct, which receives on each side the ducts of about fifteen tubular accessory glands. The ejaculatory duct leads into an ejaculatory sac and a dorsally curved spermatophore sac, both enclosed in strong muscles that form the copulatory apparatus with the phallic sclerites. Sperm mature in the vasa deferentia, are packed with the accessory gland secretions into spermatophores in the spermatophore sac, and are transferred to the female's spermatheca at mating. In mealworm beetles two kinds of accessory gland secretion, from bean-shaped and tubular glands, combine to form the wall and the contents of the spermatophore. In many butterflies and crickets the spermatophore is large and contains nutrients (a "nuptial gift") that are taken up by the female and used for egg production ([7.17.28](/7.17.28)).
 
 ## Summary
 
@@ -202,6 +293,10 @@ The male has a pair of testes, each consisting of several sperm tubes (follicles
 | Nervous system | Brain (protocerebrum with optic lobes, mushroom bodies, central complex; deutocerebrum with antennal lobes; tritocerebrum), subesophageal ganglion, ventral nerve cord, stomatogastric system |
 | Endocrine organs | Neurosecretory cells; corpora cardiaca (Definition 26.7.1), corpora allata (Definition 26.7.2), prothoracic glands (Definition 26.7.3); ring gland; Inka cells |
 | Reproduction | Ovaries of ovarioles (Definition 26.8.1): panoistic, polytrophic, telotrophic; oviducts, spermatheca, accessory glands, bursa copulatrix; testes of sperm tubes, vasa deferentia, seminal vesicles, ejaculatory duct, accessory glands, spermatophore |
+| The locust, system by system | Crop and toothed proventriculus, six caeca and six rectal pads; ten spiracle pairs with unidirectional ventilation; heart of seven chambers; three thoracic and five abdominal ganglia; about forty panoistic ovarioles per ovary; about fifteen male accessory glands on each side |
+| Diet and excretion | Gut types by diet (table); xylem feeders process about a hundred times their mass daily; Ramsay assay; *Rhodnius* diuresis (Example 26.3.1); uric acid, ammonia, allantoin |
+| Respiration in detail | Spiracle types and ways of life; hygric, chthonic and oxidative-damage hypotheses of discontinuous gas exchange; FGF-guided tracheal branching; gill beating; hemoglobin for storage (*Chironomus*) and buoyancy (*Anisops*) |
+| Classic experiments | Kopeć (brain hormone), Wigglesworth (*Rhodnius*: molting hormone, corpora allata and juvenile hormone), Fukuda (prothoracic glands), Williams, Butenandt and Karlson (ecdysone), Röller (structure of juvenile hormone) |
 
 ## Questions
 
@@ -228,3 +323,11 @@ The male has a pair of testes, each consisting of several sperm tubes (follicles
 6. Why might meroistic (polytrophic and telotrophic) ovarioles have evolved independently several times?
 
    **Answer** In panoistic ovarioles each oocyte must transcribe from its own single (tetraploid) nucleus the large amounts of RNA and ribosomes needed for embryogenesis, which limits the speed of oogenesis. In meroistic ovarioles many polyploid nurse cells transcribe and transfer RNA, ribosomes, mitochondria and proteins into the oocyte, so that eggs mature faster; this is advantageous for insects with short life cycles and high fecundity. Since the advantage is general and the developmental change (incomplete cytokinesis of the germ-line cyst and differentiation of nurse cells) is simple, it could arise repeatedly, as the distribution among orders indicates.
+
+7. (Calculation) Using Example 26.3.1, how much urine must each of the four Malpighian tubules of *Rhodnius* produce per minute? If a tubule has a volume of about 0.1 µL, how long does it take to secrete its own volume, and how does this compare with Maddrell's observation?
+
+   **Answer** About $0.9/4 \approx 0.22\,\mathrm{\mu L}$ per minute per tubule on average over three hours. A tubule of 0.1 µL then secretes its own volume in about $0.1/0.22 \approx 0.45$ minutes, roughly 27 seconds. The peak rates measured by Maddrell, a tubule volume every 10–15 seconds, are two to three times higher, as expected, since secretion is fastest in the first hour after the meal and slows as the excess water is removed.
+
+8. Why did Wigglesworth's decapitation experiments on *Rhodnius* give a clear answer, whereas similar experiments on continuously feeding caterpillars are harder to interpret?
+
+   **Answer** In *Rhodnius* each nymphal instar takes a single large blood meal, and the stretching of the abdomen by the meal triggers the release of the brain hormone at a fixed time afterwards; the molt follows at a predictable interval. By decapitating bugs at different times after feeding, Wigglesworth could find a critical period: bugs decapitated before it did not molt, those decapitated after it did, so the brain factor must have been released into the blood during that period. In caterpillars feeding continuously, the timing of hormone release depends on size and nutrition, varies among individuals and cannot be referred to a single event, so a ligature or decapitation at a given age gives variable results. *Rhodnius* also survives decapitation for months, because the head is not needed for breathing, so the long-term effects of removing the brain could be observed.

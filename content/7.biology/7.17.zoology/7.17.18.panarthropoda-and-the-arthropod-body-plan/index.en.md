@@ -5,7 +5,7 @@ description: "Tardigrades (cryptobiosis) and onychophorans (slime papillae, lobo
 
 The third lineage of the **Ecdysozoa** ([7.17.17](/7.17.17)) is the *Panarthropoda*: the water bears (Tardigrada), the velvet worms (Onychophora) and the arthropods. They share paired, clawed limbs on a segmented body, and in the arthropods these limbs and the body wall became jointed and hardened, a change called arthropodization. With well over a million described species, and estimates of several million more, the arthropods are by far the largest animal phylum: insects alone make up more than half of all described species of organisms.
 
-This chapter builds the common ground for the remaining invertebrate chapters. It first describes the two small panarthropod phyla and the Cambrian fossils that show how the arthropod body plan was assembled step by step, then the arthropod body plan itself: segments and tagmata, the exoskeleton and its molting, limbs, internal organs and eyes, and the "head problem" of which segments and appendages are homologous across the subphyla. It ends with the trilobites and the phylogeny of the living arthropods. The four subphyla are treated in [7.17.19](/7.17.19) (Chelicerata), [7.17.20](/7.17.20) (Myriapoda), [7.17.21](/7.17.21) (Crustacea) and from [7.17.22](/7.17.22) on (Hexapoda). The physiology of arthropod muscles, circulation, tracheae, excretion, hormones and vision is in 7.14 and is linked rather than repeated.
+This chapter builds the common ground for the remaining invertebrate chapters. It first describes the two small panarthropod phyla and the Cambrian fossils that show how the arthropod body plan was assembled step by step, then the arthropod body plan itself: segments and tagmata, the exoskeleton and its molting, limbs, internal organs and eyes, and the "head problem" of which segments and appendages are homologous across the subphyla. It ends with the trilobites, the phylogeny of the living arthropods and the question of why the phylum is so diverse. The four subphyla are treated in [7.17.19](/7.17.19) (Chelicerata), [7.17.20](/7.17.20) (Myriapoda), [7.17.21](/7.17.21) (Crustacea) and from [7.17.22](/7.17.22) on (Hexapoda). The physiology of arthropod muscles, circulation, tracheae, excretion, hormones and vision is in 7.14 and is linked rather than repeated.
 
 ## 18.1. Panarthropoda
 
@@ -27,7 +27,7 @@ Most phylogenomic analyses place onychophorans as the sister group of arthropods
 
 Tardigrades live in the water films on mosses, lichens and leaf litter, in fresh water and in marine sediments; moss cushions may hold more than a million per square meter. Most feed by piercing plant, algal or animal cells with their stylets and sucking out the contents, and the stylets are shed and re-formed at each molt. Two main classes are recognized: Heterotardigrada, mostly marine, with cephalic sensory cirri and often dorsal plates, and Eutardigrada, mostly in fresh water and on land, without cirri and with three Malpighian tubules.
 
-Tardigrades are famous for *cryptobiosis*, a reversible state in which metabolism becomes undetectable. When its habitat dries out, a limnoterrestrial tardigrade retracts its head and legs, loses almost all its water and becomes a barrel-shaped *tun*. In this state tardigrades have survived years in museum specimens, temperatures near absolute zero and above 100 °C for minutes, and ten days of exposure to the vacuum and radiation of low Earth orbit (Jönsson et al. 2008). Unlike many anhydrobiotic animals they accumulate little or no trehalose; instead they express intrinsically disordered proteins (cytoplasmic abundant heat-soluble or CAHS proteins) that form a gel and vitrify as the cell dries (Boothby et al. 2017), and *Ramazzottius varieornatus* has a nuclear protein, Dsup, that protects DNA from damage by X-rays (Hashimoto et al. 2016). Tardigrade genomes have lost several Hox genes that in arthropods pattern the middle of the trunk, suggesting that the tardigrade body corresponds to only the head region of an arthropod.
+Tardigrades are famous for *cryptobiosis*, a reversible state in which metabolism becomes undetectable. When its habitat dries out, a limnoterrestrial tardigrade retracts its head and legs, loses almost all its water and becomes a barrel-shaped *tun*, in which the water content falls to a few percent of the body mass and metabolism drops below detectable levels. Entering and leaving the tun takes minutes to hours and requires slow drying; tardigrades dried too fast die, because they need time to synthesize their protective proteins. In this state tardigrades have survived years in museum specimens, temperatures near absolute zero and above 100 °C for minutes, and ten days of exposure to the vacuum and radiation of low Earth orbit (Jönsson et al. 2008). Unlike many anhydrobiotic animals they accumulate little or no trehalose; instead they express intrinsically disordered proteins (cytoplasmic abundant heat-soluble or CAHS proteins) that form a gel and vitrify as the cell dries (Boothby et al. 2017), and *Ramazzottius varieornatus* has a nuclear protein, Dsup, that protects DNA from damage by X-rays (Hashimoto et al. 2016). Tardigrade genomes have lost several Hox genes that in arthropods pattern the middle of the trunk, suggesting that the tardigrade body corresponds to only the head region of an arthropod.
 
 ### 18.1.3. Phylum Onychophora
 
@@ -117,6 +117,25 @@ Biramous limbs are typical of crustaceans, especially of their swimming and filt
 
 The specialization of serially homologous limbs along one body, for sensing, feeding, walking, swimming, gas exchange, copulation and brood care, is the most obvious expression of the arthropod body plan. It is described in detail for the crayfish and shrimp in [7.17.21](/7.17.21) and for insects in [7.17.23](/7.17.23) and [7.17.24](/7.17.24).
 
+### 18.3.5. The Four Subphyla Compared
+
+The body plan described so far is realized differently in each subphylum. The table collects the characters that later chapters describe in detail; it also shows how many of the differences concern adaptations to life in water or on land.
+
+| Character | Chelicerata | Myriapoda | Crustacea | Hexapoda |
+|---|---|---|---|---|
+| Tagmata | Prosoma, opisthosoma | Head, trunk | Head, thorax, abdomen, often a cephalothorax under a carapace | Head, thorax, abdomen |
+| Antennae | None (deutocerebral chelicerae) | One pair | Two pairs | One pair |
+| Mouthparts | Chelicerae, pedipalps; coxal gnathobases of the legs in some | Mandibles, one or two pairs of maxillae | Mandibles, two pairs of maxillae, often maxillipeds | Mandibles, maxillae, labium |
+| Walking legs | 4 pairs on the prosoma | 9 to over 300 pairs on the trunk | Variable; 5 pairs of pereiopods in decapods | 3 pairs on the thorax |
+| Limb type | Uniramous | Uniramous | Primitively biramous | Uniramous |
+| Respiratory organs | Book gills (horseshoe crabs), book lungs and tracheae (arachnids) | Tracheae with spiracles | Gills on the limbs or under the carapace; body surface | Tracheae with spiracles; tracheal gills in aquatic larvae |
+| Excretory organs | Coxal glands; endodermal Malpighian tubules (arachnids) | Ectodermal Malpighian tubules; maxillary glands in some | Antennal or maxillary glands | Ectodermal Malpighian tubules |
+| Lateral eyes | Compound (horseshoe crabs) or reduced to a few simple eyes (arachnids) | Groups of ocelli; compound-like in *Scutigera* | Compound, often stalked | Compound; stemmata in holometabolous larvae |
+| Gonopores | On the second opisthosomal segment | Anterior (Progoneata) or posterior (centipedes) | On the thorax; variable | Posterior, near the end of the abdomen |
+| Development | Mostly direct | Anamorphic or epimorphic | Usually through a nauplius | Direct with metamorphosis; hemimetabolous or holometabolous |
+| Main habitat | Marine (horseshoe crabs, sea spiders), mostly terrestrial (arachnids) | Terrestrial | Aquatic, a few terrestrial | Terrestrial and fresh water |
+| Described species (approx.) | 115,000 | 16,000 | 70,000 | 1,000,000 |
+
 ## 18.4. Molting
 
 Growth in an arthropod is a cycle of four phases, named for crustaceans after Drach and applying in principle to all arthropods ([7.5.33](/7.5.33#sec-33.1) for the general concept of **molting**):
@@ -125,6 +144,12 @@ Growth in an arthropod is a cycle of four phases, named for crustaceans after Dr
 2. Premolt (proecdysis): the epidermis detaches from the old cuticle (apolysis) and secretes a new epicuticle; molting fluid with chitinases and proteases is secreted into the space between old and new cuticle and digests the old endocuticle, the products being resorbed; the new procuticle is deposited beneath the new epicuticle. In crustaceans, calcium is resorbed from the old cuticle and stored.
 3. Ecdysis: the old cuticle, now reduced to epicuticle and exocuticle, splits along preformed lines of weakness (ecdysial lines), and the animal pulls itself out, leaving the exuviae, which include the linings of the foregut, the hindgut and, in insects, the tracheae.
 4. Postmolt: the animal swallows water or air to expand the new, soft cuticle to its new size before it is sclerotized or mineralized; endocuticle continues to be laid down afterward.
+
+Drach divided the crustacean cycle further into stages that can be recognized under the microscope by the state of the setae and the cuticle: A and B (early and late postmolt, the cuticle still soft and then paper-thin), C (intermolt, with C4 the fully hardened state), D0–D4 (premolt, from apolysis to the formation of new setae inside the old ones) and E (ecdysis itself). The intermolt C4 occupies most of the cycle in an adult crab, whereas in a fast-growing juvenile the animal passes almost directly from postmolt into the next premolt.
+
+The cuticle cannot stretch much once it is hardened, so each molt must provide the space for the growth of the following intermolt. A linear increase of 20 % at one molt, for instance, corresponds to a rise of $1.2^3 \approx 1.73$, or 73 %, in body volume, which the animal fills with tissue during the intermolt, while immediately after ecdysis the extra volume is occupied by water or, in insects, by air. The material lost with the exuviae is considerable even after resorption, and many crustaceans and insects eat their own cast cuticle; a lobster recovers much of the calcium it needs from the water and from its exuviae.
+
+The number of molts differs greatly. Insects usually pass through 4–8 larval instars, but mayflies may molt more than 20 times; the American lobster molts about 20–25 times in its first five to seven years and then once a year or less; and some crabs stop at a terminal molt at maturity. Each molt also offers an opportunity to change form, which arthropods use in metamorphosis ([7.17.29](/7.17.29)).
 
 The cycle is under endocrine control. In insects a neuropeptide from the brain, prothoracicotropic hormone, stimulates the prothoracic glands to secrete **ecdysone**, which is converted to the active 20-hydroxyecdysone; a pulse of 20-hydroxyecdysone starts apolysis, and its decline releases ecdysis-triggering hormone and eclosion hormone, which run the motor program of ecdysis; the hormone bursicon then triggers sclerotization of the expanded cuticle. **Juvenile hormone** decides whether a molt leads to another larval stage or to metamorphosis ([7.5.33](/7.5.33#sec-33.3), [7.14.32](/7.14.32#sec-32.9.3)). In crustaceans the ecdysteroid is produced by the Y-organs, and molting is held back between molts by molt-inhibiting hormone released from the X-organ–sinus gland complex of the eyestalk ([7.17.21](/7.17.21)).
 
@@ -190,7 +215,25 @@ Arthropods have two kinds of eyes, innervated from the protocerebrum. Median eye
 
 **Definition 18.7.1 (Compound Eye)** A **compound eye** is a lateral eye made up of many similar optical units, the **ommatidia**, each consisting of a cuticular corneal lens, a crystalline cone formed by cone cells (four in crustaceans and insects), a small group of photoreceptor (retinula) cells, usually eight, whose rhabdomeres together form a light-sensitive rhabdom, and pigment cells that optically isolate the ommatidium.
 
-Each ommatidium samples light from a small solid angle, and the image is a mosaic of these samples. The rhabdoms are made of microvilli of **rhabdomeric photoreceptors** ([7.14.41](/7.14.41#sec-41.6.2)); their regular orientation makes many arthropods sensitive to the plane of polarized light. In an **apposition eye** each rhabdom receives light only through its own lens, which suits animals active in bright light; in a **superposition eye**, typical of nocturnal insects and many crustaceans, a clear zone separates the cones from the retina, and light from many facets is focused onto each rhabdom ([7.14.41](/7.14.41#sec-41.6.4), [7.17.27](/7.17.27)).
+Each ommatidium samples light from a small solid angle, and the image is a mosaic of these samples. The rhabdoms are made of microvilli of **rhabdomeric photoreceptors** ([7.14.41](/7.14.41#sec-41.6.2)); their regular orientation makes many arthropods sensitive to the plane of polarized light. In an **apposition eye** each rhabdom receives light only through its own lens, which suits animals active in bright light; in a **superposition eye**, typical of nocturnal insects and many crustaceans, a clear zone separates the cones from the retina, and light from many facets is focused onto each rhabdom ([7.14.41](/7.14.41#sec-41.6.4), [7.17.27](/7.17.27)). The two designs are compared in the figure and the table.
+
+![Apposition and superposition compound eyes (schematic sections). (A) Apposition eye: each ommatidium is isolated by screening pigment, and its corneal lens and crystalline cone focus the light from a small angle onto the rhabdom directly beneath, so that each rhabdom receives light only through its own facet. (B) Superposition eye: a wide clear zone separates the cones from the retina; parallel rays from one point of the visual field enter many facets and are redirected by the cones (by refraction in insects, by reflection in decapod crustaceans) so that they converge on a single rhabdom, which makes the eye up to several hundred times more sensitive](./plots/eye-types.py)
+
+| Eye type | Optics | Sensitivity | Examples |
+|---|---|---|---|
+| Focal apposition | Lens and cone focus light onto the rhabdom beneath; fused rhabdom | Low | Bees, dragonflies, butterflies, many crabs |
+| Neural superposition | Apposition optics, but the rhabdomeres are separate (open rhabdom); the six photoreceptors in six neighboring ommatidia that look at the same point send their signals to one cartridge in the lamina | Higher than focal apposition at the same resolution | Flies (Diptera) |
+| Refracting superposition | Graded-index cones bend rays across the clear zone | High | Moths, many beetles, caddisflies, krill |
+| Reflecting superposition | Square facets and mirror-lined cones reflect rays across the clear zone | High | Shrimps, crayfish, lobsters |
+| Parabolic superposition | A combination of a lens and a parabolic reflector | High | Some crabs and hermit crabs |
+
+The gain of superposition can be estimated with the standard expression for the optical sensitivity of an eye to an extended source, the number of photons absorbed per receptor for a given radiance,
+
+$$
+S = \left(\frac{\pi}{4}\right)^2 A^2 \left(\frac{d}{f}\right)^2 \left(1 - \mathrm{e}^{-kl}\right),
+$$
+
+where $A$ is the diameter of the aperture, $d$ the diameter of the rhabdom, $f$ the focal length, $k$ the absorption coefficient of the photopigment and $l$ the length of the rhabdom (Land 1981). In an apposition eye the aperture is a single facet, about 20 µm across; in a superposition eye the light from tens to hundreds of facets is pooled, so that the effective aperture is ten or more times wider and, because $S$ grows with $A^2$, the eye is about a hundred times more sensitive. Many nocturnal insects add a further trick: screening pigment migrates into the clear zone by day, turning a superposition eye into a functional apposition eye, and withdraws at night.
 
 The resolution of a compound eye is limited by two effects that pull in opposite directions. The angle between neighboring ommatidia, which sets how finely the visual field is sampled, is $\Delta\varphi = D/R$ for an eye of radius $R$ with facets of diameter $D$; smaller facets sample more finely. But diffraction at a lens of diameter $D$ blurs the image of each ommatidium over an angle of about $\lambda/D$, so smaller facets also see less sharply. The total blur
 
@@ -216,6 +259,21 @@ The ommatidia of crustaceans and insects share precise details, such as exactly 
 With over 20 000 described species, trilobites are the most diverse group of fossil arthropods and among the commonest Paleozoic fossils; in the Cambrian of China, for example, *Redlichia* and many other genera are used to define biostratigraphic zones. Their calcified dorsal exoskeleton fossilized readily, whereas the thin ventral cuticle and the limbs are preserved only in exceptional deposits (Chengjiang, Burgess Shale, the pyritized fossils of Beecher's Trilobite Bed). The limbs were all alike behind the antennae, each with a walking endopod, a gill-bearing exopod and a spiny protopod that passed food forward along the midline to the mouth.
 
 Several features show that the trilobite exoskeleton was molted like any other: the cephalon was crossed by facial sutures along which it split at ecdysis, and many fossils are exuviae. Development passed from a minute protaspis larva through meraspid stages, in which thoracic segments were released one by one from the pygidium, to the holaspid stage with the full number of thoracic segments, a rare example of a fossil ontogeny known in detail. Many trilobites could enroll into a ball for protection, and the eyes had lenses of calcite, a single crystal per lens oriented with its optic axis along the line of sight: holochroal eyes had many small lenses under a common cornea, schizochroal eyes (in Phacopida) fewer, larger lenses, each with a doublet structure that corrected spherical aberration.
+
+The dorsal shield gives the characters by which trilobites are classified. The cephalon has a raised central glabella, flanked by the fixed cheeks (fixigenae); the facial sutures separate these from the free cheeks (librigenae) that carry the visual surface of the eyes. By the course of the sutures, trilobites are proparian (the suture reaches the lateral margin in front of the genal angle), opisthoparian (behind it) or gonatoparian (at it). On the ventral side a calcified plate, the hypostome, lay under the glabella in front of the mouth. The thorax had from two (agnostids) to more than 60 segments, and the pygidium was formed by fused segments behind the thorax. Trilobites ranged in length from about 1 mm to over 70 cm (*Isotelus rex*, Ordovician of Canada).
+
+| Order | Range | Characteristics |
+|---|---|---|
+| Agnostida | Early Cambrian–Late Ordovician | Tiny, eyeless, with two thoracic segments and a pygidium as large as the cephalon; their trilobite status is debated |
+| Redlichiida | Early–Middle Cambrian | Many thoracic segments, small pygidium, crescent-shaped eyes; *Redlichia*, *Eoredlichia* of Chengjiang |
+| Corynexochida | Cambrian–Devonian | Long glabella, often spiny |
+| Ptychopariida | Cambrian–Ordovician | The generalized Cambrian type, very diverse |
+| Asaphida | Cambrian–Silurian | Large pygidium; many pelagic and burrowing forms |
+| Phacopida | Ordovician–Devonian | Schizochroal eyes; enrollment common |
+| Lichida | Cambrian–Devonian | Spiny, with granular exoskeletons |
+| Proetida | Ordovician–Permian | The last order, the only one to survive the Late Devonian crisis |
+
+Trilobites occupied many ways of life. Most were benthic deposit feeders or scavengers that plowed through the sediment, and their traces, such as the resting impressions *Rusophycus* and the crawling trails *Cruziana*, are common in Paleozoic sandstones. Others, with powerful gnathobases, were predators of worms; olenids of oxygen-poor bottoms may have harbored symbiotic bacteria; and some, with huge eyes and streamlined bodies, swam in the open water. Their diversity peaked in the Cambrian and Ordovician, fell in each of the great extinctions, and the last proetids disappeared at the end of the Permian. In China, the swallowtail trilobite *Drepanura* of the late Cambrian of Shandong, whose pygidial spines spread like the tail of a swallow, has been collected since the Song dynasty, and its slabs are still known as "swallow stones".
 
 Trilobites belong to the Artiopoda, a clade of Paleozoic arthropods with similar limbs. Whether artiopodans are closer to chelicerates (the old Arachnomorpha hypothesis, supported by some fossil analyses) or to mandibulates (Antennulata, based on the antennae) is unresolved, which is why they are shown in a polytomy in the tree above.
 
@@ -261,6 +319,23 @@ Chinese textbooks use the same subphyla with different interpretations:
 
 The diagnostic characters these textbooks give for the arthropods, namely heteronomous segmentation, a chitinous exoskeleton with molting, jointed appendages, striated muscle in bundles, a mixocoel (hemocoel) with open circulation and a ventral nerve cord, are all retained here; only their phylogenetic interpretation has changed. The textbook explanation of arthropod success, a protective and waterproof exoskeleton, jointed and specialized appendages, tracheae, metamorphosis that separates larval and adult niches, small size and complex sense organs, is also sound, although the exoskeleton and small size are linked: the same cuticle that protects the animal limits its size (Section 18.3.2).
 
+## 18.10. Why Are There So Many Arthropods?
+
+The arthropods include about 80 % of described animal species, and the insects alone more than a million; estimates of the true number of insect species center on about 5.5 million (Stork 2018). Several properties of the body plan are usually offered as explanations, and they act together:
+
+| Factor | How it promotes diversity |
+|---|---|
+| Serially homologous, independently specializable segments and limbs | The same limb can become an antenna, jaw, leg, paddle, gill or copulatory organ under Hox control, so new ways of feeding and moving evolve by modifying existing parts |
+| The exoskeleton | Protection against predators and desiccation, rigid levers for precise movement, and a surface that can be sculptured into setae, scales, sense organs and wings |
+| Small size | Many niches are available only to small animals; a single plant can host hundreds of species feeding on different parts |
+| Flight (insects) | Dispersal, escape and access to scattered resources, and the colonization of new habitats |
+| Metamorphosis | Larvae and adults use different resources and do not compete (holometabolous insects make up about 85 % of insect species) |
+| Coevolution with plants and animals | Specialization on particular host plants, hosts or prey, especially in herbivorous beetles, moths and flies and in parasitoid wasps |
+| High fecundity and short generations | Rapid adaptation and frequent speciation; large populations resist extinction |
+| Age and low extinction rates | Arthropods have existed for over 520 million years; many insect families have persisted since the Mesozoic, so diversity has accumulated |
+
+These factors explain why arthropods can be diverse, but the diversity is unevenly distributed. Within insects, it is concentrated in four holometabolous orders, the beetles, flies, wasps and moths, and within them in lineages that feed on flowering plants or parasitize other insects. Comparisons of sister groups show that shifts to herbivory on angiosperms and to parasitism are associated with higher diversity, which indicates that ecological opportunity, not the body plan alone, has driven the radiations. The insect orders and their diversity are treated in [7.17.30](/7.17.30)–[7.17.36](/7.17.36), and their interactions with plants in [7.17.37](/7.17.37).
+
 ## Summary
 
 | Topic | Key points |
@@ -272,12 +347,14 @@ The diagnostic characters these textbooks give for the arthropods, namely hetero
 | Body plan | Segments boxed by tergite, sternite and pleura; tagmata specialized under Hox control |
 | Exoskeleton | Definition 18.3.2; epicuticle (wax, no chitin), exocuticle (sclerotized), endocuticle; chitin microfibrils in helicoidal lamellae; sclerotization, mineralization, resilin; size limits |
 | Limbs | Protopod (coxa, basis) with endites and exites, telopod; biramous and uniramous (Definition 18.3.3); uniramy convergent |
-| Molting | Intermolt, premolt (apolysis, molting fluid), ecdysis, postmolt; ecdysteroids, juvenile hormone, bursicon; crustacean MIH |
+| Molting | Intermolt, premolt (apolysis, molting fluid), ecdysis, postmolt (Drach stages A–E); a 20 % linear increment means 73 % more volume; ecdysteroids, juvenile hormone, bursicon; crustacean MIH |
 | Internal organs | Open circulation with dorsal heart and ostia; hemocyanin; cuticle-lined fore- and hindgut; nephridial (coxal, antennal, maxillary) glands and convergent Malpighian tubules; three-part brain and ventral nerve cord |
 | Head problem | Protocerebral appendages lost; chelicerae = antennae of insects = first antennae of crustaceans (deutocerebral); pedipalps = second antennae = intercalary segment (tritocerebral); mandibles on segment 4 |
-| Eyes | Median ocelli and lateral compound eyes (Definition 18.7.1); apposition and superposition; optimum facet $D^* = \sqrt{\lambda R}$, resolution $\propto R^{-1/2}$ |
-| Trilobites | Definition 18.8.1; cephalon, thorax, pygidium, three lobes; biramous limbs; calcite lenses; facial sutures; protaspis–meraspis–holaspis |
+| Eyes | Median ocelli and lateral compound eyes (Definition 18.7.1); focal and neural apposition, refracting, reflecting and parabolic superposition; optimum facet $D^* = \sqrt{\lambda R}$, resolution $\propto R^{-1/2}$; sensitivity $\propto A^2$ |
+| Trilobites | Definition 18.8.1; cephalon (glabella, fixed and free cheeks, hypostome), thorax, pygidium, three lobes; biramous limbs; calcite lenses; facial sutures; protaspis–meraspis–holaspis; eight orders, the Proetida surviving to the end of the Permian |
 | Phylogeny | Chelicerata + Mandibulata (Definition 18.9.1); Myriapoda + Pancrustacea (Definition 18.9.2); Uniramia, Atelocerata, Schizoramia and Myriochelata rejected |
+| Subphyla compared | Tagmata, antennae, mouthparts, legs, respiratory and excretory organs, eyes and development differ systematically; many differences are adaptations to water or land |
+| Diversity | About 80 % of animal species; segment specialization, exoskeleton, small size, flight, metamorphosis, coevolution, fecundity and age, with ecological opportunity concentrating diversity in a few insect orders |
 
 ## Questions
 
@@ -300,3 +377,10 @@ The diagnostic characters these textbooks give for the arthropods, namely hetero
 5. (Open question) Onychophoran legs have no intrinsic muscles and are extended by hydrostatic pressure, and spiders extend two leg joints hydraulically. Discuss what this tells us about the evolution of arthropod locomotion, and suggest an experiment to measure the role of hydraulics in spider walking.
 
    **Answer** The ancestral panarthropod limb was a hydrostatic lobopod, moved by body-wall muscles and pressure; arthropodization added sclerites and intrinsic flexor and extensor muscles, but hydraulic mechanisms could persist where extensor muscles were lost or never evolved, as in spider leg joints, so the arthropod leg is a mosaic of muscular and hydraulic control. Experiment: insert a pressure transducer into the prosoma of a spider and record hemolymph pressure during walking, running and jumping, together with high-speed video of leg-joint angles; the hydraulic hypothesis predicts pressure peaks coinciding with extension of the femur–patella and tibia–metatarsus joints, increasing with speed. Puncturing the cuticle to lower pressure, or loading the spider, should impair extension at these joints but not flexion. Such measurements (Parry and Brown 1959; later work) show pressures of tens of kilopascals during fast movement.
+
+6. Using $S \propto A^2$, compare the sensitivity of an apposition eye with facets 25 µm across and a superposition eye in which the light from a patch of facets 300 µm across converges on each rhabdom, other things being equal. Why is the gain not obtained without cost?
+
+   **Answer** The ratio is $(300/25)^2 = 144$, so the superposition eye is about 140 times more sensitive. The cost is spatial resolution and complexity: the image formed by many facets is blurred by imperfections of the optics and by light spreading in the clear zone, so superposition eyes usually resolve less finely than apposition eyes of the same size; they also need a deep eye with a clear zone and precisely graded cones or mirrors, and many species need pigment migration to protect the eye in daylight.
+7. A shore crab 40 mm wide molts with a linear increment of 25 %. By how much must it increase its volume immediately after ecdysis, and where does the extra volume come from at first and later?
+
+   **Answer** The volume increases by a factor $1.25^3 \approx 1.95$, nearly doubling. Immediately after ecdysis, before the new cuticle hardens, the crab takes up water through the gut and gills to stretch the soft cuticle to its new size; during the following intermolt the water is gradually replaced by new tissue grown from food, while the cuticle hardens by mineralization and the endocuticle thickens.
