@@ -11894,7 +11894,7 @@ terms:
   - { zh: 过敏原, en: allergen, aliases: [allergens, 变应原] }
   - { zh: 特应性, en: atopy, aliases: [atopic] }
   - { zh: 全身性过敏反应, en: anaphylaxis, aliases: [过敏性休克] }
-  - { zh: 变应原免疫治疗, en: allergen immunotherapy, aliases: [脱敏治疗, 特异性免疫治疗] }
+  - { zh: 过敏原免疫治疗, en: allergen immunotherapy, aliases: [变应原免疫治疗, 脱敏治疗, 特异性免疫治疗] }
   - { zh: 迟发型超敏反应, en: delayed-type hypersensitivity, aliases: [DTH] }
   - { zh: Arthus 反应, en: Arthus reaction }
   - { zh: 血清病, en: serum sickness }

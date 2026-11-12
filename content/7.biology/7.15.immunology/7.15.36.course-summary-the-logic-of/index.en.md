@@ -1,9 +1,9 @@
 ---
 title: "Course Summary: The Logic of the Immune System"
-source_hash: 2f9fb536e298
+source_hash: c1c5fac99e4f
 ---
 
-Immunology has many names but few organizing principles. This chapter introduces no new knowledge; it puts the preceding 35 chapters back onto a single map: an immune response answers five questions in turn (who recognizes, how the decision is made after recognition, what effector mechanisms clear the threat, how it is remembered, and how it is switched off and restrained), and the answer to each question unfolds across three effector modules, types 1, 2, and 3. After reading this chapter, the reader should be able to place any newly encountered molecule or cell into a cell of the grid "which question, which module," and know which class of disease its defect corresponds to. Molecule names in the tables are not set in bold, to keep them easy to look up; to return to a definition, follow the numbered objects back to the relevant chapter.
+Immunology has many names but few organizing principles. This chapter introduces no new knowledge; it puts the preceding 35 chapters back onto a single map: an immune response answers five questions in turn (who recognizes, how the decision is made after recognition, what effector mechanisms clear the threat, how it is remembered, and how it is switched off and restrained), and the answer to each question unfolds across three effector modules, types 1, 2, and 3. After reading this chapter, the reader should be able to place any newly encountered molecule or cell into a cell of the grid "which question, which module," and know which class of disease its defect corresponds to. To return to a definition, follow the numbered objects back to the relevant chapter.
 
 ## 36.1. A Pathway of Response
 

@@ -1,7 +1,7 @@
 ---
 title: Type I Hypersensitivity and Allergy
 description: "The four-type classification of hypersensitivity, then Type I in detail: allergens and sensitization (epithelial alarmins, Th2 cells and IgE production), FcεRI and mast cell activation (the bell-shaped dose response of multivalent cross-linking), mediators and the early and late phases, anaphylaxis, genetic and environmental factors in atopy and an assessment of the hygiene hypothesis, and the immunological principles of diagnosis and treatment."
-source_hash: 9b06de36fe3b
+source_hash: 0eb52caf5dd6
 ---
 
 The preceding chapters described how immune responses are generated and how they are shut down; from this chapter on we turn to what happens when things go wrong. The common pattern of immunopathology is that a normal effector module is directed at the wrong target, or that its magnitude or duration is out of control. Type I hypersensitivity is the most typical example: it uses the module of **type 2 immunity**, which evolved to expel parasites and venoms (IL-4, IL-5, IL-13, **Th2 cells**, **IgE**, mast cells and eosinophils; see [7.15.17](/7.15.17), [7.15.20](/7.15.20), [7.15.21](/7.15.21)), but it is set off by harmless antigens such as pollen, dust mites and food proteins.

@@ -1,6 +1,6 @@
 ---
 title: Immunophenotyping and a Marker Atlas
-source_hash: 0e148d1ca815
+source_hash: 90017f9e0817
 ---
 
 The preceding chapters repeatedly describe cells by the molecules they express: CD4⁺ T cells, CD20⁺ B cells, PD-1⁺ exhausted cells, CD103⁺ resident memory cells. This chapter turns these scattered descriptions into a systematic way of reading cells. It answers three questions: how a combination of surface and intracellular markers tells us what a cell is and what state it is in; how multidimensional data (flow cytometry, mass cytometry, multiplexed imaging) turn these combinations into cell populations; and when markers should not be trusted. In the logic of the course it corresponds to no single question but is the readout end of all of them: every step of recognition, decision, effector function, memory, and regulation is observed, in the laboratory and in pathology, as a change in markers. (CD molecules organized by function are in [7.15.4](/7.15.4), the technical principles in [7.15.34](/7.15.34), the position of cells in tissues in [7.15.22](/7.15.22), the tumor-infiltration readouts in [7.15.30](/7.15.30), and the analysis of spatial omics data in [7.9.6](/7.9.6).) This chapter deals only with meaning and interpretation, not with staining procedures.
@@ -247,7 +247,7 @@ In designing a marker panel the order should be:
 
 1. Ask the question first, then choose the markers: to answer "do T cells enter the tumor nest?", one needs the tumor nest (PanCK), T cells (CD3, CD8), proliferation or exhaustion (Ki-67, PD-1), and a nuclear marker; there is no need to pursue "the more the better."
 2. Confirm each cell type with at least two independent markers: one positive for the lineage, and another that is mutually exclusive or located differently (for example, CD3 on the membrane and FOXP3 in the nucleus together confirm a Treg).
-3. Avoid placing markers that may colocalize next to each other on the same cell type, to reduce "lateral spillover" (see Section 35.6.2).
+3. Put markers that may be coexpressed on spectrally distant channels, to reduce spectral spillover; lateral spillover between neighboring cells in imaging is treated in Section 35.6.2.
 4. Put low-abundance molecules on bright, stable detection channels and high-abundance molecules on dim channels (for the linear algebra of fluorescence spillover see [7.15.34](/7.15.34)).
 5. Provide positive and negative internal controls for every key marker, and validate on the target sample (Section 35.5.4).
 6. Keep a marker of a "background" component in the panel (PanCK, αSMA, CD31) so that the positions of immune cells have a reference.

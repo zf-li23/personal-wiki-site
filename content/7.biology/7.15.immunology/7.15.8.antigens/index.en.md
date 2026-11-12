@@ -1,7 +1,7 @@
 ---
 title: Antigens
 description: What adaptive immunity recognizes. Immunogenicity and antigenicity, the hapten–carrier effect, linear and conformational epitopes, T-cell and B-cell epitopes, shared epitopes and cross-reactivity, factors that affect immunogenicity, thymus-dependent and thymus-independent antigens and other classifications, and the nonspecific immune stimulators (superantigens, adjuvants and mitogens); with a simple model of BCR cross-linking.
-source_hash: 85feb430e3e5
+source_hash: 025dd24bcb5f
 ---
 
 Innate immunity recognizes molecular patterns shared by whole classes of microbes ([7.15.6](/7.15.6)); adaptive immunity recognizes specific molecular structures, and can recognize almost any structure. This chapter gives the adaptive-immunity answer to the question "what is recognized?" on the path of knowledge ([7.15.1](/7.15.1)): what kinds of substances can be recognized by T and B lymphocytes, what kinds can elicit a response, and why these are not the same thing.
