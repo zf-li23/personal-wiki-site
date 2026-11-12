@@ -8149,7 +8149,7 @@ terms:
   - { zh: 内细胞团, en: inner cell mass }
   - { zh: 滋养外胚层, en: trophectoderm }
   - { zh: 组织表面张力, en: tissue surface tension }
-  - { zh: 原肠作用, en: gastrulation }
+  - { zh: 原肠作用, en: gastrulation, aliases: [原肠胚形成] }
   - { zh: 原肠胚, en: gastrula }
   - { zh: 胚层, en: germ layer, aliases: [germ layers] }
   - { zh: 外胚层, en: ectoderm }
@@ -9749,7 +9749,7 @@ terms:
   - { zh: 随机性状映射, en: stochastic character mapping }
   - { zh: 达尔文（速率单位）, en: darwin, aliases: [达尔文], scope: ["7.10"] }
   - { zh: 霍尔丹（速率单位）, en: haldane, aliases: [霍尔丹], scope: ["7.10"] }
-  - { zh: 表征种概念, en: phenetic species concept, aliases: [表征种, 形态学物种概念, 形态种, morphological species concept] }
+  - { zh: 表征种概念, en: phenetic species concept, aliases: [表征种, 表型物种概念, 形态学物种概念, 形态种, morphological species concept] }
   - { zh: 生态型, en: ecotype, aliases: [ecotypes] }
   - { zh: 性印记, en: sexual imprinting, aliases: [求偶印记] }
   - { zh: 活化石, en: living fossil, aliases: [living fossils] }
@@ -12727,7 +12727,7 @@ terms:
   - { zh: 浮游营养型幼虫, en: planktotrophic larva, aliases: [planktotrophy] }
   - { zh: 卵黄营养型幼虫, en: lecithotrophic larva, aliases: [lecithotrophy] }
   - { zh: 异态交替, en: heterogony, scope: ["7.17"] }
-  - { zh: 中央管系统, en: Haversian system, aliases: [osteon, 骨单位] }
+  - { zh: 哈弗斯系统, en: Haversian system, aliases: [osteon, 骨单位, 中央管系统] }
   - { zh: 斜纹肌, en: obliquely striated muscle }
   - { zh: 上皮肌细胞, en: epitheliomuscular cell, aliases: [epitheliomuscular cells, 皮肌细胞, 上皮肌肉细胞] }
   - { zh: 上表皮, en: epicuticle, scope: ["7.17"] }
@@ -12965,3 +12965,32 @@ terms:
   - { zh: 生物防治, en: biological control, aliases: [biocontrol] }
   - { zh: 有害生物综合治理, en: integrated pest management, aliases: [IPM, 综合防治] }
   - { zh: 寄主范围, en: host range, scope: ["7.17"] }
+  - { zh: 新头假说, en: new head hypothesis }
+  - { zh: 齿质单元, en: odontode, aliases: [odontodes] }
+  - { zh: 甲胄鱼类, en: ostracoderm, aliases: [ostracoderms, 甲胄鱼] }
+  - { zh: 牙形动物, en: conodont, aliases: [conodonts, 牙形石] }
+  - { zh: 盔甲鱼类, en: Galeaspida, aliases: [galeaspids] }
+  - { zh: 骨甲鱼类, en: Osteostraci, aliases: [osteostracans] }
+  - { zh: 沙隐虫, en: ammocoete, aliases: [ammocoetes] }
+  - { zh: 可变淋巴细胞受体, en: variable lymphocyte receptor, aliases: [variable lymphocyte receptors, VLR] }
+  - { zh: 盾皮鱼类, en: Placodermi, aliases: [placoderms] }
+  - { zh: 棘鱼类, en: Acanthodii, aliases: [acanthodians] }
+  - { zh: 罗伦氏壶腹, en: ampulla of Lorenzini, aliases: [ampullae of Lorenzini, 洛伦兹壶腹] }
+  - { zh: 螺旋瓣, en: spiral valve, scope: ["7.17"] }
+  - { zh: 直肠腺, en: rectal gland }
+  - { zh: 歪型尾, en: heterocercal tail, aliases: [heterocercal] }
+  - { zh: 正型尾, en: homocercal tail, aliases: [homocercal] }
+  - { zh: 鳍条, en: lepidotrichia, aliases: [lepidotrichium] }
+  - { zh: 开鳔类, en: physostomous, aliases: [physostome, physostomes] }
+  - { zh: 闭鳔类, en: physoclistous, aliases: [physoclist, physoclists] }
+  - { zh: 鳃耙, en: gill raker, aliases: [gill rakers] }
+  - { zh: Strouhal 数, en: Strouhal number, aliases: [斯特劳哈尔数] }
+  - { zh: 内鼻孔, en: choana, aliases: [choanae, internal nostril] }
+  - { zh: 离片椎类, en: Temnospondyli, aliases: [temnospondyls] }
+  - { zh: 壳椎类, en: Lepospondyli, aliases: [lepospondyls] }
+  - { zh: 尾杆骨, en: urostyle }
+  - { zh: 蝌蚪, en: tadpole, aliases: [tadpoles] }
+  - { zh: 皮肤呼吸, en: cutaneous respiration }
+  - { zh: 无肺螈科, en: Plethodontidae, aliases: [lungless salamanders, plethodontids] }
+  - { zh: 喷水孔, en: spiracle, aliases: [spiracles], scope: ["7.17.45", "7.17.46", "7.17.47", "7.17.48", "7.17.49", "7.17.50", "7.17.51", "7.17.52", "7.17.53", "7.17.54", "7.17.55", "7.17.56", "7.17.57", "7.17.58", "7.17.59", "7.17.60", "7.17.61", "7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67", "7.17.68"] }
+  - { zh: 鳃盖, en: operculum, scope: ["7.17.47", "7.17.48", "7.17.56", "7.17.57", "7.17.58", "7.17.59", "7.17.60", "7.17.61", "7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67", "7.17.68"] }

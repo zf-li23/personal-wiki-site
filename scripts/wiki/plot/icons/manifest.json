@@ -1573,6 +1573,16 @@
    "leaf"
   ]
  },
+ "phylopic/aardvark": {
+  "source": "phylopic",
+  "name": "Orycteropus afer",
+  "author": "Pearson Scott Foresman",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/cfee2dca-3767-46b8-8d03-bd8f46e79e9e",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/acorn-worm": {
   "source": "phylopic",
   "name": "Enteropneusta",
@@ -1601,6 +1611,26 @@
   "url": "https://www.phylopic.org/images/831e01d4-4ecb-453a-ba4b-a84407c8e28e",
   "tags": [
    "phylo"
+  ]
+ },
+ "phylopic/albatross": {
+  "source": "phylopic",
+  "name": "Diomedea",
+  "author": "Kimberly Haddrell",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/782009b8-e3e8-4cb5-a6a9-a0a06bafa50d",
+  "tags": [
+   "bird"
+  ]
+ },
+ "phylopic/alligator": {
+  "source": "phylopic",
+  "name": "Alligator mississippiensis",
+  "author": "Ferran Sayol",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/eefc0a4d-24b5-4c91-b687-8bd28c414295",
+  "tags": [
+   "reptile"
   ]
  },
  "phylopic/allomyces": {
@@ -1656,6 +1686,27 @@
    "cephalochordate"
   ]
  },
+ "phylopic/amphisbaenian": {
+  "source": "phylopic",
+  "name": "Amphisbaenia",
+  "author": "Jack Mayer Wood",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/be9e5c75-66a6-4828-a39b-648884a72521",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/ankylosaur": {
+  "source": "phylopic",
+  "name": "Ankylosaurus",
+  "author": "Itai Fein",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8a8a2525-e97d-4505-8085-7958f8d36137",
+  "tags": [
+   "dinosaur",
+   "fossil"
+  ]
+ },
  "phylopic/anole": {
   "source": "phylopic",
   "name": "Anolis carolinensis",
@@ -1685,6 +1736,16 @@
   "tags": [
    "insect",
    "social"
+  ]
+ },
+ "phylopic/anteater": {
+  "source": "phylopic",
+  "name": "Myrmecophaga tridactyla",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/d52b48fc-be52-46a1-94b7-ac7790b4730c",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/antlion": {
@@ -1742,6 +1803,16 @@
    "evolution"
   ]
  },
+ "phylopic/armadillo": {
+  "source": "phylopic",
+  "name": "Dasypus novemcinctus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/5d59b5ce-c1dd-40f6-b295-8d2629b9775e",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/aspergillus": {
   "source": "phylopic",
   "name": "Aspergillus",
@@ -1762,6 +1833,16 @@
    "plant",
    "eudicot",
    "asterid"
+  ]
+ },
+ "phylopic/australian-lungfish": {
+  "source": "phylopic",
+  "name": "Neoceratodus forsteri",
+  "author": "Roberto Díaz Sibaja",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/3bfadee3-c4c5-408e-a1b8-e09bec80bc7f",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/axolotl": {
@@ -1785,6 +1866,16 @@
   "tags": [
    "bacterium",
    "model-organism"
+  ]
+ },
+ "phylopic/baiji": {
+  "source": "phylopic",
+  "name": "Lipotes vexillifer",
+  "author": "Chris huh",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/103dbb51-1bce-4df6-b1ac-ff0d38d188a3",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/baleen-whale": {
@@ -1839,6 +1930,16 @@
    "insect"
   ]
  },
+ "phylopic/bichir": {
+  "source": "phylopic",
+  "name": "Polypterus",
+  "author": "Fidji Berio",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ec628c63-be72-4faf-a588-e979a95ebb63",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/bivalve": {
   "source": "phylopic",
   "name": "Bivalvia",
@@ -1858,6 +1959,27 @@
   "tags": [
    "fish",
    "marine"
+  ]
+ },
+ "phylopic/bowfin": {
+  "source": "phylopic",
+  "name": "Amia calva",
+  "author": "Duane Raver (vectorized by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/c957bd69-9ca4-465e-b86e-f28824ab739d",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/brachiosaur": {
+  "source": "phylopic",
+  "name": "Brachiosaurus",
+  "author": "Amy Beauvois",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2003b4f6-7b8d-4c98-9797-1aca028dc2ac",
+  "tags": [
+   "dinosaur",
+   "fossil"
   ]
  },
  "phylopic/brassica": {
@@ -1923,6 +2045,26 @@
    "insect"
   ]
  },
+ "phylopic/caecilian": {
+  "source": "phylopic",
+  "name": "Gymnophiona",
+  "author": "Marcos Amend (original photograph)",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/4dd27c92-9daf-4217-b35d-03487bc4a96d",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/carp": {
+  "source": "phylopic",
+  "name": "Cyprinus carpio",
+  "author": "Carlos Cano-Barbacil",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/25a76141-cca2-4b56-bd9f-9f5fdcd8efa1",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/cattle": {
   "source": "phylopic",
   "name": "Bos",
@@ -1954,6 +2096,27 @@
    "arthropod"
   ]
  },
+ "phylopic/ceratopsian": {
+  "source": "phylopic",
+  "name": "Triceratops",
+  "author": "Danny Anduza",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/075de9e2-1b71-49d3-8d22-9eb2a78248e4",
+  "tags": [
+   "dinosaur",
+   "fossil"
+  ]
+ },
+ "phylopic/chameleon": {
+  "source": "phylopic",
+  "name": "Chamaeleo",
+  "author": "Alex Slavenko",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/5346cae2-1543-4aeb-9ef0-7d67005749c3",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/chara": {
   "source": "phylopic",
   "name": "Chara",
@@ -1975,6 +2138,16 @@
    "model-organism"
   ]
  },
+ "phylopic/chimaera": {
+  "source": "phylopic",
+  "name": "Chimaera monstrosa",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/4b17f488-f226-4a2d-9856-25e22751478f",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/chimpanzee": {
   "source": "phylopic",
   "name": "Pan troglodytes",
@@ -1984,6 +2157,16 @@
   "tags": [
    "mammal",
    "primate"
+  ]
+ },
+ "phylopic/chinese-alligator": {
+  "source": "phylopic",
+  "name": "Alligator sinensis",
+  "author": "Wani2Y",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/fddc8b3c-20a3-4e7b-8c9c-be62e52aa2ab",
+  "tags": [
+   "reptile"
   ]
  },
  "phylopic/chiton": {
@@ -2060,6 +2243,16 @@
    "plant"
   ]
  },
+ "phylopic/cobra": {
+  "source": "phylopic",
+  "name": "Naja",
+  "author": "V. Deepak",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/coccolithophore": {
   "source": "phylopic",
   "name": "Emiliania",
@@ -2134,6 +2327,17 @@
    "mollusc"
   ]
  },
+ "phylopic/confuciusornis": {
+  "source": "phylopic",
+  "name": "Confuciusornis",
+  "author": "Scott Hartman",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/d48ac7b2-f36e-4d8c-9ac0-406beda6f39b",
+  "tags": [
+   "bird",
+   "fossil"
+  ]
+ },
  "phylopic/conifer": {
   "source": "phylopic",
   "name": "Cupressaceae",
@@ -2167,6 +2371,16 @@
   "url": "https://www.phylopic.org/images/c80c9f0a-4370-404c-8716-38a684d52239",
   "tags": [
    "arthropod"
+  ]
+ },
+ "phylopic/crane": {
+  "source": "phylopic",
+  "name": "Grus",
+  "author": "Mathieu Pélissié",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/5d6a2703-c087-4f58-a14d-0bbc55131100",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/crane-fly": {
@@ -2316,6 +2530,28 @@
    "model-organism"
   ]
  },
+ "phylopic/dicynodont": {
+  "source": "phylopic",
+  "name": "Lystrosaurus",
+  "author": "Matt Celeskey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/38e1e43e-b1ee-4baf-b571-4c6a2341fbdf",
+  "tags": [
+   "synapsid",
+   "fossil"
+  ]
+ },
+ "phylopic/dimetrodon": {
+  "source": "phylopic",
+  "name": "Dimetrodon",
+  "author": "Dmitry Bogdanov",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/1f3e74df-30e6-422b-9ce2-db7df199f11d",
+  "tags": [
+   "synapsid",
+   "fossil"
+  ]
+ },
  "phylopic/dinoflagellate": {
   "source": "phylopic",
   "name": "Dinophyceae",
@@ -2334,6 +2570,26 @@
   "url": "https://www.phylopic.org/images/50a3840c-8e67-4d89-8904-609fcd53860a",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/dogfish": {
+  "source": "phylopic",
+  "name": "Squalus acanthias",
+  "author": "M Kolmann",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/4b7f790f-6063-4bc2-9f16-68df3a750134",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/dolphin": {
+  "source": "phylopic",
+  "name": "Delphinidae",
+  "author": "Chris huh",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/4756b392-063c-4841-ac32-06719c9e71f5",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/dragonfly": {
@@ -2377,6 +2633,16 @@
    "model-organism"
   ]
  },
+ "phylopic/duck": {
+  "source": "phylopic",
+  "name": "Anas platyrhynchos",
+  "author": "Caleb M. Gordon",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f562234a-9b05-439c-aad5-0ea83ed4c553",
+  "tags": [
+   "bird"
+  ]
+ },
  "phylopic/e-coli": {
   "source": "phylopic",
   "name": "Escherichia coli",
@@ -2386,6 +2652,16 @@
   "tags": [
    "bacterium",
    "model-organism"
+  ]
+ },
+ "phylopic/eagle": {
+  "source": "phylopic",
+  "name": "Aquila chrysaetos",
+  "author": "Anthony Caravaggi",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/b2b60a18-fd7d-49b2-a15d-54a62cdcac6b",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/earthworm": {
@@ -2406,6 +2682,26 @@
   "url": "https://www.phylopic.org/images/3fd92960-bac6-4cd4-bcf6-584c27ee2758",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/echidna": {
+  "source": "phylopic",
+  "name": "Tachyglossus aculeatus",
+  "author": "Becky Barnes",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/6885c062-5deb-4ebf-a481-752186819108",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/eel": {
+  "source": "phylopic",
+  "name": "Anguilla anguilla",
+  "author": "Ingo Braasch",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9ce911e2-a8fa-47a2-afe9-ca18d71be30f",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/entoproct": {
@@ -2450,6 +2746,16 @@
    "arthropod"
   ]
  },
+ "phylopic/eusthenopteron": {
+  "source": "phylopic",
+  "name": "Eusthenopteron",
+  "author": "Steven Coombs (vectorized by T. Michael Keesey)",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/c81d7d12-7b4f-4ddd-bbb9-11dc0d856792",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/fairy-shrimp": {
   "source": "phylopic",
   "name": "Anostraca",
@@ -2479,6 +2785,16 @@
   "url": "https://www.phylopic.org/images/eb18e690-6bd2-4f1e-b59e-45197b02c025",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/flying-squirrel": {
+  "source": "phylopic",
+  "name": "Pteromys",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6997107a-287b-4c0f-956a-d527ba5e0868",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/foraminiferan": {
@@ -2511,6 +2827,36 @@
    "amphibian"
   ]
  },
+ "phylopic/gar": {
+  "source": "phylopic",
+  "name": "Lepisosteus",
+  "author": "Andy Wilson",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/8ed59973-73c2-4fbd-9bf0-60c07405870b",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/gecko": {
+  "source": "phylopic",
+  "name": "Gekko gecko",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9aca34d8-4dde-418d-9fdc-2d58b6a7b267",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/gharial": {
+  "source": "phylopic",
+  "name": "Gavialis gangeticus",
+  "author": "Jagged Fang Designs",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f963f388-8297-4ceb-91f6-493b38dccba5",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/giant-clam": {
   "source": "phylopic",
   "name": "Tridacna",
@@ -2521,6 +2867,26 @@
    "mollusc"
   ]
  },
+ "phylopic/giant-panda": {
+  "source": "phylopic",
+  "name": "Ailuropoda melanoleuca",
+  "author": "T. Michael Keesey",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/4b1f7a58-8713-4d6e-a130-4c8a1ac2f749",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/giant-salamander": {
+  "source": "phylopic",
+  "name": "Andrias",
+  "author": "Y. de Hoev. (vectorized by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/4825e499-7da0-479a-b189-89f61d40617b",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/giardia": {
   "source": "phylopic",
   "name": "Giardia",
@@ -2529,6 +2895,16 @@
   "url": "https://www.phylopic.org/images/697d4532-b551-4169-95de-bcc74bb35b9f",
   "tags": [
    "phylo"
+  ]
+ },
+ "phylopic/gibbon": {
+  "source": "phylopic",
+  "name": "Hylobates",
+  "author": "Kai R. Caspar",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/7d2c80e8-578d-4394-ac5e-edb0aa3f1e94",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/ginkgo": {
@@ -2551,6 +2927,17 @@
    "plant",
    "gymnosperm",
    "gnetophyte"
+  ]
+ },
+ "phylopic/gorgonopsian": {
+  "source": "phylopic",
+  "name": "Gorgonopsia",
+  "author": "Dmitry Bogdanov",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/27ae0ae2-5bfb-4ae5-b8c1-b18c6c5fc11f",
+  "tags": [
+   "synapsid",
+   "fossil"
   ]
  },
  "phylopic/grasshopper": {
@@ -2594,6 +2981,38 @@
   "url": "https://www.phylopic.org/images/fbb67694-0fd2-4e90-b88d-efab9cbac37c",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/hadrosaur": {
+  "source": "phylopic",
+  "name": "Edmontosaurus",
+  "author": "Pete Buchholz",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/48b6dd4b-b86d-4484-a1ff-a48f786e790f",
+  "tags": [
+   "dinosaur",
+   "fossil"
+  ]
+ },
+ "phylopic/hagfish": {
+  "source": "phylopic",
+  "name": "Myxine glutinosa",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/1a4223d5-9fe8-4f94-b465-53a2aebecc27",
+  "tags": [
+   "vertebrate",
+   "cyclostome"
+  ]
+ },
+ "phylopic/hagfish2": {
+  "source": "phylopic",
+  "name": "Eptatretus",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/e820a299-38f4-4ae0-9c6c-cec867cdf767",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/hallucigenia": {
@@ -2647,6 +3066,16 @@
    "insect"
   ]
  },
+ "phylopic/hedgehog": {
+  "source": "phylopic",
+  "name": "Erinaceus europaeus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6ecff71e-fcfc-4cb9-b773-9e6e21607587",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/heelwalker": {
   "source": "phylopic",
   "name": "Mantophasmatodea",
@@ -2687,6 +3116,16 @@
   "url": "https://www.phylopic.org/images/643bdb61-caf5-4238-a453-f4c95405eef5",
   "tags": [
    "plant"
+  ]
+ },
+ "phylopic/horse": {
+  "source": "phylopic",
+  "name": "Equus caballus",
+  "author": "Mercedes Yrayzoz (vectorized by T. Michael Keesey)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/85d95128-912c-427a-9542-138e1dbf5651",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/horse-fly": {
@@ -2761,6 +3200,16 @@
    "primate"
   ]
  },
+ "phylopic/hummingbird": {
+  "source": "phylopic",
+  "name": "Trochilidae",
+  "author": "Ferran Sayol",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/2bf1e800-5384-45cd-a533-ac940b8eadd6",
+  "tags": [
+   "bird"
+  ]
+ },
  "phylopic/hydra": {
   "source": "phylopic",
   "name": "Hydra",
@@ -2770,6 +3219,16 @@
   "tags": [
    "cnidarian",
    "regeneration"
+  ]
+ },
+ "phylopic/hyrax": {
+  "source": "phylopic",
+  "name": "Procavia capensis",
+  "author": "Mozillian",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/6b4e4b00-5f13-4967-b5aa-842f84052e7c",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/ice-crawler": {
@@ -2790,6 +3249,37 @@
   "url": "https://www.phylopic.org/images/48113505-7735-49b8-86b3-7ff20bcfd1d1",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/ichthyosaur": {
+  "source": "phylopic",
+  "name": "Ichthyosauria",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/8162d84e-4578-4adf-98d5-2faad56bba19",
+  "tags": [
+   "reptile",
+   "fossil"
+  ]
+ },
+ "phylopic/ichthyostega": {
+  "source": "phylopic",
+  "name": "Ichthyostega",
+  "author": "Scott Hartman",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f002b543-ff02-4f15-8fb5-49d150c287e7",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/iguana": {
+  "source": "phylopic",
+  "name": "Iguana iguana",
+  "author": "Jack Mayer Wood",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/5dec03d9-66a2-4033-b1a9-6dbb3485199f",
+  "tags": [
+   "reptile"
   ]
  },
  "phylopic/jellyfish": {
@@ -2843,6 +3333,26 @@
    "arthropod"
   ]
  },
+ "phylopic/kiwi": {
+  "source": "phylopic",
+  "name": "Apteryx",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ad7d0f80-889e-4dba-a89d-c864f2f48184",
+  "tags": [
+   "bird"
+  ]
+ },
+ "phylopic/koala": {
+  "source": "phylopic",
+  "name": "Phascolarctos cinereus",
+  "author": "Sarah Werning",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/8a06d489-024f-4505-8ccb-f86e84e00e75",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/krill": {
   "source": "phylopic",
   "name": "Euphausiacea",
@@ -2885,6 +3395,16 @@
    "vertebrate",
    "jawless",
    "fish"
+  ]
+ },
+ "phylopic/lamprey2": {
+  "source": "phylopic",
+  "name": "Lampetra",
+  "author": "Amy Beauvois",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/5b0688cf-c547-457e-bb5b-61a851f82966",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/larvacean": {
@@ -2938,6 +3458,16 @@
   "url": "https://www.phylopic.org/images/e0af5053-41e6-4348-92ef-fa8b60ea4d75",
   "tags": [
    "mollusc"
+  ]
+ },
+ "phylopic/lemur": {
+  "source": "phylopic",
+  "name": "Lemur catta",
+  "author": "Natalie Kestel",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/c8aeba86-0838-4c2e-8a3c-512608a2656c",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/limpet": {
@@ -3044,6 +3574,16 @@
    "model-organism"
   ]
  },
+ "phylopic/manatee": {
+  "source": "phylopic",
+  "name": "Trichechus",
+  "author": "Flurin Leugger",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/3f69e1ee-08bc-40d1-b4fd-75246024e2c6",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/mantis": {
   "source": "phylopic",
   "name": "Mantodea",
@@ -3093,6 +3633,17 @@
   "tags": [
    "fish",
    "model-organism"
+  ]
+ },
+ "phylopic/microraptor": {
+  "source": "phylopic",
+  "name": "Microraptor",
+  "author": "Brad McFeeters (vectorized by T. Michael Keesey)",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/90bf7ae5-8653-4dbf-ae36-8854ac711dab",
+  "tags": [
+   "dinosaur",
+   "fossil"
   ]
  },
  "phylopic/microsporidian": {
@@ -3147,6 +3698,16 @@
    "arthropod"
   ]
  },
+ "phylopic/mole": {
+  "source": "phylopic",
+  "name": "Talpidae",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/09ca6201-fd21-4d68-b0d0-af649c74d3cc",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/mole-cricket": {
   "source": "phylopic",
   "name": "Gryllotalpa",
@@ -3157,6 +3718,16 @@
    "insect"
   ]
  },
+ "phylopic/monitor-lizard": {
+  "source": "phylopic",
+  "name": "Varanus komodoensis",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/ce6a78bc-3ef1-4d60-ab40-113eb84c7802",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/monoplacophoran": {
   "source": "phylopic",
   "name": "Monoplacophora",
@@ -3165,6 +3736,17 @@
   "url": "https://www.phylopic.org/images/7ecc1db6-d90d-4fa2-804f-ae280343b90a",
   "tags": [
    "mollusc"
+  ]
+ },
+ "phylopic/morganucodon": {
+  "source": "phylopic",
+  "name": "Morganucodon",
+  "author": "FunkMonk (Michael B. H.)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/f59e026a-be3a-43f1-8394-f0381c93acfb",
+  "tags": [
+   "mammal",
+   "fossil"
   ]
  },
  "phylopic/mosquito": {
@@ -3339,6 +3921,16 @@
    "monocot"
   ]
  },
+ "phylopic/osteostracan": {
+  "source": "phylopic",
+  "name": "Cephalaspis",
+  "author": "Satoshi Kawasaki",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/43f75cdc-7e10-49d5-b98c-87a04972b814",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/ostracod": {
   "source": "phylopic",
   "name": "Ostracoda",
@@ -3349,6 +3941,26 @@
    "arthropod"
   ]
  },
+ "phylopic/ostrich": {
+  "source": "phylopic",
+  "name": "Struthio camelus",
+  "author": "Matt Martyniuk (vectorized by T. Michael Keesey)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/14ddbf4d-7749-4153-bbe1-8d0c6ffdf142",
+  "tags": [
+   "bird"
+  ]
+ },
+ "phylopic/owl": {
+  "source": "phylopic",
+  "name": "Tyto alba",
+  "author": "Sharon Wegner-Larsen",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/088bc660-44e4-4717-b5fc-13ee15ade62b",
+  "tags": [
+   "bird"
+  ]
+ },
  "phylopic/oyster": {
   "source": "phylopic",
   "name": "Ostreidae",
@@ -3357,6 +3969,16 @@
   "url": "https://www.phylopic.org/images/d6d7b28f-9d6c-4720-a71b-827caeaae2af",
   "tags": [
    "mollusc"
+  ]
+ },
+ "phylopic/paddlefish": {
+  "source": "phylopic",
+  "name": "Polyodon spathula",
+  "author": "Olivia Fitch",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/9b80988a-0a9e-48d6-ba07-256796677d4e",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/palm": {
@@ -3371,6 +3993,16 @@
    "tree"
   ]
  },
+ "phylopic/pangolin": {
+  "source": "phylopic",
+  "name": "Manis",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f628f6fe-6e2d-4173-a20f-265dc7d2d04f",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/paramecium": {
   "source": "phylopic",
   "name": "Paramecium",
@@ -3379,6 +4011,16 @@
   "url": "https://www.phylopic.org/images/595359bd-6638-4900-8536-82b2ed511a25",
   "tags": [
    "protist"
+  ]
+ },
+ "phylopic/parrot": {
+  "source": "phylopic",
+  "name": "Psittaciformes",
+  "author": "Ferran Sayol",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/b985eefe-7873-437b-93b6-e06673df564c",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/pauropod": {
@@ -3484,6 +4126,16 @@
    "conifer"
   ]
  },
+ "phylopic/placoderm": {
+  "source": "phylopic",
+  "name": "Dunkleosteus",
+  "author": "Olof Moleman",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/9521072f-2a2f-445c-b5de-a10414663764",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/placozoan": {
   "source": "phylopic",
   "name": "Trichoplax adhaerens",
@@ -3516,6 +4168,17 @@
    "phylo"
   ]
  },
+ "phylopic/plateosaurus": {
+  "source": "phylopic",
+  "name": "Plateosaurus",
+  "author": "Olof Moleman",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/bc86babf-9c57-4da5-8771-4e9c04ab08bd",
+  "tags": [
+   "dinosaur",
+   "fossil"
+  ]
+ },
  "phylopic/platypus": {
   "source": "phylopic",
   "name": "Ornithorhynchus anatinus",
@@ -3525,6 +4188,17 @@
   "tags": [
    "mammal",
    "monotreme"
+  ]
+ },
+ "phylopic/plesiosaur": {
+  "source": "phylopic",
+  "name": "Plesiosauria",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/7a2bde74-56bf-45c2-9912-619fecd5a6cb",
+  "tags": [
+   "reptile",
+   "fossil"
   ]
  },
  "phylopic/porphyra": {
@@ -3588,6 +4262,37 @@
    "deuterostome"
   ]
  },
+ "phylopic/pterosaur": {
+  "source": "phylopic",
+  "name": "Pteranodon",
+  "author": "Scott Hartman",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/0433aae5-9d7b-4a19-9de3-767c38ed9412",
+  "tags": [
+   "reptile",
+   "fossil"
+  ]
+ },
+ "phylopic/python": {
+  "source": "phylopic",
+  "name": "Python",
+  "author": "DS Biswas",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/0376a292-2e17-4978-b859-6fbf9bea6c67",
+  "tags": [
+   "reptile"
+  ]
+ },
+ "phylopic/rabbit": {
+  "source": "phylopic",
+  "name": "Oryctolagus cuniculus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/1e15411c-5394-4a9d-a209-76c8ac0c331d",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/radiolarian": {
   "source": "phylopic",
   "name": "Radiolaria",
@@ -3627,6 +4332,16 @@
   "url": "https://www.phylopic.org/images/80a00c54-bc8d-4cbd-b9bc-4daea39254c2",
   "tags": [
    "arthropod"
+  ]
+ },
+ "phylopic/rhinoceros": {
+  "source": "phylopic",
+  "name": "Rhinocerotidae",
+  "author": "Michael Tripoli",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/8e105563-f5a2-4613-a59d-ac1a155fb09b",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/rhizobium": {
@@ -3693,6 +4408,16 @@
    "phylo"
   ]
  },
+ "phylopic/salamander": {
+  "source": "phylopic",
+  "name": "Salamandra salamandra",
+  "author": "Beth Reinke",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/0a948f02-6e35-42d5-a835-b9360f450d39",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/salmon": {
   "source": "phylopic",
   "name": "Salmo salar",
@@ -3701,6 +4426,17 @@
   "url": "https://www.phylopic.org/images/f6c6590d-8aa1-4d08-a25f-e6c90727c071",
   "tags": [
    "fish"
+  ]
+ },
+ "phylopic/sauropod": {
+  "source": "phylopic",
+  "name": "Mamenchisaurus",
+  "author": "Scott Hartman",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/50414999-21ad-45fe-bda1-e180bdce5c26",
+  "tags": [
+   "dinosaur",
+   "fossil"
   ]
  },
  "phylopic/sawfly": {
@@ -3796,6 +4532,16 @@
    "lycophyte"
   ]
  },
+ "phylopic/shrew": {
+  "source": "phylopic",
+  "name": "Soricidae",
+  "author": "Becky Barnes",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/822c549b-b29b-47eb-9fe3-dc5bbb0abccb",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/silkmoth": {
   "source": "phylopic",
   "name": "Bombyx mori",
@@ -3806,6 +4552,16 @@
    "insect"
   ]
  },
+ "phylopic/silver-carp": {
+  "source": "phylopic",
+  "name": "Hypophthalmichthys molitrix",
+  "author": "Tanya Fendler",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/4270a60d-131a-46ec-bbe0-43664eaebaef",
+  "tags": [
+   "vertebrate"
+  ]
+ },
  "phylopic/silverfish": {
   "source": "phylopic",
   "name": "Lepisma saccharina",
@@ -3814,6 +4570,16 @@
   "url": "https://www.phylopic.org/images/45699fa3-9e56-49a6-a843-910464999d87",
   "tags": [
    "insect"
+  ]
+ },
+ "phylopic/sloth": {
+  "source": "phylopic",
+  "name": "Folivora",
+  "author": "Michael Tripoli",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/afde58bf-878b-46b0-864c-76c2543bcf11",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/snail": {
@@ -3846,6 +4612,26 @@
    "insect"
   ]
  },
+ "phylopic/snub-nosed-monkey": {
+  "source": "phylopic",
+  "name": "Rhinopithecus",
+  "author": "Yan Wong from drawing by Joseph Smit",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/648ed122-6b72-4c69-91f5-bf6c2bf75c78",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/softshell-turtle": {
+  "source": "phylopic",
+  "name": "Trionychidae",
+  "author": "Armin Reindl",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/4b08d3a3-4307-4e0a-aaf0-826b78ecaf0c",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/solenogaster": {
   "source": "phylopic",
   "name": "Solenogastres",
@@ -3866,6 +4652,16 @@
    "plant",
    "eudicot",
    "legume"
+  ]
+ },
+ "phylopic/sparrow": {
+  "source": "phylopic",
+  "name": "Passer domesticus",
+  "author": "Andrew Butko (modified)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/3b74c3e5-1ffa-4089-95b1-371f1b71fce0",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/sphagnum": {
@@ -3922,6 +4718,16 @@
    "neuro"
   ]
  },
+ "phylopic/squirrel": {
+  "source": "phylopic",
+  "name": "Sciurus",
+  "author": "Ferran Sayol",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/starfish": {
   "source": "phylopic",
   "name": "Asteroidea",
@@ -3930,6 +4736,17 @@
   "url": "https://www.phylopic.org/images/7e27ce06-1f4f-45d8-a359-dcba8fc54b9b",
   "tags": [
    "echinoderm"
+  ]
+ },
+ "phylopic/stegosaur": {
+  "source": "phylopic",
+  "name": "Stegosaurus",
+  "author": "Andrew A. Farke",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/173f44e3-2db7-4c98-b41f-6ab58093a145",
+  "tags": [
+   "dinosaur",
+   "fossil"
   ]
  },
  "phylopic/stick-insect": {
@@ -3952,6 +4769,16 @@
    "fish",
    "evolution",
    "behaviour"
+  ]
+ },
+ "phylopic/stingray": {
+  "source": "phylopic",
+  "name": "Dasyatis",
+  "author": "A. R. McCulloch (vectorized by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/da785df5-d023-420e-9597-59dbdbc0d29e",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/stink-bug": {
@@ -3994,6 +4821,26 @@
    "bacterium"
   ]
  },
+ "phylopic/sturgeon": {
+  "source": "phylopic",
+  "name": "Acipenser",
+  "author": "Duane Raver/USFWS",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/5ce55e7c-827d-4049-b128-ae0bc8fb2981",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/sugar-glider": {
+  "source": "phylopic",
+  "name": "Petaurus breviceps",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/735f29a4-2d43-4a63-8c7a-4e264e60d71a",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/swallowtail": {
   "source": "phylopic",
   "name": "Papilionidae",
@@ -4034,6 +4881,17 @@
    "insect"
   ]
  },
+ "phylopic/thrinaxodon": {
+  "source": "phylopic",
+  "name": "Thrinaxodon",
+  "author": "Christine Axon",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/94fda119-5435-4246-ad23-20b15f3bcb8d",
+  "tags": [
+   "synapsid",
+   "fossil"
+  ]
+ },
  "phylopic/thrips": {
   "source": "phylopic",
   "name": "Thysanoptera",
@@ -4044,6 +4902,16 @@
    "insect"
   ]
  },
+ "phylopic/thylacine": {
+  "source": "phylopic",
+  "name": "Thylacinus cynocephalus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/55e1c3e9-940c-486a-90d7-4b8e5663d248",
+  "tags": [
+   "mammal"
+  ]
+ },
  "phylopic/tick": {
   "source": "phylopic",
   "name": "Ixodes",
@@ -4052,6 +4920,36 @@
   "url": "https://www.phylopic.org/images/27e86f16-d3d8-4e6a-9fb6-13014f5153de",
   "tags": [
    "arthropod"
+  ]
+ },
+ "phylopic/tiger": {
+  "source": "phylopic",
+  "name": "Panthera tigris",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/47fa6a39-4e55-46f9-a767-d2fb2befe8a9",
+  "tags": [
+   "mammal"
+  ]
+ },
+ "phylopic/tiktaalik": {
+  "source": "phylopic",
+  "name": "Tiktaalik",
+  "author": "Ellen Edmonson (illustration) and Timothy J. Bartley (silhouette)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/9e87f9e3-a1a6-49e0-9037-924d81ab53a3",
+  "tags": [
+   "vertebrate"
+  ]
+ },
+ "phylopic/tinamou": {
+  "source": "phylopic",
+  "name": "Tinamidae",
+  "author": "George Edward Lodge",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/c8a2a294-252e-49f0-91a4-9ec4cae5d044",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/tomato": {
@@ -4066,6 +4964,16 @@
    "crop"
   ]
  },
+ "phylopic/tortoise": {
+  "source": "phylopic",
+  "name": "Testudinidae",
+  "author": "Andrew A. Farke",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/35c35a57-173f-424a-9f1a-8f4ccaddbae6",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/tree": {
   "source": "phylopic",
   "name": "Quercus robur",
@@ -4076,6 +4984,16 @@
    "plant",
    "tree",
    "angiosperm"
+  ]
+ },
+ "phylopic/tree-shrew": {
+  "source": "phylopic",
+  "name": "Tupaia",
+  "author": "Margot Michaud",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/674a7696-efb9-444a-92db-ae5bd296fb34",
+  "tags": [
+   "mammal"
   ]
  },
  "phylopic/trilobite": {
@@ -4100,6 +5018,16 @@
    "phylo"
   ]
  },
+ "phylopic/tuatara": {
+  "source": "phylopic",
+  "name": "Sphenodon punctatus",
+  "author": "Steven Traver",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/f2a5ae73-c899-4e47-b0ad-b6eac3a99350",
+  "tags": [
+   "reptile"
+  ]
+ },
  "phylopic/tubeworm": {
   "source": "phylopic",
   "name": "Siboglinidae",
@@ -4108,6 +5036,16 @@
   "url": "https://www.phylopic.org/images/2bda2959-7b95-4bc9-a046-791289905e9f",
   "tags": [
    "mollusc"
+  ]
+ },
+ "phylopic/tuna": {
+  "source": "phylopic",
+  "name": "Thunnus",
+  "author": "Stuart Humphries",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/16989401-0080-4502-828d-e85a45a262be",
+  "tags": [
+   "vertebrate"
   ]
  },
  "phylopic/turtle": {
@@ -4151,6 +5089,17 @@
   "tags": [
    "alga",
    "green-alga"
+  ]
+ },
+ "phylopic/velociraptor": {
+  "source": "phylopic",
+  "name": "Velociraptor",
+  "author": "Christian A. Masnaghetti",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/687923ee-3a11-432b-b2fb-7ffd188c16be",
+  "tags": [
+   "dinosaur",
+   "fossil"
   ]
  },
  "phylopic/velvet-worm": {
@@ -4274,6 +5223,16 @@
   "url": "https://www.phylopic.org/images/a626cebb-cb3d-48b4-a62e-9f87536ba906",
   "tags": [
    "arthropod"
+  ]
+ },
+ "phylopic/woodpecker": {
+  "source": "phylopic",
+  "name": "Picidae",
+  "author": "Pepe Reigada",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/701824d2-773f-433e-892c-74cc7846314a",
+  "tags": [
+   "bird"
   ]
  },
  "phylopic/xenopus": {
