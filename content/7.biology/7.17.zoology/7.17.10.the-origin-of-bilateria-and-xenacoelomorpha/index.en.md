@@ -71,7 +71,7 @@ The trace fossil record changes markedly across the Ediacaran–Cambrian boundar
 
 ### 10.2.3. Reconstructing Ancestral States
 
-Whether the first bilaterian had a given organ is a problem of ancestral state reconstruction on a tree ([7.10.26](/7.10.26#sec-26.6.1)). Parsimony gives the simplest answer: under the Nephrozoa hypothesis an anus requires one gain (in the nephrozoan stem), under the Xenambulacraria hypothesis one gain at the base of Bilateria and one loss in Xenacoelomorpha, or three independent gains: one step on the first tree, two on the second, and in both cases the first bilaterian is reconstructed without an anus on the first tree and with one on the second. But parsimony treats gains and losses as equally likely, and many zoologists think that complex organs are lost more easily than they are gained, as the many gutless parasites and the anus-less flatworms suggest.
+Whether the first bilaterian had a given organ is a problem of ancestral state reconstruction on a tree ([7.10.26](/7.10.26#sec-26.6.1)). Parsimony gives the simplest answer: under the Nephrozoa hypothesis an anus requires one gain (in the nephrozoan stem), under the Xenambulacraria hypothesis one gain at the base of Bilateria and one loss in Xenacoelomorpha, or two independent gains, in the protostomes and in the Ambulacraria: one step on the first tree and two on the second. The first bilaterian is reconstructed without an anus on the first tree and, if one prefers a single gain followed by a loss, with one on the second. But parsimony treats gains and losses as equally likely, and many zoologists think that complex organs are lost more easily than they are gained, as the many gutless parasites and the anus-less flatworms suggest.
 
 A likelihood reconstruction makes the assumption explicit. Let a binary character have state 0 (mouth only) and 1 (through-gut), with gain rate $g$ ($0 \to 1$) and loss rate $l$ ($1 \to 0$). Along a branch of length $t$ the probabilities of change are
 
@@ -136,7 +136,7 @@ Within the Protostomia, the Spiralia (or Lophotrochozoa in a wide sense: annelid
 
 **Definition 10.5.1 (Xenacoelomorpha)** The **Xenacoelomorpha** are a phylum of small, mostly marine, bilaterally symmetrical worms without anus, protonephridia, circulatory system or body cavity, with a ciliated epidermis whose cilia have a characteristic stepped tip, a basiepidermal nervous system, and a sac-like gut or a digestive syncytium; they comprise the Xenoturbellida, the Nemertodermatida and the Acoela.
 
-There are about 400 described species. The Acoela (about 400 species, the bulk of the phylum) and the Nemertodermatida (about 20 species) together form the Acoelomorpha, which is the sister group of the Xenoturbellida (six species, all in *Xenoturbella*). No fossils are known.
+There are about 430 described species. The Acoela (about 400 species, the bulk of the phylum) and the Nemertodermatida (about 20 species) together form the Acoelomorpha, which is the sister group of the Xenoturbellida (six species, all in *Xenoturbella*). No fossils are known.
 
 ### 10.5.1. Body Plan
 
