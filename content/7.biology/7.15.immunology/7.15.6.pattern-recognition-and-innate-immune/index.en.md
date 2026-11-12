@@ -1,6 +1,6 @@
 ---
 title: Pattern Recognition and Innate Immune Signaling
-source_hash: 0708b28bd57d
+source_hash: 982993f142d1
 ---
 
 The previous chapter introduced the cells of innate immunity; this chapter answers how they "see" pathogens, the innate part of question 1 on the knowledge path and also the starting point of question 2 (how the decision is made): what activates the pattern recognition receptors determines which cytokines are produced and thereby whether the subsequent adaptive response goes toward type 1, 2, or 3. The **pattern recognition receptors** and **interferon** response within virus-infected cells were covered in [7.11.27](/7.11.27); here we build on that, putting all receptor families together to compare their localization, ligands, and signaling and to discuss their common downstream. The cell biology of the **inflammasome** and **pyroptosis** is in [7.3.25](/7.3.25), and the **NF-κB** pathway and its oscillations are in [7.3.19](/7.3.19) and [7.9.16](/7.9.16). The next chapter describes the inflammation and effector functions that these signals trigger.

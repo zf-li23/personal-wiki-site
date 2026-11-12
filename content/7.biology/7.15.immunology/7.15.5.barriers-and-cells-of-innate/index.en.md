@@ -1,6 +1,6 @@
 ---
 title: Barriers and Cells of Innate Immunity
-source_hash: 990a508b8e44
+source_hash: 81dd58f9ce93
 ---
 
 From this chapter on we enter the first link of the knowledge path, innate immunity. It answers the "fast version" of question 1 (who recognizes) and question 3 (what clears) of the five questions. This chapter introduces the executors: first the barriers that keep pathogens out (§5.1), then the phagocytes that are the first to fight once pathogens get in (§5.2–5.3), the granulocytes (§5.4), and the NK cells that recognize "abnormal self" (§5.5), and finally the innate lymphoid cells and innate-like lymphocytes that correspond one to one with T-cell subsets (§5.6–5.7). The receptors with which they recognize pathogens are the subject of the next chapter, and the processes of their recruitment, killing, and induction of inflammation are in [7.15.7](/7.15.7). The origin, numbers, and surface markers of each cell type were tabulated in [7.15.2](/7.15.2); here we describe how they work.

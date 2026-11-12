@@ -1,6 +1,6 @@
 ---
 title: Graph Theory
-source_hash: 3b4f3c6d339f
+source_hash: 10ddadacc869
 ---
 
 Graph theory takes graphs as its objects of study: things are represented by vertices, and the relationships between them by directed or undirected edges. This course begins with the basic notions of graphs, vertex degrees, subgraphs, graph operations and isomorphism, together with ways of representing a graph such as the adjacency matrix, the incidence matrix and adjacency lists. It then turns to walks, paths and cycles, covering tests for connectivity, Eulerian circuits and Hamiltonian cycles, the traveling salesman problem, shortest paths, critical paths and the Chinese postman problem. Next it studies trees: incidence, cycle and cut-set matrices are used to characterize and count spanning trees, and Huffman trees, minimum spanning trees and maximum branchings are introduced. After that come planar graphs, Euler's formula, Kuratowski's theorem, dual graphs and graph coloring, followed by matchings in bipartite graphs and network flows, including Hall's theorem, the Hungarian algorithm, the max-flow min-cut theorem and minimum-cost flows. Finally, vertex connectivity, edge connectivity, Whitney's inequality and Menger's theorem give a finer measure of how well connected a graph is.
