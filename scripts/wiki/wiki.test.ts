@@ -21,7 +21,7 @@ import { type Concept, conceptId } from './glossary.ts';
 import { buildLinkIndex, isGeneSymbol, linkPage } from './linking.ts';
 import { type RenderContext, renderHtml, renderMarkdown } from './markdown.ts';
 import type { PlotResults } from './plots.ts';
-import { iconCredits, iconIds, licenseUrl, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
+import { helpersOf, iconCredits, iconIds, licenseUrl, lintPlotScript, plotImagePath, renderPlots, resolvePython, scriptHash } from './plots.ts';
 import { PLOT_RENDERER } from './paths.ts';
 import { type ContentTree, type PageSource, scanContent, sourceLangOf } from './scan.ts';
 
@@ -364,6 +364,13 @@ describe('plot script lint', () => {
     assert.equal(licenseUrl('CC BY 2.5'), 'https://creativecommons.org/licenses/by/2.5/');
     assert.equal(licenseUrl('CC0 1.0'), 'https://creativecommons.org/publicdomain/zero/1.0/');
     assert.equal(licenseUrl('GFDL'), undefined);
+  });
+  it('finds the helpers a script depends on, through helpers that import other helpers', () => {
+    const names = (src: string) => helpersOf(src).map((h) => path.basename(h, '.py'));
+    assert.deepEqual(names('import vertskel as vs\n'), ['wikibio', 'vertskel']);
+    assert.deepEqual(names('import wikibio as bio\n'), ['wikibio']);
+    assert.deepEqual(names('from wikichem import Scheme\n'), ['wikichem']);
+    assert.deepEqual(names('import numpy as np\n'), []);
   });
   it('flags wikichem internals but not dict.items()', () => {
     const diag = new Diagnostics();

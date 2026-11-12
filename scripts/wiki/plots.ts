@@ -130,6 +130,27 @@ function helperFiles(helper: string): Buffer[] {
     .map((f) => fs.readFileSync(path.join(helper, f)));
 }
 
+const helperName = (h: string): RegExp => new RegExp(`\\b${path.basename(h, '.py')}\\b`);
+
+/**
+ * Helpers a plot script depends on, in PLOT_HELPERS order: those it names, plus those named by the code of
+ * those helpers (vertskel.py imports wikibio), so editing an imported helper re-renders its users' users.
+ */
+export function helpersOf(source: string): string[] {
+  const used = new Set(PLOT_HELPERS.filter((h) => helperName(h).test(source)));
+  for (let grew = true; grew;) {
+    grew = false;
+    const code = [...used].flatMap(helperFiles).map((b) => b.toString('utf8')).join('\n');
+    for (const h of PLOT_HELPERS) {
+      if (!used.has(h) && helperName(h).test(code)) {
+        used.add(h);
+        grew = true;
+      }
+    }
+  }
+  return PLOT_HELPERS.filter((h) => used.has(h));
+}
+
 /**
  * Icon ids a plot script uses: every string literal of the form "<source>/<name>" whose source is a
  * folder of the icon library (servier/heart, phylopic/mouse…), whether passed to icon() directly or
@@ -282,7 +303,7 @@ export async function renderPlots(tree: ContentTree, diag: Diagnostics, opts: Re
         continue;
       }
       // A script that uses a shared helper re-renders when the helper changes.
-      const helpers = PLOT_HELPERS.filter((h) => new RegExp(`\\b${path.basename(h, '.py')}\\b`).test(source)).flatMap(helperFiles);
+      const helpers = helpersOf(source).flatMap(helperFiles);
       // Icons a script draws are part of its key too, so re-converting an icon re-renders its figures.
       const icons = iconIds(source).map(iconFile).filter((f) => fs.existsSync(f)).map((f) => fs.readFileSync(f));
       const key = hashFiles([...common, source, ...helpers, ...icons, ...dataFiles]);

@@ -23,6 +23,7 @@ export const PLOT_HELPERS = [
   path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikichem.py'),
   path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikigraph.py'),
   path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'wikibio'), // a package: every .py file inside counts
+  path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'vertskel.py'), // imports wikibio: see helpersOf in plots.ts
 ];
 /** Vector icons for biology figures (`wikibio.icon("<id>")`), converted from open SVG libraries; see BIO_FIGURES.md. */
 export const ICON_DIR = path.join(REPO_ROOT, 'scripts', 'wiki', 'plot', 'icons');

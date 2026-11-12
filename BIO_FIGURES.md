@@ -120,6 +120,45 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 - 每个公开函数写英文文档字符串；新增功能后在样张（§7）里加一例，浅色、深色都要看过。
 - wikibio 是绘图辅助包（`PLOT_HELPERS`）：修改它会使所有用到它的图重新渲染。
 
+### 4.1 脊椎动物比较解剖：vertskel
+
+动物学（7.17）的脊椎动物类群章（7.17.44–54）与比较解剖章（7.17.55–67）画头骨、咽弓、椎骨、带骨、肢骨、动脉弓与肾管时，一律用绘图辅助模块 `vertskel`（`scripts/wiki/plot/vertskel.py`，与 wikibio 并列，`import vertskel as vs`）。它的核心是一张**同源配色表**：同一块骨（或同源的一串骨）在全课程永远同一颜色，读者可以在不同章节、不同类群之间追踪它。它是独立的辅助模块（`PLOT_HELPERS`）：修改它只使导入它的图重新渲染；它导入 wikibio，所以 wikibio 变化时这些图也会重新渲染。
+
+**配色**（`vs.ELEMENTS`：键 → 英文名、系列、颜色；`vs.color(键)`、`vs.edge(键)`、`vs.name(键)`）：
+
+| 系列 | 色相 | 元素（键） |
+|---|---|---|
+| 边缘系（有齿的上颌骨） | 橙 | `premaxilla`、`maxilla`、`septomaxilla` |
+| 顶盖系 | 蓝 | `nasal`、`frontal`、`parietal`、`postparietal`（= `interparietal`） |
+| 眶周系 | 绿 | `lacrimal`、`prefrontal`、`postfrontal`、`postorbital`、`jugal` |
+| 颞系 | 紫 | `squamosal`、`quadratojugal`、`intertemporal`、`supratemporal`、`tabular` |
+| 腭系 | 青 | `vomer`、`palatine`、`pterygoid`、`ectopterygoid`、`parasphenoid` |
+| 鳃盖系 | 灰蓝 | `operculum`、`preoperculum`、`suboperculum`、`interoperculum`、`gular`、`branchiostegal` |
+| 下颌膜骨 | 棕褐；隅骨柠檬绿 | `dentary`、`splenial`、`surangular`、`prearticular`（= `goniale`）、`coronoid`；`angular` = `tympanic` |
+| 软颅及其骨化 | 沙色 | `chondrocranium`、`nasal_capsule`（= `ethmoid`）、`optic_capsule`、`otic_capsule`（= `petrosal`）、`prootic`、`opisthotic`、`trabecula`、`parachordal`、`orbitosphenoid`、`basisphenoid`、`occipital`、`basioccipital`、`exoccipital`、`supraoccipital` |
+| 颌弓（第 1 弓） | 金、珊瑚红 | `palatoquadrate` = `quadrate` = `incus`；`epipterygoid` = `alisphenoid`；`meckel` = `articular` = `malleus` |
+| 舌弓（第 2 弓） | 品红 | `hyomandibula` = `columella` = `stapes`；`symplectic`、`interhyal`、`epihyal`（= `styloid`）、`ceratohyal`、`hypohyal`、`basihyal`（= `hyoid`） |
+| 鳃弓（第 3–7 弓） | 天蓝到灰紫，每弓一色 | `arch_3`（= `thyrohyal`）、`arch_4`（= `thyroid_cartilage`）、`arch_5`、`arch_6`（= `cricoid`、`arytenoid`）、`arch_7`、`basibranchial` |
+| 椎骨 | | `centrum` = `pleurocentrum` 蓝，`intercentrum` 橙，`neural_arch`、`neural_spine`、`zygapophysis`、`transverse_process` 绿，`haemal_arch`（= `chevron`）、`haemal_spine` 粉，`rib` 棕褐，`notochord` 淡黄 |
+| 肩带 | 软骨内骨冷色、膜骨暖色 | `scapula`、`suprascapula`、`coracoid`、`procoracoid`、`scapulocoracoid`；`cleithrum`、`clavicle`、`interclavicle`、`supracleithrum`、`posttemporal`；`sternum` |
+| 腰带 | | `ilium` 紫、`ischium` 绿、`pubis` 橙、`puboischiadic` |
+| 肢骨 | 与 `zoomorph.forelimb`、`limbdev` 相同 | `humerus` = `femur` = `stylopod`，`radius` = `tibia` = `zeugopod`，`ulna` = `fibula`，`carpals` = `tarsals`，`metacarpals` = `metatarsals`，`phalanges` = `autopod`；鳍：`metapterygium`、`mesopterygium`、`propterygium`、`radials`、`fin_rays` |
+| 动脉弓 | 每弓一色 | `aortic_1` 金、`aortic_2` 浅绿、`aortic_3`（= `carotid`）青、`aortic_4`（= `systemic_arch`）红、`aortic_5` 紫、`aortic_6`（= `pulmonary_artery`、`ductus_arteriosus`）蓝；`dorsal_aorta`、`ventral_aorta`、`heart` |
+| 肾与管 | 与 `mesoderm` 相同（Müller 管除外） | `pronephros` 橙、`mesonephros`（= `opisthonephros`、`epididymis`）淡紫、`metanephros` 绿、`gonad`；`archinephric_duct`（= `vas_deferens`，别名 `wolffian_duct`）蓝、`ureter` 青、`mullerian_duct`（= `oviduct`）粉、`bladder`、`cloaca` |
+
+"=" 表示共用一种颜色（同源）。同一系列的元素是同一色相的不同明暗；需要按系列或按头骨的三个组成着色时传 `level="series"` 或 `level="component"`（膜颅蓝、软颅沙色、咽颅暖色）。表中没有的骨先在 `ELEMENTS` 加一行（按所属系列取同一色相，两种主题都看过），不要在脚本里写颜色。
+
+**接口**：
+
+- 形状（返回顶点，坐标由脚本决定）：`vs.rod(a, b, w, w2=None)` 骨干，`vs.oval(center, rx, ry, angle=0)`，`vs.smooth(points)` 平滑轮廓，`vs.poly(points)` 骨片（尖角、骨缝）。
+- `vs.bone(ax, key, vertices, state="bone", level="element", text=None)` 画一块骨，返回中心。`state`："bone"（同源色）、"cartilage"（浅色加点纹，软骨的通行画法）、"context"（中性灰，非本图主角的骨）、"lost"（虚线轮廓：该类群已丢失，仅作对照）、"highlight"（粗轮廓）。
+- `vs.draw(ax, parts, at=(0, 0), scale=1.0, flip=False)`：`parts` 是 `(键, 顶点)` 或 `(键, 顶点, {"state": …, "text": …, "z": …})` 的列表，后画的在上层；返回 `{键: 中心}`，供 `vs.callout(ax, 点, 文字位置, 键或文字)` 引线标注（键自动写成英文名）。
+- `vs.panels(n, panel_w, panel_h, titles=…, subtitles=…, ncols=None, legend_rows=0)`：同一结构跨类群的系列图，返回 `(fig, ax, boxes)`，`boxes[i] = (x, y, w, h)`；`vs.legend(ax, entries, at, width, ncols=None)` 在下方画共用图例，同源的一串写成一项：`("quadrate", "palatoquadrate / quadrate / incus")`，第三项可写状态（`("meckel", "cartilage", "cartilage")`）。
+- `vs.aortic_arches(ax, at, width, height, arches={…}, carotid_duct=True, roots=True, ductus=True, pulmonary=False, labels=None)`：腹面观（前端朝上，心脏在下；动物的左侧在读者右侧，图中标 L/R）的六对动脉弓。每弓的状态为 "present"、"gill"（经鳃毛细血管，分入鳃、出鳃两段）、"reduced"、"absent"（虚线），左右不同时写成 `(左, 右)`，如鸟 `{4: ("absent", "present")}`、哺乳类 `{4: ("present", "reduced")}`；`ductus="ligament"` 画闭合后的动脉韧带。返回各弓中点 `{(弓, "L"|"R"): 点}`。
+- `vs.kidney_series(ax, at, width, height, stages={…}, ducts={…}, opisthonephros=False, gonad=False, bladder=False, rename={…})`：一侧的前肾、中肾、后肾与原肾管、输尿管、Müller 管，前端朝上。器官与管的状态为 "functional"、"embryonic"（虚线浅色，胚胎期短暂存在）、"modified"（浅色实线，如中肾成为附睾）、"absent"；`opisthonephros=True` 画无羊膜类的后位肾；`rename` 改标签（`{"archinephric_duct": "vas deferens"}`）。
+
+约定：头骨与骨骼侧视时前端朝左；图是示意，类群之间不按比例（图注写明）。头骨的具体形状由各章脚本给出：先在 `vs.panels` 的每个面板里按局部坐标写出各骨的顶点，再 `vs.draw(..., at=(x, y))` 放入面板。
+
 ## 5. 图标库与许可
 
 图标是从开源图库下载的 SVG，经 `scripts/icons.py` 转成矢量数据（`scripts/wiki/plot/icons/<来源>/<名称>.json`），并在 `icons/manifest.json` 登记作者、许可与来源网址。
