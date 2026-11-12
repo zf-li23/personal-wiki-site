@@ -1,7 +1,7 @@
 ---
 title: 完全随机化实验：Fisher 精确 p 值
 description: Fisher 对完全随机化实验的方法。蜂蜜实验；Fisher 尖锐原假设与全部缺失潜在结果的插补；检验统计量（均值差、分位数、t 统计量、规范化秩、基于模型的统计量与 Kolmogorov–Smirnov 统计量、组合统计量）；枚举得到的精确 p 值及其有效性、Monte Carlo 近似、有限总体中心极限定理与两样本 t 检验的联系；检验统计量中的协变量；由检验反演得到的 Fisher 区间。
-source_hash: fbe681126e4a
+source_hash: 503c92554082
 ---
 
 从本章到 [3.9.7](/3.9.7)，我们研究随机化实验，即分配机制已知（因为是研究者选定的）的情形。最简单的情形是 [3.9.2](/3.9.2) 的完全随机化实验（CRE）：从 $N$ 个单元中随机抽取 $N_{\mathrm{t}}$ 个接受处理。本章与后三章发展 CRE 中推断的四种方法。
@@ -79,7 +79,7 @@ Fisher 精确 p 值通过三个步骤得到：
 
 ### 3.2.1. 基于位置差异的统计量
 
-在尖锐原假设下，所有潜在结果都是固定的，所以**检验统计量** $T(\boldsymbol{W}, \boldsymbol{Y}^{\mathrm{obs}}, \boldsymbol{X})$ 成为只是随机分配 $\boldsymbol{W}$ 的函数。任何统计量都给出有效的检验；选择只影响对所关心的备择假设的功效。最常见的选择是两组平均结果之差的绝对值，
+在尖锐原假设下，所有潜在结果都是固定的，所以**检验统计量** $T(\boldsymbol{W}, \boldsymbol{Y}^{\mathrm{obs}}, \boldsymbol{X})$ 成为仅关于随机分配 $\boldsymbol{W}$ 的函数。任何统计量都给出有效的检验；选择只影响对所关心的备择假设的功效。最常见的选择是两组平均结果之差的绝对值，
 
 $$
 T^{\mathrm{dif}} = \bigl\lvert \bar Y_{\mathrm{t}}^{\mathrm{obs}} - \bar Y_{\mathrm{c}}^{\mathrm{obs}} \bigr\rvert = \left\lvert \frac{1}{N_{\mathrm{t}}}\sum_{i:W_i = 1} Y_i^{\mathrm{obs}} - \frac{1}{N_{\mathrm{c}}}\sum_{i:W_i = 0} Y_i^{\mathrm{obs}} \right\rvert,
@@ -196,7 +196,7 @@ $$
 
 ### 3.3.2. 模拟近似
 
-精确枚举很快变得不可行：对完整的蜂蜜数据有 $\binom{72}{35} \approx 4.4 \times 10^{20}$ 个分配。通过模拟可以得到精确的近似。从分配机制中独立抽取 $K$ 个分配向量 $\boldsymbol{W}^1, \dots, \boldsymbol{W}^K$，对每个计算统计量，并用下式估计 p 值
+精确枚举很快变得不可行：对完整的蜂蜜数据有 $\binom{72}{35} \approx 4.3 \times 10^{20}$ 个分配。通过模拟可以得到高精度的近似。从分配机制中独立抽取 $K$ 个分配向量 $\boldsymbol{W}^1, \dots, \boldsymbol{W}^K$，对每个计算统计量，并用下式估计 p 值
 
 $$
 \hat p = \frac{1}{K}\sum_{k=1}^{K}\boldsymbol{1}\bigl\{T(\boldsymbol{W}^k) \ge T^{\mathrm{obs}}\bigr\}.
@@ -251,7 +251,7 @@ $$
 $$
 \frac{\bar Y_{\mathrm{t}}^{\mathrm{obs}} - \bar Y_{\mathrm{c}}^{\mathrm{obs}}}{\sqrt{\frac{N}{N_{\mathrm{t}}N_{\mathrm{c}}}S^2}} \xrightarrow{d} \mathcal{N}(0, 1), \qquad N \to \infty.
 $$
-由于 $S^2$ 在 $H_0$ 下固定，这个标准化统计量是 $T^{\mathrm{dif}}$ 的单调函数，给出同一个精确检验；正态分布在大样本下近似它的零分布，如例 3.3.1 中图的右图所示。
+由于 $S^2$ 在 $H_0$ 下固定，这个标准化统计量是 $T^{\mathrm{dif}}$ 的单调函数，给出同一个精确检验；正态分布在大样本下近似它的零分布，如例 3.3.1 的图的右半部分所示。
 
 这解释了为什么在大型随机化实验中，Fisher 检验与经典的两样本 $t$ 检验给出相近的答案，尽管 $t$ 检验假定结果服从正态分布。方差相等的两样本 $t$ 检验使用
 
@@ -287,7 +287,7 @@ t_obs <- abs(mean(yt) - mean(yc))
 mean(t_dif >= t_obs - 1e-12)         # 0.8
 ```
 
-只有六个单元时，渐近近似很差，只有枚举才给出精确答案 $0.80$；结中有重复时，`wilcox.test` 退回到正态近似，而 Fisher 的方法通过规范化秩处理结，不需要任何改变。
+只有六个单元时，渐近近似很差，只有枚举才给出精确答案 $0.80$；结果中有重复取值时，`wilcox.test` 退回到正态近似，而 Fisher 的方法通过规范化秩处理结，不需要任何改变。
 
 ## 3.4. 使用协变量
 

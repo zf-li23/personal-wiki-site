@@ -51,7 +51,7 @@ sum(st[1:8])                                    # W_A = 106
 wilcox.test(st[1:8], st[9:20])                  # W = 70, p-value = 0.09788
 ```
 
-The value $185.5$ is the shifted type A median: alignment has placed the two medians next to each other in the middle of the ordering, as it should.
+The shifted type A median is $184.5$, equal to the type B median: alignment has placed the two medians at the same point in the middle of the ordering, as it should.
 :::
 
 ![Siegel–Tukey ranks of the pooled aligned tire data. Red points are type A (shifted by $-46.5$), blue points type B; the numbers are the ranks, which alternate between the two ends in pairs and increase toward the middle. Type A occupies the middle and receives the larger ranks.](./plots/siegel-tukey.py)
@@ -284,7 +284,7 @@ coef(lm(outcome ~ predictor, data = d))                    # 1.286, 0.493
 coef(quantreg::rq(outcome ~ predictor, data = d, tau = 0.5)) # 0.500, 0.900
 ```
 
-The least squares line $\hat y=1.29+0.49x$ is pulled down by the outlier, whose squared residual dominates the fit; without the outlier, with $y_6=5.9$, least squares would give $0.44+0.91x$. The median regression line $\hat y=0.5+0.9x$ is essentially unaffected: it passes exactly through three of the points ($x=2,4,7$), with two points above and two below, and the outlier enters only through the sign of its residual. That a median regression fit interpolates $p+1$ observations (here $2$) is a general property of the linear programming solution (Section 10.3.4).
+The least squares line $\hat y=1.29+0.49x$ is pulled down by the outlier, whose squared residual dominates the fit; without the outlier, with $y_6=5.9$, least squares would give $0.44+0.91x$. The median regression line $\hat y=0.5+0.9x$ is essentially unaffected: it passes exactly through three of the points ($x=2,4,7$), with two points above and two below, and the outlier enters only through the sign of its residual. That a median regression fit interpolates at least $p+1$ observations (here $2$) is a general property of the linear programming solution (Section 10.3.4).
 :::
 
 ### 10.3.4. Computation
@@ -406,7 +406,7 @@ Quantile regression is the method of choice when interest lies in the tails (low
    **Answer** The ranks measure distance from the middle of the pooled sample. If the centers differ, one sample occupies one end of the ordering and the other sample the other end; both then receive small ranks, and differences in location are mistaken for differences in spread. Subtracting a known shift preserves exchangeability under $H_0$, so the WMW null distribution applies exactly. The difference of sample medians is computed from the data, so after the subtraction the pooled observations are no longer exchangeable, and the null distribution is only approximately correct; the error is small for moderate samples.
 2. Apply the two-sample runs test to the tire data of Example 10.1.1 (without alignment). What does the result suggest about the difference between the two failure types, and what is its limitation?
 
-   **Answer** The pooled ordering of the raw data is $\mathrm{BBBBBB\,A\,B\,A\,BB\,AA\,B\,A\,B\,A\,B\,AA}$: the six smallest times are all type B, and the four largest values alternate. The tie at $230$ can be broken either way, and both orders give $R=12$ runs. With $m=8$, $n=12$, $\mathbb{E}R=1+2\cdot96/20=10.6$, and the exact $p$-value is $\mathbb{P}(R\le12)=0.82$: the runs test sees nothing unusual, although the type B times are lower and more spread out. Its limitation is low power: the long initial run of six B's counts only as one run, and the information in where the runs lie is discarded.
+   **Answer** The pooled ordering of the raw data is $\mathrm{BBBBBB\,A\,B\,A\,BB\,AA\,B\,A\,B\,A\,B\,AA}$: the six smallest times are all type B, and the larger values nearly alternate. The tie at $230$ can be broken either way, and both orders give $R=12$ runs. With $m=8$, $n=12$, $\mathbb{E}R=1+2\cdot96/20=10.6$, and the exact $p$-value is $\mathbb{P}(R\le12)=0.82$: the runs test sees nothing unusual, although the type B times are lower and more spread out. Its limitation is low power: the long initial run of six B's counts only as one run, and the information in where the runs lie is discarded.
 3. Show that for $m=n$ and integer $k\ge1$, $\mathbb{P}(D_{n,n}^+\ge k/n)=\binom{2n}{n-k}/\binom{2n}{n}$.
 
    **Answer** In the lattice path from $(0,0)$ to $(n,n)$, $nF_n-nG_n=u-v$, so $D^+_{n,n}\ge k/n$ if and only if the path reaches the line $u-v=k$. By the reflection principle, reflecting the part of such a path after its first visit to the line $u-v=k$ gives a bijection with all paths from $(0,0)$ to the reflected end point $(n+k,n-k)$, of which there are $\binom{2n}{n-k}$. Dividing by the total number $\binom{2n}n$ of paths gives the result.

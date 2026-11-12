@@ -195,7 +195,7 @@ with equality when $\alpha$ is one of the values that $p$ can take.
 
 ### 3.3.2. Approximation by Simulation
 
-Exact enumeration quickly becomes infeasible: for the full honey data there are $\binom{72}{35} \approx 4.4 \times 10^{20}$ assignments. A precise approximation is obtained by simulation. Draw $K$ assignment vectors $\boldsymbol{W}^1, \dots, \boldsymbol{W}^K$ independently from the assignment mechanism, compute the statistic for each, and estimate the p-value by
+Exact enumeration quickly becomes infeasible: for the full honey data there are $\binom{72}{35} \approx 4.3 \times 10^{20}$ assignments. A precise approximation is obtained by simulation. Draw $K$ assignment vectors $\boldsymbol{W}^1, \dots, \boldsymbol{W}^K$ independently from the assignment mechanism, compute the statistic for each, and estimate the p-value by
 
 $$
 \hat p = \frac{1}{K}\sum_{k=1}^{K}\boldsymbol{1}\bigl\{T(\boldsymbol{W}^k) \ge T^{\mathrm{obs}}\bigr\}.

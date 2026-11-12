@@ -163,7 +163,7 @@ $$
 
 - *$X$ 对 $Z$ 的效应。* 从 $X$ 到 $Z$ 唯一的后门路径是 $X \leftarrow U \to Y \leftarrow Z$，它被对撞因子 $Y$ 阻断。因此 $\mathbb{P}(z \mid \operatorname{do}(x)) = \mathbb{P}(z \mid x)$。
 - *$Z$ 对 $Y$ 的效应。* 后门路径 $Z \leftarrow X \leftarrow U \to Y$ 被不是 $Z$ 的后代的 $X$ 阻断。因此 $\mathbb{P}(y \mid \operatorname{do}(z)) = \sum_{x'} \mathbb{P}(y \mid x', z)\,\mathbb{P}(x')$。
-- *链接。* 由于 $X$ 只通过 $Z$ 影响 $Y$，$\mathbb{P}(y \mid \operatorname{do}(x)) = \sum_z \mathbb{P}(z \mid \operatorname{do}(x))\,\mathbb{P}(y \mid \operatorname{do}(z))$。
+- *链式组合。* 由于 $X$ 只通过 $Z$ 影响 $Y$，$\mathbb{P}(y \mid \operatorname{do}(x)) = \sum_z \mathbb{P}(z \mid \operatorname{do}(x))\,\mathbb{P}(y \mid \operatorname{do}(z))$。
 
 ### 12.4.2. 准则与公式
 
@@ -180,12 +180,12 @@ $$
 \tag{12.4}
 $$
 
-**证明** 对图 (c) 的图证明：$U \to X$，$U \to Y$，$X \to Z$，$Z \to Y$，$U$ 未被观测。四个变量的联合分布分解为 $\mathbb{P}(u)\,\mathbb{P}(x \mid u)\,\mathbb{P}(z \mid x)\,\mathbb{P}(y \mid z, u)$，由截断分解得
+**证明** 对图 (c) 证明：$U \to X$，$U \to Y$，$X \to Z$，$Z \to Y$，$U$ 未被观测。四个变量的联合分布分解为 $\mathbb{P}(u)\,\mathbb{P}(x \mid u)\,\mathbb{P}(z \mid x)\,\mathbb{P}(y \mid z, u)$，由截断分解得
 
 $$
 \mathbb{P}(y \mid \operatorname{do}(x)) = \sum_z \mathbb{P}(z \mid x) \sum_u \mathbb{P}(y \mid z, u)\,\mathbb{P}(u).
 $$
-还需要通过观测量来表示内层的和。写 $\mathbb{P}(u) = \sum_{x'} \mathbb{P}(u \mid x')\,\mathbb{P}(x')$。该图蕴含 $Y \perp X \mid (Z, U)$（从 $X$ 到 $Y$ 的两条路径分别经过 $Z$ 或叉 $U$）与 $U \perp Z \mid X$（路径 $U \to X \to Z$ 与 $U \to Y \leftarrow Z$ 分别被链节点 $X$ 与对撞因子 $Y$ 阻断）。因此 $\mathbb{P}(y \mid z, u) = \mathbb{P}(y \mid x', z, u)$，$\mathbb{P}(u \mid x') = \mathbb{P}(u \mid x', z)$，从而
+还需要通过观测量来表示内层的和。写 $\mathbb{P}(u) = \sum_{x'} \mathbb{P}(u \mid x')\,\mathbb{P}(x')$。该图蕴含 $Y \perp X \mid (Z, U)$（从 $X$ 到 $Y$ 的两条路径分别经过 $Z$ 或叉节点 $U$）与 $U \perp Z \mid X$（路径 $U \to X \to Z$ 与 $U \to Y \leftarrow Z$ 分别被链节点 $X$ 与对撞因子 $Y$ 阻断）。因此 $\mathbb{P}(y \mid z, u) = \mathbb{P}(y \mid x', z, u)$，$\mathbb{P}(u \mid x') = \mathbb{P}(u \mid x', z)$，从而
 
 $$
 \sum_u \mathbb{P}(y \mid z, u)\,\mathbb{P}(u) = \sum_{x'} \mathbb{P}(x') \sum_u \mathbb{P}(y \mid x', z, u)\,\mathbb{P}(u \mid x', z) = \sum_{x'} \mathbb{P}(x')\,\mathbb{P}(y \mid x', z).
@@ -315,13 +315,13 @@ $$
    \mathbb{P}(Y = 1 \mid X = 0) = \frac{(1 - r)(1 - q_1) p_1 + r(1 - q_2) p_3}{(1 - r)(1 - q_1) + r(1 - q_2)}.
    $$
    $Z$ 是 $X$ 的父节点，所以满足后门准则，$\mathrm{ACE} = [(1 - r)p_2 + r p_4] - [(1 - r)p_1 + r p_3]$。该准则及其对这个图的证明就是定理 12.3.1 证明的第一部分：截断分解去掉因子 $\mathbb{P}(x \mid z)$，得 $\mathbb{P}(y \mid \operatorname{do}(x)) = \sum_z \mathbb{P}(z)\,\mathbb{P}(y \mid x, z)$。
-3. 在图中的 (b) 中，列出从 $X$ 到 $Y$ 的所有后门路径，并验证 $\{E\}$、$\{A\}$ 与 $\{Z\}$ 不满足后门准则，而 $\{A, Z\}$ 满足。
+3. 在图 (b) 中，列出从 $X$ 到 $Y$ 的所有后门路径，并验证 $\{E\}$、$\{A\}$ 与 $\{Z\}$ 不满足后门准则，而 $\{A, Z\}$ 满足。
 
    **答** 这些路径为 $X \leftarrow Z \to Y$、$X \leftarrow Z \leftarrow A \to Y$、$X \leftarrow E \to Z \to Y$ 与 $X \leftarrow E \to Z \leftarrow A \to Y$。$\{E\}$ 与 $\{A\}$ 使 $X \leftarrow Z \to Y$ 保持开放。$\{Z\}$ 阻断前三条（$Z$ 是叉节点或链节点），但打开第四条（其上 $Z$ 是对撞因子）。$\{A, Z\}$ 通过 $Z$ 阻断前三条，通过叉节点 $A$ 阻断第四条；二者都不是 $X$ 的后代。
 4. 对前门图，设数据为：$\mathbb{P}(X = 1) = 0.5$；在 $X = 0$ 中，60% 有 $Z = 0$，癌症比率为 $0.2$，40% 有 $Z = 1$，比率为 $0.5$；在 $X = 1$ 中，20% 有 $Z = 0$，比率为 $0.3$，80% 有 $Z = 1$，比率为 $0.6$。用前门公式计算 ACE，并与朴素的差比较。
 
    **答** 内层的和：$z = 0$：$0.5(0.2) + 0.5(0.3) = 0.25$；$z = 1$：$0.5(0.5) + 0.5(0.6) = 0.55$。于是 $\mathbb{P}(Y = 1 \mid \operatorname{do}(X = 1)) = 0.2(0.25) + 0.8(0.55) = 0.49$，$\mathbb{P}(Y = 1 \mid \operatorname{do}(X = 0)) = 0.6(0.25) + 0.4(0.55) = 0.37$，所以 $\mathrm{ACE} = 0.12$。朴素地，$\mathbb{P}(Y = 1 \mid X = 1) = 0.2(0.3) + 0.8(0.6) = 0.54$，$\mathbb{P}(Y = 1 \mid X = 0) = 0.6(0.2) + 0.4(0.5) = 0.32$，差为 $0.22$；观察到的关联有一部分是由未测量的混杂因素造成的。
-5. 对图 (c) 的图，从 $\mathbb{P}(y \mid \hat x) = \sum_z \mathbb{P}(y \mid \hat x, z)\,\mathbb{P}(z \mid \hat x)$ 出发，用 do 演算推导前门公式。
+5. 对图 (c)，从 $\mathbb{P}(y \mid \hat x) = \sum_z \mathbb{P}(y \mid \hat x, z)\,\mathbb{P}(z \mid \hat x)$ 出发，用 do 演算推导前门公式。
 
    **答** (i) 由规则 2，$\mathbb{P}(z \mid \hat x) = \mathbb{P}(z \mid x)$，因为 $(Z \perp X)_{G_{\underline{X}}}$（剩下的路径 $X \leftarrow U \to Y \leftarrow Z$ 含有对撞因子 $Y$）。(ii) 由规则 2，$\mathbb{P}(y \mid \hat x, z) = \mathbb{P}(y \mid \hat x, \hat z)$，因为 $(Y \perp Z \mid X)_{G_{\overline{X}\underline{Z}}}$。(iii) 由规则 3，$\mathbb{P}(y \mid \hat x, \hat z) = \mathbb{P}(y \mid \hat z)$，因为在 $G_{\overline{Z}\,\overline{X}}$ 中箭头 $U \to X$ 与 $X \to Z$ 被删去，$X$ 是孤立的，$(Y \perp X \mid Z)$ 成立。(iv) $\mathbb{P}(y \mid \hat z) = \sum_{x'} \mathbb{P}(y \mid x', \hat z)\,\mathbb{P}(x' \mid \hat z) = \sum_{x'} \mathbb{P}(y \mid x', z)\,\mathbb{P}(x')$，用到规则 2（$(Y \perp Z \mid X)_{G_{\underline{Z}}}$）与规则 3（$(X \perp Z)_{G_{\overline{Z}}}$）。合起来得 (12.4)。
 6. 在两个时间点给予处理：第一次就诊时的 $X$，第二次的 $U$。两次就诊之间测量一个危险因素 $Z$；$Z$ 受 $X$ 与未测量的健康状况 $H$ 的影响，$H$ 也影响结果 $Y$；第二次处理 $U$ 依据 $Z$ 选择；$X$、$Z$、$U$ 都影响 $Y$。$X$ 是随机化的。$\mathbb{P}(y \mid \operatorname{do}(x), \operatorname{do}(u))$ 可识别吗？为什么按通常方式对 $Z$ 做调整会失败？

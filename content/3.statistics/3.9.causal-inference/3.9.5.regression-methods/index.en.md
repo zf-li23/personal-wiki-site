@@ -61,7 +61,7 @@ The Lipid Research Clinics Coronary Primary Prevention Trial (LRC-CPPT) was a ra
 | `chold` $=$ `cholf` $-$ `cholp` | post | $-8.5$ (10.8) | $-33.4$ (21.3) |
 | `comp`: percentage of the prescribed dose taken | post | 74.5 (21.0) | 59.9 (24.4) |
 
-The outcome is $Y = $ `cholf`, the treatment $W$ is assignment to the drug, and the pre-treatment measurements are covariates $X$. They are balanced across the groups, as randomization implies, and strongly predictive of the outcome: the standard deviation of the change `chold` is less than half that of `cholf`. The compliance variable `comp` is measured after assignment and differs between the groups; Section 5.3.6 explains why it must not be used as a covariate.
+The outcome is $Y = $ `cholf`, the treatment $W$ is assignment to the drug, and the pre-treatment measurements are covariates $X$. They are balanced across the groups, as randomization implies, and strongly predictive of the outcome: in the control group the standard deviation of the change `chold` is less than half that of `cholf`. The compliance variable `comp` is measured after assignment and differs between the groups; Section 5.3.8 explains why it must not be used as a covariate.
 
 ## 5.2. Regression without Covariates
 

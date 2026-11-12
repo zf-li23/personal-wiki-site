@@ -63,7 +63,7 @@ e(x) = \frac{1}{N(x)} \sum_{i:X_i = x} p_i\bigl(\boldsymbol{X}, \boldsymbol{Y}(0
 $$
 where $N(x) = \#\{i = 1, \dots, N : X_i = x\}$ is the number of units with $X_i = x$. For values $x$ with $N(x) = 0$ the propensity score is defined to be zero.
 
-The propensity score is a function of the covariate value $x$ only through its index; in general its values still depend on the potential outcomes of the units. The letter $e$ is a function name (for "exposure"), not the constant $\mathrm{e}$.
+The propensity score is written as a function of the covariate value $x$ alone, but in general its values still depend on the potential outcomes of the units. The letter $e$ is a function name (for "exposure"), not the constant $\mathrm{e}$.
 
 ### 2.2.2. Four Examples
 

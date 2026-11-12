@@ -30,7 +30,7 @@ Under the three conditions the assignment mechanism is a product of propensity s
 $$
 \mathbb{P}\bigl(\boldsymbol{W} \mid \boldsymbol{X}, \boldsymbol{Y}(0), \boldsymbol{Y}(1)\bigr) = c \cdot \prod_{i=1}^{N} e(X_i)^{W_i}\bigl(1 - e(X_i)\bigr)^{1 - W_i}, \qquad 0 < e(x) < 1,
 $$
-and in the super-population the conditions reduce to **strong ignorability**: $W_i \perp (Y_i(0), Y_i(1)) \mid X_i$ and $0 < e(x) < 1$. The first part is a **conditional independence** statement: among units with the same covariates, those who were treated and those who were not have the same distribution of potential outcomes. Epidemiologists call the same condition conditional exchangeability, since the treated and untreated units could be exchanged without changing the distribution of potential outcomes; it is the unconfoundedness of this course in other words. The second part is **positivity**: every type of unit could have received either treatment.
+and in the super-population the conditions reduce to **strong ignorability**: $W_i \perp (Y_i(0), Y_i(1)) \mid X_i$ and $0 < e(x) < 1$. The first part is a **conditional independence** statement: among units with the same covariates, those who were treated and those who were not have the same distribution of potential outcomes. Epidemiologists call the same condition conditional exchangeability, since the treated and untreated units could be exchanged without changing the distribution of potential outcomes; it is unconfoundedness under another name. The second part is **positivity**: every type of unit could have received either treatment.
 
 ### 8.1.3. Unconfoundedness Cannot Be Tested
 
