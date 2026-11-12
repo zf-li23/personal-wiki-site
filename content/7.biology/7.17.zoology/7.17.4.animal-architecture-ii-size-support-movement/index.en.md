@@ -1,9 +1,9 @@
 ---
 title: "Animal Architecture II: Size, Support, Movement, and Exchange"
-description: Size and scaling, and the limit that diffusion sets on body form; skeletons (hydrostatic, exoskeleton, endoskeleton) with the Clark–Cowey model of worms reinforced by helical fibers and the materials of skeletons; locomotion at low and high Reynolds number; feeding types and the three kinds of digestive system; gas exchange and circulation; protonephridia, metanephridia and Malpighian tubules and the filtration–reabsorption principle; types of nervous system; asexual and sexual reproduction. A catalog of design solutions that later chapters take up phylum by phylum.
+description: Size and scaling, and the limit that diffusion sets on body form; skeletons (hydrostatic, exoskeleton, endoskeleton) with the Clark–Cowey model of worms reinforced by helical fibers and the materials of skeletons; locomotion at low and high Reynolds number; feeding types and the three kinds of digestive system; gas exchange and circulation; protonephridia, metanephridia and Malpighian tubules and the filtration–reabsorption principle; types of nervous system; asexual and sexual reproduction, gonads and sperm transfer; body coverings and chemical coordination. A catalog of design solutions that later chapters take up phylum by phylum.
 ---
 
-Every animal must solve the same practical problems: it must hold its shape and move, obtain food and digest it, take up oxygen and give off carbon dioxide, distribute substances within the body, get rid of nitrogenous waste while keeping its water and salts in balance, coordinate its parts and reproduce. The previous chapter ([7.17.3](/7.17.3)) described the overall architecture of the body; this one surveys the solutions animals have evolved for each of these problems, as a catalog to which the chapters on the individual phyla will refer. A single physical constraint runs through the catalog: as an animal grows, its volume increases faster than its surface, and diffusion, which serves small animals well, becomes too slow. The physiology of each system is the subject of animal physiology ([7.14](/7.14)); here we stress the structural types and how they are distributed among the phyla.
+Every animal must solve the same practical problems: it must hold its shape and move, obtain food and digest it, take up oxygen and give off carbon dioxide, distribute substances within the body, get rid of nitrogenous waste while keeping its water and salts in balance, protect itself with a body covering, coordinate its parts by nerves and hormones, and reproduce. The previous chapter ([7.17.3](/7.17.3)) described the overall architecture of the body; this one surveys the solutions animals have evolved for each of these problems, as a catalog to which the chapters on the individual phyla will refer. A single physical constraint runs through the catalog: as an animal grows, its volume increases faster than its surface, and diffusion, which serves small animals well, becomes too slow. The physiology of each system is the subject of animal physiology ([7.14](/7.14)); here we stress the structural types and how they are distributed among the phyla.
 
 ## 4.1. Size and Its Consequences
 
@@ -26,6 +26,38 @@ The figure explains several body plans as solutions to the same problem:
 - A metabolically inert core: in medusae and ctenophores most of the volume is mesoglea, which consumes almost no oxygen, so the living tissue forms thin layers on its surfaces ([7.17.2](/7.17.2#def-2.4.2)).
 - Bringing the environment inside: sponges pump water through canals lined by choanocytes, and cnidarians circulate water through a branched **gastrovascular cavity**.
 - Internal transport: larger, active animals have specialized exchange surfaces of large area (gills, lungs, **tracheal systems**) and a circulatory system that carries oxygen by bulk flow, faster than diffusion over any distance beyond about a millimeter.
+
+### 4.1.3. Numbers for Surface, Volume and Diffusion
+
+Two simple calculations show how sharply the constraint bites. For a sphere of radius $r$ the ratio of surface to volume is $3/r$; the time that diffusion takes grows with the square of the distance.
+
+**Formula 4.1.1 (Diffusion Time)** The mean time for a molecule with diffusion coefficient $D$ to diffuse a distance $x$ in one direction is approximately
+
+$$
+t \approx \frac{x^2}{2D}.
+\tag{4.2}
+$$
+
+:::
+
+| Radius or distance | Surface/volume of a sphere | Time for O$_2$ to diffuse that far in water ($D \approx 2\times10^{-9}\,\mathrm{m^2\,s^{-1}}$) | Biological scale |
+|---|---|---|---|
+| 1 µm | $3\times10^{6}\,\mathrm{m^{-1}}$ | 0.25 ms | A bacterium; the alveolar wall is about 0.5 µm thick |
+| 10 µm | $3\times10^{5}\,\mathrm{m^{-1}}$ | 25 ms | An animal cell; distance from a capillary to most cells |
+| 100 µm | $3\times10^{4}\,\mathrm{m^{-1}}$ | 2.5 s | A rotifer; a flatworm's half-thickness |
+| 1 mm | $3\times10^{3}\,\mathrm{m^{-1}}$ | about 4 min | A copepod; the limit for an active sphere |
+| 1 cm | $300\,\mathrm{m^{-1}}$ | about 7 h | A small insect; the thickness of an earthworm |
+| 1 m | $3\,\mathrm{m^{-1}}$ | about 8 years | A large mammal |
+
+The quadratic dependence is decisive: diffusion is fast enough within a cell and across thin epithelia, but useless over the length of an animal. This is why almost all exchange surfaces are thin and why bulk flow (breathing, pumping blood, ciliary currents) carries substances over every distance larger than a fraction of a millimeter. Animals increase the area of their exchange surfaces enormously: the human lungs have an alveolar surface of about $70\,\mathrm{m^2}$ behind a barrier about $0.5\,\mu\mathrm{m}$ thick, and the human small intestine, with its folds, villi and microvilli, has a mucosal surface of about $30\,\mathrm{m^2}$ (Helander and Fändriks 2014; older estimates of 200–300 m² were too high), compared with about $1.8\,\mathrm{m^2}$ of skin.
+
+### 4.1.4. Scaling of Metabolism, Support and Life History
+
+The surface–volume constraint has consequences beyond gas exchange. Because whole-animal metabolic rate scales approximately as $M^{3/4}$ (**Kleiber's law**, [7.14.30](/7.14.30#sec-30.3)), the metabolic rate per gram scales as $M^{-1/4}$: a 3 g shrew uses oxygen per gram of tissue about $(4\times10^{6}/3)^{1/4} \approx 34$ times as fast as a 4 t elephant. The same quarter-power rule applies to many rates and times: heart rate and breathing rate scale approximately as $M^{-1/4}$ (a shrew's heart beats several hundred to a thousand times a minute, an elephant's about thirty), and life span and generation time approximately as $M^{1/4}$.
+
+Support scales differently from metabolism. If animals were geometrically similar, the stress in their bones under their own weight would rise in proportion to length, and the largest animals would break their legs. Mammals solve this only partly by thicker bones: across mammals skeletal mass scales approximately as $M^{1.09}$ (Prange and colleagues 1979), only slightly faster than body mass. The main solution is posture: large mammals stand with straighter limbs, which aligns the bones with the load and increases the mechanical advantage of the muscles, so that peak bone stresses are similar from mice to horses (Biewener 1989). Aquatic animals escape much of the constraint because water supports them, which is one reason why the largest animals that have ever lived, the blue whales, are marine.
+
+The range of animal size spans about eight orders of magnitude in length. Among the smallest free-living animals are some rotifers, tardigrades and the fairyfly *Megaphragma mymaripenne*, a parasitoid wasp about 0.2 mm long whose nervous system of a few thousand neurons consists mostly of cells that lose their nuclei during development (Polilov 2012). The largest is the blue whale, up to about 30 m and more than 150 t. Arthropods are never as large as the largest vertebrates; the largest insects lived in the late Carboniferous and Permian, when griffinflies (*Meganeuropsis*) reached wingspans of about 70 cm. A popular hypothesis attributes such giants to the high atmospheric oxygen of that time (perhaps 30%), which would have extended the reach of the tracheal system ([7.17.26](/7.17.26#sec-26.4)), but the correlation is debated.
 
 ## 4.2. Support: Skeletons
 
@@ -74,6 +106,59 @@ The model explains differences among worms that measurements confirm. Nemerteans
 
 Mineralized skeletons appeared in many lineages independently near the beginning of the Cambrian, about 550–520 million years ago (the "small shelly fauna" and the **Cambrian explosion**, [7.10.29](/7.10.29#sec-29.4)). A hard skeleton gives protection, attachment for muscles, and greater size on land, at the price of the need to grow by molting (arthropods), by adding to the margin (molluscs, brachiopods) or by internal remodeling (vertebrates).
 
+The mechanical properties of these materials span a wide range. Their stiffness, measured by **Young's modulus** (stress divided by strain in the elastic range), differs by about ten orders of magnitude, which allows animals to build structures from jelly to tooth with a small set of molecules (orders of magnitude after Wainwright and colleagues 1976 and Vogel 2003):
+
+| Material | Young's modulus (order of magnitude) | Function |
+|---|---|---|
+| Mesoglea of jellyfish | $10^{2}$–$10^{4}\,\mathrm{Pa}$ | Bulk and shape at almost no metabolic cost |
+| Resilin, elastin | About $1\,\mathrm{MPa}$ | Rubber-like springs: insect wing hinges, the jumping mechanism of fleas, arterial walls |
+| **Mutable collagenous tissue** (echinoderms) | Changes by an order of magnitude or more under nervous control | Catch connective tissue that locks spines and arms |
+| Tendon collagen | About $1\,\mathrm{GPa}$ | Inextensible fibers in tension |
+| Sclerotized insect cuticle | $1$–$20\,\mathrm{GPa}$ | Rigid levers and armor |
+| Bone (compact) | About $20\,\mathrm{GPa}$ | Stiff, tough, self-repairing levers |
+| Nacre of mollusc shells | About $70\,\mathrm{GPa}$ | Hard, fracture-resistant armor |
+| Tooth enamel | About $80\,\mathrm{GPa}$ | Hardest vertebrate tissue, for cutting and grinding |
+
+### 4.2.4. Skeletons across the Phyla and Their Mechanics
+
+Each type of skeleton takes several forms, and most phyla combine more than one.
+
+| Skeleton | Form | Examples | Chapter |
+|---|---|---|---|
+| Hydrostatic | Fluid in the gastrovascular cavity | Sea anemones, *Hydra* (the mouth closes to trap water) | [7.17.9](/7.17.9) |
+| | Fluid in a blastocoelom under high pressure | Nematodes | [7.17.17](/7.17.17) |
+| | Fluid in a coelom, divided by septa | Earthworms, many polychaetes | [7.17.15](/7.17.15) |
+| | Fluid in an undivided coelom or hemocoel | Sipunculans, the foot of bivalves, the proboscis of nemerteans | [7.17.14](/7.17.14), [7.17.16](/7.17.16) |
+| | Hydraulic extension of appendages | Spider legs (extended by hemolymph pressure), echinoderm tube feet | [7.17.19](/7.17.19), [7.17.42](/7.17.42) |
+| Muscular hydrostat | Muscle tissue itself as the incompressible volume | Cephalopod arms and tentacles, tongues of mammals and lizards, the elephant's trunk | [7.17.14](/7.17.14) |
+| Exoskeleton | Molted, jointed cuticle of chitin and protein, often mineralized | Arthropods | [7.17.18](/7.17.18) |
+| | Accretionary calcareous shell | Molluscs, brachiopods | [7.17.13](/7.17.13), [7.17.16](/7.17.16) |
+| | Secreted cup or tube | Corals, serpulid polychaetes, bryozoans | [7.17.9](/7.17.9) |
+| Endoskeleton | Spicules and spongin in the mesohyl | Sponges | [7.17.7](/7.17.7) |
+| | Ossicles of calcite in the dermis, each a single crystal with a porous stereom | Echinoderms | [7.17.42](/7.17.42) |
+| | Cartilage and bone | Vertebrates; cartilage also around the brain of cephalopods, cartilage-like gill bars in lancelets | [7.17.58](/7.17.58) |
+
+**Definition 4.2.1 (Muscular Hydrostat)** A **muscular hydrostat** is a muscular organ without skeletal support or a fluid-filled cavity, in which the muscle tissue itself forms an incompressible volume; muscles arranged in at least three directions (longitudinal, transverse or circular, and helical or oblique) act as antagonists to one another, so that a decrease in one dimension causes an increase in another.
+
+Muscular hydrostats, analyzed by Kier and Smith (1985), allow bending, elongation, shortening and twisting with great precision. A squid's tentacle, for example, extends by up to about 80% in a few tens of milliseconds during prey capture by the contraction of transverse muscle fibers that are cross-striated for speed.
+
+Rigid skeletons act as levers, and their arrangement determines the trade-off between force and speed.
+
+**Formula 4.2.2 (Lever)** A muscle that exerts a force $F_{\mathrm{in}}$ at a distance $l_{\mathrm{in}}$ from a joint (the in-lever) moves a load at a distance $l_{\mathrm{out}}$ (the out-lever). At equilibrium, and for the velocities at the two points,
+
+$$
+F_{\mathrm{out}} = F_{\mathrm{in}}\,\frac{l_{\mathrm{in}}}{l_{\mathrm{out}}}, \qquad v_{\mathrm{out}} = v_{\mathrm{in}}\,\frac{l_{\mathrm{out}}}{l_{\mathrm{in}}};
+\tag{4.3}
+$$
+
+the ratio $l_{\mathrm{in}}/l_{\mathrm{out}}$ is the mechanical advantage.
+
+:::
+
+Limbs built for speed, such as the legs of running ungulates, have a small mechanical advantage: the muscles insert close to the joint and the foot moves fast. Limbs built for force, such as the forelimbs of digging moles or the chelae of crabs, have a large one. The same rule applies to jaws, where the lower jaw of a fish or mammal is a lever whose design reflects its diet ([7.17.58](/7.17.58)).
+
+The shape of a skeletal element matters as much as its material. A beam resists bending in proportion to the second moment of area of its cross section, which for a tube of outer radius $R$ and inner radius $r$ is $I = \pi(R^4 - r^4)/4$. For a given amount of material (a given cross-sectional area $A$), a tube with $r = kR$ is stiffer than a solid rod by the factor $(1 + k^2)/(1 - k^2)$: about 4.6 for $k = 0.8$. This is why arthropod legs, bird bones and the shafts of mammalian long bones are hollow, and why the exoskeleton, a tube with the muscles inside, is an efficient design for small animals. It becomes less efficient at large size, because a thin-walled tube buckles locally and because the animal must molt: a freshly molted arthropod is supported only by hemolymph pressure until the new cuticle hardens, a phase in which large land arthropods would collapse under their weight.
+
 ## 4.3. Movement
 
 ### 4.3.1. Mechanisms of Locomotion
@@ -90,6 +175,34 @@ Animals move by four basic mechanisms:
 The physics of moving through water depends on size and speed. The **Reynolds number** $Re = \rho U L/\mu$ ($\rho$ density and $\mu$ dynamic viscosity of the fluid, $U$ speed, $L$ length of the body) measures the ratio of inertial to viscous forces. A whale swimming at several meters per second has $Re \approx 10^8$, a fish $10^4$–$10^6$, a copepod $1$–$100$, a ciliated larva about $1$ or less, a sperm cell about $10^{-2}$.
 
 At high Reynolds number inertia dominates: a swimmer that stops coasting forward, streamlined bodies reduce drag, and fins and tails generate thrust by accelerating water backward. At low Reynolds number viscosity dominates: motion stops almost instantly when propulsion stops, water is effectively syrup, and a reciprocal motion, a stroke reversed exactly in the return stroke, gives no net movement at all. Cilia escape this by beating asymmetrically, with a stiff power stroke and a bent recovery stroke; flagella by propagating helical or planar waves. Low Reynolds number also governs suspension feeding: the bristles of copepod limbs and the tentacles of bryozoans work less as sieves than as paddles that move a parcel of viscous water containing particles.
+
+![Reynolds numbers of moving organisms (logarithmic scale; values from Vogel 1994, *Life in Moving Fluids*, 2nd ed., for the speeds stated). The scale spans thirteen orders of magnitude. Below $Re \approx 1$ viscosity dominates and organisms swim with cilia or flagella, whose asymmetric or wave-like beats avoid the reciprocal motion that produces no net displacement; above $Re \approx 1000$ inertia dominates and animals are streamlined and propel themselves with fins, tails, wings or jets. The intermediate range, where both forces matter, is occupied by copepods, the smallest flying insects and many larvae](./plots/reynolds-ladder.py)
+
+### 4.3.3. Locomotion Compared
+
+The main modes of locomotion are compared below. Each is suited to a range of sizes, which is one reason why the mode of locomotion changes during the life of many animals: a ciliated larva becomes a crawling or swimming adult.
+
+| Mode | Mechanism | Size and $Re$ | Examples | Chapter |
+|---|---|---|---|---|
+| Ciliary swimming | Metachronal waves of cilia on the body surface or in bands | Micrometers to millimeters; $Re < 1$ | Larvae, rotifers, small flatworms; ctenophores with comb plates | [7.17.8](/7.17.8), [7.17.12](/7.17.12) |
+| Ciliary gliding | Cilia beat in a layer of mucus on the substrate | Up to several centimeters if flat | Planarians, small nemerteans, many gastropods in part | [7.17.11](/7.17.11) |
+| Peristaltic crawling and burrowing | Waves of contraction of circular and longitudinal muscles on a segmented hydrostatic skeleton | Centimeters to meters | Earthworms, many polychaetes | [7.17.15](/7.17.15) |
+| Two-anchor burrowing | Alternate anchoring of the front (by swelling) and the rear (by a shell or swollen body), with the hydrostatic body pulling between | Centimeters | Bivalves with the foot, sipunculans, burrowing sea anemones | [7.17.14](/7.17.14) |
+| Pedal waves | Waves of muscle contraction along a foot gliding on mucus | Millimeters to decimeters | Snails, slugs, chitons | [7.17.13](/7.17.13) |
+| Undulation | Lateral or dorsoventral waves of bending along a body stiffened by a notochord, a vertebral column or a pressurized cuticle | Millimeters to meters | Nematodes (dorsoventral), polychaetes with parapodia, lancelets, eels, snakes | [7.17.17](/7.17.17), [7.17.43](/7.17.43) |
+| Jet propulsion | Expulsion of water from a cavity, refilled by elastic recoil or by muscles | Millimeters to meters | Medusae, squid and octopuses, scallops, salps, dragonfly larvae | [7.17.9](/7.17.9), [7.17.14](/7.17.14) |
+| Walking with appendages | Jointed legs acting as levers, coordinated in gaits | Millimeters to meters | Arthropods (metachronal waves in myriapods, the alternating tripod of insects), tetrapods | [7.17.20](/7.17.20), [7.17.24](/7.17.24), [7.17.61](/7.17.61) |
+| Tube feet | Hydraulic extension and adhesion of many small podia | Centimeters | Sea stars, sea urchins | [7.17.42](/7.17.42) |
+| Paddling and rowing | Appendages with a power stroke and a feathered recovery stroke | Millimeters to meters | Copepods, water beetles, turtles | [7.17.21](/7.17.21) |
+| Flapping flight | Wings generating lift and thrust | Insects from 0.2 mm, birds, bats, extinct pterosaurs | Four independent origins | [7.17.25](/7.17.25), [7.17.53](/7.17.53) |
+
+Several modes recur in unrelated lineages: jet propulsion in cnidarians, molluscs, tunicates and insects; undulation in nematodes, annelids and vertebrates; flight in four lineages. What they share is a mechanical principle, not an ancestry, and their distribution follows size and medium more closely than phylogeny.
+
+### 4.3.4. The Cost of Locomotion
+
+**Definition 4.3.1 (Cost of Transport)** The **cost of transport** is the metabolic energy an animal spends to move a unit of its body mass over a unit of distance, usually measured in joules per kilogram per meter; the net cost of transport excludes the resting metabolic rate.
+
+Schmidt-Nielsen (1972) compared the minimum cost of transport of runners, fliers and swimmers over a wide range of sizes. For each mode the cost per kilogram decreases with body size, approximately as $M^{-0.3}$, so that large animals move more cheaply. At the same body mass, swimming is the cheapest mode, because the water supports the body and streamlined swimmers suffer little drag; flying is intermediate, because a flier must support its weight but travels fast; and running is the most expensive, because muscles do work against gravity at every step. These differences help explain the long migrations of whales and birds and the short ranges of walking animals of the same size, and why burrowing, which must push soil aside, is many times more costly than walking.
 
 ## 4.4. Feeding and Digestion
 
@@ -119,6 +232,49 @@ Food is digested intracellularly, in food vacuoles after phagocytosis, or extrac
 
 Sponges and placozoans digest food only intracellularly. Cnidarians, ctenophores (whose anal pores are an exception), xenacoelomorphs and flatworms have a gastrovascular cavity, branched in large flatworms and in medusae into canals that reach every part of the body. A complete gut is the rule in the Nephrozoa (bilaterians other than xenacoelomorphs). Its advantage is the division of labor along the tube: food can be taken in while earlier meals are still being digested, and successive regions can specialize in storage (crop, stomach), grinding (gizzard), enzymatic digestion, absorption (intestine, often with a large surface increased by folds and villi) and the recovery of water and ions (rectum). The digestive systems of vertebrates are compared in [7.17.63](/7.17.63) and their physiology treated in [7.14.26](/7.14.26)–[7.14.28](/7.14.28).
 
+### 4.4.3. How Suspension Feeders Capture Particles
+
+**Filter feeding** has evolved in so many lineages that its mechanisms form a catalog of their own. They differ in what generates the current, what retains the particles and how the particles are carried to the mouth.
+
+| Mechanism | Current and capture | Examples | Chapter |
+|---|---|---|---|
+| Choanocyte pump | Flagella of collar cells drive water through the body; bacteria are trapped on the collar microvilli | Sponges | [7.17.7](/7.17.7#sec-7.3) |
+| Downstream ciliary bands | A band of compound cilia (prototroch, metatroch) creates the current and catches particles on the downstream side; a food groove between the bands leads to the mouth | Trochophore larvae of annelids and molluscs, rotifers, entoprocts | [7.17.5](/7.17.5) |
+| Upstream ciliary bands | Single cilia create the current; particles are caught on the upstream side by a local reversal of beat | Lophophorates, pterobranchs, echinoderm and enteropneust larvae | [7.17.16](/7.17.16), [7.17.41](/7.17.41) |
+| Ciliary–mucus sheets | Cilia of the gills or pharynx create a current; a mucus sheet secreted by an endostyle or gland traps particles and is rolled into a strand | Bivalves, tunicates, lancelets, some gastropods such as *Crepidula* | [7.17.14](/7.17.14), [7.17.43](/7.17.43) |
+| Mucus nets | A net of mucus spun outside the body, collected and eaten | Appendicularian houses, the polychaete *Chaetopterus*, vermetid gastropods | [7.17.43](/7.17.43) |
+| Setose appendages | Limbs bearing setae sweep or pump water; at low $Re$ they act more as paddles than as sieves | Copepods, barnacles, krill, branchiopods | [7.17.21](/7.17.21) |
+| Tentacles | Passive capture by sticky or stinging tentacles held in the current | Hydroids, corals, sea lilies, dendrochirotid sea cucumbers | [7.17.9](/7.17.9), [7.17.42](/7.17.42) |
+| Baleen | Gulping a large volume and expelling it through keratin plates | Baleen whales | [7.17.55](/7.17.55) |
+
+The distinction between downstream and upstream collecting systems was emphasized by Nielsen as a character of larval evolution: downstream systems of compound cilia characterize the trochophores of spiralians, upstream systems of single cilia the larvae of lophophorates and deuterostomes ([7.17.5](/7.17.5#sec-5.4)). Particle sizes range from bacteria (0.5–1 µm, sponges and appendicularians) through phytoplankton (2–100 µm, bivalves and copepods) to krill (several centimeters, baleen whales).
+
+### 4.4.4. Structures for Obtaining Food
+
+| Structure | Construction | Examples | Chapter |
+|---|---|---|---|
+| Cnidae and tentacles | Discharging capsules on tentacles that paralyze and hold prey | Cnidarians; colloblasts (adhesive cells) in ctenophores | [7.17.9](/7.17.9), [7.17.8](/7.17.8) |
+| Eversible pharynx | A muscular pharynx protruded through the mouth | Planarians, many polychaetes | [7.17.11](/7.17.11) |
+| Cuticular jaws | Jaws and teeth of the pharynx lining | Gnathiferans (rotifer trophi in the mastax), polychaete jaws, cephalopod beaks | [7.17.12](/7.17.12), [7.17.14](/7.17.14) |
+| **Radula** | A ribbon of chitinous teeth moved over a cartilaginous support | Molluscs except bivalves | [7.17.13](/7.17.13) |
+| Mouthparts | Modified appendages: mandibles, maxillae, chelicerae | Arthropods; insect mouthpart types | [7.17.18](/7.17.18), [7.17.23](/7.17.23) |
+| Aristotle's lantern | Five teeth moved by a complex of ossicles and muscles | Sea urchins | [7.17.42](/7.17.42) |
+| Proboscis | An eversible tube, sometimes armed with a stylet | Nemerteans, many gastropods (cone snails with harpoon-like radular teeth) | [7.17.16](/7.17.16) |
+| Jaws and teeth | Bony or cartilaginous jaws of the first pharyngeal arch, with teeth of dentine and enamel | Gnathostome vertebrates | [7.17.46](/7.17.46), [7.17.63](/7.17.63) |
+
+### 4.4.5. Regions of a Complete Gut
+
+A complete gut develops from three parts: the stomodeum, an ingrowth of ectoderm at the mouth, forms the foregut; the endodermal archenteron forms the midgut; and the proctodeum, an ingrowth of ectoderm at the anus, forms the hindgut. In arthropods the ectodermal foregut and hindgut are lined with cuticle that is shed at each molt, and digestion and absorption take place in the midgut. The regions are differently specialized in different animals:
+
+| Region | Earthworm | Insect | Crayfish | Bird |
+|---|---|---|---|---|
+| Foregut | Muscular pharynx, esophagus with calciferous glands, crop for storage, gizzard for grinding | Pharynx, esophagus, crop, proventriculus with cuticular teeth | Esophagus, stomach with a gastric mill of calcified ossicles | Esophagus with crop, glandular stomach (proventriculus), gizzard |
+| Midgut | Intestine with a dorsal fold (typhlosole) that increases its surface | Midgut with gastric caeca, lined by a peritrophic membrane | Midgut with a large digestive gland (hepatopancreas) | Small intestine with liver and pancreas |
+| Hindgut | Short rectum | Ileum, colon and rectum with rectal pads that reabsorb water | Intestine and anus | Large intestine, paired caeca, cloaca |
+| Chapter | [7.17.15](/7.17.15) | [7.17.26](/7.17.26#sec-26.2) | [7.17.21](/7.17.21) | [7.17.53](/7.17.53), [7.17.63](/7.17.63) |
+
+The table shows a convergence that reflects the problems all animals face: a storage organ (crop) where food is taken in quickly, a grinding organ (gizzard, proventriculus, gastric mill) for animals that lack chewing teeth, a large absorptive surface in the midgut, and a terminal region that recovers water. How the digestive system was modified along the animal tree is the subject of [7.17.44](/7.17.44).
+
 ## 4.5. Gas Exchange and Circulation
 
 Oxygen enters animals by diffusion across a moist surface, and the rate of entry is proportional to the area of that surface and to the difference in partial pressure across it, and inversely proportional to its thickness (Fick's law, [7.14.17](/7.14.17)). Small or flat animals use the whole body surface; larger animals use one of four kinds of respiratory organ:
@@ -133,6 +289,36 @@ Oxygen enters animals by diffusion across a moist surface, and the rate of entry
 Water contains about 30 times less oxygen than air and is about 800 times denser and 50 times more viscous, so ventilating a gill costs much more than ventilating a lung; gill breathers compensate by **countercurrent exchange** ([7.14.17](/7.14.17)). The **tracheal system** is a radical alternative: it makes a circulatory system unnecessary for gas transport and limits insect size, because diffusion along the tracheae becomes slow over large distances ([7.17.26](/7.17.26)).
 
 Where oxygen must be carried more than a millimeter or so, a circulatory system moves body fluid by bulk flow. In an **open circulatory system** the heart pumps hemolymph through vessels that open into the hemocoel, where it bathes the tissues (arthropods, most molluscs); in a **closed circulatory system** blood remains within vessels, and exchange takes place across the walls of capillaries (annelids, cephalopods, vertebrates). Respiratory pigments increase the oxygen capacity of the blood: hemoglobin (vertebrates, many annelids, some insects and crustaceans), hemocyanin, a copper protein dissolved in the plasma (molluscs and arthropods, independently evolved in the two), hemerythrin (sipunculans, brachiopods) and chlorocruorin (some polychaetes). The physiology of circulation and gas transport is treated in [7.14.12](/7.14.12) and [7.14.19](/7.14.19).
+
+### 4.5.1. Respiratory Organs and Circulatory Systems by Phylum
+
+| Group | Gas exchange | Circulation | Chapter |
+|---|---|---|---|
+| Sponges, cnidarians, ctenophores, placozoans | Whole surface, water currents through the body or the gastrovascular cavity | None | [7.17.7](/7.17.7)–[7.17.9](/7.17.9) |
+| Flatworms, xenacoelomorphs, gastrotrichs, rotifers | Body surface | None | [7.17.10](/7.17.10)–[7.17.12](/7.17.12) |
+| Nematodes | Body surface | None; the pressurized body fluid mixes by movement | [7.17.17](/7.17.17) |
+| Nemerteans | Body surface | Closed system of vessels without a heart, moved by contraction of the vessels and body wall | [7.17.16](/7.17.16#sec-16.1) |
+| Annelids | Body surface, parapodial gills, branchial crowns of tube worms | Closed in most: a contractile dorsal vessel pumping forward and a ventral vessel, linked by segmental vessels (five pairs of "hearts" in the earthworm) | [7.17.15](/7.17.15) |
+| Molluscs | Ctenidia in the mantle cavity; a lung in land snails | Open in most, with a heart in a pericardial coelom; closed in cephalopods, which have a systemic heart and two branchial hearts | [7.17.13](/7.17.13), [7.17.14](/7.17.14) |
+| Crustaceans | Gills on the limbs or under the carapace | Open, with a dorsal heart in a pericardial sinus | [7.17.21](/7.17.21) |
+| Chelicerates | Book gills (horseshoe crabs), book lungs and tracheae (arachnids) | Open, dorsal tubular heart with ostia | [7.17.19](/7.17.19) |
+| Insects, myriapods | Tracheae opening by spiracles | Open; the dorsal vessel distributes nutrients and hormones, not oxygen | [7.17.26](/7.17.26#sec-26.5) |
+| Echinoderms | Tube feet, papulae (dermal gills), respiratory trees of sea cucumbers | Coelomic fluid; a hemal system of sinuses of uncertain function | [7.17.42](/7.17.42) |
+| Hemichordates, tunicates | Pharyngeal slits and body surface | Open; the tunicate heart periodically reverses the direction of flow | [7.17.41](/7.17.41), [7.17.43](/7.17.43) |
+| Vertebrates | Gills (fishes, larval amphibians), lungs, skin | Closed, with a ventral chambered heart | [7.17.64](/7.17.64), [7.17.65](/7.17.65) |
+
+The distinction between open and closed systems is less sharp than the terms suggest: the closed systems of annelids include sinuses, and the open systems of decapod crustaceans have well-defined arteries that branch to small vessels before the blood enters the sinuses. Closed systems allow higher pressures and faster, directed delivery, which suits large active animals (squid, vertebrates); open systems operate at low pressure and the hemolymph often has functions besides transport, such as the hydraulic skeleton of spider legs.
+
+### 4.5.2. Respiratory Pigments
+
+| Pigment | Oxygen-binding site | Location | Color (oxygenated / deoxygenated) | Groups |
+|---|---|---|---|---|
+| Hemoglobin | Iron in a heme group; one O$_2$ per heme | In red blood cells (vertebrates) or dissolved as giant extracellular molecules (many annelids) | Red / dark red | Vertebrates, many annelids, some molluscs (planorbid snails, some bivalves), branchiopod crustaceans (*Daphnia*), chironomid midge larvae |
+| Chlorocruorin | Iron in a modified heme | Dissolved | Green in dilute solution, red when concentrated | Some polychaetes (sabellids, serpulids) |
+| Hemocyanin | Two copper atoms per O$_2$ | Dissolved | Blue / colorless | Molluscs and arthropods; the two hemocyanins share a type of copper site but have different protein architectures and evolved independently |
+| Hemerythrin | Two non-heme iron atoms per O$_2$ | In cells | Violet-pink / colorless | Sipunculans, priapulids, brachiopods, the polychaete *Magelona* |
+
+The scattered distribution of hemoglobins reflects the antiquity of the globin gene family, present in all kingdoms, from which oxygen carriers have been recruited many times; hemocyanins evolved separately from enzymes, the phenoloxidases in arthropods and tyrosinase-like proteins in molluscs.
 
 ## 4.6. Excretion and Osmoregulation
 
@@ -150,6 +336,26 @@ Protonephridia occur in animals without a spacious coelom or without a closed ci
 
 Malpighian tubules work without filtration, by secretion. They evolved independently in insects and arachnids, and they suit animals on land that must conserve water: uric acid precipitates in the hindgut and can be excreted almost dry. Crustaceans have instead antennal or maxillary glands (green glands), and arachnids, besides Malpighian tubules, coxal glands; both are sacs derived from the coelom with a filtering wall and a tubule. In freshwater sponges, as in freshwater protists, water entering by osmosis is expelled by contractile vacuoles.
 
+### 4.6.1. Excretory Organs across the Phyla
+
+| Group | Excretory organ | Origin and remarks | Chapter |
+|---|---|---|---|
+| Sponges, cnidarians, ctenophores, placozoans | None | Diffusion of ammonia across the body surface; contractile vacuoles in cells of freshwater sponges | [7.17.7](/7.17.7)–[7.17.9](/7.17.9) |
+| Xenacoelomorphs | None | Their absence of nephridia defines the sister group Nephrozoa | [7.17.10](/7.17.10) |
+| Flatworms, gastrotrichs, rotifers, nemerteans | Protonephridia with flame cells | Osmoregulation as much as excretion; in rotifers the tubules open into a bladder | [7.17.11](/7.17.11), [7.17.12](/7.17.12) |
+| Annelids | Metanephridia, one pair per segment; protonephridia in larvae and some small adults | Chloragogen tissue on the gut stores and processes nitrogenous waste, like a liver | [7.17.15](/7.17.15) |
+| Molluscs | Kidneys (one or two), metanephridia draining the pericardial coelom through renopericardial canals | Ultrafiltration across the heart wall into the pericardium | [7.17.13](/7.17.13) |
+| Nematodes | Renette cells or an H-shaped system of canals | No cilia, as in all ecdysozoans | [7.17.17](/7.17.17) |
+| Crustaceans | Antennal glands (green glands) or maxillary glands | Coelomic end sac with podocytes, labyrinth and tubule | [7.17.21](/7.17.21) |
+| Arachnids | Coxal glands and Malpighian tubules | The tubules grow from the endodermal midgut | [7.17.19](/7.17.19#sec-19.6) |
+| Insects, myriapods | Malpighian tubules | The tubules grow from the ectodermal hindgut; cryptonephric systems in some beetles and caterpillars | [7.17.26](/7.17.26#sec-26.3) |
+| Echinoderms | None | Diffusion across tube feet and gills; coelomocytes collect waste | [7.17.42](/7.17.42) |
+| Lancelets | Protonephridia with solenocyte-like terminal cells (cyrtopodocytes) | A chordate with protonephridia: their terminal cells lie on blood vessels and are thought to filter the blood | [7.17.43](/7.17.43) |
+| Tunicates | No tubular organ | Nephrocytes and a renal sac that stores urate concretions | [7.17.43](/7.17.43) |
+| Vertebrates | Kidneys of nephrons: pronephros, mesonephros or opisthonephros, metanephros | Derived from intermediate mesoderm; ducts used also by the male reproductive system | [7.17.66](/7.17.66) |
+
+Two general points emerge. The organs are tubes in almost every phylum that has them, and they work by producing a primary fluid and modifying it; and the terminal structure, a cilia-driven weir in protonephridia, a coelomic funnel in metanephridia or a blood-filtering podocyte layer in the coelomic sacs of crustaceans, mollusc hearts and vertebrate glomeruli, depends on whether the animal has a coelom and a pressurized circulation. Whether protonephridia and metanephridia are homologous, and how the nephridia of different phyla are related, is discussed with the evolution of organ systems in [7.17.44](/7.17.44).
+
 ## 4.7. Nervous Systems
 
 The nervous system of an animal reflects its symmetry and way of life (the cellular and molecular evolution of nervous systems is treated in [7.16.53](/7.16.53)). Four types of overall arrangement are distinguished:
@@ -162,6 +368,40 @@ The nervous system of an animal reflects its symmetry and way of life (the cellu
 **Definition 4.7.1 (Ladder-Like Nervous System, Ventral Nerve Cord)** A **ladder-like nervous system** (orthogon) consists of an anterior cerebral ganglion and several pairs of longitudinal nerve cords linked at intervals by transverse commissures, like the rungs of a ladder. A **ventral nerve cord** (ganglionated ventral nerve cord) is a pair of nerve cords, often fused, running along the ventral midline below the gut and bearing a pair of ganglia in each segment, connected to the brain by circumpharyngeal (circumesophageal) connectives.
 
 Other phyla have their own arrangements: molluscs have several pairs of ganglia connected by nerve cords, concentrated into a large brain around the esophagus in cephalopods; echinoderms have a nerve ring around the mouth with radial nerves into the arms and no brain. The trend toward centralization, with fewer longitudinal cords, concentration of ganglia and a large anterior brain, accompanies active locomotion and cephalization; sessile animals such as bryozoans, tunicates and bivalves show the opposite trend. As noted in [7.17.3](/7.17.3#sec-3.2.2), the ventral nerve cord of protostomes and the dorsal cord of chordates are specified by the same genes from an inverted dorsoventral axis, which suggests that the bilaterian ancestor already had a centralized nerve cord, although this is debated.
+
+### 4.7.1. Nervous Systems by Phylum
+
+| Group | Arrangement | Remarks | Chapter |
+|---|---|---|---|
+| Sponges, placozoans | No neurons | Coordination by contractile cells and chemical signals; sponges have many synaptic genes | [7.17.7](/7.17.7), [7.17.8](/7.17.8) |
+| Ctenophores | Subepithelial nerve net, a syncytium in *Mnemiopsis*; apical organ with statolith | Neurons may have evolved independently ([7.17.6](/7.17.6#sec-6.5.1)) | [7.17.8](/7.17.8) |
+| Cnidarians | **Nerve net** in epidermis and gastrodermis; nerve rings and rhopalia in medusae | Rhopalia of box jellyfish carry lens eyes | [7.17.9](/7.17.9) |
+| Xenacoelomorphs | Basiepidermal nerve net with an anterior condensation | | [7.17.10](/7.17.10) |
+| Flatworms | Bilobed brain and an orthogon of longitudinal cords (**ladder-like nervous system**) | Planarians regenerate the brain | [7.17.11](/7.17.11) |
+| Molluscs | Paired cerebral, pedal, pleural and visceral ganglia; tetraneurous cords in chitons | Cephalopod brain of fused ganglia around the esophagus | [7.17.13](/7.17.13), [7.17.14](/7.17.14) |
+| Annelids | Dorsal brain, circumpharyngeal connectives, **ventral nerve cord** with segmental ganglia; giant axons | | [7.17.15](/7.17.15) |
+| Nematodes | Nerve ring around the pharynx, dorsal and ventral cords | 302 neurons in the hermaphrodite *C. elegans* | [7.17.17](/7.17.17) |
+| Arthropods | Brain of protocerebrum, deutocerebrum and tritocerebrum; ventral cord, often with fused ganglia | | [7.17.18](/7.17.18), [7.17.26](/7.17.26#sec-26.6) |
+| Echinoderms | Circumoral nerve ring and radial nerves; no brain | Ectoneural and hyponeural systems | [7.17.42](/7.17.42) |
+| Hemichordates | Epidermal nerve net with dorsal and ventral cords; a hollow collar cord | | [7.17.41](/7.17.41) |
+| Chordates | **Dorsal hollow nerve cord** with an anterior brain | Cerebral vesicle in lancelets; three-part brain in vertebrates | [7.17.43](/7.17.43), [7.17.67](/7.17.67) |
+
+### 4.7.2. Sense Organs: Basic Types
+
+Sense organs are as varied as nervous systems, but most fall into a few types, each found in many phyla.
+
+| Type | Structure | Examples |
+|---|---|---|
+| Statocyst | A fluid-filled sac with sensory cilia and a dense statolith; senses gravity | Ctenophore apical organ, medusae, acoels, molluscs, decapod crustaceans; the vertebrate inner ear is a comparable organ |
+| Mechanoreceptors on the surface | Ciliary sensory cells, or sensilla in a cuticle | Lateral-line neuromasts of fishes; insect hairs, campaniform and chordotonal sensilla ([7.17.27](/7.17.27)) |
+| Chemoreceptors | Sensory cells in pits or on appendages | Nuchal organs of polychaetes, the osphradium of molluscs, aesthetascs of crustacean antennules, insect sensilla, vertebrate olfactory epithelium |
+| Eyespot and pigment-cup ocellus | Photoreceptors shaded on one side by pigment, giving the direction of light | Flatworms, larvae of many invertebrates, polychaetes |
+| Pinhole eye | A deep cup with a small aperture and no lens | *Nautilus* |
+| Lens (camera) eye | A cup with a lens focusing an image on a retina | Vertebrates, cephalopods, box jellyfish, some polychaetes and gastropods, jumping spiders |
+| **Compound eye** | Many ommatidia, each with its own lens | Arthropods (apposition and superposition types), sabellid fan worms, ark clams |
+| Mirror eye | A concave reflector forms the image | Scallops |
+
+Photoreceptor cells are of two kinds: ciliary photoreceptors, whose membrane is expanded from a cilium (vertebrate rods and cones, many cnidarians), and rhabdomeric ones, whose membrane forms microvilli (arthropods, cephalopods). Both kinds are present in many animals, and their distribution suggests that the bilaterian ancestor had both ([7.16.53](/7.16.53#sec-53.4)). The repeated origin of image-forming eyes from these elements is a classic example of convergence on a common genetic basis (Pax6), discussed in [7.17.44](/7.17.44).
 
 ## 4.8. Reproduction
 
@@ -178,19 +418,68 @@ Animals reproduce sexually, and many also asexually. Asexual reproduction produc
 
 In sexual reproduction most animals are gonochoristic, with separate sexes, but hermaphroditism is common in sessile, slow or parasitic animals, for which finding a mate is difficult. Simultaneous hermaphrodites have both kinds of gonad at once and usually cross-fertilize (earthworms and land snails exchange sperm), whereas some tapeworms self-fertilize. Sequential hermaphrodites change sex during life: the slipper limpet *Crepidula* and anemonefish are first male and later female (protandry), and many wrasses first female and later male (protogyny). Fertilization is external in many aquatic animals, which shed gametes into the water, and internal in most land animals, often by means of packets of sperm (spermatophores) or a copulatory organ. The modes of development that follow fertilization are the subject of [7.17.5](/7.17.5).
 
+### 4.8.1. Gonads, Ducts and the Transfer of Sperm
+
+The reproductive organs of animals are built from a few components: gonads, which are mesodermal in most bilaterians and lie in or next to the coelom, ducts that carry the gametes out, and accessory organs that store or package sperm and provide eggs with yolk and protective coverings. Their arrangement varies with the mode of fertilization.
+
+| Arrangement | Description | Examples | Chapter |
+|---|---|---|---|
+| No permanent gonads | Gametes differentiate from scattered cells and leave through the body cavity or the mouth | Sponges (from choanocytes and archaeocytes), many cnidarians | [7.17.7](/7.17.7), [7.17.9](/7.17.9) |
+| Gonads shedding into the coelom | Gametes mature in the coelom and leave through metanephridia or coelomoducts, or by rupture of the body wall | Many polychaetes, sipunculans | [7.17.15](/7.17.15) |
+| Gonads with their own ducts, external fertilization | Spawning of eggs and sperm into the water | Many bivalves, echinoderms, most bony fishes | [7.17.42](/7.17.42) |
+| Complex hermaphroditic system | Ovary, testes, yolk glands (vitellaria), seminal receptacles and a copulatory organ in one individual | Flatworms, earthworms, pulmonate snails | [7.17.11](/7.17.11), [7.17.15](/7.17.15) |
+| Spermatophores | Sperm packaged in a capsule, transferred directly or deposited for the female to pick up | Cephalopods (by the hectocotylus), many arachnids and myriapods, collembolans, salamanders | [7.17.14](/7.17.14), [7.17.19](/7.17.19) |
+| Copulation with sperm storage | Internal fertilization with a sperm-storage organ in the female | Insects (spermatheca), sharks, amniotes | [7.17.28](/7.17.28) |
+| Hypodermic insemination | Sperm injected through the body wall | Some flatworms and leeches, bed bugs (traumatic insemination) | [7.17.32](/7.17.32) |
+
+Sperm structure reflects these modes. The sperm of external fertilizers usually has a small head, a midpiece of a few mitochondria and a simple flagellum (the "primitive" aquasperm), whereas internal fertilization is often accompanied by elongated, modified sperm (introsperm), sometimes without a flagellum, as in nematodes, whose sperm crawl by amoeboid movement. Brooding, viviparity and the provision of yolk are treated with life histories in [7.17.5](/7.17.5).
+
+## 4.9. The Body Wall and Its Coverings
+
+The **integument** separates the animal from its environment, protects it, and in many groups also secretes the skeleton, exchanges gases or absorbs food. Its basic component is the epidermis, a single-layered or stratified epithelium of ectodermal origin, with the muscles of the body wall beneath it; Chinese textbooks call the combination of epidermis and muscle layers in worms the "dermomuscular sac".
+
+| Covering | Structure | Examples | Chapter |
+|---|---|---|---|
+| Ciliated epidermis | Single-layered epithelium with motile cilia and gland cells | Xenacoelomorphs, turbellarian flatworms, nemerteans, many larvae | [7.17.11](/7.17.11) |
+| Syncytial tegument | A nonciliated syncytium whose nuclei lie below the muscle layers; absorbs nutrients | Parasitic flatworms (Neodermata), acanthocephalans | [7.17.11](/7.17.11#sec-11.4) |
+| Collagenous cuticle, not molted | Secreted by the epidermis and grown continuously | Annelids | [7.17.15](/7.17.15) |
+| Molted cuticle | Shed and replaced at each molt under ecdysteroid control: collagenous in nematodes, chitinous in panarthropods and scalidophorans | Ecdysozoa | [7.17.17](/7.17.17), [7.17.23](/7.17.23#sec-23.1) |
+| Shell | Calcium carbonate secreted by the mantle | Molluscs, brachiopods | [7.17.13](/7.17.13) |
+| Tunic | Cellulose-like tunicin with cells, secreted by the epidermis | Tunicates, the only animals that make cellulose | [7.17.43](/7.17.43) |
+| Stratified, keratinized epidermis over a dermis | Multilayered epidermis producing keratin structures (scales, feathers, hair), with dermal bone and scales in many | Vertebrates | [7.17.57](/7.17.57) |
+
+The choice of covering is linked to the other systems of the body plan. A ciliated epidermis is possible only in a moist or aquatic animal and serves for locomotion; a cuticle that is never shed allows growth only if it is thin and flexible; a hard molted cuticle forces growth into steps ([7.17.29](/7.17.29)); a keratinized skin limits water loss on land and makes the skin useless for respiration, except in amphibians, which keep a thin, moist skin and breathe through it.
+
+## 4.10. Chemical Coordination
+
+All animals with nervous systems also use chemical messengers carried by the body fluids, and in most invertebrates the main endocrine cells are neurosecretory cells of the central nervous system (**neurosecretion**), whose products are released from neurohemal organs into the blood or hemolymph. Separate endocrine glands of non-neural origin occur in arthropods and vertebrates.
+
+| Group | Main endocrine structures | Hormones and functions | Chapter |
+|---|---|---|---|
+| Cnidarians | Neurosecretory cells | Neuropeptides controlling metamorphosis, strobilation and spawning | [7.17.9](/7.17.9) |
+| Annelids | Neurosecretory cells of the brain | Regeneration, maturation and the switch to epitoky in polychaetes | [7.17.15](/7.17.15) |
+| Molluscs | Neurosecretory cells; optic glands of cephalopods | Egg-laying hormone of *Aplysia*; optic gland secretions control maturation and post-reproductive death in octopuses | [7.17.14](/7.17.14) |
+| Crustaceans | X-organ–sinus gland complex in the eyestalk; Y-organs | Molt-inhibiting hormone versus ecdysteroids; pigment-dispersing hormones | [7.17.21](/7.17.21) |
+| Insects | Brain neurosecretory cells, corpora cardiaca, corpora allata, prothoracic glands | Prothoracicotropic hormone, ecdysone, juvenile hormone, bursicon, adipokinetic hormone | [7.17.26](/7.17.26#sec-26.7), [7.17.29](/7.17.29#sec-29.4) |
+| Echinoderms | Neurosecretory cells of the radial nerves | Relaxin-like gonad-stimulating substance induces spawning in sea stars | [7.17.42](/7.17.42) |
+| Vertebrates | Hypothalamus and pituitary, thyroid, adrenals, pancreatic islets, gonads and others | [7.14.32](/7.14.32) and the following chapters | [7.17.67](/7.17.67) |
+
+Many hormone families are older than the phyla that use them. Insulin-like peptides regulate growth and metabolism in insects, nematodes and vertebrates; the vertebrate thyroid hormones control metamorphosis in amphibians, and related iodinated compounds act in the metamorphosis of lancelets and tunicates; and the nuclear hormone receptors that relay the ecdysone signal in the insect molting cycle have orthologues that drive the molting cycle of nematodes, although *Caenorhabditis elegans* does not use ecdysone itself. Such cases show the endocrine system, like the nervous system, as an ancient toolkit deployed differently in different body plans ([7.14.32](/7.14.32)).
+
 ## Summary
 
 | Problem | Solutions (where) |
 |---|---|
-| Size and diffusion | Flat (flatworms), thin (nemerteans), inert core (medusae), water through the body (sponges), exchange organs and circulation (large active animals) |
-| Support | **Hydrostatic skeleton** (worms, polyps), exoskeleton (arthropods, molluscs), endoskeleton (echinoderms, vertebrates); helical fiber lattices with the optimum $54^\circ 44'$ (Formula 4.2.1) |
-| Movement | Amoeboid, ciliary (small animals, low $Re$), hydrostatic (peristalsis, jets), muscles and levers, undulation |
-| Feeding | **Filter feeding** (Definition 4.4.1), deposit feeding, grazing, predation, fluid feeding, symbionts, absorption |
-| Digestion | Intracellular (sponges); **gastrovascular cavity** (cnidarians, flatworms); **complete digestive tract** (Nephrozoa) (Definition 4.4.2) |
-| Gas exchange | Body surface, gills, lungs, tracheae; open or closed circulation |
+| Size and diffusion | Surface/volume $= 3/r$ for a sphere; diffusion time $t \approx x^2/2D$ (Formula 4.1.1); flat (flatworms), thin (nemerteans), inert core (medusae), water through the body (sponges), exchange organs and circulation (large active animals); metabolic rates per gram scale as $M^{-1/4}$ |
+| Support | **Hydrostatic skeleton** (worms, polyps), muscular hydrostats (Definition 4.2.1), exoskeleton (arthropods, molluscs), endoskeleton (echinoderms, vertebrates); helical fiber lattices with the optimum $54^\circ 44'$ (Formula 4.2.1); levers trade force for speed (Formula 4.2.2); tubes are stiffer than rods of the same mass |
+| Movement | Amoeboid, ciliary (small animals, low $Re$), hydrostatic (peristalsis, two-anchor burrowing, pedal waves, jets), muscles and levers (walking, paddling, flight), undulation; cost of transport (Definition 4.3.1) lowest for swimming, highest for running |
+| Feeding | **Filter feeding** (Definition 4.4.1) by choanocytes, ciliary bands (downstream or upstream), mucus sheets and nets, setose limbs, tentacles or baleen; deposit feeding, grazing, predation, fluid feeding, symbionts, absorption |
+| Digestion | Intracellular (sponges); **gastrovascular cavity** (cnidarians, flatworms); **complete digestive tract** (Nephrozoa) (Definition 4.4.2) with ectodermal foregut and hindgut and endodermal midgut |
+| Gas exchange | Body surface, gills, lungs, tracheae; open or closed circulation; hemoglobin, chlorocruorin, hemocyanin, hemerythrin |
 | Excretion | **Protonephridia** with **flame cells** (Definition 4.6.1), **metanephridia** (Definition 4.6.2), **Malpighian tubules** (Definition 4.6.3), antennal and coxal glands, nephrons; filtration (or secretion) followed by modification |
-| Coordination | Nerve net, **ladder-like nervous system**, **ventral nerve cord** (Definition 4.7.1), dorsal hollow nerve cord |
-| Reproduction | Budding, fission, fragmentation, parthenogenesis; gonochorism and simultaneous or sequential hermaphroditism |
+| Coordination | Nerve net, **ladder-like nervous system**, **ventral nerve cord** (Definition 4.7.1), dorsal hollow nerve cord; statocysts, eyespots, pinhole, lens, compound and mirror eyes; neurosecretory cells and endocrine glands |
+| Reproduction | Budding, fission, fragmentation, parthenogenesis; gonochorism and simultaneous or sequential hermaphroditism; spawning, spermatophores, copulation, hypodermic insemination |
+| Body covering | Ciliated epidermis, syncytial tegument, collagenous or molted cuticle, shell, tunic, keratinized skin |
 
 ## Questions
 
@@ -209,3 +498,11 @@ In sexual reproduction most animals are gonochoristic, with separate sexes, but 
 4. A ciliated larva 0.2 mm long swims at 1 mm/s in seawater ($\rho \approx 1025\,\mathrm{kg\,m^{-3}}$, $\mu \approx 1.1\times10^{-3}\,\mathrm{Pa\,s}$). Compute its Reynolds number and explain why it cannot swim by flapping a rigid paddle back and forth.
 
    **Answer** $Re = \rho U L/\mu = 1025 \times 10^{-3} \times 2\times10^{-4} / 1.1\times10^{-3} \approx 0.19$. Viscous forces dominate and inertia is negligible, so the flow depends only on the instantaneous motion of the body, not on its history. A rigid paddle that moves back along exactly the path of its forward stroke reverses all the flow it produced and the larva returns to where it was. Cilia avoid this by changing shape: a stiff power stroke and a flexible recovery stroke close to the body sweep different areas.
+
+5. A muscle inserts 2 cm from the elbow joint of a forelimb and the hand is 30 cm from the joint. If the muscle exerts 600 N and shortens at 5 cm/s, what force can the hand exert and how fast does it move? How would a digging animal change this design?
+
+   **Answer** By Eq. (4.3) the mechanical advantage is $l_{\mathrm{in}}/l_{\mathrm{out}} = 2/30 = 1/15$. The hand exerts $600/15 = 40\,\mathrm{N}$ and moves at $5 \times 15 = 75\,\mathrm{cm/s}$. A digging animal such as a mole has a longer olecranon process (in-lever) and a shorter forearm (out-lever), increasing the mechanical advantage: it gains force at the expense of speed.
+
+6. Using Eq. (4.2), estimate how long oxygen would take to diffuse from the surface to the center of a sphere of radius 5 mm, and explain why an earthworm of that radius needs a circulatory system although a planarian of the same length does not.
+
+   **Answer** With $D = 2\times10^{-9}\,\mathrm{m^2\,s^{-1}}$, $t \approx (5\times10^{-3})^2/(2 \times 2\times10^{-9}) \approx 6\times10^{3}\,\mathrm{s}$, about 1.7 hours, far too slow to supply metabolizing tissue. The earthworm's body is a cylinder several millimeters thick, so its inner tissues are too far from the surface; blood pumped through capillaries brings oxygen within a few micrometers of every cell. A planarian is equally long but only a fraction of a millimeter thick, so that every cell lies within a diffusion distance of the surface (Section 4.1.2), and its branched gut distributes food.

@@ -12919,3 +12919,7 @@ terms:
   - { zh: 复变态, en: hypermetamorphosis }
   - { zh: 三爪蚴, en: triungulin, aliases: [triungulins] }
   - { zh: 腹柄, en: petiole, aliases: [petioles], scope: ["7.17"] }
+  - { zh: 肌肉性静水骨骼, en: muscular hydrostat, aliases: [muscular hydrostats] }
+  - { zh: 运输代价, en: cost of transport }
+  - { zh: 波动性不对称, en: fluctuating asymmetry }
+  - { zh: 定向不对称, en: directional asymmetry }
