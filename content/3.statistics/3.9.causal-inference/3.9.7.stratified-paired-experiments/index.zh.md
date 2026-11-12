@@ -62,7 +62,7 @@ Fisher 尖锐原假设 $H_0\colon Y_i(0) = Y_i(1)$（$i = 1, \dots, N$）与 CRE
 $$
 R_i^{\mathrm{strat}} = \sum_{i': G_{i'} = G_i}\boldsymbol{1}\bigl\{Y_{i'}^{\mathrm{obs}} < Y_i^{\mathrm{obs}}\bigr\} + \frac{1}{2}\Bigl(1 + \sum_{i': G_{i'} = G_i}\boldsymbol{1}\bigl\{Y_{i'}^{\mathrm{obs}} = Y_i^{\mathrm{obs}}\bigr\}\Bigr) - \frac{N(G_i) + 1}{2},
 $$
-$\bar R_{\mathrm{t}}^{\mathrm{strat}}$、$\bar R_{\mathrm{c}}^{\mathrm{strat}}$ 是它在处理单元与对照单元上的平均。由于秩在层内计算，它们完全消去了层间的水平差异，这与 **Wilcoxon 符号秩检验**消去对效应的道理相同（[3.6.8](/3.6.8)）；这些分层秩检验属于 [3.6](/3.6) 的**秩统计量**家族。
+$\bar R_{\mathrm{t}}^{\mathrm{strat}}$、$\bar R_{\mathrm{c}}^{\mathrm{strat}}$ 是它在处理单元与对照单元上的平均。由于秩在层内计算，它们完全消去了层间的水平差异，这与 **Wilcoxon 符号秩检验**消去配对效应的道理相同（[3.6.8](/3.6.8)）；这些分层秩检验属于 [3.6](/3.6) 的**秩统计量**家族。
 
 对 Project STAR，p 值由分层随机化分布的模拟近似：
 
