@@ -12870,3 +12870,17 @@ terms:
   - { zh: 蟹形化, en: carcinization }
   - { zh: 肛后尾, en: postanal tail, aliases: [post-anal tail] }
   - { zh: 肌节, en: myomere, aliases: [myomeres], scope: ["7.17"] }
+  - { zh: 口前叶, en: prostomium, scope: ["7.17"] }
+  - { zh: 围口节, en: peristomium, scope: ["7.17"] }
+  - { zh: 尾节, en: pygidium, scope: ["7.17.15"] }
+  - { zh: 生殖态, en: epitoky, aliases: [epitoke] }
+  - { zh: 营养体, en: trophosome }
+  - { zh: 吻腔, en: rhynchocoel }
+  - { zh: 帽状幼虫, en: pilidium, aliases: [pilidium larva] }
+  - { zh: 辐轮幼虫, en: actinotroch, aliases: [actinotrocha] }
+  - { zh: 双壳幼虫, en: cyphonautes, aliases: [cyphonautes larva] }
+  - { zh: 休眠芽, en: statoblast, aliases: [statoblasts] }
+  - { zh: 褐色体, en: brown body }
+  - { zh: 上游收集, en: upstream collecting }
+  - { zh: 下游收集, en: downstream collecting }
+  - { zh: 足面盘幼虫, en: pediveliger }
