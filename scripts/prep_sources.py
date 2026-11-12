@@ -139,11 +139,14 @@ def main() -> None:
     args = ap.parse_args()
     roots = args.paths or [SOURCES / d for d in ("slides", "notes", "textbooks")]
     files = sorted(f for r in roots for f in ([r] if r.is_file() else r.rglob("*")) if f.is_file())
-    if TEXT_DIR.exists():
-        shutil.rmtree(TEXT_DIR)
-    if PAGES_DIR.exists():
-        shutil.rmtree(PAGES_DIR)
-    TEXT_DIR.mkdir(parents=True)
+    # A full run (no paths) starts from scratch; a run on given paths only replaces those files'
+    # outputs and their INDEX rows, so preparing materials in several batches keeps earlier results.
+    if not args.paths:
+        if TEXT_DIR.exists():
+            shutil.rmtree(TEXT_DIR)
+        if PAGES_DIR.exists():
+            shutil.rmtree(PAGES_DIR)
+    TEXT_DIR.mkdir(parents=True, exist_ok=True)
     results = []
     for f in files:
         ext = f.suffix.lower()
@@ -177,7 +180,13 @@ def main() -> None:
             lines.append(f"| {r['name']} | {r['pages']} | {note} | | | |")
         else:
             lines.append(f"| {r['name']} | {r['pages'] or '(office)'} | {by['figure']} | {by['formula']} | {by['little-text']} | {r['rendered']} |")
-    (TEXT_DIR / "INDEX.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    index = TEXT_DIR / "INDEX.md"
+    if args.paths and index.exists():
+        done = {r["name"] for r in results}
+        kept = [l for l in index.read_text(encoding="utf-8").splitlines()
+                if l.startswith("| ") and not l.startswith("| File ") and l.split(" | ")[0][2:] not in done]
+        lines += kept
+    index.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {TEXT_DIR.relative_to(ROOT)}/INDEX.md")
 
 
