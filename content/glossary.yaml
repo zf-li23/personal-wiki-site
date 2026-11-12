@@ -7733,7 +7733,7 @@ terms:
   - { zh: 壳粒, en: capsomere, aliases: [壳微粒, capsomeres] }
   - { zh: 核衣壳, en: nucleocapsid }
   - { zh: 病毒粒子, en: virion, aliases: [病毒体, virions] }
-  - { zh: 肌节, en: sarcomere, aliases: [肌小节, sarcomeres], scope: ["7"] }
+  - { zh: 肌节, en: sarcomere, aliases: [肌小节, sarcomeres], scope: ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.14", "7.15", "7.16", "7.18", "7.19"] }
   - { zh: 中间丝结合蛋白, en: intermediate filament–associated protein, aliases: [IFAP, IFAPs, 中间纤维结合蛋白] }
   - { zh: 亲核蛋白, en: karyophilic protein, aliases: [karyophilic proteins] }
   - { zh: B 染色体, en: B chromosome, aliases: [B chromosomes, 超数染色体, supernumerary chromosome] }
@@ -12868,3 +12868,5 @@ terms:
   - { zh: 颚足, en: maxilliped, aliases: [maxillipeds], scope: ["7.17"] }
   - { zh: 胃磨, en: gastric mill }
   - { zh: 蟹形化, en: carcinization }
+  - { zh: 肛后尾, en: postanal tail, aliases: [post-anal tail] }
+  - { zh: 肌节, en: myomere, aliases: [myomeres], scope: ["7.17"] }
