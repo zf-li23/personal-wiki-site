@@ -376,7 +376,7 @@ The chapters ended with questions that remain open. Grouped by level:
 - Coding: Poisson variability, LNP models, mutual information, efficient coding, Fisher information and Bayesian cue combination give the language and the bounds (Theorem 16.4.1, Theorem 20.2.1, Theorem 26.5.1, Theorem 27.2.1); normalization, sparse expansion and coincidence detection recur across the senses.
 - Movement: prediction compensates delay, the Kalman filter combines prediction and sensation, optimal feedback control corrects only task-relevant errors, and the cerebellum calibrates by supervised learning (Algorithm 29.4.1, Definition 29.5.2, Definition 33.2.1).
 - Value and memory: dopamine signals a TD error (Remark 39.3.1), the basal ganglia select actions as an actor–critic (Algorithm 40.4.1), memories are attractors of recurrent networks (Theorem 43.3.1, Proposition 44.2.1), and decisions accumulate evidence to a bound (Proposition 47.2.1).
-- Across levels, eight methods recur: linearization and bifurcation, mean-field reduction, balance, attractors, normative models, inference with prediction errors, three types of learning rules, and the geometry of population data (Section 54.10, Figure 2).
+- Across levels, eight methods recur: linearization and bifurcation, mean-field reduction, balance and stability, normative models and efficiency, inference with prediction errors, learning rules and credit assignment, the geometry of population data, and the comparison of brains with machines (Section 54.10, Figure 2); attractors (Section 54.8.3) connect several of them.
 
 ## Questions
 
