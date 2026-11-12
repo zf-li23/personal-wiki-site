@@ -12702,3 +12702,83 @@ terms:
   - { zh: 脉序, en: wing venation, aliases: [Comstock-Needham system], scope: ["7.17"] }
   - { zh: 病媒, en: vector, aliases: [disease vector, vectors, 病媒昆虫], scope: ["7.17"] }
   - { zh: 龙骨突, en: keel, aliases: [carina, sternal keel], scope: ["7.17"] }
+  - { zh: 全动物, en: Holozoa, aliases: [holozoans] }
+  - { zh: 领鞭动物, en: Choanozoa }
+  - { zh: 丝足虫类, en: Filasterea, aliases: [filastereans] }
+  - { zh: 鱼孢子虫类, en: Ichthyosporea, aliases: [ichthyosporeans] }
+  - { zh: 多动物, en: Myriazoa }
+  - { zh: 旁同源异型动物, en: ParaHoxozoa }
+  - { zh: 浮浪幼虫动物, en: Planulozoa }
+  - { zh: 有棘动物, en: Scalidophora, aliases: [scalidophorans] }
+  - { zh: 线虫形动物, en: Nematoida }
+  - { zh: 泛节肢动物, en: Panarthropoda, aliases: [panarthropods] }
+  - { zh: 扁腹动物, en: Rouphozoa }
+  - { zh: 二胚虫, en: Dicyemida, aliases: [dicyemids, Rhombozoa, 菱形虫] }
+  - { zh: 直泳虫, en: Orthonectida, aliases: [orthonectids] }
+  - { zh: 中生动物, en: Mesozoa, aliases: [mesozoans] }
+  - { zh: 真后生动物, en: Eumetazoa, aliases: [eumetazoans] }
+  - { zh: 颚胃动物, en: Gnathostomulida, aliases: [gnathostomulids, 颚口动物] }
+  - { zh: 微颚动物, en: Micrognathozoa, aliases: [micrognathozoans] }
+  - { zh: 双辐射对称, en: biradial symmetry, aliases: [两辐射对称] }
+  - { zh: 异律分节, en: heteronomous segmentation }
+  - { zh: 同律分节, en: homonomous segmentation }
+  - { zh: 体区形成, en: tagmosis }
+  - { zh: 端细胞, en: teloblast, aliases: [teloblasts], scope: ["7.17"] }
+  - { zh: 浮游营养型幼虫, en: planktotrophic larva, aliases: [planktotrophy] }
+  - { zh: 卵黄营养型幼虫, en: lecithotrophic larva, aliases: [lecithotrophy] }
+  - { zh: 异态交替, en: heterogony, scope: ["7.17"] }
+  - { zh: 中央管系统, en: Haversian system, aliases: [osteon, 骨单位] }
+  - { zh: 斜纹肌, en: obliquely striated muscle }
+  - { zh: 上皮肌细胞, en: epitheliomuscular cell, aliases: [epitheliomuscular cells] }
+  - { zh: 上表皮, en: epicuticle, scope: ["7.17"] }
+  - { zh: 外表皮, en: exocuticle, scope: ["7.17"] }
+  - { zh: 内表皮, en: endocuticle, scope: ["7.17"] }
+  - { zh: 节肢弹性蛋白, en: resilin }
+  - { zh: 节间膜, en: arthrodial membrane, aliases: [intersegmental membrane] }
+  - { zh: 次生分节, en: secondary segmentation }
+  - { zh: 骨片, en: sclerite, aliases: [sclerites], scope: ["7.17"] }
+  - { zh: 幕骨, en: tentorium }
+  - { zh: 下口式, en: hypognathous }
+  - { zh: 前口式, en: prognathous }
+  - { zh: 后口式, en: opisthognathous }
+  - { zh: 单眼, en: ocellus, aliases: [ocelli], scope: ["7.17"] }
+  - { zh: 侧单眼, en: stemma, aliases: [stemmata] }
+  - { zh: 上唇, en: labrum, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 上颚, en: mandible, aliases: [mandibles], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 下颚, en: maxilla, aliases: [maxillae], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 下唇, en: labium, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 舌, en: hypopharynx, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 食窦, en: cibarium }
+  - { zh: 前跗节, en: pretarsus }
+  - { zh: 基节, en: coxa, aliases: [coxae], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 转节, en: trochanter, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 腿节, en: femur, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 胫节, en: tibia, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 跗节, en: tarsus, aliases: [tarsomere, tarsomeres], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 具翅胸节, en: pterothorax }
+  - { zh: 侧缝, en: pleural suture }
+  - { zh: 前侧片, en: episternum }
+  - { zh: 后侧片, en: epimeron }
+  - { zh: 翅痣, en: pterostigma }
+  - { zh: 翅钩, en: hamuli, aliases: [hamulus] }
+  - { zh: 腹足, en: proleg, aliases: [prolegs], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 三角步态, en: alternating tripod gait, aliases: [tripod gait] }
+  - { zh: 直接飞行肌, en: direct flight muscle, aliases: [direct flight muscles] }
+  - { zh: 准定常假设, en: quasi-steady assumption }
+  - { zh: 诱导功率, en: induced power }
+  - { zh: 嗉囊, en: crop, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 前胃, en: proventriculus, scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 胃盲囊, en: gastric caeca, aliases: [gastric caecum] }
+  - { zh: 直肠垫, en: rectal pads, aliases: [rectal papillae] }
+  - { zh: 滤室, en: filter chamber }
+  - { zh: 含菌细胞, en: bacteriocyte, aliases: [bacteriocytes, mycetocyte] }
+  - { zh: 隐肾系统, en: cryptonephric system }
+  - { zh: 气囊, en: air sac, aliases: [air sacs], scope: ["7.17.22", "7.17.23", "7.17.24", "7.17.25", "7.17.26", "7.17.27", "7.17.28", "7.17.29", "7.17.30", "7.17.31", "7.17.32", "7.17.33", "7.17.34", "7.17.35", "7.17.36", "7.17.37", "7.17.38", "7.17.39", "7.17.40"] }
+  - { zh: 螺旋丝, en: taenidia, aliases: [taenidium] }
+  - { zh: 气管鳃, en: tracheal gill, aliases: [tracheal gills] }
+  - { zh: 辅搏器, en: accessory pulsatile organ, aliases: [accessory pulsatile organs] }
+  - { zh: 血细胞, en: hemocyte, aliases: [hemocytes], scope: ["7.17"] }
+  - { zh: 中央复合体, en: central complex }
+  - { zh: 咽下神经节, en: subesophageal ganglion, aliases: [食道下神经节] }
+  - { zh: 体壁, en: integument, scope: ["7.17"] }
+  - { zh: 原表皮, en: procuticle, scope: ["7.17"] }

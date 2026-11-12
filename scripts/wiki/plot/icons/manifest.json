@@ -1646,6 +1646,16 @@
    "reptile"
   ]
  },
+ "phylopic/anomalocaris": {
+  "source": "phylopic",
+  "name": "Radiodonta",
+  "author": "Espen Horn (model; vectorized by T. Michael Keesey from a photo by H. Zell)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/cdad066c-daf8-42ac-ac55-cde7c17e304f",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/ant": {
   "source": "phylopic",
   "name": "Formicidae",
@@ -1749,6 +1759,16 @@
    "marine"
   ]
  },
+ "phylopic/barnacle": {
+  "source": "phylopic",
+  "name": "Balanomorpha",
+  "author": "Jimmy Bernot",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/feaab8ab-b887-4875-801c-5c94c4b5da4b",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/bat": {
   "source": "phylopic",
   "name": "Chiroptera",
@@ -1810,8 +1830,7 @@
   "license": "CC BY 3.0",
   "url": "https://www.phylopic.org/images/7a056405-8d3e-4b1e-9368-4df1e9437e47",
   "tags": [
-   "nematode",
-   "model-organism"
+   "arthropod"
   ]
  },
  "phylopic/cattle": {
@@ -1990,6 +2009,26 @@
    "marine"
   ]
  },
+ "phylopic/crab": {
+  "source": "phylopic",
+  "name": "Brachyura",
+  "author": "H. Filhol (vectorized by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/c80c9f0a-4370-404c-8716-38a684d52239",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/crayfish": {
+  "source": "phylopic",
+  "name": "Astacidea",
+  "author": "Pearson Scott Foresman (vectorized by T. Michael Keesey)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/bb0a24f2-0ace-4321-82fc-19dcf6711bc1",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/cricket": {
   "source": "phylopic",
   "name": "Gryllus",
@@ -2161,6 +2200,26 @@
    "protist"
   ]
  },
+ "phylopic/eurypterid": {
+  "source": "phylopic",
+  "name": "Eurypterida",
+  "author": "Ichthyovenator",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/54620f15-d5b3-4d6a-b0a8-23047d9b480d",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/fairy-shrimp": {
+  "source": "phylopic",
+  "name": "Anostraca",
+  "author": "Thomas Hegna (modified from Lynch, 1958)",
+  "license": "Public domain",
+  "url": "https://www.phylopic.org/images/51ba7d73-24fb-4bf5-9839-f2b3257ee2f3",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/fern": {
   "source": "phylopic",
   "name": "Polypodiopsida",
@@ -2247,6 +2306,16 @@
    "turtle"
   ]
  },
+ "phylopic/hallucigenia": {
+  "source": "phylopic",
+  "name": "Hallucigenia",
+  "author": "Caleb M. Brown",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/d22339f4-2d2e-42ca-9bec-4c9dfdac2a23",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/harbour-seal": {
   "source": "phylopic",
   "name": "Phoca vitulina",
@@ -2256,6 +2325,16 @@
   "tags": [
    "mammal",
    "marine"
+  ]
+ },
+ "phylopic/harvestman": {
+  "source": "phylopic",
+  "name": "Opiliones",
+  "author": "Russell J. Garwood, Prashant P. Sharma, Jason A. Dunlop & Gonzalo Giribet (modified by T. Michael Keesey)",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/16cbd295-6b0c-4a2d-af1a-8223506d7f60",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/herring": {
@@ -2288,6 +2367,16 @@
   "url": "https://www.phylopic.org/images/643bdb61-caf5-4238-a453-f4c95405eef5",
   "tags": [
    "plant"
+  ]
+ },
+ "phylopic/horsehair-worm": {
+  "source": "phylopic",
+  "name": "Nematomorpha",
+  "author": "Lisa Barf",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/873541fb-755d-431b-ba22-2357f76ab744",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/horseshoe-crab": {
@@ -2362,6 +2451,16 @@
   "url": "https://www.phylopic.org/images/9acf11fa-89dd-4a56-b3da-8665c406c6f5",
   "tags": [
    "phylo"
+  ]
+ },
+ "phylopic/kinorhynch": {
+  "source": "phylopic",
+  "name": "Kinorhyncha",
+  "author": "Tree of Life App",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/6699afb6-4df4-4691-98fb-3235fbd2ae4b",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/krill": {
@@ -2475,6 +2574,16 @@
    "model-organism"
   ]
  },
+ "phylopic/mantis-shrimp": {
+  "source": "phylopic",
+  "name": "Stomatopoda",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/da459264-8e1d-422b-babc-a3077d2a8e08",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/medaka": {
   "source": "phylopic",
   "name": "Oryzias latipes",
@@ -2494,6 +2603,38 @@
   "url": "https://www.phylopic.org/images/077c76df-f224-4eb1-9c92-6049fc8f8b3e",
   "tags": [
    "phylo"
+  ]
+ },
+ "phylopic/millipede": {
+  "source": "phylopic",
+  "name": "Diplopoda",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/d7aca3f9-3045-4719-8981-ad6b38b1a2a3",
+  "tags": [
+   "arthropod",
+   "myriapod"
+  ]
+ },
+ "phylopic/millipede-julid": {
+  "source": "phylopic",
+  "name": "Juliformia",
+  "author": "Gemma Martínez-Redondo",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/0950fc2a-77b5-481f-a9f8-44b98c6179e7",
+  "tags": [
+   "arthropod",
+   "myriapod"
+  ]
+ },
+ "phylopic/mite": {
+  "source": "phylopic",
+  "name": "Acariformes",
+  "author": "Rachel Shoop",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/17172a50-685f-4f39-a0d1-c0495e33a2d0",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/mosquito": {
@@ -2638,6 +2779,16 @@
    "monocot"
   ]
  },
+ "phylopic/ostracod": {
+  "source": "phylopic",
+  "name": "Ostracoda",
+  "author": "T. Michael Keesey",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/1d2c7cb7-4a62-4f4a-96ff-b62e225d6f91",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/palm": {
   "source": "phylopic",
   "name": "Arecaceae",
@@ -2658,6 +2809,16 @@
   "url": "https://www.phylopic.org/images/595359bd-6638-4900-8536-82b2ed511a25",
   "tags": [
    "protist"
+  ]
+ },
+ "phylopic/pauropod": {
+  "source": "phylopic",
+  "name": "Pauropoda",
+  "author": "Ralf Janssen, Nikola-Michael Prpic & Wim G. M. Damen (vectorized by T. Michael Keesey)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/ec4b4c1e-40ce-4a7d-8e09-5ab20848a9a5",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/pea": {
@@ -2786,6 +2947,36 @@
    "phylo"
   ]
  },
+ "phylopic/prawn": {
+  "source": "phylopic",
+  "name": "Dendrobranchiata",
+  "author": "Almandine (vectorized by T. Michael Keesey)",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/afbc3136-8e5d-4417-a8b1-b7e50c09d56b",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/priapulid": {
+  "source": "phylopic",
+  "name": "Priapulida",
+  "author": "PaleoEquii",
+  "license": "CC BY 4.0",
+  "url": "https://www.phylopic.org/images/14cc66eb-6b14-4996-8f23-021d2404a518",
+  "tags": [
+   "arthropod"
+  ]
+ },
+ "phylopic/pseudoscorpion": {
+  "source": "phylopic",
+  "name": "Pseudoscorpiones",
+  "author": "Gareth Monger",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/9ccaea11-774f-437b-8028-afd4ee880b36",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/psilotum": {
   "source": "phylopic",
   "name": "Psilotum",
@@ -2816,6 +3007,16 @@
   "tags": [
    "mammal",
    "model-organism"
+  ]
+ },
+ "phylopic/remipede": {
+  "source": "phylopic",
+  "name": "Remipedia",
+  "author": "Joris van der Ham (vectorized by T. Michael Keesey)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/80a00c54-bc8d-4cbd-b9bc-4daea39254c2",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/rhizobium": {
@@ -2890,6 +3091,16 @@
   "url": "https://www.phylopic.org/images/7742cd64-4c67-443c-942c-fdf1c2681adf",
   "tags": [
    "arachnid"
+  ]
+ },
+ "phylopic/sea-spider": {
+  "source": "phylopic",
+  "name": "Pycnogonida",
+  "author": "Junnn11",
+  "license": "CC BY-SA 3.0",
+  "url": "https://www.phylopic.org/images/e1ea9e91-6ae1-45c2-b399-8d1892c01915",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/sea-urchin": {
@@ -3023,6 +3234,16 @@
    "bacterium"
   ]
  },
+ "phylopic/symphylan": {
+  "source": "phylopic",
+  "name": "Symphyla",
+  "author": "Ralf Janssen, Nikola-Michael Prpic & Wim G. M. Damen (vectorized by T. Michael Keesey)",
+  "license": "CC BY 3.0",
+  "url": "https://www.phylopic.org/images/fbb34126-2757-4201-9717-c5a0df3fdfb7",
+  "tags": [
+   "arthropod"
+  ]
+ },
  "phylopic/tardigrade": {
   "source": "phylopic",
   "name": "Tardigrada",
@@ -3031,6 +3252,16 @@
   "url": "https://www.phylopic.org/images/a9d22f46-16fd-47c4-85b4-96611a3a4660",
   "tags": [
    "invertebrate"
+  ]
+ },
+ "phylopic/tick": {
+  "source": "phylopic",
+  "name": "Ixodes",
+  "author": "Guillaume Dera",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/27e86f16-d3d8-4e6a-9fb6-13014f5153de",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/tomato": {
@@ -3173,6 +3404,16 @@
   "url": "https://www.phylopic.org/images/da5faa63-085f-4523-a542-e71cb386c999",
   "tags": [
    "mammal"
+  ]
+ },
+ "phylopic/woodlouse": {
+  "source": "phylopic",
+  "name": "Oniscidea",
+  "author": "Andy Wilson",
+  "license": "CC0 1.0",
+  "url": "https://www.phylopic.org/images/a626cebb-cb3d-48b4-a62e-9f87536ba906",
+  "tags": [
+   "arthropod"
   ]
  },
  "phylopic/xenopus": {
