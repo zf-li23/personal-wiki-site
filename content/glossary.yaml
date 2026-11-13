@@ -13001,3 +13001,9 @@ terms:
   - { zh: 针孔眼, en: pinhole eye, aliases: [pinhole eyes] }
   - { zh: 照相机眼, en: camera eye, aliases: [camera eyes, 透镜眼] }
   - { zh: 平衡囊, en: statocyst, aliases: [statocysts] }
+  - { zh: 动物区系, en: fauna, aliases: [faunas], scope: ["7"] }
+  - { zh: 廊道, en: corridor, aliases: [corridors], scope: ["7.17"] }
+  - { zh: 滤道, en: filter route, aliases: [filter bridge] }
+  - { zh: 机会通过, en: sweepstakes route, aliases: [sweepstakes dispersal] }
+  - { zh: 中国动物地理区划, en: zoogeographic regionalization of China }
+  - { zh: 冰期避难所, en: glacial refugium, aliases: [glacial refugia] }
