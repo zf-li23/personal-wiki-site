@@ -12638,10 +12638,10 @@ terms:
   - { zh: 颞孔, en: temporal fenestra, aliases: [temporal fenestrae, temporal opening] }
   - { zh: 合弓类, en: Synapsida, aliases: [synapsids] }
   - { zh: 蜥形类, en: Sauropsida, aliases: [sauropsids] }
-  - { zh: 鳞龙类, en: Lepidosauromorpha, aliases: [lepidosauromorphs] }
+  - { zh: 鳞龙类, en: Lepidosauria, aliases: [lepidosaurs] }
   - { zh: 有鳞目, en: Squamata, aliases: [squamates, lizards and snakes] }
   - { zh: 龟鳖目, en: Testudines, aliases: [turtles, chelonians, Chelonia] }
-  - { zh: 主龙类, en: Archosauria, aliases: [archosaurs, archosauromorphs] }
+  - { zh: 主龙类, en: Archosauria, aliases: [archosaurs] }
   - { zh: 恐龙, en: Dinosauria, aliases: [dinosaurs, 恐龙类] }
   - { zh: 蜥臀目, en: Saurischia, aliases: [saurischians] }
   - { zh: 鸟臀目, en: Ornithischia, aliases: [ornithischians] }
@@ -12669,7 +12669,7 @@ terms:
   - { zh: 舌颌骨, en: hyomandibula, aliases: [hyomandibular] }
   - { zh: 舌接型, en: hyostylic suspension, aliases: [hyostyly, hyostylic] }
   - { zh: 自接型, en: autostylic suspension, aliases: [autostyly, autostylic] }
-  - { zh: 颅接型, en: amphistylic suspension, aliases: [amphistyly, amphistylic] }
+  - { zh: 两接型, en: amphistylic suspension, aliases: [amphistyly, amphistylic] }
   - { zh: 次生腭, en: secondary palate }
   - { zh: 枕髁, en: occipital condyle, aliases: [occipital condyles] }
   - { zh: 头骨可动性, en: cranial kinesis, aliases: [skull kinesis] }
@@ -13007,3 +13007,58 @@ terms:
   - { zh: 机会通过, en: sweepstakes route, aliases: [sweepstakes dispersal] }
   - { zh: 中国动物地理区划, en: zoogeographic regionalization of China }
   - { zh: 冰期避难所, en: glacial refugium, aliases: [glacial refugia] }
+  - { zh: 颅接型, en: craniostylic suspension, aliases: [craniostyly, craniostylic] }
+  - { zh: 原接型, en: paleostyly, aliases: [paleostylic] }
+  - { zh: 真自接型, en: euautostyly, aliases: [euautostylic] }
+  - { zh: 全接型, en: holostyly, aliases: [holostylic] }
+  - { zh: 初生颌, en: primary jaws }
+  - { zh: 次生颌, en: secondary jaws }
+  - { zh: 平颅型, en: platybasic, aliases: [platybasic skull] }
+  - { zh: 高颅型, en: tropibasic, aliases: [tropibasic skull] }
+  - { zh: 双平型, en: acoelous, aliases: [amphiplatyan, acoely] }
+  - { zh: 乳腺, en: mammary gland, aliases: [mammary glands] }
+  - { zh: 羽, en: feather, aliases: [feathers, 羽毛] }
+  - { zh: 毛, en: hair, aliases: [hairs, 毛发], scope: ["7.17"] }
+  - { zh: 无孔型, en: anapsid, aliases: [anapsid skull, 无孔类] }
+  - { zh: 副爬行类, en: Parareptilia, aliases: [parareptiles] }
+  - { zh: 鳞龙形类, en: Lepidosauromorpha, aliases: [lepidosauromorphs] }
+  - { zh: 喙头目, en: Rhynchocephalia, aliases: [rhynchocephalians, 喙头蜥目] }
+  - { zh: 楔齿蜥, en: tuatara, aliases: [喙头蜥] }
+  - { zh: 有毒类, en: Toxicofera }
+  - { zh: 甲嵴, en: carapacial ridge }
+  - { zh: 侧颈龟亚目, en: Pleurodira, aliases: [side-necked turtles] }
+  - { zh: 曲颈龟亚目, en: Cryptodira, aliases: [hidden-necked turtles, 潜颈龟亚目] }
+  - { zh: 伪鳄类, en: Pseudosuchia, aliases: [pseudosuchians, Crurotarsi] }
+  - { zh: 鸟跖类, en: Avemetatarsalia, aliases: [Ornithodira] }
+  - { zh: 鳄目, en: Crocodylia, aliases: [crocodylians, crocodilians] }
+  - { zh: 翼龙类, en: Pterosauria, aliases: [pterosaurs, 翼龙目, 翼龙] }
+  - { zh: 眶前孔, en: antorbital fenestra }
+  - { zh: 兽脚类, en: Theropoda, aliases: [theropods, 兽脚亚目] }
+  - { zh: 蜥脚形类, en: Sauropodomorpha, aliases: [sauropodomorphs, 蜥脚形亚目] }
+  - { zh: 鸟腿龙类, en: Ornithoscelida }
+  - { zh: 古颚类, en: Palaeognathae, aliases: [palaeognaths, 古颚总目] }
+  - { zh: 今颚类, en: Neognathae, aliases: [neognaths, 今颚总目] }
+  - { zh: 鸡雁类, en: Galloanserae }
+  - { zh: 新鸟类, en: Neoaves }
+  - { zh: 正羽, en: contour feather, aliases: [contour feathers] }
+  - { zh: 尾综骨, en: pygostyle }
+  - { zh: 综荐骨, en: synsacrum }
+  - { zh: 叉骨, en: furcula, aliases: [wishbone] }
+  - { zh: 鸣管, en: syrinx }
+  - { zh: 腔上囊, en: bursa of Fabricius }
+  - { zh: 早成雏, en: precocial, aliases: [precocial young] }
+  - { zh: 晚成雏, en: altricial, aliases: [altricial young] }
+  - { zh: 巢寄生, en: brood parasitism, aliases: [brood parasite, brood parasites] }
+  - { zh: 盘龙类, en: pelycosaurs, aliases: [Pelycosauria] }
+  - { zh: 兽孔类, en: Therapsida, aliases: [therapsids] }
+  - { zh: 二齿兽类, en: Dicynodontia, aliases: [dicynodonts] }
+  - { zh: 磨楔齿, en: tribosphenic molar, aliases: [tribosphenic] }
+  - { zh: 多瘤齿兽类, en: Multituberculata, aliases: [multituberculates] }
+  - { zh: 非洲兽总目, en: Afrotheria, aliases: [afrotherians] }
+  - { zh: 异关节总目, en: Xenarthra, aliases: [xenarthrans, 贫齿类] }
+  - { zh: 灵长–啮齿总目, en: Euarchontoglires, aliases: [灵长总目] }
+  - { zh: 劳亚兽总目, en: Laurasiatheria, aliases: [laurasiatherians] }
+  - { zh: 鲸偶蹄目, en: Cetartiodactyla, aliases: [cetartiodactyls] }
+  - { zh: 裂齿, en: carnassial, aliases: [carnassials, carnassial teeth] }
+  - { zh: 高冠齿, en: hypsodont, aliases: [hypsodonty] }
+  - { zh: 双孔类, en: Diapsida, aliases: [diapsids, diapsid], scope: ["7.17.45", "7.17.46", "7.17.47", "7.17.48", "7.17.49", "7.17.50", "7.17.51", "7.17.52", "7.17.53", "7.17.54", "7.17.55", "7.17.56", "7.17.57", "7.17.58", "7.17.59", "7.17.60", "7.17.61", "7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67", "7.17.68", "7.17.69", "7.17.70"] }
