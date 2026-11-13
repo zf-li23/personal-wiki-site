@@ -2388,7 +2388,7 @@ terms:
   - { zh: 过程抽象, en: procedural abstraction }
   - { zh: 数据抽象, en: data abstraction }
   - { zh: 对象, en: object, aliases: [实例, instance], scope: ["4"] }
-  - { zh: 封装, en: encapsulation }
+  - { zh: 封装, en: encapsulation, scope: ["4"] }
   - { zh: 信息隐藏, en: information hiding }
   - { zh: 不变式, en: class invariant, aliases: [类不变式, invariant], scope: ["4"] }
   - { zh: 零开销抽象, en: zero-overhead abstraction, aliases: [zero-cost abstraction] }
@@ -12965,6 +12965,7 @@ terms:
   - { zh: 生物防治, en: biological control, aliases: [biocontrol] }
   - { zh: 有害生物综合治理, en: integrated pest management, aliases: [IPM, 综合防治] }
   - { zh: 寄主范围, en: host range, scope: ["7.17"] }
+  - { zh: 包囊作用, en: encapsulation, scope: ["7.17"] }
   - { zh: 新头假说, en: new head hypothesis }
   - { zh: 齿质单元, en: odontode, aliases: [odontodes] }
   - { zh: 甲胄鱼类, en: ostracoderm, aliases: [ostracoderms, 甲胄鱼] }

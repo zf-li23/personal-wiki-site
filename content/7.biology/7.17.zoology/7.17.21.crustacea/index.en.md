@@ -1,11 +1,11 @@
 ---
 title: Crustacea
-description: "The crustacean body plan: two pairs of antennae, mandibles and two pairs of maxillae, biramous limbs, the carapace and the nauplius larva; internal anatomy (gills, antennal glands, gastric mill and hepatopancreas, statocysts, eyestalk endocrine organs) and the hormonal control of molting; discontinuous growth and a model of molt increments; the classification of BG 4e (Oligostraca, Multicrustacea, Allotriocarida) with ostracods, tongue worms, copepods, barnacles and rhizocephalans, branchiopods, cephalocarids and remipedes; the Malacostraca: mantis shrimps, krill, decapods (prawns, shrimps, crayfish, lobsters, anomurans and crabs, with the serial appendages of the crayfish), amphipods and isopods; crustaceans in marine food webs; paraphyly of Crustacea and the Pancrustacea; and correspondence with Chinese textbooks."
+description: "The crustacean body plan: two pairs of antennae, mandibles and two pairs of maxillae, biramous limbs, the carapace and the nauplius larva; internal anatomy (gills, antennal glands, gastric mill and hepatopancreas, statocysts, eyestalk endocrine organs) and the hormonal control of molting; discontinuous growth and a model of molt increments; the classification of Brusca, Giribet and Moore (2023) (Oligostraca, Multicrustacea, Allotriocarida) with ostracods, tongue worms, copepods, barnacles and rhizocephalans, branchiopods, cephalocarids and remipedes; the Malacostraca: mantis shrimps, krill, decapods (prawns, shrimps, crayfish, lobsters, anomurans and crabs, with the serial appendages of the crayfish), amphipods and isopods; crustaceans in marine food webs; paraphyly of Crustacea and the Pancrustacea; and correspondence with Chinese textbooks."
 ---
 
 Crustaceans are the arthropods of the water. About 70 000 species have been described, from interstitial copepods a tenth of a millimeter long to the Japanese spider crab with a leg span of nearly 4 m, and they dominate the zooplankton of the oceans and of fresh water, the sea floor, the intertidal zone and many caves; a few groups live on land. Their morphological disparity exceeds that of any other arthropod subphylum, including the insects: barnacles, which Darwin spent eight years describing, look nothing like shrimps, and some parasitic crustaceans are reduced to a sac of gonads.
 
-The chapter has four parts. First comes the body plan shared by crustaceans, with the crayfish and the prawn as representative animals: two pairs of antennae, biramous limbs, the carapace, the nauplius larva, and the endocrine control of molting and growth. Then the main lineages are described in the order of the classification of BG 4e. Malacostraca, the largest class with the crabs, shrimps, krill, amphipods and isopods, receives most space, including a full account of the serial homology of the crayfish appendages. The chapter closes with the place of crustaceans in marine food webs and the phylogenetic result that the insects arose from within them, so that Crustacea in the traditional sense is a **paraphyletic group**, the crustacean part of the **Pancrustacea** ([7.17.18](/7.17.18#sec-18.9.2)).
+The chapter has four parts. First comes the body plan shared by crustaceans, with the crayfish and the prawn as representative animals: two pairs of antennae, biramous limbs, the carapace, the nauplius larva, and the endocrine control of molting and growth. Then the main lineages are described in the order of the classification of Brusca, Giribet and Moore (2023). Malacostraca, the largest class with the crabs, shrimps, krill, amphipods and isopods, receives most space, including a full account of the serial homology of the crayfish appendages. The chapter closes with the place of crustaceans in marine food webs and the phylogenetic result that the insects arose from within them, so that Crustacea in the traditional sense is a **paraphyletic group**, the crustacean part of the **Pancrustacea** ([7.17.18](/7.17.18#sec-18.9.2)).
 
 ## 21.1. The Crustacean Body Plan
 
@@ -90,7 +90,7 @@ in which the relative increment $(L_{n+1} - L_n)/L_n = a/L_n + b - 1$ declines t
 
 ## 21.2. Classification
 
-Crustacean classification has been revised many times; BG 4e, followed here, divides the crustaceans into two superclasses on the basis of phylogenomic analyses, with the hexapods nested inside the second (see the figure below):
+Crustacean classification has been revised many times; Brusca, Giribet and Moore (2023), followed here, divides the crustaceans into two superclasses on the basis of phylogenomic analyses, with the hexapods nested inside the second (see the figure below):
 
 | Superclass | Clade | Classes | Examples |
 |---|---|---|---|
@@ -98,7 +98,7 @@ Crustacean classification has been revised many times; BG 4e, followed here, div
 | Altocrustacea | Multicrustacea | Malacostraca, Thecostraca, Copepoda, Tantulocarida | crabs, shrimps, krill, amphipods, isopods; barnacles and rhizocephalans; copepods |
 | | Allotriocarida | Branchiopoda, Cephalocarida, Remipedia (and Hexapoda) | fairy shrimps, tadpole shrimps, water fleas; horseshoe shrimps; remipedes |
 
-![Relationships of the crustacean lineages and the hexapods (Pancrustacea), following BG 4e and phylogenomic analyses. Oligostraca is the sister group of Altocrustacea, which comprises Multicrustacea (Malacostraca with copepods and thecostracans) and Allotriocarida (branchiopods, cephalocarids, remipedes and hexapods). The hexapods arose from within the crustaceans, whose closest living relatives are probably the remipedes, so that Crustacea in the traditional sense is paraphyletic.](./plots/pancrustacea-tree.py)
+![Relationships of the crustacean lineages and the hexapods (Pancrustacea), following Brusca, Giribet and Moore (2023) and phylogenomic analyses. Oligostraca is the sister group of Altocrustacea, which comprises Multicrustacea (Malacostraca with copepods and thecostracans) and Allotriocarida (branchiopods, cephalocarids, remipedes and hexapods). The hexapods arose from within the crustaceans, whose closest living relatives are probably the remipedes, so that Crustacea in the traditional sense is paraphyletic.](./plots/pancrustacea-tree.py)
 
 ## 21.3. Oligostraca, Multicrustacea (Except Malacostraca) and Allotriocarida
 
