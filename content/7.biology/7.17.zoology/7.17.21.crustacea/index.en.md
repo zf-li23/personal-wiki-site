@@ -43,7 +43,7 @@ Most crustaceans have separate sexes; barnacles, cephalocarids and remipedes are
 
 The characteristic larva is the **nauplius** ([7.17.5](/7.17.5)), with an unsegmented body, a median eye and three pairs of appendages, the antennules, the antennae and the mandibles, used for swimming. With successive molts segments and limbs are added from a posterior growth zone (anamorphic development). In many malacostracans the nauplius stage is passed in the egg and the hatchling is a later larva:
 
-The larval forms of crustaceans are named by their main organs of locomotion: the nauplius swims with its head appendages, the zoea with the thoracic appendages (the exopods of the maxillipeds), and the post-larval stages, such as the mysis and the megalopa, with the abdominal pleopods. The sequence is most complete in penaeid prawns, which hatch as nauplii; in other groups the early stages are passed in the egg.
+The larval forms of crustaceans are named by their main organs of locomotion: the nauplius swims with its head appendages, the *zoea* with the thoracic appendages (the exopods of the maxillipeds), and the post-larval stages, such as the mysis and the *megalopa*, with the abdominal pleopods. The sequence is most complete in penaeid prawns, which hatch as nauplii; in other groups the early stages are passed in the egg.
 
 | Larva | Locomotion | Characteristics |
 |---|---|---|
@@ -55,7 +55,7 @@ The larval forms of crustaceans are named by their main organs of locomotion: th
 | Megalopa (crabs), postlarva (shrimps) | Pleopods | Adult-like limbs; settles to the bottom |
 | Phyllosoma (spiny lobsters) | Thoracic exopods | Flat, transparent, drifting for months |
 | Copepodite (copepods) | Swimming legs | Six copepodite stages after six naupliar stages, the last being the adult |
-| Cypris (barnacles) | Thoracic limbs; walks on antennules | Bivalved carapace, nonfeeding; explores and settles |
+| *Cypris larva* (barnacles) | Thoracic limbs; walks on antennules | Bivalved carapace, nonfeeding; explores and settles |
 | Calyptopis and furcilia (krill) | Antennae, then pleopods | Follow the nauplius |
 | Manca (peracarids) | Pereiopods | Juvenile lacking the last pair of pereiopods; hatches from the brood pouch |
 
