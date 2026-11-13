@@ -299,7 +299,7 @@ Because embryonic origin is evidence for homology but not its definition (§56.2
 
 ### 56.8.1. Systems, Classes and Clades
 
-Each of the following chapters treats one organ system in the same order: composition and embryonic origin; a comparison across the vertebrate groups, summarized in a table of "system × group"; and the evolutionary trends with their functional explanation. The tables use six columns, following the Chinese textbooks and most older comparative anatomies: cyclostomes, cartilaginous fishes, bony fishes, amphibians, reptiles, birds and mammals, with bony fishes sometimes split into ray-finned and lobe-finned fishes. The columns are a convenient way to arrange the data, but they are not all clades.
+Each of the following chapters treats one organ system in the same order: composition and embryonic origin; a comparison across the vertebrate groups, summarized in a table of "system × group"; and the evolutionary trends with their functional explanation. The tables use seven columns, following the Chinese textbooks and most older comparative anatomies: cyclostomes, cartilaginous fishes, bony fishes, amphibians, reptiles, birds and mammals, with bony fishes sometimes split into ray-finned and lobe-finned fishes. The columns are a convenient way to arrange the data, but they are not all clades.
 
 | Column in the tables | Traditional class (Chinese textbooks) | Status in the modern phylogeny | Chapter |
 |---|---|---|---|
