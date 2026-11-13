@@ -12725,7 +12725,7 @@ terms:
   - { zh: 体区形成, en: tagmosis }
   - { zh: 端细胞, en: teloblast, aliases: [teloblasts], scope: ["7.17"] }
   - { zh: 浮游营养型幼虫, en: planktotrophic larva, aliases: [planktotrophy] }
-  - { zh: 卵黄营养型幼虫, en: lecithotrophic larva, aliases: [lecithotrophy] }
+  - { zh: 卵黄营养型幼虫, en: lecithotrophic larva, aliases: [lecithotrophic larvae] }
   - { zh: 异态交替, en: heterogony, scope: ["7.17"] }
   - { zh: 哈弗斯系统, en: Haversian system, aliases: [osteon, 骨单位, 中央管系统] }
   - { zh: 斜纹肌, en: obliquely striated muscle }
@@ -13062,3 +13062,46 @@ terms:
   - { zh: 裂齿, en: carnassial, aliases: [carnassials, carnassial teeth] }
   - { zh: 高冠齿, en: hypsodont, aliases: [hypsodonty] }
   - { zh: 双孔类, en: Diapsida, aliases: [diapsids, diapsid], scope: ["7.17.45", "7.17.46", "7.17.47", "7.17.48", "7.17.49", "7.17.50", "7.17.51", "7.17.52", "7.17.53", "7.17.54", "7.17.55", "7.17.56", "7.17.57", "7.17.58", "7.17.59", "7.17.60", "7.17.61", "7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67", "7.17.68", "7.17.69", "7.17.70"] }
+  - { zh: 同型齿, en: homodont, aliases: [homodonty] }
+  - { zh: 异型齿, en: heterodont, aliases: [heterodonty] }
+  - { zh: 端生齿, en: acrodont, aliases: [acrodont teeth] }
+  - { zh: 侧生齿, en: pleurodont, aliases: [pleurodont teeth] }
+  - { zh: 多出齿, en: polyphyodont, aliases: [polyphyodonty] }
+  - { zh: 一出齿, en: monophyodont, aliases: [monophyodonty] }
+  - { zh: 横膈, en: diaphragm, scope: ["7.17"] }
+  - { zh: 横隔, en: septum transversum }
+  - { zh: 泄殖腔, en: cloaca }
+  - { zh: 肌胃, en: gizzard }
+  - { zh: 盲沟, en: typhlosole }
+  - { zh: 幽门盲囊, en: pyloric caecum, aliases: [pyloric caeca] }
+  - { zh: 静脉窦, en: sinus venosus }
+  - { zh: 动脉圆锥, en: conus arteriosus }
+  - { zh: 动脉球, en: bulbus arteriosus }
+  - { zh: 单循环, en: single circulation }
+  - { zh: 双循环, en: double circulation }
+  - { zh: 潘氏孔, en: foramen of Panizza, aliases: [Panizza 孔] }
+  - { zh: 肺皮动脉弓, en: pulmocutaneous arch }
+  - { zh: 颈动脉导管, en: ductus caroticus }
+  - { zh: 动脉导管, en: ductus arteriosus }
+  - { zh: 肝门静脉系统, en: hepatic portal system }
+  - { zh: 肾门静脉系统, en: renal portal system }
+  - { zh: 淋巴心, en: lymph heart, aliases: [lymph hearts] }
+  - { zh: 后位肾, en: opisthonephros }
+  - { zh: 全肾, en: holonephros }
+  - { zh: 母体营养, en: matrotrophy }
+  - { zh: 背室嵴, en: dorsal ventricular ridge, aliases: [DVR] }
+  - { zh: 血管囊, en: saccus vasculosus }
+  - { zh: 尾垂体, en: urophysis }
+  - { zh: 斯氏小体, en: corpuscles of Stannius }
+  - { zh: 后鳃体, en: ultimobranchial body, aliases: [ultimobranchial bodies] }
+  - { zh: 肾间组织, en: interrenal tissue }
+  - { zh: 嗜铬组织, en: chromaffin tissue }
+  - { zh: 神经丘, en: neuromast, aliases: [neuromasts] }
+  - { zh: 膜迷路, en: membranous labyrinth }
+  - { zh: 瓶状囊, en: lagena, aliases: [听壶] }
+  - { zh: 反光膜, en: tapetum lucidum }
+  - { zh: 栉膜, en: pecten oculi }
+  - { zh: 顶眼, en: parietal eye }
+  - { zh: 颊窝, en: pit organ, aliases: [loreal pit, pit organs] }
+  - { zh: 系膜, en: mesentery, aliases: [mesenteries], scope: ["7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67"] }
+  - { zh: 卵黄营养, en: lecithotrophy }
