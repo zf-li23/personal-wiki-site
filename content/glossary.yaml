@@ -9678,7 +9678,7 @@ terms:
   - { zh: 性状, en: character, aliases: [characters], scope: ["7"] }
   - { zh: 适应, en: adaptation, aliases: [adaptations, 适应性状] }
   - { zh: K 选择, en: K-selection, scope: ["7"] }
-  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12", "7.17"] }
+  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12", "7.17", "7.18"] }
   - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
   - { zh: 保留指数, en: retention index, scope: ["7"] }
   - { zh: 分离位点, en: segregating site, aliases: [segregating sites] }
@@ -13125,3 +13125,14 @@ terms:
   - { zh: 临界闪烁融合频率, en: critical flicker fusion frequency, aliases: [闪光融合频率, CFF, flicker fusion frequency] }
   - { zh: 压力接收器, en: pressure receiver, aliases: [pressure receivers] }
   - { zh: 压力差接收器, en: pressure-difference receiver, aliases: [pressure-difference receivers, pressure differential receiver, 压差接收器] }
+  - { zh: Krogh 原则, en: "Krogh's principle", aliases: [August Krogh principle] }
+  - { zh: 可辨认神经元, en: identified neuron, aliases: [identified neurons, 可识别神经元] }
+  - { zh: 神经毒素, en: neurotoxin, aliases: [neurotoxins] }
+  - { zh: 靶位点不敏感性, en: target-site insensitivity, aliases: [target-site resistance, 靶标位点抗性] }
+  - { zh: 儿茶酚胺, en: catecholamine, aliases: [catecholamines] }
+  - { zh: 阿片肽, en: opioid peptide, aliases: [opioid peptides, 内源性阿片肽, endogenous opioids] }
+  - { zh: 多态网络, en: polymorphic network, aliases: [polymorphic networks] }
+  - { zh: 章鱼胺, en: octopamine }
+  - { zh: 社会脑假说, en: social brain hypothesis }
+  - { zh: 昂贵组织假说, en: expensive-tissue hypothesis, aliases: [expensive tissue hypothesis] }
+  - { zh: 前额叶皮层, en: prefrontal cortex, aliases: [PFC, 前额叶] }
