@@ -11802,7 +11802,7 @@ terms:
   - { zh: 体细胞高频突变, en: somatic hypermutation, aliases: [SHM, 体细胞超突变] }
   - { zh: 类别转换重组, en: class switch recombination, aliases: [CSR, 类别转换, class switching, 同种型转换] }
   - { zh: 活化诱导胞苷脱氨酶, en: activation-induced cytidine deaminase, aliases: [AID] }
-  - { zh: 免疫组库, en: immune repertoire, aliases: [repertoire, 抗原受体库] }
+  - { zh: 免疫组库, en: immune repertoire, aliases: [抗原受体库] }
   - { zh: 主要组织相容性复合体, en: major histocompatibility complex, aliases: [MHC] }
   - { zh: 人类白细胞抗原, en: human leukocyte antigen, aliases: [HLA] }
   - { zh: MHC I 类分子, en: MHC class I molecule, aliases: [MHC I, MHC class I, MHC I 类分子, 主要组织相容性复合体 I 类分子] }
