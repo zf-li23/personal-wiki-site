@@ -11163,7 +11163,7 @@ terms:
   - { zh: 实质等同, en: substantial equivalence }
 
   # biology: animal physiology (7.14); homonyms of terms in other disciplines are scoped to 7.14
-  - { zh: 稳态, en: homeostasis, aliases: [内稳态, 自稳态], scope: ["7.14"] }
+  - { zh: 稳态, en: homeostasis, aliases: [内稳态, 自稳态], scope: ["7.14", "7.18"] }
   - { zh: 神经元学说, en: neuron doctrine }
   - { zh: 轴突始段, en: axon initial segment, aliases: [轴突起始段] }
   - { zh: 空间总和, en: spatial summation }
@@ -13136,3 +13136,37 @@ terms:
   - { zh: 社会脑假说, en: social brain hypothesis }
   - { zh: 昂贵组织假说, en: expensive-tissue hypothesis, aliases: [expensive tissue hypothesis] }
   - { zh: 前额叶皮层, en: prefrontal cortex, aliases: [PFC, 前额叶] }
+  - { zh: 比较心理学, en: comparative psychology }
+  - { zh: 行为主义, en: behaviorism }
+  - { zh: Morgan 法则, en: "Morgan's canon", aliases: [摩根法则] }
+  - { zh: 社会生物学, en: sociobiology }
+  - { zh: 行为生态学, en: behavioral ecology, aliases: [behavioural ecology] }
+  - { zh: 行为谱, en: ethogram, aliases: [ethograms] }
+  - { zh: 随意取样, en: ad libitum sampling }
+  - { zh: 焦点动物取样, en: focal sampling, aliases: [focal animal sampling, 目标取样] }
+  - { zh: 扫描取样, en: scan sampling }
+  - { zh: 行为取样, en: behavior sampling }
+  - { zh: 连续记录, en: continuous recording, aliases: [all-occurrences recording] }
+  - { zh: 瞬时取样, en: instantaneous sampling, aliases: [point sampling, 点取样] }
+  - { zh: 0–1 取样, en: one–zero sampling, aliases: [one-zero sampling, 0-1 取样] }
+  - { zh: 最优化模型, en: optimality model, aliases: [optimality models, 最优模型] }
+  - { zh: 固定行为型, en: fixed action pattern, aliases: [fixed action patterns, FAP, 固定动作模式] }
+  - { zh: 信号刺激, en: sign stimulus, aliases: [sign stimuli, 关键刺激] }
+  - { zh: 释放者, en: releaser, aliases: [releasers] }
+  - { zh: 释放机制, en: releasing mechanism }
+  - { zh: 先天释放机制, en: innate releasing mechanism, aliases: [IRM] }
+  - { zh: 超常刺激, en: supernormal stimulus, aliases: [supernormal stimuli] }
+  - { zh: 刺激的异质总和, en: heterogeneous summation, aliases: [law of heterogeneous summation, 异质总和律] }
+  - { zh: 动机, en: motivation, scope: ["7.18"] }
+  - { zh: 空放行为, en: vacuum activity, aliases: [vacuum activities] }
+  - { zh: 欲求行为, en: appetitive behavior }
+  - { zh: 完成行为, en: consummatory behavior }
+  - { zh: 心理水力模型, en: psychohydraulic model, aliases: [hydraulic model] }
+  - { zh: 替代行为, en: displacement activity, aliases: [displacement activities, 转移行为] }
+  - { zh: 转向行为, en: redirected behavior, aliases: [改向行为, redirected aggression] }
+  - { zh: 本能, en: instinct, aliases: [innate behavior, 本能行为, 先天行为], scope: ["7.18"] }
+  - { zh: 行为遗传学, en: behavioral genetics }
+  - { zh: 敏感期, en: sensitive period, aliases: [sensitive periods] }
+  - { zh: 发育稳态, en: developmental homeostasis }
+  - { zh: 发育开关, en: developmental switch, aliases: [developmental switches] }
+  - { zh: 条件策略, en: conditional strategy, aliases: [conditional strategies] }
