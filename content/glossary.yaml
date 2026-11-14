@@ -13347,3 +13347,20 @@ terms:
   - { zh: 协商模型, en: negotiation model, aliases: [negotiation models] }
   - { zh: 兄弟相残, en: siblicide, aliases: [同胞相残] }
   - { zh: 乞食, en: begging, aliases: [乞食行为], scope: ["7.18"] }
+  - { zh: 工具使用, en: tool use }
+  - { zh: 顿悟, en: insight, aliases: [顿悟学习, insight learning], scope: ["7.18"] }
+  - { zh: 传递性推理, en: transitive inference }
+  - { zh: 不公平厌恶, en: inequity aversion, aliases: [不平等厌恶] }
+  - { zh: 镜像自我识别, en: mirror self-recognition, aliases: [镜像识别, 标记测试, mark test] }
+  - { zh: 注视跟随, en: gaze following, aliases: [视线追随] }
+  - { zh: 心理理论, en: theory of mind, aliases: [心智理论] }
+  - { zh: 局部增强, en: local enhancement }
+  - { zh: 刺激增强, en: stimulus enhancement }
+  - { zh: 社会学习, en: social learning }
+  - { zh: 模仿, en: imitation, aliases: [真模仿, true imitation], scope: ["7.18"] }
+  - { zh: 仿效, en: emulation, scope: ["7.18"] }
+  - { zh: 教学, en: teaching, scope: ["7.18"] }
+  - { zh: 一致性偏向, en: conformist bias, aliases: [从众偏向, conformist transmission] }
+  - { zh: 积累文化, en: cumulative culture, aliases: [累积文化] }
+  - { zh: 语言的设计特征, en: design features of language, aliases: [Hockett 设计特征] }
+  - { zh: 动物福利, en: animal welfare }
