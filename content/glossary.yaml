@@ -13118,3 +13118,10 @@ terms:
   - { zh: 边际值定理, en: marginal value theorem }
   - { zh: 迁徙, en: migration, scope: ["7.18"] }
   - { zh: 信号, en: signal, scope: ["7.18"] }
+  - { zh: 环境界, en: Umwelt }
+  - { zh: 视野, en: visual field, aliases: [visual fields], scope: ["7"] }
+  - { zh: 双眼视觉, en: binocular vision, aliases: [双眼视, 双目视觉] }
+  - { zh: 立体视觉, en: stereopsis, aliases: [立体视] }
+  - { zh: 临界闪烁融合频率, en: critical flicker fusion frequency, aliases: [闪光融合频率, CFF, flicker fusion frequency] }
+  - { zh: 压力接收器, en: pressure receiver, aliases: [pressure receivers] }
+  - { zh: 压力差接收器, en: pressure-difference receiver, aliases: [pressure-difference receivers, pressure differential receiver, 压差接收器] }
