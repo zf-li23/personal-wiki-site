@@ -9712,7 +9712,7 @@ terms:
   - { zh: 工蜂监察, en: worker policing }
   - { zh: 隐蔽雌性选择, en: cryptic female choice }
   - { zh: 性角色逆转, en: sex-role reversal, aliases: [sex role reversal] }
-  - { zh: 替代交配策略, en: alternative mating strategy, aliases: [alternative mating strategies] }
+  - { zh: 替代交配策略, en: alternative mating strategy, aliases: [alternative mating strategies, alternative reproductive tactics, alternative reproductive tactic, alternative mating tactics] }
   - { zh: Trivers–Willard 假说, en: Trivers–Willard hypothesis }
   - { zh: 突变崩溃, en: mutational meltdown }
   - { zh: 协同上位, en: synergistic epistasis }
@@ -13322,3 +13322,28 @@ terms:
   - { zh: 繁殖抑制, en: reproductive suppression }
   - { zh: 繁殖偏斜, en: reproductive skew }
   - { zh: 分离性比, en: split sex ratio, aliases: [split sex ratios] }
+  - { zh: 偷配, en: sneaking, aliases: [sneaker, sneakers, 偷配者], scope: ["7.18"] }
+  - { zh: 配偶守卫, en: mate guarding }
+  - { zh: 直接利益, en: direct benefits, aliases: [direct benefit, material benefits], scope: ["7.18"] }
+  - { zh: 婚礼礼物, en: nuptial gift, aliases: [nuptial gifts, 婚飨, 求偶喂食] }
+  - { zh: 逃避选择, en: chase-away selection, aliases: [chase-away sexual selection] }
+  - { zh: 婚配制度, en: mating system, aliases: [mating systems, 交配制度], scope: ["7.18"] }
+  - { zh: 单配制, en: monogamy, aliases: [一夫一妻制], scope: ["7.18"] }
+  - { zh: 一雄多雌, en: polygyny, aliases: [一雄多雌制] }
+  - { zh: 一雌多雄, en: polyandry, aliases: [一雌多雄制] }
+  - { zh: 多雄多雌, en: polygynandry, aliases: [多雄多雌制] }
+  - { zh: 乱交, en: promiscuity, aliases: [混交制], scope: ["7.18"] }
+  - { zh: 保卫雌性的一雄多雌, en: female defense polygyny, aliases: [harem polygyny] }
+  - { zh: 保卫资源的一雄多雌, en: resource defense polygyny }
+  - { zh: 争夺竞争式一雄多雌, en: scramble competition polygyny }
+  - { zh: 一雄多雌阈值模型, en: polygyny threshold model }
+  - { zh: 配偶外父权, en: extra-pair paternity, aliases: [婚外父权] }
+  - { zh: 亲代抚育, en: parental care }
+  - { zh: 亲代投资, en: parental investment }
+  - { zh: Lack 窝卵数, en: Lack clutch size, aliases: [Lack 窝卵数假说] }
+  - { zh: 食子行为, en: filial cannibalism, aliases: [食卵行为] }
+  - { zh: 性分配, en: sex allocation, aliases: [性别分配] }
+  - { zh: 部分补偿, en: partial compensation }
+  - { zh: 协商模型, en: negotiation model, aliases: [negotiation models] }
+  - { zh: 兄弟相残, en: siblicide, aliases: [同胞相残] }
+  - { zh: 乞食, en: begging, aliases: [乞食行为], scope: ["7.18"] }
