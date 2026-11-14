@@ -13196,3 +13196,21 @@ terms:
   - { zh: 磁地图, en: magnetic map, aliases: [magnetic maps] }
   - { zh: 嗅觉印记假说, en: olfactory imprinting hypothesis }
   - { zh: 归巢, en: homing, scope: ["7.17", "7.18"] }
+  - { zh: 动性, en: kinesis, aliases: [kineses] }
+  - { zh: 趋性, en: taxis, aliases: [taxes], scope: ["7.18"] }
+  - { zh: 横定向, en: transverse orientation }
+  - { zh: 光罗盘反应, en: light-compass reaction, aliases: [menotaxis, 恒向趋性] }
+  - { zh: Doppler 频移补偿, en: Doppler-shift compensation, aliases: [多普勒频移补偿, Doppler shift compensation] }
+  - { zh: 刺激过滤, en: stimulus filtering }
+  - { zh: 特征检测器, en: feature detector, aliases: [feature detectors] }
+  - { zh: 逼近检测, en: looming detection }
+  - { zh: 小叶巨型运动检测器, en: lobula giant movement detector, aliases: [LGMD] }
+  - { zh: 逃避反应, en: escape response, aliases: [escape responses] }
+  - { zh: 巨纤维, en: giant fiber, aliases: [giant fibers, giant fibre] }
+  - { zh: Mauthner 细胞, en: Mauthner cell, aliases: [Mauthner cells, 毛特纳细胞] }
+  - { zh: 命令神经元, en: command neuron, aliases: [command neurons] }
+  - { zh: 壶腹感受器, en: ampullary receptor, aliases: [ampullary receptors, ampullary electroreceptor] }
+  - { zh: 结节感受器, en: tuberous receptor, aliases: [tuberous receptors, tuberous electroreceptor] }
+  - { zh: 干扰回避反应, en: jamming avoidance response, aliases: [JAR] }
+  - { zh: 趋声性, en: phonotaxis }
+  - { zh: 温度耦合, en: temperature coupling }
