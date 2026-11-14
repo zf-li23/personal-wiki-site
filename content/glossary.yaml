@@ -12237,7 +12237,7 @@ terms:
   - { zh: AgRP 神经元, en: AgRP neuron, aliases: [AgRP neurons] }
   - { zh: POMC 神经元, en: POMC neuron, aliases: [POMC neurons] }
   - { zh: 终板, en: lamina terminalis }
-  - { zh: 驱力, en: drive, scope: ["7.16"] }
+  - { zh: 驱力, en: drive, scope: ["7.16", "7.18"] }
   - { zh: 稳态奖赏, en: homeostatic reward }
   - { zh: 转录–翻译负反馈环, en: transcription–translation feedback loop, aliases: [TTFL] }
   - { zh: 触发器开关, en: flip-flop switch }
@@ -12246,7 +12246,7 @@ terms:
   - { zh: 情绪状态, en: emotion state }
   - { zh: 恐惧条件反射, en: fear conditioning }
   - { zh: 杏仁核, en: amygdala }
-  - { zh: 奖赏, en: reward, scope: ["7.16"] }
+  - { zh: 奖赏, en: reward, scope: ["7.16", "7.18"] }
   - { zh: 奖赏预测误差, en: reward prediction error, aliases: [RPE] }
   - { zh: 成瘾, en: addiction, aliases: [物质使用障碍, substance use disorder] }
   - { zh: 对手过程, en: opponent process }
@@ -13105,3 +13105,16 @@ terms:
   - { zh: 颊窝, en: pit organ, aliases: [loreal pit, pit organs] }
   - { zh: 系膜, en: mesentery, aliases: [mesenteries], scope: ["7.17.62", "7.17.63", "7.17.64", "7.17.65", "7.17.66", "7.17.67"] }
   - { zh: 卵黄营养, en: lecithotrophy }
+
+  # biology: animal behavior (7.18); homonyms of terms in other disciplines are scoped to 7.18
+  - { zh: 动物行为学, en: ethology }
+  - { zh: Tinbergen 四问, en: "Tinbergen's four questions" }
+  - { zh: 神经行为学, en: neuroethology }
+  - { zh: 子代印记, en: filial imprinting }
+  - { zh: 动物文化, en: animal culture, aliases: [culture], scope: ["7.18"] }
+  - { zh: 指标信号, en: index signal }
+  - { zh: 复制者动力学, en: replicator dynamics }
+  - { zh: 理想自由分布, en: ideal free distribution }
+  - { zh: 边际值定理, en: marginal value theorem }
+  - { zh: 迁徙, en: migration, scope: ["7.18"] }
+  - { zh: 信号, en: signal, scope: ["7.18"] }
