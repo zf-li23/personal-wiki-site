@@ -127,7 +127,7 @@ The diversity of feeding strategies might seem to defy any general theory. Yet t
 
 An optimal foraging model has three components (Stephens and Krebs 1986):
 
-- *Decision*: what the forager chooses, such as whether to eat an item, how long to stay in a patch or how many prey to carry home.
+- **Decision**: what the forager chooses, such as whether to eat an item, how long to stay in a patch or how many prey to carry home.
 - *Currency*: the quantity assumed to be maximized, the link between the decision and fitness. The commonest currency is the long-term net rate of energy intake, energy gained minus energy spent, divided by the time taken. Others are energetic efficiency (energy gained per energy spent), the probability of avoiding starvation, and the intake of a limiting nutrient.
 - *Constraints*: the limits on what the forager can do and know, from the time needed to travel or handle prey and the capacity of the gut to the accuracy with which it can recognize prey.
 
