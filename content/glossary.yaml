@@ -12695,7 +12695,7 @@ terms:
   - { zh: 群体, en: colony, scope: ["7.17"] }
   - { zh: 头冠, en: corona, aliases: [coronal cilia, 纤毛冠, 轮盘, trochal disc] }
   - { zh: 扭转, en: torsion, scope: ["7.17"] }
-  - { zh: 色素细胞, en: chromatophore, aliases: [chromatophores], scope: ["7.17"] }
+  - { zh: 色素细胞, en: chromatophore, aliases: [chromatophores], scope: ["7.17", "7.18"] }
   - { zh: 环带, en: clitellum, aliases: [clitella], scope: ["7.17"] }
   - { zh: 表皮层, en: cuticle, aliases: [角质膜], scope: ["7.17"] }
   - { zh: 梗节, en: pedicel, scope: ["7.17"] }
@@ -13241,3 +13241,26 @@ terms:
   - { zh: 集体运动, en: collective motion }
   - { zh: 法定数反应, en: quorum response, aliases: [quorum responses] }
   - { zh: 社会网络分析, en: social network analysis, aliases: [SNA] }
+  - { zh: 攻击性拟态, en: aggressive mimicry }
+  - { zh: 坐等觅食, en: sit-and-wait foraging, aliases: [sit-and-wait predation, 坐等策略] }
+  - { zh: 最优觅食理论, en: optimal foraging theory, aliases: [最适觅食理论, OFT] }
+  - { zh: 利润率, en: profitability, scope: ["7.18"] }
+  - { zh: 猎物模型, en: prey model, aliases: [optimal diet model, 最优食谱模型] }
+  - { zh: 中心地觅食, en: central-place foraging, aliases: [中心位觅食] }
+  - { zh: 经验法则, en: rule of thumb, aliases: [rules of thumb], scope: ["7.18"] }
+  - { zh: 风险敏感觅食, en: risk-sensitive foraging }
+  - { zh: 能量预算规则, en: energy budget rule }
+  - { zh: 贮食, en: food caching, aliases: [food hoarding, 贮藏食物, 食物贮藏] }
+  - { zh: Gilliam 法则, en: "Gilliam's rule" }
+  - { zh: 放弃密度, en: giving-up density, aliases: [GUD] }
+  - { zh: 恐惧景观, en: landscape of fear, aliases: [ecology of fear, 恐惧生态学] }
+  - { zh: 生命–晚餐原理, en: life–dinner principle, aliases: [life-dinner principle] }
+  - { zh: 初级防御, en: primary defense, aliases: [primary defenses, primary defence] }
+  - { zh: 次级防御, en: secondary defense, aliases: [secondary defenses, secondary defence] }
+  - { zh: 搜索图像, en: search image, aliases: [search images, searching image, 搜索意象] }
+  - { zh: 反常选择, en: apostatic selection, aliases: [背离选择] }
+  - { zh: 毒物, en: poison, aliases: [poisons], scope: ["7"] }
+  - { zh: 毒液, en: venom, aliases: [venoms] }
+  - { zh: 喷射毒素, en: toxungen, aliases: [toxungens] }
+  - { zh: 起逃距离, en: flight initiation distance, aliases: [FID, 惊飞距离] }
+  - { zh: 惊吓展示, en: deimatic display, aliases: [deimatic displays, startle display, 威吓展示] }
