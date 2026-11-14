@@ -12944,7 +12944,7 @@ terms:
   - { zh: 蚁播, en: myrmecochory }
   - { zh: 油质体, en: elaiosome, aliases: [elaiosomes] }
   - { zh: 虫瘿, en: insect gall, aliases: [zoocecidium] }
-  - { zh: 级型, en: caste, aliases: [castes], scope: ["7.17"] }
+  - { zh: 级型, en: caste, aliases: [castes], scope: ["7.17", "7.18"] }
   - { zh: 原始真社会性, en: primitively eusocial }
   - { zh: 高等真社会性, en: advanced eusocial, aliases: [highly eusocial] }
   - { zh: 蜂王浆, en: royal jelly, aliases: [王浆] }
@@ -13306,3 +13306,19 @@ terms:
   - { zh: 近似数量系统, en: approximate number system }
   - { zh: 阻断, en: blocking, scope: ["7.16", "7.18"] }
   - { zh: 遮蔽, en: overshadowing, scope: ["7.16", "7.18"] }
+  - { zh: 亲属识别, en: kin recognition }
+  - { zh: 亲属辨别, en: kin discrimination }
+  - { zh: 表型匹配, en: phenotype matching }
+  - { zh: 亲缘竞争, en: kin competition, aliases: [competition between relatives] }
+  - { zh: 合作, en: cooperation, scope: ["7.18"] }
+  - { zh: 搭便车, en: free riding, aliases: [free-riding], scope: ["7.18"] }
+  - { zh: 副产品互利, en: by-product mutualism }
+  - { zh: 群体增益, en: group augmentation }
+  - { zh: 惩罚, en: punishment, scope: ["7.18"] }
+  - { zh: 制裁, en: sanctions, aliases: [host sanctions], scope: ["7.18"] }
+  - { zh: 合作繁殖, en: cooperative breeding }
+  - { zh: 帮手, en: helper, aliases: [helpers, helper at the nest, alloparent], scope: ["7.18"] }
+  - { zh: 生态制约假说, en: ecological constraints hypothesis }
+  - { zh: 繁殖抑制, en: reproductive suppression }
+  - { zh: 繁殖偏斜, en: reproductive skew }
+  - { zh: 分离性比, en: split sex ratio, aliases: [split sex ratios] }
