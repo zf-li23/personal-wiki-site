@@ -11655,7 +11655,7 @@ terms:
   - { zh: 视交叉上核, en: suprachiasmatic nucleus, aliases: [SCN] }
   - { zh: 双过程模型, en: two-process model }
   - { zh: 习惯化, en: habituation }
-  - { zh: 敏感化, en: sensitization, scope: ["7.14"] }
+  - { zh: 敏感化, en: sensitization, scope: ["7.14", "7.16", "7.18"] }
   - { zh: 边缘系统, en: limbic system }
   - { zh: 半脑睡眠, en: unihemispheric sleep, aliases: [unihemispheric slow-wave sleep] }
   - { zh: 脑化指数, en: encephalization quotient }
@@ -12154,7 +12154,7 @@ terms:
   - { zh: 位置细胞, en: place cell, aliases: [place cells] }
   - { zh: 头朝向细胞, en: head direction cell, aliases: [head direction cells] }
   - { zh: 网格细胞, en: grid cell, aliases: [grid cells] }
-  - { zh: 边界细胞, en: border cell, aliases: [border cells], scope: ["7.16"] }
+  - { zh: 边界细胞, en: border cell, aliases: [border cells], scope: ["7.16", "7.18"] }
   - { zh: 相位进动, en: phase precession }
   - { zh: 尖波涟漪, en: sharp-wave ripple, aliases: [sharp-wave ripples] }
   - { zh: 重放, en: replay, aliases: [回放], scope: ["7.16"] }
@@ -13287,3 +13287,22 @@ terms:
   - { zh: 报警叫声, en: alarm call, aliases: [alarm calls] }
   - { zh: 观众效应, en: audience effect, aliases: [audience effects] }
   - { zh: 参照性信号, en: referential signal, aliases: [referential signals, functionally referential signal] }
+  - { zh: 学习, en: learning, scope: ["7.18"] }
+  - { zh: 潜在抑制, en: latent inhibition }
+  - { zh: 强化程序, en: schedule of reinforcement, aliases: [schedules of reinforcement, reinforcement schedule] }
+  - { zh: 味觉厌恶学习, en: conditioned taste aversion, aliases: [条件性味觉厌恶, Garcia effect, Garcia 效应, taste aversion learning] }
+  - { zh: 预备性, en: preparedness, aliases: [准备性] }
+  - { zh: 本能漂移, en: instinctive drift }
+  - { zh: 潜在学习, en: latent learning, aliases: [潜伏学习] }
+  - { zh: 学习集, en: learning set, aliases: [learning sets, 学习定势] }
+  - { zh: 延迟样本匹配, en: delayed matching to sample, aliases: [DMTS, delayed matching-to-sample, 延迟匹配样本] }
+  - { zh: 系列位置效应, en: serial position effect, aliases: [serial position effects, 序列位置效应] }
+  - { zh: 适应性特化假说, en: adaptive specialization hypothesis }
+  - { zh: 类情景记忆, en: episodic-like memory }
+  - { zh: 自然概念, en: natural concept, aliases: [natural concepts, natural category] }
+  - { zh: 物体恒常性, en: object permanence, aliases: [客体永久性, 物体永久性] }
+  - { zh: 相同–不同概念, en: same–different concept, aliases: [same-different concept] }
+  - { zh: 标量期望理论, en: scalar expectancy theory, aliases: [标量计时理论, scalar timing theory] }
+  - { zh: 近似数量系统, en: approximate number system }
+  - { zh: 阻断, en: blocking, scope: ["7.16", "7.18"] }
+  - { zh: 遮蔽, en: overshadowing, scope: ["7.16", "7.18"] }
