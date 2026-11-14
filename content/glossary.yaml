@@ -5511,7 +5511,7 @@ terms:
   - { zh: 金属指示剂, en: metallochromic indicator, aliases: [金属离子指示剂, metal ion indicator] }
   - { zh: 指示剂的封闭, en: blocking of an indicator, aliases: [指示剂封闭, indicator blocking] }
   - { zh: 指示剂的僵化, en: sluggish end point, aliases: [指示剂僵化, indicator ossification] }
-  - { zh: 掩蔽, en: masking, aliases: [掩蔽剂, masking agent] }
+  - { zh: 掩蔽, en: masking, aliases: [掩蔽剂, masking agent], scope: ["6"] }
   - { zh: 解蔽, en: demasking, aliases: [解蔽剂, demasking agent] }
   - { zh: 水的硬度, en: water hardness, aliases: [硬度] }
   - { zh: 固有溶解度, en: intrinsic solubility, aliases: [分子溶解度] }
@@ -13170,3 +13170,29 @@ terms:
   - { zh: 发育稳态, en: developmental homeostasis }
   - { zh: 发育开关, en: developmental switch, aliases: [developmental switches] }
   - { zh: 条件策略, en: conditional strategy, aliases: [conditional strategies] }
+  - { zh: 声谱图, en: spectrogram, aliases: [sonogram, 语图] }
+  - { zh: 方言, en: dialect, aliases: [song dialect, dialects, 鸣声方言], scope: ["7.18"] }
+  - { zh: 鸣声学习, en: song learning }
+  - { zh: 鸣唱系统, en: song system }
+  - { zh: 发声学习, en: vocal learning, aliases: [vocal production learning] }
+  - { zh: 自由运转节律, en: free-running rhythm, aliases: [free-running period, 自由运转] }
+  - { zh: 授时因子, en: zeitgeber, aliases: [zeitgebers, 授时因素] }
+  - { zh: 活动记录图, en: actogram, aliases: [actograms] }
+  - { zh: Aschoff 规则, en: "Aschoff's rule" }
+  - { zh: 近似年节律, en: circannual rhythm, aliases: [circannual rhythms, 年节律] }
+  - { zh: 组织效应, en: organizational effect, aliases: [organizational effects] }
+  - { zh: 激活效应, en: activational effect, aliases: [activational effects] }
+  - { zh: 挑战假说, en: challenge hypothesis }
+  - { zh: 应激反应, en: stress response }
+  - { zh: 停歇地, en: stopover site, aliases: [stopover sites, 中途停歇地] }
+  - { zh: 迁徙躁动, en: migratory restlessness, aliases: [Zugunruhe, 迁徙兴奋] }
+  - { zh: 物候错配, en: phenological mismatch, aliases: [营养错配, trophic mismatch] }
+  - { zh: 迁飞区, en: flyway, aliases: [flyways, 迁徙路线区] }
+  - { zh: 导航, en: navigation, scope: ["7"] }
+  - { zh: 真导航, en: true navigation }
+  - { zh: Emlen 漏斗, en: Emlen funnel, aliases: [埃姆伦漏斗, Emlen funnels] }
+  - { zh: 太阳罗盘, en: sun compass, aliases: [time-compensated sun compass, 时间补偿的太阳罗盘] }
+  - { zh: 星空罗盘, en: star compass, aliases: [星辰罗盘, 星罗盘] }
+  - { zh: 磁地图, en: magnetic map, aliases: [magnetic maps] }
+  - { zh: 嗅觉印记假说, en: olfactory imprinting hypothesis }
+  - { zh: 归巢, en: homing, scope: ["7.17", "7.18"] }

@@ -298,8 +298,8 @@ Migration is fuelled by fat, stored before departure by hyperphagia: small songb
 
 To migrate, a bird needs a compass (to keep a direction) and, to return to a particular place, a map. Experiments since the 1950s have identified several compasses:
 
-- *Sun compass*: birds orient by the sun's azimuth, compensating for its movement by their circadian clock; shifting the clock of a pigeon by six hours shifts its homing direction by about 90° (Kramer, Schmidt-Koenig).
-- *Star compass*: nocturnal migrants learn the centre of rotation of the night sky; indigo buntings raised under a planetarium sky rotating around a different star oriented relative to that star (Emlen 1967).
+- **Sun compass**: birds orient by the sun's azimuth, compensating for its movement by their circadian clock; shifting the clock of a pigeon by six hours shifts its homing direction by about 90° (Kramer, Schmidt-Koenig).
+- **Star compass**: nocturnal migrants learn the centre of rotation of the night sky; indigo buntings raised under a planetarium sky rotating around a different star oriented relative to that star (Emlen 1967).
 - *Magnetic compass*: birds sense the inclination (dip angle) of the geomagnetic field, distinguishing "poleward" from "equatorward" rather than north from south (Wiltschko and Wiltschko 1972); the mechanism is probably a radical-pair reaction in cryptochrome 4 in the retina.
 - *Map cues*: homing pigeons use olfactory cues carried by winds and possibly magnetic intensity and inclination gradients to determine their position; young birds on their first migration rely on an inherited programme of direction and duration, whereas adults correct for displacement.
 
