@@ -368,6 +368,7 @@ describe('plot script lint', () => {
   it('finds the helpers a script depends on, through helpers that import other helpers', () => {
     const names = (src: string) => helpersOf(src).map((h) => path.basename(h, '.py'));
     assert.deepEqual(names('import vertskel as vs\n'), ['wikibio', 'vertskel']);
+    assert.deepEqual(names('import wikibehav as wb\n'), ['wikibio', 'wikibehav']);
     assert.deepEqual(names('import wikibio as bio\n'), ['wikibio']);
     assert.deepEqual(names('from wikichem import Scheme\n'), ['wikichem']);
     assert.deepEqual(names('import numpy as np\n'), []);

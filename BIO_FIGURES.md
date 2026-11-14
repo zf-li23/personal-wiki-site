@@ -106,7 +106,7 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 | `neuro` | 离子通道与膜片、电极、电路元件、Hodgkin–Huxley 与 LIF 模型 | 7.6、7.16 |
 | `plant` | 花图式与花程式（`floral_diagram`；`floral_diagram_from_formula` 由花程式生成花图式；`floral_formula(..., style="cn")` 按中国教材写法画花程式，`floral_formula_tex` 给出页面正文用的同一 KaTeX 写法）；生活史类型（`life_cycle`：单倍体型、二倍体型、单双倍体型（世代交替）、红藻三相；`alternation_of_generations`）；真菌（`hypha` 有隔、无隔与锁状联合，`ascus`、`basidium` 按发育阶段，`paraphysis`，`hymenium` 沿任意曲线的子实层，`ascocarp` 子囊盘、子囊壳、闭囊壳、假囊壳剖面，`mushroom` 伞菌纵切或外形，`gill_section` 菌褶横切）；蕨类（`pinnule` 孢子囊群与囊群盖的类型，`leptosporangium` 环带与裂口，闭合、开裂、弹射；`frond`、`prothallus`、`sporangium`）；球果（`cone_scale` 苞鳞–种鳞复合体与小孢子叶，`cone` 松的雌雄球果、石松与卷柏、木贼的孢子叶球，纵切或外形） | 7.12 |
 | `zoology` | 动物体制横切面与胚层 | 7.17 |
-| `behaviour` | 边际值定理、鹰鸽博弈与复制者动力学 | 7.18 |
+| `behaviour` | 边际值定理、鹰鸽博弈与复制者动力学；定向、节律、实验装置、群体运动与信号检测见独立模块 `wikibehav`（§4.2） | 7.18 |
 | `botany` | 参数化植物形态：叶形、叶尖、叶基、叶缘、叶脉、复叶、叶序与黄金角、花序（含复穗状、多歧聚伞、轮伞、隐头花序）、茎根叶横切（逐个细胞）、气孔表面观（`stoma`：肾形与哑铃形保卫细胞，开与闭，不规则型、不等细胞型、平列型、横列型、四细胞型、辐射型副卫细胞）与表皮装片（`epidermis`：双子叶、单子叶、禾本科）、地衣横切（`lichen_section`：异层与同层）、次生生长与木材、L 系统与空间殖民的树形 | 7.12、7.13 |
 | `zoomorph` | 参数化动物形态：按目生成的昆虫（触角、口器、足、翅脉）、Raup 贝壳模型与缝合线、辐射对称体制、前肢同源骨 | 7.10、7.17 |
 | `ecology` | 循环图（`cycle`，也用于细胞周期）、食物网、生态金字塔、年龄金字塔 | 7.19 |
@@ -159,6 +159,16 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 
 约定：头骨与骨骼侧视时前端朝左；图是示意，类群之间不按比例（图注写明）。头骨的具体形状由各章脚本给出：先在 `vs.panels` 的每个面板里按局部坐标写出各骨的顶点，再 `vs.draw(..., at=(x, y))` 放入面板。
 
+### 4.2 动物行为：wikibehav
+
+动物行为学（7.18）的定向、节律、实验装置、群体运动与信号检测图用绘图辅助模块 `wikibehav`（`scripts/wiki/plot/wikibehav.py`，与 wikibio 并列，`import wikibehav as wb`）。它是独立的辅助模块（`PLOT_HELPERS`）：修改它只使导入它的图重新渲染；它导入 wikibio，颜色与字号与 wikibio 一致。完整接口见模块开头的说明，样张为 `gallery/c7.18-*.py`。
+
+- **定向**（方位角：从正北顺时针的度数）：`wb.vonmises(mean, kappa, n, seed)` 抽样；`wb.mean_direction(a)` 平均方向与平均合向量长度 $r$；`wb.rayleigh(a)` Rayleigh 检验（返回 $r$、$z = nr^2$、$p$）；`wb.v_test(a, expected)` V 检验；`wb.emlen_funnel(ax, 中心, 半径, 划痕方位, sectors=24)` Emlen 漏斗俯视（漏斗壁、墨垫、划痕、计数扇区）；`wb.circular_plot(ax, 中心, 半径, a, token=…, expected=…, expected_text=…)` 圆形数据图（个体方向堆叠成点、平均向量箭头、期望方向虚线、"n, r, p" 一行）。
+- **节律**：`wb.simulate_activity(days, tau, onset, alpha, taus=[(天, 周期)], shifts=[(天, 小时)], seed)` 模拟活动计数（先 LD 牵引、后 DD 自由运转、相移）；`act = wb.Actogram(ax, (x0, y0, w, h), t, counts, light=(6, 18), dd_from=…, ll_from=…, pulses=[(天, 时)])` 双重绘图的活动图（上方 LD 条，光期浅黄、暗期灰，光脉冲为星号）；`act.onsets(onsets)` 画活动起始线，`act.xy(天, 时)` 给出画布坐标。
+- **实验装置**（俯视的线条图，墙为墨色、地面浅色，均返回锚点供引线标注）：`wb.t_maze`、`wb.y_maze`（`reward="left"|"right"`）、`wb.plus_maze`（高架十字迷宫，开放臂无墙）、`wb.radial_maze`（八臂迷宫，`baited`、`visited`）、通用的 `wb.arm_maze`；`wb.water_maze(ax, 中心, 半径, platform=(方位, 距离), path=wb.swim_path(platform, start, kind="direct"|"search"|"thigmotaxis"))` Morris 水迷宫（象限、隐藏平台、远端线索、游泳轨迹）；`wb.operant_box(ax, 中心, w, h, lever, light, key, hopper, speaker)` 操作箱侧视（提示灯、杠杆、啄键、食槽与外部颗粒分配器、栅格地板）。动物用图标放入（`bio.icon(ax, "phylopic/rat", at=box["inside"], …)`，图标 id 写在脚本里，以便注明来源）。
+- **群体运动与导航**：`wb.couzin(n, steps, rr, ro, ra, blind, …)` Couzin 区域模型（排斥、对齐、吸引、后方盲区），`wb.COUZIN_REGIMES` 给出 swarm、torus、parallel 三组参数；`wb.polarization`、`wb.milling` 序参量；`wb.zones(ax, 中心, rr, ro, ra)` 区域示意；`wb.path_integration(steps, error, displace, search)` 沙漠蚁的路径整合（外出随机游走、沿整合向量归巢、位移实验的虚拟巢、扩展搜索环）；`to = wb.fit(点集, 框)` 把模拟坐标放入画布框；`wb.trail(ax, to(路径), fade=True, arrows=3)` 渐隐轨迹，`wb.school(ax, pos, head, to)` 画群体某一帧，`wb.agent` 画单个个体。
+- **信号检测**（在 `quant.Plot` 上）：`wb.sdt_panel(p, d, xc)` 噪声与信号分布、判据、击中与虚报阴影、$d'$；`wb.roc_panel(q, dprimes, points)` ROC 曲线；`wb.sdt_rates`、`wb.dprime`、`wb.bias`。
+
 ## 5. 图标库与许可
 
 图标是从开源图库下载的 SVG，经 `scripts/icons.py` 转成矢量数据（`scripts/wiki/plot/icons/<来源>/<名称>.json`），并在 `icons/manifest.json` 登记作者、许可与来源网址。
@@ -210,7 +220,7 @@ bio.icon(ax, "servier/heart", at=(10, 3), height=2)
 
 ### 5.2 图库的空缺（用原生元素画）
 
-现有图库中没有合格图标、应在 wikibio 中原生绘制的对象（扩展时优先补这些）：溶酶体、过氧化物酶体与叶绿体以外的细胞器整体图（中心体、全细胞骨架）、星形胶质细胞、浆细胞、精子与卵细胞、卵裂各期胚胎；胎盘、肾上腺、甲状腺、生殖器官、全身骨骼与骨组织；双子叶与单子叶茎横切（用 `wikibio.botany` 逐细胞绘制）、C4 叶片的花环结构；地衣的三种生长型（壳状、叶状、枝状）与粉芽、裂芽；球菌、螺菌、弧菌与古菌细胞、冠状病毒；行为学装置（迷宫、笼）。Western blot、GWAS、测序读段等用真实的数据图画，不用图标。
+现有图库中没有合格图标、应在 wikibio 中原生绘制的对象（扩展时优先补这些）：溶酶体、过氧化物酶体与叶绿体以外的细胞器整体图（中心体、全细胞骨架）、星形胶质细胞、浆细胞、精子与卵细胞、卵裂各期胚胎；胎盘、肾上腺、甲状腺、生殖器官、全身骨骼与骨组织；双子叶与单子叶茎横切（用 `wikibio.botany` 逐细胞绘制）、C4 叶片的花环结构；地衣的三种生长型（壳状、叶状、枝状）与粉芽、裂芽；球菌、螺菌、弧菌与古菌细胞、冠状病毒；行为学装置中迷宫与操作箱以外的笼具（迷宫、水迷宫、操作箱已由 `wikibehav` 原生绘制，§4.2）。Western blot、GWAS、测序读段等用真实的数据图画，不用图标。
 
 ## 6. 写作流程
 
