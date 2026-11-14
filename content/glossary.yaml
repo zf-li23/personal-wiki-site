@@ -13214,3 +13214,30 @@ terms:
   - { zh: 干扰回避反应, en: jamming avoidance response, aliases: [JAR] }
   - { zh: 趋声性, en: phonotaxis }
   - { zh: 温度耦合, en: temperature coupling }
+  - { zh: Nash 均衡, en: Nash equilibrium, aliases: [纳什均衡] }
+  - { zh: 资产者策略, en: bourgeois strategy, aliases: [Bourgeois strategy] }
+  - { zh: 消耗战, en: war of attrition }
+  - { zh: 专制分布, en: despotic distribution, aliases: [理想专制分布, ideal despotic distribution] }
+  - { zh: 生产者–拾取者博弈, en: producer–scrounger game, aliases: [producer-scrounger game, 生产者-拾取者博弈] }
+  - { zh: 动物个性, en: animal personality, aliases: [animal personalities, personality], scope: ["7.18"] }
+  - { zh: 行为综合征, en: behavioral syndrome, aliases: [behavioral syndromes, behavioural syndrome] }
+  - { zh: 生态陷阱, en: ecological trap, aliases: [ecological traps] }
+  - { zh: 巢域, en: home range, aliases: [home ranges] }
+  - { zh: 核域, en: core area, scope: ["7.18"] }
+  - { zh: 领域, en: territory, aliases: [territories, 领地], scope: ["7"] }
+  - { zh: 经济可防御性, en: economic defensibility, aliases: [economic defendability] }
+  - { zh: 资源占有潜力, en: resource-holding potential, aliases: [RHP, resource holding potential] }
+  - { zh: 序贯评估模型, en: sequential assessment model }
+  - { zh: 亲敌效应, en: dear enemy effect, aliases: [dear enemy phenomenon] }
+  - { zh: 出生地扩散, en: natal dispersal }
+  - { zh: 繁殖扩散, en: breeding dispersal }
+  - { zh: 恋巢性, en: philopatry, aliases: [恋家性] }
+  - { zh: 稀释效应, en: dilution effect }
+  - { zh: 自私牧群, en: selfish herd, aliases: [自私群, selfish herd effect] }
+  - { zh: 迷惑效应, en: confusion effect }
+  - { zh: 多眼效应, en: many-eyes effect, aliases: [many eyes effect] }
+  - { zh: 围攻, en: mobbing }
+  - { zh: 信息中心假说, en: information center hypothesis, aliases: [information centre hypothesis] }
+  - { zh: 集体运动, en: collective motion }
+  - { zh: 法定数反应, en: quorum response, aliases: [quorum responses] }
+  - { zh: 社会网络分析, en: social network analysis, aliases: [SNA] }
