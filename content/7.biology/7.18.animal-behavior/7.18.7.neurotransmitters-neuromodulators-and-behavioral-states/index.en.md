@@ -19,7 +19,8 @@ Herbivores in turn evolve to tolerate these defenses and sometimes to use them. 
 
 A **neurotransmitter** ([7.14.5](/7.14.5#sec-5.4.3)) is classically accepted as such when it is synthesized in the presynaptic neuron, stored in vesicles, released by stimulation in a $\ce{Ca^2+}$-dependent way, mimicked by applying it to the target, and removed by uptake or enzymatic breakdown. The messengers of the nervous system belong to a few chemical classes:
 
-| Class | Examples | Typical receptors and action ||---|---|---|
+| Class | Examples | Typical receptors and action |
+|---|---|---|
 | Amino acids | Glutamate, GABA, glycine | Mainly ionotropic; fast excitation and inhibition |
 | Acetylcholine | Acetylcholine | Nicotinic (fast) and muscarinic (slow) |
 | Monoamines | Dopamine, norepinephrine, epinephrine (catecholamines); serotonin (an indolamine); histamine; in invertebrates octopamine and tyramine | Almost all metabotropic; modulation |
