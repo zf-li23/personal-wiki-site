@@ -9513,7 +9513,7 @@ terms:
   - { zh: Fisher 失控选择, en: Fisherian runaway, aliases: ["Fisher's runaway", runaway sexual selection] }
   - { zh: 优良基因假说, en: good genes hypothesis, aliases: [good genes] }
   - { zh: 累赘原理, en: handicap principle, aliases: [障碍原理] }
-  - { zh: 感觉偏好, en: sensory bias, aliases: [perceptual bias] }
+  - { zh: 感觉偏好, en: sensory bias, aliases: [perceptual bias, sensory exploitation, 感觉利用] }
   - { zh: 精子竞争, en: sperm competition }
   - { zh: 性冲突, en: sexual conflict }
   - { zh: 性比, en: sex ratio }
@@ -13264,3 +13264,26 @@ terms:
   - { zh: 喷射毒素, en: toxungen, aliases: [toxungens] }
   - { zh: 起逃距离, en: flight initiation distance, aliases: [FID, 惊飞距离] }
   - { zh: 惊吓展示, en: deimatic display, aliases: [deimatic displays, startle display, 威吓展示] }
+  - { zh: 线索, en: cue, aliases: [cues], scope: ["7.18"] }
+  - { zh: 动物通讯, en: animal communication }
+  - { zh: 发送者, en: sender, aliases: [senders, 信号发送者], scope: ["7.18"] }
+  - { zh: 接收者, en: receiver, aliases: [receivers, 信号接收者], scope: ["7.18"] }
+  - { zh: 信息的价值, en: value of information }
+  - { zh: 声学适应假说, en: acoustic adaptation hypothesis }
+  - { zh: 活动空间, en: active space }
+  - { zh: 感觉驱动, en: sensory drive }
+  - { zh: 多模态信号, en: multimodal signal, aliases: [multimodal signals] }
+  - { zh: 仪式化, en: ritualization, aliases: [ritualisation] }
+  - { zh: 意向动作, en: intention movement, aliases: [intention movements] }
+  - { zh: 感觉陷阱, en: sensory trap, aliases: [sensory traps] }
+  - { zh: 代价信号, en: costly signal, aliases: [costly signals, costly signaling] }
+  - { zh: 廉价信号, en: cheap talk }
+  - { zh: 欺骗信号, en: deceptive signal, aliases: [deceptive signals] }
+  - { zh: 窃听, en: eavesdropping, scope: ["7.18"] }
+  - { zh: 地位信号, en: status signal, aliases: [status signals, badge of status, 地位标志] }
+  - { zh: 标志性哨声, en: signature whistle, aliases: [signature whistles] }
+  - { zh: 二重唱, en: duet, aliases: [duets, duetting], scope: ["7.18"] }
+  - { zh: 追逐阻止信号, en: pursuit-deterrent signal, aliases: [pursuit-deterrent signals] }
+  - { zh: 报警叫声, en: alarm call, aliases: [alarm calls] }
+  - { zh: 观众效应, en: audience effect, aliases: [audience effects] }
+  - { zh: 参照性信号, en: referential signal, aliases: [referential signals, functionally referential signal] }
