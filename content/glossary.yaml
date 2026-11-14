@@ -4195,7 +4195,7 @@ terms:
   - { zh: 开放系统, en: open system, aliases: [敞开体系, 敞开系统] }
   - { zh: 绝热系统, en: adiabatic system }
   - { zh: 平衡态, en: equilibrium state, aliases: [热力学平衡态, thermodynamic equilibrium] }
-  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.15", "7.16", "7.17", "7.18", "7.19"] }
+  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.15", "7.16", "7.17", "7.19"] }
   - { zh: 宏观量, en: macroscopic quantity }
   - { zh: 微观量, en: microscopic quantity }
   - { zh: 广延量, en: extensive quantity, aliases: [extensive property, 广度性质, 广度量, 容量性质] }
