@@ -523,7 +523,7 @@ terms:
   - { zh: 介数中心性, en: betweenness centrality, aliases: [介数, betweenness] }
   - { zh: 特征向量中心性, en: eigenvector centrality }
   - { zh: PageRank, en: PageRank }
-  - { zh: 社团结构, en: community structure, aliases: [社团, community], scope: ["1.4", "7.9"] }
+  - { zh: 社团结构, en: community structure, aliases: [社团], scope: ["1.4", "7.9"] }
   - { zh: 团, en: clique, aliases: [cliques], scope: ["1.4"] }
   - { zh: Girvan–Newman 算法, en: Girvan–Newman algorithm }
   - { zh: Louvain 算法, en: Louvain algorithm, aliases: [Louvain method] }
