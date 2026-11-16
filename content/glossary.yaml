@@ -13437,3 +13437,55 @@ terms:
   - { zh: 种群, en: population, aliases: [populations], scope: ["7"] }
   - { zh: 生物群落, en: ecological community, aliases: [群落, community, communities], scope: ["7"] }
   - { zh: 边缘效应, en: edge effect, scope: ["7.19"] }
+  - { zh: 生物圈, en: biosphere }
+  - { zh: 环境, en: environment, scope: ["7.19"] }
+  - { zh: 生境, en: habitat, aliases: [habitats, 栖息地] }
+  - { zh: 大气候, en: macroclimate }
+  - { zh: 小气候, en: microclimate, aliases: [microclimates, 微气候] }
+  - { zh: 实验驯化, en: acclimation }
+  - { zh: 气候驯化, en: acclimatization, aliases: [acclimatisation] }
+  - { zh: 调节者, en: regulator, aliases: [regulators], scope: ["7.19"] }
+  - { zh: 热分层, en: thermal stratification, aliases: [温度分层, 热成层] }
+  - { zh: 温跃层, en: thermocline }
+  - { zh: 光污染, en: light pollution, aliases: [artificial light at night, ALAN, 夜间人工照明] }
+  - { zh: 热性能曲线, en: thermal performance curve, aliases: [thermal performance curves, TPC] }
+  - { zh: 热安全边际, en: thermal safety margin }
+  - { zh: 温度–体型法则, en: temperature–size rule, aliases: [temperature-size rule] }
+  - { zh: 物候学, en: phenology, aliases: [物候] }
+  - { zh: 操作温度, en: operative temperature }
+  - { zh: Gloger 规则, en: "Gloger's rule", aliases: [葛洛格规律] }
+  - { zh: 顺应者, en: conformer, aliases: [conformers], scope: ["7.19"] }
+  - { zh: 种群统计学, en: demography }
+  - { zh: 同生群, en: cohort, scope: ["7.19"] }
+  - { zh: 动态生命表, en: cohort life table, aliases: [同生群生命表, dynamic life table] }
+  - { zh: 静态生命表, en: static life table, aliases: [time-specific life table] }
+  - { zh: 年龄锥体, en: age pyramid, aliases: [年龄金字塔, age pyramids] }
+  - { zh: 几何增长, en: geometric growth }
+  - { zh: 指数增长, en: exponential growth }
+  - { zh: 人口转变, en: demographic transition }
+  - { zh: θ-logistic 模型, en: θ-logistic model, aliases: [theta-logistic model] }
+  - { zh: 最后产量恒值法则, en: law of constant final yield, aliases: [constant final yield, 产量恒值法则] }
+  - { zh: Beverton–Holt 模型, en: Beverton–Holt model }
+  - { zh: 蛛网图, en: cobweb diagram, aliases: [cobweb plot] }
+  - { zh: Feigenbaum 常数, en: Feigenbaum constants, aliases: [Feigenbaum constant, 费根鲍姆常数] }
+  - { zh: 时滞密度制约, en: delayed density dependence, aliases: [延迟密度制约] }
+  - { zh: 直接密度制约, en: direct density dependence }
+  - { zh: 时滞逻辑斯谛方程, en: delayed logistic equation, aliases: [Hutchinson 方程, Hutchinson equation] }
+  - { zh: 种群调节, en: population regulation }
+  - { zh: 种群限制, en: population limitation }
+  - { zh: 种群投影矩阵, en: population projection matrix, aliases: [population projection matrices, 种群预测矩阵] }
+  - { zh: Lefkovitch 矩阵, en: Lefkovitch matrix }
+  - { zh: 生活周期图, en: life cycle graph }
+  - { zh: 阻尼比, en: damping ratio, scope: ["7.19"] }
+  - { zh: McKendrick–von Foerster 方程, en: McKendrick–von Foerster equation }
+  - { zh: 积分投影模型, en: integral projection model, scope: ["7.19"] }
+  - { zh: 种群统计随机性, en: demographic stochasticity }
+  - { zh: 环境随机性, en: environmental stochasticity }
+  - { zh: 随机增长率, en: stochastic growth rate }
+  - { zh: 灭绝漩涡, en: extinction vortex }
+  - { zh: 准灭绝阈值, en: quasi-extinction threshold }
+  - { zh: 扩散核, en: dispersal kernel, aliases: [dispersal kernels] }
+  - { zh: 拯救效应, en: rescue effect }
+  - { zh: 源–汇动态, en: source–sink dynamics, aliases: [source-sink dynamics, 源汇动态] }
+  - { zh: 集合种群容量, en: metapopulation capacity }
+  - { zh: 逃亡种, en: fugitive species, aliases: [逃命种] }
