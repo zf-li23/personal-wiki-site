@@ -523,7 +523,7 @@ terms:
   - { zh: 介数中心性, en: betweenness centrality, aliases: [介数, betweenness] }
   - { zh: 特征向量中心性, en: eigenvector centrality }
   - { zh: PageRank, en: PageRank }
-  - { zh: 社团结构, en: community structure, aliases: [社团, community], scope: ["1.4", "7"] }
+  - { zh: 社团结构, en: community structure, aliases: [社团, community], scope: ["1.4", "7.9"] }
   - { zh: 团, en: clique, aliases: [cliques], scope: ["1.4"] }
   - { zh: Girvan–Newman 算法, en: Girvan–Newman algorithm }
   - { zh: Louvain 算法, en: Louvain algorithm, aliases: [Louvain method] }
@@ -4195,7 +4195,7 @@ terms:
   - { zh: 开放系统, en: open system, aliases: [敞开体系, 敞开系统] }
   - { zh: 绝热系统, en: adiabatic system }
   - { zh: 平衡态, en: equilibrium state, aliases: [热力学平衡态, thermodynamic equilibrium] }
-  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.15", "7.16", "7.17", "7.19"] }
+  - { zh: 稳定态, en: steady state, aliases: [稳态], scope: ["5", "6", "7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10", "7.11", "7.12", "7.13", "7.15", "7.16", "7.17"] }
   - { zh: 宏观量, en: macroscopic quantity }
   - { zh: 微观量, en: microscopic quantity }
   - { zh: 广延量, en: extensive quantity, aliases: [extensive property, 广度性质, 广度量, 容量性质] }
@@ -9678,7 +9678,7 @@ terms:
   - { zh: 性状, en: character, aliases: [characters], scope: ["7"] }
   - { zh: 适应, en: adaptation, aliases: [adaptations, 适应性状] }
   - { zh: K 选择, en: K-selection, scope: ["7"] }
-  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12", "7.17", "7.18"] }
+  - { zh: 协同演化, en: coevolution, aliases: [共同演化, 协同进化], scope: ["7.10", "7.12", "7.17", "7.18", "7.19"] }
   - { zh: 串联分析, en: concatenation, aliases: [supermatrix, concatenated analysis], scope: ["7"] }
   - { zh: 保留指数, en: retention index, scope: ["7"] }
   - { zh: 分离位点, en: segregating site, aliases: [segregating sites] }
@@ -10985,7 +10985,7 @@ terms:
   - { zh: 抗病小体, en: resistosome }
   - { zh: 过敏反应, en: hypersensitive response, aliases: [超敏反应], scope: ["7.13"] }
   - { zh: 系统获得抗性, en: systemic acquired resistance, aliases: [SAR, 系统获得性抗性] }
-  - { zh: 化感作用, en: allelopathy }
+  - { zh: 化感作用, en: allelopathy, aliases: [他感作用] }
   - { zh: 渗透调节, en: osmotic adjustment }
   - { zh: 交叉适应, en: cross-tolerance, aliases: [cross adaptation] }
   - { zh: 冷害, en: chilling injury }
@@ -11163,7 +11163,7 @@ terms:
   - { zh: 实质等同, en: substantial equivalence }
 
   # biology: animal physiology (7.14); homonyms of terms in other disciplines are scoped to 7.14
-  - { zh: 稳态, en: homeostasis, aliases: [内稳态, 自稳态], scope: ["7.14", "7.18"] }
+  - { zh: 稳态, en: homeostasis, aliases: [内稳态, 自稳态], scope: ["7.14", "7.18", "7.19"] }
   - { zh: 神经元学说, en: neuron doctrine }
   - { zh: 轴突始段, en: axon initial segment, aliases: [轴突起始段] }
   - { zh: 空间总和, en: spatial summation }
@@ -12296,7 +12296,7 @@ terms:
   - { zh: 回路简并性, en: degeneracy of neural circuits, aliases: [circuit degeneracy], scope: ["7.16"] }
   - { zh: Matsuoka 振荡器, en: Matsuoka oscillator }
   - { zh: logistic 映射, en: logistic map }
-  - { zh: 混沌, en: chaos, scope: ["7.16"] }
+  - { zh: 混沌, en: chaos, scope: ["7.16", "7.19"] }
   - { zh: 储备池计算, en: reservoir computing }
   - { zh: 回声状态网络, en: echo state network, aliases: [ESN] }
   - { zh: 液体状态机, en: liquid state machine, aliases: [LSM] }
@@ -13002,7 +13002,7 @@ terms:
   - { zh: 照相机眼, en: camera eye, aliases: [camera eyes, 透镜眼] }
   - { zh: 平衡囊, en: statocyst, aliases: [statocysts] }
   - { zh: 动物区系, en: fauna, aliases: [faunas], scope: ["7"] }
-  - { zh: 廊道, en: corridor, aliases: [corridors], scope: ["7.17"] }
+  - { zh: 廊道, en: corridor, aliases: [corridors], scope: ["7.17", "7.19"] }
   - { zh: 滤道, en: filter route, aliases: [filter bridge] }
   - { zh: 机会通过, en: sweepstakes route, aliases: [sweepstakes dispersal] }
   - { zh: 中国动物地理区划, en: zoogeographic regionalization of China }
@@ -13116,7 +13116,7 @@ terms:
   - { zh: 复制者动力学, en: replicator dynamics }
   - { zh: 理想自由分布, en: ideal free distribution }
   - { zh: 边际值定理, en: marginal value theorem }
-  - { zh: 迁徙, en: migration, scope: ["7.18"] }
+  - { zh: 迁徙, en: migration, scope: ["7.18", "7.19"] }
   - { zh: 信号, en: signal, scope: ["7.18"] }
   - { zh: 环境界, en: Umwelt }
   - { zh: 视野, en: visual field, aliases: [visual fields], scope: ["7"] }
@@ -13364,3 +13364,76 @@ terms:
   - { zh: 积累文化, en: cumulative culture, aliases: [累积文化] }
   - { zh: 语言的设计特征, en: design features of language, aliases: [Hockett 设计特征] }
   - { zh: 动物福利, en: animal welfare }
+
+  # biology: ecology (7.19); homonyms of terms in other disciplines are scoped to 7.19
+  - { zh: 生态学, en: ecology }
+  - { zh: 生态因子, en: ecological factor, aliases: [ecological factors] }
+  - { zh: 耐受性定律, en: law of tolerance, aliases: ["Shelford's law of tolerance"] }
+  - { zh: 生态幅, en: ecological amplitude }
+  - { zh: 标记重捕法, en: mark–recapture, aliases: [mark-recapture, capture–recapture] }
+  - { zh: 存活曲线, en: survivorship curve, aliases: [survivorship curves] }
+  - { zh: 净生殖率, en: net reproductive rate }
+  - { zh: 关键因子分析, en: key factor analysis, aliases: [k 因子分析] }
+  - { zh: 周限增长率, en: finite rate of increase }
+  - { zh: 环境容纳量, en: carrying capacity }
+  - { zh: Allee 效应, en: Allee effect, aliases: [阿利效应] }
+  - { zh: 密度制约, en: density dependence, aliases: [density-dependent, 密度依赖] }
+  - { zh: 种内竞争, en: intraspecific competition }
+  - { zh: 自疏, en: self-thinning, aliases: [self-thinning rule] }
+  - { zh: 稳定年龄分布, en: stable age distribution, aliases: [stable stage distribution, 稳定阶段分布] }
+  - { zh: 种群统计敏感度, en: demographic sensitivity }
+  - { zh: 种群统计弹性, en: demographic elasticity }
+  - { zh: 最小可存活种群, en: minimum viable population, aliases: [MVP] }
+  - { zh: 种群生存力分析, en: population viability analysis, aliases: [PVA] }
+  - { zh: 集合种群, en: metapopulation, aliases: [metapopulations, 复合种群] }
+  - { zh: Levins 模型, en: Levins model }
+  - { zh: 灭绝债务, en: extinction debt }
+  - { zh: 竞争–拓殖权衡, en: competition–colonization trade-off, aliases: [competition-colonization trade-off] }
+  - { zh: 种间竞争, en: interspecific competition }
+  - { zh: 竞争系数, en: competition coefficient, aliases: [competition coefficients] }
+  - { zh: 零增长线, en: zero net growth isocline, aliases: [ZNGI, 零增长等值线] }
+  - { zh: 基础生态位, en: fundamental niche }
+  - { zh: 实际生态位, en: realized niche }
+  - { zh: 极限相似性, en: limiting similarity }
+  - { zh: "R* 法则", en: "R* rule" }
+  - { zh: 捕食, en: predation, scope: ["7"] }
+  - { zh: 植食作用, en: herbivory, aliases: [食草作用] }
+  - { zh: 功能反应, en: functional response, aliases: [functional responses] }
+  - { zh: 数值反应, en: numerical response }
+  - { zh: Rosenzweig–MacArthur 模型, en: Rosenzweig–MacArthur model }
+  - { zh: 富营养化悖论, en: paradox of enrichment }
+  - { zh: Nicholson–Bailey 模型, en: Nicholson–Bailey model }
+  - { zh: 偏利共生, en: commensalism }
+  - { zh: γ 多样性, en: gamma diversity }
+  - { zh: 群落交错区, en: ecotone, aliases: [生态过渡带, 生态交错带] }
+  - { zh: 关键种, en: keystone species }
+  - { zh: 干扰, en: disturbance, scope: ["7"] }
+  - { zh: 中度干扰假说, en: intermediate disturbance hypothesis }
+  - { zh: 种–面积关系, en: species–area relationship, aliases: [species-area relationship] }
+  - { zh: 演替, en: ecological succession, aliases: [succession, 群落演替], scope: ["7"] }
+  - { zh: 顶极群落, en: climax community, aliases: [climax, 顶级群落] }
+  - { zh: 集合群落, en: metacommunity }
+  - { zh: 生物多样性中性理论, en: unified neutral theory of biodiversity, aliases: [neutral theory of biodiversity] }
+  - { zh: 食物链, en: food chain, aliases: [food chains] }
+  - { zh: 食物网, en: food web, aliases: [food webs] }
+  - { zh: 营养级, en: trophic level, aliases: [trophic levels] }
+  - { zh: 恢复力, en: resilience, scope: ["7.19"] }
+  - { zh: 营养级联, en: trophic cascade, aliases: [trophic cascades] }
+  - { zh: 似然竞争, en: apparent competition }
+  - { zh: 稳态转换, en: regime shift, aliases: [regime shifts, alternative stable states, 替代稳态] }
+  - { zh: 生态系统, en: ecosystem, aliases: [ecosystems] }
+  - { zh: 生物群系, en: biome, aliases: [biomes] }
+  - { zh: 生态效率, en: ecological efficiency }
+  - { zh: 林德曼效率, en: Lindeman efficiency, aliases: ["Lindeman's efficiency", 十分之一定律] }
+  - { zh: 生态锥体, en: ecological pyramid, aliases: [生态金字塔, ecological pyramids] }
+  - { zh: 景观生态学, en: landscape ecology }
+  - { zh: 斑块, en: patch, scope: ["7.19"] }
+  - { zh: 基质, en: landscape matrix, scope: ["7.19"] }
+  - { zh: 生境破碎化, en: habitat fragmentation, aliases: [landscape fragmentation, 景观破碎化] }
+  - { zh: 生物多样性, en: biodiversity }
+  - { zh: 生态系统服务, en: ecosystem services, aliases: [ecosystem service] }
+  - { zh: 最大持续产量, en: maximum sustainable yield, aliases: [MSY] }
+  - { zh: 限制因子, en: limiting factor, aliases: [limiting factors], scope: ["7.19"] }
+  - { zh: 种群, en: population, aliases: [populations], scope: ["7"] }
+  - { zh: 生物群落, en: ecological community, aliases: [群落, community, communities], scope: ["7"] }
+  - { zh: 边缘效应, en: edge effect, scope: ["7.19"] }
