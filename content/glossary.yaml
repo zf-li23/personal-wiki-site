@@ -9353,7 +9353,7 @@ terms:
   - { zh: 正负反馈耦合振荡器, en: coupled positive–negative feedback oscillator, aliases: [oscillator motif] }
   - { zh: 频率编码, en: frequency encoding, scope: ["7"] }
   - { zh: 传递噪声, en: propagated noise, aliases: [noise propagation, 噪声传递] }
-  - { zh: 赌注分散, en: bet hedging, aliases: [两头下注, bet-hedging] }
+  - { zh: 赌注分散, en: bet hedging, aliases: [两头下注, 两面下注, bet-hedging] }
   - { zh: 动态补偿, en: dynamical compensation }
   - { zh: 突变体抗性, en: mutant resistance }
   - { zh: 模块化变化的目标, en: modularly varying goals, aliases: [MVG] }
