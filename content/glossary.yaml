@@ -13562,3 +13562,22 @@ terms:
   - { zh: 特化种, en: specialist, aliases: [specialists], scope: ["7.19"] }
   - { zh: 泛化种, en: generalist, aliases: [generalists, 广化种], scope: ["7.19"] }
   - { zh: 非致死效应, en: non-consumptive effect, aliases: [non-consumptive effects, nonconsumptive effect, 非消费效应] }
+  - { zh: 促进作用, en: facilitation, scope: ["7.19"] }
+  - { zh: 专性互利共生, en: obligate mutualism }
+  - { zh: 兼性互利共生, en: facultative mutualism, aliases: [原始合作, protocooperation] }
+  - { zh: 胁迫梯度假说, en: stress-gradient hypothesis, aliases: [stress gradient hypothesis] }
+  - { zh: 嵌套性, en: nestedness, aliases: [嵌套结构], scope: ["7"] }
+  - { zh: 扩散驱动不稳定性, en: diffusion-driven instability, aliases: [Turing instability, 图灵不稳定性] }
+  - { zh: 优势种, en: dominant species, scope: ["7.19"] }
+  - { zh: 建群种, en: constructive species, aliases: [edificator] }
+  - { zh: Chao1 估计量, en: Chao1 estimator, aliases: [Chao1 指数] }
+  - { zh: Pielou 均匀度指数, en: "Pielou's evenness index", aliases: [Pielou evenness, Pielou 均匀度] }
+  - { zh: 物种多度分布, en: species abundance distribution, aliases: [rank–abundance diagram, 等级–多度曲线] }
+  - { zh: 层片, en: synusia, aliases: [synusiae, synusium] }
+  - { zh: 种间关联, en: interspecific association }
+  - { zh: 梯度分析, en: gradient analysis, aliases: [direct gradient analysis, 直接梯度分析] }
+  - { zh: 排序, en: ordination, scope: ["7.19"] }
+  - { zh: 植被型, en: vegetation type }
+  - { zh: 群系, en: plant formation, scope: ["7.19"] }
+  - { zh: 群丛, en: plant association }
+  - { zh: 成层现象, en: stratification, aliases: [成层性], scope: ["7.19"] }
