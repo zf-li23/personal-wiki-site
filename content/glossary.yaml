@@ -7985,7 +7985,7 @@ terms:
   - { zh: 遗传负荷, en: genetic load }
   - { zh: 遗传漂变, en: genetic drift, aliases: [random genetic drift, 随机遗传漂变] }
   - { zh: Wright–Fisher 模型, en: Wright–Fisher model }
-  - { zh: 有效群体大小, en: effective population size, aliases: [N_e, 有效群体含量] }
+  - { zh: 有效群体大小, en: effective population size, aliases: [N_e, 有效群体含量, 有效种群大小] }
   - { zh: 奠基者效应, en: founder effect, aliases: [建立者效应, founder effects] }
   - { zh: 瓶颈效应, en: population bottleneck, aliases: [bottleneck effect, 群体瓶颈] }
   - { zh: 分子演化中性理论, en: neutral theory of molecular evolution, aliases: [分子进化中性理论, neutral theory, 中性学说, 中性理论, 中性演化理论] }
