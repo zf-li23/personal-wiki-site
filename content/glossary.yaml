@@ -13327,12 +13327,12 @@ terms:
   - { zh: 直接利益, en: direct benefits, aliases: [direct benefit, material benefits], scope: ["7.18"] }
   - { zh: 婚礼礼物, en: nuptial gift, aliases: [nuptial gifts, 婚飨, 求偶喂食] }
   - { zh: 逃避选择, en: chase-away selection, aliases: [chase-away sexual selection] }
-  - { zh: 婚配制度, en: mating system, aliases: [mating systems, 交配制度], scope: ["7.18"] }
-  - { zh: 单配制, en: monogamy, aliases: [一夫一妻制], scope: ["7.18"] }
+  - { zh: 婚配制度, en: mating system, aliases: [mating systems, 交配制度], scope: ["7.18", "7.19"] }
+  - { zh: 单配制, en: monogamy, aliases: [一夫一妻制], scope: ["7.18", "7.19"] }
   - { zh: 一雄多雌, en: polygyny, aliases: [一雄多雌制] }
   - { zh: 一雌多雄, en: polyandry, aliases: [一雌多雄制] }
   - { zh: 多雄多雌, en: polygynandry, aliases: [多雄多雌制] }
-  - { zh: 乱交, en: promiscuity, aliases: [混交制], scope: ["7.18"] }
+  - { zh: 乱交, en: promiscuity, aliases: [混交制], scope: ["7.18", "7.19"] }
   - { zh: 保卫雌性的一雄多雌, en: female defense polygyny, aliases: [harem polygyny] }
   - { zh: 保卫资源的一雄多雌, en: resource defense polygyny }
   - { zh: 争夺竞争式一雄多雌, en: scramble competition polygyny }
@@ -13517,3 +13517,48 @@ terms:
   - { zh: 晚熟球果性, en: serotiny, aliases: [serotinous] }
   - { zh: 防风林, en: shelterbelt, aliases: [shelterbelts, windbreak, 防护林带] }
   - { zh: 计划烧除, en: prescribed burning, aliases: [prescribed fire] }
+  - { zh: 微寄生物, en: microparasite, aliases: [microparasites] }
+  - { zh: 大寄生物, en: macroparasite, aliases: [macroparasites] }
+  - { zh: 密度依赖传播, en: density-dependent transmission }
+  - { zh: 频率依赖传播, en: frequency-dependent transmission }
+  - { zh: 宿主阈值密度, en: threshold host density }
+  - { zh: 临界社群规模, en: critical community size }
+  - { zh: 随机捕食者方程, en: random predator equation, aliases: ["Rogers' random predator equation"] }
+  - { zh: 相互干扰, en: mutual interference }
+  - { zh: 干扰常数, en: interference constant }
+  - { zh: 害虫再猖獗, en: pest resurgence }
+  - { zh: 伪干扰, en: pseudo-interference }
+  - { zh: 逃逸函数, en: escape function }
+  - { zh: 入侵速度, en: invasion speed, aliases: [spreading speed, asymptotic spreading speed, 扩展速度] }
+  - { zh: 积分差分方程, en: integrodifference equation, aliases: [integrodifference equations] }
+  - { zh: 临界斑块大小, en: critical patch size, aliases: [KISS model, KISS 模型] }
+  - { zh: 漂移悖论, en: drift paradox }
+  - { zh: 生活史对策, en: life history strategy, aliases: [life history strategies, 生态对策, bionomic strategy] }
+  - { zh: 达尔文魔鬼, en: Darwinian demon }
+  - { zh: 剩余生殖价, en: residual reproductive value }
+  - { zh: 选项集, en: options set, aliases: [options sets] }
+  - { zh: 终末投资假说, en: terminal investment hypothesis, aliases: [terminal investment] }
+  - { zh: CSR 三角形, en: CSR triangle, aliases: ["Grime's CSR triangle", CSR 对策] }
+  - { zh: 休眠, en: dormancy, scope: ["7.17", "7.18", "7.19"] }
+  - { zh: 夏眠, en: aestivation, aliases: [estivation] }
+  - { zh: 种子库, en: seed bank, aliases: [seed banks, 土壤种子库] }
+  - { zh: 复杂生活周期, en: complex life cycle, aliases: [complex life cycles] }
+  - { zh: 等位基因多样性, en: allelic diversity, aliases: [allelic richness, 等位基因丰富度] }
+  - { zh: 多态位点比例, en: proportion of polymorphic loci }
+  - { zh: 观测杂合度, en: observed heterozygosity }
+  - { zh: 50/500 法则, en: 50/500 rule }
+  - { zh: 时序法, en: temporal method }
+  - { zh: 遗传分化, en: genetic differentiation }
+  - { zh: 环境 DNA, en: environmental DNA }
+  - { zh: 宏条形码, en: metabarcoding, aliases: [DNA metabarcoding, 宏条形码技术] }
+  - { zh: 有性生殖, en: sexual reproduction }
+  - { zh: 无性生殖, en: asexual reproduction }
+  - { zh: 缓冲效应, en: buffer effect, scope: ["7.19"] }
+  - { zh: 社会等级, en: dominance hierarchy, aliases: [social hierarchy, 优势等级] }
+  - { zh: 生态位重叠, en: niche overlap }
+  - { zh: 稳定化机制, en: stabilizing mechanism, aliases: [stabilizing mechanisms] }
+  - { zh: 均等化机制, en: equalizing mechanism, aliases: [equalizing mechanisms] }
+  - { zh: 储存效应, en: storage effect }
+  - { zh: 特化种, en: specialist, aliases: [specialists], scope: ["7.19"] }
+  - { zh: 泛化种, en: generalist, aliases: [generalists, 广化种], scope: ["7.19"] }
+  - { zh: 非致死效应, en: non-consumptive effect, aliases: [non-consumptive effects, nonconsumptive effect, 非消费效应] }
