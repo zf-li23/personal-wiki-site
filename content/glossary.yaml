@@ -13581,3 +13581,18 @@ terms:
   - { zh: 群系, en: plant formation, scope: ["7.19"] }
   - { zh: 群丛, en: plant association }
   - { zh: 成层现象, en: stratification, aliases: [成层性], scope: ["7.19"] }
+  - { zh: 地带性, en: zonality }
+  - { zh: 功能摄食类群, en: functional feeding group, aliases: [functional feeding groups] }
+  - { zh: 河流连续体概念, en: river continuum concept }
+  - { zh: 热带雨林, en: tropical rain forest, scope: ["7"] }
+  - { zh: 稀树草原, en: savanna, aliases: [萨王纳, savannas], scope: ["7"] }
+  - { zh: 北方针叶林, en: boreal forest, aliases: [泰加林, taiga] }
+  - { zh: 苔原, en: tundra, aliases: [冻原], scope: ["7"] }
+  - { zh: 多年冻土, en: permafrost, aliases: [永久冻土] }
+  - { zh: 河口, en: estuary, aliases: [estuaries], scope: ["7"] }
+  - { zh: 盐沼, en: salt marsh, aliases: [salt marshes] }
+  - { zh: 红树林, en: mangrove, aliases: [mangroves] }
+  - { zh: 净生态系统生产力, en: net ecosystem production, aliases: [NEP, 净生态系统生产量, net ecosystem productivity] }
+  - { zh: 次级生产, en: secondary production, aliases: [次级生产量, secondary productivity, 次级生产力] }
+  - { zh: 分解作用, en: decomposition, aliases: [分解], scope: ["7.19"] }
+  - { zh: 食碎屑者, en: detritivore, aliases: [detritivores, 碎屑食者, 食腐屑动物] }
