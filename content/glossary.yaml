@@ -13508,7 +13508,7 @@ terms:
   - { zh: 无性系分株, en: ramet, aliases: [ramets, 分株] }
   - { zh: 样方, en: quadrat, aliases: [quadrats, 样方法] }
   - { zh: 内分布型, en: dispersion pattern, aliases: [分布型, spatial dispersion], scope: ["7.19"] }
-  - { zh: 分散指数, en: index of dispersion, aliases: [方差均值比, variance-to-mean ratio] }
+  - { zh: 分散指数, en: index of dispersion, aliases: [方差均值比, variance-to-mean ratio, 离散指数] }
   - { zh: 腐殖质, en: humus }
   - { zh: 土壤质地, en: soil texture }
   - { zh: 土壤结构, en: soil structure }
