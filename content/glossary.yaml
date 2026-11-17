@@ -13489,3 +13489,31 @@ terms:
   - { zh: 源–汇动态, en: source–sink dynamics, aliases: [source-sink dynamics, 源汇动态] }
   - { zh: 集合种群容量, en: metapopulation capacity }
   - { zh: 逃亡种, en: fugitive species, aliases: [逃命种] }
+  - { zh: 条件, en: condition, aliases: [conditions], scope: ["7.19"] }
+  - { zh: 资源, en: resource, aliases: [resources], scope: ["7.19"] }
+  - { zh: 生态化学计量学, en: ecological stoichiometry, aliases: [生态化学计量] }
+  - { zh: Redfield 比, en: Redfield ratio, aliases: [雷德菲尔德比] }
+  - { zh: 阈值元素比, en: threshold elemental ratio }
+  - { zh: 生长速率假说, en: growth rate hypothesis }
+  - { zh: 生态学代谢理论, en: metabolic theory of ecology, aliases: [代谢理论] }
+  - { zh: 能量等价法则, en: energy equivalence rule }
+  - { zh: 分子生态学, en: molecular ecology }
+  - { zh: 冷激蛋白, en: cold shock protein, aliases: [冷休克蛋白, cold shock proteins] }
+  - { zh: 热滞, en: thermal hysteresis, aliases: [热滞效应] }
+  - { zh: 低氧诱导因子, en: hypoxia-inducible factor, aliases: [HIF, 缺氧诱导因子] }
+  - { zh: 生态基因组学, en: ecological genomics }
+  - { zh: 单体生物, en: unitary organism, aliases: [unitary organisms] }
+  - { zh: 构件生物, en: modular organism, aliases: [modular organisms] }
+  - { zh: 基株, en: genet, aliases: [genets], scope: ["7.19"] }
+  - { zh: 无性系分株, en: ramet, aliases: [ramets, 分株] }
+  - { zh: 样方, en: quadrat, aliases: [quadrats, 样方法] }
+  - { zh: 内分布型, en: dispersion pattern, aliases: [分布型, spatial dispersion], scope: ["7.19"] }
+  - { zh: 分散指数, en: index of dispersion, aliases: [方差均值比, variance-to-mean ratio] }
+  - { zh: 腐殖质, en: humus }
+  - { zh: 土壤质地, en: soil texture }
+  - { zh: 土壤结构, en: soil structure }
+  - { zh: 沙生植物, en: psammophyte, aliases: [psammophytes] }
+  - { zh: 火情, en: fire regime, aliases: [火烧制度] }
+  - { zh: 晚熟球果性, en: serotiny, aliases: [serotinous] }
+  - { zh: 防风林, en: shelterbelt, aliases: [shelterbelts, windbreak, 防护林带] }
+  - { zh: 计划烧除, en: prescribed burning, aliases: [prescribed fire] }
