@@ -67,14 +67,14 @@ The genetic diversity of a population is measured from a sample of genotypes at 
 **Definition 20.3.1 (Measures of Genetic Diversity)** For a sample from one population:
 
 1. *Allelic diversity* $A$ is the mean number of alleles per locus. Because it increases with sample size, *allelic richness*, the number expected in a standardized sample (by rarefaction), is used for comparisons.
-2. The *proportion of polymorphic loci* $P$ is the fraction of loci at which the most common allele has a frequency below 0.95 (or 0.99): if 6 of 10 loci are polymorphic, $P = 0.6$.
+2. The **proportion of polymorphic loci** $P$ is the fraction of loci at which the most common allele has a frequency below 0.95 (or 0.99): if 6 of 10 loci are polymorphic, $P = 0.6$.
 3. The *observed heterozygosity* $H_{\mathrm{o}}$ of a locus is the fraction of individuals that are heterozygous; it is averaged over loci.
-4. The *expected heterozygosity* or *gene diversity* of a locus with allele frequencies $x_1, \dots, x_m$ is
+4. The **expected heterozygosity** or gene diversity of a locus with allele frequencies $x_1, \dots, x_m$ is
 
 $$
 H_{\mathrm{e}} = 1 - \sum_{i=1}^m x_i^2,
 $$
-the probability that two alleles drawn at random differ (the **heterozygosity** of [Definition 22.2.2](/7.4.22#def-22.2.2) of 7.4.22); in a sample of $n$ diploids it is multiplied by $2n/(2n - 1)$ to remove the bias. In a population in Hardy–Weinberg equilibrium it equals the expected frequency of heterozygotes.
+the probability that two alleles drawn at random differ (the heterozygosity of [Definition 22.2.2](/7.4.22#def-22.2.2) of 7.4.22); in a sample of $n$ diploids it is multiplied by $2n/(2n - 1)$ to remove the bias. In a population in Hardy–Weinberg equilibrium it equals the expected frequency of heterozygotes.
 5. The **nucleotide diversity** ([Definition 4.6.1](/7.10.4#def-4.6.1) of 7.10.4) of a set of DNA sequences is the average proportion of sites that differ between two sequences drawn at random, $\pi = \sum_{i,j}x_ix_j\pi_{ij}$, where $x_i$ is the frequency of sequence type $i$ and $\pi_{ij}$ the proportion of differing sites between types $i$ and $j$.
 
 Inbreeding (mating between relatives) does not change allele frequencies, so it leaves $H_{\mathrm{e}}$ unchanged at first, but it increases homozygosity at all loci and so reduces $H_{\mathrm{o}}$. The **inbreeding coefficient** ([7.4.7](/7.4.7)) of a population, measured from the deficit of heterozygotes,

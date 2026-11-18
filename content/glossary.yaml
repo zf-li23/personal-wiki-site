@@ -13544,7 +13544,7 @@ terms:
   - { zh: 种子库, en: seed bank, aliases: [seed banks, 土壤种子库] }
   - { zh: 复杂生活周期, en: complex life cycle, aliases: [complex life cycles] }
   - { zh: 等位基因多样性, en: allelic diversity, aliases: [allelic richness, 等位基因丰富度] }
-  - { zh: 多态位点比例, en: proportion of polymorphic loci }
+  - { zh: 多态位点比例, en: proportion of polymorphic loci, aliases: [多态基因座的比例, 多态基因座比例] }
   - { zh: 观测杂合度, en: observed heterozygosity }
   - { zh: 50/500 法则, en: 50/500 rule }
   - { zh: 时序法, en: temporal method }
@@ -13596,3 +13596,17 @@ terms:
   - { zh: 次级生产, en: secondary production, aliases: [次级生产量, secondary productivity, 次级生产力] }
   - { zh: 分解作用, en: decomposition, aliases: [分解], scope: ["7.19"] }
   - { zh: 食碎屑者, en: detritivore, aliases: [detritivores, 碎屑食者, 食腐屑动物] }
+  - { zh: 同资源种团, en: guild, aliases: [guilds, 共位群], scope: ["7.19"] }
+  - { zh: 零模型, en: null model, aliases: [null models], scope: ["7.19"] }
+  - { zh: C 分数, en: C-score, aliases: [checkerboard score] }
+  - { zh: 群落重要性, en: community importance }
+  - { zh: 生态系统工程师, en: ecosystem engineer, aliases: [ecosystem engineers] }
+  - { zh: 抽彩式竞争, en: lottery competition, aliases: [competitive lottery, 彩票竞争] }
+  - { zh: 目标效应, en: target effect }
+  - { zh: SLOSS 之争, en: SLOSS, aliases: [single large or several small, SLOSS debate] }
+  - { zh: 中域效应, en: mid-domain effect }
+  - { zh: 原生演替, en: primary succession }
+  - { zh: 次生演替, en: secondary succession }
+  - { zh: 促进模型, en: facilitation model }
+  - { zh: 耐受模型, en: tolerance model }
+  - { zh: 抑制模型, en: inhibition model }
