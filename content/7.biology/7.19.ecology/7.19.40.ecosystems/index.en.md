@@ -138,7 +138,7 @@ Ecological balance is a dynamic, not a static, state: populations fluctuate, spe
 
 The **Gaia hypothesis** ([7.10.29](/7.10.29)) of Lovelock and Margulis (1974) extends feedback regulation to the whole earth: the biota, especially microorganisms, regulate the composition of the atmosphere, the temperature and the chemistry of the oceans so as to keep them suitable for life. Earth's atmosphere is indeed far from chemical equilibrium, with 21 % oxygen coexisting with methane, and its composition is maintained by organisms; but critics objected that natural selection acts on individuals and cannot produce regulation "for the good of the planet" (Doolittle 1981; Dawkins 1982). Watson and Lovelock (1983) answered with a model in which regulation emerges without foresight or altruism.
 
-On Daisyworld, a planet lit by a star whose luminosity $L$ slowly increases, grow black daisies (albedo 0.25) and white daisies (albedo 0.75) on bare ground (albedo 0.5). The planetary temperature follows from the radiation balance $\sigma T_{\mathrm{e}}^4 = \operatorname{SL}(1 - A)$, where $A$ is the area-weighted albedo, and local temperatures differ, dark patches being warmer. Daisy cover $a_i$ grows as
+On Daisyworld, a planet lit by a star whose luminosity $L$ slowly increases, grow black daisies (albedo 0.25) and white daisies (albedo 0.75) on bare ground (albedo 0.5). The planetary temperature follows from the radiation balance $\sigma T_{\mathrm{e}}^4 = S L(1 - A)$, where $A$ is the area-weighted albedo, and local temperatures differ, dark patches being warmer. Daisy cover $a_i$ grows as
 
 $$
 \frac{\mathrm{d}a_i}{\mathrm{d}t} = a_i\left[x\,\beta(T_i) - \gamma\right], \qquad \beta(T) = 1 - 0.003265\,(295.5\ \mathrm{K} - T)^2, \tag{40.3}

@@ -1727,7 +1727,7 @@ terms:
   - { zh: 有效样本量, en: effective sample size, aliases: [ESS] }
   - { zh: Markov 链, en: Markov chain, aliases: [马尔可夫链, 马氏链] }
   - { zh: Markov 性, en: Markov property, aliases: [马氏性] }
-  - { zh: 转移矩阵, en: transition matrix, aliases: [转移概率矩阵, transition probability matrix], scope: ["3", "4.6"] }
+  - { zh: 转移矩阵, en: transition matrix, aliases: [转移概率矩阵, transition probability matrix], scope: ["3", "4.6", "7.19"] }
   - { zh: 平稳分布, en: stationary distribution }
   - { zh: 细致平衡条件, en: detailed balance condition, aliases: [细致平衡, detailed balance] }
   - { zh: 可逆 Markov 链, en: reversible Markov chain }
