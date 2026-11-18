@@ -13633,3 +13633,24 @@ terms:
   - { zh: 生态平衡, en: ecological balance }
   - { zh: 生态足迹, en: ecological footprint }
   - { zh: 抵抗力, en: resistance, scope: ["7.19"] }
+  - { zh: 分室模型, en: compartment model, aliases: [box model, 箱式模型, 库–通量模型] }
+  - { zh: 驻留时间, en: residence time, aliases: [滞留时间, mean residence time], scope: ["7.19"] }
+  - { zh: Revelle 因子, en: Revelle factor, aliases: [缓冲因子] }
+  - { zh: 海洋酸化, en: ocean acidification }
+  - { zh: 碳汇, en: carbon sink, aliases: [carbon sinks] }
+  - { zh: 碳源, en: carbon source }
+  - { zh: 活性氮, en: reactive nitrogen }
+  - { zh: 酸雨, en: acid rain, aliases: [acid precipitation, 酸沉降, acid deposition] }
+  - { zh: 温室效应, en: greenhouse effect }
+  - { zh: 温室气体, en: greenhouse gas, aliases: [greenhouse gases] }
+  - { zh: 平衡气候敏感度, en: equilibrium climate sensitivity, aliases: [ECS, 气候敏感度] }
+  - { zh: 气候速度, en: velocity of climate change, aliases: [climate velocity] }
+  - { zh: 行星边界, en: planetary boundaries, aliases: [planetary boundary] }
+  - { zh: 景观, en: landscape, aliases: [landscapes], scope: ["7.19"] }
+  - { zh: 景观连通性, en: landscape connectivity, aliases: [景观连接度] }
+  - { zh: 粒度, en: grain, scope: ["7.19"] }
+  - { zh: 空间自相关, en: spatial autocorrelation }
+  - { zh: 半变异函数, en: semivariogram, aliases: [variogram, 变异函数] }
+  - { zh: 生物碳泵, en: biological carbon pump, aliases: [biological pump, 生物泵] }
+  - { zh: 周转时间, en: turnover time, scope: ["7.19"] }
+  - { zh: 幅度, en: extent, scope: ["7.19"] }
