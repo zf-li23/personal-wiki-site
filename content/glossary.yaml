@@ -13654,3 +13654,24 @@ terms:
   - { zh: 生物碳泵, en: biological carbon pump, aliases: [biological pump, 生物泵] }
   - { zh: 周转时间, en: turnover time, scope: ["7.19"] }
   - { zh: 幅度, en: extent, scope: ["7.19"] }
+  - { zh: 剩余产量, en: surplus production, aliases: [剩余产量模型] }
+  - { zh: 固定配额收获, en: fixed-quota harvesting, aliases: [配额限制, fixed quota harvesting] }
+  - { zh: 固定努力收获, en: fixed-effort harvesting, aliases: [努力限制, fixed effort harvesting] }
+  - { zh: Schaefer 模型, en: Schaefer model, aliases: [舍费尔模型] }
+  - { zh: 补偿不足, en: depensation }
+  - { zh: 超稳定性, en: hyperstability }
+  - { zh: 最大经济产量, en: maximum economic yield, aliases: [MEY, 最适经济产量, economically optimum yield] }
+  - { zh: 开放获取均衡, en: open-access equilibrium, aliases: [生物经济均衡, bionomic equilibrium] }
+  - { zh: 公地悲剧, en: tragedy of the commons }
+  - { zh: 预防性方法, en: precautionary approach, aliases: [预防原则, precautionary principle] }
+  - { zh: 潜在害虫, en: potential pest, aliases: [potential pests] }
+  - { zh: 生物浓缩, en: bioconcentration }
+  - { zh: 生物积累, en: bioaccumulation, aliases: [生物累积] }
+  - { zh: 生物放大, en: biomagnification, aliases: [biological magnification, 生物放大作用] }
+  - { zh: 农业生态学, en: agroecology, aliases: [agricultural ecology] }
+  - { zh: 生态农业, en: ecological agriculture }
+  - { zh: 土地当量比, en: land equivalent ratio, aliases: [LER] }
+  - { zh: 污染, en: pollution, scope: ["7.19"] }
+  - { zh: 微塑料, en: microplastics, aliases: [microplastic] }
+  - { zh: 生态工程, en: ecological engineering }
+  - { zh: 可持续发展, en: sustainable development }
