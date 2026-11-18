@@ -13610,3 +13610,26 @@ terms:
   - { zh: 促进模型, en: facilitation model }
   - { zh: 耐受模型, en: tolerance model }
   - { zh: 抑制模型, en: inhibition model }
+  - { zh: 群落构建, en: community assembly }
+  - { zh: 物种库, en: species pool, aliases: [区域物种库, regional species pool], scope: ["7.19"] }
+  - { zh: 优先效应, en: priority effect, aliases: [priority effects] }
+  - { zh: 生态漂变, en: ecological drift }
+  - { zh: 基本生物多样性数, en: fundamental biodiversity number }
+  - { zh: Ewens 抽样公式, en: Ewens sampling formula }
+  - { zh: 对数级数分布, en: "Fisher's log-series", aliases: [log-series distribution, 费希尔对数级数] }
+  - { zh: Janzen–Connell 假说, en: Janzen–Connell hypothesis, aliases: [Janzen-Connell hypothesis, 詹曾–康奈尔假说] }
+  - { zh: 连接度, en: connectance }
+  - { zh: 圆律, en: circular law }
+  - { zh: 椭圆律, en: elliptic law }
+  - { zh: 组合效应, en: portfolio effect }
+  - { zh: 保险假说, en: insurance hypothesis }
+  - { zh: 下行控制, en: top-down control }
+  - { zh: 上行控制, en: bottom-up control }
+  - { zh: 集团内捕食, en: intraguild predation, aliases: [同资源种团内捕食] }
+  - { zh: 临界减速, en: critical slowing down }
+  - { zh: 生产者, en: producer, aliases: [producers], scope: ["7.19"] }
+  - { zh: 消费者, en: consumer, aliases: [consumers], scope: ["7.19"] }
+  - { zh: 分解者, en: decomposer, aliases: [decomposers], scope: ["7.19"] }
+  - { zh: 生态平衡, en: ecological balance }
+  - { zh: 生态足迹, en: ecological footprint }
+  - { zh: 抵抗力, en: resistance, scope: ["7.19"] }
