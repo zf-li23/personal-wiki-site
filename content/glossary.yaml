@@ -4469,7 +4469,7 @@ terms:
   - { zh: 电子组态, en: electron configuration, aliases: [电子构型] }
   - { zh: 能量最低原理, en: aufbau principle, aliases: [构造原理] }
   - { zh: Hund 规则, en: "Hund's rule", aliases: [洪特规则, "Hund's rules"] }
-  - { zh: 互补原理, en: complementarity principle, aliases: [complementarity] }
+  - { zh: 互补原理, en: complementarity principle, aliases: [complementarity], scope: ["5"] }
   - { zh: Fresnel 衍射, en: Fresnel diffraction, aliases: [菲涅耳衍射, near-field diffraction] }
   - { zh: Fraunhofer 衍射, en: Fraunhofer diffraction, aliases: [夫琅禾费衍射, far-field diffraction] }
   - { zh: Poisson 亮斑, en: Poisson spot, aliases: [泊松亮斑, Arago spot] }
@@ -12197,8 +12197,8 @@ terms:
   - { zh: 预测编码, en: predictive coding }
   - { zh: 对比学习, en: contrastive learning }
   - { zh: 联合嵌入预测架构, en: joint-embedding predictive architecture, aliases: [JEPA] }
-  - { zh: 结构连接, en: structural connectivity }
-  - { zh: 功能连接, en: functional connectivity }
+  - { zh: 结构连接, en: structural connectivity, scope: ["7.16"] }
+  - { zh: 功能连接, en: functional connectivity, scope: ["7.16"] }
   - { zh: 默认模式网络, en: default mode network, aliases: [DMN, 默认网络] }
   - { zh: 内禀时间尺度, en: intrinsic time scale, aliases: [intrinsic timescale] }
   - { zh: 神经雪崩, en: neuronal avalanche, aliases: [neuronal avalanches] }
@@ -13675,3 +13675,22 @@ terms:
   - { zh: 微塑料, en: microplastics, aliases: [microplastic] }
   - { zh: 生态工程, en: ecological engineering }
   - { zh: 可持续发展, en: sustainable development }
+  - { zh: 渗流阈值, en: percolation threshold }
+  - { zh: 物种分布模型, en: species distribution model, aliases: [species distribution models, ecological niche model] }
+  - { zh: 景观遗传学, en: landscape genetics }
+  - { zh: 保护生物学, en: conservation biology }
+  - { zh: 生物多样性与生态系统功能, en: biodiversity–ecosystem functioning, aliases: [biodiversity-ecosystem functioning] }
+  - { zh: 生物入侵, en: biological invasion, aliases: [biological invasions, 生态入侵] }
+  - { zh: 入侵种, en: invasive species, aliases: [invasive alien species, 外来入侵物种, 入侵物种] }
+  - { zh: 伞护种, en: umbrella species }
+  - { zh: 旗舰种, en: flagship species }
+  - { zh: 选择效应, en: selection effect, aliases: [sampling effect, 抽样效应], scope: ["7.19"] }
+  - { zh: 超产效应, en: transgressive overyielding }
+  - { zh: 生态经济学, en: ecological economics }
+  - { zh: 环境伦理学, en: environmental ethics }
+  - { zh: 选择价值, en: option value }
+  - { zh: 存在价值, en: existence value }
+  - { zh: 繁殖体压力, en: propagule pressure }
+  - { zh: 天敌逃逸假说, en: enemy release hypothesis }
+  - { zh: 十数定律, en: tens rule }
+  - { zh: 系统保护规划, en: systematic conservation planning }
