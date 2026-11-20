@@ -27,14 +27,14 @@ The epidermis of the skin consists of multiple layers of keratinocytes, the oute
 
 **Definition 5.1.1 (Antimicrobial Peptide)** Small cationic polypeptides produced by epithelial cells and phagocytes that can directly kill bacteria, fungi, or enveloped viruses are called **antimicrobial peptides** (also host defense peptides); a large class of them that are rich in cysteine and stabilized by three intrachain disulfide bonds are called **defensins**.
 
-Antimicrobial peptides generally consist of 12–50 amino acids, carry a net positive charge, and are amphipathic. The outer layer of microbial membranes is rich in negatively charged phospholipids (phosphatidylglycerol and cardiolipin of bacteria, lipopolysaccharide of gram-negative bacteria, teichoic acid of gram-positive bacteria), whereas the outer layer of animal cell membranes is mainly electrically neutral phosphatidylcholine and sphingomyelin and contains cholesterol. Cationic antimicrobial peptides therefore bind preferentially to microbial membranes and, after insertion, form pores or disintegrate the membrane like detergents.
+Antimicrobial peptides generally consist of 12–50 amino acids, carry a net positive charge, and are amphipathic. The outer layer of microbial membranes is rich in negatively charged phospholipids (phosphatidylglycerol and cardiolipin of bacteria, lipopolysaccharide of Gram-negative bacteria, teichoic acid of Gram-positive bacteria), whereas the outer layer of animal cell membranes is mainly electrically neutral phosphatidylcholine and sphingomyelin and contains cholesterol. Cationic antimicrobial peptides therefore bind preferentially to microbial membranes and, after insertion, form pores or disintegrate the membrane like detergents.
 
 | Class | Representatives | Source | Notes |
 |---|---|---|---|
 | α-defensins | HNP1–4; HD5, HD6 | Azurophilic granules of neutrophils; Paneth cells at the base of small intestinal crypts | HD6 does not kill directly but polymerizes into "nanonets" that entangle bacteria |
 | β-defensins | hBD1–4 | Epithelium of skin, airways, and urogenital tract | hBD2 and hBD3 are induced by IL-1, IL-17, IL-22, and bacterial products |
 | Cathelicidin | LL-37 | Neutrophils, epithelium | The only human cathelicidin; also neutralizes lipopolysaccharide and is chemotactic for leukocytes |
-| C-type lectin | RegIIIγ (mouse) / REG3A (human) | Intestinal epithelium, Paneth cells | Binds peptidoglycan and keeps gram-positive bacteria at a distance from the epithelium |
+| C-type lectin | RegIIIγ (mouse) / REG3A (human) | Intestinal epithelium, Paneth cells | Binds peptidoglycan and keeps Gram-positive bacteria at a distance from the epithelium |
 | Others | Histatins (saliva), dermcidin (sweat) | | |
 
 The production of antimicrobial peptides is regulated by type 3 immunity: IL-17 and IL-22 secreted by Th17 cells and ILC3s induce epithelial expression of β-defensins and REG3 ([7.15.1](/7.15.1)). Because they attack a basic physical property of membranes, it is difficult for bacteria to acquire high-level resistance by point mutations, which makes antimicrobial peptides a subject of research for new antibacterial drugs.
@@ -179,7 +179,7 @@ Puncturing the cell membrane is a recurrent means of killing in the immune syste
 | Pore | Direction of assembly | Formed by | Consequence |
 |---|---|---|---|
 | Perforin pore | Inserted into the target cell membrane from outside to inside | NK cells, CTLs | Granzymes enter, target cell undergoes apoptosis |
-| Membrane attack complex (C5b–C9) | From outside to inside | Complement ([7.15.10](/7.15.10)) | Lysis of cells (especially gram-negative bacteria) |
+| Membrane attack complex (C5b–C9) | From outside to inside | Complement ([7.15.10](/7.15.10)) | Lysis of cells (especially Gram-negative bacteria) |
 | Gasdermin D pore | From inside to outside | Caspase-1 activated by inflammasomes cleaves gasdermin D | Release of IL-1β and IL-18, pyroptosis ([7.15.6](/7.15.6)) |
 
 ### 5.5.3. A Threshold Model of the Killing Decision

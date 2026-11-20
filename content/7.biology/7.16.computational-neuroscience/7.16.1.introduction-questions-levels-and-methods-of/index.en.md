@@ -121,6 +121,6 @@ The course follows the flow of information and the hierarchy of scales. It begin
 
    **Answer** (i) The drug spreads to neighboring regions: control injections nearby, and a dose–response relation centered on X. (ii) Region X is needed for performance (motivation, motor output) rather than for the memory itself: test an unrelated behavior that uses the same output, or silence X only during learning versus only during recall with temporally precise tools such as optogenetics.
 
-4. Place the following on Marr's levels: (a) "the retina whitens natural images to reduce redundancy"; (b) "a ring network maintains a bump of activity that moves when angular velocity input is applied"; (c) "the bump is held by NMDA-receptor-mediated recurrent excitation in the fly ellipsoid body".
+4. Place the following on Marr's levels: (a) "the retina whitens natural images to reduce redundancy"; (b) "a ring network maintains a bump of activity that moves when angular velocity input is applied"; (c) "the bump is held by recurrent excitation between E-PG and P-EN neurons and by broad inhibition from Δ7 neurons in the fly central complex".
 
    **Answer** (a) Computational: it states a goal and its justification. (b) Algorithmic: it specifies a representation (bump position) and a procedure (integration of velocity). (c) Implementation: it names the physical substrate.

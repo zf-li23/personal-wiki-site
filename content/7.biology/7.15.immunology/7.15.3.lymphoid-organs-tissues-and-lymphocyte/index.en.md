@@ -1,6 +1,6 @@
 ---
 title: Lymphoid Organs, Tissues and Lymphocyte Recirculation
-source_hash: 335cf8d0d6a9
+source_hash: 596c783fcbdf
 ---
 
 The previous chapter introduced who the immune cells are; this chapter describes where they develop and where they meet. Adaptive immunity faces a spatial problem: naive lymphocytes recognizing a given antigen number only $10^{-6}$–$10^{-5}$ of the repertoire ([7.15.1](/7.15.1)), while antigen may enter at any point in the body. The solution consists of two arrangements: first, concentrating antigen in the fixed compartments of a few "meeting places", the lymph nodes, spleen, and mucosal lymphoid tissues; second, letting lymphocytes circulate continuously among blood, lymph, and these meeting places, so that they "patrol" each of them in turn. This chapter first treats the central organs in which immune cells develop (§3.1–3.3), then the peripheral organs in which responses take place (§3.4–3.6), and finally lymphocyte recirculation, using a random-walk model to estimate how long it takes to "find the right cell" in a lymph node (§3.7). The physiology of lymphatic vessels and lymph is in [7.14.15](/7.14.15); mucosal immunity is developed further in [7.15.23](/7.15.23) and the spatiotemporal course of responses within organs in [7.15.22](/7.15.22); the compartments described here are also the basic coordinates for analyzing tissue sections in spatial omics ([7.9.6](/7.9.6)).
@@ -67,7 +67,7 @@ The compartments of the lymph node are not delineated by septa but are maintaine
 
 **Definition 3.4.2 (High Endothelial Venule)** **High endothelial venules** (HEVs) are postcapillary venules in the lymph node paracortex (and in tissues such as Peyer's patches and tonsils) whose endothelial cells are cuboidal and express specialized adhesion molecules and chemokines; they are the main gateway by which lymphocytes in the blood enter peripheral lymphoid tissue.
 
-The endothelium of ordinary venules is flat; that of HEVs is tall and thick, expresses on its surface the sulfated glycans recognized by L-selectin (peripheral node addressin, PNAd), and displays CCL21. Naive lymphocytes expressing L-selectin and CCR7 roll here, are activated, adhere firmly, and exit the vessel (the **leukocyte adhesion cascade** of [7.15.4](/7.15.4)). A lymph node can admit lymphocytes through HEVs at a rate of the order of $10^{6}$ per hour, of which only very few will meet their own antigen.
+The endothelium of ordinary venules is flat; that of HEVs is tall and thick, expresses on its surface the sulfated glycans recognized by L-selectin (peripheral node addressin, PNAd), and displays CCL21. Naive lymphocytes expressing L-selectin and CCR7 roll here, are activated, adhere firmly, and exit the vessel (the **leukocyte adhesion cascade** of [7.15.4](/7.15.4)). A single lymph node of a large mammal can admit more than ten thousand lymphocytes per second through its HEVs (of the order of $10^{7}$ per hour; the much smaller lymph nodes of a mouse admit far fewer), of which only very few will meet their own antigen.
 
 **Definition 3.4.3 (Germinal Center)** The region of a secondary lymphoid follicle in which antigen-stimulated B cells, aided by follicular helper T cells, proliferate rapidly, undergo somatic hypermutation, and are subjected to affinity selection is called the **germinal center**.
 

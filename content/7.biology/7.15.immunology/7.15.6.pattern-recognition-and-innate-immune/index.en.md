@@ -13,7 +13,7 @@ In 1989 Janeway proposed that because the receptors of adaptive immunity are gen
 
 | PAMP | Microbe | Main receptors |
 |---|---|---|
-| **Lipopolysaccharide** (lipid A portion) | Outer membrane of gram-negative bacteria | TLR4–MD-2; cytosolic caspase-4/5/11 |
+| **Lipopolysaccharide** (lipid A portion) | Outer membrane of Gram-negative bacteria | TLR4–MD-2; cytosolic caspase-4/5/11 |
 | Lipoproteins, lipopeptides | Bacteria, mycoplasma | TLR2–TLR1 (triacylated), TLR2–TLR6 (diacylated) |
 | **Peptidoglycan** fragments | Bacterial cell wall | NOD1 (fragments containing meso-DAP), NOD2 (muramyl dipeptide) |
 | Lipoteichoic acid | Gram-positive bacteria | TLR2 |
@@ -228,9 +228,9 @@ Pathogens in turn have evolved countermeasures against each of these receptors a
 
    **Answer** Nucleic acids are molecules shared by pathogens and the host, and distinguishing them depends mainly on location: host nucleic acids are in the nucleus, mitochondria, and cytosol and do not normally enter endosomes; the nucleic acids of an engulfed pathogen are exposed only after degradation in the endosome, so endosomal TLRs "see" only foreign nucleic acid. If TLR9 were at the plasma membrane, it would contact self DNA released by dead cells into the extracellular space, the distinction by location would be lost, and the result would be a sustained response to self DNA. Indeed, mice engineered to have TLR9 at the cell surface respond to self DNA and develop fatal inflammation.
 
-2. C3H/HeJ mice barely respond to injected lipopolysaccharide yet are very susceptible to gram-negative bacterial infection. Explain both points using what you have learned in this chapter.
+2. C3H/HeJ mice barely respond to injected lipopolysaccharide yet are very susceptible to Gram-negative bacterial infection. Explain both points using what you have learned in this chapter.
 
-   **Answer** The *Tlr4* of C3H/HeJ mice carries a point mutation, so TLR4 cannot transmit signals, and injection of purified lipopolysaccharide therefore fails to cause the release of inflammatory cytokines and endotoxic shock; for the same reason, in the early phase of gram-negative infection they cannot promptly produce TNF, IL-1, IL-6, and chemokines, neutrophil recruitment and macrophage activation are delayed, and the bacteria multiply. This example shows that the same recognition by TLR4 is both necessary for defense and responsible for the toxicity of lipopolysaccharide (septic shock).
+   **Answer** The *Tlr4* of C3H/HeJ mice carries a point mutation, so TLR4 cannot transmit signals, and injection of purified lipopolysaccharide therefore fails to cause the release of inflammatory cytokines and endotoxic shock; for the same reason, in the early phase of Gram-negative infection they cannot promptly produce TNF, IL-1, IL-6, and chemokines, neutrophil recruitment and macrophage activation are delayed, and the bacteria multiply. This example shows that the same recognition by TLR4 is both necessary for defense and responsible for the toxicity of lipopolysaccharide (septic shock).
 
 3. A patient has recurrent fever, urticaria-like rash, and joint pain, and genetic testing finds a gain-of-function mutation in NLRP3. Why does blocking IL-1β effectively control the symptoms while blocking TNF has limited effect?
 

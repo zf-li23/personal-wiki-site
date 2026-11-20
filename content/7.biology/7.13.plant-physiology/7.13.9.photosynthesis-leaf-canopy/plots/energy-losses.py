@@ -2,7 +2,7 @@
 biomass, after Zhu, Long and Ort (2008), for 30 C and 380 umol mol-1 CO2.
 
 Starting from 100 % of the solar energy intercepted by a leaf canopy, successive losses: radiation outside
-400-700 nm (51.3 %), reflection and transmission (4.9 %), photochemical inefficiency (thermal relaxation of
+400-740 nm (51.3 %), reflection and transmission (4.9 %), photochemical inefficiency (thermal relaxation of
 photons above the reaction-centre energy, 6.6 %), carbohydrate synthesis (24.6 % in C3, 28.8 % in C4, the
 latter including the C4 cycle), photorespiration (6.1 % in C3, none in C4) and respiration (1.9 % and 2.5 %).
 The remainder is the maximum conversion efficiency: 4.6 % for C3 and 6.0 % for C4. Bars show the energy left

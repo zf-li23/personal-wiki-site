@@ -160,7 +160,7 @@ Kranz anatomy is not required for C4 photosynthesis. The Central Asian desert ch
 
 **Definition 8.4.1 (CAM Plant)** A plant whose stomata are open at night, in which PEPC fixes $\ce{CO2}$ and stores it as malate in the vacuole, and whose stomata are closed by day while malate is decarboxylated and the $\ce{CO2}$ refixed by the Calvin cycle in the same cell, that is, a plant carrying out **crassulacean acid metabolism**, is called a **CAM plant**.
 
-CAM plants make up about 6% of vascular plant species and are concentrated in the Crassulaceae, Cactaceae, Agavaceae, Bromeliaceae and Orchidaceae, including many epiphytes and desert succulents, and crops such as pineapple, agave and prickly pear; the aquatic quillwort *Isoetes* takes up $\ce{CO2}$ from water at night and is also a CAM plant. The name of crassulacean acid metabolism comes from the Crassulaceae: their leaves taste sour in the morning and not sour in the evening.
+CAM plants make up about 6% of vascular plant species and are concentrated in the Crassulaceae, Cactaceae, Agavaceae, Bromeliaceae and Orchidaceae, including many epiphytes and desert succulents, and crops such as pineapple, agave and prickly pear; the aquatic quillwort *Isoëtes* takes up $\ce{CO2}$ from water at night and is also a CAM plant. The name of crassulacean acid metabolism comes from the Crassulaceae: their leaves taste sour in the morning and not sour in the evening.
 
 According to the daily course of stomata and enzyme activity, CAM is divided into four phases (Osmond, 1978; see the figure below):
 

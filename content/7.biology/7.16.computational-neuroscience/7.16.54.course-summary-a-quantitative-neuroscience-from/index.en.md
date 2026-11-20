@@ -183,7 +183,7 @@ The regulatory chapters describe the body's controllers ([7.16.34](/7.16.34)–[
 
 | System | Model | Key result | Where |
 |---|---|---|---|
-| Feeding and drinking | Need minus predicted gain; proportional, integral and feedforward control | AgRP activity drops within seconds of seeing food; integral control has zero steady-state error | Formula 34.3.1, Definition 34.4.1 |
+| Feeding and drinking | Need minus predicted gain; proportional, integral and feedforward control | AgRP activity drops within seconds of seeing food; integral control has zero steady-state error | Formula 34.3.1, Definition 34.4.1, Example 34.5.1 |
 | Homeostatic reinforcement | Reward as drive reduction | Maximizing discounted reward minimizes future drives | Definition 34.5.1, Proposition 34.5.1 |
 | Circadian clock | Transcription–translation feedback loop; Goodwin model, Eq. (35.1) | Oscillation needs steep repression ($h > 8$ for three stages); entrainment on a decreasing part of the PRC | Definition 35.1.1, Proposition 35.2.1 |
 | Sleep | Flip-flop switch with two-process thresholds | The thresholds are the ends of a hysteresis loop | Definition 35.4.1, Formula 35.5.1 |

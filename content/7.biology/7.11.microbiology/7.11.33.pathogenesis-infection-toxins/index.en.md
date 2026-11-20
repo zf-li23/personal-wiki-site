@@ -148,7 +148,7 @@ The examples below are chosen because each illustrates a different enzymatic che
 
 ## 33.8. Superantigens
 
-**Definition 33.8.1 (Superantigen)** A **superantigen** is a protein that binds outside the antigen-binding groove, crosslinking MHC class II on an antigen-presenting cell to a particular variable β region of the T-cell receptor. Because specificity for a peptide is bypassed, every T cell carrying that Vβ segment is activated — of the order of 5–30 % of the T-cell population, against the 0.01–0.1 % activated by a conventional antigen.
+**Definition 33.8.1 (Superantigen)** A **superantigen** is a protein that binds outside the antigen-binding groove, crosslinking MHC class II on an antigen-presenting cell to a particular variable β region of the T-cell receptor. Because specificity for a peptide is bypassed, every T cell carrying that Vβ segment is activated — of the order of 2–20 % of the T-cell population, against about 0.001–0.01 % activated by a conventional antigen.
 
 The consequence is not immunity but a massive, synchronous release of inflammatory cytokines — a **cytokine storm** — producing fever, capillary leak, hypotension, shock and multi-organ failure. Toxic shock syndrome toxin 1 and several staphylococcal enterotoxins, and the streptococcal pyrogenic exotoxins, act this way; the staphylococcal enterotoxins additionally cause vomiting when ingested, and because they are preformed in the food and heat-stable, the illness begins within a few hours and cooking does not prevent it.
 
@@ -211,7 +211,7 @@ Why virulence persists at all is an evolutionary question, treated with the tran
 
 4. Both a superantigen and endotoxin can cause shock with fever and hypotension. Compare the two routes, and say why neither requires living bacteria at the site of damage.
 
-   **Answer** A superantigen crosslinks MHC II to TCR Vβ, activating up to a third of T cells regardless of specificity and provoking a cytokine storm. Endotoxin acts on innate cells: lipid A binds TLR4–MD-2 (and cytosolic caspases), inducing TNF-α, IL-1β and IL-6. Both converge on the same mediators, hence the similar picture. Neither needs a living organism: the superantigen is a preformed, secreted protein that can act after being absorbed from food or from a localized focus, and endotoxin is a heat-stable cell-wall component that acts after the cells have been killed — which is why antibiotic therapy of a heavy Gram-negative infection can transiently worsen the shock.
+   **Answer** A superantigen crosslinks MHC II to TCR Vβ, activating up to a fifth of all T cells regardless of specificity and provoking a cytokine storm. Endotoxin acts on innate cells: lipid A binds TLR4–MD-2 (and cytosolic caspases), inducing TNF-α, IL-1β and IL-6. Both converge on the same mediators, hence the similar picture. Neither needs a living organism: the superantigen is a preformed, secreted protein that can act after being absorbed from food or from a localized focus, and endotoxin is a heat-stable cell-wall component that acts after the cells have been killed — which is why antibiotic therapy of a heavy Gram-negative infection can transiently worsen the shock.
 
 5. A clinical isolate of *E. coli* produces Shiga toxin. What do you predict about the location of the toxin gene, and what practical consequence does the prediction have for the hospital laboratory and for treatment?
 

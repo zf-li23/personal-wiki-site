@@ -48,7 +48,7 @@ where $t_{\mathrm{eff}}$ is a short delay of a few milliseconds and $A$ is the a
 
 **Proof** The activated PDE grows linearly, $E^*(t) = \nu\Phi t$. cGMP obeys $\mathrm{d}G/\mathrm{d}t = -\beta_{\mathrm{sub}}E^*(t)\,G$ when synthesis is neglected on this short time scale, so $\ln(G/G_{\mathrm{dark}}) = -\frac12\beta_{\mathrm{sub}}\nu\Phi t^2$. The current is proportional to $G^{n_{\mathrm{H}}}$ with $n_{\mathrm{H}} \approx 3$, so $J/J_{\mathrm{dark}} = \exp(-\frac12 n_{\mathrm{H}}\beta_{\mathrm{sub}}\nu\Phi t^2)$, which is Eq. (17.2) with $A = n_{\mathrm{H}}\beta_{\mathrm{sub}}\nu$ and $F = 1 - J/J_{\mathrm{dark}}$. $\square$
 
-The amplification constant is a product of the three gains of the table; it is several times larger in mammalian rods than in amphibian rods, mainly because of the higher temperature, and much smaller in cones.
+The amplification constant is a product of the three gains of the table; it is more than an order of magnitude larger in mammalian rods than in amphibian rods, both because of the higher temperature, which speeds the enzymatic steps, and because the much thinner mammalian outer segment has a far smaller cytoplasmic volume, so that each activated PDE lowers the cGMP concentration faster; it is much smaller in cones.
 
 ### 17.2.3. Saturation and Recovery
 

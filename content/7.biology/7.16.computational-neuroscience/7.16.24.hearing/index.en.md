@@ -124,7 +124,7 @@ The neurons of the timing pathway share a set of adaptations. Their large synaps
 
 ### 24.5.1. The Barn Owl
 
-The barn owl can strike prey in complete darkness guided by sound alone, with an accuracy of $1$–$2^\circ$ in both azimuth and elevation (Konishi, 1973). Its two ears are asymmetric, the left opening higher than the right, so that the **interaural level difference** (ILD) at high frequencies varies with elevation, while the **interaural time difference** (ITD) varies with azimuth ([7.14.42](/7.14.42#def-42.4.1)). The two cues are processed in parallel pathways (Konishi, 2003):
+The barn owl can strike prey in complete darkness guided by sound alone, with an accuracy of $1$–$2^\circ$ in both azimuth and elevation (Konishi, 1973). Its two ears are asymmetric: the openings sit at different heights and the facial ruff directs the right ear upward and the left ear downward (Knudsen and Konishi, 1979), so that the **interaural level difference** (ILD) at high frequencies varies with elevation, while the **interaural time difference** (ITD) varies with azimuth ([7.14.42](/7.14.42#def-42.4.1)). The two cues are processed in parallel pathways (Konishi, 2003):
 
 1. ITD: the cochlear nucleus magnocellularis preserves the phase of the input; its axons from the two sides enter the nucleus laminaris from opposite directions and act as delay lines, and laminaris neurons are **coincidence detectors** whose best ITD depends on their position (Carr and Konishi, 1990).
 2. ILD: the cochlear nucleus angularis encodes intensity, and the dorsal nucleus of the posterior lateral lemniscus compares the two sides.
