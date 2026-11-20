@@ -66,10 +66,10 @@ ax.axhline(0, color=P.muted(), lw=0.5)
 ax.set_xlim(0, 35)
 ax.set_ylim(-1.05, 1.1)
 ax.set_xlabel("Distance from the stapes / mm  (base to apex)")
-ax.set_ylabel("Basilar-membrane velocity (normalised)")
+ax.set_ylabel("Basilar-membrane velocity (normalized)")
 ax.legend(frameon=False, fontsize=8, loc="lower left", ncol=5)
 ax.text(23, -0.45, "thin lines: 1 kHz wave\nat two instants", fontsize=8, color=P.muted())
-ax.set_title("A  Travelling-wave envelopes peak at frequency-specific places", loc="left",
+ax.set_title("A  Traveling-wave envelopes peak at frequency-specific places", loc="left",
              fontsize=10)
 
 bx.plot(x * 1e3, fG / 1000, color=P.ink(), lw=2, label="Greenwood function")

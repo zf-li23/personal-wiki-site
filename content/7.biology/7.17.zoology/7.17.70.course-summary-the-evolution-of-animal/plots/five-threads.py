@@ -62,5 +62,5 @@ for i, (thread, lab, key, cells) in enumerate(ROWS):
         bio.label(ax, (xa + (cw - 0.12) / 2, yc), text, size="tiny", color=tc, zorder=6)
     if thread and i:
         ax.plot([0.3, x0 + 7 * cw], [yc + rh / 2, yc + rh / 2], color=P.muted(), lw=0.5, zorder=3)
-bio.label(ax, (0.3, 0.55), "Cells coloured by homology (vertskel scheme): one element keeps its colour along a row. "
-          "Grey: absent. Bone counts are approximate ranges.", size="tiny", ha="left", color=P.muted())
+bio.label(ax, (0.3, 0.55), "Cells colored by homology (vertskel scheme): one element keeps its color along a row. "
+          "Gray: absent. Bone counts are approximate ranges.", size="tiny", ha="left", color=P.muted())

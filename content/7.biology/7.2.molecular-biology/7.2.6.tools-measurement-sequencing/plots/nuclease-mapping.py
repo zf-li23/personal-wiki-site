@@ -27,7 +27,7 @@ bio.panel(ax, "A", (0.1, 10.1))
 bio.label(ax, (0.6, 9.75), "S1 nuclease protection: principle", size="normal", bold=True, ha="left")
 TSS = 7.0
 y = 8.7
-bio.label(ax, (0.4, y + 0.7), "1  probe: single-stranded DNA spanning the start site, labelled at the end inside the gene",
+bio.label(ax, (0.4, y + 0.7), "1  probe: single-stranded DNA spanning the start site, labeled at the end inside the gene",
           size="small", ha="left")
 seg(2.0, 11.0, y, "dna")
 star(11.0, y)
@@ -52,7 +52,7 @@ seg(TSS, 11.0, y - 0.24, "mrna")
 star(11.0, y + 0.14)
 
 y = 3.2
-bio.label(ax, (0.4, y + 0.8), "4  the labelled fragment that survives is measured on a gel", size="small", ha="left")
+bio.label(ax, (0.4, y + 0.8), "4  the labeled fragment that survives is measured on a gel", size="small", ha="left")
 seg(TSS, 11.0, y, "dna")
 star(11.0, y)
 Q.bracket(ax, (TSS, y - 0.35), (11.0, y - 0.35), side=-1)

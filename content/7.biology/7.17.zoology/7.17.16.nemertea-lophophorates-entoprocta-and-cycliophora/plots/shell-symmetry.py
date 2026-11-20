@@ -26,7 +26,7 @@ bio.shape(ax, v, token=shell, zorder=5)
 for s in (0.82, 0.64, 0.46):
     c = np.array([3.6, 11.2])
     ax.plot(c[0] + (v[:, 0] - c[0]) * s, c[1] + (v[:, 1] - c[1]) * s, color=P.edge(shell), lw=0.6, zorder=6)
-bio.callout(ax, (3.6, 11.25), (7.0, 12.0), "Umbo (off-centre, pointing forward)")
+bio.callout(ax, (3.6, 11.25), (7.0, 12.0), "Umbo (off-center, pointing forward)")
 bio.label(ax, (1.2, 7.0), "anterior", size="tiny", color=P.muted())
 bio.label(ax, (8.6, 7.0), "posterior", size="tiny", color=P.muted())
 bio.label(ax, (4.9, 6.6), "Left valve (outside view): no plane divides it into mirror halves", size="small", color=P.muted())

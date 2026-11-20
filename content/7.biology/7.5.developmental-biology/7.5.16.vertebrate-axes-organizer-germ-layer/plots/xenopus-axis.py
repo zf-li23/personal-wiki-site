@@ -25,7 +25,7 @@ for k in range(5):
     ax.add_patch(bio.core.Circle((xs[1] + 1.3 + 0.12 * k, y - 1.45 + 0.2 * k), 0.08, facecolor=P.edge("positive"), edgecolor="none", zorder=20))
 bio.callout(ax, (xs[1] + 1.55, y - 0.85), (xs[1] + 2.4, y + r + 0.6), "dorsal determinants")
 b = BA.amphibian(ax, (xs[2], y), r, stage="blastula")
-bio.callout(ax, b["nieuwkoop"], (xs[2] + 1.4, 0.6), "Nieuwkoop centre")
+bio.callout(ax, b["nieuwkoop"], (xs[2] + 1.4, 0.6), "Nieuwkoop center")
 bio.callout(ax, b["organizer"], (xs[2] + 2.0, y + r + 0.7), "Organizer")
 g = BA.amphibian(ax, (xs[3], y), r, stage="gastrula")
 bio.callout(ax, g["dorsal_lip"], (xs[3] + 1.2, 0.6), "Dorsal lip")

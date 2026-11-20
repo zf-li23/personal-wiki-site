@@ -62,7 +62,7 @@ bio.label(ax, (9.4, 0.95), "type I (IFN-α/β) and type III (IFN-λ)\nsecreted",
 
 # ---------------------------------------------------------------- the neighbouring cell
 bio.box(ax, (15.4, 5.1), 6.6, 8.8, token="cytoplasm", radius=0.6)
-bio.label(ax, (12.4, 9.15), "Neighbouring cell", size="small", bold=True, ha="left")
+bio.label(ax, (12.4, 9.15), "Neighboring cell", size="small", bold=True, ha="left")
 bio.receptor(ax, 15.3, 8.2, kind="rtk", token="receptor", text=None)
 bio.label(ax, (16.9, 8.2), "IFNAR / IFNLR", size="small", bold=True)
 unit((15.3, 6.3), 4.6, 0.8, "enzyme", "JAK1, TYK2 → STAT1/2, IRF9")
@@ -80,5 +80,5 @@ bio.arrow(ax, (11.9, 3.9), (14.4, 8.0), kind="process", bend=0.16)
 bio.label(ax, (18.0, 7.3), "blocked by decoy\nreceptors and by\nblocks on STAT\nimport", size="tiny", color=RED)
 bio.arrow(ax, (18.0, 6.6), (17.7, 6.3), kind="inhibition", color=RED)
 
-bio.label(ax, (9.5, 0.35), "the infected cell both defends itself and warns its neighbours; every vertebrate virus "
+bio.label(ax, (9.5, 0.35), "the infected cell both defends itself and warns its neighbors; every vertebrate virus "
                            "antagonizes some step of this pathway", size="tiny", color=P.muted())

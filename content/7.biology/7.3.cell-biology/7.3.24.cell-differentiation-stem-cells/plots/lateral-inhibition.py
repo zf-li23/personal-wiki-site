@@ -76,8 +76,8 @@ for (x, side) in ((1.9, 1), (5.5, -1)):
     bio.arrow(ax, (x + side * 0.6, 6.1), (x + side * 0.6, 7.1), kind="inhibition", bg=P.fill("cytoplasm"))
 bio.arrow(ax, (3.1, 7.3), (4.3, 5.95), kind="activation", bg=P.surface())
 bio.arrow(ax, (4.3, 7.3), (3.1, 5.95), kind="activation", bg=P.surface())
-bio.label(ax, (3.7, 9.0), "Delta activates Notch in the neighbour;\nNotch represses Delta in its own cell", size="tiny")
-bio.label(ax, (3.7, 3.6), "double negative loop between neighbours\n= positive feedback on the difference", size="tiny",
+bio.label(ax, (3.7, 9.0), "Delta activates Notch in the neighbor;\nNotch represses Delta in its own cell", size="tiny")
+bio.label(ax, (3.7, 3.6), "double negative loop between neighbors\n= positive feedback on the difference", size="tiny",
           color=P.muted())
 
 # B: hexagonal sheet

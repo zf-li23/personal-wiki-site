@@ -73,19 +73,19 @@ for j, p in enumerate((0.50, 0.59, 0.68)):
 
 ps = np.linspace(0.30, 0.80, 26)
 L, reps = 128, 60
-curves = {"random, 4-neighbour": [], "random, 8-neighbour": [], "fractal, 4-neighbour": []}
+curves = {"random, 4-neighbor": [], "random, 8-neighbor": [], "fractal, 4-neighbor": []}
 for p in ps:
     acc = {k: [] for k in curves}
     for _ in range(reps):
         hab = rng.random((L, L)) < p
-        acc["random, 4-neighbour"].append(stats(hab, S4))
-        acc["random, 8-neighbour"].append(stats(hab, S8))
+        acc["random, 4-neighbor"].append(stats(hab, S4))
+        acc["random, 8-neighbor"].append(stats(hab, S8))
         z = fractal(L, 0.5)
         hab = z < np.quantile(z, p)
-        acc["fractal, 4-neighbour"].append(stats(hab, S4))
+        acc["fractal, 4-neighbor"].append(stats(hab, S4))
     for k in curves:
         curves[k].append(np.mean(acc[k], axis=0))
-toks = {"random, 4-neighbour": "plant", "random, 8-neighbour": "dna", "fractal, 4-neighbour": "negative"}
+toks = {"random, 4-neighbor": "plant", "random, 8-neighbor": "dna", "fractal, 4-neighbor": "negative"}
 
 pd_ = C.axes_at(ax, (2.6, 1.8, 12.0, 6.2))
 pe = C.axes_at(ax, (18.6, 1.8, 12.0, 6.2))

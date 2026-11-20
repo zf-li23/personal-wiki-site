@@ -36,7 +36,7 @@ pa.set_xlim(0, 6)
 pa.set_ylim(0, 0.42)
 C.style_axes(pa, "τ = 4νt / R²", "g(τ) = 4ρ / (s a)")
 bio.panel(ax, "A", (0.3, 8.6))
-bio.label(ax, (1.8, 8.6), "Signal seen by the nearest neighbour", size="small", bold=True, ha="left")
+bio.label(ax, (1.8, 8.6), "Signal seen by the nearest neighbor", size="small", bold=True, ha="left")
 
 nu, Td, ac = 400.0, 15.0, 300e-6  # um^2/s, s, cells/um^2
 a = np.linspace(1.02 * ac, 10 * ac, 300)

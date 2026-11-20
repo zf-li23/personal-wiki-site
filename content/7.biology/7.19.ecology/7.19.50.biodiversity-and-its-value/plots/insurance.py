@@ -63,7 +63,7 @@ for S, tok in ((1, "negative"), (8, "dna")):
 pa2 = pa.twinx()
 pa2.plot(tt[:200], E[burn:burn + 200], color=P.muted(), lw=0.8, alpha=0.7)
 pa2.set_ylim(-6, 3)
-C.style_axes(pa2, None, "environment E (grey)")
+C.style_axes(pa2, None, "environment E (gray)")
 pa2.spines["right"].set_visible(True)
 pa.set_ylim(0, 1.6)
 C.style_axes(pa, "year", "total biomass B")

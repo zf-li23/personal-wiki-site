@@ -41,7 +41,7 @@ for s in (-1, 1):
 lbl = [("Stele (PIN1: rootward)", (cx, 8.0), (7.6, 8.8)), ("Pericycle", (cx + 0.85, 6.5), (7.6, 7.9)),
        ("Endodermis", (cx + 1.08, 5.9), (7.6, 7.1)), ("Cortex: reflux", (cx + 1.4, 7.3), (7.6, 6.3)),
        ("Epidermis (PIN2, AUX1: shootward)", (cx + 1.78, 6.7), (7.6, 5.5)),
-       ("Lateral root cap", (cx + 2.15, 4.4), (7.6, 4.6)), ("Quiescent centre", (cx + 0.4, 3.15), (7.6, 3.6)),
+       ("Lateral root cap", (cx + 2.15, 4.4), (7.6, 4.6)), ("Quiescent center", (cx + 0.4, 3.15), (7.6, 3.6)),
        ("Columella (PIN3, PIN4, PIN7)", (cx + 0.7, 2.1), (7.6, 2.6))]
 for text, p, t in lbl:
     bio.callout(ax, p, t, text, size="tiny")

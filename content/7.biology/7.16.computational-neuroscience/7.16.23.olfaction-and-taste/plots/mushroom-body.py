@@ -63,7 +63,7 @@ ax.plot([0, 1], [0, 1], color=P.muted(), lw=0.8, ls=":")
 ax.set_xlabel("Correlation of PN inputs")
 ax.set_ylabel("Overlap of KC codes (Jaccard)")
 ax.legend(frameon=False, fontsize=8, loc="upper left")
-ax.set_title("A  Similar odours, separated codes", loc="left", fontsize=10)
+ax.set_title("A  Similar odors, separated codes", loc="left", fontsize=10)
 
 ax = axs[1]
 odours = np.clip(rng.normal(size=(200, nPN)), 0, None)
@@ -113,7 +113,7 @@ ax.plot(ks, fly, "o-", color=P.edge("rna"), lw=1.8, ms=4, label="fly hash (expan
 ax.plot(ks, lsh, "s-", color=P.edge("dna"), lw=1.8, ms=4, label="dense LSH (k projections)")
 ax.set_xscale("log", base=2)
 ax.set_xlabel("Hash length k")
-ax.set_ylabel("Precision of 20 nearest neighbours")
+ax.set_ylabel("Precision of 20 nearest neighbors")
 ax.set_ylim(0, 1)
 ax.legend(frameon=False, fontsize=8, loc="lower right")
 ax.set_title("C  Similarity search", loc="left", fontsize=10)

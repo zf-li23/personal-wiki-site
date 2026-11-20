@@ -1,6 +1,6 @@
 ---
 title: Paired Samples, Correlation and Concordance
-description: Paired designs and their nonparametric analysis. Crossover trials (carryover effect, washout period) and the analysis of a two-period crossover by rank-sum tests on sums and differences; inference on the centre of paired differences by the sign test, the Wilcoxon signed-rank test and the paired permutation test, and what the symmetry assumption means for two variables; the sign test in disguise (Cox–Stuart and runs tests for correlation, McNemar's test); and rank correlation (Pearson's r, Spearman's rho and Kendall's tau-a and tau-b, their tests and their differences).
+description: Paired designs and their nonparametric analysis. Crossover trials (carryover effect, washout period) and the analysis of a two-period crossover by rank-sum tests on sums and differences; inference on the center of paired differences by the sign test, the Wilcoxon signed-rank test and the paired permutation test, and what the symmetry assumption means for two variables; the sign test in disguise (Cox–Stuart and runs tests for correlation, McNemar's test); and rank correlation (Pearson's r, Spearman's rho and Kendall's tau-a and tau-b, their tests and their differences).
 ---
 
 Two treatments can be compared on two independent groups of units, or on the same units (or on closely matched pairs of units). The second way, a **paired design**, removes the variation between units from the comparison, and it is often far more sensitive. This chapter studies the nonparametric analysis of paired data. Section 8.1 starts from the design, with the crossover trial, where each subject receives both treatments in sequence; its analysis already uses the two-sample rank-sum test that [3.6.9](/3.6.9) develops in detail. Section 8.2 treats the most common analysis, which reduces the pairs to one sample of differences and applies the one-sample methods of [3.6.3](/3.6.3)–[3.6.5](/3.6.5), and adds the paired version of the **permutation test** of [3.6.1](/3.6.1). Section 8.3 shows how the sign test reappears, in the Cox–Stuart and runs tests of [3.6.7](/3.6.7) applied to correlation and in McNemar's test for paired binary outcomes. Section 8.4 turns from comparing the two members of a pair to measuring how they move together: Pearson's **correlation coefficient** (3.1.10) and its rank-based alternatives, Spearman's rho and Kendall's tau.
@@ -91,7 +91,7 @@ W = 1, p-value = 0.01587
 There is no evidence of a differential carryover effect ($p=0.31$), but evidence of a treatment effect ($p=0.016$). The differences are smaller in sequence AB than in BA, so by Proposition 8.1.1 $T_{\mathrm{A}}<T_{\mathrm{B}}$: the drug concentration at $15$ minutes is lower after grapefruit juice than after water. The median of the $25$ differences between an AB difference and a BA difference (the Hodges–Lehmann shift estimate of [3.6.9](/3.6.9)) is $-4.35$, which estimates $2(T_{\mathrm{A}}-T_{\mathrm{B}})$; so the effect is about $-2.2\,\mu\mathrm{g/ml}$.
 :::
 
-**Remark 8.1.1** The strategy "first test for differential carryover, and only if it is not significant compare the differences" is common but has well-known problems. The carryover test compares sums between subjects, so it inherits the full between-subject variation and has little power; with five children per group, $p=0.31$ is far from evidence that the carryover effects are equal. And the two-stage procedure as a whole (Grizzle 1965), which switches to a comparison of first-period responses only when carryover is significant, was shown by Freeman (1989) to have an inflated type I error. The sound approach is to prevent carryover by design, with an adequate washout period and treatments whose effects are known to be short-lived, and to analyse the differences.
+**Remark 8.1.1** The strategy "first test for differential carryover, and only if it is not significant compare the differences" is common but has well-known problems. The carryover test compares sums between subjects, so it inherits the full between-subject variation and has little power; with five children per group, $p=0.31$ is far from evidence that the carryover effects are equal. And the two-stage procedure as a whole (Grizzle 1965), which switches to a comparison of first-period responses only when carryover is significant, was shown by Freeman (1989) to have an inflated type I error. The sound approach is to prevent carryover by design, with an adequate washout period and treatments whose effects are known to be short-lived, and to analyze the differences.
 
 ## 8.2. Location Inference for Matched Pairs
 
@@ -112,24 +112,24 @@ This is the typical situation for pairing. The variation within the $x_i$ and wi
 
 ### 8.2.2. Reduction to One Sample
 
-With $d_i=x_i-y_i$ and $\theta$ a centre of the distribution of the differences, the hypotheses are $H_0\colon\theta=0$ against $H_1\colon\theta\ne0$ (or a one-sided alternative). The choice of test depends on what can be assumed about the $d_i$:
+With $d_i=x_i-y_i$ and $\theta$ a center of the distribution of the differences, the hypotheses are $H_0\colon\theta=0$ against $H_1\colon\theta\ne0$ (or a one-sided alternative). The choice of test depends on what can be assumed about the $d_i$:
 
 - if each $d_i$ is equally likely to be positive or negative under $H_0$, the **sign test**;
 - if the $d_i$ are symmetrically distributed about $0$ under $H_0$, the **Wilcoxon signed-rank test**;
 - if the $d_i$ are normal, the **paired t-test**.
 
-What is being tested is a property of the distribution of the differences $X-Y$: for the sign test its median, for the signed-rank test its centre of symmetry. This is not the same as the difference between the median of $X$ and the median of $Y$, since the median of a difference is not in general the difference of the medians.
+What is being tested is a property of the distribution of the differences $X-Y$: for the sign test its median, for the signed-rank test its center of symmetry. This is not the same as the difference between the median of $X$ and the median of $Y$, since the median of a difference is not in general the difference of the medians.
 
 The symmetry required by the signed-rank test is often natural for paired data, for the following reason.
 
 **Proposition 8.2.1** Let $D=X-Y$.
 
 1. If the pair is exchangeable, $(X,Y)\overset{d}{=}(Y,X)$, then $D$ is symmetric about $0$. This holds, for instance, when $X=S+E_1$ and $Y=S+E_2$ with $E_1,E_2$ i.i.d. and independent of the subject effect $S$, so $X$ and $Y$ may be strongly dependent.
-2. If $X$ and $Y$ are independent and each is symmetric about the same centre $\theta$ (their distributions may differ), then $D$ is symmetric about $0$.
+2. If $X$ and $Y$ are independent and each is symmetric about the same center $\theta$ (their distributions may differ), then $D$ is symmetric about $0$.
 
 **Proof** (1) $D=X-Y\overset{d}{=}Y-X=-D$. (2) $X-\theta\overset{d}{=}\theta-X$ and $Y-\theta\overset{d}{=}\theta-Y$, and by independence $D=(X-\theta)-(Y-\theta)\overset{d}{=}(\theta-X)-(\theta-Y)=-D$. $\square$
 
-Case 1 is exactly the null hypothesis of no treatment effect in a randomized paired experiment: if the treatment does nothing, the two responses of a subject are interchangeable. Under the symmetry assumption the alternative of interest is usually a shift of the centre only. Whether symmetry is plausible is checked on the $d_i$ themselves, for example with a plot or by comparing the mean and the median of the differences.
+Case 1 is exactly the null hypothesis of no treatment effect in a randomized paired experiment: if the treatment does nothing, the two responses of a subject are interchangeable. Under the symmetry assumption the alternative of interest is usually a shift of the center only. Whether symmetry is plausible is checked on the $d_i$ themselves, for example with a plot or by comparing the mean and the median of the differences.
 
 **Example 8.2.2 (Response to Digital Information, Continued)** The ordered differences and their signed ranks (midranks for the ties) are
 
@@ -420,7 +420,7 @@ In choosing among them, the question comes first. For two judges ranking the sam
   | Differences $Y_{i1}-Y_{i2}$ | treatment effect $T_{\mathrm{A}}=T_{\mathrm{B}}$ | $C_{\mathrm{A}}=C_{\mathrm{B}}$ |
 
   A preliminary carryover test is not a substitute for a washout period (Remark 8.1.1).
-- Paired location: reduce to the differences $d_i$ and test their centre. Assumptions: independence and a common median (sign test); symmetry about the centre (signed-rank test; Proposition 8.2.1: exchangeable pairs, or independent components symmetric about the same centre); normality (paired $t$). The paired permutation test (Definition 8.2.1) flips the signs of the $d_i$: $2^n$ rearrangements. Randomize or balance the order of the two measurements.
+- Paired location: reduce to the differences $d_i$ and test their center. Assumptions: independence and a common median (sign test); symmetry about the center (signed-rank test; Proposition 8.2.1: exchangeable pairs, or independent components symmetric about the same center); normality (paired $t$). The paired permutation test (Definition 8.2.1) flips the signs of the $d_i$: $2^n$ rearrangements. Randomize or balance the order of the two measurements.
 - Sign tests in disguise: Cox–Stuart and runs tests for correlation after ordering by one variable (Examples 8.3.1–8.3.2; the runs test is more general but weaker); McNemar's test (Definition 8.3.1) for paired binary data uses only the discordant counts, $b\sim\mathrm{Bin}(b+c,1/2)$, and tests marginal homogeneity, not independence.
 - Correlation: Pearson's $r$ measures linear association, and its $t$-test needs bivariate normality (or large $n$); Spearman's $r_s$ (Definition 8.4.1) is the correlation of (mid)ranks, $1-6\sum d_i^2/(n(n^2-1))$ without ties (Proposition 8.4.1); Kendall's $\tau$ (Definition 8.4.3) is based on concordant and discordant pairs (Definition 8.4.2), $\tau_a=(C-D)/\binom n2$, with $\tau_b$ for ties. Rank coefficients are tested by permutation, are robust to outliers and capture any monotone relation.
 

@@ -25,7 +25,7 @@ d.connect("hc", "alx", kind="negative")
 d.connect("hc", "dl", kind="negative")
 d.connect("alx", "sk", kind="positive")
 d.connect("dl", "gcm", kind="positive")
-bio.label(ax, (10.0, 3.2), "Notch in\nneighbours", size="tiny", color=P.muted(), ha="left")
+bio.label(ax, (10.0, 3.2), "Notch in\nneighbors", size="tiny", color=P.muted(), ha="left")
 
 bio.label(ax, (12.4, 10.1), "B  Boolean gate at steady state", size="small", bold=True, ha="left")
 genes = ["pmar1", "hesC", "alx1", "delta", "skel."]

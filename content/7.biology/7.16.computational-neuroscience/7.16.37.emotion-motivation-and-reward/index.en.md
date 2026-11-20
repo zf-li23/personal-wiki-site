@@ -91,7 +91,7 @@ Not all dopamine neurons conform. Neurons projecting to the tail of the striatum
 
 Addictive drugs differ in their molecular targets but share one action: all of them increase dopamine in the nucleus accumbens (Di Chiara and Imperato, 1988). Psychostimulants act on the dopamine transporter, either blocking reuptake or reversing transport; opioids inhibit GABAergic interneurons of the VTA through μ-opioid receptors and so disinhibit dopamine neurons; nicotine activates nicotinic receptors on dopamine neurons; alcohol and cannabinoids act indirectly through several of these routes. Natural rewards also release dopamine, but their prediction error disappears once they are predicted. Drug-evoked dopamine does not depend on a prediction and so cannot be predicted away, which suggested a computational account (Redish, 2004).
 
-**Formula 37.5.1 (Prediction Error with a Pharmacological Component)** If a drug adds a dopamine signal $d > 0$ that cannot be cancelled by learning, the prediction error is
+**Formula 37.5.1 (Prediction Error with a Pharmacological Component)** If a drug adds a dopamine signal $d > 0$ that cannot be canceled by learning, the prediction error is
 $$
 \delta_t = \max\bigl(r_t + \gamma\,\hat v(S_{t+1}) - \hat v(S_t) + d,\; d\bigr),
 $$

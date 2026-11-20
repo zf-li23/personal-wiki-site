@@ -83,6 +83,6 @@ ticks = [0, 12, 24, 36, 47]
 ax.set_yticks([i + 0.5 for i in ticks])
 ax.set_yticklabels([f"{fcs[i]:.0f}" for i in ticks])
 ax.set_xlabel("Time / ms")
-ax.set_ylabel("Channel centre frequency / Hz")
+ax.set_ylabel("Channel center frequency / Hz")
 ax.set_title("C  Response to a 200 Hz harmonic complex", loc="left", fontsize=10)
 fig.tight_layout()

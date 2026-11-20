@@ -60,7 +60,7 @@ for R in Rs:
         slope = (f(r + 1e-5, R) - f(r - 1e-5, R)) / 2e-5
         (stable_lo if (slope < 0 and r < 0.05) else stable_hi if slope < 0 else unstable).append((R, r))
 for pts, col, ls, lab in ((stable_lo, "#2c6fbb", "-", "quiescent (stable)"),
-                          (stable_hi, "#c0392b", "-", "labour (stable)"),
+                          (stable_hi, "#c0392b", "-", "labor (stable)"),
                           (unstable, "0.5", "--", "threshold (unstable)")):
     if pts:
         a = np.array(pts)

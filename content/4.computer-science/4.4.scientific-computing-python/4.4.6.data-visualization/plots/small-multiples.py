@@ -31,7 +31,7 @@ for k in range(len(genes)):
     ax.plot(t, y[k], linewidth=1.5, color=plt.get_cmap("tab10")(k), label=genes[k])
 ax.legend(fontsize=7, ncols=2, loc="lower left")
 ax.set_xlabel("Time (h)")
-ax.set_ylabel("log expression (centred)")
+ax.set_ylabel("log expression (centered)")
 ax.set_title("All genes in one panel", fontsize=10)
 
 grid = right.subplots(2, 4, sharex=True, sharey=True)

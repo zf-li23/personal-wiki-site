@@ -53,7 +53,7 @@ a.set_xlabel("Time of day / h")
 a.set_ylabel("Temperature / °C")
 a.legend(frameon=False, fontsize=7.5, loc="upper left")
 a.set_ylim(15, 58)
-a.set_title("A  Thermal environment and behaviour", loc="left", fontweight="bold")
+a.set_title("A  Thermal environment and behavior", loc="left", fontweight="bold")
 
 tt = np.linspace(0, 8, 801)
 Te_noon = Te_sun[t.searchsorted(13.0)]

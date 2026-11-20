@@ -73,7 +73,7 @@ Three men built the discipline.
 | Niko Tinbergen (1907–1988) | Sticklebacks, gulls, digger wasps | Experimental analysis of sign stimuli with dummies; *The Study of Instinct* (1951); field experiments on adaptive value; the four questions (1963) |
 | Karl von Frisch (1886–1982) | Honey bees, fishes | Color vision of bees (1914) and hearing in fishes; the waggle dance as a code for the distance and direction of food; the sun compass |
 
-In 1973 the three shared the Nobel Prize in Physiology or Medicine "for their discoveries concerning organization and elicitation of individual and social behaviour patterns", the first time the prize was given for the study of behavior. The ethologists compiled the ethogram, the catalog of the behavior patterns of a species ([7.18.2](/7.18.2)), and studied the stimuli that release behavior, the stereotyped motor patterns that follow, and the internal motivation that sets their threshold ([7.18.3](/7.18.3)).
+In 1973 the three shared the Nobel Prize in Physiology or Medicine "for their discoveries concerning organization and elicitation of individual and social behavior patterns", the first time the prize was given for the study of behavior. The ethologists compiled the ethogram, the catalog of the behavior patterns of a species ([7.18.2](/7.18.2)), and studied the stimuli that release behavior, the stereotyped motor patterns that follow, and the internal motivation that sets their threshold ([7.18.3](/7.18.3)).
 
 The two schools are often contrasted as follows.
 

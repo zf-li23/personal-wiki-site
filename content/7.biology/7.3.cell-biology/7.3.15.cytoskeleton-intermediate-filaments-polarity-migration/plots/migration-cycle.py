@@ -57,7 +57,7 @@ for k, name in enumerate(steps):
         bio.label(ax, (front + 0.9, y - 0.55), "rear adhesions\ndisassemble", size="tiny", ha="left")
 
 bio.panel(ax, "B", (16.6, 10.5))
-cells = [("Cdc42: filopodia", 8.0), ("Rac: lamellipodium", 4.9), ("Rho: stress fibres", 1.8)]
+cells = [("Cdc42: filopodia", 8.0), ("Rac: lamellipodium", 4.9), ("Rho: stress fibers", 1.8)]
 for k, (name, y) in enumerate(cells):
     c = np.array([21.2, y])
     o = bio.blob(c, 2.2, 1.15, wobble=0.04, seed=k + 2, k=10)

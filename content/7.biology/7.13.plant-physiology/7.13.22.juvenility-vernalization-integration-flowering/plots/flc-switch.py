@@ -37,7 +37,7 @@ ax.set_ylim(0, 1.55)
 ax.set_xlabel("Time / d")
 ax.set_ylabel("FLC expression (relative)")
 ax.legend(frameon=False, fontsize=8, loc="upper right", bbox_to_anchor=(1.0, 0.9))
-ax.text(41, 0.62, "single cells (grey)", fontsize=8, color="0.4")
+ax.text(41, 0.62, "single cells (gray)", fontsize=8, color="0.4")
 
 i20 = 20
 bins = np.logspace(-2.2, 0.6, 30)

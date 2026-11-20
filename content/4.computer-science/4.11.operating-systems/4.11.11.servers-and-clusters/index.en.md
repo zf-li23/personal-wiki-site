@@ -21,7 +21,7 @@ A cluster offers several **file systems** with different purposes, and choosing 
 |---|---|---|---|
 | home (`$HOME`) | NFS, backed up | small quota (tens of GB) | scripts, configuration, small source code |
 | project or group | NFS or parallel FS, sometimes backed up | large quota (TB), shared by a group | raw data, final results, shared references |
-| scratch | parallel FS (Lustre, IBM Storage Scale, BeeGFS) | very large, fast, not backed up; files unused for some weeks are purged | intermediate files of running analyses |
+| scratch | parallel FS (Luster, IBM Storage Scale, BeeGFS) | very large, fast, not backed up; files unused for some weeks are purged | intermediate files of running analyses |
 | node-local | SSD on the compute node (often `$TMPDIR`) | hundreds of GB, deleted at the end of the job | temporary files with many small or random accesses |
 | archive | tape behind a disk cache | very large, slow to retrieve | long-term preservation of raw data |
 

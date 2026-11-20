@@ -45,7 +45,7 @@ def sim(g, T, dt=0.02, loss=None, r0=None):
 fig, axs = plt.subplots(1, 3, figsize=(13, 4.0))
 ax, bx, cx = axs
 pp = np.linspace(20, 220, 300)
-ax.plot(pp, f(pp), color=P.edge("dna"), lw=2, label="firing (normalised)")
+ax.plot(pp, f(pp), color=P.edge("dna"), lw=2, label="firing (normalized)")
 ax2 = ax.twinx()
 g = np.gradient(f(pp), pp)
 ax2.plot(pp, g / g.max(), color=P.edge("rna"), lw=1.6, ls="--", label="gain dF/dP (relative)")
@@ -74,7 +74,7 @@ bx.set_ylim(50, 110)
 bx.set_xlabel("Time / s")
 bx.set_ylabel("Mean arterial pressure / mmHg")
 bx.legend(frameon=False, fontsize=7.5, loc="lower left")
-bx.set_title("B  Haemorrhage of 10 % of blood volume", loc="left", fontsize=10)
+bx.set_title("B  Hemorrhage of 10 % of blood volume", loc="left", fontsize=10)
 
 rng = np.random.default_rng(0)
 dt, T = 0.05, 7200

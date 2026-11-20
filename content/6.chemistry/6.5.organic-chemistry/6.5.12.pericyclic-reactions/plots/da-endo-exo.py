@@ -45,7 +45,7 @@ def scene(ax, endo):
         ax.text(*(P(3.1, 1.2, 0) + (0.25, 0)), "secondary\norbital\ninteraction", fontsize=8, color="#d1495b", va="center")
     ax.text(*(P(1.4, 0.4, zt) + (0, 1.25)), "diene HOMO", ha="center", fontsize=9, color=ink())
     ax.text(*(P(1.4, 0.0, zb) - (0, 1.35)), "dienophile LUMO", ha="center", fontsize=9, color=ink())
-    ax.set_title("endo (favoured)" if endo else "exo", fontsize=10, color=ink())
+    ax.set_title("endo (favored)" if endo else "exo", fontsize=10, color=ink())
     clean(ax, (-1.0, 5.6), (-3.8, 3.6))
 
 

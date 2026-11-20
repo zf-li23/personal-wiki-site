@@ -57,7 +57,7 @@ for ratio, ls in ((0.7, (0, (1, 1.5))), (1.0, (0, (4, 2))), (2.0, "-")):
         b.plot(t, anyp, color=P.ink(), lw=0.9, alpha=0.6)
 for nm, mu, sd, tok in windows:
     b.text(mu + (4 if nm == "arms" else -1 if nm == "heart" else 0), 0.98, nm, color=charts.line(tok), fontsize=FT["tiny"], ha="center")
-b.text(41.5, 1.27, "solid: D = 2 D50\ndashed: D = D50\ndotted: D = 0.7 D50\ngrey: any of the three",
+b.text(41.5, 1.27, "solid: D = 2 D50\ndashed: D = D50\ndotted: D = 0.7 D50\ngray: any of the three",
        fontsize=FT["tiny"], color=P.ink(), va="top")
 b.set_ylim(0, 1.3)
 charts.style_axes(b, "day of exposure after fertilization", "probability of malformation")

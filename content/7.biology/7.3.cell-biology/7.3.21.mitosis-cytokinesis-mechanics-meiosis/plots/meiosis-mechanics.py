@@ -71,7 +71,7 @@ for i, (x, n) in enumerate(zip(xs, names)):
                 other = "receptor" if tok == "dna" else "dna"
                 ax.plot(np.where(~above & (o * side < 0), xx, np.nan), yy, color=P.edge(other), lw=lw, zorder=5)
         bio.callout(ax, (x, y0 + 0.35 * length / 2), (x + 0.9, y0 + 2.1), "chiasma", size="tiny")
-bio.label(ax, (6.6, 6.2), "grey rungs: synaptonemal complex   yellow: recombination nodules", size="tiny", color=P.muted())
+bio.label(ax, (6.6, 6.2), "gray rungs: synaptonemal complex   yellow: recombination nodules", size="tiny", color=P.muted())
 
 # ----- B
 bio.panel(ax, "B", (0.2, 5.6))

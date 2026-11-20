@@ -269,8 +269,8 @@ A complete gut develops from three parts: the stomodeum, an ingrowth of ectoderm
 | Region | Earthworm | Insect | Crayfish | Bird |
 |---|---|---|---|---|
 | Foregut | Muscular pharynx, esophagus with calciferous glands, crop for storage, gizzard for grinding | Pharynx, esophagus, crop, proventriculus with cuticular teeth | Esophagus, stomach with a gastric mill of calcified ossicles | Esophagus with crop, glandular stomach (proventriculus), gizzard |
-| Midgut | Intestine with a dorsal fold (typhlosole) that increases its surface | Midgut with gastric caeca, lined by a peritrophic membrane | Midgut with a large digestive gland (hepatopancreas) | Small intestine with liver and pancreas |
-| Hindgut | Short rectum | Ileum, colon and rectum with rectal pads that reabsorb water | Intestine and anus | Large intestine, paired caeca, cloaca |
+| Midgut | Intestine with a dorsal fold (typhlosole) that increases its surface | Midgut with gastric ceca, lined by a peritrophic membrane | Midgut with a large digestive gland (hepatopancreas) | Small intestine with liver and pancreas |
+| Hindgut | Short rectum | Ileum, colon and rectum with rectal pads that reabsorb water | Intestine and anus | Large intestine, paired ceca, cloaca |
 | Chapter | [7.17.15](/7.17.15) | [7.17.26](/7.17.26#sec-26.2) | [7.17.21](/7.17.21) | [7.17.53](/7.17.53), [7.17.63](/7.17.63) |
 
 The table shows a convergence that reflects the problems all animals face: a storage organ (crop) where food is taken in quickly, a grinding organ (gizzard, proventriculus, gastric mill) for animals that lack chewing teeth, a large absorptive surface in the midgut, and a terminal region that recovers water. How the digestive system was modified along the animal tree is the subject of [7.17.44](/7.17.44).

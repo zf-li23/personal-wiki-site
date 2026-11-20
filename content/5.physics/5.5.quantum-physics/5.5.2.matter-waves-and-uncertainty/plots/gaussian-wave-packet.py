@@ -32,7 +32,7 @@ for row, sx in enumerate([0.6, 1.8]):
     ax.legend(loc="upper right", fontsize=8, frameon=False)
 
 axes[0, 0].set_title("position space")
-axes[0, 1].set_title("momentum space (centred at p0)")
+axes[0, 1].set_title("momentum space (centered at p0)")
 axes[1, 0].set_xlabel("x")
 axes[1, 1].set_xlabel("p")
 fig.tight_layout()

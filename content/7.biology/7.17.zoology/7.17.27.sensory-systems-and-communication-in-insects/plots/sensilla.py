@@ -89,7 +89,7 @@ bio.arrow(ax, (xc - 1.25, 9.4), (xc - 0.72, 9.25), kind="process", head=0.12, lw
 cell((xc - 1.6, 6.0), 0.75, 0.7, "enzyme", seed=6)
 cell((xc + 1.6, 6.0), 0.75, 0.7, "protein", seed=7)
 bio.callout(ax, (xc + 0.62, 9.6), (xc + 1.6, 10.9), "Wall pores", size="tiny")
-bio.callout(ax, (xc - 1.0, 10.9), (x0 + 0.3, 11.4), "Odour molecules", size="tiny")
+bio.callout(ax, (xc - 1.0, 10.9), (x0 + 0.3, 11.4), "Odor molecules", size="tiny")
 bio.callout(ax, (xc + 0.25, 9.0), (xc + 1.8, 8.7), "Branched dendrites", size="tiny")
 bio.callout(ax, (xc + 0.8, 3.6), (x0 + 5.0, 2.8), "Olfactory neurons", size="tiny")
 

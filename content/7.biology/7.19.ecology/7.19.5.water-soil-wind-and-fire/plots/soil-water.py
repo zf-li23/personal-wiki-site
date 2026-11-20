@@ -59,7 +59,7 @@ bx.set_xticks(x)
 bx.set_xticklabels([a[0] for a in awc])
 bx.set_ylim(0, 0.45)
 bx.set_ylabel("volumetric water content $\\theta$")
-bx.text(-0.4, 0.42, "coloured: available water\ngrey: held below the wilting point", fontsize=7.5, color=P.muted(),
+bx.text(-0.4, 0.42, "colored: available water\ngray: held below the wilting point", fontsize=7.5, color=P.muted(),
         va="top")
 bx.set_title("B  Available water capacity", loc="left", fontsize=10)
 for a in (ax, bx):

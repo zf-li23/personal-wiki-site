@@ -59,4 +59,4 @@ ax.annotate("", xy=(x(136), 5.75), xytext=(x(190), 5.75),
             arrowprops=dict(arrowstyle="<->", color=P.edge("highlight"), lw=1.3))
 bio.label(ax, (x(134), 5.75), "Gap: oldest fossils vs most clock estimates", size="small", ha="left",
           color=P.edge("highlight"))
-bio.label(ax, (x(230), 7.4), "Grey: disputed records", size="tiny", color=P.muted())
+bio.label(ax, (x(230), 7.4), "Gray: disputed records", size="tiny", color=P.muted())

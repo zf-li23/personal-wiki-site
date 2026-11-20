@@ -24,7 +24,7 @@ mg = T > 1.55
 ax.plot(T[ms], mu_s[ms], color="C0", lw=1.8, label="solid (pure solvent)")
 ax.plot(T, mu_l, color="C2", lw=1.8, label="liquid (pure solvent)")
 ax.plot(T, mu_sln, color="C2", lw=1.8, ls="--", label="solvent in solution")
-ax.plot(T[mg], mu_g[mg], color="C3", lw=1.8, label="vapour (pure solvent)")
+ax.plot(T[mg], mu_g[mg], color="C3", lw=1.8, label="vapor (pure solvent)")
 for t, c in [(Tf, "C2"), (Tb, "C2")]:
     ax.axvline(t, color="0.6", lw=0.7, ls=":")
 for t in [Tf2, Tb2]:

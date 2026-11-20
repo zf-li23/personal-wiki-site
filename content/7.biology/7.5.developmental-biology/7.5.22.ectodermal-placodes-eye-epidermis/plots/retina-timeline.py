@@ -14,7 +14,7 @@ FT = bio.core.FONT
 ev = [("eye field (Pax6, Rx, Six3)", 7.5, 8.5, "protein"), ("Shh splits the eye field", 7.7, 8.5, "drug"),
       ("optic vesicle evaginates", 8.5, 9.2, "protein"), ("contact with surface ectoderm", 9.0, 9.6, "channel"),
       ("lens placode", 9.3, 9.8, "receptor"), ("optic cup and lens pit", 9.8, 10.5, "receptor"),
-      ("lens vesicle detaches", 10.5, 11.0, "receptor"), ("primary lens fibres", 11.0, 12.5, "receptor")]
+      ("lens vesicle detaches", 10.5, 11.0, "receptor"), ("primary lens fibers", 11.0, 12.5, "receptor")]
 cells = [("ganglion cells", 11.0, 18.0), ("horizontal cells", 11.0, 14.5), ("cones", 11.5, 17.5), ("amacrine cells", 12.0, 20.0),
          ("rods", 13.0, 26.0), ("bipolar cells", 17.0, 27.0), ("Mueller glia", 18.0, 27.0)]
 fig, ax = plt.subplots(figsize=(9.6, 4.8))

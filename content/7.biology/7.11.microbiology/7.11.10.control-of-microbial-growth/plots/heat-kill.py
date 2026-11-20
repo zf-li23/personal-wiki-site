@@ -75,7 +75,7 @@ F0 = np.cumsum(L) * dt
 ax.plot(time, temp, color=charts.line("negative"), lw=2.0)
 ax.axhline(121, color=P.muted(), lw=0.7, ls=":")
 ax.text(1, 123, "retort 121 $^\\circ$C", fontsize=6.8, color=P.muted())
-charts.style_axes(ax, "time / min", "can centre $T$ / $^\\circ$C")
+charts.style_axes(ax, "time / min", "can center $T$ / $^\\circ$C")
 ax.set_ylim(20, 140)
 ax2 = ax.twinx()
 ax2.plot(time, F0, color=charts.line("dna"), lw=2.0, ls="--")

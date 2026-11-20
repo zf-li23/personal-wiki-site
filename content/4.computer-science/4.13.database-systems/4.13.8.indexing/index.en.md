@@ -375,12 +375,12 @@ PostgreSQL's index access methods illustrate the range of index structures beyon
 |---|---|---|
 | `btree` | B+ tree (B-link tree) | default; equality, ranges, sorting, `LIKE 'abc%'` (with a suitable collation or operator class) |
 | `hash` | linear-hashing variant | equality only |
-| `gist` | generalized search tree: a balanced tree of predicates (e.g. bounding boxes, as in an R-tree) | geometry (PostGIS), ranges, nearest-neighbour search, exclusion constraints |
+| `gist` | generalized search tree: a balanced tree of predicates (e.g. bounding boxes, as in an R-tree) | geometry (PostGIS), ranges, nearest-neighbor search, exclusion constraints |
 | `spgist` | space-partitioned trees (quadtrees, k-d trees, radix trees) | points, IP addresses, text prefixes |
 | `gin` | generalized inverted index: a B-tree of elements with posting lists of rows | full-text search, `jsonb`, arrays |
 | `brin` | block range index: the minimum and maximum (or another summary) of each range of 128 pages | very large tables whose physical order correlates with a column, such as timestamps of appended rows |
 
-An *inverted index*, the structure behind GIN and behind search engines, maps each element (a word, an array element, a JSON key) to the list of rows that contain it. A BRIN index on the collection date of a table of a billion appended measurements takes a few hundred kilobytes, lets a range query skip all **page** ranges whose summary excludes the range, and costs almost nothing to maintain; it is useless if the column is not correlated with the physical order. Indexes for vectors and approximate nearest-neighbour search (HNSW, IVF), available in PostgreSQL through the `pgvector` extension, are discussed in [4.13.12](/4.13.12).
+An *inverted index*, the structure behind GIN and behind search engines, maps each element (a word, an array element, a JSON key) to the list of rows that contain it. A BRIN index on the collection date of a table of a billion appended measurements takes a few hundred kilobytes, lets a range query skip all **page** ranges whose summary excludes the range, and costs almost nothing to maintain; it is useless if the column is not correlated with the physical order. Indexes for vectors and approximate nearest-neighbor search (HNSW, IVF), available in PostgreSQL through the `pgvector` extension, are discussed in [4.13.12](/4.13.12).
 
 ## 8.6. Indexes in SQL and Physical Design
 

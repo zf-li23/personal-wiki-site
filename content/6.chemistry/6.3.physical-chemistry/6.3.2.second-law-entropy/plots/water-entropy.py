@@ -27,7 +27,7 @@ def cp(t):
     return CP_G
 
 
-segments = [(0.5, T_FUS, "ice"), (T_FUS, T_B, "liquid"), (T_B, T_END, "vapour")]
+segments = [(0.5, T_FUS, "ice"), (T_FUS, T_B, "liquid"), (T_B, T_END, "vapor")]
 colors = ["#2563eb", "#16a34a", "#d97706"]
 fig, (a1, a2) = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
 s0 = 0.0
@@ -51,7 +51,7 @@ summary = (
     + r"$\Delta_{\mathrm{fus}}H/T_{\mathrm{fus}}$" + f" = {DH_FUS / T_FUS:.1f}\n"
     + f"liquid at 373.12 K: {ends[1][1]:.1f}\n"
     + r"$\Delta_{\mathrm{vap}}H/T_{\mathrm{b}}$" + f" = {DH_VAP / T_B:.1f}\n"
-    + f"vapour at 423.15 K: {ends[2][1]:.1f}"
+    + f"vapor at 423.15 K: {ends[2][1]:.1f}"
 )
 a2.text(15, 190, summary, fontsize=9, va="top", bbox=dict(boxstyle="round", fc="none", ec="#94a3b8"))
 a1.set_ylabel(r"$C_{p,\mathrm{m}}/T$ / (J mol$^{-1}$ K$^{-2}$)")

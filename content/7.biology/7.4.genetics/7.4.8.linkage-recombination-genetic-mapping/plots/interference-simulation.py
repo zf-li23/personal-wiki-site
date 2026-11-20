@@ -45,7 +45,7 @@ for nu in (1, 4):
     a.plot(seps * 100, C, "o-", color=charts.line(cols[nu]), ms=3, lw=1.5, label=f"nu = {nu}")
 a.axhline(1, color=charts.line("neutral"), lw=0.8, ls=":")
 a.set_ylim(0, 1.6)
-charts.style_axes(a, "distance between interval centres / cM", "coefficient of coincidence C")
+charts.style_axes(a, "distance between interval centers / cM", "coefficient of coincidence C")
 leg = a.legend(frameon=False, fontsize=8, loc="lower right")
 for t in leg.get_texts():
     t.set_color(bio.P.ink())

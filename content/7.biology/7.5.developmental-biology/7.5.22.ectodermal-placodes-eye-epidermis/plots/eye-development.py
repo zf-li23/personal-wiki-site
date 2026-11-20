@@ -28,6 +28,6 @@ for k, st in enumerate(("vesicle", "cup", "lens-vesicle", "eye")):
         bio.callout(ax, a["lens"], (cx + 1.9, 0.6), "lens vesicle")
         bio.callout(ax, a["cornea"], (cx + 1.9, 6.3), "surface ectoderm")
     if k == 3:
-        bio.callout(ax, a["lens"], (cx + 1.0, 0.6), "lens fibres")
+        bio.callout(ax, a["lens"], (cx + 1.0, 0.6), "lens fibers")
         bio.callout(ax, a["cornea"], (cx + 1.9, 6.3), "cornea")
         bio.callout(ax, a["stalk"], (cx - 1.2, 0.6), "optic nerve")

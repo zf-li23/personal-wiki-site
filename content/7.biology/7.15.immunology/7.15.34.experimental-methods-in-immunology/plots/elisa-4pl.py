@@ -28,7 +28,7 @@ bio.antibody(ax, (3.2, 4.15), size=0.95, angle=180, token="receptor", light_toke
 bio.label(ax, (4.05, 4.2), "detection\nantibody", size="small", ha="left")
 bio.protein(ax, (3.2, 5.0), 0.34, 0.3, "enzyme", text="E", size="tiny")
 bio.arrow(ax, (1.0, 4.4), (1.0, 3.6), kind="process", head=0.14)
-bio.label(ax, (0.6, 3.4), "substrate:\ncolour", size="tiny", ha="left")
+bio.label(ax, (0.6, 3.4), "substrate:\ncolor", size="tiny", ha="left")
 # ---- B: 4PL curve -----------------------------------------------------------------------------------------
 rng = np.random.default_rng(0)
 conc = 1000.0 / 2 ** np.arange(8)

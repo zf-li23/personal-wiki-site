@@ -53,7 +53,7 @@ for ax, kind in zip(axes, ("chair", "boat")):
         a, b = project(A[c]), project(subst(A[c], axial, up))
         ax.plot(*zip(a, b), color="C3", lw=2.2)
         ax.text(*(b + (b - a) / np.linalg.norm(b - a) * 0.28), "Me", color="C3", fontsize=9, ha="center", va="center")
-    ax.set_title("chair TS (favoured): Me eq + Me ax" if kind == "chair" else "boat TS: Me eq + Me eq", fontsize=10, color=ink)
+    ax.set_title("chair TS (favored): Me eq + Me ax" if kind == "chair" else "boat TS: Me eq + Me eq", fontsize=10, color=ink)
     ax.text(0, -1.55, "(E,Z)-2,6-octadiene, 99.7 %" if kind == "chair" else "(E,E)-2,6-octadiene, 0.3 %",
             ha="center", fontsize=9, color=ink)
     ax.set_xlim(-2.3, 2.3)

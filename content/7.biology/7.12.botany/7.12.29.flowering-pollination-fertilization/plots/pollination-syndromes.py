@@ -7,7 +7,7 @@ import wikibio as bio
 P = bio.P
 fig, ax = bio.canvas(30.0, 15.2)
 cols = [0.6, 6.0, 10.2, 14.6, 18.4, 25.4]
-heads = ["Pollinator", "Colour", "Scent", "Anthesis", "Flower", "Reward"]
+heads = ["Pollinator", "Color", "Scent", "Anthesis", "Flower", "Reward"]
 for x, h in zip(cols, heads):
     bio.label(ax, (x, 14.6), h, size="normal", bold=True, ha="left")
 ax.plot([0.4, 29.6], [14.15, 14.15], color=P.muted(), lw=0.8)

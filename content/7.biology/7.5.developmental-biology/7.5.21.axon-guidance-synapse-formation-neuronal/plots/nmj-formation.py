@@ -33,7 +33,7 @@ for x in rng.uniform(0.8, 6.6, 30):
 for x in rng.uniform(3.0, 4.4, 10):
     achr(x, 4.6)
 bio.label(ax, (3.7, 2.4), "aneural AChR prepattern", size="small")
-bio.label(ax, (3.7, 6.0), "muscle fibre before innervation", size="tiny", color=P.muted())
+bio.label(ax, (3.7, 6.0), "muscle fiber before innervation", size="tiny", color=P.muted())
 
 bio.panel(ax, "B", (7.6, 8.2))
 x0, y0 = 8.0, 1.2

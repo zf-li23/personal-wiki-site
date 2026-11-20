@@ -76,7 +76,7 @@ immuno.immune_cell(ax, (cx + 0.2, ye - 1.7), r=0.4, kind="dendritic", token="rec
 bio.label(ax, (cx + 1.2, ye - 1.7), "subepithelial dome DCs", size="tiny", ha="left")
 ax.add_patch(Ellipse((cx, 3.8), 5.6, 3.4, facecolor=P.light("antibody"), edgecolor=P.edge("antibody"), lw=1.0, zorder=2))
 ax.add_patch(Ellipse((cx, 3.7), 2.8, 1.7, facecolor=P.fill("antibody"), edgecolor="none", alpha=0.6, zorder=3))
-bio.label(ax, (cx, 3.7), "germinal centre\n(IgA switching)", size="tiny", color=P.on_fill())
+bio.label(ax, (cx, 3.7), "germinal center\n(IgA switching)", size="tiny", color=P.on_fill())
 bio.label(ax, (cx, 1.75), "B-cell follicle", size="tiny")
 bio.box(ax, (cx + 4.3, 3.2), 2.2, 1.6, "dna2")
 bio.label(ax, (cx + 4.3, 3.2), "T-cell\nzone", size="tiny", color=P.on_fill())

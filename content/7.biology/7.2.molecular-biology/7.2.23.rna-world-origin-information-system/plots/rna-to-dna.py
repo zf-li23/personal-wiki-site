@@ -100,7 +100,7 @@ bio.label(ax, (15.1, 8.1), "protein catalysis\ntakes over", size="tiny", color=P
 bio.label(ax, (15.1, 5.9), "reverse transcription:\nstorage moves to DNA", size="tiny", color=P.muted(), ha="right")
 
 bio.box(ax, (19.4, 2.5), 10.6, 2.3, token="highlight",
-        text="relics: the peptidyl transferase centre, the spliceosome and group II introns, RNase P,\n"
+        text="relics: the peptidyl transferase center, the spliceosome and group II introns, RNase P,\n"
              "self-splicing introns, riboswitches, the adenosine handle of CoA / FAD / NAD / SAM,\n"
              "and the derivation of every deoxyribonucleotide from a ribonucleotide",
         size="tiny", radius=0.14)

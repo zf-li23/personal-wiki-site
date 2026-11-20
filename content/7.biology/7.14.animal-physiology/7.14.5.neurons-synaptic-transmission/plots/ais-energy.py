@@ -48,7 +48,7 @@ bx.set_ylim(0, 13)
 bx.set_xlabel("Time / d")
 bx.set_ylabel("Cumulative ATP / $10^8$")
 bx.legend(frameon=False, fontsize=8, loc="upper left")
-bx.set_title("B  Two defences, comparable cost", loc="left", fontsize=10)
+bx.set_title("B  Two defenses, comparable cost", loc="left", fontsize=10)
 for x in (ax, bx):
     x.grid(True, alpha=0.3, which="both")
 fig.tight_layout()

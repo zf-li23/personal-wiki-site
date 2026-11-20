@@ -34,7 +34,7 @@ a1.axvline(0, color="#94a3b8", lw=1)
 a1.set_xlim(-5, 118)
 a1.set_xlabel(r"$S$ / (J K$^{-1}$)")
 a1.set_ylabel(r"$U$ / kJ (arbitrary zero)")
-a1.set_title("Each tangent line is labelled by its slope $T$ and intercept $A$", fontsize=11)
+a1.set_title("Each tangent line is labeled by its slope $T$ and intercept $A$", fontsize=11)
 a1.legend(fontsize=9, loc="upper left")
 a1.grid(alpha=0.3)
 

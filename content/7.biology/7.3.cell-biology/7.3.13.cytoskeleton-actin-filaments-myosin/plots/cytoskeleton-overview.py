@@ -113,7 +113,7 @@ C.centrosome(ax, csm, size=0.3, microtubules=0, centrioles=False, zorder=9)
 # labels
 bio.callout(ax, (12.95, 5.3), (14.2, 10.8), "Lamellipodium", size="tiny")
 bio.callout(ax, (13.3, 6.9), (14.2, 10.2), "Filopodium", size="tiny")
-bio.callout(ax, (6.0, 3.85), (5.6, 0.6), "Stress fibre", size="tiny")
+bio.callout(ax, (6.0, 3.85), (5.6, 0.6), "Stress fiber", size="tiny")
 bio.callout(ax, (10.6, 2.4), (12.4, 0.6), "Focal adhesion", size="tiny")
 bio.callout(ax, (2.0, 5.2), (0.4, 2.6), "Cortex", size="tiny")
 bio.callout(ax, (7.8, 5.45), (9.6, 0.6), "Centrosome", size="tiny")

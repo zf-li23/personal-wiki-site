@@ -66,7 +66,7 @@ bio.panel(ax, "A", (0.2, 13.4))
 bio.label(ax, (6.9, 13.2), "Paragonimus westermani", size="title", bold=True, italic=True)
 eco.cycle(ax, (6.9, 6.6), 4.4, [
     dict(text="Adults paired in lung cysts\n(human, cat, dog, tiger)", icon="phylopic/human", icon_size=1.9, token="animal", bold=True),
-    dict(text="Egg in sputum\nor faeces", draw=egg, icon_size=1.0),
+    dict(text="Egg in sputum\nor feces", draw=egg, icon_size=1.0),
     dict(text="Miracidium in water", draw=miracidium, icon_size=1.0),
     dict(text="Snail (1st intermediate):\nsporocyst, two redia\ngenerations", icon="phylopic/snail", icon_size=1.3, token="animal"),
     dict(text="Short-tailed cercaria", draw=short_cercaria, icon_size=1.2),
@@ -78,7 +78,7 @@ bio.panel(ax, "B", (14.2, 13.4))
 bio.label(ax, (21.0, 13.2), "Echinococcus granulosus", size="title", bold=True, italic=True)
 eco.cycle(ax, (21.0, 6.6), 4.4, [
     dict(text="Adults in small intestine\n(dog, other canids)", icon="phylopic/wolf", icon_size=1.6, token="animal", bold=True),
-    dict(text="Egg with oncosphere\nin faeces", draw=oncosphere, icon_size=1.0),
+    dict(text="Egg with oncosphere\nin feces", draw=oncosphere, icon_size=1.0),
     dict(text="Herbivore (intermediate):\nhydatid cyst in liver, lung", icon="phylopic/cattle", icon_size=1.5, token="animal"),
     dict(text="Brood capsules with\nprotoscoleces", draw=hydatid, icon_size=1.2),
 ], start=90, arrow_labels=["Eggs passed", "Eaten with grass\nor water", "Germinal layer\nbuds", "Offal eaten by dog"],

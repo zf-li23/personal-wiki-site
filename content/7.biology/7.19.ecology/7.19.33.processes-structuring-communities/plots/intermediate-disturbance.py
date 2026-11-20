@@ -51,7 +51,7 @@ pa2.plot(age, 1 + (S0 - 1) * (1 - np.exp(-lam * age)) * np.exp(-mu * age), color
 pa2.set_xlim(0, 400)
 C.style_axes(pa2, None, None)
 pa2.spines["top"].set_visible(True)
-pa2.set_xlabel("patch age a (years), grey dashed curve s(a)", fontsize=FS["tiny"], color=P.muted())
+pa2.set_xlabel("patch age a (years), gray dashed curve s(a)", fontsize=FS["tiny"], color=P.muted())
 pa.legend(frameon=False, fontsize=FS["tiny"], labelcolor=P.ink(), loc="upper right")
 bio.panel(ax, "A", (0.5, 19.6))
 bio.label(ax, (2.6, 19.6), "Successional mosaic", size="small", bold=True, ha="left")

@@ -5,7 +5,7 @@ description: "The Lotka–Volterra predator–prey model in full: assumptions, s
 
 Predators kill prey, and prey feed predators. The interaction is a feedback loop with a delay built into it: an increase of prey is followed by an increase of predators, which reduces the prey, which then starves the predators. Feedback with delay is the classic recipe for oscillation ([7.19.13](/7.19.13)), and the central question of the next three chapters is what the oscillations of consumer–resource systems look like, when they are damped, when they persist, and when they destroy the interaction.
 
-This chapter builds the theory from its simplest model. Section 25.1 treats the **Lotka–Volterra model** ([Definition 23.4.1](/7.5.23#def-23.4.1) of 7.5.23, where it appears as a biochemical oscillator) as an ecological model, with a complete analysis of its closed orbits; Section 25.2 draws from it the one prediction that survives every refinement, the Volterra principle; Section 25.3 adds self-limitation of the prey. Sections 25.4 and 25.5 then replace the model's crudest assumption, that each predator eats prey at a rate proportional to prey density, by the functional responses that behavioural studies actually measure, and by consumption rates that depend on the density of predators too. The consequences of these refinements for stability, the paradox of enrichment and the cycles of natural populations follow in [7.19.26](/7.19.26); discrete-time host–parasitoid models are in [7.19.27](/7.19.27), and parasites and pathogens in [7.19.28](/7.19.28). The kinds of predators and the effects of predation on individual prey are described in [7.19.24](/7.19.24), and the foraging decisions behind consumption rates in [7.18.22](/7.18.22). The mathematics of planar systems (phase plane, linearization, limit cycles) is in [2.4.11](/2.4.11).
+This chapter builds the theory from its simplest model. Section 25.1 treats the **Lotka–Volterra model** ([Definition 23.4.1](/7.5.23#def-23.4.1) of 7.5.23, where it appears as a biochemical oscillator) as an ecological model, with a complete analysis of its closed orbits; Section 25.2 draws from it the one prediction that survives every refinement, the Volterra principle; Section 25.3 adds self-limitation of the prey. Sections 25.4 and 25.5 then replace the model's crudest assumption, that each predator eats prey at a rate proportional to prey density, by the functional responses that behavioral studies actually measure, and by consumption rates that depend on the density of predators too. The consequences of these refinements for stability, the paradox of enrichment and the cycles of natural populations follow in [7.19.26](/7.19.26); discrete-time host–parasitoid models are in [7.19.27](/7.19.27), and parasites and pathogens in [7.19.28](/7.19.28). The kinds of predators and the effects of predation on individual prey are described in [7.19.24](/7.19.24), and the foraging decisions behind consumption rates in [7.18.22](/7.18.22). The mathematics of planar systems (phase plane, linearization, limit cycles) is in [2.4.11](/2.4.11).
 
 ## 25.1. The Lotka–Volterra Predator–Prey Model
 
@@ -63,7 +63,7 @@ J(N^*, P^*) = \begin{bmatrix} 0 & -m/c \\ cr & 0 \end{bmatrix}, \qquad \operator
 $$
 with eigenvalues $\pm\mathrm{i}\sqrt{rm}$. The linearization is a center: small deviations oscillate with angular frequency $\sqrt{rm}$, period $2\pi/\sqrt{rm}$, and an amplitude fixed by the initial condition. Solving the linear system, $N - N^* \propto \cos(\sqrt{rm}\,t)$ and $P - P^* \propto \sin(\sqrt{rm}\,t)$, so the predator lags the prey by a quarter period.
 
-Linearization does not settle the nonlinear behaviour: purely imaginary eigenvalues are exactly the case that Lyapunov's first method leaves open ([Theorem 11.3.1](/2.4.11#thm-11.3.1) of 2.4.11), and a nonlinear perturbation could turn the center into a stable or an unstable focus. For Eq. (25.1) the answer comes from a conserved quantity.
+Linearization does not settle the nonlinear behavior: purely imaginary eigenvalues are exactly the case that Lyapunov's first method leaves open ([Theorem 11.3.1](/2.4.11#thm-11.3.1) of 2.4.11), and a nonlinear perturbation could turn the center into a stable or an unstable focus. For Eq. (25.1) the answer comes from a conserved quantity.
 
 ### 25.1.3. The Conserved Quantity and Closed Orbits
 
@@ -81,7 +81,7 @@ $$
 $$
 The Hessian of $V$ is $\operatorname{diag}(m/N^2,\ r/P^2)$, positive definite, so $V$ is strictly convex; its gradient vanishes only where $caN = m$ and $aP = r$. Each one-variable part, such as $caN - m\ln N$, tends to $+\infty$ as $N \to 0^+$ and as $N \to \infty$, so the sublevel sets $\{V \le v\}$ are compact convex subsets of $Q$, and for $v > V(N^*, P^*)$ the level set $\{V = v\}$ is a simple closed convex curve around the equilibrium. A solution starting on it stays on it, never leaves $Q$ (it stays in a compact subset of $Q$, so it exists for all time), and contains no equilibrium. Its speed $\lvert(\dot N, \dot P)\rvert$ is continuous and positive on the compact curve, hence bounded below by some $s > 0$, so the solution goes once around the curve, of finite length $L$, in time at most $L/s$ and then repeats: it is periodic. $\square$
 
-The first integral was found by separating variables in $\mathrm{d}P/\mathrm{d}N$ ([Example 14.1.2](/2.4.14#ex-14.1.2) of 2.4.14); in the scaled variables of Eq. (25.2) it is $\alpha(x - \ln x) + (y - \ln y)$. $V$ is also a Lyapunov function in the sense of [Theorem 11.4.1](/2.4.11#thm-11.4.1) of 2.4.11 ($V - V^*$ is positive definite and $\dot V = 0$), which shows directly that the equilibrium is stable but not asymptotically stable: a perturbed population neither returns nor drifts away, it simply moves to another orbit. Such a family of closed orbits is a center in the terminology of planar systems, and the closed orbits are not **limit cycles**: none of them is isolated, and none attracts neighbouring orbits. The distinction matters, because the limit cycles of [7.19.26](/7.19.26) are robust where these orbits are not.
+The first integral was found by separating variables in $\mathrm{d}P/\mathrm{d}N$ ([Example 14.1.2](/2.4.14#ex-14.1.2) of 2.4.14); in the scaled variables of Eq. (25.2) it is $\alpha(x - \ln x) + (y - \ln y)$. $V$ is also a Lyapunov function in the sense of [Theorem 11.4.1](/2.4.11#thm-11.4.1) of 2.4.11 ($V - V^*$ is positive definite and $\dot V = 0$), which shows directly that the equilibrium is stable but not asymptotically stable: a perturbed population neither returns nor drifts away, it simply moves to another orbit. Such a family of closed orbits is a center in the terminology of planar systems, and the closed orbits are not **limit cycles**: none of them is isolated, and none attracts neighboring orbits. The distinction matters, because the limit cycles of [7.19.26](/7.19.26) are robust where these orbits are not.
 
 ![The Lotka–Volterra predator–prey model, Eq. (25.1), with r = 1, a = 0.1, c = 0.5 and m = 0.5, so N* = P* = 10. A: the phase plane; the closed curves are level curves of the conserved quantity V (Proposition 25.1.1), the dashed lines the zero isoclines of prey (horizontal) and predator (vertical), and the arrows show the anticlockwise circulation. B: one orbit as time series: the predator peaks about a quarter cycle after the prey; over each cycle both densities average exactly 10 (Theorem 25.1.1). C: the period of the cycle against its amplitude (the maximum prey density reached): it equals 2π/√(rm) ≈ 8.9 for small oscillations and lengthens for large ones, in which prey and predators spend long periods near zero](./plots/lv-phase-portrait.py)
 
@@ -112,7 +112,7 @@ The lesson is not that the Lotka–Volterra model is useless, but which of its p
 
 ### 25.2.1. Fishing in the Adriatic
 
-Volterra's interest in the model came from his son-in-law, the marine biologist Umberto D'Ancona, who had compiled the composition of fish landings in the ports of the northern Adriatic. During the First World War fishing almost stopped, and the proportion of predatory fish (selachians: sharks, skates and rays) in the catch rose markedly, falling again when fishing resumed (Figure 2B). Why should a reduction in fishing, which removes predators and prey alike, favour the predators?
+Volterra's interest in the model came from his son-in-law, the marine biologist Umberto D'Ancona, who had compiled the composition of fish landings in the ports of the northern Adriatic. During the First World War fishing almost stopped, and the proportion of predatory fish (selachians: sharks, skates and rays) in the catch rose markedly, falling again when fishing resumed (Figure 2B). Why should a reduction in fishing, which removes predators and prey alike, favor the predators?
 
 **Proposition 25.2.1 (Volterra Principle)** Suppose that both species of Eq. (25.1) are removed at the same per capita rate $h$, with $0 < h < r$ (fishing or a broad-spectrum pesticide), so that
 
@@ -124,7 +124,7 @@ Then the cycle averages are
 $$
 \bar N = \frac{m + h}{ca}, \qquad \bar P = \frac{r - h}{a}:
 $$
-increasing the harvesting rate increases the average prey density and decreases the average predator density. Equivalently, reducing harvesting (as in wartime) favours the predator.
+increasing the harvesting rate increases the average prey density and decreases the average predator density. Equivalently, reducing harvesting (as in wartime) favors the predator.
 
 **Proof** The harvested system is again of the form (25.1), with $r$ replaced by $r - h > 0$ and $m$ by $m + h$. Theorem 25.1.1 applies and gives the averages. $\square$
 
@@ -202,7 +202,7 @@ with prey growth rate $g(N)$, and most of the theory of [7.19.26](/7.19.26) is a
 
 ### 25.4.2. The Disc Equation
 
-A predator that finds a prey must catch, subdue, eat and digest it before it can search again. Holling (1959) measured this with a blindfolded assistant who searched a table by touch for sandpaper discs, removing each disc found (the handling time) before tapping on; the number of discs found per minute rose with disc density and levelled off.
+A predator that finds a prey must catch, subdue, eat and digest it before it can search again. Holling (1959) measured this with a blindfolded assistant who searched a table by touch for sandpaper discs, removing each disc found (the handling time) before tapping on; the number of discs found per minute rose with disc density and leveled off.
 
 **Proposition 25.4.1 (Holling's Disc Equation)** Suppose a predator searches at rate $a$ (area per unit time) and spends a handling time $h$ on each prey caught, and that prey density $N$ stays constant (prey are replaced or few are eaten). Then the long-run consumption rate is
 

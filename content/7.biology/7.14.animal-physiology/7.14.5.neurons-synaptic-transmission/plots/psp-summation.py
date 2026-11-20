@@ -51,7 +51,7 @@ i = alpha(9, -4.0, tau=5.0) + alpha(11, -4.0, tau=5.0)
 ax.plot(t, VR + e, color=exc, lw=2.0, label="EPSPs alone")
 ax.plot(t, VR + i, color=inh, lw=1.5, ls="--", label="IPSPs alone")
 ax.plot(t, VR + e + i, color=P.ink(), lw=2.0, label="EPSPs + IPSPs")
-ax.set_title("C  Excitation cancelled by inhibition", loc="left", fontsize=10)
+ax.set_title("C  Excitation canceled by inhibition", loc="left", fontsize=10)
 
 for ax in axs:
     ax.axhline(VT, color=P.muted(), lw=1, ls=":")

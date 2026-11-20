@@ -36,7 +36,7 @@ a.set_title("A   Germination time courses", loc="left", fontsize=10)
 b.set_xlabel("Ψ − θH / t / MPa")
 b.set_ylabel("probit(G)")
 b.legend(frameon=False, fontsize=8.5, loc="upper left")
-b.set_title("B   Normalised: one line", loc="left", fontsize=10)
+b.set_title("B   Normalized: one line", loc="left", fontsize=10)
 for x in (a, b):
     x.spines[["top", "right"]].set_visible(False)
 fig.tight_layout()

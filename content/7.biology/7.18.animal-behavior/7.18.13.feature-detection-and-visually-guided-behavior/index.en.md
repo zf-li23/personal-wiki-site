@@ -172,7 +172,7 @@ These controllers have been copied by engineers, who use optic flow sensors for 
 | Locust | Escape jumps, collision avoidance in flight | LGMD → DCMD (Definition 13.3.2) | $\eta = \dot\theta\,\mathrm{e}^{-\alpha\theta}$ (Eq. (13.2)), peak at a threshold angle; multiplication by log–exp |
 | *Drosophila* | Postural preparation and takeoff | LPLC2, LC4 → giant fiber | Size and velocity of expansion; spike timing selects escape mode ([7.18.14](/7.18.14)) |
 | Dragonfly | Interception of flying prey | Small-target motion detectors → 8 pairs of target-selective descending neurons | Constant bearing; predictive head control with internal models; population vector |
-| Flies, bees | Course stabilization, centering, landing, odometry | T4/T5 elementary motion detectors (Reichardt), lobula plate tangential cells | Rotational flow cancelled; translational flow balanced; $\omega = v/h$ constant in landing |
+| Flies, bees | Course stabilization, centering, landing, odometry | T4/T5 elementary motion detectors (Reichardt), lobula plate tangential cells | Rotational flow canceled; translational flow balanced; $\omega = v/h$ constant in landing |
 
 - Feature detectors are best seen as elements of population codes and of circuits shaped by inhibition, modulation and learning, not as single cells that recognize a category (Ewert's command releasing systems).
 - Looming detection (Definition 13.3.1) is a general visual computation found in insects, fish, mice and humans; interception laws (pursuit, constant bearing, proportional navigation) recur from insects to falcons.

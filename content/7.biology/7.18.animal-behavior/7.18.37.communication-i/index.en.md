@@ -117,7 +117,7 @@ $$
 $$
 which is above the red line, so she should accept him; if he sings slowly, $\mathbb{P}(C_1 \mid \text{slow}) = 0.06/0.55 \approx 0.11$, and she should reject him.
 
-![Decisions with a red line. A: expected payoffs of accepting (blue) and rejecting (grey) a male as functions of the probability p that he is of high quality, for the payoffs of Example 37.3.1; the lines cross at the red line p* = 0.375, and the receiver's best payoff (heavy line) is the upper envelope, a convex function of p. B: the posterior probability of a female listening to a sequence of songs from a high-quality male (blue) and a low-quality male (orange), updated by Bayes' theorem after each song (fast songs with probability 0.8 and 0.3); each trace starts at the prior 0.3, and the female accepts once her estimate rises above the red line (dashed). Several songs are often needed, and the low-quality male occasionally crosses the line by chance](./plots/red-line.py)
+![Decisions with a red line. A: expected payoffs of accepting (blue) and rejecting (gray) a male as functions of the probability p that he is of high quality, for the payoffs of Example 37.3.1; the lines cross at the red line p* = 0.375, and the receiver's best payoff (heavy line) is the upper envelope, a convex function of p. B: the posterior probability of a female listening to a sequence of songs from a high-quality male (blue) and a low-quality male (orange), updated by Bayes' theorem after each song (fast songs with probability 0.8 and 0.3); each trace starts at the prior 0.3, and the female accepts once her estimate rises above the red line (dashed). Several songs are often needed, and the low-quality male occasionally crosses the line by chance](./plots/red-line.py)
 
 ### 37.3.4. Signal Detection
 

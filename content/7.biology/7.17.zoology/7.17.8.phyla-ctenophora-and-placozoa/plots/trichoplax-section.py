@@ -72,7 +72,7 @@ ax.add_patch(plt_poly := __import__("matplotlib.patches", fromlist=["RegularPoly
 
 bio.callout(ax, (3.66, 2.4), (3.0, 8.6), "Ventral epithelial cell (ciliated)", size="small")
 bio.callout(ax, (5.66, 3.1), (9.6, 8.6), "Lipophil cell (digestive enzymes)", size="small")
-bio.callout(ax, (9.0, 4.6), (14.4, 8.6), "Fibre cell", size="small")
+bio.callout(ax, (9.0, 4.6), (14.4, 8.6), "Fiber cell", size="small")
 bio.callout(ax, (15.66, 3.4), (18.6, 8.6), "Gland cell (mucus, peptides)", size="small")
 bio.callout(ax, (21.7, 6.16), (23.0, 7.6), "Dorsal epithelium, shiny sphere", size="small")
 bio.callout(ax, (1.45, 4.4), (0.9, 7.0), "Crystal cell", size="small")

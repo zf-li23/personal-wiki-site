@@ -90,5 +90,5 @@ tokens = ("protein", "enzyme", "receptor", "drug", "dna", "positive")
 for i in range(n):
     pC.line(t, hist[:, i], tokens[i], lw=1.5)
 pC.line(t, hist.sum(axis=1), "ink", lw=1.0, dashed=True, text="total", at=0.9, size="tiny")
-bio.label(ax, (9.5, 2.62), "each colour is one antigenic variant: antibody clears the current one, a rare new variant "
+bio.label(ax, (9.5, 2.62), "each color is one antigenic variant: antibody clears the current one, a rare new variant "
                            "grows, and the infection relapses", size="tiny", color=P.muted())

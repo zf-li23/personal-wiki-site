@@ -77,7 +77,7 @@ r = [((kp / (kp + 1 / 2.0)) / (kp / (kp + 1 / 0.2))) ** N for N in (1, 3, 6)]
 axs[2].text(0.012, 0.6, "signal ratio for dwell 2 s vs 0.2 s:\n" + ", ".join(f"N={N}: {x:.0f}×" for N, x in zip((1, 3, 6), r)),
             fontsize=7, color=P.ink())
 axs[2].set_ylim(1e-8, 2)
-charts.style_axes(axs[2], "ligand dwell time 1/k_off / s", "probability of signalling")
+charts.style_axes(axs[2], "ligand dwell time 1/k_off / s", "probability of signaling")
 axs[2].legend(fontsize=7.5, frameon=False, loc="lower right")
 charts.title(axs[2], "C   T-cell receptor proofreading")
 fig.tight_layout()

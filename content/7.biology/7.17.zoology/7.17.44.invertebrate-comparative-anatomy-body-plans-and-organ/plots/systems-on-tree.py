@@ -116,5 +116,5 @@ for j, (title, cells) in enumerate(COLS):
                                     fc=P.light(tok) if kind != NONE else P.light("neutral"),
                                     ec=P.edge(tok), lw=0.5, zorder=4))
         bio.label(ax, (xc, y), text, size="tiny", color=P.muted() if kind == NONE else P.on_fill(), zorder=6)
-bio.label(ax, (x0 + 3.5 * cw, 0.2), "Cell colours group identical states; grey = absent or surface only. "
+bio.label(ax, (x0 + 3.5 * cw, 0.2), "Cell colors group identical states; gray = absent or surface only. "
           "Adult states; variation within a phylum summarized.", size="tiny", color=P.muted())

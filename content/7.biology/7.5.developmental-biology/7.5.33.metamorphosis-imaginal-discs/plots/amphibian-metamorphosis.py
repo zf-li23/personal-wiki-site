@@ -39,7 +39,7 @@ pa = C.axes_at(ax, (17.2, 1.8, 11.8, 6.8))
 st = np.linspace(45, 66, 300)
 th = 0.05 + np.exp(-((st - 62) / 3.0) ** 2) * (st < 62) + np.exp(-((st - 62) / 1.6) ** 2) * (st >= 62)
 pa.plot(st, th, color=Q.line_color("highlight"), lw=2.0)
-for x0, x1, txt, y in ((51, 57, "hindlimb growth", 0.18), (57, 60, "forelimb emergence", 0.45), (60, 63, "gut, skin, brain remodelling", 0.86),
+for x0, x1, txt, y in ((51, 57, "hindlimb growth", 0.18), (57, 60, "forelimb emergence", 0.45), (60, 63, "gut, skin, brain remodeling", 0.86),
                        (62, 66, "tail resorption", 1.0)):
     pa.plot([x0, x1], [y, y], color=P.muted(), lw=2.4, solid_capstyle="butt")
     pa.text((x0 + x1) / 2, y + 0.04, txt, fontsize=bio.core.FONT["tiny"], color=P.ink(), ha="center", va="bottom")

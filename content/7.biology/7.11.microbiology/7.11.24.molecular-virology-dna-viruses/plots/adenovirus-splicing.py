@@ -46,7 +46,7 @@ for i, (x0, name) in enumerate([(5.0, "L1"), (7.2, "L2"), (9.4, "L3"), (11.6, "L
 bio.label(ax, (8.5, 6.55), "one primary transcript: choice of poly(A) site and of 3′ splice site makes about twenty mRNAs",
           size="small", color=P.muted())
 
-for k, (name, body, bx) in enumerate([("L1 mRNA", "L1", 5.0), ("L3 mRNA (hexon)", "L3", 9.4), ("L5 mRNA (fibre)", "L5", 13.8)]):
+for k, (name, body, bx) in enumerate([("L1 mRNA", "L1", 5.0), ("L3 mRNA (hexon)", "L3", 9.4), ("L5 mRNA (fiber)", "L5", 13.8)]):
     yy = 5.85 - 0.95 * k
     for j, x in enumerate((1.6, 2.4, 3.2)):
         exon(x, x + 0.4, yy, "highlight")

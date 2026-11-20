@@ -22,8 +22,8 @@ rows = [
     ("BMP, GDF", "type I/II\nreceptor kinases", "Smad1/5/8\n(+ Smad4)", "Smad complex\n+ cofactors", "dorsal-ventral pattern, epidermis vs\nneural, bone, digit spacing", "antibody", ("activation", "activation", "activation")),
     ("FGF (EGF, PDGF,\nVEGF, IGF)", "receptor tyrosine\nkinase", "Ras–MAPK,\nPI3K", "Ets and other\nTFs", "mesoderm maintenance, limb outgrowth,\nbranching, vessels, growth", "channel", ("activation", "activation", "activation")),
     ("Hedgehog\n(Shh, Ihh, Dhh)", "Patched", "Smoothened\n(primary cilium)", "Gli activator /\nrepressor", "neural tube and limb pattern,\nbone growth, gut", "positive", ("inhibition", "inhibition", "activation")),
-    ("Delta, Jagged\n(on neighbour)", "Notch", "cleavage:\nNICD released", "NICD + CSL\n(RBPJ)", "lateral inhibition, boundaries,\nsomite clock, blood vessels", "drug", ("activation", "activation", "activation")),
-    ("ephrin\n(on neighbour)", "Eph receptor", "RhoA, Rac\n(both cells)", "cytoskeleton,\nadhesion", "boundaries, cell sorting,\naxon and crest guidance", "protein", ("activation", "activation", "activation")),
+    ("Delta, Jagged\n(on neighbor)", "Notch", "cleavage:\nNICD released", "NICD + CSL\n(RBPJ)", "lateral inhibition, boundaries,\nsomite clock, blood vessels", "drug", ("activation", "activation", "activation")),
+    ("ephrin\n(on neighbor)", "Eph receptor", "RhoA, Rac\n(both cells)", "cytoskeleton,\nadhesion", "boundaries, cell sorting,\naxon and crest guidance", "protein", ("activation", "activation", "activation")),
     ("contacts, polarity,\nmechanics", "Fat, Crumbs,\njunctions", "Mst → Lats\n(kinases)", "YAP/TAZ\n+ TEAD", "organ size, inner cell mass vs\ntrophectoderm, regeneration", "metabolite", ("activation", "activation", "inhibition")),
 ]
 xs = [2.2, 6.2, 10.2, 14.2]

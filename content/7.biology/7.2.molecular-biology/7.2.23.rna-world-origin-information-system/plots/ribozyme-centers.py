@@ -107,7 +107,7 @@ bio.box(ax, (7.0, yC - 1.3), 5.0, 0.74, token="rna", text="M1 RNA reads shape, n
 
 # ----------------------------------------------------------------- D: peptidyl transferase centre
 bio.panel(ax, "D", (12.9, 6.2))
-bio.label(ax, (15.8, 6.2), "Peptidyl transferase centre", size="small", bold=True, ha="left")
+bio.label(ax, (15.8, 6.2), "Peptidyl transferase center", size="small", bold=True, ha="left")
 yD = 3.4
 bio.shape(ax, bio.blob((18.9, yD + 0.4), 4.3, 2.5, wobble=0.05, seed=3), token="rrna", alpha=0.35, zorder=2)
 bio.label(ax, (18.9, yD + 2.5), "23S rRNA", size="tiny", color=P.edge("rrna"))
@@ -121,7 +121,7 @@ bio.label(ax, (15.3, yD + 0.1), "peptide\nester", size="tiny", color=P.muted())
 bio.molecule(ax, (20.9, yD + 0.2), token="metabolite", text="", r=0.3, size="tiny")
 bio.label(ax, (22.2, yD + 0.2), "α-NH$_2$ of the\nnew amino acid", size="tiny", color=P.muted(), ha="left")
 bio.arrow(ax, (20.6, yD + 0.0), (17.2, yD - 0.02), kind="process", bend=0.25, color=NEG)
-bio.label(ax, (18.9, yD - 0.95), "attack on the ester carbonyl: a carbon centre", size="tiny", color=NEG)
+bio.label(ax, (18.9, yD - 0.95), "attack on the ester carbonyl: a carbon center", size="tiny", color=NEG)
 nucleophile((16.68, yD + 0.62), "", dy=0)
 bio.callout(ax, (16.6, yD + 0.62), (15.4, yD + 1.8), "2′-OH of A76\nshuttles the proton")
 bio.label(ax, (18.9, yD - 1.75), "catalysis by positioning; no protein side chain reaches the site",

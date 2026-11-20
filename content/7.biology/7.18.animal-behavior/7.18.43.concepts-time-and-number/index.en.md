@@ -49,7 +49,7 @@ Anthony Wright and colleagues (1988) trained two groups of pigeons in a matching
 
 Same–different discrimination with transfer has been shown in baboons, rhesus monkeys, chimpanzees, California sea lions, crows and even the echidna. Three cases are especially informative:
 
-- *Alex*, an African grey parrot trained by Irene Pepperberg to use English labels, answered "What's same?" or "What's different?" about two objects by naming the dimension ("color", "shape" or "matter") on which they were the same or differed, with new objects, and answered "none" when nothing was same or different (Pepperberg 1987).
+- *Alex*, an African gray parrot trained by Irene Pepperberg to use English labels, answered "What's same?" or "What's different?" about two objects by naming the dimension ("color", "shape" or "matter") on which they were the same or differed, with new objects, and answered "none" when nothing was same or different (Pepperberg 1987).
 - *Honeybees* trained in a Y-maze to choose the arm marked with the same color as a sample at the entrance transferred the rule to patterns (and others from odors to colors), and bees trained to choose the different stimulus (non-matching) learned that rule too (Giurfa et al. 2001).
 - *Ducklings* that imprinted shortly after hatching on a pair of identical objects (two red spheres, say) later followed a pair of new identical objects (two blue cubes) rather than a pair of different ones, and ducklings imprinted on a pair of different objects preferred new different pairs (Martinho and Kacelnik 2016). The relation was learned in one exposure, without reinforcement, during the sensitive period of **filial imprinting** ([7.18.5](/7.18.5)).
 

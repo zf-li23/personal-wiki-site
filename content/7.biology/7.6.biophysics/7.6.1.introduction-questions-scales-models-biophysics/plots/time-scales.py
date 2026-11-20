@@ -14,7 +14,7 @@ YEAR = 3.156e7
 events_low = [
     (1e-14, "C–H bond\nvibration"),
     (1e-12, "H-bond rearrangement\nin water"),
-    (3e-12, "charge separation in\nreaction centre"),
+    (3e-12, "charge separation in\nreaction center"),
     (1e-9, "side-chain\nrotation"),
     (1e-6, "fastest\nprotein folding"),
     (1e-3, "enzyme turnover,\naction potential"),

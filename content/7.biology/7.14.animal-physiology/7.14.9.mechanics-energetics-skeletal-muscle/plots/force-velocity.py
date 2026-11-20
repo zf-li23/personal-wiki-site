@@ -45,8 +45,8 @@ for name, vmax, al, col in fib:
     etas.append(ff * vv / (0.1 * vmax + (ff + al) * vv))
 vc = vv[np.argmin(np.abs(etas[0] - etas[1])[200:]) + 200]
 c.axvline(vc, color="0.5", lw=0.9, ls="--")
-c.text(vc - 0.1, 0.47, "slow fibre\nmore efficient", ha="right", va="top", fontsize=8.5, color="0.5")
-c.text(vc + 0.1, 0.47, f"fast fibre\nmore efficient\n(v > {vc:.1f} L₀/s)", ha="left", va="top", fontsize=8.5, color="0.5")
+c.text(vc - 0.1, 0.47, "slow fiber\nmore efficient", ha="right", va="top", fontsize=8.5, color="0.5")
+c.text(vc + 0.1, 0.47, f"fast fiber\nmore efficient\n(v > {vc:.1f} L₀/s)", ha="left", va="top", fontsize=8.5, color="0.5")
 c.legend(frameon=False, fontsize=8.5, loc="lower right")
 c.set_title("C   Efficiency", loc="left", fontsize=10)
 for x in (a, b):

@@ -55,8 +55,8 @@ fig, axs = plt.subplots(1, 2, figsize=(10.5, 3.9))
 ax = axs[0]
 for L, ls in ((1, "-"), (5, "--")):
     o = run(bar(L))
-    ax.plot(t, o[:, 0], color=P.edge("dna"), ls=ls, lw=1.8, label=f"$r_1$ (centre), length {L}")
-    ax.plot(t, o[:, 1], color=P.edge("negative"), ls=ls, lw=1.8, label=f"error $e_1$ (centre), length {L}")
+    ax.plot(t, o[:, 0], color=P.edge("dna"), ls=ls, lw=1.8, label=f"$r_1$ (center), length {L}")
+    ax.plot(t, o[:, 1], color=P.edge("negative"), ls=ls, lw=1.8, label=f"error $e_1$ (center), length {L}")
 ax.set_xlabel("Time / ms")
 ax.set_ylabel("Activity (a.u.)")
 ax.set_ylim(-0.05, 1.35)
@@ -66,8 +66,8 @@ ax.set_title("A  Inference dynamics", loc="left", fontsize=10)
 ax = axs[1]
 Ls = [1, 2, 3, 4, 5]
 res = np.array([run(bar(L))[-1] for L in Ls])
-ax.plot(Ls, res[:, 0], "o-", color=P.edge("dna"), lw=1.8, label="representation $r_1$ (centre)")
-ax.plot(Ls, res[:, 1], "s-", color=P.edge("negative"), lw=1.8, label="error unit $e_1$ (centre)")
+ax.plot(Ls, res[:, 0], "o-", color=P.edge("dna"), lw=1.8, label="representation $r_1$ (center)")
+ax.plot(Ls, res[:, 1], "s-", color=P.edge("negative"), lw=1.8, label="error unit $e_1$ (center)")
 ax.plot(Ls, res[:, 2], "^-", color=P.edge("protein"), lw=1.8, label="level-2 'line' unit $r_2$")
 ax.axhline(0, color=P.muted(), lw=0.7)
 ax.set_xticks(Ls)

@@ -33,7 +33,7 @@ for trial in range(1, 301):
 fig, axs = plt.subplots(1, 3, figsize=(11.5, 3.5), sharey=True)
 for k, col in ((1, P.edge("negative")), (10, P.edge("rna")), (100, P.edge("dna"))):
     axs[0].plot(t, resp[k], color=col, lw=1.8, label=f"trial {k}")
-axs[0].set_title("A  Predictable input is cancelled", loc="left", fontweight="bold", fontsize=9.5)
+axs[0].set_title("A  Predictable input is canceled", loc="left", fontweight="bold", fontsize=9.5)
 axs[0].legend(frameon=False, fontsize=7.5)
 axs[1].plot(t, resp[200], color=P.edge("dna"), lw=1.8, label="response, trial 200")
 axs[1].plot(t, novel, color=P.muted(), lw=1, ls="--", label="novel signal alone")

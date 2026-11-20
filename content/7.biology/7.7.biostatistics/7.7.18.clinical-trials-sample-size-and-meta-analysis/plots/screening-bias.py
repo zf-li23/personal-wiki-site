@@ -43,7 +43,7 @@ dur = rng.lognormal(np.log(2), 0.8, 20000)
 onset = rng.uniform(0, 30, 20000)
 caught = (onset <= 20) & (onset + dur >= 20)
 bins = np.linspace(0, 12, 41)
-ax.hist(dur, bins=bins, density=True, color=P.fill("neutral"), alpha=0.7, label="all tumours")
+ax.hist(dur, bins=bins, density=True, color=P.fill("neutral"), alpha=0.7, label="all tumors")
 ax.hist(dur[caught], bins=bins, density=True, histtype="step", color=charts.line("rna"), lw=1.6,
         label="found at one screen")
 ax.axvline(np.median(dur), color=P.muted(), lw=0.8, ls="--")

@@ -33,7 +33,7 @@ immuno.immune_cell(ax, (12.9, 8.6), r=0.3, token="cd4", seed=5)
 immuno.immune_cell(ax, (13.1, 9.4), r=0.3, token="cd8", seed=6)
 immuno.immune_cell(ax, (15.7, 9.6), r=0.3, token="neutral", seed=7, receptor_token="antibody", receptors=5)
 immuno.immune_cell(ax, (16.9, 9.5), r=0.3, token="neutral", seed=8, receptor_token="antibody", receptors=5)
-bio.label(ax, (14.0, 7.45), "naive T cells scan DCs; T–B border;\ngerminal centre in the follicle", size="tiny")
+bio.label(ax, (14.0, 7.45), "naive T cells scan DCs; T–B border;\ngerminal center in the follicle", size="tiny")
 
 # blood / effector site
 immuno.immune_cell(ax, (22.4, 10.3), r=0.38, token="cd8", seed=9)
@@ -58,7 +58,7 @@ events = [
     (0.5, 2, "receptor", "DC migration"),
     (1, 5, "dna2", "T-cell priming and expansion"),
     (2, 8, "antibody", "B-cell activation, extrafollicular plasmablasts"),
-    (5, 21, "highlight", "germinal centre"),
+    (5, 21, "highlight", "germinal center"),
     (5, 12, "cd8", "effector T cells in tissue, clearance"),
     (12, 24, "neutral", "contraction; memory"),
 ]

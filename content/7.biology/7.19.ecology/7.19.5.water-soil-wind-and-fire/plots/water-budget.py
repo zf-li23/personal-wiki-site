@@ -55,7 +55,7 @@ for val, ls, lab in ((0.67, "--", "oxidation water, starch"), (0.53, ":", "oxida
 bx.set_xlim(0, 100)
 bx.set_ylim(0, 1.2)
 bx.set_xlabel("relative humidity of inhaled air (25 $^\\circ$C) / %")
-bx.set_ylabel("water per litre O$_2$ consumed / g")
+bx.set_ylabel("water per liter O$_2$ consumed / g")
 bx.legend(frameon=False, fontsize=8, loc="lower left")
 bx.set_title("B  Respiratory water loss versus oxidation water", loc="left", fontsize=10)
 for s in ("top", "right"):

@@ -42,7 +42,7 @@ for v, c, lab in ((va, ad, r"A$\delta$ volley: first pain"), (vc, cc, "C volley:
 bx.set_xlim(0, 3)
 bx.set_ylim(0, 1.15)
 bx.set_xlabel("Time after stimulus to the foot / s")
-bx.set_ylabel("Arrivals (normalised)")
+bx.set_ylabel("Arrivals (normalized)")
 bx.legend(frameon=False, fontsize=8, loc="upper right")
 bx.set_title("B  Two volleys, two pains", loc="left", fontsize=10)
 for a in (ax, bx):

@@ -54,8 +54,8 @@ bio.callout(ax, (hx, hy - 1.5), (6.0, 10.1), "neck and collar")
 bio.callout(ax, (3.4 + 0.5, 5.6), (6.3, 7.6), "contractile sheath")
 bio.callout(ax, (3.4, 5.2), (0.3, 6.4), "central tube")
 bio.callout(ax, (3.4 + 0.7, 4.5), (6.3, 5.2), "baseplate")
-bio.callout(ax, (3.4 + 2.6, 3.6), (6.0, 3.0), "long tail fibre\n(receptor binding)")
-bio.callout(ax, (3.4 - 1.2, 3.5), (0.3, 2.4), "short tail fibre")
+bio.callout(ax, (3.4 + 2.6, 3.6), (6.0, 3.0), "long tail fiber\n(receptor binding)")
+bio.callout(ax, (3.4 - 1.2, 3.5), (0.3, 2.4), "short tail fiber")
 
 # ---------------------------------------------------------------- B-E: entry
 titles = [("B", "Reversible binding"), ("C", "Commitment"), ("D", "Contraction"), ("E", "Ejection")]
@@ -69,11 +69,11 @@ for k, (letter, name) in enumerate(titles):
     xc = (xa + xb) / 2
     if k == 0:
         t4(xc, L["om_hi"] + 2.3, s=0.85, zorder=14)
-        bio.label(ax, (xc, 1.5), "a fibre touches LPS or the porin OmpC\nand lets go again, so the particle\nsearches over the surface",
+        bio.label(ax, (xc, 1.5), "a fiber touches LPS or the porin OmpC\nand lets go again, so the particle\nsearches over the surface",
                   size="tiny", color=MUT)
     elif k == 1:
         t4(xc, L["om_hi"] + 1.1, s=0.85, zorder=14)
-        bio.label(ax, (xc, 1.5), "two or three fibres bound: the baseplate\nchanges conformation and the short\nfibres bind irreversibly",
+        bio.label(ax, (xc, 1.5), "two or three fibers bound: the baseplate\nchanges conformation and the short\nfibers bind irreversibly",
                   size="tiny", color=MUT)
     elif k == 2:
         t4(xc, L["om_hi"] + 0.75, s=0.85, contracted=True, zorder=14)

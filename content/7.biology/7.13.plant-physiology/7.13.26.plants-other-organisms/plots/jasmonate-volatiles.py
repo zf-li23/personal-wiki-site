@@ -26,7 +26,7 @@ for k in range(7):
                            edgecolor=P.edge("animal"), lw=0.9, zorder=6))
 bio.label(ax, (5.9, 10.55), "chewing caterpillar", size="small")
 bio.label(ax, (5.9, 7.0), "wounded leaf", size="tiny", color=P.muted())
-bio.label(ax, (5.2, 2.1), "distal leaf: defences induced", size="tiny", color=P.muted())
+bio.label(ax, (5.2, 2.1), "distal leaf: defenses induced", size="tiny", color=P.muted())
 # electrical signal along the stem
 bio.arrow(ax, (3.55, 7.6), (3.55, 4.6), kind="process", dashed=True)
 bio.label(ax, (2.9, 6.6), "electrical", size="tiny", ha="right")
@@ -50,11 +50,11 @@ bio.arrow(ax, (8.0, 9.6), (10.2, 10.6), kind="process")
 
 # outputs
 bio.box(ax, (10.0, 2.2), 5.6, 1.4, token="positive", text=None)
-bio.label(ax, (10.0, 2.6), "Direct defence", size="small", bold=True, color=P.on_fill())
+bio.label(ax, (10.0, 2.6), "Direct defense", size="small", bold=True, color=P.on_fill())
 bio.label(ax, (10.0, 2.0), "proteinase inhibitors, PPO,", size="tiny", color=P.on_fill())
 bio.label(ax, (10.0, 1.65), "nicotine, glucosinolates", size="tiny", color=P.on_fill())
 bio.box(ax, (17.0, 2.2), 5.6, 1.4, token="highlight", text=None)
-bio.label(ax, (17.0, 2.6), "Indirect defence", size="small", bold=True, color=P.on_fill())
+bio.label(ax, (17.0, 2.6), "Indirect defense", size="small", bold=True, color=P.on_fill())
 bio.label(ax, (17.0, 2.0), "volatiles: terpenoids, GLVs,", size="tiny", color=P.on_fill())
 bio.label(ax, (17.0, 1.65), "methyl salicylate; EFN", size="tiny", color=P.on_fill())
 bio.arrow(ax, (12.0, 4.0), (10.6, 2.95), kind="activation")
@@ -75,4 +75,4 @@ bio.label(ax, (wx + 0.3, wy + 1.15), "lays eggs in the caterpillar", size="tiny"
 bio.arrow(ax, (22.9, 6.3), (23.3, 6.9), kind="activation")
 ax.plot([24.6, 24.6], [0.6, 4.2], color=P.edge("plant"), lw=3.2, solid_capstyle="round", zorder=3)
 ax.add_patch(mp.Ellipse((23.6, 3.6), 2.0, 0.8, angle=-20, facecolor=P.fill("plant"), edgecolor=P.edge("plant"), lw=1.1, zorder=4))
-bio.label(ax, (24.6, 0.25), "neighbour: primed", size="tiny")
+bio.label(ax, (24.6, 0.25), "neighbor: primed", size="tiny")

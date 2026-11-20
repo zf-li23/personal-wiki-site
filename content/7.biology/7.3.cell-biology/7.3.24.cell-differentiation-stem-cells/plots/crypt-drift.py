@@ -69,7 +69,7 @@ for k, j in enumerate(show):
     bio.label(ax, (cx, cy), f"{nk}/{N}", size="tiny")
     bio.label(ax, (cx, cy - 1.4), f"event {j}", size="tiny", color=P.muted())
 bio.label(ax, (4.8, 7.4), "Stem-cell ring at the crypt base (one crypt)", size="tiny")
-bio.label(ax, (4.8, 2.9), "Each loss is replaced by a neighbour's division:\nthe labelled clone drifts until lost or fixed",
+bio.label(ax, (4.8, 2.9), "Each loss is replaced by a neighbor's division:\nthe labeled clone drifts until lost or fixed",
           size="tiny", color=P.muted())
 
 bio.panel(ax, "B", (9.8, 9.5))
@@ -81,7 +81,7 @@ pb.text(80, 1 / N + 0.02, "1/N", fontsize=bio.core.FONT["tiny"], color=P.muted()
 pb.set_xlim(0, T)
 pb.set_ylim(0, 1.02)
 pb.legend(frameon=False, fontsize=bio.core.FONT["tiny"], labelcolor=P.ink(), loc="upper right")
-charts.style_axes(pb, "time after labelling / days", "fraction of crypts")
+charts.style_axes(pb, "time after labeling / days", "fraction of crypts")
 charts.title(pb, "Clones are lost or take over")
 
 bio.panel(ax, "C", (19.4, 9.5))

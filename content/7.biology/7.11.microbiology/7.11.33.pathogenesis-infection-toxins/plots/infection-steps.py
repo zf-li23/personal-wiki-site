@@ -61,12 +61,12 @@ for k, t in enumerate(["skin: only through wounds, burns,\ncatheters or an arthr
 
 # ================================================================ bottom: the six steps
 y = 1.75
-stages = [("Entry", "portal of entry;\nsurvive local defences"),
+stages = [("Entry", "portal of entry;\nsurvive local defenses"),
           ("Adhesion", "adhesins bind\nspecific receptors"),
           ("Colonization", "multiply; capsule,\nbiofilm, iron uptake"),
           ("Invasion", "degradative enzymes;\nzipper or trigger uptake"),
           ("Damage", "toxins, enzymes, and\nthe inflammatory response"),
-          ("Transmission", "shedding in secretions,\nfaeces, lesions, blood")]
+          ("Transmission", "shedding in secretions,\nfeces, lesions, blood")]
 w = 2.75
 for i, (title, sub) in enumerate(stages):
     cx = 1.9 + i * 2.95

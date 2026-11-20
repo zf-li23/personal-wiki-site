@@ -48,7 +48,7 @@ bio.label(ax, (3.0, 1.55), "codon–anticodon check by 16S rRNA", size="tiny", c
 rib, e = scene(9.3, 0, {"P": ("AAG", None, False), "A": ("CCA", None, False)}, "2  Peptidyl transfer")
 MB.peptide(ax, [e["A"] + (0.0, 0.3), e["A"] + (-0.3, 1.05), e["A"] + (-0.8, 1.75), e["A"] + (-1.3, 2.35)],
            ["Gly", "Phe", "Ala", "Met"])
-bio.label(ax, (9.3, 1.55), "catalysed by 23S rRNA (PTC)", size="tiny", color=P.muted())
+bio.label(ax, (9.3, 1.55), "catalyzed by 23S rRNA (PTC)", size="tiny", color=P.muted())
 
 # 3 hybrid states + EF-G
 rib, e = scene(15.6, 0, {"P": ("AAG", None, False), "A": ("CCA", None, False)}, "3  Hybrid states, EF-G")

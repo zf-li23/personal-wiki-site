@@ -43,7 +43,7 @@ for k, (f, title) in enumerate(((500, "B  Detector array, 500 Hz"),
         bx.plot(itd, r, color=col, lw=1.4)
     bx.axvspan(-0.66, 0.66, color=P.fill("highlight"), alpha=0.2, lw=0)
     bx.set_xlabel("ITD / ms (positive: sound leads at the left ear)")
-    bx.set_ylabel("Detector rate (normalised)")
+    bx.set_ylabel("Detector rate (normalized)")
     bx.set_xlim(-0.7, 0.7)
     bx.set_ylim(0, 1.15)
     bx.set_title(title, loc="left", fontsize=10)

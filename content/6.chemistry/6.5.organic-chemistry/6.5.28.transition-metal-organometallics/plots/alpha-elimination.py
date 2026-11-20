@@ -13,7 +13,7 @@ ta = s.molecule("[Ta](*)(*)(*)(C(*)[H])C*",
 s.partial(ta.atom(6), ta.atom(7))
 s.curly(ta.bond(0, 7), ta.atom(6), bend=0.6)
 s.curly(ta.bond(4, 6), ta.bond(0, 4), bend=0.6)
-s.text((0.5, -2.4), "four-centre TS", size=11)
+s.text((0.5, -2.4), "four-center TS", size=11)
 s.arrow((3.4, 0), (4.8, 0), below="$-$CMe$_4$")
 x = 6.8
 s.molecule("[Ta](*)(*)(*)=C*", coords=[(0, 0), (-1.2, 0.6), (-1.2, -0.6), (0, -1.3), (1.4, 0.4), (2.0, 1.3)], at=(x, 0),

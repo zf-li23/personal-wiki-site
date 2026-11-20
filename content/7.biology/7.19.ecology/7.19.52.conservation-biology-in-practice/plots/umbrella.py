@@ -87,7 +87,7 @@ pa.set_xticks([])
 pa.set_yticks([])
 bio.panel(ax, "A", (0.3, 10.7))
 bio.label(ax, (1.2, 10.3), "Umbrella reserve network (15 % of area)", size="small", bold=True, ha="left")
-bio.label(ax, (1.2, 9.8), "grey: elevation; green outline: forest; red: reserves", size="tiny", ha="left")
+bio.label(ax, (1.2, 9.8), "gray: elevation; green outline: forest; red: reserves", size="tiny", ha="left")
 
 pb = C.axes_at(ax, (12.6, 1.6, 9.4, 7.6))
 d = opt - 0.55

@@ -20,7 +20,7 @@ inputs = [
     ("gf", 10.6, "growth factors (RTKs)", "receptor"),
     ("ecm", 8.4, "matrix, stiffness (integrins)", "receptor"),
     ("cad", 6.2, "cell–cell contact (cadherins)", "receptor"),
-    ("dll", 4.3, "Delta on neighbours", "receptor"),
+    ("dll", 4.3, "Delta on neighbors", "receptor"),
     ("dmg", 1.8, "DNA damage", "negative"),
 ]
 for k, y, t, tok in inputs:

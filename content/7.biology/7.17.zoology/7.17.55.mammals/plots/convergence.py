@@ -10,7 +10,7 @@ P = bio.P
 fig, ax = bio.canvas(24, 9)
 bio.label(ax, (0.4, 8.3), "Marsupials", size="normal", bold=True, ha="left", color=P.edge("mrna"))
 bio.label(ax, (0.4, 4.4), "Placentals", size="normal", bold=True, ha="left", color=P.edge("dna"))
-pairs = [("phylopic/thylacine", "phylopic/wolf", "cursorial carnivore", "thylacine", "grey wolf"),
+pairs = [("phylopic/thylacine", "phylopic/wolf", "cursorial carnivore", "thylacine", "gray wolf"),
          ("phylopic/sugar-glider", "phylopic/flying-squirrel", "glider", "sugar glider", "flying squirrel"),
          ("phylopic/marsupial-mole", "phylopic/mole", "burrower", "marsupial mole", "mole"),
          ("phylopic/numbat", "phylopic/anteater", "ant and termite eater", "numbat", "giant anteater")]

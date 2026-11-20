@@ -46,4 +46,4 @@ for i, xx in enumerate(xs):
 ax.plot([19.5, 20.6], [3.6, 3.6], color=P.edge("receptor"), lw=3, zorder=3)
 ax.plot([20.6, 21.4], [3.6, 4.3], color=P.edge("receptor"), lw=2, zorder=3)
 ax.plot([20.6, 21.4], [3.6, 2.9], color=P.edge("receptor"), lw=2, zorder=3)
-bio.label(ax, (21.0, 1.2), "odour concentration rises to the right; the stronger tip guides the turn", size="tiny")
+bio.label(ax, (21.0, 1.2), "odor concentration rises to the right; the stronger tip guides the turn", size="tiny")

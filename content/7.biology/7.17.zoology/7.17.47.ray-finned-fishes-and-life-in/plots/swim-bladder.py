@@ -21,7 +21,7 @@ for dn, tok in ((0, "lipid"), (10, "dna"), (50, "metabolite")):
     p.points([dn], [1], tok)
 bio.panel(ax, "A", (0.4, 8.1))
 q = quant.Plot(ax, (13.0, 1.4, 8.4, 6.0), xlim=(0, 200), ylim=(0, 10.5), xlabel="depth / m",
-               ylabel="volume change per metre / %", xticks=[0, 50, 100, 150, 200], yticks=[0, 2, 4, 6, 8, 10])
+               ylabel="volume change per meter / %", xticks=[0, 50, 100, 150, 200], yticks=[0, 2, 4, 6, 8, 10])
 dd = np.linspace(0, 200, 300)
 q.line(dd, 100 / (10 + dd), "dna")
 q.text(60, 7.0, "relative change 1/(10 m + d)", size="tiny", ha="left")

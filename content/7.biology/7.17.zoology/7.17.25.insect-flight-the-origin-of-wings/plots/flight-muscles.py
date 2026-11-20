@@ -54,4 +54,4 @@ section(5.5, y, 2.2, "Upstroke: dorsoventral muscles contract", [dvm(5.5, y, 2.2
 section(17.5, y, 3.2, "Downstroke: basalar muscles contract", [dvm(17.5, y, 3.2, False), bas(17.5, y, True)])
 bio.label(ax, (12.0, 14.7), "Indirect flight muscles (flies, bees, beetles, most Neoptera)", size="normal", bold=True)
 bio.label(ax, (12.0, 7.3), "Direct flight muscles (dragonflies)", size="normal", bold=True)
-bio.label(ax, (12.0, 0.4), "red: contracting muscle; grey: relaxed; dot: pleural wing process (fulcrum)", size="tiny", color=P.muted())
+bio.label(ax, (12.0, 0.4), "red: contracting muscle; gray: relaxed; dot: pleural wing process (fulcrum)", size="tiny", color=P.muted())

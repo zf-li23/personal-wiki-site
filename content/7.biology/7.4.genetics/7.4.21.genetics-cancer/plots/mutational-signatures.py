@@ -9,7 +9,7 @@ from wikibio import charts
 P = bio.P
 FT = bio.core.FONT
 classes = ["C>A", "C>G", "C>T", "T>A", "T>C", "T>G"]
-procs = [("Ageing (C>T at CpG)", [0.10, 0.06, 0.60, 0.05, 0.14, 0.05], "neutral"),
+procs = [("Aging (C>T at CpG)", [0.10, 0.06, 0.60, 0.05, 0.14, 0.05], "neutral"),
          ("Tobacco smoke", [0.55, 0.10, 0.17, 0.08, 0.06, 0.04], "metabolite"),
          ("Ultraviolet light", [0.04, 0.04, 0.82, 0.03, 0.04, 0.03], "highlight"),
          ("Mismatch-repair defect", [0.08, 0.04, 0.52, 0.04, 0.26, 0.06], "receptor")]

@@ -61,7 +61,7 @@ def dens(gc, label13=0.0):
 pb = quant.Plot(ax, (16.0, 1.5, 9.4, 7.6), xlim=(1.68, 1.75), ylim=(0, 1.25),
                 xlabel="buoyant density / (g mL⁻¹)", ylabel="relative amount of DNA",
                 xticks=[1.68, 1.70, 1.72, 1.74], yticks=[0, 0.5, 1.0], grid=True)
-taxa = [("unlabelled taxon, 35% GC", 0.35, 0.0, "dna", 1.0), ("unlabelled taxon, 70% GC", 0.70, 0.0, "neutral", 0.7),
+taxa = [("unlabeled taxon, 35% GC", 0.35, 0.0, "dna", 1.0), ("unlabeled taxon, 70% GC", 0.70, 0.0, "neutral", 0.7),
         ("¹³C substrate user, 35% GC", 0.35, 1.0, "atp", 0.45)]
 for name, gc, lab, tok, amp in taxa:
     pb.line(rho, amp * g(dens(gc, lab)), tok, lw=1.9)

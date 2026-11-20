@@ -10,7 +10,7 @@ from wikibio import bodyaxes as BA
 fig, ax = bio.canvas(22.0, 8.6)
 P = bio.P
 b = BA.amphibian(ax, (3.2, 4.2), 2.0, stage="blastula")
-bio.callout(ax, b["nieuwkoop"], (4.6, 0.5), "Nieuwkoop centre")
+bio.callout(ax, b["nieuwkoop"], (4.6, 0.5), "Nieuwkoop center")
 bio.callout(ax, b["organizer"], (5.9, 7.2), "Organizer")
 bio.label(ax, (3.2, 8.2), "Xenopus, late blastula", size="normal", bold=True, italic=False)
 c1 = BA.chick_blastoderm(ax, (11.0, 4.3), 1.9, stage="prestreak")

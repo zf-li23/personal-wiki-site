@@ -21,7 +21,7 @@ CELLS = [
     ("serrate", "Serrate", "Click beetles"),
     ("clavate", "Clavate", "Butterflies, ladybirds"),
     ("capitate", "Capitate", "Sap beetles"),
-    ("pectinate", "Pectinate", "Fire-coloured beetles"),
+    ("pectinate", "Pectinate", "Fire-colored beetles"),
     ("plumose", "Plumose", "Male mosquitoes, midges"),
     ("lamellate", "Lamellate", "Scarab beetles"),
     ("geniculate", "Geniculate", "Ants, weevils, honey bees"),

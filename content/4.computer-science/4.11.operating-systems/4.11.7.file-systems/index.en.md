@@ -402,7 +402,7 @@ Linux supports dozens of file systems through the VFS. Those a computational bio
 | F2FS | log-structured | flash storage, Android | designed around SSD and eMMC behavior |
 | tmpfs | in memory | `/dev/shm`, often `/tmp` and `/run` | contents vanish at reboot; counts against memory |
 | NFS | network | home and project directories on servers | a client-server protocol over the network; version 4.2 is current |
-| Lustre, IBM Storage Scale (GPFS), BeeGFS, CephFS | parallel, distributed | scratch file systems of clusters | stripe files over many storage servers for aggregate bandwidth ([4.11.11](/4.11.11#sec-11.1)) |
+| Luster, IBM Storage Scale (GPFS), BeeGFS, CephFS | parallel, distributed | scratch file systems of clusters | stripe files over many storage servers for aggregate bandwidth ([4.11.11](/4.11.11#sec-11.1)) |
 
 bcachefs, a copy-on-write file system merged into Linux 6.7, was removed from the mainline kernel in 6.18 (2025) and is now distributed as an external module; it is a reminder that a file system takes a decade to become trusted. For a local disk the defaults (ext4 or XFS) are the right choice unless snapshots or checksums are needed.
 

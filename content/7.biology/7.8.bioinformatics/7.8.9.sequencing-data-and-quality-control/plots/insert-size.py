@@ -56,5 +56,5 @@ for k, (ins, lab) in enumerate(cases):
     bio.arrow(ax, (r1a, y + 0.6), (r1b, y + 0.6), kind="process", color=P.edge("positive"), lw=1.6, head=0.15)
     bio.arrow(ax, (r2b, y - 0.3), (r2a, y - 0.3), kind="process", color=P.edge("protein"), lw=1.6, head=0.15)
     bio.label(ax, (x0, y + 1.15), lab, size="small", ha="left")
-bio.label(ax, (x0, 0.5), "green: read 1 (forward); purple: read 2 (reverse); grey: adapters", size="tiny", ha="left",
+bio.label(ax, (x0, 0.5), "green: read 1 (forward); purple: read 2 (reverse); gray: adapters", size="tiny", ha="left",
           color=P.muted())

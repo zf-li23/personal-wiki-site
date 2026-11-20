@@ -22,7 +22,7 @@ v = {
     "black vs white": (col["race"] == 2).astype(float),
     "other vs white": (col["race"] == 3).astype(float),
     "smoking": col["smoke"],
-    "previous premature labour": (col["ptl"] > 0).astype(float),
+    "previous premature labor": (col["ptl"] > 0).astype(float),
     "hypertension": col["ht"],
 }
 

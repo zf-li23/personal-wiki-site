@@ -17,7 +17,7 @@ fig, ax = bio.canvas(17.4, 7.8)
 
 # --- A  drift -------------------------------------------------------------------------------------
 bio.panel(ax, "A", (0.1, 7.6))
-bio.label(ax, (4.6, 7.45), "Antigenic drift as a travelling wave", size="title", bold=True)
+bio.label(ax, (4.6, 7.45), "Antigenic drift as a traveling wave", size="title", bold=True)
 
 GRID = np.linspace(-1.0, 12.0, 521)
 DX = GRID[1] - GRID[0]
@@ -53,7 +53,7 @@ pax.annotate("antigenic distance from it\ngrows every season",
              xy=(mean_x[115], 115), xytext=(0.7, 131), fontsize=7, color=P.ink(),
              arrowprops=dict(arrowstyle="->", color=P.ink(), lw=0.9))
 charts.style_axes(pax, "antigenic position", "generations")
-bio.label(ax, (4.3, 0.5), "colour: strain abundance at each antigenic position (log scale);\n"
+bio.label(ax, (4.3, 0.5), "color: strain abundance at each antigenic position (log scale);\n"
                           "line: the population mean", size="tiny", color=P.muted())
 
 # --- B  shift -------------------------------------------------------------------------------------

@@ -73,11 +73,11 @@ bio.panel(ax, "C", (13.0, 4.6))
 ax.plot([13.6, 21.6], [2.2, 2.2], color=P.muted(), lw=1.4, zorder=8)
 aggregate((15.3, 2.2), 0.95, "mesoderm")
 aggregate((17.25, 2.2), 0.95, "highlight")
-bio.label(ax, (16.3, 3.6), "two aggregates on a glass fibre", size="tiny")
+bio.label(ax, (16.3, 3.6), "two aggregates on a glass fiber", size="tiny")
 bio.arrow(ax, (18.5, 2.9), (19.8, 2.9), kind="process")
 ax.plot([22.0, 30.5], [2.2, 2.2], color=P.muted(), lw=1.4, zorder=8)
 aggregate((26.0, 2.2), 1.6, "sorted", tokA="mesoderm", tokB="highlight", RA=0.95, offset=(-0.2, 0.0))
-bio.label(ax, (26.0, 0.2), "the less cohesive tissue spreads along the fibre and over its partner", size="tiny")
+bio.label(ax, (26.0, 0.2), "the less cohesive tissue spreads along the fiber and over its partner", size="tiny")
 
 # legend for A colours
 for k, (tok, name) in enumerate((("ectoderm", "epidermal cell"), ("neuron", "neural plate cell"),

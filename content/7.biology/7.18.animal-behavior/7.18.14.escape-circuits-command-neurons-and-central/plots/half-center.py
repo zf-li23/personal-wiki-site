@@ -40,8 +40,8 @@ def simulate(nseg, drive, coup=0.3, tA=None):
 
 Y1 = simulate(1, np.array([1.0]))
 fig, (a, b) = plt.subplots(1, 2, figsize=(11, 4.0), gridspec_kw={"width_ratios": [1, 1.3]})
-a.plot(t, Y1[:, 0, 0] + 0.6, color=P.edge("dna"), lw=1.6, label="left half-centre")
-a.plot(t, Y1[:, 0, 1], color=P.edge("rna"), lw=1.6, label="right half-centre")
+a.plot(t, Y1[:, 0, 0] + 0.6, color=P.edge("dna"), lw=1.6, label="left half-center")
+a.plot(t, Y1[:, 0, 1], color=P.edge("rna"), lw=1.6, label="right half-center")
 a.set_xlim(200, 600)
 a.set_yticks([])
 a.set_xlabel("Time / ms")

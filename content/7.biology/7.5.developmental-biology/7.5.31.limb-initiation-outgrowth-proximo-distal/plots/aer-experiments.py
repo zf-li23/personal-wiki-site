@@ -49,5 +49,5 @@ bio.label(ax, (12.2, y + 1.4), "Old PZ + AER on a young bud", size="tiny", ha="l
 LD.limb_skeleton(ax, (12.4, y), 4.6, upto="stylopod", colored="neutral")
 s = LD.limb_skeleton(ax, (12.4 + 0.34 * 4.6 + 0.05, y), 5.0, start="zeugopod", proportions=(0.0, 0.0, 0.5))
 bio.label(ax, (21.0, y), "zeugopod missing", size="tiny", color=P.muted(), ha="left")
-bio.label(ax, (12.2, 4.2), "grey: host stump; coloured: from the grafted tip", size="tiny", color=P.muted(), ha="left")
+bio.label(ax, (12.2, 4.2), "gray: host stump; colored: from the grafted tip", size="tiny", color=P.muted(), ha="left")
 

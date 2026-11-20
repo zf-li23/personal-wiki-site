@@ -72,7 +72,7 @@ bio.label(ax, (17.0, 5.15), "How good a catalyst is RNA?", size="small", bold=Tr
 items = [("uncatalysed transesterification", 1e-7, "neutral"),
          ("hammerhead ribozyme", 1e1, "rna"),
          ("L-19 IVS", 1e3, "highlight"),
-         ("peptidyl transferase centre", 1e5, "rrna"),
+         ("peptidyl transferase center", 1e5, "rrna"),
          ("typical protein enzyme", 1e6, "enzyme"),
          ("catalytically perfect enzyme", 1e8, "positive")]
 pl = Q.Plot(ax, (16.6, 0.9, 5.4, 3.6), xlim=(1e-8, 1e9), ylim=(-0.6, len(items) - 0.4), xlog=True,

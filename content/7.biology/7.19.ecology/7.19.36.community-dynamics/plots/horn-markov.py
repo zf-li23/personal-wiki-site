@@ -26,7 +26,7 @@ M = np.array([
     [0.00, 0.14, 0.55, 0.31],
     [0.00, 0.01, 0.03, 0.96],
 ])
-names = ["grey birch", "blackgum", "red maple", "beech"]
+names = ["gray birch", "blackgum", "red maple", "beech"]
 toks = ["highlight", "protein", "negative", "plant"]
 
 w, v = np.linalg.eig(M.T)
@@ -52,14 +52,14 @@ for k in range(4):
     pa.plot([535], [100 * old[k]], "D", ms=4, color=c, clip_on=False)
 pa.set_xlim(0, 540)
 pa.set_ylim(0, 102)
-C.style_axes(pa, "years since start (100 % grey birch)", "canopy composition (%)")
+C.style_axes(pa, "years since start (100 % gray birch)", "canopy composition (%)")
 pa.legend(frameon=False, fontsize=FS["tiny"], labelcolor=P.ink(), loc="center right")
 bio.panel(ax, "A", (0.4, 9.6))
 bio.label(ax, (2.2, 9.2), "Convergence to the stationary composition", size="small", bold=True, ha="left")
 
 pb = C.axes_at(ax, (12.6, 1.6, 7.0, 6.8))
 starts = {
-    "100 % grey birch": np.array([1.0, 0, 0, 0]),
+    "100 % gray birch": np.array([1.0, 0, 0, 0]),
     "100 % red maple": np.array([0, 0, 1.0, 0]),
     "50 % blackgum, 50 % maple": np.array([0, 0.5, 0.5, 0]),
     "100 % beech": np.array([0, 0, 0, 1.0]),

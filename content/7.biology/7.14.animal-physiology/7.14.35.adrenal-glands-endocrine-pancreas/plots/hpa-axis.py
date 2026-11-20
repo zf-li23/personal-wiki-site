@@ -69,7 +69,7 @@ axa.set_title("A  Circadian rhythm and a stress response", loc="left", fontsize=
 for kw, col, lab in (
     (dict(), "#2c6fbb", "normal"),
     (dict(KR=1000.0, KA=1600.0, gain=2.0), "#2e8b57", "pituitary adenoma"),
-    (dict(auto=600.0 * kF), "#c0392b", "adrenal tumour"),
+    (dict(auto=600.0 * kF), "#c0392b", "adrenal tumor"),
 ):
     _, yw = model(66.0, **kw)  # warm-up ending at 18:00
     for dex, ls in ((None, ":"), (5.0, "-")):

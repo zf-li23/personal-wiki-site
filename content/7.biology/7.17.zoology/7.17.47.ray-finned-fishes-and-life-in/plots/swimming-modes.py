@@ -31,5 +31,5 @@ for k, (name, lam, (a0, a1, a2)) in enumerate(MODES):
     ax.plot(ox + x * L, oy - A * L, color=P.edge("dna"), lw=1.2, ls="--", zorder=4)
     bio.label(ax, (ox, oy + 1.75), name, size="small", ha="left", bold=True)
     bio.label(ax, (ox + L + 0.2, oy), f"wavelength {lam:.1f} L", size="tiny", ha="left", color=P.muted())
-bio.label(ax, (0.6, 0.35), "Dashed: amplitude envelope; grey: midlines through one tailbeat (model)", size="tiny",
+bio.label(ax, (0.6, 0.35), "Dashed: amplitude envelope; gray: midlines through one tailbeat (model)", size="tiny",
           color=P.muted(), ha="left")

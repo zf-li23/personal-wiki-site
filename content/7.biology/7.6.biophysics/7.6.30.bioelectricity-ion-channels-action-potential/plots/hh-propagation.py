@@ -80,7 +80,7 @@ for tt, tok in [(2.0, "dna"), (4.0, "bacterium"), (6.0, "blood")]:
     ax.plot(x, rec[i], color=charts.line(tok), lw=1.5, label=f"t = {tt:g} ms")
 ax.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P.ink(), loc="upper right")
 charts.style_axes(ax, "position / cm", "V / mV")
-charts.title(ax, "B  Travelling spike")
+charts.title(ax, "B  Traveling spike")
 
 ax = axs[2]
 radii = np.array([3e-4, 1e-3, 3e-3, 1e-2, 3e-2])

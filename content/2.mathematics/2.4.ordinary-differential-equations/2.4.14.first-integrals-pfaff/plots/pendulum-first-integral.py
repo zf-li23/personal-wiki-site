@@ -15,7 +15,7 @@ ax.contour(X, Y, H, levels=[1.0], colors="C3", linewidths=2)
 # direction arrows from the vector field
 xs, ys = np.meshgrid(np.linspace(-6, 6, 17), np.linspace(-2.6, 2.6, 9))
 ax.quiver(xs, ys, ys, -np.sin(xs), color="0.55", angles="xy", width=0.0025)
-ax.plot([-2 * np.pi, 0, 2 * np.pi], [0, 0, 0], "o", color="C2", label="centres (H = -1)")
+ax.plot([-2 * np.pi, 0, 2 * np.pi], [0, 0, 0], "o", color="C2", label="centers (H = -1)")
 ax.plot([-np.pi, np.pi], [0, 0], "s", color="C3", label="saddles, separatrix H = 1")
 ax.set_xlabel("x = theta")
 ax.set_ylabel("y = theta'")

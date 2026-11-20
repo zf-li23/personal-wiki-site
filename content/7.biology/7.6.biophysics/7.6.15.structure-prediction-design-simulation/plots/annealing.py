@@ -74,7 +74,7 @@ for _ in range(20):                                  # show a run that ends in t
     if ees[-1] < energy(2.2, -1.7) + 0.5:
         break
 pts = ax.scatter(pth[::8, 0], pth[::8, 1], c=np.arange(len(pth))[::8], cmap="viridis", s=2, zorder=4)
-charts.title(ax, "B   Simulated annealing (colour = time)")
+charts.title(ax, "B   Simulated annealing (color = time)")
 ax = axs[2]
 final = []
 for r in range(30):

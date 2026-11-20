@@ -33,7 +33,7 @@ for p in (20, 25, 30, 40, 50, 60, 80):
     ax.plot(ph, hco3(ph, p), color="#9e9e9e", lw=0.9 if p != 40 else 1.6)
     x = 7.78 if hco3(7.78, p) < 50 else ph_of(49, p)
     ax.text(x, min(hco3(x, p), 49), f"{p}", fontsize=8, color="#7a7a7a", ha="left", va="bottom")
-ax.text(6.92, 42.5, "grey curves: PCO$_2$ isobars (mmHg)", fontsize=8, color="#7a7a7a", va="top")
+ax.text(6.92, 42.5, "gray curves: PCO$_2$ isobars (mmHg)", fontsize=8, color="#7a7a7a", va="top")
 bl = np.linspace(7.1, 7.7, 10)
 ax.plot(bl, 24 - 28 * (bl - 7.4), color="#7a4fb3", lw=1.2, ls="--")
 ax.text(7.12, 24 - 28 * (7.12 - 7.4) + 0.8, "buffer line", fontsize=8.5, color="#7a4fb3")

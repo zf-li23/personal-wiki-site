@@ -96,7 +96,7 @@ def o2_with_co(pp, frac=0.5):
     return total
 
 
-curves = [("normal", lambda q: theta(q, L0), "blood"), ("anaemia, 50% Hb", lambda q: 0.5 * theta(q, L0), "neutral"),
+curves = [("normal", lambda q: theta(q, L0), "blood"), ("anemia, 50% Hb", lambda q: 0.5 * theta(q, L0), "neutral"),
           ("50% subunits as COHb", o2_with_co, "negative")]
 for name, f, tok in curves:
     pc.plot(p, f(p), color=charts.line(tok), lw=1.7, label=name)
@@ -107,4 +107,4 @@ pc.set_ylim(0, 1.03)
 charts.style_axes(pc, r"$p_{\mathrm{O_2}}$ / kPa", "O₂ per subunit of total Hb")
 charts.title(pc, "Carbon monoxide")
 bc = charts.axes_at(ax, (18.6, 0.55, 3.2, 1.65))
-bars(bc, ["normal", "anaemia", "COHb 50%"], [f(13.3) - f(4.0) for _, f, _ in curves], [t for _, _, t in curves])
+bars(bc, ["normal", "anemia", "COHb 50%"], [f(13.3) - f(4.0) for _, f, _ in curves], [t for _, _, t in curves])

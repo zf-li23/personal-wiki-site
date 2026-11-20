@@ -217,7 +217,7 @@ $$
 $$
 in which individuals age at unit speed and die at rate $\mu(a)$, and the boundary condition at age 0 collects the births.
 
-It is solved by the **method of characteristics** ([2.5.2](/2.5.2)). Along the lines $a - t = \text{const}$ (a cohort ageing as time passes), $\mathrm{d}n/\mathrm{d}t = -\mu(a)n$, so with survivorship $\ell(a) = \exp\bigl(-\int_0^a\mu(s)\,\mathrm{d}s\bigr)$,
+It is solved by the **method of characteristics** ([2.5.2](/2.5.2)). Along the lines $a - t = \text{const}$ (a cohort aging as time passes), $\mathrm{d}n/\mathrm{d}t = -\mu(a)n$, so with survivorship $\ell(a) = \exp\bigl(-\int_0^a\mu(s)\,\mathrm{d}s\bigr)$,
 
 $$
 n(t, a) = \begin{cases} B(t - a)\,\ell(a), & a < t, \\ n_0(a - t)\,\ell(a)/\ell(a - t), & a \ge t, \end{cases}

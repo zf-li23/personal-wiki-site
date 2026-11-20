@@ -76,7 +76,7 @@ for r, (name, s, l12) in enumerate(conds):
         bio.label(ax, (cx + 0.55, cy + 0.2), NAMES[fi], size="tiny", color=P.on_fill())
     bio.label(ax, (x0 - 0.3, y), name.replace("lin-12", r"$\it{lin}$-$\it{12}$"), size="small", ha="right")
 # legend
-for k, (tok, txt) in enumerate(zip(FT, ("1° (vulva centre)", "2° (vulva flanks)", "3° (fuses with epidermis)"))):
+for k, (tok, txt) in enumerate(zip(FT, ("1° (vulva center)", "2° (vulva flanks)", "3° (fuses with epidermis)"))):
     bio.box(ax, (20.2, 8.6 - k * 0.8), 0.55, 0.45, tok)
     bio.label(ax, (20.7, 8.6 - k * 0.8), txt, size="tiny", ha="left")
 bio.label(ax, (22.6, 5.2), "LIN-3 (EGF) from the anchor cell\ninduces 1°; 1° cells signal\nlaterally through LIN-12 (Notch),\nwhich induces 2° and blocks 1°",

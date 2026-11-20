@@ -15,7 +15,7 @@ bp = 48e6
 levels = [
     ("B-DNA (2 nm)", bp * 0.34e-9, "dna", False),
     ("nucleosome array (10 nm)", bp / 200 * 11e-9, "chromatin", False),
-    ("30 nm fibre (in vitro)", bp / 1200 * 11e-9, "chromatin", True),
+    ("30 nm fiber (in vitro)", bp / 1200 * 11e-9, "chromatin", True),
     ("metaphase chromatid", 2e-6, "protein", False),
 ]
 a = C.axes_at(ax, (5.2, 1.3, 7.4, 5.2))

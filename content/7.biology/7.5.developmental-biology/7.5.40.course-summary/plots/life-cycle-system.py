@@ -28,7 +28,7 @@ cell = {
     "Zygote": "Ca2+ signals, cell cycle restart (7.3.18, 7.3.20)",
     "Blastula": "cycles without growth, polarity, Hippo (7.3.20, 7.3.22)",
     "Gastrula, body plan": "adhesion, EMT, actomyosin (7.3.13, 7.3.23)",
-    "Organs": "signalling, differentiation, apoptosis (7.3.19, 7.3.24, 7.3.25)",
+    "Organs": "signaling, differentiation, apoptosis (7.3.19, 7.3.24, 7.3.25)",
     "Adult: growth, renewal, aging": "stem cells, senescence, cancer (7.3.24-7.3.26)",
 }
 gen = {

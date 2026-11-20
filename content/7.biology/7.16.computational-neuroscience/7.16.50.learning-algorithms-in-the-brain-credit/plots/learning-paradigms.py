@@ -13,8 +13,8 @@ fig, ax = bio.canvas(18, 8.2)
 cols = [
     (3.0, "Cerebral cortex", "Unsupervised", "neuron", "Input statistics,\nprediction errors",
      "$\\Delta w \\propto$ pre $\\times$ post\n(Hebbian, normalized)", "Representations,\nmodels of the world"),
-    (9.0, "Cerebellum", "Supervised", "enzyme", "Climbing fibre:\nerror from inferior olive",
-     "$\\Delta w \\propto -$pre $\\times$ error\n(parallel-fibre LTD)", "Internal models,\nprecise timing"),
+    (9.0, "Cerebellum", "Supervised", "enzyme", "Climbing fiber:\nerror from inferior olive",
+     "$\\Delta w \\propto -$pre $\\times$ error\n(parallel-fiber LTD)", "Internal models,\nprecise timing"),
     (15.0, "Basal ganglia", "Reinforcement", "highlight", "Dopamine: reward\nprediction error $\\delta$",
      "$\\Delta w \\propto \\delta \\times$ eligibility\n(three-factor rule)", "Action selection,\nhabits, values"),
 ]

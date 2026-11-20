@@ -40,7 +40,7 @@ for _ in range(60):
     tok = "highlight" if (p[0] > e[0] and p[1] > e[1] - 0.2) else "cytoplasm"
     ax.add_patch(Circle(p, 0.09, facecolor=P.fill(tok), edgecolor=P.edge(tok if tok == "highlight" else "membrane"), lw=0.5,
                         zorder=6))
-bio.label(ax, (6.0, 8.3), "labelled clone", size="tiny", color=P.muted())
+bio.label(ax, (6.0, 8.3), "labeled clone", size="tiny", color=P.muted())
 bio.label(ax, (3.8, 7.3), "dilutes with division; needs\naccessible, large cells", size="tiny", color=P.muted())
 
 # ------------------------------------------------------------------- B chimera
@@ -64,7 +64,7 @@ bio.label(ax, (13.0, 7.0), "chick nucleus:\ndispersed", size="tiny")
 
 # ------------------------------------------------------------------- C Cre-lox
 bio.panel(ax, "C", (16.4, 13.2))
-bio.label(ax, (22.6, 12.7), "Inducible genetic labelling (Cre-loxP)", size="small", bold=True)
+bio.label(ax, (22.6, 12.7), "Inducible genetic labeling (Cre-loxP)", size="small", bold=True)
 G.construct(ax, 17.2, 11.4, [("promoter", "Prom X"), ("cds", "CreER", "enzyme")], unit=0.55)
 bio.label(ax, (24.0, 11.4), "+ tamoxifen: CreER enters the nucleus", size="tiny", ha="left", color=P.muted())
 G.construct(ax, 17.2, 9.6, [("promoter", "Rosa26"), ("lox", None), ("cds", "STOP", "negative"), ("lox", None),
@@ -73,7 +73,7 @@ bio.label(ax, (24.0, 9.6), "before: reporter silent", size="tiny", ha="left", co
 bio.arrow(ax, (20.0, 9.0), (20.0, 8.3), kind="process")
 bio.label(ax, (20.2, 8.65), "Cre excises STOP", size="tiny", ha="left")
 G.construct(ax, 17.2, 7.6, [("promoter", "Rosa26"), ("lox", None), ("cds", "reporter", "positive")], unit=0.55)
-bio.label(ax, (24.0, 7.6), "after: cell and all descendants labelled", size="tiny", ha="left", color=P.muted())
+bio.label(ax, (24.0, 7.6), "after: cell and all descendants labeled", size="tiny", ha="left", color=P.muted())
 
 # ------------------------------------------------------------------- D barcodes
 bio.panel(ax, "D", (0.2, 6.0))

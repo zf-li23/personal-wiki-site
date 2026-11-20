@@ -161,12 +161,12 @@ ax.add_patch(Polygon(np.r_[np.c_[xs[10:-10], y + 0.25 * half[10:-10]], np.c_[xs[
                      facecolor=P.fill("extracellular"), edgecolor=P.edge(SW), lw=0.4, zorder=4))
 for xx in np.linspace(17.6, 21.8, 8):
     ax.plot([xx - 0.08, xx + 0.08], [y + 0.18, y + 0.3], color=P.edge(SW), lw=0.9, zorder=5)
-title(19.7, 0.75, "fibre (longitudinal)")
+title(19.7, 0.75, "fiber (longitudinal)")
 bio.callout(ax, (19.8, y + 0.26), (20.6, 5.0), "Slit-like pits", size="tiny")
 # fibre bundle in section
 for c in hexgrid(23.6, YB - 1.0, 4, 3, 0.62):
     cen = c.mean(axis=0)
     ax.add_patch(Polygon(rounded(c, 0.1), closed=True, facecolor=P.fill(SW), edgecolor=P.edge(SW), lw=1.0, zorder=3))
     ax.add_patch(Circle(cen, 0.12, facecolor=P.fill("extracellular"), edgecolor=P.edge(SW), lw=0.5, zorder=4))
-title(25.4, 0.75, "fibre bundle (section)")
+title(25.4, 0.75, "fiber bundle (section)")
 bio.callout(ax, (25.43, YB + 0.86), (27.5, 5.0), "Narrow lumen", size="tiny")

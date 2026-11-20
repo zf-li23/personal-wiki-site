@@ -65,7 +65,7 @@ z_ph = z[np.argmax(r_ph * (O < 0.01))]
 layers = [  # (z0, z1, token, label)
     (0.00, 0.12, "extracellular", "water: algae, cyanobacteria"),
     (0.12, z_int - 0.03, "enzyme", "cyanobacteria, aerobic heterotrophs"),
-    (z_int - 0.03, z_int + 0.03, "neutral", "colourless sulfur oxidizers (O₂ + H₂S)"),
+    (z_int - 0.03, z_int + 0.03, "neutral", "colorless sulfur oxidizers (O₂ + H₂S)"),
     (z_int + 0.03, z_int + 0.08, "receptor", "purple nonsulfur bacteria"),
     (z_int + 0.08, z_int + 0.18, "protein", "purple sulfur bacteria"),
     (z_int + 0.18, z_int + 0.28, "plant", "green sulfur bacteria"),

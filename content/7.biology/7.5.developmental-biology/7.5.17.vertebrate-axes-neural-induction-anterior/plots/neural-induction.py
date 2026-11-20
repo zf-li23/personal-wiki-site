@@ -35,7 +35,7 @@ for k, (txt, kind, out, tok) in enumerate(rows):
     bio.arrow(ax, (4.6, y - 0.1), (7.2, y - 0.1), kind="process")
     bio.box(ax, (9.2, y - 0.1), 3.2, 0.9, token=tok, text=out, size="small")
     note = {None: "BMP4 made by the cells acts on them", "dissociate": "BMP diluted in the medium",
-            "dissociate+bmp": "BMP restored", "antagonist": "BMP signalling blocked"}[kind]
+            "dissociate+bmp": "BMP restored", "antagonist": "BMP signaling blocked"}[kind]
     bio.label(ax, (11.4, y - 0.1), note, size="tiny", color=P.muted(), ha="left")
 bio.label(ax, (17.6, 6.0), "BMP on → epidermis\nBMP off → neural\n(the default model)", size="normal", bold=True)
 ax.plot([15.4, 15.4], [1.2, 11.0], color=P.mix(P.muted(), P.surface(), 0.5), lw=0.8)

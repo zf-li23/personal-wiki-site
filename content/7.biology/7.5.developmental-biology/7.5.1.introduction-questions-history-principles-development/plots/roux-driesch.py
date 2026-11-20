@@ -88,7 +88,7 @@ bio.label(ax, (17.95, 1.8), "two small complete larvae", size="small", color=P.e
 bio.panel(ax, "C", (20.6, 7.3))
 bio.label(ax, (25.2, 6.8), "Frog blastomeres separated", size="normal", bold=True)
 two_cell((22.6, 4.0), sep=0.25)
-bio.label(ax, (22.6, 1.8), "each half contains\ngrey crescent", size="tiny", color=P.muted())
+bio.label(ax, (22.6, 1.8), "each half contains\ngray crescent", size="tiny", color=P.muted())
 bio.arrow(ax, (24.1, 4.0), (25.6, 4.0), kind="process")
 neurula_half((27.6, 5.0), L=2.2, H=1.1, half=False)
 neurula_half((27.6, 3.1), L=2.2, H=1.1, half=False)

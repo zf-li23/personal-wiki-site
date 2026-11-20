@@ -26,5 +26,5 @@ rows = [["Membrane", "Germ layers", "Origin", "Function"],
         ["Allantois", "endoderm + mesoderm", "hindgut outgrowth", "stores uric acid; vascularizes chorion"],
         ["Yolk sac", "endoderm + mesoderm", "midgut wall", "absorbs and transports yolk"]]
 AM.table(ax, (14.4, 9.4), col_w=[2.0, 3.1, 2.7, 6.4], row_h=[0.8] + [1.1] * 4, cells=rows, size="tiny")
-bio.label(ax, (20.5, 3.0), "Gas exchange: O2 in, CO2 and water vapour out through ~10 000 shell pores",
+bio.label(ax, (20.5, 3.0), "Gas exchange: O2 in, CO2 and water vapor out through ~10 000 shell pores",
           size="tiny", color=P.muted())

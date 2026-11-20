@@ -26,7 +26,7 @@ bars = [("host transcription and\nDNA synthesis", 0, 1.2, "negative", 8.3),
         ("middle transcripts", 2, 12, "enzyme", 6.1),
         ("late transcripts", 9, 30, "drug", 5.0),
         ("phage DNA replication", 4.5, 30, "dna2", 3.9),
-        ("heads, tails and fibres", 9, 30, "protein", 2.8),
+        ("heads, tails and fibers", 9, 30, "protein", 2.8),
         ("complete virions inside", 12, 30, "virus", 1.7)]
 for name, a, b, tok, y in bars:
     x0, x1 = pl.X(a), pl.X(b)

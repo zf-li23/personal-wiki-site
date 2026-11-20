@@ -57,7 +57,7 @@ for k in range(len(t) - 1):
     tok = "dna" if pl[k] > 0.85 else ("positive" if pl[k] > 0.7 else "highlight")
     ax.plot(xs[k:k + 2], ys[k:k + 2], color=P.edge(tok), lw=2.2, solid_capstyle="round")
 bio.arrow(ax, (21.4, 4.5), (22.1, 4.5), kind="process")
-bio.label(ax, (23.6, 1.6), "3D coordinates\ncoloured by pLDDT; PAE", size="small")
+bio.label(ax, (23.6, 1.6), "3D coordinates\ncolored by pLDDT; PAE", size="small")
 bio.label(ax, (23.6, 8.0), "pLDDT: blue high,\ngreen medium, yellow low", size="tiny", color=muted)
 
 # recycling

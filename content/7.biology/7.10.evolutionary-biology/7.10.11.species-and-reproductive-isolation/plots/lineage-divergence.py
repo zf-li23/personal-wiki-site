@@ -24,7 +24,7 @@ for sgn, tok in ((1, "dna"), (-1, "rna")):
     m = t >= split
     ax.plot(t[m], sgn * sep[m], color=P.edge(tok), lw=6, solid_capstyle="butt")
 ax.fill_between([2.2, 8.2], -2.3, 2.3, color=P.fill("neutral"), alpha=0.35, lw=0)
-ax.text(5.2, 2.15, "grey zone: concepts disagree", ha="center", fontsize=FT["tiny"], color=P.muted())
+ax.text(5.2, 2.15, "gray zone: concepts disagree", ha="center", fontsize=FT["tiny"], color=P.muted())
 events = [(2.2, "character\ndifferences"), (3.3, "diagnosable\n(PSC)"), (4.4, "ecological\ndivergence"),
           (5.5, "prezygotic\nisolation"), (6.8, "reciprocal\nmonophyly"), (8.2, "postzygotic\nisolation (BSC\ncomplete)")]
 for x, lab in events:

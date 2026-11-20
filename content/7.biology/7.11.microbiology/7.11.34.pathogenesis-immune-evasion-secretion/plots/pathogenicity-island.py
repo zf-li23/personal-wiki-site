@@ -66,5 +66,5 @@ for i, (sp, size, pseudo, note) in enumerate(reversed(rows)):
                                         lw=0.8, zorder=7))
     bio.label(ax, (pB.X(0) - 0.15, pB.Y(y)), sp, size="tiny", ha="right", italic=True)
     bio.label(ax, (pB.X(size) + 0.2, pB.Y(y)), note, size="tiny", ha="left", color=P.muted())
-bio.label(ax, (5.4, 2.1), "blue: functional genome   grey: pseudogenes and decayed regions", size="tiny",
+bio.label(ax, (5.4, 2.1), "blue: functional genome   gray: pseudogenes and decayed regions", size="tiny",
           color=P.muted(), ha="left")

@@ -28,7 +28,7 @@ axA.set_xlim(0, 1)
 axA.text(0.33, 0.2, "infected zone\n20–40 nM O$_2$\n(leghemoglobin)", ha="center", fontsize=7.2, color=P.ink())
 axA.text(0.73, 400, "diffusion\nbarrier", ha="center", fontsize=7, color=P.ink())
 axA.text(0.9, 20, "outer\ncortex", ha="center", fontsize=7, color=P.ink())
-charts.style_axes(axA, "relative distance from nodule centre", "free O$_2$ / µM")
+charts.style_axes(axA, "relative distance from nodule center", "free O$_2$ / µM")
 charts.title(axA, "A   Oxygen profile")
 
 ax = fig.add_axes([0.40, 0.02, 0.58, 0.96])

@@ -85,7 +85,7 @@ bio.label(ax, (0.3, 9.2), "Human HLA complex (6p21.3, ~3.6 Mb)", size="normal", 
 
 # legend
 bio.label(ax, (16.6, 9.0), "bold: classical class I / class II genes", size="tiny", ha="left", color=P.ink())
-bio.label(ax, (16.6, 8.6), "grey: nonclassical, processing and other genes", size="tiny", ha="left", color=P.muted())
+bio.label(ax, (16.6, 8.6), "gray: nonclassical, processing and other genes", size="tiny", ha="left", color=P.muted())
 
 # mouse H-2 schematic
 ym = 0.75

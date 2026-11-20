@@ -53,7 +53,7 @@ def F(Q, T, eps):
 T = 1.0
 # the two minima are equal when the energy of a native residue balances the entropy of a non-native one
 eps_f = s0 * T
-for dT, tok, lab in ((-0.06, "dna", "T < T_f: native favoured"), (0.0, "neutral", "T = T_f"), (0.06, "rna", "T > T_f: unfolded favoured")):
+for dT, tok, lab in ((-0.06, "dna", "T < T_f: native favored"), (0.0, "neutral", "T = T_f"), (0.06, "rna", "T > T_f: unfolded favored")):
     f = F(Q, T + dT, eps_f)
     ax.plot(Q, f - f.min(), color=charts.line(tok), lw=1.8, label=lab)
 f = F(Q, T, eps_f)

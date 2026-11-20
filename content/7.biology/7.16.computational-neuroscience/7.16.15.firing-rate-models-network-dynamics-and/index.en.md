@@ -166,7 +166,7 @@ Because $G$ is odd and periodic, $\psi = 0$ and $\psi = 1/2$ are always phase-lo
 
 ## 15.7. The Balanced State
 
-Cortical neurons receive thousands of excitatory inputs, each able to depolarize them by about $0.5\,\mathrm{mV}$; if these were not cancelled, a few percent of them active at a few hertz would drive the neuron far above threshold. Yet cortical neurons fire irregularly at low rates. Van Vreeswijk and Sompolinsky (1996) showed that strong excitation and inhibition can cancel dynamically.
+Cortical neurons receive thousands of excitatory inputs, each able to depolarize them by about $0.5\,\mathrm{mV}$; if these were not canceled, a few percent of them active at a few hertz would drive the neuron far above threshold. Yet cortical neurons fire irregularly at low rates. Van Vreeswijk and Sompolinsky (1996) showed that strong excitation and inhibition can cancel dynamically.
 
 **Definition 15.7.1 (Balanced State)** In a network in which each neuron receives $K$ excitatory and $K$ inhibitory inputs with synaptic weights of order $1/\sqrt K$, the **balanced state** is the regime in which the total excitatory and the total inhibitory inputs to each neuron are each of order $\sqrt K$, much larger than the distance from rest to threshold, but cancel to a net mean input of order 1, so that the neurons are driven by the fluctuations of their input and fire irregularly.
 

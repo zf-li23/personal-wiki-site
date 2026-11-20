@@ -101,5 +101,5 @@ bio.callout(ax, vc + np.array([-0.9, 1.4]), (vc[0] - 2.6, Y + 4.2), "Daughter co
 bio.callout(ax, vc + np.array([R * 0.7, R * 0.7]), (vc[0] + 0.9, Y + 4.2), "Somatic cells", size="small")
 # trend arrow
 bio.arrow(ax, (0.8, 11.9), (35.0, 11.9), kind="process", color=P.muted())
-bio.label(ax, (18.0, 12.3), "More cells; division of labour between somatic and reproductive cells; isogamy → oogamy",
+bio.label(ax, (18.0, 12.3), "More cells; division of labor between somatic and reproductive cells; isogamy → oogamy",
           size="small", color=P.muted())

@@ -28,7 +28,7 @@ def resistor(x0, x1, y, tok):
 
 
 rows = [
-    ("Water", "soil", "air", "ΔΨ (liquid), Δc_wv (vapour)", ["root", "xylem", "leaf", "stomata"], "dna", "Ch. 2-3, 10"),
+    ("Water", "soil", "air", "ΔΨ (liquid), Δc_wv (vapor)", ["root", "xylem", "leaf", "stomata"], "dna", "Ch. 2-3, 10"),
     ("CO₂", "air", "chloroplast", "Δc (CO₂)", ["boundary layer", "stomata", "mesophyll"], "metabolite", "Ch. 9-10"),
     ("Sucrose", "source leaf", "sink", "ΔΨp (osmotically generated)", ["loading", "sieve tubes", "unloading"], "carbohydrate", "Ch. 11"),
     ("Ions", "soil solution", "cytosol", "Δμ̃ (electrochemical)", ["channels, carriers, pumps"], "k", "Ch. 4-5"),

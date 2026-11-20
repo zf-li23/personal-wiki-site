@@ -106,4 +106,4 @@ c_.plot(t, np.mean([r[2] for r in runs], axis=0), color=charts.line("negative"),
 c_.set_xlim(0, 48)
 c_.set_ylim(0, 2.6)
 c_.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P_.ink(), loc="upper right")
-charts.style_axes(c_, "time / h", "p53 (grey: single cells)")
+charts.style_axes(c_, "time / h", "p53 (gray: single cells)")

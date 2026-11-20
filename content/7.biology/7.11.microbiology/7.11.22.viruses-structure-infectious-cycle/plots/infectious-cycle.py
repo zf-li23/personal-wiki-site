@@ -64,7 +64,7 @@ for dx, dy in [(-1.9, -0.5), (-1.1, 0.5), (-0.3, -0.8)]:
 for dx, dy in [(1.9, 0.6), (2.3, -0.3), (1.5, -0.8)]:
     ax.add_patch(Circle((cx + dx, cy + dy), 0.17, facecolor=P.fill("protein"), edgecolor=P.edge("protein"), lw=0.6, zorder=10))
 phage(cx + 2.2, cy - 0.1, scale=0.55)
-step(3, (0.4, 5.3), "synthesis: the host programme is shut off;\nphage DNA and proteins are made in a timed order")
+step(3, (0.4, 5.3), "synthesis: the host program is shut off;\nphage DNA and proteins are made in a timed order")
 step(4, (8.3, 5.3), "assembly and packaging")
 for k, (px, py) in enumerate([(12.2, 10.6), (13.2, 9.3), (13.6, 7.7), (13.0, 6.2), (12.0, 5.2)]):
     phage(px, py, scale=0.6)

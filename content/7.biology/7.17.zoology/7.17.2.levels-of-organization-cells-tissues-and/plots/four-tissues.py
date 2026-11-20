@@ -28,7 +28,7 @@ bio.label(ax, (X[0], 1.2), "Goblet cell (mucus)", size="small")
 bio.icon(ax, "servier/fibroblast", at=(X[1] - 1.4, 8.6), width=2.6)
 bio.label(ax, (X[1] - 1.4, 7.0), "Fibroblast", size="small")
 bio.icon(ax, "servier/collagen-fibre", at=(X[1] + 1.6, 8.7), height=3.0)
-bio.label(ax, (X[1] + 1.6, 7.0), "Collagen fibre", size="small")
+bio.label(ax, (X[1] + 1.6, 7.0), "Collagen fiber", size="small")
 bio.icon(ax, "servier/adipocyte", at=(X[1] - 1.4, 4.2), height=2.4)
 bio.label(ax, (X[1] - 1.4, 2.5), "Adipocyte", size="small")
 bio.icon(ax, "servier/red-blood-cell", at=(X[1] + 1.6, 4.2), height=1.6)
@@ -37,7 +37,7 @@ bio.label(ax, (X[1], 1.2), "cells in abundant matrix", size="tiny", color=P.mute
 
 # muscle
 bio.icon(ax, "servier/muscle-fibre", at=(X[2], 8.8), width=5.0)
-bio.label(ax, (X[2], 7.2), "Skeletal (striated) fibre", size="small")
+bio.label(ax, (X[2], 7.2), "Skeletal (striated) fiber", size="small")
 bio.icon(ax, "servier/cardiomyocyte", at=(X[2] - 1.4, 4.6), width=2.6)
 bio.label(ax, (X[2] - 1.4, 2.9), "Cardiomyocyte", size="small")
 bio.icon(ax, "servier/smooth-muscle-cell", at=(X[2] + 1.6, 4.6), width=2.8)

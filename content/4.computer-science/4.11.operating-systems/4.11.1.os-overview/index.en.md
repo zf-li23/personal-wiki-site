@@ -156,7 +156,7 @@ The command `strace ./program` (installed separately on most distributions) show
 
 ### 1.4.3. The Cost of a System Call
 
-A system call is much more expensive than a function call: the mode switch, saving and restoring registers, argument checks and, on processors vulnerable to the Meltdown and Spectre attacks (2018), the extra mitigations at the kernel boundary. A measurement on the laptop used throughout this course (Intel Core Ultra 7 258V, Linux 6.6 under WSL 2), averaging over $10^7$ calls:
+A system call is much more expensive than a function call: the mode switch, saving and restoring registers, argument checks and, on processors vulnerable to the Meltdown and Specter attacks (2018), the extra mitigations at the kernel boundary. A measurement on the laptop used throughout this course (Intel Core Ultra 7 258V, Linux 6.6 under WSL 2), averaging over $10^7$ calls:
 
 ```c
 #define _GNU_SOURCE

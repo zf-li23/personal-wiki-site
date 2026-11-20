@@ -18,7 +18,7 @@ pa.loglog(d, 2 * np.sqrt(d), color=charts.line("neutral"), lw=1.6, ls="--", labe
 dm = np.logspace(0, 1.5, 50)
 pa.loglog(dm, 6 * dm, color=charts.line("dna"), lw=1.6, ls="--", label="myelinated (vertebrate): v ≈ 6 m/s per µm")
 pts = [
-    (1.0, 1.0, "C fibre (mammal)", "neutral", "o"),
+    (1.0, 1.0, "C fiber (mammal)", "neutral", "o"),
     (3.0, 15, "Aδ", "dna", "o"),
     (9.0, 50, "Aβ", "dna", "o"),
     (15, 90, "Aα", "dna", "o"),
@@ -32,12 +32,12 @@ for x, y, lab, tok, m in pts:
     pa.loglog([x], [y], m, ms=7 if m != "*" else 11, color=charts.line(tok), mec=charts.line(tok))
     off = {"squid giant axon": (0.9, 1.35, "right"), "crayfish lateral giant": (1.15, 0.72, "left"),
            "earthworm medial giant": (0.9, 0.66, "right"), "cockroach giant interneuron": (0.85, 0.75, "right"),
-           "penaeid shrimp (myelinated)": (0.8, 1.05, "right"), "C fibre (mammal)": (1.25, 0.8, "left")}.get(lab, (0.8, 1.15, "right"))
+           "penaeid shrimp (myelinated)": (0.8, 1.05, "right"), "C fiber (mammal)": (1.25, 0.8, "left")}.get(lab, (0.8, 1.15, "right"))
     pa.text(x * off[0], y * off[1], lab, fontsize=7.5, color=charts.line(tok), ha=off[2])
 leg = pa.legend(loc="lower right", fontsize=7.5, frameon=False)
 for txt in leg.get_texts():
     txt.set_color(P.ink())
 pa.set_xlim(0.1, 2000)
 pa.set_ylim(0.3, 400)
-charts.style_axes(pa, "axon (or fibre) diameter d / µm", "conduction velocity / (m s⁻¹)")
+charts.style_axes(pa, "axon (or fiber) diameter d / µm", "conduction velocity / (m s⁻¹)")
 charts.title(pa, "Two ways to conduct fast: be thick, or be myelinated")

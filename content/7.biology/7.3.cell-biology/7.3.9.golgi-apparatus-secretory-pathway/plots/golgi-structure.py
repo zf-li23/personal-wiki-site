@@ -91,4 +91,4 @@ def stack(x0, title, mature):
 
 stack(13.4, "Vesicular transport", False)
 stack(18.9, "Cisternal maturation", True)
-bio.label(ax, (17.8, 0.9), "yellow: cargo; small coloured dots: resident enzymes of each cisterna", size="tiny", color=P.muted())
+bio.label(ax, (17.8, 0.9), "yellow: cargo; small colored dots: resident enzymes of each cisterna", size="tiny", color=P.muted())

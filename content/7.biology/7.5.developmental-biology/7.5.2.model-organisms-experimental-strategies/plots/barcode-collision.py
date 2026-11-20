@@ -29,7 +29,7 @@ def p_collide(n, N):
 
 
 bio.panel(ax, "A", (0.2, 9.9))
-pa = quant.Plot(ax, (2.2, 1.5, 9.8, 7.6), xlim=(1, 1e4), ylim=(0, 1), xlog=True, xlabel="number of labelled clones n",
+pa = quant.Plot(ax, (2.2, 1.5, 9.8, 7.6), xlim=(1, 1e4), ylim=(0, 1), xlog=True, xlabel="number of labeled clones n",
                 ylabel="P(at least one shared label)", xticks=[(1, "1"), (10, "10"), (100, "100"), (1000, "1000"), (1e4, "10⁴")],
                 yticks=[0, 0.5, 1], grid=True)
 ns = np.unique(np.geomspace(1, 1e4, 120).astype(int))
@@ -45,7 +45,7 @@ M = 10_000
 w = 1 / np.arange(1, M + 1)
 p = w / w.sum()
 Neff = 1 / np.sum(p**2)
-pb = quant.Plot(ax, (15.8, 1.5, 9.8, 7.6), xlim=(1, 1000), ylim=(0, 1), xlog=True, xlabel="number of labelled clones n",
+pb = quant.Plot(ax, (15.8, 1.5, 9.8, 7.6), xlim=(1, 1000), ylim=(0, 1), xlog=True, xlabel="number of labeled clones n",
                 ylabel="P(at least one shared label)", xticks=[(1, "1"), (10, "10"), (100, "100"), (1000, "1000")],
                 yticks=[0, 0.5, 1], grid=True)
 ns2 = np.unique(np.geomspace(1, 1000, 80).astype(int))

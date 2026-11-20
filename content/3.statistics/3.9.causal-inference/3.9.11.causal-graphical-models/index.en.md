@@ -105,7 +105,7 @@ The local Markov condition is sometimes taken as the definition of a Bayesian ne
 
 A convenient way to characterize the distributions compatible with a DAG is to list the conditional independencies that every such distribution must satisfy. Write $I(\mathbb{P})$ for the set of conditional independence statements $X \perp Y \mid Z$ that hold in $\mathbb{P}$, and $I(G)$ for the set of statements implied by the factorization (11.2) for every $\mathbb{P}$ compatible with $G$. The local Markov condition lists some members of $I(G)$; to read off all of them we need the graphical criterion of d-separation (the "d" stands for directional). It is built from three junctions of three variables.
 
-![Chain, fork and collider. Red arrows mark a path that transmits association between $X$ and $Z$, grey arrows a blocked one; the shaded node is conditioned on. Conditioning on the middle node blocks a chain or a fork and opens a collider.](./plots/junctions.py)
+![Chain, fork and collider. Red arrows mark a path that transmits association between $X$ and $Z$, gray arrows a blocked one; the shaded node is conditioned on. Conditioning on the middle node blocks a chain or a fork and opens a collider.](./plots/junctions.py)
 
 **Definition 11.3.1 (Chain, Fork, Collider)** On a path, a node $Y$ with neighbors $X$ and $Z$ forms
 
@@ -167,7 +167,7 @@ Markov compatibility says that $I(G) \subseteq I(\mathbb{P})$: every independenc
 
 **Definition 11.3.4 (Faithfulness)** A distribution $\mathbb{P}$ is **faithful** to a DAG $G$ if $I(\mathbb{P}) \subseteq I(G)$, that is, every conditional independence in $\mathbb{P}$ is implied by d-separation in $G$; there are no spurious independencies that the graph does not sanction. A DAG that is Markov compatible with $\mathbb{P}$ and to which $\mathbb{P}$ is faithful, so that $I(G) = I(\mathbb{P})$, is a perfect map of $\mathbb{P}$.
 
-**Example 11.3.2 (Cancelling Paths)** Let $X = U_X$, $Z = bX + U_Z$ and $Y = aX + cZ + U_Y$ with independent standard normal errors. The DAG has the arrows $X \to Z$, $Z \to Y$, $X \to Y$, and no d-separation holds between $X$ and $Y$. But $\operatorname{Cov}(X, Y) = a + bc$, which vanishes when $a = -bc$: a direct effect and an indirect effect of equal size and opposite sign cancel. The resulting distribution satisfies $X \perp Y$, which the graph does not imply, so it is not faithful.
+**Example 11.3.2 (Canceling Paths)** Let $X = U_X$, $Z = bX + U_Z$ and $Y = aX + cZ + U_Y$ with independent standard normal errors. The DAG has the arrows $X \to Z$, $Z \to Y$, $X \to Y$, and no d-separation holds between $X$ and $Y$. But $\operatorname{Cov}(X, Y) = a + bc$, which vanishes when $a = -bc$: a direct effect and an indirect effect of equal size and opposite sign cancel. The resulting distribution satisfies $X \perp Y$, which the graph does not imply, so it is not faithful.
 
 :::
 

@@ -49,13 +49,13 @@ def threshold():
 
 fig, ax = bio.canvas(26.0, 9.6)
 toks = ["neutral", "negative"]
-for row, (offs, name, y) in enumerate((((-1, 1), "contact with neighbours", 7.0),
+for row, (offs, name, y) in enumerate((((-1, 1), "contact with neighbors", 7.0),
                                       ((-2, -1, 1, 2), "contact up to two cells away", 4.6))):
     D, _ = simulate(100.0, offs)
     fates = [1 if d > 0.5 * (D.max() + D.min()) else 0 for d in D]
     Dv.cell_row(ax, 1.0, 13.0, y, fates, toks, h=1.0)
     bio.label(ax, (1.0, y + 0.9), name, size="small", ha="left")
-bio.label(ax, (1.0, 2.9), "red: high Delta (inhibiting fate)   grey: low Delta (inhibited)", size="tiny", ha="left", color=P.muted())
+bio.label(ax, (1.0, 2.9), "red: high Delta (inhibiting fate)   gray: low Delta (inhibited)", size="tiny", ha="left", color=P.muted())
 bio.panel(ax, "A", (0.3, 9.0))
 bio.label(ax, (1.0, 9.0), "Spacing set by the range of contact", size="small", bold=True, ha="left")
 

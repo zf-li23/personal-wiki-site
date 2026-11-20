@@ -154,7 +154,7 @@ The tolerance curve can be written as a function. Let $x$ be the level of a fact
 $$
 P(x) = P_{\max} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right),
 $$
-with optimum $\mu$, maximum $P_{\max}$ and tolerance breadth $\sigma$; the ecological amplitude, defined as the range over which $P$ exceeds a fraction $q$ of its maximum, is $\mu \pm \sigma\sqrt{-2\ln q}$. Thermal performance curves are asymmetric and are modelled differently (7.19.4), but the Gaussian captures the essential trade-off.
+with optimum $\mu$, maximum $P_{\max}$ and tolerance breadth $\sigma$; the ecological amplitude, defined as the range over which $P$ exceeds a fraction $q$ of its maximum, is $\mu \pm \sigma\sqrt{-2\ln q}$. Thermal performance curves are asymmetric and are modeled differently (7.19.4), but the Gaussian captures the essential trade-off.
 
 It is often observed that a species with a wide tolerance performs less well at any particular point than a specialist does at its optimum: "a jack of all trades is master of none". The simplest way to express this is to assume that the area under the tolerance curve is fixed, $\int P(x)\,\mathrm{d}x = P_{\max}\sigma\sqrt{2\pi} = c$, so that $P_{\max} = c/(\sigma\sqrt{2\pi})$: doubling the breadth halves the peak (figure below, panel B). Herbivores with narrow diets and generalist omnivores are a familiar example. Which breadth is best then depends on how variable the environment is.
 
@@ -198,8 +198,8 @@ The optimum measured in the laboratory, with one species grown alone, is the phy
 Adaptation to a demanding environment usually involves not a single trait but a coordinated set of morphological, physiological and behavioral traits, an adaptive suite. The dromedary camel (*Camelus dromedarius*) illustrates it for water shortage:
 
 - It feeds on succulent plants and those wet with dew, and it can go without drinking for two weeks or more in winter.
-- Its kidneys produce concentrated urine and its faeces are dry.
-- It lets its body temperature rise from about 34 °C at dawn to about 41 °C by late afternoon when dehydrated, storing heat by day and losing it by conduction and radiation in the cool night instead of by sweating; this saves several litres of water a day (Schmidt-Nielsen 1964).
+- Its kidneys produce concentrated urine and its feces are dry.
+- It lets its body temperature rise from about 34 °C at dawn to about 41 °C by late afternoon when dehydrated, storing heat by day and losing it by conduction and radiation in the cool night instead of by sweating; this saves several liters of water a day (Schmidt-Nielsen 1964).
 - It tolerates the loss of about a quarter of its body water, and the water is lost mainly from the tissues rather than from the blood, so that the blood does not become viscous; its oval red blood cells withstand the osmotic swelling when it drinks over 100 L within minutes.
 - Its hump stores fat as an energy reserve. The metabolic water produced by oxidizing this fat is often cited as a water source, but it is largely offset by the extra respiratory water loss needed to obtain the oxygen for the oxidation, so the hump is an energy store, not a water store.
 
@@ -263,7 +263,7 @@ Regulation need not be physiological. The simplest and most widespread mechanism
 
 3. Using Proposition 2.4.1, compare the optimal thermal tolerance breadth of an insect in a tropical lowland, where the mean temperature of the active season varies with a standard deviation of 1 °C among generations, with one in a temperate region with a standard deviation of 4 °C. What happens if the temperate insect's optimum is 2 °C above the mean temperature?
 
-   **Answer** With the optimum at the mean temperature, $\sigma^* = s$: 1 °C in the tropics, 4 °C in the temperate zone. If the temperate optimum is displaced by 2 °C, $\sigma^* = \sqrt{4^2 + 2^2} \approx 4.5$ °C: a mismatch between optimum and environment favours broader tolerance, just as variability does. The model predicts narrower thermal tolerance in the tropics, consistent with the observed latitudinal pattern (7.19.4), and implies that tropical specialists are more vulnerable to a shift in mean temperature.
+   **Answer** With the optimum at the mean temperature, $\sigma^* = s$: 1 °C in the tropics, 4 °C in the temperate zone. If the temperate optimum is displaced by 2 °C, $\sigma^* = \sqrt{4^2 + 2^2} \approx 4.5$ °C: a mismatch between optimum and environment favors broader tolerance, just as variability does. The model predicts narrower thermal tolerance in the tropics, consistent with the observed latitudinal pattern (7.19.4), and implies that tropical specialists are more vulnerable to a shift in mean temperature.
 
 4. Why is the reproductive stage often the one that limits the distribution of a species? Give an example.
 

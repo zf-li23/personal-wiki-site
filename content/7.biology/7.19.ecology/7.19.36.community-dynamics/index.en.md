@@ -139,7 +139,7 @@ $$
 $$
 with the half-saturation constants ranked so that species 1 needs little nitrogen but much light and species 5 the reverse, and with available nitrogen renewed toward a supply that rises as the soil develops. The species replace one another in order, and diversity is highest in mid-succession, when the supply ratio passes through the region where several species have similar requirements.
 
-![The resource-ratio hypothesis of succession, Eq. (36.1): five species with a trade-off between their nitrogen and light requirements (R*); nitrogen supply rises as soil develops and light at the ground falls as biomass accumulates. A: biomass of the five species over 350 years; each dominates in turn. B: the path of the two resources (arrow, with years marked) and the R* of each species (numbered dots): the environment moves from poor soil and bright light to rich soil and deep shade. C: the number of species with at least 5 % of total biomass and the Shannon diversity H′, highest in mid-succession (computed once the cover is no longer sparse, grey band)](./plots/resource-ratio-succession.py)
+![The resource-ratio hypothesis of succession, Eq. (36.1): five species with a trade-off between their nitrogen and light requirements (R*); nitrogen supply rises as soil develops and light at the ground falls as biomass accumulates. A: biomass of the five species over 350 years; each dominates in turn. B: the path of the two resources (arrow, with years marked) and the R* of each species (numbered dots): the environment moves from poor soil and bright light to rich soil and deep shade. C: the number of species with at least 5 % of total biomass and the Shannon diversity H′, highest in mid-succession (computed once the cover is no longer sparse, gray band)](./plots/resource-ratio-succession.py)
 
 Tilman's experiments at Cedar Creek, Minnesota, supported the hypothesis in part: on old fields of a chronosequence, total soil nitrogen increased with field age, and the late-successional grasses (little bluestem, *Schizachyrium scoparium*, and big bluestem, *Andropogon gerardii*) had lower $R^*$ for nitrogen than the early species. But the late species also grew slowly, so the sequence reflects a trade-off between maximal growth rate and competitive ability for nitrogen as much as a nitrogen–light trade-off. The resource-ratio hypothesis and the competition–colonization trade-off are complementary: one explains which species can win at each stage, the other in what order they arrive.
 
@@ -153,19 +153,19 @@ If late-successional dominants are limited by the arrival of seeds (the competit
 
 Horn (1975, 1981) proposed that forest succession can be predicted, without explaining its mechanisms, from the probabilities of tree-by-tree replacement. Consider a canopy site occupied by a tree of species $i$. Over a fixed interval, here 50 years, the tree is replaced by a tree of species $j$ with probability $p_{ij}$; Horn estimated these probabilities from the proportions of saplings of each species found beneath adult trees of each species in a forest near Princeton, New Jersey. If the replacement of each tree is independent of the history of the site, the species occupying a site in successive intervals is a time-homogeneous **Markov chain** with **transition matrix** $P = (p_{ij})$ ([Definition 9.3.1](/3.5.9#def-9.3.1) of 3.5.9):
 
-| Present occupant | Grey birch | Blackgum | Red maple | Beech |
+| Present occupant | Gray birch | Blackgum | Red maple | Beech |
 |---|---|---|---|---|
-| Grey birch (*Betula populifolia*) | 0.05 | 0.36 | 0.50 | 0.09 |
+| Gray birch (*Betula populifolia*) | 0.05 | 0.36 | 0.50 | 0.09 |
 | Blackgum (*Nyssa sylvatica*) | 0.01 | 0.57 | 0.25 | 0.17 |
 | Red maple (*Acer rubrum*) | 0.00 | 0.14 | 0.55 | 0.31 |
 | Beech (*Fagus grandifolia*) | 0.00 | 0.01 | 0.03 | 0.96 |
 
-A site occupied by grey birch, a pioneer, has only a 5 % chance of still holding grey birch after 50 years, and a 50 % chance of holding red maple; a beech site holds beech again with probability 0.96. If $\boldsymbol{\pi}_t$ is the row vector of the proportions of sites held by each species after $t$ intervals, the law of total probability gives
+A site occupied by gray birch, a pioneer, has only a 5 % chance of still holding gray birch after 50 years, and a 50 % chance of holding red maple; a beech site holds beech again with probability 0.96. If $\boldsymbol{\pi}_t$ is the row vector of the proportions of sites held by each species after $t$ intervals, the law of total probability gives
 
 $$
 \boldsymbol{\pi}_{t+1} = \boldsymbol{\pi}_tP, \qquad \boldsymbol{\pi}_t = \boldsymbol{\pi}_0P^t. \tag{36.2}
 $$
-Starting from a stand of pure grey birch, the composition after 50 years is the first row of $P$, $(5, 36, 50, 9)\,\%$, after 100 years $(1, 29, 39, 31)\,\%$, after 200 years $(0, 18, 24, 58)\,\%$, and it tends to about $(0, 5, 9, 86)\,\%$, close to the composition of old forest in the region, $(0, 3, 4, 93)\,\%$.
+Starting from a stand of pure gray birch, the composition after 50 years is the first row of $P$, $(5, 36, 50, 9)\,\%$, after 100 years $(1, 29, 39, 31)\,\%$, after 200 years $(0, 18, 24, 58)\,\%$, and it tends to about $(0, 5, 9, 86)\,\%$, close to the composition of old forest in the region, $(0, 3, 4, 93)\,\%$.
 
 ### 36.4.2. The Stationary Composition
 
@@ -178,9 +178,9 @@ Horn's matrix is irreducible (every species can eventually replace every other, 
 $$
 \boldsymbol{\pi} \approx (0.0005,\ 0.048,\ 0.085,\ 0.866),
 $$
-which is the stationary composition: 87 % beech, 9 % red maple, 5 % blackgum, and a trace of grey birch. The other eigenvalues are $0.716$, $0.369$ and $0.045$. The second eigenvalue sets the time scale of succession: the deviation from the stationary composition shrinks by a factor $0.716$ every 50 years, an e-folding time of $-50/\ln0.716 \approx 150$ years, so that 90 % of the initial deviation is gone after about $2.30\times150 \approx 340$ years (panel B of the figure below). This is the "time to climax" of the model.
+which is the stationary composition: 87 % beech, 9 % red maple, 5 % blackgum, and a trace of gray birch. The other eigenvalues are $0.716$, $0.369$ and $0.045$. The second eigenvalue sets the time scale of succession: the deviation from the stationary composition shrinks by a factor $0.716$ every 50 years, an e-folding time of $-50/\ln0.716 \approx 150$ years, so that 90 % of the initial deviation is gone after about $2.30\times150 \approx 340$ years (panel B of the figure below). This is the "time to climax" of the model.
 
-![Horn's Markov chain model of succession in a New Jersey forest. A: composition of the canopy, starting from pure grey birch, after successive 50-year intervals (Eq. (36.2)); dashed lines: the stationary distribution (left eigenvector for eigenvalue 1); diamonds at the right: composition of old forest observed in the region. B: distance from the stationary composition for four different initial stands, on a logarithmic scale: all decay in parallel at the rate of the second eigenvalue λ₂ = 0.716 per 50 years. C: one realization of the chain for 60 individual canopy sites starting as grey birch: at the stationary state the forest is a mosaic in which individual sites keep changing species](./plots/horn-markov.py)
+![Horn's Markov chain model of succession in a New Jersey forest. A: composition of the canopy, starting from pure gray birch, after successive 50-year intervals (Eq. (36.2)); dashed lines: the stationary distribution (left eigenvector for eigenvalue 1); diamonds at the right: composition of old forest observed in the region. B: distance from the stationary composition for four different initial stands, on a logarithmic scale: all decay in parallel at the rate of the second eigenvalue λ₂ = 0.716 per 50 years. C: one realization of the chain for 60 individual canopy sites starting as gray birch: at the stationary state the forest is a mosaic in which individual sites keep changing species](./plots/horn-markov.py)
 
 The model makes several points that hold beyond its assumptions.
 

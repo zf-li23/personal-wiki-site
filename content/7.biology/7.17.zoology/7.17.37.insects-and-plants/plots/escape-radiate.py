@@ -30,7 +30,7 @@ ys_p = [10.0, 9.0]
 clade_p = [7.8, 7.0, 6.2, 5.4, 4.6, 3.8]
 tree(1.2, 7.0, ys_p, 5.8, clade_p, "plant")
 ax.plot([2.3], [5.8], marker="s", ms=9, color=P.fill("negative"), mec=P.edge("negative"), zorder=8)
-bio.label(ax, (2.3, 5.2), "new defence", size="small", color=P.edge("negative"))
+bio.label(ax, (2.3, 5.2), "new defense", size="small", color=P.edge("negative"))
 bio.label(ax, (4.1, 10.7), "Plants", size="normal", bold=True)
 for y in ys_p:
     bio.label(ax, (4.1, y + 0.35), "undefended", size="tiny", color=mut)
@@ -49,4 +49,4 @@ for yi, yp in zip(ys_i[:2], ys_p):
     seg((13.0, yi), (7.0, yp), color=mut, lw=0.9, ls=":")
 bio.label(ax, (10.0, 1.6), "Example: Brassicales (glucosinolates, ~90 Ma) and Pierinae (nitrile-specifier protein, ~70-80 Ma)",
           size="small", color=mut)
-bio.label(ax, (10.0, 0.8), "time runs from the roots (outside) toward the tips (centre)", size="tiny", color=mut)
+bio.label(ax, (10.0, 0.8), "time runs from the roots (outside) toward the tips (center)", size="tiny", color=mut)

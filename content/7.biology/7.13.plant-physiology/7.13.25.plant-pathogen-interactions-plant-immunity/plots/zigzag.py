@@ -16,11 +16,11 @@ ax.axhline(0.70, color="#d9463b", lw=1.2, ls="--")
 ax.text(7.75, 0.315, "threshold for\neffective resistance", va="bottom", ha="right", fontsize=9, color="#2e9e5b")
 ax.text(7.75, 0.715, "threshold for HR", ha="right", fontsize=9, color="#d9463b")
 lab = [
-    (0.5, 0.25, "PAMPs\nrecognised by PRRs", "PTI"),
+    (0.5, 0.25, "PAMPs\nrecognized by PRRs", "PTI"),
     (1.5, 0.30, "effector A\nsuppresses PTI", "ETS"),
-    (2.5, 0.50, "NLR-1 recognises\neffector A", "ETI"),
+    (2.5, 0.50, "NLR-1 recognizes\neffector A", "ETI"),
     (3.5, 0.50, "pathogen loses A,\ngains effector B", "ETS"),
-    (4.5, 0.55, "NLR-2 recognises\neffector B", "ETI"),
+    (4.5, 0.55, "NLR-2 recognizes\neffector B", "ETI"),
     (5.5, 0.60, "effector C\nescapes recognition", "ETS"),
 ]
 for x, y, t, ph in lab:
@@ -36,7 +36,7 @@ ax.text(3.5, -0.47, "time and evolutionary rounds of the host-pathogen interacti
 ax.set_xlim(-0.1, 7.8)
 ax.set_ylim(-0.55, 1.05)
 ax.set_xticks([])
-ax.set_ylabel("Amplitude of defence (arbitrary units)")
+ax.set_ylabel("Amplitude of defense (arbitrary units)")
 ax.spines[["top", "right", "bottom"]].set_visible(False)
 ax.set_yticks([0, 0.5, 1.0])
 fig.tight_layout()

@@ -12,7 +12,7 @@ fig, ax = bio.canvas(17, 8.4)
 
 # --- A  three programmes ----------------------------------------------------------------------------------
 bio.panel(ax, "A", (0.1, 8.2))
-bio.label(ax, (4.6, 8.0), "Three transcriptional programmes", size="title", bold=True)
+bio.label(ax, (4.6, 8.0), "Three transcriptional programs", size="title", bold=True)
 rows = [
     ("Simian virus 40", 6.6, [(0.6, 4.2, "Early (large T)", "positive"), (4.2, 8.6, "Late (capsid)", "virus")], 4.2,
      [(1.1, "large T")]),
@@ -70,5 +70,5 @@ bio.label(ax, (13.6, 1.3), "$\\mathrm{d}G/\\mathrm{d}t = r\\,E\\,G\\,(1 - G/K)$ 
           size="tiny", color=P.muted())
 bio.label(ax, (13.6, 0.85), "$\\mathrm{d}L/\\mathrm{d}t = m\\,(G/K) - \\delta L$ : late output follows template number",
           size="tiny", color=P.muted())
-bio.label(ax, (13.6, 0.3), "A single feedback (early → genomes → late) orders the programme",
+bio.label(ax, (13.6, 0.3), "A single feedback (early → genomes → late) orders the program",
           size="tiny", color=P.muted())

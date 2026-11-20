@@ -20,8 +20,8 @@ rows = [
     ("Leaf senescence", [-1, -1, -1, 1, 1, 0, 1, 1, 1]),
     ("Abscission", [-1, 0, -1, 1, 1, 0, 1, 0, 0]),
     ("Stomatal opening", [0, 0, 1, -1, 0, 0, -1, -1, 0]),
-    ("Defence: biotrophic pathogens", [0, 0, 0, -1, 0, 0, -1, 1, 0]),
-    ("Defence: herbivores, necrotrophs", [0, 0, 0, 0, 1, 0, 1, -1, 0]),
+    ("Defense: biotrophic pathogens", [0, 0, 0, -1, 0, 0, -1, 1, 0]),
+    ("Defense: herbivores, necrotrophs", [0, 0, 0, 0, 1, 0, 1, -1, 0]),
     ("Abiotic stress tolerance", [0, 0, 0, 1, 0, 1, 0, 0, 0]),
     ("Arbuscular mycorrhiza", [0, -1, 0, 0, -1, 0, 0, 0, 1]),
 ]

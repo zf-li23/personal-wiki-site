@@ -37,6 +37,6 @@ for p, col in [(1, "C0"), (10, "C1"), (100, "C2"), (300, "C3")]:
     ax2.plot(T2, [x_nh3(t, p) for t in T2], color=col, lw=1.6, label=f"p = {p} bar")
 ax2.set_xlabel("T / K")
 ax2.set_ylabel(r"equilibrium $x(\mathrm{NH_3})$")
-ax2.set_title("lower T and higher p favour NH3", fontsize=10)
+ax2.set_title("lower T and higher p favor NH3", fontsize=10)
 ax2.legend(frameon=False, fontsize=9)
 fig.tight_layout()

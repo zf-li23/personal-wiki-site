@@ -36,13 +36,13 @@ ax.set_title("A  Two-state thermo-TRPs", loc="left", fontsize=10)
 cold = po(31, -150) * po(17, 300)
 warm = po(37, 300) * po(46, -600)
 heat = po(46, 500)
-for r, c, lab in ((cold, P.edge("dna"), "cold fibre"), (warm, P.edge("enzyme"), "warm fibre"),
+for r, c, lab in ((cold, P.edge("dna"), "cold fiber"), (warm, P.edge("enzyme"), "warm fiber"),
                   (heat, P.edge("rna"), "heat nociceptor")):
     bx.plot(Tc, r / r.max(), color=c, lw=2, label=lab)
 bx.set_xlabel("Skin temperature / °C")
-bx.set_ylabel("Static discharge (normalised)")
+bx.set_ylabel("Static discharge (normalized)")
 bx.legend(frameon=False, fontsize=7.5, loc="upper left")
-bx.set_title("B  Fibre types (schematic)", loc="left", fontsize=10)
+bx.set_title("B  Fiber types (schematic)", loc="left", fontsize=10)
 
 x = np.linspace(38, 52, 400)
 from math import erf

@@ -38,7 +38,7 @@ bio.panel(ax, "A", (0.2, 10.7))
 egg(8.8, "Drosophila", [(0.08, 0.32, "dna", "head"), (0.32, 0.5, "positive", "thorax"), (0.5, 0.95, "drug", "abdomen")])
 egg(5.6, "Tribolium", [(0.45, 0.68, "dna", "head"), (0.68, 0.8, "positive", "th."), (0.8, 0.98, "highlight", "growth zone")])
 egg(2.4, "Schistocerca", [(0.8, 0.88, "dna", "h"), (0.88, 0.99, "highlight", "gz")])
-bio.label(ax, (7.5, 0.5), "grey: extraembryonic tissue (serosa, amnioserosa)", size="tiny", color=P.muted())
+bio.label(ax, (7.5, 0.5), "gray: extraembryonic tissue (serosa, amnioserosa)", size="tiny", color=P.muted())
 
 pa = charts.axes_at(ax, (18.5, 1.8, 10.5, 7.6))
 t = np.linspace(0, 1, 400)

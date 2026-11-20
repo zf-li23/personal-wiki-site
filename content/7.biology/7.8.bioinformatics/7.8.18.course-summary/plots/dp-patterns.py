@@ -45,7 +45,7 @@ c = lambda i, j: (x0 + (j + 0.5) * s, y0 + (5 - i + 0.5) * s)
 arr(c(2, 2), c(3, 3)); arr(c(2, 3), c(3, 3)); arr(c(3, 2), c(3, 3))
 bio.label(ax, (x0 + 3 * s, y0 + 6 * s + 0.35), "sequence y", size="tiny")
 bio.label(ax, (x0 - 0.4, y0 + 3 * s), "sequence x", size="tiny", rotation=90)
-caption(x0 + 3 * s, "A  alignment", ["F(i, j) from 3 neighbours", "NW, SW, Gotoh: O(mn)"])
+caption(x0 + 3 * s, "A  alignment", ["F(i, j) from 3 neighbors", "NW, SW, Gotoh: O(mn)"])
 
 # B: HMM trellis
 bx = 8.6

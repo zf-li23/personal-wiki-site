@@ -40,7 +40,7 @@ def run(wg_on=True, block=None, T=30.0, dt=0.02):
 
 
 fig, ax = bio.canvas(23.0, 8.6)
-cases = [("A", "wild type", {}), ("B", "wingless mutant", {"wg_on": False}), ("C", "Hedgehog signalling blocked, 5 < t < 9",
+cases = [("A", "wild type", {}), ("B", "wingless mutant", {"wg_on": False}), ("C", "Hedgehog signaling blocked, 5 < t < 9",
                                                                              {"block": (5, 9)})]
 for k, (letter, title, kw) in enumerate(cases):
     E, Wg = run(**kw)

@@ -38,7 +38,7 @@ bio.panel(ax, "A", (0.3, 10.2))
 p = quant.Plot(ax, (1.8, 1.6, 8.0, 8.0), xlim=(-2, 2.5), ylim=(-2, 2.5), xlabel="Pitch (standardized)",
                ylabel="Duration (standardized)", xticks=[-2, -1, 0, 1, 2], yticks=[-2, -1, 0, 1, 2])
 bio.panel(ax, "B", (11.6, 10.2))
-q = quant.Plot(ax, (13.4, 1.6, 9.8, 8.0), xlim=(0, 6000), ylim=(0, 3.5), xlabel="Renditions practised",
+q = quant.Plot(ax, (13.4, 1.6, 9.8, 8.0), xlim=(0, 6000), ylim=(0, 3.5), xlabel="Renditions practiced",
                ylabel="Distance from template", xticks=[0, 2000, 4000, 6000], yticks=[0, 1, 2, 3])
 for name, s, deaf, tok in runs:
     path, err = run(s, deaf, seed=1)

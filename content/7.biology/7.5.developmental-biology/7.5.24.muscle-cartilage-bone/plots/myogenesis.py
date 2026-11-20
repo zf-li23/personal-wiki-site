@@ -63,7 +63,7 @@ for k in range(5):
                          lw=0.6, zorder=7))
 ax.plot([x0 - 0.05, x1 + 0.05], [y + 0.78, y + 0.78], color=P.edge("enzyme"), lw=1.4, zorder=6)
 cell((21.6, y + 0.66), 0.38, 0.12, "positive", nuc=False)
-bio.label(ax, (21.85, y + 1.2), "Myofibre", size="small")
+bio.label(ax, (21.85, y + 1.2), "Myofiber", size="small")
 bio.callout(ax, (21.6, y + 0.66), (23.6, y + 1.55), "Satellite cell (Pax7)")
 bio.callout(ax, (24.6, y + 0.78), (25.0, y + 2.2), "Basal lamina")
 

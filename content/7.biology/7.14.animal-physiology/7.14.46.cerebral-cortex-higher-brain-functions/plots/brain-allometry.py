@@ -24,7 +24,7 @@ data = {
     ],
     "Birds": [
         ("hummingbird", 0.004, 0.13), ("zebra finch", 0.012, 0.45), ("pigeon", 0.4, 2.3),
-        ("barn owl", 0.4, 6.0), ("grey parrot", 0.42, 8.8), ("crow", 0.5, 9.5),
+        ("barn owl", 0.4, 6.0), ("gray parrot", 0.42, 8.8), ("crow", 0.5, 9.5),
         ("raven", 1.2, 15), ("duck", 1.2, 6.0), ("chicken", 2.0, 3.6), ("emu", 40, 25),
         ("ostrich", 100, 40),
     ],
@@ -41,7 +41,7 @@ cols = {"Mammals": P.edge("rna"), "Birds": P.edge("dna"), "Reptiles": P.edge("pl
         "Fishes": P.edge("enzyme")}
 marks = {"Mammals": "o", "Birds": "s", "Reptiles": "^", "Fishes": "D"}
 label_these = {"human", "dolphin", "chimpanzee", "elephant", "blue whale", "mouse", "raven",
-               "ostrich", "crocodile", "white shark", "elephantnose fish", "grey parrot"}
+               "ostrich", "crocodile", "white shark", "elephantnose fish", "gray parrot"}
 
 fig, (ax, bx) = plt.subplots(1, 2, figsize=(11.5, 4.6), gridspec_kw=dict(width_ratios=[1.5, 1]))
 xx = np.logspace(-3, 5.2, 50)
@@ -55,7 +55,7 @@ for grp, rows in data.items():
     for name, mm, ee in rows:
         if name in label_these:
             off = {"human": (-20, 5), "mouse": (-8, 8), "elephantnose fish": (6, -10),
-                   "chimpanzee": (-38, 5), "grey parrot": (-40, 5)}.get(name, (4, 3))
+                   "chimpanzee": (-38, 5), "gray parrot": (-40, 5)}.get(name, (4, 3))
             ax.annotate(name, (mm, ee), xytext=off, textcoords="offset points", fontsize=7,
                         color=P.ink())
 ax.loglog(xx, 0.12 * (xx * 1000) ** (2 / 3), "--", color=P.muted(), lw=1,

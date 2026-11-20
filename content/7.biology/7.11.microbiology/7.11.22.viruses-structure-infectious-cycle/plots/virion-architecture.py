@@ -131,7 +131,7 @@ for s in (-1, 1):
 bio.callout(ax, (hx - 0.7, hy + 0.6), (21.4, 9.4), "prolate icosahedral head:\n169 kbp of dsDNA")
 bio.callout(ax, (hx + 0.40, hy - 3.2), (25.3, 5.0), "contractile sheath\naround the tail tube")
 bio.callout(ax, (hx + 0.5, hy - 4.95), (25.3, 3.4), "baseplate")
-bio.callout(ax, (hx + 1.6, hy - 4.6), (25.3, 2.3), "long and short tail fibres")
+bio.callout(ax, (hx + 1.6, hy - 4.6), (25.3, 2.3), "long and short tail fibers")
 
 # ---------------------------------------------------------------- D: enveloped, influenza
 bio.panel(ax, "D", (27.4, 10.9))

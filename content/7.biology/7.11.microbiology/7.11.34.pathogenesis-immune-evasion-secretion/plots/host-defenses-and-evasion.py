@@ -6,7 +6,7 @@ from wikibio import microbio as M
 
 P = bio.P
 fig, ax = bio.canvas(19.0, 8.6)
-bio.label(ax, (9.5, 8.35), "Four defences, and what the pathogen does about each", size="title", bold=True)
+bio.label(ax, (9.5, 8.35), "Four defenses, and what the pathogen does about each", size="title", bold=True)
 
 W = 4.3
 columns = [

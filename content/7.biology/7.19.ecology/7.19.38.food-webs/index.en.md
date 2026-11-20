@@ -72,7 +72,7 @@ Here the web has no loops, and the species can be solved one at a time; with loo
 Are the regularities of real webs (the proportions of basal, intermediate and top species, connectance, chain lengths, the frequency of omnivory) consequences of simple rules? Two stochastic models generate webs with prescribed $S$ and $C$.
 
 - *The cascade model* (Cohen and Newman 1985): species are ranked $1, \dots, S$, and each species $i$ eats each lower-ranked species $j < i$ independently with probability $p = 2CS/(S - 1)$. The ranking forbids loops: there is a hierarchy in which every species eats only those below it. The model reproduces the proportions of basal, intermediate and top species of the early webs, but underestimates the frequency of species with similar diets and of omnivory.
-- *The niche model* (Williams and Martinez 2000): each species $i$ receives a niche value $n_i$ uniform on $[0, 1]$ (think of body size), a feeding range of width $r_i = xn_i$ with $x$ drawn from a Beta$(1, \beta)$ distribution, $\beta = 1/(2C) - 1$ (so that $\mathbb{E}[x] = 2C$ and the expected connectance is $C$), and a range centre $c_i$ uniform on $[r_i/2, n_i]$. Species $i$ eats all species whose niche values lie in $[c_i - r_i/2, c_i + r_i/2]$.
+- *The niche model* (Williams and Martinez 2000): each species $i$ receives a niche value $n_i$ uniform on $[0, 1]$ (think of body size), a feeding range of width $r_i = xn_i$ with $x$ drawn from a Beta$(1, \beta)$ distribution, $\beta = 1/(2C) - 1$ (so that $\mathbb{E}[x] = 2C$ and the expected connectance is $C$), and a range center $c_i$ uniform on $[r_i/2, n_i]$. Species $i$ eats all species whose niche values lie in $[c_i - r_i/2, c_i + r_i/2]$.
 
 The niche model adds two features: diets are contiguous intervals on one niche axis (Figure 1B), so that species with similar niche values share predators and prey, and a consumer can eat species with slightly larger niche values than its own, permitting loops and cannibalism. Fed only $S$ and $C$, it predicts a dozen properties of the best-resolved webs, the fractions of top, intermediate and basal species, the variability of generality and vulnerability, the mean chain length, the frequency of omnivory and cannibalism, better than the cascade model. That webs are almost "interval" (diets can be ordered along a single dimension) is one of the strongest regularities of food-web structure, and it has an evident biological basis in body size: predators eat prey within a range of sizes related to their own (Cohen et al. 2003).
 
@@ -124,7 +124,7 @@ Consider a community of $S$ species at an equilibrium and its community matrix (
 
 The theorem is deep, and its proof (by "hermitization", relating the eigenvalue distribution to the singular values of $X_S - zI$) is beyond our scope. A heuristic makes the radius plausible: for any fixed unit vector $\boldsymbol{u}$, $\mathbb{E}\lVert X_S\boldsymbol{u}\rVert^2 = \sum_{i}\sum_j u_j^2\operatorname{Var}(x_{ij}) = S$, so $X_S/\sqrt S$ stretches a typical vector by a factor 1, and eigenvectors are typical vectors.
 
-**Proposition 38.4.1 (May's Stability Criterion)** For May's random community matrix $A = -dI + M$, with connectance $C$ and interaction strength $\sigma$, as $S \to \infty$ the eigenvalues of $A$ fill the disk of radius $\sigma\sqrt{SC}$ centred at $-d$, and the equilibrium is stable with probability tending to 1 if
+**Proposition 38.4.1 (May's Stability Criterion)** For May's random community matrix $A = -dI + M$, with connectance $C$ and interaction strength $\sigma$, as $S \to \infty$ the eigenvalues of $A$ fill the disk of radius $\sigma\sqrt{SC}$ centered at $-d$, and the equilibrium is stable with probability tending to 1 if
 
 $$
 \sigma\sqrt{SC} < d \tag{38.2}
@@ -137,7 +137,7 @@ May's result is that, in a random community, each of the three components of com
 
 May's conclusion did not show that complex communities are unstable; it showed that complexity does not by itself confer stability, and that stable complex communities must have special, non-random structure. Much of food-web theory since 1972 has been a search for that structure.
 
-![May's complexity–stability criterion. A: eigenvalues of one random community matrix A = −I + M with S = 250 species, connectance C = 0.2 and σ√(SC) = 0.8: they fill a disk of radius σ√(SC) centred at −1 (red), entirely in the left half-plane, so the equilibrium is stable (circular law, Theorem 38.4.1). B: fraction of random matrices (C = 0.3) that are stable against the complexity σ√(SC), for S = 10, 40 and 150 species: the transition sharpens around σ√(SC) = 1 (dashed) as S increases (Proposition 38.4.1)](./plots/may-stability.py)
+![May's complexity–stability criterion. A: eigenvalues of one random community matrix A = −I + M with S = 250 species, connectance C = 0.2 and σ√(SC) = 0.8: they fill a disk of radius σ√(SC) centered at −1 (red), entirely in the left half-plane, so the equilibrium is stable (circular law, Theorem 38.4.1). B: fraction of random matrices (C = 0.3) that are stable against the complexity σ√(SC), for S = 10, 40 and 150 species: the transition sharpens around σ√(SC) = 1 (dashed) as S increases (Proposition 38.4.1)](./plots/may-stability.py)
 
 ### 38.4.3. Interaction Types and the Elliptic Law
 

@@ -215,7 +215,7 @@ for a distance such as $D(\boldsymbol{u},\boldsymbol{v})=\sum_{i=1}^p\lvert u_i-
 
 **Definition 4.2.3 (Nelder–Mead Method)** A $p$-simplex is a $p$-dimensional polytope, the convex hull of $p+1$ vertices (for $p=2$, a triangle). The **Nelder–Mead method** (simplex search method) uses a simplex as its "vehicle" to search the domain: at each step the worst vertex is rejected and replaced by a new one, by reflection, expansion or contraction, or the whole simplex shrinks toward the best vertex.
 
-In the words of Nelder and Mead (1965), "the simplex adapts itself to the local landscape, elongating down long inclined planes, changing direction on encountering a valley at an angle, and contracting in the neighbourhood of a minimum." For $p=2$ a sequence of triangles is generated; the function values at their vertices decrease, the triangles shrink, and the minimum point is finally found.
+In the words of Nelder and Mead (1965), "the simplex adapts itself to the local landscape, elongating down long inclined planes, changing direction on encountering a valley at an angle, and contracting in the neighborhood of a minimum." For $p=2$ a sequence of triangles is generated; the function values at their vertices decrease, the triangles shrink, and the minimum point is finally found.
 
 **Algorithm 4.2.2 (Nelder–Mead for $p=2$)** Label the vertices of the current triangle so that $f(B)\le f(G)\le f(W)$ (best, good, worst). Let $M=(B+G)/2$ be the midpoint of the good side, and reflect the worst vertex through it, $R=M+(M-W)=2M-W$.
 

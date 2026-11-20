@@ -217,7 +217,7 @@ When the observations come in a meaningful order, for instance items from two pr
 
 ### 10.3.1. Motivation
 
-Least squares regression models the conditional mean $\mathbb{E}[Y\mid\boldsymbol{x}]$. When the spread of $Y$ changes with $\boldsymbol{x}$, a common situation for incomes, expenditures, growth and many biological measurements, the mean tells only part of the story, and the usual inference for least squares is not valid under **heteroscedasticity**. A transformation such as $\log Y$ may stabilize the variance, but it changes the quantity being modelled and often leaves other problems (skewness, outliers) in place. Weighted least squares corrects the inference for the mean, but still describes only the mean.
+Least squares regression models the conditional mean $\mathbb{E}[Y\mid\boldsymbol{x}]$. When the spread of $Y$ changes with $\boldsymbol{x}$, a common situation for incomes, expenditures, growth and many biological measurements, the mean tells only part of the story, and the usual inference for least squares is not valid under **heteroscedasticity**. A transformation such as $\log Y$ may stabilize the variance, but it changes the quantity being modeled and often leaves other problems (skewness, outliers) in place. Weighted least squares corrects the inference for the mean, but still describes only the mean.
 
 A different approach is to model several percentiles of the response at once: the conditional median, the conditional $10$th and $90$th percentiles, and so on. Together these regression lines describe how the whole conditional distribution of $Y$ changes with $\boldsymbol{x}$. Note that this cannot be done by splitting the sample according to $y$, for instance by dropping the lowest $90\%$ of the observations and fitting least squares to the rest: selecting on the response biases the fit (truncation on the dependent variable), and it ignores the dependence of the conditional quantile on $\boldsymbol{x}$. The right tool is a loss function whose minimizer is a quantile.
 
@@ -260,7 +260,7 @@ The first derivative vanishes at $F(c)=\tau$, and the function is convex, so $c=
 
 ### 10.3.3. The Linear Quantile Regression Model
 
-In linear regression the mean is modelled as $\mathbb{E}[Y_i\mid\boldsymbol{x}_i]=\beta_0+\beta_1x_{i1}+\dots+\beta_px_{ip}$ and the coefficients are estimated by minimizing the sum of squared residuals. Replacing the mean by a quantile and the squared loss by the check loss gives quantile regression.
+In linear regression the mean is modeled as $\mathbb{E}[Y_i\mid\boldsymbol{x}_i]=\beta_0+\beta_1x_{i1}+\dots+\beta_px_{ip}$ and the coefficients are estimated by minimizing the sum of squared residuals. Replacing the mean by a quantile and the squared loss by the check loss gives quantile regression.
 
 **Definition 10.3.2 (Quantile Regression)** For a fixed $\tau\in(0,1)$, the linear **quantile regression** model assumes that the conditional $\tau$-quantile of the response is
 

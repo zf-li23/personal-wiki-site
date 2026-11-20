@@ -56,7 +56,7 @@ ax.add_patch(FancyBboxPatch((2.4, cy - 1.2), 7.0, 2.6, boxstyle="round,pad=0,rou
 bio.label(ax, (5.9, cy + 1.65), "differentiating cell", size="tiny", color=P.muted())
 ax.add_patch(FancyBboxPatch((11.4, cy - 1.2), 7.0, 2.6, boxstyle="round,pad=0,rounding_size=0.3",
                             facecolor=P.fill("chloroplast"), edgecolor=P.edge("bacterium"), lw=1.4, zorder=2))
-bio.label(ax, (14.9, cy + 1.65), "neighbouring vegetative cell", size="tiny", color=P.muted())
+bio.label(ax, (14.9, cy + 1.65), "neighboring vegetative cell", size="tiny", color=P.muted())
 
 bio.box(ax, (3.9, cy + 0.5), 2.0, 0.7, token="metabolite", text="2-oxoglutarate", size="tiny", radius=0.22, zorder=10)
 bio.box(ax, (6.6, cy + 0.5), 1.4, 0.7, token="positive", text="NtcA", size="tiny", radius=0.22, zorder=10)

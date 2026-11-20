@@ -135,7 +135,7 @@ pa.set_xticks([])
 pa.set_yticks([])
 bio.panel(ax, "A", (0.3, 10.6))
 bio.label(ax, (1.2, 10.2), "Least-cost path and corridor", size="small", bold=True, ha="left")
-bio.label(ax, (1.2, 9.7), "grey: resistance (log); red: path; yellow: corridor (+10 %)", size="tiny", ha="left")
+bio.label(ax, (1.2, 9.7), "gray: resistance (log); red: path; yellow: corridor (+10 %)", size="tiny", ha="left")
 
 pb = C.axes_at(ax, (11.6, 1.4, 8.0, 8.0))
 pb.imshow(np.log10(dens + 1e-6), cmap="magma", interpolation="nearest", extent=ext, vmin=np.log10(dens.max()) - 3.5)

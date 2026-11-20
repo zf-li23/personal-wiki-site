@@ -19,7 +19,7 @@ ts = s.molecule("[Rh](*)(*)[H].C=C", coords=[(0, 0), (-1.3, 0), (0, -1.0), (0, 1
                 at=(x, 0), labels={0: "M", 1: "L", 2: "L"})
 s.partial(ts.atom(3), ts.atom(4))
 s.partial(ts.atom(0), ts.atom(5))
-s.text((x + 0.6, -1.9), "four-centre TS", size=11)
+s.text((x + 0.6, -1.9), "four-center TS", size=11)
 s.arrow((x + 2.4, 0), (x + 4.0, 0))
 x2 = x + 5.6
 s.molecule("[Rh](*)(*)CC[H]", coords=[(0, 0), (-1.3, 0), (0, -1.0), (1.2, 0.0), (1.8, 1.0), (1.2, 1.85)],

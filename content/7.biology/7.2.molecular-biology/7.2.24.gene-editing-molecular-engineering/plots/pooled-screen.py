@@ -112,7 +112,7 @@ for i in range(g):
 bio.label(ax, (21.7, 5.95), "the spread within a guide estimates the noise, so one infection\n"
           "already supports a gene-level statistic", size="tiny", color=P.muted())
 bio.box(ax, (21.7, 4.6), 6.4, 1.0, token="positive",
-        text="base-editor screens replace the cut: no breaks,\nso no growth artefact in amplified regions",
+        text="base-editor screens replace the cut: no breaks,\nso no growth artifact in amplified regions",
         size="tiny", radius=0.12)
 bio.label(ax, (21.7, 3.4), "resolution: gene → exon → codon. A library in which every guide converts one\n"
           "codon turns the question from “which genes” into “which residues”.", size="tiny", color=P.ink())

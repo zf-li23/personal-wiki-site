@@ -74,7 +74,7 @@ models = [  # (length / m, time / s, label, class)
     (1.7, 80 * Y, "Gompertz mortality (37)", "pop"),
     (0.1, 7 * D, "liver regrowth (35)", "pop"),
     (1e-2, 5 * D, "final size (33)", "pop"),
-    (1e-4, 120 * D, "bone remodelling (24)", "pop"),
+    (1e-4, 120 * D, "bone remodeling (24)", "pop"),
     (5e-3, 30 * D, "critical periods (38)", "pop"),
 ]
 

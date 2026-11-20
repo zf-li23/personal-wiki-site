@@ -18,7 +18,7 @@ from wikibio import quant
 
 P = bio.P
 fig, ax = bio.canvas(22.0, 10.0)
-p = quant.Plot(ax, (2.0, 1.5, 10.0, 7.4), xlim=(0, 90), ylim=(0, 1.1), xlabel="fibre angle θ / degrees",
+p = quant.Plot(ax, (2.0, 1.5, 10.0, 7.4), xlim=(0, 90), ylim=(0, 1.1), xlabel="fiber angle θ / degrees",
                ylabel="volume enclosed / V$_{max}$", xticks=[0, 30, 54.7, 90], yticks=[0, 0.5, 1.0])
 th = np.radians(np.linspace(0.5, 89.5, 300))
 v = np.sin(th) ** 2 * np.cos(th)
@@ -60,4 +60,4 @@ def worm(cx, cy, theta_deg, area=1.6):
 worm(17.0, 8.0, 25)
 worm(17.0, 5.0, 54.7)
 worm(17.0, 2.3, 80)
-bio.label(ax, (17.0, 9.5), "Body shape at three fibre angles", size="small", bold=True)
+bio.label(ax, (17.0, 9.5), "Body shape at three fiber angles", size="small", bold=True)

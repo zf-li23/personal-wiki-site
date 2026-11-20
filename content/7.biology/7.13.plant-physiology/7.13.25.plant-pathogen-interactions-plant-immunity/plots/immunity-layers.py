@@ -56,7 +56,7 @@ bio.arrow(ax, (6.8, ym - 2.1), (5.9, 5.85), kind="activation")
 # nucleus
 bio.nucleus(ax, (7.4, 2.4), 1.6, pores=8, chromatin=False, nucleolus=False)
 bio.label(ax, (7.4, 2.55), "WRKY TFs", size="small", bold=True)
-bio.label(ax, (7.4, 2.0), "defence genes", size="tiny")
+bio.label(ax, (7.4, 2.0), "defense genes", size="tiny")
 bio.arrow(ax, (5.8, 5.15), (6.6, 3.7), kind="activation")
 bio.arrow(ax, (9.4, 5.15), (8.3, 3.7), kind="activation")
 for i, t in enumerate(["callose deposition", "stomatal closure", "PR proteins, phytoalexins"]):

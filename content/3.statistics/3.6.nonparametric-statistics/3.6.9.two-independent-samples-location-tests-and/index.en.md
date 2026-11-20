@@ -1,6 +1,6 @@
 ---
 title: "Two Independent Samples: Location Tests and Estimates"
-description: Comparing the centres of two independent samples without normality. The two-sample permutation test and the choice of statistic; the Wilcoxon–Mann–Whitney test (rank sums and the U statistic, exact and normal null distributions, ties); the confidence interval and Hodges–Lehmann estimate of a shift; what the WMW test really tests (location-shift model, stochastic equality and dominance, counterexamples); the Brunner–Munzel test; Mood's median test; bootstrapping the difference of medians; and how to choose among these methods.
+description: Comparing the centers of two independent samples without normality. The two-sample permutation test and the choice of statistic; the Wilcoxon–Mann–Whitney test (rank sums and the U statistic, exact and normal null distributions, ties); the confidence interval and Hodges–Lehmann estimate of a shift; what the WMW test really tests (location-shift model, stochastic equality and dominance, counterexamples); the Brunner–Munzel test; Mood's median test; bootstrapping the difference of medians; and how to choose among these methods.
 ---
 
 Two independent random samples are drawn from two populations, and we want to know whether the populations differ, and in particular whether one tends to give larger values than the other. Under normality the answer is the two-sample $t$-test (3.2.5, [3.8.2](/3.8.2)). This chapter develops the distribution-free alternatives. The starting point is the two-sample permutation test of [3.6.1](/3.6.1): under the null hypothesis that the two populations are the same, the group labels are exchangeable. Replacing the observations by their ranks gives the Wilcoxon–Mann–Whitney (WMW) test, introduced briefly in 3.2.6, whose null distribution can be tabulated once and for all. Inverting it gives a confidence interval and a point estimate for a shift, exactly as the signed-rank test gave the Walsh-average interval and the Hodges–Lehmann estimate in the one-sample case ([3.6.4](/3.6.4), [3.6.5](/3.6.5)).
@@ -32,7 +32,7 @@ If the two groups do not differ, that is, if the $n_1+n_2$ observations come fro
 $$
 K=\binom{n_1+n_2}{n_1}
 $$
-partitions, each giving a value $D_k$ of the chosen statistic; for the calculators $K=\binom{21}{10}=352\,716$. If $K$ is too large, a random sample of, say, $10\,000$ partitions is used. The $D_k$ form the permutation distribution, the reference distribution for the $p$-value: for a two-sided test based on a statistic centred at zero, the $p$-value is $\#\{k\colon\lvert D_k\rvert\ge\lvert D_{\mathrm{obs}}\rvert\}/K$. For the difference of means, $10^5$ random partitions give $p\approx0.014$ for the calculator data, close to the $t$-test.
+partitions, each giving a value $D_k$ of the chosen statistic; for the calculators $K=\binom{21}{10}=352\,716$. If $K$ is too large, a random sample of, say, $10\,000$ partitions is used. The $D_k$ form the permutation distribution, the reference distribution for the $p$-value: for a two-sided test based on a statistic centered at zero, the $p$-value is $\#\{k\colon\lvert D_k\rvert\ge\lvert D_{\mathrm{obs}}\rvert\}/K$. For the difference of means, $10^5$ random partitions give $p\approx0.014$ for the calculator data, close to the $t$-test.
 
 Several statistics can be used, and some of them are equivalent.
 
@@ -213,7 +213,7 @@ so $[D_{(c+1)},D_{(n_1n_2-c)}]$ (the $(c+1)$th smallest to the $(c+1)$th largest
 
 **Proof** $U_x(\Delta_0)$ is the number of $D_{ij}$ exceeding $\Delta_0$, a non-increasing step function of $\Delta_0$. Hence $U_x(\Delta)\ge c+1$ if and only if $\Delta<D_{(n_1n_2-c)}$, and $U_x(\Delta)\le n_1n_2-c-1$ if and only if $\Delta\ge D_{(c+1)}$. Since $U_x(\Delta)$ has the null distribution, which is symmetric, the probability that both hold is $1-2\,\mathbb{P}(U_x\le c)$. $\square$
 
-The point estimate is the value $\hat\Delta$ that makes $U_x(\hat\Delta)$ equal to its null centre $n_1n_2/2$, the same construction that produced the one-sample Hodges–Lehmann estimate from the signed-rank test ([3.6.5](/3.6.5)); it is also called the Hodges–Lehmann–Sen shift estimator.
+The point estimate is the value $\hat\Delta$ that makes $U_x(\hat\Delta)$ equal to its null center $n_1n_2/2$, the same construction that produced the one-sample Hodges–Lehmann estimate from the signed-rank test ([3.6.5](/3.6.5)); it is also called the Hodges–Lehmann–Sen shift estimator.
 
 **Example 9.4.1 (Pocket Calculators, Continued)** For $n_1=10$, $n_2=11$, $\mathbb{P}(U_x\le26)=0.0215$ and $\mathbb{P}(U_x\le27)=0.0257$, so $c=26$ (`qwilcox(0.025, 10, 11)` returns $27$, the smallest $u$ with $\mathbb{P}(U_x\le u)\ge0.025$). The $95\%$ interval runs from the $27$th smallest to the $27$th largest of the $110$ differences:
 

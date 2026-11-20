@@ -60,7 +60,7 @@ bio.nucleus(ax, (x0 + 2.2, 7.4), 1.0, pores=6, chromatin=False, nucleolus=False)
 bio.label(ax, (x0 + 2.2, 7.55), "TGA + NPR1", size="tiny", bold=True)
 bio.label(ax, (x0 + 2.2, 7.15), "PR1, PR2, PR5", size="tiny", italic=True)
 bio.arrow(ax, (x0 + 4.25, 8.4), (x0 + 3.1, 7.8), kind="activation")
-bio.label(ax, (x0 + 5.9, 7.4), "antimicrobial PR proteins,\nprimed defence", size="tiny", ha="left")
+bio.label(ax, (x0 + 5.9, 7.4), "antimicrobial PR proteins,\nprimed defense", size="tiny", ha="left")
 
 # B: time course
 bio.panel(ax, "B", (12.0, 5.9))

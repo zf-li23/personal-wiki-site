@@ -71,7 +71,7 @@ a.set_xlim(0, 70)
 a.set_ylim(0, 1.25)
 a.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P.ink(), loc="center right")
 charts.style_axes(a, "time after nuclear envelope breakdown / min", "activity, level")
-a.text(12, 0.5, "grey: unattached\nkinetochores (right axis)", fontsize=FT["tiny"], color=P.muted())
+a.text(12, 0.5, "gray: unattached\nkinetochores (right axis)", fontsize=FT["tiny"], color=P.muted())
 
 bio.panel(ax, "B", (13.8, 8.8))
 b = charts.axes_at(ax, (15.4, 1.5, 8.0, 6.6))

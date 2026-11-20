@@ -65,4 +65,4 @@ for txt in leg.get_texts():
 pb.set_xlim(0, 20)
 pb.set_ylim(0, 1.15)
 charts.style_axes(pb, "time / τ", "arterial pressure P")
-charts.title(pb, "After an abrupt haemorrhage")
+charts.title(pb, "After an abrupt hemorrhage")

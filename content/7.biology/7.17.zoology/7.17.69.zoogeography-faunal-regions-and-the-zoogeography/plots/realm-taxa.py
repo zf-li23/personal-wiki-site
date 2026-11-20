@@ -85,7 +85,7 @@ for i, r in enumerate(ROWS):
         bio.label(ax, (0.3, yc), r[0], size="small", bold=True, ha="left")
 
 # legend
-for t, (txt, c) in enumerate([("absent", levels[0]), ("present", levels[1]), ("endemic / centre", levels[2])]):
+for t, (txt, c) in enumerate([("absent", levels[0]), ("present", levels[1]), ("endemic / center", levels[2])]):
     yy = 0.35
     xx = 7.2 + t * 2.2
     ax.add_patch(__import__("matplotlib").patches.Rectangle((xx, yy - 0.18), 0.36, 0.36, facecolor=c,

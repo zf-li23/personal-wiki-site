@@ -48,4 +48,4 @@ bio.label(ax, (18.0, 5.6), "organic carbon pump", size="small", bold=True, color
 bio.label(ax, (25.6, 5.6), "carbonate pump", size="small", bold=True, color=P.edge(C))
 for xs in (18.0, 25.6):
     bio.arrow(ax, (xs, 5.0), (xs, 2.0), kind="process", head=0.2)
-bio.label(ax, (21.8, 3.6), "sinking cells, faecal pellets\nand aggregates (ballast)", size="tiny", color=P.muted())
+bio.label(ax, (21.8, 3.6), "sinking cells, fecal pellets\nand aggregates (ballast)", size="tiny", color=P.muted())

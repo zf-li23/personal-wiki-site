@@ -25,7 +25,7 @@ a.plot(p, 1 / (2 - p), color=charts.line("dna"), lw=2)
 a.set_ylim(0, 1.05)
 a.set_xlim(0, 1)
 charts.style_axes(a, "survival of dispersers $p$", "ESS dispersal fraction $v^*$")
-charts.title(a, "A  Kin competition favours dispersal")
+charts.title(a, "A  Kin competition favors dispersal")
 
 b = axs[1]
 rng = np.random.default_rng(0)

@@ -44,7 +44,7 @@ bio.panel(ax, "A", (0.2, 13.4))
 bio.label(ax, (6.9, 13.2), "Clonorchis sinensis", size="title", bold=True, italic=True)
 eco.cycle(ax, (6.9, 6.6), 4.4, [
     dict(text="Adult in bile ducts\n(human, cat, dog)", icon="phylopic/human", icon_size=1.9, token="animal", bold=True),
-    dict(text="Egg with miracidium\nin faeces", draw=egg, icon_size=1.0),
+    dict(text="Egg with miracidium\nin feces", draw=egg, icon_size=1.0),
     dict(text="Snail (1st intermediate):\nsporocyst, rediae", icon="phylopic/snail", icon_size=1.3, token="animal"),
     dict(text="Cercaria", draw=cercaria, icon_size=1.2),
     dict(text="Fish (2nd intermediate):\nmetacercaria in muscle", icon="phylopic/cod", icon_size=1.0, token="animal"),
@@ -56,7 +56,7 @@ bio.panel(ax, "B", (14.2, 13.4))
 bio.label(ax, (21.0, 13.2), "Schistosoma japonicum", size="title", bold=True, italic=True)
 eco.cycle(ax, (21.0, 6.6), 4.4, [
     dict(text="Adult pairs in portal veins\n(human, cattle, buffalo)", icon="phylopic/cattle", icon_size=1.5, token="animal", bold=True),
-    dict(text="Egg in faeces", draw=lambda a, xy, s: egg(a, xy, s, operculum=False), icon_size=1.0),
+    dict(text="Egg in feces", draw=lambda a, xy, s: egg(a, xy, s, operculum=False), icon_size=1.0),
     dict(text="Miracidium in water", draw=miracidium, icon_size=1.0),
     dict(text="Snail Oncomelania:\ntwo sporocyst generations", icon="phylopic/snail", icon_size=1.3, token="animal"),
     dict(text="Fork-tailed cercaria", draw=lambda a, xy, s: cercaria(a, xy, s, forked=True), icon_size=1.2),

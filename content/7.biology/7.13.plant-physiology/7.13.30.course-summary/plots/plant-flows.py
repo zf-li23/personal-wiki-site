@@ -61,7 +61,7 @@ bio.arrow(ax, (14.55, 1.0), (14.55, 10.4), color=W, lw=2.4)
 bio.label(ax, (13.4, 8.6), "xylem:\nwater + ions", size="small", ha="right", color=W)
 leaf_mid = src["blade"]
 bio.arrow(ax, (leaf_mid[0] - 0.6, leaf_mid[1] + 0.6), (9.6, 15.0), color=W, lw=2.0, dashed=True)
-bio.label(ax, (9.4, 15.6), "H₂O vapour\nE = g_tw Δw", size="small", ha="right", color=W)
+bio.label(ax, (9.4, 15.6), "H₂O vapor\nE = g_tw Δw", size="small", ha="right", color=W)
 bio.arrow(ax, (6.6, 10.0), (leaf_mid[0] - 0.9, leaf_mid[1] - 0.2), color=C, lw=2.0)
 bio.label(ax, (6.4, 10.0), "CO₂\nA = g_c (c_a − c_i)", size="small", ha="right", color=C)
 bio.arrow(ax, (sun[0] + 1.3, sun[1] - 1.2), (leaf_mid[0] - 0.4, leaf_mid[1] + 0.3), color=P.edge("highlight"), lw=1.6)

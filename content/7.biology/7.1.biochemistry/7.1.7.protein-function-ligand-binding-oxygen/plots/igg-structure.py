@@ -70,7 +70,7 @@ bio.label(ax, (cx + 2.2, 2.7), "S–S bonds", size="tiny", color=P.edge("highlig
 bio.panel(ax, "B", (8.4, 9.3))
 bio.label(ax, (11.9, 9.0), "Sandwich ELISA", size="small", bold=True)
 steps = ["1 capture\nantibody\ncoated", "2 block;\nantigen\nbinds", "3 enzyme-\nlinked detection\nantibody",
-         "4 substrate →\ncolour ∝\n[antigen]"]
+         "4 substrate →\ncolor ∝\n[antigen]"]
 for k, txt in enumerate(steps):
     x0 = 8.9 + k * 1.85
     y0 = 3.2

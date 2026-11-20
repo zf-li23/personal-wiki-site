@@ -41,7 +41,7 @@ for k, mirror in enumerate((False, True)):
     ax.set_zlim(-2.2, 2.2)
     ax.set_box_aspect((1, 1, 1))
     ax.view_init(elev=20, azim=-60)
-    ax.text2D(0.05, 0.05, "red: CH$_3$, grey: H", transform=ax.transAxes, fontsize=8, color="0.45")
+    ax.text2D(0.05, 0.05, "red: CH$_3$, gray: H", transform=ax.transAxes, fontsize=8, color="0.45")
     ax.set_axis_off()
 
 ax = fig.add_subplot(1, 3, 3)

@@ -29,8 +29,8 @@ def simulate(g, wI=2.0, I0=1.0, tx=0.05, ta=0.6, T=8.0, dt=1e-3):
 
 fig, (ax, bx) = plt.subplots(1, 2, figsize=(11.5, 4.0), gridspec_kw={"width_ratios": [1.5, 1]})
 t, s = simulate(2.0)
-ax.plot(t, s[:, 0], color=P.edge("dna"), lw=2, label="$x_A$ (e.g. flexor half-centre)")
-ax.plot(t, s[:, 1], color=P.edge("rna"), lw=2, label="$x_B$ (extensor half-centre)")
+ax.plot(t, s[:, 0], color=P.edge("dna"), lw=2, label="$x_A$ (e.g. flexor half-center)")
+ax.plot(t, s[:, 1], color=P.edge("rna"), lw=2, label="$x_B$ (extensor half-center)")
 ax.plot(t, s[:, 2], color=P.edge("dna"), lw=1, ls="--", label="$a_A$ (adaptation of A)")
 ax.set_xlim(0, 6)
 ax.set_ylim(0, 1.25)

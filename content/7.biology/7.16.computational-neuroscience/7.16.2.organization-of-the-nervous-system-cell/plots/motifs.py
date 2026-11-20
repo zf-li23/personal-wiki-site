@@ -86,7 +86,7 @@ ax.plot(x[sl], r[sl], color=charts.line("neuron"), lw=1.6, marker="o", ms=2.5, l
 ax.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P.ink(), loc="upper left", handlelength=1.2)
 charts.style_axes(ax, "cell position", "rate (a.u.)")
 ax.text(0.0, 1.15, "Lateral inhibition", transform=ax.transAxes, fontsize=FT["small"], color=P.ink(), weight="bold", va="bottom", ha="left")
-ax.text(0.0, 1.03, "neighbours within 3 cells ⊣ each other", transform=ax.transAxes, fontsize=FT["tiny"], color=P.muted(), va="bottom", ha="left")
+ax.text(0.0, 1.03, "neighbors within 3 cells ⊣ each other", transform=ax.transAxes, fontsize=FT["tiny"], color=P.muted(), va="bottom", ha="left")
 
 # 8 convergence / divergence: summary of gains
 ax = axs.flat[7]

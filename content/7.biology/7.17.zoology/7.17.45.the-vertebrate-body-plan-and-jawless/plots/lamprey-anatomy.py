@@ -80,7 +80,7 @@ lab = [((x0 - 0.2, y0 - 0.9), (x0 - 0.6, y0 - 2.1), "buccal funnel with horny te
        ((x0 + 1.35, y0 + 0.55), (x0 + 3.0, y0 + 2.3), "brain"),
        ((x0 + 1.6, y0 + 0.2), (x0 + 4.6, y0 + 2.0), "eye"),
        ((gill_x[3], y0 - 0.6), (x0 + 3.6, y0 - 2.1), "7 gill pouches on the branchial tube"),
-       ((x0 + 3.5, y0 - 0.15), (x0 + 6.0, y0 + 1.9), "oesophagus"),
+       ((x0 + 3.5, y0 - 0.15), (x0 + 6.0, y0 + 1.9), "esophagus"),
        ((x0 + 5.5, y0 - 0.7), (x0 + 6.6, y0 - 2.1), "heart"),
        ((x0 + 6.6, y0 - 0.5), (x0 + 9.0, y0 - 2.1), "liver"),
        ((x0 + 0.52 * L, y0 - 0.3), (x0 + 0.52 * L + 0.6, y0 - 2.1), "gonad (single)"),

@@ -96,4 +96,4 @@ bio.label(ax, (13.3, 3.3), "peptide–MHC II", size="tiny", color=P.muted())
 # CD40L-CD40 and cytokines return help to the B cell
 bio.arrow(ax, (17.4, 5.6), (17.4, 2.9), kind="activation")
 bio.label(ax, (17.1, 4.25), "CD40L → CD40, cytokines", size="tiny", rotation=90)
-bio.label(ax, (13.8, 0.3), "help reaches the B cell that recognised the hapten", size="tiny", color=P.muted())
+bio.label(ax, (13.8, 0.3), "help reaches the B cell that recognized the hapten", size="tiny", color=P.muted())

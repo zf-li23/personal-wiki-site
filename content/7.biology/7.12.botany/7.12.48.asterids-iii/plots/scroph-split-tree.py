@@ -23,4 +23,4 @@ phylo.tree(ax, NEWICK, origin=(1.0, 0.6), width=10.5, height=14.8, label_size="s
            tip_text=EX,
            clades=[dict(tips=[k], token="rna", style=("branch",), label="") for k in EX] +
                   [dict(node="HCL", token="plant", style=("bar",), label="higher core Lamiales")])
-bio.label(ax, (27.5, 2.2), "Coloured: families that received genera\nof traditional Scrophulariaceae", size="small", ha="left")
+bio.label(ax, (27.5, 2.2), "Colored: families that received genera\nof traditional Scrophulariaceae", size="small", ha="left")

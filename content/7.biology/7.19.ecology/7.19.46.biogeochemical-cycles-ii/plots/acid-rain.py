@@ -43,7 +43,7 @@ b.set_ylim(0.1, 1e5)
 b.set_xlim(4, 6.5)
 b.set_xlabel("pH of water")
 b.set_ylabel("Dissolved Al$^{3+}$ (gibbsite equilibrium) / µg L$^{-1}$")
-b.set_title("B  Mobilization of aluminium", loc="left", fontweight="bold")
+b.set_title("B  Mobilization of aluminum", loc="left", fontweight="bold")
 for ax in (a, b):
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)

@@ -75,4 +75,4 @@ for na, tok in ((1.0, "dna"), (0.05, "enzyme")):
 pc.legend(frameon=False, fontsize=bio.core.FONT["tiny"], labelcolor=P.ink(), loc="upper left")
 pc.set_ylim(30, 75)
 charts.style_axes(pc, "total strand concentration / µM", "$T_\\mathrm{m}$ / °C")
-bio.label(ax, (20.5, 7.4), "20-mer, nearest-neighbour model", size="small")
+bio.label(ax, (20.5, 7.4), "20-mer, nearest-neighbor model", size="small")

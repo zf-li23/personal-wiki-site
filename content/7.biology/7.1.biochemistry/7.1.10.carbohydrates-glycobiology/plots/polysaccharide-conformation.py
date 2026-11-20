@@ -49,7 +49,7 @@ for i in np.argsort(depth):
          zorder=5 if depth[i] < 0 else 8)
 ax.annotate("", (xs[6], 6.25), (xs[0], 6.25), arrowprops=dict(arrowstyle="<->", color=P.muted(), lw=0.8))
 bio.label(ax, ((xs[0] + xs[6]) / 2, 6.6), "one turn ≈ 6 residues (≈ 0.8 nm)", size="small")
-bio.callout(ax, (xs[9] + 0.25, 4.5), (6.6, 2.0), "I₃⁻ / I₅⁻ in the core (blue colour)")
+bio.callout(ax, (xs[9] + 0.25, 4.5), (6.6, 2.0), "I₃⁻ / I₅⁻ in the core (blue color)")
 bio.label(ax, (5.3, 1.2), "adjacent rings at ≈ 60°: curved chain, compact granules", size="small")
 
 # --- B: cellulose sheet -----------------------------------------------------------------------------------

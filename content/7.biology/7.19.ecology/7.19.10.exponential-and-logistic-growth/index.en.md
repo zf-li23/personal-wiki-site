@@ -231,7 +231,7 @@ $$
 $$
 \Bigl(\frac{K}{N_1} - 1\Bigr)^2 = \Bigl(\frac{K}{N_0} - 1\Bigr)\Bigl(\frac{K}{N_2} - 1\Bigr).
 $$
-Multiplying by $N_0N_1^2N_2$, expanding, and cancelling the term $N_0N_1^2N_2$ on both sides gives $K^2N_0N_2 - 2KN_0N_1N_2 = K^2N_1^2 - KN_1^2(N_0 + N_2)$; dividing by $K \neq 0$ and solving the linear equation for $K$ gives the formula. Then $\mathrm{e}^{-r\Delta t} = y_1/y_0$ gives $r$. $\square$
+Multiplying by $N_0N_1^2N_2$, expanding, and canceling the term $N_0N_1^2N_2$ on both sides gives $K^2N_0N_2 - 2KN_0N_1N_2 = K^2N_1^2 - KN_1^2(N_0 + N_2)$; dividing by $K \neq 0$ and solving the linear equation for $K$ gives the formula. Then $\mathrm{e}^{-r\Delta t} = y_1/y_0$ gives $r$. $\square$
 
 With $t = 0, 9, 18$ h, the three-point formula gives $K = 664.3$, and the regression of Eq. (10.10) on all points then gives $r = 0.539$ per hour and $N_0 = 9.8$. The sum of squared residuals is 232, against 194 for the nonlinear fit. The difference is small here because the data are very regular, but it illustrates a general point: the transformation changes the error structure. An error of a few units in $N$ near $K$ becomes an enormous error in $\ln[(K - N)/N]$, while the same error at intermediate $N$ is shrunk, so ordinary least squares on the transformed scale gives the wrong points the most weight (see [3.3.5](/3.3.5) on assumptions of regression). Linearization is useful for starting values; estimates should come from the model on its natural scale, with an error model that fits the data (multiplicative errors, common for counts, call for least squares on $\ln N$, or for maximum likelihood with a suitable distribution).
 

@@ -47,7 +47,7 @@ for k in range(8):          # large droplets: fall within a short distance
 for k in range(30):         # aerosols: stay suspended and fill the room
     ax.add_patch(Circle((X - 0.8 + rng.uniform(0, 2.2), 4.9 + rng.uniform(0, 1.2)), 0.045,
                         facecolor=P.fill("virus"), edgecolor="none", alpha=0.8, zorder=11))
-bio.label(ax, (X, 3.35), "large droplets fall within a metre or two;\nsmall aerosols stay suspended and "
+bio.label(ax, (X, 3.35), "large droplets fall within a meter or two;\nsmall aerosols stay suspended and "
                          "accumulate\nindoors — hence ventilation", size="tiny", color=P.muted())
 bio.label(ax, (X, 1.9), "tuberculosis, pertussis, measles,\ninfluenza, SARS-CoV-2", size="tiny")
 

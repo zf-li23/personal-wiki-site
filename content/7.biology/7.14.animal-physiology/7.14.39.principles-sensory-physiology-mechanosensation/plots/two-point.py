@@ -45,7 +45,7 @@ for s in (-d / 2, d / 2):
 ax.set_xlim(-6, 6)
 ax.set_ylim(0, 1.1)
 ax.set_xlabel("Position on skin / mm")
-ax.set_ylabel("Central activity (normalised)")
+ax.set_ylabel("Central activity (normalized)")
 ax.legend(frameon=False, fontsize=8, loc="lower center")
 ax.set_title("A  Two points 3.2 mm apart", loc="left", fontsize=10)
 

@@ -21,7 +21,7 @@ d.connect("gap", "ras", "negative")
 
 bio.label(ax, (0.6, 8.6), "R8 cell", size="small", color=P.muted(), ha="left")
 bio.label(ax, (0.6, 7.0), "R7 precursor", size="small", color=P.muted(), ha="left")
-bio.label(ax, (5.9, 7.9), "ligand on the neighbouring cell", size="tiny", color=P.muted())
+bio.label(ax, (5.9, 7.9), "ligand on the neighboring cell", size="tiny", color=P.muted())
 bio.label(ax, (2.8, -0.25), "transcription factors, R7 fate", size="small")
 
 bio.label(ax, (8.9, 8.9), "In a hypomorphic $sev$ background", size="title", ha="left", bold=True)

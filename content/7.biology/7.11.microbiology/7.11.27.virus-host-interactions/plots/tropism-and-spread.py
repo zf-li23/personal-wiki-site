@@ -35,7 +35,7 @@ for x, virus, rec, kind, second, where, consequence in COLS:
     bio.label(ax, (x, 4.25), consequence, size="tiny", color=P.edge("virus"))
 
 bio.label(ax, (8.5, 3.6), "a cell with the receptor is susceptible; it is productively infected only if it is also "
-                          "permissive and its defences are overcome", size="tiny", color=P.muted())
+                          "permissive and its defenses are overcome", size="tiny", color=P.muted())
 
 # --- B  spread ------------------------------------------------------------------------------------------
 bio.panel(ax, "B", (0.1, 3.6))
@@ -67,6 +67,6 @@ bio.arrow(ax, (7.0, 1.7), (7.5, 0.55), kind="process")
 bio.arrow(ax, (11.9, 1.75), (12.45, 1.75), kind="process")
 bio.arrow(ax, (11.9, 0.55), (12.6, 1.2), kind="process")
 
-bio.label(ax, (14.7, 0.5), "Shedding: secretions, saliva, faeces,\n"
+bio.label(ax, (14.7, 0.5), "Shedding: secretions, saliva, feces,\n"
                            "urine, milk, semen, blood, lesions", size="tiny", color=P.muted())
 bio.arrow(ax, (14.4, 1.0), (14.4, 0.78), kind="process", color=P.edge("virus"))

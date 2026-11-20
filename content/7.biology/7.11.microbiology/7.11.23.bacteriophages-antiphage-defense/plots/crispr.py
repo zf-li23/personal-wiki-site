@@ -127,7 +127,7 @@ bio.label(ax, (13.1, 2.3), "About 40 % of bacterial and 85 % of archaeal genomes
 bio.panel(ax, "D", (24.0, 13.3))
 bio.label(ax, (24.7, 13.1), "How phages evade it", size="title", bold=True, ha="left")
 ev = [("escape mutants", "one substitution in the seed region or the PAM\nabolishes interference — but primes new spacers"),
-      ("anti-CRISPR proteins", "small proteins, injected with the genome or made\nat once, that block target binding or cleavage,\nmimic DNA, or degrade the signalling nucleotides"),
+      ("anti-CRISPR proteins", "small proteins, injected with the genome or made\nat once, that block target binding or cleavage,\nmimic DNA, or degrade the signaling nucleotides"),
       ("phage-encoded CRISPR", "phages of $Vibrio$ $cholerae$ carry their own system,\ndirected against the host's antiphage island"),
       ("compartmentalization", "jumbo phages wall their DNA inside a proteinaceous\nshell that DNA-targeting nucleases cannot enter")]
 yy = 11.9

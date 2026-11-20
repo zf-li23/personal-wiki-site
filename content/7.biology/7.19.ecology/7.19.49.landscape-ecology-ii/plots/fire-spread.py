@@ -69,8 +69,8 @@ for j, p in enumerate((0.55, 0.65)):
     for sp in pa.spines.values():
         sp.set_color(P.muted())
     bio.panel(ax, "AB"[j], (x0 - 0.9, 13.6))
-    bio.label(ax, (x0, 13.2), f"p = {p:.2f}: {100 * frac:.0f} % of fuel burnt", size="small", bold=True, ha="left")
-bio.label(ax, (1.2, 12.3), "ignition along the left edge; black: burnt, green: unburnt fuel", size="tiny", ha="left")
+    bio.label(ax, (x0, 13.2), f"p = {p:.2f}: {100 * frac:.0f} % of fuel burned", size="small", bold=True, ha="left")
+bio.label(ax, (1.2, 12.3), "ignition along the left edge; black: burned, green: unburned fuel", size="tiny", ha="left")
 
 ps = np.linspace(0.40, 0.90, 26)
 res = {}
@@ -84,7 +84,7 @@ pc.axvline(0.5927, color=P.muted(), lw=0.8, ls=(0, (3, 2)))
 pc.text(0.505, 0.55, "p_c = 0.593", fontsize=FS["tiny"], color=P.muted())
 pc.set_xlim(0.4, 0.9)
 pc.set_ylim(-0.02, 1.02)
-C.style_axes(pc, "fuel density p", "proportion of fuel burnt")
+C.style_axes(pc, "fuel density p", "proportion of fuel burned")
 pc.legend(frameon=False, fontsize=FS["tiny"], labelcolor=P.ink(), loc="upper left")
 bio.panel(ax, "C", (22.4, 13.6))
 bio.label(ax, (24.0, 13.2), "A threshold in fuel continuity", size="small", bold=True, ha="left")

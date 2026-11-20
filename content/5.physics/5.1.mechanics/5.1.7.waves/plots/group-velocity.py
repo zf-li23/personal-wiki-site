@@ -36,7 +36,7 @@ for i, (t, off) in enumerate(zip(times, offsets)):
     ax.plot([xc], [1.0 + off + 0.12], "o", color="C3", ms=5)
     ax.plot([vg * t], [off - 1.25], "^", color="0.3", ms=6)
 
-ax.text(0.0, -1.55, "packet centre moves at v_g = u/2", fontsize=9)
+ax.text(0.0, -1.55, "packet center moves at v_g = u/2", fontsize=9)
 ax.set_xlabel("x / m")
 ax.set_yticks([])
 ax.set_ylim(-1.8, 2.9)

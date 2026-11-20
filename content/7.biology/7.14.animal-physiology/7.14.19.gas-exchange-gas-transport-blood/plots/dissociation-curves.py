@@ -39,7 +39,7 @@ ax.set_title("A  Shifts of the curve", loc="left", fontsize=10)
 
 ax = axs[1]
 ax.plot(p, 1.34 * 15 * hill(p, 26.8) + 0.003 * p, color=P.ink(), lw=2.4, label="normal (Hb 150 g/L)")
-ax.plot(p, 1.34 * 7.5 * hill(p, 26.8) + 0.003 * p, color=P.edge("dna"), lw=2, ls="--", label="anaemia (Hb 75 g/L)")
+ax.plot(p, 1.34 * 7.5 * hill(p, 26.8) + 0.003 * p, color=P.edge("dna"), lw=2, ls="--", label="anemia (Hb 75 g/L)")
 ax.plot(p, 1.34 * 7.5 * hill(p, 13) + 0.003 * p, color=P.edge("blood"), lw=2, label="50 % COHb (Hb 150 g/L)")
 ax.axvline(40, color=P.muted(), lw=0.8, ls=":")
 ax.axvline(95, color=P.muted(), lw=0.8, ls=":")
@@ -50,7 +50,7 @@ ax.set_ylabel("O$_2$ content / (mL per 100 mL)")
 ax.set_xlim(0, 120)
 ax.set_ylim(0, 22)
 ax.legend(frameon=False, fontsize=8, loc="center right", bbox_to_anchor=(1.0, 0.7))
-ax.set_title("B  Content: anaemia vs CO", loc="left", fontsize=10)
+ax.set_title("B  Content: anemia vs CO", loc="left", fontsize=10)
 
 ax = axs[2]
 pc = np.linspace(1, 80, 300)

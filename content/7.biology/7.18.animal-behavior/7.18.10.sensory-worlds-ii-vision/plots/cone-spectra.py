@@ -40,4 +40,4 @@ for k, (name, cones) in enumerate(SPECIES):
         p.line(lam, template(lam, lm), TOK[cls])
         p.text(lm, 1.12, f"{lm}", token=TOK[cls])
     bio.label(ax, (x0, y0 + 4.55), name, size="small", bold=True, ha="left")
-bio.label(ax, (11.0, 0.35), "invisible to humans below about 400 nm (grey band)", size="tiny", color=P.muted())
+bio.label(ax, (11.0, 0.35), "invisible to humans below about 400 nm (gray band)", size="tiny", color=P.muted())

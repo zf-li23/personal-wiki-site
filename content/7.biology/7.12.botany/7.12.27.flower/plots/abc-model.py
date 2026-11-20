@@ -34,7 +34,7 @@ for r, (name, dom, organs) in enumerate(rows):
     for k, o in enumerate(organs):
         text, tok = ORG[o]
         bio.box(ax, (X0 + W * (k + 0.5), y - 0.65), W - 0.3, 0.62, token=tok, text=text, size="small", radius=0.15)
-bio.label(ax, (X0 + 2 * W, 0.55), "ag: the centre keeps producing Se-Pe-Pe (indeterminate flower)", size="small", color=P.muted())
+bio.label(ax, (X0 + 2 * W, 0.55), "ag: the center keeps producing Se-Pe-Pe (indeterminate flower)", size="small", color=P.muted())
 
 bio.panel(ax, "B", (15.6, 13.2))
 bio.label(ax, (22.8, 12.9), "ABCDE model and floral quartets", size="normal", bold=True)

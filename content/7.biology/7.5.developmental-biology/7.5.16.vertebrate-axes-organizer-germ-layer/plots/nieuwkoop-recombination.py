@@ -52,7 +52,7 @@ bio.panel(ax, "B", (12.0, 9.4))
 cc = (14.0, 6.0)
 cap((cc[0], cc[1] + 0.02), 1.1, label_cells=True)
 veg((cc[0], cc[1] - 0.02), 1.1)
-bio.label(ax, (14.0, 8.0), "animal cap (labelled)\n+ vegetal mass", size="tiny", color=P.muted())
+bio.label(ax, (14.0, 8.0), "animal cap (labeled)\n+ vegetal mass", size="tiny", color=P.muted())
 bio.arrow(ax, (15.4, 6.0), (16.8, 6.0), kind="process")
 ax.add_patch(Wedge((18.0, 6.0), 1.1, 0, 180, facecolor=P.fill(ect), edgecolor=P.edge(ect), lw=1.1, zorder=8))
 ax.add_patch(Wedge((18.0, 6.0), 0.62, 0, 180, facecolor=P.fill(mes), edgecolor=P.edge(mes), lw=1.1, zorder=8.5))
@@ -60,7 +60,7 @@ for k in range(5):
     t = np.pi * (k + 0.5) / 5
     ax.add_patch(Circle((18.0 + 0.4 * np.cos(t), 6.0 + 0.3 * np.sin(t)), 0.07, facecolor=P.edge("protein"), edgecolor="none", zorder=9))
 veg((18.0, 5.98), 1.1)
-bio.label(ax, (19.4, 6.4), "mesoderm from\nlabelled animal cells", size="tiny", ha="left")
+bio.label(ax, (19.4, 6.4), "mesoderm from\nlabeled animal cells", size="tiny", ha="left")
 
 bio.panel(ax, "C", (12.0, 4.2))
 for k, (part, txt) in enumerate([("dorsal", "dorsal vegetal → notochord, muscle"), ("ventral", "ventral vegetal → blood, mesenchyme")]):

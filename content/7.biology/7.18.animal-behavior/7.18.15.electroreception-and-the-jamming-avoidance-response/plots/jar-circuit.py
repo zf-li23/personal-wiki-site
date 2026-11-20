@@ -55,5 +55,5 @@ arr((17.6, 1.05), (14.4, 1.05), label="command, 1:1")
 arr((10.2, 1.05), (8.2, 1.05))
 ax.annotate("", (1.8, 4.6), (4.6, 1.2), arrowprops=dict(arrowstyle="-|>", color=P.muted(), lw=1, ls="--",
                                                        connectionstyle="arc3,rad=-0.3"))
-ax.text(1.4, 2.6, "own field\n+ neighbour", fontsize=7, color=P.muted(), ha="center")
+ax.text(1.4, 2.6, "own field\n+ neighbor", fontsize=7, color=P.muted(), ha="center")
 fig.tight_layout()

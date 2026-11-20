@@ -65,7 +65,7 @@ df = 2 * n - 3
 s2 = (res ** 2).sum(0) / df
 se = np.sqrt(s2 * np.linalg.inv(D.T @ D)[1, 1])
 pc = 2 * stats.t.sf(np.abs(beta[1] / se), df)
-for ax, p, ttl in [(axs[1], pb, "B  Batch = treatment"), (axs[2], pc, "C  Balanced, batch modelled")]:
+for ax, p, ttl in [(axs[1], pb, "B  Batch = treatment"), (axs[2], pc, "C  Balanced, batch modeled")]:
     h, _, _ = ax.hist(p, bins=20, range=(0, 1), color=P.fill("neutral"), edgecolor=P.edge("neutral"), lw=0.5)
     ax.set_ylim(0, 1.3 * h.max())
     ax.axhline(G / 20, color=charts.line("dna"), lw=1, ls="--")

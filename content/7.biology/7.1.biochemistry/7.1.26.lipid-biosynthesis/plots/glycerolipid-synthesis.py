@@ -59,5 +59,5 @@ bio.label(ax, (23.6, 8.2), "PSS2: Ser in, ethanolamine out\nPSD (mitochondria): 
           color=P.edge("enzyme"))
 bio.box(ax, (13.0, 13.2), 4.6, 1.1, "lipid_head", text="strategy 2: CDP-alcohol\n(Kennedy pathway)", size="tiny")
 bio.box(ax, (12.4, 1.4), 5.0, 1.1, "highlight", text="strategy 1: CDP-diacylglycerol\n(also bacteria)", size="tiny")
-bio.label(ax, (2.4, 4.4), "acyl groups: usually saturated\nat C-1, unsaturated at C-2;\nremodelled later (Lands cycle)",
+bio.label(ax, (2.4, 4.4), "acyl groups: usually saturated\nat C-1, unsaturated at C-2;\nremodeled later (Lands cycle)",
           size="tiny", color=P.muted())
