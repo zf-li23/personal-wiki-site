@@ -1,6 +1,6 @@
 ---
 title: Infinite Series
-source_hash: a70e9af2761a
+source_hash: 14a47e3020fa
 ---
 
 Does it make sense to add infinitely many numbers? The sum $1 + \frac12 + \frac14 + \cdots$ ought to equal $2$, whereas $1 - 1 + 1 - 1 + \cdots$ seems to equal nothing at all. This chapter defines an infinite sum as the limit of the **sequence** of partial sums, so convergence of a series is just convergence of a sequence in the sense of [Chapter 2](/2.2.2), and the **Cauchy criterion** and the **monotone convergence theorem** can be used directly.
@@ -187,7 +187,7 @@ In general, if the limit of the ratios exists, then the limit of the roots also 
 
 The proof of Theorem 8.1.1 squeezed a series between improper integrals; in general:
 
-**Theorem 8.2.7 (Integral Test)** Let $f$ be continuous, nonnegative and decreasing on $[1, +\infty)$, and let $u_n = f(n)$. Then
+**Theorem 8.2.5 (Integral Test)** Let $f$ be continuous, nonnegative and decreasing on $[1, +\infty)$, and let $u_n = f(n)$. Then
 
 $$
 \sum_{n=1}^\infty u_n \text{ converges} \iff \int_1^{+\infty}f(x)\,\mathrm{d}x \text{ converges}.

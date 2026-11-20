@@ -1,7 +1,7 @@
 ---
 title: References, Copying and Moving
 description: Lvalue references and const references, references versus pointers; value categories (lvalues, prvalues and xvalues) and reference binding rules; copy constructors and copy assignment operators, shallow and deep copy, copy-and-swap; rvalue references, move construction and move assignment, std::move and noexcept; copy elision; implicit generation of special member functions and the rules of zero, three and five; implicit conversions, explicit and casts; assignment semantics, copy and deepcopy in Python.
-source_hash: 8f3f9ee08674
+source_hash: 96ac8e8518f3
 ---
 
 C++ objects have value semantics: `Buffer b = a;` creates a new, independent object, and modifying `b` does not affect `a`, just as with `int`. Value semantics make programs easy to reason about, but they raise two problems. First, what does "copy" mean for an object that manages a resource? If the object contains only a pointer to heap memory, copying member by member makes two objects share one block of memory, which is released twice at destruction. Second, copying can be expensive: copying a `std::vector` with a million elements requires allocating memory and copying all the elements each time, and the source of many copies is destroyed immediately afterward. This chapter first covers references, which avoid copying, then value categories, the concept that distinguishes "objects that may be moved from", then copy construction and copy assignment, move construction and move assignment, and the compiler's elision of copies, and summarizes them as the rules of zero, three and five. Finally it discusses the implicit conversions caused by single-argument **constructors** and conversion operators. These rules form the core of the C++ object model, and the **resource acquisition is initialization** idiom of [4.2.4](/4.2.4) also becomes complete only here: how ownership of a resource should be passed when an object is copied and moved. At the end we compare with Python, whose assignment never copies an object.
@@ -197,7 +197,7 @@ A definition with an equals sign, `Buffer c = a;`, is an initialization and call
 
 ### 6.3.4. A Correct Resource Class
 
-The `Buffer` below manages a dynamic array and defines copying and moving completely (moving is explained in §6.4). The copy assignment uses the copy-and-swap idiom: first make a copy in a temporary object with the copy constructor, then swap its contents with `*this`, and the temporary releases the old data when it is destroyed. Written this way, self-assignment is handled automatically, and if copying throws an exception (for example, out of memory), `*this` remains unchanged.
+The `Buffer` below manages a dynamic array and defines copying and moving completely (moving is explained in §6.4). The copy assignment uses the copy-and-swap idiom: first make a copy in a temporary object with the copy constructor, then swap its contents with `*this`, and the temporary releases the old data when it is destroyed. Written this way, self-assignment is also correct, because the copy is made from still-valid data before any resource is released; the check `this != &other` in the code merely saves a needless copy on self-assignment. Moreover, if copying throws an exception (for example, out of memory), `*this` remains unchanged.
 
 ```cpp
 #include <algorithm>
@@ -655,7 +655,7 @@ A user-defined class can define `__copy__` and `__deepcopy__` to control how it 
 
 - A reference is an alias for an object; it must be initialized and cannot be rebound; `const T&` is the standard way of passing class-type parameters and can bind temporaries. Do not return a reference to a local object.
 - Expressions are divided into lvalues, xvalues and prvalues; an rvalue reference `T&&` binds only to rvalues, and a named rvalue reference is itself an lvalue. `std::move` merely converts an lvalue into an xvalue.
-- The copy constructor and copy assignment operator define copying; the compiler-generated memberwise copy is a shallow copy for raw pointer members and leads to double release, so a class that manages resources must implement deep copy or forbid copying. Copy-and-swap makes the assignment operator handle self-assignment automatically and gives strong exception safety.
+- The copy constructor and copy assignment operator define copying; the compiler-generated memberwise copy is a shallow copy for raw pointer members and leads to double release, so a class that manages resources must implement deep copy or forbid copying. Copy-and-swap makes the assignment operator correct under self-assignment and gives strong exception safety.
 - Move construction and move assignment transfer resources without copying, leaving the source object in a valid but unspecified state; move operations should be declared `noexcept`, otherwise `std::vector` can only copy when it grows.
 - Since C++17, copy elision is guaranteed when an object is initialized from a prvalue; to return a local variable write `return t;`, not `return std::move(t);`.
 - Declaring a destructor or copy operations suppresses the generation of move operations. Classes that manage resources follow the rule of five; other classes follow the rule of zero, handing resources to RAII members and writing no special member function at all.

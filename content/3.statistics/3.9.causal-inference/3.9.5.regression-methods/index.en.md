@@ -265,14 +265,14 @@ In this special case adjustment never hurts. In general it can: Freedman (2008) 
 Replacing population expectations by sample averages in Theorem 5.3.2 gives the heteroscedasticity-robust estimator of the sampling variance,
 
 $$
-\widehat{\operatorname{Var}}{}^{\mathrm{hetero}}_{\mathrm{sp}} = \frac{1}{N(N - 1 - K)} \cdot \frac{\sum_{i=1}^{N}(W_i - \bar W)^2\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W^2(1 - \bar W)^2},
+\widehat{\operatorname{Var}}{}^{\mathrm{hetero}}_{\mathrm{sp}} = \frac{1}{N(N - 2 - K)} \cdot \frac{\sum_{i=1}^{N}(W_i - \bar W)^2\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W^2(1 - \bar W)^2},
 $$
 and under homoscedasticity the simpler
 
 $$
-\widehat{\operatorname{Var}}{}^{\mathrm{homo}}_{\mathrm{sp}} = \frac{1}{N(N - 1 - K)} \cdot \frac{\sum_{i=1}^{N}\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W(1 - \bar W)},
+\widehat{\operatorname{Var}}{}^{\mathrm{homo}}_{\mathrm{sp}} = \frac{1}{N(N - 2 - K)} \cdot \frac{\sum_{i=1}^{N}\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W(1 - \bar W)},
 $$
-where $K = \dim X_i$. The first is, up to the degrees-of-freedom factor, the $(\tau, \tau)$ entry of the White estimator for this regression; it is the one to use unless the homoscedastic model has good support.
+where $K = \dim X_i$ and $N - 2 - K$ is the residual degrees of freedom of a regression with $K + 2$ coefficients (for $K = 0$ the homoscedastic estimator reduces to the pooled one with $\hat\sigma^2 = \frac{1}{N - 2}\sum_i\hat\varepsilon_i^2$). The first is, up to the degrees-of-freedom factor, the $(\tau, \tau)$ entry of the White estimator for this regression; it is the one to use unless the homoscedastic model has good support.
 
 ### 5.3.6. Imputation Interpretation
 

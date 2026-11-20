@@ -5510,7 +5510,7 @@ terms:
   - { zh: 酸效应曲线, en: Ringbom curve, aliases: [林邦曲线] }
   - { zh: 金属指示剂, en: metallochromic indicator, aliases: [金属离子指示剂, metal ion indicator] }
   - { zh: 指示剂的封闭, en: blocking of an indicator, aliases: [指示剂封闭, indicator blocking] }
-  - { zh: 指示剂的僵化, en: sluggish end point, aliases: [指示剂僵化, indicator ossification] }
+  - { zh: 指示剂的僵化, en: sluggish end point, aliases: [指示剂僵化] }
   - { zh: 掩蔽, en: masking, aliases: [掩蔽剂, masking agent], scope: ["6"] }
   - { zh: 解蔽, en: demasking, aliases: [解蔽剂, demasking agent] }
   - { zh: 水的硬度, en: water hardness, aliases: [硬度] }
@@ -6693,7 +6693,7 @@ terms:
   - { zh: 钴胺素, en: cobalamin, aliases: [vitamin B12, coenzyme B12] }
   - { zh: 代谢途径, en: metabolic pathway, aliases: [metabolic pathways] }
   - { zh: 代谢通量, en: metabolic flux }
-  - { zh: 定向步骤, en: committed step }
+  - { zh: 关键步骤, en: committed step, aliases: [定向步骤, 决定性步骤] }
   - { zh: 底物循环, en: substrate cycle, aliases: [futile cycle, 无效循环] }
   - { zh: 能荷, en: energy charge }
   - { zh: 代谢控制分析, en: metabolic control analysis, aliases: [MCA] }

@@ -180,7 +180,7 @@ Ignorability is weaker than unconfoundedness. The sequential experiment of Examp
 
 **Definition 2.4.2 (Classical Randomized Experiment)** A **classical randomized experiment** is a randomized experiment whose assignment mechanism is, in addition, individualistic and unconfounded.
 
-Randomized experiments are the most credible basis for causal inference: the researcher controls the assignment and can guarantee the restrictions by design rather than assume them. Regulators such as the U.S. Food and Drug Administration typically rely on such experiments in approving new drugs. Example 2.2.4 is a randomized experiment that is not classical.
+Randomized experiments are the most credible basis for causal inference: the researcher controls the assignment and can guarantee the restrictions by design rather than assume them. Regulators such as the U.S. Food and Drug Administration typically rely on such experiments in approving new drugs. The sequential experiment of Example 2.2.4 is controlled by the researcher and its functional form is known, but it is a randomized experiment only for potential outcomes with $p_3 = 1/2$; when $p_3 \in \{0, 1\}$, unit 3 is not assigned probabilistically. In no case is it a classical randomized experiment, since it is neither individualistic nor unconfounded.
 
 **Definition 2.4.3 (Observational Study)** An assignment mechanism corresponds to an **observational study** if its functional form is unknown.
 

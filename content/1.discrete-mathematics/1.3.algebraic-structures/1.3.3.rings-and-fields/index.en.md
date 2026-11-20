@@ -1,6 +1,6 @@
 ---
 title: Rings and Fields
-source_hash: 61d0eadf58e0
+source_hash: ed94a5721568
 ---
 
 A group has a single operation, whereas integers, polynomials and matrices all have both addition and multiplication, linked by the **distributive law** (Section 1.3.3). A ring is the abstraction of such systems in which one can add, subtract and multiply; a field further requires multiplication to be commutative and every nonzero element to be invertible, so that one can also divide.
@@ -266,6 +266,8 @@ Equivalently, a field is a division ring with commutative multiplication; a fiel
 ### 3.5.2. Number Fields and Common Fields
 
 **Definition 3.5.2 (Number Field)** Let $F$ be a subset of the complex numbers containing $0$ and $1$. If $F$ is closed under the four arithmetic operations of addition, subtraction, multiplication and division (by nonzero numbers), then $F$ is called a number field.
+
+A number field in this sense is simply a subfield of $\mathbb{C}$. In algebraic number theory the term "number field" usually means something else, a finite extension of $\mathbb{Q}$ (an algebraic number field).
 
 Typical fields:
 

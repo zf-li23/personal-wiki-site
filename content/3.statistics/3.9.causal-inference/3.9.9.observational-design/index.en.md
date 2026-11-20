@@ -234,7 +234,7 @@ A final design decision is whether to match or to block. Matching gives the clos
 | I | multivariate measures | Mahalanobis distance of means; normalized difference of $\hat\ell$ | joint imbalance; $\hat\Delta^{\ell} \approx 0 \Leftrightarrow f_{\mathrm{t}} \approx f_{\mathrm{c}}$ (Theorem 8.2.4) |
 | I | overlap | $q_{\mathrm{c}}$, $q_{\mathrm{t}}$: share of units with a counterpart within $\ell_u$ | for which subpopulation effects are credible |
 | II | trimming | keep $\hat e \in [\alpha, 1 - \alpha]$, often $\approx [0.1, 0.9]$ | removes units without counterparts; changes the estimand |
-| II | blocking | split at medians while $\lvert t\rvert > t_{\max} = 1$ and blocks are large enough | strata analyzed like an SRE; check $t_{kj}$, Q–Q plot, $Z_k$ |
+| II | blocking | split at medians while $\lvert t\rvert > t_{\max} = 1$ and blocks are large enough | strata analyzed like an SRE; check the within-block $t$-statistics of the covariates, Q–Q plot, $Z_k$ |
 | II | matching | nearest neighbors by $d_{\mathrm{M}}$ or $d_{\ell}$, with or without replacement, $M$ matches, calipers | close comparisons, mostly for the effect on the treated |
 
 - Every step uses only $W$ and $X$; the outcomes enter only in the analysis.

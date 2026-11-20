@@ -1,7 +1,7 @@
 ---
 title: 完全随机化实验的回归方法
 description: 以线性回归估计完全随机化实验中的平均处理效应。无协变量时，OLS 估计量就是均值差，其因果含义来自随机化，稳健标准误重现 Neyman 方差估计；有协变量时，即使模型有误，总体系数也等于超总体平均效应，估计量渐近正态，且在协变量能预测结果时更精确；交互项、效应异质性的检验，以及 LRC-CPPT 胆固醇数据。
-source_hash: 658caf5c1f47
+source_hash: c455164344d9
 ---
 
 [3.9.4](/3.9.4) 中 Neyman 的分析只使用处理指示变量与结果。多数实验还会记录处理前变量，这些变量若能预测结果，就含有均值差所丢弃的信息。线性回归是利用它们最常用的方法：把观测结果对处理指示变量和协变量作回归，读出处理的系数。回归本身只描述关联，任何数据集都可以做回归。然而在**完全随机化实验**中，随机化赋予回归系数因果含义，而且不要求线性模型成立。本章把这一论断讲精确。全章中，单元是来自**超总体**的随机样本，所以估计目标是 $\tau_{\mathrm{sp}}$，期望 $\mathbb{E}_{\mathrm{sp}}$ 与方差 $\operatorname{Var}_{\mathrm{sp}}$ 同时对单元的抽样与分配取（[3.9.4](/3.9.4)）。回归的结果是大样本结果，不同于 Fisher 与 Neyman 的精确有限样本结果。最小二乘的矩阵形式与稳健方差估计取自 [3.3.7](/3.3.7) 与 [3.3.12](/3.3.12)；[3.9.7](/3.9.7) 的分层设计与 [3.9.10](/3.9.10) 的观察性研究沿用同样的回归论证。
@@ -266,14 +266,14 @@ $R^2 = 0.75$ 的协变量使标准误减半；这一收益相当于把样本量�
 在定理 5.3.2 中用样本平均代替总体期望，得到抽样方差的异方差稳健估计，
 
 $$
-\widehat{\operatorname{Var}}{}^{\mathrm{hetero}}_{\mathrm{sp}} = \frac{1}{N(N - 1 - K)} \cdot \frac{\sum_{i=1}^{N}(W_i - \bar W)^2\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W^2(1 - \bar W)^2},
+\widehat{\operatorname{Var}}{}^{\mathrm{hetero}}_{\mathrm{sp}} = \frac{1}{N(N - 2 - K)} \cdot \frac{\sum_{i=1}^{N}(W_i - \bar W)^2\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W^2(1 - \bar W)^2},
 $$
 在同方差下则有更简单的
 
 $$
-\widehat{\operatorname{Var}}{}^{\mathrm{homo}}_{\mathrm{sp}} = \frac{1}{N(N - 1 - K)} \cdot \frac{\sum_{i=1}^{N}\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W(1 - \bar W)},
+\widehat{\operatorname{Var}}{}^{\mathrm{homo}}_{\mathrm{sp}} = \frac{1}{N(N - 2 - K)} \cdot \frac{\sum_{i=1}^{N}\bigl(Y_i^{\mathrm{obs}} - \hat\alpha^{\mathrm{ols}} - \hat\tau^{\mathrm{ols}}W_i - X_i\hat{\boldsymbol{\beta}}^{\mathrm{ols}}\bigr)^2}{\bar W(1 - \bar W)},
 $$
-其中 $K = \dim X_i$。第一个估计量除去自由度因子之外，就是该回归的 White 估计量的 $(\tau, \tau)$ 元；除非同方差模型有充分依据，应当使用它。
+其中 $K = \dim X_i$，$N - 2 - K$ 是含 $K + 2$ 个系数的回归的残差自由度（$K = 0$ 时同方差估计量化为 $\hat\sigma^2 = \frac{1}{N - 2}\sum_i\hat\varepsilon_i^2$ 的合并估计量）。第一个估计量除去自由度因子之外，就是该回归的 White 估计量的 $(\tau, \tau)$ 元；除非同方差模型有充分依据，应当使用它。
 
 ### 5.3.6. 插补解释
 

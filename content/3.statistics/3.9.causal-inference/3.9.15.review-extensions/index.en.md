@@ -84,7 +84,7 @@ The inference must respect the design. Under rerandomization, $\hat\tau^{\mathrm
 
 The methods of the course assume that all confounders are measured, or that an instrument is available. Negative controls offer a third way to deal with an unmeasured confounder $U$ of the exposure $X$ and the outcome $Y$: use other variables that are known to be unrelated to the causal question but share the confounding.
 
-**Definition 15.3.1 (Negative Control)** A **negative control exposure** is a variable $Z$ that is associated with the exposure through the unmeasured confounder but has no causal effect on the outcome. A **negative control outcome** is a variable $W$ that is affected by the unmeasured confounder but not by the exposure. Both serve as proxies of $U$.
+**Definition 15.3.1 (Negative Control)** A **negative control exposure** is a variable $Z$ that is associated with the unmeasured confounder $U$ (typically because $U$ affects it, as it affects the exposure) but has no causal effect on the outcome, so that $Z \perp Y \mid (U, X)$. A **negative control outcome** is a variable $W$ that is affected by the unmeasured confounder but neither by the exposure nor by $Z$, so that $W \perp (Z, X) \mid U$. Both serve as proxies of $U$.
 
 Classical uses detect confounding: in a study of the effect of influenza vaccination on mortality, a "protective effect" of the vaccine on deaths before the influenza season (a negative control outcome) reveals that healthier people are vaccinated. Miao, Geng and Tchetgen Tchetgen (2018) showed that a pair of proxies can do more: identify the effect.
 
@@ -116,12 +116,12 @@ The key idea of the instrumental variables analysis of [3.9.14](/3.9.14) was to 
 
 For binary $S$ there are four strata. With $S = W$, the treatment received, they are the compliance types, and the CACE is the principal stratum effect for compliers:
 
-| Stratum | $W(1)$ | $W(0)$ | $Y(1)$ observable | $Y(0)$ observable |
+| Stratum | $W(1)$ | $W(0)$ | effect of assignment on the treatment received | effect of assignment on $Y$ |
 |---|---|---|---|---|
-| never-taker | 0 | 0 | no effect defined ($W = 0$ either way) | |
-| complier | 1 | 0 | yes | yes |
-| defier | 0 | 1 | yes | yes |
-| always-taker | 1 | 1 | no effect defined ($W = 1$ either way) | |
+| never-taker | 0 | 0 | none ($W = 0$ either way) | zero under the exclusion restriction |
+| complier | 1 | 0 | $+1$ | the CACE |
+| defier | 0 | 1 | $-1$ | excluded by monotonicity |
+| always-taker | 1 | 1 | none ($W = 1$ either way) | zero under the exclusion restriction |
 
 A second application is truncation by death. In a clinical trial of a drug $Z$ for a severe disease, the outcome of interest is quality of life $Y$, measured only for patients who survive ($S = 1$); in an educational experiment, a scholarship $Z$ and a test score $Y$ observed only for students who did not drop out. Comparing the surviving patients of the two arms compares different kinds of patients if the drug affects survival, a form of **selection bias**.
 

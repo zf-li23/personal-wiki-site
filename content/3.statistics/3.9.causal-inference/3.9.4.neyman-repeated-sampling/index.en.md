@@ -248,7 +248,7 @@ By the **finite population central limit theorem** (Theorem 3.3.3, applied to th
 $$
 \mathrm{CI}^{1 - \alpha}(\tau_{\mathrm{fs}}) = \left(\hat\tau^{\mathrm{dif}} - z_{\alpha/2}\sqrt{\widehat{\operatorname{Var}}},\ \hat\tau^{\mathrm{dif}} + z_{\alpha/2}\sqrt{\widehat{\operatorname{Var}}}\right),
 $$
-where $z_{\alpha/2}$ is the upper $\alpha/2$ quantile of the standard normal distribution; for a $90\%$ interval, $z_{0.05} = 1.645$. Because the Neyman estimator overestimates the variance on average, the interval covers $\tau_{\mathrm{fs}}$ with probability at least $1 - \alpha$ in large samples; it is exact when the effect is constant. Neyman's intervals are valid (they reach the nominal coverage) and efficient as far as the data allow, since the only excess width comes from the unidentifiable $S_{\mathrm{tc}}^2$.
+where $z_{\alpha/2}$ is the upper $\alpha/2$ quantile of the standard normal distribution; for a $90\%$ interval, $z_{0.05} = 1.645$. Because the Neyman estimator overestimates the variance on average, the interval covers $\tau_{\mathrm{fs}}$ with probability at least $1 - \alpha$ in large samples; when the effect is constant, the variance estimator is unbiased and the large-sample coverage is exactly $1 - \alpha$ (in a finite sample the coverage is still only approximate, because the interval rests on the normal approximation). Neyman's intervals are valid (they reach the nominal coverage) and efficient as far as the data allow, since the only excess width comes from the unidentifiable $S_{\mathrm{tc}}^2$.
 
 ### 4.5.2. Testing the Weak Null Hypothesis
 
