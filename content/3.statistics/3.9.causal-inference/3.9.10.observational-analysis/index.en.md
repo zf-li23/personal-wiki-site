@@ -11,15 +11,7 @@ As in [3.9.8](/3.9.8), the units are a random sample from a super-population, $\
 
 **Example 10.1.1 (Lottery Winners and Labor Supply)** Imbens, Rubin and Sacerdote (2001) studied the effect of unearned income on economic behavior, including labor supply, consumption and savings. They surveyed people who had played the Massachusetts lottery. The treated units are the "winners", who had won large sums of money paid out in yearly installments; the controls are the "losers", who had also played but won only small prizes. The outcome considered here is the average annual labor earnings in the six years after winning, in thousands of dollars, and the covariates include the number of tickets bought, education, whether the person was working at the time of winning, and earnings in the years before winning.
 
-Winning is random among those who play, but the analysis sample is not a randomized experiment: survey response differed between winners and losers, and the two groups differ in covariates such as the number of tickets bought, which is related both to the chance of winning and to income. Under unconfoundedness given the covariates, the analysis follows the design of [3.9.9](/3.9.9). The propensity score is estimated by logistic regression with the three-step selection of [3.9.8](/3.9.8), and the sample of 496 units is trimmed to the units with $0.0891 \le \hat e(X_i) \le 0.9109$:
-
-| | $\hat e(X_i) < 0.0891$ | $0.0891 \le \hat e(X_i) \le 0.9109$ | $\hat e(X_i) > 0.9109$ | All |
-|---|---|---|---|---|
-| Losers | 82 | 172 | 5 | 259 |
-| Winners | 4 | 151 | 82 | 237 |
-| All | 86 | 323 | 87 | 496 |
-
-The trimming threshold $0.0891$ is the one given by the variance-minimizing rule of [3.9.9](/3.9.9). The remaining 323 units are divided into five blocks of 80, 40, 41, 81 and 81 units by the recursive splitting of Algorithm 9.4.1.
+Winning is random among those who play, but the analysis sample is not a randomized experiment: survey response differed between winners and losers, and the two groups differ in covariates such as the number of tickets bought, which is related both to the chance of winning and to income. Under unconfoundedness given the covariates, the analysis follows the design of [3.9.9](/3.9.9). The propensity score is estimated by logistic regression with the three-step selection of [3.9.8](/3.9.8), and the sample of about 500 units, roughly half winners and half losers, is trimmed to the units with $\hat e(X_i)$ between about $0.09$ and $0.91$, the thresholds given by the variance-minimizing rule of [3.9.9](/3.9.9). According to the original analysis, this removes about a third of the sample: almost all units below the lower threshold are losers and almost all above the upper threshold are winners, and a little over 300 units remain, about 170 losers and 150 winners. They are divided into five blocks of about 80, 40, 40, 80 and 80 units by the recursive splitting of Algorithm 9.4.1.
 
 :::
 
@@ -106,15 +98,15 @@ and similarly for $\hat\tau^{\mathrm{strat,adj}}$. These formulas treat the bloc
 
 ### 10.2.5. Results for the Lottery Data
 
-**Example 10.2.1 (Blocking and Regression for the Lottery Data)** Within the five blocks, the difference in means and the regression estimate with four covariates (number of tickets, education, working at the time of winning, earnings in the year before winning) give:
+**Example 10.2.1 (Blocking and Regression for the Lottery Data)** Within the five blocks, the difference in means and the regression estimate with four covariates (number of tickets, education, working at the time of winning, earnings in the year before winning) give the following results, as reported in the original analysis (rounded):
 
 | Block | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|
-| $N(j)$ | 80 | 40 | 41 | 81 | 81 |
-| $\hat\tau^{\mathrm{dif}}(j)$ (s.e.) | $-10.82$ ($4.70$) | $2.07$ ($5.10$) | $-1.17$ ($4.97$) | $-9.43$ ($3.23$) | $-2.89$ ($3.59$) |
-| $\hat\tau^{\mathrm{adj}}(j)$ (s.e.) | $-6.21$ ($4.01$) | $-6.51$ ($3.86$) | $-4.81$ ($3.87$) | $-5.88$ ($1.82$) | $-2.56$ ($2.39$) |
+| $N(j)$ | $\approx 80$ | $\approx 40$ | $\approx 40$ | $\approx 80$ | $\approx 80$ |
+| $\hat\tau^{\mathrm{dif}}(j)$ (s.e.) | $-11$ ($4.7$) | $2.1$ ($5.1$) | $-1.2$ ($5.0$) | $-9.4$ ($3.2$) | $-2.9$ ($3.6$) |
+| $\hat\tau^{\mathrm{adj}}(j)$ (s.e.) | $-6.2$ ($4.0$) | $-6.5$ ($3.9$) | $-4.8$ ($3.9$) | $-5.9$ ($1.8$) | $-2.6$ ($2.4$) |
 
-The adjustment changes the block estimates considerably and makes them much more homogeneous. Two things follow: the covariates do affect the outcome (earnings in the year before winning has a coefficient between $0.6$ and $0.85$ in every block), and within the blocks there remain enough differences in the covariates for the adjustment to matter. The overall estimates, for different samples, numbers of blocks and covariate sets, are:
+The adjustment changes the block estimates considerably and makes them much more homogeneous. Two things follow: the covariates do affect the outcome (earnings in the year before winning has a coefficient of roughly $0.6$ to $0.9$ in every block), and within the blocks there remain enough differences in the covariates for the adjustment to matter. The overall estimates reported in the original analysis, for different samples, numbers of blocks and covariate sets, are:
 
 | Covariates in the regression | Full sample, 1 block | Trimmed, 1 block | Trimmed, 2 blocks | Trimmed, 5 blocks |
 |---|---|---|---|---|
@@ -146,7 +138,7 @@ and similarly $q(j)\bar Y_{\mathrm{c}}^{\mathrm{obs}}(j) = \frac{1}{N}\sum_i(1 -
 
 Instead of each unit's own estimated score, blocking uses the average assignment rate in its block. This explains its robustness: a treated unit with $\hat e(X_i) = 0.01$ in a block where 10% of the units are treated receives weight $10$, not $100$. The price is the residual bias within blocks, which the regression adjustment of §10.2.3 removes.
 
-The weights of different estimators can be compared directly. In the trimmed lottery sample ($N_{\mathrm{c}} = 172$, $N_{\mathrm{t}} = 151$), the normalized weights of the weighting estimator have a maximum of $9.68$ among the controls, so a single unit counts almost ten times as much as an average one; in the full sample the maximum is $41.7$ and the standard deviation of the control weights $2.69$, a sign of the covariate imbalance and the reason why weighting on the untrimmed sample is sensitive to the propensity score model. Blocking with regression and matching with regression have weights with standard deviation around $1$ in the trimmed sample (their weights can even be negative, because regression extrapolates slightly within blocks or pairs).
+The weights of different estimators can be compared directly. According to the original analysis, in the trimmed lottery sample (about 170 controls and 150 treated units) the normalized weights of the weighting estimator reach about $10$ among the controls, so a single unit counts about ten times as much as an average one; in the full sample the maximum is about $40$ and the standard deviation of the control weights about $3$, a sign of the covariate imbalance and the reason why weighting on the untrimmed sample is sensitive to the propensity score model. Blocking with regression and matching with regression have weights with standard deviation around $1$ in the trimmed sample (their weights can even be negative, because regression extrapolates slightly within blocks or pairs).
 
 ## 10.4. Matching Estimators
 
@@ -240,14 +232,14 @@ With a linear model the estimated bias is $\hat B_i = D_i\hat{\boldsymbol{\beta}
 
 In all three the regression is local: it uses only the matched sample, in which the covariate distributions are similar, and it only corrects the small differences $D_i$. As with blocking and regression, misspecification of the linear model now has only a second-order effect.
 
-**Example 10.4.2 (Results for the Minimum Wage Data)** For the full data set, matching with replacement gives the following estimates of the effect of the minimum wage increase on employment, in employees per restaurant:
+**Example 10.4.2 (Results for the Minimum Wage Data)** For the full data set, matching with replacement gives the following estimates of the effect of the minimum wage increase on employment, in employees per restaurant (as reported in the original analysis, rounded):
 
 | Estimand | Method | $M$ | Distance | Estimate |
 |---|---|---|---|---|
 | New Jersey | regression, no covariates | | | $-0.22$ |
-| New Jersey | regression with covariates | | | $1.35$ |
+| New Jersey | regression with covariates | | | $1.4$ |
 | New Jersey | matching | 1 | Mahalanobis | $0.89$ |
-| New Jersey | matching | 4 | Mahalanobis | $1.01$ |
+| New Jersey | matching | 4 | Mahalanobis | $1.0$ |
 | New Jersey | matching | 1 | Euclidean | $0.93$ |
 | New Jersey | matching | 1 | exact on chain, Mahalanobis on others | $0.92$ |
 | Pennsylvania | matching | 1 | Mahalanobis | $0.63$ |
@@ -328,7 +320,7 @@ The difference in means is far off. Linear regression and plain blocking still c
    **Answer** $\hat\tau^{\mathrm{dif}} - \tau_{\mathrm{fs}} = \frac{1}{2}(Y_1(1) + Y_2(1)) - Y_3(0) - \frac{1}{3}\sum_{i}(Y_i(1) - Y_i(0))$. Taking conditional expectations with $\mu_w(x) = \alpha + \tau w + x\boldsymbol{\beta}$: the $Y(1)$ terms give $\frac{1}{6}(\mu_1(X_1) + \mu_1(X_2)) - \frac{1}{3}\mu_1(X_3) = \frac{1}{3}(\bar X_{\mathrm{t}} - X_3)\boldsymbol{\beta}$ and the $Y(0)$ terms give $-\frac{2}{3}\mu_0(X_3) + \frac{1}{3}(\mu_0(X_1) + \mu_0(X_2)) = \frac{2}{3}(\bar X_{\mathrm{t}} - X_3)\boldsymbol{\beta}$, the constants $\alpha$, $\tau$ cancelling in each group. The sum is $(\bar X_{\mathrm{t}} - \bar X_{\mathrm{c}})\boldsymbol{\beta}$ with $\bar X_{\mathrm{c}} = X_3$; the weights $N_{\mathrm{c}}/N = 1/3$ and $N_{\mathrm{t}}/N = 2/3$ are those of the proof.
 2. Show that if the linear model of Theorem 10.2.1 holds and regression is applied to the whole sample, the regression estimator is conditionally unbiased. Why, then, is regression on the raw sample not recommended?
 
-   **Answer** Under the model with a common $\boldsymbol{\beta}$, $Y_i^{\mathrm{obs}} = \alpha + \tau_{\mathrm{sp}}W_i + X_i\boldsymbol{\beta} + \varepsilon_i$ with $\mathbb{E}[\varepsilon_i \mid \boldsymbol{X}, \boldsymbol{W}] = 0$, so least squares is conditionally unbiased for $\tau_{\mathrm{sp}}$. The problem is that the model is only an approximation: when $\bar X_{\mathrm{t}}$ and $\bar X_{\mathrm{c}}$ differ much, the estimate depends on the model in regions where one group has no data, and small misspecifications (a quadratic term, an interaction) produce large biases, as the lottery data show ($-6.2$ to $-2.8$ on the full sample).
+   **Answer** Under the model with a common $\boldsymbol{\beta}$, $Y_i^{\mathrm{obs}} = \alpha + \tau_{\mathrm{sp}}W_i + X_i\boldsymbol{\beta} + \varepsilon_i$ with $\mathbb{E}[\varepsilon_i \mid \boldsymbol{X}, \boldsymbol{W}] = 0$, so least squares is conditionally unbiased for $\tau_{\mathrm{sp}}$. The problem is that the model is only an approximation: when $\bar X_{\mathrm{t}}$ and $\bar X_{\mathrm{c}}$ differ much, the estimate depends on the model in regions where one group has no data, and small misspecifications (a quadratic term, an interaction) produce large biases, as the lottery data show (on the full sample the reported estimates range from about $-6$ to $-3$).
 3. A trimmed sample has two blocks. Block 1: 60 controls, 20 treated, $\hat\tau^{\mathrm{dif}}(1) = 1.0$ with variance estimate $0.10$; block 2: 20 controls, 40 treated, $\hat\tau^{\mathrm{dif}}(2) = 2.5$ with variance estimate $0.12$. Compute $\hat\tau^{\mathrm{strat}}$, the estimate of the effect on the treated, and their standard errors.
 
    **Answer** $q = (80/140, 60/140) = (0.571, 0.429)$: $\hat\tau^{\mathrm{strat}} = 0.571 + 1.071 = 1.64$, variance $0.571^2 \times 0.10 + 0.429^2 \times 0.12 = 0.0327 + 0.0221 = 0.0547$, s.e. $0.234$. Treated weights $(20/60, 40/60)$: $\hat\tau_{\mathrm{t}} = 0.333 + 1.667 = 2.0$, variance $0.111 \times 0.10 + 0.444 \times 0.12 = 0.0644$, s.e. $0.254$. The effect on the treated is larger because the treated are concentrated in the block with the larger effect.

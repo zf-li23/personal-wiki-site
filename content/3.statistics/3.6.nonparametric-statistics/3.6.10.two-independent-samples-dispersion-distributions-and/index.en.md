@@ -331,26 +331,19 @@ mr <- rq(foodexp ~ income, data = engel, tau = 0.5)     # median regression
 summary(mr)
 ```
 
-```text
-Coefficients:
-            coefficients lower bd  upper bd
-(Intercept)  81.48225    53.25915 114.01156
-income        0.56018     0.48702   0.60199
-```
-
-The intervals reported by `summary.rq` for small samples are obtained by inverting a rank test (they need not be symmetric about the estimate). The median food expenditure increases by about $0.56$ franc per franc of income. Fitting $\tau=0.1,0.2,\dots,0.9$ shows slopes that increase with $\tau$, the upper quantile lines being steeper and fanning out; the least squares line lies above the median line at low incomes, pulled up by a few large expenditures. The figure below reproduces the same features with simulated data of the same size. The lines for large $\tau$ lie closer together than those for small $\tau$, so the conditional distribution of food expenditure is skewed to the left at given income: a few households spend much less than is typical.
+According to the original analysis, the median regression has an intercept of about $80$ and a slope of about $0.56$, with a reported interval for the slope of roughly $0.49$ to $0.60$. The intervals reported by `summary.rq` for small samples are obtained by inverting a rank test (they need not be symmetric about the estimate). The median food expenditure thus increases by a little over half a franc per franc of income. Fitting $\tau=0.1,0.2,\dots,0.9$ shows slopes that increase with $\tau$, the upper quantile lines being steeper and fanning out; the least squares line lies above the median line at low incomes, pulled up by a few large expenditures. The figure below reproduces the same features with simulated data of the same size. The lines for large $\tau$ lie closer together than those for small $\tau$, so the conditional distribution of food expenditure is skewed to the left at given income: a few households spend much less than is typical.
 :::
 
 ![Quantile regression for simulated heteroscedastic expenditure data ($n=235$, spread proportional to income). Left: fitted lines for $\tau=0.1$, $0.25$, $0.5$, $0.75$, $0.9$ and the least squares line (dashed). Right: the slope estimate as a function of $\tau$ with a $90\%$ pairs-bootstrap band ($60$ replicates), against the constant least squares slope. Under homoscedasticity the slope curve would be flat.](./plots/quantreg-lines.py)
 
-**Example 10.3.3 (Wages and Job Class)** The `Wage` data (R package `ISLR2`) give the wages (in thousands of dollars) of $3000$ male workers in the Mid-Atlantic region of the USA, with covariates including the job class, industrial or information. For the regression of wage on job class alone, diagnostic checks of the least squares fit report strongly non-normal residuals and unequal variances in the two groups. The fitted coefficients are:
+**Example 10.3.3 (Wages and Job Class)** The `Wage` data (R package `ISLR2`) give the wages (in thousands of dollars) of $3000$ male workers in the Mid-Atlantic region of the USA, with covariates including the job class, industrial or information. For the regression of wage on job class alone, diagnostic checks of the least squares fit report strongly non-normal residuals and unequal variances in the two groups. The fitted coefficients, as reported in the original analysis (rounded), are:
 
 | Fit | Intercept (industrial) | Information |
 |---|---|---|
-| Least squares | 103.32 | 17.27 |
-| $\tau=0.1$ | 66.04 | 8.40 |
-| $\tau=0.5$ | 99.69 | 12.96 |
-| $\tau=0.9$ | 145.81 | 25.96 |
+| Least squares | $\approx 100$ | $\approx 17$ |
+| $\tau=0.1$ | $\approx 66$ | $\approx 8$ |
+| $\tau=0.5$ | $\approx 100$ | $\approx 13$ |
+| $\tau=0.9$ | $\approx 150$ | $\approx 26$ |
 
 ```r
 library(ISLR2); library(quantreg)
@@ -360,12 +353,12 @@ q <- rq(wage ~ jobclass, data = Wage, tau = seq(0.1, 0.9, by = 0.1))
 plot(summary(q), parm = "jobclass2. Information")
 ```
 
-With a single binary covariate the fits have a simple meaning. Least squares gives the mean of the industrial group as intercept and the difference of the two group means as slope; quantile regression gives the $\tau$-quantile of the industrial group and the difference of the two groups' $\tau$-quantiles. Quantile regression with one binary covariate is therefore exactly the comparison of the quantiles of two independent samples. Here the information–industrial gap is about $8$ at the $10$th percentile, $13$ at the median and $26$ at the $90$th percentile: the information sector's wage distribution is not just shifted but stretched upward. The mean difference of $17.3$ overstates the gap at the bottom of the distribution and understates it at the top.
+With a single binary covariate the fits have a simple meaning. Least squares gives the mean of the industrial group as intercept and the difference of the two group means as slope; quantile regression gives the $\tau$-quantile of the industrial group and the difference of the two groups' $\tau$-quantiles. Quantile regression with one binary covariate is therefore exactly the comparison of the quantiles of two independent samples. Here the information–industrial gap is about $8$ at the $10$th percentile, $13$ at the median and $26$ at the $90$th percentile: the information sector's wage distribution is not just shifted but stretched upward. The mean difference of about $17$ overstates the gap at the bottom of the distribution and understates it at the top.
 
 Adding age and race to the model and plotting the coefficients for $\tau=0.05,\dots,0.95$ shows the same phenomenon for every covariate. For example, the estimated difference between Black and White workers (with the same job class and age) is close to zero at the lowest quantiles and widens to about $-30$ at the upper quantiles: the effects of job class, age and race on wages are not constant but depend on the part of the wage distribution considered.
 :::
 
-The interpretation of these coefficients needs care. They compare quantiles of two distributions; they do not say how the wage of a particular worker would change if that worker switched sectors. Reading $\beta(0.1)=8.4$ as "a low earner gains $8.4$ by moving to the information sector" requires that a worker would keep the same rank in the wage distribution after switching (rank invariance) and that job class is not confounded with other determinants of wages, neither of which the data establish. The quantile regression describes the conditional distributions honestly; causal claims need the designs and assumptions of [3.9](/3.9).
+The interpretation of these coefficients needs care. They compare quantiles of two distributions; they do not say how the wage of a particular worker would change if that worker switched sectors. Reading $\beta(0.1)\approx 8$ as "a low earner gains about $8$ by moving to the information sector" requires that a worker would keep the same rank in the wage distribution after switching (rank invariance) and that job class is not confounded with other determinants of wages, neither of which the data establish. The quantile regression describes the conditional distributions honestly; causal claims need the designs and assumptions of [3.9](/3.9).
 
 ### 10.3.6. Properties and Limits
 

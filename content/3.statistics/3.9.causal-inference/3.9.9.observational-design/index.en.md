@@ -3,7 +3,7 @@ title: "Designing Observational Studies: Balance, Trimming, Blocking, and Matchi
 description: The design phase of an observational study under a regular assignment mechanism, carried out without the outcomes. Assessing balance with normalized differences, log ratios of standard deviations, the Mahalanobis distance of the means and the linearized propensity score; assessing overlap unit by unit; trimming units with propensity scores near zero or one and the change of estimand; blocking on the propensity score by recursive splitting and balance tests within and across blocks; matching on the Mahalanobis or propensity score distance, hybrid matching and calipers; the barbiturate exposure data throughout.
 ---
 
-In a randomized experiment the design comes first: the researcher decides on blocks or pairs and randomizes, and only then are the outcomes measured. An observational study under a **regular assignment mechanism** ([3.9.8](/3.9.8)) can imitate this order. Before any outcome is looked at, the covariates and the treatment indicators alone tell us how different the treated and control groups are and whether every unit has comparable units in the other group. Where the groups differ, we select or arrange the units so that the comparison becomes more like one within a **stratified randomized experiment** or a **paired randomized experiment** ([3.9.7](/3.9.7)). Because the outcomes are not used, the design cannot be tuned toward a desired answer. This chapter describes the tools of the design phase: measures of balance and overlap (§9.2), trimming (§9.3), blocking (§9.4) and matching (§9.5). The estimators that use the resulting subsamples are the subject of [3.9.10](/3.9.10). The running example is the barbiturate exposure data of [3.9.8](/3.9.8) (Example 8.1.1), with $N_{\mathrm{t}} = 742$ exposed and $N_{\mathrm{c}} = 4462$ unexposed children and 17 covariates.
+In a randomized experiment the design comes first: the researcher decides on blocks or pairs and randomizes, and only then are the outcomes measured. An observational study under a **regular assignment mechanism** ([3.9.8](/3.9.8)) can imitate this order. Before any outcome is looked at, the covariates and the treatment indicators alone tell us how different the treated and control groups are and whether every unit has comparable units in the other group. Where the groups differ, we select or arrange the units so that the comparison becomes more like one within a **stratified randomized experiment** or a **paired randomized experiment** ([3.9.7](/3.9.7)). Because the outcomes are not used, the design cannot be tuned toward a desired answer. This chapter describes the tools of the design phase: measures of balance and overlap (§9.2), trimming (§9.3), blocking (§9.4) and matching (§9.5). The estimators that use the resulting subsamples are the subject of [3.9.10](/3.9.10). The running example is the barbiturate exposure data of [3.9.8](/3.9.8) (Example 8.1.1), with some seven hundred exposed and several thousand unexposed children and 17 covariates.
 
 ## 9.1. The Design Phase
 
@@ -136,16 +136,15 @@ Cochran (1968) showed that five blocks on a single covariate remove about 90% of
 
 A common choice is $t_{\max} = 1$, with minimum sizes of a few treated and control units per block. The rule tends to produce many narrow blocks where the propensity score changes quickly with the covariates and the groups differ most, and few wide blocks elsewhere.
 
-**Example 9.4.1 (Blocks for the Barbiturate Data)** With $t_{\max} = 1$, the first block contains all 4462 controls and 742 treated units, with propensity scores from $0.00$ to $0.94$ and $t = 36.3$. It is split at its median into $[0, 0.06)$ and $[0.06, 0.94]$, with $t$-statistics $3.2$ and $23.7$, and both are split again. After six rounds the procedure stops with ten blocks:
+**Example 9.4.1 (Blocks for the Barbiturate Data)** With $t_{\max} = 1$, the first block is the whole trimmed sample (all exposed children and the unexposed children that remain after the units with an estimated propensity score of zero have been removed), with propensity scores from $0.00$ to $0.94$ and $t = 36.3$. It is split at its median into $[0, 0.06)$ and $[0.06, 0.94]$, with $t$-statistics $3.2$ and $23.7$, and both are split again. After six rounds the procedure stops with ten blocks:
 
 | Block | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Range of $\hat e$ | $0$–$0.01$ | $0.01$–$0.02$ | $0.02$–$0.06$ | $0.06$–$0.11$ | $0.11$–$0.20$ | $0.20$–$0.37$ | $0.37$–$0.42$ | $0.42$–$0.50$ | $0.50$–$0.61$ | $0.61$–$0.94$ |
-| Controls | 644 | 636 | 1260 | 604 | 559 | 458 | 101 | 80 | 73 | 47 |
-| Treated | 6 | 14 | 41 | 46 | 92 | 192 | 61 | 83 | 90 | 117 |
+| Share treated | 1% | 2% | 3% | 7% | 14% | 30% | 38% | 51% | 55% | 71% |
 | $t$-statistic | $-0.0$ | $1.7$ | $0.5$ | $-0.3$ | $1.0$ | $1.2$ | $0.3$ | $0.7$ | $0.8$ | $-0.3$ |
 
-Blocks 2 and 6 still have $t > 1$ but are not split further because a split would leave too few treated units in one half. The proportion of treated units rises from about 1% in block 1 to 71% in block 10: the blocks resemble the strata of a stratified experiment with very different, but within each stratum roughly constant, assignment probabilities.
+Because each split is at the block median, blocks 1, 2 and 4–6 have about the same size, block 3 about twice that, and blocks 7–10 each about a quarter of it. Blocks 2 and 6 still have $t > 1$ but are not split further because a split would leave too few treated units in one half. The proportion of treated units rises from about 1% in block 1 to 71% in block 10: the blocks resemble the strata of a stratified experiment with very different, but within each stratum roughly constant, assignment probabilities.
 
 :::
 
@@ -204,7 +203,7 @@ The two ideas can be combined. Hybrid matching first partitions the sample by a 
 
 On the propensity score scale, a caliper of about $0.2$ standard deviations of the linearized propensity score is a common choice (Austin 2011). As with trimming, dropping treated units changes the estimand, from the effect on all treated units to the effect on those with good matches.
 
-**Example 9.5.1 (Matching the Barbiturate Data)** Each of the 742 exposed children is matched, without replacement, to one unexposed child, first by the Mahalanobis distance on all 17 covariates, then by the linearized propensity score distance. The normalized differences before and after matching are:
+**Example 9.5.1 (Matching the Barbiturate Data)** Each exposed child is matched, without replacement, to one unexposed child, first by the Mahalanobis distance on all 17 covariates, then by the linearized propensity score distance. The normalized differences before and after matching are:
 
 | | Full sample | Mahalanobis matching | Propensity score matching |
 |---|---|---|---|

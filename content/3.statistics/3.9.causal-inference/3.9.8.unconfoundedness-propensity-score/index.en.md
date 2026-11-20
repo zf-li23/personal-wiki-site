@@ -11,7 +11,7 @@ Throughout the chapter we use the **super-population** view: the units are a ran
 
 ### 8.1.1. The Barbiturate Exposure Data
 
-**Example 8.1.1 (Prenatal Exposure to Barbiturates)** Reinisch, Sanders, Mortensen and Rubin (1995) studied the effect of prenatal exposure to barbiturates, a class of sedatives acting on the central nervous system, on the cognitive development of children. The treated units are children who were exposed in utero to substantial amounts of barbiturates, the controls children who were not; the outcomes are measures of cognitive development in adulthood. Seventeen covariates were recorded for each child, describing the mother (for example her age and socioeconomic status), the course of the pregnancy and the child (for example sex). In the sample used below there are $N_{\mathrm{t}} = 742$ exposed and $N_{\mathrm{c}} = 4462$ unexposed children.
+**Example 8.1.1 (Prenatal Exposure to Barbiturates)** Reinisch, Sanders, Mortensen and Rubin (1995) studied the effect of prenatal exposure to barbiturates, a class of sedatives acting on the central nervous system, on the cognitive development of children. The treated units are children who were exposed in utero to substantial amounts of barbiturates, the controls children who were not; the outcomes are measures of cognitive development in adulthood. Seventeen covariates were recorded for each child, describing the mother (for example her age and socioeconomic status), the course of the pregnancy and the child (for example sex). The sample used below contains some seven hundred exposed children and several thousand unexposed children.
 
 :::
 
