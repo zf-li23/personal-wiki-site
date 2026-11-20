@@ -93,7 +93,7 @@ for name, ki, start in (("wt", 0.02, 0), ("mut", 0.0004, 0), ("mutA10", 0.0004, 
 pl = Q.Plot(ax, (15.2, 1.4, 5.6, 7.6), xlim=(0, 15), ylim=(0, 260), xlabel="t / min", ylabel="mean poly(A) length / nt",
             xticks=[0, 5, 10, 15], yticks=[0, 50, 100, 150, 200, 250])
 pl.line(ts / 60, curves["wt"][0], "positive", text="AAUAAA", at=0.62, dx=0.2, dy=-0.1)
-pl.line(ts / 60, curves["mut"][0], "negative", text="AAUAGA (mutant)", at=0.55, dy=0.3)
+pl.line(ts / 60, curves["mut"][0], "negative", text="AAUAAG (mutant)", at=0.55, dy=0.3)
 pl.line(ts / 60, curves["mutA10"][0], "dna", dashed=True, text="mutant + preformed A10", at=0.1, dx=0.2, dy=0.1)
 
 # distributions of the wild type
