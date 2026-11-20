@@ -184,7 +184,7 @@ Diversity depends on the scale of study. A landscape contains many habitat patch
 
 - **Alpha diversity** ([7.8.14](/7.8.14)) is the diversity within a single community or habitat patch, measured by any of the indices of Section 31.3.
 - **Beta diversity** ([7.8.14](/7.8.14)) is the differentiation among communities: the extent of change in species composition from one community to another along an environmental gradient or across a region, the turnover of species.
-- **Gamma diversity** is the total diversity of a region that contains several communities: the diversity of the pooled sample.
+- *Gamma diversity* is the total diversity of a region that contains several communities: the diversity of the pooled sample.
 
 **Definition 31.4.1 (Whittaker's Beta Diversity)** With $\gamma$ the number of species in the region and $\bar\alpha$ the mean number of species per community, Whittaker's multiplicative beta diversity is
 
