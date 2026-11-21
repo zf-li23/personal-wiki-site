@@ -6,7 +6,7 @@ Student: y = W2 tanh(W1 x) with 40 hidden units, squared error, minibatches of 5
 - Feedback alignment (FA, Lillicrap et al. 2016): delta_h = (B e) * tanh'(a) with B a fixed random
   matrix of the shape of W2^T.
 - Evolution strategies (ES): no backward pass; 20 antithetic pairs (40 samples) of Gaussian perturbations
-  (std 0.02) of all weights per update, fitness rank-transformed to [-0.5, 0.5] (centred rank),
+  (std 0.02) of all weights per update, fitness rank-transformed to [-0.5, 0.5] (centered rank),
   step 0.003 / (1 + k / 200) at update k.
 - Shallow baseline: only the output layer W2 is trained (hidden weights fixed).
 A: test error against the number of updates. B: angle between the FA hidden-error signal (B e) and the

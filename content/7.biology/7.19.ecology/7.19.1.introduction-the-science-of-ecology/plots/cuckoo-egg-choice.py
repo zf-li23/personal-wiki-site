@@ -1,5 +1,5 @@
 # Nest-choice experiment with common cuckoos (Cuculus canorus) parasitizing Daurian redstarts
-# (Phoenicurus auroreus). Each active redstart nest (centre) was flanked at 0.5 m by two unattended
+# (Phoenicurus auroreus). Each active redstart nest (center) was flanked at 0.5 m by two unattended
 # nest boxes holding a blue or a pink model clutch. Bars: number of cuckoo eggs laid in each box,
 # read from Fig. 2 of Zhang et al. (2023) Proc. R. Soc. B 290: 20222094.
 # A: host clutch blue (4 / 9 / 0 eggs in the blue box / host nest / pink box);

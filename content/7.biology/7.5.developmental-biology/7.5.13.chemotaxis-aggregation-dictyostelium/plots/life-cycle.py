@@ -1,7 +1,7 @@
 """The asexual life cycle of the social amoeba Dictyostelium discoideum (schematic, not to scale).
 
 Spores germinate into amoebae that feed on bacteria and divide. Starvation starts cAMP signaling: cells relay
-pulses of cAMP and move towards them, joining streams that converge on aggregation centres (about 1e5 cells).
+pulses of cAMP and move towards them, joining streams that converge on aggregation centers (about 1e5 cells).
 The aggregate forms a mound with a tip, which elongates into a migrating slug: prestalk cells (red) in the front
 fifth, prespore cells (blue) behind. At culmination the prestalk cells form the stalk, a column of dead,
 vacuolated cells, and lift the prespore cells, which become spores in the sorus of the fruiting body.

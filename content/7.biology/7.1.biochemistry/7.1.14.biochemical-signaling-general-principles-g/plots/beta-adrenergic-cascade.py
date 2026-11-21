@@ -1,6 +1,6 @@
 """The beta-adrenergic cascade in a hepatocyte, in SBGN process description notation.
 
-Epinephrine binds the beta-adrenergic receptor (association); the occupied receptor catalyses GDP/GTP
+Epinephrine binds the beta-adrenergic receptor (association); the occupied receptor catalyzes GDP/GTP
 exchange on Gs-alpha; Gs-alpha-GTP stimulates adenylyl cyclase (AC), which converts ATP to cAMP;
 cAMP phosphodiesterase (PDE) degrades cAMP to 5'-AMP. Four cAMP dissociate the inactive R2C2
 tetramer of protein kinase A into R2(cAMP)4 and two active C subunits. PKA phosphorylates

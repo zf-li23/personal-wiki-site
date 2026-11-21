@@ -1,7 +1,7 @@
 ---
 title: Dictionaries
 description: The dictionary ADT and hashing, design principles of hash functions, the division method and universal hashing, hash codes of strings, separate chaining and open addressing (linear probing, lazy deletion, rehashing, quadratic probing and bidirectional quadratic probing, double hashing) with their expected performance, the implementations behind Python dict/set and C++ unordered_map, bucket sort, maximum gap, counting sort and radix sort, and skip lists.
-source_hash: 766cc7ecd9de
+source_hash: fbd4bacac454
 ---
 
 The data structures of the preceding chapters access elements by position (**rank**) or by order of size: a **vector** gives random access by rank, and a search tree compares keys level by level according to their size. This chapter discusses another way of access: finding the corresponding data item directly from the key itself, which is "call-by-key". The core technique that realizes this kind of access is hashing: a function maps a key to an array index, so that search, insertion and deletion take only constant time in the expected sense, and keys need not even be comparable. Hash tables are among the most used data structures in real programs, and Python's `dict` and `set` and C++'s `unordered_map` are all built on them (for their usage see [4.2.10](/4.2.10)). This chapter first covers the design of hash functions and the two main families of methods for resolving collisions, and analyzes their expected performance. We then apply the idea of "distributing by value into buckets" to sorting, yielding bucket sort, counting sort and radix sort, which break the lower bound for comparison sorting. Finally we introduce skip lists, which implement an ordered dictionary with randomized multilevel **linked lists** and are a simple alternative to **balanced binary search trees** ([4.3.6](/4.3.6), [4.3.8](/4.3.8)).
@@ -725,7 +725,7 @@ The key to correctness is this: $n$ points have $n - 1$ gaps between them with t
 #include <random>
 #include <vector>
 
-// Largest gap between neighbours in sorted order, in O(n) time with n buckets.
+// Largest gap between neighbors in sorted order, in O(n) time with n buckets.
 double max_gap(const std::vector<double>& p) {
     std::size_t n = p.size();
     if (n < 2) return 0;
@@ -768,7 +768,7 @@ import random
 
 
 def max_gap(p: list[float]) -> float:
-    """Largest gap between neighbours in sorted order, in O(n) time with n buckets."""
+    """Largest gap between neighbors in sorted order, in O(n) time with n buckets."""
     n = len(p)
     if n < 2:
         return 0.0

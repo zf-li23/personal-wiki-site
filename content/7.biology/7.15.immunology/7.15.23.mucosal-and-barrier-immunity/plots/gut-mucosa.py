@@ -2,7 +2,7 @@
 # lymphocytes and the mucus layer; IgA plasma cells in the lamina propria secrete dimeric IgA, which pIgR
 # carries across the epithelium (transcytosis) and releases as secretory IgA into the mucus. Right: a
 # Peyer's patch: the follicle-associated epithelium with an M cell that transports luminal antigen to
-# dendritic cells of the subepithelial dome, above a B-cell follicle with a germinal centre and a T-cell zone.
+# dendritic cells of the subepithelial dome, above a B-cell follicle with a germinal center and a T-cell zone.
 # Induction happens in the patch; effector cells reach the lamina propria via lymph and blood.
 import numpy as np
 from matplotlib.patches import Ellipse, Rectangle

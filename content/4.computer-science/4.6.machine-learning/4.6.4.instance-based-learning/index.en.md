@@ -1,7 +1,7 @@
 ---
 title: Instance-Based Learning
 description: Parametric and nonparametric methods; instance-based (lazy) learning; the nearest neighbor rule, Voronoi diagrams and the Cover–Hart bound; distance measures, attribute normalization and weighting, choice of k and tie breaking for k-nearest neighbors; the curse of dimensionality; nearest neighbor queries with k-d trees and approximate nearest neighbor search (LSH, HNSW, IVF-PQ, FAISS); distance-weighted k-nearest neighbors, kernel regression and locally weighted regression.
-source_hash: e753a2093d73
+source_hash: 3d2f03f0bd61
 ---
 
 The methods of the preceding chapters all follow a "three-step" path: estimate the characteristics of the problem, make a model assumption (a linear function, normal noise, conditional independence, and so on), and then find the optimal parameters. This chapter introduces a method that does not take this path: it builds no explicit model and only stores the training examples; when a new example must be predicted, it finds the training examples most similar to it and answers with their outputs. This is the idea that "birds of a feather flock together": thinking as recall and analogy. The most typical method is $k$-nearest neighbors, which already appeared in multivariate analysis in the statistics courses ([3.4.12](/3.4.12)); this chapter discusses its design choices systematically (the distance, the treatment of attributes, the choice of $k$) as well as its two fundamental difficulties: distances lose their meaning in high-dimensional spaces (the curse of dimensionality), and the computational cost at prediction time. The latter leads to the k-d tree ([4.3.7](/4.3.7)) and to the approximate nearest neighbor search that underlies vector retrieval today. Finally, the idea of "weighting by distance" is extended to regression, giving kernel regression and locally weighted regression, the machine learning view of nonparametric regression in statistics ([3.3.12](/3.3.12), to be discussed systematically in [Nonparametric Statistics](/3.6)).
@@ -163,7 +163,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-X, y = load_breast_cancer(return_X_y=True)            # 569 tumours, 30 features
+X, y = load_breast_cancer(return_X_y=True)            # 569 tumors, 30 features
 X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.25, stratify=y, random_state=0)
 
 raw = KNeighborsClassifier(n_neighbors=5)

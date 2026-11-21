@@ -1,7 +1,7 @@
 """First step of the reduction of a carboxylic acid by LiAlH4: an acid-base reaction. An Al-H bond
 pair takes the acidic proton and the O-H bond pair stays on oxygen, releasing H2 and leaving the
-lithium carboxylate bound to aluminium. The carboxylate, activated by the Lewis acidic aluminium,
-then accepts hydride; the tetrahedral intermediate loses an aluminium oxide to give the aldehyde,
+lithium carboxylate bound to aluminum. The carboxylate, activated by the Lewis acidic aluminum,
+then accepts hydride; the tetrahedral intermediate loses an aluminum oxide to give the aldehyde,
 which is reduced at once, so workup gives the primary alcohol."""
 
 from wikichem import Scheme

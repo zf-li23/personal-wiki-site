@@ -1,7 +1,7 @@
 """Finite differences for u_t = D u_xx + f(u).
 
 A: the space-time grid (x_i = i dx, t_n = n dt) with the stencils of the explicit scheme (forward in
-time, centred in space: u_i^{n+1} from u_{i-1}^n, u_i^n, u_{i+1}^n) and the implicit scheme
+time, centered in space: u_i^{n+1} from u_{i-1}^n, u_i^n, u_{i+1}^n) and the implicit scheme
 (u_{i-1}^{n+1}, u_i^{n+1}, u_{i+1}^{n+1} coupled to u_i^n).
 B: von Neumann amplification factors of one step for the Fourier mode exp(i k x), against k dx, with
 lambda = D dt / dx^2: explicit G = 1 - 4 lambda sin^2(k dx / 2) for lambda = 0.25, 0.5 and 0.6, implicit

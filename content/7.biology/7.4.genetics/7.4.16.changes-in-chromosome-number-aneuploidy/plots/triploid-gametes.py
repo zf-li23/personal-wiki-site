@@ -1,4 +1,4 @@
-"""Fertility of triploids. Each of the x trivalents sends one or two of its three homologues to a pole at
+"""Fertility of triploids. Each of the x trivalents sends one or two of its three homologs to a pole at
 random; a gamete is euploid (x or 2x chromosomes) only if all trivalents send the same number, with
 probability 2 (1/2)^x. Circles: simulation of 100 000 meioses for each x."""
 import numpy as np

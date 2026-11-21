@@ -12,7 +12,7 @@ from wikibio import phylo
 
 P = bio.P
 T = np.array([430, 410, 395, 380, 365, 345, 320, 300, 280, 255, 230, 200, 170, 145, 125, 110, 95, 80, 66, 40, 20, 0])
-SHARE = {  # schematic relative shares (rows are normalised to 100 at each time below)
+SHARE = {  # schematic relative shares (rows are normalized to 100 at each time below)
     "Early vascular plants": [100, 85, 60, 25, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     "Lycophytes": [0, 15, 25, 25, 25, 25, 25, 20, 10, 5, 4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1],
     "Sphenophytes": [0, 0, 0, 8, 12, 15, 15, 15, 12, 8, 8, 5, 4, 3, 3, 2, 1, 1, 1, 1, 1, 1],

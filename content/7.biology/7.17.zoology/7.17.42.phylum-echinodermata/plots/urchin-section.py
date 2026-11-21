@@ -1,4 +1,4 @@
-# Regular sea urchin in vertical section (Wikimedia template "Sea Urchin Anatomy.svg"), parts highlighted and labelled.
+# Regular sea urchin in vertical section (Wikimedia template "Sea Urchin Anatomy.svg"), parts highlighted and labeled.
 import wikibio as bio
 
 fig, ax = bio.canvas(18.0, 9.6)

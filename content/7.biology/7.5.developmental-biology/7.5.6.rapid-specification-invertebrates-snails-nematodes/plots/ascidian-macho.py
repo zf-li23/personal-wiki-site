@@ -2,7 +2,7 @@
 up, anterior left); the four pairs of blastomeres are named a4.2, b4.2 (animal) and A4.1, B4.1 (vegetal).
 The yellow crescent cytoplasm, segregated into the posterior-vegetal pair B4.1, contains macho-1 mRNA; B4.1
 gives rise to most of the larval tail muscle. Other fates are listed for each pair (the notochord and
-mesenchyme are specified conditionally, by FGF from neighbouring endoderm). B: the logic of the experiments.
+mesenchyme are specified conditionally, by FGF from neighboring endoderm). B: the logic of the experiments.
 Isolated B4.1 forms muscle (the information is in the cell); depleting macho-1 mRNA abolishes primary muscle
 (necessary); injecting macho-1 mRNA into animal blastomeres makes them form muscle (sufficient)."""
 import wikibio as bio

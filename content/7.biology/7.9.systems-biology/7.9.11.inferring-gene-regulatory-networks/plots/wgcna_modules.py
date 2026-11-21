@@ -7,7 +7,7 @@ log10 k over ten bins of connectivity) for the soft threshold beta of the unsign
 B: the mean connectivity, which falls steeply with beta (dotted: beta = 6). C: the topological overlap matrix at
 beta = 6, the usual default, with genes ordered by
 average-linkage hierarchical clustering on 1 - TOM; the bar on the left marks the simulated modules
-(grey: noise genes). Cutting the tree at height 0.97 and keeping branches of at least 15 genes
+(gray: noise genes). Cutting the tree at height 0.97 and keeping branches of at least 15 genes
 gives five modules that agree with the simulated ones (adjusted Rand index 0.99); no noise gene is
 placed in a module and 3 module genes are left unassigned."""
 

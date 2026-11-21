@@ -1,4 +1,4 @@
-"""Periodic table coloured by block, with IUPAC and traditional A/B group labels."""
+"""Periodic table colored by block, with IUPAC and traditional A/B group labels."""
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle

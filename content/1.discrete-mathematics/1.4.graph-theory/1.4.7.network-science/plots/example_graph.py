@@ -1,5 +1,5 @@
 """The example graph G0 of Section 7.1: two groups of four vertices joined by the edge 4-5. Each vertex
-is coloured by its betweenness centrality (white = 0, dark red = 12.5) and annotated with its degree k
+is colored by its betweenness centrality (white = 0, dark red = 12.5) and annotated with its degree k
 and local clustering coefficient C."""
 
 from fractions import Fraction

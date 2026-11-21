@@ -1,5 +1,5 @@
 """Elementary hypercycle dx_i/dt = x_i (k_i x_{i-1} - phi): n = 3 approaches equilibrium, n = 5 oscillates;
-a parasite catalysed by member 2 (k = 1.5) but catalysing nothing invades a 3-member cycle at t = 30."""
+a parasite catalyzed by member 2 (k = 1.5) but catalyzing nothing invades a 3-member cycle at t = 30."""
 import numpy as np
 from scipy.integrate import solve_ivp
 import wikibio as bio

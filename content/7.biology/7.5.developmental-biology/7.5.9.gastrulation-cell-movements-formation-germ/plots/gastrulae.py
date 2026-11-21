@@ -1,4 +1,4 @@
-"""Gastrulae of the model species in section, coloured by germ layer (ectoderm blue, mesoderm red, endoderm
+"""Gastrulae of the model species in section, colored by germ layer (ectoderm blue, mesoderm red, endoderm
 yellow). Sea urchin: the archenteron invaginated from the vegetal plate, primary mesenchyme cells in the
 blastocoel, secondary mesenchyme at the archenteron tip extending filopodia to the animal wall. Frog
 (mid-gastrula, sagittal, dorsal right): bottle cells at the dorsal lip, mesoderm that has involuted under

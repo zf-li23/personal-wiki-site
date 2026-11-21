@@ -1,5 +1,5 @@
 """The origin of birds (Section 32.1.3): a schematic cladogram of some fossil theropods and early birds,
-with crocodiles as the outgroup. Tips are labelled with the approximate age of the fossils (Mya).
+with crocodiles as the outgroup. Tips are labeled with the approximate age of the fossils (Mya).
 Numbered bars mark where characters of living birds evolved: 1, hollow bones and a furcula (Theropoda);
 2, filamentous feathers (Coelurosauria); 3, vaned feathers (Pennaraptora); 4, long feathered forelimbs
 forming wings (Paraves); 5, a pygostyle; 6, a keeled sternum and an alula (Ornithothoraces). Red slashes:
@@ -15,7 +15,7 @@ ink, muted = P.ink(), P.muted()
 fig, ax = plt.subplots(figsize=(10.8, 4.8))
 fig.subplots_adjust(left=0.02, right=0.98, bottom=0.03, top=0.97)
 
-# (name, italic, age label, group colour token)
+# (name, italic, age label, group color token)
 TAXA = [("Crocodylia", False, "living", "neutral"),
         ("Allosaurus", True, "~150", "neutral"),
         ("Sinosauropteryx", True, "~125", "rna"),

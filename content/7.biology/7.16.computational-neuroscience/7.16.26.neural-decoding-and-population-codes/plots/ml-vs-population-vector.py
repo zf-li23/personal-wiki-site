@@ -2,7 +2,7 @@
 
 N neurons with preferred directions evenly spaced on the circle, von Mises tuning
 f_i(s) = r0 + A exp(kappa (cos(s - s_i) - 1)) with r0 = 2, A = 20 (mean spike counts in the
-decoding window), independent Poisson counts. ML decoder: maximise sum_i n_i ln f_i(s) - sum_i f_i(s)
+decoding window), independent Poisson counts. ML decoder: maximize sum_i n_i ln f_i(s) - sum_i f_i(s)
 over a grid of 720 values; population vector: direction of sum_i n_i (cos s_i, sin s_i).
 A: tuning curves of 12 of the neurons. B: root-mean-square error of the two decoders against N
 (2000 random stimuli per N) and the Cramer-Rao bound 1/sqrt(I_F), I_F = sum_i f_i'^2 / f_i.

@@ -1,6 +1,6 @@
 """Anionic Fries rearrangement (Snieckus). The aryl O-carbamate is lithiated ortho to the carbamate
 by sec-butyllithium (directed ortho metalation; lithium omitted). On warming the aryl carbanion adds
-to the neighbouring carbamoyl carbonyl group, giving a four-membered cyclic tetrahedral intermediate;
+to the neighboring carbamoyl carbonyl group, giving a four-membered cyclic tetrahedral intermediate;
 its collapse breaks the C-O(aryl) bond, so the carbamoyl group has moved from oxygen to the ortho
 carbon. Work-up protonates the phenoxide to give 2-hydroxy-N,N-diethylbenzamide."""
 

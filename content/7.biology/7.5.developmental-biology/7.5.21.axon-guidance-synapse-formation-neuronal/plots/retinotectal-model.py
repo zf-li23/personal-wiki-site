@@ -1,7 +1,7 @@
 """Formation of the retinotectal map by graded repulsion and competition (Formula 21.5.1, a stochastic model in the
 spirit of Koulakov and Tsigankov). 120 retinal axons, each with an EphA level that rises from nasal to temporal
 retina, compete for 120 tectal sites whose ephrin-A level rises from anterior to posterior; the repulsive energy
-of an axon at a site is the product of the two levels, and Monte Carlo exchanges of neighbouring axons lower the
+of an axon at a site is the product of the two levels, and Monte Carlo exchanges of neighboring axons lower the
 total energy. (A) Starting from a random arrangement, the map becomes ordered and inverted: temporal axons (high
 EphA) end in the anterior tectum (low ephrin-A), nasal axons in the posterior. (B) The experiment of Brown et al.
 (2000): in half of the retinal ganglion cells, scattered at random, EphA3 is added (knock-in). The model, like the
@@ -29,7 +29,7 @@ def anneal(R, seed=0, sweeps=1500, T0=2.0):
     for s in range(sweeps):
         T = T0 * (1 - s / sweeps) + 1e-3
         for _ in range(n):
-            j = rng.integers(0, n - 1)    # exchange the axons at neighbouring sites j and j + 1
+            j = rng.integers(0, n - 1)    # exchange the axons at neighboring sites j and j + 1
             a, b = at[j], at[j + 1]
             dE = (R[a] - R[b]) * (L[j + 1] - L[j])
             if dE < 0 or rng.random() < np.exp(-dE / T * 50):

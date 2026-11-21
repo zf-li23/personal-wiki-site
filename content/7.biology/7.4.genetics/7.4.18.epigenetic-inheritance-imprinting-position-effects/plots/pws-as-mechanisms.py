@@ -1,7 +1,7 @@
 """Genetic routes to Prader-Willi (PWS) and Angelman (AS) syndromes. Each panel shows the two chromosomes 15
 of a child, paternal (blue) and maternal (red), with the imprinted region 15q11-q13 enlarged as a box. P:
 the paternally expressed genes (SNORD116 cluster and others), M: UBE3A, expressed only from the maternal
-chromosome in neurons. A green letter is an expressed gene, a grey letter a silent one; a dashed box is a
+chromosome in neurons. A green letter is an expressed gene, a gray letter a silent one; a dashed box is a
 deletion and a cross a loss-of-function point mutation."""
 from matplotlib.patches import Circle, FancyBboxPatch
 import wikibio as bio
@@ -12,7 +12,7 @@ W, L = 0.5, 3.6
 
 
 def chrom(x, y, origin, imprint, deleted=False, mutant=False):
-    """One acrocentric chromosome 15 with its top (short arm) at y; origin 'pat'/'mat' sets the colour,
+    """One acrocentric chromosome 15 with its top (short arm) at y; origin 'pat'/'mat' sets the color,
     imprint 'pat'/'mat' the expression state of the region."""
     tok = "dna" if origin == "pat" else "receptor"
     ax.add_patch(FancyBboxPatch((x - W / 2, y - 0.35), W, 0.25, boxstyle="round,pad=0,rounding_size=0.1",

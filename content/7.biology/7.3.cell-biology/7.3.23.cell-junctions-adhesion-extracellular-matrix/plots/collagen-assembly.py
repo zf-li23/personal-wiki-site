@@ -1,7 +1,7 @@
 """From polypeptide chains to collagen fibers (type I collagen; schematic, lengths not to scale except where stated).
 
 A: every third residue of the helical domain is glycine (Gly-X-Y, X often proline, Y often hydroxyproline):
-only glycine fits in the crowded centre of the triple helix formed by two alpha1(I) chains and one alpha2(I)
+only glycine fits in the crowded center of the triple helix formed by two alpha1(I) chains and one alpha2(I)
 chain. B: the pathway. In the ER, prolines and lysines are hydroxylated (prolyl and lysyl hydroxylases,
 which need ascorbate), some hydroxylysines are glycosylated, and three pro-alpha chains are aligned by
 their C-propeptides and zip into procollagen; procollagen leaves the ER in enlarged COPII carriers, is

@@ -1,7 +1,7 @@
 """Stereoselectivity of hydride reduction of 4-tert-butylcyclohexanone. The tert-butyl group locks the
 chair (equatorial). A small hydride donor (LiAlH4) approaches the carbonyl carbon mainly from the axial
 direction (top face here), which puts H axial and OH equatorial: the trans alcohol (about 90%).
-Approach from the equatorial direction (hindered by the C2/C6 hydrogens for large reagents, but favoured
+Approach from the equatorial direction (hindered by the C2/C6 hydrogens for large reagents, but favored
 by bulky L-Selectride, which cannot pass the axial H at C3/C5) gives the axial OH of the cis alcohol.
 Chairs are projections of an ideal 3D chair; only the relevant hydrogens are drawn."""
 

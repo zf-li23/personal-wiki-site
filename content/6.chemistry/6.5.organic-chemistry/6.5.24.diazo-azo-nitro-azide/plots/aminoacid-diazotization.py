@@ -1,7 +1,7 @@
 """Diazotization of (S)-alanine with retention of configuration. The carboxylate, held next to the
 diazonium group, displaces N2 from the back side (first inversion), giving a strained alpha-lactone;
 water then opens the lactone at the same carbon, again from the back side (second inversion). Two
-inversions add up to retention: (S)-alanine gives (S)-lactic acid. Neighbouring-group participation."""
+inversions add up to retention: (S)-alanine gives (S)-lactic acid. Neighboring-group participation."""
 
 from wikichem import Scheme
 

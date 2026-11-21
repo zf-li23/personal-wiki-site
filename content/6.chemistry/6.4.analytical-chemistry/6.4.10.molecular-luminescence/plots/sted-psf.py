@@ -1,5 +1,5 @@
 """One-dimensional profiles of STED microscopy. Confocal excitation spot: Gaussian with
-FWHM 250 nm. Depletion beam: doughnut with zero at the centre and peak intensity
+FWHM 250 nm. Depletion beam: doughnut with zero at the center and peak intensity
 zeta times the saturation intensity Is. Molecules that survive depletion fluoresce with
 probability exp(-ln2 I/Is), so the effective PSF narrows roughly as 1/sqrt(1 + zeta)."""
 

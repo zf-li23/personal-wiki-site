@@ -3,7 +3,7 @@ population genetics and quantitative genetics.
 
 Each node is a numbered object of the course (F: Formula, A: Algorithm, T: Theorem, P: Proposition);
 an arrow from one node to another means that the second is derived from or uses the first. Solid
-arrows stay inside a block; dashed grey arrows cross between blocks and run in the gaps.
+arrows stay inside a block; dashed gray arrows cross between blocks and run in the gaps.
 """
 
 from matplotlib.patches import FancyBboxPatch

@@ -17,7 +17,7 @@ from wikibio import botany as B
 P = bio.P
 fig, ax = bio.canvas(22.0, 9.0)
 sec = B.Section(seed=11)
-XC, HW = 15.2, 2.6           # lenticel centre and half-width
+XC, HW = 15.2, 2.6           # lenticel center and half-width
 W = 0.55                      # width of a radial file
 
 

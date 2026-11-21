@@ -1,10 +1,10 @@
 """Contact inhibition of division and number fluctuations (Section 31.7).
 
-A: 120 synthetic tissue samples with areal nuclear density rho between 0.007 and 0.03 per square micrometre; the
+A: 120 synthetic tissue samples with areal nuclear density rho between 0.007 and 0.03 per square micrometer; the
 probability of mitosis follows the collision model (31.10) in the form m = 0.13 (1/rho - 30.8 um^2) percent, and each
 sample of about 250 nuclei gives a binomial count of mitoses. The least-squares line of m against 1/rho recovers
 the slope and intercept of Eq. (31.9). B: hard rods on a line (Tonks gas): N rods of length a placed at random
-without overlap (exponential free gaps) on a ring; the number of rod centres in windows of length 40a. The
+without overlap (exponential free gaps) on a ring; the number of rod centers in windows of length 40a. The
 variance-to-mean ratio (points, 4000 windows per packing fraction) follows (1 - rho v0)^2 (line), the result of
 Theorem 31.7.1; independent positions would give 1 (dashed).
 """

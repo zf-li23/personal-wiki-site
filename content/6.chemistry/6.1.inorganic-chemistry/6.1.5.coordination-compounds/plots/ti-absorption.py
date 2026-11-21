@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def wavelength_rgb(nm):
-    """Approximate colour of monochromatic light (Bruton's piecewise model)."""
+    """Approximate color of monochromatic light (Bruton's piecewise model)."""
     if nm < 440:
         r, g, b = (440 - nm) / 60, 0.0, 1.0
     elif nm < 490:

@@ -15,7 +15,7 @@ ecology.cycle(ax, (5.2, 4.5), 2.9, STEPS, token="virus", size="small", start=100
 DRUGS = [
     ("Attachment and entry", "maraviroc (CCR5, host-directed)\nenfuvirtide (gp41 heptad repeat)", 8.55),
     ("Uncoating", "amantadine (influenza A M2 channel)", 7.25),
-    ("Genome replication", "nucleoside and nucleotide analogues:\nacyclovir, tenofovir, sofosbuvir, remdesivir\n"
+    ("Genome replication", "nucleoside and nucleotide analogs:\nacyclovir, tenofovir, sofosbuvir, remdesivir\n"
      "non-nucleoside RT inhibitors: nevirapine\nbaloxavir (cap-snatching endonuclease)", 5.55),
     ("Integration", "raltegravir, dolutegravir\n(strand-transfer inhibitors)", 3.65),
     ("Polyprotein processing", "protease inhibitors: darunavir (HIV-1),\nglecaprevir (HCV), nirmatrelvir (SARS-CoV-2)",

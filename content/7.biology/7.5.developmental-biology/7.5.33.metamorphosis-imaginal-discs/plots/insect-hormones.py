@@ -1,10 +1,10 @@
-"""Hormonal control of molting and metamorphosis in Manduca sexta (schematic titres after the classical
+"""Hormonal control of molting and metamorphosis in Manduca sexta (schematic titers after the classical
 measurements; days of the last larval instar and the pupa).
 
 A: the pathways: brain neurosecretory cells release PTTH, which acts on the prothoracic gland (through the receptor
 tyrosine kinase Torso) to make ecdysone; peripheral tissues convert it to 20-hydroxyecdysone (20E), which acts through
 the EcR/Usp receptor; the corpora allata make juvenile hormone (JH), which acts through Met and Kr-h1 and decides the
-character of the molt. B: titres: JH falls early in the last instar once the larva passes the critical weight; a
+character of the molt. B: titers: JH falls early in the last instar once the larva passes the critical weight; a
 small pulse of 20E without JH commits the epidermis to pupal development (commitment peak), a large pulse then
 starts the pupal molt; JH reappears briefly before pupation and is absent during adult development.
 """
@@ -48,5 +48,5 @@ pa.text(8.4, 1.12, "pupa →", fontsize=bio.core.FONT["tiny"], color=P.muted())
 pa.set_xlim(0, 12)
 pa.set_ylim(0, 1.25)
 pa.set_yticks([])
-C.style_axes(pa, "time (days, last larval instar → pupa)", "titre (relative)")
+C.style_axes(pa, "time (days, last larval instar → pupa)", "titer (relative)")
 pa.legend(frameon=False, fontsize=bio.core.FONT["tiny"], labelcolor=P.ink(), loc="upper left", bbox_to_anchor=(0.16, 0.72))

@@ -38,7 +38,7 @@ cls2 = [("HLA-DRA", 32.41, True), ("HLA-DRB1", 32.55, True), ("HLA-DQA1", 32.61,
 
 
 def spread(xs, gap):
-    """Shift label positions apart (keeping order) so neighbouring labels do not overlap."""
+    """Shift label positions apart (keeping order) so neighboring labels do not overlap."""
     xs = list(xs)
     for _ in range(200):
         moved = False

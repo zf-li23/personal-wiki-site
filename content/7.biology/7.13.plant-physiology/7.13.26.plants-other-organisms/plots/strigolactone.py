@@ -1,10 +1,10 @@
 # Strigolactones in the rhizosphere: one signal, two readers (schematic). A host root exudes strigolactones (SL),
 # more under phosphate deficiency. Arbuscular mycorrhizal (AM) fungi respond with spore germination and hyphal
-# branching (Akiyama et al. 2005) and colonise the root (arbuscules). Seeds of the root parasite Striga, which can
+# branching (Akiyama et al. 2005) and colonize the root (arbuscules). Seeds of the root parasite Striga, which can
 # survive many years in the soil, germinate only when SL perceived by the expanded KAI2d/HTL receptor family
 # reaches them (Conn et al. 2015); the radicle grows to the host root, host quinones (DMBQ) induce a haustorium
 # that connects to the host xylem. Control: SL-deficient host lines (sorghum lgs1) and "suicidal germination"
-# with SL analogues applied in the absence of a host.
+# with SL analogs applied in the absence of a host.
 import matplotlib.patches as mp
 import numpy as np
 import wikibio as bio

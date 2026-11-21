@@ -1,4 +1,4 @@
-# Brains of five vertebrates in schematic dorsal view (animalmorph.brain), regions coloured alike.
+# Brains of five vertebrates in schematic dorsal view (animalmorph.brain), regions colored alike.
 import numpy as np
 import wikibio as bio
 from wikibio import animalmorph as am

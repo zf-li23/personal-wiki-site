@@ -1,5 +1,5 @@
 # Pulse sequences drawn schematically (not to scale). Narrow bars: 90 degree pulses; wide bars: 180 degree
-# pulses; grey band: broadband decoupling.
+# pulses; gray band: broadband decoupling.
 # A: inversion recovery (T1) and the CPMG train (T2 and relaxation dispersion): 90x - (tau - 180y - tau)_n.
 # B: 1H-15N HSQC: INEPT transfer 1H -> 15N (delays 1/(4J) on each side of simultaneous 180 degree pulses),
 #    15N evolution during t1 (a 1H 180 degree pulse in its middle removes the J coupling), reverse INEPT back to

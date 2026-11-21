@@ -6,7 +6,7 @@
 #    and free ribozyme. The ribozyme is unchanged: it is a catalyst, not a substrate.
 # C: Michaelis-Menten plot with k_cat = 0.028 /s (the measured 100 turnovers per hour) and K_m = 30 uM (the
 #    measured value is a few tens of uM); together they reproduce the measured k_cat/K_m ~ 1e3 /M/s.
-# D: specificity constants on a logarithmic scale, from the uncatalysed reaction to the diffusion limit.
+# D: specificity constants on a logarithmic scale, from the uncatalyzed reaction to the diffusion limit.
 import numpy as np
 import wikibio as bio
 from wikibio import quant as Q
@@ -69,7 +69,7 @@ bio.label(ax, (17.0, 5.95), "initial slope $k_{\\mathrm{cat}}/K_{\\mathrm{m}} \\
 # ----------------------------------------------------------------- D: catalytic efficiency
 bio.panel(ax, "D", (13.2, 5.15))
 bio.label(ax, (17.0, 5.15), "How good a catalyst is RNA?", size="small", bold=True)
-items = [("uncatalysed transesterification", 1e-7, "neutral"),
+items = [("uncatalyzed transesterification", 1e-7, "neutral"),
          ("hammerhead ribozyme", 1e1, "rna"),
          ("L-19 IVS", 1e3, "highlight"),
          ("peptidyl transferase center", 1e5, "rrna"),

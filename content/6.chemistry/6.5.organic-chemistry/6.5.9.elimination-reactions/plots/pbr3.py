@@ -6,7 +6,7 @@ no carbocation, no rearrangement, inversion of configuration."""
 from wikichem import Scheme
 
 s = Scheme()
-UP = [(-0.87, -0.5), (0, 0)]  # methyl and stereocentre; the oxygen points up
+UP = [(-0.87, -0.5), (0, 0)]  # methyl and stereocenter; the oxygen points up
 y = 0.0
 alc = s.molecule("C[C@@H](O)CC", coords=UP + [(0, 1), (0.87, -0.5), (1.73, 0)], at=(0, y), lone_pairs=[2])
 pb = s.molecule("BrP(Br)Br", at=(2.7, y + 1.2), lone_pairs=[1])

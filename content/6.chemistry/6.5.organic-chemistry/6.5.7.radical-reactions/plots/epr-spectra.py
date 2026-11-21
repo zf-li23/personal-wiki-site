@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from math import comb
 
-B0 = 339.0  # mT, centre of the spectrum at about 9.5 GHz for g = 2.00
+B0 = 339.0  # mT, center of the spectrum at about 9.5 GHz for g = 2.00
 B = np.linspace(B0 - 6, B0 + 6, 3000)
 w = 0.25  # Lorentzian half-width, mT
 

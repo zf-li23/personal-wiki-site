@@ -1,4 +1,4 @@
-"""Neighbouring-group participation in glycosylation, drawn on a model glycosyl bromide with an
+"""Neighboring-group participation in glycosylation, drawn on a model glycosyl bromide with an
 acetyl ester on C2 cis to the bromide (as in 2-O-acetyl-alpha-glucosyl bromide). The carbonyl
 oxygen of the C2 ester displaces bromide (or captures the oxocarbenium ion as it forms) from the
 face it sits on, giving a cis-fused bicyclic 1,3-dioxolan-2-ylium (acyloxonium) ion. That face of

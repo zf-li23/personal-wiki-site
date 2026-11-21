@@ -1,7 +1,7 @@
 """Hydrolytic deamination of cytosine (1-methylcytosine as a model of the nucleoside). Top: with N3
 protonated, water adds to C4 and the C4=N3 electrons move onto N3. Bottom: after proton transfers the
 tetrahedral intermediate collapses; the oxygen lone pair re-forms a C=O bond and ammonia leaves,
-giving uracil. In DNA this turns a C:G pair into U:G, which repair enzymes recognise because U does
+giving uracil. In DNA this turns a C:G pair into U:G, which repair enzymes recognize because U does
 not belong in DNA."""
 
 from wikichem import Scheme

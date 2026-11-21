@@ -484,7 +484,7 @@ PfsTree pfs(const WGraph& g, int s, Candidate candidate) {
         auto [p, v] = heap.top(); heap.pop();
         if (in_tree[v] || p != t.priority[v]) continue;        // stale copy: skip it
         in_tree[v] = true;                                     // v joins the PFS tree
-        for (auto [u, w] : g[v]) {                             // update v's neighbours
+        for (auto [u, w] : g[v]) {                             // update v's neighbors
             if (in_tree[u]) continue;
             if (long long c = candidate(t.priority[v], w); c < t.priority[u]) {
                 t.priority[u] = c; t.parent[u] = v;
@@ -537,7 +537,7 @@ def pfs(g: WGraph, s: int, candidate: Callable[[float, int], float]) -> tuple[li
         if in_tree[v] or p != priority[v]:         # stale copy: skip it
             continue
         in_tree[v] = True                          # v joins the PFS tree
-        for u, w in g[v]:                          # update v's neighbours
+        for u, w in g[v]:                          # update v's neighbors
             if not in_tree[u] and (c := candidate(priority[v], w)) < priority[u]:
                 priority[u], parent[u] = c, v
                 heapq.heappush(heap, (c, u))       # the old copy becomes stale

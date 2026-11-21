@@ -1,4 +1,4 @@
-"""Three ways animals digest food (schematic, not to scale; germ-layer colours as in 7.17.3).
+"""Three ways animals digest food (schematic, not to scale; germ-layer colors as in 7.17.3).
 
 A: intracellular digestion. A choanocyte of a sponge (or a placozoan cell) engulfs a particle by
 phagocytosis; digestion takes place in a food vacuole inside the cell. B: a gastrovascular cavity with a

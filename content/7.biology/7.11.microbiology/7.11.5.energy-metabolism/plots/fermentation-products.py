@@ -31,7 +31,7 @@ def edge(a, b, grp, text=None, at=0.5, off=(0.0, 0.25), dashed=False, ha="center
     L = math.hypot(dx, dy)
     ux, uy = dx / L, dy / L
 
-    def trim(w, h):  # distance from centre to box edge along (ux, uy)
+    def trim(w, h):  # distance from center to box edge along (ux, uy)
         tx = (w / 2) / abs(ux) if abs(ux) > 1e-9 else 1e9
         ty = (h / 2) / abs(uy) if abs(uy) > 1e-9 else 1e9
         return min(tx, ty) + 0.1

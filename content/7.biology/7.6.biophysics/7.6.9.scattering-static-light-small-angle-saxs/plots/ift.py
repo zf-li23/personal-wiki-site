@@ -1,6 +1,6 @@
 # Indirect Fourier transformation (IFT) of noisy SAXS data with Tikhonov regularization.
-# Test particle: a two-domain protein modelled as two touching spheres of radii 22 and 16 A (centres 38 A
-# apart, Dmax = 76 A); its true p(r) is the distance histogram of 6000 random points (grey).
+# Test particle: a two-domain protein modeled as two touching spheres of radii 22 and 16 A (centers 38 A
+# apart, Dmax = 76 A); its true p(r) is the distance histogram of 6000 random points (gray).
 # Data: I(q) = 4 pi int p(r) sinc(qr) dr on 0.012 <= q <= 0.30 A^-1 (250 points), with noise of 0.5 % of
 # I at low q rising to about 10 % at q_max (sigma = 0.005 I + 2e-4 I(0)).
 # IFT: p(r) on 60 points in (0, Dmax) with p(0) = p(Dmax) = 0; I = T p with T_ik = 4 pi dr sinc(q_i r_k);

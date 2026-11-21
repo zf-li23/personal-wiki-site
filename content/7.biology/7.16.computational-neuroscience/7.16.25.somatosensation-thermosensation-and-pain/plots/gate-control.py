@@ -7,7 +7,7 @@ w_AI = 1.0, w_CI = 0.1, w_AT = 0.8, w_CT = 1.0, w_IT = 2.0; g scales inhibition 
 A: steady output of T against C input with no touch, with touch (rubbing, A = 20 Hz) and with
 descending drive (D = 15 Hz). B: response of T to touch alone (A from 0 to 40 Hz): normally the gate
 stays closed; with inhibition reduced to g = 0.2 (disinhibition after nerve injury) touch alone
-drives the pain-projection neuron (allodynia). C: wind-up: a train of C-fibre volleys at 1 Hz;
+drives the pain-projection neuron (allodynia). C: wind-up: a train of C-fiber volleys at 1 Hz;
 each volley adds a slow NMDA-like depolarization (decay 3 s) that raises the efficacy of the next.
 """
 import matplotlib.pyplot as plt

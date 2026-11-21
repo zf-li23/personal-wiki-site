@@ -1,7 +1,7 @@
 # Posterior genotype of a diploid site from read counts (Formula 12.2.1): every base has error
 # probability 0.001, and the prior is 1 - 1.5 theta for the homozygous reference genotype, theta for the
 # heterozygote and theta/2 for the homozygous alternative, with theta = 0.001. A: for each depth and number
-# of alternative reads, the colour is the genotype of highest posterior probability and its shade the
+# of alternative reads, the color is the genotype of highest posterior probability and its shade the
 # genotype quality GQ = -10 log10(1 - posterior of that genotype), capped at 99 as in VCF files. B: the
 # posterior probability of the heterozygote against the alternative-allele fraction for depths 5, 10, 20
 # and 40; at low depth the prior keeps a site with one or two alternative reads homozygous reference.
@@ -41,7 +41,7 @@ from matplotlib.colors import to_rgb
 for b, tok in enumerate(toks):
     col = np.array(to_rgb(C.line(tok)))
     sel = best == b
-    t = 0.35 + 0.65 * (gq[sel] / 99.0)[:, None]      # weight of the genotype colour against pale grey
+    t = 0.35 + 0.65 * (gq[sel] / 99.0)[:, None]      # weight of the genotype color against pale gray
     img[sel] = t * col + (1 - t) * 0.92
 img[np.isnan(best)] = np.nan
 a1.imshow(img, origin="lower", aspect="auto", extent=(0.5, NMAX + 0.5, -0.5, NMAX + 0.5), interpolation="nearest")

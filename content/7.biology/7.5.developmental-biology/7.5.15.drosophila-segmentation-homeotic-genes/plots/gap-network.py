@@ -1,10 +1,10 @@
 # The gap-gene network and a gene-circuit model of it (Formula 15.2.1). A: inputs and interactions: Bicoid activates
 # hunchback; Caudal activates knirps and giant; Tailless represses the trunk gap genes at the poles; strong mutual
-# repression between non-adjacent gap genes (hb-kni, Kr-gt, thick bars) and weaker repression between neighbours.
+# repression between non-adjacent gap genes (hb-kni, Kr-gt, thick bars) and weaker repression between neighbors.
 # B: the steady state of the four-gene circuit on 100 nuclei along the axis (dimensionless rates, sigmoid response,
 # weak diffusion), driven by an exponential Bicoid gradient (decay length 0.2 L), a posterior Caudal ramp and terminal
 # Tailless: hb, Kr, kni and gt form ordered, abutting domains. C, D: removing Kr or kni from the circuit lets the
-# neighbouring domains expand into the vacated region, as in the mutants.
+# neighboring domains expand into the vacated region, as in the mutants.
 import numpy as np
 import wikibio as bio
 from wikibio import charts as C

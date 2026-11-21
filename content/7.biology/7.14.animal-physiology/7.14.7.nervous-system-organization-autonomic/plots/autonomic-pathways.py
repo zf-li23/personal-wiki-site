@@ -1,13 +1,13 @@
 """Efferent pathways of the somatic and autonomic nervous systems, with transmitters and receptors.
 
 Rows from top: somatic motor neuron (one neuron, ACh on muscle-type nicotinic receptors N_M);
-parasympathetic (long preganglionic fibre, ganglion in or near the organ, short postganglionic fibre,
-ACh on muscarinic receptors M); sympathetic (short preganglionic fibre to a paravertebral or prevertebral
-ganglion, long postganglionic fibre, noradrenaline on alpha/beta adrenergic receptors); sympathetic
-cholinergic fibres to sweat glands (ACh on M); the adrenal medulla, whose chromaffin cells are modified
+parasympathetic (long preganglionic fiber, ganglion in or near the organ, short postganglionic fiber,
+ACh on muscarinic receptors M); sympathetic (short preganglionic fiber to a paravertebral or prevertebral
+ganglion, long postganglionic fiber, noradrenaline on alpha/beta adrenergic receptors); sympathetic
+cholinergic fibers to sweat glands (ACh on M); the adrenal medulla, whose chromaffin cells are modified
 postganglionic neurons that release adrenaline (~80 %) and noradrenaline into the blood.
 All preganglionic neurons release ACh onto neuronal nicotinic receptors (N_N). Solid lines:
-preganglionic (myelinated B fibres) or somatic; dashed: postganglionic (unmyelinated C fibres).
+preganglionic (myelinated B fibers) or somatic; dashed: postganglionic (unmyelinated C fibers).
 """
 from matplotlib.patches import Circle
 

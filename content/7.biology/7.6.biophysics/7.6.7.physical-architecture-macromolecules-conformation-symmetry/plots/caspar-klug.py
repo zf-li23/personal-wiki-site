@@ -4,7 +4,7 @@ Top: on a hexagonal lattice of capsomer positions, the face of the icosadeltahed
 equilateral triangle spanned by the lattice vector (h, k) and its rotation by 60 degrees; its area
 is T = h^2 + hk + k^2 times that of the smallest lattice triangle (T = 1). Pentamers sit at the
 corners. Bottom: the lattice points inside every face of an icosahedron are mapped linearly onto
-the face and projected onto a sphere, which gives the capsomer centres of the shell; the program
+the face and projected onto a sphere, which gives the capsomer centers of the shell; the program
 counts 12 pentamers and 10(T - 1) hexamers, 60T subunits in all.
 """
 

@@ -2,7 +2,7 @@
 coordinate; the width at each level stands for the number of conformations (entropy).
 B: biased versus random search in a simple model (after Zwanzig, Szabo and Bagchi, 1992): each of
 N = 100 residues is native or in one of nu = 2 non-native conformations; a non-native residue becomes
-native at k0 = 1e9 s^-1, and native residues are favoured by U per residue, so the per-residue
+native at k0 = 1e9 s^-1, and native residues are favored by U per residue, so the per-residue
 equilibrium constant is K = nu exp(-U/RT). The mean first-passage time from the fully non-native
 chain to the native state is computed exactly for this birth-death chain."""
 

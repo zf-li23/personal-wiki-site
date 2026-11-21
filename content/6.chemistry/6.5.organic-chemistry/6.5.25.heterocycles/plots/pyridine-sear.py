@@ -1,7 +1,7 @@
 """Why electrophilic substitution of pyridine goes to C3. Top: attack at C3 (bromination shown)
 gives a sigma complex whose three resonance structures put the positive charge on C2, C4 and C6,
 never on nitrogen. Bottom: attack at C2 gives one resonance structure with the positive charge on
-nitrogen, which then has only six valence electrons; this structure is very unfavourable, so the
+nitrogen, which then has only six valence electrons; this structure is very unfavorable, so the
 C2 (and likewise C4) sigma complexes lie much higher in energy."""
 
 from wikichem import Scheme

@@ -6,8 +6,8 @@ Daily 2006), S = c (A_native + sigma A_converted)^z with z = 0.25, in which conv
 plantations) retains an affinity sigma = 0.2 or 0.4 for the species.
 B: a simulated region (unit square) with 200 species; abundances lognormal (median 60 individuals, log-sd
 1.3, at least 1); each species' individuals are aggregated (Thomas process: about one cluster per 25
-individuals, Gaussian spread sd 0.04 around uniformly placed cluster centres, wrapped at the edges). The
-species-area curve of nested squares centred in the region is fitted by a power law (z shown). Habitat is
+individuals, Gaussian spread sd 0.04 around uniformly placed cluster centers, wrapped at the edges). The
+species-area curve of nested squares centered in the region is fitted by a power law (z shown). Habitat is
 destroyed either as one contiguous block (a strip from the left edge) or as scattered cells (random cells of a
 20 x 20 grid). Species lost = species with no individual left in the remaining habitat (means of 20 regions).
 The SAR prediction 1 - (1 - h)^z overestimates the loss even for contiguous destruction (a species is lost only

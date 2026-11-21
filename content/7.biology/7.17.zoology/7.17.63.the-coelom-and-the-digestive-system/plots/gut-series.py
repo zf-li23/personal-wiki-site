@@ -1,4 +1,4 @@
-# Digestive tracts of six vertebrates as straightened tubes (regions coloured alike; not to scale), and a
+# Digestive tracts of six vertebrates as straightened tubes (regions colored alike; not to scale), and a
 # model of food retention time against body mass (Example 63.7.1). Model, not data.
 import numpy as np
 import wikibio as bio

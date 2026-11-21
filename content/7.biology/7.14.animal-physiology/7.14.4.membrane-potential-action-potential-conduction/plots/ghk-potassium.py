@@ -1,4 +1,4 @@
-# Resting potential of a mammalian skeletal muscle fibre against extracellular K+ (37 C).
+# Resting potential of a mammalian skeletal muscle fiber against extracellular K+ (37 C).
 # GHK voltage equation with Cl- ignored (P_Cl ~ 0) and alpha = P_Na / P_K:
 #   Vm = 61.5 mV * log10( ([K]o + alpha [Na]o) / ([K]i + alpha [Na]i) ),
 # [K]i = 155, [Na]i = 12 mM; [K]o is replaced by Na+ so that [K]o + [Na]o = 149.5 mM throughout.

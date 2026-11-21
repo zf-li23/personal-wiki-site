@@ -12,7 +12,7 @@ ink = plt.rcParams["text.color"]
 
 
 def newman(ax, x0, front, back, title):
-    """front/back: lists of (angle in degrees, label, highlight colour or None)."""
+    """front/back: lists of (angle in degrees, label, highlight color or None)."""
     ax.add_patch(plt.Circle((x0, 0), 1, fill=None, color=ink, lw=1.4))
     for ang, name, hl in front:
         t = np.radians(ang)

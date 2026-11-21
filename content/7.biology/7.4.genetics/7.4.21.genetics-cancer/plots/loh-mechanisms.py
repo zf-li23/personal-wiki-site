@@ -35,7 +35,7 @@ for k, (title, chroms, copies, markers) in enumerate(panels):
     for j, (allele, tok, special) in enumerate(chroms):
         x = cx + (j - (len(chroms) - 1) / 2) * 1.6
         if special == "recomb":
-            # distal part derived from the mutant homologue: drawn as a two-coloured chromatid
+            # distal part derived from the mutant homolog: drawn as a two-colored chromatid
             G.chromosome(ax, (x, Y), length=LEN, centromere=0.12, width=WID, token="dna", sister=False,
                          colors=[[(0.0, 0.3, "dna"), (0.3, 1.0, "receptor")]],
                          loci=[(f, t, "right") for f, t in MARK] + [(0.38, "m", "left")])

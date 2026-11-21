@@ -4,7 +4,7 @@ A: electron path. Reduced ferredoxin or flavodoxin reduces the [4Fe-4S] cluster 
 (dinitrogenase reductase, a gamma2 dimer with two MgATP sites). The Fe protein with bound MgATP docks on
 the MoFe protein (dinitrogenase, alpha2beta2); ATP binding lowers the reduction potential of the cluster
 from about -300 to -420 mV, and one electron passes to the P cluster ([8Fe-7S]) and then to the FeMo
-cofactor ([MoFe7S9C]-homocitrate), where N2 binds; the two ATP are hydrolysed and the Fe protein (with
+cofactor ([MoFe7S9C]-homocitrate), where N2 binds; the two ATP are hydrolyzed and the Fe protein (with
 MgADP) dissociates. Eight such cycles reduce one N2 to two NH3 and two protons to H2.
 B: cost of one NH4+ incorporated into glutamate, counting a pair of electrons as one NAD(P)H and one
 NAD(P)H as 2.5 ATP equivalents: fixation of N2 (8 ATP and 4 electrons per NH3, including H2 formation),
@@ -40,7 +40,7 @@ bio.arrow(ax, (16.0, 7.0), (18.2, 7.0), kind="process", color=P.edge("dna"), lw=
 bio.box(ax, (19.4, 8.0), 2.2, 0.8, "neutral", text="N₂ + 8 H⁺", size="tiny")
 bio.box(ax, (19.4, 6.0), 2.4, 0.8, "positive", text="2 NH₃ + H₂", size="tiny")
 bio.arrow(ax, (19.4, 7.55), (19.4, 6.45), kind="process")
-bio.label(ax, (9.8, 4.3), "Fe protein binds, transfers one electron, hydrolyses 2 ATP and dissociates;\n"
+bio.label(ax, (9.8, 4.3), "Fe protein binds, transfers one electron, hydrolyzes 2 ATP and dissociates;\n"
           "dissociation is rate-limiting; 8 cycles: N₂ + 8 H⁺ + 8 e⁻ + 16 MgATP → 2 NH₃ + H₂ + 16 MgADP + 16 Pᵢ",
           size="tiny", color=P.muted())
 bio.label(ax, (9.8, 3.1), "O₂ inactivates the Fe protein (half-life ≈ 30 s in air)", size="tiny",

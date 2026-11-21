@@ -2,7 +2,7 @@
 # Free-electron (particle-in-a-box) model: HOMO-LUMO gap dE = h^2 (N + 1) / (8 m_e L^2), lambda = hc / dE,
 #   with the box length L = (N - 1) a (atoms at the walls) or L = (N + 1) a (box extending half a bond
 #   beyond the terminal atoms), a = 0.14 nm; the dotted curve uses a = 0.10 nm.
-# Hueckel model with bond alternation: nearest-neighbour couplings alternate between beta_d (double bonds)
+# Hueckel model with bond alternation: nearest-neighbor couplings alternate between beta_d (double bonds)
 #   and beta_s (single bonds); beta_d = 4.10 eV and beta_s = 3.03 eV were chosen so that the model gives
 #   217 nm for butadiene (N = 4) and 470 nm for N = 22. The gap of an infinite chain is 2 (beta_d - beta_s)
 #   = 2.14 eV (578 nm): the absorption saturates instead of growing without limit.

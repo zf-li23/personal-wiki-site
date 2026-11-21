@@ -1,7 +1,7 @@
 ---
 title: Graph Applications
 description: Topological sorting by the zero in-degree algorithm and by DFS; cut vertices, cut edges and biconnected components with the highest connected ancestor and the Hopcroft–Tarjan algorithm; the unified framework of priority-first search and its complexity; Dijkstra's algorithm and shortest-path trees, Prim's algorithm and the cut property, with correctness proofs; Kruskal's algorithm and union by rank with path compression; the dynamic programming of the Floyd–Warshall algorithm.
-source_hash: 2613c9b88233
+source_hash: bdbdc3529f5f
 ---
 
 [4.3.10](/4.3.10) presented the representations of graphs and the two basic traversals. This chapter solves several classical problems on top of these traversals. The first two sections use information that DFS leaves behind: listing vertices in reverse order of finishing time gives a topological order of a directed acyclic graph, and the highest ancestor reachable through back edges lets a single DFS find all cut vertices and biconnected components of an undirected graph. The third section unifies BFS and DFS as priority-first search: the traversals differ only in which vertex is visited next, and this is determined by the priority of each vertex. With different priority-update rules, the same framework yields Dijkstra's algorithm for single-source shortest paths and Prim's algorithm for minimum spanning trees. The last two sections present two other approaches: Kruskal's algorithm greedily selects edges in increasing order of weight, and its efficiency rests on the disjoint-set data structure; the Floyd–Warshall algorithm uses **dynamic programming** to compute the shortest paths between all pairs of vertices at once. The mathematical background of these problems (the existence of shortest paths and minimum spanning trees, and the steps of the classical algorithms) was covered in [1.4.2](/1.4.2) and [1.4.3](/1.4.3); here we concentrate on implementation, complexity and correctness proofs.
@@ -485,7 +485,7 @@ PfsTree pfs(const WGraph& g, int s, Candidate candidate) {
         auto [p, v] = heap.top(); heap.pop();
         if (in_tree[v] || p != t.priority[v]) continue;        // stale copy: skip it
         in_tree[v] = true;                                     // v joins the PFS tree
-        for (auto [u, w] : g[v]) {                             // update v's neighbours
+        for (auto [u, w] : g[v]) {                             // update v's neighbors
             if (in_tree[u]) continue;
             if (long long c = candidate(t.priority[v], w); c < t.priority[u]) {
                 t.priority[u] = c; t.parent[u] = v;
@@ -538,7 +538,7 @@ def pfs(g: WGraph, s: int, candidate: Callable[[float, int], float]) -> tuple[li
         if in_tree[v] or p != priority[v]:         # stale copy: skip it
             continue
         in_tree[v] = True                          # v joins the PFS tree
-        for u, w in g[v]:                          # update v's neighbours
+        for u, w in g[v]:                          # update v's neighbors
             if not in_tree[u] and (c := candidate(priority[v], w)) < priority[u]:
                 priority[u], parent[u] = c, v
                 heapq.heappush(heap, (c, u))       # the old copy becomes stale

@@ -1,4 +1,4 @@
-"""Acid-catalysed bromination of acetone, the step after the rate-determining enolization. The
+"""Acid-catalyzed bromination of acetone, the step after the rate-determining enolization. The
 oxygen lone pair of the enol pushes the C=C pi electrons onto bromine, which loses bromide; the
 resulting protonated alpha-bromo ketone (an oxocarbenium ion) loses a proton to give bromoacetone."""
 

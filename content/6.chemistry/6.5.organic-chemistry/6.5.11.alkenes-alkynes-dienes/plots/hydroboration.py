@@ -1,4 +1,4 @@
-"""Hydroboration-oxidation of propene (methyl groups stand for the other alkyl groups on boron). Figure 1: the four-centre transition state:
+"""Hydroboration-oxidation of propene (methyl groups stand for the other alkyl groups on boron). Figure 1: the four-center transition state:
 boron adds to the less substituted carbon and hydride to the other, on the same face (syn), in one
 concerted but asynchronous step (the more substituted carbon carries partial positive charge).
 Figure 2: oxidation: hydroperoxide adds to boron, then an alkyl group migrates from B to O with
@@ -13,7 +13,7 @@ def fixed(s, smiles, coords, at=(0, 0), lone_pairs=()):
     return s.molecule(smiles, at=at, coords=coords, lone_pairs=list(lone_pairs))
 
 
-# Figure 1: alkene + BH3, curved arrows, and the four-centre transition state.
+# Figure 1: alkene + BH3, curved arrows, and the four-center transition state.
 s = Scheme()
 alkene = fixed(s, "CC=C", [(-0.9, -0.5), (0, 0), (1.2, 0)])
 borane = fixed(s, "B([H])([H])[H]", [(1.2, 1.3), (1.95, 1.75), (0.45, 1.75), (0.0, 1.3)])

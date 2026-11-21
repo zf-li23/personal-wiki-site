@@ -1,4 +1,4 @@
-"""Microtubule-organizing centres and the arrangement of microtubules in different cells (schematic).
+"""Microtubule-organizing centers and the arrangement of microtubules in different cells (schematic).
 
 A: the centrosome of an animal cell: a mother and a daughter centriole at right angles in a cloud of
 pericentriolar material containing gamma-tubulin ring complexes (gold dots); microtubules grow from it with

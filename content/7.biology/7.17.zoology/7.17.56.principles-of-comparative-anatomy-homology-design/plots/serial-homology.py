@@ -1,8 +1,8 @@
 # Serial and historical homology of tetrapod limbs (schematic). A: forelimb and hindlimb of a generalized
 # early tetrapod in dorsal view, proximal end at the top, preaxial side (radius, tibia, digit I) on the left;
-# each element is coloured by its serial homologue in the course-wide vertskel scheme (humerus = femur,
+# each element is colored by its serial homolog in the course-wide vertskel scheme (humerus = femur,
 # radius = tibia, ulna = fibula, carpals = tarsals, metacarpals = metatarsals, phalanges). B: forelimbs of a
-# human, a bat, a bird and a toothed whale drawn with the same colours (wikibio zoomorph.forelimb).
+# human, a bat, a bird and a toothed whale drawn with the same colors (wikibio zoomorph.forelimb).
 # Not to scale.
 import wikibio as bio
 import vertskel as vs

@@ -349,7 +349,7 @@ def prufer_encode(n, edges):
         leaf = min(v for v in adj if len(adj[v]) == 1)   # smallest leaf
         (nb,) = adj.pop(leaf)
         adj[nb].discard(leaf)
-        seq.append(nb)                                   # record its neighbour
+        seq.append(nb)                                   # record its neighbor
     return seq
 
 def prufer_decode(seq):

@@ -1,4 +1,4 @@
-# Recognising Cyperaceae and Poaceae (schematic). A: sedge culm in transverse section, triangular and
+# Recognizing Cyperaceae and Poaceae (schematic). A: sedge culm in transverse section, triangular and
 # solid, with bundles scattered in ground tissue. B: grass culm internode in transverse section, round and
 # hollow, bundles in two rings. C: sedge leaves in three ranks (top view) with a closed tubular sheath.
 # D: grass leaves in two ranks (top view) with a sheath split on one side, and a ligule. E: sedge flower:

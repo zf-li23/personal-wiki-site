@@ -30,7 +30,7 @@ for x, t in ((2, "headwaters\n(shaded)"), (5, "middle reaches"), (9.5, "large ri
     a.text(x, 4.7, t, fontsize=7.5, ha="center", va="top", color=P.muted())
 a.set_title("A  Production and respiration", loc="left", fontweight="bold")
 
-# functional feeding groups (% of benthic invertebrates) at reach centres
+# functional feeding groups (% of benthic invertebrates) at reach centers
 xs = [2, 5, 9.5]
 groups = [("shredders", "carbohydrate", [35, 5, 0]), ("collectors", "dna", [45, 50, 85]),
           ("grazers (scrapers)", "antibody", [5, 30, 0]), ("predators", "negative", [15, 15, 15])]

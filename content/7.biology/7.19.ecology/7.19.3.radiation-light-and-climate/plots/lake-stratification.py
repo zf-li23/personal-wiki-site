@@ -3,7 +3,7 @@
 #    rho(T) = 1000 [1 - (T + 288.9414) (T - 3.9863)^2 / (508929.2 (T + 68.12963))] kg m^-3, maximum at 3.98 C.
 # B: idealized seasonal temperature profiles (schematic, not measurements): winter inverse stratification
 #    under ice, spring and autumn mixing (isothermal near 4 C and about 10 C), and summer stratification with
-#    epilimnion (22 C, 0-6 m), metalimnion with the thermocline (6-11 m), hypolimnion (6 C), modelled with a
+#    epilimnion (22 C, 0-6 m), metalimnion with the thermocline (6-11 m), hypolimnion (6 C), modeled with a
 #    hyperbolic tangent.
 import numpy as np
 import matplotlib.pyplot as plt

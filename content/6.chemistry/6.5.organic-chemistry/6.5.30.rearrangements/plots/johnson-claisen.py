@@ -1,4 +1,4 @@
-"""Johnson-Claisen rearrangement of but-3-en-2-ol with triethyl orthoacetate. Acid-catalysed
+"""Johnson-Claisen rearrangement of but-3-en-2-ol with triethyl orthoacetate. Acid-catalyzed
 exchange gives the mixed orthoester, which loses ethanol to form a ketene acetal
 CH2=C(OEt)-O-allyl, an allyl vinyl ether generated in situ. Its [3,3]-sigmatropic shift through
 a six-membered (chair) transition state, drawn flat with the forming C-C bond dashed, transposes

@@ -14,7 +14,7 @@ from wikichem import Scheme
 
 s = Scheme()
 R0, R1, RL = 0.55, 1.25, 1.62  # circle radius, bond end, label distance
-LINES = []  # (centre, front?, angle)
+LINES = []  # (center, front?, angle)
 
 
 def u(deg):

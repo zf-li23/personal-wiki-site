@@ -2,7 +2,7 @@
 
 A: five triose phosphates (15 carbons; two dihydroxyacetone phosphate, DHAP, and three glyceraldehyde
 3-phosphate, G3P) are rearranged into three pentose phosphates (15 carbons). Each dot is one carbon,
-coloured by the triose phosphate it came from. Aldolase joins DHAP (carbons 1-3 of the product) to an
+colored by the triose phosphate it came from. Aldolase joins DHAP (carbons 1-3 of the product) to an
 aldose (C3 or C4); FBPase and SBPase remove the 1-phosphate; transketolase moves carbons 1-2 of a
 ketose (F6P, S7P) to G3P. Steps: (1) DHAP + G3P -> F1,6BP -> F6P; (2) F6P + G3P -> E4P + X5P;
 (3) E4P + DHAP -> SBP -> S7P; (4) S7P + G3P -> R5P + X5P; R5P and two X5P become 3 Ru5P, which
@@ -25,7 +25,7 @@ SRC = {"a": "carbohydrate", "b": "dna", "c": "rna", "d": "lipid", "e": "atp"}
 
 
 def mol(x, y, name, carbons, w=None):
-    """A molecule box with its name above a row of carbon dots coloured by origin."""
+    """A molecule box with its name above a row of carbon dots colored by origin."""
     n = len(carbons)
     w = w or max(1.5, 0.36 * n + 0.5)
     ax.add_patch(FancyBboxPatch((x - w / 2, y - 0.55), w, 1.1, boxstyle="round,pad=0,rounding_size=0.18",

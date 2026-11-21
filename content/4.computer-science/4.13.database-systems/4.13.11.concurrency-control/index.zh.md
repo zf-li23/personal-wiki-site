@@ -1,6 +1,6 @@
 ---
 title: 并发控制
-source_hash: 4d664f28ea90
+source_hash: c831326c1d5f
 ---
 
 [4.13.10](/4.13.10) 定义了什么是正确的并发执行：一个**冲突可串行化**的、并且在实践中是严格的**调度**。但它没有说明，当**事务**到达、运行和结束都不可预测时，系统如何产生这样的调度。本章介绍做到这一点的协议。*封锁*（locking）使事务相互等待，两阶段锁是保证可串行化的经典协议，其代价是等待和死锁，系统必须检测或预防死锁。*时间戳*协议和*乐观*协议则不等待，而是事先给事务排序，或在事务结束时再检查。*多版本*并发控制保留数据的旧版本，使读者永远不必等待写者；PostgreSQL、MySQL 的 InnoDB、Oracle、DuckDB 和大多数现代系统都这样工作，它还引出*快照隔离*，一种比可串行化弱、并带有自己的异常的保证。本章最后讨论 SQL 的隔离级别及其在各个系统中的含义。操作系统的同步原语，即互斥锁、读写锁和**死锁**处理（[4.11.6](/4.11.6)），是其底层的构件；数据库协议则以事务作为保护的单位。
@@ -113,10 +113,10 @@ class LockManager:
         color = {}
 
         def dfs(u, path):
-            color[u] = "grey"
+            color[u] = "gray"
             path.append(u)
             for v in graph[u]:
-                if color.get(v) == "grey":
+                if color.get(v) == "gray":
                     return path[path.index(v):]
                 if v not in color and (c := dfs(v, path)):
                     return c

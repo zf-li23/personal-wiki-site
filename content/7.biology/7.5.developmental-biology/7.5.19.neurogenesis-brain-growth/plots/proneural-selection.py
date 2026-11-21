@@ -1,9 +1,9 @@
 """Selection of a single neural precursor from a proneural cluster by lateral inhibition (the Delta-Notch model of
 Collier et al. 1996, Formula 19.5.1, on a hexagonal sheet of cells). Cells of the cluster (outlined) express
-proneural genes and can make Delta, with competence highest in the centre; the surrounding cells make a low, constant level of
-Delta and cannot be selected. Each cell's Notch activity n rises with the mean Delta of its six neighbours, and high Notch
+proneural genes and can make Delta, with competence highest in the center; the surrounding cells make a low, constant level of
+Delta and cannot be selected. Each cell's Notch activity n rises with the mean Delta of its six neighbors, and high Notch
 represses its own Delta d. Starting from small random differences (left), feedback amplifies them; the central cell
-wins, keeps high Delta and low Notch and becomes the neuroblast or sensory organ precursor, and its neighbours are
+wins, keeps high Delta and low Notch and becomes the neuroblast or sensory organ precursor, and its neighbors are
 inhibited (middle). Right: Delta levels of all cluster cells over time; the winner is drawn in bold."""
 import numpy as np
 import matplotlib.pyplot as plt

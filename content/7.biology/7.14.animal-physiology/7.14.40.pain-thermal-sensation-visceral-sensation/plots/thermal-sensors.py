@@ -1,12 +1,12 @@
-"""Thermal sensors: two-state TRP channels, fibre discharge and the pain threshold.
+"""Thermal sensors: two-state TRP channels, fiber discharge and the pain threshold.
 
 A: open probability of a two-state channel, p_o = 1 / (1 + exp[(dH/R)(1/T - 1/T_half)]),
 for illustrative parameters of the order reported for thermo-TRPs: TRPM8 (T_half = 25 C,
 dH = -250 kJ/mol, cold), TRPV1 (43 C, +400 kJ/mol), TRPV2 (52 C, +400 kJ/mol).
-B: schematic static discharge of cold fibres, warm fibres and heat nociceptors against skin
+B: schematic static discharge of cold fibers, warm fibers and heat nociceptors against skin
 temperature, each built from two such sigmoids (activation times high-temperature or
-low-temperature silencing), normalised to a peak of 1.
-C: cumulative fraction of people reporting pain against skin temperature, modelled as a normal
+low-temperature silencing), normalized to a peak of 1.
+C: cumulative fraction of people reporting pain against skin temperature, modeled as a normal
 distribution of thresholds (mean 45 C, s.d. 1.2 C; schematic, after population studies).
 """
 import matplotlib.pyplot as plt

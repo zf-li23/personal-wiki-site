@@ -2,7 +2,7 @@
 # Left: a few water molecules diffuse slowly through the lipid bilayer itself.
 # Middle: an open plasma-membrane intrinsic protein (PIP aquaporin): water passes in single file through
 # the pore of each subunit (a tetramer; two subunits drawn); phosphorylation of serines in the
-# cytosolic loops favours the open state.
+# cytosolic loops favors the open state.
 # Right: a closed aquaporin: dephosphorylation, or protonation of a conserved histidine in loop D when the
 # cytosol acidifies (anoxia, flooding), and Ca2+ binding fold the loop over the pore.
 # The direction of water flow is always set by the water potential difference (here outside -> inside).

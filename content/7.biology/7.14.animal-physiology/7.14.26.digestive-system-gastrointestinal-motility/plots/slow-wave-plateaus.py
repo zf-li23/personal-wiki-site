@@ -2,8 +2,8 @@
 #   d(theta_i)/dt = omega_i + K [sin(theta_{i+1} - theta_i) + sin(theta_{i-1} - theta_i)]
 # 40 oscillators represent ICC segments from the duodenum (0 m) to the terminal ileum (5 m).
 # Intrinsic frequencies omega_i/2pi fall linearly from 12 to 8 cycles/min (isolated segments).
-# K is the nearest-neighbour coupling (gap junctions in the ICC-smooth muscle syncytium), in 1/min.
-# A: realised frequency along the gut for three couplings; moderate coupling breaks the gradient into
+# K is the nearest-neighbor coupling (gap junctions in the ICC-smooth muscle syncytium), in 1/min.
+# A: realized frequency along the gut for three couplings; moderate coupling breaks the gradient into
 # plateaus of locked segments separated by jumps. B: cos(theta) at six sites for the moderate
 # coupling (cos(theta) at six sites, 30 s): waves lag aborally within a plateau; distal sites skip cycles.
 import matplotlib.pyplot as plt

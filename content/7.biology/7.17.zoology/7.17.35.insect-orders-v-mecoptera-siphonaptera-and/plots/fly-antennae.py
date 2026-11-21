@@ -1,5 +1,5 @@
 # Antennae of Diptera (schematic, drawn with wikibio.zoomorph.antenna; scape, pedicel and flagellum
-# coloured). The many-segmented antennae of the nematoceran grade (crane flies, mosquitoes, March flies)
+# colored). The many-segmented antennae of the nematoceran grade (crane flies, mosquitoes, March flies)
 # contrast with the short antennae of Brachycera, whose flagellum is reduced to a compact first
 # flagellomere with an annulated tip (horse flies), a terminal stylus (robber flies) or a dorsal arista
 # (Cyclorrhapha: house flies, fruit flies).

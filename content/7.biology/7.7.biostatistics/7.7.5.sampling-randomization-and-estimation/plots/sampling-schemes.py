@@ -1,5 +1,5 @@
 """Four probability sampling designs drawing 12 units from a population of 120 people arranged in four
-strata (rows of colour: for example age groups) and twenty clusters (blocks of six: for example households
+strata (rows of color: for example age groups) and twenty clusters (blocks of six: for example households
 or villages). Simple random: every set of 12 is equally likely. Systematic: every 10th person on the list
 after a random start. Stratified: 3 at random from each stratum. Cluster: all members of 2 randomly chosen
 clusters. Schematic; selections drawn with random seed 0.

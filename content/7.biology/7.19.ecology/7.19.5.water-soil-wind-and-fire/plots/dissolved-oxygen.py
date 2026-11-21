@@ -2,7 +2,7 @@
 
 A: air-saturated O2 concentration from the Garcia & Gordon (1992) fit to the Benson & Krause data (mL/L, converted
 with 1.429 mg/mL), for salinity 0, 17.5 and 35 at sea level, and for fresh water at 2000 and 4000 m (pressure from
-the standard atmosphere, corrected for water vapour).
+the standard atmosphere, corrected for water vapor).
 B: a one-box pond model dC/dt = P(t) - R + k (C_s - C) with daylight photosynthesis
 P(t) = P_max sin(pi (t - 6) / 12) for 6 < t < 18 h, constant respiration R and re-aeration rate k = 0.08 per h,
 at 25 C (C_s = 8.26 mg/L). Two ponds: moderate (P_max 1.2, R 0.6 mg/L/h) and eutrophic (P_max 2.4, R 1.0).

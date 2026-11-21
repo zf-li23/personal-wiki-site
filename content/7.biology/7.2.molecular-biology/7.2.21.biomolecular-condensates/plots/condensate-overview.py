@@ -1,12 +1,12 @@
 # Biomolecular condensates: what they are (schematic, not to scale).
 # A: three kinds of large assembly. A macromolecular machine has a fixed stoichiometry and geometry (nm);
-#    a condensate is a micrometre-sized, membraneless body held together by many weak, constantly exchanging
+#    a condensate is a micrometer-sized, membraneless body held together by many weak, constantly exchanging
 #    contacts; a membrane-enclosed organelle is bounded by a lipid bilayer.
 # B: multivalency. Two scaffolds with repeated binding modules (blue: five modules, e.g. SH3 domains; orange:
 #    five ligands, e.g. proline-rich motifs) connected by flexible linkers form a network once each molecule can
 #    bind several partners; clients (green) with one binding site partition into the network but do not
 #    build it; molecules exchange with the surroundings (arrow).
-# C: the nucleolus as three coexisting liquid phases (Feric and colleagues, 2016): fibrillar centre (FC, rDNA
+# C: the nucleolus as three coexisting liquid phases (Feric and colleagues, 2016): fibrillar center (FC, rDNA
 #    and Pol I), dense fibrillar component (DFC, fibrillarin, early pre-rRNA processing) and granular component
 #    (GC, nucleophosmin, assembly of preribosomal particles); nascent rRNA moves outward as it matures.
 # D: material states. A liquid droplet (fusion, rapid internal mixing) can mature into a gel and then into
@@ -21,7 +21,7 @@ fig, ax = bio.canvas(32.0, 9.2)
 
 
 def chain(ax, pts, token, beads=5, r=0.13, linker="muted"):
-    """A flexible multivalent molecule: a smooth linker with `beads` binding modules; returns bead centres."""
+    """A flexible multivalent molecule: a smooth linker with `beads` binding modules; returns bead centers."""
     pts = np.asarray(pts, float)
     u = np.linspace(0, 1, len(pts))
     path = make_interp_spline(u, pts, k=min(3, len(pts) - 1))(np.linspace(0, 1, 200))

@@ -1,4 +1,4 @@
-"""Proline-catalysed aldol reaction (Houk-List model, drawn flat). The enamine formed from L-proline
+"""Proline-catalyzed aldol reaction (Houk-List model, drawn flat). The enamine formed from L-proline
 and acetone attacks the aldehyde: the nitrogen lone pair pushes the C=C electrons onto the aldehyde
 carbon, and the carboxylic acid, hydrogen-bonded to the aldehyde oxygen, delivers its proton to the
 developing alkoxide while fixing the aldehyde on one face of the enamine. Hydrolysis of the

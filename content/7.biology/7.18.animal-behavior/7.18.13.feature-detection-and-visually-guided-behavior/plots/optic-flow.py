@@ -3,7 +3,7 @@
 A: centring in a corridor. A bee at lateral position y between walls at y = -1 and +1 flies at
 speed v; the image of each wall moves across the eye at angular speed v / (distance), reduced
 by the wall's own speed if the wall moves in the bee's direction. Steering: dy/dt = -k (w_left - w_right) (left wall at y = +1),
-moving away from the side with faster image motion. With stationary walls the bee centres; if the
+moving away from the side with faster image motion. With stationary walls the bee centers; if the
 right wall moves forward at 0.5 v, the image there slows and the bee equilibrates closer to it.
 B, C: grazing landing. If the bee keeps the angular speed of the ground image constant
 (w = v / h) while descending at a constant angle, both height and forward speed fall

@@ -1,6 +1,6 @@
 """Model: social regulation of the age at onset of foraging in honeybee workers (after the activator-inhibitor
 model of Huang and Robinson 1992 and the JH-vitellogenin double repressor of Amdam and Omholt 2003; schematic).
-Each worker's juvenile hormone titre J rises with age, opposed by vitellogenin V, which J suppresses and which
+Each worker's juvenile hormone titer J rises with age, opposed by vitellogenin V, which J suppresses and which
 suppresses J:  dJ/dt = r (1 + 0.08 t) / (1 + V^2) - J/2 - i (r about 1.2, varying among workers),  dV/dt = 1 / (1 + J^4) - V/2, with an inhibitory input i from
 contact with older foragers (ethyl oleate). A worker starts foraging when J exceeds the threshold 1.6. A: a
 typical colony (i = 0.25): J switches from low to high after about three weeks. B: a single-cohort colony with no

@@ -1,6 +1,6 @@
 # Signals that pattern the Xenopus gastrula. Maternal VegT and Vg1 in the vegetal cells and dorsal beta-catenin
 # (stabilized by Huluwa) together activate the Nodal-related genes (Xnr), most strongly on the dorsal side; high Nodal
-# signalling with beta-catenin targets (Siamois, Twin) induces the organizer, which expresses transcription factors
+# signaling with beta-catenin targets (Siamois, Twin) induces the organizer, which expresses transcription factors
 # (Goosecoid, Lim1, Xnot) and secretes antagonists: Chordin, Noggin and Follistatin bind BMPs; Cerberus binds BMP,
 # Nodal and Wnt; Dickkopf and Frzb block Wnt. Ventral BMP4 and Wnt8 promote ventral mesoderm and epidermis; their
 # inhibition dorsally gives dorsal mesoderm and neural tissue.

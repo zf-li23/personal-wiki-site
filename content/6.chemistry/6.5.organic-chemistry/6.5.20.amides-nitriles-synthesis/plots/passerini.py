@@ -2,7 +2,7 @@
 be concerted, held together by hydrogen bonds). Top: the isocyanide carbon, with its lone pair, adds to
 the carbonyl carbon of the aldehyde activated by the carboxylic acid, giving a nitrilium ion; the
 carboxylate adds to the nitrilium carbon (alpha-addition: electrophile and nucleophile end up on the
-same isocyanide carbon). Bottom: in the imidate the acyl group moves to the neighbouring hydroxy
+same isocyanide carbon). Bottom: in the imidate the acyl group moves to the neighboring hydroxy
 oxygen through a five-membered ring, and tautomerization gives the alpha-acyloxy amide."""
 
 import numpy as np

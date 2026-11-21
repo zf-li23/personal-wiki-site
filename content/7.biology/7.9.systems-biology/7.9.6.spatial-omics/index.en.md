@@ -272,7 +272,7 @@ sdata = spatialdata_io.xenium("xenium_output/")
 sdata.write("sample.zarr")                      # OME-Zarr; later sessions use sd.read_zarr
 sdata = sd.read_zarr("sample.zarr")
 
-# a region of interest in physical coordinates (micrometres), with the matching table rows
+# a region of interest in physical coordinates (micrometers), with the matching table rows
 crop = sd.bounding_box_query(sdata, axes=("x", "y"), min_coordinate=[2000, 2000],
                              max_coordinate=[4000, 4000], target_coordinate_system="global")
 

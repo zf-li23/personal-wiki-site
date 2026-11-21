@@ -1,7 +1,7 @@
 # The two transesterifications of nuclear pre-mRNA splicing and the kinetics of the lariat intermediate.
 # A: step 1, the 2'-OH of the branch-point adenosine attacks the phosphate at the 5' splice site, releasing
 # exon 1 with a 3'-OH and forming the lariat intron-exon 2 intermediate (the 5'-terminal G of the intron is
-# joined 2'-5' to the branch A, which is also linked 3'-5' to its neighbour: a branched nucleotide with
+# joined 2'-5' to the branch A, which is also linked 3'-5' to its neighbor: a branched nucleotide with
 # 2', 3' and 5' phosphodiester bonds); step 2, the 3'-OH of exon 1 attacks the phosphate at the 3' splice
 # site, joining the exons and releasing the lariat intron with a 3'-OH. The phosphate that ends up between the
 # exons (red) is the one that was at the 3' splice site.

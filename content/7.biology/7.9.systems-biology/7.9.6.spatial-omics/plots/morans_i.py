@@ -1,6 +1,6 @@
 """Spatial autocorrelation and clustering tests on synthetic data. A: a smooth expression field on a
 30 x 30 grid of spots (Gaussian-filtered noise). B: the same values shuffled over the grid.
-C: Moran's I with rook (4-neighbour) weights for both, against the permutation null of 999 random
+C: Moran's I with rook (4-neighbor) weights for both, against the permutation null of 999 random
 relabelings of B's values (identical for A, since the values are the same); dashed: E[I] = -1/(n-1).
 D: Ripley's L(r) - r for 300 points in the unit square with toroidal edge correction: complete
 spatial randomness (CSR, a Poisson process) and a clustered Thomas process (30 parents, 10

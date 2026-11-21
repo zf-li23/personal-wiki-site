@@ -1,4 +1,4 @@
-"""The neural crest and its main derivatives. Centre: a transverse section of the trunk just after neural tube
+"""The neural crest and its main derivatives. Center: a transverse section of the trunk just after neural tube
 closure, with neural crest cells (green) leaving the dorsal neural tube. Around it, the cell types the crest forms
 at different axial levels: cranial crest gives most of the bone and cartilage of the face and the anterior skull,
 the odontoblasts of the teeth and cranial ganglia; cardiac crest the septum of the outflow tract; vagal and sacral

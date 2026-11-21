@@ -1,6 +1,6 @@
-"""Two receptor cells, two defences: the noctuid moth ear read against distance.
+"""Two receptor cells, two defenses: the noctuid moth ear read against distance.
 
-Spikes per call pulse of the A1 and A2 cells are modelled as sigmoid functions of sound level
+Spikes per call pulse of the A1 and A2 cells are modeled as sigmoid functions of sound level
 (A1 threshold 45 dB SPL, A2 25 dB less sensitive; first-spike latency shortens with level).
 B converts level to distance for a bat call of 120 dB SPL at 10 cm at about 30 kHz
 (spherical spreading plus 0.8 dB/m absorption). Values are illustrative but match the

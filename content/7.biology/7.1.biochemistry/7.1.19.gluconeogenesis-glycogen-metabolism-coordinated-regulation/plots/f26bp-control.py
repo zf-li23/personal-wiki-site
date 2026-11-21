@@ -1,9 +1,9 @@
 """Control of glycolysis and gluconeogenesis in the liver by fructose 2,6-bisphosphate (SBGN process
 description). The bifunctional enzyme PFK-2/FBPase-2 is phosphorylated by protein kinase A (cAMP,
 glucagon), which inhibits its kinase and activates its bisphosphatase; a phosphoprotein phosphatase
-(PP2A, activated by xylulose 5-phosphate; insulin also favours dephosphorylation) reverses this. The
+(PP2A, activated by xylulose 5-phosphate; insulin also favors dephosphorylation) reverses this. The
 unphosphorylated form makes fructose 2,6-bisphosphate from fructose 6-phosphate, the phosphorylated
-form hydrolyses it. Fructose 2,6-bisphosphate stimulates PFK-1 and inhibits FBPase-1; AMP acts the
+form hydrolyzes it. Fructose 2,6-bisphosphate stimulates PFK-1 and inhibits FBPase-1; AMP acts the
 same way, citrate inhibits PFK-1."""
 
 import wikibio as bio

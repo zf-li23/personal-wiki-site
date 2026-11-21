@@ -1,4 +1,4 @@
-"""Reduction of cyclohexanone by lithium aluminium hydride in dry ether. The lithium cation
+"""Reduction of cyclohexanone by lithium aluminum hydride in dry ether. The lithium cation
 coordinates to the carbonyl oxygen (dashed bond) and activates it; an Al-H bond pair is delivered
 to the carbonyl carbon and the C=O pi pair moves onto oxygen, giving an alkoxyaluminate. The
 remaining three Al-H bonds reduce three more ketone molecules, and aqueous workup releases

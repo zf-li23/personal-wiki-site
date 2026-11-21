@@ -1,7 +1,7 @@
 """Design and batch structure seen in sample PCA. A: the airway experiment (Himes et al. 2014, GEO
 GSE52778; Bioconductor package airway): principal component analysis of the variance-stabilized
 expression of the 500 most variable genes in eight samples of four primary airway smooth-muscle cell
-lines (marker shape), untreated or treated with dexamethasone (colour); PC1 separates treatment, PC2
+lines (marker shape), untreated or treated with dexamethasone (color); PC1 separates treatment, PC2
 the cell lines. B, C: simulations with no treatment effect at all (2000 genes, 4 + 4 samples, a batch
 shift of 0.8 log2 units in 300 genes): p-values of per-gene t-tests of treatment when every treated
 sample was processed in batch 2 (B, design confounded) and when each batch holds two samples of each

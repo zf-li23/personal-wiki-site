@@ -1,7 +1,7 @@
 # Bacteriophage T4: the virion and the steps of adsorption and genome injection.
 # A: the anatomy of the particle, with callouts.
 # B-E: entry into a Gram-negative cell, drawn on cross-sections of the envelope (microbio.envelope):
-#   B reversible binding by a long tail fibre; C commitment through the short fibres and the star-shaped
+#   B reversible binding by a long tail fiber; C commitment through the short fibers and the star-shaped
 #   baseplate; D contraction of the sheath and local digestion of the peptidoglycan; E ejection of the DNA,
 #   the empty capsid remaining outside.
 # F: how phages without a contractile tail cross the envelope.
@@ -17,7 +17,7 @@ MUT = P.muted()
 
 
 def t4(x, ybase, s=1.0, contracted=False, empty=False, zorder=14, fibres=True):
-    """A T4 particle with the baseplate at (x, ybase); s scales it. Returns the head centre."""
+    """A T4 particle with the baseplate at (x, ybase); s scales it. Returns the head center."""
     tok = "neutral" if empty else "virus"
     sheath_len = 1.1 * s if contracted else 2.0 * s
     hy = ybase + sheath_len + 1.5 * s

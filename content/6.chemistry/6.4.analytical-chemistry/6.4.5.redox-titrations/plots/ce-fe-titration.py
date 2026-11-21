@@ -12,7 +12,7 @@ c = 0.1000
 
 
 def potential(f):
-    # electron balance: fraction of Fe oxidised = fraction of Ce reduced (per mole of Fe)
+    # electron balance: fraction of Fe oxidized = fraction of Ce reduced (per mole of Fe)
     def g(E):
         fe3 = 1 / (1 + 10 ** ((E_Fe - E) / S))          # [Fe3+]/c_Fe
         ce3 = 1 / (1 + 10 ** ((E - E_Ce) / S))          # [Ce3+]/c_Ce

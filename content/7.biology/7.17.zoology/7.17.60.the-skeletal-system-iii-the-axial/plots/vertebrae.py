@@ -1,4 +1,4 @@
-# The parts of a vertebra and the types of centra, schematic (vertskel homology colours). A: tetrapod trunk
+# The parts of a vertebra and the types of centra, schematic (vertskel homology colors). A: tetrapod trunk
 # vertebra in anterior and left lateral views with a two-headed rib; fish caudal vertebra in anterior view.
 # B: median sagittal sections of three successive centra (anterior to the left) for the five centrum types.
 # After Kardong (2019) and Romer & Parsons. Not to scale.

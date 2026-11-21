@@ -1,7 +1,7 @@
 # The B-cell receptor complex and the coreceptor. Membrane IgM binds antigen but has a three-residue
 # cytoplasmic tail; the Igα/Igβ (CD79a/CD79b) heterodimer carries the ITAMs that signal. The coreceptor
 # CD21-CD19-CD81 binds C3d on complement-tagged antigen, so one antigen engages both BCR and coreceptor;
-# CD19 recruits PI3K. Below the membrane: the core signalling cascade (Lyn, Syk, BTK, BLNK, PLCγ2).
+# CD19 recruits PI3K. Below the membrane: the core signaling cascade (Lyn, Syk, BTK, BLNK, PLCγ2).
 import wikibio as bio
 from wikibio import immuno
 
@@ -52,7 +52,7 @@ for dd in (-0.18, -0.06, 0.06, 0.18):
 bio.label(ax, (x81 + 0.45, ym + 0.75), "CD81", size="tiny", ha="left")
 bio.arrow(ax, (ag[0] - 0.65, ag[1] - 0.2), (xb + 0.9, ym + 1.9), kind="link")
 
-# --- signalling below the membrane ------------------------------------------------------------------------------
+# --- signaling below the membrane ------------------------------------------------------------------------------
 def node(xy, text, tok="protein", w=1.5):
     bio.box(ax, xy, w, 0.6, tok, text=text, size="tiny")
 

@@ -7,7 +7,7 @@ companion figure) and c_k its strength.
 A: stratified lake (depth in m). Pure-water absorption coefficients are approximate literature values
 (about 0.01 m^-1 in the blue, 0.06 at 550 nm, 0.34 at 650 nm, 2-2.5 m^-1 at 750-800 nm, 4-7 m^-1 at
 850-900 nm); a cyanobacterial layer (chlorophyll a, phycocyanin, carotenoids) occupies 0-3 m. Below a few
-metres only blue-green light (about 450-570 nm) remains: purple and green sulfur bacteria in the
+meters only blue-green light (about 450-570 nm) remains: purple and green sulfur bacteria in the
 sulfidic hypolimnion must harvest it with carotenoids and the blue (Soret) bands of their
 bacteriochlorophylls.
 B: microbial mat (depth in mm, water absorption negligible). A 1-mm layer of cyanobacteria removes the

@@ -1,7 +1,7 @@
 # Model: Boyle's law and the swim bladder. Pressure at depth d (m) in seawater is p = p0 + rho*g*d, about
 # (1 + d/10) atm. A bladder that holds a fixed amount of gas has volume V = V_n * p_n / p, where V_n is the
 # volume that gives neutral buoyancy at the fish's home depth d_n. (A) V/V_n against depth for fish neutral
-# at 0, 10, 50 and 200 m. (B) Fractional volume change per metre of vertical movement, 1/(10 + d), which
+# at 0, 10, 50 and 200 m. (B) Fractional volume change per meter of vertical movement, 1/(10 + d), which
 # sets how quickly a fish without gas secretion must correct its buoyancy.
 import numpy as np
 import wikibio as bio

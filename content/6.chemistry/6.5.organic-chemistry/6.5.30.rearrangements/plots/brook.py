@@ -1,7 +1,7 @@
 """[1,2]-Brook rearrangement. The alkoxide of an alpha-silyl alcohol (here phenyl(trimethylsilyl)
 methanol) attacks its own silicon atom; through a three-membered pentacoordinate silicate the C-Si
 bond breaks and the trimethylsilyl group ends on oxygen, leaving a benzylic carbanion that is
-protonated. Silicon can migrate to an electron-rich centre because it accepts the electron pair
+protonated. Silicon can migrate to an electron-rich center because it accepts the electron pair
 into a low-lying sigma* orbital, and the strong Si-O bond drives the reaction."""
 
 from wikichem import Scheme

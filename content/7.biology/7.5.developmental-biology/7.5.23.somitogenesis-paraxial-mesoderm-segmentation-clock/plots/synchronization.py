@@ -1,6 +1,6 @@
 """Synchronization. (A) Quenching of the free oscillation of a forced van der Pol oscillator (eps = 0.1, omega =
 2.5) compared with the averaged prediction. (B, C) A 40 x 12 sheet of phase oscillators with 5% scatter of
-natural frequency and nearest-neighbour coupling: order parameter over time and final phases."""
+natural frequency and nearest-neighbor coupling: order parameter over time and final phases."""
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp

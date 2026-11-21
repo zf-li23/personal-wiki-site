@@ -1,6 +1,6 @@
 """Native chemical ligation. Top: the thiolate of the N-terminal cysteine of peptide 2 attacks the
 C-terminal thioester of peptide 1 (transthioesterification; this step is reversible and is
-catalysed by an added aryl thiol); the alkyl thiol is released. Bottom: the new thioester sits
+catalyzed by an added aryl thiol); the alkyl thiol is released. Bottom: the new thioester sits
 five atoms from the cysteine amino group, which attacks its carbonyl carbon through a
 five-membered cyclic tetrahedral intermediate; the C-S bond breaks and the thiolate leaves.
 This S-to-N acyl shift is irreversible and gives a native peptide bond with a free cysteine

@@ -1,8 +1,8 @@
 """Selection of tip and stalk cells by VEGF-Dll4-Notch lateral inhibition (Formula 29.3.1). A: steady states of a
-row of 20 endothelial cells (colour: Dll4 level, high = tip-cell fate, gold; low = stalk cell, pink) at three
-levels of VEGF signalling G. Low VEGF: no cell is activated enough to make Dll4, no sprouting. Intermediate VEGF:
+row of 20 endothelial cells (color: Dll4 level, high = tip-cell fate, gold; low = stalk cell, pink) at three
+levels of VEGF signaling G. Low VEGF: no cell is activated enough to make Dll4, no sprouting. Intermediate VEGF:
 alternating tip and stalk cells. Very high VEGF: every cell makes Dll4, Notch is high everywhere but cannot
-overcome the signal, and all cells adopt the tip state; the pattern is lost. B: the contrast between neighbouring
+overcome the signal, and all cells adopt the tip state; the pattern is lost. B: the contrast between neighboring
 cells (maximum minus minimum Dll4) against G: patterning occurs in a window of VEGF levels."""
 import numpy as np
 import wikibio as bio

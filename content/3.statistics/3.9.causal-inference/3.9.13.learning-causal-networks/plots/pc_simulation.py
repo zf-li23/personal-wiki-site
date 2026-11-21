@@ -39,7 +39,7 @@ def pc(x, alpha=0.05):
     sepset = {}
     size = 0
     while any(len(adj[i]) - 1 >= size for i in range(p)):
-        frozen = {i: set(adj[i]) for i in range(p)}  # PC-stable: neighbours fixed within a level
+        frozen = {i: set(adj[i]) for i in range(p)}  # PC-stable: neighbors fixed within a level
         for i in range(p):
             for j in list(frozen[i]):
                 if j not in adj[i]:

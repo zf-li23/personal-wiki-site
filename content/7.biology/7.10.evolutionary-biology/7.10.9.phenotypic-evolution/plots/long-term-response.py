@@ -2,12 +2,12 @@
 population: each generation the 50 highest-scoring of 250 individuals are the parents, loci are unlinked,
 the environmental variance is V_E = 1 and the trait is the sum of allelic effects plus environmental noise.
 Three genetic architectures (two replicate lines each, seeds 1 and 2):
-A: 10 loci with favourable alleles of large effect (0.5) at initial frequency 0.1 (initial h^2 about 0.3);
+A: 10 loci with favorable alleles of large effect (0.5) at initial frequency 0.1 (initial h^2 about 0.3);
 B: 400 loci of small effect (0.03) at frequency 0.5 plus two major loci (effect 0.5, frequency 0.1);
 C: 100 loci of effect 0.1 at frequency 0.3 with mutation (each allele mutates with probability 0.001 per
 generation, adding a normal effect of variance 0.0115, so that the mutational variance is V_M = 0.0023).
 Top: change of the mean phenotype; bottom: additive genetic variance V_A among the 250 individuals. With
-few major loci the variance first rises (favourable alleles reach intermediate frequency) and the response
+few major loci the variance first rises (favorable alleles reach intermediate frequency) and the response
 stops when they fix, within about 15 generations; with many loci of small effect the response continues
 for the whole run while the variance declines gradually (selection, the small number of parents and
 linkage disequilibrium); with mutation the response is sustained at a higher rate."""

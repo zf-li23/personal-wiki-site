@@ -1,6 +1,6 @@
 """Allylic bromination of cyclohexene with NBS (Goldfinger mechanism). NBS only keeps the Br2
 concentration low by reacting with the HBr formed; the chain carriers are Br atoms.
-(1) A bromine atom abstracts an allylic H; the allylic radical is delocalised over C1 and C3.
+(1) A bromine atom abstracts an allylic H; the allylic radical is delocalized over C1 and C3.
 (2) The allylic radical abstracts Br from Br2 and regenerates the bromine atom."""
 
 import numpy as np
@@ -17,8 +17,8 @@ def pt(p):
 
 # Atom numbers are the map numbers; the two resonance structures list the atoms in the same order.
 SM = "[CH2:1]1[CH2:2][CH2:3][CH2:4][CH:5]=[CH:6]1"  # cyclohexene, allylic C1
-A = "[CH:1]1[CH2:2][CH2:3][CH2:4][CH:5]=[CH:6]1"  # radical centre at C1, C5=C6
-B = "[CH:1]=1[CH2:2][CH2:3][CH2:4][CH:5][CH:6]1"  # radical centre at C5, C1=C6
+A = "[CH:1]1[CH2:2][CH2:3][CH2:4][CH:5]=[CH:6]1"  # radical center at C1, C5=C6
+B = "[CH:1]=1[CH2:2][CH2:3][CH2:4][CH:5][CH:6]1"  # radical center at C5, C1=C6
 
 # (1) Br. + allylic C-H -> HBr + allylic radical (two resonance structures).
 s = Scheme()

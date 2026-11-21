@@ -20,7 +20,7 @@ bio.panel(ax, "A", (0.1, 10.5))
 cx, cy = 6.0, 5.2
 H, R2 = 2.0, 3.0      # half height, equatorial radius
 R3 = 2.1              # contact radius
-# profile: circular arc from (R3, H) to (R2, 0) with centre on the equator
+# profile: circular arc from (R3, H) to (R2, 0) with center on the equator
 c = (R2 ** 2 - R3 ** 2 - H ** 2) / (2 * (R2 - R3)) if False else None
 r1 = (H ** 2 + (R2 - R3) ** 2) / (2 * (R2 - R3))   # arc through (R3, +-H) tangent-vertical at (R2, 0)
 xc = R2 - r1

@@ -1,5 +1,5 @@
 """The four-state receptor: an activity variable (inactive/active, energy cost eps of activation)
-and a binding variable (empty/bound); the bound ligand stabilises the active state by J (energies
+and a binding variable (empty/bound); the bound ligand stabilizes the active state by J (energies
 in kBT). A: activity (solid) and occupancy (dashed) against ligand concentration (in units of the
 dissociation constant K_I of the inactive receptor): with one site, activity is leak + (ceiling -
 leak) x occupancy; for eps = 5, J = 10 it rises from 1/(1 + e^5) to 1/(1 + e^-5), a gain of about

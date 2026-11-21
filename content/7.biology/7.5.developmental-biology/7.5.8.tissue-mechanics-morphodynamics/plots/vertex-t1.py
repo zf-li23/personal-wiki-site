@@ -1,4 +1,4 @@
-"""Vertex models: neighbour exchange (T1 transition) and the shape index.
+"""Vertex models: neighbor exchange (T1 transition) and the shape index.
 
 A: a T1 transition between four cells: the junction shared by cells 1 and 3 shrinks to a four-fold
 vertex and a new junction forms between cells 2 and 4, so cells 1 and 3 lose contact (the elementary

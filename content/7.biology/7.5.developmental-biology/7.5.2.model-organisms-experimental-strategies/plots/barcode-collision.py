@@ -1,8 +1,8 @@
 """When do two clones share a label by chance? The birthday problem of lineage tracing.
 
-A: probability that at least two of n independently labelled clones carry the same label when each label is
+A: probability that at least two of n independently labeled clones carry the same label when each label is
 drawn uniformly from N possibilities: 1 - prod_{k<n} (1 - k/N), close to 1 - exp(-n(n-1)/2N). N = 4
-(the four colours of a Confetti/Brainbow reporter), 100, 10^4 and 10^6. The dashed line marks 50 %,
+(the four colors of a Confetti/Brainbow reporter), 100, 10^4 and 10^6. The dashed line marks 50 %,
 reached near n = 1.18 sqrt(N). B: with unequal label frequencies p_i the relevant number is the
 effective diversity N_eff = 1 / sum p_i^2. For 10^4 possible barcodes whose frequencies follow a Zipf law
 (p_i proportional to 1/i, as edit outcomes of CRISPR arrays roughly do), N_eff is only about 58, and

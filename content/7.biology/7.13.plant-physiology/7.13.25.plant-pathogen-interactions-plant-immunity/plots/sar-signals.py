@@ -4,7 +4,7 @@
 # movement). In distal leaves NHP and SA amplify each other's synthesis (ALD1-SARD4-FMO1 for NHP, ICS1 for SA);
 # SA-bound NPR1 enters the nucleus and with TGA transcription factors induces PR genes (PR1, PR2, PR5).
 # B: schematic time course after inoculation of one leaf (local SA peaks within about a day; systemic SA and
-# resistance develop over 1-2 days and resistance lasts for weeks), modelled with gamma-shaped curves.
+# resistance develop over 1-2 days and resistance lasts for weeks), modeled with gamma-shaped curves.
 import numpy as np
 import wikibio as bio
 from wikibio import charts

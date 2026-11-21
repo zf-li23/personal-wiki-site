@@ -4,7 +4,7 @@ Thirty sites, ten from each of three community types; each type has its own mean
 species (log-normal, with overlap between types), and site samples are Poisson draws (seed 2).
 A: site-by-species abundance matrix (rows in dendrogram order, log scale shading).
 B: UPGMA (average-linkage) dendrogram of Bray-Curtis dissimilarities; cutting at 0.6 recovers the three
-types (colours: true type of each site).
+types (colors: true type of each site).
 """
 
 import numpy as np

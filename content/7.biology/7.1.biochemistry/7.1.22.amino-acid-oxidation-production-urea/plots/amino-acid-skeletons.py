@@ -1,7 +1,7 @@
 """Where the carbon skeletons of the 20 amino acids enter central metabolism (Lehninger 8e, Fig. 18-15).
 Six entry points: pyruvate (A, C, G, S, T, W), acetyl-CoA (I, L, T, W) and acetoacetyl-CoA (F, K, L, W, Y),
 alpha-ketoglutarate (E, H, P, Q, R), succinyl-CoA (I, M, T, V), fumarate (F, Y) and oxaloacetate (D, N).
-Amino acids listed twice give parts of their skeletons to two entry points. Colour: glucogenic (skeleton can
+Amino acids listed twice give parts of their skeletons to two entry points. Color: glucogenic (skeleton can
 become glucose through oxaloacetate and gluconeogenesis), ketogenic (only acetyl-CoA / acetoacetyl-CoA:
 ketone bodies or fatty acids), both. Leucine and lysine are the only purely ketogenic amino acids."""
 
@@ -35,7 +35,7 @@ bio.label(ax, (17.9, 12.1), "→ ketone bodies, fatty acids", size="tiny", ha="r
 
 
 def chips(letters, at, dx=0.72, dy=0.0, cols=None):
-    """A row (or grid) of one-letter amino-acid discs coloured by fate; returns the group centre."""
+    """A row (or grid) of one-letter amino-acid discs colored by fate; returns the group center."""
     cols = cols or len(letters)
     x0, y0 = at
     pts = []

@@ -17,7 +17,7 @@ for i in range(3):
     for j in (i - 1, (i + 1) % 3):
         d = C[j] - C[i]
         base = np.arctan2(d[1], d[0])
-        # rotate the orbital axis away from the ring centre by (104 - 60) / 2 = 22 degrees
+        # rotate the orbital axis away from the ring center by (104 - 60) / 2 = 22 degrees
         out = C[i] - np.zeros(2)
         sign = np.sign(np.cross(d, -out)) or 1
         t = base - sign * (half - np.radians(30))

@@ -1,6 +1,6 @@
-"""Phase locking of auditory nerve fibres and its high-frequency limit.
+"""Phase locking of auditory nerve fibers and its high-frequency limit.
 
-Model fibre: at most one spike per stimulus cycle, fired with probability 0.3 per cycle at the
+Model fiber: at most one spike per stimulus cycle, fired with probability 0.3 per cycle at the
 preferred phase plus Gaussian timing jitter of s.d. sigma_t (a crude stand-in for the low-pass
 filtering by the hair-cell membrane and the stochastic release at the ribbon synapse).
 A: period histograms (spike phase within the cycle, 2 s of stimulation) at 300 Hz, 1 kHz and

@@ -1,6 +1,6 @@
 """One cycle of the segmentation clock in the presomitic mesoderm (dorsal view, anterior left): four rows at
 successive phases; the last row has formed one more somite and its tail bud has moved posteriorly by one somite
-length. Bars below the last row: FGF/Wnt (posterior) and retinoic acid (anterior) signalling."""
+length. Bars below the last row: FGF/Wnt (posterior) and retinoic acid (anterior) signaling."""
 import wikibio as bio
 from wikibio import mesoderm as M
 

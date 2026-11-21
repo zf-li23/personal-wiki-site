@@ -15,7 +15,7 @@ for ax, L in zip(axes, [1.0, 0.1]):
     ax.plot(dnu / 1e9, gain, color="C0", lw=1.6, label="gain curve")
     ax.axhline(threshold, color="0.4", ls="--", lw=1, label="threshold (losses)")
     spacing = c / (2 * L)
-    offset = 0.3 * spacing  # cavity resonances need not sit at the line centre
+    offset = 0.3 * spacing  # cavity resonances need not sit at the line center
     q = np.arange(-40, 41)
     modes = offset + q * spacing
     modes = modes[np.abs(modes) < 2.5e9]

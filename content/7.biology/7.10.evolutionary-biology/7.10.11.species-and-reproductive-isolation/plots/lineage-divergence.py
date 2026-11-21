@@ -4,7 +4,7 @@ widening band shows increasing differences). Along the way the daughter lineages
 different species concepts use as criteria: differences in some characters, fixed diagnosable differences
 (phylogenetic species concept), reciprocal monophyly of gene trees (genealogical species concept), ecological
 divergence, prezygotic and postzygotic reproductive isolation (biological species concept). The order shown is
-one possibility; it differs between cases. Before all criteria are met there is a grey zone in which
+one possibility; it differs between cases. Before all criteria are met there is a gray zone in which
 different concepts disagree about whether there are one or two species."""
 import numpy as np
 import matplotlib.pyplot as plt

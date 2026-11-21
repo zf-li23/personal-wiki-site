@@ -18,7 +18,7 @@ def shift(p, d):
 
 
 def pent(k, r=1.15):
-    """Vertex k of a regular pentagon centred on the origin (k = 0 at the top)."""
+    """Vertex k of a regular pentagon centered on the origin (k = 0 at the top)."""
     t = math.radians(90 + 72 * k)
     return (r * math.cos(t), r * math.sin(t))
 

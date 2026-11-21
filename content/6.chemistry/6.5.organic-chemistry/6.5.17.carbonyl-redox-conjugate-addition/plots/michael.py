@@ -1,4 +1,4 @@
-"""Michael addition of diethyl malonate to but-3-en-2-one (methyl vinyl ketone) catalysed by sodium
+"""Michael addition of diethyl malonate to but-3-en-2-one (methyl vinyl ketone) catalyzed by sodium
 ethoxide. The malonate enolate (the donor) attacks the beta carbon of the acceptor; the C=C pi pair
 moves between the alpha carbon and the carbonyl carbon and the C=O pi pair moves onto oxygen, giving
 a new enolate. This more basic enolate takes a proton from ethanol, regenerating the ethoxide

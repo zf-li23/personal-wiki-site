@@ -4,7 +4,7 @@
 #    the objective lens with the objective aperture in its back focal plane, the selected-area aperture in
 #    the first image plane, intermediate and projector lenses, energy filter and direct electron detector.
 # B: ray diagram of an ideal thin lens (object distance U = 3, focal length f = 2, image distance V = 6,
-#    magnification -2). Rays leaving three object points in the same direction (same colour) meet at one
+#    magnification -2). Rays leaving three object points in the same direction (same color) meet at one
 #    point of the back focal plane, whose height f tan(theta) depends only on the direction: the back focal
 #    plane holds the Fourier transform (diffraction pattern) of the exit wave. Rays from the same object
 #    point meet again in the image plane. A second Fourier transform (propagation from the back focal plane

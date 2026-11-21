@@ -55,7 +55,7 @@ fcs = erb_inverse(np.linspace(erb_number(100), erb_number(8000), 16))
 f = np.logspace(np.log10(50), np.log10(12000), 800)
 for fc in fcs:
     b = 1.019 * erb(fc)
-    # magnitude of the 4th-order gammatone near its centre frequency
+    # magnitude of the 4th-order gammatone near its center frequency
     gain = (1 + ((f - fc) / b) ** 2) ** (-2)
     ax.plot(f, 10 * np.log10(gain), color=P.edge("dna"), lw=1.0)
 ax.set_xscale("log")

@@ -1,6 +1,6 @@
 """Titration of weak acids HA with NaOH of the same concentration, from the charge balance.
 Left: c = 0.1000 mol/L and different pKa; right: pKa = 7 and different concentrations.
-The grey band marks +-0.1 % about the stoichiometric point; the jump becomes too small for
+The gray band marks +-0.1 % about the stoichiometric point; the jump becomes too small for
 a visual end point when c_sp*Ka falls below about 1e-8."""
 
 import numpy as np

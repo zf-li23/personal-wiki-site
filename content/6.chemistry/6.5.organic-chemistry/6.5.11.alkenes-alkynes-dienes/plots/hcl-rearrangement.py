@@ -1,6 +1,6 @@
 """Carbocation rearrangement during electrophilic addition: 3-methylbut-1-ene and HCl. The pi bond
 takes the proton at the CH2 end (secondary cation, Markovnikov). Chloride can capture this cation
-(2-chloro-3-methylbutane), or a hydride on the neighbouring tertiary carbon shifts with its electron
+(2-chloro-3-methylbutane), or a hydride on the neighboring tertiary carbon shifts with its electron
 pair (1,2-hydride shift) to give the more stable tertiary cation, which gives 2-chloro-2-methylbutane."""
 
 from wikichem import Scheme

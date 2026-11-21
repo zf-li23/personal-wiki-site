@@ -1,7 +1,7 @@
 """Coccolithophores and the two carbon pumps (schematic). Left: a coccolithophore cell covered by coccoliths; a
 new coccolith forms in a Golgi-derived coccolith vesicle and is secreted to the surface. Right: in surface water
 photosynthesis fixes CO2 as organic carbon (organic carbon pump) while calcification combines Ca2+ and HCO3- into
-CaCO3 and releases CO2 (carbonate pump); dead cells and coccoliths sink in faecal pellets and aggregates, and
+CaCO3 and releases CO2 (carbonate pump); dead cells and coccoliths sink in fecal pellets and aggregates, and
 part is buried as chalk."""
 import numpy as np
 from matplotlib.patches import Circle, Ellipse, Rectangle

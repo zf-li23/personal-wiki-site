@@ -1,6 +1,6 @@
 """Dehalogenation of 1,2-dibromoethane with zinc. Zinc inserts into one C-Br bond (by electron
 transfer from the metal surface), giving a 2-bromoethylzinc bromide; the electrons of the polar
-C-Zn bond then form the pi bond while bromide leaves from the neighbouring carbon, giving ethene
+C-Zn bond then form the pi bond while bromide leaves from the neighboring carbon, giving ethene
 and ZnBr2."""
 
 from wikichem import Scheme

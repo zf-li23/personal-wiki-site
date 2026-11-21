@@ -3,7 +3,7 @@
 # postsacral vertebrae fused into the urostyle, long ilia reaching forward to the sacral diapophyses,
 # radius and ulna fused (radioulna), tibia and fibula fused (tibiofibula), and the elongated proximal
 # tarsals (astragalus and calcaneum) adding a lever segment to the hindlimb. Salamander: long trunk with
-# ribs, a tail, short ilia and separate zeugopod bones. Colours follow the course-wide homology scheme.
+# ribs, a tail, short ilia and separate zeugopod bones. Colors follow the course-wide homology scheme.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

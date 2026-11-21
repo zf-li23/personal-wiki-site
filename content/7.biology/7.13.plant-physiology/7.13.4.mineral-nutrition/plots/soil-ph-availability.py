@@ -44,7 +44,7 @@ for i, (name, w, tok) in enumerate(rows):
     w = np.clip(w, 0, 1.1) * 0.42
     ax.fill_between(pH, y - w, y + w, color=P.fill(tok), edgecolor=charts.line(tok), lw=0.8)
     ax.text(3.92, y, name, ha="right", va="center", fontsize=8.5, color=P.ink())
-# aluminium toxicity
+# aluminum toxicity
 al = 1 / (1 + np.exp((pH - 4.9) / 0.18))
 ax.fill_between(pH, -1.4 - 0.42 * al, -1.4 + 0.42 * al, color=P.fill("neutral"), edgecolor=P.edge("neutral"), lw=0.8)
 ax.text(3.92, -1.4, "Al$^{3+}$ (toxic)", ha="right", va="center", fontsize=8.5, color=P.ink())

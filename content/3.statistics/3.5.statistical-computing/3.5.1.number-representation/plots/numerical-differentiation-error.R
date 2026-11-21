@@ -14,9 +14,9 @@ plot(h, err_f, log = "xy", pch = 19, cex = 0.5, col = "steelblue", ylim = c(1e-1
 points(h, err_c, pch = 15, cex = 0.5, col = "darkorange")
 lines(h, exact * h / 2, lty = 2, col = "steelblue")       # truncation error, forward
 lines(h, exact * h^2 / 6, lty = 2, col = "darkorange")    # truncation error, central
-lines(h, 2 * u * exact / h, lty = 3, col = "grey40")      # rounding error
+lines(h, 2 * u * exact / h, lty = 3, col = "gray40")      # rounding error
 abline(v = c(sqrt(4 * u), (3 * u)^(1 / 3)), col = c("steelblue", "darkorange"), lwd = 0.8)
 legend("top", bty = "n", cex = 0.8, ncol = 2,
        legend = c("forward difference", "central difference", "h f''/2", "h^2 f'''/6", "2u f/h"),
-       col = c("steelblue", "darkorange", "steelblue", "darkorange", "grey40"),
+       col = c("steelblue", "darkorange", "steelblue", "darkorange", "gray40"),
        pch = c(19, 15, NA, NA, NA), lty = c(NA, NA, 2, 2, 3))

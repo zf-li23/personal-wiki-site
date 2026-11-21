@@ -2,7 +2,7 @@
 chlorotrimethylsilane traps it on oxygen as a silyl ketene acetal. This is an allyl vinyl ether, so it
 undergoes the [3,3]-sigmatropic (Claisen) shift already at or below room temperature, through a
 chair-like six-membered transition state (drawn flat here; the dashed line is the forming C-C bond).
-The product is the silyl ester of 2-methylpent-4-enoic acid, hydrolysed to the acid on work-up."""
+The product is the silyl ester of 2-methylpent-4-enoic acid, hydrolyzed to the acid on work-up."""
 
 import math
 

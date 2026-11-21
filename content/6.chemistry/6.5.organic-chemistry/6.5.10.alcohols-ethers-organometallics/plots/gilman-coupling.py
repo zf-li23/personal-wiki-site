@@ -1,5 +1,5 @@
 """Corey-House coupling of lithium dimethylcuprate with 1-bromobutane. The electron-rich copper(I)
-centre attacks the carbon from the back side (an SN2-like oxidative addition), bromide leaves and a
+center attacks the carbon from the back side (an SN2-like oxidative addition), bromide leaves and a
 copper(III) intermediate with three alkyl groups forms; reductive elimination joins the methyl
 and butyl groups, giving pentane and methylcopper."""
 

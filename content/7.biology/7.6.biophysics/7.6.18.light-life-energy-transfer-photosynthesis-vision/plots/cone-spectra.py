@@ -10,7 +10,7 @@
 #    against lambda_max / lambda.
 # B: univariance. A single cone type reports only the number of photons it absorbs: 600 nm light is
 #    absorbed by an M cone 0.22 times as well as 530 nm light, so 4.5 times more 600 nm photons give the same
-#    M-cone signal. Colour is recovered by comparing cones: the ratio L / (L + M) changes monotonically with
+#    M-cone signal. Color is recovered by comparing cones: the ratio L / (L + M) changes monotonically with
 #    wavelength across the green-red range, S / (L + M) across the blue.
 import matplotlib.pyplot as plt
 import numpy as np

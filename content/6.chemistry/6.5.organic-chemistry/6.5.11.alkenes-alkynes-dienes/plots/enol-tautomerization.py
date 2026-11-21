@@ -1,5 +1,5 @@
-"""Acid-catalysed tautomerization of the enol formed by hydration of propyne. The C=C pi bond is
-protonated at the CH2 end while the oxygen lone pair forms the C=O pi bond (giving the oxocarbenium ion, stabilised by the oxygen lone pair), then
+"""Acid-catalyzed tautomerization of the enol formed by hydration of propyne. The C=C pi bond is
+protonated at the CH2 end while the oxygen lone pair forms the C=O pi bond (giving the oxocarbenium ion, stabilized by the oxygen lone pair), then
 the O-H proton is removed: the enol becomes the more stable ketone, acetone."""
 
 from wikichem import Scheme

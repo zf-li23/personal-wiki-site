@@ -1,5 +1,5 @@
 # Lancelet (Branchiostoma), schematic: (A) lateral view with the main organ systems, anterior to the left;
-# (B) cross-section through the pharynx, dorsal up. Drawn natively (germ-layer colours as in 7.17.41).
+# (B) cross-section through the pharynx, dorsal up. Drawn natively (germ-layer colors as in 7.17.41).
 import numpy as np
 import wikibio as bio
 from matplotlib.patches import Polygon, Ellipse
@@ -79,7 +79,7 @@ poly(np.vstack([np.c_[gx, gy + gh], np.c_[gx[::-1], (gy - gh)[::-1]]]), face=P.f
 anus = (18.35, Y - 0.68)
 ax.plot([18.25, anus[0] + 0.05], [Y - 0.6, Y - lo[np.searchsorted(xs, 18.4)] + 0.02], color=P.edge(GUT), lw=1.6,
         zorder=5)
-# hepatic caecum: blind sac from the midgut forward beside (to the right of) the pharynx
+# hepatic cecum: blind sac from the midgut forward beside (to the right of) the pharynx
 cae = bio.smooth_closed([(10.9, Y - 0.15), (9.8, Y - 0.05), (8.0, Y - 0.12), (7.3, Y - 0.32), (8.0, Y - 0.52),
                          (9.8, Y - 0.5), (10.9, Y - 0.45)])
 poly(cae, face=P.fill(GUT), edge=P.edge(GUT), z=5.2)
@@ -115,7 +115,7 @@ ax.plot([3.15, 3.15], [Y - 0.45, Y + 0.25], color=P.edge(GUT), lw=1.6, zorder=4.
 for yy in (Y + 0.05, Y - 0.25):
     ax.plot([3.15, 3.5], [yy, yy - 0.05], color=P.edge(GUT), lw=0.6, zorder=4.7)  # velar tentacles
 
-# blood vessels: ventral aorta (forward), dorsal aorta (backward), subintestinal vein to the hepatic caecum
+# blood vessels: ventral aorta (forward), dorsal aorta (backward), subintestinal vein to the hepatic cecum
 bl = P.edge(BLOOD)
 ax.plot([4.0, 10.6], [Y - 0.82, Y - 0.82], color=bl, lw=1.4, zorder=4.9)
 ax.plot([4.0, 11.0, 20.0], [Y + 0.38, Y + 0.38, Y + 0.12], color=bl, lw=1.4, zorder=4.9)

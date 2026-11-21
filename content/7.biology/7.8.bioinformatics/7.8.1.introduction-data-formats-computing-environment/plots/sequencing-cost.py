@@ -1,6 +1,6 @@
 # Cost of sequencing one human genome, 2001-2024, on a log scale. Values are rounded to one or two significant
-# figures after the NHGRI Genome Sequencing Program cost table (production costs at NHGRI-funded centres) and,
-# for 2024, list prices of high-throughput instruments. The grey line is a cost that halves every two years
+# figures after the NHGRI Genome Sequencing Program cost table (production costs at NHGRI-funded centers) and,
+# for 2024, list prices of high-throughput instruments. The gray line is a cost that halves every two years
 # from the 2001 value (Moore's law). The dashed bracket shows the gap that opened between 2008 and 2015.
 import numpy as np
 import matplotlib.pyplot as plt

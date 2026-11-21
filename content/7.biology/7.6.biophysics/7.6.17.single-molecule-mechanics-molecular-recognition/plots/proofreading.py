@@ -7,7 +7,7 @@
 #    the two reverse rates. The steady-state error J_D/J_C falls from f0 at dmu = 0 (equilibrium) to near f0^2.
 # B: speed against accuracy at large dmu, varying the proofreading rate m: more accuracy, slower product.
 # C: kinetic proofreading in T-cell activation (McKeithan 1995): a ligand-receptor complex must pass N
-#    modification steps (rate k_p = 1 /s each) before it signals; the probability of signalling,
+#    modification steps (rate k_p = 1 /s each) before it signals; the probability of signaling,
 #    (k_p/(k_p + k_off))^N, discriminates ligands by their dwell time 1/k_off ever more sharply as N grows.
 import matplotlib.pyplot as plt
 import numpy as np

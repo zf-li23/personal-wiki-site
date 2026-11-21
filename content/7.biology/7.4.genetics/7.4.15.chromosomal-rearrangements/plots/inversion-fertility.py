@@ -25,8 +25,8 @@ for dd in ds:
     for m in k:
         counts = np.zeros(4, int)
         for _ in range(m):
-            a = rng.integers(0, 2)        # chromatid of the normal homologue
-            b = 2 + rng.integers(0, 2)    # chromatid of the inverted homologue
+            a = rng.integers(0, 2)        # chromatid of the normal homolog
+            b = 2 + rng.integers(0, 2)    # chromatid of the inverted homolog
             counts[a] += 1
             counts[b] += 1
         unbalanced += np.sum(counts % 2 == 1)

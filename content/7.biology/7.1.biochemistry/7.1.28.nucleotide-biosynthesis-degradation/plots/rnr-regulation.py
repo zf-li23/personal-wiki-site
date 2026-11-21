@@ -1,12 +1,12 @@
 """Class I ribonucleotide reductase and its two allosteric sites. Left: the alpha2-beta2 enzyme (E. coli
 numbering). Each alpha subunit carries the active site with the cysteines that reduce the substrate and Cys439,
 which becomes a thiyl radical; the specificity site at the alpha-alpha interface; and the activity site in the
-N-terminal ATP cone. Each beta subunit has a diferric (Fe3+-O-Fe3+) centre that generates and stabilizes the
+N-terminal ATP cone. Each beta subunit has a diferric (Fe3+-O-Fe3+) center that generates and stabilizes the
 Tyr122 radical, which is passed about 3.5 nm to Cys439 along a chain of aromatic residues (proton-coupled
 electron transfer) each time a substrate binds. Electrons for the reduction come from NADPH through
 thioredoxin or glutaredoxin. Right: the regulatory logic. Activity site: ATP activates, dATP inactivates (in
-E. coli by forming inactive alpha4-beta4 rings). Specificity site: ATP or dATP bound favours reduction of CDP
-and UDP, dTTP bound favours GDP, dGTP bound favours ADP; each product thus calls for the next."""
+E. coli by forming inactive alpha4-beta4 rings). Specificity site: ATP or dATP bound favors reduction of CDP
+and UDP, dTTP bound favors GDP, dGTP bound favors ADP; each product thus calls for the next."""
 
 import wikibio as bio
 

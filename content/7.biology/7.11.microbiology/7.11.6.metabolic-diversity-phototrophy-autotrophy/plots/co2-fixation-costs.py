@@ -1,9 +1,9 @@
 """The price of autotrophy: ATP equivalents needed to make one pyruvate from CO2 in the six classical pathways.
 
-Values after Berg (2011), counting ATP equivalents (an ATP hydrolysed to AMP counts as two) and not counting
+Values after Berg (2011), counting ATP equivalents (an ATP hydrolyzed to AMP counts as two) and not counting
 the electrons: Calvin-Benson-Bassham cycle 7, reverse citric acid cycle 2, Wood-Ljungdahl pathway about 1,
 3-hydroxypropionate bicycle 7, 3-hydroxypropionate/4-hydroxybutyrate cycle 9, dicarboxylate/4-hydroxybutyrate
-cycle 5. Bar colour: oxygen tolerance of the enzymes (the three cheap pathways use oxygen-sensitive
+cycle 5. Bar color: oxygen tolerance of the enzymes (the three cheap pathways use oxygen-sensitive
 ferredoxin-dependent or metal-cluster enzymes and occur in anaerobes or microaerobes).
 """
 import numpy as np

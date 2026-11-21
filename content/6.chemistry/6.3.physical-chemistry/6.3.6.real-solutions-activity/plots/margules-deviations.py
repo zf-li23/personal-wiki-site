@@ -1,4 +1,4 @@
-"""Vapour pressures of a binary liquid mixture described by the one-parameter Margules model,
+"""Vapor pressures of a binary liquid mixture described by the one-parameter Margules model,
 G^E_m = W x_A x_B, so ln gamma_A = (W/RT) x_B^2 and ln gamma_B = (W/RT) x_A^2 (Raoult convention).
 p*_A = 40 kPa, p*_B = 60 kPa. Dashed: Raoult's law; dotted: Henry's-law tangents at infinite dilution."""
 

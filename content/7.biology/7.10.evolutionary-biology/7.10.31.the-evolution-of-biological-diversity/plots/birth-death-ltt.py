@@ -1,6 +1,6 @@
 """Birth-death trees and lineage-through-time plots (Section 31.5.1). A: one simulated clade with
 speciation rate 0.5 and extinction rate 0.25 per lineage per Myr over 12 Myr; lineages that went
-extinct are grey, and the reconstructed tree of the living species (what a molecular phylogeny can
+extinct are gray, and the reconstructed tree of the living species (what a molecular phylogeny can
 show) is dark. B: mean log number of lineages in the reconstructed trees of 300 clades (conditioned on
 survival to the present, starting from one lineage) for three models with the same net rate early on:
 a pure-birth (Yule) process with rate 0.25; a birth-death process with rates 0.5 and 0.25, whose LTT

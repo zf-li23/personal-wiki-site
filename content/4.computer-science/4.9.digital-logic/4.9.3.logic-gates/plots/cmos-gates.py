@@ -25,7 +25,7 @@ def text(ax, p, s, **kw):
 
 
 def mos(ax, x, y, kind, name):
-    """Channel at x, centred on y. Returns (top, bottom, gate) terminals."""
+    """Channel at x, centered on y. Returns (top, bottom, gate) terminals."""
     line(ax, (x, y - 0.3), (x, y + 0.3))
     line(ax, (x, y + 0.22), (x + 0.3, y + 0.22), (x + 0.3, y + 0.5))
     line(ax, (x, y - 0.22), (x + 0.3, y - 0.22), (x + 0.3, y - 0.5))

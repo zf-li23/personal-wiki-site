@@ -4,7 +4,7 @@
 # develops a second body axis; in a cross-section of the resulting twin, the primary axis (top) is entirely host tissue,
 # while in the secondary axis (bottom) the notochord and part of the somites derive from the graft (dashed outline)
 # and the neural tube, most of the somites and the gut lining are host tissue: the graft differentiated according
-# to its origin (self-differentiation) and induced neighbouring host cells to form axial structures (induction).
+# to its origin (self-differentiation) and induced neighboring host cells to form axial structures (induction).
 import numpy as np
 import wikibio as bio
 from wikibio import bodyaxes as BA

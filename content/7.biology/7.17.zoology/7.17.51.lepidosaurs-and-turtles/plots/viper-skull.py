@@ -4,7 +4,7 @@
 # which pushes the ectopterygoid against the short maxilla; the maxilla rotates on the prefrontal and the
 # hollow fang swings from its folded position to point forward. The lower jaw (dentary and compound bone)
 # drops at the quadrate joint; the two halves of the lower jaw are joined only by soft tissue at the chin.
-# Bones in the course-wide homology colours; joints are open circles. Not to scale.
+# Bones in the course-wide homology colors; joints are open circles. Not to scale.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

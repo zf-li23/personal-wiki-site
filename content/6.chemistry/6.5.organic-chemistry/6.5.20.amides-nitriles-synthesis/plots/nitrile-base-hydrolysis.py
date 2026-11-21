@@ -1,7 +1,7 @@
 """Base-promoted hydrolysis of a nitrile (acetonitrile). Hydroxide adds to the electrophilic nitrile
 carbon and the C-N pi pair moves onto nitrogen; the nitrogen anion takes a proton from water, giving the
 imidic acid, which tautomerizes to acetamide. Under the same hot, basic conditions the amide is
-hydrolysed further to the carboxylate and ammonia."""
+hydrolyzed further to the carboxylate and ammonia."""
 
 from wikichem import Scheme
 

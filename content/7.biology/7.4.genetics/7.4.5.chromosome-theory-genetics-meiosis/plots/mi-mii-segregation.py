@@ -1,5 +1,5 @@
 """When are two alleles separated? A locus (A/a) segregates at meiosis I if no crossover occurs between it and
-the centromere (A), and at meiosis II if one does (B). Blue: paternal homologue; red: maternal."""
+the centromere (A), and at meiosis II if one does (B). Blue: paternal homolog; red: maternal."""
 import wikibio as bio
 from wikibio import genetics as G
 from wikibio import cytogenetics as C
@@ -17,7 +17,7 @@ for k, (s0, title) in enumerate(((None, "No crossover between centromere and loc
     if s0 is not None:
         bio.callout(ax, b["chiasma"], (3.9, b["chiasma"][1]), "chiasma")
     bio.label(ax, (2.2, y - L / 2 - 0.35), "bivalent", size="tiny", color=bio.P.muted(), va="top")
-    # after meiosis I: homologue a (blue, one chromatid recombinant) and homologue b (red)
+    # after meiosis I: homolog a (blue, one chromatid recombinant) and homolog b (red)
     if s0 is None:
         after = [([[(0, 1, B)], [(0, 1, B)]], ("A", "A")), ([[(0, 1, R)], [(0, 1, R)]], ("a", "a"))]
     else:

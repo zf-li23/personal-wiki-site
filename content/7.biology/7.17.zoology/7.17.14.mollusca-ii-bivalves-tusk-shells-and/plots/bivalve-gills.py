@@ -1,6 +1,6 @@
 # Bivalve ctenidia in schematic transverse section (dorsal up): protobranch, filibranch, eulamellibranch and
 # septibranch. Gill axis dark blue, filaments and lamellae light blue, shell beige, mantle green,
-# visceral mass and foot grey; arrows show the water flow through the gills.
+# visceral mass and foot gray; arrows show the water flow through the gills.
 import numpy as np
 import wikibio as bio
 from matplotlib.patches import Circle, Ellipse

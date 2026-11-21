@@ -113,10 +113,10 @@ class LockManager:
         color = {}
 
         def dfs(u, path):
-            color[u] = "grey"
+            color[u] = "gray"
             path.append(u)
             for v in graph[u]:
-                if color.get(v) == "grey":
+                if color.get(v) == "gray":
                     return path[path.index(v):]
                 if v not in color and (c := dfs(v, path)):
                     return c

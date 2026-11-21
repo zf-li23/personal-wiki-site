@@ -308,7 +308,7 @@ pooled = stats.ttest_ind(x0, x1)                    # scipy default: pooled vari
 welch = stats.ttest_ind(x0, x1, equal_var=False)    # Welch (R's default)
 print(pooled.pvalue, pooled.confidence_interval())  # 0.0087, (72.8, 494.8)
 print(welch.statistic, welch.df, welch.pvalue)      # 2.73, 170.1, 0.0070
-print(stats.levene(x0, x1).pvalue)                  # median-centred (Brown-Forsythe), 0.23
+print(stats.levene(x0, x1).pvalue)                  # median-centered (Brown-Forsythe), 0.23
 # from summary statistics: ToothGrowth, dose 0.5 mg/d (Example 7.5.1)
 print(stats.ttest_ind_from_stats(13.23, 4.46, 10, 7.98, 2.75, 10, equal_var=False))   # t = 3.17, p = 0.0064
 

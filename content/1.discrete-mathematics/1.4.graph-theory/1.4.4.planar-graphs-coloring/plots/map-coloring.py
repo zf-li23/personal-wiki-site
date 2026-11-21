@@ -1,5 +1,5 @@
-# A map of six countries (a centre surrounded by a ring of five) and its dual graph, the wheel W5.
-# The odd ring needs three colours and the centre touches all of them, so four colours are needed.
+# A map of six countries (a center surrounded by a ring of five) and its dual graph, the wheel W5.
+# The odd ring needs three colors and the center touches all of them, so four colors are needed.
 import math
 
 import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ from matplotlib.patches import Circle, Wedge
 import wikigraph as G
 
 colours = [G.BLUE, G.RED, G.GREEN, G.AMBER]
-ring = [0, 1, 0, 1, 2]  # colours of the five ring countries; the centre gets colour 3
+ring = [0, 1, 0, 1, 2]  # colors of the five ring countries; the center gets color 3
 fig, (a, b) = plt.subplots(1, 2, figsize=(8.4, 4.2))
 for ax in (a, b):
     ax.set_xlim(-2.6, 2.6)

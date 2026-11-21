@@ -1,4 +1,4 @@
-"""Why the axon initial segment (AIS) needs a diffusion barrier, and what the two defences cost.
+"""Why the axon initial segment (AIS) needs a diffusion barrier, and what the two defenses cost.
 
 A: time for a membrane protein to diffuse along a length L of axon, tau = L^2 / (2D), in free
 membrane (D = 0.1 um^2/s) and inside the AIS, where the submembrane scaffold lowers the effective D

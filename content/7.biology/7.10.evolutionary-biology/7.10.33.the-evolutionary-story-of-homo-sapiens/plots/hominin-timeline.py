@@ -2,7 +2,7 @@
 dated (bars; ages in Myr ago). Ranges are approximate and many species are known from few sites;
 the bars do not imply ancestor-descendant relationships, which for most species are uncertain. Several
 species coexisted at most times: the hominin phylogeny is a bush, and Homo sapiens is its only
-surviving branch. Genus groups: Sahelanthropus, Orrorin and Ardipithecus (grey), Australopithecus
+surviving branch. Genus groups: Sahelanthropus, Orrorin and Ardipithecus (gray), Australopithecus
 (orange), Paranthropus (brown), Homo (blue)."""
 import matplotlib.pyplot as plt
 import wikibio as bio

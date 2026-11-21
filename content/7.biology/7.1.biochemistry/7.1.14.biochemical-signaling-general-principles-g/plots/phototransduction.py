@@ -1,8 +1,8 @@
 """Phototransduction in the outer segment of a vertebrate rod cell.
 
 Top: the membrane of a disk (disk lumen above). A photon isomerizes 11-cis-retinal in rhodopsin;
-activated rhodopsin (R*) catalyses GDP/GTP exchange on many molecules of transducin; transducin-alpha-GTP
-removes the inhibitory gamma subunits of cGMP phosphodiesterase (PDE6), which hydrolyses cGMP to
+activated rhodopsin (R*) catalyzes GDP/GTP exchange on many molecules of transducin; transducin-alpha-GTP
+removes the inhibitory gamma subunits of cGMP phosphodiesterase (PDE6), which hydrolyzes cGMP to
 5'-GMP. Bottom: the plasma membrane (extracellular space below). In the dark, cGMP holds
 cGMP-gated cation channels open (the dark current carries Na+ and Ca2+ in); when [cGMP] falls they
 close, while the Na+/Ca2+,K+ exchanger (NCKX: 4 Na+ in, 1 Ca2+ and 1 K+ out) keeps exporting Ca2+, so

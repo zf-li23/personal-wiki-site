@@ -7,7 +7,7 @@
 # 70 min, dexamethasone 5 h. Parameters are illustrative.
 # A: two days with a stress at 14:00 on day 2. B: 1 mg dexamethasone at 23:00; morning cortisol in a
 # normal axis, a pituitary ACTH adenoma (Cushing disease: feedback 4x weaker, drive higher) and an
-# autonomous adrenal tumour (cortisol secretion independent of ACTH).
+# autonomous adrenal tumor (cortisol secretion independent of ACTH).
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp

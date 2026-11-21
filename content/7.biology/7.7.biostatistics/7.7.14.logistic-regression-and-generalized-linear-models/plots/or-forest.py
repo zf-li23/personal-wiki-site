@@ -1,6 +1,6 @@
 """Odds ratios for low birth weight (189 births, Baystate Medical Center 1986; Hosmer and Lemeshow; R
 MASS::birthwt) from univariate logistic regressions (open circles) and from the multiple logistic
-regression with mother's age, weight, race, smoking, previous premature labour and hypertension (filled
+regression with mother's age, weight, race, smoking, previous premature labor and hypertension (filled
 squares), with 95 % Wald intervals on a log scale. Age is per 5 years and weight per 10 lb.
 """
 import csv

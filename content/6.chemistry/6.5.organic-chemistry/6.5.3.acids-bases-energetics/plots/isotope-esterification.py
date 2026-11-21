@@ -1,4 +1,4 @@
-"""18O labelling in the acid-catalysed esterification of acetic acid with methanol. The labelled
+"""18O labeling in the acid-catalyzed esterification of acetic acid with methanol. The labeled
 oxygen of methanol attacks the carbonyl carbon of the protonated acid; after proton transfer the
 water that leaves contains an oxygen of the acid, so the label ends up in the ester (as
 CH3C(=O)-18OCH3) and not in the water: the acyl C-O bond breaks, not the alkyl C-O bond of methanol."""

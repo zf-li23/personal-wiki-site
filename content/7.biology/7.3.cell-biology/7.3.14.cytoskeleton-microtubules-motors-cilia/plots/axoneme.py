@@ -3,10 +3,10 @@
 A: a motile axoneme in cross-section, viewed from the base towards the tip: nine outer doublets (complete A
 tubule with 13 protofilaments, incomplete B tubule with 10) around a central pair of singlet microtubules;
 outer and inner dynein arms on each A tubule reach towards the B tubule of the next doublet; radial spokes
-(gold) run to the central sheath; nexin-dynein regulatory complexes (grey) link neighbouring doublets.
+(gold) run to the central sheath; nexin-dynein regulatory complexes (gray) link neighboring doublets.
 B: a primary cilium (9+0): no central pair, no dynein arms; a sensory antenna.
 C: why sliding becomes bending. Dynein arms on one doublet walk towards the minus end (the base) of the
-neighbouring doublet and push it towards the tip. Left: when the links between doublets have been digested
+neighboring doublet and push it towards the tip. Left: when the links between doublets have been digested
 by protease, doublets slide apart (telescoping), as Summers and Gibbons (1971) observed after adding ATP.
 Right: in the intact axoneme the nexin links and the basal body resist sliding and the sliding is converted
 into bending.

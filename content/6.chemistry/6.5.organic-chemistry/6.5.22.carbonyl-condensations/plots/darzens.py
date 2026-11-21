@@ -1,6 +1,6 @@
 """Darzens reaction of cyclohexanone with ethyl chloroacetate. The ester enolate (formed with
 potassium tert-butoxide) adds to the ketone carbonyl, as in an aldol addition, giving a
-beta-chloro alkoxide. The alkoxide oxygen then attacks the neighbouring carbon from the back side
+beta-chloro alkoxide. The alkoxide oxygen then attacks the neighboring carbon from the back side
 and chloride leaves (intramolecular SN2), closing the epoxide of the glycidic ester."""
 
 from wikichem import Scheme

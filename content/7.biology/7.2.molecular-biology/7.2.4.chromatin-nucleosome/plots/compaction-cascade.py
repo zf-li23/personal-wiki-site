@@ -1,9 +1,9 @@
 # Compaction of human chromosome 22 (48 Mbp in the course's round number). A: contour length at each level of
 # packing on a log scale: B-DNA (0.34 nm per bp) 1.6 cm; a compact nucleosome array (one 200 bp repeat per
-# 11 nm) 2.6 mm; the in vitro 30 nm fibre (six nucleosomes per 11 nm, hollow bar: not a regular structure in
+# 11 nm) 2.6 mm; the in vitro 30 nm fiber (six nucleosomes per 11 nm, hollow bar: not a regular structure in
 # most interphase nuclei) 0.44 mm; the metaphase chromatid about 2 um. Fold compaction relative to B-DNA is
 # written beside each bar. B: the diploid genome (6.2e9 bp) as B-DNA (a 2 nm cylinder) occupies only about
-# 6 % of a 6 um nucleus, so packing is a problem of organisation and access rather than of space.
+# 6 % of a 6 um nucleus, so packing is a problem of organization and access rather than of space.
 import numpy as np
 import wikibio as bio
 from wikibio import charts as C

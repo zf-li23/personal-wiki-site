@@ -12,7 +12,7 @@ colours = [G.BLUE, G.RED, G.GREEN, G.AMBER]
 fig, (ax1, ax2) = G.panels(2, 5.4, 1.6, titles=["cut vertices c, d, f and the bridge cd", "the four blocks"])
 G.draw(ax1, pos, edges, highlight={"c": G.RED, "d": G.RED, "f": G.RED, ("c", "d"): G.RED})
 
-# Exploded view: every block is shifted away from the centre so that shared cut vertices split
+# Exploded view: every block is shifted away from the center so that shared cut vertices split
 shift = [(-0.6, 0), (0, 0), (0.6, 0), (1.2, 0)]
 for block, colour, (dx, dy) in zip(blocks, colours, shift):
     sub = {f"{v}{len(block)}": (pos[v][0] + dx, pos[v][1] + dy) for v in block}

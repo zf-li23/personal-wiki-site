@@ -1,4 +1,4 @@
-"""Acid-catalysed depurination of 2'-deoxyguanosine. With N7 of guanine protonated (or alkylated),
+"""Acid-catalyzed depurination of 2'-deoxyguanosine. With N7 of guanine protonated (or alkylated),
 the base is a good leaving group: the lone pair of the ring oxygen O4' pushes it out, the
 C1'-N9 bond breaks, and a furanosyl oxocarbenium ion and free guanine are formed. Water adds to the
 oxocarbenium ion, leaving an abasic site. Without a 2'-OH, which would destabilize the cation by

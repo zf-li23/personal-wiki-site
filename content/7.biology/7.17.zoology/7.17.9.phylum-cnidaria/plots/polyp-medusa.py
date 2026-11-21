@@ -1,5 +1,5 @@
-# Polyp and medusa in longitudinal section, germ layers coloured (epidermis = ectoderm, gastrodermis =
-# endoderm, mesoglea). Drawn natively: each layer is a band between two offsets of a smooth centre line.
+# Polyp and medusa in longitudinal section, germ layers colored (epidermis = ectoderm, gastrodermis =
+# endoderm, mesoglea). Drawn natively: each layer is a band between two offsets of a smooth center line.
 import numpy as np
 import wikibio as bio
 from wikibio import zoology as zoo
@@ -50,7 +50,7 @@ bio.panel(ax, "A", (0.2, 11.4))
 cx = 5.5
 wall = spline([(cx + 0.35, 9.0), (cx + 0.9, 8.5), (cx + 1.5, 7.8), (cx + 1.5, 4.0), (cx + 1.5, 1.6), (cx + 0.9, 1.0),
                (cx - 0.9, 1.0), (cx - 1.5, 1.6), (cx - 1.5, 4.0), (cx - 1.5, 7.8), (cx - 0.9, 8.5), (cx - 0.35, 9.0)])
-# outward normal: the centre line runs clockwise (right side down), so the left normal points inward
+# outward normal: the center line runs clockwise (right side down), so the left normal points inward
 for sgn, x0 in ((1, cx + 1.25), (-1, cx - 1.25)):
     t = spline([(x0, 8.1), (x0 + sgn * 0.9, 9.0), (x0 + sgn * 1.9, 9.9), (x0 + sgn * 3.0, 10.4)])
     tube(ax, t, 0.24, z=3)
@@ -70,7 +70,7 @@ bio.label(ax, (cx, 0.15), "Polyp", size="title", bold=True)
 
 # ---------------------------------------------------------------- B: medusa
 bio.panel(ax, "B", (11.4, 11.4))
-mx, yb = 17.6, 6.0  # bell centre and margin height
+mx, yb = 17.6, 6.0  # bell center and margin height
 ang = np.linspace(np.pi, 0, 240)
 ex = np.c_[mx + 4.6 * np.cos(ang), yb + 3.6 * np.sin(ang)]   # exumbrella, left to right
 sub = np.c_[mx + 4.2 * np.cos(ang), yb + 1.5 * np.sin(ang)]  # subumbrella

@@ -2,7 +2,7 @@
 Formula 20.5.1). Cells start packed in a band at the left of a channel (x < 0) and move at constant speed in the
 direction of their polarity, which turns at random (rotational diffusion) and, with CIL, is repolarized away from
 every cell they touch; soft repulsion prevents overlap and a weak co-attraction (as by C3a) keeps the group
-together. (A) Positions after the same time with CIL (green) and without it (grey, random polarity only). (B) The
+together. (A) Positions after the same time with CIL (green) and without it (gray, random polarity only). (B) The
 leading edge (95th percentile of x) moves steadily with CIL and only diffusively without: contact gives the cells
 at the edge, whose free side faces open space, a net outward polarity, so the group spreads as a collective."""
 import numpy as np

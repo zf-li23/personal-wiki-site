@@ -1,5 +1,5 @@
 """Diffusion to capture. A: steady-state concentration c(r)/c0 = 1 - a/r around a perfectly
-absorbing sphere of radius a (cross-section through the centre); the flux into the sphere is
+absorbing sphere of radius a (cross-section through the center); the flux into the sphere is
 J = 4 pi D a c0. B: probability that a molecule released at distance r0 is captured before it
 wanders beyond R = 50a: walk-on-spheres Monte Carlo (dots, 4000 molecules per point) against the
 exact (1/r0 - 1/R)/(1/a - 1/R), close to a/r0. C: largest radius of a spherical cell that can be

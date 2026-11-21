@@ -46,7 +46,7 @@ for _, g in gens:
     F = x.var(axis=1, ddof=1) / y.var(axis=1, ddof=1)
     p = 2 * np.minimum(stats.f.sf(F, n - 1, n - 1), stats.f.cdf(F, n - 1, n - 1))
     fr.append((p < 0.05).mean())
-    # Levene (Brown-Forsythe, median-centred) = one-way ANOVA on absolute deviations from the median
+    # Levene (Brown-Forsythe, median-centered) = one-way ANOVA on absolute deviations from the median
     zx = np.abs(x - np.median(x, axis=1, keepdims=True))
     zy = np.abs(y - np.median(y, axis=1, keepdims=True))
     lr.append((stats.ttest_ind(zx, zy, axis=1).pvalue < 0.05).mean())

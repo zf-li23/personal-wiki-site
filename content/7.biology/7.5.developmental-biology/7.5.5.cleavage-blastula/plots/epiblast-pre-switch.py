@@ -1,7 +1,7 @@
 """A model of the second lineage decision of the mouse blastocyst: epiblast (Nanog high) versus primitive
 endoderm (Gata6 high). Each inner cell carries a toggle switch, Nanog and Gata6 repressing each other; Nanog
-cells secrete FGF4, which acts on their neighbours through FGFR and ERK, favouring Gata6 and repressing
-Nanog. A: the network. B: the inner cell mass after the decision (positions of 26 cells; neighbours within
+cells secrete FGF4, which acts on their neighbors through FGFR and ERK, favoring Gata6 and repressing
+Nanog. A: the network. B: the inner cell mass after the decision (positions of 26 cells; neighbors within
 contact distance exchange FGF4): a salt-and-pepper mixture. C: Nanog and Gata6 in every cell over time;
 the co-expressing state resolves into two classes. D: the fraction of primitive endoderm as a function of
 FGF4 added to the medium, for wild-type ICMs and for ICMs that make no FGF4 (Fgf4 null): without FGF4 all

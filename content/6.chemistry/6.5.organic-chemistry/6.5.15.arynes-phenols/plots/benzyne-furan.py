@@ -9,7 +9,7 @@ FU = "[O:7]1[CH:8]=[CH:9][CH:10]=[CH:11]1"
 
 
 def facing(smiles, ks, ring, angle):
-    """Rotation that makes the midpoint of atoms ks point in direction ``angle`` from the ring centre."""
+    """Rotation that makes the midpoint of atoms ks point in direction ``angle`` from the ring center."""
     m = Scheme().molecule(smiles)  # layout only
     v = np.mean([m.xy(k) for k in ks], axis=0) - ring_centre(m, ring)
     return angle - np.degrees(np.arctan2(v[1], v[0]))

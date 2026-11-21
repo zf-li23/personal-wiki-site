@@ -7,7 +7,7 @@ isotropic friction, the dissipation principle δ(dT/dt + Φ/2) = 0 gives overdam
 the energy gradient. Shortening the preferred apical length of five cells at the vegetal pole to a quarter (apical
 constriction) while their basal surfaces relax (preferred length 1.3 times) turns them into wedges, and the sheet bends inwards: the outer surface dimples and a pit about one cell
 height deep forms (deeper invagination needs further forces, as in real embryos). Left: snapshots (the five constricting cells
-coloured); right: the depth of the pit and the apical width of the constricting cells over time."""
+colored); right: the depth of the pit and the apical width of the constricting cells over time."""
 import numpy as np
 import wikibio as bio
 from wikibio import charts

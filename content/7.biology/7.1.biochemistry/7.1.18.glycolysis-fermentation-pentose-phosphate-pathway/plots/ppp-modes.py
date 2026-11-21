@@ -1,7 +1,7 @@
 """Four modes of the pentose phosphate pathway (after Berg et al.). Nodes: glucose 6-phosphate,
 ribulose 5-phosphate (oxidative phase: 2 NADPH + CO2), ribose 5-phosphate, fructose 6-phosphate +
 glyceraldehyde 3-phosphate (nonoxidative phase, reversible) and pyruvate (glycolysis). Active routes
-coloured, inactive ones dashed gray."""
+colored, inactive ones dashed gray."""
 
 import wikibio as bio
 

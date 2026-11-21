@@ -6,7 +6,7 @@ XBP1s is a transcription factor; IRE1 also degrades ER-bound mRNAs (RIDD). PERK 
 which lowers global translation (less load) while ATF4 is translated; ATF4 induces CHOP and GADD34, which
 dephosphorylates eIF2alpha (negative feedback). ATF6 travels to the Golgi, where S1P and S2P release ATF6(N).
 In the nucleus the three transcription factors induce chaperones (BiP), ERAD components, lipid synthesis and
-ER expansion (adaptation); prolonged signalling through CHOP and other routes leads to apoptosis.
+ER expansion (adaptation); prolonged signaling through CHOP and other routes leads to apoptosis.
 """
 
 from matplotlib.patches import FancyBboxPatch

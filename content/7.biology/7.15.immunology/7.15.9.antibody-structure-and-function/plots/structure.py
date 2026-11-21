@@ -18,7 +18,7 @@ fig, ax = bio.canvas(21.0, 10.0)
 bio.panel(ax, "A", (0.1, 9.8))
 bio.label(ax, (5.0, 9.65), "IgG", size="title", bold=True)
 W, Hh = 1.05, 1.05
-HV, LV = "antibody", "protein"      # heavy chain colour, light chain colour (palette tokens)
+HV, LV = "antibody", "protein"      # heavy chain color, light chain color (palette tokens)
 xs_arm = {"L": (3.2, 1.95), "R": (6.8, 8.05)}   # (heavy, light) column of each Fab arm
 for side, (xh, xl) in xs_arm.items():
     s = -1 if side == "L" else 1
@@ -72,7 +72,7 @@ ax.add_patch(Ellipse((12.2, yA - 0.28), 2.1, 0.95, facecolor="none", edgecolor=P
 bio.label(ax, (11.0, yA), "IgA", size="normal", bold=True)
 bio.label(ax, (13.5, yA + 0.25), "secretory IgA: dimer + J chain", size="tiny", ha="left", color=P.muted())
 bio.label(ax, (13.5, yA - 0.15), "+ secretory component (mucosa)", size="tiny", ha="left", color=P.muted())
-# IgM pentamer: five antibodies radiating from the J chain, stems towards the centre
+# IgM pentamer: five antibodies radiating from the J chain, stems towards the center
 cx, cy = 12.7, 1.75
 for k in range(5):
     th = 72 * k

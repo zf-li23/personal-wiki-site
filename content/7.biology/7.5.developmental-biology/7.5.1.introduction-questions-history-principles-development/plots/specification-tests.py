@@ -2,7 +2,7 @@
 
 Top row: the eye region of an early gastrula (marked) forms eye tissue when cultured in a neutral medium,
 so it is already specified; but grafted into the trunk of a neurula, beside the somites, it forms somite
-tissue like its neighbours, so it is not yet determined. Bottom row: the same region taken from a
+tissue like its neighbors, so it is not yet determined. Bottom row: the same region taken from a
 neurula forms eye-like tissue even in the trunk: it is now determined. The isolation test asks whether a
 tissue has a fate of its own; the heterotopic graft asks whether that fate can still be changed.
 """

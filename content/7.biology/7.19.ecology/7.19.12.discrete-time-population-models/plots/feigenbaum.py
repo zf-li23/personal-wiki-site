@@ -2,7 +2,7 @@
 
 A: at the accumulation point R_inf of the logistic map f(x) = R x (1 - x) (extrapolated from the superstable
 parameters R_n, which satisfy f^(2^n)(1/2) = 1/2 and are found by Newton's method), the iterates
-f^(2^n), centred at the critical point 1/2 and rescaled so that their value there is 1,
+f^(2^n), centered at the critical point 1/2 and rescaled so that their value there is 1,
 G_n(y) = [f^(2^n)(1/2 + s_n y) - 1/2] / s_n with s_n = f^(2^n)(1/2) - 1/2, for n = 0..4,
 converge to the universal function g of the Feigenbaum-Cvitanovic equation g(y) = alpha g(g(y/alpha)),
 g(0) = 1, solved here with an even polynomial of degree 16 (collocation at 8 points, Newton iteration),

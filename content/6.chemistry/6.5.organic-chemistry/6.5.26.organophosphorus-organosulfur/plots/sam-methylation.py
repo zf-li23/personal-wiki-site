@@ -1,4 +1,4 @@
-"""Methyl transfer from S-adenosylmethionine (SAM), as catalysed by catechol O-methyltransferase
+"""Methyl transfer from S-adenosylmethionine (SAM), as catalyzed by catechol O-methyltransferase
 (COMT). SAM is a sulfonium salt: Ado = 5'-deoxyadenosyl, R = the CH2CH2CH(NH3+)CO2- chain of
 methionine. The phenoxide oxygen of dopamine (bound to Mg2+ in the enzyme, not shown) attacks the
 methyl carbon from the side opposite to sulfur in an SN2 reaction; the neutral thioether
@@ -10,7 +10,7 @@ import math
 
 
 def facing(smiles, k, angle):
-    """Rotation that makes atom k point in direction ``angle`` from the centre of the drawing."""
+    """Rotation that makes atom k point in direction ``angle`` from the center of the drawing."""
     m = Scheme().molecule(smiles)
     v = m.xy(k) - m.coords.mean(axis=0)
     return angle - math.degrees(math.atan2(v[1], v[0]))

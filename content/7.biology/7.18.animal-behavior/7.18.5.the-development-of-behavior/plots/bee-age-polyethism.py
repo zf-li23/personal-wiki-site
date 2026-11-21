@@ -1,6 +1,6 @@
 """Age polyethism in honey bees: an activator-inhibitor model (after Huang and Robinson 1992).
 
-Each worker has a maturation variable x (think of juvenile hormone titre) that rises at an individual rate r_i
+Each worker has a maturation variable x (think of juvenile hormone titer) that rises at an individual rate r_i
 and is slowed by contact with foragers: dx/dt = r_i - c F, with F the fraction of workers that are foragers
 (transmitted, e.g., by ethyl oleate). A worker starts foraging when x reaches 1. Nurses die at 0.01 per day,
 foragers at 0.1 per day; 60 workers emerge per day. Illustrative parameters.

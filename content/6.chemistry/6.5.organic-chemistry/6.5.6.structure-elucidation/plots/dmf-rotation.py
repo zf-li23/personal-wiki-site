@@ -1,5 +1,5 @@
 """Why the two methyl groups of N,N-dimethylformamide give two 1H NMR signals at room temperature.
-The nitrogen lone pair is delocalised into the carbonyl group, so the C-N bond has partial double-bond
+The nitrogen lone pair is delocalized into the carbonyl group, so the C-N bond has partial double-bond
 character and the molecule is planar; one methyl group is cis to oxygen and the other trans. Rotation
 about C-N exchanges them, but its barrier (about 87 kJ/mol) makes the exchange slow on the NMR time
 scale until the sample is heated well above 100 C."""

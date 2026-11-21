@@ -1,5 +1,5 @@
 # A "property map" of the 20 standard amino acids: residue volume in proteins (Zamyatnin, 1972) against the
-# Kyte-Doolittle hydropathy index (1982). Colours: the classes used for alignments (hydrophobic, polar,
+# Kyte-Doolittle hydropathy index (1982). Colors: the classes used for alignments (hydrophobic, polar,
 # positive, negative); squares mark the aromatic residues. Residues close together on the map are the ones
 # most often exchanged by conservative substitutions during evolution. D, N, E, Q and H are displaced slightly
 # (by less than 0.4 index units) so that their symbols do not overlap.

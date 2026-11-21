@@ -1,8 +1,8 @@
-"""Cossee-Arlman mechanism of Ziegler-Natta chain growth ([Ti] = the titanium centre on the TiCl3
+"""Cossee-Arlman mechanism of Ziegler-Natta chain growth ([Ti] = the titanium center on the TiCl3
 surface or a cationic metallocene, P = the growing polymer chain, the open square = vacant site).
 Left: ethylene binds at the vacant site cis to the Ti-P bond (d0 titanium cannot back-bond, so the
 complex is weak and inserts at once). Middle: the chain migrates with the Ti-P electron pair to
-the far alkene carbon while the pi electrons bond the near carbon to titanium (four-centre
+the far alkene carbon while the pi electrons bond the near carbon to titanium (four-center
 transition state). Right: the chain is two carbons longer and the vacant site has moved to where
 the chain was, ready for the next monomer."""
 

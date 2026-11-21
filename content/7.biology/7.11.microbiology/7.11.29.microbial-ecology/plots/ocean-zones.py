@@ -4,7 +4,7 @@ A: schematic depth zones (not to scale: each zone is given equal height): epipel
 mesopelagic (twilight, 200-1000 m), bathypelagic (1000-4000 m), abyssopelagic (4000-6000 m) and hadal
 (trenches, to about 11 000 m); hydrostatic pressure rises by about 0.1 MPa (1 atm) per 10 m; typical light,
 temperature and characteristic microbial groups of each zone.
-B: cell numbers per millilitre of Bacteria and Archaea at six depths in the North Pacific, counted by FISH
+B: cell numbers per milliliter of Bacteria and Archaea at six depths in the North Pacific, counted by FISH
 (data from Madigan et al. (2019), after Karner et al. (2001)); the archaeal fraction rises from about 10% at
 the surface to about half in the deep water.
 """

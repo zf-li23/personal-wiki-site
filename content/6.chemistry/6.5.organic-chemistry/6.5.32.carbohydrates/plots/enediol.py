@@ -1,4 +1,4 @@
-"""Base-catalysed isomerization of an aldose into a ketose through the enediol (the Lobry de
+"""Base-catalyzed isomerization of an aldose into a ketose through the enediol (the Lobry de
 Bruyn-van Ekenstein rearrangement), shown for D-glyceraldehyde and dihydroxyacetone, the
 smallest aldose-ketose pair. Top: hydroxide removes the alpha hydrogen of C2, which is acidic
 because it lies next to the carbonyl group; the enolate is protonated on oxygen, giving the

@@ -1,6 +1,6 @@
 """Evolutionary series of thallus construction in brown algae (schematic). A: heterotrichous uniseriate
 filament (Ectocarpus type), prostrate part on the substrate and branched erect part; band-shaped plastids. B:
-pseudoparenchyma: branched filaments pressed together, colourless medullary filaments in the centre and
+pseudoparenchyma: branched filaments pressed together, colorless medullary filaments in the center and
 assimilatory laterals at the surface. C: parenchymatous thallus with holdfast, stipe and blade (kelp type);
 the meristem lies at the junction of stipe and blade (intercalary growth). D: cross-section of a kelp blade:
 mucilage layer, epidermis (meristoderm) with plastids, cortex of large cells with mucilage ducts, and medulla

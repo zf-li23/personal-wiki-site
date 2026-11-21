@@ -20,7 +20,7 @@ s.text((6.0, -2.0), "benzyl radical: the odd electron on CH2, ortho and para car
 s.draw()
 
 def facing(smiles, k, angle, **kw):
-    """Rotation that points atom k of the molecule in direction ``angle`` from its centre."""
+    """Rotation that points atom k of the molecule in direction ``angle`` from its center."""
     m = Scheme().molecule(smiles, **kw)  # layout only
     v = m.xy(k) - np.mean(m.coords, axis=0)
     return angle - np.degrees(np.arctan2(v[1], v[0]))

@@ -2,7 +2,7 @@
 methyl iodide by SN2-type oxidative addition (the turnover-limiting step, Rh(I) to Rh(III)); the
 methyl migrates to an adjacent CO (migratory insertion), giving an acyl complex with a vacant site
 that is filled by CO; reductive elimination of acetyl iodide returns Rh(I). Outside the cycle HI
-converts methanol into methyl iodide and water hydrolyses acetyl iodide to acetic acid,
+converts methanol into methyl iodide and water hydrolyzes acetyl iodide to acetic acid,
 regenerating HI."""
 
 exec(open("cycle.txt").read())

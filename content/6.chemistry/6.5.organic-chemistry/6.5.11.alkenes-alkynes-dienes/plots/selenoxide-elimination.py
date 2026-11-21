@@ -1,5 +1,5 @@
 """Selenoxide syn elimination. After the PhSe group has been added and oxidized (H2O2 or mCPBA), the
-selenoxide oxygen takes a hydrogen on the neighbouring carbon through a five-membered cyclic
+selenoxide oxygen takes a hydrogen on the neighboring carbon through a five-membered cyclic
 transition state: the C-H bond becomes the new pi bond and the C-Se bond breaks toward selenium.
 The H and the Se group leave from the same side (syn), at room temperature; PhSeOH is released (in the diastereomer drawn, the two methyl groups end up cis)."""
 

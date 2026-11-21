@@ -32,7 +32,7 @@ def epithelium(x0, lumen_text, blood_text, microvilli):
             if k in (2, 6):
                 continue
             ax.add_patch(Rectangle((cx - 0.17, ytop + MH), 0.34, 0.9, facecolor=P.fill("cytoplasm"), edgecolor=P.edge("lipid_head"), lw=0.9, zorder=2))
-    # neighbouring cells and tight junctions
+    # neighboring cells and tight junctions
     for side in (-1, 1):
         xe = x0 + 0.5 if side < 0 else x0 + w - 0.5
         ax.add_patch(Rectangle((xe + side * 0.45 - (0.35 if side < 0 else 0), ybot), 0.35, ytop - ybot,

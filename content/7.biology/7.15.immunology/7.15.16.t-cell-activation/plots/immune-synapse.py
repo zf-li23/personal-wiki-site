@@ -26,10 +26,10 @@ bio.label(ax, (10.0, y_apc - 0.75), "Antigen-presenting cell", size="small", bol
 bio.label(ax, (10.0, y_far + 0.95), "CD4⁺ T cell", size="small", bold=True)
 
 a0 = y_apc + S          # APC outer surface (anchor)
-t_near = y_near - S     # T-cell outer surface in the centre
+t_near = y_near - S     # T-cell outer surface in the center
 t_far = y_far - S
 
-# centre: TCR-pMHC II + CD4
+# center: TCR-pMHC II + CD4
 m = immuno.mhc_ii(ax, 10.6, a0)
 immuno.tcr(ax, m["center_x"], t_near, up=-1, cd3_side="left")
 immuno.cd4(ax, 11.6, t_near, up=-1, reach=m["beta2"][1] - 0.1, labels=False)
@@ -46,7 +46,7 @@ immuno.domain(ax, (x, a0 + 0.14 + 1.55), 0.5, 0.62, "receptor")
 bio.label(ax, (x - 0.4, a0 + 0.75), "CD80", size="tiny", ha="right")
 bio.label(ax, (x - 0.4, a0 + 1.9), "CD28", size="tiny", ha="right")
 
-# pSMAC: LFA-1 - ICAM-1 on both sides of the centre
+# pSMAC: LFA-1 - ICAM-1 on both sides of the center
 for x in (4.0, 16.0):
     for k in range(5):
         immuno.domain(ax, (x, a0 + 0.14 + 0.28 + k * 0.56), 0.42, 0.54, "enzyme")

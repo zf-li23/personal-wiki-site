@@ -1,9 +1,9 @@
-# From the follicle cells to the nucleus: the dorsal-ventral signalling cascade of the Drosophila egg (left) and the
-# homologous Toll-like receptor pathway of mammalian innate immunity (right). Gurken-EGFR signalling represses pipe
+# From the follicle cells to the nucleus: the dorsal-ventral signaling cascade of the Drosophila egg (left) and the
+# homologous Toll-like receptor pathway of mammalian innate immunity (right). Gurken-EGFR signaling represses pipe
 # in dorsal follicle cells, so Pipe sulfates vitelline-membrane proteins only ventrally; the sulfated proteins
 # localize a protease cascade (Nudel, Gastrulation defective, Snake, Easter) in the perivitelline space that cleaves
 # Spatzle; Spatzle activates Toll; Toll recruits MyD88, Tube and the kinase Pelle, Cactus is phosphorylated and
-# degraded, and Dorsal enters ventral nuclei. Grey boxes on the right are the mammalian counterparts.
+# degraded, and Dorsal enters ventral nuclei. Gray boxes on the right are the mammalian counterparts.
 import wikibio as bio
 
 fig, ax = bio.canvas(21.0, 15.0)
@@ -46,7 +46,7 @@ bio.arrow(ax, (x1, 3.1), (x1, 1.8), kind="process")
 node((x2, 1.4), "twist, snail on; dpp, zen off", "dna2", w=5.0, italic=False)
 bio.arrow(ax, (x1 + 2.05, 1.4), (x2 - 2.55, 1.4), kind="activation")
 
-# mammalian homologues
+# mammalian homologs
 X = 16.8
 bio.label(ax, (X, 14.4), "Mammalian innate immunity", size="small", bold=True)
 pairs = [(7.3, "microbial ligand (e.g. LPS)"), (5.3, "Toll-like receptor"), (4.4, "MyD88 · IRAK"), (3.5, "IκB · NF-κB"),

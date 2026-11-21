@@ -18,7 +18,7 @@ C, R = (5.6, 5.2), 3.6
 
 
 def sector(theta0, theta1, r0, r1, token, light=False):
-    """A region between two angles (deg, measured from the dorsal side, anticlockwise = towards animal) and radii."""
+    """A region between two angles (deg, measured from the dorsal side, counterclockwise = towards animal) and radii."""
     th = np.radians(np.linspace(theta0, theta1, 60))
     outer = np.c_[C[0] + r1 * np.cos(th), C[1] + r1 * np.sin(th)]
     inner = np.c_[C[0] + r0 * np.cos(th[::-1]), C[1] + r0 * np.sin(th[::-1])]
@@ -27,7 +27,7 @@ def sector(theta0, theta1, r0, r1, token, light=False):
 
 
 def band(y0, y1, x_from, token, light=False):
-    """The part of the disc between heights y0 and y1 (relative to the centre) and right of x_from."""
+    """The part of the disc between heights y0 and y1 (relative to the center) and right of x_from."""
     ys = np.linspace(y0, y1, 80)
     xr = np.sqrt(np.clip(R**2 - ys**2, 0, None))
     keep = xr > x_from

@@ -1,6 +1,6 @@
 # Energies of molecular biology in units of the thermal energy kB T (310 K: 1 kB T = 4.28 pN nm = 2.58 kJ/mol).
 # A: typical ranges (order of magnitude): a van der Waals contact, a hydrogen bond or salt bridge in water,
-# stacking and pairing of one base pair (nearest-neighbour free energies), unfolding of a small protein,
+# stacking and pairing of one base pair (nearest-neighbor free energies), unfolding of a small protein,
 # ATP hydrolysis under cellular conditions, sequence-specific binding of a transcription factor to its site
 # (K_D = 10^-8 to 10^-12 M, relative to the 1 M standard state), a 500-nm photon and a C-C covalent bond.
 # B: the Boltzmann factor exp(-E / kB T): the relative probability of a state lying E above another.

@@ -1,6 +1,6 @@
 # The handover from RNA to DNA: the two chemical differences, the biosynthetic direction and the order of events.
 # A: the 2'-OH attacks the adjacent phosphodiester in line (the reaction the small self-cleaving ribozymes
-#    catalyse), so RNA is 1e5-1e6 times more labile than DNA; hydrolytic deamination of cytosine gives uracil,
+#    catalyze), so RNA is 1e5-1e6 times more labile than DNA; hydrolytic deamination of cytosine gives uracil,
 #    which a thymine-containing genome can recognize as damage and excise.
 # B: every dNDP is made from an NDP by ribonucleotide reductase and dTMP from dUMP by thymidylate synthase,
 #    so DNA precursors are derivatives of RNA precursors and never the reverse.
@@ -92,7 +92,7 @@ stages = [
 for name, store, cat, token, y in stages:
     bio.box(ax, (16.3, y), 4.4, 1.2, token=token, text=name, size="small", radius=0.12, zorder=10)
     bio.label(ax, (19.0, y + 0.3), f"stores: {store}", size="tiny", color=P.ink(), ha="left")
-    bio.label(ax, (19.0, y - 0.3), f"catalyses: {cat}", size="tiny", color=P.muted(), ha="left")
+    bio.label(ax, (19.0, y - 0.3), f"catalyzes: {cat}", size="tiny", color=P.muted(), ha="left")
 for y0, y1 in ((11.4, 9.2), (9.2, 7.0), (7.0, 4.8)):
     bio.arrow(ax, (16.3, y0 - 0.62), (16.3, y1 + 0.62), kind="process")
 bio.label(ax, (15.1, 10.3), "peptide bond\nformation", size="tiny", color=P.muted(), ha="right")

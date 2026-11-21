@@ -1,7 +1,7 @@
-"""Acid-catalysed hydrolysis of a nitrile (acetonitrile). The nitrile is protonated on nitrogen,
+"""Acid-catalyzed hydrolysis of a nitrile (acetonitrile). The nitrile is protonated on nitrogen,
 water adds to the electrophilic carbon, and loss of a proton gives the imidic acid, the enol-like
 tautomer of the amide. Tautomerization gives acetamide, which under the same conditions is
-hydrolysed further to acetic acid and ammonium."""
+hydrolyzed further to acetic acid and ammonium."""
 
 from wikichem import Scheme
 

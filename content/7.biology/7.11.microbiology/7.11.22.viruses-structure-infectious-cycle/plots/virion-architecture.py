@@ -1,12 +1,12 @@
 # Virion architecture: the four structural classes.
 # A helical rod (tobacco mosaic virus, drawn as a stack of capsomere discs around a helical RNA);
 # B icosahedral shells with triangulation numbers T = 1, 3 and 4, built as geodesic arrangements of
-#   capsomeres (12 pentamers at the icosahedral vertices, 10(T-1) hexamers at face centres or edge
+#   capsomeres (12 pentamers at the icosahedral vertices, 10(T-1) hexamers at face centers or edge
 #   midpoints) and projected orthographically, with 60T subunits in all;
-# C a complex virion (phage T4: prolate head, contractile tail, baseplate and fibres);
-# D an enveloped virion (influenza A: lipid bilayer with haemagglutinin and neuraminidase spikes,
+# C a complex virion (phage T4: prolate head, contractile tail, baseplate and fibers);
+# D an enveloped virion (influenza A: lipid bilayer with hemagglutinin and neuraminidase spikes,
 #   M2 channels, an M1 layer and eight helical ribonucleoprotein segments).
-# Sizes in nanometres are given for each; the drawings are not to a common scale.
+# Sizes in nanometers are given for each; the drawings are not to a common scale.
 import itertools
 import math
 
@@ -164,7 +164,7 @@ for a in (28, 150, 255):  # M2 ion channels
     t = math.radians(a)
     ax.add_patch(Circle((cx + r * math.cos(t), cy + r * math.sin(t)), 0.17, facecolor=P.fill("channel"),
                         edgecolor=P.edge("channel"), lw=0.6, zorder=8))
-bio.callout(ax, (cx - 1.75, cy - 1.95), (29.3, 1.2), "haemagglutinin (trimer):\nreceptor binding and fusion")
+bio.callout(ax, (cx - 1.75, cy - 1.95), (29.3, 1.2), "hemagglutinin (trimer):\nreceptor binding and fusion")
 bio.callout(ax, (cx + 1.6, cy + 2.55), (32.6, 9.6), "neuraminidase")
 bio.callout(ax, (cx + r * math.cos(math.radians(28)), cy + r * math.sin(math.radians(28))), (33.6, 7.4), "M2 channel")
 bio.callout(ax, (cx + 2.3, cy - 1.1), (33.0, 4.0), "host lipid bilayer\nand the M1 layer")

@@ -2,7 +2,7 @@
 # Prum (1999), Chuong et al. (2013) and Kardong (2019). Feather: placode, bud, follicle with collar, growing
 # feather with barb ridges around the dermal pulp. Hair: placode, hair peg, bulbous peg around the dermal papilla,
 # mature follicle with shaft, sebaceous gland and arrector pili muscle. Epidermis and its keratinized products
-# in one colour, dermis and dermal condensation/papilla in another.
+# in one color, dermis and dermal condensation/papilla in another.
 import numpy as np
 import wikibio as bio
 

@@ -1,7 +1,7 @@
 # Schematic model of the RNA "walking" cross-linking experiment (Nudler et al. 1997) that measured the length
 # of the RNA-DNA hybrid. A reactive UMP analog U* placed in the RNA is cross-linked to the template DNA only
 # while it is base paired in the hybrid. With the end of the hybrid at about 8-9 nt from the RNA 3' end,
-# smoothed by fraying of the terminal base pair (logistic step centred at 8.5 nt, width 0.6 nt), the DNA
+# smoothed by fraying of the terminal base pair (logistic step centered at 8.5 nt, width 0.6 nt), the DNA
 # signal is high up to 8 nt and falls to background beyond 10 nt; cross-linking to protein (beta and beta')
 # continues as the RNA runs through the exit channel (slow decline over about 20 nt).
 import numpy as np

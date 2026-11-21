@@ -1,7 +1,7 @@
 """Counts are overdispersed (airway RNA-seq, Himes et al. 2014, GEO GSE52778; Bioconductor airway;
 a random sample of 8000 of the 22369 genes with at least 10 reads). A: mean and variance of the
-normalized counts over the four untreated samples, log axes. Grey line: the Poisson variance (= mean);
-coloured curve: the negative binomial variance mu + alpha(mu) mu^2 with the dispersion trend
+normalized counts over the four untreated samples, log axes. Gray line: the Poisson variance (= mean);
+colored curve: the negative binomial variance mu + alpha(mu) mu^2 with the dispersion trend
 alpha(mu) = 0.0101 + 2.583/mu fitted by pydeseq2 (design ~ cell + dex). The between-donor differences in
 the untreated samples add to the scatter. B: dispersion estimates against the mean: gene-wise maximum
 likelihood (Cox-Reid adjusted) estimates, the fitted trend, and the final values after shrinkage

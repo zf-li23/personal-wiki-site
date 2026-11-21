@@ -10,7 +10,7 @@ Dimethylsulfoniopropionate (DMSP) made by marine algae is cleaved to dimethyl su
 natural biogenic sulfur flux to the atmosphere.
 B: pyrite oxidation. Initiation by O2 (1) releases Fe2+ and acid; at pH below about 3.5 the abiotic oxidation
 of Fe2+ by O2 is very slow, and acidophilic iron oxidizers (Acidithiobacillus ferrooxidans, Leptospirillum,
-Ferroplasma) catalyse it (2); Fe3+ then oxidizes pyrite much faster than O2 does (3), regenerating Fe2+,
+Ferroplasma) catalyze it (2); Fe3+ then oxidizes pyrite much faster than O2 does (3), regenerating Fe2+,
 so that the cycle of reactions 2 and 3 propagates the dissolution and produces 16 H+ per FeS2.
 """
 import wikibio as bio

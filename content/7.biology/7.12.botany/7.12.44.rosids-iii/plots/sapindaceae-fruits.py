@@ -1,5 +1,5 @@
 # Fruits of Sapindaceae s.l. A: Acer, a double samara (schizocarp of two winged mericarps).
-# B: Dipteronia, each mericarp with a circular wing and the seed in the centre. C: Koelreuteria,
+# B: Dipteronia, each mericarp with a circular wing and the seed in the center. C: Koelreuteria,
 # an inflated, papery, three-valved capsule (one valve cut away to show the seeds). D: Litchi in
 # section: warty pericarp, the fleshy white aril around the seed.
 import numpy as np

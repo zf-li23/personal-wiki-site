@@ -2,9 +2,9 @@
 Cyclobutane: puckered "butterfly" (atoms alternately 0.13 A above and below the mean plane). Cyclopentane:
 envelope (one carbon out of the plane of the other four) and half-chair (two adjacent carbons on opposite
 sides of the plane of the other three), both from the Cremer-Pople puckering formula with amplitude
-0.43 A; the two interconvert by pseudorotation. Cyclohexene: half-chair from an MMFF-optimised
+0.43 A; the two interconvert by pseudorotation. Cyclohexene: half-chair from an MMFF-optimized
 RDKit structure, C1, C2, C3 and C6 coplanar, C4 and C5 on opposite sides. Red: above the reference
-plane, blue: below, grey: in it."""
+plane, blue: below, gray: in it."""
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ def pucker5(phase, q=0.43):
 
 
 def colours(X, ref):
-    """Colour each atom by its side of the plane through the atoms in ref."""
+    """Color each atom by its side of the plane through the atoms in ref."""
     P = X[ref] - X[ref].mean(0)
     n = np.linalg.svd(P)[2][2]
     if n[2] < 0:

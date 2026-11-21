@@ -19,7 +19,7 @@ norm_diff <- function(a, b)
 lin <- predict(glm(w ~ scale(x), family = binomial))   # linearized propensity score
 s_inv <- solve(cov(x_c))
 
-match <- function(dist) {          # greedy 1:1 nearest neighbour without replacement
+match <- function(dist) {          # greedy 1:1 nearest neighbor without replacement
   free <- rep(TRUE, n_c); chosen <- integer(n_t)
   for (i in seq_len(n_t)) {
     d <- dist(i); d[!free] <- Inf

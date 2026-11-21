@@ -1,4 +1,4 @@
-"""Dinoflagellate cell structure (schematic). A: ventral view of an armoured dinokont (Peridinium type): epitheca
+"""Dinoflagellate cell structure (schematic). A: ventral view of an armored dinokont (Peridinium type): epitheca
 and hypotheca made of thecal plates, the girdle (cingulum) round the cell with the ribbon-like transverse
 flagellum, the sulcus on the ventral hypotheca with the longitudinal flagellum trailing behind. B: side view
 showing the plate series (apical, precingular, cingular, postcingular, antapical). C: desmokont (Prorocentrum

@@ -4,7 +4,7 @@ A: ITD versus azimuth for a spherical head of radius a = 8.75 cm, c = 343 m/s:
 Woodworth's high-frequency formula ITD = (a/c)(theta + sin theta) and the low-frequency
 (diffraction) value 3 (a/c) sin theta (Kuhn 1977). Dotted: a 10 microsecond discrimination threshold.
 B: detectors with internal delays d_k compare phase-locked inputs from the two ears; for a tone of
-frequency f the rate is modelled as exp(kappa (cos(2 pi f (ITD - d_k)) - 1)), kappa = 2.
+frequency f the rate is modeled as exp(kappa (cos(2 pi f (ITD - d_k)) - 1)), kappa = 2.
 At 500 Hz each detector has one peak within the physiological range; at 1.5 kHz the period
 (0.67 ms) is shorter than twice the maximal ITD, so peaks repeat and the code becomes ambiguous.
 """

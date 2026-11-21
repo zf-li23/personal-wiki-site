@@ -3,7 +3,7 @@
 Fish: a current source +I at the head (x = +5 cm) and a sink -I at the tail (x = -5 cm) in an
 unbounded uniform medium of conductivity sigma_w, so phi0 = I/(4 pi sigma_w) (1/r_+ - 1/r_-)
 (the real body and skin are ignored). A sphere of radius a = 0.5 cm and conductivity sigma_o
-centred at r_0 acquires an induced dipole; outside it the perturbation is
+centered at r_0 acquires an induced dipole; outside it the perturbation is
   delta phi = chi a^3 E_0 . (r - r_0) / |r - r_0|^3,   chi = (sigma_o - sigma_w)/(sigma_o + 2 sigma_w),
 with E_0 the unperturbed field at r_0 (Rasnow 1996). chi = 1 for a perfect conductor (metal, prey
 tissue is weakly conducting) and -1/2 for an insulator (stone, plastic).
@@ -11,7 +11,7 @@ A: equipotentials of the fish field in the plane of the body (arbitrary units), 
 (2.5, 1.5) cm. B: "electric image" along a line 0.4 cm lateral to the body axis for a
 conductor and an insulator at lateral distance 1.5 cm (sphere at x = 2.5 cm); the image is the
 lateral component of the perturbing field, which sets the change of current through the skin. C: images of a conductor at lateral
-distances 1, 2 and 3 cm, each normalised to its peak: farther objects give weaker and wider images.
+distances 1, 2 and 3 cm, each normalized to its peak: farther objects give weaker and wider images.
 """
 import matplotlib.pyplot as plt
 import numpy as np

@@ -2,7 +2,7 @@
 active-site serine (Enz-CH2-OH) attacks phosphorus while histidine (only its imidazole ring is
 drawn) takes the O-H proton; fluoride leaves (substitution at phosphorus through a
 five-coordinate transition state), so the serine is phosphonylated and the enzyme can no longer
-hydrolyse acetylcholine. Bottom: the oximate of pralidoxime (2-PAM), an alpha-effect nucleophile,
+hydrolyze acetylcholine. Bottom: the oximate of pralidoxime (2-PAM), an alpha-effect nucleophile,
 attacks the same phosphorus and the serine oxygen leaves, regenerating the enzyme; this works
 only before the phosphonyl-enzyme 'ages' by loss of the isopropyl group."""
 

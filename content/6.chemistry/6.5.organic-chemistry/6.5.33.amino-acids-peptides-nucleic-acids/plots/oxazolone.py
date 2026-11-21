@@ -3,7 +3,7 @@ amino acid (here N-acetylalanine with a leaving group X, such as the O-acylisour
 the carbonyl oxygen of the N-acyl group attacks the activated carbonyl carbon and X leaves,
 closing the oxazolone ring. Bottom: the C4-H of the oxazolone is acidic (pKa about 9) because
 its conjugate base is an aromatic oxazol-5-olate; a base removes it and the planar anion is
-reprotonated on either face, so the stereocentre is lost. Amines still open the oxazolone to
+reprotonated on either face, so the stereocenter is lost. Amines still open the oxazolone to
 the peptide, but as a mixture of epimers. Urethane protecting groups (Boc, Fmoc, Cbz) suppress
 this pathway."""
 

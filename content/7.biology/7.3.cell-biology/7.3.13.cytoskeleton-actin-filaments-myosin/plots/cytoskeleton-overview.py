@@ -1,7 +1,7 @@
 """The three filament systems in a crawling fibroblast (schematic, top view) and the three filaments to scale.
 
 A: actin (red) forms the dendritic network of the lamellipodium at the leading edge, bundles in filopodia,
-contractile stress fibres ending in focal adhesions and a thin cortex under the whole membrane; microtubules
+contractile stress fibers ending in focal adhesions and a thin cortex under the whole membrane; microtubules
 (blue) radiate from the centrosome, which sits between the nucleus and the leading edge; intermediate
 filaments (green) form a cage around the nucleus and extend towards the cell periphery.
 B: an actin filament (about 7 nm), a microtubule (25 nm) and an intermediate filament (10 nm), all at the
@@ -79,7 +79,7 @@ for p, nn in zip(q, nrm):
     inner.append(s)
 inner = np.array(inner)
 ax.plot(inner[:, 0], inner[:, 1], color=P.edge("actin"), lw=1.0, zorder=5)
-# stress fibres with focal adhesions
+# stress fibers with focal adhesions
 for a, b in (((2.6, 4.9), (10.6, 2.4)), ((2.6, 5.6), (11.0, 8.6)), ((3.8, 4.5), (12.0, 4.0)), ((4.2, 6.6), (12.2, 6.9))):
     ax.plot([a[0], b[0]], [a[1], b[1]], color=P.edge("actin"), lw=2.2, solid_capstyle="round", zorder=4)
     for e in (a, b):

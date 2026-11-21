@@ -502,7 +502,7 @@ import duckdb
 con = duckdb.connect()
 con.execute(open("schema.sql").read())
 con.execute(open("data.sql").read())
-# One expression profile per gene: log2(TPM + 1) in samples S01..S06, centred
+# One expression profile per gene: log2(TPM + 1) in samples S01..S06, centered
 # on the gene's mean, stored as a fixed-length array (an "embedding").
 con.execute("""
 CREATE TABLE profile AS

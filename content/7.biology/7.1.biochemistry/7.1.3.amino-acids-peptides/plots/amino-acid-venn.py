@@ -1,6 +1,6 @@
 # Taylor-style Venn diagram of amino acid properties (W. R. Taylor, J. Theor. Biol. 119:205, 1986, with the
 # sets of Livingstone and Barton, 1993): three overlapping sets, hydrophobic, polar and small, with each
-# standard amino acid (one-letter code) placed in its region. Letters are coloured by the classes used for
+# standard amino acid (one-letter code) placed in its region. Letters are colored by the classes used for
 # alignments (hydrophobic, polar, positive, negative); the subsets aliphatic, aromatic, tiny and charged are
 # listed on the right.
 import numpy as np

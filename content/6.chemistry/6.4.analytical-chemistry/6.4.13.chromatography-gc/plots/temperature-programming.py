@@ -3,7 +3,7 @@
 illustrative constants (about 4.5 kJ/mol of retention enthalpy per CH2 group), so k grows
 geometrically with the carbon number n and falls with temperature. Isothermal at 80 °C the
 late peaks are broad, low and very slow; at 180 °C the early peaks crowd together near the
-hold-up time; a program of 50 °C + 10 °C/min spaces the homologues almost evenly with
+hold-up time; a program of 50 °C + 10 °C/min spaces the homologs almost evenly with
 similar widths. Elution under the program is found by integrating dz/dt = (L/tM)/(1 + k(T(t)))."""
 
 import numpy as np
@@ -54,7 +54,7 @@ T = np.minimum(50 + 10 * tt, 250) + 273.15
 tr, sig = [], []
 for n in ns:
     kk = k_of(n, T)
-    z = np.cumsum(dt / (tM * (1 + kk)))          # fraction of column length travelled
+    z = np.cumsum(dt / (tM * (1 + kk)))          # fraction of column length traveled
     i = np.searchsorted(z, 1.0)
     tr.append(tt[i])
     sig.append(tM * (1 + kk[i]) / np.sqrt(N))

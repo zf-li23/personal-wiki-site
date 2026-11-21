@@ -1,6 +1,6 @@
 """Streeter-Phelps oxygen sag below an organic effluent (Section 54.2.2).
 
-BOD remaining L and oxygen deficit D = O_sat - O in a river parcel travelling at speed u:
+BOD remaining L and oxygen deficit D = O_sat - O in a river parcel traveling at speed u:
     dL/dt = -k1 L,  dD/dt = k1 L - k2 D,
 k1 = 0.3 per day (deoxygenation), k2 = 0.6 per day (reaeration), u = 20 km per day,
 O_sat = 9 mg/L, initial deficit D0 = 1 mg/L; initial BOD after mixing L0 = 8, 15, 25 mg/L.

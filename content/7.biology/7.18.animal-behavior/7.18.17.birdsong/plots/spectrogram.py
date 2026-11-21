@@ -1,6 +1,6 @@
 """A synthetic song in the style of a white-crowned sparrow, shown as an oscillogram and a spectrogram, in two
 'dialects' that share the introductory whistle and buzz but end in different trills. The sound is synthesized
-(sum of frequency-modulated tones and a noisy buzz) and analysed with a short-time Fourier transform, exactly
+(sum of frequency-modulated tones and a noisy buzz) and analyzed with a short-time Fourier transform, exactly
 as a recording would be."""
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap

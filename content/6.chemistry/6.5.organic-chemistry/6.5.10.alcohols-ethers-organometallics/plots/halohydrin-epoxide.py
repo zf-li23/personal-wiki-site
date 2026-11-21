@@ -1,5 +1,5 @@
 """Intramolecular Williamson reaction: trans-2-chlorocyclohexanol in aqueous NaOH. Hydroxide removes
-the hydroxy proton; the alkoxide, on the face opposite to chlorine, attacks the neighbouring carbon
+the hydroxy proton; the alkoxide, on the face opposite to chlorine, attacks the neighboring carbon
 from the back side and chloride leaves (SN2), giving cyclohexene oxide. In the cis isomer the
 alkoxide and chlorine are on the same face and backside attack is impossible."""
 

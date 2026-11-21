@@ -2,7 +2,7 @@
 # volumetric rate q (mol m^-3 s^-1); O2 enters only by diffusion (coefficient D) from a surface concentration
 # c0. The steady-state reaction-diffusion equation D * Laplacian(c) = q gives
 #     c(r) = c0 - q (R^2 - r^2) / (6 D),
-# so the centre runs out of O2 when R exceeds R_max = sqrt(6 D c0 / q).
+# so the center runs out of O2 when R exceeds R_max = sqrt(6 D c0 / q).
 # Parameters: D = 2e-9 m^2 s^-1 (O2 in water; lower in cytoplasm), c0 = 0.2 mM (air-saturated water, 37 C).
 # Respiration rates: E. coli in fast aerobic growth ~1.7 mol m^-3 s^-1 (about 1e6 O2 per cell per second);
 # a cultured mammalian cell ~0.027 mol m^-3 s^-1 (about 80 amol per cell per second in 3000 um^3).

@@ -1,5 +1,5 @@
 # Resolution of compound eyes and camera eyes (geometric and diffraction limits).
-# Compound eye of radius r with facets of diameter delta: the angle between neighbouring ommatidia is
+# Compound eye of radius r with facets of diameter delta: the angle between neighboring ommatidia is
 # theta_s = delta / r (sampling), and the diffraction blur of one facet lens is theta_d = lambda / delta
 # (prefactor dropped, lambda = 0.5 um). Their sum is smallest at delta_opt = sqrt(lambda r), where
 # theta = 2 sqrt(lambda / r).
@@ -7,7 +7,7 @@
 #    honeybee facets).
 # B: best angular resolution against eye size: compound eye, theta = 2 sqrt(lambda / r); camera eye with
 #    pupil diameter D, Rayleigh limit theta = 1.22 lambda / D. The human eye (D = 2-3 mm) reaches about one
-#    arc minute; a compound eye would need a radius of metres to do the same.
+#    arc minute; a compound eye would need a radius of meters to do the same.
 import matplotlib.pyplot as plt
 import numpy as np
 

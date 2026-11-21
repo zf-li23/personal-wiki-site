@@ -1,6 +1,6 @@
 """Kolbe-Schmitt carboxylation of sodium phenoxide. The ortho carbon of the phenoxide attacks the
 carbon of CO2 (the oxygen lone pair pushes into the ring; Na+ holds the phenoxide oxygen and CO2
-together, favouring ortho attack); a proton shift restores the aromatic ring and gives salicylate
+together, favoring ortho attack); a proton shift restores the aromatic ring and gives salicylate
 (salicylic acid after acidification)."""
 
 exec(open("helpers.txt").read())

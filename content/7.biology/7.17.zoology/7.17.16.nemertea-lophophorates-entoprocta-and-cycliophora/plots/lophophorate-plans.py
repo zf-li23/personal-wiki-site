@@ -1,7 +1,7 @@
 # U-shaped guts and tentacle crowns (schematic sagittal views, not to scale; mouth and tentacle crown up).
 # A-C: the three lophophorate phyla, in which the anus opens OUTSIDE the ring of tentacles (lophophore,
 # hollow tentacles containing a coelomic canal). D: an entoproct, whose solid tentacles surround both mouth
-# and anus (hence "inner anus"); its tentacle crown is not a lophophore. Body wall grey, coelom green wash,
+# and anus (hence "inner anus"); its tentacle crown is not a lophophore. Body wall gray, coelom green wash,
 # gut yellow, tentacles red, shell or zooecium beige.
 import numpy as np
 import wikibio as bio

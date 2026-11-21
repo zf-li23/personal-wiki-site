@@ -1,6 +1,6 @@
 # Homology of the anterior (head) segments and their appendages across the panarthropods (after BG 4e
 # Table 20.2, with Hox and engrailed expression data). Each row is one segment, identified by its brain
-# neuromere; cells in a row are homologous and share a colour. The deutocerebral appendages (onychophoran
+# neuromere; cells in a row are homologous and share a color. The deutocerebral appendages (onychophoran
 # jaws, chelifores, chelicerae, myriapod and insect antennae, crustacean first antennae) are homologous;
 # the tritocerebral segment carries pedipalps in chelicerates and second antennae in crustaceans, but no
 # appendage in myriapods and hexapods (the intercalary segment). Dash: segment without appendage.

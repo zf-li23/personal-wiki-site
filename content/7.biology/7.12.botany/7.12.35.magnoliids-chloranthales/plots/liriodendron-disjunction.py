@@ -1,5 +1,5 @@
 # The eastern Asia - eastern North America disjunction of the tulip trees (Liriodendron), drawn on a
-# simplified longitude-latitude map of the Northern Hemisphere (coastlines strongly generalised). Filled
+# simplified longitude-latitude map of the Northern Hemisphere (coastlines strongly generalized). Filled
 # areas: approximate ranges of the two living species, L. chinense (southern China, northern Vietnam)
 # and L. tulipifera (eastern North America). Triangles: examples of Late Cretaceous to Neogene fossil
 # localities of the genus (western North America, Greenland, Iceland, Europe, Japan), showing that it was

@@ -1,6 +1,6 @@
 """Discrimination and calibration of the multiple logistic model for low birth weight (189 births,
 Baystate Medical Center 1986; Hosmer and Lemeshow; R MASS::birthwt; model with mother's age, weight, race,
-smoking, previous premature labour and hypertension). A: ROC curve of the fitted probabilities (AUC 0.750)
+smoking, previous premature labor and hypertension). A: ROC curve of the fitted probabilities (AUC 0.750)
 and of smoking alone (AUC 0.585). B: calibration plot: observed proportion against the mean predicted
 probability in ten groups of predicted risk (19 or 18 births each), with 95 % Wilson intervals; the
 Hosmer-Lemeshow statistic is 8.65 on 8 degrees of freedom (p = 0.37). The model is evaluated on the

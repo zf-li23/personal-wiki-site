@@ -1,7 +1,7 @@
 """Acylation of the pyrrolidine enamine of cyclohexanone (Stork). The nitrogen lone pair pushes the
 C=C electrons onto the carbonyl carbon of acetyl chloride and the C=O electrons move onto oxygen.
 The tetrahedral intermediate collapses, re-forming C=O and expelling chloride, giving an acyl
-iminium ion; aqueous acid hydrolyses the iminium ion to 2-acetylcyclohexanone and pyrrolidine."""
+iminium ion; aqueous acid hydrolyzes the iminium ion to 2-acetylcyclohexanone and pyrrolidine."""
 
 from wikichem import Scheme
 

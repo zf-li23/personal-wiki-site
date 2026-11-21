@@ -3,7 +3,7 @@ A: amylose, (alpha1-4)-linked: each residue is turned about 60 degrees relative 
 the chain coils into a helix of about six residues per turn (V-amylose, pitch about 0.8 nm); the
 hydrophobic core of the helix holds polyiodide (I3-, I5-), the basis of the blue starch-iodine test.
 Residues on the far side of the helix are drawn paler. B: cellulose, (beta1-4)-linked: each residue is
-turned 180 degrees relative to its neighbours (marked by the side on which the C-6 group points), so
+turned 180 degrees relative to its neighbors (marked by the side on which the C-6 group points), so
 the chain is straight; intrachain hydrogen bonds (O3-H...O5') stiffen each chain and interchain
 hydrogen bonds join parallel chains into sheets and microfibrils."""
 

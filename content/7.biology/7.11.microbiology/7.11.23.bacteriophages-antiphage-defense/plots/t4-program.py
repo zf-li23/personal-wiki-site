@@ -1,4 +1,4 @@
-# The programme of a T4 infection.
+# The program of a T4 infection.
 # A: the timetable at 37 C (times from the classical description of the T4 cycle): host synthesis stops,
 #    early, middle and late transcription follow one another, DNA replication starts at 4-5 min, the first
 #    complete particle appears at about 12 min (the end of the eclipse period), and lysis occurs at 25-30 min.

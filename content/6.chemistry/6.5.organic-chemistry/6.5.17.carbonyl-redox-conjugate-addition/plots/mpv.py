@@ -1,8 +1,8 @@
-"""Meerwein-Ponndorf-Verley reduction. The ketone (left) is bound through its oxygen to aluminium
-(dashed bond), which also carries an isopropoxide group (the two other alkoxy groups on aluminium are
+"""Meerwein-Ponndorf-Verley reduction. The ketone (left) is bound through its oxygen to aluminum
+(dashed bond), which also carries an isopropoxide group (the two other alkoxy groups on aluminum are
 written OiPr). In the chair-like six-membered transition state the C-H of the isopropoxide is
 delivered as a hydride to the carbonyl carbon, the isopropoxide becomes acetone, and the substrate
-becomes an aluminium alkoxide; exchange with propan-2-ol releases the product alcohol."""
+becomes an aluminum alkoxide; exchange with propan-2-ol releases the product alcohol."""
 
 import math
 

@@ -3,7 +3,7 @@
 Prey: speed 1, starts at (0, 2) heading east. Predator: speed 1.5, starts at the origin.
 Pure pursuit: the predator always heads at the prey's present position.
 Constant bearing (parallel navigation): the predator turns so that the line of sight to the
-prey keeps a constant direction; for a non-manoeuvring prey this is the collision course.
+prey keeps a constant direction; for a non-maneuvering prey this is the collision course.
 Proportional navigation: turning rate = N x rate of rotation of the line of sight (N = 3),
 the law used by guided missiles and, to a good approximation, by falcons.
 """
@@ -23,7 +23,7 @@ def simulate(law, N=3.0, tmax=12):
     los = q - p
     h = np.arctan2(los[1], los[0])
     if law == "bearing":
-        # solve the collision course once (prey does not manoeuvre)
+        # solve the collision course once (prey does not maneuver)
         u = los / np.linalg.norm(los)
         perp = qv - np.dot(qv, u) * u
         along = np.sqrt(vp ** 2 - np.dot(perp, perp))

@@ -1,7 +1,7 @@
 """Conjugation in Spirogyra (schematic). A: scalariform conjugation between two filaments; the stages run
 from left to right (vegetative cells, papillae meet, a gamete passes through the conjugation tube, zygotes
 in the lower, female filament; the upper, male filament is left with empty cells). B: lateral
-conjugation between neighbouring cells of one filament: empty cells alternate with zygote-containing
+conjugation between neighboring cells of one filament: empty cells alternate with zygote-containing
 cells. C: the zygote rests with a thick wall; at germination meiosis gives four nuclei, three degenerate,
 and the survivor grows into a new filament."""
 import numpy as np

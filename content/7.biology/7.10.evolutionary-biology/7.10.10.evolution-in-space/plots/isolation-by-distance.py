@@ -4,7 +4,7 @@ for many demes (n large) and for two demes (n = 2, where the factor is 16). Abou
 keeps F_ST near 0.2 or below, whatever the deme size.
 B: isolation by distance in a one-dimensional stepping-stone model, computed exactly from the recursion for
 probabilities of identity by descent: a ring of 60 demes of N = 50 diploids, migration m = 0.1 per generation
-(half to each neighbour, so the dispersal variance is sigma^2 = 0.1 deme spacings squared), mutation
+(half to each neighbor, so the dispersal variance is sigma^2 = 0.1 deme spacings squared), mutation
 mu = 1e-4 (infinite alleles). Dots: pairwise F_ST / (1 - F_ST) between demes d steps apart; line: the
 prediction for a linear habitat, F_ST / (1 - F_ST) ~ a + d / (4 D sigma^2) with D = N demes per unit
 (Rousset 1997), slope 0.05, which holds at distances small compared with the mutation-dispersal scale

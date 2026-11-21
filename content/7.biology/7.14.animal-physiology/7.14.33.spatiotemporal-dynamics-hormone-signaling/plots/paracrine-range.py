@@ -1,7 +1,7 @@
 # Range of a paracrine signal: steady diffusion with first-order removal, lambda = sqrt(D / k).
 # A: profiles C(x)/C0 = exp(-x / lambda) from a planar source (an endothelial layer) for NO in tissue
 #    (D = 3300 um^2/s; k = 1 and 10 /s, i.e. half-lives of 0.7 s and 70 ms), for NO in blood, where
-#    haemoglobin scavenges it (k ~ 1000 /s), and for a small peptide such as somatostatin
+#    hemoglobin scavenges it (k ~ 1000 /s), and for a small peptide such as somatostatin
 #    (D ~ 150 um^2/s, k = 0.01 /s). Shaded: endothelium to the outer media of an arteriole (~0-20 um)
 #    and the radius of a pancreatic islet (~50-100 um).
 # B: lambda against the removal half-life for the two diffusion coefficients.

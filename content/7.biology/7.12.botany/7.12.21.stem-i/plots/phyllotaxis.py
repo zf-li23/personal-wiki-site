@@ -1,5 +1,5 @@
 # Spiral phyllotaxis and the golden angle. (A) Vogel's model (primordium k at angle k * 137.5 degrees and
-# radius proportional to sqrt(k), youngest in the centre) with the 8 and 13 contact parastichies
+# radius proportional to sqrt(k), youngest in the center) with the 8 and 13 contact parastichies
 # (wikibio.botany). (B) Divergence angles of the Schimper-Braun fractions F(n)/F(n+2) converging on the
 # golden angle from alternate sides. (C) The same model with a divergence of 135 degrees: primordia line
 # up in straight radial rows (orthostichies) and leave gaps.

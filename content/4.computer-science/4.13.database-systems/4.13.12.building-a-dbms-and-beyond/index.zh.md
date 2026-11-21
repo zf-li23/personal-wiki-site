@@ -1,6 +1,6 @@
 ---
 title: 构建关系型数据库管理系统及更广阔的世界
-source_hash: 780ea12d5406
+source_hash: 0650acfac4a2
 ---
 
 前面各章拆解了一个关系型**数据库系统**：模型与语言（[4.13.2](/4.13.2)–[4.13.4](/4.13.4)）、设计（[4.13.5](/4.13.5)、[4.13.6](/4.13.6)）、存储与**索引**（[4.13.7](/4.13.7)、[4.13.8](/4.13.8)）、查询处理（[4.13.9](/4.13.9)）、**事务**、恢复与并发（[4.13.10](/4.13.10)、[4.13.11](/4.13.11)）。本章把这些部件重新组装起来：先从构建小型关系系统的人的角度，就像课程项目中带 SQL 语法分析器和自有文件存储的单用户关系型 DBMS 那样；再从在当今使用的众多数据库系统中做选择的人的角度。前半部分把本课程与形式语言（[4.8](/4.8)）联系起来，SQL 前端实现的恰恰是形式语言的文法和自动机，并包含一个在示例数据上运行真实查询的微型查询引擎。后半部分概述分布式与云数据库、NoSQL 系统、分析型引擎、向量检索，以及数据库在数据分析和生物信息学中的用法，本课程的多数读者会在那里遇到它们。
@@ -502,7 +502,7 @@ import duckdb
 con = duckdb.connect()
 con.execute(open("schema.sql").read())
 con.execute(open("data.sql").read())
-# One expression profile per gene: log2(TPM + 1) in samples S01..S06, centred
+# One expression profile per gene: log2(TPM + 1) in samples S01..S06, centered
 # on the gene's mean, stored as a fixed-length array (an "embedding").
 con.execute("""
 CREATE TABLE profile AS

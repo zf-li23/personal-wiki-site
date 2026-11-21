@@ -4,7 +4,7 @@ pos = {"a": (0, 1.0), "b": (1.4, 2.0), "c": (1.4, 0), "d": (2.8, 2.0), "e": (2.8
 E = [("a", "b"), ("a", "c"), ("b", "c"), ("b", "d"), ("c", "e"), ("d", "e"), ("d", "f"), ("e", "f")]
 adj = {v: sorted(u for e in E for u in e if v in e and u != v) for v in pos}
 
-# BFS from a, neighbours in alphabetical order
+# BFS from a, neighbors in alphabetical order
 layer, bfs_tree, queue = {"a": 0}, [], ["a"]
 while queue:
     u = queue.pop(0)

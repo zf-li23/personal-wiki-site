@@ -2,7 +2,7 @@
 # Model: an infected cell assembles particles linearly from the end of the eclipse period (12 min) at a
 # rate that reaches the burst size (100) at its own lysis time, drawn from a normal distribution with
 # mean 25 min and s.d. 3 min (truncated below 15 min).
-# A: the one-step growth experiment - infective centres measured by plating the whole culture.
+# A: the one-step growth experiment - infective centers measured by plating the whole culture.
 # B: the premature-lysis experiment - samples lysed artificially before the cells burst; infectious
 #    particles appear only after the eclipse period, and the DNA pool rises earlier.
 # C: the single-burst experiment - the culture distributed into many small tubes with on average 0.6
@@ -27,7 +27,7 @@ inside = np.clip((t - ECL) / (MEAN - ECL), 0, 1.4) * BURST  # particles inside a
 
 # ---------------------------------------------------------------- A: one-step growth
 ax = fig.add_subplot(gs[0, 0])
-centres = (1 - F) + F * BURST                              # infective centres per originally infected cell
+centres = (1 - F) + F * BURST                              # infective centers per originally infected cell
 ax.plot(t, centres, color=charts.line("dna"), lw=2.1)
 ax.set_yscale("log")
 ax.set_ylim(0.6, 300)

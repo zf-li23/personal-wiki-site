@@ -1,7 +1,7 @@
 """The Winogradsky column as a redox gradient: schematic and a one-dimensional reaction-diffusion model.
 
 A: a column of mud enriched with cellulose (shredded paper), CaSO4 and CaCO3 under water, incubated in the
-light for weeks. From the top: algae and cyanobacteria in the oxic water; colourless sulfur oxidizers
+light for weeks. From the top: algae and cyanobacteria in the oxic water; colorless sulfur oxidizers
 (Beggiatoa, Thiobacillus) where O2 and H2S meet; purple and then green sulfur bacteria in the anoxic,
 sulfidic, illuminated zone (purple nonsulfur bacteria between); below, fermenters, sulfate reducers
 (black FeS) and methanogens.
@@ -11,7 +11,7 @@ S''  = k O S + a e^(-z/lambda) S/((Ks + S)(1 + O/0.01)) (sulfide oxidation by O2
 with O = 1 at the top (air-saturated water, about 0.25 mM), no O2 flux at the bottom, sulfide S = 2 at the
 bottom (supplied by sulfate reduction) and no sulfide flux at the top; k = 3000, q = 0.5, K = 0.05, a = 5,
 lambda = 0.5 (light attenuation length), Ks = 0.1. Curves: O2 and sulfide (each scaled to its maximum),
-light, and the two sulfide-consuming rates, which locate the colourless sulfur bacteria at the oxic-anoxic
+light, and the two sulfide-consuming rates, which locate the colorless sulfur bacteria at the oxic-anoxic
 interface and the phototrophs below it.
 """
 import numpy as np

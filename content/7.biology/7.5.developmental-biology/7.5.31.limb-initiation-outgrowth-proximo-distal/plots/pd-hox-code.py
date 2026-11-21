@@ -1,7 +1,7 @@
 """The proximo-distal code of the limb (schematic).
 
 A: paddle-stage bud with the domains of Meis1/2 (proximal), Hoxa11 (middle) and Hoxa13 (distal).
-B: the segments they become. C: deletion of whole paralogue groups (mouse hindlimbs): Hox10 (no stylopod),
+B: the segments they become. C: deletion of whole paralog groups (mouse hindlimbs): Hox10 (no stylopod),
 Hox11 (no zeugopod), Hoxa13 and Hoxd13 (no autopod).
 """
 

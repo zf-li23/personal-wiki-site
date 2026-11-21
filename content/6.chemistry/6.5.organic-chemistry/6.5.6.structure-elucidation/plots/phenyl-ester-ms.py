@@ -12,7 +12,7 @@ s = Scheme(scale=0.48)
 
 
 def ring(p, d):
-    """Hexagon coordinates for c1ccc(...)cc1 with atom 3 at p, the ring centre one bond further along d."""
+    """Hexagon coordinates for c1ccc(...)cc1 with atom 3 at p, the ring center one bond further along d."""
     d = np.asarray(d, float) / np.linalg.norm(d)
     c = np.asarray(p, float) + d
     a0 = np.degrees(np.arctan2(-d[1], -d[0]))

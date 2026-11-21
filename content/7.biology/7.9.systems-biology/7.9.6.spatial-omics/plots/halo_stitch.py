@@ -1,8 +1,8 @@
 """Segmenting a large image in tiles. A: a synthetic image of 90 cells (radius 6-11 px) divided
 into 3 x 3 tiles of 120 px (solid lines); each tile is processed together with a halo of 24 px
-(dashed: the window of the centre tile). B: without a halo, cells crossing tile boundaries are
+(dashed: the window of the center tile). B: without a halo, cells crossing tile boundaries are
 cut into fragments that are counted as separate cells (red outlines). C: with the halo, objects
-touching an inner window edge are discarded (they are complete in a neighbouring window, because
+touching an inner window edge are discarded (they are complete in a neighboring window, because
 the halo exceeds the largest cell diameter), and the duplicates found in overlapping windows are
 merged when their intersection over union is at least 0.5, using a union-find structure.
 D: the extra pixels processed because of the halo, (1 + 2h/L)^d - 1, for tiles of side L in two

@@ -1,9 +1,9 @@
 """Lasso logistic regression for low birth weight (189 births, Baystate Medical Center 1986; Hosmer and
 Lemeshow; R MASS::birthwt) with 27 candidate predictors: mother's age, weight, race (two indicators),
-smoking, previous premature labour, hypertension, uterine irritability and physician visits, the
+smoking, previous premature labor, hypertension, uterine irritability and physician visits, the
 interactions of smoking with each of the other eight, and ten pure-noise standard normal variables
 (seed 0). Predictors standardized; coordinate descent on the penalized likelihood (as in glmnet) for 50
-values of lambda. A: coefficient paths; coloured: the clinical main effects, grey dashed: noise
+values of lambda. A: coefficient paths; colored: the clinical main effects, gray dashed: noise
 variables. B: 10-fold cross-validated deviance per observation (mean and standard error over folds)
 with lambda_min and the one-standard-error lambda_1se.
 """

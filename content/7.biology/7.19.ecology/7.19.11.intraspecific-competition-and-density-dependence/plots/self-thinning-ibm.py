@@ -28,7 +28,7 @@ CR = 0.006
 
 
 def lens(d, r1, r2):
-    """Area of intersection of two circles with centre distance d (vectorized)."""
+    """Area of intersection of two circles with center distance d (vectorized)."""
     out = np.zeros_like(d)
     small = np.minimum(r1, r2)
     inside = d <= np.abs(r1 - r2)

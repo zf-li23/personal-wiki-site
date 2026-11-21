@@ -1,6 +1,6 @@
-# Mapping the 5' end of a transcript by S1 nuclease protection. A: a DNA probe labelled at one 5' end (star)
+# Mapping the 5' end of a transcript by S1 nuclease protection. A: a DNA probe labeled at one 5' end (star)
 # and spanning the transcription start site is hybridized to the RNA; S1 nuclease degrades all single-stranded
-# nucleic acid, so the probe survives only where the RNA covers it, and the length of the surviving labelled
+# nucleic acid, so the probe survives only where the RNA covers it, and the length of the surviving labeled
 # fragment is the distance from the label to the 5' end of the RNA. B: the same logic read out on a denaturing
 # gel next to a size ladder, for three hypothetical start sites; the band moves with the start site, and a
 # transcript that starts upstream of the probe protects the probe over its whole length (full-length band).

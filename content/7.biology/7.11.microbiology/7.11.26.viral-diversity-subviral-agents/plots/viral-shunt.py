@@ -1,6 +1,6 @@
 # The viral shunt in the marine microbial loop: where viral lysis diverts carbon.
-# Grey arrows, the classical food chain; red arrows, the shunt created by lysis. Standing stocks are
-# per millilitre of surface seawater (Madigan et al. 2019); the global lysis flux is of order 1e9 t C per day.
+# Gray arrows, the classical food chain; red arrows, the shunt created by lysis. Standing stocks are
+# per milliliter of surface seawater (Madigan et al. 2019); the global lysis flux is of order 1e9 t C per day.
 import wikibio as bio
 
 P = bio.P

@@ -2,8 +2,8 @@
 # One reflection of a protein, F_P = 100 exp(i 60 deg) (unknown phase), and two heavy-atom derivatives
 # whose heavy-atom contributions F_H1 = 30 exp(i 200 deg) and F_H2 = 25 exp(i 320 deg) are known from
 # the heavy-atom substructure; measured amplitudes |F_PH| = |F_P + F_H|.
-# A: Harker construction. The protein circle (radius |F_P|, centre 0) and each derivative circle
-#    (radius |F_PH|, centre -F_H) intersect where F_P + F_H has the measured length. A single derivative
+# A: Harker construction. The protein circle (radius |F_P|, center 0) and each derivative circle
+#    (radius |F_PH|, center -F_H) intersect where F_P + F_H has the measured length. A single derivative
 #    gives two intersections (two phases, SIR ambiguity); the second derivative selects the true one.
 # B: Blow-Crick phase probabilities P(phi) ~ exp(-eps(phi)^2 / (2 E^2)) with the lack of closure
 #    eps(phi) = |F_PH| - |F_P exp(i phi) + F_H| and E = 6 (a combined error of measurement and of the

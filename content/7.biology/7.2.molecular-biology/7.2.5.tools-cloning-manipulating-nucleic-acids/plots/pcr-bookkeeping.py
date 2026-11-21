@@ -1,5 +1,5 @@
 # PCR bookkeeping. A: the strands after cycles 1-3, computed by copying every strand with the primer that
-# anneals to it. Grey: the two original strands; blue: "long" products, which start at a primer but run to the
+# anneals to it. Gray: the two original strands; blue: "long" products, which start at a primer but run to the
 # end of their template; orange: target-length strands bounded by both primers. Duplexes of exactly target
 # length first appear after cycle 3 (2 of 8); after n cycles there are 2^n - 2n of them. B: amplification
 # from 1e3, 1e6 (2^20) and 1e9 starting duplexes with a primer-limited model: in each cycle a fraction

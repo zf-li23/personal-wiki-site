@@ -2,10 +2,10 @@
 # Left (PTI): the bacterial MAMP flg22 binds the LRR receptor kinase FLS2, which recruits the co-receptor BAK1;
 # the receptor-like cytoplasmic kinase BIK1 is released and phosphorylates the NADPH oxidase RBOHD (apoplastic
 # ROS burst) and Ca2+-permeable channels (CNGC2/4; OSCA1.3 in guard cells); Ca2+ activates CPKs, and a MAPK
-# cascade (MPK3/6) activates WRKY transcription factors and defence genes.
+# cascade (MPK3/6) activates WRKY transcription factors and defense genes.
 # Right (ETI): a type III secretion system injects effectors; some suppress PTI (for example by targeting BIK1
-# or the receptor complex: effector-triggered susceptibility); an intracellular NLR recognises one effector
-# (directly or by guarding its target) and oligomerises into a resistosome, giving Ca2+ influx, transcription
+# or the receptor complex: effector-triggered susceptibility); an intracellular NLR recognizes one effector
+# (directly or by guarding its target) and oligomerizes into a resistosome, giving Ca2+ influx, transcription
 # and often the hypersensitive response.
 import wikibio as bio
 from wikibio import cellbio as CB

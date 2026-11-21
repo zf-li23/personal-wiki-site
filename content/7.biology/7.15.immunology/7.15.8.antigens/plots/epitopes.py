@@ -87,11 +87,11 @@ bio.label(ax, (11.25, 5.25), "carrier", size="tiny", color=P.on_fill(), zorder=2
 ax.add_patch(Polygon([(10.72, 4.2), (10.87, 4.0), (11.02, 4.2), (10.87, 4.4)], closed=True, facecolor=P.fill("negative"),
                      edgecolor=P.edge("negative"), lw=0.8, zorder=11))
 bio.callout(ax, (10.74, 4.2), (9.9, 4.7), "hapten", size="tiny")
-# the processed carrier peptide on MHC II is recognised by the TCR of the helper T cell
+# the processed carrier peptide on MHC II is recognized by the TCR of the helper T cell
 immuno.mhc_ii(ax, 15.2, ym, up=1)
 immuno.tcr(ax, 15.2, yt, up=-1, cd3=False)
 bio.arrow(ax, (12.2, 5.0), (14.0, 4.25), kind="process", dashed=True, bend=-0.2)
-bio.label(ax, (12.9, 5.55), "internalise,\nprocess", size="tiny", color=P.muted())
+bio.label(ax, (12.9, 5.55), "internalize,\nprocess", size="tiny", color=P.muted())
 bio.label(ax, (13.3, 3.3), "peptide–MHC II", size="tiny", color=P.muted())
 # CD40L-CD40 and cytokines return help to the B cell
 bio.arrow(ax, (17.4, 5.6), (17.4, 2.9), kind="activation")

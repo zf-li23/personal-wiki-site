@@ -9,7 +9,7 @@ protected if at least one piece meets its requirement. A: protected species agai
 requirement scenarios (median a_i = 0, 0.004 and 0.015), mean of 200 random communities (bands: central
 90 %). B: protected species against the median requirement for k = 1 (single large) and k = 8 (several
 small), mean of 80 communities; they cross where the typical requirement approaches the length of one small
-reserve. C: 60 of the ranges of one community (grey) and the two configurations: for k = 8 the pieces
+reserve. C: 60 of the ranges of one community (gray) and the two configurations: for k = 8 the pieces
 sample many independent parts of the region (beta diversity), but each piece is short and loses the
 species whose requirement exceeds 0.1/8.
 """

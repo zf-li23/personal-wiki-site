@@ -1,6 +1,6 @@
 # Time scales of life on a logarithmic axis from 1 fs to 4 Gyr (seconds on the axis, everyday units on top).
 # Molecular events (bond vibration, water hydrogen-bond rearrangement, primary charge separation in a
-# photosynthetic reaction centre, side-chain rotation, fast protein folding, enzyme turnover, action potential,
+# photosynthetic reaction center, side-chain rotation, fast protein folding, enzyme turnover, action potential,
 # motor step) lie below the axis; cellular, organismal and evolutionary times above it.
 # Values are typical orders of magnitude.
 import matplotlib.pyplot as plt

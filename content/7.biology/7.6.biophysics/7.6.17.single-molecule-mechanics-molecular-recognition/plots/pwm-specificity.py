@@ -1,6 +1,6 @@
 # Sequence specificity in the energy-matrix (position weight matrix) model.
 # A hypothetical transcription factor with a 10-bp site; binding energy E(s) = sum_i eps_i(s_i) in kT,
-# zero for the consensus base at each position and 1-4 kT for the others (stronger penalties in the centre).
+# zero for the consensus base at each position and 1-4 kT for the others (stronger penalties in the center).
 # A: the sequence logo of the sites expected if sites are Boltzmann samples, p_i(b) ~ exp(-eps_i(b)).
 # B: the energy landscape along 600 bp of random sequence (equal base frequencies) containing one consensus
 #    site at position 300; occupancy p = 1/(1 + exp(E - mu)) at mu = 2 kT.

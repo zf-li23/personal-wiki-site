@@ -1,5 +1,5 @@
-# Head and neck muscles of a shark and of a mammal, coloured by their motor nerve (and so by pharyngeal arch
-# for branchiomeric muscles; arch colours from vertskel). Lateral views, anterior to the left. Schematic.
+# Head and neck muscles of a shark and of a mammal, colored by their motor nerve (and so by pharyngeal arch
+# for branchiomeric muscles; arch colors from vertskel). Lateral views, anterior to the left. Schematic.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

@@ -1,4 +1,4 @@
-"""The spread of a favourable allele (or of a species into empty habitat) through a continuous population.
+"""The spread of a favorable allele (or of a species into empty habitat) through a continuous population.
 A: numerical solution of the Fisher-KPP equation dp/dt = (sigma^2/2) d^2p/dx^2 + s p (1 - p) with s = 0.05
 and sigma = 1 (distance in dispersal SDs, time in generations), starting from a local introduction at x = 0;
 profiles every 100 generations. B: position of the front (where p = 0.5) against time for s = 0.02, 0.05 and

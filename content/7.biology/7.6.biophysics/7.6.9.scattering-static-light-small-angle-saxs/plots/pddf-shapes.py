@@ -6,8 +6,8 @@
 # Dashed: the exact p(r) of a solid sphere of radius R = 50 A, proportional to
 # r^2 (1 - 3r/(4R) + r^3/(16 R^3)) for 0 <= r <= 2R.
 # Bodies: solid sphere R = 50 A (Dmax = 100 A); hollow sphere, shell 40-50 A (Dmax = 100 A); rod, radius
-# 10 A and length 200 A (Dmax = 201 A); dumbbell, two spheres of radius 25 A with centres 70 A apart
-# (Dmax = 120 A, second peak near the centre-to-centre distance).
+# 10 A and length 200 A (Dmax = 201 A); dumbbell, two spheres of radius 25 A with centers 70 A apart
+# (Dmax = 120 A, second peak near the center-to-center distance).
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.spatial.distance import pdist

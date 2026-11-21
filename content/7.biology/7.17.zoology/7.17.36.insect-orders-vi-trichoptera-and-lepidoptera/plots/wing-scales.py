@@ -4,7 +4,7 @@
 # longitudinal ridges joined by cross-ribs, with windows between them; the lower lamina is flat. Pigments
 # (melanins, ommochromes, pterins) lie in the cuticle. (C) Cross-section of the upper lamina: the ridges are
 # built of overlapping lamellae, alternating layers of cuticle and air, whose spacing produces structural
-# colour by multilayer interference (7.17.23).
+# color by multilayer interference (7.17.23).
 import numpy as np
 from matplotlib.patches import Ellipse, Polygon, Rectangle
 import wikibio as bio

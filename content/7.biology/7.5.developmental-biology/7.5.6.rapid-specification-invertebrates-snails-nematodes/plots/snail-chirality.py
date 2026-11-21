@@ -63,4 +63,4 @@ from wikibio import embryology as E  # noqa: E402
 E.cleavage(ax, (13.8, 6.6), 0.9, "spiral")
 E.cleavage(ax, (18.6, 6.6), 0.9, "spiral-sinistral")
 bio.label(ax, (13.8, 5.0), "dextral: clockwise", size="tiny")
-bio.label(ax, (18.6, 5.0), "sinistral: anticlockwise", size="tiny")
+bio.label(ax, (18.6, 5.0), "sinistral: counterclockwise", size="tiny")

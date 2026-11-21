@@ -1,6 +1,6 @@
 """Carbon-carbon bond cleavage in the haloform reaction. Hydroxide adds to the carbonyl carbon of
 1,1,1-tribromoacetone; the tetrahedral alkoxide collapses, re-forming C=O and expelling CBr3-, which
-is stabilised by the three bromine atoms. Proton transfer from the acid to CBr3- gives bromoform
+is stabilized by the three bromine atoms. Proton transfer from the acid to CBr3- gives bromoform
 and acetate."""
 
 from wikichem import Scheme

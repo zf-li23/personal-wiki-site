@@ -1,6 +1,6 @@
 # Horns and antlers of mammals in schematic longitudinal section (skull surface at the bottom), after
 # Kardong (2019) and Davis et al. (2011): bovid horn, pronghorn, antler (in velvet and hard), rhinoceros horn,
-# giraffe ossicone. Bone in one colour, keratin in another, skin in a third. Not to scale.
+# giraffe ossicone. Bone in one color, keratin in another, skin in a third. Not to scale.
 import numpy as np
 import wikibio as bio
 

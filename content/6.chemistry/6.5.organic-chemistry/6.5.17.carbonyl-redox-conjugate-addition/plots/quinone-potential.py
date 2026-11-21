@@ -1,5 +1,5 @@
 """Formal potential of the p-benzoquinone/hydroquinone couple against pH at 25 C, for equal total
-concentrations of the oxidised form and the reduced form (all protonation states). With
+concentrations of the oxidized form and the reduced form (all protonation states). With
 Q + 2H+ + 2e- = H2Q (E0 = 0.699 V) and the acid dissociation constants of hydroquinone (pKa1 9.9,
 pKa2 11.4), E = E0 + (0.05916/2) log10([H+]^2 + Ka1[H+] + Ka1 Ka2): the slope is -59 mV per pH
 unit below pKa1, -30 mV between the two pKa values and zero above pKa2."""

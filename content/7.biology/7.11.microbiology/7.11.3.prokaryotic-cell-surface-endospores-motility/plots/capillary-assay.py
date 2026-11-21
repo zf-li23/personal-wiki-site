@@ -1,5 +1,5 @@
 """Capillary assay for chemotaxis. A: schematic. B: attractant profile outside the capillary mouth,
-modelled as a sphere of radius a held at concentration c0 in an infinite medium:
+modeled as a sphere of radius a held at concentration c0 in an infinite medium:
 c(r, t) = c0 (a / r) erfc((r - a) / (2 sqrt(D t)))."""
 import numpy as np
 from matplotlib.patches import FancyBboxPatch, Rectangle

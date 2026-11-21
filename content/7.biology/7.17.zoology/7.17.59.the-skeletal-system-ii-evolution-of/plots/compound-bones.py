@@ -1,5 +1,5 @@
-# The compound bones of the mammalian skull and the elements that fuse to form them (vertskel homology colours).
-# Each row: one adult mammalian bone; blocks: its components, labelled with the homologous element of reptiles
+# The compound bones of the mammalian skull and the elements that fuse to form them (vertskel homology colors).
+# Each row: one adult mammalian bone; blocks: its components, labeled with the homologous element of reptiles
 # or fishes. After Kardong (2019), Novacek (1993) and Yang & Cheng. Schematic.
 import wikibio as bio
 import vertskel as vs

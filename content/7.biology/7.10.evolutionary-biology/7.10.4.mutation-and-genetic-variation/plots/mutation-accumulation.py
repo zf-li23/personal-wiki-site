@@ -1,7 +1,7 @@
 """A mutation-accumulation experiment, simulated (Formula 4.4.2). 400 lines founded from one genotype are
 propagated for 50 generations without selection. Each generation a line gains a Poisson number of new
 mutations with mean U = 0.4 per genome; each lowers fitness by s, with s exponentially distributed with
-mean 0.02, and effects add (illustrative values). A: fitness of 20 lines (grey) and the mean over all
+mean 0.02, and effects add (illustrative values). A: fitness of 20 lines (gray) and the mean over all
 400 (dots), with the expected decline 1 - U E[s] t. B: the variance of fitness among lines (line) and its
 expectation U E[s^2] t (dashed), both rising linearly. The slopes give the Bateman-Mukai estimates U >= (dM)^2 / dV and E[s] <= dV / dM; with
 exponential effects they recover half of the true U and twice the true E[s]."""

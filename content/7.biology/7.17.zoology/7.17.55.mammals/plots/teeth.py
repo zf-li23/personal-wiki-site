@@ -1,5 +1,5 @@
 # (A) Heterodont dentition of a generalized placental mammal (the ancestral formula I 3/3, C 1/1, P 4/4,
-# M 3/3 = 44, close to that of the pig), left side in lateral view, with the tooth classes coloured, and the
+# M 3/3 = 44, close to that of the pig), left side in lateral view, with the tooth classes colored, and the
 # dental formulae of some representative species. (B) Occlusal (crown) views of upper molars of the main
 # crown types (schematic): tribosphenic (opossum, insectivores), bunodont with low rounded cusps (pig,
 # primates), selenodont with crescent-shaped ridges (deer, cattle), lophodont with transverse ridges

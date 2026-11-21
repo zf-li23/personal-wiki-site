@@ -1,7 +1,7 @@
 """Induction of cardiogenic mesoderm and the core cardiac gene regulatory network (SBGN activity flow,
 simplified). A: in the anterior lateral plate mesoderm, BMP2 from the endoderm (and lateral mesoderm) and FGF8
 from the endoderm promote heart fates; Wnt3a and Wnt8 from the neural tube and posterior tissues inhibit heart and
-favour blood, and the anterior endoderm relieves this inhibition by secreting the Wnt antagonists Dkk1, Cerberus
+favor blood, and the anterior endoderm relieves this inhibition by secreting the Wnt antagonists Dkk1, Cerberus
 and Crescent; Noggin and Chordin from the notochord block BMP near the midline. Heart forms where BMP is present
 and Wnt is absent. B: Mesp1 marks the earliest cardiovascular progenitors; BMP and the absence of Wnt then
 activate Nkx2-5, Gata4 and Tbx5 (first heart field) or Isl1 with Fgf8 and Tbx1 (second heart field), which

@@ -2,8 +2,8 @@
 
 Epithelial tissue: cells packed in sheets on a basal lamina, polarized (apical and basal surfaces), here a
 simple columnar epithelium with a goblet cell. Connective tissue: few cells in an abundant extracellular
-matrix; fibroblasts secrete collagen fibres, adipocytes store fat, and blood is a connective tissue with a
-fluid matrix. Muscle tissue: skeletal muscle fibres (multinucleate, striated), cardiomyocytes (branched,
+matrix; fibroblasts secrete collagen fibers, adipocytes store fat, and blood is a connective tissue with a
+fluid matrix. Muscle tissue: skeletal muscle fibers (multinucleate, striated), cardiomyocytes (branched,
 striated, joined by intercalated discs) and smooth muscle cells (spindle-shaped, unstriated). Nervous
 tissue: neurons and glial cells, such as the oligodendrocytes that myelinate central axons.
 """

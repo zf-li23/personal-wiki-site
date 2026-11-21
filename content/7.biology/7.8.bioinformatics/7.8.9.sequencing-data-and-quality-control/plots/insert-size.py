@@ -2,7 +2,7 @@
 # library (normal, mean 350, sd 90 nt) and of cell-free DNA (a mononucleosome peak at 167 nt with sd 15, and 10 %
 # dinucleosomes at 334 nt). Fragments shorter than 2 x 150 = 300 nt give overlapping mates; fragments shorter than
 # 150 nt are read through into the adapter at the 3' end of both reads. The fractions are computed from the
-# distributions. B: the three cases for one fragment (insert in colour, adapters grey, reads as arrows).
+# distributions. B: the three cases for one fragment (insert in color, adapters gray, reads as arrows).
 import numpy as np
 from matplotlib.patches import Rectangle
 from scipy import stats

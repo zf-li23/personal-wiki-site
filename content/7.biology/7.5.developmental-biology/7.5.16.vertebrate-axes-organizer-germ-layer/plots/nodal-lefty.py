@@ -1,11 +1,11 @@
 # Nodal and Lefty at the zebrafish blastoderm margin (Formula 16.4.1). One-dimensional tissue from the margin (x = 0)
 # towards the animal pole; a source at the margin (the yolk syncytial layer and maternal inputs) starts Nodal
-# production; Nodal signalling induces more Nodal and Lefty; Lefty blocks Nodal signalling. Diffusion coefficients are
+# production; Nodal signaling induces more Nodal and Lefty; Lefty blocks Nodal signaling. Diffusion coefficients are
 # those measured for Squint and Lefty1 by FRAP (Muller and colleagues, 2012: 3.2 and 11 um^2/s); both clearance rates
-# 2 x 10^-4 per s (half-life about 1 h); 3 h of signalling. A: Nodal signalling with Lefty (solid) and without it
+# 2 x 10^-4 per s (half-life about 1 h); 3 h of signaling. A: Nodal signaling with Lefty (solid) and without it
 # (dashed), log scale: Lefty confines the self-enhancing Nodal domain to the margin, without it Nodal autoactivation spreads
 # through the tissue. B: with Lefty, Nodal and Lefty concentrations; Lefty, faster and induced by Nodal, extends
-# further and caps the range of signalling.
+# further and caps the range of signaling.
 import numpy as np
 import wikibio as bio
 from wikibio import charts as C

@@ -5,8 +5,8 @@ so an emmetropic axial length of 1.336/60 m = 22.3 mm) for a distant object (par
 Myopic eye: axial length 24.0 mm; hyperopic eye: 20.8 mm (axial ametropia, relaxed accommodation).
 Spectacle lenses 12 mm in front of the cornea; their power is computed so the image falls on the retina.
 B: amplitude of accommodation versus age, Hofstetter's (1950) minimum, mean and maximum lines
-(15 - 0.25 a, 18.5 - 0.3 a, 25 - 0.4 a dioptres), and the corresponding near point of an
-emmetrope (100 / A centimetres). Reading at 40 cm needs 2.5 D.
+(15 - 0.25 a, 18.5 - 0.3 a, 25 - 0.4 a diopters), and the corresponding near point of an
+emmetrope (100 / A centimeters). Reading at 40 cm needs 2.5 D.
 """
 import matplotlib.pyplot as plt
 import numpy as np

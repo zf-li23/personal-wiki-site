@@ -4,7 +4,7 @@
 #    and above seawater; a teleost fish regulates near 300-400 mOsm kg-1 over a wide range. Dotted line:
 #    internal = external.
 # B: body temperature against ambient temperature. An ectothermic conformer (a lizard at rest, without
-#    behavioural thermoregulation) follows the air; an endotherm (a mammal) holds 37 C over a wide range,
+#    behavioral thermoregulation) follows the air; an endotherm (a mammal) holds 37 C over a wide range,
 #    and fails at the extremes (hypothermia and hyperthermia).
 import numpy as np
 

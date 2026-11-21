@@ -1,5 +1,5 @@
 # From fin to limb: the pectoral fin or forelimb skeleton of five taxa in dorsal view, proximal end at the
-# bottom, preaxial (radial) side to the left. Bones are coloured in the course-wide homology scheme
+# bottom, preaxial (radial) side to the left. Bones are colored in the course-wide homology scheme
 # (stylopod blue: humerus; zeugopod: radius and ulna; autopod: carpals/ulnare, metacarpals, phalanges;
 # fin radials and dermal fin rays). Simplified after Shubin et al. 2006, Clack 2012 and Pough et al.;
 # not to scale.

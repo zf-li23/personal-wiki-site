@@ -1,4 +1,4 @@
-# Equivalent signalling centres in four vertebrates (schematic). Xenopus: Nieuwkoop centre in the dorsal vegetal cells,
+# Equivalent signaling centers in four vertebrates (schematic). Xenopus: Nieuwkoop center in the dorsal vegetal cells,
 # organizer at the dorsal blastopore lip. Chick: Koller's sickle and the posterior marginal zone (PMZ, Vg1 and Wnt8c)
 # initiate the primitive streak; Hensen's node at its anterior end is the organizer; the hypoblast (Cerberus)
 # keeps the streak single and protects the anterior. Mouse (E6.5, anterior left): the anterior visceral endoderm (AVE,

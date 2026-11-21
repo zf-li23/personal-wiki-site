@@ -1,6 +1,6 @@
 """The transmetalation step of three cross-couplings that share the Suzuki cycle (L = PPh3, Ar from
 the aryl halide, R from the organometallic reagent). In each row the R-M electrons move to
-palladium while the Pd-X electrons move toward the main-group metal, through a four-centre
+palladium while the Pd-X electrons move toward the main-group metal, through a four-center
 bridged transition state, and R is transferred with retention of configuration (the trans
 product isomerizes to cis before reductive elimination).
 Kumada (M = MgBr) is the fastest but the Grignard reagent attacks carbonyl groups and nitriles;

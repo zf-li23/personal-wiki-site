@@ -1,4 +1,4 @@
-# Insect mouthpart types in lateral view (anterior to the right), coloured by homology
+# Insect mouthpart types in lateral view (anterior to the right), colored by homology
 # (wikibio.zoomorph.head): labrum (upper lip) yellow, mandibles orange, maxillae blue, labium (lower lip)
 # green. The ancestral chewing set (grasshopper) has toothed mandibles, maxillae with 5-segmented palps and
 # a labium with 3-segmented palps. In true bugs (Heteroptera) the labium forms a segmented sheath, the

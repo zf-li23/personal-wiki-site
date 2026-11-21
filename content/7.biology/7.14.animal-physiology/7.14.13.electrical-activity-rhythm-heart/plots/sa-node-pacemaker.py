@@ -7,7 +7,7 @@
 #   I_b   = g_b (V - E_b)                background inward current
 #   I_KACh = g_KACh (V - E_K)            ACh-activated K+ current (GIRK)
 # Sympathetic (NE, cAMP): V_half of I_f +8 mV and g_Ca x 1.5. Parasympathetic (ACh): V_half -7 mV and
-# g_KACh = 0.004. The Ca2+ clock (Ca2+ release and Na+/Ca2+ exchange) is not modelled separately.
+# g_KACh = 0.004. The Ca2+ clock (Ca2+ release and Na+/Ca2+ exchange) is not modeled separately.
 # A: membrane potential (intrinsic rate of the isolated node about 110 /min). B: firing rate when each
 # mechanism acts alone or together, and with I_f blocked.
 import matplotlib.pyplot as plt

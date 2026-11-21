@@ -1,9 +1,9 @@
 """Five threads of vertebrate comparative anatomy in one table (rows) across the seven traditional columns of
 the comparative chapters (7.17.56, Section 56.8.1; bony fishes = teleosts, reptiles = living non-avian reptiles).
 
-Cells are coloured with the homology colours of vertskel, so that one element keeps its colour along a row:
+Cells are colored with the homology colors of vertskel, so that one element keeps its color along a row:
 the palatoquadrate gold becomes the quadrate and the incus, Meckel's coral the articular and the malleus, the
-hyoid magenta the hyomandibula and the stapes. Grey cells: element absent or not applicable. Entries follow the
+hyoid magenta the hyomandibula and the stapes. Gray cells: element absent or not applicable. Entries follow the
 tables of 7.17.58 (arch fates), 7.17.59 (bone counts, approximate ranges), 7.17.65 (aortic arches), 7.17.66
 (kidneys and ducts) and 7.17.68 (middle ear).
 """

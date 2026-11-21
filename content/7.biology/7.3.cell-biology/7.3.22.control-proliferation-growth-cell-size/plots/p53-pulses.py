@@ -13,7 +13,7 @@ with ka = 0.5, kau = 6, Ka = 0.3, kw = 1.5, bp = 1, am = 3, ap = 0.1, bm = 1, dm
 dw = 0.8 (per hour, concentrations relative).
 (A) Single cells after a low (5 breaks) and a high (40 breaks) dose: p53 rises in pulses of nearly fixed height
 and width, about 6 h apart; more damage gives more pulses, not bigger ones; pulses stop when the breaks are
-repaired (grey steps: unrepaired breaks, right axis).
+repaired (gray steps: unrepaired breaks, right axis).
 (B) Number of pulses in 40 simulated cells per dose (mean and range).
 (C) The average over 100 cells after 20 breaks looks like a damped oscillation, although every cell pulses
 with an undamped amplitude: averaging hides the single-cell dynamics.

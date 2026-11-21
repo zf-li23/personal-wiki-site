@@ -3,7 +3,7 @@
 # initiates a lateral every 0.8 cm on alternating sides; each lateral grows at a rate proportional to the
 # local nitrate concentration and branches (second order) with a probability that increases with it.
 # (A) Uniform medium; (B) the same total nitrate concentrated in one patch (shaded): roots proliferate in
-# the patch and are suppressed elsewhere (systemic signalling is not modelled, only the local response).
+# the patch and are suppressed elsewhere (systemic signaling is not modeled, only the local response).
 import matplotlib.pyplot as plt
 import numpy as np
 

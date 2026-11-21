@@ -3,7 +3,7 @@
 # factor (1 + 0.033 cos(2 pi n / 365)).
 # A: daily mean top-of-atmosphere insolation Q = (S0 / pi) E (h0 sin(phi) sin(delta) + cos(phi) cos(delta) sin(h0)),
 #    cos(h0) = -tan(phi) tan(delta), S0 = 1361 W m^-2, as a function of latitude and day of year.
-# B: day length (hours between sunrise and sunset, sun's centre at -0.833 deg to allow for refraction and the
+# B: day length (hours between sunrise and sunset, sun's center at -0.833 deg to allow for refraction and the
 #    solar disc) through the year at several northern latitudes.
 import numpy as np
 import matplotlib.pyplot as plt

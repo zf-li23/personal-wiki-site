@@ -1,5 +1,5 @@
 """The pull of the Recent (Section 31.1.2), simulated. Taxa originate and go extinct at the same constant
-rate (0.1 per taxon per Myr), so true diversity (grey) fluctuates around a constant level. Each taxon
+rate (0.1 per taxon per Myr), so true diversity (gray) fluctuates around a constant level. Each taxon
 leaves fossils as a Poisson process at rate 0.3 per Myr while it lives. Diversity per 5-Myr bin is
 then counted by the range-through method, from the first to the last fossil occurrence (blue), and
 again after every taxon alive today is extended from its last fossil to the present (orange), as

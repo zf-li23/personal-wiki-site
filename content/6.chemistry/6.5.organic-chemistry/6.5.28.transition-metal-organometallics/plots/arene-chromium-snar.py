@@ -11,7 +11,7 @@ s = Scheme()
 HEX = [(1.0, 0), (0.5, -0.87), (-0.5, -0.87), (-1.0, 0), (-0.5, 0.87), (0.5, 0.87)]
 
 
-STEMS = []  # eta6 bonds from the ring centres to chromium, drawn on the axes at the end
+STEMS = []  # eta6 bonds from the ring centers to chromium, drawn on the axes at the end
 
 
 def chromium(xy):

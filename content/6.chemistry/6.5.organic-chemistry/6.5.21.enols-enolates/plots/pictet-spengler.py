@@ -1,8 +1,8 @@
-"""Pictet-Spengler cyclisation of dopamine with acetaldehyde. The iminium ion formed from the amine
+"""Pictet-Spengler cyclization of dopamine with acetaldehyde. The iminium ion formed from the amine
 and the aldehyde is attacked by the electron-rich catechol ring at the carbon ortho to the side chain
 and para to a hydroxy group: the ring pi electrons form the new C-C bond and the C=N electrons move
-onto nitrogen. The arenium ion (its positive charge delocalised onto the para oxygen) loses a proton
-and rearomatises, giving salsolinol, a 1,2,3,4-tetrahydroisoquinoline."""
+onto nitrogen. The arenium ion (its positive charge delocalized onto the para oxygen) loses a proton
+and rearomatizes, giving salsolinol, a 1,2,3,4-tetrahydroisoquinoline."""
 
 from wikichem import Scheme
 

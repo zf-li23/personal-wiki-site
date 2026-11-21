@@ -3,7 +3,7 @@ tetrode-like probe with four channels fire as Poisson processes (8, 5 and 3 Hz, 
 period); each has its own spike waveform, with a different amplitude on each channel, and the
 recording adds Gaussian noise (sd 20 uV). A: 300 ms of one channel with the detection threshold at
 -4.5 times the robust noise estimate median(|x|)/0.6745. B: the detected waveforms projected on
-their first two principal components, coloured by the cluster found by a Gaussian mixture model
+their first two principal components, colored by the cluster found by a Gaussian mixture model
 fitted with EM (3 components). C: mean waveform of each cluster on the four channels. D:
 autocorrelogram of the spike times of cluster 1: the empty bins at |lag| < 2 ms (refractoriness)
 show that the cluster is a single unit."""

@@ -1,5 +1,5 @@
 # Tolerance curves (schematic models).
-# A: Shelford's law of tolerance. Performance along an environmental gradient, modelled as a Gaussian
+# A: Shelford's law of tolerance. Performance along an environmental gradient, modeled as a Gaussian
 #    P(x) = exp(-(x - 50)^2 / (2 * 15^2)); zones: optimum (P > 0.8), physiological stress, intolerance
 #    (P < 0.05, beyond the limits of tolerance). Survival (S), growth (G) and reproduction (R) are possible
 #    over successively narrower ranges (thresholds 0.05, 0.4, 0.75 of the same curve).

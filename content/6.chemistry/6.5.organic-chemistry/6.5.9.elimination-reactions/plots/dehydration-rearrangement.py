@@ -1,5 +1,5 @@
-"""Acid-catalysed dehydration of 3,3-dimethylbutan-2-ol (E1 with rearrangement). The protonated alcohol
-loses water to give a secondary carbocation; a methyl group on the neighbouring quaternary carbon
+"""Acid-catalyzed dehydration of 3,3-dimethylbutan-2-ol (E1 with rearrangement). The protonated alcohol
+loses water to give a secondary carbocation; a methyl group on the neighboring quaternary carbon
 migrates with its bonding pair (1,2-methyl shift), giving a more stable tertiary cation; loss of a
 proton from the adjacent CH gives 2,3-dimethylbut-2-ene (Zaitsev product, 64%)."""
 

@@ -8,7 +8,7 @@
 #   (spinodal decomposition), giving elongated, partly interconnected domains that pinch off and coarsen.
 # Bottom row: phi_0 = 0.12, inside the spinodal but off-critical: the dense phase appears as droplets that grow
 #   and coarsen (small droplets dissolve and large ones grow).
-# Colour: polymer volume fraction phi (dense phase dark); times in the same dimensionless units.
+# Color: polymer volume fraction phi (dense phase dark); times in the same dimensionless units.
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap

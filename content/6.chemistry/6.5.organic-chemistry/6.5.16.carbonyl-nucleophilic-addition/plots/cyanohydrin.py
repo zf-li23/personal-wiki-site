@@ -1,4 +1,4 @@
-"""Base-catalysed cyanohydrin formation (Lapworth). Cyanide, not HCN, is the nucleophile: it adds
+"""Base-catalyzed cyanohydrin formation (Lapworth). Cyanide, not HCN, is the nucleophile: it adds
 to the carbonyl carbon of acetone, and the alkoxide takes a proton from HCN, which regenerates
 cyanide. Each step is reversible."""
 

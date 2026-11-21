@@ -1,7 +1,7 @@
 """Home range and core area from simulated radio-tracking fixes.
 
-Two neighbouring animals move around their own centres of activity (a discrete Ornstein-Uhlenbeck process, i.e.
-a random walk with attraction to a home site, plus a second, smaller attraction to a favoured spot such as a den).
+Two neighboring animals move around their own centers of activity (a discrete Ornstein-Uhlenbeck process, i.e.
+a random walk with attraction to a home site, plus a second, smaller attraction to a favored spot such as a den).
 A: the fixes, the minimum convex polygon (MCP) of each animal and the 95 % and 50 % contours of a Gaussian
 kernel density estimate; the 50 % contour is the core area. The home ranges overlap, the core areas do not.
 B: estimated area against the number of fixes for animal 1: both estimates grow with sampling effort, the MCP

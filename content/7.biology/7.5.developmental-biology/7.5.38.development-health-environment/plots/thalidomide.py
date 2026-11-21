@@ -1,7 +1,7 @@
 """Thalidomide as a molecular glue (SBGN process description, simplified).
 
 Cereblon (CRBN) is the substrate receptor of the cullin-RING ubiquitin ligase CRL4 (CUL4A, DDB1, RBX1).
-Thalidomide (or its analogues lenalidomide and pomalidomide) binds a pocket of CRBN and creates a new surface that
+Thalidomide (or its analogs lenalidomide and pomalidomide) binds a pocket of CRBN and creates a new surface that
 recruits proteins the ligase normally ignores ("neosubstrates") through a beta-hairpin zinc-finger degron.
 The neosubstrate is polyubiquitinated and degraded by the proteasome. Right: neosubstrates and consequences:
 SALL4 (limb, ear, heart and kidney development; its loss-of-function syndromes phenocopy thalidomide embryopathy;

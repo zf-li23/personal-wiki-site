@@ -1,5 +1,5 @@
 """Birth prevalence of the common congenital heart defects (per 1000 live births; approximate pooled estimates
-after van der Linde et al. 2011, total about 9 per 1000), coloured by the developmental process most often at
+after van der Linde et al. 2011, total about 9 per 1000), colored by the developmental process most often at
 fault: septation and the endocardial cushions, the outflow tract (second heart field and cardiac neural crest),
 the valves, the ductus arteriosus (failure to close after birth) and left-heart growth, which depends on flow."""
 import matplotlib.pyplot as plt

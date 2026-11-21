@@ -1,6 +1,6 @@
 """Reduction of a nitrile to a primary amine with LiAlH4. Top: hydride from AlH4- adds to the
-nitrile carbon and the C=N pi electrons move onto nitrogen, giving an imine anion bound to aluminium.
-Bottom: a second hydride adds to the C=N carbon of this imine salt, giving a dianionic aluminium
+nitrile carbon and the C=N pi electrons move onto nitrogen, giving an imine anion bound to aluminum.
+Bottom: a second hydride adds to the C=N carbon of this imine salt, giving a dianionic aluminum
 amide, which aqueous work-up protonates to pentan-1-amine; the carbon chain gains a CH2 relative to
 the alkyl halide the nitrile was made from."""
 

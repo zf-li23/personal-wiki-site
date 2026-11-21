@@ -10,8 +10,8 @@ ME = "#dc2626"
 
 
 def newman(ax, cx, cy, w, h, front, back, phi):
-    """Newman projection in a small inset centred at data point (cx, cy): front bonds meet at the
-    centre, back bonds start at the circle. Labels run clockwise from 12 o'clock; phi rotates the back carbon."""
+    """Newman projection in a small inset centered at data point (cx, cy): front bonds meet at the
+    center, back bonds start at the circle. Labels run clockwise from 12 o'clock; phi rotates the back carbon."""
     ink = plt.rcParams["text.color"]
     sub = ax.inset_axes([cx - w / 2, cy - h / 2, w, h], transform=ax.transData)
     sub.set_xlim(-2.6, 2.6)

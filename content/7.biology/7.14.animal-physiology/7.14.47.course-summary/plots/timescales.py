@@ -2,7 +2,7 @@
 
 Each bar spans the approximate range of the response time (latency to full correction) of one
 mechanism, as given in the chapters of this course; values are order-of-magnitude ranges.
-Colours mark the carrier of the signal: neural, chemical (buffers and local), hormonal, renal
+Colors mark the carrier of the signal: neural, chemical (buffers and local), hormonal, renal
 and cellular (production and growth).
 """
 import matplotlib.pyplot as plt

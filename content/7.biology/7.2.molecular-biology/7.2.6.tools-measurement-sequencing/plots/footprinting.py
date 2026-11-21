@@ -1,10 +1,10 @@
-# DNase I footprinting and gel-shift binding, simulated. A DNA fragment of 120 nt is labelled at one 5' end;
+# DNase I footprinting and gel-shift binding, simulated. A DNA fragment of 120 nt is labeled at one 5' end;
 # DNase I cuts each phosphodiester with the same small probability, so the number of cuts per molecule is
-# Poisson distributed (mean lambda) and the labelled fragment ends at the first cut from the label. A: lanes of
-# a sequencing gel (band intensity = fraction of labelled fragments of each length) for naked DNA and for DNA
+# Poisson distributed (mean lambda) and the labeled fragment ends at the first cut from the label. A: lanes of
+# a sequencing gel (band intensity = fraction of labeled fragments of each length) for naked DNA and for DNA
 # with a protein covering positions 50-70 (no cuts there): the protected positions leave a gap, the footprint.
 # B: the band intensity along the ladder for lambda = 0.5 (single-hit conditions) and lambda = 5: with heavy
-# digestion nearly every labelled fragment is short and the distal part of the ladder, including the
+# digestion nearly every labeled fragment is short and the distal part of the ladder, including the
 # footprint, disappears. C: fraction of DNA shifted in a gel-shift assay against protein concentration,
 # theta = [P] / ([P] + K_D) with K_D = 10 nM, read at half-shift when the DNA concentration is far below K_D.
 import numpy as np
@@ -21,7 +21,7 @@ def ladder(lam, protected=None):
     if protected is not None:
         q[protected[0]:protected[1]] = 0.0
     surv = np.cumprod(np.r_[1.0, 1 - q[:-1]])
-    return surv * q  # probability the first cut is at bond i (labelled fragment of length i)
+    return surv * q  # probability the first cut is at bond i (labeled fragment of length i)
 
 
 fig, ax = bio.canvas(21.0, 9.8)

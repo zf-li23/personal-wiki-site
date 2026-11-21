@@ -12,7 +12,7 @@
 # C: energy of 30 independent annealing runs against step (thin lines) and the temperature schedule
 #    (dashed, right axis); the fraction ending in the global funnel is given in the title, compared with
 #    a rapid quench (T = 0.05 throughout). Unsuccessful annealing runs end in the wider, shallower
-#    funnel: at intermediate temperatures its larger basin (higher entropy) is favoured, and by the time
+#    funnel: at intermediate temperatures its larger basin (higher entropy) is favored, and by the time
 #    the deeper funnel would win, barriers can no longer be crossed.
 import matplotlib.pyplot as plt
 import numpy as np

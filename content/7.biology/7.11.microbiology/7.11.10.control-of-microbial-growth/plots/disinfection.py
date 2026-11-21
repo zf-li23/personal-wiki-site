@@ -6,7 +6,7 @@
 #    n > 1 dilution weakens the agent more than proportionally (phenols and alcohols have large n), for n < 1
 #    less than proportionally.
 # C: the approximate order of resistance of microorganisms and infectious agents to chemical disinfectants
-#    (the commonly cited hierarchy; the order of neighbouring groups depends on the agent).
+#    (the commonly cited hierarchy; the order of neighboring groups depends on the agent).
 import matplotlib.pyplot as plt
 import numpy as np
 

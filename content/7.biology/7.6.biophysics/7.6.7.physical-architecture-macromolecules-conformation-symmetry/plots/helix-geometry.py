@@ -6,7 +6,7 @@ residue i+1 is found by least squares (Kabsch); its rotation angle and its trans
 rotation axis are the twist per residue and the rise per residue (Chasles' theorem).
 A: CA traces of five regular conformations viewed perpendicular to the computed axis.
 B: helical net of the alpha helix (the cylinder through the CA atoms cut along a line and unrolled),
-with the i -> i+3 and i -> i+4 neighbours. C: computed parameters.
+with the i -> i+3 and i -> i+4 neighbors. C: computed parameters.
 """
 
 import numpy as np

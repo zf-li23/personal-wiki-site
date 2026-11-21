@@ -3,7 +3,7 @@
 Left: the three stages of catabolism converge (I: macromolecules hydrolyzed to building blocks;
 II: building blocks degraded to acetyl-CoA; III: citric acid cycle and oxidative phosphorylation,
 ending in CO2, H2O and NH3). Right: anabolism diverges from a few precursors to the macromolecules
-of the cell. Centre: the energy released by catabolism is carried as ATP and as reducing power
+of the cell. Center: the energy released by catabolism is carried as ATP and as reducing power
 (NADH, NADPH) to biosynthesis and other work, which return ADP + Pi and NAD(P)+."""
 
 import wikibio as bio
@@ -45,7 +45,7 @@ for (t, x) in macro:
     bio.box(ax, (x, 10.0), 2.6, 0.95 if "\n" in t else 0.8, "protein", t, size="small")
     bio.arrow(ax, (x, 6.8), (x, 9.5), kind="process")
 
-# --- the two currencies (centre) -------------------------------------------------------------------
+# --- the two currencies (center) -------------------------------------------------------------------
 cx = 11.1
 bio.box(ax, (cx, 9.2), 2.2, 0.85, "atp", "ATP", size="normal")
 bio.box(ax, (cx, 6.4), 2.2, 0.85, "neutral", "ADP + Pᵢ", size="normal")

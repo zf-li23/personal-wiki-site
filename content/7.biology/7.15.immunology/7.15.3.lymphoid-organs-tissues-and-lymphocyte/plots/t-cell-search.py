@@ -1,4 +1,4 @@
-# T cells searching for antigen-presenting dendritic cells in a lymph node, modelled as a persistent
+# T cells searching for antigen-presenting dendritic cells in a lymph node, modeled as a persistent
 # random walk (speed v, direction persistence tau_p) in a periodic cube of volume 1e8 um^3 with n static
 # targets of contact radius a. A: projected trajectories. B: fraction of T cells that have not yet found a
 # target, simulation vs the Smoluchowski approximation exp(-k t), k = 4 pi D a rho, D = v^2 tau_p / 3.

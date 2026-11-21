@@ -5,7 +5,7 @@ r(ITD) = r0 + r1 exp(kappa (cos 2 pi f (ITD - d) - 1)), r0 = 5 Hz, r1 = 100 Hz, 
 Place code (Jeffress): 20 neurons with best delays d spread evenly over the physiological range.
 Two-channel code: 10 neurons per hemisphere, best interaural phase difference +-pi/4 (best delays
 +-250 us, outside the physiological range), as found by Brand et al. (2002) and argued for by
-Harper and McAlpine (2004). A: tuning curves (grey band: physiological range). B: difference of the
+Harper and McAlpine (2004). A: tuning curves (gray band: physiological range). B: difference of the
 mean rates of the two channels, a monotonic read-out of ITD. C: Fisher information of the whole
 population for Poisson spike counts in 100 ms, I_F = T sum r'^2 / r, and the corresponding
 Cramer-Rao bound on the standard deviation of an unbiased ITD estimate.

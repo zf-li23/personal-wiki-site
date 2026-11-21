@@ -3,7 +3,7 @@
 Epinephrine (and glucagon) raise cAMP and activate PKA, which phosphorylates perilipin 1 on the surface of
 the lipid droplet and hormone-sensitive lipase (HSL). Phosphorylated perilipin releases CGI-58, which binds
 and activates adipose triglyceride lipase (ATGL), and lets phosphorylated HSL reach the droplet. ATGL
-hydrolyses triacylglycerol to diacylglycerol, HSL diacylglycerol to monoacylglycerol, monoacylglycerol
+hydrolyzes triacylglycerol to diacylglycerol, HSL diacylglycerol to monoacylglycerol, monoacylglycerol
 lipase (MGL) monoacylglycerol to glycerol; each step releases a fatty acid. Insulin lowers cAMP through
 phosphodiesterase 3B. Fatty acids leave bound to serum albumin; glycerol goes to the liver.
 """

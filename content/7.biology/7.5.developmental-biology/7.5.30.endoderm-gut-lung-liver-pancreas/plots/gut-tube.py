@@ -5,7 +5,7 @@ dilation of the foregut; the hepatic diverticulum (with the gallbladder) and the
 ventrally and the dorsal pancreatic bud dorsally near the foregut-midgut junction; the midgut is connected to the
 yolk sac by the yolk stalk, and the allantois leaves the hindgut ventrally near the cloaca. Below: transcription
 factors that divide the endoderm (Sox2 in the foregut, Nkx2-1 in lung and thyroid, Hhex in liver, Pdx1 in the
-posterior foregut, Cdx2 in midgut and hindgut), set by graded Wnt, FGF and BMP signalling, high posteriorly, and
+posterior foregut, Cdx2 in midgut and hindgut), set by graded Wnt, FGF and BMP signaling, high posteriorly, and
 by retinoic acid."""
 import numpy as np
 import wikibio as bio

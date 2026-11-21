@@ -1,5 +1,5 @@
 # Antennae and tarsal formulae of some beetle families (schematic, drawn with wikibio.zoomorph.antenna;
-# scape, pedicel and flagellum coloured). Antennal type and the number of tarsomeres on fore, middle and
+# scape, pedicel and flagellum colored). Antennal type and the number of tarsomeres on fore, middle and
 # hind legs (written as true count, with the apparent count where a tarsomere is minute and hidden) are the first characters used to place a beetle in its family.
 import wikibio as bio
 from wikibio import zoomorph as zm

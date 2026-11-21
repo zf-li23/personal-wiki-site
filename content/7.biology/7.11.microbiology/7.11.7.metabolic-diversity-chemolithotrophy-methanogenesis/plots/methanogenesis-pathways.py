@@ -1,6 +1,6 @@
 """Three substrates, one terminal step: the pathways of methanogenesis (simplified).
 
-Centre, hydrogenotrophic methanogenesis (CO2 + 4 H2): CO2 is bound to methanofuran (MFR) and reduced to
+Center, hydrogenotrophic methanogenesis (CO2 + 4 H2): CO2 is bound to methanofuran (MFR) and reduced to
 the formyl level with reduced ferredoxin (Fd); the formyl group moves to tetrahydromethanopterin (H4MPT) and is
 reduced through methenyl- and methylene- to methyl-H4MPT with reduced coenzyme F420. The membrane-bound
 methyl-H4MPT:coenzyme M methyltransferase (Mtr) transfers the methyl group to coenzyme M and pumps Na+.

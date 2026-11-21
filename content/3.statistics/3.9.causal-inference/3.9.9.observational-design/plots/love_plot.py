@@ -71,7 +71,7 @@ fig, ax = plt.subplots(figsize=(7, 3.8))
 ypos = np.arange(len(names))[::-1]
 for label, values, marker, colour in rows:
     ax.plot(values, ypos, marker, color=colour, label=label, ms=7, ls="none")
-ax.axvline(0.1, color="grey", ls="--", lw=1)
+ax.axvline(0.1, color="gray", ls="--", lw=1)
 ax.set_yticks(ypos)
 ax.set_yticklabels(names)
 ax.set_xlabel("absolute normalized difference")

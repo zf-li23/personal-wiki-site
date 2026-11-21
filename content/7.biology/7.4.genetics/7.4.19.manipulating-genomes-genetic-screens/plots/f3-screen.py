@@ -10,7 +10,7 @@ LAB = {"*": "receptor", "+": "dna", "CyO": "neutral"}
 
 
 def pair(x, y, left, right, length=1.5):
-    """Two homologous chromosomes 2 side by side, labelled under each."""
+    """Two homologous chromosomes 2 side by side, labeled under each."""
     for dx, name in ((-0.32, left), (0.32, right)):
         G.chromosome(ax, (x + dx, y), length=length, centromere=0.45, width=0.34, token=LAB[name], sister=False)
         bio.label(ax, (x + dx, y - length / 2 - 0.3), name if name != "*" else "$*$", size="small", italic=name == "CyO")

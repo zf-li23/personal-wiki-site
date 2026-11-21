@@ -5,7 +5,7 @@ LINK = "#94a3b8"
 W = 0.16  # width of one orbital line
 GAP = 0.04
 
-# (x centre, energy in Dq, number of degenerate orbitals, label)
+# (x center, energy in Dq, number of degenerate orbitals, label)
 columns = {
     "tetrahedral": (0.0, [(1.78, 3, r"$t_2$" "\n" r"$d_{xy}, d_{yz}, d_{xz}$"), (-2.67, 2, r"$e$" "\n" r"$d_{z^2}, d_{x^2-y^2}$")]),
     "spherical": (2.3, [(0.0, 5, "")]),

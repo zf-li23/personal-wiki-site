@@ -3,7 +3,7 @@
 Community matrices A = -I + M: self-regulation -1 on the diagonal, and each off-diagonal entry is
 non-zero with probability C (connectance) and then drawn from N(0, sigma^2).
 A: eigenvalues of one matrix with S = 250, C = 0.2 and sigma sqrt(SC) = 0.8; by the circular law they
-fill a disk of radius sigma sqrt(SC) centred at -1 (circle), which lies in the left half-plane: the
+fill a disk of radius sigma sqrt(SC) centered at -1 (circle), which lies in the left half-plane: the
 equilibrium is stable.
 B: fraction of 200 (S = 10), 120 (S = 40) or 30 (S = 150) random matrices that are stable
 (all eigenvalues with negative real part), against sigma sqrt(SC), with C = 0.3. The transition

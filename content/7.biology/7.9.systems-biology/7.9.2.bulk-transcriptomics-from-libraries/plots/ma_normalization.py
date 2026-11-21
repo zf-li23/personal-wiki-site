@@ -1,8 +1,8 @@
-"""Normalization of microarray intensities (simulated two-colour array, 5000 genes, 3% of them truly
+"""Normalization of microarray intensities (simulated two-color array, 5000 genes, 3% of them truly
 changed by a factor of 4 in either direction). A: the M-A plot before normalization, M = log2(R/G),
 A = (log2 R + log2 G)/2; an intensity-dependent dye bias bends the cloud, and the LOWESS curve
 (locally weighted linear regression, span 0.3) estimates it. B: after subtracting the LOWESS curve the
-unchanged genes are centred on M = 0 at every intensity. C, D: quantile normalization of four
+unchanged genes are centered on M = 0 at every intensity. C, D: quantile normalization of four
 single-channel arrays. When the arrays differ only technically (C, densities of log2 intensities
 before, thin, and after, thick), it makes the distributions identical; when 30% of the genes truly
 rise twofold in arrays 3 and 4 (D), forcing identical distributions moves the reference: the changed

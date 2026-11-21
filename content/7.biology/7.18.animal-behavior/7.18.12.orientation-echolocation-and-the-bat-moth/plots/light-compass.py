@@ -1,7 +1,7 @@
 """Two explanations for why insects circle a lamp.
 
 A: light-compass reaction. The insect keeps the light at a fixed angle alpha to its heading.
-With the sun (parallel rays) the path is straight; with a lamp a few metres away the bearing
+With the sun (parallel rays) the path is straight; with a lamp a few meters away the bearing
 changes as the insect moves, and keeping alpha fixed produces a logarithmic spiral
 (alpha < 90 deg: inward, 90 deg: circle, > 90 deg: outward).
 B: dorsal light response. The insect turns its back toward the brightest part of the visual

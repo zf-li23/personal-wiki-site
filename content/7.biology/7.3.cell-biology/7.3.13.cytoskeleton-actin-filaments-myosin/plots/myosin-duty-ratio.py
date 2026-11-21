@@ -10,7 +10,7 @@ moves the filament by d during its attached time, so the filament slides at d / 
 one head is bound and stops when none is (no inertia at low Reynolds number). With enough heads
 the velocity saturates at d / t_on = 5 um/s, set by how fast heads detach, not by their number
 (Uyeda, Kron and Spudich 1990); below that it falls as attachment becomes intermittent.
-C: a simulated trace of myosin V walking hand-over-hand at 1 uM ATP: the centre of the molecule moves in
+C: a simulated trace of myosin V walking hand-over-hand at 1 uM ATP: the center of the molecule moves in
 36 nm steps; a fluorescent label on one head moves 72 nm on every second step (as measured by Yildiz et
 al. 2003). Dwell times are exponential, set mainly by ADP release and ATP binding.
 """

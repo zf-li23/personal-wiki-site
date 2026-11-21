@@ -11,7 +11,7 @@ from wikibio import quant
 
 P = bio.P
 fig, ax = bio.canvas(16.0, 9.6)
-x = np.logspace(-6, 0, 300)  # metres
+x = np.logspace(-6, 0, 300)  # meters
 D = 3e-10
 pl = quant.Plot(ax, (2.6, 1.6, 11.0, 6.8), xlim=(1e-6, 1.0), ylim=(1e-4, 1e6), xlog=True, ylog=True,
                 xlabel="distance x (log scale)", ylabel="time t / s (log scale)",

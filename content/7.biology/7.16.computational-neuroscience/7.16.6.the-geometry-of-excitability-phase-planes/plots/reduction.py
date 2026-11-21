@@ -1,8 +1,8 @@
 """Two-variable models of the action potential. A: the Rinzel reduction of the Hodgkin-Huxley model:
 m = m_inf(V) and h = 0.89 - 1.1 n turn the four-variable model into a planar system in (V, n). Shown:
 the nullclines of the reduced system (I = 0, rest -65 mV), the projection of the full 4D HH trajectory after
-a 20 uA/cm2, 0.5 ms pulse in grey, and the trajectory of the reduced model
-started from the same state after the pulse (colour). B: voltage of the full and the reduced model.
+a 20 uA/cm2, 0.5 ms pulse in gray, and the trajectory of the reduced model
+started from the same state after the pulse (color). B: voltage of the full and the reduced model.
 C: FitzHugh-Nagumo model dv/dt = v - v^3/3 - w + I, dw/dt = 0.08 (v + 0.7 - 0.8 w): nullclines for
 I = 0 (rest) and I = 0.5 (limit cycle), and the limit cycle (relaxation oscillation).
 D: time courses of v for I = 0 with a pulse, and for I = 0.5."""

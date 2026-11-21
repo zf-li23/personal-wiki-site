@@ -1,4 +1,4 @@
-"""Chemical control of breathing: CO2-O2 interaction and ventilatory acclimatisation to altitude (illustrative).
+"""Chemical control of breathing: CO2-O2 interaction and ventilatory acclimatization to altitude (illustrative).
 
 Controller (after Lloyd and Cunningham 1963): VE = S0 (1 + A / (PaO2 - 32)) (PaCO2 - B), VE >= 0,
 S0 = 0.75 L/(min mmHg), A = 40 mmHg, B = 35 mmHg (the apnoeic threshold set by the central chemoreceptors).
@@ -7,9 +7,9 @@ PAO2 = PIO2 - 1.2 PaCO2 (alveolar gas equation, R = 0.8), PaO2 = PAO2 - 5 mmHg.
 A: ventilation against PaCO2 at fixed PaO2 (the "fan"), with the metabolic hyperbola; the operating point at sea
 level is the intersection for PaO2 = 95. B: ventilation against PaO2 with PaCO2 held at 40 (isocapnic) and with
 PaCO2 free to fall (poikilocapnic, the real situation without added CO2).
-C: ascent to 4500 m (barometric pressure 430 mmHg, PIO2 = 80 mmHg) at day 0. Acclimatisation: B falls from 35 to
+C: ascent to 4500 m (barometric pressure 430 mmHg, PIO2 = 80 mmHg) at day 0. Acclimatization: B falls from 35 to
 27 mmHg (tau = 1.5 d; renal HCO3- excretion and CSF pH correction) and A rises from 40 to 70 mmHg
-(tau = 3 d; carotid body sensitisation). Each day the steady state is solved.
+(tau = 3 d; carotid body sensitization). Each day the steady state is solved.
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -94,7 +94,7 @@ ax.set_ylim(0, 105)
 ax.set_xlabel("Days")
 ax.set_ylabel("Arterial partial pressure / mmHg")
 ax.legend(frameon=False, fontsize=8, loc="center right")
-ax.set_title("C  Ventilatory acclimatisation", loc="left", fontsize=10)
+ax.set_title("C  Ventilatory acclimatization", loc="left", fontsize=10)
 for a in axs:
     a.grid(True, alpha=0.3)
 fig.tight_layout()

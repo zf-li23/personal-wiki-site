@@ -1,7 +1,7 @@
 # Statistical positioning (Kornberg and Stryer 1988) computed exactly. Nucleosomes are hard rods of 147 bp on a
 # 1-bp lattice with no sequence preference; a bound factor (a barrier) occupies the left end. The grand partition
 # function of a segment obeys Z(i) = Z(i-1) + z Z(i-147), and forward-backward recursion gives the probability
-# that a nucleosome is centred (its dyad) on each base pair. Only the barrier and the packing density (fugacity z, chosen so
+# that a nucleosome is centered (its dyad) on each base pair. Only the barrier and the packing density (fugacity z, chosen so
 # that the mean linker is about 40 bp or 20 bp) are imposed, yet nucleosomes next to the barrier are well
 # positioned: the dyad density oscillates with the repeat length and the order decays over a few nucleosomes, faster at
 # lower density. The profiles are blurred by a 15 bp Gaussian, about the resolution of nucleosome maps. The first peak is the "+1 nucleosome" of a promoter.
@@ -40,7 +40,7 @@ a = C.axes_at(ax, (1.6, 1.3, 16.6, 4.8))
 x = np.arange(L)
 for logz, tok in [(0.0, "neutral"), (3.0, "chromatin")]:
     st, cov = coverage(logz)
-    dyad = np.r_[np.zeros(w // 2), st[:-(w // 2)]] * 100  # nucleosome centres per 100 bp
+    dyad = np.r_[np.zeros(w // 2), st[:-(w // 2)]] * 100  # nucleosome centers per 100 bp
     k = np.arange(-60, 61)
     g = np.exp(-k ** 2 / (2 * 15.0 ** 2))
     dyad = np.convolve(dyad, g / g.sum(), mode="same")  # 15 bp blur, like the resolution of MNase-seq

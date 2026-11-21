@@ -1,6 +1,6 @@
 """Timeline of eye development in the mouse (approximate; embryonic day E, postnatal day P). Top: the inductive
 sequence, from the specification of a single eye field in the anterior neural plate to the lens vesicle and the
-first lens fibres. Bottom: the birth periods of the seven main cell classes of the retina, which are born in a
+first lens fibers. Bottom: the birth periods of the seven main cell classes of the retina, which are born in a
 conserved, overlapping order from the same multipotent progenitors: ganglion cells, horizontal cells, cones and
 amacrine cells first, rods, bipolar cells and Mueller glia last (after Young 1985 and Cepko and colleagues)."""
 import numpy as np

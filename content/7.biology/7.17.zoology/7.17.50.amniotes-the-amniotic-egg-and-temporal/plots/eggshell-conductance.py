@@ -1,7 +1,7 @@
-# Model: allometry of gas exchange across bird eggshells. (A) Water-vapour conductance of the shell
+# Model: allometry of gas exchange across bird eggshells. (A) Water-vapor conductance of the shell
 # G = 0.432 W^0.780 (mg per day per Torr; W = fresh egg mass in g; Ar et al. 1974) and incubation time
 # I = 12.03 W^0.217 (days; Rahn & Ar 1974). (B) Fraction of the initial egg mass lost as water during
-# incubation, M/W = G * dP * I / W with a vapour-pressure difference dP = 34 Torr between egg and nest air:
+# incubation, M/W = G * dP * I / W with a vapor-pressure difference dP = 34 Torr between egg and nest air:
 # because the exponents of G and I add to about 1, the predicted loss is nearly independent of egg size
 # (about 18 %), close to the measured average of 15-18 %. Egg masses marked: hummingbird 0.5 g, chicken 60 g,
 # ostrich 1500 g.

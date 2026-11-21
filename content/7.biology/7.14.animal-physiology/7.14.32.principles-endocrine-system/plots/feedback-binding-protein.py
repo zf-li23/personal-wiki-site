@@ -5,7 +5,7 @@
 # capacity of plasma. du/dt = k0 (s(F) - F), k0 = ln 2 / 7 d (a thyroxine-like half-life).
 # A: the steady state is where secretion meets clearance; the set point moves when the feedback
 #    sensitivity (K) or the clearance changes, but not when the binding capacity changes.
-# B: binding capacity doubled (as TBG rises with oestrogen in pregnancy) or halved at day 5.
+# B: binding capacity doubled (as TBG rises with estrogen in pregnancy) or halved at day 5.
 import numpy as np
 
 import wikibio as bio

@@ -1,7 +1,7 @@
 """Interrupted electrophilic substitution of furan (Br2 in methanol). The furan pi electrons attack
 bromine at C2, pushed by the ring oxygen lone pair; the sigma complex is an oxocarbenium ion with the
-positive charge stabilised by oxygen at C5. Because rearomatisation gains little (furan has a small
-aromatic stabilisation), methanol captures C5 instead of a proton being lost: a 1,4-addition. A second
+positive charge stabilized by oxygen at C5. Because rearomatization gains little (furan has a small
+aromatic stabilization), methanol captures C5 instead of a proton being lost: a 1,4-addition. A second
 substitution of the allylic bromide by methanol gives 2,5-dimethoxy-2,5-dihydrofuran."""
 
 from wikichem import Scheme

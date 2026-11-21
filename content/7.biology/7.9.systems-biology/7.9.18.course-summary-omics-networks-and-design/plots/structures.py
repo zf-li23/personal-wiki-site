@@ -1,6 +1,6 @@
 """Recurring mathematical structures (columns) in the chapters 7.9.2-7.9.17 (rows). A dot means that
 the chapter develops or uses the structure in a numbered statement or a worked analysis; the list
-follows the index tables of section 18.3-18.5. Colours group the columns: statistics of the
+follows the index tables of section 18.3-18.5. Colors group the columns: statistics of the
 measurements, graphs and networks, dynamics."""
 
 import matplotlib.pyplot as plt

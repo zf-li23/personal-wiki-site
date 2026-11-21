@@ -4,7 +4,7 @@
 # 0.8, thresholded at the 60th percentile. Patches are 4-connected groups of habitat cells.
 # Metrics: number of patches NP, largest patch index LPI (% of the map), edge density ED (habitat /
 # non-habitat cell edges per cell), landscape shape index LSI = E / (4 sqrt(A)) of the habitat class,
-# and contagion (%), computed from the 4-neighbour adjacency of the two classes.
+# and contagion (%), computed from the 4-neighbor adjacency of the two classes.
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap

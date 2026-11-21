@@ -5,7 +5,7 @@ A: the lux circuit. LuxI synthesizes the acyl homoserine lactone 3-oxo-C6-HSL (d
 B: steady states of the scaled model da/dt = rho (1 + beta h(a)) - a, h(a) = a^2 / (1 + a^2), with
    beta = 20: autoinducer a against scaled cell density rho. Solid: stable, dashed: unstable. Between the
    two saddle-node points the system is bistable; arrows mark the jumps (hysteresis).
-C: a culture growing logistically (rho, grey) switches abruptly when rho crosses the upper fold; without
+C: a culture growing logistically (rho, gray) switches abruptly when rho crosses the upper fold; without
    feedback (beta = 0) the signal and the output rise gradually."""
 
 import numpy as np

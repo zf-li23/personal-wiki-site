@@ -4,7 +4,7 @@ telencephalon forms the cerebral hemispheres, the diencephalon the thalamus, hyp
 the metencephalon the cerebellum and pons, the myelencephalon the medulla. (B) Expression map of the
 midbrain-hindbrain region: the Otx2/Gbx2 border positions the isthmic organizer, which expresses Fgf8 (and Wnt1
 just anterior to it) and maintains Engrailed across the boundary; the hindbrain is segmented into rhombomeres
-r1-r7, with Krox20 (Egr2) in r3 and r5 and nested anterior limits of Hox paralogue groups 1-4 at rhombomere
+r1-r7, with Krox20 (Egr2) in r3 and r5 and nested anterior limits of Hox paralog groups 1-4 at rhombomere
 boundaries (group 1 at r3/r4, group 2 at r1/r2, group 3 at r4/r5, group 4 at r6/r7)."""
 import numpy as np
 import wikibio as bio

@@ -1,8 +1,8 @@
 """Three arrangements of the contractile filaments in animal muscle cells (schematic, not to scale).
-A: cross-striated muscle; sarcomeres of neighbouring myofibrils lie in register, so the dark A bands and the
+A: cross-striated muscle; sarcomeres of neighboring myofibrils lie in register, so the dark A bands and the
 light I bands form transverse stripes; below, one sarcomere between two Z lines, thick myosin filaments in
 the middle, thin actin filaments anchored at the Z lines. B: obliquely striated muscle (nematodes,
-annelids, many molluscs); the sarcomeres of neighbouring myofilament rows are staggered, so the bands run
+annelids, many molluscs); the sarcomeres of neighboring myofilament rows are staggered, so the bands run
 obliquely (helically around the cell); below, the staggered thick filaments and the dense bodies that take
 the place of Z lines. C: smooth muscle; thick and thin filaments are not aligned, and the thin filaments are
 anchored to dense bodies in the cytoplasm and at the membrane.

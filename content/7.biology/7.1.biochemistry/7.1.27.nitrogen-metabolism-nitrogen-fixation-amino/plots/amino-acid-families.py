@@ -2,7 +2,7 @@
 
 Precursors come from glycolysis (3-phosphoglycerate, phosphoenolpyruvate, pyruvate), the pentose phosphate
 pathway (ribose 5-phosphate, erythrose 4-phosphate) and the citric acid cycle (oxaloacetate,
-alpha-ketoglutarate). Each chip is one amino acid, coloured by its nutritional status in humans:
+alpha-ketoglutarate). Each chip is one amino acid, colored by its nutritional status in humans:
 essential (must be eaten), conditionally essential (needed in the diet in growth, illness or when its
 precursor is short) and nonessential. Isoleucine takes carbons from both pyruvate and threonine (oxaloacetate
 family); tyrosine is made in animals by hydroxylation of phenylalanine, and cysteine from the sulfur of

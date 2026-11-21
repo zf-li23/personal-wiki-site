@@ -3,7 +3,7 @@ the levels of the sections. Right, from bottom to top: (1) root: two xylem stran
 dark dot, at the outer ends: exarch) alternating with two phloem strands (orange); (2) lower hypocotyl:
 each xylem strand forks; (3) middle hypocotyl: the halves swing sideways and the protoxylem turns inwards
 while the phloem strands divide; (4) upper hypocotyl: four collateral bundles, phloem outside, xylem
-inside with endarch protoxylem, a pith in the centre; the bundles pass in pairs into the two cotyledons.
+inside with endarch protoxylem, a pith in the center; the bundles pass in pairs into the two cotyledons.
 """
 
 import math

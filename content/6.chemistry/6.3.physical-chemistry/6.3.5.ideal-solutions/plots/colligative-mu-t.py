@@ -1,7 +1,7 @@
 """Schematic chemical potential of the solvent against temperature at constant pressure.
 Each line has slope -S_m (S_gas > S_liquid > S_solid). A non-volatile solute that does not enter the
 solid lowers the liquid line by RT ln x_A (exaggerated here), so the liquid line meets the solid
-line at a lower T (freezing-point depression) and the vapour line at a higher T (boiling-point elevation)."""
+line at a lower T (freezing-point depression) and the vapor line at a higher T (boiling-point elevation)."""
 
 import numpy as np
 import matplotlib.pyplot as plt

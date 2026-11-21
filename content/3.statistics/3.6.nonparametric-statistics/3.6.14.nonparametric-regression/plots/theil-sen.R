@@ -15,7 +15,7 @@ y_bad <- y
 y_bad[(n - 2):n] <- rnorm(3, 0.5, 0.5)
 op <- par(mfrow = c(1, 2))
 for (yy in list(y, y_bad)) {
-  plot(x, yy, pch = 16, col = "grey50", ylim = range(c(y, y_bad)), ylab = "y")
+  plot(x, yy, pch = 16, col = "gray50", ylim = range(c(y, y_bad)), ylab = "y")
   abline(2, 0.8, lty = 3)
   abline(lm(yy ~ x), col = "steelblue", lwd = 2)
   abline(theil_sen(x, yy), col = "darkorange", lwd = 2)

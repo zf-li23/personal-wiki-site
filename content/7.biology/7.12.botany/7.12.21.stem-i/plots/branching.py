@@ -1,5 +1,5 @@
 # Growth habits and branching. Left: erect stem; twining stems around a support (morning glory type:
-# anticlockwise seen from above, a right-handed helix, Chinese "left-twining"; honeysuckle type:
+# counterclockwise seen from above, a right-handed helix, Chinese "left-twining"; honeysuckle type:
 # clockwise, a left-handed helix, "right-twining"; strands in front of the support solid, behind faded);
 # a climber holding on with tendrils; a creeping stem rooting at the nodes. Right: branching patterns as
 # module diagrams (wikibio.botany): monopodial, sympodial, false dichotomy (dichasial) and dichotomy.
@@ -51,7 +51,7 @@ def twiner(x, handed, label):
 
 twiner(4.6, +1, "Twining (morning glory)")
 twiner(8.0, -1, "Twining (honeysuckle)")
-for x, txt in ((4.6, "anticlockwise\nfrom above"), (8.0, "clockwise\nfrom above")):
+for x, txt in ((4.6, "counterclockwise\nfrom above"), (8.0, "clockwise\nfrom above")):
     bio.label(ax, (x, 11.8), txt, size="tiny", color=P.muted())
 # climber with tendrils on a trellis
 for yy in (3.5, 6.0, 8.5):

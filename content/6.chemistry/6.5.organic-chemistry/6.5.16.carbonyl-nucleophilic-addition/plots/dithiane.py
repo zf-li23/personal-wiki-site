@@ -1,5 +1,5 @@
 """Umpolung with 1,3-dithiane. Butyllithium removes the C2 proton of 2-phenyl-1,3-dithiane (the
-anion is stabilised by the two polarisable sulfur atoms); the lithiated dithiane, an acyl anion
+anion is stabilized by the two polarisable sulfur atoms); the lithiated dithiane, an acyl anion
 equivalent, alkylates 1-bromobutane by SN2; mercury(II)-assisted hydrolysis releases the ketone.
 The former aldehyde carbon has reacted as a nucleophile."""
 

@@ -1,6 +1,6 @@
 # Auxin flows and maxima at the two apical meristems (schematic, after Taiz et al. 6e, Figs 18.19 and 19.19;
 # Blilou et al. 2005; Reinhardt et al. 2003). (A) Arabidopsis root tip, longitudinal: auxin arrives through
-# the stele (PIN1), forms a maximum around the quiescent centre and columella, is redistributed laterally
+# the stele (PIN1), forms a maximum around the quiescent center and columella, is redistributed laterally
 # in the columella (PIN3, PIN4, PIN7), moves shootward in the lateral root cap and epidermis (AUX1, PIN2)
 # and partly refluxes into the stele through the cortex: the "reverse fountain". (B) Shoot apex, side view:
 # in the L1 layer PIN1 points towards a convergence point where the next primordium (I1) will form;
@@ -14,7 +14,7 @@ fig, ax = bio.canvas(17, 10)
 bio.panel(ax, "A", (0.1, 9.9))
 bio.panel(ax, "B", (9.2, 9.9))
 cx = 4.4
-# root tissues: bands (half-widths) from the centre outwards
+# root tissues: bands (half-widths) from the center outwards
 bands = [("stele", 0.75, "xylem"), ("pericycle", 0.95, "pericycle"), ("endodermis", 1.2, "endodermis"),
          ("cortex", 1.6, "cytoplasm"), ("epidermis", 1.95, "cell_wall"), ("lateral root cap", 2.3, "bract")]
 y0, y1 = 3.0, 9.2
@@ -25,7 +25,7 @@ for name, hw, tok in reversed(bands):
                                 facecolor=P.fill(tok), edgecolor=P.edge(tok), lw=0.9, zorder=2))
 # columella
 ax.add_patch(Ellipse((cx, 2.3), 1.9, 1.5, facecolor=P.fill("sepal"), edgecolor=P.edge("sepal"), lw=0.9, zorder=3))
-# quiescent centre
+# quiescent center
 ax.add_patch(FancyBboxPatch((cx - 0.45, 2.95), 0.9, 0.4, boxstyle="round,pad=0,rounding_size=0.1",
                             facecolor=P.fill("highlight"), edgecolor=P.edge("highlight"), lw=1.0, zorder=5))
 # auxin maximum (concentric tints)

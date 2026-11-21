@@ -1,6 +1,6 @@
 """The cross-bridge cycle of myosin II (Lymn and Taylor 1971), schematic. The actin filament has its plus
 end on the right; the thick filament (above) is pulled to the right relative to actin, i.e. myosin walks
-towards the plus end. One cycle hydrolyses one ATP and moves the filaments about 5-10 nm.
+towards the plus end. One cycle hydrolyzes one ATP and moves the filaments about 5-10 nm.
 
 1 Rigor: nucleotide-free head tightly bound, lever arm in the post-stroke position.
 2 ATP binds: affinity for actin falls and the head detaches.

@@ -11,7 +11,7 @@ P = bio.P
 fig, ax = bio.canvas(24, 9)
 
 t = np.linspace(0, 2 * np.pi, 400)
-# fish body: head at x=0, tail at x=6; centreline y=0
+# fish body: head at x=0, tail at x=6; centerline y=0
 xb = 3 + 3 * np.cos(t)
 yb = 1.5 * np.sin(t) * (1 - 0.35 * (xb / 6)) * np.sqrt(np.clip(1 - ((xb - 3) / 3.05) ** 6, 0, 1)) ** 0.2
 tail_x = np.array([5.6, 7.2, 6.7, 7.2, 5.6])

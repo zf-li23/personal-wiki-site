@@ -1,7 +1,7 @@
 """Growth of receptive field size along a convolutional hierarchy.
 
 For a stack of layers with kernel size K_l and stride s_l, the receptive field r_l (in input pixels)
-and the jump j_l (input distance between neighbouring units) obey
+and the jump j_l (input distance between neighboring units) obey
     r_l = r_(l-1) + (K_l - 1) j_(l-1),   j_l = j_(l-1) s_l,   r_0 = j_0 = 1.
 A: three architectures: 3x3 convolutions with stride 1 (r = 1 + 2L), the same with 2x2 pooling
 (stride 2) after every second layer, and an AlexNet-like stack (kernels 11, 3, 5, 3, 3, 3, 3, 3 with

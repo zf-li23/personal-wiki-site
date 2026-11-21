@@ -4,7 +4,7 @@ to the electrophilic central carbon of the uronium salt and the HOAt anion is ex
 O-acyl isouronium ion. Middle: the HOAt anion attacks its acyl carbon; the tetrahedral
 intermediate expels tetramethylurea, giving the OAt active ester. Bottom: the amine attacks the
 active ester while one N-H hydrogen bonds to the pyridine nitrogen of the leaving group (dashed),
-which positions and activates the amine; this neighbouring-group assistance is why HOAt-based
+which positions and activates the amine; this neighboring-group assistance is why HOAt-based
 reagents couple faster and with less epimerization than HOBt-based ones."""
 
 import numpy as np

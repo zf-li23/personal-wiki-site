@@ -9,7 +9,7 @@ import wikibio as bio
 from wikibio import charts
 
 P = bio.P
-data = [  # genus, min, opt, max, order (colour)
+data = [  # genus, min, opt, max, order (color)
     ("Sulfolobus", 55, 75, 87, "Sulfolobales"),
     ("Acidianus", 60, 88, 95, "Sulfolobales"),
     ("Thermoproteus", 60, 88, 96, "Thermoproteales"),

@@ -1,7 +1,7 @@
 """Formation of the benzophenone ketyl. Sodium gives one electron (fishhook) to the carbonyl
 group: it pairs on oxygen with one electron of the C=O pi bond, which becomes a lone pair, and the
 other pi electron stays on carbon. The product is a radical anion: negative charge on oxygen,
-unpaired electron on carbon (delocalised into both rings)."""
+unpaired electron on carbon (delocalized into both rings)."""
 
 import matplotlib.pyplot as plt
 import numpy as np

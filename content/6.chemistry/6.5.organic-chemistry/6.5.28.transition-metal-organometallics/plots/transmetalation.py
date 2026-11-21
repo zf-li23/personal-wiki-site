@@ -1,5 +1,5 @@
 """Transmetalation in a Negishi coupling. The electron pair of the Zn-C bond of phenylzinc chloride
-attacks palladium while the bromide on palladium bridges to zinc (four-centre transition state);
+attacks palladium while the bromide on palladium bridges to zinc (four-center transition state);
 the phenyl group ends up on palladium and ZnBrCl leaves. Ar = aryl group from the oxidative
 addition step; L = phosphine."""
 

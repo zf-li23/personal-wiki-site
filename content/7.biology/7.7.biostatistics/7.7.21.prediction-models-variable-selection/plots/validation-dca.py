@@ -1,5 +1,5 @@
 """Internal validation and decision curve of the birthwt logistic model of chapter 14 (low birth weight
-on mother's age, weight, race, smoking, previous premature labour and hypertension; 189 births,
+on mother's age, weight, race, smoking, previous premature labor and hypertension; 189 births,
 Baystate Medical Center 1986; Hosmer and Lemeshow; R MASS::birthwt). A: AUC and calibration slope
 estimated in the data used for fitting (apparent), by 10-fold cross-validation (average over 20 random
 splits) and by the bootstrap optimism correction (200 resamples); seed 0. B: decision curve: net benefit

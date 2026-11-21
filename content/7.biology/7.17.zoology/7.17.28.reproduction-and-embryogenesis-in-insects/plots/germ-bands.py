@@ -1,5 +1,5 @@
 # Long-, intermediate- and short-germ development (schematic, not to scale). Top row: the germ anlage on the
-# ventral side of the blastoderm egg, coloured by the body regions it already contains (head, thorax, abdomen)
+# ventral side of the blastoderm egg, colored by the body regions it already contains (head, thorax, abdomen)
 # and the posterior growth zone. Bottom row: the segmented germ band; in short- and intermediate-germ embryos
 # the segments posterior to the anlage are added one by one from the growth zone (arrows).
 import numpy as np

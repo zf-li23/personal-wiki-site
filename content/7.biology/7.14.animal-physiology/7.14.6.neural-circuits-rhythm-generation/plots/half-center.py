@@ -1,4 +1,4 @@
-"""A half-centre oscillator: two rate units with mutual inhibition and slow self-adaptation.
+"""A half-center oscillator: two rate units with mutual inhibition and slow self-adaptation.
 
 tau_x dx_A/dt = -x_A + F(I0 - w_I x_B - g a_A),  tau_a da_A/dt = -a_A + x_A  (and the same with A <-> B),
 F(u) = max(0, u); I0 = 1 (tonic drive), w_I = 2, tau_x = 50 ms, tau_a = 0.6 s; A starts slightly ahead.

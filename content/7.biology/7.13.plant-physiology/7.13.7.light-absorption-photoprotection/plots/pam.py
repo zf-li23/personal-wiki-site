@@ -1,7 +1,7 @@
 """Pulse-amplitude-modulated (PAM) chlorophyll fluorescence trace of a dark-adapted leaf, from a kinetic model.
 
 Fluorescence yield F = kF / (kF + kD + kN(t) + kP q(t)), with kF = 1, kD = 4, kP = 24.4 (so that
-Fv/Fm = 0.83) and the yield scaled to Fm = 1. q is the fraction of open PSII centres: 1 in the dark,
+Fv/Fm = 0.83) and the yield scaled to Fm = 1. q is the fraction of open PSII centers: 1 in the dark,
 0 during a 0.8 s saturating pulse; after the actinic light (1000 umol m-2 s-1) is switched on at 60 s it
 falls quickly and recovers towards 0.45 as the Calvin cycle is activated (time constant 20 s); after the
 light is switched off at 360 s it returns to 1 (5 s). The NPQ rate constant kN builds up with time constant

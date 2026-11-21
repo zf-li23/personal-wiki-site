@@ -1,6 +1,6 @@
 """How the scale of the data changes a PCA (airway RNA-seq, Himes et al. 2014, GEO GSE52778;
 Bioconductor package airway; eight samples, four cell lines with and without dexamethasone). On each
-scale the 500 genes with the largest variance on that scale are kept and centred. A: normalized counts;
+scale the 500 genes with the largest variance on that scale are kept and centered. A: normalized counts;
 B: log2(normalized count + 1); C: variance-stabilized values (pydeseq2 vst). D: mean normalized count of
 the 500 genes chosen on each scale (box plots, log axis): the raw scale selects only very highly
 expressed genes, log2(x + 1) many weakly expressed and noisy ones.

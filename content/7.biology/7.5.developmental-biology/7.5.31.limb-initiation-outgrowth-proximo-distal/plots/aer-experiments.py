@@ -1,4 +1,4 @@
-"""Classical experiments on the chick wing bud (schematic outcomes; skeletons coloured by segment).
+"""Classical experiments on the chick wing bud (schematic outcomes; skeletons colored by segment).
 
 A: removal of the AER at three stages and the unoperated control. B: Summerbell and Lewis's exchanges of the
 progress zone (with its AER) between young and old buds.

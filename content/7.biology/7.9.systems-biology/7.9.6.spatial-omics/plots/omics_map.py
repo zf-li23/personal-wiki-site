@@ -1,6 +1,6 @@
 """The map of spatial omics: representative technologies placed by the spatial resolution of their
 readout (horizontal, finer to the right) and by the number of molecular species measured in one
-experiment (vertical). Colour: the omics layer; marker: the readout (capture and sequencing,
+experiment (vertical). Color: the omics layer; marker: the readout (capture and sequencing,
 imaging, mass spectrometry). Values are approximate orders of magnitude for current versions;
 genome- and epigenome-wide methods are drawn at the top."""
 
@@ -9,7 +9,7 @@ import wikibio as bio
 from wikibio import charts
 
 P = bio.P
-# name, resolution in micrometres, features, layer token, readout
+# name, resolution in micrometers, features, layer token, readout
 tech = [
     ("Slide-DNA-seq", 10, 3e4, "dna", "seq"),
     ("spatial ATAC-seq", 20, 6e4, "chromatin", "seq"),

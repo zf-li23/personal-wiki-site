@@ -1,6 +1,6 @@
 # The 64 orders of APG IV (2016, Bot. J. Linn. Soc. 181: 1-20, fig. 1) as a circular cladogram. Relationships
 # that APG IV leaves unresolved are drawn as polytomies: the five lineages of Mesangiospermae (magnoliids,
-# Chloranthales, monocots, Ceratophyllales, eudicots) and the orders of the lamiid crown. Coloured bands
+# Chloranthales, monocots, Ceratophyllales, eudicots) and the orders of the lamiid crown. Colored bands
 # mark the major clades; the label of each band gives the chapters of this course (7.12.34-49) that treat it.
 import wikibio as bio
 from wikibio import phylo

@@ -19,7 +19,7 @@ def bubble(ax, x, y, r=0.07):
 
 
 def gate(ax, kind, x, y, s=1.0, n_in=2):
-    """Draw a distinctive-shape gate whose left edge is at x, centred on y.
+    """Draw a distinctive-shape gate whose left edge is at x, centered on y.
     Returns (input points, output point)."""
     h = 0.5 * s
     M, L, C3, C4 = Path.MOVETO, Path.LINETO, Path.CURVE3, Path.CURVE4

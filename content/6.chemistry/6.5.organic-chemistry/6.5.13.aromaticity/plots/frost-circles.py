@@ -1,4 +1,4 @@
-"""Frost circles for n = 3 to 8: a regular n-gon inscribed in a circle of radius 2|beta| centred on
+"""Frost circles for n = 3 to 8: a regular n-gon inscribed in a circle of radius 2|beta| centered on
 E = alpha, with one vertex at the bottom; the vertex heights are the Hueckel levels
 alpha + 2 beta cos(2 pi k / n). Dots: the electron count that makes each ring aromatic
 (C3H3+ 2, C4H4 2+ 2, C5H5- 6, C6H6 6, C7H7+ 6, C8H8 2- 10)."""

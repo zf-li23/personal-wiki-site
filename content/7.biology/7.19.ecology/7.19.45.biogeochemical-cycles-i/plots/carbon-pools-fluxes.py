@@ -1,7 +1,7 @@
 # The global carbon cycle as pools (boxes, Pg C) and fluxes (arrows, Pg C per year).
 # Rounded values after IPCC AR6 (Canadell et al. 2021) and the Global Carbon Budget 2024
 # (Friedlingstein et al. 2024; anthropogenic fluxes are means for 2014-2023).
-# Natural gross fluxes in the ink colour, anthropogenic perturbations in red.
+# Natural gross fluxes in the ink color, anthropogenic perturbations in red.
 import wikibio as bio
 from wikibio import ecology as eco
 

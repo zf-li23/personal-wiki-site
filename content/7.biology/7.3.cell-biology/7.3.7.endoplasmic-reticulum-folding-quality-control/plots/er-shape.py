@@ -20,7 +20,7 @@ cx, cy = 5.0, 4.8
 cellout = bio.blob((cx, cy), 4.6, 4.2, wobble=0.05, seed=4, k=10)
 bio.membrane(ax, cellout, inside="cytoplasm", thickness=0.1)
 rng = np.random.default_rng(3)
-# honeycomb lattice: every vertex has three neighbours
+# honeycomb lattice: every vertex has three neighbors
 a = 0.75
 pts, edges = {}, []
 for i in range(-8, 9):

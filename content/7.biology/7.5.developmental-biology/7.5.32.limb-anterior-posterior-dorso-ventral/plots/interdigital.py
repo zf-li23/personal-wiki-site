@@ -1,7 +1,7 @@
 """Separation of the digits (schematic autopods, distal right, anterior up).
 
 A: the autopod plate before separation: digit condensations (Sox9) and interdigital mesenchyme expressing BMP2, 4
-and 7. B: chick: BMP signalling (with retinoic acid) kills the interdigital cells (dots: apoptosis), freeing the
+and 7. B: chick: BMP signaling (with retinoic acid) kills the interdigital cells (dots: apoptosis), freeing the
 toes. C: duck: the interdigital mesenchyme also expresses the BMP antagonist Gremlin; death is reduced and the web
 persists. D: chick with a dominant-negative BMP receptor (or a Noggin or Gremlin bead) in the interdigits: webbed,
 duck-like foot.

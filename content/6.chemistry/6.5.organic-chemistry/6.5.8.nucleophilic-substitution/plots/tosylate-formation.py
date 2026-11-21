@@ -1,7 +1,7 @@
 """Converting an alcohol into a tosylate keeps its configuration. Top: the oxygen lone pair of
 (R)-2-octanol attacks sulfur of tosyl chloride and chloride leaves; pyridine removes the proton from
 the oxonium ion. Only the O-H bond is broken, the C-O bond is untouched. Bottom: bromide then attacks
-the stereocentre from the back (SN2), displacing the tosylate anion with inversion, giving
+the stereocenter from the back (SN2), displacing the tosylate anion with inversion, giving
 (S)-2-bromooctane. Ar = 4-methylphenyl, R = n-hexyl."""
 
 from wikichem import Scheme

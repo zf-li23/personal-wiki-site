@@ -1,7 +1,7 @@
 """Formation of a Schrock carbene by alpha-hydrogen abstraction (Np = neopentyl CH2CMe3). In
 Ta(CH2CMe3)5 the crowding brings two neopentyl groups together: the Ta-C electrons of one group
-take an alpha-hydrogen of its neighbour (four-centre transition state, Ta, C, H, C) while the C-H
-electrons of that neighbour form the Ta=C pi bond. Neopentane leaves and the tantalum(V)
+take an alpha-hydrogen of its neighbor (four-center transition state, Ta, C, H, C) while the C-H
+electrons of that neighbor form the Ta=C pi bond. Neopentane leaves and the tantalum(V)
 alkylidene (Me3CCH2)3Ta=CHCMe3 remains; the oxidation state of tantalum does not change."""
 
 exec(open("helpers.txt").read())

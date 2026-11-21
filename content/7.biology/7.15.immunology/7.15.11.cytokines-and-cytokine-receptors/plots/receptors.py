@@ -6,7 +6,7 @@ from matplotlib.patches import Rectangle
 
 P = bio.P
 fig, ax = bio.canvas(24.0, 7.2)
-YM = 3.5   # membrane centre
+YM = 3.5   # membrane center
 ax.add_patch(Rectangle((0.2, YM - 0.22), 23.6, 0.44, facecolor=P.fill("lipid_tail"), edgecolor=P.edge("lipid_tail"), lw=0.8, zorder=2))
 bio.label(ax, (0.3, YM + 0.55), "outside", size="tiny", ha="left", color=P.muted())
 bio.label(ax, (0.3, YM - 0.55), "inside", size="tiny", ha="left", color=P.muted())
@@ -41,7 +41,7 @@ bio.box(ax, (x + 0.75, YM - 0.5), 0.7, 0.5, "negative", "JAK3", size="tiny", rad
 bio.box(ax, (x, YM - 0.5), 0.7, 0.5, "dna2", "JAK1", size="tiny", radius=0.1)
 bio.label(ax, (x, YM - 1.3), "STAT5", size="tiny")
 bio.arrow(ax, (x, YM - 0.8), (x, YM - 1.1), kind="process")
-title(x, "Type I\n(haematopoietin)", "IL-2R: α, β, common γ chain")
+title(x, "Type I\n(hematopoietin)", "IL-2R: α, β, common γ chain")
 # 2  type II
 x = 6.1
 chain(x - 0.45, 2, "enzyme"); chain(x + 0.45, 2, "positive")

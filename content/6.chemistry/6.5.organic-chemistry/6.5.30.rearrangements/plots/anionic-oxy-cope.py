@@ -2,7 +2,7 @@
 18-crown-6, THF) undergoes the [3,3]-sigmatropic shift at room temperature, through a chair-like
 six-membered transition state drawn flat here (the dashed line is the forming C1-C6 bond): the
 C3-C4 bond, weakened by the alkoxide, breaks and the two pi bonds move. The product is a potassium
-enolate, which is protonated on work-up and tautomerises to hept-6-en-2-one."""
+enolate, which is protonated on work-up and tautomerizes to hept-6-en-2-one."""
 
 import math
 

@@ -1,4 +1,4 @@
-"""Myogenesis: lineage from dermomyotome to myofibre (with a satellite cell), and the MRF regulatory hierarchy."""
+"""Myogenesis: lineage from dermomyotome to myofiber (with a satellite cell), and the MRF regulatory hierarchy."""
 import numpy as np
 from matplotlib.patches import Ellipse, FancyBboxPatch, Circle
 import wikibio as bio
@@ -52,7 +52,7 @@ bio.label(ax, (14.7, y + 1.2), "Myotube", size="small")
 bio.label(ax, (14.7, y - 1.1), "central nuclei", size="tiny", color=P.muted())
 bio.arrow(ax, (17.0, y), (18.0, y), kind="process")
 bio.label(ax, (17.5, y + 0.45), "mature", size="tiny")
-# myofibre with striations and peripheral nuclei, basal lamina and satellite cell
+# myofiber with striations and peripheral nuclei, basal lamina and satellite cell
 x0, x1 = 18.3, 25.4
 ax.add_patch(FancyBboxPatch((x0, y - 0.55), x1 - x0, 1.1, boxstyle="round,pad=0,rounding_size=0.25",
                             facecolor=P.fill("muscle"), edgecolor=P.edge("muscle"), lw=1.0, zorder=5))

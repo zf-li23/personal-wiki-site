@@ -1,7 +1,7 @@
-# Kinetic proofreading of T-cell receptor signalling (McKeithan 1995).
+# Kinetic proofreading of T-cell receptor signaling (McKeithan 1995).
 # A TCR-pMHC complex must complete N sequential modification steps (rate kp each) before it signals; if the
 # pMHC dissociates (rate koff = 1/tau) at any step, the TCR resets. The fraction of binding events that reach
-# the signalling state is (kp tau / (1 + kp tau))^N. Illustrative kp = 1 s^-1.
+# the signaling state is (kp tau / (1 + kp tau))^N. Illustrative kp = 1 s^-1.
 # A: response per binding event versus dwell time tau for N = 0, 1, 3, 6, 10.
 # B: discrimination between a ligand with tau = 3 s and one with tau = 1 s (ratio of responses), and the cost:
 #    the fraction of agonist (tau = 3 s) bindings that still signal, as functions of N.

@@ -1,7 +1,7 @@
 # The energy of making a spherical bud of radius R (Helfrich model, energies in kBT; bending rigidity
 # kappa = 20 kBT). A: a closed sphere costs 8 pi kappa ~ 500 kBT whatever its radius, while a coat that
 # binds with energy w per unit area gains 4 pi R^2 w and membrane tension sigma costs 4 pi R^2 sigma;
-# with w > sigma, budding becomes favourable beyond R* = sqrt(2 kappa / (w - sigma)). B: a coat that imposes a
+# with w > sigma, budding becomes favorable beyond R* = sqrt(2 kappa / (w - sigma)). B: a coat that imposes a
 # spontaneous curvature c0 (bending energy 8 pi kappa (1 - c0 R / 2)^2) makes the energy minimal at
 # R = 2 / c0: the coat geometry selects the vesicle size (here c0 for R = 30, 45 and 60 nm).
 import matplotlib.pyplot as plt

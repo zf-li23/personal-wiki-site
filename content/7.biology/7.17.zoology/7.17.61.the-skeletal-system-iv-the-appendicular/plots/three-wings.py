@@ -1,4 +1,4 @@
-# The three vertebrate wings, left forelimb in dorsal view (shoulder at the top), bones in course-wide colours,
+# The three vertebrate wings, left forelimb in dorsal view (shoulder at the top), bones in course-wide colors,
 # membranes and feathers schematic. Pterosaur drawn with vertskel primitives (wing digit IV, pteroid); bird and bat
 # from wikibio zoomorph.forelimb. After Witton (2013), Kardong (2019). Not to scale.
 import wikibio as bio

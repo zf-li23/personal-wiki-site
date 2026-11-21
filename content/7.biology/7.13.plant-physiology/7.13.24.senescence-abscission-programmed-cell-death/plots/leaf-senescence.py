@@ -3,7 +3,7 @@
 # mature leaf (1). Net photosynthesis falls first (t50 = 28 d), soluble protein and Rubisco next
 # (t50 = 33 d), chlorophyll later (t50 = 38 d); leaf nitrogen falls to about half of its mature value
 # because about 50 % of the nitrogen is resorbed (remobilized) to young leaves and seeds.
-# Grey band: onset of visible yellowing (chlorophyll below 70 %).
+# Gray band: onset of visible yellowing (chlorophyll below 70 %).
 import matplotlib.pyplot as plt
 import numpy as np
 

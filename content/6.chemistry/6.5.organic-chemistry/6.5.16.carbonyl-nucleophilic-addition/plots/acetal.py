@@ -1,4 +1,4 @@
-"""Acid-catalysed acetal formation from acetaldehyde and methanol. Top: methanol adds to the
+"""Acid-catalyzed acetal formation from acetaldehyde and methanol. Top: methanol adds to the
 protonated carbonyl group and loses a proton, giving the hemiacetal. Bottom: the hemiacetal OH is
 protonated and leaves as water, pushed out by the lone pair of the OMe oxygen, which gives an
 oxocarbenium ion (the slow step); a second methanol adds and loses a proton, giving the acetal.

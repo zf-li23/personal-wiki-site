@@ -1,4 +1,4 @@
-# Spectral spillover and compensation in two-colour flow cytometry (simulated data, seed 0).
+# Spectral spillover and compensation in two-color flow cytometry (simulated data, seed 0).
 # True fluorophore intensities x = (x_FITC, x_PE) of four populations are mixed by the spillover matrix S into the two
 # detector readings y = S x + noise, with
 #   S = [[1, 0.05], [0.20, 1]]    (y_FITC = x_FITC + 0.05 x_PE,  y_PE = 0.20 x_FITC + x_PE).

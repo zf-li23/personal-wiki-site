@@ -6,7 +6,7 @@ five agents within range, as on the lattice). A: the polar order parameter Psi =
 vectors| in the stationary state against the number of agents N: for fixed agents it decreases
 steadily with system size, as the Mermin-Wagner argument predicts (no true long-range order in two
 dimensions), while for moving agents it stays high. B: snapshot of the directions of fixed agents
-on a 48 x 48 lattice (colour = angle, cyclic): patches of similar direction that wander, on a
+on a 48 x 48 lattice (color = angle, cyclic): patches of similar direction that wander, on a
 background of strong local noise. Each point
 averages the second half of a run of 3000 (fixed) or 1500 (moving) updates."""
 

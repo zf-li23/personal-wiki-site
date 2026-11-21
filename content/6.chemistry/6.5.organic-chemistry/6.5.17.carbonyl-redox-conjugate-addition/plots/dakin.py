@@ -2,7 +2,7 @@
 anion adds to the carbonyl carbon; in the tetrahedral adduct the oxide pushes, the electron-rich
 aryl group migrates from carbon to the proximal oxygen with its bonding pair, and hydroxide leaves
 from the distal oxygen as the O-O bond breaks (a Baeyer-Villiger type step). The aryl formate is
-hydrolysed in the base to the phenol (hydroquinone) and formate."""
+hydrolyzed in the base to the phenol (hydroquinone) and formate."""
 
 from wikichem import Scheme
 

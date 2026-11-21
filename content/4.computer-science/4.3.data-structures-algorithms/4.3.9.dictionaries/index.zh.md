@@ -723,7 +723,7 @@ CPython 的 `dict` 与 `set` 都用开放定址法实现，表长是 2 的幂，
 #include <random>
 #include <vector>
 
-// Largest gap between neighbours in sorted order, in O(n) time with n buckets.
+// Largest gap between neighbors in sorted order, in O(n) time with n buckets.
 double max_gap(const std::vector<double>& p) {
     std::size_t n = p.size();
     if (n < 2) return 0;
@@ -766,7 +766,7 @@ import random
 
 
 def max_gap(p: list[float]) -> float:
-    """Largest gap between neighbours in sorted order, in O(n) time with n buckets."""
+    """Largest gap between neighbors in sorted order, in O(n) time with n buckets."""
     n = len(p)
     if n < 2:
         return 0.0

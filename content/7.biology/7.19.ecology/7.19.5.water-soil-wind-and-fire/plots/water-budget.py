@@ -3,10 +3,10 @@
 A: water budget of Merriam's kangaroo rat (Dipodomys merriami) eating 100 g of barley at 25 C and moderate humidity
 (Schmidt-Nielsen 1964): gains 54.0 mL oxidation water + 6.0 mL free water; losses 43.9 mL evaporation,
 13.5 mL urine, 2.6 mL feces.
-B: a minimal respiratory water model per litre of O2 consumed. Air breathed per litre O2: V = 25 L (about 4 %
+B: a minimal respiratory water model per liter of O2 consumed. Air breathed per liter O2: V = 25 L (about 4 %
 absolute O2 extraction). Exhaled air is saturated at temperature T_ex; inhaled air at T_a = 25 C has relative
-humidity RH. Respiratory loss = V * (rho_sat(T_ex) - RH * rho_sat(T_a)). Saturation vapour density from the
-Tetens formula. Oxidation water per litre O2: starch 0.67 g, fat 0.53 g.
+humidity RH. Respiratory loss = V * (rho_sat(T_ex) - RH * rho_sat(T_a)). Saturation vapor density from the
+Tetens formula. Oxidation water per liter O2: starch 0.67 g, fat 0.53 g.
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -17,7 +17,7 @@ P = bio.P
 
 
 def rho_sat(t):
-    """Saturation water-vapour density in g per litre at t degrees C (Tetens)."""
+    """Saturation water-vapor density in g per liter at t degrees C (Tetens)."""
     e = 0.61078 * np.exp(17.27 * t / (t + 237.3)) * 1000.0  # Pa
     return e * 18.015 / (8.314 * (t + 273.15)) / 1000.0  # g per L
 

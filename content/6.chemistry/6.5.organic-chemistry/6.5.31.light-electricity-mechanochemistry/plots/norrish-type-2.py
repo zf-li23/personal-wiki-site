@@ -1,7 +1,7 @@
 """Norrish type II reaction of hexan-2-one. The n,pi* triplet abstracts a gamma hydrogen through a
 six-membered cyclic transition state (1,5-hydrogen atom transfer), giving a 1,4-biradical.
 The biradical either cleaves (beta scission of the C(alpha)-C(beta) bond) to propene and the enol
-of acetone, which tautomerises to acetone, or closes to a cyclobutanol (Norrish-Yang cyclization)."""
+of acetone, which tautomerizes to acetone, or closes to a cyclobutanol (Norrish-Yang cyclization)."""
 
 import math
 

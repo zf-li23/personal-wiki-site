@@ -5,7 +5,7 @@ advantage from early territory settlement; migrants survive the journey and the 
 0.6 whatever the winter. Breeding success: migrants 1; residents 1 + a (1 - f), where f is the fraction of
 the population that stays (residents compete with each other for the best territories), a = 0.8.
 A: fitness of a resident (f = 0 and f = 1) and of a migrant against winter severity: pure residency is
-favoured in mild winters, pure migration in severe ones.
+favored in mild winters, pure migration in severe ones.
 B: the evolutionarily stable fraction of residents f* (equal fitness of the two tactics; f* = 0 or 1 at
 the limits) against winter severity: in between, partial migration is stable.
 """

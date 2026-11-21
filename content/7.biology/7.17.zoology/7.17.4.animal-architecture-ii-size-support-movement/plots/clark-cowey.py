@@ -1,15 +1,15 @@
-"""The Clark-Cowey model of a worm whose body wall is reinforced by a lattice of inextensible helical fibres.
+"""The Clark-Cowey model of a worm whose body wall is reinforced by a lattice of inextensible helical fibers.
 
-Take one turn of fibre of fixed length D wound around a cylinder at angle theta to the long axis. The turn
+Take one turn of fiber of fixed length D wound around a cylinder at angle theta to the long axis. The turn
 covers a length l = D cos(theta) of the body and a circumference 2 pi r = D sin(theta), so the volume it
 encloses is V = D^3 sin^2(theta) cos(theta) / (4 pi), maximal at tan(theta) = sqrt(2), theta = 54 deg 44 min
 (Clark & Cowey 1958, J. Exp. Biol. 35: 731). The aspect ratio of the cylinder is l / 2r = pi cot(theta).
 A worm of fixed volume V < V_max (horizontal line; illustrative value 0.4 V_max) can keep a circular cross
-section only between the two fibre angles where the curve crosses the line: elongating beyond the smaller
+section only between the two fiber angles where the curve crosses the line: elongating beyond the smaller
 angle is impossible, and contracting beyond the larger one forces the body to flatten (its section becomes
 elliptical, enclosing less than the cylinder). Nemerteans work close to the curve over a wide range of
 angles; flatworms, far below it, are flat at all lengths. Glyphs: cylinders drawn to the aspect ratio of
-three fibre angles.
+three fiber angles.
 """
 
 import numpy as np
@@ -35,7 +35,7 @@ p.text(54.7, 0.2, "circular section possible", size="tiny")
 p.span(cross[1], 90, "negative")
 p.text((cross[1] + 90) / 2, 0.75, "flattens", size="tiny")
 
-# glyphs: cylinders with crossing helical fibres drawn at the corresponding aspect ratio
+# glyphs: cylinders with crossing helical fibers drawn at the corresponding aspect ratio
 from matplotlib.patches import FancyBboxPatch
 
 
@@ -48,7 +48,7 @@ def worm(cx, cy, theta_deg, area=1.6):
     body = FancyBboxPatch((cx - w / 2, cy - h / 2), w, h, boxstyle=f"round,pad=0,rounding_size={r}",
                           facecolor=P.fill("animal"), edgecolor=P.edge("animal"), lw=1.2, zorder=10)
     ax.add_patch(body)
-    dx = h / np.tan(t)  # horizontal run of a fibre that crosses the visible face once
+    dx = h / np.tan(t)  # horizontal run of a fiber that crosses the visible face once
     step = max(w, dx) / 7
     for s in (1, -1):
         for x0 in np.arange(cx - w / 2 - dx - step, cx + w / 2 + dx + step, step):

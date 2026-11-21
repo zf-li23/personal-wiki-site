@@ -8,7 +8,7 @@ gone (memory). C: a sequential (ratchet) switch: N = 4 autocatalytic genes g_i s
 dg_i/dt = g_i^2 / r - g_i + e_i(m) g_(i-1), dr/dt = 10 (sum g_i^2 - r), with e_i(m) = 0.5 m^8 / (m^8 + theta_i^8),
 theta = 0.25, 0.5, 0.8. Gene 1 is on at the start; a rising morphogen m lets gene i - 1 hand over to gene i
 once m exceeds theta_i, and the common repressor keeps only one gene on. Cells in a gradient
-m = 1.3 exp(-x / 0.35) end in four states that form a French flag with four colours. D: the hand-over in the cell
+m = 1.3 exp(-x / 0.35) end in four states that form a French flag with four colors. D: the hand-over in the cell
 at x = 0 as m rises (dashed: m).
 """
 

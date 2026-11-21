@@ -2,7 +2,7 @@
 2008). The electron-poor diethyl malonyl radical, made by one-electron reduction of diethyl
 bromomalonate, adds to the electron-rich C=C of the chiral enamine: one electron of the pi bond pairs
 with the radical to form the new C-C bond and the other stays on the carbon next to nitrogen. The
-alpha-amino radical is oxidised by one electron to the iminium ion, which is hydrolysed to the
+alpha-amino radical is oxidized by one electron to the iminium ion, which is hydrolyzed to the
 alkylated aldehyde and the amine catalyst. R2N: the imidazolidinone catalyst."""
 
 from wikichem import Scheme

@@ -2,12 +2,12 @@
 
 A: efficiency of Foerster resonance energy transfer against donor-acceptor distance,
 E = 1/(1 + (r/R0)^6), for Foerster radii of 4.9 nm (about that of the CFP-YFP pair) and 5.5 nm; E falls
-from 90% to 10% between about 0.7 R0 and 1.4 R0, so FRET reports distances of a few nanometres.
+from 90% to 10% between about 0.7 R0 and 1.4 R0, so FRET reports distances of a few nanometers.
 B: a unimolecular cAMP sensor of the Epac type: the cAMP-binding domain of Epac1 between CFP (donor)
 and YFP (acceptor). Without cAMP the ends are close and excitation of CFP at 433 nm gives YFP emission at
 527 nm; cAMP binding changes the conformation, separates the fluorophores and restores CFP emission at
 476 nm.
-C: the response of such a sensor, the emission ratio CFP/YFP against [cAMP], modelled as a binding
+C: the response of such a sensor, the emission ratio CFP/YFP against [cAMP], modeled as a binding
 hyperbola with an EC50 of 2.4 uM (the value reported for Epac1-camps, Nikolaev et al., 2004) and a
 40% change in ratio; the sensor responds over about 0.3-20 uM; shaded: the approximate range of cytosolic [cAMP] (0.1-10 uM).
 """

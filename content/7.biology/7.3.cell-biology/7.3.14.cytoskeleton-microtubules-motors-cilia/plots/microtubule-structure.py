@@ -1,7 +1,7 @@
 """Microtubule structure (schematic).
 
 A: the alpha/beta-tubulin heterodimer (8 nm; beta towards the plus end; the GTP on alpha is buried and never
-hydrolysed, that on beta is exchangeable) and a protofilament of dimers stacked head to tail.
+hydrolyzed, that on beta is exchangeable) and a protofilament of dimers stacked head to tail.
 B: a cross-section: 13 protofilaments form a tube 25 nm across; the B lattice has one seam (dashed).
 C: a growing microtubule with a cap of GTP-tubulin (gold) at its plus end and a slightly flared sheet of
 protofilaments; behind the cap the beta-tubulin carries GDP (blue).

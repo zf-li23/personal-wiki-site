@@ -9,7 +9,7 @@ a_{n+1} - 2 a_n + a_{n-1} (unchanged when it is zero): a'_n = a_{n-1} a_n a_{n+1
 or a_{n+1}); 41 sites, initial block of 4 occupied sites, 18 steps (time downwards): the front
 spreads at one site per step while the coarse-grained density falls.
 C: a Lindenmayer-type growing automaton: each new row is the previous one with each cell replaced by
-(cell xor left neighbour) and one cell added at the right, starting from a single 1: the
+(cell xor left neighbor) and one cell added at the right, starting from a single 1: the
 Sierpinski pattern of Pascal's triangle mod 2.
 """
 

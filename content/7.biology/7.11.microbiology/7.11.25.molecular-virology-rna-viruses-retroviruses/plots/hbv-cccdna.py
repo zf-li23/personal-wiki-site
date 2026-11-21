@@ -67,5 +67,5 @@ bio.label(ax, (13.3, 4.05), "envelopment\nin the ER", size="tiny", color=P.muted
 bio.virus(ax, (14.9, 3.7), 0.42, kind="enveloped", spikes=9)
 bio.label(ax, (14.9, 2.9), "secreted\nvirion", size="tiny", bold=True)
 
-bio.label(ax, (8.0, 0.65), "Nucleoside analogues block the step inside the core; they do not touch the cccDNA,\nwhich is why treatment suppresses but rarely cures the infection",
+bio.label(ax, (8.0, 0.65), "Nucleoside analogs block the step inside the core; they do not touch the cccDNA,\nwhich is why treatment suppresses but rarely cures the infection",
           size="small", color=P.muted())

@@ -1,9 +1,9 @@
 """alpha-Ketol rearrangement of 1-acetylcyclopentan-1-ol in base (a model of the ring expansion of
 17alpha-hydroxy-20-keto steroids to D-homosteroids). The alkoxide re-forms a C=O bond while a ring
-C-C bond migrates with its electron pair to the neighbouring ketone carbon, whose pi electrons move
+C-C bond migrates with its electron pair to the neighboring ketone carbon, whose pi electrons move
 onto oxygen. The five-membered ring becomes a six-membered ring and the hydroxyl and carbonyl have
 exchanged places: protonation gives 2-hydroxy-2-methylcyclohexan-1-one. The reaction is reversible
-and the equilibrium favours the more stable isomer."""
+and the equilibrium favors the more stable isomer."""
 
 from wikichem import Scheme
 

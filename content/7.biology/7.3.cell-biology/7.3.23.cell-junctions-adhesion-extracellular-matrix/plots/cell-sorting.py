@@ -2,12 +2,12 @@
 
 Each cell sigma occupies a set of sites of a square lattice (L = 44; cell type tau = dark, light, or the
 medium M). The energy is
-    H = sum over neighbouring sites (i, j) of J(tau_i, tau_j) (1 - delta(sigma_i, sigma_j))
+    H = sum over neighboring sites (i, j) of J(tau_i, tau_j) (1 - delta(sigma_i, sigma_j))
         + lambda * sum over cells (a_sigma - A)^2,
 with contact energies J(d, d) = 2, J(l, l) = 14, J(d, l) = 11, J(d, M) = J(l, M) = 16 (a low J is strong
 adhesion: dark cells adhere most strongly to each other), target area A = 16 sites and lambda = 4, the
-energy summed over the eight nearest and next-nearest neighbours. A Monte Carlo step (MCS) is L^2 attempts
-to copy the cell index of a random site into a random neighbour, accepted with the Metropolis probability
+energy summed over the eight nearest and next-nearest neighbors. A Monte Carlo step (MCS) is L^2 attempts
+to copy the cell index of a random site into a random neighbor, accepted with the Metropolis probability
 min(1, exp(-dH / T)) at T = 8; cells are not allowed to shrink below two sites. Interfacial tensions gamma(d, l) = J(d, l) - (J(d, d) + J(l, l)) / 2 = 3 > 0 and
 gamma(l, M) < gamma(d, M) predict that the cells sort and that the light cells envelop the dark ones.
 A: the aggregate at 0, 100 and 3000 MCS (random mixture, clusters, sorted with dark cells inside).

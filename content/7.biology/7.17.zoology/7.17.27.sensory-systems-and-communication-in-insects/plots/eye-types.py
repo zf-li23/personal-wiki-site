@@ -3,7 +3,7 @@
 # whose axis points at the source receives its light. B refracting superposition: the cones redirect rays from
 # several facets across the clear zone onto one rhabdom of the deep retina. C neural superposition (flies):
 # each ommatidium has separate rhabdomeres (R1-R6 around the central R7/8) looking in different directions; the
-# receptors in neighbouring ommatidia that view the same point send their axons to one lamina cartridge.
+# receptors in neighboring ommatidia that view the same point send their axons to one lamina cartridge.
 import numpy as np
 from matplotlib.patches import Ellipse, Circle, Polygon
 import wikibio as bio
@@ -18,7 +18,7 @@ def rot(v, a):
 
 
 def ommatidium(c, ang, kind, lit=False):
-    """c: centre of the facet; ang: axis angle (rad from vertical, positive = to the left)."""
+    """c: center of the facet; ang: axis angle (rad from vertical, positive = to the left)."""
     u = rot(np.array([0, -1.0]), ang)   # inward axis
     n = rot(np.array([1.0, 0]), ang)    # across
     w = 0.38

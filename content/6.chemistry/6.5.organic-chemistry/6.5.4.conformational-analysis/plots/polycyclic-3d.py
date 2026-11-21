@@ -1,5 +1,5 @@
 """Carbon skeletons of trans- and cis-decalin, adamantane and 5alpha-androstane (steroid nucleus),
-embedded in 3D with RDKit (ETKDG, then MMFF94 minimisation; fixed seed). Only the hydrogens at the
+embedded in 3D with RDKit (ETKDG, then MMFF94 minimization; fixed seed). Only the hydrogens at the
 ring-fusion carbons are drawn (orange); angular methyl groups of the steroid are green."""
 
 import numpy as np
@@ -12,7 +12,7 @@ MOLS = [
     ("trans-decalin", "C1CC[C@@H]2CCCC[C@H]2C1"),
     ("cis-decalin", "C1CC[C@H]2CCCC[C@H]2C1"),
     ("adamantane", "C1C2CC3CC1CC(C2)C3"),
-    # 5alpha-androstane: the stereocentres of testosterone, with the A ring saturated (5alpha-H)
+    # 5alpha-androstane: the stereocenters of testosterone, with the A ring saturated (5alpha-H)
     ("5$\\alpha$-androstane", "C[C@]12CC[C@H]3[C@H]([C@@H]1CCC2)CC[C@H]4CCCC[C@]34C"),
 ]
 

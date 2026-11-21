@@ -1,6 +1,6 @@
 # Insect leg types: one segmented ground plan (coxa, trochanter, femur, tibia, tarsus with 1-5
 # tarsomeres, pretarsal claws) modified for different functions (wikibio.zoomorph.leg). Top: the insect in
-# lateral view with the specialized pair coloured; bottom: that leg enlarged, segments coloured as in the
+# lateral view with the specialized pair colored; bottom: that leg enlarged, segments colored as in the
 # key. Cursorial (running) legs are slender and similar (cockroach); saltatorial hind legs have an
 # enlarged femur housing the jumping muscle, with its herringbone pattern, and a long spiny tibia
 # (grasshopper, 3 tarsomeres); raptorial forelegs have an elongate coxa, and spiny femur and tibia that

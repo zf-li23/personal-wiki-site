@@ -1,6 +1,6 @@
-"""Vapour-liquid equilibrium of an ideal liquid mixture at constant T (p*_A = 40 kPa, p*_B = 120 kPa).
+"""Vapor-liquid equilibrium of an ideal liquid mixture at constant T (p*_A = 40 kPa, p*_B = 120 kPa).
 Left: partial and total pressures against the liquid composition (Raoult's law).
-Right: the liquid (bubble-point) line and the vapour (dew-point) line; a vapour with y_A = 0.4 is
+Right: the liquid (bubble-point) line and the vapor (dew-point) line; a vapor with y_A = 0.4 is
 compressed isothermally: it starts to condense at the dew point and is fully liquid at the bubble point."""
 
 import numpy as np
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 pA, pB = 40.0, 120.0
 x = np.linspace(0, 1, 201)          # mole fraction of B in the liquid
 p_liq = pA * (1 - x) + pB * x
-y = pB * x / p_liq                  # mole fraction of B in the vapour
+y = pB * x / p_liq                  # mole fraction of B in the vapor
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 ax1.plot(x, pA * (1 - x), color="C0", lw=1.6, label=r"$p_\mathrm{A} = p^*_\mathrm{A}x_\mathrm{A}$")

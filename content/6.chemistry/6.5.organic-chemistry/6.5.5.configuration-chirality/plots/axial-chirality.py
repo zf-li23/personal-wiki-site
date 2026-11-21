@@ -55,7 +55,7 @@ ax.plot(0.85 * np.cos(th), 0.85 * np.sin(th), color="#2563eb", lw=1.5)
 ax.annotate("", xy=(0.85 * np.cos(th[-1]), 0.85 * np.sin(th[-1])), xytext=(0.85 * np.cos(th[-4]), 0.85 * np.sin(th[-4])),
             arrowprops=dict(arrowstyle="-|>", color="#2563eb"))
 p1 = np.array([-1.0, 0, 1.0]); p2 = np.array([1.0, 0, 1.0]); p3 = np.array([0, 1.0, -1.0]); p4 = np.array([0, -1.0, -1.0])
-ax.text(0, -2.1, f"1 $\\to$ 2 $\\to$ 3 anticlockwise: {label(p1, p2, p3, p4)}", ha="center", fontsize=10)
+ax.text(0, -2.1, f"1 $\\to$ 2 $\\to$ 3 counterclockwise: {label(p1, p2, p3, p4)}", ha="center", fontsize=10)
 ax.set_aspect("equal")
 ax.set_xlim(-2.4, 2.4)
 ax.set_ylim(-2.5, 1.9)

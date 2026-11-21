@@ -3,7 +3,7 @@
 set.seed(42)
 x <- seq(1900, 2025, length.out = 80)
 y <- 14 + 1.2 * (x - 1900) / (40 + (x - 1900)) + sin(x / 2) * 0.15 + rnorm(length(x), sd = 0.08)
-plot(x, y, pch = 16, col = "grey55", xlab = "year", ylab = "annual mean temperature (C)")
+plot(x, y, pch = 16, col = "gray55", xlab = "year", ylab = "annual mean temperature (C)")
 cols <- c("darkorange", "steelblue", "forestgreen")
 spars <- c(0.2, 0.7, 1.5)
 for (k in 1:3) lines(predict(smooth.spline(x, y, spar = spars[k]), seq(1900, 2025, length.out = 400)),

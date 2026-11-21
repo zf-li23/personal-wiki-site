@@ -1,5 +1,5 @@
 # Representatives of the apterygote, palaeopteran and polyneopteran orders (PhyloPic silhouettes, not to
-# scale), coloured by lineage as in the order-diversity figure of 7.17.22, each with the characters that
+# scale), colored by lineage as in the order-diversity figure of 7.17.22, each with the characters that
 # identify the order in the field. Species numbers are approximate recent counts.
 import wikibio as bio
 from wikibio.icons import size as icon_size

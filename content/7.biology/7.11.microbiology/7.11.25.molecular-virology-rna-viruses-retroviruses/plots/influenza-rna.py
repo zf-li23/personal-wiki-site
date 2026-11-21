@@ -74,5 +74,5 @@ for j, cx in enumerate((12.6, 14.4, 16.2)):
         ax.plot([cx - 0.45, cx + 0.45], [3.5 - 0.17 * k, 3.5 - 0.17 * k], color=P.edge(tok), lw=2.0,
                 solid_capstyle="round", zorder=8)
 bio.arrow(ax, (14.4, 4.2), (14.4, 3.8), kind="process")
-bio.label(ax, (14.4, 1.6), "progeny with new combinations of the eight segments:\na haemagglutinin new to the population is antigenic shift",
+bio.label(ax, (14.4, 1.6), "progeny with new combinations of the eight segments:\na hemagglutinin new to the population is antigenic shift",
           size="tiny", color=P.muted())

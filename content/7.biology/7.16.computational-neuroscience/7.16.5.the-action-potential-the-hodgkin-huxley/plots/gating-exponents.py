@@ -5,7 +5,7 @@ p = 1 starts at full speed, p = 4 has the sigmoidal delay seen in the voltage cl
 conductance proportional to m^p h for a step to -20 mV, normalized to the peak of the p = 3 curve:
 the exponent controls the onset and the amplitude, h the decay. C: a stochastic channel made of four
 independent two-state gates (rates alpha_n(0 mV), beta_n(0 mV), Markov chain, time step 0.02 ms): single
-channels open after a random latency (grey), the average of 400 channels (colour) is n^4 (black)."""
+channels open after a random latency (gray), the average of 400 channels (color) is n^4 (black)."""
 
 import numpy as np
 import matplotlib.pyplot as plt

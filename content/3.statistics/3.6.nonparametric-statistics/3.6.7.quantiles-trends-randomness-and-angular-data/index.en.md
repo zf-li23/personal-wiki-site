@@ -463,7 +463,7 @@ Uniformity is only one question. If the question is whether directions are symme
 
 ```r
 theta <- c(80, 100, 350, 10, 90, 270)            # degrees
-theta0 <- 0                                      # known centre
+theta0 <- 0                                      # known center
 a <- (theta - theta0) %% 360
 x <- ifelse(a <= 180, a, a - 360)                # signed deviations in (-180, 180]
 binom.test(sum(x > 0), sum(x != 0))              # sign test

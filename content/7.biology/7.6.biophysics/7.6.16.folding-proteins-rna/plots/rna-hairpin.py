@@ -1,9 +1,9 @@
-# Thermodynamics of an RNA hairpin in the nearest-neighbour model.
+# Thermodynamics of an RNA hairpin in the nearest-neighbor model.
 # Example: 5'-GGAC(UUCG)GUCC-3', a four-base-pair stem closed by the UUCG tetraloop.
-# Stacking free energies at 37 C and enthalpies of Watson-Crick nearest neighbours (Turner 2004 set,
+# Stacking free energies at 37 C and enthalpies of Watson-Crick nearest neighbors (Turner 2004 set,
 # kcal/mol): GG/CC -3.26 (dH -13.39), GA/CU -2.35 (-12.44), AC/UG = GU/CA -2.24 (-11.40).
 # The loop is given a single approximate free-energy cost of +4.5 kcal/mol (initiation of a four-nucleotide
-# loop less the favourable terminal mismatch and tetraloop bonus) and no enthalpy.
+# loop less the favorable terminal mismatch and tetraloop bonus) and no enthalpy.
 # A: the free-energy budget at 37 C. B: two-state melting curves at three Na+ concentrations.
 # C: the melting temperature is linear in ln[Na+]: dTm/dln[Na+] = (R Tm^2 / dH) dn, with dn = 0.6 counterions
 #    released on unfolding (a value chosen to give about 8 C per decade, typical of small hairpins).

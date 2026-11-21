@@ -3,7 +3,7 @@
 A: a two-state protein (T_m = 60 C, Delta H_m = 350 kJ/mol, Delta C_p = 6 kJ/(mol K)); the excess
 heat capacity over the native baseline is the transition peak f(1-f) Delta H^2/(R T^2) plus the
 progress baseline f Delta C_p, which interpolates between the native and unfolded baselines.
-B: three proteins with the same calorimetric enthalpy per mole of polypeptide chains, analysed the
+B: three proteins with the same calorimetric enthalpy per mole of polypeptide chains, analyzed the
 same way: one two-state domain, two independent two-state domains (T_m = 55 and 65 C) and a dimer
 that dissociates on unfolding (N2 <=> 2U, 50 uM chains). The van 't Hoff enthalpy from the peak height, 4 R T_max^2 C_max / Delta H_cal,
 divided by the calorimetric enthalpy (peak area) is 1, < 1 and > 1. C: a simulated noisy scan with

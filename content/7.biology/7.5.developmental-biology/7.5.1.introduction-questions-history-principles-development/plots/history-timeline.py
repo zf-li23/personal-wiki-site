@@ -1,7 +1,7 @@
 """Milestones in the history of developmental biology on a broken time axis.
 
 Four segments with different scales (antiquity; 1650-1800; 1800-1900; 1900-2025) so that the dense
-twentieth century stays readable. Events are coloured by theme: the debate on preformation and
+twentieth century stays readable. Events are colored by theme: the debate on preformation and
 epigenesis, cells and inheritance, experimental embryology, and genetics and molecular biology.
 """
 

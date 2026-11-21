@@ -1,7 +1,7 @@
 """Reading superiority, non-inferiority and equivalence from confidence intervals (schematic).
 
 Each line is the confidence interval for the difference new minus standard in the risk of a bad outcome
-(negative favours the new treatment); M is the non-inferiority margin and -M / +M the equivalence margins.
+(negative favors the new treatment); M is the non-inferiority margin and -M / +M the equivalence margins.
 The conclusions in the right column follow from where the interval lies relative to 0 and the margins
 (two-sided 95 % intervals for superiority and non-inferiority, 90 % intervals for equivalence by TOST).
 """

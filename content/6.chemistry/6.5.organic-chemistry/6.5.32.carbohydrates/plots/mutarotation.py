@@ -3,8 +3,8 @@ is a steady-state intermediate present at about 0.003%). Starting from either pu
 specific rotation relaxes exponentially to the same equilibrium value with the rate constant
 k = k1 + k-1. Rotations: alpha +112.2, beta +18.7 deg; the equilibrium fraction of beta,
 x = 0.636, follows from the measured equilibrium rotation +52.7 deg. The rate constant
-(0.015 per minute, uncatalysed, near room temperature) only sets the time axis; acid and base
-both catalyse the reaction strongly."""
+(0.015 per minute, uncatalyzed, near room temperature) only sets the time axis; acid and base
+both catalyze the reaction strongly."""
 
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,7 +1,7 @@
 # Model: three similarity rules for the scaling of a long bone with body mass M, relative to a 10 g animal
 # (log-log axes). Geometric similarity: length l and diameter d both proportional to M^(1/3). Elastic similarity
 # (McMahon 1973): l ~ M^(1/4), d ~ M^(3/8), so that d ~ l^(3/2). Static stress similarity: d ~ M^(1/2).
-# (B) slenderness l/d under each rule. The line labelled "mammal femora" uses only the exponents reported by
+# (B) slenderness l/d under each rule. The line labeled "mammal femora" uses only the exponents reported by
 # Alexander et al. (1979) for femur length (0.35) and diameter (0.36) across mammals; it is not a fit to data
 # shown here. All curves are normalized to the same value at 10 g.
 import numpy as np

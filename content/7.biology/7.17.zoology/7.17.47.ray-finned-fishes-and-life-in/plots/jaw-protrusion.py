@@ -2,7 +2,7 @@
 # (A) Mouth closed. (B) Mouth open: the lower jaw (dentary, articular) rotates down about the quadrate; a
 # ligament from the lower jaw swings the maxilla forward, and the maxilla pushes the premaxilla, whose
 # ascending process slides forward along the snout, so the upper jaw protrudes and the gape becomes a
-# tube. Colours follow the course-wide homology scheme. Not to scale.
+# tube. Colors follow the course-wide homology scheme. Not to scale.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

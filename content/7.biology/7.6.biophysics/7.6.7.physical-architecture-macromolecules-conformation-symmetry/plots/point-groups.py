@@ -53,7 +53,7 @@ light /= np.linalg.norm(light)
 
 
 def draw_units(cx, cy, scale, units, rb=0.30, highlight=0, tok="protein"):
-    """units: list of (big centre, small centre) in 3D after the view rotation (z towards viewer)."""
+    """units: list of (big center, small center) in 3D after the view rotation (z towards viewer)."""
     items = []
     for i, (b, sm) in enumerate(units):
         items.append((b[2], i, b, rb))

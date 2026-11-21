@@ -3,7 +3,7 @@
 #    spectrum proportional to exp(-B k^2 / 2) (B = 100 A^2) plus independent white noise in each half-map,
 #    scaled so that the signal-to-noise ratio of a half-map at k -> 0 is 400. The FSC computed shell by
 #    shell (line) follows the expected FSC = SNR / (1 + SNR) (dashed). The 0.143 threshold for half-maps
-#    and the 0.5 threshold are marked with the resolutions they give. Grey: the correlation C_ref of the
+#    and the 0.5 threshold are marked with the resolutions they give. Gray: the correlation C_ref of the
 #    full map with the true structure, sqrt(2 FSC / (1 + FSC)), which equals 0.5 where FSC = 0.143.
 # B: Rosenthal-Henderson plot. If each particle contributes the same signal-to-noise ratio, decaying as
 #    exp(-B k^2 / 2), the 0.143 criterion gives ln N = B / (2 d^2) + const: ln N is linear in 1/d^2 with

@@ -1,12 +1,12 @@
 """Lateral inhibition by Notch-Delta signaling: the model of Collier, Monk, Maini and Lewis (1996).
 
-A: the feedback between two neighbouring cells: Delta in one cell activates Notch in the other, and
-Notch activity represses Delta in its own cell, so a small difference between neighbours is amplified.
+A: the feedback between two neighboring cells: Delta in one cell activates Notch in the other, and
+Notch activity represses Delta in its own cell, so a small difference between neighbors is amplified.
 B: the model on a sheet of hexagonal cells (14 x 12, periodic boundaries). For cell i with Notch activity
 N_i and Delta level D_i (dimensionless),
     dN_i/dt = f(<D>_i) - N_i,      dD_i/dt = v [ g(N_i) - D_i ],
     f(x) = x^2 / (a + x^2),        g(x) = 1 / (1 + b x^2),
-where <D>_i is the mean Delta of the six neighbours, a = 0.01, b = 100, v = 1 (time in units of the
+where <D>_i is the mean Delta of the six neighbors, a = 0.01, b = 100, v = 1 (time in units of the
 lifetime of Notch activity). Starting from the uniform steady state with 1 % random noise, the sheet resolves
 into a salt-and-pepper pattern: isolated high-Delta cells (the future neural precursors or hair cells, dark)
 surrounded by low-Delta cells. C: Delta levels of a few cells against time: all start equal, and the
@@ -33,7 +33,7 @@ def g(x):
     return 1 / (1 + b * x**2)
 
 
-# neighbours on an "odd-r" offset hexagonal lattice with periodic boundaries
+# neighbors on an "odd-r" offset hexagonal lattice with periodic boundaries
 idx = np.arange(nx * ny).reshape(ny, nx)
 nbrs = []
 for r in range(ny):

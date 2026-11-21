@@ -1,4 +1,4 @@
-"""Dose-mortality of flour beetles exposed for five hours to gaseous carbon disulphide (Bliss 1935,
+"""Dose-mortality of flour beetles exposed for five hours to gaseous carbon disulfide (Bliss 1935,
 Annals of Applied Biology 22:134; eight concentrations, 481 beetles). Observed proportions killed (circles)
 against log10 concentration (mg/L), with binomial regressions under the logit, probit and complementary
 log-log links fitted by maximum likelihood. The dotted line marks the logit estimate of the median lethal

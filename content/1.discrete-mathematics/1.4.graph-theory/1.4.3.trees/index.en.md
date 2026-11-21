@@ -1,6 +1,6 @@
 ---
 title: Trees
-source_hash: bbf489509565
+source_hash: 5154e336422c
 ---
 
 Trees are among the most important notions in graph theory and have wide applications in computer science (file systems, coding, searching, games and more). In the mid-nineteenth century the British mathematician Cayley studied the enumeration of trees and used it to count the isomers of chemical compounds, one of the earliest applications of trees. In this chapter we first give the definition of a tree and several equivalent characterizations. We then return to the incidence matrix $B$, the adjacency matrix $A$ and the degree matrix $D$ of [1.4.1](/1.4.1) and study spanning trees algebraically: the rank and the minors of the incidence matrix characterize spanning trees, the Laplacian matrix $L = D - A = BB^{\mathsf T}$ counts them (the matrix-tree theorem and Cayley's formula), and the cycle and cut-set matrices determine and are determined by the incidence matrix. Next we discuss how to generate spanning trees, and finally two optimization problems involving trees: Huffman trees and minimum spanning trees. In [1.4.6](/1.4.6) the eigenvalues of the Laplacian matrix will also measure how well a graph is connected.
@@ -348,7 +348,7 @@ def prufer_encode(n, edges):
         leaf = min(v for v in adj if len(adj[v]) == 1)   # smallest leaf
         (nb,) = adj.pop(leaf)
         adj[nb].discard(leaf)
-        seq.append(nb)                                   # record its neighbour
+        seq.append(nb)                                   # record its neighbor
     return seq
 
 def prufer_decode(seq):

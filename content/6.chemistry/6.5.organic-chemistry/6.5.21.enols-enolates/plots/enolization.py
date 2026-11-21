@@ -1,4 +1,4 @@
-"""Acid- and base-catalysed enolization of acetone. Acid (top): the carbonyl oxygen is protonated
+"""Acid- and base-catalyzed enolization of acetone. Acid (top): the carbonyl oxygen is protonated
 first, then water removes an alpha proton and the C-H electrons form the C=C bond. Base (bottom):
 hydroxide removes the alpha proton first, giving the enolate, which is then protonated on oxygen by
 water. Both routes make the same enol; their reverse steps take the enol back to the ketone."""

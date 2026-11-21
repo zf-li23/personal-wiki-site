@@ -1,4 +1,4 @@
-"""Autotetraploid segregation. A: pairing of four homologues as two bivalents or as a quadrivalent
+"""Autotetraploid segregation. A: pairing of four homologs as two bivalents or as a quadrivalent
 (partner exchange). B: gametes of a duplex AAaa as functions of the double-reduction rate alpha
 (cytogenetics.tetrasomic_gametes): from 1:4:1 under random chromosome segregation (alpha = 0) to 3:8:3
 under random chromatid segregation (alpha = 1/7). C: fraction of recessive aaaa offspring on selfing a

@@ -1,9 +1,9 @@
-# Muscle architecture trades force for speed at constant volume (simplified planar model, fibre angle constant).
+# Muscle architecture trades force for speed at constant volume (simplified planar model, fiber angle constant).
 # Three muscles of the same volume V = 200 cm^3 and specific tension sigma = 25 N cm^-2:
-#   parallel, fibre length L_f = 20 cm, pennation angle theta = 0;  pennate, L_f = 8 cm, theta = 20 deg;
+#   parallel, fiber length L_f = 20 cm, pennation angle theta = 0;  pennate, L_f = 8 cm, theta = 20 deg;
 #   pennate, L_f = 4 cm, theta = 30 deg.
-# PCSA = V / L_f; isometric force along the tendon F0 = sigma PCSA cos(theta); fibres shorten at up to
-# 5 L_f per second and the tendon moves 1 / cos(theta) times faster than the fibres (architectural gear),
+# PCSA = V / L_f; isometric force along the tendon F0 = sigma PCSA cos(theta); fibers shorten at up to
+# 5 L_f per second and the tendon moves 1 / cos(theta) times faster than the fibers (architectural gear),
 # so v_max = 5 L_f / cos(theta). Hill curvature a/F0 = 0.25. Usable excursion along the tendon about
 # 0.4 L_f / cos(theta) (sarcomeres from about 2.8 to 1.7 um).
 # (A) force-velocity along the tendon; (B) power: the maximum is the same, set by volume alone;

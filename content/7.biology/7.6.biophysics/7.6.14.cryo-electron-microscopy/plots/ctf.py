@@ -3,7 +3,7 @@
 # CTF(k) = -[sqrt(1 - A^2) sin chi + A cos chi], amplitude contrast A = 0.07.
 # A: CTF at df = 1.0 um multiplied by the envelopes: spatial coherence (illumination semi-angle
 #    alpha = 0.02 mrad), temporal coherence (focal spread delta = 4 nm) and a B-factor of 50 A^2 for
-#    specimen motion, damage and detector; the grey band is the total envelope.
+#    specimen motion, damage and detector; the gray band is the total envelope.
 # B: undamped CTF at three defoci at low spatial frequency: larger defocus raises the contrast of
 #    the lowest frequencies but makes the oscillations faster; the first zero moves to lower k.
 # C: the lowest frequencies: conventional imaging (amplitude contrast only, near zero), the CTF at

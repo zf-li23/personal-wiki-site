@@ -37,7 +37,7 @@ W = 19
 def profile(seq, w=W):
     h = np.array([KD[a] for a in seq])
     avg = np.convolve(h, np.ones(w) / w, mode="valid")
-    centre = np.arange(len(avg)) + (w + 1) // 2  # 1-based residue number of the window centre
+    centre = np.arange(len(avg)) + (w + 1) // 2  # 1-based residue number of the window center
     return centre, avg
 
 

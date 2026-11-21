@@ -1,4 +1,4 @@
-# A toy version of ab initio bead modelling (in the spirit of DAMMIN), reduced to a flat particle.
+# A toy version of ab initio bead modeling (in the spirit of DAMMIN), reduced to a flat particle.
 # Search volume: the beads of a square grid (spacing 1 unit = 5 A) inside a disc of diameter Dmax = 15 units.
 # Each bead is either particle (1) or solvent (0). The particle is flat (all beads in one plane), but it
 # tumbles in three dimensions, so its scattering is given by the Debye formula
@@ -6,7 +6,7 @@
 # Target: a two-lobed, L-shaped particle of 59 beads; its curve on 40 points, 0.05 <= q <= 1.8 unit^-1
 # (0.01 to 0.36 A^-1), with 2 % noise, serves as the "data".
 # Energy: E = chi^2 (with the best scale factor) + 3 * looseness + 2 * (number of disconnected pieces - 1),
-# looseness = 1 - (mean number of occupied neighbours of occupied beads) / 4.
+# looseness = 1 - (mean number of occupied neighbors of occupied beads) / 4.
 # Simulated annealing: single-bead flips accepted with the Metropolis probability min(1, exp(-dE / T)),
 # T lowered by a factor 0.88 every 700 steps from T0 = 2; the scattering is updated incrementally
 # (O(N) per flip) through g_m(q) = sum_k x_k S_mk(q).

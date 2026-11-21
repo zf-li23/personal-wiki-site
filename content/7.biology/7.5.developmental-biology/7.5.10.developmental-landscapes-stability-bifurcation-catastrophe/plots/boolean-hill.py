@@ -6,7 +6,7 @@ points, 011 and 100, and two 3-cycles. B: the continuous version
 da/dt = F-(c) - a, db/dt = F-(a) - b, dc/dt = F+(b) - c with F+(x) = x^n / (theta^n + x^n),
 F-(x) = theta^n / (theta^n + x^n), n = 4, theta = 0.5, from 12 random initial states: every
 trajectory goes to one of two stable steady states, close to the Boolean fixed points; the
-3-cycles of the synchronous Boolean map have no counterpart (they are artefacts of updating all
+3-cycles of the synchronous Boolean map have no counterpart (they are artifacts of updating all
 genes at once; with asynchronous updating they disappear too).
 """
 

@@ -1,7 +1,7 @@
 """Protonation of guanidine. The proton adds to the sp2 imine nitrogen; in the guanidinium ion the
 positive charge is shared equally by all three nitrogens (three equivalent resonance structures,
 interconverted by the curved arrows), which makes guanidine one of the strongest neutral organic
-bases (pKa of the conjugate acid 13.6 in water). Amidines such as DBU are stabilised the same way
+bases (pKa of the conjugate acid 13.6 in water). Amidines such as DBU are stabilized the same way
 over two nitrogens."""
 
 from wikichem import Scheme

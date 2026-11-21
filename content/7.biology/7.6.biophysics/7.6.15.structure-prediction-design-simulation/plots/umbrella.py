@@ -2,7 +2,7 @@
 # A particle performs overdamped Brownian dynamics (Euler-Maruyama, D = 1, dt = 2.5e-4, energies in k_B T)
 # in a double well U(x) = 6 (x^2 - 1)^2 + 0.5 x with a barrier of about 6 k_B T.
 # A: an unbiased run of 40 000 steps (time 10) started in the left well stays there; the histogram estimate of the
-#    free energy -ln p(x) (grey) covers only that well. Fifteen umbrella windows with harmonic biases
+#    free energy -ln p(x) (gray) covers only that well. Fifteen umbrella windows with harmonic biases
 #    w_i(x) = (k/2)(x - x_i)^2 (k = 40, x_i from -1.6 to 1.6), each sampled for 80 000 steps (time 20), are combined
 #    by WHAM; the reconstructed free-energy profile (dots) matches the exact U(x) (line) across the
 #    barrier. Curves are shifted to zero at their minima.

@@ -1,6 +1,6 @@
 """Re and Si faces of the carbonyl carbon of butan-2-one. CIP order at the trigonal carbon:
 O > CH2CH3 > CH3. Seen from the front, O -> Et -> Me runs clockwise (Re face); seen from the
-back (mirror image of the drawing), it runs anticlockwise (Si face)."""
+back (mirror image of the drawing), it runs counterclockwise (Si face)."""
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -26,7 +26,7 @@ def face(ax, x0, flip, title):
 
 fig, ax = plt.subplots(figsize=(8, 3.4))
 face(ax, 0, False, "front: 1 $\\to$ 2 $\\to$ 3 clockwise = Re face")
-face(ax, 4.2, True, "back: anticlockwise = Si face")
+face(ax, 4.2, True, "back: counterclockwise = Si face")
 ax.set_aspect("equal")
 ax.set_xlim(-2, 6.2)
 ax.set_ylim(-1.9, 1.6)

@@ -3,7 +3,7 @@
 A bounded domain [0, 1] (an elevational gradient from the valley floor to the summit, or a latitudinal
 band between two coasts). A: 40 of 200 ranges placed at random: the two end points of each range are
 independent uniform points of the domain. B: richness S(x) of 200 such species (steps, one realization;
-grey band: central 90 % of 500 realizations) and the exact expectation S(x) = 2 N x (1 - x) (line); with
+gray band: central 90 % of 500 realizations) and the exact expectation S(x) = 2 N x (1 - x) (line); with
 the same range sizes placed again at random within the domain (sizes kept, midpoints random where the
 range fits; dashed) the peak is similar. C: an elevational gradient combining the mid-domain null model
 with a monotonic decline of the regional pool with elevation (each species retained with probability

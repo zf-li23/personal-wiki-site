@@ -1,6 +1,6 @@
 """Benzylic cleavage in the EI spectra of the two C9H12 isomers of the worked example. Top: the cumene
 molecular ion (m/z 120) loses a methyl radical from the benzylic carbon, giving the
-1-phenylethyl cation m/z 105 (base peak), stabilised by delocalisation into the ring. Bottom:
+1-phenylethyl cation m/z 105 (base peak), stabilized by delocalization into the ring. Bottom:
 propylbenzene loses an ethyl radical instead; the benzyl cation (m/z 91) rearranges to the
 aromatic tropylium ion, so its base peak is m/z 91."""
 

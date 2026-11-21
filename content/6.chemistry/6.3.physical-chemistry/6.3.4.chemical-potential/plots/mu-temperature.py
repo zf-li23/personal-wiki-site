@@ -23,7 +23,7 @@ T = np.linspace(230, 480, 500)
 mus = mu(T, Tm, 0.0, Ss_m, Cs)
 mul = mu(T, Tm, 0.0, Sl_m, Cl)
 mug = mu(T, Tb, mu_l_b, Sg_b, Cg)
-mug10 = mug + R * T * np.log(10.0)  # 10 bar, ideal vapour; condensed phases barely shift
+mug10 = mug + R * T * np.log(10.0)  # 10 bar, ideal vapor; condensed phases barely shift
 
 fig, ax = plt.subplots(figsize=(8, 5.2))
 ax.plot(T, mus / 1e3, color="#2563eb", lw=2, label="solid (ice)")

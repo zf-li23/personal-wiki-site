@@ -2,7 +2,7 @@
 (SE), mutually exclusive exons (MXE), alternative 5' splice site (A5SS), alternative 3' splice site
 (A3SS) and retained intron (RI); constitutive exons in blue, alternative regions in orange, the
 inclusion form joined above and the exclusion form below. B: a sashimi plot of a skipped exon in two
-conditions: read coverage over the three exons and arcs for the junctions, labelled with the numbers
+conditions: read coverage over the three exons and arcs for the junctions, labeled with the numbers
 of junction reads. Inclusion junction counts I (the two arcs through the middle exon) and skipping
 counts S (the long arc) give the percent spliced in with effective lengths l_I = 2(L - 2a + 1) and
 l_S = L - 2a + 1 (read length L = 100, minimum anchor a = 8)."""

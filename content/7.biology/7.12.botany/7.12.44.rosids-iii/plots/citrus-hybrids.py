@@ -69,7 +69,7 @@ HALF.update({k: (1.7, 0.48) for k in hyb})
 
 
 def edge_point(c, d, half, pad=0.12):
-    """Point where the ray from box centre c towards d leaves the box (plus a small gap)."""
+    """Point where the ray from box center c towards d leaves the box (plus a small gap)."""
     c, d = np.asarray(c, float), np.asarray(d, float)
     v = d - c
     t = min((half[0] + pad) / abs(v[0]) if v[0] else 1e9, (half[1] + pad) / abs(v[1]) if v[1] else 1e9)

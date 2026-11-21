@@ -1,6 +1,6 @@
 """Conjugate (1,4-) addition of methanethiolate to cyclohex-2-en-1-one. The nucleophile attacks the
 beta carbon; the C=C pi electrons move between the alpha carbon and the carbonyl carbon, and the
-C=O pi electrons move onto oxygen, giving an enolate. Protonation (on oxygen, then tautomerisation,
+C=O pi electrons move onto oxygen, giving an enolate. Protonation (on oxygen, then tautomerization,
 or directly on the alpha carbon) gives the saturated 3-substituted ketone."""
 
 from wikichem import Scheme

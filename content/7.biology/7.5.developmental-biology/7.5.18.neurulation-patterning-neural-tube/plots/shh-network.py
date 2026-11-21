@@ -3,7 +3,7 @@ G(x, t) follows the Shh gradient (decay length 0.15 of the ventral half) and ada
 of its peak as Patched accumulates. Pax6 (P), Olig2 (O) and Nkx2.2 (N) repress one another; Gli induces Olig2 at
 a low threshold and Nkx2.2 only at a high one. (A) The domain with the highest factor at each position and time:
 Olig2 appears first, Nkx2.2 later and only ventrally, displacing Olig2; the borders then stay put although
-signalling declines. (B) Final levels across the ventral tube (0 = floor plate) and Gli activity at its peak
+signaling declines. (B) Final levels across the ventral tube (0 = floor plate) and Gli activity at its peak
 (dashed) and at the end (dotted). (C) Final fate of a single cell given a pulse of Gli activity of a given level and duration, followed
 by 40% of that level: a ventral (Nkx2.2) fate needs both a high level and a long exposure; with a short pulse the
 same level gives Olig2, as in explants exposed to Shh for different times (Dessaud et al. 2007)."""

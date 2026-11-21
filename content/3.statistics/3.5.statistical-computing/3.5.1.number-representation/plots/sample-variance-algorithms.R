@@ -32,6 +32,6 @@ err <- sapply(shifts, function(c) {
 matplot(shifts, t(err), log = "xy", type = "b", pch = c(19, 15, 17, 18), lty = 1,
         col = c("steelblue", "darkorange", "forestgreen", "firebrick"),
         xlab = "mean of the data c", ylab = "relative error of S^2")
-abline(h = 1, lty = 3, col = "grey50")
+abline(h = 1, lty = 3, col = "gray50")
 legend("topleft", bty = "n", cex = 0.8, legend = c("two-pass", "West (one pass)", "textbook", "Cotton"),
        col = c("steelblue", "darkorange", "forestgreen", "firebrick"), pch = c(19, 15, 17, 18), lty = 1)

@@ -1,10 +1,10 @@
-# Conduction velocity against axon diameter: two scaling laws and some measured fibres (log-log).
-# Lines: unmyelinated axons, v ~ 2 m/s * sqrt(d / 1 um) (mammalian C fibres at 37 C; cooler animals lie
+# Conduction velocity against axon diameter: two scaling laws and some measured fibers (log-log).
+# Lines: unmyelinated axons, v ~ 2 m/s * sqrt(d / 1 um) (mammalian C fibers at 37 C; cooler animals lie
 # lower, the squid giant axon at about 18 C falls near v ~ 1 m/s * sqrt(d / um)); myelinated vertebrate
-# fibres, v ~ 6 m/s per um of outer diameter (Hursh's rule).
-# Points (approximate literature values; temperature differs): mammalian fibre classes C, A-delta,
-# A-beta and A-alpha; frog sciatic A fibres; squid giant axon; earthworm medial giant fibre; crayfish
-# lateral giant; cockroach giant interneuron; the myelinated medial giant fibre of a penaeid shrimp.
+# fibers, v ~ 6 m/s per um of outer diameter (Hursh's rule).
+# Points (approximate literature values; temperature differs): mammalian fiber classes C, A-delta,
+# A-beta and A-alpha; frog sciatic A fibers; squid giant axon; earthworm medial giant fiber; crayfish
+# lateral giant; cockroach giant interneuron; the myelinated medial giant fiber of a penaeid shrimp.
 import numpy as np
 
 import wikibio as bio

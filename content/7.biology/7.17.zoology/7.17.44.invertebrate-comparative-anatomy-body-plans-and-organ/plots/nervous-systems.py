@@ -1,9 +1,9 @@
 """Six architectures of animal nervous systems (schematic, not to scale; nervous tissue in the neuron
-colour, gut grey-yellow in the lateral views).
+color, gut gray-yellow in the lateral views).
 
 A: nerve net of a cnidarian polyp (lateral view), condensed around the mouth. B: orthogon of a
 flatworm (dorsal view): bilobed brain and several pairs of longitudinal cords joined by commissures,
-the ventral pair dominant. C: tetraneury of a chiton (dorsal view): a circumoesophageal ring with two
+the ventral pair dominant. C: tetraneury of a chiton (dorsal view): a circumesophageal ring with two
 pedal and two lateral (pleurovisceral) cords. D: ganglionated ventral nerve cord of an annelid or
 arthropod (lateral view): a brain above the pharynx, connectives around it and a chain of segmental
 ganglia below the gut. E: circumoral ring and five radial nerves of a sea star (oral view), without a

@@ -2,7 +2,7 @@
 Each backbone is a helix of the given diameter, pitch and handedness projected onto the page; segments
 on the near side are drawn solid, those behind lighter. The two strands are offset in phase so that
 the grooves between them are unequal (major and minor groove; the offset is schematic). Lines between
-the strands are base pairs, tilted by the base-pair tilt of each form. Parameters (fibre and crystal
+the strands are base pairs, tilted by the base-pair tilt of each form. Parameters (fiber and crystal
 structures): A: right-handed, 11 bp per turn, rise 0.26 nm, diameter 2.6 nm, tilt 20 deg;
 B: right-handed, 10.5 bp per turn, rise 0.34 nm, diameter 2.0 nm, tilt 6 deg; Z: left-handed,
 12 bp per turn (6 dinucleotide repeats), rise 0.37 nm, diameter 1.8 nm, tilt 7 deg."""

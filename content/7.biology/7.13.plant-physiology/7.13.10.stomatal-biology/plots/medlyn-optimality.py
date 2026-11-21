@@ -1,4 +1,4 @@
-# Stomatal conductance models and optimal stomatal behaviour.
+# Stomatal conductance models and optimal stomatal behavior.
 # (A) Medlyn et al. (2011): g_s / A = 1.6 (1 + g1 / sqrt(D)) / c_a (g0 = 0, c_a = 420 umol/mol), for a C3
 # (g1 = 4 kPa^0.5) and a C4 plant (g1 = 1.6 kPa^0.5); expressed as g_s for A = 20 umol m^-2 s^-1.
 # (B) c_i / c_a = g1 / (g1 + sqrt(D)) (Eq. 10.5).

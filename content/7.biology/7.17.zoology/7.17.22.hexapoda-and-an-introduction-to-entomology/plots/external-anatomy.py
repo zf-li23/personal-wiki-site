@@ -1,8 +1,8 @@
 # External anatomy of an insect. Top: a grasshopper (Orthoptera) in lateral view, its three tagmata
-# coloured: the head (antennae, compound eyes, mouthparts), the thorax (prothorax with the saddle-shaped
+# colored: the head (antennae, compound eyes, mouthparts), the thorax (prothorax with the saddle-shaped
 # pronotum; meso- and metathorax bearing the two pairs of wings, here the leathery forewing or tegmen
 # covering the membranous hindwing; one pair of legs on each thoracic segment) and the abdomen (eleven
-# segments, with spiracles opening into the tracheal system). The jumping hind leg is coloured by segment.
+# segments, with spiracles opening into the tracheal system). The jumping hind leg is colored by segment.
 # Right: the segments of a walking leg, from the body outwards: coxa, trochanter, femur, tibia, tarsus
 # (here four tarsomeres) and the pretarsus with its claws. Bottom: a worker ant (Hymenoptera, Formicidae)
 # shows how tagmata can be regrouped: the first abdominal segment (propodeum) is fused to the thorax,

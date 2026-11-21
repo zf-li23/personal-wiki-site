@@ -2,7 +2,7 @@
 
 Each linear electron needs one photon absorbed by PSII and one by PSI, so under limiting light the O2
 quantum yield is proportional to 2 min(f1, f2), where f1 and f2 = 1 - f1 are the fractions of absorbed
-photons delivered to PSI and PSII. Model: f1 = 0.42 at short wavelengths (state 1: PSII favoured) rising
+photons delivered to PSI and PSII. Model: f1 = 0.42 at short wavelengths (state 1: PSII favored) rising
 to about 1 beyond 700 nm, where only PSI absorbs (logistic step at 692 nm). State 2 moves part of LHCII to
 PSI (f1 + 0.08 where PSII still absorbs). A: f1 and f2; B: relative quantum yield; C: O2 evolution under a
 fixed 700 nm beam (photon flux 1) when a 650 nm beam of increasing flux is added, compared with the sum of

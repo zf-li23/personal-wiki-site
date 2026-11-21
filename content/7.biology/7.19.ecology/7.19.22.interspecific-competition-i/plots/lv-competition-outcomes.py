@@ -2,7 +2,7 @@
 
 dN1/dt = r1 N1 (K1 - N1 - a12 N2) / K1, dN2/dt = r2 N2 (K2 - N2 - a21 N1) / K2, with K1 = K2 = 100,
 r1 = 1, r2 = 0.8. Lines: zero net growth isoclines of species 1 (N1 + a12 N2 = K1) and species 2
-(N2 + a21 N1 = K2); grey: the direction field; thin lines: trajectories from several initial densities.
+(N2 + a21 N1 = K2); gray: the direction field; thin lines: trajectories from several initial densities.
 Filled points: stable equilibria; open: unstable node (origin) or saddle. A: a12 = 0.6, a21 = 1.4,
 species 1 excludes species 2. B: a12 = 1.4, a21 = 0.6, species 2 wins. C: a12 = 1.5, a21 = 1.3, each
 species inhibits the other more than itself: the interior equilibrium is a saddle whose stable manifold

@@ -1,4 +1,4 @@
-"""Acid-catalysed cleavage of a tert-butyl ester (AAl1). After protonation of the carbonyl oxygen,
+"""Acid-catalyzed cleavage of a tert-butyl ester (AAl1). After protonation of the carbonyl oxygen,
 the bond between the ester oxygen and the tertiary alkyl group breaks heterolytically: the acid
 leaves and the tert-butyl cation remains. The cation loses a proton (isobutene) or is captured by
 water (tert-butanol). The alkyl-oxygen bond breaks, unlike in AAc2, where the acyl-oxygen bond does."""

@@ -1,5 +1,5 @@
 # The fetal circulation of a mammal as a flow diagram: boxes are organs and chambers, arrows vessels
-# coloured by oxygenation; the three shunts that close at birth are highlighted. Schematic.
+# colored by oxygenation; the three shunts that close at birth are highlighted. Schematic.
 import wikibio as bio
 
 P = bio.P

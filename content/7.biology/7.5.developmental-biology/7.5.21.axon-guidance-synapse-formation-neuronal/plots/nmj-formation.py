@@ -1,10 +1,10 @@
 """Formation of the neuromuscular junction. (A) Before innervation, acetylcholine receptors (AChR) are spread over
-the muscle fibre, with a faint prepattern in its central band. (B) The motor axon terminal releases agrin (the
+the muscle fiber, with a faint prepattern in its central band. (B) The motor axon terminal releases agrin (the
 neural, z+ isoform), which binds LRP4; LRP4 activates the receptor tyrosine kinase MuSK, which with Dok7 recruits
 rapsyn and clusters AChR under the terminal, at the crests of the junctional folds of the postsynaptic membrane.
 Neuregulin and other signals raise transcription of AChR genes in the subsynaptic nuclei, while electrical activity
-of the fibre represses it in the other nuclei, so receptors become concentrated at the synapse. (C) Polyneuronal
-innervation at birth is reduced to a single axon per fibre within the first weeks by activity-dependent
+of the fiber represses it in the other nuclei, so receptors become concentrated at the synapse. (C) Polyneuronal
+innervation at birth is reduced to a single axon per fiber within the first weeks by activity-dependent
 competition."""
 import numpy as np
 import wikibio as bio

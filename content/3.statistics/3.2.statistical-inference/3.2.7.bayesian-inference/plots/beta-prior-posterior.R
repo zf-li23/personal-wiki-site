@@ -18,7 +18,7 @@ dens <- cbind(dbeta(theta, a0, b0),
               dbeta(theta, a0 + data$x[2], b0 + data$n[2] - data$x[2]))
 matplot(theta, dens, type = "l", lty = 1, lwd = 1.8, col = cols[1:3],
         xlab = "theta", ylab = "", main = "Prior and posteriors")
-abline(v = 0.3, lty = 2, col = "grey50")
+abline(v = 0.3, lty = 2, col = "gray50")
 legend("topright", bty = "n", cex = 0.8,
        legend = c("prior Beta(14, 6)", "posterior, n = 10, x = 3", "posterior, n = 100, x = 30"),
        col = cols[1:3], lwd = 1.8)

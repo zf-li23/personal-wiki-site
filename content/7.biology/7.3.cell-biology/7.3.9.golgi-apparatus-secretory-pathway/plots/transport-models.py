@@ -7,7 +7,7 @@
 # exit is first order, exponential without lag. A: probability density of the exit time (curves) and
 # histograms of 400 simulated molecules per model. B: the fraction of
 # the pulse still in the Golgi; measurements of the export of fluorescent cargo from the Golgi of mammalian
-# cells show the exponential behaviour (Patterson et al., Cell 133:1055, 2008), while maturation is seen
+# cells show the exponential behavior (Patterson et al., Cell 133:1055, 2008), while maturation is seen
 # directly in yeast and for large cargo such as procollagen.
 import matplotlib.pyplot as plt
 import numpy as np

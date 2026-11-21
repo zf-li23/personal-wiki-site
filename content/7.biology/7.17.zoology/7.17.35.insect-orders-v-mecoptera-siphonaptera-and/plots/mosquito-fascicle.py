@@ -2,7 +2,7 @@
 # Culicidae mouthparts). Six stylets form the fascicle that enters the skin: the labrum (folded into the food
 # canal), two mandibles, two maxillae (laciniae, toothed at the tip, which cut and anchor) and the
 # hypopharynx (with the salivary canal). The labium is a grooved sheath that encloses the fascicle and bends
-# back as the stylets penetrate; it does not enter the wound. Colours follow the mouthpart homology used
+# back as the stylets penetrate; it does not enter the wound. Colors follow the mouthpart homology used
 # throughout the course: labrum yellow, mandibles orange, maxillae blue, labium green.
 import numpy as np
 from matplotlib.patches import Circle, Ellipse, Polygon

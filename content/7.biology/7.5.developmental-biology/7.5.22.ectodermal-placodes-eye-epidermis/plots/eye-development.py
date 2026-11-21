@@ -3,7 +3,7 @@
 lens placode. (B) The vesicle folds into the two-layered optic cup, whose inner layer becomes the neural retina and
 outer layer the retinal pigment epithelium (RPE), while the placode invaginates as the lens pit. (C) The lens vesicle
 pinches off and the surface ectoderm closes over it; it will form the corneal epithelium. (D) Cells of the posterior
-lens vesicle elongate into lens fibres and fill it, the retina thickens and becomes layered, ganglion cell axons
+lens vesicle elongate into lens fibers and fill it, the retina thickens and becomes layered, ganglion cell axons
 leave through the optic stalk (optic nerve), and neural crest mesenchyme forms the corneal stroma."""
 import wikibio as bio
 from wikibio import neurodev as N

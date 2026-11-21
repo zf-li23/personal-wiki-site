@@ -1,5 +1,5 @@
 # The hypothetical ground plan of wing venation (Comstock-Needham system with the cubital and anal
-# veins as recognised today), on a generalized forewing. Longitudinal veins, coloured by family: costa (C),
+# veins as recognized today), on a generalized forewing. Longitudinal veins, colored by family: costa (C),
 # subcosta (Sc), radius (R1 and the radial sector Rs with R2-R5), media (M1-M4), anterior cubitus (CuA1,
 # CuA2), posterior cubitus (CuP), anal veins (A1-A3) and jugal vein (J). Crossveins (lower case): humeral
 # (h), radial (r), radio-medial (r-m), medial (m), medio-cubital (m-cu) and cubito-cubital (cu-a, joining CuA and CuP). The

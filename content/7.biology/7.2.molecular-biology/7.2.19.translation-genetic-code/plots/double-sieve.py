@@ -2,7 +2,7 @@
 # A: the double sieve of isoleucyl-tRNA synthetase (Fersht). The synthetic (activation) site excludes amino
 #    acids larger than Ile (e.g. Phe; Leu has the wrong shape) but cannot exclude smaller ones; Val, one CH2
 #    smaller, is activated about 1/200 as often as Ile. The editing site, about 3 nm away, admits Val-AMP or
-#    Val-tRNA(Ile) but excludes Ile, and hydrolyses them (pre- and post-transfer editing). Gly and Ala are
+#    Val-tRNA(Ile) but excludes Ile, and hydrolyzes them (pre- and post-transfer editing). Gly and Ala are
 #    rejected at the first step because they bind too weakly.
 # B: typical error frequencies along the path from gene to protein (order of magnitude; ranges vary between
 #    codons and organisms): transcription about 1e-5 per nt (about 3e-5 per codon), aminoacylation 1e-5 to
@@ -37,7 +37,7 @@ for (name, r), x in zip(aas, xs):
         bio.label(ax, (x, 5.15), results1[name], size="tiny", color=P.edge("negative"))
     else:
         bio.arrow(ax, (x, 5.45), (x, 4.85), kind="process")
-bio.box(ax, (3.6, 2.05), 6.4, 0.9, token="highlight", text="Editing site: excludes Ile; hydrolyses Val-AMP, Val-tRNA(Ile)",
+bio.box(ax, (3.6, 2.05), 6.4, 0.9, token="highlight", text="Editing site: excludes Ile; hydrolyzes Val-AMP, Val-tRNA(Ile)",
         size="tiny")
 iv = xs[2], xs[3]
 bio.arrow(ax, (iv[0], 3.85), (iv[0], 2.55), kind="process")

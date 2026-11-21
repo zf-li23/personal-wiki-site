@@ -2,7 +2,7 @@
 Bioconductor package airway): eight samples from four airway smooth-muscle cell lines, untreated or
 treated with dexamethasone. Variance-stabilized expression (pydeseq2 vst) of the 500 most variable genes.
 A: Euclidean distances between samples, ordered by average-linkage hierarchical clustering (dendrogram
-on top). B: the 40 most variable genes, centred and scaled per gene (z-scores), genes clustered by
+on top). B: the 40 most variable genes, centered and scaled per gene (z-scores), genes clustered by
 average linkage on correlation distance, samples in the order of panel A.
 """
 import csv

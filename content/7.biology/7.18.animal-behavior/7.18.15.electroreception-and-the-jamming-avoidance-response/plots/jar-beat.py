@@ -1,14 +1,14 @@
-"""What the fish feels when a neighbour discharges at a nearby frequency.
+"""What the fish feels when a neighbor discharges at a nearby frequency.
 
-The fish's own EOD (amplitude 1, frequency f) mixes with a weaker neighbour signal (amplitude m)
+The fish's own EOD (amplitude 1, frequency f) mixes with a weaker neighbor signal (amplitude m)
 at f + df. Relative to the fish's own signal, the mixture z = 1 + m exp(i 2 pi df t) has amplitude
 |z| (amplitude modulation at the beat frequency |df|) and phase arg z (phase modulation).
 A: the summed waveform for df = +4 Hz, m = 0.3 (carrier drawn at 60 Hz for visibility).
-B: amplitude against phase over one beat cycle (two neighbour strengths m): the loop runs clockwise for df > 0 (neighbour higher)
-and counter-clockwise for df < 0. Rule: if amplitude rises while the phase lags, the neighbour is
+B: amplitude against phase over one beat cycle (two neighbor strengths m): the loop runs clockwise for df > 0 (neighbor higher)
+and counter-clockwise for df < 0. Rule: if amplitude rises while the phase lags, the neighbor is
 higher and the fish should lower its frequency.
 C: the fish has no pure copy of its own signal, so it compares the phase at two body regions with
-different contamination (m = 0.3 near the neighbour, m = 0.05 elsewhere): the differential phase
+different contamination (m = 0.3 near the neighbor, m = 0.05 elsewhere): the differential phase
 plotted against amplitude gives the same sense of rotation.
 """
 import matplotlib.pyplot as plt

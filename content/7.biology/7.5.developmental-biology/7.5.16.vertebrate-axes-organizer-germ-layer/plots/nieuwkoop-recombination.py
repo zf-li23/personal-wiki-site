@@ -3,7 +3,7 @@
 # vegetal mass endoderm; neither forms mesoderm. B: an animal cap combined with a vegetal mass forms mesoderm from
 # animal-cap cells (shown by lineage labels): the vegetal cells induce mesoderm. C: dorsal vegetal cells induce
 # dorsal mesoderm (notochord, muscle), ventral vegetal cells ventral mesoderm (blood, mesenchyme): the vegetal mass
-# is already patterned along the dorsal-ventral axis, and its dorsal part is the Nieuwkoop centre.
+# is already patterned along the dorsal-ventral axis, and its dorsal part is the Nieuwkoop center.
 import numpy as np
 import wikibio as bio
 from matplotlib.patches import Wedge, Circle

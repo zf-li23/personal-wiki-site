@@ -162,7 +162,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-X, y = load_breast_cancer(return_X_y=True)            # 569 tumours, 30 features
+X, y = load_breast_cancer(return_X_y=True)            # 569 tumors, 30 features
 X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.25, stratify=y, random_state=0)
 
 raw = KNeighborsClassifier(n_neighbors=5)

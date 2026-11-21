@@ -1,9 +1,9 @@
 # Maintenance of the parasegment boundary by the Wingless-Hedgehog loop (Formula 15.4.1). Each of 16 cells (four
 # parasegments of four cells) can express engrailed (en, with hedgehog) and wingless (wg). Pair-rule inputs switch en
 # on in the first cell of each parasegment and wg in the last for t < 5 and then vanish; Sloppy-paired keeps the wg
-# cells competent. En is maintained by Wingless from the neighbouring cells, wg by Hedgehog from the neighbours.
+# cells competent. En is maintained by Wingless from the neighboring cells, wg by Hedgehog from the neighbors.
 # A: wild type, the pattern persists after the initiating inputs are gone. B: no Wingless: en fades once the
-# pair-rule input ends. C: Hedgehog signalling blocked transiently (5 < t < 9): the loop collapses and does not recover,
+# pair-rule input ends. C: Hedgehog signaling blocked transiently (5 < t < 9): the loop collapses and does not recover,
 # because the off state is also stable.
 import numpy as np
 import wikibio as bio

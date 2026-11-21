@@ -1,4 +1,4 @@
-"""Combinatorial receptor codes for single odorants and for odour mixtures.
+"""Combinatorial receptor codes for single odorants and for odor mixtures.
 
 A: each of 300 receptor types binds a given odorant with a dissociation constant drawn
 log-normally (median 1 mM, 1.5 decades s.d.); occupancy c/(c + K). The number of receptor types

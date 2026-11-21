@@ -1,7 +1,7 @@
 # Epigenetic memory from read-write feedback: the model of Dodd, Micheelsen, Sneppen and Thon (2007).
 # N = 60 nucleosomes in states M (0), U (1), A (2). Each event: pick n1; with probability alpha a recruited
 # conversion (pick n2 at random; if n2 = M move n1 one step toward M, if n2 = A one step toward A); otherwise a noisy
-# conversion (n1 moves one step to a random neighbouring state). F = alpha / (1 - alpha). Every 100 sweeps a cell
+# conversion (n1 moves one step to a random neighboring state). F = alpha / (1 - alpha). Every 100 sweeps a cell
 # division replaces each nucleosome by U with probability 1/2. A: F = 1; B: F = 4 (traces of the M fraction).
 # C: histograms of (fraction M - fraction A) sampled every sweep over long runs.
 import numpy as np

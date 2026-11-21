@@ -6,7 +6,7 @@ tau_i = 4 ms; peaks in units of g_L). Each afferent volley excites the cell dire
 delta = 1.5 ms, through an inhibitory interneuron (g_i peak = 6 x g_e peak, g_e peak = 0.3 g_L), as in hippocampal CA1
 (Pouille and Scanziani 2001). Values are illustrative.
 A: response to one volley without and with feedforward inhibition.
-B: peak depolarisation produced by two volleys as a function of their separation. Without
+B: peak depolarization produced by two volleys as a function of their separation. Without
 inhibition the two EPSPs sum over ~tau_m; with feedforward inhibition only volleys within a few ms sum.
 C: shunting shortens the effective time constant, tau_eff = tau_m / (1 + g_shunt R_in) (R_in = 100 MOhm).
 """
@@ -55,7 +55,7 @@ for ffi, c, name in ((False, P.edge("positive"), "excitation only"), (True, P.in
     ax.plot(dts, pk / single, color=c, lw=2, label=name)
 ax.axhline(1, color=P.muted(), lw=0.8, ls=":")
 ax.set_xlabel("Interval between two volleys / ms")
-ax.set_ylabel("Peak depolarisation / single volley")
+ax.set_ylabel("Peak depolarization / single volley")
 ax.legend(frameon=False, fontsize=8)
 ax.set_title("B  Integration window", loc="left", fontsize=10)
 

@@ -1,7 +1,7 @@
 """Two alveoli connected to the same airway: surface tension, surfactant and the tissue network.
 
 Pressure needed to hold an alveolus of radius r open: P(r) = 2 gamma(r)/r + P_t(r) (Laplace pressure plus the
-recoil of the fibre network, which rises steeply only near full inflation: P_t = 20 exp((r - 130)/10) Pa, r in um).
+recoil of the fiber network, which rises steeply only near full inflation: P_t = 20 exp((r - 130)/10) Pa, r in um).
 Cases: water (gamma = 70 mN/m), surfactant (gamma rises from 1 mN/m at r = 60 um to 25 mN/m at r = 160 um as
 the film is expanded, gamma = 1 + 24 ((r - 60)/100)^2), and water without the tissue network.
 Dynamics (B): total volume fixed, air flows from the alveolus with the higher pressure to the other,

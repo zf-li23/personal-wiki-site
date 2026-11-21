@@ -78,7 +78,7 @@ for j, (nf, title) in enumerate([(0, "Tendril"), (3, "Tendril with flowers"), (9
                 ax.add_patch(Circle(p, 0.18, facecolor=P.fill("petal"), edgecolor=P.edge("petal"), lw=0.7, zorder=6))
     bio.label(ax, (bx + 0.6, 1.8), title, size="small")
 bio.arrow(ax, (16.3, 10.2), (26.0, 10.2), kind="process")
-bio.label(ax, (21.2, 10.8), "Same position, branching and gene expression (LEAFY homologue)", size="small")
+bio.label(ax, (21.2, 10.8), "Same position, branching and gene expression (LEAFY homolog)", size="small")
 
 # C: Parthenocissus pads
 bio.panel(ax, "C", (28.4, 13.8))

@@ -1,7 +1,7 @@
 """The zone model of collective motion (Couzin et al. 2002), in two dimensions.
 
-A: the three zones around an individual: repulsion (avoid collisions), orientation (align with neighbours) and
-attraction (approach neighbours), with a blind sector behind. B-D: groups of 40 after 500 steps for three widths of
+A: the three zones around an individual: repulsion (avoid collisions), orientation (align with neighbors) and
+attraction (approach neighbors), with a blind sector behind. B-D: groups of 40 after 500 steps for three widths of
 the orientation zone (repulsion radius 1, attraction radius 14): a swarm without alignment, a rotating torus
 (mill) and a polarized group moving in one direction; P is the polarization |mean heading| and M the normalized
 angular momentum about the centroid at the final step. E: P and M over the last 50 of 500 steps (mean of 6 runs

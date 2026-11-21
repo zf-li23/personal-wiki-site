@@ -3,9 +3,9 @@
 give the stated p50. Numbers on the panels are computed from these curves.
 A: Bohr effect, p50 = 3.5 x 10^(-0.48 (pH - 7.4)) kPa; illustrative pH 7.6 in the lungs and 7.2 in
 active tissue. B: 2,3-bisphosphoglycerate: p50 = 1.4 (no BPG), 3.5 (5 mM) and 4.3 kPa (8 mM, after
-acclimatization); high altitude modelled by a lung p_O2 of 7.5 kPa. C: carbon monoxide: 50 % of all
+acclimatization); high altitude modeled by a lung p_O2 of 7.5 kPa. C: carbon monoxide: 50 % of all
 subunits carry CO (binomially distributed over tetramers; a CO-bound subunit counts as liganded),
-compared with an anaemia in which half of the hemoglobin is missing."""
+compared with an anemia in which half of the hemoglobin is missing."""
 
 import numpy as np
 from scipy.optimize import brentq
@@ -78,7 +78,7 @@ bars(bb, ["sea level", "4500 m", "4500 m, 8 mM"],
      [theta(13.3, L5) - theta(4, L5), theta(7.5, L5) - theta(4, L5), theta(7.5, L8) - theta(4, L8)],
      ["blood", "negative", "protein"])
 
-# C: CO versus anaemia
+# C: CO versus anemia
 bio.panel(ax, "C", (15.3, 8.5))
 pc = charts.axes_at(ax, (16.5, 3.3, 5.8, 4.4))
 L0 = Lb["5 mM BPG"]

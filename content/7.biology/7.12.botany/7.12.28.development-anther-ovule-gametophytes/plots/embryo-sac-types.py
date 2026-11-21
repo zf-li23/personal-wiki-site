@@ -1,6 +1,6 @@
 # Types of embryo sac development, by the number of megaspore nuclei that take part (monosporic,
 # bisporic, tetrasporic). For each type: the products of meiosis in the megasporocyte (walls drawn as
-# lines; grey = degenerating) and the mature embryo sac (micropylar end at the top), with the ploidy of
+# lines; gray = degenerating) and the mature embryo sac (micropylar end at the top), with the ploidy of
 # the polar nuclei. Polygonum (most angiosperms), Oenothera (Onagraceae; four-celled), Allium (bisporic),
 # Fritillaria (Lilium; tetrasporic, three chalazal nuclei fuse, chalazal polar nucleus and antipodals 3n)
 # and Peperomia (sixteen nuclei, eight polar nuclei).

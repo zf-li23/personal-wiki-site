@@ -3,7 +3,7 @@
 A synthetic limb-bud section is divided into 30 x 22 squares; the bud occupies a rounded region, each square holds
 about 40 nuclei (Poisson), and the true probability of mitosis m(x) is about 0.12, lower in the dense central core
 and proximally. Mitotic counts are Poisson with mean m * rho. Estimators: the raw index M / rho; r = 3 passes of
-nearest-neighbour averaging (weights 1/4, 1/2, 1/4 in each direction) applied to M and rho separately inside the
+nearest-neighbor averaging (weights 1/4, 1/2, 1/4 in each direction) applied to M and rho separately inside the
 tissue (so that the zeros outside do not bias the edge); the Poisson maximum likelihood fit of log m as a
 combination of 15 cosine functions cos(i pi u) cos(j pi v), i + j <= 4, with offset log rho, by iteratively
 reweighted least squares. Root-mean-square errors inside the tissue are shown.

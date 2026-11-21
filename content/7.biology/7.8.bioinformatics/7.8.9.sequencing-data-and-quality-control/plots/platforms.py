@@ -12,7 +12,7 @@ from wikibio import charts as C
 P = bio.P
 fig, ax = bio.canvas(26.0, 9.4)
 a = C.axes_at(ax, (1.8, 1.4, 12.0, 7.0))
-plat = [  # name, (len lo, hi), (Q lo, hi), centre (len, Q), token, filled
+plat = [  # name, (len lo, hi), (Q lo, hi), center (len, Q), token, filled
     ("Illumina / DNBSEQ\n(short read, 2x150)", (50, 300), (25, 36), (150, 31), "dna", True),
     ("Element AVITI", (150, 300), (33, 44), (200, 39), "enzyme", True),
     ("Sanger", (500, 1000), (35, 45), (800, 40), "neutral", True),

@@ -2,7 +2,7 @@
 
 A, autonomous: a cytoplasmic determinant (dots) localized in one region of the egg is inherited by the
 blastomere formed from that region; isolated, that blastomere still forms its fate (muscle), and the embryo
-lacking it lacks that fate. B, conditional: equivalent cells acquire fates from their neighbours and
+lacking it lacks that fate. B, conditional: equivalent cells acquire fates from their neighbors and
 position; a cell moved to a new position adopts the fate of its new position, and when cells are removed
 the remaining ones regulate. C, syncytial: in a syncytium (an insect blastoderm before cellularization)
 nuclei sit in shared cytoplasm with opposing gradients of determinants; each nucleus reads its position
@@ -61,7 +61,7 @@ bio.label(ax, (5.0, 1.55), "fate set by what the cell inherits;\nmosaic developm
 # ---------------------------------------------------------------- B conditional
 bio.panel(ax, "B", (10.6, 10.3))
 bio.label(ax, (15.2, 9.7), "Conditional specification", size="normal", bold=True)
-# a row of cells next to a signalling source; the signal falls off with distance
+# a row of cells next to a signaling source; the signal falls off with distance
 src = (11.3, 7.9)
 ax.add_patch(Circle(src, 0.4, facecolor=P.fill("highlight"), edgecolor=P.edge("highlight"), lw=1.0, zorder=6))
 bio.label(ax, (src[0], src[1] - 0.7), "source", size="tiny")

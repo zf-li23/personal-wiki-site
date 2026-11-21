@@ -1,7 +1,7 @@
 """Birth weight and the normal distribution (birthwt data, 189 births at Baystate Medical Center, 1986;
 Hosmer and Lemeshow; R package MASS). A: histogram of birth weight with the fitted normal density
 N(2945, 729^2); the shaded area below 2500 g is the normal estimate of the proportion of low birth weight.
-B: the same comparison by maternal smoking. The normal curve describes the centre well but underestimates
+B: the same comparison by maternal smoking. The normal curve describes the center well but underestimates
 the lower tail, where the observed proportions are higher.
 """
 import csv

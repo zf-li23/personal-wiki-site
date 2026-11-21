@@ -4,7 +4,7 @@
 # supply line A = (g_s / 1.6)(c_a - c_i) (Eq. 9.7, mesophyll conductance ignored, c_a = 420 umol/mol).
 # Transpiration E = g_tw * dw with 1/g_tw = 1/g_s + 1/g_b (Eq. 3.5), boundary-layer conductance g_b = 3 mol m^-2 s^-1.
 # A: A and E against g_s at D = 1.5 kPa.  B: c_i / c_a.  C: water-use efficiency A/E for three leaf-to-air
-# vapour pressure differences: A saturates while E keeps rising, so WUE falls as the stomata open wider and
+# vapor pressure differences: A saturates while E keeps rising, so WUE falls as the stomata open wider and
 # as the air dries.
 import numpy as np
 

@@ -1,4 +1,4 @@
-"""Blastulae of the model species in section, coloured by the germ layer each region will form (animal pole
+"""Blastulae of the model species in section, colored by the germ layer each region will form (animal pole
 up). Sea urchin: a hollow sphere one cell thick, the vegetal plate thickened (skeletogenic micromere
 descendants red, endoderm yellow). Frog: a multilayered animal cap over a blastocoel displaced towards the
 animal pole, marginal zone (prospective mesoderm), large yolky vegetal cells. Zebrafish: the blastoderm on

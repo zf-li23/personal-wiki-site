@@ -4,7 +4,7 @@ the basal side of the ventricular zone, returns in G2 and divides (M) at the api
 relations: neuroepithelial cells (NE) divide symmetrically to expand the pool, then become apical radial glia (aRG).
 aRG divide asymmetrically, renewing themselves and producing a neuron directly or an intermediate progenitor (IP),
 which divides once or a few times in the subventricular zone to make neurons. Outer radial glia (oRG), abundant in
-primates, keep only the basal fibre and divide repeatedly in the outer SVZ; at the end of neurogenesis radial glia
+primates, keep only the basal fiber and divide repeatedly in the outer SVZ; at the end of neurogenesis radial glia
 make astrocytes and oligodendrocyte precursors and the remaining cells become ependymal cells."""
 import numpy as np
 import wikibio as bio

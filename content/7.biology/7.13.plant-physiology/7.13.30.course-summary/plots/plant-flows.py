@@ -1,7 +1,7 @@
 # The plant as one system: the main flows of matter (left) and of signals (right) in a schematic plant.
 # Left: water and mineral ions move up the xylem along a falling water potential (soil -> root -> leaf ->
 # air; values typical of a transpiring leaf on a sunny day, air at 50 % relative humidity and 20 C),
-# water vapour leaves and CO2 enters through the stomata, and sucrose moves in the phloem from the
+# water vapor leaves and CO2 enters through the stomata, and sucrose moves in the phloem from the
 # source leaf to the sinks (shoot apex, fruit, root). Right: long-distance signals: ABA and cytokinin
 # from the root in the xylem, florigen (FT protein) from the leaf to the shoot apex in the phloem,
 # polar auxin transport from the apex downwards, light perceived by phytochromes, cryptochromes and

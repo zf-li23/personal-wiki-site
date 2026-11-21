@@ -1,9 +1,9 @@
-# Antibody titre after passive and active immunisation (phenomenological model, illustrative parameters).
+# Antibody titer after passive and active immunization (phenomenological model, illustrative parameters).
 # Each antigen dose k given at time t_k adds a response
 #   a_k (1 - exp(-(t - t_k)/tau_r)) [ (1 - phi_k) exp(-ln2 (t - t_k)/T_s) + phi_k exp(-ln2 (t - t_k)/T_l) ],
 # a short-lived component (short-lived plasma cells, half-life T_s = 30 d) and a long-lived component (long-lived plasma
 # cells, T_l = 730 d); tau_r = 4 d sets the rise to the peak. A passive dose of IgG just decays with the IgG half-life
-# of 21 d (FcRn recycling). Titres are relative units; the dashed line is an assumed protective threshold (10).
+# of 21 d (FcRn recycling). Titers are relative units; the dashed line is an assumed protective threshold (10).
 #   dose 1 (prime):          a = 100,  phi = 0.10
 #   boost after 4 weeks:     a = 600,  phi = 0.25
 #   boost after 6 months:    a = 2500, phi = 0.35   (more affinity maturation, less antibody left to mask the antigen)
@@ -42,7 +42,7 @@ ax.set_yscale("log")
 ax.set_ylim(1, 300)
 ax.set_xlim(0, 360)
 ax.legend(frameon=False, fontsize=7, labelcolor=P.ink(), loc="lower left")
-charts.style_axes(ax, "time / days", "antibody titre (relative, log scale)")
+charts.style_axes(ax, "time / days", "antibody titer (relative, log scale)")
 charts.title(ax, "A")
 
 ax = axs[1]
@@ -54,6 +54,6 @@ ax.set_yscale("log")
 ax.set_ylim(1, 5000)
 ax.set_xlim(0, 720)
 ax.legend(frameon=False, fontsize=7, labelcolor=P.ink(), loc="upper right")
-charts.style_axes(ax, "time / days", "antibody titre (relative, log scale)")
+charts.style_axes(ax, "time / days", "antibody titer (relative, log scale)")
 charts.title(ax, "B")
 fig.tight_layout()

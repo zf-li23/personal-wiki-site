@@ -7,7 +7,7 @@
 # the transition matrix T(tau) is diagonalized.
 # A: the potential and a stretch of one trajectory, hopping between the three wells.
 # B: implied time scales t_i = -tau / ln lambda_i(tau) of the two slowest processes against the lag time:
-#    they level off once tau exceeds the fast relaxation inside the wells, the test of Markovian behaviour.
+#    they level off once tau exceeds the fast relaxation inside the wells, the test of Markovian behavior.
 # C: the stationary distribution of the model (first eigenvector) compared with exp(-U) (line), and the
 #    second and third left eigenvectors divided by it: each is nearly constant within a well and changes
 #    sign across the barriers, identifying which wells exchange population in each slow process

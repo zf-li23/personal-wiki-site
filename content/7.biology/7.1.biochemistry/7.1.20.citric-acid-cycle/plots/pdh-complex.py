@@ -1,4 +1,4 @@
-"""The pyruvate dehydrogenase complex: five reactions channelled by the lipoyllysyl arm of E2.
+"""The pyruvate dehydrogenase complex: five reactions channeled by the lipoyllysyl arm of E2.
 
 E1 (pyruvate dehydrogenase, with TPP) decarboxylates pyruvate to hydroxyethyl-TPP (1) and transfers the
 hydroxyethyl group, oxidized to acetyl, to the disulfide of the lipoyl arm (2). E2 (dihydrolipoyl

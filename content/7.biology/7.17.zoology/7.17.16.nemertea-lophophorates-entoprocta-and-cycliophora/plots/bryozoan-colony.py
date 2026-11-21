@@ -1,7 +1,7 @@
 # Growth and polymorphism of an encrusting bryozoan colony (model and schematic). A: a colony grown from a
 # single ancestrula by budding on a square grid of zooid sites: at each budding round every zooid on the
-# margin buds into each empty neighbouring site with probability p = 0.5 (an Eden-type model); zooids are
-# coloured by the round in which they were budded. B: number of zooids against budding rounds; because only
+# margin buds into each empty neighboring site with probability p = 0.5 (an Eden-type model); zooids are
+# colored by the round in which they were budded. B: number of zooids against budding rounds; because only
 # marginal zooids bud, the colony area grows as the square of time (dashed: c t^2), far slower than the
 # doubling that would follow if every zooid budded (dotted). C: polymorphic zooids of a cheilostome
 # (schematic): feeding autozooids, an avicularium with a mandible, a vibraculum with a long seta, and an

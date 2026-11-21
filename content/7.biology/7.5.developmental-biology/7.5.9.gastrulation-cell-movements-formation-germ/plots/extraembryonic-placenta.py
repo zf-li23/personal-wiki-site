@@ -2,7 +2,7 @@
 fluid-filled amnion; the chorion lines the shell; the allantois, an outgrowth of the hindgut, spreads under
 the chorion (forming the chorioallantoic membrane that exchanges gases through the shell) and stores
 waste; the yolk sac, its blood vessels spreading over the yolk, absorbs nutrients. B: a chorionic villus of
-the human placenta (haemochorial type). Maternal blood enters the intervillous space from spiral arteries
+the human placenta (hemochorial type). Maternal blood enters the intervillous space from spiral arteries
 and drains through endometrial veins; fetal blood arrives through the umbilical arteries (deoxygenated,
 blue) and returns through the umbilical vein (oxygenated, red) in capillaries inside the villi. The two
 circulations do not mix: oxygen and nutrients cross the syncytiotrophoblast covering of the villus into

@@ -1,6 +1,6 @@
 """Titration of Fe2+ with KMnO4 (MnO4- + 5Fe2+ + 8H+ -> Mn2+ + 5Fe3+ + 4H2O) in media that give different
 formal potentials of Fe(III)/Fe(II): 0.73 V (1 mol/L HClO4), 0.68 V (1 mol/L H2SO4), 0.46 V (2 mol/L H3PO4).
-The permanganate branch uses E = 1.51 V with [H+] taken as 1 mol/L (idealised Nernstian behaviour).
+The permanganate branch uses E = 1.51 V with [H+] taken as 1 mol/L (idealized Nernstian behavior).
 The equivalence point lies close to the permanganate potential: E_sp = (5 E_Mn + E_Fe)/6."""
 
 import numpy as np

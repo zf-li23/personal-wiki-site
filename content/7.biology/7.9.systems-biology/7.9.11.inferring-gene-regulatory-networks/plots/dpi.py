@@ -5,7 +5,7 @@ noise. B: the mutual-information network: all pairs whose Gaussian mutual inform
 threshold I0 (the largest value among 2000 permuted pairs): 26 edges, of which the 18 in red join
 genes that are not directly connected. C: after ARACNe's pruning step (Algorithm
 11.4.1, tolerance 0), which removes the weakest edge of every triangle: all 18 indirect edges are gone,
-but so is the true edge A -> G of the feed-forward loop (grey, dashed), the weakest of its triangle."""
+but so is the true edge A -> G of the feed-forward loop (gray, dashed), the weakest of its triangle."""
 
 import itertools
 import numpy as np

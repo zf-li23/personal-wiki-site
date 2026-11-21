@@ -2,7 +2,7 @@
 stimulus' up to the root; arrows are is_a relations from child to parent (some parents of the lower
 terms are omitted). Each term shows the number of airway genes annotated to it after propagation by
 the true-path rule (n, out of 11707 tested genes with a biological-process annotation) and the number
-of them among the 402 genes induced by dexamethasone (k: padj < 0.05, log2 FC > 1). Colour: one-sided
+of them among the 402 genes induced by dexamethasone (k: padj < 0.05, log2 FC > 1). Color: one-sided
 hypergeometric p-value of the overlap. Every gene counted at a term is counted again at all its
 ancestors, so the tests along a path are strongly dependent. Annotations: GO Consortium, goa_human
 (UniProtKB, excluding NOT and ND), ontology go-basic, 2026 releases."""

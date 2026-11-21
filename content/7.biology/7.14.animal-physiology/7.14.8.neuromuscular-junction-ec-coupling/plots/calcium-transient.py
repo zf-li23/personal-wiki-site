@@ -1,5 +1,5 @@
-# Myoplasmic Ca2+ transient of a fast-twitch fibre: a single-compartment model (units uM and ms; parameters
-# after Baylor & Hollingworth's models of mouse fast fibres, rounded).
+# Myoplasmic Ca2+ transient of a fast-twitch fiber: a single-compartment model (units uM and ms; parameters
+# after Baylor & Hollingworth's models of mouse fast fibers, rounded).
 #   dc/dt = J_rel(t) + J_leak - J_SERCA - d[CaTn]/dt - d[CaPv]/dt
 #   J_rel: an action potential releases 350 uM of Ca2+ from the SR (Gaussian flux, half-width ~1.6 ms); in a train
 #   release is smaller, 350 (1 - 0.7 exp(-interval / 30 ms)) uM, as RyR1 inactivates and the SR runs down

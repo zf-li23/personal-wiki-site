@@ -3,8 +3,8 @@
 A: saturation curves with the Hill equation S = P^n / (P^n + P50^n): adult blood P50 = 26.8 mmHg, n = 2.7;
 Bohr shifts to P50 = 33 (pH 7.2, high PCO2, warm, high 2,3-BPG); fetal blood P50 = 19;
 llama blood P50 about 21 (adult human blood at pH 7.6 is similar); myoglobin P50 = 2.8 mmHg, n = 1.
-B: O2 content (mL per 100 mL blood) = 1.34 Hb S + 0.003 P: normal (Hb 150 g/L), anaemia (Hb 75 g/L) and
-50 % carboxyhaemoglobin (Hb 150 g/L, half the sites blocked by CO, remaining curve shifted left to P50 = 13).
+B: O2 content (mL per 100 mL blood) = 1.34 Hb S + 0.003 P: normal (Hb 150 g/L), anemia (Hb 75 g/L) and
+50 % carboxyhemoglobin (Hb 150 g/L, half the sites blocked by CO, remaining curve shifted left to P50 = 13).
 C: CO2 content = 8.62 PCO2^0.465 + 3.5 (1 - S) mL/100 mL for fully oxygenated (S = 1) and deoxygenated (S = 0)
 blood; the arterial point a (PCO2 40, S 0.975) and the mixed venous point v (46, 0.75) give the physiological
 line; the difference between the two curves is the Haldane effect.

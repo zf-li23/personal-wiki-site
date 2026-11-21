@@ -1,12 +1,12 @@
-# The two cases of the five color theorem (Theorem 4.5.2): v has five neighbours coloured 1-5.
-# Left: the 1-3 chain from v1 misses v3, so swapping 1 and 3 on it frees colour 1 for v.
+# The two cases of the five color theorem (Theorem 4.5.2): v has five neighbors colored 1-5.
+# Left: the 1-3 chain from v1 misses v3, so swapping 1 and 3 on it frees color 1 for v.
 # Right: a 1-3 chain joins v1 to v3; with v it forms a cycle that separates v2 from v4,
-# so the 2-4 chain from v2 cannot reach v4, and swapping 2 and 4 on it frees colour 2.
+# so the 2-4 chain from v2 cannot reach v4, and swapping 2 and 4 on it frees color 2.
 import math
 
 import wikigraph as G
 
-C = [G.BLUE, G.RED, G.GREEN, G.AMBER, G.VIOLET]  # colours 1-5
+C = [G.BLUE, G.RED, G.GREEN, G.AMBER, G.VIOLET]  # colors 1-5
 fig, (a, b) = G.panels(2, 4.6, 4.4, titles=["case 1: swap colors 1, 3 on the chain from $v_1$",
                                              "case 2: swap colors 2, 4 on the chain from $v_2$"])
 pos = {"v": (2.3, 2.0)}

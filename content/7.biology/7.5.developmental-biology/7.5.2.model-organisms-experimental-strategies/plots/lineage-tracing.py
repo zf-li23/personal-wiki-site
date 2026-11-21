@@ -1,9 +1,9 @@
 """Four generations of lineage-tracing methods.
 
 A, dye injection: a lineage tracer (fluorescent dextran or DiI) injected into one blastomere is inherited by
-all its descendants, which form a labelled clone in the later embryo. B, interspecies chimera: a piece of
+all its descendants, which form a labeled clone in the later embryo. B, interspecies chimera: a piece of
 quail embryo grafted into a chick embryo; quail cells are recognized later by their condensed nucleolar
-heterochromatin or by a quail-specific antibody (QCPN). C, genetic labelling with Cre-loxP: a cell-type
+heterochromatin or by a quail-specific antibody (QCPN). C, genetic labeling with Cre-loxP: a cell-type
 specific promoter drives CreER, which enters the nucleus only after tamoxifen; Cre excises the loxP-flanked
 stop cassette in a reporter at the Rosa26 locus, and the cell and all its descendants then express the
 fluorescent reporter permanently. D, CRISPR barcodes: Cas9 edits an array of target sites; edits accumulate

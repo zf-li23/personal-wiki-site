@@ -1,4 +1,4 @@
-"""Acid-catalysed hydrolysis of cyclohexene oxide. The protonated epoxide is attacked by water at one
+"""Acid-catalyzed hydrolysis of cyclohexene oxide. The protonated epoxide is attacked by water at one
 ring carbon from the face opposite to the C-O bond (backside attack), the C-O bond breaks and the
 ring strain is released; loss of a proton gives trans-cyclohexane-1,2-diol."""
 

@@ -1,4 +1,4 @@
-# How a Kraken-style classifier labels one read. A: the read's 30 minimizers, coloured by the taxon stored for
+# How a Kraken-style classifier labels one read. A: the read's 30 minimizers, colored by the taxon stored for
 # each in the database (the lowest common ancestor of all genomes containing it); 9 are not in the database.
 # B: the hits placed on the taxonomy (counts in the boxes). The score of a root-to-leaf path is the sum of the
 # hits on its nodes: 3 + 10 + 6 = 19 for Escherichia coli, 15 for Salmonella enterica, 3 for the two

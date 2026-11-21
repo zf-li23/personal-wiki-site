@@ -4,7 +4,7 @@
 # paired group the US occurs with probability 0.4 in CS bins and never otherwise; in the truly random group it
 # occurs with probability 0.4 in every bin. The CS gains strength at first in both groups, but in the random
 # group the context comes to predict the US and the CS loses its strength again. B: conditioned inhibition:
-# A+ and AX- trials alternate; X acquires negative strength, cancelling the prediction made by A. C: latent
+# A+ and AX- trials alternate; X acquires negative strength, canceling the prediction made by A. C: latent
 # inhibition: 30 preexposures to the CS alone, then 30 CS-US pairings, in a hybrid model in which the change
 # of strength is kappa * alpha * (lambda - V) and the associability alpha of the CS follows the Pearce-Hall
 # rule alpha <- gamma |lambda - V| + (1 - gamma) alpha (kappa = 0.5, gamma = 0.1, initial alpha = 0.6).

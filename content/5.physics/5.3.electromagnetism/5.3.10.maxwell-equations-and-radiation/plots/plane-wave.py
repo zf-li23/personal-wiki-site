@@ -1,4 +1,4 @@
-"""Snapshot of a linearly polarized plane electromagnetic wave travelling along +x."""
+"""Snapshot of a linearly polarized plane electromagnetic wave traveling along +x."""
 
 import numpy as np
 import matplotlib.pyplot as plt

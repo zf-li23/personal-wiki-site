@@ -2,7 +2,7 @@
 
 Data: Brusca, Giribet & Moore, Invertebrates, 4th ed. (2023), Table 1.1 (described valid living species,
 1,453,163 in total; compiled from Zhang 2011, 2013 and later counts). Arthropoda is split into its four
-subphyla. Bars are coloured by the major clade of the phylum (see the animal tree of 7.17.6).
+subphyla. Bars are colored by the major clade of the phylum (see the animal tree of 7.17.6).
 """
 
 import wikibio as bio

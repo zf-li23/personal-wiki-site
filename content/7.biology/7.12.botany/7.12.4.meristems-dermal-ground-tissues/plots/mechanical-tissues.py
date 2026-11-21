@@ -5,7 +5,7 @@ walls; annular, evenly thickened with a rounded lumen. Bottom row, sclerenchyma 
 lignified secondary walls): a brachysclereid (stone cell, as in pear fruit) with concentric wall layers
 and branched pit canals; an astrosclereid (star-shaped, as in water-lily leaves); an osteosclereid
 (bone-shaped, in seed coats and leaves); macrosclereids (columnar, the palisade layer of legume seed
-coats); a fibre in longitudinal view, long, tapering and with slit-like pits; and a fibre bundle in
+coats); a fiber in longitudinal view, long, tapering and with slit-like pits; and a fiber bundle in
 transverse section, thick walls with narrow lumens.
 """
 
@@ -151,7 +151,7 @@ for k in range(5):
     ax.add_patch(FancyBboxPatch((x, YB - 1.3), 0.56, 2.6, boxstyle="round,pad=0,rounding_size=0.12", facecolor=P.fill(SW), edgecolor=P.edge(SW), lw=1.0, zorder=3))
     ax.add_patch(FancyBboxPatch((x + 0.18, YB - 1.1), 0.2, 1.6, boxstyle="round,pad=0,rounding_size=0.08", facecolor=P.fill("extracellular"), edgecolor=P.edge(SW), lw=0.5, zorder=4))
 title(13.8, 0.75, "macrosclereids")
-# fibre, longitudinal
+# fiber, longitudinal
 y = YB
 x0, x1 = 16.8, 22.6
 xs = np.linspace(x0, x1, 120)
@@ -163,7 +163,7 @@ for xx in np.linspace(17.6, 21.8, 8):
     ax.plot([xx - 0.08, xx + 0.08], [y + 0.18, y + 0.3], color=P.edge(SW), lw=0.9, zorder=5)
 title(19.7, 0.75, "fiber (longitudinal)")
 bio.callout(ax, (19.8, y + 0.26), (20.6, 5.0), "Slit-like pits", size="tiny")
-# fibre bundle in section
+# fiber bundle in section
 for c in hexgrid(23.6, YB - 1.0, 4, 3, 0.62):
     cen = c.mean(axis=0)
     ax.add_patch(Polygon(rounded(c, 0.1), closed=True, facecolor=P.fill(SW), edgecolor=P.edge(SW), lw=1.0, zorder=3))

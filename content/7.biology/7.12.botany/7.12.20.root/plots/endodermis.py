@@ -1,6 +1,6 @@
 # The endodermis and radial water movement in the root. (A) A radial file of cells from the epidermis
 # (with a root hair) through the cortex, endodermis and pericycle to a xylem vessel, drawn as two
-# neighbouring files so that the wall between them is a radial wall: the apoplastic path (blue, dashed)
+# neighboring files so that the wall between them is a radial wall: the apoplastic path (blue, dashed)
 # runs in the walls and is blocked by the Casparian strip (red) in the radial wall of the endodermis; the
 # symplastic path (orange) passes from cell to cell through plasmodesmata. (B) An endodermal cell seen
 # obliquely: the Casparian strip is a band in the radial and transverse (anticlinal) walls only.
@@ -27,7 +27,7 @@ bio.label(ax, (0.85, 13.77), "Apoplastic and symplastic paths", size="title", ha
 names = ["Epidermis", "Cortex", "Cortex", "Cortex", "Endodermis", "Pericycle", "Xylem vessel"]
 xs = [1.2, 3.0, 4.9, 6.8, 8.7, 10.1, 11.4]
 ws = [1.6, 1.7, 1.7, 1.7, 1.2, 1.1, 1.9]
-rows = [(7.3, 2.1), (9.6, 2.1)]  # two neighbouring files; the gap between them is the radial wall
+rows = [(7.3, 2.1), (9.6, 2.1)]  # two neighboring files; the gap between them is the radial wall
 for (y, h) in rows:
     for k, (x, w) in enumerate(zip(xs, ws)):
         tok = {4: "golgi", 5: "metabolite", 6: "extracellular"}.get(k, "cytoplasm")

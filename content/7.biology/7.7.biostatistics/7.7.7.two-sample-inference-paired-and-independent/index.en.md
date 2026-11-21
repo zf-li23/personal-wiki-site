@@ -1,7 +1,7 @@
 ---
 title: "Two-Sample Inference: Paired and Independent Samples"
 description: The difference between paired and independent samples; the paired t-test and confidence interval for paired differences; the two-sample t-test with pooled variance; the F test and Levene test for equality of variances; Welch's test for unequal variances; sample size for two-sample comparisons and the efficiency of the paired design; geometric mean ratios on the log scale; decisions for two-sample problems. Illustrated with captopril and blood pressure, maternal smoking and birth weight, the paradox of smoking children and FEV, and a vitamin C experiment in guinea pigs.
-source_hash: 64a904674f00
+source_hash: b62b258f78fb
 ---
 
 [7.7.6](/7.7.6) compared one sample with a known reference value, and its closing examples already exposed the weakness of such a comparison: the birth weight of infants of smoking mothers is far below the national mean, but infants of nonsmoking mothers in the same hospital are also below the national mean, so the external reference value is not comparable with the population studied. Most research questions are in fact comparisons of two groups: has blood pressure changed between before and after the drug? How much does the birth weight of infants of smoking mothers differ from that of nonsmoking mothers? Which is the more effective way to supplement vitamin C, orange juice or ascorbic acid? The parameters of both populations are then unknown, and two samples are compared with each other. This chapter first distinguishes two kinds of design, the paired design (the same individual measured twice, or similar individuals matched into pairs) and independent samples (two groups of unrelated individuals), which determine the method of analysis; it then treats in turn the paired **t-test**, the two-sample t-test with pooled variance, tests of equality of variances and **Welch's t-test** for unequal variances, sample size for two-group comparisons, and comparisons on the log scale. The examples follow the main threads of the course: the birth weights of birthwt can at last be compared within one sample; the paradox of "smoking children have better lung function" in the FEV data persists under the two-sample t-test, which shows that the problem lies not in the test but in the design. The mathematical derivations (the distribution of the pooled-variance t statistic, the Behrens–Fisher problem) are in [3.2.5](/3.2.5#sec-5.2.4) and [3.2.4](/3.2.4#sec-4.3.3); rank methods for data that do not satisfy normality are in [7.7.8](/7.7.8), and comparisons of more than two groups are in [7.7.12](/7.7.12).
@@ -309,7 +309,7 @@ pooled = stats.ttest_ind(x0, x1)                    # scipy default: pooled vari
 welch = stats.ttest_ind(x0, x1, equal_var=False)    # Welch (R's default)
 print(pooled.pvalue, pooled.confidence_interval())  # 0.0087, (72.8, 494.8)
 print(welch.statistic, welch.df, welch.pvalue)      # 2.73, 170.1, 0.0070
-print(stats.levene(x0, x1).pvalue)                  # median-centred (Brown-Forsythe), 0.23
+print(stats.levene(x0, x1).pvalue)                  # median-centered (Brown-Forsythe), 0.23
 # from summary statistics: ToothGrowth, dose 0.5 mg/d (Example 7.5.1)
 print(stats.ttest_ind_from_stats(13.23, 4.46, 10, 7.98, 2.75, 10, equal_var=False))   # t = 3.17, p = 0.0064
 

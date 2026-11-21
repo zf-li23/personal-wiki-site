@@ -42,7 +42,7 @@ for t0, t1, rname, zones in REGIONS:
         prov_tok = {0.25: "channel", 0.5: "plant", 1: "carbohydrate", 2: "lipid", 4: "antibody", 8: "membrane",
                     16: "rna", 32: "rna"}.get(key, "rna")
         ax.add_patch(Polygon(pts, closed=True, facecolor=P.mix(P.surface(), P.fill(prov_tok), 0.5), edgecolor=P.edge("neutral"), lw=0.7))
-        # label at geometric centre of the cell, clipped to the precipitation range
+        # label at geometric center of the cell, clipped to the precipitation range
         Tc = np.sqrt(t0 * t1)
         rk = 0.25 * 2 ** j
         rc = np.sqrt(rk * (r0 if r0 else rk / 2))
@@ -56,7 +56,7 @@ pts = [(lx(PMIN), lx(0.75)), (lx(PMAX), lx(0.75)), (lx(PMAX), lx(1.5)), (lx(PMIN
 ax.add_patch(Polygon(pts, closed=True, facecolor=P.mix(P.surface(), P.fill("neutral"), 0.5), edgecolor=P.edge("neutral"), lw=0.7))
 ax.text(lx(1000), lx(1.06), "polar desert", ha="center", va="center", fontsize=7, color=P.ink())
 ax.text(lx(PMAX) + 0.15, lx(1.06), "Polar", ha="left", va="center", fontsize=8.5, color=P.ink(), weight="bold")
-# PET-ratio lines labelled inside the tropical row, next to each line
+# PET-ratio lines labeled inside the tropical row, next to each line
 for r in [0.25, 0.5, 1, 2, 4, 8, 16]:
     Tl = 44.0
     p_at = K * Tl / r

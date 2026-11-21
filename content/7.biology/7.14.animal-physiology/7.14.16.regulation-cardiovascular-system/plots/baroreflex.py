@@ -1,12 +1,12 @@
 """A minimal closed-loop model of the arterial baroreceptor reflex.
 
-Baroreceptor firing f(P) = 1/(1 + exp(-(P - 100)/12)) (normalised; threshold near 50-60, saturation near 170 mmHg).
+Baroreceptor firing f(P) = 1/(1 + exp(-(P - 100)/12)) (normalized; threshold near 50-60, saturation near 170 mmHg).
 Efferent sympathetic drive u relaxes to u* = 0.5 + g (0.5 - f(P)) with tau = 2 s (g = 0.5: intact reflex; g = 0:
 baroreceptor denervation). Effectors, all equal to baseline at u = 0.5:
 heart rate HR = 70 (1 + 1.0 (u - 0.5)) /min; resistance R = R0 (1 + 1.2 (u - 0.5)) mmHg s/mL;
 stressed volume V = V0 - loss + 600 (u - 0.5) mL (venoconstriction), V0 = 1500 mL;
 stroke volume SV = 86 (V/V0)(1 + 0.5 (u - 0.5)) mL. Arterial pressure: C dP/dt = HR SV/60 - P/R, C = 1.5 mL/mmHg.
-B: haemorrhage of 500 mL (10 % of blood volume) between 20 and 50 s.
+B: hemorrhage of 500 mL (10 % of blood volume) between 20 and 50 s.
 C: R0 fluctuates as an Ornstein-Uhlenbeck process (SD 12 %, correlation time 30 s) over 2 h: the reflex narrows
 the distribution of pressure without changing its mean (like dogs after sinoaortic denervation).
 """

@@ -6,7 +6,7 @@
 #   p = exp(-2b) / (exp(-2b) + 2 exp(-4b)), b = eps/kT, against temperature.
 # Bottom: designability on a 4 x 4 lattice (in the spirit of Li, Helling, Tang and Wingreen 1996). All 38
 #   compact 16-monomer structures and all 2^16 = 65536 HP sequences; contact energies E_HH = -2.3,
-#   E_HP = -1, E_PP = 0 between non-bonded neighbours. A sequence "designs" a structure if that structure is
+#   E_HP = -1, E_PP = 0 between non-bonded neighbors. A sequence "designs" a structure if that structure is
 #   its unique ground state. C: the number N_s of sequences designing each structure, in decreasing order.
 #   D: the most and the least designable structures, each with the designing sequence of largest gap
 #   (dotted lines: non-bonded contacts). E: the mean energy gap between the ground state and the

@@ -1,5 +1,5 @@
 """E2 of neomenthyl and menthyl chloride on the cyclohexane chair. Top: in neomenthyl chloride the
-stable chair has the isopropyl and methyl groups equatorial and chlorine axial; both neighbouring
+stable chair has the isopropyl and methyl groups equatorial and chlorine axial; both neighboring
 carbons carry an axial hydrogen anti to chlorine, so elimination is fast and gives mainly the more
 substituted 3-menthene (about 3 : 1 over 2-menthene). Bottom: in menthyl chloride all three groups are
 equatorial; the ring must flip to the all-axial chair, where only C6 has an axial hydrogen anti to

@@ -1,5 +1,5 @@
 # The three components of the skull in a shark (Squalus-like), a bony fish (generalized teleost) and a mammal
-# (dog-like), schematic left lateral views, anterior to the left, coloured by component (vertskel
+# (dog-like), schematic left lateral views, anterior to the left, colored by component (vertskel
 # level="component"): chondrocranium sand, splanchnocranium warm, dermatocranium blue. After Kardong (2019)
 # and Romer & Parsons. Not to scale.
 import wikibio as bio

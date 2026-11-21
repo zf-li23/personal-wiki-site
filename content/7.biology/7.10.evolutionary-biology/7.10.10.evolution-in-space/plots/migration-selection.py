@@ -1,14 +1,14 @@
 """Migration-selection balance and gene swamping.
 A: an island receives a fraction m of its genes each generation from a continent fixed for allele A1, while
-A2 is favoured on the island (s = 0.05). Equilibrium frequency of A2 (iterating selection then migration
+A2 is favored on the island (s = 0.05). Equilibrium frequency of A2 (iterating selection then migration
 from p = 1) against m/s for additive fitnesses 1 : 1 + s : 1 + 2s (A1A1 : A1A2 : A2A2), for A2 dominant
 (1 : 1 + 2s : 1 + 2s) and for A2 recessive (1 : 1 : 1 + 2s); the dashed line is the approximation
 1 - m/s. In the additive case A2 is lost when m exceeds about s.
 B: a patch of width L in which A2 has advantage s, embedded in a habitat where it has disadvantage s
 (genic selection, continuous space): steady state of dp/dt = (sigma^2/2) p'' + s(x) p(1 - p), solved
 numerically, with distance in units of the characteristic length l = sqrt(sigma^2/(2s)). Curves: frequency
-profiles for several patch widths, labelled with the maximum frequency. Patches narrower than
-L_c = (pi/2) l (from the linearized equation) cannot maintain the locally favoured allele."""
+profiles for several patch widths, labeled with the maximum frequency. Patches narrower than
+L_c = (pi/2) l (from the linearized equation) cannot maintain the locally favored allele."""
 import numpy as np
 import matplotlib.pyplot as plt
 

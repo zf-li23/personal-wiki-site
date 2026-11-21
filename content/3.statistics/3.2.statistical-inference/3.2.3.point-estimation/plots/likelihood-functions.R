@@ -12,7 +12,7 @@ plot(theta, rel_lik(10, 6), type = "l", lwd = 2, col = "steelblue", ylim = c(0, 
 lines(theta, rel_lik(100, 60), lwd = 2, lty = 2, col = "darkorange")
 g <- (1:9) / 10
 points(g, g^6 * (1 - g)^4 / (0.6^6 * 0.4^4), pch = 19, col = "steelblue")
-abline(v = 0.6, lty = 3, col = "grey50")
+abline(v = 0.6, lty = 3, col = "gray50")
 legend("topleft", bty = "n", cex = 0.8,
        legend = c("n = 10, t = 6", "n = 100, t = 60", "theta = 0.1, ..., 0.9"),
        col = c("steelblue", "darkorange", "steelblue"), lty = c(1, 2, NA), pch = c(NA, NA, 19))

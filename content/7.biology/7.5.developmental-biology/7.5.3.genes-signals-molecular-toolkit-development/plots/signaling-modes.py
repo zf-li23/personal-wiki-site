@@ -3,7 +3,7 @@
 A, paracrine: a secreted factor diffuses through the extracellular space to receptors on nearby cells.
 B, autocrine: the secreting cell responds to its own factor. C, juxtacrine: a membrane-bound ligand binds a
 receptor on an adjacent cell (Delta-Notch, ephrin-Eph). D, gap junctions: small molecules and ions pass
-directly between the cytoplasms of neighbours. E, extracellular vesicles (exosomes): vesicles released by one
+directly between the cytoplasms of neighbors. E, extracellular vesicles (exosomes): vesicles released by one
 cell carry proteins and RNAs and are taken up by another. F, cytonemes: thin actin-based filopodia carry
 ligand (or receptor) to distant cells and transmit the signal at a contact.
 """

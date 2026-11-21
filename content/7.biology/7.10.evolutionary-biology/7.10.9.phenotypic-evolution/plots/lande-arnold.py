@@ -7,7 +7,7 @@ mean relative fitness in bins of 0.5 SD. B: a fitness surface with stabilizing a
 w = exp[(gamma_11 z1^2 + 2 gamma_12 z1 z2 + gamma_22 z2^2) / 2] with gamma_11 = gamma_22 = -0.4 and
 gamma_12 = 0.3 (contours of relative fitness): fitness falls off slowly along a ridge on which high z1 goes
 with high z2 and low with low, and steeply across it, as for stripe pattern and escape
-behaviour in garter snakes. The ellipse is the 95 % contour of the phenotype distribution."""
+behavior in garter snakes. The ellipse is the 95 % contour of the phenotype distribution."""
 import numpy as np
 import matplotlib.pyplot as plt
 

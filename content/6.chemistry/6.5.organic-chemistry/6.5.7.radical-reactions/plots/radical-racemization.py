@@ -1,4 +1,4 @@
-"""Radical chlorination at a stereocentre. A chlorine atom abstracts the tertiary hydrogen of
+"""Radical chlorination at a stereocenter. A chlorine atom abstracts the tertiary hydrogen of
 (S)-1-chloro-2-methylbutane; the 2-chloromethyl-2-butyl radical is (on average) planar, with the unpaired
 electron in a p orbital. Cl2 transfers a chlorine atom to either face with equal probability, so the
 two enantiomers of 1,2-dichloro-2-methylbutane form in equal amounts."""

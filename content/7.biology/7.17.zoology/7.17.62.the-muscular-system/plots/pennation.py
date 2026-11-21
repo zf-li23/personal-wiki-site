@@ -1,5 +1,5 @@
-# Model of a unipennate muscle in a fixed envelope (Example 62.7.1): force along the line of action and fibre
-# length relative to a parallel-fibred muscle, as functions of the pennation angle. Model, not data.
+# Model of a unipennate muscle in a fixed envelope (Example 62.7.1): force along the line of action and fiber
+# length relative to a parallel-fibered muscle, as functions of the pennation angle. Model, not data.
 import numpy as np
 import wikibio as bio
 from wikibio import quant

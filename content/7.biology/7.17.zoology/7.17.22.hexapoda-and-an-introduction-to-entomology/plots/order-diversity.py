@@ -1,5 +1,5 @@
 # Described species of the living hexapod orders (approximate counts as given by Brusca, Giribet & Moore
-# 2023, Invertebrates 4th ed., chapter 22), on a log scale, grouped and coloured by lineage.
+# 2023, Invertebrates 4th ed., chapter 22), on a log scale, grouped and colored by lineage.
 import numpy as np
 import wikibio as bio
 from wikibio import charts

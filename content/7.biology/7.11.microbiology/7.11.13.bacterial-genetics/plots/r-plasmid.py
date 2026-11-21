@@ -1,4 +1,4 @@
-# Anatomy of a conjugative R plasmid (schematic, modelled on the IncF resistance plasmids such as R1 and R100;
+# Anatomy of a conjugative R plasmid (schematic, modeled on the IncF resistance plasmids such as R1 and R100;
 # positions are illustrative, not those of a particular plasmid). The backbone carries the functions of the
 # plasmid itself: replication (oriV, rep) with copy-number control, partition (par), a toxin-antitoxin
 # module, and the tra region with the origin of transfer oriT. The accessory genes sit in mobile elements

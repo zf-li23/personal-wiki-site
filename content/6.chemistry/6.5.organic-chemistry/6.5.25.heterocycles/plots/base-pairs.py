@@ -26,7 +26,7 @@ def layout(smiles):
 
 
 def fit(xy, p, q, tp, tq):
-    """Rotate and translate xy so that points p, q land on tp, tq (directions matched, centred)."""
+    """Rotate and translate xy so that points p, q land on tp, tq (directions matched, centered)."""
     v, w = q - p, tq - tp
     ang = np.arctan2(w[1], w[0]) - np.arctan2(v[1], v[0])
     r = np.array([[np.cos(ang), -np.sin(ang)], [np.sin(ang), np.cos(ang)]])

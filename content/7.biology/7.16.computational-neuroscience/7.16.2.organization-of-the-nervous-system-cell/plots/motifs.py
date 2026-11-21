@@ -2,7 +2,7 @@
 tau dr/dt = -r + [sum_j w_j r_j + input]_+ (tau = 10 ms for every cell), driven by a step of
 input from 50 to 250 ms (shaded). Each panel shows the response of the output cell B (and other
 cells where relevant). The lateral-inhibition panel shows a spatial profile instead: a row of 41
-cells receiving a step edge in input, each inhibited by its neighbours within 3 cells."""
+cells receiving a step edge in input, each inhibited by its neighbors within 3 cells."""
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,7 +42,7 @@ models.append(("Feedback inhibition", "input → B → I ⊣ B",
 # 5 disinhibition: tonic I1 -| B; input -> I2 -| I1
 models.append(("Disinhibition", "input → I2 ⊣ I1 ⊣ B (B tonically driven)",
                run(lambda r, s, k: np.array([1.0 - 2.0 * r[1], 1.0 - 3.0 * r[2], s]), 3), [(0, "B", "neuron"), (1, "I1", "negative")]))
-# 6 reciprocal inhibition with adaptation (half-centre oscillator)
+# 6 reciprocal inhibition with adaptation (half-center oscillator)
 ta = 150.0
 def recip():
     r = np.zeros((len(t), 2)); a = np.zeros(2); r[0] = [0.1, 0.0]

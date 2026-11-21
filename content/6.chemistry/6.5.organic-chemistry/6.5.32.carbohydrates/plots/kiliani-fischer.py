@@ -1,7 +1,7 @@
 """Kiliani-Fischer chain extension, drawn on the top two carbons of an aldose (R = the rest of the
 chain). Top: cyanide adds to the planar aldehyde from either face, so the old C1 becomes a new
-stereocentre and two C2-epimeric cyanohydrins form (in unequal amounts). Bottom, the modern
-variant: hydrogenation over poisoned Pd/BaSO4 stops at the imine, which is hydrolysed to the
+stereocenter and two C2-epimeric cyanohydrins form (in unequal amounts). Bottom, the modern
+variant: hydrogenation over poisoned Pd/BaSO4 stops at the imine, which is hydrolyzed to the
 aldehyde of the aldose with one more carbon (classically: hydrolysis to the aldonic acid,
 lactonization and reduction of the lactone with sodium amalgam)."""
 

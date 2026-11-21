@@ -1,7 +1,7 @@
 """Rapid and slow adaptation to a ramp-and-hold indentation (schematic models).
 
 Stimulus: indentation ramps up in 10 ms, is held for 400 ms and released in 10 ms.
-Generator potential (normalised):
+Generator potential (normalized):
   intact Pacinian corpuscle: the capsule is an effective high pass (tau = 3 ms);
     the ending responds to the magnitude of core displacement, so it fires at onset and offset;
   capsule removed: the bare ending follows the indentation, with slow viscous creep

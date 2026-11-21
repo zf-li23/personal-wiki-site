@@ -1,8 +1,8 @@
-"""Why amides are protonated on oxygen. Left: the nitrogen lone pair of an amide is delocalised onto
+"""Why amides are protonated on oxygen. Left: the nitrogen lone pair of an amide is delocalized onto
 the carbonyl oxygen (two resonance structures). Right: protonation on oxygen keeps this
-delocalisation, and the positive charge of the O-protonated amide is shared by oxygen and nitrogen;
-protonation on nitrogen would use the delocalised lone pair and destroy the conjugation, so it is
-much less favourable. The conjugate acid of acetamide has pKa about -0.5."""
+delocalization, and the positive charge of the O-protonated amide is shared by oxygen and nitrogen;
+protonation on nitrogen would use the delocalized lone pair and destroy the conjugation, so it is
+much less favorable. The conjugate acid of acetamide has pKa about -0.5."""
 
 from wikichem import Scheme
 

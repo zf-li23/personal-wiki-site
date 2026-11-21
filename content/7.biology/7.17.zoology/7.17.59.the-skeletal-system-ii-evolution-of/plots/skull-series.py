@@ -1,5 +1,5 @@
 # The skull from a lobe-finned fish to a mammal, schematic left lateral views (anterior to the left), each bone
-# in its course-wide homology colour: an osteolepiform fish (Eusthenopteron-like; short snout, opercular bones),
+# in its course-wide homology color: an osteolepiform fish (Eusthenopteron-like; short snout, opercular bones),
 # an early tetrapod (Acanthostega-like; long snout, opercular series lost), an early synapsid (lower temporal
 # fenestra; intertemporal lost), a lizard (upper fenestra; lower temporal bar and quadratojugal lost, quadrate
 # exposed and movable) and a dog (zygomatic arch, orbit confluent with the temporal fossa, dentary only).

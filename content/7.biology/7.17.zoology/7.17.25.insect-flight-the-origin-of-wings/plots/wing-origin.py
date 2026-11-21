@@ -1,5 +1,5 @@
 # Three hypotheses for the origin of insect wings, shown on a schematic transverse section of a thoracic
-# segment (left half; dorsal up, tergum blue, pleuron green, leg teal, sternum grey, the proto-wing tissue pink).
+# segment (left half; dorsal up, tergum blue, pleuron green, leg teal, sternum gray, the proto-wing tissue pink).
 # A: paranotal (tergal) hypothesis: wings grew from fixed lateral extensions of the tergum (paranota),
 # later acquiring an articulation and muscles. B: exite (pleural, gill) hypothesis: wings derive from an
 # exite, a lateral outgrowth of a basal leg segment (epicoxa) that became incorporated into the body wall,

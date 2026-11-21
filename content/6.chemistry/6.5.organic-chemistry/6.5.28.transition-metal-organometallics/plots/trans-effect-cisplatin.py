@@ -2,7 +2,7 @@
 Top: from [PtCl4]2-, the first NH3 replaces any chloride; the second replaces a chloride trans to
 chloride (the ligand trans to NH3 is held more firmly), so the two NH3 end up cis: cisplatin.
 Bottom: from [Pt(NH3)4]2+, the first Cl- replaces any NH3; the second enters trans to that chloride,
-giving the trans isomer, which has no anticancer activity. The ligand labelled with an asterisk is
+giving the trans isomer, which has no anticancer activity. The ligand labeled with an asterisk is
 the one replaced in the next step."""
 
 exec(open("helpers.txt").read())

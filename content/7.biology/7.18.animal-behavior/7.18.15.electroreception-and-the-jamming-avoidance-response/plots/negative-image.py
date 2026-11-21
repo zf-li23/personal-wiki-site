@@ -1,12 +1,12 @@
-"""Cancelling the expected: an adaptive negative image in the mormyrid electrosensory lobe.
+"""Canceling the expected: an adaptive negative image in the mormyrid electrosensory lobe.
 
 A principal cell receives (i) the electrosensory input caused by the fish's own discharge
 (reafference), which has a fixed time course after each EOD command, and (ii) a corollary
-discharge signal time-locked to the command, carried by many parallel fibres with different
-delays. Anti-Hebbian plasticity at the parallel-fibre synapses (weight change opposite to the
-correlation between parallel-fibre activity and the cell's response) builds a negative image of
+discharge signal time-locked to the command, carried by many parallel fibers with different
+delays. Anti-Hebbian plasticity at the parallel-fiber synapses (weight change opposite to the
+correlation between parallel-fiber activity and the cell's response) builds a negative image of
 the predictable input. A: response after the command on trials 1, 10 and 100: the predictable
-part is cancelled. B: response on the last trials with a small novel signal (a prey, dashed) added:
+part is canceled. B: response on the last trials with a small novel signal (a prey, dashed) added:
 the novel signal stands out. C: after the reafferent input is removed (e.g. EOD silenced but
 commands continue) the learned negative image appears as an inverted response and fades.
 """

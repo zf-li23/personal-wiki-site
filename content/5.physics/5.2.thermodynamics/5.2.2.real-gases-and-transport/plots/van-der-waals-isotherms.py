@@ -18,7 +18,7 @@ def volumes(p, t):
 
 
 def maxwell_construction(t):
-    # equal-area rule: choose the vapour pressure so that the two loops have equal area
+    # equal-area rule: choose the vapor pressure so that the two loops have equal area
     vs = np.linspace(0.34, 50, 200000)
     ps = p_vdw(vs, t)
     dp = np.diff(ps)

@@ -1,4 +1,4 @@
-"""Acid-catalysed lactonization of 4-hydroxybutanoic acid. The carbonyl oxygen is protonated and the
+"""Acid-catalyzed lactonization of 4-hydroxybutanoic acid. The carbonyl oxygen is protonated and the
 hydroxy group at the other end of the chain, held close by the chain, adds to the activated carbonyl
 carbon (an intramolecular Fischer esterification); the five-membered tetrahedral intermediate loses
 water and a proton to give gamma-butyrolactone. The equilibrium lies far on the side of the lactone."""

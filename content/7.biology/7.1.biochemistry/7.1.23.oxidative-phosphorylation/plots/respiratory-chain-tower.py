@@ -51,7 +51,7 @@ for name, e, x, tok in carriers:
 
 
 def edge(name, v):
-    # where the ray from a box centre along v leaves the box
+    # where the ray from a box center along v leaves the box
     c = np.asarray(pos[name])
     tx = (wid[name] / 2 + 0.06) / abs(v[0]) if abs(v[0]) > 1e-9 else 1e9
     ty = (H / 2 + 0.06) / abs(v[1]) if abs(v[1]) > 1e-9 else 1e9

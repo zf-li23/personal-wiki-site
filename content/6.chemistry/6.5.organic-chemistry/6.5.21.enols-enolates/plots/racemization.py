@@ -1,5 +1,5 @@
-"""Base-catalysed racemization of (S)-3-phenylbutan-2-one. Hydroxide removes the alpha proton on the
-stereocentre; the C-H electrons become the C=C bond and the C=O electrons move onto oxygen, giving a
+"""Base-catalyzed racemization of (S)-3-phenylbutan-2-one. Hydroxide removes the alpha proton on the
+stereocenter; the C-H electrons become the C=C bond and the C=O electrons move onto oxygen, giving a
 planar, achiral enolate. Water protonates the alpha carbon from either face with equal probability,
 so the (S) and (R) ketones are formed in equal amounts and the optical activity decays."""
 

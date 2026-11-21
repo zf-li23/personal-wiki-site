@@ -1,6 +1,6 @@
 """The methyllithium tetramer (CH3Li)4: four lithium atoms at the corners of a tetrahedron and a
 methyl carbon above each of the four triangular faces, so each carbon is bonded to three lithium
-atoms (mu3-CH3). Each Li3C unit holds one four-centre two-electron bond in the covalent picture;
+atoms (mu3-CH3). Each Li3C unit holds one four-center two-electron bond in the covalent picture;
 the C-Li bonding is in fact largely ionic. Hydrogens are omitted."""
 
 import itertools

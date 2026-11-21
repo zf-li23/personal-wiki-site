@@ -2,7 +2,7 @@
 
 A: compartments and selector genes: engrailed and hedgehog in the posterior compartment, apterous in the dorsal
 compartment; Hedgehog signals across the AP boundary and induces dpp in a stripe of anterior cells; Notch
-signalling at the DV boundary induces wingless; vestigial (the wing selector) in the pouch. B: the Dpp gradient
+signaling at the DV boundary induces wingless; vestigial (the wing selector) in the pouch. B: the Dpp gradient
 (shading) and its nested readouts spalt (narrow) and optomotor-blind (wider) on both sides of the source.
 C: a model of the readout: Dpp ~ exp(-|x| / 20 um) from the stripe; spalt above the higher threshold, omb above
 the lower; brinker is repressed by Dpp and is expressed where Dpp is low.

@@ -2,7 +2,7 @@
 sulfur of the disulfide (thiol-disulfide exchange, SN2 at sulfur) and RS- leaves, giving a mixed
 disulfide. Bottom: the second thiolate of DTT attacks the sulfur bonded to its own chain; the ring
 closes to the six-membered cyclic disulfide (trans-4,5-dihydroxy-1,2-dithiane) and a second RS-
-is released. Because the intramolecular step is so favourable, DTT drives the reduction to
+is released. Because the intramolecular step is so favorable, DTT drives the reduction to
 completion."""
 
 from wikichem import Scheme

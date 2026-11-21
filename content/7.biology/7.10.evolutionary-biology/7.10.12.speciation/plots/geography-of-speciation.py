@@ -1,7 +1,7 @@
 """Geographic modes of speciation (schematic). Each column follows populations from top (past) to bottom
-(present); colour shows genetic divergence. Allopatric: a barrier (grey) splits a widespread population and the
+(present); color shows genetic divergence. Allopatric: a barrier (gray) splits a widespread population and the
 halves diverge in isolation. Peripatric: a small isolate founded at the edge of the range diverges rapidly.
-Parapatric: neighbouring populations along an environmental gradient diverge while exchanging genes across a
+Parapatric: neighboring populations along an environmental gradient diverge while exchanging genes across a
 narrowing hybrid zone. Sympatric: two forms arise within one interbreeding population without any spatial
 separation. Double arrows mark gene flow."""
 import numpy as np

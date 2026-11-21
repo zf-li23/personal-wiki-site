@@ -2,8 +2,8 @@
 textbooks from the Hudson's Bay Company fur returns compiled by MacLulich (1937) and Elton and
 Nicholson (1942). Section 26.5.1.
 A: data and the Lotka-Volterra model fitted by least squares on the log scale (initial densities and
-the four rates estimated; Nelder-Mead). B: the data in the phase plane, labelled every five years: in this
-period both loops run anticlockwise, as the model predicts; dashed: the fitted model orbit.
+the four rates estimated; Nelder-Mead). B: the data in the phase plane, labeled every five years: in this
+period both loops run counterclockwise, as the model predicts; dashed: the fitted model orbit.
 """
 
 import matplotlib.pyplot as plt

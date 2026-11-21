@@ -1,7 +1,7 @@
 """Metal-carbonyl bonding (Dewar-Chatt-Duncanson picture for CO). Left: sigma donation, the filled
 5-sigma orbital (lone pair on carbon) overlaps an empty metal d-sigma orbital. Right: pi
 back-donation, a filled metal d-pi orbital overlaps the empty pi* orbital of CO, which has its
-larger lobes on carbon. Grey lobes are occupied; + and - mark the phases that overlap."""
+larger lobes on carbon. Gray lobes are occupied; + and - mark the phases that overlap."""
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse

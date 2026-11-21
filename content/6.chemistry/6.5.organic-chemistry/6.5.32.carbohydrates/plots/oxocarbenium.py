@@ -1,9 +1,9 @@
-"""Acid-catalysed glycoside formation (Fischer glycosidation), drawn on tetrahydropyran-2-ol, the
+"""Acid-catalyzed glycoside formation (Fischer glycosidation), drawn on tetrahydropyran-2-ol, the
 simplest model of a pyranose hemiacetal. Top: the anomeric OH is protonated and leaves as water,
 pushed out by a lone pair of the ring oxygen; the planar oxocarbenium ion is the key intermediate
 of glycoside formation and hydrolysis. Bottom: methanol adds to C1 from either face and loses a
 proton, giving both anomers of the methyl glycoside. Every step is reversible, so the product
-ratio is set by thermodynamics (the anomeric effect favours the axial, alpha anomer)."""
+ratio is set by thermodynamics (the anomeric effect favors the axial, alpha anomer)."""
 
 from wikichem import Scheme
 

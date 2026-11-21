@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def level(ax, x, y, n, label=None, w=0.5, side="right", gap=0.18):
-    """Draw a degenerate set of n levels centred at x with given electron count list; returns x positions."""
+    """Draw a degenerate set of n levels centered at x with given electron count list; returns x positions."""
     xs = [x + (k - (len(n) - 1) / 2) * (w + gap) for k in range(len(n))]
     for xc, e in zip(xs, n):
         ax.plot([xc - w / 2, xc + w / 2], [y, y], color="black", lw=1.6)

@@ -3,7 +3,7 @@ from water (relative permittivity 78.4) into a medium of permittivity 2 (hydroca
 membrane), 4 and 10 (protein interior, effective values), in kBT at 25 C; for a divalent ion
 multiply by 4. B: the shift of the pKa of an ionizable group moved from water into a medium of
 permittivity eps (charge radius 0.25 nm), for an acid (pKa rises: the neutral form is
-favoured) and a base (pKa falls), estimated from the Born energy alone; real proteins
+favored) and a base (pKa falls), estimated from the Born energy alone; real proteins
 compensate part of this cost with hydrogen bonds, nearby charges and water penetration, so
 measured shifts are smaller."""
 

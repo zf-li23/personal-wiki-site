@@ -2,7 +2,7 @@
 
 A: the HoxD cluster between two regulatory landscapes (topologically associating domains). Early in the limb bud,
 enhancers in the telomeric landscape (T-DOM) activate Hoxd9-11 in the presumptive zeugopod; later, enhancers in the
-centromeric landscape (C-DOM) activate Hoxd13 and its neighbours in the autopod; the boundary between the domains
+centromeric landscape (C-DOM) activate Hoxd13 and its neighbors in the autopod; the boundary between the domains
 lies within the cluster, and cells switch from one landscape to the other.
 B: enhancer-swap experiment of Kvon et al. (2016): the mouse ZRS, the limb enhancer of Shh about 1 Mb away inside
 Lmbr1, was replaced by its orthologues. Human and coelacanth ZRS give normal limbs; the python ZRS, which has lost

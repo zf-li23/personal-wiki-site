@@ -1,6 +1,6 @@
 # Pupil shape and defocus blur (geometric optics; idea after Banks et al. 2015, illustrative numbers).
 # An eye focused at z0 sees a point at distance z as a blur patch whose angular extent along each
-# axis is the pupil extent along that axis times |1/z - 1/z0| (the defocus in dioptres).
+# axis is the pupil extent along that axis times |1/z - 1/z0| (the defocus in diopters).
 # A vertical slit (1 mm wide, 12 mm tall) blurs horizontal contours strongly and vertical contours
 # hardly at all; a round pupil (4 mm) blurs both equally.
 import numpy as np
@@ -25,7 +25,7 @@ bio.panel(ax, "A", (0.2, 9.4))
 # B: blur versus distance
 z0 = 1.0
 z = np.logspace(np.log10(0.2), np.log10(10), 300)
-defocus = np.abs(1 / z - 1 / z0)                   # dioptres (1/m)
+defocus = np.abs(1 / z - 1 / z0)                   # diopters (1/m)
 
 
 def blur(aperture_mm):

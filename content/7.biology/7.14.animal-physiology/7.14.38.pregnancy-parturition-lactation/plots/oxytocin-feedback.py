@@ -1,9 +1,9 @@
-# Positive feedback in labour (Ferguson reflex), an illustrative model (time in hours):
+# Positive feedback in labor (Ferguson reflex), an illustrative model (time in hours):
 #   dO/dt = (Ob + alpha S - O) / tauO               plasma oxytocin; cervical stretch S drives its release
 #   dU/dt = (R O^n / (K^n + O^n) - U) / tauU        uterine contractile activity; R = oxytocin receptor density
 #   dS/dt = (beta U - S) / tauS                     stretch of the cervix by the descending fetus
 # Half-life of oxytocin about 4 min (tauO = 0.07 h). With a sigmoid response the loop is bistable:
-# a quiescent state and an active (labour) state. As R rises at the end of pregnancy the quiescent
+# a quiescent state and an active (labor) state. As R rises at the end of pregnancy the quiescent
 # state disappears (saddle-node) and contractions escalate by themselves. Delivery removes the stretch.
 import matplotlib.pyplot as plt
 import numpy as np

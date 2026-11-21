@@ -1,7 +1,7 @@
 """Characteristic taxa of Wallace's six zoogeographic realms, and a clustering of the realms by them.
 
 Left: presence of living native members of 32 characteristic taxa in each realm (0 absent, 1 present,
-2 endemic or nearly endemic, or the clear centre of diversity), scored from standard distribution data
+2 endemic or nearly endemic, or the clear center of diversity), scored from standard distribution data
 (mammals, birds, reptiles, amphibians, fishes, insects). The selection of taxa is deliberately the set
 used in the text, so the matrix illustrates the method rather than a full faunal analysis.
 Right: Jaccard similarity of the realms (presence = score >= 1) and the UPGMA dendrogram.

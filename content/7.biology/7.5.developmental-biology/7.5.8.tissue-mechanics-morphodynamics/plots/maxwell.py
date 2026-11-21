@@ -3,7 +3,7 @@
 Constitutive law: d(tau)/dt + tau / t_r = G d(eps)/dt, with shear modulus G, viscosity eta and
 relaxation time t_r = eta / G. Time in units of t_r, stress in units of G times the imposed strain
 (or the imposed stress), strain in units of tau0 / G.
-A: the mechanical analogue. B: stress relaxation after a step strain eps0: tau = G eps0 exp(-t/t_r).
+A: the mechanical analog. B: stress relaxation after a step strain eps0: tau = G eps0 exp(-t/t_r).
 C: creep under a step stress tau0: eps = tau0/G + tau0 t / eta (instant elastic jump, then flow).
 D: start-up at constant shear rate: tau = eta (d eps/dt) (1 - exp(-t/t_r)), elastic at t << t_r
 (tau ~ G eps), Newtonian viscous at t >> t_r.

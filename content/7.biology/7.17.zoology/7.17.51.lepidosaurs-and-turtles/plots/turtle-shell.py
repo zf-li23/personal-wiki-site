@@ -5,8 +5,8 @@
 # the carapace; the neural plates fuse with the neural spines. The scapula and coracoid therefore come to
 # lie inside the rib cage. The plastron is formed by dermal bones: anteriorly the clavicles (epiplastra) and
 # interclavicle (entoplastron), posteriorly bones derived from gastralia. Keratinous scutes cover the shell.
-# Bones are coloured in the course-wide homology scheme; dermal shell plates without a homologue in the
-# lizard are grey. Not to scale.
+# Bones are colored in the course-wide homology scheme; dermal shell plates without a homolog in the
+# lizard are gray. Not to scale.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

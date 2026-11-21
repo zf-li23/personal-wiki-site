@@ -5,7 +5,7 @@ elsewhere: gated transport through nuclear pores (between topologically equivale
 transmembrane transport by protein translocators (cytosol into ER, mitochondria, plastids,
 peroxisomes), and vesicular transport between the compartments of the secretory and endocytic
 pathways, whose lumens are topologically equivalent to the outside of the cell. Boxes are tinted
-by the colour of each organelle; the dashed line separates the compartments connected by vesicle
+by the color of each organelle; the dashed line separates the compartments connected by vesicle
 traffic (the endomembrane system) from the rest.
 """
 

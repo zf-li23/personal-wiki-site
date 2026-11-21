@@ -1,4 +1,4 @@
-"""Cobalt-catalysed [2+2+2] cyclotrimerization of alkynes (Vollhardt; CpCo shown with the alkyne
+"""Cobalt-catalyzed [2+2+2] cyclotrimerization of alkynes (Vollhardt; CpCo shown with the alkyne
 substituents omitted). Two alkynes bound to CpCo couple oxidatively (Co(I) to Co(III)) to a
 cobaltacyclopentadiene; a third alkyne adds across the metallacycle (insertion, or a [4+2]
 cycloaddition to the diene) and reductive elimination releases benzene and returns CpCo. With a

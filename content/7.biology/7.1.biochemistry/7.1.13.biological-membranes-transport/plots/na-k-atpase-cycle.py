@@ -5,7 +5,7 @@ ATP bound) binds 3 Na+; phosphoryl transfer from ATP to the conserved Asp residu
 (E1-P(3Na), ADP released). The conformational change to E2-P opens the sites to the outside with low
 affinity for Na+, so 3 Na+ leave and 2 K+ bind; this triggers dephosphorylation (Pi released) and
 occludes the K+ ions (E2(2K)). Binding of ATP converts E2 back to E1 and releases 2 K+ into the
-cytosol. Net per cycle: 3 Na+ out, 2 K+ in, one ATP hydrolysed, one positive charge moved out.
+cytosol. Net per cycle: 3 Na+ out, 2 K+ in, one ATP hydrolyzed, one positive charge moved out.
 Outside is up in each panel.
 """
 

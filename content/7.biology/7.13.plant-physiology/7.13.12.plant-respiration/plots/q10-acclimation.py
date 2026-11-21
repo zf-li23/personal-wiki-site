@@ -1,5 +1,5 @@
 # Temperature response of plant respiration and thermal acclimation (models).
-# (A) Short-term response normalised to 1 at 20 C: constant Q10 = 2, and a temperature-dependent
+# (A) Short-term response normalized to 1 at 20 C: constant Q10 = 2, and a temperature-dependent
 # Q10 = 3.09 - 0.043 T (Tjoelker et al. 2001), integrated as d ln R / dT = ln(Q10(T)) / 10; above ~40 C an
 # inactivation factor (schematic) bends the curve down.
 # (B) Plants acclimated to 15 C and 30 C share the curve shape but differ in base rate (type II acclimation);

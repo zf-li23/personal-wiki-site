@@ -1,10 +1,10 @@
 # Scanning the lactase-persistence enhancer with a PWM. The 101 bp of GRCh38 chr2:135,851,026-135,851,126
-# around rs4988235 (forward-strand G>A at the centre; -13910C>T on the strand of LCT and MCM6) scanned with
+# around rs4988235 (forward-strand G>A at the center; -13910C>T on the strand of LCT and MCM6) scanned with
 # the JASPAR POU2F1 (Oct-1) matrix MA0785.1 (pseudocount 0.8, human background). A: the PWM score of each
 # 12-bp window, maximum over the two strands, for the ancestral (G) and derived (A) sequences; the variant
 # changes only the windows that contain it (shaded). B: the best window covering the variant, read on the
 # minus strand, under the logo of the matrix: at position 10, where the matrix prefers A, the derived T is
-# less disfavoured than C and raises the score by 1.6 bits, but both alleles score far below the strongest site of the region
+# less disfavored than C and raises the score by 1.6 bits, but both alleles score far below the strongest site of the region
 # (ATTATACAAATG, 46 bp away, 9.4 bits; matrix maximum 16.0 bits).
 import numpy as np
 import wikibio as bio

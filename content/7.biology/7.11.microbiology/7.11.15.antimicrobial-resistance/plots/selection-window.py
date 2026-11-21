@@ -3,7 +3,7 @@
 # wild type: psi_max = 1.0 per h, MIC = 1, psi_min = -3 per h, kappa = 2;
 # first-step resistant mutant: fitness cost 10 % (psi_max = 0.9 per h), MIC = 8 (taken as the
 # mutant prevention concentration, MPC), same psi_min and kappa.
-# A: growth rates and the selection coefficient s = psi_mut - psi_wt. The mutant is favoured above the
+# A: growth rates and the selection coefficient s = psi_mut - psi_wt. The mutant is favored above the
 #    minimal selective concentration (MSC), which lies below the wild-type MIC; between the MIC and the
 #    MPC lies the mutant selection window. Above the MPC both are killed.
 # B, C: one-compartment pharmacokinetics (elimination half-life 2 h, a dose every 8 h, instantaneous

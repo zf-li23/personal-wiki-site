@@ -1,7 +1,7 @@
-"""Why thalidomide racemizes in the body. Its stereocentre (C3 of the glutarimide ring) carries an
+"""Why thalidomide racemizes in the body. Its stereocenter (C3 of the glutarimide ring) carries an
 acidic C-H between the imide carbonyl group and the phthalimide nitrogen (NPhth = phthalimido). A base
 (in vivo: water, phosphate, the side chains of proteins) removes this proton; the electrons move onto
-the carbonyl oxygen and the stereocentre becomes the planar sp2 carbon of an enolate. Reprotonation on
+the carbonyl oxygen and the stereocenter becomes the planar sp2 carbon of an enolate. Reprotonation on
 either face gives back (R) or (S) with equal probability, so either pure enantiomer turns into the
 racemate within hours under physiological conditions."""
 
@@ -9,7 +9,7 @@ from wikichem import Scheme
 
 s = Scheme()
 PH = {5: "NPhth"}
-# atoms: 0 O, 1 C, 2 C, 3 C, 4 C3 (stereocentre), 5 NPhth, 6 C(=O), 7 O, 8 NH, 9 H on C3
+# atoms: 0 O, 1 C, 2 C, 3 C, 4 C3 (stereocenter), 5 NPhth, 6 C(=O), 7 O, 8 NH, 9 H on C3
 r = s.molecule("O=C1CC[C@@H](*)C(=O)N1", at=(0, 0), show_h=[4], lone_pairs=[7], labels=PH)
 base = s.molecule("[OH-]", at=(-2.2, -2.4), lone_pairs=True)
 s.curly(base.atom(0), r.h(4), bend=-0.4)

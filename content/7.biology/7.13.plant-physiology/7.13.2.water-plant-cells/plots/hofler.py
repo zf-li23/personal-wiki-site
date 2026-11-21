@@ -48,7 +48,7 @@ pa.annotate("incipient\nplasmolysis\n(Ψp = 0, Ψw = Ψs)", (1.0, PS0), (1.03, -
             arrowprops=dict(arrowstyle="-", color=P.muted(), lw=0.7))
 pa.annotate("full turgor\n(Ψw = 0, Ψp = −Ψs)", (vft, 0.0), (0.995, 0.66), fontsize=7.5, color=P.ink(),
             arrowprops=dict(arrowstyle="-", color=P.muted(), lw=0.7))
-pa.text(0.857, 0.78, "plasmolysed\n(in solution)", fontsize=7.5, color=P.muted())
+pa.text(0.857, 0.78, "plasmolyzed\n(in solution)", fontsize=7.5, color=P.muted())
 pa.set_xlim(0.85, vft + 0.01)
 pa.set_ylim(-1.3 / 0.85 * 0.97, 1.0)
 charts.style_axes(pa, "relative protoplast volume V / V_ip", "Ψ / MPa")

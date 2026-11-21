@@ -1,7 +1,7 @@
 """Experiments and models that shaped biophysics, 1912-2024, with the chapters (7.6.n) where they appear.
 
 Left of the time axis: molecular biophysics (structures, methods, single molecules); right: cell
-biophysics and quantitative biology, and the physicists' early arguments about the gene (grey).
+biophysics and quantitative biology, and the physicists' early arguments about the gene (gray).
 Years as given in the chapters: Laue 1912 and the Braggs 1913 (10); the three-man paper 1935 and
 What Is Life? 1944 (1); the fluctuation test 1943 (32); Hodgkin and Huxley 1952 (30); the double
 helix 1953 (10); myoglobin at 6 A 1957 (10); the growth observations of Schaechter, Maaloe and Kjeldgaard
@@ -70,7 +70,7 @@ for y in range(1910, 2030, 10):
     ax.text(-0.99, y, str(y), fontsize=F["tiny"], color=P.muted(), ha="left", va="center")
     ax.plot([-0.93, -0.9], [y, y], color=P.muted(), lw=0.6)
 
-# spread labels on each side so that neighbours keep a minimum gap (in years)
+# spread labels on each side so that neighbors keep a minimum gap (in years)
 GAP = 3.1
 
 

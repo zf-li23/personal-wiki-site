@@ -2,7 +2,7 @@
 
 The medium (water or air) enters at P_I, the blood at the venous P_v; both have constant capacitances, so a
 flow carries a "capacity rate" C = flow x capacitance. D* = G / C_blood is the diffusing conductance relative
-to the blood capacity rate, r = C_blood / C_medium. Normalised arterial partial pressure
+to the blood capacity rate, r = C_blood / C_medium. Normalized arterial partial pressure
 E = (P_a - P_v) / (P_I - P_v):
   concurrent      E = (1 - exp(-D*(1 + r))) / (1 + r)
   ventilated pool E = (1 - exp(-D*)) / (1 + r (1 - exp(-D*)))     (mammalian alveolus: well-mixed gas)

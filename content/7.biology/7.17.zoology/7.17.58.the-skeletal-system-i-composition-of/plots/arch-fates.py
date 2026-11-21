@@ -1,5 +1,5 @@
 # Fate of the pharyngeal arch skeleton, element by element, in six vertebrates (shark, teleost, frog, lizard,
-# bird, mammal). Each cell is coloured with the course-wide vertskel homology colour of its element; grey cells:
+# bird, mammal). Each cell is colored with the course-wide vertskel homology color of its element; gray cells:
 # element absent or lost. Summarized from Kardong (2019), Goodrich (1930), de Beer (1937) and Yang & Cheng; the laryngeal
 # rows (arches 4-6) are uncertain homologies.
 import wikibio as bio

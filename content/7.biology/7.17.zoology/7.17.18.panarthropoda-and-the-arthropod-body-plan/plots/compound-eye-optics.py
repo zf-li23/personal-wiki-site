@@ -1,5 +1,5 @@
 # Why compound eyes have the facets they have: a model of resolution (after Barlow 1952; Kirschfeld 1976).
-# In an eye of radius R with facet diameter D, the sampling angle between neighbouring ommatidia is
+# In an eye of radius R with facet diameter D, the sampling angle between neighboring ommatidia is
 # Delta phi = D / R, and diffraction at each facet blurs the image over about lambda / D. The total blur
 # sqrt((D/R)^2 + (lambda/D)^2) is smallest at D* = sqrt(lambda R). Curves: lambda = 0.5 um; eye radii
 # 0.25, 0.5, 1 and 2 mm. Even at the optimum a 1-mm eye resolves only about 1.8 deg, some hundred times

@@ -3,7 +3,7 @@
 #    groove closed at both ends (8-10 residue peptides). Class II = alpha (alpha1, alpha2) + beta (beta1, beta2),
 #    groove open at both ends (13-25 residue peptides).
 # B: an illustrative probability logo of 9-mer peptides eluted from HLA-A*02:01. Only the two dominant anchors
-#    are modelled (P2: L > M > I, V; PΩ = P9: V > L > I); the other positions are drawn nearly uniform with
+#    are modeled (P2: L > M > I, V; PΩ = P9: V > L > I); the other positions are drawn nearly uniform with
 #    weak hydrophobic preferences. The matrix is a schematic of the published motif, not data.
 import numpy as np
 

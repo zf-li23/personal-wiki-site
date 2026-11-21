@@ -1,4 +1,4 @@
-# A minimal model of the positive feedback loop after haemorrhage (illustrative parameters).
+# A minimal model of the positive feedback loop after hemorrhage (illustrative parameters).
 # Arterial pressure P (1 = normal) is set by the effective blood volume V (1 = normal) times the pumping
 # ability of the heart h(P), and the heart's pumping ability depends on its own coronary perfusion, i.e.
 # on P:  tau dP/dt = V h(P) - P,  with h(P) = a P^2 / (P^2 + K^2), a = 1.12, K = 0.35 (so h(1) = 1).

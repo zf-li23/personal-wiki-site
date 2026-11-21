@@ -1,6 +1,6 @@
 """Where the mass and the neurons of the human brain are (isotropic fractionator data).
 
-Adult male brains (n = 4; Azevedo et al. 2009): total mass 1509 g, of which cerebral cortex (grey and
+Adult male brains (n = 4; Azevedo et al. 2009): total mass 1509 g, of which cerebral cortex (gray and
 white matter) 1233 g, cerebellum 154 g, rest of brain (brainstem, diencephalon, basal ganglia) 118 g;
 neurons 86.1e9 in total: cerebral cortex 16.3e9, cerebellum 69.0e9, rest 0.69e9; non-neuronal cells
 84.6e9: 60.8e9, 16.0e9 and 7.7e9.

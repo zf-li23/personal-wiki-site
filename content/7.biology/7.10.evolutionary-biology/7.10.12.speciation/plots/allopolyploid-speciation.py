@@ -1,7 +1,7 @@
 """Speciation by allopolyploidy, after the goatsbeards Tragopogon in North America (chromosome numbers from
 Futuyma and Kirkpatrick 2017): the diploids T. dubius and T. pratensis (both n = 6) hybridized, and genome
 doubling in the hybrid produced the allotetraploid T. miscellus (n = 12, 2n = 24). Bars are chromosome sets
-(one bar per haploid set of 6; colours: parental genome of origin). The diploid F1 hybrid is largely sterile
+(one bar per haploid set of 6; colors: parental genome of origin). The diploid F1 hybrid is largely sterile
 because the two sets of chromosomes are not homologous enough to pair regularly at meiosis; after doubling, each
 chromosome has a partner and meiosis is regular. A cross between the tetraploid and either diploid parent gives a
 triploid (one set from the diploid, two from the tetraploid), which is largely sterile: the tetraploid is

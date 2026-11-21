@@ -1,9 +1,9 @@
 # Diffusion through small pores (Brown & Escombe 1900) and the anatomical maximum stomatal conductance
 # (Franks & Farquhar 2001), 25 C.
-# (A) Water-vapour flux through one circular pore of depth l = 8 um, J = pi r^2 D dc / (l + pi r / 2),
+# (A) Water-vapor flux through one circular pore of depth l = 8 um, J = pi r^2 D dc / (l + pi r / 2),
 # compared with the "area-proportional" flux pi r^2 D dc / l (long-tube limit, scaled to match at small r is
 # not done: both use the same l); right axis: flux per unit pore area relative to the 10-um-radius pore.
-# Driving force: 1 kPa vapour-pressure difference, dc = dp / RT.
+# Driving force: 1 kPa vapor-pressure difference, dc = dp / RT.
 # (B) g_max = (D / v) N a / (l + (pi/2) sqrt(a / pi)) over stomatal density N for three pore areas a; the
 # dot marks the leaf of Example 10.7.1 (N = 200 mm^-2, a = 78.5 um^2).
 import matplotlib.pyplot as plt

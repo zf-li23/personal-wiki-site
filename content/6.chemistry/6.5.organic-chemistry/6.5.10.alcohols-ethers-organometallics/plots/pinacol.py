@@ -1,6 +1,6 @@
 """Pinacol rearrangement of 2,3-dimethylbutane-2,3-diol in acid. Protonation of one hydroxyl group
 (not shown) turns it into a good leaving group; loss of water gives a tertiary carbocation. A methyl
-group on the neighbouring carbon migrates with its bonding pair (1,2-shift) to the cationic centre.
+group on the neighboring carbon migrates with its bonding pair (1,2-shift) to the cationic center.
 The new cation sits next to OH and is stabilized as a protonated carbonyl (oxocarbenium ion); loss
 of the proton gives pinacolone, 3,3-dimethylbutan-2-one."""
 
@@ -56,7 +56,7 @@ def label(at, text, size=None):
 
 
 def centre(c, groups):
-    """Draw a stereocentre at c; groups: (offset, text, kind)."""
+    """Draw a stereocenter at c; groups: (offset, text, kind)."""
     c = np.asarray(c, float)
     for off, text, kind in groups:
         p = c + np.asarray(off, float)
@@ -70,7 +70,7 @@ def pt(x, y):
 
 
 def dots(c, d):
-    """A lone pair drawn beside a text label: centre c, unit direction d."""
+    """A lone pair drawn beside a text label: center c, unit direction d."""
     c, d = np.asarray(c, float), np.asarray(d, float)
     t = np.array([-d[1], d[0]])
     reach(c)
@@ -84,7 +84,7 @@ def dots(c, d):
 
 
 def lobe(c, w=1.1, h=0.55):
-    """An unshaded orbital lobe (ellipse) centred at c."""
+    """An unshaded orbital lobe (ellipse) centered at c."""
     c = np.asarray(c, float)
     reach(c - pt(w / 2, h / 2), c + pt(w / 2, h / 2))
     EXTRA.append(lambda ax, ink: ax.add_patch(Ellipse(tuple(c), w, h, fill=False, color=ink, lw=1.1)))

@@ -6,7 +6,7 @@ by bulging; a bulge of radius r is in equilibrium at a supercooling dT = 2 gamma
 B: thermal hysteresis TH = 4 gamma T_m / (rho_ice L_f d) with d = (sigma_max theta)^(-1/2) and Langmuir coverage
 theta = K c / (1 + K c). gamma = 0.03 J/m2, T_m = 273.15 K, rho_ice L_f = 917 * 3.34e5 J/m3.
 Illustrative parameters: a fish AFP (saturating spacing 90 nm, K = 1 / 0.5 mM) and a hyperactive insect AFP
-(saturating spacing 20 nm, K = 1 / 0.02 mM). Grey: colligative freezing-point depression of an ideal solute
+(saturating spacing 20 nm, K = 1 / 0.02 mM). Gray: colligative freezing-point depression of an ideal solute
 (1.86 K kg/mol) at the same molar concentration.
 """
 import matplotlib.pyplot as plt

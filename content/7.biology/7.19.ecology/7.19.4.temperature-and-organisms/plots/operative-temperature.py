@@ -1,4 +1,4 @@
-# Operative temperature and behavioural thermoregulation of a small lizard (simplified heat-budget model,
+# Operative temperature and behavioral thermoregulation of a small lizard (simplified heat-budget model,
 # illustrative parameters).
 # Air temperature Ta(t) = 25 - 7 cos(2 pi (t - 3) / 24) C (minimum 18 C at 03:00, maximum 32 C at 15:00);
 # solar irradiance S(t) = 1000 sin(pi (t - 6) / 12) W m^-2 between 06:00 and 18:00.

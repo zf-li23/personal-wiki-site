@@ -17,9 +17,9 @@ x = (np.arange(n) + 0.5) * dx
 src = x < 0.2
 snk = x > 0.8
 area = np.pi * a**2
-s_load = 1.8e-10                     # mol s^-1 per metre of source
+s_load = 1.8e-10                     # mol s^-1 per meter of source
 ku = 1.2e-3                          # s^-1
-cond = np.pi * a**4 / (8 * eta * f * dx)   # m^3 s^-1 Pa^-1 between neighbouring cells
+cond = np.pi * a**4 / (8 * eta * f * dx)   # m^3 s^-1 Pa^-1 between neighboring cells
 
 
 def resid(z):

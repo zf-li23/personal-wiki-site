@@ -1,8 +1,8 @@
 """Spike timing selects the escape mode of Drosophila (after von Reyn et al. 2014).
 
-A dark disk looms toward the fly with half-size-to-speed ratio l/|v|. A parallel, non-giant-fibre
+A dark disk looms toward the fly with half-size-to-speed ratio l/|v|. A parallel, non-giant-fiber
 pathway starts a long-mode takeoff (wings raised before the legs extend; slower but stable) when
-the image reaches about 20 deg; the takeoff is completed 15 ms (s.d. 4) later. The giant fibre (GF)
+the image reaches about 20 deg; the takeoff is completed 15 ms (s.d. 4) later. The giant fiber (GF)
 fires a single spike when its input, driven mainly by the angular velocity of expansion, crosses
 threshold (with trial-to-trial variability). If the GF spike comes before the long-mode takeoff is
 completed, it triggers the fast short-mode jump (wings not raised; the fly often tumbles).

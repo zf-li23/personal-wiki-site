@@ -4,7 +4,7 @@ PN rate r = R_max x^n / (sigma^n + x^n + (m s)^n) with x the rate of the ORNs of
 and s the summed ORN input to the lobe, which drives the GABAergic local neurons
 (R_max = 165 Hz, sigma = 12 Hz, n = 1.5, m = 0.05; illustrative values of the fitted magnitude).
 A: input-output curves at four levels of total ORN input: lateral input shifts the curve to the right
-(gain control) without changing its maximum. B: ORN rates across 50 glomeruli x 100 odours drawn from
+(gain control) without changing its maximum. B: ORN rates across 50 glomeruli x 100 odors drawn from
 an exponential distribution (mean 15 Hz; most responses weak) and the PN rates they produce with no
 lateral input: the PN histogram is flatter, so the population uses its range of rates more evenly.
 """

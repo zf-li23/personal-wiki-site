@@ -1,7 +1,7 @@
 """Ketone synthesis from a nitrile and a Grignard reagent (benzonitrile and ethylmagnesium bromide).
 The C-Mg bond pair adds to the nitrile carbon and the C-N pi pair moves onto nitrogen, which is bound to
 magnesium. The negatively charged imine salt is not attacked by a second equivalent; aqueous acid
-hydrolyses it, through the imine, to propiophenone."""
+hydrolyzes it, through the imine, to propiophenone."""
 
 from wikichem import Scheme
 

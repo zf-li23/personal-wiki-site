@@ -1,7 +1,7 @@
 # Development of the Polygonum-type (monosporic, eight-nucleate) embryo sac; micropylar end at the top.
 # The megasporocyte in the nucellus divides meiotically into a linear tetrad of megaspores; the three
 # micropylar megaspores degenerate and the chalazal one enlarges (functional megaspore). Three free-nuclear
-# mitoses give 2, 4 and 8 nuclei; one nucleus from each end moves to the centre (polar nuclei); cell walls
+# mitoses give 2, 4 and 8 nuclei; one nucleus from each end moves to the center (polar nuclei); cell walls
 # then form: egg apparatus (egg and two synergids with the filiform apparatus) at the micropylar end, three
 # antipodals at the chalazal end and the large central cell with two polar nuclei.
 import numpy as np

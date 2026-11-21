@@ -1,4 +1,4 @@
-# Estimating a mitotic field from one synthetic section (Section 31.6): raw index, iterated nearest-neighbour
+# Estimating a mitotic field from one synthetic section (Section 31.6): raw index, iterated nearest-neighbor
 # smoothing inside the tissue, and a Poisson GLM (log link, offset log rho) on 15 cosine functions.
 set.seed(7)
 nx <- 30; ny <- 22

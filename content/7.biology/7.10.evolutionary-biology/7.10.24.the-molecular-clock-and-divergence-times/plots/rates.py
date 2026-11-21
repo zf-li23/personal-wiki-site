@@ -5,7 +5,7 @@ log-normal rates (Eq. (24.5), sigma^2 = 0.3, mean 1). Left: the chronogram (bran
 branches colored by rate. Right: the resulting phylogram (branch lengths = rate x time, the expected
 numbers of substitutions), which is what sequences estimate. With autocorrelated rates, related
 lineages share fast or slow rates and whole clades are stretched or compressed; with independent
-rates, neighbouring branches vary independently."""
+rates, neighboring branches vary independently."""
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection

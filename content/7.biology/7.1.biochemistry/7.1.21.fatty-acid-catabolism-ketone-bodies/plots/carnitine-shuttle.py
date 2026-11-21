@@ -1,7 +1,7 @@
 """Entry of long-chain fatty acids into mitochondria: activation and the carnitine shuttle.
 
 Cytosolic face of the outer membrane: long-chain acyl-CoA synthetase forms fatty acyl-CoA (fatty acid + CoA
-+ ATP -> acyl-CoA + AMP + PPi; PPi hydrolysed). Carnitine palmitoyltransferase 1 (CPT1, outer membrane)
++ ATP -> acyl-CoA + AMP + PPi; PPi hydrolyzed). Carnitine palmitoyltransferase 1 (CPT1, outer membrane)
 transfers the acyl group to carnitine; malonyl-CoA inhibits it. The carnitine/acylcarnitine translocase of
 the inner membrane exchanges acylcarnitine (in) for carnitine (out). CPT2 on the matrix face of the inner
 membrane transfers the acyl group to mitochondrial CoA. Cytosolic and mitochondrial CoA pools stay separate.

@@ -16,7 +16,7 @@ from wikibio import charts
 P = bio.P
 fig = plt.figure(figsize=(14.5, 5.6))
 axA = fig.add_axes([0.06, 0.16, 0.30, 0.72])
-r = np.linspace(0, 1, 400)  # 0 centre, 1 surface
+r = np.linspace(0, 1, 400)  # 0 center, 1 surface
 barrier = 0.72
 o2 = np.where(r > barrier + 0.06, 250, 0.03 + (250 - 0.03) / (1 + np.exp(-(r - barrier - 0.02) / 0.012)))
 axA.axvspan(0, 0.66, color=P.fill("rna"), alpha=0.35, lw=0)

@@ -54,7 +54,7 @@ mb_bot = np.c_[xs[1:-2][::-1], Y - half[1:-2][::-1] + 0.12]
 poly(np.vstack([mb_top, mb_bot]), **dict(face=P.mix(P.light("coelom"), P.surface(), 0.35), edge=P.edge("coelom"),
                                          z=4, lw=0.6))
 
-# ---- gut: buccal cavity, pharynx, oesophagus, hepatic region, intestine, anus
+# ---- gut: buccal cavity, pharynx, esophagus, hepatic region, intestine, anus
 gx = np.linspace(4.9, 22.75, 80)
 gh = np.where(gx < 7.4, 0.32, np.interp(gx, [7.4, 12.0, 12.6, 15.5, 22.75], [0.55, 0.55, 0.3, 0.32, 0.12]))
 gut = np.vstack([np.c_[gx, Y + gh], np.c_[gx[::-1], Y - gh[::-1]]])

@@ -1,6 +1,6 @@
 """Decline of the ovarian reserve (Formula 27.6.1). A: number of oocytes (non-growing follicles after birth) on a
 log scale. Before birth germ cells rise to about 7 million at 20 weeks and fall to about 1 million at birth
-(schematic, grey). After birth dN/dt = -lambda(N) N, with lambda rising from 0.097 to 0.237 per year as N falls
+(schematic, gray). After birth dN/dt = -lambda(N) N, with lambda rising from 0.097 to 0.237 per year as N falls
 through about 25 000 (late thirties); menopause occurs when about 1000 follicles remain. Curves: median reserve
 at birth and the 2.5 and 97.5 percentiles of a log-normal spread (sigma = 0.4). B: the predicted distribution of
 the age at menopause (mean about 50 years, SD about 4); the tails below 40 and 45 years correspond to primary

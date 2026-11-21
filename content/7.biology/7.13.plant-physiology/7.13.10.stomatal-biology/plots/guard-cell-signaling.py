@@ -1,4 +1,4 @@
-# Guard-cell signalling for stomatal opening (blue light) and closure (ABA, high CO2) as an SBGN
+# Guard-cell signaling for stomatal opening (blue light) and closure (ABA, high CO2) as an SBGN
 # Activity Flow map (simplified; after the models in Taiz et al. 6e, Figs 16.26 and 24.26).
 # Opening: phototropins -> BLUS1 -> PP1 -> (unknown kinase) -> phosphorylation of the plasma-membrane
 # H+-ATPase and 14-3-3 binding -> hyperpolarization -> K+ uptake through inward-rectifying channels.

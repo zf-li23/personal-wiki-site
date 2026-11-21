@@ -2,9 +2,9 @@
 
 Each marker is one model, at the order of magnitude of the length (size of the patterned field,
 tissue or organism) and time (duration, period or relaxation time) of the developmental process
-it treats; the number is the chapter (7.5.n). Marker colour gives the class of model. Grey
+it treats; the number is the chapter (7.5.n). Marker color gives the class of model. Gray
 lines: the diffusion time t = L^2 / D for D = 1 and 10 um^2/s (paracrine signals, 7.5.11), and
-the distance L = U t covered by tissue flow at U = 10 nm/s, about a millimetre a day (7.5.8).
+the distance L = U t covered by tissue flow at U = 10 nm/s, about a millimeter a day (7.5.8).
 Values are orders of magnitude only. Catastrophe theory (7.5.10) has no scale and is not shown.
 """
 

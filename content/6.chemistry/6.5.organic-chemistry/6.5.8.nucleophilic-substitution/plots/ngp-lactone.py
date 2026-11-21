@@ -1,5 +1,5 @@
-"""Neighbouring-group participation in the hydrolysis of (S)-2-bromopropanoate with dilute base.
-Step 1: the carboxylate oxygen, held next to the reaction centre, displaces bromide from the back
+"""Neighboring-group participation in the hydrolysis of (S)-2-bromopropanoate with dilute base.
+Step 1: the carboxylate oxygen, held next to the reaction center, displaces bromide from the back
 side (intramolecular SN2, first inversion) and gives a strained alpha-lactone. Step 2: water or
 hydroxide opens the three-membered ring at the same carbon, again from the back side (second
 inversion). Two inversions add up to overall retention: (S)-lactate."""
@@ -56,7 +56,7 @@ def label(at, text, size=None):
 
 
 def centre(c, groups):
-    """Draw a stereocentre at c; groups: (offset, text, kind)."""
+    """Draw a stereocenter at c; groups: (offset, text, kind)."""
     c = np.asarray(c, float)
     for off, text, kind in groups:
         p = c + np.asarray(off, float)
@@ -70,7 +70,7 @@ def pt(x, y):
 
 
 def dots(c, d):
-    """A lone pair drawn beside a text label: centre c, unit direction d."""
+    """A lone pair drawn beside a text label: center c, unit direction d."""
     c, d = np.asarray(c, float), np.asarray(d, float)
     t = np.array([-d[1], d[0]])
     reach(c)
@@ -84,7 +84,7 @@ def dots(c, d):
 
 
 def lobe(c, w=1.1, h=0.55):
-    """An unshaded orbital lobe (ellipse) centred at c."""
+    """An unshaded orbital lobe (ellipse) centered at c."""
     c = np.asarray(c, float)
     reach(c - pt(w / 2, h / 2), c + pt(w / 2, h / 2))
     EXTRA.append(lambda ax, ink: ax.add_patch(Ellipse(tuple(c), w, h, fill=False, color=ink, lw=1.1)))

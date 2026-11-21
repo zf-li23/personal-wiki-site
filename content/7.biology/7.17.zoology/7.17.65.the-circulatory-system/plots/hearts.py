@@ -1,4 +1,4 @@
-# Vertebrate hearts in schematic ventral view, chambers coloured by the blood they carry (animalmorph.heart).
+# Vertebrate hearts in schematic ventral view, chambers colored by the blood they carry (animalmorph.heart).
 import wikibio as bio
 from wikibio import animalmorph as am
 

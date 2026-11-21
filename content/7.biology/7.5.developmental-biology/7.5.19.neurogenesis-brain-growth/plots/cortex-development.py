@@ -1,8 +1,8 @@
 """Development of the mammalian neocortex (schematic strips of the dorsal telencephalic wall; ventricle at the
 bottom, pial surface at the top). Early: a pseudostratified neuroepithelium and the preplate of the first-born
-neurons. Mid-neurogenesis: apical radial glia in the ventricular zone (VZ) with fibres reaching the pia; outer
-radial glia (basal fibre only, dashed) and intermediate progenitors in the subventricular zone (SVZ); newborn neurons
-migrate along the glial fibres through the intermediate zone (IZ) into the cortical plate (CP), below the marginal
+neurons. Mid-neurogenesis: apical radial glia in the ventricular zone (VZ) with fibers reaching the pia; outer
+radial glia (basal fiber only, dashed) and intermediate progenitors in the subventricular zone (SVZ); newborn neurons
+migrate along the glial fibers through the intermediate zone (IZ) into the cortical plate (CP), below the marginal
 zone (MZ). Late: the cortical plate holds successive cohorts of neurons; each new cohort migrates past the earlier
 ones, so the earliest-born neurons lie deepest (teal) and the latest-born most superficial (pink): inside-out."""
 import wikibio as bio

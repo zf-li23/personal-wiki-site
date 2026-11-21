@@ -1,4 +1,4 @@
-"""Sulfur mustard alkylates DNA by neighbouring-group participation. The sulfur lone pair displaces
+"""Sulfur mustard alkylates DNA by neighboring-group participation. The sulfur lone pair displaces
 chloride intramolecularly, giving a strained three-membered episulfonium (thiiranium) ion; a
 nucleophile (in DNA, N7 of guanine, written Nu) opens the ring by SN2. The second chloroethyl arm
 reacts the same way, so one molecule can cross-link two strands."""

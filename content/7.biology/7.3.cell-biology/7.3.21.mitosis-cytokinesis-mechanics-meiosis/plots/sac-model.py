@@ -14,7 +14,7 @@ securin stays high; after it attaches, MCC disassembles and securin is destroyed
 15 minutes later.
 (B) Steady-state APC/C-Cdc20 activity as a function of the number of unattached kinetochores, for a strong
 (k_u = 5) and a weak (k_u = 0.5 per min) template: with a strong catalytic template one kinetochore suffices to
-keep the checkpoint on, which is the observed behaviour.
+keep the checkpoint on, which is the observed behavior.
 """
 
 import numpy as np

@@ -8,7 +8,7 @@ import wikibio as bio
 
 P = bio.P
 
-# (label, log10 space centre, log10 time centre, width in decades, height in decades, angle, token)
+# (label, log10 space center, log10 time center, width in decades, height in decades, angle, token)
 items = [
     ("enzyme kinetics,\nphotosynthesis", -5.0, 0.0, 3.0, 3.2, 20, "enzyme"),
     ("thermoregulation,\nforaging bouts", -0.6, 3.6, 3.0, 2.6, 25, "animal"),

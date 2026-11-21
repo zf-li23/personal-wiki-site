@@ -2,7 +2,7 @@
 
 A: a patch of the surface of an aggregate, shaded by the local tension gamma (darker = higher).
 The surface force per unit area has a normal part -gamma (1/R1 + 1/R2) n (the Laplace pressure,
-directed towards the centre of curvature) and a tangential part, the surface gradient of gamma,
+directed towards the center of curvature) and a tangential part, the surface gradient of gamma,
 pointing towards higher tension (the Marangoni force).
 B: consequence for a drop whose tension is highest at one pole: the surface is pulled towards that
 pole, and the interior circulates (schematic streamlines of the Stokes flow).

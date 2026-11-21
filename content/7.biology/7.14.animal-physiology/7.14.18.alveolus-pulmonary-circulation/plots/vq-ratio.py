@@ -76,7 +76,7 @@ ax.semilogx(vqs, sol[:, 0], color=P.edge("blood"), lw=2, label="alveolar $P_{O_2
 ax.semilogx(vqs, sol[:, 1], color=P.edge("dna"), lw=2, label="alveolar $P_{CO_2}$")
 ax.axvspan(0.8, 1.0, color=P.fill("highlight"), alpha=0.35, lw=0)
 ax.text(0.9, 152, "normal\naverage", ha="center", va="top", fontsize=8, color=P.muted())
-ax.text(0.006, 52, "low: shunt-like,\nhypoxaemia", fontsize=8, color=P.muted())
+ax.text(0.006, 52, "low: shunt-like,\nhypoxemia", fontsize=8, color=P.muted())
 ax.text(30, 60, "high: dead-\nspace-like", ha="center", fontsize=8, color=P.muted())
 ax.set_xlabel("Ventilation-perfusion ratio $\\dot V_A/\\dot Q$")
 ax.set_ylabel("Partial pressure / mmHg")

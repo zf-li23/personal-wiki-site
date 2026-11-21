@@ -1,4 +1,4 @@
-"""Wittig reaction of propanal with the non-stabilised ylide Ph3P=CHCH3 (the three phenyl groups
+"""Wittig reaction of propanal with the non-stabilized ylide Ph3P=CHCH3 (the three phenyl groups
 on phosphorus are written Ph). Top: the nucleophilic ylide carbon bonds to the carbonyl carbon
 while the carbonyl oxygen bonds to phosphorus: a concerted, asynchronous [2+2] cycloaddition that
 gives the oxaphosphetane directly and irreversibly (lithium-free conditions). Bottom: the

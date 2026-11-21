@@ -3,7 +3,7 @@ angiosperm, tunica-corpus view: two tunica layers (L1, L2) divide only anticlina
 layers; the corpus (L3) divides in all planes. Dashed lines: the cytohistological zones that cut across the
 layers: the central zone of slowly dividing stem cells at the summit, the peripheral zone on the flanks,
 where leaf primordia arise, and the rib zone below, which makes the pith in vertical files. B: the
-WUSCHEL-CLAVATA3 feedback loop: cells of the organizing centre below the stem cells express WUS, whose
+WUSCHEL-CLAVATA3 feedback loop: cells of the organizing center below the stem cells express WUS, whose
 protein moves up and keeps the stem cells and their CLV3 expression; the CLV3 peptide, sensed by CLV1 and
 related receptors, represses WUS. C: root apex, histogen view: plerome (future stele), periblem (cortex)
 and dermatogen (epidermis) arise from separate tiers of initials; a calyptrogen forms the root cap.
@@ -58,7 +58,7 @@ for sgn in (-1, 1):
     bump = np.array([p + tg * 1.0 * math.cos(u) + n * 1.1 * math.sin(u) for u in t])
     ax.add_patch(Polygon(bump, closed=True, facecolor=P.fill("plant"), edgecolor=P.edge("plant"), lw=1.2, zorder=8))
 top = C + R * np.array([0, 1])
-# zones: central zone (stem cells), organizing centre below it, rib zone
+# zones: central zone (stem cells), organizing center below it, rib zone
 t = np.linspace(0, 2 * math.pi, 80)
 czc = (6.0, top[1] - 1.35)
 ax.plot(czc[0] + 1.45 * np.cos(t), czc[1] + 1.25 * np.sin(t), color=P.edge("negative"), lw=1.4, ls=(0, (3, 2)), zorder=9)

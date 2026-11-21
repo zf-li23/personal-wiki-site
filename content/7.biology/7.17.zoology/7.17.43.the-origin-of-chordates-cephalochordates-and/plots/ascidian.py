@@ -1,5 +1,5 @@
 # Solitary ascidian, schematic: (A) tadpole larva, (B) settlement and retrogressive metamorphosis,
-# (C) adult in sagittal section. Colours as in the lancelet figure (notochord orange, nerve tissue yellow,
+# (C) adult in sagittal section. Colors as in the lancelet figure (notochord orange, nerve tissue yellow,
 # pharynx and gut yellow, tunic neutral).
 import numpy as np
 import wikibio as bio
@@ -174,7 +174,7 @@ ax.plot([ox + 0.8, ox + 0.95, ox + 0.65], [oy + 6.9, oy + 4.8, oy + 3.0], color=
 # oral tentacles at the base of the oral siphon
 for dx in (-1.25, -0.95, -0.65):
     ax.plot([ox + dx, ox + dx + 0.12], [oy + 8.3, oy + 7.95], color=P.edge(GUT), lw=1.0, zorder=4.5)
-# U-shaped gut: oesophagus -> stomach -> intestine -> anus near the atrial siphon
+# U-shaped gut: esophagus -> stomach -> intestine -> anus near the atrial siphon
 gpath = [(ox - 0.2, oy + 2.7), (ox - 0.1, oy + 1.9), (ox + 0.8, oy + 1.5), (ox + 1.8, oy + 2.0), (ox + 2.1, oy + 3.6),
          (ox + 1.9, oy + 5.8), (ox + 1.7, oy + 7.0)]
 gp = np.asarray(gpath, float)

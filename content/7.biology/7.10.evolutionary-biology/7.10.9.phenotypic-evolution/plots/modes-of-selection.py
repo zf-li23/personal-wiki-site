@@ -1,6 +1,6 @@
 """Modes of selection on a normally distributed trait (standardized: mean 0, SD 1 before selection).
 Top row: the fitness function w(z) (relative survival). Bottom row: the trait density before selection
-(grey) and among survivors (coloured), computed exactly on a grid; S is the change in mean and the ratio
+(gray) and among survivors (colored), computed exactly on a grid; S is the change in mean and the ratio
 gives the variance among survivors relative to before. A: directional (logistic), B: stabilizing
 (Gaussian peak at the mean), C: disruptive (Gaussian dip at the mean). D: a two-peaked fitness function
 (as for bill depth in crossbills feeding on two kinds of cones) imposes directional, disruptive or

@@ -1,4 +1,4 @@
-"""Raunkiaer life forms: position of the perennating buds (red dots) during the unfavourable season.
+"""Raunkiaer life forms: position of the perennating buds (red dots) during the unfavorable season.
 Parts that survive are drawn solid, parts that die back are pale and dashed. Phanerophyte (buds on shoots
 more than 25 cm above the ground), chamaephyte (buds below 25 cm, under snow), hemicryptophyte (buds at
 the soil surface under litter), cryptophyte (buds on bulbs, tubers or rhizomes below ground), therophyte

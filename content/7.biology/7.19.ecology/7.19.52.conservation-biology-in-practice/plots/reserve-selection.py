@@ -1,6 +1,6 @@
 """Reserve selection: richness ranking, greedy complementarity and the integer-programming optimum.
 
-A region of 12 x 12 planning units (sites). 200 species; each has a range centre placed uniformly and a
+A region of 12 x 12 planning units (sites). 200 species; each has a range center placed uniformly and a
 range radius (in site widths) drawn from a lognormal distribution (median 2.4, log-sd 0.5), and occurs in
 each site within that radius with probability 0.85 (at least one site). a_ij = 1 if species i occurs in site j.
 Methods for choosing k sites:

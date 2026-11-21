@@ -2,7 +2,7 @@
 # single MCM of the archaeon Saccharolobus solfataricus) were aligned with FAMSA; the guide tree on the left
 # is the UPGMA tree of the pairwise distances 1 - identity computed from that alignment, and the order in
 # which the progressive method merges profiles follows it from the tips to the root. Right: 40 columns
-# around the Walker A motif (GDPxxxKS, boxed), residues coloured where they agree with the column consensus
+# around the Walker A motif (GDPxxxKS, boxed), residues colored where they agree with the column consensus
 # in at least half of the sequences. MCM6 proteins share S instead of G in GDP(G/S); the guide tree groups
 # the paralogs by similarity only and is not a reliable phylogeny (the archaeal MCM joins MCM5).
 import wikibio as bio

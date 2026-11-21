@@ -1,4 +1,4 @@
-"""Base-catalysed cleavage of RNA. The 2'-hydroxyl, deprotonated in base, attacks the neighbouring
+"""Base-catalyzed cleavage of RNA. The 2'-hydroxyl, deprotonated in base, attacks the neighboring
 3'-phosphodiester phosphorus intramolecularly (through a trigonal-bipyramidal, pentacoordinate
 phosphorane); the 5'-oxygen of the next nucleotide leaves in line, giving a 2',3'-cyclic phosphate
 and breaking the chain (B = base, R and R' the rest of the chain). DNA, without a 2'-OH, cannot

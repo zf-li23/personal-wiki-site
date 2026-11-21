@@ -1,10 +1,10 @@
-"""Vulval induction in C. elegans: a graded paracrine signal combined with juxtacrine lateral signalling.
+"""Vulval induction in C. elegans: a graded paracrine signal combined with juxtacrine lateral signaling.
 
 Model (dimensionless). Six vulval precursor cells P3.p-P8.p (index i = 3..8) lie below the gonad; the anchor
 cell above P6.p secretes LIN-3 (EGF), whose level at cell i is s_i = s0 exp(-|i - 6| / lam). Each cell has a
-level a_i of the primary (1 deg) program, driven by LET-23 (EGF receptor) - Ras - MAPK signalling, and it
-receives a lateral signal n_i = a_{i-1} + a_{i+1} from its neighbours through LIN-12 (Notch), because
-cells adopting the 1 deg fate express Delta-like ligands. LIN-12 signalling represses the 1 deg program:
+level a_i of the primary (1 deg) program, driven by LET-23 (EGF receptor) - Ras - MAPK signaling, and it
+receives a lateral signal n_i = a_{i-1} + a_{i+1} from its neighbors through LIN-12 (Notch), because
+cells adopting the 1 deg fate express Delta-like ligands. LIN-12 signaling represses the 1 deg program:
     da_i/dt = h(s_i) / (1 + (n_i / Kn)^2) - a_i,    h(s) = s^4 / (K^4 + s^4),
 with K = 0.35, Kn = 0.3. Fate: 1 deg if a_i > 0.5; otherwise 2 deg if n_i > 0.4 (and LIN-12 works);
 otherwise 3 deg (the cell fuses with the epidermis). The initial a_i carry 1 % noise (fixed seed).

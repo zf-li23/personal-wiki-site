@@ -8,7 +8,7 @@
 # B: Stuhrmann plot of a concentric two-component model particle resembling a nucleosome core: a protein
 #    sphere of radius 32 A (Rg = 24.8 A, volume 137 nm^3, about that of the histone octamer) inside a DNA
 #    shell from 46 to 50 A (Rg = 48.1 A, volume 116 nm^3, about that of 147 bp of DNA). Rg^2 = Rm^2 + alpha / drho is linear in 1/drho
-#    (beta = 0 because the centres coincide), with alpha > 0: the component of higher SLD (DNA) is outside.
+#    (beta = 0 because the centers coincide), with alpha > 0: the component of higher SLD (DNA) is outside.
 #    Marked points: the D2O fractions where protein or DNA is matched, giving the Rg of the other component.
 import matplotlib.pyplot as plt
 import numpy as np

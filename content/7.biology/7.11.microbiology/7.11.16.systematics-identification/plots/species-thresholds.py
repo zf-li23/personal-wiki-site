@@ -5,7 +5,7 @@
 # lineages, sd 0.35 on the log scale) and being only 1500 nt long (binomial sampling of differences).
 # Pairs within a species have small d (ANI 96-100 %), pairs from different species of a genus larger d,
 # which reproduces the gap in ANI between about 83 and 95 % found in large genome surveys.
-# A: ANI against 16S identity, coloured by the true relationship; dashed lines are the 95 % ANI and
+# A: ANI against 16S identity, colored by the true relationship; dashed lines are the 95 % ANI and
 #    98.7 % 16S thresholds. Below 98.7 % 16S almost all pairs are different species, above it both occur.
 # B: the distribution of ANI over all pairs, with its gap.
 import matplotlib.pyplot as plt

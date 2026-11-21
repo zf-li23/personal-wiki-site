@@ -31,7 +31,7 @@ ax.add_patch(Ellipse((cx, 9.1), 1.5, 1.1, facecolor=P.fill("muscle"), edgecolor=
 for sx in (-1, 1):
     ax.plot([cx, cx + sx * 0.45, cx + sx * 0.3], [8.75, 9.2, 9.5], color=P.ink(), lw=1.2, zorder=7)
 ax.plot([cx, cx], [8.65, 8.95], color=P.ink(), lw=1.4, zorder=7)
-# oesophagus, stomach, gastric glands, intestine, cloaca
+# esophagus, stomach, gastric glands, intestine, cloaca
 ax.plot([cx, cx], [8.5, 7.9], color=P.edge("endoderm"), lw=3, zorder=5)
 ax.add_patch(Ellipse((cx, 6.7), 2.0, 2.6, facecolor=P.fill("endoderm"), edgecolor=P.edge("endoderm"), lw=0.9, zorder=5))
 for sx in (-1, 1):

@@ -1,4 +1,4 @@
-"""Travelling waves on a passive one-dimensional (long-wave) cochlea and the Greenwood map.
+"""Traveling waves on a passive one-dimensional (long-wave) cochlea and the Greenwood map.
 
 Model: two fluid scalae of height H = 1 mm (density 1000 kg m^-3) separated by a basilar membrane
 of length L = 35 mm, with local specific impedance Z(x) = r(x) + i w m + s(x)/(i w).
@@ -7,7 +7,7 @@ stapes (x = 0) and p = 0 at the helicotrema (x = L); membrane velocity v = p / Z
 Mass m = 0.5 kg m^-2 (effective, including the organ of Corti); stiffness s(x) = m (2 pi f_G(x))^2 so that the local resonance follows the
 Greenwood function f_G = 165.4 (10^(2.1 y) - 0.88) Hz, y = 1 - x/L (fraction of length from the apex);
 damping r = m 2 pi f_G / Q with Q = 6.
-A: envelope |v| (each normalised to its peak) and an instantaneous snapshot at 1 kHz.
+A: envelope |v| (each normalized to its peak) and an instantaneous snapshot at 1 kHz.
 B: Greenwood map and the model's peak positions.
 """
 import matplotlib.pyplot as plt

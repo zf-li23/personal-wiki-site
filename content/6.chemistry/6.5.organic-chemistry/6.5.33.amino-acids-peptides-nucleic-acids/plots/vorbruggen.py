@@ -1,4 +1,4 @@
-"""Vorbrueggen nucleoside synthesis with neighbouring-group participation, on a model furanose
+"""Vorbrueggen nucleoside synthesis with neighboring-group participation, on a model furanose
 (the C2' benzoyloxy group of 1-O-acetyl-2,3,5-tri-O-benzoylribose closes the acyloxonium ion with
 TMSOTf). The persilylated pyrimidine (2,4-bis(trimethylsilyloxy)pyrimidine) attacks C1' with N1 from
 the face opposite the acyloxonium ring, so the new N-glycosidic bond is trans to the C2' substituent

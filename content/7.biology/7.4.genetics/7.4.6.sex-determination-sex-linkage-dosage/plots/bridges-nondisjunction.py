@@ -1,5 +1,5 @@
 """Bridges' proof of the chromosome theory. A: X-chromosome nondisjunction in meiosis I of a white-eyed
-female gives XX and O eggs (red: maternal homologue, blue: paternal homologue, both carrying w). B: the
+female gives XX and O eggs (red: maternal homolog, blue: paternal homolog, both carrying w). B: the
 exceptional eggs fertilized by sperm of a red-eyed male: XXY white-eyed females and XO red-eyed (sterile)
 males survive; XXX and OY zygotes die. C: in an XXY female, the two X chromosomes usually disjoin from
 each other (X and XY eggs), but sometimes X and Y pair and the two X chromosomes go to the same pole

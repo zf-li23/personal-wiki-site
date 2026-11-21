@@ -9,7 +9,7 @@ and is taken up in proportion to growth (q = 0.3); light at the ground falls wit
 L = exp(-0.25 sum B). A: biomass of each species. B: the path of the two resources (arrow: direction of time)
 and the R* of each species (dots): the environment moves from low nitrogen and bright light to rich soil
 and deep shade, and each species dominates where the resource ratio suits it. C: the number of species with
-at least 5 % of total biomass and the Shannon diversity of biomass, both highest in mid-succession (computed once total biomass exceeds 0.5; before that the ground is nearly bare, grey band).
+at least 5 % of total biomass and the Shannon diversity of biomass, both highest in mid-succession (computed once total biomass exceeds 0.5; before that the ground is nearly bare, gray band).
 """
 
 import numpy as np

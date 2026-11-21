@@ -1,6 +1,6 @@
 # The 11 subclasses of the Cronquist system (1981) redrawn as a "bubble diagram" in the spirit of
 # Cronquist's own figure (not traced). Bubble area is proportional to the number of species given by
-# Cronquist (as summarised in Wu Guofang, Botany vol. 2, 2nd ed.); connecting lines show the presumed
+# Cronquist (as summarized in Wu Guofang, Botany vol. 2, 2nd ed.); connecting lines show the presumed
 # derivations: Magnoliidae at the base of the Magnoliopsida, Hamamelidae, Caryophyllidae and Dilleniidae
 # from it, Rosidae alongside Dilleniidae, Asteridae from Rosidae; the Liliopsida from an ancestor like
 # the Nymphaeales, with Alismatidae as a near-basal side branch.

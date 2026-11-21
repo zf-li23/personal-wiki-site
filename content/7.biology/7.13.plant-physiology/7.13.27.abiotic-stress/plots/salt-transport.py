@@ -1,8 +1,8 @@
 # Na+ transport and compartmentation under salt stress (schematic; after Munns and Tester 2008 and the SOS model
 # of J.-K. Zhu). A, a root cortical cell: Na+ enters passively through non-selective cation channels (NSCC) and
-# HKT-type transporters; the plasma-membrane P-type H+-ATPase energises the Na+/H+ antiporter SOS1, which pumps Na+
+# HKT-type transporters; the plasma-membrane P-type H+-ATPase energizes the Na+/H+ antiporter SOS1, which pumps Na+
 # back out; salt is sensed (e.g. by GIPC sphingolipids, MOCA1) and the Ca2+ signal activates the CBL-CIPK pair
-# SOS3-SOS2, which phosphorylates SOS1. The tonoplast V-ATPase and H+-PPase energise NHX antiporters that load Na+
+# SOS3-SOS2, which phosphorylates SOS1. The tonoplast V-ATPase and H+-PPase energize NHX antiporters that load Na+
 # into the vacuole; K+ is retained through K+ channels. B, the root stele: HKT1;1 (HKT1;5 in cereals) in xylem
 # parenchyma retrieves Na+ from the xylem sap, limiting Na+ delivery to the leaves.
 import wikibio as bio

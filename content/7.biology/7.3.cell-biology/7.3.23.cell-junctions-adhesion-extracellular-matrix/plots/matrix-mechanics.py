@@ -2,7 +2,7 @@
 
 A: an aggrecan aggregate of cartilage: up to about 100 aggrecan molecules (core protein with about 100
 chondroitin sulfate and keratan sulfate chains) bound through link proteins to one hyaluronan chain; the
-aggregate can be several micrometres long (here six aggrecans). B: why such a gel swells. The fixed negative
+aggregate can be several micrometers long (here six aggrecans). B: why such a gel swells. The fixed negative
 charges of the GAG chains (concentration c_F) hold counterions in the tissue (Donnan equilibrium with a bath
 of NaCl at c_0 = 0.15 mol/L); the excess of mobile ions inside gives the osmotic swelling pressure
     Pi = R T [ sqrt(c_F^2 + 4 c_0^2) - 2 c_0 ],

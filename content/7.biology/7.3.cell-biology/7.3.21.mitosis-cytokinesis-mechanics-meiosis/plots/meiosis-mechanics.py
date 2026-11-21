@@ -1,14 +1,14 @@
 """The cell mechanics of meiosis (schematic) and a cohesion-decay model of the maternal age effect.
 
-(A) Prophase I of one pair of homologues (blue paternal, orange maternal; sister chromatids drawn as one
+(A) Prophase I of one pair of homologs (blue paternal, orange maternal; sister chromatids drawn as one
 line until diplotene). Leptotene: chromosomes condense along protein axes; programmed double-strand breaks
-(Spo11) start recombination and the search for the homologue. Zygotene: synapsis begins, the
+(Spo11) start recombination and the search for the homolog. Zygotene: synapsis begins, the
 synaptonemal complex zipping the axes together about 100 nm apart. Pachytene: full synapsis; recombination
-nodules mark crossovers. Diplotene: the synaptonemal complex disassembles and the homologues stay joined at
+nodules mark crossovers. Diplotene: the synaptonemal complex disassembles and the homologs stay joined at
 chiasmata (the visible crossovers). Diakinesis: the bivalents condense further.
 (B) Chromosomes at metaphase and anaphase of meiosis I and II. In meiosis I the two sister kinetochores of a
-homologue are fused and face the same pole (co-orientation; monopolin in budding yeast, Meikin in mammals);
-separase cleaves arm cohesin (the Rec8 kleisin), which releases the chiasmata and separates the homologues,
+homolog are fused and face the same pole (co-orientation; monopolin in budding yeast, Meikin in mammals);
+separase cleaves arm cohesin (the Rec8 kleisin), which releases the chiasmata and separates the homologs,
 while centromeric Rec8 is protected by shugoshin (Sgo2 in mammals) with PP2A-B56. In meiosis II the sisters
 bi-orient as in mitosis and the remaining cohesin is cleaved.
 (C) An illustrative model of the maternal age effect. Cohesin is loaded on oocyte chromosomes before birth and
@@ -88,7 +88,7 @@ def chrom(x, y, tok, n=2, h=1.0, lw=3.0):
         ax.plot([x + o, x + o], [y - h / 2, y + h / 2], color=P.edge(tok), lw=lw, solid_capstyle="round", zorder=5)
 
 
-# metaphase I: bivalent, each homologue co-oriented to one pole
+# metaphase I: bivalent, each homolog co-oriented to one pole
 x = cols[0][1]
 chrom(x - 0.25, yb, "dna"); chrom(x + 0.25, yb, "receptor")
 for s, tok in ((-1, "dna"), (1, "receptor")):

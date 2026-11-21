@@ -1,5 +1,5 @@
 # The transcriptional cascade of DNA viruses.
-# A: timelines for three programmes, with the onset of viral DNA synthesis and the regulators that drive
+# A: timelines for three programs, with the onset of viral DNA synthesis and the regulators that drive
 #    each transition. B: a minimal kinetic model of the same logic - an immediate-early regulator drives
 #    early proteins, early proteins replicate the genome, and late promoters are active only in proportion
 #    to the number of progeny genomes. The simulation reproduces the order and the sharp late burst.
@@ -10,7 +10,7 @@ from wikibio import quant
 P = bio.P
 fig, ax = bio.canvas(17, 8.4)
 
-# --- A  three programmes ----------------------------------------------------------------------------------
+# --- A  three programs ----------------------------------------------------------------------------------
 bio.panel(ax, "A", (0.1, 8.2))
 bio.label(ax, (4.6, 8.0), "Three transcriptional programs", size="title", bold=True)
 rows = [

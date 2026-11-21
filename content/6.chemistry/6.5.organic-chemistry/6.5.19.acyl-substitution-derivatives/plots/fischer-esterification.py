@@ -1,5 +1,5 @@
-"""Mechanism of the acid-catalysed (Fischer) esterification of acetic acid with methanol (AAc2).
-Every step is reversible; read backwards, the same sequence is the acid-catalysed hydrolysis of
+"""Mechanism of the acid-catalyzed (Fischer) esterification of acetic acid with methanol (AAc2).
+Every step is reversible; read backwards, the same sequence is the acid-catalyzed hydrolysis of
 the ester. Top row: the carbonyl oxygen is protonated, methanol adds to the activated carbonyl
 carbon. Bottom row: after proton transfer, water is a good leaving group; the remaining hydroxyl
 pushes it out, and loss of the proton from the carbonyl oxygen gives the ester."""

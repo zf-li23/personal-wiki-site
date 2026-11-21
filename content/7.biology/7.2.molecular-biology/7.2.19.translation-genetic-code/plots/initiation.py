@@ -1,6 +1,6 @@
 # Initiation of translation.
 # A: bacteria. The 30S subunit binds the ribosome-binding site directly: the Shine-Dalgarno sequence (AGGAGG,
-#    centred about 7-8 nt upstream of the start codon) pairs with the anti-SD sequence near the 3' end of 16S rRNA;
+#    centered about 7-8 nt upstream of the start codon) pairs with the anti-SD sequence near the 3' end of 16S rRNA;
 #    IF3 holds the subunits apart and checks the start codon, IF1 blocks the A site, IF2-GTP brings
 #    fMet-tRNAfMet into the P site. Joining of 50S triggers GTP hydrolysis by IF2 and release of the factors.
 #    Several start sites can lie on one polycistronic mRNA.
@@ -54,7 +54,7 @@ bio.label(ax, (xs[15] - 1.05, y + 0.95), "GTP", size="tiny", color=P.muted())
 bio.protein(ax, (xs[19], y + 0.85), 0.75, 0.75, "positive", text="IF1")
 bio.label(ax, (xs[19], y + 1.45), "A site", size="tiny", color=P.muted())
 bio.protein(ax, (xs[20], y - 1.3), 0.8, 0.7, "receptor", text="IF3")
-bio.label(ax, (5.8, 1.0), "50S joins → IF2 hydrolyses GTP → factors leave → 70S initiation complex", size="tiny", color=P.muted())
+bio.label(ax, (5.8, 1.0), "50S joins → IF2 hydrolyzes GTP → factors leave → 70S initiation complex", size="tiny", color=P.muted())
 bio.label(ax, (5.8, 0.5), "fMet-tRNAfMet is the only aminoacyl-tRNA that enters the P site directly", size="tiny", color=P.muted())
 
 # ---- B: eukaryotes ----

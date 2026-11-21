@@ -5,7 +5,7 @@ the equilibrium (X, Y) = (1, 1); mitosis occurs when y = Y - 1 rises through the
 phase 0.75 of the cycle (shortly before mitosis) degrades the enzymes and moves the state towards the equilibrium,
 r -> (1 - s) r (for s > 1 to the opposite side). A: trajectories after shocks of increasing strength: a weak shock
 (1) delays the next mitosis a little, a stronger one (2) more; still stronger (3) leaves the orbit inside the
-threshold for one turn, skipping a mitosis; beyond the centre (4) the phase is shifted by about half a cycle.
+threshold for one turn, skipping a mitosis; beyond the center (4) the phase is shifted by about half a cycle.
 B: delay of the next mitosis (in periods) against the shock strength s.
 """
 

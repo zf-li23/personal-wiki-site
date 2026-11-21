@@ -1,5 +1,5 @@
 """Molar conductivity of aqueous electrolytes at 25 C versus sqrt(c).
-Left: strong electrolytes, normalised by the extrapolated limit (CRC Handbook / Robinson-Stokes data); a least-squares line through the
+Left: strong electrolytes, normalized by the extrapolated limit (CRC Handbook / Robinson-Stokes data); a least-squares line through the
 points with c <= 0.01 mol/L is extrapolated to c -> 0 (Kohlrausch), and the Onsager limiting slope
 Lambda0 - (60.20 + 0.2289 Lambda0) sqrt(c) is drawn dashed.
 Right: acetic acid, Lambda = alpha * Lambda0 with alpha from Ostwald's dilution law

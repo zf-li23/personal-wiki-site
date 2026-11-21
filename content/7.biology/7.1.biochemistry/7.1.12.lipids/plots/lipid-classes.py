@@ -1,5 +1,5 @@
 """Lipids classified by biological function (after Lehninger, chapter 10), with representative members.
-Storage lipids (left), membrane lipids (centre; the backbone, glycerol or sphingosine, and the head
+Storage lipids (left), membrane lipids (center; the backbone, glycerol or sphingosine, and the head
 group decide the subclass), and lipids present in small amounts that act as signals, cofactors and
 pigments (right). Most of the third group, like sterols, are isoprenoids built from five-carbon units."""
 

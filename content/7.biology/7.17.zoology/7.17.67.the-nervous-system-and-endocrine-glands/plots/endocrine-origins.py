@@ -32,7 +32,7 @@ for i, (x, n) in enumerate(zip(pouch_x, names)):
 # thyroid from the floor between pouches 1 and 2
 th = vs.smooth([(9.8, 2.3), (9.7, 1.3), (10.1, 0.9), (10.5, 1.3), (10.3, 2.3)])
 bio.shape(ax, th, token="positive", zorder=4)
-bio.callout(ax, (10.1, 1.2), (12.6, 0.6), "thyroid (from the pharyngeal floor; endostyle homologue)", size="tiny")
+bio.callout(ax, (10.1, 1.2), (12.6, 0.6), "thyroid (from the pharyngeal floor; endostyle homolog)", size="tiny")
 bio.callout(ax, (6.9, 5.5), (8.6, 6.8), "infundibulum: neurohypophysis", size="tiny")
 bio.callout(ax, (5.7, 4.6), (2.4, 5.4), "Rathke's pouch: adenohypophysis", size="tiny")
 bio.label(ax, (14.0, 3.1), "pharynx (endoderm)", size="tiny", color=P.on_fill())

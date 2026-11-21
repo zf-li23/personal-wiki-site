@@ -1,9 +1,9 @@
 """A minimal model of the stress-gradient hypothesis.
 
-A target plant alone performs W0(s) = 1 - s at stress level s (0 = benign, 1 = lethal). A neighbour
+A target plant alone performs W0(s) = 1 - s at stress level s (0 = benign, 1 = lethal). A neighbor
 (a nurse plant) ameliorates stress, so that the target experiences s (1 - phi), but takes a constant
 fraction c of its resources: W1(s) = (1 - s (1 - phi)) (1 - c). Here phi = 0.6 and c = 0.25.
-A: performance with and without the neighbour; the curves cross at s* = c / (phi + c - phi c) = 0.36.
+A: performance with and without the neighbor; the curves cross at s* = c / (phi + c - phi c) = 0.36.
 B: the relative interaction index RII = (W1 - W0) / (W1 + W0), negative (competition) in benign and
 positive (facilitation) in stressful conditions; dashed: a stronger amelioration, phi = 0.8, moves the
 switch to lower stress (s* = 0.29). The model is illustrative, not fitted to data.

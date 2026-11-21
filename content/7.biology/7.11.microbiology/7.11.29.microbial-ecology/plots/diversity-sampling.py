@@ -4,7 +4,7 @@ A: rarefaction curves, the expected number of taxa observed in a random subsampl
 (E[S_n] = sum_i [1 - C(N - N_i, n) / C(N, n)], computed with log-gamma), for two simulated communities of
 10^5 reads: an even community of 300 taxa and a log-normal community of 2000 taxa (SD of log10 abundance
 0.8) with a long tail of rare taxa. The rich community is far from saturation at depths where the even one
-has levelled off, so richness must be compared at equal depth (see 7.8.14).
+has leveled off, so richness must be compared at equal depth (see 7.8.14).
 B: distance-decay of community similarity. 150 sites at random positions in a 1000 km square; an
 environmental variable varies smoothly in space (sum of random cosine waves). Each of 400 taxa has a
 Gaussian niche on that variable. "Environmental selection only": a taxon occurs wherever the environment

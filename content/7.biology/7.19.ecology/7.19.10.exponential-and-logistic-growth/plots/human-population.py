@@ -4,7 +4,7 @@ A: the dates at which world population reached 1, 2, ..., 8 billion (United Nati
 estimates: 1804, 1927, 1960, 1974, 1987, 1999, 2011, 2022), on a logarithmic axis; the right axis gives the
 mean exponential growth rate between successive milestones, r = ln(N_{k+1}/N_k)/(t_{k+1} - t_k).
 B: a model of the demographic transition (illustrative parameters): crude death and birth rates fall
-logistically from 38 per 1000 per year to 10 and 11 per 1000, deaths centred on year 60 and births on
+logistically from 38 per 1000 per year to 10 and 11 per 1000, deaths centered on year 60 and births on
 year 120 (width 18 years); the population follows dN/dt = (b(t) - d(t)) N from N = 1.
 """
 

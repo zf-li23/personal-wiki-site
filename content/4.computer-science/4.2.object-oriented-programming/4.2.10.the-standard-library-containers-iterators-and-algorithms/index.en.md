@@ -1,7 +1,7 @@
 ---
 title: "The Standard Library: Containers, Iterators and Algorithms"
 description: Namespaces; the structure of the Standard Template Library, with containers, iterators and algorithms kept separate; pair and tuple; usage and complexity of sequence, associative and unordered containers; iterator categories and iterator invalidation; standard algorithms and C++20 ranges; Python's built-in containers, collections and the iterator protocol.
-source_hash: 74e1fe0533e9
+source_hash: 60edfb66c82f
 ---
 
 With **templates** (Chapter 9), a data structure or algorithm can be written once and used for any element type. The part of the C++ standard library written with templates is called the Standard Template Library, and it is the most heavily used part of everyday C++ programming: one almost never hand-writes a dynamic array, a linked list or a sort any more. This chapter treats the standard library from the user's point of view: namespaces, the choice among containers and their complexities, the iterators that connect containers to algorithms, the iterator invalidation problem that is the most common source of errors when using iterators, and finally the standard algorithms and C++20 ranges. How the data structures behind the containers (dynamic arrays, **linked lists**, red-black trees, hash tables) are implemented, and where their complexities come from, is the subject of [4.3 Data Structures and Algorithms](/4.3); this chapter only touches on it.
@@ -224,7 +224,7 @@ The most typical mistake is to modify a container while traversing it:
 int main() {
     std::vector<int> v{1, 2, 3, 4, 5, 6};
 
-    // Wrong: after erase(it), it is invalid and ++it is undefined behaviour.
+    // Wrong: after erase(it), it is invalid and ++it is undefined behavior.
     // for (auto it = v.begin(); it != v.end(); ++it)
     //     if (*it % 2 == 0) v.erase(it);
 

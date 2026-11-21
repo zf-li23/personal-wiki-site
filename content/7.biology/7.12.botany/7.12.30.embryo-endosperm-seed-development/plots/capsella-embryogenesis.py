@@ -22,7 +22,7 @@ def patch(pts, tok, lw=0.9, z=6, fill=None):
 
 
 def tube(points, w0, w1=None, n=80):
-    """Closed outline around a smooth centre line with a width tapering from w0 to w1."""
+    """Closed outline around a smooth center line with a width tapering from w0 to w1."""
     p = np.asarray(points, float)
     t = np.linspace(0, 1, len(p))
     s = np.linspace(0, 1, n)

@@ -1,6 +1,6 @@
 # The affinity (signal-strength) window of thymic selection, as a Monte Carlo model.
 # Each double-positive thymocyte gets a random TCR; its strongest signal from self-peptide-MHC in the thymus is
-# summarised by one number x = log10(signal strength), drawn from a normal distribution (mean 0, sd 1).
+# summarized by one number x = log10(signal strength), drawn from a normal distribution (mean 0, sd 1).
 # Fates by thresholds (illustrative, chosen so that the fractions match the order of magnitude reported for
 # mouse thymus: about 90% die by neglect, a few % are deleted, 2-5% are exported):
 #   x < 1.405            death by neglect

@@ -1,7 +1,7 @@
 """Structure and polarity of the actin filament (schematic).
 
 Top: a filament from its minus (pointed) end on the left to its plus (barbed) end on the right, decorated
-with myosin heads that form arrowheads pointing to the minus end; subunits are coloured by bound nucleotide:
+with myosin heads that form arrowheads pointing to the minus end; subunits are colored by bound nucleotide:
 ATP near the growing plus end, ADP-Pi behind it and ADP in the older part. Bottom left: an Arp2/3 branch.
 Bottom right: legend.
 """

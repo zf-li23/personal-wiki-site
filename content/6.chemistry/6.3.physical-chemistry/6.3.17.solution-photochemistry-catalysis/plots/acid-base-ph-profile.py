@@ -1,4 +1,4 @@
-"""pH-rate profile of a specific acid-base catalysed reaction, k = k0 + kH[H+] + kOH[OH-]
+"""pH-rate profile of a specific acid-base catalyzed reaction, k = k0 + kH[H+] + kOH[OH-]
 (illustrative constants close to ester hydrolysis at 25 C), with Kw = 1.0e-14."""
 
 import numpy as np

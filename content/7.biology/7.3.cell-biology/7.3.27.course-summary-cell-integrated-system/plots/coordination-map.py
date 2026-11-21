@@ -1,7 +1,7 @@
 """How one animal cell coordinates growth, division, movement, fate and death: an SBGN activity-flow map.
 
 Inputs (left) are what the cell senses: nutrients, growth factors, the stiffness of the matrix,
-contact with neighbours, Notch ligands on neighbours, DNA damage. Integrating modules (middle) are
+contact with neighbors, Notch ligands on neighbors, DNA damage. Integrating modules (middle) are
 the switches of 7.3.18-7.3.25: mTORC1 (an AND gate on the lysosome), Ras-ERK and PI3K-PKB, the
 Rho GTPases, Hippo-YAP, Notch-Hes, p53 and the Rb-E2F switch. Outcomes (hexagons, right) are the
 cell's decisions. Arrows with open heads activate, bars inhibit; dashed arcs are slower or indirect.

@@ -1,7 +1,7 @@
 """Acid cleavage of a beta-keto ester (retro-Claisen). Concentrated hydroxide adds to the ketone
 carbonyl of ethyl acetoacetate; the tetrahedral alkoxide collapses, re-forming C=O and expelling
-the ester enolate, a stabilised carbanion leaving group. Proton transfer gives acetate and ethyl
-acetate, which is itself hydrolysed in the concentrated base."""
+the ester enolate, a stabilized carbanion leaving group. Proton transfer gives acetate and ethyl
+acetate, which is itself hydrolyzed in the concentrated base."""
 
 from wikichem import Scheme
 

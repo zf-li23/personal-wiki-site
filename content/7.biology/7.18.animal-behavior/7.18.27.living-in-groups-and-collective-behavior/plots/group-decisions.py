@@ -4,7 +4,7 @@ A: a quorum response. The probability that an individual switches behavior (for 
 carrying nestmates to a new nest site) as a function of the number x of nestmates already at the site,
 x^h / (x^h + T^h), with threshold T = 20 and steepness h. A steep response (large h) behaves like a vote with a
 quorum. B: leadership without signals (after Couzin et al. 2005). Agents in a simple self-propelled-particle model
-avoid neighbours within distance 1, align with neighbours within 4 and are attracted to those within 15; a
+avoid neighbors within distance 1, align with neighbors within 4 and are attracted to those within 15; a
 fraction of them (rounded to whole individuals) also has a preferred direction g, weighted by 0.4 against the
 social tendency. Accuracy is the mean cosine between the displacement of the group's centroid over the last 100
 of 300 steps and g (1: the group travels exactly in the direction g; 0: random), from 24 runs per point; a

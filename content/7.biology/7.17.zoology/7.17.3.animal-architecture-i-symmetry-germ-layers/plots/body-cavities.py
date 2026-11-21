@@ -1,4 +1,4 @@
-# Animal body plans in cross-section, coloured by germ layer (ectoderm blue, mesoderm red, endoderm yellow).
+# Animal body plans in cross-section, colored by germ layer (ectoderm blue, mesoderm red, endoderm yellow).
 # Diploblastic cnidarians have two epithelia separated by the acellular mesoglea. Triploblastic bilaterians
 # add mesoderm: in acoelomate flatworms it fills the space between gut and body wall; in pseudocoelomate
 # nematodes it lines only the body wall, leaving a fluid-filled pseudocoel; in coelomate annelids it lines

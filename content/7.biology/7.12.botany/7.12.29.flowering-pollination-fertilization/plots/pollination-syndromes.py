@@ -1,5 +1,5 @@
 # Pollination syndromes (after Faegri and van der Pijl), drawn as a chart. Each row is a pollinator group;
-# columns give the typical flower colour, scent, time of anthesis, flower shape and reward. Silhouettes:
+# columns give the typical flower color, scent, time of anthesis, flower shape and reward. Silhouettes:
 # PhyloPic (bee, moth, beetle, bat). The syndromes are tendencies: many flowers are visited by several
 # kinds of animals.
 import wikibio as bio

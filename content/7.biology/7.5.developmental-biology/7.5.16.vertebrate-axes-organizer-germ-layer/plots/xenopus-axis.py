@@ -2,8 +2,8 @@
 # hemisphere on the future ventral side. B: during the first cell cycle the cortex rotates by about 30 degrees
 # relative to the core (cortical rotation), carrying vegetal dorsal determinants (Huluwa, Dishevelled, Wnt11 mRNA)
 # to the side opposite sperm entry. C: in the late blastula, beta-catenin is nuclear on the dorsal side; the dorsal
-# vegetal cells form the Nieuwkoop centre (orange) and induce the overlying marginal zone to become the organizer
-# (green); germ-layer colours: animal cap, prospective ectoderm (blue); marginal zone, mesoderm (red); vegetal mass,
+# vegetal cells form the Nieuwkoop center (orange) and induce the overlying marginal zone to become the organizer
+# (green); germ-layer colors: animal cap, prospective ectoderm (blue); marginal zone, mesoderm (red); vegetal mass,
 # endoderm (yellow). D: in the early gastrula the organizer is the dorsal lip of the blastopore, where involution
 # begins.
 import wikibio as bio

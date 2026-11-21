@@ -1,9 +1,9 @@
 # The appendicular ovipositor of a female insect (schematic lateral view of the abdominal tip, anterior to
-# the left), coloured by segment of origin: from segment 8 (blue) the first valvifer (gonocoxite 8) and the
+# the left), colored by segment of origin: from segment 8 (blue) the first valvifer (gonocoxite 8) and the
 # first, ventral valvulae (gonapophyses 8); from segment 9 (green) the second valvifer (gonocoxite 9), the
 # second, inner valvulae (gonapophyses 9) and the third, dorsal valvulae (gonoplacs). The valvulae slide on
 # one another along a tongue-and-groove joint (olistheter). In grasshoppers the dorsal and ventral valves
-# are short digging blades and the inner valves are small; in katydids all three pairs form a long sabre;
+# are short digging blades and the inner valves are small; in katydids all three pairs form a long saber;
 # in aculeate Hymenoptera the ovipositor became the sting. Segments 10-11 bear the cerci.
 import wikibio as bio
 

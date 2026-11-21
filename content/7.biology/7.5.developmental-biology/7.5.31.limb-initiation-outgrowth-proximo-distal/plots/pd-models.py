@@ -1,7 +1,7 @@
 """Three models of proximo-distal patterning, simulated.
 
 A: progress zone model (Formula 31.5.1). The distal d = 200 um of the bud proliferate (cycle 12 h), proximal cells
-do not; trajectories of cells starting at geometrically spaced distances from the tip, coloured by the time spent in
+do not; trajectories of cells starting at geometrically spaced distances from the tip, colored by the time spent in
 the zone (stylopod < 24 h, zeugopod 24-48 h, autopod > 48 h).
 B: two-signal model (Formula 31.5.2): proximal and distal signals with decay length 50 um and threshold 0.1 in a
 bud of 300 um define three domains at t = 0, which then expand by uniform growth (fivefold in 72 h).

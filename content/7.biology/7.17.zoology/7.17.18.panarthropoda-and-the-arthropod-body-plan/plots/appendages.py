@@ -2,7 +2,7 @@
 # telopod; the protopod bears medial endites (e.g. gnathobases for chewing) and lateral exites (e.g. gills,
 # epipods). A: a biramous limb (crustaceans, trilobites): the basis carries two rami, an inner endopod and
 # an outer exopod. B: a uniramous limb (an insect leg): a single series of podomeres, coxa, trochanter,
-# femur, tibia, tarsus and pretarsus, without an exopod (the trochanter is often homologized with the basis). Colours mark the protopod (grey-blue), endopod
+# femur, tibia, tarsus and pretarsus, without an exopod (the trochanter is often homologized with the basis). Colors mark the protopod (gray-blue), endopod
 # (teal) and exopod (orange); joints are arthrodial membranes.
 import numpy as np
 from matplotlib.patches import FancyBboxPatch

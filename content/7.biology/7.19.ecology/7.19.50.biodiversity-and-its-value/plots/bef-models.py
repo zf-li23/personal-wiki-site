@@ -7,7 +7,7 @@ species drawn at random is taken over by its best competitor, whose yield is tha
 (dominance and yield perfectly correlated), the expected mixture yield is the expected maximum of S draws,
 E[max] = integral of (1 - F(y)^S) dy (solid curve, computed numerically); points are means of 500 random
 mixtures, bands the central 90 %. If competitive ability is unrelated to yield, the mixture yield is that of
-a random species, and richness has no effect on the mean (grey).
+a random species, and richness has no effect on the mean (gray).
 B, complementarity model: a habitat varying continuously along a resource gradient x in [0, 1]. Species i
 has an optimum u_i (uniform on [0, 1]) and yield density g_i(x) = exp(-(x - u_i)^2 / (2 w^2)), w = 0.12. In
 monoculture species i yields integral g_i dx; in mixture, each point of the habitat is held by the species

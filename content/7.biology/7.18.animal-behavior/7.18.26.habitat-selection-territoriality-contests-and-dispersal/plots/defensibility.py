@@ -5,9 +5,9 @@ A: benefit B(x) = B_max (1 - exp(-x / x0)) of a territory of size x in a rich an
 saturates when the owner cannot use more food), and the cost of defense C(x) = c x^1.5, which accelerates as the
 boundary lengthens and intrusions increase. Defense is economical where B > C; net benefit B - C is greatest
 where the slopes are equal (dots). Illustrative parameters.
-B: sunbirds need T(n) = 8/n hours of foraging per day at n microlitres of nectar per flower (Gill and Wolf's
+B: sunbirds need T(n) = 8/n hours of foraging per day at n microliters of nectar per flower (Gill and Wolf's
 measurements: 8 h at 1, 4 h at 2, 2.7 h at 3). Excluding other nectar feeders raises the standing crop by 1
-microlitre; the bird saves T(n) - T(n + 1) hours of foraging (1000 cal/h) that it spends perched (400 cal/h).
+microliter; the bird saves T(n) - T(n + 1) hours of foraging (1000 cal/h) that it spends perched (400 cal/h).
 Defense costs 0.28 h/day at 3000 instead of 400 cal/h, 728 cal. Defense pays only when nectar is scarce.
 """
 

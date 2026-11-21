@@ -1,4 +1,4 @@
-"""Neighbouring-group participation in sulfur mustard. The sulfur lone pair displaces chloride
+"""Neighboring-group participation in sulfur mustard. The sulfur lone pair displaces chloride
 intramolecularly (an intramolecular SN2) to form a strained three-membered episulfonium (thiiranium)
 ion; water, or N7 of guanine in DNA, then opens the ring at carbon. The second arm reacts in the same
 way, so the mustard can cross-link two DNA strands."""

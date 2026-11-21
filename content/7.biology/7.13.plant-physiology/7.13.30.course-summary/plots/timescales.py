@@ -1,5 +1,5 @@
 # Plant processes on one logarithmic time axis (values taken from chapters 2-28 of this course).
-# Each bar spans the typical range of the process; the row colour marks the line of the course it belongs to.
+# Each bar spans the typical range of the process; the row color marks the line of the course it belongs to.
 import numpy as np
 
 import wikibio as bio

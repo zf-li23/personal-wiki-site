@@ -5,7 +5,7 @@
 #   conservation          R_T = R + C1 + 2 C2
 # With L measured in K_D and R in R_T: 1 = R (1 + 2L) + 4 eps L R^2 (quadratic in R).
 # A: fraction of receptors in cross-linked pairs, 2 C2 / R_T, for three cross-linking strengths eps;
-# B: degranulation modelled as a steep (Hill, n = 2) function of the cross-link density; a monovalent hapten (no cross-links)
+# B: degranulation modeled as a steep (Hill, n = 2) function of the cross-link density; a monovalent hapten (no cross-links)
 #    gives no response at any concentration, and the response falls at high antigen although receptors stay occupied.
 import matplotlib.pyplot as plt
 import numpy as np

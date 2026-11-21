@@ -2,7 +2,7 @@
 
 A: lead time (schematic): screening advances the date of diagnosis without changing the date of death, so
 survival measured from diagnosis is longer even when screening does nothing. B: length bias (simulation,
-seed 0): tumours with long preclinical phases are over-represented among those found at a single
+seed 0): tumors with long preclinical phases are over-represented among those found at a single
 screening round, because the probability of being caught is proportional to the length of the detectable
 preclinical phase. C: the National Lung Screening Trial (Aberle et al. 2011, NEJM; extended follow-up
 2019, J Thorac Oncol): lung cancers diagnosed in the low-dose CT and chest-radiography arms at a median

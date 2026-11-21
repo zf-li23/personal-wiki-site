@@ -2,7 +2,7 @@
 
 A: third-instar larva (lateral view, anterior left) with its imaginal discs: eye-antennal, three pairs of leg discs,
 wing, haltere and genital discs (the labial, humeral and clypeolabral discs are omitted). B: the adult fly in dorsal
-view; the coloured labels match the discs. Each wing disc forms one wing and the dorsal mesothorax (notum); the
+view; the colored labels match the discs. Each wing disc forms one wing and the dorsal mesothorax (notum); the
 larval cells themselves die at metamorphosis, except the precursors of the abdominal epidermis (histoblasts).
 """
 

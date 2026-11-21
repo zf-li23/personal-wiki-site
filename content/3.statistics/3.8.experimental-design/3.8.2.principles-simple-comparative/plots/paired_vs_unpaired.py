@@ -1,4 +1,4 @@
-"""Twin data analysed as two independent groups and as pairs."""
+"""Twin data analyzed as two independent groups and as pairs."""
 
 import numpy as np
 import matplotlib.pyplot as plt

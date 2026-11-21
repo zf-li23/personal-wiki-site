@@ -2,7 +2,7 @@
 open against its surface tension, for a water-air interface (gamma = 70 mN/m, constant) and with pulmonary
 surfactant, whose film lowers gamma as the surface shrinks (here gamma rises from about 1 mN/m at small radius
 towards 25 mN/m as the alveolus expands). Without surfactant the pressure is highest in the smallest alveolus;
-with it the pressure rises with radius. B: two alveoli of radii 90 and 110 micrometres connected through a
+with it the pressure rises with radius. B: two alveoli of radii 90 and 110 micrometers connected through a
 common airway, total volume fixed; air flows from the alveolus at higher pressure to the other. Without
 surfactant the small one empties into the large one (collapse, atelectasis, as in the respiratory distress
 syndrome of premature infants); with surfactant both converge to the same size."""
@@ -13,7 +13,7 @@ from wikibio import charts
 
 P_ = bio.P
 FT = bio.core.FONT
-r0 = 100.0  # micrometres
+r0 = 100.0  # micrometers
 
 
 def gamma(r, surf):

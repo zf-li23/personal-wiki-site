@@ -1,6 +1,6 @@
 # The folding funnel in two pictures.
 # A: a schematic rugged funnel as a surface over two conformational coordinates: the energy falls towards
-#    the native state at the centre, superposed on random roughness (local traps); the radius stands for the
+#    the native state at the center, superposed on random roughness (local traps); the radius stands for the
 #    breadth of the conformational ensemble.
 # B: a one-dimensional projection, the free energy F(Q) as a function of the fraction Q of native contacts,
 #    in a mean-field (Bragg-Williams) model: each of N = 50 residues is native (energy -eps) or non-native

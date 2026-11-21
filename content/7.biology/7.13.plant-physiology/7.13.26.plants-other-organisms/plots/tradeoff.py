@@ -1,12 +1,12 @@
-# Growth-defence trade-off and the time course of an induced defence (simple models).
-# A: a plant allocates a fraction f of its carbon to defence. Relative growth rate g(f) = r0 (1 - f) - h0 exp(-a f):
-# growth without defence r0 = 0.20 /d, efficiency of defence a = 5, herbivore pressure h0 (loss rate of an
+# Growth-defense trade-off and the time course of an induced defense (simple models).
+# A: a plant allocates a fraction f of its carbon to defense. Relative growth rate g(f) = r0 (1 - f) - h0 exp(-a f):
+# growth without defense r0 = 0.20 /d, efficiency of defense a = 5, herbivore pressure h0 (loss rate of an
 # undefended plant). The optimum f* = ln(a h0 / r0) / a when a h0 > r0, otherwise 0.
-# B: f* against r0 for two herbivore pressures: slow-growing plants (low r0) should invest more in defence
+# B: f* against r0 for two herbivore pressures: slow-growing plants (low r0) should invest more in defense
 # (the resource availability hypothesis, Coley, Bryant and Chapin 1985).
-# C: induced defence after one wounding event at t = 0. A fast wound signal S decays with tau = 10 min;
+# C: induced defense after one wounding event at t = 0. A fast wound signal S decays with tau = 10 min;
 # dJ/dt = kJ S - J/30 min (jasmonate); dM/dt = kM J^2/(K^2 + J^2) - M/(2 h) (proteinase-inhibitor mRNA);
-# dP/dt = kP M - P/(48 h) (proteinase-inhibitor protein). Curves are normalised to their maxima.
+# dP/dt = kP M - P/(48 h) (proteinase-inhibitor protein). Curves are normalized to their maxima.
 import matplotlib.pyplot as plt
 import numpy as np
 

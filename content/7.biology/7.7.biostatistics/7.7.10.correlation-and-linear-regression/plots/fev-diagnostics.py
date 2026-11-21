@@ -3,7 +3,7 @@ version Kahn 2005). A: residuals of the linear model against fitted values fan o
 FEV) and bend. B: residuals of the log-linear model have nearly constant spread. C: normal Q-Q plot of
 the standardized residuals of the log model. D: leverage against studentized residuals for the model
 ln FEV ~ age + height + sex + smoke; marker area proportional to Cook's distance, the largest
-labelled (an 8-year-old recorded as 171 cm tall).
+labeled (an 8-year-old recorded as 171 cm tall).
 """
 import csv
 

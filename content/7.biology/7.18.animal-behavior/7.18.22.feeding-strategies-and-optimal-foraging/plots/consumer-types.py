@@ -24,7 +24,7 @@ ax.plot([X0 + W / 2] * 2, [Y0 + 0.2, Y0 + H], color=P.mix(P.muted(), P.surface()
 ax.plot([X0 + 0.2, X0 + W], [Y0 + H / 2] * 2, color=P.mix(P.muted(), P.surface(), 0.6), lw=0.7, ls=(0, (3, 3)))
 
 CELLS = [
-    # (centre, title, subtitle, token)
+    # (center, title, subtitle, token)
     ((X0 + W * 0.25, Y0 + H * 0.25), "Grazers and browsers", "many victims, part of each,\nrarely lethal", "plant"),
     ((X0 + W * 0.75, Y0 + H * 0.25), "Predators", "many victims, each killed\nand (mostly) eaten whole", "negative"),
     ((X0 + W * 0.25, Y0 + H * 0.75), "Parasites", "one or few hosts, lives on\nor in them, rarely lethal", "rna"),

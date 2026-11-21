@@ -1,5 +1,5 @@
 """Modes of capsule dehiscence and the silique. Top row: transverse sections of a three-carpellate capsule
-with axile placentation; dehiscence sites in the highlight colour. Loculicidal: along the midrib of each
+with axile placentation; dehiscence sites in the highlight color. Loculicidal: along the midrib of each
 carpel, into the locules. Septicidal: through the septa, carpels separating. Septifragal: valves fall
 away and the septa stay attached to the central column. Bottom row, outer views: poricidal (poppy, a ring
 of pores under the stigmatic disc), circumscissile (purslane, a lid), denticidal (Caryophyllaceae,

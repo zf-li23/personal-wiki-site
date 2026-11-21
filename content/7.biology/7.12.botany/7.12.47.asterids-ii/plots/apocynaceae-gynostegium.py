@@ -1,6 +1,6 @@
 # Apocynaceae, Asclepiadoideae (schematic after Asclepias). A: flower in side view, corolla lobes reflexed,
 # five hooded corona lobes with horns around the central gynostegium. B: top view of the gynostegium: five
-# anthers fused with the style head; between neighbouring anther wings a slit (guide rail) with a dark
+# anthers fused with the style head; between neighboring anther wings a slit (guide rail) with a dark
 # corpusculum at its upper end; dashed outlines mark the pollinia in the anther sacs. C: a pollinarium:
 # corpusculum, two translator arms and two pollinia from adjacent anthers. D: Periplocoideae translator:
 # a spoon-shaped carrier holding pollen tetrads, with an adhesive disc at its base. E: floral diagram of

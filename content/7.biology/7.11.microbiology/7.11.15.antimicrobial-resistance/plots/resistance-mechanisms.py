@@ -1,7 +1,7 @@
 # Biochemical mechanisms of antibiotic resistance in a Gram-negative cell (schematic cross-section of
 # the envelope with part of the cytoplasm; not to scale). Drug molecules are small red diamonds.
 # 1 reduced uptake: loss or mutation of a porin; 2 inactivation in the periplasm: a beta-lactamase
-# hydrolyses the beta-lactam ring; 3 multidrug efflux: the tripartite RND pump AcrAB-TolC captures drugs
+# hydrolyzes the beta-lactam ring; 3 multidrug efflux: the tripartite RND pump AcrAB-TolC captures drugs
 # in the periplasm or inner membrane and expels them across the outer membrane; 4 target modification:
 # an Erm methyltransferase methylates 23S rRNA so macrolides no longer bind; 5 target protection: a
 # ribosome protection protein (Tet(M)) dislodges tetracycline; 6 drug modification in the cytoplasm:

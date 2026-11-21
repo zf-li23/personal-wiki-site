@@ -1,6 +1,6 @@
 """Pinacol rearrangement of an unsymmetrical diol, 2-methyl-1,1-diphenylpropane-1,2-diol. The hydroxy
 group that leaves is the one on the carbon that gives the more stable cation (diphenylmethyl type);
-a methyl group on the neighbouring carbon then migrates, helped by the lone pair of the remaining
+a methyl group on the neighboring carbon then migrates, helped by the lone pair of the remaining
 hydroxy oxygen, and loss of the proton from the oxocarbenium ion gives 3,3-diphenylbutan-2-one."""
 
 from wikichem import Scheme

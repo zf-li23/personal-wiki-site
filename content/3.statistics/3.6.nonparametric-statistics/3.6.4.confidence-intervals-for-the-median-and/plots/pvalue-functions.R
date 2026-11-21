@@ -12,7 +12,7 @@ grid <- seq(-8, 28, by = 0.01) + 0.0037   # avoid data values and Walsh averages
 p <- cbind(sapply(grid, p_sign), sapply(grid, p_wilcoxon), sapply(grid, p_t))
 matplot(grid, p, type = "l", lty = 1, lwd = 2, col = c("steelblue", "darkorange", "forestgreen"),
         xlab = expression("hypothesized median " * theta[0]), ylab = "two-sided p-value")
-abline(h = 0.05, lty = 2, col = "grey40")
+abline(h = 0.05, lty = 2, col = "gray40")
 rug(x)
 legend("topright", c("sign test", "Wilcoxon signed-rank test", "t test"),
        col = c("steelblue", "darkorange", "forestgreen"), lwd = 2, bty = "n")

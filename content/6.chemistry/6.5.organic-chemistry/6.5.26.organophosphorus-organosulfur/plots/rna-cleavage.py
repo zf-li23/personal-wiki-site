@@ -1,5 +1,5 @@
-"""Why RNA hydrolyses much faster than DNA: in base the 2'-oxygen of ribose attacks the
-neighbouring 3'-phosphodiester phosphorus in line with the P-O5' bond (through a trigonal
+"""Why RNA hydrolyzes much faster than DNA: in base the 2'-oxygen of ribose attacks the
+neighboring 3'-phosphodiester phosphorus in line with the P-O5' bond (through a trigonal
 bipyramidal, pentacoordinate transition state), the 5'-oxygen of the next nucleotide leaves, and a
 2',3'-cyclic phosphate forms. DNA lacks the 2'-OH. B is the nucleobase; R stands for the 5'-end of
 the strand and R' for the next nucleoside."""

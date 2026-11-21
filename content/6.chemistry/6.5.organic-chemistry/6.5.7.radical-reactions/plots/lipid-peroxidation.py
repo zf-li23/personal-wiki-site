@@ -1,6 +1,6 @@
 """Lipid peroxidation. Top: a peroxyl radical LOO abstracts a hydrogen atom from the bis-allylic
 CH2 group of a linoleate chain (C-H only about 320 kJ/mol); the resulting pentadienyl radical is
-delocalised over C1, C3 and C5. Bottom: O2 adds at a terminal carbon, giving a peroxyl radical with a
+delocalized over C1, C3 and C5. Bottom: O2 adds at a terminal carbon, giving a peroxyl radical with a
 conjugated diene, which abstracts the next bis-allylic hydrogen and carries the chain."""
 
 import matplotlib.pyplot as plt
@@ -54,7 +54,7 @@ s.text((11.8, -2.0), "pentadienyl radical (C1, C3, C5)", size=10)
 finish(s)
 
 s = Scheme()
-# radical centre C5 at the end of the diene; C1=C2 stays Z, the new C3=C4 bond forms E
+# radical center C5 at the end of the diene; C1=C2 stays Z, the new C3=C4 bond forms E
 rc = [(-2.6, -0.75), (-1.95, 0.0), (-0.65, 0.0), (0.0, -0.75), (1.3, -0.75), (1.95, -1.5), (3.25, -1.5)]
 r = s.molecule("*[CH:1]=[CH:2][CH:3]=[CH:4][CH:5]*", coords=rc, labels={0: "R", 6: "R'"})
 c5 = r.xy(5)

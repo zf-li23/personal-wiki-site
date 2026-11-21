@@ -5,8 +5,8 @@ endoderm out of their range keeps Pdx1 and forms the ventral pancreas. The dorsa
 notochord (activin, FGF2) represses Shh in the dorsal endoderm. B: the hepatoblast gives hepatocytes (HNF4a,
 Wnt, HGF) or, next to the portal vein, cholangiocytes of the bile ducts (Jagged1-Notch, TGF-beta, Sox9).
 C: Pdx1-positive pancreatic progenitors segregate into tip cells (Ptf1a, acinar cells) and trunk cells (Nkx6-1,
-Sox9), which give duct cells and, through a pulse of Ngn3, the endocrine cells; Pax4 favours beta and delta
-cells (MafA marks mature, insulin-secreting beta cells), Arx favours alpha (glucagon) and PP cells."""
+Sox9), which give duct cells and, through a pulse of Ngn3, the endocrine cells; Pax4 favors beta and delta
+cells (MafA marks mature, insulin-secreting beta cells), Arx favors alpha (glucagon) and PP cells."""
 import numpy as np
 import wikibio as bio
 

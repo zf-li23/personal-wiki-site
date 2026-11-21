@@ -9,7 +9,7 @@ its mean over all pairs. Null matrices preserve both the row sums (how widesprea
 column sums (how rich each island is): fixed-fixed randomization by the curveball algorithm (Strona et al.
 2014), 1000 null matrices each after 5000 trades. A: the structured matrix with species and islands sorted
 by frequency (filled = present). B: null distributions, standardized, and observed values (vertical lines) for the two
-matrices as standardized effect sizes SES = (observed - mean null)/sd null; the grey band is |SES| < 2. Data are simulated.
+matrices as standardized effect sizes SES = (observed - mean null)/sd null; the gray band is |SES| < 2. Data are simulated.
 """
 
 import numpy as np

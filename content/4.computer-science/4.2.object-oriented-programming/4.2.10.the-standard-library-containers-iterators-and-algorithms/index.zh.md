@@ -223,7 +223,7 @@ int main() {
 int main() {
     std::vector<int> v{1, 2, 3, 4, 5, 6};
 
-    // Wrong: after erase(it), it is invalid and ++it is undefined behaviour.
+    // Wrong: after erase(it), it is invalid and ++it is undefined behavior.
     // for (auto it = v.begin(); it != v.end(); ++it)
     //     if (*it % 2 == 0) v.erase(it);
 

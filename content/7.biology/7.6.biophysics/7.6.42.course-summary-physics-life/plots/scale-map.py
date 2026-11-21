@@ -1,7 +1,7 @@
 """A map of the models of the course on axes of length and time.
 
 Each point marks the characteristic length and time of a process treated by a model of the course,
-labelled with the chapter (7.6.n) where it is developed; colours mark the three directions
+labeled with the chapter (7.6.n) where it is developed; colors mark the three directions
 (molecular, cell, quantitative biology). Values are those of the chapters: retinal isomerization
 200 fs, rotational correlation 14 ns for a = 2.5 nm, a kinesin step of 8 nm every 10 ms, an F1 step
 of 120 degrees at 130 Hz, a Min oscillation of 60 s across a 3 um cell, a mitotic trigger wave of

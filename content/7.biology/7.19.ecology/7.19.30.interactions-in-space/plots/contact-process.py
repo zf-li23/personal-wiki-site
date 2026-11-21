@@ -2,7 +2,7 @@
 
 Each site of a 100 x 100 periodic square lattice is occupied or empty. An occupied site becomes empty at
 rate 1; an empty site is colonized at rate lambda k / 4, where k is the number of its four nearest
-neighbours that are occupied (offspring only reach adjacent sites). Simulated in small time steps
+neighbors that are occupied (offspring only reach adjacent sites). Simulated in small time steps
 (dt = 0.1, each event with probability 1 - exp(-rate dt)), from full occupancy, to t = 300; occupancy
 is averaged over t = 200-300.
 A, B: snapshots for lambda = 1.9 (near the threshold: sparse clusters) and lambda = 3.
@@ -10,7 +10,7 @@ C: equilibrium occupancy against lambda. Mean-field (Levins) model p* = 1 - 1/la
 approximation p* = ((z - 1) lambda - z) / ((z - 1) lambda - 1) with z = 4, threshold 4/3; simulation
 (points), whose threshold lies between 1.5 and 1.6, close to the critical value 1.65 of the
 continuous-time contact process on the square lattice (the discrete time step lowers it slightly). Local dispersal clusters the occupied sites, so that colonists land on occupied
-neighbours and the population needs a higher colonization rate to persist.
+neighbors and the population needs a higher colonization rate to persist.
 """
 
 import numpy as np

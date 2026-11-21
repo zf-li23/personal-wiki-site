@@ -4,7 +4,7 @@ offspring numbers, the root of 1 - pi = exp(-(1 + s) pi); dashed: Haldane's appr
 diffusion formula for N = 500; dots: fraction of 20 000 simulated Wright-Fisher populations of N = 500 diploids
 (genic selection) in which the mutation was fixed, with 95 % intervals. B: the number of copies of 60 new
 mutations with s = 0.05 in a population of N = 5000 over their first 150 generations (log scale): most are lost
-within a few generations (short grey lines ending at the bottom); the survivors grow roughly as e^(st) once
+within a few generations (short gray lines ending at the bottom); the survivors grow roughly as e^(st) once
 they exceed about 1/(2s) = 10 copies (dashed line)."""
 import numpy as np
 import matplotlib.pyplot as plt

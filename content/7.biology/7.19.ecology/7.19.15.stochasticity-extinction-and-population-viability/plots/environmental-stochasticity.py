@@ -2,7 +2,7 @@
 
 N_{t+1} = lambda_t N_t with lambda_t independent, equal to 1.5 (good year) or 0.6 (bad year) with
 probability 1/2. The arithmetic mean E[lambda] = 1.05 > 1, but E[ln lambda] = (ln 1.5 + ln 0.6)/2 = -0.053 < 0.
-A: 300 simulated populations (N0 = 100, seed 0; grey) over 100 years on a log scale; the expected size
+A: 300 simulated populations (N0 = 100, seed 0; gray) over 100 years on a log scale; the expected size
 N0 1.05^t (red) grows, the median N0 exp(-0.053 t) (blue) declines, and the sample mean (dashed) follows the
 expectation only while some rare lucky paths are present in the sample. B: long-run growth rate
 E[ln lambda] for log-normal lambda with arithmetic mean 1.05 as a function of the coefficient of variation

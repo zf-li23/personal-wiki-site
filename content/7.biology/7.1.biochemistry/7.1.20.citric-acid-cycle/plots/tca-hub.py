@@ -2,7 +2,7 @@
 
 Blue (outward): intermediates drawn off for biosynthesis. Green (inward): anaplerotic reactions that refill
 the cycle (pyruvate carboxylase, PEP carboxykinase, PEP carboxylase of plants and bacteria, malic enzyme),
-and other catabolic inputs (amino acids, odd-chain fatty acids). Grey: the cycle itself.
+and other catabolic inputs (amino acids, odd-chain fatty acids). Gray: the cycle itself.
 """
 
 import numpy as np

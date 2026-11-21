@@ -1,6 +1,6 @@
 # The same 26 families in three systems, each column in the linear sequence of its system: Engler
 # (Syllabus, 12th ed., 1964), Cronquist (1981) and APG IV (2016). Brackets give the major groups of each
-# system; lines join the same family and are coloured by its APG IV clade. The positions in the first two
+# system; lines join the same family and are colored by its APG IV clade. The positions in the first two
 # columns are the family numbers of the published family lists of the two systems.
 import wikibio as bio
 

@@ -2,9 +2,9 @@
 traits (variances 1, genetic correlation 0.8) is drawn as its 1-SD ellipse; its leading eigenvector g_max
 is the genetic line of least resistance. A selection gradient beta (arrow, pointing along +z1 and -z2)
 produces the response G beta = (0.52, 0.20), which is deflected towards g_max: trait 2 increases although
-selection favours a smaller value of it, a correlated response to the stronger selection on trait 1. B: approach to an optimum (star) under Gaussian stabilizing
+selection favors a smaller value of it, a correlated response to the stronger selection on trait 1. B: approach to an optimum (star) under Gaussian stabilizing
 selection, beta = V_s^{-1} (theta - z) with V_s = 20 I, from the origin. Dots mark every 10th generation.
-With uncorrelated traits (grey, G = I) the path is straight; with the correlated G (colour) the population
+With uncorrelated traits (gray, G = I) the path is straight; with the correlated G (color) the population
 first moves along g_max and approaches the optimum slowly along the direction of little genetic
 variation, but it reaches it eventually because G has no zero eigenvalue."""
 import numpy as np

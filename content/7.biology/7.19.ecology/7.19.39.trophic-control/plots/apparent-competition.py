@@ -8,7 +8,7 @@ m = 0.1, q = 0.5. The prey do not compete for any resource. If the predator equi
 P = (e1 a1 N1 + e2 a2 N2 - m)/q, and the prey obey Lotka-Volterra competition equations with
 rho_i = r_i + a_i m / q, beta_ii = r_i/K_i + e_i a_i^2/q and beta_ij = a_i e_j a_j / q.
 A: the two straight zero-growth isoclines of this reduced system (prey 1 green, prey 2 orange) and
-trajectories of the full three-species model projected on the (N1, N2) plane (grey, from five starts;
+trajectories of the full three-species model projected on the (N1, N2) plane (gray, from five starts;
 dots: start). The isocline of prey 1 lies outside that of prey 2: prey 1 excludes prey 2.
 B: time course: prey 2 and the predator at equilibrium; prey 1 introduced at t = 50 at low density.
 The predator increases on the extra food and drives prey 2 to extinction.

@@ -4,7 +4,7 @@ with a = 0.5, b = 1.5 (prey 1 excludes prey 2 without the predator), rho = 1, e1
 the predator prefers and profits more from prey 1; kappa = c2/c1 is its relative attack on prey 2.
 A: time series for kappa = 0.3 and d = 0.1, 0.35 and 0.8 (predator mortality): prey 1 excluded,
 all three coexist, prey 2 excluded. B: outcomes in the (d, kappa) plane from simulations on a coarse
-grid (colours), with the invasion boundaries of Proposition 26.3.1: prey 2 invades the prey 1 -
+grid (colors), with the invasion boundaries of Proposition 26.3.1: prey 2 invades the prey 1 -
 predator system left of the solid line, prey 1 invades the prey 2 - predator system right of the
 dashed line; the predator cannot persist on prey 1 for d > e1 (dotted).
 """

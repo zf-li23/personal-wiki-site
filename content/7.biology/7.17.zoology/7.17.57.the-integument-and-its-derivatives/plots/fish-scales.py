@@ -2,7 +2,7 @@
 # (2009), Kardong (2019) and Romer & Parsons. Panels: placoid scale of a shark; cosmoid scale of an early
 # sarcopterygian; palaeoniscoid ganoid scale (bichirs, early actinopterygians); lepisosteoid ganoid scale (gars);
 # elasmoid scales of a teleost, overlapping in dermal pockets, the last with ctenii (ctenoid). Tissues share one
-# colour key across panels. Not to scale.
+# color key across panels. Not to scale.
 import numpy as np
 import wikibio as bio
 

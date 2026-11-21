@@ -5,7 +5,7 @@
 # smaller and are concentrated near the jaw joint. In Morganucodon a new joint between the dentary condyle
 # and the squamosal works beside the old articular-quadrate joint. In crown mammals the lower jaw is the
 # dentary alone; the articular (malleus), quadrate (incus) and angular (tympanic ring) form the middle ear
-# with the stapes. Bones in the course-wide homology colours.
+# with the stapes. Bones in the course-wide homology colors.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

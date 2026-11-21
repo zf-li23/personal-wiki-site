@@ -6,7 +6,7 @@ A: gain of a cascade of N identical Maxwell elements, |H| = (w tau / sqrt(1 + (w
 B: schematic tuning curve of a Pacinian ending: threshold amplitude = 1 / |H_capsule H_encoder|,
 with an effective second-order high pass for the capsule (corner 120 Hz) and a first-order low pass
 for the membrane and spike encoder (corner 300 Hz); removing the capsule leaves the low pass only.
-Normalised to the minimum of the intact curve.
+Normalized to the minimum of the intact curve.
 """
 import matplotlib.pyplot as plt
 import numpy as np

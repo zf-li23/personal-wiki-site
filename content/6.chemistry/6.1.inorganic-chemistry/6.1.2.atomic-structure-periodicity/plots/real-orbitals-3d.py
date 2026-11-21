@@ -1,4 +1,4 @@
-"""3D angular surfaces |Y| of the real p and d orbitals, coloured by the sign of Y."""
+"""3D angular surfaces |Y| of the real p and d orbitals, colored by the sign of Y."""
 
 import numpy as np
 import matplotlib.pyplot as plt

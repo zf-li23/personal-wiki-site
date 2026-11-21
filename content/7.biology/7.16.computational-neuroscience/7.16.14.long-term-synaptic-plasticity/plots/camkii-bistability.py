@@ -3,7 +3,7 @@
 f = fraction of autophosphorylated subunits.
   df/dt = (1 - f) [k_c h(c) + k_a f^2] - V f / (K_M + f),   h(c) = c^4 / (c^4 + K^4)
 k_c = 0.5 /s (Ca2+/calmodulin-driven phosphorylation), k_a = 0.5 /s (cooperative
-autophosphorylation: a subunit is phosphorylated by an active neighbour), phosphatase (PP1)
+autophosphorylation: a subunit is phosphorylated by an active neighbor), phosphatase (PP1)
 with V = 0.04 /s and K_M = 0.1 (saturable), K = 1 uM, baseline Ca2+ 0.1 uM.
 A: phosphorylation without Ca2+ drive, k_a (1-f) f^2 (solid), against dephosphorylation
    V f/(K_M+f) for three phosphatase activities (dashed): f = 0 is always a fixed point and, for

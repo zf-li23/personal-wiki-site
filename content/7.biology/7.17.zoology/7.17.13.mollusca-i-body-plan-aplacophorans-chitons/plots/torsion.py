@@ -46,7 +46,7 @@ def animal(ax, cx, cy, angle, nerves_crossed, gills=("L", "R"), title="", sub=""
     c = np.array([cx, cy - 0.3])
     R = 1.75
     ax.add_patch(Circle(c, R, facecolor=wash("neutral", 0.65), edgecolor=P.edge("neutral"), lw=1.0, zorder=4))
-    d = unit(angle - 90)          # direction of the mantle cavity from the centre
+    d = unit(angle - 90)          # direction of the mantle cavity from the center
     left = np.array([d[1], -d[0]])  # the animal's (pre-torsional) left side of the visceral mass
     # mantle cavity: a wedge on the rim
     ax.add_patch(Wedge(tuple(c), R * 1.08, angle - 90 - 50, angle - 90 + 50, width=R * 0.62, facecolor=wash(MANTLE, 0.5),
@@ -61,7 +61,7 @@ def animal(ax, cx, cy, angle, nerves_crossed, gills=("L", "R"), title="", sub=""
     g = np.r_[bez(mouth, np.array([cx, cy + 1.6]), c + np.array([0, 0.4])), bez(c + np.array([0, 0.4]), c - d * 0.6 + left * 0.2, anus)]
     ax.plot(g[:, 0], g[:, 1], color=P.edge(GUT), lw=2.4, zorder=6, solid_capstyle="round")
     ax.add_patch(Circle(anus, 0.12, facecolor=P.edge(GUT), edgecolor="none", zorder=7))
-    # nerves: pleural ganglia beside the oesophagus, visceral loop near the mantle cavity
+    # nerves: pleural ganglia beside the esophagus, visceral loop near the mantle cavity
     pl_l, pl_r = np.array([cx - 0.55, cy + 2.4]), np.array([cx + 0.55, cy + 2.4])
     if nerves_crossed:
         v_l, v_r = c + d * R * 0.35 + left * 0.75, c + d * R * 0.35 - left * 0.75

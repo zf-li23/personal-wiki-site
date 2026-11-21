@@ -1,7 +1,7 @@
 # Map of this course: the six parts of the course (rows) against the levels of biological organization they
 # are treated at (columns, from molecules to ecosystems); the disc area shows how much weight each level gets
-# (an editorial judgement of this course's emphasis). Chapter numbers are given in brackets. Plant physiology connects these levels: molecular mechanisms explain
-# cell and organ function, which in turn explain whole-plant behaviour, crop yield and ecosystem fluxes.
+# (an editorial judgment of this course's emphasis). Chapter numbers are given in brackets. Plant physiology connects these levels: molecular mechanisms explain
+# cell and organ function, which in turn explain whole-plant behavior, crop yield and ecosystem fluxes.
 import numpy as np
 
 import wikibio as bio

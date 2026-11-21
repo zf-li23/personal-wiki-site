@@ -36,7 +36,7 @@ M.bacillus(ax, (15.2, 9.0), 2.6, 0.5, gram="+")
 ax.add_patch(Circle((16.6, 9.0), 0.42, facecolor=P.fill("gram_pos"), edgecolor=P.edge("gram_pos"), lw=1.1, zorder=9))
 spore((16.6, 9.0), 0.3)
 name(15.5, 7.0, "Clostridium tetani", "terminal spore")
-# Mycoplasma pneumoniae: flask shape, no wall (drawn in membrane colour)
+# Mycoplasma pneumoniae: flask shape, no wall (drawn in membrane color)
 pts = [(20.1, 9.0), (20.4, 9.5), (21.1, 9.58), (21.7, 9.25), (22.35, 9.1), (22.5, 9.0), (22.35, 8.9),
        (21.7, 8.75), (21.1, 8.42), (20.4, 8.5)]
 bio.shape(ax, bio.smooth_closed(pts), token="membrane", lw=1.1, zorder=8)

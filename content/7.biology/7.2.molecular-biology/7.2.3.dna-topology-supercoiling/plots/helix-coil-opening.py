@@ -36,7 +36,7 @@ def open_probability(tau_pn_nm):
     work = tau_pn_nm * 1e-21 * theta0 * NA          # J/mol released per opened pair
     s = np.exp(np.array([dE[b] for b in seq]) / RT - work / RT)
     sig = np.exp(-J / RT)
-    # forward vectors a[n] = (weight ending in h, weight ending in c), normalised at each step
+    # forward vectors a[n] = (weight ending in h, weight ending in c), normalized at each step
     a = np.empty((N, 2))
     a[0] = (s[0], 1.0)
     a[0] /= a[0].sum()

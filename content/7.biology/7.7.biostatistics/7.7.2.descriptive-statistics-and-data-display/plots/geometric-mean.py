@@ -1,7 +1,7 @@
-"""Antibody titres of 112 children one month after vaccination (reciprocal dilutions 4 to 512, a classic
+"""Antibody titers of 112 children one month after vaccination (reciprocal dilutions 4 to 512, a classic
 textbook example). A: on the linear scale the distribution is skewed and the arithmetic mean (69.3) is pulled
-by the few high titres. B: on a log2 scale the dilution steps are equally spaced and the distribution is
-nearly symmetric; the mean of log2(titre) is 5.57, and its antilog, the geometric mean, is 47.6 (about 1:48).
+by the few high titers. B: on a log2 scale the dilution steps are equally spaced and the distribution is
+nearly symmetric; the mean of log2(titer) is 5.57, and its antilog, the geometric mean, is 47.6 (about 1:48).
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,7 +22,7 @@ ax.bar(titre, count, width=10, color=P.fill("antibody"), edgecolor=P.edge("antib
 ax.axvline(am, color=charts.line("rna"), lw=1.2, label=f"arithmetic mean {am:.1f}")
 ax.axvline(gm, color=charts.line("dna"), lw=1.2, ls="--", label=f"geometric mean {gm:.1f}")
 ax.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P.ink())
-charts.style_axes(ax, "titre (reciprocal dilution)", "children")
+charts.style_axes(ax, "titer (reciprocal dilution)", "children")
 charts.title(ax, "A  Linear scale")
 ax = axs[1]
 k = np.log2(titre)
@@ -31,5 +31,5 @@ ax.axvline(np.log2(x).mean(), color=charts.line("dna"), lw=1.2, ls="--", label=f
 ax.set_xticks(k)
 ax.set_xticklabels([f"1:{t}" for t in titre], fontsize=FT["tiny"])
 ax.legend(frameon=False, fontsize=FT["tiny"], labelcolor=P.ink())
-charts.style_axes(ax, "titre (log2 scale)", None)
+charts.style_axes(ax, "titer (log2 scale)", None)
 charts.title(ax, "B  Log scale: dilution steps are equal")

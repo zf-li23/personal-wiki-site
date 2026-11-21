@@ -45,7 +45,7 @@ r = xkb * 1e3 * 1e-8
 for sv, tok in ((0.001, "dna"), (0.01, "enzyme"), (0.1, "rna")):
     b.plot(xkb, 1 - (2e4) ** (-2 * r / sv), color=charts.line(tok), lw=1.8, label=f"$s = {sv}$, $2N = 2\\times10^4$")
 
-# forward simulation: 2N haplotypes, selected site at the centre of a 2*R map, neutral sites on one side
+# forward simulation: 2N haplotypes, selected site at the center of a 2*R map, neutral sites on one side
 rng = np.random.default_rng(2)
 n2, sv, L = 2000, 0.05, 21
 dist = np.append(np.linspace(0, 0.004, L - 1), 0.5)  # recombination fraction to the selected site; last: unlinked

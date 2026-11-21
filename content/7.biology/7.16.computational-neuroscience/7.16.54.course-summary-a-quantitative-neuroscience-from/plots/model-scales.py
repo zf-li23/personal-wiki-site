@@ -3,7 +3,7 @@
 Each marker is one model, at the order of magnitude of the size of the structure it describes
 (a channel, a synapse, a cell, a circuit, a brain area, the body) and of the time scale of the
 process (gating time, membrane or synaptic time constant, period, duration of a trial, of
-learning, of a disease or of evolution). The number is the chapter (7.16.n); colour gives the part
+learning, of a disease or of evolution). The number is the chapter (7.16.n); color gives the part
 of the course. Dotted lines mark reference times: 1 ms (a spike), 1 s (a behavioral trial),
 1 day (circadian period, consolidation), 80 years (a human life). Orders of magnitude only.
 """

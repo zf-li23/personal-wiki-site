@@ -1,4 +1,4 @@
-# Parts of a complete flower (template with coloured parts) and the stamen with an anther in section.
+# Parts of a complete flower (template with colored parts) and the stamen with an anther in section.
 import wikibio as bio
 from wikibio import plantmorph as PM
 

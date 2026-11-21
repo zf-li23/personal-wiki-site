@@ -1,7 +1,7 @@
 """Hueckel pi molecular orbitals of ethylene, the allyl system, buta-1,3-diene and hexa-1,3,5-triene.
 Each orbital is drawn at its energy E = alpha + x*beta (beta < 0, so larger x is lower): the circles
 are the p orbitals seen from above, their area proportional to the squared coefficient and their
-colour giving the sign. Filled pairs of dots mark the electrons of the neutral molecule (allyl: the
+color giving the sign. Filled pairs of dots mark the electrons of the neutral molecule (allyl: the
 radical). The number of nodes grows by one per level, and the lowest orbital has no node."""
 
 import numpy as np

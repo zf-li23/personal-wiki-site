@@ -4,7 +4,7 @@
 2: epinephrine binds; the occupied receptor acts as a guanine nucleotide-exchange factor:
 GDP leaves alpha and GTP (abundant in the cytosol) binds.
 3: Gs-alpha-GTP separates from beta-gamma and activates adenylyl cyclase, which converts ATP to cAMP.
-4: the intrinsic GTPase of alpha, accelerated by RGS proteins, hydrolyses GTP; alpha-GDP leaves the
+4: the intrinsic GTPase of alpha, accelerated by RGS proteins, hydrolyzes GTP; alpha-GDP leaves the
 cyclase and reassociates with beta-gamma, returning to state 1.
 """
 

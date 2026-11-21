@@ -1,8 +1,8 @@
 """Menshutkin reaction: triethylamine and iodomethane give a quaternary ammonium salt by SN2. The
 nitrogen lone pair attacks the methyl carbon from the side opposite to iodine. In the transition
-state (centre) the N...C bond is partly formed and the C...I bond partly broken, the three methyl
+state (center) the N...C bond is partly formed and the C...I bond partly broken, the three methyl
 hydrogens lie in one plane, and charge has already separated (partial plus on N, partial minus on
-I). Because two neutral molecules become an ion pair, polar solvents stabilise the transition state
+I). Because two neutral molecules become an ion pair, polar solvents stabilize the transition state
 strongly and speed the reaction up."""
 
 from wikichem import Scheme

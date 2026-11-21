@@ -1,6 +1,6 @@
 # Time to result for a blood culture, by three laboratory routes (typical, rounded times; individual
 # cases vary widely). All routes start with incubation of blood-culture bottles in an automated system until
-# growth is signalled (here 20 h; most clinically significant bacteria within 1-2 days) and a Gram stain of
+# growth is signaled (here 20 h; most clinically significant bacteria within 1-2 days) and a Gram stain of
 # the positive broth (about 1 h). Conventional: subculture on plates overnight (18 h), then biochemical
 # identification and antimicrobial susceptibility testing (AST) in parallel (18 h). MALDI-TOF: the same
 # subculture, identification in minutes from the first colonies, AST as before. Direct molecular: a multiplex

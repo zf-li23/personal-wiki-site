@@ -1,7 +1,7 @@
 """Statistics of complex networks. A: degree distributions of an Erdos-Renyi random graph
 (N = 20000, mean degree 6) and of a Barabasi-Albert preferential-attachment graph (same size, m = 3
 links per new vertex, logarithmic bins): Poisson against the power law P(k) = 2m(m+1)/k(k+1)(k+2) ~ k^-3. B: the Watts-Strogatz
-construction (ring of N = 400 vertices, each linked to its 10 nearest neighbours, every edge
+construction (ring of N = 400 vertices, each linked to its 10 nearest neighbors, every edge
 rewired with probability p): clustering coefficient C(p) and mean shortest path length L(p),
 relative to the ring; for 0.003 < p < 0.05 paths are already short while clustering is still high,
 the small-world regime."""

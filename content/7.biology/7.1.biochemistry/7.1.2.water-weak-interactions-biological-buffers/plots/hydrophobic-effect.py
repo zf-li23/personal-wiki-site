@@ -1,7 +1,7 @@
-# Thermodynamics of the hydrophobic effect: transfer of benzene from liquid benzene into water, modelled with a
+# Thermodynamics of the hydrophobic effect: transfer of benzene from liquid benzene into water, modeled with a
 # constant heat capacity change dCp = +225 J/(mol K) and the convergence temperatures T_H = 295 K (dH = 0) and
 # T_S = 386 K (dS = 0) observed for liquid hydrocarbons. dH(T) = dCp (T - T_H), dS(T) = dCp ln(T / T_S).
-# Near room temperature the unfavourable dG comes almost entirely from -T dS (ordering of water);
+# Near room temperature the unfavorable dG comes almost entirely from -T dS (ordering of water);
 # at high temperature it becomes enthalpic. dG(25 C) = +18 kJ/mol, close to the value from the solubility.
 import numpy as np
 import wikibio as bio

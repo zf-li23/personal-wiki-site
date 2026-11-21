@@ -670,7 +670,7 @@ AB:TREE BC:TREE CA:BACKWARD AC:FORWARD DA:CROSS DE:TREE EB:CROSS EF:TREE FD:BACK
 #include <utility>
 #include <vector>
 
-// Iterative DFS: the explicit stack holds (vertex, index of its next neighbour),
+// Iterative DFS: the explicit stack holds (vertex, index of its next neighbor),
 // which is exactly what a recursive call keeps in its stack frame.
 void dfs_iterative(const std::vector<std::vector<int>>& adj, std::vector<int>& d, std::vector<int>& f) {
     int n = static_cast<int>(adj.size()), clock = 0;
@@ -687,7 +687,7 @@ void dfs_iterative(const std::vector<std::vector<int>>& adj, std::vector<int>& d
                 int u = adj[v][i++];                  // advance before possibly descending
                 if (!d[u]) { d[u] = ++clock; stack.push_back({u, 0}); }
             } else {
-                f[v] = ++clock;                       // all neighbours done: v finishes
+                f[v] = ++clock;                       // all neighbors done: v finishes
                 stack.pop_back();
             }
         }
@@ -708,7 +708,7 @@ int main() {
 
 ```python tab
 def dfs_iterative(adj: list[list[int]]) -> tuple[list[int], list[int]]:
-    """DFS with an explicit stack of (vertex, iterator over its neighbours)."""
+    """DFS with an explicit stack of (vertex, iterator over its neighbors)."""
     n = len(adj)
     d, f = [0] * n, [0] * n                        # d[v] == 0: undiscovered
     clock = 0
@@ -723,7 +723,7 @@ def dfs_iterative(adj: list[list[int]]) -> tuple[list[int], list[int]]:
             u = next(it, None)                     # the iterator remembers where v stopped
             if u is None:
                 clock += 1
-                f[v] = clock                       # all neighbours done: v finishes
+                f[v] = clock                       # all neighbors done: v finishes
                 stack.pop()
             elif not d[u]:
                 clock += 1

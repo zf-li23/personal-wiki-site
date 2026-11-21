@@ -3,7 +3,7 @@ A: the b ladder (N-terminal fragments, read left to right) and the y ladder (C-t
 read right to left) with the singly charged m/z of every fragment; each peptide bond gives one
 b/y pair, and b_i + y_(n-i) = M + 2 m(H+). B: a simulated MS2 spectrum: 14 of the 20 b and y ions
 (y ions stronger, as is usual for tryptic peptides with a C-terminal Lys or Arg) among 46 noise
-peaks; matched peaks are coloured. The mass differences between neighbouring y ions are residue
+peaks; matched peaks are colored. The mass differences between neighboring y ions are residue
 masses, which is how the sequence is read from the spectrum."""
 
 import numpy as np

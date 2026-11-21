@@ -1,9 +1,9 @@
-"""A half-centre oscillator and an intersegmental travelling wave (Matsuoka rate model).
+"""A half-center oscillator and an intersegmental traveling wave (Matsuoka rate model).
 
-Each half-centre is a rate unit with slow adaptation (a stand-in for the ionic mechanisms of
+Each half-center is a rate unit with slow adaptation (a stand-in for the ionic mechanisms of
 the tadpole CPG); left and right inhibit each other reciprocally (crossed glycinergic inhibition).
-A: alternation of the left and right half-centres of one segment under tonic excitation.
-B: twelve segments, each a half-centre pair, coupled to their neighbours by weak excitation
+A: alternation of the left and right half-centers of one segment under tonic excitation.
+B: twelve segments, each a half-center pair, coupled to their neighbors by weak excitation
 of the same side; the intrinsic frequency declines from head to tail (adaptation time constant
 50 -> 62 ms), so rostral segments lead and each burst is followed by the next segment's
 burst: a head-to-tail wave with a nearly constant phase lag.

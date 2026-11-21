@@ -60,7 +60,7 @@ bio.shape(ax, bio.blob((x0 + 1.6, y0 + 0.2), 0.22, 0.22, wobble=0.0), token="nuc
 ax.plot([x0 + 1.05], [y0 + H * 0.82], "o", ms=5, color=P.ink(), zorder=9)
 nas = bio.blob((x0 + 1.05, y0 + 0.55), 0.18, 0.12, wobble=0.0)
 bio.shape(ax, nas, token="receptor", zorder=8)
-# oesophagus (dorsal) and branchial tube with gill pouches (ventral)
+# esophagus (dorsal) and branchial tube with gill pouches (ventral)
 ax.plot([x0 + 0.6, x0 + 6.5], [y0 - 0.15, y0 - 0.15], color=P.edge("enzyme"), lw=2.4, zorder=7)
 ax.plot([x0 + 1.2, x0 + 5.0], [y0 - 0.45, y0 - 0.45], color=P.edge("blood"), lw=2.0, zorder=7)
 gill_x = [x0 + 2.4 + 0.42 * k for k in range(7)]

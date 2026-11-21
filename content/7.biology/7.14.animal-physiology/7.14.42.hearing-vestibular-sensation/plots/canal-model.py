@@ -6,7 +6,7 @@ Between 1/(2 pi tau1) = 0.03 Hz and 1/(2 pi tau2) = 40 Hz the cupula signals hea
 A: gain and phase (relative to head velocity). B: response to a 60 deg/s rotation lasting 45 s:
 the afferent (cupula) signal decays with tau1 and reverses when rotation stops; the central
 "velocity storage" prolongs the VOR slow-phase velocity to a time constant of about 15 s
-(modelled here as a first-order process with tau_c = 15 s driven by the same step).
+(modeled here as a first-order process with tau_c = 15 s driven by the same step).
 """
 import matplotlib.pyplot as plt
 import numpy as np

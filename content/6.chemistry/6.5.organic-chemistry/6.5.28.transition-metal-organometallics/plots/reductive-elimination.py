@@ -1,6 +1,6 @@
 """Reductive elimination from cis-dimethylpalladium(II), cis-PdMe2L2 (16 e, d8). The two methyl
 groups must be cis: the electrons of one Pd-C bond form the new C-C bond while the other Pd-C
-pair returns to the metal, through a three-centre transition state with retention at carbon.
+pair returns to the metal, through a three-center transition state with retention at carbon.
 Ethane leaves and Pd(0)L2 (14 e) remains."""
 
 exec(open("helpers.txt").read())

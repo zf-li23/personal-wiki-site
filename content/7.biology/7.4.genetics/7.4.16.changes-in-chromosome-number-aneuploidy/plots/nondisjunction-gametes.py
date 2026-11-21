@@ -1,4 +1,4 @@
-"""Nondisjunction of one chromosome pair in meiosis I and in meiosis II, with the two homologues of the
+"""Nondisjunction of one chromosome pair in meiosis I and in meiosis II, with the two homologs of the
 parent distinguished (alleles A and a near the centromere, no crossing over), and trisomy rescue: loss of
 one of the three copies from a trisomic zygote gives uniparental disomy with probability 1/3."""
 import wikibio as bio

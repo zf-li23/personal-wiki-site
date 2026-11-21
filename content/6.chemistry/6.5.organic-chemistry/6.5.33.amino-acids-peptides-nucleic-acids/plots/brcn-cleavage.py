@@ -1,7 +1,7 @@
 """Cyanogen bromide cleavage on the carboxyl side of methionine (a model Ac-Met-NHR' fragment).
 Top: the thioether sulfur attacks the carbon of BrCN and bromide leaves, giving a cyanosulfonium
 ion. Middle: the carbonyl oxygen of the Met amide attacks the gamma carbon intramolecularly (SN2,
-five-membered ring) and methyl thiocyanate leaves. Bottom: water hydrolyses the cyclic iminium
+five-membered ring) and methyl thiocyanate leaves. Bottom: water hydrolyzes the cyclic iminium
 ether (iminolactone), cutting the peptide bond: the left fragment ends in homoserine lactone and
 the right fragment is released with a free N-terminal amine."""
 

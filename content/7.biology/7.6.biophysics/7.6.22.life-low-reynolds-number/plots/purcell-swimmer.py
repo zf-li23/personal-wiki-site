@@ -2,7 +2,7 @@
 links of equal length l, no inertia: total force and torque on the swimmer vanish at every
 instant). A: the swimmer at the four corners of its stroke, a square loop in the plane of the
 two hinge angles (front arm first, then rear arm, then front back, then rear back). B: path of
-the middle link's centre over three strokes for the square loop (it advances along its body axis)
+the middle link's center over three strokes for the square loop (it advances along its body axis)
 and for a reciprocal stroke (both arms flap together and return along the same path: no net
 motion, the scallop theorem). C: net displacement per stroke against the stroke amplitude:
 it grows as the square of the amplitude, the area enclosed by the loop in shape space."""

@@ -4,7 +4,7 @@ base: its ring nitrogen takes the proton of the Ser195 hydroxyl while the serine
 the carbonyl carbon of the scissile peptide bond; Asp102 holds the His in the right tautomer and
 orientation through a hydrogen bond (dashed). The tetrahedral intermediate carries an oxyanion,
 stabilized by two backbone N-H groups (the oxyanion hole). It then collapses, His (now acting as
-a general acid) protonates the leaving amine, and the acyl-enzyme ester is hydrolysed by water
+a general acid) protonates the leaving amine, and the acyl-enzyme ester is hydrolyzed by water
 in the reverse sequence of steps: two nucleophilic acyl substitutions in a row."""
 
 from wikichem import Scheme

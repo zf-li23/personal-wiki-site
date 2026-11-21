@@ -4,7 +4,7 @@ after Harfe et al. 2004).
 Antero-posterior coordinate x (0 = posterior margin). Shh is made by cells within x < 0.15 (the ZPA) until t = 1;
 growth stretches the tissue uniformly, x = x0 exp(0.9 t), so the cells that start nearest the margin stay longest in
 the source. Paracrine Shh outside the source decays as exp(-(x - 0.15) / 0.12). Each cell's exposure is
-E = (time spent in the source) + (time integral of the paracrine level outside it). A: trajectories coloured by
+E = (time spent in the source) + (time integral of the paracrine level outside it). A: trajectories colored by
 the digit assigned (thresholds below), over the paracrine field. B: exposure against final position with the
 thresholds for digits 2 to 5; digit 1 forms without Shh.
 """

@@ -30,8 +30,8 @@ def solve(De, b, C0, Km, R):
     n = 160
     edges = r0 + (R - r0) * (np.geomspace(1, 1001, n + 1) - 1) / 1000
     rc = 0.5 * (edges[1:] + edges[:-1])
-    vol = 0.5 * (edges[1:] ** 2 - edges[:-1] ** 2) * b  # per radian per metre of root
-    g = De * edges[1:-1] / np.diff(rc)  # conductance between neighbouring cells
+    vol = 0.5 * (edges[1:] ** 2 - edges[:-1] ** 2) * b  # per radian per meter of root
+    g = De * edges[1:-1] / np.diff(rc)  # conductance between neighboring cells
     dt = 1800.0
     C = np.full(n, C0)
     out, widths = {}, []

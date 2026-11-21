@@ -1,4 +1,4 @@
-# Body of an acoel (schematic): A, dorsal view; B, cross-section coloured by germ layer (acoelomate).
+# Body of an acoel (schematic): A, dorsal view; B, cross-section colored by germ layer (acoelomate).
 import numpy as np
 import wikibio as bio
 from wikibio import zoology as zoo

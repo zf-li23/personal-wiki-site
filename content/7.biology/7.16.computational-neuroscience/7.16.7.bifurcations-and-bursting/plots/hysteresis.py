@@ -2,7 +2,7 @@
 potassium model with a low-threshold K+ current (Izhikevich 2007, Eqs. 4.1-4.2; parameters as panel C of
 the bifurcation figure: E_L = -78, g_L = 1, g_Na = 4, g_K = 4 mS/cm2, m_inf V_1/2 = -30, k = 7 mV, n_inf
 V_1/2 = -45, k = 5 mV, tau = 1 ms). A: a staircase of current steps (40, 45, 52, 45,
-40 uA/cm2, 150 ms each; grey, labels in uA/cm2): at 45 the neuron stays at rest on the way up but keeps
+40 uA/cm2, 150 ms each; gray, labels in uA/cm2): at 45 the neuron stays at rest on the way up but keeps
 spiking on the way down; spiking starts above the Hopf point (48.8) and stops below the fold of limit
 cycles (42.5). B: at a constant I = 45 (bistable) a brief depolarizing pulse (20 uA/cm2, 1 ms)
 switches the neuron from rest to spiking, and an identical pulse at the right phase switches it back.

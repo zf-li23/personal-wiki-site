@@ -1,8 +1,8 @@
 """Propensity scores for maternal smoking (189 births, Baystate Medical Center 1986; Hosmer and Lemeshow;
-R MASS::birthwt), estimated by logistic regression on age, weight, race, previous premature labour,
+R MASS::birthwt), estimated by logistic regression on age, weight, race, previous premature labor,
 hypertension, uterine irritability and any first-trimester visit. A: distribution of the propensity score
 in smokers (orange, upward) and non-smokers (blue, downward). B: standardized mean differences of the
-covariates before adjustment (grey), after inverse probability weighting (orange), after weighting with
+covariates before adjustment (gray), after inverse probability weighting (orange), after weighting with
 truncation of the weights at their 1st and 99th percentiles (light orange) and with overlap weights
 (green, exact balance by construction); the band marks |SMD| < 0.1.
 """

@@ -1,6 +1,6 @@
 """The complementation test as trans-heterozygotes (schematic).
 
-Left: m1 in gene a and m2 in gene b, one on each homologue: each homologue carries a wild-type copy of the
+Left: m1 in gene a and m2 in gene b, one on each homolog: each homolog carries a wild-type copy of the
 gene mutated on the other, both products are made, and the phenotype is wild type (complementation).
 Right: m1 and m2 both in gene a: no functional copy of a, the phenotype is mutant (no complementation).
 """
@@ -29,8 +29,8 @@ def panel(x, letter, title, top, bottom, products, result, tok):
     bio.label(ax, (x + 4.0, 8.9), title, size="normal", bold=True)
     homologue(x, 7.0, top)
     homologue(x, 5.3, bottom, tok="receptor")
-    bio.label(ax, (x - 0.2, 7.0), "homologue 1", size="tiny", ha="right", color=P.muted())
-    bio.label(ax, (x - 0.2, 5.3), "homologue 2", size="tiny", ha="right", color=P.muted())
+    bio.label(ax, (x - 0.2, 7.0), "homolog 1", size="tiny", ha="right", color=P.muted())
+    bio.label(ax, (x - 0.2, 5.3), "homolog 2", size="tiny", ha="right", color=P.muted())
     for i, (txt, ok) in enumerate(products):
         bio.box(ax, (x + 2.0 + i * 4.0, 3.3), 3.3, 0.8, token="positive" if ok else "neutral", text=txt, size="small")
     bio.box(ax, (x + 4.0, 1.4), 7.0, 0.9, token=tok, text=result, size="normal")

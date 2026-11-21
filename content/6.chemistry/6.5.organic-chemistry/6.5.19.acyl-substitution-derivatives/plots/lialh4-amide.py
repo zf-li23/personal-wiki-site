@@ -1,6 +1,6 @@
 """Reduction of a tertiary amide (N,N-dimethylacetamide) to an amine by LiAlH4. Hydride adds to the
 carbonyl carbon. In the tetrahedral intermediate the nitrogen lone pair, a better donor than the
-oxygen bound to aluminium, pushes out the O-Al group, so an iminium ion forms rather than an
+oxygen bound to aluminum, pushes out the O-Al group, so an iminium ion forms rather than an
 aldehyde. A second hydride adds to the iminium ion and gives the amine: the C=O has become CH2."""
 
 from wikichem import Scheme

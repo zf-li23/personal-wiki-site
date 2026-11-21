@@ -4,8 +4,8 @@ Plant: the lung CO2 store, V_L dP/dt = 863 VCO2 - VA P (V_L = 12 L: the effectiv
 time in min), VA = 0.7 VE. Controller: VE(t) = G max(0, P(t - tau) - B), B = 37.5 mmHg, i.e. the chemoreceptors
 see the alveolar PCO2 after the lung-to-chemoreceptor circulation delay tau. A brief sigh (VE doubled for 5 s)
 perturbs the steady state at t = 20 s. With G = 2.4 L/(min mmHg) the loop is stable at the normal delay
-(tau = 8 s) and oscillates with apnoeas when the delay is long (heart failure, tau = 30 s); at altitude the
-gain is higher (G = 5) and even a moderate delay (tau = 12 s) destabilises the loop.
+(tau = 8 s) and oscillates with apneas when the delay is long (heart failure, tau = 30 s); at altitude the
+gain is higher (G = 5) and even a moderate delay (tau = 12 s) destabilizes the loop.
 B: peak-to-peak amplitude of VE (late in the run) over the gain-delay plane; the boundary is where the
 loop gain is large enough that the response to a disturbance returns in phase after the delay.
 """

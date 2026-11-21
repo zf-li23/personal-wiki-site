@@ -1,5 +1,5 @@
 """Cell interactions at the four-cell stage of C. elegans (anterior left, dorsal up). A: P2 signals to its two
-neighbours. Its Delta-like ligand APX-1 activates the Notch-like receptor GLP-1 on ABp, which touches P2,
+neighbors. Its Delta-like ligand APX-1 activates the Notch-like receptor GLP-1 on ABp, which touches P2,
 and not on ABa, which does not: the two AB daughters, identical when born, take different fates. Its
 Wnt-like signal MOM-2 acts through the Frizzled-like receptor MOM-5 on EMS and polarizes it, so that the
 daughter next to P2 (E) forms endoderm and the other (MS) mesoderm. B: the experiment that showed the

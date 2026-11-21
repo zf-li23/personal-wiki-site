@@ -3,7 +3,7 @@
 # evaluated for the points of a cubic lattice (spacing 2.5 to 3 A, several thousand points) filling each
 # body; the pair distances are binned in 0.25 A shells.
 # Bodies: solid sphere R = 50 A; hollow sphere (shell from 40 to 50 A); rod (cylinder of radius 10 A
-# and length 200 A); dumbbell (two spheres of radius 25 A with centres 70 A apart).
+# and length 200 A); dumbbell (two spheres of radius 25 A with centers 70 A apart).
 # The dashed curve is the exact form factor of the solid sphere, [3 (sin x - x cos x) / x^3]^2 with
 # x = qR: the Debye sum reproduces it, including the first minimum at qR = 4.493.
 # Dotted guides: pi / (qL), the intermediate region of a long rod, and 9 / [2 (qR)^4], the Porod envelope

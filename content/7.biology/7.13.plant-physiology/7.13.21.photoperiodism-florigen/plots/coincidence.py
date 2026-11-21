@@ -6,7 +6,7 @@
 #   dF/dt = v P^4 / (K^4 + P^4) - g F           (FT mRNA, Arabidopsis: CO activates FT)
 #   dH/dt = v Kr^4 / (Kr^4 + Pl^4) - g H         (Hd3a mRNA, rice: light-active Hd1 represses Hd3a;
 #                                              Pl = P during the light period, 0 in darkness)
-# A, B: 16 h and 8 h photoperiods (grey bands = night; levels scaled to the 16 h maxima).
+# A, B: 16 h and 8 h photoperiods (gray bands = night; levels scaled to the 16 h maxima).
 # C: daily mean FT and Hd3a against photoperiod.
 import matplotlib.pyplot as plt
 import numpy as np

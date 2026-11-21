@@ -1,5 +1,5 @@
 # The serial (gill-arch) hypothesis of jaw origin, schematic lateral views of the head skeleton with
-# anterior to the left. Homologous elements share the vertskel colours: mandibular arch gold and coral,
+# anterior to the left. Homologous elements share the vertskel colors: mandibular arch gold and coral,
 # hyoid arch magenta, branchial arches 3-7 blue to violet. Not to scale.
 import wikibio as bio
 import vertskel as vs

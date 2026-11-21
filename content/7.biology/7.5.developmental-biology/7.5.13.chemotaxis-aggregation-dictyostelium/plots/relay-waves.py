@@ -1,8 +1,8 @@
 """Relay of cAMP pulses between amoebae (Cohen-Robertson model).
 
-A pulse of strength s released by one amoeba diffuses in the plane; a neighbour at the mean distance R, with
+A pulse of strength s released by one amoeba diffuses in the plane; a neighbor at the mean distance R, with
 1/a = pi R^2 / 4 for cell density a, sees rho(R, t) = (s a / 4) g(tau), g(tau) = exp(-1/tau) / tau, tau = 4 nu t / R^2.
-A: g(tau) has its maximum 1/e at tau = 1; a neighbour fires when rho reaches the threshold rho_c, that is when
+A: g(tau) has its maximum 1/e at tau = 1; a neighbor fires when rho reaches the threshold rho_c, that is when
 g = (a_c / a) / e with a_c = 4 e rho_c / s, so waves propagate only above the critical density a_c and the trigger
 time (dots, for a / a_c = 1.2, 2 and 5) shortens with density. B: wave speed v = R / (T_p + T_d), T_p = R^2 tau_p
 / (4 nu), against density, for nu = 400 um^2/s (cAMP), a relay delay T_d = 15 s and a_c = 300 cells/mm^2; the

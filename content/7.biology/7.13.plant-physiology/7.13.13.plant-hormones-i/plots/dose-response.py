@@ -6,7 +6,7 @@ import numpy as np
 
 c = np.logspace(-13, -2, 600)
 organs = [
-    # name, K1, K2, Emax, colour
+    # name, K1, K2, Emax, color
     ("Root", 10 ** -11.0, 10 ** -8.6, 1.6, "#c0504d"),
     ("Bud", 10 ** -9.0, 10 ** -6.6, 1.6, "#4f9a52"),
     ("Stem", 10 ** -6.2, 10 ** -3.6, 2.0, "#2f6fb5"),

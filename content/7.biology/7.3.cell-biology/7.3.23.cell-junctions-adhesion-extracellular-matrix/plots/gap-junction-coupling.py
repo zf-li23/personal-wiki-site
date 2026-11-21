@@ -1,6 +1,6 @@
 """Electrical and chemical coupling through gap junctions: a chain of identical cells.
 
-A: current injected into cell 0 spreads through the junctional conductance g_j between neighbours and leaks
+A: current injected into cell 0 spreads through the junctional conductance g_j between neighbors and leaks
 through the membrane conductance g_m of each cell (shading: steady-state voltage for g_j / g_m = 10).
 B: steady state. Kirchhoff's law at cell n, g_j (V_{n-1} - 2 V_n + V_{n+1}) = g_m V_n, gives V_n = V_0 r^n with
 r + 1/r = 2 + g_m / g_j, that is a coupling length lambda = -1 / ln r (in cells), close to sqrt(g_j / g_m) when

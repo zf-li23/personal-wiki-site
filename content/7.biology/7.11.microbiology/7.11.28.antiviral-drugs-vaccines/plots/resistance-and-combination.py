@@ -4,7 +4,7 @@
 # B: a deterministic two-population model of viral load under treatment. The wild type is suppressed
 #    by a factor (1 - eps) per drug; a resistant variant, present at frequency f0 and with a fitness
 #    cost, is suppressed less. Monotherapy leaves the resistant variant growing; three drugs leave
-#    nothing growing unless adherence lapses, modelled here as a 7-day interruption.
+#    nothing growing unless adherence lapses, modeled here as a 7-day interruption.
 # C: the residual replication left by a regimen against the time until resistance dominates.
 import numpy as np
 

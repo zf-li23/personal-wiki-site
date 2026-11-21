@@ -1,9 +1,9 @@
 # Detecting a somatic variant depends on its allele fraction, not only on depth. A: the variant-allele
 # fraction expected from Formula 12.7.1, f = p m / (p C_T + 2(1 - p)), for a heterozygous somatic
-# mutation (m = 1) in a subclone that makes up a fraction p of the tumour cells, with the tumour locus
+# mutation (m = 1) in a subclone that makes up a fraction p of the tumor cells, with the tumor locus
 # diploid (C_T = 2, solid), hemizygous after loss of the other allele (C_T = 1, dashed) and duplicated
 # with two mutant copies (m = 2, C_T = 3, dotted). B: the probability of seeing at least five supporting
-# reads, 1 - P(Bin(n, f) <= 4), against depth, for allele fractions 0.02, 0.05, 0.10 and 0.25; the grey
+# reads, 1 - P(Bin(n, f) <= 4), against depth, for allele fractions 0.02, 0.05, 0.10 and 0.25; the gray
 # line is the probability that five or more reads carry the same wrong base by chance at Q30
 # (f = 0.001/3): 3e-10 at depth 100 and 3e-5 at depth 1000, so deep sequencing needs either a higher
 # threshold, error models per context, or molecular identifiers (7.8.9).

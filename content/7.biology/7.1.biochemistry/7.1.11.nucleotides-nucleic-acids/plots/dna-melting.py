@@ -4,7 +4,7 @@ the Marmur-Doty relation Tm = 69.3 + 0.41 (%GC) deg C and an illustrative van 't
 cooperative unit (1100 kJ/mol, about 4 deg C between 10 % and 90 % melted); absorbance at 260 nm rises
 by about 40 % (hyperchromic effect). B: Tm against G+C content at three Na+ concentrations,
 Tm = 81.5 + 16.6 lg[Na+] + 0.41 (%GC) (Schildkraut-Lifson; long DNA, [Na+] up to about 0.2 M).
-C: Tm of the 20-mer TAATACGACTCACTATAGGG paired with its complement, from the nearest-neighbour model
+C: Tm of the 20-mer TAATACGACTCACTATAGGG paired with its complement, from the nearest-neighbor model
 with the unified parameters of SantaLucia (1998): Tm = dH / (dS + R ln(C_T/4)) for two different strands
 at equal concentration, total strand concentration C_T; salt correction of the entropy
 dS([Na+]) = dS(1 M) + 0.368 (N - 1) ln[Na+] cal mol-1 K-1 (N = 20 base pairs)."""
@@ -16,7 +16,7 @@ from wikibio import charts
 P = bio.P
 R = 8.314
 
-# SantaLucia (1998) unified nearest-neighbour parameters, 1 M NaCl: dH / kcal mol-1, dS / cal mol-1 K-1
+# SantaLucia (1998) unified nearest-neighbor parameters, 1 M NaCl: dH / kcal mol-1, dS / cal mol-1 K-1
 NN = {"AA": (-7.9, -22.2), "TT": (-7.9, -22.2), "AT": (-7.2, -20.4), "TA": (-7.2, -21.3), "CA": (-8.5, -22.7),
       "TG": (-8.5, -22.7), "GT": (-8.4, -22.4), "AC": (-8.4, -22.4), "CT": (-7.8, -21.0), "AG": (-7.8, -21.0),
       "GA": (-8.2, -22.2), "TC": (-8.2, -22.2), "CG": (-10.6, -27.2), "GC": (-9.8, -24.4), "GG": (-8.0, -19.9),
@@ -61,7 +61,7 @@ pb.set_xlim(20, 80)
 pb.set_ylim(40, 110)
 charts.style_axes(pb, "G + C / %", "$T_\\mathrm{m}$ / °C")
 
-# --- C: nearest-neighbour Tm of a primer -------------------------------------------------------------------
+# --- C: nearest-neighbor Tm of a primer -------------------------------------------------------------------
 bio.panel(ax, "C", (16.6, 7.7))
 pc = charts.axes_at(ax, (18.0, 1.4, 5.0, 5.6))
 seq = "TAATACGACTCACTATAGGG"

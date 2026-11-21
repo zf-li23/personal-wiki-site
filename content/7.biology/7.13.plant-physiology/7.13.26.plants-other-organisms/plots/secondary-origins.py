@@ -1,5 +1,5 @@
 # Biosynthetic origins of the three major classes of plant secondary (specialized) metabolites, simplified
-# (after Taiz et al. 6e Fig. 23.9 and Buchanan et al. 2e Ch. 24). Primary metabolism (grey) feeds:
+# (after Taiz et al. 6e Fig. 23.9 and Buchanan et al. 2e Ch. 24). Primary metabolism (gray) feeds:
 # terpenoids (yellow) from IPP/DMAPP made by the cytosolic mevalonate (MVA) pathway from acetyl-CoA and by the
 # plastid methylerythritol phosphate (MEP) pathway from pyruvate + glyceraldehyde 3-phosphate;
 # phenolics (orange) mainly from the shikimate pathway via phenylalanine and PAL (phenylpropanoids), with

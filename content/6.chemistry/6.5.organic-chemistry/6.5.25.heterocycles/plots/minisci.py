@@ -1,4 +1,4 @@
-"""Minisci reaction. The tert-butyl radical (from pivalic acid by silver-catalysed oxidative
+"""Minisci reaction. The tert-butyl radical (from pivalic acid by silver-catalyzed oxidative
 decarboxylation) adds to C2 of protonated 4-methylquinoline: one electron of the C2=N pi bond pairs
 with the radical electron, the other stays on nitrogen (aminium radical cation). Oxidation and loss
 of protons restore the aromatic ring, giving 2-tert-butyl-4-methylquinoline."""

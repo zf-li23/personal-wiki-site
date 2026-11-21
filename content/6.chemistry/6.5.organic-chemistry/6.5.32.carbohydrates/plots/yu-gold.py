@@ -1,4 +1,4 @@
-"""Gold(I)-catalysed glycosylation with a glycosyl ortho-alkynylbenzoate (Yu), on a
+"""Gold(I)-catalyzed glycosylation with a glycosyl ortho-alkynylbenzoate (Yu), on a
 tetrahydropyranyl model of the donor. Top: Ph3PAu+ coordinates the alkyne (the gold-activated pi
 bond is drawn with Au on the proximal carbon) and the ester carbonyl oxygen attacks the distal
 alkyne carbon (6-endo-dig), giving an isochromenylium (cyclic oxocarbenium) ion with a vinyl-gold

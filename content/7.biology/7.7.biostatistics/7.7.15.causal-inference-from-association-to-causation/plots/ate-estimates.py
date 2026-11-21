@@ -55,7 +55,7 @@ for _ in range(2000):
     i = rng.integers(0, Y0.size, Y0.size)
     boot.append(estimates(X0[i], T0[i], Y0[i]))
 ci = np.nanpercentile(np.array(boot), [2.5, 97.5], axis=0)
-# greedy 1:1 nearest-neighbour matching on the logit of the propensity score, caliper 0.2 SD
+# greedy 1:1 nearest-neighbor matching on the logit of the propensity score, caliper 0.2 SD
 ps = fit_ps(X0, T0)
 lp = np.log(ps / (1 - ps))
 cal = 0.2 * lp.std(ddof=1)

@@ -1,6 +1,6 @@
 # Genome size and gene content of Bacteria and Archaea.
 # A: number of protein-coding genes (ORFs) against genome size for representative sequenced genomes
-#    (data: Madigan et al. 2019, Brock Biology of Microorganisms 15e, Table 9.1), coloured by lifestyle.
+#    (data: Madigan et al. 2019, Brock Biology of Microorganisms 15e, Table 9.1), colored by lifestyle.
 #    The line is the pooled gene density of these genomes, 0.89 genes per kb.
 # B: functional categories of the genes of three genomes of decreasing size (same source, Table 9.4):
 #    the smaller the genome, the larger the share of genes for translation.

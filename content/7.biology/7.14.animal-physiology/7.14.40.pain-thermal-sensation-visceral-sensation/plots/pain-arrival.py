@@ -1,11 +1,11 @@
-"""First and second pain: arrival times of A-delta and C fibre volleys.
+"""First and second pain: arrival times of A-delta and C fiber volleys.
 
-A: conduction time t = L / v against path length L for A-delta fibres (6-30 m/s, band; line at
-15 m/s) and C fibres (0.5-2 m/s; line at 1 m/s). Marks: about 0.7 m from the hand and 1.0 m from
+A: conduction time t = L / v against path length L for A-delta fibers (6-30 m/s, band; line at
+15 m/s) and C fibers (0.5-2 m/s; line at 1 m/s). Marks: about 0.7 m from the hand and 1.0 m from
 the foot to the spinal cord.
 B: volley reaching the spinal cord after a brief noxious stimulus to the foot (L = 1.0 m):
-1000 A-delta fibres with log-normal velocities (median 15 m/s) and 3000 C fibres (median 1 m/s);
-histogram of arrival times (10-ms bins; counts per fibre type normalised to the peak).
+1000 A-delta fibers with log-normal velocities (median 15 m/s) and 3000 C fibers (median 1 m/s);
+histogram of arrival times (10-ms bins; counts per fiber type normalized to the peak).
 """
 import matplotlib.pyplot as plt
 import numpy as np

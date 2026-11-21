@@ -1,5 +1,5 @@
 """Threshold effect of a heteroplasmic mtDNA mutation (illustrative model).
-(A) Residual respiratory-chain activity of a tissue as a function of its mutant fraction h, modelled as a steep
+(A) Residual respiratory-chain activity of a tissue as a function of its mutant fraction h, modeled as a steep
 logistic drop at a tissue-specific biochemical threshold (brain 0.6, skeletal muscle 0.75, blood 0.85; values
 illustrative). (B) Children of a mother with h0 = 0.5 for a mutation like m.8993T>G (ATP6), with a germline
 bottleneck of N = 20 units: exact binomial distribution of the children's heteroplasmy, colored by the expected

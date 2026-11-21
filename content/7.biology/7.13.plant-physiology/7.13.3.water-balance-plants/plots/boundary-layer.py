@@ -1,7 +1,7 @@
 # Transpiration through stomatal and boundary-layer conductances in series:
-# E = g_t * (w_leaf - w_air), 1/g_t = 1/g_s + 1/g_b, with mole fractions of water vapour w.
+# E = g_t * (w_leaf - w_air), 1/g_t = 1/g_s + 1/g_b, with mole fractions of water vapor w.
 # Leaf and air at 25 C, air at 50 % relative humidity, pressure 101.3 kPa: w_leaf = 0.0313, w_air = 0.0156.
-# Boundary-layer conductance for water vapour of a flat leaf (Campbell and Norman): g_b = 0.147 sqrt(u/d)
+# Boundary-layer conductance for water vapor of a flat leaf (Campbell and Norman): g_b = 0.147 sqrt(u/d)
 # mol m-2 s-1, leaf dimension d = 0.05 m; still air u = 0.2 m/s (g_b = 0.29), wind u = 3 m/s (g_b = 1.14).
 # Leaf temperature is held fixed (in reality the boundary layer also couples leaf temperature to the air).
 # A: E against stomatal conductance. B: the stomatal sensitivity d ln E / d ln g_s = g_b / (g_s + g_b):

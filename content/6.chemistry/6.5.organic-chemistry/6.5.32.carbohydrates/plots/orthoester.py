@@ -1,4 +1,4 @@
-"""The orthoester side reaction of neighbouring-group participation in glycosylation (same model as
+"""The orthoester side reaction of neighboring-group participation in glycosylation (same model as
 the acyloxonium figure: a pyranose ring with an acetoxy group on C2). The acceptor alcohol can
 attack the central carbon of the bicyclic acyloxonium ion instead of C1; after loss of the proton
 this gives a 1,2-orthoester. Under acid catalysis the orthoester reionizes to the acyloxonium ion,

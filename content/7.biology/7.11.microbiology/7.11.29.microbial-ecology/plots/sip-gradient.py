@@ -1,13 +1,13 @@
 """Stable isotope probing (DNA-SIP): workflow and why a 12C control is needed (illustrative calculation).
 
-A: a sample is incubated with a 13C-labelled substrate; organisms that assimilate it build 13C into their
+A: a sample is incubated with a 13C-labeled substrate; organisms that assimilate it build 13C into their
 DNA. Total DNA is centrifuged to equilibrium in a CsCl gradient (isopycnic ultracentrifugation, about
 2 days); "heavy" 13C-DNA bands below "light" 12C-DNA. The gradient is fractionated, the buoyant density
-of each fraction measured, and the DNA of each fraction analysed (16S rRNA amplicons, metagenomes).
+of each fraction measured, and the DNA of each fraction analyzed (16S rRNA amplicons, metagenomes).
 B: buoyant density of double-stranded DNA in CsCl rises with G + C content, rho = 1.660 + 0.098 GC g/mL,
-and full 13C labelling adds about 0.036 g/mL. Curves: distribution of the DNA of three taxa across the
+and full 13C labeling adds about 0.036 g/mL. Curves: distribution of the DNA of three taxa across the
 gradient (Gaussian, SD 0.004 g/mL) in the 13C incubation (solid); dashed, the substrate user in a parallel 12C control.
-A labelled low-GC taxon (35% GC) moves to the position of an unlabelled high-GC taxon (70% GC); only the
+A labeled low-GC taxon (35% GC) moves to the position of an unlabeled high-GC taxon (70% GC); only the
 shift relative to the 12C control identifies it as the substrate user.
 """
 import numpy as np

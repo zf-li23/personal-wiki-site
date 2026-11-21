@@ -1,5 +1,5 @@
 # Secondary growth in monocots and cambial variants (transverse sections, schematic; xylem blue, phloem
-# orange, cambium yellow). (A) Dracaena: scattered primary collateral bundles in the centre; a cambium in
+# orange, cambium yellow). (A) Dracaena: scattered primary collateral bundles in the center; a cambium in
 # the cortex produces inwards a zone of ground tissue with denser amphivasal secondary bundles (xylem
 # around phloem), outwards a little parenchyma. (B) Successive cambia: concentric rings of xylem and phloem,
 # each from a new cambium outside the last (Amaranthaceae stems, beet root). (C) Included phloem: strands of

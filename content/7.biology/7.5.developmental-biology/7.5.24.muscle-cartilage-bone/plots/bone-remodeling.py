@@ -1,4 +1,4 @@
-"""Komarova model of a bone remodelling unit: one cycle, bone mass, repeated cycles, and oscillation above Hopf."""
+"""Komarova model of a bone remodeling unit: one cycle, bone mass, repeated cycles, and oscillation above Hopf."""
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp

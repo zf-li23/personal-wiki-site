@@ -4,7 +4,7 @@
 # from point atoms with weight Z (C 6, N 7, O 8), a Gaussian atomic form factor exp(-b s^2) with
 # b = 1.0 A^2, and an isotropic temperature factor exp(-B s^2 / 4) with B = 8 A^2. The electron density
 # is the Fourier synthesis rho(x) = (1/A) sum F(h) exp(-2 pi i h.x) over all reflections with
-# |s| = 1/d <= 1/d_min, for d_min = 3.5, 2.5, 1.5 and 1.0 A. Grey circles mark the true atom positions.
+# |s| = 1/d <= 1/d_min, for d_min = 3.5, 2.5, 1.5 and 1.0 A. Gray circles mark the true atom positions.
 import matplotlib.pyplot as plt
 import numpy as np
 

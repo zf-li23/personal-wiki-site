@@ -2,7 +2,7 @@
 Autophagosomes A form at rate k_f and fuse with lysosomes with rate constant k_fus; autolysosomes L are
 degraded with rate constant k_d:  dA/dt = k_f - k_fus A,  dL/dt = k_fus A - k_d L.  Fed cells k_f = 0.5,
 starved cells k_f = 2 (mTORC1 off), fusion-defective cells k_fus = 0.02 instead of 0.1; k_d = 0.08.
-Bafilomycin A1 (blocks fusion and lysosomal degradation) is modelled as k_fus = k_d = 0 from t = 0.
+Bafilomycin A1 (blocks fusion and lysosomal degradation) is modeled as k_fus = k_d = 0 from t = 0.
 (A) Autophagosomes per cell in each steady state (solid) and after bafilomycin is added at t = 0 (dashed):
 the slope with bafilomycin equals k_f, the flux. (B) LC3-II (autophagosomes plus autolysosomes, arbitrary units) after 2 h
 without and with bafilomycin: starvation and a fusion defect both raise LC3-II, but only starvation raises the

@@ -5,7 +5,7 @@ ferredoxin:thioredoxin reductase (FTR) reduces thioredoxin, which reduces regula
 activates FBPase, SBPase, phosphoribulokinase (PRK) and NADP-GAPDH (and NADP-malate dehydrogenase and the
 CF1 ATP synthase), while inactivating glucose 6-phosphate dehydrogenase of the oxidative pentose phosphate
 pathway. Thioredoxin also activates rubisco activase. (2) Proton pumping into the lumen raises stromal pH
-from about 7 to 8, and Mg2+ moves from the lumen into the stroma (1-3 to 3-6 mM); high pH and Mg2+ favour
+from about 7 to 8, and Mg2+ moves from the lumen into the stroma (1-3 to 3-6 mM); high pH and Mg2+ favor
 carbamoylation of rubisco and activate FBPase. In the dark the disulfides re-form, CA1P accumulates and
 binds rubisco, and the cycle stops.
 """

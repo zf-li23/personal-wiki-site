@@ -1,6 +1,6 @@
 # Target-cell-limited model of HIV infection (standard teaching model, illustrative parameters).
 #   dT/dt = lambda - d T - beta T V,   dI/dt = beta T V - delta I,   dV/dt = p I - c V
-# T: uninfected CD4 T cells per microlitre, I: productively infected cells, V: free virions per microlitre.
+# T: uninfected CD4 T cells per microliter, I: productively infected cells, V: free virions per microliter.
 # Basic reproduction number R0 = beta p T0 / (delta c), T0 = lambda / d; the infected steady state has T* = T0 / R0.
 # Panel A: acute phase with R0 = 2.5 (viral peak, target-cell depletion, damped approach to a set point).
 # Panel B: ten years, with R0 rising slowly (viral adaptation, loss of CTL control) as a phenomenological assumption:

@@ -7,7 +7,7 @@
 # Mutual information (with the average-product correction, APC) and mean-field DCA (couplings from the
 # inverse of the covariance matrix of the one-hot encoded alignment, pseudocount 0.5, Frobenius norm in
 # the zero-sum gauge, APC) score every pair.
-# A: true contacts (grey squares) and the 36 top-scoring pairs by DCA (upper triangle) and by MI (lower
+# A: true contacts (gray squares) and the 36 top-scoring pairs by DCA (upper triangle) and by MI (lower
 #    triangle); true positives filled, false positives open. MI is confused by indirect correlations
 #    transmitted along chains of contacts (i-j and j-k make i and k correlated without contact).
 # B: precision (fraction of true contacts) among the top-ranked pairs against their number.

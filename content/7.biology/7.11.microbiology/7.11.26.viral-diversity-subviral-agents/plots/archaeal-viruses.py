@@ -57,7 +57,7 @@ for s in np.linspace(0.08, 0.92, 9):          # the helical nucleoprotein inside
     p = np.array([x - 0.55, 2.9]) + s * np.array([1.1, 2.2])
     ax.plot([p[0] - 0.14, p[0] + 0.14], [p[1] - 0.03, p[1] + 0.03], color=P.edge("virus"), lw=0.7,
             zorder=9, solid_capstyle="round")
-for end in ((x - 0.55, 2.9), (x + 0.55, 5.1)):  # terminal fibres
+for end in ((x - 0.55, 2.9), (x + 0.55, 5.1)):  # terminal fibers
     for dx in (-0.12, 0.12):
         ax.plot([end[0], end[0] + dx * 1.6], [end[1], end[1] + (0.24 if end[1] > 4 else -0.24)],
                 color=P.edge("virus"), lw=0.7, zorder=9)

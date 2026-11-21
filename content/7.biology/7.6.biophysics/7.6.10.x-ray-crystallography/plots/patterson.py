@@ -2,7 +2,7 @@
 # A: three atoms (Z = 30, 16, 8) in a 20 x 20 A cell of plane group p1, shown by their Fourier
 #    synthesis (B = 6 A^2, d_min = 1.2 A).
 # B: its Patterson function P(u) = (1/A) sum |F(h)|^2 cos(2 pi h.u), computed from the intensities alone.
-#    It has N(N - 1) = 6 cross peaks at the interatomic vectors r_j - r_k (labelled by the pair) and the
+#    It has N(N - 1) = 6 cross peaks at the interatomic vectors r_j - r_k (labeled by the pair) and the
 #    origin peak; peak heights are proportional to Z_j Z_k, and the map is centrosymmetric.
 # C: a heavy atom (Z = 80) and 40 light atoms (Z = 6, random positions) in plane group p2, in which
 #    every atom at r has a partner at -r. The Patterson of the intensities is dominated by the

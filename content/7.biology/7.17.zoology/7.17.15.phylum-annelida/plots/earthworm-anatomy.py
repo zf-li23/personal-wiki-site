@@ -1,5 +1,5 @@
 # Annelid body organization (schematic, not to scale). A: transverse section of an earthworm trunk segment,
-# layers coloured by germ layer (zoology.body_plan), with the typhlosole, blood vessels, nerve cord, a ring of
+# layers colored by germ layer (zoology.body_plan), with the typhlosole, blood vessels, nerve cord, a ring of
 # chaetae (perichaetine, as in Amynthas) and a nephridium. B: longitudinal view of four trunk segments: septa,
 # a metanephridium whose nephrostome opens in one segment and whose pore lies on the next, ganglia of the
 # ventral nerve cord, dorsal and ventral vessels with the direction of blood flow. C: a polychaete parapodium.

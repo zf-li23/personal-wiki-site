@@ -5,7 +5,7 @@ m non-diapausing eggs that develop into a new generation within tau = 30 days; t
 only if it completes development before the season ends. The end of the season is random, normal with
 mean T and standard deviation 10 days. Breeding again pays if m P(end > t + tau) > 1, so the switch date
 t* satisfies P(end > t* + tau) = 1/m.
-A: m P(end > t + tau) against the date for m = 5 and 20 (T = day 270); diapause is favoured where the
+A: m P(end > t + tau) against the date for m = 5 and 20 (T = day 270); diapause is favored where the
 curve falls below 1 (points: t*).
 B: the switch date against the mean end of the season T for m = 5 and 20, compared with the date T - tau
 (dashed) at which the last generation would just finish in an average year: the switch date tracks the

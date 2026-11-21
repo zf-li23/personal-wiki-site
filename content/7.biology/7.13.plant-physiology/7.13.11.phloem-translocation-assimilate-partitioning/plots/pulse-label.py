@@ -1,4 +1,4 @@
-# 14C pulse labelling of phloem translocation, simulated with a 1-D advection-dispersion model.
+# 14C pulse labeling of phloem translocation, simulated with a 1-D advection-dispersion model.
 # A short pulse of label enters the stem at x = 0; it moves with the bulk-flow velocity u, spreads with an
 # effective longitudinal dispersion coefficient Dl and is lost to surrounding tissues at rate k:
 # c(x, t) = M / sqrt(4 pi Dl t) * exp(-(x - u t)^2 / (4 Dl t)) * exp(-k t).

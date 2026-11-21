@@ -1,6 +1,6 @@
 """The serial founder model of human expansion (Section 33.3.3). A chain of 25 populations is founded
 one after another, each by 50 individuals drawn from the previous one, which then grow to 2000 and
-exchange migrants with their neighbours (m = 0.002 per generation); 300 unlinked neutral loci with
+exchange migrants with their neighbors (m = 0.002 per generation); 300 unlinked neutral loci with
 initial heterozygosity of about 0.3 in the source population. A: expected heterozygosity in each
 population after the expansion falls almost linearly with distance from the source, as observed in
 human populations with distance from East Africa. B: for pairs of populations at increasing distance

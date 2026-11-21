@@ -4,8 +4,8 @@ Oxaloacetate carbons C1 (carboxyl next to C=O), C2 (C=O), C3 (CH2), C4 (carboxyl
 acetyl methyl to C2. Aconitase acts on the oxaloacetate-derived arm (prochirality, Ogston), so isocitrate
 dehydrogenase releases oxaloacetate C1 and alpha-ketoglutarate dehydrogenase oxaloacetate C4. Succinyl-CoA
 carries (OAA C3, OAA C2, methyl, acetyl carboxyl); succinate and fumarate are symmetric, so each new
-oxaloacetate has these four carbons in either order with probability 1/2. A single pulse of labelled
-acetyl-CoA enters turn 1; later turns use unlabelled acetyl-CoA.
+oxaloacetate has these four carbons in either order with probability 1/2. A single pulse of labeled
+acetyl-CoA enters turn 1; later turns use unlabeled acetyl-CoA.
 A: fraction of the label released as CO2 in each turn. B: cumulative fraction released."""
 
 import numpy as np

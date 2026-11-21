@@ -1,6 +1,6 @@
 """Packing of fatty acid chains (schematic). A: fully saturated chains (stearate, 18:0) are fully extended
 zigzags that pack side by side in nearly crystalline order, every CH2 in van der Waals contact with its
-neighbours. B: a cis double bond between C-9 and C-10 (oleate, 18:1(D9), red) puts a rigid bend of
+neighbors. B: a cis double bond between C-9 and C-10 (oleate, 18:1(D9), red) puts a rigid bend of
 about 30 degrees into the chain; mixed with saturated chains it disrupts the packing, weakens the
 interactions and lowers the melting point. Circles are carboxylate head groups."""
 

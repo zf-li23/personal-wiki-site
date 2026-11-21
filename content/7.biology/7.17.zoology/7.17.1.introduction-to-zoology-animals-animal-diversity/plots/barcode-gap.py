@@ -1,5 +1,5 @@
 """The DNA barcode gap (schematic). Histograms of pairwise COI distances within species and between each
-species and its nearest neighbour, drawn from illustrative gamma distributions (not data for a real group).
+species and its nearest neighbor, drawn from illustrative gamma distributions (not data for a real group).
 Panel A: a group with a clear gap, where a 2% threshold separates the distributions. Panel B: a group with
 recently diverged or hybridizing species, where the distributions overlap and a threshold misassigns the
 shaded tails.

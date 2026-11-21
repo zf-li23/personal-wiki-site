@@ -1,6 +1,6 @@
 """Bisulfite conversion of cytosine to uracil (R = the deoxyribose of DNA). In acid, bisulfite adds
 to C6 of N3-protonated cytosine (conjugate addition; curved arrows), saturating the C5=C6 bond.
-In the 5,6-dihydro adduct the C4 amidine is easily hydrolysed (water adds, ammonium leaves), giving
+In the 5,6-dihydro adduct the C4 amidine is easily hydrolyzed (water adds, ammonium leaves), giving
 the uracil sulfonate; in base bisulfite is eliminated and the C5=C6 double bond returns, leaving
 uracil. 5-Methylcytosine reacts far more slowly and is read as C after PCR."""
 

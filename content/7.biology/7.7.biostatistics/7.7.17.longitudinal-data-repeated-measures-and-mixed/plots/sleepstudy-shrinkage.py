@@ -6,7 +6,7 @@ B: intercepts and slopes of each subject fitted separately (open circles) and th
 linear mixed model with correlated random intercepts and slopes, fitted by REML (filled dots); the arrows
 show how the mixed model pulls the subject-specific lines towards the population line (cross), most
 strongly for the subjects whose own fit is least certain or most extreme.
-C: six subjects with the separate fit (dashed), the mixed-model fit (solid) and the population line (grey).
+C: six subjects with the separate fit (dashed), the mixed-model fit (solid) and the population line (gray).
 """
 import csv
 

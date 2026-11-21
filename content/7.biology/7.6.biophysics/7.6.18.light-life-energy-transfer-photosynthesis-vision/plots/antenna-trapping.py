@@ -1,6 +1,6 @@
 # An antenna as a random walk of the excitation on a lattice with a trap (master-equation model).
 # Sites: an L x L square lattice (N = L^2 pigments, periodic boundaries, i.e. a tiling of identical
-# photosynthetic units) with the reaction center (RC) at the center. Hopping between nearest neighbours
+# photosynthetic units) with the reaction center (RC) at the center. Hopping between nearest neighbors
 # obeys detailed balance, k(i -> j) = k0 exp[-(E_j - E_i) / 2kT], k0 = (0.5 ps)^-1. Funnel: site energies
 # rise linearly with the distance from the RC, E_i = eps * r_i / r_max. From the RC the excitation is trapped
 # by charge separation at k_cs = (1 ps)^-1; everywhere it decays (fluorescence, heat) at 1/tau0, tau0 = 2 ns.

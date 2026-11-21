@@ -5,7 +5,7 @@ with Gaussian receptive fields (s.d. 0.5 mm, spaced 1 mm) respond to the local i
 (rectified linear response). Dots 3 mm apart produce an isomorphic image in the population;
 dots 0.6 mm apart are blurred into a nearly uniform response.
 B: temporal code. A fine grating of spatial period lambda scanned at speed v vibrates the skin at
-frequency v / lambda. The Pacinian (PC) afferent response is modelled as the gain of a band-pass
+frequency v / lambda. The Pacinian (PC) afferent response is modeled as the gain of a band-pass
 filter (second-order high-pass with corner 120 Hz times first-order low-pass with corner 400 Hz),
 plotted against spatial period for scanning speeds of 40 and 80 mm/s: the response depends on
 v / lambda, so the same surface drives the PC channel at a frequency that scales with speed.

@@ -3,8 +3,8 @@ as the sister group of all other animals, Xenacoelomorpha as the sister group of
 mark unresolved nodes).
 
 Each row is a phylum (or a chordate subphylum), each column an organ system; the cell gives the adult
-state of the phylum in a few words, coloured by kind of state so that identical states line up as
-colour bands. Variation within phyla is summarized ("open / closed" for molluscs, whose cephalopods
+state of the phylum in a few words, colored by kind of state so that identical states line up as
+color bands. Variation within phyla is summarized ("open / closed" for molluscs, whose cephalopods
 are closed). Reading down a column shows which states are confined to one clade (dorsal hollow nerve
 cord, molted cuticle, compound eyes) and which are scattered across the tree (closed circulation,
 camera eyes, protonephridia), the pattern expected of homology and of convergence respectively.
@@ -22,7 +22,7 @@ NEWICK = ("(Ctenophora,(Porifera,(Placozoa,(Cnidaria,(Xenacoelomorpha,"
           "(Rotifera,(Platyhelminthes,(Mollusca,Annelida,Nemertea,(Brachiopoda,Bryozoa)))))Spiralia)"
           "Protostomia)Nephrozoa))));")
 
-# column -> {phylum: (text, kind)}; kinds map to colour tokens below
+# column -> {phylum: (text, kind)}; kinds map to color tokens below
 NONE = "none"
 COLS = [
     ("Skeleton", {

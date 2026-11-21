@@ -1,5 +1,5 @@
 # A: the main morphotypes of bacteriophages, drawn to one scale (head diameters 60-90 nm).
-# B: the virulent and the temperate life cycle, as one diagram with the decision at its centre.
+# B: the virulent and the temperate life cycle, as one diagram with the decision at its center.
 import numpy as np
 from matplotlib.patches import Circle, Polygon
 

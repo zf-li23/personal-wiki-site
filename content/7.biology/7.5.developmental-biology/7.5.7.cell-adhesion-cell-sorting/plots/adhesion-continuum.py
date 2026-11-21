@@ -2,7 +2,7 @@
 
 Cell density u(x, t) (scaled so that u = 1 is close packing) obeys
     du/dt = D d2u/dx2 - d/dx[ u (1 - u) F ],   F(x) = (alpha / R) int_{-R}^{R} u(x + s) sgn(s) ds,
-an adhesive drift towards neighbours within the sensing range R (an "adhesive trap"), limited by
+an adhesive drift towards neighbors within the sensing range R (an "adhesive trap"), limited by
 crowding through the factor 1 - u (the bound n_max of the text). D = 1, R = 1, alpha = 12, domain
 length 20 R, mean density 0.3 with 1% random perturbations; explicit finite differences
 (400 points, dt = 2e-4).

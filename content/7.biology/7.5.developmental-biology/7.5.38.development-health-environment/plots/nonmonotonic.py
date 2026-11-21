@@ -1,6 +1,6 @@
 """Monotonic and non-monotonic dose-response curves (Formula 38.5.1).
 
-Grey: a monotonic Hill curve (EC50 = 1, n = 1). Coloured: a receptor-mediated effect E(x) = x / (x + EC50)
+Gray: a monotonic Hill curve (EC50 = 1, n = 1). Colored: a receptor-mediated effect E(x) = x / (x + EC50)
 multiplied by a high-dose loss of response 1 / (1 + (x / IC50)^m) (receptor down-regulation, negative
 feedback or toxicity), with EC50 = 0.01 and IC50 = 1, m = 1.5, which gives an inverted U. Doses are relative
 (log scale). Dots: a classical design that tests three high doses (10, 30, 100) and a control; a straight line

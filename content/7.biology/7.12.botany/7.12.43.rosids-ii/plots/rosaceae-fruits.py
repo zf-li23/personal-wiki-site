@@ -1,4 +1,4 @@
-# Floral cups and fruit types of Rosaceae. Top row: schematic longitudinal sections of flowers (grey:
+# Floral cups and fruit types of Rosaceae. Top row: schematic longitudinal sections of flowers (gray:
 # receptacle and floral cup; green: carpels): A Spiraea, shallow cup with five free carpels; B Fragaria,
 # convex receptacle with many free carpels; C Rosa, urn-shaped cup bearing many free carpels on its inner
 # wall; D Prunus, cup-shaped hypanthium around a single carpel; E Malus, carpels fused with the cup,

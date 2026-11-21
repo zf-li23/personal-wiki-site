@@ -5,8 +5,8 @@ neural plate of an amphibian neurula are dissociated in alkaline medium, mixed, 
 reaggregate; the mixed aggregate sorts out, epidermis outside and neural tissue inside.
 B: fusion of two intact fragments (Steinberg): the less cohesive tissue (here liver) spreads over the
 more cohesive one (limb bud mesoderm) and envelops it, the same end state as from a mixture.
-C: the "shish kebab" variant: two aggregates threaded on a glass fibre so that they stay in contact.
-Cells are drawn as circles; colours mark cell types, not germ layers.
+C: the "shish kebab" variant: two aggregates threaded on a glass fiber so that they stay in contact.
+Cells are drawn as circles; colors mark cell types, not germ layers.
 """
 
 import numpy as np
@@ -79,7 +79,7 @@ ax.plot([22.0, 30.5], [2.2, 2.2], color=P.muted(), lw=1.4, zorder=8)
 aggregate((26.0, 2.2), 1.6, "sorted", tokA="mesoderm", tokB="highlight", RA=0.95, offset=(-0.2, 0.0))
 bio.label(ax, (26.0, 0.2), "the less cohesive tissue spreads along the fiber and over its partner", size="tiny")
 
-# legend for A colours
+# legend for A colors
 for k, (tok, name) in enumerate((("ectoderm", "epidermal cell"), ("neuron", "neural plate cell"),
                                   ("mesoderm", "limb bud mesoderm"), ("highlight", "liver"))):
     yy = 12.4 - 0.6 * k

@@ -1,4 +1,4 @@
-# Four host defences a bacterium must survive, with the counter-strategy under each.
+# Four host defenses a bacterium must survive, with the counter-strategy under each.
 from matplotlib.patches import Circle, Rectangle
 
 import wikibio as bio

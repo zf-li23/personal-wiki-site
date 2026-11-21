@@ -1,9 +1,9 @@
 """The jamming avoidance response of Eigenmannia (phenomenological model).
 
-A: steady-state frequency shift of the fish against df (neighbour minus own frequency): the fish
-moves away from the neighbour, most strongly for |df| of a few hertz; the shift is an odd
+A: steady-state frequency shift of the fish against df (neighbor minus own frequency): the fish
+moves away from the neighbor, most strongly for |df| of a few hertz; the shift is an odd
 function of df, fitted here as -sign(df) A (|df|/f0) exp(1 - |df|/f0) with A = 6 Hz, f0 = 4 Hz.
-B: time course when a neighbour mimic at df = +3 Hz is switched on for 60 s: the fish lowers its
+B: time course when a neighbor mimic at df = +3 Hz is switched on for 60 s: the fish lowers its
 EOD frequency with a time constant of about 10 s and drifts back after the stimulus ends.
 Shapes and magnitudes are illustrative.
 """

@@ -1,4 +1,4 @@
-"""Acid-catalysed hydrolysis of an amide (acetamide). The amide is protonated on oxygen (not on
+"""Acid-catalyzed hydrolysis of an amide (acetamide). The amide is protonated on oxygen (not on
 nitrogen, whose lone pair is delocalized into the carbonyl); water adds to the activated carbonyl
 carbon. Proton transfer to nitrogen turns NH2 into NH3+, a good leaving group, which the hydroxyl
 pushes out. Ammonia is then protonated (pKa of NH4+ 9.25), which makes the reaction irreversible

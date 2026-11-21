@@ -1,9 +1,9 @@
 """Changes of translation measured by ribosome profiling (simulated data and a model). A: log2 fold changes
 of mRNA (RNA-seq) and of ribosome footprints (RPF) for 3000 genes, three replicates per condition and
-assay, analysed by a linear model on log counts per million with the interaction of condition and assay,
+assay, analyzed by a linear model on log counts per million with the interaction of condition and assay,
 whose coefficient is the change of log2 translation efficiency. Classes as in deltaTE: forwarded
 (mRNA and RPF change together, TE unchanged), exclusive (TE changes without an mRNA change), buffered
-(TE change opposes an mRNA change), intensified (both change in the same direction); grey: no
+(TE change opposes an mRNA change), intensified (both change in the same direction); gray: no
 significant change (BH-adjusted p < 0.05). B, C: model profiles of ribosome density along a 300-codon
 coding sequence with a 50-codon 5' leader, normalized to the control: B, a block of scanning in the
 leader lowers footprints on the coding sequence uniformly and accumulates them upstream (an

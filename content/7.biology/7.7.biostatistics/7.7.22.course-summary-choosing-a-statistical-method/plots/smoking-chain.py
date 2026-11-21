@@ -2,7 +2,7 @@
 
 All values are those computed in the chapters (7.7.n): point estimates with 95 % intervals; open markers
 are point estimates for which the chapter reports no interval.
-A: FEV of 654 children (Tager et al. 1979; public version Kahn 2005), smoking coefficient in litres by
+A: FEV of 654 children (Tager et al. 1979; public version Kahn 2005), smoking coefficient in liters by
    adjustment set (7.7.10, 7.7.15).
 B: birthwt (189 births, Hosmer and Lemeshow), effect of maternal smoking on birth weight in grams by
    method (7.7.7, 7.7.12, 7.7.15; bootstrap intervals except matching).

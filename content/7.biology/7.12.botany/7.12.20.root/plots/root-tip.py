@@ -1,6 +1,6 @@
 # Zones of the root tip (longitudinal section, tip down): root cap, meristematic zone (apical
-# meristem with the quiescent centre), elongation zone and maturation zone (root hairs); lateral roots
-# emerge further back. Template from bioicons (root longitudinal section), zones coloured.
+# meristem with the quiescent center), elongation zone and maturation zone (root hairs); lateral roots
+# emerge further back. Template from bioicons (root longitudinal section), zones colored.
 import wikibio as bio
 from wikibio import plantmorph as PM
 

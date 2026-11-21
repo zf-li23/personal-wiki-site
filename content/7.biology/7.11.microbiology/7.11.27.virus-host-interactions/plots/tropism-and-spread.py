@@ -1,7 +1,7 @@
 # Host range, tropism and spread within a host.
 # A: three receptor requirements and the cells they restrict the virus to.
-# B: the routes a virus takes once it has entered: local replication, haematogenous spread in two
-#    stages of viraemia, or retrograde axonal transport along peripheral nerves, and then shedding.
+# B: the routes a virus takes once it has entered: local replication, hematogenous spread in two
+#    stages of viremia, or retrograde axonal transport along peripheral nerves, and then shedding.
 import wikibio as bio
 
 P = bio.P
@@ -54,8 +54,8 @@ stage((1.9, 1.95), 3.0, 1.5, "metabolite", "Entry",
       "respiratory tract,\nalimentary tract, urogenital\ntract, conjunctiva, skin breach")
 stage((5.6, 1.95), 2.7, 1.0, "bacterium", "Local replication", "at the portal of entry")
 stage((9.7, 2.95), 4.3, 0.95, "neutral", "Local disease", "influenza virus, rotavirus")
-stage((9.7, 1.75), 4.3, 1.15, "blood", "Haematogenous spread",
-      "primary viraemia → liver, spleen,\nlymph node → secondary viraemia")
+stage((9.7, 1.75), 4.3, 1.15, "blood", "Hematogenous spread",
+      "primary viremia → liver, spleen,\nlymph node → secondary viremia")
 stage((9.7, 0.45), 4.3, 0.95, "neuron", "Neural spread", "retrograde axonal transport")
 stage((14.4, 1.75), 3.8, 1.4, "animal", "Target organ",
       "poliovirus → motor neurons\nmeasles virus → skin\nrabies virus → brain")

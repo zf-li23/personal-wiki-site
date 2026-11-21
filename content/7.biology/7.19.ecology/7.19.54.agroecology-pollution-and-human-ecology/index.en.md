@@ -81,7 +81,7 @@ flowchart LR
   S[Sunlight] --> M[Mulberry on dikes]
   M -->|leaves| W[Silkworms]
   W -->|silk| H[Harvest: silk]
-  W -->|faeces and pupae| F[Fish in pond]
+  W -->|feces and pupae| F[Fish in pond]
   F -->|fish| H2[Harvest: fish]
   F -->|excreta, dead plankton| D[Pond mud]
   D -->|dredged onto dikes| M

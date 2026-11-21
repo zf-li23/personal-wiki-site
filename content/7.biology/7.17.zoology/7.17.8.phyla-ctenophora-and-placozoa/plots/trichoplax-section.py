@@ -1,5 +1,5 @@
 # Schematic cross-section through the edge of a placozoan (Trichoplax): lower epithelium of tall
-# monociliate cells with lipophil and gland cells, thin upper epithelium with shiny spheres, fibre cells
+# monociliate cells with lipophil and gland cells, thin upper epithelium with shiny spheres, fiber cells
 # between the layers, crystal cells near the rim; a temporary feeding pocket over algae.
 import numpy as np
 import wikibio as bio
@@ -58,7 +58,7 @@ for i in range(22):
     if i % 3 == 1:
         ax.add_patch(Ellipse((x + 0.5, yu + 0.28), 0.36, 0.3, facecolor=P.fill("highlight"), edgecolor=P.edge("highlight"), lw=0.6, zorder=8))
 
-# fibre cells in the middle layer
+# fiber cells in the middle layer
 rng = np.random.default_rng(2)
 for xc in (4.5, 9.0, 13.2, 17.6, 21.5):
     yc = 4.6 + (0.3 if 16 <= xc <= 20 else 0)

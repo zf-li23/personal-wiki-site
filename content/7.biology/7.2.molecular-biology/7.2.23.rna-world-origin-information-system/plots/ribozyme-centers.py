@@ -1,12 +1,12 @@
-# The catalytic centres of four ribozymes, drawn as "what must be aligned" rather than as folds.
+# The catalytic centers of four ribozymes, drawn as "what must be aligned" rather than as folds.
 # A: group I intron - an exogenous guanosine bound in a pocket attacks the 5' splice site, which the internal
 #    guide sequence holds by base pairing; two metal ions (A activates the nucleophile, B stabilizes the
 #    leaving 3'-oxygen).
-# B: group II intron and the U2/U5/U6 centre of the spliceosome - the 2'-OH of a bulged branch-point adenosine
+# B: group II intron and the U2/U5/U6 center of the spliceosome - the 2'-OH of a bulged branch-point adenosine
 #    attacks the same phosphate, giving a lariat; the metals are held by domain V (by U6 in the spliceosome).
 # C: RNase P - a metal-activated water attacks the phosphodiester 5' of the mature tRNA; the enzyme reads the
 #    shape of the acceptor stem and the CCA end, not a sequence.
-# D: peptidyl transferase centre - the alpha-amino group of the A-site aminoacyl-tRNA attacks the ester carbonyl
+# D: peptidyl transferase center - the alpha-amino group of the A-site aminoacyl-tRNA attacks the ester carbonyl
 #    of the peptidyl-tRNA, with the 2'-OH of A76 shuttling the proton; no protein side chain reaches the site.
 import numpy as np
 import wikibio as bio
@@ -105,7 +105,7 @@ metals([(3.9, yC + 0.25)], names=("Mg",))
 bio.label(ax, (2.6, yC - 0.5), "metal-activated\nwater", size="tiny", color=P.muted())
 bio.box(ax, (7.0, yC - 1.3), 5.0, 0.74, token="rna", text="M1 RNA reads shape, not sequence", size="tiny", radius=0.1)
 
-# ----------------------------------------------------------------- D: peptidyl transferase centre
+# ----------------------------------------------------------------- D: peptidyl transferase center
 bio.panel(ax, "D", (12.9, 6.2))
 bio.label(ax, (15.8, 6.2), "Peptidyl transferase center", size="small", bold=True, ha="left")
 yD = 3.4

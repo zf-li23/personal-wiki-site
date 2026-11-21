@@ -1,5 +1,5 @@
 # The four signatures of a structural variant in mapped paired-end reads, drawn for a deletion, a
-# tandem duplication and an inversion. In each panel the reference is the grey bar, the sample's true
+# tandem duplication and an inversion. In each panel the reference is the gray bar, the sample's true
 # arrangement is shown above it, and below are the read pairs as they appear after mapping: mates as
 # arrows (direction = strand) joined by a thin line. A deletion gives pairs whose insert is larger than
 # expected, reads split across the breakpoint (soft-clipped, drawn in two parts) and a drop in depth; a

@@ -1,6 +1,6 @@
 """Map of membrane and protein flow through the compartments of an animal cell, with the rates of the course.
 
-Boxes are compartments tinted by organelle colour; arrows are the main flows, coloured by direction
+Boxes are compartments tinted by organelle color; arrows are the main flows, colored by direction
 (secretory, endocytic, recycling and retrieval, translocation from the cytosol). Numbers are the
 typical values quoted in chapters 7.3.6-7.3.11 and 7.3.16-7.3.17 (fibroblasts, HeLa cells,
 pancreatic acinar cells); pH values are lumenal. Every compartment of constant size is a steady
@@ -32,7 +32,7 @@ nodes = {  # key: (center, width, text, token)
     "pm": ((13.5, 0.55), 26.4, "Plasma membrane and exterior", "extracellular"),
 }
 for k, (c, w, t, tok) in nodes.items():
-    # compartment tints turn dark in the dark theme: write their names in the ink colour
+    # compartment tints turn dark in the dark theme: write their names in the ink color
     dark = tok in ("cytoplasm", "nucleus", "extracellular")
     bio.box(ax, c, w, H if k != "pm" else 0.8, token=tok, text=None if dark else t, size="small")
     if dark:

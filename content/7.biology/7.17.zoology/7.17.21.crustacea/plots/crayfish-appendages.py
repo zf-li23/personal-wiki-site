@@ -1,10 +1,10 @@
 # The 19 pairs of appendages of a crayfish (Malacostraca: Astacidea), from head to tail, drawn as schematic
-# left limbs (not to scale) and coloured by function. Head: first antennae (antennules: two flagella,
+# left limbs (not to scale) and colored by function. Head: first antennae (antennules: two flagella,
 # statocyst at the base), second antennae (long flagellum and a scale, the exopod), mandibles (with palp),
 # first maxillae (maxillules), second maxillae (with the scaphognathite, which bails water through the
 # gill chamber). Thorax: three maxillipeds, the cheliped and four walking legs (pereiopods 2-3 with small
 # chelae). Abdomen: five pleopods (in males the first two are gonopods) and the uropods, which with the
-# telson form the tail fan. All are serial homologues of one biramous limb.
+# telson form the tail fan. All are serial homologs of one biramous limb.
 import numpy as np
 import wikibio as bio
 

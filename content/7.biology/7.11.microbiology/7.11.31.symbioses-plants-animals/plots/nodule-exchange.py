@@ -7,7 +7,7 @@ import wikibio as bio
 P = bio.P
 fig, ax = bio.canvas(26, 11)
 
-# ---------------- A: signalling steps
+# ---------------- A: signaling steps
 bio.panel(ax, "A", (0.2, 10.8))
 bio.label(ax, (2.6, 10.3), "Rhizobium", italic=True, size="small")
 bio.label(ax, (8.6, 10.3), "legume root hair", size="small")

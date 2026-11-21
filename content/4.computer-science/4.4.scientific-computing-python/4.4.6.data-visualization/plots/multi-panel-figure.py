@@ -59,7 +59,7 @@ ax_b.set_ylim(0, None)
 ax_b.set_ylabel("OD600 at 12 h")
 ax_b.set_title("Replicates at 12 h", fontsize=10)
 
-# (C) heatmap with a diverging colormap centred at zero
+# (C) heatmap with a diverging colormap centered at zero
 lim = np.abs(z).max()
 im = ax_c.imshow(z, cmap="RdBu_r", vmin=-lim, vmax=lim, aspect="auto")
 ax_c.set_xticks(range(6), [f"S{j + 1}" for j in range(6)])

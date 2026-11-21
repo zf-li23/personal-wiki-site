@@ -1,6 +1,6 @@
-"""Why aryl amines are weak bases. Top: the nitrogen lone pair of aniline is delocalised into the
+"""Why aryl amines are weak bases. Top: the nitrogen lone pair of aniline is delocalized into the
 ring; the resonance structures put negative charge on the ortho and para carbons (one ortho
-structure shown). Protonation on nitrogen removes this delocalisation, so aniline is about 10^6 times
+structure shown). Protonation on nitrogen removes this delocalization, so aniline is about 10^6 times
 less basic than cyclohexylamine. Bottom: in 4-nitroaniline the para nitro group accepts the lone
 pair directly through the ring, which lowers the basicity much further (pKa of the conjugate acid
 1.0, against 2.47 for 3-nitroaniline, where only the inductive effect operates)."""

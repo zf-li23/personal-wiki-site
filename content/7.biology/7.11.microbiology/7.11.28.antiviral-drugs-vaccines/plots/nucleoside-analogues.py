@@ -1,12 +1,12 @@
-# How a nucleoside analogue works, and where its selectivity comes from.
+# How a nucleoside analog works, and where its selectivity comes from.
 # A: the activation pathway of acyclovir - only the infected cell makes the monophosphate.
-# B: a competition model. If a polymerase incorporates the analogue triphosphate with efficiency
+# B: a competition model. If a polymerase incorporates the analog triphosphate with efficiency
 #    (kcat/Km) a relative to the natural nucleotide, the chance that a given incorporation uses the
-#    analogue is  p = a r / (1 + a r)  with r the concentration ratio [analogue-TP]/[dNTP]; the chance
+#    analog is  p = a r / (1 + a r)  with r the concentration ratio [analog-TP]/[dNTP]; the chance
 #    that a chain of n = 100 nucleotides is terminated is 1 - (1 - p)^n. A polymerase that
 #    discriminates strongly (small a) needs a far higher ratio to be stopped: the window between the
 #    two curves is the therapeutic window.
-# C: the three modes of action of nucleoside analogues.
+# C: the three modes of action of nucleoside analogs.
 import numpy as np
 
 import wikibio as bio
@@ -60,7 +60,7 @@ def terminated(a):
 
 
 pl = quant.Plot(ax, (8.9, 2.0, 3.9, 4.5), xlim=(-3, 3), ylim=(0, 1.05),
-                xlabel="$\\log_{10}$ ([analogue-TP] / [dNTP])", ylabel="chains terminated",
+                xlabel="$\\log_{10}$ ([analog-TP] / [dNTP])", ylabel="chains terminated",
                 xticks=[-3, -1, 1, 3], yticks=[0, 0.5, 1])
 pl.line(np.log10(r), terminated(1.0), "virus", text="viral polymerase\n($a = 1$)", at=0.12, dy=0.42)
 pl.line(np.log10(r), terminated(3e-4), "bacterium", dashed=True,
@@ -80,7 +80,7 @@ MODES = [
     (6.2, "Obligate chain termination", "no 3′-OH: synthesis stops at once", "acyclovir, zidovudine, tenofovir"),
     (4.1, "Delayed termination", "a few more nucleotides are added,\nthen the polymerase stalls",
      "sofosbuvir, remdesivir"),
-    (2.0, "Lethal mutagenesis", "the analogue pairs ambiguously and\nraises the error rate past the threshold",
+    (2.0, "Lethal mutagenesis", "the analog pairs ambiguously and\nraises the error rate past the threshold",
      "ribavirin, molnupiravir"),
 ]
 for y, title, how, examples in MODES:

@@ -2,7 +2,7 @@
 scores are illustrative, not taken from a database). A: a small network of eight proteins; each
 edge is labeled with its combined score S, computed from the channel scores after removing the
 prior probability p = 0.041 that two random proteins are linked. Thick blue: S >= 0.7 (high
-confidence); black: 0.4 <= S < 0.7 (medium); dashed grey: S < 0.4. B: the channels of the pair
+confidence); black: 0.4 <= S < 0.7 (medium); dashed gray: S < 0.4. B: the channels of the pair
 A-B: no single channel exceeds 0.62, but four independent moderate channels combine to 0.93."""
 
 import numpy as np

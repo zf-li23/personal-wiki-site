@@ -2,7 +2,7 @@
 # A: monovalent isotherm theta = c/(K_D + c) and the apparent isotherm of a bivalent antibody on a multivalent surface,
 #    K_D,app = K_D / (1 + c_eff/K_D): avidity can make up for a 100-fold weaker site.
 # B: Scatchard plot r/c against r for an antibody with n = 2 sites: straight lines for one affinity, concave for a mixture.
-# C: precipitin behaviour of bivalent antibody and an antigen of valence n (Flory-Stockmayer connectivity index).
+# C: precipitin behavior of bivalent antibody and an antigen of valence n (Flory-Stockmayer connectivity index).
 import numpy as np
 
 import wikibio as bio

@@ -374,7 +374,7 @@ def fisher_imex(u, D, r, dx, dt, steps):
     ab[0, 1:] = -lam
     ab[1, :] = 1 + 2 * lam
     ab[2, :-1] = -lam
-    ab[1, 0] = ab[1, -1] = 1 + lam         # zero flux: end cells have one neighbour
+    ab[1, 0] = ab[1, -1] = 1 + lam         # zero flux: end cells have one neighbor
     for _ in range(steps):
         u = solve_banded((1, 1), ab, u + dt * r * u * (1 - u))
     return u

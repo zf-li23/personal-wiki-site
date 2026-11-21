@@ -1,7 +1,7 @@
 ---
 title: Descriptive Statistics and Data Display
 description: Measures of location (mean, median, mode, geometric mean), measures of spread (range, interquartile range, standard deviation, coefficient of variation, MAD), quantiles and medical reference intervals, skewness and kurtosis, z-scores, frequency tables and statistical graphics (histograms, stem-and-leaf plots, box plots, QQ plots), and the identification and handling of outliers, illustrated with the FEV and birthwt data.
-source_hash: 57f72e3415a8
+source_hash: 656c7813b17c
 ---
 
 When we receive a dataset, the first step is not to run a test but to look at it: where the data are concentrated, how widely they are spread, what shape the distribution has, and whether any values are implausible. Descriptive statistics answers these questions with a few numbers and a few graphs. It determines all later choices: whether skewed data are summarized by the median or the mean, whether to take logarithms, whether methods based on the normal distribution can be used; it is also the best opportunity to discover data entry errors and unexpected patterns. This chapter follows the two datasets introduced in [7.7.1](/7.7.1): the lung function (FEV) of 654 children and the birth weight (birthwt) of 189 newborns, with antibody titers and ELISA replicate wells as laboratory examples. In the FEV plots we see for the first time the source of the paradox "smoking children have better lung function". The mathematical properties of sample moments, order statistics and the empirical distribution function are in [3.2.1](/3.2.1); this chapter treats their use, and their pitfalls, with biomedical data.
@@ -328,8 +328,8 @@ print(stats.skew(x), stats.kurtosis(x))              # kurtosis is excess kurtos
 print(stats.skew(np.log(x)))                         # the log transform removes most skewness
 
 # geometric mean of antibody titers
-titre = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
-print(stats.gmean(titre))                            # 47.6
+titer = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
+print(stats.gmean(titer))                            # 47.6
 
 # frequency table with 0.5 L bins, left-closed intervals
 table = pd.cut(fev["fev"], np.arange(0.5, 6.01, 0.5), right=False).value_counts(sort=False)

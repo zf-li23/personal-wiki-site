@@ -24,7 +24,7 @@ def band(pts, lw=2.6, z=8):
 
 
 def gut(cx, cy, z=5):
-    # oesophagus from the mouth, stomach, intestine to the anus at the posterior pole
+    # esophagus from the mouth, stomach, intestine to the anus at the posterior pole
     ax.add_patch(Polygon(np.r_[[(cx - 0.18, cy - 0.3), (cx - 0.12, cy + 0.6), (cx + 0.12, cy + 0.6), (cx + 0.18, cy - 0.3)]],
                          closed=True, facecolor=P.fill("endoderm"), edgecolor=P.edge("endoderm"), lw=0.8, zorder=z))
     ax.add_patch(Ellipse((cx, cy + 0.95), 1.3, 1.0, facecolor=P.fill("endoderm"), edgecolor=P.edge("endoderm"), lw=0.8, zorder=z))

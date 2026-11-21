@@ -1,4 +1,4 @@
-# Sensing of viral nucleic acid, induction of interferon, and the antiviral state in the neighbour cell.
+# Sensing of viral nucleic acid, induction of interferon, and the antiviral state in the neighbor cell.
 # Red bars mark documented viral antagonists.
 import wikibio as bio
 
@@ -60,7 +60,7 @@ bio.molecule(ax, (11.6, 3.5), token="metabolite", text="IFN", r=0.28, size="tiny
 bio.arrow(ax, (7.4, 1.75), (10.5, 2.3), kind="process", bend=-0.10)
 bio.label(ax, (9.4, 0.95), "type I (IFN-α/β) and type III (IFN-λ)\nsecreted", size="tiny", color=P.muted())
 
-# ---------------------------------------------------------------- the neighbouring cell
+# ---------------------------------------------------------------- the neighboring cell
 bio.box(ax, (15.4, 5.1), 6.6, 8.8, token="cytoplasm", radius=0.6)
 bio.label(ax, (12.4, 9.15), "Neighboring cell", size="small", bold=True, ha="left")
 bio.receptor(ax, 15.3, 8.2, kind="rtk", token="receptor", text=None)

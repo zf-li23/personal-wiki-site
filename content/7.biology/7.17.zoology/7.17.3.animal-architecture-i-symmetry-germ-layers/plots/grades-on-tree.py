@@ -1,7 +1,7 @@
 """Traditional body-plan grades mapped onto the current animal phylogeny (cladogram after Laumer et al.
 2019 and the summary in 7.17.6; the position of Xenacoelomorpha and the root are uncertain).
 
-For each phylum the adult body cavity is shown as a small cross-section coloured by germ layer: none
+For each phylum the adult body cavity is shown as a small cross-section colored by germ layer: none
 (sponges, placozoans), diploblastic with only a gut, acoelomate, pseudocoelomate (blastocoelomate) or
 coelomate; "hemocoel" marks phyla whose main body cavity is a blood space with the coelom reduced.
 Acoelomate, blastocoelomate and coelomate phyla are interspersed on the tree: none of these grades is a

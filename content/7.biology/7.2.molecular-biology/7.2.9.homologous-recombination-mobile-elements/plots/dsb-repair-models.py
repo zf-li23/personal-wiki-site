@@ -1,6 +1,6 @@
 # Double-strand-break repair by homologous recombination: SDSA and DSBR (double Holliday junction).
-# Broken duplex blue, intact homologue pink; upper strand of each duplex runs 5'->3' left to right.
-# Arrowheads mark 3' ends; dashed segments are new DNA (pink dashes: copied from the homologue,
+# Broken duplex blue, intact homolog pink; upper strand of each duplex runs 5'->3' left to right.
+# Arrowheads mark 3' ends; dashed segments are new DNA (pink dashes: copied from the homolog,
 # blue dashes: copied from the blue duplex).
 import numpy as np
 import wikibio as bio
@@ -99,7 +99,7 @@ bio.label(ax, (0.8, y3t + 1.55), "DSBR (continuing from 3)", size="normal", bold
 x0 = cols[0]; xm = x0 + W / 2; yt = y3t; yh = yt - gap
 title(x0, yt, 6, "Second-end capture: double HJ")
 xa, xb = xm - 1.2, xm + 1.4
-# blue upper: crosses down at xa, runs in homologue position, crosses up at xb
+# blue upper: crosses down at xa, runs in homolog position, crosses up at xb
 line([(x0, yt + s), (xa - 0.25, yt + s), (xa + 0.25, yh + s), (xm - 0.1, yh + s)], BL)
 line([(xm - 0.1, yh + s), (xb - 0.25, yh + s)], PK, dashed=True)
 line([(xb - 0.25, yh + s), (xb + 0.25, yt + s), (x0 + W, yt + s)], BL, arrow=True)
@@ -144,7 +144,7 @@ bio.arrow(ax, (3.4, y3t - 2.35), (18.2, y3t - 2.35), kind="process", bend=-0.04)
 bio.label(ax, (10.8, y3t - 2.05), "or", size="tiny", color=P.muted())
 ly = 0.45
 for k, (tok, dashed, text) in enumerate(((BL, False, "broken duplex"), (PK, False, "homologue"),
-                                         (PK, True, "new DNA copied from homologue"), (BL, True, "new DNA copied from blue duplex"))):
+                                         (PK, True, "new DNA copied from homolog"), (BL, True, "new DNA copied from blue duplex"))):
     xx = 0.8 + k * 5.3
     line([(xx, ly), (xx + 0.7, ly)], tok, dashed=dashed)
     bio.label(ax, (xx + 0.9, ly), text, size="tiny", ha="left")

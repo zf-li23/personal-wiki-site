@@ -9,7 +9,7 @@
 # is shared among them; in the first segment it falls on haplotype 23, which matches the target at all typed
 # SNPs, while haplotype 3 differs at one of them through the target's own error. B: the
 # imputed probability of allele 1 at the 240 untyped SNPs (posterior-weighted panel alleles, with the posterior
-# interpolated linearly between typed SNPs), coloured by the true allele, and the accuracy against imputing
+# interpolated linearly between typed SNPs), colored by the true allele, and the accuracy against imputing
 # the panel's majority allele.
 import numpy as np
 from matplotlib.patches import Rectangle

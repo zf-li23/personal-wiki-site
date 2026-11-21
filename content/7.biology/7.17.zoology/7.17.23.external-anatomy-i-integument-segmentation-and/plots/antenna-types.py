@@ -5,7 +5,7 @@
 # (setaceous), bead-like (moniliform), saw-toothed (serrate), gradually or abruptly clubbed (clavate,
 # capitate), comb-like (pectinate), feathery (plumose; hearing in male mosquitoes), with plate-like
 # terminal lamellae (lamellate; scarabs), elbowed after a long scape (geniculate), or reduced to an
-# enlarged postpedicel carrying a bristle, the arista (aristate; cyclorrhaphan flies). Colours: scape
+# enlarged postpedicel carrying a bristle, the arista (aristate; cyclorrhaphan flies). Colors: scape
 # yellow, pedicel orange, flagellum blue. Examples are typical groups, not exclusive ones.
 import wikibio as bio
 from wikibio import zoomorph as zm

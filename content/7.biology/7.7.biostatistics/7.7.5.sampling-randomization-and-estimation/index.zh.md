@@ -73,9 +73,9 @@ def block_randomization(n, block_sizes=(4, 6), arms=("A", "B")):
         out.extend(rng.permutation(block))
     return out[:n]
 
-# stratified randomization: a separate sequence for each centre
-schedule = {centre: block_randomization(40) for centre in ["centre 1", "centre 2", "centre 3"]}
-print(schedule["centre 1"][:12])
+# stratified randomization: a separate sequence for each center
+schedule = {center: block_randomization(40) for center in ["center 1", "center 2", "center 3"]}
+print(schedule["center 1"][:12])
 ```
 
 ### 5.2.3. 盲法

@@ -1,4 +1,4 @@
-# Map of pattern-recognition receptors in a cell and their signalling (SBGN-style activity flow):
+# Map of pattern-recognition receptors in a cell and their signaling (SBGN-style activity flow):
 # plasma-membrane TLRs (MyD88 -> NF-kB), endosomal TLRs (TRIF -> IRF3; MyD88 -> IRF7), cytosolic RLRs
 # (MAVS on mitochondria), cGAS-STING (ER), NOD1/2 (RIPK2), and the NLRP3 inflammasome (caspase-1).
 import wikibio as bio

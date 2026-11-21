@@ -6,7 +6,7 @@
 # with a Savitzky-Golay filter, resolves the components (narrow bands are enhanced as 1/width^2).
 # C: a least-squares fit with five Gaussians started from the second-derivative positions. The fit reproduces
 # the envelope within the noise, yet the area fractions (equal absorptivity assumed) differ from the true
-# ones: with free widths, a broad component can absorb its neighbours, so band fitting is not unique.
+# ones: with free widths, a broad component can absorb its neighbors, so band fitting is not unique.
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit

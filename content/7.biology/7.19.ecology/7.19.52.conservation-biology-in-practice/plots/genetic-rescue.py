@@ -8,7 +8,7 @@ q_t is the proportion of immigrants (outbred, F = 0, unrelated) among breeders t
 immigrant parent are not inbred, so with random mating a fraction (1 - q)^2 of matings are between residents
 (the effect is applied in the year of release, a simplification of the spread of immigrant ancestry).
 Start: N = 25, F = 0.25 (near its equilibrium, which declines as F rises). Rescue: 8 immigrants released in year 10.
-A: population size, 30 replicates each without (grey) and with rescue (blue); thick lines: medians.
+A: population size, 30 replicates each without (gray) and with rescue (blue); thick lines: medians.
 B: mean inbreeding coefficient F and expected heterozygosity relative to an outbred population, 1 - F.
 C: probability of persistence for 100 years against the number of immigrants released once in year 10
 (points), and with one immigrant every 5 years thereafter in addition (squares); 400 replicates each.

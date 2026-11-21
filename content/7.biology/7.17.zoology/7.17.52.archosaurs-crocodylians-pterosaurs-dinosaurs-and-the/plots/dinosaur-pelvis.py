@@ -3,7 +3,7 @@
 # pointing forward and down (propubic). Ornithischian (e.g. an ornithopod): the pubis is rotated backward
 # beside the ischium (opisthopubic) and has a forward prepubic process. Bird: the pubis is also rotated
 # backward, convergently with ornithischians, and the long ilium is fused with the synsacrum. All have a
-# perforate (open) acetabulum, a dinosaur synapomorphy. Bones in the course-wide homology colours.
+# perforate (open) acetabulum, a dinosaur synapomorphy. Bones in the course-wide homology colors.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

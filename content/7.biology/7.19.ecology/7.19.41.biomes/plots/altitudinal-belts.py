@@ -1,5 +1,5 @@
-# Altitudinal zonation on three mountains in China (simplified; approximate boundaries in metres).
-# Same vegetation type -> same colour across mountains.
+# Altitudinal zonation on three mountains in China (simplified; approximate boundaries in meters).
+# Same vegetation type -> same color across mountains.
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 import wikibio as bio

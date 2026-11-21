@@ -3,10 +3,10 @@ and colleagues 2010).
 
 Model: N = 16 equipotent stem cells sit on a ring at the crypt base. Each stem cell is lost (pushed out of
 the niche to differentiate) at rate lambda = 1 per day and is replaced by the division of one of its two
-neighbours, chosen at random. A clone labelled in one stem cell then stays contiguous and its size n
-(number of labelled stem cells) performs a symmetric random walk, n -> n + 1 and n -> n - 1 each at rate
+neighbors, chosen at random. A clone labeled in one stem cell then stays contiguous and its size n
+(number of labeled stem cells) performs a symmetric random walk, n -> n + 1 and n -> n - 1 each at rate
 lambda, absorbed at n = 0 (clone lost) and n = N (crypt monoclonal). A: snapshots of one simulated crypt
-base (labelled cells dark). B: fraction of crypts that still contain the clone, and fraction that have become
+base (labeled cells dark). B: fraction of crypts that still contain the clone, and fraction that have become
 monoclonal, among 20000 simulated crypts; the monoclonal fraction tends to 1/N = 6.25 %, the probability that
 a given stem cell's progeny takes over the crypt, and the conditional time to monoclonality is
 (N^2 - 1) / (6 lambda), about 42 days here. C: distribution of clone size among surviving, not yet monoclonal

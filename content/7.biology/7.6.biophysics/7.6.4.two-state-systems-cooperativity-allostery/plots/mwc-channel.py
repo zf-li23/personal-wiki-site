@@ -1,5 +1,5 @@
 """The MWC model of a ligand-gated channel with n = 2 binding sites (nicotinic acetylcholine
-receptor). The closed state is favoured by eps = eps_open - eps_closed (L = e^eps), and the ligand
+receptor). The closed state is favored by eps = eps_open - eps_closed (L = e^eps), and the ligand
 binds the open state more tightly (K_O < K_C). A: open probability (solid) and occupancy of the
 sites (dashed) against c/K_C for K_C/K_O = 100 and eps = 3, 5, 7 kBT: raising eps lowers the
 leak 1/(1 + L) and shifts the response to higher concentrations, and activity and occupancy no

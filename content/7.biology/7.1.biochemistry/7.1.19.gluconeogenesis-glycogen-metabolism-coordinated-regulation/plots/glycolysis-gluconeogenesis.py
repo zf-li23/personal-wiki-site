@@ -1,6 +1,6 @@
 """Opposing pathways of glycolysis and gluconeogenesis in the liver.
 
-The seven near-equilibrium steps are shared (double heads, centre column). At the three
+The seven near-equilibrium steps are shared (double heads, center column). At the three
 irreversible steps glycolysis (left arcs) and gluconeogenesis (right arcs) use different enzymes:
 hexokinase / glucose 6-phosphatase (in the ER lumen), PFK-1 / FBPase-1, and pyruvate kinase /
 the pyruvate carboxylase + PEP carboxykinase bypass, which passes through the mitochondrial matrix

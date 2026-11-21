@@ -55,7 +55,7 @@ def wild_panicle(top, d):
 
 
 def crop_panicle(top, d):
-    # compact panicle bending outwards under the weight of many awnless straw-coloured grains
+    # compact panicle bending outwards under the weight of many awnless straw-colored grains
     sign = 1 if d >= 0 else -1
     for off in (-0.2, 0.0, 0.2):
         a = d + sign * 1.9 + off
@@ -91,7 +91,7 @@ bio.callout(ax, (tops_c[3][0] + 0.8, tops_c[3][1] - 0.9), (24.6, 4.8), "grains r
 bio.label(ax, (24.6, 9.35), "Gn1a, GS3, GW2, GW5", size="small", italic=True, ha="right")
 bio.label(ax, (24.6, 8.75), "awnless (An-1), straw hulls (Bh4)", size="small", ha="right")
 
-# Dehulled grains: pericarp colour
+# Dehulled grains: pericarp color
 for (x, token, txt) in ((2.0, "mitochondrion", "red pericarp (Rc)"), (21.6, "highlight", "white pericarp (rc)")):
     ax.add_patch(Ellipse((x, 0.45), 0.9, 0.42, facecolor=bio.P.fill(token), edgecolor=bio.P.edge(token), lw=0.8))
     bio.label(ax, (x + 0.65, 0.45), txt, size="small", ha="left")

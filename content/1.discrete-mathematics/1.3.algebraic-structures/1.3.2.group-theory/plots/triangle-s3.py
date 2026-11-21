@@ -1,8 +1,8 @@
 """The six symmetries of an equilateral triangle and the Cayley table of the group they form, S_3
-(Example 2.4.1). Top: the image of the labelled triangle under each symmetry; r is the rotation by
+(Example 2.4.1). Top: the image of the labeled triangle under each symmetry; r is the rotation by
 120 degrees, the cycle (1 2 3), and s_i the reflection in the axis through vertex i. Bottom: the
 Cayley table, entry xy in row x and column y, where xy means "first y, then x"; each element has its
-own colour, every row and column contains each element once, and the table is not symmetric about its
+own color, every row and column contains each element once, and the table is not symmetric about its
 diagonal because the group is not commutative."""
 
 import numpy as np

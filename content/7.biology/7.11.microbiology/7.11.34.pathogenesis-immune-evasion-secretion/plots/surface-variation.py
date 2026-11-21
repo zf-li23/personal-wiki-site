@@ -1,4 +1,4 @@
-# Antigenic variation (gene conversion), phase variation (DNA inversion), and the waves of bacteraemia they cause.
+# Antigenic variation (gene conversion), phase variation (DNA inversion), and the waves of bacteremia they cause.
 import numpy as np
 from matplotlib.patches import Rectangle
 

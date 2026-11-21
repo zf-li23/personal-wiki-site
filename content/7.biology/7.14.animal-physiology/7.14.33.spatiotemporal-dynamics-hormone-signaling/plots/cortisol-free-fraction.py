@@ -2,7 +2,7 @@
 # Equilibrium binding of total cortisol Ct to CBG (total 700 nM) and, optionally, albumin (a low-affinity,
 # effectively unsaturable binder with [Alb]/Kd_alb = 1.5): free F solves
 #   Ct = F (1 + 1.5) + 700 F / (Kd + F)        (with albumin)  or   Ct = F + 700 F / (Kd + F).
-# Intact CBG: Kd = 30 nM; after neutrophil elastase cleaves the reactive-centre loop: Kd = 320 nM.
+# Intact CBG: Kd = 30 nM; after neutrophil elastase cleaves the reactive-center loop: Kd = 320 nM.
 # A: free fraction against Kd for Ct = 100 and 400 nM. B: local amplification alpha = F(320) / F(30)
 # against total cortisol, compared with the low-saturation approximation (1 + 700/30) / (1 + 700/320) = 7.63.
 import numpy as np

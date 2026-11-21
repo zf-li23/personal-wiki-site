@@ -1,5 +1,5 @@
 # Asteraceae. A: radiate capitulum in longitudinal section (schematic): flat receptacle with many florets,
-# ray florets at the margin, disc florets in the centre with paleae between them, phyllaries of the
+# ray florets at the margin, disc florets in the center with paleae between them, phyllaries of the
 # involucre outside. B: disc (tubular) floret: inferior ovary crowned by pappus, five-lobed corolla, anther
 # tube around the style, bifid style branches emerging. C: ligulate floret (Taraxacum): strap with five
 # teeth, beaked cypsela with capillary pappus. D: ray floret: strap with three teeth, female. E: floral

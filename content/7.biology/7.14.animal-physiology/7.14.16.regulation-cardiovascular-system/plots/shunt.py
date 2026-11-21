@@ -1,7 +1,7 @@
 """Intracardiac shunting in an undivided ventricle, and arterial pressures across vertebrates.
 
 A: if one ventricle ejects into the systemic and pulmonary circuits at the same pressure, flows divide in
-inverse proportion to resistance, Q_p/Q_s = R_s/R_p. Pulmonary vasoconstriction (apnoea, diving) raises R_p
+inverse proportion to resistance, Q_p/Q_s = R_s/R_p. Pulmonary vasoconstriction (apnea, diving) raises R_p
 and diverts blood from the lungs (net right-to-left shunt); during ventilation R_p falls (left-to-right shunt).
 With a fully divided heart Q_p = Q_s regardless of resistance.
 B: representative mean arterial pressures (approximate; values vary between studies, species and temperature).
@@ -21,7 +21,7 @@ ax.plot([0.5], [2], "o", color=P.ink(), ms=6)
 ax.annotate("breathing:\nL-to-R shunt", xy=(0.5, 2), xytext=(0.13, 3.5), fontsize=8, color=P.muted(),
             arrowprops=dict(arrowstyle="->", color=P.muted()))
 ax.plot([4], [0.25], "o", color=P.ink(), ms=6)
-ax.annotate("apnoea or diving:\nR-to-L shunt", xy=(4, 0.25), xytext=(1.3, 0.13), fontsize=8, color=P.muted(),
+ax.annotate("apnea or diving:\nR-to-L shunt", xy=(4, 0.25), xytext=(1.3, 0.13), fontsize=8, color=P.muted(),
             arrowprops=dict(arrowstyle="->", color=P.muted()))
 ax.set_xlabel("Pulmonary / systemic resistance R$_p$/R$_s$")
 ax.set_ylabel("Pulmonary / systemic flow Q$_p$/Q$_s$")

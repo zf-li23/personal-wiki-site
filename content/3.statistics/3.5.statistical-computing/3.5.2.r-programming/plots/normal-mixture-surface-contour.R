@@ -14,7 +14,7 @@ ys <- ifelse(runif(n) < p1, 0, 3) + rnorm(n)
 op <- par(mfrow = c(1, 2))
 persp(grid, grid, z, theta = 30, phi = 30, col = "lightblue", shade = 0.5, border = NA,
       xlab = "x", ylab = "y", zlab = "f(x, y)", main = "Surface plot")
-plot(xs, ys, pch = 20, cex = 0.5, col = "grey60", asp = 1, xlab = "x", ylab = "y",
+plot(xs, ys, pch = 20, cex = 0.5, col = "gray60", asp = 1, xlab = "x", ylab = "y",
      main = "Contour plot")
 contour(grid, grid, z, levels = c(0.002, 0.005, 0.01, 0.02, 0.03, 0.05, 0.07), add = TRUE)
 par(op)

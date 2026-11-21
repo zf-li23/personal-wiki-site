@@ -1,4 +1,4 @@
-# Biphasic (dual-isotherm) uptake of K+ by roots, modelled as the sum of a high-affinity system
+# Biphasic (dual-isotherm) uptake of K+ by roots, modeled as the sum of a high-affinity system
 # (Mechanism I of Epstein, HATS: Km = 20 uM, Vmax = 10 umol g-1 h-1) and a low-affinity system (Mechanism II,
 # LATS: Km = 10 mM, Vmax = 15 umol g-1 h-1), parameters of the order measured for barley roots (illustrative).
 # A: the low concentration range, where HATS dominates and saturates near 0.2 mM. B: the full range on a

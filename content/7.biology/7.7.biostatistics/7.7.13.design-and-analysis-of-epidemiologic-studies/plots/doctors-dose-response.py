@@ -1,6 +1,6 @@
 """British male doctors, 1951-2001 (34 439 men; Doll, Peto, Boreham and Sutherland 2004, BMJ 328:1519,
 Table 1): death rates per 1000 men per year, standardized indirectly for age and study year, by smoking habit
-at the most recent survey. A: lung cancer, chronic obstructive pulmonary disease (COPD) and ischaemic heart
+at the most recent survey. A: lung cancer, chronic obstructive pulmonary disease (COPD) and ischemic heart
 disease (IHD) for lifelong non-smokers, former cigarette smokers and current smokers of 1-14, 15-24 and
 25 or more cigarettes a day. B: the same rates as ratios to lifelong non-smokers (log scale).
 """

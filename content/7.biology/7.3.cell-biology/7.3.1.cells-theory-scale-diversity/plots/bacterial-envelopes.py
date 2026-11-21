@@ -6,7 +6,7 @@
 # outer leaflet: lipid A, core oligosaccharide, O-antigen of variable length) with porin channels. Glycan
 # strands alternate NAG and NAM residues and are cross-linked by peptides. The thick wall retains the
 # crystal violet-iodine complex (purple); the thin wall does not, and the cell takes up the safranin
-# counterstain (pink). C: cell shapes, arrangements and flagellation, coloured by Gram reaction.
+# counterstain (pink). C: cell shapes, arrangements and flagellation, colored by Gram reaction.
 import numpy as np
 
 import wikibio as bio

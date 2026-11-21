@@ -1,6 +1,6 @@
 # The molluscan body plan (schematic sagittal sections, anterior to the left, not to scale).
 # A: a generalized mollusc with the main organ systems. B: how the classes modify the same components
-# (shell, mantle and mantle cavity, foot, gut from mouth to anus), drawn with the same colours.
+# (shell, mantle and mantle cavity, foot, gut from mouth to anus), drawn with the same colors.
 import numpy as np
 import wikibio as bio
 from matplotlib.patches import Circle, Ellipse
@@ -70,7 +70,7 @@ curve(ax, sh, SHELL, lw=9.0, z=5)
 # mantle cavity
 mc = blob(ax, [(11.7, 12.3), (11.9, 15.0), (12.8, 15.8), (13.6, 14.2), (13.8, 12.6)], MANTLE, z=5, face=wash(MANTLE, 0.55), lw=0.8)
 comb(ax, (12.0, 14.6), (13.4, 13.1), 7, GILL, w=0.32, z=9)
-# gut: mouth -> buccal cavity with radula -> oesophagus -> stomach -> intestine loop -> anus in mantle cavity
+# gut: mouth -> buccal cavity with radula -> esophagus -> stomach -> intestine loop -> anus in mantle cavity
 ax.add_patch(Ellipse((3.0, 12.6), 1.3, 0.8, angle=-10, facecolor=wash(GUT, 0.3), edgecolor=P.edge(GUT), lw=0.9, zorder=8))  # buccal mass
 curve(ax, [(2.4, 12.5), (3.0, 12.45), (3.55, 12.7)], "neuron", lw=1.6, z=9)  # radula ribbon
 g = curve(ax, [(3.6, 12.8), (5.0, 13.6), (6.4, 14.4)], GUT, lw=2.6, z=8)

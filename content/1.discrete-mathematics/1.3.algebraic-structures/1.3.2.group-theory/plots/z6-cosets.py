@@ -1,5 +1,5 @@
 """Cosets and the quotient group (Sections 2.5 and 2.6). A: the subgroup H = {0, 3} of Z_6 splits Z_6
-into three cosets H, 1 + H, 2 + H of equal size (each colour is one coset), so |Z_6| = [Z_6 : H] |H|,
+into three cosets H, 1 + H, 2 + H of equal size (each color is one coset), so |Z_6| = [Z_6 : H] |H|,
 6 = 3 x 2, as Lagrange's theorem requires. B: the cosets added as sets form the quotient group
 Z_6/H, whose table is that of Z_3."""
 

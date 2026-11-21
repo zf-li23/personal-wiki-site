@@ -1,4 +1,4 @@
-"""Base-catalysed aldol addition of acetaldehyde. Hydroxide removes an alpha proton (a small amount
+"""Base-catalyzed aldol addition of acetaldehyde. Hydroxide removes an alpha proton (a small amount
 of enolate forms); the enolate carbon attacks the carbonyl carbon of a second acetaldehyde and the
 C=O pi electrons move onto oxygen; the alkoxide takes a proton from water, giving
 3-hydroxybutanal and regenerating hydroxide. Every step is reversible."""

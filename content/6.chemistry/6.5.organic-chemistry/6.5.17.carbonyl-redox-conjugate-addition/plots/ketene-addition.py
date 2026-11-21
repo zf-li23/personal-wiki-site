@@ -1,6 +1,6 @@
 """Addition of methanol to ketene. The alcohol oxygen attacks the central sp carbon in the plane of
 the molecule (where the C=O pi* orbital lies); the C=O pi electrons move onto oxygen. Proton
-transfer gives the enol of the ester, which tautomerises to methyl acetate."""
+transfer gives the enol of the ester, which tautomerizes to methyl acetate."""
 
 from wikichem import Scheme
 

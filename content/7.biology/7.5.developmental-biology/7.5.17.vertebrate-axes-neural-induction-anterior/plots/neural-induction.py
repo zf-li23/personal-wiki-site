@@ -2,7 +2,7 @@
 # cultured alone forms epidermis; the same cells dissociated (so that secreted BMPs are diluted away) and
 # reaggregated form neural tissue; dissociated cells given BMP4 form epidermis again; an intact cap expressing the
 # BMP antagonists Noggin or Chordin, or a dominant-negative BMP receptor, forms neural tissue. Conclusion: BMP
-# signalling among ectoderm cells keeps them epidermal; neural is the fate they adopt when BMP signalling is blocked.
+# signaling among ectoderm cells keeps them epidermal; neural is the fate they adopt when BMP signaling is blocked.
 import numpy as np
 import wikibio as bio
 from matplotlib.patches import Wedge, Circle

@@ -2,7 +2,7 @@
 the epidermis) secretes BMPs and Wnts; the notochord and then the floor plate secrete Sonic hedgehog. Progenitors
 in the ventricular zone form eleven domains, each producing one class of neuron: dP1-dP6 the dorsal interneurons
 dI1-dI6, p0-p3 the ventral interneurons V0-V3 and pMN the motor neurons. (B) The code of transcription factors in
-the ventral domains: class I genes (Pax6, Irx3, Dbx1, Dbx2) are repressed by Shh signalling, class II genes (Nkx2.2,
+the ventral domains: class I genes (Pax6, Irx3, Dbx1, Dbx2) are repressed by Shh signaling, class II genes (Nkx2.2,
 Olig2, Nkx6.1) are induced by it; each pair of mutually repressing factors (Nkx2.2-Pax6, Olig2-Irx3, Nkx6.1-Dbx2)
 sharpens a boundary. The dorsal domains express Pax3 (all) and Pax7 (dP3-dP6)."""
 import wikibio as bio

@@ -54,7 +54,7 @@ t = np.linspace(0, 45, 600)
 eclipse, mean_lysis, sd, burst = 10.0, 25.0, 3.0, 100.0
 F = norm.cdf(t, mean_lysis, sd)                       # fraction of cells that have lysed
 inside = np.clip((t - eclipse) / (mean_lysis - eclipse), 0, None) * burst   # particles per unlysed cell
-total = (1 - F) * np.maximum(1, inside) + F * burst   # infective centres: unlysed cells count as one each
+total = (1 - F) * np.maximum(1, inside) + F * burst   # infective centers: unlysed cells count as one each
 free = F * burst
 budding = burst * np.clip((t - eclipse) / 30.0, 0, None) ** 1.3
 ax.plot(t, total, color=charts.line("dna"), lw=2.0, label="total infectious virus (artificially lysed)")

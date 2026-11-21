@@ -5,7 +5,7 @@
 # wax canals in the epicuticle. The epidermis (a single cell layer) secretes the cuticle and rests on the
 # basement membrane facing the hemocoel. A dermal gland opens by a duct; a seta is formed by a trichogen
 # cell (hair) and a tormogen cell (socket) and innervated by a sensory neuron.
-# B: interference colour. Reflectance at normal incidence of a stack of five chitin-air layer pairs
+# B: interference color. Reflectance at normal incidence of a stack of five chitin-air layer pairs
 # (refractive indices 1.56 and 1.0), computed by the transfer-matrix method; quarter-wave layers tuned to
 # three wavelengths. The reflected peak is at lambda = 2 (n1 d1 + n2 d2) and shifts to shorter wavelengths
 # at oblique incidence (iridescence).

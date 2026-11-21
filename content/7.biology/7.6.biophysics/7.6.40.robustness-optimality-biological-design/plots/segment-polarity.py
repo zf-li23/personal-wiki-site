@@ -1,12 +1,12 @@
 # Parameter robustness of a pattern-maintaining network, in the spirit of von Dassow, Meir, Munro and
 # Odell (2000) and Ingolia (2004). A one-dimensional row of 12 cells (three repeats of four) with two
 # variables per cell: E (engrailed/hedgehog) and W (wingless). E in cell i is activated by W in its
-# anterior neighbour i-1 (Hill function, K_E, n_E); W in cell i is activated by its own W (autoregulation,
-# weight a, K_A, n_A) and by E in its posterior neighbour i+1 (K_H, n_H), and repressed by E in the same
+# anterior neighbor i-1 (Hill function, K_E, n_E); W in cell i is activated by its own W (autoregulation,
+# weight a, K_A, n_A) and by E in its posterior neighbor i+1 (K_H, n_H), and repressed by E in the same
 # cell (K_R, n_R); both decay with unit rate (E with rate 1/tau). The directional coupling stands for the
 # anterior-posterior asymmetry that other segment-polarity genes supply in the embryo.
 # Task: from a transient prepattern (easy: W = 1 in cell 0 and E = 1 in cell 1 of each repeat; hard: the
-# same with weak expression spilling into neighbouring cells, 0.5 and 0.35) the network must settle into
+# same with weak expression spilling into neighboring cells, 0.5 and 0.35) the network must settle into
 # and keep the pattern W only in cell 0, E only in cell 1. 10 parameters drawn log-uniformly
 # (K in [0.01, 1], n in [1, 6], a in [0.05, 1], tau in [0.2, 5]); 3000 random sets per task.
 # A: fraction of random parameter sets that perform each task. B: the successful sets span decades in each
@@ -45,8 +45,8 @@ def run(par, task):
     decE = np.exp(-dt / tau)
     decW = np.exp(-dt)
     for _ in range(1000):
-        Wa = np.roll(W, 1, axis=1)   # anterior neighbour i-1
-        Ep = np.roll(E, -1, axis=1)  # posterior neighbour i+1
+        Wa = np.roll(W, 1, axis=1)   # anterior neighbor i-1
+        Ep = np.roll(E, -1, axis=1)  # posterior neighbor i+1
         tE = hill(Wa, KE, nE)
         tW = (a * hill(W, KA, nA) + (1 - a) * hill(Ep, KH, nH)) * (1 - hill(E, KR, nR))
         E = tE + (E - tE) * decE  # exact relaxation over dt towards the current target (stable for any tau)

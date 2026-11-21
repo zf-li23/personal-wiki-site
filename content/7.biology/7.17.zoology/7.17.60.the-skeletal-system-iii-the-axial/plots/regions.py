@@ -1,4 +1,4 @@
-# Regions of the vertebral column in six tetrapods, one block per vertebra, anterior to the left, coloured by region;
+# Regions of the vertebral column in six tetrapods, one block per vertebra, anterior to the left, colored by region;
 # fused groups outlined together. Counts: frog 1 cervical, 7 trunk, 1 sacral, urostyle; lizard (lacertid) 8 C,
 # 18 dorsal, 2 S, ~40 caudal; crocodile 9 C, 10 T, 5 L, 2 S, ~35 Cd; chicken 14 C, 7 T, ~14 in synsacrum, 6 Cd +
 # pygostyle; rabbit 7 C, 12 T, 7 L, 4 S, 16 Cd; human 7 C, 12 T, 5 L, 5 S, 4 Cd (Kardong 2019; veterinary anatomy).

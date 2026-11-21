@@ -1,12 +1,12 @@
 """Horn's Markov chain model of forest succession (Horn 1975, 1981; Princeton, New Jersey).
 
 Transition matrix P (50-year steps): row = present occupant of a canopy site, column = occupant 50 years
-later, for grey birch, blackgum, red maple and beech. A: composition pi_t = pi_0 P^t from a stand of 100 %
-grey birch; the dashed lines are the stationary distribution (left eigenvector of P for eigenvalue 1),
+later, for gray birch, blackgum, red maple and beech. A: composition pi_t = pi_0 P^t from a stand of 100 %
+gray birch; the dashed lines are the stationary distribution (left eigenvector of P for eigenvalue 1),
 the diamonds the composition of an old forest observed by Horn. B: total variation distance between pi_t and
 the stationary distribution for four initial stands; all decay at the rate of the second eigenvalue
 lambda_2 = 0.716 per 50 years (parallel lines on the log scale). C: one realization of the chain for 60 individual sites
-started as grey birch (each row of tiles is a site), showing that the stationary composition is a mosaic
+started as gray birch (each row of tiles is a site), showing that the stationary composition is a mosaic
 in which individual sites keep changing.
 """
 

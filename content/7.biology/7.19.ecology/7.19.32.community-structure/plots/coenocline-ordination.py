@@ -5,7 +5,7 @@ x from 0 to 100, with optima u spread over -10 to 110, tolerances t between 6 an
 20 and 100 (random, seed 1). Forty sites are placed evenly along the gradient; observed abundances are
 Poisson draws around the expected values.
 A: the response curves (coenocline).
-B: principal component analysis (covariance of the abundances): sites, coloured by their true position
+B: principal component analysis (covariance of the abundances): sites, colored by their true position
 on the gradient, lie on a horseshoe, with the two ends folded toward each other.
 C: correspondence analysis: an arch; axis 2 is a quadratic function of axis 1 (the arch effect), and the
 ends of the gradient are compressed.

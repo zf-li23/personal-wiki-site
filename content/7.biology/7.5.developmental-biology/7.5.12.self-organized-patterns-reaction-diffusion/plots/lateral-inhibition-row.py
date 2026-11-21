@@ -2,11 +2,11 @@
 
 For cell i: dN_i/dt = f(<D>_i) - N_i, dD_i/dt = g(N_i) - D_i, f(x) = x^2 / (a + x^2), g(x) = 1 / (1 + b x^2),
 a = 0.01, on a ring of 30 cells, from the uniform state with 1 % noise. A: with contact only between immediate
-neighbours (<D>_i = mean of the two neighbours) the row resolves into alternating high- and low-Delta cells
+neighbors (<D>_i = mean of the two neighbors) the row resolves into alternating high- and low-Delta cells
 (red: high Delta, the cells that adopt the inhibiting fate; b = 100). If each cell also signals to the next-but-one
-cells, as through long basal protrusions (weights 1 for neighbours at distance 1 and 2), high-Delta cells end up
+cells, as through long basal protrusions (weights 1 for neighbors at distance 1 and 2), high-Delta cells end up
 further apart. B: amplitude of the final pattern (max D - min D) against the feedback strength b with nearest-
-neighbour contact; the dashed line marks the linear threshold of the alternating mode, f'(D*) |g'(N*)| = 1.
+neighbor contact; the dashed line marks the linear threshold of the alternating mode, f'(D*) |g'(N*)| = 1.
 """
 
 import numpy as np

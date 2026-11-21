@@ -4,11 +4,11 @@ Resistance surface: a 72 x 72 grid; the resistance of a cell is r = exp(1.6 z), 
 surface (spectral synthesis, H = 0.6), so that r spans about 1 (good habitat) to several hundred. A road
 crosses the map from top to bottom (two columns, r = 500) except at crossing structures (r = 1). A
 source patch on the left and a target patch on the right (5 x 5 cells, r = 1).
-A: resistance (log scale), least-cost path (computed with Dijkstra's algorithm on the 8-neighbour grid
+A: resistance (log scale), least-cost path (computed with Dijkstra's algorithm on the 8-neighbor grid
 graph, the cost of a step being the mean resistance of the two cells times the step length) and the
 least-cost corridor (cells whose cost through them exceeds the minimum by less than 10 %), with two
 crossings.
-B: current density from circuit theory: neighbouring cells (4-neighbour) are joined by resistors of
+B: current density from circuit theory: neighboring cells (4-neighbor) are joined by resistors of
 resistance equal to the mean of the two cell resistances; the source patch is held at potential 1 and the
 target patch at 0, and Kirchhoff's equations L v = 0 are solved at the other nodes (sparse Laplacian).
 Current density at a cell is half the sum of the absolute currents through its edges. Current spreads over

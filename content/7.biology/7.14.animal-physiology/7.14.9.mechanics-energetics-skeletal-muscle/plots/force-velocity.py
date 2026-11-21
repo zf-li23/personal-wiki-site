@@ -1,12 +1,12 @@
-# Force-velocity, power and efficiency of slow and fast fibres (illustrative parameters).
+# Force-velocity, power and efficiency of slow and fast fibers (illustrative parameters).
 # Hill's relation (F + a)(v + b) = b (F0 + a), written with f = F/F0, alpha = a/F0 and vmax = b/alpha:
 #   v = vmax alpha (1 - f) / (f + alpha).
-# Slow fibre: vmax = 2 L0/s, alpha = 0.18; fast fibre: vmax = 8 L0/s, alpha = 0.30; same F0 (equal specific
+# Slow fiber: vmax = 2 L0/s, alpha = 0.18; fast fiber: vmax = 8 L0/s, alpha = 0.30; same F0 (equal specific
 # tension). Energy liberation follows Hill (1938): rate = h0 + (F + a) v, where h0 is the isometric
 # (maintenance) heat rate, taken proportional to the cross-bridge cycling speed, h0 = 0.1 F0 vmax.
 # Efficiency = F v / (h0 + (F + a) v) (work over energy liberated during contraction).
 # (A) force-velocity curves; (B) power F v against absolute shortening speed; (C) efficiency against speed
-# (log axis); the dashed line marks the speed above which the fast fibre is the more efficient.
+# (log axis); the dashed line marks the speed above which the fast fiber is the more efficient.
 import matplotlib.pyplot as plt
 import numpy as np
 

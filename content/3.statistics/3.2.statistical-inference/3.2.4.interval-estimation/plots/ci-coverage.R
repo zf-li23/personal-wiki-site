@@ -16,9 +16,9 @@ for (k in c(1.96, 0.5)) {
   cover <- lo <= mu & mu <= hi
   plot(NA, xlim = c(67, 69), ylim = range(idx), xlab = "height (in)", ylab = "replication",
        main = sprintf("k = %g: %.0f%% of the intervals cover mu", k, 100 * mean(cover)))
-  segments(lo, idx, hi, idx, col = ifelse(cover, "grey65", "firebrick"),
+  segments(lo, idx, hi, idx, col = ifelse(cover, "gray65", "firebrick"),
            lwd = ifelse(cover, 1.2, 1.8))
-  points(xbar, idx, pch = 16, cex = 0.3, col = "grey35")
+  points(xbar, idx, pch = 16, cex = 0.3, col = "gray35")
   abline(v = mu, col = "steelblue", lwd = 1.5)
 }
 par(op)

@@ -1,7 +1,7 @@
 ---
 title: Pointers and Memory
 description: Variable addresses and pointers, pointer arithmetic, arrays and pointers, memory regions (code, static, stack, heap), new and delete, common memory errors (out-of-bounds access, dangling pointers, memory leaks) and tools for detecting them, modern C++ alternatives; Python comparison, covering names and objects, mutability, garbage collection.
-source_hash: 6626daa093b3
+source_hash: c342c91efc6a
 ---
 
 The previous chapters treated a variable as a "named box": we assign a value to it and read the value back without caring where the box sits. This chapter opens the box. Every variable occupies a range of bytes in memory and has an address of its own, and a variable that stores an address is a pointer. Pointers let a program access data indirectly, request memory at run time, and build data structures of arbitrary shape out of nodes and links (linked lists in the next chapter, trees and graphs in [4.3 Data Structures and Algorithms](/4.3)). Pointers are also the most common source of bugs in C++ programs: out-of-bounds access, dangling pointers, and memory leaks all involve them. We first explain what pointers mean and how to compute with them, then the relation between arrays and pointers, the memory regions of a program and dynamic memory, and finally common errors and how modern C++ avoids them. Smart pointers and RAII are discussed in detail in [4.2.4](/4.2.4) and [4.2.12](/4.2.12). The chapter ends with Python: Python has no pointers, but its model of "names referring to objects" is best understood in terms of pointers.
@@ -35,7 +35,7 @@ Addresses are usually displayed in hexadecimal (such as `0x7ffd5c3a1e4c`) and ma
 int n = 8;
 int* p = &n;     // p holds the address of n
 *p = 10;         // writes through p: now n == 10
-int* q = nullptr; // a null pointer; *q would be undefined behaviour
+int* q = nullptr; // a null pointer; *q would be undefined behavior
 ```
 
 The `*` in `int* p` is part of the type, whereas the `*` in the expression `*p` is an operator; the two have different meanings. In the declaration `int* p, q;` only `p` is a pointer and `q` is an `int`, so declare one pointer per line. In older code, `NULL` and `0` also denote the null pointer, but they are really integers and can select the wrong version in function overloading; modern C++ always uses `nullptr`.

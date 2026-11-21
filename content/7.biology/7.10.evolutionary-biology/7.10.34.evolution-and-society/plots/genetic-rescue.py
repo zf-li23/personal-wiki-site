@@ -2,7 +2,7 @@
 its initial value, H_t/H_0 = (1 - 1/(2 N_e))^t, for effective sizes 10, 50 and 500. B: simulation of
 an isolated population of N_e = 15 (500 neutral loci, initial heterozygosity about 0.3): heterozygosity
 declines and the inbreeding coefficient F = 1 - H_t/H_0 rises; at generation 30, 4 immigrants from a
-large outbred population (blue) restore much of the lost variation, compared with no immigration (grey).
+large outbred population (blue) restore much of the lost variation, compared with no immigration (gray).
 Under inbreeding depression, fitness is expected to fall with F and to recover after the rescue."""
 import numpy as np
 import matplotlib.pyplot as plt

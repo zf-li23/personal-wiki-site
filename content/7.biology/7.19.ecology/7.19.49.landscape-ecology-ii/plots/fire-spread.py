@@ -2,16 +2,16 @@
 
 A 150 x 150 grid; each cell carries fuel (forest) with probability p (the fuel density), otherwise it is
 non-flammable. The whole left column is ignited. At each step every burning cell ignites each of its four
-neighbours that carries unburnt fuel with probability q (q = 1: fire always spreads to adjacent fuel; q < 1:
+neighbors that carries unburned fuel with probability q (q = 1: fire always spreads to adjacent fuel; q < 1:
 weather or fuel moisture make spread uncertain), and then burns out. Since each edge is tried only once, the
-burnt area is computed exactly as the cluster of the ignition line in site-bond percolation (sparse graph,
+burned area is computed exactly as the cluster of the ignition line in site-bond percolation (sparse graph,
 breadth-first distances), and the duration as the largest distance from the line within it.
-A, B: final burnt area for p = 0.55 and p = 0.65 with q = 1 (black: burnt; green: unburnt fuel). Below the
+A, B: final burned area for p = 0.55 and p = 0.65 with q = 1 (black: burned; green: unburned fuel). Below the
 percolation threshold the fire dies out near the ignition line; above it, it sweeps across the map.
 C: proportion of the fuel that burns against p, for q = 1, 0.9 and 0.8 (mean of 20 grids per value); with
 q = 1 the transition is at the site-percolation threshold p_c = 0.593, and lower spread probability moves it
 to higher fuel densities (site-bond percolation).
-D: number of time steps until the fire stops (q = 1), which peaks at the threshold, where the burnt cluster
+D: number of time steps until the fire stops (q = 1), which peaks at the threshold, where the burned cluster
 is tortuous and the front advances slowly (critical slowing down of spread).
 """
 
@@ -34,8 +34,8 @@ idx = np.arange(n * n).reshape(n, n)
 
 
 def burn(p, q):
-    """Burnt set and duration. Each fuel-fuel edge transmits fire with probability q; because an edge is
-    tried only once (from the cell that burns first), the burnt set is the cluster of the ignition line in
+    """Burned set and duration. Each fuel-fuel edge transmits fire with probability q; because an edge is
+    tried only once (from the cell that burns first), the burned set is the cluster of the ignition line in
     site-bond percolation and the duration is the largest graph distance from the line within it."""
     fuel = rng.random((n, n)) < p
     I, J = [], []

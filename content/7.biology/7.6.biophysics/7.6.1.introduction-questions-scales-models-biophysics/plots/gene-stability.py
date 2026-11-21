@@ -3,7 +3,7 @@
 #    number of hits is Poisson with mean sigma*D, and the mutated fraction is 1 - exp(-sigma D): linear at low dose,
 #    with no threshold. A target that needs two hits gives 1 - exp(-x)(1 + x), quadratic at low dose.
 #    Dose in units of 1/sigma.
-# B: thermal stability (Schroedinger's table): a configuration separated from its neighbours by a barrier W
+# B: thermal stability (Schroedinger's table): a configuration separated from its neighbors by a barrier W
 #    survives on average tau = tau0 exp(W / kBT), tau0 = 1e-14 s; W/kBT = 30, 50, 60 give 0.1 s, about 20 months and
 #    about 36 000 years (Schroedinger quoted 16 months and 30 000 years).
 # C: the sqrt(N) rule: a system of N independent particles fluctuates by about 1/sqrt(N); for a gene of about

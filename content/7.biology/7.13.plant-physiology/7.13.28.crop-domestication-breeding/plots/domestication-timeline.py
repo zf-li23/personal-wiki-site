@@ -1,4 +1,4 @@
-# Approximate dates of domestication of some major crops in the independent centres of origin
+# Approximate dates of domestication of some major crops in the independent centers of origin
 # (thousands of years before present). Each bar spans the period from the earliest evidence of
 # cultivation of the wild plant to the appearance of the domesticated form; values are rounded
 # summaries of archaeobotanical syntheses (e.g. Larson et al. 2014, PNAS 111: 6139) and are

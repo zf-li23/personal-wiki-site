@@ -1,8 +1,8 @@
-"""Hydride transfer from NADH, modelled by 1-methyl-1,4-dihydronicotinamide, to acetaldehyde (as in
+"""Hydride transfer from NADH, modeled by 1-methyl-1,4-dihydronicotinamide, to acetaldehyde (as in
 alcohol dehydrogenase, where a zinc ion and an acid activate the carbonyl). The nitrogen lone pair
 pushes through the ring: one C4-H bond's electrons go with the hydrogen to the carbonyl carbon and
 the C=O electrons move onto oxygen, which is protonated. The ring becomes the aromatic pyridinium ion
-NAD+, and this aromatisation drives the transfer."""
+NAD+, and this aromatization drives the transfer."""
 
 import numpy as np
 

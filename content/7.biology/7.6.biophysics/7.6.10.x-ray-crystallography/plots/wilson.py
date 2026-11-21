@@ -6,7 +6,7 @@
 #    straight line of slope -2B (dashed: the input B), so the overall temperature factor and the scale
 #    of the data follow from a straight-line fit (fitted B printed).
 # B: cumulative distribution N(z) of the normalized intensity z = I / <I> (shell averages), compared with
-#    the acentric law 1 - exp(-z); the same atoms related by an inversion centre (P-1) follow the centric
+#    the acentric law 1 - exp(-z); the same atoms related by an inversion center (P-1) follow the centric
 #    law erf(sqrt(z/2)); averaging each intensity with an independent partner of the same shell mimics a
 #    perfect hemihedral twin, 1 - (1 + 2z) exp(-2z), with too few weak reflections.
 import matplotlib.pyplot as plt

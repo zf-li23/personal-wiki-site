@@ -1,7 +1,7 @@
 """Correlated residuals make naive standard errors too small (simulated). 200 two-dimensional Brownian
 trajectories of 1000 steps (D = 1, time step 1). For each trajectory the time-averaged mean squared
 displacement MSD(lag) is computed for lags 1-100 and a line MSD = 4 D lag is fitted by least squares.
-A: MSD curves of 20 trajectories: neighbouring lags share almost the same displacements, so each curve
+A: MSD curves of 20 trajectories: neighboring lags share almost the same displacements, so each curve
 wanders smoothly away from the truth (dashed). B: the D estimates of all 200 trajectories (histogram)
 scatter far more than the ordinary least-squares standard error of a single fit claims (bar: mean
 estimate +/- 1.96 x the median naive SE).

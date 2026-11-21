@@ -1,7 +1,7 @@
 """Hantzsch thiazole synthesis from chloroacetone and thioacetamide. Top: the soft sulfur atom
 displaces chloride by SN2. Bottom: after loss of a proton, the nitrogen of the S-alkyl isothioamide
 attacks the ketone carbonyl in the same molecule, closing the five-membered ring; the
-4-hydroxythiazoline then loses water and aromatises to 2,4-dimethylthiazole."""
+4-hydroxythiazoline then loses water and aromatizes to 2,4-dimethylthiazole."""
 
 from wikichem import Scheme
 

@@ -1,8 +1,8 @@
 """The D-aldoses from D-glyceraldehyde to the eight D-aldohexoses, as compact Fischer projections
-(a horizontal stroke shows on which side the OH of each stereocentre lies; the hydrogens are
-omitted). Each aldose gives two children by Kiliani-Fischer chain extension: the new stereocentre
-is C2, with its OH on the right or on the left, and every older stereocentre keeps its place.
-The OH of the highest-numbered stereocentre (the reference atom, red) is on the right in all of
+(a horizontal stroke shows on which side the OH of each stereocenter lies; the hydrogens are
+omitted). Each aldose gives two children by Kiliani-Fischer chain extension: the new stereocenter
+is C2, with its OH on the right or on the left, and every older stereocenter keeps its place.
+The OH of the highest-numbered stereocenter (the reference atom, red) is on the right in all of
 them. A star marks the aldoses whose aldaric acid (both chain ends oxidized to COOH) is meso,
 found from the pattern itself: the aldaric acid has a mirror plane exactly when the sequence of
 sides reads the same from both ends."""

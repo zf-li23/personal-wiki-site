@@ -7,7 +7,7 @@ unmodified PII stimulates its adenylylating activity, which inactivates GS (aden
 sensitive to its eight cumulative feedback inhibitors). PII-UMP also activates transcription of glnA
 through the NtrB/NtrC two-component system.
 B: steady-state fraction of active (deadenylylated) GS as a function of the [glutamine]/[alpha-ketoglutarate]
-ratio. Each covalent-modification cycle is modelled with Michaelis-Menten converter enzymes
+ratio. Each covalent-modification cycle is modeled with Michaelis-Menten converter enzymes
 (Goldbeter-Koshland function G(v1, v2, J1, J2)); the ratio of the forward to the reverse converter activity in
 the first cycle is proportional to [alpha-KG]/[Gln]; in the second cycle the deadenylylation/adenylylation
 ratio is proportional to u/(1 - u), where u is the fraction of PII uridylylated. A single cycle with

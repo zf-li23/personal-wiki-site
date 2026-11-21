@@ -7,8 +7,8 @@ resting cells, form in the same filament under other conditions.
 B: the regulatory circuit. Nitrogen starvation raises 2-oxoglutarate, which activates NtcA; NtcA and
 HetR activate each other, and HetR activates its own gene -- local self-activation. HetR also induces
 the small peptides PatS and HetN, whose processed product (the pentapeptide RGSGR) moves to the
-neighbouring cells and promotes the degradation of HetR there -- lateral inhibition. The spacing of the
-heterocysts follows from the two feedbacks; the pattern is modelled in 7.6.36."""
+neighboring cells and promotes the degradation of HetR there -- lateral inhibition. The spacing of the
+heterocysts follows from the two feedbacks; the pattern is modeled in 7.6.36."""
 
 import numpy as np
 from matplotlib.patches import Circle, Ellipse, FancyBboxPatch

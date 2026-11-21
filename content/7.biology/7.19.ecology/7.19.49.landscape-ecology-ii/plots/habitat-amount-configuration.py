@@ -4,14 +4,14 @@ Landscape: an 80 x 80 periodic grid in which a proportion h of the cells is habi
 random or clumped (a spectrally synthesized fractal surface, H = 0.5, thresholded at its h-quantile).
 Population: each habitat cell is occupied or empty (a contact process). An occupied cell becomes empty
 at rate e = 1; an empty habitat cell is colonized at rate (lambda / 4) k, where k is the number of its four
-neighbours that are occupied; propagules landing on non-habitat cells are lost. lambda = 3. Simulated in
+neighbors that are occupied; propagules landing on non-habitat cells are lost. lambda = 3. Simulated in
 steps dt = 0.1 from full occupancy for t = 120; occupancy is averaged over t = 80-120 and over 4 landscapes.
 A: equilibrium proportion of the habitat that is occupied against habitat amount h, for random and
 clumped habitat, with the mean-field (Levins) prediction 1 - e / (lambda h) for comparison. The mean field
 ignores configuration; with local dispersal the random landscape loses the population well above the
 mean-field threshold, near the habitat amount at which habitat stops percolating, whereas clumped
 habitat of the same amount supports it.
-B, C: snapshots at h = 0.45 (random: extinct or nearly so; clumped: persisting). Grey: habitat; green:
+B, C: snapshots at h = 0.45 (random: extinct or nearly so; clumped: persisting). Gray: habitat; green:
 occupied.
 """
 

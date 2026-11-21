@@ -1,8 +1,8 @@
 """Barton reaction (nitrite photolysis), on pentyl nitrite. Light cleaves the weak O-NO bond
 homolytically (fishhook arrows), giving an alkoxyl radical and nitric oxide. The alkoxyl radical
 abstracts a hydrogen atom from the delta carbon through a six-membered cyclic transition state
-(1,5-hydrogen atom transfer), moving the radical centre to an unactivated secondary carbon. This
-carbon radical combines with NO to give a delta-nitroso alcohol, which tautomerises to the oxime."""
+(1,5-hydrogen atom transfer), moving the radical center to an unactivated secondary carbon. This
+carbon radical combines with NO to give a delta-nitroso alcohol, which tautomerizes to the oxime."""
 
 import math
 

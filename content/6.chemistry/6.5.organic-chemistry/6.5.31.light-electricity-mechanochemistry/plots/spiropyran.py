@@ -1,7 +1,7 @@
 """Ring opening of a nitrospiropyran (1',3',3'-trimethyl-6-nitrospiro[chromene-2,2'-indoline]) by
 light or by mechanical force. The spiro C-O bond breaks heterolytically: the C-O electron pair goes
 to the phenolate oxygen while the indoline nitrogen lone pair forms a C=N+ bond. After cis-trans
-isomerization of the central double bond the planar, conjugated merocyanine zwitterion is coloured;
+isomerization of the central double bond the planar, conjugated merocyanine zwitterion is colored;
 heat or visible light closes the ring again."""
 
 from wikichem import Scheme

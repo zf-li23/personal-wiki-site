@@ -5,7 +5,7 @@ neuroectoderm forms where BMP signaling is lowest, on the ventral side, and is s
 outwards into the columns vnd, ind and msh. Right: a vertebrate (Xenopus) embryo, drawn with the dorsal side
 down so that the two diagrams align: BMP4 is high ventrally, Chordin (from the organizer) dorsally; the neural
 plate forms dorsally and is subdivided from the midline outwards into Nkx2.2, Gsx and Msx domains, the
-homologues of vnd, ind and msh. Ring: ectoderm; bars beside each section: the BMP activity gradient.
+homologs of vnd, ind and msh. Ring: ectoderm; bars beside each section: the BMP activity gradient.
 """
 
 import numpy as np

@@ -1,4 +1,4 @@
-# Light and warm-temperature signalling to photomorphogenesis as an SBGN Activity Flow map (simplified;
+# Light and warm-temperature signaling to photomorphogenesis as an SBGN Activity Flow map (simplified;
 # after Taiz et al. 6e Figs 16.10-16.18 and 16.28, and the thermosensing literature).
 # Darkness is the default: PIFs (bHLH factors) drive skotomorphogenic genes and elongation, and the
 # COP1-SPA E3 ligase degrades HY5. Active phytochromes (Pfr) promote PIF phosphorylation and

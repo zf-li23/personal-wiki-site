@@ -24,7 +24,7 @@ def simulate(e, cycles=3.0, steps=1200):
     for tk in t:
         l = l0 * (1 + e * np.sin(2 * np.pi * (f * tk - i / m)))
         S = np.concatenate([[0], np.cumsum(l)[:-1]])
-        rel = -S - l / 2                       # centres relative to the head
+        rel = -S - l / 2                       # centers relative to the head
         anch = l < l0 * (1 - TH * e)
         if prev_c is not None:
             both = anch & prev_a

@@ -2,7 +2,7 @@
 # each (lengths log-normal, median 6 kb); a contig's GC content scatters around its genome's value with a
 # standard deviation that shrinks with length, and its coverage around the genome's coverage in each of two
 # samples. Genomes 4 and 5 have almost the same GC content and the same coverage in sample 1; they differ only
-# in sample 2. Contigs (points sized by length) are coloured by the bin assigned by k-means (k = 6, best of 20
+# in sample 2. Contigs (points sized by length) are colored by the bin assigned by k-means (k = 6, best of 20
 # starts) on GC content and log coverage in both samples, standardized. A: GC against coverage in sample 1,
 # where genomes 4 and 5 overlap. B: coverage in the two samples, where they separate. The text gives the
 # length-weighted purity of the bins, the fraction of each genome's length in its main bin, and the purity

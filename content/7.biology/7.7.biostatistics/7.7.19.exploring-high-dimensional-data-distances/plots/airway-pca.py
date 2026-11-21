@@ -1,7 +1,7 @@
 """Principal component analysis of the airway samples (Himes et al. 2014, GEO GSE52778; Bioconductor
-package airway): variance-stabilized expression (pydeseq2 vst) of the 500 most variable genes, centred
+package airway): variance-stabilized expression (pydeseq2 vst) of the 500 most variable genes, centered
 per gene. A: scree plot, proportion of variance per component and cumulative. B: scores on PC1 and PC2;
-colour is treatment, marker shape the cell line (donor). C: loadings of the ten genes with the largest
+color is treatment, marker shape the cell line (donor). C: loadings of the ten genes with the largest
 loadings on PC1 or PC2, drawn as arrows (a loading plot, the variable half of a biplot).
 """
 import csv

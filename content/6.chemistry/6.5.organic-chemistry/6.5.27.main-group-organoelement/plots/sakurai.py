@@ -1,6 +1,6 @@
 """Hosomi-Sakurai allylation of benzaldehyde. Top: the Lewis acid TiCl4 binds the carbonyl oxygen;
 the terminal carbon of allyltrimethylsilane (the carbon remote from silicon) attacks the activated
-carbonyl carbon. Bottom: the new carbocation is beta to silicon and is stabilised by
+carbonyl carbon. Bottom: the new carbocation is beta to silicon and is stabilized by
 hyperconjugation with the C-Si bond, which lies parallel to the empty p orbital; a chloride (or
 other nucleophile) attacks silicon and the C-Si electrons form the new C=C bond, so the double bond
 moves (allyl transposition) and the homoallylic alkoxide is obtained."""

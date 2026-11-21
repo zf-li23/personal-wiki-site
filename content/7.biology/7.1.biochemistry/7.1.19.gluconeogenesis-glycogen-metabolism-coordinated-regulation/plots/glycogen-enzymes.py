@@ -5,7 +5,7 @@ Chains run from the reducing end (left) to the nonreducing end (right); horizont
 A: glycogen phosphorylase removes glucose 1-phosphate from nonreducing ends, one residue at a time,
    and stops four residues from a branch point (limit branch).
 B: the transferase activity of the debranching enzyme moves three of these four residues to a nearby
-   nonreducing end. C: its (alpha1->6) glucosidase activity hydrolyses the last residue, releasing glucose.
+   nonreducing end. C: its (alpha1->6) glucosidase activity hydrolyzes the last residue, releasing glucose.
 D: glycogen synthase adds glucose from UDP-glucose to nonreducing ends; the branching enzyme moves a
    terminal segment of 6-7 residues from a chain of at least 11 to the C-6 hydroxyl of a residue farther in.
 """

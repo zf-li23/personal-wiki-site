@@ -1,6 +1,6 @@
 """Benzilic acid rearrangement. Hydroxide adds to one carbonyl group of benzil. In the tetrahedral
 alkoxide, the oxygen lone pair re-forms C=O and pushes a phenyl group, with its electron pair, onto the
-neighbouring carbonyl carbon; that C=O pi bond moves onto oxygen (a 1,2-shift to an electron-poor
+neighboring carbonyl carbon; that C=O pi bond moves onto oxygen (a 1,2-shift to an electron-poor
 carbonyl carbon, rate-determining). Fast proton transfer from the carboxylic acid to the alkoxide
 gives the benzilate ion; acidification gives benzilic acid."""
 

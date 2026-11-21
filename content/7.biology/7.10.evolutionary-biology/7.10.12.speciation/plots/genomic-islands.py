@@ -7,7 +7,7 @@ r = (1 - exp(-2d))/2 for map distance d in Morgans), and its expected F_ST is 1/
 A: barrier loci with s = 0.2 and s = 0.02. B: a single barrier locus at 50 cM (s = 0.2) with normal
 recombination, and with recombination reduced 20-fold in the segment from 40 to 60 cM that contains it (as
 in an inversion heterozygote or near a centromere): the island extends over the whole low-recombination
-segment. Grey dots: F_ST of
+segment. Gray dots: F_ST of
 individual SNPs drawn around the expectation (beta distribution, seed 0), illustrating the noisy profile seen
 in genome scans."""
 import numpy as np

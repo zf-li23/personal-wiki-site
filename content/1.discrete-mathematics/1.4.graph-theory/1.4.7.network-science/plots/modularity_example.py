@@ -1,5 +1,5 @@
 """A network of 30 vertices drawn from a planted three-group model (edge probability 0.45 inside a
-group, 0.03 between groups), with the communities found by the Louvain algorithm (colours) and the
+group, 0.03 between groups), with the communities found by the Louvain algorithm (colors) and the
 modularity Q of that partition and of the planted one."""
 
 import numpy as np
@@ -23,7 +23,7 @@ def modularity(W, labels):
 
 
 def local_moves(W):
-    """Phase 1 of Louvain: move single vertices to the neighbouring community with the largest gain."""
+    """Phase 1 of Louvain: move single vertices to the neighboring community with the largest gain."""
     size = len(W)
     comm = np.arange(size)
     k = W.sum(1)

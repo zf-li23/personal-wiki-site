@@ -289,7 +289,7 @@ For the solder flux data the assumption of equal variances was rejected, and the
 
 ```r
 library(plyr)
-a2 <- ddply(a1, ~type, summarise, freq = length(strength),
+a2 <- ddply(a1, ~type, summarize, freq = length(strength),
             mean = mean(strength), s2 = var(strength))
 a2$wt <- 1 / a2$s2
 a3 <- merge(a1, a2, by = "type")

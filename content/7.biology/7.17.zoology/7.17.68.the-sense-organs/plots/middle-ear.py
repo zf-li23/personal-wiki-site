@@ -1,4 +1,4 @@
-# Evolution of the middle ear: jaw joint and ear region in five stages, bones in the homology colours of
+# Evolution of the middle ear: jaw joint and ear region in five stages, bones in the homology colors of
 # vertskel (lateral views, anterior to the left). Schematic, not to scale.
 import vertskel as vs
 

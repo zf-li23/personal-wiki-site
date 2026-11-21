@@ -3,7 +3,7 @@ pinanediol, is drawn as ethylene glycol). Top: dichloromethyllithium adds to the
 boron, giving a borate ate complex. Bottom: the alkyl group on boron migrates to the CHCl2 carbon
 with its bonding pair while chloride leaves from the back (a 1,2-metallate shift, promoted by
 ZnCl2), giving an alpha-chloroboronic ester with one carbon more; the chiral diol decides which
-chlorine leaves and so the configuration of the new stereocentre."""
+chlorine leaves and so the configuration of the new stereocenter."""
 
 from wikichem import Scheme
 

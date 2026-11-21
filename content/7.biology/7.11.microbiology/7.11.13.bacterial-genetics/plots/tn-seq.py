@@ -1,5 +1,5 @@
 # Transposon sequencing (Tn-seq): simulated data, to show how a library of transposon mutants measures the
-# fitness contribution of every gene. A mariner transposon inserting at TA dinucleotides is modelled on a
+# fitness contribution of every gene. A mariner transposon inserting at TA dinucleotides is modeled on a
 # 30 kb stretch of a genome with ten genes: insertions are placed at random TA sites (density 1 per 40 bp),
 # then the library is grown for 15 generations; the abundance of a mutant changes as 2^(15 w) with its
 # relative fitness w (w = 1 neutral, w = 0 essential gene, 0 < w < 1 fitness cost in the condition tested).

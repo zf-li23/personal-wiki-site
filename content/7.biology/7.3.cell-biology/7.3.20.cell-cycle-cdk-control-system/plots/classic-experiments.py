@@ -114,7 +114,7 @@ bio.label(ax, (16.9, 2.3), "M-phase cytoplasm\ncondenses any\ninterphase nucleus
 # ----- C
 bio.panel(ax, "C", (18.6, 10.3))
 bio.label(ax, (22.8, 9.6), "Fission yeast cdc mutants", size="small", bold=True)
-SC = 0.3  # canvas units per micrometre
+SC = 0.3  # canvas units per micrometer
 
 
 def rod(x, y, L_um, nuclei=1, septum=False):

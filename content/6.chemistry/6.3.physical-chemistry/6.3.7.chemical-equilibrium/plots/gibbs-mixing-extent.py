@@ -1,4 +1,4 @@
-"""Gibbs energy of an ideal-gas isomerisation A(g) <=> B(g) at 298.15 K and p = p0, starting from 1 mol A,
+"""Gibbs energy of an ideal-gas isomerization A(g) <=> B(g) at 298.15 K and p = p0, starting from 1 mol A,
 split into its two parts: the straight line xi * Delta_r G0 (pure, unmixed components) and the Gibbs
 energy of mixing RT[(1 - xi) ln(1 - xi) + xi ln xi]. Delta_r G0 = -3.0 kJ/mol (illustrative value)."""
 

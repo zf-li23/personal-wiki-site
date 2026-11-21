@@ -6,7 +6,7 @@
 # B: synergy, Eq. (14.2), F = ((1 + w x)/(1 + x))^n with w = 4 at x = 10 (nearly full) and x = 1 (half occupancy),
 # compared with additive activation 1 + n (w - 1) (each activator adding its own increment).
 # C: four-site enhanceosome model: sites filled independently with weight x each and a cooperativity factor q for
-# every pair of filled neighbouring sites; P(all four filled) by enumeration of the 16 states; Hill coefficient
+# every pair of filled neighboring sites; P(all four filled) by enumeration of the 16 states; Hill coefficient
 # of the mean fractional occupancy theta from the maximum slope of log(theta/(1-theta)) vs log x.
 import itertools
 

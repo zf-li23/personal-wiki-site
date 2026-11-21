@@ -1,5 +1,5 @@
 """Stokes flow past a sphere of radius a (exact solution of the Stokes equations).
-A: streamlines in the frame of the sphere (uniform flow U at infinity), coloured by speed;
+A: streamlines in the frame of the sphere (uniform flow U at infinity), colored by speed;
 the pattern is symmetric fore and aft, so reversing U reverses every streamline.
 B: the same flow seen from the fluid at rest at infinity (sphere moving with velocity U):
 fluid is dragged along over many radii.

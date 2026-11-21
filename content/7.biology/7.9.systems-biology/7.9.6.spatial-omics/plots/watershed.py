@@ -91,7 +91,7 @@ cols = [P.fill(t) for t in ("dna", "rna", "enzyme", "protein", "receptor", "anti
 
 
 def lab_cmap(lab):
-    """Colour labels greedily so that touching objects get different colours."""
+    """Color labels greedily so that touching objects get different colors."""
     n = lab.max()
     adj = {k: set() for k in range(1, n + 1)}
     for a, b in ((lab[1:, :], lab[:-1, :]), (lab[:, 1:], lab[:, :-1])):

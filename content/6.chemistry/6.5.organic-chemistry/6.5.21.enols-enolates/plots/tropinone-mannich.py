@@ -1,5 +1,5 @@
 """The second, intramolecular Mannich reaction of the Robinson tropinone synthesis. After the first
-Mannich reaction and cyclisation of the nitrogen onto the second aldehyde, the molecule holds an
+Mannich reaction and cyclization of the nitrogen onto the second aldehyde, the molecule holds an
 N-methylpyrrolinium ion and the enol of a beta-keto acid. The enol oxygen lone pair pushes the C=C
 electrons onto the iminium carbon and the C=N electrons move onto nitrogen, closing the six-membered
 ring of the tropane skeleton; loss of a proton gives tropinone-2,4-dicarboxylic acid, and

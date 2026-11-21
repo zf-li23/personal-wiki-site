@@ -1,6 +1,6 @@
-"""Catalytic cycle of rhodium-catalysed hydroformylation (Heck-Breslow mechanism, L = PPh3). The
+"""Catalytic cycle of rhodium-catalyzed hydroformylation (Heck-Breslow mechanism, L = PPh3). The
 16-electron HRh(CO)L2 binds the alkene, which inserts into Rh-H with rhodium going to the terminal
-carbon (anti-Markovnikov; bulky phosphines favour this and so the linear aldehyde); CO binds and
+carbon (anti-Markovnikov; bulky phosphines favor this and so the linear aldehyde); CO binds and
 the alkyl migrates to CO (migratory insertion), giving an acyl complex; H2 adds (oxidative
 addition, Rh(I) to Rh(III)) and reductive elimination releases the aldehyde RCH2CH2CHO."""
 

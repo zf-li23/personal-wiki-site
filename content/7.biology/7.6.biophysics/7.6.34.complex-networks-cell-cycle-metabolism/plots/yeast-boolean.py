@@ -5,7 +5,7 @@ activated. Each node is updated synchronously by S_i(t+1) = 1 if sum_j a_ij S_j(
 and keeps its state (or decays, for the self-degrading nodes) if the sum is zero. B: the trajectory
 from the excited G1 state (Cln3 switched on by cell size): 12 steps through the phases of the
 cycle (G1 at steps 1-3, S at 4, G2 at 5, M at 6-9, exit to G1 at 10-11), back to the stationary
-G1 state (coloured: on). C: sizes of the basins of attraction of the seven
+G1 state (colored: on). C: sizes of the basins of attraction of the seven
 fixed points among all 2^11 = 2048 states: 1764 states (86 %) flow to the biological G1 state."""
 
 import itertools

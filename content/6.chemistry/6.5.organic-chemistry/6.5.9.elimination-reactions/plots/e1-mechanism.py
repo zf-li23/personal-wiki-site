@@ -1,6 +1,6 @@
 """E1 elimination of 2-bromo-2-methylbutane in hot ethanol. Step 1 (slow, the same as in SN1):
 ionization to the tertiary carbocation. Step 2 (fast): a solvent molecule acting as a base removes a
-proton from a carbon next to the cationic centre; the C-H bonding pair becomes the pi bond. Loss of a
+proton from a carbon next to the cationic center; the C-H bonding pair becomes the pi bond. Loss of a
 proton from the CH2 group gives the more substituted alkene 2-methylbut-2-ene (Zaitsev product)."""
 
 import matplotlib.pyplot as plt
@@ -55,7 +55,7 @@ def label(at, text, size=None):
 
 
 def centre(c, groups):
-    """Draw a stereocentre at c; groups: (offset, text, kind)."""
+    """Draw a stereocenter at c; groups: (offset, text, kind)."""
     c = np.asarray(c, float)
     for off, text, kind in groups:
         p = c + np.asarray(off, float)
@@ -69,7 +69,7 @@ def pt(x, y):
 
 
 def dots(c, d):
-    """A lone pair drawn beside a text label: centre c, unit direction d."""
+    """A lone pair drawn beside a text label: center c, unit direction d."""
     c, d = np.asarray(c, float), np.asarray(d, float)
     t = np.array([-d[1], d[0]])
     reach(c)
@@ -83,7 +83,7 @@ def dots(c, d):
 
 
 def lobe(c, w=1.1, h=0.55):
-    """An unshaded orbital lobe (ellipse) centred at c."""
+    """An unshaded orbital lobe (ellipse) centered at c."""
     c = np.asarray(c, float)
     reach(c - pt(w / 2, h / 2), c + pt(w / 2, h / 2))
     EXTRA.append(lambda ax, ink: ax.add_patch(Ellipse(tuple(c), w, h, fill=False, color=ink, lw=1.1)))

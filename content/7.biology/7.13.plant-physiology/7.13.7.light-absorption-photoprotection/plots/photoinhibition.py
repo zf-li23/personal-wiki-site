@@ -1,6 +1,6 @@
 """Photoinhibition as a balance of D1 damage and repair: a two-state model of PSII.
 
-The fraction x of functional PSII centres obeys dx/dt = -kd I x + kr (1 - x): damage is first order in the
+The fraction x of functional PSII centers obeys dx/dt = -kd I x + kr (1 - x): damage is first order in the
 photon flux I (reciprocity, rate constant kd I) and repair (D1 replacement) is first order in the damaged
 fraction. The steady state is x* = kr / (kr + kd I). Fv/Fm is taken as 0.83 x. Illustrative parameters:
 kd = 1e-7 m2 umol-1 (damage half-time 58 min at 2000 umol m-2 s-1), kr = 3e-4 s-1 at 25 C (half-time 39 min),

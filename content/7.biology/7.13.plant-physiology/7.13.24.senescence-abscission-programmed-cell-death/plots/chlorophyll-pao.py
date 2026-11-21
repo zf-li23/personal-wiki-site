@@ -2,7 +2,7 @@
 # In the chloroplast, chlorophyll b is reduced to chlorophyll a (NYC1/NOL, then HCAR); STAY-GREEN (SGR,
 # a Mg-dechelatase) removes Mg2+ to give pheophytin a; pheophytinase (PPH) removes phytol to give
 # pheophorbide a; pheophorbide a oxygenase (PAO) opens the porphyrin ring (the step that removes the
-# green colour and the phototoxicity) to the red chlorophyll catabolite (RCC), which RCC reductase
+# green color and the phototoxicity) to the red chlorophyll catabolite (RCC), which RCC reductase
 # (RCCR) reduces to a primary fluorescent chlorophyll catabolite (pFCC). FCCs are exported, modified in
 # the cytosol and imported into the vacuole by ABC transporters, where the acidic pH converts them
 # non-enzymatically to nonfluorescent catabolites (NCCs). Liberated apoproteins are recycled.

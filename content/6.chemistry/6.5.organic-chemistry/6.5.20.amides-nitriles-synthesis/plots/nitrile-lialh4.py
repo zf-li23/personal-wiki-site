@@ -1,5 +1,5 @@
 """Reduction of a nitrile (butanenitrile) to a primary amine by LiAlH4. A hydride adds to the nitrile
-carbon and the C-N pi pair moves onto nitrogen, which binds aluminium; the imine salt takes a second
+carbon and the C-N pi pair moves onto nitrogen, which binds aluminum; the imine salt takes a second
 hydride, and aqueous workup protonates the nitrogen dianion to butan-1-amine. With DIBAL-H at low
 temperature only one hydride adds, and hydrolysis of the imine gives the aldehyde instead."""
 

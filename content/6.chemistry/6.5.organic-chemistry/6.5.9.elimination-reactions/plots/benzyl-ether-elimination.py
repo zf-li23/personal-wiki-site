@@ -1,7 +1,7 @@
 """Alpha',beta-elimination of benzyl ethyl ether with a very strong base (alkyllithium). The base first
 removes a benzylic proton; the carbanion then takes a hydrogen from the ethyl CH3 group through a
 five-membered cyclic transition state, while the C-H electrons form the C=C bond and the C-O bond
-breaks, releasing ethene and the benzyl alkoxide (shown by labelling with PhCD2OEt)."""
+breaks, releasing ethene and the benzyl alkoxide (shown by labeling with PhCD2OEt)."""
 
 from wikichem import Scheme
 

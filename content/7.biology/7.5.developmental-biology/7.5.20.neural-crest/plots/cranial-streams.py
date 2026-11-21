@@ -1,7 +1,7 @@
 """Cranial neural crest streams and the Hox code of the pharyngeal arches (schematic lateral view, anterior left).
 Crest from the midbrain and rhombomeres r1-r2 fills the frontonasal region and the first pharyngeal arch, crest
 from r4 the second arch, crest from r6-r7 the third and fourth arches; r3 and r5 release few crest cells, which
-join the neighbouring streams, so the streams stay separate. The crest carries a Hox code matching its origin: the
+join the neighboring streams, so the streams stay separate. The crest carries a Hox code matching its origin: the
 first arch is Hox-free, the second expresses Hoxa2 (and Hoxb2), the third and fourth add group 3 and 4 genes. The
 code selects the skeletal derivatives: first arch, the jaws (Meckel's cartilage, maxilla, malleus and incus);
 second arch, the stapes and hyoid; third and fourth arches, the rest of the hyoid and the laryngeal cartilages."""

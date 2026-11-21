@@ -1,4 +1,4 @@
-# Acid-base behaviour of amino acids and peptides, computed from pKa values.
+# Acid-base behavior of amino acids and peptides, computed from pKa values.
 # A: titration curves (pH against equivalents of OH- added to the fully protonated form) of glycine,
 # glutamate and histidine (pKa from Lehninger Table 3-1); dots mark the pKa values and diamonds the pI,
 # where the average net charge is zero.

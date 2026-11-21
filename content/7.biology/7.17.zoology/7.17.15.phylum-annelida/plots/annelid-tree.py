@@ -1,5 +1,5 @@
 # Phylogeny of the Annelida (simplified; after Weigert et al. 2014, Struck et al. 2015, Helm et al. 2018 and
-# Brusca et al. 2023). Numbered bars mark gains, crossed bars losses; grey dots mark nodes whose position
+# Brusca et al. 2023). Numbered bars mark gains, crossed bars losses; gray dots mark nodes whose position
 # differs among phylogenomic analyses. Approximate numbers of described species in parentheses.
 import wikibio as bio
 from wikibio import phylo

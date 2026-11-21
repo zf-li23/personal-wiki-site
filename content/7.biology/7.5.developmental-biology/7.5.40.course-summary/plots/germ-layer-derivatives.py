@@ -3,7 +3,7 @@
 The epiblast gives the three germ layers at gastrulation (7.5.9) and the primordial germ cells
 (7.5.27). Each germ layer is subdivided into the regions of the following chapters, and each leaf
 names the main tissues formed, with the chapter in which their development is described.
-Colours: ectoderm blue, mesoderm red, endoderm yellow (zoology.GERM); neural crest, neural tube,
+Colors: ectoderm blue, mesoderm red, endoderm yellow (zoology.GERM); neural crest, neural tube,
 notochord and intermediate mesoderm use the tokens of the neurodev and mesoderm modules.
 """
 

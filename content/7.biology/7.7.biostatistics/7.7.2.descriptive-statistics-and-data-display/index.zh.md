@@ -327,8 +327,8 @@ print(stats.skew(x), stats.kurtosis(x))              # kurtosis is excess kurtos
 print(stats.skew(np.log(x)))                         # the log transform removes most skewness
 
 # geometric mean of antibody titers
-titre = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
-print(stats.gmean(titre))                            # 47.6
+titer = np.repeat([4, 8, 16, 32, 64, 128, 256, 512], [1, 3, 15, 32, 43, 11, 5, 2])
+print(stats.gmean(titer))                            # 47.6
 
 # frequency table with 0.5 L bins, left-closed intervals
 table = pd.cut(fev["fev"], np.arange(0.5, 6.01, 0.5), right=False).value_counts(sort=False)

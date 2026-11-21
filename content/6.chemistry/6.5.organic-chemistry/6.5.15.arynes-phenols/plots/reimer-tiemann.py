@@ -1,7 +1,7 @@
 """Reimer-Tiemann reaction. Top: hydroxide deprotonates chloroform; the trichloromethyl anion loses
 chloride (alpha elimination) to give singlet dichlorocarbene. Bottom: the ortho carbon of phenoxide
 attacks the electron-poor carbene carbon (the oxygen lone pair pushes into the ring); proton
-transfers restore the aromatic ring, and the CHCl2 group is hydrolysed in base to CHO
+transfers restore the aromatic ring, and the CHCl2 group is hydrolyzed in base to CHO
 (salicylaldehyde after acidification)."""
 
 exec(open("helpers.txt").read())

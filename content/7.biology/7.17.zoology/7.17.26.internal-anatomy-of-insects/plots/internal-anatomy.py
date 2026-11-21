@@ -1,6 +1,6 @@
 # A: internal organs of a generalized orthopteroid insect (female), lateral view, head to the left
-# (schematic, proportions approximate), coloured by system: foregut (pharynx, esophagus, crop,
-# proventriculus), midgut (gastric caeca, ventriculus) and hindgut (ileum, colon, rectum with rectal pads);
+# (schematic, proportions approximate), colored by system: foregut (pharynx, esophagus, crop,
+# proventriculus), midgut (gastric ceca, ventriculus) and hindgut (ileum, colon, rectum with rectal pads);
 # Malpighian tubules at the midgut-hindgut junction; salivary glands; dorsal vessel (heart with ostia in
 # the abdomen, aorta into the head); central nervous system (brain, subesophageal ganglion, ventral nerve
 # cord); retrocerebral endocrine glands (corpora cardiaca and corpora allata) behind the brain and the
@@ -26,7 +26,7 @@ L = lambda pts, tok, w, z=5: ax.plot(*np.array(pts).T, color=P.edge(tok), lw=w, 
 L([(1.4, 4.4), (2.2, 5.0), (3.0, 5.4), (4.0, 5.6)], "drug", 4)                        # pharynx/esophagus
 bio.shape(ax, smooth_closed([(4.0, 5.2), (5.0, 6.3), (6.8, 6.3), (7.6, 5.6), (6.8, 4.8), (5.0, 4.8)]), "drug", lw=0.9, zorder=5)
 bio.shape(ax, [(7.6, 5.25), (8.4, 5.3), (8.4, 5.9), (7.6, 5.95)], "drug", lw=0.9, zorder=5)  # proventriculus
-for dy in (0.55, 0.2, -0.2, -0.55):                                                     # gastric caeca
+for dy in (0.55, 0.2, -0.2, -0.55):                                                     # gastric ceca
     L([(8.6, 5.6 + dy * 0.3), (7.8, 5.6 + dy * 1.6)], "golgi", 3.2, 4)
 bio.shape(ax, smooth_closed([(8.4, 5.1), (11, 4.9), (13.5, 5.0), (13.6, 6.1), (11, 6.2), (8.4, 6.1)]), "golgi", lw=0.9, zorder=5)
 L([(13.6, 5.55), (15, 5.4), (16.5, 5.8), (18.0, 5.5)], "protein", 3.6)                  # ileum, colon

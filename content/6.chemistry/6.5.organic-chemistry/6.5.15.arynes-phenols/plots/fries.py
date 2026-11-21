@@ -1,5 +1,5 @@
 """Fries rearrangement of phenyl acetate (AlCl3, heat). Top: AlCl3 binds the ester (aryl) oxygen;
-the acyl-oxygen bond breaks heterolytically to give the acylium ion and an aryloxy-aluminium
+the acyl-oxygen bond breaks heterolytically to give the acylium ion and an aryloxy-aluminum
 species. Bottom: the acylium ion attacks the ring para (or ortho) to the strongly activating
 O-Al group; the sigma complex loses a proton, and aqueous work-up gives 4-hydroxyacetophenone."""
 

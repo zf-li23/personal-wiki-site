@@ -1,4 +1,4 @@
-# Encoding a labeled tree as its Pruefer sequence: delete the smallest leaf (red), record its neighbour (blue)
+# Encoding a labeled tree as its Pruefer sequence: delete the smallest leaf (red), record its neighbor (blue)
 import matplotlib.pyplot as plt
 import wikigraph as G
 

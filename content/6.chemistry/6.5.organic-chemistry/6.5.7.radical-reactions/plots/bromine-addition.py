@@ -1,6 +1,6 @@
 """Why NBS keeps Br2 dilute. A bromine atom adds reversibly to the C=C bond of cyclohexene: its
 unpaired electron and one pi electron form the C-Br bond, and the other pi electron stays on the
-neighbouring carbon. The beta-bromoalkyl radical easily loses Br again by beta-scission; only if it
+neighboring carbon. The beta-bromoalkyl radical easily loses Br again by beta-scission; only if it
 meets Br2 before that does it give the addition product (trans-1,2-dibromocyclohexane in the ionic
 reaction). At very low Br2 concentration the irreversible abstraction of the allylic hydrogen wins."""
 

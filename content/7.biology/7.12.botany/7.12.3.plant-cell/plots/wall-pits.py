@@ -1,12 +1,12 @@
 """Layers of the cell wall and the types of pits (schematic, not to scale).
-A: a fibre-like cell with a secondary wall, in transverse section: middle lamella shared with the
-neighbours, primary wall, the three layers S1, S2 (thickest) and S3 of the secondary wall, and the lumen
+A: a fiber-like cell with a secondary wall, in transverse section: middle lamella shared with the
+neighbors, primary wall, the three layers S1, S2 (thickest) and S3 of the secondary wall, and the lumen
 left by the dead protoplast. B: a primary pit field: a thin region of the primary wall crossed by
 plasmodesmata. C to G: pit pairs in section between two cells with secondary walls; the pit membrane is the
 two primary walls plus the middle lamella. C: simple pit pair (a canal of even width). D: bordered pit pair:
 the secondary wall arches over the pit chamber and leaves a narrow aperture. E: half-bordered pit pair
 (tracheid next to a parenchyma cell). F: bordered pit pair of a conifer tracheid with a torus (a thickened,
-impermeable centre of the pit membrane) on a porous margo. G: aspirated pit: a pressure difference pushes
+impermeable center of the pit membrane) on a porous margo. G: aspirated pit: a pressure difference pushes
 the membrane aside and the torus seals the aperture of the side with the lower pressure. H: face views:
 a simple pit is one circle, a bordered pit two concentric circles (aperture inside the border), a bordered
 pit with a torus three.

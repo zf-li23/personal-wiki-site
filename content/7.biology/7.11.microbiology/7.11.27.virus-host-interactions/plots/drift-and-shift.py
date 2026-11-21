@@ -1,5 +1,5 @@
 # Antigenic drift and antigenic shift.
-# A: a minimal model of drift as a travelling wave in a one-dimensional antigenic space. Strains at
+# A: a minimal model of drift as a traveling wave in a one-dimensional antigenic space. Strains at
 #    antigenic position x grow at rate R times their susceptibility S(x) = exp(-I(x)), where I is the
 #    accumulated immunity of the population convolved with a cross-immunity kernel; mutation diffuses
 #    the population along x. The result is the characteristic steady advance: each variant is replaced

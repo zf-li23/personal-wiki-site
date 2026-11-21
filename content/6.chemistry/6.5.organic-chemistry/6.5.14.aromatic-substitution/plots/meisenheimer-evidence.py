@@ -13,7 +13,7 @@ RING = [1, 2, 3, 4, 5, 6]
 
 
 def facing(smiles, k, angle):
-    """Rotation that makes ring atom k point in direction ``angle`` (degrees) from the ring centre."""
+    """Rotation that makes ring atom k point in direction ``angle`` (degrees) from the ring center."""
     m = Scheme().molecule(smiles)  # layout only
     v = m.xy(k) - ring_centre(m, RING)
     return angle - np.degrees(np.arctan2(v[1], v[0]))

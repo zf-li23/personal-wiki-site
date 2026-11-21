@@ -41,7 +41,7 @@ first = s.molecule(SM[0], at=(0, 0), rotate=-120)
 c1, c2, c3 = first.xy(1), first.xy(2), first.xy(3)
 m12, m23 = (c1 + c2) / 2, (c2 + c3) / 2
 ring = first.coords[1:].mean(axis=0)
-out12 = m12 - ring  # side of the exocyclic bond away from the ring centre
+out12 = m12 - ring  # side of the exocyclic bond away from the ring center
 out12 = np.array([-out12[1], out12[0]]) if np.dot(np.array([-out12[1], out12[0]]), c3 - c2) < 0 else -np.array([-out12[1], out12[0]])
 out12 = out12 / np.linalg.norm(out12)
 in23 = (ring - m23) / np.linalg.norm(ring - m23)

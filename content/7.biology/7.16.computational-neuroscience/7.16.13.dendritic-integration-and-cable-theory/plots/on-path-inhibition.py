@@ -46,7 +46,7 @@ for k in range(1, n):
     p = parent[k]
     a1 = np.pi * (d[k] / 2) ** 2
     a2 = np.pi * (d[p] / 2) ** 2 if p else a1
-    # series conductance between node centres (half segments); soma treated as a node of 12.5 um
+    # series conductance between node centers (half segments); soma treated as a node of 12.5 um
     r = Ri_um * (0.5 * seg / a1 + 0.5 * seg / a2) if p else Ri_um * (seg / a1)
     g = 1e9 / r
     G[k, k] += g

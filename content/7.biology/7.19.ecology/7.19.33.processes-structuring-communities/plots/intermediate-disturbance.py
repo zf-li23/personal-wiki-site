@@ -4,7 +4,7 @@ A: mosaic of patches (Connell's verbal argument). Patches are reset by disturban
 delta; a patch of age a holds s(a) = 1 + (S0 - 1)(1 - exp(-lambda a)) exp(-mu a) species (colonization at
 rate lambda = 0.2 per year, competitive exclusion at rate mu = 0.02 per year, pool S0 = 30). Ages are
 exponential with mean 1/delta, so the mean richness per patch is
-1 + (S0 - 1) delta [1/(delta + mu) - 1/(delta + lambda + mu)] (line); grey: s(a) itself (top axis).
+1 + (S0 - 1) delta [1/(delta + mu) - 1/(delta + lambda + mu)] (line); gray: s(a) itself (top axis).
 B-C: Tilman's (1994) competitive hierarchy, dp_i/dt = c_i p_i (1 - sum_{j<=i} p_j) - m p_i
 - p_i sum_{j<i} c_j p_j, with 20 species, colonization rates c_i = 0.05 x 1.25^(i-1) per year rising as
 competitive rank falls, and a density-independent disturbance mortality m. Equilibria from the exact

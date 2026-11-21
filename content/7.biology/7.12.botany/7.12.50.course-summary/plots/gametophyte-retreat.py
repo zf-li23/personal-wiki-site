@@ -1,5 +1,5 @@
 """Where the gametophyte lives: a schematic (not to scale) of the two generations in five land plants.
-Orange: gametophyte (n); blue: sporophyte (2n); grey ring: spore wall. Moss: the sporophyte grows on the
+Orange: gametophyte (n); blue: sporophyte (2n); gray ring: spore wall. Moss: the sporophyte grows on the
 free-living gametophyte. Fern: both generations free-living, the gametophyte small. Selaginella: unisexual
 gametophytes develop inside the spore wall after the spores are shed. Pine: the megaspore stays in the
 ovule and the female gametophyte (with archegonia) develops on the parent sporophyte; the male gametophyte

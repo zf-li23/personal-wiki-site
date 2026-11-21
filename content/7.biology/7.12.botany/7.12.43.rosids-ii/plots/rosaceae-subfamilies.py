@@ -1,5 +1,5 @@
 # Subfamilies of Rosaceae (after Potter et al. 2007 and Xiang et al. 2017, simplified to tribes) and the four
-# traditional subfamilies. Rosoideae diverge first; Dryadoideae and Amygdaloideae are sisters. Branch colours
+# traditional subfamilies. Rosoideae diverge first; Dryadoideae and Amygdaloideae are sisters. Branch colors
 # mark the traditional groups: Spiraeoideae (paraphyletic, several tribes of Amygdaloideae), Rosoideae
 # (Kerria moved to Amygdaloideae), Maloideae (= tribe Maleae) and Prunoideae (= tribe Amygdaleae).
 import wikibio as bio

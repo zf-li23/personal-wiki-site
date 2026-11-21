@@ -1,5 +1,5 @@
 """Triphasic life cycle of Polysiphonia. Blue sector: diploid phase; orange sector: haploid phase. The three
-generations are boxed in different colours: gametophytes (green), carposporophyte (orange), tetrasporophyte
+generations are boxed in different colors: gametophytes (green), carposporophyte (orange), tetrasporophyte
 (blue). Gametophytes and tetrasporophyte look alike (isomorphic)."""
 import wikibio as bio
 from wikibio import plant

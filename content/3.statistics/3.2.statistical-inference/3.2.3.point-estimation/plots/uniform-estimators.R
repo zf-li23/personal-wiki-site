@@ -24,7 +24,7 @@ for (key in names(titles)) {
           log = if (key == "bias") "" else "y",
           xlab = "sample size n", ylab = "", main = titles[[key]])
   if (key == "bias") {
-    abline(h = 0, col = "grey50", lwd = 0.8)
+    abline(h = 0, col = "gray50", lwd = 0.8)
     legend("bottomright", bty = "n", cex = 0.8, legend = est_names, col = cols, lwd = 1.8)
   }
 }

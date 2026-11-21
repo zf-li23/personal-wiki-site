@@ -1,4 +1,4 @@
-"""The signalling pathways used repeatedly in animal development, as activity flows (SBGN AF style).
+"""The signaling pathways used repeatedly in animal development, as activity flows (SBGN AF style).
 
 Each row: ligand -> receptor -> key transducer -> transcriptional effector, then the main developmental
 roles. Activation is an open arrowhead, inhibition a bar. Wnt (canonical): Wnt binds Frizzled and LRP5/6,
@@ -6,7 +6,7 @@ the destruction complex is inhibited and beta-catenin enters the nucleus to act 
 superfamily: Nodal/Activin/TGF-beta receptors phosphorylate Smad2/3, BMP receptors Smad1/5/8 (Smad9), both
 partner Smad4. FGF and other RTK ligands: Ras-MAPK (and PI3K, PLC-gamma, JAK-STAT). Hedgehog: Hh binds and
 inhibits Patched, relieving the inhibition of Smoothened, and Gli proteins switch from repressor to activator in the
-primary cilium. Notch: Delta/Jagged on a neighbour triggers cleavage of Notch, whose intracellular domain
+primary cilium. Notch: Delta/Jagged on a neighbor triggers cleavage of Notch, whose intracellular domain
 (NICD) acts with CSL (RBPJ). Eph-ephrin: both partners are membrane-bound and signal in both directions,
 mostly to the cytoskeleton (RhoA). Hippo: cell contacts, polarity and mechanics activate the kinases Mst and
 Lats, which keep YAP/TAZ out of the nucleus.

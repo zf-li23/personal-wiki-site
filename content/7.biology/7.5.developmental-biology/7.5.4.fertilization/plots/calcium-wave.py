@@ -1,10 +1,10 @@
-"""Calcium at fertilization: a travelling wave in the sea urchin egg, oscillations in the mammalian egg.
+"""Calcium at fertilization: a traveling wave in the sea urchin egg, oscillations in the mammalian egg.
 
 A, B: calcium-induced calcium release as a bistable reaction-diffusion system across the egg diameter
 (L = 80 um, no-flux ends):  dc/dt = D d2c/dx2 + k c (c - a)(1 - c), with c the free Ca2+ scaled from rest (0)
 to the released state (1), effective (buffered) diffusion coefficient D = 20 um^2/s, k = 10 /s and threshold
 a = 0.25. A local release at the sperm entry point (x = 0) starts a front that crosses the egg at the constant
-speed v = sqrt(D k / 2)(1 - 2a) = 5 um/s. A: kymograph (position against time, colour = c); B: profiles every
+speed v = sqrt(D k / 2)(1 - 2a) = 5 um/s. A: kymograph (position against time, color = c); B: profiles every
 3 s. Removal of calcium (re-uptake into the endoplasmic reticulum, a slow recovery) is left out.
 C: a minimal model of calcium oscillations (Goldbeter, Dupont and Berridge 1990): cytosolic Ca2+ Z and Ca2+ in
 the stores Y, with constant influx v0 + v1 beta, where beta is the saturation of the IP3 receptor by IP3:

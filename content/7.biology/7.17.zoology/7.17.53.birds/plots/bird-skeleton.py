@@ -1,10 +1,10 @@
 # The skeleton of a pigeon in left lateral view, anterior to the left, wing folded (schematic, after
 # Kardong 2019, Proctor and Lynch 1993 and Pough et al. 2023), with the fusions and other features related
-# to flight labelled: the fused braincase and toothless beak; the flexible neck of heterocoelous cervical
+# to flight labeled: the fused braincase and toothless beak; the flexible neck of heterocoelous cervical
 # vertebrae; the notarium (fused thoracic vertebrae); the synsacrum (lumbar, sacral and some caudal
 # vertebrae fused with the ilium); the pygostyle; ribs with uncinate processes; the keeled sternum; the
 # strut-like coracoid, scapula and furcula (fused clavicles); the carpometacarpus; the tibiotarsus and
-# tarsometatarsus. Bones in the course-wide homology colours; vertebrae drawn as a simplified chain.
+# tarsometatarsus. Bones in the course-wide homology colors; vertebrae drawn as a simplified chain.
 import numpy as np
 import wikibio as bio
 import vertskel as vs

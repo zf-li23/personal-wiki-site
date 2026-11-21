@@ -1,4 +1,4 @@
-"""Luche reduction of cyclohex-2-en-1-one. In methanol, Ce3+ catalyses the formation of
+"""Luche reduction of cyclohex-2-en-1-one. In methanol, Ce3+ catalyzes the formation of
 methoxyborohydrides such as HB(OMe)3-, harder hydride donors than BH4-; methanol bound to the hard
 Lewis acid Ce3+ is more acidic and hydrogen-bonds to the carbonyl oxygen (dashed). The hydride goes
 to the carbonyl carbon (the hard site with the larger charge) rather than the beta carbon, and the

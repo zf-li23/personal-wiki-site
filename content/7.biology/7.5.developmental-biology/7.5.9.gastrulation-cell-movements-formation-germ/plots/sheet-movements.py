@@ -1,4 +1,4 @@
-"""The six cell movements of gastrulation (grey arrows: direction of movement). Invagination: a region of an
+"""The six cell movements of gastrulation (gray arrows: direction of movement). Invagination: a region of an
 epithelial sheet folds inwards (sea urchin vegetal plate, Drosophila ventral furrow). Involution: an
 expanding sheet rolls over a lip and spreads on the inner surface of the outer layer (amphibian marginal
 zone at the blastopore). Epiboly: a sheet thins and spreads to cover deeper layers or the yolk (amphibian

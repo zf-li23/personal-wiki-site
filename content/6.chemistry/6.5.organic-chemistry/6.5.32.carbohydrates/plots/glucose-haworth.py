@@ -2,7 +2,7 @@
 hemiacetals formed when the C5 hydroxyl adds to C1 (Haworth projections). Converting a Fischer
 projection into a Haworth projection: a group on the right of the Fischer projection points down
 in the Haworth projection, a group on the left points up; for a D-sugar the CH2OH on C5 points up.
-The new stereocentre C1 (the anomeric carbon, red) carries its OH down (alpha, trans to the C5
+The new stereocenter C1 (the anomeric carbon, red) carries its OH down (alpha, trans to the C5
 CH2OH) or up (beta, cis). Equilibrium composition at 25 C: about 36% alpha, 64% beta, and of
 the order of 0.003% open chain (the furanoses are below 1%)."""
 

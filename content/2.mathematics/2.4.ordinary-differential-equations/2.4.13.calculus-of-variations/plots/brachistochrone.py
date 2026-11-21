@@ -16,9 +16,9 @@ T_cyc = np.pi * np.sqrt(1.0 / g)
 L = np.hypot(xB, yB)
 T_line = np.sqrt(2 * L / (g * yB / L))
 
-# circular arc through A and B with vertical tangent at A: centre (r, 0)
+# circular arc through A and B with vertical tangent at A: center (r, 0)
 r = (xB**2 + yB**2) / (2 * xB)
-phi_B = np.arctan2(yB, xB - r)  # angle of B seen from the centre, measured from +x axis
+phi_B = np.arctan2(yB, xB - r)  # angle of B seen from the center, measured from +x axis
 phi = np.linspace(np.pi, phi_B, 400)
 ax_, ay_ = r + r * np.cos(phi), r * np.sin(phi)
 # time: ds = r dphi, y = r sin(phi), v = sqrt(2 g y)

@@ -13,8 +13,8 @@ two_sided <- function(n) {
 one_sided <- function(n) 1 - pnorm(za + sqrt(n) * (mu0 - mu) / sigma)
 
 guides <- function() {
-  abline(h = alpha, lty = 2, col = "grey50")
-  abline(v = mu0, lty = 3, col = "grey50")
+  abline(h = alpha, lty = 2, col = "gray50")
+  abline(v = mu0, lty = 3, col = "gray50")
 }
 
 op <- par(mfrow = c(1, 2))

@@ -4,7 +4,7 @@ Top: a mutant allele with a premature termination codon (PTC) is transcribed; it
 nonsense-mediated decay (NMD). In zebrafish, the NMD factor Upf3a and components of the COMPASS histone
 H3K4 methyltransferase complex then raise H3K4 trimethylation at related genes and increase their
 transcription (Ma and colleagues 2019; El-Brolosy and colleagues 2019 showed that degradation fragments
-of the mutant mRNA are required and that genes with sequence similarity are favoured). The paralogue
+of the mutant mRNA are required and that genes with sequence similarity are favored). The paralog
 replaces the lost function and the phenotype is mild. Middle: a translation-blocking morpholino removes the
 protein but leaves the mRNA intact: no decay, no compensation, a strong phenotype. Bottom: an allele that
 makes no mRNA (promoter deleted) also fails to trigger compensation.
@@ -33,7 +33,7 @@ def row(y, title, steps, outcome, good):
 
 row(7.6, "Mutant allele with a premature stop codon",
     [("DNA: PTC\nin gene A", "dna", 2.3), ("mutant mRNA", "mrna", 2.2), ("NMD (Upf1,\nUpf3a): decay", "enzyme", 2.6),
-     ("Upf3a + COMPASS:\nH3K4me3 at paralogues", "protein", 3.6), ("paralogue A'\ntranscribed more", "dna2", 3.0)],
+     ("Upf3a + COMPASS:\nH3K4me3 at paralogs", "protein", 3.6), ("paralog A'\ntranscribed more", "dna2", 3.0)],
     "A' compensates:\nmild phenotype", True)
 row(4.6, "Morpholino knockdown of gene A",
     [("DNA: gene A\nnormal", "dna", 2.3), ("normal mRNA", "mrna", 2.2), ("morpholino\nblocks translation", "drug", 3.0)],

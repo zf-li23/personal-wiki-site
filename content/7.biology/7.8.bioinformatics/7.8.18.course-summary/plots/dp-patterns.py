@@ -1,6 +1,6 @@
 # Five dependency patterns of the dynamic programs of the course. In each panel the target entry (filled)
 # is computed from the entries its arrows come from, which have been computed before it.
-# A: pairwise alignment (Needleman-Wunsch, Smith-Waterman, Gotoh): a cell from three neighbours, O(mn).
+# A: pairwise alignment (Needleman-Wunsch, Smith-Waterman, Gotoh): a cell from three neighbors, O(mn).
 # B: hidden Markov models (Viterbi, forward, profile HMMs, Li-Stephens): a state at position i from all
 #    states at i - 1, O(L K^2) in general.
 # C: trees (Felsenstein pruning, Fitch, Sankoff): a vertex from its two children, in post-order.

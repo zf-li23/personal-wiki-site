@@ -31,7 +31,7 @@ norm <- 1 / (dv * L0 * 1e6) / 1e3   # converts uJ per injection to kJ per mol of
 n_true <- 1; dH_true <- -45
 
 par(mfrow = c(1, 2))
-cols <- c("grey50", "steelblue", "purple", "firebrick", "darkcyan")
+cols <- c("gray50", "steelblue", "purple", "firebrick", "darkcyan")
 cs <- c(0.5, 5, 50, 500, 5000)
 plot(NA, xlim = c(0, 2.4), ylim = c(-47, 1), xlab = "molar ratio [L]t/[M]t",
      ylab = "heat per mol injectant (kJ/mol)", main = "Wiseman c sets the shape")

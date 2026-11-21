@@ -1,5 +1,5 @@
 # Approximate year of discovery (first report of antibacterial activity) of the main classes of
-# antibacterial drugs, coloured by origin (natural product or synthetic). The shaded band marks the
+# antibacterial drugs, colored by origin (natural product or synthetic). The shaded band marks the
 # "golden age" of discovery from soil microorganisms (about 1940-1962); after 1987 few new classes
 # were found, and the only post-2000 class shown (diarylquinolines, bedaquiline) is used only against
 # tuberculosis. Years after Silver (2011) and standard histories; they are rounded and approximate.

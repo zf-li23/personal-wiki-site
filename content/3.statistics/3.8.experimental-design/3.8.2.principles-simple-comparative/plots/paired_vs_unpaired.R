@@ -1,4 +1,4 @@
-# Twin data analysed as two independent groups and as pairs.
+# Twin data analyzed as two independent groups and as pairs.
 drug1 <- c(3, 3, 4, 8, 3, 2, 9, 5, 4, 7)
 drug2 <- c(3, 5, 3, 8, 2, 4, 9, 4, 5, 6)
 t.test(drug1, drug2, var.equal = TRUE)   # unpaired: t = -0.097, df = 18

@@ -34,7 +34,7 @@ int main() {
 int n = 8;
 int* p = &n;     // p holds the address of n
 *p = 10;         // writes through p: now n == 10
-int* q = nullptr; // a null pointer; *q would be undefined behaviour
+int* q = nullptr; // a null pointer; *q would be undefined behavior
 ```
 
 `int* p` 中的 `*` 是类型的一部分，表达式 `*p` 中的 `*` 是运算符，二者含义不同。一条声明里写 `int* p, q;` 时只有 `p` 是指针、`q` 是 `int`，因此一行只声明一个指针。旧代码中的 `NULL` 和 `0` 也表示空指针，但它们本质上是整数，在函数重载时可能选错版本；现代 C++ 一律用 `nullptr`。

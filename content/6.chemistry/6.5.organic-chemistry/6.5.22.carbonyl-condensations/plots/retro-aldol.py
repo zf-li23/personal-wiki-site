@@ -1,4 +1,4 @@
-"""Base-catalysed retro-aldol cleavage of diacetone alcohol (4-hydroxy-4-methylpentan-2-one). After
+"""Base-catalyzed retro-aldol cleavage of diacetone alcohol (4-hydroxy-4-methylpentan-2-one). After
 hydroxide removes the OH proton, the alkoxide lone pair re-forms a C=O bond and pushes out the
 enolate of acetone: the C(alpha)-C(beta) bond electrons become the C=C of the enolate and the C=O
 electrons move onto its oxygen. Protonation of the enolate gives a second molecule of acetone."""

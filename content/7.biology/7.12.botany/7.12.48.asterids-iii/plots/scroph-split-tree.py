@@ -1,6 +1,6 @@
 # The break-up of Scrophulariaceae s.l. Family-level tree of Lamiales (APG IV; Refulio-Rodriguez & Olmstead
 # 2014, simplified; unresolved parts drawn as polytomies). Families that received genera of the traditional
-# Scrophulariaceae are coloured, and example genera are listed after the family name; they are scattered
+# Scrophulariaceae are colored, and example genera are listed after the family name; they are scattered
 # over several branches of the order.
 import wikibio as bio
 from wikibio import phylo

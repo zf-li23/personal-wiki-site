@@ -1,5 +1,5 @@
 # Buffer subtraction and first checks of SAXS data (simulated, absolute scale in cm^-1).
-# Protein: a 14.3 kDa globular protein at c = 2 mg/mL, modelled as spheres of mean radius 18.7 A
+# Protein: a 14.3 kDa globular protein at c = 2 mg/mL, modeled as spheres of mean radius 18.7 A
 # (Rg = 14.5 A) with a 10 % spread of radii (Guinier fit: the z-average Rg, 15.4 A);
 # I(0) = MW c / 1385 = 0.0207 cm^-1 (Formula 9.10.1).
 # Buffer: water (0.0163 cm^-1) plus capillary and parasitic scattering, 0.030 + 2e-8 q^-3 cm^-1.

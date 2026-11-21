@@ -1,4 +1,4 @@
-# Fiedler vectors of a path, a cycle and two cliques joined by one edge; colour = vector component
+# Fiedler vectors of a path, a cycle and two cliques joined by one edge; color = vector component
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, to_hex

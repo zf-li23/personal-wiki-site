@@ -2,7 +2,7 @@
 the substrate is bound as a protonated Schiff base (iminium ion) to the active-site lysine. After the
 C4 hydroxy group is deprotonated, the alkoxide re-forms a C=O bond, the C3-C4 bond breaks and its
 electrons flow into the iminium ion, giving glyceraldehyde 3-phosphate and a neutral enamine; the
-enamine is protonated on C3 and hydrolysed to release dihydroxyacetone phosphate. R = CH(OH)CH2OPO3(2-)."""
+enamine is protonated on C3 and hydrolyzed to release dihydroxyacetone phosphate. R = CH(OH)CH2OPO3(2-)."""
 
 from wikichem import Scheme
 

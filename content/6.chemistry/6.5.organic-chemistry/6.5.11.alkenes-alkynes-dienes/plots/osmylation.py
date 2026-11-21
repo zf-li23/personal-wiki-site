@@ -1,6 +1,6 @@
 """Syn dihydroxylation with OsO4: a concerted [3+2] cycloaddition of two Os=O oxygens across the
 C=C bond gives a cyclic osmate(VI) ester on one face; hydrolysis releases the cis-1,2-diol. With
-catalytic OsO4 the co-oxidant NMO reoxidises Os(VI) to Os(VIII)."""
+catalytic OsO4 the co-oxidant NMO reoxidizes Os(VI) to Os(VIII)."""
 
 import numpy as np
 from wikichem import Scheme

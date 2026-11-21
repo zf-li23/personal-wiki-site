@@ -1,8 +1,8 @@
 # The elongation cycle of the ribosome (bacterial names; eukaryotic eEF1A and eEF2 act in the same way).
 # 1: decoding. The ternary complex EF-Tu-GTP-Gly-tRNA samples the A site; codon-anticodon pairing (GGU with
-#    anticodon 3'-CCA-5') is monitored by the decoding centre of 16S rRNA, which triggers GTP hydrolysis.
+#    anticodon 3'-CCA-5') is monitored by the decoding center of 16S rRNA, which triggers GTP hydrolysis.
 # 2: accommodation and peptidyl transfer. EF-Tu-GDP leaves, the aminoacyl end swings into the peptidyl
-#    transferase centre of the large subunit, and the alpha-amino group of Gly attacks the ester of the
+#    transferase center of the large subunit, and the alpha-amino group of Gly attacks the ester of the
 #    peptidyl-tRNA: the peptide (Met-Ala-Phe) is transferred to the A-site tRNA, the P-site tRNA is deacylated.
 # 3: hybrid states. The acceptor ends move to the P and E sites of the large subunit (A/P and P/E states) while
 #    the anticodons stay; EF-G-GTP binds and, by GTP hydrolysis, drives translocation.

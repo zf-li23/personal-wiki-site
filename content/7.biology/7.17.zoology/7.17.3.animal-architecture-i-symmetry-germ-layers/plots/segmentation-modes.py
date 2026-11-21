@@ -6,7 +6,7 @@ mesodermal and ectodermal bands; prostomium and pygidium are not segments; young
 gene expression) versus long-germ (all segments specified at once in the blastoderm, ending in fourteen
 engrailed stripes at the parasegment boundaries).
 (C) Vertebrate: only the paraxial mesoderm is segmented; somites bud from the presomitic mesoderm where
-the travelling wave of the segmentation clock meets a wavefront of falling FGF signalling.
+the traveling wave of the segmentation clock meets a wavefront of falling FGF signaling.
 """
 
 import numpy as np

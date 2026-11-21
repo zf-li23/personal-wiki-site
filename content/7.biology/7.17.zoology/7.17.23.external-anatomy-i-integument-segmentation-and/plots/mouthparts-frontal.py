@@ -1,6 +1,6 @@
 # Insect mouthparts in frontal view, drawn from templates (a parametric lateral version is
-# c7.17-insect-mouthparts). The same four appendages, coloured by homology as in the parametric figures,
-# are remodelled for different diets: labrum (upper lip), paired mandibles, paired maxillae and the
+# c7.17-insect-mouthparts). The same four appendages, colored by homology as in the parametric figures,
+# are remodeled for different diets: labrum (upper lip), paired mandibles, paired maxillae and the
 # labium (lower lip, formed by fused second maxillae). Chewing (grasshopper): head above, the parts
 # separated below. Chewing-lapping (honey bee): mandibles kept for handling wax and pollen, the maxillae and
 # labium elongated into a tongue for nectar. Siphoning (butterfly): the two maxillary galeae interlock as a

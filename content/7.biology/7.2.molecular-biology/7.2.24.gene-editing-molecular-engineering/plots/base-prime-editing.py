@@ -2,7 +2,7 @@
 # A: the cytosine base editor - deaminase on the strand displaced by the R loop, UGI to stop base excision
 #    repair, D10A nickase on the opposite strand so that repair copies the edited strand.
 # B: the editing window - fraction edited against position in the protospacer for a cytosine and an adenine
-#    editor (Gaussian windows centred on positions 6 and 6.5), and the bystander problem.
+#    editor (Gaussian windows centered on positions 6 and 6.5), and the bystander problem.
 # C: prime editing step by step.
 # D: what each approach can write.
 import numpy as np

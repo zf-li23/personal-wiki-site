@@ -1,5 +1,5 @@
 # How a virus is counted.
-# A: the plaque assay - a tenfold dilution series plated on lawns, with the titre computed from a
+# A: the plaque assay - a tenfold dilution series plated on lawns, with the titer computed from a
 #    countable plate (17 plaques from 0.1 ml of the 1e-6 dilution -> 1.7e8 PFU/ml).
 # B: the dose-response curve of the assay: one-hit kinetics give a straight line (one particle suffices),
 #    two-hit kinetics a parabola.
@@ -48,7 +48,7 @@ for px, py, n, txt, dil in plates:
     bio.label(ax, (px, py - 1.85), txt, size="tiny", color=P.muted())
     bio.label(ax, (px, py + 1.7), dil, size="tiny", color=P.muted())
     bio.arrow(ax, (px, 6.6), (px, 5.3), kind="process", lw=0.9, head=0.18, color=P.muted())
-bio.label(ax, (5.3, 0.5), "titre = 17 × 10 × $10^{6}$ = 1.7 × $10^{8}$ PFU/ml", size="small")
+bio.label(ax, (5.3, 0.5), "titer = 17 × 10 × $10^{6}$ = 1.7 × $10^{8}$ PFU/ml", size="small")
 
 # ---------------------------------------------------------------- B: dose-response
 ax = fig.add_subplot(gs[0, 1])

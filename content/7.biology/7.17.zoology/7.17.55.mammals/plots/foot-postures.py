@@ -4,7 +4,7 @@
 # metatarsals raised. Unguligrade (horse, deer): the animal stands on the tips of the toes, which bear hooves;
 # the metatarsals are long, and in the horse a single digit (III) remains, in the deer two (III, IV). The
 # distal segments lengthen from left to right, lengthening the stride. Bones in the course-wide homology
-# colours (femur, tibia and fibula, tarsals, metatarsals, phalanges).
+# colors (femur, tibia and fibula, tarsals, metatarsals, phalanges).
 import numpy as np
 import wikibio as bio
 import vertskel as vs

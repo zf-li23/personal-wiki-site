@@ -1,5 +1,5 @@
 # Homology of the tetrapod forelimb: the same bones in the same order (humerus; radius and ulna;
-# carpals; metacarpals; phalanges), each coloured identically, adapted to different functions
+# carpals; metacarpals; phalanges), each colored identically, adapted to different functions
 # (wikibio.zoomorph.forelimb; shoulder at the top, radius and digit I on the left; not to scale). Human:
 # five digits, the generalized pattern. Cat: digitigrade, digit I (dewclaw) short, claws. Toothed whale:
 # short, flattened bones in a flipper, extra phalanges in digits II and III (hyperphalangy). Horse: the

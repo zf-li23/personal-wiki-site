@@ -1,4 +1,4 @@
-"""The Watts-Strogatz model: a ring of N = 1000 vertices, each joined to its K = 10 nearest neighbours,
+"""The Watts-Strogatz model: a ring of N = 1000 vertices, each joined to its K = 10 nearest neighbors,
 with every edge rewired with probability p. A: three small examples (N = 20, K = 4). B: clustering
 coefficient C(p) and average path length l(p) relative to the ring (averages of 4 realizations), with
 the Barrat-Weigt approximation C(p)/C(0) = (1 - p)^3."""

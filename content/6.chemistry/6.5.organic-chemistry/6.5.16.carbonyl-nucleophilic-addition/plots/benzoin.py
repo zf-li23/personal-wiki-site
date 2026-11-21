@@ -1,5 +1,5 @@
-"""Cyanide-catalysed benzoin condensation (Lapworth mechanism). Top: cyanide adds to benzaldehyde;
-proton transfer from carbon to oxygen gives a carbanion stabilised by the nitrile and the phenyl
+"""Cyanide-catalyzed benzoin condensation (Lapworth mechanism). Top: cyanide adds to benzaldehyde;
+proton transfer from carbon to oxygen gives a carbanion stabilized by the nitrile and the phenyl
 ring: the former carbonyl carbon is now nucleophilic (umpolung). Middle: the carbanion adds to a
 second benzaldehyde. Bottom: after proton transfer, the alkoxide re-forms the C=O bond and expels
 cyanide, which is regenerated as the catalyst."""

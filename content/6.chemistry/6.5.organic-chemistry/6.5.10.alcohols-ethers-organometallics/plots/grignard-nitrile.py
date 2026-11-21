@@ -1,6 +1,6 @@
 """Grignard reagents and nitriles give ketones. The C-Mg bonding pair adds to the nitrile carbon of
 benzonitrile and the C-N pi electrons move onto nitrogen, giving the magnesium salt of an imine;
-it does not react further, and aqueous acid hydrolyses the imine (via the iminium ion) to
+it does not react further, and aqueous acid hydrolyzes the imine (via the iminium ion) to
 acetophenone."""
 
 from wikichem import Scheme

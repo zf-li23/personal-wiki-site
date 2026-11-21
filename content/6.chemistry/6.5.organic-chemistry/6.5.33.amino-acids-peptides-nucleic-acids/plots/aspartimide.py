@@ -2,7 +2,7 @@
 piperidine the backbone amide nitrogen of the residue after Asp (Gly here, R' the rest of the chain)
 is deprotonated and attacks the side-chain tert-butyl ester; tert-butoxide leaves and a
 five-membered succinimide (aspartimide) closes. The alpha-H of the imide is acidic, so the Asp
-centre epimerizes, and ring opening by piperidine or water gives alpha- and beta-linked peptides."""
+center epimerizes, and ring opening by piperidine or water gives alpha- and beta-linked peptides."""
 
 from wikichem import Scheme
 

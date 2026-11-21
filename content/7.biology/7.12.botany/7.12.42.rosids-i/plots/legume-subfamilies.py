@@ -1,4 +1,4 @@
-# Phylogeny of the six legume subfamilies (LPWG 2017) and the three traditional families. Coloured bars:
+# Phylogeny of the six legume subfamilies (LPWG 2017) and the three traditional families. Colored bars:
 # traditional Caesalpiniaceae (paraphyletic, spread over five subfamilies), Mimosaceae (the mimosoid clade
 # nested in Caesalpinioideae) and Papilionaceae. Dots: clades in which root nodules are widespread.
 import wikibio as bio

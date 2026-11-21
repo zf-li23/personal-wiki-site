@@ -1,8 +1,8 @@
 # One framework for the transport processes of this course: flux = conductance x driving force
-# (= driving force / resistance), the plant analogue of Ohm's law. Each row shows a path from source to sink
+# (= driving force / resistance), the plant analog of Ohm's law. Each row shows a path from source to sink
 # with its driving force and main resistances.
 # Water: soil -> roots -> xylem -> leaf -> air; driving force a difference of water potential (liquid) and of
-#   water-vapour concentration (gas); resistances of soil, root, xylem, leaf, stomata and boundary layer.
+#   water-vapor concentration (gas); resistances of soil, root, xylem, leaf, stomata and boundary layer.
 # CO2: air -> stomata -> intercellular spaces -> chloroplast; concentration difference; boundary layer,
 #   stomatal and mesophyll resistances.
 # Sucrose: source leaf -> sieve tubes -> sink; pressure difference generated osmotically; sieve plates.

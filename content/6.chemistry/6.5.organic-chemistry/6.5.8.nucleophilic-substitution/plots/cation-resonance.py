@@ -1,4 +1,4 @@
-"""Delocalisation that stabilises carbocations. Top: in the methoxymethyl cation a lone pair of
+"""Delocalization that stabilizes carbocations. Top: in the methoxymethyl cation a lone pair of
 oxygen forms a C=O pi bond, giving an oxocarbenium ion in which every atom has an octet. Bottom: in
 the allyl cation the C=C pi electrons move toward the empty p orbital, so that the positive charge
 is shared by the two terminal carbons."""

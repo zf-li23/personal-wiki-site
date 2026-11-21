@@ -1,15 +1,15 @@
 """Site percolation on neutral landscape maps.
 
 Random neutral landscapes (Gardner et al. 1987): each cell of an L x L grid is habitat independently with
-probability p. Clusters are sets of habitat cells connected through edge-sharing neighbours (4-neighbour
-rule) or through edges and corners (8-neighbour rule); they are labelled with scipy.ndimage.label.
-A-C: 160 x 160 maps at p = 0.50, 0.59 and 0.68 (4-neighbour rule); the largest cluster is highlighted.
+probability p. Clusters are sets of habitat cells connected through edge-sharing neighbors (4-neighbor
+rule) or through edges and corners (8-neighbor rule); they are labeled with scipy.ndimage.label.
+A-C: 160 x 160 maps at p = 0.50, 0.59 and 0.68 (4-neighbor rule); the largest cluster is highlighted.
 D: fraction of all habitat that belongs to the largest cluster, and E: probability that some cluster
 spans the map from the left to the right edge, against p (L = 128, 60 maps per value). Curves: random maps
-with the 4-neighbour rule (threshold p_c = 0.5927 for an infinite lattice) and the 8-neighbour rule
+with the 4-neighbor rule (threshold p_c = 0.5927 for an infinite lattice) and the 8-neighbor rule
 (p_c = 0.4073), and spatially correlated (fractal) maps made by spectral synthesis (Fourier filtering of
 white noise with amplitude proportional to f^-(H + 1), H = 0.5) and thresholded at their p-quantile,
-4-neighbour rule. Clumped habitat stays connected at lower habitat amounts than random habitat, and the
+4-neighbor rule. Clumped habitat stays connected at lower habitat amounts than random habitat, and the
 transition is gradual.
 """
 

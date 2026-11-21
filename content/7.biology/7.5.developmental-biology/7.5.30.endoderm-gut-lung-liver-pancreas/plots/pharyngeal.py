@@ -6,7 +6,7 @@ clefts. Pouch 1: tympanic cavity of the middle ear and the auditory tube. Pouch 
 tonsil. Pouch 3: the thymus (ventral part) and the inferior parathyroid glands (dorsal part). Pouch 4: the
 superior parathyroid glands and the ultimobranchial body, which gives the calcitonin-producing C cells of the
 thyroid (in mammals partly from crest-independent endoderm). The thyroid itself buds from the midline floor of
-the pharynx between the first and second arches (the foramen caecum) and descends into the neck."""
+the pharynx between the first and second arches (the foramen cecum) and descends into the neck."""
 import wikibio as bio
 from wikibio import organogenesis as O
 

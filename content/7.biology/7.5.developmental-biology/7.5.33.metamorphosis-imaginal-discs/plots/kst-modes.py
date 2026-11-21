@@ -4,7 +4,7 @@ Top: the first four nonconstant modes of the unit disc, J1(kr) cos phi, J2(kr) c
 with k^2 = 3.39, 9.33, 14.68, 17.65 (the degenerate partners sin m phi are rotated copies). Bottom: the first six
 nonconstant modes of an ellipse of the same area with e = 0.8, computed by finite differences (grid 0.02, no-flux
 boundary); eigenvalues in units of the disc's area. Lines: nodal lines (the zero set), the candidate compartment
-boundaries of the KST model; colour: sign.
+boundaries of the KST model; color: sign.
 """
 
 import numpy as np

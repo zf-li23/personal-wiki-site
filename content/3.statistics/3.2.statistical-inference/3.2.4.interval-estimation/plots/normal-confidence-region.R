@@ -22,9 +22,9 @@ polygon(c(xbar - hb, rev(xbar + hb)), c(band, rev(band)),
         col = adjustcolor("steelblue", 0.3), border = NA)
 abline(h = c(s2_lo, s2_hi), lty = 2, col = "darkgreen")
 points(0, 1, pch = 4, cex = 2, lwd = 2, col = "firebrick")
-points(xbar, ss / (n - 1), pch = 19, cex = 0.7, col = "grey30")
+points(xbar, ss / (n - 1), pch = 19, cex = 0.7, col = "gray30")
 legend("topleft", bty = "n", cex = 0.8,
        legend = c("(mu - x_bar)^2 = c^2 sigma^2 / n", "confidence region",
                   "true (mu, sigma^2) = (0, 1)", "(x_bar, s^2)"),
-       col = c("steelblue", adjustcolor("steelblue", 0.3), "firebrick", "grey30"),
+       col = c("steelblue", adjustcolor("steelblue", 0.3), "firebrick", "gray30"),
        lty = c(1, NA, NA, NA), pch = c(NA, 15, 4, 19), pt.cex = c(NA, 2, 1.5, 0.7))

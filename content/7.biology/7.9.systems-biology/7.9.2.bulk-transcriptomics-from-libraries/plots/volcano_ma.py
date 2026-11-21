@@ -1,7 +1,7 @@
 """Differential expression in the airway data (dexamethasone against untreated, design ~ cell + dex,
 DESeq2 model fitted with pydeseq2; 22369 genes with at least 10 reads in total). A: MA plot of the
 maximum-likelihood log2 fold changes against the mean normalized count; genes with adjusted p < 0.1
-in colour. Fold changes of weakly expressed genes scatter widely. B: the same after shrinkage of the
+in color. Fold changes of weakly expressed genes scatter widely. B: the same after shrinkage of the
 fold changes towards zero (an adaptive prior on the log fold changes, as in apeglm): noisy fold
 changes of weak genes shrink, well-measured ones hardly change. C: volcano plot, -log10 adjusted p
 against the shrunken log2 fold change, with the thresholds padj = 0.05 and |log2 FC| = 1. D: the

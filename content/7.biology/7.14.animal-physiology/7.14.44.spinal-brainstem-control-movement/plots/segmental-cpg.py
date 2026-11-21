@@ -1,8 +1,8 @@
-"""Travelling wave from a chain of coupled segmental oscillators (lamprey-like, phase model).
+"""Traveling wave from a chain of coupled segmental oscillators (lamprey-like, phase model).
 
 N = 100 segmental oscillators, d theta_i/dt = 2 pi f + a sin(theta_{i+1} - theta_i + phi)
-+ a sin(theta_{i-1} - theta_i - phi) (nearest-neighbour coupling with a phase bias phi = 2 pi / N,
-a = 200 s^-1; ends have one neighbour). Intrinsic frequencies scatter by 2 % (s.d.)
++ a sin(theta_{i-1} - theta_i - phi) (nearest-neighbor coupling with a phase bias phi = 2 pi / N,
+a = 200 s^-1; ends have one neighbor). Intrinsic frequencies scatter by 2 % (s.d.)
 around f; started near synchrony; shown after 20 s.
 A: bursts (cos theta > 0.7) of every segment over 1.5 cycles at f = 2 Hz: a head-to-tail wave.
 B: intersegmental phase lag (fraction of a cycle per segment) against frequency for the coupled

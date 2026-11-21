@@ -1,6 +1,6 @@
 # Free energies from irreversible pulling: the Jarzynski equality and the Crooks theorem (simulation).
 # A molecule with a double-well landscape U(x) = 3 (x^2 - 1)^2 (barrier 3 kT; units kT = 1, friction 1) is
-# held by a harmonic trap of stiffness k = 5 whose centre lambda moves at constant speed from -1.5 to 2.0
+# held by a harmonic trap of stiffness k = 5 whose center lambda moves at constant speed from -1.5 to 2.0
 # in a time 2 (forward) and back (reverse). Overdamped Langevin dynamics, dt = 1e-3, 3000 trajectories in
 # each direction, started from equilibrium. Work W = integral of dH/dlambda dlambda = -k (x - lambda) dlambda.
 # The exact free-energy difference dF follows from the partition functions Z(lambda) = int exp(-H) dx.

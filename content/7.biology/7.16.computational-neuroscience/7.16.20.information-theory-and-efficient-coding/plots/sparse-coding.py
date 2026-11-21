@@ -1,7 +1,7 @@
 """Sparse coding of image patches (Olshausen and Field 1996) on synthetic "dead leaves" images.
 
 Images: 30 images of 128 x 128 pixels, each made of 300 overlapping opaque discs and ellipses of
-random size (power-law radii), orientation and grey level, so that they contain edges at all
+random size (power-law radii), orientation and gray level, so that they contain edges at all
 orientations and a roughly 1/k^2 power spectrum. Images are whitened with the filter
 k exp(-(k/k0)^4) and normalized. Patches: 8 x 8 pixels.
 Model: patch x = Phi a + noise; inference by ISTA, minimizing |x - Phi a|^2/2 + lam |a|_1

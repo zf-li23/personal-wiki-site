@@ -1,10 +1,10 @@
-# Wound- and herbivore-induced defence (schematic). A caterpillar chews a leaf: damage plus elicitors in its
+# Wound- and herbivore-induced defense (schematic). A caterpillar chews a leaf: damage plus elicitors in its
 # oral secretions (fatty acid-amino acid conjugates such as volicitin) trigger Ca2+ fluxes and MAPKs; jasmonic
 # acid is made from linolenic acid (13-LOX, AOS, AOC -> OPDA in the chloroplast; OPR3 and beta-oxidation in the
 # peroxisome) and conjugated to JA-Ile by JAR1; JA-Ile joins COI1 and JAZ, JAZ is degraded and MYC2 activates
-# defence genes. Outputs: direct defences (proteinase inhibitors, polyphenol oxidase, nicotine, glucosinolates)
-# and indirect defences (herbivore-induced volatiles: terpenoids, green-leaf volatiles, methyl salicylate) that
-# attract parasitoid wasps and prime neighbouring plants. GLR3.3/3.6-dependent electrical signals carry the
+# defense genes. Outputs: direct defenses (proteinase inhibitors, polyphenol oxidase, nicotine, glucosinolates)
+# and indirect defenses (herbivore-induced volatiles: terpenoids, green-leaf volatiles, methyl salicylate) that
+# attract parasitoid wasps and prime neighboring plants. GLR3.3/3.6-dependent electrical signals carry the
 # alarm to other leaves at up to about 9 cm per minute (Mousavi et al. 2013).
 import matplotlib.patches as mp
 import numpy as np
@@ -34,7 +34,7 @@ bio.label(ax, (2.9, 6.2), "signal", size="tiny", ha="right")
 bio.label(ax, (2.9, 5.8), "GLR3.3/3.6", size="tiny", ha="right", italic=False)
 bio.label(ax, (2.9, 5.35), "≤ 9 cm min⁻¹", size="tiny", ha="right")
 
-# signalling chain (cell)
+# signaling chain (cell)
 x0 = 13.0
 bio.box(ax, (x0, 10.9), 5.4, 0.75, token="neutral", text="wounding + oral secretions (FACs)", size="small")
 bio.box(ax, (x0, 9.6), 5.4, 0.75, token="ca", text="Ca²⁺ influx, CPKs, MAPKs", size="small")
@@ -60,7 +60,7 @@ bio.label(ax, (17.0, 1.65), "methyl salicylate; EFN", size="tiny", color=P.on_fi
 bio.arrow(ax, (12.0, 4.0), (10.6, 2.95), kind="activation")
 bio.arrow(ax, (14.0, 4.0), (16.4, 2.95), kind="activation")
 
-# volatile plume, wasp and neighbour
+# volatile plume, wasp and neighbor
 for k, (x, y) in enumerate([(20.3, 3.2), (20.9, 3.9), (21.5, 4.6), (22.1, 5.3), (22.7, 6.0)]):
     ax.add_patch(mp.Circle((x, y), 0.12 + 0.03 * k, facecolor=P.fill("highlight"), edgecolor=P.edge("highlight"), lw=0.6, zorder=6))
 # wasp: head, thorax, abdomen, wings

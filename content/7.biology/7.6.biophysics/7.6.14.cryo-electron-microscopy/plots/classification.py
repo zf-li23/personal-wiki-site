@@ -4,7 +4,7 @@
 # SNR of 0.03. Each image is a vector in a 2304-dimensional space; the Euclidean distance between
 # normalized images is a monotone function of their cross-correlation.
 # A: the two true projections. B: images projected on the first two principal components of the data
-#    set, coloured by the (unknown) true state; the states form two overlapping clouds.
+#    set, colored by the (unknown) true state; the states form two overlapping clouds.
 # C: class averages from k-means with K = 2 (k-means++ initialization, 30 iterations) applied to the
 #    coordinates on the first ten principal components, which discards most of the noise; the numbers
 #    give the fraction of the images in each class that truly belong to its majority state.

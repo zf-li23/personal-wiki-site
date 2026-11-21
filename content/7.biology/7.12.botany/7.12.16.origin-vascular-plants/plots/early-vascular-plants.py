@@ -1,5 +1,5 @@
 """Early vascular plants, schematic reconstructions (not to one scale): Cooksonia, Rhynia, Zosterophyllum,
-Asteroxylon, Baragwanathia and Psilophyton. Coloured bands below mark the lineages: stem-group vascular
+Asteroxylon, Baragwanathia and Psilophyton. Colored bands below mark the lineages: stem-group vascular
 plants, the lycophyte lineage and the euphyllophyte lineage."""
 import numpy as np
 from matplotlib.patches import Ellipse, Polygon

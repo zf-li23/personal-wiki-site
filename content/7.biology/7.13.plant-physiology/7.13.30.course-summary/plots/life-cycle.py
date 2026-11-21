@@ -1,8 +1,8 @@
-# From seed to seed: the developmental programme of an annual seed plant as a schematic time course
+# From seed to seed: the developmental program of an annual seed plant as a schematic time course
 # (illustrative curves, not data); phase labels are spread evenly above and joined to their bands. Seed reserves fall after germination; shoot dry mass follows a
 # logistic growth curve (Eq. 17.9); green leaf area rises and then falls in senescence; grain dry mass
 # follows a later logistic filling curve (Eq. 23.3) fed partly by remobilized leaf nitrogen and carbon.
-# Coloured bands mark the phases; the row above lists the decision taken in each phase and the cue
+# Colored bands mark the phases; the row above lists the decision taken in each phase and the cue
 # and hormone balance that control it.
 import numpy as np
 

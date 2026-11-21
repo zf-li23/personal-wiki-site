@@ -1,7 +1,7 @@
-# Acidity of rain and its effect on aluminium in surface waters (25 degC).
+# Acidity of rain and its effect on aluminum in surface waters (25 degC).
 # A: pH of rain water in equilibrium with atmospheric CO2 (Henry constant 0.0334 mol L^-1 atm^-1,
 #    pK1 = 6.35) as strong acid (sulfuric and nitric) is added; for 280 and 420 ppm CO2 the pH of
-#    unpolluted rain is about 5.6. B: solubility of aluminium in equilibrium with gibbsite,
+#    unpolluted rain is about 5.6. B: solubility of aluminum in equilibrium with gibbsite,
 #    log[Al3+] = 8.1 - 3 pH (mol/L), which rises a thousandfold for each unit decrease in pH.
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ def ph(acid, pco2):
     return -np.log10(h)
 
 fig, (a, b) = plt.subplots(1, 2, figsize=(10.8, 4.2))
-acid = np.logspace(-1, 3, 300)          # strong acid, micro-equivalents per litre
+acid = np.logspace(-1, 3, 300)          # strong acid, micro-equivalents per liter
 for pc, tok, ls in ((280, "dna", "--"), (420, "negative", "-")):
     a.plot(acid, [ph(x * 1e-6, pc) for x in acid], color=P.fill(tok), lw=2, ls=ls, label=f"CO$_2$ = {pc} ppm")
 a.axhline(5.6, color=P.muted(), lw=0.8, ls=":")
@@ -34,7 +34,7 @@ a.legend(frameon=False, fontsize=7.5, loc="lower left")
 a.set_title("A  Acidity of rain", loc="left", fontweight="bold")
 
 p = np.linspace(4, 6.5, 200)
-al = 10 ** (8.1 - 3 * p) * 26.98e6          # micrograms per litre
+al = 10 ** (8.1 - 3 * p) * 26.98e6          # micrograms per liter
 b.plot(p, al, color=P.ink(), lw=2)
 b.axhspan(100, 1e5, color=P.fill("negative"), alpha=0.18, lw=0)
 b.text(6.4, 1.5e3, "inorganic Al toxic to fish\n(above about 100 µg L$^{-1}$)", fontsize=7.5, ha="right", color=P.ink())

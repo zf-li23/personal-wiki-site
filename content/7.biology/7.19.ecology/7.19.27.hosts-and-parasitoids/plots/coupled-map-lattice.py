@@ -2,9 +2,9 @@
 
 A coupled map lattice: on each cell of a 50 x 50 grid the Nicholson-Bailey model runs with
 lam = 2, a = 1, c = 1; then a fraction muH of the hosts and muP of the parasitoids in each cell
-moves, in equal parts, to the eight neighbouring cells (individuals leaving the grid are lost).
+moves, in equal parts, to the eight neighboring cells (individuals leaving the grid are lost).
 The simulation starts with hosts and parasitoids in the central cell only and runs 1500 generations.
-A-C: host density (log scale; background colour = few hosts, green = many) at generation 1500 for (muH, muP) = (0.5, 0.5):
+A-C: host density (log scale; background color = few hosts, green = many) at generation 1500 for (muH, muP) = (0.5, 0.5):
 spiral waves; (0.05, 0.3): spatial chaos; (0.05, 0.9): a checkerboard texture with irregular patches, close to the
 "crystal lattice" regime of Hassell, Comins and May.
 D: total host number over the last 300 generations for the spiral case; the local dynamics are

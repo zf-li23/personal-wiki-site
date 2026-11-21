@@ -1,5 +1,5 @@
 # Escape-and-radiate coevolution (schematic, after Ehrlich and Raven 1964). Left: plant phylogeny; a new
-# defence evolves on one branch and that clade radiates. Right: insect phylogeny; a tolerance mechanism
+# defense evolves on one branch and that clade radiates. Right: insect phylogeny; a tolerance mechanism
 # evolves later on one branch, which colonizes the defended clade and radiates. Dashed lines: host use.
 import wikibio as bio
 

@@ -1,7 +1,7 @@
 """Chain breaking by vitamin E. The lipid peroxyl radical LOO abstracts the hydrogen atom of the
 phenolic O-H group of alpha-tocopherol (hydrogen atom transfer: the unpaired electron and one O-H
 electron form the new O-H bond, the other O-H electron stays on the phenolic oxygen). The lipid
-hydroperoxide LOOH and the tocopheroxyl radical are formed; the latter is delocalised over the ring and
+hydroperoxide LOOH and the tocopheroxyl radical are formed; the latter is delocalized over the ring and
 hindered by the ortho methyl groups and does not continue the chain."""
 
 import matplotlib.pyplot as plt

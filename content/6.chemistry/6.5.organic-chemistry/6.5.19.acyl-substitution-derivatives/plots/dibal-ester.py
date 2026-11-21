@@ -1,6 +1,6 @@
-"""Partial reduction of an ester to an aldehyde with diisobutylaluminium hydride (DIBAL-H) at
--78 C. The Lewis-acidic aluminium binds the carbonyl oxygen and delivers its hydride to the carbonyl
-carbon. At low temperature the aluminium hemiacetal (tetrahedral intermediate) does not expel
+"""Partial reduction of an ester to an aldehyde with diisobutylaluminum hydride (DIBAL-H) at
+-78 C. The Lewis-acidic aluminum binds the carbonyl oxygen and delivers its hydride to the carbonyl
+carbon. At low temperature the aluminum hemiacetal (tetrahedral intermediate) does not expel
 methoxide, so no aldehyde is present while hydride is still there; aqueous work-up then releases
 the aldehyde."""
 

@@ -15,7 +15,7 @@ cols <- c("steelblue", "darkorange")
 op <- par(mfrow = c(1, 2))
 for (k in 1:2) {
   iv <- intervals[[k]]
-  plot(th, dbeta(th, a, b), type = "l", lwd = 1.6, col = "grey30",
+  plot(th, dbeta(th, a, b), type = "l", lwd = 1.6, col = "gray30",
        xlab = "theta", ylab = if (k == 1) "posterior density" else "",
        main = sprintf("%s: [%.3f, %.3f], length %.3f", names(intervals)[k], iv[1], iv[2],
                       iv[2] - iv[1]))

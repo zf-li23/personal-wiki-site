@@ -2,7 +2,7 @@
 
 Forward rate vf, reverse rate vr = r vf, net flux J = vf - vr. An effector that raises vf and lowers vr
 by the same fraction a gives J(a)/J(0) = [(1 + a) - r (1 - a)] / (1 - r), i.e.
-Delta J / J = a (1 + r) / (1 - r). The cost is the ATP hydrolysed by cycling: vr per unit net flux,
+Delta J / J = a (1 + r) / (1 - r). The cost is the ATP hydrolyzed by cycling: vr per unit net flux,
 r / (1 - r).
 A: J(a)/J(0) against a for r = 0, 0.5, 0.8, 0.9. B: amplification factor (1 + r)/(1 - r) and ATP
 cost per unit of net flux r/(1 - r) against the cycling ratio r."""

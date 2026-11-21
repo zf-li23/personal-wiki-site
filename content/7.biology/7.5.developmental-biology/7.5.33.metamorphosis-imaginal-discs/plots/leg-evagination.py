@@ -1,7 +1,7 @@
 """Eversion of the leg disc and the energy model of segment shape (Section 33.4).
 
-A: the third-instar leg disc as concentric folds; Distal-less in the centre (tarsus, claw), dachshund in the middle
-(femur, tibia), homothorax at the rim (coxa); B: the everted leg, the centre of the disc telescoped out to become
+A: the third-instar leg disc as concentric folds; Distal-less in the center (tarsus, claw), dachshund in the middle
+(femur, tibia), homothorax at the rim (coxa); B: the everted leg, the center of the disc telescoped out to become
 the distal tip. C: Percus's energy model for a segment of fixed area A: bending energy D/(2R^2) per unit area plus
 boundary energies alpha / L (circumferential boundaries) and beta / R (longitudinal boundaries). The total energy
 E(R) = D A / (2 R^2) + 2 pi alpha R + beta A / R has a minimum at the radius where alpha R^2 = L (D + beta R); curves of

@@ -3,7 +3,7 @@
 Insulin binds the preformed (alpha-beta)2 insulin receptor (INSR), whose beta subunits
 autophosphorylate in trans and phosphorylate IRS1 on several Tyr residues. Left, the mitogenic branch:
 phosphotyrosine of IRS1 binds the SH2 domain of the adaptor Grb2, whose SH3 domains hold the
-exchange factor Sos; Sos catalyses GDP/GTP exchange on Ras; Ras-GTP stimulates the activation of Raf
+exchange factor Sos; Sos catalyzes GDP/GTP exchange on Ras; Ras-GTP stimulates the activation of Raf
 (MAPKKK), which doubly phosphorylates MEK (MAPKK), which doubly phosphorylates ERK (MAPK); ERK enters
 the nucleus and phosphorylates the transcription factor Elk1, which with SRF stimulates
 transcription of genes for growth and division. Right, the metabolic branch: IRS1-P activates PI3K,

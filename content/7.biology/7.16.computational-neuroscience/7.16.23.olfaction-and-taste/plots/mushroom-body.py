@@ -3,11 +3,11 @@
 Model: 50 PN types project to 2000 Kenyon cells (KCs); each KC sums 6 randomly chosen PNs with unit
 weights. With APL feedback inhibition, only the 5 % most strongly driven KCs fire (k-winners-take-all);
 without APL, KCs fire above a fixed threshold set so that 5 % fire at the reference concentration.
-A: overlap (Jaccard index) of the KC codes of two odours against the correlation of their PN inputs
-(PN vectors: rectified Gaussian, mean-centred and rescaled after Dasgupta et al. 2017).
+A: overlap (Jaccard index) of the KC codes of two odors against the correlation of their PN inputs
+(PN vectors: rectified Gaussian, mean-centered and rescaled after Dasgupta et al. 2017).
 B: fraction of active KCs as the PN input is scaled (concentration): APL keeps it constant.
-C: nearest-neighbour search on 600 synthetic 50-dimensional odours (20 clusters). For each query the
-20 true nearest neighbours (Euclidean) are compared with the 20 nearest by the hash: the fly hash
+C: nearest-neighbor search on 600 synthetic 50-dimensional odors (20 clusters). For each query the
+20 true nearest neighbors (Euclidean) are compared with the 20 nearest by the hash: the fly hash
 (2000 sparse projections, k winners kept, Hamming distance) and a classical LSH with k dense Gaussian
 projections (Euclidean distance among projections). Mean precision over 100 queries.
 """

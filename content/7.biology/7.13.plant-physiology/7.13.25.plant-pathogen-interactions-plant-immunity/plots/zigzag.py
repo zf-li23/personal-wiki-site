@@ -1,9 +1,9 @@
 # The zigzag model of plant immunity (Jones and Dangl 2006), drawn as a schematic time course of the
-# amplitude of the defence response against two thresholds: the threshold for effective resistance and
+# amplitude of the defense response against two thresholds: the threshold for effective resistance and
 # the (higher) threshold for the hypersensitive response (HR). Phase 1: PAMPs -> PTI. Phase 2: effectors
-# -> effector-triggered susceptibility (ETS). Phase 3: an NLR recognises an effector -> ETI, often with HR.
-# Phase 4: the pathogen loses the recognised effector or gains new effectors -> ETS again; selection then
-# favours new NLR alleles -> ETI again.
+# -> effector-triggered susceptibility (ETS). Phase 3: an NLR recognizes an effector -> ETI, often with HR.
+# Phase 4: the pathogen loses the recognized effector or gains new effectors -> ETS again; selection then
+# favors new NLR alleles -> ETI again.
 import matplotlib.pyplot as plt
 import numpy as np
 

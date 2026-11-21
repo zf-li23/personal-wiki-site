@@ -1,7 +1,7 @@
 """Altitude, oxygen and the HIF oxygen sensor.
 
 A: barometric pressure from the standard atmosphere, P = 101.325 (1 - 2.25577e-5 z)^5.25588 kPa, and the inspired O2
-partial pressure 0.2095 (P - 6.27 kPa) (air saturated with water vapour at 37 C). The standard atmosphere
+partial pressure 0.2095 (P - 6.27 kPa) (air saturated with water vapor at 37 C). The standard atmosphere
 underestimates the pressure on the summit of Everest, measured at about 33.7 kPa.
 B: steady-state HIF-alpha in a minimal model: constant synthesis k_s and degradation
 k_0 + k_max [O2] / (K_m + [O2]) by prolyl hydroxylase (PHD) and VHL. K_m of PHD2 for O2 about 250 uM (in vitro);

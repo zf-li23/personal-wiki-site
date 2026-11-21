@@ -1,4 +1,4 @@
-# The pectoral girdle from fish to mammal, schematic left lateral views (anterior to the left), vertskel colours:
+# The pectoral girdle from fish to mammal, schematic left lateral views (anterior to the left), vertskel colors:
 # endochondral elements (scapulocoracoid, scapula, coracoid, procoracoid) cool, dermal elements (posttemporal,
 # supracleithrum, cleithrum, clavicle, interclavicle) warm. After Romer & Parsons, Kardong (2019), Jenkins (1993).
 import wikibio as bio

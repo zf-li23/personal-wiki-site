@@ -2,8 +2,8 @@
 
 A predator appears at a random point of the arena and attacks the nearest prey, so each prey's risk is
 proportional to the area of its Voronoi cell, its domain of danger. A: 40 prey scattered at random.
-B: after 25 steps in which every prey moves a short distance towards the centre of its three nearest neighbours
-(stopping when its nearest neighbour is closer than a minimum spacing), the prey have formed clumps; cells at the edge remain large, those in the middle small. Cells are
+B: after 25 steps in which every prey moves a short distance towards the center of its three nearest neighbors
+(stopping when its nearest neighbor is closer than a minimum spacing), the prey have formed clumps; cells at the edge remain large, those in the middle small. Cells are
 shaded by area. C: mean domain of danger of the prey that end up in the interior of the group and of those on its
 edge (convex hull vertices), against time, averaged over 30 runs.
 """

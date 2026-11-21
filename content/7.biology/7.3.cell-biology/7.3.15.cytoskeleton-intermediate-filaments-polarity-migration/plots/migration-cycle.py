@@ -3,11 +3,11 @@
 A: the cycle of crawling: (1) protrusion of a lamellipodium by Arp2/3-dependent actin polymerization
 (Rac, WAVE) and of filopodia (Cdc42, formins); (2) adhesion: integrins engage the matrix in nascent adhesions
 under the protrusion, some of which mature into focal adhesions linked to actin; (3) contraction: myosin II in
-stress fibres and the cortex (Rho, ROCK) pulls the cell body forward against the adhesions; (4) release of
+stress fibers and the cortex (Rho, ROCK) pulls the cell body forward against the adhesions; (4) release of
 the rear adhesions and retraction of the tail. Rac dominates at the front and Rho at the rear.
 B: the three Rho GTPases and the actin structures they induce when activated throughout a fibroblast
 (Ridley and Hall 1992; Nobes and Hall 1995): Cdc42 filopodia, Rac a circumferential lamellipodium, Rho stress
-fibres ending in focal adhesions.
+fibers ending in focal adhesions.
 """
 
 import numpy as np

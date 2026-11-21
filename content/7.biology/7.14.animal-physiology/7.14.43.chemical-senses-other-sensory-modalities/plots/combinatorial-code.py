@@ -1,14 +1,14 @@
 """Capacity of a combinatorial receptor code and decorrelation by lateral inhibition.
 
-A: number of distinguishable codes with N receptor types if each odour is identified by
-(i) the single most activated receptor (labelled line, N codes), (ii) which k receptors are
+A: number of distinguishable codes with N receptor types if each odor is identified by
+(i) the single most activated receptor (labeled line, N codes), (ii) which k receptors are
 active (binomial coefficient C(N, k), k = 3 and 10), (iii) any on/off pattern (2^N).
 Vertical lines: about 50 receptor genes (Drosophila), 350-400 (human), about 1100 (mouse).
 B, C: 200 glomeruli ordered along one molecular feature (chemotopy, e.g. carbon-chain length);
-an odour excites a Gaussian band of glomeruli (width 18). Lateral inhibition in the bulb
-(periglomerular and granule cells) is modelled as subtracting a Gaussian-weighted average of the
+an odor excites a Gaussian band of glomeruli (width 18). Lateral inhibition in the bulb
+(periglomerular and granule cells) is modeled as subtracting a Gaussian-weighted average of the
 surrounding activity (width 30, gain 1) and rectifying: y = max(x - K x, 0).
-C: overlap (cosine similarity) between the patterns of two odours as a function of their separation.
+C: overlap (cosine similarity) between the patterns of two odors as a function of their separation.
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -43,7 +43,7 @@ pos = np.arange(G)
 
 
 def profile(mu, width=18.0):
-    """Glomerular input for an odour at position mu on a chemical-feature axis."""
+    """Glomerular input for an odor at position mu on a chemical-feature axis."""
     return np.exp(-(pos - mu) ** 2 / (2 * width**2))
 
 

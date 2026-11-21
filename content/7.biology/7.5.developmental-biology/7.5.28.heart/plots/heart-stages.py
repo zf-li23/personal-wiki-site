@@ -1,4 +1,4 @@
-"""From cardiac crescent to four chambers (ventral views; the embryo's right is on the viewer's left), coloured
+"""From cardiac crescent to four chambers (ventral views; the embryo's right is on the viewer's left), colored
 by origin. A: the first heart field (red) forms the cardiac crescent; the second heart field (orange anterior,
 pink posterior) lies medial and dorsal to it in the pharyngeal mesoderm (mouse E7.5, human about day 18).
 B: the crescent folds into a linear heart tube (mouse E8.0, human days 21-22), mostly left-ventricle

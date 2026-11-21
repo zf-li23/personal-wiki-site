@@ -5,7 +5,7 @@
 # jugal and quadratojugal; Dimetrodon, mammals), diapsid (an upper and a lower opening separated by the
 # postorbital-squamosal bar; Petrolacosaurus, Sphenodon) and euryapsid (one upper opening, bordered below by
 # the postorbital and squamosal; plesiosaurs and placodonts, derived from a diapsid skull by loss of the
-# lower opening). Bones are coloured in the course-wide homology scheme of vertskel. Not to scale.
+# lower opening). Bones are colored in the course-wide homology scheme of vertskel. Not to scale.
 import numpy as np
 import wikibio as bio
 import vertskel as vs
@@ -37,7 +37,7 @@ SKULL = [
 
 
 def hole(ax, at, c, rx, ry, angle=0.0):
-    """An opening in the skull: background colour with a dark rim."""
+    """An opening in the skull: background color with a dark rim."""
     x, y = at
     pts = np.array(vs.oval((x + c[0], y + c[1]), rx, ry, angle))
     ax.fill(pts[:, 0], pts[:, 1], color=P.surface(), zorder=9, lw=0)

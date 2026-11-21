@@ -10,7 +10,7 @@ the maximal revenue, here 0.3; pi = 1; eta = 0.5.
 A: stock against time from n = 1, e = 0.05 for b = 0 (bionomic equilibrium n* = gamma = 0.3), b = 0.6
 (n* = gamma^(1/(1 - b)) = 0.05) and b = 1 (revenue per effort pi independent of n; if pi > gamma effort grows
 without limit and the stock is driven to extinction).
-B: the same trajectories in the (n, e) plane, with the nullclines of n (e = 1 - n, grey).
+B: the same trajectories in the (n, e) plane, with the nullclines of n (e = 1 - n, gray).
 """
 
 import numpy as np

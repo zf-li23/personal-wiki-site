@@ -2,7 +2,7 @@
 
 Parameters r = 1, a = 0.1, c = 0.5, m = 0.5, so N* = m/(ca) = 10 and P* = r/a = 10.
 A: phase plane. Orbits are level curves of the conserved quantity V (Proposition 25.1.1),
-drawn as contours; zero isoclines dashed; arrows show the anticlockwise flow.
+drawn as contours; zero isoclines dashed; arrows show the counterclockwise flow.
 B: time series of one orbit (started at N = 25, P = 10) with the cycle averages.
 C: period against amplitude (maximum prey density on the orbit); the small-amplitude
 limit is 2 pi / sqrt(r m).

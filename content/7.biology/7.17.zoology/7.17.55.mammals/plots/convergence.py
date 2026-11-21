@@ -1,6 +1,6 @@
 # Convergent evolution of marsupials (Australia) and placental mammals (other continents): pairs of species
 # with similar body forms and ways of life that evolved independently (silhouettes from PhyloPic, not to
-# scale). Thylacine (Thylacinus cynocephalus, extinct 1936) and grey wolf: cursorial carnivores. Sugar glider
+# scale). Thylacine (Thylacinus cynocephalus, extinct 1936) and gray wolf: cursorial carnivores. Sugar glider
 # (Petaurus breviceps) and flying squirrel (Pteromys): gliders with a patagium between fore- and hindlimbs.
 # Marsupial mole (Notoryctes) and mole (Talpidae): burrowers with reduced eyes and digging forelimbs.
 # Numbat (Myrmecobius) and giant anteater (Myrmecophaga): termite and ant eaters with a long tongue.

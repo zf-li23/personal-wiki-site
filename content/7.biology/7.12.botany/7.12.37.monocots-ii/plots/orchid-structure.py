@@ -1,6 +1,6 @@
 # Structure of an orchid flower (typical Orchidoideae / Epidendroideae, schematic). A: front view: dorsal
 # and lateral sepals (outer whorl), two petals and the labellum (inner whorl) with a basal spur; the
-# column in the centre. B: column in side view: anther cap with a pollinium, its stalk attached to the
+# column in the center. B: column in side view: anther cap with a pollinium, its stalk attached to the
 # viscidium formed by the rostellum, and the sticky stigmatic cavity below. C: a pollinarium (two
 # pollinia, stalks, viscidium). D: resupination: in the bud the labellum is uppermost; at anthesis the
 # pedicel and ovary twist through 180 degrees and the labellum comes to lie below.

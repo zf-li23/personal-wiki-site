@@ -2,7 +2,7 @@
 # (top strand 5'->3'), the staggered cut through both strands (red line), and the two products. EcoRI
 # (G^AATTC) leaves 4-nt 5' overhangs, PstI (CTGCA^G) 4-nt 3' overhangs and SmaI (CCC^GGG) blunt ends; all
 # products carry a 5'-phosphate and a 3'-OH. The type IIS enzyme BsaI recognizes the asymmetric site GGTCTC
-# and cuts 1 nt (top) and 5 nt (bottom) beyond it, so the 4-nt overhang (coloured letters) can be any sequence
+# and cuts 1 nt (top) and 5 nt (bottom) beyond it, so the 4-nt overhang (colored letters) can be any sequence
 # and the recognition site stays on the discarded fragment.
 import wikibio as bio
 from wikibio.sequence import MONO

@@ -1,5 +1,5 @@
 """1,2-Migratory insertion of ethylene into a metal-hydride bond. The coordinated alkene and the
-cis hydride lie in one plane; through a four-centre transition state the hydrogen moves (with the
+cis hydride lie in one plane; through a four-center transition state the hydrogen moves (with the
 M-H electron pair) to one alkene carbon while the pi electrons bond the other carbon to the
 metal: syn addition of M and H across the double bond, giving an ethyl complex with one fewer
 ligand electron pair (a vacant site). The reverse reaction is beta-hydride elimination."""

@@ -1,10 +1,10 @@
 """Evolution of Hox clusters by duplication (after the reconstruction summarized by Wolpert et al.).
 
-Columns are paralogue groups 1-15. A proposed ancestral bilaterian cluster of about seven genes; Drosophila
+Columns are paralog groups 1-15. A proposed ancestral bilaterian cluster of about seven genes; Drosophila
 (lab, pb, zen and bcd, which arose from a group 3 gene and lost Hox function, Dfd, Scr, Antp, Ubx, abd-A,
 Abd-B; drawn as one row although in flies the cluster is split into the Antennapedia and bithorax
 complexes); amphioxus with one cluster of 15 genes; and the four mouse clusters Hoxa-d (39 genes), which arose
-by two rounds of whole-genome duplication followed by gene losses. Colours: anterior (1-2), group 3, central
+by two rounds of whole-genome duplication followed by gene losses. Colors: anterior (1-2), group 3, central
 (4-8) and posterior (9-15) genes. The spatial and temporal colinearity of 3' to 5' order is conserved.
 """
 
@@ -30,7 +30,7 @@ rows = [
 ]
 for g in range(1, 16):
     bio.label(ax, (x0 + (g - 1) * dx, 11.7), str(g), size="tiny", color=P.muted())
-bio.label(ax, (x0 - 0.9, 11.7), "paralogue group", size="tiny", color=P.muted(), ha="right")
+bio.label(ax, (x0 - 0.9, 11.7), "paralog group", size="tiny", color=P.muted(), ha="right")
 for i, (name, genes) in enumerate(rows):
     y = 10.6 - 1.3 * i - (0.4 if i >= 3 else 0)
     ax.plot([x0 - 0.8, x0 + 14 * dx + 0.8], [y, y], color=P.muted(), lw=1.0, zorder=3)

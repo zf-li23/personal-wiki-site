@@ -4,7 +4,7 @@ Each neuron i fires r_i = b + k cos(theta - theta_i) spikes/s (b = 25, k = 20), 
 spike counts in a 0.4 s window. The population vector is
 P = sum_i (r_i - b) / k * u_i, where u_i is the unit vector of the preferred direction theta_i.
 A: tuning curves of four neurons with their counted rates.
-B: one trial per target in a centre-out task (8 targets, N = 60 neurons): weighted preferred
+B: one trial per target in a center-out task (8 targets, N = 60 neurons): weighted preferred
 directions (thin) and the population vector (thick).
 C: mean absolute angular error of the population vector against the number of neurons.
 """

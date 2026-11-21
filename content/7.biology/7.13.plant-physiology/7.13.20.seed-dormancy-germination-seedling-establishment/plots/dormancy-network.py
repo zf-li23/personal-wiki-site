@@ -3,7 +3,7 @@
 # Red light (phyB, Pfr) degrades PIF1/PIL5, which otherwise represses GA3ox and induces GA2ox and ABA
 # synthesis; cold stratification raises GA3ox and lowers ABA; nitrate (via NLP8) induces CYP707A2, the
 # ABA 8'-hydroxylase; karrikins from smoke act through KAI2-MAX2 and the degradation of SMAX1; DOG1 deepens
-# dormancy by enhancing ABA signalling (inhibiting the PP2C AHG1); after-ripening lowers DOG1 activity and ABA
+# dormancy by enhancing ABA signaling (inhibiting the PP2C AHG1); after-ripening lowers DOG1 activity and ABA
 # sensitivity. ABA, via ABI3/ABI5, keeps the seed dormant; GA, by degrading DELLA (RGL2), promotes
 # endosperm weakening and embryo growth.
 import wikibio as bio

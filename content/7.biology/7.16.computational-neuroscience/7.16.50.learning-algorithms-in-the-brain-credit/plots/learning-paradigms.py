@@ -2,8 +2,8 @@
 
 Each column: the circuit, the teaching signal and the rule.
 Cortex: unsupervised (Hebbian, self-supervised prediction), dw ~ pre x post (with normalization).
-Cerebellum: supervised, climbing-fibre error from the inferior olive, dw ~ -pre x error (LTD at parallel
-fibre synapses when climbing fibre active).
+Cerebellum: supervised, climbing-fiber error from the inferior olive, dw ~ -pre x error (LTD at parallel
+fiber synapses when climbing fiber active).
 Basal ganglia: reinforcement, dopamine reward prediction error delta, dw ~ delta x eligibility trace.
 """
 import wikibio as bio

@@ -1,6 +1,6 @@
 # The cyathium of Euphorbia (schematic). A: longitudinal section: a cup-shaped involucre of five fused
 # bracts with thick nectar glands on the rim; inside, many male flowers each reduced to a single stamen
-# jointed to its pedicel; in the centre one stalked female flower with a three-locular ovary and three
+# jointed to its pedicel; in the center one stalked female flower with a three-locular ovary and three
 # bifid styles. B: top view: glands alternating with the involucral lobes. C: poinsettia: red bracts
 # below a cluster of cyathia, each with one large yellow gland.
 import math

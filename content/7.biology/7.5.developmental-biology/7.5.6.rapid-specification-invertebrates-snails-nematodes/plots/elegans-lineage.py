@@ -1,6 +1,6 @@
 """The founder cells of the C. elegans embryo. Each division of the P lineage is asymmetric and produces one
 somatic founder cell (AB, MS and E from EMS, C, D) and one P cell; P4 forms the germ line. Bars beneath
-the founders show their main products (germ-layer colours: ectoderm blue, mesoderm red, endoderm yellow,
+the founders show their main products (germ-layer colors: ectoderm blue, mesoderm red, endoderm yellow,
 germ line purple); the numbers are the cells each founder contributes to the hatched larva, out of 558
 (another 113 cells generated in the embryo die by programmed cell death)."""
 import wikibio as bio

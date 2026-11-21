@@ -2,7 +2,7 @@
 heat-activated channel with half-activation at 42 C and gating enthalpy 420, 630 or 840 kJ/mol
 (TRPV1-like), and for a cold-activated channel with dH = -420 kJ/mol and half-activation at 25 C
 (TRPM8-like); dashed: a process with the temperature dependence of a typical enzyme (activation
-energy 50 kJ/mol, Q10 about 1.9), normalised to 1 at 55 C. B: van 't Hoff plot of the equilibrium
+energy 50 kJ/mol, Q10 about 1.9), normalized to 1 at 55 C. B: van 't Hoff plot of the equilibrium
 constant K = p_o/(1 - p_o): straight lines of slope -dH/R. C: the temperature coefficient Q10 of
 K at 37 C grows exponentially with the enthalpy of the transition."""
 

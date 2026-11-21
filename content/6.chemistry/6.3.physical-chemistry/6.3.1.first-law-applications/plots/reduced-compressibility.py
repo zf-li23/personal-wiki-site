@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def z_vdw(pr, tr):
-    """Compressibility factor of a van der Waals gas in reduced variables (vapour-like root)."""
+    """Compressibility factor of a van der Waals gas in reduced variables (vapor-like root)."""
     roots = np.roots([3 * pr, -(pr + 8 * tr), 9, -3])
     real = roots[np.abs(roots.imag) < 1e-9].real
     vr = real.max()

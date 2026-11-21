@@ -17,7 +17,7 @@ def gnp(n, p, rng):
 
 
 def layout(n, edges, rng, steps=400):
-    """Fruchterman-Reingold force-directed layout with a weak pull towards the centre."""
+    """Fruchterman-Reingold force-directed layout with a weak pull towards the center."""
     x = rng.random((n, 2)) - 0.5
     k = 1.0 / np.sqrt(n)
     e = np.array(edges, dtype=int).reshape(-1, 2)

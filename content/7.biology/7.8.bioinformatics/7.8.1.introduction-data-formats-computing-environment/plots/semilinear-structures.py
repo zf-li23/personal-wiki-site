@@ -1,4 +1,4 @@
-# Six kinds of semi-linear structure. A: an annotated sequence (a gene of two exons and a binding site as labelled
+# Six kinds of semi-linear structure. A: an annotated sequence (a gene of two exons and a binding site as labeled
 # intervals). B: a pairwise alignment with one gap. C: an RNA secondary structure as an arc diagram (nested,
 # non-crossing pairs; dot-bracket shown below). D: a rooted tree of four sequences. E: the de Bruijn graph of the
 # 3-mers of ATGCGTGC (nodes are 2-mers, one edge per 3-mer); the walk using every edge once spells the sequence.

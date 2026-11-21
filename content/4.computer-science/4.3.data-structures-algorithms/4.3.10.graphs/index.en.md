@@ -1,7 +1,7 @@
 ---
 title: Graphs
 description: Graph terminology and the graph ADT, implementation, space and operation costs of adjacency matrices and adjacency lists, sparse and dense graphs, breadth-first search with BFS trees, shortest-path properties and bipartiteness testing, depth-first search with active intervals, the parenthesis theorem, the white-path theorem and edge classification (tree, back, forward and cross edges) with its criteria, and iterative DFS.
-source_hash: e754dd56e0e9
+source_hash: 98e69a9a568b
 ---
 
 In a linear structure each element has at most one predecessor and one successor, and in a tree each node has at most one parent; a graph allows a relation between any two objects and is the most general structure for expressing "relations". Road networks, computer networks, social relations, the call relations of programs and the dependencies among tasks are all naturally modeled as graphs. The mathematical theory of graphs was covered in the graph theory part of discrete mathematics ([1.4](/1.4)); this chapter discusses two questions from the viewpoint of data structures: how graphs are represented in a computer, and how to visit all vertices and edges of a graph systematically. The latter is graph traversal, mainly of two kinds, breadth-first search and depth-first search, which turn a nonlinear graph into a traversal tree (or a forest) and leave behind time labels of vertices and a classification of edges during the traversal. This information is the basis of algorithms such as topological sorting, biconnected components, shortest paths and minimum spanning trees in [4.3.11](/4.3.11). The search on a state space in [4.1.14](/4.1.14) is precisely a traversal on a graph that is given implicitly.
@@ -671,7 +671,7 @@ Note that the simple formulation "pop a vertex and push all of its neighbors" is
 #include <utility>
 #include <vector>
 
-// Iterative DFS: the explicit stack holds (vertex, index of its next neighbour),
+// Iterative DFS: the explicit stack holds (vertex, index of its next neighbor),
 // which is exactly what a recursive call keeps in its stack frame.
 void dfs_iterative(const std::vector<std::vector<int>>& adj, std::vector<int>& d, std::vector<int>& f) {
     int n = static_cast<int>(adj.size()), clock = 0;
@@ -688,7 +688,7 @@ void dfs_iterative(const std::vector<std::vector<int>>& adj, std::vector<int>& d
                 int u = adj[v][i++];                  // advance before possibly descending
                 if (!d[u]) { d[u] = ++clock; stack.push_back({u, 0}); }
             } else {
-                f[v] = ++clock;                       // all neighbours done: v finishes
+                f[v] = ++clock;                       // all neighbors done: v finishes
                 stack.pop_back();
             }
         }
@@ -709,7 +709,7 @@ int main() {
 
 ```python tab
 def dfs_iterative(adj: list[list[int]]) -> tuple[list[int], list[int]]:
-    """DFS with an explicit stack of (vertex, iterator over its neighbours)."""
+    """DFS with an explicit stack of (vertex, iterator over its neighbors)."""
     n = len(adj)
     d, f = [0] * n, [0] * n                        # d[v] == 0: undiscovered
     clock = 0
@@ -724,7 +724,7 @@ def dfs_iterative(adj: list[list[int]]) -> tuple[list[int], list[int]]:
             u = next(it, None)                     # the iterator remembers where v stopped
             if u is None:
                 clock += 1
-                f[v] = clock                       # all neighbours done: v finishes
+                f[v] = clock                       # all neighbors done: v finishes
                 stack.pop()
             elif not d[u]:
                 clock += 1

@@ -1,5 +1,5 @@
-"""A mature, vacuolated parenchyma cell of a leaf in section, with parts of three neighbours (schematic,
-not to scale). The cell wall (primary wall) of each cell is cemented to its neighbours by the middle
+"""A mature, vacuolated parenchyma cell of a leaf in section, with parts of three neighbors (schematic,
+not to scale). The cell wall (primary wall) of each cell is cemented to its neighbors by the middle
 lamella; where three cells meet the walls round off and leave an intercellular space. Plasmodesmata cross
 the shared wall. Inside the plasma membrane: a nucleus pushed to the side by the central vacuole
 (nuclear envelope with pores, nucleolus), chloroplasts with grana, an amyloplast with starch grains,
@@ -40,7 +40,7 @@ def shrink(poly, d):
         u = (p0 - p1) / np.linalg.norm(p0 - p1)
         v = (p2 - p1) / np.linalg.norm(p2 - p1)
         b = u + v
-        if np.linalg.norm(b) < 1e-6:  # straight corner: step along the edge normal (polygons are anticlockwise)
+        if np.linalg.norm(b) < 1e-6:  # straight corner: step along the edge normal (polygons are counterclockwise)
             out.append(p1 + np.array([-v[1], v[0]]) * d)
             continue
         b /= np.linalg.norm(b)
@@ -49,7 +49,7 @@ def shrink(poly, d):
     return np.array(out)
 
 
-# the main cell and three neighbours sharing its walls (a small tiling)
+# the main cell and three neighbors sharing its walls (a small tiling)
 main = np.array([(6.2, 2.0), (17.6, 2.0), (19.0, 7.4), (17.6, 12.8), (6.2, 12.8), (4.8, 7.4)])
 right = np.array([(17.6, 2.0), (23.6, 2.0), (25.0, 7.4), (23.6, 12.8), (17.6, 12.8), (19.0, 7.4)])
 top = np.array([(6.2, 12.8), (17.6, 12.8), (17.6, 17.0), (6.2, 17.0)])
@@ -73,7 +73,7 @@ bio.membrane(ax, proto, "cytoplasm", thickness=0.08, zorder=3)
 vac_outline = rounded(shrink(main, 1.25), 1.2)
 ax.add_patch(PathPatch(Path(vac_outline, closed=True), facecolor=P.fill("vacuole"), edgecolor=P.edge("vacuole"), lw=1.3, zorder=6))
 
-# plasmodesmata across the wall shared with the right-hand neighbour (lower right face)
+# plasmodesmata across the wall shared with the right-hand neighbor (lower right face)
 pd_pts = []
 for t in (0.25, 0.45, 0.65):
     a, b = np.array([17.6, 2.0]), np.array([19.0, 7.4])

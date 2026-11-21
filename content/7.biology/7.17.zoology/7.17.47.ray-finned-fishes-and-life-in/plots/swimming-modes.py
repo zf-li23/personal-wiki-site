@@ -1,5 +1,5 @@
 # Swimming modes of fishes: the lateral envelope of body undulation (dorsal view, head to the left) for
-# anguilliform, subcarangiform, carangiform and thunniform swimming. The midline is modelled as a travelling
+# anguilliform, subcarangiform, carangiform and thunniform swimming. The midline is modeled as a traveling
 # wave h(x, t) = A(x) sin(2 pi (x / lambda - f t)) with amplitude envelope A(x) = a0 + a1 x + a2 x^2 and
 # wavelength lambda (in body lengths) chosen to match typical published kinematics (eel lambda ~ 0.6 L,
 # trout ~ 0.9 L, jack ~ 1.1 L, tuna ~ 1.3 L; tail-tip amplitude ~ 0.1 L). Ten midlines through one

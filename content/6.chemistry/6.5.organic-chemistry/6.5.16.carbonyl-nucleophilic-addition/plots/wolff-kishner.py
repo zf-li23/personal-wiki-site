@@ -1,5 +1,5 @@
 """Mechanism of the Wolff-Kishner reduction (acetone hydrazone, hydroxide, ethylene glycol, about
-200 C). Top: hydroxide removes an N-H proton; the anion, delocalised onto carbon, takes a proton
+200 C). Top: hydroxide removes an N-H proton; the anion, delocalized onto carbon, takes a proton
 from the solvent at carbon (the slow step), giving a diazene. Bottom: removal of the second N-H
 proton gives a diazenide anion, which loses nitrogen gas; the carbanion left behind is protonated
 by the solvent. The loss of N2 makes the reaction irreversible."""

@@ -3,7 +3,7 @@ A: odontoblast length by daily vitamin C dose (both delivery methods pooled; 20 
 means (short lines) and grand mean (dashed): the between-group part is the spread of the group means
 around the grand mean, the within-group part the spread of animals around their group mean. B: the total
 sum of squares split by one-way ANOVA (dose) and by two-way ANOVA (dose, delivery, interaction): the
-residual part shrinks when the second factor and the interaction are modelled.
+residual part shrinks when the second factor and the interaction are modeled.
 """
 import csv
 

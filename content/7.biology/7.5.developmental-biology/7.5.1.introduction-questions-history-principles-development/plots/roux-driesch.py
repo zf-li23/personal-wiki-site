@@ -6,7 +6,7 @@ B, Driesch (1892): the blastomeres of a 2-cell sea urchin embryo are separated b
 calcium-free seawater); each forms a complete, smaller pluteus larva: the embryo regulates.
 C, the later reinterpretation of Roux's result: if the frog blastomeres are separated instead of one being
 killed and left attached, each can form a whole (small) embryo, provided that the first cleavage plane
-divided the grey crescent (the future dorsal side) between them.
+divided the gray crescent (the future dorsal side) between them.
 """
 
 import numpy as np

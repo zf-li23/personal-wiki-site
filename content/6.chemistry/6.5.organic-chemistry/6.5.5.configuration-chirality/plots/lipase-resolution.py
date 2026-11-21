@@ -1,7 +1,7 @@
-"""Lipase-catalysed kinetic resolution of racemic 1-phenylethanol with vinyl acetate (for example
+"""Lipase-catalyzed kinetic resolution of racemic 1-phenylethanol with vinyl acetate (for example
 Candida antarctica lipase B). Top: the active-site serine (its proton taken by the histidine of the
 catalytic triad, not drawn) adds to the ester carbonyl group; the tetrahedral intermediate expels the
-enolate of vinyl alcohol, which tautomerises to acetaldehyde, so acylation of the enzyme is
+enolate of vinyl alcohol, which tautomerizes to acetaldehyde, so acylation of the enzyme is
 irreversible. Bottom: the acyl-enzyme transfers the acetyl group to the alcohol. The (R) enantiomer
 fits the active site with its large (phenyl) and medium (methyl) groups in the right pockets and
 reacts much faster; the (S) alcohol is left behind, and the two are separated as alcohol and ester."""

@@ -2,7 +2,7 @@
 
 A generic excitable medium (Barkley model) stands in for the cAMP relay: u_t = u (1 - u)(u - (v + b) / a) / eps + lap u,
 v_t = u - v, with a = 0.75, b = 0.06, eps = 0.02 on a 60 x 60 square with no-flux edges (dx = 0.5). Left: a
-periodically firing pacemaker in the centre (stimulated every 8 time units) emits concentric waves; the
+periodically firing pacemaker in the center (stimulated every 8 time units) emits concentric waves; the
 refractory tail behind each front keeps waves from re-exciting the region they have passed and makes colliding
 waves annihilate. Right: a broken wave front curls up into a rotating spiral, a self-sustained pacemaker that
 needs no special cell; spirals dominate late aggregation fields. Shading: excitation u.

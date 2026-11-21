@@ -42,7 +42,7 @@ def eye(cx, cy, R, superposition):
         # crystalline cone
         ax.add_patch(Polygon([p(r_cone + 0.2, -0.45), p(r_cone + 0.2, 0.45), p(r_cone - 1.2, 0.12), p(r_cone - 1.2, -0.12)],
                              closed=True, facecolor=CONE, edgecolor=P.edge("highlight"), lw=0.7, zorder=6))
-        # screening pigment between neighbours
+        # screening pigment between neighbors
         for w in (-0.55, 0.55):
             ax.plot(*zip(p(r_cone + 0.2, w), p(r_cone - 1.2, w * 0.7)), color=PIG, lw=3.0, zorder=5, solid_capstyle="butt")
             if not superposition:

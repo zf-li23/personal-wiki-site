@@ -6,7 +6,7 @@ organic carbon (DOC) by exudation, sloppy feeding and cell lysis. Heterotrophic 
 the DOC, and are grazed by heterotrophic nanoflagellates, which are eaten by ciliates and these by
 copepods: the microbial loop returns DOC to the food web and regenerates nutrients and CO2 by respiration at
 each step. Viral lysis of bacteria (and of phytoplankton, not drawn) turns cells back into DOC (dashed) (the viral shunt),
-which keeps carbon and nutrients in the microbial part of the web. Sinking particles (marine snow, faecal
+which keeps carbon and nutrients in the microbial part of the web. Sinking particles (marine snow, fecal
 pellets) export carbon to depth (the biological pump).
 """
 import wikibio as bio

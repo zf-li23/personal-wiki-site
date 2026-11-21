@@ -1,7 +1,7 @@
 """Fitting the logistic curve to Carlson's (1913) yeast data (Section 10.4).
 
 Data: amount of yeast (Saccharomyces cerevisiae) in a culture, measured hourly for 18 h (Carlson 1913,
-as reanalysed by Pearl 1927 and Gause 1934).
+as reanalyzed by Pearl 1927 and Gause 1934).
 A: nonlinear least squares fit of N(t) = K / (1 + ((K - N0)/N0) exp(-r t)) (scipy curve_fit) and the
 linearized fit (K from the three-point formula with t = 0, 9, 18 h, then least squares regression of
 ln((K - N)/N) on t). B: residuals of both fits. C: the per capita growth rate estimated from successive

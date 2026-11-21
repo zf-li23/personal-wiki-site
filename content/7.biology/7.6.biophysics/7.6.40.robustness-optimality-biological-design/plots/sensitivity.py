@@ -8,7 +8,7 @@
 # logarithms of the parameters), normalized to the largest, for a sum of four exponentials (8 parameters)
 # and for the adaptation network of Figure 40.2A (12 rate and Michaelis constants), compared with a model
 # whose parameters act on orthogonal features (a Fourier series): the eigenvalues of mechanistic models
-# spread over many decades, so that most parameter combinations barely affect the behaviour.
+# spread over many decades, so that most parameter combinations barely affect the behavior.
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp

@@ -2,10 +2,10 @@
 
 Each site of a 40 x 40 square lattice holds one cell of type A or B, or the medium M. A disk of radius 15
 is filled with a random 50:50 mixture. The adhesive energy is a sum over the eight nearest and
-next-nearest neighbour pairs, with adhesion energies E_AA = 4, E_BB = 1, E_AB = 1.5 per contact and
+next-nearest neighbor pairs, with adhesion energies E_AA = 4, E_BB = 1, E_AB = 1.5 per contact and
 E_AM = E_BM = 0 (so gamma_AB = (E_AA + E_BB)/2 - E_AB = 1 > 0, the cells sort, and E_AB > E_BB, so
 B should engulf A completely). One sweep is one attempted swap per site: a random site and a random
-one of its four nearest neighbours exchange their contents.
+one of its four nearest neighbors exchange their contents.
 Rule 1 (local, deterministic): a swap is made only if it does not decrease the adhesive energy.
 Rule 2 (with fluctuations): a swap that changes the adhesive energy by dE is accepted with probability
 min(1, exp(dE / T)), T = 0.7 (Metropolis; dE > 0 is a gain in adhesion).
@@ -42,7 +42,7 @@ def initial(seed):
 
 
 def site_energy(g, y, x, t, skip):
-    """Adhesion of a cell of type t placed at (y, x) with its neighbours (excluding site skip)."""
+    """Adhesion of a cell of type t placed at (y, x) with its neighbors (excluding site skip)."""
     s = 0.0
     for dy, dx in NB8:
         yy, xx = y + dy, x + dx

@@ -1,9 +1,9 @@
-# The open (square-planar) Holliday junction and its two resolutions. Arms are coloured by the parental
+# The open (square-planar) Holliday junction and its two resolutions. Arms are colored by the parental
 # duplex they derive from: blue flanks A and B, pink flanks a and b. The continuous strands run between
 # two arms of the same parent (A-B, a-b corners); the exchanged strands pass between a blue and a pink arm.
 # Cutting the exchanged strands (1) restores A-B and a-b (noncrossover, patch); cutting the continuous
 # strands (2) gives A-b and a-B (crossover, splice). Heteroduplex near the junction is drawn as a short
-# segment of the other colour.
+# segment of the other color.
 import numpy as np
 import wikibio as bio
 from wikibio import molbio as MB

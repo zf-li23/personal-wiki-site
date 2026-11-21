@@ -1,7 +1,7 @@
 # How balancing selection maintains MHC polymorphism: a Wright-Fisher model of one MHC locus.
 # N diploid individuals (2N gene copies); each copy mutates to a brand-new allele with probability u per
 # generation (infinite-alleles model). Under symmetric heterozygote advantage, homozygotes have fitness 1 - s
-# and heterozygotes 1, so an allele at frequency p has marginal fitness 1 - s p: rare alleles are favoured.
+# and heterozygotes 1, so an allele at frequency p has marginal fitness 1 - s p: rare alleles are favored.
 # Under negative frequency-dependent selection (pathogens adapt to the commonest MHC types) the marginal
 # fitness of allele i is 1 - c p_i as well, so both mechanisms give the same frequency-dependent push in this
 # minimal form. Illustrative parameters: N = 1000, u = 5e-4 (theta = 4Nu = 2), s in {0, 0.02, 0.1}.

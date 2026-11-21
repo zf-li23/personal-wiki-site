@@ -1,6 +1,6 @@
-"""Fischer projections of the stereoisomers of tartaric acid (two like stereocentres: a pair of
+"""Fischer projections of the stereoisomers of tartaric acid (two like stereocenters: a pair of
 enantiomers and a meso form) and of 2,3,4-trihydroxyglutaric acid (C3 is pseudoasymmetric: r/s).
-Descriptors are computed from the projections ("-": C3 is not a stereocentre when C2 and C4 match); the pseudoasymmetric centre ranks an R branch
+Descriptors are computed from the projections ("-": C3 is not a stereocenter when C2 and C4 match); the pseudoasymmetric center ranks an R branch
 above an S branch (CIP rule 5)."""
 
 import numpy as np
@@ -17,8 +17,8 @@ def sense(positions):
 
 
 def centre(oh_right, up_rank_higher):
-    """A Fischer centre with OH and H horizontal. CIP order: OH, then the higher-ranked vertical
-    neighbour, the lower one, H."""
+    """A Fischer center with OH and H horizontal. CIP order: OH, then the higher-ranked vertical
+    neighbor, the lower one, H."""
     oh, h = ("right", "left") if oh_right else ("left", "right")
     hi, lo = ("top", "bottom") if up_rank_higher else ("bottom", "top")
     return sense([oh, hi, lo, h])
