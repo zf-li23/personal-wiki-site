@@ -33,7 +33,8 @@ def superstable(fam, xc, R0, R1, nmax):
     for n in range(2, nmax + 1):
         guess = R[-1] + (R[-1] - R[-2]) / 4.669
         g = lambda p: it(lambda x: fam(p, x), xc(p), 2 ** n) - xc(p)
-        R.append(newton(g, guess, tol=1e-15, maxiter=200))
+        # tol near machine precision may never be met (rounding differs across platforms): keep the last iterate
+        R.append(newton(g, guess, tol=1e-13, maxiter=200, disp=False))
     return np.array(R)
 
 
