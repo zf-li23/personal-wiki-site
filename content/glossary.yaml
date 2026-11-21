@@ -1926,6 +1926,7 @@ terms:
   - { zh: Tukey 可加性检验, en: "Tukey's test for nonadditivity", aliases: [Tukey 单自由度检验, "Tukey's one-degree-of-freedom test", "Tukey's test for additivity"] }
   - { zh: 重复, en: replication, aliases: [replicate, replicates], scope: ["3"] }
   - { zh: 区组, en: block, aliases: [blocks], scope: ["3", "7.7"] }
+  - { zh: 广义完全区组设计, en: generalized complete block design, aliases: [GCBD, 广义随机区组设计], scope: ["3", "7.7"] }
 
   # causal inference (3.9)
   - { zh: Markov 父节点, en: Markov parents, aliases: [Markov parent], scope: ["3.9"] }
