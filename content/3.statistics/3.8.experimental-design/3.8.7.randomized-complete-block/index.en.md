@@ -722,9 +722,9 @@ The preliminary test makes the final test conditional on its outcome, so its ove
 
 ### 7.8.4. The Mixed Model
 
-The tee height can be considered a fixed effect, since the object of the experiment was to determine whether the tee heights cause any difference in driving distance. The golfer, the block factor, can be considered a random effect: there was no interest in comparing the specific golfers used in the experiment, who were a sample of representative golfers. The interaction of golfer and tee height should then also be considered random, since the interaction between a random and a fixed effect is by definition a random effect. Models of this kind have a name.
+The tee height can be considered a fixed effect, since the object of the experiment was to determine whether the tee heights cause any difference in driving distance. The golfer, the block factor, can be considered a random effect: there was no interest in comparing the specific golfers used in the experiment, who were a sample of representative golfers. The interaction of golfer and tee height should then also be considered random, since the interaction between a random and a fixed effect is by definition a random effect. Such a model, with both fixed and random effects, is a **linear mixed model** (see [7.7.17](/7.7.17) for its general form).
 
-**Definition 7.8.2 (Mixed Model)** A **mixed model** is a linear model that contains both fixed effects and random effects. In the two-factor mixed model with a **fixed factor** $A$ ($a$ levels), a **random factor** $B$ ($b$ levels) and $n$ replicates,
+**Definition 7.8.2 (Two-Factor Mixed Model)** In the two-factor mixed model with a **fixed factor** $A$ ($a$ levels), a **random factor** $B$ ($b$ levels) and $n$ replicates,
 
 $$
 Y_{ijk}=\mu+\tau_i+\beta_j+(\tau\beta)_{ij}+\varepsilon_{ijk},\qquad \sum_{i=1}^a\tau_i=0,\qquad \beta_j\sim\mathcal{N}(0,\sigma_\beta^2),\quad (\tau\beta)_{ij}\sim\mathcal{N}(0,\sigma_{\tau\beta}^2),\quad \varepsilon_{ijk}\sim\mathcal{N}(0,\sigma^2),

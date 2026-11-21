@@ -1742,10 +1742,10 @@ terms:
   - { zh: Metropolis–Hastings 算法, en: Metropolis–Hastings algorithm, aliases: [MH 算法, M-H 算法] }
   - { zh: Metropolis 算法, en: Metropolis algorithm }
   - { zh: 随机游走 Metropolis 算法, en: random walk Metropolis }
-  - { zh: 独立抽样器, en: independence sampler }
+  - { zh: 独立抽样器, en: independence sampler, aliases: [independence Metropolis–Hastings] }
   - { zh: Gibbs 抽样, en: Gibbs sampler, aliases: [Gibbs 采样, Gibbs sampling] }
   - { zh: 完全条件分布, en: full conditional distribution }
-  - { zh: 预烧期, en: burn-in, aliases: [烧入期] }
+  - { zh: 预烧期, en: burn-in, aliases: [烧入期, warm-up] }
   - { zh: 准确性, en: accuracy, aliases: [准确, accurate], scope: ["3.5"] }
   - { zh: 因子, en: factor, scope: ["3.5"] }
 
@@ -1876,6 +1876,21 @@ terms:
   - { zh: 可交换性, en: exchangeability, aliases: [exchangeable], scope: ["3.6", "3.7"] }
   - { zh: 偏差信息准则, en: deviance information criterion, aliases: [DIC], scope: ["3"] }
   - { zh: Dirichlet-多项分布, en: Dirichlet-multinomial distribution, aliases: [Dirichlet–multinomial distribution, 多元 Beta-二项分布] }
+  - { zh: 未归一化密度, en: unnormalized density, aliases: [非归一化密度, unnormalized posterior density] }
+  - { zh: 对数凹密度, en: log-concave density, aliases: [对数凹分布, log-concave distribution] }
+  - { zh: 自适应拒绝抽样, en: adaptive rejection sampling, aliases: [ARS, 自适应舍选法] }
+  - { zh: 重要性重抽样, en: sampling importance resampling, aliases: [抽样–重要性重抽样, importance resampling] }
+  - { zh: 自适应 MCMC, en: adaptive MCMC, aliases: [adaptive Markov chain Monte Carlo, adaptive Metropolis] }
+  - { zh: 最优尺度, en: optimal scaling, scope: ["3"] }
+  - { zh: Metropolis-within-Gibbs 算法, en: Metropolis-within-Gibbs, aliases: [MH-within-Gibbs, Metropolis-Hastings-within-Gibbs] }
+  - { zh: 系统扫描 Gibbs 抽样, en: systematic-scan Gibbs sampler, aliases: [systematic scan Gibbs sampler] }
+  - { zh: 随机扫描 Gibbs 抽样, en: random-scan Gibbs sampler, aliases: [random scan Gibbs sampler] }
+  - { zh: 分块 Gibbs 抽样, en: blocked Gibbs sampler, aliases: [block Gibbs sampler, blocked Gibbs sampling] }
+  - { zh: 折叠 Gibbs 抽样, en: collapsed Gibbs sampler, aliases: [collapsed Gibbs sampling] }
+  - { zh: 轨迹图, en: trace plot, aliases: [trace plots] }
+  - { zh: 潜在尺度缩减因子, en: potential scale reduction factor, aliases: [R-hat, Gelman–Rubin statistic, Gelman–Rubin diagnostic] }
+  - { zh: 积分自相关时间, en: integrated autocorrelation time }
+  - { zh: Monte Carlo 标准误, en: Monte Carlo standard error, aliases: [MCSE] }
 
   # design and analysis of experiments (3.8)
   - { zh: 设计实验, en: designed experiment, aliases: [实验设计, 试验设计, design of experiments, DOE, experimental design] }
@@ -1927,6 +1942,15 @@ terms:
   - { zh: 重复, en: replication, aliases: [replicate, replicates], scope: ["3"] }
   - { zh: 区组, en: block, aliases: [blocks], scope: ["3", "7.7"] }
   - { zh: 广义完全区组设计, en: generalized complete block design, aliases: [GCBD, 广义随机区组设计], scope: ["3", "7.7"] }
+  - { zh: 拉丁方, en: Latin square, aliases: [Latin squares] }
+  - { zh: 标准拉丁方, en: standard Latin square, aliases: [约化拉丁方, reduced Latin square] }
+  - { zh: 拉丁方设计, en: Latin square design, aliases: [拉丁方试验] }
+  - { zh: 正交拉丁方, en: orthogonal Latin squares, aliases: [正交拉丁方阵] }
+  - { zh: 互相正交的拉丁方, en: mutually orthogonal Latin squares, aliases: [MOLS, 两两正交的拉丁方] }
+  - { zh: 希腊–拉丁方, en: Graeco-Latin square, aliases: [希腊拉丁方, Euler square, 欧拉方, Graeco-Latin squares] }
+  - { zh: 希腊–拉丁方设计, en: Graeco-Latin square design, aliases: [正交拉丁方设计] }
+  - { zh: 遗留效应平衡, en: balanced for carryover effects, aliases: [残留效应平衡] }
+  - { zh: Williams 设计, en: Williams design, aliases: [Williams square, Williams designs] }
 
   # causal inference (3.9)
   - { zh: Markov 父节点, en: Markov parents, aliases: [Markov parent], scope: ["3.9"] }
